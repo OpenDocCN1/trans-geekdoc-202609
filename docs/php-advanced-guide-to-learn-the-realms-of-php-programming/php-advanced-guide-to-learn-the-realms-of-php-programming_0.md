@@ -1,19 +1,13 @@
+
 # PHP 高级指南：学习 PHP 编程领域
-
-
 
 ![](img/image_rsrcCGT.jpg)
 
-
-
-
-
-
-# 第一章：学习 PHP 的第一步
+## 第一章：学习 PHP 的第一步
 
 有很多理由可以使用 PHP 创建你的程序。你可能对学习 PHP 感兴趣，因为你想构建一个包含一些交互元素的网站。
 
-## Web 世界中的 PHP
+### Web 世界中的 PHP
 
 PHP 用于构建网站。PHP 程序与运行在桌面电脑上供单个人使用的程序不同，它通常运行在 Web 服务器上，并由许多使用电脑上网络浏览器的用户访问。本节将解释 PHP 如何调整到 Web 服务器和网络浏览器之间的交互中。
 
@@ -23,67 +17,63 @@ PHP 既指解释器，也指编程语言。PHP 被称为服务端语言，因为
 
 由 PHP 生成的动态页面就像写给世界另一端朋友的一封信。你可以将脑海中的任何内容添加到页面中，并发送给世界另一边的朋友。信的内容是为发送给的特定人员定制的。一旦信件放入邮箱，你就无法更改它了。它会立即飞向目的地。你无法在朋友阅读时对其修改。
 
-## 为什么选择 PHP？
+### 为什么选择 PHP？
 
 PHP 是免费的。无论你是在旧 PC 还是价值百万美元的超级计算机上运行解释器，你都不需要支付任何许可费、维护费、升级费和支持费。大多数 `Linux` 发行版都预装了 PHP。如果你的系统没有安装，你可能正在使用其他操作系统，如 `Windows`。作为开源项目之一，PHP 允许任何人检查它。即使你缺乏 PHP 的技术知识，你也可以派人为你进行调查。
 
-## 安装 PHP
+### 安装 PHP
 
 在接下来的章节中，我将解释在你的电脑操作系统上安装 PHP 的不同步骤。
 
-### 安装 Web 服务器
+#### 安装 Web 服务器
 
 你不能像运行 `HTML` 那样直接在浏览器中运行 PHP。如果你想运行 PHP，你需要在电脑系统上安装一个服务器，以便浏览器可以解析 PHP 脚本，然后对数据库运行若干条 `MySQL` 查询以返回结果。你也可以使用支持 `MySQL` 和 `PHP` 的主机，让他们将将其上传到服务器并允许你测试你的网站。你可以在你的电脑系统上安装不同的服务器，如 `WAMP`、`XAMP` 和 `MAMP`。
 
 我将解释适用于 `Windows` 操作系统的 `XAMP` 安装过程。它是一个适用于 `Windows`、`Linux` 和 `Mac` 的完全免费开源平台 Web 服务器包。该过程的第一步是下载最新版本的 `XAMP`。一旦下载完成，你需要在电脑上找到该文件。
 
-### 文本编辑器
+#### 文本编辑器
 
 在接下来的章节中，我将解释在你的操作系统上安装 PHP 的不同步骤。你不能像运行 `HTML` 那样直接在浏览器中运行 PHP。如果你想运行 PHP，你需要在电脑系统上安装一个服务器，以便浏览器可以解析 PHP 脚本，然后对数据库运行若干条 `MySQL` 查询以返回结果。你也可以使用支持 `MySQL` 和 `PHP` 的主机，让他们将其上传到服务器并允许你测试你的网站。你可以在你的电脑系统上安装不同的服务器，如 `WAMP`、`XAMP` 和 `MAMP`。
 
 我将解释适用于 `Windows` 操作系统的 `XAMP` 安装过程。它是一个适用于 `Windows`、`Linux` 和 `Mac` 的完全免费开源平台 Web 服务器包。该过程的第一步是下载最新版本的 `XAMP`。一旦下载完成，你需要在电脑上找到该文件。
 
-### 控制面板
+#### 控制面板
 
 在接下来的章节中，我将解释在你的电脑操作系统上安装 PHP 的不同步骤。你不能像运行 `HTML` 那样直接在浏览器中运行 PHP。如果你想运行 PHP，你需要在电脑系统上安装一个服务器，以便浏览器可以解析 PHP 脚本，然后对数据库运行若干条 `MySQL` 查询以返回结果。你也可以使用支持 `MySQL` 和 `PHP` 的主机，让他们将其上传到服务器并允许你测试你的网站。你可以在你的电脑系统上安装不同的服务器，如 `WAMP`、`XAMP` 和 `MAMP`。
 
-### 变量
+#### 变量
 
 在接下来的章节中，我将解释在你的电脑操作系统上安装 PHP 的不同步骤。你不能像运行 `HTML` 那样直接在浏览器中运行 PHP。如果你想运行 PHP，你需要在电脑系统上安装一个服务器，以便浏览器可以解析 PHP 脚本，然后对数据库运行若干条 `MySQL` 查询以返回结果。你也可以使用支持 `MySQL` 和 `PHP` 的主机，让他们将其上传到服务器并允许你测试你的网站。你可以在你的电脑系统上安装不同的服务器，如 `WAMP`、`XAMP` 和 `MAMP`。
 
-### 常量
+#### 常量
 
 在接下来的章节中，我将解释在你的电脑操作系统上安装 PHP 的不同步骤。你不能像运行 `HTML` 那样直接在浏览器中运行 PHP。如果你想运行 PHP，你需要在电脑系统上安装一个服务器，以便浏览器可以解析 PHP 脚本，然后对数据库运行若干条 `MySQL` 查询以返回结果。你也可以使用支持 `MySQL` 和 `PHP` 的主机，让他们将其上传到服务器并允许你测试你的网站。你可以在你的电脑系统上安装不同的服务器，如 `WAMP`、`XAMP` 和 `MAMP`。
 
-### 字符串拼接
+#### 字符串拼接
 
 在接下来的章节中，我将解释在你的电脑操作系统上安装 PHP 的不同步骤。你不能像运行 `HTML` 那样直接在浏览器中运行 PHP。如果你想运行 PHP，你需要在电脑系统上安装一个服务器，以便浏览器可以解析 PHP 脚本，然后对数据库运行若干条 `MySQL` 查询以返回结果。你也可以使用支持 `MySQL` 和 `PHP` 的主机，让他们将其上传到服务器并允许你测试你的网站。你可以在你的电脑系统上安装不同的服务器，如 `WAMP`、`XAMP` 和 `MAMP`。
 
-### 常量
+#### 常量
 
 在接下来的章节中，我将解释在你的电脑操作系统上安装 PHP 的不同步骤。你不能像运行 `HTML` 那样直接在浏览器中运行 PHP。如果你想运行 PHP，你需要在电脑系统上安装一个服务器，以便浏览器可以解析 PHP 脚本，然后对数据库运行若干条 `MySQL` 查询以返回结果。你也可以使用支持 `MySQL` 和 `PHP` 的主机，让他们将其上传到服务器并允许你测试你的网站。你可以在你的电脑系统上安装不同的服务器，如 `WAMP`、`XAMP` 和 `MAMP`。
 
-### 运算符
+#### 运算符
 
 PHP 使用不同的运算符来对值和变量执行各种操作。我们现在将以分组的形式查看 PHP 使用的不同运算符。某些运算符会对值执行特定的数学运算并返回计算结果。
 
+- `$a + $b` 用于计算两个变量之和。
+- `$a - $b` 用于计算两个变量之差。
+- `$a * $b` 用于计算两个变量之积。
+- `$a / $b` 用于计算两个变量之商。
+- `$a / $b` 用于计算两个变量的余数。
+- `$a ** $b` 用于计算两个变量的幂。
+- `$a = $b` 用于获取 `$b` 的值并将其赋值给 `$a`。
 
-
-
-
-* `$a + $b` 用于计算两个变量之和。
-* `$a - $b` 用于计算两个变量之差。
-* `$a * $b` 用于计算两个变量之积。
-* `$a / $b` 用于计算两个变量之商。
-* `$a / $b` 用于计算两个变量的余数。
-* `$a ** $b` 用于计算两个变量的幂。
-* `$a = $b` 用于获取 `$b` 的值并将其赋值给 `$a`。
-
-# 第二章：表达式与控制
+## 第二章：表达式与控制
 
 上一章节向你介绍了 PHP 的基础知识，如安装框架和 PHP 变量。本章将带你了解 PHP 编程是如何工作的，以及你如何控制程序的执行流。
 
-## 表达式
+### 表达式
 
 现在我将从 PHP 的基础部分开始。表达式是值、运算符、变量和函数的组合，并产生一个值。你可以通过组合如 `OR`、`AND` 和 `XOR` 等布尔运算符来编写表达式。在接下来的示例中，我将在以下代码块中解释简单的表达式。
 
@@ -155,11 +145,11 @@ f: []
 
 在某些语言中，`FALSE` 可能被定义为 `-1` 或零，因此在其他语言中，你应该验证此布尔表达式的定义。
 
-## 关系运算符
+### 关系运算符
 
 关系运算符接收两个操作数。它测试这些操作数并返回 `FALSE` 或 `TRUE` 的布尔结果。三类关系运算符 `逻辑`、`相等` 和 `比较` 如下：
 
-### 等于
+#### 等于
 
 相等运算符是 `==`。至关重要的是不要将其与单等号赋值运算符混淆。第一个语句分配一个特定值，第二个语句在表达式中对其测试以检查相等性。
 
@@ -194,7 +184,7 @@ The summer season has arrived. It is time to go to the beach.
 
 通过返回 `TRUE` 或 `FALSE`，相等运算符允许你在 `if` 语句的帮助下测试条件。然而，PHP 被视为弱类型语言。如果相等表达式的两个操作数属于不同类型，PHP 将它们转换为合理的形式。任何由数字组成的字符串在与数字比较时都会转换为数字。
 
-### 比较运算符
+#### 比较运算符
 
 通过使用比较运算符，你可以测试不仅是相等还有不等。PHP 在你构建网站时提供了大于、小于等选项供使用。
 
@@ -232,18 +222,14 @@ php main.php
 </html>
 ```
 
-### 逻辑运算符
+#### 逻辑运算符
 
 逻辑运算符产生假或真的的结果，因此它们也被称为布尔运算符。共有四种这样的运算符。
 
-* `AND`
-* `OR`
-* `XOR`
-* `NOT`
-
-
-
-
+- `AND`
+- `OR`
+- `XOR`
+- `NOT`
 
 ```html
 <html>
@@ -262,7 +248,10 @@ echo !$x . "\n";
 </body>
 </html>
 ```
-`php main.php`
+
+```bash
+php main.php
+```
 
 ```html
 <html>
@@ -273,13 +262,11 @@ echo !$x . "\n";
 </html>
 ```
 
-# PHP 条件语句
+## PHP 条件语句
 
-PHP Conditionals conditionals
+PHP 条件语句会改变程序的执行流。它们允许你对不同的事物提出某些问题，然后以多种方式对答案做出响应。条件语句在动态网站页面中占据着核心位置，因为它们让观众每次访问你的网页时都能轻松获得不同的输出。条件语句有三种类型：`if` 语句、`?` 运算符和 `switch` 语句。
 
-PHP 条件语句（原文此处重复了 conditionals）会改变程序的执行流。它们允许你对不同的事物提出某些问题，然后以多种方式对答案做出响应。条件语句在动态网站页面中占据着核心位置，因为它们让观众每次访问你的网页时都能轻松获得不同的输出。条件语句有三种类型：`if` 语句、`?` 运算符和 `switch` 语句。
-
-## if 语句
+### if 语句
 
 控制程序流的一种方法是使用 `if` 语句。`if` 语句的内容可以是一个有效的 PHP 表达式，包括比较、等值以及函数的返回值。当你希望让 PHP 在 `if` 条件为真（TRUE）时执行的操作，需要放在大括号 `{}` 中。如果你只需要执行一条语句，可以忽略大括号。然而，如果你始终使用大括号，你就可以避免寻找那些难以排查的 bug。
 
@@ -299,7 +286,7 @@ if ($my_account_balance < 1000) {
 </html>
 ```
 
-## else 语句
+### else 语句
 
 当条件语句不为真（TRUE）时，你可能需要继续执行主代码，但你可能也想做其他事情。这就是 `else` 语句大显身场的地方。在 `if-else` 语句的帮助，如果条件为真，则执行第一个条件语句；如果为假（FALSE），则执行第二个。两个选择中必须有一个被执行。在当前情况下，两个都会执行。下面的示例展示了 `if-else` 结构。
 
@@ -320,7 +307,10 @@ if ($greetings_time < "12") {
 </body>
 </html>
 ```
-`php main.php`
+
+```bash
+php main.php
+```
 
 ```html
 <html>
@@ -331,7 +321,7 @@ if ($greetings_time < "12") {
 </html>
 ```
 
-## if….elseif….else 语句
+### if….elseif….else 语句
 
 这种结构比前两个要长，并且为两个以上的条件执行多段代码。它非常适合测试多种可能性。查看下面的示例中代码是如何工作的。
 
@@ -354,7 +344,10 @@ if ($greetings_time < "12") {
 </body>
 </html>
 ```
-`php main.php`
+
+```bash
+php main.php
+```
 
 ```html
 <html>
@@ -386,7 +379,10 @@ if ($greetings_time < "12") {
 </body>
 </html>
 ```
-`php main.php`
+
+```bash
+php main.php
+```
 
 ```html
 <html>
@@ -398,6 +394,8 @@ if ($greetings_time < "12") {
 ```
 
 我将用 `15` 填充代码。
+
+
 
 ```html
 <html>
@@ -483,7 +481,7 @@ switch ($states) {
 </html>
 ```
 
-替代语法
+### 替代语法
 
 有一种你可以使用的替代语法来获得相同的结果。你可以将大括号替换为单冒号和 `endswitch` 命令。它的工作方式和之前一样。
 
@@ -524,9 +522,6 @@ endswitch;
 </body>
 </html>
 ```
-
-
-
 
 # 第三章：PHP 循环
 
@@ -592,7 +587,7 @@ php main.php
 </html>
 ```
 
-你可以看到，循环只有在条件为假时才会停止。我们可以通过从最后一行切掉 `++$a` 并将其放在 `while` 关键字旁边的括号内来改变 `while` 循环。这样它就变成了 `while` 循环条件表达式的一部分。PHP 在所有 `while` 循环迭代开始时都会检查 `$a` 变量，在此之前观察到它首先递增了变量并与其值进行比较。唯一的区别是循环将从二开始。要将其调整为一，你需要对变量的初始值进行调整。
+你可以看到，循环只有在条件为假时才会停止。我们可以通过从最后一行切掉 `++$a` 并将其放在 `while` 关键字旁边的括号内来改变 `while` 循环。这样它就变成了 `while` 循环条件表达式的一部分。PHP 在所有 `while` 循环迭代开始时都会检查 `$a` 变量，在此之前观察到它首先递增了变量并与其值进行了比较。唯一的区别是循环将从二开始。要将其调整为一，你需要对变量的初始值进行调整。
 
 ```html
 <html>
@@ -732,6 +727,8 @@ php main.php
 ```bash
 php main.php
 ```
+
+
 
 ```html
 <html>
@@ -925,10 +922,6 @@ php main.php
 </html>
 ```
 
-
-
-
-
 ### continue 语句
 
 `continue` 语句的作用与 `break` 语句类似，它们都会中断迭代。如果条件为真，它会中断当前循环，但继续执行剩余的代码，而不是直接跳出循环。这就像是在旅途中途暂停片刻，然后继续出发。
@@ -997,6 +990,8 @@ The do...while loop will go on.
 ## while 循环中的 break 和 continue 语句
 
 在上面的代码中，你看到了 `for` 循环中 `break` 和 `continue` 语句的使用。现在我将解释如何在 `while` 循环中整合这两个语句。
+
+
 
 ```html
 <html>
@@ -1105,10 +1100,6 @@ The requisite value of the variable a should be: 9
 </body>
 </html>
 ```
-
-
-
-
 
 # 定义函数
 
@@ -1312,10 +1303,6 @@ echo "26 + 42 = " . summing(26, 42);
 ?>
 ```
 
-
-
-
-
 # 第五章：PHP 数组
 
 数组被定义为一组相关的值的集合。它们可以是特定形式提交的数据，例如班级学生的姓名或城市人口列表。本章将引导你如何使用数组。你将学习如何使用 `for` 和 `foreach` 循环来遍历数组。修改数组可能会引入 `explode()` 和 `implode()` 函数，它们可以将不同的数组转换为字符串，并将将字符串转换为数组。你还可以对数组进行排序。
@@ -1337,7 +1324,10 @@ echo "Today I plan to cook " . $vegetables[7] . "\n";
 数组是一种特殊的变量，可以在特定时期内保存多个值。
 
 ## 数组的长度
+
 PHP 允许你通过 `count()` 函数计算数组的长度。
+
+
 
 ```php
 $vegetables = array("pumpkin", "tomato", "potato", "cabbage", "cauliflower", "ginger", "turmeric", "peas");
@@ -1345,6 +1335,7 @@ echo count($vegetables);
 ```
 
 ## PHP 索引数组
+
 你可以通过两种方式创建索引数组。你可以通过从 0 开始自动分配索引。你已经在上面的示例中看到了一种方法。我将在接下来的示例中解释另一种方法。
 
 ```php
@@ -1367,7 +1358,8 @@ echo "Today I plan to cook " . $vegetables[7] . "\n";
 ```
 
 ### 遍历索引数组
-你可以遍历索引数组并逐个打印值。我将索引数组与 `for` 循环配合使用以产生我需要的结果。
+
+你可以遍历索引数组并逐个打印值。我将索引数组与`for`循环配合使用以产生我需要的结果。
 
 ```php
 $vegetables = array("pumpkin", "tomato", "potato", "cabbage", "cauliflower", "ginger", "turmeric", "peas");
@@ -1386,6 +1378,7 @@ for($a = 0; $a < $arrlength; $a++) {
 ```
 
 ## PHP 关联数组
+
 关联数组使用命名的键。你可以为它们分配任何名称。你可能通过两种方式创建关联数组。
 
 ```php
@@ -1412,7 +1405,8 @@ echo "Today I plan to cook " . $vegetables['peas'] . "\n";
 ```
 
 ### 遍历关联数组
-在下面的示例中，我将遍历上面创建的关联数组。我将使用 `foreach` 循环来实现。
+
+在下面的示例中，我将遍历上面创建的关联数组。我将使用`foreach`循环来实现。
 
 ```php
 $vegetablesfruits = array(
@@ -1432,6 +1426,7 @@ foreach($vegetablesfruits as $x => $x_value) {
 ```
 
 ## 多维数组
+
 多维数组是包含多个数组的数组。PHP 支持深度为四或六层的数组。当你处理二维数组时，你可能需要两个索引来选择特定元素。当你处理三维数组时，你可能需要三个索引。我将创建一个三列的数组；第一列表示汽车名称，第二列表示库存，第三列表示售出的数量。
 
 ```php
@@ -1451,7 +1446,7 @@ echo $middleclasscars[4][0].": The cars that are in stock: ".$middleclasscars[4]
 echo $middleclasscars[5][0].": The cars that are in stock: ".$middleclasscars[5][1].", The cars that have been sold: ".$middleclasscars[5][2].\n";
 ```
 
-现在我将在另一个 `for` 循环内部添加一个 `for` 循环。
+现在我将在另一个`for`循环内部添加一个`for`循环。
 
 ```php
 $middleclasscars = array (
@@ -1473,6 +1468,7 @@ for ($rows = 0; $rows < 6; $rows++) {
 ```
 
 ## 数组排序
+
 ```php
 $vegetables = array("pumpkin", "tomato", "potato", "cabbage", "cauliflower", "ginger", "turmeric", "peas");
 sort($vegetables);
@@ -1484,6 +1480,7 @@ for($x = 0; $x < $length; $x++) {
 ```
 
 ### 下面的示例将数组降序排序。
+
 ```php
 $vegetables = array("pumpkin", "tomato", "potato", "cabbage", "cauliflower", "ginger", "turmeric", "peas");
 rsort($vegetables);
@@ -1493,7 +1490,8 @@ for($x = 0; $x < $length; $x++) {
 }
 ```
 
-### 下面使用 `asort` 关键字将数组升序排序。
+### 下面使用`asort`关键字将数组升序排序。
+
 ```php
 $vegetables = array("pumpkin", "tomato", "potato", "cabbage", "cauliflower", "ginger", "turmeric", "peas");
 asort($vegetables);
@@ -1505,6 +1503,7 @@ for($x = 0; $x < $length; $x++) {
 ```
 
 ### 下面的示例将根据键对数组进行排序。
+
 ```php
 $vegetablesfruits = array(
     "pumpkin" => "vegetable", 
@@ -1523,7 +1522,8 @@ foreach($vegetablesfruits as $x => $x_value) {
 }
 ```
 
-### 现在我将按值降序排序。其关键字是 `arsort()`。
+### 现在我将按值降序排序。其关键字是`arsort()`。
+
 ```php
 $vegetablesfruits = array(
     "pumpkin" => "vegetable", 
@@ -1542,7 +1542,8 @@ foreach($vegetablesfruits as $x => $x_value) {
 }
 ```
 
-### 这将按键降序排序。我将使用 `krsort` 关键字作为目的。
+### 这将按键降序排序。我将使用`krsort`关键字作为目的。
+
 ```php
 $vegetablesfruits = array(
     "pumpkin" => "vegetable", 
@@ -1561,17 +1562,13 @@ foreach($vegetablesfruits as $x => $x_value) {
 }
 ```
 
-
-
-
-
 # 第六章：PHP 超全局变量
 
 超全局变量基本上是内置变量，它们在不同的作用范围内都是可用的。我将在后面的代码示例中讨论每一个变量，并看看它们能做什么。
 
-## PHP $GLOBALS
+## PHP `$GLOBALS`
 
-`$GLOBALS` 是 PHP 中的一个超变量，你可以用它从 PHP 脚本的任何位置（如方法和函数）访问不同的全局变量。PHP 倾向将变量存储在名为 `$GLOBALS[$index]` 的数组中。索引即变量的名称。
+`$GLOBALS` 是 PHP 中的一个超变量，你可以用它从 PHP 脚本的任何位置（如方法和函数）访问不同的全局变量。PHP 倾向将变量存储在名为`$GLOBALS[$index]`的数组中。索引即变量的名称。
 
 ```php
 <!DOCTYPE html>
@@ -1603,414 +1600,25 @@ main.php
 </html>
 ```
 
-## PHP 超全局变量 = $_SERVER
+## PHP 超全局变量 = `$_SERVER`
 
 超全局变量是某种内置变量，它们在不同的作用范围内都是可用的。`$_SERVER` 包含了关于路径、标头和脚本位置的信息。
 
-```html
-<!DOCTYPE html>
-<html>
-<body>
-<form method="post your information" action="<?php echo $_SERVER['PHP_SELF'];?>">
-    Name: <input type="text" name="firstname">
-    <input type="Please submit here">
-</form>
-<?php
-if ($_SERVER["REQUEST"] == "POST") {
-    $uname = $_REQUEST['firstname'];
-    if (empty($uname)) {
-        echo "Name is currently empty. Please fill in the requisite information.";
-    } else {
-        echo $uname ;
-    }
-}
-?>
-</body>
-</html>
+
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
 ```
-
-```php
-main.php
-```
-
-```html
-<DOCTYPE html>
-<html>
-<body>
-<form method="post your information" action="main.php">
-    Name: <input type="text" name="firstname">
-    <input type="Please submit here">
-</form>
-</body>
-</html>
-```
-
-## PHP $_POST 变量
-
-`$_POST` 是超全局变量，你可以用它在提交 HTML 表单后收集数据。你可以用它传递不同的变量。下面的示例显示了一个带有输入框和提交按钮的表单。当用户点击按钮提交数据时，表单数据将处理到你在 HTML 表单的 action 属性中指定的文件中。
-
-```html
-<!DOCTYPE html>
-<html>
-<body>
-<form method="post your information" action="<?php echo $_SERVER['PHP_SELF'];?>">
-    Name: <input type="text" name="firstname">
-    <input type="Please submit here">
-</form>
-<?php
-if ($_SERVER["REQUEST"] == "POST") {
-    $uname = $_POST['firstname'];
-    if (empty($uname)) {
-        echo "Name is currently empty. Please fill in the requisite information.";
-    } else {
-        echo $uname;
-    }
-}
-?>
-</body>
-</html>
-```
-
-```php
-main.php
-```
-
-```html
-<DOCTYPE html>
-<html>
-<body>
-<form method="post your information" action="main.php">
-    Name: <input type="text" name="firstname">
-    <input type="Please submit here">
-</form>
-</body>
-</html>
-```
-
-# 交互式 PHP 编程
-
-在本节中，我将逐一讨论各种功能，以便你轻松掌握这些概念。
-
-## PHP 日期与时间
-
-```php
-<!DOCTYPE html>
-<html>
-<body>
-<?php
-echo "The date as of today is " . date("Y/m/d") . "\n";
-echo "The date as of today is " . date("Y.m.d") . "\n";
-echo "The date as of today is " . date("Y-m-d") . "\n";
-echo "The date as of today is " . date("l");
-?>
-</body>
-</html>
-```
-
-```php
-main.php
-```
-
-```html
-<!DOCTYPE html>
-<html>
-<body>
-The date as of today is 2020/12/31
-The date as of today is 2020.1231
-The date as of today is 2020-12-31
-The date as of today is Thursday
-</body>
-</html>
-```
-
-通过使用代码，你可以为网站添加不同格式的日期。这将赋予网站风格。你还可以通过简单的代码为网站添加版权符号。
-
-```php
-<!DOCTYPE html>
-<html>
-<body>
-© 2004-<?php echo date("Y");?>
-</body>
-</html>
-```
-
-```php
-main.php
-```
-
-```html
-<!DOCTYPE html>
-<html>
-<body>
-© 2004-2020
-</body>
-</html>
-```
-
-你可以编写并将以下代码添加到网站中，向用户显示时间。
-
-```php
-<!DOCTYPE html>
-<html>
-<body>
-<?php
-echo "My dear visitor, the time at the moment is " . date("h:i:sa");
-?>
-</body>
-</html>
-```
-
-```php
-main.php
-```
-
-```html
-<!DOCTYPE html>
-<html>
-<body>
-My dear visitor, the time at the moment is 10:13:16am
-</body>
-</html>
-```
-
-# 第七章：面向对象编程
-
-普通的过程化编程围绕着编写简单的过程或函数来执行简单的数据操作。与之相比，面向对象编程围绕着包含数据和函数的对象。在转向高级 PHP 编程时，你必须考虑面向对象编程的几个优点。
-
-- 面向对象编程提高了编码和执行速度。
-- 面向对象编程为程序提供了良好的结构。
-- 面向对象编程有助于保持代码整洁，同时也让代码维护变得容易。
-- 面向对象编程使代码调试变得更容易。
-- 面向对象编程帮助你创建可以重复使用的应用程序。因此它缩短了代码量和开发时间。
-
-
-
-
-
-## PHP 类
-
-## 类定义
-我将创建一个名为 `Guns` 的类。它将拥有不同的属性，如 `name`、`capacity`、`color` 和 `weight`。我会定义不同的变量如 `$gname`、 `$gcapacity`、 `$gcolor` 和 `$gweight` 来存储属性的特定值。当我创建单个对象时，它们都将继承类的属性和行为。在创建类的第一步中，你必须定义它。你可以使用 `class` 关键字来定义类，后面可以跟类名和花括号。以下是定义的 `Guns` 类：
-
-```php
-<?php
-class Guns {
-    // 类属性
-    public $gname;
-    public $gcolor;
-    public $gcapacity;
-    public $gweight;
-
-    // 类方法
-    function setting_the_name($gname) {
-        $this->gname = $gname;
-    }
-    function getting_the_name() {
-        return $this->gname;
-    }
-    function setting_the_color($gcolor) {
-        $this->gcolor = $gcolor;
-    }
-    function getting_the_color() {
-        return $this->gcolor;
-    }
-    function setting_the_capacity($gcapacity) {
-        $this->gcapacity = $gcapacity;
-    }
-    function getting_the_capacity() {
-        return $this->gcapacity;
-    }
-    function setting_the_weight($gweight) {
-        $this->gweight = $gweight;
-    }
-    function getting_the_weight() {
-        return $this->gweight;
-    }
-}
-?>
-```
-
-## 对象
-现在我已经定义了类，可以继续构建对象了。我可以根据程序需求创建一个或多个对象。每个对象都拥有类中定义的所有方法和属性，但它们的属性值会有不同。你可以使用 `new` 关键字来创建类的实例。看以下示例：
-
-```php
-$bazooka = new Guns();
-$revolver = new Guns();
-$bazooka->setting_the_name('This is a hard-hitting bazooka ready for waging war.');
-$revolver->setting_the_name('This is a revolver to kill the guards at the gates.');
-echo $bazooka->getting_the_name();
-echo "\n";
-echo $revolver->getting_the_name();
-```
-
-##为 Guns 类添加方法
-在下面的示例中，我将通过添加更多方法来扩展该类。
-
-```php
-<?php
-class Guns {
-    // ... 属性和方法 ...
-}
-$bazooka = new Guns();
-$revolver = new Guns();
-$bazooka->setting_the_name('This is a hard-hitting bazooka ready for waging war.');
-$bazooka->setting_the_color('The color of my bazooka is black.');
-$bazooka->setting_the_capacity('I can load up to six rockets to my bazooka. This is a beast for the enemy.');
-echo "Name of the bazooka : " . $bazooka->getting_the_name();
-echo "\n";
-echo "Color of the bazooka : " . $bazooka->getting_the_color();
-echo "\n";
-echo "Capacity of the bazooka : " . $bazooka->getting_the_capacity();
-echo "\n";
-?>
-```
-
-## 添加多个实例
-在下面的代码段中，我将为同一个类添加两个以上的以上的实例。
-
-```php
-$bazooka = new Guns();
-$revolver = new Guns();
-$Ak47 = new Guns();
-$shotgun = new Guns();
-$bazooka->setting_the_name('This is a hard-hitting bazooka ready for waging war.');
-$revolver->setting_the_name('This is a revolver to kill the guards at the gates.');
-// ... 其他实例 ...
-```
-
-## PHP __construct 函数
-PHP 构造函数允许你在创建对象时初始化对象的属性。如果你创建了一个 `__construct()` 函数，PHP 将会在你构建对象时调用该函数。构造函数以两个下划线（`__`）开头。
-
-```php
-<?php
-class Guns {
-    public $gname;
-    public $gcolor;
-    public $gcapacity;
-
-    public function __construct($gname, $gcolor, $gcapacity) {
-        $this->gname = $gname;
-        $this->gcolor = $gcolor;
-        $this->gcapacity = $gcapacity;
-    }
-    // ... 方法 ...
-}
-?>
-```
-
-## PHP __destruct 函数
-析构函数通常在你需要销毁之前创建的对象时调用。如果你必须停止或退出脚本，也可以调用它。如果你创建了 `__destruct()` 函数，PHP 将会在脚本结束时调用它。
-
-```php
-<?php
-class Guns {
-    public $gname;
-    public $gcolor;
-    public $gcapacity;
-
-    public function __construct($gname, $gcolor, $gcapacity) {
-        $this->gname = $gname;
-        $this->gcolor = $gcolor;
-        $this->gcapacity = $gcapacity;
-    }
-    public function __destruct() {
-        echo "$this->gname\n";
-        echo "$this->gcolor\n";
-        echo "$this->gcapacity\n";
-    }
-}
-?>
-```
-
-## 继承
-继承允许子类使用父类的属性和方法。使用 `extends` 关键字可以定义子类。PHP 子类可以继承父类的方法。子类可以重写父类的方法。你可以使用 `parent` 关键字来访问父类的方法。
-
-```php
-<?php
-class Animal {
-    public $name;
-    public function speak() {
-        echo "{$this->name makes a sound";
-    }
-}
-
-class Dog extends Animal {
-    public function speak() {
-        echo "{$this->name barks";
-    }
-}
-
-$dog = new Dog();
-$dog->name = "John";
-$dog->speak();
-?>
-```
-
-## 访问修饰符
-访问修饰符用于控制属性和属性的可见性。PHP 有三种主要的修饰符：`public`（任何地方可见）、`protected`（在类及其子类中可见）和 `private`（仅在类内部可见）。
-
-```php
-<?php
-class BaseClass {
-    public $public;
-    protected $protected;
-    private $private;
-
-    public function __construct($p, $pr, $s) {
-        $this->public = $p;
-        $this->protected = $pr;
-        $this->private = $s;
-    }
-}
-
-class DerivedClass extends BaseClass {
-    public function display() {
-        // 可以访问 public 和 protected 属性
-        echo $this->public;
-        echo $this->protected;
-        // 访问 private 属性会导致错误
-        // echo $this->private;
-    }
-}
-
-$obj = new DerivedClass("public", "protected", "private");
-$obj->display();
-?>
+if (condVar > someVal) {console.log("xxx")}
 ```
 
 
-
-
-
-# 第八章：在 PHP 中创建数据库
-
-MySQL 是你可以在网站上使用的数据库。你必须将其连接到服务器才能成功运行。你可以以表格的形式在 MySQL 或 SQL 数据库中存储数据。表格是相互相关数据的集合，由行和列组成。你可以使用数据库对信息进行分类。公司可以建立如客户、员工、产品和订单等表格的数据库。你需要下载带有 MySQL 数据库的 PHP 服务器，你可以从互联网免费下载。MySQL 用于存储海量数据。
-
-## 建立连接
-
-第一步是在 PHP 和数据库之间建立连接。
-
-```php
-<!DOCTYPE html>
-<html>
-<body>
-<?php
-$theservername = "this is a localhost";
-$theusername = "this is the username box";
-$thepassword = "this is the password box";
-// 创建连接
-$myconnection = new mysqli($theservername, $theusername, $thepassword);
-// 检查连接
-if ($myconnection->connect_error) {
-    die("Connection has fully failed: " . $myconnection->connect_error);
-}
-echo "You have been connected successfully to the database";
-?>
-</body>
-</html>
-```
-
-`$php main.php`
 
 ```
 Connection has fully failed: php_network_getaddresses: getaddrinfo failed: Name or service not known
@@ -2167,7 +1775,7 @@ $myconnection->close();
 
 ## SQL 列选择
 
-以下语句将从表格中选择列。我将使用 `select` 命令来解释它的工作原理。`BuyingDetails` 数据库所示：
+以下语句将从表格中选择列。我将使用`select`命令来解释它的工作原理。`BuyingDetails`数据库所示：
 
 | Serial | BuyerName | PostalAddress | Age | Namecountry | MoneySpent |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -2181,11 +1789,6 @@ $myconnection->close();
 | 8 | Justin Goldminer | Street 10 Trafalgar Square | 30 | Canada | 10000 |
 | 9 | Sylvinia Marko | Street 34 Nion Valley | 33 | United Kingdom | 15000 |
 | 10 | Adam Toffin | Street 55 Nion Valley | 21 | United Kingdom | 55000 |
-
-
-
-
-
 | 10 | Adam Toffin | Street 55 Nion Valley | 21 | United Kingdom | 55000 |
 
 命令如下：`SELECT BuyerName, Nameofcountry FROM BuyingDetails`
@@ -2203,7 +1806,7 @@ $myconnection->close();
 | Sylvinia Marko | United Kingdom |
 | Adam Toffin | United Kingdom |
 
-如果你不确定需要处理哪一列，可以使用 `*` 命令来选择表格中的所有列。原始表格如下：
+如果你不确定需要处理哪一列，可以使用`*`命令来选择表格中的所有列。原始表格如下：
 
 | Serial# | BuyerName | PostalAddress | Age | Nameofcountry | MoneySpent |
 | --- | --- | --- | --- | --- | --- |
@@ -2233,16 +1836,14 @@ $myconnection->close();
 | 9 | Sylvinia Marko | Street 34 Nion Valley | 33 | United Kingdom | 15000 |
 | 10 | Adam Toffin | Street 55 Nion Valley | 21 | United Kingdom | 55000 |
 
-该命令已经选择了表格中的所有列。这是查看所有列详情最简单的方法。你可以从这里记录下列名，并使用相同的 `SELECT` 命令选择所需的列。另一种名为 `DISTINCT` 的语法用于消除数据库中的重复条目，这样你就可以避免在重复读取相同条目上浪费时间。
-
-
-
-
+该命令已经选择了表格中的所有列。这是查看所有列详情最简单的方法。你可以从这里记录下列名，并使用相同的`SELECT`命令选择所需的列。另一种名为`DISTINCT`的语法用于消除数据库中的重复条目，这样你就可以避免在重复读取相同条目上浪费时间。
 
 在下面的示例中，我将选取来自的买家。以下是命令：
 
+
+
 ```sql
-SELECT * FROM BuyingDetails WHERE Nameofcountry = ‘United Kingdom’ ;
+SELECT * FROM BuyingDetails WHERE Nameofcountry = 'United Kingdom' ;
 ```
 
 这是原始形式的表格。
@@ -2267,7 +1868,7 @@ SELECT * FROM BuyingDetails WHERE Nameofcountry = ‘United Kingdom’ ;
 | 9 | Sylvinia Marko | Street 34 Nion Valley | 33 | United Kingdom | 15000 |
 | 10 | Adam Toffin | Street 55 Nion Valley | 21 | United Kingdom | 55000 |
 
-文本：你可以根据 `serial` 列的编号来选择行。这是其原始形式的表格。
+文本：你可以根据`serial`列的编号来选择行。这是其原始形式的表格。
 
 | Serial# | BuyerName | PostalAddress | Age | Nameofcountry | MoneySpent |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -2304,7 +1905,7 @@ SELECT * FROM BuyingDetails WHERE Serial#=1; WHERE Serial#=2; WHERE Serial#=3; W
 SQL `AND`、`OR` 操作符与 `AND`、`OR` 子句配合使用。你可以使用这些子句过滤表格。这是表格当前的状态。
 
 ```sql
-SELECT * FROM BuyingDetails WHERE Nameofcountry=United States’ AND Moneyspent=1000;
+SELECT * FROM BuyingDetails WHERE Nameofcountry=United States' AND Moneyspent=1000;
 ```
 
 | Serial# | BuyerName | PostalAddress | Age | Nameofcountry | MoneySpent |
@@ -2328,7 +1929,7 @@ SELECT * FROM BuyingDetails WHERE Nameofcountry=United States’ AND Moneyspent=
 | 10 | Adam Toffin | Street 55 Nion Valley | 21 | United Kingdom | 55000 |
 
 ```sql
-SELECT * FROM Buyingdetails WHERE Nameofcountry=‘United States’ OR Moneyspent= 55000;
+SELECT * FROM Buyingdetails WHERE Nameofcountry='United States' OR Moneyspent= 55000;
 ```
 
 | Serial# | BuyerName | PostalAddress | Age | Nameofcountry | MoneySpent |
@@ -2356,132 +1957,129 @@ SELECT * FROM Buyingdetails WHERE Nameofcountry=‘United States’ OR Moneyspen
 | 9 | Sylvinia Marko | Street 34 Nion Valley | 33 | United Kingdom | 15000 |
 | 10 | Adam Toffin | Street 55 Nion Valley | 21 | United Kingdom | 55000 |
 
-
-
-
-
-| 10  || Adam Toffin  || Street 55 Nion Valley  || 21  || United Kingdom  || 55000  |
-
 `NOT` 子句如下：
 
 ```
-SELECT * FROM Buyingdetails WHERE NOT Nameofcountry = ‘Spain’;
+SELECT * FROM Buyingdetails WHERE NOT Nameofcountry = 'Spain';
 ```
 
-| Serial#  || BuyerName  || PostalAddress  || Age  || Nameofcountry  || MoneySpent  |
+| Serial# | BuyerName | PostalAddress | Age | Nameofcountry | MoneySpent |
 | --- | --- | --- | --- | --- | --- |
-| 1  || Temeria Fellar  || Street 7 Orington  || 45  || United States  || 1000  |
-| 2  || Pastor Kemari  || Street 10 Ontario  || 55  || Canada  || 500  |
-| 3  || Tim Miller  || Street 55 Irina  || 45  || United States  || 1500  |
-| 4  || Jasmine Tim Kesan  || Street 87  || 20  || Sweden  || 2000  |
-| 6  || Mark Flagrar  || Street 90 Time Square  || 25  || United States  || 18000  |
-| 7  || Stanley Cooper  || Street 45 Insta Debian  || 33  || Italy  || 15000  |
-| 8  || Justin Goldminer  || Street 10 Trafalgar Square  || 30  || Canada  || 10000  |
-| 9  || Sylvinia Marko  || Street 34 Nion Valley  || 33  || United Kingdom  || 15000  |
-| 10  || Adam Toffin  || Street 55 Nion Valley  || 21  || United Kingdom  || 55000  |
+| 1 | Temeria Fellar | Street 7 Orington | 45 | United States | 1000 |
+| 2 | Pastor Kemari | Street 10 Ontario | 55 | Canada | 500 |
+| 3 | Tim Miller | Street 55 Irina | 45 | United States | 1500 |
+| 4 | Jasmine Tim Kesan | Street 87 | 20 | Sweden | 2000 |
+| 6 | Mark Flagrar | Street 90 Time Square | 25 | United States | 18000 |
+| 7 | Stanley Cooper | Street 45 Insta Debian | 33 | Italy | 15000 |
+| 8 | Justin Goldminer | Street 10 Trafalgar Square | 30 | Canada | 10000 |
+| 9 | Sylvinia Marko | Street 34 Nion Valley | 33 | United Kingdom | 15000 |
+| 10 | Adam Toffin | Street 55 Nion Valley | 21 | United Kingdom | 55000 |
 
 ### 双重 NOT 子句 (Double Not Clause)
+
 你已经看到我们如何使用 `NOT` 子句来移除元素。然而，如果你必须排除两个条件，可以使用双重 `NOT` 子句。表格恢复到原始状态，如下：
 
-| Serial#  || BuyerName  || PostalAddress  || Age  || Nameofcountry  || MoneySpent  |
+| Serial# | BuyerName | PostalAddress | Age | Nameofcountry | MoneySpent |
 | --- | --- | --- | --- | --- | --- |
-| 1  || Temeria Fellar  || Street 7 Orington  || 45  || United States  || 1000  |
-| 2  || Pastor Kemari  || Street 10 Ontario  || 55  || Canada  || 500  |
-| 3  || Tim Miller  || Street 55 Irina  || 45  || United States  || 1500  |
-| 4  || Jasmine Tim Kesan  || Street 87  || 20  || Sweden  || 2000  |
-| 5  || Kevin Nevada  || Street 76 Kevada Olumpur  || 15  || Spain  || 5000  |
-| 6  || Mark Flagrar  || Street 90 Time Square  || 25  || United States  || 18000  |
-| 7  || Stanley Cooper  || Street 45 Insta Debian  || 33  || Italy  || 15000  |
-| 8  || Justin Goldminer  || Street 10 Trafalgar Square  || 30  || Canada  || 10000  |
-| 9  || Sylvinia Marko  || Street 34 Nion Valley  || 33  || United Kingdom  || 15000  |
-| 10  || Adam Toffin  || Street 55 Nion Valley  || 21  || United Kingdom  || 55000  |
+| 1 | Temeria Fellar | Street 7 Orington | 45 | United States | 1000 |
+| 2 | Pastor Kemari | Street 10 Ontario | 55 | Canada | 500 |
+| 3 | Tim Miller | Street 55 Irina | 45 | United States | 1500 |
+| 4 | Jasmine Tim Kesan | Street 87 | 20 | Sweden | 2000 |
+| 5 | Kevin Nevada | Street 76 Kevada Olumpur | 15 | Spain | 5000 |
+| 6 | Mark Flagrar | Street 90 Time Square | 25 | United States | 18000 |
+| 7 | Stanley Cooper | Street 45 Insta Debian | 33 | Italy | 15000 |
+| 8 | Justin Goldminer | Street 10 Trafalgar Square | 30 | Canada | 10000 |
+| 9 | Sylvinia Marko | Street 34 Nion Valley | 33 | United Kingdom | 15000 |
+| 10 | Adam Toffin | Street 55 Nion Valley | 21 | United Kingdom | 55000 |
 
 以下语句将选择表中所有国家为 `NOT` 西班牙且不是 `NOT` 意大利的字段。
 
-| Serial#  || BuyerName  || PostalAddress  || Age  || Nameofcountry  || MoneySpent  |
-| --- | --- | --- | --- | --- | --- |
-| 1  || Temeria Fellar  || Street 7 Orington  || 45  || United States  || 1000  |
-| 2  || Pastor Kemari  || Street 10 Ontario  || 55  || Canada  || 500  |
-| 3  || Tim Miller  || Street 55 Irina  || 45  || United States  || 1500  |
-| 4  || Jasmine Tim Kesan  || Street 87  || 20  || Sweden  || 2000  |
-| 6  || Mark Flagrar  || Street 90 Time Square  || 25  || United States  || 18000  |
-| 8  || Justin Goldminer  || Street 10 Trafalgar Square  || 30  || Canada  || 10000  |
-| 9  || Sylvinia Marko  || Street 34 Nion Valley  || 33  || United Kingdom  || 15000  |
-| 10  || Adam Toffin  || Street 55 Nion Valley  || 21  || United Kingdom  || 55000  |
 
-### 解密 SQL ORDER BY 关键字
+
+| Serial# | BuyerName | PostalAddress | Age | Nameofcountry | MoneySpent |
+| --- | --- | --- | --- | --- | --- |
+| 1 | Temeria Fellar | Street 7 Orington | 45 | United States | 1000 |
+| 2 | Pastor Kemari | Street 10 Ontario | 55 | Canada | 500 |
+| 3 | Tim Miller | Street 55 Irina | 45 | United States | 1500 |
+| 4 | Jasmine Tim Kesan | Street 87 | 20 | Sweden | 2000 |
+| 6 | Mark Flagrar | Street 90 Time Square | 25 | United States | 18000 |
+| 8 | Justin Goldminer | Street 10 Trafalgar Square | 30 | Canada | 10000 |
+| 9 | Sylvinia Marko | Street 34 Nion Valley | 33 | United Kingdom | 15000 |
+| 10 | Adam Toffin | Street 55 Nion Valley | 21 | United Kingdom | 55000 |
+
+## 解密 SQL ORDER BY 关键字
+
 `ORDER BY` 关键字通常用于按升序或降序对结果进行排序。`ORDER BY` 关键字将作为默认函数对细节进行排序。你需要使用 `DESC` 关键字将其变为降序。以下是未排序的表格。
 
-| Serial#  || BuyerName  || PostalAddress  || Age  || Nameofcountry  || MoneySpent  |
+| Serial# | BuyerName | PostalAddress | Age | Nameofcountry | MoneySpent |
 | --- | --- | --- | --- | --- | --- |
-| 1  || Temeria Fellar  || Street 7 Orington  || 45  || United States  || 1000  |
-| 2  || Pastor Kemari  || Street 10 Ontario  || 55  || Canada  || 500  |
-| 3  || Tim Miller  || Street 55 Irina  || 45  || United States  || 1500  |
-| 4  || Jasmine Tim Kesan  || Street 87  || 20  || Sweden  || 2000  |
-| 5  || Kevin Nevada  || Street 76 Kevada Olumpur  || 15  || Spain  || 5000  |
-| 6  || Mark Flagrar  || Street 90 Time Square  || 25  || United States  || 18000  |
-| 7  || Stanley Cooper  || Street 45 Insta Debian  || 33  || Italy  || 15000  |
-| 8  || Justin Goldminer  || Street 10 Trafalgar Square  || 30  || Canada  || 10000  |
-| 9  || Sylvinia Marko  || Street 34 Nion Valley  || 33  || United Kingdom  || 15000  |
-| 10  || Adam Toffin  || Street 55 Nion Valley  || 21  || United Kingdom  || 55000  |
+| 1 | Temeria Fellar | Street 7 Orington | 45 | United States | 1000 |
+| 2 | Pastor Kemari | Street 10 Ontario | 55 | Canada | 500 |
+| 3 | Tim Miller | Street 55 Irina | 45 | United States | 1500 |
+| 4 | Jasmine Tim Kesan | Street 87 | 20 | Sweden | 2000 |
+| 5 | Kevin Nevada | Street 76 Kevada Olumpur | 15 | Spain | 5000 |
+| 6 | Mark Flagrar | Street 90 Time Square | 25 | United States | 18000 |
+| 7 | Stanley Cooper | Street 45 Insta Debian | 33 | Italy | 15000 |
+| 8 | Justin Goldminer | Street 10 Trafalgar Square | 30 | Canada | 10000 |
+| 9 | Sylvinia Marko | Street 34 Nion Valley | 33 | United Kingdom | 15000 |
+| 10 | Adam Toffin | Street 55 Nion Valley | 21 | United Kingdom | 55000 |
+
 我将写下命令：
 
-```
+```sql
 SELECT * FROM BuyingDetails ORDER BY Country
 ```
 
-| Serial#  || BuyerName  || PostalAddress  || Age  || Nameofcountry  || MoneySpent  |
+| Serial# | BuyerName | PostalAddress | Age | Nameofcountry | MoneySpent |
 | --- | --- | --- | --- | --- | --- |
-| 8  || Justin Goldminer  || Street 10 Trafalgar Square  || 30  || Canada  || 10000  |
-| 2  || Pastor Kemari  || Street 10 Ontario  || 55  || Canada  || 500  |
-| 7  || Stanley Cooper  || Street 45 Insta Debian  || 33  || Italy  || 15000  |
-| 4  || Jasmine Tim Kesan  || Street 87  || 20  || Sweden  || 2000  |
-| 5  || Kevin Nevada  || Street 76 Kevada Olumpur  || 15  || Spain  || 5000  |
-| 9  || Sylvinia Marko  || Street 34 Nion Valley  || 33  || United Kingdom  || 15000  |
-| 10  || Adam Toffin  || Street 55 Nion Valley  || 21  || United Kingdom  || 55000  |
-| 1  || Temeria Fellar  || Street 7 Orington  || 45  || United States  || 1000  |
-| 6  || Mark Flagrar  || Street 90 Time Square  || 25  || United States  || 18000  |
-| 3  || Tim Miller  || Street 55 Irina  || 45  || United States  || 1500  |
+| 8 | Justin Goldminer | Street 10 Trafalgar Square | 30 | Canada | 10000 |
+| 2 | Pastor Kemari | Street 10 Ontario | 55 | Canada | 500 |
+| 7 | Stanley Cooper | Street 45 Insta Debian | 33 | Italy | 15000 |
+| 4 | Jasmine Tim Kesan | Street 87 | 20 | Sweden | 2000 |
+| 5 | Kevin Nevada | Street 76 Kevada Olumpur | 15 | Spain | 5000 |
+| 9 | Sylvinia Marko | Street 34 Nion Valley | 33 | United Kingdom | 15000 |
+| 10 | Adam Toffin | Street 55 Nion Valley | 21 | United Kingdom | 55000 |
+| 1 | Temeria Fellar | Street 7 Orington | 45 | United States | 1000 |
+| 6 | Mark Flagrar | Street 90 Time Square | 25 | United States | 18000 |
+| 3 | Tim Miller | Street 55 Irina | 45 | United States | 1500 |
 
 我们可以通过根据买家名称对表格进行排序来对 `ORDER BY` 子句进行进一步实验。首先，我将表格恢复到原始形式。
 
-| Serial#  || BuyerName  || PostalAddress  || Age  || Nameofcountry  || MoneySpent  |
+| Serial# | BuyerName | PostalAddress | Age | Nameofcountry | MoneySpent |
 | --- | --- | --- | --- | --- | --- |
-| 1  || Temeria Fellar  || Street 7 Orington  || 45  || United States  || 1000  |
-| 2  || Pastor Kemari  || Street 10 Ontario  || 55  || Canada  || 500  |
-| 3  || Tim Miller  || Street 55 Irina  || 45  || United States  || 1500  |
-| 4  || Jasmine Tim Kesan  || Street 87  || 20  || Sweden  || 2000  |
-| 5  || Kevin Nevada  || Street 76 Kevada Olumpur  || 15  || Spain  || 5000  |
-| 6  || Mark Flagrar  || Street 90 Time Square  || 25  || United States  || 18000  |
-| 7  || Stanley Cooper  || Street 45 Insta Debian  || 33  || Italy  || 15000  |
-| 8  || Justin Goldminer  || Street 10 Trafalgar Square  || 30  || Canada  || 10000  |
-| 9  || Sylvinia Marko  || Street 34 Nion Valley  || 33  || United Kingdom  || 15000  |
-| 10  || Adam Toffin  || Street 55 Nion Valley  || 21  || United Kingdom  || 55000  |
+| 1 | Temeria Fellar | Street 7 Orington | 45 | United States | 1000 |
+| 2 | Pastor Kemari | Street 10 Ontario | 55 | Canada | 500 |
+| 3 | Tim Miller | Street 55 Irina | 45 | United States | 1500 |
+| 4 | Jasmine Tim Kesan | Street 87 | 20 | Sweden | 2000 |
+| 5 | Kevin Nevada | Street 76 Kevada Olumpur | 15 | Spain | 5000 |
+| 6 | Mark Flagrar | Street 90 Time Square | 25 | United States | 18000 |
+| 7 | Stanley Cooper | Street 45 Insta Debian | 33 | Italy | 15000 |
+| 8 | Justin Goldminer | Street 10 Trafalgar Square | 30 | Canada | 10000 |
+| 9 | Sylvinia Marko | Street 34 Nion Valley | 33 | United Kingdom | 15000 |
+| 10 | Adam Toffin | Street 55 Nion Valley | 21 | United Kingdom | 55000 |
 
 这里是完成此任务代码：
 
-```
+```sql
 SELECT * FROM BuyingDetails ORDER BY BuyerName;
 ```
 
-| Serial#  || BuyerName  || PostalAddress  || Age  || Nameofcountry  || MoneySpent  |
+| Serial# | BuyerName | PostalAddress | Age | Nameofcountry | MoneySpent |
 | --- | --- | --- | --- | --- | --- |
-| 10  || Adam Toffin  || Street 55 Nion Valley  || 21  || United Kingdom  || 55000  |
-| 8  || Justin Goldminer  || Street 10 Trafalgar Square  || 30  || Canada  || 10000  |
-| 4  || Jasmine Tim Kesan  || Street 87  || 20  || Sweden  || 2000  |
-| 5  || Kevin Nevada  || Street 76 Kevada Olumpur  || 15  || Spain  || 5000  |
-| 6  || Mark Flagrar  || Street 90 Time Square  || 25  || United States  || 18000  |
-| 2  || Pastor Kemari  || Street 10 Ontario  || 55  || Canada  || 500  |
-| 9  || Sylvinia Marko  || Street 34 Nion Valley  || 33  || United Kingdom  || 15000  |
-| 7  || Stanley Cooper  || Street 45 Insta Debian  || 33  || Italy  || 15000  |
-| 3  || Tim Miller  || Street 55 Irina  || 45  || United States  || 1500  |
-| 1  || Temeria Fellar  || Street 7 Orington  || 45  || United States  || 1000  |
+| 10 | Adam Toffin | Street 55 Nion Valley | 21 | United Kingdom | 55000 |
+| 8 | Justin Goldminer | Street 10 Trafalgar Square | 30 | Canada | 10000 |
+| 4 | Jasmine Tim Kesan | Street 87 | 20 | Sweden | 2000 |
+| 5 | Kevin Nevada | Street 76 Kevada Olumpur | 15 | Spain | 5000 |
+| 6 | Mark Flagrar | Street 90 Time Square | 25 | United States | 18000 |
+| 2 | Pastor Kemari | Street 10 Ontario | 55 | Canada | 500 |
+| 9 | Sylvinia Marko | Street 34 Nion Valley | 33 | United Kingdom | 15000 |
+| 7 | Stanley Cooper | Street 45 Insta Debian | 33 | Italy | 15000 |
+| 3 | Tim Miller | Street 55 Irina | 45 | United States | 1500 |
+| 1 | Temeria Fellar | Street 7 Orington | 45 | United States | 1000 |
 
-ORDER BY DESC 下一个示例将按降序排列表格。表格目前的状态如下：
+### ORDER BY DESC
 
-
-
-
+下一个示例将按降序排列表格。表格目前的状态如下：
 
 | 3 | Tim Miller | Street 55 Irina | 45 | United States | 1500 |
 | 4 | Jasmine Tim Kesan | Street 87 | 20 | Sweden | 2000 |
@@ -2511,7 +2109,7 @@ SELECT * FROM BuyingDetails ORDER BY Nameofcountry DESC;
 | 2 | Pastor Kemari | Street 10 Ontario | 55 | Canada | 500 |
 | 8 | Justin Goldminer | Street 10 Trafalgar Square | 30 | Canada | 10000 |
 
-### SQL 插入语句
+## SQL 插入语句
 
 你可以使用 `INSERT INTO` 语句向现有表格添加新的行和列。我将用我们在所有示例中一直使用的表格真实示例进行演示。
 
@@ -2541,19 +2139,15 @@ INSERT INTO BuyingDetails (BuyerName, PostalAddress, Age, Nameofcountry, MoneySp
 | 3 | Tim Miller | Street 55 Irina | 45 | United States | 1500 |
 | 4 | Jasmine Tim Kesan | Street 87 | 20 | Sweden | 2000 |
 | 5 | Kevin Nevada | Street 76 Kevada Olumpur | 15 | Spain | 5000 |
-| 6 | Mark Flagrar | Street 90 Time Square | 25 | United States | 18000 |
-| 7 | Stanley Cooper | Street 45 Insta Debian | 33 | Italy | 15000 |
-| 8 | Justin Goldminer | Street 10 Trafalgar Square | 30 | Canada | 10000 |
-| 9 | Sylvinia Marko | Street 34 Nion Valley | 33 | United Kingdom | 15000 |
-| 10 | Adam Toffin | Street 55 Nion Valley | 21 | United Kingdom | 55000 |
-| 11 | Eliseh Bentley | Street 45 Aliano Cameo | 33 | Mexico | 5000 |
+
+
 
 ### UPDATE 语句
 
 在这个示例中，我将解释你如何使用 `UPDATE` 语句以及它在构建网站时起什么作用。当你创建一个表格后，可以使用 `UPDATE` 语句刷新特定行和列的详细信息。需要记住的一点是，你不应该省略 `WHERE` 子句，否则你将得到不可预测的结果。你想要的更新将会发生。现在让我们来一些代码。以下是表格的当前状态。
 
 | Serial# | BuyerName | PostalAddress | Age | Nameofcountry | MoneySpent |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Temeria Fellar | Street 7 Orington | 45 | United States | 1000 |
 | 2 | Pastor Kemari | Street 10 Ontario | 55 | Canada | 500 |
 | 3 | Tim Miller | Street 55 Irina | 45 | United States | 1500 |
@@ -2572,7 +2166,7 @@ UPDATE BuyingDetails SET BuyerName = 'Alfred', Nameofcountry = 'Germany' WHERE S
 ```
 
 | Serial# | BuyerName | PostalAddress | Age | Nameofcountry | MoneySpent |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Alfred | Street 7 Orington | 45 | Germany | 1000 |
 | 2 | Pastor Kemari | Street 10 Ontario | 55 | Canada | 500 |
 | 3 | Tim Miller | Street 55 Irina | 45 | United States | 1500 |
@@ -2599,13 +2193,10 @@ UPDATE BuyingDetails SET BuyerName = 'Alfred', Nameofcountry = 'Germany' WHERE S
 | 9 | Sylvinia Marko | Street 34 Nion Valley | 33 | United Kingdom | 15000 |
 | 10 | Adam Toffin | Street 55 Nion Valley | 21 | United Kingdom | 55000 |
 
-
-
-
-以下示例将将国家名从 United Kingdom 更新为 Germany。
+以下示例将将国家名从 `United Kingdom` 更新为 `Germany`。
 
 ```sql
-UPDATE BuyingDetails SET Nameofcountry= ‘Germany’ WHERE Nameofcountry= ‘United States’;
+UPDATE BuyingDetails SET Nameofcountry= 'Germany' WHERE Nameofcountry= 'United States';
 ```
 
 | Serial# | BuyerName | PostalAddress | Age | Nameofcountry | MoneySpent |
@@ -2643,7 +2234,7 @@ UPDATE BuyingDetails SET Nameofcountry= ‘Germany’ WHERE Nameofcountry= ‘Un
 现在我将编写代码但省略 `WHERE` 子句，看看结果如何。
 
 ```sql
-UPDATE BuyingDetails SET Nameofcountry= ‘United States’
+UPDATE BuyingDetails SET Nameofcountry= 'United States'
 ```
 
 | Serial# | BuyerName | PostalAddress | Age | Nameofcountry | MoneySpent |
@@ -2657,7 +2248,9 @@ UPDATE BuyingDetails SET Nameofcountry= ‘United States’
 | 7 | Stanley Cooper | Street 45 Insta Debian | 33 | United States | 15000 |
 | 8 | Justin Goldminer | Street 10 Trafalgar Square | 30 | United States | 10000 |
 | 9 | Sylvinia Marko | Street 34 Nion Valley | 33 | United States | 15000 |
-| 10 | Adam Toffin | Street 55 Nion Valley | 21 | United States | 55000 |当你创建表格并更新它时，可能会遇到这种情况。使用 `WHERE` 子句来删除某些条目。你想要删除的条目。使用 `WHERE` 子句来删除 `DELETE` 状态。
+| 10 | Adam Toffin | Street 55 Nion Valley | 21 | United States | 55000 |
+
+当你创建表格并更新它时，可能会遇到这种情况。使用 `WHERE` 子句来删除某些条目。你想要删除的条目。使用 `WHERE` 子句来删除 `DELETE` 状态。
 
 | Serial# | BuyerName | PostalAddress | Age | Nameofcountry | MoneySpent |
 | --- | --- | --- | --- | --- | --- |
@@ -2693,14 +2286,13 @@ DELETE FROM BuyingDetails;
 
 在某些情况下，你可能想删除所有属性。这包括结构和所有索引。这是目前表的状态。
 
-
-
-
 最重要的重要的是表格将保持完整。只有条目会被删除。
 
-## TOP, ROWNUM, LIMIT 子句
 
-这里有一些有趣的子句可以使用。你可以使用 `SELECT TOP` 来指定返回的条目总数。在处理具有数千条记录的大表时，`SELECT TOP` 子句非常有用。如果你选择返回整个表格，将会降低数据库性能。但是，如果你只返回你想要处理的条目，除非这些数据过大，否则几乎不会影响性能。以下是我将使用 `TOP` 子句的表格。
+
+# TOP、ROWNUM、LIMIT 子句
+
+这里有一些有趣的子句可以使用。你可以使用`SELECT TOP`来指定返回的条目总数。在处理具有数千条记录的大表时，`SELECT TOP`子句非常有用。如果你选择返回整个表格，将会降低数据库性能。但是，如果你只返回你想要处理的条目，除非这些数据过大，否则几乎不会影响性能。以下是我将使用`TOP`子句的表格。
 
 | Serial# | BuyerName | PostalAddress | Age | Nameofcountry | MoneySpent |
 | --- | --- | --- | --- | --- | --- |
@@ -2781,11 +2373,11 @@ SELECT * FROM BuyingDetails WHERE ROWNUM <=7
 | Serial# | BuyerName | PostalAddress | Age | Nameofcountry | MoneySpent |
 | --- | --- | --- | --- | --- | --- |
 | 1 | Temeria Fellar | Street 7 Orington | 45 | United States | 1000 |
-| ... | ... | ... | ... | ... |
+| ... | ... | ... | ... | ... | ... |
 
 ## TOP 50 Percent
 
-Percent 子句在处理处理大型数据库时非常有用。它会选择表格的前 50% 并显示条目。以下是表格。
+`Percent`子句在处理大型数据库时非常有用。它会选择表格的前 50% 并显示条目。以下是表格。
 
 | Serial# | BuyerName | PostalAddress | Age | Nameofcountry | MoneySpent |
 | --- | --- | --- | --- | --- | --- |
@@ -2800,22 +2392,18 @@ Percent 子句在处理处理大型数据库时非常有用。它会选择表格
 | 9 | Sylvinia Marko | Street 34 Nion Valley | 33 | United Kingdom | 15000 |
 | 10 | Adam Toffin | Street 55 Nion Valley | 21 | United Kingdom | 55000 |
 
-`TOP` 子句如下：
+`TOP`子句如下：
 
 ```sql
 SELECT TOP 50 PERCENT * FROM BuyingDetails;
 ```
 
-你可以为 `TOP 50 percent` 子句添加 `WHERE` 子句以获得自定义结果。请参阅以下示例。
-
-
-
-
+你可以为`TOP 50 percent`子句添加`WHERE`子句以获得自定义结果。请参阅以下示例。
 
 | 序号 | 买家姓名 | 邮寄 | 年龄 | 国家 | 消费金额 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Temeria Fellar | Street 7 Orington | 45 | 美国 | 1000 |
-| 2 | Pastor Kemari | Street 10 Ontario | 55 | 加拿 | 500 |
+| 2 | Pastor Kemari | Street 10 Ontario | 55 | 加拿大 | 500 |
 | 3 | Tim Miller | Street 55 Irina | 45 | 美国 | 1500 |
 | 4 | Jasmine Tim Kesan | Street 87 | 20 | 瑞典 | 2000 |
 | 5 | Kevin Nevada | Street 76 Kevada Olumpur | 15 | 西班牙 | 5000 |
@@ -2826,6 +2414,7 @@ SELECT TOP 50 PERCENT * FROM BuyingDetails;
 | 10 | Adam Toffin | Street 55 Nion Valley | 21 | 英国 | 55000 |
 
 以下是代码：
+
 ```sql
 SELECT TOP 2 * FROM BuyingDetails WHERE Nameofcountry= ‘United States’;
 ```
@@ -2851,6 +2440,7 @@ SELECT TOP 2 * FROM BuyingDetails WHERE Nameofcountry= ‘United States’;
 | 10 | Adam Toffin | Street 55 Nion Valley | 21 | 英国 | 55000 |
 
 以下是选择以‘Uni.’开头的特定国家的语句：
+
 ```sql
 SELECT * FROM BuyingDetails WHERE Country LIKE ‘Uni%';
 ```
@@ -2874,11 +2464,11 @@ SELECT * FROM BuyingDetails WHERE Country LIKE ‘Uni%';
 | 5 | Kevin Nevada | Street 76 Kevada Olumpur | 15 | 西班牙 | 5000 |
 | 6 | Mark Flagrar | Street 90 Time Square | 25 | 美国 | 18000 |
 | 7 | Stanley Cooper | Street 45 Insta Debian | 33 | 意大利 | 15000 |
-| 8 | Justin Goldminer | Street 10 Trafalgar Square | 30 | 加拿大 | 10000 |
-| 9 | Sylvinia Marko | Street 34 Nion Valley | 33 | 英国 | 15000 |
-| 10 | Adam Toffin | Street 55 Nion Valley | 21 | 英国 | 55000 |
+
+
 
 以下是语句：
+
 ```sql
 SELECT * FROM BuyingDetails WHERE Nameofcountry LIKE '%dom%';
 ```
@@ -2888,7 +2478,7 @@ SELECT * FROM BuyingDetails WHERE Nameofcountry LIKE '%dom%';
 | 9 | Sylvinia Marko | Street 34 Nion Valley | 33 | 英国 | 15000 |
 | 10 | Adam Toffin | Street 55 Nion Valley | 21 | 英国 | 55000 |
 
-如果你使用 `_` 通配符，你可以更有选择性地查看表格条目。这里是原始格式的表格：
+如果你使用`_`通配符，你可以更有选择性地查看表格条目。这里是原始格式的表格：
 
 | 序号 | 买家姓名 | 邮寄 | 年龄 | 国家 | 消费金额 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -2904,14 +2494,16 @@ SELECT * FROM BuyingDetails WHERE Nameofcountry LIKE '%dom%';
 | 10 | Adam Toffin | Street 55 Nion Valley | 21 | 英国 | 55000 |
 
 这里是通配符语句：
+
 ```sql
 SELECT * FROM BuyingDetails WHERE Nameofcountry LIKE ‘_United Kingdom’;
 ```
 
 ### 结论
+
 现在你已经读到了这本书的最后，下一步是更多的练习。当你将 PHP 与 MySQL 结合时，它并不是一种容易的语言。你需要考虑细节、代码中的细微差别以及禁忌区域。希望这本书已经让你熟练了 PHP 高级编程。我为面向对象编程和数据库留了大量的空间，以便你更进一步，进入函数式编程的世界。
 
 ### 参考文献
+
 - Nixon, R. (2014, June). *Learning PHP, MySQL, JavaScript, CSS & HTML5 X-Files*.
 - PHP `$_REQUEST`. (n.d.). Www.W3schools.com. Retrieved from https://www.w3schools.com/php/php_superglobals_request.asp
-

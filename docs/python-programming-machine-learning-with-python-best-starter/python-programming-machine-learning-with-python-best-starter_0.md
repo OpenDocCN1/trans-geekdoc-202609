@@ -1,16 +1,5 @@
+
 # Python 编程与机器学习：初学者与中级者的最佳入门图解指南：未来已来！
-
-
-
-
-
-
-
-
-
-
-
-
 
 ![数据分析封面](img/image00312.jpeg)
 
@@ -24,8 +13,7 @@
 
 使用上方链接即可获取畅销电子书《初学者数据分析指南》
 
-
-- [reduce 函数]
+- [`reduce` 函数]
 
 # 第 1 章
 
@@ -39,80 +27,99 @@ Python 是一种弱类型的面向对象编程语言，用于执行各种编程�
 
 * 易于学习
 
-
-
-
 Python 凭借其极其简单的语法和松散的类型，是最容易学习的语言之一。与其他语言不同，你不需要学习如何使用无数种括号来指定代码块。你也不会遇到行尾分号错误。最后，在变量存储数据时，你不需要指定变量的类型。这些点对于专家程序员来说可能是微不足道的，但对于编程初学者来说，它们是非常令人望而却步的
 
 ## 开源与大型开发者社区
-Python 是一种开源语言，这意味着它可以用于商业或非商业目的开发、共享和分发应用程序，而不会违反任何版权。此外，Python 大大的开发者社区使得查找问题的解决方案变得更容易。
+
+Python 是一种开源语言，这意味着它可以用于商业或非商业目的开发、共享和分发应用程序，而不会违反任何版权。此外，Python 庞大的开发者社区使得查找问题的解决方案变得更容易。
 
 ## 对 Web 开发的支持
+
 Python 可用于开发网站。事实上，有一些非常优秀的 Python 框架，如 `Django` 和 `Flask`，它们使得服务器端 Web 开发变得更加简单且稳定。
 
 ## 用于数据科学和机器学习
+
 你可能听过“数据即未来”的说法。如果数据真的是未来，那么 Python 无疑是应该学习的语言，因为目前大多数数据科学和机器学习都是通过 Python 实现的。许多机器学习和深度学习库如 `Sklearn`、`Tensorflow`、`Keras`，使得开发复杂的机器学习模型变得非常简单。
 
 ## Python 的重要特性
+
 以下是 Python 的一些重要特性：
 
 ### 源码到字节码
+
 Python 源代码直接编译为字节码，无需任何中间步骤。这使得 Python 脚本可以在多个平台上运行，而不需要任何额外的工具。
 
 ### 面向对象
+
 Python 是一种 100% 面向对象的语言。Python 中的一切都是对象。此外，Python 提供了一种通过类创建新对象的简单方法。
 
 ### 支持 C/C++ 扩展
+
 Python 代码可以用 C 和 C++ 进一步扩展。通过这种方式可以显著提高 Python 程序的速度。
 
 ### 动态语言
+
 Python 是一种动态语言。绑定到类型的值而不是变量。此外，方法和函数的查找是在运行时进行的。
 
 ### 自动垃圾回收
-Python 会自动执行垃圾回收。不过，可以使用 `gc` 模块在任何给执行垃圾回收。
+
+Python 会自动执行垃圾回收。不过，可以使用 `gc` 模块在任何给定时间执行垃圾回收。
 
 ### 高结构化语言
-语句、函数、类、模块、包，以及最重要的 Python 缩进语法允许开发者编写高度结构化且可读性代码。
+
+语句、函数、类、模块、包，以及最重要的 Python 缩进语法允许开发者编写高度结构化且可读性强的代码。
 
 ### 与其他语言相比快速且易于维护
+
 与其他编译语言相比，Python 更快、更结构化且更易于维护。
 
 ## 关于本书
+
 本书旨在对 Python 编程语言提供深入而简单的见解。本书面向初学者以及高级读者。本书帮助初学者通过实用的 Python 接触编程。另一方面，它也可以作为专家用户的参考资料，用于学习不同的基础和高级 Python 概念。
 
 所有重要的 Python 概念都已分在不同的章节中。每个章节包含关于特定 Python 概念的理论信息，以及以 Python 脚本形式呈现的实现。为了充分利用本书的内容，建议读者先彻底理解该概念，然后练习代码。
 
 ## 接下来是什么？
-在下一章中，我们将设置运行 Python 脚本所需的环境。我们将安装运行书中脚本所需的各种软件。祝编码愉快  ！！！
+
+在下一章中，我们将设置运行 Python 脚本所需的环境。我们将安装运行书中脚本所需的各种软件。祝编码愉快 ！！！
 
 # 第 2 章
 
 ## 环境搭建
+
 在本章中，我们将安装运行 Python 脚本所需的软件。我们将安装运行本书中脚本所需的不同软件。
 
 ### 下载并安装 Anaconda
+
 Linux 和 Mac 的安装过程几乎相同。
 
 1. 转到你的 Windows 搜索框并输入 `Anaconda Navigator`，然后选择 `Anaconda Navigator` 。
+
 2. 访问以下 URL：`https://www.anaconda.com/download/`。选择最新版本。点击 `Download` 按钮。
+
 3. 一旦下载了可执行文件，进入下载文件夹并运行可执行文件。
+
 4. 将弹出“License Agreement”对话框。阅读许可协议并点击 `I Agree` 按钮。
+
 5. 在“Select Installation Type”对话框中，勾选 `Just Me` 按钮并点击 `Next` 按钮。
+
 6. 在“Choose Install Location”对话框中选择安装目录（建议使用默认），并点击 `Next` 按钮。
+
 7. 在“Advanced Installation Options”对话框中，勾选第二个复选框 `Register Anaconda as default Python 3.6` 并点击 `Install` 按钮。
+
 8. 安装完成后，点击 `Next` 按钮。
+
 9. 弹出“Microsoft Studio Code Installation”窗口，点击 `Skip` 按钮。
+
 10. 恭喜你你安装了 Anaconda。取消对话框中的两个复选框并点击 `Finish` 按钮。
 
 ### 运行你的第一个程序
+
 我们已经安装了运行 Python 脚本的环境。现在是运行我们第一个程序的时间了。通过 Anaconda，你有多种方法可以实现。我们将在本节介绍其中两种。
 
 #### 通过 Jupyter Notebook 运行脚本
+
 Jupyter notebook 在你的默认浏览器中运行。从导航器中，启动 `Jupyter Notebook`（顶部的第二个选项）。
-
-
-
-
 
 启动 Jupyter 的另一种方法是在搜索框中输入“Jupyter Notebook”，并从开始菜单选择“Jupyter Notebook”应用程序，如下所示：
 
@@ -222,14 +229,18 @@ print("This is outside block")
 
 ### Python 标识符
 
-编程中的标识符是分配给任何变量、函数、模块或类的名称。Python 标识符可以包含 A-Z a-z、0-9 和下划线。Python 标识符名称必须以字母或下划线开头。Python 是一种大小敏感的语言，这意味着 `Customer` 和 `customer` 被视为不同的标识符。
+编程中的标识符是分配给任何变量、函数、模块或类的名称。Python 标识符可以包含 A-Z a-z、0-9 和下划线。Python 标识符名称必须以字母或下划线开头。Python 是一种大小写敏感的语言，这意味着 `Customer` 和 `customer` 被视为不同的标识符。
 
 #### 命名规范
 
 *   包和模块名全小写
+
 *   类使用驼峰法，每个单词的首字母大写。例如 `CustomerProductRecord`
-*   方法和函数的约定是使用小字母并用下划线分隔。例如 `person_name`, `get_age` 等
+
+*   方法和函数的约定是使用小写字母并用下划线分隔。例如 `person_name`, `get_age` 等
+
 *   私有变量以单下划线开头
+
 *   强私有变量以双下划线开头
 
 ### Python 关键字
@@ -248,18 +259,13 @@ print("This is outside block")
 | else | is | with |
 | except | lambda | yield |
 
-## [获取用户输入]
-
-### 获取用户输入
+## 获取用户输入
 
 获取用户输入是最基础的编程任务之一。Python 让它变得非常简单。在 Python 3 中，你可以使用 `input()` 函数并向其传递你想显示给用户的字符串。看下面的截图：
 
 ![](img/image0033.jpeg)
 
 你在文本框中输入的任何内容将存储在 `text` 变量中。
-
-
-
 
 本章简要介绍了 Python 语法。本书的其余部分将遵循本章所描述的规范和语法。在下一章中，我们将学习 Python 的基础数据类型。我们将看到 Python 可以存储哪些不同类型的数据，以及如何声明变量来存储这些数据。编码愉快！！！
 
@@ -271,7 +277,7 @@ print("This is outside block")
 
 ### 变量的定义
 
-编程中的变量是用于存储某些值的内存位置。每当你向变量存储一个值时，该值实际上存储在内存的物理位置。变量可以被看是对物理内存位置的引用。为变量预留内存的大小取决于变量中存储的值类型。
+编程中的变量是用于存储某些值的内存位置。每当你向变量存储一个值时，该值实际上存储在内存的物理位置。变量可以被看作是对物理内存位置的引用。为变量预留内存的大小取决于变量中存储的值类型。
 
 ### 创建变量
 
@@ -310,10 +316,15 @@ print(Point)
 编程应用程序需要存储各种数据。考虑一个需要存储客户信息的银行应用程序场景。例如，一个人的姓名和手机号码；他是否是违约者；他/她借出的物品列表等等。为了存储此类各种信息，需要不同的数据类型。虽然你可以以类的形式自定义数据类型，但 Python 提供了六种标准数据类型。它们是：
 
 *   字符串 (Strings)
+
 *   数字 (Numbers)
+
 *   布尔 (Booleans)
+
 *   列表 (Lists)
+
 *   元组 (Tuples)
+
 *   字典 (Dictionaries)
 
 ### 字符串
@@ -338,11 +349,20 @@ mike johns
 Python 中有四种数值数据类型：
 
 *   `int`（存储整数，例如 10）
+
 *   `float`（存储浮点数，例如 2.5）
+
 *   `long`（存储长整数，如 48646684333）
+
 *   `complex`（复数，如 7j+4847k）
 
 要创建一个数值型 Python 变量，只需将数字赋值给变量。在接下来的脚本中，我们创建了四种不同类型的数值对象并在控制台上打印它们。
+
+
+
+# Python 变量、数据类型与运算符
+
+## 数字类型
 
 ```python
 int_num = 10      # 整数
@@ -359,7 +379,7 @@ print(complex_num)
 
 ![](img/image00334.jpeg)
 
-### 布尔
+## 布尔
 
 布尔变量用于存储布尔值。`True` 和 `False` 是 Python 中的两个布尔值。看下面的示例：
 
@@ -371,7 +391,7 @@ print(defaulter, has_car)
 
 在上面的脚本中，我们创建了布尔变量 `defaulter` 和 `has_car`，对应值为 `True` 和 `False`。我们打印这两个变量的结果。我们将学习更多逻辑运算符。
 
-### 列表
+## 列表
 
 在 Python 中，列表数据类型用于存储值的集合。列表与其他语言中的数组类似。然而，Python 列表可以存储不同类型的值。创建列表时使用左右方括号。列表中的每个项目之间用逗号分隔。看下面的示例：
 
@@ -385,7 +405,7 @@ print(cars)
 
 ![](img/image0335.
 
-### 元组
+## 元组
 
 元组与列表相似，但有两个主要区别。首先，创建元组使用花括号而不是列表使用的方括号。其次，元组一旦创建就是不可变的，这意味着一旦创建，你就无法更改元组的值。下面的示例说明了这一概念。
 
@@ -411,20 +431,15 @@ print(cars.keys())
 print(cars.values())
 ```
 
-
-
-
 在上面的脚本中，我们创建了一个名为 `cars` 的字典。该字典包含三个键值对，即 3 个项目。要访问值，我们可以将键传递到字典名后的括号中。同样，我们可以使用 `keys()` 和 `values()` 方法分别从字典中检索所有的键和值。上述脚本的输出如下：
 
 ![](img/image00337.jpeg)
 
-### 接下来要做什么？
+## 接下来要做什么？
 
-本章简要介绍了 Python 中的变量和数据类型。在下一章节章中，我们将开始讨论 Python 运算符。编码愉快！
+本章简要介绍了 Python 中的变量和数据类型。在下一章节中，我们将开始讨论 Python 运算符。编码愉快！
 
-# 第 5 章
-
-## 运算符
+# 第 5 章 运算符
 
 编程中的运算符是用于对操作数执行特定逻辑、关系或数学运算的字面量。Python 运算符分为以下五类：
 
@@ -436,7 +451,7 @@ print(cars.values())
 
 在本章中，我们将通过示例讨论这些运算符。
 
-### 算术运算符
+## 算术运算符
 
 顾名，算术运算符用于对操作数进行算术运算。
 
@@ -444,16 +459,16 @@ print(cars.values())
 
 | OperatorName | Symbol | Functionality | Example |
 | --- | --- | --- | --- |
-| 加法 | `+` | 将两边的操作数相 | `N1 + N2 = 15` |
+| 加法 | `+` | 将两边的操作数相加 | `N1 + N2 = 15` |
 | 减法 | `-` | 减两边的操作数 | `N1 – N2 = 5` |
 | 乘法 | `*` | 乘两边的操作数 | `N1 * N2 = 50` |
 | 除法 | `/` | 将左的操作数除以右侧的操作数 | `N1 / N2 = 2` |
-| 取模 | `%` | 将左的操作数除以右侧的操作数并返回余数 | `N1 / N2 = 0` |
+| 取模 | `%` | 将左的操作数除以右侧的操作数并返回余数 | `N1 % N2 = 0` |
 | 幂 | `**` | 取左侧操作数的右侧幂 | `N1 ** N2 = 100000` |
 
 查看以下示例以了解算术运算符的用法：
 
-```
+```python
 N1 = 10
 N2 = 5
 print(N1 + N2)
@@ -467,9 +482,9 @@ print(N1 ** N2)
 
 ![](img/image00338.jpeg)
 
-### 逻辑运算符
+## 逻辑运算符
 
-逻辑运算符用于对操作数执行逻辑函数，如 AND（与）、和（（非。下表包含了 Python 逻辑运算符及其描述和功能。假设 `N1` 为 True，`N2` 为 false。
+逻辑运算符用于对操作数执行逻辑函数，如 AND（与）、OR（或）和 NOT（非）。下表包含了 Python 逻辑运算符及其描述和功能。假设 `N1` 为 True，`N2` 为 False。
 
 | Operator | Symbol | Functionality | Example |
 | --- | --- | --- | --- |
@@ -479,7 +494,7 @@ print(N1 ** N2)
 
 查看以下示例以了解逻辑运算符的用法：
 
-```
+```python
 N1 = True
 N2 = False
 print(N1 and N2)
@@ -491,68 +506,49 @@ print(not(N1 and N2))
 
 ![](img/image00339.jpeg)
 
-### 比较运算符
+## 比较运算符
 
 比较运算符用于比较操作数包含的值，并根据操作数之间的关系返回 true 或 false。比较运算符也称为关系运算符。假设 `N1` 等于 10 且 `N2` 等于 5，请查看下表以理解比较运算符。
 
 | Operator | Symbol | Description | Example |
 | --- | --- | --- | --- |
 | 等于 | `==` | 如果两个操作数的值相等则返回 true | `(N1 == N2) = false` |
-| 不等于 | `!=` | 如果两个操作数的值不相等则返回 true | |
-| 大于 | `>` | | |
-| 小于 | `<` | | |
-| 大于或等于 | `>=` | | |
-| 小于等于 | `<=` | | |
-
-等等，让我根据提供的文本重新对齐表格：
-
-| Operator | Symbol | Description | Example |
-| --- | --- | --- | --- |
-| 等于 | `==` | 如果两个操作数的值相等则返回 true | `(N1 == N2) = false` |
-| 不等于 | `!=` | 如果两个操作数的值不相等则返回 true | |
-| 大于 | `>` | | |
-| 小于 | `<` | | |
-| 大于或等于 | `>=` | | |
-| 小于等于 | `<=` | | |
-
-*(自我纠正：源文本的表格格式不完整，我将重构所提供的核心逻辑)*
+| 不等于 | `!=` | 如果两个操作数的值不相等则返回 true | `(N1 != N2) = true` |
+| 大于 | `>` | 如果左操作数大于右操作数则返回 true | `(N1 > N2) = true` |
+| 小于 | `<` | 如果左操作数小于右操作数则返回 true | `(N1 < N2) = false` |
+| 大于或等于 | `>=` | 如果左操作数大于或等于右操作数则返回 true | `(N1 >= N2) = true` |
+| 小于等于 | `<=` | 如果左操作数小于或等于右操作数则返回 true | `(N1 <= N2) = false` |
 
 查看以下示例以了解比较运算符的用法：
 
-```
+```python
 N1 = 10
 N2 = 5
-# (文本中隐含的比较逻辑)
 ```
 
-*实际上，比较示例的源文本被截断了。我将保留提供的变量。*
-
-`N1 = 10`
-`N2 = 5`
-
-### 赋值运算符
+## 赋值运算符
 
 赋值运算符用于给操作数赋值。下表包含了关于赋值运算符的信息。假设 `N1` 等于 10 且 `N2` 等于 5。
 
 | Operator | Symbol | Description | Example |
 | --- | --- | --- | --- |
-| 赋值 | `=` | 给操作数赋值。 | |
-| 加赋值 | `+=` | 将两边的操作数相加并赋值结果。 | |
-| 减赋值 | `-=` | 减去两边的操作数并赋值结果。 | |
-| 乘赋值 | `*=` | 将两边的操作数相乘并赋值结果。 | |
-| 除赋值 | `/=` | 将左的操作数除以右侧的操作数并赋值结果。 | |
-| 取模赋值 | `%=` | 将左的操作数除以右侧的操作数并返回余数。 | |
-| 幂赋值 | `**=` | 取左侧操作数的右侧幂并赋值。 | |
+| 赋值 | `=` | 给操作数赋值。 | `N1 = 10` |
+| 加赋值 | `+=` | 将两边的操作数相加并赋值结果。 | `N1 += N2` |
+| 减赋值 | `-=` | 减去两边的操作数并赋值结果。 | `N1 -= N2` |
+| 乘赋值 | `*=` | 将两边的操作数相乘并赋值结果。 | `N1 *= N2` |
+| 除赋值 | `/=` | 将左的操作数除以右侧的操作数并赋值结果。 | `N1 /= N2` |
+| 取模赋值 | `%=` | 将左的操作数除以右侧的操作数并返回余数。 | `N1 %= N2` |
+| 幂赋值 | `**=` | 取左侧操作数的右侧幂并赋值。 | `N1 **= N2` |
 
 查看以下示例以了解赋值运算符的用法：
 
-```
+```python
 N1 = 10
 N2 = 5
 R = N1 + N2
 ```
 
-### 成员运算符
+## 成员运算符
 
 成员运算符用于检查操作数存储的值是否存在于特定序列。Python 中有两种成员运算符：`in` 和 `not in`。`in` 运算符在特定序列中找到值时返回 true。`not in` 运算符在相反的情况下返回 true。查看以下示例以了解成员运算符的用法。
 
@@ -564,17 +560,15 @@ print('Honda' not in cars) # 返回 False
 print('BMW' not in cars) # 返回 True
 ```
 
-
-
-
+# 第 6 章 条件语句
 
 Python 中有三种主要的条件语句：
 
-- `If`
+- `if`
 - `else`
 - `elif`
 
-### “if”语句
+## “if”语句
 
 `if` 语句用于在随其后的表达式结果为真时执行一段代码块。这个语句目前听起来可能很复杂，但一旦你看到 `if` 语句的工作示例，就能理解它了。来看：
 
@@ -585,7 +579,7 @@ if num2 > num1:
     print("num2 is greater than num1")
 ```
 
-在上面的脚本中，我们创建了两个变量 `num1` 和 `num2`，其值分别为 10 和 20。接下来，我们写了一个 `if` 语句来判断 `num2` 是否大于 `num1`，结果为真。因此，打印“num1 is greater than num2”的语句被执行。输出如下：
+在上面的脚本中，我们创建了两个变量 `num1` 和 `num2`，其值分别为 10 和 20。接下来，我们写了一个 `if` 语句来判断 `num2` 是否大于 `num1`，结果为真。因此，打印“num2 is greater than num1”的语句被执行。输出如下：
 
 ![](img/image00343.jpeg)
 
@@ -600,7 +594,7 @@ if num2 < num1:
 
 由于 `num2` 并不小于 `num1`，因此 `if` 块不会执行，你将在输出中什么也看不到。
 
-### 连接两个或多个条件
+## 连接两个或多个条件
 
 你还可以使用逻辑“OR”（或）和“AND”（与）运算符连接两个或两个以上的表达式。来看下面的脚本：
 
@@ -616,7 +610,7 @@ if num2 < num1 or num3 > num2 :
 
 ![](img/image00344.jpeg)
 
-### 嵌套“if”语句
+## 嵌套“if”语句
 
 你可以将 `if` 语句嵌套在其他 `if` 语句内部。来看这个示例：
 
@@ -633,9 +627,9 @@ if num2 > num1:
 
 ![](img/image00345.jpeg)
 
-### “else”语句
+## “else”语句
 
-只有当随其后的条件返回真时，`if` 块才会执行。如果我们想在条件返回假时执行另一组语句呢？`else` 语句正是为此此任务的。来看下面的语句：
+只有当随其后的条件返回真时，`if` 块才会执行。如果我们想在条件返回假时执行另一组语句呢？`else` 语句正是为此任务的。来看下面的语句：
 
 ```python
 num1 = 10
@@ -650,7 +644,7 @@ else:
 
 ![](img/image00346.jpeg)
 
-### “elif”语句
+## “elif”语句
 
 你可以使用 `elif` 语句评估多个条件。通过示例来解释这一点最为清楚：
 
@@ -674,7 +668,7 @@ else:
 
 如果 `if` 和所有 `elif` 语句的条件均为假，则执行 `else` 之后的代码块。
 
-### 嵌套“elif”语句
+## 嵌套“elif”语句
 
 与 `if` 语句一样，你也可以嵌套 `elif` 语句。来看这个示例：
 
@@ -699,7 +693,7 @@ elif num3 > num2:
 
 ![](img/image00348.jpeg)
 
-### 接下来做什么？
+## 接下来做什么？
 
 在本章中，我们学习了不同类型的条件语句以及如何使用它们来控制程序的流程。在下一章中，我们将开始讨论迭代语句。我们将看到不同类型的迭代语句及其用法。编码愉快！！！
 
@@ -712,23 +706,25 @@ Python 中有两种迭代语句：
 - `for` 循环
 - `while` 循环
 
-### “for”循环
+## “for”循环
 
 `for` 循环用于遍历集合（例如列表、元组、字典等）。`for` 循环的语法如下：
 
-```
+```python
 for i in list:
     statement 1
     statement 2
 ```
 
-这里 `i` 是任何可以被赋值的变量。`List` 是 `for` 循环遍历的列表。来看下面的示例以查看 `for` 循环的作用：
+这里 `i` 是任何可以被赋值的变量。`list` 是 `for` 循环遍历的列表。来看下面的示例以查看 `for` 循环的作用：
 
 ```python
 cars = ['Audi','BMW','Toyota','Honda','Ford']
 for car in cars:
     print(car)
 ```
+
+
 
 在上面的脚本中，我们创建了一个汽车列表。然后我们使用 `for` 循环遍历这个列表。让我们理解 `for` 循环在后台是如何执行的。在第一次迭代中，`cars` 列表的第一个项（索引为 0 的项）“Audi”被赋值给变量 `car`。`car` 变量的值打印在屏幕上。在第二次迭代中，列表第二个项存储在 `car` 变量并打印在屏幕上，依此类推。上述脚本的输出如下：
 
@@ -745,19 +741,16 @@ for i in range(10):
 
 `range` 函数返回一个从 0 开始的具有指定数量整数的序列。上述脚本的输出将是 0 到 9 的整数。
 
-
-
-
 `range` 函数也可以用于创建一个特定范围内的整数序列。例如，如果你想创建一个从 `50` 到 `100` 的整数序列，可以按照如下方式操作：
 
 ```python
-for i in range(50,101):
+for i in range(50, 101):
     print(i)
 ```
 
 请记住，`range` 函数返回的序列包含下界整数，但不包含上界。因此，上面的脚本将返回从 50 到 100 的整数，但不包含 101。
 
-## 遍历字符串
+### 遍历字符串
 
 `for` 循环也可以用于遍历字符串。这是因为字符串实际上是字符的序列。请看下面的脚本：
 
@@ -770,7 +763,7 @@ for c in 'Hello world':
 
 ![](img/image00350.jpeg)
 
-## “while”循环
+### “while”循环
 
 `for` 循环执行的次数等于循环所操作的序列中的项目数量。如果我们想要一个在满足特定条件时终止的循环呢？`while` 循环就是答案；`while` 循环会执行，直到满足某个条件为止。`while` 循环的语法如下：
 
@@ -786,7 +779,7 @@ while (expression = true):
 i = 1
 while i < 11:
     print(i)
-    i = i+1
+    i = i + 1
 ```
 
 在上面的脚本中，我们初始化变量 `i` 为整数 `1`。然后我们创建了一个 `while` 循环，检查变量 `i` 的值是否小于 `11`。在每次迭代中，我们在 `while` 循环内部将 `i` 的值加 `1`。在循环执行 10 次后，`i` 的值变为 `11`。因此，条件 `i` 小于 `11` 返回为假（false），因此 `while` 循环终止。
@@ -796,21 +789,21 @@ while i < 11:
 ```python
 i = 1
 while i < 11:
-    print('9 x '+ str(i) + ' = ' + str(i * 9))
-    i = i+1
+    print('9 x ' + str(i) + ' = ' + str(i * 9))
+    i = i + 1
 ```
 
 上面脚本的输出如下：
 
 ![](img/image00351.jpeg)
 
-## Continue 语句
+### Continue 语句
 
 `continue` 语句用于跳过循环中的剩余语句并将控制权移回循环的开头。`continue` 语句可以用于 `for` 循环也可以用于 `while` 循环。请看下面的示例来查看 `continue` 语句的作用。
 
 ```python
-for i in range(1,11):
-    if(i%2) != 0:
+for i in range(1, 11):
+    if (i % 2) != 0:
         continue
     print(i)
 ```
@@ -819,20 +812,20 @@ for i in range(1,11):
 
 ![](img/image0352.jpeg)
 
-## Break 语句
+### Break 语句
 
 `break` 语句用于终止循环的执行。`break` 语句可以用于 `for` 循环也可以用于 `while` 循环。请看下面的语句来查看 `break` 语句的作用。
 
 ```python
-for i in range(1,11):
-    if(i > 5):
+for i in range(1, 11):
+    if i > 5:
         break
     print(i)
 ```
 
 在上面的脚本中，当 `i` 的值大于 `5` 时，`for` 循环终止。
 
-## 接下来是什么？
+### 接下来是什么？
 
 我们已经涵盖了大部分 Python 基本概念。从下一章开始，我们将注意力转向高级 Python 概念的深入分析。在下一章中，我们将详细学习序列。我们将对列表（lists）、元组（tuples）、字典（dictionaries）以及可以在这些执行的函数进行深入分析。
 
@@ -840,11 +833,11 @@ for i in range(1,11):
 
 我们在第四章：变量与数据类型中简要回顾了列表、元组和字典。它们是 Python 中最重要的数据结构之一。在本章中，我们将详细查看列表、元组和字典及其工作原理。
 
-### 列表 (Lists)
+## 列表 (Lists)
 
 Python 中的列表类似于其他编程语言中的数组。列表存储不同类型的集合，并且是可变的（mutable）。
 
-#### 创建列表
+### 创建列表
 
 有多种方法可以创建列表。最简单的方法是将逗号分隔的项包含方括号内，并将其赋值给变量，如下所示：
 
@@ -868,12 +861,12 @@ nums = list(range(10))
 `range` 函数返回一个从 0 到小于传递值的整数列表。如果你想指定范围，可以向 `range` 传递两个值：
 
 ```python
-nums = list(range(50,101))
+nums = list(range(50, 101))
 ```
 
 `range` 函数返回一个从 50 到 100 的整数列表（不包含 101）。
 
-#### 访问元素
+### 访问元素
 
 列表是有索引的，这意味着你可以通过索引访问元素。第一个元素存储在索引 0 ：
 
@@ -931,7 +924,7 @@ print(sublist)
 
 ![](img/image0356.jpeg)
 
-#### 向列表添加元素
+### 向列表添加元素
 
 `append` 函数可用于向列表添加元素。要添加的项目作为参数传递给 `append` 函数。请看下面的示例：
 
@@ -946,13 +939,9 @@ print(colors)
 
 ![](img/image0357.jpeg)
 
-
-
-
-
 你可以在输出中看到新添加的项 ‘Orange’。
 
-## 从列表中删除元素
+### 从列表中删除元素
 
 `remove` 函数用于从列表中删除元素。要删除的元素将作为参数传递给该方法。
 
@@ -978,14 +967,14 @@ print(colors)
 
 要按索引删除列表元素，必须使用 `del` 函数，后跟列表名和传递在方括号内的索引值。
 
-## 合并列表
+### 合并列表
 
 你可以使用 `+` 符号将一个列表与其他列表合并，如下所示：
 
 ```python
 nums1 = [2, 4, 6, 8, 10]
 nums2 = [1, 3, 5, 7, 9]
-result = nums1 + nums2 
+result = nums1 + nums2
 print(result)
 ```
 
@@ -995,7 +984,7 @@ print(result)
 
 你可以看到第二个列表被合并在第一个列表的末尾。
 
-## 在列表中使用 in 和 not in 函数
+### 在列表中使用 in 和 not in 函数
 
 `in` 和 `not in` 函数可以用于检查元素是否存在于字符串中。
 
@@ -1011,7 +1000,7 @@ print('Blue' not in colors)
 
 ![](img/image00360.jpeg)
 
-## 查找列表的长度
+### 查找列表的长度
 
 `len` 函数可以找到列表中元素的总数。
 
@@ -1022,7 +1011,7 @@ print(len(colors))
 
 上述脚本返回 5，因为 `colors` 列表中有五个元素。
 
-## 排序列表
+### 排序列表
 
 你可以对列表元素进行排序和反转。对于字符串，元素按字母顺序排序；对于数值，按升序排序。看下面的示例：
 
@@ -1039,7 +1028,7 @@ print(nums)
 
 ![](img/image00361.jpeg)
 
-## 列表列表（矩阵）
+### 列表列表（矩阵）
 
 列表可以嵌套在另一个列表中，形成矩阵。在接下来的示例中，我们将三个包含四个项的列表嵌套在另一个列表中，形成一个 ‘3 x 4’矩阵。
 
@@ -1095,11 +1084,11 @@ print(colors[2])
 
 ```python
 colors = ('Red', 'Green', 'Blue', 'Yellow', 'White')
-print(colors[:3]) # 访问前三个元素
+print(colors[:3])  # 访问前三个元素
 colors = ('Red', 'Green', 'Blue', 'Yellow', 'White')
-print(colors[-3:]) # 访问后三个元素
+print(colors[-3:])  # 访问后三个元素
 colors = ('Red', 'Green', 'Blue', 'Yellow', 'White')
-print(colors[1:3]) # 访问索引 1 和 2 的元素
+print(colors[1:3])  # 访问索引 1 和 2 的元素
 ```
 
 上述脚本的输出如下：
@@ -1159,25 +1148,27 @@ newcolors = colors + orange_color
 print(newcolors)
 ```
 
-在上述脚本中，我们创建了一个包含五个元素的元组 `colors`。然后我们创建了另一个名为 `orange_color` 的包含一个字符串元素 ‘Orange’ 的元组。两个元组合并后返回一个包含 6 个元素的新元组。结果元组被打印到输出控制台。这是向现有元组添加新元素的方法之一。上述脚本的输出如下：
+
+
+在上述脚本中，我们创建了一个包含五个元素的元组 `colors`。然后我们创建了另一个名为 `orange_color` 的包含一个字符串元素 'Orange' 的元组。两个元组合并后返回一个包含 6 个元素的新元组。结果元组被打印到输出控制台。这是向现有元组添加新元素的方法之一。上述脚本的输出如下：
 
 ![](img/image0066.jpeg)
 
 ### 查找元组中的最大最小元素
 
-`max` 和 `min` 函数用于查找元组中的最大值和最小值。看下面的脚本：
+`max()` 和 `min()` 函数用于查找元组中的最大值和最小值。看下面的脚本：
 
 ```python
 nums = (2, 4, 6, 8, 10)
 print(min(nums)) # 打印元组中的最小值
-print(max(nums)) # 打印元组中的最小值
+print(max(nums)) # 打印元组中的最大值
 ```
 
 上述脚本的输出如下：
 
 ![](img/image0067.jpeg)
 
-`min` 和 `max` 函数也可以用于列表。
+`min()` 和 `max()` 函数也可以用于列表。
 
 ### 将列表转换为元组
 
@@ -1190,48 +1181,40 @@ colors_tuple = tuple(colors)
 print(colors_tuple)
 ```
 
-
-
-
 在上面的脚本中，我们创建了一个包含 5 个元素的列表 `colors`。然后我们检查了 `colors` 变量的类型。接着我们创建了另一个变量 `colors_tuple`。将 `colors` 列表传递给元组的构造函数，生成的元组存储在 `colors_tuple` 变量中。随后将新创建的 `colors_tuple` 输出到控制台上。上述脚本的输出如下：
 
 ![](img/image00368.jpeg)
 
 ## 字典
 
-字典以键值对（key-value pairs）的形式存储项集合。每个项的键和值之间用冒号‘:’隔开。每个元素之间用逗号隔开。逗号分隔的项列表包含在大括号 {} 中。字典是可变的，这意味着你可以更新或删除字典中的某个项，也可以向字典中添加新项。
+字典以键值对（key-value pairs）的形式存储项集合。每个项的键和值之间用冒号 `:` 隔开。每个元素之间用逗号隔开。逗号分隔的项列表包含在大括号 `{}` 中。字典是可变的，这意味着你可以更新或删除字典中的某个项，也可以向字典中添加新项。
 
 ### 创建字典
 
-```
+```python
 cars = {'name':'Honda', 'model':2013, 'color':'Yellow', 'Air bags': True}
-
 type(cars)
 ```
 
-在上面的脚本中，我们创建了一个包含 4 个元素的字典 `cars`。然后我们使用 `type` 函数来确认 `cars` 变量的类型，返回‘dict’。
+在上面的脚本中，我们创建了一个包含 4 个元素的字典 `cars`。然后我们使用 `type()` 函数来确认 `cars` 变量的类型，返回 'dict'。
 
 ### 访问字典项
 
 可以通过将键作为索引来访问字典中的项。请看下面的示例。
 
-```
+```python
 cars = {'name':'Honda', 'model':2013, 'color':'Yellow', 'Air bags': True}
-
 model = cars['model'] 
-
 print(model)
 ```
 
-在上面的脚本中，通过将键作为索引值，访问了键为‘model’的项的值。你将在输出中看到 2013。
+在上面的脚本中，通过将键作为索引值，访问了键为 'model' 的项的值。你将在输出中看到 2013。
 
-你也可以像下面所示，使用 `keys` 和 `values` 函数来访问字典中的所有的键和值：
+你也可以像下面所示，使用 `keys()` 和 `values()` 函数来访问字典中的所有的键和值：
 
-```
+```python
 cars = {'name':'Honda', 'model':2013, 'color':'Yellow', 'Air bags': True} 
-
 print(cars.keys()) # 访问字典的键
-
 print(cars.values()) # 访问字典的值
 ```
 
@@ -1239,11 +1222,10 @@ print(cars.values()) # 访问字典的值
 
 ![](img/image00369.jpeg)
 
-你还可以使用 `items` 函数以键值对的形式从字典中获取项。请看下面的示例：
+你还可以使用 `items()` 函数以键值对的形式从字典中获取项。请看下面的示例：
 
-```
+```python
 cars = {'name':'Honda', 'model':2013, 'color':'Yellow', 'Air bags': True} 
-
 print(cars.items()) # 访问字典的项
 ```
 
@@ -1253,11 +1235,10 @@ print(cars.items()) # 访问字典的项
 
 ### 遍历字典项、键和值
 
-`items`、`keys` 和 `values` 函数返回可以使用 `for` 循环迭代的序列。请看下面的示例：
+`items()`、`keys()` 和 `values()` 函数返回可以使用 `for` 循环迭代的序列。请看下面的示例：
 
-```
+```python
 cars = {'name':'Honda', 'model':2013, 'color':'Yellow', 'Air bags': True} 
-
 for item in cars.items():
     print(item)
 ```
@@ -1268,9 +1249,8 @@ for item in cars.items():
 
 同样，也可以像下面的示例所示，使用 `for` 循环遍历键和值：
 
-```
+```python
 cars = {'name':'Honda', 'model':2013, 'color':'Yellow', 'Air bags': True} 
-
 for key in cars.keys():
     print(key)
 ```
@@ -1281,9 +1261,8 @@ for key in cars.keys():
 
 值也是如此：
 
-```
+```python
 cars = {'name':'Honda', 'model':2013, 'color':'Yellow', 'Air bags': True} 
-
 for value in cars.values():
     print(value)
 ```
@@ -1296,67 +1275,58 @@ for value in cars.values():
 
 向字典中添加新项非常简单。你只需要传递一个新的键即可。请看下面的示例：
 
-```
+```python
 cars = {'name':'Honda', 'model':2013, 'color':'Yellow', 'Air bags': True}
-
 cars['capacity'] = 500
-
 print(cars)
 ```
 
 在上面的脚本中，我们创建了一个包含 4 个元素的字典 `cars`。然后打印了该字典。接着向字典中添加了新项。你会看到字典包含了 5 个元素。
 
-/image00374.jpeg
+![](img/image00374.jpeg)
 
 ### 更新字典
 
 要更新字典，将要更新的键作为索引并赋予新值。下面的示例显示：
 
-```
+```python
 cars = {'name':'Honda', 'model':2013, 'color':'Yellow', 'Air bags': True}
-
 cars['model'] = 2015
-
 print(cars)
 ```
 
-在上面的脚本中，我们在更新键为‘model’的项之前之后打印了字典。
+在上面的脚本中，我们在更新键为 'model' 的项之前之后打印了字典。
 
-/image00375.jpeg)
+![](img/image00375.jpeg)
 
 ### 删除字典项
 
 和列表一样，可以使用 `del` 函数从字典中删除项。请看下面的示例：
 
-```
+```python
 cars = {'name':'Honda', 'model':2013, 'color':'Yellow', 'Air bags': True}
-
 del cars['model']
-
 print(cars)
 ```
 
-在上面的脚本中，我们删除了键为‘model’的项，并打印了字典。你也可以使用 `clear` 函数删除字典中的所有项。下面的示例显示了：
+在上面的脚本中，我们删除了键为 'model' 的项，并打印了字典。你也可以使用 `clear()` 函数删除字典中的所有项。下面的示例显示了：
 
-```
+```python
 cars = {'name':'Honda', 'model':2013, 'color':'Yellow', 'Air bags': True}
-
 cars.clear()
-
 print(cars)
 ```
 
 输出如下：
 
-/image00376.jpeg)
+![](img/image00376.jpeg)
 
 ### 查找字典长度
 
-和元组和列表一样，可以使用 `len` 函数找到字典的长度。请看下面的示例：
+和元组和列表一样，可以使用 `len()` 函数找到字典的长度。请看下面的示例：
 
-```
+```python
 cars = {'name':'Honda', 'model':2013, 'color':'Yellow', 'Air bags': True}
-
 print(len(cars))
 ```
 
@@ -1364,35 +1334,31 @@ print(len(cars))
 
 ### 检查字典中的项
 
-要检查字典中是否存在某个键，可以使用 `in` 和 `not in` 方法。请看下面的脚本：
+要检查字典中是否存在某个键，可以使用 `in` 和 `not in` 运算符。请看下面的脚本：
 
-```
+```python
 cars = {'name':'Honda', 'model':2013, 'color':'Yellow', 'Air bags': True}
-
 print('color' in cars)
-
 print('model' not in cars)
 ```
 
 在上面的脚本中，由于 `color` 存在于字典中，`in` 运算符返回 true。然而由于 `model` 也存在于字典中，`not in` 运算符返回 false。输出如下：
 
-/image00377.jpeg)
+![](img/image00377.jpeg)
 
 ### 复制字典
 
-要将一个字典复制到另一个字典，可以使用 `copy` 函数。请看下面的示例：
+要将一个字典复制到另一个字典，可以使用 `copy()` 函数。请看下面的示例：
 
-```
+```python
 cars = {'name':'Honda', 'model':2013, 'color':'Yellow', 'Air bags': True}
-
 cars2 = cars.copy()
-
 print(cars2)
 ```
 
 在上面的脚本中，我们创建了一个包含 4 个元素的字典 `cars`。然后将此字典复制到另一个字典 `cars2` 中。新创建的字典随后打印到控制台上。输出如下：
 
-/image00378.jpeg
+![](img/image00378.jpeg)
 
 ## 接下来是什么？
 
@@ -1408,10 +1374,6 @@ print(cars2)
 
 异常是中断程序执行的事件。简单来说，当 Python 脚本遇到无法处理的情况时，它就会抛出异常。在 Python 中，异常是以对象的形式提出的。每当发生异常时，就会初始化一个包含异常信息的对象。异常在 Python 中必须被处理，否则程序将停止执行。
 
-
-
-
-
 与大多数其他编程语言不同，Python 代码在运行时不会进行求值，因为 Python 是一种弱类型语言。变量的类型是在运行时求值的。这种方法既有优点也有缺点。这种方法的主要优点是用户在编写代码时不需要指定变量的类型。一个主要的缺点是可能会在运行时导致异常。我们将通过本文中的一个示例来看这一点，但首先让我们看看 Python 是如何处理简单异常的。
 
 ## 异常处理语法
@@ -1424,9 +1386,9 @@ try:
 except ExceptionA:
     # 如果发生 ExceptionA 则执行的代码
 except ExceptionB:
-    # 如果发生 ExceptionA 则执行的代码
+    # 如果发生 ExceptionB 则执行的代码
 except ExceptionC:
-    # 如果发生 ExceptionA 则执行的代码
+    # 如果发生 ExceptionC 则执行的代码
 else:
     # 如果没有异常则执行的代码
 ```
@@ -1488,7 +1450,7 @@ else:
     print("Program executed without an exception")
 ```
 
-在上面的脚本中，我们尝试用 `a` 除以 `b`。我们处理了 `ZeroDivisonError` 异常。因此，如果 `b` 包含 `0`，则异常将被处理。否则，如果没有发生异常，则将执行 `else` 块。当你运行上面的脚本时，你将看到下面的异常：
+在上面的脚本中，我们尝试用 `a` 除以 `b`。我们处理了 `ZeroDivisionError` 异常。因此，如果 `b` 包含 `0`，则异常将被处理。否则，如果没有发生异常，则将执行 `else` 块。当你运行上面的脚本时，你将看到下面的异常：
 
 ![](img/image00383.jpeg)
 
@@ -1554,7 +1516,7 @@ else:
 
 ### 打开文件
 
-在对文件执行任何函数之前，你需要打开它。在 Python 中使用 `open` 函数打开文件。它接受三个参数：文件路径、打开文件的模式以及按行计算的缓冲区。第三个参数是可选的。`open` 函数返回文件对象。`open` 函数的语法如下：
+在对文件执行任何函数之前，你需要打开它。在 Python 中使用 `open()` 函数打开文件。它接受三个参数：文件路径、打开文件的模式以及按行计算的缓冲区。第三个参数是可选的。`open()` 函数返回文件对象。`open()` 函数的语法如下：
 
 ```python
 file_object = open(file_name, file_mode, buffer_size)
@@ -1574,21 +1536,23 @@ file_object = open(file_name, file_mode, buffer_size)
 | wb+ | 以二进制格式读写打开文件。会覆盖同名文件 |
 | a | 在文件末尾追加内容打开文件 |
 | a+ | 用于追加和读取内容的文件 |
-| ab | 以二进制格式追加内容文件 |
-| ab+ | 以二进制格式读取和追加内容文件 |
+
+
+
+| 模式 | 说明 |
+|------|------|
+| `ab` | 以二进制格式追加内容文件 |
+| `ab+` | 以二进制格式读取和追加内容文件 |
 
 `open` 方法返回的文件对象有三个主要属性：
 
-1. `name`: 返回文件名
-2. `mode`: 返回打开文件时的模式
-3. `closed`: 文件是否关闭
-
-
-
+1. `name`：返回文件名
+2. `mode`：返回打开文件时的模式
+3. `closed`：文件是否关闭
 
 请看以下示例：
 
-注意：在执行上方脚本之前，请创建一个文件 `test.txt` 并将其置于 `D` 盘的根目录下。
+> **注意**：在执行上方脚本之前，请创建一个文件 `test.txt` 并将其置于 `D` 盘的根目录下。
 
 ```python
 file_object = open("D:/test.txt", "r+")
@@ -1611,7 +1575,7 @@ file_object.close()
 print(file_object.closed)
 ```
 
-在上面的脚本中，`test.txt` 文件以 `r+` 模式打开。打印了文件名。接下来，我们使用 `closed` 属性检查文件是否已打开，它返回 `false`，因为文件目前是打开的。然后我们使用 `close` 方法关闭文件。我们再次检查文件是否关闭，由于我们已经关闭了文件，它返回 `true`。输出如下：
+在上面的脚本中，`test.txt` 文件以 `r+` 模式打开。打印了文件名。接下来，我们使用 `closed` 属性检查文件是否已打开，它返回 `False`，因为文件目前是打开的。然后我们使用 `close` 方法关闭文件。我们再次检查文件是否关闭，由于我们已经关闭了文件，它返回 `True`。输出如下：
 
 ![](img/image00386.jpeg)
 
@@ -1629,8 +1593,10 @@ file_object.close()
 
 如果你进入 `D` 盘的根目录，你将看到一个内容如下的新文件 `test1.txt`：
 
+```text
 Welcome to Python.
 The best programming language!
+```
 
 #### 从文件中读取数据
 
@@ -1639,7 +1605,7 @@ The best programming language!
 ```python
 file_object = open("D:/test1.txt", "r+")
 sen = file_object.read(12)
-print("The file reads: "+sen)
+print("The file reads: " + sen)
 file_object.close()
 ```
 
@@ -1692,7 +1658,7 @@ print(sen)
 print(file_object.tell())
 ```
 
-在上面的脚本中，打开了 `file_object`。我们打印了 `tell()` 位置。然后读取了 12 个字符并打印它们。最后再次打印位置。（注意：此部分的提供的文本有些重复/混乱，已保留核心逻辑）。
+在上面的脚本中，打开了 `file_object`。我们打印了 `tell()` 位置。然后读取了 12 个字符并打印它们。最后再次打印位置。
 
 ![](img/image00389.jpeg)
 
@@ -1700,9 +1666,9 @@ print(file_object.tell())
 
 在 Python 中，函数是只执行特定任务的代码块。它们用于封装代码并使其可重用。
 
-#### 函数声明
+### 函数声明
 
-创建函数的语法以 `def` 关键字开头，后面后跟函数名和括号。
+创建函数的语法以 `def` 关键字开头，后面跟函数名和括号。
 
 ```python
 def print_welcome():
@@ -1715,7 +1681,7 @@ def print_welcome():
 print_welcome()
 ```
 
-#### 参数化函数
+### 参数化函数
 
 在上一个示例中，我们留空了括号。然而，这些括号用于向函数传递参数。请看以下示例：
 
@@ -1746,24 +1712,21 @@ print_details("Rick", 25, "Male")
 
 在上面的脚本中，我们创建了一个函数 `print_details`。该函数接受三个参数 `name`、`age` 和 `gender` 并在控制台上打印它们。该函数被调用了三次，分别对应不同的 `name`、`age` 和 `gender` 参数值。
 
-
-
-
-正如你可以通过参数（参数）向函数传递信息一样，你也可以从函数返回返回值。要从函数返回返回值，需要使用 `return` 关键字。请看下面的示例。
+正如你可以通过参数向函数传递信息一样，你也可以从函数返回返回值。要从函数返回返回值，需要使用 `return` 关键字。请看下面的示例。
 
 ```python
 def add_number(num1, num2):
     result = num1 + num2
     return result
 
-result = add_number(10,20)
+result = add_number(10, 20)
 print("sum of 10 and 20 is :" + str(result))
 
-result = add_number(5,15)
+result = add_number(5, 15)
 print("sum of 5 and 15 is :" + str(result))
 ```
 
-在上面的脚本中，我们创建了一个名为 `add_number` 函数。该函数接受两个参数，将它们相加并返回结果和。
+在上面的脚本中，我们创建了一个名为 `add_number` 的函数。该函数接受两个参数，将它们相加并返回结果和。
 
 然后我们调用了两次该函数，并传递了两个不同的数字。结果打印在控制台上。输出如下：
 
@@ -1774,14 +1737,14 @@ print("sum of 5 and 15 is :" + str(result))
 Python 函数可以为参数设置默认值，称为默认参数。如果在调用函数时没有为该参数传递参数值，则使用默认值。请看以下脚本：
 
 ```python
-def add_number(num1, num2 = 100):
+def add_number(num1, num2=100):
     result = num1 + num2
     return result
 
 result = add_number(20)
 print("sum of 100 and 20 is :" + str(result))
 
-result = add_number(5,15)
+result = add_number(5, 15)
 print("sum of 5 and 15 is :" + str(result))
 ```
 
@@ -1797,13 +1760,13 @@ print("sum of 5 and 15 is :" + str(result))
 
 ```python
 def update_list(newlist):
-  newlist.append([20,25,30]);
-  return
+    newlist.append([20, 25, 30])
+    return
 
-numlist = [5,10,15];
-print ("Values before function call", numlist)
-update_list( numlist );
-print ("Values after function call", numlist)
+numlist = [5, 10, 15]
+print("Values before function call", numlist)
+update_list(numlist)
+print("Values after function call", numlist)
 ```
 
 在上面的脚本中，我们创建了一个名为 `update_list` 的函数。该函数接受列表作为参数，并将另一个列表作为元素添加到其中。
@@ -1819,39 +1782,33 @@ print ("Values after function call", numlist)
 ```python
 square = lambda a: a * a
 ## 使用 lambda 表达式
-print(square(5)) #25
-print(square(10)) #100
+print(square(5))  # 25
+print(square(10)) # 100
 
 add = lambda x, y: x + y
 ## 使用 lambda 表达式
-print(add(2, 3)) #5
-print(add(10, 20)) #30
+print(add(2, 3))   # 5
+print(add(10, 20)) # 30
 
 multiply = lambda x, y, z: x * y * z
 ## 使用 lambda 表达式
-print(multiply(1, 2, 3)) #6
-print(multiply(5, 7, 2)) #70
+print(multiply(1, 2, 3)) # 6
+print(multiply(5, 7, 2)) # 70
 ```
 
-
-
-在上面的脚本中，我们创建了一个包含四个属性和三个方法的 `Person` 类。这些属性为 `name`、`age`、`gender` 和 `role`，而方法为 `stand` 和 `sit`。类方法基本上是函数，但它们被定义在类体内部。需要注意的是，类方法默认将 `self` 作为第一个参数。字面量 `self` 指向包含该方法的类。
-
-正如之前讨论的，类仅仅仅仅是蓝图，它们通过对象被具体化。一个类可以有多个对象。
-
-## 对象
+## 类与对象
 
 在 Python 中，一切都被视为对象。Python 对象可以粗略分为两类：
 
-1- 内置对象
-2- 自定义对象
+1. 内置对象
+2. 自定义对象
 
 ### 内置对象
 
 内置对象是属于原始数据类型的对象。例如，当你将一个整数赋值给变量时，实质上在该变量中存储了一个整数对象。请看以下脚本：
 
 ```python
-#创建一个整数类型的对象 age
+# 创建一个整数类型的对象 age
 age = 28
 type(age)
 ```
@@ -1871,11 +1828,11 @@ person1 = Person()
 要访问类属性或方法，可以使用对象名后跟点运算符，以及属性或方法的名称。请看以下示例：
 
 ```python
-#访问属性
+# 访问属性
 f_name = person1.name
 print(f_name)
 
-#调用方法
+# 调用方法
 person1.stand()
 ```
 
@@ -1888,14 +1845,14 @@ person1.stand()
 “构造函数”是在类被实例化时执行的方法。创建类对象的过程也被称为实例化。在 Python 中，使用 `__init__` 方法来创建构造函数。请看以下示例以查看构造函数的用法。
 
 ```python
-#创建类 Person
+# 创建类 Person
 class Person:
-  #创建构造函数
-  def __init__(self):
-      print("Class object created")
-  #创建类方法
-  def stand(self):
-      print ("Person standing")
+    # 创建构造函数
+    def __init__(self):
+        print("Class object created")
+    # 创建类方法
+    def stand(self):
+        print("Person standing")
 ```
 
 在上面的脚本中，我们再次创建了类 `Person`。但这次类有一个构造函数，它只是在屏幕上打印一些文本。该类还包含 `stand` 方法。
@@ -1915,9 +1872,9 @@ person1 = Person()
 我们知道 Python 中赋值给命名实体的值实际上是一个对象。通过同样的类比，在类内部声明的属性也是对象。这意味着对象可以包含嵌套对象。让我们创建一个原始字符串类型对象并检查该对象包含哪些属性。请看以下脚本：
 
 ```python
-#创建一个字符串对象 message
+# 创建一个字符串对象 message
 message = "I love Python"
-#查找 message 对象的所有属性
+# 查找 message 对象的所有属性
 print(dir(message))
 ```
 
@@ -1927,27 +1884,29 @@ print(dir(message))
 
 #### 类属性 vs 实例属性
 
-Python 类具有两种类型的属性：类属性和实例属性。实例属性特定于类的每个个体对象，并且在对象之间不共享。另一方面，类属性在类的所有实例（对象）之间共享的。
+Python 类具有两种类型的属性：类属性和实例属性。实例属性特定于类的每个个体对象，并且在对象之间不共享。另一方面，类属性在类的所有实例（对象）之间共享。
 
 实例属性定义在方法内部，而类属性则定义在方法外部。请看以下示例以查看类属性和实例属性之间的区别。
 
 ```python
-#创建类 Person
+# 创建类 Person
 class Person:
-  #创建类属性
+    # 创建类属性
     person_count = 0
-#创建带有实例属性的方法
-  def set_details(self, name, age, gender):
-      #初始化实例变量
-      self.name = name
-      self.age = name
-      self.gender = name
-      #增加类变量
-      Person.person_count += 1
-      print("Details for person " + self.name + " have been stored")
+    # 创建带有实例属性的方法
+    def set_details(self, name, age, gender):
+        # 初始化实例变量
+        self.name = name
+        self.age = age
+        self.gender = gender
+        # 增加类变量
+        Person.person_count += 1
+        print("Details for person " + self.name + " have been stored")
 ```
 
-在上面的脚本中，我们像往一样创建了 `Person` 类。该类包含一个类属性 `person_count` 和一个方法 `set_details`。在 `set_details` 方法内部，三个实例属性通过作为传递给 `set_details` 方法的参数进行初始化。在方法内部，`person_count` 属性加了 1。你在这里看到的另一个区别是，在方法内部，类属性通过类名访问，而实例属性则是通过对象访问的。
+在上面的脚本中，我们像往常一样创建了 `Person` 类。该类包含一个类属性 `person_count` 和一个方法 `set_details`。在 `set_details` 方法内部，三个实例属性通过作为传递给 `set_details` 方法的参数进行初始化。在方法内部，`person_count` 属性加了 1。你在这里看到的另一个区别是，在方法内部，类属性通过类名访问，而实例属性则是通过对象访问的。
+
+
 
 ```python
 person1 = Person()
@@ -2003,8 +1962,6 @@ medicine1 = Medicine("xyz", 2020, 15)
 ```python
 medicine1.getExpiryDate()
 ```
-
-
 
 从技术上讲，月份可以赋予任何数字。但从逻辑上讲，一年只有 12 个月月份。因此，数字应该在 1 到 12 之间。这就是属性派上用场的地方。通过属性，你可以控制从类成员中赋值和检索的值。
 
@@ -2182,8 +2139,6 @@ class Person:
         return "这个人是 " + self.name
 ```
 
-
-
 让我们创建一个 `Person` 类的对象并尝试在控制台上打印：
 
 ```python
@@ -2294,32 +2249,34 @@ child.methodA()
 child.methodB()
 ```
 
-在上述脚本中，我们创建了一个 `Parent` 类和一个 `Child` 类。`Child` 类继承了 `Parent` 类。要继承一个类，只需在括号内传递父类的名称即可。在上面的脚本中，`Parent` 类包含一个名为 `methodA` 方法，而 `Child` 类包含一个名为 `methodB` 方法。然后我们创建了一个名为 `child` 的子对象。从这个 `child` 对象我们调用了 `methodA`。你可以看到 `Child` 类并不包含 `methodA`，但因为它继承了 `Parent` 类，所以 `Child` 对象也可以访问该方法。最后我们调用了子类方法 `methodB`。上述脚本的输出如下：
+
+
+在上述脚本中，我们创建了一个 `Parent` 类和一个 `Child` 类。`Child` 类继承了 `Parent` 类。要继承一个类，只需在括号内传递父类的名称即可。在上面的脚本中，`Parent` 类包含一个名为 `methodA` 的方法，而 `Child` 类包含一个名为 `methodB` 的方法。然后我们创建了一个名为 `child` 的子对象。从这个 `child` 对象我们调用了 `methodA`。你可以看到 `Child` 类并不包含 `methodA`，但因为它继承了 `Parent` 类，所以 `Child` 对象也可以访问该方法。最后我们调用了子类方法 `methodB`。上述脚本的输出如下：
 
 ![](img/image00408.jpeg)
 
 像方法一样，子类也从父类继承属性。请看下面的示例：
 
 ```python
-#创建 Parent 类
+# 创建 Parent 类
 class Parent:
-    name=""
+    name = ""
     age = ""
-    def methodA (self):
+    def methodA(self):
         print("Hello, I am a Parent method")
 
-## 创建继承 Parent 的 Child
+# 创建继承 Parent 的 Child
 class Child(Parent):
-    def methodB (self):
+    def methodB(self):
         print("Hello, I am a Child method")
 
-## 创建 Child 对象
+# 创建 Child 对象
 child = Child()
-## 访问 Parent 方法
+# 访问 Parent 方法
 child.methodA()
-## 访问 Child 方法
+# 访问 Child 方法
 child.methodB()
-## 访问父类属性
+# 访问父类属性
 child.name = "Jacob"
 child.age = 10
 print(child.name + " " + str(child.age))
@@ -2332,52 +2289,39 @@ print(child.name + " " + str(child.age))
 多个子类可以继承同一个父类。请看下面的脚本：
 
 ```python
-#创建 Parent 类
+# 创建 Parent 类
 class Parent:
-    def methodA (self):
+    def methodA(self):
         print("Hello, I am a Parent method")
 
-## 创建继承 Parent 的 Child1
+# 创建继承 Parent 的 Child1
 class Child1(Parent):
-    def methodB (self):
+    def methodB(self):
         print("Hello, I am a Child1 method")
 
-## 创建继承 Parent 的 Child2
+# 创建继承 Parent 的 Child2
 class Child2(Parent):
-    def methodC (self):
+    def methodC(self):
         print("Hello, I am a Child2 method")
 
-## 创建 Child1 对象
+# 创建 Child1 对象
 child1 = Child1()
-## 访问 Parent 方法
+# 访问 Parent 方法
 child1.methodA()
-## 访问 Child1 方法
+# 访问 Child1 方法
 child1.methodB()
 
-## 创建 Child2 对象
-```
-
-
-
-
-
-```python
+# 创建 Child2 对象
 child2 = Child2()
-```
 
-## 访问父类方法
-
-```python
+# 访问父类方法
 child2.methodA()
-```
 
-## 访问 Child1 类方法
-
-```python
+# 访问 Child2 类方法
 child2.methodC()
 ```
 
-在上面的脚本中，有两个子类 `Child1` 和 `Child2`，它们都继承了名为 `Parent` 的父类。现在，这两个子类都拥有访问 `Parent` 类方法（即 `methodA`），上述脚本的输出如下：
+在上面的脚本中，有两个子类 `Child1` 和 `Child2`，它们都继承了名为 `Parent` 的父类。现在，这两个子类都拥有访问 `Parent` 类方法（即 `methodA`）的权限，上述脚本的输出如下：
 
 ![](img/image0040.jpeg)
 
@@ -2387,7 +2331,7 @@ child2.methodC()
 
 Python 为这个问题提供了一个简单的解决方案。父类和子类构造函数的参数会被传递给子类。在子类的构造函数内部，会调用父类的构造函数并将父类构造函数的参数传递给它。剩余的参数则用于初始化子类的属性。看以下示例：
 
-## 创建 Vehicle 类
+#### 创建 Vehicle 类
 
 ```python
 class Vehicle:
@@ -2397,7 +2341,7 @@ class Vehicle:
         self.color = color
 ```
 
-## 创建继承 Vehicle 类的 Bike 类
+#### 创建继承 Vehicle 类的 Bike 类
 
 ```python
 class Bike(Vehicle):
@@ -2408,16 +2352,16 @@ class Bike(Vehicle):
         self.price = price
 ```
 
-## 创建 Vehicle 类对象
+#### 创建 Vehicle 类对象
 
 ```python
-bike = Bike("Honda","Black",25000)
+bike = Bike("Honda", "Black", 25000)
 
-## 访问父类属性
+# 访问父类属性
 print(bike.name)
 print(bike.color)
 
-## 访问子类属性
+# 访问子类属性
 print(bike.price)
 ```
 
@@ -2442,21 +2386,21 @@ class Sedan:
     def showSedanDetails(self):
         print("I am sedan class")
 
-## 创建继承 Vehicle 和 Sedan 的 Car 类
-class Car(Vehicle,Sedan):
+# 创建继承 Vehicle 和 Sedan 的 Car 类
+class Car(Vehicle, Sedan):
     def showCarDetails(self):
         print("I am car class")
 
 # 创建 Car 类的对象
 car = Car()
 
-## 访问 Vehicle 类方法
+# 访问 Vehicle 类方法
 car.showVehicleDetails()
 
-## 访问 Sedan 类方法
+# 访问 Sedan 类方法
 car.showSedanDetails()
 
-## 访问子类方法
+# 访问子类方法
 car.showCarDetails()
 ```
 
@@ -2468,7 +2412,7 @@ car.showCarDetails()
 
 除了访问父类方法外，子类还可以通过为相同的方法名提供自己的定义来重写父类方法。看以下示例来理解这一概念：
 
-## 创建 Person 类
+#### 创建 Person 类
 
 ```python
 class Employee:
@@ -2484,7 +2428,7 @@ manager = Manager()
 manager.printdetails()
 ```
 
-在上面的脚本中，我们了两个类：`Employee` 和 `Manager`。`Employee` 类包含一个方法 `printdetails`。`Manager` 类继承了 `Employee` 类，这意味着 `Manager` 类拥有访问 `Employee` 类 `printdetails` 方法的。然而 `Manager` 包含了对 `printdetails` 方法的自己的定义。现在你创建 `Manager` 对象并调用该方法，将调用子类方法，如下输出所示：
+在上面的脚本中，我们创建了两个类：`Employee` 和 `Manager`。`Employee` 类包含一个方法 `printdetails`。`Manager` 类继承了 `Employee` 类，这意味着 `Manager` 类拥有访问 `Employee` 类 `printdetails` 方法的权限。然而 `Manager` 包含了对 `printdetails` 方法的自己的定义。现在你创建 `Manager` 对象并调用该方法，将调用子类方法，如下输出所示：
 
 ![](img/image00412.jpeg)
 
@@ -2506,7 +2450,7 @@ result = x + y
 print(result)
 ```
 
-在上面的脚本中，我们给变量 `x` 和 `y` 赋值数值。然后我们使用加法运算符这些这些值并将和存储在 `result` 变量中。然后我们在屏幕上打印 `result` 变量。这表明加法运算符用于的是数值操作数。接下来，我们给 `x` 和 `y` 赋值字符串类型的值并再次使用加法运算符。这次加法运算符拼接了两个字符串。示例显示了加法运算符如何根据操作数遵循多态。
+在上面的脚本中，我们给变量 `x` 和 `y` 赋值数值。然后我们使用加法运算符将这些值相加并将和存储在 `result` 变量中。然后我们在屏幕上打印 `result` 变量。这表明加法运算符用于的是数值操作数。接下来，我们给 `x` 和 `y` 赋值字符串类型的值并再次使用加法运算符。这次加法运算符拼接了两个字符串。示例显示了加法运算符如何根据操作数遵循多态。
 
 在自定义类中，多态通过方法重载（method overloading）和方法重写（method overriding）实现。我们在上一节中学习了方法重写，这里我们将学习方法重载。
 
@@ -2516,10 +2460,10 @@ print(result)
 # 创建 Employee
 class Employee:
     def printname(self, name=None):
-        if name == None:
+        if name is None:
             print("Hello, I am an employee")
         else:
-            print("Hello, I am an employee. My name is ",name)
+            print("Hello, I am an employee. My name is ", name)
 ```
 
 在上面的脚本中，我们创建了一个包含一个方法 `printname` 的 `Employee` 类。`printname` 方法有一个可选参数 `name`。`printname` 方法可以带一个字符串类型的参数调用，也可以不带任何参数调用。如果不带任何参数调用方法，将在控制台打印“Hello, I am an employee”。如果带字符串类型参数调用 `printname` 方法，则将在屏幕上打印“Hello, I am an employee. My name is ,name”，其中参数将替换 name 变量。让我们创建一个 `Employee` 类的对象并分别带参数和不带参数调用 `printname` 方法。
@@ -2529,10 +2473,6 @@ emp = Employee()
 emp.printname()
 emp.printname("Joseph")
 ```
-
-
-
-
 
 ![](img/image00413.jpeg)
 
@@ -2549,8 +2489,8 @@ emp.printname("Joseph")
 看这个简单的例子：
 
 ```python
-sum = lambda a,b,c: a + b + c
-result = sum(10,15,5)
+sum = lambda a, b, c: a + b + c
+result = sum(10, 15, 5)
 print(result)
 ```
 
@@ -2562,21 +2502,21 @@ map 函数用于在序列上应用函数并返回更新后的序列。`map` 函�
 
 ```python
 def takesquare(x):
-    return(x * x)
+    return x * x
 
-nums = [2,4,6,8,10]
+nums = [2, 4, 6, 8, 10]
 squares = map(takesquare, nums)
 print(list(squares))
 ```
 
-在上面的脚本中，我们创建了函数 `takesquare`，它接收一个参数并返回所传参数值的平方。该函数在这里仅应用于一个参数，但通过使用 `map` 函数，我们可以将此函数应用于列表的每个单独元素。在上面的脚本中，我们创建了一个从 2 到 10 的偶数列表。接着，我们使用 `map` 函数，并将 `takesquare` 函数作为第一个参数，列表 `"nums"` 作为第二个参数传递进去。`map` 函数将 `takesquare` 函数应用于列表的每个单独元素，例如 `2` 的平方变为 `4`，`4` 的平方变为 `16`，依此类推。结果序列存储在变量 `squares` 中。然后，我们将 `squares` 对象转换为列表并将其打印到控制台上。输出将如下所示：
+在上面的脚本中，我们创建了函数 `takesquare`，它接收一个参数并返回所传参数值的平方。该函数在这里仅应用于一个参数，但通过使用 `map` 函数，我们可以将此函数应用于列表的每个单独元素。在上面的脚本中，我们创建了一个从 2 到 10 的偶数列表。接着，我们使用 `map` 函数，并将 `takesquare` 函数作为第一个参数，列表 `nums` 作为第二个参数传递进去。`map` 函数将 `takesquare` 函数应用于列表的每个单独元素，例如 `2` 的平方变为 `4`，`4` 的平方变为 `16`，依此类推。结果序列存储在变量 `squares` 中。然后，我们将 `squares` 对象转换为列表并将其打印到控制台上。输出将如下所示：
 
 ![](img/image00414.jpeg)
 
 在脚本中我们没有使用 lambda 函数；简单地传递了一个具体的函数。然而，`map` 函数真正的魅力在于它能够使用 lambda 函数的能力。看下面的示例：
 
 ```python
-squares2 = map(lambda x: x*x, nums)
+squares2 = map(lambda x: x * x, nums)
 print(list(squares2))
 ```
 
@@ -2587,18 +2527,18 @@ print(list(squares2))
 你甚至可以在 `map` 函数中使用两个或多个序列，并同时对这两个列表应用某些功能。看下面的脚本：
 
 ```python
-even = [2,4,6,8,10]
-odd = [1,3,5,7,9]
-result = map(lambda a,b: a+b, even, odd)
+even = [2, 4, 6, 8, 10]
+odd = [1, 3, 5, 7, 9]
+result = map(lambda a, b: a + b, even, odd)
 print(list(result))
 ```
 
 ### Filter 函数
 
-`filter` 函数用于在序列上应用函数并返回过滤后的序列。`filter` 函数接受 (1) 作为第一个参数的应用函数以及 (2) 作为第二个参数的待过滤序列。`filter` 函数返回一个 map 类型对象，可以使用 `list` 函数转换为列表。看下面的示例：
+`filter` 函数用于在序列上应用函数并返回过滤后的序列。`filter` 函数接受 (1) 作为第一个参数的应用函数以及 (2) 作为第二个参数的待过滤序列。`filter` 函数返回一个 filter 类型对象，可以使用 `list` 函数转换为列表。看下面的示例：
 
 ```python
-nums = [1,2,3,4,5,6,7,8,9,10]
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 result = filter(lambda a: a % 2 == 0, nums)
 print(list(result))
 ```
@@ -2606,7 +2546,7 @@ print(list(result))
 在上面的脚本中，我们过滤出了偶数。然而，`filter` 函数真正的美丽之处在于它能够使用 lambda 函数。看下面的示例：
 
 ```python
-nums = [1,2,3,4,5,6,7,8,9,10]
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 result = filter(lambda a: a > 5, nums)
 print(list(result))
 ```
@@ -2617,14 +2557,16 @@ print(list(result))
 
 ```python
 from functools import reduce
-nums = [1,2,3]
-result = reduce(lambda a,b: a+b, nums)
+nums = [1, 2, 3]
+result = reduce(lambda a, b: a + b, nums)
 print(result)
 ```
 
 ## 列表推导式
 
 列表推导式可以使用集合符号来创建列表。列表推导式可以简化由 `map` 和 `reduce` 函数完成的任务。看这个简单的示例，整数列表转换为相应的平方列表：
+
+
 
 ```python
 evens = [2,4,6,8,10]
@@ -2646,17 +2588,13 @@ print(evens)
 
 ![Cover Data Analytics](img/image00417.jpeg)
 
-免费电子书下载： 
+免费电子书下载：
 
 [`bit.ly/2yJsyq4`](http://bit.ly/2yJsyq4)
 
 或者
 
 [`pragmaticsolutionstech.com/`](http://pragmaticsolutionstech.com/)
-
-
-
-
 
 点击上方链接即可获取畅销电子书《初学者数据分析指南》（Data Analytics' Guide For Beginners）。
 
@@ -2667,9 +2605,11 @@ print(evens)
 在任何情况下，出版者对因本文包含的信息（直接或间接）导致的任何赔偿、损害或资金损失不承担任何法律责任或指责。
 
 ## 法律声明
+
 未经作者同意，您不得修改、分发、销售、使用、引用或转述本书的任何部分或其内容。
 
 ## 免责声明
+
 请注意，本文档中包含的信息仅供教育目的。不提供任何形式的明示或隐含保证。读者承认，作者并未提供法律、财务、医疗或专业建议。在尝试本书中概述的任何技术之前，请咨询执业的专业人士。
 
 通过阅读本文档，读者同意在任何情况下，作者对因使用本文档包含的信息而导致的任何直接或间接损失不承担责任，包括但不限于——错误、遗漏或不准确之处。
@@ -2677,90 +2617,168 @@ print(evens)
 ## 目录
 
 - 引言
+
 - 第一章
+
     - 机器学习简介
+
     - 定义
+
     - 机器如何学习？
+
     - 机器学习的重要性
+
     - 机器学习的类型
+
     - 结论
+
 - 第二章
+
     - 环境搭建
+
     - 下载并安装 Anaconda
+
     - 运行你的第一个程序
+
 - 第三章
+
     - 机器学习的数据预处理
+
     - 获取数据集
+
     - 导入库
+
     - 导入数据集
+
     - 处理缺失值
+
     - 处理分类数据
+
     - 将数据分为训练集和测试集
+
     - 数据标准化
+
 - 第四章
+
     - 线性回归
+
     - 线性回归理论
+
     - 单变量线性回归
+
     - 多变量线性回归
+
 - 第五章
+
     - 多项式回归
+
     - 使用 Python Scikit Learn 实现多项式回归
+
 - 第六章
+
     - 回归的决策树
+
     - 决策树的优点
+
     - 使用 Python Scikit Learn 实现决策树
+
 - 第七章
+
     - 回归的随机森林
+
     - 随机森林算法原理
+
     - 随机森林算法的优点
+
     - 随机森林算法的缺点
+
     - 使用 Scikit Learn 实现随机森林算法
+
 - 第八章
+
     - 支持向量回归
+
     - SVM 理论
+
 - 第九章
+
     - 分类的朴素贝叶斯算法
+
     - 朴素贝叶斯算法理论
+
     - 朴素贝叶斯算法的优点
+
     - 朴素贝叶斯算法的缺点
+
     - 朴素贝叶斯算法的应用
+
     - 使用 Scikit Learn 实现朴素贝叶斯算法
+
 - 第十章
+
     - 分类的 K 最近邻算法
+
     - KNN 算法原理
+
     - KNN 算法的优点
+
     - KNN 算法的缺点
+
     - 使用 Scikit Learn 实现 KNN
+
     - K 值对预测准确率的影响
+
 - 第十一章
+
     - 决策树分类
+
     - 使用 Scikit Learn 解决决策树问题
-- 第十二章章
+
+- 第十二章
+
     - 分类的随机森林
+
     - 使用 Python Scikit Learn 实现随机森林分类
-- 第十三章章
+
+- 第十三章
+
     - 支持向量机分类
+
     - 使用 Python Scikit Learn 进行 SVM 分类
+
 - 第十四章
+
     - K 聚类算法
+
     - K 均聚类的步骤
-- 第十五章章
+
+- 第十五章
+
     - 层次聚类
+
     - 层次聚类理论
+
     - 使用 Python Scikit Learn 实现层次聚类
-- 第十六章章
+
+- 第十六章
+
     - 基于 PCA 的降维
+
     - 主成分分析理论
+
     - 使用 Sklearn 实现 PCA
-- 第十七章章
+
+- 第十七章
+
     - 基于 LDA 的降维
+
     - 线性判别分析理论
+
     - 使用 Scikit Learn 实现 LDA
-- 第十八章章
+
+- 第十八章
+
     - 通过交叉验证和网格搜索进行性能评估
-
-
-
 
 机器学习是目前最热门的词汇之一。随着高性能计算硬件的进步以及数千太字节数据的可用性，越来越多的公司和研究机构正在使用机器学习来构建能够执行各种任务并帮助人类做出更好决策的智能机器。
 
@@ -2776,19 +2794,19 @@ print(evens)
 
 ### 定义
 
-机器学习的第一个定义是由[Arthur Samuel](https://en.wikipedia.org/wiki/Arthur_Samuel)在 1959 年提出的。他将机器学习定义为：
+机器学习的第一个定义是由 [Arthur Samuel](https://en.wikipedia.org/wiki/Arthur_Samuel) 在 1959 年提出的。他将机器学习定义为：
 
-“计算机能够在没有显式编程的情况下进行学习的研究领域。”
+> “计算机能够在没有显式编程的情况下进行学习的研究领域。”
 
-卡内基梅隆大学的[Tom Mitchel](http://www.cs.cmu.edu/~tom/)在 1997 年用数学可理解的术语定义了机器学习。他说：
+卡内基梅隆大学的 [Tom Mitchel](http://www.cs.cmu.edu/~tom/) 在 1997 年用数学可理解的术语定义了机器学习。他说：
 
-“如果计算机程序对于某些任务 `T` 和性能衡量标准 `P` 通过 `P` 测量的性能随着经验 `E` 的增加而提高，则称从经验 `E` 中学习。”
+> “如果计算机程序对于某些任务 `T` 和性能衡量标准 `P` 通过 `P` 测量的性能随着经验 `E` 的增加而提高，则称从经验 `E` 中学习。”
 
 Tom Mitchel 提供的定义被广泛认为是最精确且清晰的机器学习定义。现在我们知道机器学习是什么了，但留有一个问题：机器是如何学习的，它们的内部工作原理是什么？下一节将回答这个问题：
 
 ### 机器是如何学习的？
 
-在深入机器学习的细节之前，让我们先回顾一下人类是如何学习的。例如，我们人类如何知道当加热板开启时不应该用手手触碰它们？我们如何知道它们会导致烫伤？嗯，这有两种可能：要么我们过去被加热炉烫伤过，要么我们受过长辈的教导不要触碰加热板。在这两种情况下，我们过去都有某些经验阻止了我们在加热板开启时去触碰它们。换句话说，我们拥有一些过去的信息，并基于这些信息做出未来的决策。
+在深入机器学习的细节之前，让我们先回顾一下人类是如何学习的。例如，我们人类如何知道当加热板开启时不应该用手触碰它们？我们如何知道它们会导致烫伤？嗯，这有两种可能：要么我们过去被加热炉烫伤过，要么我们受过长辈的教导不要触碰加热板。在这两种情况下，我们过去都有某些经验阻止了我们在加热板开启时去触碰它们。换句话说，我们拥有一些过去的信息，并基于这些信息做出未来的决策。
 
 机器的学习方式相似。在开始，它们没有任何知识。它们就像一个零知识的婴儿。为了让机器学习，信息被传递给这些机器。通过这些信息，机器利用各种统计技术识别模式。一旦机器学会了从数据中识别模式，它们就可以预测未见过的数据。
 
@@ -2825,7 +2843,7 @@ Tom Mitchel 提供的定义被广泛认为是最精确且清晰的机器学习�
 
 在数学术语中，你拥有输入变量 `X` 和输出变量 `y`，并且必须找到一个捕捉两者之间关系的函数，即：
 
-`y= f(X)`
+`y = f(X)`
 
 监督学习用于解决两种类型的问题：分类和回归。
 
@@ -2836,10 +2854,6 @@ Tom Mitchel 提供的定义被广泛认为是最精确且清晰的机器学习�
 #### 2. 无监督学习
 
 在无监督学习中，算法被喂了没有标签的输入数据。识别数据中的模式并对具有相似特征的记录进行聚类是算法的责任。通常，现实世界大部分数据是没有标签的；因此，无监督学习可以作为监督学习的前身。
-
-
-
-
 
 例如，客户的购物趋势可以输入无监督学习算法中。该算法可以发现购物中的趋势。考虑一种场景：算法发现购买婴儿用品的客户也会购买牛奶。因此，可以根据这一信息做出一项业务决策，将牛奶放置在婴儿用品附近。
 
@@ -2855,45 +2869,44 @@ Tom Mitchel 提供的定义被广泛认为是最精确且清晰的机器学习�
 
 ### 下载和安装 Anaconda
 
-按照以下步骤下载并安装 `anaconda`。在本节中，我们将展示在 Windows 上安装 `Anaconda` 的过程。Linux 和 Mac 的安装过程几乎相同。
+按照以下步骤下载并安装 `Anaconda`。在本节中，我们将展示在 Windows 上安装 `Anaconda` 的过程。Linux 和 Mac 的安装过程几乎相同。
 
-11- 进入以下 URL `https://www.anaconda.com/download/`
-
-12- 你将看到以下网页。选择 `Python 3.6` 版本，因为这是目前的最新版本。点击“Download”按钮下载可执行文件。根据你的互联网速度，下载文件需要 2-3 分钟。
+1. 进入以下 URL `https://www.anaconda.com/download/`
+2. 你将看到以下网页。选择 `Python 3.6` 版本，因为这是目前的最新版本。点击“Download”按钮下载可执行文件。根据你的互联网速度，下载文件需要 2-3 分钟。
 
 ![](img/image00420.jpeg)
 
-13- 可执行文件下载完成后进入下载文件夹并运行。文件名应类似于 `Anaconda3-5.1.0-Windows-x86_64.`。当你运行该文件时，你会看到类似下方截图所示安装向导。点击“Next”按钮。
+3. 可执行文件下载完成后进入下载文件夹并运行。文件名应类似于 `Anaconda3-5.1.0-Windows-x86_64`。当你运行该文件时，你会看到类似下方截图所示安装向导。点击“Next”按钮。
 
 ![](img/image00421.jpeg)
 
-14- 将弹出“License Agreement”（许可协议）对话框。阅读许可协议并点击“I Agree”按钮。
+4. 将弹出“License Agreement”（许可协议）对话框。阅读许可协议并点击“I Agree”按钮。
 
 ![](img/image00422.jpeg)
 
-15- 在“Select Installation Type”（选择安装类型）对话框中，勾选“Just Me”单选按钮并如下所示点击“Next”按钮。
+5. 在“Select Installation Type”（选择安装类型）对话框中，勾选“Just Me”单选按钮并如下所示点击“Next”按钮。
 
 ![](img/image00423.jpeg)
 
-16- 从“Choose Install Location”（选择安装位置）对话框中选择安装目录（建议默认），并点击“Next”按钮。你的安装目录应该有 3 GB 的可用空间。
+6. 从“Choose Install Location”（选择安装位置）对话框中选择安装目录（建议默认），并点击“Next”按钮。你的安装目录应该有 3 GB 的可用空间。
 
 ![](img/image00424.jpeg)
 
-17- 从“Advanced Installation Options”（高级安装选项）对话框中，选择第二个复选框“Register Anaconda as my default Python 3.6”，并所示点击“Install”按钮。
+7. 从“Advanced Installation Options”（高级安装选项）对话框中，选择第二个复选框“Register Anaconda as my default Python 3.6”，并所示点击“Install”按钮。
 
 ![](img/image00425.jpeg)
 
 安装过程将开始，可能需要一些时间完成。坐下来享杯咖啡吧。
 
-18- 安装完成后，如下所示点击“Next”按钮。
+8. 安装完成后，如下所示点击“Next”按钮。
 
 ![](img/image00426.jpeg)
 
-19- 出现“Microsoft Visual Studio Code Installation”窗口，点击“Skip”按钮。
+9. 出现“Microsoft Visual Studio Code Installation”窗口，点击“Skip”按钮。
 
 ![](img/image00427.jpeg)
 
-20- 恭喜，你已经安装了 `Anaconda`。取消对话框中出现的两个复选框并点击“Finish”按钮。
+10. 恭喜，你已经安装了 `Anaconda`。取消对话框中出现的两个复选框并点击“Finish”按钮。
 
 ![](img/image00428.jpeg)
 
@@ -2907,7 +2920,9 @@ Tom Mitchel 提供的定义被广泛认为是最精确且清晰的机器学习�
 
 将出现这样的 `Anaconda Navigator` 仪表。
 
-注意：`Anaconda Navigator` 启动需要一些时间，请耐心等待![](img/image00430.jpeg)
+> 注意：`Anaconda Navigator` 启动需要一些时间，请耐心等待
+
+![](img/image00430.jpeg)
 
 从仪表面板，你可以看到所有用于开发 Python 应用程序的工具。在书中，我们将主要使用“Jupyter Notebook”（从上数第二个）。尽管在本章中，我们也将看到如何通过“Spyder”运行 Python 脚本。
 
@@ -2951,14 +2966,13 @@ Tom Mitchel 提供的定义被广泛认为是最精确且清晰的机器学习�
 
 要在 `Python` 中运行脚本你有两个选择。你可以点击顶部菜单的绿色三角形，或者选择你想执行的代码段并按键盘上的 `CTRL + ENTER`。你将在控制台中看到输出。
 
-接下来是什么？
+## 接下来是什么？
 
 在本章中，我们了解了运行 Python 程序所需环境搭建的过程。我们在两个不同的编辑器中编写了第一个 Python 程序。在下一章中，我们将开始讨论机器学习的数据预处理。
 
 
 
-
-在将机器学习算法应用于数据之前，数据必须符合特定的格式。将数据转换为机器学习算法适的正确格式通常被称为**数据预处理**。根据数据集的不同，通常需要执行若干预处理步骤，以将数据转换为机器学习算法可使用的格式。以下是为机器学习算法进行数据预处理所涉及的步骤：
+在将机器学习算法应用于数据之前，数据必须符合特定的格式。将数据转换为机器学习算法适用的正确格式通常被称为**数据预处理**。根据数据集的不同，通常需要执行若干预处理步骤，以将数据转换为机器学习算法可使用的格式。以下是为机器学习算法进行数据预处理所涉及的步骤：
 
 1. 获取数据集
 2. 导入库
@@ -2984,21 +2998,21 @@ Tom Mitchel 提供的定义被广泛认为是最精确且清晰的机器学习�
 
 该数据集包含了 12 名患者的年龄（Age）、BMI（体重指数）和性别（Gender）。数据集还包含一列，显示患者是否患有糖尿病。Age 和 BMI 列是数值型的，因为它们包含数值；而 Gender 和 Diabetic（糖尿病）列是分类的。
 
-在将你的数据集用于机器学习之前，你还需要需要区分的另一个重要区别是**自变量**和**因变量**。根据经验法则，要预测其值的变量是因变量，而用于进行预测的变量是自变量。例如，在 `patients.csv` 数据集中，Age、BMI 和 Gender 变量是自变量，而第四列即 Diabetic 是因变量，因为它的值取决于前三列。
+在将你的数据集用于机器学习之前，你还需要区分的另一个重要区别是**自变量**和**因变量**。根据经验法则，要预测其值的变量是因变量，而用于进行预测的变量是自变量。例如，在 `patients.csv` 数据集中，Age、BMI 和 Gender 变量是自变量，而第四列即 Diabetic 是因变量，因为它的值取决于前三列。
 
 ### 导入库
 
 Python 带有许多执行不同任务的预构建库。在书中，我们将使用 Python 的 Scikit Learn 库。但目前，我们只安装在几乎每个机器学习应用中需要的三个最基本的库。这些库是 `numpy`、`matplotlib.pyplot` 和 `pandas`。
 
-### numpy
+#### numpy
 
 `numpy` 库用于执行各种高级数学函数。由于机器学习算法大量使用数学，因此强烈建议安装 `numpy` 库。
 
-### matplotlib.pyplot
+#### matplotlib.pyplot
 
 该库用于绘制精美的图表。为了直观地了解我们的数据和结果，我们需要这个库。
 
-### pandas
+#### pandas
 
 最后，我们在本章中要安装的第三个库是 `pandas`。`pandas` 库用于方便地导入和查看数据集。
 
@@ -3029,7 +3043,7 @@ patient_data = pd.read_csv("D:/Datasets/patients.csv")
 
 该数据集包含了 12 名患者的年龄、BMI（体重指数）和性别。数据集还包含一列，显示患者是否患有糖尿病。Age 和 BMI 列是数值型的，因为它们包含数值；而 Gender 和 Diabetic（糖尿病）列是分类的。
 
-在将你的数据集用于机器学习之前，你还需要需要区分的另一个重要区别是自变量和因变量。根据经验法则，要预测其值的变量是因变量，而用于进行预测的变量是自变量。例如，在 `patients.csv` 数据集中，Age、BMI 和 Gender 变量是自变量，而第四列即 Diabetic 是因变量，因为它的值取决于前三列。
+在将你的数据集用于机器学习之前，你还需要区分的另一个重要区别是自变量和因变量。根据经验法则，要预测其值的变量是因变量，而用于进行预测的变量是自变量。例如，在 `patients.csv` 数据集中，Age、BMI 和 Gender 变量是自变量，而第四列即 Diabetic 是因变量，因为它的值取决于前三列。
 
 我们的数据集是 CSV（逗号分隔值）格式。`read_csv` 函数接受文件路径并加载数据为 DataFrame。
 
@@ -3077,8 +3091,6 @@ imputer = imputer.fit(features[:,1:2])
 features[:,1:2] = imputer.transform(features[:,1:2])
 ```
 
-
-
 在上面的脚本中，第一行从 `sklearn.preprocessing` 库导入了 `Imputer` 类。接下来我们创建了 `Imputer` 类的对象。`Imputer` 类的构造函数接受三个参数：`missing_value`、`strategy` 和 `axis`。`missing_value` 参数指定了需要替换的值。在我们的数据集中，缺失值被标记为“nan”，因此我们为 `missing_value` 参数指定了“NaN”。`Strategy` 参数指定了我们想要使用的填充缺失值的策略类型，它可以取值为 `mean`（平均值）、`median`（中位数）和 `most_frequent`（众数）。最后，`axis` 参数指定了我们想要进行插补的轴。`axis 0` 指定列轴，而 `axis 1` 指定行轴。
 
 接下来我们执行了 `Imputer` 类的 `fit` 方法。该方法接受我们想要处理缺失值的列作为输入。最后我们执行 `transform` 函数，它实际上通过列 1 的平均值填充了列 1 中的缺失值。当你执行上面的脚本时，你会发现索引为 4 的记录之前列 1（即 BMI）有缺失值，现在它包含了 BMI 列中所有值的平均值。如下所示所示：
@@ -3123,8 +3135,6 @@ train_features, test_features, train_labels, test_labels = train_test_split(feat
 
 执行上述脚本后，你会发现 `train_features` 包含 75% 的特征，`test_features` 包含 25% 的特征，`train_labels` 包含 75% 的标签，`test_labels` 包含 25% 的标签。
 
-
-
 这里 `n` 是独立变量的总数。该方程基本上代表一个 `n` 维超平面。需要提到的是，在二维空间中，线性回归模型可以表示为直线。在三维空间中，它以平面的形式表示；而在三个及以上的维度中，它表示为超平面。
 
 理论部分到此为止，让我们借助 Python 的 Scikit-learn 库来实现线性回归。
@@ -3137,7 +3147,7 @@ train_features, test_features, train_labels, test_labels = train_test_split(feat
 
 为了预测价格，我们将使用通过 Python Scikit Learn 库实现的线性回归算法。那么，让我们开始这段乐趣吧：
 
-### 1- 导入所需的库
+### 1. 导入所需的库
 
 正如上一章所讨论的，实现任何机器学习算法的第一步是将所需的库导入到你的程序中。以下代码导入了所需的库：
 
@@ -3150,7 +3160,7 @@ import matplotlib.pyplot as plt
 
 该脚本是在 Jupyter notebook 中实现的。因此，为了在笔记本中绘制图表，我们使用了 `%matplotlib inline` 命令。如果你正在使用 Spyder，可以删除最后一行。
 
-### 2- 导入数据集
+### 2. 导入数据集
 
 一旦导入了库，下一步是导入你将用于训练算法的数据集。我们将使用 `car_price.csv` 数据集。执行以下脚本导入数据集：
 
@@ -3160,7 +3170,7 @@ car_data = pd.read_csv('D:\\Datasets\\car_price.csv')
 
 上面的脚本读取数据集并将其存储在 `car_data` 数据框中。
 
-### 3- 数据分析
+### 3. 数据分析
 
 在使用数据进行训练之前，分析数据是否存在缺失值或是否需要缩放始终是一个良好的习惯。
 
@@ -3196,7 +3206,7 @@ plt.show()
 
 在上面的脚本中，我们使用 `matplotlib` 库的散点图将年份绘制在 x 轴，价格绘制在 y 轴。从输出图中我们可以清楚地看到，随着年份的增加，汽车价格也会增加。年份和价格之间存在线性关系。因此，我们可以使用线性回归算法来解决这个问题。
 
-### 4- 数据预处理
+### 4. 数据预处理
 
 在上章节中，我们学习了在将数据输入学习算法之前，必须先将数据划分为特征集和标签集，然后分为测试集和训练集。在这一步中，我们将完成这两项任务。
 
@@ -3218,7 +3228,7 @@ train_features, test_features, train_labels, test_labels = train_test_split(feat
 
 如果我们观察数据集，可以看到年份和价格的值之间没有非常巨大的差异。它们都是千位数。因此，不需要对数据进行缩放，我们可以直接使用这些数据训练算法。
 
-### 5- 训练算法并进行预测
+### 5. 训练算法并进行预测
 
 `sklearn.linear_model` 中的 `LinearRegression` 类用于在 Python 中实现线性回归。`LinearRegression` 类具有 `fit` 方法，它接受训练特征和标签作为输入并按所示训练模型：
 
@@ -3242,6 +3252,8 @@ print(lin_reg.coef_)
 
 执行以下脚本预测测试特征的标签：
 
+
+
 ```python
 predictions = lin_reg.predict(test_features)
 ```
@@ -3251,7 +3263,7 @@ predictions = lin_reg.predict(test_features)
 让我们比较预测值与实际值。执行以下脚本进行比较：
 
 ```python
-comparison=pd.DataFrame({'Real':test_labels, 'Predictions':predictions})
+comparison = pd.DataFrame({'Real': test_labels, 'Predictions': predictions})
 print(comparison)
 ```
 
@@ -3261,7 +3273,7 @@ print(comparison)
 
 我们可以看到测试中有四个值，占整个数据集的 20%，如 `train_test_split` 所示。
 
-为了评估机器学习模型的性能，通常使用三个指标：[绝对误差](https://en.wikipedia.org/wiki/Mean_absolute_error) (MAE),[均方误差](https://en.wikipedia.org/wiki/Mean_squared_error) (MSE) 和 [均方根误差](https://en.wikipedia.org/wiki/Root-mean-square_deviation) (RMSE)。幸运的是，我们不需要编写这些指标背后的复杂数学代码。sklearn 中的 metrics 类包含了用于计算这些指标值的函数。执行以下脚本为我们的线性回归模型计算 MAE、MSE 和 RMSE。
+为了评估机器学习模型的性能，通常使用三个指标：[绝对误差](https://en.wikipedia.org/wiki/Mean_absolute_error) (MAE)、[均方误差](https://en.wikipedia.org/wiki/Mean_squared_error) (MSE) 和 [均方根误差](https://en.wikipedia.org/wiki/Root-mean-square_deviation) (RMSE)。幸运的是，我们不需要编写这些指标背后的复杂数学代码。sklearn 中的 metrics 类包含了用于计算这些指标值的函数。执行以下脚本为我们的线性回归模型计算 MAE、MSE 和 RMSE。
 
 ```python
 from sklearn import metrics
@@ -3282,14 +3294,11 @@ print('RMSE:', np.sqrt(metrics.mean_squared_error(test_labels, predictions)))
 
 我们将根据球员的身高、体重、投篮命中率和罚球命中率来预测球员在篮球比赛中可以得到多少分。我们已经下载了数据集，它位于 Datasets 文件夹中。
 
-
-
-
-[`college.cengage.com/mathematics/brase/understandable\_statistics/7e/students/datasets/mlr/frames/frame.html`](http://college.cengage.com/mathematics/brase/understandable_statistics/7e/students/datasets/mlr/frames/frame.html)
+[`college.cengage.com/mathematics/brase/understandable_statistics/7e/students/datasets/mlr/frames/frame.html`](http://college.cengage.com/mathematics/brase/understandable_statistics/7e/students/datasets/mlr/frames/frame.html)
 
 对于这个问题，我们将遵循与单变量线性回归相似的步骤。我们将从导入库和数据集开始，进行数据分析和预处理。最后，我们将训练线性回归算法并评估性能。
 
-### 1- 导入所需的库
+### 1. 导入所需的库
 
 以下代码导入了所需的库：
 
@@ -3300,7 +3309,7 @@ import matplotlib.pyplot as plt
 %matplotlib inline
 ```
 
-### 2- 导入数据集
+### 2. 导入数据集
 
 虽然数据集可以在线获取，但我们已经将其下载并添加到本书提供的数据集仓库中。数据集名为“player.csv”。执行以下命令导入数据集。
 
@@ -3310,7 +3319,7 @@ player_data = pd.read_csv('D:\\Datasets\\player.csv')
 
 上面的脚本读取数据集并将其存储在 `player_data` DataFrame 中。
 
-### 3- 分析数据
+### 3. 分析数据
 
 执行以下脚本来直观观察数据：
 
@@ -3330,12 +3339,12 @@ player_data.describe()
 
 ![](img/image00453.gif)
 
-### 4- 数据预处理
+### 4. 数据预处理
 
 以下脚本将数据分为特征集和标签集。
 
 ```python
-features = player_data[['Height','Weight','Field_Goals','Throws']]
+features = player_data[['Height', 'Weight', 'Field_Goals', 'Throws']]
 labels = player_data['Points']
 ```
 
@@ -3345,10 +3354,10 @@ labels = player_data['Points']
 
 ```python
 from sklearn.model_selection import train_test_split
-train_features, test_features, train_labels, test_labels = train_test_split(features, labels, test_size = 0.2, random_state = 0)
+train_features, test_features, train_labels, test_labels = train_test_split(features, labels, test_size=0.2, random_state=0)
 ```
 
-### 5- 数据缩放
+### 5. 数据缩放
 
 观察数据集可以发现，它的缩放并不理想。例如，`Field_Goals` 和 `Throws` 列的值在 0 到 1 之间，而其他列的值较高。因此，在训练算法之前，我们将数据进行缩放。记得我们在上一章中讨论过缩放。这里我们将使用 `StandardScaler` 类。
 
@@ -3359,7 +3368,7 @@ train_features = feature_scaler.fit_transform(train_features)
 test_features = feature_scaler.transform(test_features)
 ```
 
-### 6- 训练算法并进行预测
+### 6. 训练算法并进行预测
 
 对于多元线性回归，我们将再次使用 `sklearn.linear_model` 库中的 `LinearRegression` 类。执行以下脚本训练模型：
 
@@ -3372,7 +3381,7 @@ lin_reg.fit(train_features, train_labels)
 让我们看看模型为唯一的独立变量找到了什么系数。执行以下脚本：
 
 ```python
-coefficients= pd.DataFrame(lin_reg.coef_,features.columns,columns=['Coefficients'])
+coefficients = pd.DataFrame(lin_reg.coef_, features.columns, columns=['Coefficients'])
 print(coefficients)
 ```
 
@@ -3380,7 +3389,7 @@ print(coefficients)
 
 ![](img/image00454.jpeg)
 
-输出显示，`Height` 每增加一个单位，球员得出的分会减少 2.58%。同样，重量每增加一个单位，得分增加 1.29，以此此类推。
+输出显示，`Height` 每增加一个单位，球员得出的分会减少 2.58%。同样，重量每增加一个单位，得分增加 1.29，以此类推。
 
 这表明年份每变化一个单位，汽车价格就会增加 204.815。
 
@@ -3389,7 +3398,7 @@ print(coefficients)
 执行以下脚本预测测试特征的标签：
 
 ```python
-predictions = lin_reg.predict( test_features)
+predictions = lin_reg.predict(test_features)
 ```
 
 为了将预测结果与真实输出比较，执行以下脚本：
@@ -3397,7 +3406,7 @@ predictions = lin_reg.predict( test_features)
 让我们比较预测值与实际值。执行以下脚本：
 
 ```python
-comparison=pd.DataFrame({'Real':test_labels, 'Predictions':predictions})
+comparison = pd.DataFrame({'Real': test_labels, 'Predictions': predictions})
 print(comparison)
 ```
 
@@ -3426,9 +3435,6 @@ RMSE 分别为 4.65 和 5.67，大于得分平均值 1.179 的 10%。因此，�
 
 在本章中，我们学习了第一个监督学习算法，即线性回归。我们了解了单变量和多元线性回归是什么以及它们的特点。
 
-
-
-
 执行以下脚本来直观数据：
 
 ```python
@@ -3447,12 +3453,12 @@ petrol_data.describe()
 
 ![](img/image00461.gif)
 
-## 4- 数据预处理
+## 4. 数据预处理
 
 以下脚本将数据分为特征集和标签集。
 
 ```python
-features = player_data['Height','Weight','Field_Goals','Throws']
+features = player_data[['Height', 'Weight', 'Field_Goals', 'Throws']]
 labels = player_data['Points']
 ```
 
@@ -3460,12 +3466,12 @@ labels = player_data['Points']
 
 ```python
 from sklearn.model_selection import train_test_split
-train_features, test_features, train_labels, test_labels = train_test_split(features, labels, test_size = 0.2, random_state = 0)
+train_features, test_features, train_labels, test_labels = train_test_split(features, labels, test_size=0.2, random_state=0)
 ```
 
 ## 5. 生成多项特征
 
-要使用 Python 的 Scikit Learn 库实现多项回归，使用了相同的 `LinearRegression` 类。然而在将数据输入算法之前，我们需要将线性特征转换为多项特征，即更高阶的特征。如果你查看特征集，我们目前有 4 个特征。如果我们将这些线性特征转换为阶数为 2 的多项特征，我们将得到 15 个特征。每列有三个特征，即阶数为 0、1 和 2 的特征。我们有 4 个特征，因此有 4 x 3 = 12 个。此外，在多项回归中我们还有交叉项。我们有 4 个特征，因此会有 3 个交叉项，即 column1 x column2、column2 x column3 和 column3xcolumn4。
+要使用 Python 的 Scikit Learn 库实现多项回归，使用了相同的 `LinearRegression` 类。然而在将数据输入算法之前，我们需要将线性特征转换为多项特征，即更高阶的特征。如果你查看特征集，我们目前有 4 个特征。如果我们将这些线性特征转换为阶数为 2 的多项特征，我们将得到 15 个特征。每列有三个特征，即阶数为 0、1 和 2 的特征。我们有 4 个特征，因此有 4 x 3 = 12 个。此外，在多项回归中我们还有交叉项。我们有 4 个特征，因此会有 3 个交叉项，即 column1 x column2、column2 x column3 和 column3 x column4。
 
 让我们看看如何使用 Python Scikit learn 库将线性特征转换为多项特征。执行以下脚本：
 
@@ -3476,7 +3482,7 @@ train_features_poly = poly_reg_feat.fit_transform(train_features)
 test_features_poly = poly_reg_feat.transform(test_features)
 ```
 
-仔细观察上面的脚本。为了实现多项回归，使用了 `sklearn.preprocessing` 库中的 `PolynomialFeature` 类。多项式的阶数传递给类构造函数。接下来调用 `fit_transform` 方法并将原始特征集传递给该方法。`fit_transform` 方法返回多项特征集。现在如果你检查 `train_feature_poly` 和 `test_features_poly` 变量列，你会发现它们包含 15 列，而不是原始的 4 列。
+仔细观察上面的脚本。为了实现多项回归，使用了 `sklearn.preprocessing` 库中的 `PolynomialFeatures` 类。多项式的阶数传递给类构造函数。接下来调用 `fit_transform` 方法并将原始特征集传递给该方法。`fit_transform` 方法返回多项特征集。现在如果你检查 `train_features_poly` 和 `test_features_poly` 变量列，你会发现它们包含 15 列，而不是原始的 4 列。
 
 ## 6. 数据缩放
 
@@ -3508,7 +3514,7 @@ predictions = lin_reg.predict(test_features_poly)
 让我们比较预测值与实际值。执行以下脚本进行比较：
 
 ```python
-comparison=pd.DataFrame({'Real':test_labels, 'Predictions':predictions})
+comparison = pd.DataFrame({'Real': test_labels, 'Predictions': predictions})
 print(comparison)
 ```
 
@@ -3524,9 +3530,9 @@ print(comparison)
 
 ```python
 from sklearn import metrics
-print('MAE:', metrics.absolute_error(test_labels, predictions))
-print('MSE:', metrics.squared_error(test_labels, predictions))
-print('RMSE:', np.sqrt(metrics.squared_error(test_labels, predictions)))
+print('MAE:', metrics.mean_absolute_error(test_labels, predictions))
+print('MSE:', metrics.mean_squared_error(test_labels, predictions))
+print('RMSE:', np.sqrt(metrics.mean_squared_error(test_labels, predictions)))
 ```
 
 输出值如下：
@@ -3539,10 +3545,10 @@ MAE 的值为 56.69，小于平均值 57.67。然而 RMSE 的值为 70.23，这�
 
 在本章中，我们学习了多项回归，它是回归算法的一种。在下一章，我们将看看如何将决策树算法用于回归目的。
 
-
-
 1. 决策树在回归任务和分类任务中的效果同样良好，这意味着你可以预测连续值也可以预测离散值。
+
 2. 决策树可以用于分类线性和非线性数据。
+
 3. 与大多数机器学习算法相比，它们的训练速度相对较快。
 
 ## 使用 Python Scikit Learn 库实现决策树
@@ -3555,7 +3561,7 @@ MAE 的值为 56.69，小于平均值 57.67。然而 RMSE 的值为 70.23，这�
 
 ### 1. 导入必要的库
 
-```
+```python
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -3572,7 +3578,7 @@ import matplotlib.pyplot as plt
 petrol_data = pd.read_csv('D:\\Datasets\\petrol_data.csv')
 ```
 
-上面的脚本读取数据集并将其存储在 `player_data` 数据框中。
+上面的脚本读取数据集并将其存储在 `petrol_data` 数据框中。
 
 ### 3. 数据分析
 
@@ -3590,16 +3596,18 @@ petrol_data.head()
 
 以下脚本将数据分为特征集和标签集。
 
+
+
 ```python
-features= petrol_data.iloc[:,:,0:4].values
-labels= petrol_data.iloc[:,:,4].values
+features = petrol_data.iloc[:, :, 0:4].values
+labels = petrol_data.iloc[:, :, 4].values
 ```
 
 最后，让我们将数据分为 80% 训练集和 20% 测试集：
 
 ```python
 from sklearn.model_selection import train_test_split
-train_features, test_features, train_labels, test_labels = train_test_split(features, labels, test_size = 0.2, random_state = 0)
+train_features, test_features, train_labels, test_labels = train_test_split(features, labels, test_size=0.2, random_state=0)
 ```
 
 ### 5. 数据缩放
@@ -3615,7 +3623,7 @@ test_features_poly = feature_scaler.transform(test_features)
 
 ### 6. 训练算法
 
-我们已经对特征进行了缩放。现在是训练算法的时间了。为了实现分类决策树，我们使用 `sklearn.tree` 库中的 `DecisionTreeClassifier` 类。该类的 `fit` 方法用于训练算法。训练特征和标签将如如下脚本所示传递给 `fit` 方法：
+我们已经对特征进行了缩放。现在是训练算法的时间了。为了实现分类决策树，我们使用 `sklearn.tree` 库中的 `DecisionTreeClassifier` 类。该类的 `fit` 方法用于训练算法。训练特征和标签将如下脚本所示传递给 `fit` 方法：
 
 ```python
 from sklearn.tree import DecisionTreeClassifier
@@ -3634,7 +3642,7 @@ predictions = dt_reg.predict(test_features)
 让我们将预测值与实际值的比较，执行以下脚本：
 
 ```python
-comparison=pd.DataFrame({'Real':test_labels, 'Predictions':predictions})
+comparison = pd.DataFrame({'Real': test_labels, 'Predictions': predictions})
 print(comparison)
 ```
 
@@ -3657,7 +3665,7 @@ print('RMSE:', np.sqrt(metrics.mean_squared_error(test_labels, predictions)))
 
 ![](img/image00466.jpeg)
 
-`MAE` 的值为 79，大于上一章为多项回归算法计算的 MAE 值。同样，决策树的 `RMSE` 值为 118，远大于上一章使用多项回归算法得到的值。因此可以说，对于本章使用的数据集预测汽油价格，多项回归算法的表现优于决策树算法。
+`MAE` 的值为 79，大于上一章为多项回归算法计算的 `MAE` 值。同样，决策树的 `RMSE` 值为 118，远大于上一章使用多项回归算法得到的值。因此可以说，对于本章使用的数据集预测汽油价格，多项回归算法的表现优于决策树算法。
 
 ## 结论
 
@@ -3668,9 +3676,6 @@ print('RMSE:', np.sqrt(metrics.mean_squared_error(test_labels, predictions)))
 ## 用于回归的随机森林
 
 在上一章中我们学习了决策树。随机森林算法基本上基于决策树算法。
-
-
-
 
 ## 引言
 
@@ -3684,7 +3689,7 @@ print('RMSE:', np.sqrt(metrics.mean_squared_error(test_labels, predictions)))
 
 我们将遵循之前所有章节中一直采用的步骤。
 
-### 1- 导入所需的库
+### 1. 导入所需的库
 
 以下代码导入了所需的库：
 
@@ -3695,7 +3700,7 @@ import matplotlib.pyplot as plt
 %matplotlib inline
 ```
 
-### 2- 导入数据集
+### 2. 导入数据集
 
 虽然可以在网上找到数据集，但我们已经将其下载并添加到随书提供的数据集仓库中。数据集名为 `player.csv`。执行以下命令导入数据集。
 
@@ -3705,9 +3710,9 @@ player_data = pd.read_csv('D:\\Datasets\\player.csv')
 
 上面的脚本读取数据集并将其存储在 `player_data` DataFrame 中。
 
-### 3- 分析数据 
+### 3. 分析数据
 
-执行以下脚本以直查看数据：
+执行以下脚本以查看数据：
 
 ```python
 player_data.head()
@@ -3717,12 +3722,12 @@ player_data.head()
 
 ![](img/image00467.jpeg)
 
-### 4- 数据预处理
+### 4. 数据预处理
 
 以下脚本将数据分为特征集和标签集。
 
 ```python
-features = player_data.iloc[:, 0:4].values 
+features = player_data.iloc[:, 0:4].values
 labels = player_data.iloc[:, 4].values
 ```
 
@@ -3730,10 +3735,10 @@ labels = player_data.iloc[:, 4].values
 
 ```python
 from sklearn.model_selection import train_test_split
-train_features, test_features, train_labels, test_labels = train_test_split(features, labels, test_size = 0.2, random_state = 0)
+train_features, test_features, train_labels, test_labels = train_test_split(features, labels, test_size=0.2, random_state=0)
 ```
 
-### 5- 数据缩放
+### 5. 数据缩放
 
 观察数据集会发现它的缩放并不良好，例如 `Field_Goals` 和 `Throws` 列的值在 0 到 1 之间，而其他列的值较高。因此，在训练算法之前，我们将对数据进行缩放。记得我们在第 3 章讨论过缩放。这里我们将使用 `StandardScaler` 类。
 
@@ -3744,26 +3749,26 @@ train_features = feature_scaler.fit_transform(train_features)
 test_features = feature_scaler.transform(test_features)
 ```
 
-### 6- 训练算法并进行预测
+### 6. 训练算法并进行预测
 
 为了实现回归任务的随机森林算法，使用了 `sklearn.ensemble` 库中的 `RandomForestRegressor` 类。树的数量作为参数 `n_estimators` 参数。在下面的脚本中，树的数量被设置为 200。
 
 ```python
 from sklearn.ensemble import RandomForestRegressor
-rf_reg = RandomForestRegressor(n_estimators=200, random_state=0) 
-rf_reg.fit(train_features, train_labels) 
+rf_reg = RandomForestRegressor(n_estimators=200, random_state=0)
+rf_reg.fit(train_features, train_labels)
 ```
 
 执行以下脚本预测测试特征的标签：
 
 ```python
-predictions = rf_reg.predict( test_features)
+predictions = rf_reg.predict(test_features)
 ```
 
-为了将预测结果与真实输出进行比较，执行以下脚本：让我们比较预测值与实际值。执行以下脚本来操作：
+为了将预测结果与真实输出进行比较，执行以下脚本：
 
 ```python
-comparison=pd.DataFrame({'Real':test_labels, 'Predictions':predictions})
+comparison = pd.DataFrame({'Real': test_labels, 'Predictions': predictions})
 print(comparison)
 ```
 
@@ -3771,7 +3776,7 @@ print(comparison)
 
 ![](img/image00468.gif)
 
-### 7- 评估算法
+### 7. 评估算法
 
 执行以下脚本为我们的线性回归模型寻找 MAE、MSE 和 RMSE。
 
@@ -3786,7 +3791,7 @@ print('RMSE:', np.sqrt(metrics.mean_squared_error(test_labels, predictions)))
 
 ![](img/image00469.jpeg)
 
-MAE 的值为 5.00，大于第 4 章中为线性回归算法计算的 MAE 值（即 4.65）。同样，随机森林算法的 RMSE 值为 6.27，大于 5.67（即第 4 章中使用线性回归算法得到的数值）。因此，我们可以，对于根据本章使用的数据集预测篮球球员的得分，线性回归算法的性能优于随机森林算法。
+`MAE` 的值为 5.00，大于第 4 章中为线性回归算法计算的 `MAE` 值（即 4.65）。同样，随机森林算法的 `RMSE` 值为 6.27，大于 5.67（即第 4 章中使用线性回归算法得到的数值）。因此，我们可以认为，对于根据本章使用的数据集预测篮球球员的得分，线性回归算法的性能优于随机森林算法。
 
 # 第 8 章
 
@@ -3801,24 +3806,22 @@ MAE 的值为 5.00，大于第 4 章中为线性回归算法计算的 MAE 值（
 对于二维特征空间中的典型线性回归，任务是找到一条能够平分数据点的直线。然而在现实世界中，如图 1 所示，存在多个边界。
 
 ![](img/image0470.jpeg)
+
 图 1：多个边界
-
-
-
 
 此脚本在使用 Jupyter notebook 实现的。因此，要在 notebook 中绘制图表，我们使用了命令 `%matplotlib inline`。如果你正在使用 Spyder，可以删除最后一行。
 
-## 2. 导入数据集
+### 2. 导入数据集
 
 我们将使用 `car_price.csv` 数据集。执行以下脚本导入数据集：
 
-```
+```python
 car_data = pd.read_csv('D:\\Datasets\\car_price.csv')
 ```
 
 上面的脚本读取数据集并将其存储在 `car_data` 数据框中。
 
-## 3. 分析数据
+### 3. 分析数据
 
 让我们先对数据进行总体概览。`head` 函数返回数据集的前 5 行。执行以下脚本：
 
@@ -3828,27 +3831,27 @@ car_data.head()
 
 ![](img/image00447.gif)
 
-## 4. 数据预处理
+### 4. 数据预处理
 
 为了将数据分为特征和标签，执行以下脚本：
 
 ```python
-features= car_data.iloc[:,0:1].values
-labels= car_data.iloc[:,1].values
+features = car_data.iloc[:, 0:1].values
+labels = car_data.iloc[:, 1].values
 ```
 
 最后，我们将数据划分为 80% 的训练集和 20% 的测试集：
 
 ```python
 from sklearn.model_selection import train_test_split
-train_features, test_features, train_labels, test_labels = train_test_split(features, labels, test_size = 0.2, random_state = 0)
+train_features, test_features, train_labels, test_labels = train_test_split(features, labels, test_size=0.2, random_state=0)
 ```
 
 如果你观察数据集，可以发现年份和价格值之间没有巨大的差异。两者的单位都是千。因此，没有必要对数据进行标准化，可以直接使用这些数据进行算法训练。
 
-## 5. 训练算法并进行预测
+### 5. 训练算法并进行预测
 
-`sklearn.svm` 中的 `SVR` 类用于在 Python 中实现支持向量回归。`SVR` 类接受一个 `kernel` 参数值。如果你的数据是线性的（`car_data` 实际上就是如此），请使用 `linear` 作为内核值，否则你可以使用文档中[此链接](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html) 列表中任何内核值。
+`sklearn.svm` 中的 `SVR` 类用于在 Python 中实现支持向量回归。`SVR` 类接受一个 `kernel` 参数值。如果你的数据是线性的（`car_data` 实际上就是如此），请使用 `linear` 作为内核值，否则你可以使用文档中[此链接](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html)列表中任何内核值。
 
 `SVR` 类具有 `fit` 方法，接受训练特征和标签作为输入，并如下所示训练模型：
 
@@ -3861,7 +3864,7 @@ svr_reg.fit(train_features, train_labels)
 最后，执行以下脚本预测测试特征的标签：
 
 ```python
-predictions = lin_reg.predict( test_features)
+predictions = svr_reg.predict(test_features)
 ```
 
 所有预测结果都存储在 `predictions` 变量中。
@@ -3869,7 +3872,7 @@ predictions = lin_reg.predict( test_features)
 让我们比较预测值与实际值。执行以下脚本进行比较：
 
 ```python
-comparison=pd.DataFrame({'Real':test_labels, 'Predictions':predictions})
+comparison = pd.DataFrame({'Real': test_labels, 'Predictions': predictions})
 print(comparison)
 ```
 
@@ -3896,7 +3899,7 @@ print('RMSE:', np.sqrt(metrics.mean_squared_error(test_labels, predictions)))
 
 ## 用于分类的朴素贝叶斯算法
 
-在之前的章节中，我们涵盖了一些最常用的回归算法，例如：线性回归、支持向量回归、多项式回归、决策树和随机森林算法。这些算法中的一些一些变体也可以用于分类，我们将在接下来的章节中看到。在本章中，我们将开始讨论分类算法，即用于预测输入数据的离散值或类别标签的算法。在本节中我们将涵盖的第一个分类算法是朴素贝叶斯算法。
+在之前的章节中，我们涵盖了一些最常用的回归算法，例如：线性回归、支持向量回归、多项式回归、决策树和随机森林算法。这些算法中的一些变体也可以用于分类，我们将在接下来的章节中看到。在本章中，我们将开始讨论分类算法，即用于预测输入数据的离散值或类别标签的算法。在本节中我们将涵盖的第一个分类算法是朴素贝叶斯算法。
 
 ### 朴素贝叶斯 (NB) 算法理论
 
@@ -3908,11 +3911,14 @@ print('RMSE:', np.sqrt(metrics.mean_squared_error(test_labels, predictions)))
 
 ![](img/image00476.jpeg)
 
-上述语解释如下：
+上述公式解释如下：
 
 1. `P(A|B)` 是在给定属性集 B 下事件 A 发生的概率
+
 2. `P(A)` 是事件 A 发生的先验概率
+
 3. `P(B|A)` 是在事件 A 发生条件下事件 B 发生的概率（注：此处原文描述可能有误，通常指条件概率）
+
 4. `P(B)` 是事件 B 的先验概率
 
 让我们通过例子来理解这个概念。假设一个水果如果长度达到 5 英寸或以上、呈黄色且直径为 1 厘米，就可以被认为是香蕉。朴素贝叶斯并不担心这些特征是否相互依赖。该水果通过这些特征的独立贡献被声明为香蕉。由于这种独立性假设，NB 算法被称为“朴素”。
@@ -3929,12 +3935,17 @@ print('RMSE:', np.sqrt(metrics.mean_squared_error(test_labels, predictions)))
 | **Total** | **4** | **8** |
 
 2. 计算类别/事件先验概率：
+
 当糖尿病 (Yes) 时，`P(A)` = 4/12 = 0.33
+
 当糖尿病 (No) 时，`P(A)` = 8/12 = 0.67
 
 最后让我们找到特征的先验概率：
+
 当超重时，`P(B)` = 4/12 = 0.33
+
 当正常时，`P(B)` = 4/12 = 0.33
+
 当体重轻时，`P(B)` = 4/12 = 0.33
 
 3. 现在如果一个患者来，我们需要根据体重判断他是否患有糖尿病。有两种结果：糖尿病或非糖尿病。我们将计算两者的概率。概率较高的类别将分配给患者。
@@ -3942,12 +3953,16 @@ print('RMSE:', np.sqrt(metrics.mean_squared_error(test_labels, predictions)))
 假设一个超重患者来到诊所，我们需要测试他是否有糖尿病。我们需要解两个方程：
 
 a) `P(Yes|Overweight) = P(Overweight|Yes) * P(Yes) / P(Overweight)`
+
+
+
 = (0.75 * 0.33) / 0.33 = 0.75
 
 b) `P(No|Overweight) = P(Overweight|No) * P(No) / P(Overweight)`
+
 = (0.125 * 0.67) / 0.33 = 0.25
 
-可以看出超重时患糖尿病的概率为 0.75，大于不患糖尿病的概率 0.25，因此 NB 算法会将该患者分类为糖尿病。
+可以看出超重时患糖尿病的概率为 0.75，大于不患糖尿病的概率 0.25，因此 `NB` 算法会将该患者分类为糖尿病。
 
 在上面的例子中只有一个属性，在多个属性的情况下，概率可以这样计算：
 
@@ -3955,36 +3970,40 @@ b) `P(No|Overweight) = P(Overweight|No) * P(No) / P(Overweight)`
 
 ### 朴素贝叶斯算法的优点
 
-1. NB 算法非常简单且训练速度快，因为不涉及复杂的数学计算、纠错或反向传播。
-2. 对于分类数据，NB 算法优于大多数其他算法。对于数值特征，NB 算法假设符合正态分布。
+1. `NB` 算法非常简单且训练速度快，因为不涉及复杂的数学计算、纠错或反向传播。
+
+2. 对于分类数据，`NB` 算法优于大多数其他算法。对于数值特征，`NB` 算法假设符合正态分布。
 
 ### 朴素贝叶斯算法的缺点
 
-1. 在现实数据中，特征通常依赖于其他特征。NB 算法的独立性假设使其对于具有相互依赖特征的数据集来说预测效果较差。
-
-
+1. 在现实数据中，特征通常依赖于其他特征。`NB` 算法的独立性假设使其对于具有相互依赖特征的数据集来说预测效果较差。
 
 2. 如果分类特征在测试集中出现了训练集中未出现过的某个值，`NB` 算法将为该实例分配零概率。因此，对使用 `NB` 算法得到的结论进行交叉验证非常重要。
 
-3. 朴叶贝斯算法的应用
+3. 朴素贝叶斯算法的应用
 
 1. `NB` 算法是多分类问题的理想选择，通常用于文本分类问题，如情感分析和电子邮件垃圾邮件过滤。
+
 2. `NB` 算法也广泛用于协同过滤算法，以构建基于机器学习的推荐系统。
+
 3. 与其他高级算法相比，`NB` 速度极快，因此被应用于实时应用中。
 
-### 使用 Python Scikit Learn 实现朴叶贝斯算法
+### 使用 Python Scikit Learn 实现朴素贝叶斯算法
 
-一如既常，在这一节中，我们将使用 Python 的 Scikit Learn 库来实现朴叶贝斯算法。
+一如既常，在这一节中，我们将使用 Python 的 Scikit Learn 库来实现朴素贝叶斯算法。
 
 在 Scikit Learn 中，你可以实现三种 `NB` 算法的变体：
 
-1- `Gaussian NB`：用于特征具有正态数据分布的情况。
-2- `Multinomial NB`：当你的特征包含离散数据时使用。
-3- `Bernoulli`：当你的特征包含二值数据时使用。
+1. `Gaussian NB`：用于特征具有正态数据分布的情况。
+
+2. `Multinomial NB`：当你的特征包含离散数据时使用。
+
+3. `Bernoulli`：当你的特征包含二值数据时使用。
 
 在本节中，我们将根据四个属性预测鸢尾花的类型：花萼长度、花萼宽度、花瓣长度和花瓣宽度。
 
 关于 IRIS 数据集的细节可以访问此链接：
+
 [`archive.ics.uci.edu/ml/datasets/Iris`](https://archive.ics.uci.edu/ml/datasets/Iris)
 
 该数据集已随书提供，可以在 Datasets 文件夹中找到名为 `iris_data.csv` 的文件。
@@ -4021,6 +4040,7 @@ iris_data.head()
 ```
 
 输出如下：
+
 ![](img/image0047.gif)
 
 ### 10- 数据预处理
@@ -4028,8 +4048,8 @@ iris_data.head()
 以下脚本将数据分为特征集和标签集。
 
 ```python
-features = player_data.iloc[:, 0:4].values 
-labels = player_data.iloc[:, 4].values
+features = iris_data.iloc[:, 0:4].values 
+labels = iris_data.iloc[:, 4].values
 ```
 
 最后，我们将数据分为 80% 的训练集和 20% 的测试集：
@@ -4041,7 +4061,7 @@ train_features, test_features, train_labels, test_labels = train_test_split(feat
 
 ### 11- 数据缩放
 
-如果你观察数据集会发现它的缩放得并不好，例如 `petal_width` 列的值在 0 到 1 之间，其余列的值较高。因此，在训练算法之前，我们将对数据进行缩放。记得我们在第 3 章讨论过缩放。在这里我们将使用标准标准化类（StandardScaler）。
+如果你观察数据集会发现它的缩放得并不好，例如 `petal_width` 列的值在 0 到 1 之间，其余列的值较高。因此，在训练算法之前，我们将对数据进行缩放。记得我们在第 3 章讨论过缩放。在这里我们将使用标准标准化类（`StandardScaler`）。
 
 ```python
 from sklearn.preprocessing import StandardScaler
@@ -4052,7 +4072,7 @@ test_features = feature_scaler.transform(test_features)
 
 ### 12- 训练算法并预测
 
-我们可以看到特征值呈正态分布；因此可以使用高斯朴叶贝斯来解决这个问题。要使用 Scikit learn 实现高斯朴叶贝斯算法，我们需要使用 `sklearn.naive_bayes` 库中的 `GaussianNB` 类。执行以下脚本在 `train_features` 和 `train_labels` 上训练模型：
+我们可以看到特征值呈正态分布；因此可以使用高斯朴素贝叶斯来解决这个问题。要使用 Scikit learn 实现高斯朴素贝叶斯算法，我们需要使用 `sklearn.naive_bayes` 库中的 `GaussianNB` 类。执行以下脚本在 `train_features` 和 `train_labels` 上训练模型：
 
 ```python
 from sklearn.naive_bayes import GaussianNB
@@ -4063,31 +4083,33 @@ nb_clf.fit(train_features, train_labels)
 执行以下脚本预测测试特征的标签：
 
 ```python
-predictions = nb_clf.predict( test_features)
+predictions = nb_clf.predict(test_features)
 ```
 
 要将预测结果与真实输出比较，执行以下脚本：
 
 ```python
-comparison=pd.DataFrame({'Real':test_labels, 'Predictions':predictions})
+comparison = pd.DataFrame({'Real': test_labels, 'Predictions': predictions})
 print(comparison)
 ```
 
 输出如下：
+
 ![](img/image00478.jpeg)
 
 从输出中可以看出，我们的算法在预测花卉类型方面非常出色。在 30 个测试实例中，有 29 个被预测正确，而只有一个（用红色标出）被分类错误。
 
 ### 评估算法
 
-为了评估回归算法，我们使用了平均绝对误差、均方根误差和均方误差。对于分类问题，性能衡量指标是不同的。通常使用精确率（Precision）、召回率（Recall）和 F1 分数来评估分类算法的性能。让我们简单回顾一下混淆矩阵、准确率（Accuracy）、精确率、召回率和 F1 分数：
+为了评估回归算法，我们使用了平均绝对误差、均方根误差和均方误差。对于分类问题，性能衡量指标是不同的。通常使用精确率、召回率和 F1 分数来评估分类算法的性能。让我们简单回顾一下混淆矩阵、准确率、精确率、召回率和 F1 分数：
 
 ### 混淆矩阵
+
 混淆矩阵是一个显示真阳性、真阴性、假阳性和假阴性预测值的矩阵。
 
-真阳性 (`TP`）是那些实际为正且也被预测为正的值。同样，真阴性 (`TN`）是那些实际为负且预测为负的值。
+真阳性（`TP`）是那些实际为正且也被预测为正的值。同样，真阴性（`TN`）是那些实际为负且预测为负的值。
 
-另一方面，假阳性（False Positives）是实际为负但被错误预测为正的值。同样，假阴性（False Negatives）是那些实际为正但被错误预测为负的值。
+另一方面，假阳性是实际为负但被错误预测为正的值。同样，假阴性是那些实际为正但被错误预测为负的值。
 
 混淆矩阵如下：
 
@@ -4097,21 +4119,28 @@ print(comparison)
 | 预测负性 | 假阴性 | 真阴性 |
 
 ### 准确率
+
 评估机器学习算法性能最简单的参数是准确率。准确率是指正确预测的实例数除以总实例数。数学上可以表示为：
+
 `Accuracy = (TP + TN) / (TP + FP + FN)`
 
 ### 精确率
+
 精确率是指算法精确预测的能力。它可以通过真阳性除以预测正性（真阳性+假阳性）来计算。数学表示为：
+
 `Precision = TP / (TP + FP)`
 
 ### 召回率
+
 召回率可以通过真阳性除以实际正性（真阳性+假阴性）来计算
+
 `Recall = TP / (TP + FN)`
 
 ### F1 分数
+
 F1 分数是精确率和召回率的调和平均数
 
-与回归指标一样，我们不需要手动计算上述指标的值。Python Scikit Learn 库提供了用于此目的类。执行以下脚本查看查看预测鸢尾花的 `NB` 算法的性能：
+与回归指标一样，我们不需要手动计算上述指标的值。Python Scikit Learn 库提供了用于此目的类。执行以下脚本查看预测鸢尾花的 `NB` 算法的性能：
 
 ```python
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score 
@@ -4121,29 +4150,26 @@ print(accuracy_score(test_labels, predictions))
 ```
 
 上述脚本的输出如下：
+
 ![](img/image00479.jpeg)
 
 从输出可以看出我们的算法实现了 96.66% 的准确率。
 
 ### 总结
 
-在本章中，我们开始对分类算法进行讨论。在本章中学习的第一个分类算法是朴叶贝斯算法。我们学习了算法的理论以及在 Python 中的实现。
+在本章中，我们开始对分类算法进行讨论。在本章中学习的第一个分类算法是朴素贝叶斯算法。我们学习了算法的理论以及在 Python 中的实现。
 
 # 第 10 章
 
 ## 用于分类的 K 邻算法
 
-在上一章中，我们学习了用于分类的朴叶贝斯算法。我们提到 NB 算法假设特征独立性。此外，NB 算法的一个缺点是它假设分类特征值呈正态分布。然而在大多数情况下，现实世界的数据并不遵循任何趋势，例如均匀分布或线性可分性等。在这种情况下，非参数算法可以派上用场。K 邻（KNN）算法就是这样一种非参数算法。
+在上一章中，我们学习了用于分类的朴素贝叶斯算法。我们提到 `NB` 算法假设特征独立性。此外，`NB` 算法的一个缺点是它假设分类特征值呈正态分布。然而在大多数情况下，现实世界的数据并不遵循任何趋势，例如均匀分布或线性可分性等。在这种情况下，非参数算法可以派上用场。K 邻（`KNN`）算法就是这样一种非参数算法。
 
 ### KNN 理论
 
+`KNN` 算法的基本原理非常简单。`KNN` 算法简单地寻找新的测试数据点与数据集中所有其他数据点之间的距离。然后，根据它们与测试点的距离对所有其他数据点进行升序排序。最后，它选择最近的 `K` 个数据点。接着，它将新数据点分配给这 `K` 个数据点中多数所在的类别。现在你应该知道为什么我们要缩放数据，以便保持数据点不同维度之间的距离。根据问题的不同，距离可以是曼哈顿距离，也可以是欧几得距离。
 
-
-
-
-KNN 算法的直原理非常简单。KNN 算法简单地寻找新的测试数据点与数据集中所有其他数据点之间的距离。然后，根据它们与测试点的距离对所有其他数据点进行升序排序。最后，它选择最近的 K 个数据点。接着，它将新数据点分配给这 K 个数据点中多数所在的类别。现在你应该知道为什么我们要缩小数据规模，以便保持数据点不同维度之间的距离。根据问题的不同，距离可以是曼哈顿距离，也可以是欧几得距离。
-
-让我们直观地观察 KNN 算法的工作原理。
+让我们直观地观察 `KNN` 算法的工作原理。
 
 假设我们在二维空间中有一些数据点，它们分为两类：红色和蓝色，如图所示。
 
@@ -4155,25 +4181,25 @@ KNN 算法的直原理非常简单。KNN 算法简单地寻找新的测试数据
 
 你可以看到，在黄色数据点的三个最近邻中，有两个蓝色的，一个是红色的。因此，黄色数据点将被归类为蓝色类。
 
-KNN 算法没有训练阶段；实际上，它使用整个数据集来对新数据点进行分类。正因如此，它被称为懒惰学习算法。
+`KNN` 算法没有训练阶段；实际上，它使用整个数据集来对新数据点进行分类。正因如此，它被称为懒惰学习算法。
 
 ### KNN 算法的优点
 
-1. 与其他算法不同，KNN 算法所需的参数列表并不详尽。你只需要指定最近邻数 `K` 和距离函数的类型。
+1. 与其他算法不同，`KNN` 算法所需的参数列表并不详尽。你只需要指定最近邻数 `K` 和距离函数的类型。
 
-2. 与逻辑回归、决策树和其他分类算法相比，KNN 算法速度极快，因为 KNN 不涉及训练阶段。新数据点可以通过简单的寻找它与其他数据点之间的距离直接进行分类，而无需广泛的训练。
+2. 与逻辑回归、决策树和其他分类算法相比，`KNN` 算法速度极快，因为 `KNN` 不涉及训练阶段。新数据点可以通过简单的寻找它与其他数据点之间的距离直接进行分类，而无需广泛的训练。
 
-3. KNN 非常简单且易于实现。此外，可以随时随添加新的数据点，因为每当需要进行预测时，都会重新计算与所有数据点的距离。
+3. `KNN` 非常简单且易于实现。此外，可以随时添加新的数据点，因为每当需要进行预测时，都会重新计算与所有数据点的距离。
 
 ### KNN 算法的缺点
 
-1. KNN 算法在数值特征上表现良好，但在处理类别特征时，其性能会下降。这是因为对于类别特征，两个数据点之间的距离无法精确计算。
+1. `KNN` 算法在数值特征上表现良好，但在处理类别特征时，其性能会下降。这是因为对于类别特征，两个数据点之间的距离无法精确计算。
 
-2. 随着数据量和维度的增加，KNN 算法的预测成本也会增加，因为计算高维度大量数据点之间的距离是非常耗费时间的。
+2. 随着数据量和维度的增加，`KNN` 算法的预测成本也会增加，因为计算高维度大量数据点之间的距离是非常耗费时间的。
 
 ### 使用 Scikit Learn 实现 KNN
 
-在本节中，我们将使用 Python 的 Scikit Learn 库实现 KNN 算法。我们将用 KNN 算法解决的问题是预测银行钞票是否为真。数据集中有四个属性，即钞票小波变换图像的熵、偏度、方差和峰度。
+在本节中，我们将使用 Python 的 Scikit Learn 库实现 `KNN` 算法。我们将用 `KNN` 算法解决的问题是预测银行钞票是否为真。数据集中有四个属性，即钞票小波变换图像的熵、偏度、方差和峰度。
 
 关于该数据集的更多信息可以从此[链接](https://archive.ics.uci.edu/ml/datasets/banknote+authentication) 找到。
 
@@ -4212,7 +4238,7 @@ banknote_data.shape
 
 上面的脚本返回 `(1372, 5)`，这意味着我们的数据集包含 1372 条记录和 5 个属性。
 
-执行以下脚本直直观察数据：
+执行以下脚本直观观察数据：
 
 ```python
 banknote_data.head()
@@ -4240,7 +4266,7 @@ train_features, test_features, train_labels, test_labels = train_test_split(feat
 
 #### 17- 数据缩放
 
-如果你使用 KNN 算法，对数据进行缩放始终是一个良好的习惯。记得我们在第三章中讨论过缩放。在这里我们将使用标准缩器类。
+如果你使用 `KNN` 算法，对数据进行缩放始终是一个良好的习惯。记得我们在第三章中讨论过缩放。在这里我们将使用标准缩放类（`StandardScaler`）。
 
 ```python
 from sklearn.preprocessing import StandardScaler
@@ -4251,7 +4277,7 @@ test_features = feature_scaler.transform(test_features)
 
 #### 18- 训练算法并进行预测
 
-要用 Scikit learn 实现 KNN 算法，我们需要使用 `sklearn.neighbors` 库中的 `KNeighborsClassifier` 类。`K` 的值指定为参数 `n_neighbors` 的值，如下脚本所示。我们将 `K` 设置为 3。执行以下脚本在 `train_features` 和 `train_labels` 上训练模型。
+要用 Scikit learn 实现 `KNN` 算法，我们需要使用 `sklearn.neighbors` 库中的 `KNeighborsClassifier` 类。`K` 的值指定为参数 `n_neighbors` 的值，如下脚本所示。我们将 `K` 设置为 3。执行以下脚本在 `train_features` 和 `train_labels` 上训练模型。
 
 ```python
 from sklearn.neighbors import KNeighborsClassifier 
@@ -4268,7 +4294,7 @@ predictions = knn_clf.predict(test_features)
 为了比较预测值与真实值，执行以下脚本：
 
 ```python
-comparison=pd.DataFrame({'Real':test_labels, 'Predictions':predictions})
+comparison = pd.DataFrame({'Real': test_labels, 'Predictions': predictions})
 print(comparison)
 ```
 
@@ -4291,13 +4317,13 @@ print(accuracy_score(test_labels, predictions))
 
 ![](img/image00484.jpeg)
 
-从输出可以看出，我们的算法在预测钞票方面做得很好。我们得到了 100%的准确率。
+从输出可以看出，我们的算法在预测钞票方面做得很好。我们得到了 100% 的准确率。
 
 ### K 值对准确率的影响
 
-在上一节中，我们随机将`K`值设置为 3，偶然产生了 100%的准确率。然而，情况并非总是如此。我们从一开始并不知道最佳的`K`值。寻找最佳`K`值的方法是尝试不同的`K`并选择产生最高准确率的值。
+在上一节中，我们随机将 `K` 值设置为 3，偶然产生了 100% 的准确率。然而，情况并非总是如此。我们从一开始并不知道最佳的 `K` 值。寻找最佳 `K` 值的方法是尝试不同的 `K` 并选择产生最高准确率的值。
 
-下面的脚本将使用 1 到 50 之间的`k`值来预测钞票的认证。执行以下脚本：
+下面的脚本将使用 1 到 50 之间的 `k` 值来预测钞票的认证。执行以下脚本：
 
 ```python
 rate_of_error = []
@@ -4308,7 +4334,9 @@ for i in range(1, 50):
     rate_of_error.append(np.mean(predictions != test_labels))
 ```
 
-一旦计算了每个`K`值的错误率，就可以打印图表来显示随`K`值变化的错误率。执行以下脚本：
+
+
+一旦计算了每个 `K` 值的错误率，就可以打印图表来显示随 `K` 值变化的错误率。执行以下脚本：
 
 ```python
 plt.figure(figsize=(10, 5)) 
@@ -4323,10 +4351,7 @@ plt.ylabel('Error Value')
 
 ![](img/image00485.jpeg)
 
-
-
-
-从上面的图中可以明显看出，在 `K` 为 1 到 18 之间的所有值，误差保持为零。 18 之后，误差增加到 4%，但仍然并不大。
+从上面的图中可以明显看出，在 `K` 为 1 到 18 之间的所有值，误差保持为零。18 之后，误差增加到 4%，但仍然并不大。
 
 ## 结论
 
@@ -4344,7 +4369,7 @@ plt.ylabel('Error Value')
 
 我们从导入库开始：
 
-### 1- 导入所需的库
+#### 1- 导入所需的库
 
 以下代码导入所需的库：
 
@@ -4355,7 +4380,7 @@ import matplotlib.pyplot as plt
 %matplotlib inline
 ```
 
-### 2- 导入数据集
+#### 2- 导入数据集
 
 执行以下命令导入数据集。
 
@@ -4365,7 +4390,7 @@ iris_data = pd.read_csv('D:\\Datasets\\iris_data.csv')
 
 上面的脚本读取数据集并将其存储在 `iris_data` dataframe 中。
 
-### 3- 分析数据
+#### 3- 分析数据
 
 执行以下脚本来直观察数据：
 
@@ -4377,7 +4402,7 @@ iris_data.head()
 
 ![](img/image00477.gif)
 
-### 4- 数据预处理
+#### 4- 数据预处理
 
 以下脚本将数据分为特征集和标签集。
 
@@ -4393,7 +4418,7 @@ from sklearn.model_selection import train_test_split
 train_features, test_features, train_labels, test_labels = train_test_split(features, labels, test_size = 0.2, random_state = 0)
 ```
 
-### 5- 数据缩放
+#### 5- 数据缩放
 
 如果你查看数据集，它的缩放并不良好，例如 `petal_width` 列的值在 0 到 1 之间，而其他列的值较高。因此，在训练算法之前，我们将对数据进行缩放。记得我们在第 3 章讨论过缩放。在这里我们将使用标准缩器类。
 
@@ -4404,7 +4429,7 @@ train_features = feature_scaler.fit_transform(train_features)
 test_features = feature_scaler.transform(test_features)
 ```
 
-### 6- 训练算法并进行预测
+#### 6- 训练算法并进行预测
 
 我们可以看到特征值符合正态分布；因此，我们可以对这个问题使用高斯朴素贝叶斯。要使用 Scikit learn 实现高斯朴素贝叶斯，我们需要使用 `sklearn.tree` 库中的 `DecisionTreeClassifier` 类。执行以下脚本在 `train_features` 和 `train_labels` 上训练模型：
 
@@ -4417,13 +4442,13 @@ dt_clf.fit(train_features, train_labels)
 执行以下脚本预测测试特征的标签：
 
 ```python
-predictions = dt_clf.predict( test_features)
+predictions = dt_clf.predict(test_features)
 ```
 
 为了将预测结果与真实输出比较，执行以下脚本：
 
 ```python
-comparison=pd.DataFrame({'Real':test_labels, 'Predictions':predictions})
+comparison = pd.DataFrame({'Real': test_labels, 'Predictions': predictions})
 print(comparison)
 ```
 
@@ -4431,7 +4456,7 @@ print(comparison)
 
 ![](img/image00486.gif)
 
-### 评估算法
+#### 评估算法
 
 以下脚本返回我们分类算法的性能指标值：
 
@@ -4468,7 +4493,7 @@ print(accuracy_score(test_labels, predictions))
 
 数据集已随书提供，可以在 Datasets 文件夹中通过 `banknote_data.csv` 找到。遵循以下步骤
 
-### 1- 导入所需的库
+#### 1- 导入所需的库
 
 ```python
 import pandas as pd
@@ -4477,7 +4502,7 @@ import matplotlib.pyplot as plt
 %matplotlib inline
 ```
 
-### 2- 导入数据集
+#### 2- 导入数据集
 
 以下脚本导入数据集。
 
@@ -4487,7 +4512,7 @@ banknote_data = pd.read_csv(r'D:\\Datasets\\banknote_data.csv')
 
 上面的脚本读取数据集并将其存储在 `banknote_data` dataframe 中。
 
-### 3- 分析数据
+#### 3- 分析数据
 
 以下脚本返回数据维度：
 
@@ -4507,9 +4532,6 @@ banknote_data.head()
 
 ![](img/image00482.gif)
 
-
-
-
 要使用随机森林解决回归问题，可以使用 `sklearn.ensemble` 库中的 `RandomForestRegressor` 类。对于分类问题，我们需要使用同一库中的 `RandomForestClassifier` 类。执行以下脚本在 `train_features` 和 `train_labels` 上训练模型。
 
 ```python
@@ -4523,13 +4545,13 @@ rf_clf.fit(train_features, train_labels)
 执行以下脚本预测测试集的标签：
 
 ```python
-predictions = rf_clf .predict( test_features)
+predictions = rf_clf.predict(test_features)
 ```
 
 为了将预测结果与真实输出进行比较，执行以下脚本：
 
 ```python
-comparison=pd.DataFrame({'Real':test_labels, 'Predictions':predictions})
+comparison = pd.DataFrame({'Real': test_labels, 'Predictions': predictions})
 print(comparison)
 ```
 
@@ -4537,7 +4559,7 @@ print(comparison)
 
 ![](img/image0048.jpeg)
 
-## 7- 评估算法
+#### 7- 评估算法
 
 我们知道，评估分类算法的性能可以使用混淆矩阵、准确率、精确率、召回率和 F1 分数作为指标。执行以下脚本获取这些指标的值：
 
@@ -4573,7 +4595,7 @@ print(accuracy_score(test_labels, predictions))
 
 我们从导入库开始：
 
-### 1- 导入所需的库
+#### 1- 导入所需的库
 
 以下代码导入所需的库：
 
@@ -4584,7 +4606,7 @@ import matplotlib.pyplot as plt
 %matplotlib inline
 ```
 
-### 2- 导入数据集
+#### 2- 导入数据集
 
 执行以下命令导入数据集。
 
@@ -4594,7 +4616,7 @@ iris_data = pd.read_csv('D:\\Datasets\\iris_data.csv')
 
 上述脚本读取数据集并将其存储在 `iris_data` DataFrame 中。
 
-### 3- 数据分析
+#### 3- 数据分析
 
 执行以下脚本直查看数据：
 
@@ -4606,13 +4628,13 @@ iris_data.head()
 
 ![](img/image00477.gif)
 
-### 4- 数据预处理
+#### 4- 数据预处理
 
 以下脚本将数据分为特征集和标签集。
 
 ```python
-features = iris_data.iloc[:,:, 0:4].values 
-labels = iris_data.iloc[:,:, 4].values
+features = iris_data.iloc[:, 0:4].values 
+labels = iris_data.iloc[:, 4].values
 ```
 
 最后，我们将数据分为 80% 的训练集和 20% 的测试集：
@@ -4623,7 +4645,7 @@ from sklearn.model_selection import train_test_split
 train_features, test_features, train_labels, test_labels = train_test_split(features, labels, test_size = 0.2, random_state = 0)
 ```
 
-### 5- 数据缩放
+#### 5- 数据缩放
 
 如果你观察数据集会发现它的缩放不好，例如 `petal_width` 列的值于 0 到 1 之间，而其他列的值较高。因此，在训练算法之前，我们将数据进行缩放。
 
@@ -4637,7 +4659,7 @@ train_features = feature_scaler.fit_transform(train_features)
 test_features = feature_scaler.transform(test_features)
 ```
 
-### 6- 训练算法并进行预测
+#### 6- 训练算法并进行预测
 
 在回归情况下，我们使用了 `sklearn.svm` 库中的 `SVR` 类。对于分类，我们需要使用同一库中的 `SVC` 类。执行以下脚本在 `train_features` 和 `train_labels` 上训练模型。
 
@@ -4652,13 +4674,13 @@ svm_clf.fit(train_features, train_labels)
 执行以下脚本预测测试集的标签：
 
 ```python
-predictions = svm_clf.fit.predict( test_features)
+predictions = svm_clf.predict(test_features)
 ```
 
 为了将预测结果与真实输出进行比较，执行以下脚本：
 
 ```python
-comparison=pd.DataFrame({'Real':test_labels, 'Predictions':predictions})
+comparison = pd.DataFrame({'Real': test_labels, 'Predictions': predictions})
 print(comparison)
 ```
 
@@ -4684,7 +4706,7 @@ print(accuracy_score(test_labels, predictions))
 
 ![](img/image00490.jpeg)
 
-从输出可以看出，使用决策树算法实现了 100% 的预测准确率，这高于第 9 章使用贝叶斯实现的 96.66%，等于第 11 章使用决策树分类的准确率。
+从输出可以看出，使用支持向量机算法实现了 100% 的预测准确率，这高于第 9 章使用朴素贝叶斯实现的 96.66%，等于第 11 章使用决策树分类的准确率。
 
 ## 结论
 
@@ -4703,22 +4725,24 @@ K Means 算法是最常用的无监督学习算法之一，根据相似性度量
 K-Mean 聚类算法非常简单易懂。以下是 K-Means 聚类的步骤：
 
 1. 随机选择质心数量 `K`。其中 `K` 对应于你想将数据分组的簇数量。
+
 2. 计算所有数据点与所有质心之间的距离。距离可以是欧式距离或曼哈顿距离，但通常使用欧式距离。
+
 3. 将数据点分配给距离最近的质心。重复此步骤处理所有数据点，形成 K 个点簇。
+
 4. 通过取簇中所有点的 x 和 y 分量的平均值来更新每个质心的位置。
+
 5. 重复步骤 2、3 和 4，直到所有质心的更新位置与其之前的位置相同。
 
 ### 使用 Python 的 Scikit Learn 进行 K-Means 聚类
 
 在第 4 章回归中，我们根据制造年份预测了汽车价格。在本节中，我们将学习如何根据相似性将这些汽车分到不同的簇中。所以让我们开始聚类。
 
-1.  导入库
-
-
-
-
+#### 1. 导入库
 
 一如既往，第一步是导入所需的库：
+
+
 
 ```python
 import pandas as pd
@@ -4761,11 +4785,11 @@ plt.show()
 
 ![](img/image00492.jpeg)
 
-如果我们观察上面的图表，并没有发现任何明显的聚类。然而，如果我们的任务是将上述数据点分为三个类，我们可能会形成一个低价格且非常老旧车型的汽车类（左下角的点）、一个中等价格和旧车型的汽车类（图表中间的点）以及一个相对较新且价格较高的汽车类（右上角的点）。让我们尝试使用 Python 的 Sklearn 库将上述数据点分为三类。
+如果我们观察上面的图表，并没有发现任何明显的聚类。然而，如果我们的任务是将上述数据点分为三个类，我们可能会形成一个低价格且非常老旧车型的汽车类（左下角的点）、一个中等价格和旧车型的汽车类（图表中间的点）以及一个相对较新且价格较高的汽车类（右上角的点）。让我们尝试使用 Python 的 `Sklearn` 库将上述数据点分为三类。
 
 ## 4. 数据聚类
 
-要使用 sklearn 实现 K-Means 聚类，可以使用 `sklearn.cluster` 库中的 `KMeans` 类。聚类的数量可以通过 `KMeans` 类的 `n_cluster` 参数定义。在下面的脚本中，我们创建了三个类。然后调用 `fit` 方法对数据进行聚类，如下所示所示：
+要使用 `sklearn` 实现 K-Means 聚类，可以使用 `sklearn.cluster` 库中的 `KMeans` 类。聚类的数量可以通过 `KMeans` 类的 `n_clusters` 参数定义。在下面的脚本中，我们创建了三个类。然后调用 `fit` 方法对数据进行聚类，如下所示：
 
 ```python
 from sklearn.cluster import KMeans
@@ -4773,7 +4797,7 @@ km_clus = KMeans(n_clusters=3)
 km_clus.fit(car_data)
 ```
 
-现在要找到聚类算法找到质心，可以使用 `KMeans` 对象的 `cluster_centers_` 属性，如下所示：
+现在要找到聚类算法找到的质心，可以使用 `KMeans` 对象的 `cluster_centers_` 属性，如下所示：
 
 ```python
 print(km_clus.cluster_centers_)
@@ -4795,14 +4819,14 @@ print(km_clus.labels_)
 
 ![](img/image00494.jpeg)
 
-算法形成的三个类被命名为 0, 1 和 2。需要提到的是，这些聚类名称没有数学意义，它们只是为了给聚类命名。如果还有另一个聚类，它将会被标记为 4。
+算法形成的三个类被命名为 0, 1 和 2。需要提到的是，这些聚类名称没有数学意义，它们只是为了给聚类命名。如果还有另一个聚类，它将会被标记为 3。
 
 ## 5. 绘制聚类图
 
 标签没有提供关于聚类的任何视觉化信息。因此，让我们绘制聚类图。执行以下脚本：
 
 ```python
-plt.scatter(car_data['Year'], car_data['Price'], c = km_clus.labels_, cmap='rainbow')
+plt.scatter(car_data['Year'], car_data['Price'], c=km_clus.labels_, cmap='rainbow')
 ```
 
 输出如下：
@@ -4814,8 +4838,8 @@ plt.scatter(car_data['Year'], car_data['Price'], c = km_clus.labels_, cmap='rain
 最后，让我们查看质心以及聚类情况，执行以下脚本：
 
 ```python
-plt.scatter(car_data['Year'], car_data['Price'], c = km_clus.labels_, cmap='rainbow')
-plt.scatter(km_clus.cluster_centers_[:,0],km_clus.cluster_centers_[:,1], color='yellow')
+plt.scatter(car_data['Year'], car_data['Price'], c=km_clus.labels_, cmap='rainbow')
+plt.scatter(km_clus.cluster_centers_[:,0], km_clus.cluster_centers_[:,1], color='yellow')
 ```
 
 输出如下：
@@ -4875,14 +4899,14 @@ data = np.array([
 ])
 ```
 
-上述脚本创建了一个二维整数列表。将它们视为汽车模型和对应的价格。让我们绘制这些数据点。执行以下脚本进行：
+上述脚本创建了一个二维整数列表。将它们视为汽车模型和对应的价格。让我们绘制这些数据点。执行以下脚本进行绘制：
 
 ```python
 import matplotlib.pyplot as plt
 annots = range(1, 13)
 plt.figure(figsize=(12, 8)) 
 plt.subplots_adjust(bottom=0.1) 
-plt.scatter(data[:,0],data[:,1], label='True Position')
+plt.scatter(data[:,0], data[:,1], label='True Position')
 for label, x, y in zip(annots, data[:,0], data[:,1]): 
     plt.annotate(
         label,
@@ -4914,13 +4938,11 @@ dendrogram(annot,
 plt.show()
 ```
 
-
-
 聚类图（Dendrograms）是按照之前提到的步骤创建的。首先将两个最近的点连接在一起。这些点位于聚类图层次结构的底部。例如点 6 和 1、5 和 3、4 和 2、10 和 7，这些点彼此距离最近。点的高度对应于点之间的欧几里得距离。最后，当最近的点连接形成类时，最近的类会被连接在一起，例如点 5, 3 和点 3, 4 的类被连接在一起了。这个过程一直持续，直到形成一个大类。
 
 一旦形成了一个大类，找到没有水平线穿过的最长垂直线。在其上画一条水平线。水平线交叉垂直线的点数即为类的数量。
 
-例如在下面的图中，黑色虚线是距离最长的垂直线。我们在这条垂直线上画了一条红线。红线切断了两条垂直线，如如下所示导致两个类：
+例如在下面的图中，黑色虚线是距离最长的垂直线。我们在这条垂直线上画了一条红线。红线切断了两条垂直线，如下所示导致两个类：
 
 ![](img/image00499.jpeg)
 
@@ -4928,27 +4950,24 @@ plt.show()
 
 ### 使用 Python Scikit Learn 进行层次聚类
 
-在上一节节中，我们使用 Scipy 库绘制了聚类图。然而，层次聚类也可以使用 Python 的 Scikit Learn 库来实现。
+在上一节中，我们使用 `Scipy` 库绘制了聚类图。然而，层次聚类也可以使用 Python 的 `Scikit Learn` 库来实现。
 
 我们在这一节中要解决的问题是根据消费习惯将客户分组。数据已经下载并命名为 `customer_records.csv`。
 
-接下来，按照以下步骤使用 Python Scikit Learn 实现层次聚类：
+接下来，按照以下步骤使用 Python `Scikit Learn` 实现层次聚类：
 
-### 导入库
+#### 导入库
 
 ```python
 import matplotlib.pyplot as plt 
-
 import pandas as pd 
-
 import numpy as np
-
 %matplotlib inline
 ```
 
-### 导入数据集
+#### 导入数据集
 
-以下脚本导入数据集并将其存储在 `customer_record` 数据框中
+以下脚本导入数据集并将其存储在 `customer_record` 数据框中：
 
 ```python
 customer_record = pd.read_csv('D:\\Datasets\\customer_records.csv')
@@ -4964,25 +4983,22 @@ customer_record.head()
 
 ![](img/image00500.jpeg)
 
-该数据集有五个属性：客户 ID（CustomerID）、性别（Genre）、年龄（Age）、年收入（单位：千美元）和消费得分（Spending Score，1-100）。消费得分列对应用户的消费习惯。用户花费得越多，该消费得分列越高。为了简单起见，我们将只取两列，即年收入和消费得分，并尝试根据这两列对数据进行聚类。要选择这两列，执行以下脚本：
+该数据集有五个属性：客户 ID（`CustomerID`）、性别（`Genre`）、年龄（`Age`）、年收入（单位：千美元）和消费得分（`Spending Score`，1-100）。消费得分列对应用户的消费习惯。用户花费得越多，该消费得分列越高。为了简单起见，我们将只取两列，即年收入和消费得分，并尝试根据这两列对数据进行聚类。要选择这两列，执行以下脚本：
 
 ```python
 dataset = customer_record.iloc[:, 3:5].values 
 ```
 
-### 聚类数据
+#### 聚类数据
 
-要使用 Python 的 Scikit Learn 对数据进行聚类，我们可以使用 `scipy.cluster.hierarchy` 库。它有两个类：`linkage` 和 `dendrogram`。首先，我们需要创建一个 `linkage` 类的对象，并将数据集和距离方法传递给 `linkage` 类。接下来，我们需要将 `linkage` 类的对象传递给 `dendrogram` 类，如下脚本所示。这里使用的距离方法是“ward”，它基本上是最小化了多个类之间的方差差。执行以下脚本：
+要使用 Python 的 `Scikit Learn` 对数据进行聚类，我们可以使用 `scipy.cluster.hierarchy` 库。它有两个类：`linkage` 和 `dendrogram`。首先，我们需要创建一个 `linkage` 类的对象，并将数据集和距离方法传递给 `linkage` 类。接下来，我们需要将 `linkage` 类的对象传递给 `dendrogram` 类，如下脚本所示。这里使用的距离方法是“ward”，它基本上是最小化了多个类之间的方差差。执行以下脚本：
 
 ```python
 import scipy.cluster.hierarchy as hc
 
 plt.figure(figsize=(12, 8)) 
-
 plt.title("Customer Clusters") 
-
 link = hc.linkage(dataset, method='ward')
-
 dendograms = hc.dendrogram(link) 
 ```
 
@@ -5004,7 +5020,7 @@ dendograms = hc.dendrogram(link)
 
 ## 使用 PCA 进行降维
 
-由于高性能硬件和存储空间的可用性，机器学习作为一学科在近年来取得了巨大的进展。20 年前需要运行几个月才能的算法，现在可以在几分钟内运行。尽管机器学习算法的执行速度显著提高，但仍然有少数减慢机器学习算法速度的瓶颈。
+由于高性能硬件和存储空间的可用性，机器学习作为一学科在近年来取得了巨大的进展。20 年前需要运行几个月才能完成的算法，现在可以在几分钟内运行。尽管机器学习算法的执行速度显著提高，但仍然有少数减慢机器学习算法速度的瓶颈。
 
 巨大的数据集和每个数据集大量的特征是导致算法执行缓慢的原因之一。不建议减少数据集中的记录数量，因为它们可能包含有用信息。然而，数据集中的特征数量是可以减少的。
 
@@ -5013,33 +5029,30 @@ dendograms = hc.dendrogram(link)
 1. 合并相关特征导致特征数量减少。
 2. 选择在数据集以及输出中引起最大方差的特征。
 
-通常更倾向于第二种方法，并为此开发了多种统计技术，例如因子分析、线性判别分析（LDA）和主成分分析（PCA）。在本章中，我们将学习 PCA，在下一章中我们将学习 LDA。
+通常更倾向于第二种方法，并为此开发了多种统计技术，例如因子分析、线性判别分析（`LDA`）和主成分分析（`PCA`）。在本章中，我们将学习 `PCA`，在下一章中我们将学习 `LDA`。
 
 ### 主成分分析理论
 
-主成分分析是最广泛使用的降维技术之一。PCA 通过选择在输出中引起最大方差的特征来工作，留下对输出没有影响的特征。这种方法背后的直觉是，方差可以作为输出的衡量。
+主成分分析是最广泛使用的降维技术之一。`PCA` 通过选择在输出中引起最大方差的特征来工作，留下对输出没有影响的特征。这种方法背后的直觉是，方差可以作为输出的衡量。
 
 ### 使用 Sklearn 实现 PCA
 
-在本节中，我们将看到如何使用 Python 的 Sc Learn 库来实现主成分分析。通过 PCA，我们将从银行验证数据中找到最重要的特征。我们的数据中有四个属性，即熵（entropy）、偏度（skewness）、方差（variance）和货币波波变换图像的峰度（curtosis）。
+在本节中，我们将看到如何使用 Python 的 `Scikit Learn` 库来实现主成分分析。通过 `PCA`，我们将从银行验证数据中找到最重要的特征。我们的数据中有四个属性，即熵（`entropy`）、偏度（`skewness`）、方差（`variance`）和货币小波变换图像的峰度（`curtosis`）。
 
 关于数据集的更多细节可以在此处找到：[https://archive.uci.edu/ml/datasets/banknote+authentication]。
 
-数据集已随书提供，可以在 Datasets 文件夹中通过 `banknote_data.csv` 找到。遵循以下步骤
+数据集已随书提供，可以在 `Datasets` 文件夹中通过 `banknote_data.csv` 找到。遵循以下步骤：
 
-### 导入所需的库
+#### 导入所需的库
 
 ```python
 import pandas as pd
-
 import numpy as np
-
 import matplotlib.pyplot as plt
-
 %matplotlib inline
 ```
 
-### 导入数据集
+#### 导入数据集
 
 以下脚本导入数据集。
 
@@ -5049,7 +5062,7 @@ banknote_data = pd.read_csv(r'D:\\Datasets\\banknote_data.csv')
 
 上面的脚本读取数据集并将其存储在 `banknote_data` 数据框中。
 
-#### 分析数据
+##### 分析数据
 
 以下脚本返回数据维度：
 
@@ -5057,7 +5070,7 @@ banknote_data = pd.read_csv(r'D:\\Datasets\\banknote_data.csv')
 banknote_data.shape
 ```
 
-上述脚本返回 (1372, 5)，这意味着我们的数据集包含 1372 条记录五个属性。
+上述脚本返回 `(1372, 5)`，这意味着我们的数据集包含 1372 条记录和五个属性。
 
 要查看数据外观，请执行以下脚本。它返回数据的前五行。
 
@@ -5069,53 +5082,49 @@ banknote_data.head()
 
 ![](img/image00482.gif)
 
-
-
-
-# 4- 数据预处理
+### 4. 数据预处理
 
 以下脚本将数据分为特征集和标签集。
 
 ```python
-features= banknote_data.iloc[:,0:4].values
-labels= banknote_data.iloc[:,4].values
+features = banknote_data.iloc[:,0:4].values
+labels = banknote_data.iloc[:,4].values
 ```
 
 最后，我们将数据分为 80% 的训练集和 20% 的测试集：
 
 ```python
 from sklearn.model_selection import train_test_split
-train_features, test_features, train_labels, test_labels = train_test_split(features, labels, test_size = 0.2, random_state = 0)
+train_features, test_features, train_labels, test_labels = train_test_split(features, labels, test_size=0.2, random_state=0)
 ```
 
-# 5- 数据缩放
+### 5. 数据缩放
 
-对于随机森林算法，没有必要对数据进行缩放，但为了练习，让我们使用标准化器（standard scaler）对数据进行缩放。记得我们在第三章讨论过缩放。
+对于随机森林算法，没有必要对数据进行缩放，但为了练习，让我们使用标准化器（`StandardScaler`）对数据进行缩放。记得我们在第三章讨论过缩放。
 
 ```python
 from sklearn.preprocessing import StandardScaler
 
 feature_scaler = StandardScaler()
 train_features = feature_scaler.fit_transform(train_features)
-
 test_features = feature_scaler.transform(test_features)
 ```
 
-# 6- 应用 PCA
+### 6. 应用 PCA
 
-通过 sklearn 库实现 PCA 非常简单，我们需要使用 `sklearn.decomposition` 库中的 `PCA` 类。选择的主成分数量可以作为参数传递给 `PCA` 类。如果没有传递组件数量，则所有特征都将被选为主成分。接下来，我们需要调用 `fit` 和 `transform` 方法并将训练和测试特征传递给它们。我们不需要传递输出，因为 PCA 是一种无监督学习技术，仅根据特征集计算方差。执行以下脚本以获取 `banknote_data.csv` 数据集的所有四个主成分。
+通过 `sklearn` 库实现 `PCA` 非常简单，我们需要使用 `sklearn.decomposition` 库中的 `PCA` 类。选择的主成分数量可以作为参数传递给 `PCA` 类。如果没有传递组件数量，则所有特征都将被选为主成分。接下来，我们需要调用 `fit` 和 `transform` 方法并将训练和测试特征传递给它们。我们不需要传递输出，因为 `PCA` 是一种无监督学习技术，仅根据特征集计算方差。执行以下脚本以获取 `banknote_data.csv` 数据集的所有四个主成分。
 
 ```python
 from sklearn.decomposition import PCA
 
 pca = PCA() 
-
 train_features = pca.fit_transform(train_features) 
-
 test_features = pca.transform(test_features) 
 ```
 
 现在，为了查看按降序排列的每个组件检索的方差，在屏幕上打印 `explained_variance_ratio_` 属性，如下所示：
+
+
 
 ```python
 exp_var = pca.explained_variance_ratio_ 
@@ -5134,9 +5143,7 @@ print(exp_var)
 
 ```python
 pca = PCA(1) 
-
 train_features = pca.fit_transform(train_features) 
-
 test_features = pca.transform(test_features) 
 ```
 
@@ -5144,22 +5151,17 @@ test_features = pca.transform(test_features)
 
 ```python
 from sklearn.ensemble import RandomForestClassifier
-
 rf_clf = RandomForestClassifier(n_estimators=50, random_state=0) 
-
 rf_clf.fit(train_features, train_labels)
-predictions = rf_clf .predict( test_features)
+predictions = rf_clf.predict(test_features)
 ```
 
 最后让我们看看随机森林在一个主成分下的表现如何。执行以下脚本：
 
 ```python
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score 
-
 print(confusion_matrix(test_labels, predictions)) 
-
 print(classification_report(test_labels, predictions)) 
-
 print(accuracy_score(test_labels, predictions))
 ```
 
@@ -5175,28 +5177,20 @@ print(accuracy_score(test_labels, predictions))
 
 ```python
 pca = PCA(2) 
-
 train_features = pca.fit_transform(train_features) 
-
 test_features = pca.transform(test_features) 
-
 from sklearn.ensemble import RandomForestClassifier
-
 rf_clf = RandomForestClassifier(n_estimators=50, random_state=0) 
-
 rf_clf.fit(train_features, train_labels)
-predictions = rf_clf .predict( test_features)
+predictions = rf_clf.predict(test_features)
 ```
 
 最后让我们看看随机森林在两个主成分下的表现如何。执行以下脚本：
 
 ```python
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score 
-
 print(confusion_matrix(test_labels, predictions)) 
-
 print(classification_report(test_labels, predictions)) 
-
 print(accuracy_score(test_labels, predictions))
 ```
 
@@ -5224,7 +5218,7 @@ LDA 是一种监督降维技术，它尝试根据特征区分输出的能力来�
 
 在本节中，我们将使用 Python 的 Scikit Learn 库实现 LDA。我们将再次尝试减少 `banknote_data.csv` 数据集的维度。遵循以下步骤：
 
-1- 导入所需的库
+1. 导入所需的库
 
 ```python
 import pandas as pd
@@ -5233,7 +5227,7 @@ import matplotlib.pyplot as plt
 %matplotlib inline
 ```
 
-2- 导入数据集
+2. 导入数据集
 
 以下脚本导入数据集。
 
@@ -5243,7 +5237,7 @@ banknote_data = pd.read_csv(r'D:\Datasets\banknote_data.csv')
 
 上面的脚本读取数据集并将其存储在 `banknote_data` DataFrame 中。
 
-3- 分析数据
+3. 分析数据
 
 以下脚本返回数据维度：
 
@@ -5263,26 +5257,24 @@ banknote_data.head()
 
 ![](img/image00482.gif)
 
-
-
-
 通过 `sklearn` 库实现 PCA 非常简单，我们需要使用 `sklearn.discriminant_analysis` 库中的 `LinearDiscriminantAnalysis` 类。`n_components` 参数用于设置线性判别器的数量。接下来，我们需要调用 `fit` 和 `transform` 方法，并向它们传递训练特征和训练标签。请记住，在 PCA 的情况下，我们只需要传递特征集而不需要标签。执行以下脚本以获取数据集第一个线性判别器。
 
 ```python
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
-LDA = LinearDiscriminantAnalysis (n_components=1)
+LDA = LinearDiscriminantAnalysis(n_components=1)
 train_features = LDA.fit_transform(train_features, train_labels)
 test_features = LDA.transform(test_features) 
 ```
 
 ### 使用单个线性判别器的性能评估
+
 现在让我们在有一个线性判别器的训练特征上训练随机森林算法，并在测试特征上测试该算法。执行以下脚本：
 
 ```python
 from sklearn.ensemble import RandomForestClassifier
 rf_clf = RandomForestClassifier(n_estimators=50, random_state=0)
 rf_clf.fit(train_features, train_labels)
-predictions = rf_clf.predict( test_features)
+predictions = rf_clf.predict(test_features)
 ```
 
 最后，让我们看看随机森林算法结合线性判别器的表现如何。执行以下脚本：
@@ -5301,11 +5293,13 @@ print(accuracy_score(test_labels, predictions))
 在这里，使用 1 个线性判别器实现的准确率（即 99.27%）与上一章中四个主成分实现的 99.63% 进行对比。
 
 ## 结论
+
 在本章中，我们详细学习了 LDA。如果数据是均匀分布的，LDA 在大多数情况下会优于 PCA。但在数据不规则的情况下，PCA 的表现更好。此外，PCA 可以用于有标签和无标签数据。编码愉快！！！
 
 # 第 18 章
 
 ## 使用交叉验证和网格搜索进行性能评估
+
 欢迎来到本书的最后一章。在本章中，我们将学习如何以更稳健的方法评估算法的性能。
 
 到目前为止，我们一直通过将数据划分为训练集和测试集，然后在训练集上训练模型并在测试集上测试来评估算法性能。然而，这种方法存在某些问题。其中一个问题就是方差。这个问题可以通过交叉验证（Cross Validation）来解决。
@@ -5315,26 +5309,17 @@ print(accuracy_score(test_labels, predictions))
 在本章中，我们将详细学习交叉验证和网格搜索。
 
 ### 交叉验证
+
 之前我们提到，将数据随机划分为训练集和测试集会导致方差问题。算法性能评估中的方差是指算法性能根据所使用的测试集而变化的情况。
 
 交叉验证是解决方差问题的方案。在交叉验证中，数据集被分为 `K` 份，其中 `K` 是任意整数。这 `K` 份或或每一个部分至少出现一次。
 
 ### 使用 Python 实现交叉验证
-要实现交叉验证，我们使用 `sklearn.model_selection` 模块。`cross_val_score` 函数用于评估模型在数据集每一折上的性能。
 
-（注意：本节提供的文本高度重复且碎片化，并带有类似占位符的句子。我在保持指令中要求的技术背景的同时，清理了其结构流。）
-
-*自我纠正：从“交叉验证”部分开始的源文本似乎是乱码文本和重复短语的混合体（葡萄酒/数据集引用）。我将对其进行格式处理以提高可读性，同时根据规则保留了特定的技术术语和变量。*
-
-### 交叉验证
-之前我们提到，将数据随机划分为训练集和测试集会导致方差问题。算法性能评估中的方差是指算法性能根据所使用的测试集而变化的情况。
-
-交叉验证是解决方差问题的方案。在交叉验证中，数据集被分为 `K` 份，其中 `K` 是任意整数。这 `K` 份或或每一个部分至少出现一次。
-
-### 使用 Python 实现交叉验证
 要实现交叉验证，我们使用 `sklearn.model_selection` 模块。`cross_val_score` 函数用于评估模型在数据集每一折上的性能。
 
 ### 导入所需的库
+
 ```python
 import pandas as pd
 import numpy as np
@@ -5343,29 +5328,35 @@ import matplotlib.pyplot as plt
 ```
 
 ### 导入数据集
+
 ```python
 wine_data = pd.read_csv('wine.csv', sep=';')
 ```
 
 #### 数据分析
+
 ```python
 print(wine_data.head())
 ```
+
 ![](img/image0050.gif)
 
 ### 数据预处理
+
 ```python
 features = wine_data.iloc[:,0].values
 labels = wine_data.iloc[:,1].values
 ```
 
 #### 划分数据
+
 ```python
 from sklearn.model_selection import train_test_split
 train_features, test_features, train_labels, test_labels = train_test_split(features, labels, test_size=0, random_state=0)
 ```
 
 ### 数据缩放
+
 ```python
 from sklearn.preprocessing import StandardScaler
 feature_scaler = StandardScaler()
@@ -5373,6 +5364,7 @@ train_features = feature_scaler.fit_transform(train_features)
 ```
 
 ### 交叉验证
+
 要应用交叉验证，第一步是选择你想使用的算法。以下脚本初始化了具有 500 个估计器的随机森林。
 
 ```python
@@ -5387,12 +5379,10 @@ from sklearn.model_selection import cross_val_score
 rf_accuracies = cross_val_score(estimator=rf_clf, X=train_features, y=train_labels, cv=5)
 print(rf_accuracies)
 ```
+
 ![](img/image00508.gif)
 
 ### 用于参数选择的网格搜索
-
-
-
 
 机器学习算法的工作是寻找能够产生最佳结果的最优参数或权重。这些参数是由算法找到的，并取决于数据集。我们无法控制这些参数。
 
@@ -5404,7 +5394,7 @@ print(rf_accuracies)
 
 ## 使用 Sklearn 实现网格搜索
 
-Python 的 Scikit Learn 库带有一个用于实现网格搜索的包。为此，`sklearn.model_selection` 类包含了 `GridSearchCV` 类，可以用于实现网格搜索。但在在此之前，需要进行一些预处理。
+Python 的 Scikit Learn 库带有一个用于实现网格搜索的包。为此，`sklearn.model_selection` 类包含了 `GridSearchCV` 类，可以用于实现网格搜索。但在此之前，需要进行一些预处理。
 
 ### 创建参数字典
 
@@ -5439,6 +5429,8 @@ grid_search = GridSearchCV(estimator=rf_clf,
                             cv=5,
                             n_jobs=-1)
 ```
+
+
 
 最后一步是在 `GridSearchCV` 对象上调用 `fit` 方法，并按所示传递训练集和测试集：
 
@@ -5479,15 +5471,11 @@ print(optimal_results)
 
 ## 你可能还会感兴趣……
 
-# ![](https://amzn.to/2AiwYf)
-
-# �
-
-# 书籍链接：[`amzn.to/2AiwYf`](https://amzn.to/2AiwYf)
+书籍链接：[`amzn.to/2AiwYf`](https://amzn.to/2AiwYf)
 
 ![Cover Data Analyitics](img/image00418.jpeg)
 
- 免费电子书下载： 
+免费电子书下载：
 
 [`bit.ly/2yJsyq4`](http://bit.ly/2yJsyq4)
 

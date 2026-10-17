@@ -1,6 +1,5 @@
+
 # 高科技安全职业的计算机科学应用指南
-
-
 
 ![](img/cover.jpg)
 
@@ -44,31 +43,23 @@
 
 ### 网络安全的类型
 
-
-
-
-
-### 网络安全
-
-网络安全包含多种高科技安全类型。
-
-### 应用安全
+#### 应用安全
 
 应用安全涉及检测漏洞并开发工具和程序，以防止黑客利用应用程序中的弱点获取对公司系统的未授权访问。
 
-### 信息安全
+#### 信息安全
 
 信息安全保护信息和数据免受未授权访问、泄露、篡改、窃取等威胁。
 
-### 网络安全
+#### 网络安全
 
 网络安全涉及监控组织的内部网络，以识别任何弱点并防止未授权访问。网络安全同时使用硬件和软件技术，例如防火墙、防病毒和反间谍软件，以保持内部网络的安全可靠。
 
-### 灾难规划
+#### 灾难规划
 
 网络安全还涉及为灾难制定计划，无论是自然灾害还是技术灾害。该规划包括评估和分析风险、确定资产优先级以及制定灾难响应计划。有了灾难计划，组织能够更快地从灾难中恢复，并将损失降至最低。
 
-### 网站安全
+#### 网站安全
 
 网站是组织容易受到攻击的另一个场所。近年来，网站数据泄露的数量有所上升。这些泄露导致客户和公司遭遇身份盗窃和财务损失。一旦泄露事件公开，公司的品牌形象和声誉也会受损。网站安全专注于保护网站免受在线威胁。它使用网站扫描和恶意软件清除、应用安全测试、网站应用防火墙等技术和工具。
 
@@ -76,7 +67,7 @@
 
 *网络安全专业人员在公司服务器室工作，监控一款能检测对公司网络任何未授权访问的软件程序。*
 
-### 端点安全
+#### 端点安全
 
 移动技术和互联网让人们能够在世界任何地方工作。这种灵活性也带来了一定风险，因为远程工作站和移动设备容易遭受网络攻击。当移动设备连接到组织的网络并相互互联时，它们会为黑客创建新的入口点，以获取对公司系统的访问权限。端点安全通过阻止来自远程入口点的访问尝试，来保护和保障组织网络的安全。
 
@@ -116,15 +107,11 @@
 
 ### 网络世界的侦探
 
-
-
-
-
-### 网络侦探破案记
+#### 网络侦探破案记
 
 一位企业主得知一名员工正秘密策划离职。他怀疑该员工正在背地里试图将公司的几位客户带到新的工作单位。企业主如何证实自己的猜测？他求助于网络世界的侦探——计算机取证专家。这些网络安全专业人员会检查员工在公司计算机、系统和网络上的操作，看看能否找到任何确凿证据。如果找到，企业主就可以用这些证据与员工对质。
 
-### 计算机取证专家出马
+#### 计算机取证专家出马
 
 计算机取证是法医学的一个分支，即在犯罪调查中使用科学测试或技术。计算机取证专家收集、分析并呈报犯罪调查中的数字证据。他们在计算机系统、硬盘、光盘和其他存储设备上挖掘信息。他们梳理电子文档和文件，如电子邮件和图像。在许多情况下，数字证据极难查找和收集，因为它被隐藏或删除。为了找到这些证据，计算机取证专家使用各种软件程序和其他应用程序，挖掘并提取计算机系统中的潜在或隐藏数据。他们为许多类型的公司和组织提供服务，包括政府机构、会计事务所、律师事务所、银行和软件开发公司。任何拥有计算机系统的组织都可能需要计算机取证专家的服务。
 
@@ -150,7 +137,7 @@ Alfred Demirjian 是计算机取证公司 TechFusion 的总裁兼首席执行官
 
 据 Irvine 介绍，数字取证之所以有价值，是因为它提供信息。他在发布于 Balance Careers 的采访中表示：
 
-> **无论该信息是联邦刑事案件的证据，还是内部人员为竞争对手窃取企业知识产权的知情情况，数字取证专业人员都能提供客户原本无法获得的数据。用最简单的术语来说，人们可以将数字取证检查员的工作比作照片冲洗师。例如，如果我手里有一卷未冲洗的胶卷，作为任何证据它几乎毫无用处。然而，如果有人将胶卷冲洗成照片（在我们的案例中是从硬盘恢复数据），这些内容可以提供检察官、人力资源经理或企业安全官所需的一切。**
+> 无论该信息是联邦刑事案件的证据，还是内部人员为竞争对手窃取企业知识产权的知情情况，数字取证专业人员都能提供客户原本无法获得的数据。用最简单的术语来说，人们可以将数字取证检查员的工作比作照片冲洗师。例如，如果我手里有一卷未冲洗的胶卷，作为任何证据它几乎毫无用处。然而，如果有人将胶卷冲洗成照片（在我们的案例中是从硬盘恢复数据），这些内容可以提供检察官、人力资源经理或企业安全官所需的一切。
 
 ### 美国国家安全局赞助的夏令营
 
@@ -160,10 +147,7 @@ Alfred Demirjian 是计算机取证公司 TechFusion 的总裁兼首席执行官
 
 ### 如何成为一名计算机取证专家
 
-
-
-
-### 计算机取证职业路径
+#### 计算机取证职业路径
 
 对于计算机取证职业，大多数候选人会在大学或高校获得 IT、计算机科学或相关领域的四年制学位。在这些项目中，学生将学习计算机操作系统、网络、硬件和软件应用。学生还可以选修会计和刑事司法课程，以学习计算机取证职业所需的技能。对计算机取证感兴趣的高中生可以选修计算机科学、编程和会计课程，为这一职业做准备。
 
@@ -173,11 +157,11 @@ Alfred Demirjian 是计算机取证公司 TechFusion 的总裁兼首席执行官
 
 主修计算机科学的大学生在讲座中听讲并做笔记，学习不同的计算机操作系统。
 
-### 认证要求
+#### 认证要求
 
 一些雇主要求计算机取证专业人员持有认证。获得认证表明该专业人员已掌握工作所需的特定技能。对于计算机取证专业人员，国际法庭计算机检查员协会（ISFCE）和国际计算机调查专家协会（IACIS）等专业组织提供认证法庭计算机检查员（CFCE）认证。该认证必须每三年更新一次。
 
-### 计算机取证的就业前景
+#### 计算机取证的就业前景
 
 计算机取证职业的就业前景预计将非常好。根据劳工统计局（BLS）的数据，信息安全分析师（包括计算机取证专业人员）的就业预计将从 2016 年增长 28% 至 2026 年。这一增长率远高于所有职业的平均增长率（7%）。随着更多犯罪发生在网络上，网络攻击频率增加，将需要计算机取证专业人员为调查人员和法院发现、分析和呈报这些数字数据。此外，还需要计算机取证专业人员帮助各行各业的组织保护其计算机系统免受黑客攻击。
 
@@ -194,6 +178,8 @@ Alfred Demirjian 是计算机取证公司 TechFusion 的总裁兼首席执行官
 客户将信用卡插入支付机。信息安全分析师设计解决方案以保护客户个人信息安全。
 
 ### 信息安全分析师的工作
+
+
 
 组织聘用信息安全分析师来保护其信息系统。这些分析师规划安全程序并实施安全系统。他们的目标是保护组织的计算机系统、网络和数据免受网络攻击、数据泄露和其他未经授权的访问或使用。
 
@@ -213,8 +199,6 @@ Alfred Demirjian 是计算机取证公司 TechFusion 的总裁兼首席执行官
 
 ### 成为信息安全分析师的步骤
 
-
-
 ### 信息安全分析师
 
 大多数信息安全分析师至少拥有四年制学院或大学的计算机科学、计算机编程或相关领域的学士学位。一些学校设有专门面向信息安全专业人员的课程。一些雇主要求应聘者拥有信息系统方向的工商管理硕士学位。
@@ -231,7 +215,7 @@ Alfred Demirjian 是计算机取证公司 TechFusion 的总裁兼首席执行官
 
 ### 获取经验：网络安全实习
 
-实习工作可以帮助学生获得宝贵的实践经验，并建立信息安全职业生涯所需的核心技能。作为一名实习生，蒂芙尼·史密斯曾在网络安全公司 Foreground Security 工作。每位实习生都会被分配一项任务：史密斯的项目是将一个名为 Opsview 的监控工具安装到 Red Hat 服务器上。史密斯花费了大量时间琢磨如何安装该监控工具。“这对我来说极具挑战性，但我通过记录安装每个阶段所采取的步骤，最终解决了问题，”史密斯在 Keirsten Brager.tech 的一篇博客文章中说道。“这段经历为我应对第一份全职网络安全工作中等待我的挑战做好了准备。我的项目在实习结束时被选中并投入了公司的生产环境，我当时欣喜若狂！”
+实习工作可以帮助学生获得宝贵的实践经验，并建立信息安全职业生涯所需的核心技能。作为一名实习生，蒂芙尼·史密斯曾在网络安全公司 Foreground Security 工作。每位实习生都会被分配一项任务：史密斯的项目是将一个名为 `Opsview` 的监控工具安装到 Red Hat 服务器上。史密斯花费了大量时间琢磨如何安装该监控工具。“这对我来说极具挑战性，但我通过记录安装每个阶段所采取的步骤，最终解决了问题，”史密斯在 Keirsten Brager.tech 的一篇博客文章中说道。“这段经历为我应对第一份全职网络安全工作中等待我的挑战做好了准备。我的项目在实习结束时被选中并投入了公司的生产环境，我当时欣喜若狂！”
 
 ### 信息安全分析师的就业前景
 
@@ -259,11 +243,9 @@ Alfred Demirjian 是计算机取证公司 TechFusion 的总裁兼首席执行官
 
 ### 实习生破解密码
 
-
-
 ### 对渗透测试职业感兴趣的学生可以通过在安全实习中工作获得宝贵的实践经验。
 
-2017 年，Tim Welles 在 Sword & Shield Enterprise Security（一家信息安全咨询公司）担任暑期实习生。Welles 是田纳西大学的学生，主修计算机科学，专注于网络安全。他在一个项目中工作，旨在为办公室内`hashcat`的安装设置一个名为 wrapper 的编程功能，`hashcat`是一款密码破解工具。Welles 在 Sword & Shield 网站的一篇文章中说道：
+2017 年，Tim Welles 在 Sword & Shield Enterprise Security（一家信息安全咨询公司）担任暑期实习生。Welles 是田纳西大学的学生，主修计算机科学，专注于网络安全。他在一个项目中工作，旨在为办公室内 `hashcat` 的安装设置一个名为 wrapper 的编程功能，`hashcat` 是一款密码破解工具。Welles 在 Sword & Shield 网站的一篇文章中说道：
 
 > 分布式哈希破解项目的 hashcat wrapper 非常适合像我这样的实习生。它给了我一些事情做，我觉得这将为公司增加价值，远远超出我的实习期限，并完成他们需要完成的工作。同时，它让我学到了很多关于密码破解和 Linux 的一般知识，以及一些通用的网络技能。该项目最好的部分是当我完成它时，团队实际上开始在他们的渗透测试服务中使用它。这让我感觉我在为公司产生影响，而不是在做一个不会被充分利用的副项目。
 
@@ -279,7 +261,7 @@ Welles 计划毕业后从事网络安全职业。
 
 对于那些好奇心强、擅长为网络安全想出独特且复杂的修复方案的人来说，渗透测试职业可能非常适合。大多数渗透测试员拥有数年的相关经验，以及至少计算机科学、信息安全或相关领域的学士学位。这些专业使学生具备编程、网络和网络安全技能。学生将学习计算机取证、灾难恢复、渗透测试等领域的课程。高中生可以通过选修计算机科学和编程课程为渗透测试职业做准备。
 
-大多数网络安全职业（包括渗透测试）都需要扎实的技术和计算机技能，以便这些专业人员能够入侵计算机系统。一些雇主要求候选人掌握特定的编程语言，如`C`、`C++`、`Java`、`PHP`和`Python`。由于客户运行不同的操作系统，渗透测试员应了解`Windows`、`UNIX`和`Linux`操作系统。他们还应具有基于 Web 的应用程序、网络服务器和网络工具、安全工具以及安全框架的经验。Contrast Security 的首席技术官兼联合创始人 Jeff Williams 在 2018 年 4 月为《Forbes》撰写的文章中表示：
+大多数网络安全职业（包括渗透测试）都需要扎实的技术和计算机技能，以便这些专业人员能够入侵计算机系统。一些雇主要求候选人掌握特定的编程语言，如 `C`、`C++`、`Java`、`PHP` 和 `Python`。由于客户运行不同的操作系统，渗透测试员应了解 `Windows`、`UNIX` 和 `Linux` 操作系统。他们还应具有基于 Web 的应用程序、网络服务器和网络工具、安全工具以及安全框架的经验。Contrast Security 的首席技术官兼联合创始人 Jeff Williams 在 2018 年 4 月为《Forbes》撰写的文章中表示：
 
 > **你绝对需要深入了解你正在测试的技术。你不必成为专家级程序员，但你应该懂得足够多的知识，以便使用你想要测试的技术构建简单的应用程序，并理解更复杂应用程序的代码。我建议专注于广泛用于构建人们真正关心的应用程序的技术，如 Java、.NET 和主要的应用程序框架。**
 
@@ -312,10 +294,6 @@ Welles 计划毕业后从事网络安全职业。
 ![](img/page_45-1.jpg)
 
 为了设计组织的安全系统和整体安全计划，安全架构师必须了解组织使用的所有硬件和软件。
-
-
-
-
 
 ### 安全架构师：角色、要求与职业前景
 
@@ -355,23 +333,21 @@ Welles 计划毕业后从事网络安全职业。
 
 ### 威胁建模
 
+
+
 公司网络安全的第一步是确定需要保护什么，以及要防范谁。开始时，网络安全专业人员创建威胁模型。准备威胁模型使网络安全团队能够思考他们担心哪些数据和系统会被黑客攻击。这些都需要受到保护。威胁模型还识别出公司担心谁会实施黑客攻击。例如，一名少女可能想保护电子邮件账户，以免爱管闲事的哥哥窥探阅读她的邮件。为此，她可以决定在电子邮件账户上设置一个不与哥哥共享的密码。但如果她担心其他人阅读她的邮件，可能需要采取其他预防措施。这样，威胁模型取决于威胁和受保护的数据。
+
+## 第六章：安全工程
+
+随着越来越多的组织将宝贵且敏感的信息存储在计算机系统和网络中，保护这些信息从未像现在这样重要。有缺陷的软件和脆弱的系统会使计算机网络易受恶意恶意软件、间谍软件等的攻击。安全工程师获取安全架构师创建的设计，并构建能够应对恶意网络攻击、意外自然灾害或其他灾难性事件的系统。
 
 ### 安全架构师的就业前景
 
 安全架构师的就业前景非常好。根据 BLS 数据，包括安全架构师在内的信息安全分析师就业人数预计将从 2016 年到 2026 年增长 28%。
 
-
-
-
-
 ### 安全工程
 
 随着企业越来越理解高科技网络安全的重要性，对熟练安全架构师和其他网络安全专业人员的需求将持续上升。此外，网络安全与教育中心的一项研究预测，在未来五年内，职位空缺将多于合格的专业人员，人才缺口将达 180 万个职位。对于对高科技网络安全感兴趣的人来说，安全架构师的职业生涯可能是完美的选择。
-
-## 第六章：安全工程
-
-随着越来越多的组织将宝贵且敏感的信息存储在计算机系统和网络中，保护这些信息从未像现在这样重要。有缺陷的软件和脆弱的系统会使计算机网络易受恶意恶意软件、间谍软件等的攻击。安全工程师获取安全架构师创建的设计，并构建能够应对恶意网络攻击、意外自然灾害或其他灾难性事件的系统。
 
 ### 设计防护系统
 
@@ -419,10 +395,6 @@ Helen Oswell 是技术咨询公司 6point6 的一名安全工程师。在她的�
 
 2013 年，计算机软件公司 Adobe 宣布其计算机系统遭到黑客攻击。网络攻击者访问了数百万 Adobe 客户 ID、加密密码以及加密的信用卡或借记卡号码。该公司后来报告称，黑客还窃取了其流行的照片编辑软件 Photoshop 的源代码。三千八百万客户受到了此次泄露事件的影响。
 
-
-
-
-
 ### 加密与密码学：保护数据安全
 
 虽然数据泄露和丢失对 Adobe 造成了严重影响，但也有一线好消息。被盗数据的某些部分经过了加密，包括客户密码以及借记卡和信用卡号码。加密数据是一种使用代码或密码隐藏数据的方法。这样，即使未经授权的人员访问了数据，也无法使用或理解它。因为 Adobe 对部分数据进行了加密，被盗信息中只有少部分对黑客有价值。加密是该公司用于保护其系统中存储数据的工具之一。加密和密码学行业专家 Rick Robinson 表示：
@@ -452,7 +424,9 @@ Christof Paar 自 1995 年以来一直从事应用密码学研究，是马萨诸
 密码学算法主要分为三大类：
 
 *   **密钥或对称加密**：使用单个密钥进行加密和解密。它主要用于保持数据的私密性和机密性。
+
 *   **公钥或非对称加密**：使用一个密钥进行加密，使用不同的密钥进行解密。它通常用于身份验证。
+
 *   **哈希函数**：一种可在文件或密码等数据上运行的算法，生成一个称为校验和的值。哈希函数可用于验证文件或数据的真实性。如果两个文件生成的校验和相同，则可以假定这两个文件也相同。
 
 ### 如何成为一名密码学家
@@ -468,9 +442,6 @@ Christof Paar 自 1995 年以来一直从事应用密码学研究，是马萨诸
 ### 密码学家的就业前景
 
 密码学职业的就业前景预计将非常好。根据 BLS 数据，包括密码学专业人员在内的数学家和统计学家的就业人数预计将从 2016 年到 2026 年增长 33%。电子商务的增长以及对密码学家保护在线客户数据的需求，是推动对密码学家需求增长的因素之一。
-
-
-
 
 随着电子商务的持续增长和更多企业转向线上运营，对密码学专业人才的需求将持续强劲。“数据加密与安全是当今一个庞大且不断增长的领域，”Rainer Steinwandt 在 Bank Info Security 网站的一篇文章中表示，他是 *Journal of Mathematical Cryptology* 的副主编兼联合编辑。“每天都有新公司涌现，它们需要对数据进行加密；这通过密码学家利用数学开发的软件和‘密钥’来实现。”拥有相关经验以及数学或计算机科学硕士或博士学位的密码学专业人士，极有可能在密码学领域获得理想的工作。
 
@@ -553,7 +524,6 @@ Christof Paar 自 1995 年以来一直从事应用密码学研究，是马萨诸
 1120 Route 73, Suite 200  
 Mount Laurel, NJ 08054-5113  
 (800) 224-9371  
-
 Website: [`www.aitp.org`](https://www.aitp.org)  
 Twitter: @CompTIAAITP  
 
@@ -565,7 +535,6 @@ ASP Executive Director
 PO Box 1522  
 Martinsville, IN 46151  
 (765) 349-4740  
-
 Website: [`asp-software.org`](http://asp-software.org)  
 Facebook: @AssocSoftwareProfessionals  
 Twitter: @Applied_SW  
@@ -579,7 +548,6 @@ Unit 8, Suite #324
 Mississauga, ON L4Z 3K8  
 Canada  
 (905) 602-1370  
-
 Website: [`www.cips.ca`](http://www.cips.ca)  
 Facebook: @CIPS.ca  
 Twitter: @cips  
@@ -591,7 +559,6 @@ CIPS 代表加拿大 IT 行业的数千名专业人士，提供社交机会、IT
 3500 Lacey Road, Suite 100  
 Downers Grove, IL 60515  
 (630) 678-8300  
-
 Website: [`www.comptia.org`](https://www.comptia.org)  
 Facebook and Twitter: @CompTIA  
 
@@ -601,18 +568,20 @@ CompTIA 为 IT 专业人士提供多种 IT 认证和教育资源。该组织还�
 
 3 Park Avenue, 17th Floor  
 New York, NY 10016  
-
 Website: [`www.ieee.org`](https://www.ieee.org)  
 Facebook: @ieeecomputersociety  
 Twitter: @ComputerSociety  
 
+
+
+# IEEE Computer Society
+
 IEEE Computer Society 是全球最大的专业组织，致力于在全球范围内推动技术和工程发展。它提供许多出版物、会议、技术标准，以及对软件开发感兴趣者有用的专业和教育活动。
 
-### Information Systems Security Association (ISSA)
+## Information Systems Security Association (ISSA)
 
 1964 Gallows Road, Suite 310  
 Vienna, VA 22182  
-
 Email: [`www.issai.org/en_us/site-issai/other-information`](http://www.issai.org/en_us/site-issai/other-information)  
 Website: [`www.issai.org`](http://www.issai.org)  
 Facebook: @ISSAIntl  
@@ -620,33 +589,30 @@ Twitter: @ISSAINTL
 
 ISSA 是一个非营利性的国际信息安全专业人士组织。它为信息安全专业人士提供出版物、教育论坛和社交机会。
 
-### Information Technology Association of Canada
+## Information Technology Association of Canada
 
 5090 Explorer Drive, Suite 510  
 Mississauga, ON L4W 4T9  
 Canada  
 (905) 602-8345  
-
 Website: [`itac.ca`](http://itac.ca)  
 Twitter: @ITAC_Online  
 
 Information Technology Association of Canada 支持加拿大数字经济的发展。它代表各行各业的 IT 专业人士。
 
-### International Web Association (IWA)
+## International Web Association (IWA)
 
 556 S. Fair Oaks Avenue, #101-200  
 Pasadena, CA 91105  
 (626) 449-3709  
-
 Website: [`iwanet.org`](http://iwanet.org)  
 
 IWA 是公认的行业领导者，为 Web 专业人士提供教育和认证标准。该协会支持 106 个国家的 300,000 多名个人会员。
 
-### National Association of Programmers
+## National Association of Programmers
 
 PO Box 529  
 Prairieville, LA 70769  
-
 Email: info@napusa.org  
 Website: [`www.napusa.org`](http://www.napusa.org)  
 
@@ -665,61 +631,37 @@ Website: [`www.napusa.org`](http://www.napusa.org)
 - Niver, Heather. *Careers for Tech Girls in Computer Science.* New York, NY: Rosen Publishing, 2014.
 - Payment, Simone. *Getting to Know Python! Code Power: A Teen Programmer’s Guide.* New York, NY: Rosen Publishing, 2014.
 
-
-
-
-
 ## 参考文献
 
 Porterfield, Jason. *White and Black Hat Hackers* (Cryptography: Code Making and Code Breaking). New York, NY: Rosen Publishing, 2017.
 
 ## 书目
 
-[Accenture.com](http://Accenture.com). “2017 Cost of Cyber Crime.” [`www.accenture.com`](https://www.accenture.com).
+- [Accenture.com](http://Accenture.com). “2017 Cost of Cyber Crime.” [`www.accenture.com`](https://www.accenture.com).
+- Balut, Dawid. “How to Become a Security Expert with Zero Experience.” *Forbes,* May 2, 2018. [`www.forbes.com`](https://www.forbes.com).
+- Bureau of Labor Statistics. “Information Security Analyst.” *Occupational Outlook Handbook.* [`www.bls.gov`](https://www.bls.gov).
+- CareerCast. “Best Jobs of 2016: Information Security Analyst.” [`www.careercast.com`](https://www.careercast.com).
+- [CyberDegrees.org](http://CyberDegrees.org). “Become a Cryptographer or Cryptanalyst.” [`www.cyberdegrees.org/jobs/cryptographer`](https://www.cyberdegrees.org/jobs/cryptographer).
+- Fandos, Nicholas. “NSA Summer Camp: More Hacking than Hiking.” *New York Times,* July 17, 2015. [`www.nytimes.com/2015/07/18/us/nsa-summer-camp-hacking-cyber-defense.html`](https://www.nytimes.com/2015/07/18/us/nsa-summer-camp-hacking-cyber-defense.html).
+- Francis, Ryan. “Computer Forensics Follows the Bread Crumbs Left by Perpetrators.” CSO Online, May 8, 2017. [`www.csoonline.com/article/3192348/security/computer-forensics-follows-the-bread-crumbs-left-by-perpetrators.html`](https://www.csoonline.com/article/3192348/security/computer-forensics-follows-the-bread-crumbs-left-by-perpetrators.html).
+- Gupta, Upasana. “The Cryptology Profession: Its Evolution, Growth, Skill Set and Career Prospects.” Bank Info Security, May 28, 2009. [`www.bankinfosecurity.com/cryptology-profession-its-evolution-growth-skill-set-career-prospects-a-1500`](http://www.bankinfosecurity.com/cryptology-profession-its-evolution-growth-skill-set-career-prospects-a-1500).
+- Haag, Michael. “Security Architect Lessons: What I Learned Managing and Assessing Cyber Risk at a Fortune 200.” Red Canary, April 25, 2018. [`www.redcanary.com/blog/security-architect-lessons-learned-managing-assessing`](http://www.redcanary.com/blog/security-architect-lessons-learned-managing-assessing).
+- IEEE Cyber Security. “Christof Paar on Why Cryptography Is Key for Automotive Cybersecurity.” June 28, 2017. [`cybersecurity.ieee.org/blog/2017/06/28/christof-paar-on-why-cryptography-is-key-for-automotive-cybersecurity`](https://cybersecurity.ieee.org/blog/2017/06/28/christof-paar-on-why-cryptography-is-key-for-automotive-cybersecurity).
+- Kauflin, Jeff. “The Fast-Growing Job with a Huge Skills Gap: Cyber Security.” *Forbes,* March 16, 2017. [`www.forbes.com`](https://www.forbes.com).
+- Keirsten Brager.tech. “#WeCyberToo: Tiffany L. Smith, Security Analyst, Fortune 100 Company.” [`keirstenbrager.tech/tiffanysmith`](https://keirstenbrager.tech/tiffanysmith).
+- Korolov, Maria. “What It Takes to Become an Application Security Engineer.” CSO Online, April 5, 2017. [`www.csoonline.com`](https://www.csoonline.com).
+- Magee, Tamlin. “What Is Penetration Testing? Meet the Security Pros Breaking Into Your Business for Cash.” *Computerworld UK,* March 9, 2017. [`www.computerworlduk.com/security/what-is-penetration-testing-3637534`](https://www.computerworlduk.com/security/what-is-penetration-testing-3637534).
+- Owens, Jeremy. “The Equifax Data Breach in One Chart.” MarketWatch, September 10, 2018. [`www.marketwatch.com/story/the-equifax-data-breach-in-one-chart-2018-09-07`](http://www.marketwatch.com/story/the-equifax-data-breach-in-one-chart-2018-09-07).
+- Risen, Tom. “Lawmakers Demand Cybersecurity Reform After Sony Hack.” *U.S. News & World Report,* December 19, 2014. [`www.usnews.com/news/articles/2014/12/19/lawmakers-demand-cybersecurity-reform-after-sony-hack`](https://www.usnews.com/news/articles/2014/12/19/lawmakers-demand-cybersecurity-reform-after-sony-hack).
+- Roberts, Jeff John, and Adam Lashinsky, “Hacked: How Business Is Fighting Back Against the Explosion in Cybercrime.” *Fortune,* June 22, 2017. [`fortune.com/2017/06/22/cybersecurity-business-fights-back`](http://fortune.com/2017/06/22/cybersecurity-business-fights-back).
+- Robinson, Rick. “38 Million Reasons to Use Cryptography for Business.” Security Intelligence, November 11, 2013. [`securityintelligence.com/reasons-encryption-cryptography-for-business`](https://securityintelligence.com/reasons-encryption-cryptography-for-business).
+- Roufa, Timothy. “What It’s like to Work as a Digital Forensic Examiner.” Balance Careers, May 1, 2018. [`www.thebalancecareers.com/what-it-s-like-to-work-as-a-digital-forensic-examiner-974889`](https://www.thebalancecareers.com/what-it-s-like-to-work-as-a-digital-forensic-examiner-974889).
+- Stupple, Laura. “A Day in the Life of a Cyber Security Engineer.” Learning People. [`blog.learningpeople.co.uk/a-day-in-the-life-of-a-cyber-security-engineer`](https://blog.learningpeople.co.uk/a-day-in-the-life-of-a-cyber-security-engineer).
+- Tabriz, Parisa. “So, You Want to Work in Security?” freeCodeCamp, July 28, 2016. [`medium.freecodecamp.org`](https://medium.freecodecamp.org).
+- *U.S. News & World Report.* “Information Security Analyst.” [`money.usnews.com/careers/best-jobs/information-security-analyst/reviews`](https://money.usnews.com/careers/best-jobs/information-security-analyst/reviews).
+- Welles, Tim. “Reflections of an Intern: My Cybersecurity Career Path.” Sword & Shield, August 22, 2017. [`www.swordshield.com/2017/08/cybersecurity-career-path`](https://www.swordshield.com/2017/08/cybersecurity-career-path).
 
-Balut, Dawid. “How to Become a Security Expert with Zero Experience.” *Forbes,* May 2, 2018. [`www.forbes.com`](https://www.forbes.com).
 
-Bureau of Labor Statistics. “Information Security Analyst.” *Occupational Outlook Handbook.* [`www.bls.gov`](https://www.bls.gov).
-
-CareerCast. “Best Jobs of 2016: Information Security Analyst.” [`www.careercast.com`](https://www.careercast.com).
-
-[CyberDegrees.org](http://CyberDegrees.org). “Become a Cryptographer or Cryptanalyst.” [`www.cyberdegrees.org/jobs/cryptographer`](https://www.cyberdegrees.org/jobs/cryptographer).
-
-Fandos, Nicholas. “NSA Summer Camp: More Hacking than Hiking.” *New York Times,* July 17, 2015. [`www.nytimes.com/2015/07/18/us/nsa-summer-camp-hacking-cyber-defense.html`](https://www.nytimes.com/2015/07/18/us/nsa-summer-camp-hacking-cyber-defense.html).
-
-Francis, Ryan. “Computer Forensics Follows the Bread Crumbs Left by Perpetrators.” CSO Online, May 8, 2017. [`www.csoonline.com/article/3192348/security/computer-forensics-follows-the-bread-crumbs-left-by-perpetrators.html`](https://www.csoonline.com/article/3192348/security/computer-forensics-follows-the-bread-crumbs-left-by-perpetrators.html).
-
-Gupta, Upasana. “The Cryptology Profession: Its Evolution, Growth, Skill Set and Career Prospects.” Bank Info Security, May 28, 2009. [`www.bankinfosecurity.com/cryptology-profession-its-evolution-growth-skill-set-career-prospects-a-1500`](http://www.bankinfosecurity.com/cryptology-profession-its-evolution-growth-skill-set-career-prospects-a-1500).
-
-Haag, Michael. “Security Architect Lessons: What I Learned Managing and Assessing Cyber Risk at a Fortune 200.” Red Canary, April 25, 2018. [`www.redcanary.com/blog/security-architect-lessons-learned-managing-assessing`](http://www.redcanary.com/blog/security-architect-lessons-learned-managing-assessing).
-
-IEEE Cyber Security. “Christof Paar on Why Cryptography Is Key for Automotive Cybersecurity.” June 28, 2017. [`cybersecurity.ieee.org/blog/2017/06/28/christof-paar-on-why-cryptography-is-key-for-automotive-cybersecurity`](https://cybersecurity.ieee.org/blog/2017/06/28/christof-paar-on-why-cryptography-is-key-for-automotive-cybersecurity).
-
-Kauflin, Jeff. “The Fast-Growing Job with a Huge Skills Gap: Cyber Security.” *Forbes,* March 16, 2017. [`www.forbes.com`](https://www.forbes.com).
-
-Keirsten Brager.tech. “#WeCyberToo: Tiffany L. Smith, Security Analyst, Fortune 100 Company.” [`keirstenbrager.tech/tiffanysmith`](https://keirstenbrager.tech/tiffanysmith).
-
-Korolov, Maria. “What It Takes to Become an Application Security Engineer.” CSO Online, April 5, 2017. [`www.csoonline.com`](https://www.csoonline.com).
-
-Magee, Tamlin. “What Is Penetration Testing? Meet the Security Pros Breaking Into Your Business for Cash.” *Computerworld UK,* March 9, 2017. [`www.computerworlduk.com/security/what-is-penetration-testing-3637534`](https://www.computerworlduk.com/security/what-is-penetration-testing-3637534).
-
-Owens, Jeremy. “The Equifax Data Breach in One Chart.” MarketWatch, September 10, 2018. [`www.marketwatch.com/story/the-equifax-data-breach-in-one-chart-2018-09-07`](http://www.marketwatch.com/story/the-equifax-data-breach-in-one-chart-2018-09-07).
-
-Risen, Tom. “Lawmakers Demand Cybersecurity Reform After Sony Hack.” *U.S. News & World Report,* December 19, 2014. [`www.usnews.com/news/articles/2014/12/19/lawmakers-demand-cybersecurity-reform-after-sony-hack`](https://www.usnews.com/news/articles/2014/12/19/lawmakers-demand-cybersecurity-reform-after-sony-hack).
-
-Roberts, Jeff John, and Adam Lashinsky, “Hacked: How Business Is Fighting Back Against the Explosion in Cybercrime.” *Fortune,* June 22, 2017. [`fortune.com/2017/06/22/cybersecurity-business-fights-back`](http://fortune.com/2017/06/22/cybersecurity-business-fights-back).
-
-Robinson, Rick. “38 Million Reasons to Use Cryptography for Business.” Security Intelligence, November 11, 2013. [`securityintelligence.com/reasons-encryption-cryptography-for-business`](https://securityintelligence.com/reasons-encryption-cryptography-for-business).
-
-Roufa, Timothy. “What It’s like to Work as a Digital Forensic Examiner.” Balance Careers, May 1, 2018. [`www.thebalancecareers.com/what-it-s-like-to-work-as-a-digital-forensic-examiner-974889`](https://www.thebalancecareers.com/what-it-s-like-to-work-as-a-digital-forensic-examiner-974889).
-
-Stupple, Laura. “A Day in the Life of a Cyber Security Engineer.” Learning People. [`blog.learningpeople.co.uk/a-day-in-the-life-of-a-cyber-security-engineer`](https://blog.learningpeople.co.uk/a-day-in-the-life-of-a-cyber-security-engineer).
-
-Tabriz, Parisa. “So, You Want to Work in Security?” freeCodeCamp, July 28, 2016. [`medium.freecodecamp.org`](https://medium.freecodecamp.org).
-
-*U.S. News & World Report.* “Information Security Analyst.” [`money.usnews.com/careers/best-jobs/information-security-analyst/reviews`](https://money.usnews.com/careers/best-jobs/information-security-analyst/reviews).
-
-Welles, Tim. “Reflections of an Intern: My Cybersecurity Career Path.” Sword & Shield, August 22, 2017. [`www.swordshield.com/2017/08/cybersecurity-career-path`](https://www.swordshield.com/2017/08/cybersecurity-career-path).
 
 Williams, Jeff. “Building a Strong Foundation for a Career in Cybersecurity Penetration Testing.” *Forbes,* April 12, 2018. [`www.forbes.com/sites/forbestechcouncil`](https://www.forbes.com/sites/forbestechcouncil).
 
@@ -747,9 +689,9 @@ Williams, Jeff. “Building a Strong Foundation for a Career in Cybersecurity Pe
 
 工作内容，7，17–23
 
-C++，40，65
+`C++`，40，65
 
-C 编程语言，40，65
+`C` 编程语言，40，65
 
 密码学家就业前景，66–67
 
@@ -771,12 +713,6 @@ Demirjian, Alfred，19
 
 灾难恢复计划，10
 
-
-
-
-
-## 索引
-
 ### E
 
 加密，4，28，41，55，59，60–67
@@ -791,7 +727,7 @@ GenCyber 夏令营，22
 
 ### H
 
-HTML，14
+`HTML`，14
 
 ### I
 
@@ -811,23 +747,23 @@ HTML，14
 
 ### J
 
-Java，14，40，41，49，65
+`Java`，14，40，41，49，65
 
-JavaScript，14
+`JavaScript`，14
 
 ### L
 
-Linux，38，40，49，58
+`Linux`，38，40，49，58
 
 ### M
 
 恶意软件，11，12，20，44，53
 
-MySQL，58
+`MySQL`，58
 
 ### O
 
-Oracle，58
+`Oracle`，58
 
 ### P
 
@@ -839,9 +775,9 @@ Oracle，58
 
 网络钓鱼，12，30，37
 
-PHP，14，40，49
+`PHP`，14，40，49
 
-Python，14，40，65
+`Python`，14，40，65
 
 ### R
 
@@ -867,9 +803,9 @@ Python，14，40，65
 
 社交媒体攻击，12
 
-SQL，14
+`SQL`，14
 
-SQL Server，58
+`SQL Server`，58
 
 ### T
 
@@ -879,7 +815,7 @@ SQL Server，58
 
 ### U
 
-UNIX，49
+`UNIX`，49
 
 未修补软件，12
 
@@ -889,7 +825,7 @@ UNIX，49
 
 Williams, Jeff，4，5，41，43
 
-Windows，40，49，58
+`Windows`，40，49，58
 
 ## 作者简介
 
@@ -902,4 +838,3 @@ Carla Mooney 毕业于宾夕法尼亚大学。在成为作家之前，她曾担�
 设计：Michael Moy；版式：Nicole Russo-Duca；图片研究员：Karen Huang
 
 ![](img/back-cover.jpg)
-

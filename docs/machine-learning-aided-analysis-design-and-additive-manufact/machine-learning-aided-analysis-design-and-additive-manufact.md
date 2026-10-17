@@ -1,23 +1,13 @@
+
 # 机器学习辅助的功能梯度孔隙复合结构分析、设计与增材制造
-
-
-
-
-
 
 ![](img/90ed165a39fa708ec438fcda79319c25_0_0.png)
 
-
-
 ![](img/90ed165a39fa708ec438fcda79319c25_0_1.png)
-
 
 ## 关于系列
 
 Woodhead 复合材料科学与工程出版系列是一套专业参考书，为目前及未来应用的复合材料研究最新进展提供全面涵盖。
-
-
-
 
 Adrian Mauritz，澳大利亚梅尔兰理工大学（RMIT）执行院长
 
@@ -31,85 +21,23 @@ Yuris A. Dzenis，美国内布拉斯加大学林肯分校机械与材料工程�
 
 王春，澳大利亚新南威尔士大学（UNSW）机械工程学院院长
 
-
-
-
-
-
-
 ![](img/90ed165a39fa708ec438fcda79319c25_3_0.png)
-
-
-
-
-
-
-
-
-
-
-
-
 
 ![](img/90ed165a39fa708ec438fcda79319c25_4_0.png)
 
-
-
-
-
-
 2.3 结果与讨论 30
-
-
-
-
-
-
-
-
-
-
 
 - 8.2.3 能量计算 219
 
-
-
-
-
-
-
-
-
-
-
 致谢 291
-
-
 
 - 12.4.2 高斯过程 299
 
-
-
-
-
-
-
-
-
-
 - 15.4.1 动态结果的重复性 399
-
-
 
 - 16.2.2 介观几何模型的构建
 
-
-
-
-
-
 - 17.2.5 防务工程应用 440
-
 
 ## 贡献者列表
 
@@ -201,22 +129,24 @@ Yuris A. Dzenis，美国内布拉斯加大学林肯分校机械与材料工程�
 
 天然多孔介质（如岩石、木材和生物骨骼）启发了研究人员和工程师，通过在原始固体物质中引入单元来设计轻量化形式，从而开发了人工多孔材料 [1,2]。并非所有带有孔隙的复合材料应称为多孔材料，因为这里的孔隙率并非制造或使用过程中的意外缺陷。相反，在固体基体内部人为产生均匀或不均匀分布的孔隙，以获得卓越的材料性能。
 
-
-
-
-
 ## 基体材料
 
 - 金属金属
+
 - 聚合物
+
 - 混凝土
+
 - 陶瓷
+
 - 玻璃
+
 等
 
 ## 流体相
 
 - 气体
+
 - 液体
 
 ![](img/90ed165a39fa708ec438fcda79319c25_19_0.png)
@@ -277,14 +207,12 @@ Yuris A. Dzenis，美国内布拉斯加大学林肯分校机械与材料工程�
 
 增材制造（3D 打印）提供了形状完美复杂几何 [38] 的可能，因为所需的孔隙分布努力已致力于使用这种新技术开发各种几何形貌的功能梯度组件。Wang 等人 [39] 为具有优化微观特征的增材制造晶格结构提出了一种设计框架。Zhang 等人 [40] 展示了 3D 打印的再入形蜂窝。Geng 等人 [41] 引入了 3D 混凝土打印来实现孔隙梯度的轻质高性能水泥基复合材料。
 
-
-
-
-
 ![](img/90ed165a39fa708ec438fcda79319c25_23_0.png)
 
 | 梁 | 板 | 拱 |
+
 | --- | --- | --- |
+
 | 梯度孔隙率 | | |
 
 图 1.5 功能梯度多孔复合结构的示例。
@@ -309,46 +237,62 @@ Yuris A. Dzenis，美国内布拉斯加大学林肯分校机械与材料工程�
 
 在梯度孔隙率复合形式的分析和设计之后，第四部分提供了高效制造的见解，包括四章。第 13 章回顾了包含周期最小曲面的 FG 多孔结构性能评估最新进展，并介绍了复合材料的增材制造技术和轻质混凝土结构的数字制造。第 14–16 章概述了原生 FG 多孔结构的设计与制造、力学行为和应用，其中梯度泡沫、晶格和蜂窝结构是
 
-
-
-
-
-
 ## 第一部分：引言
 
 ## 第1章：引言及本书概述
 
 | 第二部分：力学性能评估 | 多元化FG多孔壳体 |
+
 | :--- | :--- |
+
+
+
 | 第2章：振动 | 第3章：振动 | 第4章：振动 | 第5章：振动 |
+
 | FG多孔梁（开孔金属泡沫 | FG多孔板（开孔金属泡沫） | FG多孔壳体（开孔金属泡沫） | FG多孔壳体（开孔金属泡沫） |
+
 | 第6章：失稳与振动 | 第7章：概率性失稳 | 第8章：弯曲振动 |
+
 | FG多孔梁（开孔金属泡沫） | 石墨烯增强（闭孔泡沫） | 厚FG梁（陶瓷-金属复合材料） |
 
 ## 第三部分：机器学习辅助分析
 
 | 第9章 | 第10章：弯曲 |
+
 | :--- | :--- |
+
 | 设计与构型材料 | FG多孔梁 |
+
 | 非均匀图案 | 多尺度建模（闭孔金属泡沫） |
 
 | 第11章 | 第12章： |
+
 | :--- | :--- |
+
 | 随机静态分析 | 随机振动分析 |
+
 | FG多孔板 | FG多孔板 |
+
 | 陶瓷-金属多孔复合材料 | 陶瓷-金属多孔复合材料 |
 
 ## 第四部分：增材制造
 
 | 第13章 | 第14章： |
+
 | :--- | :--- |
+
 | 性能评估 | 设计与制造 |
+
 | 3D打印复合材料与混凝土 | 泡沫、点阵、蜂窝 |
+
 | 三周期极小表面 | 梯度胞体固体（金属与非金属复合材料） |
 
 | 第15章 | 第16章： |
+
 | :--- | :--- |
+
 | 压缩行为 | 压缩行为 |
+
 | 梯度闭孔非金属泡沫 | 梯度泡沫填充非金属管材 |
 
 ## 第五部分：应用
@@ -372,17 +316,26 @@ Yuris A. Dzenis，美国内布拉斯加大学林肯分校机械与材料工程�
 ## 参考文献
 
 - [1] Liu P, Chen G-F. Porous materials: Processing and applications. Elsevier, 2014.
-- [2] Gibson LJ, Ashby MB. Cambridge Solid State Science Series Cellular solids: Structure and properties. 2nd ed. Cambridge: Cambridge University Press; 1997.
-- [3] Pan C, Han Y, Lu J. Design and and optimization of lattice structures: A review. Appl Sci 2020;10(18)
-- [4] Wang F et al. Design and additive manufacturing of a modified face-centered cubic lattice with enhanced energy absorption capacity. Extreme Mech Lett 2021;47:101358.
-- [5] Rizzuto JP. Experimental investigation of reciprocally supported element (RSE) lattice honeycomb domes structural behavioural. Eng Struct 2018:166–196.
-- [6] Ashby MF, et al. Metal foams: a design guide. Boston, USA: Butterworth-Heimann; 2000.
-- [7] Wang Y, et al. On the out-of-plane ballistic performances of hexagonal, reentrant, square, triangular honeycomb panels. Int J Mech Sci 2020;173:105402.
-- [8] Nasrullah AH, Santosa SP, Dargantara T. Design and optimization of crashworthy components based on lattice structure configuration. Structures 2020;26:969–81.
-- [9] Liu PS, Chen GF. Applications of porous ceramics. In: Liu PS, Chen GF, editors. Porous materials, Boston: Elsevier; 2014; 30–44.
-- [10] Liu PS, Chen GF. Applications of polymer foams. In: Liu PS, Chen GF, editors. Porous materials. Boston: Butterworth-Heimann; 2014; 383–410.
-- [11] Laur V, et al. Gen foams for microwave absorption applications: Synthesis and characterization. Mater Sci Bull 2017;79:
 
+- [2] Gibson LJ, Ashby MB. Cambridge Solid State Science Series Cellular solids: Structure and properties. 2nd ed. Cambridge: Cambridge University Press; 1997.
+
+- [3] Pan C, Han Y, Lu J. Design and and optimization of lattice structures: A review. Appl Sci 2020;10(18)
+
+- [4] Wang F et al. Design and additive manufacturing of a modified face-centered cubic lattice with enhanced energy absorption capacity. Extreme Mech Lett 2021;47:101358.
+
+- [5] Rizzuto JP. Experimental investigation of reciprocally supported element (RSE) lattice honeycomb domes structural behavioural. Eng Struct 2018:166–196.
+
+- [6] Ashby MF, et al. Metal foams: a design guide. Boston, USA: Butterworth-Heimann; 2000.
+
+- [7] Wang Y, et al. On the out-of-plane ballistic performances of hexagonal, reentrant, square, triangular honeycomb panels. Int J Mech Sci 2020;173:105402.
+
+- [8] Nasrullah AH, Santosa SP, Dargantara T. Design and optimization of crashworthy components based on lattice structure configuration. Structures 2020;26:969–81.
+
+- [9] Liu PS, Chen GF. Applications of porous ceramics. In: Liu PS, Chen GF, editors. Porous materials, Boston: Elsevier; 2014; 30–44.
+
+- [10] Liu PS, Chen GF. Applications of polymer foams. In: Liu PS, Chen GF, editors. Porous materials. Boston: Butterworth-Heimann; 2014; 383–410.
+
+- [11] Laur V, et al. Gen foams for microwave absorption applications: Synthesis and characterization. Mater Sci Bull 2017;79:
 
 功能梯度多孔材料与复合结构介绍
 
@@ -425,66 +378,114 @@ Yuris A. Dzenis，美国内布拉斯加大学林肯分校机械与材料工程�
 ## 功能梯度多孔直梁与弯曲梁的自由振动与迫振动
 
 Qingshan Wang$^{1,2}$, Tao Liu$^{1,2}$ 和 Rui Zhong$^{1,2}$
+
 $^{1}$中国湖南长沙中南大学极端性能精密制造关键实验室, $2$中国湖南长沙中南大学机械与电气学院, $3$中国湖南长沙中南大学轻合金研究院。
 
 ## 符号表
 
-- $k_{\sigma}, k_{\omega}$ 线性边界弹簧。
-- $k_{\phi}$ 旋转边界弹簧。
-- $u$ FGP梁中面沿 x 轴的位移。
-- $w$ FGP梁中面沿 z 轴的位移。
-- $R_{\rho}$ 曲率半径。
-- $h$ 梁截面的厚度。
-- $b$ 梁截面的宽度。
-- $a_e$ 椭圆的长半轴。
-- $b_e$ 椭圆的短半轴。
-- $E$ 有效弹性模量。
-- $G$ 有效 剪切模量。
-- $\rho$ 有效质量密度。
-- $e_0$ 孔隙率系数。
-- $e_m$ 质量密度孔隙率系数。
-- $\phi$ 与 x 轴法分量的中面径向分量。
-- $\epsilon_{\varphi}$ 法应变。
-- $\gamma_{\varphi v}$ 剪切应变。
-- $\sigma_{\varphi}$ 法应力。
-- $\tau_{\varphi}$ 剪切应力。
-- $Q_{11}$ 功能梯度材料。
-- $\nu$ 泊松比。
-- $N_{\varphi}$ 正力。
-- $Q_{\varphi}$ 剪切力。
-- $M_{\varphi}$ 弯矩。
-- $A_{11}$ 弯伸系数。
-- $B_{11}$ 耦合系数。
-- $D_{11}$ 弯曲系数。
-- $\kappa$ 剪切修正因子。
+- `$k_{\sigma}, k_{\omega}$` 线性边界弹簧。
+
+- `$k_{\phi}$` 旋转边界弹簧。
+
+- `$u$` FGP梁中面沿 x 轴的位移。
+
+- `$w$` FGP梁中面沿 z 轴的位移。
+
+- `$R_{\rho}$` 曲率半径。
+
+- `$h$` 梁截面的厚度。
+
+- `$b$` 梁截面的宽度。
+
+- `$a_e$` 椭圆的长半轴。
+
+- `$b_e$` 椭圆的短半轴。
+
+- `$E$` 有效弹性模量。
+
+- `$G$` 有效 剪切模量。
+
+- `$\rho$` 有效质量密度。
+
+- `$e_0$` 孔隙率系数。
+
+- `$e_m$` 质量密度孔隙率系数。
+
+- `$\phi$` 与 x 轴法分量的中面径向分量。
+
+- `$\epsilon_{\varphi}$` 法应变。
+
+- `$\gamma_{\varphi v}$` 剪切应变。
+
+- `$\sigma_{\varphi}$` 法应力。
+
+- `$\tau_{\varphi}$` 剪切应力。
+
+- `$Q_{11}$` 功能梯度材料。
+
+- `$\nu$` 泊松比。
+
+- `$N_{\varphi}$` 正力。
+
+- `$Q_{\varphi}$` 剪切力。
+
+- `$M_{\varphi}$` 弯矩。
+
+- `$A_{11}$` 弯伸系数。
+
+- `$B_{11}$` 耦合系数。
+
+- `$D_{11}$` 弯曲系数。
+
+- `$\kappa$` 剪切修正因子。
 
 功能梯度多孔材料与复合结构介绍
 
 功能梯度多孔材料与复合结构
+
 增材制造（FG-backed）
 
-2.1 引言
+## 2.1 引言
 
-- $U_s$ 弹性能
-- $T$ 动能
-- $I_{n}, I_{n2}$ 惯性项
-- $U_b$ 弹性能
-- $F_p$ 激励
-- $f(\zeta)$ 函数
-- $N$ 自然数
-- $a$ 系数
-- $C$ 分布
-- $D$ 导数矩阵
-- $v$ 值
-- $R_{\rho}(\zeta)$ 半径
-- $c, e$ 系数
-- $j$ 坐标
-- $L$ 长度
-- $K$ 刚度矩阵
-- $M$ 质量矩阵
-- $K_s$ 弹簧矩阵
-- $F$ 力
-- $\omega$ 频率
+- `$U_s$` 弹性能
+
+- `$T$` 动能
+
+- `$I_{n}, I_{n2}$` 惯性项
+
+- `$U_b$` 弹性能
+
+- `$F_p$` 激励
+
+- `$f(\zeta)$` 函数
+
+- `$N$` 自然数
+
+- `$a$` 系数
+
+- `$C$` 分布
+
+- `$D$` 导数矩阵
+
+- `$v$` 值
+
+- `$R_{\rho}(\zeta)$` 半径
+
+- `$c, e$` 系数
+
+- `$j$` 坐标
+
+- `$L$` 长度
+
+- `$K$` 刚度矩阵
+
+- `$M$` 质量矩阵
+
+- `$K_s$` 弹簧矩阵
+
+- `$F$` 力
+
+- `$\omega$` 频率
 
 近年来，功能梯度多孔（FGP）已得到广泛研究。目前，FGP 梁的自由振动与迫振动是一个热门话题。
 
@@ -497,8 +498,6 @@ $^{1}$中国湖南长沙中南大学极端性能精密制造关键实验室, $2$
 弯曲（13–15）、失曲（16,17）以及动力学特性分析是 FGP 梁的重要研究成果。Pennya [20] 提出了一种解决热湿环境下 FGP 梁弯曲响应的方法。Chen 等 [21] 得出结论，孔隙分布和石墨烯片对石墨烯增强复合材料的非线性自由振动和后失曲有巨大影响。Harsha 等 [22] 对 FGP 梁的弹性失曲进行了参数分析，材料孔隙率参数是研究重点。Nguyen 等 [23] 提出的双剪切变形理论预测对称多孔梁的失曲和振动特性，并对孔隙系数和密度类型进行了参数分析。
 
 此外，研究人员对 FGP 梁的非线性行为提供了大量的讨论和分析。Chen 等 [25] 对其低速冲击响应进行了理论分析，发现微小的侵入载荷会导致产生更大的弯曲。Chen 等 [26] 应用基于 DQN 的 Galerkin 程序建立了存在缺陷 FGP 梁的振动理论分析，并分类了非线性共振行为。根据该方法，Fouadi 等 [27] 开发了一种用于分析 FGP 梁弯曲特性的解。基于统计线性化法和欧拉梁理论，Raskheni 和 Ghadiri [28] 研究了弹性边界下 FGP 纳米梁的随机振动，通过与扰动法的结果比较验证了其方法的可靠性。
-
-
 
 与功能梯度多孔（FGP）直梁相比，对 FGP 弯梁的研究日益受到关注。最近提出了一种考虑了多种弹性边界的 FGP 直梁和弯梁的通用理论模型，该模型适用于参数化研究。Sayyad 等人 [31] 提供了一种解析解，用于求解支撑边界条件下 FGP 圆形梁的自由振动特性，并获得了更高的精度。由于功能化石墨烯纳米片增强复合材料对拱的静态和动态振动特性的显著改善，该材料引起了越来越多的关注 [32–36]。Li 等人 [37,38] 研究了由 FGP 石墨烯纳米增强复合材料组成的拱的线性非线性稳定机制，并对屈曲负载提供了一系列参数化分析。此外，还引入了温度场来模拟温度参数对拱承载能力的影响 [39]。基于三角形剪切变形理论，对于功能梯度增强弯梁，Ganapati 等人 [40] 研究了带孔隙的功能梯度压电材料的振动和动力特性，Su 等人 [41] 则关注了多孔材料属性对深曲梁瞬态响应的影响。
 
@@ -516,19 +515,23 @@ FGP 直梁和弯梁的几何图如图 2.1 所示。FGP 直梁和弯梁的示意�
 
 **图 2.1** 功能梯度多孔直梁和弯梁的几何结构和坐标系示意图。(A) 椭圆梁，(B) 圆梁，(C) 直梁。
 
-$(k_v, k_w)$ 和旋转边界弹簧 ($k_{\theta}$) 用于模拟不同的边界条件。位移涉及 FGP 梁的 $u$ 和 $v$，定义在长度、宽度和厚度方向上，在中面坐标 $x, y, z$ 处进行估计。
+`$(k_v, k_w)$` 和旋转边界弹簧 (`$k_{\theta}$`) 用于模拟不同的边界条件。位移涉及 FGP 梁的 `$u$` 和 `$v$`，定义在长度、宽度和厚度方向上，在中面坐标 `$x, y, z$` 处进行估计。
 
-为了准确且统一地描述直梁、圆弯梁和椭圆弯梁的几何形状，引入了一组几何参数：截面的曲率半径 $R_c$、厚度 $h$ 和宽度 $b$。图 2.1 所示椭圆梁的曲率半径 $R_c(\varphi)$ 给出：
+为了准确且统一地描述直梁、圆弯梁和椭圆弯梁的几何形状，引入了一组几何参数：截面的曲率半径 `$R_c$`、厚度 `$h$` 和宽度 `$b$`。图 2.1 所示椭圆梁的曲率半径 `$R_c(\varphi)$` 给出：
 
-$$R_c(\varphi) = \frac{a_e b_e^2}{\sqrt{a_e^2\sin^2\varphi+b_e^2\cos^2\varphi}}$$
+```
+R_c(\varphi) = \frac{a_e b_e^2}{\sqrt{a_e^2\sin^2\varphi+b_e^2\cos^2\varphi}}
+```
 
-其中 $a_e$ 和 $b_e$ 表示椭圆的长短半轴。值得注意的是，当 $a_e=b_e=R_c$ 时，得到如图 2.1B 所示的圆梁。此外，当 $R_c$ 的值增大到无穷大时，直梁将图 2.1C 中的弯梁退化而来。
+其中 `$a_e$` 和 `$b_e$` 表示椭圆的长短半轴。值得注意的是，当 `$a_e=b_e=R_c$` 时，得到如图 2.1B 所示的圆梁。此外，当 `$R_c$` 的值增大到无穷大时，直梁将图 2.1C 中的弯梁退化而来。
 
-图 2.2 所示 FGP 材料的孔隙率分布形式称为类型 1 和类型 2，其材料属性沿厚度方向发生连续非线性变化。对于孔隙率分布类型 1，有效材料属性 ($E, G, \rho$) 对称分布。弹性模量、剪切模量和密度的最大值 ($E_{max}, G_{max}, \rho_{max}$) 出现在 FGP 梁的顶底表面
+图 2.2 所示 FGP 材料的孔隙率分布形式称为类型 1 和类型 2，其材料属性沿厚度方向发生连续非线性变化。对于孔隙率分布类型 1，有效材料属性 (`$E, G, \rho$`) 对称分布。弹性模量、剪切模量和密度的最大值 (`$E_{max}, G_{max}, \rho_{max}$`) 出现在 FGP 梁的顶底表面
 
 ![](img/90ed165a39fa708ec438fcda79319c25_36_0.png)
 
 **图 2.2** FGP 材料的模型：(A) 类型 1，对称分布；(B) 类型 2，非对称分布。
+
+
 
 $(E_{min}, G_{min})$ 出现在中表面。孔隙率分布类型 2 表现出的材料属性变化是从顶表面到底面的连续下降。类型 1 和类型 2 的材料属性变化过程可以用公式 (2.2) 和 (2.3) 的数学形式表示，这些公式可以从文献 [8,30] 中。
 
@@ -546,7 +549,7 @@ $$\rho(z) = \rho_{max} \left[1 - e_{m\rho}\cos\left(\frac{\pi z}{2h} + \frac{\pi
 
 其中 $e_{0} < 1$ 且 $e_{m} < 1$。
 
-### 2.2.2 功能梯度多孔梁的能量表述
+## 2.2.2 功能梯度多孔梁的能量表述
 
 FGP 梁的相应表述可以使用 Timoshenko 梁理论确定：
 
@@ -566,7 +569,7 @@ $$\varepsilon_{\varphi}^0 = \frac{1}{R_{\varphi}} \frac{\partial u}{\partial \va
 
 $$\begin{pmatrix} \sigma_{\varphi} \\ \tau_{\varphi z} \end{pmatrix} = \begin{pmatrix} Q_{11} & 0 \\ 0 & Q_{55} \end{pmatrix} \begin{pmatrix} \varepsilon_{\varphi} \\ \gamma_{\varphi z} \end{pmatrix} \quad (2.8)$$
 
-其中 $\sigma_{\varphi}$ 和 $\tau_{\varphi z}$ 分别代表法向应力和剪切应力。Q_{11}$ 和 $Q_{55}$ 是 FGP 材料的弹性刚度，其表达式可以写为：
+其中 $\sigma_{\varphi}$ 和 $\tau_{\varphi z}$ 分别代表法向应力和剪切应力。$Q_{11}$ 和 $Q_{55}$ 是 FGP 材料的弹性刚度，其表达式可以写为：
 
 $$Q_{11} = \frac{E(z)}{1-\nu^2} = G(z) \quad (2.9)$$
 
@@ -574,16 +577,12 @@ $$Q_{11} = \frac{E(z)}{1-\nu^2} = G(z) \quad (2.9)$$
 
 $$\begin{pmatrix} N_{\varphi} \\ Q_{\varphi} \end{pmatrix} = b \int_{-h/2}^{h/2} \begin{pmatrix} \sigma_{\varphi} \\ \tau_{\varphi z} \end{pmatrix} dz \quad (2.10)$$
 
-
-
-
-
 $M_{v} = \dot{b} \int_{-b/2}^{b/2} \sigma_{v} dz \quad (2.10b)$
 
 将等式 (2.6) 代入等式 (2.10)，进一步表达式可以重写为依赖于应变的形式：
 
 ```
-$$\begin{cases} N_{\zeta} \\ M_{\zeta} \\ Q_{\zeta} \end{cases} = \begin{cases} A_{11} & B_{11} & 0 \\ B_{11} & D_{11} & 0 \\ 0 & 0 & A_{55} \end{cases} \begin{cases} \varepsilon_{\zeta} \\ k_{\zeta} \\ \gamma_{\zeta} \end{cases} \quad (2.11)
+$$\begin{cases} N_{\zeta} \\ M_{\zeta} \\ Q_{\zeta} \end{cases} = \begin{cases} A_{11} & B_{11} & 0 \\ B_{11} & D_{11} & 0 \\ 0 & 0 & A_{55} \end{cases} \begin{cases} \varepsilon_{\zeta} \\ k_{\zeta} \\ \gamma_{\zeta} \end{cases} \quad (2.11)$$
 ```
 
 其中，扩展刚度系数 $A_{11}$、扩展系数 $B_{11}$、弯曲耦合刚度 $D_{11}$ 以及剪切刚度 $A_{55}$ 可以表示为：
@@ -619,7 +618,7 @@ $$\mathbf{A} = \begin{pmatrix} \tilde{A}_{11} & \tilde{B}_{11} \\ \tilde{B}_{11}
 ```
 
 ```
-$(\hat{A}_{ij\zeta}, \hat{B}_{ij\zeta}, \hat{D}_{ij\zeta}, \hat{C}_{ij\zeta}) = \int_{-b/2}^{b/2} Q_{0}(z)(1, z, z^{2}, z^{3}) dz \quad (2.13d)$$
+$(\hat{A}_{ij\zeta}, \hat{B}_{ij\zeta}, \hat{D}_{ij\zeta}, \hat{C}_{ij\zeta}) = \int_{-b/2}^{b/2} Q_{0}(z)(1, z, z^{2}, z^{3}) dz \quad (2.13d)$
 ```
 
 ```
@@ -658,7 +657,7 @@ $U_b = \frac{1}{2} \int_{\varphi_1}^{\varphi_2} \left[ (k_w^2 w^2 + k_{\theta}^2
 $W_f = \dots$
 ```
 
-### 2.2.3 离散化与求解
+## 2.2.3 离散化与求解
 
 基于有限切比多项式的一维无限可微函数 $f(\varphi)$ 的近似表达式为：
 
@@ -754,13 +753,11 @@ $(\mathbf{M}\omega^2 - \mathbf{K} - \mathbf{K}_s)\mathbf{q} = \mathbf{F}$
 
 其中 $\mathbf{M}$ 和 $\mathbf{K}$ 是系统的质量矩阵和刚度矩阵，$\mathbf{K}_s$ 是刚度矩阵，$\mathbf{F}$ 代表力向量，$\omega$ 表示角频率。具体的向量和矩阵可以表示为：
 
+
+
 ```
 $$\mathbf{K} = \begin{bmatrix} A_{11}q^T\mathbf{V}_{R_{\theta}}^T\mathbf{Q} + A_{55}q^T\mathbf{V}_{R_{\theta}}^T\mathbf{LC} & A_{11}q^T\mathbf{V}_{R_{\theta}}^T\mathbf{C} - A_{55}q^T\mathbf{V}_{R_{\theta}}^T\mathbf{Q} & B_{11}q^T\mathbf{V}_{R_{\theta}}^T\mathbf{Q} - A_{55}q^T\mathbf{V}_{R_{\theta}}^T\mathbf{VC} \\ A_{11}c^T\mathbf{V}_{R_{\theta}}^T\mathbf{LC} - A_{55}c^T\mathbf{V}_{R_{\theta}}^T\mathbf{Q} & A_{11}c^T\mathbf{V}_{R_{\theta}}^T\mathbf{C} + A_{55}c^T\mathbf{V}_{R_{\theta}}^T\mathbf{Q} & A_{55}c^T\mathbf{V}_{R_{\theta}}^T\mathbf{VC} + B_{11}c^T\mathbf{V}_{R_{\theta}}^T\mathbf{Q} \\ B_{11}q^T\mathbf{V}_{R_{\theta}}^T\mathbf{Q} - A_{55}q^T\mathbf{V}_{R_{\theta}}^T\mathbf{VC} & A_{55}q^T\mathbf{V}_{R_{\theta}}^T\mathbf{VC} + B_{11}q^T\mathbf{V}_{R_{\theta}}^T\mathbf{Q} & D_{11}q^T\mathbf{V}_{R_{\theta}}^T\mathbf{Q} + A_{55}q^T\mathbf{V}_{R_{\theta}}^T\mathbf{VC} \end{bmatrix}$$
 ```
-
-
-
-
 
 $\mathbf{M} = \begin{bmatrix} I_0C^T V_{R_0}C & I_1C^T V_{R_1}C & 0 \\ I_1C^T V_{R_0}C & I_0C^T V_{R_1}C & 0 \\ 0 & 0 & I_2C^T V_{R_2}C \end{bmatrix} \quad (2.33)$
 
@@ -838,10 +835,6 @@ $(\mathbf{M}\omega^2 - \mathbf{K})\mathbf{q} = 0 \quad (2.36)$
 | | | 文献 [8] | 0.0185 | 0.1157 | | 0.1157 | 1.4378 |
 | | | 误差 (%) | 0.0019 | | | | | | 0.037 | -0.378 |
 
-
-
-
-
 表 2.5 不同边界条件下、不同幂律指数的函数梯度多孔梁的无量纲频率参数对比（$e_0 = 0.5$）。
 
 | | C-C | | | C-F | | |
@@ -865,7 +858,7 @@ $(\mathbf{M}\omega^2 - \mathbf{K})\mathbf{q} = 0 \quad (2.36)$
 # 表 2.6 不同边界条件下函数梯度多孔梁的无量纲频率参数（$e_0/h_0 = 0.5$）。
 
 | BC | Mode | 1 | 2 | 3 | 4 | 5 | 6 |
-|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|
 | Type 1 | C-C | Abaqus | 2.2539 | 3.8781 | 6.2190 | 7.3876 | 10.7437 | 11.3826 |
 | | Diff (%) | 0.675 | 0.8172 | 0.440 | 1.356 | 1.070 |
 | | SS | Abaqus | 1.3608 | 3.2185 | 5.4990 | 6.2110 | 9.8447 | 10.7060 |
@@ -873,10 +866,17 @@ $(\mathbf{M}\omega^2 - \mathbf{K})\mathbf{q} = 0 \quad (2.36)$
 | | C-S | Abaqus | 1.7999 | 3.6091 | 5.3957 | 6.8868 | 10.5197 | 10.6913 |
 | | Diff (%) | 0.816 | 0.1137 | 0.0070 | 0.9156 | 0.5774 | 0.7932 |
 | Type 2 | C-C | Abaqus | 2.1067 | 3.1167 | 3.6401 | 6.0238 | 10.6090 | 10.6984 |
+
+
+
 | | Diff (%) | -0.850 | 0.00 | -0.0852 | -1.538 | 0.404 | -1.518 |
+
 | | SS | Abaqus | 1.2715 | 3.0994 | 5.7806 | 5.8913 | 9.2718 | 10.4584 |
+
 | | Diff (%) | -1.683 | -5.147 | -5.151 | -1.072 | 0.354 | 1.213 |
+
 | | C-S | Abaqus | 1.6218 | 3.3324 | 5.8796 | 6.5344 | 9.9417 | 10.6103 |
+
 | | Diff (%) | -3.510 | -3.479 | -0.076
 
 #### 表 2.7 不同边界条件下等性梁的无量纲频率参数。
@@ -919,17 +919,13 @@ $(\mathbf{M}\omega^2 - \mathbf{K})\mathbf{q} = 0 \quad (2.36)$
 
 **图 2.3** 不同边界条件下函数梯度多孔梁的三阶型：(A) 直梁，C-C；(B) 直梁，C-S；(C) 圆梁，C-D；(D) 圆梁，E-C；(F) 椭圆梁，C-S。
 
-120 度，$F_\theta = [90$ 度, 90 度]$。预先注意图 2.4 中的稳态位移响应为了通用性采用了计算结果的绝对值。确定时间频率频率的扫描范围是为了更清晰地显示对比结果。图 2.5 和 2.6 分为三组，分别显示直梁、圆曲梁和椭圆曲梁的受力振动曲线，考虑了 C-C 和 C-S 两种边界条件。可以发现，直梁和弯曲梁在不同边界下的稳态位移响应和瞬态位移响应与 Abaqus 的结果一致良好。
+120 度，`F_\theta = [90` 度, 90 度]`。预先注意图 2.4 中的稳态位移响应为了通用性采用了计算结果的绝对值。确定时间频率频率的扫描范围是为了更清晰地显示对比结果。图 2.5 和 2.6 分为三组，分别显示直梁、圆曲梁和椭圆曲梁的受力振动曲线，考虑了 C-C 和 C-S 两种边界条件。可以发现，直梁和弯曲梁在不同边界下的稳态位移响应和瞬态位移响应与 `Abaqus` 的结果一致良好。
 
 ### 2.3.3 参数研究
 
-在本节中研究了孔参数和几何参数对函数梯度直梁和弯曲梁振动特性的影响，考虑了孔隙分布、孔隙系数 $c_{\phi}$ 和细长比 $L$。孔隙和细长比的值假设 $c_{\phi}\le0.8$ 且 $0.04 \le L\le0.1$，并在范围内均匀取值。不同边界下的响应曲线随参数的变化表现出相似的趋势，仅考虑了 C-C 边界条件。具体的材料和几何参数与本节开头相同。注意的是，为了研究椭圆曲梁的几何参数，椭周公式为 $L = 2\pi\sqrt{(a^2+b^2)/2}$。
+在本节中研究了孔参数和几何参数对函数梯度直梁和弯曲梁振动特性的影响，考虑了孔隙分布、孔隙系数 `c_{\phi}` 和细长比 `L`。孔隙和细长比的值假设 `c_{\phi}\le0.8` 且 `0.04 \le L\le0.1`，并在范围内均匀取值。不同边界下的响应曲线随参数的变化表现出相似的趋势，仅考虑了 C-C 边界条件。具体的材料和几何参数与本节开头相同。注意的是，为了研究椭圆曲梁的几何参数，椭周公式为 `L = 2\pi\sqrt{(a^2+b^2)/2}`。
 
 图 2.6–2.11 显示了不同孔隙系数和细长比下 FG 直梁、圆梁和椭圆梁的稳态位移响应。图 2.6 研究了孔隙系数和孔隙分布对 FG 直梁稳态响应的影响。可以看出随着孔隙系数的增加，稳态
-
-
-
-
 
 ![](img/90ed165a39fa708ec438fcda79319c25_53_0.png)
 
@@ -943,7 +939,7 @@ $(\mathbf{M}\omega^2 - \mathbf{K})\mathbf{q} = 0 \quad (2.36)$
 
 (C)
 
-**图 2.4** 不同边界条件下功能梯度多孔梁的稳态位移响应的比较（类型 1，$e_0=0.5$）：(A) 直梁；(B) 圆形梁；(C) 椭圆梁。
+**图 2.4** 不同边界条件下功能梯度多孔梁的稳态位移响应的比较（类型 1，`e_0=0.5`）：(A) 直梁；(B) 圆形梁；(C) 椭圆梁。
 
 FGP梁的位移响应向低频偏移，而峰值没有显著变化。这是由于孔隙率系数的增加意味着孔隙体积分数的增加，削弱了FGP直梁的结构刚度。
 
@@ -961,7 +957,7 @@ FGP梁的位移响应向低频偏移，而峰值没有显著变化。这是由�
 
 (C)
 
-**图 2.5** 不同边界条件下功能梯度梁的瞬态位移响应的比较（类型 1，$e_0=0.5$）：(A) 直梁；(B) 圆形梁；(C) 椭圆梁。
+**图 2.5** 不同边界条件下功能梯度梁的瞬态位移响应的比较（类型 1，`e_0=0.5`）：(A) 直梁；(B) 圆形梁；(C) 椭圆梁。
 
 孔隙率分布为类型 1 的FGP直梁受孔隙率系数的影响明显小于类型 2，这表明这种分布形式可以使FGP梁在重量更轻的情况下具有更好的力学性能。所示
 
@@ -969,27 +965,27 @@ FGP梁的位移响应向低频偏移，而峰值没有显著变化。这是由�
 
 ![](img/90ed165a39fa708ec438fcda79319c25_55_0.png)
 
-**图 2.6** 具有孔隙率系数 $e_0$ 和孔隙率分布类型的功能多孔直梁的稳态位移响应：(A) 类型 1；(B) 类型 2。
+**图 2.6** 具有孔隙率系数 `e_0` 和孔隙率分布类型的功能多孔直梁的稳态位移响应：(A) 类型 1；(B) 类型 2。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_55_1.png)
 
-**图 2.7** 具有不同细长比 $h/l$ 和孔隙率分布类型的功能梯度多孔梁的稳态位移响应：(A) 类型 1；(B) 类型 2。
+**图 2.7** 具有不同细长比 `h/l` 和孔隙率分布类型的功能梯度多孔梁的稳态位移响应：(A) 类型 1；(B) 类型 2。
 
 图 2.7 研究了具有不同细长比的FGP梁的稳态位移响应变化。可以看出，细长比越大，梁越厚，稳态位移响应峰值的频率越高。在图 2.8 和图 2.9 中，FGP圆形梁的稳态位移响应变化与直梁相似，受孔隙率系数和细长比的影响。通过图 2.6 和图 2.8 的对比可以发现，孔隙率系数对圆形梁稳态位移响应位置的影响更为显著。此外，随着孔隙因子的增加，稳态位移响应峰值向低频移动。所示
 
 ![](img/90ed165a39fa708ec438fcda79319c25_56_0.png)
 
-**图 2.8** 具有不同孔隙率系数 $e_0$ 和孔隙率分布类型的功能梯度圆形梁的稳态位移响应：(A) 类型 1；(B) 类型 2。
+**图 2.8** 具有不同孔隙率系数 `e_0` 和孔隙率分布类型的功能梯度圆形梁的稳态位移响应：(A) 类型 1；(B) 类型 2。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_56_1.png)
 
-**图 2.9** 具有不同细长比 $h/l$ 和孔隙率分布类型的功能梯度圆形梁的稳态位移响应：(A) 类型 1；(B) 类型 2。
+**图 2.9** 具有不同细长比 `h/l` 和孔隙率分布类型的功能梯度圆形梁的稳态位移响应：(A) 类型 1；(B) 类型 2。
 
 在图 2.10 和图 2.11 中，讨论了孔隙率系数和细长比对 FGP 椭圆梁稳态响应的影响。从图 2.10 的多个峰值可以看出，随着频率从低向高移动，稳态位移响应对孔隙率系数的敏感性增加。从两图中可以观察到，类型 1 孔隙分布的椭圆梁峰值小得多，表明这种位移模式极大提高了梁的抗弯能力。FGP 直梁和弯曲梁在点激励下受孔隙率系数和细长比影响的瞬态位移响应所示
 
 ![](img/90ed165a39fa708ec438fcda79319c25_57_0.png)
 
-**图 2.10** 具有不同孔隙率系数 $e_0$ 和孔隙率分布类型的功能多孔椭圆梁的稳态位移响应：(A)(B) 类型 2。
+**图 2.10** 具有不同孔隙率系数 `e_0` 和孔隙率分布类型的功能多孔椭圆梁的稳态位移响应：(A)(B) 类型 2。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_57_1.png)
 
@@ -999,27 +995,27 @@ FG 多孔复合结构
 
 ![](img/90ed165a39fa708ec438fcda79319c25_58_0.png)
 
-**图 2.11** 具有不同孔隙率系数 $e_0$ 和孔隙率分布类型的功能梯度梁的稳态位移响应：(A) 类型 1；(B) 类型 2。
+**图 2.11** 具有不同孔隙率系数 `e_0` 和孔隙率分布类型的功能梯度梁的稳态位移响应：(A) 类型 1；(B) 类型 2。
 
 ![](img/90-ed165a39fa708ec438fcda79319c25_58_1.png)
 
-**图 2.12** 具有不同细长比 $h/l$ 和孔隙率分布类型的功能梯度梁的稳态位移响应：(A) 类型 1；(B) 类型 2。
+**图 2.12** 具有不同细长比 `h/l` 和孔隙率分布类型的功能梯度梁的稳态位移响应：(A) 类型 1；(B) 类型 2。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_58_2.png)
 
-**图 2.13** 具有不同孔隙率系数 $e_0$ 和孔隙率分布类型的功能梯度梁的瞬态位移响应：(A) 类型 1；(B) 类型 2。
+**图 2.13** 具有不同孔隙率系数 `e_0` 和孔隙率分布类型的功能梯度梁的瞬态位移响应：(A) 类型 1；(B) 类型 2。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_59_0.png)
 
-**图 2.14** 具有不同细长比 $h/l$ 和孔隙率分布类型的功能梯度梁的瞬态位移响应：(A) 类型 1；(B) 类型 2。
+**图 2.14** 具有不同细长比 `h/l` 和孔隙率分布类型的功能梯度梁的瞬态位移响应：(A) 类型 1；(B) 类型 2。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_59_1.png)
 
-**图 2.15** 具有不同孔隙率系数 $e_0$ 和孔隙率分布类型的功能梯度梁的瞬态位移响应：(A) 类型 1；(B) 类型 2。
+**图 2.15** 具有不同孔隙率系数 `e_0` 和孔隙率分布类型的功能梯度梁的瞬态位移响应：(A) 类型 1；(B) 类型 2。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_59_2.png)
 
-**图 2.16** 具有不同细长比 $h/l$ 和孔隙率分布类型的功能梯度梁的瞬态位移响应：(A) 类型 1；(B) 类型 2。
+**图 2.16** 具有不同细长比 `h/l` 和孔隙率分布类型的功能梯度梁的瞬态位移响应：(A) 类型 1；(B) 类型 2。
 
 细长比对瞬态位移响应的影响是决定性的。当梁变薄时，细长比的减少会增加峰值位移响应。
 
@@ -1039,9 +1035,6 @@ FG 多孔复合结构
 
 - [1] Lei Y-L, et al. Dynamic behaviors of single-and multi-span functionally graded porous beams with flexible boundary constraints. Appl Math Model 2020;83:754–761.
 
-
-
-
 功能梯度多孔直梁与弯梁的自由振动与迫振
 
 - [2] Smith B, et al. Steel foam for structures: a review of applications, manufacturing and material properties, J Constr Steel Res 2012:71:1–10.
@@ -1054,6 +1047,11 @@ FG 多孔复合结构
 - [9] Gao L, Ri Y. Dynamic analysis of functionally graded porous beams with interval material properties. Eng Struct 2019;397:109441.
 - [10] Jamshid M, Agrawal. Optimal material design of functionally graded porous beams for buckling and free vibration. Mech Res Comm 2018;88:19–24.
 - [11] Chen D, et al. Multiscale modelling of functionally graded porous beams: buckling and vibration analysis. Eng Struct 2022;266:114568.
+
+
+
+# References
+
 - [12] Ebrahim F, Zi M. Large amplitude nonlinear vibration analysis of functionally graded Timoshenko beams with porosity. Continuum 2015;116:117–25.
 - [13] Chen D, Yang J, Kitiponchai S. Elastic buckling and static design of shearable beams with Bejani pores. Composite Struct 2015:133:54–61.
 - [14] Srikaran B, Gongsuwan W, Wattanasukung N. Linear and nonlinear static bending of sandwich beams with functionally graded porous core under different distributions. J Struct 2020;275:112323.
@@ -1103,6 +1101,11 @@ FG 多孔复合结构
 - [58] Chen D, Yang J. Nonlinear buckling and postbuckling of functionally graded graphene reinforced porous nanocomposite beams. Compos Sci Technol 2021;172:235–45.
 - [59] Harishi B, Bejani P, Lenin B. Effect of porosity and axial load on elastic buckling and free vibration of functionally graded porous beam. IOP conference series: Materials science and engineering. IOP Publishing; 2021.
 - [60] Nguyen N-D, et al. A new two-variable deformation theory for binding, vibration and buckling analysis of functionally graded porous beams. Compos Struct 2022:282:115095.
+
+
+
+## References
+
 - [61] Chen D, et al. Impact response of self-weighted functionally graded porous beams reinforced by graphene platelets. Thin-Walled Struct 2022;179:109501.
 - [62] Chen D, et al. Nonlinear vibration analysis of a rotating two-dimensional functionally graded porous beam using isogeometric analysis. Eur Mech A/Solids 2023:204:140683.
 - [63] Chen X, Chen L, Y U. Interference sensitivity of nonlinear response behaviour in bi-directional functionally graded porous material beam. Compos Struct 2022:271:114142.
@@ -1152,104 +1155,217 @@ FG 多孔复合结构
 - [107] Akbaş S. Forced vibration analysis of functionally graded porous deep beams.
 - [108] Pemba F, Lovi G. Hygro-thermal behavior of functionally graded F nanobeams via viscoelastic strain and stress gradient theories of elasticity. Composite Struct 2021;263:113627.
 - [109] Chen D, Yang J. Nonlinear buckling and postbuckling of functionally graded graphene reinforced porous nanocomposite beams. Compos Sci Technol 2021;172:235–45.
+
+
+
+# 参考文献
+
 - [110] Harishi B, Bejani P, Lenin B. Effect of porosity and axial load on elastic buckling and free vibration of functionally graded porous beam. IOP conference series: Materials science and engineering. IOP Publishing; 2021.
+
 - [111] Nguyen N-D, et al. A new two-variable deformation theory for binding, vibration and buckling analysis of functionally graded porous beams. Compos Struct 2022:282:115095.
+
 - [112] Chen D, et al. Impact response of self-weighted functionally graded porous beams reinforced by graphene platelets. Thin-Walled Struct 2022;179:109501.
+
 - [113] Chen D, et al. Nonlinear vibration analysis of a rotating two-dimensional functionally graded porous beam using isogeometric analysis. Eur Mech A/Solids 2023:204:140683.
-- [114] Chen X, Chen L, Y U. Interference sensitivity of nonlinear response behaviour in bi-directional functionally graded porous material beam. Compos Struct 2022:271:114142.
+
+- [114] Chen X, Chen L, Y U. Interference sensitivity of nonlinear response behaviour in bi-directional functionally graded porous material beam. Compos Struct 2022;271:114142.
+
 - [115] Foudhi M, Jamil N, Belagousadia N. Nonlinear analysis of functionally graded porous beams using the multiquadric basis functions and a Taylor series-based continuation.
+
 - [116] Chen D, Yang J, Kitiponchai S. Free vibrations of functionally graded porous beams.
+
 - [117] Chen D, Yang J, Kitiponchai S. Nonlinear analysis of functionally graded porous beams with Bejani pores.
-- [118] Chen D, Yang J, Kitiponchai S. Elastic buckling and static design of shearable beams with Bejani pores. Composite Struct 2015:133:54–61.
+
+- [118] Chen D, Yang J, Kitiponchai S. Elastic buckling and static design of shearable beams with Bejani pores. Composite Struct 2015;133:54–61.
+
 - [119] Srikaran B, Gongsuwan W, Wattanasukung N. Linear and nonlinear static bending of sandwich beams with functionally graded porous core under different distributions. J Struct 2020;275:112323.
+
 - [120] Viet N, Zaki W. Buckling model for functionally graded porous beam memory/pororelastic cantilever beams. Appl Math Model 2021;97:398–417.
+
 - [121] Hamed M, et al. Influence of axial load function and optimization on stability of sandwich functionally graded beams with porous core. Eng Compute 2020.36(4)1929-46.
+
 - [122] Kitiponchai S, Chen J. Free vibration and buckling of functionally graded porous beams reinforced by graphene platelets. Plater Mater 2017;116:655–66.
+
 - [123] Noori AR, Aslan TA, Temel B. Dynamic analysis of functionally graded porous beams using complementary methods in the Laplace domain. Composite Struct 2021;256:11094.
+
 - [124] Akbaş S. Forced vibration analysis of functionally graded porous deep beams.
+
 - [125] Pemba F, Lovi G. Hygro-thermal behavior of functionally graded F nanobeams via viscoelastic strain and stress gradient theories of elasticity. Composite Struct 2021;263:113627.
+
 - [126] Chen D, Yang J. Nonlinear buckling and postbuckling of functionally graded graphene reinforced porous nanocomposite beams. Compos Sci Technol 2021;172:235–45.
+
 - [127] Harishi B, Bejani P, Lenin B. Effect of porosity and axial load on elastic buckling and free vibration of functionally graded porous beam. IOP conference series: Materials science and engineering. IOP Publishing; 2021.
+
 - [128] Nguyen N-D, et al. A new two-variable deformation theory for binding, vibration and buckling analysis of functionally graded porous beams. Compos Struct 2022:282:115095.
+
 - [129] Chen D, et al. Impact response of self-weighted functionally graded porous beams reinforced by graphene platelets. Thin-Walled Struct 2022:179:109501.
+
 - [130] Chen D, et al. Nonlinear vibration analysis of a rotating two-dimensional functionally graded porous beam using isogeometric analysis. Eur Mech A/Solids 2023:204:140683.
+
 - [131] Chen X, Chen L, Y U. Interference sensitivity of nonlinear response behaviour in bi-directional functionally graded porous material beam. Compos Struct 2022:271:114142.
+
 - [132] Foudhi M, Jamil N, Belagousadia N. Nonlinear analysis of functionally graded porous beams using the multiquadric basis functions and a Taylor series-based continuation.
+
 - [133] Chen D, Yang J, Kitiponchai S. Free vibrations of functionally graded porous beams.
+
 - [134] Chen D, Yang J, Kitiponchai S. Nonlinear analysis of functionally graded porous beams with Bejani pores.
+
 - [135] Chen D, Yang J, Kitiponchai S. Elastic buckling and static design of shearable beams with Bejani pores. Composite Struct 2015:133:54–61.
+
 - [136] Srikaran B, Gongsuwan W, Wattanasukung N. Linear and nonlinear static bending of sandwich beams with functionally graded porous core under different distributions. J Struct 2020;275:112323.
+
 - [137] Viet N, Zaki W. Buckling model for functionally graded porous beam memory/pororelastic cantilever beams. Appl Math Model 2021;97:398–417.
+
 - [138] Hamed M, et al. Influence of axial load function and optimization on stability of sandwich functionally graded beams with porous core. Eng Compute 2020.36(4)1929-46.
+
 - [139] Kitiponchai S, Chen J. Free vibration and buckling of functionally graded porous beams reinforced by graphene platelets. Plater Mater 2017;116:655–66.
+
 - [140] Noori AR, Aslan TA, Temel B. Dynamic analysis of functionally graded porous beams using complementary methods in the Laplace domain. Composite Struct 2021;256:11094.
+
 - [141] Akbaş S. Forced vibration analysis of functionally graded porous deep beams.
+
 - [142] Pemba F, Lovi G. Hygro-thermal behavior of functionally graded F nanobeams via viscoelastic strain and stress gradient theories of elasticity. Composite Struct 2021;263:113627.
+
 - [143] Chen D, Yang J. Nonlinear buckling and postbuckling of functionally graded graphene reinforced porous nanocomposite beams. Compos Sci Technol 2021;172:235–45.
+
 - [144] Harishi B, Bejani P, Lenin B. Effect of porosity and axial load on elastic buckling and free vibration of functionally graded porous beam. IOP conference series: Materials science and engineering. IOP Publishing; 2021.
+
 - [145] Nguyen N-D, et al. A new two-variable deformation theory for binding, vibration and buckling analysis of functionally graded porous beams. Compos Struct 2022:282:115095.
+
 - [146] Chen D, et al. Impact response of self-weighted functionally graded porous beams reinforced by graphene platelets. Thin-Walled Struct 2022;179:109501.
+
 - [147] Chen D, et al. Nonlinear vibration analysis of a rotating two-dimensional functionally graded porous beam using isogeometric analysis. Eur Mech A/Solids 2023;204:140683.
+
 - [148] Chen X, Chen L, Y U. Interference sensitivity of nonlinear response behaviour in bi-directional functionally graded porous material beam. Compos Struct 2022;271:114142.
+
 - [149] Foudhi M, Jamil N, Belagousadia N. Nonlinear analysis of functionally graded porous beams using the multiquadric basis functions and a Taylor series-based continuation.
+
 - [150] Chen D, Yang J, Kitiponchai S. Free vibrations of functionally graded porous beams.
+
 - [151] Chen D, Yang J, Kitiponchai S. Nonlinear analysis of functionally graded porous beams with Bejani pores.
+
 - [152] Chen D, Yang J, Kitiponchai S. Elastic buckling and static design of shearable beams with Bejani pores. Composite Struct 2015:133:54–61.
+
 - [153] Srikaran B, Gongsuwan W, Wattanasukung N. Linear and nonlinear static bending of sandwich beams with functionally graded porous core under different distributions. J Struct 2020;275:112323.
+
 - [154] Viet N, Zaki W. Buckling model for functionally graded porous beam memory/pororelastic cantilever beams. Appl Math Model 2021;97:398–417.
+
 - [155] Hamed M, et al. Influence of axial load function and optimization on stability of sandwich functionally graded beams with porous core. Eng Compute 2020.36(4)1929-46.
+
 - [156] Kitiponchai S, Chen J. Free vibration and buckling of functionally graded porous beams reinforced by graphene platelets. Plater Mater 2017;116:655–66.
+
 - [157] Noori AR, Aslan TA, Temel B. Dynamic analysis of functionally graded porous beams using complementary methods in the Laplace domain. Composite Struct 2021;256:11094.
+
 - [158] Akbaş S. Forced vibration analysis of functionally graded porous deep beams.
+
+
+
+# References
+
 - [159] Pemba F, Lovi G. Hygro-thermal behavior of functionally graded F nanobeams via viscoelastic strain and stress gradient theories of elasticity. Composite Struct 2021;263:113627.
+
 - [160] Chen D, Yang J. Nonlinear buckling and postbuckling of functionally graded graphene reinforced porous nanocomposite beams. Compos Sci Technol 2021;172:235–45.
+
 - [161] Harishi B, Bejani P, Lenin B. Effect of porosity and axial load on elastic buckling and free vibration of functionally graded porous beam. IOP conference series: Materials science and engineering. IOP Publishing; 2021.
+
 - [162] Nguyen N-D, et al. A new two-variable deformation theory for binding, vibration and buckling analysis of functionally graded porous beams. Compos Struct 2022:282:115095.
+
 - [163] Chen D, et al. Impact response of self-weighted functionally graded porous beams reinforced by graphene platelets. Thin-Walled Struct 2022;179:109501.
+
 - [164] Chen D, et al. Nonlinear vibration analysis of a rotating two-dimensional functionally graded porous beam using isogeometric analysis. Eur Mech A/Solids 2023;204:140683.
+
 - [165] Chen X, Chen L, Y U. Interference sensitivity of nonlinear response behaviour in bi-directional functionally graded porous material beam. Compos Struct 2022;271:114142.
+
 - [166] Foudhi M, Jamil N, Belagousadia N. Nonlinear analysis of functionally graded porous beams using the multiquadric basis functions and a Taylor series-based continuation.
+
 - [167] Chen D, Yang J, Kitiponchai S. Free vibrations of functionally graded porous beams.
+
 - [168] Chen D, Yang J, Kitiponchai S. Nonlinear analysis of functionally graded porous beams with Bejani pores.
+
 - [169] Chen D, Yang J, Kitiponchai S. Elastic buckling and static design of shearable beams with Bejani pores. Composite Struct 2015:133:54–61.
+
 - [170] Srikaran B, Gongsuwan W, Wattanasukung N. Linear and nonlinear static bending of sandwich beams with functionally graded porous core under different distributions. J Struct 2020;275:112323.
+
 - [171] Viet N, Zaki W. Buckling model for functionally graded porous beam memory/pororelastic cantilever beams. Appl Math Model 2021;97:398–417.
+
 - [172] Hamed M, et al. Influence of axial load function and optimization on stability of sandwich functionally graded beams with porous core. Eng Compute 2020.36(4)1929-46.
+
 - [173] Kitiponchai S, Chen J. Free vibration and buckling of functionally graded porous beams reinforced by graphene platelets. Plater Mater 2017;116:655–66.
+
 - [174] Noori AR, Aslan TA, Temel B. Dynamic analysis of functionally graded porous beams using complementary methods in the Laplace domain. Composite Struct 2021;256:11094.
+
 - [175] Akbaş S. Forced vibration analysis of functionally graded porous deep beams.
+
 - [176] Pemba F, Lovi G. Hygro-thermal behavior of functionally graded F nanobeams via viscoelastic strain and stress gradient theories of elasticity. Composite Struct 2021;263:113627.
+
 - [177] Chen D, Yang J. Nonlinear buckling and postbuckling of functionally graded graphene reinforced porous nanocomposite beams. Compos Sci Technol 2021;172:235–45.
+
 - [178] Harishi B, Bejani P, Lenin B. Effect of porosity and axial load on elastic buckling and free vibration of functionally graded porous beam. IOP conference series: Materials science and engineering. IOP Publishing; 2021.
+
 - [179] Nguyen N-D, et al. A new two-variable deformation theory for binding, vibration and buckling analysis of functionally graded porous beams. Compos Struct 2022:282:115095.
+
 - [180] Chen D, et al. Impact response of self-weighted functionally graded porous beams reinforced by graphene platelets. Thin-Walled Struct 2022;179:109501.
+
 - [181] Chen D, et al. Nonlinear vibration analysis of a rotating two-dimensional functionally graded porous beam using isogeometric analysis. Eur Mech A/Solids 2023;204:140683.
+
 - [182] Chen X, Chen L, Y U. Interference sensitivity of nonlinear response behaviour in bi-directional functionally graded porous material beam. Compos Struct 2022;271:114142.
+
 - [183] Foudhi M, Jamil N, Belagousadia N. Nonlinear analysis of functionally graded porous beams using the multiquadric basis functions and a Taylor series-based continuation.
+
 - [184] Chen D, Yang J, Kitiponchai S. Free vibrations of functionally graded porous beams.
+
 - [185] Chen D, Yang J, Kitiponchai S. Nonlinear analysis of functionally graded porous beams with Bejani pores.
+
 - [186] Chen D, Yang J, Kitiponchai S. Elastic buckling and static design of shearable beams with Bejani pores. Composite Struct 2015:133:54–61.
+
 - [187] Srikaran B, Gongsuwan W, Wattanasukung N. Linear and nonlinear static bending of sandwich beams with functionally graded porous core under different distributions. J Struct 2020;275:112323.
+
 - [188] Viet N, Zaki W. Buckling model for functionally graded porous beam memory/pororelastic cantilever beams. Appl Math Model 2021;97:398–417.
+
 - [189] Hamed M, et al. Influence of axial load function and optimization on stability of sandwich functionally graded beams with porous core. Eng Compute 2020.36(4)1929-46.
+
 - [190] Kitiponchai S, Chen J. Free vibration and buckling of functionally graded porous beams reinforced by graphene platelets. Plater Mater 2017;116:655–66.
+
 - [191] Noori AR, Aslan TA, Temel B. Dynamic analysis of functionally graded porous beams using complementary methods in the Laplace domain. Composite Struct 2021;256:11094.
+
 - [192] Akbaş S. Forced vibration analysis of functionally graded porous deep beams.
+
 - [193] Pemba F, Lovi G. Hygro-thermal behavior of functionally graded F nanobeams via viscoelastic strain and stress gradient theories of elasticity. Composite Struct 2021;263:113627.
+
 - [194] Chen D, Yang J. Nonlinear buckling and postbuckling of functionally graded graphene reinforced porous nanocomposite beams. Compos Sci Technol 2021;172:235–45.
+
 - [195] Harishi B, Bejani P, Lenin B. Effect of porosity and axial load on elastic buckling and free vibration of functionally graded porous beam. IOP conference series: Materials science and engineering. IOP Publishing; 2021.
+
 - [196] Nguyen N-D, et al. A new two-variable deformation theory for binding, vibration and buckling analysis of functionally graded porous beams. Compos Struct 2022:282:115095.
+
 - [197] Chen D, et al. Impact response of self-weighted functionally graded porous beams reinforced by graphene platelets. Thin-Walled Struct 2022;179:109501.
+
 - [198] Chen D, et al. Nonlinear vibration analysis of a rotating two-dimensional functionally graded porous beam using isogeometric analysis. Eur Mech A/Solids 2023;204:140683.
+
 - [199] Chen X, Chen L, Y U. Interference sensitivity of nonlinear response behaviour in bi-directional functionally graded porous material beam. Compos Struct 2022;271:114142.
+
 - [200] Foudhi M, Jamil N, Belagousadia N. Nonlinear analysis of functionally graded porous beams using the multiquadric basis functions and a Taylor series-based continuation.
+
 - [201] Chen D, Yang J, Kitiponchai S. Free vibrations of functionally graded porous beams.
+
 - [202] Chen D, Yang J, Kitiponchai S. Nonlinear analysis of functionally graded porous beams with Bejani pores.
+
 - [203] Chen D, Yang J, Kitiponchai S. Elastic buckling and static design of shearable beams with Bejani pores. Composite Struct 2015:133:54–61.
+
 - [204] Srikaran B, Gongsuwan W, Wattanasukung N. Linear and nonlinear static bending of sandwich beams with functionally graded porous core under different distributions. J Struct 2020;275:112323.
+
 - [205] Viet N, Zaki W. Buckling model for functionally graded porous beam memory/pororelastic cantilever beams. Appl Math Model 2021;97:398–417.
+
 - [206] Hamed M, et al. Influence of axial load function and optimization on stability of sandwich functionally graded beams with porous core. Eng Compute 2020.36(4)1929-46.
+
 - [207] Kitiponchai S, Chen J. Free vibration and buckling of functionally graded porous beams reinforced by graphene platelets. Plater Mater 2017;116:655–66.
+
+
+
+# 参考文献
+
+## 英文文献
+
 - [208] Noori AR, Aslan TA, Temel B. Dynamic analysis of functionally graded porous beams using complementary methods in the Laplace domain. Composite Struct 2021;256:11094.
 - [209] Akbaş S. Forced vibration analysis of functionally graded porous deep beams.
 - [210] Pemba F, Lovi G. Hygro-thermal behavior of functionally graded F nanobeams via viscoelastic strain and stress gradient theories of elasticity. Composite Struct 2021;263:113627.
@@ -1293,11 +1409,9 @@ FG 多孔复合结构
 - [248] Chen D, et al. Impact response of self-weighted functionally graded porous beams reinforced by graphene platelets. Thin-Walled Struct 2022;179:109501.
 - [249] Chen D, et al. Nonlinear vibration analysis of a rotating two-dimensional functionally graded porous beam using isogeometric analysis. Eur Mech A/Solids 2023;204:140683.
 - [250] Chen X, Chen L, Y U. Interference sensitivity of nonlinear response behaviour in bi-directional functionally graded porous material beam. Compos Struct 2022;271:114142.
-[/content]
 
-翻译：
+## 中文翻译
 
-[content]
 功能梯度多孔直梁与弯梁的自由振动与迫振
 
 - [2] Smith B, et al. 结构钢泡沫：应用、制造和材料性能综述，J Constr Steel Res 2012:71:1–10.
@@ -1311,6 +1425,9 @@ FG 多孔复合结构
 - [10] Jamshid M, Agrawal. 用于失稳和自由振动的功能梯度多孔梁优化材料设计。Mech Res Comm 2018;88:19–24.
 - [11] Chen D, et al. 功能梯度多孔梁的多尺度建模：失稳与振动分析。Eng Struct 2022;266:114568.
 - [12] Ebrahim F, Zi M. 具有孔隙的功能梯度提姆申森梁大幅非线性振动分析。Continuum 2015;116:117–25.
+
+
+
 - [13] Chen D, Yang J, Kitiponchai S. 带有Bejani孔的可剪切梁的弹性失稳和静态设计。Composite Struct 2015:133:54–61.
 - [14] Srikaran B, Gongsuwan W, Wattanasukung N. 不同分布下功能梯度多孔芯夹明治梁的线性与非线性静态弯曲。J Struct 2020;275:112323.
 - [15] Viet N, Zaki W. 功能梯度多孔记忆/多孔弹性悬臂梁失稳模型。Appl Math Model 2021;97:398–417.
@@ -1359,7 +1476,7 @@ FG 多孔复合结构
 - [58] Chen D, Yang J. 石墨烯增强的功能梯度多孔纳米复合材料梁的非线性失稳和后失稳。Compos Sci Technol 2021;172:235–45.
 - [59] Harishi B, Bejani P, Lenin B. 孔隙率和轴向载荷对功能梯度多孔梁弹性失稳和自由振动的影响。IOP会议系列：材料科学与工程。IOP Publishing; 2021.
 - [60] Nguyen N-D, et al. 用于功能梯度多孔梁结合、振动和失稳分析的新型双变量变形理论。Compos Struct 2022:282:115095.
-- [61] Chen D, et al. 石墨烯片增强的自重功能梯度多孔梁的冲击响应。Thin-Walled Struct 2022;179:109501.
+- [61] Chen D, et al. 石墨烯片增强的自重功能梯度多孔梁的冲击响应。Thin-Walled Struct 2022:179:109501.
 - [62] Chen D, et al. 使用等几何分析对旋转二维功能梯度多孔梁进行非线性振动分析。Eur Mech A/Solids 2023;204:140683.
 - [63] Chen X, Chen L, Y U. 双向功能梯度多孔材料梁非线性响应行为的干扰敏感性。Compos Struct 2022;271:114142.
 - [64] Foudhi M, Jamil N, Belagousadia N. 使用多二次基函数和基于泰勒级数的延续法对功能梯度多孔梁进行非线性分析。
@@ -1376,7 +1493,7 @@ FG 多孔复合结构
 - [75] Chen D, Yang J. 石墨烯增强的功能梯度多孔纳米复合材料梁的非线性失稳和后失稳。Compos Sci Technol 2021;172:235–45.
 - [76] Harishi B, Bejani P, Lenin B. 孔隙率和轴向载荷对功能梯度多孔梁弹性失稳和自由振动的影响。IOP会议系列：材料科学与工程。IOP Publishing; 2021.
 - [77] Nguyen N-D, et al. 用于功能梯度多孔梁结合、振动和失稳分析的新型双变量变形理论。Compos Struct 2022:282:115095.
-- [78] Chen D, et al. 石墨烯片增强的自重功能梯度多孔梁的冲击响应。Thin-Walled Struct 2022;179:109501.
+- [78] Chen D, et al. 石墨烯片增强的自重功能梯度多孔梁的冲击响应。Thin-Walled Struct 2022:179:109501.
 - [79] Chen D, et al. 使用等几何分析对旋转二维功能梯度多孔梁进行非线性振动分析。Eur Mech A/Solids 2023;204:140683.
 - [80] Chen X, Chen L, Y U. 双向功能梯度多孔材料梁非线性响应行为的干扰敏感性。Compos Struct 2022;271:114142.
 - [81] Foudhi M, Jamil N, Belagousadia N. 使用多二次基函数和基于泰勒级数的延续法对功能梯度多孔梁进行非线性分析。
@@ -1393,7 +1510,7 @@ FG 多孔复合结构
 - [92] Chen D, Yang J. 石墨烯增强的功能梯度多孔纳米复合材料梁的非线性失稳和后失稳。Compos Sci Technol 2021;172:235–45.
 - [93] Harishi B, Bejani P, Lenin B. 孔隙率和轴向载荷对功能梯度多孔梁弹性失稳和自由振动的影响。IOP会议系列：材料科学与工程。IOP Publishing; 2021.
 - [94] Nguyen N-D, et al. 用于功能梯度多孔梁结合、振动和失稳分析的新型双变量变形理论。Compos Struct 2022:282:115095.
-- [95] Chen D, et al. 石墨烯片增强的自重功能梯度多孔梁的冲击响应。Thin-Walled Struct 2022;179:109501.
+- [95] Chen D, et al. 石墨烯片增强的自重功能梯度多孔梁的冲击响应。Thin-Walled Struct 2022:179:109501.
 - [96] Chen D, et al. 使用等几何分析对旋转二维功能梯度多孔梁进行非线性振动分析。Eur Mech A/Solids 2023;204:140683.
 - [97] Chen X, Chen L, Y U. 双向功能梯度多孔材料梁非线性响应行为的干扰敏感性。Compos Struct 2022;271:114142.
 - [98] Foudhi M, Jamil N, Belagousadia N. 使用多二次基函数和基于泰勒级数的延续法对功能梯度多孔梁进行非线性分析。
@@ -1408,11 +1525,14 @@ FG 多孔复合结构
 - [107] Akbaş S. 功能梯度多孔深梁的迫振分析。
 - [108] Pemba F, Lovi G. 通过粘弹性应变和应力梯度力学理论研究功能梯度F纳米束的热力学行为。Composite Struct 2021;263:113627.
 - [109] Chen D, Yang J. 石墨烯增强的功能梯度多孔纳米复合材料梁的非线性失稳和后失稳。Compos Sci Technol 2021;172:235–45.
+
+
+
 - [110] Harishi B, Bejani P, Lenin B. 孔隙率和轴向载荷对功能梯度多孔梁弹性失稳和自由振动的影响。IOP会议系列：材料科学与工程。IOP Publishing; 2021.
 - [111] Nguyen N-D, et al. 用于功能梯度多孔梁结合、振动和失稳分析的新型双变量变形理论。Compos Struct 2022:282:115095.
 - [112] Chen D, et al. 石墨烯片增强的自重功能梯度多孔梁的冲击响应。Thin-Walled Struct 2022;179:109501.
 - [113] Chen D, et al. 使用等几何分析对旋转二维功能梯度多孔梁进行非线性振动分析。Eur Mech A/Solids 2023;204:140683.
-- [114] Chen X, Chen L, Y U. 双向功能梯度多孔材料梁非线性响应行为的干扰敏感性。Compos Struct 2022;271;114142.
+- [114] Chen X, Chen L, Y U. 双向功能梯度多孔材料梁非线性响应行为的干扰敏感性。Compos Struct 2022;271:114142.
 - [115] Foudhi M, Jamil N, Belagousadia N. 使用多二次基函数和基于泰勒级数的延续法对功能梯度多孔梁进行非线性分析。
 - [116] Chen D, Yang J, Kitiponchai S. 功能梯度多孔梁的自由振动。
 - [117] Chen D, Yang J, Kitiponchai S. 带有Bejani孔的功能梯度多孔梁的非线性分析。
@@ -1499,93 +1619,139 @@ FG 多孔复合结构
 - [198] Chen D, et al. 使用等几何分析对旋转二维功能梯度多孔梁进行非线性振动分析。Eur Mech A/Solids 2023;204:140683.
 - [199] Chen X, Chen L, Y U. 双向功能梯度多孔材料梁非线性响应行为的干扰敏感性。Compos Struct 2022;271:114142.
 - [200] Foudhi M, Jamil N, Belagousadia N. 使用多二次基函数和基于泰勒级数的延续法对功能梯度多孔梁进行非线性分析。
-[/content]
 
-翻译：
-
-[content]
-自由振动与符号
+# 自由振动与符号
 
 功能梯度多孔板具有复杂边缘
 
 刘涛、钟忠、王青山
-1中南方大学研究院
-2精密制造关键实验室
-3中南方大学机械电气学院
 
-符号术语
+1 中南方大学研究院
 
-+   $k_{0x}, k_{0y}$线性弹簧
-$K_x, K_y$旋转弹簧
-$u_v, v_w$中间侧线性位移分量
-$\Phi$绕y轴的旋转
-$\Phi_y$结构的厚度
-$L_1$四边形底边长度
-$L_2$四边形右边长度
-$L_3$四边形顶边长度
-$L_4$四边形左边长度
-$\alpha_1$$L_4$与$L_1$之间的夹角
-$\alpha_2$$L_1$与$L_2$之间的夹角
-$\alpha_3$$L_2$与$L_3$之间的夹角
-$\alpha_4$$L_3$与$L_4$之间的夹角
-$a$椭圆最大直径
-$b$椭圆最小直径
+2 精密制造关键实验室
+
+3 中南方大学机械电气学院
+
+## 符号术语
+
++ `$k_{0x}, k_{0y}$` 线性弹簧
++ `$K_x, K_y$` 旋转弹簧
++ `$u_v, v_w$` 中间侧线性位移分量
++ `$\Phi$` 绕y轴的旋转
++ `$\Phi_y$` 结构的厚度
++ `$L_1$` 四边形底边长度
++ `$L_2$` 四边形右边长度
++ `$L_3$` 四边形顶边长度
++ `$L_4$` 四边形左边长度
++ `$\alpha_1$` `$L_4$`与`$L_1$`之间的夹角
++ `$\alpha_2$` `$L_1$`与`$L_2$`之间的夹角
++ `$\alpha_3$` `$L_2$`与`$L_3$`之间的夹角
++ `$\alpha_4$` `$L_3$`与`$L_4$`之间的夹角
++ `$a$` 椭圆最大直径
++ `$b$` 椭圆最小直径
+
+
+
 $r$中心到截断圆板的距离
+
 $N_x, N_y$x和y轴第一阶byshev多项式截断数
+
 $E$弹性模量
+
 $G$剪切模量
+
 $\rho$质量密度
+
 $\rho_0$孔隙系数
+
 $\rho_m$质量密度的孔隙系数
+
 $\varepsilon_x$x轴法向应变
+
 $\varepsilon_y$对应y轴的法向应变
-
-
-
-
 
 FG 功能梯度多孔复合结构
 
 $\gamma_{xy}$ 对应z轴的正应变
+
 $L_x$ 绕x轴的曲率变化
+
 $L_y$ 绕y轴的曲率变化
+
 $L_{yz}$ 绕z轴的曲率变化
+
 $\gamma_{xz}$ x-z坐标的横向剪切应变
+
 $\gamma_{yz}$ y-z坐标的横向剪切应变
+
 $M$ x轴法向力合力
+
 $N$ y轴法向力合力
+
 $N_{xy}$ x-y坐标的剪力合力
+
 $M_x$ 绕x轴的弯弯矩
+
 $M_y$ 绕x-y坐标的扭矩合力
+
 $Q_x$ 绕x轴的横力
+
 $Q_y$ 绕y轴的扭矩合力
+
 $A_{ij}$ 耦合系数
+
 $B_{ij}$ 伸弯系数
+
 $C_{ij}$ 弯曲系数
+
 $D_{ij}$ 材料刚度
+
 $T$ 结构动能
+
 $U_s$ 结构应变能
+
 $U_{op}$ 边界弹簧储存的势能
+
 $N_{ij}$ 映射方法的基函数
+
 $\xi$ 计算区域中的水平轴
+
 $\eta$ 计算区域中的垂直轴
+
 $L_{ij}^{(\xi)}$ $\xi$轴上的一维基函数
+
 $L_{ij}^{(\eta)}$ $\eta$轴上的一维基函数
+
 $u$ 泊松比
+
 $k_s$ 剪切修正因子
+
 $I_{0} I_1 I_2$ 惯性项
+
 $F_p$ 点力
+
 $a$ 切比雪夫多项式的系数向量
+
 $D$ 切比雪夫多项式的微分矩阵
+
 $Q$ 偏微分矩阵
+
 $V_c$ 切比雪夫内积矩阵
+
 $q$ 广义坐标向量
+
 $L$ FGP板的全能量方程
+
 $K$ 刚度矩阵
+
 $M$ 质量矩阵
+
 $K_s$ 弹簧刚度矩阵
+
 $F$ 力向量
+
 $\omega$ 圆频率
+
 $Q$ 广义位移向量
 
 ## 3.1 引言
@@ -1598,16 +1764,13 @@ $Q$ 广义位移向量
 
 总结来说，尽管对FGP板的振动特性进行了许多研究，但针对各种形状FGP板的通用方法仍然较少。此外，由于FGP板在领域具有重要作用，
 
-
-
-
 具有复杂曲线边缘的功能梯度多孔四边板的自由振动和受迫振动。在55个工程领域，理论需求与实际应用密切相关，迫切需要一种统一的方法来预测各种形状FGP板的振动特性。因此，本文关注于结合一阶剪切理论（FSDT）和连续变形元法（CDQM）的统一理论模型，用于研究具有孔隙分布的FGP板的振动特性。首先根据FSDT得到板的能量方程。同时，引入拉格朗变换技术，将具有曲线边缘的板映射到方形板上。换句话说，结构位移场可以用切比多项式表示，并通过能量方程求解振动问题。通过一系列数值示例验证了该方法的收敛性、正确性和通用性。最后，详细讨论了孔隙系数及其分布对结构力学行为的影响。
 
 ## 3.2 理论分析
 
 ### 3.2.1 建立
 
-如图3.1所示，建立了具有任意曲线几何形状的FGP板通用几何模型，在中中面上建立了一个正交坐标系 (x, y, z)。板的边界边缘由一组线性弹簧 ($k_x, k_y, k_z$) 和一组旋转弹簧 ($K_x, K_y, K_z$) 约束，通过调节弹簧刚度可以很容易实现包含经典边界和弹性边界条件的通用边界条件 [38,39]。本章考虑的对称和非对称孔隙分布分别命名为类型1和类型2。
+如图3.1所示，建立了具有任意曲线几何形状的FGP板通用几何模型，在中中面上建立了一个正交坐标系 (x, y, z)。板的边界边缘由一组线性弹簧 (`k_x, k_y, k_z`) 和一组旋转弹簧 (`K_x, K_y, K_z`) 约束，通过调节弹簧刚度可以很容易实现包含经典边界和弹性边界条件的通用边界条件 [38,39]。本章考虑的对称和非对称孔隙分布分别命名为类型1和类型2。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_67_0.png)
 
@@ -1664,19 +1827,19 @@ $\epsilon = \begin{bmatrix} \epsilon_{xx} \\ \epsilon_{yy} \\ \epsilon_{zz} \\ \
 其中，符号 $\epsilon_{xx}, \epsilon_{yy}, \epsilon_{zz}, \gamma_{xy}$ 和 $\gamma_{yz}$ 分别表示与位移 $u, v, w, \phi_x$ 和 $\phi_y$ 相关的正应变和剪切应变。那么，力矩表示为：
 
 ```
-$N = \begin{bmatrix} N_x \\ N_y \\ N_{xy} \\ M_x \\ M_y \\ Q_x \end{bmatrix} = \begin{bmatrix} A_{11} & A_{12} & 0 & B_{11} & B_{12} & 0 \\ A_{12} & A_{22} & 0 & B_{12} & B_{22} & 0 \\ 0 & 0 & A_{66} & 0 & 0 & C_{66} \\ B_{11} & B_{12} & 0 & D_{11} & D_{12} & 0 \\ B_{12} & B_{22} & 0 & D_{12} & D_{22} & 0 \\ 0 & 0 & C_{66} & 0 & 0 & k_{44} \\ 0 & 0 & 0 & 0 & 0 & k_{55} \end{bmatrix} \begin{bmatrix} \epsilon_x \\ \epsilon_y \\ \gamma_{xy} \\ \theta_x \\ \theta_y \\ \gamma_y \end{bmatrix} \quad (3.7)
+$N = \begin{bmatrix} N_x \\ N_y \\ N_{xy} \\ M_x \\ M_y \\ Q_x \end{bmatrix} = \begin{bmatrix} A_{11} & A_{12} & 0 & B_{11} & B_{12} & 0 \\ A_{12} & A_{22} & 0 & B_{12} & B_{22} & 0 \\ 0 & 0 & A_{66} & 0 & 0 & C_{66} \\ B_{11} & B_{12} & 0 & D_{11} & D_{12} & 0 \\ B_{12} & B_{22} & 0 & D_{12} & D_{22} & 0 \\ 0 & 0 & C_{66} & 0 & 0 & k_{44} \\ 0 & 0 & 0 & 0 & 0 & k_{55} \end{bmatrix} \begin{bmatrix} \epsilon_x \\ \epsilon_y \\ \gamma_{xy} \\ \theta_x \\ \theta_y \\ \gamma_y \end{bmatrix} \quad (3.7)$
 ```
 
 其中 $N_x$ 和 $N_y$ 代表法力结果；$N_{xy}$ 是剪切结果；$M_x$ 和 $M_y$ 代表弯矩结果；$M_{xy}$ 表示扭矩结果；$Q_x$ 和 $Q_y$ 表示横向力结果；$k_r$ 定义为剪切修正因子；$A_{ij}, B_{ij}, D_{ij}$ 分别代表拉伸、耦合和弯曲：
 
 ```
-$(A_{ij}, B_{ij}, D_{ij}) = \int_{-h/2}^{h/2} Q_{ij}(z, z^2) dz \quad (3.8)
+$(A_{ij}, B_{ij}, D_{ij}) = \int_{-h/2}^{h/2} Q_{ij}(z, z^2) dz \quad (3.8)$
 ```
 
 表示 $Q_{ij}$ 材料刚度，可以给出：
 
 ```
-$Q_{11} = \frac{E}{1-\nu}, Q_{22} = \frac{E}{1-\nu}, Q_{12} = \frac{E}{1-\nu} \\ Q_{66} = \frac{E}{2(1+\nu)}, Q_{44} = \frac{E}{2(1+\nu)}, Q_{55} = \frac{E}{2(1+\nu)} \quad (3.9)
+$Q_{11} = \frac{E}{1-\nu}, Q_{22} = \frac{E}{1-\nu}, Q_{12} = \frac{E}{1-\nu} \\ Q_{66} = \frac{E}{2(1+\nu)}, Q_{44} = \frac{E}{2(1+\nu)}, Q_{55} = \frac{E}{2(1+\nu)} \quad (3.9)$
 ```
 
 其中 $\nu$ 是泊松比。根据上述工作，结构能量可以给出：
@@ -1731,15 +1894,13 @@ $L_{i}^{m}(\xi) = \prod_{\rho \neq i}^{m} \frac{\xi - \xi_{\rho}}{\xi_i - \xi_{\
 
 图3.3 映射示意图。
 
-
-
-
-
 FG（梯度）孔隙复合结构
 
 其中 $\xi$ 和 $\eta$ 分别代表 $\xi$ 和 $\eta$ 方向的坐标，$L^n(\xi)$ 和 $L^n(\eta)$ 分别表示 $\xi$ 和 $\eta$ 方向上的一维基函数。
 
 通过引入坐标变换，具有复杂曲线边缘的板可以转换为沿两个轴向方向均限制在 $[-1, 1]$ 区间内的计算域。根据导数链式法则，笛卡尔 $(x, y)$ 坐标系中函数 $f$ 与自然坐标系 $(\xi, \eta)$ 中 $f$ 之间的一阶偏导数关系可以给给出：
+
+
 
 $$\frac{\partial f}{\partial x} = |J| \left( \frac{\partial f}{\partial \xi} \frac{\partial \xi}{\partial x} - \frac{\partial f}{\partial \eta} \frac{\partial \eta}{\partial x} \right)$$ $(3.17)$$
 
@@ -1767,23 +1928,26 @@ $$\mathbf{a} = (a_{0,0}, \dots, a_{0,N-1}, a_{M-1,0}, \dots, a_{M-1,N-1})^T$$ $(
 
 ### 3.2.4 求解步骤
 
-根据方程 (3.10–3.13)，FGP 板的整体能量方程 $L$ 可以表示为：
+根据方程 (3.10–3.13)，FGP 板的整体能量方程 `L` 可以表示为：
 
 $$L = T - U_i - U_{wp} + W_f \quad (3.33)$$
 
 将方程 (3.32) 代入方程 (3.33) 中，令拉格朗日关于未知系数的偏导数为，可以得到：
 
 $$(\mathbf{K} - \omega^2\mathbf{M})\mathbf{Q} = \mathbf{F}$$
+
 $$\mathbf{Q} = [q_1, q_2, q_3, q_4, q_5]^T$$
 
-其中 $F$ 代表外载荷向量，$\mathbf{K}$ 和 $\mathbf{M}$ 是刚度和质量矩阵；$\omega$ 和 $\mathbf{Q}$ 表示圆频率和广义位移向量。结合本文中的映射算法，刚度矩阵和质量矩阵给出：
+其中 `F` 代表外载荷向量，`K` 和 `M` 是刚度和质量矩阵；`ω` 和 `Q` 表示圆频率和广义位移向量。结合本文中的映射算法，刚度矩阵和质量矩阵给出：
 
 $$\mathbf{M} = \begin{bmatrix} M_{11} & & M_{14} \\ M_{12} & M_{25} \\ M_{41} & M_{13} & M_{14} \end{bmatrix} \quad (3.35)$$
 
 $$\mathbf{K}_k = \begin{bmatrix} K_{11}^T & K_{12}^T & K_{13}^T & K_{14}^T & K_{15}^T \\ K_{21}^T & K_{22}^T & K_{23}^T & K_{24}^T & K_{25}^T \\ K_{31}^T & K_{32}^T & K_{33}^T & K_{34}^T & K_{35}^T \\ K_{41}^T & K_{42}^T & K_{43}^T & K_{44}^T & K_{45}^T \\ K_{51}^T & K_{52}^T & K_{53}^T & K_{54}^T & K_{55}^T \end{bmatrix} \quad (3.36)$$
 
 $$\mathbf{K}_{wp} = \begin{bmatrix} 0 & 0 & 0 & 0 & 0 \\ 0 & K_{22}^{wp} & 0 & 0 & 0 \\ 0 & 0 & K_{33}^{wp} & 0 & 0 \\ 0 & 0 & 0 & K_{44}^{wp} & 0 \\ 0 & 0 & 0 & 0 & K_{55}^{wp} \end{bmatrix} \quad (3.37)$$
+
 where $M_{11} = M_{22} = M_{33} = -I_0 \bar{\mathbf{Q}}^T \nabla \mathbf{Q}$, $M_{14} = -I_1 \bar{\mathbf{Q}}^T \nabla \mathbf{Q}$, $M_{44} = M_{55} = -I_2 \bar{\mathbf{Q}}^T \nabla \mathbf{Q}$,
+
 $$[I_0, I_1, I_2] = \int_{-h/2}^{h/2} \rho z^2 dz$$
 
 ## 复杂边缘梯度梯度板的自由与受迫振动
@@ -1826,34 +1990,31 @@ $$K_{44}^v = D_{41} \frac{\partial}{\partial \xi} \bar{Q}_{\xi} + D_{42} \frac{\
 
 $$K_{55}^v = E_{51} \frac{\partial}{\partial \eta} \bar{Q}_{\eta} + E_{52} \frac{\partial}{\partial \xi} \bar{Q}_{\eta} + E_{53} \frac{\partial}{\partial \eta} \bar{Q}_{\eta}$$ (3.39)
 
-
-
-
 $$\bar{V}_e = \mathbf{V}_e \bullet \text{diag}(\mathbf{J})$$
 
 符号 $\bullet$ 表示哈达玛积。根据之前的工作，FGP板的瞬态响应可以通过公式求解：
 
 $$\mathbf{M}\mathbf{u} + \mathbf{C}_R\mathbf{u} + \mathbf{K}\mathbf{u} = \mathbf{F}$$
 
-其中 $\mathbf{u}$、$\dot{\mathbf{u}}$ 和 $\ddot{\mathbf{u}}$ 分别表示位移、速度和加速度；$\mathbf{C}_R$ 是结构阻尼矩阵，定义为
+其中 `u`、`dot{u}` 和 `ddot{u}` 分别表示位移、速度和加速度；`C_R` 是结构阻尼矩阵，定义为
 
 $$\mathbf{C}_R = \beta_1\mathbf{M} + \beta_2\mathbf{K}$$
 
-$\beta_1$ 和 $\beta_2$ 为阻尼系数，给出如下：
+`β1` 和 `β2` 为阻尼系数，给出如下：
 
 $$\beta_1 = 2\left(\frac{\omega_2^2}{\omega_3^2}\right)\left(\frac{1}{\omega_1^2}-\frac{1}{\omega_2^2}\right), \beta_2 = 4\left(\frac{\omega_2}{\omega_3}\right)\left(\frac{1}{\omega_1\omega_2}\right)$$
 
-其中 $\gamma$ 和 $\beta$ 代表衰减系数。采用 Newmark-$\beta$ 方法求解动力方程，得到了 $\mathbf{u}$、$\dot{\mathbf{u}}$ 和 $\ddot{\mathbf{u}}$ 的相关性：
+其中 `γ` 和 `β` 代表衰减系数。采用 Newmark-`β` 方法求解动力方程，得到了 `u`、`dot{u}` 和 `ddot{u}` 的相关性：
 
 $$\begin{cases} \ddot{\mathbf{u}}_{i+1} = a_0\ddot{\mathbf{u}}_{i+1} + a_1\dot{\mathbf{u}}_i + a_2\mathbf{u}_i \\ \dot{\mathbf{u}}_{i+1} = a_3\ddot{\mathbf{u}}_{i+1} + a_4\dot{\mathbf{u}}_i + a_5\mathbf{u}_i \end{cases}$$
 
-其中$a_0 = \frac{1}{\Delta t^2}, a_1 = \frac{1}{\Delta t}, a_3 = \frac{1}{\Delta t}-1, a_5 = \frac{\Delta t}{2}, \quad a_2 = -0.5, a_4 = 0.5$
+其中`a0 = 1/Δt^2, a1 = 1/Δt, a3 = 1/Δt-1, a5 = Δt/2, a2 = -0.5, a4 = 0.5`
 
 通过将方程 (3.45) 代入上式，得到：
 
 $$\mathbf{M}\ddot{\mathbf{u}}_{i+1} + \mathbf{C}_R\dot{\mathbf{u}}_{i+1} + \mathbf{K}\mathbf{u}}_{i+1} = \mathbf{F}_{i+1}$$
 
-最后可以得到 $t_{i+1}$ 时的位移、加速度和速度。
+最后可以得到 `t_{i+1}` 时的位移、加速度和速度。
 
 ## 3.3 结果与讨论
 
@@ -1863,10 +2024,14 @@ $$\mathbf{M}\ddot{\mathbf{u}}_{i+1} + \mathbf{C}_R\dot{\mathbf{u}}_{i+1} + \math
 
 为了测试当前 CDQM 处理复杂边缘 FGP 板振动的有效性和准确性，一种通用且有效的方案是首先给出示例，然后将结果与该方法以及已验证的方法进行比较。首先进行一些数值实例以验证 CDQM 的收敛性；然后综合分析孔隙率和分布对结构行为的影响，并获得了一些创新结果。为了验证该方法在边缘板振动中的通用性，给出了三种典型板的数值结果。此外，采用了包括经典和弹性约束在内的多种边界条件来增加数据的丰富性。通过引入虚拟弹簧边界条件，并考虑表3.1 中的弹簧值 [1,41]。
 
-如图3.4 所示，矩形板的几何参数为 $L_1, L_2$ 以及内角 $\alpha_1,\alpha_2,\alpha_3,\alpha_4$；椭圆板由最大最小直径 $a$ 和 $b$ 定义；截圆板的几何形状由半径 $(r)$ 和中心距离 $(d)$ 决定。矩形板的边界约束遵循 $L_1, L_2, L_3, L_4$ 的顺序，而截圆板按照曲边和直边的顺序，椭圆板为单边。这里考虑的几种材料及其相应属性为：
+如图3.4 所示，矩形板的几何参数为 `L1, L2` 以及内角 `α1,α2,α3,α4`；椭圆板由最大最小直径 `a` 和 `b` 定义；截圆板的几何形状由半径 `(r)` 和中心距离 `(d)` 决定。矩形板的边界约束遵循 `L1, L2, L3, L4` 的顺序，而截圆板按照曲边和直边的顺序，椭圆板为单边。这里考虑的几种材料及其相应属性为：
 
-- 1. FM1: $E_1 = 200$ GPa; $u = 0.3; \rho_1 = 7850 \text{ kg/m}^3$
+- 1. FM1: `E1 = 200 GPa`; `u = 0.3; ρ1 = 7850 kg/m^3`
+
+
+
 - 2. FM2: $E_2 = 70$ GPa; $u = 0.3; \rho_2 = 2700 \text{ kg/m}^3$
+
 - 3. FM3: $E_3 = 70$ GPa; $u = 0.3; \rho_3 = 2720 \text{ kg/m}^3$
 
 | BC | $k_u$ | $k_r$ | $k_w$ | $K_x$ | $K_y$ |
@@ -1912,9 +2077,6 @@ $$\mathbf{M}\ddot{\mathbf{u}}_{i+1} + \mathbf{C}_R\dot{\mathbf{u}}_{i+1} + \math
 | E | 14 x 14 | 1119.64 | 2032.21 | 2104.52 | 2899.32 | 3300.14 | 3318.16 | 3519.06 | 3610.63 |
 | E | 16 x 16 | 1119.64 | 2032.21 | 2104.52 | 2899.32 | 3300.14 | 3318.16 | 3519.06 | 3610.63 |
 
-
-
-
 ## 表 3.3 各种边界边缘 FGP 截圆板的频率收敛性。
 
 | BC | M x N | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
@@ -1941,7 +2103,7 @@ $$\mathbf{M}\ddot{\mathbf{u}}_{i+1} + \mathbf{C}_R\dot{\mathbf{u}}_{i+1} + \math
 **表 3.4** 1 型 FGP 方板的无量纲频率参数。
 
 | BC | e0 | Method | h/L1 (0.01) | | | h/L1 (0.1) | | | |
-|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|---|
 | | | n=1 | 2 | 3 | n=1 | 2 | 3 | |
 | CCCC | | Present | 3.64 | 7.42 | 7.42 | 3.30 | 6.29 | 6.29 | |
 | | | Ref.[2] | 3.64 | 7.42 | 7.42 | 3.30 | 6.29 | | |
@@ -1968,12 +2130,12 @@ $$\mathbf{M}\ddot{\mathbf{u}}_{i+1} + \mathbf{C}_R\dot{\mathbf{u}}_{i+1} + \math
 | | | Ref.[2] | 2.02 | 5.05 | 5.05 | 1.94 | 4.58 | | |
 | | | Difference% | 0.00 | 0.01 | 0.01 | 0.00 | 0.00 | | |
 
-3.3.1 参数研究
+### 3.3.1 参数研究
 
 本小节进行了对具有曲线边缘的 FGP 板的自由振动分析。图 3.6–8 显示了 FGP 板的第一阶频率对主参数 $e_0$ 的敏感性。此外，多孔率分布也影响 FGP 板的自由振动：较大的多孔率相对较弱。表 3.5 圆板的无量纲频率参数。
 
 | BC | Method | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|---|
 | S1 | Present | 218.42 | 446.25 | 315.05 | 555.68 | 613.97 | 699.83 | 816.35 | 873.17 |
 | | Ref[26] | 218.77 | 447.22 | 314.83 | 559.63 | 612.36 | 699.55 | 815.35 | 872.44 |
 | S1 | Present | 105.57 | 302.25 | 188.70 | 367.86 | 457.80 | 499.47 | 645.64 | 660.05 |
@@ -1985,65 +2147,105 @@ $$\mathbf{M}\ddot{\mathbf{u}}_{i+1} + \mathbf{C}_R\dot{\mathbf{u}}_{i+1} + \math
 ## 表 3.7 FGP 板的无量纲频率。
 
 | Type | BC | Method | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-|---|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | CFF | Present | 135.85 | 315.52 | 446.97 | 555.65 | 713.27 | 801.77 | 915.29 | 1031.59 |
 | | | FEM | 101.68 | 352.31 | 446.97 | 555.65 | 700.77 | 801.77 | 915.29 | 1031.59 |
 | | | Difference% | 31.62 | -10.00 | 0.00 | 0.00 | 12.87 | 12.87 | 12.87 | 12.87 |
 | SSSS | Present | 135.85 | 352.31 | 446.97 | 555.65 | 700.77 | 801.77 | 915.29 | 1031.59 |
 | | | FEM | 135.85 | 352.31 | 446.97 | 555.65 | 700.77 | 801.77 | 915.29 | 1031.59 |
+
+
+
 | | | Difference% | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+
 | CCCC | Present | 135.85 | 352.31 | 446.97 | 555.65 | 700.77 | 801.77 | 915.29 | 1031.59 |
+
 | | | FEM | 135.85 | 352.31 | 446.97 | 555.65 | 700.77 | 801.77 | 915.29 | 1031.59 |
+
 | | | Difference% | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
-
-
-
-
 
 ## 表 3.8 FGP 等边板的频率。
 
 | 类型 | 边界 | 方法 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-|---|---|---|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|---|---|
+
 | | C | 测量值 | | 163.67 | 254.59 | 329.99 | 406.95 | 449.62 | 508.04 | 592.34 | 627.93 |
+
 | | | FEM | | 161.02 | 230.75 | 161.41 | 401.19 | 442.21 | 500.98 | 583.10 | 619.24 |
+
 | | | 差异% | | 1.36 | 1.69 | 1.41 | 1.68 | 1.81 | 1.72 | 1.68 |
+
 | | E | 测量值 | | 166.44 | 166.66 | 100.53 | 131.11 | 138.58 | 168.11 | 223.51 | 285.91 |
+
 | | | FEM | | 30.86 | 62.42 | 1.81 | 129.77 | 172.72 | 185.92 | 215.79 | 251.69 |
+
 | | | 差异% | | 2.03 | 1.92 | 1.94 | 1.92 | 1.33 | 1.65 | 1.68 |
+
 | | S | 测量值 | | 80.04 | 142.12 | 228.87 | 275.25 | 340.40 | 370.16 | 475.47 | 484.36 |
+
 | | | FEM | | 1.75 | 128.78 | 196.76 | 297.16 | 417.47 | 438.78 | 492.57 | 573.83 |
+
 | | | 差异% | | 1.78 | 1.55 | 1.63 | 1.81 | 5.34 | 0.98 | 613.32 |
+
 | | C | 测量值 | | 159.55 | 228.76 | 321.89 | 394.46 | 438.78 | 534.69 | 573.31 | 608.08 |
+
 | | | FEM | | 62.05 | 236.88 | 319.05 | 492.57 | 496.01 | 182.70 | 516.56 | 629.43 |
+
 | | | 差异% | | 99.69 | 63 | 0.74 | 0.71 | 0.84 | 0.89 | 0.80 |
+
 | | E | 测量值 | | 39.19 | 61.37 | 98.82 | 128.93 | 162.86 | 184.20 | 212.46 | 247.46 |
+
 | | | FEM | | 1.21 | 11.85 | 0.81 | 106.51 | 161.56 | 171.02 | 360.02 | 472.60 |
+
 | | | 差异% | | 1.19 | 0.88 | 1.27 | 0.53 | 0.19 | 0.54 | |
+
 | | S | 测量值 | | 74.34 | 37.27 | 221.01 | 266.39 | 328.86 | 358.39 | 460.09 |
-| | | 差异% | | 0.96 | 0.72 | 0.85 | | 表 3.9 FGP 圆形板的频率。
+
+| | 差异% | | 0.96 | 0.72 | 0.85 | | 表 3.9 FGP 圆形板的频率。
 
 | 类型 | 边界 | 方法 | | | | | | | |
 |---|---|---|---|---|---|---|---|---|---|
+
 | 1 | CC | 测量值 | 1582.63 | 2625.29 | 3083.57 | 3994.68 | 4115.47 | 4181.69 | 4860.54 | |
+
 | | | FEM | 1569.20 | 2621.50 | 3072.10 | 3985.50 | 4115.47 | 4236.50 | 4857.70 | |
+
 | | | 差异% | 1.16 | 0.14 | 0.28 | 0.47 | 0.69 | 0.89 | 0.28 | |
+
 | 1 | 2 | CC | 测量值 | 1924.01 | 2358.99 | 3352.59 | 3433.93 | 4419.68 | 4221.56 | 4555.36 | |
+
 | | | FEM | 1868.90 | 1903.50 | 2336.50 | 3400.40 | 4193.60 | 4236.30 | 4614.90 | |
+
 | | | 差异% | 1.41 | 1.08 | 1.16 | 0.71 | 0.96 | 0.78 | 0.24 | |
+
 | 1 | | SS | 测量值 | 1040.77 | 1419.52 | 1919.72 | 3065.50 | 2811.70 | 4996.50 | 2871.10 | |
+
 | | | FEM | 1000.50 | 1444.90 | 1818.12 | 3068.70 | 2521.03 | 4776.10 | 2854.10 | |
+
 | | | 差异% | 0.98 | 0.85 | 1.44 | 1.23 | 0.86 | 0.70 | 0.27 | |
+
 | 1 | | EE | 测量值 | 804.82 | 1334.36 | 1352.74 | 3918.60 | 4105.43 | 4551.16 | 4801.95 | |
+
 | | | FEM | 785.88 | 1280.72 | 1296.88 | 3030.50 | 4181.53 | 4537.50 | 4776.10 | |
+
 | | | 差异% | 3.52 | 0.96 | 0.89 | 0.28 | 0.24 | 0.36 | 0.11 | |
+
 | 2 | CC | 测量值 | 1552.22 | 2593.17 | 3038.54 | 1976.50 | 1878.48 | 2490.10 | 2806.90 | |
+
 | | | FEM | 778.63 | 829.90 | 837.17 | 17830.16 | 2701.74 | 2682.90 | 3797.20 | |
+
 | | | 差异% | 0.99 | 0.80 | 2.28 | 0.75 | 0.70 | 0.70 | 0.36 | |
+
 | 2 | | CF | 测量值 | 962.17 | 2350.82 | 2282.62 | 3048.87 | 3984.87 | 3193.50 | 3626.50 | |
+
 | | | FEM | 984.08 | 1739.70 | 2816.22 | 2311.56 | 4551.63 | |
+
 | | | 差异% | 0.67 | 0.66 | 0.31 | 0.61 | 0.62 | 0.39 | 0.55 | |
+
 | 2 | | SS | 测量值 | 862.10 | 1884.83 | 3293.74 | 3326.50 | 4178.27 | 4776.10 | 2854.10 |
+
 | | | FEM | 871.18 | | | | | | | |
+
 | | | 差异% | | | | | | | | |
 
 系数意味着孔隙体积较大，导致结构刚度和自然频率降低。同时，孔隙的分布在某种程度上可以优化振动行为。
@@ -2053,28 +2255,28 @@ $$\mathbf{M}\ddot{\mathbf{u}}_{i+1} + \mathbf{C}_R\dot{\mathbf{u}}_{i+1} + \math
 如图 39 所示，本文采用了四种加载类型：(A) 矩形脉冲；(B) 三角脉冲；(C) 半正波脉冲；(D) 指数脉冲，其表达式如下：
 
 对于矩形脉冲：
+
 ```
 f(t) = f_r(H(t) - H(t - t_r))
 ```
 
 对于三角脉冲：
+
 ```
 f(t) = f_r(1 - t/t_r)
 ```
 
 对于半正波脉冲：
+
 ```
 f(t) = f_r.sin(pi*t/t_r)H(t)
 ```
 
 对于指数脉冲：
+
 ```
 f(t) = f_r e^{-Dt}
 ```
-
-
-
-
 
 ![](img/90ed165a39fa708ec438fcda79319c25_94_0.png)
 
@@ -2088,7 +2290,7 @@ f(t) = f_r e^{-Dt}
 
 #### 3.3.3.2 稳态响应的参数化分析
 
-基于 3.2.1 节中之前的验证，接下来的工作关注 FGP 结构稳态响应在不同孔隙系数和分布下的行为。通过图 3.18–3.20 评估了孔隙参数对 FGP 板稳态响应影响的定性规律。一方面，我们得出结论：无论分布和几何形状如何，不同的孔隙系数 $e_0$ 对位移幅的影响较小，而 2 型的位移幅通常大于 1 型。另一方面，对于 1 型孔隙分布，随着孔隙系数 $e_0$ 的增加，位移向高频移动，而这与 2 型孔隙分布的情况相反。此外，孔隙系数 $e_0$ 的影响程度对孔隙分布非常敏感，2 型孔隙分布引起的 $e_0$ 影响比 1 型分布显著得多。
+基于 3.2.1 节中之前的验证，接下来的工作关注 FGP 结构稳态响应在不同孔隙系数和分布下的行为。通过图 3.18–3.20 评估了孔隙参数对 FGP 板稳态响应影响的定性规律。一方面，我们得出结论：无论分布和几何形状如何，不同的孔隙系数 `e0` 对位移幅的影响较小，而 2 型的位移幅通常大于 1 型。另一方面，对于 1 型孔隙分布，随着孔隙系数 `e0` 的增加，位移向高频移动，而这与 2 型孔隙分布的情况相反。此外，孔隙系数 `e0` 的影响程度对孔隙分布非常敏感，2 型孔隙分布引起的 `e0` 影响比 1 型分布显著得多。
 
 具有复杂曲线边缘的功能梯度多孔四边形板的自由振动与受迫振动
 
@@ -2116,22 +2318,27 @@ f(t) = f_r e^{-Dt}
 
 ## 致谢
 
-作者感谢匿名评审员提供的宝贵反馈。作者还感谢感谢中国国家自然科学基金（资助号：52075554）、湖南省自然科学基金（2022J20070 和 2021J30841）以及中南大学创新驱动科研计划（资助号：2023CXQ049）的资金支持。本研究得到了中南大学直属高校基础研究经费（资助号：2022ZZTS0015）的支持。
+作者感谢匿名评审员提供的宝贵反馈。作者还感谢感谢中国国家自然科学基金（资助号：`52075554`）、湖南省自然科学基金（`2022J20070` 和 `2021J30841`）以及中南大学创新驱动科研计划（资助号：`2023CXQ049`）的资金支持。本研究得到了中南大学直属高校基础研究经费（资助号：`2022ZZTS0015`）的支持。
 
 ## 参考文献
 
 - [1] Chen Z, et al. Investigation on free vibration and transient response of functionally graded graphene platelets reinforced cylindrical shell resting on elastic foundation. Eur J Phys 2020;135(7).
+
 - [2] Xue Y, et al. Free vibration analysis of porous plates with porosity distributions in the thickness and in-plane directions using isogeometric analysis. Int J Mech Sci 2019;12:546–62.
+
 - [3] Tran TT, Pham Q-H, Nguyen-Thoi T. An edge-based smoothed finite element for free vibration analysis of Functionally Graded Porous (FGP) plates on Elastic Foundation Taking Into Mass (EFTM). Math Prob Eng 2020;2020:1–17.
+
 - [4] Tran TT, Pham Q-H, Nguyen-Thoi T. Dynamic analysis of functionally graded plates resting on elastic foundation taking into mass subjected to moving loads using an edge-based smoothed finite element. SAE International 2020;2020:19
+
 - [5] Tran TT, Pham Q-H, Nguyen-Thoi T. Static and free vibration of functionally graded variable-thickness plates using an edge-based smoothed finite element method. Def Tech 2021;17(9):771–86.
+
 - [6] Tung PT, et al. Nonlinear bending analysis of fgp plates under various boundary conditions. Structures 2021;34:4803–13.
+
 - [7] Xiao X, et al. Nonlinear in-plane instability of the confined fgp arches with nanocomposites reinforcement under directed-uniform pressure. Eng Struct 2022:252.
+
 - [8] Yin Z, et al. An efficient scaled boundary element element in bending and analysis of functionally graded piezoelectric plates. Eng Anal Bound Mech 2021:113208:81.
+
 - [9] Barati MR, Zenkour AM. Electromechanical vibration of plates functionally graded piezoelectric plates under various boundary conditions. J Vib Control 2016;64(4):1910–26.
-
-
-
 
 - [39] Chen, Z., 等. 层状开口圆柱壳耦合矩形板的振动分析。2022;292:115607.
 
@@ -2143,7 +2350,7 @@ f(t) = f_r e^{-Dt}
 
 Yan Qing Wang¹², Qing Dong Chai¹ and Mei Wen Teng¹, College of Sciences,¹辽宁省结构动力学实验室, College of Sciences, Northeastern University, Shenyang, P.R. China; ²教育部深部矿山安全采矿重点实验室, Northeastern University, Shenyang, P.R. China
 
-### ### 节 4.1 引言
+### 节 4.1 引言
 
 金属泡沫作为一种低密度材料，因其低密度、显著的能量吸收和高导热性而受到越来越多的关注 [1,2]。由于内孔隙的大小可以定制，因此能够形成功能梯度（FG）多孔结构，这种结构具有均匀结构和良好的机械性能 [3-5]。
 
@@ -2154,53 +2361,59 @@ Yan Qing Wang¹², Qing Dong Chai¹ and Mei Wen Teng¹, College of Sciences,¹�
 Fakuwa 等 [16] 研究了具有径向轴承支撑的旋转圆柱壳的感振动响应，并通过频率响应测试验证了壳的振动特性。上述研究主要关注圆柱壳的线性自由振动，且针对经典边界条件。
 
 机器学习辅助功能梯度多孔复合结构的分析、设计与增材制造。
+
 DOI: https://doi.org/10.1016/B978-0-443-15425-6.0006-7
+
+
+
 Copyright © 2024 Elsevier. 版权所有。
 
 已知，圆柱壳经常受到外力作用并产生大幅幅振动，这需要使用非线性壳理论进行描述。因此，学者们进行了许多关于圆柱壳非线性振动的研究 [17–24]。Chai 等 [25] 研究了任意边界条件下跨跨圆柱壳的非线性振动特性。Rosikhin 和 Shitnikova [26] 分析了粘度对圆柱壳内共振的影响。在约束边界条件和均匀温度变化下，Zhang 等 [27] 对功能梯度圆柱壳的非线性动力学进行了分析。Amabili [28] 和 Ye 与 Wang [29] 分别分析了圆柱壳的 1:1:2 和 1:1:2 内部行为。
 
 在本章介绍了功能梯度圆柱壳的自由和受迫振动，包括线性和非线性分析。通过引入人工弹簧技术实现了任意边界条件。
 
-### ### 4.2 线性自由振动
+## 4.2 线性自由振动
 
-具有长度 $L$、厚度 $h$ 和半径 $R$ 的圆柱壳如图1所示。正交坐标系 $(x, θ, z)$ 用于纵向、周向和径向。位移由 $u, v, w$ 表示。为了方便计算，无量纲量 $\eta$ 定义为 $\eta=h$。数字“0”和“1”指示壳的左和右边缘。通过引入弹簧可以实现任意边界条件。这里考虑了三组频率分布：(A) PD-A, (B) PD-B, (C) PD-U。
+具有长度 `L`、厚度 `h` 和半径 `R` 的圆柱壳如图1所示。正交坐标系 `(x, θ, z)` 用于纵向、周向和径向。位移由 `u, v, w` 表示。为了方便计算，无量纲量 `η` 定义为 `η=h`。数字“0”和“1”指示壳的左和右边缘。通过引入弹簧可以实现任意边界条件。这里考虑了三组频率分布：(A) `PD-A`, (B) `PD-B`, (C) `PD-U`。
 
 功能梯度圆柱壳的自由与受迫振动
 
-
-
-
 功能梯度多孔圆柱壳的自由与自由振动
 
-应变向量 $\varepsilon$ 表示为：
+应变向量 `ε` 表示为：
 
 $$\varepsilon = [\varepsilon_x, \varepsilon_{\theta}, \varepsilon_{x\theta}, \kappa_x, \kappa_{\theta}, \kappa_{x\theta}]^T \quad (4.9)$$
 
-其中 $\varepsilon_x, \varepsilon_{\theta}$ 表示中面应变，$\kappa_x, \kappa_{\theta}$ 表示中面曲率。根据 Sanders 理论，中面的应变-位移关系和曲率变化可以表示为：
+其中 `ε_x, ε_θ` 表示中面应变，`κ_x, κ_θ` 表示中面曲率。根据 Sanders 理论，中面的应变-位移关系和曲率变化可以表示为：
 
 $$\varepsilon_x = \frac{\dot{u}}{L\eta}$$
+
 $$\varepsilon_{\theta} = \frac{1}{R}\frac{dw}{d\theta} - \frac{w}{R}$$
+
 $$\varepsilon_{x\theta} = \frac{1}{R}\frac{du}{d\theta} + \frac{\dot{v}}{L\eta} \quad (4.10)$$
 
 $$\kappa_x = -\frac{\ddot{w}}{L^2\eta^2}$$
+
 $$\kappa_{\theta} = -\frac{1}{R^2}\frac{\partial^2w}{d\theta^2} - \frac{1}{R}\frac{\dot{w}}{R}$$
+
 $$\kappa_{x\theta} = -\frac{1}{R^2}\frac{\partial^2u}{d\theta^2} + \frac{2}{RL}\frac{\partial v}{d\theta} - \frac{2}{RL}\frac{\dot{\eta}}{R\eta} \quad (4.11)$$
 
-等式 (4.8) 中的应力矩阵 $S$ 给出：
+等式 `(4.8)` 中的应力矩阵 `S` 给出：
 
 $$\begin{bmatrix} A_{11} & A_{12} & 0 & B_{11} & B_{12} & 0 \\ A_{12} & A_{22} & 0 & B_{12} & B_{22} & 0 \\ 0 & 0 & A_{66} & 0 & 0 & B_{66} \\ B_{11} & B_{12} & 0 & D_{11} & D_{12} & 0 \\ B_{12} & B_{22} & 0 & D_{12} & D_{22} & 0 \\ 0 & 0 & 0 & D_{66} & 0 & D_{66} \end{bmatrix} \quad (4.12)$$
 
-其中 $A_{ij}, B_{ij}$ 和 $D_{ij}$ ($i, j=1, 2, 6$) 分别表示拉伸矩阵、拉伸-耦合矩阵和弯曲矩阵的元素。它们的定义为：
+其中 `A_{ij}, B_{ij}` 和 `D_{ij}` (`i, j=1, 2, 6`) 分别表示拉伸矩阵、拉伸-耦合矩阵和弯曲矩阵的元素。它们的定义为：
 
 $$A_{ij} = \int_{-h/2}^{h/2} Q_{ij}dz, B_{ij} = \int_{-h/2}^{h/2} zQ_{ij}dz, D_{ij} = \int_{-h/2}^{h/2} z^2Q_{ij}dz \quad (4.13)$$
 
-等式 (4.13) 中的 $Q_{ij}$ 是应力-应变矩阵元素，可以通过以下方式确定：
+等式 `(4.13)` 中的 `Q_{ij}` 是应力-应变矩阵元素，可以通过以下方式确定：
 
 $$Q_{11} = Q_{22} = \frac{E(z)}{1-\mu(z)^2}, Q_{12} = \frac{\mu(z)E(z)}{1-\mu(z)^2}, Q_{66} = \frac{E(z)}{2(1+\mu(z))} \quad (4.14)$$
 
 在壳两端实现的人工弹簧用于模拟任意边界条件。边界人工弹簧的势能表示为：
 
 $$U_b = \frac{1}{2}\int_{0}^{2\pi} \left\{ k_u^2[u(0, \theta, t)]^2 + k_v^2[v(0, \theta, t)]^2 + k_w^2[w(0, \theta, t)]^2 + k_{\rho}^2\left[\frac{\Delta w(0,t)}{L_z}\right]^2 \right\} d\theta$$
+
 + \frac{1}{2}\int_{0}^{2\pi} \left\{ k_{\theta}^2[u(1, \theta, t)]^2 + k_{\phi}^2[v(1, \theta, t)]^2 + k_w^2[w(1, \theta, t)]^2 + k_{\rho}^2\left[\frac{\Delta w(1,t)}{L_z}\right]^2 \right\} d\theta \quad (4.15)$$
 
 ### 4.2.2 求解步骤
@@ -2208,32 +2421,38 @@ $$U_b = \frac{1}{2}\int_{0}^{2\pi} \left\{ k_u^2[u(0, \theta, t)]^2 + k_v^2[v(0,
 FG 圆柱壳在周向方向的模式定义为谐函数，轴向模式选择为多项式。则位移函数可以表示为：
 
 $$u(\eta, \theta, t) = \cos(n\theta+\omega t)U(\eta)$$
+
 $$v(\eta, \theta, t) = \sin(n\theta+\omega t)V(\eta)$$
+
 $$w(\eta, \theta, t) = \cos(n\theta+\omega t)W(\eta) \quad (4.16)$$
 
-其中 $\omega$ 是圆频率，$n$ 是周向波数。用切比夫多项式表示的轴向模式函数 $U(\eta), V(\eta)$ 和 $W(\eta)$ 可以写为：
+其中 `ω` 是圆频率，`n` 是周向波数。用切比夫多项式表示的轴向模式函数 `U(η), V(η)` 和 `W(η)` 可以写为：
 
 $$U(\eta) = \sum_{g=0}^{NT} a_g \varphi_g(\eta)$$
+
 $$V(\eta) = \sum_{g=0}^{NT} b_g \varphi_g(\eta)$$
+
 $$W(\eta) = \sum_{g=0}^{NT} c_g \varphi_g(\eta) \quad (4.17)$$
 
-其中 $NT$ 是截断阶；$a_g, b_g$ 和 $c_g$ 是未知系数；$\varphi_g(\eta), \varphi_g(\eta)$, 和 $\varphi_g(\eta)$ 是第一类切比夫多项式，其递推关系为：
+其中 `NT` 是截断阶；`a_g, b_g` 和 `c_g` 是未知系数；`φ_g(η), φ_g(η)`, 和 `φ_g(η)` 是第一类切比夫多项式，其递推关系为：
 
 $$\varphi_0(\eta) = 1, \varphi_1(\eta) = \eta, \varphi_{g+1}(\eta) = 2\eta\varphi_g(\eta) - \varphi_{g-1}(\eta), g \ge 1 \quad (4.18)$$
 
-坐标从 $\eta$ 到 $2\eta-1$ 的变换对于应用切比夫多项式是必要的，因为切比夫多项式定义在区间 $[-1, 1]$ 之间。一旦获得了能量表达式和许函数，便采用 Ritz 方法推导出 FG 多孔壳的特征值方程。
+坐标从 `η` 到 `2η-1` 的变换对于应用切比夫多项式是必要的，因为切比夫多项式定义在区间 `[-1, 1]` 之间。一旦获得了能量表达式和许函数，便采用 Ritz 方法推导出 FG 多孔壳的特征值方程。
 
-将等式 (4.16) 代入等式 (7)，FG 多孔壳的动能 $T$ 可以表示为：
+将等式 `(4.16)` 代入等式 `(7)`，FG 多孔壳的动能 `T` 可以表示为：
 
 $$T = \frac{\pi LR}{2} \rho_0^2 \int_{0}^{L} (U^2 + V^2 + W^2) d\eta \quad (19)$$
+
 其中
+
 $$\rho_0^2 = \int_{-L}^{L} \rho(z) dz \quad (20)$$
 
-同样，将等式 (4.16) 代入等式 (8)，FG 多孔壳的应变能通过：
+同样，将等式 `(4.16)` 代入等式 `(8)`，FG 多孔壳的应变能通过：
 
 $$U_\epsilon = \frac{\pi L}{2} \int_{-L}^{L} \left( n^2 A_{66} U^2 + \frac{R^2 A_{11}}{L^2} V^2 + 2n \left(\frac{RA_{12}}{L} + \frac{B_{12}}{L}\right) U' V' - 2n \left(\frac{RA_{66}}{L} + \frac{B_{06}}{L}\right) U' V' + 2n \left(\frac{n^2 B_{12}}{L} + \frac{RA_{12}}{L}\right) U' W' + \frac{4n^2 B_{66}}{L} UW' - \frac{R^2 B_{66}}{L^3} U' V' + n^2 \left(\frac{A_{22}}{R} + \frac{D_{22}}{R^2}\right) V^2 + \left(\frac{D_{66}}{L} + \frac{2RB_{66}}{L^2}\right) V' W' + 4n \left(\frac{RB_{66}}{L^2} + \frac{B_{06}}{L}\right) V' W'' - 2n \left(\frac{n^2 B_{12}}{L^2} + \frac{RB_{12}}{L}\right) V' W'' + 2n \left(\frac{n^2 B_{22}}{R} + \frac{D_{22}}{R^2}\right) W' W'' + A_{22} \frac{2n^2 B_{22}}{R} + \frac{n^2 D_{06}}{R^2} W^2 + 4n^2 \frac{D_{06}}{L^2} W^2 - \frac{R^2 D_{11}}{L^4} W'' - 2n \left(\frac{n^2 B_{12}}{L^2} + \frac{RB_{12}}{L}\right) WW'' \right) d\eta \quad (21)$$
 
-然后，将等式 (4.16) 代入等式 (15)，边界势能可以写为：
+然后，将等式 `(4.16)` 代入等式 `(15)`，边界势能可以写为：
 
 $$U_b = \frac{\pi R}{2} \left\{ k_u^2[U(0)]^2 + k_v^2[V(0)]^2 + k_w^2[W(0)]^2 + k_{\theta}^2\left[\frac{W(0)}{L_{\eta}}\right]^2 \right\} + \frac{\pi R}{2} \left\{ k_u^2[U(1)]^2 + k_v^2[V(1)]^2 + k_w^2[W(1)]^2 + k_{\theta}^2\left[\frac{W(1)}{L_{\eta}}\right]^2 \right\} \quad (22)$$
 
@@ -2241,7 +2460,7 @@ $$U_b = \frac{\pi R}{2} \left\{ k_u^2[U(0)]^2 + k_v^2[V(0)]^2 + k_w^2[W(0)]^2 + 
 
 $$\Pi = T - U_c - U_s \quad (23)$$
 
-应用标准 Ritz 程序对未知系数最小化 $\Pi$，可以得到表达式 (24)：
+应用标准 Ritz 程序对未知系数最小化 `Π`，可以得到表达式 `(24)`：
 
 $$\frac{\partial \Pi}{\partial a_g}=0, \frac{\partial \Pi}{\partial b_g}=0, \frac{\partial \Pi}{\partial c_g}=0, \dots, NT \quad (24)$$
 
@@ -2249,33 +2468,41 @@ $$\frac{\partial \Pi}{\partial a_g}=0, \frac{\partial \Pi}{\partial b_g}=0, \fra
 
 $$\omega^2 \mathbf{M} \mathbf{q} - \mathbf{K} \mathbf{q} = \mathbf{K}_s \quad (25)$$
 
-其中 $\mathbf{q} = [\mathbf{a}_g, \mathbf{b}_g, \mathbf{c}_g]^T$ 是 Ritz 向量，$\mathbf{a}_g = [a_1, a_2, \dots, a_{NT}]$, $\mathbf{b}_g = [b_1, b_2, \dots, b_{NT}]$, 以及 $\mathbf{c}_g = [c_1, c_2, \dots, c_{NT}]$。
+其中 `q = [a_g, b_g, c_g]^T` 是 Ritz 向量，`a_g = [a_1, a_2, ..., a_{NT}]`, `b_g = [b_1, b_2, ..., b_{NT}]`, 以及 `c_g = [c_1, c_2, ..., c_{NT}]`。
 
-质量矩阵 $\mathbf{M}$ 的表达式为：
+质量矩阵 `M` 的表达式为：
 
 $$\mathbf{M} = \begin{bmatrix} M_{aa} & M_{ab} \\ M_{ac} & M_{bc} \end{bmatrix} \quad (26)$$
 
 其中
+
 $$M_{aa}(p, q) = \rho_L^{LR} \int_{0}^{1} \varphi_p(\eta)\varphi_q(\eta) d\eta \quad (27)$$
+
 $$M_{ab}(p, q) = \rho_L^{LR} \int_{0}^{1} \varphi_p(\eta)\varphi_q(\eta) d\eta \quad (28)$$
+
 $$M_{bc}(p, q) = \rho_L^{LR} \int_{0}^{1} \varphi_p(\eta)\varphi_q(\eta) d\eta \quad (29)$$
 
-刚度矩阵 $\mathbf{K}$ 的表达式为：
+刚度矩阵 `K` 的表达式为：
 
 $$\mathbf{K} = \begin{bmatrix} K_{aa} & K_{ab} & K_{ac} \\ K_{ba} & K_{bb} & K_{bc} \\ K_{ca} & K_{cb} & K_{cc} \end{bmatrix} \quad (4.30)$$
 
 其中
+
 $$K_{aa}(p, q) = \frac{L}{R} \int_{0}^{L} \left[ n^2 A_{66} - \frac{n^2 B_{66}}{R} + \frac{n^2 D_{66}}{4R^2} \right] \varphi_p(\eta)\varphi_q(\eta) + \frac{R^2 A_{11}}{L^2} \varphi_p(\eta)\varphi_q(\eta) d\eta \quad (31)$$
+
 $$K_{ab}(p, q) = \frac{L}{R} \int_{0}^{L} \left( \frac{n^2 B_{12}}{L} - \frac{RA_{12}}{L} \right) \varphi_p(\eta)\varphi_q(\eta) + \frac{3nD_{66}}{L} \left( \frac{RA_{66}}{L} - \frac{B_{66}}{L} \right) \varphi_p(\eta)\varphi_q(\eta) d\eta \quad (32)$$
+
 $$K_{ac}(p, q) = \frac{L}{R} \int_{0}^{L} \left[ \left( \frac{RA_{12}}{L} + \frac{B_{12}}{L} \right) \varphi_p(\eta)\varphi_q(\eta) + \left( \frac{n^2 D_{66}}{L} - \frac{2n^2 B_{66}}{L} \right) \varphi_p(\eta)\varphi_q(\eta) \right] - \frac{R^2 B_{11}}{L^3} \varphi_p(\eta)\varphi_q(\eta) d\eta \quad (33)$$
+
 $$K_{ba}(p, q) = \frac{L}{R} \int_{0}^{L} \left[ \left( \frac{RA_{12}}{L} + \frac{B_{12}}{L} \right) \varphi_p(\eta)\varphi_q(\eta) + \frac{3nD_{66}}{4L} \left( \frac{RA_{66}}{L} - \frac{B_{66}}{L} \right) \varphi_p(\eta)\varphi_q(\eta) \right] d\eta \quad (34)$$
+
 $$K_{bb}(p, q) = \frac{L}{R} \int_{0}^{L} \left[ n^2 A_{22} - \frac{2n^2 B_{22}}{R} + \frac{n^2 D_{22}}{R^2} \right] \varphi_p(\eta)\varphi_q(\eta) + \frac{R^2 A_{66}}{L^2} + \frac{3RB_{66}}{L} + \frac{9D_{66}}{4L^2} \varphi_p(\eta)\varphi_q(\eta) d\eta \quad (35)$$
+
 $$K_{bc}(p, q) = \frac{L}{R} \int_{0}^{L} \left[ \left( \frac{2nRB_{66}}{L^2} + \frac{3nD_{66}}{L^2} \right) \varphi_p(\eta)\varphi_q(\eta) - \left( \frac{nRB_{12}}{L^2} + \frac{nD_{12}}{L^2} \right) \varphi_p(\eta)\varphi_q(\eta) \right] + \left( nA_{22} + \frac{n^2 B_{22}}{R} + \frac{n^2 D_{22}}{R^2} \right) \varphi_p(\eta)\varphi_q(\eta) d\eta \quad (36)$$
 
+$$K_{cv}(p, q) = \frac{L}{R_0} \left[ \frac{RA_{12}}{L} + \frac{n^2B_{12}}{R}\psi_p^{(w)}(\eta)\psi_q^{(w)}(\eta) + \frac{n^2D_{66}}{LR} - \frac{2n^2D_{66}}{L}\psi_p^{(w)}(\eta)\psi_q^{(w)}(\eta) + \frac{R^2B_{11}}{L^5}\psi_p^{(w)}(\eta)\psi_q^{(w)}(\eta) \right] d\eta \quad (4.37)$$
 
 
-
-$K_{cv}(p, q) = \frac{L}{R_0} \left[ \frac{RA_{12}}{L} + \frac{n^2B_{12}}{R}\psi_p^{(w)}(\eta)\psi_q^{(w)}(\eta) + \frac{n^2D_{66}}{LR} - \frac{2n^2D_{66}}{L}\psi_p^{(w)}(\eta)\psi_q^{(w)}(\eta) + \frac{R^2B_{11}}{L^5}\psi_p^{(w)}(\eta)\psi_q^{(w)}(\eta) \right] d\eta \quad (4.37)$
 
 $K_{cb}(p, q) = \frac{L}{R_0} \left[ \frac{2nRB_{66}}{L^2} + \frac{3nD_{66}}{L}\psi_p^{(w)}(\eta)\psi_q^{(w)}(\eta) - (\frac{nRB_{12}}{L^2} + \frac{nD_{12}}{L^2})\psi_p^{(w)}(\eta)\psi_q^{(w)}(\eta) + nA_{22} + \frac{n^2B_{22}}{R} + \frac{n^2D_{22}}{R^2}\psi_p^{(w)}(\eta)\psi_q^{(w)}(\eta) \right] d\eta \quad (4.38)$
 
@@ -2340,10 +2567,15 @@ $L=5$ m，$R=1$ m，$h=0.002$ m，$E_m=2.04\times10^{9}$ Pa，$\rho_m=7850$ kg/m
 图 4.3 显示了不同孔隙率下自然频率与周向波数的关系。此外，不同的边界条件：
 
 ![](img/90ed165a39fa708ec48fc7931c25_111_0.png)
+
 ![](img/90ed165a39fa708ec48fc7931c25_111_1.png)
+
 ![](img/90ed165a39fa708ec48fc7931c25_111_2.png)
+
 ![](img/90ed165a39fa708ec48fc7931c25_111_3.png)
+
 ![](img/90ed165a39fa708ec48fc7931c25_111_4.png)
+
 ![](img/90ed165a39fa708ec48fc7931c25_111_5.png)
 
 **图 4** 不同孔隙率下的自然频率周向波数：(A) C-C；(B) S-S；(C) $k_t=10^{10}$ (N/m or Nrad)；(D) $k_l=10^{9}$ (N/m or Nrad)；(E) $k_t=10^{9}$ (N/m or Nrad)；(F) $k_l=10^{8}$ (N/m or Nrad)。对于较强的边界，如图 4.3A–C 所示，自然频率随着孔隙率的增加而降低。但频率降低与周向波数有关。对于较弱边界，上述现象不再适用。如图 4.3D–F 所示，随着边界刚度的降低，孔隙率对自然频率的影响逐渐收敛。当周向波数较小时，自然频率甚至随孔隙率的增加而增加（见图 4.3E 和 F）。同时，对于大波数，孔隙率对自然频率的影响也微乎其微。
@@ -2357,7 +2589,7 @@ $L=5$ m，$R=1$ m，$h=0.002$ m，$E_m=2.04\times10^{9}$ Pa，$\rho_m=7850$ kg/m
 **表 4.3** 不同边界条件和孔隙分布下功能梯度多孔圆柱壳的最低自然频率 (Hz) ($e_1=0.2$)。
 
 | | C-C | | E-E | | C-F | | |
-|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|
 | | PD-A | PD-B | PD-A | PD-B | PD-A | PD-B |
 | 1 | 963.1 | 963.1 | 248.8 | 248.8 | 248.8 | 453.4 | 453.1 |
 | 2 | 628.5 | 628.5 | 227.8 | 235.0 | 235.1 | 229.2 |
@@ -2382,10 +2614,6 @@ $$\begin{aligned} u(\eta, \theta, t) &= \sum_{n=1}^{N} \sum_{m=-G}^{G} a_{nm}T_m
 FG 多孔
 
 复合结构
-
-
-
-
 
 ![](img/90ed165a39fa708ec438fcda79319c25_114_0.png)
 
@@ -2418,6 +2646,7 @@ $V = [T_0(\eta)\sin(\theta)]$
 $W = [T_0(\eta)\cos(\theta), \dots, T_G(\eta)\cos(\theta), \dots, T_1(\eta)\cos(N), \dots, T_G(\eta)\cos(N)]^T \quad (4.55)$
 
 $J = N(G+1)$.
+
 功能梯度孔隙圆柱壳的拉格朗日方程可以表示为：
 
 $\frac{d}{dr}\frac{\partial \tilde{T}}{\partial \tilde{q}_u} +\frac{\partial (U_z + U_n)}{\partial \tilde{q}_u}}=f_u$
@@ -2427,6 +2656,7 @@ $\frac{d}{dr}\frac{\partial \tilde{T}}{\partial \tilde{q}_v} +\frac{\partial (U_
 $\frac{d}{dr}\frac{\partial \tilde{T}}{\partial \tilde{q}_w} +\frac{\partial (U_z + U_n)}{\partial \tilde{q}_w}}=f_w$
 
 $f_u, f_v$ 和 $f_w$ 分别是轴向、周向和径向方向的外力矢量。
+
 将等式 (4.7) 和 (4.15) 代入等式 (4.56)，可以导出功能梯度孔隙圆柱壳的控制方程：
 
 $M\dot{q} + C\dot{q} + (K+K_s)q=F(t) \quad (4.57)$
@@ -2436,6 +2666,7 @@ $M\dot{q} + C\dot{q} + (K+K_s)q=F(t) \quad (4.57)$
 $q = [q_u, q_v, q_w]^T \quad (4.58)$
 
 其中 $M, C, K$, 和 $K_s$ 分别是质量矩阵、阻尼矩阵、结构刚度矩阵和弹簧刚度矩阵。
+
 质量矩阵 $M$ 表示为：
 
 $M = \begin{bmatrix} M_1 & 0 & 0 \\ 0 & M_2 & 0 \\ 0 & 0 & M_3 \end{bmatrix} \quad (4.59)$
@@ -2451,6 +2682,7 @@ $M_3 = \rho^b_{LR} \int_0^{2\pi} \mathbf{WW}^T d\theta\eta \quad (4.62)$
 刚度矩阵 $K$ 表示为：
 
 $K = \begin{bmatrix} \frac{1}{2}K_{11} & \frac{1}{2}K_{12} & \frac{1}{2}K_{13} \\ \frac{1}{2}K_{21} & \frac{1}{2}K_{22} & \frac{1}{2}K_{23} \\ \frac{1}{2}K_{31} & \frac{1}{2}K_{32} & \frac{1}{2}K_{33} \end{bmatrix} \quad (4.63)$
+
 其中
 
 $K_{11} = \frac{L}{R} \int_0^{2\pi} \left( \frac{L}{A_{66}}\frac{\partial U}{\partial\theta} + \frac{R^2 A_{11}}{L^2}\frac{\partial U}{\partial\theta} + \frac{D_{66}}{R^2}\frac{\partial U}{\partial\theta} \right) d\theta\eta \quad (4.64)$
@@ -2463,13 +2695,16 @@ $K_{22} = \frac{L}{R} \int_0^{2\pi} \left( A_{22} + \frac{D_{22}}{R^2}\frac{\par
 
 $K_{23} = \frac{L}{R} \int_0^{2\pi} \left( \frac{2A_{22}}{L}\frac{\partial V}{\partial\theta} - \frac{2D_{22}}{R^2}\frac{\partial W}{\partial\theta} + \frac{6D_{66}}{L^2}\frac{\partial W}{\partial\theta} - \frac{2D_{12}}{L^2}\frac{\partial V}{\partial\theta} \right) d\theta\eta \quad (4.68)$
 
+
+
 $K_{33} = \frac{L}{R} \int_0^{2\pi} \left( A_{22}\mathbf{W}\mathbf{W}^T + \frac{D_{22}}{R^2}\frac{\partial W}{\partial\theta} + \frac{R^2 A_{11}}{L^5}\frac{\partial W}{\partial\theta} + \frac{4D_{60}}{L^2}\frac{\partial W}{\partial\theta} \right) d\theta\eta \quad (4.69)$
 
-功能梯度孔隙圆柱壳的自由与受迫振动
+# 功能梯度孔隙圆柱壳的自由与受迫振动
 
 弹簧刚度矩阵 $\mathbf{K}_s$ 表示为：
 
 $\mathbf{K}_s = \begin{bmatrix} \mathbf{K}_{s11} & 0 & 0 \\ 0 & \mathbf{K}_{s22} & 0 \\ 0 & 0 & \mathbf{K}_{s33} \end{bmatrix} \quad (4.70)$
+
 其中
 
 $\mathbf{K}_{s11} = \int_{0}^{2\pi} (k_1^0 U(0)T(0) + k_1^1 U(1)T(1))R d\theta \quad (4.71)$
@@ -2491,9 +2726,10 @@ $\beta = 2 \left( \frac{\xi_u}{\omega_u} - \frac{\xi_v}{\omega_v} \right) \left(
 $F(t) = [f_u, f_v, f_w]^T \quad (4.76)$
 
 其中 $f_{ex}$ 是激励幅度。
+
 通过等式 (4.57) 得到稳态响应，功能梯度孔隙圆柱壳的瞬态响应会衰减，由于阻尼的存在，稳态分析更为重要。在本节中，
 
-### 4.3.2 求解步骤
+## 4.3.2 求解步骤
 
 功能梯度圆柱壳的频率响应由下给出：
 
@@ -2510,6 +2746,7 @@ $\mathbf{Q}^T(\mathbf{K} + \mathbf{C}/\mathbf{M}) = \text{diag}(\omega_1^2, \dot
 $H_{ij}(\omega) = \sum_{n=1}^{NT} \frac{q_{in}q_{jn}}{\omega_n^2 - \omega^2 + i\dots} \quad (4.80)$
 
 其中 $NT$ 是实际计算中的截断模数。
+
 事实上，模态 $q_i$ 是位移函数的未知系数，表示为：
 
 $\mathbf{q}_i = \begin{bmatrix} a_{10} & a_{11} & \dots & a_{1G} & a_{N0} & a_{N1} & \dots & a_{NG1} \\ b_{10} & b_{11} & \dots & b_{1G} & b_{N0} & b_{N1} & \dots & b_{NG1} \\ c_{10} & c_{11} & \dots & c_{1G} & c_{N0} & c_{N1} & \dots & c_{NG1} \end{bmatrix}^T \quad (4.81)$
@@ -2520,20 +2757,17 @@ $\q_i^a = \sum_{e=0}^G T_{ie}^a(r_p)\cos(\theta_e), \sum_{e=0}^G T_{ie}^a(r_p)\c
 
 $\q_i^b = \sum_{e=0}^G T_{ie}^b(r_p)\cos(\theta_e), \sum_{e=0}^G T_{ie}^b(r_p)\cos(2\theta_e), \dots, \sum_{e=0}^G T_{ie}^b(r_p)\cos(G\theta_e) \quad (4.82)$
 
-
-
-
 功能梯度多孔圆柱壳的自由振动与受迫振动
 
 其中 $\eta_p$，$\theta_p$ 代表与激励点相关的坐标值，$\eta_q$，$\theta_q$ 代表与响应点相关的坐标值。因此，可以得到 FG 多孔圆柱壳相应激励点与响应点之间的频率响应：
 
 ```
-$H_p^q(\omega) = \sum_{i=1}^{NT} \frac{-\omega^2 q_i^T}{\omega_i^2 + (\alpha\beta\omega_i)^2 - \omega^2} \quad (4.83)
+$H_p^q(\omega) = \sum_{i=1}^{NT} \frac{-\omega^2 q_i^T}{\omega_i^2 + (\alpha\beta\omega_i)^2 - \omega^2} \quad (4.83)$
 ```
 
 需要注意的是，由公式(4.83)得到的频率响应是一个复函数。FG 多孔圆柱壳在任何激励函数下的响应值通过取其绝对值得到。
 
-### 4.3.3 结果与讨论
+## 4.3.3 结果与讨论
 
 本节中 FG 多孔圆柱壳的几何和材料参数与第 4.2 节相同。首先
 
@@ -2549,7 +2783,7 @@ $H_p^q(\omega) = \sum_{i=1}^{NT} \frac{-\omega^2 q_i^T}{\omega_i^2 + (\alpha\bet
 
 在固定边界条件下，齐质圆柱壳方法（FEM）的频率响应与使用 ANSYS 软件的有限元法的对比如图 4.8 所示，其中采用了 SHELL 281 单元。单元数量为 900，节点数为 2820。模态阻尼比 $\zeta_i$ 和 $\zeta_n$ 设置为 0.02。节点在左右边缘受到连续约束以模拟固定条件。频率响应的对比如图 4.9 所示。可以观察到本文方法得到的频率响应与 FEM 良好一致，验证了本文方法的准确性。
 
-## 功能梯度多孔圆柱壳的自由振动与受迫振动
+# 功能梯度多孔圆柱壳的自由振动与受迫振动
 
 ![](img/90ed165a39fa708ec438fcda79319c25_122_0.png)
 
@@ -2592,7 +2826,7 @@ $\gamma_{x0} = \gamma_{x0}^0 + z\gamma_{x0}^1$
 ![](img/90ed165a39fa708ec438fcda79319c25)
 
 ```
-$H_p^q(\omega) = \sum_{i=1}^{NT} \frac{-\omega^2 q_i^T}{\omega_i^2 + (\alpha\beta\omega_i)^2 - \omega^2} \quad (4.83)
+$H_p^q(\omega) = \sum_{i=1}^{NT} \frac{-\omega^2 q_i^T}{\omega_i^2 + (\alpha\beta\omega_i)^2 - \omega^2} \quad (4.83)$
 ```
 
 功能梯度多孔壳的受迫振动
@@ -2654,19 +2888,19 @@ M_{x\theta} &= B_{16}\varepsilon_{xx} + B_{26}\varepsilon_{00} + B_{66}\gamma_{x
 FG 多孔壳的应变能 $U_r$ 和动能 $T$ 为：
 
 ```
-$U_r = \int_{-z_0}^{z_0} \frac{1}{2} [Q_{11}\varepsilon_{xx}^2 + Q_{22}\varepsilon_{\theta\theta}^2 + 2Q_{12}\varepsilon_{xx}\varepsilon_{\theta\theta} + Q_{66}\gamma_{x\theta}^2] dz \quad (4.90)
+$U_r = \int_{-z_0}^{z_0} \frac{1}{2} [Q_{11}\varepsilon_{xx}^2 + Q_{22}\varepsilon_{\theta\theta}^2 + 2Q_{12}\varepsilon_{xx}\varepsilon_{\theta\theta} + Q_{66}\gamma_{x\theta}^2] dz \quad (4.90)$
 ```
 
 ```
-$T = \int_{-z_0}^{z_0} \frac{1}{2} \rho (\dot{U}^2 + \dot{V}^2 + \dot{W}^2) dz \quad (4.91)
+$T = \int_{-z_0}^{z_0} \frac{1}{2} \rho (\dot{U}^2 + \dot{V}^2 + \dot{W}^2) dz \quad (4.91)$
 ```
-
-
-
 
 $$k_{31} = \frac{(B_{12}+2B_{60})L^2mn\pi^2+A_{12}m^2\piR+B_{11}m^3\pi^2}{L^3\rho^2} \quad (4.104)$$
+
 $$k_{32} = \frac{B_{11}L^2n^3+A_{11}L^2n^2+(B_{12}+2B_{60})mn^2\pi^2}{L^3\rho^2} \quad (4.105)$$
+
 $$k_{33} = \frac{L^2[2B_{21}L^2n^5+A_{11}L^2n^2+2m\pi^2(D_{12}n^2+D_{60}n^2+B_{12}R)] + \frac{D_{11}(L^2n^4+m^4\pi^4)}{L^4R^4\rho^2} \quad (4.106)$$
+
 $$k_{34} = \frac{9A_{11}(L^2n^4+m^4\pi^4)+(A_{12}+4A_{60})L^2mn^2\pi^2}{32L^4\rho^2} \quad (4.107)$$
 
 忽略在横向振动中微不足道的惯性项 $\rho\ddot{u}$ 和 $\rho\ddot{v}$，我们可以通过结合方程 (4.95) 和方程 (4.96) 来求解 $u_i$ 和 $v_i$。将结果代入方程 (4.97)，得到：
@@ -2674,15 +2908,21 @@ $$k_{34} = \frac{9A_{11}(L^2n^4+m^4\pi^4)+(A_{12}+4A_{60})L^2mn^2\pi^2}{32L^4\rh
 $$\frac{\ddot{w}_i}{t^2} + a_1w_i + a_3w_i^3 = 0 \quad (4.108)$$
 
 其中
+
 $$a_1 = \frac{k_{13}k_{22}k_{31}}{k_{12}k_{21}-k_{11}k_{22}} - \frac{k_{12}k_{23}k_{31}}{k_{12}k_{21}-k_{11}k_{22}} - \frac{k_{13}k_{21}k_{32}}{k_{12}k_{21}-k_{11}k_{22}} + \frac{k_{12}k_{23}k_{32}}{k_{12}k_{21}-k_{11}k_{22}} - k_{33} \quad (4.109)$$
+
 $$a_3 = k_{34} \quad (4.110)$$
 
 ### 4.4.2 求解步骤
 
 线性惯性得为：
+
 $$\omega = \sqrt{a_1} \quad (4.111)$$
 
 初始条件定义为：
+
+
+
 $$w_i|_{t=0} = w_{max}, \frac{\dot{w}_i}{t}|_{t=0} = 0 \quad (4.112)$$
 
 其中 $w_{max}$ 是 $w_i(t)$ 的最大值。
@@ -2690,51 +2930,67 @@ $$w_i|_{t=0} = w_{max}, \frac{\dot{w}_i}{t}|_{t=0} = 0 \quad (4.112)$$
 ## 功能梯度多孔壳的自由振动与受迫振动
 
 接下来，利用多尺度法求解方程 (4.108)。首先，我们引入缩放时间：
+
 $$T_\psi = \varepsilon t, \quad \psi = 0, 1, 2... \quad (4.113)$$
 
 $\varepsilon$ 是一个无量纲小参数。时间导数用 $T_\psi$ 表示如下：
+
 $$\frac{\partial}{\partial t}=-D_0 + \varepsilon D_1 + \varepsilon^2 D_2 + \dots$$
+
 $$\frac{\partial^2}{\partial t^2}=D_0^2 + 2\varepsilon D_0D_1 + \varepsilon^2(D_1^2 + 2D_0D_2) + \dots \quad (4.114)$$
 
 其中 $D_\psi=\frac{\partial}{\partial T_\psi}, \ \psi=0, 1, 2 \quad (4.115)$
 
 振动响应写为不同缩放时间的函数：
+
 $$w=\varepsilon w_1(T_0, T_2) + \varepsilon^2 w_2(T_0, T_2) \quad (4.116)$$
 
 由于方程 (4.108) 中的非线性是三次方的，因此 $\varepsilon T_1$ 和 $\varepsilon^2 w_2$ 缺失。将方程 (4.117) 和 (4.116) 代入方程 (4.108) 并使 $\varepsilon$ 的阶幂次系数为零，得到：
 
 $$D_0^2 w_1 + \omega_1^2 w_1=0 \quad (4.117)$$
+
 $$D_0^2 w_2 + \omega_1^2 w_2=-2D_0D_2w_1-a_iw_1^3 \quad (4.118)$$
 
 方程 (4.117) 的解可以给出：
+
 $$w_1=A(T_2)e^{i\omega_1 T_0} + \bar{A}(T_2)e^{-i\omega_1 T_0} \quad (4.119)$$
 
-$A(T_2)$ 是待定函数；$\bar{A}(T_2)$ 是其共轭项。将方程 (4.119) 代入方程 (4.118) ：
+$A(T_2)$ 是待定函数；$\bar{A}(T_2)$ 是其共轭项。将方程 (4.119) 代入方程 (4.118)：
+
 $$D_0^2 w_2+\omega_1^2 w_2=-a_iw^3 e^{i\omega_1 T_0}-(3a_i^2\bar{A}+2i\omega_1 D_2)e^{i\omega_1 T_0}+cc \quad (4.120)$$
 
 $cc$ 代表前面项的共轭。必须消除方程 (4.120) 中的割项，因此有：
+
 $$3a_i^2\bar{A}+2i\omega_1 D_2=0 \quad (4.121)$$
 
 方程 (4.121) 的解形式为：
+
 $$A = \frac{1}{2}ae^{\phi T_2}$$
 
 其中 $a$ 代表幅，$a$ 和 $\phi$ 是实数。将方程 (4.122) 代入方程 (4.121) 并分离实部和虚部，得到：
+
 $$\frac{\dot{a}}{T_2} = 0, \quad \frac{\dot{\phi}}{T_2} = 0 \quad (4.123)$$
 
 从方程 (4.123) 得：
+
 $$\phi = \frac{3a^2T_2}{8\omega} + \phi_0 \quad (4.124)$$
 
 其中 $\phi_0$ 是常数。将方程 (4.124) 和 $T_2=\varepsilon^2 t$ 代入方程 (4.122)：
+
 $$A = \frac{1}{2}a\exp\left(1 + \frac{3a^2\varepsilon^2t}{8\omega} + \phi_0\right) \quad (4.125)$$
+
 $$w=\varepsilon a\cos(\omega t + \phi_0) + O(\varepsilon^3) \quad (4.126)$$
 
 通过应用方程 (4.112) 中的初始条件得到：
+
 $$\varepsilon a = w_{max}, \quad \phi = 0 \quad (4.127)$$
 
 最后，得到功能梯度壳的非线性频率：
+
 $$\omega_n = \omega\left(1 + \frac{3w_{max}^2\varepsilon^2}{8\omega^2}\right) \quad (4.128)$$
 
 因此，功能梯度壳的非线性线性频率比为：
+
 $$\omega_n/\omega = 1 + \frac{3w_{max}^2\varepsilon^2}{8\omega^2}$$
 
 ### 4.4.3 结果与讨论
@@ -2772,9 +3028,6 @@ $$\omega_n/\omega = 1 + \frac{3w_{max}^2\varepsilon^2}{8\omega^2}$$
 | $m=1$ | 207.85 | 65.99 | 31.14 | 19.13 | 16.05 | 18.03 | 22.72 |
 | $m=2$ | 449.62 | 207.87 | 109.72 | 66.43 | 45.20 | 35.09 | 32.11 |
 | $m=3$ | 573.06 | 345.46 | 207.93 | 133.72 | 92.26 | 68.27 | 54.87 |
-
-
-
 
 细梯度多孔圆柱壳的自由振动与迫振动
 
@@ -2831,7 +3084,7 @@ $W_c = \frac{1}{2} \int_{0}^{2\pi} \int_{0}^{L} \left(\frac{\partial w}{\partial
 其中 $c$ 代表粘阻尼系数，可以表示为：
 
 ```
-$c = 2\xi_{mn} \omega_{mn}^2 \quad (4.132)
+$c = 2\xi_{mn} \omega_{mn}^2 \quad (4.132)$
 ```
 
 其中 $\omega_{mn}$ 和 $\xi_{mn}$ 分别是壳对于 $(m, n)$ 的阶频率和阻尼比。
@@ -2920,6 +3173,8 @@ $$P_1 = \int_{0}^{2\pi} \int_{0}^{L} X(x,\theta)^2 dx d\theta \quad (4150)$$
 
 $$P_2 = \int_{0}^{2\pi} \int_{0}^{L} Y(x,\theta)^2 dx d\theta \quad (4151)$$
 
+
+
 $$P_3 = \int_{0}^{2\pi} \int_{0}^{L} Z(x,\theta)^2 dx d\theta \quad (4152)$$
 
 $$P_4 = \int_{0}^{2\pi} \int_{0}^{L} \left(\frac{\partial X(x,\theta)}{\partial \theta}\right)^2 \frac{\partial X(x,\theta)}{\partial \theta} dx d\theta \quad (4153)$$
@@ -2949,9 +3204,6 @@ $$P_{15} = \int_{0}^{2\pi} \int_{0}^{L} \left(\frac{\partial Z(x,\theta)}{\parti
 $$N_1 = \frac{A_{11}}{2} \int_{0}^{2\pi} \int_{0}^{L} \left[\frac{\partial Z(x,\theta)}{\partial \tilde{x}}\right]^T \frac{\partial Y(x,\theta)}{\partial \tilde{x}} dx \tilde{x}d\theta + \frac{A_{12}}{2} \int_{0}^{2\pi} \int_{0}^{L} \left[\frac{\partial Z(x,\theta)}{\partial \theta}\right]^2 \left[\frac{\partial Y(x,\theta)}{\partial \theta}\right]^T dx \tilde{x}d\theta \quad (41665)$$
 
 $$N_2 = \frac{A_{11}}{2} \int_{0}^{2\pi} \int_{0}^{L} \left[\frac{\partial Z(x,\theta)}{\partial \theta}\right]^2 \left[\frac{\partial Y(x,\theta)}{\partial \tilde{x}}\right]^T dx \tilde{x}d\theta + \frac{A_{12}}{2} \int_{0}^{2\pi} \int_{0}^{L} \left[\frac{\partial Z(x,\theta)}{\partial \tilde{x}}\right]^2 \left[\frac{\partial Y(x,\theta)}{\partial \theta}\right]^T dx \tilde{x}d\theta + A_{66} \int_{0}^{2\pi} \int_{0}^{L} \left[\frac{\partial Z(x,\theta)}{\partial \tilde{x}}\right]^T \left[\frac{\partial Z(x,\theta)}{\partial \theta}\right]^T \left[\frac{\partial Y(x,\theta)}{\partial \tilde{\theta}}\right]^T dx \tilde{x}d\theta \quad (41666)$$
-
-
-
 
 通用圆柱形壳的受激振与自由振動
 
@@ -2998,6 +3250,7 @@ $+ \frac{A_{11}}{R^2} \int_{0}^{2\pi} \int_{0}^{L} \left[\frac{\partial Z(x,\the
 ```
 $+ \frac{A_{11}}{2R^2} \int_{0}^{2\pi} \int_{0}^{L} \left[\frac{\partial Z(x,\theta)}{\partial \theta}\right]^2 Z(x,\theta) \text{d}x\text{d}\theta$
 ```
+
 (4.67)
 
 为了计算方便，等式 (438) 转换为：
@@ -3005,6 +3258,7 @@ $+ \frac{A_{11}}{2R^2} \int_{0}^{2\pi} \int_{0}^{L} \left[\frac{\partial Z(x,\th
 ```
 $\mathbf{I}\mathbf{q} + \mathbf{C}\dot{\mathbf{q}} + \mathbf{K}\mathbf{q} + \mathbf{N}\mathbf{q} = \mathbf{f}\cos(\Omega t)$
 ```
+
 (4.68)
 
 其中 $\mathbf{I}$ 是单位矩阵
@@ -3012,6 +3266,7 @@ $\mathbf{I}\mathbf{q} + \mathbf{C}\dot{\mathbf{q}} + \mathbf{K}\mathbf{q} + \mat
 ```
 $\mathbf{C} = \mathbf{M}^{-1}\mathbf{C}, \mathbf{K} = \mathbf{M}^{-1}\mathbf{K}, \mathbf{N} = \mathbf{M}^{-1}\mathbf{N}, \mathbf{f} = \mathbf{M}^{-1}\mathbf{f}$
 ```
+
 (4.69)
 
 FG 多孔结构
@@ -3041,18 +3296,18 @@ $$\epsilon = 0.0053, f_d = 0.0015.$$
 ### 表 4.9 广义坐标
 
 | 广义坐标 |
+
 | :--- |
+
 | GC1 | $X_{1,0}^a, X_{1,1}^a, X_{1,2}^a, Y_{1,0}^b, Y_{1,1}^b, Y_{1,2}^b, Z_{1,0}^c, Z_{1,1}^c, Z_{1,2}^c$ |
+
 | GC2 | $GC1 + Z_{1,0}^d, Z_{1,1}^e, Z_{1,2}^f$ |
+
 | GC3 | $GC2 + Z_{3,2}^g$ |
 
 ![](img/90ed165a39fa708ec438fcda79319c25_140_0.png)
 
 **图 4.18** 不同广义坐标组合下 FG 圆柱壳的非线性频率响应比较。(A) 驱动模 (B) 伴随模。
-
-
-
-
 
 ![](img/90ed165a39fa708ec438fcda79319c25_143_0.png)
 
@@ -3094,14 +3349,16 @@ FG 多孔复合结构
 
 ## 4.6 结论
 
+
+
 在本章中介绍了 FG 多孔圆柱形壳的自由振动和受迫振动。在自由振动分析中，采用了人工弹簧模拟边界条件。利用模态叠加法分别求解了频率频率。根据 Donnell 理论推导了 FG 多孔壳的非线性方程。采用多尺度法求解了共振的受迫振动响应。结果如下：
 
-- 对于较强的边界条件（如 C-S, $k_n=10^3$），孔隙系数的增加会导致频率降低。然而，对于弱边界条件，孔隙系数的增加会导致频率增加。
-- PD-A 壳的非线性特性最强，而 PD-B 壳的特性最弱。
-- 孔隙分布和孔隙系数影响激发 1:1 内部共振所需的激励振幅。
+- 对于较强的边界条件（如 `C-S`, `k_n=10^3`），孔隙系数的增加会导致频率降低。然而，对于弱边界条件，孔隙系数的增加会导致频率增加。
+- `PD-A` 壳的非线性特性最强，而 `PD-B` 壳的特性最弱。
+- 孔隙分布和孔隙系数影响激发 `1:1` 内部共振所需的激励振幅。
 - 孔隙分布对 FG 多孔圆柱壳的振动特性有显著影响。
 
-功能梯度多孔圆柱壳的自由振动
+## 功能梯度多孔圆柱壳的自由振动
 
 ![](img/90ed165a39fa708ec438fcda79319c25_146_0.png)
 
@@ -3117,34 +3374,45 @@ FG 多孔复合结构
 
 (C)
 
-**图 4.26** 功能梯度多孔壳在不同孔隙系数下的响应：(A) PD-A；(B) PD-B；(C) PD-U。
+**图 4.26** 功能梯度多孔壳在不同孔隙系数下的响应：(A) `PD-A`；(B) `PD-B`；(C) `PD-U`。
 
 ## 致谢
 
-本研究受中国自然科学基金的支持（项目：119220）。
+本研究受中国自然科学基金的支持（项目：`119220`）。
 
 ## 参考文献
 
 [1] Xie Z. et al. Sound absorption of metal foam. Prog Mat Sci 2004
+
 [2] Banhart J. Manufacture, characterisation of cellular cells. Prog Mat Sci 2001;
+
 [3] Magnack E. Effective design of a sandwich beam with metal foam. Thin-Walled Struct 2007;38
+
 [4] Ramnary U, Patil A. Variability in mechanical properties of metal foam. Acta Mater 2004;
+
 [5] Wu H, Yang J, Kitporai S. Analysis of functionally generated structures: a review. Int J Stab Dyn 2020;20
+
 [6] Leissa A. Vibration of shells. Vol.288: Scientific and Technical Information, NASA
+
 [7] Soedel W, Qu M. Acoustic Society of America; 2005
+
 [8] Ambad M. Nonlinear vibrations and stability of shells. Cambridge University, 2008
+
 [9] Reddy JN. Vibration and elastic properties of shells. CRC Press; 2006
+
 [10] Soldatos K, Hadidje G. Three-dimensional analysis of the free problem of homogeneous isotropic shells. J Sound Vib 1990;137
+
 [11] Chang H. Vibration analysis of circular cylindrical shells on Winkler and Pasternak foundations. Int J Press 1996;69
+
 [12] Salahieh R, Mohammader M. Analysis of cylindrical shells under harmonic forces. Thin-Walled Struct 2007;38
+
 [13] Q Y. et al. Free and forced analysis of uniform and stepped shells using a domain decomposition method. Appl Count 2013;74
+
 [14] Gao R. et al. Symplectic wave-based method for free and steady state vibration analysis of orthotropic cylindrical shells with arbitrary boundary conditions. J Sound Vib 2021;455
+
 [15] Fakkaw W, Cole M. On the vibrations of rotating thin-walled shells: a theoretical and experimental study utilizing active magnetic bearings. Int J Mech Sci 2019;163
+
 [16] Yang S, Wang M. Nonlinear vibrations of carbon fiber reinforced polymer cylindrical shell under non-normal boundary conditions with 1:2 internal resonance. Eur Int J Mech A/Solids 2019;74
-
-
-
-
 
 - [19] Amabili M. 各向异性和层层弯曲壳静态与动力学分析的三阶厚度变形理论中厚度与变形的非线性问题。Int J Non-Linear Mech 2015;69:109–28.
 - [20] Amabili M, Reddy J. 叠层弯曲壳大幅振动的新型非线性高阶剪切变形理论。Int J Non-Linear Mech 2010;45(4):409–18.
@@ -3164,89 +3432,87 @@ FG 多孔复合结构
 - [34] Dhooge A, 等. MATCONT和CL MATCONT: Matlab中的连续工具箱。比利时时根特大学和荷兰乌得勒支特，2006。
 - [35] Chen JC, Babušck CD. 圆柱壳的非线性振动。AIAA J 1975;17(7):868–77.
 
-## 弹性基础上功能梯度孔隙壳的自由与强制振动
+# 弹性基础上功能梯度孔隙壳的自由与强制振动
 
 Rui Zhong$^{1,2}$, Tao Liu$^{2}$ 和 Qingshan Wang$^{1,2}$
+
 $^{1}$中南大学极端性能精密制造关键实验室，中国湖南长沙市，$^{2}$中南大学机械与电气工程学院，中国湖南长沙市，$^{3}$中南大学轻合金研究所，中国湖南长沙市。
 
 ## 符号表
 
-- $E(z)$ 沿材料厚度坐标的弹性模量
-- $\rho(z)$ 沿材料厚度坐标的质量密度
-- $G(z)$ 沿材料厚度坐标的剪切模量
-- $e_0$ 孔隙率
-- $e_m$ 质量密度孔隙系数
-- $R_x$ 沿x轴的主半径
-- $R_y$ 沿y轴的主半径
-- $u$ 中面上沿x轴方向的位移
-- $v$ 中面上沿y轴方向的位移
-- $w$ 中面上沿厚度方向的位移
-- $U$ 壳上任意点沿x轴的位移
-- $V$ 壳上任意点沿y轴的位移
-- $W$ 壳上任意点沿z轴的位移
-- $\varphi_{xy}$ 功能梯度壳（FGP壳）的旋转变量
-- $\epsilon_x$ x轴方向法应变
-- $\epsilon_y$ y轴法应变
-- $\gamma_{xy}$ 剪切应变
-- $\gamma_{yz}$ y-z坐标的横向剪切应变
-- $\gamma_{zg}$ y-z坐标的横向剪切应变
-- $\epsilon^b$ 中面的法应变
-- $\epsilon_b$ 中面的法应变
-- $\gamma_{xb}$ 中面的横向剪切应变
-- $\gamma_{yb}$ 中面的横向剪切应变
-- $\gamma_{gb}$ 中面的横向剪切应变
-- $\kappa_x$ 中面的曲率
-- $\kappa_y$ 中面的曲率
-- $A_{ij}$ 拉伸刚度
-- $B_{ij}$ 弯耦合刚度
-- $D_{ij}$ 弯曲刚度
-- $r_s$ 修正系数
-- $N_x$ 沿x轴力
-- $N_y$ 沿y轴力
-- $N_{xy}$ 膜内切力
-- $M_x$ 沿x轴弯矩
-- $M_y$ 沿y轴弯矩
-- $M_{xy}$ 膜扭转弯矩
-- $Q_x$ 横向剪切力
-- $Q_y$ 横向剪切力
-- $h$ 厚度
-- $f$ 弹性基础常数
-- $k$ 刚度
-- $\omega$ 频率
-- $\lambda$ 频率
-- $I_i$ 惯性量
-- $A_i$ 截面面积
-- $J_i$ 截面极性矩
-- $E_i$ 弹性模量
-- $G_i$ 泊松模量
-- $\nu_i$ 泊松系数
-- $\rho_i$ 密度
-- $\alpha_i$ 膨胀系数
-- $t_i$ 厚度
-- $L_i$ 长度
-- $x, y, z$ 坐标
-- $u, v, w$ 位移
-- $U, V, W$ 位移
-- $\epsilon, \gamma$ 应变
-- $\kappa$ 曲率
-- $N, M, Q$ 力力矩
-- $\phi, \theta, \psi$ 旋转角
-- $i, j$ 索引
-- $k, l$ 索引
-- $m, n$ 索引
-- $p, q$ 索引
-- $r, s$ 索引
-- $t, u$ 索引
-- $v, w$ 索引
-- $x, y$ 索引
-- $z$ 索引
+- `$E(z)$` 沿材料厚度坐标的弹性模量
+- `$\rho(z)$` 沿材料厚度坐标的质量密度
+- `$G(z)$` 沿材料厚度坐标的剪切模量
+- `$e_0$` 孔隙率
+- `$e_m$` 质量密度孔隙系数
+- `$R_x$` 沿x轴的主半径
+- `$R_y$` 沿y轴的主半径
+- `$u$` 中面上沿x轴方向的位移
+- `$v$` 中面上沿y轴方向的位移
+- `$w$` 中面上沿厚度方向的位移
+- `$U$` 壳上任意点沿x轴的位移
+- `$V$` 壳上任意点沿y轴的位移
+- `$W$` 壳上任意点沿z轴的位移
+- `$\varphi_{xy}$` 功能梯度壳（FGP壳）的旋转变量
+- `$\epsilon_x$` x轴方向法应变
+- `$\epsilon_y$` y轴法应变
+- `$\gamma_{xy}$` 剪切应变
+- `$\gamma_{yz}$` y-z坐标的横向剪切应变
+- `$\gamma_{zg}$` y-z坐标的横向剪切应变
+- `$\epsilon^b$` 中面的法应变
+- `$\epsilon_b$` 中面的法应变
+- `$\gamma_{xb}$` 中面的横向剪切应变
+- `$\gamma_{yb}$` 中面的横向剪切应变
+- `$\gamma_{gb}$` 中面的横向剪切应变
+- `$\kappa_x$` 中面的曲率
+- `$\kappa_y$` 中面的曲率
+- `$A_{ij}$` 拉伸刚度
+- `$B_{ij}$` 弯耦合刚度
+- `$D_{ij}$` 弯曲刚度
+- `$r_s$` 修正系数
+- `$N_x$` 沿x轴力
+- `$N_y$` 沿y轴力
+- `$N_{xy}$` 膜内切力
+- `$M_x$` 沿x轴弯矩
+- `$M_y$` 沿y轴弯矩
+- `$M_{xy}$` 膜扭转弯矩
+- `$Q_x$` 横向剪切力
+- `$Q_y$` 横向剪切力
+- `$h$` 厚度
+- `$f$` 弹性基础常数
+- `$k$` 刚度
+- `$\omega$` 频率
+- `$\lambda$` 频率
+- `$I_i$` 惯性量
+- `$A_i$` 截面面积
+- `$J_i$` 截面极性矩
+- `$E_i$` 弹性模量
+- `$G_i$` 泊松模量
+- `$\nu_i$` 泊松系数
+- `$\rho_i$` 密度
+- `$\alpha_i$` 膨胀系数
+- `$t_i$` 厚度
+- `$L_i$` 长度
+- `$x, y, z$` 坐标
+- `$u, v, w$` 位移
+- `$U, V, W$` 位移
+- `$\epsilon, \gamma$` 应变
+- `$\kappa$` 曲率
+- `$N, M, Q$` 力力矩
+- `$\phi, \theta, \psi$` 旋转角
+- `$i, j$` 索引
+- `$k, l$` 索引
+- `$m, n$` 索引
+- `$p, q$` 索引
+- `$r, s$` 索引
+- `$t, u$` 索引
+- `$v, w$` 索引
+- `$x, y$` 索引
+- `$z$` 索引
 
-5.1 引言
+## 5.1 引言
 
 在航空航天和机械工程等领域，诸如薄壁壳、球壳、抛物面壳等结构是常见的。这些结构的特征是相对于其尺寸曲半径较小。由于这些结构具有卓越的承载能力，在严苛的工作条件下，对其进行全面的分析和失效评估具有重要意义。近年来，功能梯度孔隙（FGP）材料被广泛应用，它们不仅具有功能梯度材料的优异性能，而且具有良好的力学性能，这些性能是通过适当的分布实现的。本章的目标是针对具有任意边界条件且位于弹性基础上的功能梯度孔隙壳开发一个通用的分析模型。过去，大量的努力集中在FGM结构的动力学分析上。而对于弹性基础上的复杂FGM结构（如壳）的研究较少[2–5]。大多数对象是梁、板和圆柱壳等简单结构。FG壳的研究主要限于同向异性或FGM结构的自由振动。
-
-
-
 
 以及文献 [14]。Lu 等人 [15] 使用经典的能量-Ritz 方法分析了 FGP 浅壳的受迫振动和自由振动，并进行了大量的参数分析。Duvayd 等人 [16] 在一阶剪切变形（FSD）框架下建立了 FGP 复合圆柱壳的失稳模型，给出了关于关键参数对振动响应影响的大量信息。由于文章空间限制，关于 FGP/FGM 壳研究的许多相似理论 [17–21] 在本文中未另行讨论。
 
@@ -3258,50 +3524,62 @@ $^{1}$中南大学极端性能精密制造关键实验室，中国湖南长沙�
 
 ### 5.2.1 梯度多孔材料属性
 
-FGP 材料的材料特性与 FGM 相似。材料的弹性模量（E）也是沿材料厚度坐标方向的线性函数（假设厚度坐标为 z）。质量密度 $\rho(z)$ 和剪切模量 $G(z)$ 也具有这种关系。FGP 材料通常具有不同类型的孔隙，如均匀分布、对称分布和非对称分布。在本章中，沿厚度方向的两种代表性孔隙分布分别为类型 1：对称分布，类型 2：非对称分布。这两类最大的区别在于沿厚度坐标方向的孔隙分布函数不同。类型 1 的材料属性函数可以表示如下：
+FGP 材料的材料特性与 FGM 相似。材料的弹性模量（`E`）也是沿材料厚度坐标方向的线性函数（假设厚度坐标为 `z`）。质量密度 `$\rho(z)$` 和剪切模量 `$G(z)$` 也具有这种关系。FGP 材料通常具有不同类型的孔隙，如均匀分布、对称分布和非对称分布。在本章中，沿厚度方向的两种代表性孔隙分布分别为类型 1：对称分布，类型 2：非对称分布。这两类最大的区别在于沿厚度坐标方向的孔隙分布函数不同。类型 1 的材料属性函数可以表示如下：
 
-$E(z) = E_1 - e_{e_0}\cos\left(\frac{\pi z}{h}\right)$
-$G(z) = G_1 - e_{g_0}\cos\left(\frac{\pi z}{h}\right) \quad (5.1)$
-$\rho(z) = \rho_1 - e_{\rho_0}\cos\left(\frac{\pi z}{h}\right)$
+`$E(z) = E_1 - e_{e_0}\cos\left(\frac{\pi z}{h}\right)$`
 
-类型 2 的材料表达式定义为等式 (5.2)。显然，杨氏模量、质量密度和剪切模量沿厚度方向呈现单调趋势。
+`$G(z) = G_1 - e_{g_0}\cos\left(\frac{\pi z}{h}\right) \quad (5.1)$`
 
-$E(z) = E_1 - e_{e_0}\cos\left(\frac{\pi z}{h}\right)$
-$G(z) = G_1 - e_{g_0}\cos\left(\frac{\pi z}{h}\right) \quad (5.2)$
-$\rho(z) = \rho_1 - e_{\rho_0}\cos\left(\frac{\pi z}{h}\right)$
+`$\rho(z) = \rho_1 - e_{\rho_0}\cos\left(\frac{\pi z}{h}\right)$`
 
-在上述公式中，$h$ 表示壳的厚度，$e_m$ 为孔隙系数 [42]，给出：
+类型 2 的材料表达式定义为等式 `(5.2)`。显然，杨氏模量、质量密度和剪切模量沿厚度方向呈现单调趋势。
 
-$e_0 = 1 - e_{e_0}\cos\left(\frac{\pi z}{h}\right)$
-$e_m = 1 - e_{g_0}\cos\left(\frac{\pi z}{h}\right) \quad (5.3)$
+`$E(z) = E_1 - e_{e_0}\cos\left(\frac{\pi z}{h}\right)$`
 
-其中 $E$ 是模量，$\rho$ 是质量密度，$G$ 是剪切模量。此外，下标 0 和 1 代表材料的属性。值得注意的是，$e_0 = e_m = 0$ 表示材料没有孔隙，而 $e_0 = e_m = 1$ 显然是不可能的。上述材料的截面图如图 5.1 所示。
+`$G(z) = G_1 - e_{g_0}\cos\left(\frac{\pi z}{h}\right) \quad (5.2)$`
+
+`$\rho(z) = \rho_1 - e_{\rho_0}\cos\left(\frac{\pi z}{h}\right)$`
+
+在上述公式中，`$h$` 表示壳的厚度，`$e_m$` 为孔隙系数 [42]，给出：
+
+`$e_0 = 1 - e_{e_0}\cos\left(\frac{\pi z}{h}\right)$`
+
+`$e_m = 1 - e_{g_0}\cos\left(\frac{\pi z}{h}\right) \quad (5.3)$`
+
+其中 `E` 是模量，`$\rho$` 是质量密度，`G` 是剪切模量。此外，下标 0 和 1 代表材料的属性。值得注意的是，`$e_0 = e_m = 0$` 表示材料没有孔隙，而 `$e_0 = e_m = 1$` 显然是不可能的。上述材料的截面图如图 5.1 所示。
 
 类型 1：对称分布
+
 类型 2：非对称分布
+
 梯度材料
 
 ### 5.2.2 浅壳描述
 
-$z = \frac{x^2}{2R_x} + \frac{xy}{R_{xy}} + \frac{y^2}{2R_y} \quad (5.4)$
+`$z = \frac{x^2}{2R_x} + \frac{xy}{R_{xy}} + \frac{y^2}{2R_y} \quad (5.4)$`
 
-其中 $R_x$ 和 $R_y$ 是 x 轴和 y 轴半径，$R_{xy}$ 是矩形壳的扭转，如图 5.2 所示。此处，$a$ 和 $b$ 是浅壳的长度和宽度。由于存在许多浅壳形式，为了分析方便，这部分主要考虑半径恒定的情况。通过调整 $R_x, R_y$ 的值，等式 (5.4) 退化为 $xy$ 平面的二次面。
+其中 `$R_x$` 和 `$R_y$` 是 x 轴和 y 轴半径，`$R_{xy}$` 是矩形壳的扭转，如图 5.2 所示。此处，`$a$` 和 `$b$` 是浅壳的长度和宽度。由于存在许多浅壳形式，为了分析方便，这部分主要考虑半径恒定的情况。通过调整 `$R_x, R_y$` 的值，等式 `(5.4)` 退化为 `$xy$` 平面的二次面。
 
 ### 5.2.3 梯度孔壳的能量泛函
 
 基于 FSDT，可以得到以下方程 [44]：
 
-$\begin{cases} U(x,y,z,t) = u(x,y,t) \\ V(x,y,z,t) = v(x,y,t) + z\varphi_z(x,y,t) \\ W(x,y,z,t) = w(x,y,t) = 0 \end{cases} \quad (5.5)$
+```
+U(x,y,z,t) = u(x,y,t)
+V(x,y,z,t) = v(x,y,t) + z\varphi_z(x,y,t)
+W(x,y,z,t) = w(x,y,t) = 0
+```
+`(5.5)`
 
-不同浅壳示意图。(A) 板：$R_x=R_y=\infty$；(B) 球壳：$R_x/R_y=1$；(C) 圆柱壳：$R_x/R_y=0$；(D) 双曲面壳：$R_x/R_y=-1$。
+不同浅壳示意图。(A) 板：`$R_x=R_y=\infty$`；(B) 球壳：`$R_x/R_y=1$`；(C) 圆柱壳：`$R_x/R_y=0$`；(D) 双曲面壳：`$R_x/R_y=-1$`。
 
-其中，$t$ 是时间变量，$u, v$ 和 $w$ 是浅壳中间参考面上沿 $x, y, z$ 轴的位移分，$U, V$ 和 $W$ 是壳上任意点的位移分，varphi_x$ 和 $\varphi_y$ 分别是中面的旋转变量。壳上任意点的应变可以表示为：
+
+
+其中，`$t$` 是时间变量，`$u, v$` 和 `$w$` 是浅壳中间参考面上沿 `$x, y, z$` 轴的位移分，`$U, V$` 和 `$W$` 是壳上任意点的位移分，`varphi_x$` 和 `$\varphi_y$` 分别是中面的旋转变量。壳上任意点的应变可以表示为：
 
 $\begin{matrix} \varepsilon_x & \gamma_{xy}^0 & \gamma_{xz}^0 \\ \gamma_{xy}^0 & \varepsilon_y & \gamma_{yz}^0 \\ \gamma_{xz}^0 & \gamma_{yz}^0 & \varepsilon_z \end{matrix} + z \begin{matrix} \kappa_{xx}^0 & \kappa_{xy}^0 & \kappa_{xz}^0 \\ \kappa_{xy}^0 & \kappa_{yy}^0 & \kappa_{yz}^0 \\ \kappa_{xz}^0 & \kappa_{yz}^0 & \kappa_{zz}^0 \end{matrix} \quad (5.6)$
 
 其中 $(\varepsilon_x, \varepsilon_y)$ 和 $\gamma_{xy}$ 分别是壳上任意点的正应变和切应变。$\gamma_{xz}$ 和 $\gamma_{yz}$ 是横向剪应变。
-
-
 
 表面，扭转变化（$\kappa_s$）和曲率变化（$\kappa_s$ 和 $\kappa_t$）。这些变量可以表示为：
 
@@ -3394,13 +3672,10 @@ $\eta_j = -\cos\left(\frac{\pi j}{N-1}\right), j=0, 1, \dots, N-1$ (21)
 $q = C_{q}a, \quad a = C_{q}^{-1}q$ (22)
 
 其中
+
 $q = (q_{0,0}, \dots, q_{0,N-1}, \dots, q_{M-1,0}, \dots, q_{M-1,N-1})^T$ (23a)
 
 $C = C_{M-1}(\xi) \otimes C_{N-1}(\eta)$ (23b)
-
-
-
-[content]
 
 ### 5.2.5 求解步骤
 
@@ -3479,6 +3754,7 @@ $$\mathbf{M}\ddot{\mathbf{u}}_{i+1} + \mathbf{C}_R\dot{\mathbf{u}}_{i+1} + \math
 弹性基上功能梯度壳的自由和受迫振动 5.3 分析与讨论
 
 基于上述模型，本节目的是进行弹性基上功能梯度壳的自由和受迫振动，主要包括以下方面：
+
 - (1) 收敛性分析；
 - (2) 验证，与文献结果进行对比；
 - (3) FGP 浅壳的自由振动分析；
@@ -3486,79 +3762,77 @@ $$\mathbf{M}\ddot{\mathbf{u}}_{i+1} + \mathbf{C}_R\dot{\mathbf{u}}_{i+1} + \math
 
 ### 5.3.1 收敛
 
-根据理论推导可以发现，合适的截断数有助于提高求解的效率和精度。为了方便，在分析中选择了截断数 $M=4\times4$、$8\times8$、$10\times10$ 和 $12\times12$。
+
+
+根据理论推导可以发现，合适的截断数有助于提高求解的效率和精度。为了方便，在分析中选择了截断数 `$M=4\times4$`、`$8\times8$`、`$10\times10$` 和 `$12\times12$`。
 
 ### 5.3.2 方法有效性
 
-为了确保本章提出的方法的正确性，首先需要与不同多项式截断的功能梯度壳无量纲频率 $\Omega$ 结果进行对比。表 5.1 收敛
+为了确保本章提出的方法的正确性，首先需要与不同多项式截断的功能梯度壳无量纲频率 `$\Omega$` 结果进行对比。表 5.1 收敛
 
 | 壳类型 | M $\times$ N | 1 | 2 | 3 | 4 | 5 | 6 | 8 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| $R_{\infty} = \infty$ | $4\times4$ | 0.1497 | 0.2263 | 0.2833 | 0.3257 | 0.3728 | 0.3757 | 0.4147 |
-| | $6\times6$ | 0.0970 | 0.1734 | 0.2267 | 0.3197 | 0.3597 | 0.3797 | 0.3724 | 0.3767 |
-| | $8\times8$ | 0.0971 | 0.1839 | 0.2159 | 0.3469 | 0.3401 | 0.3081 | 0.3604 | 0.3604 |
-| | $12\times12$ | 0.0971 | 0.1841 | 0.2571 | 0.3050 | 0.3604 | 0.3051 | 0.3604 | 0.4148 |
-| $R_{\infty} = 2$ | $4\times4$ | 0.1058 | 0.1841 | 0.2210 | 0.3276 | 0.3597 | 0.3724 | 0.3781 | 0.4148 |
-| | $6\times6$ | 0.1058 | 0.1836 | 0.1834 | 0.2840 | 0.3752 | 0.3758 | 0.3789 | 0.3592 |
-| | $10\times10$ | 0.1058 | 0.1889 | 0.2580 | 0.3092 | 0.3739 | 0.3595 | 0.3072 | 0.3613 |
-| | $4\times4$ | 0.1144 | 0.1836 | 0.2135 | 0.3073 | 0.3002 | 0.3073 | 0.3072 | 0.4147 |
-| | $6\times6$ | 0.1144 | 0.1889 | 0.2589 | 0.3126 | 0.3024 | 0.3385 | 0.3385 |
-| | $8\times8$ | 0.1144 | 0.1870 | 0.2151 | 0.3016 | 0.3525 | 0.3379 | 0.3599 |
-| | $10\times10$ | 0.1144 | 0.1872 | 0.2295 | 0.3078 | 0.3501 | 0.3108 | 0.3576 | 0.3558 |
-| | $12\times12$ | 0.1144 | 0.1831 | 0.2329 | 0.3076 | 0.3076 | 0.3038 | 0.3588 | 0.3556 |
-| $R_{\infty} = -2$ | $10\times10$ | 0.1133 | 0.1829 | 0.2595 | 0.3255 | 0.3060 | 0.3063 | 0.3071 | 0.3451 |
-| | $4\times4$ | 0.1133 | 0.1796 | 0.2198 | 0.3177 | 0.3721 | 0.3721 | 0.3753 | 0.3785 |
-| | $6\times6$ | 0.1133 | 0.1896 | 0.2573 | 0.3072 | 0.2384 | 0.3595 | 0.3595 | 0.3785 |
-| | $8\times8$ | 0.1133 | 0.1896 | 0.2579 | 0.3067 | 0.3113 | 0.3113 | 0.3657 | 0.3696 |
-| | $12\times12$ | 0.1133 | 0.1896 | 0.1896 | 0.3084 | 0.3083 | 0.3065 | 0.3096 | 0.3606 |
-
-[/content]
-
-
+| `$R_{\infty} = \infty$` | `$4\times4$` | 0.1497 | 0.2263 | 0.2833 | 0.3257 | 0.3728 | 0.3757 | 0.4147 |
+| | `$6\times6$` | 0.0970 | 0.1734 | 0.2267 | 0.3197 | 0.3597 | 0.3797 | 0.3724 | 0.3767 |
+| | `$8\times8$` | 0.0971 | 0.1839 | 0.2159 | 0.3469 | 0.3401 | 0.3081 | 0.3604 | 0.3604 |
+| | `$12\times12$` | 0.0971 | 0.1841 | 0.2571 | 0.3050 | 0.3604 | 0.3051 | 0.3604 | 0.4148 |
+| `$R_{\infty} = 2$` | `$4\times4$` | 0.1058 | 0.1841 | 0.2210 | 0.3276 | 0.3597 | 0.3724 | 0.3781 | 0.4148 |
+| | `$6\times6$` | 0.1058 | 0.1836 | 0.1834 | 0.2840 | 0.3752 | 0.3758 | 0.3789 | 0.3592 |
+| | `$10\times10$` | 0.1058 | 0.1889 | 0.2580 | 0.3092 | 0.3739 | 0.3595 | 0.3072 | 0.3613 |
+| | `$4\times4$` | 0.1144 | 0.1836 | 0.2135 | 0.3073 | 0.3002 | 0.3073 | 0.3072 | 0.4147 |
+| | `$6\times6$` | 0.1144 | 0.1889 | 0.2589 | 0.3126 | 0.3024 | 0.3385 | 0.3385 |
+| | `$8\times8$` | 0.1144 | 0.1870 | 0.2151 | 0.3016 | 0.3525 | 0.3379 | 0.3599 |
+| | `$10\times10$` | 0.1144 | 0.1872 | 0.2295 | 0.3078 | 0.3501 | 0.3108 | 0.3576 | 0.3558 |
+| | `$12\times12$` | 0.1144 | 0.1831 | 0.2329 | 0.3076 | 0.3076 | 0.3038 | 0.3588 | 0.3556 |
+| `$R_{\infty} = -2$` | `$10\times10$` | 0.1133 | 0.1829 | 0.2595 | 0.3255 | 0.3060 | 0.3063 | 0.3071 | 0.3451 |
+| | `$4\times4$` | 0.1133 | 0.1796 | 0.2198 | 0.3177 | 0.3721 | 0.3721 | 0.3753 | 0.3785 |
+| | `$6\times6$` | 0.1133 | 0.1896 | 0.2573 | 0.3072 | 0.2384 | 0.3595 | 0.3595 | 0.3785 |
+| | `$8\times8$` | 0.1133 | 0.1896 | 0.2579 | 0.3067 | 0.3113 | 0.3113 | 0.3657 | 0.3696 |
+| | `$12\times12$` | 0.1133 | 0.1896 | 0.1896 | 0.3084 | 0.3083 | 0.3065 | 0.3096 | 0.3606 |
 
 弹性基础上功能梯度多孔壳的自由振动与受迫振动
 
 FGP结构元素的分布为对称分布。所采用的几何参数与表5.1使用的相同。值得注意的是，引入了虚拟弹簧技术来模拟任意弹性边界条件。在分析中，不同边界条件下的弹簧刚度值设置如下 [15]：
 
-1. 固定 ($K_x^* = K_y^* = K_z^* = 10^{14}$)
-2. 自由 ($K_x^* = K_y^* = K_z^* = 0$)
-3. 简支 ($K_x^* = K_y^* = 10^{14}, K_z^* = 0$)
+1. 固定 (`$K_x^* = K_y^* = K_z^* = 10^{14}$`)
+2. 自由 (`$K_x^* = K_y^* = K_z^* = 0$`)
+3. 简支 (`$K_x^* = K_y^* = 10^{14}, K_z^* = 0$`)
 
 从表 5.2 可以看出，结果与文献 [15] 的研究结果一致，这充分证实了本章所提模型在任意边界条件下的正确性。
 
-本章研究了位于弹性基础上的 FGP 壳。据我们所知，文献中尚未对其进行此类研究；然而，有许多关于弹性基础振动特性分析的文献，这些将作为本章方法的验证。表 5.3 和 5.4 实施了不同弹性基础下正方形板频率参数的一些对比研究。此处使用的参数为 $\rho = 2702\text{ kg/m}^2$；$E_1 = 70\text{ GPa}$，$u = 0.15$。由于文献中分析的是均匀区域，因此孔隙系数 $e_0$ 应设为 0。边界条件为 CCCC 和 SSSS。无量纲频率的表达式为：
+本章研究了位于弹性基础上的 FGP 壳。据我们所知，文献中尚未对其进行此类研究；然而，有许多关于弹性基础振动特性分析的文献，这些将作为本章方法的验证。表 5.3 和 5.4 实施了不同弹性基础下正方形板频率参数的一些对比研究。此处使用的参数为 `$\rho = 2702\text{ kg/m}^2$`；`$E_1 = 70\text{ GPa}$`，`$u = 0.15$`。由于文献中分析的是均匀区域，因此孔隙系数 `$e_0$` 应设为 0。边界条件为 CCCC 和 SSSS。无量纲频率的表达式为：
 
-$\Omega = \sqrt{\frac{D}{\rho h}} \int \frac{\partial^4 w}{\partial x^4}} dx$。此外，表 5.3 和 5.4 给出了 [48] 中的无量纲基础参数 $K_F$ 和 $G_F$，并在公式 (5.40) 中给出；通过对比文献 [49] 和 [50] 的结果，可以发现本章的结果与现有文献一致良好。
+`$\Omega = \sqrt{\frac{D}{\rho h}} \int \frac{\partial^4 w}{\partial x^4}} dx$`。此外，表 5.3 和 5.4 给出了 [48] 中的无量纲基础参数 `$K_F$` 和 `$G_F$`，并在公式 (5.40) 中给出；通过对比文献 [49] 和 [50] 的结果，可以发现本章的结果与现有文献一致良好。
 
-$K_F = \frac{a_K^2}{D_{11}}, G_F = \frac{a_G^2}{D_{11}}, D_{11} = \frac{B_{11}B_{12}+B_{12}B_{11}}{HB}, B_{11} = \frac{A_{11}^2}{HB}, B_{12} = \frac{A_{12}^2}{HB}$ (5.40)
+`$K_F = \frac{a_K^2}{D_{11}}, G_F = \frac{a_G^2}{D_{11}}, D_{11} = \frac{B_{11}B_{12}+B_{12}B_{11}}{HB}, B_{11} = \frac{A_{11}^2}{HB}, B_{12} = \frac{A_{12}^2}{HB}$` (5.40)
 
 ### 5.3.3 自由振动分析
 
-基于上述小节的分析，本章建立的基于 Winkler–Pasternak 基础的 FGP 壳动力模型具有正确性。图 5.4–5.6 显示了 FGP 壳的一阶频率值 $\Omega = \omega\sqrt{\rho/E_1}$ 的变化。为了说明方便，使用了无量量纲基础参数（$K_F, G_F$）。它们的取值范围从 0 到 2。孔隙系数 $e_0$ 设为 0.2。施加在各侧的所有边界条件如下：
+基于上述小节的分析，本章建立的基于 Winkler–Pasternak 基础的 FGP 壳动力模型具有正确性。图 5.4–5.6 显示了 FGP 壳的一阶频率值 `$\Omega = \omega\sqrt{\rho/E_1}$` 的变化。为了说明方便，使用了无量纲基础参数（`$K_F, G_F$`）。它们的取值范围从 0 到 2。孔隙系数 `$e_0$` 设为 0.2。施加在各侧的所有边界条件如下：
 
 | 壳类型 | 边界条件 | 方法 | 1 | 2 | 3 | 4 | 5 | 6 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| $R_x = \infty, R_y = \infty$ | CCCC | [5] | 0.0976 | 0.1851 | 0.1857 | 0.2598 | 0.3057 | 0.3087 |
+| `$R_x = \infty, R_y = \infty$` | CCCC | [5] | 0.0976 | 0.1851 | 0.1857 | 0.2598 | 0.3057 | 0.3087 |
 | | SSSS | [1] | 0.0573 | 0.1361 | 0.1367 | 0.1854 | 0.1884 | 0.2094 |
 | | CFCF | Present | 0.0620 | 0.1778 | 0.1906 | 0.1578 | 0.1884 | 0.2081 |
-| $R_x = \infty, R_y = 2$ | CCCC | [5] | 0.1065 | 0.1836 | 0.1855 | 0.2176 | 0.1720 | 0.1720 |
+| `$R_x = \infty, R_y = 2$` | CCCC | [5] | 0.1065 | 0.1836 | 0.1855 | 0.2176 | 0.1720 | 0.1720 |
 | | SSSS | [1] | 0.1058 | 0.2153 | 0.2961 | 0.3116 | 0.3026 | 0.3110 |
 | | CFCF | Present | 0.0617 | 0.1365 | 0.1160 | 0.2580 | 0.1884 | 0.2102 |
-| $R_x = 2, R_y = \infty$ | CCCC | [5] | 0.0640 | 0.0374 | 0.0720 | 0.1600 | 0.1713 | 0.1717 |
+| `$R_x = 2, R_y = \infty$` | CCCC | [5] | 0.0640 | 0.0374 | 0.0720 | 0.1600 | 0.1713 | 0.1717 |
 | | SSSS | [1] | 0.1153 | 0.1892 | 0.1893 | 0.2628 | 0.3074 | 0.3119 |
 | | CFCF | Present | 0.0688 | 0.1401 | 0.1415 | 0.1845 | 0.1884 | 0.2124 |
-| $R_x = 2, R_y = 2$ | CCCC | [5] | 0.0710 | 0.0785 | 0.1221 | 0.1555 | 0.1568 | 0.2103 |
+| `$R_x = 2, R_y = 2$` | CCCC | [5] | 0.0710 | 0.0785 | 0.1221 | 0.1555 | 0.1568 | 0.2103 |
 | | SSSS | [1] | 0.1142 | 0.1917 | 0.1917 | 0.2619 | 0.1997 | 0.3125 |
 | | CFCF | Present | 0.1133 | 0.1896 | 0.1896 | 0.2583 | 0.3084 | 0.3084 |
-| $R_x = \infty, R_y = -2$ | CCCC | [5] | 0.0621 | 0.1412 | 0.1412 | 0.1986 | 0.1884 | 0.2096 |
+| `$R_x = \infty, R_y = -2$` | CCCC | [5] | 0.0621 | 0.1412 | 0.1412 | 0.1986 | 0.1884 | 0.2096 |
 | | SSSS | [1] | 0.0804 | 0.0873 | 0.1253 | 0.1613 | 0.1716 | 0.1729 |
 | | CFCF | Present | 0.0799 | | | 0.1241 | | 0.1596 | 0.1715 |
 
 表 5.2 不同边界条件和结构的一阶无量纲频率对比。
 
-**表 5.3** SSSS 边界条件下正方形板频率的对比 ($h/b = 0.015$)。
+**表 5.3** SSSS 边界条件下正方形板频率的对比 (`$h/b = 0.015$`)。
 
-| $K_F$ | $G_F$ | $\Omega_1$ | $\Omega_2$ | $\Omega_3$ |
+| `$K_F$` | `$G_F$` | `$\Omega_1$` | `$\Omega_2$` | `$\Omega_3$` |
 | :--- | :--- | :--- | :--- | :--- |
 | 1390.2 | 0 | [49] | 5.2446 | 0.3156 | 1.5410 |
 | | | [50] | 5.2440 | 8.3136 | 1.5375 |
@@ -3570,9 +3844,9 @@ $K_F = \frac{a_K^2}{D_{11}}, G_F = \frac{a_G^2}{D_{11}}, D_{11} = \frac{B_{11}B_
 | | | [50] | 6.4626 | 9.1309 | 021409 |
 | | | Present | 6.4623 | 9.1294 | 021360 |
 
-**表 5.4** CCCC 边界条件下正方形板频率的对比 ($h/b = 0.015$)。
+**表 5.4** CCCC 边界条件下正方形板频率的对比 (`$h/b = 0.015$`)。
 
-| $K_F$ | $G_F$ | $\Omega_1$ | $\Omega_2$ | $\Omega_3$ |
+| `$K_F$` | `$G_F$` | `$\Omega_1$` | `$\Omega_2$` | `$\Omega_3$` |
 | :--- | :--- | :--- | :--- | :--- |
 | 1390.2 | 0 | [49] | 5.2446 | 0.3156 |
 | | | [50] | 5.2440 | 8.3136 |
@@ -3584,31 +3858,17 @@ $K_F = \frac{a_K^2}{D_{11}}, G_F = \frac{a_G^2}{D_{11}}, D_{11} = \frac{B_{11}B_
 | | | [50] | 6.4626 | 9.1309 |
 | | | Present | 6.4623 | 9.1294 |
 
-图 5.4–5.6 显示了 FGP 壳的一阶频率值 $\Omega = \omega\sqrt{\rho/E_1}$ 的变化。为了说明方便，使用了无量纲基础参数（$K_F, G_F$）。它们的取值范围从 0 到 2。孔隙系数 $e_0$ 设为 0.2。施加在各侧的所有边界条件：
 
-无量纲频率的表达式为
 
-$\Omega = \sqrt{\frac{D}{\rho h}} \int \frac{\partial^4 w}{\partial x^4}} dx$。此外，无量纲基础参数 $K_F$ 和 $G_F$ 在表 5.3 和 5.4 中给出，并在公式 (5.40) 中给出；通过对比文献 [49] 和 [50] 的结果，可以发现本章的结果与现有文献一致良好。
-
-$K_F = \frac{a_K^2}{D_{11}}, G_F = \frac{a_G^2}{D_{11}}, D_{11} = \frac{B_{11}B_{12}+B_{12}B_{11}}{HB}, B_{11} = \frac{A_{11}^2}{HB}, B_{12} = \frac{A_{12}^2}{HB}$ (5.40)
-
-### 5.3.3 自由振动分析
-
-基于上述小节的分析，本章建立的基于 Winkler–Pasternak 基础的 FGP 壳动力模型具有正确性。图 5.4–5.6 显示了 FGP 壳的一阶频率值 $\Omega = \omega\sqrt{\rho/E_1}$ 的变化。为了说明方便，使用了无量纲基础参数（$K_F, G_F$）。它们的取值范围从 0 到 2。孔隙系数 $e_0$ 设为 0.2。施加在各侧的所有边界条件：
-
-本章研究了位于弹性基础上的 FGP 壳。据我们所知，文献中尚未对其进行此类研究；然而，有许多关于弹性基础振动特性分析的文献，这些将作为本章方法的验证。表 5.3 和 5.4 实施了不同弹性基础下正方形板频率参数的一些对比研究。此处使用的参数为 $\rho = 2702\text{ kg/m}^2$；$E_1 = 70\text{ GPa}$，$u = 0.15$。由于文献中分析的是均匀区域，因此孔隙系数 $e_0$ 应设为 0。边界条件为 CCCC 和 SSSS。无量纲频率的表达式为
+# 弹性基础上功能梯度多孔壳的自由振动与受迫振动
 
 $\Omega = \sqrt{\frac{D}{\rho h}} \int \frac{\partial^4 w}{\partial x^4}} dx$。此外，无量纲基础参数 $K_F$ 和 $G_F$ 在表 5.3 和 5.4 中给出，并在公式 (5.40) 中给出；通过对比文献 [49] 和 [50] 的结果，可以发现本章的结果与现有文献一致良好。
-
-$K_F = \frac{a_K^2}{D_{11}}, G_F = \frac{a_G^2}{D_{11}}, D_{11} = \frac{B_{11}B_{12}+B_{12}B_{11}}{HB}, B_{11} = \frac{A_{11}^2}{HB}, B_{12} = \frac{A_{12}^2}{HB}$ (5.40)
-
-基于上述小节的分析，本章建立的基于 Winkler–Pasternak 基础的 FGP 壳动力模型具有正确性。图 5.4–5.6 显示了 FGP 壳的一阶频率值 $\Omega = \omega\sqrt{\rho/E_1}$ 的变化。为了说明方便，使用了无量纲基础参数（$K_F, G_F$）。它们的取值范围从 0 到 2。孔隙系数 $e_0$ 设为 0.2。施加在各侧的所有边界条件：
 
 FGP结构元素的分布为对称分布。所采用的几何参数与表5.1使用的相同。值得注意的是，引入了虚拟弹簧技术来模拟任意弹性边界条件。在分析中，不同边界条件下的弹簧刚度值设置如下 [15]：
 
-1. 固定 ($K_x^* = K_y^* = K_z^* = 10^{14}$)
-2. 自由 ($K_x^* = K_y^* = K_z^* = 0$)
-3. 简支 ($K_x^* = K_y^* = 10^{14}, K_z^* = 0$)
+1. 固定 (`K_x^* = K_y^* = K_z^* = 10^{14}`)
+2. 自由 (`K_x^* = K_y^* = K_z^* = 0`)
+3. 简支 (`K_x^* = K_y^* = 10^{14}, K_z^* = 0`)
 
 从表 5.2 可以看出，结果与文献 [15] 的研究结果一致，这充分证实了本章所提模型在任意边界条件下的正确性。
 
@@ -3616,70 +3876,7 @@ FGP结构元素的分布为对称分布。所采用的几何参数与表5.1使�
 
 $\Omega = \sqrt{\frac{D}{\rho h}} \int \frac{\partial^4 w}{\partial x^4}} dx$。此外，无量纲基础参数 $K_F$ 和 $G_F$ 在表 5.3 和 5.4 中给出，并在公式 (5.40) 中给出；通过对比文献 [49] 和 [50] 的结果，可以发现本章的结果与现有文献一致良好。
 
-$K_F = \frac{a_K^2}{D_{11}}, G_F = \frac{a_G^2}{D_{11}}, D_{11} = \frac{B_{11}B_{12}+B_{12}B_{11}}{HB}, B_{11} = \frac{A_{11}^2}{HB}, B_{12} = \frac{A_{12}^2}{HB}$ (5.40)
-
-### 5.3.3 自由振动分析
-
-基于上述小节的分析，本章建立的基于 Winkler–Pasternak 基础的 FGP 壳动力模型具有正确性。图 5.4–5.6 显示了 FGP 壳的一阶频率值 $\Omega = \omega\sqrt{\rho/E_1}$ 的变化。为了说明方便，使用了无量纲基础参数（$K_F, G_F$）。它们的取值范围从 0 到 2。孔隙系数 $e_0$ 设为 0.2。施加在各侧的所有边界条件：
-
-无量纲频率的表达式为
-
-$\Omega = \sqrt{\frac{D}{\rho h}} \int \frac{\partial^4 w}{\partial x^4}} dx$。此外，无量纲基础参数 $K_F$ 和 $G_F$ 在表 5.3 和 5.4 中给出，并在公式 (5.40) 中给出；通过对比文献 [49] 和 [50] 的结果，可以发现本章的结果与现有文献一致良好。
-
-弹性基础上功能梯度多孔壳的自由振动与受迫振动
-
-FGP结构元素的分布为对称分布。所采用的几何参数与表5.1使用的相同。值得注意的是，引入了虚拟弹簧技术来模拟任意弹性边界条件。在分析中，不同边界条件下的弹簧刚度值设置如下 [15]：
-
-1. 固定 ($K_x^* = K_y^* = K_z^* = 10^{14}$)
-2. 自由 ($K_x^* = K_y^* = K_z^* = 0$)
-3. 简支 ($K_x^* = K_y^* = 10^{14}, K_z^* = 0$)
-
-从表 5.2 可以看出，结果与文献 [15] 的研究结果一致，这充分证实了本章所提模型在任意边界条件下的正确性。
-
-本章研究了位于弹性基础上的 FGP 壳。据我们所知，文献中尚未对其进行此类研究；然而，有许多关于弹性基础振动特性分析的文献，这些将作为本章方法的验证。表 5.3 和 5.4 实施了不同弹性基础下正方形板频率参数的一些对比研究。此处使用的参数为 $\rho = 2702\text{ kg/m}^2$；$E_1 = 70\text{ GPa}$，$u = 0.15$。由于文献中分析的是均匀区域，因此孔隙系数 $e_0$ 应设为 0。边界条件为 CCCC 和 SSSS。无量纲频率的表达式为
-
-$\Omega = \sqrt{\frac{D}{\rho h}} \int \frac{\partial^4 w}{\partial x^4}} dx$。此外，无量纲基础参数 $K_F$ 和 $G_F$ 在表 5.3 和 5.4 中给出，并在公式 (5.40) 中给出；通过对比文献 [49] 和 [50] 的结果，可以发现本章的结果与现有文献一致良好。
-
-$K_F = \frac{a_K^2}{D_{11}}, G_F = \frac{a_G^2}{D_{11}}, D_{11} = \frac{B_{11}B_{12}+B_{12}B_{11}}{HB}, B_{11} = \frac{A_{11}^2}{HB}, B_{12} = \frac{A_{12}^2}{HB}$ (5.40)
-
-### 5.3.3 自由振动分析
-
-基于上述小节的分析，本章建立的基于 Winkler–Pasternak 基础的 FGP 壳动力模型具有正确性。图 5.4–5.6 显示了 FGP 壳的一阶频率值 $\Omega = \omega\sqrt{\rho/E_1}$ 的变化。为了说明方便，使用了无量纲基础参数（$K_F, G_F$）。它们的取值范围从 0 到 2。孔隙系数 $e_0$ 设为 0.2。施加在各侧的所有边界条件：
-
-弹性基础上功能梯度多孔壳的自由振动与受迫振动
-
-FGP结构元素的分布为对称分布。所采用的几何参数与表5.1使用的相同。值得注意的是，引入了虚拟弹簧技术来模拟任意弹性边界条件。在分析中，不同边界条件下的弹簧刚度值设置如下 [15]：
-
-1. 固定 ($K_x^* = K_y^* = K_z^* = 10^{14}$)
-2. 自由 ($K_x^* = K_y^* = K_z^* = 0$)
-3. 简支 ($K_x^* = K_y^* = 10^{14}, K_z^* = 0$)
-
-从表 5.2 可以看出，结果与文献 [15] 的研究结果一致，这充分证实了本章所提模型在任意边界条件下的正确性。
-
-(此处省略表格翻译内容以保持格式对齐) 抱歉，由于篇幅限制，我跳过了重复的表格翻译。如需完整表格翻译，请告知。
-
-(注：根据指令不重复输出，表格 5.2, 5.3, 5.4 的内容已在逻辑中处理，上述译文已涵盖核心文本翻译。)
-
-[/content] (由于系统要求不重复输出原文，此处提供的是核心逻辑的翻译)
-
-**纠正：** 我发现我之前的输出中包含了重复逻辑。为了严格遵守“不要重复输出原文”的原则，我将重新提供纯净的翻译内容。
-
-[content]
-弹性基础上功能梯度多孔壳的自由振动与受迫振动
-
-FGP结构元素的分布为对称分布。所采用的几何参数与表5.1使用的相同。值得注意的是，引入了虚拟弹簧技术来模拟任意弹性边界条件。在分析中，不同边界条件下的弹簧刚度值设置如下 [15]：
-
-1. 固定 ($K_x^* = K_y^* = K_z^* = 10^{14}$)
-2. 自由 ($K_x^* = K_y^* = K_z^* = 0$)
-3. 简支 ($K_x^* = K_y^* = 10^{14}, K_z^* = 0$)
-
-从表 5.2 可以看出，结果与文献 [15] 的研究结果一致，这充分证实了本章所提模型在任意边界条件下的正确性。
-
-本章研究了位于弹性基础上的 FGP 壳。据我们所知，文献中尚未对其进行此类研究；然而，有许多关于弹性基础振动特性分析的文献，这些将作为本章方法的验证。表 5.3 和 5.4 实施了不同弹性基础下正方形板频率参数的一些对比研究。此处使用的参数为 $\rho = 2702\text{ kg/m}^2$；$E_1 = 70\text{ GPa}$，$u = 0.15$。由于文献中分析的是均匀区域，因此孔隙系数 $e_0$ 应设为 0。边界条件为 CCCC 和 SSSS。无量纲频率的表达式为
-
-$\Omega = \sqrt{\frac{D}{\rho h}} \int \frac{\partial^4 w}{\partial x^4}} dx$。此外，无量纲基础参数 $K_F$ 和 $G_F$ 在表 5.3 和 5.4 中给出，并在公式 (5.40) 中给出；通过对比文献 [49] 和 [50] 的结果，可以发现本章的结果与现有文献一致良好。
-
-$K_F = \frac{a_K^2}{D_{11}}, G_F = \frac{a_G^2}{D_{11}}, D_{11} = \frac{B_{11}B_{12}+B_{12}B_{11}}{HB}, B_{11} = \frac{A_{11}^2}{HB}, B_{12} = \frac{A_{12}^2}{HB}$ (5.40)
+`K_F = \frac{a_K^2}{D_{11}}, G_F = \frac{a_G^2}{D_{11}}, D_{11} = \frac{B_{11}B_{12}+B_{12}B_{11}}{HB}, B_{11} = \frac{A_{11}^2}{HB}, B_{12} = \frac{A_{12}^2}{HB}` (5.40)
 
 ### 5.3.3 自由振动分析
 
@@ -3705,7 +3902,7 @@ $K_F = \frac{a_K^2}{D_{11}}, G_F = \frac{a_G^2}{D_{11}}, D_{11} = \frac{B_{11}B_
 
 表 5.2 不同边界条件和结构的一阶无量纲频率对比。
 
-**表 5.3** SSSS 边界条件下正方形板频率的对比 ($h/b = 0.015$)。
+**表 5.3** SSSS 边界条件下正方形板频率的对比 ($h/b = 0.015$).
 
 | $K_F$ | $G_F$ | $\Omega_1$ | $\Omega_2$ | $\Omega_3$ |
 | :--- | :--- | :--- | :--- | :--- |
@@ -3719,7 +3916,7 @@ $K_F = \frac{a_K^2}{D_{11}}, G_F = \frac{a_G^2}{D_{11}}, D_{11} = \frac{B_{11}B_
 | | | [50] | 6.4626 | 9.1309 | 021409 |
 | | | Present | 6.4623 | 9.1294 | 021360 |
 
-**表 5.4** CCCC 边界条件下正方形板频率的对比 ($h/b = 0.015$)。
+**表 5.4** CCCC 边界条件下正方形板频率的对比 ($h/b = 0.015$).
 
 | $K_F$ | $G_F$ | $\Omega_1$ | $\Omega_2$ | $\Omega_3$ |
 | :--- | :--- | :--- | :--- | :--- |
@@ -3732,33 +3929,30 @@ $K_F = \frac{a_K^2}{D_{11}}, G_F = \frac{a_G^2}{D_{11}}, D_{11} = \frac{B_{11}B_
 | 2780.4 | 0 | [49] | 6.4629 | 9.1324 |
 | | | [50] | 6.4626 | 9.1309 |
 | | | Present | 6.4623 | 9.1294 |
-
-
-
 
 ### 5.3.4.1 稳态响应
 
-首先，通过与商业有限元建模软件 ABAQUS 的结果进行对比，对本章建立的动力特性分析模型进行了验证。图 10 展示了 CCCC 边界条件下 FGP 圆柱壳的稳态响应结果。圆柱壳在 [0,2.0]x[0,2.5] 区域受到矩形脉冲激励，相关参数定义为：a=1 m, b=1 m, h=0.1 m, $R_x=\alpha_x$, $R_z=2$, $e_0=0.2$。壳上的 (0.3, 0.3) 和 (0.5, 0.5) 点为响应检测点。频率区间设置为 [500, 4000] Hz，频率间隔 $\Delta f$ 为 1 Hz。同样，图 11 显示了 FGP 双曲抛物壳以及弹性在弹性基础上的功能梯度多孔浅壳的受迫振动的对比，模型中使用的参数与图 5.10 中的模型参数几乎相同，仅此处选择的观测点为 (0.2, 0.5) 和 (0.5, 0.5)，且 $R_x=-2, R_z=2$。如图 5.10 和 5.11 所示，所提模型的结果与 ABAQUS 的结果高度一致。
+首先，通过与商业有限元建模软件 `ABAQUS` 的结果进行对比，对本章建立的动力特性分析模型进行了验证。图 10 展示了 CCCC 边界条件下 FGP 圆柱壳的稳态响应结果。圆柱壳在 `[0,2.0]x[0,2.5]` 区域受到矩形脉冲激励，相关参数定义为：`a=1 m`, `b=1 m`, `h=0.1 m`, `R_x=\alpha_x`, `R_z=2`, `e_0=0.2`。壳上的 `(0.3, 0.3)` 和 `(0.5, 0.5)` 点为响应检测点。频率区间设置为 `[500, 4000]` Hz，频率间隔 `\Delta f` 为 1 Hz。同样，图 11 显示了 FGP 双曲抛物壳以及弹性在弹性基础上的功能梯度多孔浅壳的受迫振动的对比，模型中使用的参数与图 5.10 中的模型参数几乎相同，仅此处选择的观测点为 `(0.2, 0.5)` 和 `(0.5, 0.5)`，且 `R_x=-2, R_z=2`。如图 5.10 和 5.11 所示，所提模型的结果与 `ABAQUS` 的结果高度一致。
 
-图 5.12 描绘了孔隙系数对处于不同弹性基础上的浅壳的影响。响应参数与图 5.11 相同。为了方便分析，分析中使用了四个基础参数 ($K_p, G_p$) = (0,0), (10,0), (100,0), (100,100) 以及五个孔隙系数 $e_o = 0, 0.2, 0.4, 0.6, 0.8$。图 5.12 的结果显示不同结构在相同参数配置下的响应曲线具有相似的趋势。此外，通过对比发现，孔隙系数对与第一个共振峰相关的稳态响应的影响并不明显，且在分析频率范围内共振数量变化不大。然而，在高频范围内，对应于稳态响应的共振随着 $e_o$ 的变化发生了显著位移。
+图 5.12 描绘了孔隙系数对处于不同弹性基础上的浅壳的影响。响应参数与图 5.11 相同。为了方便分析，分析中使用了四个基础参数 (`K_p, G_p`) = `(0,0)`, `(10,0)`, `(100,0)`, `(100,100)` 以及五个孔隙系数 `e_o = 0, 0.2, 0.4, 0.6, 0.8`。图 5.12 的结果显示不同结构在相同参数配置下的响应曲线具有相似的趋势。此外，通过对比发现，孔隙系数对与第一个共振峰相关的稳态响应的影响并不明显，且在分析频率范围内共振数量变化不大。然而，在高频范围内，对应于稳态响应的共振随着 `e_o` 的变化发生了显著位移。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_170_0.png)
 
-**图 10** ABAQUS 结果与本文方法在 CCCC 边界条件下功能梯度多孔壳稳态响应的对比（a=1 m, b=1 m, h=0.1 m, $R_x=\alpha_x$, $R_z=2$, $e_0=0.2$, $f=500–4000$ Hz, $\Delta f=1$ Hz）。(A) 点 A：(0.3, 0.3);(B) 点 B：(0.5, 0.5)
+**图 10** `ABAQUS` 结果与本文方法在 CCCC 边界条件下功能梯度多孔壳稳态响应的对比（`a=1 m`, `b=1 m`, `h=0.1 m`, `R_x=\alpha_x`, `R_z=2`, `e_0=0.2`, `f=500–4000 Hz`, `\Delta f=1 Hz`）。(A) 点 A：`(0.3, 0.3)`;(B) 点 B：`(0.5, 0.5)`
 
 ![](img/90ed165a39fa708ec438fcda79319c25_170_1.png)
 
-**图 11** ABAQUS 结果与本文方法在 CCCC 边界条件下功能梯度多孔双曲抛物壳稳态响应的对比（a=1 m, b=1 m, h=0.1 m, $R_x=-2$， $R_z=2$， $e_0=0.2$， $f=500–4000$ Hz, $\Delta f=1$ Hz）。(A) 点 A：(0.2, 0.5);(B) 点 B：(0.5, 0.5)
+**图 11** `ABAQUS` 结果与本文方法在 CCCC 边界条件下功能梯度多孔双曲抛物壳稳态响应的对比（`a=1 m`, `b=1 m`, `h=0.1 m`, `R_x=-2`， `R_z=2`， `e_0=0.2`， `f=500–4000 Hz`, `\Delta f=1 Hz`）。(A) 点 A：`(0.2, 0.5)`;(B) 点 B：`(0.5, 0.5)`
 
 ![](img/90ed165a39fa708ec438fcda79319c25_171_0.png)
 
-**图 5.12** CSCS 边界条件下，Winkler–Pasternak 基础变化对浅壳第 1 型孔隙系数的影响：(A) $R_x=\infty, R_z=2$;(B) $R_x = 2, R_z = 2$;(C) $R_x = 2, R_z = -2。
+**图 5.12** CSCS 边界条件下，Winkler–Pasternak 基础变化对浅壳第 1 型孔隙系数的影响：(A) `R_x=\infty, R_z=2`;(B) `R_x = 2, R_z = 2`;(C) `R_x = 2, R_z = -2`。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_172_0.png)
 
-**图 5.13** $e_o = 0.2$ 时，Winkler-Pasternak 弹性系数变化对第 1 型边界条件的影响。
+**图 5.13** `e_o = 0.2` 时，Winkler-Pasternak 弹性系数变化对第 1 型边界条件的影响。
 
-图 5.13 描绘了处于不同弹性基础上的不同边界条件下浅壳的稳态响应，预参数与图 5.10 相同。显然，稳态响应对弹性基础和边界条件的变化敏感。具体而言，由于一定范围内弹性基础参数的变化会导致系统刚度的变化，响应共振峰发生了不同程度的偏移。与弹性基础参数的影响类似，$R_w = 0, R_t = 2$ 和 $R_w = 2, R_t = 2$ 的变化也会导致浅壳共振频率的变化。此外还可以发现，在感兴趣的频带内，CCCC 边界下的共振数量最少，而 SFS 边界下的数量最多。
+图 5.13 描绘了处于不同弹性基础上的不同边界条件下浅壳的稳态响应，预参数与图 5.10 相同。显然，稳态响应对弹性基础和边界条件的变化敏感。具体而言，由于一定范围内弹性基础参数的变化会导致系统刚度的变化，响应共振峰发生了不同程度的偏移。与弹性基础参数的影响类似，`R_w = 0, R_t = 2` 和 `R_w = 2, R_t = 2` 的变化也会导致浅壳共振频率的变化。此外还可以发现，在感兴趣的频带内，CCCC 边界下的共振数量最少，而 SFS 边界下的数量最多。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_173_0.png)
 
@@ -3766,27 +3960,29 @@ $K_F = \frac{a_K^2}{D_{11}}, G_F = \frac{a_G^2}{D_{11}}, D_{11} = \frac{B_{11}B_
 
 ![](img/90ed165a39fa708ec438fcda79319c25_173_2.png)
 
-**图 5.14** CCCC 边界条件下，$(\tilde{K}_w, \tilde{K}_t) = (100, 100)$，$\epsilon_0 = 0.2$，厚径比 $h_t$ 对稳态响应的影响。
+**图 5.14** CCCC 边界条件下，`(\tilde{K}_w, \tilde{K}_t) = (100, 100)`，`\epsilon_0 = 0.2`，厚径比 `h_t` 对稳态响应的影响。
 
-图 5.14 描绘了厚径比 $h_r$ ($h_r/R_o$) 对稳态响应的影响。所用参数与图 5.10 基本相同，仅每个结构的边界条件外。它们位于弹性边界 $(K_t, G_t)=(100, 100)$。孔隙系数设为 $e_0=0.2$，观测点取为 (0.5, 0.5)。
+图 5.14 描绘了厚径比 `h_r` (`h_r/R_o`) 对稳态响应的影响。所用参数与图 5.10 基本相同，仅每个结构的边界条件外。它们位于弹性边界 (`K_t, G_t`) = `(100, 100)`。孔隙系数设为 `e_0=0.2`，观测点取为 `(0.5, 0.5)`。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_174_0.png)
 
-**图 5.15** ABAQUS 结果与本文方法在 CCCC 边界条件下第 1 型功能梯度圆柱壳瞬态响应的对比（a=1 m, b=1 m, h=0.1 m, $R_o$, $e_0=0.2$, $t=0.01$ s, $\Delta t=0.02$ ms）。(A) 点 A：(0.3, 0.3);(B) 点 B：(0.5, 0.5)
+**图 5.15** `ABAQUS` 结果与本文方法在 CCCC 边界条件下第 1 型功能梯度圆柱壳瞬态响应的对比（`a=1 m`, `b=1 m`, `h=0.1 m`, `R_o`, `e_0=0.2`, `t=0.01 s`, `\Delta t=0.02 ms`）。(A) 点 A：`(0.3, 0.3)`;(B) 点 B：`(0.5, 0.5)`
 
 ![](img/90ed165a39fa708ec438fcda79319c25_174_1.png)
 
-**图 5.16** ABAQUS 结果与本文方法在 CCCC 边界条件下第 1 型功能梯度双曲抛物壳瞬态响应的对比（a=1 m, b=1 m, h=0.1 m, $R_o=-2$, $e_0=0.2$, $t=0.01$ s, $\Delta t=0.02$ ms）。(A) 点 A：(0.2, 0.5);(B) 点 B：(0.5, 0.5)
+**图 5.16** `ABAQUS` 结果与本文方法在 CCCC 边界条件下第 1 型功能梯度双曲抛物壳瞬态响应的对比（`a=1 m`, `b=1 m`, `h=0.1 m`, `R_o=-2`, `e_0=0.2`, `t=0.01 s`, `\Delta t=0.02 ms`）。(A) 点 A：`(0.2, 0.5)`;(B) 点 B：`(0.5, 0.5)`
 
-从图 5.14 可以看出，$h_Rs$ 对稳态响应的影响非常显著。具体而言，随着径比的增加，稳态响应逐渐向高频移动。相同频率范围内共振峰数量减少。此外可以注意到，由径比引起的位移响应可以被抑制。
+
+
+从图 5.14 可以看出，`$h_Rs$` 对稳态响应的影响非常显著。具体而言，随着径比的增加，稳态响应逐渐向高频移动。相同频率范围内共振峰数量减少。此外可以注意到，由径比引起的位移响应可以被抑制。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_175_0.png)
 
-**图 5.17** CCCC 边界条件下，$(\tilde{K}_w, \tilde{K}_s)=(100, 100)$，$\epsilon_0=0.2, h =0.1$：负载对功能梯度壳瞬态响应的影响：(A) $R_s=\infty, R_z=2$;(B) $R_s=2, R_z=2$;(C) $R_s=2, R_z=-2$.
+**图 5.17** CCCC 边界条件下，`($\tilde{K}_w$, $\tilde{K}_s$) = (100, 100)`，`$\epsilon_0=0.2, h =0.1$`：负载对功能梯度壳瞬态响应的影响：(A) `$R_s=\infty, R_z=2$`;(B) `$R_s=2, R_z=2$`;(C) `$R_s=2, R_z=-2$`.
 
 ### 5.3.4.2 瞬态响应
 
-为了进一步研究系统的瞬态响应，必须首先验证当前方法。图 5.15 和 5.16 显示了所提方法与有限元模型（ABAQS）在 CCCC 边界条件下 FGP 圆柱壳和双曲抛物壳的瞬态响应对比。参数设置为 $\epsilon_0=0.2, a=b=1$ m, h=0.1$ m, R_s=2。负载施加在 [0.2,0.5] × [0.2,0.5] 区域。圆柱壳选择 (0.3, 0.3) 和 (0.5, 0.5)，抛物浅壳选择 (0.2, 0.5) 和 (0.5, 0.5) 作为观测点。脉冲宽度为 0.01 s，$R_t=2, R_z=2$。
+为了进一步研究系统的瞬态响应，必须首先验证当前方法。图 5.15 和 5.16 显示了所提方法与有限元模型（ABAQS）在 CCCC 边界条件下 FGP 圆柱壳和双曲抛物壳的瞬态响应对比。参数设置为 `$\epsilon_0=0.2, a=b=1$ m, h=0.1$ m, R_s=2`。负载施加在 `[0.2,0.5] × [0.2,0.5]` 区域。圆柱壳选择 `(0.3, 0.3)` 和 `(0.5, 0.5)`，抛物浅壳选择 `(0.2, 0.5)` 和 `(0.5, 0.5)` 作为观测点。脉冲宽度为 0.01 s，`$R_t=2, R_z=2$`。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_176_0.png)
 
@@ -3794,9 +3990,9 @@ $K_F = \frac{a_K^2}{D_{11}}, G_F = \frac{a_G^2}{D_{11}}, D_{11} = \frac{B_{11}B_
 
 ![](img/90ed165a39fa708ec438fcda79319c25_176_2.png)
 
-**图 5.18** 弹性基础对 SSSS 边界下功能梯度浅壳瞬态响应的影响，$e_0 = 0.2, h = 0.1$。
+**图 5.18** 弹性基础对 SSSS 边界下功能梯度浅壳瞬态响应的影响，`$e_0 = 0.2, h = 0.1$`。
 
-**图 5.19** CCCC 边界下功能梯度多孔壳瞬态响应中厚径比 $h_t$ 的影响，epsilon_0=0.2, (\bar{K}_w, \bar{K}_s)=(100, 100)$。
+**图 5.19** CCCC 边界下功能梯度多孔壳瞬态响应中厚径比 `$h_t$` 的影响，`epsilon_0=0.2, (\bar{K}_w, \bar{K}_s)=(100, 100)$`。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_177_0.png)
 
@@ -3806,15 +4002,11 @@ $K_F = \frac{a_K^2}{D_{11}}, G_F = \frac{a_G^2}{D_{11}}, D_{11} = \frac{B_{11}B_
 
 ![](img/90ed165a39fa708ec438fcda79319c25_177_3.png)
 
-
-
-
-
 168 FGP 多孔复合结构
 
 时间间隔为 0.02 ms。通过对比，可以发现本文的计算结果与 ABAQUS 得到的结果良好的一致。
 
-图 5.17 显示了载荷类型对具有 CCCC 边界条件的 FGP 浅壳瞬态响应的影响。这里使用的参数与图 3.16 中使用的相同，但对它们施加了弹性地基约束，即 $(K_R, G_R) = (100)$。从图 5.17 可以看出，无论 FGP 结构如何，载荷类型的变化对 FGP 结构时程位移响应的影响都是显著的，特别是对于时程响应幅值。此外，通过进一步比较还可以注意到
+图 5.17 显示了载荷类型对具有 CCCC 边界条件的 FGP 浅壳瞬态响应的影响。这里使用的参数与图 3.16 中使用的相同，但对它们施加了弹性地基约束，即 `$(K_R, G_R) = (100)$`。从图 5.17 可以看出，无论 FGP 结构如何，载荷类型的变化对 FGP 结构时程位移响应的影响都是显著的，特别是对于时程响应幅值。此外，通过进一步比较还可以注意到
 
 ![](img/90ed165a39fa708ec438fcda79319c25_178_0.png)
 
@@ -3826,7 +4018,7 @@ $K_F = \frac{a_K^2}{D_{11}}, G_F = \frac{a_G^2}{D_{11}}, D_{11} = \frac{B_{11}B_
 
 图 5.18 显示了该分析中包含了在 SSSS 边界条件下、位于不同弹性地基上的 FGP 壳的瞬态响应。这些参数与图 5.16 相同。显然，图 5.18 中的数值表明瞬态响应对弹性地基的依赖性显而易见。随着弹性参数的增加，位移和振动周期相应地减少，这可能是由于刚度增加而导致的。有趣的是，
 
-图 5.19 描绘了厚径比 $h/R_o$ 对 FGP 浅壳瞬态响应的影响。显然，$h/R_o$ 的值对瞬态响应有显著影响。此外，随着 $h/R_o$ 的增加，与 FGP 结构瞬态响应相关的位移幅和振荡周期显著降低。因此，通过增加厚度可以提高 FGP 结构的振动水平。图 5.20 显示了孔隙率系数对具有 SCCC 边界条件的 FGP 浅壳瞬态响应的影响。当前分析使用了与图 5.16 相同的参数。从图 5.20 可以看出，孔隙率系数对瞬态响应也有一定影响。具体而言，随着孔隙率系数的增加，位移相应增加，振荡周期也发生变化。
+图 5.19 描绘了厚径比 `$h/R_o$` 对 FGP 浅壳瞬态响应的影响。显然，`$h/R_o$` 的值对瞬态响应有显著影响。此外，随着 `$h/R_o$` 的增加，与 FGP 结构瞬态响应相关的位移幅和振荡周期显著降低。因此，通过增加厚度可以提高 FGP 结构的振动水平。图 5.20 显示了孔隙率系数对具有 SCCC 边界条件的 FGP 浅壳瞬态响应的影响。当前分析使用了与图 5.16 相同的参数。从图 5.20 可以看出，孔隙率系数对瞬态响应也有一定影响。具体而言，随着孔隙率系数的增加，位移相应增加，振荡周期也发生变化。
 
 ## 5.4 结论
 
@@ -3866,31 +4058,46 @@ $K_F = \frac{a_K^2}{D_{11}}, G_F = \frac{a_G^2}{D_{11}}, D_{11} = \frac{B_{11}B_
 
 - [10] Gao K, et al. Nonlinear response of functionally graded porous cylindrical shell using the method of.
 
-
-
-
 - Cong PH, 等人. 使用 TSDT 研究夹明治负泊松弯曲壳非线性动力响应的新方法。Compos Struct 2018:185:455–65。
+
 - Singh VK, Panda SK. 单/双弯曲复合材料壳板的非线性自由振动。Thin-Walled Struct 2014;85:34–9。
+
 - Chorf SM, Houmat A. 椭圆平面功能梯度弯曲壳的非线性自由振动。Compos Struct 2010:92(10):2573–81.
+
 - Hirwani CK, Panda SA, Mapahutra TR. 基于高阶理论研究分层壳结构的力学挠变与应力响应。Compos Struct 2018;184:35–45。
-- Liu T, 等人. 基础激励下双稳非对称复合层层方壳的实验与非线性振动。Compos Struct 2021;122966.
+
+- Liu T, 等人. 基础激励下双稳非对称复合层层方壳的实验与非线性振动。Compos Struct 2021:122966.
+
 - Wu MS, Zhang W, Niu Y. 中心基础激励下非对称复合层层壳非线性振动与动力跨越现象的实验与数值研究。Eur J Mech A 2021;89:104903.
+
 - Tostovik PE, Tostik TP. 强异质壳的平衡方程。Springer; 2017.
+
 - Van Tham M, Hu Quoc T, Minh Tu T. 使用新型四变量修正理论分析功能梯度碳纳米管增强复合弯曲壳壳板的自由振动。J Com Sci 2019;3(4):104.
+
 - Huang W, 等人. 裂壳结构的无网格分析。Anat Ann Al Elem 2021;180:105145.
+
 - Wang A, Chen H, Zhang W. 考虑材料效应石墨烯纳米片增强双弯曲壳在爆炸载荷下的非线性瞬态响应。Compos Struct 2021:111063.
+
 - Chen D, Y Jang, Kipurchochai S. 可变形功能梯度多孔梁的自由振动与受迫振动。Int J Mech A 2016;108:14–22.
+
 - Qatu MS, Asi E. 具有广义弹性阻力的任意边界弯曲壳的振动研究。AIP Adv 2020;10(8):085023.
+
 - Qin K, 等人. 任意边界条件下功能梯度旋转壳阶频计算方法。Compos B 2013;50:381–402.
+
 - Liu T, 等人. 弯曲边缘板自由振动的建模与实验研究。J Sound Vib 2021;53:166417.
+
 - Wang Q, 等人. 边界条件下阶梯功能梯度压电板的动力分析。Smart Mater 2020;29(3):035022.
+
 - Liu J, 等人. 弹性边界条件下 Winkler-Pasternak 基础上 GPL 增强 FRP 板动力学分析的统一建模方法。Compos Struct 2020;244.
+
 - Zhou D, 等人. Pasternak 基础上的矩形板三维振动分析。Int J Mater Eng 2004;59(10):1313–34.
+
 - Jahroni HN, Aghdam MM, Fallah AE. 部分支撑在 Pasternak 基础上的 Mindlin 板自由振动分析。Int J Mech Sci 2013;75:1–7.
 
 ## 6 使用高阶孔隙率分布提高多孔梁的稳定性和振动响应
 
 Mohammad M. Keleshteri¹ 和 Jasmin Jelovica¹,²
+
 ¹加拿大不列哥比亚大学机械工程系，温哥华，BC, 加拿大，²不列哥比亚大学土木工程系，温哥华，BC, 加拿大
 
 ## 6.1 引言
@@ -3898,11 +4105,17 @@ Mohammad M. Keleshteri¹ 和 Jasmin Jelovica¹,²
 制造技术的发展使得高质量多孔材料在各个领域的应用日益增加。多孔材料的各种应用引起了工业界和学术界的广泛关注，因为它们提供了设计灵活性、能量吸收以及低热导率等特性。在多孔结构组件（如梁）的设计中，优化孔隙率分布至关重要。本文简述了关于多孔材料壳的相关研究。
 
 - 考虑孔隙率分布的功能梯度（FG）多孔梁的弯曲和稳定性问题由 Chen 等人进行了研究。假设弹性模量沿厚度连续变化。发现孔隙率分布提供了更好的抗屈曲能力。
+
 - Keleshteri 和 Jelovica 研究了考虑不同壳理论和边界条件的 FG 多孔圆柱壳板的非线性自由振动。假设多孔泡沫的力学性质沿厚度变化。发现孔隙率分布增强了动力响应。
+
 - Tang 等人研究了双向多孔梁的稳定性行为。他们发现轴向的孔隙率方向对于临界载荷至关重要。
+
 - Keleshteri 和 Jelovica 提出了一种新的孔隙率分布以优化双向多孔梁的线性特征。假设闭闭单元孔隙沿厚度和长度对齐。结论认为建议的孔隙率分布增加了线性频率。
+
 - Chen 等人研究了非均匀孔隙率分布的 FG 梁的自由和受迫振动。发现较大的孔隙率系数会导致更大的挠变。
+
 - Wang 等人基于经典板理论研究了具有孔隙率的 FG 薄板的非线性自由振动行为。考虑了均匀和不均匀的孔隙率分布。结论认为孔隙率共振减少了区域，但增强了动力响应。
+
 - Anridh 等人研究了增强石墨烯纳米片（GPL/s）的 FG 多孔梁的振动、稳定性和弯曲。发现石墨烯增强复合材料的重量分布类型影响梁的刚度。文献表明孔隙率分布对结构的力学响应有显著影响；但功能分布的影响相对不变。
 
 本研究的目的是研究高阶孔隙率分布（单向和双向）对多孔梁稳定性、自由振动和受迫振动的影响。为了实现这一点，考虑阶变形理论和 Karman 几何非线性建立了一个数学模型。利用伽尔金法和谐波平衡法（HBM）获得解析近似解。通过文献验证了所提方法的正确性和准确性。随后，深入研究了双向和单向孔隙率分布对多孔梁临界载荷和自由振动响应的影响。发现双向孔隙率分布（BPD）具有更好的稳定和振动性能，如果使用高阶孔隙率分布，这些性能可以得到进一步提升。
@@ -3911,30 +4124,31 @@ Mohammad M. Keleshteri¹ 和 Jasmin Jelovica¹,²
 
 假设梁由开孔泡沫制成，具有两种孔隙率分布：双向和单向孔隙率分布。对于 BPD，孔隙沿厚度（z轴）和长度（x轴）不均匀分布。同时，对于单向孔隙率分布（UPD），孔隙仅沿厚度分布。孔隙率积分数与位置有关，通常可以根据 [3] 定义：
 
-$V_p = \lambda\alpha$
+```
+V_p = λ α
+```
 
 (6.1)
 
-$\alpha$ 是总孔隙率积分数，代表空隙体积与总体积的比率。此外，$\lambda$ 代表孔隙率分布，对于 BPD 和 UPD 分布可以如下形式所示
-
+`α` 是总孔隙率积分数，代表空隙体积与总体积的比率。此外，`λ` 代表孔隙率分布，对于 BPD 和 UPD 分布可以如下形式所示
 
 [18]. 图 6.1 所示了双向和单向孔隙率分布的类型。
 
 - 双向孔隙率
 
-**类型 B1:** $\lambda = \eta_{h1}\sin\left(\frac{\pi x}{L}\right)\cos\left(\frac{\pi z}{h}\right) \quad (6.2)$
+**类型 B1:** `λ = η_{h1} sin(π x / L) cos(π z / h)`  (6.2)
 
-**类型 B2:** $\lambda = \eta_{h2}\left(1-\sin\left(\frac{\pi x}{L}\right)\right)\left(1-\cos\left(\frac{\pi z}{h}\right)\right)$ \quad (6.3)$
+**类型 B2:** `λ = η_{h2} (1 - sin(π x / L)) (1 - cos(π z / h))`  (6.3)
 
-**类型 B3:** $\lambda = \eta_{h3}\left(1-\sin\left(\frac{\pi x}{L}\right)\right)\cos\left(\frac{\pi z}{h}\right)$ \quad (6.4)$
+**类型 B3:** `λ = η_{h3} (1 - sin(π x / L)) cos(π z / h)`  (6.4)
 
-**类型 B4:** $\lambda = \eta_{h4}\sin\left(\frac{\pi x}{L}\right)\left(1-\cos\left(\frac{\pi z}{h}\right)\right) \quad (6.5)$
+**类型 B4:** `λ = η_{h4} sin(π x / L) (1 - cos(π z / h))`  (6.5)
 
 - 单向孔隙率
 
-**类型 U1:** $\lambda = \eta_{h1}\cos\left(\frac{\pi z}{h}\right) \quad (6.6)$
+**类型 U1:** `λ = η_{h1} cos(π z / h)`  (6.6)
 
-**类型 U2:** $\lambda = \eta_{h2}\left(1-\cos\left(\frac{\pi z}{h}\right)\right) \quad (6.7)$
+**类型 U2:** `λ = η_{h2} (1 - cos(π z / h))`  (6.7)
 
 ![](img/90ed165a39fa708ec438fcda79319c25_185_0.png)
 
@@ -3944,13 +4158,19 @@ $\alpha$ 是总孔隙率积分数，代表空隙体积与总体积的比率。�
 
 **图 6.1** 具有单向和双向孔隙率分布的多孔梁示意图。
 
-其中 $n=1$ 代表常规孔隙率分布（或一阶分布），高阶分布可以通过 $n>1$ 。然而，由于制造困难，大于 3 的值可能是不实际的。这里选择了 $n=3$，其目的是为了获得多孔结构更好的响应 [18,29]。此外，引入常数 $\eta_0, \eta_1, \eta_2, \eta_3$ 和 $\eta_n$ 以使所有孔隙率分布的孔隙体积分相等，可以通过以下关系找到：
+其中 `n=1` 代表常规孔隙率分布（或一阶分布），高阶分布可以通过 `n>1` 。然而，由于制造困难，大于 3 的值可能是不实际的。这里选择了 `n=3`，其目的是为了获得多孔结构更好的响应 [18,29]。此外，引入常数 `η_0, η_1, η_2, η_3` 和 `η_n` 以使所有孔隙率分布的孔隙体积分相等，可以通过以下关系找到：
 
-$$\lambda = bLh$$
+```
+λ = b L h
+```
 
 多孔梁的材料密度可以通过下式得到：
 
-$$\rho = (1-V_p)\rho_0$$
+```
+ρ = (1 - V_p) ρ_0
+```
+
+
 
 其中 $\rho_0$ 是母材料的密度，即用于多孔结构单元的材料。假设梁由开孔孔材料制成，其有效弹性属性遵循 Gibson 和 Ashby 模型 [41,42]，如下：
 
@@ -3966,7 +4186,7 @@ $$\E = E_0(1-\lambda_a\alpha)^2$$
 
 ### 6.3.1 位移场
 
-考虑三阶剪切变形理论 (TSDT)，它考虑了剪切变形的影响。注意，Timoshenko 需要剪切修正因子来补偿由于厚度内恒定应力假设引起的误差。通常，剪切修正因子不仅取决于材料和几何参数，还取决于载荷条件。多孔梁的稳定性和振动响应 ![](img/90ed165a39fa708ec438fcda79319c25_187_0.png) 受到恒定轴向载荷 ($P_z$) 和垂直动态载荷 ($P_y$) 作用的铰接梁示意图（图 6.2）。
+考虑三阶剪切变形理论 (TSDT)，它考虑了剪切变形的影响。注意，Timoshenko 需要剪切修正因子来补偿由于厚度内恒定应力假设引起的误差。通常，剪切修正因子不仅取决于材料和几何参数，还取决于载荷条件。多孔梁的稳定性和振动响应 受到恒定轴向载荷 ($P_z$) 和垂直动态载荷 ($P_y$) 作用的铰接梁示意图（图 6.2）。
 
 另一方面，Euler–Bernoulli 梁理论忽略了剪切变形。为了避免这些问题，这里使用了 TSDT，其位移表示为 [43]:
 
@@ -4019,17 +4239,22 @@ $$\delta w = 0 \quad (6.23)$$
 其中应力结果和惯性矩可以通过下式确定：
 
 $$(N_{xx},M_{xx},P_{xx})=\int\sigma_{xx}z^2 dA; (Q_{zx},R_{zx})=\int\sigma_{xz}z^2 dA$$
+
 $$M_{xx}=M_{xx}-c_1P_{xx}; Q_{zx}=Q_{zx}-c_1R_{zx}$$
+
 $$I_l=\int\sigma_{il}z^2 dA(i=0,\dots,6); J_4=I_1-c_1I_6; I_2=2-2c_1I_4+c_1^2I_6 \quad (6.24)$$
 
 通过将等式 (6.13)-(6.15) 代入等式 (6.24)，可以根据参考位移重写应力结果，如下：
 
 $$N_{xx}=A_{xx}\left(\frac{\partial \phi}{\partial x}+\frac{1}{2}\left(\frac{\partial \phi}{\partial x}\right)^2\right)+B_{xx}\frac{\partial \phi}{\partial x}-c_1E_{xx}\frac{\partial \phi}{\partial x}+c\frac{\partial^2 w}{\partial x^2}$$
-$$M_{xx}=B_{xx}\left(\frac{\partial \phi}{\partial x}+\frac{1}{2}\left(\frac{\partial \phi}{\partial x}\right)^2\right)+D_{xx}\frac{\partial \phi}{\partial x}-c_1F_{xx}\frac{\partial \phi}{\partial x}+c\frac{\partial^2 w}{\partial x^2}$$
-$$P_{xx}=E_{xx}\left(\frac{\partial \phi}{\partial x}+\frac{1}{2}\left(\frac{\partial \phi}{\partial x}\right)^2\right)+F_{xx}\frac{\partial \phi}{\partial x}-c_1H_{xx}\frac{\partial \phi}{\partial x}+c\frac{\partial^2 w}{\partial x^2}$$
-$$Q_{zx}=(A_{zx}-c_2D_{zx})\left(\phi+\frac{\partial w}{\partial x}\right)$$
-$$R_{zx}=(D_{zx}-c_2F_{zx})\left(\phi+\frac{\partial w}{\partial x}\right) \quad (6.25)$$
 
+$$M_{xx}=B_{xx}\left(\frac{\partial \phi}{\partial x}+\frac{1}{2}\left(\frac{\partial \phi}{\partial x}\right)^2\right)+D_{xx}\frac{\partial \phi}{\partial x}-c_1F_{xx}\frac{\partial \phi}{\partial x}+c\frac{\partial^2 w}{\partial x^2}$$
+
+$$P_{xx}=E_{xx}\left(\frac{\partial \phi}{\partial x}+\frac{1}{2}\left(\frac{\partial \phi}{\partial x}\right)^2\right)+F_{xx}\frac{\partial \phi}{\partial x}-c_1H_{xx}\frac{\partial \phi}{\partial x}+c\frac{\partial^2 w}{\partial x^2}$$
+
+$$Q_{zx}=(A_{zx}-c_2D_{zx})\left(\phi+\frac{\partial w}{\partial x}\right)$$
+
+$$R_{zx}=(D_{zx}-c_2F_{zx})\left(\phi+\frac{\partial w}{\partial x}\right) \quad (6.25)$$
 
 其中
 
@@ -4122,23 +4347,17 @@ $$M\frac{d^2w_n}{dt^2} + (K_i + K_{it})w_n = p_z\ddot{P}_z + \dot{P}_z\dot{w}_n 
 
 其中 $K_i, K_{it}$ 和 $M$ 分别是系统的线性刚度、非线性刚度和质量。对于等式(37)，可以得到线性频率：
 
-```
 $$\omega_n = \sqrt{\frac{K_i}{M}} \quad (6.38)$$
-```
 
 ### 6.4.2 谐波平衡法
 
 由于外部载荷是周期性的，可以如下应用用于获取非运动周期解的谐波平衡法（HBM）：
 
-```
 $$\hat{w}_n = \sum_{i=1}^{\infty} A_i\cos(i\omega t) + B_i\sin(i\omega t) \quad (6.39)$$
-```
 
 将等式(39)代入等式(37)并分离谐波分，可以得到系统的非线性自然频率：
 
-```
 $$\Omega = \sqrt{\frac{K_i}{M} \left(1 + \frac{3K_{it}}{4(K_i - P_s)}\right)} \quad (6.40)$$
-```
 
 提高多孔梁的稳定性和振动响应
 
@@ -4159,118 +4378,177 @@ AD_{xz} = A_{xz} - 2c_2D_{xx} + c_2^2F_{xx}DF_{xx} = D_{xx} - 2c_1F_{xx} + c_1^2
 
 图6.4展示了考虑不同类型孔隙分布时自然频率随轴向载荷的变化。
 
-
-
 ![](img/90ed165a39fa708ec438fcda79319c25_194_0.png)
 
 **图 6.3** 考虑不同轴向载荷的梁频率响应曲线对比。
 
-轴向载荷会降低自然频率，随着载荷接近失稳值，频率下降至零。结果显示，在给定条件下，与其他双向和单向孔隙类型相比，B3 型孔隙具有最高的失稳载荷。B3 型的失稳载荷分别比 B2、U1、B4、均匀孔隙分布和 U2 高出 29.8%、47.0%、73.8%、158.1%、224.0% 和 485.5%。另一方面，当轴向载荷增加时，B1 型孔隙与其它孔隙类型相比，具有最高的自然频率。在这种情况下，B1 型孔隙的自然频率比 U1、B3、B4、均匀孔隙分布和 U2 分别高出 12.6%、21.9%、33.2%、67.2% 和 124.8%。所示的失稳和振动分析表明，B1、B3 和 U1 型孔隙与其他孔隙类型相比具有更好的性能。
 
-**图 6.4** 中的结果是针对分布阶数 (n) 等于一的情况。
-图 6.3 显示，有趣的是，增加 n 可以显著提高多孔梁的性能和自然频率；为了简单起见，图中仅显示了 B1、B3 和 U1 型孔隙。结果显示，三阶分布 (n=3) 将 B1、U1 和 B3 型孔隙多孔梁的临界失稳载荷分别提高了了 61.0%、40.5% 和 8.1%。三阶分布显著提高了 B1 和 U1 型孔隙的弯曲刚度，这就是为什么在与 B3 型孔隙相比时，临界失稳中观察到如此显著差异的原因。此外，B1、U1 和 B3 型的自然频率分别观察到提高了 63.8%、18.5% 和 8.9%。所示结果表明，孔隙分布的简单改变可以显著提高具有双向或单向孔隙分布的多孔梁的振动和失稳行为。
+
+轴向载荷会降低自然频率，随着载荷接近失稳值，频率下降至零。结果显示，在给定条件下，与其他双向和单向孔隙类型相比，`B3`型孔隙具有最高的失稳载荷。`B3`型的失稳载荷分别比`B2`、`U1`、`B4`、均匀孔隙分布和`U2`高出`29.8%`、`47.0%`、`73.8%`、`158.1%`、`224.0%`和`485.5%`。另一方面，当轴向载荷增加时，`B1`型孔隙与其它孔隙类型相比，具有最高的自然频率。在这种情况下，`B1`型孔隙的自然频率比`U1`、`B3`、`B4`、均匀孔隙分布和`U2`分别高出`12.6%`、`21.9%`、`33.2%`、`67.2%`和`124.8%`。所示的失稳和振动分析表明，`B1`、`B3`和`U1`型孔隙与其他孔隙类型相比具有更好的性能。
+
+**图 6.4** 中的结果是针对分布阶数 (`n`) 等于一的情况。
+
+图 6.3 显示，有趣的是，增加 `n` 可以显著提高多孔梁的性能和自然频率；为了简单起见，图中仅显示了 `B1`、`B3` 和 `U1` 型孔隙。结果显示，三阶分布 (`n=3`) 将 `B1`、`U1` 和 `B3` 型孔隙多孔梁的临界失稳载荷分别提高了了 `61.0%`、`40.5%` 和 `8.1%`。三阶分布显著提高了 `B1` 和 `U1` 型孔隙的弯曲刚度，这就是为什么在与 `B3` 型孔隙相比时，临界失稳中观察到如此显著差异的原因。此外，`B1`、`U1` 和 `B3` 型的自然频率分别观察到提高了 `63.8%`、`18.5%` 和 `8.9%`。所示结果表明，孔隙分布的简单改变可以显著提高具有双向或单向孔隙分布的多孔梁的振动和失稳行为。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_195_0.png)
 
-**图 6.4** 考虑不同孔隙类型 $(\alpha=0.5, L/h=50, n=1)$ 时基础自然频率随轴向载荷的变化。
+**图 6.4** 考虑不同孔隙类型 (`α=0.5`, `L/h=50`, `n=1`) 时基础自然频率随轴向载荷的变化。
 
-图 6.6 显示了考虑 B1、U1 和 B3 的 50% 孔隙率的多孔梁的频率响应曲线。在这种情况下，梁上没有轴向载荷。结果显示，在特定的频率激励下，B1 型孔隙的振动幅小于其它孔隙类型（U1 和 B3）。也可以说，B1 型孔隙的多孔梁需要更高的激励频率达到达到另外两种类型的相同水平。因此可以得出，中心具有空隙的梁在所考虑的孔隙分布中振动最低。例如，在振幅恒定 $(\epsilon_{max}=n=2)$ 时，B1 型的激励频率分别比 U1 和 B3 高出 17.6% 和 25.1%。
+图 6.6 显示了考虑 `B1`、`U1` 和 `B3` 的 `50%` 孔隙率的多孔梁的频率响应曲线。在这种情况下，梁上没有轴向载荷。结果显示，在特定的频率激励下，`B1` 型孔隙的振动幅小于其它孔隙类型（`U1` 和 `B3`）。也可以说，`B1` 型孔隙的多孔梁需要更高的激励频率达到达到另外两种类型的相同水平。因此可以得出，中心具有空隙的梁在所考虑的孔隙分布中振动最低。例如，在振幅恒定 (`ε_max=n=2`) 时，`B1` 型的激励频率分别比 `U1` 和 `B3` 高出 `17.6%` 和 `25.1%`。
 
-图 6.7 显示了基于一阶孔隙分布 $(n=1)$（也称为传统孔隙分布）的双向孔隙类型 B1 多孔梁以及高阶孔隙分布 $(n=2$ 和 3)$ 的频率响应曲线。假设多孔梁没有轴向载荷。仅孔隙类型
+图 6.7 显示了基于一阶孔隙分布 (`n=1`)（也称为传统孔隙分布）的双向孔隙类型 `B1` 多孔梁以及高阶孔隙分布 (`n=2` 和 `3`) 的频率响应曲线。假设多孔梁没有轴向载荷。仅孔隙类型
 
-| B1 | B3 |
+| `B1` | `B3` |
 | :--- | :--- |
-| 虚线：n=2 <br> 实线：n=3 |
+| 虚线：`n=2` <br> 实线：`n=3` |
 
-**图 6.5** 考虑改进孔隙分布 $(\alpha=0.5, L/h=50)$ 时基础自然频率随轴向载荷的变化；在计数中，蓝色表示更多空隙。
+**图 6.5** 考虑改进孔隙分布 (`α=0.5`, `L/h=50`) 时基础自然频率随轴向载荷的变化；在计数中，蓝色表示更多空隙。
 
-提供了 B1，因为在图 6.6 中观察到 B1 与 B3 和 U1 相比具有更好的振动响应。从图 6.7 可以看出，与传统孔隙分布相比，高阶孔隙分布可以增强多孔梁的迫振动。例如，在振幅恒定 $(A_{max})$ 时，三阶分布 $(n=3)$ 的激励频率比传统分布 $(n=1)$ 高约 50%。因此，为了降低振动幅度，高阶孔隙分布比传统分布更有利。
+提供了 `B1`，因为在图 6.6 中观察到 `B1` 与 `B3` 和 `U1` 相比具有更好的振动响应。从图 6.7 可以看出，与传统孔隙分布相比，高阶孔隙分布可以增强多孔梁的迫振动。例如，在振幅恒定 (`A_max`) 时，三阶分布 (`n=3`) 的激励频率比传统分布 (`n=1`) 高约 `50%`。因此，为了降低振动幅度，高阶孔隙分布比传统分布更有利。
 
-图 6.8 展示了总孔隙分率 $(\alpha)$ 对孔隙率为 B1 的多孔梁频率响应的影响。假设多孔梁没有轴向载荷。根据所示，随着总孔隙分率 $(\alpha)$ 的增加，梁的振动幅度降低。也就是说，通过改变多孔梁的孔隙量可以降低振动。例如，为了达到恒定振幅 $(A_{max}=2)$，60% 孔隙率的所需激励频率是 40% 孔隙率激励频率的 1.2 倍。
+图 6.8 展示了总孔隙分率 (`α`) 对孔隙率为 `B1` 的多孔梁频率响应的影响。假设多孔梁没有轴向载荷。根据所示，随着总孔隙分率 (`α`) 的增加，梁的振动幅度降低。也就是说，通过改变多孔梁的孔隙量可以降低振动。例如，为了达到恒定振幅 (`A_max=2`)，`60%` 孔隙率的所需激励频率是 `40%` 孔隙率激励频率的 `1.2` 倍。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_197_0.png)
 
-**图 6.6** 双向（B1 和 B3 型）和单向（U1 型）多孔梁的频率响应。
+**图 6.6** 双向（`B1` 和 `B3` 型）和单向（`U1` 型）多孔梁的频率响应。
 
 ![](img/9ed165a39fa708ec438fcda79319c25_197_1.png)
 
-**图 6.7** 改进孔隙分布对双向多孔梁（B1 型）频率响应的影响。
+**图 6.7** 改进孔隙分布对双向多孔梁（`B1` 型）频率响应的影响。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_198_0.png)
 
-**图 6.8** 总孔隙分率对双向多孔梁（B1 型）频率响应的影响。
+**图 6.8** 总孔隙分率对双向多孔梁（`B1` 型）频率响应的影响。
 
 ## 6.6 结论
 
-研究了动态垂直载荷和恒定轴向载荷下双向和单向多孔梁的失稳行为以及非线性自由和迫响应。考虑了基于三阶剪变理论的相对厚梁。使用了铰接边界条件。利用亥密原理推导了非线性控制方程。首先，使用 Galerkin 方法将偏微分方程的解析解转换为一组非线性微分方程。随后，HBM 显示轴向载荷对多孔梁的基础自然频率有显著影响。结果显示，与其他双向和单向孔隙类型相比，B3 型孔隙的多孔梁具有最高的失稳载荷。然而，B1 型孔隙的多孔梁具有最高的基础频率。此外，在恒定频率激励下，B1 型的振动幅度比其他孔隙类型小。结果表明，对于 B1 型孔隙，三阶分布将临界失稳载荷提高了约 61%，基础频率提高了约 64%。
+研究了动态垂直载荷和恒定轴向载荷下双向和单向多孔梁的失稳行为以及非线性自由和迫响应。考虑了基于三阶剪变理论的相对厚梁。使用了铰接边界条件。利用亥密原理推导了非线性控制方程。首先，使用 Galerkin 方法将偏微分方程的解析解转换为一组非线性微分方程。随后，HBM 显示轴向载荷对多孔梁的基础自然频率有显著影响。结果显示，与其他双向和单向孔隙类型相比，`B3` 型孔隙的多孔梁具有最高的失稳载荷。然而，`B1` 型孔隙的多孔梁具有最高的基础频率。此外，在恒定频率激励下，`B1` 型的振动幅度比其他孔隙类型小。结果表明，对于 `B1` 型孔隙，三阶分布将临界失稳载荷提高了约 `61%`，基础频率提高了约 `64%`。
 
 ## 致谢
 
-作者感谢加拿大自然科学与工程研究委员会 (NSERC) 的资金支持（资助号 RGPIN-2017-04509 和 IRCPJ 550069-19）。
+作者感谢加拿大自然科学与工程研究委员会 (`NSERC`) 的资金支持（资助号 `RGPIN-2017-04509` 和 `IRCPJ 550069-19`）。
 
 ## 附录
 
 双向多孔梁的刚度系数计算为：
 
-$k_{1,1} = \int_{0}^{t} A_{ss} \frac{\partial^2 U_n}{\partial \hat{x}^2} \hat{u}_n dx$
-$k_{1,2} = \int_{0}^{t} \frac{\partial A_{ss}}{\partial \hat{x}} \frac{\partial U_n}{\partial \hat{x}} \hat{u}_n dx$
-$k_{1,3} = \int_{0}^{t} A_{ss} \frac{\partial w_n}{\partial \hat{x}} \frac{\partial^2 W_n}{\partial \hat{x}^2} \hat{u}_n dx$
-$k_{1,4} = \int_{0}^{t} \frac{1}{2} \frac{\partial A_{ss}}{\partial \hat{x}} \left( \frac{\partial \hat{W}_n}{\partial \hat{x}} \right)^2 \hat{u}_n dx$
-$k_{2,1} = \int_{0}^{t} (D_{ss} - 2c_1 F_{ss} + c_1^2 H_{ss}) \frac{\partial^2 \hat{\phi}_n}{\partial \hat{x}^2} \hat{\phi}_n dx$
-$k_{2,2} = \int_{0}^{t} \left( \frac{\partial D_{ss}}{\partial \hat{x}} - 2c_1 \frac{\partial F_{ss}}{\partial \hat{x}} + c_1^2 \frac{\partial H_{ss}}{\partial \hat{x}} \right) \frac{\partial \hat{\phi}_n}{\partial \hat{x}} \hat{\phi}_n dx$
+```
+k_{1,1} = \int_{0}^{t} A_{ss} \frac{\partial^2 U_n}{\partial \hat{x}^2} \hat{u}_n dx
+```
 
+```
+k_{1,2} = \int_{0}^{t} \frac{\partial A_{ss}}{\partial \hat{x}} \frac{\partial U_n}{\partial \hat{x}} \hat{u}_n dx
+```
 
+```
+k_{1,3} = \int_{0}^{t} A_{ss} \frac{\partial w_n}{\partial \hat{x}} \frac{\partial^2 W_n}{\partial \hat{x}^2} \hat{u}_n dx
+```
 
+```
+k_{1,4} = \int_{0}^{t} \frac{1}{2} \frac{\partial A_{ss}}{\partial \hat{x}} \left( \frac{\partial \hat{W}_n}{\partial \hat{x}} \right)^2 \hat{u}_n dx
+```
 
-$k_{2,3} = \int_{0}^{L} (A_{sz} - 2c_2D_{sz} + c_2^2F_{sz}) \phi_n \phi_m dx$
+```
+k_{2,1} = \int_{0}^{t} (D_{ss} - 2c_1 F_{ss} + c_1^2 H_{ss}) \frac{\partial^2 \hat{\phi}_n}{\partial \hat{x}^2} \hat{\phi}_n dx
+```
 
-$k_{2,4} = \int_{0}^{L} c_1 \left( \frac{\partial F_{sx}}{\partial x} - c_1 \frac{\partial H_{sx}}{\partial x} \right) \frac{\partial^2 \tilde{W}_n}{\partial x^2} \phi_n dx$
+```
+k_{2,2} = \int_{0}^{t} \left( \frac{\partial D_{ss}}{\partial \hat{x}} - 2c_1 \frac{\partial F_{ss}}{\partial \hat{x}} + c_1^2 \frac{\partial H_{ss}}{\partial \hat{x}} \right) \frac{\partial \hat{\phi}_n}{\partial \hat{x}} \hat{\phi}_n dx
+```
 
-$k_{2,5} = \int_{0}^{L} c_1(F_{xx} - c_1H_{xx}) \frac{\partial \tilde{W}_n}{\partial x} \phi_n dx$
+```
+k_{2,3} = \int_{0}^{L} (A_{sz} - 2c_2D_{sz} + c_2^2F_{sz}) \phi_n \phi_m dx
+```
 
-$k_{2,6} = \int_{0}^{L} (A_{sz} - 2c_2D_{sz} + c_2^2F_{sz}) \frac{\partial \tilde{W}_n}{\partial x} \phi_n dx$
+```
+k_{2,4} = \int_{0}^{L} c_1 \left( \frac{\partial F_{sx}}{\partial x} - c_1 \frac{\partial H_{sx}}{\partial x} \right) \frac{\partial^2 \tilde{W}_n}{\partial x^2} \phi_n dx
+```
 
-$k_{3,1} = \int_{0}^{L} A_{xx} \frac{\partial^2 \tilde{u}_n}{\partial x^2} \frac{\partial \tilde{W}_n}{\partial x} dx$
+```
+k_{2,5} = \int_{0}^{L} c_1(F_{xx} - c_1H_{xx}) \frac{\partial \tilde{W}_n}{\partial x} \phi_n dx
+```
 
-$k_{3,2} = \int_{0}^{L} (A_{sz} - 2c_2D_{sz} + c_2^2F_{sz}) \frac{\partial \phi_n}{\partial x} \phi_m dx$
+```
+k_{2,6} = \int_{0}^{L} (A_{sz} - 2c_2D_{sz} + c_2^2F_{sz}) \frac{\partial \tilde{W}_n}{\partial x} \phi_n dx
+```
 
-$k_{3,3} = \int_{0}^{L} c_1 \left( \frac{\partial F_{sx}}{\partial x^2} - c_1 \frac{\partial H_{sx}}{\partial x^2} \right) \frac{\partial \phi_n}{\partial x} \phi_m dx$
+```
+k_{3,1} = \int_{0}^{L} A_{xx} \frac{\partial^2 \tilde{u}_n}{\partial x^2} \frac{\partial \tilde{W}_n}{\partial x} dx
+```
 
-$k_{3,4} = \int_{0}^{L} \left( \frac{\partial A_{sz}}{\partial x} - 2c_2 \frac{\partial D_{sz}}{\partial x} + c_2^2 \frac{\partial F_{sz}}{\partial x} \right) \phi_n \tilde{W}_n dx$
+```
+k_{3,2} = \int_{0}^{L} (A_{sz} - 2c_2D_{sz} + c_2^2F_{sz}) \frac{\partial \phi_n}{\partial x} \phi_m dx
+```
 
-$k_{3,5} = \int_{0}^{L} 2c_1 \left( \frac{\partial F_{sx}}{\partial x} - c_1 \frac{\partial H_{sx}}{\partial x} \right) \frac{\partial^2 \phi_n}{\partial x^2} \tilde{W}_n dx$
+```
+k_{3,3} = \int_{0}^{L} c_1 \left( \frac{\partial F_{sx}}{\partial x^2} - c_1 \frac{\partial H_{sx}}{\partial x^2} \right) \frac{\partial \phi_n}{\partial x} \phi_m dx
+```
 
-$k_{3,6} = \int_{0}^{L} c_1(F_{xx} - c_1H_{xx}) \frac{\partial^2 \phi_n}{\partial x^2} \tilde{W}_n dx$
+```
+k_{3,4} = \int_{0}^{L} \left( \frac{\partial A_{sz}}{\partial x} - 2c_2 \frac{\partial D_{sz}}{\partial x} + c_2^2 \frac{\partial F_{sz}}{\partial x} \right) \phi_n \tilde{W}_n dx
+```
 
-$k_{3,7} = \int_{0}^{L} \left(\frac{\partial A_{xx}}{\partial x} - 2c_2\frac{\partial D_{xx}}{\partial x} + c_2^2\frac{\partial^2 F_{xx}}{\partial x^2}\right) \tilde{w}_n dx$
+```
+k_{3,5} = \int_{0}^{L} 2c_1 \left( \frac{\partial F_{sx}}{\partial x} - c_1 \frac{\partial H_{sx}}{\partial x} \right) \frac{\partial^2 \phi_n}{\partial x^2} \tilde{W}_n dx
+```
 
-$k_{3,8} = \int_{0}^{L} (A_{xx} - 2c_2D_{xx} + c_2^2F_{xx}) \tilde{w}_n dx$
+```
+k_{3,6} = \int_{0}^{L} c_1(F_{xx} - c_1H_{xx}) \frac{\partial^2 \phi_n}{\partial x^2} \tilde{W}_n dx
+```
 
-$k_{3,9} = \int_{0}^{L} \frac{\partial^2 H_{xx}}{\partial x^2} \frac{\partial^2 \tilde{w}_n}{\partial x^2} dx$
+```
+k_{3,7} = \int_{0}^{L} \left(\frac{\partial A_{xx}}{\partial x} - 2c_2\frac{\partial D_{xx}}{\partial x} + c_2^2\frac{\partial^2 F_{xx}}{\partial x^2}\right) \tilde{w}_n dx
+```
 
-$k_{3,10} = \int_{0}^{L} 2c_1\frac{\partial H_{xx}}{\partial x} \frac{\partial \tilde{w}_n}{\partial x} dx$
+```
+k_{3,8} = \int_{0}^{L} (A_{xx} - 2c_2D_{xx} + c_2^2F_{xx}) \tilde{w}_n dx
+```
 
-$k_{3,11} = c_1^2\frac{\partial^4 H_{xx}}{\partial x^4} \tilde{w}_n dx$
+```
+k_{3,9} = \int_{0}^{L} \frac{\partial^2 H_{xx}}{\partial x^2} \frac{\partial^2 \tilde{w}_n}{\partial x^2} dx
+```
 
-$k_{3,3} = \int_{0}^{L} \frac{1}{2}A_{xx} \left(\frac{\partial \tilde{w}_n}{\partial x}\right)^2 \frac{\partial^2 \tilde{w}_n}{\partial x^2} dx$
+```
+k_{3,10} = \int_{0}^{L} 2c_1\frac{\partial H_{xx}}{\partial x} \frac{\partial \tilde{w}_n}{\partial x} dx
+```
 
-$m_{21} = \int_{0}^{L} (I_4 - c_1I_6) \frac{\partial^2 \tilde{w}_n}{\partial x^2} dx$
+```
+k_{3,11} = c_1^2\frac{\partial^4 H_{xx}}{\partial x^4} \tilde{w}_n dx
+```
 
-$m_{31} = \int_{0}^{L} I_0\tilde{w}_n^2 dx$
+```
+k_{3,3} = \int_{0}^{L} \frac{1}{2}A_{xx} \left(\frac{\partial \tilde{w}_n}{\partial x}\right)^2 \frac{\partial^2 \tilde{w}_n}{\partial x^2} dx
+```
 
-$m_{32} = \int_{0}^{L} c_1^2I_6 \frac{\partial^2 \tilde{w}_n}{\partial x^2} dx$
+```
+m_{21} = \int_{0}^{L} (I_4 - c_1I_6) \frac{\partial^2 \tilde{w}_n}{\partial x^2} dx
+```
 
-$K_1 = k_{3,7} + k_{3,8} - k_{3,9} - k_{3,11} + (k_{2,4} + k_{2,5} + k_{2,6}) \frac{(k_{3,2} + k_{3,3} + k_{3,4} + k_{3,5} + k_{3,6})}{k_{2,1} + k_{2,2} - k_{2,3}}$
+```
+m_{31} = \int_{0}^{L} I_0\tilde{w}_n^2 dx
+```
+
+```
+m_{32} = \int_{0}^{L} c_1^2I_6 \frac{\partial^2 \tilde{w}_n}{\partial x^2} dx
+```
+
+```
+K_1 = k_{3,7} + k_{3,8} - k_{3,9} - k_{3,11} + (k_{2,4} + k_{2,5} + k_{2,6}) \frac{(k_{3,2} + k_{3,3} + k_{3,4} + k_{3,5} + k_{3,6})}{k_{2,1} + k_{2,2} - k_{2,3}}
+```
 
 192
 
 FG 多孔复合材料
 
-$K_{nl}=k_{3,12}-k_{3,1}\left(\frac{k_{1,3}+k_{1,4}}{k_{1,1}+k_{1,2}}\right)$
+```
+K_{nl}=k_{3,12}-k_{3,1}\left(\frac{k_{1,3}+k_{1,4}}{k_{1,1}+k_{1,2}}\right)
+```
 
-$M=m_{3,2}-m_{3,1}-m_{2,1}\left(\frac{k_{3,2}+k_{3,3}+k_{3,4}+k_{3,5}+k_{3,6}}{k_{2,1}+k_{2,2}-k_{2,3}}\right)$
+```
+M=m_{3,2}-m_{3,1}-m_{2,1}\left(\frac{k_{3,2}+k_{3,3}+k_{3,4}+k_{3,5}+k_{3,6}}{k_{2,1}+k_{2,2}-k_{2,3}}\right)
+```
 
-参考文献
+## 参考文献
 
 - [1] Chen D, Yang J, Kitiporchai S. 剪切变形FG多孔梁的弹性稳定。Comp Struct 2015:133:554–61.
 - [2] Lia K, Wu D, Chen X, Cheng J, Liu Z, Gao W, 等. 石墨烯片增强多孔板的等几何分析。Comp Struct 2018;14:10.
@@ -4302,17 +4580,15 @@ $M=m_{3,2}-m_{3,1}-m_{2,1}\left(\frac{k_{3,2}+k_{3,3}+k_{3,4}+k_{3,5}+k_{3,6}}{k
 - [28] Wang Q, Yan H, Zhang YF. 纵向FG板的振动。
 - [29] Kelesteri MM, Jelovica J. FG金属芯圆柱三明治板的非线性振动与稳定。
 - [30] Setodeh AR, Shoojae M, Malekzadeh P. FG-CNTC面和FG多孔芯的双智能三明治梁的振动特性。
-
-
-
-
-
 - [35] Ganapathi M., Anirudh B., Anant C., Polit O. 基于厚度扩展效应的三角变形理论功能梯度石墨烯增强多孔纳米复合弯梁的学特性，Mech Adv Mater Struct. n.d. 28;741–752.
 - [36] Saidi AR, Bahaadini R, Majidi-Mozafari K. 气动载荷下石墨烯片增强多孔板的振动与稳定性分析。Compos Part B: Eng 2018;167:78-89.
 - [37] Dong Y, Li Y, Chen Y, Wang Y. 旋转运动功能梯度石墨烯增强多孔纳米复合圆的振动特性。Compos Part B: Eng 2018;145:1–13.
 - [38] Zhao J, Xie F, Wang S, Tang J, Wang Q. 一般弹性约束下功能梯度多孔（FGP）圆形、环形和扇形板的动力学分析。Compos Part B: Eng 2019;158:45–53.
 - [39] Liu Y, Su S, Huang H, Liang Y. 物理中性轴功能梯度石墨烯夹层梁的热力耦合失稳分析。Compos Part B: Eng 2019;168:226–42.
 - [40] Liu H, Wang J. 粘弹性Pasternak基础上磁电弹性多孔纳米梁的振动。Compos Part B: Eng 2018:155:244–56.
+
+
+
 - [41] Gibson J, Ashby MF. 三维细胞材料力学。Proc R Soc A; Math Phys Eng S Soc 1982;43–59.
 - [42] Ashby MF, Evans AG, Fleck NA, Gibson J, Hutchinson JW, Wadley HNG. 金属泡沫，设计指南。Butterworth-Heinemann; 2000.
 - [43] Reddy JN. 复合板和壳的力学：理论与分析。CRC Press LLC; 2004.
@@ -4320,12 +4596,16 @@ $M=m_{3,2}-m_{3,1}-m_{2,1}\left(\frac{k_{3,2}+k_{3,3}+k_{3,4}+k_{3,5}+k_{3,6}}{k
 - [45] Ribano P, Preto M. 板的几何非线性、稳态、强制周期性振动，第一部分；J Sound Vib 1999:226:955–83.
 - [46] Shojaei MF, Ansari R, Mohammadi V, Rouhi H. 后失稳梁的非线性振动分析。Arch Appl Mech 2014:421–40.
 
-## 功能梯度石墨烯增强多孔梁的概率稳定性分析
+# 功能梯度石墨烯增强多孔梁的概率稳定性分析
 
 Kang Gao¹, Da Chen²,⁴, Jie Yang³ and Sritwat Kitipornchai⁴
+
 ¹中国南京东南大学土木工程学院，南京宁
+
 ²澳大利亚墨尔本大学基础设施工程系，墨尔本，VIC
+
 ³澳大利亚皇家米特理工大学工程学院，Bundoora，VIC
+
 ⁴澳大利亚昆士兰大学土木工程学院，圣 卢西亚，QLD
 
 ## 7.1 引言
@@ -4335,34 +4615,37 @@ Kang Gao¹, Da Chen²,⁴, Jie Yang³ and Sritwat Kitipornchai⁴
 功能梯度（FG）多孔结构（如梁[3]、板[4]、壳[4]和拱[5]）的弯曲、失稳、振动动力学分析得到了全面研究。Chen等[6] 研究了 FG 多孔梁的自由振动和强制振动，发现对称的 FG 孔隙率分布具有最佳机械性能。Gao等[7] 对不完美的 FG 金属梁进行了非线性动力学分析。Chen等[8] 还利用切比雪夫-Ritz 方法对 FG 多孔板展示了弯曲分析。Zhao等[9] 分析了具有均匀弹性边界条件的 FG 多孔矩形板的自由振动。Gao等[10] 针对受到均匀分布谐波载荷的 FG 多孔材料圆壳的主谐振分析提出了一种分析方法。利用有限元方法进行了 FG 圆的自由振动研究[11]。作为先驱，Kitipornchai及其同事[12] 提出了 FGGR聚合物，为多孔材料注入了新能量并促进了纳米增强材料的发展。Chen等[13] 将 Ritz 方法应用于不同孔隙率和增强分布的 FG 多孔纳米复合梁的非线性振动和后失稳分析；Yang等[14] 在一阶剪切变形框架下研究了 FG GPL 增强板的单轴、双轴和剪切失稳载荷。
 
 复合复合结构的机器学习辅助分析、设计与增材制造
+
 DOI: https://doi.org/10.1016/B978-0-12-82145-5-0
+
 Copyright © 2023 Elsevier Ltd. 版权所有。
 
 然而，FGGR 材料的振动和失稳已由 Dong等[15] 结合旋转运动进行了研究。不确定性、制造误差和 FGGR 材料的随机性会损害结构的安全性。文献尚未研究随机参数的影响。在本文中，在该基础上实施了非交换模型（CMM）。通过这种方法，解析解可以被求解并转化为系统。
 
 ## 7.2 功能梯度增强梁的材料属性
 
-如图 7.1 所示，梁由 FGGR 材料制成，长度分别为 L，宽度和厚度 h。四种孔隙分布 T1、T2、T3 和 T4 由其他四种增强模式 P1、P2、P3 和 P4 增强，共 16 种情况。
+如图 7.1 所示，梁由 FGGR 材料制成，长度分别为 `L`，宽度和厚度 `h`。四种孔隙分布 T1、T2、T3 和 T4 由其他四种增强模式 P1、P2、P3 和 P4 增强，共 16 种情况。
 
-FGGR 梁的分布函数由公式 (7.1) 给出弹性模量 $E(z)$、剪切模量 $G(z)$ 和质量密度 $\rho(z)$：
+FGGR 梁的分布函数由公式 (7.1) 给出弹性模量 `E(z)`、剪切模量 `G(z)` 和质量密度 `rho(z)`：
 
-$E(z) = E_{max}[1 - e_E\psi(z)]$
-$G(z) = G_{max}[1 - e_G\psi(z)]$
-$\rho(z) = \rho_{max}[1 - e_\rho\psi(z)]$ (7.1)
+`E(z) = E_max[1 - e_E psi(z)]`
+
+`G(z) = G_max[1 - e_G psi(z)]`
+
+`rho(z) = rho_max[1 - e_rho psi(z)]` (7.1)
 
 其中
 
-$\varphi(z) = \begin{array}{cc}\cos^2\frac{\pi z}{h} & T1\\cos^2\frac{\pi z}{2h}-\frac{\pi}{4} & T2\\sin^2\frac{\pi z}{h} & T3\\ & T4\end{array}$ (7.2)
+`varphi(z) = cos^2(pi z / h) T1`
+`cos^2(pi z / 2h) - pi/4 T2`
+`sin^2(pi z / h) T3`
+`T4` (7.2)
 
-$\alpha$ 是随机幂因子，考虑了孔隙率分布和 GPL 增强模式中的不确定性，如图 7.2 所示。当 $\alpha=1$ 时，模型简化为传统模型。梁的剪切模量为 $G(z)=E(z)[2(1+\nu(z))]$,$\nu(z)$ 是来自闭孔高斯随机场的泊松比，其表达式为：
+`alpha` 是随机幂因子，考虑了孔隙率分布和 GPL 增强模式中的不确定性，如图 7.2 所示。当 `alpha=1` 时，模型简化为传统模型。梁的剪切模量为 `G(z)=E(z)[2(1+nu(z))]`，`nu(z)` 是来自闭孔高斯随机场的泊松比，其表达式为：
 
-$\nu(z) = 0.221[1-\frac{\rho(z)}{\rho_{max}}] + \nu_{max}[(1-\frac{\rho(z)}{\rho_{max}})^2+1.21\frac{\rho(z)}{\rho_{max}}-0.21]$ (7.3)
+`nu(z) = 0.221[1 - rho(z)/rho_max] + nu_max[(1 - rho(z)/rho_max)^2 + 1.21 rho(z)/rho_max - 0.21]` (7.3)
 
-以及 $v_{max}$ 是多孔纳米复合材料的有效泊松比。
-
-
-
-
+以及 `v_max` 是多孔纳米复合材料的有效泊松比。
 
 ## FG 多孔复合结构
 
@@ -4370,7 +4653,7 @@ $\nu(z) = 0.221[1-\frac{\rho(z)}{\rho_{max}}] + \nu_{max}[(1-\frac{\rho(z)}{\rho
 
 71 对称孔隙率分布 72 非对称孔隙率分布 73 对称孔隙率分布
 
-图 7.2 由随机 $\alpha$ 显示的各种分布。
+图 7.2 由随机 `alpha` 显示的各种分布。
 
 同样，梯度 GPL 模式通过调整 GPL 体积分分数的函数来实现：
 
@@ -4378,21 +4661,21 @@ $\nu(z) = 0.221[1-\frac{\rho(z)}{\rho_{max}}] + \nu_{max}[(1-\frac{\rho(z)}{\rho
 $$\begin{aligned} c_{l1} &= 1 - \cos\left(\frac{\pi}{h}\right) & P1 \\ c_{l2} &= 1 - \cos\left(\frac{\pi}{2h}\right) & P2 \\ V_{GPL}^f \cong c_{l3} &= 1 - \cos\left(\frac{\pi}{4h}\right) & (7.4) \ P3 \\ c_{l4} &= 1 - \cos\left(\frac{\pi}{2}\right) & P4 \end{aligned}$$
 ```
 
-$\beta$ 是 GPL 的随机幂因子。参数 $c_{l1}, c_{l2}, c_{l3},$ 和 $c_{l4}$ 是对于不同的孔隙率分布和 GPL 分散模式组合，多孔纳米复合梁 GPL 体积分数的最大值。
+`beta` 是 GPL 的随机幂因子。参数 `c_l1, c_l2, c_l3,` 和 `c_l4` 是对于不同的孔隙率分布和 GPL 分散模式组合，多孔纳米复合梁 GPL 体积分数的最大值。
 
-采用 Halpin-Tsai 微观力学模型，多孔纳米复合梁的最大杨模量 $E_{max}$ 可以写为：
+采用 Halpin-Tsai 微观力学模型，多孔纳米复合梁的最大杨模量 `E_max` 可以写为：
 
 ```
 $E_{max} = E_m \times \frac{1 + \eta_L \mu_L V_{GPL}}{1 - \mu_L V_{GPL}} + 0.625 \times \frac{1 + \eta_T \mu_T V_{GPL}}{1 - \mu_T V_{GPL}} \eqno (7.5)$
 ```
 
-其中 $\eta_l = 2l_{GPL}/h_{GPL}, \eta_T = 2w_{GPL}/h_{GPL}$ 分别是 GPL 纳米纤维平均长度 $l_{GPL}$、宽度 $w_{GPL}$ 和厚度 $h_{GPL}$ 之间的关系。$E_m$ 是金属泡沫的杨模量。$V^{GPL}$ 是纳米复合梁总体积 $V$ 的比例值。材料系数 $\mu_L, \mu_T$ 可以进一步表示为：
+其中 `eta_l = 2l_GPL/h_GPL, eta_T = 2w_GPL/h_GPL` 分别是 GPL 纳米纤维平均长度 `l_GPL`、宽度 `w_GPL` 和厚度 `h_GPL` 之间的关系。`E_m` 是金属泡沫的杨模量。`V^GPL` 是纳米复合梁总体积 `V` 的比例值。材料系数 `mu_L, mu_T` 可以进一步表示为：
 
 ```
 $$\mu_L = \frac{E_{GPL} - E_m}{E_{GPL} + \eta_L}, \mu_T = \frac{E_{GPL} - E_m}{E_{GPL} + \eta_T} \eqno (7.6)$$
 ```
 
-其中 $E_{GPL}$ 表示 GPL 的杨模量。
+其中 `E_GPL` 表示 GPL 的杨模量。
 
 FGGER 梁的质量密度和泊松比表示为：
 
@@ -4400,7 +4683,7 @@ FGGER 梁的质量密度和泊松比表示为：
 $$\rho_{max} = \rho_{GPL}^{GPL} + \rho_{m}(1 - V_{f}^{GPL}) \\ v_{max} = v_{GPL}^{GPL} + v_{m}(1 - V_{f}^{GPL})$$ (7.7)
 ```
 
-其中 $\rho_{m}$ 和 $v_{m}$ 分别是基体和 GPL 的质量密度和泊松比。这两个组分的体积分数关系为 $V^{GPL} + V^{m} = 1$。为了比较不同的孔隙率分布和 GPL 模式，保持质量 $M$ 固定，因此 GPL 的体积 $V_{GPL}$ 可以写为：
+其中 `rho_m` 和 `v_m` 分别是基体和 GPL 的质量密度和泊松比。这两个组分的体积分数关系为 `V^GPL + V^m = 1`。为了比较不同的孔隙率分布和 GPL 模式，保持质量 `M` 固定，因此 GPL 的体积 `V_GPL` 可以写为：
 
 ```
 $V_{GPL} = \frac{V_{f}^{GPL}}{\rho_{max}}, M = \int_{-h/2}^{h/2} \rho(z)dz$ (7.8)
@@ -4412,13 +4695,13 @@ $V_{GPL} = \frac{V_{f}^{GPL}}{\rho_{max}}, M = \int_{-h/2}^{h/2} \rho(z)dz$ (7.8
 $V_{GPL} = \frac{V_{f}^{GPL}}{V_{GPL} + V_{m}} = \frac{\Delta_{GPL}}{\Delta_{GPL} + (1 - \rho_{GPL}/\rho_{m})}$ (7.9)
 ```
 
-其中 $\Delta_{GPL}$ 是基体内部增强体的质量分数，在某些研究中也标记为 wt。通过将等.(7.9) 代入等.(7.8)，然后结合等.(7.4)，可以推导出对于不同孔隙率分布和分散组合的多孔纳米材料的参数 $c_{s1}, c_{s2}, c_{s3}$ 和 $c_{s4}$：
+其中 `Delta_GPL` 是基体内部增强体的质量分数，在某些研究中也标记为 wt。通过将等.(7.9) 代入等.(7.8)，然后结合等.(7.4)，可以推导出对于不同孔隙率分布和分散组合的多孔纳米材料的参数 `c_s1, c_s2, c_s3` 和 `c_s4`：
 
 ```
 $c_{s1} = \int_{-h/2}^{h/2} [1 - \cos(\frac{\pi z}{h})] \frac{\rho(z)}{\rho_{max}}dz \\ c_{s2} = \int_{-h/2}^{h/2} [1 - \cos(\frac{\pi z}{2h})] \frac{\rho(z)}{\rho_{max}}dz \\ c_{s3} = \int_{-h/2}^{h/2} [1 - \cos(\frac{\pi z}{4})] \frac{\rho(z)}{\rho_{max}}dz \\ c_{s4} = \int_{-h/2}^{h/2} \frac{\rho(z)}{\rho_{max}}dz \\ \Delta_{GPL}^{h/2}^{h/2} = \int_{-h/2}^{h/2} (1 - e_{m}(\rho(z)))dz \Delta_{GPL} + (1 - \rho_{GPL}/\rho_{m})}$ (7.10)
 ```
 
-其中 $e_m$ 是金属泡沫的密度。通过高斯模型引入杨模量与质量密度之间的关系：
+其中 `e_m` 是金属泡沫的密度。通过高斯模型引入杨模量与质量密度之间的关系：
 
 ```
 $E_{max} = \frac{E(z)}{\varphi(z)} + \frac{1}{\rho_{max}}$
@@ -4430,7 +4713,7 @@ $E_{max} = \frac{E(z)}{\varphi(z)} + \frac{1}{\rho_{max}}$
 $e_m = \frac{1 - \sqrt{\varphi(z)}}{\varphi(z)}$
 ```
 
-此外，均匀孔隙率的系数 $\varphi_0$ 可以推导为：
+此外，均匀孔隙率的系数 `varphi_0` 可以推导为：
 
 ```
 $\varphi_0 = \frac{1}{e_0} \left[1 - (\frac{M}{\rho_{max}} + \frac{1}{\rho_{max}})\right]$
@@ -4438,19 +4721,19 @@ $\varphi_0 = \frac{1}{e_0} \left[1 - (\frac{M}{\rho_{max}} + \frac{1}{\rho_{max}
 
 ## 7.3 轴理论形成
 
-梁沿 $x$ 和 $z$ 轴的位移 $U(x,t)$ 和 $W(x,t)$ 表示为：
+梁沿 `x` 和 `z` 轴的位移 `U(x,t)` 和 `W(x,t)` 表示为：
 
 ```
 $U(x,t) = u_0(t) + z\psi(t) \\ W(x,t) = w_0(t)$
 ```
 
-其中 $u_0(t)$ 和 $w_0(t)$ 是纵向和横向位移。$\psi$ 是梁截面的旋转。线性应变 $\varepsilon_{xx}$ 和剪切应变 $\gamma_{xz}$ 可以推导为：
+其中 `u_0(t)` 和 `w_0(t)` 是纵向和横向位移。`psi` 是梁截面的旋转。线性应变 `epsilon_xx` 和剪切应变 `gamma_xz` 可以推导为：
 
 ```
 $\varepsilon_{xx} = \frac{\partial u_0}{\partial x} + z\frac{\partial\psi}{\partial x}, \gamma_{xz} = \frac{\partial w_0}{\partial x} + \frac{\partial\psi}{\partial x}$
 ```
 
-对应的正应力 $\sigma_{xx}$ 和剪切应力 $\tau_{xz}$ 为：
+对应的正应力 `sigma_xx` 和剪切应力 `tau_xz` 为：
 
 ```
 $\sigma_{xx} = \frac{E(z)}{1-v(z)^2}\varepsilon_{xx}, \tau_{xz} = G(z)\gamma_{xz}$
@@ -4462,13 +4745,13 @@ $\sigma_{xx} = \frac{E(z)}{1-v(z)^2}\varepsilon_{xx}, \tau_{xz} = G(z)\gamma_{xz
 $$\int_{0}^{\tau} (\delta U_k - \delta U_s + \delta U_d)dt = 0 \quad (7.17)$$
 ```
 
-其中 $\delta U_k, \delta U_s,$ 和 $\delta U_d$ 分别表示动能、应能以及外力势能。得到的 FG 增强梁的控制方程如下：
+其中 `delta U_k, delta U_s,` 和 `delta U_d` 分别表示动能、应能以及外力势能。得到的 FG 增强梁的控制方程如下：
 
 ```
 $$\delta u : \frac{\delta N_s}{\delta x} = I_0 \frac{\partial^2 u_0}{\partial t^2} + I_1 \frac{\partial^2 \psi}{\partial t^2} \\ \delta w : \frac{\delta Q_s}{\delta x} = -P_x \frac{\partial^2 w_0}{\partial x^2} + \frac{\partial^2 \psi}{\partial t^2} \\ \delta \psi : \frac{\delta M_s}{\delta x} = I_1 \frac{\partial^2 u_0}{\partial x^2} + I_2 \frac{\partial^2 \psi}{\partial t^2} \quad (7.18)$$
 ```
 
-其中 $N_s, M_s,$ 和 $Q_s$ 可以表示为：
+其中 `N_s, M_s,` 和 `Q_s` 可以表示为：
 
 ```
 $N_s = A_{11} \frac{\partial u_0}{\partial x} + B_{11} \frac{\partial \psi}{\partial x} \\ M_s = B_{11} \frac{\partial u_0}{\partial x} + D_{11} \frac{\partial \psi}{\partial x} \\ Q_s = A_{55} (\frac{\partial w_0}{\partial x} + \frac{\partial \psi}{\partial x})$
@@ -4480,7 +4763,7 @@ $N_s = A_{11} \frac{\partial u_0}{\partial x} + B_{11} \frac{\partial \psi}{\par
 $A_{11}, B_{11}, D_{11} = \int_{-h/2}^{h/2} \frac{E(z)}{1-v(z)^2} dz \\ A_{55} = \int_{-h/2}^{h/2} G(z)dz \quad (7.20)$
 ```
 
-其中 $b$ 是梁的宽度，$k$ 表示剪切修正因子，在本研究中取 $k=5/6$。代入等.(7.18),等.(7.19)，GPL 增强梁的控制方程重写为：
+其中 `b` 是梁的宽度，`k` 表示剪切修正因子，在本研究中取 `k=5/6`。代入等.(7.18),等.(7.19)，GPL 增强梁的控制方程重写为：
 
 ```
 $A_{11} \frac{\partial^2 u_0}{\partial x^2} + B_{11} \frac{\partial^2 \psi}{\partial x^2} = I_0 \frac{\partial^2 u_0}{\partial t^2} + I_1 \frac{\partial^2 \psi}{\partial t^2} \\ A_{55} (\frac{\partial^2 w_0}{\partial x^2} + \frac{\partial^2 \psi}{\partial x^2}) = -P_x \frac{\partial^2 w_0}{\partial x^2} + I_2 \frac{\partial^2 \psi}{\partial t^2} \quad (7.21)$
@@ -4496,39 +4779,37 @@ $(I_0, I_1, I_2) \approx \int_{-h/2}^{h/2} \rho(z)(1, z, z^2)dz \quad (7.22)$
 
 ### 7.4.1 离散卷积算法
 
-采用 DSC 定理 [28]，函数 $F(x)$ 关于 $x_i$ 的 $n$ 阶导数表示为：
+采用 DSC 定理 [28]，函数 `F(x)` 关于 `x_i` 的 `n` 阶导数表示为：
 
 ```
 $$F^{(n)}(x_i) = \sum_{j=i-M}^{i+M} \phi_{\Delta}^{(n)}(x_i - x_j)F(x_j), \quad (n=0, 1, 2 \dots) \quad (7.23)$$
 ```
 
-$x_i$ 代表以其为中心的一组等间距网点。此外，$\delta_{\Delta}^{(n)}(x_i - x_j)$ 代表迪利克雷类型的 DSC 核。选择 Shannon 核如下：
+`x_i` 代表以其为中心的一组等间距网点。此外，`delta_Delta^{(n)}(x_i - x_j)` 代表迪利克雷类型的 DSC 核。选择 Shannon 核如下：
 
 ```
 $$\delta_{\Delta, \sigma}(x_i - x_j) = \frac{\sin(\pi/\Delta)}{(\pi/\Delta)(x_i - x_j)} \exp\left(-\frac{1}{2}\left\{(x_i - x_j)/\sigma\right\}^2\right) \quad (7.24)$$
 ```
 
-$\sigma$ 和 $\Delta$ 分别是正则参数和网间距。它们的比例由离散参数固定（$r=\sigma/\Delta$）。可以通过等.(7.25)获得合适的 $r$，该式由 Wei 等人 [28] 提出：
+`sigma` 和 `Delta` 分别是正则参数和网间距。它们的比例由离散参数固定（`r=sigma/Delta`）。可以通过等.(7.25)获得合适的 `r`，该式由 Wei 等人 [28] 提出：
 
 ```
 $$r(\pi - B\Delta) > \sqrt{4.6\mu}, M/r > \sqrt{4.6\mu} \quad (7.25)$$
 ```
 
-通过 DSC 方法，$F(x)$ 关于 $x_i$ 的一阶和二阶导数写如下：
+通过 DSC 方法，`F(x)` 关于 `x_i` 的一阶和二阶导数写如下：
 
 ```
 $$F^{(1)}(x_i) = F_i^{(1)} \approx \sum_{j=i-M}^{i+M} \phi_{\Delta}^{(1)}(x_i - x_j)F(x_j) = \sum_{j=i-M}^{i+M} A_{ij}F_j \quad (7.26)$$
 ```
+
+
 
 ```
 $$F^{(2)}(x_i) = F_i^{(2)} \approx \sum_{j=i-M}^{i+M} \phi_{\Delta}^{(2)}(x_i - x_j)F(x_j) = \sum_{j=i-M}^{i+M} B_{ij}F_j$$
 ```
 
 关于 DSC 方法的更多细节，请查看参考文献 [17] 和 [28]。
-
-
-
-
 
 ### 7.4.2 使用离散奇异卷积方法的稳定性分析
 
@@ -4675,10 +4956,6 @@ $\omega = \Omega\sqrt{\frac{T_0}{A_{11}}}, N^* = \frac{P_x}{A_{11}}$
 | Kumar et al. [12] | 0.8 | 34.03 34.35 | 34.26 34.59 | 34.35 34.68 | 34.39 34.72 |
 | Kumar et al. [12] | 1 | 41.17 41.55 | 41.45 41.84 | 41.55 41.94 | 41.60 41.99 |
 
-
-
-
-
 ### 7.6.2 概率失曲分析的验证与准确性
 
 在本研究中，随机材料属性的概率信息见表 7.4。
@@ -4719,33 +4996,35 @@ $\omega = \Omega\sqrt{\frac{T_0}{A_{11}}}, N^* = \frac{P_x}{A_{11}}$
 
 ### 7.6.5 不同边界条件的影响
 
-本小节讨论了材料属性以及孔隙率和 GPLs 的随机分布对边界条件的影响。不同边界条件下 FBLs 的 PDFs 和 CDFs 分别如 图 7.6 和 7.7 所示。可见，不同边界条件之间几乎没有重叠。C-C 的不确定范围最大，而 C-F 最小。
+
+
+本小节讨论了材料属性以及孔隙率和`GPLs`的随机分布对边界条件的影响。不同边界条件下`FBLs`的`PDFs`和`CDFs`分别如图 7.6 和 7.7 所示。可见，不同边界条件之间几乎没有重叠。`C-C`的不确定范围最大，而`C-F`最小。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_220_0.png)
 
-图 7.4 孔隙类型的概率密度函数和累积密度函数。（A） FBLs 的估计 PDF；(B) FBLs 的估计 CDF。
+图 7.4 孔隙类型的概率密度函数和累积密度函数。（A） `FBLs`的估计`PDF`；(B) `FBLs`的估计`CDF`。
 
 ![](img/90ed165a39fa708ec438fcda79_1.png)
 
-图 7.5 不同石墨烯散布模式的概率密度函数和累积密度函数。（A） FBLs 的估计 PDF；(B) FBLs 的估计 CDF。
+图 7.5 不同石墨烯散布模式的概率密度函数和累积密度函数。（A） `FBLs`的估计`PDF`；(B) `FBLs`的估计`CDF`。
 
 ![](img/90ed165a39fa708ec438fcda79319c225_2.png)
 
-图 7.6 T1P 不同边界条件下 FBLs 的概率密度函数。
+图 7.6 `T1P`不同边界条件下`FBLs`的概率密度函数。
 
 ![](img/90ed165a39fa708ec438fcda79_221_0.png)
 
-图 7.7 T1P 不同边界条件下 FBLs 的累积密度函数。
+图 7.7 `T1P`不同边界条件下`FBLs`的累积密度函数。
 
 ## 7.7 结论
 
-本研究利用随机孔隙分布、GPL 增强材料和随机材料属性，对 FGGR 梁提出了概率稳定性分析。利用 DSC 方法求解了解析形式的方程，并采用非密集 CMM 完成统计。随后对材料属性、孔隙分布、GPL 模式和不同边界应对结构行为的影响进行了详细研究。总结如下：
+本研究利用随机孔隙分布、`GPL`增强材料和随机材料属性，对`FGGR`梁提出了概率稳定性分析。利用`DSC`方法求解了解析形式的方程，并采用非密集`CMM`完成统计。随后对材料属性、孔隙分布、`GPL`模式和不同边界应对结构行为的影响进行了详细研究。总结如下：
 
-由于纳米结构的缺陷、制造误差以及几何随机性会影响 FGGR 材料的力学行为，特别是孔隙分布、$\alpha_c$ 系数和 GPL 含量。对称孔隙分布具有最大的失载荷值，而中间对称分布最小。对于不同的边界条件，不存在重叠现象，这意味着边界条件对材料属性具有重要作用。
+由于纳米结构的缺陷、制造误差以及几何随机性会影响`FGGR`材料的力学行为，特别是孔隙分布、`α_c`系数和`GPL`含量。对称孔隙分布具有最大的失载荷值，而中间对称分布最小。对于不同的边界条件，不存在重叠现象，这意味着边界条件对材料属性具有重要作用。
 
 ## 致谢
 
-这项工作得到了澳大利亚研究委员会项目（DP16011978）、中国国家科学基金（52208151）、江苏省自然科学基金（BK202110254）以及2021 年江苏省海外人才项目（JSS20210069）的支持。感谢这些资金支持。
+这项工作得到了澳大利亚研究委员会项目（`DP16011978`）、中国国家科学基金（`52208151`）、江苏省自然科学基金（`BK202110254`）以及2021 年江苏省海外人才项目（`JSS20210069`）的支持。感谢这些资金支持。
 
 ## 参考文献
 
@@ -4768,10 +5047,7 @@ $\omega = \Omega\sqrt{\frac{T_0}{A_{11}}}, N^* = \frac{P_x}{A_{11}}$
 - [17] Gao K, Li R, Yang J. 随机材料属性功能梯度孔隙梁的动态特征。Eng Struct 2019;197:109441.
 - [18] Xu Y, Qian Y, Song G. 随机 FGM 梁自由振动特征的随机有限元方法。Appl Math Math 2016;40:10238–53.
 
-
-
-
-## 功能梯度增强多孔梁的概率稳定性分析
+### 功能梯度增强多孔梁的概率稳定性分析
 
 - [19] García-Macías E. Castro-Triquiero R. Frivell ML, Adhikari S. Sáez A. 基于元模型的材料梯度碳纳米管增强复合板随机自由振动分析方法。Composites Struct 2016;152:183–98.
 - [20] Garesci F, Fligener S. 长纤维增强热塑性塑料的杨氏模量预测。Com Sci Tech 2013;35:842–7.
@@ -4785,24 +5061,21 @@ $\omega = \Omega\sqrt{\frac{T_0}{A_{11}}}, N^* = \frac{P_x}{A_{11}}$
 - [28] Wei G, Zhao Y, Xiang X. 离散奇异卷积及其在内支板分析中的应用。第一部分：理论与算法。Int J Numer Methods Eng 2002;55:91–46.
 - [29] Wu B, Wu G, Song C. 结构时变随机区间频率分析。J Sound Vib 2018;414:284–98.
 
-## 弯曲涡度下功能梯度梁的改进方法
+### 弯曲涡度下功能梯度梁的改进方法
 
 David Bassir1,2, Nadhir Lebaal3, Youssef Bouthafar3, Mohammad Talha1,4, and Loucine Bouthafar2
+
 ¹University of Bourgogne-Franche-Comte (UTBM), Belfort, France,²Centre Borelli, ENS-University of Paris-saclay, Gif-sur-Yvette, France,³University Bourgogne-Franche-Comte (UTBM), Belfort, France,⁴School of Mechanical and Materials Engineering, Indian Institute of Technology Mandi, Mandi, Himachal Pradesh, India,⁵University Mohammed V of Rabat, ENSAM, M25M, Rabat, Morocco
 
 ## 8.1 引言
 
-功能梯度材料（FGMs）是通过混合陶瓷和金属组分获得的新型复合材料 [1–4]。材料属性根据混合过程沿梁的厚度方向连续变化。这避免了在层层材料中观察到的应力集中问题。FGMs 被用于特定领域，例如涡轮叶片的热屏障涂层、军事应用屏蔽、汽车和航空航天工业，以及生物医学材料。
+功能梯度材料（`FGMs`）是通过混合陶瓷和金属组分获得的新型复合材料 [1–4]。材料属性根据混合过程沿梁的厚度方向连续变化。这避免了在层层材料中观察到的应力集中问题。`FGMs`被用于特定领域，例如涡轮叶片的热屏障涂层、军事应用屏蔽、汽车和航空航天工业，以及生物医学材料。
 
-在过去的几十年里，对FGM梁 [5–10]、板 [11–19]和壳 [20–22]的研究引起了广泛关注，基于经典的梁理论和剪切变形理论，引入了大量的梁和板理论。
+在过去的几十年里，对`FGM`梁 [5–10]、板 [11–19]和壳 [20–22]的研究引起了广泛关注，基于经典的梁理论和剪切变形理论，引入了大量的梁和板理论。
 
-工业界对 FGMs 存在巨大需求，需要特定的模型来分析其行为并预测其响应。由于其广泛的应用领域，许多研究人员对不同的 FGM结构感兴趣。目前已介绍了两种梁模型：用于薄梁的欧拉-伯努利模型（CBT）和用于厚梁的提辛柯夫模型（SDT）。CBT模型忽略了横向变形。后来提出将剪切变形考虑在内，从而得出了SDT。尽管如此，这第二个模型需要剪切修正以满足梁顶和底的边界条件，这会影响结果。高阶SDT旨在消除 CBT的缺陷，并在不提供任何剪切修正的情况下，考虑通过梁厚度的横向变形。
+工业界对 `FGMs` 存在巨大需求，需要特定的模型来分析其行为并预测其响应。由于其广泛的应用领域，许多研究人员对不同的 `FGM`结构感兴趣。目前已介绍了两种梁模型：用于薄梁的欧拉-伯努利模型（`CBT`）和用于厚梁的提辛柯夫模型（`SDT`）。`CBT`模型忽略了横向变形。后来提出将剪切变形考虑在内，从而得出了`SDT`。尽管如此，这第二个模型需要剪切修正以满足梁顶和底的边界条件，这会影响结果。高阶`SDT`旨在消除 `CBT`的缺陷，并在不提供任何剪切修正的情况下，考虑通过梁厚度的横向变形。
 
-目前已经提出了多种具有不同剪切应力的模型，例如Reddy模型 [23]。Thai和Vo [24] 为FGMs提出了各种高阶梁理论。他们证明了这些模型在梁的静态和动态分析中是有效的。Ebrahemi Jafari [25] 使用高阶剪切变形理论（HSDT）分析了具有孔隙的温度相关FGM梁的热机械振动。Aydoglu和Taskin [26] 使用欧拉-伯努利模型和抛物线及指数剪切函数研究了简支梁的弯曲响应。高阶SDT旨在消除CBT的缺陷，并在不提供任何剪切修正的情况下，考虑通过梁厚度的横向变形。（注：此处OCR文本似乎有重复，我将遵循逻辑流进行处理）。
-
-
-
-
+目前已经提出了多种具有不同剪切应力的模型，例如`Reddy`模型 [23]。`Thai`和`Vo` [24] 为`FGMs`提出了各种高阶梁理论。他们证明了这些模型在梁的静态和动态分析中是有效的。`Ebrahemi Jafari` [25] 使用高阶剪切变形理论（`HSDT`）分析了具有孔隙的温度相关`FGM`梁的热机械振动。`Aydoglu`和`Taskin` [26] 使用欧拉-伯努利模型和抛物线及指数剪切函数研究了简支梁的弯曲响应。高阶`SDT`旨在消除`CBT`的缺陷，并在不提供任何剪切修正的情况下，考虑通过梁厚度的横向变形。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_227_0.png)
 
@@ -4810,9 +5083,9 @@ David Bassir1,2, Nadhir Lebaal3, Youssef Bouthafar3, Mohammad Talha1,4, and Louc
 
 其中
 
-$w_x(x) = g(z)\theta(x)g(z) = 1 - df(z)/dz$ (8.5)
+`w_x(x) = g(z)θ(x)g(z) = 1 - df(z)/dz` (8.5)
 
-$u_0$: 轴向位移；$w_b$: 弯曲位移；$w_s$: 剪切横向位移；$w_{ts}$: 厚度拉伸位移；$u_0, w_b, w_s 和 $\phi$ 是待定的四个未知数；$f(x)$ 和 $g(z)$ 是形状函数。
+`u_0`: 轴向位移；`w_b`: 弯曲位移；`w_s`: 剪切横向位移；`w_ts`: 厚度拉伸位移；`u_0, w_b, w_s` 和 `φ` 是待定的四个未知数；`f(x)` 和 `g(z)` 是形状函数。
 
 应变如下：
 
@@ -4822,7 +5095,7 @@ $$\varepsilon_z = \frac{\partial g(z)}{\partial z}$$
 $$\gamma_{xz} = g(z)[\frac{\partial u_0}{\partial z} + 2z\frac{\partial \phi}{\partial x}]$$ (8.6)
 ```
 
-FG 梁遵循胡克定律。线性弹性方程可以表示为：
+`FG` 梁遵循胡克定律。线性弹性方程可以表示为：
 
 ```
 $$\begin{array} \varepsilon_x & 1 & \nu & 0 \\ \varepsilon_y & \nu & 1 & 0 \\ \varepsilon_z & 0 & 0 & 1 \end{array} = E(z) \begin{pmatrix} \frac{\partial u_0}{\partial x} - z^2\frac{\partial w_b}{\partial x^2} - f(z)\frac{\partial w_s}{\partial x^2} + \nu\frac{\partial \phi}{\partial x} \\ \frac{\partial u_0}{\partial y} - z^2\frac{\partial w_b}{\partial y^2} - f(z)\frac{\partial w_s}{\partial y^2} + \nu\frac{\partial \phi}{\partial y} \\ \frac{\partial g(z)}{\partial z} \end{pmatrix}$$
@@ -4834,12 +5107,13 @@ $$\{\begin{array}{cc} \varepsilon_x & E(z) \\ \varepsilon_z & 2(1+\nu) \end{arra
 
 ### 8.2.3 能量计算
 
--   应变能：
+- 应变能：
 
 ```
 $$\begin{aligned} \delta U &= \int_{h_0}^{h_1} \left[ \frac{h}{2} \delta(\sigma_{\varepsilon_x} + \tau_{xz}\gamma_{zx}) + \sigma_{\varepsilon_z}) \right] dz dy dx \\ &= \int_{h_0}^{h_1} \left( \mathcal{N}_x \frac{\partial \tilde{B}u_x}{\partial\varepsilon_x} - \mathcal{M}_x \frac{\partial^2 \tilde{B}u_x}{\partial\varepsilon_x^2} - \mathcal{M}'_x \frac{\partial^2 \tilde{B}u_x}{\partial\varepsilon_z^2} + 2\mathcal{M}_{xz}\frac{\partial^2 \tilde{B}u_x}{\partial\varepsilon_x\partial\varepsilon_z} + \mathcal{N}_z \frac{\partial \tilde{B}\phi}{\partial\varepsilon_z} \right) dx \end{aligned} $$
 
 其中，$\mathcal{N}_x, \mathcal{M}_x, \mathcal{M}'_x, \mathcal{M}_{xz}$ 和 $\mathcal{N}_z$ 是应力力，规定为：
+```
 
 ```
 $$\begin{aligned} \mathcal{N}_x &= \int_{-h_0/2}^{h_1/2} z(z)\sigma_x dz \\ \mathcal{M}_x &= \int_{-h_0/2}^{h_1/2} z^2\tau(z) dz \\ \mathcal{N}_z &= \int_{-h_0/2}^{h_1/2} \sigma_z(z) dz \end{aligned} $$
@@ -4851,50 +5125,52 @@ $$\begin{aligned} \mathcal{N}_x &= \int_{-h_0/2}^{h_1/2} z(z)\sigma_x dz \\ \mat
 $$\begin{aligned} \mathcal{N}_x &= \begin{bmatrix} \mathcal{A} & \mathcal{B} & \mathcal{C} & 0 \\ \mathcal{D} & \mathcal{E} & \mathcal{F} & 0 \\ \mathcal{G} & \mathcal{H} & \mathcal{I} & 0 \\ 0 & 0 & 0 & \mathcal{A}_s \end{bmatrix} \begin{bmatrix} \frac{\partial \tilde{U}w_b}{\partial\varepsilon_x} \\ \frac{\partial^2 \tilde{B}w_x}{\partial\varepsilon_x^2} \end{bmatrix} \end{aligned} $$
 ```
 
-($\mathcal{A}, \mathcal{B}, \mathcal{C}, \mathcal{D}, \mathcal{E}, \mathcal{F}, \mathcal{G}, \mathcal{H}, \mathcal{I}, \mathcal{A}_s$) 是给出的 FG 刚度，见附录 A。
+(`$\mathcal{A}, \mathcal{B}, \mathcal{C}, \mathcal{D}, \mathcal{E}, \mathcal{F}, \mathcal{G}, \mathcal{H}, \mathcal{I}, \mathcal{A}_s$`) 是给出的 `FG` 刚度，见附录 A。
 
--   外横载荷引起的势能：
+- 外横载荷引起的势能：
 
 ```
 $$\delta V^f = - \int_{0}^{l} q(x)\delta Wdx = - \int_{0}^{l} q(x)\delta(w_b + w_x + w_s)dx $$
 ```
 
-$q(x)$: 外横载荷。
+`q(x)`: 外横载荷。
 
 ```
 $$\delta\mathcal{X} = \int_0^l \int_0^{h/2} \rho(z)(\delta\dot{u} + \delta\dot{v} + \delta\dot{w}) dz dx$$
-$$= \int_0^l (I_0\delta\dot{u}_0\delta\dot{u}_0 + (w_b + \dot{w}_b)(\delta\dot{w}_b + \delta\dot{w}_b) + J_0\delta\dot{v}_0\delta\dot{v}_0 + \phi\delta(w_b + \dot{w}_b)) dx$$
-$$- L_0 \int_0^l (u_0\frac{\delta^2 u_0}{\partial x^2} + I_1\frac{\delta^2 \dot{w}_b}{\partial x^2} + J_1\frac{\delta^2 \dot{v}_0}{\partial x^2} + J_2\delta\ddot{u}_0) dx$$
-$$- l_0 \int_0^l (K_2\frac{\delta^2 \ddot{w}_b}{\partial x^2} - J_2\frac{\delta^2 \dot{w}_b}{\partial x^2} + \dot{w}_b\frac{\delta^2 \phi}{\partial x^2} + K_0\delta\phi) dx$$ (8.12)
 ```
 
--   动能，
+
+
+$$= \int_0^l (I_0\delta\dot{u}_0\delta\dot{u}_0 + (w_b + \dot{w}_b)(\delta\dot{w}_b + \delta\dot{w}_b) + J_0\delta\dot{v}_0\delta\dot{v}_0 + \phi\delta(w_b + \dot{w}_b)) dx$$
+
+$$- L_0 \int_0^l (u_0\frac{\delta^2 u_0}{\partial x^2} + I_1\frac{\delta^2 \dot{w}_b}{\partial x^2} + J_1\frac{\delta^2 \dot{v}_0}{\partial x^2} + J_2\delta\ddot{u}_0) dx$$
+
+$$- l_0 \int_0^l (K_2\frac{\delta^2 \ddot{w}_b}{\partial x^2} - J_2\frac{\delta^2 \dot{w}_b}{\partial x^2} + \dot{w}_b\frac{\delta^2 \phi}{\partial x^2} + K_0\delta\phi) dx$$ (8.12)
+
+- 动能，
 其中（$I_0, I_1, I_2, J_0, J_1, J_2, K_0, K_2$) 是惯性，见附录 A。
 
 ### 8.2.4 控制方程
 
 为了得到控制方程，应用哈密顿原理如下：
 
-```
 $$\int J_1(\delta\dot{u} + \delta\dot{v} - \delta\dot{x})dt = 0$$ (8.13)
-```
 
 将方程 (8.8), (8.11) 和 (8.12) 中的 $\delta u_b, \delta w_b$ 和 $\delta x$ 表达式代入方程 (8.13)，通过分部积分并合并 $\delta u_0, \delta w_0, \delta v_0, \delta\phi$ 的系数，得到以下方程：
 
-```
 $$\delta\ddot{u}_0\frac{\delta^2 u_0}{\partial x^2} = I_0\delta\ddot{u}_0 - I_1\frac{\delta^2 \dot{w}_b}{\partial x^2}$$
+
 $$\delta\ddot{w}_b\frac{\delta^2 w_b}{\partial x^2} = I_1\delta\ddot{u}_0 - I_2\frac{\delta^2 \dot{w}_b}{\partial x^2}$$
+
 $$\delta\ddot{v}_0\frac{\delta^2 v_0}{\partial x^2} = J_1\delta\ddot{v}_0 - J_2\delta\ddot{u}_0$$
+
 $$\delta\ddot{\phi}\frac{\delta^2 \phi}{\partial x^2} = K_0$$ (8.14)
-```
 
 ## 功能梯度梁在弯曲振动下的改进方法
 
 方程 (8.14) 可以用 $u_0, w_b, w_s$ 和 $\phi$ 的项表示，利用 $E_L$ (8.10) 如下：
 
-```
 $$\begin{aligned} \mathcal{N}_x &= \begin{bmatrix} \mathcal{A} & \mathcal{B} & \mathcal{C} & 0 \\ \mathcal{D} & \mathcal{E} & \mathcal{F} & 0 \\ \mathcal{G} & \mathcal{H} & \mathcal{I} & 0 \\ 0 & 0 & 0 & \mathcal{A}_s \end{bmatrix} \begin{bmatrix} \frac{\partial \tilde{U}w_b}{\partial\varepsilon_x} \\ \frac{\partial^2 \tilde{B}w_x}{\partial\varepsilon_x^2} \end{bmatrix} \end{aligned}$$
-```
 
 (8.15)
 
@@ -4902,47 +5178,33 @@ $$\begin{aligned} \mathcal{N}_x &= \begin{bmatrix} \mathcal{A} & \mathcal{B} & \
 
 在本节中，给图 8.3 所示的全长度均匀载荷作用下简支功能梯度梁的解析解。运动方程的解析解基于 Navier 型解。未知位移 $u_0, w_b, w_s$ 和 $\phi$ 被假设为三角函数的组合，对于每个 $\eta$ 值有待定的系数。
 
-```
 $$\begin{aligned} u_0(x,t) &= \sum_{n=1}^{\infty} U_n\sin(\lambda_n x)e^{i\omega_n t} \\ w_b(x,t) &= \sum_{n=1}^{\infty} W_n\sin(\lambda_n x)e^{i\omega_n t} \\ w_s(x,t) &= \sum_{n=1}^{\infty} V_n\sin(\lambda_n x)e^{i\omega_n t} \\ \phi(x,t) &= \sum_{n=1}^{\infty} \Phi_n\sin(\lambda_n x)e^{i\omega_n t} \end{aligned}$$
-```
 
 (8.16)
 
 $\omega_n$ 是与第 $n$ 阶特征值相关的频率，$\lambda_n = n\pi/L$，$U_n, W_n, V_n$ 和 $\Phi_n$ 是未知系数。
 
-
-
-
 对于两端简支梁，施加以下边界条件。
 
-```
 $U = W = \mathcal{M}_h^b = \mathcal{M}_m^b = 0 \quad (8.17)$
-```
 
 假设的机械横载荷 $q(x)$ 以正弦傅里级数展开：
 
-```
 $q(x) = \sum_{n=1}^{\pi} a_n \sin(n\lambda x) \quad (8.18)$
-```
 
 某些载荷的系数 $a_n$ 如下所示：
 
 - $n = 1 \Rightarrow \mathfrak{q}_1 = q_0 \quad (8.19)$
-
 - 均匀分布情况：
 $\mathfrak{q}_n = \frac{4q_0}{n\pi}(n = 1, 3, 5) \quad (8.20)$
 
 因此，对于任何固定的"$n$" 值，可以通过下面的特征值方程得到解析解：
 
-```
 $[K - \omega_m^2(M)][\Delta] = \{F\} \quad (8.21)$
-```
 
 在静态问题情况下，等式 (8.24) 变为：
 
-```
 $[K][\Delta] = \{F\} \quad (8.22)$
-```
 
 $[K] = \begin{bmatrix} k_{11} & k_{12} & k_{13} & k_{14} \\ k_{21} & k_{22} & k_{23} & k_{24} \\ k_{31} & k_{32} & k_{33} & k_{34} \\ k_{41} & k_{42} & k_{43} & k_{44} \end{bmatrix} [M] = \begin{bmatrix} m_{11} & m_{12} & m_{13} & 0 \\ m_{21} & m_{22} & m_{23} & m_{24} \\ m_{31} & m_{32} & m_{33} & m_{34} \\ 0 & 0 & 0 & 0 \end{bmatrix}, [\Delta] = \begin{bmatrix} U_s \\ W_{ba} \\ W_m \\ \phi_s \\ 0 \end{bmatrix}, \{F\} \quad (8.23)$
 
@@ -4952,15 +5214,13 @@ $(k_{11}, k_{12}, k_{13}, k_{14}, k_{21}, k_{22}, k_{23}, k_{24}, k_{31}, k_{32}
 
 在这部分，对 S-S FG 梁施加了均匀横载荷。首先提出数值示例以验证上述模型并评估其准确性。FG 梁材料由 $Al_2O_3$（氧化铝）和 Al（铝）组成。对应分的材料特性如表 8.1 所示。无量纲形式的使用如下：
 
-```
 $\bar{U} = 100\sqrt{\frac{f_{max}}{L}} U(0, -\frac{1}{2}); \bar{W} = 100\sqrt{\frac{E_{ref}}{\rho_{ref}}} W(\frac{1}{2}, \frac{1}{2}); \sigma_s = (\frac{\sigma_y}{E})\sigma_s(\frac{1}{2}, \frac{1}{2});\sigma_{rc} = (\frac{\sigma_y}{E})\sigma_{rc}(0,0); \sigma_{\theta} = (\frac{\sigma_y}{E})\sigma_{\theta}(\frac{1}{2}, \frac{1}{2}); \bar{\omega} = (\omega L^2/h)\sqrt{\rho}$
-```
 
 表 8.2 中列出的数值示例针对不同的材料指数 (p) 和细长比 (L/h) 进行，以验证本文模型。将该理论得到的关于 $L/h=5, 20$ 的位移和应力结果与 Li 等人 [44] 提供的解析解进行比较。使用了以下基于 Reddy 理论的形状函数：
 
-```
 $f(z) = \frac{4z^2}{3h^2}$
-```
+
+
 
 ### 8.3.1 静态分析
 
@@ -5024,10 +5284,6 @@ FG 梁无量纲轴向应力 $\sigma_x$ 跨深度和无量纲长度的变化在�
 img/90ed165a39fa708ec4da7931c25_236_0.png
 
 **图 8.6** 剪切和拉伸对横向位移的影响。
-
-
-
-
 
 ![](img/90ed165a39fa708ec438fcda79319c25_237_0.png)
 
@@ -5093,7 +5349,7 @@ img/90ed165a39fa708ec4da7931c25_236_0.png
 8.12 (A) 材料参数和 (B) 细长比 (L/h) 对 S-S 函数梯度梁无量纲频率的影响。
 
 | L/h | 模态 | 理论 | 0 | 0.5 | 1 | 5 | 10 |
-|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|
 | 2 | 1 | εf = 0 | 4.1229 | 3.5811 | | 2.6639 | 2.5066 |
 | 2 | 2 | εf = 0 | 4.1288 | 3.5993 | | 2.7058 | 2.5199 |
 | 2 | 3 | εf = 0 | 11.2785 | 9.9531 | | 7.0687 | 6.5825 |
@@ -5103,10 +5359,6 @@ img/90ed165a39fa708ec4da7931c25_236_0.png
 | 7 | 1 | εf = 0 | 20.9836 | 19.0593 | | 16.2332 | 14.3817 |
 | 7 | 2 | εf = 0 | 20.9861 | 17.7131 | | 13.6498 | 12.3027 |
 | 7 | 3 | εf = 0 | 44.9631 | 38.5796 | | 29.5118 | 28.5434 |
-
-
-
-
 
 $$\mathcal{X}, \mathcal{Y}_s, \mathcal{Z}_s = \int_{-h/2}^{h/2} (v, \nu z, \nu f(z), \frac{dg(x)}{dz}, \frac{dg(z)}{dz}) E(z)bdz$$
 
@@ -5184,9 +5436,6 @@ $$m_{33} = I_0 + K_2\lambda^2; m_{34} = J_0, m_{44} = K_0$$
 - [43] Tornabene F. 四参数幂分布的功能梯度锥形、圆壳和环形板结构的振动分析. Comput Methods Appl Mech 2009;198. 来源: https://doi.org/10.1016/j.cmame.2008.01.011.
 - [44] Li XF, Wang BL, Han JC. 功能梯度梁静态和动态分析的高阶理论. Arch Appl Mech 2010;80. 来源: https://doi.org/10.1007/s00419-010-0435-6.
 
-
-
-
 # 具有可调机械性能的非均匀胞状架构材料的加速设计与表征
 
 雪冰林¹张道波²冯鹏²和胡纳米$^{1,3}$
@@ -5227,9 +5476,6 @@ $$m_{33} = I_0 + K_2\lambda^2; m_{34} = J_0, m_{44} = K_0$$
 正如 9.2.2 节所述，总共运行了 168 次仿真。为了分类区域内的响应，我们观察到 48,960 个副本具有相同的响应，我们将其称为“复制图案”。注意到，训练数据同时包含独特图案及其复制图案，因为 DNN 并并不自然“知道”独特图案及其副本应该具有相同的响应。准备完成后，我们将训练数据（图案-响应）输入 DNN，并使用测试数据验证训练性能。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_250_0.png)
-
-
-
 
 通过分析方法（如层次聚类）对无成型细胞结构材料进行处理。选用 Ward 方法（Ward's Method）对响应曲线进行聚类。图 9.3A 显示了聚类树图，以模拟总次数（168 次）为横轴，不相似性为纵轴。
 
@@ -5285,10 +5531,6 @@ FG 多孔复合结构。聚类分析提供了拓扑结构的心理分类分类�
 - [11] Hu N, Buragno R. Buckling-induced smart materials: recent advances and trends. Smart Mater 2015;24:06501.
 - [12] Coulais C, Tony E, de Rees C, Shoker, van Hecke M. Combinatorial design of tuned metamaterials. Nature 2016:535:529.
 
-
-
-
-
 [20] Wu Y-J, Fang L, Xu Y. 通过机器学习预测界面热阻。npj Comput Mater 2019:5.
 
 [21] Yang K, Xu X, Yang B, Cook B, Ramos H, Krishnan NMA, et al. 使用高通量分子动力学模拟和机器学习预测硅酸盐玻璃的杨氏模量。Sci Rep 2019;9:8739.
@@ -5337,14 +5579,13 @@ Bai-Xiang Xu⁵, Jens Schneider⁵, Kang Gao⁶ 和 Jie Yang⁶
 图10.1 二维正方形有限元代表性单元示例。
 来源：用于训练 CNN 的图像。
 
-
-
-
 RVE 的参数是通过金属泡沫的特征计算的，以下方法仅适用于高孔隙率泡沫。估计的 RVE 内部单元数量 $N_{cell}$ 与厂家提供的泡沫平均单元尺寸 $\varnothing_{cell}$ 联，公式如下：
 
 ```
+
+
+
 $N_{cell} \approx (H/\varnothing_{cell})^2$
-```
 
 其中 $H$ 表示方形 RVE 的高度/宽度。
 总单元长度 $L_{cell}$ 根据每个 RVE 的形形状而不同，并且对于确定单元厚度（所有单元壁厚相等）至关重要：
@@ -5354,18 +5595,16 @@ $t_{cell}=S_{RVE}\mu/L_{cell}$
 ```
 
 其中 $S_{RVE}=H^2$ 且 $\mu$ 是相对密度。
-在构建 RVE 模型后，在 ANSYS 中进行有限元（FE）仿真，通过使用 Smart Size (1)（细密网格，ANSYS 自动尺寸划分）和梁单元（BEAM188）对几何形状进行网格划分，以评估其结构行为。所有的面外位移都受到限制，因为本研究采用了 2D 均匀化处理，以便专注于面内变形。事实证明，2D 建模对于多孔泡沫分析 [31,32] 以及闭孔金属泡沫仿真 [15,53,34] 是可行的。周期性边界条件（PBCs）应用于左/右边缘具有相同垂直坐标的相应 RVE 节点，而在底部边缘施加了固定支撑。顶部边缘规定了均匀的面内垂直位移（$0.01 \times H$）、移动和零水平运动：
+在构建 RVE 模型后，在 `ANSYS` 中进行有限元（FE）仿真，通过使用 `Smart Size (1)`（细密网格，`ANSYS` 自动尺寸划分）和梁单元（`BEAM188`）对几何形状进行网格划分，以评估其结构行为。所有的面外位移都受到限制，因为本研究采用了 2D 均匀化处理，以便专注于面内变形。事实证明，2D 建模对于多孔泡沫分析 [31,32] 以及闭孔金属泡沫仿真 [15,53,34] 是可行的。周期性边界条件（`PBCs`）应用于左/右边缘具有相同垂直坐标的相应 RVE 节点，而在底部边缘施加了固定支撑。顶部边缘规定了均匀的面内垂直位移（$0.01 \times H$）、移动和零水平运动：
 
 ```
 $E = F/(0.01H_{cell})$
 ```
 
 该值被假设为金属泡沫的有效杨氏模量。
-进行了一个验证案例以确认所提 RVE 模型在模拟真实泡沫材料方面的有效性。我们使用了现有论文 [35] 中的样品，ALPORAS 闭孔铝泡沫：样品尺寸为 $50\times50\times30$ mm$^3$；平均单元尺寸 2.88 mm，单元壁材料：杨氏模量 61.7 GPa，金属密度 2700 kg/$m^3$；泊松比 0.3；相对密度 8.52% $\pm0.74\%$。所提的 RVE 模型如图 10.2 所示，外部尺寸为 $30\times30$ mm$^2$，单元数量 $N_{cell}=109$（等式 (10.11），相对密度 8.52%，且具有实验样品相同的单元壁材料属性。预测的压缩模量 $E=1.103$ GPa（等式 (10.3））在建议范围 1.0–1.2 GPa [35] 内，验证了所提方法的有效性。请注意，当包含足够的单元时，RVE 的外部尺寸不会明显影响整体刚度 [17]。
+进行了一个验证案例以确认所提 RVE 模型在模拟真实泡沫材料方面的有效性。我们使用了现有论文 [35] 中的样品，`ALPORAS` 闭孔铝泡沫：样品尺寸为 $50\times50\times30$ mm$^3$；平均单元尺寸 2.88 mm，单元壁材料：杨氏模量 61.7 GPa，金属密度 2700 kg/$m^3$；泊松比 0.3；相对密度 8.52% $\pm0.74\%$。所提的 RVE 模型如图 10.2 所示，外部尺寸为 $30\times30$ mm$^2$，单元数量 $N_{cell}=109$（等式 (10.11），相对密度 8.52%，且具有实验样品相同的单元壁材料属性。预测的压缩模量 $E=1.103$ GPa（等式 (10.3））在建议范围 1.0–1.2 GPa [35] 内，验证了所提方法的有效性。请注意，当包含足够的单元时，RVE 的外部尺寸不会明显影响整体刚度 [17]。
 
 AI增强的有限元多尺度建模
-
-255
 
 ![](img/90ed165a39fa708ec438fcda79319c25_261_0.png)
 
@@ -5373,7 +5612,7 @@ AI增强的有限元多尺度建模
 
 ### 10.2.2 数据库构建
 
-生成并计算具有不同内部孔隙率分布和相对密度的各种 RVE，通过有限元压缩仿真获取它们的杨氏模量。RVE 图像（以图 10.1 为例）与它们的压缩模量组合构成了 AI 训练的数据。所有 RVE 均采用相同的设置：尺寸为 30 × 30 mm²；厚度为 0.142 mm 的 BEAM188 单元；铝单元壁（与验证案例一致）：杨氏模量为 61.7 GPa，质量密度 2700 kg/m³；泊松比 0.3。它们的相对密度从 6.1% 变化到 20.1%，导致杨氏模量具有很宽范围：282.5–487.3 MPa。在计算过程中，创建数据集时未将梁厚度考虑为变量，而是完全专注于内部形貌的影响。大多数 RVE 以凸形单元为特征，另一些包含有限数量（通常只有一个）的凹形单元，如图 10.3 所示。
+生成并计算具有不同内部孔隙率分布和相对密度的各种 RVE，通过有限元压缩仿真获取它们的杨氏模量。RVE 图像（以图 10.1 为例）与它们的压缩模量组合构成了 AI 训练的数据。所有 RVE 均采用相同的设置：尺寸为 30 × 30 mm²；厚度为 0.142 mm 的 `BEAM188` 单元；铝单元壁（与验证案例一致）：杨氏模量为 61.7 GPa，质量密度 2700 kg/m³；泊松比 0.3。它们的相对密度从 6.1% 变化到 20.1%，导致杨氏模量具有很宽范围：282.5–487.3 MPa。在计算过程中，创建数据集时未将梁厚度考虑为变量，而是完全专注于内部形貌的影响。大多数 RVE 以凸形单元为特征，另一些包含有限数量（通常只有一个）的凹形单元，如图 10.3 所示。
 
 - 大多数 RVE 以凸形单元为特征。
 - 另一些包含有限数量（通常只有一个）的凹形单元，如图 10.3 所示。
@@ -5381,19 +5620,13 @@ AI增强的有限元多尺度建模
 
 在计算过程中，创建数据集时未将梁厚度考虑为变量，而是完全专注于内部形貌的影响。
 
-大多数 RVE 以凸形单元为特征，另一些包含有限数量（通常只有一个）的凹形单元，如图 10.3 所示。
-
-（注：由于原文中存在大量重复句子，根据“不要重复输出原文”原则，此处保留核心翻译内容后不再对重复行重复翻译。）
-
-
-
 ![](img/90ed165a39fa708ec438fcda79319c25_264_0.png)
 
 图 10.5 残差块的示意图。
 
 ## 10.2.4 卷积神经网络的结果
 
-本章评估了所提模型在预测有效杨氏模量值方面的性能，可接受的预测差异小于 10%（见 10.2.1 节中验证用例的结果比较）。该模型基于 Pytorch 1.9 构建，并在带有 NVIDIA RTX 2080 的设备上进行训练。此外，训练过程中使用了数据增强（见 10.2.2 节）。最后，通过进一步的超参数调优以获得结果。由于杨氏模量的分布广泛（即范围或尺度较大），MAE（平均绝对误差）值不能很好地代表模型的回归情况。使用相对误差百分比来研究结果，以获得更好的基准。
+本章评估了所提模型在预测有效杨氏模量值方面的性能，可接受的预测差异小于 10%（见 10.2.1 节中验证用例的结果比较）。该模型基于 `Pytorch 1.9` 构建，并在带有 `NVIDIA RTX 2080` 的设备上进行训练。此外，训练过程中使用了数据增强（见 10.2.2 节）。最后，通过进一步的超参数调优以获得结果。由于杨氏模量的分布广泛（即范围或尺度较大），`MAE`（平均绝对误差）值不能很好地代表模型的回归情况。使用相对误差百分比来研究结果，以获得更好的基准。
 
 模型实现了 5.92% 的平均误差，远低于最初 10% 的可容差。最终的误差分布如图 10.7 所示。如所示，模型在预测许多图像时表现得较好，误差率较低，但在少数图像上表现得较为吃力。事实上，对于大多数测试用例，预测误差小于 5%。在某些少数情况下，出现了较高的误差。通过观察这些案例相关的微观结构，发现这些案例的随机生成模式无意中与数据集的大部分完全不同。后者解释了这些案例中的偏差，可以通过为网络提供更多数据来轻松克服。尽管使用了数据增强，但添加材料对称性等其他物理约束对于提高对未见情况的预测准确性非常有帮助 [44, 45]。最后一点仍将在未来的开发中展示。
 
@@ -5419,19 +5652,27 @@ AI增强的有限元多尺度建模
 
 杨氏模量
 
+```
 $\tilde{E}(\alpha, \beta) = (e_1 - e_3)\alpha + (e_3 - e_1)\beta + (e_2 - e_3)\alpha + e_1\alpha, \alpha, \beta \in [0, 1]$ (10.5)
+```
 
 其中 $e_2$ 代表 FVE（体体单元）结果作为此处的准确数据，$e_1 = (1 - 5.92\%)e_2$ 和 $e_3 = (1 + 5.92\%)e_2$ 分别对应于深度学习预测的下限和上限。同时，金属泡沫的其他材料确定性与相对密度 $\mu$ 关联：[17]
 
+```
 $G(\mu) = G_0[0.75 \times 0.4886](1 + v_0)(0.5\mu^2 + 0.3\mu)]$ (10.6)
+```
 
 泊松比 [49]
 
+```
 $v(\mu) = v_0 + 3(1 - 5v_0)(1 - v_0^2)/[2(7 - 5v_0)]$ (10.7)
+```
 
 密度
 
+```
 $\rho(\mu) = \rho_0$ (10.8)
+```
 
 其中 $G_0 = 23.731 \text{ GPa}, v_0 = 0.3,$ 且 $\rho_0 = 2700 \text{ kg/m}^3$。
 
@@ -5439,17 +5680,23 @@ $\rho(\mu) = \rho_0$ (10.8)
 
 本节检查了一个包含低密度层并由底部高密度层层边界的新型 FG 梁的静态弯曲行为，如图 10.8 所示，所有层均假设完美结合并由闭孔框架组成。层与梁厚度之间的关系建立在中间平面，$h_H$（$h_H$: 高密度层）和 $\frac{1}{2}h$（$h_L$: 低密度层）$= h$（总厚度）。建立一个直角坐标系，$x \in [0, L]$（$L$ 为梁长），$z \in [-h_L, h_H]$，梁宽由 $b$ 表示。梁挠度是在跨中点施加载荷时测量的。每层的相对密度表示为：
 
+```
 $\mu = \begin{cases} 13.81\% (\text{高密度层}) \\ 6.92\% (\text{低密度层}) \end{cases} \quad (10.9)$
+```
 
 且两层属性均具有 CNN 预测杨氏模量的不确定性（基于公式 10.5），写如下：
 
 高密度层的杨氏模量（$\mu = 13.81$， $\alpha_1, \beta_1 \in [0, 1]$）
 
+```
 $\epsilon_H(\alpha_1, \beta_1) = (\epsilon_H - \epsilon_M)\alpha_1 + (\epsilon_M - \epsilon_L)\beta_1 + (\epsilon_H - \epsilon_L)\alpha_1\beta_1 + \epsilon_H \quad (10.10)$
+```
 
 低密度层的杨氏模量（$\mu = 6.92$， $\alpha_2, \beta_2 \in [0, 1]$）
 
+```
 $\epsilon_L(\alpha_2, \beta_2) = (\epsilon_L - \epsilon_M)\alpha_2 + (\epsilon_M - \epsilon_H)\beta_2 + (\epsilon_L - \epsilon_H)\alpha_2\beta_2 + \epsilon_L \quad (10.11)$
+```
 
 其中 $\epsilon_{2H} = 1693.2 \text{ MPa}$,$\epsilon_{1H} = (1 - 5.92\%)\epsilon_{2H}$ 和 $\epsilon_{3H} = (1 + 5.92\%)\epsilon_{2H}$ 分别对应于深度学习预测的下限和上限。
 
@@ -5464,9 +5711,6 @@ $\epsilon_L(\alpha_2, \beta_2) = (\epsilon_L - \epsilon_M)\alpha_2 + (\epsilon_M
 ### 10.3.3 验证与讨论
 
 开展了验证研究以识别 10.3.2 节中梁公式的准确性，见表 10.1。验证和后续的不确定性分析中采用了以下参数：$P=100 \text{ N}, h=0.1 \text{ m}, b=0.1 \text{ m}, L=2 \text{ m}$（细长比 $L/h=20$），H-H 梁。
-
-
-
 
 ## 表 10.2 考虑高密度层不确定性的跨中挠度（mm） ($\alpha_2 = 1, \beta_1 = 1$）。
 
@@ -5500,15 +5744,17 @@ $\epsilon_L(\alpha_2, \beta_2) = (\epsilon_L - \epsilon_M)\alpha_2 + (\epsilon_M
 | 0.9 | 1.346 | 1.345 | | 1.344 | 1.343 |
 | 1 | 1.344 | 1.344 | | 1.344 | 1.344 |
 
-单元（SOLID186）。如所示，高度的一致性证明了本文公式的有效性。
+单元（`SOLID186`）。如所示，高度的一致性证明了本文公式的有效性。
 
 ```
 对于均质梁 $\Delta = \frac{PL^3}{48EI}$ (10.19)
 ```
 
+
+
 其中 $E^*$ 基于等式 (10.15)，且 $I = bh_h^3/12$。
 
-AI 增强的有限元多尺度建模
+# AI 增强的有限元多尺度建模
 
 **表 10.4** 考虑两层层不确定性的跨中挠度（mm）。
 
@@ -5525,10 +5771,6 @@ AI 增强的有限元多尺度建模
 | 0.8 | 1.360 | 1.352 | | 1.337 | 1.329 |
 | 0.9 | 1.352 | 1.348 | | 1.340 | 1.337 |
 | 1 | 1.344 | 1.344 | | 1.344 | 1.344 |
-
-
-
-
 
 [18] Huang JS, Lee JX, Ademiloye AS, Lee KM. 材料建模与设计中的工智能。Arch Comput Method Eng 2021;28:3399–413.
 
@@ -5598,18 +5840,28 @@ AI 增强的有限元多尺度建模
 
 [52] Kitpornchai S, Chen D, Yang J. 梯度材料的自由振动与弹性稳定性。Des Mater 2017;116:656.
 
+材料成分尚未被考虑用于 `FGP` 结构。由于功能梯度材料（FGM）多孔结构成分的重要性，针对这种变化的随机静态分析至关重要，并需要进行更具体的研究。
 
-
-
-材料成分尚未被考虑用于 FGP 结构。由于功能梯度材料（FGM）多孔结构成分的重要性，针对这种变化的随机静态分析至关重要，并需要进行更具体的研究。
-
-本章将研究 FGM 多孔结构的随机问题。将明确讨论如一阶剪变理论（FSDT）等基础理论。引入随机有限元法（SFEM）以获得一个高效的不确定性量化框架，用于研究 FGM 多孔结构的系统不确定性。基于 SFEM，还提出了机器学习辅助的随机静态分析（MLSSA），它可以帮助定义材料属性并将其实现到各种系统中。引入了两种机器学习算法，即人工神经网络（ANNs）和扩展支持向量回归（SVR），以寻找数据与结构之间的关系。在机器学习分析中采用了不同的多调和核函数来提高回归的稳健性、稳定性和精度。建立的回归模型可以帮助预测不同情况下的静态结果。此外，可以通过可靠性属性评估 FGM 多孔结构的安全性，包括概率密度函数（PDF）和累积密度函数（CDF）。由于在节省计算量方面的卓越优势，MLA-SSA 框架为特定项目中的实际复合结构应用提供了一些参考。
+本章将研究 `FGM` 多孔结构的随机问题。将明确讨论如一阶剪变理论（`FSDT`）等基础理论。引入随机有限元法（`SFEM`）以获得一个高效的不确定性量化框架，用于研究 `FGM` 多孔结构的系统不确定性。基于 `SFEM`，还提出了机器学习辅助的随机静态分析（`MLSSA`），它可以帮助定义材料属性并将其实现到各种系统中。引入了两种机器学习算法，即人工神经网络（`ANNs`）和扩展支持向量回归（`SVR`），以寻找数据与结构之间的关系。在机器学习分析中采用了不同的多调和核函数来提高回归的稳健性、稳定性和精度。建立的回归模型可以帮助预测不同情况下的静态结果。此外，可以通过可靠性属性评估 `FGM` 多孔结构的安全性，包括概率密度函数（`PDF`）和累积密度函数（`CDF`）。由于在节省计算量方面的卓越优势，`MLA-SSA` 框架为特定项目中的实际复合结构应用提供了一些参考。
 
 ## 11.2 功能梯度多孔板
 
-考虑三维坐标系中的一个陶瓷-金属 FGP 板，板上的点由 $x$、$y$ 和 $z$ 方向定义。假设板的顶表面和底表面分别由陶瓷和金属完全组成。板的厚度为 $h$，宽度为 $b$，长度为 $L$。这里考虑了两种类型的孔隙率 [5]，它们沿厚度路径连续变化，如图 11.1 所示。这些分布用杨模量属性表示。板的最大值和最小值（陶瓷为 $E_c$，金属为 $E_m$）也符合这些分布。
+考虑三维坐标系中的一个陶瓷-金属 `FGP` 板，板上的点由 $x$、$y$ 和 $z$ 方向定义。假设板的顶表面和底表面分别由陶瓷和金属完全组成。板的厚度为 $h$，宽度为 $b$，长度为 $L$。这里考虑了两种类型的孔隙率 [5]，它们沿厚度路径连续变化，如图 11.1 所示。这些分布用杨模量属性表示。板的最大值和最小值（陶瓷为 $E_c$，金属为 $E_m$）也符合这些分布。
 
-$$ \begin{aligned} E(z) &= E_c \begin{cases} 1-e^{-\alpha_0 \frac{\pi z}{h}} \end{cases} \ G(z) &= G_c \begin{cases} 1-e^{-\beta_0 \frac{\pi z}{h}} \end{cases} \ \rho(z) &= \rho_c \begin{cases} 1-e^{-\gamma_0 \frac{\pi z}{h}} \end{cases} \end{aligned}\quad(11.1) $$
+$$
+\begin{aligned}
+E(z) &= E_c \begin{cases}
+1-e^{-\alpha_0 \frac{\pi z}{h}}
+\end{cases} \\
+G(z) &= G_c \begin{cases}
+1-e^{-\beta_0 \frac{\pi z}{h}}
+\end{cases} \\
+\rho(z) &= \rho_c \begin{cases}
+1-e^{-\gamma_0 \frac{\pi z}{h}}
+\end{cases}
+\end{aligned}
+\quad(11.1)
+$$
 
 功能梯度多孔板的机器学习辅助随机分析
 
@@ -5623,66 +5875,108 @@ $$ \begin{aligned} E(z) &= E_c \begin{cases} 1-e^{-\alpha_0 \frac{\pi z}{h}} \en
 
 **图 11.1** 具有孔隙率分布 1: (A) 和分布 2: (B)的功能梯度多孔板 [5]。
 
-$$ \begin{aligned} E(z) &= E_m - e_0\cos\left(\frac{\pi z}{2h}\right) + \frac{\pi}{4}\\ G(z) &= G_m - e_0\cos\left(\frac{\pi z}{2h}\right) + \frac{\pi}{4}\\ \rho(z) &= \rho_m - e_m\cos\left(\frac{\pi z}{2h}\right) + \frac{\pi}{4}\end{aligned} \quad (11.2) $$
+$$
+\begin{aligned}
+E(z) &= E_m - e_0\cos\left(\frac{\pi z}{2h}\right) + \frac{\pi}{4}\\
+G(z) &= G_m - e_0\cos\left(\frac{\pi z}{2h}\right) + \frac{\pi}{4}\\
+\rho(z) &= \rho_m - e_m\cos\left(\frac{\pi z}{2h}\right) + \frac{\pi}{4}
+\end{aligned}
+\quad (11.2)
+$$
 
 其中 $E_m, \rho_m$ 和 $E_c, G_c, \rho_c$ 是陶瓷材料的杨模量、剪切模量和密度的值；$e_0$ 是孔隙率系数，其关系表示为 $e_0 = 1 - E_m/E_c = 1 - G_m/G_c, 0 < e_0 < 1$，$e_m$ 是与密度相关的孔隙率系数，为 $e_m = 1 - \rho_m/\rho_c, 0 < e_m < 1$。杨模量与泊松比的关系可以表示为 $G = E/2(1+\nu)$
 
 根据等式 (11.1) 和 (11.2)，很容易看出分布 1 的材料属性的最大值位于板的顶表面和底部，而中面包含最小的材料属性。对于分布 2，明显材料属性的最大值和最小值出现在板的顶表面和底部。考虑到力学属性的通用联系，该关系可以表示为：
 
-$$ E_c = \left(\frac{\rho_m}{\rho_c}\right)^2 \quad (11.3) $$
+$$
+E_c = \left(\frac{\rho_m}{\rho_c}\right)^2 \quad (11.3)
+$$
 
-$$ e_m = 1 - \sqrt{1 - e_0} \quad (11.4) $$
+$$
+e_m = 1 - \sqrt{1 - e_0} \quad (11.4)
+$$
 
 ## 11.3 理论公式
 
 ### 11.3.1 板的一阶剪变变形
 
-为了对 FGP 进行静态分析，将采用 Mindlin 板理论或板的 FSDT。取 $\Omega$ 为中面区域。场板（厚度为 $h$）的假设位移 $u(x,y,z)$、$v(x,y,z)$ 和 $w(x,y,z)$ 描述如下：
+为了对 `FGP` 进行静态分析，将采用 Mindlin 板理论或板的 `FSDT`。取 $\Omega$ 为中面区域。场板（厚度为 $h$）的假设位移 $u(x,y,z)$、$v(x,y,z)$ 和 $w(x,y,z)$ 描述如下：
 
-$$ u(x,y,z) = u_0(x,y) + z\theta_x(x,y), \quad v(x,y,z) = v_0(x,y) + z\theta_y(x,y), \quad w(x,y,z) = w_0(x,y) $$
-$$ -h/2 \le z \le h/2 \quad (1.5) $$
+$$
+u(x,y,z) = u_0(x,y) + z\theta_x(x,y), \quad v(x,y,z) = v_0(x,y) + z\theta_y(x,y), \quad w(x,y,z) = w_0(x,y)
+$$
+$$
+-h/2 \le z \le h/2 \quad (1.5)
+$$
 其中 $u_0, v_0, w_0$ 是中面位移，$\theta_x, \theta_y$ 是转角。基于小位变理论，应变 $\varepsilon$ 可以表示为：
 
-$$ \epsilon_{xx} = \frac{\partial u_0}{\partial x}, \quad \epsilon_{yy} = \frac{\partial v_0}{\partial y}, \quad \epsilon_{xy} = \frac{\partial u_0}{\partial y} + \frac{\partial v_0}{\partial x} $$
-$$ \gamma_{xz} = \frac{\partial w_0}{\partial z} - \theta_x, \quad \gamma_{yz} = \frac{\partial w_0}{\partial z} - \theta_y \quad (1.6) $$
+$$
+\epsilon_{xx} = \frac{\partial u_0}{\partial x}, \quad \epsilon_{yy} = \frac{\partial v_0}{\partial y}, \quad \epsilon_{xy} = \frac{\partial u_0}{\partial y} + \frac{\partial v_0}{\partial x}
+$$
+$$
+\gamma_{xz} = \frac{\partial w_0}{\partial z} - \theta_x, \quad \gamma_{yz} = \frac{\partial w_0}{\partial z} - \theta_y \quad (1.6)
+$$
 
 剪应变 $\gamma$ 与位移的关系为：
 
-$$ \gamma_{xz} = \frac{\partial u_0}{\partial z} + \theta_x, \quad \gamma_{yz} = \frac{\partial v_0}{\partial z} + \theta_y \quad (1.7) $$
+$$
+\gamma_{xz} = \frac{\partial u_0}{\partial z} + \theta_x, \quad \gamma_{yz} = \frac{\partial v_0}{\partial z} + \theta_y \quad (1.7)
+$$
 
 假设应力 $\sigma$ 的应力-应变关系为：
 
-$$ \sigma_{xx} = E\epsilon_{xx}, \quad \sigma_{yy} = E\epsilon_{yy}, \quad \tau_{xy} = 2G\epsilon_{xy} $$
-$$ \tau_{xz} = G\gamma_{xz}, \quad \tau_{yz} = G\gamma_{yz} \quad (1.8) $$
+$$
+\sigma_{xx} = E\epsilon_{xx}, \quad \sigma_{yy} = E\epsilon_{yy}, \quad \tau_{xy} = 2G\epsilon_{xy}
+$$
+$$
+\tau_{xz} = G\gamma_{xz}, \quad \tau_{yz} = G\gamma_{yz} \quad (1.8)
+$$
 
 功能梯度多孔板的机器学习辅助随机分析
 
 矩阵 $D$ 和 $D_i$ 定义为：
 
-$$ D = \begin{bmatrix} A & 0 & 0 \\ 0 & B & 0 \\ 0 & 0 & C \end{bmatrix}, \quad D_i = \begin{bmatrix} A_i & 0 & 0 \\ 0 & B_i & 0 \\ 0 & 0 & C_i \end{bmatrix} \quad (11.9) $$
+$$
+D = \begin{bmatrix}
+A & 0 & 0 \\
+0 & B & 0 \\
+0 & 0 & C
+\end{bmatrix}, \quad D_i = \begin{bmatrix}
+A_i & 0 & 0 \\
+0 & B_i & 0 \\
+0 & 0 & C_i
+\end{bmatrix} \quad (11.9)
+$$
 
 其中：
 
-$$ A = \int_{-h/2}^{h/2} Q(z) dz, \quad B = \int_{-h/2}^{h/2} R(z) dz, \quad C = \int_{-h/2}^{h/2} S(z) dz \quad (11.10) $$
+$$
+A = \int_{-h/2}^{h/2} Q(z) dz, \quad B = \int_{-h/2}^{h/2} R(z) dz, \quad C = \int_{-h/2}^{h/2} S(z) dz \quad (11.10)
+$$
 
 以及
 
-$$ A_i = \int_{-h/2}^{h/2} Q_i(z) dz, \quad B_i = \int_{-h/2}^{h/2} R_i(z) dz, \quad C_i = \int_{-h/2}^{h/2} S_i(z) dz \quad (11.11) $$
+$$
+A_i = \int_{-h/2}^{h/2} Q_i(z) dz, \quad B_i = \int_{-h/2}^{h/2} R_i(z) dz, \quad C_i = \int_{-h/2}^{h/2} S_i(z) dz \quad (11.11)
+$$
 
 对于 Mindlin 板，剪切修正因子 $k$ 取值为：
 
-$$ k = 5/6 \quad (11.12) $$
+$$
+k = 5/6 \quad (11.12)
+$$
 
-FGP 的控制方程为：
+`FGP` 的控制方程为：
 
-$$ \nabla \cdot \sigma + f = 0 $$
+$$
+\nabla \cdot \sigma + f = 0
+$$
 
 平衡方程的虚形式为：
 
-$$ \int_{\Omega} \delta\epsilon^T \sigma d\Omega + \int_{\Omega} \delta\gamma^T \tau d\Omega = \int_{\Omega} \delta u^T f d\Omega \quad (11.13) $$
-
-
-
+$$
+\int_{\Omega} \delta\epsilon^T \sigma d\Omega + \int_{\Omega} \delta\gamma^T \tau d\Omega = \int_{\Omega} \delta u^T f d\Omega \quad (11.13)
+$$
 
 ## 机器学习辅助的函数梯度多孔板随机性分析
 
@@ -5691,8 +5985,14 @@ $$ \int_{\Omega} \delta\epsilon^T \sigma d\Omega + \int_{\Omega} \delta\gamma^T 
 此外，使用指数协方差函数 $C_{HHH}(x,x')$ 研究了不确定结构属性的空间变异。将其分为 1D、2D 和 3D 场，相关的协方差函数所示：
 
 ```
-$C_{HHH}(\mathbf{x,x'}) = \begin{cases} \sigma_H^2 e^{-\frac{|x-x'|}{l_x}} & \text{对于 1D场} \\ \sigma_H^2 e^{-\frac{|x-x'|}{l_x} - \frac{|y-y'|}{l_y}} & \text{对于 2D场} \quad (11.21) \\ \sigma_H^2 e^{-\frac{|x-x'|}{l_x} - \frac{|y-y'|}{l_y} - \frac{|z-z'|}{l_z}} & \text{对于 3D场} \end{cases}$
+$C_{HHH}(\mathbf{x,x'}) = \begin{cases}
+\sigma_H^2 e^{-\frac{|x-x'|}{l_x}} & \text{对于 1D场} \\
+\sigma_H^2 e^{-\frac{|x-x'|}{l_x} - \frac{|y-y'|}{l_y}} & \text{对于 2D场} \quad (11.21) \\
+\sigma_H^2 e^{-\frac{|x-x'|}{l_x} - \frac{|y-y'|}{l_y} - \frac{|z-z'|}{l_z}} & \text{对于 3D场}
+\end{cases}$
 ```
+
+
 
 其中 $\sigma_H \in \mathbb{R}^{++}$ 代表随机场标准差；$l_x, l_y, l_z \in \mathbb{R}^+$ 分别代表 x 轴、y 轴和 z 轴的相关长度。
 
@@ -5826,25 +6126,23 @@ $\mathbf{U} = \mathbf{K}^{-1}\mathbf{F}$
 $\mathbf{U} = \mathbf{K}^{-1}\mathbf{F}$
 ```
 
-其中 $\mathbf{K}$ 是刚度矩阵，$\mathbf{F}$ 是力向量，$\mathbf{U}$ 是位移向量。在实际应用中，$\tau_x$ 和 $\tau_y$ 是剪切应力。
 
-神经网络常用于解决复杂的非线性问题。通过反向传播算法（BP），神经网络可以学习输入到输出之间的映射。神经网络的结构包括输入层、多个隐藏层和输出层。每一层中的神经元通过激活函数引入非线性变换。
+
+其中 `K` 是刚度矩阵，`F` 是力向量，`U` 是位移向量。在实际应用中，`tau_x` 和 `tau_y` 是剪切应力。
+
+神经网络常用于解决复杂的非线性问题。通过反向传播算法（`BP`），神经网络可以学习输入到输出之间的映射。神经网络的结构包括输入层、多个隐藏层和输出层。每一层中的神经元通过激活函数引入非线性变换。
 
 常用的激活函数有 Sigmoid、ReLU 和 Tanh 等。在随机性分析中，神经网络可以用于预测材料属性在不确定性下的影响。通过训练大量数据，神经网络能够捕捉到物理参数之间复杂的关系，从而提供更准确的预测结果。
-
-
-
-
 
 机器学习辅助的功能梯度孔隙板随机分析
 
 $$\hat{\mathbf{G}}_k = \begin{bmatrix} \mathbf{0}_{2m} \times 2m & \mathbf{0}_{2m} \times m & \mathbf{0}_{2m} \times m \\ \mathbf{0}_{2m} \times 2m & \mathbf{I}_m \times m & \mathbf{0}_m \times m \\ \mathbf{0}_{2m} \times 2m & -\mathbf{0}_m \times m & \mathbf{I}_m \times m \end{bmatrix}, \quad \hat{\mathbf{e}}_k = \begin{bmatrix} \mathbf{e}_{2m} \\ \mathbf{e}_m \end{bmatrix}$$ (11.38)
 
-其中 $\mathbf{I}_m \times m \in \mathbb{R}^{m \times m}, \mathbf{e}_m=[1, 1, \dots, 1]^T \in \mathbb{R}^m$。S-XVR模型的最终回归性能取决于所选择的核，本文提出了一种新型特征映射核函数，即狄利雷特特征映射，其递归定义如下：
+其中 `I_m × m ∈ R^{m × m}`, `e_m=[1, 1, …, 1]^T ∈ R^m`。S-XVR模型的最终回归性能取决于所选择的核，本文提出了一种新型特征映射核函数，即狄利雷特特征映射，其递归定义如下：
 
 $$\varphi_0^d(X) = \begin{cases} x_d, & \chi_d \in X, \ d=1, 2, \dots, n \\ \Gamma(\sum_{k=1}^n \alpha_k) \prod_{k=1}^n \chi_k^{\alpha_k-1} \times (1-\sum_{k=1}^n \chi_k)^{\alpha_n-1}, , & d=n+1 \end{cases}$$ (11.39)
 
-其中 $d \in \mathbb{Z}^+$ 表示狄利雷特映射函数的阶，整体输入数据维度根据方程 $\varphi_{d+1}^*(X)$ 增加了1。
+其中 `d ∈ Z^+` 表示狄利雷特映射函数的阶，整体输入数据维度根据方程 `varphi_{d+1}^*(X)` 增加了1。
 
 ## 11.5 结果分析
 
@@ -5852,13 +6150,13 @@ $$\varphi_0^d(X) = \begin{cases} x_d, & \chi_d \in X, \ d=1, 2, \dots, n \\ \Gam
 
 由于关于功能梯度板（FGP）随机线性弹性分析的公开文献有限，首先通过无孔隙分布的纯功能梯度板结果对所提出的 MLA-SSA 框架进行了验证。
 
-对于厚度为 $h$ 的给定 FGM 板，复合材料的材料属性按照幂律变化如下：
+对于厚度为 `h` 的给定 FGM 板，复合材料的材料属性按照幂律变化如下：
 
 $$E(z) = E_m + (E_c-E_m)(\frac{z}{h})^n \\ \rho(z) = \rho_m + (\rho_c-\rho_m)(\frac{z}{h})^n \\ v(z) = v_m + (v_c-v_m)(\frac{z}{h})^n$$ (11.40)
 
-其中 $E_c, E_m, \rho_c, \rho_m, v_c, v_m$ 是 FGM 板底/顶表面不同阶段的模量、密度和泊松比；$n$ 是梯度系数。材料属性的详细值列于表 11.1。
+其中 `E_c, E_m, rho_c, rho_m, v_c, v_m` 是 FGM 板底/顶表面不同阶段的模量、密度和泊松比；`n` 是梯度系数。材料属性的详细值列于表 11.1。
 
-为了验证所提框架的静态分析，考虑了 $a/h=5$ 的正方形 FGM 结构在简单支撑（SSSS）和固定（CCCC）边界条件下，静态载荷 $P$ 下的位移，如图 11.3 所示。采用了具有 $50 \times 50$ 个单元的收敛有限元法（FEM）网格。表 11.2 和 11.3 列出了两种边界条件下通过 MLA-SSA 框架得到的复合材料归一化中心位移。
+为了验证所提框架的静态分析，考虑了 `a/h=5` 的正方形 FGM 结构在简单支撑（SSSS）和固定（CCCC）边界条件下，静态载荷 `P` 下的位移，如图 11.3 所示。采用了具有 `50 × 50` 个单元的收敛有限元法（FEM）网格。表 11.2 和 11.3 列出了两种边界条件下通过 MLA-SSA 框架得到的复合材料归一化中心位移。
 
 与已发表的其他文献 [11–13] 相比，从机器学习框架计算出的结果与基准值吻合良好。因此，从表中可以看出，MLA-SSA 框架对于静态线性弹性分析的准确性可以保证。
 
@@ -5866,10 +6164,10 @@ $$E(z) = E_m + (E_c-E_m)(\frac{z}{h})^n \\ \rho(z) = \rho_m + (\rho_c-\rho_m)(\f
 
 | 属性 | 铝 | 氧化锆 |
 |---|---|---|
-| $n$ | - | - |
-| $E$ (GPa) | 70 | 200 |
-| $\nu$ | 0.3 | 0.3 |
-| $\rho$ (kg/m³) | 2707 | 5700 |
+| `n` | - | - |
+| `E` (GPa) | 70 | 200 |
+| `nu` | 0.3 | 0.3 |
+| `rho` (kg/m³) | 2707 | 5700 |
 
 ![](img/90ed165a39fa70ec438fc7931c25_287_0)
 
@@ -5893,17 +6191,17 @@ $$E(z) = E_m + (E_c-E_m)(\frac{z}{h})^n \\ \rho(z) = \rho_m + (\rho_c-\rho_m)(\f
 
 ![](img/90ed165a39fa70ec438fc7931c25_288_0)
 
-**图 11.4** (A) 功能梯度孔隙板的布局，(B) 采用的有限元法。第一个示例涉及进一步的 FGP 圆柱板结构，布局如图 11.4 所示。FGP 板厚度为 1 cm，材料属性从顶部到底变化。板的金属和陶瓷属性由铝（AL）和氧化锆（$ZrO_2$）组成，其确定性属性列于表 11.4。板的左边缘和底部固定，并对板进行了随机分析。通过 FEM 方法讨论了结构的不同网格收敛性，最收敛网格大小为 $h_{min} = 0.1$ cm。
+**图 11.4** (A) 功能梯度孔隙板的布局，(B) 采用的有限元法。第一个示例涉及进一步的 FGP 圆柱板结构，布局如图 11.4 所示。FGP 板厚度为 1 cm，材料属性从顶部到底变化。板的金属和陶瓷属性由铝（AL）和氧化锆（`ZrO_2`）组成，其确定性属性列于表 11.4。板的左边缘和底部固定，并对板进行了随机分析。通过 FEM 方法讨论了结构的不同网格收敛性，最收敛网格大小为 `h_min = 0.1` cm。
 
-对于该示例，通过将模量和泊松比考虑为对数正随机场 $H(x,\theta)$，使用公式 (11.21) 中的指数协方差函数，$x$ 和 $y$ 方向上的相关长度为 $l_x = l_y = 0.1$，研究了代表两种孔隙分布的 Case A 和 Case B 的空间相关材料不确定性。为了构建
+对于该示例，通过将模量和泊松比考虑为对数正随机场 `H(x,theta)`，使用公式 (11.21) 中的指数协方差函数，`x` 和 `y` 方向上的相关长度为 `l_x = l_y = 0.1`，研究了代表两种孔隙分布的 Case A 和 Case B 的空间相关材料不确定性。为了构建
 
 #### 表 11.4 功能梯度材料属性。
 
-| 属性 | Al | $ZrO_2$ |
+| 属性 | Al | `ZrO_2` |
 |---|---|---|
-| $E$ (GPa) | 70 | 150 |
-| $\rho$ (kg/m³) | 2707 | 5700 |
-| $\nu$ | 0.3 | 0.3 |
+| `E` (GPa) | 70 | 150 |
+| `rho` (kg/m³) | 2707 | 5700 |
+| `nu` | 0.3 | 0.3 |
 
 **表 11.5** Case A 下 P 点的位移（cm）估计值。
 
@@ -5923,27 +6221,25 @@ $$E(z) = E_m + (E_c-E_m)(\frac{z}{h})^n \\ \rho(z) = \rho_m + (\rho_c-\rho_m)(\f
 
 ![](img/90ed165a39fa70ec438fc7931c25_289_0.png)
 
-**图 11.6** (A) Case A 下 P 点 $u_s$ 的估计概率密度函数和 (B) 累积密度函数。
+**图 11.6** (A) Case A 下 P 点 `u_s` 的估计概率密度函数和 (B) 累积密度函数。
 
 ### 11.5.3 功能梯度扳手板示例
 
-第二个示例研究了一个 FGP 板结构，结构布局如图 11.10 所示。FGP 板厚度为 1.5 cm，FGM 属性从底部到顶部变化。板的金属和陶瓷部分由钢和氧化铝（$Al_{2}O_{3}$）组成，各阶段的确定性属性列于表 11.7。扳手的左边缘是
-
-
+第二个示例研究了一个 FGP 板结构，结构布局如图 11.10 所示。FGP 板厚度为 1.5 cm，FGM 属性从底部到顶部变化。板的金属和陶瓷部分由钢和氧化铝（`Al_2O_3`）组成，各阶段的确定性属性列于表 11.7。扳手的左边缘是
 
 FG 多孔复合结构
 
 ![](img/90ed165a39fa708ec438fcda79319c25_291_0.png)
 
-图 11.7 Case B 中 P 点 $u_s$ 的估计 (A) 概率密度函数和 (B) 累积密度函数。
+图 11.7 Case B 中 P 点 `u_s` 的估计 (A) 概率密度函数和 (B) 累积密度函数。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_291_1.png)
 
-图 11.8 Case A 中 P 点 $u_s$ 的 (A) 神经网络和 (B) 扩展支持向量回归的累积密度函数相对误差。
+图 11.8 Case A 中 P 点 `u_s` 的 (A) 神经网络和 (B) 扩展支持向量回归的累积密度函数相对误差。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_291_2.png)
 
-图 11.9 Case B 中 P 点 $u_s$ 的 (A) 神经网络和 (B) 扩展支持向量回归的累积密度函数相对误差。
+图 11.9 Case B 中 P 点 `u_s` 的 (A) 神经网络和 (B) 扩展支持向量回归的累积密度函数相对误差。
 
 ![](img/90ed165aa39fa708ec438fcda79319c25_292_0.png)
 
@@ -5957,57 +6253,57 @@ FG 多孔复合结构
 |  ρ (kg/m³) | 7480 | 3800 |
 | ν | 0.28 | 0.3 |
 
-固定，并对结构进行随机静态分析。通过 FEM 方法计算，讨论了该结构不同网格条件的收敛性，并选择收敛性最好的网格尺寸为 $h_{min} = 0.15$ cm。
+固定，并对结构进行随机静态分析。通过 FEM 方法计算，讨论了该结构不同网格条件的收敛性，并选择收敛性最好的网格尺寸为 `h_min = 0.15` cm。
 
-再次，通过将杨氏模量和泊松比视为对数正态场 $H(x,y)$，公式 (11.21) 中的指数协方差函数以及 x 和 y 方向上的相关长度 $l_x=0.2, l_y=0.1$，研究了代表两种孔隙分布的 Case A 和 Case B 空间材料不确定性。为了建立合适的回归模型，对两种机器学习算法采用了不同的训练样本量，并使用 $R^2$ 和 RMSE 数学指标在图 11.11 中测试准确性。从图中可以看出，Case A 和 Case B 的 X-SVR 训练样本量确定为 200，NN 方法也为 200。
+再次，通过将杨氏模量和泊松比视为对数正态场 `H(x,y)`，公式 (11.21) 中的指数协方差函数以及 x 和 y 方向上的相关长度 `l_x=0.2, l_y=0.1`，研究了代表两种孔隙分布的 Case A 和 Case B 空间材料不确定性。为了建立合适的回归模型，对两种机器学习算法采用了不同的训练样本量，并使用 `R^2` 和 `RMSE` 数学指标在图 11.11 中测试准确性。从图中可以看出，Case A 和 Case B 的 X-SVR 训练样本量确定为 200，NN 方法也为 200。
 
-为了说明 NN 和 X-SVR 机器学习算法的不同回归性能，提供了 Case A 和 Case B 的两种方法的对比测试。FGP 扳在五个点上的 S 点位移 $u_s$：
+为了说明 NN 和 X-SVR 机器学习算法的不同回归性能，提供了 Case A 和 Case B 的两种方法的对比测试。FGP 扳在五个点上的 S 点位移 `u_s`：
 
 ![](img/90ed165a39fa708ec438fcda79319c25_293_0.png)
 
-**图 11.11** 神经网络和扩展向量回归估计的 (A) $R^2$ 和 (B) RMSE。
+**图 11.11** 神经网络和扩展向量回归估计的 (A) `R^2` 和 (B) `RMSE`。
 
 **表 11.8** Case A 中 S 点位移 (cm) 的估计值。
 
 | | Case A | | | | | |
 | MCS | NN | RE (%) | X-SVR | RE (%) | |
 |---|---|---|---|---|---|
-| $u_s$ (cm) | | | | | |
-| $\mu - 2\sigma$ | 0.0325 | 0.0325 | 0.0095 | 0.0324 | -0.0112 |
-| $\mu - \sigma$ | 0.0343 | 0.0342 | -0.0188 | 0.0342 | -0.0275 |
-| $\mu$ | 0.0364 | 0.0363 | -0.0412 | 0.0363 | -0.0432 |
-| $\mu + \sigma$ | 0.0382 | 0.0381 | -0.0191 | 0.0381 | -0.0266 |
-| $\mu + 2\sigma$ | 0.0391 | 0.0391 | 0.0096 | 0.0391 | -0.0108 |
+| `u_s` (cm) | | | | | |
+| `mu - 2sigma` | 0.0325 | 0.0325 | 0.0095 | 0.0324 | -0.0112 |
+| `mu - sigma` | 0.0343 | 0.0342 | -0.0188 | 0.0342 | -0.0275 |
+| `mu` | 0.0364 | 0.0363 | -0.0412 | 0.0363 | -0.0432 |
+| `mu + sigma` | 0.0382 | 0.0381 | -0.0191 | 0.0381 | -0.0266 |
+| `mu + 2sigma` | 0.0391 | 0.0391 | 0.0096 | 0.0391 | -0.0108 |
 
 **表 11.9** Case B 中 S 点位移 (cm) 的估计值。
 
 | | Case B | | | | |
 | MCS | NN | RE (%) | X-SVR | RE (%) |
 |---|---|---|---|---|---|
-| $u_s$ (cm) | | | | | |
-| $\mu - 2\sigma$ | 0.0220 | 0.0220 | 0.0237 | 0.0220 | 0.0475 |
-| $\mu - \sigma$ | 0.0231 | 0.0230 | -0.0245 | 0.0231 | 0.0112 |
-| $\mu$ | 0.0246 | 0.0245 | -0.0821 | 0.0246 | -0.0532 |
-| $\mu + \sigma$ | 0.0258 | 0.0258 | 0.0781 | 0.0258 | 0.0266 |
-| $\mu + 2\sigma$ | 0.0267 | 0.0266 | -0.0255 | 0.0267 | 0.0088 |
+| `u_s` (cm) | | | | | |
+| `mu - 2sigma` | 0.0220 | 0.0220 | 0.0237 | 0.0220 | 0.0475 |
+| `mu - sigma` | 0.0231 | 0.0230 | -0.0245 | 0.0231 | 0.0112 |
+| `mu` | 0.0246 | 0.0245 | -0.0821 | 0.0246 | -0.0532 |
+| `mu + sigma` | 0.0258 | 0.0258 | 0.0781 | 0.0258 | 0.0266 |
+| `mu + 2sigma` | 0.0267 | 0.0266 | -0.0255 | 0.0267 | 0.0088 |
 
-两种方法所考虑的位置（即 $\mu, \mu \pm \sigma, \mu \pm 2\sigma$）如表 11.8 和 11.9 所示。同时，选择了 10 万次循环的粗特卡洛模拟方法作为参考。从表中可以看出，MLA-SSA 框架为五个位置提供了可靠的结果。与 MCS 结果相比，NN 方法的绝对最大误差为 0.0391%，而 X-SVR 方法的 RE 为 0.0532%。两种机器学习算法消耗了大量时间，但仍为 FGP 扳提供了准确的统计数据。
+两种方法所考虑的位置（即 `mu, mu ± sigma, mu ± 2sigma`）如表 11.8 和 11.9 所示。同时，选择了 10 万次循环的粗特卡洛模拟方法作为参考。从表中可以看出，MLA-SSA 框架为五个位置提供了可靠的结果。与 MCS 结果相比，NN 方法的绝对最大误差为 0.0391%，而 X-SVR 方法的 RE 为 0.0532%。两种机器学习算法消耗了大量时间，但仍为 FGP 扳提供了准确的统计数据。
 
 在 PDF 中，通过图 11.2-11.3 绘制了两种方法在 Case A 和 Case B 中的位移效率。从图中可以看出，机器学习预测的五个位置位移的 PDF 和 CDF 与参考一致良好。此外，可以看到 Case B FGP 扳不同位置的 PDF 和 CDF 的可靠性，这再次证明了 MLA-SSA 对于 FGP 扳的准确性、效率和适用性。因此，MLA-SSA 框架的预测能力![](img/90ed165a39fa708ec438fcda79319c25_295_0.png)
 
-图 11.12 Case A 中 S 点 $u_s$ 的估计 (A) 概率密度函数和 (B) 累积密度函数。
+图 11.12 Case A 中 S 点 `u_s` 的估计 (A) 概率密度函数和 (B) 累积密度函数。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_295_1.png)
 
-图 11.13 Case A 中 S 点 $u_s$ 的 (A) 神经网络和 (B) 扩展支持向量回归的累积密度函数相对误差。
+图 11.13 Case A 中 S 点 `u_s` 的 (A) 神经网络和 (B) 扩展支持向量回归的累积密度函数相对误差。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_295_2.png)
 
-图 11.14 Case B 中 S 点 $u_s$ 的估计 (A) 概率密度函数和 (B) 累积密度函数。
+图 11.14 Case B 中 S 点 `u_s` 的估计 (A) 概率密度函数和 (B) 累积密度函数。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_296_0.png)
 
-图 11.15 Case B 中 S 点 $u_s$ 的 (A) 神经网络和 (B) 扩展支持向量回归的累积密度函数相对误差。
+图 11.15 Case B 中 S 点 `u_s` 的 (A) 神经网络和 (B) 扩展支持向量回归的累积密度函数相对误差。
 
 通过两个不同的案例进行了深入研究，展示了机器学习辅助分析在实际工程领域的潜在应用。
 
@@ -6047,10 +6343,6 @@ FG 多孔复合结构
 
 [12] Lee YY, Zhao X Liew KM. Thermoelastic analysis of functionally graded plates using the element-free kp-Ritz method. Smart Mater 2009;18(3):035007.
 
-
-
-
-
 # 机器学习辅助的功能梯度多孔板随机自由振动分析
 
 Yuan Feng¹, Di Wu ², Xiaojun Chen¹ 和 Wei Gao¹
@@ -6071,25 +6363,29 @@ FG 多孔复合结构
 
 事实上，过去几年已经对 FG 结构的不确定结构行为进行了彻底研究，但考虑到确定性属性，专注于 FGP 结构的关注仍然有限。例如，Yang 等人[6] 使用经典摄动技术计算了带有温度载荷的 FG 板的不确定响应。Shaker 等人[7] 在一阶和二阶技术的帮助下，考虑了功能梯度板固有频率的参数敏感性分析。随后，Sheokkar 和 Lal[8] 采用一阶摄动法，在考虑材料属性的情况下评估了先进复合材料的不确定行为。考虑到 FGP 结构的独特组成，需要对此类问题的确定性机械测试进行研究。
 
-在本章中，考虑了 FGP 板的随机自由振动。为了获得一个稳健高效的定量框架，为 FG 板引入了机器学习辅助自由振分析（MLA-SFV）技术。随后可以考虑并实现复合材料的系统属性，输入与结构响应之间的内在关系可以通过两种机器学习算法（即高斯过程回归和扩展支持向量回归 (SVR））进行评估。此外，机器学习算法中使用了多项式核函数来增强稳健性和稳定性。通过建立回归模型，可以预测 FGP 板的基频，并有效地获取输出的详细统计矩[即输出的概率密度函数 (PDF) 和累积分布函数 (CDF)]，以便通过可靠性理论评估 FGP 板的安全性。与传统的不确定性定量方法不同，MLA-SFV 框架能够随不同的输入进行自优化和自更新，而且可以大大减少计算量。机器学习辅助随机分析的这些优势特征确实可以为现实复合结构提供一些参考。
+在本章中，考虑了 FGP 板的随机自由振动。为了获得一个稳健高效的定量框架，为 FG 板引入了机器学习辅助自由振分析（MLA-SFV）技术。随后可以考虑并实现复合材料的系统属性，输入与结构响应之间的内在关系可以通过两种机器学习算法（即高斯过程回归和扩展支持向量回归 (`SVR`)）进行评估。此外，机器学习算法中使用了多项式核函数来增强稳健性和稳定性。通过建立回归模型，可以预测 FGP 板的基频，并有效地获取输出的详细统计矩[即输出的概率密度函数 (`PDF`) 和累积分布函数 (`CDF`)]，以便通过可靠性理论评估 FGP 板的安全性。与传统的不确定性定量方法不同，MLA-SFV 框架能够随不同的输入进行自优化和自更新，而且可以大大减少计算量。机器学习辅助随机分析的这些优势特征确实可以为现实复合结构提供一些参考。
 
 ## 12.2 功能梯度多孔板的材料模型
 
-FGP 结构建立在笛卡尔坐标系（x, y, z）中，厚度 h、宽度 b 和长度 l。如图 12.1 所示，沿厚度方向考虑了两种孔隙分布。孔隙是非均匀分布的，E1, E2 是材料属性，其他属性（即剪切模量、密度）也满足这些分布。FGP 的非均匀分布可以通过方程 (12.1) 和 (12.2) 给出。
+FGP 结构建立在笛卡尔坐标系（`x, y, z`）中，厚度 `h`、宽度 `b` 和长度 `l`。如图 12.1 所示，沿厚度方向考虑了两种孔隙分布。孔隙是非均匀分布的，`E1, E2` 是材料属性，其他属性（即剪切模量、密度）也满足这些分布。FGP 的非均匀分布可以通过方程 (12.1) 和 (12.2) 给出。
 
 ```
-E(z) = E1 - e0
-G(z) = G1 - e0
-rho(z) = rho1 - e0
-```
 
-```
-E(z) = E2 - e0
-G(z) = G2 - e0
-rho(z) = rho2 - e0
-```
 
-其中 $E_1, G_1, \rho_1$ 和 $E_2, G_2, \rho_2$ 是弹性模量、剪切模量和密度的最大值最小值；$e_0$ 是弹性模量和剪切模量的孔隙系数；$e_m$ 是密度的孔隙系数，可以通过 $G = E/2(1+\nu)$ 获得。
+
+`E(z) = E1 - e0`
+
+`G(z) = G1 - e0`
+
+`rho(z) = rho1 - e0`
+
+`E(z) = E2 - e0`
+
+`G(z) = G2 - e0`
+
+`rho(z) = rho2 - e0`
+
+其中 `$E_1, G_1, \rho_1$` 和 `$E_2, G_2, \rho_2$` 是弹性模量、剪切模量和密度的最大值最小值；`$e_0$` 是弹性模量和剪切模量的孔隙系数；`$e_m$` 是密度的孔隙系数，可以通过 `$G = E/2(1+\nu)$` 获得。
 
 从材料图来看，对于分布类型 1，弹性模量和密度的最大值位于 FGP 板的表面，而属性的最小值位于中平面。对于分布类型 2，弹性模量和密度的最大值分别分布在顶部和底部。根据机械属性的一般联系[9]，上述 FGP 板的系数关系为：
 
@@ -6105,15 +6401,13 @@ $$e_m = 1 - \sqrt{e_0} \qquad (12.4)$$
 
 $$\mathbf{M} + \mathbf{K} = \mathbf{C} = 0, \quad \ddot{\mathbf{u}}(t) = d^2\mathbf{u}(t)/dt^2 \qquad (12.5)$$
 
-其中 $\ddot{\mathbf{u}}(t)$ 是加速度向量；$\mathbf{u}$ 是位移向量；$\mathbf{M}$ 和 $\mathbf{K}$ 是 FGP 板的全局质量矩阵和刚度矩阵，它们通过单个单元质量矩阵 $\mathbf{M}^e$ 和刚度矩阵 $\mathbf{K}^e$ 组合而成：
+其中 `$\ddot{\mathbf{u}}(t)$` 是加速度向量；`$\mathbf{u}$` 是位移向量；`$\mathbf{M}$` 和 `$\mathbf{K}$` 是 FGP 板的全局质量矩阵和刚度矩阵，它们通过单个单元质量矩阵 `$\mathbf{M}^e$` 和刚度矩阵 `$\mathbf{K}^e$` 组合而成：
 
 ```
 \mathbf{M}^e = \int_{V_e} \rho N dV, \quad \mathbf{K}^e = \int_{V_e} \mathbf{B}^T\mathbf{DB} dV
-qquad (12.6) 其中 $e$ 是 FGP 板内的单个单元；$\rho$ 是 FGP 板的密度；$\mathbf{N}$ 是单元的位移插值矩阵；$\mathbf{B}$ 是单元的应变位移协调矩阵；$\mathbf{D}$ 是弹性刚度矩阵；$V_e$ 是单元的体积。
+```
 
-
-
-
+`qquad (12.6) 其中 $e$ 是 FGP 板内的单个单元；$\rho$ 是 FGP 板的密度；$\mathbf{N}$ 是单元的位移插值矩阵；$\mathbf{B}$ 是单元的应变位移协调矩阵；$\mathbf{D}$ 是弹性刚度矩阵；$V_e$ 是单元的体积。`
 
 自由振动问题可以被视为方程 (12.5) 的子解，假设谐谐振动为：
 
@@ -6121,23 +6415,23 @@ qquad (12.6) 其中 $e$ 是 FGP 板内的单个单元；$\rho$ 是 FGP 板的密
 u(t) = \Phi e^{i\omega t} \quad (12.8)
 ```
 
-其中 $\omega$ 是 FGP 板的自然频率 (rad/s)；$\Phi$ 是正态模式。将方程 (12.8) 代入方程 (12.5) 中，广义特征值问题可以表述为：
+其中 `$\omega$` 是 FGP 板的自然频率 (rad/s)；`$\Phi$` 是正态模式。将方程 (12.8) 代入方程 (12.5) 中，广义特征值问题可以表述为：
 
 ```
 K\Phi = \lambda M\Phi \quad (12.9)
 ```
 
-其中 $\lambda$ 是特征值，$\Phi$ 是对应的特征向量。FGP 板的基础频率基于获取的最小特征值。
+其中 `$\lambda$` 是特征值，`$\Phi$` 是对应的特征向量。FGP 板的基础频率基于获取的最小特征值。
 
-## 12.3.2 功能梯度多孔板的随机振动分析
+### 12.3.2 功能梯度多孔板的随机振动分析
 
-对于结构系统所涉及的随机性，材料属性的随机参数是随机的，并对于 FGP 板改变为 $E(\theta), G(\theta), \rho(\theta)$，其中 $\theta\in\Omega$ 是随机事件。FGP 板的全局质量矩阵、刚度矩阵以及自由振动分析的控制方程可以转换为随机格式，其表示为：
+对于结构系统所涉及的随机性，材料属性的随机参数是随机的，并对于 FGP 板改变为 `E(\theta), G(\theta), \rho(\theta)`，其中 `$\theta\in\Omega$` 是随机事件。FGP 板的全局质量矩阵、刚度矩阵以及自由振动分析的控制方程可以转换为随机格式，其表示为：
 
 ```
 M(\theta)\ddot{u}(\theta) + K(\theta)\mathbf{u}(\theta) = 0 \quad (12.10)
 ```
 
-其中 $M(\theta), K(\theta), \dot{u}(\theta), \ddot{u}(\theta)$ 是全局质量矩阵、刚度矩阵、加速度和变形向量的随机格式。需要注意的是，受 FGP 板随机属性 $\rho(\theta), E(\theta)$ 的影响，单元质量矩阵和刚度矩阵也被转换为：
+其中 `M(\theta), K(\theta), \dot{u}(\theta), \ddot{u}(\theta)` 是全局质量矩阵、刚度矩阵、加速度和变形向量的随机格式。需要注意的是，受 FGP 板随机属性 `$\rho(\theta), E(\theta)$` 的影响，单元质量矩阵和刚度矩阵也被转换为：
 
 ```
 M(\theta) = \sum_{r} M^r(\theta), \quad K(\theta) = \sum_{r} K^r(\theta) \quad (12.11)
@@ -6147,7 +6441,7 @@ M(\theta) = \sum_{r} M^r(\theta), \quad K(\theta) = \sum_{r} K^r(\theta) \quad (
 M'(\theta) = \int_{v_r} \rho(\theta)N^T dV, \quad K'(\theta) = \int_{v_r} B^T D(\theta) dB \quad (12.12)
 ```
 
-其中 $M'(\theta)$ 和 $K'(\theta)$ 是单元质量矩阵和刚度矩阵的随机格式，$D(\theta)$ 是随机弹性刚度矩阵，它们受 FGP 板密度和杨氏模量随机值的影响。
+其中 `M'(\theta)` 和 `K'(\theta)` 是单元质量矩阵和刚度矩阵的随机格式，`D(\theta)` 是随机弹性刚度矩阵，它们受 FGP 板密度和杨氏模量随机值的影响。
 
 对于 FGP 板不确定自由振动分析的解，方程 (12.9) 中的随机特征值问题可以重新表述为：
 
@@ -6155,7 +6449,7 @@ M'(\theta) = \int_{v_r} \rho(\theta)N^T dV, \quad K'(\theta) = \int_{v_r} B^T D(
 K(\theta)\Phi(\theta) = \lambda(\theta)M(\theta)\Phi(\theta) \quad (12.13)
 ```
 
-其中 $\lambda(\theta)$ 和 $\Phi(\theta)$ 是特征值和特征向量的随机解。应当注意，上述方程是一个具有非确定解的随机系统，无法通过解析法或数学公式直接求解。为了给该随机问题提供有效解，机器学习技术被视为一种替代方案并介绍如下。
+其中 `$\lambda(\theta)$` 和 `$\Phi(\theta)$` 是特征值和特征向量的随机解。应当注意，上述方程是一个具有非确定解的随机系统，无法通过解析法或数学公式直接求解。为了给该随机问题提供有效解，机器学习技术被视为一种替代方案并介绍如下。
 
 ## 12.4 机器学习辅助的随机振动分析
 
@@ -6170,19 +6464,19 @@ K(\theta)\Phi(\theta) = \lambda(\theta)M(\theta)\Phi(\theta) \quad (12.13)
 
 ### 12.4.2 高斯过程回归
 
-对于高斯过程，它定义对于函数内的任意两个数据点，其相应的输出服从多元高斯分布。在 GPR 中，假设一组输入和输出向量为 $x$ 和 $y$，它们之间的关系表述为：
+对于高斯过程，它定义对于函数内的任意两个数据点，其相应的输出服从多元高斯分布。在 GPR 中，假设一组输入和输出向量为 `x` 和 `y`，它们之间的关系表述为：
 
 ```
 y = f(x) + \varepsilon \quad (12.14)
 ```
 
-功能梯度多孔板的机器学习辅助随机振动分析其中 $\varepsilon \sim N(0, \delta^2)$。对于高斯过程回归，关系函数 $f(\mathbf{x})$ 服从高斯过程：
+功能梯度多孔板的机器学习辅助随机振动分析其中 `$\varepsilon \sim N(0, \delta^2)$`。对于高斯过程回归，关系函数 `f(\mathbf{x})` 服从高斯过程：
 
 ```
 $f(\mathbf{x}) \sim GP(m(\mathbf{x}), k(\mathbf{x}, \mathbf{x})) \quad (12.15)$
 ```
 
-其中 $m(\mathbf{x})$ 是均值方程，$k(\mathbf{x}, \mathbf{x})$ 是协方差方程，详细公式如下：
+其中 `m(\mathbf{x})` 是均值方程，`k(\mathbf{x}, \mathbf{x})` 是协方差方程，详细公式如下：
 
 ```
 $m(\mathbf{x}) = E[f(\mathbf{x})] \quad (12.16)$
@@ -6192,29 +6486,29 @@ $m(\mathbf{x}) = E[f(\mathbf{x})] \quad (12.16)$
 $k(\mathbf{x}, \mathbf{x}') = E[(f(\mathbf{x}) - m(\mathbf{x}))(f(\mathbf{x}') - m(\mathbf{x}'))] \quad (12.17)
 ```
 
-其中 $E(\cdot)$ 是所有值的期望。$k$ 是高斯过程的核函数。合适的核函数可以平滑数据点并提供高维回归，基于 GPR 的一种典型核是径基函数，表示为：
+其中 `E(\cdot)` 是所有值的期望。`k` 是高斯过程的核函数。合适的核函数可以平滑数据点并提供高维回归，基于 GPR 的一种典型核是径基函数，表示为：
 
 ```
 $k(\mathbf{x}, \mathbf{x}') = \sigma_f^2 \exp(-\frac{\|\mathbf{x}-\mathbf{x}'\|^2}{2\lambda^2}) \quad (12.18)$
 ```
 
-其中 $\lambda$ 是尺度超参数，$\sigma_f^2$ 是信号方差，通过高斯过程获得。
+其中 `$\lambda$` 是尺度超参数，`$\sigma_f^2$` 是信号方差，通过高斯过程获得。
 
 ### 12.4.3 扩展支持回归
 
-由 Vapnik [15] 提出的 SVR 在回归问题中广受欢迎。随后，支持向量机 (SVM) 和支持向量回归 (S-SVM) 的成功由 Feng 等 [13,14] 引入了 X-SVR。对于输入输出变量 $\mathbf{x}$，X-SVR 创建了一个超平面来描述正则化格式：
+由 Vapnik [15] 提出的 SVR 在回归问题中广受欢迎。随后，支持向量机 (SVM) 和支持向量回归 (S-SVM) 的成功由 Feng 等 [13,14] 引入了 X-SVR。对于输入输出变量 `$\mathbf{x}$`，X-SVR 创建了一个超平面来描述正则化格式：
 
 ```
 \hat(\mathbf{x}) = \mathbf{p}^T\mathbf{x} - \zeta \quad (12.19)
 ```
 
-其中 $\mathbf{p}, \mathbf{q}$ 是系数；$\zeta$ 是偏置。上述方程适用于线性回归。为了解决随机问题，X-SVR 将 $\mathbf{x}$ 映射到高维空间空间：
+其中 `$\mathbf{p}, \mathbf{q}$` 是系数；`$\zeta$` 是偏置。上述方程适用于线性回归。为了解决随机问题，X-SVR 将 `$\mathbf{x}$` 映射到高维空间空间：
 
 ```
 \mathbf{x} = [x_1, x_2, \dots, x_m]^T \rightarrow \hat{\mathbf{x}} = \begin{bmatrix} k(x_1) & k(x_1) \\ k(x_2) & k(x_2) \\ \vdots & \vdots \\ k(x_m) & k(x_m) \end{bmatrix}
 ```
 
-其中 $k(\mathbf{x})$ 是核向量，X-SVR 的核化形式表示为：
+其中 `k(\mathbf{x})` 是核向量，X-SVR 的核化形式表示为：
 
 ```
 \min_{\mathbf{p}_i, \mathbf{q}_i, \vartheta} \frac{1}{2} ||\mathbf{p}_i - \mathbf{q}_i||^2 + \gamma_1 k(\mathbf{p}_i, \mathbf{q}_i) + \gamma_2 \frac{1}{2} (\vartheta^2)
@@ -6223,21 +6517,18 @@ $k(\mathbf{x}, \mathbf{x}') = \sigma_f^2 \exp(-\frac{\|\mathbf{x}-\mathbf{x}'\|^
 \quad \mathbf{p}_i, \mathbf{q}_i \geq 0; \quad \vartheta \geq 0
 ```
 
-其中 $\gamma_1, \gamma_2$ 是调节参数；$\vartheta$ 是容差变量；$k$ 表示核化过程。从 SVM 模型采用的优化问题来看，通过引入非负拉格日乘子 $\beta_k \in \mathbb{R}^{im}$，可以将回归函数简化并考虑为二次规划问题：
+其中 `$\gamma_1, \gamma_2$` 是调节参数；`$\vartheta$` 是容差变量；`k` 表示核化过程。从 SVM 模型采用的优化问题来看，通过引入非负拉格日乘子 `$\beta_k \in \mathbb{R}^{im}$`，可以将回归函数简化并考虑为二次规划问题：
 
 ```
 \min_{\beta_k} \frac{1}{2} \beta_k^T \mathbf{P}_k \beta_k - \mathbf{L}_k^T \beta_k; \quad \beta_k \geq \mathbf{0}_{im}
 ```
 
-其中 $\mathbf{P}_k$ 和 $\mathbf{L}_k$ 是优化向量矩阵。考虑到 $\beta_k^* \in \mathbb{R}^{im}$ 为获取的优化问题的全局解，核-SVR 模型的整体核方程可以重新表述为：
+其中 `$\mathbf{P}_k$` 和 `$\mathbf{L}_k$` 是优化向量矩阵。考虑到 `$\beta_k^* \in \mathbb{R}^{im}$` 为获取的优化问题的全局解，核-SVR 模型的整体核方程可以重新表述为：
 
 ```
 \hat{f}_n(\mathbf{x}) = (\mathbf{p}_n - \mathbf{q}_n)^T k(\mathbf{p}_n, \mathbf{x}) - \mathbf{v}_k^T \beta_k^* \\
 \mathbf{p}_n - \mathbf{q}_n = \mathbf{v}(1:m) - \mathbf{v}(m+1:2m); \quad \mathbf{v}_k^T = (\mathbf{R}_k + \mathbf{I}_{lm \times k})^T \beta_k^* - \gamma_2 \mathbf{u}_k
 ```
-
-
-
 
 基于机器学习的函数梯度多孔板随机自由振动分析 301
 
@@ -6245,15 +6536,15 @@ $k(\mathbf{x}, \mathbf{x}') = \sigma_f^2 \exp(-\frac{\|\mathbf{x}-\mathbf{x}'\|^
 
 | 超参数 | 范围 |
 |---|---|
-| $\gamma_1$ | $[10^{-3}, 10^3]$ |
-| $\gamma_2$ | $[10^{-3}, 10^4]$ |
-| $\theta$ | $[10^0, 10^2]$ |
-| $\lambda$ | $[10^{-3}, 10^{-1}]$ |
-| $\delta_s^2$ | $[10^{-1}, 1]$ |
-| $d$ | $[1, 6]$ |
-| $\sigma$ | $[10^{-2}, 10^2]$ |
+| `$\gamma_1$` | `[10^{-3}, 10^3]` |
+| `$\gamma_2$` | `[10^{-3}, 10^4]` |
+| `$\theta$` | `[10^0, 10^2]` |
+| `$\lambda$` | `[10^{-3}, 10^{-1}]` |
+| `$\delta_s^2$` | `[10^{-1}, 1]` |
+| `d` | `[1, 6]` |
+| `$\sigma$` | `[10^{-2}, 10^2]` |
 
-## 12.4.4 超参数的优化
+### 12.4.4 超参数的优化
 
 GPR 和 X-SVR 中使用的核函数很大程度上取决于优化过程中选择的超参数，这从本质上会影响回归模型的预测准确性。为了验证，k 折交叉验证方法是测试不同超参数下预测准确性的有效方法。在工作中，GPR 和 X-SVR 可以采用五折交叉验证法，如下：
 
@@ -6297,11 +6588,11 @@ $Err_{MCV} = \sum_{i=1}^{5} err_i^2 \quad (12.26)$
 | 20 | 0.0570 | 0.0508 | 0.0464 | 0.0463 |
 | 50 | 0.0204 | 0.0204 | 0.0186 | 0.0186 |
 
-FGP 梁由钢泡沫组成，$E_i = 200 \text{ GPa}$，$\nu = 0.33$，$\rho_i = 7850 \text{ kg/m}^3$。无量纲频率的形式可以为 $\omega = d\sqrt{A_{10}/I_{10}}$,其中 $A_{10}$ 和 $I_{10}$ 是 $e=0$ 时梁的截面积和刚度。通过考虑文献 [5] 的公开数据，将提出的振动分析与参考值进行对比列在表 12.2 中，旨在从控制方程获取不同孔隙分布和长厚比的影响。因此，本研究证明了 FGP 板确定性振动分析的准确性。
+FGP 梁由钢泡沫组成，`$E_i = 200 \text{ GPa}$`，`$\nu = 0.33$`，`$\rho_i = 7850 \text{ kg/m}^3$`。无量纲频率的形式可以为 `$\omega = d\sqrt{A_{10}/I_{10}}$`,其中 `$A_{10}$` 和 `$I_{10}$` 是 `$e=0$` 时梁的截面积和刚度。通过考虑文献 [5] 的公开数据，将提出的振动分析与参考值进行对比列在表 12.2 中，旨在从控制方程获取不同孔隙分布和长厚比的影响。因此，本研究证明了 FGP 板确定性振动分析的准确性。
 
 ### 12.5.2 函数梯度多孔板
 
-第一个示例涉及 FGP 板结构，其结构布局如图 12.3 所示。FGP 板的厚度为 5 cm，材料从底部到顶部由铝（Al）和氧化锆（ZrO）组成。板的边缘固定固定，通过有限元法（FEM）讨论了不同的网格条件，最收敛的网格尺寸选择为 $h_{max}=0.35$ cm。对于该示例，研究了两种孔隙分布，标记为 Case A 和 Case B。在两种情况下，关注 FGP 板顶部和底部的模量、密度和泊松比。FGP 板的变分数据列在表 12.3 中。为了构建振动模式，必须确定不同的样本尺寸（例如 10, 20, 50, 100）。例如，针对 Case A 第一阶自然频率的 $R^2$ 和均方根误差 (RMSE) 绘制图 12.4。根据结果，Case A 和 B 的训练样本尺寸选择为 150 和 100。两种方法的第三阶自然频率在表 12.4 和 12.5 中给出。同时，
+第一个示例涉及 FGP 板结构，其结构布局如图 12.3 所示。FGP 板的厚度为 5 cm，材料从底部到顶部由铝（Al）和氧化锆（ZrO）组成。板的边缘固定固定，通过有限元法（FEM）讨论了不同的网格条件，最收敛的网格尺寸选择为 `$h_{max}=0.35$` cm。对于该示例，研究了两种孔隙分布，标记为 Case A 和 Case B。在两种情况下，关注 FGP 板顶部和底部的模量、密度和泊松比。FGP 板的变分数据列在表 12.3 中。为了构建振动模式，必须确定不同的样本尺寸（例如 10, 20, 50, 100）。例如，针对 Case A 第一阶自然频率的 `$R^2$` 和均方根误差 (RMSE) 绘制图 12.4。根据结果，Case A 和 B 的训练样本尺寸选择为 150 和 100。两种方法的第三阶自然频率在表 12.4 和 12.5 中给出。同时，
 
 ![](img/90ed165a39fa708ec438fcda79319c25_308_png)
 
@@ -6311,11 +6602,11 @@ FGP 梁由钢泡沫组成，$E_i = 200 \text{ GPa}$，$\nu = 0.33$，$\rho_i = 7
 
 | 变分输入 | 分布类型 | 平均值 | 标准差 |
 |---|---|---|---|
-| $E_1$ (GPa) | 对数正态 | 151 | 7.55 |
-| $E_2$ (GPa) | 正态 | 70 | 3.5 |
-| $\rho_1$ (kg/m³) | 正态 | 5700 | 285 |
-| $\rho_2$ (kg/m³) | 贝塔 | 2707 | 135.35 |
-| $\nu$ | 对数正态 | 0.3 | 0.015 |
+| `$E_1$` (GPa) | 对数正态 | 151 | 7.55 |
+| `$E_2$` (GPa) | 正态 | 70 | 3.5 |
+| `$\rho_1$` (kg/m³) | 正态 | 5700 | 285 |
+| `$\rho_2$` (kg/m³) | 贝塔 | 2707 | 135.35 |
+| `$\nu$` | 对数正态 | 0.3 | 0.015 |
 
 多孔复合结构
 
@@ -6327,12 +6618,17 @@ FGP 梁由钢泡沫组成，$E_i = 200 \text{ GPa}$，$\nu = 0.33$，$\rho_i = 7
 
 | 阶数 | MCS | X-SVR | RE (%) | GPR | RE (%) |
 |---|---|---|---|---|---|
+
+
+
 | 第一阶 | 6635.522 | 6632.781 | -0.0413 | 6630.581 | -0.0745 |
+
 | 第二阶 | 7342.564 | 7345.961 | -0.0463 | 7337.658 | -0.0668 |
 
 **标准差**
 
 | 第一阶 | 13.862 | 13.787 | -0.5410 | 13.701 | -1.161 |
+
 | 第二阶 | 17.654 | 17.438 | -1.2235 | 17.321 | -1.886 |
 
 ## 表 12.5 Case B 下不同阶自然频率的估计值 (Hz)。
@@ -6360,10 +6656,6 @@ FGP 梁由钢泡沫组成，$E_i = 200 \text{ GPa}$，$\nu = 0.33$，$\rho_i = 7
 ![](img/90ed165a39fa708ec438fcda79319c25_310_1.png)
 
 图 12.6 Case 第二阶自然频率的预测 (A) PDF 和 (B) CDF。
-
-
-
-
 
 FG 多孔复合材料结构
 
@@ -6429,7 +6721,9 @@ FG 多孔复合材料结构
 | 第三 | 3.872e–3 | 3.874e–3 | 0.0517 | 3.877e–3 | 0.1291 |
 | **标准差** | | | | | | |
 | 第一 | 0.941 | 0.943 | 0.2125 | 0.946 | 0.5313 |
-| 第三 | 1.436 | 1.439 | 0.2089 | 1.443 | 0.4875 |![](img/90ed165a39fa708ec438fcda79319c25_314_0.png)
+| 第三 | 1.436 | 1.439 | 0.2089 | 1.443 | 0.4875 |
+
+![](img/90ed165a39fa708ec438fcda79319c25_314_0.png)
 
 **图 12.11** 情况 A 第一阶阶频率的预测 (A) PDF 和 (B) CDF。(img/90ed165a39fa708ec438fcda79319c25_314_1.png)
 
@@ -6464,13 +6758,10 @@ FG 多孔复合材料结构
 - [15] Wapnik V.N. An Overview of Statistical Learning Theory, 1999:10.
 - [16] Igusa T, Buonaparte SG, Ellington BR. Bayesian analysis of uncertainty for structural engineering applications. Struct Saf 2002;24(2):165–86.
 
-
-
-
-
 # 功能梯度多孔结构的性能评估
 
 Vuong Nguyen-Van$^{1,2}$, Chenxi Peng, Junli Liu, Phuong Tran$^{1}$ 和 H. Nguyen-Xuan$^{2}$
+
 $^{1}$澳大利亚维多利亚州墨尔本，RMIT理工大学工程学院，$^{2}$ 越南，胡志明市，HUTECH大学，CIRTech研究所
 
 ## 13.1 引言
@@ -6485,8 +6776,6 @@ $^{1}$澳大利亚维多利亚州墨尔本，RMIT理工大学工程学院，$^{2
 
 
 
-
-
 ![](img/90ed165a39fa708ec438fcda79319c25_321_0.png)
 
 图 13.1 网络/固体相海晶体的示例（每个结构中包含八个单元单元）。
@@ -6496,6 +6785,7 @@ $^{1}$澳大利亚维多利亚州墨尔本，RMIT理工大学工程学院，$^{2
 图 13.2 水平集常数为 -0.4 和 0.4 的海晶体表面。
 
 随后可以通过对表面边界进行平面拟合来生成基相海晶体，如图 13.3 所示。
+
 网络/固体相和基相 TPMS 的结构相对密度（RD）$\rho_s$ 是根据固体区域体积 $V_{solid}$ 与结构总体积 $V$ 的体积分计算的。
 
 $$\rho_s = \frac{V_{solid}}{V}$$ (13.14)
@@ -6548,20 +6838,17 @@ TPMS 拓扑结构发现于上世纪，但由于传统制造方法的限制，TPM
 
 由于 3DCP 采用无模打印工艺，混凝土质量主要取决于新鲜混凝土的材料性能。这里介绍了三个重要的材料性能，这是获得良好 3D 打印混凝土的关键。第一个性能是泵性，意味着在挤出之前混凝土需要足够的流动性以输送到喷嘴而不发生任何阻塞。第二个性能是挤出性，混凝土需要以连续丝胶的形式被挤出。第三个性能是成型性，意味着挤出的混凝土需要产生强度强度以抵抗上层的自重。通常，混凝土性能与材料性能之间的关系正在研究中 [62]。
 
-
-
-
-
 324 FG 多孔复合结构
 
 ![](img/90ed165a39fa708ec438fcda79319c25_326_0.png)
 
 **图 13.6** 3D 混凝土打印系统的设置示例。
+
 来源：源自 Zhang X, 等人。由移动机器人团队实现的大规模 3D 打印。Autom Con 2018:95–106; doi: https://doi.org/10.1016/j.autcon.2018.08.004。
 
 当利用热塑性聚合物用于模板具打印时，可以实现具有超薄特征的模板具 [60]。模板具打印后，将高流动性的混凝土材料送入模板具中进行浇筑。在某些情况下，在混凝土浇筑之前，会将加筋材料放入打印的模板具中，以增强混凝土的结构耐久性。一旦打印模板具中的混凝土材料硬化，该混凝土结构被认为是数字制造的。在某些情况下，打印的模板具可以从浇筑结构中拆除（破坏）（惰性临时模板），而在其他情况下，模板具不从浇筑结构中取出，而是作为整体混凝土结构的一部分（原位集成模板）。
 
-这里简要介绍了由苏黎世联邦理工学院（ETH Zurich）开发的*蛋壳（Eggshell）方法，以说明基于模板的混凝土制造背后的思想。蛋壳主要包含两个阶段：(1) 使用热塑性材料（如聚乙二对苯二甲酸乙二醇）3D 打印壳，以生成具有复杂几何形状的模板具；(2) 在模板具制造过程中向模板具中填充快速凝固混凝土，以提高结构制造效率（同步工艺），或将完成的塑料壳与按需凝固的混凝土结合浇筑（连续制造工艺）[74]。使用*蛋壳*方法进行同步工艺的一个示例是高 1.8 米的支叉柱，它由三个独立部分组成，详见参考文献 [74]，而“未来之树”（Future Tree）[75] 可以作为蛋壳方法中连续制造工艺的典型示例。关于混凝土结构制造中 3D 打印模板具的应用和研究进展的更多详细讨论，建议读者参考参考文献 [76]。
+这里简要介绍了由苏黎世联邦理工学院（ETH Zurich）开发的*蛋壳（Eggshell）方法*，以说明基于模板的混凝土制造背后的思想。蛋壳主要包含两个阶段：(1) 使用热塑性材料（如聚乙二对苯二甲酸乙二醇）3D 打印壳，以生成具有复杂几何形状的模板具；(2) 在模板具制造过程中向模板具中填充快速凝固混凝土，以提高结构制造效率（同步工艺），或将完成的塑料壳与按需凝固的混凝土结合浇筑（连续制造工艺）[74]。使用*蛋壳*方法进行同步工艺的一个示例是高 1.8 米的支叉柱，它由三个独立部分组成，详见参考文献 [74]，而“未来之树”（Future Tree）[75] 可以作为蛋壳方法中连续制造工艺的典型示例。关于混凝土结构制造中 3D 打印模板具的应用和研究进展的更多详细讨论，建议读者参考参考文献 [76]。
 
 ## 2. 轻质混凝土结构的数字制造
 
@@ -6572,102 +6859,22 @@ TPMS 拓扑结构发现于上世纪，但由于传统制造方法的限制，TPM
 ![](img/90ed165a39fa708ec438fcda79319c25_327_0.png)
 
 **图 13.7** 具有不同空心图案的 3D 打印轻质混凝土梁：(A) 蜂窝、(B) 三角形、(C) 桁架、(D) 点格。
+
 来源：源自 Wang L, Jiang H, Li Z, Ma G。空心截3D 打印轻质混凝土结构的机械行为。Arch Civ Mech Eng 2020;20(1):16. doi:10.1007/s43452-020-00017-1。
 
 具有不同空心图案的打印混凝土梁。每个结构分别通过混凝土喷嘴（直径 12 mm）以 4.5 mm/min 的打印速度和 5 mm 的层厚进行打印。
 
 最近，还有关于通过挤出中空丝材制造轻质 3D 打印混凝土纤维的创新研究。Ramakrishnan 等人 [78] 结合了两种挤出的空心丝材，包括矩形空心和 U 形（图 13.8）。与实心丝材相比，矩形空心和 U 形的密度分别降低了 35% 和 20%。混凝土配合比设计中加入了纳米粘土，这提高了挤出的空心丝材在新鲜状态下悬挑部分的稳定性。因此，喷嘴的创新设计为生产更轻的空心丝材提供了另一种途径。然而，预计未来在利用这种空心混凝土制造集成结构方面还有工作。
 
-生产轻质混凝土结构的另一种可行方法是利用泡沫混凝土代替传统砂作为 3DCP 的供料材料。Cho 等人 [179] 开发了不同密度范围（700、1000 和 1400kg/m³）的 3D 可打印泡沫混凝土。采用硫铝酸钙水泥替代重量上 2% 和 10% 的水泥，并掺入配合比设计中以提高性能。为了达到实际目的，打印了两种类型的模板，包括蜂窝状![](img/90ed165a39fa708ec438fcda79319c25_328_0.png)
+生产轻质混凝土结构的另一种可行方法是利用泡沫混凝土代替传统砂作为 3DCP 的供料材料。Cho 等人 [179] 开发了不同密度范围（700、1000 和 1400kg/m³）的 3D 可打印泡沫混凝土。采用硫铝酸钙水泥替代重量上 2% 和 10% 的水泥，并掺入配合比设计中以提高性能。为了达到实际目的，打印了两种类型的模板，包括蜂窝状
+
+![](img/90ed165a39fa708ec438fcda79319c25_328_0.png)
 
 **图 13.8** 具有不同截面的打印混凝土丝材，左侧为矩形；右侧为 U 形。
+
 来源：源自 Ramakrishnan S, Sananjan S, Pasupathy J。中空丝挤出的3D 打印混凝土。Cem Con 2021;123:10420.
 
-[/content]
 
-/content] 
-
-*(注：由于提供的文本在结尾处截断，我已根据提供的上下文完成了前面的翻译。如果后续有完整文本，请提供。)* 
-
-**抱歉，我注意到您提供的待翻译文本在结尾似乎截断了（在“the”处结束）。以下是基于您提供的完整片段的汇总翻译：**
-
-[由于输入文本不完整，我将为您提供您提供的可见部分的完整翻译。]
-
----
-*(重新审视，我发现您提供的文本在 `[content]` 标签内确实在 `the` 处断了，我将确保翻译涵盖所有可见内容。)*
-
----
-
-**以下是针对您提供的文本片段的完整译文：**
-
-[content]
-324 FG 多孔复合结构
-
-![](img/90ed165a39fa708ec438fcda79319c25_326_0.png)
-
-**图 13.6** 3D 混凝土打印系统的设置示例。
-来源：源自 Zhang X, 等人。由移动机器人团队实现的大规模 3D 打印。Autom Con 2018:95–106; doi: https://doi.org/10.1016/j.autcon.2018.08.004。
-
-当利用热塑性聚合物用于模板具打印时，可以实现具有超薄特征的模板具 [60]。模板具打印后，将高流动性的混凝土材料送入模板具中进行浇筑。在某些情况下，在混凝土浇筑之前，会将加筋材料放入打印的模板具中，以增强混凝土的结构耐久性。一旦打印模板具中的混凝土材料硬化，该混凝土结构被认为是数字制造的。在某些情况下，打印的模板具可以从浇筑结构中拆除（破坏）（惰性临时模板），而在其他情况下，模板具不从浇筑结构中取出，而是作为整体混凝土结构的一部分（原位集成模板）。
-
-这里简要介绍了由苏黎世联邦理工学院（ETH Zurich）开发的*蛋壳（Eggshell）方法*以说明基于模板的混凝土制造背后的思想。蛋壳主要包含两个阶段：(1) 使用热塑性材料（如聚乙二对苯二甲酸乙二醇）3D 打印壳，以生成具有复杂几何形状的模板具；(2) 在模板具制造过程中向模板具中填充快速凝固混凝土，以提高结构制造效率（同步工艺），或将完成的塑料壳与按需凝固的混凝土结合浇筑（连续制造工艺）[74]。使用*蛋壳*方法进行同步工艺的一个示例是高 1.8 米的支叉柱，它由三个独立部分组成，详见参考文献 [74]，而“未来之树”（Future Tree）[75] 可以作为蛋壳方法中连续制造工艺的典型示例。关于混凝土结构制造中 3D 打印模板具的应用和研究进展的更多详细讨论，建议读者参考参考文献 [76]。
-
-## 2. 轻质混凝土结构的数字制造
-
-本小节讨论了不同的数字混凝土制造技术在制造新一代轻质混凝土结构领域的应用，例如多孔结构和其他具有高几何复杂的结构。
-
-对于无模板 3DCP（3D 混凝土打印），研究已证明 3D 打印具有中空结构的轻质混凝土棱体的可行性。Wang 等人 [77] 利用自主开发的打印系统打印了具有不同空心图案的轻质混凝土块（150 × 150 × 150 mm）和梁（100 × 100 × 400 mm），包括蜂窝、三角形、桁架和点格图案。图 13.7 展示了
-
-![](img/90ed165a39fa708ec438fcda79319c25_327_0.png)
-
-**图 13.7** 具有不同空心图案的 3D 打印轻质混凝土梁：(A) 蜂窝、(B) 三角形、(C) 桁架、(D) 点格。
-来源：源自 Wang L, Jiang H, Li Z, Ma G。空心截3D 打印轻质混凝土结构的机械行为。Arch Civ Mech Eng 2020;20(1):16. doi:10.1007/s43452-020-00017-1。
-
-具有不同空心图案的打印混凝土梁。每个结构分别通过混凝土喷嘴（直径 12 mm）以 4.5 mm/min 的打印速度和 5 mm 的层厚进行打印。
-
-最近，还有关于通过挤出中空丝材制造轻质 3D 打印混凝土纤维的创新研究。Ramakrishnan 等人 [78] 结合了两种挤出的空心丝材，包括矩形空心和 U 形（图 13.8）。与实心丝材相比，矩形空心和 U 形的密度分别降低了 35% 和 20%。混凝土配合比设计中加入了纳米粘土，这提高了挤出的空心丝材在新鲜状态下悬挑部分的稳定性。因此，喷嘴的创新设计为生产更轻的空心丝材提供了另一种途径。然而，预计未来在利用这种空心混凝土制造集成结构方面还有工作。
-
-生产轻质混凝土结构的另一种可行方法是利用泡沫混凝土代替传统砂作为 3DCP 的供料材料。Cho 等人 [179] 开发了不同密度范围（700、1000 和 1400kg/m³）的 3D 可打印泡沫混凝土。采用硫铝酸钙水泥替代重量上 2% 和 10% 的水泥，并掺入配合比设计中以提高性能。为了达到实际目的，打印了两种类型的模板，包括蜂窝状![](img/90ed165a39fa708ec438fcda79319c25_328_0.png)
-
-**图 13.8** 具有不同截面的打印混凝土丝材，左侧为矩形；右侧为 U 形。
-来源：源自 Ramakrishnan S, Sananjan S, Pasupathy J。中空丝材挤出的3D 打印混凝土。Cem Con 2021;123:10420.
-
-![](img/90ed165a39fa708ec438fcda79319c25_329_0.png)
-
-**图 13.9** 打印的混凝土结构。
-来源：源自 Cho S, Kruger J, van Rooyen A, van Zij G。混凝土的流变学与应用。Composites B 2021;215:10880。
-
-Lissajous 图。图 13.9 展示了 3D 打印的具有 Lissajous 图形图案的（此处原文截断）
-
-
-
-
-# 功能梯度多孔结构的性能评估
-
-| TPMS-原始单元 | 晶格结构 | TPMS-gyroid |
-|---|---|---|
-
-![](img/90ed165a39fa708ec438fcda79319c25_331_0.png)
-
-砂浆填充
-
-![](img/90ed165a39fa708ec438fcda79319c25_331_1.png)
-
-**图 13.11** 用于制造轻质蜂窝混凝土结构的具有不同单元单元的3DD打印聚乳酸塑料模具。来源：Nguyen-Van V, Tran P, Peng C, Pham L, Zhang G, Nguyen-Xuan H. 用于预制建筑的仿生水泥基结构：混合设计与性能评估。Autom Constr 2020;119, doi: 10.1016/j.autcon.2020.103324。
-
-布局。这方面的一个代表性例子是苏黎世联邦学院开发的 Smart Slab（智能石板），其重量不到传统混凝土板的一半。此处简要描述了其制造过程。首先，使用计算工具设计混凝土板，以便用较少的材料实现几何复杂性和结构完整性。之后，使用 BJ 打印机制造了浇筑混凝土所需的模具。石板被分为 181 个段以便组装，因此总共通过 BJ 方法形成了 181 个模具。然后，将打印好的模具从打印机取出，进行清洗并准备浇筑板段。在完成阶段，将板段从模具中抬起并运输到施工现场进行进一步组装。对 Smart Slab 感兴趣的读者建议参考 [83,84] 获取更多信息。
-
-## 13.4 结果与讨论
-
-### 13.4.1 三周期极小表面复合结构的力学性能
-
-由于制造技术的限制，早期对晶格结构的研究是基于简化的分析方法。Calladine 和 English [85] 描述了两种类型的结构。I 型蜂窝结构在载载下表现出几乎恒定（甚至增加）的强度，而 II 型结构则表现出由蜂窝材料失稳导致的软化，并且对惯性效应更为敏感。根据 Maxwell 准则 [9]，晶格结构的响应类型由节点和支柱的数量决定。为了评估晶格结构 (Ls) 的力学性能，Ashby 和 Gibson 描述了一种分析模型。他们证明，相对密度 $(\rho*/\rho_s)$ 是蜂窝材料中最重要的特征 [86]。虽然单元的形状、尺寸、边缘和面的连接性会影响力学性能，但该模型忽略了这些因素，仅考虑了韧的弯曲。图 13.12 展示了 Ashby-Gibson 模型 (A) 及其在弯曲 (B) 和失稳 (C) 中的变形。
-
-基于这些假设，预测弹性模量与相对密度之间关系的方程给出的：
-
-```
-\varnothing = C\rho^*^n
-```
 
 其中 $\varnothing$ 是感兴趣的属性，$\rho^*$ 是体相材料的密度，$n$ 是密度指数，$C$ 是考虑几何不完善的因子。对于 gyroid 结构，几何因子 $C<1$ 表示打印晶格存在缺陷，而 $C=1$ 是相关属性的理论极限（即无缺陷）。指数值 $n=1$ 表示结构在压缩下表现出拉伸主导行为，而 $n=2$ 表示弯曲主导行为 [87]，其中 $E^*$ 是蜂窝材料的弹性模量，$E_s$ 是固体材料的弹性模量，$\rho^*$ 是蜂窝材料的密度，$\rho_s$ 是固体材料的密度
 
@@ -6675,7 +6882,7 @@ Lissajous 图。图 13.9 展示了 3D 打印的具有 Lissajous 图形图案的�
 
 图 13.12 Ashby-Gibson 模型示意图 [86]。
 
-功能梯度多孔结构的性能评估
+# 功能梯度多孔结构的性能评估
 
 **表 13.1** 标度律拟合的固体/网络相三周期极小表面晶格的力学性能。
 
@@ -6703,10 +6910,6 @@ Lissajous 图。图 13.9 展示了 3D 打印的具有 Lissajous 图形图案的�
 
 图 13.13 使用 (A) 聚合物和 (B) 金属 [3] 材料制造的固体/网络相三周期极小表面晶格的变形机制。
 
-
-
-
-
 功能梯度多孔结构的性能评估
 
 **表 13.2** 通过缩放律拟合实验得到的相三周期周期最小表面点阵材料的力学性能。
@@ -6730,40 +6933,58 @@ Lissajous 图。图 13.9 展示了 3D 打印的具有 Lissajous 图形图案的�
 
 不同相对密度下的弹性模量和压缩强度。可以看出，通常情况下，基相 TPMS 点阵表现出更高的弹性模量。然而，在压缩强度方面，基相和实相/网络相 TPMS 点阵的表现相似。同时，一些研究表明，在低相对密度下，TPMS 的拓扑结构对力学性能的影响相对于材料材料属性更为显著，而在高相对密度下，材料材料属性的影响更为明显 [3,400]。同样值得提到的是
 
-### (A) 低 $ho_s$
-### (B) 高 $ho_s$
+### (A) 低 $
+
+ho_s$
+
+### (B) 高 $
+
+ho_s$
 
 原始型 (Primitive)
 
 ![](img/90ed165a39fa708ec438fcda79319c25_336_0.png)
+
 ![](img/90ed165a39fa708ec438fcda79319c25_336_1.png)
+
 ![](img/90ed165a39fa708ec438fcda79319c25_336_2.png)
+
 ![](img/90ed165a39fa708ec438fcda79319c25_336_3.png)
 
 正型 (Positive)
 
 ![](img/90ed165a39fa708ec438fcda79319c25_336_4.png)
+
 ![](img/90ed165a39fa708ec438fcda79319c25_336_5.png)
+
 ![](img/90ed165a39fa708ec438fcda79319c25_336_6.png)
 
 良好型 (Good)
 
 ![](img/90ed165a39fa708ec438fcda79319c25_336_7.png)
+
 ![](img/90ed165a39fa708ec438fcda79319c25_336_8.png)
+
 ![](img/90ed165a39fa708ec438fcda79319c25_336_9.png)
 
 IWP
 
 ![](img/90ed165a39fa708ec438fcda79319c25_336_10.png)
+
 ![](img/90ed165a39fa708ec438fcda79319c25_336_11.png)
+
 ![](img/90ed165a39fa708ec438fcda79319c25_336_12.png)
+
 ![](img/90ed165a39fa708ec438fcda79319c25_336_13.png)
 
 Neovius 密实型
 
 ![](img/90ed165a39fa708ec438fcda79319c25_336_14.png)
+
 ![](img/90ed165a39fa708ec438fcda79319c25_336_15.png)
+
 ![](img/90ed165a39fa708ec438fcda79319c25_336_16.png)
+
 ![](img/90ed165a39fa708ec438fcda79319c25_336_17.png)
 
 **图 13.5** 使用 (A) 聚合物 [52] 和 (B) 金属材料 [3] 制备的实相/网络三周期最小表面点阵的变形机制。
@@ -6773,10 +6994,6 @@ Neovius 密实型
 ## 13.4.2 多孔水泥和混凝土材料的力学性能
 
 与实相/网络相 TPMS 点阵类似，单元单元拓扑结构和基础属性共同导致了基相 TPMS 点阵的变形机制。Abueida 等人 [52] 研究了基相 TPMS 点阵在压缩作用下的变形机制。在聚合物和 Neovius 点阵中观察到层坍塌，而 IWP 点阵在垂直层上发生均匀变形。同时，发现基相 TPMS 点阵在低、高相对密度下的变形是相同的。Al-Ketan 等人 [88] 报道了马渗钢基相螺旋面型点阵中形成了剪切带。他们研究了其他相 TPMS 点阵，发现其对失效机制的影响有限，而在其他 TPMS 拓扑结构中观察到了剪切带（图 13.5B）。Zhang 等人 [40] 也发现，由不锈钢制成的基相 TPMS 点阵的变形机制取决于其拓扑结构，而点阵的相对密度贡献非常有限。
-
-
-
-
 
 模板具对提高抗压强度可能有限。这一结果表明，在实际应用中，3D 打印塑料模具根据材料类型和厚度，可以作为额外的牺牲层，由于约束效应增强轻质孔隙混凝土结构。
 
@@ -6819,6 +7036,7 @@ Neovius 密实型
 ![](img/90ed165a39fa708ec438fcda79319c25_340_0.png)
 
 **图 13.17** 通过挤出式 DCP 制造混凝土自行车桥的一个段。
+
 Source 来源：自 Menma C, et al. Opportunities and challenges for structural engineering of digitally fabricated concrete. Cem Conc Res 2020;133:106079. https://doi.org/10.1016/j.cemconres.2020.106079.
 
 对打印的功能梯度孔隙结构进行性能评估，所有六个混凝土段被运输到施工现场进行现场桥梁组装。在组装过程中，通过跨越每个结构空区域的后张力杆沿主跨度方向实施了预应力作用。关于加特自行车桥项目的更多细节请见 [112,113]。第二个示例是经过几何优化的大型混凝土板，它是利用 3D 打印泡沫框架浇造的 (114)。在概念设计的初始阶段，对板的材料布局进行了设计和优化，以在保持足够质量的同时减少材料使用。随后，通过挤出式 3D 打印臂制造了具有复杂几何的轻质框架。完成后，在浇造高性能纤维增强混凝土之前，将所有泡沫手动放置在木框架的特定位置。最后，固化完成后，木框架和优化的混凝土板完成。根据功能，泡沫框架可以是现场或从浇筑混凝土中取出以供未来项目回收和重复利用。
@@ -6830,8 +7048,6 @@ Source 来源：自 Menma C, et al. Opportunities and challenges for structural 
 - 详细描述了 FPGSs 的设计，其中 TPMS 拓扑到具有功能相关密度的晶格结构清晰可见。
 - 研究了复合材料和混凝土材料这些 FPGSs 的制造方法。在此，批判性地审查了复合材料的增材制造和轻质混凝土结构的数字制造。
 - 对于结果和讨论，报告了基于 TPMS 复合和基于混凝土的结构在不同类型载荷下的机械性能。此外，提出了此类 FPGSs 的潜在应用。通过利用增材技术的优势，这些复杂的设计变得比以往任何时候都更加容易。
-
-
 
 
 
@@ -6861,13 +7077,13 @@ Source 来源：自 Menma C, et al. Opportunities and challenges for structural 
 
 [12] Bao-Li D, Nguyen T, Tran Wah M, Lee J, Hackl et al. 基于初级最小表面的新型多孔陀螺梁的力学和流体动力特性。Ocean Eng 2022;254:111392. 来源于：https://doi.org/10.1016/j.oceaneng.2022.111392.
 
-[13] Lee D-W, Khan A, Au-RB RK.  Schwarz初级三元组最小表面建筑泡沫的刚度和强度。Int J Plast 2017;95:71–82. 来源于：https://doi.org/10.1016/j.plas.2017.03.005.
+[13] Lee D-W, Khan A, Au-RB RK. Schwarz初级三元组最小表面建筑泡沫的刚度和强度。Int J Plast 2017;95:71–82. 来源于：https://doi.org/10.1016/j.plas.2017.03.005.
 
 [14] Tran F, Tran C. 遭受冲击影响的三元组最小表面三明治结构。J Sand Struct Mater 2020;23(6):2146–75. 来源于：https://doi.org/10.1177/10993622905551
 
 [15] Peng C, Tran P. 遭受脉冲载荷的生物打印功能梯度陀螺夹板。Compos B Eng 2020;188:10788. 来源于：https://doi.org/10.1016/j.composb.2020.107773.
 
-功能梯度多孔结构的性能评估
+### 功能梯度多孔结构的性能评估
 
 [16] Nguyen-Van V, Chenxi P, Hazell P, Lee J, Nguyen-Xuan H, Tran P. 遭受爆炸载荷的拟态混凝土板的性能：数值研究。Struct Concr 2023; 来源于：https://doi.org/10.1016/j.uaco.2022.100749.
 
@@ -6929,65 +7145,77 @@ Source 来源：自 Menma C, et al. Opportunities and challenges for structural 
 
 [45] Yan C, Hao L, Hussein A, Young P. 通过选择性激光熔化制备用于骨植入的Ti–6AlV三周期最小表面。J Mech Behav Biomed Mater 2015;51:61–75.
 
+### 功能梯度多孔结构的性能评估
+
+- [49] Kadkhodapour J, Montazarian H, Darabi C, Zargarian A, Schmauder S. 增材制造孔生物材料变形机制与机械性能之间的关系。J Mech Behav Behavond Mater 2017;70:28–42.
+
+- [50] Abuewida DW, Elbari M, Shi C-S, Pang S, Abu-Rub RK, Jasiuk M. 3D打印聚合物单元结构的机械性能：实验与有限元研究。Des Mater 2019;165:107597. 可自: https://doi.org/10.1016/j.desmater.2019.107597.
+
+- [51] Al-Kene O, Soliman A, Aqubais AM, Abu Al-Rub RK. 自然启发的具有架构化周期支架的轻量化单元连续复合材料。Adv Eng Mater 2018;2:1700549. 可自: https://doi.org/10.1002/adv.2017005449
+
+- [52] Abuewida DW, Baker M, Abu-Rub RKA, Bergström J, Sobh N, Jasiuk M. 具有三重最小表面支架3D打印聚合物材料的机械性能。Biofabrication 2018;8(2):022001.
+
+- [53] Amin R, Fu C, Wang Y. 多孔材料的最小表面设计：从微观结构到机械尺度。J Mater Sci 2018;53(14):10194–108.
+
+- [54] Zheng X, Fu Z, Wang C, Yi Y. 三重打印最小表面架构中的表面曲率作为制先进组织工程支架的设计参数。Biofabrication 2017;9(2):022001.
+
+- [55] Walker JM, Mohamed E, Kleinhofen A, Luo Y, Becker M, Dean D. 固体和高多孔3D打印聚丙烯泡沫材料的设计与表征。Add Mater 2017;3:170036.
+
+- [56] Sychov M, Lebedev I, Dychenko S, Nefedova L. 三重打印最小表面拓扑能量吸收结构的机械性能。Acta Structur 2018;150:81–94.
+
+- [57] Restrepo O, Oscar S, Ramirez J, Paucar C, García C. 基于3D打印的三重最小表面拓扑（TPMS）陶瓷结构的机械性能。J Phys 2017;195(1):012016.
+
+- [58] Abuewida DW, Al-Rub RKA, Dalqa AJ, Younes HA, Al Gheri AA. 碳纳米纤维增强的3D打印架构化互渗透相复合材料的电导率。Compos Sci 2015;518:127–34.
+
+- [59] Liter-Pitsch F, et al. 3D打印创建了一种新型数字铸造系统。Cem Con Res 2020;183:106071. 可自: https://doi.org/10.1016/j.conconc.2020.106071.
+
+- [60] Zhang X, et al. 移动机器人团队的大规模3D打印。Autom Construct 2019;207:477–90. 可自: https://doi.org/10.1016/j.conbuild.2019.02.144.
+
+- [61] Li B, et al. 3D打印胶胶材料的系统性综述。Construct Build Mater 2019;207:477–90. 可自: https://doi.org/10.1016/j.conbuild.2019.02.144.
+
+- [62] Bhattacharjeee S, et al. 3D混凝土打印的结构材料。Cem Concer Res 2021;222:104156. 可自: https://doi.org/10.1016/j.conconc.2021.104156.
+
+- [63] Panda B, Sun Y, Chen C. 使用纳米粘土添加剂的高胶粉灰混合物的3D可打印性。Compos B Eng 2019;165:75–83. 可自: https://doi.org/10.1016/j.compositesb.2018.11.109.
+
+- [64] Panda B, Tan MJ. 含有硅胶的高胶粉灰混合物用于数字施工的流变行为。Mater Lett 2019;237:348–51. 可自: https://doi.org/10.1016/j.matlet.2019.11.131.
 
 
 
-功能梯度多孔结构的性能评估
+- [65] Liu J, Li S, Gunasekara C, Fox K. 再生玻璃的3D打印混凝土：玻璃级配对抗弯强度和微观结构的影响。Build Mater 2022:314:125561. 可自: https://doi.org/10.1016/j.conbuild.2021.125561.
+- [67] Ting GHA, Tay YWD, Tan MJ. 再生玻璃作为3D打印骨料的影响的实验测量。J Clean Prod 2021;300:12691. 可自: https://doi.org/10.1016/j.jclepro.2021.12691.
+- [68] Liu J, Set S, Tran P. 粘泥涂层再生橡胶的3D打印：机械和结构性能。Build Master 2022;324:12750.
+- [69] Panda B, Singh GV, Ulancar C, Tan MJ. 单组分地聚合物混凝土的合成与表征。J Clean Prod 2019;220:610–9. 可自: https://doi.org/10.1016/j.jclepro.2019.02.185.
+- [70] Panda B, Ulancar C, Tan MJ. 3D打印中地聚合物复合材料的挤出和流变性。Comp B 2019;176:10729. 可自: https://doi.org/10.1016/j.compb.2019.10729.
+- [71] Panda B, Ulancar C, Tan MJ. 水泥基地聚合物混合物的流变性和强度研究。Cem Comp 2018;94:307–14. 可自: https://doi.org/10.1016/j.cemcon.2018.002.
+- [72] Chen Y, Rodriguez C, Li Z, Chen B, Çapurğlu, Schlangen E. 细级粘土对3D打印三元基粘灰石材料新鲜和硬化性能的影响。Cem Comp 2020;114:10370. 可自: https://doi.org/10.1016/j.concomp.2020.10370.
+- [73] Chen Y, He S, Zhang Y, Wan Z, Çapurğlu O, Schlangen E. 粘土石岩胶结材料的3D打印。Cem Res 2021;10654. 可自: https://doi.org/10.1016/j.con.2021.10654.
+- [74] Burger J, et al. 混凝土结构的超薄三维打印框架。3D Print Addit 2019;5:723–50. 可自: https://doi.org/10.1089/3dp.2019.09.017.
+- [75] Koller G, Geser R. 未来。ETH Zurich。https://gramazio-koller.ethz.ch/web/project380.html (访问于2022)。
+- [76] Ipa A, Dollenberg B. 混凝土的3D打印成型：现状、机遇与应用。3D Print Addit Man 2021;58:101. 可自: https://doi.org/10.1016/j.3dp.2021.10924.
+- [77] Wang J, Liang H, Li Z. 空心芯3D打印混凝土结构的机械行为。Arch Mech Eng 2020;20(1):16. 可自: https://doi.org/10.1007/s42342-020-0001-7.
+- [78] Ramakrishnan, Srikrishnan S, Jayasan J, Parikutthy K. 使用空心挤出的轻量化元件3D打印。Cem Mater 2021;123:10420. 可自: https://doi.org/10.1016/j.cemcon.2021.10420.
+- [79] Yene O, Rezgui R, Row SL, Young D. 直接激光烧结制造的轻量化AlSi10Mg周期性结构评估。J Mater Process 2013;24(4):0514.
+- [80] Atace A, Li Y, Brand MC. 用于骨植入应用的选择性激光熔化（SLM）制造的仿生设计高强度钛支架。Acta Mater 2018;158:354–68.
+- [91] Wang B, et al. 用于负重骨的定制Ti64V多孔支架的3D打印。Mater Des 2015;182:21–30.
+- [92] Zhao X, Li F, Fu G, Zhang Z, Zhang H. SLM制造的BCC晶格结构的改进机械性能和能量吸收。Materials 2018;11(2):2411.
+- [93] Nguyen-Huan H, Tran QC, Qi HC, Lee J. 功能梯度三重最小表面（FGTPMS）建模。Compos Struct 2023,375:11681. 可自: https://doi.org/10.1016/j.construct.2023.11681.
 
--   [49] Kadkhodapour J, Montazarian H, Darabi C, Zargarian A, Schmauder S. 增材制造孔生物材料变形机制与机械性能之间的关系。J Mech Behav Behavond Mater 2017;70:28–42.
--   [50] Abuewida DW, Elbari M, Shi C-S, Pang S, Abu-Rub RK, Jasiuk M. 3D打印聚合物单元结构的机械性能：实验与有限元研究。Des Mater 2019;165:107597. 可自: https://doi.org/10.1016/j.desmater.2019.107597.
--   [51] Al-Kene O, Soliman A, Aqubais AM, Abu Al-Rub RK. 自然启发的具有架构化周期支架的轻量化单元连续复合材料。Adv Eng Mater 2018;2:1700549. 可自: https://doi.org/10.1002/adv.2017005449
--   [52] Abuewida DW, Baker M, Abu-Rub RKA, Bergström J, Sobh N, Jasiuk M. 具有三重最小表面支架3D打印聚合物材料的机械性能。Biofabrication 2018;8(2):022001.
--   [53] Amin R, Fu C, Wang Y. 多孔材料的最小表面设计：从微观结构到机械尺度。J Mater Sci 2018;53(14):10194–108.
--   [54] Zheng X, Fu Z, Wang C, Yi Y. 三重打印最小表面架构中的表面曲率作为制先进组织工程支架的设计参数。Biofabrication 2017;9(2):022001.
--   [55] Walker JM, Mohamed E, Kleinhofen A, Luo Y, Becker M, Dean D. 固体和高多孔3D打印聚丙烯泡沫材料的设计与表征。Add Mater 2017;3:170036.
--   [56] Sychov M, Lebedev I, Dychenko S, Nefedova L. 三重打印最小表面拓扑能量吸收结构的机械性能。Acta Structur 2018;150:81–94.
--   [57] Restrepo O, Oscar S, Ramirez J, Paucar C, García C. 基于3D打印的三重最小表面拓扑（TPMS）陶瓷结构的机械性能。J Phys 2017;195(1):012016.
--   [58]] Abuewida DW, Al-Rub RKA, Dalqa AJ, Younes HA, Al Gheri AA. 碳纳米纤维增强的3D打印架构化互渗透相复合材料的电导率。Compos Sci 2015;518:127–34.
--   [59] Liter-Pitsch F, et al. 3D打印创建了一种新型数字铸造系统。Cem Con Res 2020;183:106071. 可自: https://doi.org/10.1016/j.conconc.2020.106071.
--   [60] Zhang X, et al. 移动机器人团队的大规模3D打印。Autom Construct 2019;207:477–90. 可自: https://doi.org/10.1016/j.conbuild.2019.02.144.
--   [61] Li B, et al. 3D打印胶胶材料的系统性综述。Construct Build Mater 2019;207:477–90. 可自: https://doi.org/10.1016/j.conbuild.2019.02.144.
--   [62] Bhattacharjeee S, et al. 3D混凝土打印的结构材料。Cem Concer Res 2021;222:104156. 可自: https://doi.org/10.1016/j.conconc.2021.104156.
--   [63] Panda B, Sun Y, Chen C. 使用纳米粘土添加剂的高胶粉灰混合物的3D可打印性。Compos B Eng 2019;165:75–83. 可自: https://doi.org/10.1016/j.compositesb.2018.11.109.
--   [64] Panda B, Tan MJ. 含有硅胶的高胶粉灰混合物用于数字施工的流变行为。Mater Lett 2019;237:348–51. 可自: https://doi.org/10.1016/j.matlet.2019.11.131.
--   [65] Liu J, Li S, Gunasekara C, Fox K. 再生玻璃的3D打印混凝土：玻璃级配对抗弯强度和微观结构的影响。Build Mater 2022:314:125561. 可自: https://doi.org/10.1016/j.conbuild.2021.125561.
--   [67] Ting GHA, Tay YWD, Tan MJ. 再生玻璃作为3D打印骨料的影响的实验测量。J Clean Prod 2021;300:12691. 可自: https://doi.org/10.1016/j.jclepro.2021.12691.
--   [68] Liu J, Set S, Tran P. 粘泥涂层再生橡胶的3D打印：机械和结构性能。Build Master 2022;324:12750.
--   [69] Panda B, Singh GV, Ulancar C, Tan MJ. 单组分地聚合物混凝土的合成与表征。J Clean Prod 2019;220:610–9. 可自: https://doi.org/10.1016/j.jclepro.2019.02.185.
--   [70] Panda B, Ulancar C, Tan MJ. 3D打印中地聚合物复合材料的挤出和流变性。Comp B 2019;176:10729. 可自: https://doi.org/10.1016/j.compb.2019.10729.
--   [71] Panda B, Ulancar C, Tan MJ. 水泥基地聚合物混合物的流变性和强度研究。Cem Comp 2018;94:307–14. 可自: https://doi.org/10.1016/j.cemcon.2018.002.
--   [72] Chen Y, Rodriguez C, Li Z, Chen B, Çapurğlu, Schlangen E. 细级粘土对3D打印三元基粘灰石材料新鲜和硬化性能的影响。Cem Comp 2020;114:10370. 可自: https://doi.org/10.1016/j.concomp.2020.10370.
--   [73] Chen Y, He S, Zhang Y, Wan Z, Çapurğlu O, Schlangen E. 粘土石岩胶结材料的3D打印。Cem Res 2021;10654. 可自: https://doi.org/10.1016/j.con.2021.10654.
--   [74] Burger J, et al. 混凝土结构的超薄三维打印框架。3D Print Addit 2019;5:723–50. 可自: https://doi.org/10.1089/3dp.2019.09.017.
--   [75] Koller G, Geser R. 未来。ETH Zurich。https://gramazio-koller.ethz.ch/web/project380.html (访问于2022)。
--   [76] Ipa A, Dollenberg B. 混凝土的3D打印成型：现状、机遇与应用。3D Print Addit Man 2021;58:101. 可自: https://doi.org/10.1016/j.3dp.2021.10924.
--   [77] Wang J, Liang H, Li Z. 空心芯3D打印混凝土结构的机械行为。Arch Mech Eng 2020;20(1):16. 可自: https://doi.org/10.1007/s42342-020-0001-7.
--   [78] Ramakrishnan, Srikrishnan S, Jayasan J, Parikutthy K. 使用空心挤出的轻量化元件3D打印。Cem Mater 2021;123:10420. 可自: https://doi.org/10.1016/j.cemcon.2021.10420.
--   [79] Yene O, Rezgui R, Row SL, Young D. 直接激光烧结制造的轻量化AlSi10Mg周期性结构评估。J Mater Process 2013;24(4):0514.
--   [80] Atace A, Li Y, Brand MC. 用于骨植入应用的选择性激光熔化（SLM）制造的仿生设计高强度钛支架。Acta Mater 2018;158:354–68.
--   [91] Wang B, et al. 用于负重骨的定制Ti64V多孔支架的3D打印。Mater Des 2015;182:21–30.
--   [92] Zhao X, Li F, Fu G, Zhang Z, Zhang H. SLM制造的BCC晶格结构的改进机械性能和能量吸收。Materials 2018;11(2):2411.
--   [93] Nguyen-Huan H, Tran QC, Qi HC, Lee J. 功能梯度三重最小表面（FGTPMS）建模。Compos Struct 2023,375:11681. 可自: https://doi.org/10.1016/j.construct.2023.11681.
+## 功能梯度结构的评估
 
-功能梯度结构的评估
-
--   [83] Ipa M, Çapurğlu, et al. 3D打印板材的机械性能。第一届3D打印国际会议（3DP），澳大利亚墨尔本，11月26–28日。
--   [84] Peng C, Tran P, Nguyen H, Ferreira AJM. 智能板材：计算设计与数字制造。第三十八届计算机辅助建筑会议（ACIA）2018，墨西哥墨西哥城，10月18–20日。
--   [85] Calladine C, English R. 最小表面晶格材料的应变率和疲劳寿命。Mater Des 2018;31:1058.
--   [86] Madsen L, Tran P, Nguyen H, Lee J. BCC周期晶格结构的机械性能和能量吸收。Comp Struct 2023:111:1076.
--   [87] Avestela DU, Abu-Rub RK, Rowshan R, Khan K, Jasnik I. 具有最小表面的架构化轻量化材料。Adv Mater 2018;30:1729.
--   [88] Yan C, Ha L, Xiao P, Young D. 趋势拓扑新型泡沫的弹性。Mech Mater 2016;595:102.
--   [89] Yene O, Rezgui R, Row SL, Young D. 直接激光烧结制造的轻量化AlSi10Mg周期性结构评估。J Mater Process 2013;24(4):0514.
--   [80] Vantyhem G, De Corte W, Steeman M, Boel V. 3D可打印结构的拓扑优化。Struct Multidiscip Optin 2019;60(6):2391–403.
--   [81] Vantyhem G, Boel V, De Corte W, Steeman M. 3D打印混凝土结构的合规性、基于应力的多物理场拓扑优化。In: Wagner T, Flat RJ, editors. 混凝土与数字制造会议——混凝土2018。Cham: Springer International Publishing:2019, p. 323–332.
--   [82] Vantyhem G, De Corte W, Shakour E, Amir O. 功能梯度结构的3D打印。Autom Construct 2020;112:10384. 可自: https://doi.org/10.1016/j.conbuild.2020.10384.
-
-
-
+- [83] Ipa M, Çapurğlu, et al. 3D打印板材的机械性能。第一届3D打印国际会议（3DP），澳大利亚墨尔本，11月26–28日。
+- [84] Peng C, Tran P, Nguyen H, Ferreira AJM. 智能板材：计算设计与数字制造。第三十八届计算机辅助建筑会议（ACIA）2018，墨西哥墨西哥城，10月18–20日。
+- [85] Calladine C, English R. 最小表面晶格材料的应变率和疲劳寿命。Mater Des 2018;31:1058.
+- [86] Madsen L, Tran P, Nguyen H, Lee J. BCC周期晶格结构的机械性能和能量吸收。Comp Struct 2023:111:1076.
+- [87] Avestela DU, Abu-Rub RK, Rowshan R, Khan K, Jasnik I. 具有最小表面的架构化轻量化材料。Adv Mater 2018;30:1729.
+- [88] Yan C, Ha L, Xiao P, Young D. 趋势拓扑新型泡沫的弹性。Mech Mater 2016;595:102.
+- [89] Yene O, Rezgui R, Row SL, Young D. 直接激光烧结制造的轻量化AlSi10Mg周期性结构评估。J Mater Process 2013;24(4):0514.
+- [80] Vantyhem G, De Corte W, Steeman M, Boel V. 3D可打印结构的拓扑优化。Struct Multidiscip Optin 2019;60(6):2391–403.
+- [81] Vantyhem G, Boel V, De Corte W, Steeman M. 3D打印混凝土结构的合规性、基于应力的多物理场拓扑优化。In: Wagner T, Flat RJ, editors. 混凝土与数字制造会议——混凝土2018。Cham: Springer International Publishing:2019, p. 323–332.
+- [82] Vantyhem G, De Corte W, Shakour E, Amir O. 功能梯度结构的3D打印。Autom Construct 2020;112:10384. 可自: https://doi.org/10.1016/j.conbuild.2020.10384.
 
 346
 
-梯度（FG）多隙复合结构
+## 梯度（FG）多隙复合结构
 
 - [99] Nguyen BD, Cho JS, Kang K. "Shellar" 一超低密度微结构材料的最优设计。Mater Des 2016;19:495–500.
 - [100] Bobbert F, 等. 小型购物商场表面的增材制造金属多隙生物材料：拓扑、力学传输特性的独特结合。Acta Materia 2017;53:572–84.
@@ -7009,18 +7237,22 @@ Source 来源：自 Menma C, et al. Opportunities and challenges for structural 
 ## 增材制造梯度结构的设计与制造
 
 段宇$^{1,2,3}$, 史晓鹏$^{1,2}$, 赵仙$^{1,2}$, 侯兵$^{1,2}$, 李玉龙$^{1,2}$
+
 $^{1}$西北理工大学航空学院，中国陕西西安
+
 $^{2}$西北理工大学冲击动力学联合国际实验室，中国陕西西安
+
 $^{3}$浙江大学力学中心，中国浙江杭州
+
 $^{4}$中国民航大学安全与工程学院，中国天津
 
-## 14.1 引言
+### 14.1 引言
 
 车辆不可避免地受到不可预测的冲击载荷，例如航空航天中的碎片 [1]、飞机上的 [2] 以及车辆上的 [3]。尽管已经做了大量工作，由冲击载荷引起的事故仍在发生，这些事故可以通过抗冲击和吸能结构来解决。这种结构可以有效补偿运输载荷并显著提高乘客的生存率。吸能材料在此起着关键作用。
 
 它们最近因其特定的比强度、高刚度和高能量吸收亲和力而流行，并被广泛应用于航空航天、运输等领域。
 
-“胞隙材料”（cellular material）和“多隙材料”（porous material）这两个词在学术论文中均在使用。这两种材料都具有大量孔洞的特征 [5]。通常，材料失效会引起应力集中，导致裂纹扩展和破坏。然而，当孔隙比例达到一定水平时，总孔体积与总材料体积之比定义为孔隙率 $\phi$。为了更好地表示相对密度，定义为 $\bar{\rho} = 1 - \phi$，表示带孔材料的密度与其基体材料（相应的致密材料）密度的比例。多隙材料对应 $\bar{\rho} < 0.7$，而致密材料对应 $\rho > 0.3$。如 [14] 所示，不同的孔隙率对应不同的应用。在实践中涉及广泛的孔隙率，很难在所有情况下涵盖精确的孔隙率标准。因此在后续章节中，本章不区分多隙材料和胞隙材料。相反，遵循 Gibson 和 Ashby 的经典工作 [8]，两者统称为胞隙固体（cellular solids），指具有大量孔洞的材料。
+“胞隙材料”（cellular material）和“多隙材料”（porous material）这两个词在学术论文中均在使用。这两种材料都具有大量孔洞的特征 [5]。通常，材料失效会引起应力集中，导致裂纹扩展和破坏。然而，当孔隙比例达到一定水平时，总孔体积与总材料体积之比定义为孔隙率 `φ`。为了更好地表示相对密度，定义为 `$\bar{\rho} = 1 - \phi$`，表示带孔材料的密度与其基体材料（相应的致密材料）密度的比例。多隙材料对应 `$\bar{\rho} < 0.7$`，而致密材料对应 `$\rho > 0.3$`。如 [14] 所示，不同的孔隙率对应不同的应用。在实践中涉及广泛的孔隙率，很难在所有情况下涵盖精确的孔隙率标准。因此在后续章节中，本章不区分多隙材料和胞隙材料。相反，遵循 Gibson 和 Ashby 的经典工作 [8]，两者统称为胞隙固体（cellular solids），指具有大量孔洞的材料。
 
 如图14.2 所示，胞隙固体可分为无序泡沫和有序点格结构。材料可以分为开孔泡沫和闭孔泡沫。开孔泡沫通过边缘连接，边缘之间没有细胞填充物 [12]。闭孔泡沫是指孔洞被细胞壁隔的胞隙固体 [13]。点格结构是一种由一个或多个结构单元组成的结构材料。根据其宏观尺寸，可以分为一维（1D）晶格（如建筑 [14]）、二维（2D）晶格（如蜂窝建筑 [15]）和三维（3D）晶格（如八角桁架建筑 [16]）。
 
@@ -7031,11 +7263,8 @@ $^{4}$中国民航大学安全与工程学院，中国天津
 ![](img/90ed165a39fa708ec43fcfc79319c25_350_0.png)
 
 **图 14.1** 胞隙结构的应用 [9,10]。
+
 来源：经许可转载自 Bahart J. 胞隙材料和金属泡沫的制造与表征。Prog Mater Sci 2001;46:559–632; Nazir A, Abate KM, Kumar A, Jeng-J.Y. 胞隙结构类型、设计、优化和增材制造的最新综述。Int J Adv Man Technol 2019;104:3489–510. 版权 2001, Elsevier.
-
-
-
-
 
 增材制造功能梯度多孔结构的设计与制造 349
 
@@ -7061,6 +7290,8 @@ $^{4}$中国民航大学安全与工程学院，中国天津
 
 通过在泡沫层中引入不同的物理参数引入了 FG 多孔复合结构 350 [22–26]。[21] 研究了梯度函数、密度差、平均密度和冲击能量对梯度泡沫吸能的影响。Liu 等人 [23] 发现，梯度泡沫在低速冲击下会在其最薄弱区域变形，而其在高速冲击下的压碎响应则由梯度函数和冲击波效应共同决定。另一方面，一些研究人员 [27,28] 采用了 Voronoi 模型来实现连续梯度。Liang 等人 [27] 指出，当连续梯度泡沫处于爆炸载荷时，无法同时实现高吸能和低传递冲量的设计目标。除了仿真，IDD 冲击理论 [29] 已被研究梯度泡沫在高速冲击下的冲击波传播和抗冲击性 [30–35]。Shen 等人 [30] 发现正梯度泡沫中观察到单冲击模式，而负梯度泡沫中存在双冲击模式。Yang 等人 [33] 和 Ding 等人 [34] 关注梯度泡沫的碰撞性。然而，这些数值和理论研究中得出的某些结论尚未通过实验验证。
 
+
+
 在实验研究方面，关于中空球聚集体等梯度细胞固体压缩行为的研究非常有限 [37]。此外，这些工作主要局限于具有离散梯度的梯度泡沫（图 14.3）。在 Zeng 的工作 [36] 中，建议最强和最弱层为第一层和最后一层，以增强梯度泡沫的吸能能力。Hangai 等人 [37] 对两种不同基材的双层泡沫进行了落落冲击试验。然而，据作者所知，由于制造困难，关于预设梯度的连续梯度泡沫实验的研究仍然匮如。
 
 如图 14.4 所示，在传统制造过程中，无法预设梯度函数。因此，无法生产具有连续且预设梯度的梯度细胞固体。即使是均匀细胞
@@ -7079,7 +7310,7 @@ $^{4}$中国民航大学安全与工程学院，中国天津
 
 ### 14.2.1 粉末熔
 
-粉床熔 (PBF) 使用激光束熔化粉末。PBF 有两种典型技术：选择性激光烧结 (SLS) 和选择性激光熔化 (SLM)。如图 14.5 所示，系统由粉末床、粉末供应器、辊、激光源和扫描仪组成。能量源用于熔化当前层。之后，辊覆盖下一层粉末。重复整个过程直到制造出 3D 模型。SLS 是 SLS 的变体，可确保更高的密度。SLS 应用于包括聚合物和金属在内的广泛材料。然而，SLM 只能用于金属，如铝和钢。PBF 更广泛的材料将在 14.3 节中讨论。
+粉床熔 `PBF` 使用激光束熔化粉末。`PBF` 有两种典型技术：选择性激光烧结 `SLS` 和选择性激光熔化 `SLM`。如图 14.5 所示，系统由粉末床、粉末供应器、辊、激光源和扫描仪组成。能量源用于熔化当前层。之后，辊覆盖下一层粉末。重复整个过程直到制造出 3D 模型。`SLS` 是 `SLS` 的变体，可确保更高的密度。`SLS` 应用于包括聚合物和金属在内的广泛材料。然而，`SLM` 只能用于金属，如铝和钢。`PBF` 更广泛的材料将在 14.3 节中讨论。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_354_0.png)
 
@@ -7087,21 +7318,17 @@ $^{4}$中国民航大学安全与工程学院，中国天津
 
 ### 14.2.2 材料挤出
 
-材料挤出首先从喷嘴挤出基材料并形成制件。熔融丝材制造 (FFF) 是材料挤出中最常用的制造技术。如图 14.6 所示，系统由丝材、驱动轮、挤出喷嘴、打印平台和制造平台组成。通过基于材料线轴驱动丝材，丝材首先通过驱动轮。然后被加热成熔融流体并通过挤出喷嘴挤出。此外，扩展喷嘴在 2D 空间移动以完成当前层的制造。之后，制造平台继续向下移动到层，扩展喷嘴继续制造该层的结构。重复整个过程直到制件完成。FFF 具有许多优点，包括材料利用率高、工艺简单、成本低以及包括热塑性塑料和低熔点金属在内的广泛材料。然而，由于表面粗糙度和制造精度差等缺点，FFF 主要用于概念模型或原型模型的验证。
+材料挤出首先从喷嘴挤出基材料并形成制件。熔融丝材制造 `FFF` 是材料挤出中最常用的制造技术。如图 14.6 所示，系统由丝材、驱动轮、挤出喷嘴、打印平台和制造平台组成。通过基于材料线轴驱动丝材，丝材首先通过驱动轮。然后被加热成熔融流体并通过挤出喷嘴挤出。此外，扩展喷嘴在 2D 空间移动以完成当前层的制造。之后，制造平台继续向下移动到层，扩展喷嘴继续制造该层的结构。重复整个过程直到制件完成。`FFF` 具有许多优点，包括材料利用率高、工艺简单、成本低以及包括热塑性塑料和低熔点金属在内的广泛材料。然而，由于表面粗糙度和制造精度差等缺点，`FFF` 主要用于概念模型或原型模型的验证。
 
-直接油墨打印 (DIW) 是材料挤出的另一种技术。从图 14.7 所示，液体、膏体和水胶等材料位于注射器中。注射器通过气压或步进电机加压。挤出的材料经加热或紫外线诱导，发生固化反应。注射器可以在 3D 空间移动以制造 3D 模型。DIW 快速、高效且灵活，允许设计和制造复杂结构。该技术用于陶瓷材料的增材制造。
+直接油墨打印 `DIW` 是材料挤出的另一种技术。从图 14.7 所示，液体、膏体和水胶等材料位于注射器中。注射器通过气压或步进电机加压。挤出的材料经加热或紫外线诱导，发生固化反应。注射器可以在 3D 空间移动以制造 3D 模型。`DIW` 快速、高效且灵活，允许设计和制造复杂结构。该技术用于陶瓷材料的增材制造。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_355_0.png)
 
 **图 14.6** 典型的熔融丝材制造装置示意图。来源：经 Wang X, Jiang M, Zhou Z, Gou J, Hui D 许可转载。聚合物基复合材料的 3D 打印：综述与展望。Compos Part B Eng 2017;110:42–58。
 
+### 14.2.3 槽内光聚化
 
-
-
-
-## 14.2.3 槽内光聚化
-
-槽内光聚化通常针对光敏树脂基材料。在紫外光下，树脂迅速聚合以完成制造-光聚化。光固成型（SLA）是槽内光聚化中最具代表性的技术。如图14.8所示，该系统由液体光聚合物、制造平台、激光源和扫描系统组成。其制造过程与图14.5所示的SLS相似。区别在于粉末基材料被液体树脂基取代。SLA的一个大优点是它可以产生高分辨率（亚微米级）材料。然而，SLA存在两个缺点：基材料强度较低，且残留的光引发剂和未固树脂具有细胞毒性。
+槽内光聚化通常针对光敏树脂基材料。在紫外光下，树脂迅速聚合以完成制造-光聚化。光固成型 `SLA` 是槽内光聚化中最具代表性的技术。如图14.8所示，该系统由液体光聚合物、制造平台、激光源和扫描系统组成。其制造过程与图14.5所示的`SLS`相似。区别在于粉末基材料被液体树脂基取代。`SLA`的一个大优点是它可以产生高分辨率（亚微米级）材料。然而，`SLA`存在两个缺点：基材料强度较低，且残留的光引发剂和未固树脂具有细胞毒性。
 
 ## 14.3 增材制造细胞固体
 
@@ -7114,7 +7341,8 @@ $^{4}$中国民航大学安全与工程学院，中国天津
 ![](img/90ed165a39fa708ec438fcda79319c25_357_0.png)
 
 **图 14.8** 典型光固成型装置的示意图。
-来源：经许可自 Wang X, Jiang M, Zhou Z, Gou J, Hui D. 3D printing of polymer matrix composites: a review and prospect. Composites Part B Eng 2017;110:442–58. Copyright 2017, Elsevier.
+
+来源：经许可自 Wang X, Jiang M, Zhou Z, Gou J, Hui D. 3D printing of polymer matrix composites: a review and prospect. Composites Part B Eng 2017;110:442–58. Copyright 2017, Elsevier。
 
 本本节将从五个方面系统地介绍这些工作：开孔泡沫、闭孔泡沫、2D蜂窝、3D点阵结构和梯度细胞固体。
 
@@ -7127,11 +7355,12 @@ Nava等[44]在圆柱形容器内填充球体以产生开孔泡沫，并用面积
 ![](img/90ed165a39fa708ec438fcda79319c25_358_0.png)
 
 **图 14.9** 通过X射线计算机断层扫描（XCT）和电子束熔化（EBM）产生的泡沫样品，并列出了测量的相对密度。
-*来源：*经许可复制自 Hernández-Nava E, Smith CJ, Derguti F, Tammas-Williams S, Léonard F, Withers PJ, et al. The effect of density and feature size on mechanical properties of isostatic metallic foams produced by additive manufacturing. Acta Mater 2015;85:387–95. Copyright 2015, Elsevier.
 
-同样，Matheson等[45]使用X射线CT成像系统重建了通过传统铸造工艺生产的开孔泡沫。首先生成试件的光固成型（STL）文件。然后，通过PBF制备了作为扫描3D结构的框架铝。如图14.10所示，作者对通过传统技术和增材制造技术技术制备的开孔泡沫进行了准静态实验。通过射线CT获取了开孔泡沫的坍塌和断裂分布。我们发现传统泡沫有更多的杆部坍塌而没有断裂。PBF产生的泡沫比传统泡沫更脆。
+*来源：*经许可复制自 Hernández-Nava E, Smith CJ, Derguti F, Tammas-Williams S, Léonard F, Withers PJ, et al. The effect of density and feature size on mechanical properties of isostatic metallic foams produced by additive manufacturing. Acta Mater 2015;85:387–95. Copyright 2015, Elsevier。
 
-Wang等[46]使用包括聚氨酯、聚酰胺12和聚酰胺在内的不同基材料生产增材制造开孔泡沫。他们研究了物种在准静态载荷下的宏观力学性能和变形机制。Voronoi图是生成随机细胞的典型方法。在Voronoi图中，首先建立一个具有$V_0$体积的3D有限空间，创建$N$细胞，其过程与泡沫生长类似。如果$N$在$V_0$空间均匀分布，将产生完全规则的费曼泡沫，其相邻细胞之间的距离给出：
+同样，Matheson等[45]使用X射线CT成像系统重建了通过传统铸造工艺生产的开孔泡沫。首先生成试件的光固成型（STL）文件。然后，通过`PBF`制备了作为扫描3D结构的框架铝。如图14.10所示，作者对通过传统技术和增材制造技术技术制备的开孔泡沫进行了准静态实验。通过射线CT获取了开孔泡沫的坍塌和断裂分布。我们发现传统泡沫有更多的杆部坍塌而没有断裂。`PBF`产生的泡沫比传统泡沫更脆。
+
+Wang等[46]使用包括聚氨酯、聚酰胺12和聚酰胺在内的不同基材料生产增材制造开孔泡沫。他们研究了物种在准静态载荷下的宏观力学性能和变形机制。`Voronoi`图是生成随机细胞的典型方法。在`Voronoi`图中，首先建立一个具有`V_0`体积的3D有限空间，创建`N`细胞，其过程与泡沫生长类似。如果`N`在`V_0`空间均匀分布，将产生完全规则的费曼泡沫，其相邻细胞之间的距离给出：
 
 $$d_0 = \frac{\sqrt{6}}{2} \sqrt[3]{\frac{V_0}{N}}$$
 
@@ -7150,22 +7379,22 @@ $$d_0 = \frac{\sqrt{6}}{2} \sqrt[3]{\frac{V_0}{N}}$$
 (C) 激光粉末沉积
 
 **图 14.10** 泡沫的XCT重建：(A) 在给定区域生成的细胞、(B)节点模型、(C) 3D网格模型。
-来源：经许可自 Matheson KE, Cross KK, Nowell MM, Spear AD. Crushing behavior and deformation mechanism of additively manufactured Voronoi-based foams. Mater Today 2020;25:101406.
+
+来源：经许可自 Matheson KE, Cross KK, Nowell MM, Spear AD. Crushing behavior and deformation mechanism of additively manufactured Voronoi-based foams. Mater Today 2020;25:101406。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_360_0.png)
 
 **图 14.11** 开孔Voronoi结构的构建过程：(A) 传统制造、（B) 激光粉末沉积、（C) 激光粉末沉积。
 
-为了构建具有随机性的Voronoi泡沫，只有当后续细胞与任何现有细胞的距离大于$\delta$时才被接受。最小距离$\delta$必须小于$d_0$，否则无法$V_0$中放置$N$细胞。细胞规则性$R=1.0$和$R=0.0$分别代表费曼泡沫和完全随机泡沫，提供了泡沫的边界。当细胞节点连接而不缝合胞壁时，可以获得开孔Voronoi泡沫（如图14.11）。
+为了构建具有随机性的Voronoi泡沫，只有当后续细胞与任何现有细胞的距离大于`δ`时才被接受。最小距离`δ`必须小于`d_0`，否则无法`V_0`中放置`N`细胞。细胞规则性`R=1.0`和`R=0.0`分别代表费曼泡沫和完全随机泡沫，提供了泡沫的边界。当细胞节点连接而不缝合胞壁时，可以获得开孔Voronoi泡沫（如图14.11）。
 
 ### 14.3.2 闭孔泡沫
 
 闭孔泡沫[53–55]由于其良好的能量吸收能力、高强度重量比和卓越的可定制性，已应用于保护结构、包装和结构功能等各种领域[56–58]。
 
-Virat等[53]研究了相对密度和载荷速率对费曼泡沫压缩应力、变形模式和能量吸收的影响。如图14.2所示，首先生成了具有费曼细胞的细胞结构3D计算机辅助设计（CAD）数据。然后，将不同细胞厚度的试件CAD模型转换为STL格式进行增材制造。使用通用试验机对费曼泡沫进行准静态载荷测试，使用直接冲击霍普金压力杆进行动态载荷测试。在不同相对密度和不同载荷速率的试件实验中观察到了四变形模式。进一步的数值结果表明存在临界相对密度，低于该密度时费曼泡沫主要通过细胞边缘弯曲变形，而在该密度之上，细胞膜发生变形。
+Virat等[53]研究了相对密度和载荷速率对费曼泡沫压缩应力、变形模式和能量吸收的影响。如图14.2所示，首先生成了具有费曼细胞的细胞结构3D计算机辅助设计（CAD）数据。然后，将不同细胞厚度的试件CAD模型转换为`STL`格式进行增材制造。使用通用试验机对费曼泡沫进行准静态载荷测试，使用直接冲击霍普金压力杆进行动态载荷测试。在不同相对密度和不同载荷速率的试件实验中观察到了四变形模式。进一步的数值结果表明存在临界相对密度，低于该密度时费曼泡沫主要通过细胞边缘弯曲变形，而在该密度之上，细胞膜发生变形。
 
 Wang等[54]采用熔融沉积建模技术制备了不同细胞类型的闭孔泡沫（图14.13），包括规则
-
 
 增材制造功能梯度多孔结构的设计与制造
 
@@ -7196,8 +7425,11 @@ IdeaMaker 软件
 来源：经 Duan, Y, Du B, Shi, X, Hou B, Li Y 许可复制。具有 Kelvin单元的3D打印聚合物窝状结构的准静态和动态压缩性能及变形机制。Int J Impact Eng 2019;132:103303. 版权所有2019. Elsevier。
 
 | 单元格 | | | | | | |
+
 |---|---|---|---|---|---|
+
 | 名称 | RC | Tet | HP | RP | CRP |
+
 | 样品 | | | | | | |
 
 图 14.13 泡沫的单元格及相应的样品。
@@ -7240,6 +7472,8 @@ FG 复合结构
 
 ## 正方形网格![](img/90ed165a39fa708ec438fcda79319c25_364_11.png) ![](img/90ed165a39fa708ec438fcda79319c25_364_12.png) ![](img/90ed165a39fa708ec438fcda79319c25_364_13.png) ![](img/90ed165a39fa708ec438fcda79319c25_364_14.png) SrCuBO
 
+
+
 ## 四面角形![](img/90ed165a39fa708ec438fcda79319c25_364_15.png) ![](img/90ed165a39fa708ec438fcda79319c25_364_16.png) ![](img/90ed165a39fa708ec438fcda79319c25_364_17.png) 稀疏
 
 ## 实体心 n45°![](img/90ed165a39fa708ec438fcda79319c25_364_18.png) ![](img/90ed165a39fa708ec438fcda79319c25_364_19.png) ![](img/90ed165a39fa708ec438fcda79319c25_364_20.png)
@@ -7252,15 +7486,13 @@ FG 复合结构
 
 Garra 等人 [60] 分析了单元图案对蜂窝材料力学性能的影响。如图 14、16 所示，分析涵盖了二维单元形状，包括反扭形、圆形、六对角形、六边形、凹六边形 I 型和 II 型、菱形、扭角形、正弦波带、正方形网格、CuBO 和 四面角形。他们提出了一个实验验证的模型来预测不同图案的压缩刚度。本文提供的实验数据可以进一步指导细胞固体的增材制造设计策略。
 
-## 14.3.4 晶格结构
+### 14.3.4 晶格结构
 
 晶格结构 [63–66] 具有高设计性。通过优化结构元件，可以提高力学性能，包括比强度和比刚度。这使得晶格结构在结构设计设计设计设计 [67–75]。此外，晶格材料的力学性能取决于几何配置而非化学组分，晶格材料也是超材料。传统的制造技术无法满足设计复杂配置晶格材料的需求，而这一空白正由增材制造技术填补 [76–82]。
 
 Abucciella 等人 [63] 专注于具有三周期表面（TPMS）的细胞固体。他们设计了三种 TPMS 架构，包括 Schwarz Primitive、Schoen I-包裹立方 (IWP) 和 Neovius，如图 14.17 所示。他们使用以聚酰胺 12 为基材料的 SLS 技术制造了这些模型。他们报告说，IWP 和 Neovius 架构在力学性能上优于其他，且两者的刚度和强度高于 Primitive 架构。
 
 Bonatti 等人 [64] 研究了 TPMS 架构。他们采用参数化表面平滑技术推导了三类晶格，包括简单立方 (SC)、面心立方 (FCC) 和体心立方 (BCC) 单元单元。他们指出，与桁架相比，晶格可以提供更高的平均刚度、强度能量吸收能力。此外，壳晶格具有几何光滑性，可以避免应力集中。预计壳晶格将获得更好的疲劳寿命和强度。
-
-
 
 364
 
@@ -7269,13 +7501,14 @@ FG 多孔复合结构
 ![](img/90ed165a39fa708ec438fcda79319c25_366_0.png)
 
 **图 14.17** 相对密度为 10% 的三周期最小表面细胞材料（CMs）的计算机辅助制图：(A) primitive-CM，(B) IWP-CM，(C) Neovius-CM。3D 打印样品：(E) primitive-CM（相对密度为 23.5%），(F) IWP-CM（相对密度为 25.6%），(G) Neovius-CM（相对密度为 23.7%）。
+
 来源：经 [Baker, Abu Al-Rub Bergstrom, Sob NA, Jasiuk] 许可自具有三周期最小表面架构的3D打印聚合物材料的力学性能。Mater Des 2017;122:255–67. Copyright 2017, Elsevier.
 
 Duan 等人 [65] 采用 SLM 技术生产了 316 L 钢板点格。需要注意的是，由于板材具有闭孔结构，很难通过粉末床或液基增材制造技术直接生产此类点格。因此，在图 14.19 中，作者在板面上钻了几个小孔，以便在制造后取出闭孔。进一步的实验表明，对于任何新型的板点格，在宽的相对密度范围内都可以实现弹性各向异性。此外，所提出的板点格在力学性能上优于壳点格和桁架点格。
 
 Andrew 等人 [66] 使用 FFF 技术制造了三种基础板点格（包括 SC、BCC 和 FCC）以及复合板点格（SC-BCC、SC-FCC 和 SC-BCC-FCC）。他们发现 SC-BCC-FCC 板点格的响应最好，因为点格中的每个组分都对承载能力有贡献。增材制造与微结构细胞固体的结合促进了具有前所未有的性能的材料的发展（图 14.20）。
 
-## 14.3.5 梯度细胞固体
+### 14.3.5 梯度细胞固体
 
 梯度细胞固体 [83–88] 结合了梯度材料和细胞固体的优点。它不仅利用了梯度材料强设计性和适应性的优点来根据增材制造的功能梯度多孔结构的设计和制造来设计材料的梯度分布 365
 
@@ -7296,6 +7529,7 @@ FG 多孔复合结构
 ![](img/90ed165a39fa708ec438fcda79319c25_368_0.png)
 
 | ANI-1 | ANI-2 | ANI-3 |
+
 |---|---|---|
 
 **图 14.19** (A)具有不同单元取向的 ISO-1,2,3 未测试样品视图；(B) ANI-1,2,3 未测试样品视图；(C) 316 L 不锈钢粉末的扫描电子显微；(D) 和 (E) ISO-3 样品的扫描电子显微。
@@ -7311,11 +7545,17 @@ Duan 等人 [85] 使用 Voronoi 方法和 FFF 技术构建了细胞尺寸泡沫�
 ![](img/90ed165a39fa708ec438fcda79319c25_369_0.png)
 
 | SC | BCC | FCC |
+
 |---|---|---|
+
 | 板点格 | | |
+
 | SC-BCC | SC-FCC | SC-BCC-FCC |
+
 | 复合材料 | | |
+
 | 泡沫2 wt % | 泡沫4 wt % | 泡沫6 wt % |
+
 | 泡沫8 wt % | | |
 
 **图 14.20** 图形
@@ -7337,37 +7577,39 @@ FG 多孔复合结构
 ![](img/90ed165a39fa708ec438fcda79319c25_370_0.png)
 
 **图 14.22** 具有梯度的 Ti-6Al-V 结构示意图。
+
 *来源：*经 Xiao L, Song W. 许可自静态和动态载荷下高强度的功能梯度泡沫。Int J Eng 2018;111:255–72。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_370_1.png)
 
 **图 14.23** (A) 均匀泡沫、B) 尺寸梯度泡沫（SGF）和 (C) 厚度梯度泡沫（TGF）的等轴视图，以及 (D) 均匀泡沫、E) SGF 和 (F) TGF 的正面视图。
+
 *来源：*经 Duan Y, Ding Y, Liu Z, Hou N, Zhao X, Liu H, 等. 细胞尺寸与细胞壁厚度梯度对增材制造泡沫压缩行为的影响。Compos. Sci Technol 2020;199:108539.
-
-
-
-
 
 增材制造功能梯度多孔结构的设计与制造 369
 
 ![](img/90ed165a39fa708ec438fcda79319c25_371_0.png)
 
 **图 14.24** (A) 初始几何模型和 (B) 微米 X 射线成像结果。
+
 来源：许可自 Duan Y, Ding Y, Liu Z, Hou N, Zhao X, Liu H, et al. 的 Effects of cell size vs. cell-wall thickness gradients on compressive behavior of additively manufactured foams. Compos Sci Technol 2020;199:108339. Copyright 2020, Elsevier.
 
 ![](img/90ed165a39fa708ec438fcda79319c25_371_1.png)
 
 **图 14.25** 增材三周期周期最小表面结构详细图像，附带顶部和底面的放大插图：(A) 基于网络的功能梯度 Gyroid 样品。(B) 基于片材的功能梯度 Gyroid 样品。
+
 来源：许可自 Zhou H, Zhao M, Ma Z, Zhang DZ, Fu G. Sheet and network based functionally graded lattice structures manufactured by selective laser melting: design, mechanical properties, and simulation. Int J Mech Sci 2020;175:105480. Copyright 2020, Elsevier.
 
 ![](img/90ed165a39fa708ec438fcda79319c25_372_0.png)
 
 **图 14.26** 人工设计的 Gyroid 晶格结构。
+
 来源：许可自 Yang L, Li Y, Wu S, Chen P, Wu H, Su J, J, et al. tailorable and predictable mechanical responses of additive manufactured TPMS lattices with graded structures. Mater Sci Eng A 2022;843:143109. Copyright 2022, Elsevier.
 
 ![](img/90ed165a39fa708ec438fcda79319c25_372_1.png)
 
 **图 14.27** 具有不同梯度体积分数的钻石形功能梯度多孔支架 (FGPS) 的微-CT 重建模型：(A) 20–5,(B) 20–7.5,(C) 20–10,(D) 20–12.5 以及 (E) 20–15。(F) 20–15 FGPS 的代表性拓扑形态。
+
 来源：许可自 Han C, Li Y, Wang Q, Wen S, Wei Q, Yan C, et al. Continuous functionally graded porous titanium scaffolds manufactured by selective laser melting for bone implants, J Mech Behav Biomomed Mater 2018;80:119–27. Copyright 2018, Elsevier.
 
 增材制造功能梯度多孔结构的设计与制造 371
@@ -7382,7 +7624,7 @@ FG 多孔复合结构。
 
 最后，细胞固体与增材制造相结合的应用需要进一步探索。例如，4D 打印 [101,102] 和智能制造 [103,104] 可以整合到当前的研究中。最近设计并制造了一类能够多自由度的机器人机器人材料 [105]。这项工作将压电陶瓷、金属和结构材料集成到3D架构中，机器人超材料可以主动感知和移动。通过结合智能超材料和拓扑优化设计，增材制造细胞固体的应用可以进一步扩展。尽管如此，该领域仍需要广泛的研究。
 
-## 14.5 结论
+### 14.5 结论
 
 从细胞固体的先进应用和研究局限性出发，本章阐明了结合增材制造研究细胞固体的必要性。目前，传统制造无法满足灵活材料的设计。潜在工作包括4D和智能制造部件引入细胞固体中。
 
@@ -7402,176 +7644,222 @@ FG 多孔复合结构。
 - [8] Gibson LJ, Ashby MF. Cellular solids: structures and properties. Cambridge University Press, 1999.
 - [9] Bharti J. Manufacturing, characterisation and application of cellular materials and metals Pros Mater Sci 2001;46:559–63.
 
-
-
-
-
 # 增材制造功能梯度多隙结构的设计与验证
 
-[10] Nazir A, Abate KM, Kumar A, Jung J-Y. 细胞结构设计、优化与增材制造的最新综。Int Adv Manuf Technol 2019;04:3489–510. Available自: https://doi.org/10.1007/s0017-019-04085-3.
-
-[11] Tao W, Leu MC. 用于增材制造的点阵结构设计。In: 2016 International symposium on flexible actuation, IEEE; 2016, p. 32–32. Available自: https://doi.org/10.1109/ICFA.2016.7771923
-
-[12] Gong K, Kyaldas S, Jang W-Y. 开孔泡沫的复合响应。第1部分形貌与弹性属性。Int J Solids Struct 2004;42:1355–79. Available自: https://doi.org/10.1016/j.struct.2004.07.023,
-
-[13] Paul A, Ramauti R. 闭孔泡沫材料的应变敏感性。Mater Sci Eng A 2000;281:1–7. Available自: https://doi.org/10.1016/S0921-5093(99)00068-X
-
-[14] Rackiffe ME, 超轻量桁结构的局部与全局失稳。Comp Sci Technol 2006;66:28–83. Available自: https://doi.org/10.1016/j.compsmech.2005.08.023,
-
-[15] Ruan D, Li G, Wang B, Tu Y. 有限元研究。蜂窝的动态压溃—Int Mater Stud 2003:81–82. Available自: https://doi.org/10.1016/S0743-X74X(02)00056-E
-
-[16] Deschande VS, Nash AF. 八角点格材料的有效属性。J Phys Solids 2001;49:1477–98. Available自: https://doi.org/10.1016/S0022-5062(01)0061
-
-[17] Liu J, Myers MA, Jung G, Richtman RO. 材料中的功能属性与异质性：设计原理、功能与边界应用。Prog Mater Sci 2017;88:47–98. Available自: https://doi.org/10.1016/j.pmatsci.2017.04.013,
-
-[18] Cheng Z, Zhou H, Li G, Gao H, Lu L. 梯度纳米结构材料中的额外强化与硬化。Science 2016;352:1921–1925. Available自: https://doi.org/10.1126/science.aau1925
-
-[19] Deschande VS, Nash MF. 金属泡沫的等向性属性。J Mech Phys Solids 2004;48:1253–83. Available自: https://doi.org/10.1016/S0022-5096(03)00096-X
-
-[20] Fleck NA, Deschande VS. 微架构材料：过去与现在。Proc R Soc A Math Phys 2016;365:2496–515. Available自: https://doi.org/10.1098/rspa.2015.02210,
-
-[21] Cui Y, Kieran S, Goldsmith MJ 设计功能梯度泡沫材料的吸吸收能力。Mater Sci Eng A 2009;55:207–215. Available自: https://doi.org/10.1016/j.msa.2008.12.011,
-
-[22] Kieran S, Cui LJ. 应力波通过虚拟梯度泡沫的传播。Int J Mater 2009;44:456–68. Available自: https://doi.org/10.1016/j.ijmat.2009.02.006,
-
-[23] Li Y, Wei H-Y, Wang G. 密度梯度的金属空心球(MHS)泡沫设计。Comp Part B Eng 2012;33:1346–52. Available自: https://doi.org/10.1016/j.compsmech.2011.11.057,
-
-[24] Xian X, An L. 密度梯度蜂窝的动态压溃行为与能量吸收。Sandwich Struct Mater 2014;16:125–47. Available自: https://doi.org/10.1177/096976231253999
-
-[25] Zhou H, Wang X, Zhao Z. 梯度细胞固体的高速冲击。Comp Part B 2016;85:93–101. Available自: https://doi.org/10.1016/j.composites.2015.09.042
-
-[26] Zhang J, Wang, Zhao L. 基于Voronoi模型的材料梯度材料动态响应。Comp Part B 2016;85:176–87. Available自: https://doi.org/10.1016/j.composites.2015.09.045.
-
-[27] Liang M, Li Z, Lu F, Li X. 连续密度梯度材料的理论与数值研究。Comp Struct 2017;164:170–9. Available自: https://doi.org/10.1016/j.struct.2016.065.
-
-[28] Chen D, Chitrou S, Yang J. 变密度功能梯度结构的动态响应与能量吸收。J Des 2018;140:473–88. Available自: https://doi.org/10.1016/j.matdes.2017.029.
-
-[29] Reid S, Peng C. 载荷下的单轴压溃。Int J Eng 1997;19:531–70. Available自: https://doi.org/10.1016/S0074-743(97)0016-X.
-
-[30] Chen J, Yu X, Li G. 梯度棒的双重冲击效应。J Polym 2015;30:55–63. Available自: https://doi.org/10.1016/j.polym.2014.021.
-
-[31] Karagio D, Alves M. 变密度材料中的波传播。J Solids 2015;71:323–37. Available自: https://doi.org/10.1016/j.ijjsolid.2015.005.
-
-[32] Liu J, Hou B, Li T. 梯度棒设计中冲击传播的理论研究。Eng 2015;580:123–42. Available自: https://doi.org/10.1016/j.ijmeng.2015.001.
-
-[33] Yang J, Wang S, Ding Y, Zheng Y, Yu Chu. 基于非线性塑性模型的梯度细胞材料抗碰撞性。Mater Sci Eng A 2017;650:11010. Available自: https://doi.org/10.1016/j.msa.2016.11010.
-
-[34] Ding Y, Zheng Z, Wang Y, Zhao F. 梯度细胞泡沫的冲击响应与设计。J Appl Mech 2018;2018:10517. Available自: https://doi.org/10.1142/25788215077.
-
-[35] Liu H, Deng S, Ng BF. 温度环境下功能梯度泡沫的冲击响应与吸收。Compos Part B Eng 2019;172:516–32. Available自: https://doi.org/10.1016/j.composb.2019.05.072.
-
-[36] Zeng HB, Patofato S, Zhang H, Girard Y, Vasto V. 变密度泡沫聚集体的冲击行为。J Mech Sci 2010;52:628–88. Available自: https://doi.org/10.1016/j.jmec.2009.11.033.
-
-[37] Hanaku Y, Takaba N, Usumura T, Kawazuru O, Ishikawa N. A1050和A6061铝合金组成的功能梯度泡沫落落冲击行为。Mater Sci Eng A 2015;639:597–604. Available自: https://doi.org/10.1016/j.matmsa.2015.05.007.
-
-[38] Gopa R, Wu C. 微观结构体积和壁厚具有梯分层合成泡沫的压缩属性。Mater Sci Eng A 2006;427:231–42. Available自: https://doi.org/10.1016/j.matmsa.2006.04.078.
-
-[39] Schauber TA, Jacobsen AJ, Torrens A, Sorensen AE, Lean J, Greer JR, et al. 超轻金属复合材料。Science 2011;334:962–5. Available自: https://doi.org/10.1126/science.1196533 (English).
-
-[40] Compton BG, Lewis JA. 轻量细胞泡沫的3D打印。Adv Mater 2014;26:5990–5. Available自: https://doi.org/10.1002/adma.2014.01804.
-
-[41] Ngo TD, Kashani A, Imbhazan G, Nguyen KT, Hui D. 增材制造（3D打印）：材料、方法、应用与挑战综述。Compos Part B Eng 2018;153:77–96. Available自: https://doi.org/10.1016/j.composb.2018.02.12.
-
-[42] Wang X, Jiang M, Zhou Z, Gou J, Hui D. 聚合物3D打印：综述与展望。Compos Part B Eng 2017;110:442–58. Available自: https://doi.org/10.1016/j.composb.2016.4.
-
-[43] Mannella GA, Conson G, Pavia F, Bucato V. 通过热诱导分离（TIPS）制备孔径梯度聚合物泡沫。Mater Lett 2015;160:31–3. Available自: https://doi.org/10.1016/j.materlet.2015.7
-
-[44] Hernández-Nave E, Smith CJ, Derguti F, Tammas S, Léonard F, et al. 设计和尺寸对增材制造金属泡沫学性能的影响。Acta Mater 2015;85:337–95. Available自: https://doi.org/10.1016/j.acta.2014.6.
-
-[45] Matheson KE, Cross KK, Nowak MM, Spear AD. 增材制造随机开孔泡沫的多尺度分析。Mater Sci Eng A 2017;207:181–92. Available自: https://doi.org/10.1016/j.mse.2017.8.
-
-[46] Wang S, Ding Y, Yu F, Zheng Y. 增材制造Voronoi基开孔泡沫的压溃与变形机制。Mater Today 2020;25:101046. Available自: https://doi.org/10.1016/j.matod.2020.2
-
-[47] Bracomiti M, Ambrose M, Okafer A, Sans Y, Zhang X, Ou X, et al. 复制开孔泡沫中的压力降研究：与增材制造泡沫的实验数据耦合。Chem Eng 2019;377:120823. Available自: https://doi.org/10.1016/j.chemeng.2018.10
-
-[48] Wang G, Shen L, Zhao J, Li H, Xie T, et al. 基于Voronoi镶分的增材制造可控机械支架的设计与表征。ACS Mater Sci 2018;4:217–29. Available自: https://doi.org/10.1021/acbiosomaterials.7
-
-[49] Mur LE, Gaysan SM, Medina F, Parinitz E, Martinez JL, Hernandez DH, et al. 电子束增材制造Ti-6Al-4V开孔泡沫的表征。Mater Sci A 2020;521:86–8. Available自: https://doi.org/10.1016/j.msa.2019.11
-
-[50] Yang J, Jin X, Gao H, Zhang D, Chen S, et al. 激光粉熔熔钽支架：力学性能评估与孔隙结构表征。Mater Charat 2020;117:110694. Available自: https://doi.org/10.1016/j.matint.2020.11
-
-[51] Porter DA, Di Pina MA, Baxter Y, Parikh AR. 用于增材制造结构性能的尼龙点阵设计要素。Mech Behav Mater Int 2022;125:104869. Available自: https://doi.org/10.1016/j.jmbm.2021.10
-
-[52] Ramirez DA, Lee, S, Yan X, Martinez E, Martinez JL, et al. 使用电子束熔化制造开孔铜支撑结构。Mater Sci A 2011;528:5279–86. Available自: https://doi.org/10.1016/j.msa.2011.3
-
-[53] Du Y, Du B, Shi X, Hou B, Li Y. 3D打印带开尔文细胞聚合物支架的静态-动态压缩性能和变形。Cells Int J Mater Eng 2019;132:103003. Available自: https://doi.org/10.1016/j.ijmpeng.2019.05
-
-[54] Wang S, Zheng Z, Zhou C, Ding Y, Yu J. 原型聚合物泡沫的压溃与密化：中中结构分析和统计本构模型。Mech Mater 2019;326:75–87. Available自: https://doi.org/10.1016/j.mechmater.2018.9
-
-[55] Duan Y, Du B, Zhou X, Shi X, Hou B, et al. 细胞规则性对增材制造Voronoi泡沫压缩性能的影响。Int J Mechch Sci 2019;1064:105151. Available自: https://doi.org/10.1016/j.ijmecs.2019.1
 
 
+# 参考文献
+
+[10] Nazir A, Abate KM, Kumar A, Jung J-Y. 细胞结构设计、优化与增材制造的最新综。Int Adv Manuf Technol 2019;04:3489–510. Available自: `https://doi.org/10.1007/s0017-019-04085-3`.
+
+[11] Tao W, Leu MC. 用于增材制造的点阵结构设计。In: 2016 International symposium on flexible actuation, IEEE; 2016, p. 32–32. Available自: `https://doi.org/10.1109/ICFA.2016.7771923`
+
+[12] Gong K, Kyaldas S, Jang W-Y. 开孔泡沫的复合响应。第1部分形貌与弹性属性。Int J Solids Struct 2004;42:1355–79. Available自: `https://doi.org/10.1016/j.struct.2004.07.023`,
+
+[13] Paul A, Ramauti R. 闭孔泡沫材料的应变敏感性。Mater Sci Eng A 2000;281:1–7. Available自: `https://doi.org/10.1016/S0921-5093(99)00068-X`
+
+[14] Rackiffe ME, 超轻量桁结构的局部与全局失稳。Comp Sci Technol 2006;66:28–83. Available自: `https://doi.org/10.1016/j.compsmech.2005.08.023`,
+
+[15] Ruan D, Li G, Wang B, Tu Y. 有限元研究。蜂窝的动态压溃—Int Mater Stud 2003:81–82. Available自: `https://doi.org/10.1016/S0743-X74X(02)00056-E`
+
+[16] Deschande VS, Nash AF. 八角点格材料的有效属性。J Phys Solids 2001;49:1477–98. Available自: `https://doi.org/10.1016/S0022-5062(01)0061`
+
+[17] Liu J, Myers MA, Jung G, Richtman RO. 材料中的功能属性与异质性：设计原理、功能与边界应用。Prog Mater Sci 2017;88:47–98. Available自: `https://doi.org/10.1016/j.pmatsci.2017.04.013`,
+
+[18] Cheng Z, Zhou H, Li G, Gao H, Lu L. 梯度纳米结构材料中的额外强化与硬化。Science 2016;352:1921–1925. Available自: `https://doi.org/10.1126/science.aau1925`
+
+[19] Deschande VS, Nash MF. 金属泡沫的等向性属性。J Mech Phys Solids 2004;48:1253–83. Available自: `https://doi.org/10.1016/S0022-5096(03)00096-X`
+
+[20] Fleck NA, Deschande VS. 微架构材料：过去与现在。Proc R Soc A Math Phys 2016;365:2496–515. Available自: `https://doi.org/10.1098/rspa.2015.02210`,
+
+[21] Cui Y, Kieran S, Goldsmith MJ 设计功能梯度泡沫材料的吸吸收能力。Mater Sci Eng A 2009;55:207–215. Available自: `https://doi.org/10.1016/j.msa.2008.12.011`,
+
+[22] Kieran S, Cui LJ. 应力波通过虚拟梯度泡沫的传播。Int J Mater 2009;44:456–68. Available自: `https://doi.org/10.1016/j.ijmat.2009.02.006`,
+
+[23] Li Y, Wei H-Y, Wang G. 密度梯度的金属空心球(MHS)泡沫设计。Comp Part B Eng 2012;33:1346–52. Available自: `https://doi.org/10.1016/j.compsmech.2011.11.057`,
+
+[24] Xian X, An L. 密度梯度蜂窝的动态压溃行为与能量吸收。Sandwich Struct Mater 2014;16:125–47. Available自: `https://doi.org/10.1177/096976231253999`
+
+[25] Zhou H, Wang X, Zhao Z. 梯度细胞固体的高速冲击。Comp Part B 2016;85:93–101. Available自: `https://doi.org/10.1016/j.composites.2015.09.042`
+
+[26] Zhang J, Wang, Zhao L. 基于Voronoi模型的材料梯度材料动态响应。Comp Part B 2016;85:176–87. Available自: `https://doi.org/10.1016/j.composites.2015.09.045`.
+
+[27] Liang M, Li Z, Lu F, Li X. 连续密度梯度材料的理论与数值研究。Comp Struct 2017;164:170–9. Available自: `https://doi.org/10.1016/j.struct.2016.065`.
+
+[28] Chen D, Chitrou S, Yang J. 变密度功能梯度结构的动态响应与能量吸收。J Des 2018;140:473–88. Available自: `https://doi.org/10.1016/j.matdes.2017.029`.
+
+[29] Reid S, Peng C. 载荷下的单轴压溃。Int J Eng 1997;19:531–70. Available自: `https://doi.org/10.1016/S0074-743(97)0016-X`.
+
+[30] Chen J, Yu X, Li G. 梯度棒的双重冲击效应。J Polym 2015;30:55–63. Available自: `https://doi.org/10.1016/j.polym.2014.021`.
+
+[31] Karagio D, Alves M. 变密度材料中的波传播。J Solids 2015;71:323–37. Available自: `https://doi.org/10.1016/j.ijjsolid.2015.005`.
+
+[32] Liu J, Hou B, Li T. 梯度棒设计中冲击传播的理论研究。Eng 2015;580:123–42. Available自: `https://doi.org/10.1016/j.ijmeng.2015.001`.
+
+[33] Yang J, Wang S, Ding Y, Zheng Y, Yu Chu. 基于非线性塑性模型的梯度细胞材料抗碰撞性。Mater Sci Eng A 2017;650:11010. Available自: `https://doi.org/10.1016/j.msa.2016.11010`.
+
+[34] Ding Y, Zheng Z, Wang Y, Zhao F. 梯度细胞泡沫的冲击响应与设计。J Appl Mech 2018;2018:10517. Available自: `https://doi.org/10.1142/25788215077`.
+
+[35] Liu H, Deng S, Ng BF. 温度环境下功能梯度泡沫的冲击响应与吸收。Compos Part B Eng 2019;172:516–32. Available自: `https://doi.org/10.1016/j.composb.2019.05.072`.
+
+[36] Zeng HB, Patofato S, Zhang H, Girard Y, Vasto V. 变密度泡沫聚集体的冲击行为。J Mech Sci 2010;52:628–88. Available自: `https://doi.org/10.1016/j.jmec.2009.11.033`.
+
+[37] Hanaku Y, Takaba N, Usumura T, Kawazuru O, Ishikawa N. A1050和A6061铝合金组成的功能梯度泡沫落落冲击行为。Mater Sci Eng A 2015;639:597–604. Available自: `https://doi.org/10.1016/j.matmsa.2015.05.007`.
+
+[38] Gopa R, Wu C. 微观结构体积和壁厚具有梯分层合成泡沫的压缩属性。Mater Sci Eng A 2006;427:231–42. Available自: `https://doi.org/10.1016/j.matmsa.2006.04.078`.
+
+[39] Schauber TA, Jacobsen AJ, Torrens A, Sorensen AE, Lean J, Greer JR, et al. 超轻金属复合材料。Science 2011;334:962–5. Available自: `https://doi.org/10.1126/science.1196533` (English).
+
+[40] Compton BG, Lewis JA. 轻量细胞泡沫的3D打印。Adv Mater 2014;26:5990–5. Available自: `https://doi.org/10.1002/adma.2014.01804`.
+
+[41] Ngo TD, Kashani A, Imbhazan G, Nguyen KT, Hui D. 增材制造（3D打印）：材料、方法、应用与挑战综述。Compos Part B Eng 2018;153:77–96. Available自: `https://doi.org/10.1016/j.composb.2018.02.12`.
+
+[42] Wang X, Jiang M, Zhou Z, Gou J, Hui D. 聚合物3D打印：综述与展望。Compos Part B Eng 2017;110:442–58. Available自: `https://doi.org/10.1016/j.composb.2016.4`.
+
+[43] Mannella GA, Conson G, Pavia F, Bucato V. 通过热诱导分离（TIPS）制备孔径梯度聚合物泡沫。Mater Lett 2015;160:31–3. Available自: `https://doi.org/10.1016/j.materlet.2015.7`
+
+[44] Hernández-Nave E, Smith CJ, Derguti F, Tammas S, Léonard F, et al. 设计和尺寸对增材制造金属泡沫学性能的影响。Acta Mater 2015;85:337–95. Available自: `https://doi.org/10.1016/j.acta.2014.6`.
+
+[45] Matheson KE, Cross KK, Nowak MM, Spear AD. 增材制造随机开孔泡沫的多尺度分析。Mater Sci Eng A 2017;207:181–92. Available自: `https://doi.org/10.1016/j.mse.2017.8`.
+
+[46] Wang S, Ding Y, Yu F, Zheng Y. 增材制造Voronoi基开孔泡沫的压溃与变形机制。Mater Today 2020;25:101046. Available自: `https://doi.org/10.1016/j.matod.2020.2`
+
+[47] Bracomiti M, Ambrose M, Okafer A, Sans Y, Zhang X, Ou X, et al. 复制开孔泡沫中的压力降研究：与增材制造泡沫的实验数据耦合。Chem Eng 2019;377:120823. Available自: `https://doi.org/10.1016/j.chemeng.2018.10`
+
+[48] Wang G, Shen L, Zhao J, Li H, Xie T, et al. 基于Voronoi镶分的增材制造可控机械支架的设计与表征。ACS Mater Sci 2018;4:217–29. Available自: `https://doi.org/10.1021/acbiosomaterials.7`
+
+[49] Mur LE, Gaysan SM, Medina F, Parinitz E, Martinez JL, Hernandez DH, et al. 电子束增材制造Ti-6Al-4V开孔泡沫的表征。Mater Sci A 2020;521:86–8. Available自: `https://doi.org/10.1016/j.msa.2019.11`
+
+[50] Yang J, Jin X, Gao H, Zhang D, Chen S, et al. 激光粉熔熔钽支架：力学性能评估与孔隙结构表征。Mater Charat 2020;117:110694. Available自: `https://doi.org/10.1016/j.matint.2020.11`
+
+[51] Porter DA, Di Pina MA, Baxter Y, Parikh AR. 用于增材制造结构性能的尼龙点阵设计要素。Mech Behav Mater Int 2022;125:104869. Available自: `https://doi.org/10.1016/j.jmbm.2021.10`
+
+[52] Ramirez DA, Lee, S, Yan X, Martinez E, Martinez JL, et al. 使用电子束熔化制造开孔铜支撑结构。Mater Sci A 2011;528:5279–86. Available自: `https://doi.org/10.1016/j.msa.2011.3`
+
+[53] Du Y, Du B, Shi X, Hou B, Li Y. 3D打印带开尔文细胞聚合物支架的静态-动态压缩性能和变形。Cells Int J Mater Eng 2019;132:103003. Available自: `https://doi.org/10.1016/j.ijmpeng.2019.05`
+
+[54] Wang S, Zheng Z, Zhou C, Ding Y, Yu J. 原型聚合物泡沫的压溃与密化：中中结构分析和统计本构模型。Mech Mater 2019;326:75–87. Available自: `https://doi.org/10.1016/j.mechmater.2018.9`
+
+[55] Duan Y, Du B, Zhou X, Shi X, Hou B, et al. 细胞规则性对增材制造Voronoi泡沫压缩性能的影响。Int J Mechch Sci 2019;1064:105151. Available自: `https://doi.org/10.1016/j.ijmecs.2019.1`
+
+- [56] Kalia K, Francouvoir B, Amirkhazzi A, Ameli A. 在使用材料挤出增材制造进行多细胞结构3D打印中 (In 3D printing of multicellular structures using material extrusion additive manufacturing), ACS App Mater Interfaces 2022;14:22454–65. `https://doi.org/10.1021/acsamiam.2020.03014`.
+
+- [57] Zielielski TG, Opieka KC, Pawlowski P, Dauchez N, Boutin T, Kennedy J, 等. 增材制造技术吸音多孔材料的可重复性：循环研究 (Reproducibility of sound-absorbing porous materials using additive manufacturing technologies: round study). Addit Mater 2020;36:101564. `https://doi.org/10.1016/j.addma.2020.101564`.
+
+- [58] Zamelabini H, Vidde VO, Hosseini AC. 球形细胞增材制造聚合物泡沫的机械性能 (Mechanical performance of additively manufactured polymeric foams with spherical cells). Addit Mater 2016;12:2274–81. `https://doi.org/10.1016/j.addma.2016.04.008`.
+
+- [59] Duan Y, Zhao X, Hong N, Du, Liu H, 等. 剪切压缩载荷下蜂窝与泡沫的碰撞 (Crashing of honeycomb vs foam under shear-compression load). Int J Imp 2020;146:106998. `https://doi.org/10.1016/j.ijimp.2020.106998`.
+
+- [60] Torres-Garriga A, Gómez-Gras G, Pérez MA. 增材制造轻质结构的力学性能：胞单元形状和密度对打印时间和压缩行为的影响 (Mechanical performance of additively manufactured lightweight structures: influence of cell pattern and density on the printing time and compression behavior). Mater Des 2022;215:110472. `https://doi.org/10.1016/j.matdes.2021.110472`.
 
 
 
-- [56] Kalia K, Francouvoir B, Amirkhazzi A, Ameli A. 在使用材料挤出增材制造进行多细胞结构3D打印中 (In 3D printing of multicellular structures using material extrusion additive manufacturing), ACS App Mater Interfaces 2022;14:22454–65. https://doi.org/10.1021/acsamiam.2020.03014.
-- [57] Zielielski TG, Opieka KC, Pawlowski P, Dauchez N, Boutin T, Kennedy J, 等. 增材制造技术吸音多孔材料的可重复性：循环研究 (Reproducibility of sound-absorbing porous materials using additive manufacturing technologies: round study). Addit Mater 2020;36:101564. https://doi.org/10.1016/j.addma.2020.101564.
-- [58] Zamelabini H, Vidde VO, Hosseini AC. 球形细胞增材制造聚合物泡沫的机械性能 (Mechanical performance of additively manufactured polymeric foams with spherical cells). Addit Mater 2016;12:2274–81. https://doi.org/10.1016/j.addma.2016.04.008.
-- [59] Duan Y, Zhao X, Hong N, Du, Liu H, 等. 剪切压缩载荷下蜂窝与泡沫的碰撞 (Crashing of honeycomb vs foam under shear-compression load). Int J Imp 2020;146:106998. https://doi.org/10.1016/j.ijimp.2020.106998.
-- [60] Torres-Garriga A, Gómez-Gras G, Pérez MA. 增材制造轻质结构的力学性能：胞单元形状和密度对打印时间和压缩行为的影响 (Mechanical performance of additively manufactured lightweight structures: influence of cell pattern and density on the printing time and compression behavior). Mater Des 2022;215:110472. https://doi.org/10.1016/j.matdes.2021.110472.
-- [61] Nowak N, Busietti L, Rebani Z, Carfigamito S, Krstović-Opara L, 等. 增材制造螺旋形和四面体胞结构结构的实验与计算评估 (Experimental and computational evaluation of properties of additively manufactured helical and tetrahedral cellular structures). Addit Mater 2021;45:102022. https://doi.org/10.1016/j.addma.2021.102022.
-- [62] Balaji M, Papacharakis C. 增材制造薄壁金属结构的碰撞：双尺度应变局部化 (Crashing of additively manufactured thin-walled metallic structures: two-scale strain localization). Mech Mater 2021;160:103915. https://doi.org/10.1016/j.mechmat.2021.103915.
-- [63] Abdeuwa DW, Bakir M, Al-Rub RK, Bergström G, Soh NAS, Jasiuk I. 具有三周期最小表面的3D打印聚合物的力学性能 (Mechanical properties of 3D printed polymeric cells with triperiodic minimal surfaces). Mater Des 2017;122:255–67. https://doi.org/10.1016/j.matdes.2017.03.018.
-- [64] Bonatti C, Mohr D. 胞对称性平滑超材料：各向异性弹性、强度和比能吸收 (Smooth-metamaterials of cell symmetry: anisotropic elasticity, strength and specific energy absorption). Acta Mater 2019;164:301–21. https://doi.org/10.1016/j.actam.2018.10.034.
-- [65] Duan J, Wen F, Wang D. 增强机械性能的各向异性和等向性多孔点格材料设计：仿真与实验 (Design of anisotropic and isotropic porous lattice materials for enhanced mechanical performance: simulations and experiments). Acta Mater 2020;199:397–412. https://doi.org/10.1016/j.actam
-- [66] Andrew J, Venner P, Kumar S. 纳米工程3D打印点格的抗冲击行为 (Impact behavior of nanoengineered 3D printed lattices). Mater Des 2021;209:109516. https://doi.org/10.1016/j.actmat
-- [67] Benemetti M, P Buselli A, Ricci RO, Palligoso M, Razavi SM, Berto A. 边缘胞材料：其力学性能、容错设计和制造综述 (ed cellular materials: a review on their mechanical properties failure-tolerant design and fabrication). Mater Sci Eng R 2021;144:100606. https://doi.org/10.1016/j.msme.2021.100606.
-- [68] Tan C, Zou J, Li S, Jamshid P, Abena F, A, 等. 多尺度层次增强型点格结构的增材制造 (Additive manufacturing of multi-scale hierarchically strengthened lattice structures). Int J Mach Tools 2021;167:103764. https://doi.org/10.1016/j.ijmachtools.2021.103764.
-- [69] Zhang X, Zhang R, Li Y, Li R. 增材制造Al-2O3陶瓷点格结构的准静态和动态力学性能：结构配置的影响 (Quasi-static and dynamic mechanical properties of additively manufactured Al-2O3 ceramic lattice structures: effects of structural configuration). Virtual Phys Prototypes 2022;17:528–42. https://doi.org/10.1080/17452759.2022.2048340.
+- [61] Nowak N, Busietti L, Rebani Z, Carfigamito S, Krstović-Opara L, 等. 增材制造螺旋形和四面体胞结构结构的实验与计算评估 (Experimental and computational evaluation of properties of additively manufactured helical and tetrahedral cellular structures). Addit Mater 2021;45:102022. `https://doi.org/10.1016/j.addma.2021.102022`.
+
+- [62] Balaji M, Papacharakis C. 增材制造薄壁金属结构的碰撞：双尺度应变局部化 (Crashing of additively manufactured thin-walled metallic structures: two-scale strain localization). Mech Mater 2021;160:103915. `https://doi.org/10.1016/j.mechmat.2021.103915`.
+
+- [63] Abdeuwa DW, Bakir M, Al-Rub RK, Bergström G, Soh NAS, Jasiuk I. 具有三周期最小表面的3D打印聚合物的力学性能 (Mechanical properties of 3D printed polymeric cells with triperiodic minimal surfaces). Mater Des 2017;122:255–67. `https://doi.org/10.1016/j.matdes.2017.03.018`.
+
+- [64] Bonatti C, Mohr D. 胞对称性平滑超材料：各向异性弹性、强度和比能吸收 (Smooth-metamaterials of cell symmetry: anisotropic elasticity, strength and specific energy absorption). Acta Mater 2019;164:301–21. `https://doi.org/10.1016/j.actam.2018.10.034`.
+
+- [65] Duan J, Wen F, Wang D. 增强机械性能的各向异性和等向性多孔点格材料设计：仿真与实验 (Design of anisotropic and isotropic porous lattice materials for enhanced mechanical performance: simulations and experiments). Acta Mater 2020;199:397–412. `https://doi.org/10.1016/j.actam`
+
+- [66] Andrew J, Venner P, Kumar S. 纳米工程3D打印点格的抗冲击行为 (Impact behavior of nanoengineered 3D printed lattices). Mater Des 2021;209:109516. `https://doi.org/10.1016/j.actmat`
+
+- [67] Benemetti M, P Buselli A, Ricci RO, Palligoso M, Razavi SM, Berto A. 边缘胞材料：其力学性能、容错设计和制造综述 (ed cellular materials: a review on their mechanical properties failure-tolerant design and fabrication). Mater Sci Eng R 2021;144:100606. `https://doi.org/10.1016/j.msme.2021.100606`.
+
+- [68] Tan C, Zou J, Li S, Jamshid P, Abena F, A, 等. 多尺度层次增强型点格结构的增材制造 (Additive manufacturing of multi-scale hierarchically strengthened lattice structures). Int J Mach Tools 2021;167:103764. `https://doi.org/10.1016/j.ijmachtools.2021.103764`.
+
+- [69] Zhang X, Zhang R, Li Y, Li R. 增材制造Al-2O3陶瓷点格结构的准静态和动态力学性能：结构配置的影响 (Quasi-static and dynamic mechanical properties of additively manufactured Al-2O3 ceramic lattice structures: effects of structural configuration). Virtual Phys Prototypes 2022;17:528–42. `https://doi.org/10.1080/17452759.2022.2048340`.
 
 # 功能梯度增材结构的制造与亲和性
 
-- [70] Al-Ketan O, Roshan R, Abu-Al-Rub RK. 3D打印杆件、骨架和片基周期性金属胞结构的拓扑属性关系 (Topological property relationship of 3D printed strut, skeletal, and sheet based periodic metallic cellular additives). Add Manuf 2018;19:67–83. https://doi.org/10.1016/j.addma.2017.12.006.
-- [71] Sun Z, Gao Y, Shin PWW. 用于能量吸收的增材制造聚合物混合结构的表征与建模 (Characterisation and modelling of additively-manufactured polymeric hybrid structures for energy absorption). Int J Mech Sci 2021;91:101601. https://doi.org/10.1016/j.jmecsc.2020.106101.
-- [72] Cai X P, Can C, Wang J, Zhang W, Fan Z, Gao Y, 等. 选择激光熔化AISI304多孔结构的力学性能、损伤模式和机制 (Mechanical properties, damage mode and mechanism of AISI304 porous structure manufactured by selective laser melting). J Alloys 2023;126:10613. https://doi.org/10.1016/j.allcom.2022.10613.
-- [73] Al-Ketan O, Lee D, Abu-Rub RK. 增材制造片基拟周期面胞结构的力学性能 (Mechanical properties of additively-manufactured sheet-based gyroid cellular additives). Add Manuf 2021;68:102418. https://doi.org/10.1016/j.addma.2021.102418.
-- [74] Jiang J, Hiegler Z, Zheng M, Heng H, Chronopoulos D, Chen Y, 等. 变形下3D打印聚合物泡沫的力学性能 (Mechanical properties of 3D printed polymeric foams under deformation). Mater Des 2019;204:10896. https://doi.org/10.1016/j.matdes.2019.10896.
-- [75] Holmes DW, Smith J, Lamont R, Slattery P, 等. 作为偏移泡沫替代品的柔性3D打印合金的力学行为 (Mechanical behaviour of flexible 3D printed alloys as a suitable replacement for offset foam). Add Manuf 2022;55:10255. https://doi.org/10.1016/j.addma.2022.10255.
-- [76] Wang M, DZ J, Li F, Ma Z. 具有最小表面的增材制造功能梯度结构的力性和能量吸收特性 (Mechanical and energy absorption characteristics of additively manufactured functionally graded structures with minimal surfaces). Int J Mech Sci 2020;167:10526. https://doi.org/10.1016/j.jmecsc.2019.10526.
-- [77] Bonati C, Mohr D. 面向连续壳的多孔格FCC金属的大变形性能 (Large deformation performance of additively-manufactured FCC metals from porous lattice structures towards continuous shell). Int J Plast Eng 2017;152:75–82. https://doi.org/10.1016/ijplas.2017.0203.
-- [78] Andrew J, Schneider J, Uaib J, Yelumnagar R. 低速冲击下增材制造板-格结构的能量吸收特性 (Energy absorption characteristics of additively manufactured plate-lattice under low-velocity impact). Int J Plast Eng 2021;149:10376. https://doi.org/10.1016/j.ijpe.2020.10376.
-- [79] Bhad C, Kumar A, Jung Y. 测试对增材制造格结构结构和功能性能的影响 (Effect of testing on structural and functional properties of additively manufactured lattice structures). Add Manuf 2021;47:10236. https://doi.org/10.1016/j.addma.2021.10236.
-- [80] Li T, Sharif F, Abu-Rub R, Cantwell W. 高比韧性增材制造半板材料 (Additive manufactured semi-plate materials with high specific toughness). Int J Solids 2021;230:13115. https://doi.org/10.1016/j.ijols.2021.13115.
-- [81] Maskery I, Aboukhail NT, Areu AO, Tuck J, Craft IA. 增材制造梯度结构的压缩失效模式和能量吸收 (Compressive failure mode and energy absorption in additively manufactured graded lattices). Add Manuf 2017;16:24–39. https://doi.org/10.1016/j.addma.2017.04003.
-- [82] Ghamdi SM, Mahmoud M, Rezapour K. 杆件芯3D打印明治板的结构行为：实验与数值研究 (Structural behavior of 3D printed sandwich boards with strut-based core: Experimental and numerical study). Compus Struct 2022;288:11513. https://doi.org/10.1016/j.compstruct.2021.11513.
-- [83] Maskery I, Aboukhail NT, Areu AO, Tuck J, Craft IA, Wildman RD, 等. 选择激光熔化梯度密度Al-Si-Mg格结构的力学性能评估 (A mechanical property evaluation of graded density Al-Si-Mg lattice structures manufactured by selective laser melting). Mater Sci Eng A 2016;670:264–74. https://doi.org/10.1016/j.msa.2016.06013.
+- [70] Al-Ketan O, Roshan R, Abu-Al-Rub RK. 3D打印杆件、骨架和片基周期性金属胞结构的拓扑属性关系 (Topological property relationship of 3D printed strut, skeletal, and sheet based periodic metallic cellular additives). Add Manuf 2018;19:67–83. `https://doi.org/10.1016/j.addma.2017.12.006`.
+
+- [71] Sun Z, Gao Y, Shin PWW. 用于能量吸收的增材制造聚合物混合结构的表征与建模 (Characterisation and modelling of additively-manufactured polymeric hybrid structures for energy absorption). Int J Mech Sci 2021;91:101601. `https://doi.org/10.1016/j.jmecsc.2020.106101`.
+
+- [72] Cai X P, Can C, Wang J, Zhang W, Fan Z, Gao Y, 等. 选择激光熔化AISI304多孔结构的力学性能、损伤模式和机制 (Mechanical properties, damage mode and mechanism of AISI304 porous structure manufactured by selective laser melting). J Alloys 2023;126:10613. `https://doi.org/10.1016/j.allcom.2022.10613`.
+
+- [73] Al-Ketan O, Lee D, Abu-Rub RK. 增材制造片基拟周期面胞结构的力学性能 (Mechanical properties of additively-manufactured sheet-based gyroid cellular additives). Add Manuf 2021;68:102418. `https://doi.org/10.1016/j.addma.2021.102418`.
+
+- [74] Jiang J, Hiegler Z, Zheng M, Heng H, Chronopoulos D, Chen Y, 等. 变形下3D打印聚合物泡沫的力学性能 (Mechanical properties of 3D printed polymeric foams under deformation). Mater Des 2019;204:10896. `https://doi.org/10.1016/j.matdes.2019.10896`.
+
+- [75] Holmes DW, Smith J, Lamont R, Slattery P, 等. 作为偏移泡沫替代品的柔性3D打印合金的力学行为 (Mechanical behaviour of flexible 3D printed alloys as a suitable replacement for offset foam). Add Manuf 2022;55:10255. `https://doi.org/10.1016/j.addma.2022.10255`.
+
+- [76] Wang M, DZ J, Li F, Ma Z. 具有最小表面的增材制造功能梯度结构的力性和能量吸收特性 (Mechanical and energy absorption characteristics of additively manufactured functionally graded structures with minimal surfaces). Int J Mech Sci 2020;167:10526. `https://doi.org/10.1016/j.jmecsc.2019.10526`.
+
+- [77] Bonati C, Mohr D. 面向连续壳的多孔格FCC金属的大变形性能 (Large deformation performance of additively-manufactured FCC metals from porous lattice structures towards continuous shell). Int J Plast Eng 2017;152:75–82. `https://doi.org/10.1016/ijplas.2017.0203`.
+
+- [78] Andrew J, Schneider J, Uaib J, Yelumnagar R. 低速冲击下增材制造板-格结构的能量吸收特性 (Energy absorption characteristics of additively manufactured plate-lattice under low-velocity impact). Int J Plast Eng 2021;149:10376. `https://doi.org/10.1016/j.ijpe.2020.10376`.
+
+- [79] Bhad C, Kumar A, Jung Y. 测试对增材制造格结构结构和功能性能的影响 (Effect of testing on structural and functional properties of additively manufactured lattice structures). Add Manuf 2021;47:10236. `https://doi.org/10.1016/j.addma.2021.10236`.
+
+- [80] Li T, Sharif F, Abu-Rub R, Cantwell W. 高比韧性增材制造半板材料 (Additive manufactured semi-plate materials with high specific toughness). Int J Solids 2021;230:13115. `https://doi.org/10.1016/j.ijols.2021.13115`.
+
+- [81] Maskery I, Aboukhail NT, Areu AO, Tuck J, Craft IA. 增材制造梯度结构的压缩失效模式和能量吸收 (Compressive failure mode and energy absorption in additively manufactured graded lattices). Add Manuf 2017;16:24–39. `https://doi.org/10.1016/j.addma.2017.04003`.
+
+- [82] Ghamdi SM, Mahmoud M, Rezapour K. 杆件芯3D打印明治板的结构行为：实验与数值研究 (Structural behavior of 3D printed sandwich boards with strut-based core: Experimental and numerical study). Compus Struct 2022;288:11513. `https://doi.org/10.1016/j.compstruct.2021.11513`.
+
+- [83] Maskery I, Aboukhail NT, Areu AO, Tuck J, Craft IA, Wildman RD, 等. 选择激光熔化梯度密度Al-Si-Mg格结构的力学性能评估 (A mechanical property evaluation of graded density Al-Si-Mg lattice structures manufactured by selective laser melting). Mater Sci Eng A 2016;670:264–74. `https://doi.org/10.1016/j.msa.2016.06013`.
 
 ## FG复合结构
 
-- [84] Xiao L, Song W. 和动态载荷下高强度增材制造功能梯度Ti-6Al-4格：实验 (Additively-manufactured functionally graded Ti-6Al-4 lattice structures with high strength under static and dynamic loading: experiments). Int Impact 2018;111:255–72. https://doi.org/10.1016/j.ijimp.2017.09018.
-- [85] Duan Y, Ding Y, Liu Z, Hou N, Xiao X, Liu H, 等. 胞尺寸与胞壁厚度对制造泡沫的影响 (Effects of cell size vs. cell-wall thickness on behavior of manufactured foams). Compos Sci Tech 2020;199:10389. https://doi.org/10.1016/j.compsitech.2020.10389.
-- [86] Zhou J, Li M, Wang Z, Fu G. 选择激光熔化制造片基和功能梯度格结构：力学性能与集成 (Sheet and functionally graded lattice structures manufactured by selective laser melting: mechanical properties, and integration). Int Mater Sci 2020;175:10548. https://doi.org/10.1016/j.jmec.2020.10548.
-- [87] Yang Y, Li S, Wei P, Pu W, Ho S, 等. 具有梯度结构的增材制造TPMS的可调性和力响应 (Tailorabile and mechanical responses of additively manufactured TPMS with graded structures). Mater Sci A 2022;843:224319. https://doi.org/10.1016/j.msa.2022.224319.
-- [88] Han C, Li Y, Wang Q, Wei S, Wei Q, 等. 用于骨植入的选择激光熔化制造连续梯度多孔钛支架 (Continuously graded porous titanium scaffolds manufactured by selective laser melting for bone implants). Int Mech Behave Mater Biol 2018;080:119–27. https://doi.org/10.1016/j.imbmb.2018.080119.
-- [89] Baneshi B, Babam O, Gol G, Golhi T, Shams N. 不同图案的增材制造格结构 (Additively manufactured lattice structures with varying patterns). Add Manuf 2021;47:10236. https://doi.org/10.1016/j.addma.2021.10236.
-- [90] Li S, Zhao H, Hou Y, Teng C. 功能梯度Ti-6Al-4高强度和能量吸收 (Functionally graded Ti-6Al-4 with high strength and energy absorption). Adv Mater 2015;38:0038. https://doi.org/10.1002/adms.2015.
-- [91] Duan Y, Xiao Z, Liu H, Du B. 增材制造梯度泡沫的动态响应 (Dynamic response of additively manufactured graded foams). Composites B 2019;183:10763. https://doi.org/10.1016/j.composb.2019.10763.
-- [92] Duan Y, Du B, Shi X, Wang H, Du B. 梯度泡沫的准静态行为和本构模型 (Quasi-static behavior and constitutive model of graded foams). Int J Mater Sci 2020;177:10563. https://doi.org/10.1016/j.ijmm.2020.10563.
+- [84] Xiao L, Song W. 和动态载荷下高强度增材制造功能梯度Ti-6Al-4格：实验 (Additively-manufactured functionally graded Ti-6Al-4 lattice structures with high strength under static and dynamic loading: experiments). Int Impact 2018;111:255–72. `https://doi.org/10.1016/j.ijimp.2017.09018`.
+
+- [85] Duan Y, Ding Y, Liu Z, Hou N, Xiao X, Liu H, 等. 胞尺寸与胞壁厚度对制造泡沫的影响 (Effects of cell size vs. cell-wall thickness on behavior of manufactured foams). Compos Sci Tech 2020;199:10389. `https://doi.org/10.1016/j.compsitech.2020.10389`.
+
+- [86] Zhou J, Li M, Wang Z, Fu G. 选择激光熔化制造片基和功能梯度格结构：力学性能与集成 (Sheet and functionally graded lattice structures manufactured by selective laser melting: mechanical properties, and integration). Int Mater Sci 2020;175:10548. `https://doi.org/10.1016/j.jmec.2020.10548`.
+
+- [87] Yang Y, Li S, Wei P, Pu W, Ho S, 等. 具有梯度结构的增材制造TPMS的可调性和力响应 (Tailorabile and mechanical responses of additively manufactured TPMS with graded structures). Mater Sci A 2022;843:224319. `https://doi.org/10.1016/j.msa.2022.224319`.
+
+- [88] Han C, Li Y, Wang Q, Wei S, Wei Q, 等. 用于骨植入的选择激光熔化制造连续梯度多孔钛支架 (Continuously graded porous titanium scaffolds manufactured by selective laser melting for bone implants). Int Mech Behave Mater Biol 2018;080:119–27. `https://doi.org/10.1016/j.imbmb.2018.080119`.
+
+- [89] Baneshi B, Babam O, Gol G, Golhi T, Shams N. 不同图案的增材制造格结构 (Additively manufactured lattice structures with varying patterns). Add Manuf 2021;47:10236. `https://doi.org/10.1016/j.addma.2021.10236`.
+
+- [90] Li S, Zhao H, Hou Y, Teng C. 功能梯度Ti-6Al-4高强度和能量吸收 (Functionally graded Ti-6Al-4 with high strength and energy absorption). Adv Mater 2015;38:0038. `https://doi.org/10.1002/adms.2015`.
+
+- [91] Duan Y, Xiao Z, Liu H, Du B. 增材制造梯度泡沫的动态响应 (Dynamic response of additively manufactured graded foams). Composites B 2019;183:10763. `https://doi.org/10.1016/j.composb.2019.10763`.
+
+- [92] Duan Y, Du B, Shi X, Wang H, Du B. 梯度泡沫的准静态行为和本构模型 (Quasi-static behavior and constitutive model of graded foams). Int J Mater Sci 2020;177:10563. `https://doi.org/10.1016/j.ijmm.2020.10563`.
+
+
+
 - [93] Li F M, Zhao Z, Wang J, Ma J. 多图案功能梯度多孔支架：设计方法、物理性能 (Functionally graded porous scaffolds from multiple patterns: design method, physical properties). Mater Des 2018;169:84–90. https://doi.org/10.1016/j.matdes.2018.09053.
+
 - [94] Huang C, Aunes S, Ziegler K, Han T, Chen Y. 3D打印具有不同吸收系数的梯度结构 (3D Printing graded cellular structures with varying absorption coefficients). Compos Part B 2022;221:10918. https://doi.org/10.1016/j.composb.2021.
+
 - [95]] Shao S, Li SJ, Wang GH, Hou YT, Li J, 等. 电子束熔化制造的功能梯度Ti-6Al-4疲劳和疲劳行为 (Fatigue and fatigue behavior of functionally graded Ti-6Al-4 manufactured by electron beam melting). Mater Sci 2018;150:1–15. https://doi.org/10.1016/j.matsci.2018.02015.
+
 - [96] Chen Y, Su C, Ke Lei X. 选择激光熔化制造的功能梯度格结构的力学性能 (Mechanical properties of functionally graded lattice structures by selective laser melting). Mater Des 2017;131:112–20. https://doi.org/10.1016/j.matdes.2017.06006.
+
 - [97] Seyedyani A, Karim H, Akbarzadeh AH. 优化梯度3D打印胞单元梁的弯曲行为 (Bending behavior of optimally graded 3D printed cellular beams). Add Manuf 2020;35:10327. https://doi.org/10.1016/j.addma.2020.10327.
+
 - [98] Seiring A, Azman AH, Abdullah S. 增材制造零件中轻量化梯度格结构集成的综述 (A review on integration of lightweight graded lattice structures in additive manufacturing parts). Adv Mech Sci 2020;12. https://doi.org/10.1177/1678814020919951.
 
-
-
-
-自适应制造梯度多隙结构的设计与制造
+# 自适应制造梯度多隙结构的设计与制造
 
 - [99] Li Q, Zhi X, Fan F. 由SLM制造的均匀和功能性仿生启发性单元结构的动态压碎。M. Eng Struct 2022:262:114327. 来源于：https://doi.org/10.1016/j.engstruct.2022.114327.
+
 - [100] Xiang Y, Han Z, Qin J, Dong L, Zhang H, Wang Y, et al. 孔隙率梯度模式对自适应制造Ti-6Al-4V功能性多隙结构机械性能的影响。Mater Des 2021;208:109911. 来源于：https://doi.org/10.1016/j.matdes.2021.109911.
+
 - [101] Ge Q, Dunn QC, Qi J, Hahn ML. 4D打印实现主动折纸。Smart Mater 2014;5:04067. 来源于：https://doi.org/10.1088/096764-1726/23/094007.
+
 - [102] Liu G, Zhao Y, Wu G, Lu J. 弹性体衍生陶瓷结构的4D打印。Sci Adv 2018;4:160641. 来源于：https://doi.org/10.1126/sciadv.aev0641.
-- [103] Zhu J-H, Zhang W-H, Xia L. 飞机和航天结构设计中的拓扑优化。Arch Comput Methods Eng 2016;23:595–622. 来源于：https://doi.org/10.1007/s11831-015-9. 
+
+- [103] Zhu J-H, Zhang W-H, Xia L. 飞机和航天结构设计中的拓扑优化。Arch Comput Methods Eng 2016;23:595–622. 来源于：https://doi.org/10.1007/s11831-015-9.
+
 - [104] Meng L, Zhang W, Quan D, Shi T, Wang L, et al. 从拓扑优化设计到自适应制造：今天与未来的路线图。Arch Comput Methods Eng 2020;27:3805–30. 来源于：https://doi.org/10.1007/s11831-019-3.
+
 - [105] Cui H, Yao D, Hensleigh R, Lu H, Calderon, Xu Z, et al. 感知三维架构材料的设计与打印。Science 2022;376:1287–93. 来源于：https://doi.org/10.1126/science.abc090.
 
 # 增材制造功能梯度多隙结构的机械行为
 
 Yu Duan$^{1,2}$, Du$^{1,2}$, Xianhang Zhao$^{1,2}$, Hou$^{1,2}$ Yulong Li$^{1,2}$
+
 1 西北理工大学航空学院，西安，中国
+
 2 西北理工大学冲击动力学及其工程联合国际实验室，西安，中国
+
 3 浙江大学力学中心，杭州，中国
 
 ## 15.1 引言
@@ -7581,7 +7869,9 @@ Yu Duan$^{1,2}$, Du$^{1,2}$, Xianhang Zhao$^{1,2}$, Hou$^{1,2}$ Yulong Li$^{1,2}
 关于泡沫的压缩行为的研究尚较少 [16–18]，Gupta和 Ricci [16] 对具有梯度分数和壁厚的微球泡沫进行了研究。Mackey等人 [17] 构建了梯度泡沫与均匀泡沫的机械性能。Zeng等人 [18] 建议将最硬层与冲击头接触，最软层作为冲击层可以实现最大的能量吸收。然而，这些梯度泡沫具有分段变化的密度，限制了这些材料的性能。为了制造连续梯度泡沫，Hangai等人 [19] 通过搅拌铸造制造了连续梯度铝泡沫。Brothers和 Duan [20] 分别使用非均匀泡沫构建和粉末混合结构制造了密度梯度泡沫。两者均发现梯度泡沫表现出平滑上升的平台，这是由于每个组件的渐进变形引起的。一旦较软层失效，较强层将支撑载荷，且应力将超过当前层的强度。
 
 机器学习辅助的功能梯度多隙复合结构分析、设计与增材制造
+
 DOI: https://doi.org/10.1016/S2145-6425-00012-2
+
 Copyright © 2024 Elsevier. 版权所有。
 
 然而，上述方法以单调或不可控的方式实现了泡沫密度的连续变化。
@@ -7594,16 +7884,13 @@ Copyright © 2024 Elsevier. 版权所有。
 
 ### 15.2.1 实验设置
 
-静态加载
+#### 静态加载
 
-使用带有100 kN通用试验机进行测试，应变速率为0.001 s⁻¹。根据ASTM1621标准进行测试。通过力计测量施加力$F$，计算相应的应力$\sigma = F/A_0$（其中$A_0$为初始截面积）。通过光学位移计测量位移$\Delta L$，计算相应的应变$\varepsilon = \Delta L/L_0$（其中$L_0$为初始长度）。
+使用带有100 kN通用试验机进行测试，应变速率为0.001 s⁻¹。根据ASTM1621标准进行测试。通过力计测量施加力`F`，计算相应的应力`σ = F/A_0`（其中`A_0`为初始截面积）。通过光学位移计测量位移`ΔL`，计算相应的应变`ε = ΔL/L_0`（其中`L_0`为初始长度）。
 
-### 15.2.2 动态加载
+#### 动态加载
 
 霍金斯冲击棒因其精确测量被广泛用于材料机械性能测试 [40,41]。本文考虑了直接冲击试验和泰勒试验，以研究增材制造泡沫的压碎行为。在直接冲击试验中，样品固定在支撑杆上，由冲击杆压缩泡沫（图15.1A）。在泰勒试验中，将相同的样品固定在冲击杆上，支撑承受动态冲击（图15.1B）。
-
-
-
 
 ![](img/90ed165a39fa708ec438fcda79319c25_385_0.png)
 
@@ -7624,11 +7911,13 @@ Voronoi 模型非常真实的泡沫，因为其生成过程与物理成泡过程
 ![](img/90ed165a39fa708ec438fcda79319c25_386_0.png)
 
 **图 15.2** 单元尺寸范围从 5 到 10 mm 的均匀 Voronoi 泡沫：(A) U5, (B) U6, (C) U7, (D) U8, (E) U9 和 (F) U10，所有均匀泡沫均为立方体，且长度均为 50 mm [44]。
+
 来源：经许可自 Duan Y, Zhao X, Du B, Shi X, Zhao H, Hou B, 等. 梯度泡沫的准静态压缩行为和本构模型。Int J Mech Sci 2020;177:105603. 版权 2020, Elsevier。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_386_1.png)
 
 **图 15.3** (A) 梯度 Voronoi 泡沫单元尺寸分布的示意图，*h* 是沿高度方向的坐标，原点位于未变形试样的加载端，*H* 是试样的初始高度。(B) 单调梯度分布下单元尺寸归一化高度曲线的变化。
+
 来源：经许可自 Duan Y, Zhao X, Du B, Shi X, Zhao H, Hou B, 等. 梯度泡沫的准静态压缩行为和本构模型。Int J Mech Sci 2020,177:105603. 版权 2020, Elsevier。
 
 ### 15.2.2.2 梯度泡沫的建模
@@ -7636,11 +7925,13 @@ Voronoi 模型非常真实的泡沫，因为其生成过程与物理成泡过程
 Voronoi 模型也被用于建模梯度泡沫。通过在保持壁厚恒定的同时改变沿加载方向的单元尺寸分布，引入了连续梯度。根据坐标系（如图 15.3A 所示），我们可以自定义沿 h 轴的单元尺寸分布。为了获得密度梯度，单元尺寸分布给出：
 
 $$s(\bar{h}) = \frac{s_{max} + s_{min}}{2} + \frac{s_{max} - s_{min}}{2} \cdot (1-2\bar{h})}{\frac{\dot{h}}{2}} \quad (0 \le \bar{h} \le \frac{1}{2})$$
+
 $$s(\bar{h}) = s_{min} + \frac{s_{max} - s_{min}}{2} \cdot (2-2\bar{h})^M \quad (\frac{1}{2} \le \bar{h} \le 1) \quad (15.1)$$
 
-其中 $M$ 是梯度参数$h$ 是归一化高度，定义为 $h/H$，其中 $h$ 是沿高度方向的坐标，原点位于均匀试样的加载端，$H$ 是试样的初始高度（图 15.3A）。$s_{min}$ 和 $s_{max}$ 分别是梯度泡沫的最小和最大单元尺寸分别为 5 mm 和 10 mm。根据公式 (15.1)，内部单元的数量沿压溃密度逐渐增加，导致密度逐渐增大。此外，为了获得负梯度密度，单元尺寸分布定义为：
+其中 `M` 是梯度参数`h` 是归一化高度，定义为 `h/H`，其中 `h` 是沿高度方向的坐标，原点位于均匀试样的加载端，`H` 是试样的初始高度（图 15.3A）。`s_min` 和 `s_max` 分别是梯度泡沫的最小和最大单元尺寸分别为 5 mm 和 10 mm。根据公式 (15.1)，内部单元的数量沿压溃密度逐渐增加，导致密度逐渐增大。此外，为了获得负梯度密度，单元尺寸分布定义为：
 
 $$s(\bar{h}) = s_{min} + \frac{s_{max} - s_{min}}{2} \cdot (2-\bar{h})^M \quad (0 \le \bar{h} \le \frac{1}{2})$$
+
 $$s(\bar{h}) = s_{min} + \frac{s_{max} - s_{min}}{2} \cdot (2-\bar{h})^{\frac{1}{M}} \quad (\frac{1}{2} \le \bar{h} \le 1) \quad (15.2)$$
 
 内部单元的数量沿加载方向逐渐减少，导致密度逐渐减小。不同梯度泡沫归一化高度的单元尺寸变化如图 15.3B 所示。图例中的第一个字符“M”代表由公式 (15.1) 和 (15.2) 给出的梯度参数。准静态测试选择了包括 1 和 10 在内的 M 值。第二个符号“NG”或“PG”分别代表负密度或正密度。除了上述的单调密度外，图 15.4 中还考虑了六种非单调分布。数字“H”或“L”分别表示最高或最低密度。由公式 (15.1) 和 (15.2) 给出的梯度参数设定为 0.1、0.5、1、2和10 以制作更多梯度泡沫配置。此外，与准静态测试相同，因此省略。
@@ -7650,11 +7941,13 @@ $$s(\bar{h}) = s_{min} + \frac{s_{max} - s_{min}}{2} \cdot (2-\bar{h})^{\frac{1}
 ![](img/90ed165a39fa708ec438fcda79319c25_386_0.png)
 
 **图 15.2** 单元尺寸范围从 5 到 10 mm 的均匀 Voronoi 泡沫：(A) U5, (B) U6, (C) U7, (D) U8, (E) U9 和 (F) U10，所有均匀泡沫均为立方体，且长度均为 50 mm [44]。
+
 来源：经许可自 Duan Y, Zhao X, Du B, Shi X, Zhao H, Hou B, 等. 梯度泡沫的准静态压缩行为和本构模型。Int J Mech Sci 2020;177:105603. 版权 2020, Elsevier。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_386_1.png)
 
 **图 15.3** (A) 梯度 Voronoi 泡沫单元尺寸分布的示意图，*h* 是沿高度方向的坐标，原点位于未变形试样的加载端，*H* 是试样的初始高度。(B) 单调梯度分布下单元尺寸归一化高度曲线的变化。
+
 来源：经许可自 Duan Y, Zhao X, Du B, Shi X, Zhao H, Hou B, 等. 梯度泡沫的准静态压缩行为和本构模型。Int J Mech Sci 2020,177:105603. 版权 2020, Elsevier。
 
 **图 15.4** (A) 单调 (B) 非单调
@@ -7673,10 +7966,11 @@ $$s(\bar{h}) = s_{min} + \frac{s_{max} - s_{min}}{2} \cdot (2-\bar{h})^{\frac{1}
 
 使用名为“Raise3D N2 PLUS”的商业3D打印机进行增材制造。首先，我们生成 Voronoi 泡沫的计算机辅助设计。其次，将模型转换为立体格式并传输到切片软件“IdeaMaker”。最后，将模型切片并导入3D打印机。所有试样的基材是一种名为PolyMax的聚丙酸。打印材料的密度和熔点分别为1200 kg/m³和170°C。对打印参数进行了优化，以消除对试样力学性能的影响。层高、挤出温度和速度分别确定为0.1 mm、220°C和30 mm/s。该打印机的喷嘴直径为0.4 mm，因此所有试样的单元壁厚均设定为0.4 mm。每种配置生产三个试样以检查实验结果的可重复性。
 
-相对密度 $\rho$ 定义为泡沫密度 $\rho^*$ 与基材密度 $\rho_-$ 之比，通常用于描述泡沫的力学性能。所有 Voronoi 泡沫的平均密度计算并列在表15.1和15.2中。可以看出，均匀泡沫的相对密度随单元尺寸减小而增加，而所有梯度泡沫具有相似的相对密度。注意，单元尺寸梯度直接应用于公式(15.1)和(15.2)，而相对密度主要用于描述
+相对密度 `ρ` 定义为泡沫密度 `ρ*` 与基材密度 `ρ_-` 之比，通常用于描述泡沫的力学性能。所有 Voronoi 泡沫的平均密度计算并列在表15.1和15.2中。可以看出，均匀泡沫的相对密度随单元尺寸减小而增加，而所有梯度泡沫具有相似的相对密度。注意，单元尺寸梯度直接应用于公式(15.1)和(15.2)，而相对密度主要用于描述
 
 
-增材制造功能梯度多孔结构的力学行为
+
+# 增材制造功能梯度多孔结构的力学行为
 
 表15.1 准静态测试中制造试样的基本规格。
 
@@ -7692,16 +7986,16 @@ $$s(\bar{h}) = s_{min} + \frac{s_{max} - s_{min}}{2} \cdot (2-\bar{h})^{\frac{1}
 表15.2 动态测试中试样的的基本规格。
 
 | ID | 均匀泡沫的相对密度 (%) | ID | 单调梯度泡沫的相对密度 (%) | ID | 单调梯度泡沫的相对密度 (%) |
-|---|---|---|---|---|
+|---|---|---|---|---|---|
 | U5 | 18.49 ± 0.11 | M0.1 | 11.82 ± 0.07 | 1/4-H | 11.91 ± 0.18 |
 | U6 | 15.58 ± 0.08 | M0.5-PG | 11.90 ± 0.05 | 1/2-H | 12.07 ± 0.10 |
 | U7 | 13.37 ± 0.06 | M1-PG | 11.84 ± 0.10 | 3/4-H | 12.10 ± 0.03 |
 | U8 | 11.77 ± 0.04 | M2-PG | 11.87 ± 0.03 | 1/4-L | 12.15 ± 0.02 |
 | U9 | 10.63 ± 0.04 | M10-PG | 11.86 ± 0.04 | 1/2-L | 11.95 ± 0.10 |
 | U10 | 9.58 ± 0.02 | M10-NG | 11.83 ± 0.06 | 3/4-L | 12.00 ± 0.19 |
-| | M0.5-NG | 11.93 ± 0.22 | | |
-| | M2-NG | 11.84 ± 0.09 | | |
-| | M10-NG | 11.93 ± 0.01 | | |
+| | M0.5-NG | 11.93 ± 0.22 | | | |
+| | M2-NG | 11.84 ± 0.09 | | | |
+| | M10-NG | 11.93 ± 0.01 | | | |
 
 泡沫的力学性能。根据[46]，相对密度的函数给出：
 
@@ -7757,8 +8051,6 @@ $\eta = \frac{\int_{0}^{\varepsilon_a}\sigma(z)dz}{\sigma(\varepsilon_a)}$
 | 3/4-H | 58.71 ± 4.93 | 0.027 ± 0.001 | 1.16 ± 0.02 | 1.47 ± 0.01 | 0.68 ± 0.01 |
 | 3/4-L | 66.29 ± 1.54 | 0.024 ± 0.001 | 1.22 ± 0.01 | 1.44 ± 0.03 | 0.66 ± 0.01 |
 
-
-
 增材制造梯度多孔结构的力学行为
 
 （应）。随后，在0.03的名义应变下（图 15.9B），初始变形集中出现在最薄的区域并影响相邻单元，导致承载能力下降。随着标义应变的继续增加，坍塌的单元聚集在一起，未损坏的单元开始承担载荷，应力再次上升。在标义应变为0.15时（图 15.9B），出现了更多变形集中。在变形带之后，出现了被称为“平台阶段”的第二阶段。这有助于泡沫在冲击保护应用中的利用。在较长的应变范围内，应力随应变增加略有波动。最后一张图显示了显著上升的密化阶段。在标义应变为0.65时（图 15.9B），胞壁相互接触，泡沫将塌变为固体材料。
@@ -7805,8 +8097,6 @@ $\eta = \frac{\int_{0}^{\varepsilon_a}\sigma(z)dz}{\sigma(\varepsilon_a)}$
 
 试件的名义应力-应变曲线和应变轮线如图 15.16 所示，黑色箭头表示载荷方向。图例中的最后一个符号“D”或“T”分别指向冲击测试或泰勒测试。应变轮线选择了 Von Mises 有效应变。
 
-
-
 # 增材制造功能梯度多孔结构的力学行为
 
 ![](img/90ed165a39fa708ec438fcda79319c25_398_0.png)
@@ -7822,13 +8112,16 @@ $\eta = \frac{\int_{0}^{\varepsilon_a}\sigma(z)dz}{\sigma(\varepsilon_a)}$
 ![](img/90ed165a39fa708ec438fcda79319c25_399_0.png)
 
 **图 15.16** 两种冲击场景下试件的应力-应变曲线：(A) 均匀泡沫和 (B) 梯度泡沫；两种冲击场景下试件的应变等线图：(C) 均匀泡沫和 (D) 梯度泡沫。
+
 *来源：*经许可自 Duan Y, Zhao X, Liu Z, Hou N, Liu H, Du 等. 适应性制造梯度泡沫的动态响应.Compos Part B 2020:183:107630. 版所有 2020, Elsevier.
 
 变形模式主要取决于梯度分布。试件中密度最低区域的承载能力最低并首先发生变形，如图 15.16j 所示。尽管两种冲击场景具有不同的初始变形位置，但它们的应力-应变曲线几乎相同。因此，为了简洁起见，将在后续章节中讨论直接冲击测试的应力-应变曲线和变形分布。
 
 ## 15.4.3 梯度分布的影响
 
-不同梯度分布的梯度泡沫的名义应力-应变曲线如图 15.17A–C 所示。可以看出试件 MI-NG
+
+
+不同梯度分布的梯度泡沫的名义应力-应变曲线如图 15.17A–C 所示。可以看出试件 `MI-NG`
 
 ![](img/90ed165a39fa708ec438fcda79319c25_400_0.png)
 
@@ -7848,22 +8141,17 @@ $\eta = \frac{\int_{0}^{\varepsilon_a}\sigma(z)dz}{\sigma(\varepsilon_a)}$
 
 > **图 15.17** 梯度泡沫的应力-应变曲线：(A) M1-PG 和 (B) NG-NG，(C) 1/4-H 和 3/4-H；梯度泡沫的变形演化：(D) M1-PG 和 (E) M1-NG。**来源：** 经许可自 Duan Y, Zhao X, Liu Z, Hou N, Liu H, 等. 增材制造梯度泡沫的动态响应.Compos Part B Eng 2020:18510630. 版所有 2020, Elsevier.
 
-具有逐渐增加的平台期，而 M1-PG 在逐渐增加的平台期之前表现出波动（图 15.1A）。同样，试件 1/4-H 和 3/4-H 表现出逐渐增加的平台期（图 15.1B）。在实践中，应力-应变曲线的趋势（梯度波动）主要取决于末端附近的局部密度。例如，试件 M1-PG 的支撑端具有波动，而 M1-NG 的末端具有逐渐增加的平台期。在实验中，应变片记录了支撑端获得了试件支撑端的应力-应变曲线。如果最低密度区域靠近支撑端，这将以逐渐增加的平台期结束。相反，如果将高密度区域放在这里，它将在逐渐增加的平台期之前表现出断裂波动。梯度泡沫的变形过程可以解释这些现象。例如，对于正梯度泡沫 M1-PG（图 15.17D），初始塑性变形由最低密度区域主导，试件逐层坍塌。随着塑性变形发生，施加的负载无法引起高密度区域的变形，因此支撑端的高密度区域开始卸载。随着名义应变的增加，最低密度区域逐渐密实，然后施加的负载将二次加载带到高密度区域，导致压缩应增加。结果是在平台期开始时出现剧烈波动。相反，考虑负梯度 M1-NG（图 15.17E），最低密度区域靠近支撑端，初始塑性变形发生在支撑端。变形逐渐延伸到最低密度区域，在应力-应变曲线中进入增加的平台期。最后，在试件两端具有相似承载能力后可以实现应力平衡，因此 M1-PG 和 M1-NG 具有不同梯度参数的相似应力-应变曲线，如图 15.18 所示。可以观察到较高梯度的泡沫![](img/90ed165a39fa708ec438fcda79319c25_401_0.png)
+具有逐渐增加的平台期，而 `M1-PG` 在逐渐增加的平台期之前表现出波动（图 15.1A）。同样，试件 `1/4-H` 和 `3/4-H` 表现出逐渐增加的平台期（图 15.1B）。在实践中，应力-应变曲线的趋势（梯度波动）主要取决于末端附近的局部密度。例如，试件 `M1-PG` 的支撑端具有波动，而 `M1-NG` 的末端具有逐渐增加的平台期。在实验中，应变片记录了支撑端获得了试件支撑端的应力-应变曲线。如果最低密度区域靠近支撑端，这将以逐渐增加的平台期结束。相反，如果将高密度区域放在这里，它将在逐渐增加的平台期之前表现出断裂波动。梯度泡沫的变形过程可以解释这些现象。例如，对于正梯度泡沫 `M1-PG`（图 15.17D），初始塑性变形由最低密度区域主导，试件逐层坍塌。随着塑性变形发生，施加的负载无法引起高密度区域的变形，因此支撑端的高密度区域开始卸载。随着名义应变的增加，最低密度区域逐渐密实，然后施加的负载将二次加载带到高密度区域，导致压缩应增加。结果是在平台期开始时出现剧烈波动。相反，考虑负梯度 `M1-NG`（图 15.17E），最低密度区域靠近支撑端，初始塑性变形发生在支撑端。变形逐渐延伸到最低密度区域，在应力-应变曲线中进入增加的平台期。最后，在试件两端具有相似承载能力后可以实现应力平衡，因此 `M1-PG` 和 `M1-NG` 具有不同梯度参数的相似应力-应变曲线，如图 15.18 所示。可以观察到较高梯度的泡沫
+
+![](img/90ed165a39fa708ec438fcda79319c25_401_0.png)
 
 **图 15.18** 不同单调分布的梯度泡沫应力-应变曲线：(A) 正向和 (B) 负向；不同分布的梯度泡沫应变等线图：(C) 正向和 (D) 负向。
+
 来源：经许可自 Duan Y, Zhao X, Liu Z, Hou N, Liu H, Du, 等. 增材制造泡沫的动态响应.Compos Part B 2020:183:10730. 版所有 2020, Elsevier
 
 增材制造功能梯度多孔结构的
 
-参数（如 M1-NG）具有逐渐增加的平台期，而 M1-PG 在逐渐增加的平台期之前表现出波动（图 15.1A）。同样，试件 1/4-H 和 3/4-H 表现出逐渐增加的平台期（图 15.1B）。在实践中，应力-应变曲线的趋势（梯度波动）主要取决于末端的局部密度。例如，试件 M1-PG 的支撑端具有波动，而 M1-NG 的末端具有逐渐增加的平台期。在实验中，应变片记录支撑端获得了试件支撑端的应力-应变曲线。如果最低密度区域靠近支撑端，这将以逐渐增加的平台期结束。相反，如果将高密度区域放在这里，它将在逐渐增加的平台期之前表现出断裂波动。梯度泡沫的变形过程可以解释这些现象。例如，对于正梯度泡沫 M1-PG（图 15.17D），初始塑性变形由最低密度区域主导，试件逐层坍塌。随着塑性变形发生，施加的负载无法引起高密度区域的变形，因此支撑端的高密度区域开始卸载。随着名义应变的增加，最低密度区域逐渐密实，然后施加的负载将二次加载带到高密度区域，导致压缩应力增加。结果是在平台期开始时出现剧烈波动。相反，考虑负梯度 M1-NG（图 15.17E），最低密度区域靠近支撑棒，初始塑性变形发生在支撑端。变形逐渐延伸到最低密度区域，在应力-应变曲线中进入增加的平台期。最后，在试件两端具有相似承载能力后可以实现应力平衡，因此 M1-PG 和 M1-NG 具有不同梯度参数的相似应力-应变曲线，如图 15.18。可以观察到较高梯度的泡沫
-
-（注：此处提供的文本包含大量重复内容，已根据逻辑流进行合并和去重处理，以确保翻译的专业性。）
-
-*(自我修正：提供的 OCR 文本由于页眉包含许多重复块，我将根据逻辑提供合并后的版本。）*
-
-
-
-
+参数（如 `M1-NG`）具有逐渐增加的平台期，而 `M1-PG` 在逐渐增加的平台期之前表现出波动（图 15.1A）。同样，试件 `1/4-H` 和 `3/4-H` 表现出逐渐增加的平台期（图 15.1B）。在实践中，应力-应变曲线的趋势（梯度波动）主要取决于末端的局部密度。例如，试件 `M1-PG` 的支撑端具有波动，而 `M1-NG` 的末端具有逐渐增加的平台期。在实验中，应变片记录支撑端获得了试件支撑端的应力-应变曲线。如果最低密度区域靠近支撑端，这将以逐渐增加的平台期结束。相反，如果将高密度区域放在这里，它将在逐渐增加的平台期之前表现出断裂波动。梯度泡沫的变形过程可以解释这些现象。例如，对于正梯度泡沫 `M1-PG`（图 15.17D），初始塑性变形由最低密度区域主导，试件逐层坍塌。随着塑性变形发生，施加的负载无法引起高密度区域的变形，因此支撑端的高密度区域开始卸载。随着名义应变的增加，最低密度区域逐渐密实，然后施加的负载将二次加载带到高密度区域，导致压缩应力增加。结果是在平台期开始时出现剧烈波动。相反，考虑负梯度 `M1-NG`（图 15.17E），最低密度区域靠近支撑棒，初始塑性变形发生在支撑端。变形逐渐延伸到最低密度区域，在应力-应变曲线中进入增加的平台期。最后，在试件两端具有相似承载能力后可以实现应力平衡，因此 `M1-PG` 和 `M1-NG` 具有不同梯度参数的相似应力-应变曲线，如图 15.18。可以观察到较高梯度的泡沫
 
 202
 
@@ -7877,18 +8165,19 @@ FG 多孔复合结构
 
 换言之，引入梯度分布对弹性模量、平台应变以及密化应变的影响很小。因此，可以建立一种预测模型，基于均匀泡沫的力学性能模拟分级泡沫的准静态压缩性能，并研究梯度分布如何控制平台阶段。
 
-对于动态测试，分级泡沫与均匀泡沫之间的关系通常与准静态测试中的发现相似。图 15.21 比较了均匀泡沫和分级泡沫的标量应力-应变曲线。注意，均匀泡沫 U8 和分级泡沫 M1-NG 具有几乎相同的弹性模量。
+对于动态测试，分级泡沫与均匀泡沫之间的关系通常与准静态测试中的发现相似。图 15.21 比较了均匀泡沫和分级泡沫的标量应力-应变曲线。注意，均匀泡沫 `U8` 和分级泡沫 `M1-NG` 具有几乎相同的弹性模量。
 
 增材制造的功能梯度多孔结构的力学行为 403
 
 ![](img/90ed165a39fa708ec438fcda79319c25_404_0.png)
 
 **图 15.20** 准静态压缩下均匀泡沫“U8”和分级泡沫“M1-PG”的标量应力-应变曲线对比。
+
 来源：经 Duan Y, Zhao X, Du B, Shi X, Zhao H, Hou B, 等许可复制。分级泡沫的准静态压缩行为和本构模型。Int J Mech Sci 2020;105603. 版所有 2020, Elsevier。
 
 这表明，当相对密度相同时，分级泡沫和均匀泡沫具有相同的弹性模量。由于泡沫中的所有单元在弹性阶段具有相同的应变，因此对于任何梯度分布，分级泡沫的弹性模量都是所有单元的平均值。
 
-从图 15.21 所示，分级泡沫 M1-NG 和均匀泡沫 U10 具有类似的坍塌阶段（弹性阶段后的第一个峰）。当泡沫开始坍塌时，分级泡沫总是从最弱的层开始坍塌（最高 10 MPa）。结果，分级泡沫的坍塌应力取决于最弱层的强度。对于平台阶段，均匀泡沫表现出恒定的平台阶段，而分级泡沫 M1-NG 则表现出逐渐增加的平台阶段（图 15.21）。这种现象可以用分级泡沫的连续变形模式来解释，因为它们从最弱层向最强层变形。当较弱的层被压缩时，力学响应将保持在当前层的平台上。当较弱层完全坍塌后，较强的层继续承受规定的载荷，力学响应遵循当前层的新平台阶段。这种行为从最弱区域到最强区域连续发生，随着标量应变的增加，应力逐渐增大。
+从图 15.21 所示，分级泡沫 `M1-NG` 和均匀泡沫 `U10` 具有类似的坍塌阶段（弹性阶段后的第一个峰）。当泡沫开始坍塌时，分级泡沫总是从最弱的层开始坍塌（最高 10 MPa）。结果，分级泡沫的坍塌应力取决于最弱层的强度。对于平台阶段，均匀泡沫表现出恒定的平台阶段，而分级泡沫 `M1-NG` 则表现出逐渐增加的平台阶段（图 15.21）。这种现象可以用分级泡沫的连续变形模式来解释，因为它们从最弱层向最强层变形。当较弱的层被压缩时，力学响应将保持在当前层的平台上。当较弱层完全坍塌后，较强的层继续承受规定的载荷，力学响应遵循当前层的新平台阶段。这种行为从最弱区域到最强区域连续发生，随着标量应变的增加，应力逐渐增大。
 
 404
 
@@ -7896,9 +8185,9 @@ FG 多孔复合结构
 
 ![](img/90ed165a39fa708ec438fcda79319c25_405_0.png)
 
-**图 15.21** 试件 U8、U10 和 M1-NG 在动态压缩（20 m/s）下的应力-应变曲线对比。*来源：*经 Duan Y, Zhao X, Liu Z, Hou N, Liu H, Du B, 等许可复制。制备分级泡沫的动态响应。Compos Part Eng 2020;1831. 版所有 2020, Elsevier。
+**图 15.21** 试件 `U8`、`U10` 和 `M1-NG` 在动态压缩（20 m/s）下的应力-应变曲线对比。*来源：*经 Duan Y, Zhao X, Liu Z, Hou N, Liu H, Du B, 等许可复制。制备分级泡沫的动态响应。Compos Part Eng 2020;1831. 版所有 2020, Elsevier。
 
-从图 15.21 来看，分级泡沫 M1-NG 和均匀泡沫 U8 具有类似的密化阶段，因为它们的相对密度相似。当泡沫压缩到密化阶段时，它们的力学性能仅取决于相对密度，而非内部结构。
+从图 15.21 来看，分级泡沫 `M1-NG` 和均匀泡沫 `U8` 具有类似的密化阶段，因为它们的相对密度相似。当泡沫压缩到密化阶段时，它们的力学性能仅取决于相对密度，而非内部结构。
 
 结论，分级泡沫的力学性能与均匀泡沫的力学性能相关。在弹性阶段，如果相对密度相同，分级泡沫和均匀泡沫具有相同的模量。在平台阶段，分级泡沫在其每一层表现出其组成的多个平台应力。在密化阶段，分级泡沫与整体密度类似的均匀泡沫具有类似的密化阶段。因此，分级泡沫的应力-应变曲线可以通过不同相对密度的均匀泡沫来预测。
 
@@ -7912,11 +8201,11 @@ FG 多孔复合结构
 
 $$\begin{aligned} \frac{E^*}{E_s} &= 0.756 \left(\frac{\rho_{pl}}{\rho_c}\right)^{1.747} \\ \frac{\sigma^*_{pl}}{\sigma_{ys}} &= 1.096 \left(\frac{\rho_{pl}}{\rho_c}\right)^{1.450} \\ \frac{E^*}{E_s} &= 0.806 \left(\frac{\rho_{pl}}{\rho_c}\right)^{1.369} \end{aligned}$$ (15.6) (15.7)
 
-其中 $E^*, \sigma^*_{pl}, \sigma_{ys}$ 分别是弹性模量、坍塌应力和平台应力。$E_c$ 和 $\sigma_{ys}$ 是泡沫的弹性模量和屈服应力，$E_c$ 和 $\sigma_{ys}$ 分别为 11 和 52.86 MPa。其次，分级泡沫的压缩如图 15.22 所示。分级泡沫从较弱区域向较强区域变形。当试件被压缩到 $h$ 时，变形区域（蓝色区域）为 $H-h$。在图 15.22 中，假设内部泡沫已完全密化。变形区域（红色区域）为 $h_{deformed}$，其中 $\rho_{deformed}$ 是变形区域的平均相对密度，可以计算为：
+其中 `$E^*, \sigma^*_{pl}, \sigma_{ys}$` 分别是弹性模量、坍塌应力和平台应力。`$E_c$` 和 `$\sigma_{ys}$` 是泡沫的弹性模量和屈服应力，`$E_c$` 和 `$\sigma_{ys}$` 分别为 11 和 52.86 MPa。其次，分级泡沫的压缩如图 15.22 所示。分级泡沫从较弱区域向较强区域变形。当试件被压缩到 `$h$` 时，变形区域（蓝色区域）为 `$H-h$`。在图 15.22 中，假设内部泡沫已完全密化。变形区域（红色区域）为 `$h_{deformed}$`，其中 `$\rho_{deformed}$` 是变形区域的平均相对密度，可以计算为：
 
 $$\rho_{deformed} = \frac{\int_0^h \rho(h) dh}{h}$$ (15.8)
 
-其中 $h$ 是归化高度，可以通过 $h/H$ 确定。
+其中 `$h$` 是归化高度，可以通过 `$h/H$` 确定。
 
 ![](img/90ed165a39fa708ec438fcda79319c25_406_0.png)
 
@@ -7928,11 +8217,11 @@ $$\rho_{deformed} = \frac{\int_0^h \rho(h) dh}{h}$$ (15.8)
 
 $$\varepsilon = \frac{H-(h\rho_{deformed})}{H} = \tilde{h} - \int_{0}^{\tilde{h}} \tilde{\rho}(h)\mathrm{d}h = f(\tilde{h}).$$ (15.9)
 
-方程 (15.9) 给出了分级泡沫标量应变与归化高度之间的关系。当确定了梯度分布函数 $\tilde{\rho}(h)$ 后，标量到归化高度可以通过方程 (15.9) 得到。梯度密度可以表示为 $\tilde{f}^{-1}(\varepsilon)$，因此每个标量应变对应的局部密度可以确定为：
+方程 (15.9) 给出了分级泡沫标量应变与归化高度之间的关系。当确定了梯度分布函数 `$\tilde{\rho}(h)$` 后，标量到归化高度可以通过方程 (15.9) 得到。梯度密度可以表示为 `$\tilde{f}^{-1}(\varepsilon)$`，因此每个标量应变对应的局部密度可以确定为：
 
 $$\sigma(\varepsilon) = E^*-\sigma_{\text{y}}^*e^{-\varepsilon/\lambda})+\sigma_{\text{y}}^*\varepsilon.$$ (15.10)
 
-$\rho_{\text{av}} = \frac{1}{H}\int_{0}^{H}\rho(h)\mathrm{d}h$ 且 $\tilde{\rho}=\rho(h)$，其中 $\kappa$ 和 $\lambda$ 分别是形状参数和尺度参数。形状参数和尺度参数对相对密度不敏感，分别为 0.0335 和 1.469。将 Weibull 分布应用于方程 (15.10)是因为它可以捕捉泡沫的弹性阶段下降区域 [48]。此外，如 15.5 节所述，分级泡沫的密化阶段可以通过具有相似密度的泡沫来确定。然而，这需要考虑泡沫的实验数据，在实际工程应用中增加了额外工作。此外，泡沫进入密化阶段会失去其能量吸收潜力。因此，为了通用性和简洁性，目前的弹性塑化模型未考虑该阶段。
+`$\rho_{\text{av}} = \frac{1}{H}\int_{0}^{H}\rho(h)\mathrm{d}h$` 且 `$\tilde{\rho}=\rho(h)$`，其中 `$\kappa$` 和 `$\lambda$` 分别是形状参数和尺度参数。形状参数和尺度参数对相对密度不敏感，分别为 0.0335 和 1.469。将 Weibull 分布应用于方程 (15.10)是因为它可以捕捉泡沫的弹性阶段下降区域 [48]。此外，如 15.5 节所述，分级泡沫的密化阶段可以通过具有相似密度的泡沫来确定。然而，这需要考虑泡沫的实验数据，在实际工程应用中增加了额外工作。此外，泡沫进入密化阶段会失去其能量吸收潜力。因此，为了通用性和简洁性，目前的弹性塑化模型未考虑该阶段。
 
 结合方程 (15.6)、(15.7) 和 (15.10)，实验模型与弹性-塑化模型的对比如图 15.23 所示。
 
@@ -7940,58 +8229,85 @@ $\rho_{\text{av}} = \frac{1}{H}\int_{0}^{H}\rho(h)\mathrm{d}h$ 且 $\tilde{\rho}
 
 图 15.23 弹性-塑化模型在 (A) 准静态测试和 (B) 动态测试中实验结果的验证。
 
-
-
-
 增材制造功能梯度多孔结构的力学行为
 
 观察到优异的准确性，表明公式 (15.10) 能够精确预测梯度泡沫的应力-应变关系。
 
 ## 15. 结论
 
-本工作对增材制造的均匀和梯度泡沫的准静态和动态压缩行为进行了系统研究。通过增材制造技术成功制备了具有预设密度梯度的 Voronoi 梯度泡沫以及具有不同相对密度的均匀泡沫。通过实验研究了梯度泡沫和均匀泡沫的准静态和动态溃灭行为。结果表明，在密度相似的情况下，均匀泡沫和梯度泡沫在弹性阶段和密化阶段具有相似的力学性能。然而，梯度泡沫均表现出增长的平台期，而非均匀泡沫的恒定平台。这是因为密度梯度导致变形机制倾向于从低密度区域逐渐向高密度区域坍塌。换句话之，梯度泡沫控制了每个组件层面的应力。此外，本文还提出了一种用于预测梯度泡沫力学行为的弹性硬化模型。首先，确定了均匀泡沫力学性能与相对密度之间的关系；其次，通过梯度泡沫的压缩过程获得了对应于每个标称应变的局部相对密度；最后，通过实验结果验证了该模型。基于本研究推导的模型，无需额外的实验工作即可确定连续梯度泡沫的准静态和动态（20 m/s 冲击）应力-应变曲线。这避免了针对不同工程应用对梯度泡沫进行大量的实验研究。
+本工作对增材制造的均匀和梯度泡沫的准静态和动态压缩行为进行了系统研究。通过增材制造技术成功制备了具有预设密度梯度的 Voronoi 梯度泡沫以及具有不同相对密度的均匀泡沫。通过实验研究了梯度泡沫和均匀泡沫的准静态和动态溃灭行为。结果表明，在密度相似的情况下，均匀泡沫和梯度泡沫在弹性阶段和密化阶段具有相似的力学性能。然而，梯度泡沫均表现出增长的平台期，而非均匀泡沫的恒定平台。这是因为密度梯度导致变形机制倾向于从低密度区域逐渐向高密度区域坍塌。换言之，梯度泡沫控制了每个组件层面的应力。此外，本文还提出了一种用于预测梯度泡沫力学行为的弹性硬化模型。首先，确定了均匀泡沫力学性能与相对密度之间的关系；其次，通过梯度泡沫的压缩过程获得了对应于每个标称应变的局部相对密度；最后，通过实验结果验证了该模型。基于本研究推导的模型，无需额外的实验工作即可确定连续梯度泡沫的准静态和动态（20 m/s 冲击）应力-应变曲线。这避免了针对不同工程应用对梯度泡沫进行大量的实验研究。
 
 ## 致谢
 
-本工作得到了中国国家科学基金（资助号：12102390, 12002111 和 11972310）、高等教育学科创新项目（项目号：BP071007）以及中国博士后科学基金项目（资助号：2021M692788 和 2022T150568）的支持。
+本工作得到了中国国家科学基金（资助号：`12102390`, `12002111` 和 `11972310`）、高等教育学科创新项目（项目号：`BP071007`）以及中国博士后科学基金项目（资助号：`2021M692788` 和 `2022T150568`）的支持。
 
 ## 参考文献
 
 - [1] Deshpande VS, Fleck NA. Isotropic constitutive models for metallic foams. J Mech Phys Solids 2000;48:1253–83. Available自: https://doi.org/10.1016/S0022-5096(99)00082-4.
+
 - [2] Wang Y, Zhang B, Lu J, Xue B, Zai. Quasi-static crushing behaviour of the energy absorbing connector with polyurethane foam and multiple plates. Eng Struct 2020;2021:110404. Available自: https://doi.org/10.1016/j.engstruct.2020.110404.
+
 - [3] Avenue M, Belingardi G, Montani R. Characterization of polymeric structural foams under compressive impact loading by means of energy-absorption. In J Impact Eng 2005;245–72. Available自: https://doi.org/10.1016/S0074-7433(00)00069-0.
+
 - [4] Sun Y, LM, Ju Y, Reid SR. Dynamic compressive behaviour of cellular materials: a review of phenomenon, mechanism and modeling. In J Impact Eng 2018;112:74–115. Available自: https://doi.org/10.1016/jimp.2017.10.0386.
+
 - [5] Bonatti C, Mohr D. Mechanical performance of additive-manufactured anisotropic and isotropic shell-lattice structures: simulations and experiments. J Mech Phys Phys 2019;92:121–26. Available自: https://doi.org/10.1016/j.jmphys.2018.08.022.
+
 - [6] Zheng Z, Wang C, Yu SR, Harrison JJ. Dynamic stress-strain states for metals using a 3D cellular model. J Mech Phys 2014;72:93–114. Available自: https://doi.org/10.1016/j.jimp.2014.07.010.
+
 - [7] Langos GS, Gaskova D, Thomas T, Patrick GN, Gu J, Merritt RP. Performance of aluminium foam cell cladding to sub-air loading. In J Impact Eng 2020;37:58–51. Available自: https://doi.org/10.1016/jimpeng.2009.07.006.
+
 - [8] Zhao H, Elahi I, Abdelnader S. An experimental study on the behaviour under impact loading of metallic materials. In J Mech Sci 2005;47:757–74. Available自: https://doi.org/10.1016/j.jmms.2004.12.012.
+
+
+
 - [9] Pan TJ, Reid SR, Harrison JJ, Lu Z. Dynamic strength properties of aluminium foams Part I–experimental data observations. In J Mech Phys 2005;53:2174–205. Available自: https://doi.org/10.1016/jmps.2005.05.007.
+
 - [10] Duan Y, Ding J, Liu Z, Hao X, Liu H, et al. Effects of size vs. cell-wall thickness gradients on additive manufactured foams. Comp Comp Sci Tech 2020;199:108.
+
 - [11] Zhang J, Lu G, Duan X. Experimental observations of local relative density corresponding to each nominal strain in graded foams. J Impact Eng 2019;134.
+
 - [12] Nagai Y, Takashi T, Udonomiya R, Kitazuru S, Yoshikawa N. Functionality of graded foam by aluminum casting. Mat A 2012;534.
+
 - [13] Rahman U, Aziz K, Mithujan J. Evaluation of graded foam with density gradient. Adv Mater 2022;315.
+
 - [14] Li Q, Zhi X, Fan J. Dynamic behavior of graded cellular lattice with sectional area. Eng Struct 2021;662.
+
 - [15] Wang J, Wang S, Ding Y, Zheng Y, Zu Y..... 2011;181.
+
 - [16] Gupta N, Ricci W. Compression performance of graded- with structures. Mat Sci Eng 2006;427.
+
 - [17] Maskery I, Aboukh O, Tuck CJ, Ashford RD. Impact behavior of foam foamatesates. Int Sci 2010;52.
+
 - [18] Zeng HB, Pato S, Zhang H, Girard V. Impact properties of graded-cell. Int Solids 2013;215.
+
 - [19] Nagai Y, Takashi R, Udonomiya R, Kitazuru S. Nondestructive observation of graded-foam by X-ray tomography. Mat Sci Eng 2012;555.
+
 - [20] Boucher AH, Dund DC. Impact properties of graded-foams. Mat Sci 2008;48.
+
 - [21] Hassani A, Babah H, Ward G. Production of graded via space holder technique. Mat Des 2011;35.
+
 - [22] Ajdari A, Cavan P, Nayeb H. Mechanical properties of graded: a finite element simulation. Mat Des 2009;507.
+
 - [23] Li L, Han B, Shaw Y, Zhang R, Zhang Q. Shock analysis using nonlinear plastic model. Mat Sci Eng A 2019;106.
+
 - [24] Karagoz D, Alves M. Propagation of waves in cellular materials with varying density. Int Solids 2017;121.
+
 - [25] Chang Z, Zheng Z, He X, Hu Y. Craftworthiness of graded cellular materials: an asymptotic solution. J Impact 2020;143.
+
 - [26] Cui L, Kieran S, Christidis MD. Designing the energy absorption capacity of functionally graded materials. Mater 2009;507.
+
 - [27] Kieran S, Christidis MD. Towards a functionally graded structure of closed porous cell. Int Sci 2010;48.
+
 - [28] Shen C, Yu X, Lu C, Zhang J. Design of graded cell structure under impact. Int Solids 2013;215.
+
 - [29] Wang J, Wang S, Ding Y, Zheng Z, Zu Y. Craftworthiness of graded cellular materials: a design strategy based on nonlinear shock model. Mat Sci Eng A 2017;681.
+
 - [30] Ding Y, Zheng Z, Wang Y, Zhou F. Impact behavior and design of graded cellular lattice. In: Int J Mech 2018;38.
+
 - [31] Tanneco-Dejean T, Tremblay, Copier M, Mohr C D. 3D plate-lattices: an emerging class of low-density metamaterial exhibiting optimal catastrophic effect. Adv Mater 2018;80.
+
 - [32] Belhabib S, Guessama S. Compression performance of hollow structures: topology optimization to design 3D printing. Int J Mech Sci 2017;133.
-
-
-
 
 [33] Schaedler TA, Jacobsen AJ, Torrents A, Sorensen AE, Lian J, Greer JR, et al. 超轻微点格结构。Science 2011;334:962–5. 来源：https://doi.org/10.1.1126/science.1211649.
 
@@ -8029,9 +8345,6 @@ $\rho_{\text{av}} = \frac{1}{H}\int_{0}^{H}\rho(h)\mathrm{d}h$ 且 $\tilde{\rho}
 
 尽管研究人员在研究吸能方面取得了显著进展，但泡沫的制备仍然困难。此外，增材制造（AM）能够制造具有复杂几何形状的结构。许多研究致力于主动制造材料，例如金属微点格[44]复合材料[45]负泊松结构[46]聚合物衍生陶瓷[47]八面体晶格材料[48]以及光滑格[49]。通过微观方法，AM可以产生相应的样品，使仿真和实验中的微观几何结构保持一致。
 
-
-
-
 增材制造功能梯度多孔结构的应用
 
 第 16.3 节和 16.4 节分别报告并讨论了实验和数值结果。第 16.5 节提出了一个基于实验数据的预测模型。最后在第 16.6 节得出结论。
@@ -8040,11 +8353,11 @@ $\rho_{\text{av}} = \frac{1}{H}\int_{0}^{H}\rho(h)\mathrm{d}h$ 且 $\tilde{\rho}
 
 ### 16.2.1 实验装置
 
-在 $10^{-3}\text{ s}^{-1}$ 的初始应变率下进行准静态压缩测试。测试根据 ASTM D1621-16 标准使用通用试验机进行。试样在两个加载板之间压缩。施加的载荷 $F$ 和试样的形变 $\Delta$ 分别通过力传感器和光学位移计进行测量。使用数字相机捕捉测试过程中的全局变形。图像分辨率和采集频率分别为 $1280 \times 800$ 像素和 50 fps。
+在 `$10^{-3}\text{ s}^{-1}$` 的初始应变率下进行准静态压缩测试。测试根据 ASTM D1621-16 标准使用通用试验机进行。试样在两个加载板之间压缩。施加的载荷 `F` 和试样的形变 `Δ` 分别通过力传感器和光学位移计进行测量。使用数字相机捕捉测试过程中的全局变形。图像分辨率和采集频率分别为 `1280 × 800` 像素和 50 fps。
 
 ### 16.2.2 介观几何模型的构建
 
-泡沫材料在固体基体材料内部具有孔隙，这类似于 Voronoi 模型的生成过程。因此，本章采用 Voronoi 模型 [50] 来构建泡沫数值仿真的介观几何模型。Voronoi 泡沫的生成过程可以分为三个步骤：首先，创建一个三维空间。其次，根据 Voronoi 镶分在该空间内插入一组核。具体而言，只有当后续核与现有核的距离大于 $\delta$ 时，才接受该核。最后，所有核各向同性地生长，直到它们相互接触形成 Voronoi 泡沫。通过给出不同的 $\delta$，可以控制不同单元尺寸的泡沫，从而产生不同的密度。相对密度 $\tilde{\rho}$ 定义为泡沫密度 $\rho$ 与材料密度 $\rho_{m}$ 的比值。通过采用沿轴方向的梯度单元分布，可以实现梯度密度配置的泡沫。为了对比，还考虑了密度分布均匀的均匀泡沫 (UF)。所有泡沫的壁厚和管壁均为 0.4 mm 左右（3D 打印机的 0.4 mm）。注意的是，当胞壁厚为打印喷嘴直径的倍数时，3D 打印机可以产生更精确的泡沫。所有试样的相对密度计算并列在表 16.1 中。第一列的数字代表泡沫的单元尺寸。例如，“UF-12”意味着密度分布均匀的试样，“GF-612”代表梯度密度分布的试样，其单元尺寸沿轴方向从 6 mm 线性增长到 12 mm。所有泡沫的直径和长度分别为 60 mm 和 90 mm。这也对应于薄壁管的尺寸，其内径和长度分别为 60 mm 和 90 mm。这表明泡沫与薄壁内壁之间不存在间隙。管的外径为 60.8 mm。为了使泡沫与薄壁之间的相互作用更加明显，本章将 FFT 视为一个整体（而非两个部分的组合）进行增材制造。为了方便起见，后续章节将均匀泡沫填充管和梯度泡沫填充管分别缩写为 UFTs 和 FFTs。泡沫的介观几何结构如图 16.1 所示。
+泡沫材料在固体基体材料内部具有孔隙，这类似于 Voronoi 模型的生成过程。因此，本章采用 Voronoi 模型 [50] 来构建泡沫数值仿真的介观几何模型。Voronoi 泡沫的生成过程可以分为三个步骤：首先，创建一个三维空间。其次，根据 Voronoi 镶分在该空间内插入一组核。具体而言，只有当后续核与现有核的距离大于 `δ` 时，才接受该核。最后，所有核各向同性地生长，直到它们相互接触形成 Voronoi 泡沫。通过给出不同的 `δ`，可以控制不同单元尺寸的泡沫，从而产生不同的密度。相对密度 `~ρ` 定义为泡沫密度 `ρ` 与材料密度 `ρ_m` 的比值。通过采用沿轴方向的梯度单元分布，可以实现梯度密度配置的泡沫。为了对比，还考虑了密度分布均匀的均匀泡沫 `UF`。所有泡沫的壁厚和管壁均为 0.4 mm 左右（3D 打印机的 0.4 mm）。注意的是，当胞壁厚为打印喷嘴直径的倍数时，3D 打印机可以产生更精确的泡沫。所有试样的相对密度计算并列在表 16.1 中。第一列的数字代表泡沫的单元尺寸。例如，“UF-12”意味着密度分布均匀的试样，“GF-612”代表梯度密度分布的试样，其单元尺寸沿轴方向从 6 mm 线性增长到 12 mm。所有泡沫的直径和长度分别为 60 mm 和 90 mm。这也对应于薄壁管的尺寸，其内径和长度分别为 60 mm 和 90 mm。这表明泡沫与薄壁内壁之间不存在间隙。管的外径为 60.8 mm。为了使泡沫与薄壁之间的相互作用更加明显，本章将 FFT 视为一个整体（而非两个部分的组合）进行增材制造。为了方便起见，后续章节将均匀泡沫填充管和梯度泡沫填充管分别缩写为 UFTs 和 FFTs。泡沫的介观几何结构如图 16.1 所示。
 
 #### 表 16.1 泡沫试样的基本规格。
 
@@ -8059,11 +8372,11 @@ $\rho_{\text{av}} = \frac{1}{H}\int_{0}^{H}\rho(h)\mathrm{d}h$ 且 $\tilde{\rho}
 
 ### 16.2.3 试样制备
 
-构建的泡沫或 FFTs 被切片并导入 3D 打印机进行制造。使用了增材制造技术之一的熔融丝沉积 (FFF)，因为它具有制造封闭空间结构的能力。所有试样均使用带有双黄铜喷嘴的工业级 3D 打印机（上海聚光立方创新的 Pro3 Plus）制造。为了具有可重复性，打印速度和层高分别被优化为 30 mm 和 0.1 mm。床温度和喷嘴温度分别为 30°C 和 220°C。打印图案设定为矩形，丝材直径为 1.75 mm。试样的基体是名为“PolyMax™”的聚乳酸 (PLA)，其密度约为 1200 kg/m³。
+构建的泡沫或 FFTs 被切片并导入 3D 打印机进行制造。使用了增材制造技术之一的熔融丝沉积 `FFF`，因为它具有制造封闭空间结构的能力。所有试样均使用带有双黄铜喷嘴的工业级 3D 打印机（上海聚光立方创新的 Pro3 Plus）制造。为了具有可重复性，打印速度和层高分别被优化为 30 mm 和 0.1 mm。床温度和喷嘴温度分别为 30°C 和 220°C。打印图案设定为矩形，丝材直径为 1.75 mm。试样的基体是名为“PolyMax™”的聚乳酸 `PLA`，其密度约为 1200 kg/m³。
 
 ### 16.2.4 有限元仿真的设置
 
-进行数值研究以模拟泡沫胞壁结构与管子薄壁部分之间的相互作用，以揭示实验研究无法监测的 FFTs 内部变形机制。为了计算泡沫的大变形和弹性-塑性材料行为，采用了 Abaqus 软件包和显式时间积分法来模拟泡沫和 FFTs 的压缩行为。介观模型夹在两个刚性板之间。底板在所有自由度上固定，而顶板沿 y 方向施加恒定速度，其余自由度固定。速度为 0.1 m/s。介观模型的弹性模量、泊松比和密度分别为 1511 MPa、0.3 和 1130 kg/m³。90ed165a39fa708ec438fcda7931c25
+进行数值研究以模拟泡沫胞壁结构与管子薄壁部分之间的相互作用，以揭示实验研究无法监测的 FFTs 内部变形机制。为了计算泡沫的大变形和弹性-塑性材料行为，采用了 Abaqus 软件包和显式时间积分法来模拟泡沫和 FFTs 的压缩行为。介观模型夹在两个刚性板之间。底板在所有自由度上固定，而顶板沿 y 方向施加恒定速度，其余自由度固定。速度为 0.1 m/s。介观模型的弹性模量、泊松比和密度分别为 1511 MPa、0.3 和 1130 kg/m³。`90ed165a39fa708ec438fcda7931c25`
 
 图16.1 泡沫的介观几何模型：(A) GF-12-6 和 (B) 3。
 
@@ -8073,17 +8386,17 @@ $\rho_{\text{av}} = \frac{1}{H}\int_{0}^{H}\rho(h)\mathrm{d}h$ 且 $\tilde{\rho}
 
 为了验证数值模型的可靠性，将数值模型计算的力曲线与 16.4A 中的实验结果对比。仿真结果与实验数据匹配良好。然而，数值强度略高于实验强度，原因有两个：首先，仿真中没有考虑材料失效。其次，实验中使用的制备样品相对密度略低于设定值。数值变形分布（ε = 0.4）与 16.4B 中的实验结果对比，观察到了良好的一致性。经过验证的数值模型将用于后续章节。
 
-
-
 增材制造功能梯度多孔结构的应用
 
 ## 16.3 实验结果与讨论
 
 ### 16.3.1 泡沫填充管状材料的典型力学响应
 
-以 UF-9 试件为例，图 16.5A 显示了薄壁管和单个泡沫的力-位移曲线。可以看到，单个泡沫的曲线表现出三个阶段。在弹性阶段，力几乎随位移线性增加。在平台期阶段，位移持续增加，而力保持在某一水平。在密化阶段，力迅速增加并导致位移趋于减缓。对于薄壁管，也有三个阶段。不同之处在于弹性阶段结束后，力达到一个峰值，然后迅速下降，这是因为薄壁管发生了失稳和坍塌。此外，图 16.5B 比较了 FFT（功能梯度复合材料）的力-位移曲线与空管力与单个泡沫力之和的曲线，尽管在相同质量下，FFT 具有更高的整体承载能力。这是因为薄壁管与单个泡沫之间的相互作用贡献了额外的承载能力，正如图 16.5B 中的红色区域所示。注意，薄壁管的压缩强度明显低于管与泡沫之间的相互作用，而后者远高于管自身的承载能力（图 16.5A）。因此，FFT 可以在具有良好能量吸收能力的同时，减轻能量吸收结构的重量。
 
-如图 16.5B 所示，FFT 的承载能力由三部分组成，包括薄壁管、单个泡沫以及管与泡沫之间的相互作用。为了解释 FFT 的宏观力学响应，图 16.6 显示了管和泡沫的介观变形。空薄壁管显示出模式 A 的变形（图 16.6A）。然而，如
+
+以 `UF-9` 试件为例，图 16.5A 显示了薄壁管和单个泡沫的力-位移曲线。可以看到，单个泡沫的曲线表现出三个阶段。在弹性阶段，力几乎随位移线性增加。在平台期阶段，位移持续增加，而力保持在某一水平。在密化阶段，力迅速增加并导致位移趋于减缓。对于薄壁管，也有三个阶段。不同之处在于弹性阶段结束后，力达到一个峰值，然后迅速下降，这是因为薄壁管发生了失稳和坍塌。此外，图 16.5B 比较了 `FFT`（功能梯度复合材料）的力-位移曲线与空管力与单个泡沫力之和的曲线，尽管在相同质量下，`FFT` 具有更高的整体承载能力。这是因为薄壁管与单个泡沫之间的相互作用贡献了额外的承载能力，正如图 16.5B 中的红色区域所示。注意，薄壁管的压缩强度明显低于管与泡沫之间的相互作用，而后者远高于管自身的承载能力（图 16.5A）。因此，`FFT` 可以在具有良好能量吸收能力的同时，减轻能量吸收结构的重量。
+
+如图 16.5B 所示，`FFT` 的承载能力由三部分组成，包括薄壁管、单个泡沫以及管与泡沫之间的相互作用。为了解释 `FFT` 的宏观力学响应，图 16.6 显示了管和泡沫的介观变形。空薄壁管显示出模式 A 的变形（图 16.6A）。然而，如
 
 ![](img/90ed165a39fa708ec438fcda79319c25_418_0.png)
 
@@ -8095,17 +8408,17 @@ $\rho_{\text{av}} = \frac{1}{H}\int_{0}^{H}\rho(h)\mathrm{d}h$ 且 $\tilde{\rho}
 
 (C)
 
-图 16.6 试件的变形演变：(A) 空薄壁管，(B) 填充泡沫支撑的薄壁管，(C) UF-9 的单个泡沫。（红色虚线框表示典型变形的局部区域。）
+图 16.6 试件的变形演变：(A) 空薄壁管，(B) 填充泡沫支撑的薄壁管，(C) `UF-9` 的单个泡沫。（红色虚线框表示典型变形的局部区域。）
 
 图 16.6B 所示，由填充泡沫支撑的薄壁管在变形模式上从菱形模式向手风琴模式发生了显著转变。这是因为内部填充泡沫限制了薄壁管的向内位移，使其在变形过程中难以失稳。图 16.6C 显示了单个泡沫的变形演变。随着加载的进行，由于胞体结构分布不均匀，局部应力随着压缩的进行而达到最大值，相邻的胞壁开始屈曲。屈塌胞壁之间的接触阻止了这种坍塌，从而稳定了局部微观结构。这导致了相邻局部坍塌区细胞的坍塌。该过程重复，直到局部坍塌扩散到整个试件。这导致力-位移曲线中平台区域呈现出几乎恒定的力水平（图 16.5A）。最后，所有细胞被压实在一起，原始孔隙被填充，导致了强度急剧上升的密化阶段。
 
 ### 16.3.2 泡沫相对密度对泡沫填充管的影响
 
-图 16.7A 绘制了填充不同相对密度泡沫的管的力-位移曲线。力随相对密度的增加而增加，因为 FFT 的质量增加，导致负载能力的提高。此外，相对密度越高，应变硬化现象（力水平随变形位移变化的函数）越明显。这是因为孔隙变得更小，在变形发生后胞壁之间的距离变小。相互作用定义为 FFT 的力减去管和泡沫的力之和（如图 16.7B 所示）。随着相对密度的增加，相互作用也增加。
+图 16.7A 绘制了填充不同相对密度泡沫的管的力-位移曲线。力随相对密度的增加而增加，因为 `FFT` 的质量增加，导致负载能力的提高。此外，相对密度越高，应变硬化现象（力水平随变形位移变化的函数）越明显。这是因为孔隙变得更小，在变形发生后胞壁之间的距离变小。相互作用定义为 `FFT` 的力减去管和泡沫的力之和（如图 16.7B 所示）。随着相对密度的增加，相互作用也增加。
 
 ### 16.3.3 泡沫填充管的典型力学响应
 
-图 16.8 绘制了填充不同相对密度泡沫的管的力-位移曲线。尽管 UF 和 GF 具有相似的密度，但 GF-12 和 GFT-12 在力-位移曲线上表现出不同的趋势。如图 16.6 所示，显示了 GF-12 和 GFT-6 具有不同的变形模式。图 16.8 显示了 UF 和 GFT 的变形演变。例如，GF-12 和 GFT-6 在加载端附近发生了坍塌。随着位移的增加，
+图 16.8 绘制了填充不同相对密度泡沫的管的力-位移曲线。尽管 `UF` 和 `GF` 具有相似的密度，但 `GF-12` 和 `GFT-12` 在力-位移曲线上表现出不同的趋势。如图 16.6 所示，显示了 `GF-12` 和 `GFT-6` 具有不同的变形模式。图 16.8 显示了 `UF` 和 `GFT` 的变形演变。例如，`GF-12` 和 `GFT-6` 在加载端附近发生了坍塌。随着位移的增加，
 
 ![](img/90ed165a39fa708ec438fcda79319c25_420_0.png)
 
@@ -8113,13 +8426,13 @@ $\rho_{\text{av}} = \frac{1}{H}\int_{0}^{H}\rho(h)\mathrm{d}h$ 且 $\tilde{\rho}
 
 ![](img/90ed165a39fa708ec438fcda79319c25_421_0.png)
 
-图 16.8 FFT 与 GF（泡沫）的力-位移曲线。
+图 16.8 `FFT` 与 `GF`（泡沫）的力-位移曲线。
 
 ## 16.4 数值结果与讨论
 
 ### 16.4.1 泡沫填充管中泡沫与管的相互作用
 
-泡沫填充管的泡沫与管的相互作用在图 16.9 中进行了监测。为了反映感兴趣的变形，对泡沫填充的泡沫进行了数值研究。在图 16.10 中，可以看到管和泡沫的相互作用在平台阶段发生。图 16.10B 显示了 FFT 的能量吸收潜力得到了增强。在图 16.11 中显示了薄壁管和泡沫的相互作用。注意，高密度的填充泡沫有更多的壁材料参与相互作用，导致了更高的相互能量（图 16.7）。
+泡沫填充管的泡沫与管的相互作用在图 16.9 中进行了监测。为了反映感兴趣的变形，对泡沫填充的泡沫进行了数值研究。在图 16.10 中，可以看到管和泡沫的相互作用在平台阶段发生。图 16.10B 显示了 `FFT` 的能量吸收潜力得到了增强。在图 16.11 中显示了薄壁管和泡沫的相互作用。注意，高密度的填充泡沫有更多的壁材料参与相互作用，导致了更高的相互能量（图 16.7）。
 
 增材制造功能梯度多孔结构的应用
 
@@ -8127,33 +8440,29 @@ $\rho_{\text{av}} = \frac{1}{H}\int_{0}^{H}\rho(h)\mathrm{d}h$ 且 $\tilde{\rho}
 
 ![](img/90ed165a39fa708ec438fcda79319c25_422_0.png)
 
-图 16.10 试件的变形演变：(A) GF-12-6，(B) GFT-12-6，(C) GF-6-12，(D) GFT-6-12。（红色虚线框表示典型变形的区域。）
+图 16.10 试件的变形演变：(A) `GF-12-6`，(B) `GFT-12-6`，(C) `GF-6-12`，(D) `GFT-6-12`。（红色虚线框表示典型变形的区域。）
 
 ### 16.4.2 梯度泡沫填充管中泡沫与管的相互作用
 
 沿轴向具有不同尺寸的细胞。因此，随着轴向压缩的进行，不同的坍塌层表现出不同的压缩强度。如图 16.12 所示，变形总是从低密度区域扩展到高密度区域。结果，在力-位移曲线上可以观察到逐渐增加的趋势。
 
-
-
-
-
 ![](img/90ed165a39fa708ec438fcda79319c25_424_0.png)
 
-图 16.12 标称应变为为 0.4 时薄壁管与轴向梯度泡沫在介尺度上的相互作用：(A) "GFFT-12-6" 和 (B) "GFFT-6-12"。
+图 16.12 标称应变为为 0.4 时薄壁管与轴向梯度泡沫在介尺度上的相互作用：(A) `"GFFT-12-6"` 和 (B) `"GFFT-6-12"`。
 
 ## 16.5 梯度泡沫填充管的预测模型
 
 ### 16.5.1 泡沫填充管的现有预测模型
 
-如上所述，FFT 的承载能力由三个部分支撑：薄壁管、泡沫以及两者之间的相互作用。因此，开发了一个模型来预测 FFT 的压缩力，其中薄壁管部分与其构型有关，泡沫部分与其相对密度有关，而相互作用部分则与薄壁管和泡沫的承载能力有关。Hansen 等人 [25] 提出了一个广泛的 FFT 压缩力预测模型：
+如上所述，`FFT` 的承载能力由三个部分支撑：薄壁管、泡沫以及两者之间的相互作用。因此，开发了一个模型来预测 `FFT` 的压缩力，其中薄壁管部分与其构型有关，泡沫部分与其相对密度有关，而相互作用部分则与薄壁管和泡沫的承载能力有关。Hansen 等人 [25] 提出了一个广泛的 `FFT` 压缩力预测模型：
 
 $$F_{avg} = F_{avg}^0 + \sigma_t \pi \left(\frac{b_n}{2}\right)^2 + C_{avg}\sqrt{\sigma_t\sigma_b}bm \quad (16.1)$$
 
-$F_{avg}^0$ 是空心管的贡献，中间项和最后一项分别描述单个泡沫的阻力和相互作用效应。b$ 和 $h$ 分别是管的外截面直径和壁厚。b_m=b-h$ 和 $h_m=b-2h$ 分别是中间截面直径和泡沫的直径。$\sigma_t$ 是泡沫的平台应力。$\sigma_b$ 是管材料的特征应力，定义为管材料屈服强度和极限强度的平均值。
+`F_{avg}^0` 是空心管的贡献，中间项和最后一项分别描述单个泡沫的阻力和相互作用效应。`b` 和 `h` 分别是管的外截面直径和壁厚。`b_m=b-h` 和 `h_m=b-2h` 分别是中间截面直径和泡沫的直径。`\sigma_t` 是泡沫的平台应力。`\sigma_b` 是管材料的特征应力，定义为管材料屈服强度和极限强度的平均值。
 
 ### 16.5.2 梯度泡沫填充管的新预测模型
 
-虽然等式 (16.1) 提供了一种预测 FFT 平均压缩力的可靠方法，但很难将该模型直接应用于 GFFT。如式 16.8 所示，GF 的强度随着压力的进行而逐渐增大。式 (16.1) 中泡沫的强度随应变的增加而变化。对于 GFFT，本章提出了以下预测模型：
+虽然等式 (16.1) 提供了一种预测 `FFT` 平均压缩力的可靠方法，但很难将该模型直接应用于 `GFFT`。如式 16.8 所示，`GF` 的强度随着压力的进行而逐渐增大。式 (16.1) 中泡沫的强度随应变的增加而变化。对于 `GFFT`，本章提出了以下预测模型：
 
 $$F_{GFFT} = F_{avg}^0 + \sigma^* \pi \left(\frac{b_n}{2}\right)^2 + C_{avg}\sqrt{\sigma^*\sigma_b}bm \quad (16.2)$$
 
@@ -8161,19 +8470,19 @@ $$F_{GFFT} = F_{avg}^0 + \sigma^* \pi \left(\frac{b_n}{2}\right)^2 + C_{avg}\sqr
 
 $$F_{avg}^0 = \kappa_D \sigma_b bm^{1/3}h^{5/3} \quad (16.3)$$
 
-$\kappa_D$ 是表示空心管变形方法的无量纲常数。在本章中，$\sigma_0, b_m,$ 和 $h$ 分别确定为 52.86 MPa、60.4 mm 和 0.4 mm。$\kappa_D$ 可以通过数据拟合确定为2.572。此外，发现平台应力遵循与泡沫密度的幂律 [34,51]。通过将实验数据拟合到幂律方程，可以得到式 (16.4)：
+`\kappa_D` 是表示空心管变形方法的无量纲常数。在本章中，`\sigma_0, b_m,` 和 `h` 分别确定为 52.86 MPa、60.4 mm 和 0.4 mm。`\kappa_D` 可以通过数据拟合确定为2.572。此外，发现平台应力遵循与泡沫密度的幂律 [34,51]。通过将实验数据拟合到幂律方程，可以得到式 (16.4)：
 
 $$\frac{\sigma_{ys}^*}{\sigma_{ys}} = 0.903 \left(\frac{\rho^*}{\rho_l}\right)^{1.787} \quad (16.4)$$
 
-$\sigma_{ys}^*$ 和 $\sigma_{ys}$ 分别是泡沫和基材料的平台应力。屈服强度 $\sigma_{ys}$ 为 52.86 MPa。这里使用能量吸收方向法来确定 UF 的平台应力。能量吸收效率定义为到标称应变 $\varepsilon_a$ 的吸收能量除以相应的应力 $\sigma(\varepsilon_a)$，如下：
+`\sigma_{ys}^*` 和 `\sigma_{ys}` 分别是泡沫和基材料的平台应力。屈服强度 `\sigma_{ys}` 为 52.86 MPa。这里使用能量吸收方向法来确定 `UF` 的平台应力。能量吸收效率定义为到标称应变 `\varepsilon_a` 的吸收能量除以相应的应力 `\sigma(\varepsilon_a)`，如下：
 
 $$\eta(\varepsilon_a) = \frac{\int_0^{\varepsilon_a}\sigma(\varepsilon)d\varepsilon}{\sigma(\varepsilon_a)} \quad (16.5)$$
 
-如图 16.13 所示，当能量吸收效率达到最大值时，相应的应变值定义为密化应变 $\varepsilon_D$。然后，平台应力 $\sigma_{pl}$ 由式确定：
+如图 16.13 所示，当能量吸收效率达到最大值时，相应的应变值定义为密化应变 `\varepsilon_D`。然后，平台应力 `\sigma_{pl}` 由式确定：
 
 $$\sigma_{pl} = \frac{\int_0^{\varepsilon_{cr}}\sigma(\varepsilon)d\varepsilon}{\varepsilon_D - \varepsilon_{cr}} \quad (16.6)$$
 
-式 (16.4) 给出了均匀泡沫应力与相对密度之间的关系。根据第 15 章第 15.5.2 节，梯度泡沫的标称应变与相对密度梯度的关系可以通过 $\rho(\rho^{-1}(\varepsilon))$ 确定。因此，对于 GF，压缩应力定义为：
+式 (16.4) 给出了均匀泡沫应力与相对密度之间的关系。根据第 15 章第 15.5.2 节，梯度泡沫的标称应变与相对密度梯度的关系可以通过 `\rho(\rho^{-1}(\varepsilon))` 确定。因此，对于 `GF`，压缩应力定义为：
 
 $$\sigma^*(\varepsilon) = \sigma_{pl}(\rho(\rho^{-1}(\varepsilon))) \quad (16.7)$$
 
@@ -8183,15 +8492,15 @@ $$\sigma^*(\varepsilon) = \sigma_{pl}(\rho(\rho^{-1}(\varepsilon))) \quad (16.7)
 
 ![](img/90ed165a39fa708ec438fcda79319c25_427_0.png)
 
-**图 16.14** GFFT-6-12 实验数据与预测的对比。结合式 (16.2)、(16.3) 和 (16.7)，GFFT 的压缩力计算如下：
+**图 16.14** `GFFT-6-12` 实验数据与预测的对比。结合式 (16.2)、(16.3) 和 (16.7)，`GFFT` 的压缩力计算如下：
 
 $$F_{avg} = F_{avg}^0 + \sigma_t \pi \left(\frac{b_n}{2}\right)^2 + C_{avg}\sqrt{\sigma_t\sigma_b}bm \quad (16.8)$$
 
-相互作用系数 $C_{avg}$ 与泡沫和管之间的界面变形有关。在本章中，通过数据拟合确定 $C_{avg}$ 为 2.572。此外，如图 16.14 所示，验证了该预测模型的准确性。
+相互作用系数 `C_{avg}` 与泡沫和管之间的界面变形有关。在本章中，通过数据拟合确定 `C_{avg}` 为 2.572。此外，如图 16.14 所示，验证了该预测模型的准确性。
 
 ## 16.6 结论
 
-本章对不同密度的 FFT 和不同构型的 GFFT 进行了实验和数值研究。阐述了泡沫与管之间的内部相互作用机制。结果显示，由于引入了泡沫，FFT 具有更高的负载能力，包含了挤挤出和泡沫的支撑。此外，尽管 GF 和 UF 密度相似，但 FFT 显示出明显的硬化而非平台。提出了一种包含三项（管、泡沫及其相互作用）的预测模型。
+本章对不同密度的 `FFT` 和不同构型的 `GFFT` 进行了实验和数值研究。阐述了泡沫与管之间的内部相互作用机制。结果显示，由于引入了泡沫，`FFT` 具有更高的负载能力，包含了挤挤出和泡沫的支撑。此外，尽管 `GF` 和 `UF` 密度相似，但 `FFT` 显示出明显的硬化而非平台。提出了一种包含三项（管、泡沫及其相互作用）的预测模型。
 
 致谢
 
@@ -8200,13 +8509,18 @@ $$F_{avg} = F_{avg}^0 + \sigma_t \pi \left(\frac{b_n}{2}\right)^2 + C_{avg}\sqrt
 参考文献
 
 - [1] Guillermo SR, Lu G, Grizeta RH. Quasi-static axial compression of thin-walled tubes. Int J Mech Sci 2001;42:2103–23
-- [2] Bintaraj A, Salih M, Shah S. On the crashworthiness of thin-walled energy absorbers: recent advances and future developments. Thin-Walled Structures 2017;118:37–63.
-- [3] Wang M, Yu X, Zhang J, Qin Q. Point-bending of asymmetrically metallic sandwich beams with foam core: failure behavior and optimal design. Comp Struct 2022;280:112475.
-- [4] Duan Y, Bi S, Shi X, Li Y. Quasi-static and dynamic compressive properties and deformation mechanics of 3D printed cellular structures with Kelvin cells. Int J Mater Eng 2019;132:103003.
-- [5] Sun G, Wang Z, Hu H, Zheng Li Q. Numerical and experimental investigation into the crashworthiness of metal-foam-composite hybrid structures. Comp Struct 2019:535–547.
-- [6] Luo H, Han Y, Meng X, Jin C. Failure analysis and energy-absorbing experiment of composite tubes under axial dynamic impact. Compos B Eng 2016;87:1–11.
-- [7] Legendre J, Le Gnecque P, Douard C, Moyne S. Numerical, and experimental study of the plastic buckling of thick cylindrical tubes under axial
 
+- [2] Bintaraj A, Salih M, Shah S. On the crashworthiness of thin-walled energy absorbers: recent advances and future developments. Thin-Walled Structures 2017;118:37–63.
+
+- [3] Wang M, Yu X, Zhang J, Qin Q. Point-bending of asymmetrically metallic sandwich beams with foam core: failure behavior and optimal design. Comp Struct 2022;280:112475.
+
+- [4] Duan Y, Bi S, Shi X, Li Y. Quasi-static and dynamic compressive properties and deformation mechanics of 3D printed cellular structures with Kelvin cells. Int J Mater Eng 2019;132:103003.
+
+- [5] Sun G, Wang Z, Hu H, Zheng Li Q. Numerical and experimental investigation into the crashworthiness of metal-foam-composite hybrid structures. Comp Struct 2019:535–547.
+
+- [6] Luo H, Han Y, Meng X, Jin C. Failure analysis and energy-absorbing experiment of composite tubes under axial dynamic impact. Compos B Eng 2016;87:1–11.
+
+- [7] Legendre J, Le Gnecque P, Douard C, Moyne S. Numerical, and experimental study of the plastic buckling of thick cylindrical tubes under axial
 
 compression. Int J Mech Sci 2019:156:494–505. 可自: https://doi.org/10.1016/j.ijmecmec.2019.03.002.
 
@@ -8237,6 +8551,8 @@ compression. Int J Mech Sci 2019:156:494–505. 可自: https://doi.org/10.1016/
 [20] Evaziyan A, Habibi MH, Musa AM, Hedayati R. 波纹管的轴向溃压和能量吸收。Mater Mex 2014;54:28–38. 可自: https://doi.org/10.1016/j.mattex.2013.0931.
 
 [21] Dajmuddin F. 制造良好的梯度多孔结构的综述、变形和优化抗溃性能。AM J Solid Struct 2019:16. 可自: https://doi.org/10.1590/1679-7852.7502.
+
+
 
 [23] Ha NS, Pham TM, Hao H, Lu G. 仿生建筑多单元方管在轴向溃压下的能量吸收行为。Int J Mech Sci 2021;201:106464. 可自: https://doi.org/10.1016/j.ijcsci.2021.106464.
 
@@ -8290,15 +8606,16 @@ compression. Int J Mech Sci 2019:156:494–505. 可自: https://doi.org/10.1016/
 
 [51] Duan R, Lu G, Chen F, Sires E. 增材制造铝泡沫在低和中应变率下的压缩行为。Compos Struct 2002;57:331–6. 可自: https://doi.org/10.1016/S0273-8233(02)00100-9.
 
-
-
-
 # 功能梯度多孔材料制备复合结构的应用：概述
 
 Kang Gao¹, Da Chen²⁻⁴, Jie Yang²⁻⁵ and Sritawat Kitipornchai⁶ᴰ
+
 1东南大学土木工程学院，中国南京江宁区，
+
 2墨尔本大学基础设施工程系，澳大利亚墨尔本，VIC, Australia
+
 5RMIT大学工程学院，澳大利亚Bundoora, VIC, Australia
+
 6昆士兰大学土木工程学院，澳大利亚St. Lucia, QLD, Australia
 
 ## 17.1 引言
@@ -8310,7 +8627,9 @@ Kang Gao¹, Da Chen²⁻⁴, Jie Yang²⁻⁵ and Sritawat Kitipornchai⁶ᴰ
 ![](img/90ed165a39fa708ec438fcda79319c25_432_0.png)
 
 功能梯度多孔复合结构的机器学习辅助分析、设计与增材制造。
+
 DOI: https://doi.org/10.1016/B978-0-12-81525-5.00016-X
+
 Copyright © 2024 Elsevier Ltd. 保留所有权利。
 
 功能梯度多孔复合结构
@@ -8352,7 +8671,6 @@ Copyright © 2024 Elsevier Ltd. 保留所有权利。
 ## 17.2.2 土木工程应用
 
 多孔结构因其卓越的冲击吸收、高强度重量比、优的阻尼和吸声性能而在土木工程领域被广泛采用。多孔材料是一种新型阻尼材料，其阻尼性能是致密材料的 3–10 倍 [24]。姚等人 [25] 在磁流（MR）阻尼器中使用泡沫材料，发现磁流泡沫是影响磁场并导致动态响应适应的关键因素。磁流泡沫阻尼器的工作机制如图 17.6 所示。图 17.6(a) 是阻尼器的示意图；(B) 是阻尼器的 3D 模型(C) 是物理细节。此外，多孔材料具有优异的机械物理特性，如阻尼、隔声、高能量耗散轻量化，被广泛用于建筑业的吸音和隔热材料 [28]。徐等人 [29] 使用统计分析法建立了铝泡沫夹层板的隔声预测模型，并通过实验进行了验证，讨论了铝泡沫密度和厚度对夹板隔声性能的影响。图 17.7 中，夹层板 (B) 是声源室 (C) 是接收室。他们还通过安装阻尼层优化了夹板的隔声性能。此外，尽管隧道建设高度发达，隧道内的噪声污染问题也变得日益严重。林等人 [30] 探索了吸声和噪声
-
 
 功能梯度多孔材料复合结构的应用：概述
 
@@ -8425,11 +8743,12 @@ Hind 等人 [41] 研究了孔隙分布对 6Al4V  材料的影响（图 17.13）�
 | 输入 | 输出 |
 | :--- | :--- |
 | 热处理 | 增材制造 |
-| CAD 基于 | 图像 | |
+| CAD 基于 | 图像 |
 | 位热处理 | 原 原热处理 |
 | 扫描/CT | SLM / EBM |
-
 | 骨科 |
+
+
 
 **图 17.12** 多孔结构的设计、制造和表面改性 [14]。
 
@@ -8442,9 +8761,13 @@ Hind 等人 [41] 研究了孔隙分布对 6Al4V  材料的影响（图 17.13）�
 (A) 模拟骨组织内部结构的结构
 
 R1
+
 R2
+
 R3
+
 R4
+
 R5
 
 ![](img/90ed165a39fa708ec438fcda79319c25_440_1.png)
@@ -8455,9 +8778,7 @@ R5
 
 ## 17.2.6 能量和电子应用
 
-多孔结构在热交换、导电性能和高电磁干扰（EMI）屏蔽方面表现出卓越的性能。Forte [47] 开发了一种微型多孔泡沫换热器并完成了低温应用的测试；同时在 FLUENT 6.3 中创建了数值模型（图 17.17）。当流体速度在 0 到 0.5 m/s 之间时，模型与实验数据高度吻合。Xu [48] 通过设计泡沫内部的氧气传输路径制备了一种新型 Ni/MnO2 空电极（图 17.18）。它显示出卓越的性能，如时间效率、易于制备以及高活性和稳定性，使其能够长寿命金属空气电池和其他电化学设备。泡沫结构的 EMI 屏蔽能力吸引了许多研究人员 [49–51]。Fan 等人 [52] 成功制备了轻量化导电的 MXene/石墨烯复合
-
-
+多孔结构在热交换、导电性能和高电磁干扰（EMI）屏蔽方面表现出卓越的性能。Forte [47] 开发了一种微型多孔泡沫换热器并完成了低温应用的测试；同时在 `FLUENT 6.3` 中创建了数值模型（图 17.17）。当流体速度在 0 到 0.5 m/s 之间时，模型与实验数据高度吻合。Xu [48] 通过设计泡沫内部的氧气传输路径制备了一种新型 `Ni/MnO2` 空电极（图 17.18）。它显示出卓越的性能，如时间效率、易于制备以及高活性和稳定性，使其能够长寿命金属空气电池和其他电化学设备。泡沫结构的 EMI 屏蔽能力吸引了许多研究人员 [49–51]。Fan 等人 [52] 成功制备了轻量化导电的 MXene/石墨烯复合
 
 FG 多孔复合材料结构
 
@@ -8528,10 +8849,6 @@ FGP 结构的设计主要基于设计者的直觉或试错法。在缺乏与其�
 ## 致谢
 
 本工作得到了...的资助。
-
-
-
-
 
 ## 功能梯度（FG）多孔复合结构
 
@@ -8665,10 +8982,6 @@ FGP 结构的设计主要基于设计者的直觉或试错法。在缺乏与其�
 - 点阵结构，365–366
 - 开孔单元，355–359
 
-
-
-
-
 索引 453
 
 - 切比雪夫-Ritz 方法，195–196
@@ -8695,6 +9008,9 @@ FGP 结构的设计主要基于设计者的直觉或试错法。在缺乏与其�
 - 卷积神经网络 (CNNs)，252, 257–259
 - 协方差函数，277
 - CP-Ti。参见商用钛 (CP-Ti)
+
+
+
 - 累积密度函数 (CDF)，208, 217f, 228f, 260f, 305, 309f, 307–310
 - 数据传播，244–243
 - 深度学习模型，252
@@ -8724,7 +9040,6 @@ FGP 结构的设计主要基于设计者的直觉或试错法。在缺乏与其�
 - 动态测试，384–402
 
 # E
-
 - 蛋壳法，324–325
 - 弹性失稳，206
 - 弹性刚度矩阵，296
@@ -8739,7 +9054,7 @@ FGP 结构的设计主要基于设计者的直觉或试错法。在缺乏与其�
 - Enneper-Weierstrass 表示，317–318
 - Eshelby 理论，445
 - 欧拉梁理论，21
--  Euler-Hermault 模型 (CBT)，215–216
+- Euler-Hermault 模型 (CBT)，215–216
 - 欧拉失稳，411–412
 - 指数协方差函数，277
 - 指数脉冲，76, 78f
@@ -8748,7 +9063,6 @@ FGP 结构的设计主要基于设计者的直觉或试错法。在缺乏与其�
 - 可挤出性，233
 
 # F
-
 - 面心立方 (FCC)，363–364
 - FCC。参见面心立方 (FCC)
 - FD。参见有限差分 (FD)
@@ -8870,17 +9184,7 @@ FGP 结构的设计主要基于设计者的直觉或试错法。在缺乏与其�
 - 梯度蜂窝结构，141
 - 石墨烯片层，195
 - 石墨烯增强纳米复合材料，173–174
-
-
-
-
-
-索引
-
-457
-
-- 孔隙率的高阶分布
-- 控方程, 176–181
+- 控制方程, 176–181
 - 构构方程, 177–188
 - 位移场, 176–177
 - 亥密顿原理, 178–181
@@ -8899,7 +9203,6 @@ FGP 结构的设计主要基于设计者的直觉或试错法。在缺乏与其�
 - 蜂窝, 3–5, 24, 251, 361–363
 - 胡克定律, 25, 177–178
 - 超参数, 优化, 301
-
 - 线性受迫振动, 102–111
 - 控方程, 102–107
 - 求解步骤, 108–109
@@ -8913,7 +9216,6 @@ FGP 结构的设计主要基于设计者的直觉或试错法。在缺乏与其�
 - 下界 (LB) 模式, 243
 
 # M
-
 - 机器学习 (ML), 241–242
 - 算法, 272
 - 模型验证与响应预测, 247–248
@@ -8928,18 +9230,15 @@ FGP 结构的设计主要基于设计者的直觉或试错法。在缺乏与其�
 - 梯度多孔板, 278–279
 
 # I
-
 - IGA. 整体几何分析 (IGA)
 - 隐式映射, 299–300
 - 基于不稳定性的架构材料, 241
 - 整体几何分析 (IGA), 54
 
 # J
-
 - 雅可比多项式, 53–54
 
 # K
-
 - Karhun–Lee 展开, 277
 - 凯尔文泡沫, 355–358, 360–363
 - 动能, 220
@@ -8947,7 +9246,6 @@ FGP 结构的设计主要基于设计者的直觉或试错法。在缺乏与其�
 - Kromer 积, 260
 
 # L
-
 - 格朗日日函数, 96
 - 格朗日方程, 29–30, 115
 - 格子架构, 363–364
@@ -8970,39 +9268,27 @@ FGP 结构的设计主要基于设计者的直觉或试错法。在缺乏与其�
 - 矩阵相三面体, 319, 320
 - 矩阵相 TPMS, 318
 - MCS 方法, 305
-
 - 均绝对误差 (MAE), 257–258
-
 - 均方误差 (MSE), 257–258, 279–280
-
 - 机械工程, 293
-
 - 机械超材料, 363
 - 曼格海绵 (MS) 立方体, 336–337
 - Menges–Rachitz 模型, 8
 - 介观有限元模型, 412–413
-
 - 金属泡沫, 434
 - 微射线成像, 366–367, 369
 - Mindlin 理论, 274
-
 - ML. 参见机器学习
-
 - MLA-SFV. 参见机器学习辅助随机振动分析 (MLA-SFV)
-
 - MLA-SSA. 参见机器学习辅助随机静态分析 (MLA-SSA)
-
 - 蒙特卡洛模拟, 303–305, 307
-
 - Mori–Takagi 模型, 445
-
 - MSE. 参见均方误差 (MSE)
 - 多目标优化, 443
 - 多相技术, 53–54
 - 多尺度, 441–442
 
 # N
-
 - Na-Net, 257
 - 天然多孔介质, 333
 - Navier 型解, 221
@@ -9028,7 +9314,6 @@ FGP 结构的设计主要基于设计者的直觉或试错法。在缺乏与其�
 - 非均匀 PA66, 383
 
 # O
-
 - ODEs. 参见常微分方程 (ODEs)
 - 一维 (ID), 138
 - 一对一映射, 59
@@ -9037,7 +9322,6 @@ FGP 结构的设计主要基于设计者的直觉或试错法。在缺乏与其�
 - 优化算法, 279–280
 - 优化向量, 299–300
 - 常微分方程 (ODEs), 181
-
 - Pasternak 基础, 148
 - PBCs. 参见周期边界条件 (PBCs)
 - PBF. 参见粉末床熔 (PBF)
@@ -9115,7 +9399,6 @@ FGP 结构的设计主要基于设计者的直觉或试错法。在缺乏与其�
 - QMCS. 参见准蒙特卡洛方案 (QMCS)
 
 # S
-
 - Sanders 壳理论, 93
 - 夹层板, 241
 - SC. 参见简单立方 (SC)
@@ -9123,138 +9406,251 @@ FGP 结构的设计主要基于设计者的直觉或试错法。在缺乏与其�
 - 选择性电子束熔化 (SEBM), 320–322
 - 选择性激光熔 (SLM), 320–322, 351–352
 - 选择性激光烧结 (SLS), 320–322, 352–353
+
+索引
+
+457
+
+
+
 - 半轴法, 141–142
+
 - SFEM. 参见随机有限元法 (SFEM)
+
 - S-FGG. 参见基于板的梯度三面体 (S-FGG)
+
 - SGF. 参见尺寸梯度泡沫 (SGF)
+
 - 变分剪切理论
+
 - 应变-剪切理论, 445
+
 - 应变量, 142–143, 260, 294–296
+
 - 应变位移, 217–218
+
 - 基于板的梯度三面体 (S-FGG), 367–368
+
 - 冲击波传播, 350
+
 - 简单立方 (SC), 363
+
 - 梯度多面梁 (S-FG beam), 221–222
+
 - 正弦级数, 222
+
 - 尺寸梯度泡沫 (SGF), 366–368
+
 - SLA. 参见光固化 (SLA)
+
 - SLM. 参见选择性激光熔 (SLM)
+
 - SLS. 参见选择性激光烧结 (SLS)
+
 - 智能板, 328–329
+
 - 平滑蜂窝结构, 412
+
 - 固相产率, 321
+
 - 空间设计, 251
+
 - 谱切切比法, 22, 59–61, 84, 149–150
+
 - 旋转圆壳, 90
+
 - 压力杆系统, 365–366
+
 - S-FG beam. 参见梯度多面梁 (S-FG beam)
+
 - 不锈钢钢, 320–322
+
 - 尖端应用, 371–372
+
 - 静态分析, 223–231
+
 - 静态压缩测试, 6
+
 - 静态加载, 216
+
 - 统计线性化法, 217–218
+
 - 稳态响应, 160–166
+
 - 光固化 (SLA), 321, 354, 355, 388
+
 - 刚度矩阵, 97–98
+
 - 随机有限元法 (SFEM), 27–294
+
 - 随机自由振动模型, 303
+
 - 随机静态问题, 279
+
 - 应变变形系数矩阵, 296
+
 - 应变-位移关系, 177
+
 - 应变能, 219
+
 - 应力-应变曲线, 335–336, 350, 382, 390, 401, 402
+
 - 应力-应变方法, 93–94
+
 - 应力-应变关系, 278–279
+
 - 结构周期, 301
+
 - 结构不确定性分析, 259–266
+
 - 梯度多面梁分析, 261–263
+
 - 材料不确定性, 259–260
+
 - 梯度多面梁的验证与讨论, 263–366
+
 - 支持向量回归 (SVR), 298
+
 - 基于代理模型的随机切比雪夫法, 204–206
+
 - SVR. 参见支持向量回归 (SVR)
+
 - 对称分布, 142–143
+
 - 对称孔隙率, 211
-
-
-
-
 
 # 索引
 
 461
 
 三阶剪切变形理论 (TSDT), 142, 176–177
+
 3D 声学夹层板, 440
+
 三维笛卡尔坐标系, 318
+
 三维 (3D) 胞体形态, 251
+
 3D 混凝土打印 (3DCP), 316, 323, 327
+
 3DCP, 见 3D混凝土打印 (3DCP)
+
 三维 (3D) 晶格, 3, 5–38
+
 3D 打印, 6–7, 315–318, 388, 413–414
+
 复合材料的, 320–332
+
 框架, 316
+
 Ti6A4V, 见 钛合金 (Ti6A4V)
+
 梁力申科梁, 8, 22, 48, 177–177, 262–263
+
 梁力申科模型 (3D), 315, 325
+
 钛合金 (Ti6A4V), 320–322
+
 传统制造工艺, 350–351
+
 训练数据, 243–244
+
 瞬态响应, 166–169
+
 交通工程, 411
+
 横向位移, 227, 227/
+
 三角形脉冲, 76, 78
+
 三角函数, 221
+
 三角函数剪切变形理论, 173–173–174
+
 三周期周期最小表面 (TPMs), 315, 363
+
 钻石型, 318
+
 Fischer–Koch S, 318
+
 开普曲面 (gyroid), 317
+
 IWP, 317
+
 原元型 (primitive), 317
+
 三脚架, 337
+
 TSDT, 见 三阶剪切变形理论 (TSDT)
+
 二维 (2D) 胞体形态, 251
+
 二维 (2D) 晶格, 3, 5–38
+
 2D 建模, 254
+
 Type I1 单元结构, 330
+
 紫外线, 353
+
 单向孔隙率分布 (UPD), 174–176, 175f
+
 均匀分布, 142–143
+
 均匀泡沫
+
 压缩行为, 391–393
+
 力学性能, 391, 391r
+
 建模, 384
+
 均匀孔隙率分布 (PD-U), 91
+
 独特图案, 243–244
+
 ., 见 单向分布 (UPD)
+
 上界 (UPB), 模式, 243
+
 气化, 350–351
+
 速度向量, 151–152
+
 振动分析, 231–233
+
 虚拟弹簧法, 58–59, 64–65, 147–148
+
 体积分数, 319–320
+
 von Karman 几何非线性, 174
+
 沃诺诺图 (Voronoi diagram), 356–360
+
 沃罗诺伊泡沫模型, 357–358, 382, 385f, 397–398, 413–414
+
 沃罗诺伊镶嵌, 253, 413–414
 
 # U
 
 UFT-9, 415
+
 超声辅助压力烧结, 6–7
 
 # W
 
 波浪边, 252
+
 韦布尔分布, 406
+
 魏尔拉斯函数, 317–318
+
 Winkler–Pasternak 基础, 142
 
 # X
 
 X 射线计算机层扫描, 355–356
+
 X-SVR, 见 扩展支持向量回归 (X-SVR)
 
 # Y
@@ -9264,5 +9660,5 @@ X-SVR, 见 扩展支持向量回归 (X-SVR)
 # Z
 
 零轴向应力, 227–229
-氧化锆 (ZrO2), 282, 303
 
+氧化锆 (ZrO2), 282, 303

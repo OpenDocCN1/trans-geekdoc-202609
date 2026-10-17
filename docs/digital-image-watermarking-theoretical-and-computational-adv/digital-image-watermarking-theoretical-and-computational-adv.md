@@ -1,57 +1,35 @@
+
 # 数字图像水印：理论与计算进展（智能信号处理与数据分析）
-
-
-
-
-
 
 ![](img/2aafc43f8e3a22e17b338f7ddcb87be4_0_0.png)
 
-
-
 ![](img/2aafc43f8e3a22e17b338f7ddcb87be4_0_1.png)
 
-
-
 丛主
+
 Nilanjan Dey 博士
+
 信息技术系，
+
 Techno India College of Technology, 印度西孟加拉邦, 印度
-
-
 
 关于关于该的更多信息，请访问：https://www.crcpress.com/Intelligent-Signal-Processing-and-Data-Analysis/book-series/INSPDA
 
-
 作者
+
 Surekha Borra, Rohit Thanki 以及
+
 Nilananjan Dey
 
 ![](img/2aafc43f8e3a22e17b338f7ddcb87be4_3_0.png)
 
-
-
-
-
-
-
-
-
-
 访问 Taylor & Francis 网站
+
 http://www.taylorandfrancis.com
 
 访问 CRC Press 网站
+
 http://www.crcpress.com
-
-
-
-
-
-
-
-
-
 
 # 前序
 
@@ -67,21 +45,26 @@ http://www.crcpress.com
 - 概述此类算法的不同应用、困难和挑战，以及未来的研究方向。
 
 Surekha Borra
+
 Rohit Thankani
+
 Nilanjan Dey
 
 MATLAB® 是 MathWorks, Inc. 的注册商标。有关产品信息请联系：
 
 The MathWorks, Inc.
+
 3 Apple Hill Drive
+
 Natick, MA 01760-2098 USA
+
 电话: 508-647-7000
+
 传真: 508-647-7001
+
 电子邮箱: info@mathworks.com
+
 网址: www.mathworks.com
-
-
-
 
 # 作者
 
@@ -94,7 +77,6 @@ Nilanjan Dey 是印度加尔各答 Techno India 科技学院信息技术系的�
 Dey 博士与 Elsevier、Wiley、CRC Press、Springer 等机构合著或编辑了 40 多部书籍，并发表了 300 多篇研究文章。他是《环境计算与智能国际期刊》（International Journal of Ambient Computing and Intelligence, IGI Global）的主编辑。Dey 博士是 Springer 自然启发计算系列（Springer Nature）、《医疗保健无处感知应用进展》（Elsevier）以及《智能信号处理与数据分析》（CRC Press）的系列共同编辑。他还是 IEEE Access 的副编辑。
 
 Dey 博士的主要研究兴趣包括医学成像、机器学习、数据挖掘等。他最近被评为2015–2017 年印度计算机科学领域发表和引用次数最高的 10 位学术学者之一。
-
 
 - CSA 骆尾搜索算法
 
@@ -132,9 +114,6 @@ Dey 博士的主要研究兴趣包括医学成像、机器学习、数据挖掘�
 
 每秒都有大量的数字信息（例如图片、录音、旋律和重要档案）在个人、组织和协会之间进行发布或交换。（注：原文中该段落存在大量重复，翻译已按要求保留核心含义并去重）。
 
-
-
-
 ## 4 数字图像水印
 
 隐写术确保了没有人知晓实体正在进行秘密通信，因此它适用于版权标记。相比之下，水印一直是一对多通信的一部分，被用于验证多媒体文件的所有者（Vellasques et al., 2010）。
@@ -162,10 +141,6 @@ Dey 博士的主要研究兴趣包括医学成像、机器学习、数据挖掘�
 鲁棒标记在安全应用中更受青睐，例如复制控制、广播监控和版权保护，因为这些标记能够抵抗广泛的攻击（Qasim et al., 2018）。鲁棒标记将标记嵌入在图像的重要部分，即使在图像发生修改/扭曲时，标记也不会被破坏，例如压缩、缩放、重采样、模拟转数字（A/D）和数字转模拟（D/A）转换、加性噪声、线性及非线性滤波、平移、剪裁和旋转等。由于相互冲突的需求（如隐藏能力、透明度和鲁棒性）之间的权衡，鲁棒标记技术的设计非常复杂且具有挑战性。尽管生存程度取决于应用，但理想目标是设计一种标记系统，使得只有通过破坏宿图像才能移除标记，这对于保护医学领域和国防相关的敏感图像非常有用（Dey et al., 2017; Biswas et al., 2013）。根据要保护的实体，鲁棒标记主要有两种类型。水印识别文件的版权所有者，而指纹识别识别允许/分发/非法复制宿图像的授权客户和/或违反许可协议。除非另说明，鲁棒水印是不可逆的。一种特殊类别可逆水印被设计为无损，因为这些标记是可逆的，原始水印可以恢复和或提取。另一方面，零水印在水印隐藏过程中不会影响宿图像的质量。
 
 水印检测本身是许多输入的函数，例如测试图像、私钥或公钥、原始水印和原始宿图像。非对称/公钥水印允许所有者之外的任何人提取水印，通过限制移除水印的权限。另一方面，为了证明图像的所有权，使用私有水印，因为它们只能通过密钥进行检测（Mohanty et al., 2017）。
-
-
-
-
 
 盲水印技术在提取水印时既不需要原始宿主图像也不需要水印，在许多应用中都非常灵活，包括图像认证、版权保护、隐蔽通信和电子投票系统。半盲技术不需要原始宿主图像，但在提取水印时需要原始水印或某些额外信息。内容隐私、图像认证和版权保护是半盲技术的若干应用。非盲技术在提取水印时需要原始宿主图像，而这种图像可能难以获取，因此在应用上受到限制。
 
@@ -207,64 +182,69 @@ $$WC = C*(1+k\timesw)$$
 
 - 鲁棒性：水印图像会经历无意变换（如存储和传输过程中的压缩）以及故意攻击（如加密、删除、重采样、裁剪、几何和缩放攻击）。数字水印对不可见和指定攻击的抵抗力在水印技术中至关重要，主要取决于嵌入域和像素/系数的选择。在实践中，水印算法
 
-
-
-
-
--   可逆性：在医学领域等特定应用中，对图像进行细微修改可能会导致灾难性后果，这可能涉及法律影响。在这种情况下，必须根据需要严格检索原始图像。这些应用要求开发无损或可逆水印技术，以便在所有权确认后能够恢复原始图像。
+- 可逆性：在医学领域等特定应用中，对图像进行细微修改可能会导致灾难性后果，这可能涉及法律影响。在这种情况下，必须根据需要严格检索原始图像。这些应用要求开发无损或可逆水印技术，以便在所有权确认后能够恢复原始图像。
 
 ## 1.6 指标
 
-图像水印方案在不可感知性和鲁棒性方面的性能可以通过多种衡量指标进行衡量。为了衡量原始图像与水印图像之间感知失真的的相似性，通常使用不可感知性指标如 PSNR 和加权 PSNR (WPSNR) (Wang, 1999)；归一化相关 (NC) 和 SSIM 是衡量原始水印与提取水印之间相似性的常用指标。这些指标反映了提取水印的质量，还有助于分析水印技术在攻击存在下的鲁棒性 (Wang, 2017)。
 
-公式 1.3 给出的 PSNR 以分贝为单位测量，它取决于均方误差 (MSE)，即原始图像与水印图像之间的误差。MSE 使用公式 1.4 计算：
 
-$$PSNR = 10 \times \log_{10} \left(\frac{255^2}{MSE}\right)$$
+图像水印方案在不可感知性和鲁棒性方面的性能可以通过多种衡量指标进行衡量。为了衡量原始图像与水印图像之间感知失真的相似性，通常使用不可感知性指标如`PSNR`和加权`PSNR`（`WPSNR`）(Wang, 1999)；归一化相关（`NC`）和`SSIM`是衡量原始水印与提取水印之间相似性的常用指标。这些指标反映了提取水印的质量，还有助于分析水印技术在攻击存在下的鲁棒性 (Wang, 2017)。
 
-$$MSE = \frac{1}{M \times N} \sum_{x=0}^{M-1} \sum_{y=0}^{N-1} (C(x,y) - WC(x,y))^2$$
+公式 1.3 给出的`PSNR`以分贝为单位测量，它取决于均方误差（`MSE`），即原始图像与水印图像之间的误差。`MSE`使用公式 1.4 计算：
 
-其中 $C$ 分别代表原始图像和水印图像。WPSNR 是一种用于计算水印图像不可感知性的新方法，如公式 1.5 所示：
+```
+PSNR = 10 × log₁₀(255² / MSE)
+```
 
-$$WPSNR = 10 \times \log_{10} \left(\frac{255^2}{NVF \times MSE}\right)$$
+```
+MSE = (1 / (M × N)) Σ(x=0 to M-1) Σ(y=0 to N-1) (C(x,y) - WC(x,y))²
+```
 
-其中 NVF 是可见性函数，表示基于高斯模型的图像纹理信息。NVF 的值处于 [0, 1] 区间。纹理区域的 NVF 值为 0，平坦区域为 1。NVF 使用公式 1.6 计算：
+其中`C`分别代表原始图像和水印图像。`WPSNR`是一种用于计算水印图像不可感知性的新方法，如公式 1.5 所示：
 
-$$NVF = \text{NORM} \left( \frac{1}{1+\delta} \right)$$
+```
+WPSNR = 10 × log₁₀(255² / (NVF × MSE))
+```
 
-$\delta$ 是计算块的亮度方差。PSNR 和 WPSNR 的值越高表示不可感知性越。。如果 NC 和 SSIM 值接近 1，则任何图像水印方案的鲁棒性都很高 (Wang, 2017)。NC 和 SSIM 分别使用公式 1.7 和 1.8 计算。NC 衡量原始水印与提取水印之间的相关性，而 SSIM 衡量它们之间的结构相似性。
+其中`NVF`是可见性函数，表示基于高斯模型的图像纹理信息。`NVF`的值处于`[0, 1]`区间。纹理区域的`NVF`值为 0，平坦区域为 1。`NVF`使用公式 1.6 计算：
 
-$$NC = \frac{\sum_{x=1}^{M}\sum_{y=1}^{N} w(x,y)\times w^*(x,y)}{\sum_{x=1}^{M}\sum_{y=1}^{N} w^2(x,y)}$$
+```
+NVF = NORM(1 / (1 + δ))
+```
 
-$$SSIM = \frac{(2\mu_{w}\mu_{w^*} + C_1)(2\sigma_{ww^*} + C_2)}{(\mu_{w}^2 + \mu_{w^*}^2 + C_1)(\sigma_{w}^2 + \sigma_{w^*}^2 + C_2)}$$
+`δ`是计算块的亮度方差。`PSNR`和`WPSNR`的值越高表示不可感知性越好。如果`NC`和`SSIM`值接近 1，则任何图像水印方案的鲁棒性都很高 (Wang, 2017)。`NC`和`SSIM`分别使用公式 1.7 和 1.8 计算。`NC`衡量原始水印与提取水印之间的相关性，而`SSIM`衡量它们之间的结构相似性。
 
-$C_1$ 和 $C_2$ 是常量，$w$ 和 $w^*$ 是原始水印和提取水印，$\mu_w$ 和 $\mu_{w^*}$ 是原始水印和提取水印的均值，$\sigma_{ww}$ 和 $\sigma_{ww^*}$ 代表原始水印和提取水印的协方差，$N$ 代表窗口数量。
+```
+NC = Σ(x=1 to M) Σ(y=1 to N) w(x,y) × w*(x,y) / Σ(x=1 to M) Σ(y=1 to N) w²(x,y)
+```
+
+```
+SSIM = ((2μ_w μ_w* + C₁)(2σ_ww* + C₂)) / ((μ_w² + μ_w*² + C₁)(σ_w² + σ_w*² + C₂))
+```
+
+`C₁`和`C₂`是常量，`w`和`w*`是原始水印和提取水印，`μ_w`和`μ_w*`是原始水印和提取水印的均值，`σ_ww`和`σ_ww*`代表原始水印和提取水印的协方差，`N`代表窗口数量。
 
 ## 1.7 针对水印的攻击
 
-尽管网上有很多可用的水印算法和工具，但在处理攻击时，水印仍然是一项具有挑战性的任务 (Wang, 1999)。在水印术语中，攻击旨在移除水印痕迹以阻碍认证目标。了解攻击类型及其分析有助于在竞争环境中识别适用于特定应用的最佳工具。Checkmark、Optark 和 StirMark 是一些评估开发的水印工具鲁棒性的软件 (Borra et al., 2017)。攻击通常分为移除攻击、几何攻击、加密攻击、协议攻击和安全攻击。
+尽管网上有很多可用的水印算法和工具，但在处理攻击时，水印仍然是一项具有挑战性的任务 (Wang, 1999)。在水印术语中，攻击旨在移除水印痕迹以阻碍认证目标。了解攻击类型及其分析有助于在竞争环境中识别适用于特定应用的最佳工具。`Checkmark`、`Optark`和`StirMark`是一些评估开发的水印工具鲁棒性的软件 (Borra et al., 2017)。攻击通常分为移除攻击、几何攻击、加密攻击、协议攻击和安全攻击。
 
--   移除攻击旨在通过刻意执行图像操作（如量化、有损压缩、平均化、调制、解调、碰撞攻击、块替换攻击、去噪和滤波）从水印图像移除水印。观察到，要执行调制攻击，攻击者首先必须使用各种滤波器（中值滤波器、高通滤波器和维纳滤波器）预测水印，然后将其从水印图像中减去，最后在其上添加高斯噪声。这通常被称为碰撞攻击。然而，作为马赛克攻击，攻击者将水印图像分割成小部分并尝试使用表格重新组合，其目的是移除插入的水印。
+- **移除攻击**旨在通过刻意执行图像操作（如量化、有损压缩、平均化、调制、解调、碰撞攻击、块替换攻击、去噪和滤波）从水印图像移除水印。观察到，要执行调制攻击，攻击者首先必须使用各种滤波器（中值滤波器、高通滤波器和维纳滤波器）预测水印，然后将其从水印图像中减去，最后在其上添加高斯噪声。这通常被称为碰撞攻击。然而，作为马赛克攻击，攻击者将水印图像分割成小部分并尝试使用表格重新组合，其目的是移除插入的水印。
 
--   几何攻击旨在通过在提取的水印和原始水印之间制造不同步来扭曲水印而非移除它。攻击者尝试从边缘裁剪图像，或随机删除/编辑/移动某些像素行或列，其目的是扭曲水印。这在提取水印时会产生同步问题。通常会组合使用攻击而非单一攻击。常见的几何攻击包括旋转、剪切、平移、仿射变换、缩放、比例变化、裁剪、列/行删除、抖动和随机弯曲。注意，这些攻击可以在局部或全局应用，并以系统或随机的方式进行。
+- **几何攻击**旨在通过在提取的水印和原始水印之间制造不同步来扭曲水印而非移除它。攻击者尝试从边缘裁剪图像，或随机删除/编辑/移动某些像素行或列，其目的是扭曲水印。这在提取水印时会产生同步问题。通常会组合使用攻击而非单一攻击。常见的几何攻击包括旋转、剪切、平移、仿射变换、缩放、比例变化、裁剪、列/行删除、抖动和随机弯曲。注意，这些攻击可以在局部或全局应用，并以系统或随机的方式进行。
 
--   协议攻击旨在攻击水印应用本身，利用可逆水印的概念产生所有权的模糊。协议攻击对水印工具的设计提出了另一个要求：无法从实际上未标记的任何图像中提取水印。换句话说，误报率必须降到最低。此外，协议攻击利用了水印管理或实施过程中的漏洞。
+- **协议攻击**旨在攻击水印应用本身，利用可逆水印的概念产生所有权的模糊。协议攻击对水印工具的设计提出了另一个要求：无法从实际上未标记的任何图像中提取水印。换句话说，误报率必须降到最低。此外，协议攻击利用了水印管理或实施过程中的漏洞。
 
--   复制攻击旨在在不知道涉及密钥的情况下预测水印并将其复制到其他数据上。此外，开发与图像相关的水印是阻碍此类攻击的最佳解决方案。
+- **复制攻击**旨在在不知道涉及密钥的情况下预测水印并将其复制到其他数据上。此外，开发与图像相关的水印是阻碍此类攻击的最佳解决方案。
 
--   法律攻击试图在法庭上对水印的技术证据产生怀疑，同时证明所有权。
+- **法律攻击**试图在法庭上对水印的技术证据产生怀疑，同时证明所有权。
 
--   加密攻击设想通过穷举搜索寻找密钥。
+- **加密攻击**设想通过穷举搜索寻找密钥。
 
--   神谕攻击旨在利用水印检测器从水印图像生成原始图像。
+- **神谕攻击**旨在利用水印检测器从水印图像生成原始图像。
 
--   禁用攻击旨在不影响水印存在的情况下，破坏水印与宿主之间的关系。
+- **禁用攻击**旨在不影响水印存在的情况下，破坏水印与宿主之间的关系。
 
--   歧攻击通过嵌入多个水印来误导检测器。在这种情况下，插入水印的顺序是模糊的。
-
-
-
-
-
+- **歧攻击**通过嵌入多个水印来误导检测器。在这种情况下，插入水印的顺序是模糊的。
 
 | 序号 | 工具名称 | 数字图像水印工具 | 描述 |
 |---|---|---|---|
@@ -278,25 +258,24 @@ $C_1$ 和 $C_2$ 是常量，$w$ 和 $w^*$ 是原始水印和提取水印，$\mu_
 | 08 | Water mark lib | http://download.net.com/WatermarkLib/3000-2192_4_10963794.html | |
 | 09 | Alamoon | http://alamoon.com/ | |
 | 10 | TSR water mark | 1-More water marker https://1-more-watermarken.softsonic.com/ | |
-| 11 | Photo Watermark Professional | https://archive.org/details/tucows_25618.Photo_Watermark_Professional | | |
-| 12 | Fast water mark | https://fast-watermarken.softsonic.com/ | | |
-| 13 | Watermark Master | http://www.videocharge.com/Products/wm/main.php | | |
-| 14 | Watermark | https://www.watermark.ws/ | | |
-| 15 | Coolweak | http://www.coolweak.com/ | | |
-| 16 | Picture stamper | http://amin-ahmadi.com/picture-stamper/ | | |
+| 11 | Photo Watermark Professional | https://archive.org/details/tucows_25618.Photo_Watermark_Professional | |
+| 12 | Fast water mark | https://fast-watermarken.softsonic.com/ | |
+| 13 | Watermark Master | http://www.videocharge.com/Products/wm/main.php | |
+| 14 | Watermark | https://www.watermark.ws/ | |
+| 15 | Coolweak | http://www.coolweak.com/ | |
+| 16 | Picture stamper | http://amin-ahmadi.com/picture-stamper/ | |
 | 17 | Water mark passion | http://www.majorgeeks.com/mg/getmirror/watermark_passion.1.html | |
-
 | 表 1.1 (续) | 序号 | 工具名称 | 数字图像水印工具 | 描述 |
 | :--- | :--- | :--- | :--- | :--- |
-| 19 | Easy watermark studio lite | http://www.easy-watermark-studio.com/easy-watermark-studio/lite-version.html | | |
-| 20 | Bytescout watermarking | https://bytescout.software.informer.com/products/enduser/download-watermarking/watermarks/ | | |
-| 21 | Snagit | https://snagitl.software.sourceforge.net/download-snagit-watermarking.net/ | | |
-| 22 | Jaco Watermark | http://jaco-watermark.com/ | | |
-| 23 | Star Watermark | http://www.star-watermark.com/ | | |
-| 24 | Arclab Watermark | https://www.arca.com/en/watermarkstudio/ | | |
-| 25 | Batch Watermark | http://batch-watermark.com/creator.software-informer.com/6.0/ | | |
-| 26 | Optimark | http://www.poseidon.csd.auth.gr/optimark/ | | | |
-| 27 | StirMark | http://www.pettiticolas.net/fabien/stirmark/index.html | | |
+| 19 | Easy watermark studio lite | http://www.easy-watermark-studio.com/easy-watermark-studio/lite-version.html | |
+| 20 | Bytescout watermarking | https://bytescout.software.informer.com/products/enduser/download-watermarking/watermarks/ | |
+| 21 | Snagit | https://snagitl.software.sourceforge.net/download-snagit-watermarking.net/ | |
+| 22 | Jaco Watermark | http://jaco-watermark.com/ | |
+| 23 | Star Watermark | http://www.star-watermark.com/ | |
+| 24 | Arclab Watermark | https://www.arca.com/en/watermarkstudio/ | |
+| 25 | Batch Watermark | http://batch-watermark.com/creator.software-informer.com/6.0/ | |
+| 26 | Optimark | http://www.poseidon.csd.auth.gr/optimark/ | |
+| 27 | StirMark | http://www.pettiticolas.net/fabien/stirmark/index.html | |
 
 ## 参考文献
 
@@ -314,8 +293,9 @@ Biswas, Debalina, Debalina Debal, Deb,,,,,,,,,,,, and........... of of of. of of
 
 ,, and, and. of. Optimization of frequency-based discrete wavelet transform. Computer Science, and, and, 2013.
 
-,, and, and. of. Optimization of frequency-based discrete wavelet transform. Computer Science, and, and and  of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of. Springer, and and of and and of. University of California, Berkeley. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018.
 
+
+Optimization of frequency-based discrete wavelet transform. Computer Science, and, and and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of and of. Springer, and and of and and of. University of California, Berkeley. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018. Multimedia Tools and Applications, 1–23, 2018.
 
 
 
@@ -363,12 +343,9 @@ Patchwork（Bender et al., 1996）利用某些统计数据生成随机模式并�
 
 ### 2.2.4 预测编码技术
 
-该技术由 Matsui 和 Tanaka 针对灰度图像设计实现（Matsui, 1998）。在该技术中，计算相邻像素之间的相关性。水印由一组嵌入的像素生成，每隔
+该技术由 Matsui 和 Tanaka 针对灰度图像设计实现（Matsui, 1998）。在该技术中，计算相邻像素之间的相关性。水印由一组嵌入的像素生成，每隔像素通过相邻像素之间的差异进行修改。这些技术比最低位（LSB）替换技术更健健（Pandhwal and Chaudhary, 2013; Saxena et al., 2015）。
 
-
-像素通过相邻像素之间的差异进行修改。这些技术比最低位（LSB）替换技术更健健（Pandhwal and Chaudhary, 2013; Saxena et al., 2015）。
-
- 2.2.5 加法水印技术
+### 2.2.5 加法水印技术
 
 传统的水印方法是使用 M 序列/伪随机 PN 序列顺序或随机地修改宿图像的块。PN 序列的使用由于其优异的相关性，允许对水印进行盲检测。这些方法利用 PN 序列将缩放后的水印以加法方式嵌入宿图像中（Langelaar et al., 2000; Arena et al., 2000; Shoemaker, 2002）。由于这些序列的幅度较小，它们以一种不可感知的方式影响像素值。在需要时，使用种子生成随机序列，该种子作为密钥。一个序列用于插入水印位 0，另一个用于水印位 1。通过以下步骤将水印插入宿图像中：
 
@@ -410,12 +387,9 @@ DFT（离散傅里叶变换）将任何数字函数转换为其频率系数。�
 
 DCT（离散余弦变换）是一种线性变换，将 $n \times n$ 大小的图像映射到另一个 $n \times n$ 大小的矩阵，其元素代表图像的分布和频率（Langelaar et al., 2000; Arena et al., 2000; Hernandez et al., 2000; Lu and Liao, 2001; Shoemaker, 2002; Huang and Guan, 2004; Preda and Vizireanu, 2007; Sridevi et al., 2010; Ding et al., 2010）。其中 DC 系数位于矩阵的左上角，包含非常重要的信息。DC 系数是整数并代表图像的平均颜色。AC 系数可能是整数。图2 显示图像的 DCT 分布。
 
-图像中的重要信息位于低频 DCT 系数中。高频 DCT 系数代表图像的锐利细节，很容易被模糊和高斯噪声攻击消除。因此，对于健壮水印，使用了中频 DCT 系数。文献中在 DCT 域嵌入水印有两种主要方法：(1) 中频 DCT 比较（Langelaar et al., 2000; Shoemaker, 2002）和 (2) 给中频 DCT 系数添加 PN 噪声序列（Langelaar et al., 2000; Shoemaker, 2002）。两种方法都是盲的，提取水印不需要原始宿图像，并广泛用于多媒体数据的保护（Langelaar et al., 2000; Shoemaker, 2002）。另一种方法是考虑一组较大的 DCT 系数进行修改。在非盲方法中，DCT
-
-根据以下步骤修改宿图像的系数，以生成水印图像：
+图像中的重要信息位于低频 DCT 系数中。高频 DCT 系数代表图像的锐利细节，很容易被模糊和高斯噪声攻击消除。因此，对于健壮水印，使用了中频 DCT 系数。文献中在 DCT 域嵌入水印有两种主要方法：(1) 中频 DCT 比较（Langelaar et al., 2000; Shoemaker, 2002）和 (2) 给中频 DCT 系数添加 PN 噪声序列（Langelaar et al., 2000; Shoemaker, 2002）。两种方法都是盲的，提取水印不需要原始宿图像，并广泛用于多媒体数据的保护（Langelaar et al., 2000; Shoemaker, 2002）。另一种方法是考虑一组较大的 DCT 系数进行修改。在非盲方法中，DCT 根据以下步骤修改宿图像的系数，以生成水印图像：
 
 - 1. 计算宿图像的大小。
-
 - 2. 对宿图像应用正向 DCT 以得到其 DCT 系数，如下：
 
 ```
@@ -425,7 +399,6 @@ $D = DCT(I) \quad (2.2)$
 其中 $D$ 代表宿图像的 DCT 系数。
 
 - 3. 计算水印的大小。
-
 - 4. 使用下方的方程将水印插入到宿数据的 DCT 系数中。
 
 ```
@@ -445,7 +418,6 @@ $WI = IDCT(D') \quad (2.4)$
 DCT 域中基本水印提取过程的步骤所示。
 
 - 1. 计算水印图像的大小。
-
 - 2. 对水印图像应用正向 DCT 以得到其 DCT 系数。
 
 ```
@@ -484,35 +456,36 @@ $w'_{x,y} = (D'_{x,y} - D_{x,y}) / k \quad (2.6)$
 
 ## 2.7 压缩感知与分解方法
 
+
+
 2005 年，人员引入了一种基于信号稀疏性的信号处理理论。该理论被称为压缩感知（CS）（Dono, 2006; Candes, 2006; Baraniuk, 2007），其在水印中的应用通过为传统水印方法增加两个过程——基于 CS 的加密和解密来提供安全性。压缩感知应用于图像的必要条件是图像在其所在域内是稀疏的。因此，首先使用图像变换（如 DFT、DCT、DWT 和 SVD）将水印转换为稀疏系数，以生成水印的稀疏系数。在嵌入前加密水印的缺点增加了计算时间。该技术主要用于多媒体数据的所有权认证和检测（Sheikh and Baraniuk, 2007; Valenzise et al., 2011; Zhang et al., 2009; Raval et al., 2011; Fakhr, 2012; Tiesheng et al., 2013; Thanki et al., 2017, 2018）。压缩感知理论可以在嵌入水印之前用于加密宿图像。
 
 QR 分解将矩阵分解为正交矩阵和一个三角矩阵。实数方矩阵 A 的 QR 分解表示为 $A = QR$，其中 Q 是正交矩阵（即 $Q^TQ=I$），R 是上三角矩阵。如果 A 是非奇异的，则这种分解是唯一的。通过 QR 分解获得的矩阵具有以下两个重要特征（Wang et al., 2016）：
 
 - R 矩阵第一行元素的值大于其他行元素的值，表明第一行具有更高的能量，因此 R 矩阵决定了原始图像的性质。
-
-
-
-Q矩阵第一列元素的值代表了矩阵值之间的关系。因此，它们可以提供针对常见攻击的鲁棒性。因此，在基于QR分解的水印技术中，可以将水印插入到Q矩阵第一列的元素中（Su et al., 2014, 2017; Wang et al., 2016; Rasti et al., 2016; Mehta et al., 2016; Laur et al., 2015; Han et al., 2012; Mitra et al., 2012; Song et al., 2011; Naderahmian and Hosseini-Khayat, 2010）。
+- Q 矩阵第一列元素的值代表了矩阵值之间的关系。因此，它们可以提供针对常见攻击的鲁棒性。因此，在基于 QR 分解的水印技术中，可以将水印插入到 Q 矩阵第一列的元素中（Su et al., 2014, 2017; Wang et al., 2016; Rasti et al., 2016; Mehta et al., 2016; Laur et al., 2015; Han et al., 2012; Mitra et al., 2012; Song et al., 2011; Naderahmian and Hosseini-Khayat, 2010）。
 
 ## 2.8 基于 SCHUR 分解的水印
 
-Schur分解（Van Loan, 1996）当应用于实矩阵 $A$ 时，会产生两个矩阵 $U$ 和 $D$，使得 $A = U \times D \times U^T$，其中 $U$ 是正交矩阵，$D$ 是上三角矩阵。$D$ 矩阵对角线上有实特征值。这种分解大约需要 $8n^{3/2}$ 次计算操作，少于SVD分解所需的计算（约 $11n^3$）。$U$ 矩阵的特征是前两列的所有元素具有相同的符号和数值。$U$ 矩阵的这一属性被用于水印的嵌入过程。因此，可以使用这种分解轻松设计盲水印方法。基于Schur分解的水印（Li et al., 2017; Rajab et al., 2015; Meenakshi et al., 2014; Razaafindradina et al., 2013; Gunjan et al., 2012; Mohammad, 2012; Su et al., 2012; Chaudhary et al., 2012; Mohan et al., 2011; Mohan and Swamy, 2010; Seddik et al., 2009）与所有其他水印方法相比具有较高的透明度，但实现起来更为复杂。
+Schur 分解（Van Loan, 1996）当应用于实矩阵 $A$ 时，会产生两个矩阵 $U$ 和 $D$，使得 $A = U \times D \times U^T$，其中 $U$ 是正交矩阵，$D$ 是上三角矩阵。$D$ 矩阵对角线上有实特征值。这种分解大约需要 $8n^{3/2}$ 次计算操作，少于 SVD 分解所需的计算（约 $11n^3$）。$U$ 矩阵的特征是前两列的所有元素具有相同的符号和数值。$U$ 矩阵的这一属性被用于水印的嵌入过程。因此，可以使用这种分解轻松设计盲水印方法。基于 Schur 分解的水印（Li et al., 2017; Rajab et al., 2015; Meenakshi et al., 2014; Razaafindradina et al., 2013; Gunjan et al., 2012; Mohammad, 2012; Su et al., 2012; Chaudhary et al., 2012; Mohan et al., 2011; Mohan and Swamy, 2010; Seddik et al., 2009）与所有其他水印方法相比具有较高的透明度，但实现起来更为复杂。
 
 ## 2.9 水印中的 HESSENBERG 矩阵因子
 
-Hessenberg分解（Van Loan, 1996）是一种矩阵分解方法。矩阵 $B$ 被分解为正交矩阵 $U$ 和Hessenberg矩阵 $H$，使得 $U \times H \times U^T = B$，其中 $U^T$ 是正交矩阵的共轭转置。这种分解大约需要 $14n^{3/3}$ 次计算操作，高于Schur分解所需的计算操作，但少于SVD分解。Hessenberg矩阵因子用于水印是为了确保随机化过程是完全可逆的（Su and Chen, 2017; Singh et al., 2017; Su, 2016; Bhatnagar and Wu, 2013; Bhatnagar et al., 2010）。使用这种分解的水印实现较为复杂，研究人员探索也较少。
+Hessenberg 分解（Van Loan, 1996）是一种矩阵分解方法。矩阵 $B$ 被分解为正交矩阵 $U$ 和 Hessenberg 矩阵 $H$，使得 $U \times H \times U^T = B$，其中 $U^T$ 是正交矩阵的共轭转置。这种分解大约需要 $14n^{3/3}$ 次计算操作，高于 Schur 分解所需的计算操作，但少于 SVD 分解。Hessenberg 矩阵因子用于水印是为了确保随机化过程是完全可逆的（Su and Chen, 2017; Singh et al., 2017; Su, 2016; Bhatnagar and Wu, 2013; Bhatnagar et al., 2010）。使用这种分解的水印实现较为复杂，研究人员探索也较少。
 
 ## 2.10 可见与不可逆水印
 
-可见水印是一种常用的水印方法，主要用于内容认证或所有权识别。在这种方法中，水印可见地叠加在宿主介质的部分区域（Biswas et al., 2013）。图2.4展示了使用现有技术生成的两个可见水印图像（Thanki et al., 2011, 2017）。可见水印的缺点是它们会给宿主图像带来退化。
+可见水印是一种常用的水印方法，主要用于内容认证或所有权识别。在这种方法中，水印可见地叠加在宿主介质的部分区域（Biswas et al., 2013）。图 2.4 展示了使用现有技术生成的两个可见水印图像（Thanki et al., 2011, 2017）。可见水印的缺点是它们会给宿主图像带来退化。
 
-不可逆水印是水印的一种特殊情况。在接收端可以完全恢复原始宿主介质，这在传统水印中是不可能的。一般而言，任何不可逆水印都分三步实现：水印嵌入、水印提取和宿主介质恢复Lakshmi and Surekha, 2016; Chakraborty et al., 2014; Pal et al., 2013）。所有这些过程都需要密钥来确保水印的安全。图2.5显示了不可逆水印的框图。注意，在提取水印后，还有最后一步，即图像恢复。该算法的输入是水印图像，输出是原始水印。
+不可逆水印是水印的一种特殊情况。在接收端可以完全恢复原始宿主介质，这在传统水印中是不可能的。一般而言，任何不可逆水印都分三步实现：水印嵌入、水印提取和宿主介质恢复（Lakshmi and Surekha, 2016; Chakraborty et al., 2014; Pal et al., 2013）。所有这些过程都需要密钥来确保水印的安全。图 2.5 显示了不可逆水印的框图。注意，在提取水印后，还有最后一步，即图像恢复。该算法的输入是水印图像，输出是原始水印。
 
 ![](img/2aaf43f8e3a2217b338457_0.png)
-图2.4 可见水印图像。
+
+图 2.4 可见水印图像。
 
 ![](img/2aaf43f8e3a2217b338457_1.png)
-图2.5 不可逆水印的框图。
+
+图 2.5 不可逆水印的框图。
 
 ## 2.11 基于机器学习的图像水印
 
@@ -520,25 +493,18 @@ Hessenberg分解（Van Loan, 1996）是一种矩阵分解方法。矩阵 $B$ 被
 
 监督学习模型基于已知输入输出预测未来输出。它们使用分类和回归方法来开发预测模型。常见的监督机器学习算法有决策树、支持向量机（SVM）、神经网络、朴素贝叶和线性回归。分类方法通常用于离散数据的预测，而回归方法用于模拟数据。无监督学习算法使用聚类方法对数据进行分类。
 
-人工神经网络（ANN）训练系统记忆特定场景，并根据所学内容对新输入产生输出。ANN基于人工神经元的连接和层（输入层、输出层以及多个隐藏层）来解决问题。基于神经网络的技术训练缓慢且容易导致过拟合，精度限于最小二乘误差。因此，更先进的机器学习算法如极速学习（ELM）、支持向量回归（SVR）和SVM被用于智能水印。这些算法克服了过拟合问题，性能优于基于梯度的学习算法。SVM和SVR通过将问题视为凸优化问题来估计高精度非线性函数，从而避免陷入局部最优解。
+人工神经网络（ANN）训练系统记忆特定场景，并根据所学内容对新输入产生输出。ANN 基于人工神经元的连接和层（输入层、输出层以及多个隐藏层）来解决问题。基于神经网络的技术训练缓慢且容易导致过拟合，精度限于最小二乘误差。因此，更先进的机器学习算法如极速学习（ELM）、支持向量回归（SVR）和 SVM 被用于智能水印。这些算法克服了过拟合问题，性能优于基于梯度的学习算法。SVM 和 SVR 通过将问题视为凸优化问题来估计高精度非线性函数，从而避免陷入局部最优解。
 
-最近机器学习的大部分工作转向使用概率神经网络（PNN），它由四层节点组成：输入层、模式层、求和层和输出层。PNN的训练通过生成模式节点、将其连接到目标类别的求和节点并将输入向量赋予权重向量来实现。PNN是一种监督学习网络，使用径向基函数和贝叶斯方法进行分类。
+最近机器学习的大部分工作转向使用概率神经网络（PNN），它由四层节点组成：输入层、模式层、求和层和输出层。PNN 的训练通过生成模式节点、将其连接到目标类别的求和节点并将输入向量赋予权重向量来实现。PNN 是一种监督学习网络，使用径向基函数和贝叶斯方法进行分类。
 
-
-
-
-
-由特征检测层和分类隐藏层组成。特征检测层对输入数据执行三类操作：卷积、池化和修正线性单元单元（ReLU）。卷积将输入数据通过一组卷积滤波器，其中每个滤波器作用于输入数据的某些特征。池化过程通过执行非线性下采样来简化输出值。这一过程减少了网络需要学习的输出值数量。ReLU 用于将负值映射为零，并只允许正值通过。这三种操作在许多层中重复，每层都学习从输入数据中提取不同的特征。特征提取之后紧跟着是分类层，其中一层是全连接的并输出一个 $k$ 维输出向量，其中 $k$ 代表网络预测的输入类别数量。该向量具有每个输入类别被分类的概率。CNN 架构的最终层使用分类函数产生分类输出。
+由特征检测层和分类隐藏层组成。特征检测层对输入数据执行三类操作：卷积、池化和修正线性单元（ReLU）。卷积将输入数据通过一组卷积滤波器，其中每个滤波器作用于输入数据的某些特征。池化过程通过执行非线性下采样来简化输出值。这一过程减少了网络需要学习的输出值数量。ReLU 用于将负值映射为零，并只允许正值通过。这三种操作在许多层中重复，每层都学习从输入数据中提取不同的特征。特征提取之后紧跟着是分类层，其中一层是全连接的并输出一个 $k$ 维输出向量，其中 $k$ 代表网络预测的输入类别数量。该向量具有每个输入类别被分类的概率。CNN 架构的最终层使用分类函数产生分类输出。
 
 上述所有机器学习算法及其他算法通过以下四种不同方法，提高了不可感知性和鲁棒性，从而提升了传统水印技术的性能：
 
-- 类型 I：在这种方法中，使用机器学习算法来优化值，目标是通过通过选择嵌入水印的最佳位置、强度或缩放因子，来保持水印图像的隐性和质量。该方法的广义框图如图 2.6 所示。
-
-- 类型 II：在这种方法中，如图 2.7 所示，在执行水印嵌入后，将如 SVM 等机器学习算法建模为二分类器。其目标是记忆水印与相应水印图像之间的关系，以便在需要时从测试图像中盲目检测水印位，从而提高传统水印的性能。
-
-- 类型 III：在这种方法中，机器学习算法被用于水印嵌入和/或提取算法，如图 2.8 所示。
-
-- 类型 IV：在这种方法中，机器学习算法用于在传统提取算法检测水印后，对其质量进行智能增强（表 2.1 至 2.3）。
+- **类型 I**：在这种方法中，使用机器学习算法来优化值，目标是通过选择嵌入水印的最佳位置、强度或缩放因子，来保持水印图像的隐性和质量。该方法的广义框图如图 2.6 所示。
+- **类型 II**：在这种方法中，如图 2.7 所示，在执行水印嵌入后，将如 SVM 等机器学习算法建模为二分类器。其目标是记忆水印与相应水印图像之间的关系，以便在需要时从测试图像中盲目检测水印位，从而提高传统水印的性能。
+- **类型 III**：在这种方法中，机器学习算法被用于水印嵌入和/或提取算法，如图 2.8 所示。
+- **类型 IV**：在这种方法中，机器学习算法用于在传统提取算法检测水印后，对其质量进行智能增强（表 2.1 至 2.3）。
 
 最近，还引入了基于深度学习的水印模型，其设计流程与 CNN 相似。深度学习是机器学习的一种，直接从输入数据中学习执行应用任务。深度学习算法结合了多个非线性处理层，这些层使用受神经系统的并行简单元素。每层通过节点或神经元相互连接，每个隐藏层根据前一层生成的输出产生结果。与传统机器学习相比……
 
@@ -568,11 +534,10 @@ Hessenberg分解（Van Loan, 1996）是一种矩阵分解方法。矩阵 $B$ 被
 
 图 2.8 类型 III 基于机器学习的数字图像水印。
 
-
 ## 类型 I 基于机器学习的数字图像水印技术比较
 
 | 序号 | 论文 | 特性 | 特征 | 嵌入方法 | 水印提取 | 优点 | 缺点 |
-| --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | Zhang and Zhang (2004) | 空间灰度图像 (256 x 256) | 嵌入中使用了可见性函数 (NVF) | 使用 Hopfield 神经网络 | 使用哈希函数提取水印位 | 实现简单 | 易受水印攻击 |
 | 2 | Li 等人 (2005) | 空间灰度图像 (512 x 512) | 伪随机位置改变 | 添加缩放水印 | 基于树的 SVR 模型从加水印图像中估计水印位 | 抗几何攻击（如模糊、旋转、缩放） | 对 JPEG 中值滤波 |
 | 3 | Liu and Jiang (2006) | DCT，隐性灰度图像 (512 x 512) | 使用径向基函数 (RBF) 网络控制缩放 | 添加缩放水印 | 非盲 | 良好的鲁棒性 | 抗低通滤波 |
@@ -601,45 +566,42 @@ Hessenberg分解（Van Loan, 1996）是一种矩阵分解方法。矩阵 $B$ 被
 
 表 2.2 类型 II 基于机器学习的数字图像水印技术比较
 
-
-
-
-
 ## 表 2.2 (续) 基于机器学习的 II 类数字图像水印技术对比
 
 | 序号 | 数字 | 论文 | 特性 | 特征 | 嵌入方法 | 水印提取 | 优点 | 缺点 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| | 7 | Peng 等人 (2010) | DWT，不可见灰度宿主 (512×512) | 单级多小波 | 块值调制 | SVM | JPEG、低通滤波、噪声添加、旋转和缩放 | 仿射攻击 |
-| | 8 | Jagadeesh 等人 (2014) | 二进制水印 (32×32) DWT，不可见二值宿主 (512×512) | 二级 DWT | 小波系数块修改 | SVM | 噪声添加、滤波 | 几何攻击 |
-| | 9 | Yahya 等人 (2015) | DWT，不可见灰度宿主 (512×512) | 三级 Haar DWT 块 | 缩放水印添加 | PNN | JPEG 压缩、高斯旋转、噪声、裁剪和中值滤波 | 未报告 |
-| | 10 | Singh 等人 (2016) | DWT，非不可见二值宿主 (64×64) | 二级和三级 DWT | 缩放水印添加 | BPNN | 噪声添加、滤波 | 水印图像质量较低 |
-| | 11 | Zear 等人 (2017) | DWT，非不可见色彩宿主 (512×512) 灰度水印 (128×128) | 三级 DWT | 缩放水印添加 | BPNN | 噪声添加、滤波 | 水印图像质量较低 |
-| | | | 色色宿主 (512×512) 色色水印 (64×64) | | | | | |
+| 7 | Peng 等人 (2010) | DWT，不可见灰度宿主 (512×512) | 单级多小波 | 块值调制 | SVM | JPEG、低通滤波、噪声添加、旋转和缩放 | 仿射攻击 |
+| 8 | Jagadeesh 等人 (2014) | 二进制水印 (32×32) DWT，不可见二值宿主 (512×512) | 二级 DWT | 小波系数块修改 | SVM | 噪声添加、滤波 | 几何攻击 |
+| 9 | Yahya 等人 (2015) | DWT，不可见灰度宿主 (512×512) | 三级 Haar DWT 块 | 缩放水印添加 | PNN | JPEG 压缩、高斯旋转、噪声、裁剪和中值滤波 | 未报告 |
+| 10 | Singh 等人 (2016) | DWT，非不可见二值宿主 (64×64) | 二级和三级 DWT | 缩放水印添加 | BPNN | 噪声添加、滤波 | 水印图像质量较低 |
+| 11 | Zear 等人 (2017) | DWT，非不可见色彩宿主 (512×512) 灰度水印 (128×128) | 三级 DWT | 缩放水印添加 | BPNN | 噪声添加、滤波 | 水印图像质量较低 |
 
 ## 基于机器学习的 III 类数字图像水印技术对比
 
 | 序号 | 论文 | 特性 | 特征 | 嵌入方法 | 水印提取 | 优点 | 缺点 |
-|---|---|---|---|---|---|---|--|
+|---|---|---|---|---|---|---|---|
 | 1 | Tsai 等人 (2006) | DWT，盲目；二值 (64×64) | ANN 用于生成两个随机种子 | 使用邻域平均过程通过水印修改图像像素值 | 将水印图像的系数与随机种子值进行比较 | 对可能的攻击具有鲁棒性 | 视觉效果；未给出方案的质量信息 |
 | 2 | Yen 和 Wang (2006) | 空间，盲目；色彩宿主 (52×52)；二进制水印 (64×64) | 使用 SVM 寻找宿主中的嵌入位置 | 二进制水印被水印标记修改 | SVM；提取水印图像 | 色彩质量良好；为水印提供良好质量 | 未报告 |
 | 3 | Fu 和 Peng (2007) | DWT，非盲目；不可见 | 使用 SVR 寻找最佳 2 级小波系数 | 缩放水印添加 | 通过比较修改后的小波系数提取水印位 | 水印图像质量良好 | 对中值滤波效果较差 |
 | 4 | Shao 等人 (2008) | 灰度宿主 (512×512)；二进制水印 (32×32) | 使用 SVM 寻找嵌入和提取所需的最佳 2 级小波系数 | 缩放小波添加 | 通过比较嵌入像素值及其时间邻域值提取水印位 | 对所有可能的攻击均具有良好的鲁棒性 | 水印图像质量较低；未报告 |
-| 5 | Jain 和 Tiwari (2011) | DWT，盲目；不可见 | 色彩宿主 (256×256)；二进制水印 (32×32) | 三级 DWT 块 | 使用训练过的 SVM 从小波系数中提取水印 | 使用训练过的 SVM 在宿主块中嵌入水印 | 为宿主块提供良好质量 | |
+
+
 
 # 数字水印
 
-表 2.3 (续) 基于机器学习的 III 类数字图像水印技术对比
+表 2.3（续）基于机器学习的 III 类数字图像水印技术对比
 
-| 序号 | 数字 | 论文 | 特性 | 特征 | 嵌入方法 | 水印提取 | 量化与 BPNN | 优点 | 缺点 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 6 | Ramamuthu 和 Varadarajan (2012) | DWT，盲目且不可见 | 灰度宿主 (256×256) 灰度水印 | 蓝色分量的 4级 DWT | 量化和反传播神经网络 (BPNN) | 量化和 BPNN | 对椒盐噪声、裁剪、旋转具有鲁棒性 | 无法抵抗 JPEG 和中值滤波攻击 |
+| 序号 | 论文 | 特性 | 特征 | 嵌入方法 | 水印提取 | 优点 | 缺点 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 5 | Jain 和 Tiwari (2011) | DWT，盲目；不可见 | 色彩宿主 (256×256)；二进制水印 (32×32) | 三级 DWT 块 | 使用训练过的 SVM 从小波系数中提取水印 | 使用训练过的 SVM 在宿主块中嵌入水印 | 为宿主块提供良好质量 | |
+| 6 | Ramamuthu 和 Varadarajan (2012) | DWT，盲目且不可见 | 灰度宿主 (256×256) 灰度水印 | 蓝色分量的 4 级 DWT | 量化和反传播神经网络 (BPNN) | 量化和 BPNN | 对椒盐噪声、裁剪、旋转具有鲁棒性 | 无法抵抗 JPEG 和中值滤波攻击 |
 | 7 | Ramamuthu 和 Varadarajan (2012) | DWT，盲目且不可见 | 灰度宿主 (512×512) 灰度水印 (64×64) | 蓝色分量的三级 DWT | 量化和模糊逻辑 | 量化和模糊逻辑 | 对裁剪、JPEG 压缩、噪声和攻击具有鲁棒性 | 易受椒盐滤波攻击的影响 |
 | 8 | Jagadeesh 等人 (2013) | DWT，不可见 | 二进制水印 (512×512) (64×64) | 二级 DWT | 使用 SVM 在使用缩放因子插入时寻找水印嵌入的最佳系数 | 比较 | 为水印提供良好质量 | 无法抵抗 JPEG |
 | 9 | Yahya 等人 (2014) | DWT，不可见 | 空间，盲目 | 灰度宿主 (256×256) 水印 | LSB | 使用 SVM 寻找嵌入位置 | LSB | 提供良好质量 | 易受几何攻击 |
 
 # 高级水印技术
 
-表 2.3 (续) 基于机器学习的 III 类数字图像水印技术对比
+表 2.3（续）基于机器学习的 III 类数字图像水印技术对比
 
 | 序号 | 论文 | 特性 | 特征 | 嵌入方法 | 水印提取 | 优点 | 缺点 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -647,7 +609,6 @@ Hessenberg分解（Van Loan, 1996）是一种矩阵分解方法。矩阵 $B$ 被
 | 11 | Jagadeesh 等人 (2016) | DWT+DCT，盲目 | 灰度宿主 (512×512) 灰度水印 | 模糊逻辑 + BPNN | 模糊逻辑 + BPNN | 对常见攻击具有鲁棒性 | 对滤波效果较差 |
 | 12 | Mamatha Venkat (2016) | DWT，盲目 | 不可见 | 灰度宿主 (32×32) | BPNN | BPNN | 图像质量良好 | 易受仿射攻击 |
 | 13 | Kalkarni 和 Kuri (2017) | DWT+DCT，盲目 | 不可见 | 灰度宿主 (512×512) 灰度水印 (64×64) | 三级 DWT+DCT | PNN | 对裁剪、JPEG 压缩、噪声和攻击具有鲁棒性 | |
-
 
 在特征提取和模型训练需要手动完成的算法中，深度学习可以自动完成这些。虽然机器学习模型可以在低性能图形处理器（GPU）上轻松运行，但深度学习模型需要高性能 GPU。机器学习在小数据集上提供良好结果，而深度学习擅长处理非常大的数据集。机器学习模型的准确性有局限，而深度学习模型则更广泛。
 
@@ -661,14 +622,9 @@ $$Specificity=\frac{True\_Negative}{True\_Negative+False\_Negative}$$
 
 $$=\frac{True\_Positive+True\_Negative}{True\_Positive+True\_Negative+False\_Positive+False\_Negative}$$
 
-其中 False\_Negative 表示错误分类的负值，False\_Positive 表示错误分类的正值，True\_Positive 表示正确分类的正值，True\_Negative 表示正确分类的负值。
+其中 `False\_Negative` 表示错误分类的负值，`False\_Positive` 表示错误分类的正值，`True\_Positive` 表示正确分类的正值，`True\_Negative` 表示正确分类的负值。
 
 正负值的允许范围取决于具体的应用程序。例如，在电子商务应用中，实现零假阳性率比获得更高的假阴性率更重要。假阳性率相对于真阳性率的图
-
-
-
-
-
 
 该率被称为接收者工作特征（ROC）曲线，用于视觉化二分类分类器的性能。
 
@@ -678,8 +634,9 @@ $$=\frac{True\_Positive+True\_Negative}{True\_Positive+True\_Negative+False\_Pos
 
 ## 参考文献
 
-Ansari, Rahim, Mrutyyanja M. Devanalamath, K. Manikantan, and S. Ramachandran. “DWT-SVD 域彩色图像的鲁棒数字图像水印算法。” 通信、信息与计算国际会议 (ICCICT '12), pp. 1–6. IEEE, Piscataway, NJ, 2012. Arena, Simone, Marcello Carramma, and Rosa Lancini. “利用空间和频率掩蔽应用于 MPEG-2 编码视频序列的数字水印。” 图像处理国际会议论文集，卷 1, pp. 438–441. IEEE, Piscataway, NJ, 2000.
+Ansari, Rahim, Mrutyyanja M. Devanalamath, K. Manikantan, and S. Ramachandran. “DWT-SVD 域彩色图像的鲁棒数字图像水印算法。” 通信、信息与计算国际会议 (ICCICT '12), pp. 1–6. IEEE, Piscataway, NJ, 2012.
 
+Arena, Simone, Marcello Carramma, and Rosa Lancini. “利用空间和频率掩蔽应用于 MPEG-2 编码视频序列的数字水印。” 图像处理国际会议论文集，卷 1, pp. 438–441. IEEE, Piscataway, NJ, 2000.
 
 Ashour, Amira S., and Nilanjan Dey. “多媒体内容的安全性：简述。” 智能技术用于多媒体安全性的信号处理, pp. 3–14. Springer, Cham, 2017.
 
@@ -702,7 +659,6 @@ Biswas, Debalina, Poulami Das, Prosenjit Maji, Nilanjan Dey, and Sheli Chaudhuri
 Borra, Suresh, and R. Lakshmi. “基于视觉加密的敏感图像无损水印。” 群体、进化与启发式计算国际会议, pp. 29–39. Springer, Cham, 2015.
 
 Candès, Emmanuel J. “压缩采样。” 数学家国际大会论文集，卷 3, pp. 1433–1452. Madrid, Spain, 2006.
-
 
 Chakraborty, Sayan, Prasenit Majji, Arijit Kumar Pal, Debalina Biswas, and Nilanjan Dey. “使用三角函数的可逆彩色图像水印。” 电子系统、信号处理与计算国际会议 (ICESC), pp. 105–110. IEEE, Piscataway, NJ, 2014.
 
@@ -724,7 +680,7 @@ Fan, Liang, and Gang. “使用压缩框架的鲁棒 DWT 水印。” Internatio
 
 Fu, Emir, and Gang. “基于 DFT 的下采样水印。” TENCON, 2007.
 
-,,Z,, and and...一种基于非下采样剪切波（Shearlet transform）的图像水印。” EUROCON, pp. 138–141, 2007.
+“一种基于非下采样剪切波（Shearlet transform）的图像水印。” EUROCON, pp. 138–141, 2007.
 
 Gavini, Narasimthy, and Suresh. “基于块的 SVD 视频单通道水印。” International Journal of Advances in Computing and Information Researches 1(2): 2012.
 
@@ -745,25 +701,6 @@ Huang, Fangjun, and Zhi-Hong Guan. “基于 LPSNR 的混合 SVD-DCT 标记方�
 Huang, Song, Wei Feng, and Hua Yang. “基于神经网络的盲水印方案。” 第 7 次智能控制与自动化世界大会 (WCICA '08), p. 5985–5989. IEEE, Piscataway, NJ, 2008.
 
 
-该率被称为接收者工作特征（ROC）曲线，用于视觉化二分类分类器的性能。
-
-## 2.12 挑战
-
-水印方案为了保护多媒体数据、医学数据或生物识别数据的版权而嵌入水印。这些方案通过探索信号处理变换的各种属性来生成水印数据。每种水印方案都有其优缺点，且其性能可能随着不同宿主数据类型而变化。基于 SVD 的水印方案结合 DWT 被广泛应用，并且比所有其他水印方案具有更高的透明度和鲁棒性。文献中的大多数水印都是对二进制水印进行盲提取完成的。鲁棒性低、安全性差、透明度不足以及在实际应用中接受度低被认为是许多水印方案的缺点。文献中缺乏可用的基准方案。此外，某些现有水印方案计算时间较长也是一个限制。关于水印有很多仿真工作，但关于变换水印的硬件实现工作较少。未来的研究工作可以关注这些主题。需要解决处理更通用的仿射变换和几何畸变的算法开发。需要寻找用于水印嵌入的变换不变域。
-
-## 参考文献
-
-Ansari, Rahim, Mrutyyanja M. Devanalamath, K. Manikantan, and S. Ramachandran. “DWT-SVD 域彩色图像的鲁棒数字图像水印算法。” 通信、信息与计算国际会议 (ICCICT '12), pp. 1–6. IEEE, Piscataway, NJ, 2012. Arena, Simone, Marcello Carramma, and Rosa Lancini. “利用空间和频率掩蔽应用于 MPEG-2 编码视频序列的数字水印。” 图像处理国际会议论文集，卷 1, pp. 438–441. IEEE, Piscataway, NJ, 2000.
-
-Ashour, Amira S., and Nilanjan Dey. “多媒体内容的安全性：简述。” 智能技术用于多媒体安全性的信号处理, pp. 3–14. Springer, Cham, 2017.
-
-Banerjee, Shubhendendu, Sayak Chakraborty, Nilanjan Dey, Arijit Kumar Pal, and Ruben Ray. “利用余数系统的高载荷水印。” International Journal of Image, Graphics and Signal Processing: 3:1–8, 2015.
-
-Bangaloree, R., and H. C. S. Rhuopoth. “通过多样性和攻击表化提高扩频空间域水印方案的性能。” 第 6 次非洲非洲会议, 2002 (IEEE AFRICON), 卷 1, pp. 293–298. IEEE, Piscataway, NJ, 2002.
-
-Bansal, Ashish, and Sarita Singh Bhaduria. “使用神经网络水印并将训练后的网络隐藏在核心图像中。” Journal of Theoretical & Applied Information Technology 4(8):663–670, 2008.
-
-Baraniuk, Richard G. “压缩感知” [讲义]. IEEE Signal Processing Magazine 24(4):118–121, 2007.
 
 Bender, Daniel, Gruhl, Norishige Morimoto, and Anthony Lu Lu. “数据隐藏技术。” IBM Systems Journal 35(3–4): 313–336, 1996.
 
@@ -777,64 +714,57 @@ Borra, Suresh, and R. Lakshmi. “基于视觉加密的敏感图像无损水印�
 
 Candès, Emmanuel J. “压缩采样。” 数学家国际大会论文集，卷 3, pp. 1433–1452. Madrid, Spain, 2006.
 
+Kaushik, Ananish Kr. “一种基于离散傅里变换的图像数字水印的新方法。” International Journal of Electronics and Computer Science Engineering 1(1): 35–41, 2012.
 
+Kulkarni, Gururaj, and Suresh Kuri. “基于 DWT、DCT 和概率神经网络的鲁棒数字图像水印。” In International Conference on Electrical, Electronics, Communication, Computer, and Optimization Techniques (ICEECOCT '17), pp. 1–5. IEEE, Piscatway, NJ, 2017.
 
+Lakshmi, H. R., and B. Surekha. “使用大规模流水线技术实现可逆图像水印的异步实现。” In IEEE 66th International Conference on Advanced Computing (IACC '16), pp. 529–553. IEEE, Bhimavaram, India, 2016.
 
+Langal, Gerhard C., Iwan Setyawan, and Reginald L. “数字图像和视频数据的水印。技术综述。” IEEE Signal Processing Magazine 17(5): 20–46, 2000.
 
+Laur, Lauri, Pejami Rasti, Mary Agholi, and Gholamre Anjarbari. “基于熵和 QR 分解的鲁棒彩色图像水印方案。” Radioengineering 24(4): 1025–1032, 2015.
 
-Kaushik, Ananish Kr. “一种基于离散傅里变换的图像数字水印的新方法。”*International Journal of Electronics and Computer Science Engineering 1(1): 35–41, 2012.*
+Lee, Yuan-Kuen, Zheng-Ding Lu, and Ling-Wei Chen. “高容量图像水印模型。” IEEE Proceedings–Vision, Image and Signal Processing 14(3): 288–294, 2000.
 
-Kulkarni, Gururaj, and Suresh Kuri. “基于 DWT、DCT 和概率神经网络的鲁棒数字图像水印。” In *International Conference on Electrical, Electronics, Communication, Computer, and Optimization Techniques (ICEECOCT '17)*, pp. 1–5. IEEE, Piscatway, NJ, 2017.
+Li, Chun-Hua, Zheng Zhu, and Ke Zhou. “基于支持向量回归的图像水印技术。” In IEEE International Symposium on Communications and Information Technology (ICSIT '05), vol. 1, pp. 183–186. IEEE, Piscatway, NJ, 2005.
 
-Lakshmi, H. R., and B. Surekha. “使用大规模流水线技术实现可逆图像水印的异步实现。” In *IEEE 66th International Conference on Advanced Computing (IACC '16)*, pp. 529–553. IEEE, Bhimavaram, India, 2016.
+Li, Jianhong, Chuing Yu, B. B. Gupta, and Xuechang Ran. “基于四元数变换和舒尔分解的彩色图像水印方案。” Multimedia Tools and Applications 77(4): 4545–4561, 2017.
 
-Langal, Gerhard C., Iwan Setyawan, and Reginald L. “数字图像和视频数据的水印。技术综述。”*IEEE Signal Processing Magazine 17(5): 20–46, 2000.*
+Li, Lei, Wen-Yan Ding, and Jin-Yan Li. “基于模糊支持向量机的新型鲁棒水印方案。” In 3rd IEEE International Conference on Computer Science and Information Technology (ICSIT '10), vol. 6, pp. 533–537. IEEE, Piscatway, NJ, 2010.
 
-Laur, Lauri, Pejami Rasti, Mary Agholi, and Gholamre Anjarbari. “基于熵和 QR 分解的鲁棒彩色图像水印方案。”*Radioengineering 24(4): 1025–1032, 2015.*
-
-Lee, Yuan-Kuen, Zheng-Ding Lu, and Ling-Wei Chen. “高容量图像水印模型。”*IEEE Proceedings–Vision, Image and Signal Processing 14(3): 288–294, 2000.*
-
-Li, Chun-Hua, Zheng Zhu, and Ke Zhou. “基于支持向量回归的图像水印技术。” In *IEEE International Symposium on Communications and Information Technology (ICSIT '05)*, vol. 1, pp. 183–186. IEEE, Piscatway, NJ, 2005.
-
-Li, Jianhong, Chuing Yu, B. B. Gupta, and Xuechang Ran. “基于四元数变换和舒尔分解的彩色图像水印方案。”*Multimedia Tools and Applications 77(4): 4545–4561, 2017.*
-
-Li, Lei, Wen-Yan Ding, and Jin-Yan Li. “基于模糊支持向量机的新型鲁棒水印方案。” In *3rd IEEE International Conference on Computer Science and Information Technology (ICSIT '10)*, vol. 6, pp. 533–537. IEEE, Piscatway, NJ, 2010.
-
-Lin, Chung-Yung, Min Wu, Jeffrey A. Bloom, Ingemar J. Cox, Matthew L. Miller, and Yi Mai Li. “图像的抗旋转、缩放和和平移水印。”*IEEE Transactions on Image Processing 10(5): 767–782, 2001.*
-
+Lin, Chung-Yung, Min Wu, Jeffrey A. Bloom, Ingemar J. Cox, Matthew L. Miller, and Yi Mai Li. “图像的抗旋转、缩放和和平移水印。” IEEE Transactions on Image Processing 10(5): 767–782, 2001.
 
 Liu, Quan, and Xuemei Jiang. “基于 RBF 神经网络的有意义数字水印算法的设计与实现。” In International Conference on Neural Networks and Brain (ICNN&B '05), vol. 1, pp. 214–218. IEEE, Piscatway, NJ, 2005.
 
 Lu, Chun-Shien, Reena Jung and Hong-Yuan Mark Liao. “视频对象水印：一种抗旋转和翻转的方案。” In Proceedings of the 2001 International Conference on Image Processing, vol. 2, pp. 483–486. IEEE, Piscatway, NJ, 2001.
 
-Mathama, P., and N. Venkatram. “使用提升变换 (LWT) 和人工神经网络 (ANN) 的水印。”Indian Journal of Science and Technology 9(17): 1–7, 2016.
+Mathama, P., and N. Venkatram. “使用提升变换 (LWT) 和人工神经网络 (ANN) 的水印。” Indian Journal of Science and Technology 9(17): 1–7, 2016.
 
-Mansouri, A. Mahmoud Asnave, F. Torkamani Azar. “基于复小波变换的 SVD 数字数字图像水印。”Sadhadhana 34(3): 393–406, 2009.
+Mansouri, A. Mahmoud Asnave, F. Torkamani Azar. “基于复小波变换的 SVD 数字数字图像水印。” Sadhadhana 34(3): 393–406, 2009.
 
-Matsui, K. *数字水印基础——多媒体保护的新型保护技术*。Morikita Publishing, Tokyo, Japan, 1998.
+Matsui, K. 数字水印基础——多媒体保护的新型保护技术。 Morikita Publishing, Tokyo, Japan, 1998.
 
-Meenakshi, K. Srinivasa Rao, and K. Satya Prasad. “基于 Schur 和 SVD 变换的快速鲁棒水印方案。”International Journal of Research in Engineering and Technology 3(4): 7–11, 2014.
+Meenakshi, K. Srinivasa Rao, and K. Satya Prasad. “基于 Schur 和 SVD 变换的快速鲁棒水印方案。” International Journal of Research in Engineering and Technology 3(4): 7–11, 2014.
 
-Mehta, Rajesh, Navin Rajpal, and Virend P. Vishwakarma. “基于拉格朗日 SVR 的 LWT-QR 分解鲁棒高效图像水印。”Multimedia Tools and Applications 75(7): 4129–4150, 2016.
+Mehta, Rajesh, Navin Rajpal, and Virend P. Vishwakarma. “基于拉格朗日 SVR 的 LWT-QR 分解鲁棒高效图像水印。” Multimedia Tools and Applications 75(7): 4129–4150, 2016.
 
 Mitra, Priyanka, Reena Gunian, and Manoj S. Gaur. “基于 SVD 和 QR 分解的基于轮廓波的多分辨率水印。” In International Conference on Recent Advances in Computing and Software Systems (RACSS '12), pp. 135–140. IEEE, Piscatay, NJ, 2012.
 
-Mohammad, Ahmed A. “一种基于舒尔分解的新型数字图像水印方案。”Multimedia Tools and Applications 59(3): 851–883, 2012.
+Mohammad, Ahmed A. “一种基于舒尔分解的新型数字图像水印方案。” Multimedia Tools and Applications 59(3): 851–883, 2012.
 
-Mohan, B. Chandra, and K. Veera Swamy. “论舒尔分解在数字图像版权保护中的应用。”International Journal of Computer and Electrical Engineering 2(4): 781, 2010.
+Mohan, B. Chandra, and K. Veera Swamy. “论舒尔分解在数字图像版权保护中的应用。” International Journal of Computer and Electrical Engineering 2(4): 781, 2010.
 
 Mohan, B. Chandra, Veera Swamy, and S. Srin Kumar. “SVD 和 Schur 分解水印的对比评估。” In IJCAI (International Conference on VLSI and Instrumentation), vol. 14, pp. 25–29, 2011.
 
-
-Mostafa, Salwa A., K. S. Tolba, Abdelkader, and Hisham M. El. “基于主成分分析和小波变换的视频水印方案。”International Journal of Computer Science and Network 9(8): 45–52, 2009.
+Mostafa, Salwa A., K. S. Tolba, Abdelkader, and Hisham M. El. “基于主成分分析和小波变换的视频水印方案。” International Journal of Computer Science and Network 9(8): 45–52, 2009.
 
 Naderian, Yashar, and Saied Hosseini. “小波域基于 QR 分解的快速水印。” In International Conference on Intelligent Hiding and Multimedia Processing (IIH-MSP '10), pp. 127–152.
 
 Pal, Ajit Kumar, Nila Nilaanjan, Sourav Samanta, Achintya Das, and Sheli Chaudhuri. “彩色图像的混合可逆水印技术。” In IEEE International Conference on Computational Intelligence (JCIC '13), pp. 1–6.
 
-Pandey, Barun, and Devendra S. Chaudhuri. “数字水印综述。”International Journal of Soft Computing and Engineering (IJSCE) 3(1): 416–420, 2013.
+Pandey, Barun, and Devendra S. Chaudhuri. “数字水印综述。” International Journal of Soft Computing and Engineering (IJSCE) 3(1): 416–420, 2013.
 
-Peng, Hong, Jun Wang, and Weijing Wang. “基于支持向量机的多小波域水印方法。”Journal of Systems and Software 8(8): 1470–1477, 2010.
+Peng, Hong, Jun Wang, and Weijing Wang. “基于支持向量机的多小波域水印方法。” Journal of Systems and Software 8(8): 1470–1477, 2010.
 
 Podtar, Vidyasagar, Song Han, and Elizabeth Chang. “数字水印综述。” In 3rd IEEE International Conference on Industrial Informatics (ININ '05), pp. 709–716. IEEE, Piscatway, NJ, 2005.
 
@@ -842,37 +772,33 @@ Preda, Radu O., and Drag Vizireanu. “MPEG2 视频的盲水印。” In 8th Int
 
 Raghavendra, K., and K. R. Chetan. “用于视频认证的带加密盲鲁棒水印方案。” In IEEE International Conference on Multimedia Services Architecture and Applications (IMSAA '09), pp. 1–6. IEEE, Piscatway, NJ, 2009.
 
-Ai, Ankur and Vikram Singh. “LTE 网络传输医疗图像的机器学习鲁棒水印技术。”Journal of Intelligent Systems 27(1): 105–114, 2018.
+Ai, Ankur and Vikram Singh. “LTE 网络传输医疗图像的机器学习鲁棒水印技术。” Journal of Intelligent Systems 27(1): 105–114, 2018.
 
-Rajab, Lama, Tahani Al-Khatib, and Ali Al-Haj. “一种盲 DWT-SCHUR 数字水印技术。”Journal of Software Engineering and Applications 8(4): 224, 2015.
+Rajab, Lama, Tahani Al-Khatib, and Ali Al-Haj. “一种盲 DWT-SCHUR 数字水印技术。” Journal of Software Engineering and Applications 8(4): 224, 2015.
 
 ## 进阶水印技术 65
 
 Rajab, Lama, Tahani Al-Khatib, and Ali Al-Haj. “混合 DWT-SVD 视频水印。” In International Conference on Innovations in Information Technology (IIT '08), pp. 588–592. IEEE, Piscatay, NJ, 2008.
 
-Ramalingam, Mritha. “使用改进 LSB 算法的隐形算法-视频加密。”World Academy of Science, Engineering and Technology 74: 502–505, 2011.
+Ramalingam, Mritha. “使用改进 LSB 算法的隐形算法-视频加密。” World Academy of Science, Engineering and Technology 74: 502–505, 2011.
 
-Ramamurthy, Nargaralla, and S. Varadarajan. “DWT 域中使用量化和模糊逻辑方法的鲁棒数字图像水印。”arXiv preprint arXiv:1302.4233, 2013.
+Ramamurthy, Nargaralla, and S. Varadarajan. “DWT 域中使用量化和模糊逻辑方法的鲁棒数字图像水印。” arXiv preprint arXiv:1302.4233, 2013.
 
-Ramamurthy, Nargaralla, and S. Varadarajan. “使用量化和反传播网络的鲁棒数字图像水印。”Contemporary Engineering Sciences 5(3): 137–147, 2012.
+Ramamurthy, Nargaralla, and S. Varadarajan. “使用量化和反传播网络的鲁棒数字图像水印。” Contemporary Engineering Sciences 5(3): 137–147, 2012.
 
 Ramkumar, Mahalingam, Ali N. Aksansu, and A. Aydın Aslan. “基于 DFT 的图像鲁棒数据隐写方案。” In Proceedings of International Conference on Image Processing (ICIP '99), vol. 2, pp. 211–215. IEEE, Piscatay, NJ, 1999.
 
-Rasti, Pejm, Salma Sameiei, Mary Agoyi, Sergio Escalera, and Gholamreza Anbarjari. “基于 QR 分解和熵分析的鲁棒盲彩色水印。”Journal of Visual Communication and Image Representation: 838–847, 2016.
+Rasti, Pejm, Salma Sameiei, Mary Agoyi, Sergio Escalera, and Gholamreza Anbarjari. “基于 QR 分解和熵分析的鲁棒盲彩色水印。” Journal of Visual Communication and Image Representation: 838–847, 2016.
 
 Raval, M. S., and P. P. Re. “基于离散小波变换的多重水印方案。” In TENCON 2003, Conference on Convergent Technologies for the Asia-Pacific Region, vol. 3, pp. 935–938. IEEE, Piscatay, NJ, 2003.
 
 Raval, M., M. Joshi, Re, and S. Pulkar. “基于压缩感知水印方案的图像篡改检测。” In Proceedings of MVIP 2011. Pune, India, 2011.
 
-Zafrindindra, Henri Bruno, Nicolas Raft Rafazindrakoto, and Paul Auguste Randiamitantsoa. “使用离散余弦变换和舒尔分解的改进水印方案。”International Journal of Computer Science and Network 2(4): 25–31, 2013.
+Zafrindindra, Henri Bruno, Nicolas Raft Rafazindrakoto, and Paul Auguste Randiamitantsoa. “使用离散余弦变换和舒尔分解的改进水印方案。” International Journal of Computer Science and Network 2(4): 25–31, 2013.
 
-Santhi, V., and Arunkumar Thangavelu. “YUV 色彩空间彩色图像的 DWT-SVD 结合全频鲁棒水印技术。”International Journal of Computer Theory and Engineering 1(4): 424, 2009.
+Santhi, V., and Arunkumar Thangavelu. “YUV 色彩空间彩色图像的 DWT-SVD 结合全频鲁棒水印技术。” International Journal of Computer Theory and Engineering 1(4): 424, 2009.
 
-Saxena, Rahul, Nirupa Tiwari, and Manoj Kumar Ramaiya. “数字水印综述工作。”IJLTEMAS 4(5): 34–37, 2015.
-
-
-
-
+Saxena, Rahul, Nirupa Tiwari, and Manoj Kumar Ramaiya. “数字水印综述工作。” IJLTEMAS 4(5): 34–37, 2015.
 
 ## 66 数字水印
 
@@ -883,6 +809,8 @@ Serdean, C. M. Ambrose, M. Tomlinson, and G. Wade. “DWT 盲视频水印系统�
 Shao, Yuanhai, Wei Chen, and Chan Liu. “基于支持机技术的多小波数字水印。” In Chinese Control and Decision Conference (CCDC ‘08), p. 4557–4561. IEEE, Piscataway, 2008.
 
 Shareef, Asmaa Qasim, and Roaa Essam Fadel. “一种利用神经网络的图像水印方案。” International Journal of Computer Applications 92(1): 44–48, 2014.
+
+
 
 Sharma, Anika, and Ajay Kushwaha. “变换域利用神经网络的图像隐术方案。” International Journal of Scientific Engineering and Research 3(10): 153–158, 2015.
 
@@ -970,12 +898,7 @@ Zhang, Fan, and Hongbin Zhang. “利用神经网络的图像水印容量分析�
 
 Zhang, Jun, Nengchao Wang, and Feng Xiong. “利用神经网络在多尺度小波域中隐藏低水印。” In Proceedings of the 14th IEEE International Conference on Tools with Artificial Intelligence (ICTAI’02), pp. 477–482. IEEE, Piscataway, NJ, 2002.
 
-
-
-
-
-Zhang, Xinpeng, Zhenxing Qian, Yanli Ren, and Guorui Feng.
-“基于压缩感知和复合重构的灵活自恢复质量水印.” IEEE Transactions on Information Forensics and Security 6(4): 1223–1332, 2011.
+Zhang, Xinpeng, Zhenxing Qian, Yanli Ren, and Guorui Feng. “基于压缩感知和复合重构的灵活自恢复质量水印.” IEEE Transactions on Information Forensics and Security 6(4): 1223–1332, 2011.
 
 Zhou, Xiaoyi, Chunjie Cao, Jixin Ma, and Longjuan Wang. “基于支持向量和优化遗传算法的自适应数字水印方案.” Mathematical Problems in Engineering 2018: 2685739, 2018.
 
@@ -991,41 +914,60 @@ Zhou, Xiaoyi, Chunjie Cao, Jixin Ma, and Longjuan Wang. “基于支持向量和
 
 优化是在评估了满足一个或多个目标函数及相关假设的可能解后，识别或选择最佳数量的科学（Powell, 1970）。优化模型可以定义如方程3.1（Venter, 2010）：
 
-目标函数：最小化或最大化 f(X)
+目标函数：最小化或最大化 `f(X)`
 
 受限于约束条件
 
-$a_i(Y) \geq 0, \quad j = 1, 2, \dots, n;$
-$b_j(Y) = 0, \quad j = n+1, n+2, \dots, m \quad (3.1)$
+`$a_i(Y) \geq 0, \quad j = 1, 2, \dots, n;$`
+
+`$b_j(Y) = 0, \quad j = n+1, n+2, \dots, m \quad (3.1)$`
 
 其中：
 
-$Y$ 是决策变量向量
-$a(Y)$ 是不等式约束
-$b(Y)$ 是等式约束
+`$Y$` 是决策变量向量
+
+`$a(Y)$` 是不等式约束
+
+`$b(Y)$` 是等式约束
 
 优化技术根据以下标准分类（Antoniou and Wu, 2007; Venter, 2010）：
 
 - 约束类型：约束优化和无约束优化问题
+
 - 涉及方程的性质：线性、非线性、几何和二次
+
 - 设计变量的性质：最优控制和非最优控制问题
+
 - 设计变量的允许值：整数和实值
+
 - 目标函数数量：单目标和多目标
+
 - 问题性质：确定性优化和随机优化问题
 
 除了梯度下降外，许多寻找最小值（局部/全局）的方法：（1) 近似方法（多项式插值），(2) 搜索方法（二分法、斐波那契法、黄金分割法），(3) 组合方法（Davies, Swann, and Campe Algorithm）等。优化算法的性能通过收集数学收敛证明和在基准问题上进行测试来验证。随机跳转、随机游走和模拟退火等方法相当无效，但可以用于初始阶段寻找有前景的起点和局部最小值，并适用于非微分函数；然而，随机搜索方法的结果是不可重复的。其他方法如 Nelder 和 Mead 单纯形法（Nelder and Mead, 1965）、Powell 的共轭方向法（Powell, 1970）和循环坐标搜索法可以作为替代方案。目前的趋势是使用生物启发的方法在寻找全局最小值方面获得更高的精度，尽管这些方法非常复杂。本章涵盖的算法有：
 
 - 遗传算法 (GA)
+
 - 遗传程序算法 (GP)
+
 - 蚁群优化算法 (ACO)
+
 - 差分进化算法 (DE)
+
 - 细菌算法 (BA)
+
 - 细菌觅食算法 (BF)
+
 - 布谷搜索算法 (CSA)
+
 - 猫群优化算法 (CSO)
+
 - 粒子群优化算法 (PSO)
+
 - 火萤虫算法 (FA)
+
 - 禁忌搜索 (TS)
+
 - 模拟退火 (SA)
 
 74 数字图像水印
@@ -1035,24 +977,27 @@ $b(Y)$ 是等式约束
 遗传算法（GA)（Baranowski and Eugene, 2018; Dey et al., 2015; Chatterjee et al., 2018）演变自达尔文理论，是一种搜索方法，与传统方法相比，具有以下优势：
 
 - GA 采用多点搜索，而传统方法采用单点搜索。
+
 - GA 改进了全局值并提供了更高的鲁棒性。
+
 - GA 不需要任何辅助值。
+
+
+
 - GA 适用于连续或离散问题。
 - GA 使用概率转移函数，而传统方法使用确定性转移函数。
 
-遗传算法适用于无约束问题，但大多数问题本质上是有约束的。作为第一步，通过根据距离灵活区域的距离添加惩罚函数，将约束问题转换为无约束
+遗传算法适用于无约束问题，但大多数问题本质上是有约束的。作为第一步，通过根据距离灵活区域的距离添加惩罚函数，将约束问题转换为无约束问题。惩罚函数必须满足两个要求：(1) 它是渐进的；(2) 该函数的因子由于违反约束产生的总损失。
 
 # 使用仿启发算法的水印技术
 
-75 制。惩罚函数必须满足两个要求：
-(1) 它是渐进的；(2) 该函数的因子由于违反约束产生的总损失。
+遗传算法利用种群产生最优解。遗传算法自然用于解决问题。该算法对于各种类型的问题都是鲁棒、灵活且高效的。遗传算法不是简单的随机搜索方法，而是利用了之前迭代的知识并生成新的最优解。该算法有六步：(1) 问题识别，(2) 类初始化，(3) 适应度函数评估，(4) 约束处理，(5) 生成新类，(6) 停止准则。应用遗传算法的第一步是编码，它设置了系统的窗口限制。在 GA 中，信息由多个染色体/基因表示，表示为变量字符串。变量可以是二进制或实数，其长度由问题决定。接下来初始化两个参数：类和过程。每个类在获取最优解的过程中根据某些适应度函数测量进行评估。GA 生成预定义大小的多个类点。这使得 GA 搜索问题空间的不同概率，并产生全局最优解。类初始化后，GA 利用自然界的生存原理进行搜索，并将适应度信息作为输入信息来确定问题空间。新类的生成通过选择、交叉和变异等不同算子完成。第一步根据给定优化问题的适应度函数从多个类中选择一个类。一旦选择过程结束，应用交叉（一种结合两个主染色体信息以产生新信息的重组算子）。变异和交叉算子产生大量数据字符串，可能会产生两种问题：(1) 由于初始数据字符串的多样性较低，GA 搜索整个优化空间；(2) GA 可能由于初始类的选择不当，产生了次优字符串。这些问题通过遗传算法（GA）中的变异算子得以解决。变异算子用于将新的遗传数据注入遗传类中。在这个过程中，父代字符串可以替换整个类，也可以替换字符串中适应度较低的值。在 GA 运行期间，适应度值逐渐增加，在特定条件下，适应度函数值不再可能增加，这代表了最优或近优解。在此阶段，GA 的操作终止。GA 的基本流程图以及采样交叉和变异操作如图 3.1 和 3.2 所示。
 
-遗传算法利用种群产生最优解。遗传算法自然用于解决问题。该算法对于各种类型的问题都是鲁棒、灵活且高效的。遗传算法不是简单的随机搜索方法，而是利用了之前迭代的知识并生成新的最优解。该算法有六步：(1) 问题识别，2) 类初始化，3) 适应度函数评估，4) 约束处理，5) 生成新类，6) 停止准则。应用遗传算法的第一步是编码，它设置了系统的窗口限制。在 GA 中，信息由多个染色体/基因表示，表示为变量字符串。变量可以是二进制或实数，其长度由问题决定。接下来初始化两个参数：类和过程。每个类在获取最优解的过程中根据某些适应度函数测量进行评估。GA 生成预定义大小的多个类点。这使得 GA 搜索问题空间的不同概率，并产生全局最优解。类初始化后，GA 利用自然界的生存原理进行搜索，并将适应度信息作为输入信息来确定问题空间。新类的生成通过选择、交叉和变异等不同算子完成。第一步根据给定优化问题的适应度函数从多个类中选择一个类。一旦选择过程结束，应用交叉（一种结合两个主染色体信息以产生新信息的重组算子）。变异和交叉算子产生大量数据字符串，可能会产生两种问题：(1) 由于初始数据字符串的多样性较低，GA 搜索整个优化空间；(2) GA 可能
+遗传编程（GP）（Koza, 1994）是遗传算法的扩展，其区别在于输出。GA 使用直接编码方法来寻找最优解，而 GP 使用间接方法。另一个区别是 GP 使用变长编码字符串，而 GA 使用固定长度编码字符串。在某种程度上，GP 提供了 GA 的计算机编程。GP 涉及的步骤如下：
 
-
-由于初始类的选择不当，产生了次优字符串。这些问题通过遗传算法（GA）中的变异算子得以解决。变异算子用于将新的遗传数据注入遗传类中。在这个过程中，父代字符串可以替换整个类，也可以替换字符串中适应度较低的值。在GA运行期间，适应度值逐渐增加，在特定条件下，适应度函数值不再可能增加，这代表了最优或近优解。在此阶段，GA的操作终止。GA的基本流程图以及采样交叉和变异操作如图3.1和3.2所示。
-
-遗传编程（GP）（（Koza, 1994）是遗传算法的扩展，其区别在于输出。GA使用直接编码方法来寻找最优解，而GP使用间接方法。另一个区别是GP使用变长编码字符串，而GA使用固定长度编码
+1. 根据输入函数生成初始程序类。
+2. 执行类中的每个程序，并根据解决优化问题的方法分配适应度值。
+3. 根据现有程序的先验知识，利用变异和交叉操作创建一个新的计算机程序类。
 
 ![](img/2aafc43f8e3a22e17b338f7ddcb87be4_90_0.png)
 
@@ -1062,31 +1007,27 @@ $b(Y)$ 是等式约束
 |---|---|
 | 父字符串 1: 0010 1010 | 父字符串 1: 0010 1101 |
 | 父字符串 2: 1101 1101 | 父字符串 2: 1101 1010 |
+
 | 变异操作前 | 变异操作后 |
+|---|---|
 | 父字符串 1: 0010 1010 | 父字符串 1: 0110 1000 |
 | 父字符串 2: 1101 1101 | 父字符串 2: 0101 1001 |
 
 图 3.2 交叉和变异操作。
 
-string。在某种程度上，GP提供了GA的计算机编程。GP涉及的步骤如下：
+在数字图像水印中，GA 或 GP 基本上用于寻找水印嵌入和提取过程中使用的缩放因子优化，如图 3.3 所示。嵌入到宿图像中的水印和从测试图像中提取是通过迭代的，或者使用传统的水印算法和 GP/GA 生成的缩放因子/位置/强度迭代完成。在每次迭代中，计算相应的不可见性和鲁棒性，并将其代入适应度函数，以满足水印优化的停止准则。停止标准是适应度值随迭代保持稳定，或者迭代次数达到限制。一旦满足停止标准，适应度函数的最终值即为该特定宿图像的优化缩放因子。测试图像甚至是一组受各种攻击影响的水印图像。
 
-- 1. 根据输入函数生成初始程序类。
-- 2. 执行类中的每个程序，并根据解决优化问题的方法分配适应度值。
-- 3. 根据现有程序的先验知识，利用变异和交叉操作创建一个新的计算机程序类。
-
-在数字图像水印中，GA或GP基本上用于寻找水印嵌入和提取过程中使用的缩放因子优化，如图3.3所示。嵌入到宿图像中的水印和从测试图像中提取是通过迭代的，或者使用传统的水印算法和GP/GA生成的缩放因子/位置/强度迭代完成。在每次迭代中，计算相应的不可见性和鲁棒性，并将其代入适应度函数，以满足水印优化的停止准则。停止标准是适应度值随迭代保持稳定，或者迭代次数达到限制。一旦满足停止标准，适应度函数的最终值即为该特定宿图像的优化缩放因子。测试图像甚至是一组受各种攻击影响的水印图像。
-
-基于GA的图像水印将使用多种适应度函数，这些函数是各种性能指标的函数。
+基于 GA 的图像水印将使用多种适应度函数，这些函数是各种性能指标的函数。
 
 ![](img/2aafc43f8e3a22e17b338f7ddcb87be4_92_0.png)
 
 图 3.3 使用演化方法的图像水印。
 
-表 3.1对各种基于GA-/GP的数字图像水印技术在适应度函数、嵌入域域和水印检测类型方面进行了比较。需要注意的是，基于GA的水印方法与各种图像处理变换相结合，例如离散小波变换（DWT）、奇异值分解（SVD）、离散余弦变换（DCT）、矢量量化（VQ）等，其中每个水印技术的性能取决于宿图像的性质、嵌入过程、提取过程以及GA或GP中执行的迭代次数。现有基于GA水印技术的不可见性参数（PSNR）在30 dB到60 dB之间，而鲁棒性参数（NC）的平均值在0.4到1之间。大多数现有技术是针对灰度宿图像定义的。这些技术的计算时间非常
+表 3.1 对各种基于 GA-/GP 的数字图像水印技术在适应度函数、嵌入域和水印检测类型方面进行了比较。需要注意的是，基于 GA 的水印方法与各种图像处理变换相结合，例如离散小波变换（DWT）、奇异值分解（SVD）、离散余弦变换（DCT）、矢量量化（VQ）等，其中每个水印技术的性能取决于宿图像的性质、嵌入过程、提取过程以及 GA 或 GP 中执行的迭代次数。现有基于 GA 水印技术的不可见性参数（PSNR）在 30 dB 到 60 dB 之间，而鲁棒性参数（NC）的平均值在 0.4 到 1 之间。大多数现有技术是针对灰度宿图像定义的。这些技术的计算时间非常长。
 
-## 表 3.1 基于GA/GP的数字图像水印算法比较
+## 表 3.1 基于 GA/GP 的数字图像水印算法比较
 
-| 参考文献论文 | GA的用途 | 所在域 | 检测类型 | 适应度函数 |
+| 参考文献论文 | GA 的用途 | 所在域 | 检测类型 | 适应度函数 |
 | :--- | :--- | :--- | :--- | :--- |
 | Shieh 等人 (2004) | 寻找最优缩放因子 | DCT | 盲检测和系数比较 | $f = PSNR + \lambda \cdot NC(w_i, w'_i)$ |
 | Huang 等人 (2007) | 寻找最优缩放因子 | DCT | 盲检测和系数比较 | $f = PSNR + \lambda_1 \cdot \sum_{i=1}^{N} BCR(w_i, w'_i) + \lambda_2 \cdot Bits_N$ |
@@ -1097,21 +1038,15 @@ string。在某种程度上，GP提供了GA的计算机编程。GP涉及的步�
 
 ## 3.3 使用差分演化的图像水印
 
-差分演化（DE）是基于种群的（Storn and Price, 1997），具有类的差异。只需要调节变异因子和交叉概率两个参数。DE的几个特征如下：
+差分演化（DE）是基于种群的（Storn and Price, 1997），具有类的差异。只需要调节变异因子和交叉概率两个参数。DE 的几个特征如下：
 
-- 1. DE很少用于局部优化，因为它搜索空间的多个区域。
-- 2. DE主要用于非平滑输入函数。
-- 3. DE允许浮点数据。
-- 4. DE使用算术运算。
-- 5. DE用于
+1. DE 很少用于局部优化，因为它搜索空间的多个区域。
+2. DE 主要用于非平滑输入函数。
+3. DE 允许浮点数据。
+4. DE 使用算术运算。
+5. DE 用于全局优化。
 
-在DE中，两个父字符串之间的加权差加到第三个字符串上生成试验字符串，然后与最优解进行交叉。最后应用选择操作来比较目标和试验解的适应度值，以决定携带哪个解。DE的基本步骤有：（1）类的初始化、（2）交叉操作以及4）选择操作。DE的主要优点是易于实现、参数较少，且与GA相比收敛更快。该算法的主要局限性由于其贪婪性质可能会受到噪声的影响。基于DE的水印方法主要在变换域内实现奇异值分解（SVD）（Ali等人，2014a; Aslantas, 2009）。此类水印技术实现的不可见性参数（PSNR）值在32 dB到50 dB之间，而归一化相关系数（NC）在0.95到1之间。现有技术仅针对灰度图像定义。文献中未提到现有技术的计算时间。数据的缺失是使用DE进行水印的局限性之一。表3.2比较了各种基于DE的数字图像水印技术。
-
-## 3.4 使用群算法的图像水印
-
-
-
-
+在 DE 中，两个父字符串之间的加权差加到第三个字符串上生成试验字符串，然后与最优解进行交叉。最后应用选择操作来比较目标和试验解的适应度值，以决定携带哪个解。DE 的基本步骤有：(1) 类的初始化、(2) 交叉操作以及 (3) 选择操作。DE 的主要优点是易于实现、参数较少，且与 GA 相比收敛更快。该算法的主要局限性由于其贪婪性质可能会受到噪声的影响。基于 DE 的水印方法主要在变换域内实现奇异值分解（SVD）（Ali 等人，2014a; Aslantas, 2009）。此类水印技术实现的不可见性参数（PSNR）值在 32 dB 到 50 dB 之间，而归一化相关系数（NC）在 0.95 到 1 之间。现有技术仅针对灰度图像定义。文献中未提到现有技术的计算时间。数据的缺失是使用 DE 进行水印的局限性之一。表 3.2 比较了各种基于 DE 的数字图像水印技术。
 
 ## 表 3.2 基于 DE 的数字图像水印算法比较
 
@@ -1122,6 +1057,8 @@ string。在某种程度上，GP提供了GA的计算机编程。GP涉及的步�
 | Aslantas (2009) | SVD | 非盲检测 | Corr | | $F_i = \frac{1}{L} \sum_{i=1}^{L} \text{corr}(w_i, w'_i)$, $f_i = \frac{1}{F_i}$ |
 
 其中，$f$ 为适应度函数；NC 为归一化交叉相关；corr 为相关；BER 为比特错误率；$w$ 为原始水印图像；$w^*$ 为恢复的 $WI$；原始宿主图像；$I$ 为水印图像。
+
+## 3.4 使用群算法的图像水印
 
 这些算法被称为轨迹跟踪算法，由五个基本原理描述（Waleed 等，2014）：
 
@@ -1136,7 +1073,7 @@ string。在某种程度上，GP提供了GA的计算机编程。GP涉及的步�
 - 蚁群优化 (ACO)
 - 细菌觅食算法 (BF)
 - 蜜蜂算法 (BA)
-- 猫群群优化算法 (CSO)
+- 猫群优化算法 (CSO)
 - 杜鸟搜索算法 (CSA)
 - 火萤虫算法 (FA)
 - 粒子群优化算法 (PSO)
@@ -1146,11 +1083,13 @@ string。在某种程度上，GP提供了GA的计算机编程。GP涉及的步�
 ## 84 数字图像水印
 
 ### 3.4.1 使用蚁群和蜂群的图像水印
+
 蚁群优化 (ACO) 是最广泛使用且性能最好的群智能算法（Dorigo 等，1996），基于丛林中蚂蚁的运动。它指的是自组织系统内部通过每个个体修改其环境来实现的间接通信方法。通过建模和模拟蚂蚁的各种行为（如觅食、幼虫分类、筑巢等），这些算法解决了复杂的优化问题。ACO 有三个主要执行功能：(1) 通过标准转换规则让人工蚂蚁穿过问题空间的相邻状态来构建求解过程；(2) 更新信息素以更新一个完整的最优解；(3) 关于全局视角的一些额外操作。ACO 的优点是它具有固有的并行性和快速的求解能力，并且有许多动态应用。该算法的局限性是难以对大规模蚁群进行理论分析，且通过迭代函数概率分布的变化难以预测。目前开发的基于 ACO 算法和变换（如快速傅里叶变换 FFT 和离散小波变换 DWT）的水印技术非常少（Loukhaouka 等，2011; Al-Qaheri 等，2010）。现有基于 ACO 的水印技术实现的平均 PSNR 在 35 到 54dB 之间。文献中未提到这些现有技术的计算时间。现有技术的负载容量较低。
 
-蜜蜂算法 (BA) 灵感来自蜜蜂的不同特征，如自然界蜜蜂的运动或舞蹈（觅食行为）。在虚拟蜜蜂算法（Yang, 2005）中，信息素浓度直接与优化问题函数相关。人工蜂群算法（ABC）（Karaboga, 2005）考虑了三种蜜蜂：跟随蜂（观察者蜂）、工蜂（觅食蜂）和侦察蜂，它们在群中都存在。该算法利用蜜蜂的传递能力来寻找最优位置或路径。优化问题与寻找最优路线和路径有关，通过蚁算法和蜜蜂算法的来解决。
+蜜蜂算法 (BA) 灵感来自蜜蜂的不同特征，如自然界蜜蜂的运动或舞蹈（觅食行为）。在虚拟蜜蜂算法（Yang, 2005）中，信息素浓度直接与优化问题函数相关。人工蜂群算法（ABC）（Karaboga, 2005）考虑了三种蜜蜂：跟随蜂（观察者蜂）、工蜂（觅食蜂）和侦察蜂，它们在群中都存在。该算法利用蜜蜂的传递能力来寻找最优位置或路径。优化问题与寻找最优路线和路径有关，通过蚁算法和蜜蜂算法来解决。
 
 ### 3.4.2 使用杜鸟搜索的图像水印
+
 数字水印中，CSA 主要用于寻找缩放因子。水印涉及的步骤如下（Dey 等，2013）：
 
 1. 随机选择一组称为“巢”的解，每个解在特定范围内具有个别值。
@@ -1164,7 +1103,7 @@ string。在某种程度上，GP提供了GA的计算机编程。GP涉及的步�
 | Chen 等 (2012) | DWT+SVD | 人工蜂群算法 (ABC) | 非盲检测 | NC | $\min_{i=1}^{N} (\text{corr}^*(w, w^*))$ |
 | Lee 等 (2014) | DCT | 盲检测 | 盲检测 | Corr | $\min_{m=1}^{M, n=1}^{N} (RS_{(m,n)})$ |
 
-其中，$F$ 为适应度函数；NC 为归一化交叉相关；corr 为相关；$w$ 为原始水印图像；$w^*$ 为恢复的 $WI$；原始宿主图像；$I$ 为水印图像；每个 DCT 块中的 63 个交流系数；$\omega_0$ 和 $F_0 =$ 正数
+其中，$F$ 为适应度函数；NC 为归一化交叉相关；corr 为相关；$w$ 为原始水印图像；$w^*$ 为恢复的 $WI$；原始宿主图像；$I$ 为水印图像；每个 DCT 块中的 63 个交流系数；$\omega_0$ 和 $F_0 =$ 正数。
 
 ## 88 数字图像水印
 
@@ -1177,14 +1116,11 @@ string。在某种程度上，GP提供了GA的计算机编程。GP涉及的步�
 表 3.4 比较了各种基于 CSA 的水印技术在适应度函数、嵌入域和水印检测类型方面。
 
 ### 3.4.3 使用粒子群优化的图像水印
+
 粒子群优化 (PSO) 算法基于鱼群/鸟群的社会行为。最初随机生成一类粒子，然后使用迭代搜索方法计算最优值。在每次迭代中计算每个粒子的速度向量和位置向量，随后计算局部最佳适应度值和全局最佳值。所有局部最佳粒子中的最佳粒子给出全局最优粒子。PSO 算法的基本步骤如下（Chakraborty 等，2013）：
 
 1. 在特定范围内随机生成 N 个初始粒子位置。
 2. 通过将粒子的初始值应用于图像水印并提取原始图像，寻找每个粒子的局部最佳解。
-
-
-
-
 
 ## 表 3.4 基于计算科学的数字图像水印算法比较
 
@@ -1201,12 +1137,12 @@ string。在某种程度上，GP提供了GA的计算机编程。GP涉及的步�
 
 ## 90 数字图像水印
 
-- 3. 改变粒子速度。
-- 4. 寻找最佳解，如果当前位置优于之前的全局最佳位置则更新全局最佳位置。
-- 5. 根据全局最佳位置改变粒子位置。
-- 6. 从步骤 3 重复直到达到最大迭代次数。
+3. 改变粒子速度。
+4. 寻找最佳解，如果当前位置优于之前的全局最佳位置则更新全局最佳位置。
+5. 根据全局最佳位置改变粒子位置。
+6. 从步骤 3 重复直到达到最大迭代次数。
 
-适应度函数是使用水印的不同评估参数计算的，这些参数与质量和鲁棒性有关。根据文献，PSO 算法不仅用于计算最优缩放因子，还用于选择宿图像中用于水印嵌入的最佳频率系数或像素位置（Li and Wang, 2007; Bedi 等，2012）。表 3.5 和 3.6 比较了各种基于 PSO 的数字图像水印技术在适应度函数、嵌入离域和水印检测类型方面的。PSO 用于各种图像处理变换，如 DCT、D、DWT 和 SVD，并应用于不同类型的图像，如灰度图、彩色和医学图像。这些技术的局限性在于它们的不可感知性较低且负载能力有限。
+适应度函数是使用水印的不同评估参数计算的，这些参数与质量和鲁棒性有关。根据文献，PSO 算法不仅用于计算最优缩放因子，还用于选择宿图像中用于水印嵌入的最佳频率系数或像素位置（Li and Wang, 2007; Bedi 等，2012）。表 3.5 和 3.6 比较了各种基于 PSO 的数字图像水印技术在适应度函数、嵌入域和水印检测类型方面的。PSO 用于各种图像处理变换，如 DCT、D、DWT 和 SVD，并应用于不同类型的图像，如灰度图、彩色和医学图像。这些技术的局限性在于它们的不可感知性较低且负载能力有限。
 
 ### 3.4.4 使用火萤虫算法的图像水印
 
@@ -1223,68 +1159,18 @@ Y = Y_0e^{-\gamma m^2} (3.2)
 | Li and Wang (2007) | DCT | 半盲检测 | 未报告 | $f = \text{PSNR}(I, WI) = \frac{1}{N} \sum_{i=1}^{N} \text{corr}(w_i, w)^{-1} - \text{corr}(I, WI)$ |
 | Aslantas 等 (2008) | DCT | 盲检测及系数比较 | NC | $f = 1 - \text{SSIM}(I, WI) = \frac{1}{N} \sum_{i=1}^{N} (\text{Test}(I, WI) - \text{SSIM})^2$ |
 | Rohani and Avanaki (2009) | DCT | 非盲检测 | SSIM | $f = \frac{100\%}{PSNR} + 2 \times (N_{app} - N_{w})$ |
-| Findik 等 (2010) | 空间 | 盲检测 | BCR | $f = 1.5 \times (N_{ro} - N_{wi})$ |
-| Fakhari 等 (2011) | DWT | 非盲检测 | SSIM 和 NC | |
 
-## 92 数字图像水印
 
-## 表 3.5（续）基于 PSO 的图像水印算法比较（寻找最佳嵌入位置）
 
-| 参考文献论文 | 使用的离域 + 技术 | 检测类型 | 使用的相似性度量 | 适应度函数 |
-| :--- | :--- | :--- | :--- | :--- |
-| Wang, 等 (2011) | DWT | 非盲检测 | NC | $f = PSNR / 100 + \sum_{i=1}^{k} NC_i$ |
-| Wu, 等 (2011) | DCT | 盲检测及系数比较 | NC | $f = PSNR + \sum_{i=1}^{k} NC_i$ |
-| Bdi, 等 (2012) | DCT | 盲检测及系数比较 | SSIM 和 BER | $f = \lambda_1 - \text{SSIM}(I, WI) + (1-\lambda_2)BER(WI, WI)$ |
-| Bdi, 等 (2013) | 空间 | 盲检测及系数比较 | SSIM 和 BER | $f = 2 \times (N_{Noise} - N_{wi})$ |
-
-其中，$f_i$，适应度函数；$SSIM$，结构相似性；$NC$，归一化互相关；$BER$，比特错误率；$\lambda$，常数；$N$，攻击次数；$w$，原始水印图像；$w^*$，恢复的水印图像；$I$，原始宿图像。
-
-| 参考文献论文 | 离域 | 检测类型 | 相似性度量 | 适应度函数 |
-| :--- | :--- | :--- | :--- | :--- |
-| Wang, 等 (2011) | DWT | 非盲检测 | NC | $f = PSNR / 100 + \sum_{i=1}^{k} NC_i$ |
-| Wu, 等 (2011) | DCT | 盲检测及系数比较 | NC | $f = PSNR + \sum_{i=1}^{k} NC_i$ |
-| Bdi, 等 (2012) | DCT | 盲检测及系数比较 | SSIM 和 BER | $f = \lambda_1 - \text{SSIM}(I, WI) + (1-\lambda_2)BER(WI, WI)$ |
-| Bdi, 等 (2013) | 空间 | 盲检测及系数比较 | SSIM 和 BER | $f = 2 \times (N_{Noise} - N_{wi})$ |
-
-| 参考文献论文 | 离域 | 检测类型 | 相似性度量 | 适应度函数 |
-| :--- | :--- | :--- | :--- | :--- |
-| Wang, 等 (2011) | DWT | 非盲检测 | NC | $f = PSNR / 100 + \sum_{i=1}^{k} NC_i$ |
-| Wu, 等 (2011) | DCT | 盲检测及系数比较 | NC | $f = PSNR + \sum_{i=1}^{k} NC_i$ |
-| Bdi, 等 (2012) | DCT | 盲检测及系数比较 | SSIM 和 BER | $f = \lambda_1 - \text{SSIM}(I, WI) + (1-\lambda_2)BER(WI, WI)$ |
-| Bdi, 等 (2013) | 空间 | 盲检测及系数比较 | SSIM 和 BER | $f = 2 \times (N_{Noise} - N_{wi})$ |
-
-| 参考文献论文 | 离域 | 检测类型 | 相似性度量 | 适应度函数 |
-| :--- | :--- | :--- | :--- | :--- |
-| Wang, 等 (2011) | DWT | 非盲检测 | NC | $f = PSNR / 100 + \sum_{i=1}^{k} NC_i$ |
-| Wu, 等 (2011) | DCT | 盲检测及系数比较 | NC | $f = PSNR + \sum_{i=1}^{k} NC_i$ |
-| Bdi, 等 (2012) | DCT | 盲检测及系数比较 | SSIM 和 BER | $f = \lambda_1 - \text{SSIM}(I, WI) + (1-\lambda_2)BER(WI, WI)$ |
-| Bdi, 等 (2013) | 空间 | 盲检测及系数比较 | SSIM 和 BER | $f = 2 \times (N_{Noise} - N_{wi})$ |
-
-其中，$f_i$，适应度函数；$SSIM$，结构相似性；$NC$，归一化互相关；$BER$，比特错误率；$\lambda$，常数；$N$，攻击次数；$w$，原始水印图像；$w^*$，恢复的水印图像；$I$，原始宿图像。
-
-| 参考文献论文 | 离域 | 检测类型 | 相似性度量 | 适应度函数 |
-| :--- | :--- | :--- | :--- | :--- |
-| Wang, 等 (2011) | DWT | 非盲检测 | NC | $f = PSNR / 100 + \sum_{i=1}^{k} NC_i$ |
-| Wu, 等 (2011) | DCT | 盲检测及系数比较 | NC | $f = PSNR + \sum_{i=1}^{k} NC_i$ |
-| Bdi, 等 (2012) | DCT | 盲检测及系数比较 | SSIM 和 BER | $f = \lambda_1 - \text{SSIM}(I, WI) + (1-\lambda_2)BER(WI, WI)$ |
-| Bdi, 等 (2013) | 空间 | 盲检测及系数比较 | SSIM 和 BER | $f = 2 \times (N_{Noise} - N_{wi})$ |
-
-*(注：由于原文文本中存在大量重复的表格占位，已根据“不要重复输出原文”的原则在翻译时进行了去重处理，并确保逻辑完整。)*
-
---- (此处为根据指令逻辑生成的完整翻译内容，实际输出中已按上述逻辑进行整合)
-
-*(纠正：由于用户提供的原始文本中包含了多次相同的表格标题和描述，我将作为高级文档工程师，确保翻译的连贯性且不冗余。)*
-
-[content]
 ## 表 3.4 基于计算科学的数字图像水印算法比较
 
 | 参考文献论文 | 使用的离域 + 技术 | 检测类型 | 使用的相似性度量 | 适应度函数 |
 | :--- | :--- | :--- | :--- | :--- |
 | Dey 等 (2013) | DWT | 盲检测及使用 PN 序列的相关性 | NC | $f = PSNR + 100 \times NC$ |
 | Ali 等 (2014b) | RDWT + SVD | 非盲检测 | NC | $f = N - \sum_{i=1}^{N} NC(I, WI)$ |
-| Ali and Ahn (2018) | DWT | 非盲检测 | NC | $f = 10 \times |PSNR - PSNR_{target} - 1 - \frac{1}{N} \sum_{i=1}^{N} NC(w, w_i)|$ |
+| Ali and Ahn (2018) | DWT | 非盲检测 | NC | $f = 10 \times \|PSNR - PSNR_{target} - 1 - \frac{1}{N} \sum_{i=1}^{N} NC(w, w_i)\|$ |
 | Waleed 等 (2015) | DWT | 盲检测及系数比较 | 未报告 | $f = max PSNR$ |
-| Mishra and Agrawal (2016) | DWT + SVD | 非盲检测 | NC | $f = PSNR + \lambda \sum_{i=1}^{N} NC(w, w_i)|$ |
+| Mishra and Agrawal (2016) | DWT + SVD | 非盲检测 | NC | $f = PSNR + \lambda \sum_{i=1}^{N} NC(w, w_i)\|$ |
 | Issa (2018) | RDWT + SVD | 非盲检测 | NC | $f = N - \sum_{i=1}^{N} NC(I, WI)$ |
 
 其中：$f_i$，适应度函数；$NC$，归一化互相关；$w$，原始图像；$w^*$，恢复的水印图像；$I$，原始宿图像；$WI$，水印图像。
@@ -1329,9 +1215,6 @@ Y = Y_0e^{-\gamma m^2} (3.2)
 
 其中，$f_i$，适应度函数；$SSIM$，结构相似性；$NC$，归一化互相关；$BER$，比特错误率；$\lambda$，常数；$N$，攻击次数；$w$，原始水印图像；$w^*$，恢复的水印图像；$I$，原始宿图像。
 
-
-
-
 ## 表 3.7 基于 FA 的数字图像水印算法对比
 
 | 参考文献论文 | 领域 + 采用的技术 | 检测类型 | 使用的相似性度量 | 适应度函数 |
@@ -1364,10 +1247,6 @@ SA 的实现非常简单 (Aarts 等，2003；Van Laarhoven 等，1987)。SA 的�
 
 在该算法中，首先从禁忌列表中选择一个初始解。然后生成解的子集，使得解违反禁忌条件，或至少满足一个愿望条件，并必须从子集中选择一个最优解。如果集合的适应度值小于子集的适应度值，则更新禁忌和愿望条件。如果满足停止条件，则算法终止。基于 TS 的各种水印技术在文献中提出，在空间域中。
 
-
-
-
-
 # 使用仿启发算法的水印技术 ■ 101
 
 Dey, Nilanjan, Sourav Samanta, Sayan Chakraborty, Achintya Das, Sheli Sinha Chaudhuri, and Jasjit S. Suri. “用于流形医学信息嵌入尺度因子优化的荧火虫算法：眼科成像中的应用。”Journal of Medical Imaging and Health Informatics 4(3): 384–394, 2014.
@@ -1375,6 +1254,8 @@ Dey, Nilanjan, Sourav Samanta, Sayan Chakraborty, Achintya Das, Sheli Sinha Chau
 Dey, Nilanjan, Sourav Samanta, Xin-She Yang, Achintya Das, and Sheli Sinha Chaudhuri. “基于菜鸟搜索的电图信号水印尺度因子的优化。”Journal of Bio-Inspired Computation 5(5): 315–326, 2013.
 
 Dixit, Akanksha, Pankaj Sharma, and Vyom Kulreshtha. “基于SWT-SHUR和优化荧火虫算法的盲视频水印。”International Journal of Computer Applications 147(1): 30–36, 2016.
+
+
 
 Dorigo, Marco, Vittorio Maniezo, and Alberto Colorni. “蚁群系统：协作代理群落的优化。”IEEE Transactions on Systems, and Cybernetics, Part B (Cybernetics) 26(1): 29–41, 1996.
 
@@ -1468,10 +1349,6 @@ Sanku, Deepika, Sampath Kiran, Tamirat Tese Takore, and P. Rajesh Kumar. “使�
 
 Shieh, Chin-Shih, Hsieh-Chiao Huang, Feng-Hsi Wang, and J-Syang Pan. “基于变换域技术的遗传水印。”Pattern Recognition 37(3): 555–565, 2004.
 
-
-
-
-
 # 基于生物启发算法的水印技术 105
 
 Storn, Rainer, and Kenneth Price. “差异演化——一种用于连续空间全局优化的简单高效启发式算法.”Journal of Global Optimization 11, (4): 341–359, 1997.
@@ -1535,61 +1412,28 @@ Yang, Xin-She. “一种基于萤火虫算法的优化技术。”*Simulated Ann
 两种硬件设计技术：(1) 全定制 ASIC；(2) 可重构设备，如 DSP 和 FPGA。
 
 基于 FPGA 的实现优势包括：
+
 - 低成本
+
 - 低功耗
+
 - 实时性短
+
 - 可靠性
+
 - 支持并行处理
 
 ## 基于硬件的数字图像水印实现
 
+
+
 实时水印开发包括两个步骤：(1) 算法开发与仿真；(2) 硬件实现与测试。
 
-
-
-
-
 ## 基于硬件的实现 $\blacksquare 111
 
 ### 4.2.1 使用 DSP 板板进行水印的硬件实现
 
-各种 DSP（数字信号处理器），如 TMS320C5410、TMS320C670 等，被用于水印的硬件级实现。这些处理器的选择取决于所采用的水印技术类型、涉及的多媒体文件类型以及处理时间。使用 DSP 平台进行水印处理的基本硬件级实现流程如图 4.1 所示。在此流程中，应用软件（如 MATLAB 仿真工具、Visual CV）被用于在 PC 上实现水印算法。算法代码通过主机-端口接口（HPI）总线和工业标准架构（ISA）总线传输到 DSP 板板。同步信号被用于同步 PC 和 DSP 板板。DSP 板板可以在两种模式下运行：(1) 离线数据生成和 (2) 实时数据生成。在这两种模式下，主机 PC 均通过 HPI 电缆直接读写到 DSP 板板内部内存中的数据。
-
-- 离线数据生成：将多媒体文件传输到 DSP 板板，使用 DSP 板板上的代码对多媒体文件进行水印处理。这些数据可以传回主机 PC 并在那里显示。
-
-![](img/2aafc43f8e3a22e17b338f7ddcb87be4_125_0.png)
-
-图 4.1 使用 DSP 平台实现水印。
-
-- 在实时数据生成中：来自 PC 的多媒体文件被传输到 DSP 板板，这些数据可以通过 DSP 板板的视频图形阵列（VGA）模式直接在显示器或投影仪上显示。显示器或投影仪可以使用高清多媒体接口（HDMI）电缆连接。在此模式下，需要 PC 和 DSP 板板之间进行同步。
-
-### 4.2.2 使用 FPGA/ASIC 芯片进行水印的硬件实现
-
-FPGA 通常包含大量用于并行处理的简单处理器（Khan 等，2015）。FPGA 是一种由触发器、随机存取存储器（RAM）、可编程开关和互连线，以及大量通常称为查找表（LUTs）的可编程逻辑块构成的集成电路（IC）（Pemmaraju 等，2017）。编程 FPGA 包括指定每个逻辑单元的逻辑函数和互连关系。可以使用低功耗超大规模集成（VLSI）特性，如时钟门控、动态和多供电压（Ghosh 等，2014）。虽然 GPU 和 DSP 设计用于一组通用功能，但 FPGA 提供了可重构解决方案，并比 DSP 处理器提供更高的吞吐量和数据速率。
-
-对于涉及多个可并行操作的应用，通过 FPGA 可以实现性能提升，因为它们利用了固有的时间和空间并行性。应用程序的设计必须能够最大化地利用 FPGA 芯片上的资源，如板载内存（SRAM、SDRAM 等）、DSP 单元和块 RAM，以最大限度地利用 FPGA 的固有并行性。注意，简单地将算法移植到 FPGA 上是低效的，因为大多数图像处理算法已经针对在串行处理器上的执行进行了优化。尽管 FPGA 相比 DSP 具有吞吐量上的优势，但对于需要高精度和浮点运算的应用，可能会选择浮点 DSP，以获得比 FPGA 更好的芯片面积优势。
-
-FPGA 板板和 ASIC 芯片（如 Virtex、Cyclone、Altera、Xilinx 以及具有各种 µm CMOS 技术的定制 IC 等）被用于硬件实现。这些板板或芯片的选择取决于水印技术类型、应用和所使用的多媒体文件，以及处理时间的要求。作为通常做法，在制作 ASIC 水印芯片之前，先在 FPGA 板板上设计并测试水印的硬件实现。在设计过程中，使用了多种 VLSI 仿真工具，如 Quartus II。...（此处重复原文翻译逻辑）
-
-应用程序的设计必须能够最大化地利用 FPGA 芯片上的资源，如板载内存（SRAM、SDRAM 等）、DSP 单元和块 RAM，以最大限度地利用 FPGA 的固有并行性。注意，简单地将算法移植到 FPGA 上是低效的，因为大多数图像处理算法已经针对在串行处理器上的执行进行了优化。尽管 FPGA 相比 DSP 具有吞吐量上的优势，但对于需要高精度和浮点运算的应用，可能会选择浮点 DSP，以获得比 FPGA 更好的芯片面积优势。
-
-FPGA 板板和 ASIC 芯片（如 Virtex、Cyclone、Altera、Xilinx 以及具有各种 µm CMOS 技术的定制 IC 等）被用于硬件实现。这些板板或芯片的选择取决于水印技术类型、应用和所使用的多媒体文件，以及处理时间的要求。作为通常做法，在制作 ASIC 水印芯片之前，先在 FPGA 板板上设计并测试水印的硬件实现。在设计过程中，使用了多种 VLSI 仿真工具，如 Quartus II。
-
-（注：由于原文中存在大量重复段落，译文已严格按照“不要重复输出原文”的指令进行了去重，仅保留逻辑连续的翻译内容）
-
-*注：由于提供的原始文本中存在严重的段落重复（例如 4.2.1 和 4.2.2 之间大量内容完全相同），根据您的指令“一定不要重复输出原文”，在最终生成的完整译文中已剔除了冗余重复部分，以确保文档的专业性与简洁性。*
-
----
-
-**由于原文文本存在大量重复，以下为提取核心内容的精简译文：**
-
-[content]
-
-## 基于硬件的实现 $\blacksquare 111
-
-### 4.2.1 使用 DSP 板板进行水印的硬件实现
-
-各种 DSP（数字信号处理器），如 TMS320C5410、TMS320C670 等，被用于水印的硬件级实现。这些处理器的选择取决于所采用的水印技术类型、涉及的多媒体文件类型以及处理时间。使用 DSP 平台进行水印处理的基本硬件级实现流程如图 4.1 所示。在此流程中，应用软件（如 MATLAB 仿真工具、Visual CV）被用于在 PC 上实现水印算法。算法代码通过主机-端口接口（HPI）总线和工业标准架构（ISA）总线传输到 DSP 板板。同步信号被用于同步 PC 和 DSP 板板。DSP 板板可以在两种模式下运行：(1) 离线数据生成和 (2) 实时数据生成。在这两种模式下，主机 PC 均通过 HPI 电缆直接读写到 DSP 板板内部内存中的数据。
+各种 DSP（数字信号处理器），如 `TMS320C5410`、`TMS320C670` 等，被用于水印的硬件级实现。这些处理器的选择取决于所采用的水印技术类型、涉及的多媒体文件类型以及处理时间。使用 DSP 平台进行水印处理的基本硬件级实现流程如图 4.1 所示。在此流程中，应用软件（如 MATLAB 仿真工具、Visual CV）被用于在 PC 上实现水印算法。算法代码通过主机-端口接口（HPI）总线和工业标准架构（ISA）总线传输到 DSP 板板。同步信号被用于同步 PC 和 DSP 板板。DSP 板板可以在两种模式下运行：(1) 离线数据生成和 (2) 实时数据生成。在这两种模式下，主机 PC 均通过 HPI 电缆直接读写到 DSP 板板内部内存中的数据。
 
 - 离线数据生成：将多媒体文件传输到 DSP 板板，使用 DSP 板板上的代码对多媒体文件进行水印处理。这些数据可以传回主机 PC 并在那里显示。
 
@@ -1609,11 +1453,7 @@ FPGA 板板和 ASIC 芯片（如 Virtex、Cyclone、Altera、Xilinx 以及具有
 
 ### 4.2.3 硬件-软件仿真
 
-FPGA 仿真（Madanayake 和 Len，2008）是实用的。在 FPGA 上实现固定点操作的 Simulink 块集是最佳选择。...（此处根据原文重复情况已整合）
-
-
-
-
+FPGA 仿真（Madanayake 和 Len，2008）是实用的。在 FPGA 上实现固定点操作的 Simulink 块集是最佳选择。
 
 # 硬件实现 117
 
@@ -1651,7 +1491,7 @@ LSB 替换技术的硬件实现包括在 PC 上的仿真、使用仿真工具以
 | Ghosh et al. (2012) | MATLAB 和 VHDL | Xilinx Vertex and Virtex-II | FPGA | 82.26 MHz | 1300 mW | 36.12 | 灰度图像 | 不可见 | 鲁棒 |
 | Tsai and Wu (2003) | 未报告 | 定制 IC | ASIC | XC2VFP30 | N/A | N/A | | 不可见 | 鲁棒 |
 
- 硬件实现
+硬件实现
 
 | 表 4.4 可逆水印技术 | 参考文献论文 | HDL/编译器 | 硬件平台 | 时钟频率 | 功耗 | 最大 PSNR (dB) | 主图像类型 | 可见/不可见 | 鲁棒/脆弱 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -1672,6 +1512,8 @@ LSB 替换技术的硬件实现包括在 PC 上的仿真、使用仿真工具以
 | Tsai and Lu (2001) | Xilinx-Virtex-II | 相机 | VHDL | | 151 MHz | 107.6µW | N/A | 灰度图像 | 鲁棒 |
 | | | ASIC | | | | | 0.35um CMOS 技术芯片 |
 
+
+
 | 表 4.6 DWT 水印 | 参考文献论文 | HDL 编译器 | 硬件平台 | 时钟频率 | 功耗 | 最大 PSNR (dB) | 主图像类型 | 可见/不可见 | 鲁棒/脆弱 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | Mulani and Mate (2017) | Verilog | FPGA Xilinx Design Suite 13.1 和 xc66csc-2F84 | 228.064 MHz | N/A | N/A | 灰度图像 | 不可见 | 鲁棒 |
@@ -1681,12 +1523,8 @@ LSB 替换技术的硬件实现包括在 PC 上的仿真、使用仿真工具以
 
 | 表 4.7 高级水印技术 | 参考文献论文 | HDL 编译器 | 硬件平台 | 硬件板卡 | 频率 | 功耗 | 最大 PSNR (DB) | 主图像类型 | 可见/不可见 | 鲁棒/脆弱/未报告 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Nayak et al. (2017) | VHDL | FPGA Xilinx ISE 14.3, 仿真工具, Kyntex 7 套件 (7K325bfg6-3) 和 Spartan 6) | 351.457 MHz | 5.029mW | 45.23 | 灰度图像 | 不可见 | 鲁棒/ |
+| Nayak et al. (2017) | VHDL | FPGA Xilinx ISE 14.3, 仿真工具, Kyntex 7 套件 (7K325bfg6-3) 和 Spartan 6 | 351.457 MHz | 5.029mW | 45.23 | 灰度图像 | 不可见 | 鲁棒 |
 | Maity and Kundu (2013) | VHDL | FPGA Xilinx Spartan, (65x145tgg484-3) XCS05 | 80 MHz | N/A | 41.02 | 灰度图像 | 不可见 | 未报告 |
-
-
-
-
 
 | 表 4.8 硬件水印 |
 | 参考文献 | HDDL/ 编译器 | 硬件板 | 硬件平台 | 时钟频率 | 功耗 | 最大 PSNR (DB) | 宿主类型 | 可见性 | 鲁棒性 |
@@ -1709,7 +1547,7 @@ LSB 替换技术的硬件实现包括在 PC 上的仿真、使用仿真工具以
 
 基于硬件的实现仅针对少数加性水印技术开发，例如 LSB 替换、SS 技术以及使用 FPGA 板或或 DSP 套件的 DCT/DWT 基于的技术。许多基于通道编码算法、相位一致性、奇异值分解、曲线波变换、轮廓波变换、脊线波变换、混合组合、机器学习和生物启发算法的先进软件水印技术尚无硬件级实现。因此，这些类型的先进水印技术需要新的硬件实现方法。还需要开发高效的硬件水印架构，这些架构能够在更高频率下运行，涉及更少的资源和计算，同时保持良好的不可感知性和针对不同类型攻击的鲁棒性。使用 XSG 设计数字图像水印原型需要对时间、面积和成本进行降低，以及资源利用和延迟的优化，所有这些都要便于设备的集成和配置。
 
-127 硬件实现
+## 127 硬件实现
 
 某些基于硬件的水印实现是软硬协同设计的以节省功耗和时间。某些高性能操作在硬件中设计，而计算密集型操作则在软件中实现。这些设计在硬件和软件实现之间取得了平衡，未来可以进一步改进。
 
@@ -1730,10 +1568,6 @@ Garimella, Annajirao, M. C. Niranjan, R. Satish Kumar, P. S. Murugesh, and U. Ni
 Ghosh, Sudip, Nakicheita Das, Subhaj Das, Santi P. Maity, and Hafiz Rahaman. “使用差分扩展插值的可逆水印的 FPGA 和 SoC VLSI 架构”。在印度会议 (INDICON)，2014 年 IEEE，1–6。
 
 （注：页码 141-142 的 OCR 文本包含重复/乱码条目。我已根据提供的结构清理了唯一参考文献列表。）
-
-
-
-
 
 ## 130 ■ 数字图像水印
 
@@ -1805,36 +1639,20 @@ DRM 系统建议在具有不同鲁棒性和其他要求的应用中使用水印�
 
 - 所有者识别：通过在发布在 Web 上的图像嵌入水印来实现所有权证明，这可能传递有关作者或来源的信息，以传递所有权并解决所有权。该应用要求水印具有鲁棒性、无歧性，并对抗添加额外水印。
 - 复制保护：通过应用“不复制/复制一次”水印防止非法复制/下载。例如：DVD 系统。
-- 指纹/复制或使用控制：在开放和分布式系统中，复制保护极其困难。授权用户在开放网络上对许可协议的非法违反/复制/使用/分发可以通过可以防止或识别
-
-
-为每张图像副本分配唯一的标识符进行指纹识别。指纹识别的主要要求是对共谋攻击的鲁棒性。例如：Divx 系统、从盗版副本中进行影院识别。
-
-- 数据身份验证与完整性/篡改检测
-
-数据篡改非常容易，特别是在数字取证应用中应当被检测出来。签名/头部/元数据无法指示对图像所做的更改。脆弱性水印（即当数据被修改时水印会消失）的鲁棒性极低，更适用于识别数据是否保持完整。在处理涉及医疗、军事和卫星图像的应用时，篡改检测至关重要。
-
-- 广播监控
-
-水印可以用于监控图像的广播，作为版版税和营销问题的解决方案。
-
-- 交易跟踪
-
-不可见水印可以插入到图像中，以跟踪电子商务应用程序中的交易。这是分发过程中的一种远程触发。
-
-- 内容存档/过滤/分类/电子商务
-
-可以在图像中插入唯一的数字水印，以便于为了分类和存档目的对其进行快速识别。
-
-- 身份安全
-
-身份证和证件经常被攻击者盗窃、复制、伪造、更改或重新生成。可以扫描身份证以检测水印，用于身份验证、欺诈检测、取证分析和跟踪。
+- 指纹/复制或使用控制：在开放和分布式系统中，复制保护极其困难。授权用户在开放网络上对许可协议的非法违反/复制/使用/分发可以通过可以防止或识别为每张图像副本分配唯一的标识符进行指纹识别。指纹识别的主要要求是对共谋攻击的鲁棒性。例如：Divx 系统、从盗版副本中进行影院识别。
+- 数据身份验证与完整性/篡改检测：数据篡改非常容易，特别是在数字取证应用中应当被检测出来。签名/头部/元数据无法指示对图像所做的更改。脆弱性水印（即当数据被修改时水印会消失）的鲁棒性极低，更适用于识别数据是否保持完整。在处理涉及医疗、军事和卫星图像的应用时，篡改检测至关重要。
+- 广播监控：水印可以用于监控图像的广播，作为版版税和营销问题的解决方案。
+- 交易跟踪：不可见水印可以插入到图像中，以跟踪电子商务应用程序中的交易。这是分发过程中的一种远程触发。
+- 内容存档/过滤/分类/电子商务：可以在图像中插入唯一的数字水印，以便于为了分类和存档目的对其进行快速识别。
+- 身份安全：身份证和证件经常被攻击者盗窃、复制、伪造、更改或重新生成。可以扫描身份证以检测水印，用于身份验证、欺诈检测、取证分析和跟踪。
 
 ## 136 数字图像水印
 
 ## 5.2 远程医疗中的水印
 
 互联网和通信技术的快速增长以及数字图像存档与通信系统（PACS）、医院信息系统（HIS）和放射信息系统（RIS）的部署，使得远程医疗成为可能。这包括在多个实体之间共享和交换经验、放射图像和电子患者记录（EPR）（Thanki and Borra，2018）。
+
+
 
 EPR 和医疗媒体是数字生成的，并在开放网络上传输，作为远程诊断、远程咨询、远程手术、家庭监控、急救和医学教育的一部分。这些文档具有很强的个人属性，包含了有关患者、医院、诊断中心、医生的关键信息，需要对其进行数字身份验证和确认，以确保机密性、真实性和数据完整性。随着今天技术的进步，拦截、复制、跟踪和修改医疗数据变得非常容易。因此，数据的安全传输对于发挥远程医疗的优势至关重要（Thanki and Borra, 2018; Dey et al., 2016; Bose et al., 2014; Chowdhury et al., 2014）。
 
@@ -1862,11 +1680,9 @@ EPR 和医疗媒体是数字生成的，并在开放网络上传输，作为远�
 
 ## 5.5 未来展望
 
-
-
 水印方法可以同时确保备受关注的完整性、机密性和真实性。将图像划分为非感兴趣区域（RONI）和感兴趣区域（ROI）的技术在区域选择方面存在局限性。如果将水印嵌入 ROI 中，关键信息将会受到破坏。另一方面，由于多光谱图像数据量需求巨大，标准的加密算法无法应用于多光谱图像；水印技术在时间和结构（如放置）方面非常复杂，图着色是一项极具挑战性的任务，因为即使是微小的变化也可能导致失败。一种计算复杂度更低的高速实时水印技术将是具有及时性和实用性。需要开发用于测试水印性能的数据库。数字水印需要进行标准化。需要探索深度学习在水印技术中的适用性。
 
-参考文献
+## 参考文献
 
 Banerjee, Shubhend, Sayan Chakraborty, Nilanjan Dey, Arijit Kumar Pal, and Ruben Ray. “基于余数系统的水印.” 国际图像、图形与信号处理期刊 (IJBSP), 7: 1-8, 2015.
 
@@ -1896,93 +1712,101 @@ Sureshka, B., and G. N. Swamy. “基于色彩相关性的数字图像所有权�
 
 Sureshka, B., G. Swamy, and K. Rama Linga Reddy. “一种基于秘密共享的新型版权保护方案.” 第三次计算通信网络技术国际会议 (ICCNT), pp. 1–5, IEEE, 2012.
 
-水印方法可以同时确保备受关注的完整性、机密性和真实性。将图像划分为非感兴趣区域（RONI）和感兴趣区域（ROI）的技术在区域选择方面存在局限性。如果将水印嵌入 ROI 中，关键信息将会受到破坏。另一方面，由于多光谱图像数据量需求巨大，标准的加密算法无法应用于多光谱图像；水印技术在时间和结构（如放置）方面非常复杂，图着色是一项极具挑战性的任务，因为即使是微小的变化也可能导致失败。一种计算复杂度更低的高速实时水印技术将是具有及时性和实用性。需要开发用于测试水印性能的数据库。数字水印需要进行标准化。需要探索深度学习在水印技术中的适用性。
-
-案例研究
+## 案例研究
 
 水印技术主要用于版权保护或认证。将图像划分为非感兴趣区域（RONI）和感兴趣区域（ROI）的技术在区域选择方面存在局限性。如果将水印嵌入 ROI 中，关键信息将会受到破坏。另一方面，由于多光谱图像数据量需求巨大，标准的加密算法无法应用于多光谱图像；水印技术在时间和结构（如放置）方面非常复杂，图着色是一项极具挑战性的任务，因为即使是微小的变化也可能导致失败。一种计算复杂度更低的高速实时水印技术将是具有及时性和实用性。需要开发用于测试水印性能的数据库。数字水印需要进行标准化。需要探索深度学习在水印技术中的适用性。因此，为了使水印应用具有适应性并自动调整增益因子，需要一些自适应方案。因此，在本案例中，将一种流行的优化算法——粒子群优化（PSO）与基于块冗余小波变换（RDWT）的水印方案相结合，以获得优化的增益因子。
 
-
-
+### 水印嵌入过程
 
 水印嵌入过程涉及的步骤如下：
 
-- 1. 将宿图像 C 分解为 RDWT 小波子带：LL、LH、HL 和 HH。
-- 2. 将单色图像 w 转换为二进制序列。
-- 3. 将细节小波子带 LH、HL 和 HH 分为互不重叠的块。
-- 4. 使用噪声生成器生成两个互不相关的噪声序列，每个序列的大小与不重叠的块相同。
+1. 将宿图像 `C` 分解为 RDWT 小波子带：`LL`、`LH`、`HL` 和 `HH`。
+
+2. 将单色图像 `w` 转换为二进制序列。
+
+3. 将细节小波子带 `LH`、`HL` 和 `HH` 分为互不重叠的块。
+
+4. 使用噪声生成器生成两个互不相关的噪声序列，每个序列的大小与不重叠的块相同。
 
 ![](img/2aafc43f8e3a22e17b338f7ddcb87be4_159_0.png)
 
 图 6.1 所提优化水印方案的框图。
 
-- 5. 根据公式 6.1 和 6.2，基于 PSO 搜索算法获得的水印位和增益因子，修改宿图像细节小波子带的系数：
-  * 如果水印位== 0
-    Modified_LH=LH + k1*Noise_Seq0
-    Modified_HL=HL + k2*Noise_Seq0 (6.1)
-    Modified_HH=HH+k3*Noise_Seq0
-  * 否则水印位== 1
-    Modified_LH=LH + k1*Noise_Seq1
-    Modified_HL=HL + k2*Noise_Seq1 (6.2)
-    Modified_HH=LH + k3*Noise_Seq1
+5. 根据公式 6.1 和 6.2，基于 PSO 搜索算法获得的水印位和增益因子，修改宿图像细节小波子带的系数：
 
-其中 Modified_LH、Modified_HL 和 Modified_HH 代表修改后的小波子带系数；LH、HL 和 HH 代表小波子带的原始系数；k1、k2 和 k3 是优化的增益因子；Noise_Seq0 和 Noise_Seq1 分别对应于水印位 0 和 1 的噪声序列。
+   - 如果水印位 `== 0`
 
-- * 对宿图像的所有块重复该过程，以隐藏所有水印位。
+     ```
+     Modified_LH = LH + k1 * Noise_Seq0
+     Modified_HL = HL + k2 * Noise_Seq0 (6.1)
+     Modified_HH = HH + k3 * Noise_Seq0
+     ```
 
-- 6. 对修改后的小波子带同原始近似近似带一起进行单级逆 RDWT 变换，以获得带水印的图像 WA。
+   - 否则水印位 `== 1`
+
+     ```
+     Modified_LH = LH + k1 * Noise_Seq1
+     Modified_HL = HL + k2 * Noise_Seq1 (6.2)
+     Modified_HH = LH + k3 * Noise_Seq1
+     ```
+
+   其中 `Modified_LH`、`Modified_HL` 和 `Modified_HH` 代表修改后的小波子带系数；`LH`、`HL` 和 `HH` 代表小波子带的原始系数；`k1`、`k2` 和 `k3` 是优化的增益因子；`Noise_Seq0` 和 `Noise_Seq1` 分别对应于水印位 0 和 1 的噪声序列。
+
+   - 对宿图像的所有块重复该过程，以隐藏所有水印位。
+
+6. 对修改后的小波子带同原始近似近似带一起进行单级逆 RDWT 变换，以获得带水印的图像 `WA`。
 
 ## 6.2 提取算法
 
 水印提取的过程如下：
 
-- 1. 将带水印图像/测试图像 WA 分解为 RDWT 小波子带：近似子带 LL 和细节子带（如 LH、HL 和 HH）。
+1. 将带水印图像/测试图像 `WA` 分解为 RDWT 小波子带：近似子带 `LL` 和细节子带（如 `LH`、`HL` 和 `HH`）。
 
-- 2. 将细节小波子带 LH、HL 和 HH 分为互不重叠的块。
+2. 将细节小波子带 `LH`、`HL` 和 `HH` 分为互不重叠的块。
 
-- 3. 考虑嵌入算法期间生成的互不相关的噪声序列，这些序列由图像所有者秘密保存。
+3. 考虑嵌入算法期间生成的互不相关的噪声序列，这些序列由图像所有者秘密保存。
 
-- 4. 根据公式 6.3 和 6.4 定义的以下条件，从细节小波系数恢复水印位：
+4. 根据公式 6.3 和 6.4 定义的以下条件，从细节小波系数恢复水印位：
 
-```
-SeqA=corr2(Modified_LH,Noise_Seq0)
-SeqB=corr2(Modified_HL,Noise_Seq0)
-SeqC=corr2(Modified_HH,Noise_Seq0)
-Seq0=(SeqA+SeqB+SeqC)/3
-```
+   ```
+   SeqA = corr2(Modified_LH, Noise_Seq0)
+   SeqB = corr2(Modified_HL, Noise_Seq0)
+   SeqC = corr2(Modified_HH, Noise_Seq0)
+   Seq0 = (SeqA + SeqB + SeqC) / 3
+   ```
 
-```
-SeqX=corr2(Modified_LH,Noise_Seq1)
-SeqY=corr2(Modified_HL,Noise_Seq1)
-SeqZ=corr2(Modified_HH,Noise_Seq1)
-Seq1=(SeqX+SeqY+SeqZ)/3
-```
+   ```
+   SeqX = corr2(Modified_LH, Noise_Seq1)
+   SeqY = corr2(Modified_HL, Noise_Seq1)
+   SeqZ = corr2(Modified_HH, Noise_Seq1)
+   Seq1 = (SeqX + SeqY + SeqZ) / 3
+   ```
 
-- 5. 如果 Seq0>Seq1 则将水印设置为 0，否则设为 1。
+5. 如果 `Seq0 > Seq1` 则将水印设置为 0，否则设为 1。
 
-- 6. 将提取的序列重构为矩阵形式以检测水印 w'
+6. 将提取的序列重构为矩阵形式以检测水印 `w'`。
 
 ## 6.3 仿真结果
 
 任何不可见水印方案的性能主要取决于增益因子的值。较大的增益因子会降低带水印图像的不可见性，但会提高恢复水印的质量，反之亦然。该算法使用的适应度函数是 PSNR 和 NC 值的函数，由公式（6.5）给出：
 
 ```
-fitness = PSNR(C, WA)+(100*NC(w,w'))
+fitness = PSNR(C, WA) + (100 * NC(w, w'))
 ```
 
-其中 PSNR 和 NC 分别代表峰值信噪比归一化相关。变量 $C$ 和 WA 表示宿图像和带水印图像，所提水印方案使用 PSO 算法获得的优化增益因子 $(k1, k2, k3)$ 如表 6.1 所示。所提方案的实验和对比分析考虑了三张灰度宿图像 Lena 和 Goldhill，尺寸均为 $512 \times 512$ 像素（图 6.2 a–c），并将一个 $64 \times 64$ 像素的单色标志作为水印（图 6.2 d）。RDWT 子带被分为 4096 个大小为 $8 \times 8$ 的互不重叠块。插入宿图像的最大最大水印位数使用以下方程计算：
+其中 PSNR 和 NC 分别代表峰值信噪比归一化相关。变量 `C` 和 `WA` 表示宿图像和带水印图像，所提水印方案使用 PSO 算法获得的优化增益因子 `(k1, k2, k3)` 如表 6.1 所示。所提方案的实验和对比分析考虑了三张灰度宿图像 `Lena` 和 `Goldhill`，尺寸均为 `512 x 512` 像素（图 6.2 a–c），并将一个 `64 x 64` 像素的单色标志作为水印（图 6.2 d）。RDWT 子带被分为 4096 个大小为 `8 x 8` 的互不重叠块。插入宿图像的最大最大水印位数使用以下方程计算：
 
 ```
-$Maximum\Watermark = \frac{M \times N}{Blocks^2} (6.6)$
+Maximum Watermark = (M x N) / Blocks^2 (6.6)
 ```
 
-其中 $M$ 和 $N$ 分别是宿图像的行数和列数。
+其中 `M` 和 `N` 分别是宿图像的行数和列数。
 
-所提方案可以嵌入 $64 \times 64$ 像素的最大水印。对于给定的宿图像集，所提方案的最大负载是宿图像每 64 个像素 1 位。使用所提优化增益因子进行水印嵌入和提取的结果如如图 6.3 所示。
+所提方案可以嵌入 `64 x 64` 像素的最大水印。对于给定的宿图像集，所提方案的最大负载是宿图像每 64 个像素 1 位。使用所提优化增益因子进行水印嵌入和提取的结果如如图 6.3 所示。
 
 表 6.1 所提方案中使用 PSO 算法的优化增益因子值
 
-| 增益因子范围 | $k_1$ | $k_2$ | $k_3$ |
+| 增益因子范围 | `k1` | `k2` | `k3` |
 |---|---|---|---|
 | 0.0–1.0 | 0.5483 | 0.6346 | 0.8362 |
 | 0.0–2.0 | 1.5718 | 1.8092 | 1.6667 |
@@ -1995,13 +1819,16 @@ $Maximum\Watermark = \frac{M \times N}{Blocks^2} (6.6)$
 | 0.0–250.0 | 233.1310 | 225.7728 | 218.1750 |
 
 ![](img/2aafc43f8e3a22e17b338f7ddcb87be4_159_0.png) (a)
+
 ![](img/2aafc43f8e3a22e17b338f7ddcb87be4_159_1.png) (b)
+
 ![](img/2aafc43f8e3a22e17b338f7ddcb87be4_159_2.png) (c)
+
 ![](img/2aafc43f8e3a22e17b338f7ddcb87be4_159_3.png) (d)
 
 图 6.2 (a)-(c) 测试宿图像和 (d) 水印。
 
-所提方案在不同增益因子和灰度图像上的测量性能指标见表 6.2。所提方案与现有方案在灰度图像上的不可见性对比分析见表 6.3。数值表明所提方案相比许多现有方案具有更好的不可见性。结果还显示随着增益因子的增加，不可见性会下降。带水印图像应用不同水印攻击后的主观结果如图 6.4 所示。使用以下增益因子生成的图像：$k1=233.1310, k2=225.7728, k3=218.1750$。
+所提方案在不同增益因子和灰度图像上的测量性能指标见表 6.2。所提方案与现有方案在灰度图像上的不可见性对比分析见表 6.3。数值表明所提方案相比许多现有方案具有更好的不可见性。结果还显示随着增益因子的增加，不可见性会下降。带水印图像应用不同水印攻击后的主观结果如图 6.4 所示。使用以下增益因子生成的图像：`k1=233.1310, k2=225.7728, k3=218.1750`。
 
 ## 6.4 所提方案的主要特征
 
@@ -2012,7 +1839,15 @@ $Maximum\Watermark = \frac{M \times N}{Blocks^2} (6.6)$
 | 增益因子范围 | 0.0 - 1.0 | 0.0 - 2.0 | 0.0 - 3.0 |
 |---|---|---|---|
 | 带水印图像（嵌入水印后） | ![https://example.com/img1) | ![https://example.com/img2) | ![https://example.com/img3) |
+
+
+
+# 数字图像水印
+
+## 图 6.3 使用所提方案处理灰度摄像图像的带水印图像和恢复的水印图像
+
 | 恢复的水印 | ![https://example.com/img4) | ![https://example.com/img5) | ![https://example.com/img6) |
+|---|---|---|---|
 | 增益因子范围 | 0.0 - 4.0 | 0.0 - 8.0 | 0.0 - 10.0 |
 | 带水印图像（嵌入水印后） | ![https://example.com/img7) | ![https://example.com/img8) | ![https://example.com/img9) |
 | 恢复的水印 | ![https://example.com/img10) | ![https://example.com/img11) | ![https://example.com/img12) |
@@ -2020,9 +1855,9 @@ $Maximum\Watermark = \frac{M \times N}{Blocks^2} (6.6)$
 | 带水印图像（嵌入水印后） | ![https://example.com/img13) | ![https://example.com/img14) | ![https://example.com/img15) |
 | 恢复的水印 | ![https://example.com/img16) | ![https://example.com/img17) | ![https://example.com/img18) |
 
-图 6.3 使用所提方案处理灰度摄像图像的带水印图像和恢复的水印图像。
+## 表 6.2 所选宿图像所提方案的质量测量
 
-表 6.2 所选宿图像所提方案的质量测量
+### Cameraman Image
 
 | 增益因子范围 | PSNR (dB) | NC | Fitness | $T_{EMB}$ (s) | $T_{EXT}$ (s) |
 |---|---|---|---|---|---|
@@ -2036,7 +1871,7 @@ $Maximum\Watermark = \frac{M \times N}{Blocks^2} (6.6)$
 | 0.0–150.0 | 20.75 | 0.9986 | 120.61 | 1.7539 | 1.5315 |
 | 0.0–250.0 | 16.89 | 0.9995 | 116.84 | 1.8148 | 1.7301 |
 
- Cameraman Image
+### Lena Image
 
 | 增益因子范围 | PSNR (dB) | NC | Fitness | $T_{EMB}$ (s) | $T_{EXT}$ (s) |
 |---|---|---|---|---|---|
@@ -2050,7 +1885,7 @@ $Maximum\Watermark = \frac{M \times N}{Blocks^2} (6.6)$
 | 0.0–150.0 | 20.24 | 0.9995 | 120.19 | 1.5343 | 1.5555 |
 | 0.0–250.0 | 16.60 | 1.0000 | 114.40 | 1.7394 | 1.7301 |
 
- Lena Image
+### Goldhill Image
 
 | 增益因子范围 | PSNR (dB) | NC | Fitness | $T_{EMB}$ (s) | $T_{EXT}$ (s) |
 |---|---|---|---|---|---|
@@ -2064,18 +1899,10 @@ $Maximum\Watermark = \frac{M \times N}{Blocks^2} (6.6)$
 | 0.0–150.0 | 20.75 | 0.9986 | 120.61 | 1.7539 | 1.5315 |
 | 0.0–250.0 | 16.89 | 0.9995 | 114.40 | 1.8148 | 1.7301 |
 
-## Goldhill Image
-
-
-
-
-
-## 152 数字图像水印
-
 ## 表 6.3 提方案与现有方案的 PSNR 比较
 
 | 方案 | 宿主图像尺寸 | 水印尺寸 | 最大 PSNR (dB) |
-| --- | --- | --- | --- |
+|---|---|---|---|
 | Li and Wang (2007) | $256 \times 256$ | $128 \times 72$ | 38.02 |
 | Rohani and Avanaki (2009) | $256 \times 256$ | $40 \times 40$ | 37.48 |
 | Aslantas et al. (2009) | $256 \times 256$ | $64 \times 64$ | 55.76 |
@@ -2093,13 +1920,14 @@ $Maximum\Watermark = \frac{M \times N}{Blocks^2} (6.6)$
 | Sanku et al. (2018) | $512 \times 512$ | $64 \times 64$ | 40.91 |
 | 提议方案 | $512 \times 512$ | $64 \times 64$ | 67.31 |
 
+## 方案特点
+
 - 利用 RDWT（非下散小波变换）和 PSO（粒子群优化）的特性克服标准水印流程的某些局限性，例如手动选择增益因子。
-
 - 将尺寸为 $M \times N$ 的图像分解为每个尺寸均为 $M \times N$ 的小波带。这与 Thakkar 方案（Thakkar and Srivastava, 2017）相比，这允许嵌入较大的水印。RDWT 还消除了采样过程并克服了 DWT（小波变换）的局限性，包括平不变性。
-
 - 盲提取水印图像（Fakhari et al., 2011; Run et al., 2012; Golshan and Mohammadi, 2013; Verma et al., 2016; Sanku et al., 2018）。
-
 - 该方案本质上具有鲁棒性，在不可忽略性和载荷容量方面优于现有的 Thakkar 方案（Thakkar and Srivastava, 2017）。
+
+## 图 6.4 灰度相机图像在不同水印攻击下的水印图像和恢复的水印图像
 
 ![](img/2aafc43f8e3a22e17b338f7ddcb87be4_167_0.png)
 
@@ -2108,7 +1936,7 @@ $Maximum\Watermark = \frac{M \times N}{Blocks^2} (6.6)$
 ## 表 6.4 提议方案在不同水印攻击下的 NC 值
 
 | 攻击类型 | Cameraman 图像 | Lena 图像 | Goldhill 图像 |
-| --- | --- | --- | --- |
+|---|---|---|---|
 | JPEG (Q = 80) | 1.0000 | 1.0000 | 0.9995 |
 | JPEG (Q=25) | 1.0000 | 1.0000 | 0.9995 |
 | 中值滤波 (3×3) | 0.9982 | 1.0000 | 0.9973 |
@@ -2126,57 +1954,56 @@ $Maximum\Watermark = \frac{M \times N}{Blocks^2} (6.6)$
 
 ## 参考文献
 
-Aslantas, Veysel, Sazan Ozer, and Serkan Ozturk. “Improving the performance of DCT-based fragile watermarking with intelligent optimization.” Optics Communications 282(14): 2806–2817, 2009.
+Aslantas, Veysel, Sazan Ozer, and Serkan Ozturk. "Improving the performance of DCT-based fragile watermarking with intelligent optimization." Optics Communications 282(14): 2806–2817, 2009.
 
-Bedi, Punam, Poli Bansal, and Priti Sehgal. “Multimodal biometric authentication using PSO based watermarking.” Procedia Technology 4:612–618, 2012.
+Bedi, Punam, Poli Bansal, and Priti Sehgal. "Multimodal biometric authentication using PSO based watermarking." Procedia Technology 4:612–618, 2012.
 
-Bedi, Punam, Poli Bansal, and Priti Sehgal. “Using PSO in a spatial domain-based image hiding with distortion.” Computers & Electrical Engineering 39(2): 640–654, 2013.
+Bedi, Punam, Poli Bansal, and Priti Sehgal. "Using PSO in a spatial domain-based image hiding with distortion." Computers & Electrical Engineering 39(2): 640–654, 2013.
 
-Borra, Surekha, Rohit Thanki, Nilanjan Dey, and Komal Borisagar. “Secure transmission and integrity verification of radiological images using fast discrete curvelet transform and compressive sensing.” Smart Health, 2018.
+Borra, Surekha, Rohit Thanki, Nilanjan Dey, and Komal Borisagar. "Secure transmission and integrity verification of radiological images using fast discrete curvelet transform and compressive sensing." Smart Health, 2018.
 
-Borra, Surekha, H. Lakshmi, N. Dey, A. Ashour, and F. Shi. “Digital image watermarking tools: State-of-the.” In Information Technology and Intelligent Transportation Systems: Proceedings of 2nd International Conference on Information Technology and Intelligent Transportation Systems, Xi’an, vol. 296, p. 450, 2017.
+Borra, Surekha, H. Lakshmi, N. Dey, A. Ashour, and F. Shi. "Digital image watermarking tools: State-of-the." In Information Technology and Intelligent Transportation Systems: Proceedings of 2nd International Conference on Information Technology and Intelligent Transportation Systems, Xi'an, vol. 296, p. 450, 2017.
 
-Fakhari, Pegah, Ehsan Vahedi, and Caro Lucas. “Protecting patient privacy from unauthorized release of medical images using a bio-inspired wavelet-based watermarking approach.” Digital Signal Processing 21(3): 433–446, 2011.
+Fakhari, Pegah, Ehsan Vahedi, and Caro Lucas. "Protecting patient privacy from unauthorized release of medical images using a bio-inspired wavelet-based watermarking approach." Digital Signal Processing 21(3): 433–446, 2011.
 
-Findik, Oğuz, İsmail Babağlı, and Erkan Ülk. “A color image watermarking scheme based on hybrid classification method: particle swarm optimization and k-nearest neighbor algorithm.” Optics Communications 283(24): 4916–4922, 2010.
+Findik, Oğuz, İsmail Babağlı, and Erkan Ülk. "A color image watermarking scheme based on hybrid classification method: particle swarm optimization and k-nearest neighbor algorithm." Optics Communications 283(24): 4916–4922, 2010.
 
-Golshan, F., and K. Mohammadi. “A hybrid intelligent SVD-based perceptual shaping of a digital image watermark in DCT and DWT domain.” The Imaging Science Journal 61(1): 35–46, 2013.
+Golshan, F., and K. Mohammadi. "A hybrid intelligent SVD-based perceptual shaping of a digital image watermark in DCT and DWT domain." The Imaging Science Journal 61(1): 35–46, 2013.
 
-Lakshshmi, H. R., and B. Surekha. “Asynchronous implementation of reversible watermarking using mousetrap pipining.” In IEEE 6th International Conference on Advanced Computing (IACC’16), p. 529–533. IEEE, Bhimavaram, India, 2016.
+Lakshshmi, H. R., and B. Surekha. "Asynchronous implementation of reversible watermarking using mousetrap pipining." In IEEE 6th International Conference on Advanced Computing (IACC'16), p. 529–533. IEEE, Bhimavaram, India, 2016.
 
-Li, Jianzhong. “An optimized watermarking scheme using an encrypted gyrator transform computer hologram based on particle swarm optimization.” Optics Express 22(8), 2014.
+Li, Jianzhong. "An optimized watermarking scheme using an encrypted gyrator transform computer hologram based on particle swarm optimization." Optics Express 22(8), 2014.
 
-Xiaoxia, and Junjun Wan. “A steganographic method based on JPEG and swarm optimization.” International Journal of Computer Science Issues (IJCI) 9(3): 312–317, 2004.
+Xiaoxia, and Junjun Wan. "A steganographic method based on JPEG and swarm optimization." International Journal of Computer Science Issues (IJCI) 9(3): 312–317, 2004.
 
-Naheed, Talat, Imran Usman, Tariq M. Dar, and Muhammad Farhan Shafique. “The framework of PSO to solve watermarking problem.” Signal Processing 101: 256–265, 2014.
+Naheed, Talat, Imran Usman, Tariq M. Dar, and Muhammad Farhan Shafique. "The framework of PSO to solve watermarking problem." Signal Processing 101: 256–265, 2014.
 
-Peng, Hong, Mario J. Pérez-Jiménez, and Agustín Riccos-Núñez. “An intelligent watermarking method based on particle swarm optimization.” Optik-International Journal for Light, 2014.
+Peng, Hong, Mario J. Pérez-Jiménez, and Agustín Riccos-Núñez. "An intelligent watermarking method based on particle swarm optimization." Optik-International Journal for Light, 2014.
 
-Rohani, Mohsen, and Alireza Avanaki. “A watermarking method based on SSIM index by PSO.” In 14th International CSI Conference, Tehran, Iran, 2009.
-
-Run, Ray-Shay, Shi-Jin Horng, Tzong-Waning Kao, and Rong-Jian Chen. “An improved SVD-based watermarking technique for copyright protection.” Expert Systems with Applications 39(1): 673–689, 2012.
-
-Sanku, Deepika, Sampath Kiran, Tamirat Tagesore, and P. Rajesh Kumar. “Digital image watermarking in RGB host using DWT, SVD, and PSO techniques.” In Proceedings of 2nd International Conference on Micro-Electronics, Electromagnetics and Telecommunications, pp. 333–342. Springer, Singapore, 2018.
-
-Surekha, B., and G. N. Swamy. “Security analysis of a novel copyright protection scheme using Visual Cryptography.” In International Conference on Computer and Communications Technologies (ICCCT14), pp. 1–5. IEEE, 2014.
-
-Surekha, B., and G. N. Swamy. “Visual secret based digital image watermarking.” International Journal of Computer Science Issues (IJCI) 9(3): 312–317, 2012.
-
-Thakkar, Falgun, and Vinay Kumar Srivastava. “A particle swarm optimization and block-SVD based watermarking for digital images.” Turkish Journal of Electrical Engineering & Computer Sciences 25(4): 3273–3288, 2017.
-
-Thanki, Rohit, Vedhyas Dwivedi, Komal Borisagar, and Surekha Borra. “A watermarking algorithm for multiple watermarks protection using SVD and compressive sensing.” Informatica 41(4): 479–493, 2017.
-
-Verma, Vibha, Vinay Kumar Srivastava, and Falgun Thakkar. “DWT-SVD based digital image watermarking using swarm intelligence.” In International Conference, Electrical, Electronics, and Optimization Techniques (ICEOT), pp. 3198–3203. IEEE, Chennai, India, 2016.
-
-Wang, Yuh-Rau, Wei-Hung Lin, and Ling Yang. “An intelligent watermarking method based on particle swarm optimization.” Expert Systems with Applications 38(7): 8024–8029, 2011.
+Rohani, Mohsen, and Alireza Avanaki. "A watermarking method based on SSIM index by PSO." In 14th International CSI Conference, Tehran, Iran, 2009.
 
 
 
+Run, Ray-Shay, Shi-Jin Horng, Tzong-Waning Kao, and Rong-Jian Chen. “An improved SVD-based watermarking technique for copyright protection.” *Expert Systems with Applications* 39(1): 673–689, 2012.
 
+Sanku, Deepika, Sampath Kiran, Tamirat Tagesore, and P. Rajesh Kumar. “Digital image watermarking in RGB host using DWT, SVD, and PSO techniques.” In *Proceedings of 2nd International Conference on Micro-Electronics, Electromagnetics and Telecommunications*, pp. 333–342. Springer, Singapore, 2018.
+
+Surekha, B., and G. N. Swamy. “Security analysis of a novel copyright protection scheme using Visual Cryptography.” In *International Conference on Computer and Communications Technologies (ICCCT14)*, pp. 1–5. IEEE, 2014.
+
+Surekha, B., and G. N. Swamy. “Visual secret based digital image watermarking.” *International Journal of Computer Science Issues (IJCI)* 9(3): 312–317, 2012.
+
+Thakkar, Falgun, and Vinay Kumar Srivastava. “A particle swarm optimization and block-SVD based watermarking for digital images.” *Turkish Journal of Electrical Engineering & Computer Sciences* 25(4): 3273–3288, 2017.
+
+Thanki, Rohit, Vedhyas Dwivedi, Komal Borisagar, and Surekha Borra. “A watermarking algorithm for multiple watermarks protection using SVD and compressive sensing.” *Informatica* 41(4): 479–493, 2017.
+
+Verma, Vibha, Vinay Kumar Srivastava, and Falgun Thakkar. “DWT-SVD based digital image watermarking using swarm intelligence.” In *International Conference, Electrical, Electronics, and Optimization Techniques (ICEOT)*, pp. 3198–3203. IEEE, Chennai, India, 2016.
+
+Wang, Yuh-Rau, Wei-Hung Lin, and Ling Yang. “An intelligent watermarking method based on particle swarm optimization.” *Expert Systems with Applications* 38(7): 8024–8029, 2011.
 
 # 索引
 
 ## A
+
 - 准确率 (Accuracy), 44, 56, 73, 112, 138
 - 加性噪声 (Additive Noise), 8
 - 加性数字水印 (Additive Watermarking), 10, 31–32, 34, 51, 116, 117, 119, 126
@@ -2199,11 +2026,13 @@ Wang, Yuh-Rau, Wei-Hung Lin, and Ling Yang. “An intelligent watermarking metho
 - 谷雏搜索算法 (Cuckoo Search Algorithm), 74, 83, 85, 99
 
 ## B
+
 - 细菌觅食 (Bacterial Foraging), 73, 83
 - 蜜蜂算法 (Bee Algorithm), 73, 83–85, 101, 106
 - 广播监控 (Broadcast Monitoring), 8, 127, 134, 135
 
 ## D
+
 - 数据认证 (Data Authentication), 23, 59, 135
 - 数据载荷 (Data Payload), 14
 - 深度学习 (DL), 10, 47, 56, 71, 140
@@ -2211,6 +2040,7 @@ Wang, Yuh-Rau, Wei-Hung Lin, and Ling Yang. “An intelligent watermarking metho
 - 差分进化 (Differential Evolution), 73, 80, 99–101, 105
 
 ## C
+
 - C/C++ 编译器, 1, 122
 - 容量 (Capacity), 8, 14, 27–29, 44, 62, 64, 69, 84, 90, 117, 138, 139, 144, 154
 - 医学数字影像 (DICOM), 136
@@ -2222,12 +2052,14 @@ Wang, Yuh-Rau, Wei-Hung Lin, and Ling Yang. “An intelligent watermarking metho
 - 离散小波变换 (DWT), 9, 27, 37, 84, 110
 
 ## G
+
 - 增益 (Gain), 10, 32, 33, 39, 71, 85, 117, 143–144, 146–149, 151, 152
 - 高斯混合模型 (GMM), 28
 - 遗传算法 (Genetic Algorithm), 70, 73–74, 76, 80, 100–104, 141
 - 几何的 (Geometrical), 17, 66
 
 ## H
+
 - 硬件 (Hardware), 12, 14, 23, 57, 107–133
 - 硬件描述语言 (HDL), 109
 - 医院信息系统 (HIS), 136
@@ -2236,6 +2068,7 @@ Wang, Yuh-Rau, Wei-Hung Lin, and Ling Yang. “An intelligent watermarking metho
 - 海森堡矩阵分解 (Hessenberg Matrix Factorization), 41–42
 
 ## F
+
 - 阳性率 (False Positive Rate), 14, 18, 56
 - 特征提取 (Feature Extraction), 28, 46
 - 可编程门阵列 (FPGAs), 108, 109
@@ -2247,6 +2080,7 @@ Wang, Yuh-Rau, Wei-Hung Lin, and Ling Yang. “An intelligent watermarking metho
 - 模糊逻辑 (Fuzzy Logic), 45, 49, 54, 65, 71, 103
 
 ## I
+
 - 不可见性 (Imperceptibility), 13–16, 27, 33–34, 37–38, 44, 46, 71–77, 78, 81, 90, 99, 117, 126, 138, 139, 143–144, 147, 152
 - 工业 (Industrial), 64, 66, 139
 - 完整性 (Integrity), 3–4, 7, 14, 22, 25, 131–151, 154
@@ -2255,12 +2089,14 @@ Wang, Yuh-Rau, Wei-Hung Lin, and Ling Yang. “An intelligent watermarking metho
 - 隐藏 (Invisible), 7, 11–13, 19, 38–49, 55, 71, 118–125, 128, 130, 135, 144, 147
 
 ## L
+
 - 最低位 (LSB), 7, 27, 29, 116
 - 法律 (Legal), 14, 18
 - 线性 (Linear), 8, 34, 39, 44, 46, 72, 117
 - 查找表 (LUTs), 112
 
 ## M
+
 - 机器学习 (ML), 7, 9–10, 19, 26, 44
 - MATLAB®, 110–111, 113–118, 120, 122–125, 125–131
 - 均方误差 (MSE), 15
@@ -2268,6 +2104,7 @@ Wang, Yuh-Rau, Wei-Hung Lin, and Ling Yang. “An intelligent watermarking metho
 - 乘性水印 (Multiplicative Watermarking), 140
 
 ## N
+
 - 神经网络 (Neural Networks), 19, 44–45, 49, 61, 63–68, 71, 99, 102, 104
 - 可见性函数 (NVF), 15, 49
 - 非线性 (Nonlinear), 8, 45–47, 72
@@ -2275,6 +2112,7 @@ Wang, Yuh-Rau, Wei-Hung Lin, and Ling Yang. “An intelligent watermarking metho
 - 归一化相关 (NC), 15, 81, 148
 
 ## O
+
 - 优 (Optimal), 19
 - 优 (Optimal), 19
 - 优 (Optimal), 45, 49, 50, 66, 71, 72, 74, 76, 77, 79, 80, 81, 83, 84, 86, 90, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 117, 121, 126, 128, 131, 132, 133, 134, 137, 138, 139, 140, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156
@@ -2282,6 +2120,7 @@ Wang, Yuh-Rau, Wei-Hung Lin, and Ling Yang. “An intelligent watermarking metho
 - 所有者 (Owner), 14
 
 ## P
+
 - 粒子群优化 (Particle Swarm Optimization), 74, 83, 88, 95, 100–103, 155
 - 峰值噪比 (PSNR), 6, 29, 108, 114
 - 影像存档和通信系统 (PACS), 136
@@ -2290,9 +2129,11 @@ Wang, Yuh-Rau, Wei-Hung Lin, and Ling Yang. “An intelligent watermarking metho
 - 伪随机噪声 (NP), 17
 
 ## Q
+
 - QR 分解, 41–42, 59, 62–63, 65, 67, 68
 
 ## R
+
 - 径基函数 (RBF), 45, 49
 - 线性单元单元 (ReLU), 46
 - 兴趣区域 (ROI), 137, 138
@@ -2305,6 +2146,7 @@ Wang, Yuh-Rau, Wei-Hung Lin, and Ling Yang. “An intelligent watermarking metho
 - 旋转、缩放和平移 (RST), 33, 49, 51
 
 ## S
+
 - Schur 分解 (Schur Decomposition), 41–42, 59, 62–63, 65, 67, 68
 - 敏感性 (Sensitivity), 56
 - 模拟火 (Simulated Annealing), 73, 74, 97, 98, 101–105
@@ -2320,6 +2162,7 @@ Wang, Yuh-Rau, Wei-Hung Lin, and Ling Yang. “An intelligent watermarking metho
 - 支持向量回归 (SVR), 45, 71
 
 ## T
+
 - 禁忌搜索 (Tabu Search), 74, 98, 101–105
 - 篡改检测 (Tampering Detection), 65
 - 远程医疗 (Telemedicine), 67, 133–134, 136, 142
@@ -2327,17 +2170,20 @@ Wang, Yuh-Rau, Wei-Hung Lin, and Ling Yang. “An intelligent watermarking metho
 - 事务跟踪 (Transaction Tracking), 26, 134
 
 ## U
+
 - 通用异步收发器 (UART), 115
 - 通用多媒体访问 (UMA), 2
 
 ## V
+
 - Verilog HDL (Verilog), 109
 - 极高速集成电路 HDL (VHDL), 109, 118, 121–123
 - Virtex, 113, 116, 118–120, 122–123
 
 ## W
+
 - 加权峰值噪比 (WPSNR), 15
 
 ## X
-- Xilinx, 108, 110, 113–114, 118–125
 
+- Xilinx, 108, 110, 113–114, 118–125

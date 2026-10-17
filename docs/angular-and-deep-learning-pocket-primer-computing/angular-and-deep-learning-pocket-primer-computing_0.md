@@ -1,89 +1,5 @@
+
 # Angular 与深度学习入门指南
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 前言
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## 前言
 
@@ -97,7 +13,7 @@
 
 前三章涵盖了基础知识。第四章介绍了 `MLPs`。第五章讨论了 `RNNs`、`LSTMs`、`GRUs`、自动编码器 (`autoencoders`) 和 `GANs`。第六章介绍了 `TensorFlow.js`。
 
-### 本本书需要多少 Keras 知识？
+### 本书需要多少 Keras 知识？
 
 答案取决于你计划深度参与深度学习。接触 `Keras` 有帮助。
 
@@ -135,7 +51,6 @@ Ivy Workspace:
 
 | 包 | 版本 |
 | --- | --- |
-| \---------------------------------------------------- |
 | @angular-devkit/architect | 0.1001.0-next.5 |
 | @angular-devkit/core | 10.1.0-next.5 |
 | @angular-devkit/schematics | 10.1.0-next.5 |
@@ -143,17 +58,13 @@ Ivy Workspace:
 | @schematics/update | 0.1001.0-next.5 |
 | rxjs | 6.6.2 |
 
-
-
-
-
 你可能拥有不同版本的 Angular CLI 和 `Node`，如果它们与上方显示的版本号接近，它们可能也能正常工作。
 
 另一个需要注意的点是：第 3 章中的几个代码示例是通过额外的手动调用 `npm` 创建的，这意味着这些目录中的 `package.json` 文件与默认的略有不同。因此，请勿将 `package.json` 从一个代码示例复制到另一个代码示例中。
 
-万一你用该文件的另一份副本覆盖了 `package.json`，那么那些涉及额外命令行调用的代码示例将在 `app.component.ts` 中包含以下注释，该注释已**加粗**显示以确保你注意到它：
+万一你用该文件的另一份副本覆盖了 `package.json`，那么那些涉及额外命令行调用的代码示例将在 `app.component.ts` 中包含以下注释，该注释已加粗显示以确保你注意到它：
 
-```
+```typescript
 // remember: npm install jquery --save
 ```
 
@@ -163,25 +74,25 @@ Ivy Workspace:
 
 在代码示例中运行 `npm install` 时可能出现如下潜在错误：
 
-```
+```text
 An unhandled exception occurred: Could not find module "@angular-devkit/build-angular"
 ```
 
 第一步涉及删除 `package-lock.json` 文件：
 
-```
+```bash
 rm package-lock.json
 ```
 
 第二步是将上述错误消息中列出的包（Angular 6 中引入）作为依赖安装，这涉及以下命令：
 
-```
+```bash
 npm install --save-dev @angular-devkit/build-angular
 ```
 
 第三步涉及标准的 `npm` 调用：
 
-```
+```bash
 npm install
 ```
 
@@ -205,7 +116,7 @@ npm install
 
 如果你是 Mac 用户，有三种方法。第一种方法是使用 Finder（访达）导航到 `Applications > Utilities`，然后双击 `Utilities` 应用程序。接下来，如果你已经有一个可用的终端，可以通过输入以下命令启动一个新的终端：
 
-```
+```bash
 open /Applications/Utilities/Terminal.app
 ```
 
@@ -223,7 +134,7 @@ Mac 用户的第二种方法是在已可见的终端中通过简单点击 `comma
 
 O. Campesato 2020 年 10 月
 
-第 1 章：Angular 快速介绍
+# 第 1 章：Angular 快速介绍
 
 本章提供了基于 Angular 应用程序的快速介绍。虽然许多代码示例非常直观，但请记住，你需要投入额外的时间和精力来更深入地理解 Angular。
 
@@ -233,17 +144,13 @@ O. Campesato 2020 年 10 月
 
 本章的第一部分讨论了 Angular 设计目标以及各种功能，如组件、模块和单向数据绑定。第二部分讨论了 Angular CLI，这是一个用于生成 Angular 应用程序的命令行工具。
 
-注意：*书中的 Angular 应用程序基于 Angular 10，使用 `ng` 命令行工具创建 Angular 应用程序。*
-
-
-
-
+> **注意：** 书中的 Angular 应用程序基于 Angular 10，使用 `ng` 命令行工具创建 Angular 应用程序。
 
 Angular 中的两个重要技术是 `TypeScript` 和 `RxJS`。用通俗的话说，`TypeScript` 可能会让你想起将 `JavaScript` 与经典的面向对象方法结合起来。如果你已经熟悉 `Java`，你可能会觉得使用 `TypeScript` 比 `JavaScript` 更加自在。
 
 `RxJS` 是基于 JavaScript 的 FRP（函数响应式编程），它支持许多中间操作符，例如 `filter()`、`map()`、`take()` 以及许多其他有用操作符。接下来的子章节包含关于 `TypeScript` 和 `RxJS` 的更多细节。
 
-# 学习 TypeScript
+## 学习 TypeScript
 
 强烈建议掌握 `TypeScript` 知识，同时需要具备 `NodeJS`（即 `npm` 工具）和 `ES6` 的基础能力。Angular 应用程序是用 `node v6.14.7` 和 `npm 12.0.0` 创建的，但稍低的版本也可能正常工作。你可以在终端中使用以下命令来确定你机器上的版本：
 
@@ -254,13 +161,13 @@ npm -v
 
 如有必要，请访问 `NodeJS` 主页下载较新版本的 `node` 可执行文件。如果你没有接触过 `Node`，可以找到许多在线教程解释如何使用基础的 `npm` 命令。
 
-代码示例还涉及 `ES6` 和 `TypeScript` 的基本概念，它们各自的主页包含大量帮助你入门的信息。特别是要学习 `classes` 和模板字符串（template strings）。正如你你在后续章节中看到的，Angular 应用程序高度依赖动态模板，这通常涉及到变量的插值（通过 `{{}}` 语法）。此外，以下网站提供了一个在线“游乐场”，以及关于 `TypeScript` 文档和代码示例的链接：
+代码示例还涉及 `ES6` 和 `TypeScript` 的基本概念，它们各自的主页包含大量帮助你入门的信息。特别是要学习 `classes` 和模板字符串（template strings）。正如你在后续章节中看到的，Angular 应用程序高度依赖动态模板，这通常涉及到变量的插值（通过 `{{}}` 语法）。此外，以下网站提供了一个在线“游乐场”，以及关于 `TypeScript` 文档和代码示例的链接：
 
-*https://www.typescriptlang.org/play/*
+* <https://www.typescriptlang.org/play/>
 
 Angular 利用了 `ES6` 特性（如 `components` 和 `classes`）以及属于 `TypeScript` 的特性（如注解和类型系统）。`TypeScript` 优于 `ES6`，因为 `TypeScript` 支持 `ES6` 的所有特性，并且 `TypeScript` 提供了一个可选的类型推断系统，可以为你捕捉许多错误。
 
-# 学习 RxJS 和 Observable（观察者）
+## 学习 RxJS 和 Observable（观察者）
 
 如果你用过 `ES6`，那么你可能已经熟悉 `filter()` 函数（对于 Angular `Pipes` 非常有用）以及 `map()` 函数（在 Angular 的早期版本中经常与 `Observables` 和 `HTTP` 请求一起使用）。其他函数如 `merge()` 和 `flatten()` 也很有用，你可以根据需要学习这些以及其他函数。
 
@@ -268,19 +175,19 @@ Angular 利用了 `ES6` 特性（如 `components` 和 `classes`）以及属于 `
 
 不同的语言支持不同的方法作为终端操作符，在 `RxJS` 中，`subscribe()` 方法就是一个终端操作符。`RxJS Observables` 比 `Promises` 更强大，对后者的了解将简化你过渡到 `RxJS Observables` 的过程。在你学习了 RxJS 的基本功能后，以下（更高级的）包含了关于 `RxJS unsubscribe()` 方法非常有价值的信息：
 
-*[`blog.bitsrc.io/6-ways-to-unsubscribe-from-observables-in-­angular-ab912819a78f`](https://blog.bitsrc.io/6-ways-to-unsubscribe-from-observables-in-­angular-ab912819a78f)*
+* <https://blog.bitsrc.io/6-ways-to-unsubscribe-from-observables-in-angular-ab912819a78f>
 
-## Promises 与 Observables
+### Promises 与 Observables
 
 第 2 和第 3 章包含了涉及 `Observables` 的 Angular 应用程序示例。虽然你可以使用 `Observables`，但也可以使用 `Promises`。
 
-# Angular 概视角
+## Angular 概视角
 
 Angular 设计为一个支持服务端渲染的平台。本书的重点是浏览器中的 Angular 应用程序。Angular 支持最新版本的 Chrome 和 Firefox，以及 Edge、iOS 和 Safari。Angular 框架支持的浏览器列表如下：
 
-*https://angular.io/guide/browser-support*
+* <https://angular.io/guide/browser-support>
 
-# 特性简介
+## 特性简介
 
 Angular 采用基于组件的架构，组件以树形结构组织。Angular 还支持强大的技术，你将学习这些技术以精通编写应用程序。这里列了一些重要特性：
 
@@ -289,7 +196,7 @@ Angular 采用基于组件的架构，组件以树形结构组织。Angular 还�
 *   变更检测
 *   样式封装
 
-# Angular 中的单向数据绑定
+## Angular 中的单向数据绑定
 
 Angular 将声明式单向绑定作为默认行为（但如果你愿意，也可以切换到双向绑定）。单向绑定充当单向变化传播，可以提高性能并减少代码复杂度。Angular 还支持有状态、响应式和不可变模型。
 
@@ -297,49 +204,47 @@ Angular 应用程序涉及定义一个顶层（根）模块，该模块引用一
 
 `template` 属性包含 HTML 和自定义标记的混合，你可以将其放在单独的文件中然后通过 `templateUrl` 属性引用该文件。此外，`Component` 之后紧跟着 TypeScript 类定义，它包含了“支撑代码”，这些代码与 `template` 属性中出现的组件变量相关。
 
-注意：`templateUrl` 属性和 `styleUrls` 属性指的是文件，而 `template` 属性和 `styles` 属性指的是内联代码。
-
-
-
-
+> **注意：** `templateUrl` 属性和 `styleUrls` 属性指的是文件，而 `template` 属性和 `styles` 属性指的是内联代码。
 
 简而言之，Angular Material 现在提供了新的日期范围选择器，并对其他功能进行了相对微小的更改。`Ivy` 渲染器在提高性能和缩小应用体积方面提供了改进。
 
 `Angular 10` 于 2020 年 6 月发布，支持 `TypeScript 3.9`。由于 `TypeScript 4.0` 已于 2020 年 8 月发布，`Angular 11` 可能会支持该版本（或更新的版本）。如果你感兴趣，可以在这里了解 `TypeScript 4.0`：
 
-*[`devblogs.microsoft.com/typescript/announcing-typescript-4-0/`](https://devblogs.microsoft.com/typescript/announcing-typescript-4-0/)*
+* <https://devblogs.microsoft.com/typescript/announcing-typescript-4-0/>
 
-## Angular 10 与严格模式
+### Angular 10 与严格模式
 
-### `--strict` 选项
+#### `--strict` 选项
+
 `Angular 10` 的另一个重要变化是支持 `ng` 命令行工具的 `--strict` 选项，它可以在你的自定义代码中执行更严格的类型检查。例如，以下代码在没有 `--strict` 选项的情况下编译编译：
 
-```
+```typescript
 employees = [];
 ```
 
 然而，如果你在创建 Angular 应用时使用了 `--strict` 选项，那么就需要下面的代码片段，因为之前的片段是无效的：
 
-```
-employees : any;
+```typescript
+employees: any;
 ```
 
 这些（以及其他）差异已在本章中使用 `--strict` 选项创建的 `Angular 10` 应用中注明。请记住，其他章节中的 `Angular 10` 应用都是在没有 `--strict` 选项的情况下创建的。
 
 ### Angular 10 的 Node 和 npm 工具
+
 如果你的机器上没有 `node` 工具（它也包含 `npm` 工具），请从此链接下载发行版：
 
-*[`www.npmjs.com/get-npm`](https://www.npmjs.com/get-npm)*
+* <https://www.npmjs.com/get-npm>
 
 **重要：** `Angular 10` 要求 `node` 可执行文件的版本号在以下范围内内（该范围在 `package.json` 中指定）：
 
-```
+```json
 "node": ">=10.9.0 <13.0.0"
 ```
 
 书中的所有 Angular 应用都是使用以下版本的 `npm` 和 `node` 工具创建的（`ng` 的版本将在本章稍后显示）：
 
-```
+```bash
 $ npm --version
 6.14.7
 
@@ -355,20 +260,23 @@ v12.0.0
 
 Angular 提供了多种类型的依赖项，例如指令（directives）和管道（pipes）。`自定义指令`本质上是定义组件的 TypeScript 文件内容。因此，一个自定义指令由 `import` 语句、`Component` 装饰器和一个导出的 TypeScript 类组成。
 
-Angular 提供了 `内置指令`。`内置指令`包括 `if`、`ngFor`、`switchCase`。管道包括 `asyncPipe`、`datePipe`、`currencyPipe`、`decimalPipe`、`jsonPipe`、`numberPipe`、`percentPipe`、`relativeTimePipe`、`slicePipe`、`lowercasePipe`、`uppercasePipe`、`titlecasePipe`、`timeAgoPipe`、`exponentPipe`、`multiplyPipe`、`dividePipe`、`minPipe`、`maxPipe`、`asyncPipe`、`datePipe`、`currencyPipe`、`decimalPipe`、`jsonPipe`、`numberPipe`、`percentPipe`、`relativeTimePipe`、`slicePipe`、`lowercasePipe`、`uppercasePipe`、`titlecasePipe`、`timeAgoPipe`、`exponentPipe`、`multiplyPipe`、`dividePipe`、`minPipe`、`maxPipe`。（等待，此处此处重复了，保留了核心逻辑）。
+
+
+# Angular 内置指令与管道
+
+Angular 提供了 `内置指令`。`内置指令`包括 `if`、`ngFor`、`switchCase`。管道包括 `asyncPipe`、`datePipe`、`currencyPipe`、`decimalPipe`、`jsonPipe`、`numberPipe`、`percentPipe`、`relativeTimePipe`、`slicePipe`、`lowercasePipe`、`uppercasePipe`、`titlecasePipe`、`timeAgoPipe`、`exponentPipe`、`multiplyPipe`、`dividePipe`、`minPipe`、`maxPipe`。
 
 `自定义指令`本质上是定义组件的 TypeScript 文件内容。因此，一个自定义指令由 `import` 语句、`Component` 装饰器和一个导出的 TypeScript 类组成。
 
-Angular 提供了 `内置指令`。`内置指令`包括 `if`、`ngFor`、`switchCase`。管道包括 `asyncPipe`、`datePipe` 等等。
-
-## Angular CLI
+# Angular CLI
 
 `Angular CLI` 是一个用于创建、构建和测试 Angular 应用的命令行工具。
 
-### 安装 Angular CLI
+## 安装 Angular CLI
+
 如果你的机器上没有 `ng` 工具，请从这里下载最新版本：
 
-*[`angular.io/cli`](https://angular.io/cli)*
+* [`angular.io/cli`](https://angular.io/cli)
 
 如果你的机器上已经有了 `ng` 工具，可以通过以下方式升级到最新版本：
 
@@ -388,9 +296,8 @@ sudo npm uninstall -g angular-cli own
 sudo npm install -g @angular/cli
 ```
 
-`Angular CLI` 是一个用于创建、构建和测试 Angular 应用的命令行工具。
+## 验证安装
 
-### 验证安装
 要找到 `ng` 可执行文件的位置，请使用：
 
 ```
@@ -422,7 +329,6 @@ Workspace:
 
 | Package | Version |
 | --- | --- |
-| -------------------------------------- |
 | @angular-devkit/architect | 0.1001.0-next.5 |
 | @angular-devkit/core | 10.1.0-next.5 |
 | @angular-devkit/schematics | 10.1.0-next.5 |
@@ -431,9 +337,7 @@ Workspace:
 | rxjs | 6.6.2 |
 ```
 
-
-
-
+### 常用命令
 
 * `deploy`: 为指定项目或工作区中的默认项目调用部署构建器
 * `config`: 在工作区的 `angular.json` 文件中检索或设置 Angular 配置值
@@ -460,7 +364,7 @@ Workspace:
 ng new app-root --prefix abc
 ```
 
-注意：*通过 `ng` 创建的 Angular 应用包含 `src/app` 目录。*
+> **注意**：通过 `ng` 创建的 Angular 应用包含 `src/app` 目录。
 
 关于升级 Angular CLI 信息请访问：[`github.com/angular/cli`](https://github.com/angular/cli)
 
@@ -484,15 +388,15 @@ ng new HelloWorld
 ng new --strict HelloWorld
 ```
 
-上述命令会在 Angular 应用中产生更严格的类型检查，你将在本章稍后看到。如果你在指定命令行选项时遇到困难，可以回到创建创建 Angular 应用的方式。
+上述命令会在 Angular 应用中产生更严格的类型检查，你将在本章稍后看到。如果你在指定命令行选项时遇到困难，可以回到创建 Angular 应用的方式。
 
-注意：*本章中通过 `ng` 工具创建的前三个 Angular 应用指定了 `--strict` 参数。*
+> **注意**：本章中通过 `ng` 工具创建的前三个 Angular 应用指定了 `--strict` 参数。
 
 # Angular 应用程序结构
 
 Angular CLI 提供了除了你的自定义代码之外的一切。其次，Angular CLI 允许你生成新的组件、路由器等，这在启动应用程序中是可以实现的。第三，Angular CLI 纯基于 TypeScript，生成的应用程序包含了 `tsconfig.json`、`tslint.json`、`typedoc.json` 和 `typings.json` JSON 文件。
 
-最相关的文件是 `package.json` 和 `angular.json`，而创建自定义代码最重要的目录是 `src` 目录（这些在前面的列表中已加粗）。通常，你不需要修改这两个文件中的任何一个。正如你在本章后面看到的，当你处理基于 D3 的图形时，需要从命令行执行额外步骤。
+最相关的文件是 `package.json` 和 `angular.json`，而创建自定义代码最重要的目录是 `src` 目录。通常，你不需要修改这两个文件中的任何一个。正如你在本章后面看到的，当你处理基于 D3 的图形时，需要从命令行执行额外步骤。
 
 以下是 HelloWorld Angular 应用程序根目录的文件和目录列表：
 
@@ -515,24 +419,13 @@ Angular CLI 提供了除了你的自定义代码之外的一切。其次，Angul
 
 * `app`
 * `assets`
-
-
-
-
-
-`environments`
-
-`favicon.ico`
-
-`index.html`
-
-`main.ts`
-
-`polyfills.ts`
-
-`styles.css`
-
-`test.ts`
+* `environments`
+* `favicon.ico`
+* `index.html`
+* `main.ts`
+* `polyfills.ts`
+* `styles.css`
+* `test.ts`
 
 注意，上述列表包含了 TypeScript 文件 `main.ts`，它将在本章后面进行讨论。
 
@@ -540,17 +433,12 @@ Angular CLI 提供了除了你的自定义代码之外的一切。其次，Angul
 
 以下列表显示了 `src/app` 子目录的内容：
 
-`app.component.css`
-
-`app.component.html`
-
-`app.component.spec.ts`
-
-`app.component.ts`
-
-`app.module.ts`
-
-`package.json`
+* `app.component.css`
+* `app.component.html`
+* `app.component.spec.ts`
+* `app.component.ts`
+* `app.module.ts`
+* `package.json`
 
 除非另有说明，否则你可以删除书中每个代码示例中 `app.component.html` 的内容。`app.component.ts` 文件包含特定于你的 Angular 应用的 TypeScript 代码，而 `app.module.ts` 文件指定了 Angular 应用中的任何依赖项，这些依赖项可以包括 Angular 模块以及自定义模块（你将在第 3 章中看到示例）。
 
@@ -566,7 +454,7 @@ Angular CLI 提供了除了你的自定义代码之外的一切。其次，Angul
 
 `Listing 1.1` 显示了 `src` 子目录（而非 `src/app` 子目录）中的 `main.ts` 内容，它导入并引导了顶层 Angular 模块 `AppModule`。Angular 应用具有基于组件的架构，这看起来可能比其他框架更复杂。然而，这种架构允许开发团队并行处理复杂应用程序的不同部分。
 
-LISTING 1.1: main.ts
+**Listing 1.1: main.ts**
 
 ```typescript
 import { enableProdMode } from '@angular/core';
@@ -595,7 +483,7 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 
 `Listing 1.2` 显示了 `app.component.ts` 的内容，它说明了 Angular 应用的典型属性。
 
-LISTING 1.2: app.component.ts
+**Listing 1.2: app.component.ts**
 
 ```typescript
 import { Component } from '@angular/core';
@@ -621,7 +509,7 @@ export class AppComponent {
 
 `Listing 1.3` 显示了 `app.module.ts` 的内容，显示了 Angular 应用中各种模块的依赖项。
 
-LISTING 1.3: app.module.ts
+**Listing 1.3: app.module.ts**
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
@@ -645,7 +533,7 @@ export class AppModule { }
 
 `Listing 1.3` 包含了导入 `BrowserModule` 和 `NgModule` 的导入语句。第三个导入语句导入了上一节 `Listing 1.2` 所示的顶层组件类 `AppComponent`。
 
-注意：Angular 依赖始终包含“@符号”，而自定义依赖项指定相对路径。
+> **注意**：Angular 依赖始终包含“@符号”，而自定义依赖项指定相对路径。
 
 接下来，`@NgModule` 装饰器包含一个带有各种属性的对象（将在下一节讨论）。这些属性指定了 `Listing 1.3` 最后一行代码导出的 `AppModule` 类的元数据。`AppModule` 中的元数据涉及以下数组属性：`imports`、`providers`、`declarations`、`exports` 和 `bootstrap`。
 
@@ -653,11 +541,13 @@ export class AppModule { }
 
 现在来看 HTML 页面 `index.html` 的内容，它包含了我们 Angular 应用的主页面。
 
+
+
 ### index.html 页面
 
 `Listing 1.4` 显示了通过命令行 `ng` 工具生成的全新 Angular 应用的 `index.html` 内容。
 
-LISTING 1.4: index.html
+**LISTING 1.4: index.html**
 
 ```html
 <!doctype html>
@@ -675,31 +565,27 @@ LISTING 1.4: index.html
 </html>
 ```
 
+`Listing 1.4` 非常极简：只有自定义的 `<app-root>` 元素（在 `app.component.ts` 的 `selector` 属性中指定）能让你看出此网页是 Angular 应用程序的一部分。
 
+> **注意**：`Angular CLI` 在项目“构建”期间会自动在 `index.html` 中插入 JavaScript 依赖项。
 
-
-
-Listing 1.4 非常极简：只有自定义的 `<app-root>` 元素（在 `app.component.ts` 的 `selector` 属性中指定）能让你看出此网页是 Angular 应用程序的一部分。
-
-注意 *Angular CLI 在项目“构建”期间会自动在 `index.html` 中插入 JavaScript 依赖项。*
-
-在我们深入研究 Angular 应用程序中的 TypeScript 文件之前，让我们快速绕一下，了解 Angular 应用程序中 import 语句是如何工作的。如果你已经熟悉 Angular 中的 import 和 export 语句，可以随时跳过下一节。
+在我们深入研究 Angular 应用程序中的 TypeScript 文件之前，让我们快速绕一下，了解 Angular 应用程序中 `import` 语句是如何工作的。如果你已经熟悉 Angular 中的 `import` 和 `export` 语句，可以随时跳过下一节。
 
 ### 导出和导入包与类（可选）
 
-在 TypeScript 文件中导入的每个 TypeScript 类都必须在定义该类的 TypeScript 文件中被导出。你将看到许多 import 和 export 语句的示例：事实上，书中的每一个 Angular 应用程序都是如此。
+在 TypeScript 文件中导入的每个 TypeScript 类都必须在定义该类的 TypeScript 文件中被导出。你将看到许多 `import` 和 `export` 语句的示例：事实上，书中的每一个 Angular 应用程序都是如此。
 
-import 语句有两种常见类型：一种类型涉及从 Angular 模块导入包，另一种类型涉及导入自定义类（由你编写的类）。以下是这两种类型的语法：
+`import` 语句有两种常见类型：一种类型涉及从 Angular 模块导入包，另一种类型涉及导入自定义类（由你编写的类）。以下是这两种类型的语法：
 
-```
+```typescript
 import {some-package-name} from 'some-angular-module';
 
 import {some-class } from 'my-custom-class';
 ```
 
-以下是两种类型 import 语句的示例：
+以下是两种类型 `import` 语句的示例：
 
-```
+```typescript
 import { NgModule } from '@angular/core';
 
 import {EmpComponent} from './emp.component';
@@ -707,7 +593,7 @@ import {EmpComponent} from './emp.component';
 
 在前面的代码段中，`NgModule` 包是从位于 `node_modules` 目录下的 `@angular/core` 模块导入的。`EmpComponent` 类是在 TypeScript 文件 `emp.component.ts` 中定义并导出的自定义类。
 
-在第二个 import 语句中，当从 TypeScript 文件导入自定义类时，需要 `./` 前缀：注意省略了 `.ts` 后缀。
+在第二个 `import` 语句中，当从 TypeScript 文件导入自定义类时，需要 `./` 前缀：注意省略了 `.ts` 后缀。
 
 ### 在 Angular 中使用组件
 
@@ -717,7 +603,7 @@ import {EmpComponent} from './emp.component';
 
 Angular 组件通常是 `@Component` 装饰器和类定义的组合，该类可以可选包含一个构造函数。一个 `@Component` 装饰器的简单示例在此：
 
-```
+```typescript
 import { Component } from '@angular/core';
 
 import {EmpComponent} from './emp/emp.component';
@@ -733,7 +619,7 @@ import {EmpComponent} from './emp/emp.component';
 
 `selector` 属性是强制的，它指定了作为 Angular 应用程序“根”的 HTML 元素（无论是现有元素还是自定义元素）。
 
-接下来 `template` 属性（或 `templateUrl` 属性）是强制的，它包含了标记、插值变量和 TypeScript 代码的混合。一个重要的细节：当 `template` 属性的定义跨越多行时，需要“反引号”。`directives` 属性是一个可选属性，指定了一个被视为嵌套组件的组件数组。在这个示例中，`directives` 属性指定了组件 `EmpComponent`，它在代码块开头附近也通过 import 语句导入了。注意 import 语句不包含“@”符号，这意味着 `EmpComponent` 是定义在文件 `emp/emp.component.ts` 中的自定义组件。
+接下来 `template` 属性（或 `templateUrl` 属性）是强制的，它包含了标记、插值变量和 TypeScript 代码的混合。一个重要的细节：当 `template` 属性的定义跨越多行时，需要“反引号”。`directives` 属性是一个可选属性，指定了一个被视为嵌套组件的组件数组。在这个示例中，`directives` 属性指定了组件 `EmpComponent`，它在代码块开头附近也通过 `import` 语句导入了。注意 `import` 语句不包含“@”符号，这意味着 `EmpComponent` 是定义在文件 `emp/emp.component.ts` 中的自定义组件。
 
 #### Angular 中的有状态组件与无状态组件
 
@@ -775,7 +661,7 @@ Angular 为属性和属性引入了方括号 `[]` 记法，以及用于处理事
 <my-directive foo="{{something}}"></my-directive>
 ```
 
-对应的 Angular 代码（不需要插值）在这里
+对应的 Angular 代码（不需要插值）在这里：
 
 ```html
 <my-directive [foo]="something"></my-directive>
@@ -812,10 +698,6 @@ Angular 应用程序具有按照定义顺序执行的生命周期方法。因此
 完整的 Angular 生命周期事件集在这里：
 
 [`angular.io/docs/ts/latest/guide/lifecycle-hooks.html`](https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html)
-
-
-
-
 
 将辅助文件中的 `LifeCycle` 目录复制到方便的位置。列表 1.5 显示了 `app.component.ts` 的内容，它阐述了某些 Angular 生命周期周期方法被调用的顺序。
 
@@ -957,20 +839,23 @@ export class AppComponent {
 启动 Angular 应用并在浏览器会话中导航到 `localhost:4200`。当显示名称列表时，将鼠标缓慢移动到每个名称上并观察它们如何改变颜色。文本显示如下，但你需要启动程序：
 
 Employee Information
-*   Jane Jones lives in San Francisco
-*   John Smith lives in New York
-*   Dave Stone lives in Seattle
-*   Sara Edson lives in Chicago
+
+- Jane Jones lives in San Francisco
+- John Smith lives in New York
+- Dave Stone lives in Seattle
+- Sara Edson lives in Chicago
 
 通过使用 Angular 功能而不是 CSS3 功能，本节通过实现动画效果增强了之前的代码。
 
-通过“Angular 方式”动画效果
+### 通过“Angular 方式”动画效果
 
 与其使用 CSS3 来实现动画效果，你也可以通过 Angular 功能来实现，本节演示了这一点。
 
 将辅助文件中的 `Animation` 目录复制到方便的位置。列表 1.7 显示了 `app.component.ts` 的内容，它演示了当用户鼠标悬停在每个 `<li>` 元素上时，如何移动列表项的位置。
 
 ### 列表 1.7: app.component.ts
+
+
 
 ```typescript
 import {Component, Input} from '@angular/core';
@@ -1025,15 +910,11 @@ export class AppComponent {
 }
 ```
 
-列表 1.7 包含了对 列表 1.6 代码的五处修改。具体而言，标记为 `part #1` 的部分是新的导入语句。标记为 `part #2` 的部分是新添加的 `Emp` 类。加粗部分（未标记，但是 `part #4`）在 `ngFor` 元素中实际上是将 `mousemove` 事件绑定到了 `Emp` 类的 `toggleState()` 方法。最后，标记为 `part #5` 的部分是 `Emp` 对象的数组，它替换了原来的每个员工都用 JSON 字符串表示的数组。
-
-
-
-
+列表 1.7 包含了对列表 1.6 代码的五处修改。具体而言，标记为 `part #1` 的部分是新的导入语句。标记为 `part #2` 的部分是新添加的 `Emp` 类。加粗部分（未标记，但是 `part #4`）在 `ngFor` 元素中实际上是将 `mousemove` 事件绑定到了 `Emp` 类的 `toggleState()` 方法。最后，标记为 `part #5` 的部分是 `Emp` 对象的数组，它替换了原来的每个员工都用 JSON 字符串表示的数组。
 
 Listing 1.8 显示了 `app.module.ts` 的内容，它包含了两个额外的代码片段（**加粗显示**），你必须将它们添加到该文件的默认内容中。
 
-列表 1.8：app.module.ts
+### 列表 1.8：app.module.ts
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
@@ -1058,13 +939,13 @@ import { AppComponent } from './app.component';
 export class AppModule { }
 ```
 
-如果你没有在 Listing 1.8 中包含那两个代码片段（**加粗显示**），你将在将在启动此应用程序的浏览器会话台中看到以下错误消息：
+如果你没有在 Listing 1.8 中包含那两个代码片段（**加粗显示**），你将在启动此应用程序的浏览器会话台中看到以下错误消息：
 
 `ERROR: Found the synthetic property @empState. Please include either "BrowserAnimationsModule" or "NoopAnimationsModule" in your application.`
 
-注 *Listing 1.8 中**加粗显示**的两个代码片段对于 Angular 10 应用程序是必要的，但对于 Angular 8 应用程序并不是必需。*
+注：Listing 1.8 中**加粗显示**的两个代码片段对于 Angular 10 应用程序是必要的，但对于 Angular 8 应用程序并不是必需。
 
-通过 `ng serve` 从命令行启动此 Angular ，导航到 `localhost:4200`，然后将鼠标悬停在每个人的名字上并观察“淡入”效果。浏览器中的输出将如下所示：
+通过 `ng serve` 从命令行启动此 Angular 应用，导航到 `localhost:4200`，然后将鼠标悬停在每个人的名字上并观察“淡入”效果。浏览器中的输出将如下所示：
 
 Employee Information
 
@@ -1077,6 +958,7 @@ Employee Information
 
 现在打开浏览器（Chrome 或 Firefox）中的检查器，你将看到以下类型的输出：
 
+```
 Dave new state = active
 Dave new state = inactive
 John new state = active
@@ -1090,6 +972,7 @@ Dave new state = active
 Dave new state = inactive
 Sara new state = active
 Sara new state = inactive
+```
 
 # Angular 中的基础 SVG 示例
 
@@ -1097,7 +980,7 @@ Sara new state = inactive
 
 从配套文件中将 `SVGEllipse` 目录复制到方便的位置。Listing 1.9 显示了 `app.component.ts` 的内容，它引用了一个 Angular 自定义组件来渲染 SVG 椭圆。
 
-列表 1.9：app.component.ts
+### 列表 1.9：app.component.ts
 
 ```typescript
 import {Component} from '@angular/core';
@@ -1113,7 +996,7 @@ Listing 1.9 非常直观：代码定义了一个组件，其 `template` 属性�
 
 Listing 1.10 显示了 `MyEllipse.ts` 的内容，它包含了在 SVG 中渲染三个重叠椭圆的 SVG 代码。
 
-列表 1.10：MyEllipse.ts
+### 列表 1.10：MyEllipse.ts
 
 ```typescript
 import {Component} from '@angular/core';
@@ -1134,7 +1017,7 @@ Listing 1.10 同样直观：`template` 属性包含了带有 `width` 和 `height
 
 Listing 1.11 显示了带有新代码的 `app.module.ts` 内容。
 
-列表 1.11：app.module.ts
+### 列表 1.11：app.module.ts
 
 ```typescript
 import {Component} from '@angular/core';
@@ -1154,9 +1037,11 @@ export class AppModule { }
 Listing 1.11 包含了你在本章之前的示例中熟悉的通用代码，以及一个涉及 `MyEllipse` 的新 `import` 语句（**加粗显示**）。Listing 1.11 中的另一个修改是在 `declarations` 数组中包含了 `MyEllipse` 类（**加粗显示**）。
 
 ![images/Pg49]
+
 图 1.2 在 Angular 应用中渲染 SVG 椭圆
 
-按通常方式启动 Angular 应用。在浏览器会话中，你将看到三个彩色 SVG 椭圆，如图 1.2
+按通常方式启动 Angular 应用。在浏览器会话中，你将看到三个彩色 SVG 椭圆，如图 1.2 所示。
+
 * [`medium.com/@OlegVaraksin/how-to-proper-use-svg-gradients-in-angularjs-2-3241672ede-oa9z1`](https://medium.com/@OlegVaraksin/how-to-proper-use-svg-gradients-in-angularjs-2-3241672ede-oa9z1)
 
 # Angular 中检测鼠标位置
@@ -1165,7 +1050,7 @@ Listing 1.11 包含了你在本章之前的示例中熟悉的通用代码，以�
 
 从配套文件中将 `SVGEllipse` 目录复制到方便的位置。Listing 1.12 显示了 `app.component.ts` 的内容，它引用了一个 Angular 自定义组件来渲染 SVG 椭圆。
 
-列表 1.12：app.component.ts
+### 列表 1.12：app.component.ts
 
 ```typescript
 import {Component} from '@angular/core';
@@ -1181,7 +1066,7 @@ Listing 1.12 包含了 `template` 属性，该属性由一个 `<div>` 元素组�
 
 Listing 1.13 显示了 `mousemove.ts` 的内容，它展示了如何检测 `mousemove` 事件并显示当前鼠标位置的坐标。
 
-列表 1.13：mousemove.ts
+### 列表 1.13：mousemove.ts
 
 ```typescript
 import {Component} from '@angular/core';
@@ -1204,9 +1089,7 @@ Listing 1.13 包含了 `mouseMove()` 方法，其唯一参数 `event` 是一个�
 
 确保你更新了 `app.module.ts` 内容以包含 `MouseMove` 类，如 Listing 1.14 所示。
 
-
-
-
+### 列表 1.14：app.module.ts
 
 ```typescript
 import { MouseMove } from './mousemove';
@@ -1246,7 +1129,7 @@ Position x: 526 y: 259 mousemove.ts:12:13
 
 代码列表 1.15 显示了 `app.component.ts` 的内容，它说明了如何引用自定义 Angular 组件，该组件会在当前鼠标位置渲染一个 SVG `<ellipse>` 元素。
 
-*列表* 1.15: app.component.ts
+### 列表 1.15：app.component.ts
 
 ```typescript
 import {Component} from '@angular/core';
@@ -1262,7 +1145,9 @@ export class AppComponent {}
 
 代码列表 1.16 显示了 `MouseMove.ts` 的内容（此处原文为 ts），它说明了如何引用自定义 Angular 组件，该组件会在当前鼠标位置渲染一个 SVG `<ellipse>` 元素。
 
-*列表* 1.16: MouseMove.ts
+### 列表 1.16：MouseMove.ts
+
+
 
 ```typescript
 import {Component} from '@angular/core';
@@ -1302,7 +1187,7 @@ export class MouseMove {
 
 代码列表 1.17 显示了 `app.module.ts`。
 
-*列表* 1.17: app.module.ts
+### 列表 1.17: app.module.ts
 
 ```typescript
 import { BrowserModule } from '@angular/browser';
@@ -1316,10 +1201,6 @@ import { NgModule } from '@angular/core';
 })
 export class AppModule { }
 ```
-
-
-
-
 
 ```typescript
 template: `<svg id="svg" width="600" height="600" (click)="drawCharts($event)"></svg>`
@@ -1461,6 +1342,7 @@ for ( let i = 0; i < this.barCount; i++) {
 ```
 
 ![图片 60](img/Pg60)
+
 *图 1.4* Angular 应用中的 SVG 柱状图、散点图和折线图。
 
 ---
@@ -1473,7 +1355,7 @@ D3 是一个为 SVG 提供基于 JavaScript 抽象层的工具包。幸运的是
 
 将配套文件 `D3Anim` 复制到方便的位置。列表 1.21 显示了 `app.component.ts` 的内容，它说明了如何使用 D3 在 Angular 应用中渲染基础 SVG 图形。
 
-*列表 1.21：app.component.ts*
+### 列表 1.21：app.component.ts
 
 ```typescript
 import { Component, ViewChild, ElementRef } from '@angular/core';
@@ -1502,9 +1384,6 @@ export class AppComponent {
         .attr("cx", (width-100)*Math.random())
 ```
 
-
-
-
 ```javascript
 .attr("cy", (height-100)*Math.random())
 .attr("r", radius)
@@ -1527,6 +1406,8 @@ export class AppComponent {
 let svgElement = this.mysvg.nativeElement;
 ```
 
+
+
 注意各种 SVG 元素是如何动态创建的，以及它们的强制性属性（取决于涉及的 SVG 元素）如何通过 `attr()` 方法赋值，如下所示（以及之前的代码块）：
 
 ```javascript
@@ -1540,9 +1421,9 @@ svg.append("circle")
 
 在学习了 SVG 元素的强制属性名称后，您可以使用前面的语法创建并将此类元素附加到 DOM 中。
 
-列表 1.22 显示了 `app.module.ts` 的内容，其中新代码已**加粗**。
+列表 1.22 显示了 `app.module.ts` 的内容，其中新代码已加粗。
 
-*列表* 1.22：app.module.ts
+列表 1.22：app.module.ts
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
@@ -1570,7 +1451,7 @@ export class AppModule { }
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 ```
 
-前面的代码段允许我们添加任何在基于 D3 代码中创建的元素，而不产生错误消息。注意 列表 1.22 中的 `schemas` 属性也必须更新以包含 `NO_ERRORS_SCHEMA`。
+前面的代码段允许我们添加任何在基于 D3 代码中创建的元素，而不产生错误消息。注意列表 1.22 中的 `schemas` 属性也必须更新以包含 `NO_ERRORS_SCHEMA`。
 
 启动此 Angular 应用。然后，在新的浏览器会话中，点击屏幕上的任何地方来查看“级联”的动画圆形。
 
@@ -1620,7 +1501,7 @@ svg.append("circle")
 
 # 第 2 章：UI 控制、用户输入和管道
 
-### Angular 中的 ngFor 指令
+## Angular 中的 ngFor 指令
 
 本节的代码示例通过 `ngFor` 指令显示了一个硬编码的字符串列表。这个简单的代码示例是一个起点，你可以从这里创建更复杂的应用程序。
 
@@ -1647,12 +1528,12 @@ export class AppComponent {
 启动本节中的应用程序，你将在浏览器会话中看到以下输出：
 
 one
+
 two
+
 three
+
 four
-
-
-
 
 下一节包含一个涉及 `<button>` 元素的代码示例，这可能是 HTML 页面中最常见的 UI 控件之一。`app.component.ts` 文件包含了所需的自定义代码，而 `app.component.ts` 文件包含了不需要任何修改的自动生成代码。
 
@@ -1660,7 +1541,7 @@ four
 
 将伴随文件中的 `ButtonClick` 目录复制到方便的位置。本节中的 `app.component.ts` 文件包含了该 Angular 应用程序的所有自定义代码。列表 2.2 显示了 `app.component.ts` 的内容，它说明了如何渲染 `<button>` 元素，并通过显示用户在当前会话中点击 `<button>` 元素的次数来响应点击事件。
 
-**列表 2.2：app.component.ts**
+列表 2.2：app.component.ts
 
 ```typescript
 import { Component } from '@angular/core';
@@ -1684,9 +1565,9 @@ export class AppComponent {
 }
 ```
 
-列表 2.2 以一个导入语句开头，随后是所需的 `selector` 属性。接下来，`template` 属性包含一个响应点击事件的 `<button>` 元素和一个 `<p>` 元素，每当用户点击 `<button>` 元素时，其内容就会更新。(click) 项的值是 `clickMe()` 函数（定义在 `AppComponent` 类中），该函数增加并显示 `clickCount` 变量的值。
+列表 2.2 以一个导入语句开头，随后是所需的 `selector` 属性。接下来，`template` 属性包含一个响应点击事件的 `<button>` 元素和一个 `<p>` 元素，每当用户点击 `<button>` 元素时，其内容就会更新。`(click)` 项的值是 `clickMe()` 函数（定义在 `AppComponent` 类中），该函数增加并显示 `clickCount` 变量的值。
 
-此外，`styles` 属性为 `<button>` 元素指定了 `red` 的值。`styles` 属性是组件样式的示例，这意味着样式仅应用于给定组件的模板。实际上， Angular 通过生成唯一的属性来局部应用 CSS 而不是全局应用，这些属性在点击 Chrome 器的“元素”选项卡时是可见的。
+此外，`styles` 属性为 `<button>` 元素指定了 `red` 的值。`styles` 属性是组件样式的示例，这意味着样式仅应用于给定组件的模板。实际上，Angular 通过生成唯一的属性来局部应用 CSS 而不是全局应用，这些属性在点击 Chrome 器的“元素”选项卡时是可见的。
 
 关于 Angular 中组件样式的更多详细信息请参此处：
 
@@ -1722,7 +1603,7 @@ export class AppComponent {
 
 将伴随文件中的 `RadioButtons` 目录复制到方便的位置。列表 2.3 显示了 `app.component.ts` 的内容，它说明了如何渲染一组单选按钮，并跟踪用户点击的那个。
 
-**列表 2.3：app.component.ts**
+列表 2.3：app.component.ts
 
 ```typescript
 import {Component} from '@angular/core';
@@ -1759,7 +1640,7 @@ export class AppComponent {
 
 本节的代码示例显示了当用户点击按钮时更新字符串列表。将伴随文件中的 `AddList` 目录复制到方便的位置。列表 2.4 显示了 `app.component.ts` 的内容，它说明了当用户点击按钮时向数组追加字符串。
 
-**列表 2.4：app.component.ts**
+列表 2.4：app.component.ts
 
 ```typescript
 import {Component} from '@angular/core';
@@ -1807,9 +1688,6 @@ export class AppComponent {
 <button (click)="clickMe(fname.value)">ClickMe</button>
 ```
 
-
-
-
 `AppComponent` 组件中的 `clickMe()` 方法包含一个 `console.log()` 语句，用于显示用户输入的文本（可选的），然后将新文本追加到 `user` 数组中。Listing 2.4 中的最后部分由一个被注释掉的伪代码块组成，用于防止用户输入空字符串或重复字符串。此代码块涉及“纯”JavaScript，实际代码留给你进行练习。
 
 ![images](img/Pg74.jpg)
@@ -1822,7 +1700,7 @@ export class AppComponent {
 
 ## 在 Angular 中删除列表中的项
 
-本节通过在每个列表项旁边添加新的 `<button>` 元素来增强上一节的代码。现在，将配套文件中的 `DelListButton` 目录复制到方便的地方。Listing 2.5 显示了 `app.component.ts` 的内容，说明了当用户点击每个数组项相邻的按钮时，如何从项数组中删除单个元素。
+本节通过在每个列表项旁边添加新的 `<button>` 元素来增强上一节的代码。现在，将配套文件中的 `DelListButton` 目录复制到方便的地方。列表 2.5 显示了 `app.component.ts` 的内容，说明了当用户点击每个数组项相邻的按钮时，如何从项数组中删除单个元素。
 
 列表 2.5：app.component.ts
 
@@ -1872,9 +1750,11 @@ if(user is duplicate) {
 }
 ```
 
-Listing 2.5 包含一个 `ngFor` 指令，用于显示项“对”列表，每个“对”由一个 `<button>` 元素和一个 `users` 数组中定义的用户组成。
+列表 2.5 包含一个 `ngFor` 指令，用于显示项“对”列表，每个“对”由一个 `<button>` 元素和一个 `users` 数组中定义的用户组成。
 
-当用户点击任何 `<button>` 元素时，“关联”用户将作为参数传递给 `deleteMe()` 方法，该方法只需从 `AppComponent` 类的 `users` 数组中删除该用户。`deleteMe()` 的内容是用从数组中删除项的标准 JavaScript 代码写的。你可以将 Listing 2.5 中的伪代码块替换为你在 Listing 2.4 中添加的相同代码，以防止用户输入空字符串或重复字符串。
+当用户点击任何 `<button>` 元素时，“关联”用户将作为参数传递给 `deleteMe()` 方法，该方法只需从 `AppComponent` 类的 `users` 数组中删除该用户。`deleteMe()` 的内容是用从数组中删除项的标准 JavaScript 代码写的。你可以将列表 2.5 中的伪代码块替换为你在列表 2.4 中添加的相同代码，以防止用户输入空字符串或重复字符串。
+
+
 
 `app.module.ts` 文件包含不需要任何修改的自动生成代码，因此没有必要讨论其熟悉的内容。
 
@@ -1882,14 +1762,14 @@ Listing 2.5 包含一个 `ngFor` 指令，用于显示项“对”列表，每�
 
 本节的代码示例向你展示如何在 Angular 中创建一个子组件，你可以在 Angular 应用程序中引用它。将配套文件中的 `ChildComponent` 目录复制到方便的地方。Listing 2.6 显示了 `app.component.ts` 的内容，说明了如何在 Angular 应用程序中导入（由你编写的）自定义组件。
 
-列表 2.6：app.component.ts
+### 列表 2.6：app.component.ts
 
 ```typescript
 import {Component} from '@angular/core';
 
 @Component({
-selector: 'app-root',
-template: `<div>Goodbye<child-comp></child-comp>World!</div>`
+  selector: 'app-root',
+  template: `<div>Goodbye<child-comp></child-comp>World!</div>`
 })
 export class AppComponent {}
 ```
@@ -1898,25 +1778,25 @@ Listing 2.6 包含一个 `template` 属性，由 `<div>` 元素和一个嵌套�
 
 注意 Listing 2.6 没有导入 `ChildComponent` 类：该类在 Listing 2.8 的 `app.module.ts` 中导入（后文所示）。Listing 2.7 显示了子目录下的 `child.component.ts` 内容。
 
-列表 2.7：child.component.ts
+### 列表 2.7：child.component.ts
 
 ```typescript
 import {Component} from '@angular/core';
 
 @Component({
-selector: 'child-comp',
-template: `<div>Hello from ChildComponent!</div>`
+  selector: 'child-comp',
+  template: `<div>Hello from ChildComponent!</div>`
 })
-export class ChildComponent{}
+export class ChildComponent {}
 ```
 
 Listing 2.7 是直观的：`template` 属性指定了显示在 `<div>` 中 `<child-comp>` 元素内的字符串。
 
-注意 *这是本章第一个涉及修改 `app.module.ts` 文件自动生成内容的代码示例。*
+> **注意：** 这是本章第一个涉及修改 `app.module.ts` 文件自动生成内容的代码示例。
 
 Listing 2.8 显示了修改后的 `app.module.ts`，它必须从 `child.component.ts` 导入 `ChildComponent` 类，并在 `declarations` 属性中指定 `ChildComponent` 类。对 `app.module.ts` 默认内容的添加在 Listing 2.8 中已加粗显示。
 
-列表 2.8：app.module.ts
+### 列表 2.8：app.module.ts
 
 ```typescript
 import { NgModule } from '@angular/core';
@@ -1925,9 +1805,9 @@ import { AppComponent } from './app.component';
 import { ChildComponent } from './child.component';
 
 @NgModule({
-imports: [ BrowserModule ],
-declarations: [ AppComponent, ChildComponent ],
-bootstrap: [ AppComponent ]
+  imports: [ BrowserModule ],
+  declarations: [ AppComponent, ChildComponent ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
 ```
@@ -1938,31 +1818,31 @@ Listing 2.8 包含一个新的导入语句（加粗显示），从 TypeScript �
 
 本节包含一个代码示例，说明如何在构造函数中初始化变量，然后通过 `template` 属性中的插值引用该变量的值。现在，将配套文件中的 `StateComponent` 目录复制到方便的地方。Listing 2.9 显示了 `app.component.ts` 的内容，它显示了“员工”的各种属性。
 
-列表 2.9：app.component.ts
+### 列表 2.9：app.component.ts
 
 ```typescript
 import {Component} from '@angular/core';
 
 @Component({
-selector: 'app-root', 
-template: '<h3>My name is {{emp.fname}} {{emp.lname}}</h3>'
+  selector: 'app-root', 
+  template: '<h3>My name is {{emp.fname}} {{emp.lname}}</h3>'
 })
 export class AppComponent {
-public emp = {fname:'John',lname:'Smith',city:'San Francisco'};
-public name = 'John Smith'
+  public emp = {fname:'John',lname:'Smith',city:'San Francisco'};
+  public name = 'John Smith'
 
-constructor() {
-this.name = 'Jane Edwards'
-this.emp = {fname:'Sarah',lname:'Smith',city:'San Francisco'};
-}
+  constructor() {
+    this.name = 'Jane Edwards'
+    this.emp = {fname:'Sarah',lname:'Smith',city:'San Francisco'};
+  }
 }
 ```
 
 Listing 2.9 包含一个 `constructor()` 方法，用于初始化变量 `name` 以及字面量对象 `emp`。`emp` 变量在 `template` 属性中加粗显示，在 `AppComponent` 类内部的两个地方也是如此。
 
-***问题：*** 启动应用程序时将显示哪个名称？
-
-***答案：*** 在构造函数中赋值给 `emp` 变量的值。这种行为与 Java 等面向对象的语言是相同的。
+> **问题：** 启动应用程序时将显示哪个名称？
+>
+> **答案：** 在构造函数中赋值给 `emp` 变量的值。这种行为与 Java 等面向对象的语言是相同的。
 
 启动此应用程序，在 Web 浏览器中看到以下输出：
 
@@ -1970,11 +1850,7 @@ My name is Sarah Smith
 
 敏锐的读者会注意到我们如何在 `emp` 和 `name` 变量的声明中“滑入” TypeScript 关键字 `public`。其他可能的关键字包括 `private` 和 `protected`；这三个关键字的语义与在 Java 中相同。如果你不熟悉这些关键字，可以找到在线 TypeScript 教程来解释它们的用途。下一节将讨论另一种实用的 TypeScript 变量语法。
 
-
-
-
-
-# 构造函数中的私有参数：快捷方式
+### 构造函数中的私有参数：快捷方式
 
 TypeScript 提供了一种通过构造函数初始化私有变量的快捷写法。考虑以下 TypeScript 代码块：
 
@@ -1988,7 +1864,7 @@ class MyStuff {
 }
 ```
 
-这是一个更且等效的 TypeScript 代码块：
+这是一个更简洁且等效的 TypeScript 代码块：
 
 ```typescript
 class MyStuff {
@@ -2084,17 +1960,13 @@ export class AppComponent {
 
 现在，将配套文件中的 `TodoInput` 目录复制到方便的位置。列表 2.11 显示了 `app.component.ts` 的内容，它说明了如何使用 `*ngIf` 指令进行 Angular 应用中的条件逻辑（注：此处原文编号可能有误，根据上下文应为 2.11）。
 
-*(注：原文中多处引用 Listing 2.10 似乎是指 Listing 2.11，此处翻译保持原文链接，但根据逻辑理解)*
-
-
-
-
+> *(注：原文中多处引用 Listing 2.10 似乎是指 Listing 2.11，此处翻译保持原文链接，但根据逻辑理解)*
 
 Listing 2.14 包含一个 `todos` 数组，当用户点击根组件中的 `<button>` 元素时，该数组会更新新的待办事项。
 
 最后，更新 `app.module.ts` 的内容，以包含 Listing 2.15 中**加粗**显示的类。
 
-列表 2.15: app.module.ts
+### 列表 2.15: app.module.ts
 
 ```typescript
 import { NgModule } from '@angular/core';
@@ -2110,10 +1982,10 @@ import { TodoList } from './todolist';
 import { TodoService } from './todoservice';
 
 @NgModule({ 
-imports: [ BrowserModule ],
-providers: [ TodoService ],
-declarations: [ AppComponent, TodoInput, TodoList ],
-bootstrap: [ AppComponent ]
+  imports: [ BrowserModule ],
+  providers: [ TodoService ],
+  declarations: [ AppComponent, TodoInput, TodoList ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
 ```
@@ -2128,7 +2000,7 @@ export class AppModule { }
 
 将配套文件中的 `ClickItems` 目录复制到方便的位置。Listing 2.16 显示了 `app.component.ts` 的内容，它为项目列表中的每个项目声明了 `onClick()` 事件处理器。
 
-列表 2.16: app.component.ts
+### 列表 2.16: app.component.ts
 
 ```typescript
 import {Component} from '@angular/core';
@@ -2136,24 +2008,25 @@ import {Component} from '@angular/core';
 import {ClickItem} from './clickitem';
 
 @Component({
-selector: 'app-root',
-styles: [`li { display: inline; }`],
-template: `
-<div> 
-<ul> 
-<li><img (click)="onClick(100)" 
-width="100" height="100" src="src/sample1.png"></li
-<li><img (click)="onClick(200)"
-width="100" height="100" src="src/sample2.png"></li
-<li><img (click)="onClick(300)"
-width="100"height="100" src="src/sample3.png"></li>
-</ul>
-</div> 
-`
+  selector: 'app-root',
+  styles: [`li { display: inline; }`],
+  template: `
+  <div> 
+    <ul> 
+      <li><img (click)="onClick(100)" 
+        width="100" height="100" src="src/sample1.png"></li>
+      <li><img (click)="onClick(200)"
+        width="100" height="100" src="src/sample2.png"></li>
+      <li><img (click)="onClick(300)"
+        width="100" height="100" src="src/sample3.png"></li>
+    </ul>
+  </div> 
+  `
 })
 export class AppComponent {
-onClick(id) {
-console.log("you clicked me: "+id);
+  onClick(id) {
+    console.log("you clicked me: "+id);
+  }
 }
 ```
 
@@ -2161,15 +2034,17 @@ Listing 2.16 中的 `template` 属性显示了一个无序列表，其中每个�
 
 Listing 2.17 显示了 `clickitem.ts` 的内容，它为项目列表中的每个项目声明了 `onClick()` 事件处理器。
 
-列表 2.17: clickitem.ts
+### 列表 2.17: clickitem.ts
+
+
 
 ```typescript
 import {Component} from '@angular/core';
 
 @Component({
-selector: 'click',
-styleUrl: [` li: block }`],
-template: `
+  selector: 'click',
+  styleUrl: [` li: block }`],
+  template: `
 <div>
 <ul>
 <li><img (click)="onClick(100)"
@@ -2183,8 +2058,9 @@ width="100" height="100" src="assets/sample3.png"></li>
 `
 })
 export class ClickItem {
-onClick(id) {
-console.log("app.component.ts: you clicked me: "+id);
+  onClick(id) {
+    console.log("app.component.ts: you clicked me: "+id);
+  }
 }
 ```
 
@@ -2204,11 +2080,15 @@ providers: [ClickItem]
 
 现在启动应用查看 Figure 2.4 中显示的三个图像。点击最左侧的、中间的，然后是最右侧的图像。打开当前浏览器会话的检查器，你将看到这些消息：
 
+```
 you clicked me: 100
-you clicked me: 200
-you clicked me: 300
 
-## 使用 @Input,@Output 和 EventEmitter
+you clicked me: 200
+
+you clicked me: 300
+```
+
+## 使用 @Input、@Output 和 EventEmitter
 
 Angular 支持 `@Input` 和 `@Output` 注解在组件之间传递值。`@Input` 注解用于接收来自父组件的值，而 `@Output` 注解在给定变量发生变化时从组件发送（或“发射”）数据到父组件。
 
@@ -2220,7 +2100,7 @@ Angular 支持 `@Input` 和 `@Output` 注解在组件之间传递值。`@Input` 
 
 将配套文件中的 `ParentChildEmitters` 目录复制到方便的位置。Listing 2.18 显示了 `app.component.ts` 的内容，它向你展示了如何从父组件更新子组件属性的值。
 
-列表 2.18: app.component.ts
+### Listing 2.18: app.component.ts
 
 ```typescript
 import {Component} from '@angular/core';
@@ -2229,9 +2109,9 @@ import {EventEmitter} from '@angular/core';
 import {ChildComponent} from './childcomponent';
 
 @Component({
-selector: 'app-root',
-providers: [ChildComponent],
-template: `
+  selector: 'app-root',
+  providers: [ChildComponent],
+  template: `
 <div>
 <child-comp [childValue]="parentValue"
 (childValueChange)="reportValueChange($event)">
@@ -2240,13 +2120,13 @@ template: `
 `
 })
 export class AppComponent {
-public parentValue:number = 77;
-constructor() {
-console.log("constructor parentValue = "+this.parentValue);
-}
-reportValueChange(event) {
-console.log(event);
-}
+  public parentValue:number = 77;
+  constructor() {
+    console.log("constructor parentValue = "+this.parentValue);
+  }
+  reportValueChange(event) {
+    console.log(event);
+  }
 }
 ```
 
@@ -2267,10 +2147,6 @@ Listing 2.18 中的 `template` 属性有一个顶层 `<div>` 元素，包含一�
 Listing 2.18 的后续部分是一个简单的构造函数，随后是包含 `console.log()` 语句的 `reportValueChange` 方法。
 
 Listing 2.19 显示了 `childcomponent.ts` 的内容，它向你展示了如何从父组件更新子组件属性的值。
-
-
-
-
 
 ```typescript
 import {Output} from '@angular/core';
@@ -2322,7 +2198,7 @@ this.childValueChange.emit({
 
 按照 Listing 2.20 所示更新 `app.module.ts` 的内容（这与本章之前示例中该文件的内容不同）。
 
-*LISTING* 2.20: app.module.ts
+### Listing 2.20: app.module.ts
 
 ```typescript
 import { NgModule } from '@angular/core';
@@ -2353,11 +2229,11 @@ constructor parentValue = 77
 
 Listing 2.20 包含了加粗显示的三个代码片段，它们对于此代码都是必须的。
 
-### 使用管道 (Pipes) 
+## 使用管道 (Pipes)
 
 Angular 支持内置管道、异步管道和自定义管道。
 
-#### 使用内置管道
+### 使用内置管道
 
 Angular 支持多种内置管道，例如 `DatePipe`、`UpperCasePipe`、`CurrencyPipe` 和 `PercentPipe`。这些命名直观的管道每个都提供了你预期的功能：`DatePipe` 支持日期值，`UpperCasePipe` 将字符串转换为大写，以此此类推。
 
@@ -2385,7 +2261,7 @@ Angular 支持多种内置管道，例如 `DatePipe`、`UpperCasePipe`、`Curren
 <div>{{employees | json }}</div>
 ```
 
-#### 异步管道 (AsyncPipe)
+### 异步管道 (AsyncPipe)
 
 `AsyncPipe` 接受 `Promise` 或 `Observable` 作为输入并自动订阅它，最终返回发射的值。此外，`AsyncPipe` 是有状态的：该管道对输入保持订阅，并在值到达时持续传递来自该处的值。
 
@@ -2403,7 +2279,7 @@ Angular 支持多种内置管道，例如 `DatePipe`、`UpperCasePipe`、`Curren
 
 请记住 `AsyncPipe` 提供了两个优势。第一，`AsyncPipe` 减少了样板代码。第二，不需要对 `Observable` 进行订阅或取消（后者功能有助于避免内存泄漏）。
 
-#### 展示型组件 (Presentational Components)
+### 展示型组件 (Presentational Components)
 
 展示型组件接收数据并进行显示。下面的示例展示了 `StudentDetailsComponent`：
 
@@ -2424,10 +2300,6 @@ export class StudentDetails {
   @Input() students;
 }
 ```
-
-
-
-
 
 ```typescript
 import { Component } from '@angular/core';
@@ -2492,7 +2364,10 @@ export class AppComponent {
 
 第二个列表根据自定义管道 `MyPipe` 中的条件逻辑显示了过滤后的用户列表。`Listing 2.22` 显示了 `pipe.component.ts` 的内容，它定义了在 `Listing 2.25` 中引用的自定义管道 `MyPipe`。
 
-#### LISTING 2.22: pipe.component.ts
+### Listing 2.22: pipe.component.ts
+
+
+
 ```typescript
 import {Component} from '@angular/core';
 import {Pipe} from '@angular/core';
@@ -2511,7 +2386,8 @@ export class MyPipe {
 
 `Listing 2.23` 显示了用于创建 `User` 实例的自定义组件 `user.component.ts` 的内容，它通过 `app.component.ts` 中的导入语句也被引用。
 
-#### LISTING 2.23: user.component.ts
+#### Listing 2.23: user.component.ts
+
 ```typescript
 import {Component} from '@angular/core';
 import { Inject } from '@angular/core';
@@ -2532,9 +2408,10 @@ export class User {
 
 `Listing 2.23` 包含了 `fname` 和 `lname` 字段，这在 Angular 应用中非常有用。当你需要显示数据（如列表或表格）时，这种功能非常有用。
 
-最后，我们需要更新 `app.module.ts`，如 `Listing 24` 所示：
+最后，我们需要更新 `app.module.ts`，如 `Listing 2.24` 所示：
 
-#### LISTING 2.24: app.module.ts
+#### Listing 2.24: app.module.ts
+
 ```typescript
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/browser';
@@ -2553,12 +2430,19 @@ export class AppModule { }
 `Listing 2.24` 包含了两个导入语句。导航到 `localhost:4200`，稍后将看到以下输出：
 
 用户完整列表：
+
 Jane-Smith
+
 John-Stone
+
 Dave-Jones
+
 Rick-Heard
+
 过滤后的用户列表：
+
 Jane-Smith
+
 John-Stone
 
 `Listing 2.23` 的内容在 Angular 中非常直观。关于 Angular 管道的更多信息请参阅：https://angular.io/docs/ts/latest/guide/pipes
@@ -2569,7 +2453,8 @@ John-Stone
 
 本节展示了如何从文件读取数据。将 `JSONFile` 拷贝到方便的位置。`Listing 2.25` 显示了 `app.component.ts` 的内容，它说明了如何发起 HTTP 请求（返回 `Observable`）来获取员工信息。
 
-#### LISTING 2.25: app.component.ts
+#### Listing 2.25: app.component.ts
+
 ```typescript
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -2608,13 +2493,9 @@ export class AppComponent {
 }
 ```
 
-
-
-
-
 Listing 2.26 显示了 `employees.json` 的内容，其中包含了员工相关信息。该文件位于 `src/assets` 子目录下。
 
-列表 2.26: `employees.json`
+#### Listing 2.26: employees.json
 
 ```json
 [
@@ -2627,7 +2508,7 @@ Listing 2.26 显示了 `employees.json` 的内容，其中包含了员工相关�
 
 Listing 2.27 显示了 `app.module.ts` 的内容，它导入了 Angular 的 `HttpModule`。
 
-列表 2.27: `app.module.ts`
+#### Listing 2.27: app.module.ts
 
 ```typescript
 import { NgModule } from '@angular/core';
@@ -2643,7 +2524,7 @@ import { AppComponent } from './app.component';
 export class AppModule { }
 ```
 
-Listing 2.27 包含了熟悉的导入语句，以及 `HttpClientModule`，它被列在 `@NgModule` 装饰器内部 `imports` 属性元素列表中。
+`Listing 2.27` 包含了熟悉的导入语句，以及 `HttpClientModule`，它被列在 `@NgModule` 装饰器内部 `imports` 属性元素列表中。
 
 启动 Angular 应用，你将看到一个可以点击的按钮（此处未显示），点击后将看到以下文本：
 
@@ -2665,7 +2546,7 @@ this.http.get('assets/employees.json')
 //.map(res => res.json()) redundant in Angular 8 and 9 and 10
 ```
 
-然而， `map()` 操作符会自动为我们调用，因此不再需要它；此外，如果你包含了这段代码片段，将会看到错误信息。
+然而，`map()` 操作符会自动为我们调用，因此不再需要它；此外，如果你包含了这段代码片段，将会看到错误信息。
 
 ### 升级来自早期 Angular 版本的代码
 
@@ -2794,10 +2675,6 @@ export class AppComponent {
 }
 ```
 
-
-
-
-
 ```typescript
 getCustomers() {
   this.http.get('assets/customers.json')
@@ -2812,13 +2689,16 @@ getCustomers() {
 }
 ```
 
+
+
 上述代码在调用 `subscribe()` 方法时会发起一个 HTTP GET 请求，如果请求成功，变量 `customers` 将被文件 `customers.json` 的内容所填充。事实上，你只需要在 `getEmployees()` 方法（涉及 `employees.json` 文件）和 `getRelatives()` 方法（涉及 `relatives.json` 文件）中修改这行代码。
 
 `httpRequest()` 方法包含了发送 HTTP GET 请求的代码，该请求返回一个 `Observable`。`subscribe()` 方法包含了常规代码，在这种情况下，它还根据 `src/assets` 子目录下 `employees.json` 文件的内容初始化了 `employees` 数组。
 
 Listing 2.29、Listing 2.30 和 Listing 2.31 分别展示了基于 JSON 的文件 `customers.json`、`employees.json` 和 `relatives.json` 的内容。
 
-### LISTING 2.29: customers.json
+### Listing 2.29: customers.json
+
 ```json
 [
   {"fname":"Paolo","lname":"Friulano","city":"Maniago"},
@@ -2828,7 +2708,8 @@ Listing 2.29、Listing 2.30 和 Listing 2.31 分别展示了基于 JSON 的文�
 ]
 ```
 
-### LISTING 2.30: employees.json
+### Listing 2.30: employees.json
+
 ```json
 [
   {"fname":"Jane","lname":"Jones","city":"San Francisco"},
@@ -2838,7 +2719,8 @@ Listing 2.29、Listing 2.30 和 Listing 2.31 分别展示了基于 JSON 的文�
 ]
 ```
 
-### LISTING 2.31: relatives.json
+### Listing 2.31: relatives.json
+
 ```json
 [
   {"fname":"Beppi","lname":"Guarda","city":"Vicenza"},
@@ -2850,7 +2732,8 @@ Listing 2.29、Listing 2.30 和 Listing 2.31 分别展示了基于 JSON 的文�
 
 Listing 2.32 展示了 `app.module.ts` 的内容，它导入了 `HttpClientModule`。
 
-### LISTING 2.32: app.module.ts
+### Listing 2.32: app.module.ts
+
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -2874,19 +2757,23 @@ export class AppModule { }
 Listing 2.32 包含了标准的导入语句集，以及列在 `@NgModule` 装饰器 `imports` 数组中的 `HttpClientModule`。启动此 Angular 应用，将在浏览器会话中显示以下输出：
 
 #### HTTP 和 Observables
+
 **我们的一些员工**
+
 - Jane 住在 San Diego
 - John 住在 New York
 - Dave 住在 Seattle
 - Sara 住在 Chicago
 
 **我们的一些客户**
+
 - Paolo Friulano 住在 Maniago
 - Luigi Napoli 住在 Vicenza
 - Miko Tanaka 住在 Yokohama
 - Yumi Fujimoto 住在 Tokyo
 
 **我们的一些亲戚**
+
 - Beppi Guarda 住在 Vicenza
 - Paolo Fermi 住在 Padova
 - Antonio Gatto 住在 Brescia
@@ -2906,7 +2793,8 @@ this.http.get('assets/relatives.json')
 
 本节代码示例展示了如何读取 CSV 文件的内容并显示该文件的内容。此 Angular 应用对于涉及读取 CSV 文件内容的机器学习任务非常有用。将目录复制到方便的位置。Listing 2.33 展示了 `app.component.ts` 的内容，它说明了如何读取 `assets/wine.csv` 的内容并以表格形式显示数据。
 
-### LISTING 2.33: app.component.ts
+### Listing 2.33: app.component.ts
+
 ```typescript
 import { Component } from '@angular/core';
 import { Inject } from '@angular/core';
@@ -2942,36 +2830,32 @@ export class AppComponent {
 // ... (省略部分实现以保持逻辑一致)
 }
 ```
-*(注：由于原文中代码块较长，此处翻译根据要求保留了代码结构并对应描述)*
-
-
-
-
 
 在自动生成的文件 `app.module.ts` 中有两个新增，如 Listing 2.34 所示：第一个代码片段是一个导入语句，第二个片段在 `imports` 元素中引用了 `HttpClientModule`。
 
-启动此 Angular 应用。在浏览器会中，你将看到以下输出：
+启动此 Angular 应用。在浏览器会话中，你将看到以下输出：
 
-| 酒精 苹果酸 类 |
-| --- |
-| 14.23 || 1.71 || 1 |
-| 13.2 || 1.78 || 1 |
-| 13.16 || 2.36 || 1 |
-| 14.37 || 1.95 || 1 |
-| 13.24 || 2.59 || 1 |
-| // 为了简洁起见，省略详细内容 |
-| 13.71 || 5.65 || 3 |
-| 13.4 || 3.91 || 3 |
-| 13.27 || 4.28 || 3 |
-| 13.17 || 2.59 || 3 |
-| 14.13 || 4.1 || 3 |
+| 酒精 | 苹果酸 | 类 |
+| --- | --- | --- |
+| 14.23 | 1.71 | 1 |
+| 13.2 | 1.78 | 1 |
+| 13.16 | 2.36 | 1 |
+| 14.37 | 1.95 | 1 |
+| 13.24 | 2.59 | 1 |
+| ... | ... | ... |
+| 13.71 | 5.65 | 3 |
+| 13.4 | 3.91 | 3 |
+| 13.27 | 4.28 | 3 |
+| 13.17 | 2.59 | 3 |
+| 14.13 | 4.1 | 3 |
 
 上面的输出是一个由三列数字数据组成的“骨干”显示。你可以自由定义 CSS 相关代码来优化输出的样式。
 
 # 总结
+
 本章向你展示了如何在 Angular 应用中使用 UI 控制（UI Controls）。你学习了如何渲染按钮、如何渲染名称列表，以及如何从这些列表中添加和删除名称。你还学习了条件逻辑以及如何创建子组件。
 
-然后，你学习了父组件与子组件之间的通信，随后是了对展示型组件（presentational components）的讨论。此外，你还简要地介绍了 Angular 管道（Angular Pipes）以及说明如何在 Angular 应用中使用它们的管道代码示例。最后，你学习了如何从 Angular 应用发送 HTTP GET 请求，以获取 `src/assets` 子目录下的 `JSON` 文件内容以及 `CSV` 文件内容。
+然后，你学习了父组件与子组件之间的通信，随后是对展示型组件（presentational components）的讨论。此外，你还简要地介绍了 Angular 管道（Angular Pipes）以及说明如何在 Angular 应用中使用它们的管道代码示例。最后，你学习了如何从 Angular 应用发送 HTTP GET 请求，以获取 `src/assets` 子目录下的 `JSON` 文件内容以及 `CSV` 文件内容。
 
 # 第 3 章：表单与服务
 
@@ -2979,28 +2863,21 @@ export class AppComponent {
 
 本章的第一部分包含使用 Angular 控制（Angular Controls）和控制组（Control Groups）的 Angular 应用。该部分还提供了一个包含执行 HTTP GET 请求表单的 Angular 应用示例。
 
-本章的第二部分包含从外部端点获取数据的代码示例。具体而言，该部分向你展示了如何获取硬编码用户的 GitHub ，以及如何在文本字段中提供 GitHub 用户名，然后在 GitHub 上搜索关于该用户的更多详细信息。
+本章的第二部分包含从外部端点获取数据的代码示例。具体而言，该部分向你展示了如何获取硬编码用户的 GitHub 信息，以及如何在文本字段中提供 GitHub 用户名，然后在 GitHub 上搜索关于该用户的更多详细信息。
 
 本书代码示例的重点是 Angular 特有的功能，这意味着应用程序的 UI 部分采用的是“无修饰”的方法。因此，UI 部分是极简主义的，但你可以通过提供自己的自定义代码来增强 UI。
 
 ## Angular 表单概述
 
-`FormControl` 代表单个输入字段，`FormGroup` 由多个逻辑相关的字段组成，而 `NgForm` 组件代表 HTML 网页页中的 `<form>` 元素。用于提交表单的 `ngSubmit` 动作语法如下：
-
-```html
-(ngSubmit)="onSubmit(myForm.value)"
-```
-
-注意 `NgForm` 提供了 `ngSubmit` 事件，而你必须定义 `onSubmit()` 方法。此外，你还简要地介绍了 Angular 管道（Angular Pipes）以及说明如何在 Angular 应用中使用它们的管道代码示例。最后，你学习了如何从 Angular 应用发送 HTTP GET 请求，以获取 `src/assets` 子目录下的 `JSON` 文件内容以及 `CSV` 文件内容。
-
-### 响应式表单（Reactive Forms）
 `FormControl` 代表单个输入字段，`FormGroup` 由多个逻辑相关的字段组成，而 `NgForm` 组件代表 HTML 网页中的 `<form>` 元素。用于提交表单的 `ngSubmit` 动作语法如下：
 
 ```html
 (ngSubmit)="onSubmit(myForm.value)"
 ```
 
-注意 `NgForm` 提供了 `ngSubmit` 事件，而你必须定义 `onSubmit()` 方法。此外，你还简要地介绍了 Angular 管道（Angular Pipes）以及说明如何在 Angular 应用中使用它们的管道代码示例。最后，你学习了如何从 Angular 应用发送 HTTP GET 请求，以获取 `src/assets` 子目录下的 `JSON` 文件内容以及 `CSV` 文件内容。
+注意 `NgForm` 提供了 `ngSubmit` 事件，而你必须定义 `onSubmit()` 方法。
+
+### 响应式表单（Reactive Forms）
 
 `FormControl` 代表单个输入字段，`FormGroup` 由多个逻辑相关的字段组成，而 `NgForm` 组件代表 HTML 网页中的 `<form>` 元素。用于提交表单的 `ngSubmit` 动作语法如下：
 
@@ -3011,9 +2888,11 @@ export class AppComponent {
 注意 `NgForm` 提供了 `ngSubmit` 事件，而你必须定义 `onSubmit()` 方法。
 
 ### 模板驱动表单（Template-driven Forms）
+
 `FormsModule` 为模板驱动表单提供了必要的功能。
 
 ### Angular 表单示例
+
 本部分包含一个在 Angular 中创建表单的简单示例。
 
 ```typescript
@@ -3022,28 +2901,20 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-<<div> 
-<h2>一个示例表单</h2> 
-<form #f="ngForm"
-(ngSubmit)="onSubmit(f.value)"
-class="ui form">
-<div class="field">
-<label for="fname">fname</label>
-<input type="text"
-id="fname"
-placeholder="fname"
-name="fname" ngModel>
+    <div> 
+      <h2>一个示例表单</h2> 
+      <form #f="ngForm" (ngSubmit)="onSubmit(f.value)" class="ui form">
+        <div class="field">
+          <label for="fname">fname</label>
+          <input type="text" id="fname" placeholder="fname" name="fname" ngModel>
 
-<label for="lname">lname</label>
-<input type="text"
-id="lname"
-placeholder="lname"
-name="lname" ngModel>
-</div>
-<button type="submit">提交</button> 
-</form>
-</div>
-` 
+          <label for="lname">lname</label>
+          <input type="text" id="lname" placeholder="lname" name="lname" ngModel>
+        </div>
+        <button type="submit">提交</button> 
+      </form>
+    </div>
+  ` 
 }) 
 export class AppComponent {
   myForm: any;
@@ -3053,10 +2924,6 @@ export class AppComponent {
   }
 }
 ```
-
-
-
-
 
 ```typescript
 @NgModule({ 
@@ -3071,7 +2938,6 @@ export class AppModule { }
 
 启动应用程序并在浏览器会话中导航到 `localhost:4200`，你将看到一个简单的表单带有两个标签分别为 `fname` 和 `lname` 的输入字段。为这两个字段输入一对值——假设为 `tom` 和 `jones`。打开此浏览器会话的检查器以查看显示的以下信息：
 
-you submitted value: Object { fname: "tom", lname: "jones" } 
 `you submitted value: Object { fname: "tom", lname: "jones" }`
 
 ## 数据绑定与 ngModel
@@ -3102,11 +2968,13 @@ Angular 支持表单中的三种绑定类型：无绑定、单向绑定和双向
 
 ## 使用 FormBuilder 的 Angular 表单
 
+
+
 `FormBuilder` 类和 `FormGroup` 类是用于创建表单的内置 Angular 类。`FormBuilder` 支持创建 `FormControl` 的 `control()` 函数和用于创建 `FormGroup` 的 `group()` 函数。
 
 从配套文件中将 `FormBuilder` 目录复制到方便的位置。代码列表 3.3 显示了 `app.component.ts` 的内容，它说明了如何在 Angular 应用中使用 Angular 表单。
 
-*代码列表* 3.3: app.component.ts
+**代码列表 3.3: app.component.ts**
 
 ```typescript
 import { Component } from '@angular/core';
@@ -3129,7 +2997,7 @@ import { FormGroup } from '@angular/forms';
     </div>
     <button type="submit">Submit</button> 
   </form>
-</</div>
+</div>
 ` 
 }) 
 export class AppComponent {
@@ -3148,11 +3016,13 @@ export class AppComponent {
 
 代码列表 3.3 包含一个 `<form>` 元素和两个 `<div>` 元素，每个元素包含一个 `<input>` 元素。第一个 `<input>` 元素用于新用户的名，第二个 `<input>` 元素用于新用户的姓。
 
-在 代码列表 3.3 中，`FormBuilder` 被注入到构造函数，它创建一个 `FormBuilder` 实例并赋值给构造函数中的变量 `fb`。接下来，通过调用 `group()` 方法初始化 `myForm`，该方法接收一个键值对对象。在这种情况下，`fname` 和 `lname` 是键，它们都会在模板属性中作为 `<input>` 元素出现。这些键的值是可选的初始值。
+在代码列表 3.3 中，`FormBuilder` 被注入到构造函数，它创建一个 `FormBuilder` 实例并赋值给构造函数中的变量 `fb`。接下来，通过调用 `group()` 方法初始化 `myForm`，该方法接收一个键值对对象。在这种情况下，`fname` 和 `lname` 是键，它们都会在模板属性中作为 `<input>` 元素出现。这些键的值是可选的初始值。
 
 启动应用程序并在浏览器会话中导航到 `localhost:4200`，你将看到一个简单的表单带有两个标签分别为 `fname` 和 `lname` 的输入字段，并预先填充了 `John` 和 `Smith` 值。打开此浏览器会话的检查器以查看以下信息：
 
+```
 you submitted value: Object { fname: "John", lname: "Smith" }
+```
 
 显然，你可以在 `group()` 方法内部添加许多其他属性（例如地址相关的字段）。此外，你可以为每个新实体添加不同的表单。例如，你可以为 `Customer`（客户）、`PurchaseOrder`（订单）和 `LineItems`（行项目）创建单独的表单。
 
@@ -3160,7 +3030,7 @@ you submitted value: Object { fname: "John", lname: "Smith" }
 
 本节涵盖了如何使用 `FormBuilder` 创建响应式表单。从配套文件中将 `FormBuilder` 目录复制到方便的位置。代码列表 3.4 显示了 `app.component.ts` 的内容，它说明了如何定义响应式的 Angular 表单。
 
-*代码列表* 3.4: app.component.ts
+**代码列表 3.4: app.component.ts**
 
 ```typescript
 import { Component } from '@angular/core';
@@ -3199,7 +3069,7 @@ export class AppComponent {
 
 代码列表 3.5 显示了 `app.component.html` 的内容，其中包含一个 Angular 表单，其与 `userForm` 变量对应的 `<input>` 元素。
 
-*代码列表* 3.5: app.component.html
+**代码列表 3.5: app.component.html**
 
 ```html
 <form [formGroup]="userForm" (ngSubmit)="onSubmitted(userForm)">
@@ -3239,10 +3109,6 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 ```
 
-
-
-
-
 ```typescript
 import { AppComponent } from './app.component';
 
@@ -3265,10 +3131,12 @@ export class AppModule { }
 
 启动此应用程序并在浏览器会话中导航到 `localhost:4200`，你将看到一个带有若干预填充输入字段的简单表单。点击提交按钮。当你打开此浏览器会话的检查器时，你看到显示以下信息：
 
-`name = Jane`
-`email = jsmith@yahoo.com`
-`city = San Francisco`
-`state = California`
+```
+name = Jane
+email = jsmith@yahoo.com
+city = San Francisco
+state = California
+```
 
 ### FormGroup 与 FormArray
 
@@ -3304,7 +3172,7 @@ Angular 表单提供了事件监听器，用于检测与表单状态相关的各
 例如，如果一个或多个表单字段无效，则显示以下 `<span>` 元素：
 
 ```html
-<span *ngIf="!myform.form.valid">表单无效</>
+<span *ngIf="!myform.form.valid">表单无效</span>
 ```
 
 你还可以使用 `*ngIf` 指令显示特定字段的状态来显示错误消息，如下所示：
@@ -3325,13 +3193,13 @@ Angular 表单提供了事件监听器，用于检测与表单状态相关的各
 
 与其使用纯 CSS 为字段相关的错误消息设置样式效果，不如考虑使用 Bootstrap 之类的工具。
 
-### 什么是 Angular 服务？
+## 什么是 Angular 服务？
 
 本节包含 Angular 服务的简要描述，并列出了一些内置服务，并在随后的章节中提供了一个在 Angular 中定义自定义服务的示例。
 
 有时 Web 应用程序的前端需要数据。Angular 服务是单例的，这意味着在应用程序的不同部分可以使用同一个实例。通过依赖注入机制，可以在组件中使用服务。
 
-这里是一个自定义 服务的示例：
+这里是一个自定义服务的示例：
 
 ```typescript
 @Injectable()
@@ -3365,13 +3233,13 @@ export class UpperComponent {
 
 ### 内置服务
 
-Angular 支持由模块组织的内置服务。例如，`http` 模块（位于 `@angular/common/http`）包含对典型的 `GET`、POST`、PUT 和 `DELETE` 请求的支持。事实上，你在第 2 章中见过基于 HTTP 请求的示例。此外，`routing` 模块（位于 `@angular/router`）提供了路由支持，包括 HTML5 和哈希路由。`forms` 模块（位于 `@angular/forms`）提供了表单服务。查看 Angular 文档以获取完整的内置服务列表。
+Angular 支持由模块组织的内置服务。例如，`http` 模块（位于 `@angular/common/http`）包含对典型的 `GET`、`POST`、`PUT` 和 `DELETE` 请求的支持。事实上，你在第 2 章中见过基于 HTTP 请求的示例。此外，`routing` 模块（位于 `@angular/router`）提供了路由支持，包括 HTML5 和哈希路由。`forms` 模块（位于 `@angular/forms`）提供了表单服务。查看 Angular 文档以获取完整的内置服务列表。
 
 ### 服务示例
 
 将配套文件 `ServiceExample` 目录复制到方便的位置。列表 3.7 显示了 `app.component.ts` 的内容，其中包含定义基础自定义服务的示例。
 
-*列表* 3.7: app.component.ts
+**列表 3.7: app.component.ts**
 
 ```typescript
 import {Component} from '@angular/core';
@@ -3399,8 +3267,6 @@ export class AppComponent {
 ```
 
 列表 3.7 包含一个 `Service` 类，其前面带有 `@Injectable` 装饰器，这允许我们在 `AppComponent` 类的构造函数中注入 `Service` 类的实例。
-
-
 
 
 
@@ -3462,7 +3328,7 @@ export class UserService {
 }
 ```
 
-显示列表 3.9 导入了 `User` 自定义组件（见显示列表 3.11），然后定义了 `UserService` 自定义组件，该组件使用 `User` 元素的 `userList` 数组来跟踪用户。该数组在构造函数中初始化，包含了三个创建并填充了的新 `User` 实例。`getUserList()` 方法执行返回 `userList` 数组的“服务”。
+显示列表 3.9 导入了 `User` 自定义组件（见显示列表 3.8），然后定义了 `UserService` 自定义组件，该组件使用 `User` 元素的 `userList` 数组来跟踪用户。该数组在构造函数中初始化，包含了三个创建并填充了的新 `User` 实例。`getUserList()` 方法执行返回 `userList` 数组的“服务”。
 
 显示列表 3.10 显示了 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户相关信息。
 
@@ -3523,296 +3389,14 @@ export class AppComponent {
 显示列表 3.10 包含一个模板属性，用于显示当前用户列表（即通过执行显示列表 3.10 构造函数中的代码而初始化的三个用户）。注意在用户列表中显示每个用户信息的语法：
 
 USER {{i+1}}: {{user.fname}}-{{user.lname}}
+
 <img class="user-image" [src]="user.imageUrl"
 
-当鼠标悬停在用户列表中的某个用户上时，`mouseEvent` 方法会被调用。它会设置 `currentUser` 并触发 `onUserSelected` 事件。当鼠标悬停在图像上时，`mouseEnter` 方法会被调用，并弹出图像名称的警告。显示列表 3.11 包含一个模板属性来显示当前用户列表。
+当鼠标悬停在用户列表中的某个用户上时，`mouseEvent` 方法会被调用。它会设置 `currentUser` 并触发 `onUserSelected` 事件。当鼠标悬停在图像上时，`mouseEnter` 方法会被调用，并弹出图像名称的警告。
 
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
 
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-1.  显示列表 3.10 包含一个模板属性来显示当前用户列表（即通过执行显示列表 3.10 构造函数中的代码而初始化的三个用户）。注意在用户列表中显示每个用户信息的语法：
-
-USER {{i+1}}: {{user.fname}}-{{user.lname}}
-<img class="user-image" [src]="user.imageUrl"
 
 当鼠标悬停在用户列表中的某个用户上时，`mouseEvent` 方法会被调用。它会设置 `currentUser` 并触发 `onUserSelected` 事件。当鼠标悬停在图像上时，`mouseEnter` 方法会被调用，并弹出图像名称的警告。显示列表 3.11 包含一个模板属性来显示当前用户列表。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件， 3.11](#10_Ch03.xhtml#list-3-11) 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。 3.11：
-
-```typescript
-import {Component} from '@angular/core';
-
-import { Inject } from '@angular/core';
-
-@Component({
-  selector: 'user',
-  template: '<h2></h2>'
-})
-export class User {
-  fname: string; 
-  lname: string; 
-  imageUrl: string;
-
-  constructor(@Inject(String) fname: string, 
-  @Inject(String) lname: string,
-  @Inject(String) imageUrl: string) {
-    this.fname = fname; 
-    this.lname = lname; 
-    this.imageUrl = imageUrl; 
-  } 
-}
-```
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。 
-
-1.  显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。
-
-显示列表 3.11 是 `app.component.ts` 的内容，它引用了之前的两个自定义组件，并在无序列表中渲染用户信息。 3.11：
-
-由于上述翻译过程中出现了重复节点，请参考以下整理后的翻译：
 
 ### 列表 3.8：user.component.ts
 
@@ -3927,13 +3511,12 @@ export class AppComponent {
 显示列表 3.10 包含一个模板属性来显示当前用户列表（即通过执行显示列表 3.10 构造函数中的代码而初始化的三个用户）。注意在用户列表中显示每个用户信息的语法：
 
 USER {{i+1}}: {{user.fname}}-{{user.lname}}
+
 <img class="user-image" [src]="user.imageUrl"
 
 当鼠标悬停在用户列表中的某个用户上时，`mouseEvent` 方法会被调用。它会设置 `currentUser` 并触发 `onUserSelected` 事件。当鼠标悬停在图像上时，`mouseEnter` 方法会被调用，并弹出图像名称的警告。显示列表 3.11 包含一个模板属性来显示当前用户列表。
 
-(注：由于原文文本中存在大量重复段落，译文已根据要求进行了去重处理，确保逻辑通顺且不重复输出。)
-
-
+### 列表 3.12
 
 ```javascript
 // reset the input field to an empty string
@@ -3953,6 +3536,8 @@ Listing 3.12 包含了常规导入语句，随后是一个 `@Component` 装饰�
 
 template 属性由一个顶层 `<div>` 元素组成，其中包含一个 `<form>` 元素另一个 `<div>` 元素。`<form>` 元素包含一个 `<input>` 元素，用户可以在其中输入 GitHub 用户名，而 `<div>` 元素包含一个 `<ul>` 元素，后者渲染当前用户列表。注意，`<ul>` 元素中的每个 `<li>` 元素都通过将当前用户设置为用户鼠标悬停高亮的元素来处理鼠标悬停（mouseover）事件。
 
+
+
 Listing 3.12 的后续部分定义了导出的类 `AppComponent`，它初始化了一些实例变量，随后是一个构造函数，该构造函数使用两个硬编码的用户初始化 `users` 数组。接下来，`currUser()` 方法“指向”用户鼠标悬停高亮的用户。此功能并非必需，但为了以防你需要跟踪当前高亮的用户时可以使用它。
 
 `findGitHubUser()` 方法在 `<input>` 元素为空时会显示一个警报框（alert），这防止了冗余调用 `http()` 方法。如果 `<input>` 元素中指定了用户，代码将从 GitHub 网站发起一个 HTTP GET 请求，并将新用户（作为 `UserComponent` 类的实例）添加到 `users` 数组中。此外，如果没有匹配输入字符串的 GitHub 用户，也会显示警报框。
@@ -3967,7 +3552,7 @@ this.guserStr = guser.value;
 
 Listing 3.13 显示了 `user.component.ts` 的内容，其中包含三个字符串，用于跟踪三个与用户相关的字段。
 
-*列表* 3.13: user.component.ts
+**列表 3.13: user.component.ts**
 
 ```typescript
 import {Component} from '@angular/core';
@@ -3991,13 +3576,13 @@ export class UserComponent {
 
 ![images](img/Pg137.jpg)
 
-*图 3.1* 在列表中搜索并显示 GitHub 用户
+**图 3.1** 在列表中搜索并显示 GitHub 用户
 
 Listing 3.13 包含字符串属性 `field1`、`field2` 和 `field3`，用于跟踪来自 GitHub 用户 JSON 格式信息字符串的三个属性。`UserComponent` 类中的属性名是通用的，因此你可以存储 JSON 字符串中的不同属性，例如 `followers`、`following` 和 `created_at`。
 
 你现在有了一个显示用户更多细节的起点，可以使用 Bootstrap 或其他用于 UI 布局工具包来改进输出的样式。
 
-Figure 3.1 显示了启动此 Angular 应用并添加 GitHub 用户信息后的输出。需要注意的是，当前示例中允许重复（防止重复的代码是留留给你的练习题）。
+Figure 3.1 显示了启动此 Angular 应用并添加 GitHub 用户信息后的输出。需要注意的是，当前示例中允许重复（防止重复的代码是留给你的练习题）。
 
 ## 其他与服务相关的用例
 
@@ -4042,9 +3627,13 @@ export class MyComponent2 {
 考虑两个 Angular 组件必须共享同一个 `UserService` 类实例的情况。为了简单起见，假设这两个组件是根组件的子组件。在这种情况下，执行以下步骤：
 
 1) 创建一个新的服务组件（`ng g s service`）。
+
 2) 在 `app.module.ts` 的 `providers` 数组中包含 `UserService`。
+
 3) 在 `service.component.ts` 中导入 `MyComponent1` 和 `MyComponent2`。
+
 4) 从 `MyComponent1` 的 `providers` 数组中移除 `UserService`。
+
 5) 从 `MyComponent2` 的 `providers` 数组中移除 `UserService`。
 
 步骤 #2 确保 `UserService` 类对应用中的所有组件都可用，并且该服务类只有一个实例。
@@ -4113,9 +3702,7 @@ npm install jquery --save
 
 Listing 3.14 显示了 `app.component.ts` 的内容，它说明了如何发起 HTTP GET 请求以根据用户在搜索框中输入的文本字符串从 Flickr 获取图片。
 
-
-
-
+**列表 3.14: app.component.ts**
 
 ```typescript
 import * as $ from "jquery";
@@ -4159,7 +3746,7 @@ import * as $ from "jquery";
 
 `ERROR ReferenceError: "$ is not defined"`
 
-注意 *本节中的代码适用于 Angular 6 及更高版本，而 Angular 4 的代码需要不同的语法。*
+注意：本节中的代码适用于 Angular 6 及更高版本，而 Angular 4 的代码需要不同的语法。
 
 列表 3.14 的下一部分是 `@Component` 装饰器，它的 `template` 属性包含 `<input>`、`<button>` 和 `<div>` 元素，分别用于获取用户的搜索字符串、使用该字符串执行搜索以及显示搜索结果。
 
@@ -4179,7 +3766,7 @@ import * as $ from "jquery";
 
 ![images](img/Pg142.jpg)
 
-*图 3.2* 带有 pasta 的部分图片列表
+**图 3.2** 带有 pasta 的部分图片列表
 
 ## 使用简单服务器进行 HTTP GET 请求
 
@@ -4205,7 +3792,7 @@ import * as $ from "jquery";
 
 现在从辅助文件中将目录 `JSONServerGET` 复制到方便的位置。列表 3.15 显示了 `app.component.ts` 的内容，它说明了如何向文件服务器发送 HTTP GET 请求以检索数据。
 
-*列表* 3.15：app.component.ts
+**列表 3.15：app.component.ts**
 
 ```typescript
 import {Component} from '@angular/core';
@@ -4248,7 +3835,7 @@ export class AppComponent {
 
 列表 3.16 显示了 `posts.json` 的内容，该内容在 HTTP GET 请求期间被检索到。
 
-*列表* 3.16：posts.json
+**列表 3.16：posts.json**
 
 ```json
 {
@@ -4270,11 +3857,13 @@ export class AppComponent {
 
 前面的命令在端口 3000 启动一个文件服务器并将 `authors.json` 的内容读入内存，使该数据可供 HTTP GET 请求使用。
 
-注意 *必须在启动 Angular 应用之前启动 json-server。*
+注意：必须在启动 Angular 应用之前启动 `json-server`。
+
+
 
 列表 3.17 显示了 `app.component.ts` 的内容，它说明了如何向文件服务器发送 HTTP POST 请求。
 
-*列表* 3.17：app.component.ts
+**列表 3.17：app.component.ts**
 
 ```typescript
 import {Component } from '@angular/core';
@@ -4339,10 +3928,6 @@ export class AppComponent {
 }
 ```
 
-
-
-
-
 ```typescript
 foundData = false;
 authorData : any;
@@ -4395,7 +3980,7 @@ authorInfo() {
 
 Listing 3.17 包含了常见的导入语句，随后是一个用于显示基于作者数据的表格模板属性。当用户点击 `<button>` 元素时，`postAuthorData()` 会向作者列表添加一个硬编码的新作者。该方法执行了一个标准的 jQuery POST 请求，而不是使用 `Observable`。注意，此方法会增加每个作者的 `id` 属性值，以便它们被视为不同的作者（尽管新用户的名称几乎相同）。
 
-另一方面，`getAuthorData()` 方法确实包含一个 `Observable` 用于从运行在 3000 端口的文件服务器检索作者相关数据（如 Listing 3.18 所示）。
+另一方面，`getAuthorData()` 方法确实包含一个 `Observable` 用于从运行在 3000 端口的文件服务器检索作者相关数据（如列表 3.18 所示）。
 
 在每次调用 `postAuthorData()` 方法后，浏览器都会重新加载，因此你需要点击“Author Info”按钮来查看新添加的作者。不过，你可以通过命令行执行以下命令之一来防止页面刷新：
 
@@ -4403,9 +3988,7 @@ Listing 3.17 包含了常见的导入语句，随后是一个用于显示基于�
 
 `ng serve --no-live-reload`
 
-Listing 3.18 展示了 `authors.json` 的部分内容，其内容在该 Angular 应用中给出。
-
-*代码列表* 3.18: authors.json
+**代码列表 3.18: authors.json**
 
 ```json
 {
@@ -4436,9 +4019,9 @@ Listing 3.18 是一个非常简单的 JSON 数据项集合，每个项目都包�
 
 本节中的 Angular 应用读取 CSV 文件（位于 `src/assets` 子目录）的内容，然后使用这些数据显示基于 SVG 的折线图。然而，如果你对生成 SVG 折线图不感兴趣，可以跳过本节而不会影响连贯性。
 
-将目录 `ReadDataCSV` 复制到方便的位置。Listing 3.19 展示了 `app.component.ts` 的内容，它阐明了如何读取 `assets/csv` 的内容并以表格形式显示数据。
+将目录 `ReadDataCSV` 复制到方便的位置。列表 3.19 展示了 `app.component.ts` 的内容，它阐明了如何读取 `assets/csv` 的内容并以表格形式显示数据。
 
-*代码列表* 3.19: app.component.ts
+**代码列表 3.19: app.component.ts**
 
 ```typescript
 import { Component } from '@angular/core';
@@ -4514,14 +4097,11 @@ export class AppComponent {
 }
 ```
 
-
-
-
 `readCsvData()` 方法中的最后一个代码段调用了 `constructLineGraph()` 方法，该方法将 `records` 数组中的每一行追加到变量 `polyPts` 中，从而构建一组连续的线段并将其渲染为折图。这种技术之所以有效，是因为 `rand20.csv` 中的值是根据第一列的值按升序排列的。
 
 列表 3.20 显示了 `rand20.csv` 的部分内容，该文件位于 `src/assets` 子目录下。
 
-列表 3.20：`rand20.csv`
+**列表 3.20：`rand20.csv`**
 
 ```
 46,8
@@ -4541,7 +4121,7 @@ export class AppComponent {
 
 ![images](img/Pg153.jpg)
 
-图 3.3 来自数字列表的折图
+**图 3.3 来自数字列表的折图**
 
 # 总结
 
@@ -4574,9 +4154,9 @@ XOR(1,1) = 0
 
 我们可以将输出值视为与输入值相关的标签。具体来说，点 (0,0) 和 (1,1) 属于类 0，点 (1,0) 和 (0,1) 属于类 1。在平面上画出这些点，你会得到一个正方形的四个顶点，左下顶点为原点。此外，每对对角元素属于同一类，这使得 `XOR` 函数在平面上是非线性可分的。如果你对此怀疑，可以尝试在欧几里得平面上为 `XOR` 函数寻找一个线性分割器。
 
-列表 4.1 显示了 `tf2_keras_xor.py` 的内容，展示了如何创建一个基于 Keras 的 `NN` 来训练 `XOR` 函数。
+**列表 4.1：`tf2_keras_xor.py`**
 
-列表 4.1：`tf2_keras_xor.py`
+
 
 ```python
 import tensorflow as tf
@@ -4591,7 +4171,7 @@ model.add(tf.keras.layers.Dense(1))
 print("compiling model...")
 model.compile(loss='mean_squared_error', optimizer='adam')
 print("fitting model...")
-model.fit(x,y,verbose=0,epochs=1000)
+model.fit(x, y, verbose=0, epochs=1000)
 pred = model.predict(x)
 
 # 测试最终预测
@@ -4600,59 +4180,13 @@ p1 = np.array([[0., 0.]])
 p2 = np.array([[0., 1.]])
 p3 = np.array([[1., 0.]])
 p4 = np.array([[1., 1.]])
-print(p1,":", model.predict(p1))
-print(p2,":", model.predict(p2))
-print(p3,":", model.predict(p3))
-print(p4,":", model.predict(p4))
+print(p1, ":", model.predict(p1))
+print(p2, ":", model.predict(p2))
+print(p3, ":", model.predict(p3))
+print(p4, ":", model.predict(p4))
 ```
 
 列表 4.1 初始化了 NumPy 数组 `x`，其包含 0 和 1 的四种组合数字对，随后是 NumPy 数组 `y`，它包含 `x` 中每对数字的逻辑异或结果。
-
-列表 4.1](#11_Ch04.xhtml#list-4-1) 的部分定义了一个具有两个 `Dense` 层的基于 Keras 的模型。接下来，对模型进行编译和训练，然后根据训练后的模型填充预测值变量 `pred`。
-
-下一个代码块初始化了点 `p1`、`p2`、`p3` 和 `p4`，然后显示这些点的预测值。运行列表 4.1 中代码的输出为：
-
-```
-compiling model...
-fitting model...
-Testing XOR operator
-[[0. 0.]: [0.00154321]
-[[0. 1.]: [0.99821456]
-[[1. 0.]: [0.99812345]
-[[1. 1.]: [0.00165412]
-```
-
-列表 4.1 初始化了 NumPy 数组 `x`，包含 0 和 1 的四种组合数字对，随后是 NumPy 数组 `y`，包含 `x` 中每对数字的逻辑异或。
-
-列表 4.1](#11_Ch04.xhtml#list-4-1) 的部分定义了一个具有两个 `Dense` 层的基于 Keras 的模型。接下来，对模型进行编译和训练，然后根据训练后的模型填充预测值变量 `pred`。
-
-下一个代码块初始化了点 `p1`、`p2`、`p3` 和 `p4`，然后显示这些点的预测值。运行列表 4.1 中代码的输出为：
-
-```
-compiling model...
-fitting model...
-Testing XOR operator
-[[0. 0.]: [0.00154321]
-[[0. 1.]: [0.99821456]
-[[1. 0.]: [0.99812345]
-[[1. 1.]: [0.00165412]
-```
-
-列表 4.1](#11_Ch04.xhtml#list-4-1) 初始化了 NumPy 数组 `x`，包含 0 和 1 的四种组合数字对，随后是 NumPy 数组 `y`，包含 `x` 中每对数字的逻辑异或。
-
-列表 4.1](#11_Ch04.xhtml#list-4-1) 的部分定义了一个具有两个 `Dense` 层的基于 Keras 的模型。接下来，对模型进行编译和训练，然后根据训练后的模型填充预测值变量 `pred`。
-
-下一个代码块初始化了点 `p1`、`p2`、`p3` 和 `p4`，然后显示这些点的预测值。运行列表 4.1 中代码的输出为：
-
-```
-compiling model...
-1 model...
-111
-[[0. 01 [0.00144321]
-10. 11 [0.998214.1]
-11. 01 0.091114451
-11. 11.1.001111111_
-4.1#list-4.1) 初始化了 NumPy 数组 `x`，包含 0 和 1 的四种组合数字对，随后是 NumPy 数组 `y`，包含 `x` 中每对数字的逻辑异或。
 
 列表 4.1 的部分定义了一个具有两个 `Dense` 层的基于 Keras 的模型。接下来，对模型进行编译和训练，然后根据训练后的模型填充预测值变量 `pred`。
 
@@ -4662,19 +4196,13 @@ compiling model...
 compiling model...
 fitting model...
 Testing XOR operator
-[[0. 0.]: [0.00154321]
-[[0. 1.]: [0.99821456]
-[[1. 0.]: [0.99812345]
-[[1. 1.]: [0.00165412]
+[[0. 0.]]: [0.00154321]
+[[0. 1.]]: [0.99821456]
+[[1. 0.]]: [0.99812345]
+[[1. 1.]]: [0.00165412]
 ```
-（注：输入文本后半部分有重复章节，我将根据提供的文本逻辑提供一个干净的版本。）
-*更正：用户文本包含了列表 4.1 的重复段落。我将去重以保持专业文档标准。*
 
----
-**等等，查看提供的文本存在字面重复。我将进行去重以确保高质量文档。**
-
-[content]
-`readCsvData()` 方法中的最后一个代码段调用了 `constructLineGraph()` 方法，该方法将 `records` 数组中的每一行追加到变量 `polyPts` 中，从而构建一组连续的线段并将其渲染为折图。这种技术之所以有效，是因为 `rand20.csv` 中的值是根据第一列的值按升序排列的。
+`readCsvData()` 方法中的最后一个代码段调用了 `constructLineGraph()` 方法，该方法将 `records` 数组中的每一行追加到变量 `polyPts` 中，从而构建一组连续的线段并将其渲染为折线图。这种技术之所以有效，是因为 `rand20.csv` 中的值是根据第一列的值按升序排列的。
 
 列表 3.20 显示了 `rand20.csv` 的部分内容，该文件位于 `src/assets` 子目录下。
 
@@ -4698,13 +4226,13 @@ Testing XOR operator
 
 ![images](img/Pg153.jpg)
 
-图 3.3 来自数字列表的折图
+图 3.3 来自数字列表的折线图
 
 # 总结
 
-本章向你展示了如何使用 HTML5 表单创建 Angular 应用，以及包含 Angular 控件和 `FormGroups` 的表单。你还学习了如何在本地存储中保存表单数据。接下来，你学习了 Angular 管道（Pipes），以及一个展示如何实现该功能的示例。
+本章向你展示了如何使用 HTML5 表单创建 Angular 应用，以及包含 Angular 控件和 `FormGroups` 的表单。你还学习了如何在本地存储中保存表单数据。接下来，你学习了 Angular 管道，以及一个展示如何实现该功能的示例。
 
-你还学习了 Angular 服务（Services），并通过一个说明如何使用 `Services` 的示例。接下来，你看到了一个 `Http` 类中 `http()` 方法（返回一个 `Observable`）的示例，用于获取任何 GitHub 用户的数据并在用户列表中显示这些数据的部分。最后，你学习了如何读取一个带有数值数据的 CSV 文件，并用它来生成和显示 SVG 折图。
+你还学习了 Angular 服务，并通过一个说明如何使用 `Services` 的示例。接下来，你看到了一个 `Http` 类中 `http()` 方法（返回一个 `Observable`）的示例，用于获取任何 GitHub 用户的数据并在用户列表中显示这些数据的部分。最后，你学习了如何读取一个带有数值数据的 CSV 文件，并用它来生成和显示 SVG 折线图。
 
 # 第 4 章
 
@@ -4733,12 +4261,9 @@ XOR(1,1) = 0
 
 列表 4.1 显示了 `tf2_keras_xor.py` 的内容，展示了如何创建一个基于 Keras 的 `NN` 来训练 `XOR` 函数。
 
+- 通过梯度下降减少误差
 
-
-
--   通过梯度下降减少误差
-
-我们还需要为训练数据（通常命名为 `x_train` 和 `y_train`）和测试相关数据（通常命名为 `x_test` 和 `x_test`）初始化变量，通常是在训练数据和测试数据之间进行 80/20 或 75/25 的划分。
+我们还需要为训练数据（通常命名为 `x_train` 和 `y_train`）和测试相关数据（通常命名为 `x_test` 和 `y_test`）初始化变量，通常是在训练数据和测试数据之间进行 80/20 或 75/25 的划分。
 
 ## 什么是超参数？
 
@@ -4751,15 +4276,15 @@ XOR(1,1) = 0
 - 损失函数
 - 优化器
 - 学习率
-- 丢弃率（dropout rate）
+- 丢弃率
 
-上述列表前三个超参数是初始化神经网络所必需的。第四个超参数用于前向传播。接下来三个超参数（即损失函数、优化器和学习率）用于在监督学习任务中执行反向误差传播（又称反向传播，backprop）。这一步计算出一组数字，用于更新神经网络中的权重值，以提高神经网络的准确性。如果你需要减少模型中的过拟合，最后一个超参数将非常有用。通常，损失函数是所有这些超参数中最复杂的。
+上述列表前三个超参数是初始化神经网络所必需的。第四个超参数用于前向传播。接下来三个超参数（即损失函数、优化器和学习率）用于在监督学习任务中执行反向误差传播（又称反向传播）。这一步计算出一组数字，用于更新神经网络中的权重值，以提高神经网络的准确性。如果你需要减少模型中的过拟合，最后一个超参数将非常有用。通常，损失函数是所有这些超参数中最复杂的。
 
-在反向传播过程中，可能会发生`梯度消失问题`，导致某些权重不再更新，在这种情况下，神经网络本质上是处于状态的（调试这个问题通常非常困难）。另一个考虑是决定局部最小值是否足够好，并且优于花费额外的时间和精力去寻找全局最小值。
+在反向传播过程中，可能会发生`梯度消失问题`，导致某些权重不再更新，在这种情况下，神经网络本质上是处于停滞状态的（调试这个问题通常非常困难）。另一个考虑是决定局部最小值是否足够好，并且优于花费额外的时间和精力去寻找全局最小值。
 
 ## 深度学习架构
 
-如前所述，深度学习支持多种架构，包括 MLP、CNN、RNN 和 LSTM。尽管这些架构在解决的任务类型上存在重叠，但每种架构都有特定的创建理由。随着你从 MLP 进展到 LSTM，架构变得越来越复杂。有时这些架构的组合非常适合解决任务。例如，捕捉视频并进行预测通常涉及 `CNN`（用于处理视频序列中的每个输入图像）和一个预测视频流中物体位置的 `LSTM`。
+如前所述，深度学习支持多种架构，包括 `MLP`、`CNN`、`RNN` 和 `LSTM`。尽管这些架构在解决的任务类型上存在重叠，但每种架构都有特定的创建理由。随着你从 `MLP` 进展到 `LSTM`，架构变得越来越复杂。有时这些架构的组合非常适合解决任务。例如，捕捉视频并进行预测通常涉及 `CNN`（用于处理视频序列中的每个输入图像）和一个预测视频流中物体位置的 `LSTM`。
 
 此外，用于 NLP（自然语言处理）的神经网络可以包含一个或多个 `CNN`、`RNN`、`LSTM` 和 `biLSTM`（双向 LSTM）。强化学习与这些架构的结合被称为`深度强化学习`。注意，`Transformer` 架构和 `Reformer` 架构（均由 Google 创建）是两种较新的 NLP 架构，其性能结果处于领先水平。
 
@@ -4795,9 +4320,9 @@ XOR(1,1) = 0
 
 *图 4.1 感知机示例*
 
-DNN（深度神经网络）包含至少两个隐藏层，它们可以解决逻辑回归以及分类问题。事实上，分类模型的输出层实际上由一组概率（数据集中的每个类别一个），其总和为 1。图 4.1](#11_Ch04.xhtml#fig4-1) 显示了一个具有数值权重输入边的感知机。
+DNN（深度神经网络）包含至少两个隐藏层，它们可以解决逻辑回归以及分类问题。事实上，分类模型的输出层实际上由一组概率（数据集中的每个类别一个），其总和为 1。图 4.1 显示了一个具有数值权重输入边的感知机。
 
-下一节将深入探讨感知机的细节以及它们如何形成 MLP 的骨干。
+下一节将深入探讨感知机的细节以及它们如何形成 `MLP` 的骨干。
 
 ## 感知机函数的定义
 
@@ -4809,17 +4334,15 @@ f(x) = 1 如果 w*x + b > 0 (否则 f(x) = 0)
 
 在前面的表达式中，`w` 是权重向量，`x` 是输入向量，`b` 是偏置向量。乘积 `w*x` 是向量 `w` 和 `x` 的内积，激活感知机是一个全或无的决策（例如，灯泡要么亮要么灭，没有中间状态）。
 
-
-
-
-
 一个 `neuron` 本质上是神经网络的构建模块。通常情况下，每个神经元接收多个输入（数值值），其中每个输入都来自神经网络中前一层的神经元。系统会计算输入的加权和并将其分配给该神经元。
 
-具体来说，假设有一个神经元 `N’`（`N “prime””）接收到的输入的权重属于集合 `{w1, w2, w3, . . . , wn}`，这些数字指定了连接到神经元 `N’` 的边的权重。由于正向传播涉及从左到右的数据流，这意味着这些边的左端点连接到前一层中的神经元 `{N1, N2, . . ., Nk}`，而这些边的右端点是 `N’`。加权和的计算方式如下：
+具体来说，假设有一个神经元 `N’`（`N “prime”`）接收到的输入的权重属于集合 `{w1, w2, w3, . . . , wn}`，这些数字指定了连接到神经元 `N’` 的边的权重。由于正向传播涉及从左到右的数据流，这意味着这些边的左端点连接到前一层中的神经元 `{N1, N2, . . ., Nk}`，而这些边的右端点是 `N’`。加权和的计算方式如下：
 
 ```
 x1*w1 + x2*w2 + . . . + xn*wn
 ```
+
+
 
 计算出加权和后，它会被“传递”给激活函数，由激活函数计算出第二个值。这一步对于人工神经网络是必须的，将在本书稍后的章节进行解释。这种计算加权和的过程会在给定层中的每一个神经元上重复进行，然后在神经网络的下一层神经元上重复相同的过程。
 
@@ -4833,14 +4356,14 @@ x1*w1 + x2*w2 + . . . + xn*wn
 
 顺带一提，如果你有数学背景，你可能会想将 ANN 视为一组连续的二分图，其中数据从输入层（想象为“多源”）流向输出层（“汇点”）。遗憾的是，这种观点对于理解 ANN 并不 Practical 用。理解 ANN 的更好方法是将其结构看为以下列表中超参数的组合：
 
-1) 隐藏层的数量
-2) 每个隐藏层中神经元的数量
-3) 连接神经元对对的边的初始权重
-4) 激活函数
-5) 损失函数
-6) 优化器（与损失函数配合使用）
-7) 学习率（一个小的数字）
-8) 丢弃率（可选）
+1. 隐藏层的数量
+2. 每个隐藏层中神经元的数量
+3. 连接神经元对对的边的初始权重
+4. 激活函数
+5. 损失函数
+6. 优化器（与损失函数配合使用）
+7. 学习率（一个小的数字）
+8. 丢弃率（可选）
 
 [图 4.2] 显示了 ANN 的内容（有很多变体：这只是一个示例）。
 
@@ -4882,14 +4405,11 @@ ANN 并不一定是全连接的，这意味着相邻层神经元对之间的某�
 
 # 学习率超参数
 
-
-
-
-`learning rate 是一个很小的值，通常在 0.001 到 0.05 之间，它影响加到当前边权重权重上的数值幅度，以便通过这些更新后的权重来训练模型。学习率具有某种节流作用。如果值太大，新的近似值可能会越过最优点；如果值太小，训练时间可能会显著增加。类比一下，想象你正坐在一架喷客机上，距离机场还有 100 英里。飞机在接近机场时速度会降低，这对应于降低神经网络中的学习率。
+`learning rate` 是一个很小的值，通常在 0.001 到 0.05 之间，它影响加到当前边权重权重上的数值幅度，以便通过这些更新后的权重来训练模型。学习率具有某种节流作用。如果值太大，新的近似值可能会越过最优点；如果值太小，训练时间可能会显著增加。类比一下，想象你正坐在一架喷客机上，距离机场还有 100 英里。飞机在接近机场时速度会降低，这对应于降低神经网络中的学习率。
 
 ## 丢弃率（Dropout Rate）超参数
 
-`dropout rate 是第八个超参数，是一个 0 到 1 之间的小数值，通常在 0.2 到 0.5 之间。将此小数值乘以 100，即可确定在训练过程中每次正向传播中随机忽略的神经元的百分比。例如，如果丢弃率为 0.2，则在前向传播的每一步中都有 20% 的神经元被随机选中并忽略。当神经网络处理一个新的数据点时，都会随机选择一组不同的神经元。注意，神经元并没有从神经网络中移除：它们仍然存在，在正向传播期间忽略它们具有稀释神经网络的作用。在 TF 2 中，Keras 的 `tf.keras.layers.Dropout` 类执行了稀释神经网络的任务。
+`dropout rate` 是第八个超参数，是一个 0 到 1 之间的小数值，通常在 0.2 到 0.5 之间。将此小数值乘以 100，即可确定在训练过程中每次正向传播中随机忽略的神经元的百分比。例如，如果丢弃率为 0.2，则在前向传播的每一步中都有 20% 的神经元被随机选中并忽略。当神经网络处理一个新的数据点时，都会随机选择一组不同的神经元。注意，神经元并没有从神经网络中移除：它们仍然存在，在正向传播期间忽略它们具有稀释神经网络的作用。在 TF 2 中，Keras 的 `tf.keras.layers.Dropout` 类执行了稀释神经网络的任务。
 
 你还可以指定额外的超参数，但它们是可选的，对于理解人工神经网络（ANN）并不是必须的。
 
@@ -4927,19 +4447,15 @@ sigmoid 函数的输出范围在 0 到 1 之间，具有压缩数据值的作用
 
 ## 数据点是如何被正确分类的？
 
-`datapoint 指数据集中的某行数据，它可以是房地产的数据集、缩略图数据集或其他其它类型的数据集。假设我们想为一个包含四个类别（也称为标签）的数据集训练一个 MLP。在这种情况下，输出层也必须包含四个神经元，这些神经元的索引值为 0, 1, 2 和 3（十个神经元的输出层索引值为从 0 到 9）。由于在从倒数第二层过渡到输出层时使用了 softmax 激活函数，输出层中概率之和始终等于 1。
+`datapoint` 指数据集中的某行数据，它可以是房地产的数据集、缩略图数据集或其他其它类型的数据集。假设我们想为一个包含四个类别（也称为标签）的数据集训练一个 MLP。在这种情况下，输出层也必须包含四个神经元，这些神经元的索引值为 0, 1, 2 和 3（十个神经元的输出层索引值为从 0 到 9）。由于在从倒数第二层过渡到输出层时使用了 softmax 激活函数，输出层中概率之和始终等于 1。
 
 找到标签（当前数据点）的独热编码（one-hot encoding）中最大概率的索引和“1”的索引并进行比较。如果索引值相等，则神经网络正确分类了当前数据点（否则，则不匹配）。
 
 例如，MNIST 数据集包含从 0 到 9（包含）的手写数字图像，这意味着用于 MNIST 数据集的神经网络在最后一层有十个输出，每个输出对应一个数字。假设当前有一个包含数字 3 的图像正在通过神经网络。3 的独热编码为 `[0,0,0,1,0,0,0,0,0,0]`，独热编码中具有最大值的索引值也是 3。现在假设在处理数字 3 后，神经网络的输出层为 `[0.05,0.05,0.2,0.6,0.2,0.2,0.1,0.1,0.238]`。正如你所见，最大值的索引值（为 0.6）也是 3。在这种情况下，神经网络正确识别了输入图像。另一点：TF API `tf.argmax()` 用于计算被神经网络正确标记的图像总数。
 
-
-
-
-
 二分类器涉及用于处理任务的两种结果，例如确定垃圾邮件/非垃圾邮件、欺诈/非欺诈或股票上涨/下降（或温度、气压）。预测股票的未来值是一个回归任务，而预测价格会上涨还是下降是一个分类任务。
 
-在机器学习中，多层感知器是用于二分类器监督学习的神经网络（NN）（它也是线性分类器的一种）。然而，单层感知器只能学习线性可分离的模式。事实上，马文·明斯基（Marvin Minsky）和西摩尔·帕珀特（Seymour Papert）在 1969 年写的一本名为*感知机》（Perceptrons）的名书中表明，这类网络无法学习 XOR 函数。然而，双层感知器可以学习 XOR 函数。
+在机器学习中，多层感知器是用于二分类器监督学习的神经网络（NN）（它也是线性分类器的一种）。然而，单层感知器只能学习线性可分离的模式。事实上，马文·明斯基（Marvin Minsky）和西摩尔·帕珀特（Seymour Papert）在 1969 年写的一本名为*感知机*（Perceptrons）的名书中表明，这类网络无法学习 XOR 函数。然而，双层感知器可以学习 XOR 函数。
 
 # CNN 的高层视角
 
@@ -4999,11 +4515,7 @@ ReLU(x) = x if x >=0 and ReLU(x) = 0 if x < 0
 
 如果你对这种技术感到疑惑或怀疑，可以考虑一下压缩算法的类比，它们可以分为两类：有损和无损。如果你还不知道，JPEG 是一种有损算法（即在压缩过程中会丢失数据），但它对于压缩图像效果良好。将最大池化视为有损压缩算法的对应物，也许这会让你信服这种算法的有效性。
 
-然而，你的怀疑是合理的。事实上，杰弗里·辛顿（Geoffrey Hinton，通常被称为“深度学习之父”）提出了一种替代最大池化的方案，称为*胶囊网络*capsule networks）。这种架构更复杂、更难训练，而且超出了本书的范围。
-
-
-
-
+然而，你的怀疑是合理的。事实上，杰弗里·辛顿（Geoffrey Hinton，通常被称为“深度学习之父”）提出了一种替代最大池化的方案，称为*胶囊网络*（capsule networks）。这种架构更复杂、更难训练，而且超出了本书的范围。
 
 Listing 4.2 首先从一些导入语句开始，然后从 MNIST 数据集中填充了训练数据和测试数据。变量 `first_img` 被初始化为 `X_train` 数组中的第一个元素，即训练数据集中的第一张图像。Listing 4.2 中的最后一个代码块显示了第一张图像的像素值。Listing 4.2 的输出如下：
 
@@ -5047,29 +4559,22 @@ mnist = tf.keras.datasets.mnist
 x_train, x_test = x_train / 255.0, x_test / 255.0
 
 model = tf.keras.models.Sequential([
+
   tf.keras.layers.Flatten(input_shape=(28, 28)),
+
   tf.keras.layers.Dense(512, activation='relu'),
+
   tf.keras.layers.Dropout(0.2),
-  tf.keras.layers.Dense(10, activation='softmax')
-])
-
-model.summary()
-
-model.compile(optimizer='adam',
-loss='sparse_categorical_crossentropy',
-metrics=['accuracy'])
-
-model.fit(x_train, y_train, epochs=5)
-
-model.evaluate(x_test, y_test)
 ```
+
+
 
 Listing 4.3 首先从一些导入语句开始，然后将变量 `MNIST` 初始化为内置数据集的引用。接下来，用 MNIST 数据集的相应部分初始化与训练相关和与测试相关的变量，随后对 `x_train` 和 `x_test` 进行缩放变换。
 
 Listing 4.3 的下部分定义了一个非常简单的基于 Keras 的模型，包含由 `tf.keras.layers` 包创建的四层。接下来的代码片段显示了模型的摘要，如下：
 
 | Model: "sequential" | | |
-| --- | --- |
+| --- | --- | --- |
 | Layer (type) | Output Shape | Param |
 | `flatten` | `(None, 784)` | 0 |
 | `dense` | `(None, 512)` | 401920 |
@@ -5100,7 +4605,7 @@ Epoch 5/5
 
 Listing 4.4 展示了 `keras_cnn.py` 的内容，它展示了如何在 TensorFlow 中创建一个基于 Keras 的神经网络来处理 MNIST 数据集。
 
-*列表* 4.4：`keras_cnn.py`
+**列表 4.4：`keras_cnn.py`**
 
 ```python
 import tensorflow as tf
@@ -5108,16 +4613,18 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 mnist = tf.keras.datasets.mnist
-(x_train, y_train),(x_test, y_test) = mnist.load_data()
+
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
 
 # Normalize pixel values: from the range 0-255 to the range 0-1
 x_train, x_test = x_train / 255.0, x_test / 255.0
 
 model = tf.keras.models.Sequential()
-model.add(tf.keras.layers.Conv2D(32,(3,3),activation='relu',input_shape=(28,28,1)))
-model.add(tf.keras.layers.MaxPooling2D((2,2)))
-model.add(tf.keras.layers.Conv2D(64,(3,3),activation='relu'))
-model.add(tf.keras.layers.MaxPooling2D((2,2)))
+
+model.add(tf.keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1)))
+model.add(tf.keras.layers.MaxPooling2D((2, 2)))
+model.add(tf.keras.layers.Conv2D(64, (3, 3), activation='relu'))
+model.add(tf.keras.layers.MaxPooling2D((2, 2)))
 model.add(tf.keras.layers.Flatten())
 model.add(tf.keras.layers.Dense(128, activation='relu'))
 model.add(tf.keras.layers.Dropout(0.5))
@@ -5126,24 +4633,23 @@ model.add(tf.keras.layers.Dense(10, activation='softmax'))
 model.summary()
 
 model.compile(optimizer='adam',
-loss='sparse_categorical_crossentropy',
-metrics=['accuracy'])
+              loss='sparse_categorical_crossentropy',
+              metrics=['accuracy'])
 
 model.fit(x_train, y_train, epochs=1)
+
 test_loss, test_acc = model.evaluate(x_test, y_test)
 print(test_acc)
 
 # predict the label of one image
-test_image = np.expand_dims(test_images[300],axis = 0)
-plt.imshow(test_image.reshape(28,28))
+test_image = np.expand_dims(test_images[300], axis=0)
+plt.imshow(test_image.reshape(28, 28))
 plt.show()
 
 result = model.predict(test_image)
 print("result:", result)
 print("result.argmax():", result.argmax())
 ```
-
-
 
 
 
@@ -5169,7 +4675,7 @@ print("result.argmax():", result.argmax())
 
 # 第 5 章：深度学习：RNNs 和 LSTMs
 
-本章通过讨论 `RNNs`（循环神经网络）和 `LSTMs`（长短期记忆网络）扩展了第 4 章的介绍。虽然本章的大部分包含关于这些架构的描述性内容，但也包含了一些基于 `Keras` 代码示例。因此，如果你还没有这样做，现在是阅读相关附录中 `Keras` 资料的好好时机。
+本章通过讨论 `RNNs`（循环神经网络）和 `LSTMs`（长短期记忆网络）扩展了第 4 章的介绍。虽然本章的大部分包含关于这些架构的描述性内容，但也包含了一些基于 `Keras` 代码示例。因此，如果你还没有这样做，现在是阅读相关附录中 `Keras` 资料的好时机。
 
 本章的第一部分介绍了 `RNNs` 的架构、`BPTT`（随时间反向传播）以及一个简短的基于 `Keras` 代码示例。正如你所看到的，`RNNs` 可以跟踪早期时间段的信息，这使得它们适用于各种任务，包括 `NLP` 任务。
 
@@ -5198,184 +4704,11 @@ print("result.argmax():", result.argmax())
 - `BPTT`（随时间反向传播）
 - 截断 `BPTT`（简单 `RNNs`）
 
-`RNNs`（包括 `LSTMs` 和 `GRUs`）与 `ANNs` 在几个重要方面不同，列如下：
-
-- 状态性（所有 `RNNs`）
-- 反馈机制（所有 `RNNs`）
-- `sigmoid` 或 `tanh` 激活函数
-- 多个门（`LSTMs` 和 `GRUs`）
-- `BPTT`（随时间反向传播）
-- 截断 `BPTT`（简单 `RNNs`）
-
-`RNNs`（包括 `LSTMs` 和 `GRUs`）与 `ANNs` 在几个重要方面不同，列如下：
-
-- 状态性（所有 `RNNs`）
-- 反馈机制（所有 `RNNs`）
-- `sigmoid` 或 `tanh` 激活函数
-- 多个门（`LSTMs` 和 `GRUs`）
-- `BPTT`（随时间反向传播）
-- 截断 `BPTT`（简单 `RNNs`）
-
-`RNNs`（包括 `LSTMs` 和 `GRUs`）与 `ANNs` 在几个重要方面不同，列如下：
-
-- 状态性（所有 `RNNs`）
-- 反馈机制（所有 `RNNs`）
-- `sigmoid` 或 `tanh` 激活函数
-- 多个门（`LSTMs` 和 `GRUs`）
-- `BPTT`（随时间反向传播）
-- 截断 `BPTT`（简单 `RNNs`）
-
-`RNNs`（包括 `LSTMs` 和 `GRUs`）与 `ANNs` 在几个重要方面不同，列如下：
-
-- 状态性（所有 `RNNs`）
-- 反馈机制（所有 `RNNs`）
-- `sigmoid` 或 `tanh` 激活函数
-- 多个门（`LSTMs` 和 `GRUs`）
-- `BPTT`（随时间反向传播）
-- 截断 `BPTT`（简单 `RNNs`）
-
-`RNNs`（包括 `LSTMs` 和 `GRUs`）与 `ANNs` 在几个重要方面不同，列如下：
-
-- 状态性（所有 `RNNs`）
-- 反馈机制（所有 `RNNs`）
-- `sigmoid` 或 `tanh` 激活函数
-- 多个门（`LSTMs` 和 `GRUs`）
-- `BPTT`（随时间反向传播）
-- 截断 `BPTT`（简单 `RNNs`）
-
-`RNNs`（包括 `LSTMs` 和 `GRUs`）与 `ANNs` 在几个重要方面不同，列如下：
-
-- 状态性（所有 `RNNs`）
-- 反馈机制（所有 `RNNs`）
-- `sigmoid` 或 `tanh` 激活函数
-- 多个门（`LSTMs` 和 `GRUs`）
-- `BPTT`（随时间反向传播）
-- 截断 `BPTT`（简单 `RNNs`）
-
-`RNNs`（包括 `LSTMs` 和 `GRUs`）与 `ANNs` 在几个重要方面不同，列如下：
-
-- 状态性（所有 `RNNs`）
-- 反馈机制（所有 `RNNs`）
-- `sigmoid` 或 `tanh` 激活函数
-- 多个门（`LSTMs` 和 `GRUs`）
-- `BPTT`（随时间反向传播）
-- 截断 `BPTT`（简单 `RNNs`）
-
-`RNNs`（包括 `LSTMs` 和 `GRUs`）与 `ANNs` 在几个重要方面不同，列如下：
-
-- 状态性（所有 `RNNs`）
-- 反馈机制（所有 `RNNs`）
-- `sigmoid` 或 `tanh` 激活函数
-- 多个门（`LSTMs` 和 `GRUs`）
-- `BPTT`（随时间反向传播）
-- 截断 `BPTT`（简单 `RNNs`）
-
-`RNNs`（包括 `LSTMs` 和 `GRUs`）与 `ANNs` 在几个重要方面不同，列如下：
-
-- 状态性（所有 `RNNs`）
-- 反馈机制（所有 `RNNs`）
-- `sigmoid` 或 `tanh` 激活函数
-- 多个门（`LSTMs` 和 `GRUs`）
-- `BPTT`（随时间反向传播）
-- 截断 `BPTT`（简单 `RNNs`）
-
-`RNNs`（包括 `LSTMs` 和 `GRUs`）与 `ANNs` 在几个重要方面不同，列如下：
-
-- 状态性（所有 `RNNs`）
-- 反馈机制（所有 `RNNs`）
-- `sigmoid` 或 `tanh` 激活函数
-- 多个门（`LSTMs` 和 `GRUs`）
-- `BPTT`（随时间反向传播）
-- 截断 `BPTT`（简单 `RNNs`）
-
-`RNNs`（包括 `LSTMs` 和 `GRUs`）与 `ANNs` 在几个重要方面不同，列如下：
-
-- 状态性（所有 `RNNs`）
-- 反馈机制（所有 `RNNs`）
-- `sigmoid` 或 `tanh` 激活函数
-- 多个门（`LSTMs` 和 `GRUs`）
-- `BPTT`（随时间反向传播）
-- 截断 `BPTT`（简单 `RNNs`）
-
-`RNNs`（包括 `LSTMs` 和 `GRUs`）与 `ANNs` 在几个重要方面不同，列如下：
-
-- 状态性（所有 `RNNs`）
-- 反馈机制（所有 `RNNs`）
-- `sigmoid` 或 `tanh` 激活函数
-- 多个门（`LSTMs` 和 `GRUs`）
-- `BPTT`（随时间反向传播）
-- 截断 `BPTT`（简单 `RNNs`）
-
-`RNNs`（包括 `LSTMs` 和 `GRUs`）与 `ANNs` 在几个重要方面不同，列如下：
-
-- 状态性（所有 `RNNs`）
-- 反馈机制（所有 `RNNs`）
-- `sigmoid` 或 `tanh` 激活函数
-- 多个门（`LSTMs` 和 `GRUs`）
-- `BPTT`（随时间反向传播）
-- 截断 `BPTT`（简单 `RNNs`）
-
-`RNNs`（包括 `LSTMs` 和 `GRUs`）与 `ANNs` 在几个重要方面不同，列如下：
-
-- 状态性（所有 `RNNs`）
-- 反馈机制（所有 `RNNs`）
-- `sigmoid` 或 `tanh` 激活函数
-- 多个门（`LSTMs` 和 `GRUs`）
-- `BPTT`（随时间反向传播）
-- 截断 `BPTT`（简单 `RNNs`）
-
-`RNNs`（包括 `LSTMs` 和 `GRUs`）与 `ANNs` 在几个重要方面不同，列如下：
-
-- 状态性（所有 `RNNs`）
-- 反馈机制（所有 `RNNs`）
-- `sigmoid` 或 `tanh` 激活函数
-- 多个门（`LSTMs` 和 `GRUs`）
-- `BPTT`（随时间反向传播）
-- 截断 `BPTT`（简单 `RNNs`）
-
-`RNNs`（包括 `LSTMs` 和 `GRUs`）与 `ANNs` 在几个重要方面不同，列如下：
-
-- 状态性（所有 `RNNs`）
-- 反馈机制（所有 `RNNs`）
-- `sigmoid` 或 `tanh` 激活函数
-- 多个门（`LSTMs` 和 `GRUs`）
-- `BPTT`（随时间反向传播）
-- 截断 `BPTT`（简单 `RNNs`）
-
-`RNNs`（包括 `LSTMs` 和 `GRUs`）与 `ANNs` 在几个重要方面不同，列如下：
-
-- 状态性（所有 `RNNs`）
-- 反馈机制（所有 `RNNs`）
-- `sigmoid` 或 `tanh` 激活函数
-- 多个门（`LSTMs` 和 `GRUs`）
-- `BPTT`（随时间反向传播）
-- 截断 `BPTT`（简单 `RNNs`）
-
-`RNNs`（包括 `LSTMs` 和 `GRUs`）与 `ANNs` 在几个重要方面不同，列如下：
-
-- 状态性（所有 `RNNs`）
-- 反馈机制（所有 `RNNs`）
-- `sigmoid` 或 `tanh` 激活函数
-- 多个门（`LSTMs` 和 `GRUs`）
-- `BPTT`（随时间反向传播）
-- 截断 `BPTT`（简单 `RNNs`）
-
-`RNNs`（包括 `LSTMs` 和 `GRUs`）与 `ANNs` 在几个重要方面不同，列如下：
-
-- 状态性（所有 `RNNs`）
-- 反馈机制（所有 `RNNs`）
-- `sigmoid` 或 `tanh` 激活函数
-- 多个门（`LSTMs` 和 `GRUs`）
-- `BPTT`（随时间反向传播）
-- 截断 `BPTT`（简单 `RNNs`）
-
 ### RNN 的结构
 
 考虑图 5.1 中的 RNN。假设输入序列为 `x1, x2, x3, ..., x(t)`，且隐藏状态序列为 `h1, h2, h3, ..., h(t-1), h(t)`。
 
 在时间段 `t` 时，输入是 `h(t-1)` 和 `x(t)` 的组合，之后应用激活函数。
-
-` `` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` `。
 
 首先，`ANNs` 和 `CNNs` 都是“无状态的”，而 `RNNs` 是“有状态的”，因为它们具有内部状态。
 
@@ -5387,10 +4720,6 @@ print("result.argmax():", result.argmax())
 
 好消息是，还有另一种克服梯度爆炸和梯度消失问题的方法，这涉及本章稍后讨论的 `LSTMs`。
 
-
-
-
-
 # 使用 RNN 和 Keras
 
 Listing 5.1 显示了 `keras_rnn_model.py` 的内容，它展示了如何创建一个基于 Keras 的简单 RNN 模型。
@@ -5401,26 +4730,23 @@ Listing 5.1 显示了 `keras_rnn_model.py` 的内容，它展示了如何创建�
 import tensorflow as tf
 
 timesteps = 30
-
 input_dim = 12
-
 # number of units in RNN cell
 units = 512
-
 # number of classes to be identified
 n_classes = 5
 
 ## Keras Sequential model with RNN and Dense layer
 model = tf.keras.models.Sequential()
 model.add(tf.keras.layers.SimpleRNN(units=units,
-dropout=0.2,
-input_shape=(timesteps, input_dim)))
+                                    dropout=0.2,
+                                    input_shape=(timesteps, input_dim)))
 model.add(tf.keras.layers.Dense(n_classes, activation='softmax'))
 
 # model loss function and optimizer
 model.compile(loss='categorical_crossentropy',
-optimizer=tf.keras.optimizers.Adam(),
-metrics=['accuracy'])
+              optimizer=tf.keras.optimizers.Adam(),
+              metrics=['accuracy'])
 model.summary()
 ```
 
@@ -5430,25 +4756,24 @@ Listing 5.1 的后续部分创建了一个基于 Keras 的模型，该模型与�
 
 ```python
 model.add(tf.keras.layers.SimpleRNN(units=units,
-dropout=0.2,
-input_shape=(timesteps, input_dim)))
+                                    dropout=0.2,
+                                    input_shape=(timesteps, input_dim)))
 ```
 
 前面的代码片段添加了 `SimpleRNN` 类的实例以及在之前代码块中定义的变量。
 
 代码的最后部分调用了 `compile()` 方法，随后调用 `summary()` 方法来显示模型的结构。
 
-运行 Listing 5.1 中的代码以查看输出输出：
+运行 Listing 5.1 中的代码以查看输出：
 
-| Model: "sequential" |
-| --- |
-| Layer (type) || Output Shape || Param # |
-| simple_rnn (SimpleRNN) || (None, 512) || 268800 |
-| dense (Dense) || (None, 5) || 2565 |
-
-Total params: 271,365
-Trainable params: 271,365
-Non-trainable params: 0
+| Model: "sequential" | | | |
+| --- | --- | --- | --- |
+| Layer (type) | Output Shape | Param # |
+| simple_rnn (SimpleRNN) | (None, 512) | 268800 |
+| dense (Dense) | (None, 5) | 2565 |
+| **Total params: 271,365** | | |
+| **Trainable params: 271,365** | | |
+| **Non-trainable params: 0** | | |
 
 现在你已经看到在 Keras 中创建一个基于 RNN 的模型是多么简单，让我们来看一个 Keras RNN 模型示例，该模型将在 MNIST 数据集上进行训练，这是下一节的主题。
 
@@ -5473,14 +4798,19 @@ mnist = tf.keras.datasets.mnist
 num_labels = len(np.unique(y_train))
 
 # make sure that all labels are one-hot encoded:
+```
+
+
+
+```python
 y_train = tf.keras.utils.to_categorical(y_train)
 y_test = tf.keras.utils.to_categorical(y_test)
 
-# resize the training and test data x_train and x-test
+# resize the training and test data x_train and x_test
 # and divide pixel values by 255 (normalization)
 image_size = x_train.shape[1]
-x_train = np.reshape(x_train,[-1, image_size, image_size])
-x_test = np.reshape(x_test,[-1, image_size, image_size])
+x_train = np.reshape(x_train, [-1, image_size, image_size])
+x_test = np.reshape(x_test, [-1, image_size, image_size])
 x_train = x_train.astype('float32') / 255
 x_test = x_test.astype('float32') / 255
 
@@ -5491,14 +4821,14 @@ units = 256
 dropout = 0.2
 
 # create a Keras RNN model with:
-# 256 units 
-# input is 28-dimensional vector 
+# 256 units
+# input is 28-dimensional vector
 # having 28 timesteps
 # with a few simple layers
 model = tf.keras.models.Sequential()
 model.add(tf.keras.layers.SimpleRNN(units=units,
-dropout=dropout,
-input_shape=input_shape))
+                                    dropout=dropout,
+                                    input_shape=input_shape))
 model.add(tf.keras.layers.Dense(num_labels))
 model.add(tf.keras.layers.Activation('softmax'))
 model.summary()
@@ -5506,8 +4836,8 @@ tf.keras.utils.plot_model(model, to_file='my-rnn-mnist.png', show_shapes=True)
 
 ## loss function and optimizer
 model.compile(loss='categorical_crossentropy',
-optimizer='sgd',
-metrics=['accuracy'])
+              optimizer='sgd',
+              metrics=['accuracy'])
 
 # train the network:
 model.fit(x_train, y_train, epochs=5, batch_size=batch_size)
@@ -5517,14 +4847,9 @@ loss, acc = model.evaluate(x_test, y_test)
 print("\nTest accuracy: %.1f%%" % (acc*100))
 ```
 
-
-
-
-
 ```python
 n_inputs = 3 # 每个时间单元的输入数量
 n_neurons = 5 # 隐藏单元数量
-
 X_batch = np.array([
     # t = 0 t = 1
     [[0, 1, 2], [9, 8, 7]], # 实例 0
@@ -5538,22 +4863,20 @@ seq_length_batch = np.array([2, 1, 2, 2])
 
 X = tf.placeholder(dtype=tf.float32, shape=[None, n_steps, n_inputs])
 seq_length = tf.placeholder(tf.int32, [None])
-
 basic_cell = tf.nn.rnn_cell.BasicRNNCell(num_units=n_neurons)
-
 outputs, states = tf.nn.dynamic_rnn(basic_cell, X,
-    sequence_length=seq_length, dtype=tf.float32)
+                                    sequence_length=seq_length, dtype=tf.float32)
 
 with tf.Session() as sess:
     sess.run(tf.global_variables_initializer())
     outputs_val, states_val = sess.run([outputs, states],
-        feed_dict={X:X_batch, seq_length:seq_length_batch})
+                                       feed_dict={X: X_batch, seq_length: seq_length_batch})
     print("X_batch shape:", X_batch.shape) # (4,2,3)
     print("outputs_val shape:", outputs_val.shape) # (4,2,5)
     print("states_val shape:", states_val.shape) # (4,5)
-    print("outputs_val:",outputs_val)
+    print("outputs_val:", outputs_val)
     print("----------------------------\n")
-    print("states_val: ",states_val)
+    print("states_val: ", states_val)
 ```
 
 ###########################################################
@@ -5563,75 +4886,31 @@ with tf.Session() as sess:
 # 对于短序列，state = output[0]
 ###########################################################
 
-Listing 5.3 首先将 `n_steps`（时间步数）、`n_inputs`（输入数量）和 `n_neurons`（神经元数量）分别初始化为 2、3 和 5。
+## Listing 5.3 代码解析
+
+`Listing 5.3` 首先将 `n_steps`（时间步数）、`n_inputs`（输入数量）和 `n_neurons`（神经元数量）分别初始化为 2、3 和 5。
 
 接下来，NumPy 数组 `X_batch` 是用整数初始化的 4x2x3 数组。从注释行可以看出，第一列值对应时间步 0，第二列值对应时间步 1。你也可以将 `X_batch` 中的每行数据看作是两个时间步的数据实例。
 
 接着，变量 `seq_length_batch` 是一个整数一维向量，其中每个值指定了在全零向量左侧出现的时间步数。如你所示，该向量对于实例 0、2 和 3 的值为 2，对于实例 1 的值为 0。
 
-Listing 5.3 的下部分定义了占位符 `X`，它可以容纳任意数量的形状为 `[n_steps, n_inputs]` 的数组。现在我们准备好定义一个 RNN 单元并指定它的输出和状态，如下所示：
+`Listing 5.3` 的下部分定义了占位符 `X`，它可以容纳任意数量的形状为 `[n_steps, n_inputs]` 的数组。现在我们准备好定义一个 RNN 单元并指定它的输出和状态，如下所示：
 
 ```python
 basic_cell = tf.nn.rnn_cell.BasicRNNCell(num_units=n_neurons)
 outputs, states = tf.nn.dynamic_rnn(basic_cell, X,
-    sequence_length=seq_length, dtype=tf.float32)
+                                    sequence_length=seq_length, dtype=tf.float32)
 ```
 
-需要记住的关键点是，最右侧隐藏单元的最终输出值是传递给下一个神经元的值。运行 Listing 5.3 中的代码以查看以下输出，其中感兴趣的值以粗体显示：images/pg192.jpg
+需要记住的关键点是，最右侧隐藏单元的最终输出值是传递给下一个神经元的值。运行 `Listing 5.3` 中的代码以查看以下输出，其中感兴趣的值以粗体显示：`images/pg192.jpg`
 
-在之前的输出中，注意加粗显示的行行数为 2, 1, 2 和 2，这与 `seq_length_batch` 的值完全相同。如你所见，这些高亮行（同样以加粗显示）出现在 `states_val` 数组中。Listing 5.3 是一个非常小且人工的 RNN 示例，希望这个例子能让你更好地理解其内部机制。RNN 有许多变体，你可以在这里阅读其中一些：[`en.wikipedia.org/wiki/Recurrent_neural_network`](https://en.wikipedia.org/wiki/Recurrent_neural_network)
+在之前的输出中，注意加粗显示的行行数为 2, 1, 2 和 2，这与 `seq_length_batch` 的值完全相同。如你所见，这些高亮行（同样以加粗显示）出现在 `states_val` 数组中。`Listing 5.3` 是一个非常小且人工的 RNN 示例，希望这个例子能让你更好地理解其内部机制。RNN 有许多变体，你可以在这里阅读其中一些：[`en.wikipedia.org/wiki/Recurrent_neural_network`](https://en.wikipedia.org/wiki/Recurrent_neural_network)
 
-### 什么是 LSTM？
-
-LSTM 是一种特殊的 RNN，它们非常适用于许多用例，包括自然语言处理（NLP）、语音识别和手写识别。LSTM 非常擅长处理长期依赖，这指的是相关信息与所需信息位置之间的距离。当文档某部分的信息需要“链接”到文档更远位置的信息时，就会出现这种情况。
-
-LSTM 开发于 1997 年，其准确性能超过了最先进的算法。LSTM 也非常擅长处理长期依赖，这指的是相关信息与所需信息位置之间的距离。（注：此处原文重复，翻译已遵循原文）
-
-此处此处处此处处此处处此处处处：[`en.wikipedia.org/wiki/Recurrent_neural_network`](https://en.wikipedia.org/wiki/Recurrent_neural_network)
-
-### 什么是 LSTM？
-
-LSTM 是一种特殊的 RNN，它们非常适用于许多用例，包括自然语言处理（NLP）、语音识别和手写识别。LSTM 非常擅长处理长期依赖，这指的是相关信息与所需信息位置之间的距离。当文档某部分的信息需要“链接”到文档更远位置的信息时，就会出现这种情况。
-
-LSTM 开发于 1997 年，其准确性能超过了最先进的算法。LSTM 也非常擅长处理长期依赖，这指的是相关信息与所需信息位置之间的距离。（注：此处原文重复，翻译已遵循原文）
-
-此处此处处此处处处处处处处处处：当文档某部分的信息需要“链接”到文档更远位置的信息时，就会出现这种情况。
-
-LSTM 开发于 1997 年，其准确性能超过了最先进的算法。LSTM 也非常擅长处理长期依赖，这指的是相关信息与所需信息位置之间的距离。（注：此处原文重复，翻译已遵循原文）
-
-此处此处处此处处处处处处处处处处处：当文档某部分的信息需要“链接”到文档更远位置的信息时，就会出现这种情况。
-
-LSTM 开发于 1997 年，其准确性能超过了最先进的算法。LSTM 也非常擅长处理长期依赖，这指的是相关信息与所需信息位置之间的距离。（注：此处原文重复，翻译已遵循原文）
-
-*(注：由于提供的待翻译文本存在大量重复和乱码，以上翻译严格遵循“不要重复输出原文”的原则，对核心逻辑部分进行了完整翻译。)*
-
-Listing 5.3 首先将 `n_steps`（时间步数）、`n_inputs`（输入数量）和 `n_neurons`（神经元数量）分别初始化为 2、3 和 5。
-
-接下来，NumPy 数组 `X_batch` 是用整数初始化的 4x2x3 数组。从注释行可以看出，第一列值对应时间步 0，第二列值对应时间步 1。你也可以将 `X_batch` 中的每行数据看作是两个时间步的数据实例。
-
-接着，变量 `seq_length_batch` 是一个整数一维向量，其中每个值指定了在全零向量左侧出现的时间步数。如你所示，该向量对于实例 0、2 和 3 的值为 2，对于实例 1 的值为 0。
-
-Listing 5.3 的下部分定义了占位符 `X`，它可以容纳任意数量的形状为 `[n_steps, n_inputs]` 的数组。现在我们准备好定义一个 RNN 单元并指定它的输出和状态，如下所示：
-
-```python
-basic_cell = tf.nn.rnn_cell.BasicRNNCell(num_units=n_neurons)
-outputs, states = tf.nn.dynamic_rnn(basic_cell, X,
-    sequence_length=seq_length, dtype=tf.float32)
-```
-
-需要记住的关键点是，最右侧隐藏单元的最终输出值是传递给下一个神经元的值。运行 Listing 5.3 中的代码以查看以下输出，其中感兴趣的值以粗体显示：images/pg192.jpg
-
-在之前的输出中，注意加粗显示的行行数为 2, 1, 2 和 2，这与 `seq_length_batch` 的值完全相同。如你所见，这些高亮行（同样以加粗显示）出现在 `states_val` 数组中。Listing 5.3 是一个非常小且人工的 RNN 示例，希望这个例子能让你更好地理解其内部机制。RNN 有许多变体，你可以在这里阅读其中一些：[`en.wikipedia.org/wiki/Recurrent_neural_network`](https://en.wikipedia.org/wiki/Recurrent_neural_network)
-
-### 什么是 LSTM？
+## 什么是 LSTM？
 
 LSTM 是一种特殊的 RNN，它们非常适用于许多用例，包括自然语言处理（NLP）、语音识别和手写识别。LSTM 非常擅长处理长期依赖，这指的是相关信息与所需信息位置之间的距离。当文档某部分的信息需要“链接”到文档更远位置的信息时，就会出现这种情况。
 
 LSTM 开发于 1997 年，其准确性能超过了最先进的算法。LSTM 也非常擅长处理长期依赖，这指的是相关信息与所需信息位置之间的距离。
-
-
-
-
 
 [长短期记忆网络](https://en.wikipedia.org/wiki/Long_short-term_memory#cite-note-lstm1997-1)
 
@@ -5657,7 +4936,7 @@ h(t) = o(t) * tanh(c(t))
 
 LSTM 的最终状态是一个一维向量，包含了 LSTM 中所有其他层的输出。如果你有一个包含多个 LSTM 的模型，则给定 LSTM 的最终状态向量将成为该模型中下一个 LSTM 的输入。
 
-### LSTM 超参数调优
+## LSTM 超参数调优
 
 LSTM 同样容易发生过拟合，如果你正在手动优化 LSTM 的超参数，这里是一些考虑性因素：
 
@@ -5673,11 +4952,9 @@ LSTM 同样容易发生过拟合，如果你正在手动优化 LSTM 的超参数
 
 进行在线搜索以获取有关上述列表中优化器的更多信息。
 
-### 使用 TensorFlow 和 LSTM（可选）
+## 使用 TensorFlow 和 LSTM（可选）
 
-列表 5.4 显示了 `dynamic_lstm_2TP.py` 的内容，该文件说明了如何使用 TensorFlow 1.x 代码创建一个简单的 LSTM 模型。
-
-*列表* 5.4: `dynamic_lstm_2TP.py`
+**列表 5.4** 显示了 `dynamic_lstm_2TP.py` 的内容，该文件说明了如何使用 TensorFlow 1.x 代码创建一个简单的 LSTM 模型。
 
 ```python
 import tensorflow as tf
@@ -5696,8 +4973,9 @@ X_batch = np.array([
 ])
 
 seq_length_batch = np.array([2, 1, 2, 2])
-X = tf.placeholder(dtype=tf.float32,shape=[None,n_steps, n_inputs])
-seq_length = tf.placeholder(dtype=tf.int32,shape=[None])
+
+X = tf.placeholder(dtype=tf.float32, shape=[None, n_steps, n_inputs])
+seq_length = tf.placeholder(dtype=tf.int32, shape=[None])
 basic_cell = tf.rnn.LSTMCell(units=n_neurons)
 outputs, states = tf.rnn.dynamic_rnn(basic_cell, X, sequence_length=seq_length)
 
@@ -5710,13 +4988,11 @@ with tf.Session() as sess:
 
 
 
-
-
 AE 也可以用于特征提取，因为它们产生的结果比 `PCA` 更好。请记住，AE 是针对特定数据的，这意味着它们只适用于相似的数据。然而，它们与图像压缩有所不同（且在数据压缩方面表现平平）。例如，一个在人脸上训练的自动编码器在处理树木图片时效果很差。总之，`AE` 涉及以下内容：
 
 * 将输入“压缩”到更小的层
-* 为一组数据学习表示表示
-* 通常用于降维 (`PCA`)
+* 为一组数据学习表示
+* 通常用于降维（`PCA`）
 * 只保留中间的压缩层
 
 作为一个高层面的示例，考虑一张 10x10 的图像（100 个像素），以及一个拥有 100 个神经元（10x10 像素）、一个具有 50 个神经元的隐藏层以及一个具有 100 个神经元的输出层的 `AE`。因此，该 `AE` 将 100 个神经元压缩到 50 个神经元。
@@ -5733,13 +5009,13 @@ AE 也可以用于特征提取，因为它们产生的结果比 `PCA` 更好。�
 
 以下网站包含了各种自动编码器，包括在本节中提到的：
 
-*[`www.google.com/search?sa=X&q=Autoencoder&tbm=isch&source=univ&ved=2ahUKEwjo-8zRrIniAhUGup4KHVgvC10QiR56BAgMEBY&biw=967&bih=672`](https://www.google.com/search?sa=X&q=Autoencoder&tbm=isch&source=univ&ved=2ahUKEwjo-8zRrIniAhUGup4KHVgvC10QiR56BAgMEBY&biw=967&bih=672)*
+* [`www.google.com/search?sa=X&q=Autoencoder&tbm=isch&source=univ&ved=2ahUKEwjo-8zRrIniAhUGup4KHVgvC10QiR56BAgMEBY&biw=967&bih=672`](https://www.google.com/search?sa=X&q=Autoencoder&tbm=isch&source=univ&ved=2ahUKEwjo-8zRrIniAhUGup4KHVgvC10QiR56BAgMEBY&biw=967&bih=672)
 
 在线搜索关于 `AE` 及其相关用例的代码样本和更多细节。
 
 ### 自动编码器与 PCA
 
-如果自动编码器涉及线性激活或仅有一个 sigmoid 隐藏层，那么自动编码器的最优解与主成分分析 (`PCA`) 密切相关。
+如果自动编码器涉及线性激活或仅有一个 sigmoid 隐藏层，那么自动编码器的最优解与主成分分析（`PCA`）密切相关。
 
 一个具有大小为 `p` 的单隐藏层（其中 `p` 小于输入大小）的自动编码器，其权重跨越与前 `p` 个主成分跨越相同的向量子空间。
 
@@ -5756,10 +5032,6 @@ AE 也可以用于特征提取，因为它们产生的结果比 `PCA` 更好。�
 以下网站包含了各种自动编码器，包括在本节中提到的：
 
 `variational autoencoder`
-
-
-
-
 
 GAN 包含两个主要部分：`generator`（生成器）和 `discriminator`（判别器）。生成器可以采用类似于 `CNN` 的架构用于生成图像，而判别器可以采用类似于 `CNN` 的架构来检测（生成器提供的）图像是真实的还是伪造的。类比来说，生成器类比制造伪币的人，而判别器类比于试图区分有效货币和伪币的执法人员。
 
@@ -5807,7 +5079,7 @@ def build_gan(generator, discriminator):
     gan.add(discriminator)
     # 编译 gan
     opt = tf.keras.optimizers.Adam(lr=0.0002, beta_1=0.5)
-    gan.compile(loss='binary_crossentropy', optimizer=opt) 
+    gan.compile(loss='binary_crossentropy', optimizer=opt)
     return gan
 
 gen = build_generator(...)
@@ -5825,7 +5097,6 @@ GAN 使用生成器和判别器进行初始化，这两者都是该函数的参�
 
 ```python
 dis = build_discriminator(...)
-
 gen_model = tf.keras.models.Sequential()
 gen_model.add(tf.keras.layers.Dense(...))
 gen_model.add(tf.keras.layers.LeakyReLU(alpha=0.2))
@@ -5873,9 +5144,6 @@ GAN 优于 VAE，但它们也难以处理，并且需要大量的数据和调优
 
 本章的第一部分提供了 TensorFlow.js 的快速介绍，以及它的一些功能。你将学习在 TensorFlow.js 中创建、编译和训练机器学习模型所需的 TensorFlow.js API，以及用于预测的 API。你将看到使用 TensorFlow.js 在 HTML 页面上执行线性回归的示例。
 
-
-
-
 在阅读本章之前，请记住几点细节。首先，你需要对 `HTML` 和 `JavaScript` 有基础的了解。你还需要熟悉代码示例中使用的 `async` 和 `await` 关键字。本章没有为这些主题提供任何类似教程的内容，但你可以轻松地在网上找到许多解释 `HTML` 和 `JavaScript` 的在线教程。
 
 其次，我们假设你已经阅读了前面章节中关于线性回归的内容，以及附录中与 Keras 相关的材料。具体来说，你至少对激活函数、优化器、`MSE`、`SGD`、损失函数和指标有基本的了解，这些内容在第 4 章中都有讨论。
@@ -5892,7 +5160,7 @@ https://js.tensorflow.org/api/latest/
 
 某些修改是直观的。具体来说，当前版本的 `TensorFlow.js` 使用此类类型的代码：
 
-```
+```javascript
 import * as tf from @tensorflow/tfjs
 ```
 
@@ -5904,7 +5172,7 @@ import {max, div, mul, depthToSpace} from @tensorflow/tjfs
 
 `TensorFlow.js` 利用 `WebGL` 的力量在浏览器会话中训练模型。某些方法返回 `Promise`，而某些方法是同步的。
 
-此外，还有两个重要的 API：`tf.tidy()` 方法和 `tf.dispose()` 方法。`tf.tidy()` 方法本质上充当垃圾回收器，这在 `WebGL` 中是不可用的。`tf.dispose()` 方法对包含张的对象执行类似的功能。
+此外，还有两个重要的 API：`tf.tidy()` 方法和 `tf.dispose()` 方法。`tf.tidy()` 方法本质上充当垃圾回收器，这在 `WebGL` 中是不可用的。`tf.dispose()` 方法对包含张量的对象执行类似的功能。
 
 顺便提，`TensorFlow.js` API 的一个方便之处是，包名与 TensorFlow 中对应的 API 是并行的。例如，TensorFlow 包 `tf.keras.layers` 对应 `TensorFlow.js` 包 `tf.layers`。因此，`TensorFlow.js` API `tf.layers.dense` 对应 TensorFlow 中的 API `tf.keras.layers.Dense`。
 
@@ -5935,7 +5203,7 @@ https://www.tensorflow.org/js/guide/conversion
 Listing 6.1: tfjs-hello.html
 
 ```html
-<html
+<html>
 <head>
 <!-- 加载 TensorFlow.js -->
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
@@ -5946,9 +5214,9 @@ Hello
 </html>
 ```
 
-[Listing 6.1] 包含一个引用 `TensorFlow.js` 代码的 `<script>` 元素，该代码在示例中没有任何作用。Web 页面显示单词 Hello，没有其他内容。
 
-## 在 TensorFlow.js 中处理张量
+
+# 在 TensorFlow.js 中处理张量
 
 `TensorFlow.js` 提供了几种用于处理张量的方法。`tensor()` 方法支持多维数据点，但没有标明维度。
 
@@ -5974,16 +5242,16 @@ https://www.tensorflow.org/js/guide/conversion
 
 另一种可能性利用迁移学习：你从一个之前训练过的模型开始，然后使用自己的数据进行一些（希望是极少的）额外训练。
 
-注意：本章中的代码示例涉及在浏览器中开发的模型（并在 Firefox 75.0.1 版本中测试过）。
+> **注意**：本章中的代码示例涉及在浏览器中开发的模型（并在 Firefox 75.0.1 版本中测试过）。
 
 # 带有 TensorFlow.js 的简单 HTML Web 页面
 
 [Listing 6.1] 显示了 `tfjs-hello.html` 的内容，它说明了如何引用 `TensorFlow.js` 相关的 `JavaScript` 代码并显示简单的消息。
 
-Listing 6.1: tfjs-hello.html
+**Listing 6.1: tfjs-hello.html**
 
 ```html
-<html
+<html>
 <head>
 <!-- 加载 TensorFlow.js -->
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
@@ -5995,60 +5263,10 @@ Hello
 ```
 
 [Listing 6.1] 包含一个引用 `TensorFlow.js` 代码的 `<script>` 元素，该代码在示例中没有任何作用。Web 页面显示单词 Hello，没有其他内容。
-
-## 在 TensorFlow.js 中处理张量
-
-`TensorFlow.js` 提供了几种用于处理张量的方法。`tensor()` 方法支持多维数据点，但没有标明维度。
-
-此外，还有两个重要的 API：`tf.tidy()` 方法和 `tf.dispose()` 方法。`tf.tidy()` 方法本质上类似于垃圾回收器，这在 `WebGL` 中是不可用的。`tf.dispose()` 方法对包含张量的对象执行类似的功能。
-
-此外，`TensorFlow.js` API 的方便方面之一是包名与 TensorFlow 中对应的 API 是并行的。例如，TensorFlow 包 `tf.keras.layers` 对应 `TensorFlow.js` 包 `tf.layers`。因此，`TensorFlow.js` API `tf.layers.dense` 对应 TensorFlow 中的 API `tf.keras.layers.Dense`。
-
-虽然现在没有必要，但值得花时间浏览此 URL 中的 `TensorFlow.js` API 详细列表：
-
-https://js.tensorflow.org/api/latest/
-
-# TensorFlow.js 中的 ML 模型
-
-`TensorFlow.js` 为你提供了在浏览器中处理 TensorFlow 模型的几种选择：
-
-* 导入训练过的模型
-* 重新训练模型
-* 在浏览器中创建模型
-
-如果你已经有一个 TensorFlow 模型，可以将其转换为 `TensorFlow.js` 格式，然后在 Web 浏览器中使用该模型。模型转换详情在此：
-
-https://www.tensorflow.org/js/guide/conversion
-
-另一种可能性利用迁移学习：你从一个之前训练过的模型开始，然后使用自己的数据进行一些（希望是极少的）额外训练。
-
-注意：本章中的代码示例涉及在浏览器中开发的模型（并在 Firefox 75.0.1 版本中测试过）。
-
-# 带有 TensorFlow.js 的简单 HTML Web 页面
-
-[Listing 6.1] 显示了 `tfjs-hello.html` 的内容，它说明了如何引用 `TensorFlow.js` 相关的 `JavaScript` 代码并显示简单的消息。
-
-Listing 6.1: tfjs-hello.html
-
-```html
-<html
-<head>
-<!-- 加载 TensorFlow.js -->
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
-</head>
-<body>
-Hello
-</body>
-</html>
-```
-
-[Listing 6.1] 包含一个引用 `TensorFlow.js` 代码的 `<script>` 元素，该代码在示例中没有任何作用。Web 页面显示单词 Hello，没有其他内容。
-
-## 在 TensorFlow.js 中处理张量
 
 # TensorFlow 在 TensorFlow.js 中的 API
 
-本节包含了一些用于定义机器学习学习模型的 TensorFlow.js 中的 API。
+本节包含了一些用于定义机器学习模型的 TensorFlow.js 中的 API。
 
 让我们看看如何实现前面的步骤，从 `TensorFlow.js` 最简单的模型定义开始：
 
@@ -6079,12 +5297,9 @@ const ys = tf.tensor2d([3,6,9,12,15,18,21,24],[8,1]);
 model.fit(xs, ys);
 ```
 
-
-
-
 此时，我们的模型已经使用训练数据完成了训练，因此我们可以使用这段代码段进行预测：
 
-```
+```javascript
 model.predict(tf.tensor2d([10], [1, 1])).print()
 ```
 
@@ -6096,10 +5311,10 @@ model.predict(tf.tensor2d([10], [1, 1])).print()
 
 列表 6.2 显示了 `tfjs-linreg1.html` 的内容，它演示了如何使用 TensorFlow.js 执行线性回归。
 
-*列表* 6.2: tfjs-linreg1.html
+**Listing 6.2: tfjs-linreg1.html**
 
 ```html
-<html
+<html>
 <head>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
 <title>Hello from TensorFlowJS!</title>
@@ -6153,22 +5368,23 @@ list1.appendChild(item3);
 }
 LinearRegression();
 </script>
+</ul>
 </body>
 </html>
 ```
 
 列表 6.2 以一个引用 TensorFlow.js 代码的 `<script>` 元素开头，随后是一个包含四个主要部分的 `<body>` 元素，如下：
 
-// 1) 定义模型：
-// 2) 编译模型：
-// 3) 拟合/训练模型：
-// 4) 进行一些预测
+1. 定义模型
+2. 编译模型
+3. 拟合/训练模型
+4. 进行一些预测
 
 第一部分将变量 `model` 定义为 TensorFlow 的 Sequential 模型实例，它类似于 `tf.keras.layers.Sequential`（在附录中讨论）。接下来，`model` 变量通过 TensorFlow.js 的 `dense` API 添加了一个层。
 
 第二部分指定了三个参数值，所示：
 
-```
+```javascript
 model.compile({
 loss:'meanSquaredError',
 optimizer: 'sgd',
@@ -6182,7 +5398,7 @@ metrics: ['mse']
 
 第四部分包含了当 X 值为 -30、50 和 100 时 Y 值的三个预测。核心思想是为之前的每个 X 值调用一次 `model` 变量的 `predict()` 方法。例如，这段代码段预测了 X 值为 -30 时的 Y 值：
 
-```
+```javascript
 var pred1 = model.predict(tf.tensor1d([-30])).dataSync();
 ```
 
@@ -6190,7 +5406,7 @@ var pred1 = model.predict(tf.tensor1d([-30])).dataSync();
 
 在浏览器中打开此 Web 页面，你将看到以下输出：
 
-线性回归和一些预测
+**线性回归和一些预测**
 
 *   Predict(-30):-61.6697998046875
 *   Predict(50):104.10870361328125
@@ -6198,15 +5414,12 @@ var pred1 = model.predict(tf.tensor1d([-30])).dataSync();
 
 根据公式 `y = 2*x+1`，30、50 和 100 的正确值分别为 -59、101 和 201。让我们来看看如何将 TensorFlow.js 与 Angular 结合。
 
+### 值 50 的预测
 
-
-
-第三部分初始化了变量 `xs` 和 `ys`，然后调用 `model` 变量的 `fit()` 方法来训练该模型。第四部分通过调用变量 `model` 的 `predict()` 方法，预测当 `X` 的值为 50 时 `Y` 的值。现在在浏览器中启动此 Web 页面查看以下输出。
-
-### 值 50 的预测：
-
+```text
 Tensor
 [[104.7459564],]
+```
 
 根据公式 `y = 2*x + 1`，50 的正确值为 101，而预测值与精确值相差三个以上。
 
@@ -6216,15 +5429,10 @@ Tensor
 ERROR in ../node_modules/@types/webgl2/index.d.ts:582:13 - error TS2403: Subsequent variable declarations must have the same type. Variable 'WebGL2RenderingContext' must be of type '{ new (): WebGL2RenderingContext; prototype: WebGL2RenderingContext; readonly ACTIVE_ATTRIBUTES: number; readonly ACTIVE_TEXTURE: number; ... 556 more ...; readonly WAIT_FAILED: number; }', but here has type '{ new (): WebGL2RenderingContext; prototype: WebGL2RenderingContext; readonly ACTIVE_ATTRIBUTES: number; readonly ACTIVE_TEXTURE: number; ... 557 more ...; readonly MAX_CLIENT_WAIT_TIMEOUT_WEBGL: number; }'.
 
 582 declare var WebGL2RenderingContext: {
-
-\~~~~~~~~~~~~~~~~~~~~~~
-
+~~~~~~~~~~~~~~~~~~~~~~
 ../node_modules/typescript/lib/lib.dom.d.ts:16316:13
-
 16316 declare var WebGL2RenderingContext: {
-
-\~~~~~~~~~~~~~~~~~~~~~~
-
+~~~~~~~~~~~~~~~~~~~~~~
 'WebGL2RenderingContext' was also declared here.
 ```
 
@@ -6240,20 +5448,31 @@ ERROR in ../node_modules/@types/webgl2/index.d.ts:582:13 - error TS2403: Subsequ
 
 Listing 6.4 显示了 `tfjsvis-linegraph.js` 的内容，其中包含了折线图的数据。Listing 6.5 显示了 `tfjsvis-linegraph.html` 的内容，它说明了如何使用 `tfjs-vis` 显示折线图。
 
-列表 6.4: tfjsvis-linegraph.js
+**Listing 6.4: tfjsvis-linegraph.js**
 
 ```javascript
 // 定义数据点
-
 values = [
   [{x: 10, y: 20}, {x: 20, y: 30}, {x: 30, y: 5}, {x: 40, y: 12},
-  [{x: 10, y: 40}, {x: 20, y: 0}, {x: 30, y: 50}, {x: 40, y: -5}]
+```
+
+
+
+# 在 tfjs-vis 中创建折线图
+
+```javascript
+[
+  {x: 10, y: 40}, {x: 20, y: 0}, {x: 30, y: 50}, {x: 40, y: -5}
 ];
+```
 
 // 与图例相关的信息
-let series = ['Dataset1', 'Dataset2'];
+
+`let series = ['Dataset1', 'Dataset2'];`
 
 // 渲染折线图
+
+```javascript
 tfvis.render.linechart(document.getElementById('plot1'), values, {
   xLabel: 'x-axis',
   yLabel: 'y-axis'
@@ -6262,10 +5481,10 @@ tfvis.render.linechart(document.getElementById('plot1'), values, {
 
 Listing 6.4 定义了带有数据点的变量 `values` 以及包含图例中显示字符串的 `series`。Listing 6.4 的最后部分调用了 `tfvis` API 在类为 `plot` 的 HTML `div` 元素中渲染折线图。
 
-列表 6.5: tfjsvis-linegraph.html
+## 列表 6.5: tfjsvis-linegraph.html
 
 ```html
-<html
+<html>
 <head>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@latest"></script>
@@ -6280,6 +5499,7 @@ Listing 6.4 定义了带有数据点的变量 `values` 以及包含图例中显�
 <body>
   <div class="plot" id="plot1"></div>
   <script src="tfjsvis-linegraph.js"></script>
+</body>
 </html>
 ```
 
@@ -6288,11 +5508,11 @@ Listing 6.5 包含一个 `head` 元素，其中包含两个引用渲染图表和
 ![images](img/pg222.jpg)
 图 1: 折线图
 
-### 在 tfjs-vis 中创建柱状图
+## 在 tfjs-vis 中创建柱状图
 
 Listing 6.6 显示了 `tfjsvis-barchart.js` 的内容，其中包含了柱状图的数据。Listing 6.7 显示了 `tfjsvis-barchart.html` 的内容，它说明了如何使用 `tfjs-vis` 显示柱状图。
 
-列表 6.6: tfjsvis-barchart.js
+### 列表 6.6: tfjsvis-barchart.js
 
 ```javascript
 // 定义数据点
@@ -6308,12 +5528,12 @@ tfvis.render.barchart(document.getElementById('plot1'), data, {
 });
 ```
 
-Listing 6.6 定义了带有数据点的变量 `values` 以及包含图例中显示字符串的 `data series`。Listing 6.6 的最后部分调用了 `tfvis.render.barchart` API 在类为 `plot` 的 HTML `div` 元素中渲染柱状图。
+Listing 6.6 定义了带有数据点的变量 `data` 以及包含图例中显示字符串的 `data series`。Listing 6.6 的最后部分调用了 `tfvis.render.barchart` API 在类为 `plot` 的 HTML `div` 元素中渲染柱状图。
 
-列表 6.7: tfjsvis-barchart.html
+### 列表 6.7: tfjsvis-barchart.html
 
 ```html
-<html
+<html>
 <head>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@latest"></script>
@@ -6328,6 +5548,7 @@ Listing 6.6 定义了带有数据点的变量 `values` 以及包含图例中显�
 <body>
   <div class="plot" id="plot1"></div>
   <script src="tfjsvis-barchart.js"></script>
+</body>
 </html>
 ```
 
@@ -6336,11 +5557,11 @@ Listing 6.7 包含一个 `head` 元素，其中包含两个引用渲染图表和
 ![images](img/pg224.jpg)
 图 2: 柱状图
 
-### 在 tfjs-vis 中创建散点图
+## 在 tfjs-vis 中创建散点图
 
 Listing 6.8 显示了 `tfjsvis-scatterplot.js` 的内容，其中包含了散点图的数据。Listing 6.9 显示了 HTML 页面 `tfjsvis-scatterplot.html` 的内容，它说明了如何使用 `tfjs-vis` 显示散点图。
 
-列表 6.8: tfjsvis-scatterplot.js
+### 列表 6.8: tfjsvis-scatterplot.js
 
 ```javascript
 // 定义数据点
@@ -6349,19 +5570,19 @@ const data = [
   {index: 3, value: 3}, {index: 5, value: 6}
 ];
 
-// 渲染柱状图
-tfvis.render.barchart(document.getElementById('plot1'), data, {
+// 渲染散点图
+tfvis.render.scatterplot(document.getElementById('plot1'), data, {
   yLabel: 'y-axis',
   width: 400
 });
 ```
 
-Listing 6.8 定义了带有数据点的变量 `values` 以及包含图例中显示字符串的 `data series`。Listing 6.8 的最后部分调用了 `tfvis.render.barchart` API 在类为 `plot` 的 HTML `div` 元素中渲染柱状图。
+Listing 6.8 定义了带有数据点的变量 `data` 以及包含图例中显示字符串的 `data series`。Listing 6.8 的最后部分调用了 `tfvis.render.scatterplot` API 在类为 `plot` 的 HTML `div` 元素中渲染散点图。
 
-列表 6.9: tfjsvis-scatterplot.html
+### 列表 6.9: tfjsvis-scatterplot.html
 
 ```html
-<html
+<html>
 <head>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@latest"></script>
@@ -6375,215 +5596,219 @@ Listing 6.8 定义了带有数据点的变量 `values` 以及包含图例中显�
 </head>
 <body>
   <div class="plot" id="plot1"></div>
-  <script src="tfjsvis-barchart.js"></script>
+  <script src="tfjsvis-scatterplot.js"></script>
+</body>
 </html>
 ```
 
-
-
-
-
-Listing 6.9 的后续部分定义了用于渲染散点图的 `<div>`元素，而 Listing 6.8 中的最后一个代码片段是一个 `<script>`元素，它引用了 `tfjsvis-scatterplot.js` 中的代码。
+Listing 6.9 的后续部分定义了用于渲染散点图的 `<div>` 元素，而 Listing 6.8 中的最后一个代码片段是一个 `<script>` 元素，它引用了 `tfjsvis-scatterplot.js` 中的代码。
 
 Figure 6.3 显示了当你运行 Listing 6.9 中的代码时显示的散点图。
 
 ![images](img/pg225.jpg)
-
 图 6.3 散点图
 
-# 在 tfjs-vis 中创建直方图
+## 在 tfjs-vis 中创建直方图
 
 Listing 6.10 显示了 `tfjsvis-histogram.js` 的内容，其中包含了直方图的数据。Listing 6.11 显示了 HTML 页面 `tfjsvis-histogram.html` 的内容，它说明了如何使用 `tfjs-vis` 显示直方图。
 
-列表 6.10: tfjsvis-histogram.js
+### 列表 6.10: tfjsvis-histogram.js
 
 ```javascript
 // define the data points
-
 data = [1, 5, 12, 12, 5, 10, -2, -8];
 
 // render the histogram
-
 tfvis.render.histogram(document.getElementById('plot1'), data, {
-
-maxBins: 5,
-
-width: 400
-
+  maxBins: 5,
+  width: 400
 });
 ```
 
-Listing 6.10 定义了带有数据点的变量值，以及包含用于显示在图例中的字符串的数据序列。Listing 6.10 的最后一部分调用了 `tfvis.render.histogram` API，用于在类值为 `plot` 的 HTML `<div>` 元素中渲染直方图。
+Listing 6.10 定义了带有数据点的变量 `data`，以及包含用于显示在图例中的字符串的数据序列。Listing 6.10 的最后一部分调用了 `tfvis.render.histogram` API，用于在类值为 `plot` 的 HTML `<div>` 元素中渲染直方图。
 
-列表 6.11: tfjsvis-histogram.html
+### 列表 6.11: tfjsvis-histogram.html
 
 ```html
 <html>
 <head>
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@latest"> </script>
-<style>
-.plot {
-display: inline-block;
-width: 50%;
-margin: 10px;
-}
-</style>
-</head> 
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@latest"></script>
+  <style>
+    .plot {
+      display: inline-block;
+      width: 50%;
+      margin: 10px;
+    }
+  </style>
+</head>
 <body>
-<div class="plot" id="plot1"></div>
+  <div class="plot" id="plot1"></div>
+  <script src="tfjsvis-histogram.js"></script>
 </body>
-<script src="tfjsvis-histogram.js"> </script>
-</</html>
+</html>
 ```
 
-Listing 6.11 包含一个带有两个 `<script>`元素的 `<head>`元素，它们引用了渲染图表和图形所需的 `tfjs-vis` JavaScript 代码。`<style>`元素指定了一些用于布局的属性。
+Listing 6.11 包含一个带有两个 `<script>` 元素的 `<head>` 元素，它们引用了渲染图表和图形所需的 `tfjs-vis` JavaScript 代码。`<style>` 元素指定了一些用于布局的属性。
 
-Listing 6.11 的后续部分定义了用于渲染直方图的 `<div>`元素，而 Listing 6.10 中的最后一个代码片段是一个 `<script>`元素，它引用了 `tfjsvis-histogram.js` 中的代码。Figure 6.4 显示了当你运行 Listing 6.11 中的代码时显示的直方图。
+Listing 6.11 的后续部分定义了用于渲染直方图的 `<div>` 元素，而 Listing 6.10 中的最后一个代码片段是一个 `<script>` 元素，它引用了 `tfjsvis-histogram.js` 中的代码。Figure 6.4 显示了当你运行 Listing 6.11 中的代码时显示的直方图。
 
 ![images](img/pg227.jpg)
-
 图 6.4 直方图
 
-# 在 tfjs-vis 中创建热力图
+## 在 tfjs-vis 中创建热力图
 
-Listing 6.12 显示了 `tfjsvis-heatmap.js` 的内容，其中包含了直方图的数据。Listing 6.13 显示了 HTML 页面 `tfjsvis-heatmap.html` 的内容，它说明了如何使用 `tfjs-vis` 显示热力图。
+Listing 6.12 显示了 `tfjsvis-heatmap.js` 的内容，其中包含了热力图的数据。Listing 6.13 显示了 HTML 页面 `tfjsvis-heatmap.html` 的内容，它说明了如何使用 `tfjs-vis` 显示热力图。
 
-列表 6.12: tfjsvis-heatmap.js
+### 列表 6.12: tfjsvis-heatmap.js
 
 ```javascript
 // render the heat map
 tfvis.render.heatmap(document.getElementById('plot1'), {
-values: [[0,0], [0.5,0.8], [0.8,0.5]],
-xTickLabels: ['Tall', 'Medium', 'Short'],
-yTickLabels: ['Tall', 'Medium', 'Short']
+  values: [[0,0], [0.5,0.8], [0.8,0.5]],
+  xTickLabels: ['Tall', 'Medium', 'Short'],
+  yTickLabels: ['Tall', 'Medium', 'Short']
 }, {
-width: 500,
-height: 500,
-xLabel: 'TypeA',
-yLabel: 'TypeB',
-colorMap: 'red'
+  width: 500,
+  height: 500,
+  xLabel: 'TypeA',
+  yLabel: 'TypeB',
+  colorMap: 'red'
 });
 ```
 
 Listing 6.12 定义了带有数据点的变量值，以及用于在热力图水平和垂直轴上显示的两个字符串。Listing 6.12 的最后一部分调用了 `tfvis.render.heatmap` API，用于在类值为 `plot` 的 HTML `<div>` 元素中渲染热力图。
 
-列表 6.13: tfjsvis-heatmap.html
+### 列表 6.13: tfjsvis-heatmap.html
 
 ```html
 <html>
 <head>
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@latest"> </script>
-<style>
-.plot {
-display: inline-block;
-width: 50%;
-margin: 10px;
-}
-</style>
-</head> 
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@latest"></script>
+  <style>
+    .plot {
+      display: inline-block;
+      width: 50%;
+      margin: 10px;
+    }
+  </style>
+</head>
 <body>
-<div class="plot" id="plot1"></div>
+  <div class="plot" id="plot1"></div>
+  <script src="tfjsvis-heatmap.js"></script>
 </body>
-<script src="tfjsvis-heatmap.js"> </script>
-</html
+</html>
 ```
 
-Listing 6.13 包含一个带有两个 `<script>`元素的 `<head>`元素，它们引用了渲染图表和图形所需的 `tfjs-vis` JavaScript 代码。`<style>`元素指定了一些用于布局的属性。Listing 6.13 的后续部分定义了用于渲染热力图的 `<div>`元素，而 Listing 6.13 中的最后一个代码片段是一个 `<script>`元素，它引用了 `tfjsvis-heatmap.js` 中的代码。Figure 6.5 显示了当你运行 Listing 6.13 中的代码时显示的热力图。
+Listing 6.13 包含一个带有两个 `<script>` 元素的 `<head>` 元素，它们引用了渲染图表和图形所需的 `tfjs-vis` JavaScript 代码。`<style>` 元素指定了一些用于布局的属性。Listing 6.13 的后续部分定义了用于渲染热力图的 `<div>` 元素，而 Listing 6.13 中的最后一个代码片段是一个 `<script>` 元素，它引用了 `tfjsvis-heatmap.js` 中的代码。Figure 6.5 显示了当你运行 Listing 6.13 中的代码时显示的热力图。
 
 ![images](img/pg229.jpg)
-
 图 6.5 热力图
 
-这结束了章节中关于 `tfjs-vis` 可数据可视化功能的部分。章节的后续部分包含了一个在 Angular 应用中结合 `TensorFlow.js` 和 `tfjs-vis` 执行线性回归的代码示例。
+这结束了章节中关于 `tfjs-vis` 数据可视化功能的部分。章节的后续部分包含了一个在 Angular 应用中结合 `TensorFlow.js` 和 `tfjs-vis` 执行线性回归的代码示例。
 
 # TensorFlow.js, tfjs-vis 和线性回归
 
 Listing 6.14 显示了 `tfjsvis-linreg.html` 的内容，它说明了如何生成一组随机值，然后使用机器学习和线性回归来确定最佳拟合线。
 
-列表 6.14: tfjs-vis-linreg.html
+## 列表 6.14: tfjs-vis-linreg.html
 
 ```html
 <html>
 <head>
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@latest"> </script>
-<style>
-.plot {
-width: 100%;
-height: 40%;
-margin: 4px;
-}
-.btn {
-display: float-left;
-}
-</style>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@latest"></script>
+  <style>
+    .plot {
+      width: 100%;
+      height: 40%;
+      margin: 4px;
+    }
+    .btn {
+      display: float-left;
+    }
+  </style>
 </head>
 <body>
-<div id="mydiv"></div>
-<div>
-<button class="btn" type="button" onclick="trainLinearModel()">训练模型</button>
-</div>
-<!-- 散点图将显示在这里: -->
-<div class="plot" id="plot1"></div>
+  <div id="mydiv"></div>
+  <div>
+    <button class="btn" type="button" onclick="trainLinearModel()">训练模型</button>
+  </div>
+  <!-- 散点图将显示在这里: -->
+  <div class="plot" id="plot1"></div>
 </body>
 <script>
 async function trainLinearModel() {
-//----------------------------------
-// 定义一个具有以下内容的简单模型：
-// 1) 单个输入（数值）
-// 3) 到输出层的连接
-// 4) 单个神经元的输出层
-//----------------------------------
-const model = tf.sequential();
-model.add(tf.layers.dense({units: 1, inputShape: [1]}));
-model.compile({
-loss: 'meanSquaredError',
-optimizer: 'sgd'
-});
-var epochs = 100
-var maxRand = 30
-var count = 100
-items1 = [];
-itemsX = [];
-itemsY = [];
-values = [];
-// 定义数据点
-for(var i=0; i<count; i++) {
-x = i
-y = 2*x + 1 + Math.random()*maxRand
-items1.push({"x":x, "y":y})
-itemsX.push(x)
-itemsY.push(y)
-}
-values.push(items1)
-const xs = tf.tensor1d([1,2,3,4,5,6,7,8,9,10]);
-const ys = tf.tensor1d([3,5,7,9,11,13,15,17,19,21]);
-// 图例相关信息
-let series1 = ['数据集 1', 'Dataset2'];
-// 在 'plot1' 元素中渲染散点图：
-tfvis.render.scatterplot(document.getElementById('plot1'), {values,series1}, {
-width: 600,
-xLabel: 'x-axis',
-yLabel: 'y-axis'
-})
-// 训练模型：
-await model.fit(xs, ys, {epochs: epochs});
-// 预测 x = 52.5 时 y 的值：
-var mydiv = document.getElementById('mydiv');
-mydiv.innerText += "52.5 的预测: "+
-model.predict(tf.tensor1d([50]));
+  //----------------------------------
+  // 定义一个具有以下内容的简单模型：
+  // 1) 单个输入（数值）
+  // 3) 到输出层的连接
+  // 4) 单个神经元的输出层
+  //----------------------------------
+  const model = tf.sequential();
+  model.add(tf.layers.dense({units: 1, inputShape: [1]}));
+  model.compile({
+    loss: 'meanSquaredError',
+    optimizer: 'sgd'
+  });
+  var epochs = 100;
+  var maxRand = 30;
+  var count = 100;
+  items1 = [];
+  itemsX = [];
+  itemsY = [];
+  values = [];
+  // 定义数据点
+  for(var i=0; i<count; i++) {
+    x = i;
+    y = 2*x + 1 + Math.random()*maxRand;
+    items1.push({"x":x, "y":y});
+    itemsX.push(x);
+    itemsY.push(y);
+  }
+  values.push(items1);
+  const xs = tf.tensor1d([1,2,3,4,5,6,7,8,9,10]);
+  const ys = tf.tensor1d([3,5,7,9,11,13,15,17,19,21]);
+  // 图例相关信息
+  let series1 = ['数据集 1', 'Dataset2'];
+  // 在 'plot1' 元素中渲染散点图：
+  tfvis.render.scatterplot(document.getElementById('plot1'), {values, series1}, {
+    width: 600,
+    xLabel: 'x-axis',
+  });
 }
 </script>
 </html>
 ```
 
-Listing 6.14 包含一个带有 `<script>`元素的 `<head>`元素，它们引用了渲染图表和图形所需的 `tfjs-vis` JavaScript 代码以及 TensorFlow.js 代码。`<style>`元素指定了一些用于布局的属性。Listing 6.14 的后续部分定义了一个包含 `<button>`元素的 `<div>`元素，用于调用训练过程。另一个 `<div>`元素指定了在本示例中渲染数据点散点图的位置。
 
 
+yLabel: 'y-axis'
 
+})
 
+// 训练模型：
+
+await model.fit(xs, ys, {epochs: epochs});
+
+// 预测 x = 52.5 时 y 的值：
+
+var mydiv = document.getElementById('mydiv');
+
+mydiv.innerText += "52.5 的预测: "+
+
+model.predict(tf.tensor1d([50]));
+
+}
+
+</script>
+
+</html>
+
+```
+
+Listing 6.14 包含一个带有 `<script>` 元素的 `<head>` 元素，它们引用了渲染图表和图形所需的 `tfjs-vis` JavaScript 代码以及 TensorFlow.js 代码。`<style>` 元素指定了一些用于布局的属性。Listing 6.14 的后续部分定义了一个包含 `<button>` 元素的 `<div>` 元素，用于调用训练过程。另一个 `<div>` 元素指定了在本示例中渲染数据点散点图的位置。
 
 Listing 6.14 的后续部分包含一个带有 `trainLinearModel()` 函数的 `<script>` 元素，其中执行线性回归的所有代码。接下来的代码块定义了变量 `model`，添加了一个层，然后编译了模型，就像你在之前的代码示例中看到的那样。
 
@@ -6591,12 +5816,19 @@ Listing 6.14 的后续部分包含一个带有 `trainLinearModel()` 函数的 `<
 
 ```javascript
 // define the data points
+
 for(var i=0; i<count; i++) {
+
   x = i
+
   y = 2*x + 1 + Math.random()*maxRand
+
   items1.push({"x":x, "y":y})
+
   itemsX.push(x)
+
   itemsY.push(y)
+
 }
 ```
 
@@ -6610,12 +5842,15 @@ Listing 6.14 的后续部分包含渲染散点图的代码，这与你在早之�
 await model.fit(xs, ys, {epochs: epochs});
 ```
 
-最后，Listing 6.14](#13_Ch06.xhtml#list-6-14) 的最后一部分调用了变量 `model` 的 `predict()` 方法，预测当 `x` 的值为 52.5 时 `y` 的值，然后将此值填充到相应的 `<<div>` 元素中，如下所示：
+最后，Listing 6.14 的最后一部分调用了变量 `model` 的 `predict()` 方法，预测当 `x` 的值为 52.5 时 `y` 的值，然后将此值填充到相应的 `<div>` 元素中，如下所示：
 
 ```javascript
 // predict the value of y when x = 52.5:
+
 var mydiv = document.getElementById('mydiv');
+
 mydiv.innerText += "Prediction for 52.5: "+
+
 model.predict(tf.tensor1d([50]));
 ```
 
@@ -6623,7 +5858,7 @@ Figure 6.6 显示了在运行 Listing 6.14 中的代码并点击最顶部按钮�
 
 ![images](img/pg233.jpg)
 
-图 6.6 一一个机器学习预测
+图 6.6 一个机器学习预测
 
 # MNIST 数据集
 
@@ -6632,10 +5867,6 @@ Figure 6.6 显示了在运行 Listing 6.14 中的代码并点击最顶部按钮�
 MNIST (Modified NIST) 数据集包含 70,000 张手写数字灰度图像（包括 0 到 9），每张图像的尺寸为 28x28。因此，每张图像由 784 个像素值组成，像素值是 0 到 255 之间的数字，对应于 `(R,G,B)` 颜色模型中每个组件的数值范围。
 
 MNIST 数据集中的每张图像都有一个标签，对应于图像中显示的数字。因此，显示数字 0 的图像标签为 0，显示数字 1 的图像标签为 1，以此类推。由于有 10 种可能的数字，因此有 10 个不同的标签，数据集中约 10% 属于这 10 个标签中的每一个。请记住，MNIST 数据集中的图像包含单个数字。
-
-
-
-
 
 `metrics=['accuracy']`
 
@@ -6675,19 +5906,27 @@ print('Test accuracy:', scores[1])
 * `index.html`
 * `data.js`
 * `script.js`
-* `mysimpleserver.py` 
+* `mysimpleserver.py`
 
 第 1 步的细节在本章的较早部分讨论过，因此我们不需要重复它们。第 2 步在 JavaScript 文件 `script.js` 中执行，其的第一部分与上一节中的 `script.js` 文件相同。创建模型的代码由 `script.js` 注释中列出的以下步骤组成：
 
 ```javascript
 // getModel() 函数创建一个模型：
+
 // 1) 定义类型为 tf.sequential() 的模型
+
 // 2) 添加 conv2d 层
+
 // 3) 添加 max pooling 层
+
 // 4) 添加 conv2d 层
+
 // 5) 添加 max pooling 层
+
 // 6) 添加 flatten 层
+
 // 7) 添加 dense 全连接层
+
 // 8) 使用 'adam' 优化器编译模型
 ```
 
@@ -6701,7 +5940,7 @@ print('Test accuracy:', scores[1])
 python mysimpleserver.py
 ```
 
-上一个命令在端口 `8080` 上启动了一个 Web 器。如果需要，你可以在 Python 脚本中将 `port` 变量的值改为不同的端口号。Python 2.x 提供了 `SimpleHTTPServer`，而 Python 3.x 提供了 `http.server` 模块。
+上一个命令在端口 `8080` 上启动了一个 Web 服务器。如果需要，你可以在 Python 脚本中将 `port` 变量的值改为不同的端口号。Python 2.x 提供了 `SimpleHTTPServer`，而 Python 3.x 提供了 `http.server` 模块。
 
 接下来，打开（Safari）浏览器会话并输入以下 URL：
 
@@ -6737,6 +5976,7 @@ python mysimpleserver.py
 
 ```typescript
 import { Component } from '@angular/core';
+
 import * as tf from '@tensorflow/tfjs';
 ```
 
@@ -6745,6 +5985,7 @@ import * as tf from '@tensorflow/tfjs';
 
 ```bash
 npm install @tensorflow/tfjs --save
+
 npm install @tensorflow/tfjs-vis --save
 ```
 
@@ -6753,7 +5994,9 @@ npm install @tensorflow/tfjs-vis --save
 
 ```typescript
 constructor() {
+
   this.run();
+
 }
 ```
 
@@ -6765,7 +6008,9 @@ constructor() {
 
 ```typescript
 async showExamples(data)
+
 async run()
+
 async train(model, data)
 ```
 
@@ -6774,7 +6019,9 @@ async train(model, data)
 
 ```typescript
 await this.showExamples(data);
+
 const model = this.getModel();
+
 await this.train(model, data);
 ```
 
@@ -6791,26 +6038,43 @@ import * as tf from '@tensorflow/tfjs';
 
 ```typescript
 import { Component } from '@angular/core';
+
 import * as tf from '@tensorflow/tfjs';
+
 import * as tfvis from '@tensorflow/tfjs-vis';
+
 import {MnistData} from './data.js';
 
 @Component({
+
   selector: 'app-root',
+
   styleUrls: ['./app.component.css'],
+
   template: `
+
     <h2>使用 TensorFlow.js 训练 CNN</h2>
+
   `,
+
 })
+
 export class AppComponent {
+
   title = 'GTJSCNN';
 
   constructor() {
+
     this.run();
+
   }
+
   // 剩余代码来自 script.js
+
   // 所需更改如上所示
+
   // 完整代码位于配套文件中
+
 }
 ```
 
@@ -6828,15 +6092,12 @@ ERROR in node_modules/@types/webgl2/index.d.ts:582:13 - error TS2403: 后续变�
 582 declare var WebGL2RenderingContext: {
 ```
 
-
-
-
 ```typescript
 node_modules/typescript/lib/lib.dom.d.ts:16535:13
 
 16535 declare var WebGL2RenderingContext: {
 
-\~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 'WebGL2RenderingContext' was also declared here.
 ```
@@ -6846,6 +6107,8 @@ node_modules/typescript/lib/lib.dom.d.ts:16535:13
 ```json
 "skipLibCheck": true,
 ```
+
+
 
 更多信息可以参阅此处：
 
@@ -6859,7 +6122,7 @@ node_modules/typescript/lib/lib.dom.d.ts:16535:13
 
 此外，你还学习了如何结合 TensorFlow.js 和 `tfjs-vis` 在 HTML 页面中执行线性回归。然后，你学习了如何在 HTML 页面中显示 MNIST 图像，随后跟了一个在 MNIST 数据集上训练神经网络的示例。
 
-最后，你学习了如何创建一个 Angular 应用，使用 TensorFlow.js 在 MNIST 数据集上创建、编译和训练深度学习模型，并带有显示每个 epoch 中每个 batch 的损失（loss）和准确率（accuracy）值的图表。
+最后，你学习了如何创建一个 Angular 应用，使用 TensorFlow.js 在 MNIST 数据集上创建、编译和训练深度学习模型，并带有显示每个 epoch 中每个 batch 的损失（`loss`）和准确率（`accuracy`）值的图表。
 
 # 附录 A：KERAS 简介
 
@@ -6871,7 +6134,7 @@ node_modules/typescript/lib/lib.dom.d.ts:16535:13
 
 第三部分包含使用 `cifar10` 数据集训练神经网络的简单示例。该代码示例与在 MNIST 数据集上训练神经网络相似，只需要非常小的代码改动。
 
-最后一部分包含两个执行早停（early stopping）的基于 Keras 模型示例，当模型在训练过程中表现出微小改进（由你指定）时，这种方法非常方便。
+最后一部分包含两个执行早停（`early stopping`）的基于 Keras 模型示例，当模型在训练过程中表现出微小改进（由你指定）时，这种方法非常方便。
 
 ## 什么是 Keras？
 
@@ -6945,10 +6208,6 @@ TF 2 提供了 `tf.keras` 命名空间，包含以下内容：
 
 上述数据集常用于使用小数据集训练模型。`mnist` 和 `fashion_mnist` 数据集在训练 CNN 时都很流行，而 `boston_housing` 数据集则流行于线性回归。
 
-
-
-
-
 * `tf.keras.experimental.CosineDecayRestarts`
 * `tf.keras.experimental.LinearCosineDecay`
 * `tf.keras.experimental.NoisyLinearCosineDecay`
@@ -6963,7 +6222,7 @@ TF 2 提供了许多其他包含有用类的命名空间，其中一些列在此
 * `tf.keras.callbacks`（早停法）
 * `tf.keras.optimizers`（`Adam` 等）
 * `tf.keras.regularizers`（`L1` 和 `L2`）
-* `tf.keras.utils`（`to_categorical()`
+* `tf.keras.utils`（`to_categorical()`）
 
 `tf.keras.callbacks` 命名空间包含一个你可以用于**早停法**的类，也就是说，如果代价函数在连续两次迭代中的减少不足，则可以终止训练过程。
 
@@ -7007,9 +6266,6 @@ TF 2 提供了许多其他包含有用类的命名空间，其中一些列在此
 4. 调用 `evaluate()`。
 5. 调用 `predict()`。
 
-
-
-
 ```python
 optimizer=tf.keras.optimizers.Adam(0.1))
 ```
@@ -7027,9 +6283,8 @@ plt.xlabel('Number of Epochs')
 plt.ylabel("Loss Values")
 plt.plot(history.history['loss'])
 plt.show()
-
-print("Cost for 11kg:",model.predict([11.0]))
-print("Cost for 45kg:",model.predict([45.0]))
+print("Cost for 11kg:", model.predict([11.0]))
+print("Cost for 45kg:", model.predict([45.0]))
 ```
 
 列表 A.3 使用 CSV 文件 `pasta.csv` 的内容初始化 Pandas DataFrame `df`，然后分别用 `df` 的第一列和第二列初始化变量 `weight` 和 `cost`。
@@ -7037,7 +6292,6 @@ print("Cost for 45kg:",model.predict([45.0]))
 列表 A.3 的下部分定义了一个基于 Keras 的模型，该模型由单个 `Dense` 层组成。该模型经过编译和训练，然后显示一张图，横轴为“epoch 数”，纵轴为损失函数的对应值。运行列表 A.3 中的代码以查看以下输出：
 
 Cost for 11kg: [[41.727108]]
-
 Cost for 45kg: [[159.02121]]
 
 图 A.1 显示了训练过程中 epoch 数与损失的关系图表。
@@ -7063,6 +6317,7 @@ mnist = tf.keras.datasets.mnist
 # 对所有标签进行独热编码，以创建与最终层比较的# 1x10 向量:
 y_train = tf.keras.utils.to_categorical(y_train)
 y_test = tf.keras.utils.to_categorical(y_test)
+
 image_size = x_train.shape[1]
 input_size = image_size * image_size
 
@@ -7086,6 +6341,7 @@ model.add(tf.keras.layers.Dense(hidden_units))
 model.add(tf.keras.layers.Activation('relu'))
 model.add(tf.keras.layers.Dense(10))
 model.add(tf.keras.layers.Activation('softmax'))
+
 model.summary()
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
@@ -7095,10 +6351,17 @@ model.fit(x_train, y_train, epochs=10, batch_size=batch_size)
 # 计算并显示准确率:
 loss, acc = model.evaluate(x_test, y_test, batch_size=batch_size)
 print("\nTest accuracy: %.1f%%" % (100.0 * acc))
-```列表 A.4 包含常规导入语句，并将 `mnist` 变量作为 MNIST 数据集的引用。列表 A.4 的下部分包含一些典型代码用于填充训练数据集和测试数据集，并通过“独热”编码技术将标签转换为数值。接下来，初始化了几个超参数，并定义了一个基于 Keras 的模型，指定了三个 `Dense` 层和 ReLU 激活函数。该模型经过编译和训练，计算并显示了测试数据集上的准确率。运行列表 A.4 中的代码以查看以下输出：
+```
+
+
+
+## 列表 A.4 与 MNIST 数据集
+
+列表 A.4 包含常规导入语句，并将 `mnist` 变量作为 MNIST 数据集的引用。列表 A.4 的下部分包含一些典型代码用于填充训练数据集和测试数据集，并通过“独热”编码技术将标签转换为数值。接下来，初始化了几个超参数，并定义了一个基于 Keras 的模型，指定了三个 `Dense` 层和 ReLU 激活函数。该模型经过编译和训练，计算并显示了测试数据集上的准确率。运行列表 A.4 中的代码以查看以下输出：
 
 ![images](img/pg256)
 
+```
 Total params: 269,322
 Trainable params: 269,322
 Non-trainable params: 0
@@ -7125,6 +6388,7 @@ Epoch 10/10
 60000/60000 [====================] - 4s 64us/sample - loss: 0.0805 - accuracy: 0.9748
 10000/10000 [====================] - 4s 39us/sample - loss: 0.0654 - accuracy: 0.9797
 Test accuracy: 98.0%
+```
 
 ## Keras、CNN 与 cifar10
 
@@ -7134,14 +6398,17 @@ Test accuracy: 98.0%
 
 ```python
 import tensorflow as tf
+
 batch_size = 32
 num_classes = 10
 epochs = 100
 num_predictions = 20
+
 cifar10 = tf.keras.datasets.cifar10
 
 # 数据划分为训练集和测试集:
 (x_train, y_train), (x_test, y_test) = cifar10.load_data()
+
 print('x_train shape:', x_train.shape)
 print(x_train.shape[0], 'train samples')
 print(x_test.shape[0], 'test samples')
@@ -7149,8 +6416,10 @@ print(x_test.shape[0], 'test samples')
 # 将类别向量转换为二分类矩阵
 y_train = tf.keras.utils.to_categorical(y_train, num_classes)
 y_test = tf.keras.utils.to_categorical(y_test, num_classes)
+
 model = tf.keras.models.Sequential()
-model.add(tf.keras.layers.Conv2D(32, (3, 3), padding='same', input_shape=x_train.shape[1]))
+
+model.add(tf.keras.layers.Conv2D(32, (3, 3), padding='same', input_shape=x_train.shape[1:]))
 model.add(tf.keras.layers.Activation('relu'))
 model.add(tf.keras.layers.Conv2D(32, (3, 3)))
 model.add(tf.keras.layers.Activation('relu'))
@@ -7166,11 +6435,14 @@ model.add(tf.keras.layers.Dense(num_classes))
 model.add(tf.keras.layers.Activation('softmax'))
 
 # 使用 RMSprop 优化器训练模型
+opt = tf.keras.optimizers.RMSprop(learning_rate=0.0001, decay=1e-6)
 model.compile(loss='categorical_crossentropy', optimizer=opt, metrics=['accuracy'])
+
 x_train = x_train.astype('float32')
 x_test = x_test.astype('float32')
 x_train /= 255
 x_test /= 255
+
 model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs, validation_data=(x_test, y_test), shuffle=True)
 
 # 评估并显示测试数据的结果
@@ -7179,27 +6451,25 @@ print('Test loss:', scores[0])
 print('Test accuracy:', scores[1])
 ```
 
-
-
 请注意，“原生”CNN 包含一个卷积层（即前一个代码段的作用），随后是 `ReLU` 激活函数和最大池化层，这两者都显示在列表 A.5 中。此外，`Keras` 模型的最后一层是 `softmax` 激活函数，它将“全连接”层中的 10 个数值转换为一组 0 到 1 之间的 10 个非负数，其总和等于 1（这为我们提供了一个概率分布）。
 
 该模型经过编译和训练，然后在测试数据集上进行评估。列表 A.5 的最后部分显示了与测试相关的损失和准确率值，这两者都在之前的评估步骤中计算得出。运行列表 A.5 中的代码以查看以下输出（注意代码在部分完成第二个轮次 epoch 后已停止）：
 
 ```
-x\_train shape: (50000, 32, 32, 3)
+x_train shape: (50000, 32, 32, 3)
 50000 train samples
 10000 test samples 
 Epoch 1/100
-50000/50000 \[==============================\] - 285s 6ms/sample - loss: 1.7187 - accuracy: 0.3802 - val\_loss: 1.4294 - val\_accuracy: 0.4926
+50000/50000 [==============================] - 285s 6ms/sample - loss: 1.7187 - accuracy: 0.3802 - val_loss: 1.4294 - val_accuracy: 0.4926
 Epoch 2/100
-1888/50000 \[>.............................\] - ETA: 4:39 - loss: 1.4722 - accuracy: 0.4635
+1888/50000 [>.............................] - ETA: 4:39 - loss: 1.4722 - accuracy: 0.4635
 ```
 
 ## 在 Keras 中调整图像大小
 
 列表 A.6 显示了 `keras_resize_image.py` 的内容，说明了如何在 `Keras` 中调整图像大小。
 
-列表 A.6: `keras_resize_image.py`
+### 列表 A.6: keras_resize_image.py
 
 ```python
 import tensorflow as tf
@@ -7216,19 +6486,20 @@ model.summary()
 # 读取 PNG 或 JPG 的内容
 X = imageio.imread('sample3.png')
 out = model.predict(X[np.newaxis, ...]) 
+
 fig, axes = plt.subplots(nrows=1, ncols=2)
 axes[0].imshow(X)
 axes[1].imshow(np.int8(out[0,...]))
 plt.show()
 ```
 
-列表 A.6 包含了通常导入语句，然后初始化变量 `inp` 以适应彩色图像，随后是变量 `out`，它是 `inp` 大小的结果，使其维度变为 28x128。接下来，将 `inp` 和 `out` 分别指定为 `Keras` 模型的 `inputs` 和 `outputs`，如下代码所示：
+列表 A.6 包含了通常导入语句，然后初始化变量 `inp` 以适应彩色图像，随后是变量 `out`，它是 `inp` 大小的结果，使其维度变为 128x128。接下来，将 `inp` 和 `out` 分别指定为 `Keras` 模型的 `inputs` 和 `outputs`，如下代码所示：
 
 ```python
 model = tf.keras.Model(inputs=inp, outputs=out)
 ```
 
-接下来，变量 `X` 初始化为读取图像 `sample3.png` 内容的引用。列表 A.6 的剩余部分涉及显示两个图像：原始图像和调整大小后的图像。运行列表 A.6 中的代码，查看如 图 A.2 所示的图像及其调整大小后的图像图。
+接下来，变量 `X` 初始化为读取图像 `sample3.png` 内容的引用。列表 A.6 的剩余部分涉及显示两个图像：原始图像和调整大小后的图像。运行列表 A.6 中的代码，查看如图 A.2 所示的图像及其调整大小后的图像图。
 
 ![images](img/pg261.jpg)
 
@@ -7242,38 +6513,40 @@ model = tf.keras.Model(inputs=inp, outputs=out)
 
 你有多种方法可以指定早停，这些方法涉及回调函数（callback）的概念。列表 A.7 显示了 `tf2_keras_callback.py` 的内容，它通过回调机制执行早停。
 
-列表 A.7: `tf2_keras_callback.py`
+### 列表 A.7: tf2_keras_callback.py
 
 ```python
 import tensorflow as tf
 import numpy as np
+
 model = tf.keras.Sequential()
 model.add(tf.keras.layers.Dense(64, activation='relu'))
 model.add(tf.keras.layers.Dense(64, activation='relu'))
 model.add(tf.keras.layers.Dense(10, activation='softmax'))
+
 model.compile(optimizer=tf.keras.optimizers.Adam(0.01),
-loss='mse', #均方误差
-metrics=['mae']) # 平均绝对误差
+              loss='mse',  # 均方误差
+              metrics=['mae'])  # 平均绝对误差
 
 data = np.random.random((1000, 32))
 labels = np.random.random((1000, 10))
 val_data = np.random.random((100, 32))
 val_labels = np.random.random((100, 10))
+
 callbacks = [
     # 如果 "val_loss" 超过 2 个轮次不再改进，则停止训练
     tf.keras.callbacks.EarlyStopping(patience=2, monitor='val_loss'),
     # 将 TensorBoard 日志写入 ./logs 目录
     tf.keras.callbacks.TensorBoard(log_dir='./logs')
 ]
+
 model.fit(data, labels, batch_size=32, epochs=50, callbacks=callbacks,
-validation_data=(val_data, val_labels))
+          validation_data=(val_data, val_labels))
 ```
 
 上一节包含关于在 `Keras` 中使用回调函数代码示例。然而，你也可以定义一个自定义类，使用回调机制提供更细粒度的功能。注意，尽管指定了 50 个轮次，但代码在四个轮次后就停止了。
 
-
-
-Listing A.8 中的新代码与 Listing A.7 不同。它仅限于显示为**粗体**的代码块。这段新代码定义了一个带有多个方法的自定义 Python 类，每个方法都会在 Keras 生命周期执行过程中的相应点被调用。这六个方法由三对方法组成，分别对应训练、轮次（epochs）和批次（batches）的开始和结束事件，列表如下：
+列表 A.8 中的新代码与列表 A.7 不同。它仅限于显示为粗体的代码块。这段新代码定义了一个带有多个方法的自定义 Python 类，每个方法都会在 Keras 生命周期执行过程中的相应点被调用。这六个方法由三对方法组成，分别对应训练、轮次（epochs）和批次（batches）的开始和结束事件，列表如下：
 
 * `def on_train_begin()`
 * `def on_train_end()`
@@ -7282,7 +6555,7 @@ Listing A.8 中的新代码与 Listing A.7 不同。它仅限于显示为**粗�
 * `def on_batch_begin()`
 * `def on_batch_end()`
 
-上述方法在 Listing A.8 中仅包含一个 `print()` 语句，你可以在这些任何方法中插入任何需要的代码。运行 Listing A.8 中的代码查看以下输出：
+上述方法在列表 A.8 中仅包含一个 `print()` 语句，你可以在这些任何方法中插入任何需要的代码。运行列表 A.8 中的代码查看以下输出：
 
 ```
 on_train_begin
@@ -7290,7 +6563,8 @@ on_train_begin
 Epoch 1/50
 on_batch_begin
 on_batch_end
-32/1000 [...................] - ETA: 4s - loss: 0.2489 - mae: 0.4170on_batch_begin
+32/1000 [...................] - ETA: 4s - loss: 0.2489 - mae: 0.4170
+on_batch_begin
 on_batch_end
 on_batch_begin on_batch_end
 // details omitted for brevity
@@ -7298,7 +6572,8 @@ on_batch_begin
 on_batch_end
 on_batch_begin
 on_batch_end
-992/1000 [==================>.] - ETA: 0s - loss: 0.2468 - mae: 0.4138on_batch_begin
+992/1000 [==================>.] - ETA: 0s - loss: 0.2468 - mae: 0.4138
+on_batch_begin
 on_batch_end
 on_epoch_end
 1000/1000 [=====================] - 0s 335us/sample - loss: 0.2466 - mae: 0.4136 - val_loss: 0.2445 - val_mae: 0.4126
@@ -7306,7 +6581,8 @@ on_train_begin
 Epoch 2/50
 on_batch_begin
 on_batch_end
-32/1000 [..............................] - ETA: 0s - loss: 0.2465 - mae: 0.4133on_batch_begin
+32/1000 [..............................] - ETA: 0s - loss: 0.2465 - mae: 0.4133
+on_batch_begin
 on_batch_end
 on_batch_begin
 on_batch_end
@@ -7324,9 +6600,11 @@ on_train_begin
 
 许多基于 Keras 的模型只指定准确率（accuracy）作为评估训练模型的指标，如下所示：
 
-```
+```python
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 ```
+
+
 
 然而，还有许多其他内置指标可用，每个指标都封装在 `tf.keras.metrics` 命名空间的 Keras 类中。其中一些指标如下：
 
@@ -7339,17 +6617,18 @@ model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=
 * `Precision`：预测值相对于标签的精确率
 * `Recall`：预测值相对于标签的召回率
 * `TrueNegatives`：真阴性的数量
-* `TruePositives`：真正性的数量
+* `TruePositives`：真阳性的数量
 
-在本章之前，你学习了混淆矩阵，它为 `TP`、`TN`、`FP` 提供了数值，且这些每个值都有对应的 Keras 类，分别为：`TruePositive`、`TrueNegative`、`FalsePositive` 和 `FalseNegative`。请在网上搜索使用上述列表列表中指标的代码示例。
+在本章之前，你学习了混淆矩阵，它为 `TP`、`TN`、`FP` 提供了数值，且这些每个值都有对应的 Keras 类，分别为：`TruePositive`、`TrueNegative`、`FalsePositive` 和 `FalseNegative`。请在网上搜索使用上述列表中指标的代码示例。
 
 # 保存与恢复 Keras 模型
 
 Listing A.9 显示了 `tf2_keras_save_model.py` 的内容，它创建、训练并保存了一个基于 Keras 的模型，然后创建一个用从保存模型的数据填充的新模型。
 
-#### LISTING A.8: tf2_keras_save_model.py
+#### LISTING A.9: tf2_keras_save_model.py
 
-```pythonimport tensorflow as tf
+```python
+import tensorflow as tf
 import os
 
 def create_model():
@@ -7366,15 +6645,11 @@ model = create_model()
 (x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
 model.fit(x_train / 255.0, y_train, epochs=2, batch_size=32, validation_data=(x_test / 255.0, y_test))
 model.save('checkpoint')
-
 model = tf.keras.models.load_model('checkpoint')
 model.evaluate(x_test / 255.0, y_test)
 ```
+
 *(注：由于原文中代码块 A.8 存在严重的文本混乱和重复错误，翻译时已根据逻辑进行了修复以确保可读性)*
-
-
-
-
 
 本附录向你介绍了 Keras 的一些功能以及一系列基于 Keras 的代码示例，这些示例涉及使用 MNIST 和 Cifar10 数据集的基础神经网络。你学习了一些重要的命名空间（例如 `tf.keras.layers`）及其内容。
 
@@ -7388,7 +6663,7 @@ model.evaluate(x_test / 255.0, y_test)
 
 尽管本章中的许多主题非常简单，但它们为你学习 TF 2 提供了基础。你可以将本附录视为学习 TF 2 的起点，并将其与讨论 Keras 的附录结合使用。
 
-请记住，TensorFlow 1.x 版本在 TF 2 正式发布后被视为遗留代码。Google 将仅为 TF 1.x 提供安全相关的更新（即不再开发新代码），并在 TF 2 初始正式发布后至少支持 TensorFlow 1.x 一年。为了方便起见，TensorFlow 提了一个转换脚本，以便在许多情况下方便将 TensorFlow 1.x 代码自动转换为 TF 2 代码（详细将在在本章稍后的部分提供）。
+请记住，TensorFlow 1.x 版本在 TF 2 正式发布后被视为遗留代码。Google 将仅为 TF 1.x 提供安全相关的更新（即不再开发新代码），并在 TF 2 初始正式发布后至少支持 TensorFlow 1.x 一年。为了方便起见，TensorFlow 提供了一个转换脚本，以便在许多情况下方便将 TensorFlow 1.x 代码自动转换为 TF 2 代码（详细将在本章稍后的部分提供）。
 
 本附录包含几个关于 TF 1.x 的章节，所有内容都放置在附录的末尾。如果你没有 TF 1.x 代码，这些章节是可选的（并已标记为可选）。
 
@@ -7408,28 +6683,28 @@ model.evaluate(x_test / 255.0, y_test)
 
 TF 2 是 Google 的一个开源框架，是 TensorFlow 的最新版本。TF 2 框架是一个现代框架，非常适合机器学习（ML）和深度学习（DL），并通过 Apache 许可证提供。有趣的是，TensorFlow 在艺术、音乐和医学等领域的创意和海量用例让许多人惊讶，甚至让 TF 团队的成员感到惊讶。由于多种原因，TensorFlow 团队创建了 TF 2，目标是整合 TF API、消除 API 重复、实现快速原型设计并让调试变得更加容易。
 
-如果你是 Keras 的粉丝，那么有一个好消息：TF 2 的改进部分归功于将 Keras 采用 TF 2 核心功能的一部分。事实上，TF 2 扩展并优化了 Keras，使其能够利用 TF 2 中的所有高级功能。
+如果你是 Keras 的粉丝，那么有一个好消息：TF 2 的改进部分归功于将 Keras 采用为 TF 2 核心功能的一部分。事实上，TF 2 扩展并优化了 Keras，使其能够利用 TF 2 中的所有高级功能。
 
 如果你主要处理深度学习模型（CNN、RNN、LSTM 等），你可能会使用 `tf.keras` 命名空间中的某些类，该空间是 Keras 在 TF 2 中的实现。正如你之后将看到的，有几种定义 Keras 模型的方法：通过 `tf.keras.Sequential` 类、函数式定义以及通过子类化技术。或者，你仍然可以使用低级操作和自动微分。
 
-此外，TF 2 消除了重复的功能，在整个 TF 2 生态系统中提供了更直观的语法，并提供了一个名为 `tf.compat.v1` 的后兼容模块（不包含 `tf.contrib`），以及帮助用户从 TF 1.x 迁移到 TF 2 的转换脚本 `tf_upgrade_v2`
+此外，TF 2 消除了重复的功能，在整个 TF 2 生态系统中提供了更直观的语法，并提供了一个名为 `tf.compat.v1` 的后兼容模块（不包含 `tf.contrib`），以及帮助用户从 TF 1.x 迁移到 TF 2 的转换脚本 `tf_upgrade_v2`。
 
 另一个重大变化是将动态执行作为默认模式（而不是延迟执行），并带有如 `@tf.function` 装饰器的新特性。以下是 TF 2 特性及相关技术的简列表：
 
-*   支持 `tf.keras`：用于机器学习和深度学习的高级规范
-*   `tensorflow.js` v1.0：现代浏览器中的 TF
-*   `TensorFlow Federated`：用于机器学习和去中心化数据的开源框架
-*   `Ragged Tensors`：嵌套变长（“不规则”）列表
-*   `TensorFlow Probability`：概率模型结合深度学习
-*   `Tensor2Tensor`：模型和数据集库
+* 支持 `tf.keras`：用于机器学习和深度学习的高级规范
+* `tensorflow.js` v1.0：现代浏览器中的 TF
+* `TensorFlow Federated`：用于机器学习和去中心化数据的开源框架
+* `Ragged Tensors`：嵌套变长（“不规则”）列表
+* `TensorFlow Probability`：概率模型结合深度学习
+* `Tensor2Tensor`：模型和数据集库
 
 TF 2 还支持多种编程语言和硬件平台，包括
 
-*   支持 Python、Java、C++
-*   桌面、服务器、移动设备（TF Lite）
-*   CPU/GPU/TPU 支持
-*   Linux 和 Mac OS X 支持
-*   Windows 虚拟机
+* 支持 Python、Java、C++
+* 桌面、服务器、移动设备（TF Lite）
+* CPU/GPU/TPU 支持
+* Linux 和 Mac OS X 支持
+* Windows 虚拟机
 
 访问 TF 2 首页，你可以在那里找到许多 TF 2 资源：https://www.tensorflow.org
 
@@ -7437,23 +6712,20 @@ TF 2 还支持多种编程语言和硬件平台，包括
 
 TF 2 设计用于解决各种用例中出现的任务，其中一些列在此：
 
-*   图像识别
-*   计算机视觉
-*   语音/声音识别
-*   时间序列分析
-*   语言检测
-*   语言翻译
-*   文本处理
-*   手写识别
+* 图像识别
+* 计算机视觉
+* 语音/声音识别
+* 时间序列分析
+* 语言检测
+* 语言翻译
+* 文本处理
+* 手写识别
 
 上述用例可以在 TF 1.x 也可以 TF 2 中解决，而在后者的情况下，代码比其 TF 1.x 对应部分通常更简单简洁。
 
 ## TF 2 架构：简述
 
 TF 2 使用 C++ 编写，并支持涉及原始值和张量的操作（后文讨论）。TF 1.x 的默认执行模式是*延迟执行*，而 TF 2 使用*即时执行*（即“立即模式”）。尽管 TF 1.4 引入了即时执行，但你在网上找到的大多数 TF 1.x 代码示例都使用延迟执行。
-
-
-
 
 TF 2 支持对张量（即增强型多维数组）进行算术运算，以及条件逻辑、for 循环和 while 循环。虽然在 TF 2 中可以在执行模式（eager execution mode）和延迟模式（deferred mode）之间切换，但本书中的所有代码示例均使用执行模式。
 
@@ -7487,8 +6759,8 @@ pip install --upgrade tensorflow==1.13.1
 
 ```python
 import tensorflow as tf
-print("TF Version:",tf.__version__)
-print("eager execution:",tf.executing_eagerly())
+print("TF Version:", tf.__version__)
+print("eager execution:", tf.executing_eagerly())
 ```
 
 运行上述代码，将看到类似下面的输出：
@@ -7505,7 +6777,7 @@ import tensorflow as tf
 print("1 + 2 + 3 + 4 =", tf.reduce_sum([1, 2, 3, 4]))
 ```
 
-从命令行运行上述代码，看到看到输出：
+从命令行运行上述代码，将看到输出：
 
 ```
 1 + 2 + 3 + 4 = tf.Tensor(10, shape=(), dtype=int32)
@@ -7528,7 +6800,7 @@ python
 现在使用此命令检查机器上安装的 TF 2 版本：
 
 ```python
->>> print('TF version:',tf.__version__)
+>>> print('TF version:', tf.__version__)
 ```
 
 上述代码段的输出所示（你看到的数字取决于你安装的 TF 2 版本）：
@@ -7543,11 +6815,11 @@ TF version: 2.0.0-beta1
 
 除了提供对多设备上基于 TF 2 代码的支持外，TF 2 还提供了以下工具包：
 
-*   用于可视化的 `TensorBoard`（作为 TensorFlow 的一部分）
-*   `TensorFlow Serving`（托管在服务器上）
-*   `TensorFlow Hub`
-*   `TensorFlow Lite`（用于移动应用）
-*   `Tensorflow.js`（用于网页和 NodeJS）
+* 用于可视化的 `TensorBoard`（作为 TensorFlow 的一部分）
+* `TensorFlow Serving`（托管在服务器上）
+* `TensorFlow Hub`
+* `TensorFlow Lite`（用于移动应用）
+* `Tensorflow.js`（用于网页和 NodeJS）
 
 `TensorBoard` 是一个在浏览器中运行的图形可视化工具。如下从命令行启动 `TensorBoard`：打开命令行窗口并输入以下命令以访问 `/tmp/abc` 子目录（或你选择的目录）中保存的 TF 图：
 
@@ -7555,11 +6827,11 @@ TF version: 2.0.0-beta1
 tensorboard --logdir /tmp/abc
 ```
 
-注意，上述命令中 `logdir` 参数前面有两个连续的连字符（----）。现在启动浏览器并导航到此 URL：`localhost:6006`
+注意，上述命令中 `logdir` 参数前面有两个连续的连字符（--）。现在启动浏览器并导航到此 URL：`localhost:6006`
 
 片刻之后，你将看到在代码中创建并保存到 `/tmp/abc` 目录的 TF 2 图的可视化。
 
-`TensorFlow Serving` 是一个为生产环境设计的云端灵活、高性能机器学习模型部署系统。TensorFlow Serving 可以轻松部署新算法和实验，同时保持相同的服务器架构和 API。更多信息请访问：`https://www.TF2.org/serving/`
+`TensorFlow Serving` 是一个为生产环境设计的云端灵活、高性能机器学习模型部署系统。TensorFlow Serving 可以轻松部署新算法和实验，同时保持相同的服务器架构和 API。更多信息请访问：`https://www.tensorflow.org/serving/`
 
 `TensorFlow Lite` 专门为移动开发（包括 Android 和 iOS）创建。请记住，`TensorFlow Lite` 代替了 TF 2 Mobile，后者是早期开发移动应用的 SDK。`TensorFlow Lite` 支持设备端推理、低延迟和小体积。更多关于 `TensorFlow Lite` 的信息请访问：`https://www.tensorflow.org/`
 
@@ -7573,10 +6845,10 @@ tensorboard --logdir /tmp/abc
 
 简单来说，TF 2 张量类似于 NumPy `ndarray` 的多维数组。TF 2 张量由其维度定义，如下：
 
-*   标量：0 阶
-*   向量：一阶张量
-*   矩阵：二阶张量
-*   三维数组：三阶张量
+* 标量：0 阶
+* 向量：一阶张量
+* 矩阵：二阶张量
+* 三维数组：三阶张量
 
 下一节将讨论可用的一些数据类型，随后是关于基本类型的节。
 
@@ -7584,15 +6856,15 @@ tensorboard --logdir /tmp/abc
 
 TF 2 支持以下数据类型（类似于 1.x 中支持的数据类型）：
 
-*   `tf.float32`
-*   `tf.float64`
-*   `tf.int8`
-*   `tf.int16`
-*   `tf.int32`
-*   `tf.int64`
-*   `tf.uint8`
-*   `tf.string`
-*   `tf.bool`
+* `tf.float32`
+* `tf.float64`
+* `tf.int8`
+* `tf.int16`
+* `tf.int32`
+* `tf.int64`
+* `tf.uint8`
+* `tf.string`
+* `tf.bool`
 
 列表中的数据类型一言易懂：两个浮点类型、四个整数类型、一个无符号整数类型、一个字符串类型和一个布尔类型。你可以看到 32 位和 64 位浮点类型，整数类型从 8 位到 64 位。
 
@@ -7606,7 +6878,7 @@ TF 2 `constant` 是不可变值，一个简单的示例所示：
 aconst = tf.constant(3.0)
 ```
 
-TF 2 `variable` 是 TF 2 图中的可训练值。例如，对于由欧几平面上的点组成的数据集，拟合线的斜率 `m` 和截距 `b` 是可训练值的两个例子。一些 TF 变量的示例所示：
+TF 2 `variable` 是 TF 2 图中的可训练值。例如，对于由欧几里得平面上的点组成的数据集，拟合线的斜率 `m` 和截距 `b` 是可训练值的两个例子。一些 TF 变量的示例所示：
 
 ```python
 b = tf.Variable(3, name="b")
@@ -7615,7 +6887,6 @@ z = tf.Variable(5*x, name="z")
 W = tf.Variable(20)
 lm = tf.Variable(W*x + b, name="lm")
 ```
-
 
 
 
@@ -7633,25 +6904,22 @@ lm = tf.Variable(W*x + b, name="lm")
 
 列表 B.1 显示了 `tf2_constants1.py` 的内容，说明了如何分配并打印某些 TF 2 常量的值。
 
-*列表* B.1：`tf2_constants1.py`
+列表 B.1：`tf2_constants1.py`
 
 ```python
-import tensorflow as tf 
+import tensorflow as tf
 
 scalar = tf.constant(10)
 
-vector = tf.constant([1,2,3,4,5])
+vector = tf.constant([1, 2, 3, 4, 5])
 
-matrix = tf.constant([[1,2,3],[4,5,6]])
+matrix = tf.constant([[1, 2, 3], [4, 5, 6]])
 
-cube = tf.constant([[[1],[2],[3]],[[4],[5],[6]],[[7],[8],[9]]])
+cube = tf.constant([[[1], [2], [3]], [[4], [5], [6]], [[7], [8], [9]]])
 
 print(scalar.get_shape())
-
 print(vector.get_shape())
-
 print(matrix.get_shape())
-
 print(cube.get_shape())
 ```
 
@@ -7666,23 +6934,21 @@ print(cube.get_shape())
 
 列表 B.2 显示了 `tf2_constants2.py` 的内容，说明了如何给 TF 2 常量赋值并然后打印这些值。
 
-*列表* B.2：`tf2_constants2.py`
+列表 B.2：`tf2_constants2.py`
 
 ```python
-import tensorflow as tf 
+import tensorflow as tf
 
-x = tf.constant(5,name="x")
-
-y = tf.constant(8,name="y")
+x = tf.constant(5, name="x")
+y = tf.constant(8, name="y")
 
 @tf.function
 def calc_prod(x, y):
-    z = 2*x + 3*y
+    z = 2 * x + 3 * y
     return z
 
 result = calc_prod(x, y)
-
-print('result =',result)
+print('result =', result)
 ```
 
 列表 B.2 定义了一个带装饰器的 Python 函数 `calc_prod()`，其 TF 2 代码在其他情况下会被包含在 TF 1.x 的 `tf.Session()` 代码块中。具体来说，`z` 将包含在 `sess.run()` 语句中，以及提供 `x` 和 `y` 值的 `feed_dict`。幸运的是，TF 2 中带装饰器的 Python 函数看起来就像普通的 Python 代码。
@@ -7697,29 +6963,23 @@ tf.Variable(tf.random.normal([2, 4]))
 
 列表 B.3 显示了 `tf2_variables.py` 的内容，说明了如何在 `with` 代码块中计算涉及 TF 常量和变量的值。
 
-*列表* B.3：`tf2_variables.py`
+列表 B.3：`tf2_variables.py`
 
 ```python
 import tensorflow as tf
 
-v = tf.Variable([[1., 2., 3.], [4., 5., 6.]] )
+v = tf.Variable([[1., 2., 3.], [4., 5., 6.]])
 
 print("v.value():", v.value())
-
 print("")
-
 print("v.numpy():", v.numpy())
-
 print("")
 
 v.assign(2 * v)
-
 v[0, 1].assign(42)
-
 v[1].assign([7., 8., 9.])
 
-print("v:",v)
-
+print("v:", v)
 print("")
 
 try:
@@ -7743,7 +7003,7 @@ v: <tf.Variable 'Variable:0' shape=(2, 3), dtype=float32, numpy=array([[2., 42.]
 
 TF 2 张量的 `rank` 是张量的维度，而张量的 `shape` 是每个维度中的元素数量。列表 B.4 显示了 `tf2_rank.py` 的内容，说明了如何查找 TF 2 张量的秩。
 
-*列表* B.4：`tf2_rank.py`
+列表 B.4：`tf2_rank.py`
 
 ```python
 import tensorflow as tf
@@ -7768,232 +7028,6 @@ print(tf.rank(d))
 3
 ```
 
-a = tf.constant([1, 2, 3, 4, 5])
-b = tf.constant([[1, 2, 3], [4, 5, 6]])
-c = tf.constant([[[1], [2], [3]], [[4], [5], [6]], [[7], [8], [9]]])
-
-def show_rank(x):
-    print(tf.rank(x))
-
-show_rank(a)
-show_rank(b)
-show_rank(c)
-show_rank(d)
-
-列表 B.4 展示了如何通过 `show_rank` 函数查看不同维度张量的秩。输出如下：
-
-```
-0
-1
-2
-3
-```
-
-## tf.rank()
-
-```python
-import tensorflow as tf
-
-a = tf.constant([1, 2, 3, 4, 5])
-b = tf.constant([[1, 2, 3], [4, 5, 6]])
-c = tf.constant([[[1], [2], [3]], [[4], [5], [6]], [[7], [8], [9]]])
-
-def show_rank(x):
-    print(tf.rank(x))
-
-show_rank(a)
-show_rank(b)
-show_rank(c)
-show_rank(d)
-```
-
-列表 B.4 展示了如何通过 `show_rank` 函数查看不同维度张量的秩。输出如下：
-
-```
-0
-1
-2
-3
-```
-
-a = tf.constant([1, 2, 3, 4, 5])
-b = tf.constant([[1, 2, 3], [4, 5, 6]])
-c = tf.constant([[[1], [2], [3]], [[4], [5], [6]], [[7], [8], [9]]])
-
-def show_rank(x):
-    print(tf.rank(x))
-
-show_rank(a)
-show_rank(b)
-show_rank(c)
-show_rank(d)
-```
-
-列表 B.4 展示了如何通过 `show_rank` 函数查看不同维度张量的秩。输出如下：
-
-```
-0
-1
-2
-3
-```
-
-a = tf.constant([1, 2, 3, 4, 5])
-b = tf.constant([[1, 2, 3], [4, 5, 6]])
-c = tf.constant([[[1], [2], [3]], [[4], [5], [6]], [[7], [8], [9]]])
-
-def show_rank(x):
-    print(tf.rank(x))
-
-show_rank(a)
-show_rank(b)
-show_rank(c)
-show_rank(d)
-```
-
-列表 B.4 展示了如何通过 `show_rank` 函数查看不同维度张量的秩。输出如下：
-
-```
-0
-1
-2
-3
-```
-
-a = tf.constant([1, 2, 3, 4, 5])
-b = tf.constant([[1, 2, 3], [4, 5, 6]])
-c = tf.constant([[[1], [2], [3]], [[4], [5], [6]], [[7], [8], [9]]])
-
-def show_rank(x):
-    print(tf.rank(x))
-
-show_rank(a)
-show_rank(b)
-show_rank(c)
-show_rank(d)
-```
-
-列表 B.4 展示了如何通过 `show_rank` 函数查看不同维度张量的秩。输出如下：
-
-```
-0
-1
-2
-3
-```
-
-
-
-a = tf.constant([1, 2, 3, 4, 5])
-b = tf.constant([[1, 2, 3], [4, 5, 6]])
-c = tf.constant([[[1], [2], [3]], [[4], [5], [6]], [[7], [8], [9]]])
-
-def show_rank(x):
-    print(tf.rank(x))
-
-show_rank(a)
-show_rank(b)
-show_rank(c)
-show_rank(d)
-```
-
-列表 B.4 展示了如何通过 `show_rank` 函数查看不同维度张量的秩。输出如下：
-
-```
-0
-1
-2
-3
-```
-
-a = tf. tf.1, . =
-a = tf.constant(5)
-b = tf.constant(1, 2, 3, 4,  tensorflow as tf
-a = tf.constant(1)
-b = tf.constant(5, name="x")
-c = tf.constant([[1, 2, 3], [4, 5, 6]])
-d = tf.constant(8, name="y")
-
-e = tf.constant(5, 2, 3, 4, 5)
-f = tf.constant(10)
-
-@tf.function
-def calc_prod(x, y):
-    z = 2*x + 3*y
-    return z
-
-result = calc_prod(a, b)
-
-print('result =',result)
-```
-
-列表 B.2 定义了一个带装饰器的 Python 函数 `calc_prod()`，其 TF 2 代码在其他情况下会被包含在 TF 1.x 的 `tf.Session()` 代码块中。具体来说，`z` 将包含在 `sess.run()` 语句中，以及提供 `x` 和 `y` 值的 `feed_dict`。 幸运的是，TF 2 中带装饰器的 Python 函数看起来就像普通的 Python 代码。
-
-# TF 2 中的变量
-
-TF 2.0 删除了全局集合及其相关的 API，例如 `tf.get_variable`、`tf.variable_scope` 和 `tf.initializers.global_variables`。每当你在 TF 2 中需要 `tf.Variable` 时，直接构造并初始化它，如下：
-
-```python
-tf.Variable(tf.random.normal([2, 4]))
-```
-
-列表 B.3 显示了 `tf2_variables.py` 的内容，说明了如何在 `with` 代码块中计算涉及 TF 常量和变量的值。
-
-```python
-import tensorflow as tf
-
-v = tf.Variable([[1., 2., 3.], [4., 5., 6.]] )
-
-print("v.value():", v.value())
-
-print("")
-
-print("v.numpy():", v.numpy())
-
-print("")
-
-v.assign(2 * v)
-
-v[0, 1].assign(42)
-
-v[1].assign([7., 8., 9.])
-
-print("v:",v)
-
-print("")
-
-try:
-    v[1] = [7., 8., 9.]
-except TypeError as ex:
-    print(ex)
-```
-
-列表 B.3 定义了一个 TF 2 变量 `v` 并打印它的值。列表 B.3 的下部分更新了 `v` 的值并打印了新值。列表 B.3 的最后部分包含一个 `try/except` 块，尝试更新 `v[1]` 的值。列表 B.3 的输出如下：
-
-```
-v.value(): tf.Tensor([[1., 2., 3.], [4., 5., 6.]], shape=(2, 3), dtype=float32)
-v.numpy(): [[1., 2., 3.], [4., 5., 6.]]
-v: <tf.Variable 'Variable:0' shape=(2, 3), dtype=float32, numpy=array([[2., 42.], [7., 8., 9.]])>
-'ResourceVariable' object does not support assignment
-```
-
-
-
-
-
-- 一种可以通过操作更新的张量
-- 存在于 `session.run` 上下文之外
-- 类似于“普通”变量
-- 存储训练好的模型参数
-- 变量可以是共享的（或不可训练的）
-- 用于存储/维护状态
-- 内部存储一个持久化张量
-- 你可以读取/修改张量的值
-- 多个工作线程可以看到 `tf.Variables` 的相同值
-- 表示你的程序所操作的共享、持久化状态的最佳方式
-
-TF 2 还提供了 `tf.assign()` 方法来修改 TF 2 变量的值；请务必阅读本章后文中相关的代码示例，以便学习如何正确使用此 API。
-
 ## TF 2 变量 (Variables) 对比 张量 (Tensors)
 
 请记住 TF 变量与 TF 张量之间的以下区别：TF `variables` 代表模型的可训练参数（例如：神经网络的权重和偏置），而 TF `tensors` 代表输入到模型中的数据以及这些数据在通过模型过程中的中间表示。
@@ -8017,8 +7051,6 @@ TF 2 为 Python 函数引入了 `@tf.function` “装饰器”，用于定义图
 另一个需要注意的点是，动态执行模式下的 `tf.Variable` 实际上是一个“普通的” Python 对象：该对象在超出作用范围时会被销毁。如果函数通过 `@tf.function` 进行了装饰，则 `tf.Variable` 对象将定义一个持久化对象。在这种情况下，动态执行被禁用，`tf.Variable` 对象定义了持久化 TF 2 图中的一个节点。因此，在没有注解的情况下可以在动态模式下运行的函数，在装饰上 `@tf.function` 后可能会失败。
 
 ## TF 2 中 @tf.function 的注意事项
-
-
 
 
 
@@ -8047,7 +7079,7 @@ print(func().numpy())
 
 列表 B.9 显示了 `tf2_overload.py` 的内容，它阐明了如何定义一个可以用不同数据类型调用的被装饰 Python 函数。
 
-*列表* B.9：`tf2_overload.py`
+**列表 B.9：`tf2_overload.py`**
 
 ```python
 import tensorflow as tf
@@ -8093,7 +7125,7 @@ AutoGraph 支持任意深度的控制流，因此你可以实现许多类型的�
 
 列表 B.10 显示了 `tf2_arithmetic.py` 的内容，它说明了如何在 TF 2 中执行算术运算。
 
-*列表* B.10：`tf2_arithmetic.py`
+**列表 B.10：`tf2_arithmetic.py`**
 
 ```python
 import tensorflow as tf
@@ -8125,7 +7157,7 @@ tf.Tensor(1.0, shape=(), dtype=float64)
 
 你也可以执行涉及 TF 2 常量的变量算术运算。列表 B.11 显示了 `tf2_const_var.py` 的内容，说明了如何执行涉及 TF 2 常量变量的算术运算。
 
-列表 B.11：`tf2_const_var.py`
+**列表 B.11：`tf2_const_var.py`**
 
 ```python
 import tensorflow as tf
@@ -8146,7 +7178,7 @@ diff: tf.Tensor([3., 3.], shape=(2,), dtype=float32)
 
 如果你更新了 `v1` 的值，输出将不会改变。列表 B.12 显示了 `tf2_const_var.py` 的内容，说明了如何执行涉及 TF 2 常量变量的算术运算。
 
-列表 B.12：`tf2_const_var.py`
+**列表 B.12：`tf2_const_var.py`**
 
 ```python
 import tensorflow as tf
@@ -8170,7 +7202,7 @@ c: <tensorflow.python.eager.function.ConcreteFunction object at 0x1209576a0>
 
 列表 B.13 显示了 `tf2_math_ops.py` 的内容，它说明了如何在 TF 2 中执行算术运算。
 
-*列表* B.13：`tf2_math_ops.py`
+**列表 B.13：`tf2_math_ops.py`**
 
 ```python
 import tensorflow as tf
@@ -8198,9 +7230,6 @@ tf.Tensor(-1.0,shape=(), dtype=float32)
 tf.Tensor(0.99999964,shape=(), dtype=float32)
 ```
 
-
-
-
 Listing B.14 与 Listing B.13 中的代码几乎相同：唯一的区别在于 Listing B.14 为 `PI` 指定了硬编码值，而 Listing B.14 将 `m.pi` 的值赋值给 `PI`。因此，近似值在零的正确值上更更近了一位小数。Listing B.14 的输出在此。注意由于 Python `print()` 函数的影响，输出格式与 Listing B.13 有不同：
 
 ```
@@ -8213,11 +7242,11 @@ tf.Tensor(1.0,  shape=(), dtype=float32)
 
 # 在 TF 2 中计算三角值
 
-Listing B.15 显示了 `tf2_trig_values.py` 的内容，它说明了如何在 TF 2 中计算涉及三角函数的值。
+列表 B.15 显示了 `tf2_trig_values.py` 的内容，它说明了如何在 TF 2 中计算涉及三角函数的值。
 
-*列表* B.15: `tf2_trig_values.py`
+**列表 B.15: `tf2_trig_values.py`**
 
-```
+```python
 import tensorflow as tf
 import math as m
 
@@ -8249,11 +7278,11 @@ d: tf.Tensor(0.57735026, shape=(), dtype=float32)
 
 # 在 TF 2 中计算指数值
 
-Listing B.15 显示了 `tf2_exp_values.py` 的内容，它说明了如何在 TF 2 中计算涉及额外三角函数的值。
+列表 B.15 显示了 `tf2_exp_values.py` 的内容，它说明了如何在 TF 2 中计算涉及额外三角函数的值。
 
-*列表* B.15: `tf2_exp_values.py`
+**列表 B.15: `tf2_exp_values.py`**
 
-```
+```python
 import tensorflow as tf
 a = tf.exp(1.0)
 b = tf.exp(-2.0)
@@ -8272,7 +7301,7 @@ def math_values():
 math_values()
 ```
 
-Listing B.15 以 TF 2 API `tf.exp()`、`tf.sigmoid()` 和 `tf.tanh()` 开头，它们分别计算一个数字的指数值、一个数字的 sigmoid 值以及一个数字的双曲正切值。Listing B.15 的输出在此：
+列表 B.15 以 TF 2 API `tf.exp()`、`tf.sigmoid()` 和 `tf.tanh()` 开头，它们分别计算一个数字的指数值、一个数字的 sigmoid 值以及一个数字的双曲正切值。列表 B.15 的输出在此：
 
 ```
 a: tf.Tensor(2.7182817, shape=(), dtype=float32)
@@ -8284,11 +7313,11 @@ t2: tf.Tensor(0.9640276, shape=(), dtype=float32)
 
 # 在 TF 2 中处理字符串
 
-Listing B.16 显示了 `tf2_strings.py` 的内容，它说明了如何在 TF 2 中处理字符串。
+列表 B.16 显示了 `tf2_strings.py` 的内容，它说明了如何在 TF 2 中处理字符串。
 
-Listing B.16: `tf2_strings.py`
+**列表 B.16: `tf2_strings.py`**
 
-```
+```python
 import tensorflow as tf
 x1 = tf.constant("café")
 print("x1:",x1)
@@ -8309,7 +7338,7 @@ r = tf.strings.unicode_decode(x2, "UTF8")
 print("r:",r)
 ```
 
-Listing B.16 将 TF 2 常量 `x1` 定义为包含重音符号的字符串。第一个 `print()` 语句显示 `x1` 的前三个字符，随后是一对代表带重音的“e”的十六进制值。第二个和第三个 `print()` 语句显示 `x1` 中的字符数量，然后是字符串 `x1` 的 UTF8 序列。B.16 的下一部分将 `x2` 定义为包含四个字符串的一阶 TF 2 张量。下一个 `print()` 语句显示 `x2` 的内容，并对包含重音的字符使用 UTF8 值。B.16 的最后部分将 `r` 定义为 `x2` 中字符的 Unicode 值。Listing B.14 的输出为：
+列表 B.16 将 TF 2 常量 `x1` 定义为包含重音符号的字符串。第一个 `print()` 语句显示 `x1` 的前三个字符，随后是一对代表带重音的“e”的十六进制值。第二个和第三个 `print()` 语句显示 `x1` 中的字符数量，然后是字符串 `x1` 的 UTF8 序列。B.16 的下一部分将 `x2` 定义为包含四个字符串的一阶 TF 2 张量。下一个 `print()` 语句显示 `x2` 的内容，并对包含重音的字符使用 UTF8 值。B.16 的最后部分将 `r` 定义为 `x2` 中字符的 Unicode 值。Listing B.14 的输出为：
 
 ```
 x1: tf.Tensor(b'café', shape=(), dtype=string)
@@ -8319,11 +7348,16 @@ x2: tf.Tensor([b'Café' b'Coffee' b'affé'], shape=(4,), dtype=string)
 len2: [4 6 5]
 r: <RaggedTensor [[67, 97, 102, 233], [67, 111, 102, 102, 101, 101], [97, 102, 102, 233]]
 ```
+
 *(注：由于原文输出中 r 部分似乎有截断或异常，此处根据上下文逻辑对齐)*
 
 # 在 TF 2 中处理张量和操作
 
-Listing B.17 显示了 `tf2_tensors.py` 的内容，它说明了如何在 TF 2 中对张量进行操作。Listing B.17: `tf2_tensors.py`
+列表 B.17 显示了 `tf2_tensors.py` 的内容，它说明了如何在 TF 2 中对张量进行操作。
+
+**列表 B.17: `tf2_tensors.py`**
+
+
 
 ```python
 import tensorflow as tf
@@ -8338,9 +7372,6 @@ print("x+1:", y)
 z = x * 2
 print("x*2:", z)
 ```
-
-
-
 
 Listing B.19 包含了 TF 常量 `arr3`，其用值 `[[[1,2],[2,3]],[[3,4],[5,6]]]` 初始化。四个 `print()` 语句分别显示了 `arr3` 的值、索引为 1 的元素值、索引为 `[1,1]` 的元素值以及索引为 `[1,1,0]` 的元素值。Listing B.19 的输出（为了显示目的经过了微调）如下：
 
@@ -8364,7 +7395,7 @@ arr3: tf.Tensor(
 
 Listing B.20 展示了 `tf2_mult.py` 的内容，它说明了如何在 TF 2 中相乘二阶张量。
 
-LISTING B.20: `tf2_mult.py`
+### LISTING B.20: `tf2_mult.py`
 
 ```python
 import tensorflow as tf
@@ -8397,7 +7428,7 @@ p1: tf.Tensor([[12.]], shape=(1, 1), dtype=float32)
 
 Listing B.21 展示了 `tf2_convert_tensors.py` 的内容，它说明了如何将 Python 数组转换为 TF 2 张量。
 
-LISTING B.21: `tf2_convert_tensors.py`
+### LISTING B.21: `tf2_convert_tensors.py`
 
 ```python
 import tensorflow as tf
@@ -8409,7 +7440,7 @@ print('x1:',x1)
 print('x2:',x2)
 ```
 
-Listing B.21 非常直观，它从 TensorFlow 和 NumPy 的导入语句开始。接下来，`x_data` 变量是一个 NumPy 数组，而 `x` 是将 `x_data` 转换为 TF 张量后得到的结果。Listing B.21 的输出如下：
+Listing B.21 非常直观，它从 TensorFlow 和 NumPy 的导入语句开始。接下来，`x1` 变量是一个 NumPy 数组，而 `x2` 是将 `x1` 转换为 TF 张量后得到的结果。Listing B.21 的输出如下：
 
 ```
 x1: [[1. 2.] [3. 4.]]
@@ -8420,7 +7451,7 @@ x2: tf.Tensor([[1. 2.] [3. 4.]], shape=(2, 2), dtype=float32)
 
 Listing B.22 展示了 `tf2_conflict_types.py` 的内容，它说明了当你尝试在 TF 2 中组合不兼容的张量时会发生什么。
 
-LISTING B.22: `tf2_conflict_types.py`
+### LISTING B.22: `tf2_conflict_types.py`
 
 ```python
 import tensorflow as tf
@@ -8443,12 +7474,7 @@ cannot compute Add as input #1(zero-based) was expected to be double tensor but 
 
 ## TF 2 中的微分和 GradientTape
 
-自动微分（即计算导数）对于实现机器学习算法非常有用，例如用于训练各种神经网络（NN）的反向传播。在动态执行（eager execution）期间，TF 2 上下文管理器 `GradientTape` 会跟踪计算梯度的操作。该上下文管理器提供了一个用于跟踪操作的机制。
-
-（注：由于提供的原文文本在部分部分存在重复或不完整，翻译已根据提供的逻辑结构进行了对齐处理。）
-
-
-
+自动微分（即计算导数）对于实现机器学习算法非常有用，例如用于训练各种神经网络（NN）的反向传播。在动态执行期间，TF 2 上下文管理器 `GradientTape` 会跟踪计算梯度的操作。该上下文管理器提供了一个用于跟踪操作的机制。
 
 Listing B.25 的第一部分包含一个嵌套循环，其中外层循环计算 `x` 等于 `4` 时项 `x*x*x` 的阶阶，内层循环计算二阶导。Listing B.25 的第二部分包含另一个嵌套循环，通过略不同的语法产生相同的输出。
 
@@ -8474,7 +7500,7 @@ Second `d2z_dx2`: `tf.Tensor(24.0, shape=(), dtype=float32)`
 
 Listing B.26 显示了 `tf2_gradient_tape4.py` 的内容，它阐明了如何在 TF 2 中使用 `tf.GradientTape` 计算依赖于 2x2 张量的表达式的一阶导数。
 
-*LISTING* B.26: `tf2_gradient_tape4.py`
+### LISTING B.26: `tf2_gradient_tape4.py`
 
 ```python
 import tensorflow as tf
@@ -8505,7 +7531,7 @@ z' = 3*y*y
 
 当用值 `9` 评估 `y` 的 `z'` 时，结果为 `3*9*9`，等于 `243`。运行 Listing B.26 中的代码查看以下输出（为了可读性进行了略微格式调整）：
 
-```python
+```
 y: tf.Tensor(9.0, shape=(), dtype=float32)
 z: tf.Tensor(81.0, shape=(), dtype=float32)
 z: tf.Tensor(729.0,shape=(), dtype=float32)
@@ -8516,7 +7542,7 @@ dz_dy: tf.Tensor(243.0, shape=(), dtype=float32)
 
 Listing B.27 显示了 `tf2_gradient_tape5.py` 的内容，它阐明了如何使用 `tf.GradientTape` 定义一个持久的梯度带，以计算 TF 2 中张量的一阶导数。
 
-*LISTING* B.27: `tf2_gradient_tape5.py`
+### LISTING B.27: `tf2_gradient_tape5.py`
 
 ```python
 import tensorflow as tf
@@ -8542,7 +7568,7 @@ with tf.GradientTape(persistent=True) as t:
 
 Listing B.27 与 Listing B.26 几乎相同：新部分已加粗显示。注意 `w` 是项 `y*y`，因此其一阶导 `w'` 是 `2*y`。因此，当用值 `9.0` 评估 `w` 和 `w'` 时，它们的值分别为 `81` 和 `18`。运行 Listing B.27 中的代码查看以下输出（为了可读性进行了略微格式调整），其中新输出以加粗显示：
 
-```python
+```
 y: tf.Tensor(9.0,shape=(), dtype=float32)
 w: tf.Tensor(81.0,shape=(), dtype=float32)
 z: tf.Tensor(81.0,shape=(), dtype=float32)
@@ -8555,9 +7581,7 @@ dw_dy: tf.Tensor(18.0,shape=(), dtype=float32)
 
 根据硬件情况，基于 GPU 的 TF 2 代码有时比基于 CPU 的 TF 2 代码快 15 倍。然而，一个良好的 GPU 成本可能很高。
 
-
-
-通过此链接下载软件并在 Mac 笔记本电脑上安装 `GCloud SDK`：*[`cloud.google.com/sdk/docs/quickstart-macos`](https://cloud.google.com/sdk/docs/quickstart-macos)*
+通过此链接下载软件并在 Mac 笔记本电脑上安装 `GCloud SDK`：[`cloud.google.com/sdk/docs/quickstart-macos`](https://cloud.google.com/sdk/docs/quickstart-macos)
 
 如果你从未用过 Google Cloud，你将获得价值 300 美元的额度（有效期超过一年）。
 
@@ -8591,73 +7615,17 @@ dw_dy: tf.Tensor(18.0,shape=(), dtype=float32)
 
 在深入研究这个主题之前，我们需要确保以下区分是清晰的：数据集（dataset）包含数据行（通常在平文件中），其中列被称为*特征（features）*，行代表数据集的*实例（instance）*。相比之下，TF 2 Dataset 指的是 `tf.data.Dataset` 命名空间中的一个类，它像是一个包含数据行的“普通”数据集的封装器。
 
-（注：此处原文存在大量重复，已按要求翻译翻译）
-
 你也可以将 TF 2 Dataset 类比为 Pandas DataFrame。同样，如果你熟悉 Angular 中的 Observables（或类似内容），在学习 TF 2 数据集时可以进行快速的知识迁移。
 
-TF 2 `tf.data.Datasets` 包含数据行（通常在平文件中），列被称为*特征（features）*，行代表数据集的*实例（instance）*。相比之下，TF 2 Dataset 指的是 `tf.data.Dataset` 命名空间中的一个类，它像是一个包含数据行的“普通”数据集的封装器。
 
-你也可以将 TF 2 Dataset 类比为 Pandas DataFrame。同样，如果你熟悉 Angular 中的 Observables（或类似内容），在学习 TF 2 数据集时可以进行快速的知识迁移。
 
-TF 2 `tf.data.Datasets` 包含数据行（通常在平文件中），列被称为*特征（features）*，行代表数据集的*实例（instance）*。相比之下，TF 2 Dataset 指的是 `tf.data.Dataset` 命名空间中的一个类，它像是一个包含数据行的“普通”数据集的封装器。
-
-你也可以将 TF 2 Dataset 类比为 Pandas DataFrame。同样，如果你熟悉 Angular 中的 Observables（或类似内容），在学习 TF 2 数据集时可以进行快速的知识迁移。
-
-TF 2 `tf.data.Datasets` 包含数据行（通常在平文件中），列被称为*特征（features）*，行代表数据集的*实例（instance）*。相比之下，TF 2 Dataset 指的是 `tf.data.Dataset` 命名空间中的一个类，它像是一个包含数据行的“普通”数据集的封装器。
-
-你也可以将 TF 2 Dataset 类比为 Pandas DataFrame。同样，如果你熟悉 Angular 中的 Observables（或类似内容），在学习 TF 2 数据集时可以进行快速的知识迁移。
-
-TF 2 `tf.data.Datasets` 包含数据行（通常在平文件中），列被称为*特征（features）*，行代表数据集的*实例（instance）*。相比之下，TF 2 Dataset 指的是 `tf.data.Dataset` 命名空间中的一个类，它像是一个包含数据行的“普通”数据集的封装器。
-
-你也可以将 TF 2 Dataset 类比为 Pandas DataFrame。同样，如果你熟悉 Angular 中的 Observables（或类似内容），在学习 TF 2 数据集时可以进行快速的知识迁移。
-
-TF 2 `tf.data.Datasets` 包含数据行（通常在平文件中），列被称为*特征（features）*，行代表数据集的*实例（instance）*。相比之下，TF 2 Dataset 指的是 `tf.data.Dataset` 命名空间中的一个类，它像是一个包含数据行的“普通”数据集的封装器。
-
-你也可以将 TF 2 Dataset 类比为 Pandas DataFrame。同样，如果你熟悉 Angular 中的 Observables（或类似内容），在学习 TF 2 数据集时可以进行快速的知识迁移。
-
-TF 2 `tf.data.Datasets` 包含数据行（通常在平文件中），列被称为*特征（features）*，行代表数据集的*实例（instance）*。相比之下，TF 2 Dataset 指的是 `tf.data.Dataset` 命名空间中的一个类，它像是一个包含数据行的“普通”数据集的封装器。
-
-你也可以将 TF 2 Dataset 类比为 Pandas DataFrame。同样，如果你熟悉 Angular 中的 Observables（或类似内容），在学习 TF 2 数据集时可以进行快速的知识迁移。
-
-TF 2 `tf.data.Datasets` 包含数据行（通常在平文件中），列被称为*特征（features）*，行代表数据集的*实例（instance）*。相比之下，TF 2 Dataset 指的是 `tf.data.Dataset` 命名空间中的一个类，它像是一个包含数据行的“普通”数据集的封装器。
-
-你也可以将 TF 2 Dataset 类比为 Pandas DataFrame。同样，如果你熟悉 Angular 中的 Observables（或类似内容），在学习 TF 2 数据集时可以进行快速的知识迁移。
-
-TF 2 `tf.data.Datasets` 包含数据行（通常在平文件中），列被称为*特征（features）*，行代表数据集的*实例（instance）*。相比之下，TF 2 Dataset 指的是 `tf.data.Dataset` 命名空间中的一个类，它像是一个包含数据行的“普通”数据集的封装器。
-
-你也可以将 TF 2 Dataset 类比为 Pandas DataFrame。同样，如果你熟悉 Angular 中的 Observables（或类似内容），在学习 TF 2 数据集时可以进行快速的知识迁移。
-
-TF 2 `tf.data.Datasets` 包含数据行（通常在平文件中），列被称为*特征（features）*，行代表数据集的*实例（instance）*。相比之下，TF 2 Dataset 指的是 `tf.data.Dataset` 命名空间中的一个类，它像是一个包含数据行的“普通”数据集的封装器。
-
-你也可以将 TF 2 Dataset 类比为 Pandas DataFrame。同样，如果你熟悉 Angular 中的 Observables（或类似内容），在学习 TF 2 数据集时可以进行快速的知识迁移。
-
-TF 2 `tf.data.Datasets` 包含数据行（通常在平文件中），列被称为*特征（features）*，行代表数据集的*实例（instance）*。相比之下，TF 2 Dataset 指的是 `tf.data.Dataset` 命名空间中的一个类，它像是一个包含数据行的“普通”数据集的封装器。
-
-你也可以将 TF 2 Dataset 类比为 Pandas DataFrame。同样，如果你熟悉 Angular 中的 Observables（或类似内容），在学习 TF 2 数据集时可以进行快速的知识迁移。
-
-TF 2 `tf.data.Datasets` 包含数据行（通常在平文件中），列被称为*特征（features）*，行代表数据集的*实例（instance）*。相比之下，TF 2 Dataset 指的是 `tf.data.Dataset` 命名空间中的一个类，它像是一个包含数据行的“普通”数据集的封装器。
-
-你也可以将 TF 2 Dataset 类比为 Pandas DataFrame。同样，如果你熟悉 Angular 中的 Observables（或类似内容），在学习 TF 2 数据集时可以进行快速的知识迁移。
-
-TF 2 `tf.data.Datasets` 包含数据行（通常在平文件中），列被称为*特征（features）*，行代表数据集的*实例（instance）*。相比之下，TF 2 Dataset 指的是 `tf.data.Dataset` 命名空间中的一个类，它像是一个包含数据行的“普通”数据集的封装器。
-
-你也可以将 TF 2 Dataset 类比为 Pandas DataFrame。同样，如果你熟悉 Angular 中的 Observables（或类似内容），在学习 TF 2 数据集时可以进行快速的知识迁移。
-
-TF 2 `tf.data.Datasets` 包含数据行（通常在平文件中），列被称为*特征（features）*，行代表数据集的*实例（instance）*。相比之下，TF 2 Dataset 指的是 `tf.data.Dataset` 命名空间中的一个类，它像是一个包含数据行的“普通”数据集的封装器。
+# TF 2 Dataset 概述
 
 你也可以将 TF 2 Dataset 类比为 Pandas DataFrame。同样，如果你熟悉 Angular 中的 Observables（或类似内容），在学习 TF 2 数据集时可以进行快速的知识迁移。
 
 TF 2 `tf.data.Datasets` 包含数据行（通常在平文件中），列被称为*特征（features）*，行代表数据集的*实例（instance）*。相比之下，TF 2 Dataset 指的是 `tf.data.Dataset` 命名空间中的一个类，它像是一个包含数据行的“普通”数据集的封装器。
 
 ## Dataset vs. Tensors Comparison
-
-The TF 2 `tf.data.Datasets` 包含数据行（通常在平文件中），列被称为*特征（features）*，行代表数据集的*实例（instance）*。相比之下，TF 2 Dataset 指的是 `tf.data.Dataset` 命名空间中的一个类，它像是一个包含数据行的“普通”数据集的封装器。
-
-（注：此处原文存在大量重复，已按要求翻译翻译）
-
-
-
-
 
 在前面的代码块中，`TF 2` 的 `from_tensors()` API 创建了一个形状为 (2,2,3) 的 3D 张量，而 `TF 2` 的 `from_tensor_slices()` API 则合并输入张量并产生一个形状为 (2,3) 的张量。
 
@@ -8703,13 +7671,13 @@ elem2: 1 tf.Tensor([[0.9139079 0.13430142] [0.9585271 0.58751714] [0.4501326 0.8
 
 有许多方法从多个源填充 `TF 2 Dataset`。为了简单起见，本附录第一部分的代码示例执行了以下步骤：首先，使用初始化的 `NumPy` 数组创建一个 `TF 2 Dataset` 实例；其次，定义一个 Python 函数来遍历 `TF 2 Dataset`；第三，访问数据集的元素（在某些情况下，将这些元素提供给 `TF 2 model`）。
 
-备注：请记住 `TF 1.x` 将 `Datasets` 与 `iterators` 结合，而 `TF 2` 使用 `generators` 配合 `Datasets`。`TF 2` 使用 `generators` 是因为急模式执行（`TF 2` 的默认执行模式）不支持迭代器。
+> **备注**：请记住 `TF 1.x` 将 `Datasets` 与 `iterators` 结合，而 `TF 2` 使用 `generators` 配合 `Datasets`。`TF 2` 使用 `generators` 是因为急模式执行（`TF 2` 的默认执行模式）不支持迭代器。
 
 ## 一个简单的 TF 2 tf.data.Dataset
 
 列表 C.3.1 显示了 `tf2_numpy_dataset.py` 的内容，它展示了如何从数字 `NumPy` 数组创建一个基础的 `TF 2 tf.data.Dataset`。尽管此代码示例非常简单，但它是本附录其他代码示例中出现的初始代码块。
 
-列表 C.3.1: tf2_numpy_dataset.py
+### 列表 C.3.1: tf2_numpy_dataset.py
 
 ```python
 import tensorflow as tf
@@ -8730,7 +7698,7 @@ ds = tf.data.Dataset.from_tensor_slices(x)
 
 列表 C.3.2 显示了 `tf2_plusone.py` 的内容。
 
-列表 C.3.2: tf2_plusone.py
+### 列表 C.3.2: tf2_plusone.py
 
 ```python
 import tensorflow as tf
@@ -8748,9 +7716,7 @@ for value in ds.take(2):
     print(value)
 ```
 
-
-
-
+```
 1value: tf.Tensor(9,shape=(), dtype=int64)
 1value: tf.Tensor(10, shape=(), dtype=int64)
 2value: tf.Tensor(1,shape=(), dtype=int64)
@@ -8763,6 +7729,7 @@ for value in ds.take(2):
 2value: tf.Tensor(8,shape=(), dtype=int64)
 2value: tf.Tensor(9,shape=(), dtype=int64)
 2value: tf.Tensor(10, shape=(), dtype=int64)
+```
 
 下一节包含一个代码示例，展示了如何合并两个 TF 2 数据集（Datasets）。
 
@@ -8770,7 +7737,7 @@ for value in ds.take(2):
 
 列表 C.3.3 显示了 `tf2_concatenate.py` 的内容，它演示了如何合并两个 TF 2 数据集。
 
-### 列表 C.3.3：`tf2_concatenate.py`
+### 列表 C.3.3：tf2_concatenate.py
 
 ```python
 import tensorflow as tf
@@ -8793,7 +7760,7 @@ except tf.errors.OutOfRangeError:
 
 列表 C.3.3 的后续部分是一个 try/except 块，其中包含一个 for 循环用于显示 `ds3` 的内容。运行列表 C.3.4 中代码的输出如下：
 
-```text
+```
 ds3 value: tf.Tensor(1, shape=(), dtype=int64)
 ds3 value: tf.Tensor(2, shape=(), dtype=int64)
 ds3 value: tf.Tensor(3, shape=(), dtype=int64)
@@ -8817,7 +7784,9 @@ ds3 value: tf.Tensor(10, shape=(), dtype=int64)
 
 ## TF 2 reduce() 运算符
 
-TF 2 `reduce()` 运算符对其输入进行归约，直到产生单个值。例如，你可以使用 `reduce()` 运算符相加数组中的所有数字。列表 C.3.4 显示了 `tf2_reduce.py` 的内容，演示了如何在 TF 2 中 `reduce()` API。
+
+
+TF 2 `reduce()` 运算符对其输入进行归约，直到产生单个值。例如，你可以使用 `reduce()` 运算符相加数组中的所有数字。列表 C.3.4 显示了 `tf2_reduce.py` 的内容，演示了如何在 TF 2 中使用 `reduce()` API。
 
 ### 列表 C.3.4：`tf2_reduce.py`
 
@@ -8825,18 +7794,18 @@ TF 2 `reduce()` 运算符对其输入进行归约，直到产生单个值。例�
 import tensorflow as tf
 import numpy as np
 
-x1 = tf.data.Dataset.range(8).reduce(np.int64(0),lambda x, _: x + 1)
-x2 = tf.data.Dataset.range(8).reduce(np.int64(0),lambda x, y: x + y)
-print("x1:",x1)
-print("x2:",x2)
+x1 = tf.data.Dataset.range(8).reduce(np.int64(0), lambda x, _: x + 1)
+x2 = tf.data.Dataset.range(8).reduce(np.int64(0), lambda x, y: x + y)
+print("x1:", x1)
+print("x2:", x2)
 ```
 
 列表 C.3.4 将变量 `x1` 和 `x2` 定义为 `tf.data.Dataset` 实例，它们基于从 0 到 7（包含）的数字。注意 `x1` 和 `x2` 指定了不同的 lambda 表达式。`x1` 的 lambda 表达式返回其输入值加 1。由于输入值集中最大的数字是 7，最后一个输出值是 8。
 
-另一方面，`x2` 定义了一个返回两个连续输入值之的 lambda 表达式。初始和为 0，因此最终输出等于数字 1, 2, ... 和 7 的和，即 28。运行列表 C.3.4 中代码的输出如下：
+另一方面，`x2` 定义了一个返回两个连续输入值之和的 lambda 表达式。初始和为 0，因此最终输出等于数字 1, 2, ... 和 7 的和，即 28。运行列表 C.3.4 中代码的输出如下：
 
 ```text
-x1: tf.Tensor(8,shape=(), dtype=int64)
+x1: tf.Tensor(8, shape=(), dtype=int64)
 x2: tf.Tensor(28, shape=(), dtype=int64)
 ```
 
@@ -8848,79 +7817,76 @@ x2: tf.Tensor(28, shape=(), dtype=int64)
 
 `tf.data.Dataset.from_generator` 方法接收一个生成器函数和一个 `output_signature`，用于定义产生的数据的类型和形状。
 
+作为一个简单的示例，假设我们有一个 NumPy 数组 `[1,2,3,4]`，我们只想从该数组中选择出偶数。结果是 `[2,4,6,8,10]`（注：原文此处描述与代码输出不符，代码输出为偶数），其内容是原始数组的子集。列表 C.3.6 显示了 `tf2_filter.py` 的内容，说明了如何在 TF 2 中使用 `filter()` 运算符。
 
-
-
-作为一个简单的示例，假设我们有一个 NumPy 数组 `[1,2,3,4]`，我们只想从该数组中选择出偶数。结果是 `[1,2]`，其内容是原始数组的子集。列表 C.3.6 显示了 `tf2_filter.py` 的内容，说明了如何在 TF 2 中使用 `filter()` 运算符。
-
-*LISTING* C.3.6: tf2_filter.py
+### 列表 C.3.6：`tf2_filter.py`
 
 ```python
 import tensorflow as tf
 import numpy as np
 
-#def filter_fn(x):
-# # return tf.reshape(tf.not_equal(x % 2, 1), []
+# def filter_fn(x):
+#     return tf.reshape(tf.not_equal(x % 2, 1), [])
 
-x = np.array([1,2,3,4,5,6,7,8,9,10])
+x = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 ds = tf.data.Dataset.from_tensor_slices(x)
-ds = ds.filter(lambda x: tf.reshape(tf.not_equal(x%2,1), []))
-#ds = ds.filter(filter_fn)
+ds = ds.filter(lambda x: tf.reshape(tf.not_equal(x % 2, 1), []))
+# ds = ds.filter(filter_fn)
 
 for value in ds:
-    print("value:",value)
+    print("value:", value)
 ```
 
 列表 C.3.6 将变量 `x` 初始化为一个包含从 1 到 10（包含）整数的 NumPy 数组。接下来，变量 `ds` 初始化为一个 TF 2 Dataset，它由变量 `x` 的内容创建。接下来的代码片段调用了 `filter()` 运算符，其内部的 lambda 表达式只返回偶数，这是因为了这个表达式：
 
-`tf.not_equal(x%2,1)`
+`tf.not_equal(x % 2, 1)`
 
 列表 C.3.6 的后续部分是一个 for 循环，用于遍历数据集 `ds` 的元素。运行列表 C.3.6 中的代码的输出如下：
 
-```
-value: tf.Tensor(2,shape=(), dtype=int64)
-value: tf.Tensor(4,shape=(), dtype=int64)
-value: tf.Tensor(6,shape=(), dtype=int64)
-value: tf.Tensor(8,shape=(), dtype=int64)
+```text
+value: tf.Tensor(2, shape=(), dtype=int64)
+value: tf.Tensor(4, shape=(), dtype=int64)
+value: tf.Tensor(6, shape=(), dtype=int64)
+value: tf.Tensor(8, shape=(), dtype=int64)
 value: tf.Tensor(10, shape=(), dtype=int64)
 ```
 
-## TF 2 filter() 运算符 (2)
+## TF 2 `filter()` 运算符 (2)
 
 列表 C.3.7 显示了 `tf2_filter2.py` 的内容，说明了 TF 2 中 `filter()` 运算符另一个示例。
 
-*LISTING* C.3.7: tf2_filter2.py
+### 列表 C.3.7：`tf2_filter2.py`
 
 ```python
 import tensorflow as tf
 import numpy as np
 
-ds = tf.data.Dataset.from_tensor_slices([1,2,3,4,5])
-ds = ds.filter(lambda x: x < 4) # [1,2,3]
+ds = tf.data.Dataset.from_tensor_slices([1, 2, 3, 4, 5])
+ds = ds.filter(lambda x: x < 4)  # [1, 2, 3]
 
 print("First iteration:")
 for value in ds:
-    print("value:",value)
+    print("value:", value)
 
-# "tf.math.equal(x, y)" 用于等等性比较
+# "tf.math.equal(x, y)" 用于相等性比较
 def filter_fn(x):
     return tf.math.equal(x, 1)
 
 ds = ds.filter(filter_fn)
 print("Second iteration:")
 for value in ds:
-    print("value:",value)
+    print("value:", value)
 ```
 
-列表 C.3.7 定义变量 `ds` 为一个从数组 `[1,2,3,4,5]` 创建的 TF 2 Dataset。接下来的代码片段调用了 `filter()` 运算符，其内部的 lambda 表达式返回小于 4 的数字。for 循环打印了 `ds` 变量中的数字，该变量由过滤后的数字 1、2 和 3 列表组成。
+列表 C.3.7 定义变量 `ds` 为一个从数组 `[1, 2, 3, 4, 5]` 创建的 TF 2 Dataset。接下来的代码片段调用了 `filter()` 运算符，其内部的 lambda 表达式返回小于 4 的数字。for 循环打印了 `ds` 变量中的数字，该变量由过滤后的数字 1、2 和 3 列表组成。
 
-列表 C.3.7 的后续部分是装饰过的 Python 函数 `filter_fn()`，它被作为 `ds` 新定义的一部分指定，如下所示：
+列表 C.3.7 的后续部分定义了 Python 函数 `filter_fn()`，它被作为 `ds` 新定义的一部分指定，如下所示：
 
 `ds = ds.filter(filter_fn)`
 
-前述代码片段在列表 C.3.7 的第二个 for 循环中执行了装饰过的 Python 函数 `filter_fn()`。运行列表 C.3.7 中代码的输出如下：
+前述代码片段在列表 C.3.7 的第二个 for 循环中执行了 Python 函数 `filter_fn()`。运行列表 C.3.7 中代码的输出如下：
 
-```
+```text
 First iteration:
 value: tf.Tensor(1, shape=(), dtype=int32)
 value: tf.Tensor(2, shape=(), dtype=int32)
@@ -8929,11 +7895,11 @@ Second iteration:
 value: tf.Tensor(1, shape=(), dtype=int32)
 ```
 
-## TF 2 batch() 运算符 (1)
+## TF 2 `batch()` 运算符 (1)
 
 `batch(n)` 运算符在每次迭代期间处理包含 `n` 个元素的批。列表 C.3.8 显示了 `tf2_batch1.py` 的内容，说明了如何在 TF 2 中使用 `batch()` 运算符。
 
-*LISTING* C.3.8: tf2_batch1.py
+### 列表 C.3.8：`tf2_batch1.py`
 
 ```python
 import tensorflow as tf
@@ -8943,14 +7909,14 @@ x = np.arange(0, 34)
 ds = tf.data.Dataset.from_tensor_slices(x).batch(3)
 
 for value in ds:
-    print("value:",value)
+    print("value:", value)
 ```
 
 列表 C.3.8 将变量 `x` 初始化为包含从 0 到 33（包含）整数的 NumPy 数组（注意该数组包含 34 个数字）。接下来，变量 `ds` 初始化为一个 TF 2 Dataset，它是变量 `x` 内容的容器。注意 `x` 的定义涉及方法链调用，通过将 `batch(3)` 运算符作为 `ds` 定义的一部分“附加”上去的。
 
 列表 C.3.8 的最后部分包含一个循环，用于遍历数据集 `ds` 的元素。现在运行列表 C.3.8 中的代码以查看完整输出，如下：
 
-```
+```text
 tf.Tensor([0 1 2], shape=(3,), dtype=int64)
 tf.Tensor([3 4 5], shape=(3,), dtype=int64)
 tf.Tensor([6 7 8], shape=(3,), dtype=int64)
@@ -8965,32 +7931,33 @@ tf.Tensor([30 31 32], shape=(3,), dtype=int64)
 tf.Tensor([33], shape=(1,), dtype=int64)
 ```
 
-## TF 2 batch() 运算符 (2)
+## TF 2 `batch()` 运算符 (2)
 
 列表 C.3.9 显示了 `tf2_generator.py` 的内容，说明了如何使用生成器来显示批数据。
 
-*LISTING* C.3.9: tf2_generator.py
+### 列表 C.3.9：`tf2_generator.py`
 
 ```python
 import tensorflow as tf
 import numpy as np
 
 x = np.arange(0, 12)
+
 def gener():
     i = 0
     while i < len(x):
-        yield i, i+1, i+2
+        yield i, i + 1, i + 2
         i += 3
 
 ds = tf.data.Dataset.from_generator(gener, output_signature=(tf.int64, tf.int64, tf.int64))
 third = ds.batch(3)
 for value in ds:
-    print("value:",value)
+    print("value:", value)
 ```
 
 列表 C.3.9 将变量 `x` 初始化为从 0 到 11 的 NumPy 数组。接下来的代码片段通过 `from_generator()` API 调用了 `gener()` 函数，后者被视为生成器。列表 C.3.9 的最后部分包含一个 for 循环，遍历数据集 `ds` 的元素，在每次 `print()` 语句期间打印批数据。运行列表 C.3.9 中代码的输出如下：
 
-```
+```text
 value: tf.Tensor([0 1 2], shape=(3,), dtype=int64)
 value: tf.Tensor([3 4 5], shape=(3,), dtype=int64)
 value: tf.Tensor([6 7 8], shape=(3,), dtype=int64)
@@ -8999,13 +7966,13 @@ value: tf.Tensor([9 10 11], shape=(3,), dtype=int64)
 
 配套文件包含 `tf2_generator1.py` 和 `tf2_generator3.py`，它们说明了前述代码的变体。
 
-## TF 2 map() 运算符 (1)
+## TF 2 `map()` 运算符 (1)
 
 `map()` 运算符通常定义为投影，虽然这在技术上是正确的，但实际行为可能并不清晰。基本思想是：当你提供列表或数组作为 `map()` 运算符的输入时，该运算符会对每个元素应用 lambda 表达式。
 
-例如，lambda 表达式 `lambda x: x*2` 返回输入值 `x` 的两倍，而 lambda 表达式 `lambda x: x/2` 返回输入值 `x` 的一半。在两种情况下，输入列表和输出列表具有相同数量的元素。在许多情况下，这两个列表的大小相同的，但有很多例外。例如，lambda 表达式 `lambda x: x%2` 对偶数返回 0，对奇数返回 1，因此输出最多包含两个数字，而输入列表可以是任意大的。列表 C.3.10 显示了 `tf2_map.py` 的内容，说明了 TF 2 中 `map()` 运算符的一个完整示例。
+例如，lambda 表达式 `lambda x: x * 2` 返回输入值 `x` 的两倍，而 lambda 表达式 `lambda x: x / 2` 返回输入值 `x` 的一半。在两种情况下，输入列表和输出列表具有相同数量的元素。在许多情况下，这两个列表的大小相同，但有很多例外。例如，lambda 表达式 `lambda x: x % 2` 对偶数返回 0，对奇数返回 1，因此输出最多包含两个数字，而输入列表可以是任意大的。列表 C.3.10 显示了 `tf2_map.py` 的内容，说明了 TF 2 中 `map()` 运算符的一个完整示例。
 
-*LISTING* C.3.10: tf2_map.py
+### 列表 C.3.10：`tf2_map.py`
 
 ```python
 import tensorflow as tf
@@ -9013,20 +7980,17 @@ import numpy as np
 
 x = np.array([[1], [2], [3], [4]])
 ds = tf.data.Dataset.from_tensor_slices(x)
-ds = ds.map(lambda x: x*2)
+ds = ds.map(lambda x: x * 2)
 
 for value in ds:
-    print("value:",value)
+    print("value:", value)
 ```
-
-
-
 
 列表 C.3.10 将变量 `x` 初始化为包含四个元素的 NumPy 数组，其中每个元素都是包含数字 1, 2, 3 和 4 的 1x1 数组。接下来，变量 `ds` 初始化为 TF 2 Dataset，该数据集由变量 `x` 的内容创建。注意 `ds.map()` 如何定义了一个 lambda 表达式，该表达式在示例中将每个输入值（在本示例中取值为 1 到 4 的每个整数）的数值翻倍。
 
 列表 C.3.10 的最后部分包含一个 `for` 循环，该循环遍历 `ds` 的元素并显示它们的值。运行列表 C.3.10 中的代码输出如下：
 
-```
+```text
 value: tf.Tensor([2], shape=(1,), dtype=int64)
 value: tf.Tensor([4], shape=(1,), dtype=int64)
 value: tf.Tensor([6], shape=(1,), dtype=int64)
@@ -9037,51 +8001,51 @@ value: tf.Tensor([8], shape=(1,), dtype=int64)
 
 列表 C.3.11 显示了 `tf2_map2.py` 的内容，它展示了定义数据集的两种技术，以及如何在 TF 2 中调用多次出现的 `map()` 运算符。
 
-**列表** C.3.11: `tf2_map2.py`
+### 列表 C.3.11：`tf2_map2.py`
 
 ```python
 import tensorflow as tf
 import numpy as np
 
 # 一个简单的 NumPy 数组
-x = np.array([[1],[2],[3],[4]])
+x = np.array([[1], [2], [3], [4]])
 
 # 从 NumPy 数组创建数据集
 dataset = tf.data.Dataset.from_tensor_slices(x)
 
 # 方法 #1: 较长的方法
 # 使用 lambda 表达式将每个值翻倍
-# dataset = dataset.map(lambda x: x*2)
+# dataset = dataset.map(lambda x: x * 2)
 # 使用 lambda 表达式给每个值加 1
-# dataset = dataset.map(lambda x: x+1)
+# dataset = dataset.map(lambda x: x + 1)
 # 使用 lambda 表达式将每个值立方
-# dataset = dataset.map(lambda x: x**3)
+# dataset = dataset.map(lambda x: x ** 3)
 
 # 方法 #2: 更短的方法
-dataset = dataset.map(lambda x: x*2).map(lambda x: x+1).map(lambda x: x**3)
+dataset = dataset.map(lambda x: x * 2).map(lambda x: x + 1).map(lambda x: x ** 3)
 
-for value in ds:
-    print("value:",value)
+for value in dataset:
+    print("value:", value)
 ```
 
 列表 C.3.11 将变量 `x` 初始化为包含四个元素的 NumPy 数组，其中每个元素都是包含数字 1, 2, 3 和 4 的 1x1 数组。接下来，变量 `dataset` 初始化为 TF 2 Dataset，该数据集由变量 `x` 的内容创建。
 
-列表 C.3.11 的下一部分是一个被注释掉的代码块，包含三个 lambda 表达式，随后是一个（**加粗显示**）的代码片段，该片段使用方法链以一种更紧凑的方式调用这相同的三个 lambda 表达式：
+列表 C.3.11 的下一部分是一个被注释掉的代码块，包含三个 lambda 表达式，随后是一个代码片段，该片段使用方法链以一种更紧凑的方式调用这相同的三个 lambda 表达式：
 
 ```python
-dataset = dataset.map(lambda x: x*2).map(lambda x: x+1).map(lambda x: x**3)
+dataset = dataset.map(lambda x: x * 2).map(lambda x: x + 1).map(lambda x: x ** 3)
 ```
 
 前面的代码片段通过以下方式转换每个输入值：首先将值翻倍，然后对第一个 lambda 表达式的输出结果加 1，最后对第二个 lambda 表达式的输出结果立方。
 
 虽然方法链是组合运算符的简洁方式，但在单行（非常长）代码中调用许多惰性运算符（lazy operators）可能会变得难以理解，而使用较长的方法编写代码会更容易调试。
 
-建议：从将每个惰性运算符写在单独的代码行中开始，在你确认单个结果是正确的，*之后*再使用方法链将运算符组合在单行代码中（可能最多包含四个五个惰性运算符）。
+建议：从将每个惰性运算符写在单独的代码行中开始，在你确认单个结果是正确的，*之后*再使用方法链将运算符组合在单行代码中（可能最多包含四个或五个惰性运算符）。
 
 列表 C.3.11 的最后部分包含一个 `for` 循环，该循环遍历转换后的值并显示它们的值。运行列表 C.3.11 中的代码输出如下：
 
-```
-value: tf.Tensor([27],shape=(1,), dtype=int64)
+```text
+value: tf.Tensor([27], shape=(1,), dtype=int64)
 value: tf.Tensor([125], shape=(1,), dtype=int64)
 value: tf.Tensor([343], shape=(1,), dtype=int64)
 value: tf.Tensor([729], shape=(1,), dtype=int64)
@@ -9089,11 +8053,11 @@ value: tf.Tensor([729], shape=(1,), dtype=int64)
 
 ### TF 2 `flatmap()` 运算符 (1)
 
+
+
 除了 TF 2 `map()` 运算符外，TF 2 还支持 TF 2 `flat_map()` 运算符。然而，TF 2 `map()` 和 TF 2 `flat_map()` 运算符期望的函数签名不同。具体而言，`map()` 接收一个将输入数据集的单个元素映射到单个新元素的函数，而 `flat_map()` 接收一个将输入数据集的单个元素映射到元素 `Dataset` 的函数。
 
-列表 C.3.12 显示了 `tf2_flatmap1.py` 的内容，展示了如何在 TF 2 中使用 `flatmap()` 运算符。
-
-**列表** C.3.12: `tf2_flatmap1.py`
+### 列表 C.3.12: `tf2_flatmap1.py`
 
 ```python
 import tensorflow as tf
@@ -9122,9 +8086,7 @@ value: tf.Tensor([7 8 9], shape=(3,), dtype=int64)
 
 上一节的代码运行正常，但在显示数据集元素的代码块中存在一个硬编码值 `3`。本节的代码示例移除了这个硬编码值。
 
-列表 C.3.13 显示了 `tf2_flatmap.py` 的内容，它展示了如何在 TF 2 中使用 `flatmap()` 运算符，并遍历数据集的元素。
-
-**列表** C.3.13: `tf2_flatmap.py`
+### 列表 C.3.13: `tf2_flatmap.py`
 
 ```python
 import tensorflow as tf
@@ -9153,7 +8115,7 @@ value: tf.Tensor([7 8 9], shape=(3,), dtype=int64)
 
 列表 C.3.14 显示了 `comments.txt` 的内容，列表 C.3.15 显示了 `tf2_flatmap_filter.py` 的内容，展示了如何在 TF 2 中使用 `filter()` 运算符。
 
-**列表** C.3.14: `comments.txt`
+### 列表 C.3.14: `comments.txt`
 
 ```text
 #this is file line #1
@@ -9163,7 +8125,7 @@ this is file line #4
 #this is file line #5
 ```
 
-**列表** C.3.15: `tf2_flatmap_filter.py`
+### 列表 C.3.15: `tf2_flatmap_filter.py`
 
 ```python
 import tensorflow as tf
@@ -9173,7 +8135,7 @@ ds = tf.data.Dataset.from_tensor_slices(filenames)
 
 # 1) 使用 Dataset.flat_map() 将每个文件
 # 转换为单独的嵌套 ds，然后按顺序将它们内容
-#连接接到单个“扁平” ds 中
+# 连接到单个“扁平” ds 中
 # 2) 跳过第一行（标题行）
 # 3) 过滤掉以 "#" 开头的行（注释）
 ds = ds.flat_map(
@@ -9188,8 +8150,6 @@ for value in ds.take(2):
     print("value:",value)
 ```
 
-
-
 具体来说，`flat_map()` 操作符会展平嵌套 lambda 表达式返回的任何内容，这涉及到几次变换。第一次变换是将每个输入文件名逐个传递给 `tf.data.TextLineDataset` 类。第二次变换是跳过当前输入文件的第一行文本。第三次变换调用了 `filter()` 操作符，它指定了另一个带有条件逻辑的 lambda 表达式，如下：
 
 ```python
@@ -9198,18 +8158,18 @@ tf.not_equal(tf.strings.substr(line,0,1),"#")
 
 上述代码段当且仅当文本行第一个位置的字符不是字符 `#` 时，会返回当前行的文本（来自当前处理的文本文件）；否则，不返回任何内容（即跳过该行）。这些变换可以总结为：“对于每个输入文件，跳过第一行，并打印任何不以字符 `#` 开头的后续行。”
 
-列表 C.3.15 的最后部分打印了两个行的输出，在定义了如此如此华丽的变换 set 之后，这看起来可能有些大失所望！运行列表 C.3.15 中的代码查看以下输出：
+列表 C.3.15 的最后部分打印了两个行的输出，在定义了如此华丽的变换 set 之后，这看起来可能有些大失所望！运行列表 C.3.15 中的代码查看以下输出：
 
 ```
 value: tf.Tensor(b'this is file line #3 ', shape=(), dtype=string)
 value: tf.Tensor(b'this is file line #4 ', shape=(), dtype=string)
 ```
 
-## TF 2 repeat() 操作符
+## TF 2 `repeat()` 操作符
 
 `repeat(n)` 操作符简单地将其输入值重复 `n` 次。列表 C.3.16 显示了 `tf2_repeat.py` 的内容，它说明了如何在 TF 2 中使用 `repeat()` 操作符。
 
-**列表 C.3.16: tf2_repeat.py**
+### 列表 C.3.16: `tf2_repeat.py`
 
 ```python
 import tensorflow as tf
@@ -9237,11 +8197,11 @@ value: tf.Tensor(2, shape=(), dtype=int32)
 value: tf.Tensor(3, shape=(), dtype=int32)
 ```
 
-## TF 2 take() 操作符
+## TF 2 `take()` 操作符
 
 `take(n)` 操作符获取 `n` 个输入值。列表 C.3.17 显示了 `tf2_take.py` 的内容，它说明了 TF 2 中 `take()` 操作符的另一个示例。
 
-**列表 C.3.17: tf2_take.py**
+### 列表 C.3.17: `tf2_take.py`
 
 ```python
 import tensorflow as tf
@@ -9254,7 +8214,7 @@ for value in ds.take(20):
     print("value:",value)
 ```
 
-列表 C.3.17 将变量 `ds1` 初始化为 TF 2 Dataset，它由 0 到 7（包含）之间的整数创建。下一个代码片段将 `take()` 操作符附加到 `ds`，其效果是将输出限制为前五个整数。
+列表 C.3.17 将变量 `ds` 初始化为 TF 2 Dataset，它由 0 到 7（包含）之间的整数创建。下一个代码片段将 `take()` 操作符附加到 `ds`，其效果是将输出限制为前五个整数。
 
 列表 C.3.17 的最后部分包含一个遍历数据集 `ds` 元素的 for 循环。关于输出是如何生成的解释，请参见述一节中的代码。运行列表 C.3.17 中代码的输出在此：
 
@@ -9266,11 +8226,11 @@ value: tf.Tensor(3, shape=(), dtype=int32)
 value: tf.Tensor(4, shape=(), dtype=int32)
 ```
 
-## 结合 TF 2 map() 和 take() 操作符
+## 结合 TF 2 `map()` 和 `take()` 操作符
 
 列表 C.3.18 显示了 `tf2_map_take.py` 的内容，它说明了如何使用方法链调用三次 `map()` 操作符（使用三个 lambda 表达式），随后在 TF 2 中调用 `take()` 操作符。
 
-**列表 C.3.18: tf2_map_take.py**
+### 列表 C.3.18: `tf2_map_take.py`
 
 ```python
 import tensorflow as tf
@@ -9291,11 +8251,11 @@ value: tf.Tensor(343, shape=(), dtype=int64)
 value: tf.Tensor(729, shape=(), dtype=int64)
 ```
 
-## 结合 TF 2 zip() 和 batch() 操作符
+## 结合 TF 2 `zip()` 和 `batch()` 操作符
 
 列表 C.3.19 显示了 `tf2_zip_batch.py` 的内容，它说明了如何在 TF 2 中结合 `zip()` 和 `batch()` 操作符。
 
-**列表 C.3.19: tf2_zip_batch.py**
+### 列表 C.3.19: `tf2_zip_batch.py`
 
 ```python
 import tensorflow as tf
@@ -9321,35 +8281,44 @@ value: (<tf.Tensor(id=48, shape=(), dtype=int64, numpy=[28, 29, 30, 31]), tf.Ten
 value: (<tf.Tensor(id=52, shape=(), dtype=int64, numpy=[32, 33, 34, 35]), tf.Tensor(id=53, shape=(), dtype=int64, numpy=[-32, -33, -34, -35])>)
 ```
 
-
-
-
 `value: (<tf.Tensor: id=56, shape=(4,), dtype=int64, numpy=array([36, 37, 38, 39])>, <tf.Tensor: id=57, shape=(4,), dtype=int64, numpy=array([-36, -37, -38, -39]))>)`
 
-为了方便起，这里是列表 3.19 输出结果稍微简洁且清晰的版本：
+为了方便起见，这里是列表 C.3.19 输出结果稍微简洁且清晰的版本：
 
+```
 [0, 1, 2, 3], [0, -1, -2, -3]
 [4, 5, 6, 7], [-4, -5, -6, -7]
 [8, 9, 10, 11], [-8, -9, -10, -11]
 [12, 13, 14, 15], [-12, -13, -14, -15]
 [16, 17, 18, 19], [-16, -17, -18, -19]
 [20, 21, 22, 23], [-20, -21, -22, -23]
+```
+
+
+
 [24, 25, 26, 27], [-24, -25, -26, -27]
+
 [28, 29, 30, 31], [-28, -29, -30, -31]
+
 [32, 33, 34, 35], [-32, -33, -34, -35]
+
 [36, 37, 38, 39], [-36, -37, -38, -39]
+
 [40, 41, 42, 43], [-40, -41, -42, -43]
+
 [44, 45, 46, 47], [-44, -45, -46, -47]
+
 . . . .
+
 [96, 97, 98, 99], [-96, -97, -98, -99]
 
-## 结合 TF 2 的 zip() 和 take() 操作符
+## 结合 TF 2 的 `zip()` 和 `take()` 操作符
 
 `zip()` 操作符每次处理两个元素，以成对的方式进行。想象电影院双开门处有两排正在等待的人。门打开后，一对人——每排各一个——进入了电影院内部。
 
 列表 C.3.20 显示了 `tf2_zip_take.py` 的内容，它说明了如何在 TF 2 中结合 `zip()` 和 `take()` 操作符。
 
-列表 C.3.20: tf2_zip_take.py
+### 列表 C.3.20: tf2_zip_take.py
 
 ```python
 import tensorflow as tf
@@ -9365,7 +8334,7 @@ dy = tf.data.Dataset.from_tensor_slices(y)
 # 将两个数据集合并在一起
 d2 = tf.data.Dataset.zip((dx, dy)).batch(3)
 for value in d2.take(8):
-    print("value:",value)
+    print("value:", value)
 ```
 
 列表 C.3.20 将变量 `x` 和 `y` 分别初始化为 0 到 9 以及 1 到 10 的整数范围。接下来，变量 `dx` 和 `dy` 初始化为 TF 2 Datasets，它们分别由变量 `x` 和 `y` 的内容创建。
@@ -9376,65 +8345,69 @@ for value in d2.take(8):
 d2 = tf.data.Dataset.zip((dx, dy)).batch(3)
 ```
 
-注意是如何通过在 `dcomb` 的定义中“加上” `batch(3)` 操作符来实现链式调用的。
+注意是如何通过在 `d2` 的定义中“加上” `batch(3)` 操作符来实现链式调用的。
 
-列表 C.3.20 的最后部分包含一个执行 15 次的循环，在每次迭代中，循环都会打印变量 `iterator` 的当前内容。每行输出包含两个数字块，每个块由三个连续的整数组成。运行列表 C.3.20 中的代码得到的输出如下：
+列表 C.3.20 的最后部分包含一个执行 3 次的循环，在每次迭代中，循环都会打印变量 `value` 的当前内容。每行输出包含两个数字块，每个块由三个连续的整数组成。运行列表 C.3.20 中的代码得到的输出如下：
 
-`value: (<tf.Tensor: id=16, shape=(3,), dtype=int64, numpy=array([0, 1, 2])), <tf.Tensor: id=17, shape=(3,), dtype=int64, numpy=array([1, 2, 3]))>)`
-`value: (<tf.Tensor: id=20, shape=(3,), dtype=int64, numpy=array([3, 4, 5])), <tf.Tensor: id=21, shape=(3,), dtype=int64, numpy=array([4, 5, 6]))>)`
-`value: (<tf.Tensor: id=24, shape=(3,), dtype=int64, numpy=array([6, 7, 8])), <tf.Tensor: id=25, shape=(3,), dtype=int64, numpy=array([7, 8, 9]))>)`
-`value: (<tf.Tensor: id=28, shape=(1,), dtype=int64, numpy=array([9])), <tf.Tensor: id=29, shape=(1,), dtype=int64, numpy=array([10]))`
+```
+value: (<tf.Tensor: id=16, shape=(3,), dtype=int64, numpy=array([0, 1, 2])>, <tf.Tensor: id=17, shape=(3,), dtype=int64, numpy=array([1, 2, 3])>)
+value: (<tf.Tensor: id=20, shape=(3,), dtype=int64, numpy=array([3, 4, 5])>, <tf.Tensor: id=21, shape=(3,), dtype=int64, numpy=array([4, 5, 6])>)
+value: (<tf.Tensor: id=24, shape=(3,), dtype=int64, numpy=array([6, 7, 8])>, <tf.Tensor: id=25, shape=(3,), dtype=int64, numpy=array([7, 8, 9])>)
+value: (<tf.Tensor: id=28, shape=(1,), dtype=int64, numpy=array([9])>, <tf.Tensor: id=29, shape=(1,), dtype=int64, numpy=array([10])>)
+```
 
 ## TF 2 tf.data.Datasets 和随机数
 
 列表 C.3.21 显示了 `tf2_generator.py` 的内容，说明了如何创建一个带有随机数的 TF 2 Dataset。
 
-列表 C.3.21: tf2_generator.py
+### 列表 C.3.21: tf2_generator.py
 
 ```python
 import tensorflow as tf
 import numpy as np
 
-x = np.random.sample((8,2))
+x = np.random.sample((8, 2))
 size = x.shape[0]
 
 def gener():
     for i in range(size):
-        yield x[i,0], x[i,1]
+        yield x[i, 0], x[i, 1]
 
-ds = tf.data.Dataset.from_generator(gener, (tf.float64,))
+ds = tf.data.Dataset.from_generator(gener, (tf.float64, tf.float64))
 for value in ds:
-    print("value:",value)
+    print("value:", value)
 ```
 
 列表 C.3.21 将变量 `x` 初始化为包含 8 行 2 列随机数的 NumPy 数组。接下来，变量 `ds` 初始化为从变量 `x` 内容创建的 TF 2 Dataset。列表 C.3.21 的后续部分定义了 Python 函数 `gener()`，其生成器与之前的代码相同。列表 C.3.21 的最后部分打印了转换后的第一行数据，如下：
 
-`value: (<tf.Tensor: id=32, shape=(,), dtype=float64, numpy=0.205917496658795), <tf.Tensor: id=33, shape=(,), dtype=float64, numpy=0.599047732296538)>`
-`value: (<tf.Tensor: id=36, shape=(,), dtype=float64, numpy=0.43840118732957), <tf.Tensor: id=37, shape=(,), dtype=float64, numpy=0.516920941899256)>`
-`value: (<tf.Tensor: id=40, shape=(,), dtype=float64, numpy=0.58737487532609), <tf.Tensor: id=41, shape=(,), dtype=float64, numpy=0.814186491673524)>`
-`value: (<tf.Tensor: id=44, shape=(,), dtype=float64, numpy=0.054716991950889), <tf.Tensor: id=45, shape=(,), dtype=float64, numpy=0.806596986559444)>`
-`value: (<tf.Tensor: id=48, shape=(,), dtype=float64, numpy=0.887837922956106), <tf.Tensor: id=49, shape=(,), dtype=float64, numpy=0.953386103301681)>`
-`value: (<tf.Tensor: id=52, shape=(,), dtype=float64, numpy=0.4504035573049521), <tf.Tensor: id=53, shape=(,), dtype=float64, numpy=0.6303139480618501)>`
-`value: (<tf.Tensor: id=56, shape=(,), dtype=float64, numpy=0.84588294357816), <tf.Tensor: id=57, shape=(,), dtype=float64, numpy=0.916291642540712)>`
+```
+value: (<tf.Tensor: id=32, shape=(), dtype=float64, numpy=0.205917496658795>, <tf.Tensor: id=33, shape=(), dtype=float64, numpy=0.599047732296538>)
+value: (<tf.Tensor: id=36, shape=(), dtype=float64, numpy=0.43840118732957>, <tf.Tensor: id=37, shape=(), dtype=float64, numpy=0.516920941899256>)
+value: (<tf.Tensor: id=40, shape=(), dtype=float64, numpy=0.58737487532609>, <tf.Tensor: id=41, shape=(), dtype=float64, numpy=0.814186491673524>)
+value: (<tf.Tensor: id=44, shape=(), dtype=float64, numpy=0.054716991950889>, <tf.Tensor: id=45, shape=(), dtype=float64, numpy=0.806596986559444>)
+value: (<tf.Tensor: id=48, shape=(), dtype=float64, numpy=0.887837922956106>, <tf.Tensor: id=49, shape=(), dtype=float64, numpy=0.953386103301681>)
+value: (<tf.Tensor: id=52, shape=(), dtype=float64, numpy=0.4504035573049521>, <tf.Tensor: id=53, shape=(), dtype=float64, numpy=0.6303139480618501>)
+value: (<tf.Tensor: id=56, shape=(), dtype=float64, numpy=0.84588294357816>, <tf.Tensor: id=57, shape=(), dtype=float64, numpy=0.916291642540712>)
+```
 
 ## TF 2, MNIST 和 tf.data.Dataset
 
 除了从 NumPy 数据数组或 Pandas DataFrame 创建数据集外，你还可以从现有数据集创建数据集。例如，列表 C.3.22 显示了 `tf2_mnist.py` 的内容，说明了如何从 MNIST 数据集创建 `tf.data.Dataset`。
 
-列表 C.3.22: tf2_mnist.py
+### 列表 C.3.22: tf2_mnist.py
 
 ```python
 import tensorflow as tf
 
 train, test = tf.keras.datasets.mnist.load_data()
 mnist_x, mnist_y = train
-print("mnist_x.shape:",mnist_x.shape)
-print("mnist_y.shape:",mnist_y.shape)
+print("mnist_x.shape:", mnist_x.shape)
+print("mnist_y.shape:", mnist_y.shape)
 
 mnist_ds = tf.data.Dataset.from_tensor_slices(mnist_x)
-#print(mnist_ds)
+# print(mnist_ds)
 for value in mnist_ds:
-    print("value:",value)
+    print("value:", value)
 ```
 
 列表 C.3.22 从 MNIST 数据集初始化变量 `train` 和 `test`，然后从 `train` 变量初始化变量 `mnist_x` 和 `mnist_y`。接下来的代码段将变量 `mnist_ds` 初始化为从 `mnist_x` 变量创建的 `tf.data.Dataset`。列表 C.3.22 的后续部分包含一个遍历 `mnist_ds` 中元素的 for 循环。
@@ -9443,15 +8416,14 @@ for value in mnist_ds:
 
 接下来的块显示了 `mnist_x` 和 `mnist_y` 的形状，随后是 MNIST 数据集中第一张图像的部分数据（即像素值）。
 
-`mnist_x.shape: (60000, 28, 28)`
-`mnist_y.shape: (60000,)`
-
-
-
+```
+mnist_x.shape: (60000, 28, 28)
+mnist_y.shape: (60000,)
+```
 
 列表 C.3.23 包含一个 `print()` 语句，用于显示 TF 2 中所有内置数据集的完整列表。变量 `ds` 初始化为 MNIST 数据集中的训练相关数据。接下来的代码段使用链式调用调用了三个操作符：首先是 `shuffle()` 操作符（用于洗乱输入数据），然后是 `batch()` 操作符（指定每批次 32 行），最后使用 `prefetch()` 方法来选择第一批数据。最后的代码块是一个 `for` 循环，它仅从 `ds` 中提取第一行数据。运行列表 C.3.23 中的代码产生的输出结果在此：
 
-```python
+```
 ['bair_robot_pushing_small', 'cats_vs_dogs', 'celeb_a', 'celeb_a_hq', 'cifar10', 'cifar100', 'coco2014', 'diabetic_retinopathy_detection', 'dummy_dataset_shared_generator', 'dummy_mnist', 'fashion_mnist', 'image_label_folder', 'imagenet2012', 'imdb_reviews', 'lm1b', 'lsun', 'mnist', 'moving_mnist', 'nsynth', 'omniglot', 'open_images_v4', 'quickdraw_bitmap', 'squad', 'starcraft_video', 'svhn_cropped', 'tf_flowers', 'wmt_translate_ende', 'wmt_translate_enfr']
 ```
 
@@ -9461,7 +8433,7 @@ for value in mnist_ds:
 
 列表 C.3.24 显示了 `tfds-cifar10.py` 的内容，它说明了如何对 CIFAR10 数据集进行某些处理，并使用 lambda 表达式和 `map()` 操作符来训练数据集。
 
-### 列表 C.3.24：tfds-cifar10.py
+### 列表 C.3.24: tfds-cifar10.py
 
 ```python
 import tensorflow as tf
@@ -9482,7 +8454,7 @@ train = train.map(
 
 本节中的代码来自以下 stackoverflow 帖子（其中包含更多细节）：
 
-[https://stackoverflow.com/questions/55141076/how-to-apply-data-augmentation-in-tensorflow-2-0-after-tfds-load]
+<https://stackoverflow.com/questions/55141076/how-to-apply-data-augmentation-in-tensorflow-2-0-after-tfds-load>
 
 # 总结
 
@@ -9507,13 +8479,13 @@ train = train.map(
 - 最大池化 (max pooling), 156
 - 优化器 (optimizer), 149
 - ANDR 函数 (ANDR function), 141
-- Angular [10], 08_Ch01.10), 特性 [5–6
+- Angular [10] (Angular 10), 08_Ch01.10), 特性 [5–6
 - node 和 npm 工具 (node and npm utilities for), 6–7
 - 升级代码 (upgrading code from), 86–87
 - 基于 Angular 的应用 (Angular-based applications)
     - 结构 (anatomy of), 14–15
     - Angular CLI, 7–11
-    - Angular [10], 08_Ch01.10), 特性 [5–6
+    - Angular [10] (Angular 10), 特性 [5–6
     - “Angular 方式” (Angular Way) Effects, 28–31
     - app.component.ts 文件, 17–18
     - app.module.ts 文件, 18–19
@@ -9540,39 +8512,55 @@ train = train.map(
     - src/app 子目录, 15–16
     - 有状态组件与无状态组件 (stateful vs. stateless components), 22
     - SVG 动画 (SVG animation in), 48–49
-    - 以及 SVG 图表 (and SVG Charts), 38–44
-    - 语法、属性和属性 (syntax, attributes, and properties), 22–23
-    - TypeScript, 2–3
-    - Angular [10], 08_Ch01.10), 特性 [5–6
-    - Angular CLI, 7–11
-    - Angular [10], 08_Ch01.10), 特性 [5–6
-    - “Angular 方式” (Angular Way) Effects, 28–31
-- Angular Forms
-    - 结构 (anatomy of), 14–15
-    - Form 类 (Form class), 14–15
-    - FormGroup 类 (FormGroup class), 14–15
-    - 特性 (features of), 4–5
-- Angular service
-    - 结构 (anatomy of), 14–15
-    - 基础服务 (basic service), 149
-    - 内置服务 (built-in services), 112
-    - 自定义服务 (custom service), 111
-    - 注入 (injecting services into), 124
-    - 组件间通信 (inter-component communication), 123–124
-    - 多个实例 (multiple service instances), 122
-    - 服务与组件通信 (services-component communication), 123–124
-    - 单个实例 (single service instance), 122–123
-- Angular supports
-    - 内置 Angular 服务 (built-in Angular services), 112
-    - 内置管道 (built-in pipes), 77
-    - 数据绑定与 ngModel (data binding and ngModel), 103–104
-    - @Input 和 @Output 注解 (@Input and @Output annotations), 71–75
-    - Angular Universal (服务端渲染) (Angular Universal (server-side rendering)), 4
-- “Angular 方式” (Angular Way) Effects, 28–31, 104
-- ANNs (人工神经网络), 232
 
 
 
+# 索引
+
+## 符号
+
+- 以及 SVG 图表 (and SVG Charts), 38–44
+- 语法、属性和属性 (syntax, attributes, and properties), 22–23
+- TypeScript, 2–3
+- Angular [10], 08_Ch01.10), 特性 [5–6
+- Angular CLI, 7–11
+- Angular [10], 08_Ch01.10), 特性 [5–6
+- “Angular 方式” (Angular Way) Effects, 28–31
+
+## Angular Forms
+
+- 结构 (anatomy of), 14–15
+- `Form` 类, 14–15
+- `FormGroup` 类, 14–15
+- 特性 (features of), 4–5
+
+## Angular service
+
+- 结构 (anatomy of), 14–15
+- 基础服务 (basic service), 149
+- 内置服务 (built-in services), 112
+- 自定义服务 (custom service), 111
+- 注入 (injecting services into), 124
+- 组件间通信 (inter-component communication), 123–124
+- 多个实例 (multiple service instances), 122
+- 服务与组件通信 (services-component communication), 123–124
+- 单个实例 (single service instance), 122–123
+
+## Angular supports
+
+- 内置 Angular 服务 (built-in Angular services), 112
+- 内置管道 (built-in pipes), 77
+- 数据绑定与 `ngModel`, 103–104
+- `@Input` 和 `@Output` 注解, 71–75
+- Angular Universal (服务端渲染) (Angular Universal (server-side rendering)), 4
+
+## “Angular 方式” (Angular Way) Effects
+
+- 28–31, 104
+
+## ANNs (人工神经网络)
+
+- 232
 
 # Angular 框架与组件
 
@@ -9628,6 +8616,7 @@ train = train.map(
 - 批处理操作符 `(n)`, 311–313
 - 反向传播, 147, 149, 150
 - 图, 206
+
 # 数据处理与 文件
 
 - `ReadJSON` 目录, 83–84
@@ -9678,258 +8667,154 @@ train = train.map(
 - 从右向左的方式, 144
 - XOR 函数
 
+# 动态 Angular 表单
 
+- 110
 
+## 文件
 
-
-# 动态 Angular 表单,110
-
-`dynamic_lstm_2TP.py`, 181
-
-`dynamic_rnn_2TP.py`, 175
+- `dynamic_lstm_2TP.py`, 181
+- `dynamic_rnn_2TP.py`, 175
 
 # E
 
-快速执行模式，258, 261
-
-元素 vs 属性，54–55
-
-`employees.json`, 84–85, 91
-
-`EmpService` 组件，63
-
-`eras_cnn_cifar10.py`, 220–221
-
-欧几里得空间，140, 149
-
-`evaluate()` 方法，236
-
-梯度爆炸问题，144, 170
-
-`extractData()` 方法，136
+- 快速执行模式，258, 261
+- 元素 vs 属性，54–55
+- `employees.json`, 84–85, 91
+- `EmpService` 组件，63
+- `eras_cnn_cifar10.py`, 220–221
+- 欧几里得空间，140, 149
+- `evaluate()` 方法，236
+- 梯度爆炸问题，144, 170
+- `extractData()` 方法，136
 
 # F
 
-特征图，155
-
-反馈机制，169
-
-`filter()` 函数，3
-
-`filter()` 运算符，309–311
-
-`findGitHubUser()` 方法，120
-
-`fit()` 方法，173, 200, 216
-
-`flat_map()` 运算符，316–319
-
-Flickr 网站，124–126
-
-`focus()` 方法，66
-
-SVG 中的鼠标跟随效果，36–38
-
-遗忘门，184
-
-FormGroup vs. FormArray，109
-
-前向传播，147
+- 特征图，155
+- 反馈机制，169
+- `filter()` 函数，3
+- `filter()` 运算符，309–311
+- `findGitHubUser()` 方法，120
+- `fit()` 方法，173, 200, 216
+- `flat_map()` 运算符，316–319
+- Flickr 网站，124–126
+- `focus()` 方法，66
+- SVG 中的鼠标跟随效果，36–38
+- 遗忘门，184
+- FormGroup vs. FormArray，109
+- 前向传播，147
 
 # G
 
-GAN（生成对抗网络），157, 187–188
-
-对抗攻击，188–189
-
-判别器，189–191
-
-生成器，189–191
-
-高层序列，191–192
-
-`keras_create_gan.py`, 190–191
-
-重置门，184
-
-VAE 模型，192
-
-Cloud SDK，294
-
-GCP（Google 云平台），294
-
-`generateHeights()` 方法，43
-
-生成器，189–191, 307
-
-`gener()` 函数，308
-
-`getData()` 方法，132
-
-`getCustomers()` 方法，90
-
-`get()` 方法，120
-
-GitHub 用户，117–121
-
-Google，194, 256
-
-Google Colatory，292–294
-
-`greet()` 方法，112
-
-`group()` 方法，105, 106
-
-GRU（门控循环单元），184
+- GAN（生成对抗网络），157, 187–188
+- 对抗攻击，188–189
+- 判别器，189–191
+- 生成器，189–191
+- 高层序列，191–192
+- `keras_create_gan.py`, 190–191
+- 重置门，184
+- VAE 模型，192
+- Cloud SDK，294
+- GCP（Google 云平台），294
+- `generateHeights()` 方法，43
+- 生成器，189–191, 307
+- `gener()` 函数，308
+- `getData()` 方法，132
+- `getCustomers()` 方法，90
+- `get()` 方法，120
+- GitHub 用户，117–121
+- Google，194, 256
+- Google Colatory，292–294
+- `greet()` 方法，112
+- `group()` 方法，105, 106
+- GRU（门控循环单元），184
 
 # H
 
-热图，211–213
-
-HelloWorld 应用，11–14
-
-Hinton, Geoffrey，157
-
-直图，210–211
-
-HTML 页面 index.html，54
-
-HTML Web 页面，197, 218
-
-`HttpClient` 类，90
-
-`httpRequest()` 方法，91, 126
-
-超参数，142–143
-
-激活函数，149
-
-反向误差，150–151
-
-Dropout 率，150
-
-隐藏层，148
-
-初始化模型，148
-
-学习率，149–150
-
-损失函数，149
-
-优化器，149–150
+- 热图，211–213
+- HelloWorld 应用，11–14
+- Hinton, Geoffrey，157
+- 直图，210–211
+- HTML 页面 index.html，54
+- HTML Web 页面，197, 218
+- `HttpClient` 类，90
+- `httpRequest()` 方法，91, 126
+- 超参数，142–143
+- 激活函数，149
+- 反向误差，150–151
+- Dropout 率，150
+- 隐藏层，148
+- 初始化模型，148
+- 学习率，149–150
+- 损失函数，149
+- 优化器，149–150
 
 # I
 
-IfLogic 目录，64
-
-index.html Web 页面，19–20
-
-`@Injectable()` 装饰器，111, 113, 124
-
-将服务注入服务中，124
-
-`@Input` 注解，71–73
-
-输入门，184
-
-输入层（考虑多个源），147
+- IfLogic 目录，64
+- index.html Web 页面，19–20
+- `@Injectable()` 装饰器，111, 113, 124
+- 将服务注入服务中，124
+- `@Input` 注解，71–73
+- 输入门，184
+- 输入层（考虑多个源），147
 
 # J
 
-Angular CLI，8–9
-
-`TensorFlow` 2, 258–259
-
-组件间通信，123–124
-
-中间运算符，3
-
-“同态”JavaScript，129
-
-JavaScript 数组，51
-
-基于 JavaScript 的 FRP（函数式编程），2
-
-JavaScript 文件，218
-
-`jQuery`，124–126
-
-`each()` 方法，126
-
-`getJSON()` 方法，126
-
-JSON 文件，91–93
-
-`json-server`,126, 129
+- Angular CLI，8–9
+- `TensorFlow` 2, 258–259
+- 组件间通信，123–124
+- 中间运算符，3
+- “同态”JavaScript，129
+- JavaScript 数组，51
+- 基于 JavaScript 的 FRP（函数式编程），2
+- JavaScript 文件，218
+- `jQuery`，124–126
+- `each()` 方法，126
+- `getJSON()` 方法，126
+- JSON 文件，91–93
+- `json-server`,126, 129
 
 # K
 
-基于 Keras 的模型，139–140, 159–161
-
-cifar10 数据集，241–244
-
-描述，229–230
-
-线性回归，236–238
-
-MNIST 数据集，238–241
-
-在调整调整大小，241–245
-
-vs. “独立”Keras，234
-
-`tf.keras.activations` 命名空间，231–232
-
-`tf2_keras_callback.py`, 245–247
-
-`tf2_keras_callback2.py`, 247–250
-
-`tf.keras.callbacks` 命名空间，233
-
-`tf.keras.datasets` 命名空间，232–233
-
-`tf.keras.experimental` 命名空间，232–233
-
-`tf.keras.layers` 命名空间，231
-
-`tf.keras.metrics` 命名空间，250
-
-`tf.keras` 命名空间，230–231
-
-`tf.keras.optimizers` 命名空间，233
-
-`tf.keras.regularizers` 命名空间，233
-
-`tf2_keras_save_model.py`, 250–253
-
-`tf.keras.utils` 命名空间，233
-
-基于 Keras 的神经网络，161–164
-
-`keras_cnn_cifar10.py`, 242
-
-`keras_cnn_mnist.py`, 161–162
-
-`keras_create_gan.py`, 190–191
-
-`keras_mnist.py`, 159–160
-
-`keras_pasta.py`, 237
-
-`keras_resize.py`, 241–245
-
-`keras_rnn_mnist.py`, 171–174
-
-`keras_rnn_model.py`, 170–171
-
-
-
-
+- 基于 Keras 的模型，139–140, 159–161
+- cifar10 数据集，241–244
+- 描述，229–230
+- 线性回归，236–238
+- MNIST 数据集，238–241
+- 在调整调整大小，241–245
+- vs. “独立”Keras，234
+- `tf.keras.activations` 命名空间，231–232
+- `tf2_keras_callback.py`, 245–247
+- `tf2_keras_callback2.py`, 247–250
+- `tf.keras.callbacks` 命名空间，233
+- `tf.keras.datasets` 命名空间，232–233
+- `tf.keras.experimental` 命名空间，232–233
+- `tf.keras.layers` 命名空间，231
+- `tf.keras.metrics` 命名空间，250
+- `tf.keras` 命名空间，230–231
+- `tf.keras.optimizers` 命名空间，233
+- `tf.keras.regularizers` 命名空间，233
+- `tf2_keras_save_model.py`, 250–253
+- `tf.keras.utils` 命名空间，233
+- 基于 Keras 的神经网络，161–164
+- `keras_cnn_cifar10.py`, 242
+- `keras_cnn_mnist.py`, 161–162
+- `keras_create_gan.py`, 190–191
+- `keras_mnist.py`, 159–160
+- `keras_pasta.py`, 237
+- `keras_resize.py`, 241–245
+- `keras_rnn_mnist.py`, 171–174
+- `keras_rnn_model.py`, 170–171
 
 # T
-- TensorFlow `1.x` 代码, 1, 181–184
+
+## TensorFlow
+
+- `1.x` 代码, 1, 181–184
 
 # M
+
 - 机器学习 (ML) 模型, 197–198, 256
 - 框架, 149, 153
 - LASSO 正则化器, 233
@@ -9970,6 +8855,7 @@ vs. “独立”Keras，234
 - `simimer.py`, 218
 
 # N
+
 - 神经网络, 142–143
 - ANNs (人工神经网络), 147, 150, 168, 232
 - 自动编码器, 184
@@ -9987,6 +8873,7 @@ vs. “独立”Keras，234
 - NumPy 数组, 141
 
 # O
+
 - 面对象编程 (OOP), 65
 - `onClick()` 方法, 69–70
 - 一维向量, 180
@@ -10000,6 +8887,7 @@ vs. “独立”Keras，234
 - 载载函数, 274
 
 # P
+
 - `package.json`, 8, 15
 - `ParentChildmitters` 目录, 72
 - 感知器定义, 145–146
@@ -10013,7 +8901,7 @@ vs. “独立”Keras，234
 - `posts.json`, 129
 - `predict()` 方法, 200, 203, 216, 236
 - `prefetch()` 方法, 328
-- `呈现组件, 76
+- 呈现组件, 76
 - 之前的时间, 169
 - 主成分分析 (PCA), 186
 - 编程语言, 274
@@ -10025,6 +8913,7 @@ vs. “独立”Keras，234
 - Python 脚本, 218, 222, 259
 
 # R
+
 - `RadioButtons` 指令, 55–56
 - `rand20.csv`, 136–137
 - 随机数, 325–326
@@ -10035,18 +8924,16 @@ vs. “独立”Keras，234
 - `ReadWineCSV` 目录, 92
 - `reduce()` 运算符, 306–307
 - Reformer 架构, 143
-- `relatives.json`, 91
-- `ReLU` (线性整流单元), 152
-- `ReLU` 激活函数, 144, 152, 156, 221
-- `repeat(n)` 运算符, 319–320
-- 重置门, 184
-
-
 
 
 
 # 组件与方法
 
+- `relatives.json`, 91
+- `ReLU` (线性整流单元), 152
+- `ReLU` 激活函数, 144, 152, 156, 221
+- `repeat(n)` 运算符, 319–320
+- 重置门, 184
 - `scatter 点图`, 208–209
 - `script.js`, 218, 222
 - `SearchGithubUsers` 目录, 117–121
@@ -10149,173 +9036,98 @@ vs. “独立”Keras，234
 - `TensorFlow`, 260
 - TensorFlow 1.x 代码, 181–184
 - TensorFlow 2, 258
-
-
-
-
-
-`tf.keras.metrics` 命名空间, 250
-
-`tf2_keras-mnist_digit.py`, 158
-
-`tf.keras` 命名空间, 230–231
-
-`tf.keras.optimizers` 命名空间, 233
-
-`tf.keras.regularizers` 命名空间, 233
-
-`tf2_keras_save_model.py`, 250–253
-
-`tf.keras.utils` 命名空间, 233
-
-`tf2_keras_xor.py`, 140–141
-
-`tf2_map_take.py`, 321–322
-
-`tf2_math_ops.py`, 278
-
-`tf2_mult.py`, 285
-
-`tf2_numpy_dataset.py`, 301–302
-
-`tf2_overload.py`, 274–275
-
-`tf2_plusone.py`, 303–305
-
-`tf.print()` 函数, 271–272
-
-`tf2_rank.py`, 266
-
-`tf2_reduce.py`, 306–307
-
-`tf.sequential()` API, 197
-
-`tf2_shapes.py`, 267–268
-
-`tf2_simple_function.py`, 273
-
-`tf2_strings.py`, 281
-
-`TF` 2 张量, 261–262
-
-`tf2_tensors_operations.py`, 282–283
-
-`TF` 2 `tf.data.Dataset` 命名空间
-
-`batch(n)` 运算符, 311–313
-
-`CIFAR10` 数据集, 329–330
-
-`创建与处理`, 301
-
-`描述`, 298–299
-
-`filter()` 运算符, 309–311
-
-`flat_map()` 运算符, 316–319
-
-`generators`, 307–309
-
-`lambda` 表达式, 302–303
-
-`map()` 运算符, 313–316
-
-`MNIST` 数据集, 326–328
-
-`创建 pipeline`, 299–301
-
-`random` 数, 325–326
-
-`reduce()` 运算符, 306–307
-
-`repeat(n)` 运算符, 319–320
-
-`take(n)` 运算符, 320–321
-
-`tensorflow_datasets` 包, 328–329
-
-`tf2_concatenate.py`, 305–306
-
-`tf2_map_take.py`, 321–322
-
-`tf2_numpy_dataset.py`, 301–302
-
-`tf2_plusone.py`, 303–305
-
-`zip() and batch()` 运算符, 322–323
-
-`zip() and take()` 运算符, 324–325
-
-`tf.tidy()` 方法, 195
-
-`tf2_trig_values.py`, 279
-
-`tf2_variables.py`, 264–265
-
-`to_categorical()` 函数, 233
-
-`TodoInput` 目录, 66
-
-`todoinput.ts`, 66–69
-
-`todoservice.ts`, 65
-
-`toggleState()` 方法, 30
-
-`顶层（“root”）模块, 5
-
-`train()` 函数, 222
-
-`trainLinearModel()` 函数, 216
-
-`transformer 架构`, 143, 179
-
-`transform()` 方法, 81
-
-`平移不变性`, 144
-
-`三角函数`, 279–280
-
-`两层神经网络`, 152
-
-`双向绑定`, 103
-
-`TypeScript` 文件, 2–3, 15–16, 21
-
-`TypeScript` todos 数组, 65
+- `tf.keras.metrics` 命名空间, 250
+- `tf2_keras-mnist_digit.py`, 158
+- `tf.keras` 命名空间, 230–231
+- `tf.keras.optimizers` 命名空间, 233
+- `tf.keras.regularizers` 命名空间, 233
+- `tf2_keras_save_model.py`, 250–253
+- `tf.keras.utils` 命名空间, 233
+- `tf2_keras_xor.py`, 140–141
+- `tf2_map_take.py`, 321–322
+- `tf2_math_ops.py`, 278
+- `tf2_mult.py`, 285
+- `tf2_numpy_dataset.py`, 301–302
+- `tf2_overload.py`, 274–275
+- `tf2_plusone.py`, 303–305
+- `tf.print()` 函数, 271–272
+- `tf2_rank.py`, 266
+- `tf2_reduce.py`, 306–307
+- `tf.sequential()` API, 197
+- `tf2_shapes.py`, 267–268
+- `tf2_simple_function.py`, 273
+- `tf2_strings.py`, 281
+- `TF` 2 张量, 261–262
+- `tf2_tensors_operations.py`, 282–283
+- `TF` 2 `tf.data.Dataset` 命名空间
+- `batch(n)` 运算符, 311–313
+- `CIFAR10` 数据集, 329–330
+- `创建与处理`, 301
+- `描述`, 298–299
+- `filter()` 运算符, 309–311
+- `flat_map()` 运算符, 316–319
+- `generators`, 307–309
+- `lambda` 表达式, 302–303
+- `map()` 运算符, 313–316
+- `MNIST` 数据集, 326–328
+- `创建 pipeline`, 299–301
+- `random` 数, 325–326
+- `reduce()` 运算符, 306–307
+- `repeat(n)` 运算符, 319–320
+- `take(n)` 运算符, 320–321
+- `tensorflow_datasets` 包, 328–329
+- `tf2_concatenate.py`, 305–306
+- `tf2_map_take.py`, 321–322
+- `tf2_numpy_dataset.py`, 301–302
+- `tf2_plusone.py`, 303–305
+- `zip() and batch()` 运算符, 322–323
+- `zip() and take()` 运算符, 324–325
+- `tf.tidy()` 方法, 195
+- `tf2_trig_values.py`, 279
+- `tf2_variables.py`, 264–265
+- `to_categorical()` 函数, 233
+- `TodoInput` 目录, 66
+- `todoinput.ts`, 66–69
+- `todoservice.ts`, 65
+- `toggleState()` 方法, 30
+- `顶层（“root”）模块`, 5
+- `train()` 函数, 222
+- `trainLinearModel()` 函数, 216
+- `transformer 架构`, 143, 179
+- `transform()` 方法, 81
+- `平移不变性`, 144
+- `三角函数`, 279–280
+- `两层神经网络`, 152
+- `双向绑定`, 103
+- `TypeScript` 文件, 2–3, 15–16, 21
+- `TypeScript` todos 数组, 65
 
 ### U
-“通用” JavaScript, 129
 
-`UpperCaseService` 类, 111–112
-
-`user.component.ts`
-
-GitHub 用户, 120–121
-
-`SimplePipe` 目录, 81–82
-
-`UserServiceEmitter` 目录, 113–114
-
-`UserService` 类, 122, 123
+- “通用” JavaScript, 129
+- `UpperCaseService` 类, 111–112
+- `user.component.ts`
+- GitHub 用户, 120–121
+- `SimplePipe` 目录, 81–82
+- `UserServiceEmitter` 目录, 113–114
+- `UserService` 类, 122, 123
 
 ### V
-VAE-GAN 模型, 192
 
-`梯度消失问题`, 143
-
-`变量` 模型, 200
-
-`变分自编码器`, 186–187
+- VAE-GAN 模型, 192
+- `梯度消失问题`, 143
+- `变量` 模型, 200
+- `变分自编码器`, 186–187
 
 ### W
-`watch()` 方法, 287, 289
+
+- `watch()` 方法, 287, 289
 
 ### X
-XOR 函数, 139–142, 151, 165
+
+- XOR 函数, 139–142, 151, 165
 
 ### Z
-`zip() and batch()` 运算符, 322–323
 
-`zip() and take()` 运算符, 324–325
-
+- `zip() and batch()` 运算符, 322–323
+- `zip() and take()` 运算符, 324–325

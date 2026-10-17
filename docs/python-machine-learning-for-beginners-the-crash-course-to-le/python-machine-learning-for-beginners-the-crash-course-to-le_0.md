@@ -1,21 +1,7 @@
+
 # Python 机器学习初学者指南：学习 Python 编程如何助力数据科学、数据分析和人工智能的速成课程
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    - 结论
+## 结论
 
 # 引言
 
@@ -33,18 +19,15 @@ Python 是一种著名的面向对象高级计算机语言，被全球的软件�
 
 最后，Van Rossum 在 90 年代初最终发布了他编程语言的第一版本。最初，`Modula-3` 模块框架支撑了他的编程语言。今天，我们把他的编程语言称为 `Python`。
 
-
-
-
-人们通常认为 Python 是用蛇或蛇类命名的，甚至 Python 的标志中也了两条蛇，第一条是蓝色的，第二条是金色的。但我们中很少有人知道 Python 这个名字背后的真实故事。
+人们通常认为 Python 是用蛇或蛇类命名的，甚至 Python 的标志中也有了两条蛇，第一条是蓝色的，第二条是金色的。但我们中很少有人知道 Python 这个名字背后的真实故事。
 
 20 世纪 70 年，BBC 有一部非常非常成功的喜剧电视节目叫做《蒙派森的飞行马戏团》（Monty Python's Fly Circus）。巧的是，Van Rossum 是该节目的超级粉丝。因此，在看完这个节目后，Rossum 将他新开发的语言命名为：
 
-'Python'
+`Python`
 
-# 1. 学习 Python 的步骤
+## 1.3 学习 Python 的步骤（详述）
 
-在现代世界，每个开发者都应该掌握的核心编程结构和语言之一就是 Python。大多数程序员使用这种语言来构建网站、开发学习算法以及执行其他编程任务。首先，学习 Python 可能会令人畏畏、沮丧且困难，特别是当你不确定如何接触工具和资源时。
+在现代世界，每个开发者都应该掌握的核心编程结构和语言之一就是 Python。大多数程序员使用这种语言来构建网站、开发学习算法以及执行其他编程任务。首先，学习 Python 可能会令人畏惧、沮丧且困难，特别是当你不确定如何接触工具和资源时。
 
 你可能会发现的最大挑战之一，是所有的学习材料和资源是如此相似。假设你对理解和编写 Python 感兴趣。在这种情况下，你会发现，在你甚至考虑做你感兴趣的事情之前，任何写作资源都需要你在 Python 语法上花费大量时间。
 
@@ -55,7 +38,7 @@ Python 是一种著名的面向对象高级计算机语言，被全球的软件�
 
 当你对 Python 一无所知时，要理解它是如何协同工作的是非常困难的。
 
-这里最初的问题是，你需要理解 Python 的构建块才能构建出有趣的东西。上面提到的 `django.http` 代码段使用了流行的 MVC 架构来创建网站的视图（view），这是网站的关键构建块之一。如果你无法编写开发视图的代码，那么归结底，在这个阶段你是不可能创建一个动态网站的。
+这里最初的问题是，你需要理解 Python 的构建块才能构建出有趣的东西。上面提到的 `django.http` 代码段使用了流行的 MVC 架构来创建网站的视图（`view`），这是网站的关键构建块之一。如果你无法编写开发视图的代码，那么归结底，在这个阶段你是不可能创建一个动态网站的。
 
 大多数 Python 编程教程和课程都假设你在开始做某些事情之前需要理解 Python 语法的一切内容。这导致你在语法上浪费了几个月的时间，而你真正想做的是分析数据、创建一个网站或创建一个自主无人机。
 
@@ -93,13 +76,10 @@ Python 是一种著名的面向对象高级计算机语言，被全球的软件�
 
 如果你完成了上述所有阶段，在 Python 编程中，你可以不断增加项目的复杂性。如果你对自己创建的内容完全满意，这意味着是时候尝试更困难、更复杂的东西了。你可以考虑一个全新的、更有挑战性的项目，或者在你最近的项目中增加难度，也许你可能为你的项目寻找完全不同的挑战。嘿！对于这一点！你必须记住，人通过实践变得更好！
 
+* 你可以提出建议，让你的界面更加用户友好。
+* 你可能考虑让你的项目公开的方法。
 
-
-
-*   你可以提出建议，让你的界面更加用户友好。
-*   你可能考虑让你的项目公开的方法。
-
-## 1.2 Python 基础
+## 1.4 Python 基础语法
 
 在开始编写你的第一个 Python 程序（通常被称为 "Hello World"）之前，你必须学习 Python 语法的基础知识。在这一阶段，我们将讨论 Python 编程的基础及其语法，这无疑将帮助你开启作为一名 Python 开发者的职业生涯。现在，让我们先编写一个最基础的 Python 程序。
 
@@ -122,7 +102,7 @@ Python 程序可以打印和编译，通常以两种不同的形式存在。
 你可以在终端的 Python 编程交互模式下输入以下命令来编写你的第一个程序。
 
 ```
->>> $ Python
+$ Python
 ```
 
 如果你在终端中输入并执行了此命令，那么你现在就处于 Python 的交互模式下。
@@ -134,7 +114,7 @@ Python 程序可以打印和编译，通常以两种不同的形式存在。
 语法：
 
 ```
->>> print ("Hello to the Universe of Python!")
+>>> print("Hello to the Universe of Python!")
 ```
 
 输出：
@@ -148,13 +128,13 @@ Python 程序可以打印和编译，通常以两种不同的形式存在。
 你所编写并保存的项目文件在开始时必须是可用且执行的。通常，这通过程序员使用以下命令来实现：
 
 ```
->>> $ chmod +x test.py
+$ chmod +x test.py
 ```
 
 现在，如果你的文件是可以运行和重新执行的，你就可以在 Python 的脚本模式下运行并执行你的软件。
 
 ```
->>> $ Python Hello to the Python.py
+$ Python Hello_to_the_Python.py
 ```
 
 你可以看到计算机终端或控制台上显示 "Hello to the Universe of Python!"，直到该命令结束。通过运行 "Hello to the Universe of Python!" 你已经掌握了第一个 Python 语法。
@@ -169,11 +149,11 @@ Python 编程中总共有三十一个关键字和五个重要的标识符。在�
 
 Python 编程中有五种标识符的基本形式：
 
-*   函数
-*   模块
-*   类
-*   变量
-*   对象
+* 函数
+* 模块
+* 类
+* 变量
+* 对象
 
 我们应该查看 Python 语法中可用的关键字以便继续后续。
 
@@ -181,11 +161,11 @@ Python 编程中有五种标识符的基本形式：
 
 你必须打开 IDE 并输入以下命令来查看 Python 中所有的三十一个关键字。
 
-语法
+语法：
 
 ```
->>> import keyword
->>> keyword.kwlist
+import keyword
+keyword.kwlist
 ```
 
 输出：
@@ -200,8 +180,8 @@ Python 编程中有五种标识符的基本形式：
 
 存在 set 关键字，我们不能将它们作为标识符。
 
-*   在 Python 中，关键字是区分大小写的。通常
-*   关键字被称为保留字。
+* 在 Python 中，关键字是区分大小写的。
+* 关键字被称为保留字。
 
 ### Python 语句
 
@@ -212,10 +192,12 @@ Python 编程中有五种标识符的基本形式：
 我们必须注意，缩进空格在每种情况下是不同的。我们需要观察以下代码来理解这一点。
 
 ```
->>> Person = ["David", "Jennifer", "Michael"]
->>> for n in person:
-... if n == "David": print(n)
-... else: print("Not David")
+Person = ["David", "Jennifer", "Michael"]
+for n in person:
+    if n == "David":
+        print(n)
+    else:
+        print("Not David")
 ```
 
 在以下代码中，你必须注意 `for` 语句有一个空格，而 `if` 语句有两个空格。
@@ -236,18 +218,18 @@ Person = "David" ; age = 25 ; location = "NYC"
 
 对于任何新项目，虚拟环境将是你制作的内容之一。在 Python 中，即使不构建新的环境你也可以处理新项目。然而，这样做可能会让你陷入这种情况：
 
-*   依赖项可能无法增强或优化。例如，Python 版本可能无法从 2.7 更新到 3.8。
+* 依赖项可能无法增强或优化。例如，Python 版本可能无法从 2.7 更新到 3.8。
 
 你必须进入终端并输入以下命令创建一个虚拟世界：
 
 ```
->>> $virtualenv newvironment
+$ virtualenv newenvironment
 ```
 
 我们刚刚创建的虚拟环境名称在命令中是 `newenvironment`。现在，要打开你的新世界，输入以下指令：
 
 ```
->>> source newenvironment
+source newenvironment
 ```
 
 ### 从用户处输入
@@ -259,17 +241,17 @@ Person = "David" ; age = 25 ; location = "NYC"
 在这种下，任何程序员都可以邀请用户提交他们的输入。
 
 ```
->>> raw_input ()
+raw_input()
 ```
 
 这在 Python 3.0 中不再准确或有效。新的输入形式是 `input()`。
 
-#### Input ( )
+#### Input()
 
 我们必须查看上述示例来理解这个概念。
 
 ```
->>> user_input_request = input ("Enter your worst Ex’s name: ")
+user_input_request = input("Enter your worst Ex's name: ")
 ```
 
 在你输入后，你的 IDE 将允许你输入你糟糕的前任的名字。我的错！
@@ -278,17 +260,13 @@ Person = "David" ; age = 25 ; location = "NYC"
 
 到目前为止，我们拥有的编程语言几乎可以 {手指数得来。有这么多编程语言，每种计算机编程语言都有其独特的特性。这些特性是该语言区别于其他语言的特征。
 
-
-
-
-
 最后，由于该语言的特性，某种语言可能会被迁移或用于更广泛的项目。因此，在深入学习 Python 概念之前，让我们先来看看 Python 的功能、特性和应用。在接下来的章节中，你将学习 Python 的基本概念、特性、应用和架构，这使其与其他许多语言相比显得独特且强大。
 
 ## 2.1 Python 的独特特性
 
 让我们从 `Python` 的一些独特特征开始。
 
-### ### 易于理解和编码
+### 易于理解和编码
 
 当我们对 Python 编程使用“简单”或“容易”一词时，我们必须从非常不同的语境来看待它。
 
@@ -300,7 +278,7 @@ Person = "David" ; age = 25 ; location = "NYC"
 
 然而，要精通 Python 编程及其原理、模块和包还需要一些时间。因此，换句话说，我们可以说 Python 是一门**开发者友好**的语言。
 
-### ### 开源且免费
+### 开源且免费
 
 首先，你可能知道 Python 是免费的，并且在许多平台上都可用。它的官方网站是下载和安装 Python 最可靠的来源，即：
 
@@ -308,51 +286,49 @@ Person = "David" ; age = 25 ; location = "NYC"
 
 第二点是，Python 是一门开源编程语言。开源确保了公众可以随时访问 Python 的源代码。即使是非专业人士也可以下载、修改、使用和分发 Python。`FLOSS` 通常将此类软件或语言称为“自由、许可和开源软件”。所有的 Python 开发者都在 Python 世界中为了一个共同的目标努力，即增强 Python 及其功能。Python 正此将源代码设为开源代码。
 
-### ### 高级语言
+### 高级语言
 
 从书的开始，我们一直在讨论这样一个观点：Python 是一门高级计算机编程语言。
 
 作为一名开发者，你不需要思考或回忆你的计算机或设备的设计。用 Python 编写的代码可以在全球范围内任何程序、机器或系统上运行。你不需要关心系统的内存。这一功能使得在 Python 中编写和编码变得更容易。因此，我们可以像之前描述的那样称 Python 为“开发者友好语言”。
 
-### ### 便语言
+### 便携语言
 
 对于你面向 Windows 系统的计算机，假设你构建了一个 Python 程序或应用。假设你只想在面向 MAC 系统的计算机上运行该程序。现在，你不需要对 Python 代码进行太多的修改。
 
 你可以从面向 Windows 系统的计算机上获取 Python 代码并在任何 MAC 机器上运行它。因此，如果你使用 Python，就不必为不同的工具或操作系统编写不同的代码。这一 Python 特性使得我们的语言成为一种极具移植性的编程语言。
 
-### ### 解释型语言
+### 解释型语言
 
 如果你使用 Python，你的代码不需要编译。这是因为 Python 是一种解释型语言，意味着代码是按行执行的。
 
-### ### 面对象语言
+### 面向对象语言
 
 我们从开始就在讨论这个观点：`Python` 是一门面向对象的语言。这意味着它关注对象，并将数据和函数结合。Python 在其范式中支持多重继承。
 
-### ### 可扩展语言
+### 可扩展语言
+
+
 
 假设你是某些编程语言的开发者。Python 是非常有扩展性的，这意味着它可以被扩展和扩大以包含其他语言。
 
-### ### 嵌入式语言
+## 嵌入式语言
 
 在之前的阶段，我们已经提到其他语言的代码和命令也可以被我们的 Python 代码接受。这有助于我们整合其他语言的脚本能力。
 
-### ### 标准库
+## 标准库
 
 通过丰富的包和库，你可以下载 Python，这样你就不需要为软件中的每一项都编写完整的代码。常用短语、各种版本的文档、测试单元、网站和浏览器的创建、线程、数据库的开发和维护、流行接口、电子邮件的开发和维护以及许多形式的图像处理都有相应的库。
 
-### ### 图形界面编程
+## 图形界面编程
 
 除非你创建图形界面（GUI），否则任何应用程序或软件可能都不够友好。通过你软件的图形界面，任何使用你软件的用户都可以轻松与其交互。为了改进程序、应用的图形界面，Python 提供了一系列库。其中 `wxPython`、`JPython` 和 `Tkinter` 最受欢迎。
 
-## 2.2 Python 版本
+## Python 版本
 
-### ### 第一阶段
+### 第一阶段
 
 Python 在 1994 年 1 月的第一阶段开发并发布了其第一个版本，即 `Python 1.0`。函数式编程工具如 `reduce`、`filter`、`lambda` 和 `map` 是该版本实现的关键特性。`Python 1.2` 是 Rossum 先生仍在 `CWI` 工作时发布的最后更新。该版本于 1995 年出版。
-
-
-
-
 
 1995 年，Van Rossum 先生在国家研究倡议公司（Company for National Research Initiatives）研究了他自己发明的语言 `Python`。他在那里发布了其他几个版本的 `Python`。随着 `Python 1.4` 的发布，`Python` 获得了一些自己新的且未知的特性。这些特性中，`Modula-3` 最常见。为了激发关键字参数的灵感，引入了 `Modula-3`。他们还通过 `Python 1.4` 中通过名称修饰（name mangling）实现了一种简单的数据隐藏形式。
 
@@ -360,7 +336,7 @@ Van Rossum 还引入了名为 `CP4E` 的“全民计算机编程”（Computer P
 
 `Python 1.6` 是下一个 Python 版本。他们在 `Python 1.6` 中发布了新的 CNRI 许可。在修复了一些 bug 之后，`Python 1.6` 发布了它的另一个版本。
 
-### 第二阶段 – 2
+### 第二阶段
 
 在 `Python` 的第二个阶段，`Python` 发布了 `Python 2.0.0` 版本。它于 2000 年 10 月发布。`Python` 在此版本中实现了列表推导式（list comprehension）。这是 `Python` 从其他实用计算机编程语言中借鉴的功能。随后 `Python` 实现了 `Python 2.1`，它类似于 `Python 1.6.1` 并且与 `Python 2.0.0.0` 高密一致。为了适应嵌套作用域，`Python 2.1` 的引入实现了一个根本性的变化，使其能够与其他静态作用域编程语言竞争。
 
@@ -368,7 +344,7 @@ Van Rossum 还引入了名为 `CP4E` 的“全民计算机编程”（Computer P
 
 `Python 2.6.1` 和 `Python 2.7.0` 是 `Python` 在第二阶段发布的后续版本。创建 `Python 2.6` 是为了支持 `Python 3.0`，并且随着 `Python 3.0` 的引入，一些 bug、警告和语法错误得到了调试。另一方面，发布 `Python 2.7` 是为了支持 `Python 3.1`。
 
-### 第三阶段 – 3
+### 第三阶段
 
 `Python` 发布了 `Python 3.0.0`。在 `Python` 开发的第三阶段——通常被称为 `Py3K` 或 `Python 3000`——`Python 3.0` 于 2008 年发布（`Python 3000` 发布）。此外，为了克服 `Python` 的缺陷，开发了 `Py3K`。
 
@@ -400,59 +376,13 @@ Van Rossum 还引入了名为 `CP4E` 的“全民计算机编程”（Computer P
 | `Python 3.8.1` | 2019 年 10 月 |
 | `Python 3.9.0` | 2020 年 5 月 |
 
-## 2.1 安装 Python
-
-1995 年，Van Rossum 先生在国家研究倡议公司研究了他自己发明的语言 `Python`。他在那里发布了其他几个版本的 `Python`。随着 `Python 1.4` 的发布，`Python` 获得了一些自己新的且未知的特性。这些特性中，`Modula-3` 最常见。为了激发关键字参数的灵感，引入了 `Modula-3`。他们还通过 `Python 1.4` 中通过名称修饰（name mangling）实现了一种简单的数据隐藏形式。
-
-Van Rossum 还引入了名为 `CP4E` 的“全民计算机编程”。他的目标是让普通人也能掌握编程，以及许多计算机编程语言所需的专业知识。`Python` 在这方面发挥了至关重要的作用。解释是 `Python` 拥有一种简单直观的语法。
-
-`Python 1.6` 是下一个 Python 版本。他们在 `Python 1.6` 中发布了新的 CNRI 许可。在修复了一些 bug 之后，`Python 1.6` 发布了它的另一个版本。
-
-### 第二阶段 – 2
-
-在 `Python` 的第二个阶段，`Python` 发布了 `Python 2.0.0` 版本。它于 2000 年 10 月发布。`Python` 在此版本中实现了列表推导式。这是 `Python` 从其他实用计算机编程语言中借鉴的功能。随后 `Python` 实现了 `Python 2.1`，它类似于 `Python 1.6.1` 并且与 `Python 2.0.0.0` 高密一致。为了适应嵌套作用域，`Python 2.1` 的引入实现了一个根本性的变化，使其能够与其他静态作用域编程语言竞争。
-
-接下来，`Python 2.2` 是 `Python` 的下一个版本。`Python 2.2` 于 2001 年发布。`Python` 在这个版本中实现了一个重大改进，统一了 `Python` 的类别，即将单独的类统一到单一层次结构中。这一转变是 `Python` 成为面向对象范式编程语言的根本原因。`Python 2.5` 是下一个 Python 版本。2006 年 9 月，`Python` 发布了这个版本。该版本要求的改进是能够使用上下文管理器封装任何代码块语句。
-
-`Python 2.6.1` 和 `Python 2.7.0` 是 `Python` 在第二阶段发布的后续版本。`Python 2.6` 是为了支持 `Python 3.0` 创建的，并且随着 `Python 3.0` 的引入，一些 bug、警告和语法错误得到了调试。另一方面，发布 `Python 2.7` 是为了支持 `Python 3.1`。
-
-### 第三阶段 – 3
-
-`Python` 发布了 `Python 3.0.0`。在 `Python` 开发的第三阶段——通常被称为 `Py3K` 或 `Python 3000`——`Python 3.0` 于 2008 年发布（`Python 3000` 发布）。此外，为了克服 `Python` 的缺陷，开发了 `Py3K`。
-
-`Python 3.0` 被称为多范式语言。然而，开发者仍然可以将其作为标准的、函数式和面向对象的范式编程语言，与其他编程语言区分。
-
-因此，在阅读这些之后，我们可以假设 `Python` 正在通过更新的版本、支持和组件不断被修改。如果你需要了解更多关于 `Python` 版本及其发布日细节，你会发现这个表对你有帮助。
-
-| Python 版本 | 发布日期 |
-| --- | --- |
-| `Python 1.1.0` | 1994 年 1 月 |
-| `Python 1.5.1` | 1997 年 12 月 |
-| `Python 1.6.1` | 2000 年 9 月 |
-| `Python 2.0.` | 2000 年 10 月 |
-| `Python 2.0.1` | 2001 年 4 月 |
-| `Python 2.2.3` | 2003 年 12 月 |
-| `Python 2.3.7` | 2003 年 7 月 |
-| `Python 2.4.6` | 2004 年 11 月 |
-| `Python 2.5.6` | 2006 年 9 月 |
-| `Python 2.6.9` | 2008 年 10 月 |
-| `Python 2.7.17` | 2010 年 7 月 |
-| `Python 3.0.1` | 2008 年 12 月 |
-| `Python 3.1.5` | 2009 年 6 月 |
-| `Python 3.2.6` | 2011 年 2 月 |
-| `Python 3.3.7` | 2013 年 |
-| `Python 3.4.10` | 2014 年 3 月 |
-| `Python 3.5.9` | 2015 年 9 月 |
-| `Python 3.6.10` | 2016 年 12 月 |
-| `Python 3.7.6` | 2018 年 6 月 |
-| `Python 3.8.1` | 2019 年 10 月 |
-| `Python 3.9.0` | 2020 年 5 月 |
-
-## 2.4 安装 Python
+## 安装 Python
 
 你可以访问上述网站在 Windows 上下载并安装 Python。
 
-```https://www.python.org```
+```
+https://www.python.org
+```
 
 ### 在 Windows 上安装
 
@@ -462,12 +392,7 @@ Van Rossum 还引入了名为 `CP4E` 的“全民计算机编程”。他的目�
 
 在使用下载 Python 的高级选项时，一个新窗口将打开。你只需要勾选“全选”按钮以获得更好的安装，然后按下“下一步”按钮。
 
-```
-当你按下“下一步”按钮后，Python 3.8.1 将在你的电脑上下载程序。
-```
-
-
-
+当你按下“下一步”按钮后，`Python 3.8.1` 将在你的电脑上下载程序。
 
 安装后，你必须在框架的 `CMD`（即 `命令提示符`）上运行 Python。只需在命令提示符中输入以下命令来检查 Python 是否安装正确。
 
@@ -484,6 +409,8 @@ python
 ```
 python
 ```
+
+
 
 终于！Python 解释器打开了，你可以在这里开始编写和执行 Python 命令和语句。
 
@@ -563,10 +490,6 @@ Python 编译器中的一个被认为是 `Shed Skin`。它也是列表中的一�
 
 ### GNU/EMACS 文本编辑器
 
-
-
-
-
 这是一款被许多开发者强烈推荐的 GNU 文本编辑器。该文本编辑器由理查德·斯尔曼（Richard Stallman）开发，在二十多年里，它一直是软件开发人员和编程专业人士中最受欢迎的文本编辑器。该文本编辑器的所有者理查德·斯尔曼先生让每位用户都能免费使用。
 
 在许多计算机编程语言中，`GNU/EMACS` 文本编辑器主要使用独特的自定义功能来实现渐进式方法。
@@ -574,6 +497,7 @@ Python 编译器中的一个被认为是 `Shed Skin`。它也是列表中的一�
 该文本编辑器的一个扩展是 `Elpy` 扩展。该文本编辑器有许多功能使其与其他文本编辑器区分开来。例如，它提供了一种句式结构，可以将文本之间的存档记录分段和空格隔离开，以获得最佳格式。
 
 #### 核心优势：
+
 * 它是免费的，并提供了一个完全移动的编程环境。
 * 它支持记录结构所需分段的自动扩展。
 * 它支持具有 24 位色彩方案的各种操作系统。
@@ -610,6 +534,7 @@ IDE 代表集成化开发环境（Environment for Incorporated Development）。
 对于 Python 未来，`PYCHARM` 是一个非常实用的 IDE。它为你提供了许多特殊功能，如快速项目路线、自动代码补全、支持远程开发、快速检查和修复错误、数据库等。
 
 #### 特殊特性：
+
 * 有效的调试
 * 它提供了一条高效的代码路径
 * 大量突出显示错误
@@ -625,6 +550,7 @@ IDE 代表集成化开发环境（Environment for Incorporated Development）。
 另一个你在其他 Python IDE 中可能看不到的元素是 `SPYDER` 包含一个向前的“变量航游者”（variable voyager）。它允许你在使用基于表格的设计的同时在 IDE 中显示信息。
 
 #### 特殊特性：
+
 * 集成 `IPython`
 * 良好的语法质量
 
@@ -635,6 +561,7 @@ IDE 代表集成化开发环境（Environment for Incorporated Development）。
 面向 `Windows OS`、`MAC OS X` 和 `Linux OS` 的机器使得 `PYDEV` 可用。我们也可以将 `PYDEV` 视为基于 `Java` 开发的认可的开源 IDE。它包含了一个用于附加和扩展项目的商业中心。这一功能使得 `PYDEV` 适用于广泛的和练习。
 
 #### 特殊特性：
+
 * `PyLint`、远程调试器、单元测试结合的组合。
 * 代码的检查和验证。
 
@@ -645,6 +572,7 @@ IDE 代表集成化开发环境（Environment for Incorporated Development）。
 在 `Atom IDE` 中，你可以分步了解关于 IDE 的功能。这种集成开发技术允许你在不同平台之间工作。这就是为什么 `Atom IDE` 被广泛推崇。尽管它也有缺点，但对于爱好者和初学者来说，它被认为是最好的工具。除了它的优点之外，`Atom IDE` 是让你处理高级编程语言的科学工具之一。
 
 #### 特殊特性：
+
 * 拥有 `Markdown Preview` 模块
 * 它在运行窗口中显示结果
 
@@ -655,6 +583,7 @@ IDE 代表集成化开发环境（Environment for Incorporated Development）。
 它还有一个名为 `Wing Pro` 的付费版本。使用 `Wing Pro` 的好处是它可以为你的 Python 代码提供调试、突出显示等。
 
 #### 特殊特性：
+
 * 结合单元测试，它支持远程
 * 它可以自定义并插件
 
@@ -665,16 +594,15 @@ IDE 代表集成化开发环境（Environment for Incorporated Development）。
 然而，Jupyter Notebook 证明它是每个 Python 数据研究工具箱中不可或缺的一部分。对于原型开发非常出色，也用于展示记笔记本的形式。
 
 #### 特殊特性：
+
 * 你的代码可以在此 IDE 中生成并轻松修改
 * Jupyter 笔记本提供了 markdown 支持
 
-
-
-
+### Microsoft Visual Studio IDE
 
 对于研究和改进基于 Web 的活动，Microsoft Visual Studio IDE 是最合适的 IDE。此 IDE 是一个开源代码生成器，并且有它自己的市场。此外，微软负责创建此 IDE。
 
-### 特殊特性
+#### 特殊特性
 
 - 在 Visual Studio 环境中，此 IDE 允许你使用 `Python` 编写代码，这是该 IDE 一个非常显著的特征。
 - 此 IDE 有付费和免费版两种形式。
@@ -715,9 +643,7 @@ IDE 代表集成化开发环境（Environment for Incorporated Development）。
 
 我们知道 `Python` 首次实现是为了看起来像英语语言。`Python` 中这些较长的表述略微难以阅读。在这方面，特别是你可以使用合适的变量名。此外，在 `Python` 中，由于简单的语法结构，没有纠缠的创新。例如，各种单词修饰符、`C` 和 `C++` 语法部分（如开发框架）以及添加许多因素的几种其他方法。你会认为，在这方面，这一切让 `Python` 的代码易于理解、学习和编写。
 
-`C#` (C-sharp) 与此并行。由于语言继承，`C#` 继承了来自 `C++`、`JavaScript` 和 `Java` 的许多思想。在“C 类型”句式中，首先使用这些定义。`C#` 语言结构方言通常使得在检查你的语言技术或获取课程时，必须遵循特定要求，其中大多数是如此的。你会认为，在这方面，这一切让 `Python` 的代码易于理解、学习和编写。
-
-`C#` 与此并行。由于语言继承，`C#` 继承了来自 `C++`、`JavaScript` 和 `Java` 的许多思想。在“C 类型”句式中，首先使用这些定义。`C#` 语言结构方言通常使得在检查你的语言技术或获取课程时，必须遵循特定要求，其中大多数是如此的。
+`C#` (C-sharp) 与此并行。由于语言继承，`C#` 继承了来自 `C++`、`JavaScript` 和 `Java` 的许多思想。在“C 类型”句式中，首先使用这些定义。`C#` 语言结构方言通常使得在检查你的语言技术或获取课程时，必须遵循特定要求，其中大多数是如此的。
 
 `C#` 的这种对比在这种情况下是不被忽视的。`Python` 使用了某种特定的类型，这让代码看起来很完美。此外，在材料组成方面，引用任何项目通常是值得的。`Python` 声称内容只是内容，因此你可以通过编译器、IDE 或编辑器有效地运行它。
 
@@ -730,9 +656,6 @@ IDE 代表集成化开发环境（Environment for Incorporated Development）。
 ## 4.3 Python 和 Java
 
 比较 `Java` 程序的执行速度与 `Python` 的速度！`Java` 程序的执行速度比 `Python` 快。然而在 `Python` 中，创建程序所需的精力较少，因为 `Python` 的代码直观且相对基础。在各种级别和数据类型上工作是简单的。在 `Python` 中，例如，当你分析表述时它不会尝试收集时间。Python 在那个时刻产生一个合适的扩展操作，这是一个总输出数字。
-
-
-
 
 将 Python 视为一种完全增强的语言是最好的做法，而大多数开发者将 `Java` 视为一种低级执行语言。此外，Python 和 `Java` 之间还形成了一种异常的关系。大多数 Python 代码段都可以在 `Java` 编程中使用，并在与 `Java` 代码结合后，可以用于在 Python 中形成句法结构。另一方面，`Python` 也可以用于 `Java` 编程，以构建和结构化组件，使得 Python 结构可以使用。另一项正在进行的工作是使用 `Java` 编写的 Python 句法结构，以支持这种继承和开发，它允许在进行 `Java` 编程时调用 Python 代码，反之亦然。`Python` 的源代码被用 `Java` 字节码进行此类执行。
 
@@ -793,24 +716,35 @@ IDE 代表集成化开发环境（Environment for Incorporated Development）。
 打开 Python 控制台或 IDE 并编写声明变量的命令。
 
 ```
+```
+
+
+
 >>> n=v=w=987
+
 >>> print
+
 >>> print (n, v, w)
-```
 
+```
 输出：当你打印变量值的命令时，输出如下。
-
 ```
+
 >>> 987, 987, 987
+
 ```
 
 示例 -2：
 
 ```
 >>> n, v, w = 987, 876, 765
+
 >>> print
+
 >>> print (n)
+
 >>> print (v)
+
 >>> print (w)
 ```
 
@@ -818,20 +752,21 @@ IDE 代表集成化开发环境（Environment for Incorporated Development）。
 
 ```
 >>> print (n)
+
 "987"
+
 >>> print (v)
+
 "876"
+
 >>> print (w)
+
 "765"
 ```
 
 ## 5.2 Python 中的运算符
 
-通常，运算符是语言中独特的语法标记，需要执行某些操作。运算符主要源于数学原理。例如，乘法符号 (*)` 是一个 Python 编程运算符。它用于两个数字的相乘。
-
-
-
-
+通常，运算符是语言中独特的语法标记，需要执行某些操作。运算符主要源于数学原理。例如，乘法符号（`*`）是一个 Python 编程运算符。它用于两个数字的相乘。
 
 在 Python 中，运算符被表示为函数的符号表示，为了实现某些真实且期望的结果，它在两个操作数之间执行特定的操作。在单个计算机编程语言中，运算符被视为软件运行的基石。Python 提供的运算符选择被看作一种追求。为了执行基本操作，这里是一些被广泛使用的运算符：
 
@@ -851,69 +786,74 @@ IDE 代表集成化开发环境（Environment for Incorporated Development）。
 
 以下是 Python 中广泛使用且重要实用的算术运算符：
 
-* 加法 `"+"`
-* 减法 `"-"`
-* 除法 `"/"`
-* 乘法 `"*"`
-* 取余 `"%"`
+* 加法 `+`
+* 减法 `-`
+* 除法 `/`
+* 乘法 `*`
+* 取余 `%`
 
 这些运算符的详细定义：
 
-* 加法 `"+"`
+* 加法 `+`
 
 该运算符用于两个操作数之间，执行加法或求和操作。
 
 示例：
 ```
 >>> n, v = 25, 25
+
 >>> n + v
 ```
 在这种情况下，你的控制台将打印
 “50”
 
-* 减法 `"-"`
+* 减法 `-`
 
 该运算符取第一个操作数，并从第一个操作数减去第二个操作数。
 
 示例：
 ```
 >>> n, v = 25, 25
+
 >>> n - v
 ```
 在这种情况下，你的控制台将打印
 “0”
 
-* 除法 `"/"`
+* 除法 `/`
 
 该运算符取第二个操作数并将第二个操作数除以第一个操作数，并根据你的性能给出商。
 
 示例：
 ```
 >>> n, v = 6, 2
+
 >>> n / v
 ```
 在这种情况下，你的控制台将打印
 “3.0”
 
-* 乘法 `"*"`
+* 乘法 `*`
 
 该运算符如前所述，在第一个操作数和第二个操作数之间执行乘法操作。
 
 示例：
 ```
 >>> n, v = 6, 3
+
 >>> n * v
 ```
 在这种情况下，你的控制台将打印
 “18”
 
-* 取余 `"%"`
+* 取余 `%`
 
 该运算符负责除法服务，并接收余数作为你的产。
 
 示例：
 ```
 >>> c, w = 4, 2
+
 >>> c % w
 ```
 在这种情况下，你的控制台将打印
@@ -950,11 +890,13 @@ IDE 代表集成化开发环境（Environment for Incorporated Development）。
 示例：
 ```
 >>> n = 2, v = 4
+
 >>> n += v
 ```
 这等同于
 ```
 >>> n = n + v
+
 >>> print (n)
 ```
 如果 `n` 为 "6"，你的控制台可能会打印该值。
@@ -965,11 +907,13 @@ IDE 代表集成化开发环境（Environment for Incorporated Development）。
 示例：
 ```
 >>> n, v = 4, 2
+
 >>> n -= v
 ```
 这等同于：
 ```
 n = n - v
+
 >>>print (n)
 ```
 你的控制台可能会打印
@@ -981,11 +925,13 @@ n = n - v
 示例：
 ```
 >>> n, v = 4 , 2
+
 >>> a * = b
 ```
 这等同于
 ```
 n = n * v
+
 >>> print (n)
 ```
 如果 `n` 为 "8"，你的控制台可能会打印该值。
@@ -996,11 +942,13 @@ n = n * v
 示例：
 ```
 >>> n, v = 4 , 2
+
 >>> a % = b
 ```
 这等同于
 ```
 n = n % v
+
 >>> print (n)
 ```
 如果 `n` 为 “0”，你的控制台可能会打印该值。
@@ -1030,36 +978,40 @@ Python 中的因子可以携带不同类型的数据。Python 是一种动态类
 示例：
 ```
 >>> C = 69
+
 >>> W = "Hi Python"
+
 >>> K = 17.5
+
 >>> print ( type (C));
+
 >>> print ( type (W));
+
 >>> print ( type (K));
 ```
 输出：
 当你输入命令时：
 ```
 >>> print ( type (C));
+
 ```
 <type 'int'>
 当你输入命令时：
 ```
 >>> print ( type (W));
+
 ```
 <type 'str'>
 当你输入命令时：
 ```
 >>> print ( type (K));
+
 ```
 <type 'float'>
 
 ### 标准数据类型
 
 Python 中的标识符可以承受不同的性质。例如，任何人的名字必须存储为字符串，而他的 ID 必须存储为整数。
-
-
-
-
 
 Python 为我们提供了各种标准数据类型，并通过强大的技术定义了其中的每种类型。Python 中常用的数据类型及其特征列命名如下：
 
@@ -1078,8 +1030,9 @@ Python 为我们提供了各种标准数据类型，并通过强大的技术定�
 示例：
 
 ```python
-\>>> C = 79
-\>>> W = 06
+>>> C = 79
+
+>>> W = 06
 ```
 
 在上述示例中，`c` 和 `w` 是数值对象。
@@ -1116,12 +1069,17 @@ Python 支持四种不同的数值数据类型
 示例：
 
 ```python
-\>>> string1 = "Hi Mr. David Robertson"
-\>>> string2 = "How are you"
-\>>> print (string1[0:2]) #使用切片运算符打印前两个字符
-\>>> print (string1[4]) #打印字符串的第 4 个字符
-\>>> print (string1 * 2) #打印两次字符串
-\>>> print (string1 + string2) #打印 string1 和 string2 的拼接结果
+>>> string1 = "Hi Mr. David Robertson"
+
+>>> string2 = "How are you"
+
+>>> print (string1[0:2]) #使用切片运算符打印前两个字符
+
+>>> print (string1[4]) #打印字符串的第 4 个字符
+
+>>> print (string1 * 2) #打印两次字符串
+
+>>> print (string1 + string2) #打印 string1 和 string2 的拼接结果
 ```
 
 输出：
@@ -1167,12 +1125,17 @@ Python 支持四种不同的数值数据类型
 示例：
 
 ```python
-\>>> l = [1.5, "Hello", "Python", 7]
-\>>> print (l[3 :])
-\>>> print (l[0:2])
-\>>> print (l)
-\>>> print (l + l)
-\>>> print (l * 3)
+>>> l = [1.5, "Hello", "Python", 7]
+
+>>> print (l[3 :])
+
+>>> print (l[0:2])
+
+>>> print (l)
+
+>>> print (l + l)
+
+>>> print (l * 3)
 ```
 
 输出：
@@ -1226,14 +1189,21 @@ Python 支持四种不同的数值数据类型
 示例：
 
 ```python
-\>>> t = ("Hello", "Python’s world", 69)
-\>>> print (t[1 :])
-\>>> print (t[0:1])
-\>>> print (t)
-\>>> print (t + t)
-\>>> print (t * 3)
-\>>> print (type (t))
-\>>> t[2] = "hello"
+>>> t = ("Hello", "Python’s world", 69)
+
+>>> print (t[1 :])
+
+>>> print (t[0:1])
+
+>>> print (t)
+
+>>> print (t + t)
+
+>>> print (t * 3)
+
+>>> print (type (t))
+
+>>> t[2] = "hello"
 ```
 
 # 第 6 章：正则表达式、表达式语句、Python 中的循环
@@ -1245,7 +1215,7 @@ Python 支持四种不同的数值数据类型
 正则表达式在 Python 中也被称为 regex。正则用于分析字符串。有许多正则表达式函数可以被继承、调用或导入。为了导入这些函数，我们可以使用
 
 ```python
-\>>> import re
+>>> import re
 ```
 
 ### 正则表达式函数
@@ -1258,7 +1228,7 @@ Python 支持四种不同的数值数据类型
 
 ## 6.2 Python 的表达式语句
 
- `=`；“等号”用于表示赋值语句。在 Python 的语法和语言中，赋值语句的工作方式与其他编程语言和语言不同，这些基本概念对于理解 Python 的特性至关重要。如果我们在 C 编程语言中考虑这项任务，它将是 `v = 2`，这意味着有一个名为 `v` 的组合变量，它拥有数值 2 的副本。在 Python 最直接的实例中，我们使用一个非常相似的模型，`v = 2` 意味着（非唯一的）名称 `v` 获取了一个不同的、动态分配的数值或整数 `int` 类型对象的引用，值为 2。”
+`=`；“等号”用于表示赋值语句。在 Python 的语法和语言中，赋值语句的工作方式与其他编程语言和语言不同，这些基本概念对于理解 Python 的特性至关重要。如果我们在 C 编程语言中考虑这项任务，它将是 `v = 2`，这意味着有一个名为 `v` 的组合变量，它拥有数值 2 的副本。在 Python 最直接的实例中，我们使用一个非常相似的模型，`v = 2` 意味着（非唯一的）名称 `v` 获取了一个不同的、动态分配的数值或整数 `int` 类型对象的引用，值为 2。”
 
 在这里，我们将讨论 Python 中用于构建程序的基本语句。
 
@@ -1266,9 +1236,6 @@ Python 支持四种不同的数值数据类型
 - for 语句：在 Python 中，`for` 语句遍历文章。它捕获每个组件到一个局部因子中供连接的代码块使用。
 - while 语句：`while` 语句在 Python 中只要其条件有效就会执行代码块。
 - try 语句：在 Python 中，`try` 语句允许在其相关和连接的代码块中抛出的某些异常被相应的异常要求捕获并处理；这同时也确保了在和最后最后的清理代码将始终运行，无论代码块如何退出。
-
-
-
 
 Python 使用 `raise` 语句来抛出指定的异常，或重新抛出许多特殊情况。
 
@@ -1279,8 +1246,9 @@ Python 使用 `raise` 语句来抛出指定的异常，或重新抛出许多特�
 导入：
 
 ```
-\>>> import <module name>
-\>>> [as <alias>]。
+>>> import <module name>
+
+>>> [as <alias>]。
 ```
 
 ### 打印语句 (Print statement)
@@ -1312,228 +1280,231 @@ Python 使用 `raise` 语句来抛出指定的异常，或重新抛出许多特�
 示例 – 1:
 
 ```
-\>>> number = int (input ("Enter your desired number = "))
-\>>> if number % 2 == 0:
-\>>> print ("Your entered number is an even number")
+>>> number = int (input ("Enter your desired number = "))
+
+>>> if number % 2 == 0:
+
+>>> print ("Your entered number is an even number")
 ```
 
-输出：
 
-当执行执行此代码时，你的控制台屏幕将打印一行：
 
+# Python 控制流与函数详解
+
+## If 语句
+
+`if` 语句用于根据条件执行代码块。
+
+### 示例 1
+
+```python
+n = int(input("Enter first integer"))
+v = int(input("Enter second integer"))
+w = int(input("Enter third integer"))
+if n > v and n > w:
+    print("n is largest")
+if v > n and v > w:
+    print("v is largest")
+if w > n and w > v:
+    print("w is largest")
+```
+
+### 示例 2
+
+```python
+number = int(input("Enter your desired number :"))
+if number % 2 == 0:
+    print("Your entered number is an even number!")
+```
+
+**输出：**
+当执行此代码时，你的控制台屏幕将打印一行：
+```text
 Enter your desired number =
-
+```
 在输入数字后，如果输入的数字是偶数，你的程序将打印：
-
+```text
 Your entered number is an even number
-
-示例 – 2:
-
-```
-\>>> n = int (input ("Enter first integer"));
-\>>> v = int (input ("Enter second integer "));
-\>>> w = int (input ("Enter third integer"));
-\>>> if n > v and n > w:
-\>>> print ("n is largest");
-\>>> if v > n and v > w:
-\>>> print ("v is largest");
-\>>> if w > n and w > v:
-\>>> print ("w is largest");
 ```
 
-### If-Else 语句 (The If-Else Statement)
+## If-Else 语句
 
-`if-else` 语句在 `if` 语句之外提供了一个 `else` 块，该块在第一个条件为假的情况下执行。当条件为真时，执行 `if` 块。否则，`else` 块将被视为真。
+`if-else` 语句在 `if` 语句之外提供了一个 `else` 块，该块在第一个条件为假的情况下执行。当条件为真时，执行 `if` 块。否则，`else` 块将被执行。
 
-在 Python 中，`if else` 语句的语法如下
+### 语法
 
-```
-\>>> if condition:
-\>>> (block of statements)
-\>>> Else:
-\>>> (Block of else statements)
-```
-
-示例 - 1:
-
-```
-\>>> voterage = int (input ("Enter your age = "))
-\>>> if voterage >= 18:
-\>>> print ("You are eligible to cast vote!");
-\>>> else:
-\>>> print ("Sorry! You have to wait!");
+```python
+if condition:
+    (block of statements)
+else:
+    (Block of else statements)
 ```
 
-示例 - 2:
+### 示例 1
 
-```
-\>>> number = int (input ("Enter your desired number :"))
-\>>> if number % 2 == 0:
-\>>> print ("Your entered number is an even number!")
-\>>> else:
-\>>> print ("Your entered number is an odd number!")
-```
-
-### Elif 语句 (The Elif Statement)
-
-`elif` 语句帮助我们同时运行多个层级的条件。它必须具有 `if-and-if` 层来执行程序指定的任务。它仅通过获取一系列“真”条件来工作。
-
-`elif` 语句的语法如下
-
-```
-\>>> if (expression 1):
-\>>> (block of statements);
-\>>> elif (expression 2):
-\>>> (block of statements);
-\>>> elif (expression 3):
-\>>> (block of statements);
-\>>> else:
-\>>> (block of statements);
+```python
+voterage = int(input("Enter your age = "))
+if voterage >= 18:
+    print("You are eligible to cast vote!")
+else:
+    print("Sorry! You have to wait!")
 ```
 
-### Python Break 语句 (Python Break Statement)
+### 示例 2
 
-`break` 语句在 Python 循环编程中具有其独特的重要性。它通过打破之前代码的循环，将执行模式转移到下一行。通过简单的语法，它将控制权交回同一个较大程序中的循环。它的语法非常简单。
-
-```
-\>>> break;
-```
-
-### Python Continue 语句 (Python Continue Statement)
-
-在 Python 中，此语句将程序的控制权交回循环的开头。它允许个人跳过其余代码，并执行回到开头。它在特殊条件下跳过和执行起着重要作用。
-
-`continue` 语句的语法如下
-
-```
-\>>> loop statements
-\>>> continue;
-\>>> (the code to be skipped)
+```python
+number = int(input("Enter your desired number :"))
+if number % 2 == 0:
+    print("Your entered number is an even number!")
+else:
+    print("Your entered number is an odd number!")
 ```
 
-示例 – 1:
+## Elif 语句
 
-```
-\>>> v = 0;
-\>>> while v != 10:
-\>>> print ("%d"%v)
-\>>> v=v+1;
-```
+`elif` 语句帮助我们同时运行多个层级的条件。它必须具有 `if` 和 `elif` 层来执行程序指定的任务。
 
-示例 - 2:
+### 语法
 
-```
-\>>> n=1;
-\>>> for n in range(1,10):
-\>>> if n == 15:
-\>>>
-```
-
-### Python Pass 语句 (Python Pass Statement)
-
-在 Python 中，`pass` 语句被视为空操作。它通常用于代码不是程序的一部分时。我们使用这种语法。
-
-```
-\>>> pass;
+```python
+if (expression 1):
+    (block of statements)
+elif (expression 2):
+    (block of statements)
+elif (expression 3):
+    (block of statements)
+else:
+    (block of statements)
 ```
 
-示例：
+## Break 语句
 
-```
-\[1,2,3,4,5\]:
-\>>> pass
-\>>> print (w)
-\>>>);
-```
+`break` 语句在 Python 循环编程中具有其独特的重要性。它通过打破之前代码的循环，将执行模式转移到下一行。
 
-### Python 导入语句 (Import Statement of Python)
+### 语法
 
-此语句在 Python 中被认为是有价值的。它使得模块之间的访问成为可能。没有 `import` 语句，Python 无法执行标记。我们使用这种语法。
-
-```
-\>>> import module;
+```python
+break
 ```
 
-示例：
+## Continue 语句
 
+在 Python 中，`continue` 语句将程序的控制权交回循环的开头。它允许个人跳过其余代码，并执行回到开头。
+
+### 语法
+
+```python
+loop statements
+continue
+(the code to be skipped)
 ```
-\>>> import document;
-\>>> last name = input("input name :")
-\>>> document.displayMsg(last name)
+
+### 示例 1
+
+```python
+v = 0
+while v != 10:
+    print("%d" % v)
+    v = v + 1
 ```
 
-## 6.3 Python 中的循环 (6.3 Loops in Python)
+### 示例 2
 
-计算机编程涉及命令和函数的反复执行。有时，相同的代码必须重复多次以获得所需的结果。这是通用编程领域非常常见的做法。为了让 Python 程序员更方便，有很多循环被专业人士用于节省时间并保持语法简单。这些循环通过一个小代码块重复所需的代码。
+```python
+n = 1
+for n in range(1, 10):
+    if n == 15:
+        pass
+```
+
+## Pass 语句
+
+在 Python 中，`pass` 语句被视为空操作。它通常用于代码不是程序的一部分时。
+
+### 语法
+
+```python
+pass
+```
+
+### 示例
+
+```python
+[1, 2, 3, 4, 5]
+pass
+print(w)
+```
+
+## Import 语句
+
+此语句在 Python 中被认为是有价值的。它使得模块之间的访问成为可能。没有 `import` 语句，Python 无法执行标记。
+
+### 语法
+
+```python
+import module
+```
+
+### 示例
+
+```python
+import document
+last_name = input("input name :")
+document.displayMsg(last_name)
+```
+
+# 第 6 章：Python 中的循环
+
+计算机编程涉及命令和函数的反复执行。有时，相同的代码必须重复多次以获得所需的结果。为了让 Python 程序员更方便，有很多循环被专业人士用于节省时间并保持语法简单。
 
 在 Python 中，循环有助于减少代码的复杂性。这些循环的语法很容易理解，并且维护程序流程是必要的。它通过简单的循环避免相同代码的重复。
 
-*   `for` 循环
-*   `while` 循环
-*   `do-while` 循环
-*   Python `for` 循环
+- `for` 循环
+- `while` 循环
+- `do-while` 循环
 
-### For 循环 (For Loop)
+## For 循环
 
-Python 中的 `for` 循环其语法如下
+Python 中的 `for` 循环其语法如下：
 
-```
-\>>> for iterating_variable in sequence:
-\>>> {statements);
-```
-
-示例：
-
-```
-\>>> v=1;
-\>>> number = int (input ("Enter your desired number:"));
-\>>> for v in range(1,11):
-\>>> print ("%d X %d = %d"% (number,v,number*v));
+```python
+for iterating_variable in sequence:
+    (statements)
 ```
 
-输出：
+### 示例
 
+```python
+v = 1
+number = int(input("Enter your desired number:"))
+for v in range(1, 11):
+    print("%d X %d = %d" % (number, v, number * v))
+```
+
+**输出：**
 当你执行此程序时，你的控制台将打印：
-
+```text
 Enter your desired number
-
+```
 假设你输入了“10”作为你的数字。你的控制台将打印：
-
+```text
 10 X 1 = 10
-
 10 X 2 = 20
-
 10 X 3 = 30
-
 10 X 4 = 40
-
 10 X 5 = 50
-
 10 X 6 = 60
-
 10 X 7 = 70
-
 10 X 8 = 80
-
 10 X 9 = 90
-
 10 X 10 = 100
+```
 
-
-
-
-
-10 X 8 = 80
-
-10 X 9 = 90
-
-10 X 10 = 100
-
-### 嵌套 for 循环
+## 嵌套 For 循环
 
 在 Python 中，嵌套 for 循环是指将一个“for 循环”嵌套在另一个“for 循环”内部以执行多次。
 
-嵌套 for 循环的语法如下：
+### 语法
 
 ```python
 for iterating_variable1 in sequence:
@@ -1542,47 +1513,47 @@ for iterating_variable1 in sequence:
         (Other statements)
 ```
 
-示例：
+### 示例
 
 ```python
 v = int(input("Enter your desired number of rows"))
-v,w=0,0
-for v in range(0,n):
-    print ()
-    for w in range(0,i+1):
-        print("*",end="")
+v, w = 0, 0
+for v in range(0, n):
+    print()
+    for w in range(0, i + 1):
+        print("*", end="")
 ```
 
-输出：
+**输出：**
 当你执行此程序时，你的控制台屏幕将打印：
-
+```text
 Enter your desired number of rows
-
+```
 假设你输入了“6”。它将打印：
-
+```text
 *
 **
 ***
 ****
 *****
 ******
-
-### 带有循环的 else 语句
-
-`else` 语句是许多条件语句中不可或的一部分。它也用于许多其他编程语言中以满足条件。在 Python 中，`else` 语句可以在“for 循环”内部执行。
-
-示例 -1：
-
-```python
-for v in range(0,8):
-    print(v)
-else:
-    print("Excluding break statement therefore for loop completely exhausted.");
 ```
 
-输出：
-在这种情况下，你的控制台屏幕将打印：
+## 带有循环的 Else 语句
 
+`else` 语句可以在“for 循环”内部执行。
+
+### 示例 1
+
+```python
+for v in range(0, 8):
+    print(v)
+else:
+    print("Excluding break statement therefore for loop completely exhausted.")
+```
+
+**输出：**
+```text
 0
 1
 2
@@ -1591,51 +1562,54 @@ else:
 5
 6
 7
-
 由于没有 break，for 循环完全执行完毕
+```
 
-示例 – 2：
+### 示例 2
 
 ```python
-for v in range(0,5):
+for v in range(0, 5):
     print(v)
-    break;
+    break
 else:
     print("for loop is exhausted now!")
-print ("break statement is used therefore loop gets broken")
+
+print("break statement is used therefore loop gets broken")
 ```
 
 `break` 语句停止了 `else` 语句的执行。
 
-输出：
-在这种情况下，你的控制台将打印：
-
+**输出：**
+```text
 0
 the break statement is used therefore loop gets broken
+```
 
-### while 循环
+## While 循环
 
-通常，`while` 循环负责只要已知条件为真就一直执行一段代码。它通常用于预不知道迭代次数的情况。`while` 循环的语法如下。
+通常，`while` 循环负责只要已知条件为真就一直执行一段代码。它通常用于预不知道迭代次数的情况。
+
+### 语法
 
 ```python
 while expression:
-    (statements);
+    (statements)
 ```
 
 语句表达式必须是任何结果为真或假的有效 Python 表达式。在这种情况下，`True` 是任何非零值。
 
-示例 – 1：
+### 示例 1
 
 ```python
-v=1;
-while v<=11:
-    print(v);
-    v=v+1;
+v = 1
+while v <= 11:
+    print(v)
+    v = v + 1
 ```
 
-输出：
+**输出：**
 在这种情况下，你的控制台将打印直到 11 的所有整数列表。
-
+```text
 1
 2
 3
@@ -1647,23 +1621,24 @@ while v<=11:
 9
 10
 11
+```
 
-### Python 中的无限 while 循环
+## Python 中的无限 While 循环
 
-如果在 `while` 循环中提供的条件没有变为假，`while` 循环将永远不会结束，结果将是一个无限循环循环。要获得 `True` 条件，我们在 `while` 循环中使用非零值，用零值表示 `False` 条件。
+如果在 `while` 循环中提供的条件没有变为假，`while` 循环将永远不会结束，结果将是一个无限循环。要获得 `True` 条件，我们在 `while` 循环中使用非零值，用零值表示 `False` 条件。
 
-示例：
+### 示例
 
 ```python
 variable = 1
 while variable != 2:
     v = int(input("Enter your desired number :"))
-    print ("Entered value is %d"%(v))
+    print("Entered value is %d" % (v))
 ```
 
-输出：
+**输出：**
 其结果将是：
-
+```text
 Enter your desired number : 67
 Entered value is 67
 Enter your desired number : 69
@@ -1672,50 +1647,51 @@ Enter your desired number : 68
 Entered value is 68
 Enter your desired number : 76
 这将是一个无限循环。
+```
 
-### 带有 else 的 while 循环
+## 带有 Else 的 While 循环
 
 Python 允许开发者在 `while` 循环内部使用 `else` 循环。当给定的条件变为假时，它执行 `else` 块。与 for 循环一样，如果 while 循环通过 `break` 语句中断，则 `else` 块将不会执行。
 
-示例 - 1：
+### 示例 1
 
 ```python
-v=1;
-while v<=4:
+v = 1
+while v <= 4:
     print(v)
-    v=v+1;
+    v = v + 1
 else:
-    print("The while loop is broken");
+    print("The while loop is broken")
 ```
 
-输出：
-在这种情况下，你的控制台将打印：
-
+**输出：**
+```text
 1
 2
 3
 4
 The while loop is broken
-
-示例 – 2：
-
-```python
-v=1;
-while v<=5:
-    print(v)
-    v=v+1;
-    if(v==3):
-    break;
-else:
-    print("The while loop is broken");
 ```
 
-输出：
-在这种情况下，你的控制台将打印：
+### 示例 2
 
+```python
+v = 1
+while v <= 5:
+    print(v)
+    v = v + 1
+    if v == 3:
+        break
+else:
+    print("The while loop is broken")
+```
+
+**输出：**
+```text
 1
 2
 The while loop is broken
+```
 
 # 第 7 章：函数与文件处理
 
@@ -1723,7 +1699,7 @@ Python 函数和文件处理是 Python 最重要的部分。如果不使用这�
 
 ## 7.1 Python 中的函数
 
-Python 函数是高度实用的代码包，可以调用来执行特定任务。它们被用于程序中。基本上，它们是封装在 {} 中的一些唯一语句。在 Python 中，你可以根据需要任意次数调用函数。
+Python 函数是高度实用的代码包，可以调用来执行特定任务。它们被用于程序中。基本上，它们是封装在 `{}` 中的一些唯一语句。在 Python 中，你可以根据需要任意次数调用函数。
 
 ### 函数的优势
 
@@ -1735,114 +1711,124 @@ Python 函数是高度实用的代码包，可以调用来执行特定任务。�
 
 ### Python 函数
 
-Python 语言中有很多函数。它们可以从解释器包中调用并用于任何程序。没有这些函数，Python 对软件社区就没有任何吸引力。如今，它们被世界范围内用于执行所有主要任务。
+Python 语言中有很多函数。它们可以从解释器包中调用并用于任何程序。如今，它们被世界范围内用于执行所有主要任务。
 
-### abs() 函数
+### `abs()` 函数
 
-此函数 `abs()` 主要用于数值。当我们在程序中输入任何整数时，它会返回一个绝对值。它专门用于获取一个参数的绝对值。这里有一些绝对数的示例以帮助理解这一概念。
+此函数 `abs()` 主要用于数值。当我们在程序中输入任何整数时，它会返回一个绝对值。它专门用于获取一个参数的绝对值。
 
-示例：
+#### 示例
 
 ```python
 integer = -25
-print(' abs value of -25 is', abs(integer))
+print('abs value of -25 is', abs(integer))
 
-float = -55
-print('abs value of -55', abs(float))
+float_num = -55
+print('abs value of -55', abs(float_num))
 ```
 
-输出：
+**输出：**
+```text
 abs value of -25 is: 25
 abs value of -55 is: 55
+```
 
 这些结果显示了 `abs()` 函数是如何工作的。
 
-### bin() 函数
+### `bin()` 函数
 
 此函数 `bin()` 返回整数的二进制结果。二进制输出在值的开头有前缀 `0b`。
 
-示例：
+#### 示例
 
 ```python
-n=20
-v= bin(n)
+n = 20
+v = bin(n)
 print(v)
 ```
 
-输出：
-在这种情况下，你的控制台将打印：
-
+**输出：**
+```text
 0b10100
+```
 
-### bool() 函数
+### `bool()` 函数
 
 此函数 `bool()` 使用真值测试方法输出布尔类型的值。它是 Python 的一个重要的内置函数。如果有任何输入值，结果为真；否则它打印假。
 
-示例：
+#### 示例
 
 ```python
-v1=[5]
-print(v1, 'is',bool(v1))
+v1 = [5]
+print(v1, 'is', bool(v1))
 
-v1= No-value
-print(v1, 'is',bool(v1))
+v1 = None
+print(v1, 'is', bool(v1))
 ```
 
-输出：
+**输出：**
+```text
 [5] is True
-No-value is False
+None is False
+```
 
-### bytes() 函数
+### `bytes()` 函数
 
-在 Python 中，`bytes()` 函数对于获取字节形式的对象非常有帮助。它属于字节数组命令。大多数 Python 编程专业人士通过此命令生成对象来获得帮助。
+在 Python 中，`bytes()` 函数对于获取字节形式的对象非常有帮助。它属于字节数组命令。
 
-示例：
+#### 示例
 
 ```python
-string= "Hi Friend."
-array= bytes(string, 'utf-8')
+string = "Hi Friend."
+array = bytes(string, 'utf-8')
 print(array)
 ```
 
-结果：
+**结果：**
+```text
 b'Hi Friend.'
-
-### callable() 函数
-
-相关函数 `callable()` 检查并在对象看起来可可用的时返回 True，否则返回 False。该函数通过单条命令通知用户对象的可用性，从而节省时间。
-
-示例：
-
-```python
-v=12
-print (callable(v))
 ```
 
-输出：
-False
+### `callable()` 函数
 
-### compile() 函数
+相关函数 `callable()` 检查并在对象看起来可调用时返回 `True`，否则返回 `False`。
+
+#### 示例
+
+```python
+v = 12
+print(callable(v))
+```
+
+**输出：**
+```text
+False
+```
+
+### `compile()` 函数
 
 此函数 `compile()` 通过 Python 的编译器作用于源代码，并最终生成一个该代码的对象。随后，我们可以在同一个程序中使用另一个函数 `exec()` 来执行此代码。
 
-示例：
+#### 示例
 
 ```python
-yourcode_str='v=10\nw=15\nprint("sum=",v+w)'
-yourcode=compile(yourcode_str, "sum.py','exec')
+yourcode_str = 'v=10\nw=15\nprint("sum=",v+w)'
+yourcode = compile(yourcode_str, "sum.py", 'exec')
 print(type(yourcode))
 exec(yourcode)
 ```
 
-输出：
+**输出：**
+```text
 <class 'code'>
 sum = 25
+```
 
-### exec() 函数
+### `exec()` 函数
 
-`exec()` 函数在 内置函数中具有额外的重要性。它运行 Python 程序并产生输出。没有这个函数，Python 程序无法执行。
+`exec()` 函数在内置函数中具有额外的重要性。它运行 Python 程序并产生输出。
 
-示例：
+#### 示例
 
 ```python
 v = 12
@@ -1850,236 +1836,259 @@ exec('print(v==12)')
 exec('print(v+4)')
 ```
 
-输出：
+**输出：**
+```text
 True
 16
+```
 
-### sum() 函数
-
-
-
-
+### `sum()` 函数
 
 在 Python 中，当我们对数值数据进行算术操作时，`sum()` 函数是必不可少的。我们使用该函数对列表中可用的值进行求加。
 
-示例：
+#### 示例
+
 ```python
-\>>> v = sum([2, 5,4 ])
-\>>> print(v)
-\>>> v = sum([4, 2, 4], 10)
-\>>> print(v)
+v = sum([2, 5, 4])
+print(v)
+
+v = sum([4, 2, 4], 10)
+print(v)
 ```
-输出：
-11
-20
+
+
+
+# Python 内置函数与文件处理
+
+## Python 内置函数
 
 ### `any()` 函数
-Python 中的 `any()` 函数提供布尔类型的结果或输出，其值可能是 True 也可能是 False。
+Python 中的 `any()` 函数提供布尔类型的结果或输出，其值可能是 `True` 也可能是 `False`。
 
-当列表中有任何一个值为 True 时，它会打印 True。但如果没有 True 的值，它会返回 False。这对于处理大数据项目的数据科学家来说，这也是一个非常有用的函数。
+当列表中有任何一个值为 `True` 时，它会打印 `True`。但如果没有 `True` 的值，它会返回 `False`。这对于处理大数据项目的数据科学家来说，这也是一个非常有用的函数。
 
 示例：
 ```python
-\>>> V=[4, False,9]
-\>>> Print(any(V))
-\>>> V=[]
-\>>> Print(any(V))
+>>> V = [4, False, 9]
+>>> print(any(V))
+>>> V = []
+>>> print(any(V))
 ```
 结果：
+```
 True
 False
+```
 
 ### `ascii()` 函数
 `ascii()` 函数在 Python 中起着重要作用。该函数的输出值始终是一个字符串。我们必须记住，它不会打印其他的 ascii 字符。
 
 示例：
 ```python
-\>>> vQ= 'Have a good day'
-\>>> print(ascii(vQ))
-\>>> wQ= 'Have a nice day'
-\>>> print(ascii(wQ))
-\>>> print('Have\xf6n a good day')
+>>> vQ = 'Have a good day'
+>>> print(ascii(vQ))
+>>> wQ = 'Have a nice day'
+>>> print(ascii(wQ))
+>>> print('Have\xf6n a good day')
 ```
 输出：
+```
 'Have a good day'
-'Have\xf6n a good day'
 'Have a nice day'
+'Have\xf6n a good day'
+```
 
 ### `bytearray()` 函数
 `bytearray()` 函数在 Python 编程中起着重要作用。为了创建一个对象，此函数帮助用户或软件专业人员避免浪费时间。
 
 示例：
 ```python
-\>>> string1= "Computer Programming"
-#string1 使用 ‘utf-8’ 
-\>>> array1= bytearray(string, ‘utf-8')
-\>>> print(array1)
+>>> string1 = "Computer Programming"
+>>> array1 = bytearray(string1, 'utf-8')
+>>> print(array1)
 ```
 结果：
+```
 bytearray(b'Computer Programming')
+```
 
 ### `eval()` 函数
 `eval()` 函数在 Python 编程中发挥额外的作用。该函数在运行的程序中执行自身，帮助代码管理器快速地完成工作。
 
 示例：
 ```python
-\>>> w= 6
-\>>> print(eval('w+1'))
+>>> w = 6
+>>> print(eval('w+1'))
 ```
 输出：
+```
 7
+```
 
 ### `format()` 函数
 Python 中的这个 `format()` 函数让每个程序员的编码变得更简单。通过格式化值和其他给定的数据，它节省了程序员的时间。
 
 示例：
 ```python
-\>>> d, f 和 b 是类型
-### 整数
-\>>> print(format(515, "d"))
-### 浮点参数
-\>>>print(format(515.7898, "f"))
-### 二进制格式
-\>>> print(format(15, "b"))
+>>> print(format(515, "d"))
+>>> print(format(515.7898, "f"))
+>>> print(format(15, "b"))
 ```
 输出：
-245
-363.790
-35
+```
+515
+515.789800
+1111
+```
 
 ### `frozenset()` 函数
 Python 编程中的 `frozenset()` 函数提供了一个不可变的冻结集合对象。这对于 Python 编程来说是一个非常有用的函数。
 
 示例：
 ```python
-\>>> letter = ('j', 'k', 'l', ‘m', 'p')
-\>>> frozset = frozenset(letter)
-\>>> print('Frozen set:', frozSet)
-\>>> print('set with no value:',frozenset())
+>>> letter = ('j', 'k', 'l', 'm', 'p')
+>>> frozset = frozenset(letter)
+>>> print('Frozen set:', frozset)
+>>> print('set with no value:', frozenset())
 ```
 输出：
-Frozen set: ({'k', 'p', 'j', 'm', 'l'})
-Set with no val: frozenset()
+```
+Frozen set: frozenset({'k', 'p', 'j', 'm', 'l'})
+set with no value: frozenset()
+```
 
 ### `getattr()` 函数
 相关函数在 Python 语言中起着非常重要的作用。通过这个函数的帮助，用户能够获取对象的属性。软件程序员使用此函数为对象分配名称。
 
 示例：
 ```python
-\>>> class Details:
-\>>> age = 25
-\>>> name = "faheel"
-\>>> detail = Details()
-\>>> print('age:', getattr(detail, "age"))
-\>>> print('age:', detail.age)
+>>> class Details:
+...     age = 25
+...     name = "faheel"
+>>> detail = Details()
+>>> print('age:', getattr(detail, "age"))
+>>> print('age:', detail.age)
 ```
 输出：
+```
 age: 25
 age: 25
+```
 
 ### `globals()` 函数
 `globals()` 函数允许用户获取全局符号表，包含所有变量和方法的信息。它是在任何 Python 程序中准备好所有符号以备的强制性函数。
 
 示例：
 ```python
-\>>> Id = 72
-\>>> globals()['Id'] = 72
-\>>> print(' My id :', Id)
+>>> Id = 72
+>>> globals()['Id'] = 72
+>>> print(' My id :', Id)
 ```
 输出：
+```
 My id : 72
+```
 
 ### `hasattr()` 函数
-`hasattr()` 函数基于布尔类型返回，即 True 和 False。
+`hasattr()` 函数基于布尔类型返回，即 `True` 和 `False`。
 
 示例：
 ```python
-\>>> v = [0, False, 5]
-\>>> print(any(v))
-\>>> v = []
-\>>> print(any(v))
+>>> class Test:
+...     attr = 1
+>>> t = Test()
+>>> print(hasattr(t, 'attr'))
+>>> print(hasattr(t, 'nonexist'))
 ```
-结果：
+输出：
+```
 True
 False
+```
 
 ### `iter()` 函数
 `iter()` 函数经常被使用，因为它处理对象（通常是列表）内部的值。它逐个打印列表中的值。
 
 示例：
 ```python
-### 数字列表
-\>>> list = [6,7,8,9,0}
-\>>> listIter = iter(list)
-### 打印 '6'
-\>>> print(next(listIter))
-### 打印 '7'
-\>>> print(next(listIter))
-### 打印 '8'
-\>>> print(next(listIter))
+>>> list_num = [6, 7, 8, 9, 0]
+>>> listIter = iter(list_num)
+>>> print(next(listIter))
+>>> print(next(listIter))
+>>> print(next(listIter))
 ```
 输出：
+```
 6
 7
 8
+```
 
 ### `len()` 函数
 这是一个对于 Python 编程简单但极其重要的函数。用户或程序员可以使用此函数测量项的长度。
 
 示例：
 ```python
-\>>> stringW = '…Data…'
-\>>> print(len(stringW))
+>>> stringW = 'Data'
+>>> print(len(stringW))
 ```
 结果：
+```
 4
+```
 
 ### `list()` 函数
-`list()` 函数是最常用的函数之一，用于用于生成给定指令集合的完整列表。
+`list()` 函数是最常用的函数之一，用于生成给定指令集合的完整列表。
 
 示例：
 ```python
-\>>> print(list())
-### 用于空列表
-### 字符串
-\>>> String = 'abcde'
-\>>> print(list(String))
-### 元组
-\>>> tuple = (1,2,3,4,5)
-\>>> print(list(Tuple))
-### 列表
-\>>> list = [1,2,3,4,5]
-\>>> print(list(list))
+>>> print(list())
+>>> String = 'abcde'
+>>> print(list(String))
+>>> tuple_val = (1, 2, 3, 4, 5)
+>>> print(list(tuple_val))
+>>> list_val = [1, 2, 3, 4, 5]
+>>> print(list(list_val))
+```
+输出：
+```
+[]
+['a', 'b', 'c', 'd', 'e']
+[1, 2, 3, 4, 5]
+[1, 2, 3, 4, 5]
 ```
 
 ### `locals()` 函数
-`locals()` 根据输入提供布尔类型结果（True 或 False）。它接收输入并根据你定义的程序返回 true 或 false。
+`locals()` 函数返回当前局部符号表。
 
 示例：
 ```python
-\>>> def localsBeta():
-\>>> return locals()
-\>>> def localstSenior():
-\>>> Alpha = True
-\>>> return locals()
-\>>> print('localsNoAutority:', localsBeta())
-\>>> print('localsHighAuthority:', localsAlpha())
+>>> def localsBeta():
+...     return locals()
+>>> def localsAlpha():
+...     Alpha = True
+...     return locals()
+>>> print('localsNoAutority:', localsBeta())
+>>> print('localsHighAuthority:', localsAlpha())
 ```
 结果：
-localsBeta: {}
-localsAlpha: {'Alpha': True}
+```
+localsNoAutority: {}
+localsHighAuthority: {'Alpha': True}
+```
 
 ### `map()` 函数
 `map()` 函数用于将给定的函数应用于列表的所有项上。
 
 示例：
 ```python
-\>>> def square(n):
-\>>> return n*n
-\>>> result = map(square, [1, 2, 3])
-\>>> print(list(result))
+>>> def square(n):
+...     return n * n
+>>> result = map(square, [1, 2, 3])
+>>> print(list(result))
 ```
 输出：
+```
 [1, 4, 9]
 ```
 
@@ -2088,173 +2097,153 @@ localsAlpha: {'Alpha': True}
 
 示例：
 ```python
-\>>> class Details:
-\>>> age = 25
-\>>> name = "faheel"
-\>>> detail = Details()
-\>>> delattr(detail, "age")
-\>>> print(detail.age)
+>>> class Details:
+...     age = 25
+...     name = "faheel"
+>>> detail = Details()
+>>> delattr(detail, "age")
+>>> print(detail.age)
 ```
 输出：
+```
 AttributeError: 'Details' object has no attribute 'age'
 ```
 
-
-
-
-
+### `help()` 函数
 `help()` 函数负责调用 `help` 来协助对象传递的过程。通过额外的参数，此函数会与你共享帮助数据。
 
 示例：
-
+```python
+>>> help()
 ```
->>> Information = help()
->>> print(Information)
-```
-
 输出：
-
+```
 Help Centre!
+```
 
-### `min() ` 函数
-
-`min()` 函数通过接受两个参数作为输入（元素列表和关键字列表）来帮助获取最小或最基础的元素。
+### `min()` 函数
+`min()` 函数通过接受参数作为输入来帮助获取最小或最基础的元素。
 
 示例：
-
 ```python
->>> V = min(2100,221,225)
->>> W = min(1000.25,2025.35,5625.36,10052.50)
+>>> V = min(2100, 221, 225)
+>>> W = min(1000.25, 2025.35, 5625.36, 10052.50)
 >>> print(V)
 >>> print(W)
 ```
-
 输出：
-
+```
 221
-
 1000.25
+```
 
-### `set() ` 函数
-
+### `set()` 函数
 `set()` 函数通过可迭代对象生成一个对象。Python 编程中的这个函数被认为是程序的基础。
 
 示例：
-
 ```python
 >>> v = set('25')
->>> w= set('python')
+>>> w = set('python')
 >>> print(v)
 >>> print(w)
 ```
-
 输出：
-
+```
 {'2', '5'}
+{'y', 'o', 't', 'h', 'p', 'n'}
+```
 
-{'y', 'o', 't', 'h',', 'p', 'n'}
-
-### `hex() ` 函数
-
+### `hex()` 函数
 `hex()` 函数将整数参数转换为十六进制字符串值。此函数为所有程序员、软件开发人员、工程师和专业 Python 专家提供了便利转换。
 
 示例：
-
 ```python
 >>> n = hex(4)
->>> v= hex(140)
+>>> v = hex(140)
 >>> print(n)
 >>> print(v)
 ```
-
 输出：
+```
+0x4
+0x8c
+```
 
-0x2
-
-0x70
-
-### `id() ` 函数
-
+### `id()` 函数
 `id()` 函数通过使用参数生成标识整数。
 
 示例：
-
 ```python
 >>> N = id("Python")
 >>> V = id(1500)
->>> W= id([95,236,92,3225])
+>>> W = id([95, 236, 92, 3225])
 >>> print(N)
 >>> print(V)
 >>> print(W)
 ```
-
 输出：
-
+```
 59696771728
-
 66864236539
-
 19945047867
+```
 
-### `setattr() ` 函数
-
+### `setattr()` 函数
 此函数负责设置对象的属性。它接收不同的值并在执行函数后不返回任何。
 
 示例：
-
 ```python
->>> RollNo = 0 #RN- 学号
->>> Name = ""
->>> def _init__(my, RollNo, Name):
->>> my.RollNo = RollNo
->>> self.Name = Name
->>> V= Student(33,"David")
+>>> class Student:
+...     def __init__(self, RollNo, Name):
+...         self.RollNo = RollNo
+...         self.Name = Name
+>>> V = Student(33, "David")
 >>> print(V.RollNo)
 >>> print(V.Name)
->>> print(V.email) product error
->>> setattr(V, 'email','davidrobert6185512@gcaill.com') # 添加新属性
+>>> setattr(V, 'email', 'davidrobert6185512@gcaill.com')
 >>> print(V.email)
 ```
-
 输出：
-
+```
 33
-
 David
+davidrobert6185512@gcaill.com
+```
 
-Davidrobert6185512@gcail.com
-
-### `slice() ` 函数
-
+### `slice()` 函数
 `slice()` 函数从一组元素提取切片。初始接受单个参数，但第二个函数需要三个参数才能继续。
 
 示例：
-
 ```python
 >>> V = slice(7)
->>> W = slice(0,7,3)
+>>> W = slice(0, 7, 3)
 >>> print(V)
 >>> print(W)
 ```
-
-### `sorted() ` 函数
-
-我们使用此函数对元素进行排序。由于此函数，排序按升序排列。为了继续操作，此函数通常使用四个值。
-
-示例：
-
-```python
-V = "python"
-W = sorted(V) # 排序字符串
-print(W)
+输出：
+```
+slice(None, 7, None)
+slice(0, 7, 3)
 ```
 
-### `next() ` 函数
-
-`next()` 函数允许从给定的组获取下一个元素。通过两个参数实现。
+### `sorted()` 函数
+我们使用此函数对元素进行排序。由于此函数，排序按升序排列。
 
 示例：
+```python
+>>> V = "python"
+>>> W = sorted(V)
+>>> print(W)
+```
+输出：
+```
+['h', 'n', 'o', 'p', 't', 'y']
+```
 
+### `next()` 函数
+`next()` 函数允许从给定的组获取下一个元素。
+
+示例：
 ```python
 >>> V = iter([128, 16, 42])
 >>> W = next(V)
@@ -2264,149 +2253,132 @@ print(W)
 >>> W = next(V)
 >>> print(W)
 ```
-
 输出：
-
+```
 128
-
 16
-
 42
+```
 
-### `input() ` 函数
-
+### `input()` 函数
 `input()` 函数专门用于从用户获取指令。
 
 示例：
-
 ```python
 >>> value = input("请输入您的值: ")
->>> print("您输入的:",value)
+>>> print("您输入的:", value)
+```
+输出：
+```
+请输入您的值: 22
+您输入的: 22
 ```
 
-输出：
-
-请输入您的值: 22
-
-### `int() ` 函数
-
+### `int()` 函数
 `int()` 函数设计用于将字符串和其他数据结构转换为整数。
 
 示例：
-
 ```python
->>> n = int(15) # 整数
->>> v = int(15.5) # 浮点
->>> w = int('15') # 字符串
->>> print("整数值:",n, v, w)
+>>> n = int(15)
+>>> v = int(15.5)
+>>> w = int('15')
+>>> print("整数值:", n, v, w)
+```
+输出：
+```
+整数值: 15 15 15
 ```
 
-输出：
-
-整数值:15 15 15
-
-### `pow() ` 函数
-
+### `pow()` 函数
 我们使用 `pow()` 函数计算数字的幂以定义项目所需的特定结果。
 
 示例：
-
 ```python
->>> Positive v, w (v**w)
 >>> print(pow(2, 2))
 ```
+输出：
+```
+4
+```
 
-### `print() ` 函数
-
+### `print()` 函数
 `print()` 函数用于输出到控制台。
 
 示例：
-
 ```python
 >>> print("Hello World")
 ```
-
 输出：
-
+```
 Hello World
+```
 
-### `range() ` 函数
-
+### `range()` 函数
 `range()` 函数生成数字序列。通常用于循环。
 
 示例：
-
 ```python
 >>> list(range(5))
 ```
-
 输出：
-
+```
 [0, 1, 2, 3, 4]
+```
 
-### `reversed() ` 函数
-
+### `reversed()` 函数
 `reversed()` 函数返回一个反向访问序列的迭代器。
 
 示例：
-
 ```python
->>> list(reversed([1,2,3]))
+>>> list(reversed([1, 2, 3]))
+```
+输出：
+```
+[3, 2, 1]
 ```
 
-输出：
-
-[3, 2, 1]
-
-### `type() ` 函数
-
+### `type()` 函数
 `type()` 函数返回对象的类型。
 
 示例：
-
 ```python
 >>> type(10)
 ```
-
 输出：
-
+```
 <class 'int'>
+```
 
-### `vars() ` 函数
-
+### `vars()` 函数
 `vars()` 函数返回对象的 `__dict__` 属性。
 
 示例：
-
 ```python
+>>> class Obj:
+...     pass
+>>> obj = Obj()
 >>> vars(obj)
 ```
-
 输出：
-
+```
 {}
+```
 
-### `zip() ` 函数
-
+### `zip()` 函数
 `zip()` 函数从一个或多个可迭代对象创建元组迭代器。
 
 示例：
-
 ```python
->>> list(zip([1,2], ['a','b']))
+>>> list(zip([1, 2], ['a', 'b']))
 ```
-
 输出：
-
+```
 [(1, 'a'), (2, 'b')]
+```
 
 ## 7.2 Python 文件处理
 
 Python 支持文件处理，并允许客户端处理读取和写入任何文档，同时提供了各种处理可用文件或文档的方法。文件处理的概念存在许多不同的计算机编程语言中，但在其他语言中，文件处理的使用可能是混乱或冗长的。在 Python 中，文件处理非常简单。
-
-
-
-
 
 Python 提供了许多独特的特性和函数来处理文件。它根据文件处理和管理的结构化组织与其他高级计算机编程语言区分开来。在 Python 中，学习和实现代码模块非常容易。我们应该从读取和写入文件开始。为此，语法如下所示。
 
@@ -2415,35 +2387,32 @@ open(filename, mode)
 ```
 
 ### 使用函数 `open()` 打开文件
-
 我们使用 `open()` 函数来读取和写入文件。如前所述，它会恢复一个文件格式的对象。通常，`open()` 配合两个内容参数一起工作，以确认文件管理。其语法如下：
 
 ```python
-Object File= open(<name>, <mode>, <buffering>)
+file_obj = open(<name>, <mode>, <buffering>)
 ```
 
 ### 使用函数 `close()` 关闭文件
-
-程序执行完成后，程序员必须使用 Python 脚本 `close()` 来关闭文件。
-
-它能保护文件免受外部威胁，并防止功能的误用。其语法如下：
+程序执行完成后，程序员必须使用 Python 脚本 `close()` 来关闭文件。它能保护文件免受外部威胁，并防止功能的误用。其语法如下：
 
 ```python
 file.close()
 ```
 
 示例：
-
 ```python
->>> Filenvw=open("file.txt","c")
+>>> filenvw = open("file.txt", "w")
 >>> if filenvw:
->>> print("opened successfully")
->>> filenvw.close()
+...     print("opened successfully")
+...     filenvw.close()
 ```
+
+
 
 # 第 8 章：Python 中的库
 
-在之前的章节中，我们学习了 Python 的重要概念，如数据结构、内置函数、变量、异常、方法、循环和语句。在接下来的章节中，我们将深入学习 Python 的模块、库和包，这些对于任何项目都可能很重要。导入（import）是 Python 中最重要的概念。因此，通过使用这个概念，我们可以调用数百万个库。
+在之前的章节中，我们学习了 Python 的重要概念，如数据结构、内置函数、变量、异常、方法、循环和语句。在接下来的章节中，我们将深入学习 Python 的模块、库和包，这些对于任何项目都可能很重要。导入（`import`）是 Python 中最重要的概念。因此，通过使用这个概念，我们可以调用数百万个库。
 
 此外，Python 编程和数据科学是并行的。Python 是数据科学领域一种难以置信的语言，对于想要进入数据科学领域的个人来说非常重要。它提供了无数集群库和系统，以便以纯净且高效的方式进行数据科学工作决策。不同的系统和库都有特定的用途，应该根据你的需求进行选择。
 
@@ -2453,7 +2422,7 @@ Python 被称为“内置电池的编程语言”。Python 本质上意味着并
 
 在增加 Python 普及程度的各种元素中，拥有庞大的库是一个值得注意的。大多数库和包都是许多编程语言的组合或分组，为开发者提供了访问权限。以下是 Python 中用到的一些本质语言。
 
-最重要的通用通用 Python 库之一是 "Requests"。它的目的是让 HTTP 请求变得越来越符合人类习惯且更简单。该库在 Apache2 许可下授权并用 Python 编写；`Requests` 是 Python 开发者在使用 Python 发送 HTTP 请求时的真实标准。
+最重要的通用通用 Python 库之一是 `Requests`。它的目的是让 HTTP 请求变得越来越符合人类习惯且更简单。该库在 Apache2 许可下授权并用 Python 编写；`Requests` 是 Python 开发者在使用 Python 发送 HTTP 请求时的真实标准。
 
 使用 `Requests` 库向服务器发送 HTTP 请求，它还允许在请求中包含结构信息、内容、头部、多部分文档等。通过该库，设计人员无需向 URL 添加查询问题或物理地对 POST 信息编码。
 
@@ -2508,28 +2477,23 @@ Python 被称为“内置电池的编程语言”。Python 本质上意味着并
 
 ### Six
 
-我们必须承认六 是 Python 库中最简单的。它是一个优秀的 Python 库，旨在平滑 Python 2 和 Python 3 版本之间的差异。
+我们必须承认 `Six` 是 Python 库中最简单的。它是一个优秀的 Python 库，旨在平滑 Python 2 和 Python 3 版本之间的差异。
 
-`Six` 的开发是为了支持可以在 Python 2 和 Python 3 上运行的代码库，而无需任何调整。由于它是作为单个 Python 文件提供的，将 `Six` 复制到 Python 项目异常简单。名字 Six 反映了 Python 2 x 3。
+`Six` 的开发是为了支持可以在 Python 2 和 Python 3 上运行的代码库，而无需任何调整。由于它是作为单个 Python 文件提供的，将 `Six` 复制到 Python 项目异常简单。名字 `Six` 反映了 Python 2 x 3。
 
 特殊特性：
 
 - `Six` 易于利用其能力使 Python 代码在 Python 2 和 Python 3 中都完美。
 - 该库支持每个 Python 版本，自 Python 2.6 起。
-
-
-
-
-
-- 在单个 Python 文档中使用 Six 是非常简单的。
+- 在单个 Python 文档中使用 `Six` 是非常简单的。
 
 ### Pygame
 
-Pygame 是一个开源且免费的 Python 库，旨在在 Python 中实现基于视频和基于音频的应用程序改进。特别是，它支持二维游戏项目。因此，它被初学者和资深 Python 游戏开发者广泛使用。
+`Pygame` 是一个开源且免费的 Python 库，旨在在 Python 中实现基于视频和基于音频的应用程序改进。特别是，它支持二维游戏项目。因此，它被初学者和资深 Python 游戏开发者广泛使用。
 
 在 Python 编译器或 IDE 中，`Pygame` 利用了 `SDL`，即 `Simple DirectMedia Layer` 库。与 `SDL` 库一样，`Pygame` 库非常方便，并为许多阶段和工作框架提供了帮助。
 
-Pygame 可以将使用 `Pygame` 创建的应用迁移到手机和平板电脑等 Android 设备上。出于许多原因，你可能更喜欢 `pg4a`，它是 Android 的 `Pygame` 子集。
+`Pygame` 可以将使用 `Pygame` 创建的应用迁移到手机和平板电脑等 Android 设备上。出于许多原因，你可能更喜欢 `pg4a`，它是 Android 的 `Pygame` 子集。
 
 #### 特性：
 
@@ -2605,9 +2569,6 @@ Python 库每天都在变得更加易于获取和更有用。作为一组开源�
 - `Web 应用程序服务器`
 - `GUI 工具箱`
 
-
-
-
 正如 Matplotlib 官网所说，这个 Python 库试图“让简单变得更简单，让复杂变得易懂”。这个 2D 绘图 Python 库允许用较少的代码生成条形图、误差图、直方图、图形、散点图等。
 
 也许，可视化最大的优势在于它允许我们以有效吸收的视觉效果访问海量信息。Matplotlib 包含了许多图表，如线图、条形图和散点直方图等。
@@ -2625,7 +2586,7 @@ Matplotlib 是 Python 中的数学绘图库。它在很大程度上用于信息�
 
 ### Scikit-Learn
 
-Scikit-learn 通过 Python 的可预测接口提供了一系列监督和无监督学习算法。它在宽松的重写 BSD 许可证下授权，并在许多 Linux 发行版中发布，能够满足学术和商业用途。该库基于 `SciPy`（科学 Python），在在使用 `sci-kit-learn` 之前必须引入它。
+`Scikit-learn` 通过 Python 的可预测接口提供了一系列监督和无监督学习算法。它在宽松的重写 BSD 许可证下授权，并在许多 Linux 发行版中发布，能够满足学术和商业用途。该库基于 `SciPy`（科学 Python），在在使用 `sci-kit-learn` 之前必须引入它。
 
 有几个 Python 库在机器学习算法领域提供了强强大的性能实现。其中最著名的是 `Scikit-Learn`，这是一个提供许多基础算法的高效实现的包。`Scikit-Learn` 以完美、统一且精简的 API 描述，并拥有极其有用且详尽的在线文档。这种一致性的优势在于，一旦你理解了某类模型的基本用法和语言结构，切换到另一种模型或算法将极其直接。
 
@@ -2662,7 +2623,7 @@ Scikit-learn 通过 Python 的可预测接口提供了一系列监督和无监�
 - 可以在 CPU 和 GPU 上轻松训练以进行分布式计算
 - 在其操作上具有灵活性，这意味着 `TensorFlow` 提供了提取所需部分并留下不需要部分的选择
 - 高级别的网络和设计器支持
--与其他数据科学 Python 库不同，`TensorFlow` 改进了想象图中每一个部分的方法。
+- 与其他数据科学 Python 库不同，`TensorFlow` 改进了想象图中每一个部分的方法。
 
 ### Keras
 
@@ -2682,19 +2643,15 @@ Scikit-learn 通过 Python 的可预测接口提供了一系列监督和无监�
 
 `Seaborn` 本质上是一个 Python 的数据感知库，它基于 `Matplotlib` 库。此外，它与 `Pandas` 数据结构紧密集成。这个 Python 数据感知库提供了一个异常接口，用于绘制美观且实用的事实图表。
 
-
-
-
-
 Seaborn 的核心点是将数据表示成为调查和获取信息的不可或缺的一部分。其基于数据集的绘图功能适用于包含整个数据集的展示和信息边缘。该库非常适合检查许多因素之间的关系。Seaborn 内部为创建教育性图表提供了所有重要的语义映射和可测量集合。该 Python 数据可视化库还拥有用于选择调色板的设备，有助于发现数据集中的设计。
 
 ### 特色功能
 
-*   直接回归模型的自动估计绘图。
-*   对复杂数据集总体结构的直观视角。
-*   便于利用异常状态分析构建复杂的表示以组织多图矩阵。
-*   用于双变量或单变量分布的选项。
-*   对使用清晰因素的专门支持。
+- 直接回归模型的自动估计绘图。
+- 对复杂数据集总体结构的直观视角。
+- 便于利用异常状态分析构建复杂的表示以组织多图矩阵。
+- 用于双变量或单变量分布的选项。
+- 对使用清晰因素的专门支持。
 
 ### 自然语言工具包 (NLTK)
 
@@ -2702,8 +2659,8 @@ Seaborn 的核心点是将数据表示成为调查和获取信息的不可或缺
 
 ### 特色功能
 
-*   带有一个语言结构标记器
-*   支持词法分析
+- 带有一个语言结构标记器
+- 支持词法分析
 
 # 第 9 章：人工智能与 Python
 
@@ -2731,368 +2688,79 @@ Python 对其人工智能原型算法非常有帮助。该语言还支持无需�
 
 ### 人工智能与 Python
 
-*   `Python`:
+- `Python`:
     它是一种具有复杂语义的高级面向对象语言。它通过易读且清晰的语法降低了软件开发成本，即使是初学者也能阅读。
-*   `Artificial Intelligence`:
+- `Artificial Intelligence`:
     这是一个计算机科学领域，优先开发能够像人类一样运行的智能机器，例如语音识别、视觉感知、翻译甚至选择。
 
 ### Python 的优势和特点
 
-*   `通过虚拟机或模拟器进行简单解释`：
+- `通过虚拟机或模拟器进行简单解释`：
     它在执行之前不需要编译成机器语言。然而，程序员可以使用硬件理解的本地机器语言直接运行它。
-*   `高级编程语言`：
+- `高级编程语言`：
     它包含了变量、表格、复杂算术、伪代码、布尔表达式和其他抽象原理，使其更易于。
-*   `通用编程语言`：
+- `通用编程语言`：
     它可以跨越技术和领域使用。
-*   `自动内存控制和动态类型系统`：
+- `自动内存控制和动态类型系统`：
     它有一系列编程风格，包括命令式、面向对象、函数和过程化的特征。
-*   `独立平台`：
+- `独立平台`：
     它可以在所有操作系统上运行，并且是一种开源编程语言。
 
 ### 为什么选择 AI 和 Python？
 
 与其他 `OOPs` 相比，`Python` 提供的代码仅为 1/5。我们应该从其他编程语言中选择 `Python` 用于 AI 的原因：
 
-*   `内置库`：
+- `内置库`：
     用于 Python 机器语言的 `Numpy`、`PyBrain` 以及用于高级计算的 `Scipy` 是这些库使得 `Python` 成为 AI 的正确语言。
-*   `强大的社区`：
+- `强大的社区`：
     全球的 `Python` 开发者通过论坛和指南提供支持和贡献，帮助编写代码。
-*   `独立平台`：
+- `独立平台`：
     它通过极少的简单代码更改即可灵活地使用各种操作系统。
-*   `OOPs 脚本和概念选择`：
+- `OOPs 脚本和概念选择`：
     帮助 `IDE`（集成软件环境）通过使用多种算法解决开发者的困难。
 
 ## 使用 AI 进行 Python 编码
 
 `Python` 有了一系列库包用于 AI 项目的创建和解码。少数高级包：
 
-*   `NumPy`：
+- `NumPy`：
     它被用作通用数据容器，由 N 数组元素、`C / C++` 集成资源、随机数能力和其他特征组成。
-*   `Pandas`：
+- `Pandas`：
     它为 `Python` 提供了易用的数据结构和计算方法，是一个开源库。
-*   `Matplotlib`：
+- `Matplotlib`：
     这是一个 2D 绘图库，为出版生成高质量图像。
-*   `AIMA`：
+- `AIMA`：
     Russel 和 Norvig 使用 `Artificial Intelligence – A New Solution` 应用通用 AI 算法。
-*   `PyDatalog`：
+- `PyDatalog`：
     这是一个 `Python` 逻辑编程引擎。
-*   `Easy`：
+- `Easy`：
     它被用于构建 AI 游戏的基础双玩家 `Python` 引擎。（例如：Negamax）（仅限法语）
-*   `PyBrain`：
+- `PyBrain`：
     一种简单但强大的机器学习算法，用于评估和比较预定义的环境。
-*   `PyML`：
+- `PyML`：
     双边 SVM 和其他内核方法系统。并支持 `Linux` 和 `Mac OS X`。
-*   `Scikit-Learn`：
+- `Scikit-Learn`：
     最流行的机器学习库是一个非常强大的数据分析平台。
-*   `MDP-Toolkit`：
+- `MDP-Toolkit`：
     学习算法是管理且无人的，可以扩展到网络架构的使用。
-*   `NLTK`：
+- `NLTK`：
     自然语言工具包用于语言数据和文档中的文本解释以及自然语言处理的研究与开发。
 
 ### AI Python 比 C++
 
-*   `Python` 是 AI 最常用的 `C++` 语言，以 57% 的得票领先开发者。`Python` 易于阅读和应用。它们也可以用于多个仓库的数据挖掘。
-*   `C++` 效率优于 `Python`。这是因为 `C++` 是一种静态类型语言，所以运行时没有类型错误。`C++` 还让运行时编程更轻量、更快。
+- `Python` 是 AI 最常用的 `C++` 语言，以 57% 的得票领先开发者。`Python` 易于阅读和应用。它们也可以用于多个仓库的数据挖掘。
+- `C++` 效率优于 `Python`。这是因为 `C++` 是一种静态类型语言，所以运行时没有类型错误。`C++` 还让运行时编程更轻量、更快。
 
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
 
+1. 运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
 
 
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
 
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-[content]
 ## 结论
 
 Python 通过提供强大的框架和易于使用的库，满足了创建人工智能的需求。在需要 `500 kB` 的 `Java` 代码时，Python 可以通过 `20 to 30` 行代码来实现，包括库，以便在 SLA 内的人工智能培训。
-[/content]
 
-[content]
 ## 结语
 
 恭喜！你已经读到了这里。我们希望你已经真正开始理解 Python 的基本概念和复杂性。此时，我们假设你应该能够自信地阅读任何 Python 代码了。
@@ -3108,3 +2776,13 @@ Python 通过提供强大的框架和易于使用的库，满足了创建人工�
 请不要听他们的！
 
 如果你找到了更容易理解的，你应该选择那一个。嗯，我们无法告诉你这本书是否正确。我们认为这本书适合计算机编程的新手，但即使是商业毕业生也可以。
+
+## 费曼学习法
+
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者理查德·费曼。
+
+1. 运用费曼技巧，你只需花上 `20 min` 就能深入理解知识点，而且记忆深刻，难以遗忘。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```

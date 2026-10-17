@@ -1,12 +1,5 @@
+
 # [iiWAS '20： 第22届信息集成与基于Web的应用程序和服务国际会议（清迈 泰国 ..-..）] 第22届信息集成与基于Web的应用程序和服务国际会议论文集
-
-
-
-
-
-
-
-
 
 ## ABSTRACT
 
@@ -44,9 +37,7 @@ MAS和预测过程已有大量研究。大多数研究集中于在设计阶段�
 
 ### 3.1 Multi-Agents System
 
-智能智能体是像计算机程序或机器人一样的计算机化实体[27]。智能体可以被描述为自主的，因为它在环境变化时具有适应能力。它是用于解决大规模复杂问题的重要人工智能概念之一[24]。MAS被定义为自主智能体的社会，它们相互竞争或
-
-协同解决复杂问题，但由于其固有的学习能力和自主决策能力，它们提供了更大的灵活性。由于 MAS 的突出特性，包括其分布式特性、效率、灵活性、可靠性和低成本，使其成为解决复杂任务的有效解决方案。MAS 被应用于不同的敏感领域，如电子健康 [12]、物流 [9]、制造 [16]、电子商务 [17] 等。它被用于降低这些领域的运营成本并执行自动功能，因为代理的特殊特性如智能、独立性、学习能力，以及 MAS 的特性如独立性、其分布式特性和灵活性，使其成为解决复杂问题最常见的系统之一。但该系统的主要问题是代理之间的协调 [1]。尽管为开发确保 MAS 中安全通信和协调的模型和机制付出了许多显著努力，但尚未找到满足所有要求的可行解决方案。
+智能智能体是像计算机程序或机器人一样的计算机化实体[27]。智能体可以被描述为自主的，因为它在环境变化时具有适应能力。它是用于解决大规模复杂问题的重要人工智能概念之一[24]。MAS被定义为自主智能体的社会，它们相互竞争或协同解决复杂问题，但由于其固有的学习能力和自主决策能力，它们提供了更大的灵活性。由于 MAS 的突出特性，包括其分布式特性、效率、灵活性、可靠性和低成本，使其成为解决复杂任务的有效解决方案。MAS 被应用于不同的敏感领域，如电子健康 [12]、物流 [9]、制造 [16]、电子商务 [17] 等。它被用于降低这些领域的运营成本并执行自动功能，因为代理的特殊特性如智能、独立性、学习能力，以及 MAS 的特性如独立性、其分布式特性和灵活性，使其成为解决复杂问题最常见的系统之一。但该系统的主要问题是代理之间的协调 [1]。尽管为开发确保 MAS 中安全通信和协调的模型和机制付出了许多显著努力，但尚未找到满足所有要求的可行解决方案。
 
 ### 3.2 Blockchain technology
 
@@ -67,29 +58,38 @@ BCT 是记录网络中用户之间发生的交易的网络账本。其优势在�
 在我们提出的方法中，多个代理协同工作以实现系统的总体目标，每个代理都有特定的职责。本节旨在描述每个代理工作的步骤，解释这些步骤背后的逻辑，并定义每个代理的输入和输出。
 
 **Agent layer1: Data preprocessing.** 大数据集通常是大量组织良好的行和列。相反，日志文件是非结构化的，因为它们以文本和非结构化数据集的形式出现，这就是为什么尽管它们包含有价值的信息，但开发人员仍未使用它们来分析事件的原因。因此，我们开发了一个自主智能代理来执行此过程，它将非结构化文件转换为易于使用和理解的结构化文件。此外，这一步是机器学习过程中最重要的一步之一，因为机器学习过程无法处理非结构化数据。输入：我们使用研究输入的是与 Hadoop 分布式文件系统（HDFS）执行跟踪链接的原始事件日志的一部分。我们假设执行跟踪（日志文件）中的每一行显示一个事件（或特征），我们还假设一系列事件与特定故障相关联。输出：预处理数据的目标是创建有序数据集以供第二层机器学习算法使用。该数据集是原始事件日志的副本，已以特定方式格式化，适合用于机器学习算法。该层中的代理通过以下五个步骤生成结构化记录：
+
 - 日志键提取
+
 - 解析
+
 - 转换
+
 - 分组
+
 - 归一化
 
 **Agent layer 2: Data classification,** 通常，数据存储在目标文件中。在文件系统中，文件被分成一个或多个部分并存储在单独的数据节点中。这些文件段称为块。换句话说，HDFS 可以读取或写入的数据称为块。每个块在存储过程中会经历某些阶段或步骤，所有这些步骤都记录在 HDFS 执行跟踪中。查看每个块的事件序列时，我们可以知道该块是否正常存储。通过对先前研究 [29] 的研究，我们能够确定块中发生的故障类型，他们在决策树中进行了说明。在本层中，我们开发了一个专家代理，可以从决策树中推导出规则并用于分类。输入：该代理的输入是第一层代理的输出，即组。每个组包含特定块的事件。输出：它们是根据故障类型分类的组。该层中的代理根据特定规则将组分类为组，通过两个步骤：
+
 - 从决策树中提取规则
+
 - 基于规则的分类
 
 **Agent layer 3: Building a failure model,** 构建故障模型。本层的输入是上一步分类的组。根据前述内容，我们发现每个组都被分配给特定故障，每个组包含块组。每个块组包含一组按记录顺序排列的事件。如果我们发现每个故障都有许多案例，换句话说，我们发现每个故障都没有单一的事件序列。因此，我们使用 FSA 来模拟每个故障的所有案例并显示导致该故障的内部组件之间的所有交互。从中我们将拥有一个显示所有故障序列的单一模型。我们可以利用它在故障发生之前预测该故障。还开发了一个自主智能代理来自动化这些步骤。输入：该代理的输入是第二层代理的输出，即根据故障类型分类的组。代理使用它来构建故障模型。输出：它们是将在第 4 层中用于在故障发生前预测故障的故障模型。在本层中，代理使用 FSA 从分类组中构建故障模型。FSA 由有限数量的状态和状态之间的转换组成。组中的每个事件都是一个转换。代理使用 [18] 提出的算法通过块中的事件序列学习系统每个故障的 FSA。
 
 **Agents layer 4: Prediction,** 在本层使用一组代理的目标是使每个代理搜索与其他代理不同的特定问题。这将减少时间和精力。当代理检测到故障的早期预警信号时，它会写入 BCT，以便其他代理和管理员在故障发生前同时获知，这就是本层使用 BCT 的原因，因为它提供了代理之间的透明度、信任和通信，以及代理与管理员之间的同步。本层使用的所有代理都是智能代理，因为它们能够从模型中学习、发现信息并做出针对故障的决策。输入：这些代理的输入来自执行跟踪的单行。输出：当任何代理检测到故障的早期预警信号时，它会写入 BCT，因此这里的输出是携带预测信息的新的块。这些代理在检测早期预警信号时相互合作，通过四个步骤：
+
 - 数据预处理
+
 - 知识发现
+
 - 预测
+
 - 写入 BCT
 
 ## 4 RESULTS AND INTERPRETATION
 
 我们进行了实验以验证所提出方法的有效性。在此实验中，我们展示了可以自动发现 HDFS 中异常行为的许多早期预警信号。通过在 203 个 EC2 节点上设置 Hadoop 集群并运行 Hadoop map-reduce 函数样本 48 小时，生成并处理了超过 200 TB 的随机数据。从 HDFS 收集了超过 2400 万行记录 [29]。对 HDFS 记录应用数据预处理后，共处理了 11,197,954 条消息（约占所有消息的 50%）。我们发现有 88 个日志键对应 31 种事件类型。此外，还有 575,139 个块 ID。有关此数据集的更多信息可在 [29] 中找到。所有工作均由 VS Code 版本 1.44 软件完成，使用配备 2.5 GHz Intel Core i5 CPU 和 8 GB 内存的 MacBook Pro。我们选择报告标准性能指标：精确率、召回率和 F 分数来评估我们的结果。精确率、F 分数和召回率也在 [6] 中的基准性能评估中使用。在我们的研究中，对超过两个类别进行分类，因此精确率计算为所有类别中真正例的总和除以所有类别中真正例和假正例的总和，召回率计算为所有类别中真正例的总和除以所有类别中真正例和假负例的总和
-
-
 
 ### 表 1：精确率、召回率和 F 测量的结果
 
@@ -97,13 +97,15 @@ BCT 是记录网络中用户之间发生的交易的网络账本。其优势在�
 |---|---|---|---|
 | HDFS | 0.998 | 0.990 | 0.9939 |
 
+
+
 对所有类别而言。此外，我们手动将故障消息定义为正例，非故障消息定义为负例，我们有：
 
+```
 Precision = sum(TruePositives) / sum(TruePositives + FalsePositives) (1)
-
 Recall = sum(TruePositives) / sum(TruePositives + FalseNegatives) (2)
-
 F-Measure = (2 * Precision * Recall) / (Precision + Recall) (3)
+```
 
 表 1 展示了将我们的方法应用于 HDFS 数据集时精确率、召回率和 F 测量的结果，从表中可以清楚地看出，我们的方法能够在故障发生前以高精度检测到故障的早期预警。此外，它还具有速度快的特点，我们对来自 HDFS 数据集的 11,197,954 条消息进行了检验，并在 10 分钟内显示出 [29] 中记录的所有错误。我们没有找到在同一数据集上预测故障在发生前的研究。
 
@@ -113,6 +115,64 @@ F-Measure = (2 * Precision * Recall) / (Precision + Recall) (3)
 
 ## 参考文献
 
-[1] Mourad Abed, Adel M Alimi, Khaled Ghedira, Lobna Hsairi, and Abdellatif Benabdellah. 2011. MAIS-E2 model and R2-IBN framework: port application case. 波兰管理研究杂志 3 (2011), 110–126. [2] Muneeb Ali, Jude Nelson, Ryan Shea, and Michael J Freedman. 2016. Blockstack: A global naming and storage system secured by blockchains. 在 2016 {USENIX} 年度技术会议 ({USENIX} {ATC} 16) 中。181–194. [3] Davide Calvaresi, Alevtina Dubovitskaya, Jean Paul Calbimonte, Kuldar Taveter, and Michael Schumacher. 2018. Multi-agent systems and blockchain: Results from a systematic literature review. 在国际多智能体系统实践应用会议上。Springer, 110–126. [4] Davide Calvaresi, Alevtina Dubovitskaya, Diego Retaggi, Aldo F Dragoni, and Michael Schumacher. 2018. Trusted registration, negotiation, and service evaluation in multi-agent systems throughout the blockchain technology. 在 2018 IEEE/WIC/ACM Web Intelligence 国际会议 (WI) 上。IEEE, 56–63. [5] Robert Charette and Joshua Romero. 2015. The staggering impact of it systems gone wrong. IEEE Spectrum (2015). [6] Yan Chen and Cristiano Bellavitis. 2020. Blockchain disruption and decentralized finance: The rise of decentralized business models. 商务创业洞察杂志 13 (2020), e00151.
+[1] Mourad Abed, Adel M Alimi, Khaled Ghedira, Lobna Hsairi, and Abdellatif Benabdellah. 2011. MAIS-E2 model and R2-IBN framework: port application case. 波兰管理研究杂志 3 (2011), 110–126.
 
-[7] Emeka Chukwu and Lalit Garg. 2020. A systematic review of blockchain in healthcare: Frameworks, prototypes, and implementations. IEEE Access 8 (2020), 21196–21214. [8] Maria Luisa Di Silvestre, Pierluigi Gallo, Josep M Guerrero, Rossano Musca, Eleonora Riva Sanseverino, Giuseppe Scuimè, Juan C Vázquez, and Gaetano Zizzo. 2020. Blockchain for power systems: Current trends and future applications. 可再生与可持续能源评论 119 (2020), 109585. [9] Juliane Fischer, Christian Lieberoth-Leden, Johannes Fottner, and Birgit Vogel-Heuser. 2020. Design, Application, and Evaluation of a Multiagent System in the Logistics Domain. IEEE 自动化科学与工程汇刊 (2020). [10] Mehdi Golzadeh, Esmaeil Hadavandi, and S Chehreh Chelgani. 2018. A new Ensemble based multi-agent system for prediction problems: Case study of modeling coal free swelling index. 应用软计算 64 (2018), 109–125. [11] Aleksandr Kapitonov, Sergey Lonshakov, Aleksandr Krupenkin, and Ivan Berman. 2017. Blockchain-based protocol of autonomous business activity for multi-agent systems consisting of UAVs. 在 2017 无人飞行器系统研究、教育与发展研讨会 (RED-UAS) 上。IEEE, 84–89. [12] Faizal Khan and Omar Reyad. 2020. Application of Intelligent Multi Agent Based Systems For E-Healthcare Security. arXiv 预印本 arXiv:2004.01256 (2020). [13] Chung Hwan Kim, Junghwan Rhee, Hui Zhang, Nipun Arora, Guofei Jiang, Xiangyu Zhang, and Dongyan Xu. 2014. Introperf: Transparent context-sensitive multi-layer performance inference using system stack traces. ACM SIGMETRICS 性能评估评论 42, 1 (2014), 235–247. [14] Namhun Kim, D Shin, RA Wysk, and Ling Rothrock. 2010. Using finite state automata (FSA) for formal modelling of affordances in human-machine cooperative manufacturing systems. 国际生产研究杂志 48, 5 (2010), 1303–1320. [15] Cong Liu, Qingting Zeng, Hua Duan, Lei Wang, Jie Tan, Chongguang Ren, and Wangyang Yu. 2020. Petri net based data-flow error detection and correction strategy for business processes. IEEE Access 8 (2020), 43265–43276. [16] RenZhi Lu, Yi-Chang Li, Yuting Li, Junhui Jiang, and Yuemin Ding. 2020. Multi-agent deep reinforcement learning based demand response for discrete manufacturing systems energy management. 应用能源 276 (2020), 115473. [17] Elham Majd and Mark Hobson. 2020. An incorporated RUU model for multi-agent systems in e-commerce. 企业信息管理杂志 (2020). [18] Leonardo Mariani and Mauro Pezze. 2007. Dynamic detection of cots component incompatibility. IEEE 软件 24, 5 (2007), 76–85. [19] Alireza Meshkin, Nasser Ghasem Aghaee, and Mehdi Sadeghi. 2011. Modeling and implementing an agent-based system for prediction of protein relative solvent accessibility. 专家系统与应用 38, 5 (2011), 6324–6332. [20] Graziano Mita, Paolo Papotti, Maurizio Filippone, and Pietro Michiardi. 2020. LIBRE: Learning Interpretable Boolean Rule Ensembles. 在国际人工智能与统计会议上。PMLR, 245–255. [21] Peifang Ni, Hongda Li, Xianning Meng, and Dongxue Pan. 2019. UniqueChain: A Fast, Provably Secure Proof-of-Stake Based Blockchain Protocol in the Open Setting. IACR 密码学电子印刷档案 2019 (2019), 456. [22] Serkan Örücü and Murat Selek. 2020. Design and validation of rule-based expert system by using Kinest V2 for real-time athlete support. 应用科学 10, 2 (2020), 611. [23] Yigong Peng, ZhongCheng Lu, and JinShou Yu. 2009. Multi-agent Framework for Energy Supply/Demand Prediction. 在 2009 WRI 计算机科学与信息工程世界大会上。卷 4。IEEE, 586–590. [24] Roxana Rădulescu, Patrick Mannion, Diederik M Roijers, and Ann Nowé. 2020. Multi-objective multi-agent decision making: a utility-based analysis and survey. 自主智能体与多智能体系统 34, 1 (2020), 10. [25] Donald Rumblelow. 2016. Complete Jack The Ripper. Random House. [26] AA Sakhipov and DS Baygozhanova. 2020. BLOCKCHAIN TECHNOLOGY IN EDUCATION. 科学进化 1 (2020), 36–39. [27] Yamsileydi Salgueiro, Marco Rivera, and Gonzalo Nápoles. 2020. Multi-agent-Based Decision Support Systems in Smart Microgrids. 在智能决策技术中。Springer, 123–132. [28] Ruben Sipos, Dmitriy Franko, Fabian Moerchen, and Zhuang Wang. 2014. Log-based predictive maintenance. 在第 20 届 ACM SIGKDD 知识发现与数据挖掘国际会议论文集。1867–1876. [29] Wei Xu, Ling Huang, Armando Fox, David Patterson, and Michael I Jordan. 2009. Detecting large-scale system problems by mining console logs. 在 ACM SIGOPS 第 22 届操作系统原理研讨会论文集。117–132. [30] Ding Yuan, Haohui Mai, Weiwei Xiong, Lin Tan, Yuanyuan Zhou, and Shankar Pasupathy. 2010. SherLog: error diagnosis by connecting clues from run-time logs. 在第 15 届编程语言与操作系统体系结构支持国际会议论文集。143–154. [31] Ke Zhang, Jianwu Xu, Martin Renqiang Min, Guofei Jiang, Konstantinos Pelechrinis, and Hui Zhang. 2016. Automated IT system failure prediction: A deep learning approach. 在 2016 IEEE 大数据国际会议 (Big Data) 上。IEEE, 1291–1300.
+[2] Muneeb Ali, Jude Nelson, Ryan Shea, and Michael J Freedman. 2016. Blockstack: A global naming and storage system secured by blockchains. 在 2016 USENIX 年度技术会议 (USENIX ATC 16) 中。181–194.
+
+[3] Davide Calvaresi, Alevtina Dubovitskaya, Jean Paul Calbimonte, Kuldar Taveter, and Michael Schumacher. 2018. Multi-agent systems and blockchain: Results from a systematic literature review. 在国际多智能体系统实践应用会议上。Springer, 110–126.
+
+[4] Davide Calvaresi, Alevtina Dubovitskaya, Diego Retaggi, Aldo F Dragoni, and Michael Schumacher. 2018. Trusted registration, negotiation, and service evaluation in multi-agent systems throughout the blockchain technology. 在 2018 IEEE/WIC/ACM Web Intelligence 国际会议 (WI) 上。IEEE, 56–63.
+
+[5] Robert Charette and Joshua Romero. 2015. The staggering impact of it systems gone wrong. IEEE Spectrum (2015).
+
+[6] Yan Chen and Cristiano Bellavitis. 2020. Blockchain disruption and decentralized finance: The rise of decentralized business models. 商务创业洞察杂志 13 (2020), e00151.
+
+[7] Emeka Chukwu and Lalit Garg. 2020. A systematic review of blockchain in healthcare: Frameworks, prototypes, and implementations. IEEE Access 8 (2020), 21196–21214.
+
+[8] Maria Luisa Di Silvestre, Pierluigi Gallo, Josep M Guerrero, Rossano Musca, Eleonora Riva Sanseverino, Giuseppe Scuimè, Juan C Vázquez, and Gaetano Zizzo. 2020. Blockchain for power systems: Current trends and future applications. 可再生与可持续能源评论 119 (2020), 109585.
+
+[9] Juliane Fischer, Christian Lieberoth-Leden, Johannes Fottner, and Birgit Vogel-Heuser. 2020. Design, Application, and Evaluation of a Multiagent System in the Logistics Domain. IEEE 自动化科学与工程汇刊 (2020).
+
+[10] Mehdi Golzadeh, Esmaeil Hadavandi, and S Chehreh Chelgani. 2018. A new Ensemble based multi-agent system for prediction problems: Case study of modeling coal free swelling index. 应用软计算 64 (2018), 109–125.
+
+[11] Aleksandr Kapitonov, Sergey Lonshakov, Aleksandr Krupenkin, and Ivan Berman. 2017. Blockchain-based protocol of autonomous business activity for multi-agent systems consisting of UAVs. 在 2017 无人飞行器系统研究、教育与发展研讨会 (RED-UAS) 上。IEEE, 84–89.
+
+[12] Faizal Khan and Omar Reyad. 2020. Application of Intelligent Multi Agent Based Systems For E-Healthcare Security. arXiv 预印本 `arXiv:2004.01256` (2020).
+
+[13] Chung Hwan Kim, Junghwan Rhee, Hui Zhang, Nipun Arora, Guofei Jiang, Xiangyu Zhang, and Dongyan Xu. 2014. Introperf: Transparent context-sensitive multi-layer performance inference using system stack traces. ACM SIGMETRICS 性能评估评论 42, 1 (2014), 235–247.
+
+[14] Namhun Kim, D Shin, RA Wysk, and Ling Rothrock. 2010. Using finite state automata (FSA) for formal modelling of affordances in human-machine cooperative manufacturing systems. 国际生产研究杂志 48, 5 (2010), 1303–1320.
+
+[15] Cong Liu, Qingting Zeng, Hua Duan, Lei Wang, Jie Tan, Chongguang Ren, and Wangyang Yu. 2020. Petri net based data-flow error detection and correction strategy for business processes. IEEE Access 8 (2020), 43265–43276.
+
+[16] RenZhi Lu, Yi-Chang Li, Yuting Li, Junhui Jiang, and Yuemin Ding. 2020. Multi-agent deep reinforcement learning based demand response for discrete manufacturing systems energy management. 应用能源 276 (2020), 115473.
+
+[17] Elham Majd and Mark Hobson. 2020. An incorporated RUU model for multi-agent systems in e-commerce. 企业信息管理杂志 (2020).
+
+[18] Leonardo Mariani and Mauro Pezze. 2007. Dynamic detection of cots component incompatibility. IEEE 软件 24, 5 (2007), 76–85.
+
+[19] Alireza Meshkin, Nasser Ghasem Aghaee, and Mehdi Sadeghi. 2011. Modeling and implementing an agent-based system for prediction of protein relative solvent accessibility. 专家系统与应用 38, 5 (2011), 6324–6332.
+
+[20] Graziano Mita, Paolo Papotti, Maurizio Filippone, and Pietro Michiardi. 2020. LIBRE: Learning Interpretable Boolean Rule Ensembles. 在国际人工智能与统计会议上。PMLR, 245–255.
+
+[21] Peifang Ni, Hongda Li, Xianning Meng, and Dongxue Pan. 2019. UniqueChain: A Fast, Provably Secure Proof-of-Stake Based Blockchain Protocol in the Open Setting. IACR 密码学电子印刷档案 2019 (2019), 456.
+
+[22] Serkan Örücü and Murat Selek. 2020. Design and validation of rule-based expert system by using Kinest V2 for real-time athlete support. 应用科学 10, 2 (2020), 611.
+
+[23] Yigong Peng, ZhongCheng Lu, and JinShou Yu. 2009. Multi-agent Framework for Energy Supply/Demand Prediction. 在 2009 WRI 计算机科学与信息工程世界大会上。卷 4。IEEE, 586–590.
+
+[24] Roxana Rădulescu, Patrick Mannion, Diederik M Roijers, and Ann Nowé. 2020. Multi-objective multi-agent decision making: a utility-based analysis and survey. 自主智能体与多智能体系统 34, 1 (2020), 10.
+
+[25] Donald Rumblelow. 2016. Complete Jack The Ripper. Random House.
+
+[26] AA Sakhipov and DS Baygozhanova. 2020. BLOCKCHAIN TECHNOLOGY IN EDUCATION. 科学进化 1 (2020), 36–39.
+
+[27] Yamsileydi Salgueiro, Marco Rivera, and Gonzalo Nápoles. 2020. Multi-agent-Based Decision Support Systems in Smart Microgrids. 在智能决策技术中。Springer, 123–132.
+
+[28] Ruben Sipos, Dmitriy Franko, Fabian Moerchen, and Zhuang Wang. 2014. Log-based predictive maintenance. 在第 20 届 ACM SIGKDD 知识发现与数据挖掘国际会议论文集。1867–1876.
+
+[29] Wei Xu, Ling Huang, Armando Fox, David Patterson, and Michael I Jordan. 2009. Detecting large-scale system problems by mining console logs. 在 ACM SIGOPS 第 22 届操作系统原理研讨会论文集。117–132.
+
+[30] Ding Yuan, Haohui Mai, Weiwei Xiong, Lin Tan, Yuanyuan Zhou, and Shankar Pasupathy. 2010. SherLog: error diagnosis by connecting clues from run-time logs. 在第 15 届编程语言与操作系统体系结构支持国际会议论文集。143–154.
+
+[31] Ke Zhang, Jianwu Xu, Martin Renqiang Min, Guofei Jiang, Konstantinos Pelechrinis, and Hui Zhang. 2016. Automated IT system failure prediction: A deep learning approach. 在 2016 IEEE 大数据国际会议 (Big Data) 上。IEEE, 1291–1300.

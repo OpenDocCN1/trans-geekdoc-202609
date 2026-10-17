@@ -1,24 +1,7 @@
+
 ## 以太坊：工具与技能
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 前言
+### 前言
 
 随着以太坊平台的发展，支持它的工具生态系统也随之壮大。在本书中，我们将探讨一些最流行的以太坊工具，并指导您在构建自己的以太坊应用时如何使用它们。
 
@@ -139,10 +122,6 @@ remix-ide
 
 ##### 在 Remix 中创建/打开文件
 
-
-
-
-
 ### Remix IDE 指南
 
 #### 文件浏览器
@@ -211,7 +190,7 @@ Remix IDE 提供了多种用于执行交易的环境：
 我们将使用以下示例合约 [来自本教程](https://bitfalls.com/2018/03/31/solidity-development-crash-course-building-blockchain-raffle/)，它实现了一个区块链抽奖：
 
 ```
-pragma solidity ⁰.4.20;
+pragma solidity ^0.4.20;
 
 contract Blocksplit {
 
@@ -302,9 +281,6 @@ contract Blocksplit {
 
 该合约的构建允许参与者通过向地址发送以太币（使用可支付的回调函数）或调用带有参与者地址的 `play()` 函数来参加抽奖。
 
-
-
-
 JavaScript 虚拟机提供了五个拥有 `100` 以太币的假账户，我们可以用它们来测试合约。你可以从 `Environment` 下拉菜单下方名为 `Account` 的下拉菜单中选择一个当前账户。
 
 ![选择当前账户](img/00019.jpeg)
@@ -329,6 +305,9 @@ JavaScript 虚拟机提供了五个拥有 `100` 以太币的假账户，我们�
 
 *   [Truffle](http://truffleframework.com/): 号称以太坊的“瑞士军刀”，并声称是以太坊最流行的开发框架，其使命是让你的生活轻松得多。我们将在后续章节中大量使用 Truffle。
 *   [Embark](https://github.com/embark-framework/embark): 一个允许你轻松开发和部署去中心化应用（DApps）的框架。
+
+
+
 *   [MetaMask](https://metamask.io/): 一个桥梁，让你今天就能在浏览器中访问明天的分布式网络。它允许你直接在浏览器中运行以太坊 DApps，而无需运行完整的以太坊节点。关于如何使用 MetaMask 进行开发，请查看此 [FAQ](https://github.com/MetaMask/faq/)。
 *   [Dapp](https://dapp.readthedocs.io/en/latest/): Dapp 是一个用于智能合约开发的简单命令行工具。
 *   用于为流行 IDE 添加 Solidity 支持的不同插件，例如 [这个 Visual Studio Code 插件](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) 和 [这个 Atom 插件](https://atom.io/packages/language-ethereum) 等。
@@ -347,7 +326,7 @@ JavaScript 虚拟机提供了五个拥有 `100` 以太币的假账户，我们�
 
 为了与区块链通信，我们必须使用区块链 **客户端**。客户端是一段能够与其他客户端建立 p2p 通信通道、签名并广播交易、挖矿、部署和交互智能合约等的软件。客户端通常被称为 **节点**。
 
-以太坊节点必须遵循的功能正式定义见 [以太坊黄皮书](https://ethereum.github.io/yellowpaper/paper.pdf)。黄皮书定义了网络上节点所需的功能、挖矿算法、私钥/公钥 [ECDSA](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) 参数。它定义了使节点成为完全兼容的以太坊客户端的全部特性。
+以太坊节点必须遵循的功能正式定义见 [以太坊黄皮书](https://ethereum.github.io/yellowpaper/paper.pdf)。黄皮书定义了网络上节点所需的功能、挖矿算法、私钥/公钥 `ECDSA` 参数。它定义了使节点成为完全兼容的以太坊客户端的全部特性。
 
 基于黄皮书，任何人都可以用他们认为合适的任何语言创建自己的以太坊节点实现。
 
@@ -382,8 +361,6 @@ JavaScript 虚拟机提供了五个拥有 `100` 以太币的假账户，我们�
 ### 运行 Geth
 
 要启动一个 Geth 节点，你只需要打开终端窗口并运行 `geth`。当你这样做时，你应该会得到类似如下的输出：
-
-
 
 ```
 ➜  ~ geth
@@ -476,7 +453,7 @@ geth account new
 
 Mist 是一个在后台连接到 Geth 的程序，同时也作为钱包的界面。
 
-当 Geth 运行时，它通过下载所有数据与公共区块链同步。Mist 只是一个用于与 Geth 对话的对人类友好的界面。换句话说，Geth 既是你的节点也是你的钱包，但你不必通过晦涩的命令（例如 `web3.fromWei(eth.getBalance(eth.coinbase)`）来获取账户余额），Mist 会在 UI 中提供相同的信息，甚至不需要你询问。
+当 Geth 运行时，它通过下载所有数据与公共区块链同步。Mist 只是一个用于与 Geth 对话的对人类友好的界面。换句话说，Geth 既是你的节点也是你的钱包，但你不必通过晦涩的命令（例如 `web3.fromWei(eth.getBalance(eth.coinbase))`）来获取账户余额，Mist 会在 UI 中提供相同的信息，甚至不需要你询问。
 
 你可以从 [此链接](https://github.com/ethereum/mist/releases) 下载 Mist。下载名为 Mist-installer 的版本，而不是 Ethereum-Wallet 版本。
 
@@ -493,9 +470,6 @@ Mist 是一个在后台连接到 Geth 的程序，同时也作为钱包的界面
 首次运行后，Mist 会检查同一台机器上是否安装了最新的 Geth，然后检查与以太坊网络的连接。
 
 ![检查与以太坊网络的连接](img/00024.jpeg)
-
-
-
 
 然后，Mist 会寻找对等节点 —— 它可以连接以从中下载区块链数据的节点。
 
@@ -519,9 +493,11 @@ Mist 是一个在后台连接到 Geth 的程序，同时也作为钱包的界面
 
 ![Ropsten](img/00028.jpeg)
 
+
+
 关于测试网的解释，请阅读[这篇文章](https://bitfalls.com/2018/02/08/what-is-an-ethereum-testnet-and-how-is-it-used/)。大意是存在各种用于测试以太坊软件的公共测试网络，但这些网络上的以太币毫无价值，因此鲁莽操作和随意开发也不会有危险。Ropsten 就是其中之一。
 
-请随意使用 *Add Account*（添加账户）功能来添加更多地址。一个 Geth/Mist 可支持无限数量的地址。下图显示了三个生成的地址。
+请随意使用 `Add Account`（添加账户）功能来添加更多地址。一个 Geth/Mist 可支持无限数量的地址。下图显示了三个生成的地址。
 
 ![三个生成的地址](img/00029.jpeg)
 
@@ -529,7 +505,7 @@ Mist 是一个在后台连接到 Geth 的程序，同时也作为钱包的界面
 
 ![账户详情](img/00030.jpeg)
 
-余额上方图标旁边的部分 —— 以 0x90 开头的那个 —— 是我们可以向其发送以太币的地址。但我们如何获取一些呢？如果你连接的是 Ropsten 网络，可以使用他们的水龙头网站：[faucet.ropsten.be:3001/](http://faucet.ropsten.be:3001/)
+余额上方图标旁边的部分 —— 以 `0x90` 开头的那个 —— 是我们可以向其发送以太币的地址。但我们如何获取一些呢？如果你连接的是 Ropsten 网络，可以使用他们的水龙头网站：[faucet.ropsten.be:3001/](http://faucet.ropsten.be:3001/)
 
 将该地址输入该网站第一个字段并请求一些以太币。
 
@@ -539,7 +515,7 @@ Mist 是一个在后台连接到 Geth 的程序，同时也作为钱包的界面
 
 ### 发送和接收以太币
 
-发送极其简单。在 Mist 中打开 *Send*（发送）界面，将接收地址填入“To”（收款人），并在“From”（付款人）下选择发送方（使用你从水龙头接收以太币的那个地址）。
+发送极其简单。在 Mist 中打开 `Send`（发送）界面，将接收地址填入“To”（收款人），并在“From”（付款人）下选择发送方（使用你从水龙头接收以太币的那个地址）。
 
 ![发送资金](img/00032.jpeg)
 
@@ -559,17 +535,17 @@ Mist 通过 Mist 套件的两个组件，实现了智能合约到以太坊区块
 
 Remix 是一个用于部署智能合约的基于 Web 的开发环境。Remix 具有语法高亮、代码片段、合约编译和部署脚本生成等许多其他有趣功能。
 
-你可以通过点击工具栏上的 *Develop*（开发），然后点击“Open Remix IDE”（打开 Remix IDE）来访问 Remix。你应该会看到一个类似这样的窗口：
+你可以通过点击工具栏上的 `Develop`（开发），然后点击“Open Remix IDE”（打开 Remix IDE）来访问 Remix。你应该会看到一个类似这样的窗口：
 
 ![Remix](img/00035.jpeg)
 
 #### 2. 合约部署
 
-在 Remix 中，你可以编写、编译和测试智能合约。完成后，返回 Mist，从 *Wallet*（钱包）页面打开 *Contracts*（合约）选项卡。你应该会看到如下界面：
+在 Remix 中，你可以编写、编译和测试智能合约。完成后，返回 Mist，从 `Wallet`（钱包）页面打开 `Contracts`（合约）选项卡。你应该会看到如下界面：
 
 ![Mist 钱包页面](img/00036.jpeg)
 
-当你点击 *Deploy new contract*（部署新合约）时，一组输入框将打开。在那里你可以粘贴合约源代码或字节码，并将其部署到以太坊网络。完成后，你可以与你的合约进行交互。
+当你点击 `Deploy new contract`（部署新合约）时，一组输入框将打开。在那里你可以粘贴合约源代码或字节码，并将其部署到以太坊网络。完成后，你可以与你的合约进行交互。
 
 ### 结论
 
@@ -625,17 +601,20 @@ truffle unbox metacoin
 
 你应该会看到如下输出：
 
-
-
 正在下载...
+
 正在解包...
+
 正在设置...
+
 解包成功。太棒了！
 
 命令：
 
 *   编译合约：`truffle compile`
+
 *   迁移合约：`truffle migrate`
+
 *   测试合约：`truffle test`
 
 如果你遇到一些错误，可能是因为你使用的 Truffle 版本不同。本教程编写时使用的版本是 `Truffle v4.1.5`，但这些说明至少在未来几个版本中仍应保持相关性。
@@ -681,6 +660,7 @@ truffle unbox metacoin
 让我们举个例子：
 
 *   你有智能合约 `One`、`Two` 和 `Three`
+
 *   智能合约 `Three` 包含对智能合约 `One` 的引用，*并且* 在其构造函数中需要合约 `Two` 的地址。
 
 这个例子要求合约不仅要按顺序部署，还要相互引用。简而言之，迁移使我们能够自动化这个过程。
@@ -704,8 +684,11 @@ module.exports = function(deployer) {
 除此之外，迁移还允许你做很多其他很酷的事情，比如：
 
 *   设置部署的最大 Gas 限制
+
 *   更改部署的 `from` 地址
+
 *   部署库
+
 *   调用任意合约函数
 
 #### 初始迁移
@@ -753,6 +736,7 @@ var MetaCoin = artifacts.require("./MetaCoin.sol");
 **包管理**
 
 *   Truffle 可以配合 EthPM（以太坊包管理器）工作，但目前仍不太稳定。
+
 *   你可以为 Truffle 项目设置 EthPM 依赖。
 
 **项目描述** 项目作者、项目名称、联系地址等。
@@ -813,9 +797,6 @@ Truffle 是一个非常实用的工具，它让这个全新生态系统中的开
 
 ### 辅助工具
 
-
-
-
 ### OpenZeppelin 库
 
 OpenZeppelin 库是以太坊开发者工具箱中最酷的工具之一。它是一个框架，包含许多以安全方式编写的 Solidity 代码模式和智能合约模块。作者本身就是 Solidity 审计师和顾问，你可以[在此阅读关于这些模块的第三方审计报告](https://blog.zeppelin.solutions/external-audit-of-openzeppelin-2ea50404ba7b)。OpenZeppelin 背后的阿根廷公司 Zeppelin Solutions 的 Manuel Araoz [概述](https://blog.zeppelin.solutions/onward-with-ethereum-smart-contract-security-97a827e47702)了主要的 Solidity 安全模式和注意事项。
@@ -832,13 +813,17 @@ OpenZeppelin 库包含一组用于在以太坊平台上发布代币的合约—�
 
 还有一组用于 [ERC721](https://openzeppelin.org/api/docs/token_ERC721_ERC721Token.html) 代币的合约——即非同质化、独特的 CryptoKitties 类型代币。
 
+
+
+# ERC827 代币与众筹合约
+
 [ERC827 代币](https://github.com/ethereum/EIPs/issues/827)合约，即随交易代币发送数据的标准，[也已包含在内](https://openzeppelin.org/api/docs/token_ERC827_ERC827.html)。
 
-还有一组*[众筹合约](https://openzeppelin.org/api/docs/crowdsale_Crowdsale.html)*——用于进行首次代币发行（ICO）的合约。这些合约可以[记录购买](https://openzeppelin.org/api/docs/crowdsale_Crowdsale.html#TokenPurchase)，向购买者[交付/发放代币](https://openzeppelin.org/api/docs/crowdsale_Crowdsale.html#_deliverTokens)，[转发 ETH 资金](https://openzeppelin.org/api/docs/crowdsale_Crowdsale.html#_forwardFunds)。其中包含用于验证和处理代币购买的函数。
+还有一组[众筹合约](https://openzeppelin.org/api/docs/crowdsale_Crowdsale.html)——用于进行首次代币发行（ICO）的合约。这些合约可以[记录购买](https://openzeppelin.org/api/docs/crowdsale_Crowdsale.html#TokenPurchase)，向购买者[交付/发放代币](https://openzeppelin.org/api/docs/crowdsale_Crowdsale.html#_deliverTokens)，[转发 ETH 资金](https://openzeppelin.org/api/docs/crowdsale_Crowdsale.html#_forwardFunds)。其中包含用于验证和处理代币购买的函数。
 
-[FinalizableCrowdsale](https://openzeppelin.org/api/docs/crowdsale_distribution_FinalizableCrowdsale.html) 合约提供了众筹结束后执行某些逻辑的功能。[PostDeliveryCrowdsale](https://openzeppelin.org/api/docs/crowdsale_distribution_PostDeliveryCrowdsale.html) 允许冻结提款直到众筹结束。[RefundableCrowdsale](https://openzeppelin.org/api/docs/crowdsale_distribution_RefundableCrowdsale.html) 是*Crowdsale 合约的扩展，增加了融资目标，以及在目标未达成时用户可退款的可能性*。
+[FinalizableCrowdsale](https://openzeppelin.org/api/docs/crowdsale_distribution_FinalizableCrowdsale.html) 合约提供了众筹结束后执行某些逻辑的功能。[PostDeliveryCrowdsale](https://openzeppelin.org/api/docs/crowdsale_distribution_PostDeliveryCrowdsale.html) 允许冻结提款直到众筹结束。[RefundableCrowdsale](https://openzeppelin.org/api/docs/crowdsale_distribution_RefundableCrowdsale.html) 是 Crowdsale 合约的扩展，增加了融资目标，以及在目标未达成时用户可退款的可能性。
 
-[可销毁合约](https://openzeppelin.org/api/docs/lifecycle_Destructible.html)可由所有者销毁，并将所有资金发送给所有者。还有用于向子合约[实现*可暂停性*](https://openzeppelin.org/api/docs/lifecycle_Pausable.html)的合约。
+[可销毁合约](https://openzeppelin.org/api/docs/lifecycle_Destructible.html)可由所有者销毁，并将所有资金发送给所有者。还有用于向子合约[实现可暂停性](https://openzeppelin.org/api/docs/lifecycle_Pausable.html)的合约。
 
 OpenZeppelin 为进行 ICO 提供了许多辅助工具和实用程序——例如[用于恢复误发送到 ICO 地址而非 ETH 地址的 ERC20 代币的合约](https://openzeppelin.org/api/docs/ownership_CanReclaimToken.html)。[可继承合约](https://openzeppelin.org/api/docs/ownership_Heritable.html)提供在特定情况下将所有权转移给另一所有者的功能。[Ownable 合约](https://openzeppelin.org/api/docs/ownership_Ownable.html)拥有一个所有者地址，并提供基本的授权/权限控制和所有权转移功能。
 
@@ -846,19 +831,19 @@ OpenZeppelin 为进行 ICO 提供了许多辅助工具和实用程序——例�
 
 Zeppelin 还提供了一个示例众筹启动 Truffle 项目，该项目尚未经过审计，因此最适合作为 OpenZeppelin 使用入门。它使快速启动众筹和代币变得容易。
 
-### ZeppelinOS
+## ZeppelinOS
 
 ![ZeppelinOS 图表](img/00037.jpeg)
 
-[ZeppelinOS](https://zeppelinos.org/) 是*一个建立在 EVM 之上的开源、去中心化的工具与服务平台，用于安全地开发和管理智能合约应用*。
+[ZeppelinOS](https://zeppelinos.org/) 是一个建立在 EVM 之上的开源、去中心化的工具与服务平台，用于安全地开发和管理智能合约应用。
 
-实际上，这是一种建立在 EVM 之上的中间件层，比目前的 OpenZeppelin 框架更进一步。Zeppelin Solutions 此处承诺*通过[可升级模式](https://blog.zeppelinos.org/proxy-patterns/)，使开发者能够选择让其已部署的代码具备可变性*。为 EVM 编写智能合约的人都知道，其中一个顾虑/限制是已部署合约的不可变性：一旦上链，合约无法更改。这正是 ZeppelinOS 承诺中有趣的地方之一。
+实际上，这是一种建立在 EVM 之上的中间件层，比目前的 OpenZeppelin 框架更进一步。Zeppelin Solutions 此处承诺通过[可升级模式](https://blog.zeppelinos.org/proxy-patterns/)，使开发者能够选择让其已部署的代码具备可变性。为 EVM 编写智能合约的人都知道，其中一个顾虑/限制是已部署合约的不可变性：一旦上链，合约无法更改。这正是 ZeppelinOS 承诺中有趣的地方之一。
 
 直到现在，为了“更新”合约，必须部署两个合约——一个作为带有接口的代理，另一个作为实现。代理的函数会被调用，并将请求转发给实现。如果需要更改，则在代理中替换实现（重定向到另一个实现，并可选择用 `suicide` 函数销毁原始实现），新实现便无缝激活。
 
 我们正在等待观察社区对 ZeppelinOS 的未来采用情况。Zeppelin Solutions 已点名一些举足轻重的参与者，如 OpenBazaar、district0x、storj.io 等正在使用 ZeppelinOS。
 
-### Truffle Boxes
+## Truffle Boxes
 
 [Truffle 框架](http://truffleframework.com)是以太坊的开发环境、测试框架和资源管道。它是工具集最完整、在以太坊开发者中关注度最高的框架。Truffle 的生态系统包含许多 [Truffle Boxes](http://truffleframework.com/boxes/)——即样板项目，包含前端 JavaScript 代码、Solidity 合约和工作流实用程序，如带有工具集的样板 webpack 项目——迁移、测试、构建管道等。Truffle Boxes 可包含完整的入门级 dapp。
 
@@ -872,13 +857,9 @@ Zeppelin 还提供了一个示例众筹启动 Truffle 项目，该项目尚未�
 
 社区创建的 boxes 还带来了用于[合约与移动应用 / Status IM 集成](http://truffleframework.com/boxes/status)的样板，或提供 Angular 和 Vue.js 样板等。
 
-这些 boxes 与 Truffle 集成，因此我们可以通过运行类似 `truffle unbox react` 的命令开始使用它们——这将下载 *React* box 并在本地安装其依赖项。
+这些 boxes 与 Truffle 集成，因此我们可以通过运行类似 `truffle unbox react` 的命令开始使用它们——这将下载 `React` box 并在本地安装其依赖项。
 
-
-
-
-
-### TokenMarket
+## TokenMarket
 
 [TokenMarket](https://tokenmarket.net/about) 是另一家发布了 Solidity 合约和管理代币销售 / ICO 工具存储库的公司。它是一家在直布罗陀注册的有限公司，从事 ICO 咨询。它在 [Cryptocurrency World Expo Berlin Summit 2018](https://cryptocurrencyworldexpo.com/) 上获得了“最佳 ICO 顾问”奖。
 
@@ -886,7 +867,7 @@ Zeppelin 还提供了一个示例众筹启动 Truffle 项目，该项目尚未�
 
 TokenMarket 定期（尝试）跟进其上游代码库 OpenZeppelin 的更新。但它也增加了更多内容，例如：
 
-*   [`AMLToken` 合约](https://github.com/TokenMarketNet/ico/blob/master/contracts/AMLToken.sol)：该合约*在参与者经历漫长的 AML 流程失败后，代币发布前，给予所有者从参与者处追回代币的机会*。
+*   [`AMLToken` 合约](https://github.com/TokenMarketNet/ico/blob/master/contracts/AMLToken.sol)：该合约在参与者经历漫长的 AML 流程失败后，代币发布前，给予所有者从参与者处追回代币的机会。
 *   [`GnosisWallet`](https://github.com/TokenMarketNet/ico/blob/master/contracts/GnosisWallet.sol)：基本上是一个多签钱包，需要多方共识才能进行某些交易。
 *   一个 [`CentrallyIssuedToken`](https://github.com/TokenMarketNet/ico/blob/master/contracts/CentrallyIssuedToken.sol) 合约。
 *   [`KYCCrowdsale`](https://github.com/TokenMarketNet/ico/blob/master/contracts/KYCCrowdsale.sol)：一个只允许非匿名投资者参与的合约。
@@ -895,41 +876,41 @@ TokenMarket 定期（尝试）跟进其上游代码库 OpenZeppelin 的更新。
 
 尽管我们在这里讨论的存储库中有大量代码，但 EVM 图灵完备，因此所有这些不同的合约甚至远未穷尽其全部能力。只要系统 —— Ethereum —— 能够生存并保持竞争力，网络上有足够多的人，我们就可以期待这些区块链合约尝试解决的问题将具有更大的多样性。
 
-### ConsenSys
+## ConsenSys
 
-ConsenSys Ventures 是一家瑞士风投/投资公司，将自己定位为去中心化领域的 *天使/种子投资公司* —— 特别是指 Ethereum 领域。除了为其孵化公司提供其他资源外，他们还整理了一份 [Ethereum 智能合约最佳实践的精选汇编](https://consensys.github.io/smart-contract-best-practices/)。虽然狭义上讲这不是代码，但它仍包含大量好的和坏的 Solidity 代码示例。
+ConsenSys Ventures 是一家瑞士风投/投资公司，将自己定位为去中心化领域的天使/种子投资公司——特别是指 Ethereum 领域。除了为其孵化公司提供其他资源外，他们还整理了一份 [Ethereum 智能合约最佳实践的精选汇编](https://consensys.github.io/smart-contract-best-practices/)。虽然狭义上讲这不是代码，但它仍包含大量好的和坏的 Solidity 代码示例。
 
-它主要关注 Solidity 智能合约的 *安全最佳实践*。
+它主要关注 Solidity 智能合约的安全最佳实践。
 
-完整的主题列表超出了本文的范围，因为该资源 *全面* 且值得一读，即使只是为了提醒智能合约开发者在为 EVM 编写软件时需要牢记的所有事项。如果从头编写程序（不依赖像 OpenZeppelin 这样已经制作并经过审核的代码），这一点 *尤其* 重要。
+完整的主题列表超出了本文的范围，因为该资源全面且值得一读，即使只是为了提醒智能合约开发者在为 EVM 编写软件时需要牢记的所有事项。如果从头编写程序（不依赖像 OpenZeppelin 这样已经制作并经过审核的代码），这一点尤其重要。
 
-一些文章涉及外部调用、避免在外部调用后更改状态、处理外部调用中的错误、倾向于对外部调用使用拉取而非推送模式、注意抽象合约和接口之间的权衡、不要假设合约创建时余额为零、区分函数和事件、多重继承的注意事项、关于时间戳依赖及此类结构可被博弈的警告 —— 例如与区块相关的 —— 以及许多其他带有大量代码示例的提示。
+一些文章涉及外部调用、避免在外部调用后更改状态、处理外部调用中的错误、倾向于对外部调用使用拉取而非推送模式、注意抽象合约和接口之间的权衡、不要假设合约创建时余额为零、区分函数和事件、多重继承的注意事项、关于时间戳依赖及此类结构可被博弈的警告——例如与区块相关的——以及许多其他带有大量代码示例的提示。
 
-然后还有特定于代币的警告、与代币标准相关的警告、软件工程技术、安全工具 —— 用于静态分析、测试、代码检查等。
+然后还有特定于代币的警告、与代币标准相关的警告、软件工程技术、安全工具——用于静态分析、测试、代码检查等。
 
 他们还列出了已知攻击，包括调用外部代码和合约的攻击、此类情况下可能被重复调用的函数、重入问题、跨函数竞态条件。在这里，他们分析了一系列问题，其中一些表现为 [The DAO 攻击](https://en.wikipedia.org/wiki/The_DAO_\(organization\))。
 
 他们进一步提到了交易顺序依赖、时间戳依赖、整数溢出和下溢、不同的 DoS 攻击可能性/切入点，如区块 Gas 限制导致的 DoS、强制向合约发送 Ether；他们还分析了历史上的和已弃用的攻击。强烈建议阅读他们的文档。
 
-### 结论
+## 结论
 
 在本生态系统介绍中，我们浏览了一些可用于在 Ethereum 虚拟机上编写优秀、生产就绪智能合约的资源。这包括复用已经过审计、验证的代码（OpenZeppelin 声称有超过 40 亿美元价值的加密货币运行在其合约上），以及学习编写自己安全、生产就绪软件的实用资源。
 
-## 第 6 章：Truffle：测试智能合约
+# 第 6 章：Truffle：测试智能合约
 
 ### 作者：Mislav Javor
 
-在我们的 Truffle 简介 中，我们讨论了什么是 Truffle 以及它如何帮助你自动化编译、测试和部署智能合约的工作。
+在我们的 Truffle 简介中，我们讨论了什么是 Truffle 以及它如何帮助你自动化编译、测试和部署智能合约的工作。
 
-在本文中，我们将探讨如何测试智能合约。测试是高质量智能合约开发 *最* 重要的方面。
+在本文中，我们将探讨如何测试智能合约。测试是高质量智能合约开发最重要的方面。
 
-为什么要进行广泛测试？这样你可以避免类似 [这种](http://www.businessinsider.com/ethereum-price-parity-hack-bug-fork-2017-11) 或 [这种](https://coincodex.com/article/50/the-dao-hack-what-happened-and-what-followed/) 事件。智能合约处理价值，有时是巨额价值 —— 这使它们成为有时间和技能攻击它们的人极具吸引力的猎物。
+为什么要进行广泛测试？这样你可以避免类似[这种](http://www.businessinsider.com/ethereum-price-parity-hack-bug-fork-2017-11)或[这种](https://coincodex.com/article/50/the-dao-hack-what-happened-and-what-followed/)事件。智能合约处理价值，有时是巨额价值——这使它们成为有时间和技能攻击它们的人极具吸引力的猎物。
 
-你肯定不希望你的项目最终进入 [区块链墓地](https://magoo.github.io/Blockchain-Graveyard/)，对吧？
+你肯定不希望你的项目最终进入[区块链墓地](https://magoo.github.io/Blockchain-Graveyard/)，对吧？
 
-### 入门
+## 入门
 
-我们将构建 *HashMarket*，一个基于智能合约的简单二手商品市场。
+我们将构建 HashMarket，一个基于智能合约的简单二手商品市场。
 
 打开终端，定位到你想要构建项目的文件夹。在该文件夹中，运行以下命令：
 
@@ -967,9 +948,9 @@ Commands:
 └── truffle.js
 ```
 
-有关文件的回顾，请参阅 [上一篇文章](https://www.sitepoint.com/truffle-introduction/)。简而言之，我们有基本的 `truffle.js` 和两个用于进行初始区块链迁移的文件。
+有关文件的回顾，请参阅[上一篇文章](https://www.sitepoint.com/truffle-introduction/)。简而言之，我们有基本的 `truffle.js` 和两个用于进行初始区块链迁移的文件。
 
-#### 准备测试环境
+### 准备测试环境
 
 最简单的测试方式是在本地网络上进行。我强烈建议使用 `ganache-cli`（以前称为 `TestRPC`）工具进行合约测试。
 
@@ -987,9 +968,7 @@ ganache-cli
 
 你应该会看到类似如下的输出：
 
-
-
-
+```
 Ganache CLI v6.1.0 (ganache-core: 2.1.0)
 
 可用账户
@@ -1012,18 +991,27 @@ Ganache CLI v6.1.0 (ganache-core: 2.1.0)
 (2) 047fef2c5c95d5cf29c4883b924c24419b12df01f3c6a0097f1180fa020e6bd2
 (3) 6ca68e37ada9b1b88811015bcc884a992be8f6bc481f0f9c6c583ef0d4d8f1c9
 (4) 84bb2d44d64478d1a8b9d339ad1e1b29b8dde757e01f8ee21b1dcbce50e2b746
+```
+
+
+
 (5) 517e8be95253157707f34d08c066766c5602e519e93bace177b6377c68cba34e
+
 (6) d2f393f1fc833743eb93f108fcb6feecc384f16691250974f8d9186c68a994ef
+
 (7) 8b8be7bec3aca543fb45edc42e7b5915aaddb4138310b0d19c56d836630e5321
+
 (8) e73a1d7d659b185e56e5346b432f58c30d21ab68fe550e7544bfb88765235ae3
+
 (9) 8bb5fb642c58b7301744ef908fae85e2d048eea0c7e0e5378594fc7d0030f100
 
-HD 钱包
-==================
-助记词：      ecology sweet animal swear exclude quote leopard erupt guard core nice series
-基础 HD 路径：  m/44'/60'/0'/0/{account_index}
+# HD 钱包
 
-正在监听 localhost:8545
+助记词：`ecology sweet animal swear exclude quote leopard erupt guard core nice series`
+
+基础 HD 路径：`m/44'/60'/0'/0/{account_index}`
+
+正在监听 `localhost:8545`
 
 这是 `ganache-cli` 为你创建的所有账户的列表。你可以使用任意账户，但这些账户将预加载以太币，这使它们非常有用（因为测试需要以太币来支付 [gas 成本](https://www.sitepoint.com/ethereum-transaction-costs)）。
 
@@ -1041,11 +1029,11 @@ module.exports = {
 };
 ```
 
-#### 编写智能合约
+## 编写智能合约
 
-我们要做的第一件事是编写 HashMarket 智能合约。我们将尽量保持其简洁，同时仍保留所需的功能。
+我们要做的第一件事是编写 `HashMarket` 智能合约。我们将尽量保持其简洁，同时仍保留所需的功能。
 
-HashMarket 是区块链上的一种 eBay。它允许卖家发布商品，买家用以太币购买。它还允许卖家在商品未售出时将其移除。
+`HashMarket` 是区块链上的一种 eBay。它允许卖家发布商品，买家用以太币购买。它还允许卖家在商品未售出时将其移除。
 
 在你的项目中，在 `contracts` 文件夹下，创建一个新文件并命名为 `HashMarket.sol`。在该文件中，添加以下代码：
 
@@ -1143,9 +1131,9 @@ contract HashMarket {
 }
 ```
 
-完成此操作后，尝试运行 `truffle compile` 以查看代码是否能编译通过。由于 Solidity 惯例经常变更，如果你的代码无法编译，可能的解决方案是使用旧版本的编译器（0.4.21 是编写此代码时的版本，将工作正常）。
+完成此操作后，尝试运行 `truffle compile` 以查看代码是否能编译通过。由于 Solidity 惯例经常变更，如果你的代码无法编译，可能的解决方案是使用旧版本的编译器（`0.4.21` 是编写此代码时的版本，将工作正常）。
 
-#### 编写迁移脚本
+## 编写迁移脚本
 
 你需要编写一个迁移脚本，让 Truffle 知道如何将你的合约部署到区块链。进入 `migrations` 文件夹并创建一个名为 `2_deploy_contracts.js` 的新文件。在该文件中，添加以下代码：
 
@@ -1180,16 +1168,16 @@ Saving successful migration to network...
 Saving artifacts...
 ```
 
-### 测试智能合约
+## 测试智能合约
 
 你可以使用 Solidity 或 JavaScript 进行智能合约测试。测试智能合约时 Solidity 可能稍微更直观一些，但 JavaScript 给你提供了更多可能性。
 
-#### Solidity 测试
+### Solidity 测试
 
 为了开始测试，在你项目的 `test` 文件夹中，创建一个名为 `TestHashMarket.sol` 的文件。Truffle 套件为我们提供了用于测试的辅助函数，所以我们需要导入它们。在文件开头，添加：
 
 ```solidity
-pragma solidity ⁰.4.20;
+pragma solidity ^0.4.20;
 
 import "truffle/Assert.sol";
 import "truffle/DeployedAddresses.sol";
@@ -1198,13 +1186,11 @@ import "../contracts/HashMarket.sol";
 
 前两个导入是最重要的。
 
-`Assert` 导入让我们能访问各种测试函数，如 `Assert.equals()`、`Assert.greaterThan()` 等。通过这种方式，Assert 配合 Truffle 自动完成大部分“枯燥”的代码编写工作。
+`Assert` 导入让我们能访问各种测试函数，如 `Assert.equals()`、`Assert.greaterThan()` 等。通过这种方式，`Assert` 配合 Truffle 自动完成大部分“枯燥”的代码编写工作。
 
 `DeployedAddresses` 导入为我们管理合约地址。因为每次你更改合约，都必须将其重新部署到新地址，*并且*即使你不更改它，每次测试时合约也应该重新部署以从原始状态开始。`DeployedAddresses` 库为我们处理了这个问题。
 
 现在让我们编写一个测试。在 `import` 指令下方，添加以下内容：
-
-
 
 #### 使用 Truffle 进行 Solidity 测试
 
@@ -1287,6 +1273,8 @@ TestHashMarket
 让我们深入合约内部检查可能的错误。
 
 经过仔细检查，我们会发现合约的问题出在 `addNewItem` 方法的 `return` 语句上：
+
+
 
 ```solidity
 function addNewItem(bytes32 name, uint price) public returns (uint) {
@@ -1432,10 +1420,6 @@ Contract: HashMarket
 
 一般来说，迁移是开发者实现数据及其支持结构自动化部署的方式。它们对于管理新软件版本的部署非常有用，因此并非区块链开发所独有。
 
-
-
-
-
 ### Truffle 迁移
 
 Truffle 迁移使我们能够将智能合约“推送”到以太坊区块链（无论是[本地、测试网还是主网](https://bitfalls.com/2018/02/08/what-is-an-ethereum-testnet-and-how-is-it-used/)），并设置将合约与其他合约链接以及用初始数据填充合约所需的步骤。
@@ -1478,8 +1462,8 @@ Commands:
 
 首先，在 `contracts` 目录中，创建一个名为 `Storage.sol` 的新文件，内容如下：
 
-```
-pragma solidity ⁰.4.21;
+```solidity
+pragma solidity ^0.4.21;
 
 
 contract Storage {
@@ -1584,7 +1568,7 @@ Writing artifacts to ./build/contracts
 
 掌握了这些知识，让我们编写第一个迁移脚本。在 `2_deploy_contracts.js` 文件中，编写以下内容：
 
-```
+```javascript
 // 从 Storage.json 文件获取 Storage 合约数据
 var Storage = artifacts.require("./Storage.sol");
 
@@ -1612,6 +1596,12 @@ Error: No network specified. Cannot determine current network.
 这意味着 Truffle 找不到您要部署的网络。
 
 为了使用模拟的以太坊区块链，在终端中打开一个新标签页并运行 `ganache-cli`。您应该会得到类似如下的输出：
+
+
+
+# Ganache CLI 输出与 Truffle 配置
+
+## Ganache CLI 启动信息
 
 ```
 Ganache CLI v6.1.0 (ganache-core: 2.1.0)
@@ -1666,10 +1656,6 @@ module.exports = {
 };
 ```
 
-
-
-
-
 这仅仅意味着你要将合约部署到运行在 `localhost:8545` 上的网络。
 
 现在运行 `truffle migrate`。你应该会得到类似如下的输出：
@@ -1714,7 +1700,7 @@ Truffle 将你的合约迁移到了网络并保存了构件。在 build 目录�
 
 我们稍后在教程中将看到这有何用处。
 
-##### 多合约
+## 多合约
 
 Truffle 迁移真正大放异彩的地方在于当有多个合约需要编译、部署和跟踪时（几乎所有区块链项目都是这样）。
 
@@ -1723,7 +1709,7 @@ Truffle 迁移真正大放异彩的地方在于当有多个合约需要编译、
 现在在你的 `contracts` 目录下，创建一个名为 `InfoManager.sol` 的文件。在文件中编写如下合约：
 
 ```
-pragma solidity ⁰.4.21;
+pragma solidity ^0.4.21;
 
 import "./Storage.sol";
 
@@ -1788,7 +1774,7 @@ deployer.deploy(Storage)
 
 这很有用，因为有时合约之间的相互依赖关系可能要求在合约构造函数的作用域之外检索或插入某些数据。
 
-##### 网络
+## 网络
 
 你可以根据所处的网络有条件地运行特定的迁移。这在开发阶段填充模拟数据或将已部署的主网合约输入到你的合约中时非常有用。
 
@@ -1804,7 +1790,7 @@ module.exports = function(deployer, network) {
 }
 ```
 
-##### 账户
+## 账户
 
 `module.exports` 默认函数还暴露了你通过以太坊节点或钱包提供者访问的账户。这是一个示例：
 
@@ -1819,7 +1805,7 @@ module.exports = function(deployer, network, accounts) {
 }
 ```
 
-##### 库
+## 库
 
 你还可以通过使用 `deployer.link(...)` 函数来链接现有的库（已部署的）：
 
@@ -1831,11 +1817,11 @@ deployer.deploy(MyContract);
 ...
 ```
 
-### 结论
+# 结论
 
 通过使用上述技术，你可以自动化大部分区块链部署工作，并减少去中心化应用开发中涉及的大量样板工作。
 
-## 第 8 章：扁平化合约与使用 Remix 进行调试
+# 第 8 章：扁平化合约与使用 Remix 进行调试
 
 ### 作者：Ahmed Bouchefra
 
@@ -1847,30 +1833,27 @@ deployer.deploy(MyContract);
 
 在整个教程中，我们将使用 [Truffle 和 OpenZeppelin](https://www.sitepoint.com/solidity-openzeppelin) 来构建一个简单的自定义代币。我们将了解为什么以及如何扁平化合约，最后我们将使用 Remix IDE 开始调试合约。
 
-### 为什么要扁平化智能合约？
+## 为什么要扁平化智能合约？
 
 **扁平化**智能合约是指将所有 Solidity 代码合并到一个文件中，而不是分散在多个源文件中，这样就不需要导入，导入的代码会嵌入在同一个文件中。我们需要扁平化智能合约的原因有很多，例如手动审查合约、在 [Etherscan](https://etherscan.io) 上验证合约，或使用 Remix IDE 调试合约，因为它目前不支持导入。
 
-### 使用 Truffle 和 OpenZeppelin 编写简单代币
+## 使用 Truffle 和 OpenZeppelin 编写简单代币
 
 Remix IDE 官方推荐用于构建小型合约或学习 Solidity，但一旦你需要构建更大的合约或需要高级编译选项，你就必须使用 Solidity 编译器或其他工具/框架，如 Truffle。
 
 除了无错误的合约，安全性也是构建智能合约的关键部分。因此，使用像 [OpenZeppelin](https://openzeppelin.org/) 这样经过实战检验的框架——它提供可复用、经过充分测试、社区审核的智能合约——将有助于你减少 Dapp 中的漏洞。
 
-
-
-
-### 使用 Truffle 和 OpenZeppelin 创建自定义 Token
+## 使用 Truffle 和 OpenZeppelin 创建自定义 Token
 
 本文介绍如何使用 Truffle 和 OpenZeppelin 创建一个扩展自 OpenZeppelin 标准 Token 的简单自定义 Token。
 
-#### 环境要求
+### 环境要求
 
 本教程需要具备 Truffle、Ethereum 和 Solidity 的基础知识。您可以阅读 [区块链简介](https://www.sitepoint.com/blockchain-what-it-is-how-it-works-why-its-so-popular/) 和 [Ethereum 简介](https://www.sitepoint.com/ethereum-introduction/)。
 
 您还需要在系统上安装 Node.js `5.0+` 和 npm。请参考其 [下载页面](https://nodejs.org/en/download/) 获取安装说明。
 
-#### 安装 Truffle
+### 安装 Truffle
 
 在终端中运行以下命令安装 Truffle：
 
@@ -1878,7 +1861,7 @@ Remix IDE 官方推荐用于构建小型合约或学习 Solidity，但一旦你�
 npm install -g truffle
 ```
 
-#### 创建新的 Truffle 项目
+### 创建新的 Truffle 项目
 
 首先创建一个新的项目目录，命名为 `simpletoken` 并进入该目录：
 
@@ -1901,12 +1884,12 @@ truffle init
 npm install openzeppelin-solidity
 ```
 
-#### 创建简单的 Token 合约
+### 创建简单的 Token 合约
 
 在 `contracts/` 文件夹内，创建一个名为 `SimpleToken.sol` 的文件并添加以下内容：
 
 ```
-pragma solidity ⁰.4.23;
+pragma solidity ^0.4.23;
 
 import 'openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol';
 
@@ -1928,6 +1911,8 @@ contract SimpleToken is StandardToken {
 
 这是我们将要扁平化和调试的合约。我们导入了 OpenZeppelin 的 `StandardToken.sol` 合约，并使用 `is` 操作符声明了继承自 `StandardToken.sol` 的 `SimpleToken` 合约。
 
+
+
 我们的合约将继承一系列变量和函数，这些需要被重写以实现自定义。
 
 为了完成 Truffle 项目，在项目的 `migrations/` 文件夹内创建一个名为 `2_deploy_contract.js` 的文件并添加以下内容：
@@ -1941,7 +1926,7 @@ module.exports = function(deployer) {
 
 使用该文件，我们可以将智能合约部署/迁移到区块链，但本例中并不需要此步骤，因为我们将在扁平化后使用 Remix IDE 部署智能合约。
 
-#### 使用 Truffle Flattener 扁平化合约
+### 使用 Truffle Flattener 扁平化合约
 
 [Truffle Flattener](https://www.npmjs.com/package/truffle-flattener) 是一个 npm 工具，用于将 Truffle 下开发的 Solidity 文件及其所有依赖按正确顺序扁平化或合并。
 
@@ -1959,7 +1944,7 @@ truffle-flattener contracts/SimpleToken.sol > FlattenedSimpleToken.sol
 
 `truffle-flattener` 将扁平化后的合约输出到标准输出（终端）。使用 `>` 操作符将输出保存到当前文件夹下的 `FlattenedSimpleToken.sol` 文件中。
 
-#### 使用 Remix IDE 编译和部署合约
+### 使用 Remix IDE 编译和部署合约
 
 您可以从 `FlattenedSimpleToken.sol` 文件获取扁平化后的智能合约。打开文件并复制其内容。
 
@@ -1973,7 +1958,7 @@ truffle-flattener contracts/SimpleToken.sol > FlattenedSimpleToken.sol
 
 您的合约已部署并在 JavaScript VM 上运行，该虚拟机模拟了区块链环境。现在我们可以开始以不同方式对其进行调试。
 
-### 调试自定义 Token 合约
+## 调试自定义 Token 合约
 
 为了演示如何调试合约，我们将首先引入一些错误。
 
@@ -1981,7 +1966,7 @@ truffle-flattener contracts/SimpleToken.sol > FlattenedSimpleToken.sol
 
 当您首次部署智能合约或随后执行任何交易时，终端会记录一些信息，您可以点击日志旁边的白色 *Debug* 按钮开始调试。让我们看看实际操作。
 
-#### 使用 assert()
+### 使用 assert()
 
 SafeMath 是 OpenZeppelin 用于带安全检查的数学运算的库，检查失败会抛出错误。`sub(a,b)` 函数用于两数相减并返回无符号数。第一个参数必须大于第二个参数以保证结果为正数。该函数使用 `assert()` 函数强制执行此规则。以下是 `sub` 函数的代码：
 
@@ -2046,33 +2031,31 @@ constructor() public {
 
 查看调试器的其他面板也很有价值。
 
-##### Instructions（指令）
+#### Instructions（指令）
 
 ![Instructions panel](img/00046.jpeg)
 
 *Instructions* 面板显示被调试合约的字节码。当前步骤的字节码会被高亮显示。
 
-##### Solidity State（Solidity 状态）
+#### Solidity State（Solidity 状态）
 
 ![Solidity state](img/00047.jpeg)
 
 *Solidity State* 面板显示当前被调试合约的状态变量。
 
-##### Low Level Panels（底层面板）
+#### Low Level Panels（底层面板）
 
 ![Low level panels](img/00048.jpeg)
 
 这些面板显示执行的底层信息，如步骤详情、内存、堆栈和函数返回值。
 
-### 结论
-
-
+## 结论
 
 在本教程中，我们使用了 Truffle 和 OpenZeppelin 来构建一个简单的代币，然后使用 `truffle-flattener` 扁平化自定义合约，并使用 Remix IDE 开始调试合约以查找错误。
 
 希望这能帮助你无畏地深入到自己合约的逐步调试中。请告诉我们效果如何！
 
-## 第 9 章：使用 Truffle CLI 进行调试
+# 第 9 章：使用 Truffle CLI 进行调试
 
 ### 作者：Mislav Javor
 
@@ -2089,13 +2072,13 @@ constructor() public {
 
 那么，Solidity 智能合约调试和调试器的现状如何呢？
 
-### Solidity 调试器
+## Solidity 调试器
 
 与大多数区块链事物一样，我们仍处于起步阶段。基础调试器已可用（并正在快速发展），但尚无编辑器集成，且调试器高度依赖所选框架。
 
 在本文中，我们将探索随 [Truffle Suite](http://truffleframework.com/) 捆绑的 Solidity 调试器。
 
-### 入门
+## 入门
 
 首先，我们需要安装所有必需的工具。幸运的是，Truffle 框架集成度很高，所以我们只需安装它即可。
 
@@ -2122,7 +2105,7 @@ Truffle v4.1.11 (core: 4.1.11)
 Solidity v0.4.24 (solc-js)
 ```
 
-### 设置项目
+## 设置项目
 
 现在你已经完全设置好 Truffle，让我们创建一个新的（空的）Truffle 项目。打开终端，定位到所需目录并运行 `truffle init`。输出应类似于以下内容：
 
@@ -2205,13 +2188,12 @@ Ensure you do not use it on production blockchains, or else you risk losing fund
 
 这启动了一个由 `ganache-cli`（前身为 `TestRPC`）支持的 Truffle 开发区块链实例。
 
-### 编写和部署合约
+## 编写和部署合约
 
 在 contracts 目录中，创建一个名为 `Storage.sol` 的文件。在该文件中，放入以下代码：
 
 ```
-pragma solidity ⁰.4.23;
-
+pragma solidity ^0.4.23;
 
 contract Storage {
 
@@ -2276,9 +2258,9 @@ Saving successful migration to network...
 Saving artifacts...
 ```
 
+
+
 现在输入 `truffle console`。这将为你打开一个交互式控制台来测试你的合约。在控制台中执行以下操作：
-
-
 
 ~> `Storage.deployed().then((i) => { iStorage = i })` // 将合约实例存储到 `iStorage` 变量中
 
@@ -2333,7 +2315,7 @@ Filter {
         logs: [ [Object] ],
         status: '0x01',
         logsBloom:
-        '0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000000000000000000000000080000000004000000000000000000000000000000000000000000000000000000000000000000010000000000000' },
+        '0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000000000000000000000000080000000004000000000000000000000000000000000000000000000000000000000000000000010000000000000' },
     logs:
     [ { logIndex: 0,
         transactionIndex: 0,
@@ -2371,7 +2353,7 @@ Error: VM Exception while processing transaction: invalid opcode
 
 我们得到了一个错误！多方便啊：看来我们现在可以使用调试器了。简直就像是早有预谋似的！
 
-### 使用调试器
+## 使用调试器
 
 为了调试交易，你需要找到想要调试的交易的交易哈希。复制交易哈希，并在终端中按以下形式输入：
 
@@ -2488,8 +2470,6 @@ undefined
 
 按 `q` 退出调试器，然后我们来修复代码。在你的 `Storage.sol` 中修改这部分：
 
-
-
 ```
 uint numberPosition = _numberStorage.length;
 ```
@@ -2548,6 +2528,8 @@ go get github.com/ethereum/go-ethereum/cmd/puppeth
 
 如果你不知道什么是 Vagrant，以及我们在这里使用了什么工具，我们建议你阅读 [Vagrant 入门](http://www.sitepoint.com/re-introducing-vagrant-right-way-start-php/)，它以对新手友好的方式进行了详细拆解。
 
+
+
 ```
 mkdir my_project; cd my_project
 git clone https://github.com/swader/homestead_improved hi_puppeth1
@@ -2559,21 +2541,21 @@ git clone https://github.com/swader/homestead_improved hi_puppeth2
 接下来，通过修改每个克隆的 `Homestead.yaml` 末尾部分来在虚拟机上打开一些端口，如下所示：
 
 ```
- ports:
-     - send: 8545
-       to: 8545
-     - send: 30301
-       to: 30301
-     - send: 30302
-       to: 30302
-     - send: 30303
-       to: 30303
-     - send: 30304
-       to: 30304
-     - send: 30305
-       to: 30305
-     - send: 30306
-       to: 30306
+ports:
+    - send: 8545
+      to: 8545
+    - send: 30301
+      to: 30301
+    - send: 30302
+      to: 30302
+    - send: 30303
+      to: 30303
+    - send: 30304
+      to: 30304
+    - send: 30305
+      to: 30305
+    - send: 30306
+      to: 30306
 ```
 
 别忘了将这些虚拟主机也添加到宿主机的 `/etc/hosts` 文件中。否则虚拟机将无法通过域名访问！
@@ -2583,15 +2565,15 @@ git clone https://github.com/swader/homestead_improved hi_puppeth2
 192.168.10.11 puppethnode.test
 ```
 
-#### IP 地址
+### IP 地址
 
 如果你的虚拟机 IP 地址不同，请相应更改。
 
-最后，运行 `vagrant up; vagrant ssh` 启动每台机器并通过 SSH 登录。记得要从*两个单独的标签页*运行此命令，以便保持两台机器都处于开启和运行状态。
+最后，运行 `vagrant up; vagrant ssh` 启动每台机器并通过 SSH 登录。记得要从两个单独的标签页运行此命令，以便保持两台机器都处于开启和运行状态。
 
-### 先决条件
+## 先决条件
 
-现在让我们在*每台机器*上安装先决软件。
+现在让我们在每台机器上安装先决软件。
 
 Puppeth 会在 Docker 容器中为你运行辅助应用程序和以太坊节点，所以我们需要 Docker。安装 Geth 本身也很有用。
 
@@ -2642,9 +2624,9 @@ Repeat passphrase:
 Address: {655a6ea9950cdf9f8a8175fda639555f17277bdf}
 ```
 
-我们需要两个账户，因为在权威证明区块链中至少需要两个*签名者*（稍后详述）。
+我们需要两个账户，因为在权威证明区块链中至少需要两个签名者（稍后详述）。
 
-### Puppeth
+## Puppeth
 
 现在我们的虚拟机正在运行，账户也已初始化，让我们看看 Puppeth 提供了什么功能。在远程服务器/虚拟机仍在运行的情况下，在宿主机上打开一个新标签页，通过 `puppeth` 运行 Puppeth。
 
@@ -2662,7 +2644,7 @@ WARN [05-20|10:32:15] No previous configurations found         path=/Users/swade
 
 现在让我们连接到我们的“远程”服务器，以便 Puppeth 将它们列入列表并可以对它们执行操作。
 
-#### 跟踪新的远程服务器
+### 跟踪新的远程服务器
 
 使用此选项可以连接到将运行区块链相关服务的服务器。选择选项 3，然后按如下方式输入值：
 
@@ -2686,9 +2668,6 @@ INFO [05-20|10:39:53] Starting remote server health-check      server=vagrant@19
 ```
 
 Puppeth 会询问你的 SSH 密钥密码，以防通过 SSH 连接到服务器。如果不是，它将询问 SSH 密码（如上例所示）。相关虚拟机上用户 `vagrant` 的默认 SSH 密码是 `vagrant`。
-
-
-
 
 末尾的输出显示了远程服务器的“健康”状态。由于没有运行任何服务，它将仅列出 IP 地址。你可以通过选择选项 1：`Show network stats` 看到相同的结果。
 
@@ -2730,11 +2709,11 @@ INFO [05-20|11:25:55] Configured new genesis block
 
 现在让我们部署一些区块链组件！
 
-### 部署网络组件
+## 部署网络组件
 
 Puppeth 使用 `docker-compose` 工具在独立的 Docker 容器中部署这些组件。Docker 作为一种工具超出了本文的范围，但你无需熟悉它也能使用此功能。让我们从第一个组件 Ethstats 开始。
 
-#### Ethstats
+### Ethstats
 
 安装 Ethstats 会安装并运行 [ethstats.net 网站](https://ethstats.net/) 的本地版本。选择第一个选项。
 
@@ -2790,15 +2769,16 @@ INFO [05-20|11:44:23] Starting remote server health-check      server=vagrant@19
 
 该应用目前毫无用处：我们需要至少部署一个节点，该应用才会开始显示内容！
 
-#### 引导节点
+### 引导节点
 
 让我们部署一个引导节点。
 
-引导节点是一个仅作为以太坊 [节点](https://bitfalls.com/2017/11/26/whats-bitcoin-node-mining-vs-validation/) 连接到其他节点的第一个连接点的节点。它基本上是一个信息中继，帮助节点建立连接。
+引导节点是一个仅作为以太坊节点连接到其他节点的第一个连接点的节点。它基本上是一个信息中继，帮助节点建立连接。
 
 选择选项 2 部署引导节点。同样，在同一台远程服务器上部署并选择一些默认值，然后为节点命名以便在“健康统计”表格中显示：
 
-```
+
+
 Which server do you want to interact with?
  1. vagrant@192.168.10.10
  2. vagrant@192.168.10.11
@@ -2819,7 +2799,6 @@ How many light peers to allow connecting? (default = 256)
 
 What should the node be called on the stats page?
 > booty
-```
 
 Docker 将构建并运行该节点。在远程机器上存储数据的位置是任意的。我们选择了 `vagrant` 用户的主目录。
 
@@ -2827,11 +2806,11 @@ Docker 将构建并运行该节点。在远程机器上存储数据的位置是�
 
 ![Booty is listed](img/00051.jpeg)
 
-##### 如果你的引导节点显示为离线
+### 如果你的引导节点显示为离线
 
 如果并非如此，且你的引导节点在健康检查中显示为离线，请重启远程服务器（对于虚拟机，即 `vagrant reload`），然后再次检查。
 
-#### 出块节点
+## 出块节点
 
 出块节点是可以作为新区块矿工（出块者）的节点。接下来让我们部署它：
 
@@ -2870,9 +2849,6 @@ What gas price should the signer require (GWei)? (default = 18.000)
 >
 ```
 
-
-
-
 除数据存储位置和节点名称外，均为默认值。对于 JSON，请从我们之前创建新以太坊账户时生成的文件中获取内容。该文件位于 `my_project/node1/keystore`。应将该文件的完整内容粘贴至此，随后 Puppeth 会要求输入密码以解锁该钱包。此后一切均为自动化操作。
 
 健康检查屏幕应显示节点运行正常，且应在 Ethstats 屏幕中以您赋予的名称出现。
@@ -2883,11 +2859,11 @@ What gas price should the signer require (GWei)? (default = 18.000)
 
 您的节点现在将一起运行并挖矿。您应该能在上一步部署的 Ethstats 屏幕上看到一些进度。
 
-##### 死锁
+### 死锁
 
 如果状态不变，或者仅挖出一个区块后就无任何反应，则节点已**死锁**。这可能发生在全新安装时。重启虚拟机即可恢复正常。
 
-##### 钱包
+## 钱包
 
 为了能轻松发送以太币和自定义代币，您可以使用 Puppeth 部署您自己的 [MyEtherWallet](https://www.sitepoint.com/ethereum-wallets-myetherwallet/) 版本。
 
@@ -2919,7 +2895,7 @@ What gas price should the signer require (GWei)? (default = 18.000)
 
 您可以通过选择 JSON 文件作为解锁方式，并指向我们之前在 `my_project/nodeX/keystore` 文件夹中生成的 JSON 文件之一来打开钱包。然后输入密码，您将拥有数万亿以太币可供发送。您可以使用这个钱包的本地版本在您的私有区块链上创建账户并彻底测试所有功能。请尝试发送一些以太币！
 
-##### 水龙头
+## 水龙头
 
 `Faucet`（水龙头）是一个用户可以轻松请求测试以太币的网站。公开可访问的水龙头（如 [Rinkeby 水龙头](https://faucet.rinkeby.io/)）具有防垃圾邮件保护机制，但由于我们的是测试区块链，本地水龙头可以不那么安全。
 
@@ -2966,7 +2942,7 @@ WARN [05-20|12:51:13] 用户将能够通过自动化脚本请求资金
 
 ![所有服务均已列出](img/00054.jpeg)
 
-##### 仪表盘
+### 仪表盘
 
 最后，Puppeth 提供了“仪表盘”，一个结合了我们迄今为止启动的所有界面的 Web 界面。部署过程同样简单：只需遵循步骤操作，当询问是否链接到现有组件时，选择我们已经启动的那些。最终结果应如下所示：
 
@@ -2974,7 +2950,7 @@ WARN [05-20|12:51:13] 用户将能够通过自动化脚本请求资金
 
 仪表盘是我们迄今部署的所有工具的集合，外加一些关于如何手动连接到我们构建的区块链的说明。
 
-### 结论
+## 结论
 
 您现在可以轻松开始开发智能合约，并通过您的 MyEtherWallet 本地版本、Remix 的 MetaMask 集成，或任何[其他组合](https://bitfalls.com/2018/03/26/connecting-myetherwallet-mist-metamask-private-blockchain/)将其部署到您的测试区块链。
 
@@ -2983,4 +2959,3 @@ Puppeth 是区块链服务管理工具的一站式商店。当您经常进行区
 运行组件的 Docker 容器配置为开机自启，因此重启任一虚拟机均无需重新配置，但如果您想进一步调整某些组件或安装新组件，则需要将服务器重新添加到 Puppeth 中。
 
 有任何问题？请在 [Twitter](https://twitter.com/bitfalls) 上联系作者！
-

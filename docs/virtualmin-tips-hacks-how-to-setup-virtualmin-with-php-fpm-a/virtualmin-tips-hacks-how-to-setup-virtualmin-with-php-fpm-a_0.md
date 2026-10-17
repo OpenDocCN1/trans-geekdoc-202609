@@ -1,16 +1,9 @@
+
 # Virtualmin 技巧与技巧：如何使用 PHP-FPM 和 Nginx 反向代理设置 Virtualmin
-
-
-
-
-
 
 如何在 Virtualmin 中设置并集成 PHP-FPM 与 Nginx 反向代理
 
 Adrian Ling Kong Heng
-
-
-
 
 ## 致谢
 
@@ -29,6 +22,7 @@ Adrian Ling Kong Heng
 我的同事建议我应该将这些脚本以每个 5 美元的价格单独出售，但我希望为你提供一个完整的解决方案。在 Virtualmin 中安装、配置、集成和自动化 PHP-FPM 以及 Nginx 所需的**所有内容**都在此书中。没有没有任何遗漏。
 
 - `createvhost.sh` – 用于创建 Nginx 反向代理“虚拟主机 (vhosts)”的 shell 脚本——你只需要提供 `userID`、`domain-name` 和 IP 地址，脚本就会为你创建正确的虚拟主机配置设置。
+
 - `createpool.sh` – 此 shell 脚本将为你的每个现有的虚拟服务器（Virtual Servers）创建独立的“php-fpm”用户池。你只需要提供 `userID`，剩下的将由它处理。
 
 如果你在当前的 Virtualmin 配置中有许多现有网站（虚拟服务器），并且你想将它们迁移到 PHP-FPM 和/或 Nginx 反向代理，你会发现这两个脚本非常有用。
@@ -36,9 +30,6 @@ Adrian Ling Kong Heng
 我写这本书的目标（正如我在“实用指南系列”中的所有其他书籍一样）是让你尽可能快地提高生产力！
 
 好了，在我们开始之前最后说明一点——我的律师说应该按照下面的格式进行“正确的框架化表述”（即“免责声明和使用条款协议”）——但如果听我的话，服务条款的“简短精明版”是这样的这样的——
-
-
-
 
 ## 引言
 
@@ -62,10 +53,6 @@ Adrian Ling Kong Heng
 
 ## 为什么选择 Nginx？
 
-
-
-
-
 Nginx 是 Web 服务器领域的一颗新星。全球最繁忙的近 40% 网站运行着高度调优的 Nginx，每天服务数千名访问者。它快速、稳定，且使用的资源没有像 Apache 服务器那样那么多。Virtualmin 内置了运行 Nginx Web 服务器而非 Apache 的支持，但与 Apache 相比，Nginx 的支持和功能相当有限。此外，如果你想运行 Nginx Web 服务器，必须禁用 Apache。
 
 我们希望同时运行两者——将 Apache 作为主 Web 服务器，并将 Nginx 作为“反向代理”来处理所有的静态页面和文件。这在 `Virtualmin` 中是不支持的。书中的信息将使你兼得两者的优点：Apache Web 服务器的力量和灵活性，以及运行在同一 Virtualmin 驱动服务器上的作为“反向代理”的 Nginx 服务器的速度敏捷。
@@ -83,6 +70,7 @@ Nginx 是 Web 服务器领域的一颗新星。全球最繁忙的近 40% 网站�
 预计读者熟悉 `Virtualmin` 界面以及各种菜单和设置。同样预计读者应具备以下技能：
 
 * 能够使用内置的 Unix/Linux 编辑器，如 `vi`、`joe` 或 `nano`。
+
 * 能够从命令行/shell 运行命令。
 
 # 概述
@@ -93,7 +81,7 @@ Nginx 是 Web 服务器领域的一颗新星。全球最繁忙的近 40% 网站�
 
 否则，你的现有网站将“停止工作”，因为它们找不到正确的 Apache 处理程序来处理 php 文件。
 
-**郑警告：** 如果你决定在生产服务器上实施本指南中概述的步骤，你的现有网站完全可能会故障。这是因为每个服务器环境和设置都是不同的。没有完全相同的设置——除非你从零开始同时以完全相同的方式设置了它们。
+**警告：** 如果你决定在生产服务器上实施本指南中概述的步骤，你的现有网站完全可能会故障。这是因为每个服务器环境和设置都是不同的。没有完全相同的设置——除非你从零开始同时以完全相同的方式设置了它们。
 
 墨菲定律往往在人们最没意料的时候降临。正因如此，我强烈建议你在开发服务器上尝试（你可以轻松获取一个每月 5 到 10 美元的廉价 VPS 进行测试）。
 
@@ -106,11 +94,12 @@ Nginx 是 Web 服务器领域的一颗新星。全球最繁忙的近 40% 网站�
 CentOS 6.5（以及 6.6）附带以下默认软件：
 
 * `PHP 5.3.3`（此版本的 `PHP` 已达到寿命结束，PHP 团队不再支持它）
+
 * `MySQL 5.1.73`（一个非常老的 MySQL 服务器版本。当前的稳定版本是 `MySQL 5.5`）
+
 * `Apache 2.2.15`
 
 为了本书，我们将 `PHP` 更新到最新的 `5.4`，并从 `EPEL` 将 `MySQL` 升级到当前的 `5.5`。我们还将使用位于 `REMI` 仓库的 `fastcgi`。
-
 
 EPEL (Enterprise Linux 额外软件包)
 
@@ -133,7 +122,7 @@ REMI 仓库是由法国程序员 Remi Collet 维护的 yum 仓库。它通常包
 
 例如，官方 CentOS 仓库使用 `php-cli`（`PHP` 的命令行版本，基于 `PHP 5.3.3`）。如果你从 `REMI` 仓库安装 `php-cli`，它将自动将 `php-cli` 升级到最新的 `PHP 5.4.34`。
 
-由于由于（包与官方仓库使用相同的命名规则），`REMI` 仓库默认是“禁用”的，以免让你在不知情的情况下“升级”系统软件。如果你想从该仓库安装特定的软件，必须显式地“启用”该仓库。Remi 仓库还依赖 `EPEL` 仓库，这就是为什么我们必须先安装 `EPEL` 仓库。
+由于（包与官方仓库使用相同的命名规则），`REMI` 仓库默认是“禁用”的，以免让你在不知情的情况下“升级”系统软件。如果你想从该仓库安装特定的软件，必须显式地“启用”该仓库。Remi 仓库还依赖 `EPEL` 仓库，这就是为什么我们必须先安装 `EPEL` 仓库。
 
 下载并安装 `REMI` 仓库：
 
@@ -143,9 +132,6 @@ rpm -ivh remi-release-6.rpm
 ```
 
 RPMFORGE: http://repoforge.org/use/
-
-
-
 
 RPMFORGE 是另一个深受许多开源爱好者信赖的流行软件仓库。它现在被称为“RepoForge”，这是一个为 Red Hat Enterprise Linux (RHEL)、CentOS 和 Scientific Linux 维护各种 RPM 软件包的项目。它提供了一组与各种 RHEL 派生发行版兼容的仓库。
 
@@ -214,7 +200,6 @@ RPMFORGE 是另一个深受许多开源爱好者信赖的流行软件仓库。�
 
 （注意：上述 3 行的源代码可以在“fastcgi.conf”文件中找到）
 
-
 好了，现在所有必要的软件都已更新并安装，让我们现在登录 Virtualmin。
 
 **注意**：如果这是您第一次登录 Virtualmin，它将提示您完成一系列“安装后步骤”，在这些步骤中将微调某些服务器设置（例如，根据您选择的内存设置为您优化 MySQL 的 `/etc/my.cnf` 并为 MySQL 分配根密码）。
@@ -232,48 +217,56 @@ RPMFORGE 是另一个深受许多开源爱好者信赖的流行软件仓库。�
 需要注意的两个重要字段是：
 
 * 修改服务器之前运行的命令：`/root/updatehandler.sh` 
+
 * 修改服务器之后运行的命令：`/root/phpfpm.sh`
 
 这是使所有 PHP-FPM 自动化运行的“关键”。基本上，此功能允许您在修改服务器之前（例如在创建虚拟服务器之前）或在服务器创建之后运行自定义脚本。
 
 * `/root/updatehandler.sh` 是一个简单的脚本，用于检查 `/etc/httpd/conf.d/fastcgi.conf` 是否存在；如果存在，则将其重命名为 `/etc/httpd/conf.d/fastcgi.conf.orig`。这防止了 'mod_php' 模块的加载。
+
 * `/root/phpfpm.sh` 是创建 FPM 池的主脚本。它也适用于删除服务器。
 
-
 [此处存在大量文本重复内容...]
-
 
 在第 2 章中，我们已经设置了 Virtualmin 运行 2 个自定义脚本——在创建虚拟服务器之前运行 `updatehandler.sh`，在虚拟服务器创建之后运行 `phpfpm.sh`。在本章中，我们将仔细查看这 2 个 shell 脚本，以及其他一些“辅助”脚本。
 
 您可以在此处下载这些脚本：[`ilovevirtualmin.com/books-scripts/php-fpm`](http://ilovevirtualmin.com/books-scripts/php-fpm)
 
-
-
-
 下载 `vserver.tgz` 文件并将其解压到 `/root` 目录。你会看到以下文件和目录：
 
 *   `updatehandler.sh`
+
 *   `phpfpm.sh`
+
 *   `createpool.sh`
+
 *   `www.bare`
+
 *   `fastcgi.conf`
+
 *   `nginx/` ← 这是一个。
+
     *   `nginx.conf`
+
     *   `proxy.inc`
+
     *   `microcache.inc`
+
     *   `virtualserver.com`
+
     *   `nginx-proxy`
+
     *   `createvhost.sh`
 
 让我们来看下这些自定义脚本：
 
 
-基本上，这个脚本检查 `/etc/httpd/conf.d/php.conf` 是否存在。如果存在，它将其重命名为 `php.conf.orig`，以防止 Apache 加载该模块并作为 `mod_php`  PHP 解释器。这将允许 `mod_fastcgi` 模块运行并与 PHP-FPM 服务器通信。
+
+基本上，这个脚本检查 `/etc/httpd/conf.d/php.conf` 是否存在。如果存在，它将其重命名为 `php.conf.orig`，以防止 Apache 加载该模块并作为 `mod_php` PHP 解释器。这将允许 `mod_fastcgi` 模块运行并与 PHP-FPM 服务器通信。
 
 它还会将 `/etc/httpd/conf/` 和 `/etc/httpd/conf.d/` 中的所有文件备份到 `/root/config-bak/` 以备后。
 
 ![](img/00027.jpg)
-
 
 此脚本使用了 Virtualmin 提供的条件语句 `If the $VIRTUALSERVER_ACTION`。这是 Virtualmin 的一个酷功能，允许人们使用 Virtualmin 提供的各种条件语句创建一些非常独特的脚本。以下是代码列表：
 
@@ -297,11 +290,9 @@ fi
 
 上面的条件语句检查文件 `nginx-proxy`（它是一个空白/空文件）是否存在于 `/root` 文件夹中。默认情况下，它不存在，而是位于 `ngnix` 文件夹中。因此，如果你想让脚本自动创建 Nginx 反向代理 vhost 文件，你需要将 `nginx-proxy` 文件复制到 `/root`（或者你也可以直接执行此命令：`# touch /root/nginx-proxy`）
 
-
 这是 `/root/phpfpm.sh` 脚本使用的 php-fpm 池模板文件。所有 `www` 出现的地方将被替换为虚拟服务器的 userID。
 
 ![](img/00026.jpg) 你可以调整变量，例如 `pm.*` 以适应你的服务器环境/资源。
-
 
 这是一个自定义的（且简单得多）三行代码，告诉 Apache 加载 `mod_fastcgi` 模块并创建一个新的 PHP 处理程序（称为 `php-fpm`）来处理所有 .php 文件。我们将使用此文件来替换 `mod_fastcgi` 模块自带的默认 `fastcgi.conf`。
 
@@ -313,11 +304,9 @@ fi
 
 它包含了一些示例脚本供你开始，以下是实用的变量列表：
 
-
 ![](img/00049.jpg)
 
 恭喜！你现在拥有了一个完全自动化的 PHP-FPM 驱动的 Virtualmin 服务器。
-
 
 前面的章节假设是一个全新的 Virtualmin 服务器，其中没有任何现有的虚拟服务器（网站）。这允许我们配置 Virtualmin 丢弃其他 PHP Sapi 并仅使用 PHP-FPM。如果你在 Virtualmin 中有现有的网站（虚拟服务器），我们需要先重新配置现有网站——否则网站将停止工作。
 
@@ -348,6 +337,7 @@ fi
 
 ```bash
 # cd /etc/php-fpm.d/
+```
 
 我们将使用强大的 `sed` 工具来完成大部分工作。语法为：
 
@@ -372,26 +362,21 @@ fi
 ### 步骤 4：最终检查
 
 *   你是否编辑了 `/etc/httpd/httpd.conf` 文件中所有的 `<VirtualHost>` 容器？
+*   你是否为每个 `VirtualHost`（虚拟服务器）创建了专用的 `php-fpm` 池文件？
 
-
-
-
-
-> 你是否为每个 `VirtualHost`（虚拟服务器）创建了专用的 `php-fpm` 池文件？
-
-> 检查完所有内容后，你可以启动 PHP-FPM 服务：
+检查完所有内容后，你可以启动 PHP-FPM 服务：
 
 ```bash
 # service php-fpm start
 ```
 
-> 在重启 Apache 服务器之前，执行此命令以检查 `/etc/httpd/conf/httpd.conf` 文件中是否存在错误：
+在重启 Apache 服务器之前，执行此命令以检查 `/etc/httpd/conf/httpd.conf` 文件中是否存在错误：
 
 ```bash
 # httpd -M
 ```
 
-如果配置文件（/etc/httpd/conf/httpd.conf`）存在错误，错误将显示在屏幕上，例如如果我漏掉了删除其中一个 `php_admin_` 指令。
+如果配置文件（`/etc/httpd/conf/httpd.conf`）存在错误，错误将显示在屏幕上，例如如果我漏掉了删除其中一个 `php_admin_` 指令。
 
 ![](img/00009.jpg)
 
@@ -400,7 +385,6 @@ fi
 ```bash
 # service httpd restart
 ```
-
 
 这是一个“信息性”章节——旨在为你提供关于 Apache Handlers 和 PHP-FPM 的理论和背景知识。它不是必读内容，但建议阅读，这样你就能更好地理解什么是 Apache Handler 以及什么是 PHP-FPM？
 
@@ -438,54 +422,13 @@ FastCGI 的优势在于进程是“持久的”——可以配置多个持久性
 
 但当我们使用 `mod_fastcgi` 模块（从 RepoForge 仓库安装）时，Apache 将“进程管理器”的控制权交给 PHP-FPM 引擎，它有自己的“PM”。
 
-PHP-FPM 实际上是带有其内置“进程管理器”（PM）的“FastCGI”。
-
-需要注意的是，大多数 FastCGI 应用程序/进程以守护进程（服务器）模式与 Apache 并行运行。这些 FastCGI 应用程序由“PM”（进程管理器）管理。
-
-在 Apache 中，当我们使用 `fastcgid` 模块（Virtualmin 中的默认设置）时，Apache 使用其内置的“PM”来管理 FastCGI 进程。
-
-但当我们使用 `mod_fastcgi` 模块（从 RepoForge 仓库安装）时，Apache 将“进程管理器”的控制权交给 PHP-FPM 引擎，它有自己的“PM”。
-
-PHP-FPM 实际上是带有其内置“进程管理器”（PM）的“FastCGI”。
-
-需要注意的是，大多数 FastCGI 应用程序/进程以守护进程（服务器）模式与 Apache 并行运行。这些 FastCGI 应用程序由“PM”（进程管理器）管理。
-
-在 Apache 中，当我们使用 `fastcgid` 模块（Virtualmin 中的默认设置）时，Apache 使用其内置的“PM”来管理 FastCGI 进程。
-
-但当我们使用 `mod_fastcgi` 模块（从 RepoForge 仓库安装）时，Apache 将“进程管理器”的控制权交给 PHP-FPM 引擎，它有自己的“PM”。
-
-PHP-FPM 实际上是带有其内置“进程管理器”（PM）的“FastCGI”。
-
-需要注意的是，大多数 FastCGI 应用程序/进程以守护进程（服务器）模式与 Apache 并行运行。这些 FastCGI 应用程序由“PM”（进程管理器）管理。
-
-在 Apache 中，当我们使用 `fastcgid` 模块（Virtualmin 中的默认设置）时，Apache 使用其内置的“PM”来管理 FastCGI 进程。
-
-但当我们使用 `mod_fastcgi` 模块（从 RepoForge 仓库安装）时，Apache 将“进程管理器”的控制权交给 PHP-FPM 引擎，它有自己的“PM”。
-
-PHP-FPM 实际上是带有其内置“进程管理器”（PM）的“FastCGI”。
-
-需要注意的是，大多数 FastCGI 应用程序/进程以守护进程（服务器）模式与 Apache 并行运行。这些 FastCGI 应用程序由“PM”（进程管理器）管理。
-
-在 Apache 中，当我们使用 `fastcgid` 模块（Virtualmin 中的默认设置）时，Apache 使用其内置的“PM”来管理 FastCGI 进程。
-
-但当我们使用 `mod_fastcgi` 模块（从 RepoForge 仓库安装）时，Apache 将“进程管理器”的控制权交给 PHP-FPM 引擎，它有自己的“PM”。
-
-PHP-FPM 实际上是带有其内置“进程管理器”（PM）的“FastCGI”。
-
-需要注意的是，大多数 FastCGI 应用程序/进程以守护进程（服务器）模式与 Apache 并行运行。这些 FastCGI 应用程序由“PM”（进程管理器）管理。
-
-在 Apache 中，当我们使用 `fastcgid` 模块（Virtualmin 中的默认设置）时，Apache 使用其内置的“PM”来管理 FastCGI 进程。
-
-但当我们使用 `mod_fastcgi` 模块（从 RepoForge 仓库安装）时，Apache 将“进程管理器”的控制权交给 PHP-FPM 引擎，它有自己的“PM”。
-
-
 本章的目标是运行 Nginx 作为主服务器。
 
 在开始之前关于性能的说明。
 
 Nginx 作为反向代理的作用通过分担 Apache 的负载来提升网站性能。我个人没有检测到使用 Nginx 作为反向代理有显著性能——但这可能是因为我的网站没有数千访问者。
 
-运行 PHP-FPM 对大多数人来说足够了，但无论如何准备总是好的
+运行 PHP-FPM 对大多数人来说足够了，但无论如何准备总是好的。
 
 第一步是下载并安装 Nginx 仓库：
 
@@ -522,14 +465,13 @@ mkdir -p /etc/nginx/vhosts
 
 将 `nginx-proxy`（这是一个空文件）复制到 `/root` 目录。
 
-
-
-
 脚本 `phpfpm.sh` 会检查 `/root` 目录下是否存在该文件 (`nginx-proxy`) ——如果是，那么当你从 Virtualmin 创建新的虚拟服务器时，它将继续创建必要的 Nginx 反向代理配置（虚拟主机）文件。如果没有这个文件 (`nginx-proxy`)，`phpfpm.sh` 脚本将不会创建 nginx vhost 配置文件。
 
-```
+```bash
 # cp nginx-proxy /root/
 ```
+
+
 
 现在让我们登录 Virtualmin 对以下设置进行一些调整：
 
@@ -555,10 +497,11 @@ mkdir -p /etc/nginx/vhosts
 
 像之前一样，从“Edit template section”（编辑模板部分）下拉列表中选择“Apache website”。
 
-![](img/00025.jpg)向下滚动页面，找到“Port Number for Virtual Hosts”（虚拟主机端口号）并将其更改为“8080”，如下所示：
+![](img/00025.jpg)
+
+向下滚动页面，找到“Port Number for Virtual Hosts”（虚拟主机端口号）并将其更改为“8080”，如下所示：
 
 ![](img/00012.jpg)
-
 
 我们需要修改“Default Settings”（默认设置）模板并将端口也更改为 8080！
 
@@ -606,10 +549,10 @@ mkdir -p /etc/nginx/vhosts
 
 ![](img/00014.jpg)
 
-
-服务器安全是一个巨大的话题，根本无法在一个章节中甚至一书中涵盖所有内容。在本章中，我们将仅涵盖 4 个关键步骤，我相信每个服务器管理员都应该采取这些步骤来“锁定”服务器，无论服务器运行的是 Virtualmin 还是其他控制面板。
+服务器安全是一个巨大的话题，根本无法在一个章节中甚至一书种涵盖所有内容。在本章中，我们将仅涵盖 4 个关键步骤，我相信每个服务器管理员都应该采取这些步骤来“锁定”服务器，无论服务器运行的是 Virtualmin 还是其他控制面板。
 
 这 4 个步骤是：
+
 * 只运行必需的服务，停止所有其他服务
 * 保护 `/tmp`
 * 安装防火墙
@@ -619,17 +562,17 @@ mkdir -p /etc/nginx/vhosts
 
 我们在服务器上运行的每个服务都会监听一个 `port` - 例如，Apache Web 服务器监听 80 端口，SSH 服务器监听 22 端口，邮件服务器监听 25 端口等。
 
-将这些 `ports` 想象成堡垒墙上的“门” —— 墙上的门越多，黑客可以练习的目标就越多。为了最大限地减少这种情况，我们应该关闭任何我们不打算在服务器上使用的服务。例如，如果我们不向用户提供邮件列表服务或 DAV 登录服务，我们就应该关掉它们。
+将这些 `ports` 想象成堡垒墙上的“门” —— 墙上的门越多，黑客可以练习的目标就越多。为了最大限度地减少这种情况，我们应该关闭任何我们不打算在服务器上使用的服务。例如，如果我们不向用户提供邮件列表服务或 DAV 登录服务，我们就应该关掉它们。
 
 我们可以通过命令行使用 `chkconfig` 命令执行此操作，或从 Webmin 的 Bootup and Shutdown 界面，即 `Webmin > System > Bootup and Shutdown`
 
 ![](img/00013.jpg)
 
 Virtualmin 的默认设置相当合理，但以下服务也可以安全地关闭：
+
 * `xinetd`
 * `splash-manager`
 * `mailman`（如果你不打算提供邮件服务）
-
 
 在大多数情况下，新安装/部署的 Linux 服务器中的 `/tmp` 目录是不安全的，即它允许任何人（或脚本）向 `/tmp` 目录上传文件并执行。运行这个简单的测试来确定你的 `/tmp/` 目录是否设置了执行位：
 
@@ -637,6 +580,7 @@ Virtualmin 的默认设置相当合理，但以下服务也可以安全地关闭
 
 ```bash
 #!/bin/bash
+
 echo "hello world"
 ```
 
@@ -644,6 +588,7 @@ echo "hello world"
 
 ```bash
 chmod 755 hello.sh
+
 ./hello.sh
 ```
 
@@ -651,9 +596,9 @@ chmod 755 hello.sh
 
 ![](img/00032.jpg)
 
-**注意：** 根据操作系统`fstab` 中的条目可能会不同，如果你的服务器是 VPS，托管公司可能会提供不同的 `fstab` 布局。如有疑问，请咨询你的托管提供商。
+**注意：** 根据操作系统 `fstab` 中的条目可能会不同，如果你的服务器是 VPS，托管公司可能会提供不同的 `fstab` 布局。如有疑问，请咨询你的托管提供商。
 
-一旦完成了对 `//fstab` 的编辑，你可以重启服务器或运行以下命令重新挂载分区以生效：
+一旦完成了对 `/etc/fstab` 的编辑，你可以重启服务器或运行以下命令重新挂载分区以生效：
 
 ```bash
 mount -a
@@ -661,16 +606,15 @@ mount -a
 
 注意：上述命令应该使 `/etc/fstab` 中提到的文件系统重新挂载，带有 `noauto` 选项的分区除外，但在某些 VPS 上可能无效。尝试运行 `hello.sh` 文件查看是否可以运行。如果是，最佳选择是重启 VPS。
 
-
 虽然 Virtualmin 自带了一个界面来帮助管理 `iptables` 规则和链，但它可能非常晦涩且望人生畏，特别是如果你是新手。（Virtualmin 防火墙界面可以在 `Webmin > Networking > Firewall` 找到）
 
 更简单、直观的替代方案是来自 [configserver.com](https://configserver.com/) 的 CSF 防火墙
 
-通过 SSH 登录服务器并从命令行安装防火火墙：
+通过 SSH 登录服务器并从命令行安装防火墙：
 
 ![](img/00042.jpg)
 
-编辑 csf 配置文件，例如 `vi etc/csf/csf.conf`。寻找此行（位于文件顶部）：
+编辑 csf 配置文件，例如 `vi /etc/csf/csf.conf`。寻找此行（位于文件顶部）：
 
 `# lfd 在此启用时将不会启动`
 `TESTING = "0"` ← 默认是“1”。将其更改为“0”以启用 CSF 防火墙。
@@ -691,17 +635,15 @@ service csf start
 
 选择“From local file”（从本地文件安装）并在字段中输入此路径：`/usr/local/csf/csfwebmin.tgz`
 
-
-
-
-
 ![](img/00008.jpg)
 
 然后，点击“Install Module”（安装模块）按钮。安装完成后，可以通过以下路径访问 CSF 防火墙界面：`Webmin > System > ConfigServer Security and Firewall`
 
 第一次点击链接时，系统会提示你更新符号链接（symlink），即：
 
-![](img/00011.jpg)点击提供的链接，你将看到 CSF Web 界面。
+![](img/00011.jpg)
+
+点击提供的链接，你将看到 CSF Web 界面。
 
 ![](img/00035.jpg)
 
@@ -721,6 +663,7 @@ service csf start
 
 ```bash
 # chkconfig --level 2345 portreserve off
+
 # chkconfig --level 2345 rpcbind off
 ```
 
@@ -728,9 +671,9 @@ service csf start
 
 ```bash
 # service xinetd stop && chkconfig --level 2345 off
+
 # service saslauthd stop && chkconfig --level 2345 saslauthd off
 ```
-
 
 Linux Malware Detect (LMD) 是一种 Linux 恶意软件扫描器。它是针对共享托管环境中面临的威胁设计的，并根据 GNU GPLv2 许可证发布。
 
@@ -814,7 +757,6 @@ Virtualmin 中设置的文件路径与 Cpanel 类似 – 因此你不需要对�
 
 注意：`?` 表示通配符特性，而不是典型的 `*`
 
-
 在这本短书中，我们涵盖了大量内容。你在这里看到的各种代码段是许多小时研究、测试和调试的结果。
 
 虽然实现某个目标有许多方法，但我尽力遵循古老的 UNIX 原则“K.I.S.S”（Keep It Super Simple，保持极度简单），并为你提供最简单、最易的方法来实现在 Virtualmin 中设置自动化 PHP-FPM 服务器的目标。
@@ -823,8 +765,7 @@ Virtualmin 中设置的文件路径与 Cpanel 类似 – 因此你不需要对�
 
 为了跟进 Virtualmin 的最新变化和更新 – 请随时访问官方网站 – [`virtualmin.com`](http://virtualmin.com/)。
 
-
-你可以在这里下载源代码和脚本：[`ilovevirtualmin.com/book-2`](http://ilovevirtualmin.com/book-2) 
+你可以在这里下载源代码和脚本：[`ilovevirtualmin.com/book-2`](http://ilovevirtualmin.com/book-2)
 
 你需要输入此“访问代码”：`VMPHP2014` 来访问下载文件。
 
@@ -852,11 +793,6 @@ Virtualmin 中设置的文件路径与 Cpanel 类似 – 因此你不需要对�
 
 2. `Apache, PHP-FPM & Nginx: 如何构建安全、快速且强大的 Web 服务器`
 
-
-
-
-
-
 ![](img/00048.jpg)
 
 实现这一点的 PHP 代码仅需 3 行！
@@ -868,4 +804,3 @@ Virtualmin 中设置的文件路径与 Cpanel 类似 – 因此你不需要对�
 书中将有一章专门关于性能优化的章节，并包含关于 `PHP-FPM` 池文件中“理想”设置的两个微型案例研究。
 
 你现在就可以预订这本书了：[`ilovevirtualmin.com/go/book3.php`](http://ilovevirtualmin.com/go/book3.php)
-

@@ -1,34 +1,7 @@
+
 # AI 时代的繁荣指南
 
-
-
 ![](img/cover.jpg)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 献给 Dr. Robin S. Rosenberg，是她让我的生活成为可能。
 
@@ -50,11 +23,7 @@
 
 DOI: [10.4324/9781032686653-1](http://doi.org/10.4324/9781032686653-1)
 
-硅谷初创公司 OpenAI 于 2022 年 11 月 30 日发布了其开创性的`ChatGPT`软件。这种新型人工智能（AI）立即引发了震惊、敬畏、兴奋，以及——我认为公平地说——恐惧和忧虑的复杂情绪。两个月内，活跃用户超过 1 亿，创下了新技术采用速度的纪录。¹ 人们热烈拥抱这项新型 AI 有充分理由：它能在广泛主题上写出极高质量的文本，其后继者——来自 Anthropic、Google、Meta 和 OpenAI 等公司——能做的事情更是无所不包：从为商学院课程创建合理的教学大纲，到撰写像样的布道词，根据几条剧情要点为电影构思巧妙标题，分析职位描述以推断先决能力，写诗、综合观点、撰写可发表的各类主题文章。此外，这些 AI 很擅长听指挥：如果我们不满意初稿，可以要求它们改进。例如，我们可以要求它们调整语气更正式、提供更多例子、更聚焦某个特定方面、改变深度水平等。即使是`ChatGPT`的初始版本，也能做到这一切且表现卓越。²
-
-
-
-
+硅谷初创公司 OpenAI 于 2022 年 11 月 30 日发布了其开创性的 `ChatGPT` 软件。这种新型人工智能（AI）立即引发了震惊、敬畏、兴奋，以及——我认为公平地说——恐惧和忧虑的复杂情绪。两个月内，活跃用户超过 1 亿，创下了新技术采用速度的纪录。¹ 人们热烈拥抱这项新型 AI 有充分理由：它能在广泛主题上写出极高质量的文本，其后继者——来自 Anthropic、Google、Meta 和 OpenAI 等公司——能做的事情更是无所不包：从为商学院课程创建合理的教学大纲，到撰写像样的布道词，根据几条剧情要点为电影构思巧妙标题，分析职位描述以推断先决能力，写诗、综合观点、撰写可发表的各类主题文章。此外，这些 AI 很擅长听指挥：如果我们不满意初稿，可以要求它们改进。例如，我们可以要求它们调整语气更正式、提供更多例子、更聚焦某个特定方面、改变深度水平等。即使是 `ChatGPT` 的初始版本，也能做到这一切且表现卓越。²
 
 ## 怪物的本质
 
@@ -80,9 +49,6 @@ AI 的许多特征源于软件系统本身的设计。为了看清这一点，�
 
 是什么决定了连接的强度？用一个词概括：训练。当 AI 接受语言处理训练时，网络最初会被输入海量文本，并尝试预测连续的“Token”，即网络处理的最小文本单元（如短单词、词的一部分或符号）。模型依赖前面的 Token 来预测下一个。这种预测是自动进行的，因为网络被输入了完整的单词和句子，它可以检查自己猜得是否正确，并调整相关连接的强度以纠正错误。一旦网络在预测方面变得非常擅长，就会用更具体的材料对网络进行训练以进行“微调”。随后，人类介入进行最后一轮训练。这些人类训练师进行“基于人类反馈的强化学习”，以鼓励某些输出并抑制其他输出。如果人类训练师喜欢某个回答，他们会让网络加强导致该回答的连接；如果不喜欢，他们会让网络削弱正向连接并加强负向连接。这就是“护栏”的来源，旨在防止网络提供危险信息或建议，例如帮助用户制造炸弹或犯罪。
 
-
-
-
 ## 这些新的人工智能通常具有“GPT 架构”。
 
 “G”代表“生成式”；该模型并非像 Google 那样，或像文字处理程序中的“查找”功能那样，仅仅检索先前存储的信息，而是依靠连接模式来生成新颖的回复。“P”代表“预训练”；该模型经过预先训练，通常涵盖互联网上几乎所有内容，并常由其他来源补充。“T”代表“Transformer”；就语言而言，网络解析标记并关注两个（或更多）标记在句子中的出现位置，将输入转化为关于特定标记含义及其在句子中关系的规范。这一转换过程使网络产生“理解”输入的假象。
@@ -94,8 +60,6 @@ AI 的许多特征源于软件系统本身的设计。为了看清这一点，�
 ## 生活与工作在 AI 融合的世界中
 
 我们已经可以利用互联网获取世界上大部分——如果不是全部——知识，这些知识积累了人类全部历史。对于大多数目的而言，“云”可以作为我们大脑的扩展记忆存储；它保留信息，这样我们就不需要自己记住。此外，AI 在各种需要处理信息的认知技能上，已经至少不输于大多数人类，例如批判性
-
-
 
 我们可以对 AI 提出同样的论点：它们没有身体、没有激素、不会体验疲劳的影响，等等。因此，它们无法完全理解身为人类是什么感受。它们可以基于训练集模拟此类知识，并在该集合内进行插值，但无法轻易外推到那些需要考虑语境的开放式情境。此外，即使我们人类都是同一物种的成员，我们也并非完全相同——这些差异导致我们每个人看待事物的方式至少都与他人略有不同。因此，AI 不会完全像任何特定人类那样划分世界，并且在试图理解我们每个人时，会在需要考虑语境的开放式情境中跌跌撞撞。
 
@@ -135,8 +99,6 @@ AI 可能会消除或改变许多不同形式的工作，范围涵盖从体力�
 
 为了在一个充斥着 AI 的世界中保持相关性，我们需要发挥人类在需要考虑语境的开放式情境中发挥作用的能力。我们可能需要从关注工作的*数量*转向关注工作的*质量*。如果我们知道如何修订和完善 AI 的产出和建议，我们可以在工作中获得相当大的满足感。通过提供高质量的判断和决策，特别是在对 AI 具有挑战性的那些开放式情境中，我们也可以在工作中获得满足感。
 
-
-
 此外，我们需要这样做，因为世界正在迅速变化。要实现这一目标，我们必须知道如何识别何时需要学习，并且必须能够有效且高效地获取技能和知识，因为工作正在被转型或取代。事实上，有人声称即便在当下——在 AI 深度渗透职场之前——“技能的平均半衰期现在不到五年，在某些技术领域甚至低至两年半。”³⁹ 学习应成为一种生活方式，这将是应对瞬息万变时刻的必要之举。
 
 ## 工作与生活的平衡
@@ -151,7 +113,11 @@ AI 将承担人类目前从事的许多工作，尤其是那些高度结构化�
 
 ## 个人成长与能力才干的开发
 
-AI 还能帮助我们实现个人成长。AI 可以在一定范围内充当私人教练和导师，并能对多种类型的教学进行个性化定制。⁴⁰ 我们可以利用这一点来帮助我们开发能力和才干。
+
+
+# AI 还能帮助我们实现个人成长
+
+AI 可以在一定范围内充当私人教练和导师，并能对多种类型的教学进行个性化定制。⁴⁰ 我们可以利用这一点来帮助我们开发能力和才干。
 
 然而，要充分发挥我们人类认知优势，我们需要学会识别和管理我们的认知局限与情绪。正如我们在后续章节将看到的，AI 可以帮助我们做到这一点。我们还需要留意自己的偏见以及驱动我们动机的深层因素，并以批判的眼光审视它们。AI 可以提供个性化指导，帮助我们在这些方面成长。
 
@@ -167,117 +133,88 @@ AI 还能帮助我们实现个人成长。AI 可以在一定范围内充当私�
 
 对于想要深入钻研主题的读者，他们当然可以查阅文中专门引用的文章、书籍和视频。然而，其中大部分材料具有技术性，面向专业人士。因此，每章末尾都设有“深度探索”部分。该部分包含一些通俗易懂的视频示例，对本章回顾的材料的某些方面提供了更深入的阐述。此外，由于互联网上的视频来去无常，且读者可能想钻研得更深，我还提供了搜索词，以帮助读者找到关于该主题的新视频。
 
-2 分钟了解生成式 AI：[`www.youtube.com/watch?v=rwF-X5STYks`](https://www.youtube.com/watch?v=rwF-X5STYks)
+- 2 分钟了解生成式 AI：[`www.youtube.com/watch?v=rwF-X5STYks`](https://www.youtube.com/watch?v=rwF-X5STYks)
+- AI 将如何改变世界？[`www.youtube.com/watch?v=RzkD_rTEBYs`](https://www.youtube.com/watch?v=RzkD_rTEBYs)
 
-AI 将如何改变世界？[`www.youtube.com/watch?v=RzkD_rTEBYs`](https://www.youtube.com/watch?v=RzkD_rTEBYs)
+搜索词：
+- “生成式 AI 解释”
+- “ChatGPT 对社会的影响”
+- “改变行业的 AI 语言模型”
+- “先进 AI 的伦理担忧”
+- “AI 发展的政府监管”
 
-*   “生成式 AI 解释”
-*   “ChatGPT 对社会的影响”
-*   “改变行业的 AI 语言模型”
-*   “先进 AI 的伦理担忧”
-*   “AI 发展的政府监管”
+- 深度神经网络如何工作——初学者全程课程：[`www.youtube.com/watch?v=dPWYUELwIdM`](https://www.youtube.com/watch?v=dPWYUELwIdM)
+- 5 分钟了解神经网络 | 什么是神经网络？| 神经网络如何工作 | Simplilearn：[`www.youtube.com/watch?v=bfmFfD2RIcg`](https://www.youtube.com/watch?v=bfmFfD2RIcg)
 
-深度神经网络如何工作——初学者全程课程：[`www.youtube.com/watch?v=dPWYUELwIdM`](https://www.youtube.com/watch?v=dPWYUELwIdM)
+搜索词：
+- “传统编程与 AI 的区别”
+- “人工神经网络如何工作”
+- “神经网络中的人工神经元与连接”
+- “符号 AI 与神经网络”
+- “神经网络中连接的强度”
 
-5 分钟了解神经网络 | 什么是神经网络？| 神经网络如何工作 | Simplilearn：[`www.youtube.com/watch?v=bfmFfD2RIcg`](https://www.youtube.com/watch?v=bfmFfD2RIcg)
+- AI 如何赋能任何企业 | Andrew Ng | TED：[`www.youtube.com/watch?v=reUZRyXxUs4`](https://www.youtube.com/watch?v=reUZRyXxUs4)
+- 如何利用 AI 实现个人成长：[`www.youtube.com/watch?v=S4kSR-pB83c`](https://www.youtube.com/watch?v=S4kSR-pB83c)
+- 社会困境：[www.netflix.com/title/81254224](http://www.netflix.com/title/81254224)
 
-*   “传统编程与 AI 的区别”
-*   “人工神经网络如何工作”
-*   “神经网络中的人工神经元与连接”
-*   “符号 AI 与神经网络”
-*   “神经网络中连接的强度”
+搜索词：
+- “在 AI 时代培养批判性思维技能”
+- “AI 时代人际关系的重要性”
+- “AI 时代的工作满意度与工作性质的变化”
+- “在 AI 时代实现工作与生活的平衡”
+- “在 AI 协助下实现个人成长与发展”
+- “在 AI 时代寻找意义与目标”
+- “伦理决策与 AI”
+- “在 AI 时代培养情商”
+- “持续学习并适应 AI 驱动的变化”
+- “利用 AI 实现个人成长与才干开发”
 
-AI 如何赋能任何企业 | Andrew Ng | TED：[`www.youtube.com/watch?v=reUZRyXxUs4`](https://www.youtube.com/watch?v=reUZRyXxUs4)
+- AI 和 ChatGPT 的局限性：常识问题：[`www.youtube.com/watch?v=w9MSsnoTSJs`](https://www.youtube.com/watch?v=w9MSsnoTSJs)
 
-如何利用 AI 实现个人成长：[`www.youtube.com/watch?v=S4kSR-pB83c`](https://www.youtube.com/watch?v=S4kSR-pB83c)
-
-社会困境：[www.netflix.com/title/81254224](http://www.netflix.com/title/81254224)
-
-*   “在 AI 时代培养批判性思维技能”
-*   “AI 时代人际关系的重要性”
-*   “AI 时代的工作满意度与工作性质的变化”
-*   “在 AI 时代实现工作与生活的平衡”
-*   “在 AI 协助下实现个人成长与发展”
-*   “在 AI 时代寻找意义与目标”
-*   “伦理决策与 AI”
-*   “在 AI 时代培养情商”
-*   “持续学习并适应 AI 驱动的变化”
-*   “利用 AI 实现个人成长与才干开发”
-
-AI 和 ChatGPT 的局限性：常识问题：[`www.youtube.com/watch?v=w9MSsnoTSJs`](https://www.youtube.com/watch?v=w9MSsnoTSJs)
-
-*   “人类智能相对于人工智能的优势”
-*   “AI 在理解语境方面的局限性”
-*   “AI 无法取代的人类技能”
-*   “人类与 AI 在情境感知与适应性方面的对比”
-*   “高压下的决策：人类与 AI”
-*   “文化胜任力与 AI 的局限性”
-*   “AI 时代的有效沟通技巧”
-
-## 参考文献
-
-
-
+搜索词：
+- “人类智能相对于人工智能的优势”
+- “AI 在理解语境方面的局限性”
+- “AI 无法取代的人类技能”
+- “人类与 AI 在情境感知与适应性方面的对比”
+- “高压下的决策：人类与 AI”
+- “文化胜任力与 AI 的局限性”
+- “AI 时代的有效沟通技巧”
 
 ## 参考文献
 
-1.  Hu, K. (2023, February 2). ChatGPT sets record for fastest-growing user base—analysis note. *Reuters*. [www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/](http://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/)
-
-2.  Zsolnai-Feher, K. (2023). OpenAI ChatGPT: The future is here! [`www.youtube.com/watch?v=V2RoqUr0qDU&t=1s`](https://www.youtube.com/watch?v=V2RoqUr0qDU&t=1s)
-
-3.  Kosslyn, S. M. (2023). *Active learning with AI: A practical guide*. Alinea Learning.
-
-4.  Mollick, E. (2024). *One useful thing*. Substack. [www.oneusefulthing.org/](http://www.oneusefulthing.org/)
-
-5.  Associated Press. (2023, March 29). Tech leaders urge a pause in the “out-of-control” artificial intelligence race. *NPR*. [www.npr.org/2023/03/29/1166896809/tech-leaders-urge-a-pause-in-the-out-of-control-artificial-intelligence-race](http://www.npr.org/2023/03/29/1166896809/tech-leaders-urge-a-pause-in-the-out-of-control-artificial-intelligence-race)
-
-6.  Shein, E. (2024, March 15). Governments setting limits on AI. *Communications of the ACM*. [`cacm.acm.org/news/governments-setting-limits-on-ai/`](https://cacm.acm.org/news/governments-setting-limits-on-ai/)
-
-7.  Karpathy, A. (2023). *Let’s build GPT: From scratch, in code, spelled out*. [www.youtube.com/watch?v=kCc8FmEb1nY](http://www.youtube.com/watch?v=kCc8FmEb1nY)
-
-8.  Twarog, A. (2022). *ChatGPT tutorial—A crash course on ChatGPT for beginners*. [www.youtube.com/watch?v=JTxsNm9IdYU](http://www.youtube.com/watch?v=JTxsNm9IdYU)
-
-9.  Wolfram, S. (2023, February 14). *What is ChatGPT doing… and why does it work?* Stephen Wolfram Writings. [`writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/`](https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/)
-
+1. Hu, K. (2023, February 2). ChatGPT sets record for fastest-growing user base—analysis note. *Reuters*. [www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/](http://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/)
+2. Zsolnai-Feher, K. (2023). OpenAI ChatGPT: The future is here! [`www.youtube.com/watch?v=V2RoqUr0qDU&t=1s`](https://www.youtube.com/watch?v=V2RoqUr0qDU&t=1s)
+3. Kosslyn, S. M. (2023). *Active learning with AI: A practical guide*. Alinea Learning.
+4. Mollick, E. (2024). *One useful thing*. Substack. [www.oneusefulthing.org/](http://www.oneusefulthing.org/)
+5. Associated Press. (2023, March 29). Tech leaders urge a pause in the “out-of-control” artificial intelligence race. *NPR*. [www.npr.org/2023/03/29/1166896809/tech-leaders-urge-a-pause-in-the-out-of-control-artificial-intelligence-race](http://www.npr.org/2023/03/29/1166896809/tech-leaders-urge-a-pause-in-the-out-of-control-artificial-intelligence-race)
+6. Shein, E. (2024, March 15). Governments setting limits on AI. *Communications of the ACM*. [`cacm.acm.org/news/governments-setting-limits-on-ai/`](https://cacm.acm.org/news/governments-setting-limits-on-ai/)
+7. Karpathy, A. (2023). *Let’s build GPT: From scratch, in code, spelled out*. [www.youtube.com/watch?v=kCc8FmEb1nY](http://www.youtube.com/watch?v=kCc8FmEb1nY)
+8. Twarog, A. (2022). *ChatGPT tutorial—A crash course on ChatGPT for beginners*. [www.youtube.com/watch?v=JTxsNm9IdYU](http://www.youtube.com/watch?v=JTxsNm9IdYU)
+9. Wolfram, S. (2023, February 14). *What is ChatGPT doing… and why does it work?* Stephen Wolfram Writings. [`writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/`](https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/)
 10. Evans, J. S. B. T. (2002). Logic and human reasoning: An assessment of the deduction paradigm. *Psychological Bulletin*, **128**, 978–996.
-
 11. Holyoak, K. J., & Cheng, P. W. (2011). Causal learning and inference as a rational process: The new synthesis. *Annual Review of Psychology*, **62**, 135–163.
-
 12. Sarathy, V. (2018). Real world problem-solving. *Frontiers in Human Neuroscience*, **12**, 261. doi:[10.3389/fnhum.2018.00261](http://dx.doi.org/10.3389/fnhum.2018.00261).
-
 13. Acar, O. A. AI prompt engineering isn’t the future. *Harvard Business Review*. [`hbr.org/2023/06/ai-prompt-engineering-isnt-the-future`](https://hbr.org/2023/06/ai-prompt-engineering-isnt-the-future)
-
 14. Aboze, B. J. (2024, March 25). How to measure LLM performance. *deepchecks*. [`deepchecks.com/how-to-measure-llm-performance/`](https://deepchecks.com/how-to-measure-llm-performance/)
-
 15. Wei, F., Chen, X., & Luo, L. (2004). Rethinking generative large language model evaluation for semantic comprehension. [`ar5iv.labs.arxiv.org/html/2403.07872v1`](https://ar5iv.labs.arxiv.org/html/2403.07872v1)
-
 16. Zaphir, L., & Lodge, J. M. (2023, June 27). Is critical thinking the answer to generative AI? *Times Higher Education*. [www.timeshighereducation.com/campus/critical-thinking-answer-generative-ai](http://www.timeshighereducation.com/campus/critical-thinking-answer-generative-ai)
-
 17. Bechara, A., & Damasio, H. (2002). Decision-making and addiction (Part 1): Impaired activation of somatic state in substance dependent individuals when pondering decisions with negative future consequences. *Neuropsychologia*, **40**, 1675–1689.
-
 18. Bechara, A., Damasio, A. R., Damasio, H., & Anderson, S. W. (1994). Insensitivity to future consequences following damage to human prefrontal cortex. *Cognition*, **50**, 7–15.
-
 19. Bechara, A., Damasio, H., & Damasio, A. R. (2000). Emotion, decision making and the orbitofrontal cortex. *Cerebral Cortex*, **10**, 295–307.
-
 20. Bechara, A., Damasio, H., Tranel, D., & Damasio, A. R. (1997). Deciding advantageously before knowing the advantageous strategy. *Science*, **275**, 1293–1295.
-
-21. Bechara, A., Tranel, D., & Damasio, H. (2000). Characterization of the decision-making deficit of patients with ventromedial prefrontal cortex lesions. *Brain*, **123**, 2189–2202.
-
-22. Bechara, A., Tranel, D., Damasio, H., & Damasio, A. R. (1996). Failure to respond autonomically to anticipated future outcomes following damage to prefrontal cortex. *Cerebral Cortex*, **6**, 215–225.
-
+21. Bechara, A., Damasio, H., & Damasio, A. R. (2000). Characterization of the decision-making deficit of patients with ventromedial prefrontal cortex lesions. *Brain*, **123**, 2189–2202.
+22. Bechara, A., Tranel, D., & Damasio, H. (2000). Failure to respond autonomically to anticipated future outcomes following damage to prefrontal cortex. *Cerebral Cortex*, **6**, 215–225.
 23. Damasio, A. R. (1994). *Descartes’ error: Emotion, reason, and the human brain*. G.P. Putnam.
-
 24. Wittgenstein, L. (1953). *Philosophical investigations* (G. E. M. Anscombe, Trans.). Basil Blackwell.
-
 25. Ben-Shahar, T. (2009). *The pursuit of perfect: How to stop chasing perfection and start living a richer, happier life*. McGraw-Hill.
-
 26. Nussbaum, M. C. (2011). *Creating capabilities: The human development approach*. Harvard University Press.
-
 27. Sen, A. (1999). *Development as freedom*. Oxford University Press.
-
 28. Layard, R. (2011). *Happiness: Lessons from a new science* (2nd ed.). Penguin Books.
-
 29. VanderWeele, T. J. (2020). Activities for flourishing: An evidence-based guide. *Journal of Positive Psychology and Wellbeing*, **4**, 79–91.
+
+
+
+# 参考文献
 
 30. Miller, E. J., Steward, B. A., Witkower, Z., Sutherland, C. A. M., Krumhuber, E. G., & Dawel, A. (2023). AI hyperrealism: Why AI faces are perceived as more real than human ones. *Psychological Science*, **34**, 1390–1403. [`doi.org/10.1177/09567976231207095`](https://doi.org/10.1177/09567976231207095)
 
@@ -289,20 +226,17 @@ AI 和 ChatGPT 的局限性：常识问题：[`www.youtube.com/watch?v=w9MSsnoTS
 
 34. Georgieva, K. (2024, January 14). AI will transform the global economy. Let’s make sure it benefits humanity. *IMF blog*. [www.imf.org/en/Blogs/Articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity](http://www.imf.org/en/Blogs/Articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity)
 
+35. Kita, J. (2024, April 12). Are you ready for AI to be a better doctor than you? *Medscape*. [www.medscape.com/viewarticle/are-you-ready-ai-be-better-doctor-than-you-2024a100070q?form=fpf](http://www.medscape.com/viewarticle/are-you-ready-ai-be-better-doctor-than-you-2024a100070q?form=fpf)
 
+36. Tu, T., Palepu, A., Schaekermann, M., Saab, K., Freyberg, J., Tanno, R., et al. (2024). Towards conversational diagnostic AI. *Cornell University: arXiv:2401.05654* \[cs.AI\].
 
+37. Barton, R. E. (2023, August 23). How will leveraging AI change the future of legal services? *Reuters*. [www.reuters.com/legal/legalindustry/how-will-leveraging-ai-change-future-legal-services-2023-08-23/](http://www.reuters.com/legal/legalindustry/how-will-leveraging-ai-change-future-legal-services-2023-08-23/)
 
-*   35Kita, J. (2024, April 12). Are you ready for AI to be a better doctor than you? *Medscape*. [www.medscape.com/viewarticle/are-you-ready-ai-be-better-doctor-than-you-2024a100070q?form=fpf](http://www.medscape.com/viewarticle/are-you-ready-ai-be-better-doctor-than-you-2024a100070q?form=fpf)
+38. Hatzius, J., Briggs, J., Kodnani, D., & Pierdomenico, G. (2023, March 26). The potentially large effects of artificial intelligence on economic growth. *Goldman Sachs, Global Economics Analyst*. [www.ansa.it/documents/1680080409454\_ert.pdf](http://www.ansa.it/documents/1680080409454_ert.pdf)
 
-*   36Tu, T., Palepu, A., Schaekermann, M., Saab, K., Freyberg, J., Tanno, R., et al. (2024). Towards conversational diagnostic AI. *Cornell University: arXiv:2401.05654* \[cs.AI\].
+39. Tamayo, J., Doumi, L., Goel, S., Kovacs-Ondrejkovic, O., & Sadun, R. (2023, September–October). Reskilling in the Age of AI. *Harvard Business Review*. [`hbr.org/2023/09/reskilling-in-the-age-of-ai`](https://hbr.org/2023/09/reskilling-in-the-age-of-ai)
 
-*   37Barton, R. E. (2023, August 23). How will leveraging AI change the future of legal services? *Reuters*. [www.reuters.com/legal/legalindustry/how-will-leveraging-ai-change-future-legal-services-2023-08-23/](http://www.reuters.com/legal/legalindustry/how-will-leveraging-ai-change-future-legal-services-2023-08-23/)
-
-*   38Hatzius, J., Briggs, J., Kodnani, D., & Pierdomenico, G. (2023, March 26). The potentially large effects of artificial intelligence on economic growth. *Goldman Sachs, Global Economics Analyst*. [www.ansa.it/documents/1680080409454\_ert.pdf](http://www.ansa.it/documents/1680080409454_ert.pdf)
-
-*   39Tamayo, J., Doumi, L., Goel, S., Kovacs-Ondrejkovic, O., & Sadun, R. (2023, September–October). Reskilling in the Age of AI. *Harvard Business Review*. [`hbr.org/2023/09/reskilling-in-the-age-of-ai`](https://hbr.org/2023/09/reskilling-in-the-age-of-ai)
-
-*   40Kosslyn, S. M. (2023). Active learning with AI: A practical guide. *Alinea Learning*.
+40. Kosslyn, S. M. (2023). Active learning with AI: A practical guide. *Alinea Learning*.
 
 # 第一部分：与 AI 互动
 
@@ -310,9 +244,9 @@ AI 和 ChatGPT 的局限性：常识问题：[`www.youtube.com/watch?v=w9MSsnoTS
 
 DOI: [10.4324/9781032686653-3](http://doi.org/10.4324/9781032686653-3)
 
-未来，我们中的许多人——如果不是大多数的话——都将在日常生活中咨询并与 AI 互动。我们应将 AI 视为伙伴、协作者、工具，还是副驾驶？依我之见，这些描述均未抓住 AI 的本质：伙伴分担责任，这需要意图，而 AI 并不具备；协作者拥有意志和能动性，而 AI 目前不具备；工具通常是被动的，仅按明确指令响应——这或许适用于微小、功能极其有限的 AI，但无法刻画我们此处关注的大型、强大的大语言模型（LLM）。同样，将 AI 视为“副驾驶”也存在问题，因为它们并非能主动作为的真正协作者。相反，依我之见，AI 最好被视为*认知放大器*。认知放大器是一种与人协作、以*增强其心智优势并弥补其心智局限*的技术。例如，我们的心智优势包括发现模式和创造故事的能力，而心智局限包括无法同时关注多件事以及推理时受诸多偏见干扰。AI 可助我们发挥优势、规避局限。
+未来，我们中的许多人——如果不是大多数的话——都将在日常生活中咨询并与 AI 互动。我们应将 AI 视为伙伴、协作者、工具，还是副驾驶？依我之见，这些描述均未抓住 AI 的本质：伙伴分担责任，这需要意图，而 AI 并不具备；协作者拥有意志和能动性，而 AI 目前不具备；工具通常是被动的，仅按明确指令响应——这或许适用于微小、功能极其有限的 AI，但无法刻画我们此处关注的大型、强大的大语言模型（`LLM`）。同样，将 AI 视为“副驾驶”也存在问题，因为它们并非能主动作为的真正协作者。相反，依我之见，AI 最好被视为*认知放大器*。认知放大器是一种与人协作、以*增强其心智优势并弥补其心智局限*的技术。例如，我们的心智优势包括发现模式和创造故事的能力，而心智局限包括无法同时关注多件事以及推理时受诸多偏见干扰。AI 可助我们发挥优势、规避局限。
 
-通过考量一种早期、功能更为有限的认知放大器——电子计算器，我们能洞察 AI 可能扮演的角色。计算器刚问世时，有人持怀疑态度，认为它鼓励作弊——这当然也在学校使用 ChatGPT 的反应中得到呼应。¹ 但实际上，电子计算器让学习者能更专注于数学背后的概念，而非死记硬背式的计算。例如，计算器让学习者得以聚焦于某个数学运算（如开平方）的作用、为何有用，以及何时适用。此外，计算器还促使学习者建立结果的“数量级”概念。例如，若结果本应在 50 到 150 之间却算出 1,500，他们应立即意识到出错了。这种对底层概念的关注，比单纯记忆并执行一系列步骤需要更深层的数学理解。如果考核学习者运用数学背后概念的能力，且他们知晓即将进行此类考核，他们就会努力掌握这些材料。即便他们依赖计算器进行实际计算，此理依然成立。
+通过考量一种早期、功能更为有限的认知放大器——电子计算器，我们能洞察 AI 可能扮演的角色。计算器刚问世时，有人持怀疑态度，认为它鼓励作弊——这当然也在学校使用 `ChatGPT` 的反应中得到呼应。¹ 但实际上，电子计算器让学习者能更专注于数学背后的概念，而非死记硬背式的计算。例如，计算器让学习者得以聚焦于某个数学运算（如开平方）的作用、为何有用，以及何时适用。此外，计算器还促使学习者建立结果的“数量级”概念。例如，若结果本应在 50 到 150 之间却算出 1,500，他们应立即意识到出错了。这种对底层概念的关注，比单纯记忆并执行一系列步骤需要更深层的数学理解。如果考核学习者运用数学背后概念的能力，且他们知晓即将进行此类考核，他们就会努力掌握这些材料。即便他们依赖计算器进行实际计算，此理依然成立。
 
 AI 可充当计算器的认知类比，但用户无需理解数学函数，而是需掌握一系列心智技能，诸如如何评估主张、如何识别不一致性、以及如何分析和构建论证。
 
@@ -326,7 +260,7 @@ AI 作为认知放大器的威力不容小觑。例如，请看麻省理工学�
 
 ## 认知放大循环
 
-若我们遵循一组特定步骤，便能从作为认知放大器的 AI 中获得巨大收益。我将此过程描述为*认知放大循环*（CAL），如图 2.1 所示。
+若我们遵循一组特定步骤，便能从作为认知放大器的 AI 中获得巨大收益。我将此过程描述为*认知放大循环*（`CAL`），如图 2.1 所示。
 
 ![图 2.1 认知放大循环。](img/9781032686646_C002_001.jpg)
 
@@ -336,17 +270,15 @@ AI 作为认知放大器的威力不容小觑。例如，请看麻省理工学�
 
 伊始，我们需明确当下的*目标*，即我们向 AI 输入内容的缘由。我们希望 AI 回答特定问题，或执行特定任务。
 
-开启 CAL 时，我们应自问以下问题：
+开启 `CAL` 时，我们应自问以下问题：
 
 *   我们想回答的实际问题，或想解决的问题是什么？它是否清晰具体？是否应将其拆解为一组更精确的问题或请求？若我们不确定问题或难题为何——或许因初涉某学科、定位不清——我们需退一步，将*此*设为待解之题。此时，需将目标指定为：尝试提炼我们难以定义的问题或疑问。
 
 *   我们能为手头问题或议题的性质所作的假设辩护吗？我们是否在寻求非黑即白的选择，而事实上存在模糊地带？我们的假设中是否有站不住脚者？
 
+*   我们的目标符合伦理吗？我们需要暂停并考虑潜在解决方案的即时和长期伦理后果，同时考虑期望的结果和任何可能的意外副作用。
 
-
-* 我们的目标符合伦理吗？我们需要暂停并考虑潜在解决方案的即时和长期伦理后果，同时考虑期望的结果和任何可能的意外副作用。
-
-例如，假设我们阅读了早期的“经典”AI 程序，如 IBM 的 Watson。³ 2011 年，该程序赢得了测试常识的电视游戏节目《危险边缘》（*Jeopardy!*）。这类计算机程序仅在定义明确、范围有限的情况下才有用。我们可能想知道新的生成式 AI 有何不同。因此，我们的目标可能是让 AI“简要总结生成式 AI 与经典 AI 的异同。”这是一个要求 AI 生成特定类型总结的请求，非常具体。我们假设存在一些共同特征和一些不同特征；这些假设是站得住脚的。这里没有明显的伦理问题。这是一个非常简单的目标，将帮助我们掌握 CAL 的关键特征。我们稍后将考虑的许多目标更为复杂和微妙。
+例如，假设我们阅读了早期的“经典”AI 程序，如 IBM 的 `Watson`。³ 2011 年，该程序赢得了测试常识的电视游戏节目《危险边缘》（*Jeopardy!*）。这类计算机程序仅在定义明确、范围有限的情况下才有用。我们可能想知道新的生成式 AI 有何不同。因此，我们的目标可能是让 AI“简要总结生成式 AI 与经典 AI 的异同。”这是一个要求 AI 生成特定类型总结的请求，非常具体。我们假设存在一些共同特征和一些不同特征；这些假设是站得住脚的。这里没有明显的伦理问题。这是一个非常简单的目标，将帮助我们掌握 `CAL` 的关键特征。我们稍后将考虑的许多目标更为复杂和微妙。
 
 ### 步骤 2：创建提示词
 
@@ -368,7 +300,7 @@ AI 作为认知放大器的威力不容小觑。例如，请看麻省理工学�
 
 例如，针对上述目标“简要总结生成式 AI 与经典 AI 的异同”，我们的提示词可以是：
 
-这个提示词是否遵守了我们考虑的指南列表？表 2.1 中的指南有点多，不易轻松记忆。这种情况正是 CAL 大显身手之时，让 AI 替我们减轻记住所有这些内容的认知负担。因此，我将上述草稿提交给 GPT-4，并附上此提示词：
+这个提示词是否遵守了我们考虑的指南列表？表 2.1 中的指南有点多，不易轻松记忆。这种情况正是 `CAL` 大显身手之时，让 AI 替我们减轻记住所有这些内容的认知负担。因此，我将上述草稿提交给 `GPT-4`，并附上此提示词：
 
 AI 的回复如下：
 
@@ -376,11 +308,11 @@ AI 的回复如下：
 
 但如果我们定位不清，在试图明确问题或指令时四处碰壁，该怎么办？在这种情况下，我们退一步，现在请 AI 生成问题或指令的候选方案。我们给它尽可能多的信息，然后将结果作为灵感——假设我们能认出我们想要的东西，即使一开始无法清晰地陈述它。例如：
 
-AI 确实照做了。如果您有兴趣查看结果，或想尝试本书中的任何其他提示词，可以在以下网站找到它们，这些内容采用易于复制粘贴并提交给 AI 的形式：[www.routledge.com/9781032686660](http://www.routledge.com/9781032686660)。除非另有说明，本书中与 AI 的所有交互均使用 OpenAI 的 GPT-4，截至撰写时，它是最优秀的 LLM 之一，与 Anthropic 的 Claude 3.5 Sonnet 和 Google 的 Gemini 1.5 Pro 齐名。
+AI 确实照做了。如果您有兴趣查看结果，或想尝试本书中的任何其他提示词，可以在以下网站找到它们，这些内容采用易于复制粘贴并提交给 AI 的形式：[www.routledge.com/9781032686660](http://www.routledge.com/9781032686660)。除非另有说明，本书中与 AI 的所有交互均使用 OpenAI 的 `GPT-4`，截至撰写时，它是最优秀的 `LLM` 之一，与 Anthropic 的 `Claude 3.5 Sonnet` 和 Google 的 `Gemini 1.5 Pro` 齐名。
 
 ### 步骤 3：评估结果
 
-一旦 AI 对提示词做出回应，我们就要*评估*它生成的内容。在 CAL 的这一阶段，我们需要决定结果是否达成了我们的目标。评估过程要求我们运用批判性思维，如下一章所总结。在评估结果后，会发生以下三种情况之一。我们决定：
+一旦 AI 对提示词做出回应，我们就要*评估*它生成的内容。在 `CAL` 的这一阶段，我们需要决定结果是否达成了我们的目标。评估过程要求我们运用批判性思维，如下一章所总结。在评估结果后，会发生以下三种情况之一。我们决定：
 
 1.  产品足够好，可供使用，因此我们*保留*它并“手动”调优，例如编辑文档或修饰图形。
 
@@ -388,22 +320,23 @@ AI 确实照做了。如果您有兴趣查看结果，或想尝试本书中的�
 
 3.  产品与我们想要的相去甚远，因此我们用一个新目标*修订*目标并返回步骤 1。
 
-除少数例外，本书呈现的提示词均非首次尝试。在几乎所有情况下，我都不得不循环执行 CAL 并修订提示词以获得预期结果。这通常反映在我最终告诉 AI 在提示词中*不*做什么，例如不要对陈述采取行动而要对其进行评估。
-
-
-
+除少数例外，本书呈现的提示词均非首次尝试。在几乎所有情况下，我都不得不循环执行 `CAL` 并修订提示词以获得预期结果。这通常反映在我最终告诉 AI 在提示词中*不*做什么，例如不要对陈述采取行动而要对其进行评估。
 
 ## 使用 CAL
 
-我们可以将 CAL 用于更复杂的 AI 应用，例如设计“Custom GPTs”（为特定用途设计的专用 AI）或代理。实际上，我们可以指示 AI 编写计算机代码来执行许多不同类型的任务，范围从设计网站到分析数据。虽然在这里探讨 CAL 的这些用法很诱人，但我没有这样做，主要有两个原因：第一，这是一个移动的目标。在撰写本书时，AI 的范围和能力几乎每周都在增加，不可能列出我们可以或能够使用它的所有方式。第二，随着 AI 的改进，它们将在不需要明确指令的情况下完成越来越多的此类任务。我们不需要调用 OpenAI 的“Advanced Data Analytics”（以前称为“Code Interpreter”）来分析数据；我们只需要提出要求，AI 就会处理细节。我们不需要描述我们想要 AI 编写的代码；我们只需要仔细指定目标，AI 就会为我们解决代码问题。以此类推。
+我们可以将 `CAL` 用于更复杂的 AI 应用，例如设计“Custom GPTs”（为特定用途设计的专用 AI）或代理。实际上，我们可以指示 AI 编写计算机代码来执行许多不同类型的任务，范围从设计网站到分析数据。虽然在这里探讨 `CAL` 的这些用法很诱人，但我没有这样做，主要有两个原因：第一，这是一个移动的目标。在撰写本书时， AI 的范围和能力几乎每周都在增加，不可能列出我们可以或能够使用它的所有方式。第二，随着 AI 的改进，它们将在不需要明确指令的情况下完成越来越多的此类任务。我们不需要调用 OpenAI 的“Advanced Data Analytics”（以前称为“Code Interpreter”）来分析数据；我们只需要提出要求，AI 就会处理细节。我们不需要描述我们想要 AI 编写的代码；我们只需要仔细指定目标，AI 就会为我们解决代码问题。以此类推。
 
-在所有当前和未来的情况下，CAL 都将为我们提供良好的服务。CAL 中概述的流程比从一个定义不清的目标开始、不设计合适的提示词来解决目标、不在目标背景下刻意评估 AI 的产出等要高效得多。使用 CAL 流程可以帮助我们比随意的、纯粹的试错方法更有效、更高效地实现目标。
+在所有当前和未来的情况下，`CAL` 都将为我们提供良好的服务。`CAL` 中概述的流程比从一个定义不清的目标开始、不设计合适的提示词来解决目标、不在目标背景下刻意评估 AI 的产出等要高效得多。使用 `CAL` 流程可以帮助我们比随意的、纯粹的试错方法更有效、更高效地实现目标。
 
-然而，我们需要意识到使用 CAL 的一个潜在问题：我们可能会陷入其中，最终花费过多的时间在持续的改进中循环（或感觉像是在改进）。这归因于“部分强化效应”。也就是说，人们倾向于重复导致期望结果的行为。这种结果被称为该行为的“正强化”。当强化不是每次都发生时，人们特别容易坚持该行为。如果强化只在一定百分比的时间发生，我们倾向于继续努力，寻求那种强化。因此，如果每几个 CAL 周期就能产生甚至部分有用的结果，让我们更接近目标，我们通常会坚持尝试——甚至（就个人经验而言）持续到深夜。我们需要意识到这一点，并准备好在合理的时间后强制暂停我们的努力。事实上，暂停可能导致“孵化效应”，我们的潜意识在处理问题，并可能产生我们之前未曾考虑的解决方案。
+然而，我们需要意识到使用 `CAL` 的一个潜在问题：我们可能会陷入其中，最终花费过多的时间在持续的改进中循环（或感觉像是在改进）。这归因于“部分强化效应”。也就是说，人们倾向于重复导致期望结果的行为。这种结果被称为该行为的“正强化”。当强化不是每次都发生时，人们特别容易坚持该行为。如果强化只在一定百分比的时间发生，我们倾向于继续努力，寻求那种强化。因此，如果每几个 `CAL` 周期就能产生甚至部分有用的结果，让我们更接近目标，我们通常会坚持尝试——甚至（就个人经验而言）持续到深夜。我们需要意识到这一点，并准备好在合理的时间后强制暂停我们的努力。事实上，暂停可能导致“孵化效应”，我们的潜意识在处理问题，并可能产生我们之前未曾考虑的解决方案。
 
 ### 我们需要人在回路中吗？
 
 考虑到 AI 在分析、评估和创建文本及图像方面表现得如此出色，人们可能会质疑为什么人类需要评估 AI 的结果。为什么不让 AI 自身进行必要的批判性思考？或者，我们或许可以运行两个系统实例，让一个评估另一个的产出。请考虑人类必须在回路中的四个原因。
+
+
+
+# 为什么人类无法被 AI 取代
 
 首先，即使是非常先进的 AI 也不太可能是完美的，部分原因在于其神经网络设计（如前一章所述），也因为它们永远不会在完美的数据集上训练。它们的缺陷不仅影响它们对提示词的初始响应，还影响它们所做的一切。如果我们让一个 AI 评估另一个 AI 的结果，我们将需要第三个 AI 来评估第二个 AI 的评估结果，接着需要第四个 AI 评估第三个，以此类推，陷入无限倒退。我们人类当然也不完美，但我们的错误通常不会长期违背我们的利益。相比之下，AI 的错误可能是随机的，或以未知方式存在偏见，这意味着至少有时它们可能违背我们的利益。我们需要人类在回路中充当把关人，这类似于学者为期刊把关：他们依靠已有知识来评估产品质量。我们将在下一章探讨如何做到这一点。
 
@@ -411,9 +344,7 @@ AI 确实照做了。如果您有兴趣查看结果，或想尝试本书中的�
 
 第三，因为 AI 永远无法了解每个用户的绝对一切，它永远无法确定用户在任何特定时刻实际在寻求什么。因此，它无法为我们每个人制定最优目标。正如上一章所述，部分问题在于 AI 永远无法完全了解围绕任何个人的语境。AI 无法被信任为我们自主做决策。
 
-第四，人类必须发展自己的目标，部分原因在于他们往往可能无法预先有意识地知道其确切目标是什么。美国最高法院大法官波特·斯图尔特于 1964 年曾著名地拒绝定义色情制品，而只是断言他“一看就知”。当时人们嘲笑他，这在法律语境下讲得通：淫秽标准应当是客观的，因为人们应当遵守它们。但这种反应在我们与 AI 协作开发目标的语境下实际上是合理的。我们的识别能力通常超越我们的回忆或生成能力。例如，大多数熟悉第二语言的人能听懂的比能说的多，这凸显了识别输入与能够产出内容之间的区别。CAL 的使用者可能会生成他们能做出的最佳目标近似值，并迭代直到他们“一看就知”地识别出所寻求的产品。由于不了解任何特定人类的一切，AI 无法做到这一点。
-
-
+第四，人类必须发展自己的目标，部分原因在于他们往往可能无法预先有意识地知道其确切目标是什么。美国最高法院大法官波特·斯图尔特于 1964 年曾著名地拒绝定义色情制品，而只是断言他“一看就知”。当时人们嘲笑他，这在法律语境下讲得通：淫秽标准应当是客观的，因为人们应当遵守它们。但这种反应在我们与 AI 协作开发目标的语境下实际上是合理的。我们的识别能力通常超越我们的回忆或生成能力。例如，大多数熟悉第二语言的人能听懂的比能说的多，这凸显了识别输入与能够产出内容之间的区别。`CAL` 的使用者可能会生成他们能做出的最佳目标近似值，并迭代直到他们“一看就知”地识别出所寻求的产品。由于不了解任何特定人类的一切，AI 无法做到这一点。
 
 简而言之，人类用户无法被 AI 取代。AI 是一种认知放大器，需要人类输入来激发其活力。因此，人类需要学会有效、高效且合乎道德地部署 AI。
 
@@ -429,139 +360,137 @@ AI 确实照做了。如果您有兴趣查看结果，或想尝试本书中的�
 
 对于希望深入钻研主题的读者，以下是一些视频示例，它们对本章回顾的材料各个方面提供了通俗易懂、更深入的阐述。此外，我还列入了一些搜索词，可帮助读者找到该主题的新视频。
 
-What is Cognitive AI? Cognitive Computing vs Artificial Intelligence | AI Tutorial | Edureka: [`www.youtube.com/watch?v=Zsl7ttA9Kcg`](https://www.youtube.com/watch?v=Zsl7ttA9Kcg)
+* What is Cognitive AI? Cognitive Computing vs Artificial Intelligence | AI Tutorial | Edureka: [`www.youtube.com/watch?v=Zsl7ttA9Kcg`](https://www.youtube.com/watch?v=Zsl7ttA9Kcg)
+* Prompt Engineering Course. How To Effectively Use ChatGPT & Other AI Language Models: [`www.youtube.com/playlist?list=PLYio3GBcDKsPP2_zuxEp8eCulgFjI5a3g`](https://www.youtube.com/playlist?list=PLYio3GBcDKsPP2_zuxEp8eCulgFjI5a3g)
+* AI in a Minute: Prompt Engineering: [`www.youtube.com/watch?v=vGdyePbGNaE`](https://www.youtube.com/watch?v=vGdyePbGNaE)
 
-Prompt Engineering Course. How To Effectively Use ChatGPT & Other AI Language Models: [`www.youtube.com/playlist?list=PLYio3GBcDKsPP2_zuxEp8eCulgFjI5a3g`](https://www.youtube.com/playlist?list=PLYio3GBcDKsPP2_zuxEp8eCulgFjI5a3g)
+* “增强智能与人机协作”
+* “利用 AI 增强人类认知优势”
+* “AI 弥补人类认知劣势”
+* “利用 AI 进行决策支持”
+* “AI 作为延伸人类能力的工具”
+* “设计清晰简洁的 AI 提示词”
+* “评估 AI 生成的输出”
+* “AI 提示词的迭代优化”
+* “针对相似任务调整 AI 提示词”
 
-AI in a Minute: Prompt Engineering: [`www.youtube.com/watch?v=vGdyePbGNaE`](https://www.youtube.com/watch?v=vGdyePbGNaE)
+* Don’t fear intelligent machines. Work with them | Garry Kasparov: [`www.youtube.com/watch?v=NP8xt8o4_5Q`](https://www.youtube.com/watch?v=NP8xt8o4_5Q)
+* The limits of AI and ChatGPT: The common sense problem: [`www.youtube.com/watch?v=w9MSsnoTSJs`](https://www.youtube.com/watch?v=w9MSsnoTSJs)
 
-*   “增强智能与人机协作”
-*   “利用 AI 增强人类认知优势”
-*   “AI 弥补人类认知劣势”
-*   “利用 AI 进行决策支持”
-*   “AI 作为延伸人类能力的工具”
-*   “设计清晰简洁的 AI 提示词”
-*   “评估 AI 生成的输出”
-*   “AI 提示词的迭代优化”
-*   “针对相似任务调整 AI 提示词”
-
-Don’t fear intelligent machines. Work with them | Garry Kasparov: [`www.youtube.com/watch?v=NP8xt8o4_5Q`](https://www.youtube.com/watch?v=NP8xt8o4_5Q)
-
-The limits of AI and ChatGPT: The common sense problem: [`www.youtube.com/watch?v=w9MSsnoTSJs`](https://www.youtube.com/watch?v=w9MSsnoTSJs)
-
-*   “人在回路 AI”
-*   “人类监督在 AI 决策中的重要性”
-*   “AI 在理解人类目标和语境方面的局限性”
-*   “人机协作设定目标”
-*   “AI 偏见与人类评估的必要性”
-*   “在 AI 协助下迭代优化目标”
-*   “人机交互中的伦理考量”
-*   “建立高效的人机伙伴关系”
-*   “人类认知局限与 AI 放大”
+* “人在回路 AI”
+* “人类监督在 AI 决策中的重要性”
+* “AI 在理解人类目标和语境方面的局限性”
+* “人机协作设定目标”
+* “AI 偏见与人类评估的必要性”
+* “在 AI 协助下迭代优化目标”
+* “人机交互中的伦理考量”
+* “建立高效的人机伙伴关系”
+* “人类认知局限与 AI 放大”
 
 ## 参考文献
 
-*   1Mitchell, A. (2022, December 26). Professor catches student cheating with ChatGPT: “I feel abject terror.” New York Post. [`nypost.com/2022/12/26/students-using-chatgpt-to-cheat-professor-warns/`](https://nypost.com/2022/12/26/students-using-chatgpt-to-cheat-professor-warns/)
-*   2Autor, D. (2024). Applying AI to rebuild middle class jobs. National Bureau of Economic Research Working paper 32140.
-*   3Walsh, B. (2021, February 13). Looking back at Watson’s 2011 “Jeopardy win.” Axios Technology. [www.axios.com/2021/02/13/ibm-watson-jeopardy-win-language-processing](http://www.axios.com/2021/02/13/ibm-watson-jeopardy-win-language-processing)
-*   4Kojima, T., Gu, S. S., Reid, M., Matsuo, Y, & Iwasawa, Y. (2023, January 29). Large language models are zero-shot reasoners. Cornell University. [`arxiv.org/abs/2205.11916`](https://arxiv.org/abs/2205.11916)
-*   5Mollick, E. (2023, August 13). Automating creativity. [www.oneusefulthing.org/p/automating-creativity](http://www.oneusefulthing.org/p/automating-creativity)
-*   6Mollick, E. (2024, May 14). What OpenAI did: A new model opens up new possibilities. [www.oneusefulthing.org/p/what-openai-did](http://www.oneusefulthing.org/p/what-openai-did)
-*   7Hochman, G., & Erev, I. (2013). The partial-reinforcement extinction effect and the contingent-sampling hypothesis. Psychonomic Bulletin and Review, *20*, 1336–1342. doi:[10.3758/s13423-013-0432-1](http://dx.doi.org/10.3758/s13423-013-0432-1).
-*   8Kosslyn, S. M., and Rosenberg, R. S. (2019). Introducing psychology: Brain, person, group (5th ed.). Flatworld.
-*   9Mellgren, R. L. (2012). Partial reinforcement effect. In N. M. Seel (Ed.), Encyclopedia of the sciences of learning. Springer. [`doi.org/10.1007/978-1-4419-1428-6_276`](https://doi.org/10.1007/978-1-4419-1428-6_276)
-*   10Baird, B., Smallwood, J., Mrazek, M., Kam, J. W., Franklin, M. S., & Schooler, J. W. (2012). Inspired by distraction: Mind wandering facilitates creative incubation. Psychological Science, *23*, 1117–1122. [`doi.org/10.1177/0956797612446024`](https://doi.org/10.1177/0956797612446024).
-*   11Talandron-Felipe, M. M. P., & Rodrigo, M. M. T. (2021). The incubation effect among students playing an educational game for physics. Research and Practice in Technology Enhanced Learning, *16*. [`doi.org/10.1186/s41039-021-00171-x`](https://doi.org/10.1186/s41039-021-00171-x)
-*   12Koos, R., Lee, M., Raheja, V., Park, J. I., Kim, Z. M., & Kang, D. (2023). Benchmarking cognitive biases in large language models as evaluators. Cornell University. [`arxiv.org/abs/2309.17012`](https://arxiv.org/abs/2309.17012)
+1. Mitchell, A. (2022, December 26). Professor catches student cheating with ChatGPT: “I feel abject terror.” New York Post. [`nypost.com/2022/12/26/students-using-chatgpt-to-cheat-professor-warns/`](https://nypost.com/2022/12/26/students-using-chatgpt-to-cheat-professor-warns/)
+2. Autor, D. (2024). Applying AI to rebuild middle class jobs. National Bureau of Economic Research Working paper 32140.
+3. Walsh, B. (2021, February 13). Looking back at Watson’s 2011 “Jeopardy win.” Axios Technology. [`www.axios.com/2021/02/13/ibm-watson-jeopardy-win-language-processing`](http://www.axios.com/2021/02/13/ibm-watson-jeopardy-win-language-processing)
+4. Kojima, T., Gu, S. S., Reid, M., Matsuo, Y, & Iwasawa, Y. (2023, January 29). Large language models are zero-shot reasoners. Cornell University. [`arxiv.org/abs/2205.11916`](https://arxiv.org/abs/2205.11916)
+5. Mollick, E. (2023, August 13). Automating creativity. [`www.oneusefulthing.org/p/automating-creativity`](http://www.oneusefulthing.org/p/automating-creativity)
+6. Mollick, E. (2024, May 14). What OpenAI did: A new model opens up new possibilities. [`www.oneusefulthing.org/p/what-openai-did`](http://www.oneusefulthing.org/p/what-openai-did)
+7. Hochman, G., & Erev, I. (2013). The partial-reinforcement extinction effect and the contingent-sampling hypothesis. Psychonomic Bulletin and Review, *20*, 1336–1342. doi: [`10.3758/s13423-013-0432-1`](http://dx.doi.org/10.3758/s13423-013-0432-1)
+8. Kosslyn, S. M., and Rosenberg, R. S. (2019). Introducing psychology: Brain, person, group (5th ed.). Flatworld.
+9. Mellgren, R. L. (2012). Partial reinforcement effect. In N. M. Seel (Ed.), Encyclopedia of the sciences of learning. Springer. [`doi.org/10.1007/978-1-4419-1428-6_276`](https://doi.org/10.1007/978-1-4419-1428-6_276)
+10. Baird, B., Smallwood, J., Mrazek, M., Kam, J. W., Franklin, M. S., & Schooler, J. W. (2012). Inspired by distraction: Mind wandering facilitates creative incubation. Psychological Science, *23*, 1117–1122. [`doi.org/10.1177/0956797612446024`](https://doi.org/10.1177/0956797612446024)
+11. Talandron-Felipe, M. M. P., & Rodrigo, M. M. T. (2021). The incubation effect among students playing an educational game for physics. Research and Practice in Technology Enhanced Learning, *16*. [`doi.org/10.1186/s41039-021-00171-x`](https://doi.org/10.1186/s41039-021-00171-x)
+12. Koos, R., Lee, M., Raheja, V., Park, J. I., Kim, Z. M., & Kang, D. (2023). Benchmarking cognitive biases in large language models as evaluators. Cornell University. [`arxiv.org/abs/2309.17012`](https://arxiv.org/abs/2309.17012)
 
 # 第 3 章 提升批判性思维
 
-DOI: [10.4324/9781032686653-4](http://doi.org/10.4324/9781032686653-4)
+DOI: [`10.4324/9781032686653-4`](http://doi.org/10.4324/9781032686653-4)
 
 批判性思维的核心在于分析和评估，最终形成判断或决策。我们需要在认知放大器循环（`CAL`）的每一步都进行批判性思维，批判性思维还能在许多其他以人为本的情境中帮助我们。毫无疑问，为了在 AI 时代蓬勃发展，我们必须成为成熟的批判性思考者。
 
 关于批判性思维的一个关键洞见是，它并非“单一事物”。相反，它有许多侧面，这一点从该术语定义的以下摘录中显而易见。¹
 
-
-
 > 至关重要的是，它指明了采用了表 3.1 中的哪些技术。但这其实是一个特性，而非缺陷：要求 AI 说明它是如何借鉴表 3.1 中的技术的，其副作用是我们会随着时间的推移熟悉各种批判性思维形式，并在某个时刻可以去掉“辅助轮”——我们将不再总需要依赖 AI。让 AI 反复强调其使用的技术将有助于我们学习这些技术。
-
-
 
 确实，通过要求 AI 指明其运用的批判性思维类型，我们可以解决学习科学中最棘手的问题，即迁移问题：我们不会自动将在一种情境下学到的知识应用到其他情境中。²³⁴ 解决该问题最有效的方法是考虑应用某一原则的多种多样的例子，并确保我们深刻理解这些例子的共同点。仅仅接触不同类型的批判性思维是不够的；我们需要学会如何在多种情境中应用它们。
 
 ## 面向 CAL 的批判性思维
 
-我们刚才探讨了如何利用 CAL 帮助我们人类进行批判性思维。这种批判性思维在 CAL 的每一步都至关重要。
+我们刚才探讨了如何利用 `CAL` 帮助我们人类进行批判性思维。这种批判性思维在 `CAL` 的每一步都至关重要。
 
-重申一下，CAL 包含以下步骤：
+重申一下，`CAL` 包含以下步骤：
 
-1.  设定目标
-2.  创建提示词
-3.  评估结果
-4.  可选循环：返回步骤 1（修订目标）或步骤 2（优化提示词）
-5.  保留并编辑结果
+1. 设定目标
+2. 创建提示词
+3. 评估结果
+4. 可选循环：返回步骤 1（修订目标）或步骤 2（优化提示词）
+5. 保留并编辑结果
 
-让我们逐一考察每个步骤，了解批判性思维如何帮助我们使用 CAL，以及 AI 如何运用批判性思维协助我们高效、有效地使用 CAL。
+让我们逐一考察每个步骤，了解批判性思维如何帮助我们使用 `CAL`，以及 AI 如何运用批判性思维协助我们高效、有效地使用 `CAL`。
 
 ### 设定目标
 
-我们之前提到，在与 AI 交互时，我们有时对想要寻求的内容略显模糊。在这种情况下，我们可以利用 CAL 来明确目标。事实上，我们并不总能意识到自己的目标是否模糊。例如，我们可能决定“想多锻炼”，却没意识到这个目标有多模糊。AI 可以通过部署 SMART 标准来锐化我们的目标。⁵⁶ SMART 目标具备五个特征：*Specific*（具体）、*Measurable*（可衡量）、*Achievable*（可达成）、*Relevant*（相关）、*Time-bound*（有时限）：
+我们之前提到，在与 AI 交互时，我们有时对想要寻求的内容略显模糊。在这种情况下，我们可以利用 `CAL` 来明确目标。事实上，我们并不总能意识到自己的目标是否模糊。例如，我们可能决定“想多锻炼”，却没意识到这个目标有多模糊。AI 可以通过部署 SMART 标准来锐化我们的目标。⁵⁶ SMART 目标具备五个特征：*Specific*（具体）、*Measurable*（可衡量）、*Achievable*（可达成）、*Relevant*（相关）、*Time-bound*（有时限）：
 
-*   **Specific（具体）**。目标应清晰详细。如前所述，我们需要明确陈述想要完成的内容。
-*   **Measurable（可衡量）**。我们需要制定具体标准来衡量达成目标的进度，否则无法知道何时真正实现了目标。
-*   **Achievable（可达成）**。目标应在现有资源范围内切合实际。我们不应为自己设定失败的陷阱。
-*   **Relevant（相关）**。输入 CAL 的短期目标应与我们更宏大、更长远的目标和优先事项保持一致并予以支持。
-*   **Time-bound（有时限）**。我们需要明确达成目标所需的时间，并努力满足这一自设的截止日期。
+* **Specific（具体）**。目标应清晰详细。如前所述，我们需要明确陈述想要完成的内容。
+* **Measurable（可衡量）**。我们需要制定具体标准来衡量达成目标的进度，否则无法知道何时真正实现了目标。
+* **Achievable（可达成）**。目标应在现有资源范围内切合实际。我们不应为自己设定失败的陷阱。
+* **Relevant（相关）**。输入 `CAL` 的短期目标应与我们更宏大、更长远的目标和优先事项保持一致并予以支持。
+* **Time-bound（有时限）**。我们需要明确达成目标所需的时间，并努力满足这一自设的截止日期。
 
 下面是一个提示词，可用于请求 AI 部署 SMART 标准评估目标，将 AI 作为认知放大器：
 
-这是根据 SMART 标准优化我目标的循环过程：
+> 这是根据 SMART 标准优化我目标的循环过程：
 
 请 AI 对目标进行批判性思考很有帮助。它合理地应用了 SMART 标准，并督促我使目标更具体、更具体化。不过，我决定无需指定学习者的性质或时间范围。我想广泛撒网，且以往类似项目的经验让我能快速轻松地评估该项目的可行性。
 
-总之，当我们初次构思启动 CAL 的目标时，通过进行批判性思维——并让 AI 协助我们这样做——可以节省时间。这种方法有助于我们避免错误的开端、钻牛角尖和大量困惑。
+总之，当我们初次构思启动 `CAL` 的目标时，通过进行批判性思维——并让 AI 协助我们这样做——可以节省时间。这种方法有助于我们避免错误的开端、钻牛角尖和大量困惑。
 
 ### 创建提示词
 
 下一步是创建针对目标的提示词。同样，AI 可以运用批判性思维来优化这一过程。例如，让我们追求目标“找出生成式 AI 至少 6 种帮助任何人学会有效使用 AI 的方式”。以下是针对该目标的初稿提示词：
 
+> [此处原文缺失初稿提示词具体内容]
+
 我们现在可以请 AI 参考表 3.1 和表 2.1（其中规定了有效提示词的标准）来优化初稿提示词：
+
+> [此处原文缺失优化提示词具体内容]
 
 以下是 GPT-4 的回复：
 
+> [此处原文缺失 GPT-4 回复具体内容]
+
 我对该回复不满意，因为它没有充分借鉴表 3.1 中总结的各类批判性思维，因此决定进行迭代。在同一线程中，我输入了以下内容：
+
+> [此处原文缺失迭代输入具体内容]
 
 提交修订后的提示词后，AI 确实生成了更充实、更深思熟虑、更细致的回复。以下是输出样本（为节省空间予以截断）：
 
-显然，AI 可以帮助我们开发提示词。如图所示，我们可以迭代地运行 CAL，让 AI 运用批判性思维来优化提示词。
+> [此处原文缺失输出样本具体内容]
+
+显然，AI 可以帮助我们开发提示词。如图所示，我们可以迭代地运行 `CAL`，让 AI 运用批判性思维来优化提示词。
 
 ### 评估结果
 
-上一节结束时的结果比提交原始提示词时获得的结果更好。它更完整、更“深思熟虑”。然而，这只是主观判断。我们可以通过将 AI 作为认知放大器来做得更好。我们可以诱导 AI 在 CAL 的“评估”阶段运用多种批判性思维。例如，下面是一个用于评估 AI 输出的提示词。因为粘贴的提示词包含总体目标，所以我们无需在此重述——但请记住，我们需要在该目标的背景下评估结果。
+上一节结束时的结果比提交原始提示词时获得的结果更好。它更完整、更“深思熟虑”。然而，这只是主观判断。我们可以通过将 AI 作为认知放大器来做得更好。我们可以诱导 AI 在 `CAL` 的“评估”阶段运用多种批判性思维。例如，下面是一个用于评估 AI 输出的提示词。因为粘贴的提示词包含总体目标，所以我们无需在此重述——但请记住，我们需要在该目标的背景下评估结果。
+
+> [此处原文缺失评估提示词具体内容]
 
 以下是 GPT-4 的回复样本：
 
-毫无疑问，我们可以招募 AI 协助我们进行批判性思维，这反过来又能帮助我们在部署 CAL 时评估结果。
+> [此处原文缺失 GPT-4 回复样本具体内容]
+
+毫无疑问，我们可以招募 AI 协助我们进行批判性思维，这反过来又能帮助我们在部署 `CAL` 时评估结果。
 
 ### 优化结果
 
 此时，我们需要结合我们正在做的事情的总体背景，通读 AI 的结果并决定它们是否达成了我们的目标。在某些情况下，我们可能希望跟进并请 AI 详细阐述某一点。例如，在本例中，我注意到 AI 没有针对“仿真与建模工具”考虑“不当假设”。如果这一遗漏损害了目标的实现，我们可以轻松返回并请 AI 补充此内容。
 
-基于此类考量，CAL 的下一步要求我们做出决策。正如上一章所述，此时我们需要决定采取以下后续步骤之一：
+基于此类考量，`CAL` 的下一步要求我们做出决策。正如上一章所述，此时我们需要决定采取以下后续步骤之一：
 
-1.  产品足够好，可以直接使用，因此我们**保留**它。现在我们专注于“手动”微调，例如编辑文档或修饰图形。
-2.  产品接近我们的要求，但不完全正确，因此我们**优化提示词**。我们对其进行编辑，然后提交新版本，请 AI 改进先前的结果。我在上面就是这样做的，当时我请 AI 更多地借鉴批判性思维标准。一旦 AI 对修订后的提示词做出回复，我们评估新产品，并再次考虑它是否足够好以保留和微调，或者是否需要继续优化提示词。
-3.  产品与我们的要求相去甚远，因此我们**修订目标**并返回步骤 1。
 
-此前所有的批判性思维都为这一决策奠定了基础。我们需要根据批判性思维揭示的当前结果的局限性，决定这三个选项中哪个最合适。在本例中，考虑到我的目标，我对结果相当满意。
-
-决定走哪条路后，如何实际实施下一步？在所有三种情况下，我们需要的不仅仅是批判性思维。我们现在需要解决一个问题：我们需要弄清楚如何编辑和微调结果、优化提示词或修订目标。在下一章中，我们将探讨如何确切应对这类问题解决挑战。
 
 ## 通过 CAL 实现卓越
-
-
-
 
 # AI 时代的批判性思维
 
@@ -576,9 +505,11 @@ DOI: [10.4324/9781032686653-4](http://doi.org/10.4324/9781032686653-4)
 为了更深入地探讨主题，以下是一些视频示例，它们对本章回顾的材料的各个方面提供了更深入的阐述。此外，以下搜索词可以帮助读者找到该主题的新视频。
 
 *   **提升批判性思维的 5 个技巧——Samantha Agoos**：[`www.youtube.com/watch?v=dItUGF8GdTw`](https://www.youtube.com/watch?v=dItUGF8GdTw)
+
 *   **AI 时代的创造力与批判性思维**：[`www.youtube.com/watch?v=XhJN3gRCm8k`](https://www.youtube.com/watch?v=XhJN3gRCm8k)
 
 搜索词：
+
 *   “21 世纪批判性思维技能”
 *   “在 AI 时代培养批判性思维”
 *   “为批判性分析分解复杂问题”
@@ -590,11 +521,12 @@ DOI: [10.4324/9781032686653-4](http://doi.org/10.4324/9781032686653-4)
 *   “区分相关性与因果性”
 *   “决策制定与批判性思维”
 *   “批判性思维中的可行性分析”
-
 *   **运用批判性思维工具进行有效决策**：[`www.youtube.com/watch?v=REW3uV18YTw`](https://www.youtube.com/watch?v=REW3uV18YTw)
+
 *   **Edward Burger 与 Michael Starbird 的《高效思维的 5 个要素》**：[`www.youtube.com/watch?v=2fSf-AmR9_A`](https://www.youtube.com/watch?v=2fSf-AmR9_A)
 
 搜索词：
+
 *   “AI 辅助决策中的批判性思维”
 *   “将批判性思维应用于 AI 提示词”
 *   “用批判性思维评估 AI 输出”
@@ -603,11 +535,12 @@ DOI: [10.4324/9781032686653-4](http://doi.org/10.4324/9781032686653-4)
 *   “批判性思维中的人机协作”
 *   “借助 AI 发展批判性思维技能”
 *   “AI 辅助批判性思维中的伦理考量”
-
 *   **批判性思维技能与 AI 的交汇：有效使用的策略**：[`www.youtube.com/watch?v=7r1z-h-Ifd4`](https://www.youtube.com/watch?v=7r1z-h-Ifd4)
+
 *   **人工智能与批判性思维**：[`www.youtube.com/playlist?list=PLqXQ0rOd491Kc4ElL8viVk-IfTrW1j41r`](https://www.youtube.com/playlist?list=PLqXQ0rOd491Kc4ElL8viVk-IfTrW1j41r)
 
 搜索词：
+
 *   “AI 辅助批判性思维技能发展”
 *   “利用 AI 学习批判性思维”
 *   “用于批判性思维练习的 AI 生成场景”
@@ -620,10 +553,15 @@ DOI: [10.4324/9781032686653-4](http://doi.org/10.4324/9781032686653-4)
 ## 参考文献
 
 *   [1] Scriven, M., & Paul, R. (1987). Critical thinking as defined by the National Council for Excellence in Critical Thinking, 1987. *8th Annual International Conference on Critical Thinking and Education Reform*. [www.criticalthinking.org/pages/defining-critical-thinking/766](http://www.criticalthinking.org/pages/defining-critical-thinking/766)
+
 *   [2] Barnett, S. M., & Ceci, S. J. (2002). When and where do we apply what we learn? A taxonomy for far transfer. *Psychological Bulletin*, 128, 612–637.
+
 *   [3] Haskell, R. E. (2004). Transfer of learning. In C. D. Spielberger (Ed.), *Encyclopedia of applied psychology*. Academic Press, pp. 575–586.
+
 *   [4] Hempenstall, K. (2019, September 25). Near and far transfer in cognitive training. *National Institute for Direct Instruction*. [www.nifdi.org/resources/hempenstall-blog/758-near-and-far-transfer-in-cognitive-training.html](http://www.nifdi.org/resources/hempenstall-blog/758-near-and-far-transfer-in-cognitive-training.html)
+
 *   [5] Herrity, J. (2024, April 9). How to write SMART goals in 5 steps (with examples). *Indeed Career Guide*. [www.indeed.com/career-advice/career-development/how-to-write-smart-goals](http://www.indeed.com/career-advice/career-development/how-to-write-smart-goals)
+
 *   [6] Leonard, K., & Watts, R. (2024, July 9). The ultimate guide to SMART goals. *Forbes Advisor*. [www.forbes.com/advisor/business/smart-goals/](http://www.forbes.com/advisor/business/smart-goals/)
 
 # 第 4 章：提升创造性问题解决能力
@@ -635,10 +573,6 @@ DOI：[10.4324/9781032686653-5](http://doi.org/10.4324/9781032686653-5)
 来自世界各地的潜水员、救援专家和医疗专业人员从多个角度研判了这一问题。救援行动本身需要洞穴潜水员、军事人员、医生和其他志愿者通力合作。救援人员最终决定通过远程指导教会男孩们基本的潜水技能，然后给他们服用镇静剂，逐个将他们转移通过山洞中被淹没的区域。这一策略前所未有，救援人员必须持续监测男孩们的健康状况、洞内水位和天气——并随形势变化调整计划。他们最终成功营救了全队队员。¹
 
 这次救援行动很好地诠释了人类解决开放性问题、并将情境纳入考量的能力。此类例子不胜枚举。²,³ 正如我们在此使用该术语的语境，“问题”发生在我们面对谜题或挑战、只能靠独创性思维来解决时。如果我们不需要依赖独创性思维，而是仅凭记忆调取以往遭遇的解决方案，那对我们来说就不是真正的“问题”。在某些情境下，挑战是必须克服或规避的障碍；在另一些情境下，挑战仅仅是按一系列明确定义的步骤操作（如常见的数学题），并验证它们是否能解决问题；而在又一些情境下，挑战是在没有清晰路径的情况下达成目标。
-
-
-
-
 
 ## 利用 AI 放大进行创造性问题解决
 
@@ -689,14 +623,8 @@ DOI：[10.4324/9781032686653-5](http://doi.org/10.4324/9781032686653-5)
 | 重构障碍 | 我们能否重构障碍，使其成为机遇？ | 将水视为运输介质而非障碍，并使用船只或漂浮装置。 |
 | 边缘情况 | 我们能否通过设想非寻常或极端条件下的场景，或关注超出常规的罕见或非典型案例，来创建新目标？ | 考虑洞穴完全被淹没的场景，并规划水下逃生路线。 |
 | 精化联想 | 鉴于已存在的联想，我们如何对其进行扩展？ | 扩展通讯线路的用途，使其同时传递物资和指令。 |
-
-
-
-
-
-| 权衡对立面 | | 我们能否反转术语的含义并产生有用的结果？ | | 不要专注于阻挡水进入，而是寻找管理和利用来水的方法。 |
-|---|---|---|---|---|
-| 增加约束 | | 我们能否通过增加约束（如施加资源限制）来创造新目标？ | | 施加时间约束，迫使团队开发更快、更高效的救援方法。 |
+| 权衡对立面 | 我们能否反转术语的含义并产生有用的结果？ | 不要专注于阻挡水进入，而是寻找管理和利用来水的方法。 |
+| 增加约束 | 我们能否通过增加约束（如施加资源限制）来创造新目标？ | 施加时间约束，迫使团队开发更快、更高效的救援方法。 |
 
 同样，这需要大量工作。仅以这些技术中的第一个为例，我们询问：*我们能否利用类比来创造新的可能解决方案？* 类比要求我们利用一个物体、情境或现象的特征来解释另一个。类比能促进创造性问题解决，因为它们允许我们从一个领域获取已知的解决方案或概念，并将其应用到另一个领域，往往能带来突破性的想法。
 
@@ -710,11 +638,13 @@ DOI：[10.4324/9781032686653-5](http://doi.org/10.4324/9781032686653-5)
 
 ### 收敛性思维
 
+
+
 一旦我们部署 CAL 生成了问题的许多候选解决方案，我们就需要从中进行选择。发散性思维打开了可能性的空间，而收敛性思维则缩小这些选项。收敛性思维是系统且合乎逻辑的。因此，收敛性思维调用批判性思维来评估可能的解决方案，并找出最有希望的一个。我们可以善用我们在第 3 章中回顾的许多批判性思维类型。此外，研究人员和实践者还专门开发了用于此目的的具体技术。一旦我们考虑了此类技术的关键示例，就能看到我们如何利用 AI 来帮助我们在各种可能性中进行筛选，就像我们可以利用它来帮助我们首先产生这些可能性一样。
 
 除了表 3.1 中总结的通用批判性思维技术外，有三种具体技术在帮助我们筛选候选解决方案方面特别有用。即，我们可以询问：*相对的优势、劣势、机会和威胁是什么？成本与收益相比如何？哪些偏见在起作用，它们的影响是什么，我们如何对抗它们？*
 
-#### SWOT 分析
+### SWOT 分析
 
 首先，考虑“SWOT 分析”，它评估任何拟议行动方案的*优势*、*劣势*、*机会*和*威胁*（例如，¹⁵^,¹⁶）。为了演示该方法，让我们仅考虑刚才提到的滑雪队救援问题的两个解决方案，看看 SWOT 分析如何帮助我们决定优先考虑哪一个。
 
@@ -722,22 +652,19 @@ DOI：[10.4324/9781032686653-5](http://doi.org/10.4324/9781032686653-5)
 
 理想情况下，我们应该有明确的标准来进行这些评分，并应对发散性思维阶段产生的每个候选解决方案进行此类分析。如果候选方案只有几个，这可能行得通，但如果有很多候选方案，很快就会变得难以应付。这个问题呼唤 CAL。我们可以轻松创建一个定义明确评价标准的评分量表，并提示 AI 在做出判断时参考它（参见 ¹⁷）。
 
-#### 成本-收益分析
+### 成本-收益分析
 
 评估选项间权衡的另一种方法是*成本-收益分析*，它通过比较实施某想法的预期成本与预期收益，揭示该想法的经济价值。¹⁸^,¹⁹ 同样，这也是 CAL 的一个好用例，利用 AI 减轻认知负担，让我们专注于我们特别擅长的事情——在这种情况下，就是将提案置于具体情境中。我只是请 GPT-4 对刚才考虑的两个解决方案进行成本-收益分析，以下是它的回应：
 
 有趣的是，AI 自行提出了一种混合方法，试图取两个方案之长。当我们能为各种成本和收益分配数字时，成本-收益分析特别有效。但正如此处考虑的问题那样，在许多情况下，一些价值是难以估量的。例如，我们无法为挽救一条人命分配特定的美元价值。尽管如此，即使是这种定性方法也很有用。一般来说，我们需要将这些 AI 输出视为建议，然后根据我们的判断进行修改。它们显然是激发创造灵感的有效方式！
 
-#### 识别和对抗偏见
+### 识别和对抗偏见
 
 还有一种技术可以帮助我们进行收敛性思维过程。我们现在询问：*哪些偏见在起作用，它们的影响是什么，我们如何对抗它们？*
 
-
-
-
 多种类型的偏见可能会影响我们的决策。²⁰^,²¹^,²²^,²³ 然而，这并不总是坏事。例如，如果一个备选方案唤起积极的情绪，这可能是一件好事。尽管如此，我们应该意识到这些偏见及其对我们的影响，并准备好在它们扭曲我们的判断时加以对抗。表 4.3 总结了可能影响创造性问题解决收敛阶段的偏见，以及试图抵消这些偏见影响的常见方法。想象一下试图将所有这些都记在脑子里！
 
-表 4.3 可能影响收敛性思维的偏见。
+**表 4.3 可能影响收敛性思维的偏见。**
 
 | **偏见** | **描述** | **缓解措施** | **示例** |
 | --- | --- | --- | --- |
@@ -760,13 +687,15 @@ DOI：[10.4324/9781032686653-5](http://doi.org/10.4324/9781032686653-5)
 
 请注意，表 4.3 中的不同偏见可能会将我们拉向不同的方向。例如，某些偏见——如确认偏误、乐观/悲观偏误、沉没成本谬误和承诺升级——可能倾向于让我们只看到我们想看到的东西。相比之下，其他偏见——如现状偏误和从众效应——可能会让我们对别人的想法和行为过于敏感。
 
-偏见种类和类型的极度复杂性促使我们利用 AI 作为认知放大器。AI 可以帮助我们识别并规避这些偏见。然而，我们在编写提示词时需要小心消除偏见。例如，我们在编写提示词的方式上可能会无意中陷入乐观/悲观偏误。因此，在起草提示词后，我们可以将其提交给 AI，询问该提示词是否包含上述任何偏见。提示词可以像下面这样简单：
+偏见种类和类型的极度复杂性促使我们利用 AI 作为认知放大器。AI 可以帮助我们识别并规避这些偏见。然而，我们在编写提示词时需要小心消除偏见。例如，我们在编写提示词的方式上可能会无意中陷入乐观/悲观偏见。因此，在起草提示词后，我们可以将其提交给 AI，询问该提示词是否包含上述任何偏见。提示词可以像下面这样简单：
 
-#### 使用 CAL 收敛于解决方案
+```
+请检查以下提示词是否包含认知偏见：[您的提示词]
+```
+
+### 使用 CAL 收敛于解决方案
 
 有时我们不确定哪几个候选解决方案最有希望，因此想要对所有方案进行排序，而不仅仅是比较几个顶尖竞争者。在这种情况下，我们可以提示 AI 提供此类排序。继续以营救被困在山顶的滑雪队为例，我们可以部署如下提示词，帮助我们对使用 SCAMPER 和 AFREETA 技术创建的备选解决方案进行排序。为了提供相关背景信息，我将表 3.1 和表 4.3 粘贴到 Word 文档中，并在提交下方提示词时将其上传至 AI。为了清晰地说明这种方法，我让 AI 仅使用这两个表中的标准，但我们也可以让它采用专门技术。AI 的回复如下：
-
-
 
 我认为这个排名很合理。但请注意，AI 在第三个候选方案后停止提供多重偏见。我们完全可以通过第二个提示词进行跟进，要求它充实可能影响排名前三之外的解决方案的其他偏见。然而，即使存在这个怪异之处，该输出也极大地简化了问题，并让我们能够发挥所长。如前所述，对我们人类而言，识别某事物比回忆它容易得多，而这种方法正好利用了这一优势。
 
@@ -791,9 +720,6 @@ DOI：[10.4324/9781032686653-5](http://doi.org/10.4324/9781032686653-5)
 我们以一个许多人都问过的问题来结束本节：使用 CAL 来帮助我们解决问题算不算“作弊”或“剽窃”？让 AI 帮我们写东西又算不算？为了回应这一顾虑，让我先讲个轶事：至少在 2000 年代初期，在法国巴黎，如果你受邀去别人家里吃晚餐，主人通常期望你带一瓶酒或一份甜点。如果你带了甜点，你获得的“赞誉”不是因为你亲手做的，而是因为你知道去哪里能买到好甜点——知道哪家面包店做的蛋糕、馅饼之类特别美味。同样，我们可以因一件产品获得赞誉，不是因为我们完全靠自己创造了它，而是因为我们识别出何时诱导 AI 产出了有价值的东西，并对其进行了改进。也就是说，AI 输出的最终质量取决于我们用户定义目标、编写提示词、评估结果、迭代，以及最终修订和润色输出的有效程度。在每一步中，人类用户都至关重要——没有人类输入，AI 就不会以那种方式解决问题或撰写文档。例如，我用 CAL 起草了本书表格中的大多数示例，但最终成果反映了我的知识、技能和品味。如果按此处所述方式使用，AI 真的是一种认知放大器，被放大的是用户的认知。
 
 因此，只要我们承认使用了 CAL，用户作为关键贡献者理应获得最终产品的赞誉。话虽如此，正如谎称美味的面包店买来的蛋糕是自己做的一样不诚实，否认 AI 在最终产品中的作用，并隐性或显性地声称所有工作都是自己完成的，也是不诚实的。只要我们没有被禁止为特定目的使用 AI，依我之见，我们理应因懂得如何善用它而获得赞誉。
-
-
-
 
 ## 认知放大器的概念对 AI 如何帮助我们克服心智和大脑本质所施加的局限性具有直接意义。接下来我们将探讨这些局限性，并考虑这些局限性如何会损害我们有效使用 CAL，以及我们如何利用 CAL 来帮助管理这些约束。
 
@@ -853,47 +779,40 @@ SWOT 分析——什么是 SWOT？定义、示例及操作方法：[`www.youtube
 
 ## 参考文献
 
-*   1Gutman, M. (2018). The boys in the cave: Deep inside the impossible rescue in Thailand. William Morrow.
-*   2Cass S. (2005, April 1). Apollo 13, we have a solution. IEEE Spectrum Online, *4*, 1. [`spectrum.ieee.org/tech-history/space-age/apollo-13-we-have-a-solution`](https://spectrum.ieee.org/tech-history/space-age/apollo-13-we-have-a-solution)
-*   3Sarathy, V. (2018). Real world problem-solving. Frontiers in Human Neuroscience, *12*, 261. doi:[10.3389/fnhum.2018.00261](http://dx.doi.org/10.3389/fnhum.2018.00261).
-*   4Aboze, B. J. (2024, March 25). How to measure LLM performance. deepchecks. [`deepchecks.com/how-to-measure-llm-performance/`](https://deepchecks.com/how-to-measure-llm-performance/)
-*   5Wei, F., Chen, X., & Luo, L. (2024). Rethinking generative large language model evaluation for semantic comprehension. [`ar5iv.labs.arxiv.org/html/2403.07872v1`](https://ar5iv.labs.arxiv.org/html/2403.07872v1)
-*   6Zaphir, L., & Lodge, J. M. (2023, June 27). Is critical thinking the answer to generative AI? Times Higher Education. [www.timeshighereducation.com/campus/critical-thinking-answer-generative-ai](http://www.timeshighereducation.com/campus/critical-thinking-answer-generative-ai)
-*   7Baer, J. (2016). Creativity and divergent thinking: A task-specific approach. Psychology Press.
-*   8Bingölbali, E. & Bingölbali, F. (2020). Divergent thinking and convergent thinking: Are they promoted in mathematics textbooks? International Journal of Contemporary Educational Research, *7*, 240–252. [`doi.org/10.33200/ijcer.689555`](https://doi.org/10.33200/ijcer.689555)
-*   9Nielsen, D. (2017). The divergent and convergent thinking book: Notebook for creative thinking. Lawrence King Publishing.
-*   10Dam, R. F., & Siang, T. Y. (2024, January 25). SCAMPER: How to use the best ideation methods. Interaction Design Foundation. [www.interaction-design.org/literature/article/learn-how-to-use-the-best-ideation-methods-scamper](http://www.interaction-design.org/literature/article/learn-how-to-use-the-best-ideation-methods-scamper)
-*   11Elmansy, R. (2015, April 10). A guide to the SCAMPER technique for design thinking. *Designorate*. [www.designorate.com/a-guide-to-the-scamper-technique-for-creative-thinking/](http://www.designorate.com/a-guide-to-the-scamper-technique-for-creative-thinking/)
-*   12Serrat, O. (2017). Knowledge solutions: Tools, methods, and approaches to drive organizational performance. Springer. [`doi.org/10.1007/978-981-10-0983-9_33`](https://doi.org/10.1007/978-981-10-0983-9_33)
-*   13Gentner, D., & Hoyos, C. (2017). Analogy and abstraction. TopiCS: Topics in Cognitive Science, *9*, 672–693.
-*   14Holyoak, K. J. (2005). Analogy. In K. J. Holyoak & R. G. Morrison (Eds.), The Cambridge handbook of thinking and reasoning. Cambridge University Press, pp. 117–142.
-*   15Schooley, S. (2024, January 3). What is a SWOT analysis? (And when to use it). Business News Daily. [www.businessnewsdaily.com/4245-swot-analysis.html](http://www.businessnewsdaily.com/4245-swot-analysis.html)
-*   16Teoli, D., Sanvictores, T., & An, J. (2024). SWOT analysis. In: StatPearls. StatPearls Publishing. [www.ncbi.nlm.nih.gov/books/NBK537302/](http://www.ncbi.nlm.nih.gov/books/NBK537302/)
-*   17Kosslyn, S. M. (2023). Active learning with AI: A practical guide. Alinea Learning.
+*   1 Gutman, M. (2018). The boys in the cave: Deep inside the impossible rescue in Thailand. William Morrow.
+*   2 Cass S. (2005, April 1). Apollo 13, we have a solution. IEEE Spectrum Online, *4*, 1. [`spectrum.ieee.org/tech-history/space-age/apollo-13-we-have-a-solution`](https://spectrum.ieee.org/tech-history/space-age/apollo-13-we-have-a-solution)
+*   3 Sarathy, V. (2018). Real world problem-solving. Frontiers in Human Neuroscience, *12*, 261. doi:[10.3389/fnhum.2018.00261](http://dx.doi.org/10.3389/fnhum.2018.00261).
+*   4 Aboze, B. J. (2024, March 25). How to measure LLM performance. deepchecks. [`deepchecks.com/how-to-measure-llm-performance/`](https://deepchecks.com/how-to-measure-llm-performance/)
+*   5 Wei, F., Chen, X., & Luo, L. (2024). Rethinking generative large language model evaluation for semantic comprehension. [`ar5iv.labs.arxiv.org/html/2403.07872v1`](https://ar5iv.labs.arxiv.org/html/2403.07872v1)
+*   6 Zaphir, L., & Lodge, J. M. (2023, June 27). Is critical thinking the answer to generative AI? Times Higher Education. [www.timeshighereducation.com/campus/critical-thinking-answer-generative-ai](http://www.timeshighereducation.com/campus/critical-thinking-answer-generative-ai)
 
 
 
+# 参考文献
 
+*   7 Baer, J. (2016). Creativity and divergent thinking: A task-specific approach. Psychology Press.
+*   8 Bingölbali, E. & Bingölbali, F. (2020). Divergent thinking and convergent thinking: Are they promoted in mathematics textbooks? *International Journal of Contemporary Educational Research*, 7, 240–252. [`doi.org/10.33200/ijcer.689555`](https://doi.org/10.33200/ijcer.689555)
+*   9 Nielsen, D. (2017). The divergent and convergent thinking book: Notebook for creative thinking. Lawrence King Publishing.
+*   10 Dam, R. F., & Siang, T. Y. (2024, January 25). SCAMPER: How to use the best ideation methods. *Interaction Design Foundation*. [www.interaction-design.org/literature/article/learn-how-to-use-the-best-ideation-methods-scamper](http://www.interaction-design.org/literature/article/learn-how-to-use-the-best-ideation-methods-scamper)
+*   11 Elmansy, R. (2015, April 10). A guide to the SCAMPER technique for design thinking. *Designorate*. [www.designorate.com/a-guide-to-the-scamper-technique-for-creative-thinking/](http://www.designorate.com/a-guide-to-the-scamper-technique-for-creative-thinking/)
+*   12 Serrat, O. (2017). Knowledge solutions: Tools, methods, and approaches to drive organizational performance. Springer. [`doi.org/10.1007/978-981-10-0983-9_33`](https://doi.org/10.1007/978-981-10-0983-9_33)
+*   13 Gentner, D., & Hoyos, C. (2017). Analogy and abstraction. *TopiCS: Topics in Cognitive Science*, 9, 672–693.
+*   14 Holyoak, K. J. (2005). Analogy. In K. J. Holyoak & R. G. Morrison (Eds.), *The Cambridge handbook of thinking and reasoning*. Cambridge University Press, pp. 117–142.
+*   15 Schooley, S. (2024, January 3). What is a SWOT analysis? (And when to use it). *Business News Daily*. [www.businessnewsdaily.com/4245-swot-analysis.html](http://www.businessnewsdaily.com/4245-swot-analysis.html)
+*   16 Teoli, D., Sanvictores, T., & An, J. (2024). SWOT analysis. In: *StatPearls*. StatPearls Publishing. [www.ncbi.nlm.nih.gov/books/NBK537302/](http://www.ncbi.nlm.nih.gov/books/NBK537302/)
+*   17 Kosslyn, S. M. (2023). Active learning with AI: A practical guide. Alinea Learning.
 
 ## 参考文献
 
-*   18 **Landau, P.** (2023, June 21). Cost–benefit analysis: A quick guide with examples and templates. *ProjectManager*. [www.projectmanager.com/blog/cost-benefit-analysis-for-projects-a-step-by-step-guide](http://www.projectmanager.com/blog/cost-benefit-analysis-for-projects-a-step-by-step-guide)
-
-*   19 **Stobierski, T.** (2019, September 5). How to do a cost–benefit analysis & why it’s important. *Harvard Business School Online*. [`online.hbs.edu/blog/post/cost-benefit-analysis`](https://online.hbs.edu/blog/post/cost-benefit-analysis)
-
-*   20 **Acciarini, C.**, Brunetta, F., & Boccardelli, P. (2021). Cognitive biases and decision-making strategies in times of change: A systematic literature review. *Management Decision*, *59*, 638–652. [`doi.org/10.1108/MD-07-2019-1006`](https://doi.org/10.1108/MD-07-2019-1006)
-
-*   21 **Azzopardi, L.** (2021). Cognitive biases in search: A review and reflection of cognitive biases in information retrieval. *Association for Computing Machinery*.
-
-*   22 **Caputo, A.** (2013). A literature review of cognitive biases in negotiation processes. *International Journal of Conflict Management*, *24*, 374–398. [`doi.org/10.1108/IJCMA-08-2012-0064`](https://doi.org/10.1108/IJCMA-08-2012-0064)
-
-*   23 **Ehrlinger, J.**, Readinger, W. O., & Kim, B. (2016). Decision-making and cognitive biases. *Encyclopedia of Mental Health*. doi:[10.1016/B978-0-12-397045-9.00206-8](http://dx.doi.org/10.1016/B978-0-12-397045-9.00206-8).
-
-*   24 **Rizzolatti, G.**, & Craighero, L. (2004). The mirror-neuron system. *Annual Review of Neuroscience*, *27*, 169–192.
-
-*   25 **Wellman, H. M.**, Cross, D., & Watson, J. (2001). Meta-analysis of theory-of-mind development: The truth about false belief. *Child Development*, *72*, 655–684.
-
-*   26 **Saxe, R.**, & Kanwisher, N. (2003). People thinking about thinking people: The role of the temporo-parietal junction in “theory of mind.” *NeuroImage*, *19*, 1835–1842.
+*   18 Landau, P. (2023, June 21). Cost–benefit analysis: A quick guide with examples and templates. *ProjectManager*. [www.projectmanager.com/blog/cost-benefit-analysis-for-projects-a-step-by-step-guide](http://www.projectmanager.com/blog/cost-benefit-analysis-for-projects-a-step-by-step-guide)
+*   19 Stobierski, T. (2019, September 5). How to do a cost–benefit analysis & why it’s important. *Harvard Business School Online*. [`online.hbs.edu/blog/post/cost-benefit-analysis`](https://online.hbs.edu/blog/post/cost-benefit-analysis)
+*   20 Acciarini, C., Brunetta, F., & Boccardelli, P. (2021). Cognitive biases and decision-making strategies in times of change: A systematic literature review. *Management Decision*, 59, 638–652. [`doi.org/10.1108/MD-07-2019-1006`](https://doi.org/10.1108/MD-07-2019-1006)
+*   21 Azzopardi, L. (2021). Cognitive biases in search: A review and reflection of cognitive biases in information retrieval. *Association for Computing Machinery*.
+*   22 Caputo, A. (2013). A literature review of cognitive biases in negotiation processes. *International Journal of Conflict Management*, 24, 374–398. [`doi.org/10.1108/IJCMA-08-2012-0064`](https://doi.org/10.1108/IJCMA-08-2012-0064)
+*   23 Ehrlinger, J., Readinger, W. O., & Kim, B. (2016). Decision-making and cognitive biases. *Encyclopedia of Mental Health*. doi: [10.1016/B978-0-12-397045-9.00206-8](http://dx.doi.org/10.1016/B978-0-12-397045-9.00206-8).
+*   24 Rizzolatti, G., & Craighero, L. (2004). The mirror-neuron system. *Annual Review of Neuroscience*, 27, 169–192.
+*   25 Wellman, H. M., Cross, D., & Watson, J. (2001). Meta-analysis of theory-of-mind development: The truth about false belief. *Child Development*, 72, 655–684.
+*   26 Saxe, R., & Kanwisher, N. (2003). People thinking about thinking people: The role of the temporo-parietal junction in “theory of mind.” *NeuroImage*, 19, 1835–1842.
 
 # 第 5 章：管理认知与情绪约束
 
@@ -919,9 +838,6 @@ DOI: [10.4324/9781032686653-6](http://doi.org/10.4324/9781032686653-6)
 
 ## 利用 CAL 减轻工作记忆负荷
 
-
-
-
 ### CAL 与工作记忆负荷
 
 CAL 可以帮助我们应对系统 2 中的工作记忆负荷，这些负荷 (a) 具有“效价”，范围从积极（如喜悦）到消极（如绝望）；(b) 具有强度（喜悦和狂喜都是积极的，但后者更强烈）；(c) 通常与身体状态相关（如心率加快和手心出汗）；(d) 通常会导致行为改变（使我们接近或回避情绪的焦点）。我问 `GPT-4` 了以下问题：“你能感受情绪吗？”它回答：“我没有情绪或意识。我根据训练数据中的模式和信息处理并生成文本。我的回答是基于学习到的信息和查询中给出的具体指令生成的，没有任何个人经历或情感理解。”如果我们问人类同样的问题，他们可能会看起来很困惑，不知道为什么我们要问这么愚蠢的问题。当然人类会感受情绪！
@@ -944,11 +860,9 @@ CAL 可以帮助我们应对系统 2 中的工作记忆负荷，这些负荷 (a)
 
 任何强烈的情绪都会干扰我们的推理和决策。例如，如果你发现自己中了彩票，你认为在得到这个好消息后立刻就能清楚地推理如何花这笔钱吗？研究人员发现，负面情绪内容尤其会干扰我们评估逻辑论证的能力。¹³ 然而，我们跌跌撞撞的具体方式可能取决于特定的情绪。例如，恐惧可能会让我们不太愿意冒险，而愤怒可能会让我们更愿意冒险。¹⁴
 
-此外，情绪还会通过助长 表 4.3 中总结的许多偏见来破坏推理和决策。事实上，情绪会加剧对支持我们已有信念或愿望相信的信息或解释的搜寻，从而增加确认偏误。¹⁵ 同样，情感投入会加剧沉没成本谬误，即我们因为过去在某事上的投入而继续该行动方案。我们也容易受到“情绪框架效应”影响，即我们的决策受到信息情感表达方式的影响，而不仅仅是内容。¹⁶ 我们通常偏好积极框架的选项。
+此外，情绪还会通过助长表 4.3 中总结的许多偏见来破坏推理和决策。事实上，情绪会加剧对支持我们已有信念或愿望相信的信息或解释的搜寻，从而增加确认偏误。¹⁵ 同样，情感投入会加剧沉没成本谬误，即我们因为过去在某事上的投入而继续该行动方案。我们也容易受到“情绪框架效应”影响，即我们的决策受到信息情感表达方式的影响，而不仅仅是内容。¹⁶ 我们通常偏好积极框架的选项。
 
 情绪的这种影响会扭曲创造性问题解决过程中的聚合思维。此外，我们可能会对特定的候选解决方案产生强烈的情感依恋，而不管其可能的功效如何。这可能会导致我们选择一个非最优解，因为我们对它产生了情感依恋。
-
-
 
 ### 威胁反应
 
@@ -964,9 +878,15 @@ CAL 可以帮助我们应对系统 2 中的工作记忆负荷，这些负荷 (a)
 
 1.  **身体扫描冥想。** 参与者躺下，将注意力一次集中在身体的各个部位上，从脚趾开始向上移动。
 
-2.  **坐式冥想。** 参与者安静地坐着，专注于呼吸、咒语或身体感觉。当注意力游离时，他们会察觉到它去了哪里，并温和地将其引回冥想的焦点。
 
-3.  **行走冥想。** 专注于脚底接触地面的感觉进行行走，有助于提高专注力和觉察力。
+
+## 坐式冥想
+
+参与者安静地坐着，专注于呼吸、咒语或身体感觉。当注意力游离时，他们会察觉到它去了哪里，并温和地将其引回冥想的焦点。
+
+## 行走冥想
+
+专注于脚底接触地面的感觉进行行走，有助于提高专注力和觉察力。
 
 参加 MBSR 项目确实能增强注意力和工作记忆。确实，一项研究中的参与者在仅进行四天 MBSR 后，注意力广度就得到了改善²⁴。这种简短的训练也提高了工作记忆容量，这可能是减少干扰性思维数量的副产品。确实，这种冥想训练可以帮助人们更长时间地维持注意力²⁵。这种能力增强的一个结果是，人们可以更高效地处理信息，从而更快地切换到下一个任务。与这些行为发现一致的是，仅参加八周 MBSR 项目后，MRI 扫描显示，与学习和记忆、情绪调节、自我参照加工和视角采择相关的大脑区域灰质增加了²⁶。
 
@@ -983,9 +903,7 @@ CAL 可以帮助我们应对系统 2 中的工作记忆负荷，这些负荷 (a)
 “认知重构”是一种行之有效的方法，帮助人们重新评估令人困扰的情绪成因（例如，²⁷^,²⁸）。这种方法让人们能够重新解释情境，从而用更平衡、更现实的想法取代消极或非理性的想法——这能减轻最初想法造成的情绪痛苦。该过程的关键步骤包括：
 
 *   **识别问题。** 第一步是识别产生情绪痛苦的想法。
-
 *   **审视并质疑证据。** 接下来我们需要质疑这些想法是否准确和有用。
-
 *   **替换不准确的想法。** 最后，我们需要用更准确或更积极的想法取代消极或非理性的想法。
 
 研究表明，这种方法确实能帮助人们重塑情绪和行为，减轻负面情绪的影响（例如，²⁹）。我们可以利用 AI 来教授这种方法，但这需要大量工作。然而，在某些情况下，我们可以让 AI 为我们完成部分工作，这有可能帮助我们对令人不安的情境进行认知重构。确实，研究人员报告称，GPT-4 在重新评估负面情境方面往往比人类做得更好³⁰。
@@ -993,8 +911,6 @@ CAL 可以帮助我们应对系统 2 中的工作记忆负荷，这些负荷 (a)
 请尝试以下提示词：
 
 这是我试用时的情况，重点关注一个低情绪、相当无害的个人问题：
-
-
 
 请注意，AI 并不总是逐字采用提示词中提供的特定措辞，而是有时会提炼其潜在意图并用不同的方式表达出来。如果我们希望 AI 始终使用提示词中的确切措辞，我们可以修改提示词以强调这一要求，并明确告知其不要改写或即兴发挥。如果你尝试这个提示词，可能会惊讶于 AI 表现得多么建设性和富有同理心。确实，生成式 AI 在提供心理治疗方面似乎大有可为（例如，³¹、³²、³³）。AI 不会评判人，似乎乐于接受我们想说的任何内容。但请记住，AI 只是在预测哪些词会跟在哪些词之后——它并不真正“理解”我们写的内容。话虽如此，作为一种认知放大器，它可以帮助我们管理认知和情感局限，在本例中是指我们的盲点，以及无法退一步从更客观的角度审视自身处境的无能为力。一如既往，不过，我们应该对 AI 的建议持保留态度，不能全盘照单全收。
 
@@ -1021,8 +937,6 @@ CAL 可以帮助我们应对系统 2 中的工作记忆负荷，这些负荷 (a)
 ## 与 CAL 共同繁荣
 
 在本章中，我们看到可以部署 CAL 来应对我们的认知和情感局限，方法是将认知负担卸载给 AI，例如让它帮助我们推演财务决策，或帮助我们重构令人困扰的情境。以这种方式使用 CAL 显然能增强我们的自主感和掌控感。同样，解决此类局限也能让我们在工作中更高效——其他条件相同的情况下，这应当能提高我们的工作满意度。确实，通过帮助我们管理局限，CAL 使我们能够作为个体成长，并有望帮助我们开发能力和才干。
-
-
 
 此外，驾驭我们的情绪能提供洞见，从而促进我们的人际关系。下一章开启本书的第二部分，重点探讨如何利用我们迄今为止所考虑的一切来改善我们与他人的互动。首先，我们需要认识到不同的人在同一情境下往往会有不同的行为表现。在许多情况下，这种独特的反应会创造出一种独特的情境，需要创造性地解决问题，而不能仅仅退回到陈旧的应对方式上。人们反应不同的一个原因是他们拥有不同的个性。我们将在下一章探讨这一主题，这将为我们理解如何在广泛的社会情境中运用 CAL（认知-情感-语言）体系奠定基础，帮助我们在变化的世界中蓬勃发展。
 
@@ -1115,32 +1029,79 @@ CAL 可以帮助我们应对系统 2 中的工作记忆负荷，这些负荷 (a)
 *   5 **Cowan, N.** (2001). The magical number 4 in short-term memory: A reconsideration of mental storage capacity. *Behavioral and Brain Sciences*, *24*, 87–114.
 *   6 **Sweller, J.** (1988). Cognitive load during problem solving: Effects on learning. *Cognitive Science*, *12*, 257–285.
 
-
-
-
 ## 参考文献
 
 *   7 Sweller, J. (1999). *技术领域的教学设计*。澳大利亚教育研究委员会。
-
 *   8 Kosslyn, S. M. (2023). *AI 赋能主动学习：实用指南*。Alinea Learning。
-
 *   9 van Steenbergen, H., Band, G. P. H., & Hommel, B. (2011). 威胁而非唤醒会缩窄注意：来自瞳孔放大和扫视控制的证据。《心理学前沿》，《2》，281。doi:[10.3389/fpsyg.2011.00281](http://dx.doi.org/10.3389/fpsyg.2011.00281)。
-
 *   10 Phelps, E. A., Ling, S., & Carrasco, M. (2006). 情绪促进感知并增强注意的感知益处。《心理科学》，《17》，292–299。
-
 *   11 LaBar, K. S., & Cabeza, R. (2006). 情绪记忆的认知神经科学。《自然评论·神经科学》，《7》，54–64。
-
 *   12 Talmi, D., Anderson, A. K., Riggs, L., Caplan, J. B., & Moscovitch, M. (2008). 情绪对图片注意影响的即时记忆后果。《学习与记忆》，《15》，172–182。[`doi.org/10.1101/lm.722908`](https://doi.org/10.1101/lm.722908)
-
 *   13 Blanchette, I., & Richards, A. (2010). 情感对高级认知的影响：关于解释、判断、决策和推理研究的综述。《认知与情绪》，《24》，561–595。doi:[10.1080/02699930903132496](http://dx.doi.org/10.1080/02699930903132496)。
-
 *   14 Lerner, J. S., & Keltner, D. (2000). 超越效价：迈向判断和选择中情绪特异性影响的模型。《认知与情绪》，《14》，473–493。[`doi.org/10.1080/026999300402763`](https://doi.org/10.1080/026999300402763)
-
 *   15 Priedols, M., & Dimdins, G. (2022). 确证偏误，分析性？*MedicalNewsToday*。[www.medicalnewstoday.com/articles/fight-flight-or-freeze-response](http://www.medicalnewstoday.com/articles/fight-flight-or-freeze-response)
-
 *   19 Salleh, M. R. (2008). 生活事件、压力与疾病。《马来西亚医学科学杂志》，《15》(4)，9–18。
-
 *   20 美国心理学会。 (2023, 3 月 8 日)。 压力对身体的影响。《心理学专题》。[www.apa.org/topics/stress/body](http://www.apa.org/topics/stress/body)
+
+
+
+# 第二部分：在 AI 时代与人类互动
+
+# 第 6 章：驾驭人类个性
+
+DOI: [10.4324/9781032686653-8](http://doi.org/10.4324/9781032686653-8)
+
+我们在前几章中探讨的技能和知识，仅仅是我们在 AI 渗透我们的世界时所需学习内容的一小部分。在本章中，我们将探讨在 AI 出现之前我们就已需要、但在 AI 时代将变得日益重要的技能和知识。具体而言，要在 AI 时代蓬勃发展，我们需要善于与他人互动。随着机器承担更多工作，我们将拥有更多时间与他人互动。许多此类互动的关键，可能在于与他人紧密合作，做那些我们人类比 AI 做得更好的事——在需要考虑语境的开放性情境中做出反应。
+
+与他人互动具有挑战性的原因之一，在于我们需要懂得如何与不同个性的人共事。“个性”由一个人的行为个人模式和情绪反应组成。这些倾向受个人气质和经历的影响。人与人存在差异，而这些差异会影响他们在特定情境下的反应。
+
+研究人员开发了许多评估个性的不同方法。这些方法大多侧重于测量个性*特质*，即个性中随时间和地点相对稳定的特定方面。然而，正如我们将看到的，每种特质的表现方式可能各不相同，这既取决于我们拥有的其他特质，也取决于特定情境。但在探讨这些要素如何相互作用之前，我们首先需要弄清基础知识。
+
+## “大五”人格特质
+
+当研究人员关联来自多种人格测试的结果时，他们发现这些测试都基于相同的五个潜在特质。这五个特质是广泛的类别，也被称为“因素”或“维度”。这些所谓的“大五”人格特质在心理学家中广为认可。这五个因素分别是：开放性、尽责性、外向性、宜人性和神经质。你可以用首字母缩写词 `OCEAN` 来记忆它们。¹^,²^,³
+
+让我们依次考察每个因素。为了定义和说明这些维度，我们侧重于高分与低分的含义，但请记住，人们的得分可能处于中间水平。
+
+### 对经验的开放性
+
+在开放性特质上得分高的人，往往富有想象力、好奇心、思想开放、喜欢冒险，并对美敏感。相反，在这一因素上得分低的人，倾向于偏好熟悉的常规事务、对理论或抽象概念不感兴趣，并偏好传统的做事方式。研究人员发现，评估这一维度的测试分数能预测人们在需要创造性思维的任务中的表现。特别是，在这一因素上得分高的人，在从事发散性思维（正如我们在第 4 章所讨论的）时效率更高。研究还证实，在这一因素上得分高的人倾向于参与艺术和文化活动。⁴^,⁵^,⁶
+
+但在该维度上得分高也有其负面影响。⁷ 例如，高分者可能难以应对常规任务、目标不稳定、有时会“过度思考”情境而变得优柔寡断、冒不必要的风险、冲动行事、难以坚持一份职业——甚至一段伴侣关系——并可能倾向于尝试违禁物质。
+
+尽管该因素经常从人格测试分数分析中浮现，但由于它涵盖了如此多不同类型的行为和偏好，因此难以严格准确地评估。这一因素通常通过让人们填写问卷来测量，因此分数可能反映出一个人自我认知中的偏见和不准确性。分数也可能反映出受测者希望给人留下积极印象的愿望。此外，“开放性”的概念与智力和创造力并不完全截然不同，因此很难将这一人格特质的影响与其他心理因素的贡献区分开来。
+
+### 尽责性
+
+在尽责性上得分高的人，往往条理分明、值得信赖，且拥有很强的自律性。在这一因素上得分低的人，可能更随性、不注重细节、且不太以目标为导向。尽责性测试的分数能预测一个人是否会坚持执行计划、做事仔细勤勉以及遵守规则。该因素测量得分还能预测广泛领域的工作绩效。此外，该因素的测量得分还能预测人们的寿命长短，这可能仅仅反映了这些分数能预测规律锻炼、健康饮食和遵医嘱等行为。⁸^,⁹^,¹⁰ 事实上，童年时期的尽责性测量指标能预测成年后的职业成就和社会关系质量。尽责性还与坚持性相关，这可能解释了其中一些效应。
+
+高度尽责的潜在缺点包括缺乏灵活性、沉迷工作而忽视生活其他方面，以及容易产生工作相关压力。高度尽责的人对新机遇的反应也可能较慢。但请记住，一个人既可以高尽责，又可以高开放，这会勾勒出一幅更复杂的个性图景。
+
+### 外向性
+
+这一维度的一端是“外向性”，另一端是“内向性”。外向性是指为人外向、喜欢与他人交谈和社交、善于表达情绪、果断自信，且总体上以他人为导向。相反，内向性是指善于内省、喜欢独处、偏好安静的活动，且总体上倾向于一次只与一两个人互动。外向者从与他人的互动中获得能量，而内向者则从独处中获得能量。¹¹^,¹²^,¹³
+
+在这一维度上得分较高的人（即偏向外向性一极）通常对生活持更积极的态度，并表示经常体验到积极情绪。他们也倾向于在需要频繁与他人互动的工作中取得成功。领导者通常是外向的。另一方面，得分偏向内向性一极的人能更深度地专注、擅长独立工作、善于倾听、观察敏锐——所有这些特质往往使他们成为优秀的决策者。
+
+不同文化对这一维度两极的重视程度各异。一些文化（如美国）主要重视外向、善社交的外向者，而另一些文化（如亚洲许多国家）则主要重视深思熟虑、内敛含蓄的内向者。此外，即使在美国等文化中，某些人也可能被视为“过于外向”，从事冲动行为和冒险——这可能导致事故或药物滥用。
+
+### 宜人性
+
+宜人性因素反映了一个人友善、富有同情心和合作的程度。¹⁴^,¹⁵^,¹⁶^,¹⁷ 在这一维度上得分较高的人倾向于重视与他人相处融洽，通常被认为心地善良、乐于助人且值得信赖。相反，得分较低的人可能更具竞争性、更果断自信，且不太倾向于与他人合作。该因素的高分可预测亲社会行为和积极的社会结果，如同伴接纳和稳定的人际关系。高分还预示着较低水平的犯罪行为和药物滥用。此外，高分预示着更好的冲突解决技巧和较少的人际冲突。
+
+尽管如此，在某些情境下，该因素得分高可能是把双刃剑。首先，得分高的人在必须进行艰难谈判时可能表现不佳。其次，高分者合作和信任的天性可能使他们容易被他人操纵。
+
+### 神经质
+
+神经质因素关注“情绪反应性”。在这一因素上得分较高的人倾向于情绪不稳定，可能会经历极端的负面情绪——如焦虑、愤怒或抑郁——尤其是在压力下。得分较低的人倾向于情绪稳定、有韧性，且通常沉着冷静。该因素的高分可预测一个人患情绪障碍或焦虑障碍的可能性，以及健康状况较差的可能性。在这一维度上得分高的人也容易陷入适应不良的思维过程，例如执着地思考潜在问题、沉溺于恐惧、不恰当地将小事灾难化、即便灾难不太可能发生也能预见到灾难。这些思维过程反过来会放大压力的影响，并引发其他心理健康问题。¹⁸^,¹⁹^,²⁰
+
+有人批评这一维度，因为它常被完全负面地描述，但高神经质的某些方面（如警惕性和审慎）在高风险情境下可能具有适应性。
+
+为了使这一切更具体，你可以尝试以下提示词——或者参加一个广泛使用的免费测试，网址为 [`bigfive-test.com/`](https://bigfive-test.com/)；快速在 Google 上搜索会发现许多可能性。以下提示词无法产生科学有效的评估，而只是旨在让你更好地了解这些因素的本质。你可以为自己回答，也可以为你足够了解其内心体验的人回答。在下文中，我是基于对一位挚友的了解来回答的。
+
+---
+
+## 参考文献
 
 *   21 Klein, G. (1996). 急性应激源对决策的影响。载于 J. E. Driskell & E. Salas (Eds.)，《压力与人类表现》（第 49–88 页）。Psychology Press。
 
@@ -1172,82 +1133,23 @@ CAL 可以帮助我们应对系统 2 中的工作记忆负荷，这些负荷 (a)
 
 *   35 Bower, G. H. (1981). 情绪与记忆。《美国心理学家》，《36》，129–148。[`doi.org/10.1037/0003-066X.36.2.129`](https://doi.org/10.1037/0003-066X.36.2.129)
 
+*   36 Rigoni, D., Demanet, J., & Sartori, G. (2015). Happiness in action: The impact of positive affect on the time of the conscious intention to act. *Frontiers in Psychology*, *6*. [www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.01307](http://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.01307)
+
+*   37 Renner, F., Schwarz, P., Peters, M. L., & Huibers, M. J. H. (2014). Effects of a best-possible-self mental imagery exercise on mood and dysfunctional attitudes. *Psychiatry Research*, *215*, 105–110. [`doi:10.1016/j.psychres.2013.10.033`](https://doi.org/10.1016/j.psychres.2013.10.033) (截至 [2024/10/24] 无法访问)
+
+*   38 O’Donnell, C., Di Simplicio, M., Brown, R., Holmes, E. A., & Heyes, S. B. (2018). The role of mental imagery in mood amplification: An investigation across subclinical features of bipolar disorders. *Cortex*, *105*, 104–117.
+
+*   39 Garland, E. L., Farb, N. A., Goldin, P. R., & Fredrickson, B. L. (2015). Mindfulness broadens awareness and builds eudaimonic meaning: A process model of mindful positive emotion regulation. *Psychological Inquiry*, *26*, 293–314. doi:[10.1080/1047840X.2015.1064294](http://dx.doi.org/10.1080/1047840X.2015.1064294).
+
+*   40 Zeidan, F., Johnson, S. K., Diamond, B. J., David, Z., & Goolkasian, P. (2010). Mindfulness meditation improves cognition: Evidence of brief mental training. *Consciousness and Cognition: An International Journal*, *19*, 597–605. [`doi.org/10.1016/j.concog.2010.03.014`](https://doi.org/10.1016/j.concog.2010.03.014)
+
+*   41 Damasio, A. (2005). *Descartes’ error: Emotion, reason, and the human brain*. Penguin.
+
+*   42 Beijamini, F., Valentin, A., Jäger, R., Born, J., & Diekelmann, S. (2021). Sleep facilitates problem solving with no additional gain through targeted memory reactivation. *Frontiers in Behavioral Neuroscience*, *15*, 645110. doi:[10.3389/fnbeh.2021.645110](http://dx.doi.org/10.3389/fnbeh.2021.645110).
+
+*   43 Sio, U. N., Monaghan, P., & Ormerod, T. (2013). Sleep on it, but only if it is difficult: Effects of sleep on problem solving. *Memory and Cognition*, *41*, 159–166. doi:[10.3758/s13421-012-0256-7](http://dx.doi.org/10.3758/s13421-012-0256-7).
 
 
-
-*   36Rigoni, D., Demanet, J., & Sartori, G. (2015). Happiness in action: The impact of positive affect on the time of the conscious intention to act. *Frontiers in Psychology*, *6*. [www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.01307](http://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.01307)
-
-*   37Renner, F., Schwarz, P., Peters, M. L., & Huibers, M. J. H. (2014). Effects of a best-possible-self mental imagery exercise on mood and dysfunctional attitudes. *Psychiatry Research*, *215*, 105–110. [`doi:10.1016/j.psychres.2013.10.033`](https://doi.org/10.1016/j.psychres.2013.10.033) (截至 [2024/10/24] 无法访问)
-
-*   38O’Donnell, C., Di Simplicio, M., Brown, R., Holmes, E. A., & Heyes, S. B. (2018). The role of mental imagery in mood amplification: An investigation across subclinical features of bipolar disorders. *Cortex*, *105*, 104–117.
-
-*   39Garland, E. L., Farb, N. A., Goldin, P. R., & Fredrickson, B. L. (2015). Mindfulness broadens awareness and builds eudaimonic meaning: A process model of mindful positive emotion regulation. *Psychological Inquiry*, *26*, 293–314. doi:[10.1080/1047840X.2015.1064294](http://dx.doi.org/10.1080/1047840X.2015.1064294).
-
-*   40Zeidan, F., Johnson, S. K., Diamond, B. J., David, Z., & Goolkasian, P. (2010). Mindfulness meditation improves cognition: Evidence of brief mental training. *Consciousness and Cognition: An International Journal*, *19*, 597–605. [`doi.org/10.1016/j.concog.2010.03.014`](https://doi.org/10.1016/j.concog.2010.03.014)
-
-*   41Damasio, A. (2005). *Descartes’ error: Emotion, reason, and the human brain*. Penguin.
-
-*   42Beijamini, F., Valentin, A., Jäger, R., Born, J., & Diekelmann, S. (2021). Sleep facilitates problem solving with no additional gain through targeted memory reactivation. *Frontiers in Behavioral Neuroscience*, *15*, 645110. doi:[10.3389/fnbeh.2021.645110](http://dx.doi.org/10.3389/fnbeh.2021.645110).
-
-*   43Sio, U. N., Monaghan, P., & Ormerod, T. (2013). Sleep on it, but only if it is difficult: Effects of sleep on problem solving. *Memory and Cognition*, *41*, 159–166. doi:[10.3758/s13421-012-0256-7](http://dx.doi.org/10.3758/s13421-012-0256-7).
-
-# 第二部分：在 AI 时代与人类互动
-
-# 第 6 章：驾驭人类个性
-
-DOI: [10.4324/9781032686653-8](http://doi.org/10.4324/9781032686653-8)
-
-我们在前几章中探讨的技能和知识，仅仅是我们在 AI 渗透我们的世界时所需学习内容的一小部分。在本章中，我们将探讨在 AI 出现之前我们就已需要、但在 AI 时代将变得日益重要的技能和知识。具体而言，要在 AI 时代蓬勃发展，我们需要善于与他人互动。随着机器承担更多工作，我们将拥有更多时间与他人互动。许多此类互动的关键，可能在于与他人紧密合作，做那些我们人类比 AI 做得更好的事——在需要考虑语境的开放性情境中做出反应。
-
-与他人互动具有挑战性的原因之一，在于我们需要懂得如何与不同个性的人共事。“个性”由一个人的行为个人模式和情绪反应组成。这些倾向受个人气质和经历的影响。人与人存在差异，而这些差异会影响他们在特定情境下的反应。
-
-研究人员开发了许多评估个性的不同方法。这些方法大多侧重于测量个性*特质*，即个性中随时间和地点相对稳定的特定方面。然而，正如我们将看到的，每种特质的表现方式可能各不相同，这既取决于我们拥有的其他特质，也取决于特定情境。但在探讨这些要素如何相互作用之前，我们首先需要弄清基础知识。
-
-## “大五”人格特质
-
-当研究人员关联来自多种人格测试的结果时，他们发现这些测试都基于相同的五个潜在特质。这五个特质是广泛的类别，也被称为“因素”或“维度”。这些所谓的“大五”人格特质在心理学家中广为认可。这五个因素分别是：开放性、尽责性、外向性、宜人性和神经质。你可以用首字母缩写词 OCEAN 来记忆它们。¹^,²^,³
-
-让我们依次考察每个因素。为了定义和说明这些维度，我们侧重于高分与低分的含义，但请记住，人们的得分可能处于中间水平。
-
-### 对经验的开放性
-
-在开放性特质上得分高的人，往往富有想象力、好奇心、思想开放、喜欢冒险，并对美敏感。相反，在这一因素上得分低的人，倾向于偏好熟悉的常规事务、对理论或抽象概念不感兴趣，并偏好传统的做事方式。研究人员发现，评估这一维度的测试分数能预测人们在需要创造性思维的任务中的表现。特别是，在这一因素上得分高的人，在从事发散性思维（正如我们在第 4 章所讨论的）时效率更高。研究还证实，在这一因素上得分高的人倾向于参与艺术和文化活动。⁴^,⁵^,⁶
-
-但在该维度上得分高也有其负面影响。⁷ 例如，高分者可能难以应对常规任务、目标不稳定、有时会“过度思考”情境而变得优柔寡断、冒不必要的风险、冲动行事、难以坚持一份职业——甚至一段伴侣关系——并可能倾向于尝试违禁物质。
-
-尽管该因素经常从人格测试分数分析中浮现，但由于它涵盖了如此多不同类型的行为和偏好，因此难以严格准确地评估。这一因素通常通过让人们填写问卷来测量，因此分数可能反映出一个人自我认知中的偏见和不准确性。分数也可能反映出受测者希望给人留下积极印象的愿望。此外，“开放性”的概念与智力和创造力并不完全截然不同，因此很难将这一人格特质的影响与其他心理因素的贡献区分开来。
-
-### 尽责性
-
-在尽责性上得分高的人，往往条理分明、值得信赖，且拥有很强的自律性。在这一因素上得分低的人，可能更随性、不注重细节、且不太以目标为导向。尽责性测试的分数能预测一个人是否会坚持执行计划、做事仔细勤勉以及遵守规则。该因素测量得分还能预测广泛领域的工作绩效。此外，该因素的测量得分还能预测人们的寿命长短，这可能仅仅反映了这些分数能预测规律锻炼、健康饮食和遵医嘱等行为。⁸^,⁹^,¹⁰ 事实上，童年时期的尽责性测量指标能预测成年后的职业成就和社会关系质量。尽责性还与坚持性相关，这可能解释了其中一些效应。
-
-
-
-
-
-高度尽责的潜在缺点包括缺乏灵活性、沉迷工作而忽视生活其他方面，以及容易产生工作相关压力。高度尽责的人对新机遇的反应也可能较慢。但请记住，一个人既可以高尽责，又可以高开放，这会勾勒出一幅更复杂的个性图景。
-
-### 外向性
-
-这一维度的一端是“外向性”，另一端是“内向性”。外向性是指为人外向、喜欢与他人交谈和社交、善于表达情绪、果断自信，且总体上以他人为导向。相反，内向性是指善于内省、喜欢独处、偏好安静的活动，且总体上倾向于一次只与一两个人互动。外向者从与他人的互动中获得能量，而内向者则从独处中获得能量。¹¹^,¹²^,¹³
-
-在这一维度上得分较高的人（即偏向外向性一极）通常对生活持更积极的态度，并表示经常体验到积极情绪。他们也倾向于在需要频繁与他人互动的工作中取得成功。领导者通常是外向的。另一方面，得分偏向内向性一极的人能更深度地专注、擅长独立工作、善于倾听、观察敏锐——所有这些特质往往使他们成为优秀的决策者。
-
-不同文化对这一维度两极的重视程度各异。一些文化（如美国）主要重视外向、善社交的外向者，而另一些文化（如亚洲许多国家）则主要重视深思熟虑、内敛含蓄的内向者。此外，即使在美国等文化中，某些人也可能被视为“过于外向”，从事冲动行为和冒险——这可能导致事故或药物滥用。
-
-### 宜人性
-
-宜人性因素反映了一个人友善、富有同情心和合作的程度。¹⁴^,¹⁵^,¹⁶^,¹⁷ 在这一维度上得分较高的人倾向于重视与他人相处融洽，通常被认为心地善良、乐于助人且值得信赖。相反，得分较低的人可能更具竞争性、更果断自信，且不太倾向于与他人合作。该因素的高分可预测亲社会行为和积极的社会结果，如同伴接纳和稳定的人际关系。高分还预示着较低水平的犯罪行为和药物滥用。此外，高分预示着更好的冲突解决技巧和较少的人际冲突。
-
-尽管如此，在某些情境下，该因素得分高可能是把双刃剑。首先，得分高的人在必须进行艰难谈判时可能表现不佳。其次，高分者合作和信任的天性可能使他们容易被他人操纵。
-
-### 神经质
-
-神经质因素关注“情绪反应性”。在这一因素上得分较高的人倾向于情绪不稳定，可能会经历极端的负面情绪——如焦虑、愤怒或抑郁——尤其是在压力下。得分较低的人倾向于情绪稳定、有韧性，且通常沉着冷静。该因素的高分可预测一个人患情绪障碍或焦虑障碍的可能性，以及健康状况较差的可能性。在这一维度上得分高的人也容易陷入适应不良的思维过程，例如执着地思考潜在问题、沉溺于恐惧、不恰当地将小事灾难化、即便灾难不太可能发生也能预见到灾难。这些思维过程反过来会放大压力的影响，并引发其他心理健康问题。¹⁸^,¹⁹^,²⁰
-
-有人批评这一维度，因为它常被完全负面地描述，但高神经质的某些方面（如警惕性和审慎）在高风险情境下可能具有适应性。
-
-为了使这一切更具体，你可以尝试以下提示词——或者参加一个广泛使用的免费测试，网址为 [`bigfive-test.com/`](https://bigfive-test.com/)；快速在 Google 上搜索会发现许多可能性。以下提示词无法产生科学有效的评估，而只是旨在让你更好地了解这些因素的本质。你可以为自己回答，也可以为你足够了解其内心体验的人回答。在下文中，我是基于对一位挚友的了解来回答的。
 
 正如这类练习所清楚表明的，个性是多维的，我们每个人都有不同的倾向，这些倾向可能在不同情境下凸显出来。
 
@@ -1262,9 +1164,6 @@ DOI: [10.4324/9781032686653-8](http://doi.org/10.4324/9781032686653-8)
 *   **高开放性 + 高尽责性**。具有这一特定特质组合的人在鼓励创新的环境中（如科技初创公司）应当表现良好。他们不仅贡献新想法，而且自律性足以将其实施。但在某些工作中是美德的特质，在其他工作中可能成为缺点。例如，同一个人在高度官僚的公司或组织中可能感到窒息，并因在坚守既定规则和程序的同时仍对新想法保持开放而体验压力。
 
 *   **高外向性 + 低宜人性**。具有这一特质组合的人可能在竞争性销售或领导角色中如鱼得水。这些角色通常要求果断自信和厚脸皮（抗挫折）。但同样，这种类型的人在团队合作与和谐至上的工作环境中（如某些非政府组织）会遇到问题。
-
-
-
 
 同样，不同特质组合对一个人在不同教育环境中的表现有着明确的影响。例如：
 
@@ -1288,7 +1187,7 @@ DOI: [10.4324/9781032686653-8](http://doi.org/10.4324/9781032686653-8)
 
 ### 识别核心特质
 
-表 6.1 总结了大五因素中每一个的十个构成特质。尽管列表很长，但这只是研究人员已识别出的大量此类特质的一个样本。这些特质之所以是强有力的行为预测指标，部分原因在于对于任何特定个体而言，只有其中一些是相关的。³⁵ 我们的**核心特质**是那些通常处于前台、影响我们在广泛情境下的思想、情感和行为的特质，而更外围的特质可能只在特定情境下才重要。例如，“自我效能感”是尽责性因素下的一个构成特质，可能是 Sally 的一个决定性特征，但对 John 来说根本不重要——因此它会被视为她的核心特质，但不是他的。在这种情况下，Sally 在自我效能感测量上的得分可能预测她的行为，但 John 的得分可能无法预测。
+表 6.1 总结了大五因素中每一个的十个构成特质。尽管列表很长，但这只是研究人员已识别出的大量此类特质的一个样本。这些特质之所以是强有力的行为预测指标，部分原因在于对于任何特定个体而言，只有其中一些是相关的。³⁵ 我们的`核心特质`是那些通常处于前台、影响我们在广泛情境下的思想、情感和行为的特质，而更外围的特质可能只在特定情境下才重要。例如，“自我效能感”是尽责性因素下的一个构成特质，可能是 Sally 的一个决定性特征，但对 John 来说根本不重要——因此它会被视为她的`核心特质`，但不是他的。在这种情况下，Sally 在自我效能感测量上的得分可能预测她的行为，但 John 的得分可能无法预测。
 
 表 6.1 大五人格构成特质示例。
 
@@ -1318,41 +1217,36 @@ DOI: [10.4324/9781032686653-8](http://doi.org/10.4324/9781032686653-8)
 | | 群居性 | 偏好与他人相处而非独处。 | 举办派对和社交聚会。 |
 | | 自信 | 倾向于掌控局面、指导他人活动。 | 自信地领导小组项目或会议。 |
 | | 活动水平 | 喜欢保持忙碌和投入。 | 参与多项爱好和运动。 |
+| | 寻求刺激 | 在他人陪伴下或活动中寻求刺激。 | 去蹦极或享受热闹的社交活动。 |
+| | 愉快 | 积极情绪的存在及对生活的看法。 | 经常微笑并保持积极的态度。 |
+| | 温暖 | 平易近人且容易与他人建立融洽关系。 | 让新认识的人感到自在。 |
+| | 积极 | 倾向于看到事物好的一面并预期良好的结果。 | 总是谈论事物光明的一面。 |
+| | 精力 | 高度的热情和活力。 | 总是精力充沛，随时准备迎接新的冒险。 |
+| | 健谈 | 倾向于参与交谈。 | 在社交聚会中主导谈话。 |
+| **宜人性** | 信任 | 相信他人的真诚和善意。 | 假设人们怀有最好的意图。 |
+| | 道德 | 坦率、真诚、诚实的朴素。 | 直率诚实，不耍心机。 |
+| | 利他 | 乐于助人；无私。 | 定期在当地收容所做志愿者。 |
+| | 合作 | 不喜欢对抗。偏好与他人相处融洽。 | 避免争吵并寻求妥协。 |
+| | 谦逊 | 倾向于淡化自己的成就或能力。 | 很少吹嘘个人成就。 |
+| | 同情 | 对处于困境中的人感到怜悯。 | 为朋友的问题感到难过并试图提供帮助。 |
+| | 善良 | 友好、慷慨、体贴。 | 在没被要求的情况下帮助邻居做日常家务。 |
+| | 温和 | 举止温和、性情平静。 | 语气柔和，待人细心。 |
+| | 灵活 | 面对不同意见时愿意适应或妥协。 | 改变计划以适应他人的需求。 |
+| | 耐心 | 能够接受或忍受延迟、问题或痛苦而不恼怒。 | 冷静地等待轮到自己而不抱怨。 |
+| **神经质** | 焦虑 | 倾向于紧张或容易感到压力。 | 为小事和未来的可能性担忧。 |
+| | 愤怒 | 愤怒和挫败感的频率和强度。 | 因小麻烦而恼火。 |
+| | 抑郁 | 倾向于感到悲伤、沮丧和灰心。 | 遭遇挫折后情绪低落且难以恢复。 |
+| | 自我意识 | 对他人如何看待自己敏感。 | 经常琢磨他人如何看待自己。 |
+| | 无节制 | 倾向于产生强烈的渴望和冲动。 | 难以抗拒过度沉溺于喜爱的食物。 |
+| | 脆弱 | 难以应对压力。 | 在高压情境下感到不堪重负。 |
+| | 敏感 | 对细微变化、信号或影响反应迅速。 | 容易受情绪或语气细微变化的影响。 |
+| | 情绪波动 | 情感急剧、强烈且无法控制地起伏。 | 对日常挫折反应强烈。 |
+| | 悲观 | 预期最坏的情况会发生。 | 即使胜算很大也怀疑结果。 |
+| | 不安全感 | 缺乏对自己能力或价值的信心。 | 因自我怀疑而犹豫是否接受新挑战。 |
 
+鉴于`核心特质`的预测力，我们有必要对构成大五因素的具体特质变得敏感。表 6.1 令人望而生畏，这通常预示着一个机会，可以启动`认知放大循环 (CAL)`来卸下试图记忆并学习如何应用所有这些信息的认知负担。然而，在这种情况下，我们需要承认，当考虑情境因素时，AI 并不适合诊断特质之间的相互作用。尽管如此，`CAL`可以帮助我们识别一个人可能正在表达的`核心特质`，因为这些特质通常在不同情境中都很明显。
 
-
-
-
-| | | 寻求刺激 | 在他人陪伴下或活动中寻求刺激。 | 去蹦极或享受热闹的社交活动。 |
-| | | 愉快 | 积极情绪的存在及对生活的看法。 | 经常微笑并保持积极的态度。 |
-| | | 温暖 | 平易近人且容易与他人建立融洽关系。 | 让新认识的人感到自在。 |
-| | | 积极 | 倾向于看到事物好的一面并预期良好的结果。 | 总是谈论事物光明的一面。 |
-| | | 精力 | 高度的热情和活力。 | 总是精力充沛，随时准备迎接新的冒险。 |
-| | | 健谈 | 倾向于参与交谈。 | 在社交聚会中主导谈话。 |
-| | **宜人性** | 信任 | 相信他人的真诚和善意。 | 假设人们怀有最好的意图。 |
-| | | 道德 | 坦率、真诚、诚实的朴素。 | 直率诚实，不耍心机。 |
-| | | 利他 | 乐于助人；无私。 | 定期在当地收容所做志愿者。 |
-| | | 合作 | 不喜欢对抗。偏好与他人相处融洽。 | 避免争吵并寻求妥协。 |
-| | | 谦逊 | 倾向于淡化自己的成就或能力。 | 很少吹嘘个人成就。 |
-| | | 同情 | 对处于困境中的人感到怜悯。 | 为朋友的问题感到难过并试图提供帮助。 |
-| | | 善良 | 友好、慷慨、体贴。 | 在没被要求的情况下帮助邻居做日常家务。 |
-| | | 温和 | 举止温和、性情平静。 | 语气柔和，待人细心。 |
-| | | 灵活 | 面对不同意见时愿意适应或妥协。 | 改变计划以适应他人的需求。 |
-| | | 耐心 | 能够接受或忍受延迟、问题或痛苦而不恼怒。 | 冷静地等待轮到自己而不抱怨。 |
-| | **神经质** | 焦虑 | 倾向于紧张或容易感到压力。 | 为小事和未来的可能性担忧。 |
-| | | 愤怒 | 愤怒和挫败感的频率和强度。 | 因小麻烦而恼火。 |
-| | | 抑郁 | 倾向于感到悲伤、沮丧和灰心。 | 遭遇挫折后情绪低落且难以恢复。 |
-| | | 自我意识 | 对他人如何看待自己敏感。 | 经常琢磨他人如何看待自己。 |
-| | | 无节制 | 倾向于产生强烈的渴望和冲动。 | 难以抗拒过度沉溺于喜爱的食物。 |
-| | | 脆弱 | 难以应对压力。 | 在高压情境下感到不堪重负。 |
-| | | 敏感 | 对细微变化、信号或影响反应迅速。 | 容易受情绪或语气细微变化的影响。 |
-| | | 情绪波动 | 情感急剧、强烈且无法控制地起伏。 | 对日常挫折反应强烈。 |
-| | | 悲观 | 预期最坏的情况会发生。 | 即使胜算很大也怀疑结果。 |
-| | | 不安全感 | 缺乏对自己能力或价值的信心。 | 因自我怀疑而犹豫是否接受新挑战。 |
-
-鉴于核心特质的预测力，我们有必要对构成大五因素的具体特质变得敏感。表 6.1 令人望而生畏，这通常预示着一个机会，可以启动 `认知放大循环 (CAL)` 来卸下试图记忆并学习如何应用所有这些信息的认知负担。然而，在这种情况下，我们需要承认，当考虑情境因素时，AI 并不适合诊断特质之间的相互作用。尽管如此，`CAL` 可以帮助我们识别一个人可能正在表达的核心特质，因为这些特质通常在不同情境中都很明显。
-
-要了解一个人在特定情境下所表达的核心特质，请尝试以下提示词：
+要了解一个人在特定情境下所表达的`核心特质`，请尝试以下提示词：
 
 这是回复：
 
@@ -1360,24 +1254,23 @@ AI 的观察和假设是开始思考社会互动的有益方式。然而，我�
 
 ### 另一种特质类型
 
-我们专注于大五模型及其构成特质，因为这是分析人类人格最被接受和验证的方法。然而，这并非唯一的方法。简要了解另一种广泛使用的方法，即 `迈尔斯-布里格斯类型指标 (MBTI)`，是值得的。
+我们专注于大五模型及其构成特质，因为这是分析人类人格最被接受和验证的方法。然而，这并非唯一的方法。简要了解另一种广泛使用的方法，即`迈尔斯-布里格斯类型指标 (MBTI)`，是值得的。
 
-首先，什么是 `MBTI`？它是一份旨在评估人格四个关键方面的问卷。³⁶^,³⁷ 凯瑟琳·库克·布里格斯及其女儿伊莎贝尔·布里格斯·迈尔斯开发了这种方法，基于瑞士精神分析学家卡尔·荣格发表的理论的某些方面。荣格假设，当我们人类与世界互动时，依赖四种功能，即感觉、直觉、情感和思维。`MBTI` 以这些功能为跳板，开发出四个二分量表，并根据在这些维度上的得分组合，将每个人归类为 16 种人格类型之一。这四个二分维度如下：
+首先，什么是`MBTI`？它是一份旨在评估人格四个关键方面的问卷。³⁶^,³⁷ 凯瑟琳·库克·布里格斯及其女儿伊莎贝尔·布里格斯·迈尔斯开发了这种方法，基于瑞士精神分析学家卡尔·荣格发表的理论的某些方面。荣格假设，当我们人类与世界互动时，依赖四种功能，即感觉、直觉、情感和思维。`MBTI`以这些功能为跳板，开发出四个二分量表，并根据在这些维度上的得分组合，将每个人归类为 16 种人格类型之一。这四个二分维度如下：
 
 *   **外向 (E) 对 内向 (I)**：该维度试图捕捉一个人如何获取或聚焦精力，是通过与人互动和参与社交活动，还是通过反思和独处活动。这与大五模型的外向性因素相同。
+
 *   **实感 (S) 对 直觉 (N)**：该维度试图捕捉一个人如何收集信息，是通过感官（实感），还是通过注意即时数据之外的模式和意义（直觉）。
+
 *   **思维 (T) 对 情感 (F)**：该维度试图捕捉一个人如何做决定，是依赖客观事实和原则（思维），还是依赖价值观和情感影响（情感）。
+
 *   **判断 (J) 对 感知 (P)**：该维度试图捕捉一个人如何与外部世界联系，是偏好计划和结构（判断），还是偏好开放、适应性强和灵活（感知）。
 
-这四种偏好的组合产生 16 种人格类型，每种类型由一个四字母代码指定（例如 `ENTP`、`ISTP`）。
+这四种偏好的组合产生 16 种人格类型，每种类型由一个四字母代码指定（例如`ENTP`、`ISTP`）。
 
-尽管 `MBTI` 对许多人具有直觉吸引力，但科学研究反复未能支持它。³⁸^,³⁹ 事实上，多达 50% 的参加测试者在五周后再次测试时，至少在一个维度上会得到不同的结果。这是非常差的信度。⁴⁰^,⁴¹ 不仅如此，该测试无法预测工作表现、人际关系或个人满意度方面的行为。⁴² 也许一个更深层的问题是，只有 16 个类别，但人格差异更加多样和细微——正如表 6.1 所证明的那样。最后，`MBTI` 如有任何效用，似乎源于其与特定大五因素的相关性。特别是，外向对内向量表和实感对直觉量表分别与外向性和宜人性量表高度相关。⁴³
+尽管`MBTI`对许多人具有直觉吸引力，但科学研究反复未能支持它。³⁸^,³⁹ 事实上，多达 50% 的参加测试者在五周后再次测试时，至少在一个维度上会得到不同的结果。这是非常差的信度。⁴⁰^,⁴¹ 不仅如此，该测试无法预测工作表现、人际关系或个人满意度方面的行为。⁴² 也许一个更深层的问题是，只有 16 个类别，但人格差异更加多样和细微——正如表 6.1 所证明的那样。最后，`MBTI`如有任何效用，似乎源于其与特定大五因素的相关性。特别是，外向对内向量表和实感对直觉量表分别与外向性和宜人性量表高度相关。⁴³
 
 ## 改变特质，改变行为
-
-
-
-
 
 ### 我们的性格特质随时间相对稳定，但并非绝对固定
 
@@ -1386,15 +1279,18 @@ AI 的观察和假设是开始思考社会互动的有益方式。然而，我�
 各种事件都可能改变这一特质（例如⁴⁷^,⁴⁸）。此类事件包括：
 
 *   **生活经历。** 我们个人处境发生的某些重大变化，如结婚或生育子女，可能会提高尽责性。
+
 *   **衰老。** 随着时间推移，人们通常会变得更有尽责性，这可能反映了大脑成熟变化与积累的生活经历共同作用的结果。
+
 *   **努力。** 我们也可以刻意提高自己的尽责性，部分方法是设定目标并确保我们坚持执行。这反过来又能形成新习惯，使我们变得更有尽责性。
+
 *   **环境。** 转到一份高度结构化的新工作能让我们更有尽责性。例如，管理一家快餐店，其固定的日常任务能让我们养成注重细节和结构的习惯。
 
 尽管我们可以在一定程度上改变自己的性格，但这通常需要付出大量努力。另一种策略不是试图改变自己，而是接受自己的性格，并想办法调整自己的*行为*以适应特定情境。要开始这一过程，可以参加一项评估你在“大五”人格特质上具体表现的测试（如前文引用的那项）。随后，你可以向值得信赖的朋友、家人或同事寻求反馈，了解你被分配的特质是否准确。这种反馈可能会令人惊讶。我们可能不会密切关注自己的行为如何反映我们的思想和感受，也可能没有意识到他人在不同情境下如何感知这些行为。通过这一练习，我们可以很好地了解自己在五大因素上的得分，以及它们在特定情境中的表现。
 
-一旦我们对这些人格因素有了很好的了解，接下来就需要对那些特质在助力我们、还是制造摩擦和压力的情境保持敏感。如果人格特质在助力我们，我们就应顺其自然。但如果我们的性格阻碍了我们，最好调整行为来规避问题。也就是说，即使我们无法轻易改变特质本身，我们也可以——通过一些努力——改变自己的行为。要更擅长做到这一点，我们可以使用 CAL。
+一旦我们对这些人格因素有了很好的了解，接下来就需要对那些特质在助力我们、还是制造摩擦和压力的情境保持敏感。如果人格特质在助力我们，我们就应顺其自然。但如果我们的性格阻碍了我们，最好调整行为来规避问题。也就是说，即使我们无法轻易改变特质本身，我们也可以——通过一些努力——改变自己的行为。要更擅长做到这一点，我们可以使用`CAL`。
 
-例如，我们可以指示 AI 开发角色扮演练习，帮助我们为那些需要抑制自然冲动的情境做准备。例如，如果我们性格内向——也许如表 6.1 所述，我们在健谈性和自信方面的核心特质得分较低——且即将参加一个社交拓展活动，我们可以按如下方式与 AI 互动。
+例如，我们可以指示 AI 开发角色扮演练习，帮助我们为那些需要抑制自然冲动的情境做准备。例如，如果我们性格内向——也许如表 6.1 所述，我们在健谈性和自信方面的`核心特质`得分较低——且即将参加一个社交拓展活动，我们可以按如下方式与 AI 互动。
 
 AI 提供的此类建议属于应对策略。我们也可以制定更通用的应对策略。例如，即使我们在外向性和/或宜人性上得分很高，因此通常在与人相处时游刃有余、得心应手，我们仍可改善在特定情境下与人的互动方式。特别是，我们都可以提升沟通技巧。为此，我们可以提示 AI 帮助我们学会更善于接收他人传递的信息，并更充分、清晰地表达自己（例如⁴⁹）。此外，AI 还能帮助我们培养时间管理技能。这对尽责性得分较低的人特别有用。
 
@@ -1419,6 +1315,11 @@ Trait Theory—History of Personality Psychology: [`www.youtube.com/watch?v=oUgC
 *   “Big Five personality traits”（大五人格特质）
 *   “OCEAN model of personality”（人格 OCEAN 模型）
 *   “Trait theory in personality psychology”（人格心理学中的特质理论）
+
+
+
+# 主题列表
+
 *   “Personality differences in human interactions”（人际互动中的性格差异）
 *   “Navigating different personality types”（应对不同人格类型）
 *   “Understanding personality for effective communication”（理解性格以实现有效沟通）
@@ -1429,9 +1330,12 @@ Trait Theory—History of Personality Psychology: [`www.youtube.com/watch?v=oUgC
 *   “Leveraging personality research for self-understanding”（利用人格研究增进自我理解）
 *   “AI and personality analysis”（AI 与人格分析）
 
-Jordan Peterson | Big 5 Personality Traits: [`www.youtube.com/watch?v=PgIErTULONc`](https://www.youtube.com/watch?v=PgIErTULONc)
+## 视频资源
 
-What Causes Our Personality? Genetics vs. Environment: [`www.youtube.com/watch?v=aew2WRAOk9M`](https://www.youtube.com/watch?v=aew2WRAOk9M)
+*   Jordan Peterson | Big 5 Personality Traits: [`www.youtube.com/watch?v=PgIErTULONc`](https://www.youtube.com/watch?v=PgIErTULONc)
+*   What Causes Our Personality? Genetics vs. Environment: [`www.youtube.com/watch?v=aew2WRAOk9M`](https://www.youtube.com/watch?v=aew2WRAOk9M)
+
+# 研究议题
 
 *   “Cross-cultural validity of the Big Five personality traits”（大五人格特质的跨文化效度）
 *   “Big Five personality traits and life outcomes”（大五人格特质与生活结果）
@@ -1444,18 +1348,16 @@ What Causes Our Personality? Genetics vs. Environment: [`www.youtube.com/watch?v
 *   “Context-dependent expression of personality traits”（人格特质的情境依赖性表达）
 *   “Personality psychology research on trait interactions”（人格心理学中的特质互动研究）
 
+# 资源与参考文献
 
+## 视频资源
 
+### Big Five 模型应用
 
-
-## 资源与参考文献
-
-### 视频资源
-
-#### Big Five 模型应用
 *   “在现实环境中应用 Big Five 模型”
 
-#### MBTI 相关
+### MBTI 相关
+
 *   Myers Briggs (MBTI) 详解——性格测试：[`www.youtube.com/watch?v=2ZF4OM6mrrI`](https://www.youtube.com/watch?v=2ZF4OM6mrrI)
 *   迈尔斯-布里格斯类型指标 (MBTI) 的问题：[`www.youtube.com/watch?v=tPgKQO-WX28`](https://www.youtube.com/watch?v=tPgKQO-WX28)
 *   “迈尔斯-布里格斯类型指标 (MBTI) 详解”
@@ -1464,7 +1366,8 @@ What Causes Our Personality? Genetics vs. Environment: [`www.youtube.com/watch?v
 *   “MBTI 与 Big Five 人格特质的关系”
 *   “人格研究中相关证据的局限性”
 
-#### 性格改变与发展
+### 性格改变与发展
+
 *   你能改变你的性格吗？[`www.youtube.com/watch?v=Dy1i-u_2rQ8`](https://youtu.be/Dy1i-u_2rQ8?si=V-JFuxlrgfx-_VdK)
 *   如何破解人际网络 \| David Burkus \| TEDx University of Nevada：[`www.youtube.com/watch?v=xFrqZjIDE44`](https://www.youtube.com/watch?v=xFrqZjIDE44)
 *   “通过干预改变人格特质”
@@ -1482,87 +1385,28 @@ What Causes Our Personality? Genetics vs. Environment: [`www.youtube.com/watch?v
 
 ## 参考文献
 
-1.  Costa, P., & McCrae, R. R. (2002). Personality in adulthood: A Five-Factor Theory perspective. *Management Information Systems Quarterly—MISQ*. doi:[10.4324/9780203428412](http://dx.doi.org/10.4324/9780203428412).
+1.  Costa, P., & McCrae, R. R. (2002). Personality in adulthood: A Five-Factor Theory perspective. *Management Information Systems Quarterly—MISQ*. doi:[`10.4324/9780203428412`](http://dx.doi.org/10.4324/9780203428412).
 2.  Goldberg, L. R. (1993). The structure of phenotypic personality traits. *American Psychologist*, 48, 26–34. [`doi.org/10.1037/0003-066X.48.1.26`](https://doi.org/10.1037/0003-066X.48.1.26)
-3.  McCrae, R. R., & John, O. P. (1992). An introduction to the Five-Factor model and its applications. *Journal of Personality*, 60, 175–215. doi:[10.1111/j.1467-6494.1992.tb00970.x](http://dx.doi.org/10.1111/j.1467-6494.1992.tb00970.x).
-4.  Kaufman, S. B., Quilty, L. C., Grazioplene, R. G., Hirsh, J. B., Gray, J. R., Peterson, J. B., & DeYoung, C. G. (2016). Openness to experience and intellect differentially predict creative achievement in the arts and sciences. *Journal of Personality*, 84, 248–258. doi:[10.1111/jopy.12156](http://dx.doi.org/10.1111/jopy).
+3.  McCrae, R. R., & John, O. P. (1992). An introduction to the Five-Factor model and its applications. *Journal of Personality*, 60, 175–215. doi:[`10.1111/j.1467-6494.1992.tb00970.x`](http://dx.doi.org/10.1111/j.1467-6494.1992.tb00970.x).
+4.  Kaufman, S. B., Quilty, L. C., Grazioplene, R. G., Hirsh, J. B., Gray, J. R., Peterson, J. B., & DeYoung, C. G. (2016). Openness to experience and intellect differentially predict creative achievement in the arts and sciences. *Journal of Personality*, 84, 248–258. doi:[`10.1111/jopy.12156`](http://dx.doi.org/10.1111/jopy).
 5.  McCrae, R. R., & Sutin, A. R. (2009). Openness to experience. In M. R. Leary & R. H. Hoyle (Eds.), *Handbook of individual differences in social behavior*. The Guilford Press, pp. 257–273.
-6.  Schretlen, D. J., van der Hulst, E. J., Pearlson, G. D., & Gordon, B. (2010). A neuropsychological study of personality: Trait openness in relation to intelligence, fluency, and executive functioning. *Journal of Clinical and Experimental Neuropsychology*, 32, 1068–1073. doi:[10.1080/13803391003689770](http://dx.doi.org/10.1080/13803391003689770).
-7.  Piedmont, R. L., Sherman, M. F., & Sherman, N. C. (2012). Maladaptively high and low openness: The case for experiential permeability. *Journal of Personality*, 80, 1641–1668. doi:[10.1111/j.1467-6494.2012.00777](http://dx.doi.org/10.1111/j.1467-6494.2012.00777).
-8.  Bogg, T., & Roberts, B. W. (2013). The case for conscientiousness: Evidence and implications for a personality trait marker of health and longevity. *Annals of Behavioral Medicine*, 45, 278–288. doi:[10.1007/s12160-012-9454-6](http://dx.doi.org/10.1007/s12160-012-9454-6).
-9.  Jackson, J. J., Wood, D., Bogg, T., Walton, K. E., Harms, P. D., & Roberts, B. W. (2010). What do conscientious people do? Development and validation of the Behavioral Indicators of Conscientiousness (BIC). *Journal of Research in Personality*, 44, 501–511. doi:[10.1016/j.jrp.2010.06.005](http://dx.doi.org/10.1016/j.jrp.2010.06.005).
+6.  Schretlen, D. J., van der Hulst, E. J., Pearlson, G. D., & Gordon, B. (2010). A neuropsychological study of personality: Trait openness in relation to intelligence, fluency, and executive functioning. *Journal of Clinical and Experimental Neuropsychology*, 32, 1068–1073. doi:[`10.1080/13803391003689770`](http://dx.doi.org/10.1080/13803391003689770).
+7.  Piedmont, R. L., Sherman, M. F., & Sherman, N. C. (2012). Maladaptively high and low openness: The case for experiential permeability. *Journal of Personality*, 80, 1641–1668. doi:[`10.1111/j.1467-6494.2012.00777`](http://dx.doi.org/10.1111/j.1467-6494.2012.00777).
+8.  Bogg, T., & Roberts, B. W. (2013). The case for conscientiousness: Evidence and implications for a personality trait marker of health and longevity. *Annals of Behavioral Medicine*, 45, 278–288. doi:[`10.1007/s12160-012-9454-6`](http://dx.doi.org/10.1007/s12160-012-9454-6).
+9.  Jackson, J. J., Wood, D., Bogg, T., Walton, K. E., Harms, P. D., & Roberts, B. W. (2010). What do conscientious people do? Development and validation of the Behavioral Indicators of Conscientiousness (BIC). *Journal of Research in Personality*, 44, 501–511. doi:[`10.1016/j.jrp.2010.06.005`](http://dx.doi.org/10.1016/j.jrp.2010.06.005).
 10. Roberts, B. W., Jackson, J. J., Fayard, J. V., Edmonds, G., & Meints, J. (2009). Conscientiousness. In M. R. Leary & R. H. Hoyle (Eds.), *Handbook of individual differences in social behavior*. The Guilford Press, pp. 369–381.
 11. Haddock, A. D., & Rutkowski, A. P. (Eds.). (2014). *The psychology of extraversion*. Nova Science Publishers.
 12. Lucas, R. E., & Diener, E. (2001). Extraversion. In N. J. Smelser & P. B. Baltes (Eds.), *International encyclopedia of the social & behavioral sciences*. Pergamon, pp. 5202–5205.
-13. McCabe, K. O., & Fleeson W. (2012). What is extraversion for? Integrating trait and motivational perspectives and identifying the purpose of extraversion. *Psychological Science*, 23, 1498–1505. doi:[10.1177/0956797612444904](http://dx.doi.org/10.1177/0956797612444904).
+13. McCabe, K. O., & Fleeson W. (2012). What is extraversion for? Integrating trait and motivational perspectives and identifying the purpose of extraversion. *Psychological Science*, 23, 1498–1505. doi:[`10.1177/0956797612444904`](http://dx.doi.org/10.1177/0956797612444904).
 14. Furnham, A. (2017). Agreeableness. In V. Zeigler-Hill & T. Shackelford (Eds.), *Encyclopedia of personality and individual differences*. Springer, pp. 1–11. [`doi.org/10.1007/978-3-319-28099-8_1200-1`](https://doi.org/10.1007/978-3-319-28099-8_1200-1)
 15. Furnham, A., & Cheng, H. (2015). Early indicators of adult trait agreeableness. *Personality and Individual Differences*, 73, 67–71. [`doi.org/10.1016/j.paid.2014.09.025`](https://doi.org/10.1016/j.paid.2014.09.025)
-16. Graziano, W. G., Habashi, M. M., Sheese, B. E., & Tobin, R. M. (2007). Agreeableness, empathy, and helping: A person x situation perspective. *Journal of Personality and Social Psychology*, 93, 583–599. doi:[10.1037/0022-3514.93.4.583](http://dx.doi.org/10.1037/0022-3514.93.4.583).
+16. Graziano, W. G., Habashi, M. M., Sheese, B. E., & Tobin, R. M. (2007). Agreeableness, empathy, and helping: A person x situation perspective. *Journal of Personality and Social Psychology*, 93, 583–599. doi:[`10.1037/0022-3514.93.4.583`](http://dx.doi.org/10.1037/0022-3514.93.4.583).
 17. Sheese, B. E., & Graziano, W. G. (2004). Agreeableness. In C. Spielberger (Ed.), *Encyclopedia of applied psychology*. Academic Press, pp. 117–122.
-18. Luo, J., Zhang, B., Cao, M., & Roberts, B. W. (2023). The stressful personality: A meta-analytical review of the relation between personality and stress. *Personality and Social Psychology Review*, 27, 128–194. doi:[10.1177/10888683221104002](http://dx.doi.org/10.1177/10888683221104002).
+18. Luo, J., Zhang, B., Cao, M., & Roberts, B. W. (2023). The stressful personality: A meta-analytical review of the relation between personality and stress. *Personality and Social Psychology Review*, 27, 128–194. doi:[`10.1177/10888683221104002`](http://dx.doi.org/10.1177/10888683221104002).
 19. Perkins, A. M., Arnone, D., Smallwood, J., & Mobbs, D. (2015). Thinking too much: Self-generated thought as the engine of neuroticism. *Trends in Cognitive Sciences*, 19, 492–498.
-20. Widiger, T. A., & Oltmanns, J. R. (2017). Neuroticism is a fundamental domain of personality with enormous public health implications. *World Psychiatry*, 16, 144–145. doi:[10.1002/wps.20411](http://dx.doi.org/10.1002/wps.20411).
+20. Widiger, T. A., & Oltmanns, J. R. (2017). Neuroticism is a fundamental domain of personality with enormous public health implications. *World Psychiatry*, 16, 144–145. doi:[`10.1002/wps.20411`](http://dx.doi.org/10.1002/wps.20411).
 21. De Raad, B., Perugini, M., Hrebícková, M., & Szarota, P. (1998). Lingua franca of personality: Taxonomies and structures based on the psycholexical approach. *Journal of Cross-Cultural Psychology*, 29, 212–232. [`doi.org/10.1177/0022022198291011`](https://doi.org/10.1177/0022022198291011)
-
-
-
-
-
-## 参考文献
-
-*   22 McCrae, R. R., Terracciano, A., & Members of the Personality Profiles of Cultures Project. (2005). Personality profiles of cultures: Aggregate personality traits. *Journal of Personality and Social Psychology*, *89*, 407–425. doi:[10.1037/0022-3514.89.3.407](http://dx.doi.org/10.1037/0022-3514.89.3.407).
-
-*   23 Schmitt, D. P., Allik, J., McCrae, R. R., & Benet-Martínez, V. (2007). The geographic distribution of Big Five personality traits: Patterns and profiles of human self-description across 56 nations. *Journal of Cross-Cultural Psychology*, *38*, 173–212. doi:[10.1177/0022022106297299](http://dx.doi.org/10.1177/0022022106297299).
-
-*   24 Barrick, M. R., & Mount, M. K. (1991). The Big Five personality dimensions and job performance: A meta-analysis. *Personnel Psychology*, *44*, 1–26. [`doi.org/10.1111/j.1744-6570.1991.tb00688.x`](https://doi.org/10.1111/j.1744-6570.1991.tb00688.x)
-
-*   25 Roberts, B. W., Kuncel, N. R., Shiner, R., Caspi, A., & Goldberg, L. R. (2007). The power of personality: The comparative validity of personality traits, socioeconomic status, and cognitive ability for predicting important life outcomes. *Perspectives on Psychological Science*, *2*, 313–345. doi:[10.1111/j.1745-6916.2007.00047.x](http://dx.doi.org/10.1111/j.1745-6916.2007.00047.x).
-
-*   26 Jang, K. L., Livesley, W. J., & Vernon, P. A. (1996). Heritability of the Big Five personality dimensions and their facets: A twin study. *Journal of Personality*, *64*, 577-591. doi:[10.1111/j.1467-6494.1996.tb00522.x](http://dx.doi.org/10.1111/j.1467-6494.1996.tb00522.x).
-
-*   27 Loehlin, J. C., & Nichols, R. C. (1976). *Heredity, environment, and personality: A study of 850 sets of twins*. University of Texas Press.
-
-*   28 Cobb-Clark, D. A., & Schurer, S. (2012). The stability of big-five personality traits. *Economics Letters*, *115*, 11–15. [`doi.org/10.1016/j.econlet.2011.11.015`](https://doi.org/10.1016/j.econlet.2011.11.015)
-
-*   29 Roberts, B. W., & DelVecchio, W. F. (2000). The rank-order consistency of personality traits from childhood to old age: A quantitative review of longitudinal studies. *Psychological Bulletin*, *126*, 3–25. doi:[10.1037/0033-2909.126.1.3](http://dx.doi.org/10.1037/0033-2909.126.1.3).
-
-*   30 Soldz, S., & Vaillant, G. E. (1999). The Big Five personality traits and the life course: A 45-year longitudinal study. *Journal of Research in Personality*, *33*, 208–232. doi:[10.1006/jrpe.1999.2243](http://dx.doi.org/10.1006/jrpe.1999.2243).
-
-*   31 Briley, D. A., & Tucker-Drob, E. M. (2014). Genetic and environmental continuity in personality development: A meta-analysis. *Psychological Bulletin*, *140*, 1303–1331. [`doi.org/10.1037/a0037091`](https://doi.org/10.1037/a0037091)
-
-*   32 Mershon, B., & Gorsuch, R. L. (1988). Number of factors in the personality sphere: Does increase in factors increase predictability of real-life criteria? *Journal of Personality and Social Psychology*, *55*, 675–680. doi:[10.1037/0022-3514.55.4.675](http://dx.doi.org/10.1037/0022-3514.55.4.675).
-
-*   33 Paunonen, S. V., & Ashton, M. C. (2001). Big Five factors and facets and the prediction of behavior. *Journal of Personality & Social Psychology*, *81*, 524–539. doi:[10.1037/0022-3514.81.3.524](http://dx.doi.org/10.1037/0022-3514.81.3.524).
-
-*   34 Postigo, Á., Cuesta, M., García-Cueto, E., Prieto-Díez, F., & Muñiz, J. (2021). General versus specific personality traits for predicting entrepreneurship. *Personality and Individual Differences*, *182*, Article 111094. [`doi.org/10.1016/j.paid.2021.111094`](https://doi.org/10.1016/j.paid.2021.111094)
-
-*   35 Allport, G. W. (1937). *Personality: A psychological interpretation*. Henry Holt.
-
-*   36 Myers, I. B., & McCaulley, M. H. (1985). *Manual: A guide to the development and use of the Myers-Briggs Type Indicator*. Consulting Psychologists Press.
-
-*   37 Myers, I. B., McCaulley, M. H., Quenk, N. L., & Hammer, A. L. (1998). *MBTI Manual: A guide to the development and use of the Myers-Briggs Type Indicator* (3rd ed.). Consulting Psychologists Press.
-
-*   38 Boyle, G. J. (1995). Myers-Briggs Type Indicator (MBTI): Some psychometric limitations. *Australian Psychologist*, *30*, 71–74. doi:[10.1111/j.1742-9544.1995.tb01750.x](http://dx.doi.org/10.1111/j.1742-9544.1995.tb01750.x).
-
-*   39 Bradford, V. (2018, October 2). MBTI facts & common criticisms. *The Myers-Briggs Company*. [www.themyersbriggs.com/en-US/Connect-With-Us/Blog/2018/October/MBTI-Facts--Common-Criticisms](http://www.themyersbriggs.com/en-US/Connect-With-Us/Blog/2018/October/MBTI-Facts--Common-Criticisms)
-
-*   40 Howes, R. J., & Carskadon, T. G. (1979). Test-retest reliabilities of the Myers-Briggs Type Indicator as a function of mood changes. *Research in Psychological Type*, *2*, 67–72.
-
-*   41 Pittenger, D. J. (1993). Measuring the MBTI… and coming up short. *Journal of Career Planning and Placement*, *54*, 48–52.
-
-*   42 Nowack, K. (1996). Is the Myers Briggs Type Indicator the right tool to use? *Performance in Practice*, 6. American Society of Training and Development.
-
-*   43 McCrae, R. R., & Costa Jr., P. T. (1989). Reinterpreting the Myers-Briggs Type Indicator from the perspective of the Five-Factor Model of Personality. *Journal of Personality*, *57*, 17–40. doi:[10.1111/j.1467-6494.1989.tb00759.x](http://dx.doi.org/10.1111/j.1467-6494.1989.tb00759.x).
-
-*   44 Barrick, M. R., & Mount, M. K. (1991). The Big Five personality dimensions and job performance: A meta-analysis. *Personnel Psychology*, *44*, 1–26. [`doi.org/10.1111/j.1744-6570.1991.tb00688.x`](https://doi.org/10.1111/j.1744-6570.1991.tb00688.x)
-
-*   45 Roberts, B. W., Kuncel, N. R., Shiner, R., Caspi, A., & Goldberg, L. R. (2007). The power of personality: The comparative validity of personality traits, socioeconomic status, and cognitive ability for predicting important life outcomes. *Perspectives on Psychological Science*, *2*, 313–345. doi:[10.1111/j.1745-6916.2007.00047.x](http://dx.doi.org/10.1111/j.1745-6916.2007.00047.x).
-
-*   46 Schmidt, F. L., & Hunter, J. E. (1998). The validity and utility of selection methods in personnel psychology: Practical and theoretical implications of 85 years of research findings. *Psychological Bulletin*, *124*, 262–274. doi:[10.1037/0033-2909.124.2.262](http://dx.doi.org/10.1037/0033-2909.124.2.262).
-
-*   47 Lüdtke, O., Roberts, B. W., Trautwein, U., & Nagy, G. (2011). A random walk down university avenue: Life paths, life events, and personality trait change at the transition to university life. *Journal of Personality and Social Psychology*, *101*, 620–637. doi:[10.1037/a0023743](http://dx.doi.org/10.1037/a0023743).
-
-
+22. McCrae, R. R., Terracciano, A., & Members of the Personality Profiles of Cultures Project. (2005). Personality profiles of cultures: Aggregate personality traits. *Journal of Personality and Social Psychology*, 89, 407–425. doi:[`10.1037/0022-3514.89.3.407`](http://dx.doi.org/10.1037/0022-3514.89.3.407).
 
 
 
@@ -1582,7 +1426,7 @@ DOI: `10.4324/9781032686653-9`
 
 不同的理论家以不同方式刻画情商，汇总见表 7.1。
 
-表 7.1 情商主要理论。
+### 表 7.1 情商主要理论
 
 | **模型名称** | **模型摘要** | **主要批评** |
 | --- | --- | --- |
@@ -1597,22 +1441,25 @@ DOI: `10.4324/9781032686653-9`
 
 同样，特质情商问卷的较高得分与更好的应对策略、更高的生活满意度、更好的人际关系和更好的压力管理呈相关。¹³¹⁴¹⁵¹⁶
 
+
+
 最后，研究者报告称，基于巴昂混合模型的情商测量指标与心理健康结果、压力管理、团队动力学和领导力结果相关。¹⁷¹⁸¹⁹²⁰
 
 ## 参考文献
 
 *   48 Specht, J., Egloff, B., & Schmukle, S. C. (2011). Stability and change of personality across the life course: The impact of age and major life events on mean-level and rank-order stability of the Big Five. *Journal of Personality and Social Psychology*, *101*, 862–882. doi:`10.1037/a0024950`。
+
 *   49 Kosslyn, S. M. (2023). *Active learning with AI: A practical guide*. Alinea Learning。
+
 *   50 Briley, D. A., & Tucker-Drob, E. M. (2014). Genetic and environmental continuity in personality development: A meta-analysis. *Psychological Bulletin*, *140*, 1303–1331. `https://doi.org/10.1037/a0037091`
+
 *   51 Kendler, K. S., & Baker, J. H. (2007). Genetic influences on measures of the environment: A systematic review. *Psychological Medicine*, *37*, 615–626. doi:`10.1017/S0033291706009524`。
+
 *   52 Plomin, R., DeFries, J. C., & Loehlin, J. C. (1977). Genotype-environment interaction and correlation in the analysis of human behavior. *Psychological Bulletin*, *84*, 309–322. doi:`10.1037/0033-2909.84.2.309`。
-
-
-
 
 尽管这些模型在一定程度上有重叠，但它们往往关注不同的现象。例如，四分支模型关注的是能力本身，而特质模型关注的则类似于大五人格特质。我将表 7.1 输入`GPT-4`，并请它找出贯穿这些模型的共同主线。以下是它的回复：
 
-关键结论是……“在情绪感知、情绪管理的核心组成部分，以及情绪在增强认知和社会功能方面的实用作用这三点上，存在强烈的共识。”
+> 关键结论是……“在情绪感知、情绪管理的核心组成部分，以及情绪在增强认知和社会功能方面的实用作用这三点上，存在强烈的共识。”
 
 我第一次运行这个提示词时，每个主题的结果似乎都采用了不同的风格——这让我担心`GPT-4`可能是在发送其训练材料的片段给我。因此，我要求如果它引用其他来源则提供引用。这个简单的提示词补充导致了截然不同的结果。但是，即使应用了一点批判性思维。但即便如此，AI 随后回复我：“你正确识别了关键情绪：挫败感：你的同事正在表达他们对项目进展的不满……”我根本没提过挫败感！这个故障凸显了不应盲目相信 AI 回复的必要性。我们需要将它们视为我们最终通过修改和润色 AI 给出的结果而创造出的成果的基础（参见第 2 章）。事实上，我将其每一次回复都视为一个机会，用来衡量我的情绪反应，正如第 5 章所述——并关注这些反应，作为让我对 AI 建议更加敏感的主要方式。
 
@@ -1620,14 +1467,11 @@ DOI: `10.4324/9781032686653-9`
 
 目前的 AI 不太可能将 `EI` 训练到基础水平之上，但即使是基础水平有时也可能有帮助。不过，与其笼统地训练 `EI`，AI 可能更适合用于训练这一复杂能力的各个单独组成部分。
 
-
-
-
-例如，尽管识别情绪只是情商（EI）的一小部分，但它至关重要。如果我们无法正确识别和解读情绪，就无法可靠地运用情商的其他方面。而 AI 可以被训练来识面部表情，这是识别情绪的一个方面。事实上，有几家公司推销解读面部表情的 AI 产品，旨在为人类用户提供提示。⁴¹ Affectiva 提供了一个现有产品的良好范例，该公司开发了可实时自动解读面部表情和面部动作的软件。该软件可以帮助人们解读会议期间团队成员的感受。这是 AI 如何减轻人类用户负担的一个例子。例如，可以提示 AI 标记团队成员何时显得焦虑，这反过来可以帮助领导者知道何时放慢节奏并澄清沟通内容——甚至暂停向听众提问，以确定担忧的来源。无论其当前存在何种局限，此类软件都是未来趋势的信号。
+例如，尽管识别情绪只是情商（EI）的一小部分，但它至关重要。如果我们无法正确识别和解读情绪，就无法可靠地运用情商的其他方面。而 AI 可以被训练来识别面部表情，这是识别情绪的一个方面。事实上，有几家公司推销解读面部表情的 AI 产品，旨在为人类用户提供提示。⁴¹ Affectiva 提供了一个现有产品的良好范例，该公司开发了可实时自动解读面部表情和面部动作的软件。该软件可以帮助人们解读会议期间团队成员的感受。这是 AI 如何减轻人类用户负担的一个例子。例如，可以提示 AI 标记团队成员何时显得焦虑，这反过来可以帮助领导者知道何时放慢节奏并澄清沟通内容——甚至暂停向听众提问，以确定担忧的来源。无论其当前存在何种局限，此类软件都是未来趋势的信号。
 
 这是 AI 如何帮助我们处理情商一个组成部分的第二个例子：我们可以利用 AI 在社交互动中就我们如何“读取”他人情绪提供反馈，即使我们必须对其评论持保留态度（持怀疑态度）。此类反馈主要应用于激发反思，帮助我们从不同角度看待事物。在这种情况下，我们可以请 AI 给出对他人在社交互动中情绪反应的解读，并看看什么似乎符合实际。以下是我提交给 `GPT-4o` 的提示词，其回复如下：
 
-这并非一次深刻的互动，但它确实提醒我在未来此类互动中应注意什么，并确实给了我一些可采用的有用策略。因此，这次与 AI 的交流是有帮助的。
+> 这并非一次深刻的互动，但它确实提醒我在未来此类互动中应注意什么，并确实给了我一些可采用的有用策略。因此，这次与 AI 的交流是有帮助的。
 
 ## 在 CAL 时代蓬勃发展
 
@@ -1639,9 +1483,10 @@ DOI: `10.4324/9781032686653-9`
 
 下面列出的视频对情商的不同方面提供了通俗易懂、更深入的阐述。此外，您可能想尝试使用搜索词来查找该主题的新视频。
 
-Daniel Goleman 的《情商》 ► 动画书摘：[`www.youtube.com/watch?v=n6MRsGwyMuQ`](https://www.youtube.com/watch?v=n6MRsGwyMuQ)
+*   Daniel Goleman 的《情商》 ► 动画书摘：[`www.youtube.com/watch?v=n6MRsGwyMuQ`](https://www.youtube.com/watch?v=n6MRsGwyMuQ)
+*   情商在 AI 时代的重要性：[`www.youtube.com/watch?v=pO6m44oFqvQ`](https://www.youtube.com/watch?v=pO6m44oFqvQ)
 
-情商在 AI 时代的重要性：[`www.youtube.com/watch?v=pO6m44oFqvQ`](https://www.youtube.com/watch?v=pO6m44oFqvQ)
+### 搜索词建议
 
 *   “情商模型”
 *   “Mayer 和 Salovey 的情商四分支模型”
@@ -1655,9 +1500,10 @@ Daniel Goleman 的《情商》 ► 动画书摘：[`www.youtube.com/watch?v=n6MR
 *   “基于 AI 的情商训练游戏”
 *   “用 AI 训练情商面临的挑战”
 
-情商：从理论到日常实践：[`www.youtube.com/watch?v=e8JMWtwdLQ4`](https://www.youtube.com/watch?v=e8JMWtwdLQ4)
+*   情商：从理论到日常实践：[`www.youtube.com/watch?v=e8JMWtwdLQ4`](https://www.youtube.com/watch?v=e8JMWtwdLQ4)
+*   情商：它是什么以及为什么重要：[`www.youtube.com/watch?v=tN6mKvlxeBg`](https://www.youtube.com/watch?v=tN6mKvlxeBg)
 
-情商：它是什么以及为什么重要：[`www.youtube.com/watch?v=tN6mKvlxeBg`](https://www.youtube.com/watch?v=tN6mKvlxeBg)
+### 搜索词建议
 
 *   “情绪与认知过程”
 *   “情绪对决策的影响”
@@ -1669,20 +1515,25 @@ Daniel Goleman 的《情商》 ► 动画书摘：[`www.youtube.com/watch?v=n6MR
 
 ## 参考文献
 
-*   1Mayer, J. D., and Salovey, P. (1993). The intelligence of emotional intelligence. Intelligence, *17*, 433–442. [`doi.org/10.1016/0160-2896(93)90010-3`](https://doi.org/10.1016/0160-2896\(93\)90010-3)
-*   2Mayer, J. D., & Salovey, P. (1997). What is emotional intelligence? In P. Salovey & D. J. Sluyter (Eds.), Emotional development and emotional intelligence: Educational implications. Basic Books, pp. 3–31.
-*   3Mayer J. D., Salovey P., & Caruso D. R. (2004). Emotional intelligence: Theory, findings, and implications. Psychological Inquiry, *15*, 197–215. [`doi.org/10.1207/s15327965pli1503\_02`](https://doi.org/10.1207/s15327965pli1503_02)
-*   4Lopes, P. N., Brackett, M. A., Nezlek, J. B., Schütz, A., Sellin, I., & Salovey, P. (2004). Emotional intelligence and social interaction. Personality and Social Psychology Bulletin, *30*, 1018–1034. [`doi.org/10.1177/01461 67204264762`](https://doi.org/10.1177/0146167204264762)(Not accessible as of \[2024/10/24\])
-*   5Rosete, D., & Ciarrochi, J. (2005). Emotional intelligence and its relationship to workplace performance outcomes of leadership effectiveness. Leadership & Organization Development Journal, *26*, 388–399. [`doi.org/10.1108/01437730510607871`](https://doi.org/10.1108/01437730510607871)
-*   6Kerr, R., Garvin, J., Heaton, N., & Boyle, E. (2006). Emotional intelligence and leadership effectiveness. Leadership & Organization Development Journal, *27*, 265–279. [`doi.org/10.1108/01437730610666028`](https://doi.org/10.1108/01437730610666028)
-*   7O’Boyle Jr., E. H., Humphrey, R. H., Pollack, J. M., Hawver, T. H., & Story, P. A. (2011). The relation between emotional intelligence and job performance: A meta-analysis. Journal of Organizational Behavior, *32*, 788–818. [`doi.org/10.1002/job.714`](https://doi.org/10.1002/job.714)
-*   8Joseph, D. L., & Newman, D. A. (2010). Emotional intelligence: An integrative meta-analysis and cascading model. Journal of Applied Psychology, *95*, 54–78. [`doi.org/10.1037/a0017286`](https://doi.org/10.1037/a0017286)
-*   9Goleman, D. (1996). Emotional intelligence: Why it can matter more than IQ. Learning, *24*, 49–50.
-*   10Goleman, D., Boyatzis, R., & McKee, A. (2013). Primal leadership: Realizing the power of emotional intelligence. Harvard Business School Press.
+*   1 Mayer, J. D., and Salovey, P. (1993). The intelligence of emotional intelligence. Intelligence, *17*, 433–442. [`doi.org/10.1016/0160-2896(93)90010-3`](https://doi.org/10.1016/0160-2896\(93\)90010-3)
 
+*   2 Mayer, J. D., & Salovey, P. (1997). What is emotional intelligence? In P. Salovey & D. J. Sluyter (Eds.), Emotional development and emotional intelligence: Educational implications. Basic Books, pp. 3–31.
 
+*   3 Mayer J. D., Salovey P., & Caruso D. R. (2004). Emotional intelligence: Theory, findings, and implications. Psychological Inquiry, *15*, 197–215. [`doi.org/10.1207/s15327965pli1503_02`](https://doi.org/10.1207/s15327965pli1503_02)
 
+*   4 Lopes, P. N., Brackett, M. A., Nezlek, J. B., Schütz, A., Sellin, I., & Salovey, P. (2004). Emotional intelligence and social interaction. Personality and Social Psychology Bulletin, *30*, 1018–1034. [`doi.org/10.1177/0146167204264762`](https://doi.org/10.1177/0146167204264762) (Not accessible as of [2024/10/24])
 
+*   5 Rosete, D., & Ciarrochi, J. (2005). Emotional intelligence and its relationship to workplace performance outcomes of leadership effectiveness. Leadership & Organization Development Journal, *26*, 388–399. [`doi.org/10.1108/01437730510607871`](https://doi.org/10.1108/01437730510607871)
+
+*   6 Kerr, R., Garvin, J., Heaton, N., & Boyle, E. (2006). Emotional intelligence and leadership effectiveness. Leadership & Organization Development Journal, *27*, 265–279. [`doi.org/10.1108/01437730610666028`](https://doi.org/10.1108/01437730610666028)
+
+*   7 O’Boyle Jr., E. H., Humphrey, R. H., Pollack, J. M., Hawver, T. H., & Story, P. A. (2011). The relation between emotional intelligence and job performance: A meta-analysis. Journal of Organizational Behavior, *32*, 788–818. [`doi.org/10.1002/job.714`](https://doi.org/10.1002/job.714)
+
+*   8 Joseph, D. L., & Newman, D. A. (2010). Emotional intelligence: An integrative meta-analysis and cascading model. Journal of Applied Psychology, *95*, 54–78. [`doi.org/10.1037/a0017286`](https://doi.org/10.1037/a0017286)
+
+*   9 Goleman, D. (1996). Emotional intelligence: Why it can matter more than IQ. Learning, *24*, 49–50.
+
+*   10 Goleman, D., Boyatzis, R., & McKee, A. (2013). Primal leadership: Realizing the power of emotional intelligence. Harvard Business School Press.
 
 ## 参考文献
 
@@ -1701,6 +1552,8 @@ Daniel Goleman 的《情商》 ► 动画书摘：[`www.youtube.com/watch?v=n6MR
 *   17 Bar-On, R. (1997). *The emotional quotient inventory (EQ-i): A test of emotional intelligence*. Multi-Health Systems.
 
 *   18 Bar-On, R. (2000). Emotional and social intelligence: Insights from the Emotional Quotient Inventory (EQ-i). In R. Bar-On & J. D. A. Parker (Eds.), *The handbook of emotional intelligence: Theory, development, assessment, and application at home, school, and in the workplace* (pp. 363–388). Jossey-Bass/Wiley.
+
+
 
 *   19 Bar-On, R. (2006). The Bar-On model of emotional-social intelligence (ESI). *Psicothema*, *18*, 13–25. [`www.psicothema.com/pdf/3271.pdf`](https://www.psicothema.com/pdf/3271.pdf)
 
@@ -1736,10 +1589,6 @@ Daniel Goleman 的《情商》 ► 动画书摘：[`www.youtube.com/watch?v=n6MR
 
 *   35 Clarke, N. (2010). Developing emotional intelligence abilities through team-based learning. *Human Resource Development Quarterly*, *21*, 119–138. [`doi.org/10.1002/hrdq.20036`](https://doi.org/10.1002/hrdq.20036)
 
-
-
-
-
 # 第 8 章：增强人类沟通
 
 DOI: [10.4324/9781032686653-10](http://doi.org/10.4324/9781032686653-10)
@@ -1753,14 +1602,21 @@ LinkedIn 的研究人员分析了超过 10 亿会员的数据，以发现哪些�
 我们人类通过多种方式进行沟通，每种方式都适用于特定目的，而不适用于其他目的。我们可以基于五个潜在维度来描述人类沟通的各种方法。这些维度帮助我们理解每种方法最适用的特定语境和目的，以及其内在的优势和局限。这些维度如下：
 
 *   **正式程度。** 沟通方式范围涵盖从正式（如正式教学、网络研讨会、演示）到非正式（如交谈、短信）。
+
 *   **同步与异步。** 沟通可以是实时的同步沟通（如交谈、戏剧演出、正式教学），也可以是异步沟通（如电子邮件、博客、文献）。
+
 *   **目的与内容。** 沟通可以旨在传递信息（如图表、图形、正式教学），也可以旨在说服、娱乐或表达情感（如歌曲、戏剧演出、艺术作品）。
+
 *   **传递模式。** 沟通在传递模式上有所不同。我们可以将此维度细分为三个更细粒度的维度：
+
     1.  语言沟通（如交谈、戏剧演出、播客）与非语言沟通（如肢体语言、标识、符号）。
+
     2.  视觉方法（如视频、图表、图形、图解、艺术作品）与听觉方法（如音乐、播客）。
+
     3.  书面方法（如电子邮件、文献、博客）与口语方法（如正式教学、网络研讨会）。
-    
+
     在某些情况下，两种或多种模式可能会结合使用（例如，视频通常同时传递视觉和语言信息）。
+
 *   **复杂性与可及性。** 最后，沟通可以是简单且易于获取的（如短信、标识、流行音乐），也可以是复杂的，需要专业知识或技能（如技术学科讲座、艺术作品、交响乐）。
 
 表 8.1 总结了人类沟通的主要方法。每种沟通方法都依赖于这五个维度上独特的数值组合，这使其适用于特定的受众和目的。选择合适的方法可能很棘手，特别是因为 表 8.1 仅提供了一个顶层概览。该表未列出每种类型的众多变体——例如，书面沟通还包括信件和杂志。此外，我们可以区分这些类别的各种版本，它们有时会相互渗透，形成混合体。
@@ -1774,13 +1630,8 @@ LinkedIn 的研究人员分析了超过 10 亿会员的数据，以发现哪些�
 | | 文献/文学作品 | 书面作品，如小说和诗歌，运用语言传达思想和故事。 | 知识传播、娱乐、文化传承。 | 通过“演示而非讲述”传递内容。 | 创作和阅读耗时、需要读写能力。 |
 | | 博客 | 分享信息或个人观点的在线书面内容。 | 个人表达、信息分享。 | 触达面广、可通过多种设备访问、制作廉价且容易。 | 需要写作技巧、信息过载、可信度问题。 |
 | 视觉沟通 | 图表和图形 | 数据的图形化表示。 | 简洁概览数据模式。 | 高效总结信息、视觉冲击力强。 | 可能被误解、失真、过度简化、需要图形素养。 |
-
-
-
-
-
-| | | 图表 | 元素间关系的视觉呈现。 | 清晰传达流程，辅助教学。 | 视觉清晰度。 | 可能需要技术理解，可能过度简化或过于复杂。 |
-| | | 标识与符号 | 传达特定信息的视觉符号或标志。 | 高度结构化的指引。 | 高效传达简单信息，适用于多种场景。 | 缺乏语境时可能不被普遍理解，将复杂信息过度简化。 |
+| | 图表 | 元素间关系的视觉呈现。 | 清晰传达流程，辅助教学。 | 视觉清晰度。 | 可能需要技术理解，可能过度简化或过于复杂。 |
+| | 标识与符号 | 传达特定信息的视觉符号或标志。 | 高度结构化的指引。 | 高效传达简单信息，适用于多种场景。 | 缺乏语境时可能不被普遍理解，将复杂信息过度简化。 |
 | 口头/语言沟通 | 对话 | 人与人之间直接的语言互动。 | 个人互动、建立关系、传达近期信息。 | 易于产生即时反馈。 | 可能被误解，要求双方同时在场，可能效率低下、转瞬即逝。 |
 | | 演示 | 口头沟通，通常辅以视觉辅助工具以告知或说服受众。 | 教育、说服。 | 高度结构化，可触达大量受众。 | 需要公开演讲技巧，互动性通常较低，准备工作密集。 |
 | | 播客 | 以数字形式提供的口语内容。 | 个人表达、信息分享、娱乐。 | 触达面广，可通过多种设备访问，制作廉价且容易。 | 仅限音频，需要引人入胜的内容以维持兴趣，无视觉辅助。 |
@@ -1798,35 +1649,27 @@ LinkedIn 的研究人员分析了超过 10 亿会员的数据，以发现哪些�
 
 所有类型的人类沟通都必须尊重这样一个事实：人类是信息的最终接收者。这意味着沟通必须尊重人类的认知局限性，不能一次性提供过多信息导致工作记忆超载，也不能要求多任务处理从而超出我们的注意力容量（参见 第 5 章）。
 
-研究者们记录了许多原则，可指导我们创建清晰、引人入胜且令人难忘的沟通。我们在此聚焦于旨在传递信息的沟通，这在我们需要与他人协作时尤为重要。许多指导我们在协作中如何沟通的原则，被*沟通七大原则*²所概括。这七大原则是：清晰、简洁、具体、正确、连贯、完整和礼貌。我们可以将这些准则用作清单，以确保沟通有效。这种检查几乎总是有用的，尤其是在专业和商务场合。请逐一考量每项原则：
+
+
+# 研究者们记录了许多原则，可指导我们创建清晰、引人入胜且令人难忘的沟通
+
+我们在此聚焦于旨在传递信息的沟通，这在我们需要与他人协作时尤为重要。许多指导我们在协作中如何沟通的原则，被*沟通七大原则*²所概括。这七大原则是：清晰、简洁、具体、正确、连贯、完整和礼貌。我们可以将这些准则用作清单，以确保沟通有效。这种检查几乎总是有用的，尤其是在专业和商务场合。请逐一考量每项原则：
 
 *   **清晰。** 传递信息的沟通应尽可能直截了当且条理清晰。为此，它们通常应依赖精准、具体且无歧义的词汇或符号。
-
 *   **简洁。** 爱因斯坦据说曾说：“事物应尽可能简单，但不能过于简单。”这绝对适用于沟通。我们应使用必要的最少词汇或符号，避免不必要的冗余。这不仅尊重接收者的时间，也有助于维持注意力、防止信息过载。
-
 *   **具体。** 传递信息的沟通应具体详尽，运用事实、数据和现实案例来阐明观点。
-
 *   **正确。** 信息应事实准确，不包含语法、格式或拼写错误。在专业场合，此项实践尤为重要。
-
 *   **连贯。** 沟通应合乎逻辑且前后一致。沟通的所有部分应相互关联，且与主题相关。
-
 *   **完整。** 我们应提供所有必要信息，不包含无关信息。
-
 *   **礼貌。** 我们应保持尊重、得体和体贴。这要求不咄咄逼人，不使用冒犯性语言或符号。
 
-### 尊重语境
+## 尊重语境
 
 沟通七大原则清单很有用，但其应用方式取决于沟通的具体语境。例如，哲学家 H. P. Grice 提出了一套四条“准则”来描述人们在日常对话中应如何沟通³。其中一些准则与七大原则有重叠，但可能有助于进一步聚焦。Grice 的四条准则如下：
 
 *   **数量准则。** 我们应提供所需的信息量，不多不少。该准则强调在不因过度详细、无关信息而使接收者超载的前提下，解决问题或回应议题。例如，如果有人问我们几点了，我们应告诉他们时和分，但不必报秒——这对大多数用途而言过于详细且无关紧要。
-
 *   **质量准则。** 我们应努力提供准确信息，避免提供虚假或缺乏证据支持的信息。例如，如果我们不知道某个问题的答案，承认不知情总比编造答案要好。鉴于 AI 爱产生幻觉，它们有时会违反这一准则。
-
 *   **相关性准则。** 我们应只提供相关信息。该准则表明，对话中的贡献应与正在讨论的主题相关。例如，如果我们在讨论气候变化，突然谈论起孩子学校的行为问题，就违反了这一准则。
-
-
-
-
 
 ### 举止准则
 
@@ -1850,13 +1693,13 @@ LinkedIn 的研究人员分析了超过 10 亿会员的数据，以发现哪些�
 
 该理论的主要批评之一是，它反映了西方的规范和假设，可能不适用于其他文化。¹⁰^,¹¹^,¹² 该理论也因专注于事务性沟通而受到批评，未涉及更自发的互动，或相互了解甚深、共同历史丰富的人际互动。再次强调，语境至关重要。
 
-### 赢得认同
+## 赢得认同
 
 本章迄今讨论的所有内容也有助于我们说服他人。然而，在这种情况下，我们需要借助的不仅仅是通用的沟通技巧，即使结合了批判性思维和创造性解决问题的技巧——我们还必须依赖情商。例如，在 AI 时代，一种至关重要的说服类型将是说服人们不被情感上极具诱惑力的虚假信息和错误信息所迷惑。显然，仅仅提供扭曲或捏造的证据，不足以动摇人们的观点或信念。¹³ 仅仅告诉甚至展示给人们他们的错误是不够的。
 
 相反，要劝阻人们相信情感上极具诱惑力的虚假信息和错误信息，我们需要依赖同理心、心智理论，以及源于情商的那种人文关怀。研究结果表明，要揭穿此类捏造，我们必须仔细倾听，并找出使某人易于接受虚假信息的潜在担忧。然后我们应承认那些使此类信息具有诱惑力的“真实成分”。¹⁴ 此外，我们需要让对方参与进来，使他们不仅感到被倾听，还感到自己在解读相关主张的过程中发挥了作用。研究人员提供了证据，表明当人们积极参与构建叙事时，最有可能被说服。¹⁵^,¹⁶ 他们需要在情感上投入其中。
 
-### 沟通促进者与编辑
+## 沟通促进者与编辑
 
 我们可以利用 AI 协助撰写各类沟通内容，范围涵盖电子邮件、营销材料、歌词、睡前故事等。我们可以或多或少地将刚才回顾的沟通准则应用于所有这些模式。然而，即使是“七大原则”和格赖斯准则，要轻松牢记也颇多，这再次引出了将 AI 用作认知放大器的想法。
 
@@ -1870,24 +1713,21 @@ LinkedIn 的研究人员分析了超过 10 亿会员的数据，以发现哪些�
 >
 > 如果你是丈夫，你会如何向他们每个人解释这件事？
 
-我向 GPT-4 提交了以下提示词。
+我向 `GPT-4` 提交了以下提示词。
 
-GPT-4 的回复如下：
+`GPT-4` 的回复如下：
 
-
-
-
-AI 确实或多或少地恰当调节了信息，并借鉴了“七大原则”和格赖斯准则——即使我没有上传这些材料的摘要。在许多情况下，我们不需要上传材料作为指导，而是可以依赖创建 AI 时所用的训练数据。如果材料非常具体、明确，且在众多来源中以一致的方式呈现，那么这些训练数据可能就足够了。“七大原则”和格赖斯准则都符合这一条件。为了检查训练数据是否准确，我只是请 GPT-4 给我快速总结一下“七大原则”和格赖斯准则——它做得很好。因此，我在编写上述提示词时很放心，只需提及关键考量因素，而无需上传相应的表格。
+AI 确实或多或少地恰当调节了信息，并借鉴了“七大原则”和格赖斯准则——即使我没有上传这些材料的摘要。在许多情况下，我们不需要上传材料作为指导，而是可以依赖创建 AI 时所用的训练数据。如果材料非常具体、明确，且在众多来源中以一致的方式呈现，那么这些训练数据可能就足够了。“七大原则”和格赖斯准则都符合这一条件。为了检查训练数据是否准确，我只是请 `GPT-4` 给我快速总结一下“七大原则”和格赖斯准则——它做得很好。因此，我在编写上述提示词时很放心，只需提及关键考量因素，而无需上传相应的表格。
 
 然而，像往常一样，我们需要编辑这些草稿。例如，取决于幼女的年龄，提到“玩具”可能并不合适。此外，我们应该为礼貌性进行编辑，这可能既微妙又细致。
 
-一般来说，AI 可以帮助我们为不同的受众或接收者起草多种类型的信息。例如，它会为 CEO 和员工助理采用不同的措辞方式。我们还可以利用 CAL 来帮助起草私人通信，例如写给保险公司、医生、家人的信等。
+一般来说，AI 可以帮助我们为不同的受众或接收者起草多种类型的信息。例如，它会为 CEO 和员工助理采用不同的措辞方式。我们还可以利用 `CAL` 来帮助起草私人通信，例如写给保险公司、医生、家人的信等。
 
 ## 跨文化沟通
 
-要不仅描述文化如何影响沟通，还要描述另一种文化中的沟通方式与我们自身有何不同，这绝非易事。为了应对这些挑战，Erin Meyer 出版了一本开创性的著作，名为《文化地图：突破全球商业的无形界限》。¹⁷ Meyer 定义了八个维度来描述不同文化中的人如何思考和沟通，每个维度都源于先前的理论和研究。这些维度包括：沟通¹⁸、评价¹⁹、说服²⁰^,²¹、领导²²、决策²³、建立信任²⁴、处理分歧²⁵^,²⁶和时间观念²⁷。这些维度总结在表 8.2 中。我们可以利用这些维度创建一张“地图”，以指示两种文化在具体方面的相似与不同。CAL 可以帮助我们尊重这些差异。
+要不仅描述文化如何影响沟通，还要描述另一种文化中的沟通方式与我们自身有何不同，这绝非易事。为了应对这些挑战，Erin Meyer 出版了一本开创性的著作，名为《文化地图：突破全球商业的无形界限》。¹⁷ Meyer 定义了八个维度来描述不同文化中的人如何思考和沟通，每个维度都源于先前的理论和研究。这些维度包括：沟通¹⁸、评价¹⁹、说服²⁰^,²¹、领导²²、决策²³、建立信任²⁴、处理分歧²⁵^,²⁶和时间观念²⁷。这些维度总结在表 8.2 中。我们可以利用这些维度创建一张“地图”，以指示两种文化在具体方面的相似与不同。`CAL` 可以帮助我们尊重这些差异。
 
-表 8.2 Meyer 的文化差异八大维度。
+**表 8.2 Meyer 的文化差异八大维度。**
 
 | **维度** | **描述** | **示例** |
 | --- | --- | --- |
@@ -1910,12 +1750,9 @@ AI 确实或多或少地恰当调节了信息，并借鉴了“七大原则”�
 
 我们还可以利用 AI 来编写我们的内容。例如，我们可以提交一个简单的提示词，如下所示：
 
-当我提交这个提示词连同本章的早期草稿时，GPT-4 提供了宝贵的建议，不仅涉及句子结构的细节，还涉及副标题、示例的使用以及其他旨在改善行文流畅度的指点。我并不赞同所有建议，但觉得它们合理且发人深省。
+当我提交这个提示词连同本章的早期草稿时，`GPT-4` 提供了宝贵的建议，不仅涉及句子结构的细节，还涉及副标题、示例的使用以及其他旨在改善行文流畅度的指点。我并不赞同所有建议，但觉得它们合理且发人深省。
 
 我们可以利用 AI 编辑各种书面沟通，范围涵盖备忘录、信函、论文、剧本等。在高度结构化且语境清晰的情况下，AI 表现良好。然而，在情境开放、语境影响复杂或微妙的情况下，我们需要在上述提示词的一般性要求之外，提供具体指导。例如，我们不希望 AI 以编辑悲剧剧本的方式来编辑喜剧剧本。在这类情况下，我们需要提供关于材料的背景信息，并经常应提供适当编辑的示例——以及不该做什么的示例（例如，从喜剧中移除幽默感！）。
-
-
-
 
 我们可以使用类似的提示词来编辑插图。正如我们在表 8.1 中所见，写作并非我们沟通的唯一方式。事实上，`GPT-4o`、`MidJourney`、`Stable Diffusion` 以及其他各类生成式 AI 都能帮助我们制作多种类型的插图和图形。确实，各种软件系统——例如 `Invideo.io`、`快手可灵`、`Narakeet` 和 `OpenAI 的 Sora`——允许用户基于语言提示词创建高质量视频。与使用库存照片或视频（例如 `Pixabay` 上的素材）相比，这些程序的一个优点是它们生成的内容具有独特性。此外，当我们使用 AI 时，可以设计视频以精准阐释特定观点。虽然使用 AI 创建视频通常需要多次迭代 `CAL`，但如果我们耐心且坚持不懈，这些模型能产出的成果令人惊叹。
 
@@ -1982,45 +1819,8 @@ Cross cultural communication | Pellegrino Riccardi | TEDxBergen: [`www.youtube.c
 *   1Brodnitz, D. (2024, February 8). The most in-demand skills for 2024. *LinkedIn Talent Blog*. [www.linkedin.com/business/talent/blog/talent-strategy/linkedin-most-in-demand-hard-and-soft-skills](http://www.linkedin.com/business/talent/blog/talent-strategy/linkedin-most-in-demand-hard-and-soft-skills)
 *   2Baird, J., & Stull, J. (1992). The seven C’s of communication. Prentice Hall.
 *   3Grice, H. P. (1975). Logic and conversation. In D. Davidson & G. Harman (Eds.), *The logic of grammar*. Dickenson, pp. 64–75.
-*   4Davies, C. & Katsos, N. (2013). Are speakers and listeners “only moderately Gricean”? An empirical response to Engelhardt et al. (2006). *Journal of Pragmatics*, *49*, 78–106.
-*   5Hossain, M. M. (2021). The application of Grice Maxims in conversation: A pragmatic study. *Journal of English Language Teaching and Applied Linguistics*, *3*, 32–40. doi:[10.32996/jeltal.2021.3.10.4](http://dx.doi.org/10.32996/jeltal.2021.3.10.4).
-*   6Kleinke, S. (2010). Speaker activity and Grice’s maxims of conversation at the interface of pragmatics and cognitive linguistics. *Journal of Pragmatics*, *42*, 3345–3366. [`doi.org/10.1016/j.pragma.2010.05.008`](https://doi.org/10.1016/j.pragma.2010.05.008)
-*   7Yin, Z., Wang, H., Horio, K., Kawahara, D., & Sekine, S. (2024). Should we respect LLMs? A cross-lingual study on the influence of prompt politeness on LLM performance. *Cornell University*. *arXiv*:2402.14531v1.
-*   8Brown, P., & Levinson, S. C. (1978). Universals in language usage: Politeness phenomena. In E. N. Goody (Ed.), *Question and politeness: Strategies in social interaction*. Cambridge University Press, pp. 56–310.
-*   9Brown, P. & Levinson, S. C. (1987). *Politeness: Some universals in language usage*. Cambridge University Press.
-*   10Armaşu, V.-D. (2012). Modern approaches to Politeness Theory: A cultural context. *Lingua. Language and Culture*, *1*, 9–19.
-*   11Goldsmith, D. J. (2007). Brown and Levinson’s Politeness Theory. In B. B. Whaley & W. Samter (Eds.), *Explaining communication: Contemporary theories and exemplars*. Lawrence Erlbaum Associates, pp. 243–262.
-*   12Mao, L. R. (1994). Beyond Politeness Theory: “Face” revisited and renewed. *Journal of Pragmatics*, *21*, 451–486. doi:[10.1016/0378-2166(94)90025-6](http://dx.doi.org/10.1016/0378-2166(94)90025-6).
-*   13Venkataraman, B. (2024, May 30). What’s the best way to fight viral disinformation? Look to South Florida. *The Washington Post*. [www.washingtonpost.com/opinions/2024/05/30/misinformation-spanish-latinos-south-florida/](http://www.washingtonpost.com/opinions/2024/05/30/misinformation-spanish-latinos-south-florida/)
-*   14Cialdini, R. (2021). *Influence, new and expanded: The psychology of persuasion*. Harper Business.
 
 
-
-*   15 信息未来实验室 (2024). *信息项目：快速响应试点*. [`bpb-us-w2.wpmucdn.com/sites.brown.edu/dist/4/371/files/2024/01/Brown-IFL-Rapid-Reponse-Pilot-v3-5a656cc41c42028a.pdf`](https://bpb-us-w2.wpmucdn.com/sites.brown.edu/dist/4/371/files/2024/01/Brown-IFL-Rapid-Reponse-Pilot-v3-5a656cc41c42028a.pdf)
-
-*   16 Starbird, K., Arif, A., & Wilson, T. (2024). 错误信息作为协作工作：揭示战略信息行动的参与性质。华盛顿大学预印本。[`faculty.washington.edu/kstarbi/Disinformation-as-Collaborative-Work-Authors-Version.pdf?utm_source=pocket_saves`](https://faculty.washington.edu/kstarbi/Disinformation-as-Collaborative-Work-Authors-Version.pdf?utm_source=pocket_saves)
-
-*   17 Meyer, E. (2014). *文化地图：突破全球商业的无形界限*. PublicAffairs/Hatchette.
-
-*   18 Hall, E. T. (1976). *超越文化*. Anchor Books/Doubleday.
-
-*   19 Hofstede, G. (1980). *文化的后果：工作相关价值观的国际差异*. Sage Publications.
-
-*   20 Trompenaars, F., & Hampden-Turner, C. (2012). *驾驭文化浪潮：理解全球商业中的多样性* (第 3 版). McGraw-Hill.
-
-*   21 Nisbett, R. E. (2004). *思维版图：亚洲人和西方人为何思维不同*. Free Press.
-
-*   22 Hofstede, G. (1980). *文化的后果：工作相关价值观的国际差异*. Sage Publications.
-
-*   23 Follett, M. P. (1941/2003). 在 H. C. Metcalf & L. Urwick (Eds.) 中, *动态管理：玛丽·帕克·福莱特文集*. Routledge.
-
-*   24 Hooker, J. (2012). 商业沟通中的文化差异。在 C. B. Paulston, S. F. Kiesling, & E. S. Rangel (Eds.) 中, *跨文化话语与沟通手册*. Wiley, pp. 389–407.
-
-*   25 Hammer, M. R. (2005). 跨文化冲突风格量表：跨文化冲突解决方法的概念框架与测量。 *国际跨文化关系期刊*, *29*, 675–695. [`doi.org/10.1016/j.ijintrel.2005.08.010`](https://doi.org/10.1016/j.ijintrel.2005.08.010) (截至 [2024/10/24] 无法访问)
-
-*   26 Rahim, M. A. (1983). 处理人际冲突风格的测量。 *管理学院期刊*, *26*, 368–376.
-
-*   27 Hall, E. T. (1976). *超越文化*. Anchor Books/Doubleday.
 
 # 第 9 章：领导、追随与协作
 
@@ -2044,8 +1844,6 @@ DOI: [10.4324/9781032686653-11](http://doi.org/10.4324/9781032686653-11)
 
 甚至不仅如此，领导者必须定期激励追随者继续与他们同行。仅在启动计划时激励他们是不够的——领导者需要激励追随者在漫长的过程中坚持下去。为此，领导者必须以一种能捕捉追随者想象力并使其与组织的使命、愿景、价值观和当前目标保持一致的方式阐述愿景。为了持续激励追随者，领导者必须了解个人和团队动态，并需要知道如何认可和奖励贡献，而不引起其他团队成员的怨恨。他们还必须帮助团队成员正确看待日常工作，看到它如何推进更大的目标。领导者通常依赖各种激励技巧来鼓励、挑战和支持团队成员（例如 ¹, ², ³, ⁴, ⁵）。
 
-
-
 领导者需要了解如何帮助团队成员在任务中取得成功。此外，在许多组织中，领导者应帮助团队成员在职业生涯中成长和进步。领导者可能需要识别每位团队成员的潜力，担任导师，提供培训机会，并给予建设性反馈，以促进个人和职业成长。
 
 处于组织顶层的领导者往往也是组织的“门面”。他们在公开论坛、谈判和其他外部活动中代表组织的利益。他们既推广组织，又寻找合资和合作的机会。领导者经常进行社交网络建设，并发展有利于组织的关系。
@@ -2054,7 +1852,7 @@ DOI: [10.4324/9781032686653-11](http://doi.org/10.4324/9781032686653-11)
 
 许多研究者研究过领导者，并提出了关于如何成为一名高效领导者的理论。⁶ 表 9.1 总结了最具影响力的领导力理论，即特质理论、⁷⁸⁹ 行为理论、¹⁰ 应变理论、¹¹¹² 交易理论、¹³¹⁴ 变革理论、¹⁵¹⁶ 和仆人理论。¹⁷¹⁸ 正如刚才回顾的那样，不同的理论往往强调领导者必须做的不同方面。因此，当我们考虑各种理论以及它们如何相互补充时，高效领导力的完整图景便会浮现。
 
-表 9.1 领导力主要理论。
+**表 9.1 领导力主要理论**
 
 | **理论** | **理论摘要** | **主要批评** |
 | --- | --- | --- |
@@ -2083,9 +1881,6 @@ DOI: [10.4324/9781032686653-11](http://doi.org/10.4324/9781032686653-11)
 
 追随者执行领导者的战略和战术，并提供反馈以帮助团队实现目标。追随者不仅要支持他们的领导者，还要在实现团队目标的整体努力中补充领导者的工作。追随者应投身于团队的使命，并通过出色履行自己的角色来做出贡献。追随者还需要与其他团队成员良好合作。追随者应在工作情境下与所有团队成员保持积极的关系，搁置与手头工作无关的个人分歧——如政治观点。
 
-
-
-
 ## 有效的追随者素质
 
 此外，追随者应当可靠：他们不仅需要对分配的任务负责，还应恪守承诺、尊重截止日期。但这还不够，追随者应当积极主动。他们应当超前一步思考，并进行批判性和创造性思考。这种思考应促使他们提出问题，并建议实现团队目标的替代方案。同时，追随者应当灵活适应。他们应当察觉环境变化，即使战术或战略发生改变，也能保持对团队目标的专注。
@@ -2096,9 +1891,11 @@ DOI: [10.4324/9781032686653-11](http://doi.org/10.4324/9781032686653-11)
 
 ### 有效的追随力
 
+
+
 众多理论和模型阐述了追随者如何发挥最大效能。表 9.2 总结了主要理论、模型及其关键批评。这些理论包括：五型理论²¹^,²²^,²³^、勇敢追随者模型²⁴^,²⁵^、独立追随力理论²⁶^,²⁷^、社会交换理论²⁸^,²⁹^,³⁰^,³¹^,³²^、特质理论³³^,³⁴^ 以及行为理论³⁵^,³⁶^,³⁷^。
 
-表 9.2 追随力关键理论。
+### 表 9.2 追随力关键理论
 
 | **理论** | **理论摘要** | **关键批评** |
 | --- | --- | --- |
@@ -2109,7 +1906,7 @@ DOI: [10.4324/9781032686653-11](http://doi.org/10.4324/9781032686653-11)
 | 特质理论 | 根据该理论，特定人格特质（如高尽责性、高开放性、高宜人性、低神经质）造就优秀追随者。研究表明这些特质确实与有效团队合作相关。 | 研究者认为该理论过度简化了人类行为，忽视了互动的动态本质及影响群体动力学的情境因素（如任务性质、资源）。 |
 | 行为理论 | 该理论聚焦于有效沟通、认真倾听和适应性等具体行为，视其为有效追随力的关键。研究将这些行为与团队成功联系起来，支持了该理论。 | 批评者指出该理论未解释人们为何表现出这些行为，也未分析潜在特质或情境因素（如组织文化或团队动力学）。 |
 
-每种理论和模型都突出了成为有效追随者的不同侧面。这些理论再次聚焦于需要考量情境的开放式人际互动，这类互动极可能难倒当前的 AI。尽管如此，我发现让 GPT-4 结合 表 9.2 提炼各理论的核心要义颇有裨益。我提出了以下请求（附上了 表 9.2），它作出了如下回应：
+每种理论和模型都突出了成为有效追随者的不同侧面。这些理论再次聚焦于需要考量情境的开放式人际互动，这类互动极可能难倒当前的 AI。尽管如此，我发现让 `GPT-4` 结合表 9.2 提炼各理论的核心要义颇有裨益。我提出了以下请求（附上了表 9.2），它作出了如下回应：
 
 AI 在整合理论方面颇具创造力，且方式潜在有用。然而，其提出的理论模糊且抽象。不清楚该理论将如何充实，其潜在效用取决于这些细节。缺乏细节时，它更像是一种方法——正如它有时所言——而非实质理论。显然，成为优秀追随者取决于驾驭需要考量情境的开放式局面。同样，AI 在应对此类互动时只能提供有限帮助。尽管如此，我们可以沿用处理领导力时的方法，让 AI 创建活动和练习，帮助我们学习底层技能的关键要素。
 
@@ -2120,10 +1917,6 @@ AI 在整合理论方面颇具创造力，且方式潜在有用。然而，其�
 ### 协作者做什么？
 
 在团队中协作的人员会从事有助于实现团队目标的联合活动。首要的是，协作者必须相互沟通，并与团队领导者沟通。此类沟通通过多种模式进行，包括会议中的演示与讨论（线下和虚拟）、电子邮件、短信，以及通过专业项目管理工具（如 `Asana` 或 `Slack`）。协作者不仅讨论进度与计划，还提供绩效反馈、识别挑战、提出推进建议。此外，在某些团队中，成员必须做出战术决策，并需与利益相关者沟通以确保他们参与决策。
-
-
-
-
 
 此外，协作要求团队成员设计共同工作的方式，以完成其特定任务。例如，他们必须协调——有时还要协商——他们的日程安排和角色。团队成员还必须协调为达成目标必须完成的各种其他任务，例如撰写进度报告，这可能需要使用共享文档或平台来提供反馈和共享编辑。
 
@@ -2155,56 +1948,55 @@ AI 在整合理论方面颇具创造力，且方式潜在有用。然而，其�
 
 以下视频对本章讨论的材料的不同方面提供了通俗易懂、深入的阐述。一如既往，搜索词可以帮助定位该主题的新视频。
 
-Simon Sinek：激励他人做非凡之事：[`www.youtube.com/watch?v=C5vqyKRJzEI`](https://www.youtube.com/watch?v=C5vqyKRJzEI)
+- Simon Sinek：激励他人做非凡之事：[`www.youtube.com/watch?v=C5vqyKRJzEI`](https://www.youtube.com/watch?v=C5vqyKRJzEI)
+- 动机的谜题 \| Dan Pink \| TED：[`www.youtube.com/watch?v=rrkrvAUbU9Y`](https://www.youtube.com/watch?v=rrkrvAUbU9Y)
 
-动机的谜题 | Dan Pink | TED：[`www.youtube.com/watch?v=rrkrvAUbU9Y`](https://www.youtube.com/watch?v=rrkrvAUbU9Y)
+搜索词：
+- “领导角色与职责”
+- “作为领导者设定目标与制定战略”
+- “激励与鼓舞追随者”
+- “管理资源与授权委派”
+- “作为领导者适应变革”
+- “推广组织文化与价值观”
+- “培养与指导团队成员”
+- “作为领导者代表组织”
+- “领导力中的批判性思维与问题解决”
+- “领导力中的情商”
+- “领导者的高效沟通策略”
+- “作为领导者的协作与人脉拓展”
 
-*   “领导角色与职责”
-*   “作为领导者设定目标与制定战略”
-*   “激励与鼓舞追随者”
-*   “管理资源与授权委派”
-*   “作为领导者适应变革”
-*   “推广组织文化与价值观”
-*   “培养与指导团队成员”
-*   “作为领导者代表组织”
-*   “领导力中的批判性思维与问题解决”
-*   “领导力中的情商”
-*   “领导者的高效沟通策略”
-*   “作为领导者的协作与人脉拓展”
+- 领导力理论：[`www.youtube.com/watch?v=Ifd6jxpVx6k`](https://www.youtube.com/watch?v=Ifd6jxpVx6k)
+- 服务型领导力：[`www.youtube.com/watch?v=H8rdRFVG0rE`](https://www.youtube.com/watch?v=H8rdRFVG0rE)
 
-领导力理论：[`www.youtube.com/watch?v=Ifd6jxpVx6k`](https://www.youtube.com/watch?v=Ifd6jxpVx6k)
-
-服务型领导力：[`www.youtube.com/watch?v=H8rdRFVG0rE`](https://www.youtube.com/watch?v=H8rdRFVG0rE)
-
-*   “领导力特质理论”
-*   “领导力行为理论”
-*   “领导权变理论”
-*   “领导力交易理论”
-*   “领导力变革理论”
-*   “服务型领导理论”
-*   “领导力理论比较”
-*   “领导有效性中的情境因素”
-*   “根据情境调整领导风格”
-
-
-
-
+搜索词：
+- “领导力特质理论”
+- “领导力行为理论”
+- “领导权变理论”
+- “领导力交易理论”
+- “领导力变革理论”
+- “服务型领导理论”
+- “领导力理论比较”
+- “领导有效性中的情境因素”
+- “根据情境调整领导风格”
 
 ## 领导力与追随力资源列表
 
 ### 视频资源
 
 #### 领导力培训
+
 - “AI-assisted leadership training”
 - “Scenario-based leadership development”
 - “Applying leadership theories in practice”
 
 #### 追随力的艺术
-**追随力在领导力中的艺术**：[`www.youtube.com/watch?v=XBL6oTaGu-w`](https://www.youtube.com/watch?v=XBL6oTaGu-w)
 
-**成为一名高效的追随者**：[`www.youtube.com/watch?v=wddfzAO--VQ`](https://www.youtube.com/watch?v=wddfzAO--VQ)
+- **追随力在领导力中的艺术**：[`www.youtube.com/watch?v=XBL6oTaGu-w`](https://www.youtube.com/watch?v=XBL6oTaGu-w)
+- **成为一名高效的追随者**：[`www.youtube.com/watch?v=wddfzAO--VQ`](https://www.youtube.com/watch?v=wddfzAO--VQ)
 
 #### 高效追随者特征
+
+搜索词：
 - “高效追随者的特征”
 - “追随力在组织中的重要性”
 - “作为追随者支持领导者”
@@ -2219,11 +2011,14 @@ Simon Sinek：激励他人做非凡之事：[`www.youtube.com/watch?v=C5vqyKRJzE
 - “平衡追随者与领导者角色”
 
 #### 专家网络研讨会
-**领导力视角网络研讨会——与 Barbara Kellerman 探讨追随力**：[`www.youtube.com/watch?v=31YChjPoPn8`](https://www.youtube.com/watch?v=31YChjPoPn8)
+
+- **领导力视角网络研讨会——与 Barbara Kellerman 探讨追随力**：[`www.youtube.com/watch?v=31YChjPoPn8`](https://www.youtube.com/watch?v=31YChjPoPn8)
 
 #### 追随者类型理论
-**追随者类型**：[`www.youtube.com/watch?v=AtbnTNld-LM`](https://www.youtube.com/watch?v=AtbnTNld-LM)
 
+- **追随者类型**：[`www.youtube.com/watch?v=AtbnTNld-LM`](https://www.youtube.com/watch?v=AtbnTNld-LM)
+
+搜索词：
 - “Robert Kelley 的追随力五型理论”
 - “Ira Chaleff 的勇敢追随者模型”
 - “Abraham Zaleznik 的独立追随理论”
@@ -2238,11 +2033,13 @@ Simon Sinek：激励他人做非凡之事：[`www.youtube.com/watch?v=C5vqyKRJzE
 - “追随力理论与模型的整合”
 
 #### 团队建设与冲突解决
-**Shane Snow 助我们打造梦之队**：[`www.youtube.com/watch?v=FVNC2Nd18xk`](https://www.youtube.com/watch?v=FVNC2Nd18xk)
 
-**冲突解决培训：如何在 6 分钟内管理团队冲突！**：[`www.youtube.com/watch?v=PHJ8eybXJdw`](https://www.youtube.com/watch?v=PHJ8eybXJdw)
+- **Shane Snow 助我们打造梦之队**：[`www.youtube.com/watch?v=FVNC2Nd18xk`](https://www.youtube.com/watch?v=FVNC2Nd18xk)
+- **冲突解决培训：如何在 6 分钟内管理团队冲突！**：[`www.youtube.com/watch?v=PHJ8eybXJdw`](https://www.youtube.com/watch?v=PHJ8eybXJdw)
 
 #### 协作与冲突解决主题
+
+搜索词：
 - “高效协作的特征”
 - “在团队协作中建立信任”
 - “协作的高效沟通策略”
@@ -2258,31 +2055,52 @@ Simon Sinek：激励他人做非凡之事：[`www.youtube.com/watch?v=C5vqyKRJzE
 ## 参考文献
 
 1.  Deci, E. L., & Ryan, R. M. (1985). *Intrinsic motivation and self-determination in human behavior*. Plenum.
+
 2.  Deci, E. L., & Ryan, R. M. (2000). The “what” and “why” of goal pursuits: Human needs and the self-determination of behavior. *Psychological Inquiry*, 11, 227–268. [`doi.org/10.1207/S15327965PLI1104_01`](https://doi.org/10.1207/S15327965PLI1104_01)
+
 3.  Ryan, R. M., & Deci, E. L. (2000). Self-determination theory and the facilitation of intrinsic motivation, social development, and well-being. *American Psychologist*, 55, 68–78. [`doi.org/10.1037/0003-066X.55.1.68`](https://doi.org/10.1037/0003-066X.55.1.68)
+
 4.  Vroom, V. H. (1964). *Work and motivation*. Wiley.
+
 5.  Vroom, V. H. (2005). On the origins of expectancy theory. In K. G. Smith & M. A. Hitt (Eds.), *Great minds in management* (pp. 239–258). Oxford University Press. [`doi.org/10.1093/oso/9780199276813.003.0012`](https://doi.org/10.1093/oso/9780199276813.003.0012)
+
 6.  Northouse, P. G. (2021). *Leadership: Theory and practice* (9th ed.). Sage.
+
 7.  Colbert, A. E., Judge, T. A., Choi, D., & Wang, G. (2012). Assessing the trait theory of leadership using self and observer ratings of personality: The mediating role of contributions to group success. *The Leadership Quarterly*, 23, 670–685. [`doi.org/10.1016/j.leaqua.2012.03.004`](https://doi.org/10.1016/j.leaqua.2012.03.004)
+
 8.  Judge, T. A., Bono, J. E., Ilies, R., & Gerhardt, M. W. (2002). Personality and leadership: A qualitative and quantitative review. *Journal of Applied Psychology*, 87, 765–780. [`doi.org/10.1037/0021-9010.87.4.765`](https://doi.org/10.1037/0021-9010.87.4.765)
+
 9.  Zhang, J., Yin, K., & Li, S. (2022). Leader extraversion and team performance: A moderated mediation model. *PLoS One*, 17(12), e0278769. [`doi.org/10.1371/journal.pone.0278769`](https://doi.org/10.1371/journal.pone.0278769)
+
 10. Humphrey, R. H. (2013). *Effective leadership: Theory, cases, and applications*. Sage Publications.
+
 11. Deckard, G. J. (2009). Contingency theories of leadership. *Organizational behavior in health care*, 2, 191–208.
+
+
+
+## 参考文献（续）
+
 12. Hughes, R. L., Ginnett, R. C., & Curphy, G. J. (2022). *Leadership: Enhancing the lessons of experience* (10th ed.). McGraw-Hill.
+
 13. Aga, D. A. (2016). Transactional leadership and project success: The moderating role of goal clarity. *Procedia Computer Science*, 100, 517–525.
+
 14. Tavanti, M. (2008). Transactional leadership. In A. Marturano & J. Gosling (Eds.), *Leadership: The key concepts* (pp. 166–170). Routledge.
+
 15. Bass, B. M., & Riggio, R. E. (2006). *Transformational leadership* (2nd ed.). Lawrence Erlbaum Associates.
+
 16. Hay, I. (2006). Transformational leadership: Characteristics and criticisms. *E-Journal of Organizational Learning and Leadership*, 5(2). [`www.academia.edu/9121644/Transformational_leadership_characteristics_and_criticisms`](http://www.academia.edu/9121644/Transformational_leadership_characteristics_and_criticisms)
+
 17. Berger, T. A. (2014). Servant leadership 2.0: A call for strong theory. *Sociological Viewpoints*, 30, 146–167.
+
 18. Van Dierendonck, D., & Patterson, K. (2010). Servant leadership: An introduction. In D. van Dierendonck & K. Patterson (Eds.), *Servant leadership: Developments in theory and research* (pp. 3–10). Palgrave Macmillan UK.
+
 19. Matshoba-Ramuedzisi, T., de Jongh, D., & Fourie, W. (2022). Followership: A review of current and emerging research. *Leadership & Organization Development Journal*, 43, 653–668. [`doi.org/10.1108/LODJ-10-2021-0473`](https://doi.org/10.1108/LODJ-10-2021-0473) (截至[2024/10/24]不可访问)
+
 20. Uhl-Bien, M., Riggio, R. E., Lowe, K. B., & Carsten, M. K. (2014). Followership theory: A review and research agenda. *The Leadership Quarterly*, 25, 83–104. [`doi.org/10.1016/j.leaqua.2013.11.007`](https://doi.org/10.1016/j.leaqua.2013.11.007)
+
 21. Kelley, R. (1992). *The power of followership*. Doubleday Business.
+
 22. Kelley, R. (2008). Rethinking followership. In R. Riggio, I. Chaleff, & J. Lipman-Blument (Eds.), *The art of followership: How great followers create great leaders and organizations* (pp. 5–17). Wiley.
-
-
-
-
 
 # 第三部分：AI 时代的拓展视野
 
@@ -2342,10 +2160,6 @@ DOI：[10.4324/9781032686653-13](http://doi.org/10.4324/9781032686653-13)
 
 *   44 Ramsbotham, O., Woodhouse, T., & Miall, H. (2011). *Contemporary conflict resolution: The prevention, management and transformation of deadly conflicts* (3rd ed.). Wiley.
 
-
-
-
-
 然而，适应不仅仅需要学习。为了适应，我们需要三种技能：首先，我们需要注意到我们当前的做法不再奏效。其次，我们需要规划一条替代的前进道路。第三，我们需要获取、保持并应用遵循这条新道路所需的技能和知识。我们依次探讨这些主题。
 
 ## 识别不断变化的现实
@@ -2357,6 +2171,8 @@ DOI：[10.4324/9781032686653-13](http://doi.org/10.4324/9781032686653-13)
 `Metacognition`（元认知）是关于认知的认知。如果你曾经连续清醒超过一天，你可能会注意到自己不像平时那样敏锐——这种察觉就是元认知的一个例子。注意到喝完第一杯早咖啡或茶后你能更好地集中注意力，也是元认知。另一个例子是当你注意到你目前的学习方式帮助不大时。
 
 元认知需要系统的观察。只有在我们注意到当前的做法不再奏效后，我们才会决定适应不断变化的环境。由于这个过程确实需要付出努力——而我们可能经常试图规避或轻视它——认知放大器循环（`CAL`）可以在帮助我们学会更频繁、更有效地运用元认知方面发挥特殊作用。请考虑以下内容：
+
+
 
 元认知很复杂，AI 正确地指出我们应该使用多种技术来应对它。确实，它推荐的技术已获得可靠的实证支持。例如，James Pennebaker 及其同事记录了日记对于自我洞察以及应对令人困扰的情绪和记忆的价值。⁵ 同样，大量研究表明，正念冥想可以促进我们进行元认知的能力（例如，⁶）。而社会支持的一部分涉及寻求反馈，如果反馈在事件发生后相对较快地提供，且具有建设性和非威胁性，则特别有帮助。⁷^,⁸
 
@@ -2383,9 +2199,6 @@ DOI：[10.4324/9781032686653-13](http://doi.org/10.4324/9781032686653-13)
 前两个阶段——认识到学习的必要性和规划前进的道路——对于适应变化至关重要，但它们只是序曲。这些活动为我们实际学习新技能和知识的工作奠定了基础。适应的核心是学习。
 
 我们通过阅读或观察来获取大量所学内容。如果我们在学习技能，还需要实际执行该活动，例如开车、演讲或唱歌。但即使在这里，我们在真正开始执行技能之前也能学到很多。想想看，如果我们在真正握住方向盘之前无法学到很多关于如何开车的知识，道路会变成什么样。幸运的是，并非所有学习都是通过试错进行的。我们可以阅读交通规则，观察他人如何驾驶，并通过这样做学到大量知识。
-
-
-
 
 ### 学习的两种方式
 
@@ -2441,8 +2254,6 @@ DOI：[10.4324/9781032686653-13](http://doi.org/10.4324/9781032686653-13)
 
 这一匹配假设直觉上很吸引人，但研究并未支持它。事实上，不存在令人信服的证据证明学习风格真实存在。¹⁶^,¹⁷^,¹⁸
 
-
-
 然而，有一个细节让我在完全摒弃“学习风格”这一观点之前不得不停下来斟酌。人们确实对不同的学习方式有着*偏好*。我们喜欢、享受并倾向于以特定方式呈现的材料进行互动。即使研究结果表明，我们所有人基本以相同的方式学习，实际上并不存在独特的“学习风格”这一说法是正确的，但如果呈现的形式符合我们的心意，我们学习的*动力*可能会更强。如果材料以偏好的方式呈现，我们可能更有可能在第一时间投入其中，并持续保持投入。我的文献检索未发现直接在真实情境下探讨这一可能性的研究。
 
 这些考量引导我们关注动机，并思考是什么激励我们去学习。
@@ -2474,9 +2285,6 @@ DOI：[10.4324/9781032686653-13](http://doi.org/10.4324/9781032686653-13)
 总的来说，AI 可以通过提供基于场景的练习、即时反馈，以及针对我们觉得最困难部分的聚焦练习，来帮助我们学习和适应。它还能帮助我们管理工作记忆负荷，³⁹^,⁴⁰ 并提供种类繁多的主动学习类型。⁴¹ 在所有情况下，我们都可以使用 `CAL` 引导 AI 为我们提供不仅难度适合（考虑到我们的相关背景），而且包含我们觉得引人入胜的例子和插图的材料。
 
 ## 与 CAL 共同繁荣
-
-
-
 
 清晰地学习新技能和知识能带来自主感和掌控感，因为学习赋予了我们驾驭环境的工具。新技能和知识甚至能指引我们在寻找新工作——或在现有工作中寻找新任务——时找到合适的匹配。提升学习能力能增强工作满意度，并让我们在组织中晋升，进而提供更强的财务保障。此外，我们前面提到过，要想蓬勃发展，我们需要作为个体不断成长，开发我们的能力和天赋。学习是实现这些目标的关键。
 
@@ -2538,78 +2346,91 @@ ARCS：与 John Keller 的对话：[`www.youtube.com/watch?v=E1ugbX2EKN0`](https
 
 ## 参考文献
 
-*   1Georgieva, K. (2024, January 14). AI will transform the global economy. Let’s make sure it benefits humanity. IMF blog. [www.imf.org/en/Blogs/Articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity](http://www.imf.org/en/Blogs/Articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity)
-*   2Tamayo, J., Doumi, L., Goel, S., Kovacs-Ondrejkovic, O., & Sadun, R. (2023, September–October). Reskilling in the Age of AI. Harvard Business Review. [`hbr.org/2023/09/reskilling-in-the-age-of-ai`](https://hbr.org/2023/09/reskilling-in-the-age-of-ai)
-*   3Brown, P. C., Roediger, H. L. III, & McDaniel, M. A. (2014). Make it stick: The science of successful learning. Belknap Press/Harvard University Press.
-*   4Kosslyn, S. M. (2023). Active learning with AI: A practical guide. Alinea Learning.
-*   5Pennebaker, J. W. (2004). Writing to heal: A guided journal for recovering from trauma & emotional upheaval. New Harbinger Publications; Distributed in Canada by Raincoast Books.
-*   6Creswell, J. D. (2017). Mindfulness interventions. Annual Review of Psychology, *68*, 491–516. [`doi.org/10.1146/annurev-psych-042716-051139`](https://doi.org/10.1146/annurev-psych-042716-051139)
-*   7Hattie, J., & Clarke, S. (2018). Visible learning: Feedback. Routledge. doi:[10.4324/9780429485480](http://dx.doi.org/10.4324/9780429485480)
-*   8Wiśniewski, B., Zierer, K., & Hattie, J. (2020). The power of feedback revisited: A meta-analysis of educational feedback research. Frontiers in Psychology: Section on Educational Psychology, *10*. [www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2019.03087/full](http://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2019.03087/full)
-*   9Kosslyn, S. M. (2017). The science of learning. In S. M. Kosslyn & B. Nelson (Eds.), Building the intentional university: Minerva and the future of higher education. MIT Press, pp. 149–164.
-*   10Willingham, D. T. (2023). Outsmart your brain: Why learning is hard and how you can make it easy. Gallery Books.
-*   11Kosslyn, S. M. (2020). Active learning online: Five principles that make online courses come alive. Alinea Learning.
-*   12Roediger, H. L., & Karpicke, J. D. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. Psychological Science, *17*, 249–255. [`doi.org/10.1111/j.1467-9280.2006.01693.x`](https://doi.org/10.1111/j.1467-9280.2006.01693.x) (Not accessible as of [2024/10/24])
-*   13Bellson, L. (1985). Modern reading text in 4/4 for all instruments. Alfred Music.
-*   14Kosslyn, S. M. (2023). Active learning with AI: A practical guide. Alinea Learning.
-*   15Foer, J. (2011). Moonwalking with Einstein: The art and science of remembering everything. Penguin Press.
-*   16Cuevas J. (2015). Is learning styles-based instruction effective? A comprehensive analysis of recent research on learning styles. Theory and Research in Education, *13*, 308–333. doi:[10.1177/1477878515606621](http://dx.doi.org/10.1177/1477878515606621)
-
-
-
 
 
 ## 参考文献
 
-*   17 Pashler, H., McDaniel, M., Rohrer, D., & Bjork, R. (2008). Learning styles: Concepts and evidence. *Psychological Science in the Public Interest*, *9*, 105–119. [`doi.org/10.1111/j.1539-6053.2009.01038.x`](https://doi.org/10.1111/j.1539-6053.2009.01038.x) （截至[2024/10/24]无法访问）。
+1.  Georgieva, K. (2024, January 14). AI will transform the global economy. Let’s make sure it benefits humanity. *IMF blog*. <http://www.imf.org/en/Blogs/Articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity>
 
-*   18 Willingham, D. T., Hughes, E. M., & Dobolyi, D. G. (2015). The scientific status of learning styles theories. *Teaching of Psychology*, *42*, 266–271. [`doi.org/10.1177/0098628315589505`](https://doi.org/10.1177/0098628315589505)。
+2.  Tamayo, J., Doumi, L., Goel, S., Kovacs-Ondrejkovic, O., & Sadun, R. (2023, September–October). Reskilling in the Age of AI. *Harvard Business Review*. <https://hbr.org/2023/09/reskilling-in-the-age-of-ai>
 
-*   19 Deci, E. L., & Ryan, R. M. (2012). Motivation, personality, and development within embedded social contexts: An overview of self-determination theory. In R. M. Ryan (Ed.), *Oxford handbook of human motivation*. Oxford University Press, pp. 85–107。
+3.  Brown, P. C., Roediger, H. L. III, & McDaniel, M. A. (2014). *Make it stick: The science of successful learning*. Belknap Press/Harvard University Press.
 
-*   20 Ryan, R. M., & Deci, E. L. (2000). Self-determination theory and the facilitation of intrinsic motivation, social development, and well-being. *American Psychologist*, *55*, 68–78. doi:[10.1037/0003-066X.55.1.68](http://dx.doi.org/10.1037/0003-066X.55.1.68)。
+4.  Kosslyn, S. M. (2023). *Active learning with AI: A practical guide*. Alinea Learning.
 
-*   21 Ryan, R. M. & Deci, E. L. (2017). *Self-determination theory: Basic psychological needs in motivation, development, and wellness*. The Guilford Press. [`doi.org/10.1521/978.14625/28806`](https://doi.org/10.1521/978.14625/28806)。
+5.  Pennebaker, J. W. (2004). *Writing to heal: A guided journal for recovering from trauma & emotional upheaval*. New Harbinger Publications; Distributed in Canada by Raincoast Books.
 
-*   22 Vroom, V. H. (1964). *Work and motivation*. Wiley。
+6.  Creswell, J. D. (2017). Mindfulness interventions. *Annual Review of Psychology*, *68*, 491–516. <https://doi.org/10.1146/annurev-psych-042716-051139>
 
-*   23 Vroom, V. H. (2005). On the origins of expectancy theory. In K. G. Smith & M. A. Hitt (Eds.), *Great minds in management*. Oxford University Press, pp. 239–258. [`doi.org/10.1093/oso/9780199276813.003.0012`](https://doi.org/10.1093/oso/9780199276813.003.0012)。
+7.  Hattie, J., & Clarke, S. (2018). *Visible learning: Feedback*. Routledge. <http://dx.doi.org/10.4324/9780429485480>
 
-*   24 Montana, P. J., & Charnov, B. H. (2008). *Management* (4th ed.). Barron’s Educational Series。
+8.  Wiśniewski, B., Zierer, K., & Hattie, J. (2020). The power of feedback revisited: A meta-analysis of educational feedback research. *Frontiers in Psychology: Section on Educational Psychology*, *10*. <http://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2019.03087/full>
 
-*   25 McDougall, W. (1932). *The energies of men: A study of the fundamentals of dynamic psychology*. Methuen & Co。
+9.  Kosslyn, S. M. (2017). The science of learning. In S. M. Kosslyn & B. Nelson (Eds.), *Building the intentional university: Minerva and the future of higher education* (pp. 149–164). MIT Press.
 
-*   26 Bernard, L. C., Mills, M., Swenson, L., & Walsh, R. P. (2005). An evolutionary theory of human motivation. *Genetic, Social, and General Psychology Monographs*, *131*, 129–84. doi:[10.3200/MONO.131.2.129-184](http://dx.doi.org/10.3200/MONO.131.2.129-184)。
+10. Willingham, D. T. (2023). *Outsmart your brain: Why learning is hard and how you can make it easy*. Gallery Books.
 
-*   27 Cosmides, L., & Tooby, J. (2013). Evolutionary psychology: New perspectives on cognition and motivation. *Annual Review of Psychology*, *64*, 201–229. doi:[10.1146/annurev.psych.121208.131628](http://dx.doi.org/10.1146/annurev.psych.121208.131628)。
+11. Kosslyn, S. M. (2020). *Active learning online: Five principles that make online courses come alive*. Alinea Learning.
 
-*   28 Pinker, S. (2007). *The language instinct: How the mind creates language*. Harper Perennial Modern Classics。
+12. Roediger, H. L., & Karpicke, J. D. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. *Psychological Science*, *17*, 249–255. <https://doi.org/10.1111/j.1467-9280.2006.01693.x> (Not accessible as of [2024/10/24])
 
-*   29 Maslow, A. (1943). A theory of human motivation. *Psychological Review*, *50*, 370–396. [`doi.org/10.1037/h0054346`](https://doi.org/10.1037/h0054346)。
+13. Bellson, L. (1985). *Modern reading text in 4/4 for all instruments*. Alfred Music.
 
-*   30 Tay, L., & Diener, E. (2011). Needs and subjective well-being around the world. *Journal of Personality and Social Psychology*, *101*, 354–365. doi:[10.1037/a0023779](http://dx.doi.org/10.1037/a0023779)。
+14. Kosslyn, S. M. (2023). *Active learning with AI: A practical guide*. Alinea Learning.
 
-*   31 Wahba, M. A., & Bridwell, L. G. (1976). Maslow reconsidered: A review of research on the need hierarchy theory. *Organizational Behavior and Human Performance*, *15*, 212–240. doi:[10.1016/0030-5073(76)90038-6](http://dx.doi.org/10.1016/0030-5073(76)90038-6)。
+15. Foer, J. (2011). *Moonwalking with Einstein: The art and science of remembering everything*. Penguin Press.
 
-*   32 Keller, J. M. (1979). Motivation and instructional design: A theoretical perspective. *Journal of Instructional Development*, *2*, 26–34。
+16. Cuevas, J. (2015). Is learning styles-based instruction effective? A comprehensive analysis of recent research on learning styles. *Theory and Research in Education*, *13*, 308–333. <http://dx.doi.org/10.1177/1477878515606621>
 
-*   33 Keller, J. M. (1987). Development and use of the ARCS model of instructional design. *Journal of Instructional Development*, *10*, 2–10。
+## 参考文献（续）
 
-*   34 Filgona, J., Sakiyo, J., Gwany, D. M., & Okoronka, A. U. (2020). Motivation in learning. *Asian Journal of Education and Social Studies*, *10*, 16–37. [`doi.org/10.9734/ajess/2020/v10i43027`](https://doi.org/10.9734/ajess/2020/v10i43027) （截至[2024/10/24]无法访问）。
+17. Pashler, H., McDaniel, M., Rohrer, D., & Bjork, R. (2008). Learning styles: Concepts and evidence. *Psychological Science in the Public Interest*, *9*, 105–119. <https://doi.org/10.1111/j.1539-6053.2009.01038.x> （截至[2024/10/24]无法访问）。
 
-*   35 Gopalan, V., Bakar, J. A. A., Zulkifli, A. N., Alwi, A., & Mat, R. C. (2017). A review of the motivation theories of learning. *AIP Conference Proceedings*, 1891, 020043. [`doi.org/10.1063/1.5005376`](https://doi.org/10.1063/1.5005376)。
+18. Willingham, D. T., Hughes, E. M., & Dobolyi, D. G. (2015). The scientific status of learning styles theories. *Teaching of Psychology*, *42*, 266–271. <https://doi.org/10.1177/0098628315589505>。
 
-*   36 Graham, S., & Weiner, B. (2012). Motivation: Past, present, and future. In K. R. Harris, S. Graham, T. Urdan, C. B. McCormick, G. M. Sinatra, & J. Sweller (Eds.), *APA educational psychology handbook, Vol. 1: Theories, constructs, and critical issues*. American Psychological Association, pp. 367–397. [`doi.org/10.1037/13273-013`](https://doi.org/10.1037/13273-013)。
+19. Deci, E. L., & Ryan, R. M. (2012). Motivation, personality, and development within embedded social contexts: An overview of self-determination theory. In R. M. Ryan (Ed.), *Oxford handbook of human motivation* (pp. 85–107). Oxford University Press.
 
-*   37 Lai, E. R. (2011). *Motivation: A literature review*. [www.johnnietfeld.com/uploads/2/2/6/0/22606800/motivation_review_final.pdf](http://www.johnnietfeld.com/uploads/2/2/6/0/22606800/motivation_review_final.pdf)。
+20. Ryan, R. M., & Deci, E. L. (2000). Self-determination theory and the facilitation of intrinsic motivation, social development, and well-being. *American Psychologist*, *55*, 68–78. <http://dx.doi.org/10.1037/0003-066X.55.1.68>。
 
-*   38 Christensen, C. M. (2016). *The innovator’s dilemma: When new technologies cause great firms to fail*. Harvard Business Review Press。
+21. Ryan, R. M. & Deci, E. L. (2017). *Self-determination theory: Basic psychological needs in motivation, development, and wellness*. The Guilford Press. <https://doi.org/10.1521/978.14625/28806>。
 
-*   39 Clark, R. C., Nguyen, F., & Sweller, J. (2005). *Efficiency in learning: Evidence-based guidelines to manage cognitive load*. Wiley。
+22. Vroom, V. H. (1964). *Work and motivation*. Wiley。
 
-*   40 Sweller, J. (1988). Cognitive load during problem solving: Effects on learning. *Cognitive Science*, *12*, 257–285. doi:[10.1207/s15516709cog1202_4](http://dx.doi.org/10.1207/s15516709cog1202_4)。
+23. Vroom, V. H. (2005). On the origins of expectancy theory. In K. G. Smith & M. A. Hitt (Eds.), *Great minds in management* (pp. 239–258). Oxford University Press. <https://doi.org/10.1093/oso/9780199276813.003.0012>。
 
-*   41 Kosslyn, S. M. (2023). *Active learning with AI: A practical guide*. Alinea Learning。
+24. Montana, P. J., & Charnov, B. H. (2008). *Management* (4th ed.). Barron’s Educational Series。
+
+25. McDougall, W. (1932). *The energies of men: A study of the fundamentals of dynamic psychology*. Methuen & Co。
+
+26. Bernard, L. C., Mills, M., Swenson, L., & Walsh, R. P. (2005). An evolutionary theory of human motivation. *Genetic, Social, and General Psychology Monographs*, *131*, 129–84. <http://dx.doi.org/10.3200/MONO.131.2.129-184>。
+
+27. Cosmides, L., & Tooby, J. (2013). Evolutionary psychology: New perspectives on cognition and motivation. *Annual Review of Psychology*, *64*, 201–229. <http://dx.doi.org/10.1146/annurev.psych.121208.131628>。
+
+28. Pinker, S. (2007). *The language instinct: How the mind creates language*. Harper Perennial Modern Classics。
+
+29. Maslow, A. (1943). A theory of human motivation. *Psychological Review*, *50*, 370–396. <https://doi.org/10.1037/h0054346>。
+
+30. Tay, L., & Diener, E. (2011). Needs and subjective well-being around the world. *Journal of Personality and Social Psychology*, *101*, 354–365. <http://dx.doi.org/10.1037/a0023779>。
+
+31. Wahba, M. A., & Bridwell, L. G. (1976). Maslow reconsidered: A review of research on the need hierarchy theory. *Organizational Behavior and Human Performance*, *15*, 212–240. <http://dx.doi.org/10.1016/0030-5073(76)90038-6>。
+
+32. Keller, J. M. (1979). Motivation and instructional design: A theoretical perspective. *Journal of Instructional Development*, *2*, 26–34。
+
+33. Keller, J. M. (1987). Development and use of the ARCS model of instructional design. *Journal of Instructional Development*, *10*, 2–10。
+
+34. Filgona, J., Sakiyo, J., Gwany, D. M., & Okoronka, A. U. (2020). Motivation in learning. *Asian Journal of Education and Social Studies*, *10*, 16–37. <https://doi.org/10.9734/ajess/2020/v10i43027> （截至[2024/10/24]无法访问）。
+
+35. Gopalan, V., Bakar, J. A. A., Zulkifli, A. N., Alwi, A., & Mat, R. C. (2017). A review of the motivation theories of learning. *AIP Conference Proceedings*, 1891, 020043. <https://doi.org/10.1063/1.5005376>。
+
+36. Graham, S., & Weiner, B. (2012). Motivation: Past, present, and future. In K. R. Harris, S. Graham, T. Urdan, C. B. McCormick, G. M. Sinatra, & J. Sweller (Eds.), *APA educational psychology handbook, Vol. 1: Theories, constructs, and critical issues* (pp. 367–397). American Psychological Association. <https://doi.org/10.1037/13273-013>。
+
+37. Lai, E. R. (2011). *Motivation: A literature review*. <http://www.johnnietfeld.com/uploads/2/2/6/0/22606800/motivation_review_final.pdf>。
+
+38. Christensen, C. M. (2016). *The innovator’s dilemma: When new technologies cause great firms to fail*. Harvard Business Review Press。
+
+39. Clark, R. C., Nguyen, F., & Sweller, J. (2005). *Efficiency in learning: Evidence-based guidelines to manage cognitive load*. Wiley。
+
+
 
 # 第 11 章：策划人生目标
 
@@ -2620,9 +2441,6 @@ DOI: [10.4324/9781032686653-14](http://doi.org/10.4324/9781032686653-14)
 我们都在创建和更新人生目标。尽管高中生和 40 岁职场人士面临的任务看似截然不同，但它们有许多共同之处。在所有情况下，我们都需要弄清有哪些可能性，什么激励着我们，什么对我们来说似乎可行，以及我们能想象自己做什么。
 
 我们需要区分人生目标的两个方面：一方面，我们的*人生目标（human goals）*驱动着我们的个人生活。这些目标关注我们想成为什么样的人，深植于我们的价值观、人际关系和世界观中。另一方面，我们的*职业目标（professional goals）*主导着我们日常的工作生活，植根于我们在工作中运用的实用技能和知识。这两类目标相互交织，共同赋予我们的生活目的和意义。
-
-
-
 
 无论我们是制定最初的、试探性的人类与职业目标，还是修订成熟的目标以使其更令人满意，我们都需要学习的不仅仅是我们在工作中使用的实用技能和知识。特别是，我们许多人类目标可能受到那些乍看之下似乎没有用处的技能和知识的影响。在下一节中，我们将探讨这一观点。
 
@@ -2647,8 +2465,6 @@ DOI: [10.4324/9781032686653-14](http://doi.org/10.4324/9781032686653-14)
 人文学科还提供直接和间接的经验来源，帮助我们了解自己，这对于规划我们的前进道路至关重要。正如希腊哲学家柏拉图引用其老师苏格拉底所说：“未经审视的人生是不值得过的。”⁵ 有些人文学科可以通过让我们进入特定的心境，产生关于我们自己和我们世界的洞见。艺术和音乐常常做到这一点，戏剧也是如此。这些心理状态可以帮助我们体会我们如何看待世界，以及我们如何看待世界中的自己。同样，我们可以将哲学视为一种审视应指导我们人生目标的信仰和伦理基础的方式。
 
 简而言之，学习人文学科可以帮助我们在 AI 渗透社会各个方面、脚下的地貌发生变化时，制定和更新我们的人类目标。要从这个角度汲取人文学科的养分，我们可能不会以传统方式学习它们，即作为“为了知识而知识”。相反，我们会利用这些材料来塑造我们可以瞄准的长期目标。要做好这一点，我们可以基于 Russell Ackoff 描述的四个分析层次来考虑这些材料⁶：
-
-
 
 我们首先考虑材料所依赖的——无论是显性还是隐性的——*数据*。数据是定性观察或定量测量的未经解释的结果。它们可以用数字、字符、词语或图像来传达。我们需要确定小说、戏剧或其他人文作品是否建立在可靠的观察之上。
 
@@ -2694,24 +2510,26 @@ DOI: [10.4324/9781032686653-14](http://doi.org/10.4324/9781032686653-14)
 
 **批判性思维。** 正如第 3 章所讨论的，批判性思维不是“单一事物”，我们需要在各种各样的语境中依赖不同类型的批判性思维。要深入掌握表 3.1 中的方法，我们需要具备统计思维，这需要一些基础数学。此类学习应侧重于概念，以便我们培养直觉，帮助我们驾驭日益复杂的环境。
 
-
-
-
 ### 核心人类技能
 
 #### 创造性问题解决
+
 正如第 4 章所述，许多类型的问题需要创造性方法，且往往需要在开放式情境中进行“跳出框架”的思考，此时必须考量上下文。我们需要为创造性问题解决的发散思维阶段和聚合思维阶段采用多种启发式方法。要善于进行批判性思考或创造性问题解决，我们需要了解人类的认知优势与局限，并学会如何应对后者（第 5 章）。
 
 #### 情商
+
 我们不仅能培养识别和管理自身情绪的能力（第 6 章），还能领会自身行为对他人的影响。此外，我们还需理解他人的情绪及其如何影响行为。他人的反应方式部分取决于他们的个性（第 7 章），而情商能帮助我们解读并应对这些个性差异（第 8 章）。这项技能结合良好的沟通技巧，将极大地促进人际和谐。
 
 #### 人际沟通
+
 第 9 章讨论了另一项关键技能：清晰且得体地沟通的能力。我们需要知道如何针对特定受众、出于特定目的，最好地传达不同类型的信息。如前所述，AI 时代的一项关键沟通技巧是知道如何揭穿虚假信息和错误信息。沟通技巧结合批判性思维、创造性问题解决和情商，是确保真相与透明度占据主导地位的关键——并帮助整个社会适应一个渗透着 AI 的世界。
 
 #### 领导、追随与协作
+
 在第 10 章中，我们探讨了人类作为领导者、追随者和协作者进行集体工作的底层技能。随着我们人类越来越专注于与其他人类的互动，这些技能在 AI 时代将变得愈发重要。
 
 #### 适应与学习
+
 考虑到世界变化的速度之快，且随着技术进步这种变化还将持续，我们人类将需要在一生中不断适应和学习。人们需要学会如何高效、有效地做到这一点（第 10 章）。
 
 我们可以利用 CAL 来锻炼这些技能中的每一项，及/或帮助我们学习它们。事实上，在许多情况下，利用 CAL 来辅助我们将——作为副产品——最终帮助我们掌握这些技能。
@@ -2721,19 +2539,25 @@ DOI: [10.4324/9781032686653-14](http://doi.org/10.4324/9781032686653-14)
 如果我们人类想要发挥我们比当前 AI 更擅长的优势，我们就需要学会如何评估并适应事件展开的上下文。要做好这一点，我们需要了解多个领域的知识。此外，我们将需要终身学习，因为总会有新的相关发现和发展。我们需要涉足的领域包括：
 
 #### 人文学科
+
 正如本章前文所述，人文学科能以多种方式照亮我们的生活。它们能帮助我们识别和评估可能的人生道路，通过替代性经验学习，理解周围的世界，并开拓新的视野供我们考量。
 
 #### 人类个性
+
 通过了解关于个性本质的最新认识，我们不仅获得了自我认知，还使自己能够掌握如何最好地与他人互动（第 7 章）。
 
 #### 社会科学
+
 社会科学提供了丰富的实用知识。我通过借鉴心理学的各个侧面（如它对学习本质、情绪管理、个性刻画和情商的阐述），在全书中对此进行了阐释。此外，经济学能帮助我们决定如何优先分配时间、金钱等资源。通过学习经济学，我们可以深入了解特定人类目标和职业目标的财务与物质后果。同样，社会学引导我们考量可能影响我们选择的社会因素，以及我们行为对社会的影响。此外，人类学引导我们采取文化敏感的世界观。采纳这种视角能帮助我们识别并应对自身的文化盲区，从而看到以前不明显的可能性。总的来说，社会科学中的理论、概念和发现能帮助我们构想和评估可能的人类目标和职业目标。
 
 #### STEM 领域
+
 当我们掌握批判性思维和创造性问题解决时，将被引导去学习科学、技术、工程和数学（STEM）材料的许多方面。例如，当我们考量人类判断和决策时，需要了解大脑的基本知识。当然，为了跟上 AI 的发展，我们需要精通计算机科学的各个方面。但除此之外，我们还需要对 STEM 领域有总体认识，因为这些领域的进步将震撼我们的世界。这种进步已经令人惊叹，而 AI 只会加速这一进程⁸⁹。例如，AI 将加速寻找疾病治疗方法、延长人类寿命、创造新建筑材料和提供廉价能源。我们至少需要掌握 STEM 领域的基础知识，以免感觉自己被人类无法控制的、看似神奇的力量所摆布。
 
 #### 应对日常情境
+
 最后，考虑我们所有人都在其中生活的日常情境。只要我们了解这些情境的基本原理，在面对开放式情境时就能更好地对其进行推理。具体而言，我们应该了解：
+
 1.  **法律体系**：从被警察拦截时的权利等琐碎事实，到律师工作的基本事实，再到法院系统的运作方式；
 2.  **医疗体系**：从不同类型医疗服务提供者的职责，到知道如何与他们互动，再到理解医疗报告；
 3.  **金融体系**：从个人理财、税收，到股市基础知识；
@@ -2747,12 +2571,11 @@ DOI: [10.4324/9781032686653-14](http://doi.org/10.4324/9781032686653-14)
 
 我们再次以视频推荐作为结尾，这些视频对本章内容提供了通俗易懂、更深入的阐述。我们还提供了搜索词以帮助查找该主题的新视频。
 
+
+
 - **Fareed Zakaria—The Importance of the Liberal Arts**: [`www.youtube.com/watch?v=g-Kbfu_XOi0`](https://www.youtube.com/watch?v=g-Kbfu_XOi0)
+
 - **How to know your life purpose in 5 minutes | Adam Leipzig | TEDxMalibu**: [`www.youtube.com/watch?v=vVsXO9brK7M`](https://www.youtube.com/watch?v=vVsXO9brK7M)
-
-
-
-
 
 ## 课程主题与资源
 
@@ -2883,9 +2706,6 @@ DOI: [10.4324/9781032686653-14](http://doi.org/10.4324/9781032686653-14)
 *   **Bar-On 混合情商模型** [164], [165]
 *   **追随者行为理论** [219], [221]
 
-
-
-
 # 索引
 
 *   **领导力行为理论** 211
@@ -2936,10 +2756,6 @@ DOI: [10.4324/9781032686653-14](http://doi.org/10.4324/9781032686653-14)
     *   巴昂混合模型 164, 165
     *   与虚假/错误信息 196
     *   面部表情识别 174–175
-
-
-
-
 *   **四分支模型** 164, 165
 *   **戈尔曼模型** 164, 165
 *   重要性 280
@@ -2950,7 +2766,6 @@ DOI: [10.4324/9781032686653-14](http://doi.org/10.4324/9781032686653-14)
 *   **特质模型** 164, 165
 *   利用 AI 提升组成部分 174–178
 *   利用 AI 进行训练 169–174
-
 *   情绪性（特质） 145
 *   情绪波动性（特质） 148
 *   情绪：对认知的影响 109–110
@@ -2961,7 +2776,6 @@ DOI: [10.4324/9781032686653-14](http://doi.org/10.4324/9781032686653-14)
     *   概述 108–109
     *   重构认知以重塑 115–120
     *   110
-
 *   精力（特质） 147
 *   承诺升级 87, 92
 *   伦理：偏见与 34
@@ -3043,6 +2857,11 @@ DOI: [10.4324/9781032686653-14](http://doi.org/10.4324/9781032686653-14)
 *   列文森，斯蒂芬 195
 *   自由主义（特质） 145
 *   **LIME（局部可解释模型无关解释）** 34
+
+
+
+# 索引
+
 *   文学 186
 *   乱扔垃圾信息（AI 创建） 189–192
 *   逻辑一致性 46
@@ -3072,12 +2891,6 @@ DOI: [10.4324/9781032686653-14](http://doi.org/10.4324/9781032686653-14)
 *   **OpenAI** 1
 *   开放式情境 5, 7–10
 *   对情绪的开放性（特质） 145
-
-
-
-
-# 索引
-
 *   **对经验的开放性（特质）** 136, 143, 145
 *   **运营约束** 47
 *   **乐观/悲观偏见** 86, 91, 92
@@ -3131,10 +2944,6 @@ DOI: [10.4324/9781032686653-14](http://doi.org/10.4324/9781032686653-14)
 *   **智慧顾问（AI 作为）** 124
 *   **维特根斯坦, 路德维希** 6
 *   **工作：当前可能存续的工作** 271–274
-
-
-
-
 *   职业置换 11–12
 *   情商与 167–168
 *   \-生活平衡 12
@@ -3142,10 +2951,7 @@ DOI: [10.4324/9781032686653-14](http://doi.org/10.4324/9781032686653-14)
 *   职业目标 271–279
 *   取代当今工作 243
 *   满意度 11–12；*另见* 职业目标
-
 *   工作记忆：概述 102–103
     *   利用 AI 减轻其负荷 103–108
-
 *   艺术作品 188
-
 *   书面沟通 186

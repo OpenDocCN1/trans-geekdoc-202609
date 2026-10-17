@@ -1,13 +1,10 @@
-# 2020欧洲光通信会议 (ECOC)(布鲁塞尔，比利时 2020.12.6-2020.12.10) 2020欧洲光通信会议 (ECOC) ｜｜ 基于机器学习的软故障定位
 
-
-
-
-
+# 2020欧洲光通信会议 (ECOC)(布鲁塞尔，比利时 2020.12.6-2020.12.10) | 基于机器学习的软故障定位
 
 Kayol S. Mayer(1*), Jonathan Soares(1), Rossano P. Pinto(2), Christian E. Rotenberg(2), Dalton S. Arantes(1), 和 Darli A. Mello(1)
 
 (1) DECOM, DCA, 卡皮纳大学, 404 Albert Einstein Ave., Campinas, 13083-52, SP, Brazil.
+
 (*) kayol@decom.unicamp.br
 
 针对软故障（soft failure）定位，我们提出了一种利用 SDN 全网参数流式遥测的机器学习方法。该人工神经网络只需要少数场景即可达到良好的插值性能。在仿真的 FSNet 拓扑中通过 gNMI 遥测对该实现进行了验证。
@@ -69,34 +66,52 @@ Kayol S. Mayer(1*), Jonathan Soares(1), Rossano P. Pinto(2), Christian E. Rotenb
 
 结论。获得的结果表明，在硬故障和软故障场景下训练 ANN 进行软故障定位具有良好的性能。实现环境的性能洞察表明性能是合适的。
 
-
-
-
-
 ## 参考文献
 
 - [1] F. Khan, Q. Fan, C. Lu, and A. P. T. Lu, "基于机器学习的光纤通信服务及其应用," Journal of Lightweight Technology, vol. 37, no. 2, pp. 493–516, 2021.
-- [2] F. Musmann, C. Roberts, A. Nag, I. Macaluso, D. Zibar, R. Muffini, and M. Tornatore, "光网络中机器学习技术综述," IEEE Communications Surveys & Tutorials, vol. 23, no. 2, pp. 1180–1203, 2021.
-- [3] F. Musmann, C. Roberts, G. Gorani, S. Shakahari, F. Cini, and M. Tornatore, "光网络管理中的机器学习教程," Journal of Lightweight Technology, vol. 37, no. 16, pp. 4125–4139, 2019.
-- [4] N. Gu, L. Li, X. Liang, S. Bose, and G. Shen, "如果 AI 失败：光网络中对抗攻击的防御," 2020 IEEE Optical Fiber Communications and Exhibition (OFC), 2020.
-- [5] S. Bargazer, V. Merilli, U. Ferrai, A. Napoli, V. Curri, and L. Lasso, "解构网络中的软定位与设备工作参数," in 2021 IEEE Optical Fiber Communications and Exhibition (OFC), 2021, pp. 1–6.
-- [6] A. P. Bela, V. Shakahari, R. Muffini, F. Cini, A. Castelli, L. R. Roetti, P. Casalella, S. J. Basto, and Y. Luo, "光网络识别与拓扑的软定位," IEEE/OSA Journal of Optical Communications and Networking, vol. 37, no. 1, AZE26–AZE236, 2020.
-- [7] H. Liu, F. Xu, Y. Liu, W. Yi, and C. Zhuge, "基于稠密卷积神经网络的光通信系统软故障识别," Journal of Lightweight Technology, vol. 38, no. 4, pp. 2995–3006, 2020.
-- [8] S. Shakahari, F. Musmann, F. Cini, and M. Tornatore, "光网络中基于机器学习的软故障检测与识别," in 2018 IEEE Optical Fiber Communications and Exhibition (OFC), 2018, pp. 1–6.
-- [9] S. Varausegge, D. Liptak, R. Ticher, S. Sibelius, and E. Raj, "使用复杂度异常检测识别光纤链路中的软故障," Optical Fiber Communications and Exhibition (OFC), 2019, pp. 1–6.
-- [10] L. Shu, Z. Yu, J. Zhang, J. Shu, and K. Ku, "利用光谱信息的线性光网络双点软故障检测与识别," Journal of Lightweight Technology, vol. 38, no. 5, pp. 1988–1999, 2020.
-- [11] Z. Liu, M. Zhang, D. Wang, G. Song, M. Liu, J. Li, L. Lou, and Z. Liu, "光网络中使用机器学习和时间序列进行故障预测," Opt. Express. vol. 25, no. 16, pp. 18553–18566, 2017.
-- [12] D. Rafiefer, S. Tychonowicz, H. Grieber, A. Autterhoff, and J. Chen, "光网络故障管理的认知保障架构," Journal of Lightweight Technology, vol. 36, no. 7, pp. 1443–1450, 2018.
-- [13] T. Panayotou, S. P. Chataris, and G. Elias, "利用机器学习解决光网络故障定位问题," IEEE/OSA Journal of Optical Communications and Networking, vol. 10, no. 3, pp. 162–173, 2018.
-- [14] T. Pan, E. Song, J. Jia, W. Cao, and T. Huang, "无探头的轻量级网络遥测," in 2020 INFOCOM, pp. 2–3.
-- [15] A. Shyagar, A. Mercian, M. McGary, M. Reinstein, and W. Keller, "软件定义光网络 (SDNs)," IEEE Communications Surveys & Tutorials, vol. 18, no. 4, pp. 2738–2788, 2016.
-- [16] Y. Zhou, L. Xu, X. Zhang, G. Zheng, and Y. Sun, "基于机器学习的软件定义网络应用综述," IEEE Access, vol. 7, pp. 95417–95419, 2019.
-- [17] 未来网络机器学习框架 ITU-2020, ITU-International Communications Union, Tech Rep.
-- [18] A. Sadadasivaro, S. Sayed, D. Panda, P. Gomes, R. Raj, L. Prashasti, and K. Raj, "用于 DWDM 分析与验证的时域光纤监控," in 2020 IEEE Optical Fiber Communications and Exhibition (OFC), pp. 1–6.
-- [19] H. Chen, Y. Zhou, J. Zhang, W. Wang, and R. Zhu, "弹性光网络中碎片化流量的静态路由与频谱分配," IEEE Networks, vol. 35, no. 5, pp. 1045–1052, 2021.
-- [20] I. Kath and D. Medis, "MPLS/ON-over-DWDM 多层网络容量优化：启发式算法与理论," IEEE Transactions on Network and Service Management, vol. 14, no. 3, pp. 340–365, 2007.
-- [21] Y. Xiao, J. Zhang, Z. Gao, and Y. Li, "5G/融合无线网络中基于强化学习的服务型 DU 放置," IEEE Optical Fiber Communications and Exhibition (OFC), Mar. 2020, pp. 1–6.
-- [22] M. Solintakiani, A. Jamavard, and J. Lee, "被动光神经网络部署优化的理论洞解," IEEE Transactions on Information Theory, vol. 65, no. 2, pp. 742–769, 2019.
-- [23] A. Jain, K. Kandakumar, and A. Ross, "多模态生物识别系统中的评分归一化模式," Pattern Recognition, vol. 38, no. 12, pp. 22770–2285, 2005.
-- [24] D. P. King and L. Ba, "一种随机优化方法," in International Conference on Learning Representations (ICLR) 2015, pp. 1–15.
 
+- [2] F. Musmann, C. Roberts, A. Nag, I. Macaluso, D. Zibar, R. Muffini, and M. Tornatore, "光网络中机器学习技术综述," IEEE Communications Surveys & Tutorials, vol. 23, no. 2, pp. 1180–1203, 2021.
+
+- [3] F. Musmann, C. Roberts, G. Gorani, S. Shakahari, F. Cini, and M. Tornatore, "光网络管理中的机器学习教程," Journal of Lightweight Technology, vol. 37, no. 16, pp. 4125–4139, 2019.
+
+- [4] N. Gu, L. Li, X. Liang, S. Bose, and G. Shen, "如果 AI 失败：光网络中对抗攻击的防御," 2020 IEEE Optical Fiber Communications and Exhibition (OFC), 2020.
+
+- [5] S. Bargazer, V. Merilli, U. Ferrai, A. Napoli, V. Curri, and L. Lasso, "解构网络中的软定位与设备工作参数," in 2021 IEEE Optical Fiber Communications and Exhibition (OFC), 2021, pp. 1–6.
+
+- [6] A. P. Bela, V. Shakahari, R. Muffini, F. Cini, A. Castelli, L. R. Roetti, P. Casalella, S. J. Basto, and Y. Luo, "光网络识别与拓扑的软定位," IEEE/OSA Journal of Optical Communications and Networking, vol. 37, no. 1, AZE26–AZE236, 2020.
+
+- [7] H. Liu, F. Xu, Y. Liu, W. Yi, and C. Zhuge, "基于稠密卷积神经网络的光通信系统软故障识别," Journal of Lightweight Technology, vol. 38, no. 4, pp. 2995–3006, 2020.
+
+- [8] S. Shakahari, F. Musmann, F. Cini, and M. Tornatore, "光网络中基于机器学习的软故障检测与识别," in 2018 IEEE Optical Fiber Communications and Exhibition (OFC), 2018, pp. 1–6.
+
+- [9] S. Varausegge, D. Liptak, R. Ticher, S. Sibelius, and E. Raj, "使用复杂度异常检测识别光纤链路中的软故障," Optical Fiber Communications and Exhibition (OFC), 2019, pp. 1–6.
+
+- [10] L. Shu, Z. Yu, J. Zhang, J. Shu, and K. Ku, "利用光谱信息的线性光网络双点软故障检测与识别," Journal of Lightweight Technology, vol. 38, no. 5, pp. 1988–1999, 2020.
+
+- [11] Z. Liu, M. Zhang, D. Wang, G. Song, M. Liu, J. Li, L. Lou, and Z. Liu, "光网络中使用机器学习和时间序列进行故障预测," Opt. Express. vol. 25, no. 16, pp. 18553–18566, 2017.
+
+- [12] D. Rafiefer, S. Tychonowicz, H. Grieber, A. Autterhoff, and J. Chen, "光网络故障管理的认知保障架构," Journal of Lightweight Technology, vol. 36, no. 7, pp. 1443–1450, 2018.
+
+- [13] T. Panayotou, S. P. Chataris, and G. Elias, "利用机器学习解决光网络故障定位问题," IEEE/OSA Journal of Optical Communications and Networking, vol. 10, no. 3, pp. 162–173, 2018.
+
+- [14] T. Pan, E. Song, J. Jia, W. Cao, and T. Huang, "无探头的轻量级网络遥测," in 2020 INFOCOM, pp. 2–3.
+
+- [15] A. Shyagar, A. Mercian, M. McGary, M. Reinstein, and W. Keller, "软件定义光网络 (SDNs)," IEEE Communications Surveys & Tutorials, vol. 18, no. 4, pp. 2738–2788, 2016.
+
+- [16] Y. Zhou, L. Xu, X. Zhang, G. Zheng, and Y. Sun, "基于机器学习的软件定义网络应用综述," IEEE Access, vol. 7, pp. 95417–95419, 2019.
+
+- [17] 未来网络机器学习框架 ITU-2020, ITU-International Communications Union, Tech Rep.
+
+- [18] A. Sadadasivaro, S. Sayed, D. Panda, P. Gomes, R. Raj, L. Prashasti, and K. Raj, "用于 DWDM 分析与验证的时域光纤监控," in 2020 IEEE Optical Fiber Communications and Exhibition (OFC), pp. 1–6.
+
+- [19] H. Chen, Y. Zhou, J. Zhang, W. Wang, and R. Zhu, "弹性光网络中碎片化流量的静态路由与频谱分配," IEEE Networks, vol. 35, no. 5, pp. 1045–1052, 2021.
+
+- [20] I. Kath and D. Medis, "MPLS/ON-over-DWDM 多层网络容量优化：启发式算法与理论," IEEE Transactions on Network and Service Management, vol. 14, no. 3, pp. 340–365, 2007.
+
+- [21] Y. Xiao, J. Zhang, Z. Gao, and Y. Li, "5G/融合无线网络中基于强化学习的服务型 DU 放置," IEEE Optical Fiber Communications and Exhibition (OFC), Mar. 2020, pp. 1–6.
+
+- [22] M. Solintakiani, A. Jamavard, and J. Lee, "被动光神经网络部署优化的理论洞解," IEEE Transactions on Information Theory, vol. 65, no. 2, pp. 742–769, 2019.
+
+- [23] A. Jain, K. Kandakumar, and A. Ross, "多模态生物识别系统中的评分归一化模式," Pattern Recognition, vol. 38, no. 12, pp. 22770–2285, 2005.
+
+- [24] D. P. King and L. Ba, "一种随机优化方法," in International Conference on Learning Representations (ICLR) 2015, pp. 1–15.

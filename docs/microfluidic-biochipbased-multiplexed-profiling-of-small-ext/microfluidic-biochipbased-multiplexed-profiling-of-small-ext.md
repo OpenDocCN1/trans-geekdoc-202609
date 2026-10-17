@@ -1,9 +1,5 @@
+
 # 基于微流控生物芯片的小型细胞外囊泡蛋白多重分析与机器学习集成用于早期疾病诊断
-
-
-
-
-
 
 精准的早期诊断对于预防疾病、提高治愈率和生存率至关重要。目前大多数主要疾病尚无可靠的早期诊断生物标志物。在此，以食管鳞状细胞癌（ESCC）为疾病模型，通过整合条形码免疫分析生物芯片与机器学习，开发了一种用于准确早期诊断的蛋白组生物标志物 panel 检测平台。该生物芯片可从血清中捕获小细胞外囊泡（EVs），原位裂解，并定量包括 EV 膜蛋白和内部蛋白在内的多种蛋白。其被用于多中心 273 例临床样本的检测。随后利用机器学习对验证集进行分析，得出 ESCC 的精准诊断模型。该模型基于质谱分析鉴定的差异表达蛋白中筛选出的九个诊断蛋白生物标志物，在外部验证中达到 91.0% 的准确率，在检测早期 ESCC 时准确率为 90.8%。这些结果显著优于目前用于鳞状细胞癌的生物标志物（仅 14.4%）的准确率。因此，将细胞外囊泡蛋白分析与机器学习相结合为识别 ESCC 患者提供了一种方法。所开发的细胞外囊泡分析平台为多生物标志物检测方法的临床应用提供了有前景的工具，推动了 ESCC 的早期诊断。
 
@@ -18,31 +14,48 @@
 在此，以食管鳞状细胞癌（ESCC）为模型，我们开发了一种整合质谱和条形码免疫分析生物芯片的小细胞外囊泡蛋白检测平台，以研究患者中的膜蛋白和内部蛋白，并通过血清小细胞外囊泡蛋白质组鉴定出在癌症患者和健康对照中差异表达且具有诊断潜力的蛋白标志物。质谱鉴定出超过 2000 种蛋白，并提供了早期诊断的潜在蛋白标志物。生物芯片从血清中捕获小细胞外囊泡，原位裂解，并定量分析质谱在两个队列临床样本中鉴定的多种潜在蛋白标志物。然后，基于机器学习算法为 ESCC 开发了可靠的诊断模型，并在独立临床队列中进行了验证。该平台能够对多中心多个样本进行高通量、快速分析，促进多生物标志物检测向临床应用的转化。
 
 X. Zhang, Y. Zhang, C. Wang, Y. Liang, J. Qiu, M. Sun, X. Chen, M. Huang, Y. Zhang, H. Liu, L. Han
+
 海洋科学与技术学院
+
 山东大学
+
 中国山东省青岛市滨海路266237
+
 电子邮件：hanlin@sdu.edu.cn
 
 Y. Jia, Z. Li, J. Wang
+
 放射肿瘤科
+
 齐鲁医院
+
 齐鲁医学院
+
 山东大学
+
 中国山东省济南市文化西路250012
+
 电子邮件：200862000877@email.sdu.edu.cn
+
 C. Mao
+
 生物医学工程系
+
 香港中文大学
+
 中国香港特别行政区沙田
+
 电子邮件：cmao@cuhk.edu.hk
+
 L. Han
+
 微生物技术国家重点实验室
+
 山东大学
+
 中国山东省青岛市滨海路266237
 
 本文作者的 ORCID 识别号可在 https://doi.org/10.1002/advs.202506167 下找到
-
-
 
 ## 2. Results
 
@@ -53,8 +66,6 @@ L. Han
 ### 2.2. 候选小细胞外囊泡蛋白标志物的筛选
 
 为表征 ESCC 中血清小细胞外囊泡的蛋白功能，我们对 12 例 ESCC 患者和 18 例 HC 血清样本分离的小细胞外囊泡进行 4D-DIA 质谱分析（图 2A）。总共在 ESCC 患者血清小细胞外囊泡中鉴定出 2062 种蛋白，而在 HC 中检测到 2370 种蛋白，其中 2053 种蛋白在两组中共存（图 2B）。主成分分析（PCA）有效区分了 ESCC 样本与 HC，提示 ESCC 血清小细胞外囊泡蛋白质组发生了显著重塑（图 2C）。采用倍数变化（FC）阈值 ≥1.5 且显著性水平 P < 0.05 进一步分析 ESCC 与 HC 共有的血清小细胞外囊泡蛋白差异。该分析显示，与 HC 相比，ESCC 血清小细胞外囊泡中 203 种蛋白显著上调（图 2D）。此外，差异蛋白的基因本体（GO）分析显示，ESCC 患者血清细胞外囊泡中的蛋白显著富集于“细胞外外泌体”、“蛋白结合”和“中性粒细胞脱颗粒”相关通路（图 2E）。此外，京都基因与基因组百科全书（KEGG）通路分析显示“核糖体”、“趋化因子信号通路”和“内吞作用”通路显著上调（图 2F）。上述结果表明，ESCC 患者血清小细胞外囊泡中激活了多个显著的功能和代谢通路。基于 ESCC 患者与 HC 血清小细胞外囊泡蛋白质组差异的分析以及前两个 GO 通路，筛选出 14 种小细胞外囊泡蛋白，其在 ESCC 中显著升高，作为后续诊断分析的候选标志物（图 2G；支持信息图 S1 和 S2）。
-
-
 
 ### 2.3. 用于血清小EV蛋白筛选的条形码免疫分析芯片
 
@@ -94,11 +105,13 @@ RETN、EIF2S2、LCN2 和 CRP 在 ESCC 患者中显著升高（图 S13–S16，�
 
 为了利用候选蛋白开发ESCC的创新诊断方法，采用机器学习创建能够精确预测临床状态的模型（图5A）。最初，使用随机森林算法基于14种蛋白构建模型，并根据准确率（ACC）和AUC的综合评分优化模型参数（图 S19A–C，支持信息）。最优值设定为 ntree = 145 和 mtry = 1。
 
+
+
 队列1按7:3的比例随机分为训练集和测试集，而队列2作为独立的外部测试集，称为测试集2。为了可视化模型性能，生成了图表以比较预测值与实际疾病状态（ESCC或HC）。以0.5为分类截止值，14个诊断标志物（DM）模型在测试集1中准确识别了63.2%的ESCC患者，在测试集2中为78.7%（图5B,C）。该模型在训练集中表现出100%的准确率（图 S19D，支持信息），测试集1的准确率为79.1%（图 S19E，支持信息），测试集2为82.1%（图 S19F，支持信息）。各自测试集的AUC值分别为0.94和0.96（图5D）。
 
 为了进一步优化模型并降低检测成本，使用随机森林算法对14-DM模型中变量的重要性进行排序。根据平均最小深度和节点数，ELA2、CXCL6、MMP9、CRP和BPIFB1排名前五，其余9种蛋白用于进一步分析（图5E）。结果表明，基于ACC、AUC和整体性能，9个蛋白变量获得了最高的综合评分（图5F）。所选变量为MMP9、CRP、CXCL6、FST、EIF2S2、ELA2、BPIFB1、PTX3和CD16。逐一排除变量会导致准确率下降程度不同，观察到MMP9的下降最为显著（图5G），这意味着MMP9在诊断模型中发挥重要作用。
 
-使用这九个变量构建改进的随机森林模型，将参数优化为 ntree 设为400，mtry 设为1（图 S20A–C，支持信息）。该9-DM模型在测试集1中准确识别了79.0%的ESCC患者，在测试集2中为91.5%（图5H,I）。准确率在测试集1中为88.4%（图 S20D，支持信息），测试集2中为91.0%（图 S20E，支持信息），各自测试集的AUC值分别为0.96和0.95（图5J）。这些结果表明9-DM模型具有高灵敏度和可靠性。
+使用这九个变量构建改进的随机森林模型，将参数优化为`ntree`设为400，`mtry`设为1（图 S20A–C，支持信息）。该9-DM模型在测试集1中准确识别了79.0%的ESCC患者，在测试集2中为91.5%（图5H,I）。准确率在测试集1中为88.4%（图 S20D，支持信息），测试集2中为91.0%（图 S20E，支持信息），各自测试集的AUC值分别为0.96和0.95（图5J）。这些结果表明9-DM模型具有高灵敏度和可靠性。
 
 为了进一步验证所选生物标志物和9-DM模型的普适性，在2025年1月至3月期间于齐鲁医院招募了由30名ESCC患者和30名健康对照组成的独立验证队列（队列3）。外部验证结果显示，大多数候选生物标志物的表达模式与队列1和2中观察到的结果一致（图 S21 和 S22，支持信息），而9-DM模型保持了稳健的诊断性能，分类准确率为83.3%（AUC = 0.93）（图 S23，支持信息），从而证实了我们的蛋白特征在ESCC检测中的临床实用性和可靠性。
 
@@ -115,62 +128,101 @@ RETN、EIF2S2、LCN2 和 CRP 在 ESCC 患者中显著升高（图 S13–S16，�
 为了进一步验证所选生物标志物的准确性，我们对源自ESCC细胞系（KYSE150/KYSE510）和正常食管上皮细胞系（HEEC）的EV进行了蛋白质组学分析。结果显示，在ESCC来源的EV中PTX3、EIF2S2和FST显著过表达，与HEEC对照相比，倍数变化值超过10。后续对三对配对ESCC和
 
 ### A
+
 队列1
+
 发现集 (n=103)
+
 ESCC n = 47
+
 HC n = 56
+
 随机森林模型
+
 自助采样 1
+
 自助采样 2
+
 自助采样 145
+
 分类器 1
+
 分类器 2
+
 分类器 145
+
 投票
+
 集成分类器
+
 14-DM 模型
+
 逐一消除
+
 平均最小深度
+
 节点数
+
 作为根的次数
+
 准确率下降
+
 变量重要性
+
 9-DM 模型
+
 测试集 1 (n=43)
+
 ESCC n = 19
+
 HC n = 24
+
 性能评估
+
 队列2
+
 测试集 2 (n=67)
+
 ESCC n = 47
+
 HC n = 20
+
 性能评估
 
 ### B
+
 ![](img/1d59dabaa30cead580459a3f47caa4df_7_0.png)
 
 ### C
+
 ![](img/1d59dabaa30cead580459a3f47caa4df_7_1.png)
 
 ### D
+
 ![](img/1d59dabaa30cead580459a3f47caa4df_7_2.png)
 
 ### E
+
 ![](img/1d59dabaa30cead580459a3f47caa4df_7_3.png)
 
 ### F
+
 ![](img/1d59dabaa30cead580459a3f47caa4df_7_4.png)
 
 ### G
+
 ![](img/1d59dabaa30cead580459a3f47caa4df_7_5.png)
 
 ### H
+
 ![](img/1d59dabaa30cead580459a3f47caa4df_7_6.png)
 
 ### I
+
 ![](img/1d59dabaa30cead580459a3f47caa4df_7_7.png)
 
 ### J
+
 ![](img/1d59dabaa30cead580459a3f47caa4df_7_8.png)
 
 图 5. 基于血清小细胞外囊泡蛋白的机器学习衍生预测模型用于 ESCC 诊断。A) 构建诊断模型的流程设计。特征选择和模型训练使用随机森林算法进行。14-DM 和 9-DM 模型在内部测试集（测试集 1）和外部测试集（测试集 2）中得到验证。B) 14-DM 模型在测试集 1 中区分 ESCC（红色）与 HC（蓝色）的预测性能，以及 C) 测试集 2。虚线表示 0.50 的截止值，用于分别预测 HC（左侧）和 ESCC（右侧）。D) 14-DM 模型在测试集 1 和 2 中诊断 ESCC 的 ROC 曲线。E) 14 个生物标志物的重要性分布图。每个点代表一个蛋白生物标志物，点的大小表示该生物标志物在模型中用于分割的总节点数。X 轴表示变量的平均最小深度，值越小表示重要性越大，而 Y 轴表示变量用于分割的树总数。F) 折线图显示随着纳入变量数量的增加，模型准确率、AUC 以及准确率与 AUC 的综合评分。G) 条形图显示移除每个变量后 9-DM 模型的准确率下降情况。H) 9-DM 模型在测试集 1（G）中预测 ESCC（红色）与 HC（蓝色），以及 I) 测试集 2。虚线表示 0.50 的截止值，用于分别预测 HC（左侧）和 ESCC（右侧）。J) 9-DM 模型在测试集 1 和 2 中诊断 ESCC 的 ROC 曲线。缩写。AUC：曲线下面积；DM：诊断标志物；ESCC：食管鳞状细胞癌；HC：健康对照；PC：主成分。
@@ -197,122 +249,192 @@ HC n = 20
 
 本研究有若干局限性应予承认。首先，由于我们的预测模型是使用相对定量蛋白质组学数据开发的，其在新患者中用于 ESCC 风险评估的临床应用将在模型实施过程中需要标准化质量控制样本。尽管存在这些局限性，我们的工作已成功鉴定出关键的细胞外囊泡蛋白质组标志物，可有效区分 ESCC 与健康对照，代表了迈向临床适用诊断模型的重要进展。其次，当前平台需要将检测结果手动传输到机器学习模型，这可能在临床环境中引入操作复杂性。展望未来，我们将对这些生物标志物在大规模多中心队列中进行绝对定量蛋白质组学分析，以建立临床相关的参考范围和检测阈值，同时努力开发一个完全集成的自动化平台，将检测、数据采集和诊断输出相结合，以提高临床实用性和操作效率。
 
-
-
 总之，所提出的平台鉴定出具有潜在诊断价值的生物标志物，并构建了整合机器学习算法的诊断模型。此外，已开发出一种条形码免疫分析平台，集成了小EVs捕获、原位裂解和多参数检测，能够实现多样本的快速分析。这些发现增强了对疾病病理学的理解，同时促进了早期检测并开发了多参数小EVs检测的新方法。更广泛地，基于机器学习的小EVs数据解读在肿瘤检测和临床决策中具有明显优势，而所开发的微流控分析平台在实际临床应用中具有重要的转化前景，并可扩展至其他疾病的研究。
 
 ## 4. 实验部分
 
 ### 临床队列
+
 2023年8月至2024年5月期间，66例ESCC患者从山东大学齐鲁医院招募，80例接受体检的HC被纳入，形成队列1。2023年7月至2023年9月期间，另有47例ESCC患者在山东第一医科大学附属省立医院接受治疗，以及20例HC被招募，从而建立队列2。此外，自2025年1月至3月，30例ESCC患者和30例HC在齐鲁医院入组，以建立用于验证研究的队列3（图S28，支持信息）。纳入标准：参与者年龄为18–85岁，经组织学确诊为ESCC，且未接受治疗。排除标准：具有双原发或多原发肿瘤的个体；患有免疫紊乱或自身免疫性疾病的参与者；以及接受过器官移植、非自体骨髓移植或干细胞移植者被排除。健康个体的纳入标准：
+
 - 已获得书面同意；
+
 - 年龄在18至85岁之间；且
+
 - 无恶性疾病。
+
 上述排除标准同样适用于健康个体。本研究使用的所有样本均回顾性地从已建立的机构生物库中获得。人材料的用途已获得山东大学齐鲁医院医学科学研究伦理委员会批准（批准号：KYLL-2021(K S)-011和KYLL-202409(YJ)-024）。所有参与者均自愿签署知情同意书。
 
 ### 临床样本采集
+
 从ESCC患者和HC收集血清样本。每位参与者采集5 mL外周静脉血样本。样本在4 °C下于1 h内迅速转移至实验室进行进一步处理。新采集的血液样本在室温（RT）下保持1 h以允许凝固，然后进行离心。上清液随后在4 °C、1,000 g下离心15 min后小心移除并转移至干净的试管中。为确保完全去除血小板和其他碎屑，样本在4 °C、10 000 g下进行第二次离心10 min。收集的上清液储存在−80 °C。
 
 ### 细胞上清液小EVs的收集与分离
+
 细胞在完全培养基中培养至达到70%汇合度，此时培养基更换为无胎牛血清（FBS）培养基。在无FBS条件下培养48 h后收集上清液。收集的上清液进行连续离心：首先以300 × g离心10 min，随后以2000 × g离心10 min，然后以10 000 × g离心30 min。然后上清液通过0.22-μm滤器并以100 000 × g超速离心70 min。离心后获得的上清液被指定为小EVs去除组分。小EVs沉淀随后重悬于磷酸盐缓冲液（PBS）中并进行第二次100 000 × g超速离心70 min以纯化小EVs。
 
 ### 纳米颗粒追踪分析
+
 小EVs被重悬并稀释100-至500倍，以获得每帧20–100个颗粒的浓度。分析使用NanoSight NS300系统（NanoSight Technology, Malvern, UK）进行，该系统配备488 nm激光器和高度灵敏的sCMOS相机。在手动将小EVs引入腔室后，每个样本使用13级相机进行三次重复测量，采集时间为30 s，检测阈值设为7。NTA分析软件版本2.3用于分析每个视频中至少200条完整轨迹。
 
 ### 透射电子显微镜
+
 小EVs颗粒用2.5%戊二醛在RT下处理10 min。然后将5–10 μL小EVs悬液的一滴置于铜网上。用滤纸去除多余液体，小EVs样本用PBS洗涤三次，每次洗涤持续10 min。最后，加入10 μL 1%醋酸铀在铜网上对小EVs进行负染色1 min，然后使用Tecnai G2 F20透射电子显微镜进行检查。
 
 ### 血清小EVs用于液相色谱-质谱（LC-MS）及数据非依赖采集
+
 血清小EVs使用EVtrap试剂盒分离和收集。分离后，小EVs经裂解、蛋白提取、还原、烷基化和胰蛋白酶消化以生成用于质谱分析的肽链。接下来，每个样本的肽经受质谱进行DIA分析。更多细节见图S29（支持信息）。
 
+
+
 ### 差异蛋白及通路富集分析
-ESCC患者与HC之间差异蛋白丰度使用R软件中的“limma”包计算。显著性水平设定为校正后P值< 0.05，log2倍数变化（FC）阈值为> 0.58（表示上调）或< −0.58（表示肿瘤中下调）。功能富集分析使用KOBAS（http://bioinfo.org/kobas）进行，参数为默认。
+
+ESCC患者与HC之间差异蛋白丰度使用`R`软件中的`limma`包计算。显著性水平设定为校正后P值< 0.05，log2倍数变化（`FC`）阈值为> 0.58（表示上调）或< −0.58（表示肿瘤中下调）。功能富集分析使用`KOBAS`（`http://bioinfo.org/kobas`）进行，参数为默认。
 
 ### 微流控平台的制备
-GOQDs基底玻璃载玻片和PDMS微腔层按照先前报道的相同程序制备。[31] 具有14个平行微通道的微打印芯片首先与GOQD功能化玻璃载玻片键合，该纳米材料基底显示出显著增强的抗体固定化效率。使用精密移液器，将3 μL捕获抗体溶液分配到每个独立微通道的入口，然后在室温下施加真空力将装载的捕获抗体从入口泵送至出口。捕获抗体在每个相应微通道的基底表面固定化。去除微打印芯片后，基底用1% BSA溶液处理以进行表面钝化，随后用3% BSA溶液封闭以饱和微通道外的剩余反应位点。最后，芯片经过严格洗涤、旋干并在4 °C下保存直至使用。微打印芯片包含14个锯齿状微通道，保持完全的流体隔离。每个检测单元包括全部14个微通道的完整循环回路（图S30，支持信息）。为捕获小EVs，将4.5 μL含有CD63（100 μg mL−1）、CD81（100 μg mL−1）和CD9（100 μg mL−1）抗体的混合溶液加入每个反应单元并过夜孵育。然后使用3% BSA封闭10 min，随后用PBS和超纯水连续洗涤以去除未结合组分。为富集小EVs，将10 μL血清样本加入每个反应单元并孵育60 min。然后去除上清液，孔用PBS冲洗。随后，将5 μL RIPA裂解缓冲液与蛋白酶抑制剂的混合物（100:1比例）加入每个反应单元，以原位裂解捕获的小EVs 30 min。对于抗原检测，微阵列芯片的PDMS微腔用1% BSA密封。然后将小EVs裂解液转移至微阵列芯片上的孔中并孵育45 min，之后去除上清液。微阵列芯片在1% BSA中孵育，孔与终浓度为5 μg mL−1的检测抗体孵育45 min，随后与APC孵育30 min。微阵列用PBS和蒸馏水彻底洗涤然后振干。使用荧光扫描仪测量抗原的荧光强度。本研究使用的商业抗体和蛋白来自R&D Systems、BioLegend、NOVUS、eBioscience、Abcam和Santa Cruz Biotechnology等制造商。
 
-
+`GOQDs`基底玻璃载玻片和`PDMS`微腔层按照先前报道的相同程序制备。[31] 具有14个平行微通道的微打印芯片首先与`GOQD`功能化玻璃载玻片键合，该纳米材料基底显示出显著增强的抗体固定化效率。使用精密移液器，将3 μL捕获抗体溶液分配到每个独立微通道的入口，然后在室温下施加真空力将装载的捕获抗体从入口泵送至出口。捕获抗体在每个相应微通道的基底表面固定化。去除微打印芯片后，基底用1% `BSA`溶液处理以进行表面钝化，随后用3% `BSA`溶液封闭以饱和微通道外的剩余反应位点。最后，芯片经过严格洗涤、旋干并在4 °C下保存直至使用。微打印芯片包含14个锯齿状微通道，保持完全的流体隔离。每个检测单元包括全部14个微通道的完整循环回路（图S30，支持信息）。为捕获小EVs，将4.5 μL含有`CD63`（100 μg mL−1）、`CD81`（100 μg mL−1）和`CD9`（100 μg mL−1）抗体的混合溶液加入每个反应单元并过夜孵育。然后使用3% `BSA`封闭10 min，随后用`PBS`和超纯水连续洗涤以去除未结合组分。为富集小EVs，将10 μL血清样本加入每个反应单元并孵育60 min。然后去除上清液，孔用`PBS`冲洗。随后，将5 μL `RIPA`裂解缓冲液与蛋白酶抑制剂的混合物（100:1比例）加入每个反应单元，以原位裂解捕获的小EVs 30 min。对于抗原检测，微阵列芯片的`PDMS`微腔用1% `BSA`密封。然后将小EVs裂解液转移至微阵列芯片上的孔中并孵育45 min，之后去除上清液。微阵列芯片在1% `BSA`中孵育，孔与终浓度为5 μg mL−1的检测抗体孵育45 min，随后与`APC`孵育30 min。微阵列用`PBS`和蒸馏水彻底洗涤然后振干。使用荧光扫描仪测量抗原的荧光强度。本研究使用的商业抗体和蛋白来自`R&D Systems`、`BioLegend`、`NOVUS`、`eBioscience`、`Abcam`和`Santa Cruz Biotechnology`等制造商。
 
 ### 微流控平台数据分析
-检测过程涉及以下步骤：1) 信号采集：使用 635 nm 激光通道扫描生物芯片，并使用 GenePix Pro 软件对每个条形码的荧光信号进行定量，并获得检测区域的平均荧光强度。2) 数据归一化：在机器学习模型输入之前，对原始荧光强度值进行 log10 转换，以归一化数据分布并增强模型性能。
+
+检测过程涉及以下步骤：1) 信号采集：使用 635 nm 激光通道扫描生物芯片，并使用 `GenePix Pro` 软件对每个条形码的荧光信号进行定量，并获得检测区域的平均荧光强度。2) 数据归一化：在机器学习模型输入之前，对原始荧光强度值进行 `log10` 转换，以归一化数据分布并增强模型性能。
 
 ### 诊断预测建模
-使用 R version 4.4.2 为 ESCC 开发了诊断预测模型，采用集成机器学习方法进行多维分析。在方法学上，系统性地实施了多个 R 包：randomForest 用于随机森林建模，caret 用于数据预处理和模型调优，pROC 用于性能评估，randomForestExplainer 用于特征重要性分析，ggplot2 用于可视化，以及 Rtsne 用于高维数据降维。在模型构建期间：首先使用 caret 包进行数据标准化和分层抽样（70% 训练集/30% 测试集），以确保数据分布均衡。随机森林模型使用 randomForest 中实现的自助聚合算法开发，最初纳入 14 种血浆蛋白作为预测变量。通过 caret 指导的网格搜索验证，模型参数优化为：ntree = 145 棵决策树，mtry = 14（每次节点分裂考虑的特征数），nodesize = 5（每个末端节点的最小样本数）。参数优化由 pROC 计算的 AUC 值和 caret 生成的混淆矩阵指标共同指导。使用 randomForestExplainer 进行了特征重要性分析，其提供了三种互补的评估方法：1) 最小深度分析（min_depth_distribution）以识别最关键的分类特征；2) 节点纯度提升（measure_importance）以量化每个特征对模型精度的贡献；3) 根节点分裂频率以反映全局特征重要性。基于这些分析，从最初的 14 个特征中选出 9 个最具预测性的蛋白生物标志物用于最终模型。验证阶段采用多维评估策略：caret 生成的混淆矩阵提供了包括准确率、敏感性和特异性在内的关键指标；pROC 从 ROC 曲线计算 AUC 值；ggplot2 生成校准曲线；Rtsne 可视化展示了 ESCC 患者与健康对照在蛋白生物标志物空间中的分离模式。模型通过 randomForest 的 predict 函数输出个体化预测概率（范围 0–1），诊断阈值设为 0.5（概率 > 0.5 分类为 ESCC，≤0.5 为健康对照）。所有可视化均使用 ggplot2 创建，包括 ROC 曲线、多维特征重要性热图、t-SNE 降维散点图和模型校准曲线。
+
+使用 `R` version 4.4.2 为 ESCC 开发了诊断预测模型，采用集成机器学习方法进行多维分析。在方法学上，系统性地实施了多个 `R` 包：`randomForest` 用于随机森林建模，`caret` 用于数据预处理和模型调优，`pROC` 用于性能评估，`randomForestExplainer` 用于特征重要性分析，`ggplot2` 用于可视化，以及 `Rtsne` 用于高维数据降维。在模型构建期间：首先使用 `caret` 包进行数据标准化和分层抽样（70% 训练集/30% 测试集），以确保数据分布均衡。随机森林模型使用 `randomForest` 中实现的自助聚合算法开发，最初纳入 14 种血浆蛋白作为预测变量。通过 `caret` 指导的网格搜索验证，模型参数优化为：`ntree` = 145 棵决策树，`mtry` = 14（每次节点分裂考虑的特征数），`nodesize` = 5（每个末端节点的最小样本数）。参数优化由 `pROC` 计算的 `AUC` 值和 `caret` 生成的混淆矩阵指标共同指导。使用 `randomForestExplainer` 进行了特征重要性分析，其提供了三种互补的评估方法：1) 最小深度分析（`min_depth_distribution`）以识别最关键的分类特征；2) 节点纯度提升（`measure_importance`）以量化每个特征对模型精度的贡献；3) 根节点分裂频率以反映全局特征重要性。基于这些分析，从最初的 14 个特征中选出 9 个最具预测性的蛋白生物标志物用于最终模型。验证阶段采用多维评估策略：`caret` 生成的混淆矩阵提供了包括准确率、敏感性和特异性在内的关键指标；`pROC` 从 ROC 曲线计算 `AUC` 值；`ggplot2` 生成校准曲线；`Rtsne` 可视化展示了 ESCC 患者与健康对照在蛋白生物标志物空间中的分离模式。模型通过 `randomForest` 的 `predict` 函数输出个体化预测概率（范围 0–1），诊断阈值设为 0.5（概率 > 0.5 分类为 ESCC，≤0.5 为健康对照）。所有可视化均使用 `ggplot2` 创建，包括 ROC 曲线、多维特征重要性热图、t-SNE 降维散点图和模型校准曲线。
 
 ### 免疫荧光染色
-福尔马林固定石蜡包埋切片经二甲苯和梯度乙醇系列脱蜡，随后在柠檬酸缓冲液（pH 6.0）中采用微波加热进行抗原 retrieval。经 10% 与二抗宿主种属匹配的血清封闭后，载玻片在 4 °C 下过夜孵育以下一抗：anti-FST（1:400, Proteintech #60060-1-Ig）、anti-PTX3（1:200, Proteintech #13797-1-AP）和 anti-EIF2S2（1:500, Servicebio #GB111135）。Alexa Fluor 偶联二抗（1:200）在室温下作用 50 min，随后进行 DAPI 复染和自发荧光淬灭。切片用抗淬灭封片剂封固并使用数字切片扫描仪成像。所有步骤之间均进行 PBS 洗涤（3 min × 5 min）。
+
+福尔马林固定石蜡包埋切片经二甲苯和梯度乙醇系列脱蜡，随后在柠檬酸缓冲液（pH 6.0）中采用微波加热进行抗原 retrieval。经 10% 与二抗宿主种属匹配的血清封闭后，载玻片在 4 °C 下过夜孵育以下一抗：`anti-FST`（1:400, `Proteintech` #60060-1-Ig）、`anti-PTX3`（1:200, `Proteintech` #13797-1-AP）和 `anti-EIF2S2`（1:500, `Servicebio` #GB111135）。`Alexa Fluor` 偶联二抗（1:200）在室温下作用 50 min，随后进行 `DAPI` 复染和自发荧光淬灭。切片用抗淬灭封片剂封固并使用数字切片扫描仪成像。所有步骤之间均进行 `PBS` 洗涤（3 min × 5 min）。
 
 ### 统计方法
-采用 Kolmogorov–Smirnov 检验评估所有数据的正态性，而分类数据则使用卡方检验进行分析。对于呈正态分布的数据，采用非配对双尾 t 检验进行比较，而非正态分布数据则使用 Mann–Whitney 非参数检验。荧光强度或光密度（O.D.）值与目标抗原浓度之间的线性关系使用 R-squared（R²）统计量进行评估。p 值低于 0.05 被认为具有统计学意义。检测限（LOD）由方程确定：LOD = 3 × δ / S，其中 δ 为空白值的相对标准偏差，S 表示由线性回归方程得出的斜率。
 
-诊断效率使用准确率、ROC 曲线和其他相关指标进行评估。分析使用 GraphPad Prism（v.9.5）、R software（v.4.4.1）（可获取于 https://www.r-project.org/）和 Origin（v.2021）进行。
+采用 `Kolmogorov–Smirnov` 检验评估所有数据的正态性，而分类数据则使用卡方检验进行分析。对于呈正态分布的数据，采用非配对双尾 t 检验进行比较，而非正态分布数据则使用 `Mann–Whitney` 非参数检验。荧光强度或光密度（O.D.）值与目标抗原浓度之间的线性关系使用 `R-squared`（`R²`）统计量进行评估。p 值低于 0.05 被认为具有统计学意义。检测限（`LOD`）由方程确定：`LOD = 3 × δ / S`，其中 `δ` 为空白值的相对标准偏差，`S` 表示由线性回归方程得出的斜率。
+
+诊断效率使用准确率、ROC 曲线和其他相关指标进行评估。分析使用 `GraphPad Prism`（v.9.5）、`R software`（v.4.4.1）（可获取于 `https://www.r-project.org/`）和 `Origin`（v.2021）进行。
 
 ## 支持信息
+
 支持信息可从 Wiley Online Library 或作者处获取。
 
 ## 致谢
+
 本工作得到中国国家重点研发计划（2023YFB3210400）、山东省重大科技创新项目（2022CXGC020501）、国家自然科学基金（项目号 62174101）、山东大学集成研究与培养项目（项目号 2022JC001）以及微生物技术国家重点实验室院内联合项目（项目号 SKLMTPJ-2024-05）资助。作者感谢山东大学生命与环境科学核心设施的 Xiaoju Li、Haiyan Sui 和 Xueyun Geng 在 TEM 方面的帮助。C.M. 感谢香港研究资助局研究基金（14208723）的财务支持，以及香港赛马会慈善信托基金对自然启发精准医学工程 JC STEM 实验室的资助。
 
 ## 利益冲突
+
 作者声明无利益冲突。
 
 ## 作者贡献
+
 L.H.、Y.Z.、J.W.、X.Z. 和 C.M. 构思了研究思路。X.Z.、Y.Z.、J.Q. 和 Y.L. 执行实验、撰写文章并制作图表。Y.Z.、C.W.、M.S. 和 X.C. 指导了本稿件的准备。Z.L. 和 Y.Z. 执行样本采集和数据获取。H.L.、L.H. 和 C.M. 进行论文修改。所有作者均阅读并批准了最终稿件。
 
 ## 数据可用性声明
+
 支持本研究结果的数据可根据合理请求从通讯作者处获取。
 
 ## 关键词
+
 早期诊断, 机器学习, 微流控平台, 小型细胞外囊泡蛋白
 
 收稿：2025年4月7日
+
 修订：2025年6月17日
+
 在线发表：
 
 [1] N. Deboever, C. M. Jones, K. Yamashita, J. A. Ajani, W. L. Hofstetter, BMJ 2024, 385, 074962.
+
 [2] H. Sung, J. Ferlay, R. L. Siegel, M. Laversanne, I. Soerjomataram, A. Jemal, F. Bray, CA Cancer J. Clin. 2021, 71, 209.
+
 [3] T. L. Vaughan, R. C. Fitzgerald, Nat. Rev. Gastroenterol. Hepatol. 2015, 12, 243.
+
 [4] R. K. Vajravelu, J. M. Kolb, S. U. Thanawala, F. I. Scott, S. Han, A. G. Singal, G. W. Falk, D. A. Katzka, S. Wani, Clin. Gastroenterol. Hepatol. 2022, 20, 1739.
+
 [5] S. Connal, J. M. Cameron, A. Sala, P. M. Brennan, D. S. Palmer, J. D. Palmer, H. Perlow, M. J. Baker, J. Transl. Med. 2023, 21, 118.
+
 [6] J. J. Hao, D. C. Lin, H. Q. Dinh, A. Mayakonda, Y. Y. Jiang, C. Chang, Y. Jiang, C. C. Lu, Z. Z. Shi, X. Xu, Y. Zhang, Y. Cai, J. W. Wang, Q. M. Zhan, W. Q. Wei, B. P. Berman, M. R. Wang, H. P. Koeffler, Nat. Genet. 2016, 48, 1500.
+
 [7] Z. Yuan, X. Wang, X. Geng, Y. Li, J. Mu, F. Tan, Q. Xue, S. Gao, J. He, Cancer Commun. 2021, 41, 3.
+
 [8] R. B. Corcoran, B. A. Chabner, N. Engl. J. Med. 2018, 379, 1754.
+
 [9] S. N. Lone, S. Nisar, T. Masoodi, M. Singh, A. Rizwan, S. Hashem, W. El-Rifai, D. Bedognetti, S. K. Batra, M. Haris, A. A. Bhat, M. A. Macha, Mol. Cancer 2022, 21, 79.
+
 [10] E. A. Klein, D. Richards, A. Cohn, M. Tummala, R. Lapham, D. Cosgrove, G. Chung, J. Clement, J. Gao, N. Hunkapiller, A. Jamshidi, K. N. Kurtzman, M. V. Seiden, C. Swanton, M. C. Liu, Ann. Oncol. 2021, 32, 1167.
+
 [11] J. D. Cohen, L. Li, Y. Wang, C. Thoburn, B. Afsari, L. Danilova, C. Douville, A. A. Javed, F. Wong, A. Mattox, R. H. Hruban, C. L. Wolfgang, M. G. Goggins, M. Dal Molin, T. L. Wang, R. Roden, A. P. Klein, J. Ptak, L. Dobbyn, J. Schaefer, N. Silliman, M. Popoli, J. T. Vogelstein, J. D. Browne, R. E. Schoen, R. E. Brand, J. Tie, P. Gibbs, H. L. Wong, A. S. Mansfield, et al., Science 2018, 359, 926.
+
 [12] M. C. Liu, G. R. Oxnard, E. A. Klein, C. Swanton, M. V. Seiden, Ann. Oncol. 2020, 31, 745.
+
 [13] J. A. Welsh, D. Goberdhan, L. O'Driscoll, E. I. Buzas, C. Blenkiron, B. Bussolati, H. Cai, D. Di Vizio, T. Driedonks, U. Erdbrügger, J. M. Falcon-Perez, Q. L. Fu, A. F. Hill, M. Lenassi, S. K. Lim, M. G. Mahoney, S. Mohanty, A. Möller, R. Nieuwland, T. Ochiya, S. Sahoo, A. C. Torrecillas, L. Zheng, A. Zijlstra, S. Abuelreich, R. Bagabas, P. Bergese, E. M. Bridges, M. Brucale, D. Burger, et al., J Extracell. Vesicles 2024, 13, 12404.
+
 [14] I. A. Batista, J. C. Machado, S. A. Melo, Trends Cancer 2024, 10, 947.
+
 [15] D. Yu, Y. Li, M. Wang, J. Gu, W. Xu, H. Cai, X. Fang, X. Zhang, Mol. Cancer 2022, 21, 56.
+
 [16] H. Yin, J. Xie, S. Xing, X. Lu, Y. Yu, Y. Ren, J. Tao, G. He, L. Zhang, X. Yuan, Z. Yang, Cell Rep. Med. 2024, 5, 101689.
+
 [17] Q. Zhu, J. Luo, H. P. Li, W. Ye, R. Pan, K. Q. Shi, R. Yang, H. Xu, H. Li, L. P. Lee, F. Liu, ACS Nano 2023, 17, 8564.
+
 [18] H. K. Charles Jacob, R. Signorelli, J. L. Charles Richard, T. Kashuv, S. Lavania, A. Middleton, B. A. Gomez, A. Ferrantella, H. Amirian, J. Tao, A. B. Ergounl, M. M. Boone, M. Hadisiyura, W. A. Tao, A. Iliuk, M. K. Kashyap, M. Garcia-Buitrago, R. Dawra, A. K. Saluja, J. Exp. Clin. Cancer Res. 2022, 41, 258.
+
 [19] B. Pang, Q. Wang, H. Chen, Z. Liu, M. Han, J. Gong, L. Yue, X. Ding, S. Wang, Z. Yan, Y. Chen, D. Malouf, J. Bucci, T. Guo, C. Zhou, J. Jiang, Y. Li, Adv. Sci. 2024, 11, 2402509.
+
 [20] M. Quiralte, A. Barquín, M. Yagüe-Fernández, P. Navarro, T. Grazioso, E. Sevillano-Fernández, J. F. Rodríguez-Moreno, A. Balarézo-Saldívar, H. Peinado, E. Izquierdo, C. Millán, I. López-Carrasco, M. Prieto, R. Madurga, I. Fernández-Miranda, S. Ruiz-Llorente, J. García-Donas, J. Clin. Invest. 2024, 134, 176161.
+
 [21] W. Li, C. Li, T. Zhou, X. Liu, X. Liu, X. Li, D. Chen, Mol. Cancer 2017, 16, 145.
+
 [22] R. Kalluri, V. S. LeBleu, Science 2020, 367, aau6977.
+
 [23] M. Haider, R. Cagliani, J. Jagal, M. N. Jayakumar, B. Fayed, S. B. Shakartalla, R. Pasricha, K. Greish, R. El-Awady, J. Colloid Interface Sci. 2023, 630, 698.
+
 [24] C. Brosseau, L. Colas, A. Magnan, S. Brouard, Front. Immunol. 2018, 9, 2316.
+
 [25] S. Gurunathan, M. H. Kang, M. Jeyaraj, M. Qasim, J. H. Kim, Cells 2019, 8, 307.
+
 [26] M. Mathieu, N. Névo, M. Jouve, J. I. Valenzuela, M. Maurin, F. J. Verweij, R. Palmulli, D. Lankar, F. Dingli, D. Loew, E. Rubinstein, G. Boncompain, F. Perez, C. Théry, Nat. Commun. 2021, 12, 4389.
+
+
+
 [27] C. Wang, C. Wang, Y. Wu, J. Gao, Y. Han, Y. Chu, L. Qiang, J. Qiu, Y. Gao, Y. Wang, F. Song, Y. Wang, X. Shao, Y. Zhang, L. Han, Adv. Healthcare Mater. 2022, 11, 2102800.
+
 [28] V. S. Wang, J. L. Hornick, J. A. Sepulveda, R. Mauer, J. M. Poneros, Gastrointest. Endosc. 2009, 69, 777.
+
 [29] E. L. Bird-Lieberman, R. C. Fitzgerald, Br. J. Cancer 2009, 101, 1.
+
 [30] Y. Gao, L. Qiang, Y. Chu, Y. Han, Y. Zhang, L. Han, AIP Adv. 2020, 10, 045022.
+
 [31] C. Wang, Y. Zhang, W. Tang, C. Wang, Y. Han, L. Qiang, J. Gao, H. Liu, L. Han, Anal. Chim. Acta 2021, 1178, 338791.
+
 [32] J. W. Yang, L. L. Yuan, Y. Gao, X. S. Liu, Y. J. Wang, L. M. Zhou, X. Y. Kui, X. H. Li, C. B. Ke, Z. J. Pei, J. Cancer 2021, 12, 5838.
+
 [33] L. Dreikhausen, S. Blank, L. Sisic, U. Heger, W. Weichert, D. Jäger, T. Bruckner, N. Giese, L. Grenacher, C. Falk, K. Ott, T. Schmidt, BMC Cancer 2015, 15, 121.
+
 [34] Z. Fan, Y. Zheng, X. Li, X. Deng, Y. Ba, K. Feng, J. Su, H. Wang, Z. Suo, L. Li, Mol. Ther. Oncolytics 2022, 24, 772.
+
 [35] S. K. Bhat, D. T. McManus, H. G. Coleman, B. T. Johnston, C. R. Cardwell, U. McMenamin, F. Bannon, B. Hicks, G. Kennedy, A. T. Gavin, L. J. Murray, Gut 2015, 64, 20.
+
 [36] Y. Wang, X. Li, X. Wei, L. Li, H. Bai, X. Yan, H. Zhang, L. Zhao, W. Zhou, L. Zhao, MedComm 2023, 4, 377.
+
 [37] K. Li, Y. Lin, Y. Zhou, X. Xiong, L. Wang, J. Li, F. Zhou, Y. Guo, S. Chen, Y. Chen, H. Tang, X. Qiu, S. Cai, D. Zhang, E. Bremer, S. C. Jim Yeung, H. Zhang, Gastroenterology 2023, 165, 932.
+
 [38] I. H. Chen, L. Xue, C. C. Hsu, J. S. Paez, L. Pan, H. Andaluz, M. K. Wendt, A. B. Iliuk, J. K. Zhu, W. A. Tao, Proc. Natl. Acad. Sci. USA 2017, 114, 3175.
+
 [39] L. Dimitrakopoulos, I. Prassas, E. P. Diamandis, G. S. Charames, Crit. Rev. Clin. Lab. Sci. 2017, 54, 414.
+
 [40] Z. Ding, N. Wang, N. Ji, Z. S. Chen, Mol. Cancer 2022, 21, 53.
+
 [41] M. Binnewies, E. W. Roberts, K. Kersten, V. Chan, D. F. Fearon, M. Merad, L. M. Coussens, D. I. Gabrilovich, S. Ostrand-Rosenberg, C. C. Hedrick, R. H. Vonderheide, M. J. Pittet, R. K. Jain, W. Zou, T. K. Howcroft, E. C. Woodhouse, R. A. Weinberg, M. F. Krummel, Nat. Med. 2018, 24, 541.
+
 [42] K. E. de Visser, J. A. Joyce, Cancer Cell 2023, 41, 374.
+
 [43] Y. Chen, B. Wang, Y. Zhao, X. Shao, M. Wang, F. Ma, L. Yang, M. Nie, P. Jin, K. Yao, H. Song, S. Lou, H. Wang, T. Yang, Y. Tian, P. Han, Z. Hu, Nat. Commun. 2024, 15, 1657.
+
 [44] Z. Huang, C. Deng, C. Ma, G. He, J. Tao, L. Zhang, X. Hu, Y. Mo, L. Qiu, N. Zhang, C. Luo, S. Xing, J. Xie, H. Yin, Int. J. Surg. 2024, 110, 4672.
+
 [45] Y. Chen, G. Cai, J. Jiang, C. He, Y. Chen, Y. Ding, J. Lu, W. Zhao, Y. Yang, Y. Zhang, G. Wu, H. Wang, Z. Zhou, L. Teng, Gastric Cancer 2023, 26, 504.
+
 [46] B. Li, F. G. Kugeratski, R. Kalluri, Elife 2024, 12, RP90390.
+
 [47] J. Zhang, Z. Gao, W. Xiao, N. Jin, J. Zeng, F. Wang, X. Jin, L. Dong, J. Lin, J. Gu, C. Wang, Chem. Sci. 2024, 15, 18419.

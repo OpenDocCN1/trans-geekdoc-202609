@@ -1,36 +1,47 @@
+
 # 2020 IEEE 第17届印度理事会国际会议 (INDICON) ｜｜ 机器学习辅助 A
 
-
-
-
-
-
 **Deepak Rai**
+
 CSE 部门
+
 Bennett University
+
 Greater Noida, 印度
+
 l1988@bennett.edu
 
 **Hiren Kumar Thakkar**
+
 CSE 部门
+
 Bennett University
+
 Greater Noida, 印度
+
 hirenkumar.thakkar@bennett.edu
 
 **Deepak Singh**
+
 CSE 部门
+
 Bennett University
+
 Greater Noida, 印度
+
 Deepak.Singh1@bennett.edu
 
 **Harsha Vardhan Bathula**
+
 CSE 部门
+
 HITITM, Kurnool
+
 Andhra Pradesh, 
+
 harsha@iitm.in
 
-*摘要—最近，心震图（SCG）被用于通过相关的 SCG 峰值标注来监测监测心脏健康参数。然而，准确标注 SCG 是一项具有挑战性的任务。在本文中，我们设计了二分类器来标注 SCG 的等容积运动和主动脉瓣关闭（AC）。实现并评估了逻辑回归、支持向量机、决策树、随机森林和高斯贝叶斯算法。实验在 PhysioNet 存储库提供的“echo”数据库上进行。特别是，若干性能结果显示在标注方面具有较高的准确性。
-
+*摘要—最近，心震图（SCG）被用于通过相关的 SCG 峰值标注来监测监测心脏健康参数。然而，准确标注 SCG 是一项具有挑战性的任务。在本文中，我们设计了二分类器来标注 SCG 的等容积运动和主动脉瓣关闭（AC）。实现并评估了逻辑回归、支持向量机、决策树、随机森林和高斯贝叶斯算法。实验在 PhysioNet 存储库提供的“echo”数据库上进行。特别是，若干性能结果显示在标注方面具有较高的准确性。*
 
 ## I. 引言
 
@@ -92,19 +103,18 @@ harsha@iitm.in
 本文包含了适用于实时监测的机器学习分类器：逻辑回归 (LR)、支持向量机 (SVM)、决策树 (DT)、随机森林 (RF) 和高斯朴素贝叶斯 (NB)。
 
 - **逻辑回归**：它是基础分类模型之一，使用 sigmoid 几率比和迭代法输出 0 或 1。
-- **支持向量机**：被认为是最常见的学习模型之一。其核心思想是通过由 $w$ 和 $b$ 指定的超平面来分离两类。最优超平面是使超平面与两类最近支持点之间距离最大化的平面。
+
+- **支持向量机**：被认为是最常见的学习模型之一。其核心思想是通过由 `w` 和 `b` 指定的超平面来分离两类。最优超平面是使超平面与两类最近支持点之间距离最大化的平面。
+
 - **决策树**：这是一种简单的监督分类模型，根据某些规则连续分割数据。通过递归划分方法构建树，该方法迭代地将数据划分为分区。由于训练数据集被拆分成越来越小的子集，同时 DT 会被增量地开发。
+
 - **随机森林**：是一种基于集成分类概念的分类模型。使用数据的自助采样构建分类树，并在每个节点上，候选变量集是变量的随机子集。通过使用袋法（bagging）组合树并进行随机变量选择，产生一个同时实现低偏差和低方差的集成模型。
+
 - **高斯朴素贝叶斯**：朴叶斯是基于贝叶斯定理的监督分类分类器。它不是单一模型，而是一族模型，所有模型共享一个共同原理，即每对特征之间相互独立的。GNB 是针对真实属性的朴素贝叶斯名称，假设数据分布是高斯且连续的。在 GNB 中，任何新数据的概率都是通过高斯概率密度函数计算的。
-
-
-
-
 
 ![](img/9413aa04f5eec4fdc092811851e335d9_3_0.png)
 
 图 6：相对于 ECG T 波波的 SC AC 点。
-
 
 | 数据集 | 特征 | 总样本量 | 训练样本 | 测试样本 |
 |---|---|---|---|---|
@@ -129,7 +139,6 @@ harsha@iitm.in
 
 本文分析了用于 ECG 上 IM 和 AC 点标注的各种机器学习方法。分类器使用从 Physio 存储库公开获取的数据集进行训练和测试。使用两种特征以及“TO AO”组合准备了四个不同的数据集，每个用于 IM 和 AC。
 
-
 | 分类器 | 数据集 | 准确率 | 精确率 | 召回率 | F1 分 | 对数损失 | 错误率 | AUC |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | Logistic | IM_Dataset_1 | 0.913 | 0.862 | 0.560 | 0.679 | 3.011 | 0.087 | 0.771 |
@@ -147,7 +156,6 @@ harsha@iitm.in
 | Bayes | IM_Dataset_13 | 0.918 | 0.776 | 0.830 | 0.798 | 2.358 | 0.066 | 0.902 |
 | Gaussian | IM_Dataset_14 | 0.910 | 0.720 | 0.620 | 0.665 | 3.096 | 0.095 | 0.794 |
 | AC | IM_Dataset_15 | 0.913 | 0.797 | 0.680 | 0.704 | 3.111 | 0.087 | 0.799 |
-
 
 | 分类器 | 数据集 | 准确率 | 精确率 | 召回率 | F1 分 | Neg-loss | AUC |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -171,11 +179,19 @@ harsha@iitm.in
 ## 参考文献
 
 - [1] S. S. Virani, A. Alonso, E. J. Benjamin, M. Bittner, C. C. Callaway, A. P. Carter, A. R. Chang, S. Sergey, F. J. N. Delling et al., “Heart disease and statistics-2020 update: a report from the american heart association.” Circulation, 141(9), e225–e333, 2020.
-- [2] P. K. Salso, H. K. Takkar, W.-Y. Lin, P.-C. Chang, and M.-Y. Lee, "On the design of cardiac health monitoring system based on scg signals," Sensors, 18, no. 2, p. 379, 2018.
-- [3] P. K. Salso, H. K. Takkar, and M.-Y. Lee, "Cardiac monitoring system with multi scg and ecg monitoring for health mobile," Sensors, 19, no. 4, p. 371, 2021.
-- [4] R. Buresij, A. Gorky, and K. Kazarian, "The method of seismocardiography." Journal of clinical medicine, 23(1), pp. 45–52, 1968.
-- [5] D. M. Salerno, "Seismocardiography: a new technique for detecting cardiac vibrations, and initial observations," Journal of cardiology research, vol. 2, no. 1, p–5, 2001.
-- [6] J. Zanetti, M. Polici, and J. Lu, "Seismocardiography: waveform for identification and noise analysis," in International Conference on Biomedical Engineering, pp. 49–52.
-- [7] R. S. Craven, P. D. Hamans, and M. Hedard, "Seismocardiographic analysis of the mitral valve." The american journal of cardiology, 190(4), pp. 88–96, 1994.
-- [9] G. Shafiq, S. Tatini, and K. Veludu, "Automatic annotation of points in seismocardiography for functional heart intervals," in 18th Annual Conference of the IEEE in Medicine and Biology Society (EMBC). IEEE, 2016, pp. 2662–2667.
 
+- [2] P. K. Salso, H. K. Takkar, W.-Y. Lin, P.-C. Chang, and M.-Y. Lee, "On the design of cardiac health monitoring system based on scg signals," Sensors, 18, no. 2, p. 379, 2018.
+
+- [3] P. K. Salso, H. K. Takkar, and M.-Y. Lee, "Cardiac monitoring system with multi scg and ecg monitoring for health mobile," Sensors, 19, no. 4, p. 371, 2021.
+
+- [4] R. Buresij, A. Gorky, and K. Kazarian, "The method of seismocardiography." Journal of clinical medicine, 23(1), pp. 45–52, 1968.
+
+
+
+- [5] D. M. Salerno, "Seismocardiography: a new technique for detecting cardiac vibrations, and initial observations," *Journal of cardiology research*, vol. 2, no. 1, p–5, 2001.
+
+- [6] J. Zanetti, M. Polici, and J. Lu, "Seismocardiography: waveform for identification and noise analysis," in *International Conference on Biomedical Engineering*, pp. 49–52.
+
+- [7] R. S. Craven, P. D. Hamans, and M. Hedard, "Seismocardiographic analysis of the mitral valve." *The american journal of cardiology*, 190(4), pp. 88–96, 1994.
+
+- [9] G. Shafiq, S. Tatini, and K. Veludu, "Automatic annotation of points in seismocardiography for functional heart intervals," in *18th Annual Conference of the IEEE in Medicine and Biology Society (EMBC)*. IEEE, 2016, pp. 2662–2667.

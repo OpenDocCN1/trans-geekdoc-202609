@@ -1,34 +1,9 @@
+
 # Go Web 开发简洁指南
-
-
-
-
-
-
-
-
-
-
 
 序言：Daniel Jebaraj
 
 ![](img/cdabbe899d95a91197e7ec37cc1c8048_1_0.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 - RESTful API ...................................................................................48
 - 我们的 RESTful Web 服务 ................................................................................51
@@ -61,6 +36,7 @@
 Daniel Jebaraj，Syncfusion, Inc. 副总裁
 
 **处于技术前沿**
+
 正如许多人所知，Syncfusion 是微软平台软件组件的提供者。这让我们处于一个既兴奋又充满挑战的位置。
 
 每当微软发布新的平台或工具时（现在几乎每周一次），我们都必须快速学习。
@@ -71,13 +47,10 @@ Daniel Jebaraj，Syncfusion, Inc. 副总裁
 
 虽然互联网上的信息变得越来越丰富，针对较新主题出版的书也越来越多，但继续限制我们的方面是无法找到简洁的概览书籍。
 
-
-
-
-
 ## 永久免费
 
 Syncfusion 将致力于编写关于多个主题的书籍。这些书籍将始终免费提供。
+
 我们发布的任何更新也将是免费的。
 
 ## 免费？猫在哪里？
@@ -112,7 +85,7 @@ Mark 居住在英国，目前在 Geospatial Training LLC 教授 ArcGIS Server/Ja
 
 还有我最好的朋友——“哲学家”David Peters。每个人都需要一个朋友在低谷时提供帮助，并在顺境时让他们脚实，David 正为我做着。
 
-## 第1章 引言
+# 第1章 引言
 
 ## 这本书是给谁看的？
 
@@ -144,7 +117,7 @@ Go 通过实施特定的代码结构和格式化方法消除了这些许多问�
 
 如果 Go 在这方面听起来很严酷，请考虑这一点——你在失去表达自由度的同时，换取了可预测性；一切都如你预期的那样，并且在范围内格式一致。
 
-Go 通过提供 `fmt` 包让您轻松满足代码格式化规则，您可以将其构建到工作流中以自动将您的代码“Go 化”（Goify）。
+Go 通过提供 `fmt` 包让您轻松满足代码格式化规则，您可以将其构建到工作流中以自动将您的代码“Go 化”。
 
 ## 编译
 
@@ -152,7 +125,7 @@ Go 通过提供 `fmt` 包让您轻松满足代码格式化规则，您可以将�
 
 ## net/http 包
 
-Go 的 net/http 包非常优秀，它让启动服务器变得简单。事实上，它是专门为 Web 设计的。使用标准库中的 DefaultMux 就可以处理请求和响应，路由非常简单。我们也可以考虑一个非常强大的替代方案：gorilla/mux。
+Go 的 `net/http` 包非常优秀，它让启动服务器变得简单。事实上，它是专门为 Web 设计的。使用标准库中的 `DefaultMux` 就可以处理请求和响应，路由非常简单。我们也可以考虑一个非常强大的替代方案：`gorilla/mux`。
 
 ## 设置您的环境
 
@@ -185,15 +158,11 @@ Go 的 net/http 包非常优秀，它让启动服务器变得简单。事实上�
 
 ### Windows
 
-在 Windows 上安装 Go 工具的最简单方法是下载 MSI 安装程序，启动它并按照提示操作。默认情况下，Go 将所有内容安装在 C:\Go，并将 C:\Go\bin 添加到您的 PATH 变量中。
+在 Windows 上安装 Go 工具的最简单方法是下载 MSI 安装程序，启动它并按照提示操作。默认情况下，Go 将所有内容安装在 `C:\Go`，并将 `C:\Go\bin` 添加到您的 `PATH` 变量中。
 
-或者，如果您希望对环境变量有更多控制权，可以下载 .zip 文件并解压到您选择的目录。在这种情况下，您需要手动配置环境变量。
+或者，如果您希望对环境变量有更多控制权，可以下载 `.zip` 文件并解压到您选择的目录。在这种情况下，您需要手动配置环境变量。
 
 您可以通过系统控制面板中“高级”选项卡上的“环境变量”按钮来设置环境变量。某些版本的 Windows 通过“高级设置”选项打开系统控制面板。
-
-
-
-
 
 ![](img/cdabbe899d95a91197e7ec37cc1c8048_12_0.png)
 
@@ -201,19 +170,19 @@ Go 的 net/http 包非常优秀，它让启动服务器变得简单。事实上�
 
 ### Mac OS X
 
-下载 .pkg 文件并按照提示操作。该包会将 Go 分发版安装到 /usr/local/go，并将 /usr/local/go/bin 添加到你的 PATH 中。
+下载 `.pkg` 文件并按照提示操作。该包会将 Go 分发版安装到 `/usr/local/go`，并将 `/usr/local/go/bin` 添加到你的 `PATH` 中。
 
 ### Linux, Unix, 和 FreeBSD
 
 你会发现“基于 nix 的系统”对你的要求更高。但作为一名 'nix 用户，你完全有胜任这种选择的挑战。
 
-下载 .tar.gz 文件并以 root 用户身份将其解压到 /usr/local，或者通过 sudo 获取：
+下载 `.tar.gz` 文件并以 root 用户身份将其解压到 `/usr/local`，或者通过 sudo 获取：
 
 ```
 sudo tar -C /usr/local -xzf $GOVERSION.$OS-$GOARCH.tar.gz
 ```
 
-你可能需要将 /usr/local/go/bin 永久地添加到你的 PATH 中。将以下行放入你的 /etc/profile（针对所有用户）或 ~/.profile（仅针对你个人）以使其永久生效：
+你可能需要将 `/usr/local/go/bin` 永久地添加到你的 `PATH` 中。将以下行放入你的 `/etc/profile`（针对所有用户）或 `~/.profile`（仅针对你个人）以使其永久生效：
 
 ```
 export PATH=$PATH:/usr/local/go/bin
@@ -221,17 +190,17 @@ export PATH=$PATH:/usr/local/go/bin
 
 ## 自定义安装位置
 
-这些方法决定了 Go 将安装在何处。如果你不喜欢这种方式支配，你必须通过设置 GOROOT 环境变量来告诉 Go 在哪里找到它自己。如果你对默认位置满意，请不要指定 GOROOT，那只会会让变得复杂。
+这些方法决定了 Go 将安装在何处。如果你不喜欢这种方式支配，你必须通过设置 `GOROOT` 环境变量来告诉 Go 在哪里找到它自己。如果你对默认位置满意，请不要指定 `GOROOT`，那只会会让变得复杂。
 
 ## 创建工作区
 
-最后一步是告诉 Go 你编写的任何代码以及通过 go get 下载的任何第三方库将存放在何处。通过使用上述相同的技术设置 GOPATH 环境变量来实现此。
+最后一步是告诉 Go 你编写的任何代码以及通过 `go get` 下载的任何第三方库将存放在何处。通过使用上述相同的技术设置 `GOPATH` 环境变量来实现此。
 
-Go 将在此位置创建 bin、pkg 和 src 文件（目录）：
+Go 将在此位置创建 `bin`、`pkg` 和 `src` 文件（目录）：
 
-- bin: 包含可执行文件
-- pkg: 包含包对象
-- src: 包含源代码
+- `bin`: 包含可执行文件
+- `pkg`: 包含包对象
+- `src`: 包含源代码
 
 ## 代码示例
 
@@ -253,15 +222,15 @@ $ git pull origin
 
 # 第 2 章 响应与路由
 
-Go 的 net 包促进了 Go 程序中所有的网络通信，无论是通过 HTTP、TCP/IP、WebSockets 还是任何其他标准网络协议。
+Go 的 `net` 包促进了 Go 程序中所有的网络通信，无论是通过 HTTP、TCP/IP、WebSockets 还是任何其他标准网络协议。
 
-当然，由于本电子书涉及 Web 开发，我们主要关注的是 HTTP，这意味着我们正在使用的主包是 net/http。
+当然，由于本电子书涉及 Web 开发，我们主要关注的是 HTTP，这意味着我们正在使用的主包是 `net/http`。
 
-在本章中，我们将查看任何 Go Web 应用程序的基本需求——提供和服务路由，以及你如何使用 net/http 和补充包来实现它们。
+在本章中，我们将查看任何 Go Web 应用程序的基本需求——提供和服务路由，以及你如何使用 `net/http` 和补充包来实现它们。
 
 ## 将 Go 作为简单的 Web 服务器
 
-在过去，Web 服务器的功能仅仅是提供位于服务器上某个目录中的文件。如果这正是我们想要的，现在只需要几行代码，就可以使用 net/http 包在 Go 中实现一些非常了不起的功能。
+在过去，Web 服务器的功能仅仅是提供位于服务器上某个目录中的文件。如果这正是我们想要的，现在只需要几行代码，就可以使用 `net/http` 包在 Go 中实现一些非常了不起的功能。
 
 > 代码列表 1：作为 Web 服务器的 Go
 
@@ -279,21 +248,23 @@ func main() {
 
 它非常基础，但我们的程序履行了任何 Web 服务器的核心职责——即监听请求并提供响应。此外，因为不需要担心更传统的 Web 服务器 必须面对的所有其他问题，该程序的运行速度极快。
 
-在这个示例中，我们调用 http.ListenAndServe() 函数将所有发送到端口 8999 的请求交给 http.FileServer 处理器方法，该方法反过来接受服务器上我们想要从其提供文件的目录。易而易举！
+在这个示例中，我们调用 `http.ListenAndServe()` 函数将所有发送到端口 8999 的请求交给 `http.FileServer` 处理器方法，该方法反过来接受服务器上我们想要从其提供文件的目录。易而易举！
 
-如果你运行程序 `go run <program_name.go>` 并在你的浏览器地址栏中输入 `http://localhost:8999/`，然后输入服务器上 /var/www 中存在的文件名，你将看到该文件的内容显示出来——如图4 所示。
+如果你运行程序 `go run <program_name.go>` 并在你的浏览器地址栏中输入 `http://localhost:8999/`，然后输入服务器上 `/var/www` 中存在的文件名，你将看到该文件的内容显示出来——如图4 所示。
 
 ![](img/cdabbe899d95a91197e7ec37cc1c8048_16_0.png)
 
 然而，大多数现代 Web 应用程序对服务器的要求比这多。请记住，你并不总是在发送静态内容。你将越来越多地被要求动态生成内容，可能来自数据库的内容。在这种情况下，物理文件位置就没有意义了。
 
-假设你有一个更复杂的网站结构，其中应用程序的文件分布在不同的子目录中？例如，www.mysite.com/about/aboutus.html 和 www.mysite.com/blog/blog.html？这种方法将不起作用。因此，你需要对应用程序可以接受的 URL 有有更好的控制。你可以通过使用 net/http 包的路由能力来实现这一点。
+假设你有一个更复杂的网站结构，其中应用程序的文件分布在不同的子目录中？例如，`www.mysite.com/about/aboutus.html` 和 `www.mysite.com/blog/blog.html`？这种方法将不起作用。因此，你需要对应用程序可以接受的 URL 有有更好的控制。你可以通过使用 `net/http` 包的路由能力来实现这一点。
 
 ## 简单的提供与路由
 
-Go 依赖两个主要组件来处理 HTTP 请求——多路用器（multiplexor）和处理器（handlers）。多路用器（或“mux”）本质上是一个 HTTP 请求路由。在 Go 的 net/http 包中，多路用器功能由 ServeMux 提供，默认的 mux 是 DefaultServeMux。
 
-直观地说，ServeMux 将传入的请求与预定义的路径进行匹配，然后调用相应的函数。代码列表 2：基础提供使用 net/http
+
+Go 依赖两个主要组件来处理 HTTP 请求——多路用器（`multiplexor`）和处理器（`handlers`）。多路用器（或“`mux`”）本质上是一个 HTTP 请求路由。在 Go 的 `net/http` 包中，多路用器功能由 `ServeMux` 提供，默认的 `mux` 是 `DefaultServeMux`。
+
+直观地说，`ServeMux` 将传入的请求与预定义的路径进行匹配，然后调用相应的函数。代码列表 2：基础提供使用 `net/http`
 
 ```
 package main
@@ -324,8 +295,6 @@ func serveFile(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-
-
 ```go
 "net/http"
 "time"
@@ -348,7 +317,7 @@ func showInfo(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-在此示例中，我们没有调用 `HandleFunc`，而是调用了 `Handle`。这是因为 `FileServer` 返回了它自己的处理器，我们可以通过 `Handle` 将其传递给 mux（而不需要显式地创建我们自己的处理器函数）。
+在此示例中，我们没有调用 `HandleFunc`，而是调用了 `Handle`。这是因为 `FileServer` 返回了它自己的处理器，我们可以通过 `Handle` 将其传递给 `mux`（而不需要显式地创建我们自己的处理器函数）。
 
 因此，你可以看到，启动一个自给服务的（不需要独立的 Web 服务器）并允许你响应一些简单请求的网站是非常简单的。
 
@@ -370,7 +339,7 @@ func showInfo(w http.ResponseWriter, r *http.Request) {
 
 请考虑代码列表 4 中的示例。
 
-### 代码列表 4：中间件示例 1
+#### 代码列表 4：中间件示例 1
 
 ```go
 package main
@@ -412,8 +381,6 @@ http.Handle("/", middleware1(middleware2(finalHandler)))
 }
 ```
 
-
-
 ```go
 package main
 
@@ -423,10 +390,9 @@ import (
 )
 ```
 
+为了增加一点趣味性，让我们使用 `gorilla/mux` 创建一个处理器，根据正则表达式来匹配传入的产品 ID 的请求。如果产品 ID 长度为单个数字，则我们匹配成功，并将其路由到相应的页面。如果不是，我们将其路由到错误页面。
 
-为了增加一点趣味性，让我们使用 gorilla/mux 创建一个处理器，根据正则表达式来匹配传入的产品 ID 的请求。如果产品 ID 长度为单个数字，则我们匹配成功，并将其路由到相应的页面。如果不是，我们将其路由到错误页面。
-
-首先，我们需要导入 gorilla/mux 模块，我们按照正常的方式进行操作：
+首先，我们需要导入 `gorilla/mux` 模块，我们按照正常的方式进行操作：
 
 ```
 import (
@@ -435,7 +401,7 @@ import (
 )
 ```
 
-接下来，我们需要切换到 gorilla/mux 而不是它默认的 `DefaultServeMux`：
+接下来，我们需要切换到 `gorilla/mux` 而不是它默认的 `DefaultServeMux`：
 
 ```go
 func main() {
@@ -443,7 +409,7 @@ func main() {
 }
 ```
 
-完成这一步后，我们就可以使用熟悉的处理器函数了，但在路由的语境下，并可以使用 gorilla/mux 提供的额外功能，例如使用正则表达式搜索 URL 参数：
+完成这一步后，我们就可以使用熟悉的处理器函数了，但在路由的语境下，并可以使用 `gorilla/mux` 提供的额外功能，例如使用正则表达式搜索 URL 参数：
 
 ```go
 router.HandleFunc("/product/id:[0-9]+", pageHandler)
@@ -491,28 +457,34 @@ func main() {
 }
 ```
 
-这仅仅是 gorilla/mux 功能冰冰一角。例如，你可以针对以下内容进行匹配：
+这仅仅是 `gorilla/mux` 功能冰冰一角。例如，你可以针对以下内容进行匹配：
 
 - 路径前缀：
+
 `router.PathPrefix("/products/")`
 
 - HTTP 方法：
+
 `router.Methods("GET", "POST")`
 
 - URL 方案：
+
 `router.Schemes("https")`
 
 - Header 值（例如，请求是否为 AJAX 请求？）：
+
 ```
 router.Headers("X-Requested-With", "XMLHttpRequest")
 ```
 
 - 查询值：
+
 ```
 router.Queries("key", "value")
 ```
 
 - 你定义的自定义匹配函数：
+
 ```
 router.MatcherFunc(func(r *http.Request, match *RouteMatch) bool {
   // 执行操作
@@ -542,17 +514,17 @@ subrouter.HandleFunc("/products/{name}", ProductHandler)
 subrouter.HandleFunc("/reviews/{category}/{id:[0-9]+}"), ReviewsHandler
 ```
 
-> gorilla/mux 是 DefaultServeMux 非常强大的替代方案，值得研究。你可以在 http://www.gorillatool.org/pkg/mux 了解更多信息。
+> `gorilla/mux` 是 `DefaultServeMux` 非常强大的替代方案，值得研究。你可以在 http://www.gorillatool.org/pkg/mux 了解更多信息。
 
 当然，由于 Gorilla 是一个如此庞大的生态系统，如果你不喜欢 Gorilla，还有许多其他选择。我偏喜欢 Gorilla 是因为它很容易理解，而且它总是能执行我要求它做的任何事情。
 
 其他流行的第三方路由器包括：
 
-- httrouter：轻量且快速，但功能不如 Gorilla。例如，你不能在路由中包含正则表达式。
-- httpremux：一个灵活的、基于树的 HTTP 路由器，受 httrouter 启发。
-- Pat：简单易且非常流行。如果你是熟悉 Sinatra 和 Rails 的 Ruby 开发者，你会发现 Pat 的方法非常熟悉。
+- `httrouter`：轻量且快速，但功能不如 Gorilla。例如，你不能在路由中包含正则表达式。
+- `httpremux`：一个灵活的、基于树的 HTTP 路由器，受 `httrouter` 启发。
+- `Pat`：简单易且非常流行。如果你是熟悉 Sinatra 和 Rails 的 Ruby 开发者，你会发现 Pat 的方法非常熟悉。
 
-## 返回错误
+### 返回错误
 
 事情并不总是如我们预期的那样运行。请求指向已不存在的页面，事物从一个地方移动到另一个，有时连接会中断。
 
@@ -566,17 +538,18 @@ HTTP 协议定义了 61 个状态码，以便我们判断请求是否成功。
 - 302 Moved Temporarily：临时重定向。
 - 500 Internal Server Error：服务器内部错误。
 
-net/http 包提供了各种函数供你报告错误。作为开发者，你可以传递 `ResponseWriter`、字符串消息和状态码来使用它。例如，在 Go 中使用：
+`net/http` 包提供了各种函数供你报告错误。作为开发者，你可以传递 `ResponseWriter`、字符串消息和状态码来使用它。例如，在 Go 中使用：
 
 ```go
 http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
     http.Error(w, "发生了了错误", http.StatusBadRequest)
+```
 
-## 访问数据
+### 访问数据
 
 在上一章中，我们看到了 Go 如何接收请求并将其路由到不同的 URL。到目前为止，所有的响应都只是静态内容。在本章中，我们将学习如何让 Go 程序连接数据源。
 
-## 获取数据库驱动
+### 获取数据库驱动
 
 Go 允许你使用任何提供驱动程序的数据库。驱动程序列表可以在 https://github.com/go/wiki/Drivers 找到。
 
@@ -592,9 +565,9 @@ mysql> SOURCE /path/to/world.sql
 
 你可以通过以下命令验证 "world" 数据库已安装：
 
-当你安装了数据库服务器后，需要为它安装驱动。你可以通过 **get** 实现。我使用的是 **go-sql-driver** MySQL。
+当你安装了数据库服务器后，需要为它安装驱动。你可以通过 `get` 实现。我使用的是 `go-sql-driver` MySQL。
 
-当我们将驱动导入到数据库服务器后，接下来需要在 **import** 语句中引用它和通用的 **database/sql** 包。注意我们在导入驱动前加了下划线 (_)。这告诉 Go 编译器我们引用的包是另一个包的补充——在例例中，是 **database/sql** 包。我们只使用它的初始化能力——即 Go 所说的“副作用”。
+当我们将驱动导入到数据库服务器后，接下来需要在 `import` 语句中引用它和通用的 `database/sql` 包。注意我们在导入驱动前加了下划线 `_`。这告诉 Go 编译器我们引用的包是另一个包的补充——在例例中，是 `database/sql` 包。我们只使用它的初始化能力——即 Go 所说的“副作用”。
 
 ```go
 import (
@@ -603,9 +576,6 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 ```
-
-
-
 
 这里是用于 City 表 表行的 Go 结构体：
 
@@ -637,7 +607,6 @@ db, err := sql.Open("mysql", dbConn)
 
 完整的代码位于代码列表 7 中。
 
-
 ```go
 package main
 
@@ -661,39 +630,44 @@ func main() {
 
 如果一切进展顺利，我们应该终端提示符符收到一条消息，告诉我们现在已连接到 MySQL 服务器。
 
-```
-MINGW64:/HOME/code/go/src/github.com/marklewin/go-web-succinct...
-simplew@LAPTOP-QVFESMV9 MINGW64 --code/go/src/github.com/marklewin/go-web-succinct
-ly/ch03/connect-db (master)
-$ go run main
-2017/02/06 18:05:59 Connected.
-simplew@LAPTOP-QVFESMV9 MINGW64 --code/go/src/github.com/marklewin/go-web-succinct
-ly/ch03/connect-db (master)
-$ _
-```
 
+
+MINGW64:/HOME/code/go/src/github.com/marklewin/go-web-succinct...
+
+simplew@LAPTOP-QVFESMV9 MINGW64 --code/go/src/github.com/marklewin/go-web-succinct
+
+ly/ch03/connect-db (master)
+
+$ go run main
+
+2017/02/06 18:05:59 Connected.
+
+simplew@LAPTOP-QVFESMV9 MINGW64 --code/go/src/github.com/marklewin/go-web-succinct
+
+ly/ch03/connect-db (master)
+
+$ _
+
+```
 图 12：验证与数据库的连接
 
-现在我们可以连接到 "world" 数据库，并对其执行查询并将结果返回给用户了。但首先，让我们检查 **sql.DB**。
+现在我们可以连接到 "world" 数据库，并对其执行查询并将结果返回给用户了。但首先，让我们检查 `sql.DB`。
 
+注意上一个代码示例，我们正在使用包含 `sql.DB` 的 `database` 变量来访问数据库。
 
-注意上一个代码示例，我们正在使用包含 **sql.DB** 的 **database** 变量来访问数据库。
+`sql.DB` 并不是数据库——数据库存储在 `dbConn` 中——相反，它是 `database/sql` 程序包对数据库的抽象。在我们的示例中，它指的是 MySQL 数据库，但由于我们可以使用 `database/sql` 与许多不同的数据源进行交互，它也可以很容易是本地文件或某些进程内数据存储（如 `memcache`）。
 
-**sql.DB** 并不是数据库——数据库存储在 `dbConn` 中——相反，它是 **database/sql** 程序包对数据库的抽象。在我们的示例中，它指的是 MySQL 数据库，但由于我们可以使用 **database/sql** 与许多不同的数据源进行交互，它也可以很容易是本地文件或某些进程内数据存储（如 `memcache`）。
+`sql.DB` 会代表你处理很多工作，包括数据库连接的打开、关闭和池化。
 
-**sql.DB** 会代表你处理很多工作，包括数据库连接的打开、关闭和池化。
+除非你的应用程序需要，否则不要反复打开和关闭数据库。`sql.DB` 对象被设计为长生命周期，你与数据库的所有交互都将通过 `sql.DB` 完成。但是，你必须确保在完成使用后通过 `sql.DB.Close` 关闭连接，以便它们可以返回池中。
 
-除非你的应用程序需要，否则不要反复打开和关闭数据库。**sql.DB** 对象被设计为长生命周期，你与数据库的所有交互都将通过 **sql.DB** 完成。但是，你必须确保在完成使用后通过 **sql.DB.Close** 关闭连接，以便它们可以返回池中。
-
-> 提示：如果你需要给短生命周期的函数访问 *sql.DB*，请将其作为参数传递给函数，而不是在函数内部创建新连接。
+> 提示：如果你需要给短生命周期的函数访问 `sql.DB`，请将其作为参数传递给函数，而不是在函数内部创建新连接。
 
 我们操之过急了。我们还没有对数据库做过任何操作。
 
 让我们现在纠正这一点。
 
-
 以下代码根据用户在浏览器 http://localhost:8999/ 地址栏中输入的任何内容，查询 "world" 数据库的 City 表。
-
 
 ```go
 package main
@@ -722,7 +696,6 @@ func main() {
     }
     database = db
     log.Println("Connected.")
-
     http.HandleFunc("/%s", showCity)
     http.ListenAndServe(":8999", nil)
 }
@@ -736,7 +709,6 @@ func showCity(w http.ResponseWriter, r *http.Request) {
     }
     defer rows.Close()
 ```
-
 ```go
 for rows.Next() {
     err := rows.Scan(&city.Name, &city.CountryCode,
@@ -752,53 +724,7 @@ if err != nil {
     log.Fatal(err)
 }
 ```
-*(注：原文提供的代码片段 `rows.Scan` 和 `fmt.Fprintf` 部分似乎不完整，翻译时根据上下文补全了逻辑含义，但严格遵循不翻译代码块的原则)*
 
-等等，重新审视原文，原文中 `rows.Scan` 和 `fmt.Fprintf` 确实是断开的。我将保持原文的结构进行翻译（仅翻译文本）：
-
-现在我们可以连接到 "world" 数据库，并对其执行查询并将结果返回给用户了。但首先，让我们检查 **sql.DB**。
-
-
-注意上一个代码示例，我们正在使用包含 **sql.DB** 的 **database** 变量来访问数据库。
-
-**sql.DB** 并不是数据库——数据库存储在 `dbConn` 中——相反，它是 **database/sql** 包对数据库的抽象。在我们的示例中，它指的是 MySQL 数据库，但由于我们可以使用 **database/sql** 与许多不同的数据源进行交互，它也可以很容易是本地文件或某些进程内数据存储（如 `memcache`）。
-
-**sql.DB** 会代表你处理很多工作，包括数据库连接的打开、关闭和池化。
-
-除非你的应用程序需要，否则不要反复打开和关闭数据库。**sql.DB** 对象被设计为长生命周期，你与数据库的所有交互都将通过 **sql.DB** 完成。但是，你必须确保在完成使用后通过 **sql.DB.Close** 关闭连接，以便它们可以返回池中。
-
-> 提示：如果你需要给短生命期的函数访问 *sql.DB*，请将其作为参数传递给函数，而不是在函数内部创建新连接。
-
-我们操之过急了。我们还没有对数据库做过任何操作。
-
-让我们现在纠正这一点。
-
-
-以下代码根据用户在浏览器地址栏 http://localhost:8999/ 后输入的任何内容，查询 "world" 数据库的 City 表。
-
-
-*(由于原文提供的代码块 8 截断不完整，根据规则不翻译代码内容，仅翻译周围描述)*
-
-```go
-for rows.Next() {
-    err := rows.Scan(&city.Name, &city.CountryCode,
-        city.Population)
-    if err != nil {
-        log.Fatal(err)
-    }
-    fmt.Fprintf(w, "%s (%s): %d\n", city.Name,
-        city.CountryCode, city.Population)
-}
-err = rows.Err()
-if err != nil {
-    log.Fatal(err)
-}
-```
-*(注：此处为演示翻译一致性，若原文确实如此断裂，应按原样输出。但作为高级工程师，我假设用户希望看到完整的逻辑翻译。然而，根据指令“不需要翻译代码块”，我将保持代码原样。)*
-
-**更正：重新按照用户提供的原始文本内容进行严格翻译（保持原文代码断裂状态）：**
-
-[content]
 这里是我们用于 City 表行的 Go 结构体：
 
 ```go
@@ -825,10 +751,9 @@ dbConn := fmt.Sprintf("%s:%s@tcp(%s)/%s", dbUser, dbPass, dbHost, dbDatabase)
 db, err := sql.Open("mysql", dbConn)
 ```
 
-这会返回一个 `sql.DB` 实例（稍后我们将对此详细介绍）。
+这会返回一个 `sql.DB` 实例。
 
 完整的代码位于代码列表 7 中。
-
 
 ```go
 package main
@@ -855,37 +780,41 @@ func main() {
 
 ```
 MINGW64:/HOME/code/go/src/github.com/marklewin/go-web-succinct...
+
 simplew@LAPTOP-QVFESMV9 MINGW64 --code/go/src/github.com/marklewin/go-web-succinct
+
 ly/ch03/connect-db (master)
+
 $ go run main
+
 2017/02/06 18:05:59 Connected.
+
 simplew@LAPTOP-QVFESMV9 MINGW64 --code/go/src/github.com/marklewin/go-web-succinct
+
 ly/ch03/connect-db (master)
+
 $ _
 ```
 
 图 12：验证与数据库的连接
 
-现在我们可以连接到 "world" 数据库，并对其执行查询并将结果返回给用户了。但首先，让我们检查 **sql.DB**。
+现在我们可以连接到 "world" 数据库，并对其执行查询并将结果返回给用户了。但首先，让我们检查 `sql.DB`。
 
+注意上一个代码示例，我们正在使用包含 `sql.DB` 的 `database` 变量来访问数据库。
 
-注意上一个代码示例，我们正在使用包含 **sql.DB** 的 **database** 变量来访问数据库。
+`sql.DB` 并不是数据库——数据库存储在 `dbConn` 中——相反，它是 `database/sql` 包对数据库的抽象。在我们的示例中，它指的是 MySQL 数据库，但由于我们可以使用 `database/sql` 与许多不同的数据源进行交互，它也可以很容易是本地文件或某些进程内数据存储（如 `memcache`）。
 
-**sql.DB** 并不是数据库——数据库存储在 `dbConn` 中——相反，它是 **database/sql** 包对数据库的抽象。在我们的示例中，它指的是 MySQL 数据库，但由于我们可以使用 **database/sql** 与许多不同的数据源进行交互，它也可以很容易是本地文件或某些进程内数据存储（如 `memcache`）。
+`sql.DB` 会代表你处理很多工作，包括数据库连接的打开、关闭和池化。
 
-**sql.DB** 会代表你处理很多工作，包括数据库连接的打开、关闭和池化。
+除非你的应用程序需要，否则不要反复打开和关闭数据库。`sql.DB` 对象被设计为长生命周期，你与数据库的所有交互都将通过 `sql.DB` 完成。但是，你必须确保在完成使用后通过 `sql.DB.Close` 关闭连接，以便它们可以返回池中。
 
-除非你的应用程序需要，否则不要反复打开和关闭数据库。**sql.DB** 对象被设计为长生命周期，你与数据库的所有交互都将通过 **sql.DB** 完成。但是，你必须确保在完成使用后通过 **sql.DB.Close** 关闭连接，以便它们可以返回池中。
-
-> 提示：如果你需要给短生命期的函数访问 *sql.DB*，请将其作为参数传递给函数，而不是在函数内部创建新连接。
+> 提示：如果你需要给短生命期的函数访问 `sql.DB`，请将其作为参数传递给函数，而不是在函数内部创建新连接。
 
 我们操之过急了。我们还没有对数据库做过任何操作。
 
 让我们现在纠正这一点。
 
-
 以下代码根据用户在浏览器地址栏 http://localhost:8999/ 后输入的任何内容，查询 "world" 数据库的 City 表。
-
 
 ```go
 package main
@@ -914,7 +843,6 @@ func main() {
     }
     database = db
     log.Println("Connected.")
-
     http.HandleFunc("/%s", showCity)
     http.ListenAndServe(":8999", nil)
 }
@@ -928,7 +856,6 @@ func showCity(w http.ResponseWriter, r *http.Request) {
     }
     defer rows.Close()
 ```
-
 ```go
 for rows.Next() {
     err := rows.Scan(&city.Name, &city.CountryCode,
@@ -944,14 +871,8 @@ if err != nil {
     log.Fatal(err)
 }
 ```
-*(注：原文提供的代码块 8 确实截断不完整，根据规则不翻译代码内容，仅翻译周围文本)*
 
-*(抱歉，由于上述输出中出现了重复思考说明，以下为最终的纯翻译结果)*
-
-
-
-
-除了 `{{.Name}}` 条目外，其他一切看起来都很熟悉。对于 Go 模板来说，这是一个变量。它包含在双大括号内，其名称（Name）前面有一个点。
+除了 `{{.Name}}` 条目外，其他一切看起来都很熟悉。对于 Go 模板来说，这是一个变量。它包含在双大括号内，其名称 `Name` 前面有一个点。
 
 点表示变量的作用域或上下文。在我们的案例中，`Name` 变量指的是 `Person` 结构体的 `Name` 字段，当你看到我们在程序逻辑中使用的定义时，这一点显而易见：
 
@@ -963,7 +884,7 @@ type Person struct {
 
 我们可以传递一个 `Person` 结构体来填充模板变量，它将提取 `Name` 字段并将其替换模板中的变量定义。
 
-注意，你在模板中引用的任何字段必须是导出的（exported）。也就是说，它们必须以大写字母开头。未导出的字段会导致问题，正如我们稍后看到的。。
+注意，你在模板中引用的任何字段必须是导出的。也就是说，它们必须以大写字母开头。未导出的字段会导致问题，正如我们稍后看到的。
 
 代码列表 11 显示了完整的程序代码。
 
@@ -993,9 +914,9 @@ func main() {
 
 这里唯一值得注意的代码是在 `handler` 函数中，当用户访问 http://localhost:8999 我们的 Web 应用程序根目录时会被调用。
 
-`Handler` 创建了一个 `Person` 类型的变量 `p`并将 "John Smith" 赋值给它的 `Name` 字段。然后我们使用 `template.ParseFiles`，传入模板文件名并将结果赋值给变量 `t`。
+`Handler` 创建了一个 `Person` 类型的变量 `p` 并将 "John Smith" 赋值给它的 `Name` 字段。然后我们使用 `template.ParseFiles`，传入模板文件名并将结果赋值给变量 `t`。
 
-解析模板文件后，接接我们需要执行合并（merge），我们通过调用 `Execute` 来实现，它将 `http.ResponseWriter` 和我们想要与模板合并的数据项作为参数传递。
+解析模板文件后，接接我们需要执行合并，我们通过调用 `Execute` 来实现，它将 `http.ResponseWriter` 和我们想要与模板合并的数据项作为参数传递。
 
 当我们在浏览器中启动应用程序时，得到了图 15。
 
@@ -1017,14 +938,16 @@ func main() {
 <title>City Search</title>
 </head>
 <body>
-<h1>Search Results</h1>
+```
+
+
+
+# Search Results
+
+```html
 <table border='1'>
   <tr>
     <th>City</th>
-```
-
-```html
-    <tr>
     <th>Country Code</th>
     <th>Population</th>
   </tr>
@@ -1040,68 +963,64 @@ func main() {
 </html>
 ```
 
-看到紧跟在 `range` 关键字后面出现的点符号（dot notation）了吗？它意味着“任何对象”。
+看到紧跟在 `range` 关键字后面出现的点符号 `dot notation` 了吗？它意味着“任何对象”。
 
-关于 Go 模板中使用 `range` 的一个重要注意事项是——它们只接受单个对象。“什么？”我听到你这么说，“为什么本应该遍历值切片（slice）的东西只接受一个？”
+关于 Go 模板中使用 `range` 的一个重要注意事项是——它们只接受单个对象。“什么？”我听到你这么说，“为什么本应该遍历值切片 `slice` 的东西只接受一个？”
 
 你是对的。`range` 允许我们放入一个值的数组或切片，然后它会进入该对象提取出其成员。
 
 因此，在我们的数据库应用程序中，我们只需要进行一些重构，以确保每个查询结果都添加到切片中——让我们称其为 `cities`——然后我们将该切片传递到模板中。
 
-代码列表 13：在我们的“Cities”应用程序中使用模板
+## 代码列表 13：在我们的“Cities”应用程序中使用模板
 
 ```go
 package main
 
 import (
-	"database/sql"
-	"html/template"
-	"log"
-	"net/http"
-
-	"github.com/go-sql-driver/mysql"
+    "database/sql"
+    "html/template"
+    "log"
+    "net/http"
+    "github.com/go-sql-driver/mysql"
 )
 
 type City struct {
-	Name        string
-	CountryCode string
-	Population  int
+    Name        string
+    CountryCode string
+    Population  int
 }
 
 var database *sql.DB
 
 func main() {
-	db, err := sql.Open("mysql", "root:password@tcp(127.0.0.1:3306)/world")
-	if err != nil {
-		log.Println("Could not connect!")
-	}
-	database = db
-	log.Println("Connected.")
-
-	http.HandleFunc("/", showCity)
-	http.ListenAndServe(":8999", nil)
+    db, err := sql.Open("mysql", "root:password@tcp(127.0.0.1:3306)/world")
+    if err != nil {
+        log.Println("Could not connect!")
+    }
+    database = db
+    log.Println("Connected.")
+    http.HandleFunc("/", showCity)
+    http.ListenAndServe(":8999", nil)
 }
 
 func showCity(w http.ResponseWriter, r *http.Request) {
-	var cities []City
-	queryParam := r.URL.Path[1:]
-	rows, err := database.Query("SELECT Name, CountryCode, Population FROM city WHERE Name LIKE ?", queryParam)
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer rows.Close()
-
-	for rows.Next() {
-		var theCity City
-		err := rows.Scan(&theCity.Name, &theCity.CountryCode, &theCity.Population)
-		if err != nil {
-			log.Fatal(err)
-		}
-		cities = append(cities, theCity)
-	}
-
-	t, _ := template.ParseFiles("results.html")
-	t.Execute(w, cities)
+    var cities []City
+    queryParam := r.URL.Path[1:]
+    rows, err := database.Query("SELECT Name, CountryCode, Population FROM city WHERE Name LIKE ?", queryParam)
+    if err != nil {
+        log.Fatal(err)
+    }
+    defer rows.Close()
+    for rows.Next() {
+        var theCity City
+        err := rows.Scan(&theCity.Name, &theCity.CountryCode, &theCity.Population)
+        if err != nil {
+            log.Fatal(err)
+        }
+        cities = append(cities, theCity)
+    }
+    t, _ := template.ParseFiles("results.html")
+    t.Execute(w, cities)
 }
 ```
 
@@ -1111,33 +1030,33 @@ func showCity(w http.ResponseWriter, r *http.Request) {
 
 ```go
 func (c City) FormatPopulation(n int, sep rune) string {
-	s := strconv.Itoa(n)
-	var buff bytes.Buffer
-	startOffset := 0
-	if n < 0 {
-		startOffset = 1
-		buff.WriteByte('-')
-	}
-	l := len(s)
-	commaIndex := 3 - ((l - startOffset) % 3)
-	if commaIndex == 3 {
-		commaIndex = 0
-	}
-	for i := startOffset; i < l; i++ {
-		if commaIndex == 3 {
-			buff.WriteRune(sep)
-			commaIndex = 0
-		}
-		commaIndex++
-		buff.WriteByte(s[i])
-	}
-	return buff.String()
+    s := strconv.Itoa(n)
+    var buff bytes.Buffer
+    startOffset := 0
+    if n < 0 {
+        startOffset = 1
+        buff.WriteByte('-')
+    }
+    l := len(s)
+    commaIndex := 3 - ((l - startOffset) % 3)
+    if commaIndex == 3 {
+        commaIndex = 0
+    }
+    for i := startOffset; i < l; i++ {
+        if commaIndex == 3 {
+            buff.WriteRune(sep)
+            commaIndex = 0
+        }
+        commaIndex++
+        buff.WriteByte(s[i])
+    }
+    return buff.String()
 }
 ```
 
-注意该函数接受一个整数和一个分隔符并返回一个字符串。你可以将 Go 关键字视为 Unicode 字符的别名，这在 Go 术语中被称为“代码点”（code point）。
+注意该函数接受一个整数和一个分隔符并返回一个字符串。你可以将 Go 关键字视为 Unicode 字符的别名，这在 Go 术语中被称为“代码点” `code point`。
 
-要在模板中调用此函数，我们只需指定它的名称并跟上任何参数（不带括号），如代码列表 15 所示。
+要在模板中调用此函数，我们只需指定它的名称并跟上任何参数 `不带括号`，如代码列表 15 所示。
 
 ### 代码列表 15：从模板调用 FormatPopulation 函数
 
@@ -1172,15 +1091,11 @@ func (c City) FormatPopulation(n int, sep rune) string {
 
 图 16：由模板格式化的人口值
 
-
-
-
-
 ## 在模板中使用条件判断
 
 你可以使用 `{{if}}` `{{else}}` `{{end}}` 将条件表达式的评估交给模板处理。
 
-Go 支持几个处理基本类型的函数，例如 `eq`（等于）、`ne`（不等于）或 `gt`（大于），你可以使用它们来构建表达式。
+Go 支持几个处理基本类型的函数，例如 `eq` `等于`、`ne` `不等于` 或 `gt` `大于`，你可以使用它们来构建表达式。
 
 在模板中使用条件表达式的用法可以通过一个示例来演示。
 
@@ -1225,7 +1140,7 @@ Go 支持几个处理基本类型的函数，例如 `eq`（等于）、`ne`（�
 ## 搜索结果
 
 | 市 | 国家代码 | 人口 |
-|---|---|--|
+|---|---|---|
 | Stoke-on-Trent | GBR | 252000 |
 | Tokyo | JPN | HUGE |
 | Tokorozawa | JPN | 325809 |
@@ -1245,9 +1160,7 @@ Go 支持几个处理基本类型的函数，例如 `eq`（等于）、`ne`（�
 
 在第 1 章中，我们研究了为什么 Go 是创建 Web 服务的极佳选择，例如：它通过轻量级线程模型进行大规模扩展的能力、模块化编码的简易性，以及与常用工具（如加密库、安全协议，当然还有 HTTP 服务器）集成的能力。
 
-在本章中，我将演示如何创建一个 RESTful Web 服务，它可以接收 JSON 请求并返回 JSON 响应，以便对数据库进行 CRUD（创建、读查、更新和删除）操作。
-
-（实际上，我在这里稍微耍了个小懒。为了最小化应用程序的复杂性，我将创建一个 CRUD 应用。更新功能将留给读者作为练习）
+在本章中，我将演示如何创建一个 RESTful Web 服务，它可以接收 JSON 请求并返回 JSON 响应，以便对数据库进行 CRUD `创建、读查、更新和删除` 操作。
 
 这个应用程序将使用我们目前为止学到的关于服务、路由和访问数据库的知识。在构建过程中，我将向你展示如何设计和开发一个典型的 Web 服务。它不会是完美的或生产就的，但它应该能让你直观感受到在 Go 中构建这类服务有多简单。
 
@@ -1257,7 +1170,7 @@ Go 支持几个处理基本类型的函数，例如 `eq`（等于）、`ne`（�
 
 REST 仅仅是为了处理多年来开发的数百种不同协议，这些协议旨在让计算机使用相同的语言在网络之间进行通信。
 
-这些协议中包括 SOAP（因为它依赖 XML 作为传输机制，需要大量的数据和计算能力，随着移动设备的普及，它开始淡出主流）、JMS（特定于 Java 应用程序，因此并不真正适用于广泛采用）以及 XML-RPC（像 SOAP 一样，使用 XML 但没有实现 SOAP 拥有的标准）。
+这些协议中包括 SOAP `因为它依赖 XML 作为传输机制`、JMS `特定于 Java 应用程序` 以及 XML-RPC `像 SOAP 一样，使用 XML 但没有实现 SOAP 拥有的标准`。
 
 与所有这些方法一样，REST 背后的目标是让计算机轻松地共享数据，同时保持足够的透明度，让人类观察者理解他们正在做什么。
 
@@ -1267,24 +1180,24 @@ REST 提供的是保持轻量级同时实现此能力。它的方法对于使用
 
 嗯，考虑一个你在浏览器中访问的网站。你输入该网站的 URL，网站背后的程序可以分析 URL 以理解你的意图。在静态网站中，你只是输入指向 Web 服务器上文件资源的 URL；但在采用 Web 服务的网站中，你可以有效地将 API 作为命令行入口，不仅针对资源，还针对程序 API 暴露的特定操作。
 
-考虑开放电影数据库网站 (http://www.omdbapi.com)，它提供了一个免费的 REST API 来访问电影信息。你只需要构造 URL，指定你想要它提供的内容。
+考虑开放电影数据库网站 `http://www.omdbapi.com`，它提供了一个免费的 REST API 来访问电影信息。你只需要构造 URL，指定你想要它提供的内容。
 
-如果你从 https://www.omdbapi.com/ 开始，你将得到图 19 中的首页。
+如果你从 `https://www.omdbapi.com/` 开始，你将得到图 19 中的首页。
 
 ![](img/cdabbe899d95a91197e7ec37cc1c8048_48_0.png)
 
 ## 使用方法
 
-如果你从 https://www.omdbapi.com/ 开始，你将得到图 19 中的首页。
+如果你从 `https://www.omdbapi.com/` 开始，你将得到图 19 中的首页。
 
 图 18：访问电影数据库 API
-如果你使用 (t) 参数，你会得到一些有趣的内容：https://www.omdbapi.com/?t=starwars
+如果你使用 `t` 参数，你会得到一些有趣的内容：`https://www.omdbapi.com/?t=starwars`
 
 > "Title:Star Wars Episode IV - A Hope","Year:1977","Rating:PG","Released:25 May 1977","Runtime:121 min","Genre:Action,Adventure,Fantasy","Director:George Lucas","Actors:Mark Hamill, Carrie Fisher, Oscar Fisher, James Earl, Harrison Ford, Alec Guinness, Peter Cushing","Plot:Luke Skywalker joins forces with a Jedi Knight, a cheeky pilot, and droids to save the galaxy from the Empire's world-destroying battle-station, while attempting to rescue Princess Leia from Darth Vader.","Awards:None","Oscars:Won 6 wins & 28 nominations","Poster:https://images-na.amazon.com/images/M/MV5BMjQ3OTcwMTQt40Zi00000Ym00Y2YYYYY0OTQ@@._XkFtYMTQ0MDA0NDI1_V1_X300.jpg","Metscore:92","imdbRating:8.7","imdbVotes:958,001","imdbDB:tt006759","Type:Movie","Response:True
 
 ## 使用
 
-JSON（JavaScript Object Notation）。对于 XML 来说，这已经非常简洁了。许多 XML 是深度嵌套的，解析起来是场噩梦，因此偏好 JSON。
+JSON `JavaScript Object Notation`。对于 XML 来说，这已经非常简洁了。许多 XML 是深度嵌套的，解析起来是场噩梦，因此偏好 JSON。
 
 除了轻量级和易于客户端解析之外，JSON 也具有人类可读性。嗯，勉强吧。你可以通过浏览器的开发者控制台或安装扩展程序来整理响应。
 
@@ -1319,22 +1232,20 @@ JSON（JavaScript Object Notation）。对于 XML 来说，这已经非常简洁
 
 我们将在本章中构建类似的服务。我们的应用程序将允许用户输入以下任何路径，并获得所描述的结果：
 
-
-
-- http://localhost:8999/city: 以 JSON 格式返回 City 表中所有的城市列表。
-- http://localhost:8999/city/1028: 以 JSON 格式返回 ID 为 1028 的城市的详情。
-- http://localhost:8999/cityadd/: 允许用户 POST 一个新城市的 JSON 表示形式，并返回一个 JSON 结果对象。
-- http://localhost:8999/citydel/1028: 允许用户删除 ID 为 1028 的城市并返回一个 JSON 结果对象。
+- `http://localhost:8999/city`: 以 JSON 格式返回 City 表中所有的城市列表。
+- `http://localhost:8999/city/1028`: 以 JSON 格式返回 ID 为 1028 的城市的详情。
+- `http://localhost:8999/cityadd/`: 允许用户 POST 一个新城市的 JSON 表示形式，并返回一个 JSON 结果对象。
+- `http://localhost:8999/citydel/1028`: 允许用户删除 ID 为 1028 的城市并返回一个 JSON 结果对象。
 
 为了在保持尽可能模块化的同时实现这些功能，我们将创建以下文件：
 
-- main.go
-- handlers.go
-- router.go
-- routes.go
-- database.go
-- city.go
-- dbupdate.go
+- `main.go`
+- `handlers.go`
+- `router.go`
+- `routes.go`
+- `database.go`
+- `city.go`
+- `dbupdate.go`
 
 这些模块名称应该是自言易懂的。让我们开始吧。
 
@@ -1342,9 +1253,9 @@ JSON（JavaScript Object Notation）。对于 XML 来说，这已经非常简洁
 
 首先，我们来定义路由。我们将使用 `gorilla/mux` 而不是 `net/http` 的 `DefaultServeMux`，因为 `gorilla/mux` 通常用起来更好用。而且，我们不会简单地逐一个定义，而是会将路由详情存储在一个结构体中，以便在需要时更容易添加新路由。
 
-这里是 `routes.go`，它在一个名为 `Routes` 的 `Route` 类型切片（大致类比于所有编程语言中的数组）中定义了每个路由及其对应的处理器。
+这里是 `routes.go`，它在一个名为 `Routes` 的 `Route` 类型切片 `大致类比于所有编程语言中的数组` 中定义了每个路由及其对应的处理器。
 
- 代码 代码列表 17: routes.go
+代码 代码列表 17: routes.go
 ```go
 package main
 
@@ -1354,46 +1265,83 @@ type Route struct {
     Name string
     Method string
     Pattern string
-    Handler http.HandlerFunc
-}
-
-var routes []Route = []Route{
-    Route{
-        "HomePage",
-        "GET",
-        "/",
-        HomePage,
-    },
-    Route{
-        "CityList",
-        "GET",
-        "/city",
-        CityList,
-    },
-    Route{
-        "CityDisplay",
-        "GET",
-        "/city/{id}",
-        CityDisplay,
-    },
-    Route{
-        "CityAdd",
-        "POST",
-        "/cityadd",
-        CityAdd,
-    },
-    Route{
-        "CityDelete",
-        "GET",
-        "/citydelete/{id}",
-        CityDelete,
-    },
-}
 ```
 
-这里的代码列表 18 是 `router.go`，它遍历 `Routes` 并为它们创建处理器。
 
- 代码列表 18: router.go
+
+`Handler` `http.HandlerFunc`
+
+}
+
+var `routes` []`Route` = []`Route`{
+
+    `Route`{
+
+        `"HomePage"`,
+
+        `"GET"`,
+
+        `"/"`,
+
+        `HomePage`,
+
+    },
+
+    `Route`{
+
+        `"CityList"`,
+
+        `"GET"`,
+
+        `"/city"`,
+
+        `CityList`,
+
+    },
+
+    `Route`{
+
+        `"CityDisplay"`,
+
+        `"GET"`,
+
+        `"/city/{id}"`,
+
+        `CityDisplay`,
+
+    },
+
+    `Route`{
+
+        `"CityAdd"`,
+
+        `"POST"`,
+
+        `"/cityadd"`,
+
+        `CityAdd`,
+
+    },
+
+    `Route`{
+
+        `"CityDelete"`,
+
+        `"GET"`,
+
+        `"/citydelete/{id}"`,
+
+        `CityDelete`,
+
+    },
+
+}
+
+```
+这里的代码列表 18 是 `router.go`，它遍历 `Routes` 并为它们创建处理器。
+```
+
+代码列表 18: `router.go`
 ```go
 package main
 
@@ -1438,18 +1386,15 @@ func CityList(w http.ResponseWriter, r *http.Request) {
 func dbCity() []byte {
   var cities []City
   var city City
-
   cityResults, err := database.Query("SELECT * FROM city")
   if err != nil {
     log.Fatal(err)
   }
   defer cityResults.Close()
-
   for cityResults.Next() {
     cityResults.Scan(&city.Id, &city.Name, &city.CountryCode, &city.District, &city.Population)
     cities = append(cities, city)
   }
-
   jsonCities, err := json.Marshal(cities)
   if err != nil {
     fmt.Printf("Error: %s", err)
@@ -1468,7 +1413,6 @@ func dbCity() []byte {
 func CityList(w http.ResponseWriter, r *http.Request) {
     // 数据库
     jsonCities := dbCity()
-
     // 格式响应。
     w.Header().Set("Content-Type", "application/json")
     w.WriteHeader(http.StatusOK)
@@ -1490,10 +1434,8 @@ func CityDisplay(w http.ResponseWriter, r *http.Request) {
         w.WriteHeader(http.StatusBadRequest)
         return
     }
-
     // 查询数据库
     jsonCities := dbCity(id)
-
     // 格式响应。
     w.Header().Set("Content-Type", "application/json")
     w.WriteHeader(http.StatusOK)
@@ -1506,16 +1448,13 @@ func CityDisplay(w http.ResponseWriter, r *http.Request) {
 ### 代码列表 23: 使用 QueryRow 查找单个城市
 ```go
 // 根据 ID 查找城市并作为 JSON 返回。
-
  dbCityDisplay(id int) []byte {
 	var city City
-
 	err := database.QueryRow("SELECT * FROM city WHERE id = ?", id).
 		Scan(&city.Id, &city.Name, &city.CountryCode, &city.District, &city.Population)
 	if err != nil {
 		log.Fatal(err)
 	}
-
 	jsonCities, err := json.Marshal(city)
 	if err != nil {
 		fmt.Printf("Error: %s", err)
@@ -1529,7 +1468,6 @@ func CityDisplay(w http.ResponseWriter, r *http.Request) {
 ```go
 func CityAdd(w http.ResponseWriter, r *http.Request) {
     var city City
-
     // 读取请求体。
     body, err := ioutil.ReadAll(io.LimitReader(r.Body, 1048576))
     if err != nil {
@@ -1538,17 +1476,14 @@ func CityAdd(w http.ResponseWriter, r *http.Request) {
     if err := r.Body.Close(); err != nil {
         panic(err)
     }
-
     // 将请求中的 JSON 解析为结构体。
     if err := json.Unmarshal(body, &city); err != nil {
         w.Header().Set("Content-Type", "application/json")
         w.WriteHeader(http.StatusBadRequest)
         return
     }
-
     // 写入数据库。
     addResult := dbCityAdd(city)
-
     // 格式响应。
     w.Header().Set("Content-Type", "application/json")
     w.WriteHeader(http.StatusCreated)
@@ -1562,15 +1497,12 @@ func CityAdd(w http.ResponseWriter, r *http.Request) {
 ```go
 // 根据提供的信息创建一个新城市。
 func dbCityAdd(city City) []byte {
-
     var addResult DBUpdate
-
     // 创建预处理语句。
 	stmt, err := database.Prepare("INSERT INTO City(Name, CountryCode, District, Population) VALUES(?,?,?,?)")
 	if err != nil {
 		log.Fatal(err)
 	}
-
 	// 执行预处理语句并获取结果。
 	res, err := stmt.Exec(city.Name, city.CountryCode, city.District, city.Population)
 	if err != nil {
@@ -1584,11 +1516,9 @@ func dbCityAdd(city City) []byte {
 	if err != nil {
 		log.Fatal(err)
 	}
-
 	// 使用最后的 ID 和影响行数填充 DBUpdate 结构体。
 	addResult.Id = lastID
 	addResult.Affected = rowCnt
-
 	// 转换为 JSON 并返回。
 	newCity, err := json.Marshal(addResult)
 	if err != nil {
@@ -1598,22 +1528,14 @@ func dbCityAdd(city City) []byte {
 }
 ```
 
-
-
-
-
 ### 代码列表 26: CityDelete 函数
-
 ```go
 func CityDelete(w http.ResponseWriter, r *http.Request) {
-
     // 获取用于删除的城市 ID URL 参数。
     vars := mux.Vars(r)
     cityID, _ := strconv.ParseInt(vars["id"], 10, 64)
-
     // 查询数据库。
     deleteResult := dbCityDelete(cityID)
-
     // 发送响应。
     w.Header().Set("Content-Type", "application/json")
     w.WriteHeader(http.StatusOK)
@@ -1621,21 +1543,18 @@ func CityDelete(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-对应的 dbCityDelete 函数接收该 ID 并准备准备相应的 DELETE 语句。数据库返回影响的行数，我们可以使用相同的 DBUpdate 结构体来向用户展示信息。
+对应的 `dbCityDelete` 函数接收该 ID 并准备准备相应的 DELETE 语句。数据库返回影响的行数，我们可以使用相同的 `DBUpdate` 结构体来向用户展示信息。
 
 ### 代码列表 27: dbCityDelete 函数
-
 ```go
 // 根据 ID 删除城市。
 func dbCityDelete(id int64) []byte {
     var deleteResult DBUpdate
-
     // 创建准备语句。
     stmt, err := database.Prepare("DELETE FROM CITY WHERE ID=?")
     if err != nil {
         log.Fatal(err)
     }
-
     // 执行准备语句并获取结果。
     res, err := stmt.Exec(id)
     if err != nil {
@@ -1645,11 +1564,9 @@ func dbCityDelete(id int64) []byte {
     if err != nil {
         log.Fatal(err)
     }
-
     // 使用 Last ID 和影响的行数填充 DBUpdate 结构体。
     deleteResult.Id = id
     deleteResult.Affected = rowCnt
-
     // 转换为 JSON 并返回。
     deletedCity, err := json.Marshal(deleteResult)
     if err != nil {
@@ -1665,16 +1582,15 @@ func dbCityDelete(id int64) []byte {
 
 接下来让我们检查一些代码列表示例，这些示例展示了将各种关注点分离到这些模块中的完整应用程序：
 
-- main.go
-- router.go
-- routes.go
-- handlers.go
-- database.go
-- city.go
-- dbupdate.go
+- `main.go`
+- `router.go`
+- `routes.go`
+- `handlers.go`
+- `database.go`
+- `city.go`
+- `dbupdate.go`
 
 ### 代码列表 28: main.go
-
 ```go
 package main
 
@@ -1686,13 +1602,11 @@ import (
 func main() {
     router := NewRouter()
     dbConnect()
-
     log.Fatal(http.ListenAndServe(":8999", router))
 }
 ```
 
 ### 代码列表 29: router.go
-
 ```go
 package main
 
@@ -1712,7 +1626,6 @@ func NewRouter() *mux.Router {
 ```
 
 ### 代码列表 30: routes.go
-
 ```go
 package main
 
@@ -1762,52 +1675,52 @@ var routes = Routes{
 ```
 
 ### 代码列表 31: handlers.go
-
 ```go
 package main
 
 import (
     "encoding/json"
-    "fmt"
-    "io"
-    "io/ioutil"
-    "net/http"
-    "strconv"
 
-    "github.com/gorilla/mux"
+
+
+```go
+"fmt"
+
+"io"
+
+"io/ioutil"
+
+"net/http"
+
+"strconv"
+
+"github.com/gorilla/mux"
+
 )
-
 func HomePage(w http.ResponseWriter, r *http.Request) {
     fmt.Fprintf(w, "Welcome to the City Database!")
 }
-
 func CityList(w http.ResponseWriter, r *http.Request) {
     // 查询数据库。
     jsonCities := dbCityList()
-    
     // 格式化响应。
     w.Header().Set("Content-Type", "application/json")
     w.WriteHeader(http.StatusOK)
     w.Write(jsonCities)
 }
-
 func CityDisplay(w http.ResponseWriter, r *http.Request) {
     // 获取用于搜索的城市 ID URL 参数。
     vars := mux.Vars(r)
     cityID, _ := strconv.Atoi(vars["id"])
-
     // 查询数据库。
     jsonCity := dbCityDisplay(cityID)
-
     // 格式化响应。
     w.Header().Set("Content-Type", "application/json")
     w.WriteHeader(http.StatusOK)
     w.Write(jsonCity)
 }
-
 func CityAdd(w http.ResponseWriter, r *http.Request) {
     var city City
-
     // 读取请求体。
     body, err := ioutil.ReadAll(io.LimitReader(r.Body, 1048576))
     if err != nil {
@@ -1816,7 +1729,6 @@ func CityAdd(w http.ResponseWriter, r *http.Request) {
     if err := r.Body.Close(); err != nil {
         panic(err)
     }
-
     // 将请求中的 JSON 转换为 Go 类型。
     if err := json.Unmarshal(body, &city); err != nil {
         w.Header().Set("Content-Type", "application/json")
@@ -1825,24 +1737,19 @@ func CityAdd(w http.ResponseWriter, r *http.Request) {
             panic(err)
         }
     }
-
     // 写入数据库。
     addResult := dbCityAdd(city)
-
     // 格式化响应。
     w.Header().Set("Content-Type", "application/json")
     w.WriteHeader(http.StatusCreated)
     w.Write(addResult)
 }
-
 func CityDelete(w http.ResponseWriter, r *http.Request) {
     // 获取用于删除的城市 ID URL 参数。
     vars := mux.Vars(r)
     cityID, _ := strconv.ParseInt(vars["id"], 10, 64)
-
     // 查询数据库。
     deleteResult := dbCityDelete(cityID)
-
     // 格式化响应。
     w.Header().Set("Content-Type", "application/json")
     w.WriteHeader(http.StatusOK)
@@ -1850,15 +1757,10 @@ func CityDelete(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-
-
-
-
-### 代码列表 33: city.go
+### 代码列表 33: `city.go`
 
 ```go
 package main
-
 type City struct {
     Id         int    `json:"id"`
     Name       string `json:"name"`
@@ -1868,11 +1770,10 @@ type City struct {
 }
 ```
 
-### 代码列表 34: dbupdate.go 中的 DBUpdate 结构体
+### 代码列表 34: `dbupdate.go` 中的 `DBUpdate` 结构体
 
 ```go
 package main
-
 type DBUpdate struct {
     Id       int64 `json:"id"`
     Affected int64 `json:"affected"`
@@ -1883,9 +1784,9 @@ type DBUpdate struct {
 
 我们可以从浏览器测试应用程序，但这将涉及对开发者控制台的一些折腾，并且会有比必要的更多的点击。
 
-替代方案
+### 替代方案
 
-如果你有 Mac 或 Linux 机器，可能可能已经为你提供了 curl。如果你使用的是 Windows，访问它的最简单方法是下载 Git Bash，它包含了 curl 以及许多其他有用工具。Windows 上甚至有一个 Bash shell —— 请参阅 [https://msdn.microsoft.com/en-us/commandline/wsl/about](https://msdn.microsoft.com/en-us/commandline/wsl/about)。即使你不使用 Git，有它也很有用。另一个替代方案（尽管在我看来是一个更臃肿的替代方案）是 Cygwin。
+如果你有 Mac 或 Linux 机器，可能可能已经为你提供了 `curl`。如果你使用的是 Windows，访问它的最简单方法是下载 Git Bash，它包含了 `curl` 以及许多其他有用工具。Windows 上甚至有一个 Bash shell —— 请参阅 [https://msdn.microsoft.com/en-us/commandline/wsl/about](https://msdn.microsoft.com/en-us/commandline/wsl/about)。即使你不使用 Git，有它也很有用。另一个替代方案（尽管在我看来是一个更臃肿的替代方案）是 Cygwin。
 
 你可以在 [https://git-for-windows.github.io](https://git-for-windows.github.io) 下载 Git Bash。
 
@@ -1902,7 +1803,6 @@ $ city.go database.go dbupdate handlers.go main.go router.go routes.go
 marklewLAPTOP-QVVF5MV9 MINGW64 ~/code/src/github.com/marklewin/go-web-succinctly/ch05 (master)
 $ go run *
 2017/02/16 20:19:56 Connected.
-
 marklewLAPTOP-QVVF5MV9 MINGW64 ~/code/src/github.com/marklewin/go-web-succinctly/ch05
 $ |
 ```
@@ -1915,7 +1815,7 @@ $ |
 curl -i localhost:8999/city
 ```
 
-`-i` 标志指示 curl 包含 HTTP 头部。
+`-i` 标志指示 `curl` 包含 HTTP 头部。
 
 你应该能看到 City 表中每个城市的 JSON 表示，如图 25 所示。
 
@@ -1964,7 +1864,7 @@ marklewLAPTOP-QVVF5MV9 MINGW64 ~/code/src/github.com/marklewin/go-web-succinctly
 $ curl -X 'Content-Type: application/json' -d '{"name":"whoville","country":"ITA","district":"XXX","pop":1}' http://localhost:8999/cityadd
 % Total % Received % Xfered Average Speed Time Time Current Speed
 Download Upload Spent Speed
-100 87 100 24 100 63 307 807 -- ------ --
+100 87 100 24 100 63 307 807 -- ------ -- 
 ```
 
 图 26: 添加新城市
@@ -1989,7 +1889,6 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 Date: 16 Feb 2017 20:31:28 GMT
 Content-Length: 70
-
 {"id":"4093","name":"Whoville","country":"ITA","district":"XXX","pop":1}
 ```
 
@@ -2003,7 +1902,7 @@ Content-Length: 70
 curl -i localhost:8999/city/4093
 ```
 
-如果一切顺利，你应该得到一个用 JSON 编码的 DBUpdate 对象，显示有一行受影响，如图 29 所示。
+如果一切顺利，你应该得到一个用 JSON 编码的 `DBUpdate` 对象，显示有一行受影响，如图 29 所示。
 
 ```bash
 MINGW64:/c/HOME/code/src/github.com/marklewin/go-web-succinctly/ch05
@@ -2016,9 +1915,10 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 Date: Thu, 16 Feb 2017 20:35:16 GMT
 Content-Length: 24
-
 {"id":"4093","affected":1}
 ```
+
+
 
 图 28: 删除城市
 
@@ -2027,10 +1927,6 @@ Content-Length: 24
 当然，这远非完美，如果你计划将其投入生产环境，你可能想要进行相当的重构、实现更好的错误处理等等。
 
 然而，这一切的意义在于强调 Go 是开发此类应用程序的极佳语言。我曾在其他语言（包括 Node.js 和 Ruby）中做过类似的工作，但在 Go 中工作我要愉快得多。在我浅见中，一切都看起来更整洁、考虑得更周全。
-
-
-
-
 
 # 第 6 章 Cookies 和 Sessions
 
@@ -2050,7 +1946,7 @@ Cookie 仅仅是浏览器放在用户计算机上的一个小文本文件。它�
 
 Cookies 通常用于身份验证、存储访访问偏好、维护购物车物品以及识别服务器会话。
 
-当浏览器与服务器交互时，它会将 cookie 中的信息作为请求的一部分传递。请注意，cookies 是特定域的。如果浏览器为 twitter.com 创建了一个 cookie，它不能突然将该 cookie 发送到 google.com。
+当浏览器与服务器交互时，它会将 cookie 中的信息作为请求的一部分传递。请注意，cookies 是特定域的。如果浏览器为 `twitter.com` 创建了一个 cookie，它不能突然将该 cookie 发送到 `google.com`。
 
 从本质本质，cookies 非常适合存储用户从一个页面移动到另一个页面时与网页的交互信息。
 
@@ -2082,35 +1978,35 @@ Sessions 是在 cookies 中塞入大量不断变化信息的更好替代方案�
 http.SetCookie(w ResponseWriter, cookie *Cookie)
 ```
 
-w 是请求的响应，cookie 是一个结构体：
+`w` 是请求的响应，`cookie` 是一个结构体：
 
 ```go
 type Cookie struct {
-	Name        string
-	Value       string
-	Path        string
-	Domain      string
-	Expires     time.Time
-	RawExpires  string
-	MaxAge      int
-	Secure      bool
-	HttpOnly    bool
-	Raw         string
-	Unparsed    []string
+    Name        string
+    Value       string
+    Path        string
+    Domain      string
+    Expires     time.Time
+    RawExpires  string
+    MaxAge      int
+    Secure      bool
+    HttpOnly    bool
+    Raw         string
+    Unparsed    []string
 }
 ```
 
-cookie 可以包含很多信息，但最重要的字段是：
+`cookie` 可以包含很多信息，但最重要的字段是：
 
-- Name: cookie 的键，用于在你的代码中引用它。
-- Value: cookie 的数据。
-- Expires: 一个 Time 值，表示浏览器何时可以删除它。
+- `Name`: cookie 的键，用于在你的代码中引用它。
+- `Value`: cookie 的数据。
+- `Expires`: 一个 Time 值，表示浏览器何时可以删除它。
 
 其他可能用于控制 cookie 访问的字段包括：
 
-- Path
-- Domain
-- HttpOnly
+- `Path`
+- `Domain`
+- `HttpOnly`
 
 现在，让我们保持简单。
 
@@ -2122,9 +2018,9 @@ cookie := http.Cookie{Name: "username", Value: "jsmith", Expires: expiration}
 http.SetCookie(w, &cookie)
 ```
 
-> 提示：Go 的时间函数非常强大但也很复杂。更多信息请参阅文档 https://golang.org/pkg/time/
+> 提示：Go 的时间函数非常强大但也很复杂。更多信息请参阅文档 `https://golang.org/pkg/time/`
 
-## 获取 cookies
+### 获取 cookies
 
 为了从请求中检索 cookie，你可以执行以下操作：
 
@@ -2149,6 +2045,7 @@ fmt.Fprintf(w, cookie.Name)
 
 ```go
 package main
+
 import (
     "net/http"
     "strconv"
@@ -2158,13 +2055,11 @@ import (
 func CheckLastVisit(w http.ResponseWriter, r *http.Request) {
     c, err := r.Cookie("lastvisit")
     expiry := time.Now().AddDate(0, 0, 1)
-
     cookie := &http.Cookie{
         Name: "lastvisit",
         Expires: expiry,
     }
     http.SetCookie(w, cookie)
-
     if err != nil {
         w.Write([]byte("Welcome!"))
     } else {
@@ -2190,7 +2085,7 @@ func main() {
 go get github.com/gorilla/sessions
 ```
 
-## 基础
+### 基础
 
 以下代码演示了使用 **gorilla/sessions** 包创建和身份验证 session、检索 session、设置某些值，然后保存 session 的基础。
 
@@ -2201,7 +2096,6 @@ package main
 
 import (
     "net/http"
-
     "github.com/gorilla/mux"
     "github.com/gorilla/sessions"
 )
@@ -2217,7 +2111,6 @@ func handler(w http.ResponseWriter, r *http.Request) {
             http.StatusInternalServerError)
         return
     }
-
     // 设置 session 值。
     session.Values["abc"] = "cba"
     session.Values[111] = 222
@@ -2231,10 +2124,6 @@ func main() {
     http.ListenAndServe(":8999", router)
 }
 ```
-
-
-
-
 
 ### 配置或设置 session store，使所有 session cookie 具有相同的 MaxAge 值。
 
@@ -2261,10 +2150,10 @@ import (
     "fmt"
     "net/http"
     "time"
-
     "github.com/gorilla/mux"
     "github.com/gorilla/sessions"
 )
+
 var store = sessions.NewCookieStore([]byte("keep-it-secret"))
 
 func handler(w http.ResponseWriter, r *http.Request) {
@@ -2273,7 +2162,6 @@ func handler(w http.ResponseWriter, r *http.Request) {
         http.Error(w, err.Error(), http.StatusInternalServerError)
         return
     }
-
     // 获取任何 flashes
     flashes := session.Flash()
     if len(flashes) > 0 {
@@ -2300,59 +2188,59 @@ func main() {
 
 ## 日志
 
-Go 的 log 包允许你写入到所有标准设备、自定义文件（通过 `io.Writer` 接口）。到目前为止我们只通过 `fmt.Println` 记录到 stdout，但对于生产应用程序来说这不是现实的选择。让我们考虑如何输出日志到文件并指定哪些文件接收什么类型的日志消息。
+Go 的 `log` 包允许你写入到所有标准设备、自定义文件（通过 `io.Writer` 接口）。到目前为止我们只通过 `fmt.Println` 记录到 stdout，但对于生产应用程序来说这不是现实的选择。让我们考虑如何输出日志到文件并指定哪些文件接收什么类型的日志消息。
 
-在下面的代码中，我们创建了一个应用程序，将通知记录到 notices.log，警告到 warnings.log，错误到 errors.log。
+在下面的代码中，我们创建了一个应用程序，将通知记录到 `notices.log`，警告到 `warnings.log`，错误到 `errors.log`。
 
 > 代码列表 38：根据信息类型记录到不同的文件
 
 ```go
 package main
-import (
-	"log"
-	"os"
-)
-var (
-	Notice *log.Logger
-	Warning *log.Logger
-	Error *log.Logger
-)
-func main() {
-	noticeFile, err := os.OpenFile("notice.log", 
-		os.O_RDWR|os.O_APPEND, 0660)
-	defer noticeFile.Close()
-	if err != nil {
-		log.Fatal(err)
-	}
-	warnFile, err := os.OpenFile("warnings.log",
-	os.O_RDWR|os.O_APPEND, 0660)
 
-	defer warnFile.Close()
-	if err != nil {
-	log.Fatal(err)
-	}
+import (
+    "log"
+    "os"
+)
+
+var (
+    Notice *log.Logger
+    Warning *log.Logger
+    Error *log.Logger
+)
+
+func main() {
+    noticeFile, err := os.OpenFile("notice.log", 
+        os.O_RDWR|os.O_APPEND, 0660)
+    defer noticeFile.Close()
+    if err != nil {
+        log.Fatal(err)
+    }
+    warnFile, err := os.OpenFile("warnings.log",
+    os.O_RDWR|os.O_APPEND, 0660)
+    defer warnFile.Close()
+    if err != nil {
+    log.Fatal(err)
+    }
     errorFile, err := os.OpenFile("error.log",
-	os.O_RDWR|os.O_APPEND, 0660)
+    os.O_RDWR|os.O_APPEND, 0660)
     defer errorFile.Close()
     if err != nil {
-	log.Fatal(err)
+    log.Fatal(err)
     }
 }
 
 Notice = log.New(noticeFile, "NOTICE: ", log.Date|log.Ltime)
 Notice.SetOutput(noticeFile)
 Notice.Println("This is basically F.Y.I.")
-
 Warning = log.New(warnFile, "WARNING: ", log.Date|log.Ltime)
 Warning.SetOutput(warnFile)
 Warning.Println("Perhaps this needs your attention")
-
 Error = log.New(errorFile, "ERROR: ", log.Date|log.Ltime)
 Error.SetOutput(errorFile)
 Error.Println("You REALLY should fix this!")
 ```
 
-在上面的代码列表中，0660 是允许用户和组读写文件的文件模式参数。关于文件模式 0660（以及普通文件）的更多信息，请参阅 http://www.filepermissions.com/file-permission/0660。
+在上面的代码列表中，0660 是允许用户和组读写文件的文件模式参数。关于文件模式 0660（以及普通文件）的更多信息，请参阅 `http://www.filepermissions.com/file-permission/0660`。
 
 输出如代码列表 39 所示：
 
@@ -2368,9 +2256,9 @@ Error.Println("You REALLY should fix this!")
 
 让我们重新回顾在第 5 章中创建的日志请求。记得我们如何将路由拆分到这些模块中：
 
-- router.go
-- routes.go
-- logger.go
+- `router.go`
+- `routes.go`
+- `logger.go`
 
 让我们看看另一种方法，处理任何 Web 服务器可以做的的。
 
@@ -2389,9 +2277,14 @@ func NewRouter() *mux.Router {
         router.Methods(route.Method).
             Path(route.Pattern).
             Name(route.Name).
-            Handler(route.HandleFunc)
-    }
-    return router
+```
+
+
+
+```go
+Handler(route.HandleFunc)
+}
+return router
 }
 ```
 
@@ -2401,8 +2294,9 @@ func NewRouter() *mux.Router {
 package main
 
 import (
-	"net/http"
+"net/http"
 )
+
 type Route struct {
     Name string
     Method string
@@ -2457,11 +2351,8 @@ import (
 
 func Logger(inner http.Handler, name string) http.Handler {
   return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-
     startTime := time.Now()
-
     inner.ServeHTTP(w, r)
-
     log.Printf(
         "%s\t%s\t%s\t%s",
         r.Method,
@@ -2478,10 +2369,6 @@ func Logger(inner http.Handler, name string) http.Handler {
 ## 测试
 
 Go 测试是内置在语言中的，标准库中提供了 `testing` 包。测试包提供了通过执行 `go test` 命令来运行测试的能力。
-
-
-
-
 
 ### 代码列表 44: Math 包中的 Average 函数
 
@@ -2506,7 +2393,6 @@ package main
 
 import (
     "fmt"
-
     "github.com/marklewin/go-web-succinctly/ch07/testing/math"
 )
 
@@ -2558,7 +2444,9 @@ $
 
 ```go
 package math
+
 import "testing"
+
 func TestAverage(t *testing.T) {
     var v float64
     v = Average([]float64{1, 2, 3, 4, 5})
@@ -2587,4 +2475,3 @@ $
 希望你在 Go Web 开发之旅中不会遇到太多失败的测试，但在开发阶段发现它们总比在生产环境中发现要好！
 
 无论发生什么，我祝你作为 Go 开发者拥有愉快且高效的时光！
-

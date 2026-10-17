@@ -1,18 +1,19 @@
+
 # 深度学习用于 NLP 笔记
 
 ## 1 免责声明
 
-撰写这些笔记是我学习过程的一部分，因此这是一份正在进行中的工作。为了编写本文档的当前版本，我主要整合了原始2D CNN论文 [16]、斯坦福大学CS231n CNN课程笔记 [1]、Zhang和Wallace关于NLP中CNN的实践指南 [26]、关于文本分类CNN的经典论文 [13, 14]、Denny Britz关于RNN的教程 [2]、Chris Olah关于理解LSTM单元的文章 [3]、以及关于GRU单元的经典论文 [2, 4]、编码器-解码器架构 [2, 24] 和注意力机制 [20, 1]。最后但同样重要的是，Yoav Goldberg关于用于NLP的神经网络的入门指南 [8] 和Luong、Cho以及Manning关于神经机器翻译的教程 [4] 证明非常有价值。
+撰写这些笔记是我学习过程的一部分，因此这是一份正在进行中的工作。为了编写本文档的当前版本，我主要整合了原始2D CNN论文 [16]、斯坦福大学`CS231n` CNN课程笔记 [1]、Zhang和Wallace关于NLP中CNN的实践指南 [26]、关于文本分类CNN的经典论文 [13, 14]、Denny Britz关于`RNN`的教程 [2]、Chris Olah关于理解`LSTM`单元的文章 [3]、以及关于`GRU`单元的经典论文 [2, 4]、编码器-解码器架构 [2, 24] 和注意力机制 [20, 1]。最后但同样重要的是，Yoav Goldberg关于用于NLP的神经网络的入门指南 [8] 和Luong、Cho以及Manning关于神经机器翻译的教程 [4] 证明非常有价值。
 
 ## 2 代码
 
-我用Keras实现了本文档中描述的一些模型，并在IMDB影评数据集上进行了测试。代码可以在我的GitHub上找到：https://github.com/Tixierae/deep_learning_NLP。再次强调，这是一份正在进行中的工作。
+我用`Keras`实现了本文档中描述的一些模型，并在`IMDB`影评数据集上进行了测试。代码可以在我的`GitHub`上找到：`https://github.com/Tixierae/deep_learning_NLP`。再次强调，这是一份正在进行中的工作。
 
 ## 3 IMDB影评数据集
 
 ### 3.1 概述
 
-任务是对来自互联网电影数据库（IMDB）数据集 [5] 的影评进行二分类（正面/负面），这被称为情感分析或观点挖掘。该数据集包含5万条影评，按极性进行标注。数据被划分为50%用于训练，50%用于测试。我在GitHub上的 `imdb_preprocess.py` 脚本清理了影评，并将它们整理成适合传入神经网络的格式：每条评论是一个单词索引（整数）的列表，来自大小为 $V$ 的字典，其中最频繁的单词索引为1。
+任务是对来自互联网电影数据库（`IMDB`）数据集 [5] 的影评进行二分类（正面/负面），这被称为情感分析或观点挖掘。该数据集包含5万条影评，按极性进行标注。数据被划分为50%用于训练，50%用于测试。我在`GitHub`上的 `imdb_preprocess.py` 脚本清理了影评，并将它们整理成适合传入神经网络的格式：每条评论是一个单词索引（整数）的列表，来自大小为 `$V$` 的字典，其中最频繁的单词索引为1。
 
 ### 3.2 二分类目标函数
 
@@ -22,7 +23,7 @@ $$
 \text{logloss} = -\frac{1}{N} \sum_{i=1}^{N} \left( y_i \log p_i + (1-y_i) \log(1-p_i) \right) \quad (1)
 $$
 
-其中 $N$ 是观察值的数量，$p_i$ 是分配给类别1的概率，$(1-p_i)$ 是分配给类别0的概率，$y_i$ 是第 $i^{th}$ 个观察值的真实标签（0或1）。你可以看到，只有与每个观察值真实标签相关的项才贡献于整体得分。对于给定的观察值，假设真实标签是1，且模型分配给该类的概率是0.8（相当好的预测），那么对数损失将等于 $-\log(0.8) = 0.22$。如果预测稍差，但并非完全错误，例如 $p_i = 0.6$，对数损失将等于0.51，而对于0.1，对数损失将达到2.3。因此，模型与真相偏离得越远，其受到的惩罚就越大。显然，完美的预测（正确类别的概率为1）得分为零。
+其中 `$N$` 是观察值的数量，`$p_i$` 是分配给类别1的概率，`$(1-p_i)$` 是分配给类别0的概率，`$y_i$` 是第 `$i^{th}$` 个观察值的真实标签（0或1）。你可以看到，只有与每个观察值真实标签相关的项才贡献于整体得分。对于给定的观察值，假设真实标签是1，且模型分配给该类的概率是0.8（相当好的预测），那么对数损失将等于 `$-\log(0.8) = 0.22$`。如果预测稍差，但并非完全错误，例如 `$p_i = 0.6$`，对数损失将等于0.51，而对于0.1，对数损失将达到2.3。因此，模型与真相偏离得越远，其受到的惩罚就越大。显然，完美的预测（正确类别的概率为1）得分为零。
 
 ## 4 范式转变
 
@@ -36,104 +37,109 @@ $$
 
 ### 4.3 组合核心特征
 
-与传统机器学习不同，核心特征的组合作为被组合的核心特征向量的*和、平均值或拼接*来编码，而不是特征空间的新维度。求和或求平均值是一种简单的方法，无论训练示例的大小（例如，文档中的单词数量）如何，都能始终获得固定大小的输入向量。然而，这两种方法都完全忽略了特征的顺序。例如，在这种设置下，使用n-gram作为特征，句子“John is quicker than Mary”（约翰比玛丽快）和“Mary is quicker than John”（玛丽比约翰快）具有完全相同的表示。另一方面，使用拼接可以保留顺序，但每个训练示例需要*填充*和*截断* [8]，以确保拼接相同数量的向量。例如，无论其大小如何，集合中的每个文档都可以转换为具有相同的固定长度 $s$：较长的文档被截断为其前（或后、中间...）$s$ 个单词，而较短的文档则用特殊的零向量进行填充，以补齐缺失的单词 [26, 14]
+与传统机器学习不同，核心特征的组合作为被组合的核心特征向量的*和、平均值或拼接*来编码，而不是特征空间的新维度。求和或求平均值是一种简单的方法，无论训练示例的大小（例如，文档中的单词数量）如何，都能始终获得固定大小的输入向量。然而，这两种方法都完全忽略了特征的顺序。例如，在这种设置下，使用n-gram作为特征，句子“John is quicker than Mary”（约翰比玛丽快）和“Mary is quicker than John”（玛丽比约翰快）具有完全相同的表示。另一方面，使用拼接可以保留顺序，但每个训练示例需要*填充*和*截断* [8]，以确保拼接相同数量的向量。例如，无论其大小如何，集合中的每个文档都可以转换为具有相同的固定长度 `$s$`：较长的文档被截断为其前（或后、中间...）`$s$` 个单词，而较短的文档则用特殊的零向量进行填充，以补齐缺失的单词 [26, 14]
 
 ---
 
 [1] http://cs231n.github.io/convolutional-networks/
+
 [2] http://www.wildml.com/2015/09/recurrent-neural-networks-tutorial-part-1-introduction-to-rnns/
+
 [3] http://colah.github.io/posts/2015-08-Understanding-LSTMs/
+
 [4] https://sites.google.com/site/acl16mnt/home
+
 [5] http://ai.stanford.edu/~amaa/data/sentiment/
-[6] 在NLP中，通常使用Word2vec或GloVe从非常语料库中获得的预训练词向量。例如，Google News的**word2vec**向量可以从 https://code.google.com/archive/p/word2vec/ 获得，在“Pre-trained word and phrase vectors”（预训练单词和短语向量）部分下
+
+[6] 在NLP中，通常使用`Word2vec`或`GloVe`从非常语料库中获得的预训练词向量。例如，Google News的**word2vec**向量可以从 https://code.google.com/archive/p/word2vec/ 获得，在“Pre-trained word and phrase vectors”（预训练单词和短语向量）部分下
+
 [7] 请注意，独热向量可以作为输入传入神经网络。但随后，网络会在其第一层隐式地学习特征嵌入
+
 [8] https://keras.io/preprocessing/sequence/
-
-
 
 ## 5 卷积神经网络（CNNs）
 
 ### 5.1 局部不变性和组合性
 
-卷积神经网络（CNNs）最初受猫视觉皮层研究 [12] 的启发，在计算机视觉领域被开发出来，用于处理如图像 [16] 等规则网格数据。它们是前馈神经网络，其中每一层的每个神经元都接收来自前一层神经元邻域的输入。这些邻域，即*局部感受野*，使得 CNN 能够以层次化的方式识别越来越复杂的模式，通过将较低层次的初级特征组合成较高层次的特征。这一特性被称为*组合性*。例如，可以从原始像素推断出边缘，边缘反过来可用于检测简单的形状，最后形状可用于识别物体。此外，特征在图像中的绝对位置并不重要。只有捕获它们的相对位置对于组合更高级的模式才有用。因此，模型应能够检测图像中任意位置的特征。这一特性被称为*局部不变性*。组合性和局部不变性是 CNN 的两个核心概念。
+卷积神经网络（`CNNs`）最初受猫视觉皮层研究 [12] 的启发，在计算机视觉领域被开发出来，用于处理如图像 [16] 等规则网格数据。它们是前馈神经网络，其中每一层的每个神经元都接收来自前一层神经元邻域的输入。这些邻域，即*局部感受野*，使得 `CNN` 能够以层次化的方式识别越来越复杂的模式，通过将较低层次的初级特征组合成较高层次的特征。这一特性被称为*组合性*。例如，可以从原始像素推断出边缘，边缘反过来可用于检测简单的形状，最后形状可用于识别物体。此外，特征在图像中的绝对位置并不重要。只有捕获它们的相对位置对于组合更高级的模式才有用。因此，模型应能够检测图像中任意位置的特征。这一特性被称为*局部不变性*。组合性和局部不变性是 `CNN` 的两个核心概念。
 
-CNN 在计算机视觉中取得了很好的性能 [15]，但不难理解，得益于组合性和局部不变性，它们在自然语言处理（NLP）中也能表现优异。确实，在 NLP 中，可以从低阶特征构建高阶特征（*n*-gram），就像在计算机视觉中一样，且局部顺序至关重要（“不太好，挺好的”，“不好，挺坏的”，“不推荐”），但在文档级别则不然。事实上，在试图确定电影评论的情感极性时，我们并不真正关心“不太好，挺好的”出现在文档的开头还是结尾。我们只需要捕获“not”（不）在“bad”（坏/糟糕）之前这一事实，以此类推。需要注意的是，CNN 无法编码长距离依赖关系，因此，对于诸如语言建模等长距离依赖关系至关重要的任务，通常更偏好循环架构，如 LSTM。
+`CNN` 在计算机视觉中取得了很好的性能 [15]，但不难理解，得益于组合性和局部不变性，它们在自然语言处理（`NLP`）中也能表现优异。确实，在 `NLP` 中，可以从低阶特征构建高阶特征（*n*-gram），就像在计算机视觉中一样，且局部顺序至关重要（“不太好，挺好的”，“不好，挺坏的”，“不推荐”），但在文档级别则不然。事实上，在试图确定电影评论的情感极性时，我们并不真正关心“不太好，挺好的”出现在文档的开头还是结尾。我们只需要捕获“not”（不）在“bad”（坏/糟糕）之前这一事实，以此类推。需要注意的是，`CNN` 无法编码长距离依赖关系，因此，对于诸如语言建模等长距离依赖关系至关重要的任务，通常更偏好循环架构，如 `LSTM`。
 
 ### 5.2 卷积和池化
 
-尽管最近的研究表明卷积层可以直接堆叠在一起 [23]，但 CNN 的基本结构是一个*卷积*层后接一个*池化*层。在接下来的部分中，我们将详细说明这两个层如何相互作用，以短文档分类这一 NLP 任务为例（见图 1）。
+尽管最近的研究表明卷积层可以直接堆叠在一起 [23]，但 `CNN` 的基本结构是一个*卷积*层后接一个*池化*层。在接下来的部分中，我们将详细说明这两个层如何相互作用，以短文档分类这一 `NLP` 任务为例（见图 1）。
 
 #### 5.2.1 输入
 
-我们可以将文档表示为实数矩阵 $A \in \mathbb{R}^{s \times d}$，其中 $s$ 是文档长度，$d$ 是词嵌入向量的维度。由于在语料库级别 $s$ 必须固定，但文档的大小不同，我们将较长的文档截断为其前 $s$ 个词，并用特殊的零向量填充较短文档，直到达到所需长度。词向量可以是随机初始化的，也可以是预训练的。在后一种情况下，它们在训练过程中可以更新也可以不更新（“非静态”与“静态”方法 [14]）。
+我们可以将文档表示为实数矩阵 `$A \in \mathbb{R}^{s \times d}$`，其中 `$s$` 是文档长度，`$d$` 是词嵌入向量的维度。由于在语料库级别 `$s$` 必须固定，但文档的大小不同，我们将较长的文档截断为其前 `$s$` 个词，并用特殊的零向量填充较短文档，直到达到所需长度。词向量可以是随机初始化的，也可以是预训练的。在后一种情况下，它们在训练过程中可以更新也可以不更新（“非静态”与“静态”方法 [14]）。
 
-将 $A$ 视为图像可能会产生误导，因为只有一个空间维度。嵌入向量实际上并不是输入本身的一部分，它们只是表示输入元素在共享潜在空间中的坐标。在计算机视觉中，术语*通道*通常用于指代这个*深度*维度（不要将其与网络中隐藏层的数量混淆）。如果我们处理的是图像，我们将拥有两个空间维度，加上深度。输入将是一个维度为（宽度 × 高度 × n_channels）的张量，即一个 2D 矩阵，其中每个条目分别与长度为 3 或 1 的向量相关联，分别对应彩色（RGB）和灰度图像。
+将 `$A$` 视为图像可能会产生误导，因为只有一个空间维度。嵌入向量实际上并不是输入本身的一部分，它们只是表示输入元素在共享潜在空间中的坐标。在计算机视觉中，术语*通道*通常用于指代这个*深度*维度（不要将其与网络中隐藏层的数量混淆）。如果我们处理的是图像，我们将拥有两个空间维度，加上深度。输入将是一个维度为（宽度 × 高度 × n_channels）的张量，即一个 2D 矩阵，其中每个条目分别与长度为 3 或 1 的向量相关联，分别对应彩色（RGB）和灰度图像。
 
 #### 5.2.2 卷积层
 
-卷积层是一个线性操作，后接一个非线性变换。该线性操作包括将应用于输入文档的 1D 窗口的每个实例与一个滤波器相乘（逐元素），该滤波器表示为参数矩阵。滤波器，就像窗口一样，只有一个空间维度，但它贯穿整个输入深度（词嵌入空间的 $d$ 个维度）。如果 $h$ 是窗口大小，则与该滤波器关联的参数矩阵 $W$ 属于 $\mathbb{R}^{h \times d}$。$W$ 随机初始化，并在训练过程中学习。
+卷积层是一个线性操作，后接一个非线性变换。该线性操作包括将应用于输入文档的 1D 窗口的每个实例与一个滤波器相乘（逐元素），该滤波器表示为参数矩阵。滤波器，就像窗口一样，只有一个空间维度，但它贯穿整个输入深度（词嵌入空间的 `$d$` 个维度）。如果 `$h$` 是窗口大小，则与该滤波器关联的参数矩阵 `$W$` 属于 `$\mathbb{R}^{h \times d}$`。`$W$` 随机初始化，并在训练过程中学习。
 
-窗口在输入上的实例化被称为区域或感受野。共有 $\lfloor(s-h)/\text{stride}\rfloor+1$ 个，其中 stride（步长）对应于我们在每一步中滑动窗口的词数。当步长为 1 时，因此有 $s-h+1$ 个感受野。因此，对于给定的滤波器，卷积层的输出是一个向量 $o \in \mathbb{R}^{s-h+1}$，其元素计算如下：
+窗口在输入上的实例化被称为区域或感受野。共有 `$\lfloor(s-h)/\text{stride}\rfloor+1$` 个，其中 `stride`（步长）对应于我们在每一步中滑动窗口的词数。当步长为 1 时，因此有 `$s-h+1$` 个感受野。因此，对于给定的滤波器，卷积层的输出是一个向量 `$o \in \mathbb{R}^{s-h+1}$`，其元素计算如下：
 
 $$
 o_i = W \cdot A[i:i+h-1,:] \quad (2)
 $$
 
-其中 $A[i:i+h-1,:] \in \mathbb{R}^{h \times d}$ 是第 $i^{th}$ 个区域矩阵，$\cdot$ 是一个返回两个矩阵逐行点积之和的运算符。请注意，对于给定的滤波器，无论窗口在文档中的位置如何，相同的 $W$ 都应用于窗口的所有实例化。换句话说，滤波器的参数在感受野之间共享。这正是赋予模型空间不变性特性的原因，因为滤波器被训练用于识别位于任何地方的模式。这也极大地减少了模型的总参数量。
+其中 `$A[i:i+h-1,:] \in \mathbb{R}^{h \times d}$` 是第 `$i^{th}$` 个区域矩阵，`$\cdot$` 是一个返回两个矩阵逐行点积之和的运算符。请注意，对于给定的滤波器，无论窗口在文档中的位置如何，相同的 `$W$` 都应用于窗口的所有实例化。换句话说，滤波器的参数在感受野之间共享。这正是赋予模型空间不变性特性的原因，因为滤波器被训练用于识别位于任何地方的模式。这也极大地减少了模型的总参数量。
 
-然后，将非线性激活函数 $f$（例如 ReLU (max(0,x)) 或 $\tanh(x)$）逐元素应用于 $o$，返回与滤波器相关的特征图 $c \in \mathbb{R}^{s-h+1}$：
+然后，将非线性激活函数 `$f$`（例如 `ReLU` (`max(0,x)`) 或 `$\tanh(x)$`）逐元素应用于 `$o$`，返回与滤波器相关的特征图 `$c \in \mathbb{R}^{s-h+1}$`：
 
 $$
 c_i = f(o_i) + b \quad (3)
 $$
 
-其中 $b \in \mathbb{R}$ 是可学习的偏置。
+其中 `$b \in \mathbb{R}$` 是可学习的偏置。
 
-对于短句子分类，最佳区域大小通常发现在 1 到 10 之间，在实践中，$n_f$ 个滤波器（其中 $n_f \in [100, 600]$）应用于每个区域，赋予模型为每个区域学习不同互补特征的能力 [26]。由于每个滤波器生成一个特征图，因此每个区域被嵌入到一个 $n_f$ 维空间中。此外，使用围绕最优值变化的区域大小可以提高性能 [26]。在这种情况下，会创建不同的并行分支（每个区域大小一个），并在池化后连接输出，如图 1 所示。随着 $n_f$ 的增加，性能和成本也会增加，直到达到某个点，之后模型开始过拟合。
+对于短句子分类，最佳区域大小通常发现在 1 到 10 之间，在实践中，`$n_f$` 个滤波器（其中 `$n_f \in [100, 600]$`）应用于每个区域，赋予模型为每个区域学习不同互补特征的能力 [26]。由于每个滤波器生成一个特征图，因此每个区域被嵌入到一个 `$n_f$` 维空间中。此外，使用围绕最优值变化的区域大小可以提高性能 [26]。在这种情况下，会创建不同的并行分支（每个区域大小一个），并在池化后连接输出，如图 1 所示。随着 `$n_f$` 的增加，性能和成本也会增加，直到达到某个点，之后模型开始过拟合。
 
 #### 5.2.3 池化层
 
-输入文档中特征的确切位置并不重要。重要的是某些特征是否存在。例如，要将评论分类为正面，无论“有史以来最好的电影”出现在文档的开头还是结尾并不重要。为了将这种鲁棒性注入模型，采用全局 $k$-max 池化。该方法从每个特征图中提取 $k$ 个最大值并将其连接，从而形成一个大小在训练期间始终保持不变的最终向量。对于短句子分类，[26] 发现 $k=1$ 远远优于高阶策略。他们还报告说，使用最大值比使用平均值要好得多，这是有道理的，因为我们只感兴趣于从每个特征图中提取最显著的（salient）特征。
+输入文档中特征的确切位置并不重要。重要的是某些特征是否存在。例如，要将评论分类为正面，无论“有史以来最好的电影”出现在文档的开头还是结尾并不重要。为了将这种鲁棒性注入模型，采用全局 `$k$-max` 池化。该方法从每个特征图中提取 `$k$` 个最大值并将其连接，从而形成一个大小在训练期间始终保持不变的最终向量。对于短句子分类，[26] 发现 `$k=1$` 远远优于高阶策略。他们还报告说，使用最大值比使用平均值要好得多，这是有道理的，因为我们只感兴趣于从每个特征图中提取最显著的（salient）特征。
 
 ![](img/cff14e17039cb2b04cb132bbbb5e2363_5_0.png)
 
 #### 5.2.4 文档编码
 
-如图 1 所示，从高层角度来看，CNN 架构将输入的每个滤波版本连接到最终特征向量中的单个神经元。这个向量可以被视为输入文档的嵌入或编码。它是模型的主要贡献，也是我们要感兴趣的内容。架构的其余部分取决于任务。
+如图 1 所示，从高层角度来看，`CNN` 架构将输入的每个滤波版本连接到最终特征向量中的单个神经元。这个向量可以被视为输入文档的嵌入或编码。它是模型的主要贡献，也是我们要感兴趣的内容。架构的其余部分取决于任务。
 
 #### 5.2.5 Softmax 层
 
-由于这里的目标是分类文档，因此对文档编码应用 softmax 函数以输出类别概率。然而，不同的任务需要不同的架构：例如，确定两个句子是否为释义，需要两个共享权重的 CNN 编码器，以及一个最终的能函数和对比损失（类 Siamese 方法 [3]）；对于翻译或摘要，我们可以使用基于输入文档的 CNN 编码条件的 LSTM 语言模型解码器（类 seq-to-seq 方法 [24]）等等。
+由于这里的目标是分类文档，因此对文档编码应用 `softmax` 函数以输出类别概率。然而，不同的任务需要不同的架构：例如，确定两个句子是否为释义，需要两个共享权重的 `CNN` 编码器，以及一个最终的能函数和对比损失（类 Siamese 方法 [3]）；对于翻译或摘要，我们可以使用基于输入文档的 `CNN` 编码条件的 `LSTM` 语言模型解码器（类 seq-to-seq 方法 [24]）等等。
 
-回到我们的分类设置，softmax 将向量 $x \in \mathbb{R}^K$ 转换为一个由正浮数组成的向量，其总和为 1，即转换为类别上的*概率分布*
+回到我们的分类设置，`softmax` 将向量 `$x \in \mathbb{R}^K$` 转换为一个由正浮数组成的向量，其总和为 1，即转换为类别上的*概率分布*
 
 **脚注：**
-[^9]: 与 tanh 相比，ReLU 更经济实惠（由负区域的大量零值引起的稀疏性），并且在正区域中更好地对抗梯度消失问题，因为在正区域中梯度是常数，而在 tanh 中梯度变得越来越小。
+
+[^9]: 与 `tanh` 相比，`ReLU` 更经济实惠（由负区域的大量零值引起的稀疏性），并且在正区域中更好地对抗梯度消失问题，因为在正区域中梯度是常数，而在 `tanh` 中梯度变得越来越小。
+
 [^10]: 池化也可以在局部小区域上应用，但对于短文本分类，全局池化效果更佳 [26]。
-
-
-
-
 
 可预测：
 
 $\operatorname{softmax}(x_i) = \frac{e^{x_i}}{\sum_{j=1}^{K} e^{x_j}}$ (4)
 
-在二分类情况下，我们不必使用带有软最大值函数（softmax）且由两个神经元组成的最终输出层（每个神经元代表两类之一），而是可以使用仅包含一个神经元和 S 型函数（$\sigma(x) = \frac{1}{1 + e^{-x}}$）的输出层。在这种情况下，神经元输出属于这两类中某一类的概率，并基于 $\sigma(x)$ 是大于还是小于 0.5 来决定预测的类别（假设先验概率相等）。这两种方法是等效的。事实上，$\frac{1}{1+e^{-x}} = \frac{e^{x}}{e^{x} + e^{0}}$。因此，单神经元的 S 型层可以被视为双神经元的软最大值层，其中一个神经元从不激活，其输出始终为零。
+在二分类情况下，我们不必使用带有软最大值函数（`softmax`）且由两个神经元组成的最终输出层（每个神经元代表两类之一），而是可以使用仅包含一个神经元和 S 型函数（`$\sigma(x) = \frac{1}{1 + e^{-x}}$`）的输出层。在这种情况下，神经元输出属于这两类中某一类的概率，并基于 `$\sigma(x)$` 是大于还是小于 0.5 来决定预测的类别（假设先验概率相等）。这两种方法是等效的。事实上，`$\frac{1}{1+e^{-x}} = \frac{e^{x}}{e^{x} + e^{0}}$`。因此，单神经元的 S 型层可以被视为双神经元的软最大值层，其中一个神经元从不激活，其输出始终为零。
 
 ## 5.3 参数数量
 
-我们 CNN 的可训练参数总数是以下各项之和：
+我们 `CNN` 的可训练参数总数是以下各项之和：
 
-- **词嵌入矩阵**（仅在非静态模式下）：$(V+1) \times d$，其中 $V$ 是词汇表的大小。我们额外添加一行用于零填充向量。
-- **卷积层：** $h \times d \times n_f + n_f$（每个滤波器中的条目数乘以滤波器数量，再加上偏置项）。
-- **软最大值层：** $n_f \times 1 + 1$（输出维度为 1 的全连接层以及一个偏置项）。
+- **词嵌入矩阵**（仅在非静态模式下）：`$(V+1) \times d$`，其中 `$V$` 是词汇表的大小。我们额外添加一行用于零填充向量。
+
+- **卷积层：** `$h \times d \times n_f + n_f$`（每个滤波器中的条目数乘以滤波器数量，再加上偏置项）。
+
+- **软最大值层：** `$n_f \times 1 + 1$`（输出维度为 1 的全连接层以及一个偏置项）。
 
 ## 5.4 可视化和理解内部表示及预测
 
 ### 5.4.1 文档嵌入
 
-验证模型是否有效学习的一种快速简便方法，是检查其内部文档表示是否合理。回想一下，馈送到软最大值层的特征向量可以被视为输入文档的 $n_f$ 维编码。通过收集架构中该特定层级的中间输出（针对部分文档），并将这些向量投影到低维地图上，我们就可以可视化嵌入与标签之间是否存在相关性。图 2 和图 3 证明，我们的模型确实正在学习文档的有意义表示。
+验证模型是否有效学习的一种快速简便方法，是检查其内部文档表示是否合理。回想一下，馈送到软最大值层的特征向量可以被视为输入文档的 `$n_f$` 维编码。通过收集架构中该特定层级的中间输出（针对部分文档），并将这些向量投影到低维地图上，我们就可以可视化嵌入与标签之间是否存在相关性。图 2 和图 3 证明，我们的模型确实正在学习文档的有意义表示。
 
 ![](img/cff14e17039cb2b04cb132bbbb5e2363_6_0.png)
 
@@ -145,25 +151,27 @@ $\operatorname{softmax}(x_i) = \frac{e^{x_i}}{\sum_{j=1}^{K} e^{x_j}}$ (4)
 
 ### 5.4.2 预测区域识别
 
-该方法在参考文献 [13] 的第 3.6 节（表 5 和表 6）中有介绍。回想一下，在应用池化（pooling）导致丢失位置信息之前，每个大小为 $h$ 的 $n_f$ 个滤波器都关联着一个大小为 $(s-h)/stride+1$ 的向量（特征图），其条目表示滤波器与输入中对应感受野进行卷积后的输出（应用非线性并加上偏置后）。因此，每个感受野都被嵌入到 $n_f$ 维空间中。因此，训练后，我们可以通过检查模型对应于感受野嵌入的中间输出（池化层之前紧邻处），并寻找范数最大的区域，来识别给定文档中最具预测性的区域。例如，一些对负面 IMDB 评论最具预测性的区域包括：“有史以来最烂的电影”、“别浪费你的钱”、“编写和表演都很糟糕”、“画质糟糕”。相反，一些非常指示正面评价的区域包括：“惊人的配乐”、“视觉美感”、“酷炫的旅程”、“结局相当令人满意”……
+该方法在参考文献 [13] 的第 3.6 节（表 5 和表 6）中有介绍。回想一下，在应用池化（pooling）导致丢失位置信息之前，每个大小为 `$h$` 的 `$n_f$` 个滤波器都关联着一个大小为 `$(s-h)/stride+1$` 的向量（特征图），其条目表示滤波器与输入中对应感受野进行卷积后的输出（应用非线性并加上偏置后）。因此，每个感受野都被嵌入到 `$n_f$` 维空间中。因此，训练后，我们可以通过检查模型对应于感受野嵌入的中间输出（池化层之前紧邻处），并寻找范数最大的区域，来识别给定文档中最具预测性的区域。例如，一些对负面 `IMDB` 评论最具预测性的区域包括：“有史以来最烂的电影”、“别浪费你的钱”、“编写和表演都很糟糕”、“画质糟糕”。相反，一些非常指示正面评价的区域包括：“惊人的配乐”、“视觉美感”、“酷炫的旅程”、“结局相当令人满意”……
 
 ### 5.4.3 显著性图
 
-理解模型如何做出预测的另一种方法由 [22] 描述，并由 [17] 应用于自然语言处理。其思想是根据输入文档 $A \in \mathbb{R}^{s \times d}$ 的元素对预测的影响对其进行排序。可以通过模型输出 $\text{CNN}: A \mapsto \text{CNN}(A)$ 关于 $A$ 的每一行 $a$ 的一阶偏导数的幅值来给出近似值： 
+理解模型如何做出预测的另一种方法由 [22] 描述，并由 [17] 应用于自然语言处理。其思想是根据输入文档 `$A \in \mathbb{R}^{s \times d}$` 的元素对预测的影响对其进行排序。可以通过模型输出 `$\text{CNN}: A \mapsto \text{CNN}(A)$` 关于 `$A$` 的每一行 `$a$` 的一阶偏导数的幅值来给出近似值： 
 
 $$ \text{saliency}(a) = \left| \frac{\partial(\text{CNN})}{\partial a} \right|_a \tag{5} $$
 
-其解释是，我们识别出在 $A$ 中哪些词*改变得最少却能最大程度改变类别得分*。这些导数可以通过执行一次反向传播（基于预测值，而不是像训练时那样基于损失值）来获得。图 4 和图 5 分别展示了负面和正面评论的显著性图示例。
+其解释是，我们识别出在 `$A$` 中哪些词*改变得最少却能最大程度改变类别得分*。这些导数可以通过执行一次反向传播（基于预测值，而不是像训练时那样基于损失值）来获得。图 4 和图 5 分别展示了负面和正面评论的显著性图示例。
 
 ![](img/cff14e17039cb2b04cb132bbbb5e2363_7_0.png)
 
-图 4：IMDB 测试集中文档 1 的显著性图（真实标签：正面）
+图 4：`IMDB` 测试集中文档 1 的显著性图（真实标签：正面）
 
 ![](img/cff14e17039cb2b04cb132bbbb5e2363_8_0.png)
 
-图 5：IMDB 测试集中文档 15 的显著性图（真实标签：负面）
+图 5：`IMDB` 测试集中文档 15 的显著性图（真实标签：负面）
 
 ## 6 循环神经网络（RNNs）
+
+
 
 我们首先介绍整体 RNN 框架，然后介绍两种在实际中广泛使用的单元：LSTM 和 GRU。关于 RNN、LSTM 及其应用的良好综述可以在 [19] 中找到。
 
@@ -193,15 +201,13 @@ $$ \text{saliency}(a) = \left| \frac{\partial(\text{CNN})}{\partial a} \right|_a
 
 注意，当垂直堆叠多个 RNN 层（深度 RNN 架构）时，下方单元的隐藏状态直接连接到上方的单元，即 $x_{t}^{above}=y_{t}^{below}$ 且 $y_{t}^{below}=h_{t}^{below}$。输出层（公式 7）位于堆栈顶部。
 
-### 6.1.1 语言建模
+#### 6.1.1 语言建模
 
 语言建模是分类的一个特例，其中模型被训练用于预测句子中的下一个单词或字符。在每个时间步 $t$，输出向量给出序列中前文条件下，词汇表中所有单词/字符关于 $x_{t}$ 的概率分布，即 $P[x_{t}|x_{t-1},...,x_{1}]$。在测试时，完整序列 ${x_{1},...,x_{T}}$ 的概率由所有条件概率的乘积给出：
 
 > $\displaystyle P[{x_{1},...,x_{T}}] = P[x_{1}] \times \prod_{t=2}^{T} P[x_{t}|x_{t-1},...,x_{1}]$
 
 语言模型还可以通过重复采样字符（针对字符级别粒度）或直到
-
-
 
 选用的特殊句末标记为 $^{11}$（针对词级别粒度）。例如，对于字符级别的语言模型，$T$ 很容易超过 20 或 25。这极大地加剧了著名的梯度消失和梯度爆炸问题的负面影响，导致长距离依赖无法被学习 $^{12}$。需要注意的是，前馈神经网络（如多层感知机）也会出现此问题，但由于 RNN 固有的深层结构倾向，该问题在 RNN 中会更为严重。
 
@@ -213,7 +219,7 @@ $$ \text{saliency}(a) = \left| \frac{\partial(\text{CNN})}{\partial a} \right|_a
 
 ![](img/cff14e17039cb2b04cb132bbbb5e2363_10_0.png)
 
-### 6.2.1 内部层
+#### 6.2.1 内部层
 
 这四个层分别是：
 
@@ -224,7 +230,7 @@ $$ \text{saliency}(a) = \left| \frac{\partial(\text{CNN})}{\partial a} \right|_a
 
 由于逐元素应用了 Sigmoid 函数（$\sigma$），遗忘、输入和输出*门*层（即上述第 1、2、4 层）生成的向量其所有条目均介于 0 和 1 之间，且要么接近 0，要么接近 1。因此，当这些层与另一个向量相乘时，它们充当一种过滤器，仅选择该向量的一定比例。这正是这些层被称为“门”的原因。两种极端情况是所有条目等于 1——完整向量通过——或等于 0——无内容通过。需要注意的是，遗忘、输入和输出门以完全相同的方式计算，只是参数有所不同。然而，这些参数在所有时间步之间是共享的。
 
-### 6.2.2 遗忘/学习
+#### 6.2.2 遗忘/学习
 
 通过考虑新的训练样本 $x_t$ 和当前的隐藏状态 $h_{t-1}$，遗忘门层 $f_t$ 确定应遗忘多少之前的细胞状态 $c_{t-1}$（即释放多少记忆），而从相同的输入出发，输入门层 $i_t$ 决定应将多少候选值 $\tilde{c}_t$ 写入记忆，换句话说，即应学习多少新信息。将这两个过滤器的输出结合，即可*更新*细胞状态：
 
@@ -238,7 +244,7 @@ $h_t = \tanh(c_t) \circ o_t$ (10)
 
 $y_t = \text{softmax}(Vh_t)$ (11)
 
-### 6.2.3 与普通 RNN 的类比
+#### 6.2.3 与普通 RNN 的类比
 
 如果我们决定遗忘关于之前状态的一切（$f_t$ 的所有元素为零），学习所有新信息（$i_t$ 的所有元素等于 1），并将整个细胞状态记忆并传递给下一个时间步（$o_t$ 的所有元素等于 1），那么我们就有 $c_t = \tilde{c}_t = \text{tanh}(U_c x_t + W_c h_{t-1} + b_c)$，从而回到普通 RNN 单元，唯一的区别是多了一个 **tanh**，因为最终得到的是 $h_t = \text{tanh}(\text{tanh}(U_c x_t + W_c h_{t-1} + b_c))$，而不是像经典 RNN 情况下的 $h_t = \text{tanh}(U_c x_t + W_c h_{t-1} + b_c)$。
 
@@ -295,11 +301,7 @@ $\operatorname{argmax}_{\theta} \bigg\{ \sum_{(x, y) \in \mathrm{corpus}} \log p
 
 在这里，我们要最大化的函数是正确翻译的对数概率。
 
-
-
-
-
-## 7.1.2 编码器
+#### 7.1.2 编码器
 
 源句子可以通过任何模型（例如，CNN、全连接网络）进行嵌入。不过，对于机器翻译（MT）而言，编码器通常是一个深度循环神经网络（RNN）。Bahdanau等人[1]最初使用的是*双向*深度RNN。这种模型由两个深度单向RNN组成，除了词嵌入矩阵外，它们的参数不同。第一个*前向*RNN从左到右处理源句子，而第二个*后向*RNN则从右到左处理该句子。在每一个时间步 $t$，两个句子嵌入被连接起来，以获得双向RNN的内部表示：
 
@@ -307,7 +309,7 @@ $$h_t = [\vec{h}_t; \vec{h}_t] \tag{15}$$
 
 双向RNN在编码源单词时会考虑整个上下文，而不仅仅是前文。结果是，$h_t$ 倾向于以单词 $x_t$ 为中心的一个小窗口，而单向RNN中的 $h_t$ 则倾向于 $x_t$ 及其紧挨着的前几个单词。关注围绕 $x_t$ 的小窗口可能是有利的，但似乎并非至关重要。事实上，Luong等人[20]使用普通的单向深度RNN编码器也取得了最先进（state-of-the-art）的结果。在后续内容中，编码器的隐藏状态将写作 $\hat{h}_t$。它们在文献中有时被称为*注释*（annotations）。
 
-## 7.1.3 解码器
+#### 7.1.3 解码器
 
 虽然不同的模型都可以作为编码器，但在神经机器翻译（NMT）中，解码器通常是一个单向RNN，因为该模型自然适应生成任务的序列特性，且通常是深度的（堆叠结构）。解码器每次生成目标句子的一个单词，一步一生成。
 
@@ -329,21 +331,23 @@ $h_t$ 是解码器的隐藏状态（当解码器是堆叠RNN时，为顶层的�
 
 图 11：全局注意力（左）与局部注意力（右）。改编自 [20]。
 
-### 7.1.4 全局注意力
+#### 7.1.4 全局注意力
 
 在此，上下文向量 $c_t$ 计算为源句子*完整列表*注释 $\tilde{h}_i$（即编码器的隐藏状态）的加权和。共有 $T_x$ 个注释。每一个都是大小为编码器隐藏层单元数的向量。$c_t$ 的大小与任何注释相同。对齐向量 $\alpha_t$ 的大小等于源句子的大小 $T_x$，因此它是*可变*的。
 
+
+
 $c_t = \sum_{i=1}^{T_x} \alpha_{t,i} \tilde{h}_i$ (18)
 
-对齐向量 $\alpha_t$ 通过对当前的目标隐藏状态 $h_t$ 和所有源隐藏状态 $\tilde{h}_i$ 之间的*对齐*操作（$\textbf{score()}$）的输出应用 softmax 来计算：
+对齐向量 $\alpha_t$ 通过对当前的目标隐藏状态 $h_t$ 和所有源隐藏状态 $\tilde{h}_i$ 之间的`对齐`操作（`score()`）的输出应用 softmax 来计算：
 
 $\alpha_{t,i} = \frac{\exp(\textbf{score}(h_t, \tilde{h}_i))}{\sum_{i'=1}^{T_x} \exp(\textbf{score}(h_t, \tilde{h}_{i'}))}$ (19)
 
-换句话说，$\alpha_t$ 是所有源隐藏状态上的概率分布（其系数都在 0 和 1 之间，且总和为 1），并指示源句子中哪些单词最有可能有助于预测下一个单词。**score()** 在理论上可以是任何比较函数。Luong等人[20]实验了内积（$\textbf{score}(h_t, \tilde{h}_i) = h_t^\top \tilde{h}_i$）、带有参数矩阵的更通用形式（$\textbf{score}(h_t, \tilde{h}_i) = h_t^\top W_a \tilde{h}_i$）以及全连接层。他们发现*内积*在全局注意力中表现更好，而*通用*形式在局部注意力中更优越。图 12 提供了全局注意力的总结。
+换句话说，$\alpha_t$ 是所有源隐藏状态上的概率分布（其系数都在 0 和 1 之间，且总和为 1），并指示源句子中哪些单词最有可能有助于预测下一个单词。`score()` 在理论上可以是任何比较函数。Luong等人[20]实验了内积（`score(h_t, \tilde{h}_i) = h_t^\top \tilde{h}_i`）、带有参数矩阵的更通用形式（`score(h_t, \tilde{h}_i) = h_t^\top W_a \tilde{h}_i`）以及全连接层。他们发现`内积`在全局注意力中表现更好，而`通用`形式在局部注意力中更优越。图 12 提供了全局注意力的总结。
 
 ![](img/cff14e17039cb2b04cb132bbbb5e2363_16_0.png)
 
-图 12：*全局注意力*机制的总结 [20]。
+图 12：`全局注意力`机制的总结 [20]。
 
 ### 7.1.5 局部注意力
 
@@ -351,7 +355,7 @@ $\alpha_{t,i} = \frac{\exp(\textbf{score}(h_t, \tilde{h}_i))}{\sum_{i'=1}^{T_x} 
 
 $$c_t = \sum_{i=p_t-D}^{p_t+D} \alpha_{t,i}\tilde{h}_i \quad\quad\quad\quad\quad\quad (20)$$
 
-$D$ 由用户指定，窗口中心位置 $p_t$ 要么设置为 $t$（*单调对齐*），要么通过基于存储在 $h_t$ 中的之前生成的目标单词 $\{y_1,...,y_{t-1}\}$ 信息的可微分机制（*预测对齐*）确定：
+$D$ 由用户指定，窗口中心位置 $p_t$ 要么设置为 $t$（`单调对齐`），要么通过基于存储在 $h_t$ 中的之前生成的目标单词 $\{y_1,...,y_{t-1}\}$ 信息的可微分机制（`预测对齐`）确定：
 
 $$p_t = T_x \cdot (v_p^{\top}\tanh(W_p h_t)) \quad\quad\quad\quad\quad\quad (21)$$
 
@@ -365,7 +369,7 @@ $$\alpha_{t,i} = \frac{\exp(\text{score}(h_t, \tilde{h}_i))}{\sum_{i'=p_t-D}^{p_
 
 ## 7.2 自注意力
 
-我们这里处于一个更简单的设置中，单个RNN编码器接受长度为 $T$ 的序列 $(x_1, \dots, x_T)$ 作为输入。通常，RNN将输入序列映射到注释序列 $(h_1, \dots, h_T)$。目标与编码器-解码器上下文中的注意力机制完全相同：而不是将最后一个注释 $h_T$ 视为整个序列的综合摘要（这容易丢失信息），通过考虑*所有*时间步的注释来计算新的隐藏表示。为此目的，自注意力或内部注意力机制在 2016/2017 年出现在文献中，例如 [27, 18]。在后续中，我们使用 [27] 中的公式。
+我们这里处于一个更简单的设置中，单个RNN编码器接受长度为 $T$ 的序列 $(x_1, \dots, x_T)$ 作为输入。通常，RNN将输入序列映射到注释序列 $(h_1, \dots, h_T)$。目标与编码器-解码器上下文中的注意力机制完全相同：而不是将最后一个注释 $h_T$ 视为整个序列的综合摘要（这容易丢失信息），通过考虑`所有`时间步的注释来计算新的隐藏表示。为此目的，自注意力或内部注意力机制在 2016/2017 年出现在文献中，例如 [27, 18]。在后续中，我们使用 [27] 中的公式。
 
 如公式 23 所示，注释 $h_t$ 首先通过一个密集层（dense layer）。然后通过将密集层的输出 $u_t$ 与可训练的上下文向量 $u$（随机初始化）进行比较，并通过对结果应用 softmax 归一化，推导得出对齐系数 $\alpha_t$。注意力向量 $s$ 最终作为注释的加权和获得。
 
@@ -375,13 +379,13 @@ $\alpha_t = \frac{\exp(\text{score}(u_t, u))}{\sum_{t'=1}^T \exp(\text{score}(u_
 
 $s = \sum_{t=1}^T \alpha_t h_t$
 
-score 在理论上可以是任何对齐函数。一种直接的方法是使用 $\text{score}(u_t, u) = u_t^\top u$。上下文向量可以解释为平均意义上的理想单词表示。面对新样本时，模型利用这些知识来决定应该关注哪个单词。在训练过程中，通过反向传播，模型更新上下文向量，即调整其内部对理想单词的表示。
+`score` 在理论上可以是任何对齐函数。一种直接的方法是使用 `score(u_t, u) = u_t^\top u`。上下文向量可以解释为平均意义上的理想单词表示。面对新样本时，模型利用这些知识来决定应该关注哪个单词。在训练过程中，通过反向传播，模型更新上下文向量，即调整其内部对理想单词的表示。
 
 ### 7.2.1 与 seq2seq 注意力的区别
 
 上述自注意力定义中的上下文向量与 seq2seq 注意力中使用的上下文向量没有任何关系！在 seq2seq 注意力中，上下文向量 $c_t$ 等于加权和 $\sum_{i=1}^{T_s} \alpha_{t,i} \tilde{h}_i$，并用于计算注意力隐藏状态 $\tilde{h}_t = \tanh(W_c [c_t; h_t])$。在
 
-然而，在自注意力机制中，由于没有解码器，上下文向量只是作为解码器隐藏状态的替代品，在执行与 `score()` 的对齐操作时使用。因此，在自注意力中，对齐向量 α 指示 *每个输入词相对于最优词（在平均意义上）的相似度*，而在序列到序列（seq2seq）注意力中，α 指示 *每个源词在生成目标句子下一个元素时的相关性*。
+然而，在自注意力机制中，由于没有解码器，上下文向量只是作为解码器隐藏状态的替代品，在执行与 `score()` 的对齐操作时使用。因此，在自注意力中，对齐向量 α 指示 `每个输入词相对于最优词（在平均意义上）的相似度`，而在序列到序列（seq2seq）注意力中，α 指示 `每个源词在生成目标句子下一个元素时的相关性`。
 
 ## 7.2.2 层次化注意力
 
@@ -392,30 +396,57 @@ score 在理论上可以是任何对齐函数。一种直接的方法是使用 $
 ## 参考文献
 
 - [1] Bahdanau, Dzmitry, Kyunghyun Cho, and Yoshua Bengio. "Neural machine translation by jointly learning to align and translate." arXiv preprint arXiv:1409.0473 (2014). 2, 14, 15
-- [2] Cho, K., Van Merriënboer, B., Gulcehre, C., Bahdanau, D., Bougares, F., Schwenk, H., Bengio, Y. (2014). Learning phrase representations using RNN encoder-decoder for statistical machine translation. arXiv preprint arXiv:1406.1078. 2, 12, 13, 14
-- [3] Chopra, Sumit, Raia Hadsell, and Yann LeCun. "Learning a similarity metric discriminatorily, with application to face verification." Computer Vision and Pattern Recognition, 2005. CVPR 2005. IEEE Computer Society Conference on. Vol. 1. IEEE, 2005. 6
-- [4] Chung, J., Gulcehre, C., Cho, K., & Bengio, Y. (2014). Empirical evaluation of gated recurrent neural networks on sequence modeling. arXiv preprint arXiv:1412.3555. 2, 13, 14
-- [5] Conneau, A., Kiela, D., Schwenk, H., Barrault, L., & Bordes, A. (2017). Supervised learning of universal sentence representations from natural language inference data. arXiv preprint arXiv:1705.02364. 14
-- [6] Elman, J. L. (1990). Finding structure in time. Cognitive Science, 14:2, 179-211. 9
-- [7] Freitag, Markus, and Yaser Al-Onaizan. "Beam search strategies for neural machine translation." arXiv preprint arXiv:1702.01806 (2017). 16
-- [8] Goldberg, Y. (2015). A primer on neural network models for natural language processing. Journal of Artificial Intelligence Research, 57, 345-420. 2, 3, 9
-- [9] Graves, A. (2013). Generating sequences with recurrent neural networks. arXiv preprint arXiv:1308.0850. 11
-- [10] Greff, Klaus, et al. "LSTM: A search space odyssey." IEEE transactions on neural networks and learning systems 28.10 (2017): 2222-2232. 14
-- [11] Hochreiter, S., Schmidhuber, J. (1997). Long short-term memory. Neural computation, 9(8), 1735-1780. 11
-- [12] Hubel, David H., and Torsten N. Wiesel (1962). Receptive fields, binocular interaction and functional architecture in the cat's visual cortex. The Journal of physiology 160.1:106-154. 4
-- [13] Johnson, R., Zhang, T. (2015). Effective Use of Word Order for Text Categorization with Convolutional Neural Networks. To Appear: NAACL-2015, (2011). 2, 8
-- [14] Kim, Y. (2014). Convolutional Neural Networks for Sentence Classification. Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP 2014), 1746-1751. 2, 3, 4
-- [15] Krizhevsky, Alex, Ilya Sutskever, and Geoffrey E. Hinton. "Imagenet classification with deep convolutional neural networks." Advances in neural information processing systems. 2012. 4
-- [16] LeCun, Y., Bottou, L., Bengio, Y., and Haffner, P. (1998). Gradient-based learning applied to document recognition. Proceedings of the IEEE, 86(11), 2278-2324. 2, 4
-- [17] Li, J., Chen, X., Hovy, E., and Jurafsky, D. (2015). Visualizing and understanding neural models in nlp. arXiv preprint arXiv:1506.01066. 8
-- [18] Lin, Zhouhan, et al. "A structured self-attentive sentence embedding." arXiv preprint arXiv:1703.03130 (2017). 18
-- [19] Lipton, Zachary C., John Berkowitz, and Charles Elkan. "A critical review of recurrent neural networks for sequence learning." arXiv preprint arXiv:1506.00019 (2015). 9
-- [20] Luong, Minh-Thang, Hieu Pham, and Christopher D. Manning. "Effective approaches to attention-based neural machine translation." arXiv preprint arXiv:1508.04025 (2015). 2, 14, 15, 16, 17, 18
-- [21] Rush, Alexander M., Sumit Chopra, and Jason Weston. "A neural attention model for abstractive sentence summarization." arXiv preprint arXiv:1509.00685 (2015). 14
-- [22] Simonyan, K., Vedaldi, A., and Zisserman, A. (2013). Simonyan, Karen, Andrea Vedaldi, and Andrew Zisserman. "Deep inside convolutional networks: Visualising image classification models and saliency maps." arXiv preprint arXiv:1312.6034 (2013). arXiv preprint arXiv:1312.6034. 8
-- [23] Springenberg, Jost Tobias, et al. "Striving for simplicity: The all convolutional net." arXiv preprint arXiv:1412.6806 (2014). 4
-- [24] Sutskever, Ilya, Oriol Vinyals, and Quoc V. Le. "Sequence to sequence learning with neural networks." Advances in neural information processing systems. 2014. 2, 6, 14
-- [25] Xu, K., Ba, J., Kiros, R., Cho, K., Courville, A., Salakhudinov, R., ... & Bengio, Y. (2015, June). Show, attend and tell: Neural image caption generation with visual attention. In International Conference on Machine Learning (pp. 2048-2057). 14
-- [26] Zhang, Ye, and Byron Wallace. "A sensitivity analysis of (and practitioners' guide to) convolutional neural networks for sentence classification." arXiv preprint arXiv:1510.03820 (2015). 2, 3, 5, 6
-- [27] Yang, Zichao, et al. "Hierarchical attention networks for document classification." Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. 2016. 14, 18, 19
 
+- [2] Cho, K., Van Merriënboer, B., Gulcehre, C., Bahdanau, D., Bougares, F., Schwenk, H., Bengio, Y. (2014). Learning phrase representations using RNN encoder-decoder for statistical machine translation. arXiv preprint arXiv:1406.1078. 2, 12, 13, 14
+
+- [3] Chopra, Sumit, Raia Hadsell, and Yann LeCun. "Learning a similarity metric discriminatorily, with application to face verification." Computer Vision and Pattern Recognition, 2005. CVPR 2005. Vol. 1. IEEE, 2005. 6
+
+- [4] Chung, J., Gulcehre, C., Cho, K., & Bengio, Y. (2014). Empirical evaluation of gated recurrent neural networks on sequence modeling. arXiv preprint arXiv:1412.3555. 2, 13, 14
+
+- [5] Conneau, A., Kiela, D., Schwenk, H., Barrault, L., & Bordes, A. (2017). Supervised learning of universal sentence representations from natural language inference data. arXiv preprint arXiv:1705.02364. 14
+
+- [6] Elman, J. L. (1990). Finding structure in time. Cognitive Science, 14:2, 179-211. 9
+
+- [7] Freitag, Markus, and Yaser Al-Onaizan. "Beam search strategies for neural machine translation." arXiv preprint arXiv:1702.01806 (2017). 16
+
+- [8] Goldberg, Y. (2015). A primer on neural network models for natural language processing. Journal of Artificial Intelligence Research, 57, 345-420. 2, 3, 9
+
+- [9] Graves, A. (2013). Generating sequences with recurrent neural networks. arXiv preprint arXiv:1308.0850. 11
+
+- [10] Greff, Klaus, et al. "LSTM: A search space odyssey." IEEE transactions on neural networks and learning systems 28.10 (2017): 2222-2232. 14
+
+- [11] Hochreiter, S., Schmidhuber, J. (1997). Long short-term memory. Neural computation, 9(8), 1735-1780. 11
+
+- [12] Hubel, David H., and Torsten N. Wiesel (1962). Receptive fields, binocular interaction and functional architecture in the cat's visual cortex. The Journal of physiology 160.1:106-154. 4
+
+- [13] Johnson, R., Zhang, T. (2015). Effective Use of Word Order for Text Categorization with Convolutional Neural Networks. To Appear: NAACL-2015, (2011). 2, 8
+
+- [14] Kim, Y. (2014). Convolutional Neural Networks for Sentence Classification. Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP 2014), 1746-1751. 2, 3, 4
+
+- [15] Krizhevsky, Alex, Ilya Sutskever, and Geoffrey E. Hinton. "Imagenet classification with deep convolutional neural networks." Advances in neural information processing systems. 2012. 4
+
+- [16] LeCun, Y., Bottou, L., Bengio, Y., and Haffner, P. (1998). Gradient-based learning applied to document recognition. Proceedings of the IEEE, 86(11), 2278-2324. 2, 4
+
+- [17] Li, J., Chen, X., Hovy, E., and Jurafsky, D. (2015). Visualizing and understanding neural models in nlp. arXiv preprint arXiv:1506.01066. 8
+
+- [18] Lin, Zhouhan, et al. "A structured self-attentive sentence embedding." arXiv preprint arXiv:1703.03130 (2017). 18
+
+- [19] Lipton, Zachary C., John Berkowitz, and Charles Elkan. "A critical review of recurrent neural networks for sequence learning." arXiv preprint arXiv:1506.00019 (2015). 9
+
+- [20] Luong, Minh-Thang, Hieu Pham, and Christopher D. Manning. "Effective approaches to attention-based neural machine translation." arXiv preprint arXiv:1508.04025 (2015). 2, 14, 15, 16, 17, 18
+
+- [21] Rush, Alexander M., Sumit Chopra, and Jason Weston. "A neural attention model for abstractive sentence summarization." arXiv preprint arXiv:1509.00685 (2015). 14
+
+- [22] Simonyan, K., Vedaldi, A., and Zisserman, A. (2013). Simonyan, Karen, Andrea Vedaldi, and Andrew Zisserman. "Deep inside convolutional networks: Visualising image classification models and saliency maps." arXiv preprint arXiv:1312.6034 (2013). arXiv preprint arXiv:1312.6034. 8
+
+- [23] Springenberg, Jost Tobias, et al. "Striving for simplicity: The all convolutional net." arXiv preprint arXiv:1412.6806 (2014). 4
+
+- [24] Sutskever, Ilya, Oriol Vinyals, and Quoc V. Le. "Sequence to sequence learning with neural networks." Advances in neural information processing systems. 2014. 2, 6, 14
+
+- [25] Xu, K., Ba, J., Kiros, R., Cho, K., Courville, A., Salakhudinov, R., ... & Bengio, Y. (2015, June). Show, attend and tell: Neural image caption generation with visual attention. In International Conference on Machine Learning (pp. 2048-2057). 14
+
+- [26] Zhang, Ye, and Byron Wallace. "A sensitivity analysis of (and practitioners' guide to) convolutional neural networks for sentence classification." arXiv preprint arXiv:1510.03820 (2015). 2, 3, 5, 6
+
+
+
+- [27] Yang, Zichao, et al. "Hierarchical attention networks for document classification." Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. 2016. 14, 18, 19

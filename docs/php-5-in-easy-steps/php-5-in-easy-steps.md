@@ -1,97 +1,59 @@
+
 # PHP 5 快速入门指南
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 下表描述了用于操作 MySQL 数据库的特殊 PHP 函数。这些函数将出现在书中的实际演示中。
 
-| mysql_connect(server-name, user-name, password); | 尝试打开到 MySQL 服务器的连接。成功返回链接标识符，失败返回 false。 |
-| mysql_create_db(database-name, link-identifier); | 尝试在与指定 link-identifier 关联的服务器上创建一个新数据库。成功返回 true，失败返回 false。 |
-| mysql_select_db(database-name, link-identifier); | 设置与指定 link-identifier 关联的服务器上的当前活动数据库。成功返回 true，失败返回 false。 |
-| mysql_drop_db(database-name, link-identifier); | 尝试删除与指定 link-identifier 关联的服务器上的整个数据库。成功返回 true，失败返回 false。 |
-| mysql_fetch_array(result-resource); | 返回与数据库表行对应的数组，如果没有更多行，则返回 false。 |
-| mysql_list_dbs(link-identifier); | 列出 MySQL 服务器上可用的数据库。 |
-| mysql_num_rows(result-resource); | 返回 result-resource 中的行数。 |
-| mysql_list_tables(database-name, link-identifier); | 列出指定数据库中的表。 |
-| mysql_query(SQL-string, link-identifier); | 向与指定 link-identifier 关联的服务器上的当前活动数据库发送查询。成功返回回答查询的 result-resource，失败返回 false。 |
+| `mysql_connect(server-name, user-name, password);` | 尝试打开到 MySQL 服务器的连接。成功返回链接标识符，失败返回 false。 |
 
-书中的示例和练习是使用 Apache 1.3.31、MySQL 4.0.18 以及 PHP 5.0.00 最终版演示的——其他版本可能需要修改。所有示例的源代码可以从本书的网站 www.ineasystems.com 下载。
+| `mysql_create_db(database-name, link-identifier);` | 尝试在与指定 `link-identifier` 关联的服务器上创建一个新数据库。成功返回 true，失败返回 false。 |
 
+| `mysql_select_db(database-name, link-identifier);` | 设置与指定 `link-identifier` 关联的服务器上的当前活动数据库。成功返回 true，失败返回 false。 |
 
+| `mysql_drop_db(database-name, link-identifier);` | 尝试删除与指定 `link-identifier` 关联的服务器上的整个数据库。成功返回 true，失败返回 false。 |
+
+| `mysql_fetch_array(result-resource);` | 返回与数据库表行对应的数组，如果没有更多行，则返回 false。 |
+
+| `mysql_list_dbs(link-identifier);` | 列出 MySQL 服务器上可用的数据库。 |
+
+| `mysql_num_rows(result-resource);` | 返回 `result-resource` 中的行数。 |
+
+| `mysql_list_tables(database-name, link-identifier);` | 列出指定数据库中的表。 |
+
+| `mysql_query(SQL-string, link-identifier);` | 向与指定 `link-identifier` 关联的服务器上的当前活动数据库发送查询。成功返回回答查询的 `result-resource`，失败返回 false。 |
+
+书中的示例和练习是使用 Apache 1.3.31、MySQL 4.0.18 以及 PHP 5.0.00 最终版演示的——其他版本可能需要修改。所有示例的源代码可以从本书的网站 `www.ineasystems.com` 下载。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_2_0.png)
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_2_1.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## 介绍 PHP
 
 欢迎来到激动有趣的 PHP 服务器端脚本世界。
+
 本章介绍了 PHP，描述了它的工作原理，然后演示如何在 Windows 操作系统上建立工作环境。
 
 - 书中的 PHP 8
+
 - 什么是 PHP? 9
+
 - PHP 是如何工作的? 10
+
 - 创建 PHP 环境 11
+
 - 安装 Apache 12
+
 - 启动与停止 Apache 13
+
 - 安装 MySQL 14
+
 - 安装 PHP 15
+
 - 为 PHP 配置 Apache 16
+
 - 测试 PHP 17
+
 - 测试 MySQL 连接 18
-
-
-
-
 
 ### 什么是 PHP？
 
@@ -111,7 +73,7 @@ PHP 的模块化扩展系统允许它与不同的库（如加密、图形或 XML
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_10_0.png)
 
-可以在 www.zend.com 在了解更多关于 Zend 引擎的信息。
+可以在 `www.zend.com` 在了解更多关于 Zend 引擎的信息。
 
 ### PHP 如何工作？
 
@@ -145,26 +107,31 @@ PHP 解析器还可能被要求从数据库中检索信息，因此整个过程�
 
 ### 安装 Apache
 
-Apache 是世界上最流行的 Web 服务器，根据最近的调查，它占全球 Web 服务器的 56%。它可以从 http://httpd.apache.org 或该网站上的镜像站点免费下载。
+Apache 是世界上最流行的 Web 服务器，根据最近的调查，它占全球 Web 服务器的 56%。它可以从 `http://httpd.apache.org` 或该网站上的镜像站点免费下载。
 
-下载 Windows 的稳定版本，文件名类似于 "apache_1.3.31-win32-x86-no.msi"。双击下载的文件开始安装，然后在“服务器信息”对话框中输入如下所示字段：
+下载 Windows 的稳定版本，文件名类似于 "`apache_1.3.31-win32-x86-no.msi`"。双击下载的文件开始安装，然后在“服务器信息”对话框中输入如下所示字段：
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_13_0.png)
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_13_1.png)
 
 服务器信息：
+
 网络（例如 somenet.com): localhost
+
 名称（例如 somenet.com): localhost
+
 电子邮件（例如 somenet.com): localhost
+
 位置（例如 somenet.com): localhost
+
 安装服务：为所有用户运行
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_13_2.png)
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_13_3.png)
 
-当 Setup 对话框出现时，选择建议的位置 C:\mysql 并选择“典型”安装。MySQL 用户手册可以在 C:\mysql 子目录下找到。
+当 Setup 对话框出现时，选择建议的位置 `C:\mysql` 并选择“典型”安装。MySQL 用户手册可以在 `C:\mysql` 子目录下找到。
 
 ### 启动与停止 Apache
 
@@ -184,28 +151,37 @@ Apache 是世界上最流行的 Web 服务器，根据最近的调查，它占�
 
 ### 安装 MySQL
 
-有各种数据库服务器出售，例如 Microsoft Access，但 MySQL 数据库服务器既强大又免费。它在 Web 服务器上广泛使用，可以从 www.mysql.com 免费下载。
+有各种数据库服务器出售，例如 Microsoft Access，但 MySQL 数据库服务器既强大又免费。它在 Web 服务器上广泛使用，可以从 `www.mysql.com` 免费下载。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_15_0.png)
 
-下载 Windows 的 MySQL 二进制版本，例如 "mysql-4.0.18-win.zip"。解压缩此文件并双击提取的文件 "setup.exe" 开始安装。在设置期间接受建议安装位置 C:\mysql 并选择“典型”安装。MySQL 用户手册可以在 C:\mysql 子目录下找到。
+下载 Windows 的 MySQL 二进制版本，例如 "`mysql-4.0.18-win.zip`"。解压缩此文件并双击提取的文件 "`setup.exe`" 开始安装。在设置期间接受建议安装位置 `C:\mysql` 并选择“典型”安装。MySQL 用户手册可以在 `C:\mysql` 子目录下找到。
 
 - bench
+
 - bin
+
 - data
+
 - docs
+
 - embedded
+
 - examples
+
 - include
+
 - lib
+
 - scripts
+
 - share
 
-在启动 MySQL 服务器之前，你必须在系统的根目录下放置一个配置文件——为此目的提供了模板。通常情况下，你应该将 C:\mysql\my-medium.cnf 模板文件复制到 C: 并将其重命名为 "my.cnf"。MySQL 服务启动时会读取此文件中的选项。
+在启动 MySQL 服务器之前，你必须在系统的根目录下放置一个配置文件——为此目的提供了模板。通常情况下，你应该将 `C:\mysql\my-medium.cnf` 模板文件复制到 C: 并将其重命名为 "`my.cnf`"。MySQL 服务启动时会读取此文件中的选项。
 
-C:\mysql 文件夹包含运行 MySQL 需要的所有可执行文件。在 Windows XP、2000 和 NT 系统上，MySQL 可以安装为后台运行的服务，其他平台可以手动作为应用程序运行 MySQL。
+`C:\mysql` 文件夹包含运行 MySQL 需要的所有可执行文件。在 Windows XP、2000 和 NT 系统上，MySQL 可以安装为后台运行的服务，其他平台可以手动作为应用程序运行 MySQL。
 
-在提示符输入 "C:\bin\mysql-nt --install" 将 MySQL 安装为后台服务，它将在每次计算机启动时自动启动。可以从提示符使用命令 `NET START mysql` 手动启动，并使用命令 `NET STOP mysql` 停止。当 MySQL 运行时，输入 "C:\mysql\bin\mysql" 启动 MySQL 器，可以在其中创建和操作数据库：
+在提示符输入 "`C:\bin\mysql-nt --install`" 将 MySQL 安装为后台服务，它将在每次计算机启动时自动启动。可以从提示符使用命令 `NET START mysql` 手动启动，并使用命令 `NET STOP mysql` 停止。当 MySQL 运行时，输入 "`C:\mysql\bin\mysql`" 启动 MySQL 器，可以在其中创建和操作数据库：
 
 ```
 Command Prompt
@@ -219,17 +195,13 @@ C:\>
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_15_1.png)
 
-
-
-
-
 ### 安装 PHP
 
-建立 PHP 开发环境所需的最后一个组件是 PHP 及其本身。你可以从 www.php.net 免费下载。Windows 版本的名称类似于 "php-5.0.0-Win32.zip"。下载此压缩包，然后将其内容解压到方便的位置，例如 C:\php。
+建立 PHP 开发环境所需的最后一个组件是 PHP 及其本身。你可以从 `www.php.net` 免费下载。Windows 版本的名称类似于 "`php-5.0.0-Win32.zip`"。下载此压缩包，然后将其内容解压到方便的位置，例如 `C:\php`。
 
-解出的文件包含一个名为 "php.ini-recommended" 的文件，这是一个 PHP 配置文件模板。将其复制到 C:\Windows 文件夹，然后将其重命名为 "php.ini"。
+解出的文件包含一个名为 "`php.ini-recommended`" 的文件，这是一个 PHP 配置文件模板。将其复制到 `C:\Windows` 文件夹，然后将其重命名为 "`php.ini`"。
 
-"php.ini" 仅仅是一个文本文件，可以使用任何文本编辑器（如 Windows 记事本）打开。将 Apache 安装在 C:\Apache，PHP 安装在 C:\php（如本章所述），通过遵循以下行可以确保 "php.ini" 配置文件正确识别 Apache 根目录和 PHP 扩展目录：
+"`php.ini`" 仅仅是一个文本文件，可以使用任何文本编辑器（如 Windows 记事本）打开。将 Apache 安装在 `C:\Apache`，PHP 安装在 `C:\php`（如本章所述），通过遵循以下行可以确保 "`php.ini`" 配置文件正确识别 Apache 根目录和 PHP 扩展目录：
 
 ```
 doc_root = "C:\Apache\htdocs"
@@ -238,13 +210,13 @@ extension_dir = "C:\php\ext"
 
 如果 PHP 安装没有自动创建这些内容，可以手动编辑它们以按上述方式读取——记得保存文件。
 
-PHP 5 支持 MySQL，但默认可能未启用。要手动启用它，首先打开一次 "php.ini"，然后找到以下行：
+PHP 5 支持 MySQL，但默认可能未启用。要手动启用它，首先打开一次 "`php.ini`" ，然后找到以下行：
 
 ```
 extension = "php_mysql.dll"
 ```
 
-如有必要，删除此行开头的分号使其不再被“注释 掉”，然后保存文件。现在复制 C:\php\libmysql.dll 处的 MySQL 库文件并将其粘贴到 C:\Windows\System 文件夹中。
+如有必要，删除此行开头的分号使其不再被“注释 掉”，然后保存文件。现在复制 `C:\php\libmysql.dll` 处的 MySQL 库文件并将其粘贴到 `C:\Windows\System` 文件夹中。
 
 至此完成了 PHP 的安装，但在使用浏览器进行测试之前，需要对 Apache 配置进行修改，使其识别 PHP 示例并知道如何处理它们。本章的其余部分描述了如何修改 Apache 配置以及如何测试 PHP 环境。
 
@@ -256,9 +228,9 @@ extension = "php_mysql.dll"
 
 ### 为 PHP 配置 Apache
 
-在 Apache 服务器运行 PHP 示例之前，必须告诉它在何处找到 PHP 模块以及如何识别 PHP 文件。这通过编辑位于 C:\Apache\conf\httpd.conf 的 Apache 配置来实现。
+在 Apache 服务器运行 PHP 示例之前，必须告诉它在何处找到 PHP 模块以及如何识别 PHP 文件。这通过编辑位于 `C:\Apache\conf\httpd.conf` 的 Apache 配置来实现。
 
-在文本编辑器中打开 "httpd.conf" 配置文件，找到包含 "AddModule" 指令的部分。在该部分的末尾添加以下三行：
+在文本编辑器中打开 "`httpd.conf`" 配置文件，找到包含 "`AddModule`" 指令的部分。在该部分的末尾添加以下三行：
 
 ```
 LoadModule php5_module c:/php/php5apache.dll
@@ -282,21 +254,32 @@ AddType application/x-httpd-php .php .phtml
 <?php phpinfo(); ?>
 ```
 
-将文件保存为“phpinfo.php”并将其放置在 Apache 的“htdocs”文件夹中。该位置是 Apache 自动查找 浏览器请求的文件的地方。
+将文件保存为“`phpinfo.php`”并将其放置在 Apache 的“`htdocs`”文件夹中。该位置是 Apache 自动查找 浏览器请求的文件的地方。
 
-现在，在 Apache 运行的情况下，打开网络浏览器并在 URL 字段中输入 "http://localhost/phpinfo.php"。按下回车键，PHP 将生成一个类似于下方的网页，列出关于你 PHP 环境的重要信息。
+现在，在 Apache 运行的情况下，打开网络浏览器并在 URL 字段中输入 "`http://localhost/phpinfo.php`" 。按下回车键，PHP 将生成一个类似于下方的网页，列出关于你 PHP 环境的重要信息。
 
 - Apache
+
 - bin
+
 - cgi-bin
+
 - conf
+
 - htdocs
+
 - icons
+
 - include
+
 - lib
+
 - libexec
+
 - logs
+
 - modules
+
 - proxy
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_18_0.png)
@@ -325,9 +308,11 @@ AddType application/x-httpd-php .php .phtml
 <?php phpinfo(); ?>
 ```
 
-将文件保存为“phpinfo.php”并将其放置在 Apache 的“htdocs”文件夹中。该位置是 Apache 自动查找浏览器请求的文件的地方。
 
-现在，在 Apache 运行的情况下，打开网络浏览器并在 URL 字段中输入 "http://localhost/phpinfo.php"。按下回车键，PHP 将生成一个类似于下方的网页，列出关于你 PHP 环境的重要信息。
+
+将文件保存为“`phpinfo.php`”并将其放置在 Apache 的“`htdocs`”文件夹中。该位置是 Apache 自动查找浏览器请求的文件的地方。
+
+现在，在 Apache 运行的情况下，打开网络浏览器并在 URL 字段中输入 "`http://localhost/phpinfo.php`" 。按下回车键，PHP 将生成一个类似于下方的网页，列出关于你 PHP 环境的重要信息。
 
 - Apache
 - bin
@@ -366,9 +351,9 @@ AddType application/x-httpd-php .php .phtml
 <?php phpinfo(); ?>
 ```
 
-将文件保存为“phpinfo.php”并将其放置在 Apache 的“htdocs”文件夹中。该位置是 Apache 自动查找浏览器请求的文件的地方。
+将文件保存为“`phpinfo.php`”并将其放置在 Apache 的“`htdocs`”文件夹中。该位置是 Apache 自动查找浏览器请求的文件的地方。
 
-现在，在 Apache 运行的情况下，打开网络浏览器并在 URL 字段中输入 "http://localhost/phpinfo.php"。按下回车键，PHP 将生成一个类似于下方的网页，列出关于你 PHP 环境的重要信息。
+现在，在 Apache 运行的情况下，打开网络浏览器并在 URL 字段中输入 "`http://localhost/phpinfo.php`" 。按下回车键，PHP 将生成一个类似于下方的网页，列出关于你 PHP 环境的重要信息。
 
 - Apache
 - bin
@@ -391,9 +376,9 @@ AddType application/x-httpd-php .php .phtml
 <?php phpinfo(); ?>
 ```
 
-将文件保存为“phpinfo.php”并将其放置在 Apache 的“htdocs”文件夹中。该位置是 Apache 自动查找浏览器请求的文件的地方。
+将文件保存为“`phpinfo.php`”并将其放置在 Apache 的“`htdocs`”文件夹中。该位置是 Apache 自动查找浏览器请求的文件的地方。
 
-现在，在 Apache 运行的情况下，打开网络浏览器并在 URL 字段中输入 "http://localhost/phpinfo.php"。按下回车键，PHP 将生成一个类似于下方的网页，列出关于你 PHP 环境的重要信息。
+现在，在 Apache 运行的情况下，打开网络浏览器并在 URL 字段中输入 "`http://localhost/phpinfo.php`" 。按下回车键，PHP 将生成一个类似于下方的网页，列出关于你 PHP 环境的重要信息。
 
 - Apache
 - bin
@@ -418,16 +403,13 @@ PHP 通常不是区分大小写的，因此对面页上的示例可以如下所�
 <?php ECHO ( "<h1>Hello World</h1>" );
 ```
 
-
-
-
 ### 转义字符
 
 `\` 字符可用于为紧随其后的字符赋予特殊含义。在用 `echo()` 函数写入文本字符串时，在字符串内部包含引号非常为有用。由于字符串本身被引号包围，PHP 解析器会被额外的引号所困惑并返回错误信息。通过在额外的引号前加上一个反斜线字符进行转义，可以避免这个问题。
 
 此外，换行语法 `"\n"` 可在文本区域中移动到新行，`"\t"` 可用于跨越文本区域。
 
-以下示例创建了一个包含转义引号的 HTML 文本区域内容，并演示了换行和制表符功能。包含 `rows` 和 `cols` (列) HTML 属性值的引号也经过了转义。
+以下示例创建了一个包含转义引号的 HTML 文本区域内容，并演示了换行和制表符功能。包含 `rows` 和 `cols` HTML 属性值的引号也经过了转义。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_23_0.png)
 
@@ -504,10 +486,10 @@ PHP 是一种弱类型语言，因此它的变量可以存储不同类型的数�
 
 PHP 变量中可以存储的数据类型包括：
 
-- 字符串 (String) – 在双引号 (`"..."`) 或单引号 (`'...'`) 中指定的空格、文本和数字字符
-- 整数 (Integer) – 没有小数部分的数字，例如 1,000
-- 浮点数 (Floating-point) – 有小数部分的数字，如 3.142
-- 布尔值 (Boolean) – 用不区分大小写的 PHP 关键字 `TRUE` 或 `FALSE` 表示的真值。
+- 字符串 String – 在双引号 `"..."` 或单引号 `'...'` 中指定的空格、文本和数字字符
+- 整数 Integer – 没有小数部分的数字，例如 1,000
+- 浮点数 Floating-point – 有小数部分的数字，如 3.142
+- 布尔值 Boolean – 用不区分大小写的 PHP 关键字 `TRUE` 或 `FALSE` 表示的真值。
 
 在给不应被引号包围的变量分配数值值时，否则它们将被视为字符串值。
 
@@ -547,16 +529,13 @@ Done Local intranet
 
 PHP 有许多内置函数，例如 `echo()`，但你可以使用声明中的 `function` 关键字来创建自己的函数。
 
-
-
-
 ### 变量作用域
 
 变量作用域定义了 PHP 脚本的哪些部分可以访问变量。相反页示例中使用的变量都在函数内部声明的，因此被称为“局部”变量。这些变量只能由声明它们的函数使用。
 
 相反，“全局”变量声明在函数外部，可以被文档中的任何函数访问。与其他自动允许访问全局变量的语言不同，PHP 要求函数显式声明它想要使用全局变量，否则该变量将默认被视为局部作用域。在函数代码块内部，简单的声明是通过使用“global”关键字后后跟变量名来完成的。
 
-此示例创建了一个全局变量 $num，通过在每个代码块中包含声明，使得两个函数都能访问它。
+此示例创建了一个全局变量 `$num`，通过在每个代码块中包含声明，使得两个函数都能访问它。
 
 ```php
 <?php $num;
@@ -617,8 +596,6 @@ function addup($a = 32, $b = 32, $c = 32 ) {
 
 本章介绍了不同的 PHP 运算符，并演示了如何在脚本语句中使用它们执行比较和操纵值。
 
-
-
 第三章
 
 ### 算术运算符
@@ -636,11 +613,11 @@ PHP 脚本中常用的算术运算符列在下表中，并列出了它们执行�
 | ++ | 递增 |
 | -- | 递减 |
 
-注意 + 运算符不能像在其他语言中那样用于连接字符串。它将两个数值相加并给出加法结果。字符串的拼接只能通过 . 点运算符执行。
+注意 `+` 运算符不能像在其他语言中那样用于连接字符串。它将两个数值相加并给出加法结果。字符串的拼接只能通过 `.` 点运算符执行。
 
 取模运算符将第一个给定的数除以第二个给定的数并返回操作的余数。这对于判断一个数字是奇数还是偶数最有用。
 
-递增 ++ 和递减 -- 运算符将给定值改变 1 并返回结果。这些通常用于计算循环中的次数。
+递增 `++` 和递减 `--` 运算符将给定值改变 1 并返回结果。这些通常用于计算循环中的次数。
 
 所有其他运算符的作用都如你预期的那样，但在使用多个运算符的表达式中，应注意使用括号来以明确操作顺序：
 
@@ -693,7 +670,6 @@ $result = "dec:$dec <br>";
 | :--- | :--- | :--- | :--- | :--- |
 | Address | | | | |
 | 8 + 16 + 24 = 48 | | | | |
-
 | 8 + 16 + 32 = 56 | | | | |
 
 ### 逻辑运算符
@@ -704,6 +680,8 @@ $result = "dec:$dec <br>";
 | || | 逻辑 OR |
 | xor | 逻辑 XOR |
 | ! | 逻辑 NOT |
+
+
 
 ```php
 <?php
@@ -751,31 +729,27 @@ $result .= "NOT - 1:$test10 2:$test11";
 
 3. 执行操作 | 35
 
-
-
-
-
 ### 赋值运算符
 
 PHP 中常用的用于赋值赋值的运算符都列在下表中。除了简单的 `=` 赋值运算符外，每一个运算符都是较长表达式的写形式，因此为了清晰起见，也给出了等效表达式。
 
 | 运算符 | 示例 | 等效于 |
 | --- | --- | --- |
-| = | $a = $b | $a = $b |
-| += (用于数字) | $a += $b | $a = $a + $b |
-| .= (用于字符串) | $a .= $b | $a = $a . $b |
-| -= | $a -= $b | $a = $a - $b |
-| *= | $a *= $b | $a = $a * $b |
-| /= | $a /= $b | $a = $a / $b |
-| %= | $a %= $b | $a = $a % $b |
+| = | `$a = $b` | `$a = $b` |
+| += (用于数字) | `$a += $b` | `$a = $a + $b` |
+| .= (用于字符串) | `$a .= $b` | `$a = $a . $b` |
+| -= | `$a -= $b` | `$a = $a - $b` |
+| *= | `$a *= $b` | `$a = $a * $b` |
+| /= | `$a /= $b` | `$a = $a / $b` |
+| %= | `$a %= $b` | `$a = $a % $b` |
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_37_0.png)
 
 相等运算符用于比较值，在第 38 页有详细解释和示例。
 
-将 `=` 运算符视为“赋值”而不是“等于”很重要，以避免与 `==` 相等运算符混淆。在表格的示例中，变量 $a 被赋值为变量 $b 中包含的值，将其赋值为其新值。
+将 `=` 运算符视为“赋值”而不是“等于”很重要，以避免与 `==` 相等运算符混淆。在表格的示例中，变量 `$a` 被赋值为变量 `$b` 中包含的值，将其赋值为其新值。
 
-在表格表中，`+=` 运算符将变量 $a 中包含的数字值加上变量 $b 中包含的数字值，然后将结果赋值为变量 $a 中包含的新值。
+在表格表中，`+=` 运算符将变量 `$a` 中包含的数字值加上变量 `$b` 中包含的数字值，然后将结果赋值为变量 `$a` 中包含的新值。
 
 `.=` 运算符非常有用，在之前的示例中已曾用于向现有字符串上添加第二个字符串。
 
@@ -827,12 +801,12 @@ $result = "$f MODULO AND ASSIGN: $f";
 | --- | --- |
 | 文件 编辑 视图 收藏 工具 帮助 | |
 | 地址 http://localhost/assignment.php | 转到 |
-| $a ADD AND ASSIGN STRING: PHP Script |
-| $b ADD AND ASSIGN INTEGER: 12 |
-| $c SUBTRACT AND ASSIGN FLOAT: 5.25 |
-| $d MULTIPLY AND ASSIGN: 32 |
-| $e DIVIDE AND ASSIGN: 2 |
-| $f MODULO AND ASSIGN: 0 |
+| `$a ADD AND ASSIGN STRING: PHP Script` | |
+| `$b ADD AND ASSIGN INTEGER: 12` | |
+| `$c SUBTRACT AND ASSIGN FLOAT: 5.25` | |
+| `$d MULTIPLY AND ASSIGN: 32` | |
+| `$e DIVIDE AND ASSIGN: 2` | |
+| `$f MODULO AND ASSIGN: 0` | |
 | 完成 | 本地域网 |
 
 ### 比较运算符
@@ -853,9 +827,11 @@ PHP 中常用的用于比较值的运算符列在表中：
 相反，`!=` 运算符在操作数不相等时返回 true。
 
 `>` 运算符在第一个操作数大于第二个操作数时返回 true。
+
 `<` 运算符在第一个操作数小于第二个操作数时返回 true。
 
 `>=` 运算符在第一个操作数大于等于第二个操作数时返回 true。
+
 `<=` 运算符在第一个操作数小于等于第二个操作数时返回 true。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_39_0.png) # 比较运算符
@@ -890,119 +866,6 @@ $result = "$f MODULO AND ASSIGN: $f";
 ?>
 ```
 
-(注：由于提供的原文后半部分存在重复和逻辑错乱，翻译已根据“高级文档工程师”的逻辑对重复的运算符描述进行了结构化处理，确保输出符合 Markdown 规范且不重复。)
-
-**由于您提供的待翻译文本后半部分出现了大量重复的片段和乱码的逻辑，我已根据“不要重复输出”的要求提取并翻译了核心的运算符逻辑部分：**
-
-[content]
-### 赋值运算符
-
-PHP 中常用的用于赋值赋值的运算符都列在下表中。除了简单的 `=` 赋值运算符外，每一个运算符都是较长表达式的写形式，因此为了清晰起见，也给出了等效表达式。
-
-| 运算符 | 示例 | 等效于 |
-| --- | --- | --- |
-| = | $a = $b | $a = $b |
-| += (用于数字) | $a += $b | $a = $a + $b |
-| .= (用于字符串) | $a .= $b | $a = $a . $b |
-| -= | $a -= $b | $a = $a - $b |
-| *= | $a *= $b | $a = $a * $b |
-| /= | $a /= $b | $a = $a / $b |
-| %= | $a %= $b | $a = $a % $b |
-
-![](img/7faa63a7fa0add8f53300594ebae949f_37_0.png)
-
-相等运算符用于比较值，在第 38 页有详细解释和示例。
-
-将 `=` 运算符视为“赋值”而不是“等于”很重要，以避免与 `==` 相等运算符混淆。在表格的示例中，变量 $a 被赋值为变量 $b 中包含的值，将其赋值为其新值。
-
-在表格表中，`+=` 运算符将变量 $a 中包含的数字值加上变量 $b 中包含的数字值，然后将结果赋值为变量 $a 中包含的新值。
-
-`.=` 运算符非常有用，在之前的示例中已用于向现有字符串上添加第二个字符串。
-
-表中的所有其他运算符的工作方式与 `+=` 运算符相同，即先对两个值进行算术运算，然后将结果赋值给第一个变量。
-
-### ...接续
-
-```php
-<?php
-$a = "PHP ";
-$aa = "Script"; #赋值字符串值
-$a .= $aa; #拼接字符串并赋值给 $a
-
-$b = 8; $bb = 4; #赋值整数值
-$b += $bb; #数字相加并将结果赋值给 $b
-
-$c = 7.5; $cc = 2.25; #赋值浮点值
-$c -= $cc; #相减并将结果赋值给 $c
-
-$d = 8; $dd = 4; #赋值整数值
-$d *= $dd; #相乘并将结果赋值给 $d
-
-$e = 8; $ee = 4; #赋值整数值
-$e /= $ee; #除法并将结果赋值给 $e
-
-$f = 8; $ff = 4; #赋值整数值
-$f %= $ff; #除法取余并赋值给 $f
-
-$result = "$a ADD AND ASSIGN STRING: $a<br>";
-$result = "$b ADD AND ASSIGN INTEGER: $b<br>";
-$result = "$c SUBTRACT AND ASSIGN FLOAT: $c<br>";
-$result = "$d MULTIPLY AND ASSIGN: $d<br>";
-$result = "$e DIVIDE AND ASSIGN: $e<br>";
-$result = "$f MODULO AND ASSIGN: $f";
-?>
-```
-
-![](img/7faa63a7fa0add8f53300594ebae949f_38_0.png)
-
-使用 `=` 运算符处理数字会将它们拼接，使得 8.4 = 84
-
-![](img/7faa63a7fa0add8f53300594ebae949f_38_1.png)
-
-```html
-<html><head><title>赋值运算符</title></head><body> <?php echo ( $result ); ?></body></html>
-```
-
-| 赋值运算符 | |
-| --- | --- |
-| 文件 编辑 视图 收藏 工具 帮助 | |
-| 地址 http://localhost/assignment.php | 转到 |
-| $a ADD AND ASSIGN STRING: PHP Script |
-| $b ADD AND ASSIGN INTEGER: 12 |
-| $c SUBTRACT AND ASSIGN FLOAT: 5.25 |
-| $d MULTIPLY AND ASSIGN: 32 |
-| $e DIVIDE AND ASSIGN: 2 |
-| $f MODULO AND ASSIGN: 0 |
-| 完成 | 本地域网 |
-
-### 比较运算符
-
-PHP 中常用的用于比较值的运算符列在下表中：
-
-| 运算符 | 比较测试 |
-| --- | --- |
-| == | 相等 |
-| != | 不等于 |
-| > | 大于 |
-| < | 小于 |
-| >= | 大于等于 |
-| <= | 小于等于 |
-
-相等运算符 `==` 比较两个操作数，如果两者的值相等则返回 true：如果两个数字相同，则它们相等；或者如果两个字符串包含相同的字符，则它们相等。布尔操作数若均为 true 或均为 false。
-
-相反，`!=` 运算符在操作数不相等时返回 true。
-
-`>` 运算符在第一个操作数大于第二个操作数时返回 true。
-`<` 运算符在第一个操作数小于第二个操作数时返回 true。
-
-`>=` 运算符在第一个操作数大于等于第二个操作数时返回 true。
-`<=` 运算符在第一个操作数小于等于第二个操作数时返回 true。
-
-![](img/7faa63a7fa0add8f53300594ebae949f_39_0.png)
-
-
-
-
 ### If-else 语句
 
 PHP 的 "else" 关键字可以与 "if" 语句配合使用，在测试表达式为假时提供备执行的备用代码。
@@ -1015,7 +878,7 @@ if ( test-expression ) do-this; else do-this ;
 
 可能会测试多个表达式，直到找到真值，此时将执行真表达式后面的代码。需要注意的是，if-else 语句中包含的任何后续代码都将被忽略。
 
-在接下来的示例中，在成功第三次测试并调用 echo() 函数后，之后的任何代码都将被忽略：
+在接下来的示例中，在成功第三次测试并调用 `echo()` 函数后，之后的任何代码都将被忽略：
 
 ```
 <html><head><title>If-else Statement</title></head>
@@ -1071,6 +934,8 @@ default : echo("This is default code");
 </body></html>
 ```
 
+
+
 ![](img/7faa63a7fa0add8f53300594ebae949f_45_1.png)
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_45_2.png)
@@ -1085,7 +950,7 @@ default : echo("This is default code");
 for( initializer , test , increment ) { statement/s }
 ```
 
-初始化器用于设置循环迭代次数计数器的起始值。可以在此处声明一个变量用于此目的，且传统上将其命名为 $i。
+初始化器用于设置循环迭代次数计数器的起始值。可以在此处声明一个变量用于此目的，且传统上将其命名为 `$i`。
 
 在循环的每次迭代中，都会对表达式进行布尔结果测试，只有当结果为真时，该循环迭代才会运行。如果测试结果为假，循环将结束。
 
@@ -1121,7 +986,7 @@ echo "At the end of the loop a=$a and b=$b";
 
 需要注意的是，while 循环中包含的任何后续代码都将被忽略。
 
-在接下来的示例中，成功第三次测试并调用 echo() 函数后的任何代码都将被忽略：
+在接下来的示例中，成功第三次测试并调用 `echo()` 函数后的任何代码都将被忽略：
 
 ```
 <html><head><title>While Loop</title></head>
@@ -1157,17 +1022,22 @@ do {
 ![](img/7faa63a7fa0add8f53300594ebae949f_47_1.png)
 
 | While Loop |
+
 | :--- |
+
 | File Edit View Tools Help |
+
 | Address: http://localhost/ifelse.php Go |
+
 | Test 3 success |
+
 | Done Local intranet |
 
 ### Break 语句
 
- “break” 关键字用于提前退出循环，无论循环条件是否仍然为真。“break”语句通常用于循环内部的 if 语句中，以便在满足特定条件时停止执行。
+“break”关键字用于提前退出循环，无论循环条件是否仍然为真。“break”语句通常用于循环内部的 if 语句中，以便在满足特定条件时停止执行。
 
-在接下来的示例中，当 $i 达到 3 时，循环终止：
+在接下来的示例中，当 `$i` 达到 3 时，循环终止：
 
 ```php
 <?php
@@ -1186,9 +1056,9 @@ echo "Loop stopped at $i";
 
 ### Continue 语句
 
- “continue” 关键字用于跳过循环的当前迭代并直接进入下一次迭代。与 “break” 不同，它不会终止整个循环。
+“continue”关键字用于跳过循环的当前迭代并直接进入下一次迭代。与“break”不同，它不会终止整个循环。
 
-在接下来的示例中，$i 为 3 的这次迭代被跳过了：
+在接下来的示例中，`$i` 为 3 的这次迭代被跳过了：
 
 ```php
 <?php
@@ -1204,10 +1074,6 @@ while ($i < 5) {
 ```
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_49_0.png)
-
-
-
-
 
 ## 返回语句
 
@@ -1251,12 +1117,19 @@ function multiply($a=1, $b=1, $c=1, $d=1, $e=1) {
 ## 目录
 
 - 创建数组 | 52
+
 - 修改数组元素值 | 53
+
 - 列出数组元素 | 54
+
 - 获取数组大小 | 55
+
 - 添加 & 移除数组元素 | 56
+
 - 数组键和值 | 58
+
 - 从 1 开始的索引 | 59
+
 - 操作数组 | 60
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_52_0.png)
@@ -1274,6 +1147,7 @@ $arr[2] = "array";
 
 echo($arr[0] . $arr[1] . $arr[2]);
 ```
+
 每个数组元素现在都可以像普通变量一样使用。
 
 将初始数组值作为列表传递给 `array()` 函数通常很方便。下面的示例演示了这种方法，该示例创建了三个数组输出显示在页面底部：![](img/7faa63a7fa0add8f53300594ebae949f_53_1.png)
@@ -1285,11 +1159,15 @@ $dy = array("21", "22", "23");
 $yr = array("2005", "2006", "2007");
 echo($mo[1]);
 ```
- 记得数组索引从 0 开始。因此 `$arr[2]` 是第三个数组，而不是第二个。参见第 59 页如何创建从 1 开始的索引。![](img/7faa63a7fa0add8f53300594ebae949f_53_2.png)
+
+记得数组索引从 0 开始。因此 `$arr[2]` 是第三个数组，而不是第二个。参见第 59 页如何创建从 1 开始的索引。![](img/7faa63a7fa0add8f53300594ebae949f_53_2.png)
 
 http://localhost/array.php
+
 First array
+
 Feb 21 
+
 Done
 
 ### 修改数组元素值
@@ -1318,6 +1196,7 @@ echo($arr[0] . $arr[1] . $arr[2]);
 ```
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_54_1.png)
+
 ![](img/7faa63a7fa0add8f53300594ebae949f_54_2.png)
 
 5. 使用数组 | 53
@@ -1389,8 +1268,11 @@ echo("<li>Total of elements is $size</li>");
 ![](img/7faa63a7fa0add8f53300594ebae949f_56_1.png)
 
 | 获取数组大小 | File | Favorites |
+
 | :--- | :--- | :--- |
+
 | Address | http://localhost/array.php | Go |
+
 | * This is element 0 | * This is element 1 | * Total number of elements is 3 |
 
 5. 使用数组 | 55
@@ -1460,10 +1342,6 @@ echo("<br>Removed last element: \$last");
 
 示例中的每个 PHP 数组函数都要求将数组名作为其参数指定。
 
-
-
-
-
 ### 数组的键和值
 
 PHP 数组元素不是包含单个数据值，而是每个元素可以包含一个键值对，其中键可以在脚本中用于引用其关联的值。
@@ -1494,21 +1372,28 @@ echo
 键名对大小写敏感，因此 `$arr['OS']` 和 `$arr['os']` 指向不同的数组
 
 | 键值数组元素 | |
+
 |---|---|
+
 | 文件 编辑 视图 收藏 工具 帮助 | |
+
 | 地址 http://localhost/keyarray.php | 访问 |
+
+
+
 | Platform: Linux Mandrake 10 | |
+
 | 完成 本地域网 | |
 
-从 HTML 表单提交的数据以输入名称（name）作为键，输入内容作为其值。这些内容可以存储在数组中，以便使用键名检索用户输入的数据。
+从 HTML 表单提交的数据以输入名称（`name`）作为键，输入内容作为其值。这些内容可以存储在数组中，以便使用键名检索用户输入的数据。
 
-PHP 5 快速入门
+# PHP 5 快速入门
 
 ### 从 1 开始的索引
 
 默认情况下，所有数组元素的索引从零开始，因此一号元素的索引是零。这可能会引起困惑，但 PHP 提供了一种从从一开始索引的方法，使得一号元素的索引也是一号。
 
-解决方案是使用 `=>` 语法为第一个元素值显式指定一个整数键 1。后续所有值将采用连续的索引号，正确地与它们在数组中的位置匹配。
+解决方案是使用 `=>` 语法为第一个元素值显式指定一个整数键 `1`。后续所有值将采用连续的索引号，正确地与它们在数组中的位置匹配。
 
 下面的示例演示了这种技术，它使一个包含五个元素的数组索引为 1-5，而不是默认的 0-4。每个元素通过循环写在页面上，该循环现在可以方便地通过其索引位置正确引用每个元素。
 
@@ -1559,17 +1444,21 @@ echo "Position $si - Element value: $arr[$si]<br>");
 ![](img/7faa63a7fa0add8f53300594ebae949f_61_1.png)
 
 | 操作数组 | |
+
 |---|---|
+
 | 文件 编辑 视图 收藏 工具 帮助 | |
+
 | 地址 http://localhost/slicearray.php | 访问 |
+
 | Alpha Charlie Delta Echo | |
+
 | Bravo Charlie Delta | |
 
 ## 生成动态内容
 
 本章演示了 PHP 如何根据浏览器类型、日期和时间、随机生成的数字或用户输入提供动态内容。它还说明了字符串处理以及如何重定向客户端浏览器。
 
-# 
 - 识别浏览器与平台 | 62
 - 服务器日期与时间 | 64
 - 特定时间的内容 | 65
@@ -1599,8 +1488,6 @@ Windows 中的细节识别出 Internet Explorer 6.0 是运行在 Windows XP（�
 ![](img/7faa63a7fa0add8f53300594ebae949f_63_1.png)
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_63_2.png)
-
-PHP 5 快速入门
 
 ### ...续
 
@@ -1643,8 +1530,6 @@ preg_match("/string-to-seek", "string-to-search");
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_64_2.png)
 
-6. 生成动态内容
-
 ### 服务器日期与时间
 
 PHP `date()` 函数返回服务器当前的日期和时间，根据指定的参数进行格式化。参数如下表所示，示例在页面底部：
@@ -1675,10 +1560,6 @@ $time = date("g:i a"); # 5.25 pm
 $time = date("H:i:s"); // 05:25:30
 ```
 
-
-
-
-
 ### 与时间相关的内容
 
 当前日期或时间可以用于创建适用于当天、月份或一天中特定时段动态内容。下面的示例脚本将根据用户访问服务器的时间写入一条合适的消息。
@@ -1708,26 +1589,21 @@ echo ("$msg The time is \$now");
 |---|---|---|------|
 | 文件 编辑 视图 收藏 工具 帮助 | | | | |
 | 地址 | http://localhost/greetings.php | Go |
-
 早上好。时间是 11:30
 
 | 问候 | | | | |
 |---|---|---|------|
 | 文件 编辑 视图 收藏 工具 帮助 | | | | |
 | 地址 | http://localhost/greetings.php | Go |
-
 下午好。时间是 3:35
 
 | 问候 | | | | |
 |---|---|---|------|
 | 文件 编辑 视图 收藏 工具 帮助 | | | | |
 | 地址 | http://localhost/greetings.php | Go |
-
 晚上好。时间是 9:40
 
 | 完成 | 本地局域网 |
-
-6. 生成动态内容 | 65
 
 ### 随机数生成器
 
@@ -1790,8 +1666,6 @@ $banner .= " width='380' height='110' border='0'>";
 echo( $banner );
 ?>
 </body>
-
-
 ```
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_68_1.png)
@@ -1804,32 +1678,25 @@ echo( $banner );
 
 PHP 非常擅长处理表单提交的数据。下面的简单表单包含一组用于获取值的输入字段。当表单提交时，这些值将发送到服务器。通过 `rand()` 函数设置种子，可以防止生成规律性的数字。
 
-[此处为原文重复内容，已忽略翻译逻辑]
-
 | 问候 | | | | |
 |---|---|---|------|
 | 文件 编辑 视图 收藏 工具 帮助 | | | | |
 | 地址 | http://localhost/greetings.php | Go |
-
 早上好。时间是 11:30
 
 | 问候 | | | | |
 |---|---|---|------|
 | 文件 编辑 视图 收藏 工具 帮助 | | | | |
 | 地址 | http://localhost/greetings.php | Go |
-
 下午好。时间是 3:35
 
 | 问候 | | | | |
 |---|---|---|------|
 | 文件 编辑 视图 收藏 工具 帮助 | | | | |
 | 地址 | http://localhost/greetings.php | Go |
-
 晚上好。时间是 9:40
 
 | 完成 | 本地局域网 |
-
-6. 生成动态内容 | 65
 
 ### 随机数生成器
 
@@ -1839,15 +1706,11 @@ PHP `rand()` 函数用于生成随机数。可以可选地作为 `rand()` 函数
 
 此示例以常用方式使用 `rand()` 函数，然后生成 1 到 100 范围内的随机数。
 
-[此处为原文重复内容，已忽略翻译逻辑]
-
-
-
-
-
 ### 续
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_72_0.png)
+
+
 
 ```html
 <html><head><title>Calculation Result</title> </head>
@@ -1875,11 +1738,11 @@ if( is_numeric($val1) && is_numeric($val2) )
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_72_1.png)
 
-switch 语句正在与 HTML 表单单按钮组的四种可能值进行匹配。
+`switch`语句正在与 HTML 表单单按钮组的四种可能值进行匹配。
 
-上面的表单处理脚本使用 PHP 的 is_numeric 函数来确保确实输入了两个数字。该函数接受一个值作为参数进行求值，并且仅当该值为数字时才返回 true。
+上面的表单处理脚本使用 PHP 的 `is_numeric` 函数来确保确实输入了两个数字。该函数接受一个值作为参数进行求值，并且仅当该值为数字时才返回 `true`。
 
-如果选择了算术操作，switch 语句将确定操作类型并执行求和。（注意：文本说的是 "sum"，但代码执行了各种操作）。脚本将输出计算总和，或者在用户输入无效或不完整的内容时请求重试。
+如果选择了算术操作，`switch`语句将确定操作类型并执行求和。（注意：文本说的是 "sum"，但代码执行了各种操作）。脚本将输出计算总和，或者在用户输入无效或不完整的内容时请求重试。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_72_2.png)
 
@@ -1887,7 +1750,7 @@ switch 语句正在与 HTML 表单单按钮组的四种可能值进行匹配。
 
 ## 字符串处理
 
-此示例演示了如何使用 PHP 的一些字符串函数对字符串进行处理。当表单提交时，函数名将作为键 "fcn" 关联的值发送到服务器。
+此示例演示了如何使用 PHP 的一些字符串函数对字符串进行处理。当表单提交时，函数名将作为键 `"fcn"` 关联的值发送到服务器。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_73_0.png)
 
@@ -1913,22 +1776,32 @@ switch 语句正在与 HTML 表单单按钮组的四种可能值进行匹配。
 </html>
 ```
 
-strings.html
+`strings.html`
 
-在本示例中，要处理的字符串是 textarea 的文本输入内容，它通过 "txt" 键发送到服务器。
+在本示例中，要处理的字符串是 `textarea` 的文本输入内容，它通过 `"txt"` 键发送到服务器。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_73_1.png)
 
 | 字符串处理 |
+
 | :--- |
+
 | 文件 编辑 视图 收藏 工具 帮助 |
+
 | 地址 http://localhost/strings.html 转 |
+
 | 在此处输入一些文本： |
+
 | PHP 太棒了 - 很容易学！ |
+
 | ○ 查找文本长度 反转文本 |
+
 | ○ 更改为全大写 更改为全小写 |
+
 | ○ 将所有单词的首字母大写 |
+
 | 处理 |
+
 | 完成 |
 
 ### 续
@@ -1942,38 +1815,51 @@ echo ($fcn($txt));
 ?></body></html>
 ```
 
-上面的表单处理脚本从变量 $fcn 获取函数名，并以 $txt 键的字符串作为参数调用它。以下是针对 textarea 中所示字符串的一些处理结果。（img/7faa63a7fa0add8f53300594ebae949f_74_0.png）
+上面的表单处理脚本从变量 `$fcn` 获取函数名，并以 `$txt` 键的字符串作为参数调用它。以下是针对 `textarea` 中所示字符串的一些处理结果。（img/7faa63a7fa0add8f53300594ebae949f_74_0.png）
 
-strlen() 函数返回给定字符串字符的整数总数。（img/7faa63a7fa0add8f53300594ebae949f_74_1.png）
+`strlen()` 函数返回给定字符串字符的整数总数。（img/7faa63a7fa0add8f53300594ebae949f_74_1.png）
 
-strrev() 函数返回反序的给定字符串。（img/7faa63a7fa0add8f53300594ebae949f_74_2.png）
+`strrev()` 函数返回反序的给定字符串。（img/7faa63a7fa0add8f53300594ebae949f_74_2.png）
 
-给定字符串可以通过 strtoupper() 完全转换为大写，或通过 strtolower() 转换为小写。（img/7faa63a7fa0add8f53300594ebae949f_74_3.png）
+给定字符串可以通过 `strtoupper()` 完全转换为大写，或通过 `strtolower()` 转换为小写。（img/7faa63a7fa0add8f53300594ebae949f_74_3.png）
 
-ucwords() 函数返回每个单词首字母大写的给定字符串。
+`ucwords()` 函数返回每个单词首字母大写的给定字符串。
 
 | 字符串结果 |
+
 | :--- |
+
 | 文件 编辑 视图 收藏 帮助 |
+
 | 地址 http://localhost/strings.php 转 |
+
 | 40 |
+
 | 字符串结果 |
+
 | 文件 编辑 视图 收藏 帮助 |
+
 | 地址 http://localhost/strings.php 转 |
+
 | PHP 太棒了 - 很容易学！ |
+
 | 字符串结果 |
+
 | 文件 编辑 视图 收藏 帮助 |
+
 | 地址 http://localhost/strings.php 转 |
+
 | PHP 太棒了 - 很容易学！ |
+
 | 完成  |
 
 6. 生成动态内容 | 73
 
 ### 刷新页面
 
-之前的示例使用了不同的文件作为表单处理器来处理数据，但通过将 PHP 环境变量 `$_SERVER['PHP_SELF']` 赋值给表单的 action 属性，可以使用页面自身的表单处理器。
+之前的示例使用了不同的文件作为表单处理器来处理数据，但通过将 PHP 环境变量 `$_SERVER['PHP_SELF']` 赋值给表单的 `action` 属性，可以使用页面自身的表单处理器。
 
-下面的示例演示了一个数字游戏，它在首次加载时生成一个随机数并赋值给隐藏输入。页面包含一个调用 header() 的初始化块。指定的参数 "Cache-Control:no-cache" 表示浏览器应该刷新此页面而不是使用缓存。初始化块包含一个名为 setnum() 的函数，它生成一个 1 到 20 之间的随机数并赋值给变量 `$num`。随后页面刷新并保留 $num 变量的值。如果用户猜对了数字，脚本将调用 setnum() 函数为 $num 变量分配一个新的目标数字。
+下面的示例演示了一个数字游戏，它在首次加载时生成一个随机数并赋值给隐藏输入。页面包含一个调用 `header()` 的初始化块。指定的参数 `"Cache-Control:no-cache"` 表示浏览器应该刷新此页面而不是使用缓存。初始化块包含一个名为 `setnum()` 的函数，它生成一个 1 到 20 之间的随机数并赋值给变量 `$num`。随后页面刷新并保留 `$num` 变量的值。如果用户猜对了数字，脚本将调用 `setnum()` 函数为 `$num` 变量分配一个新的目标数字。
 
 ```php
 <?php header("Cache-Control:no-cache");
@@ -2031,10 +1917,6 @@ else if ($guess == $num) {
 
 6. 生成动态内容 | 75
 
-
-
-
-
 ### ...续
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_78_0.png)
@@ -2053,7 +1935,7 @@ PHP 可为能够访问互联网的各种移动设备提供适当的内容。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_79_0.png)
 
-通常这些设备的显示区域比 PC 显示器小得多，因此大图像并不合适。此外，它们的功能通常较低，可能无法正确读取网页。例如，NTT DoCoMo 采用的 i-mode 标准使用了紧凑 HTML (cHTML)，它仅包含 HTML 中的部分标签。
+通常这些设备的显示区域比 PC 显示器小得多，因此大图像并不合适。此外，它们的功能通常较低，可能无法正确读取网页。例如，NTT DoCoMo 采用的 i-mode 标准使用了紧凑 HTML (`cHTML`)，它仅包含 HTML 中的部分标签。
 
 下面的示例通过搜索 `HTTP_USER_AGENT` 环境变量来识别浏览器。如果它发现了某些移动设备上使用的 Pixo 微浏览器，它将提供一张小图片。否则，将提供一张大图片：
 
@@ -2075,7 +1957,7 @@ echo ($img);
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_79_1.png)
 
-或者，PHP 也可以微浏览器重定向到包含适合设备内容的 cHTML 页面。
+或者，PHP 也可以微浏览器重定向到包含适合设备内容的 `cHTML` 页面。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_79_2.png)
 
@@ -2086,16 +1968,27 @@ echo ($img);
 ### 涵盖
 
 - 显示目录文件 | 80
+
 - 复制与重命名文件 | 82
+
 - 删除文件 | 84
+
 - 打开与关闭文件 | 85
+
 - 读取文件 | 86
+
 - 写入文件 | 88
+
 - 记录访问者详情 | 90
+
 - 启用文件上传 | 92
+
 - 创建上传表单 | 93
+
 - 创建上传脚本 | 94
+
 - 上传文件 | 95
+
 - 确认文件上传 | 96
 
 ### 显示目录文件
@@ -2106,7 +1999,7 @@ echo ($img);
 
 重要的是，在循环完成后要使用 `closedir()` 函数关闭目录。同样，这需要提供目录句柄作为参数。
 
-此示例将 Apache 的 bin 文件夹中的每个文件名赋值给变量 `$file`，然后将其添加到 `$file_list` 变量中。
+此示例将 Apache 的 `bin` 文件夹中的每个文件名赋值给变量 `$file`，然后将其添加到 `$file_list` 变量中。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_81_0.png)
 
@@ -2144,7 +2037,7 @@ closedir($dir);
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_82_0.png)
 
-调整代码以获得适用于你系统的的正确路径。请注意，Linux 版本的 Apache 将更多文件放在其 bin 目录中，因此 `$file_list` 变量将显示出更长的列表。
+调整代码以获得适用于你系统的的正确路径。请注意，Linux 版本的 Apache 将更多文件放在其 `bin` 目录中，因此 `$file_list` 变量将显示出更长的列表。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_82_1.png)
 
@@ -2156,7 +2049,7 @@ closedir($dir);
 
 当 `copy()` 函数成功复制文件时，它返回一个 `true` 值，否则返回一个 `false` 值。
 
-下面的示例尝试从 Apache 的 logs 目录复制错误日志，然后无论成功失败都打印一条消息。
+下面的示例尝试从 Apache 的 `logs` 目录复制错误日志，然后无论成功失败都打印一条消息。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_83_0.png)
 
@@ -2164,7 +2057,7 @@ closedir($dir);
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_83_1.png)
 
-copyfile.php
+`copyfile.php`
 
 ```php
 <?php
@@ -2183,7 +2076,6 @@ if (copy($source, $dest)) {
 }
 ?>
 ```
-*(注：此处对示例代码中的 echo 内容进行了逻辑翻译以符合语境，但根据规则代码块不翻译，此处保持原意逻辑，修正为原始代码内容：)*
 
 ```php
 <?php
@@ -2202,235 +2094,14 @@ if (copy($source, $dest)) {
 }
 ?>
 ```
-*(更正：遵循“代码块不需要翻译”原则，严格保留原文代码内容)*
 
-```php
-<?php
-# php for Windows ...
-$source = "C:\\Apache\\logs\\error.log";
-$dest = "C:\\Documents and Settings\\All Users\\Desktop\\error.bak";
 
-# for Linux ...
-$source = "/usr/local/apache/logs/error_log";
-$dest = "/home/mike/desktop/error_log";
 
-if (copy($source, $dest)) {
-    echo "success";
-} else {
-    echo "fail";
-}
-?>
-```
-*(重新审视原文，原文代码中只有 `echo ($img)`，应保持原样：)*
-
-```php
-<?php
-# php for Windows ...
-$source = "C:\\Apache\\logs\\error.log";
-$dest = "C:\\Documents and Settings\\All Users\\Desktop\\error.bak";
-
-# for Linux ...
-$source = "/usr/local/apache/logs/error_log";
-$dest = "/home/mike/desktop/error_log";
-
-if (copy($source, $dest)) {
-    echo "success";
-} else {
-    echo "fail";
-}
-?>
-```
-*(抱歉，提供的原文文本中代码部分在示例中似乎不完整或有差异，我将基于提供的待翻译文本进行处理：)*
-
-```php
-<?php
-# php for Windows ...
-$source = "C:\\Apache\\logs\\error.log";
-$dest = "C:\\Documents and Settings\\All Users\\Desktop\\error.bak";
-
-# for Linux ...
-$source = "/usr/local/apache/logs/error_log";
-$dest = "/home/mike/desktop/error_log";
-
-if (copy($source, $dest)) {
-    echo "success";
-} else {
-    echo "fail";
-}
-?>
-```
-*(再次检查原文，发现待翻译文本中 `copyfile.php` 之后紧跟的是代码块，但用户给出的文本中代码块不完整，我将按照待翻译文本中的结构输出：)*
-
-copyfile.php
-
-```php
-<?php
-# php for Windows ...
-$source = "C:\\Apache\\logs\\error.log";
-$dest = "C:\\Documents and Settings\\All Users\\Desktop\\error.bak";
-
-# for Linux ...
-$source = "/usr/local/apache/logs/error_log";
-$dest = "/home/mike/desktop/error_log";
-
-if (copy($source, $dest)) {
-    echo "success";
-} else {
-    echo "fail";
-}
-?>
-```
-*(注：由于待翻译文本中 `copyfile.php` 后的代码块似乎截断或不完整，我将仅翻译文本中可见的部分。但观察发现用户提供的文本块中 `copyfile.php` 后面确实没有完整的代码，我将根据提供的文本进行翻译。)*
-
-*(重新核对待翻译文本，发现 `copyfile.php` 后面确实没有代码，我将直接结束。等等，发现 `copyfile.php` 之后没有代码。我将重新开始翻译。)*
-
----重新翻译：：
-
-如果命名的目标文件已存在，它将被 `copy()` 函数覆盖。
-
-![](img/7faa63a7fa0add8f53300594ebae949f_83_1.png)
-
-copyfile.php
-
-```php
-<?php
-# php for Windows ...
-$source = "C:\\Apache\\logs\\error.log";
-$dest = "C:\\Documents and Settings\\All Users\\Desktop\\error.bak";
-
-# for Linux ...
-$source = "/usr/local/apache/logs/error_log";
-$dest = "/home/mike/desktop/error_log";
-
-if (copy($source, $dest)) {
-    echo "success";
-} else {
-    echo "fail";
-}
-?>
-```
-*(等等，我发现待翻译文本中 `copyfile.php` 之后确实没有代码。我将根据用户提供的文本进行翻译。)*
-
-*(抱歉，我发现用户提供的“待翻译文本”中 `copyfile.php` 之后确实没有代码。我将直接结束。)*
-
---- 实际上，我重新看了一眼用户提供的文本，我发现 `copyfile.php` 之后确实没有代码。我将只翻译文本文本。。
-
-
-
-
-
-以下翻译的翻译翻译：：
-
-### 涵盖
-
-- 显示目录文件 | 80
-- 复制与重命名文件 | 82
-- 删除文件 | 84
-- 打开与关闭文件 | 85
-- 读取文件 | 86
-- 写入文件 | 88
-- 记录访问者详情 | 90
-- 启用文件上传 | 92
-- 创建上传表单 | 93
-- 创建上传脚本 | 94
-- 上传文件 | 95
-- 确认文件上传 | 96
-
-### 显示目录文件
-
-可以使用特殊的 PHP 函数来显示系统中任何目录中包含的所有文件列表。在访问目录之前，必须使用 `opendir()` 函数打开它。该函数接受目录的完整路径地址作为参数，并返回一个“目录句柄”。
-
-一旦打开，就可以循环使用 `readdir()` 函数将所有文件名分配给一个变量列表以遍历每次迭代；该函数以目录句柄作为参数。
-
-重要的是，在循环完成后要使用 `closedir()` 函数关闭目录。同样，这需要提供目录句柄作为参数。
-
-此示例将 Apache 的 bin 文件夹中的每个文件名赋值给变量 `$file`，然后将其添加到 `$file_list` 变量中。
-
-![](img/7faa63a7fa0add8f53300594ebae949f_81_0.png)
-
-```php
-<?php
-### 适用于 Windows...
-$dirname = "C:\\bin";
-
-### 适用于 Linux... $dirname = "/usr/local/apache/bin";
-
-$dir = opendir($dirname);
-
-while ( false != $file = readdir($dir) ) {
-    if ($file != ".") && ($file != "..")) {
-        $file_list .= "<li>\$$file</li>";
-    }
-}
-
-closedir($dir);
-
-?>
-
-<html><head><title>Listing directory</title>
-<body>
-<p>Files in <?php echo $dirname; ?></p>
-<ul>
-<li><?php echo $file_list; ?></li>
-</ul>
-</body></html>
-```
-
-![](img/7faa63a7fa0add8f53300594ebae949f_81_1.png)
-
-### ...续
-
-![](img/7faa63a7fa0add8f53300594ebae949f_82_0.png)
-
-调整代码以获得适用于你系统的正确路径。请注意，Linux 版本的 Apache 将更多文件放在其 bin 目录中，因此 `$file_list` 变量将显示出更长的列表。
-
-![](img/7faa63a7fa0add8f53300594ebae949f_82_1.png)
-
-7 使用 PHP 进行文件处理 | 81
-
-### 复制与重命名文件
-
-系统上的文件可以使用 PHP 的 `copy()` 函数复制到任何位置。这需要两个参数：要复制的源文件的完整路径，以及要放置副本的目标位置的完整路径。
-
-当 `copy()` 函数成功复制文件时，它返回一个 `true` 值，否则返回一个 `false` 值。
-
-下面的示例尝试从 Apache 的 logs 目录复制错误日志，然后无论成功失败都打印一条消息。
-
-![](img/7faa63a7fa0add8f53300594ebae949f_83_0.png)
-
-如果命名的目标文件已存在，它将被 `copy()` 函数覆盖。
-
-![](img/7faa63a7fa0add8f53300594ebae949f_83_1.png)
-
-copyfile.php
-
-*(由于原文文本中 copyfile.php 之后无内容，此处跳过)*
-
-*(等等，我发现用户提供的文本中 copyfile.php 之后确实没有代码。我将只翻译文本。)*
-
---- 最终输出如下：：
-
-[content]
-
-### ...续
-
-![](img/7faa63a7fa0add8f53300594ebae949f_78_0.png)
-
-![](img/7faa63a7fa0add8f53300594ebae949f_78_1.png)
-
-世界维网联盟（W3C）开发具有互操作性的技术（规范、指南、软件和工具），以引导 Web 发挥其全部潜力。W3C 是一个关于信息、商业、通信和共同理解的论坛。在此页面上，你将找到 W3C 新闻、W3C 技术的链接以及参与其中的方法。新访问者可以在“在 W3C 寻找路”中找到帮助。我们鼓励您阅读《愿书》并了解更多关于 W3C 的信息。
-
-![](img/7faa63a7fa0add8f53300594ebae949f_78_2.png)
-
-6 生成动态内容 | 77
-
-## PHP 与移动设备
+### PHP 与移动设备
 
 PHP 可为能够访问互联网的各种移动设备提供适当的内容。
 
-![](img/7faa63a7fa0add8f53300594ebae949f_79_0.png)
-
-通常这些设备的显示区域比 PC 显示器小得多，因此大图像并不合适。此外，它们的功能通常较低，可能无法正确读取网页。例如，NTT DoCoMo 采用的 i-mode 标准使用了紧凑 HTML (cHTML)，它仅包含 HTML 中的部分标签。
+通常这些设备的显示区域比 PC 显示器小得多，因此大图像并不合适。此外，它们的功能通常较低，可能无法正确读取网页。例如，NTT DoCoMo 采用的 i-mode 标准使用了紧凑 HTML (`cHTML`)，它仅包含 HTML 中的部分标签。
 
 下面的示例通过搜索 `HTTP_USER_AGENT` 环境变量来识别浏览器。如果它发现了某些移动设备上使用的 Pixo 微浏览器，它将提供一张小图片。否则，将提供一张大图片：
 
@@ -2450,11 +2121,7 @@ echo ($img);
 </html>
 ```
 
-![](img/7faa63a7fa0add8f53300594ebae949f_79_1.png)
-
-或者，PHP 也可以微浏览器重定向到包含适合设备内容的 cHTML 页面。
-
-![](img/7faa63a7fa0add8f53300594ebae949f_79_2.png)
+或者，PHP 也可以微浏览器重定向到包含适合设备内容的 `cHTML` 页面。
 
 ## 使用 PHP 进行文件处理
 
@@ -2485,8 +2152,6 @@ echo ($img);
 
 此示例将 Apache 的 bin 文件夹中的每个文件名赋值给变量 `$file`，然后将其添加到 `$file_list` 变量中。
 
-![](img/7faa63a7fa0add8f53300594ebae949f_81_0.png)
-
 ```php
 <?php
 ### 适用于 Windows...
@@ -2515,17 +2180,7 @@ closedir($dir);
 </body></html>
 ```
 
-![](img/7faa63a7fa0add8f53300594ebae949f_81_1.png)
-
-### ...续
-
-![](img/7faa63a7fa0add8f53300594ebae949f_82_0.png)
-
 调整代码以获得适用于你系统的正确路径。请注意，Linux 版本的 Apache 将更多文件放在其 bin 目录中，因此 `$file_list` 变量将显示出更长的列表。
-
-![](img/7faa63a7fa0add8f53300594ebae949f_82_1.png)
-
-7 使用 PHP 进行文件处理 | 81
 
 ### 复制与重命名文件
 
@@ -2535,21 +2190,31 @@ closedir($dir);
 
 下面的示例尝试从 Apache 的 logs 目录复制错误日志，然后无论成功失败都打印一条消息。
 
-![](img/7faa63a7fa0add8f53300594ebae949f_83_0.png)
-
 如果命名的目标文件已存在，它将被 `copy()` 函数覆盖。
 
-![](img/7faa63a7fa0add8f53300594ebae949f_83_1.png)
+`copyfile.php`
 
-copyfile.php
+```php
+<?php
+# php for Windows ...
+$source = "C:\\Apache\\logs\\error.log";
+$dest = "C:\\Documents and Settings\\All Users\\Desktop\\error.bak";
 
+# for Linux ...
+$source = "/usr/local/apache/logs/error_log";
+$dest = "/home/mike/desktop/error_log";
 
-
-
+if (copy($source, $dest)) {
+    echo "success";
+} else {
+    echo "fail";
+}
+?>
+```
 
 ### 打开与关闭文件
 
-PHP 的 fopen() 函数用于从文件中读取文本、向文件中写入文本以及向文件追加文本。它需要两个参数：文件名和操作模式。
+PHP 的 `fopen()` 函数用于从文件中读取文本、向文件中写入文本以及向文件追加文本。它需要两个参数：文件名和操作模式。
 
 文件模式可以指定为下表中的六个选项之一：
 
@@ -2562,30 +2227,26 @@ PHP 的 fopen() 函数用于从文件中读取文本、向文件中写入文本�
 | a | 只写模式打开文件。将文件指针放在文件末尾。如果文件不存在，将尝试创建它。 |
 | a+ | 读写模式打开文件。将文件指针放在文件末尾。如果文件不存在，将尝试创建它。 |
 
-![](img/7faa63a7fa0add8f53300594ebae949f_86_0.png)
-
-如果尝试打开文件失败，fopen() 返回 false，否则它返回一个引用该文件的文件指针。在对打开的文件进行更改后，使用 fclose() 函数关闭它以断开文件指针。fclose() 函数需要文件指针作为参数，并在关闭成功时返回 true，失败时返回 false。
-
-下一页的示例演示了如何打开文件、读取文件，然后正确关闭文件。
+如果尝试打开文件失败，`fopen()` 返回 `false`，否则它返回一个引用该文件的文件指针。在对打开的文件进行更改后，使用 `fclose()` 函数关闭它以断开文件指针。`fclose()` 函数需要文件指针作为参数，并在关闭成功时返回 `true`，失败时返回 `false`。
 
 ### 读取文件
 
-可以使用 fopen() 函数打开文件，它需要两个参数：指定文件名和上一页列出的文件模式之一。fopen() 函数返回一个引用该文件的文件指针，可用于读取文件内容。
+可以使用 `fopen()` 函数打开文件，它需要两个参数：指定文件名和上一页列出的文件模式之一。`fopen()` 函数返回一个引用该文件的文件指针，可用于读取文件内容。
 
-然后可以使用 fread() 函数读取文件，该函数也需要两个参数：文件指针和以字节为单位的文件长度。
+然后可以使用 `fread()` 函数读取文件，该函数也需要两个参数：文件指针和以字节为单位的文件长度。
 
-可以使用 filesize() 函数找到文件的长度，它接受文件名作为参数并返回以字节为单位的文件大小。
+可以使用 `filesize()` 函数找到文件的长度，它接受文件名作为参数并返回以字节为单位的文件大小。
 
 因此，使用 PHP 读取文件的技术遵循以下模式：
 
-- 使用 fopen() 打开文件
-- 使用 filesize() 获取文件长度
-- 使用 fread() 读取文件内容
-- 使用 fclose() 关闭文件
+- 使用 `fopen()` 打开文件
+- 使用 `filesize()` 获取文件长度
+- 使用 `fread()` 读取文件内容
+- 使用 `fclose()` 关闭文件
 
 以下示例将文本文件的内容赋值给一个变量，然后在页面上显示这些内容。
 
-![](img/7faa63a7fa0add8f53300594ebae949f_87_0.png)
+
 
 ```html
 <html><head><title>Reading a file</title></head>
@@ -2606,7 +2267,7 @@ echo("<pre>$text</pre>");
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_88_0.png)
 
-quote.txt
+`quote.txt`
 
 ```
 quote.txt - 记事本
@@ -2649,13 +2310,13 @@ Done Local intranet
 
 ### 写入文件
 
-可以使用 PHP fwrite() 函数写入新文件，或向现有文件追加内容。这需要两个参数：文件指针和要写入的数据字符串。可选地包含第三个整数参数来指定要写入的数据长度。如果包含了第三个参数，将在达到指定的长度（字节）后停止。
+可以使用 PHP `fwrite()` 函数写入新文件，或向现有文件追加内容。这需要两个参数：文件指针和要写入的数据字符串。可选地包含第三个整数参数来指定要写入的数据长度。如果包含了第三个参数，将在达到指定的长度（字节）后停止。
 
-使用 fopen() 函数获取文件指针，参数指定文件名和第 85 页列出的写入模式之一。
+使用 `fopen()` 函数获取文件指针，参数指定文件名和第 85 页列出的写入模式之一。
 
-向文件写入后，应使用 fclose() 函数关闭它，该函数需要文件指针。
+向文件写入后，应使用 `fclose()` 函数关闭它，该函数需要文件指针。
 
-可以使用 file_exists() 函数测试文件是否存在，如果文件存在则返回 true，不存在则返回 false。以下示例创建了一个新文件并向其中写入文本。
+可以使用 `file_exists()` 函数测试文件是否存在，如果文件存在则返回 true，不存在则返回 false。以下示例创建了一个新文件并向其中写入文本。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_89_0.png)
 
@@ -2678,9 +2339,9 @@ if (file_exists($filename)) {
 
 写入文件的能力使得 PHP 可以轻松地记录页面访问者的详情，并对网站开发有所帮助。
 
-通过记录环境变量 HTTP_REFERER 的值，发现访问者是如何到达页面的是特别有趣的。它包含了用户为了到达你的页面所遵循的页面 URL。
+通过记录环境变量 `HTTP_REFERER` 的值，发现访问者是如何到达页面的是特别有趣的。它包含了用户为了到达你的页面所遵循的页面 URL。
 
-通过记录页面访问者的 IP 地址，可以发现访问者返回的频率；这存储在环境变量 REMOTE_ADDR 中。
+通过记录页面访问者的 IP 地址，可以发现访问者返回的频率；这存储在环境变量 `REMOTE_ADDR` 中。
 
 以下脚本演示了如何记录这些访问者详情，以及他们的浏览器类型和访问页面的时间。
 
@@ -2720,36 +2381,54 @@ fclose($file);
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_91_1.png)
 
-
-
-
-
 在本示例中，`log.php` 文件不包含任何 HTML 内容，但实际上会显示一个普通页面。多种不同颜色的示例页面提供了指向 `log.php` 的链接，可以通过打开 `log.html` 日志文件清晰地识别。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_92_0.png)
 
-| C:\Apache\htdocs\log.html |
+| `C:\Apache\htdocs\log.html` |
+
 |---|---|
+
 | 文件 编辑 视图 收藏  工具 帮助 |
+
 | 时间: 16:22 6月10日 |
+
 | IP 地址: 127.0.0.1 |
+
 | 引用页: http://localhost/yellow_site.html |
+
 | 浏览器: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1) |
+
 | 时间: 16:23 6月10日 |
+
 | IP 地址: 127.0.0.1 |
+
 | 引用页: http://localhost/blue_site.html |
+
 | 浏览器: Mozilla/4.0 (compatible; MSIE 6.0, Windows NT 5.1) |
+
 | 时间: 16:23 6月10日 |
+
 | IP 地址: 127.0.0.1 |
+
 | 引用页: http://localhost/green_site.html |
+
 | 浏览器: Mozilla/4.0 (compatible; MSIE 6.0, Windows NT 5.1) |
+
 | 时间: 16:24 6月10日 |
+
 | IP 地址: 127.0.0.1 |
+
 | 引用页: http://localhost/red_site.html |
+
 | 浏览器: Opera/7.51 (Windows NT 5.1, U) [en] |
+
 | 时间: 16:24 6月10日 |
+
 | IP 地址: 127.0.0.1 |
+
 | 引用页: http://localhost/yellow_site.html |
+
 | 浏览器: Opera/7.51 (Windows NT 5.1, U) [en] |
 
 ## 启用文件上传
@@ -2801,12 +2480,19 @@ Select a file to upload:<br>
 ![](img/7faa63a7fa0add8f53300594ebae949f_94_1.png)
 
 | 文件上传器 | |
+
 |---|---|
+
 | 文件 编辑 视图 收藏 工具 帮助 |
+
 | 地址 http://localhost/uploader.html 转 |
+
 | 文件上传 |
+
 | 选择一个要上传的文件：[浏览] |
+
 | 上传文件 |
+
 | 完成 本局域网 |
 
 7. 使用 PHP 处理文件 | 93
@@ -2920,23 +2606,24 @@ setcookie("cookie_name", "cookie_data" );
 </html>
 ```
 
-
-
-
-
 ### ...续上
 
-setcookie() 函数一次只设置一个 cookie，最多需要六个参数。这些参数在下列表中进行了描述，并按照它们必须出现的顺序排列：
+`setcookie()` 函数一次只设置一个 cookie，最多需要六个参数。这些参数在下列表中进行了描述，并按照它们必须出现的顺序排列：
 
 - **名称（Name）** - 设置 cookie 的名称，并将其存储在名为 `$_COOKIE[]` 的 PHP 环境变量数组中。可以通过在方括号内的引号中插入 cookie 名称来引用该 cookie。
 - **值（Value）** - 设置命名变量的值，即你想要存储的内容。
+
+
+
 - **过期时间（Expiry）** - 指定一个未来的时间，以自 1970 年 1 月 1 日 GMT 00:00:00 以来计算的秒数，在该时间之后 cookie 将无法访问。如果未设置此参数，cookie 将在网络浏览器关闭时自动过期。
+
 - **路径（Path）** - 指定 cookie 有效的服务器目录。单个正斜杠 `/` 允许 cookie 在所有目录下均有效。如果指定了特定目录，则 cookie 仅在该目录内有效。
+
 - **域名（Domain）** - 可指定域名，且必须包含至少两个点才有效。如果未指定此参数，默认值为创建 cookie 的服务器的主机。所有 cookie 仅对创建它们的主机和域名有效。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_100_0.png)
 
-可以使用 setcookie() 函数配合过去的过期日期来删除 cookie。
+可以使用 `setcookie()` 函数配合过去的过期日期来删除 cookie。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_100_1.png)
 
@@ -2948,7 +2635,7 @@ setcookie() 函数一次只设置一个 cookie，最多需要六个参数。这�
 
 除了名称参数外，所有参数都是可选的。如果只存在名称参数，则将从用户的计算机上删除该名称的 cookie。
 
-通过在 PHP time() 函数获取的当前基础上加上秒数，可以轻松地设置过期时间。以下每个示例都设置了一个名为 "ID"、值为 "X12345" 的 cookie，并在生成 24 小时后过期：
+通过在 PHP `time()` 函数获取的当前基础上加上秒数，可以轻松地设置过期时间。以下每个示例都设置了一个名为 "ID"、值为 "X12345" 的 cookie，并在生成 24 小时后过期：
 
 ```php
 setcookie("ID", "X12345", time()+86400 , "/", " ", 0);
@@ -3098,10 +2785,6 @@ if (isset($_COOKIE['auth'])) {
 </html>
 ```
 
-
-
-
-
 ### 续
 
 Netscape 和 Mozilla 浏览器拥有非常出色的 Cookie 管理（Cookie Manager）功能，它可以让你轻松查看存储在计算机上的 cookie。这可以用于验证启动 PHP 会话后会 cookie 是否存在。
@@ -3199,6 +2882,7 @@ PHP 有一个名为 SID 的常量，它以键值对的形式包含了唯一会�
 ![](img/7faa63a7fa0add8f53300594ebae949f_109_2.png)
 
 session_start.php
+
 ```php
 <?php session_start(); ?>
 <html>
@@ -3234,6 +2918,7 @@ if (isset($_SESSION['count'])) {
 </body>
 </html>
 ```
+
 PHPSESSID = <?php echo session_id(); ?>
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_10_2.png)
@@ -3243,6 +2928,8 @@ PHPSESSID = <?php echo session_id(); ?>
 ### 设置会话偏好
 
 此示例演示了如何使用名为 "font" 的会话变量跨多个页面访问用户选择的偏好。会话 ID 通过 URL 链接传递 SID常量，这样即使禁用了 cookie，也可以从任何页面访问用户的偏好。
+
+
 
 ```php
 <?php session_start();
@@ -3275,14 +2962,20 @@ if ($_POST['font']) {
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_111_1.png)
 
-当带有选单单按钮提交此表单时，名为 "font" 的会话获取所选按钮的值，并进行重定向。
+当带有选单单按钮提交此表单时，名为 `"font"` 的会话获取所选按钮的值，并进行重定向。
 
 | 会话偏好 |
+
 | :--- |
+
 | 文件 编辑 视图 书签 工具 帮助 |
+
 | 选择你偏好的字体族 |
+
 | 衬线 无衬线 等宽 字体 幻想 |
+
 | 提交 |
+
 | 完成 |
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_111_2.png)
@@ -3307,20 +3000,23 @@ body { font-family:<?php echo $_SESSION['font']; ?>}
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_112_0.png)
 
-prefs2.php
+`prefs2.php`
 
-此示例中的第二个页面在样式表中分配 `$_SESSION['font']` 变量的值 —— 正体内容以第一个页面选择的字体显示。指向另一个页面的链接再次附加SID常量。
+此示例中的第二个页面在样式表中分配 `$_SESSION['font']` 变量的值 —— 正体内容以第一个页面选择的字体显示。指向另一个页面的链接再次附加`SID`常量。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_112_1.png)
 
 会话运行
+
 偏好的字体族是等宽
+
 下一页
+
 http://localhost/pr...9785e129cbd515c94
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_112_2.png)
 
-prefs3.php
+`prefs3.php`
 
 ```php
 <?php session_start(); ?>
@@ -3340,11 +3036,7 @@ body { font-family:<?php echo $_SESSION['font']; ?>}
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_112_3.png)
 
-此示例中的第三个页面在样式表中分配 `$_SESSION['font']` —— 正体内容以第一个页面选择的字体显示。返回第一个页面的链接仅允许选择不同的字体，不附加SID。
-
-
-
-
+此示例中的第三个页面在样式表中分配 `$_SESSION['font']` —— 正体内容以第一个页面选择的字体显示。返回第一个页面的链接仅允许选择不同的字体，不附加`SID`。
 
 ### Cookies 还是 sessions？
 
@@ -3354,9 +3046,9 @@ Cookies 是 PHP 维护数据的最佳方法，使用 `set_cookie()` 函数存储
 
 一些新出的可以访问互联网的移动设备可能甚至没有存储 Cookie。
 
-另一方面，将数据存储在会变量中并不依赖于用户的浏览器设置，因此比使用 Cookie 可靠得多。你只需要记住在超链接的每个 URL 后面追加 SID 会话标识符，并在每个页面的开始调用 `session_start()` 函数。
+另一方面，将数据存储在会变量中并不依赖于用户的浏览器设置，因此比使用 Cookie 可靠得多。你只需要记住在超链接的每个 URL 后面追加 `SID` 会话标识符，并在每个页面的开始调用 `session_start()` 函数。
 
-更改 PHP 配置甚至可以消除在每个页面手动调用 `session_start()` 的需要。在 `phpinfo.php` 页面的 session 块中有一个名为 "session.auto_start" 的指令，默认情况下安装时被设置为关闭。
+更改 PHP 配置甚至可以消除在每个页面手动调用 `session_start()` 的需要。在 `phpinfo.php` 页面的 session 块中有一个名为 `"session.auto_start"` 的指令，默认情况下安装时被设置为关闭。
 
 用文本编辑器打开 `php.ini` 文件并找到 `session.auto_start` 条目。将它的值从 0 改为 1 以开启此功能。现在，每当页面加载时，PHP 都会自动执行 `session_start()` 函数的任务。
 
@@ -3387,7 +3079,7 @@ Sessions 确保存储的数据在整个网站中可用，即使在未启用 Cook
 
 必须在 `php.ini` 文件中正确配置 PHP，并包含你的系统如何发送邮件的细节。用文本编辑器打开 `php.ini`，然后找到标题为 `[mail function]` 的部分。
 
-Windows 用户应确保提供了两个指令：第一个称为 SMTP（简单邮件传输协议），定义了你的邮件服务器地址；第二个称为 `sendmail_from`，定义了你自己的电子邮件地址。
+Windows 用户应确保提供了两个指令：第一个称为 `SMTP`（简单邮件传输协议），定义了你的邮件服务器地址；第二个称为 `sendmail_from`，定义了你自己的电子邮件地址。
 
 Windows 的配置看起来像这样：
 
@@ -3404,7 +3096,7 @@ sendmail_from = user@ntworld.com
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_115_1.png)
 
-Linux 用户只需要让 PHP 知道他们的 sendmail 应用程序的位置。路径以及任何所需的开关都应该指定在 "sendmail_path" 指令中。
+Linux 用户只需要让 PHP 知道他们的 sendmail 应用程序的位置。路径以及任何所需的开关都应该指定在 `"sendmail_path"` 指令中。
 
 Linux 的配置应该像这样：
 
@@ -3418,7 +3110,7 @@ sendmail_path = sendmail -t -i
 
 ### 创建反馈表单
 
-所示反馈表单在本章中通过邮件提交用户数据。包含 "username"、email" 和 "comments" 三个输入字段的 HTML 页面将其值提交到下一页的表单处理器（feedback.php）。
+所示反馈表单在本章中通过邮件提交用户数据。包含 `"username"`、`email"` 和 `"comments"` 三个输入字段的 HTML 页面将其值提交到下一页的表单处理器 `feedback.php`。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_16_0.png)
 
@@ -3437,7 +3129,8 @@ Email:<input type="text" name="email" size="30">
 </body>
 </html>
 ```
-feedback.html
+
+`feedback.html`
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_16_1.png)
 
@@ -3482,7 +3175,7 @@ Reply to <?php echo ($email); ?>
 
 ### ...接上
 
-用户在反馈表单的 "username" 和 "email" 字段中的输入用于显示接收消息的确认。
+用户在反馈表单的 `"username"` 和 `"email"` 字段中的输入用于显示接收消息的确认。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_118_0.png)
 
@@ -3496,15 +3189,15 @@ Reply to <?php echo ($email); ?>
 
 ### 发送 HTML 邮件
 
-PHP `mail()` 函数可指定随邮件发送的额外头部字符串。每个头部必须由 "\r\n" 分隔——代表回车符和换行符。
+PHP `mail()` 函数可指定随邮件发送的额外头部字符串。每个头部必须由 `"\r\n"` 分隔——代表回车符和换行符。
 
-以下示例说明了反馈处理程序中的添加，通过设置 "Content-type:text/html" 来允许 HTML 格式。
+以下示例说明了反馈处理程序中的添加，通过设置 `"Content-type:text/html"` 来允许 HTML 格式。
 
-它将用户在 "email" 表单字段中输入的电子邮件地址赋值给 "From" 头部。此外，“Cc:" 头部赋予了一个应该发送副本的第二个地址。注意 Cc 头部对大小写敏感——Cc 或 cc 是错误的。
+它将用户在 `"email"` 表单字段中输入的电子邮件地址赋值给 `"From"` 头部。此外，`"Cc:"` 头部赋予了一个应该发送副本的第二个地址。注意 Cc 头部对大小写敏感——Cc 或 cc 是错误的。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_119_0.png)
 
-所有头部信息包含在 $headers 变量中，该变量作为 `mail()` 函数的第四个参数。
+所有头部信息包含在 `$headers` 变量中，该变量作为 `mail()` 函数的第四个参数。
 
 当提交表单时，发送头部信息和消息；然后显示确认。
 
@@ -3536,17 +3229,14 @@ Reply to <?php echo ($email); ?>
 </body>
 </html>
 ```
-feedback.php (已修改)
 
-在本示例中，设置 MIME-Version: 1.0 是至关重要的。
+`feedback.php` (已修改)
+
+在本示例中，设置 `MIME-Version: 1.0` 是至关重要的。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_119_2.png)
 
 118 | 易学 PHP 5
-
-
-
-
 
 ### ...接续
 
@@ -3554,7 +3244,7 @@ feedback.php (已修改)
 
 HTML 格式标签现在可以包含在用户的输入中，并应用于接收到的消息上。当提交此表单时，用户的评论将以如下所示的形式接收：
 
-注意，这封邮件似乎是从用户自己的邮箱地址发送的，并添加了抄送（Cc）。“From:”头部替换了 `send_from` 指令的值。现在点击回复按钮将打开一个空白的邮件表单，并将用户自己的地址设置为收件人。
+注意，这封邮件似乎是从用户自己的邮箱地址发送的，并添加了抄送（Cc）。`"From:"` 头部替换了 `send_from` 指令的值。现在点击回复按钮将打开一个空白的邮件表单，并将用户自己的地址设置为收件人。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_120_1.png)
 
@@ -3564,11 +3254,13 @@ HTML 格式标签现在可以包含在用户的输入中，并应用于接收到
 
 要向邮件消息中发送附件，必须在 HTML `<form>` 元素中添加 `enctype` 属性，并将其赋值为 `"multipart/form-data"`。
 
-此示例在之前的反馈表单的基础上，增加了主题和文件附件的输入字段。用户可以点击“浏览”按钮打开对话框，允许他们选择要附加到消息的文件。在提交时，名为 "to"、"from"、"re"、"comments" 和 "att" 的字段中的值将发送到表单处理器 `sendmixed.php`（该文件位于第 122 页）。
+此示例在之前的反馈表单的基础上，增加了主题和文件附件的输入字段。用户可以点击“浏览”按钮打开对话框，允许他们选择要附加到消息的文件。在提交时，名为 `"to"`、`"from"`、`"re"`、`"comments"` 和 `"att"` 的字段中的值将发送到表单处理器 `sendmixed.php`（该文件位于第 122 页）。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_121_0.png)
 
 此示例将输入放在表格单元格内以便更好的显示效果。
+
+
 
 ```html
 <<html>><head><title>附件表单</title></head>
@@ -3687,9 +3379,13 @@ if ($ok) echo "OK";
 ![](img/7faa63a7fa0add8f53300594ebae949f_124_1.png)
 
 | 发件人 | bob@some-mail-server.com |
+
 | 发送时间 | 2005年6月14日 星期一 上午12:15 |
+
 | 收件人 | phpineasystems@hotmail.com |
+
 | 主题 | 新图片 |
+
 | 附件 | lilguy.gif (0.01 MB) |
 
 这是新人的图片...
@@ -3767,10 +3463,6 @@ if( mail ($to, $re, $msg, $headers) )
 </body></html>
 ```
 
-
-
-
-
 ## 验证电子邮件地址格式
 
 PHP 的 `preg_match()` 函数可以通过匹配允许的模式，评估电子邮件地址的每个部分是否符合预期的格式。
@@ -3803,12 +3495,19 @@ if (!$useraddr) {
 这展示了提交不完整的电子邮件地址（缺少顶级域部分）后的页面。
 
 | 组合反馈表单 |
+
 | :--- |
+
 | 地址 | http://localhost/combined.php |
+
 | 电子邮件地址格式错误！ |
+
 | 姓名 | Bob |
+
 | 电子邮件 | bob@some-mail-server. |
+
 | 注释 | Bob 认为 PHP 非常棒！ |
+
 | 表单 | |
 
 ## 开始使用 MySQL
@@ -3849,17 +3548,17 @@ if (!$useraddr) {
 
 ### 探索数据库表
 
-在 shell 窗口或 Windows 上的命令提示符窗口打开 MySQL 监控器，输入 "show databases;" 查看所有可用数据库。
+在 shell 窗口或 Windows 上的命令提示符窗口打开 MySQL 监控器，输入 "`show databases;`" 查看所有可用数据库。
 
-MySQL 安装默认创建两个数据库：一个名为 "test"，另一个名为 "mysql"。SQL 命令 "use database-name" 选择要操作的数据库。
+MySQL 安装默认创建两个数据库：一个名为 "`test`"，另一个名为 "`mysql`"。SQL 命令 "`use database-name`" 选择要操作的数据库。
 
-输入 "use mysql;"，然后输入 "show tables;" 命令查看该数据库中的表列表。
+输入 "`use mysql;`"，然后输入 "`show tables;`" 命令查看该数据库中的表列表。
 
-SQL 命令 "explain table-name" 可查看表的格式以及表中可能包含的字段名。使用 mysql 数据库，输入 "explain"， 查看表的格式。关于运行 MySQL 监控器的详情请参阅第 14 页。
+SQL 命令 "`explain table-name`" 可查看表的格式以及表中可能包含的字段名。使用 mysql 数据库，输入 "`explain`"， 查看表的格式。关于运行 MySQL 监控器的详情请参阅第 14 页。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_130_0.png)
 
-explain 命令并没有显示表中的实际数据，只需查看第 34 页以了解如何查看表数据。
+`explain` 命令并没有显示表中的实际数据，只需查看第 34 页以了解如何查看表数据。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_130_1.png)
 
@@ -3895,9 +3594,11 @@ mysql> explain;
 
 ### 创建新数据库
 
-SQL 命令 "create database-name" 用于创建新数据库。例如，`CREATE DATABASE test;`。
+SQL 命令 "`create database-name`" 用于创建新数据库。例如，`CREATE DATABASE test;`。
 
 MySQL 监控器将响应 "Query OK, 1 row affected"。查看新数据库，输入 `SHOW DATABASES;`。
+
+
 
 ```
 mysql> create database test;
@@ -3915,7 +3616,7 @@ mysql> show databases;
 
 ### 创建数据库表
 
-要创建表，必须使用 `USE database-name` 命令选择数据库。例如，`USE test;。
+要创建表，必须使用 `USE database-name` 命令选择数据库。例如，`USE test;`。
 
 然后，使用 `CREATE TABLE` 命令定义表的列。
 
@@ -4015,22 +3716,23 @@ mysql> drop database test;
 Query OK, 0 row affected (0 sec)
 ```
 
-
-
-
-
 ## SQL 字段修饰
 
 在创建数据库列时，除了指定允许的数据类型外，还可以可选下表描述的修饰符来进一步控制列的使用方式：
 
 | 修饰 | 描述 |
+
 | --- | --- |
+
 | not null | 强制每条记录必须包含此列的数据条目 |
+
 | unique | 强制记录中的此列不能有重复条目 |
+
 | auto_increment | 仅适用于数值列，自动生成比该列中上一个值大 1 的数字 |
+
 | primary key() | 将参数指定作为该表主键的列名。例如：primary key(id) |
 
-在第 131 页创建 cars 表时，可以包含这些修饰符，以生成一个列定义更清晰的表。下方 MySQL 监控器中显示的 "create table-name;" 命令会自动为主键 id 编号。现在，每条记录必须包含“make”和“model”列中的数据，尽管“model”列不允许有重复项。
+在第 131 页创建 `cars` 表时，可以包含这些修饰符，以生成一个列定义更清晰的表。下方 MySQL 监控器中显示的 `create table-name;` 命令会自动为主键 `id` 编号。现在，每条记录必须包含 `make` 和 `model` 列中的数据，尽管 `model` 列不允许有重复项。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_134_0.png)
 
@@ -4048,10 +3750,11 @@ mysql> _
 
 ### 表数据
 
-一旦在 MySQL 数据库中创建了表，就可以使用 SQL “insert into” 命令向其中输入数据。跨行输入完整记录的语法为：
-“insert into table-name values (value1, value2, value3);”
+一旦在 MySQL 数据库中创建了表，就可以使用 SQL `insert into` 命令向其中输入数据。跨行输入完整记录的语法为：
 
-数据值以逗号分隔的参数形式输入 SQL values() 函数；列表必须与表列的数量对应，且每个值必须具有正确的数据类型。
+`insert into table-name values (value1, value2, value3);`
+
+数据值以逗号分隔的参数形式输入 SQL `values()` 函数；列表必须与表列的数量对应，且每个值必须具有正确的数据类型。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_135_0.png)
 
@@ -4081,29 +3784,29 @@ mysql>
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_135_1.png)
 
-注意，第二条和第三条记录的 id 值是由于列的 auto_increment 修饰符而自动生成的。
+注意，第二条和第三条记录的 `id` 值是由于列的 `auto_increment` 修饰符而自动生成的。
 
-向表中插入数据的另一种方法是指定要添加数据的列名，并作为逗号分隔的列表，例如“insert into table-name(column-name, column-name);”。然后，插入到指定列中的实际数据将像常一样作为 values() 函数的参数列出。
+向表中插入数据的另一种方法是指定要添加数据的列名，并作为逗号分隔的列表，例如 `insert into table-name(column-name, column-name);`。然后，插入到指定列中的实际数据将像常一样作为 `values()` 函数的参数列出。
 
-插图中的 SQL指令使用三种方法向上一页创建的“cars”表添加了记录。
+插图中的 SQL 指令使用三种方法向上一页创建的 `cars` 表添加了记录。
 
-可以使用 SQL “select * from”命令后跟表名和强制性的分号来查看整个表。上面的示例使用了此命令来查看“cars”表。
+可以使用 SQL `select * from` 命令后跟表名和强制性的分号来查看整个表。上面的示例使用了此命令来查看 `cars` 表。
 
 ### 修改现有表
 
-可以使用 SQL 命令 “alter table” 和 “modify” 修改现有表中列的定义，语法如下：
+可以使用 SQL 命令 `alter table` 和 `modify` 修改现有表中列的定义，语法如下：
 
-alter table table-name modify field-name modifiers;
+`alter table table-name modify field-name modifiers;`
 
-可以使用相同的“alter table” 命令向现有表添加新列，但现在需要使用 SQL “add” 关键字。添加额外列的语法如下所示：
+可以使用相同的 `alter table` 命令向现有表添加新列，但现在需要使用 SQL `add` 关键字。添加额外列的语法如下所示：
 
-alter table table-name add field-name modifiers;
+`alter table table-name add field-name modifiers;`
 
-下方的 MySQL 监控器中显示的示例使用了“alter table” 命令为上一页的 cars 表添加了一个名为“top_mph”的新额外列。现在可以使用 SQL “update” 命令向该新列中输入数据，这将在下一页中演示。
+下方的 MySQL 监控器中显示的示例使用了 `alter table` 命令为上一页的 `cars` 表添加了一个名为 `top_mph` 的新额外列。现在可以使用 SQL `update` 命令向该新列中输入数据，这将在下一页中演示。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_136_0.png)
 
-新的 top_mph 列没有“not null”修饰符，因此可以在此处输入数据。
+新的 `top_mph` 列没有 `not null` 修饰符，因此可以在此处输入数据。
 
 ```
 mysql> use garage;
@@ -4132,108 +3835,10 @@ mysql> select * from cars;
 mysql> 
 ```
 
-注意，第二条和第三条记录的 id 值是由于列的 auto_increment 修饰符而自动生成的。
-*(注：此处原文翻译逻辑与前文一致，修正了语境衔接)*
-*(修正：根据原文逻辑翻译：)*
-注意：第二条和第三条记录的 id 值是由于列的 auto_increment 修饰符而自动生成的。
-*(重新对齐原文内容：)*
-注意：第二条和第三条记录的 id 值是由于列的 auto_increment 修饰符而自动生成的。
-*(此处为原文逻辑重复，已确保翻译翻译一致性：)*
-注意：第二条和第三条记录的 id 值是由于列的 auto_increment 修饰符而自动生成的。
-*(最终对齐翻译：)*
-注意：第二条和第三条记录的 id 值是由于列的 auto_increment 修饰符而自动生成的。
+注意，第二条和第三条记录的 `id` 值是由于列的 `auto_increment` 修饰符而自动生成的。
 
-```，
-mph top_mph 列没有“not null” *。
 
-```
-```+-----------+++
-+
-| id | make      | model    | top_mph |
-+------+-----------+----------+----------+
-| 1 | Porsche    | Carrera |         |
-| 2 | Ferrari    | Dino     |||
-| 3 | Lamborghini| Diablo  |         |
-+------+-----------+----------+----------+
-3 rows in set (0.00 sec)
-mysql> 
-```
-*(注：原文此处段落似乎存在重复或混乱，翻译已按原文顺序呈现)*
-SQL 指令使用三种方法向上一页创建的“cars”表添加记录。
 
-可以使用 SQL “select * from” 命令后跟表名和强制性的分号来查看整个表。上面的示例使用了此命令来查看“cars”表。
-
-### 修改现有表
-
-*(此处重复部分：)*
-可以使用 SQL 命令 “alter table” 和 “modify” 修改现有表中列的定义，语法如下：
-
-alter table table-name modify field-name modifiers;
-
-可以使用相同的“alter table” 命令向现有表添加新列，但现在需要使用 SQL “add” 关键字。添加额外列的语法如下所示：
-
-alter table table-name add field-name modifiers;
-
-下方的 MySQL 监控器中显示的示例使用了“alter table” 命令为上一页的 cars 表添加了一个名为“top_mph”的新额外列。现在可以使用 SQL “update” 命令向该新列中输入数据，这将在下一页中演示。
-
-![](img/7faa63a7fa0add8f53300594ebae949f_136_0.png)
-
-新的 top_mph 列没有“not null”修饰符，因此可以在此处输入数据。
-
-```
-mysql> use garage;
-Database changed
-mysql> select * from cars;
-+------+-----------+----------+
-| id | make      | model    |
-+------+-----------+----------+
-| 1 | Porsche    | Carrera |
-| 2 | Ferrari    | Dino     |
-| 3 | Lamborghini| Diablo  |
-+------+-----------+----------+
-3 rows in set (0.00 sec)
-mysql> alter table cars add top_mph int;
-Query OK, 3 rows affected (0.02 sec)
-Records: 3 Duplicates: 0 Warnings: 0
-mysql> select * from cars;
-+------+-----------+----------+----------+
-| id | make      | model    | top_mph |
-+------+-----------+----------+----------+
-| 1 | Porsche    | Carrera |         |
-| 2 | Ferrari    | Dino     |         |
-| 3 | Lamborghini| Diablo  |         |
-+------+-----------+----------+----------+
-3 rows in set (0.00 sec)
-mysql> 
-```
-*(注：原文此处段落似乎存在重复或混乱，翻译已按原文顺序呈现)*
-SQL 指令使用三种方法向上一页创建的“cars”表添加记录。
-
-可以使用 SQL “select * from” 命令后跟表名和强制性的分号来查看整个表。上面的示例使用了此命令来查看“cars”表。
-
-### 修改现有表
-
-*(此处重复部分：)*
-可以使用 SQL 命令 “alter table” 和 “modify” 修改现有表中列的定义，语法如下：
-
-alter table table-name modify field-name modifiers;
-
-可以使用相同的“alter table” 命令向现有表添加新列，但现在需要使用 SQL “add” 关键字。添加额外列的语法如下所示：
-
-alter table table-name add field-name modifiers;
-
-下方的 MySQL 监控器中显示的示例使用了“alter table” 命令为上一页的 cars 表添加了一个名为“top_mph”的新额外列。现在可以使用 SQL “update” 命令向该新列中输入数据，这将在下一页中演示。
-
-![](img/7faa63a7fa0add8f53300594ebae949f_136_0.png)
-
-新的 top_mph 列没有“not null”修饰符，因此可以在此处输入数据。
-
-*(注：由于用户提供的待翻译文本存在大量重复和格式混乱，此处已严格遵循原文出现的顺序进行翻译，以确保不漏译且不违反“不要重复输出原文”的原则，即只翻译原文出现的内容。)*
-
----
-**重新审视并清理，以下为基于原文逻辑流的完整翻译结果：**
-
-[content]
 # SQL 字段修饰符
 
 在创建数据库列时，除了指定允许的数据类型外，还可以可选地下表描述的修饰符来进一步控制列的使用方式：
@@ -4243,9 +3848,9 @@ alter table table-name add field-name modifiers;
 | not null | 强制每条记录必须包含此列的数据条目 |
 | unique | 强制记录中的此列不能有重复条目 |
 | auto_increment | 仅适用于数值列，自动生成比该列中上一个值大 1 的数字 |
-| primary key() | 将参数指定作为该表主键的列名。例如：primary key(id) |
+| primary key() | 将参数指定作为该表主键的列名。例如：`primary key(id)` |
 
-在第 131 页创建 cars 表时，可以包含这些修饰符，以生成一个列定义更清晰的表。下方 MySQL 监控器中显示的 "create table-name;" 命令会自动为主键 id 编号。现在，每条记录必须包含“make”和“model”列中的数据，尽管“model”列不允许有重复项。
+在第 131 页创建 `cars` 表时，可以包含这些修饰符，以生成一个列定义更清晰的表。下方 MySQL 监控器中显示的 `create table-name;` 命令会自动为主键 `id` 编号。现在，每条记录必须包含“make”和“model”列中的数据，尽管“model”列不允许有重复项。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_134_0.png)
 
@@ -4261,12 +3866,13 @@ Query OK. 0 rows affected (0.00 sec)
 mysql> _
 ```
 
-### 插入表数据
+## 插入表数据
 
-一旦在 MySQL 数据库中创建了表，就可以使用 SQL “insert into” 命令向其中输入数据。跨行输入完整记录的语法为：
-“insert into table-name values (value1, value2, value3);”
+一旦在 MySQL 数据库中创建了表，就可以使用 SQL `insert into` 命令向其中输入数据。跨行输入完整记录的语法为：
 
-数据值以逗号分隔的参数形式输入 SQL values() 函数；列表必须与表列的数量对应，且每个值必须具有正确的数据类型。
+`insert into table-name values (value1, value2, value3);`
+
+数据值以逗号分隔的参数形式输入 SQL `values()` 函数；列表必须与表列的数量对应，且每个值必须具有正确的数据类型。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_135_0.png)
 
@@ -4296,29 +3902,29 @@ mysql>
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_135_1.png)
 
-注意，第二条和第三条记录的 id 值是由于列的 auto_increment 修饰符而自动生成的。
+注意，第二条和第三条记录的 `id` 值是由于列的 `auto_increment` 修饰符而自动生成的。
 
-向表中插入数据的另一种方法是指定要添加数据的列名，并作为逗号分隔的列表，例如“insert into table-name(column-name, column-name);”。然后，插入到指定列中的实际数据将像常一样作为 values() 函数的参数列出。
+向表中插入数据的另一种方法是指定要添加数据的列名，并作为逗号分隔的列表，例如 `insert into table-name(column-name, column-name);`。然后，插入到指定列中的实际数据将像常一样作为 `values()` 函数的参数列出。
 
-插图中的 SQL指令使用三种方法向上一页创建的“cars”表添加记录。
+插图中的 SQL指令使用三种方法向上一页创建的 `cars` 表添加记录。
 
-可以使用 SQL “select * from” 命令后跟表名和强制性的分号来查看整个表。上面的示例使用了此命令来查看“cars”表。
+可以使用 SQL `select * from` 命令后跟表名和强制性的分号来查看整个表。上面的示例使用了此命令来查看 `cars` 表。
 
-### 修改现有表
+## 修改现有表
 
-可以使用 SQL 命令 “alter table” 和 “modify” 修改现有表中列的定义，语法如下：
+可以使用 SQL 命令 `alter table` 和 `modify` 修改现有表中列的定义，语法如下：
 
-alter table table-name modify field-name modifiers;
+`alter table table-name modify field-name modifiers;`
 
-可以使用相同的“alter table” 命令向现有表添加新列，但现在需要使用 SQL “add” 关键字。添加额外列的语法如下所示：
+可以使用相同的 `alter table` 命令向现有表添加新列，但现在需要使用 SQL `add` 关键字。添加额外列的语法如下所示：
 
-alter table table-name add field-name modifiers;
+`alter table table-name add field-name modifiers;`
 
-下方的 MySQL 监控器中显示的示例使用了“alter table” 命令为上一页的 cars 表添加了一个名为“top_mph”的新额外列。现在可以使用 SQL “update” 命令向该新列中输入数据，这将在下一页中演示。
+下方的 MySQL 监控器中显示的示例使用了 `alter table` 命令为上一页的 `cars` 表添加了一个名为 `top_mph` 的新额外列。现在可以使用 SQL `update` 命令向该新列中输入数据，这将在下一页中演示。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_136_0.png)
 
-新的 top_mph 列没有“not null”修饰符，因此可以在此处输入数据。
+新的 `top_mph` 列没有 `not null` 修饰符，因此可以在此处输入数据。
 
 ```
 mysql> use garage;
@@ -4346,13 +3952,12 @@ mysql> select * from cars;
 3 rows in set (0.00 sec)
 mysql> 
 ```
+
 *(注：由于原始文本中存在大量重复段落，以上翻译已根据逻辑流进行去重处理)*
-
-
 
 # SQL 查询
 
-本章演示的基础 SQL 命令用于创建数据库表并向其填充数据。SQL 的更高级功能允许对特定信息进行查询。例如，可以使用此查询搜索第 136 页底部的“cars”表，查找最高速度超过 200 英英的任何汽车的详情：
+本章演示的基础 SQL 命令用于创建数据库表并向其填充数据。SQL 的更高级功能允许对特定信息进行查询。例如，可以使用此查询搜索第 136 页底部的 `cars` 表，查找最高速度超过 200 英英的任何汽车的详情：
 
 ```
 select * from cars where top_mph > 200;
@@ -4360,9 +3965,9 @@ select * from cars where top_mph > 200;
 
 在这种情况下，只有一条符合记录的记录：
 
-查询数据库中包含的数据的能力是 MySQL 的威力所在。关于 SQL 语言高级功能的更多信息，请参阅 MySQL 安装目录目录下 Docs 文件夹中的手册。
+查询数据库中包含的数据的能力是 MySQL 的威力所在。关于 SQL 语言高级功能的更多信息，请参阅 MySQL 安装目录目录下 `Docs` 文件夹中的手册。
 
-有关 SQL 的更多详细信息可以在互联网上 www.mysql.com 的 MySQL 语言参考中找到。
+有关 SQL 的更多详细信息可以在互联网上 `www.mysql.com` 的 MySQL 语言参考中找到。
 
 可以使用 PHP 使用特殊函数查询 MySQL 数据库，这些函数复制了本章使用的 SQL 命令。
 
@@ -4388,25 +3993,25 @@ select * from cars where top_mph > 200;
 - 从表中检索数据 | 152
 - 更多 MySQL | 154
 
-### 第十一章
+## 第十一章
 
 ### 创建 MySQL 用户和密码
 
-在本书开头（安装后立即）完成的 MySQL 连接测试假设是以 root 用户身份在无密码的情况下连接到 MySQL。这提供的安全性很差，因此在现实中，你应该创建一个关联密码的用户。
+在本书开头（安装后立即）完成的 MySQL 连接测试假设是以 `root` 用户身份在无密码的情况下连接到 MySQL。这提供的安全性很差，因此在现实中，你应该创建一个关联密码的用户。
 
-添加用户的最佳方法是以 root 用户身份在 MySQL 监视器中输入“授权语句（grant statement）”。正常打开 MySQL 监视器通常会将你识别为 root 用户。为了确保无误，请在 MySQL 监视器中输入“exit”关闭监视器。
+添加用户的最佳方法是以 `root` 用户身份在 MySQL 监视器中输入 `grant statement`。正常打开 MySQL 监视器通常会将你识别为 `root` 用户。为了确保无误，请在 MySQL 监视器中输入 `exit` 关闭监视器。
 
 ```
 mysql -u root
 ```
 
-或者，如果为 root 用户设置了密码，该行将变为：
+或者，如果为 `root` 用户设置了密码，该行将变为：
 
 ```
 mysql -u root -p password
 ```
 
-现在在 mysql> 提示符下输入此 MySQL 授权语句：
+现在在 `mysql>` 提示符下输入此 MySQL 授权语句：
 
 ```
 grant all privileges on * to user-name@domain identified by "password" with grant option;
@@ -4414,7 +4019,7 @@ grant all privileges on * to user-name@domain identified by "password" with gran
 
 这将创建一个具有超级用户权限的新用户——允许指定的用户从指定域完全访问，前提是他们提供了指定的密码。
 
-插图显示在 localhost 域中创建一个新用户（“mike”），使用简单的密码“bingo”——这些用户的详情将出现在书中随后的代码示例中。
+插图显示在 `localhost` 域中创建一个新用户（`mike`），使用简单的密码 `bingo`——这些用户的详情将出现在书中随后的代码示例中。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_141_0.png)
 
@@ -4432,7 +4037,7 @@ mysql>
 
 ### 将用户连接到 MySQL
 
-连接 MySQL 时，PHP `mysql_connect` 函数需要三个参数来指定有效的域名、用户名和密码。如果连接成功，该函数返回 true；如果失败则返回 false。下面的脚本在连接成功时写入确认信息。
+连接 MySQL 时，PHP `mysql_connect` 函数需要三个参数来指定有效的域名、用户名和密码。如果连接成功，该函数返回 `true`；如果失败则返回 `false`。下面的脚本在连接成功时写入确认信息。
 
 ```php
 <?php $user = "mike";
@@ -4443,18 +4048,20 @@ $msg="Congratulations $user, connected to MySQL";
 <html><head><title>Connecting user</title></head>
 <body><h3><?php echo($msg); ?></h3></body></html>
 ```
+
 ![](img/7faa63a7fa0add8f53300594ebae949f_142_0.png)
+
 ![](img/7faa63a7fa0add8f53300594ebae949f_142_1.png)
 
-用户详情是区分大小写的，因此将 $user 的值更改为 "MIKE" 将导致连接失败并在 Apache 目录下的 error.log 文件中写入 PHP 警告；提供了关于失败的详细信息，如下：
+用户详情是区分大小写的，因此将 `$user` 的值更改为 `"MIKE"` 将导致连接失败并在 Apache 目录下的 `error.log` 文件中写入 PHP 警告；提供了关于失败的详细信息，如下：
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_142_2.png)
 
 ### 列出数据库
 
-PHP 中相当于 SQL "show databases" 需要三个函数。
+PHP 中相当于 SQL `show databases` 需要三个函数。
 
-首先，`mysql_list_db()` 返回所有数据库信息的“结果集”，可以将其赋值给变量。每个数据库的详情存储在结果集的单独行中，因此可以使用 `mysql_num_rows()` 函数确定结果中有多少行。每个数据库的名称可以通过 `mysql_tablename()` 函数从结果集中提取。该函数还用于从指定的数据库提取每个表的名称。下面的示例将结果赋值给变量 $rs，并将其作为 `mysql_num_rows()` 函数的参数列出每个数据库名称。
+首先，`mysql_list_db()` 返回所有数据库信息的 `结果集`，可以将其赋值给变量。每个数据库的详情存储在结果集的单独行中，因此可以使用 `mysql_num_rows()` 函数确定结果中有多少行。每个数据库的名称可以通过 `mysql_tablename()` 函数从结果集中提取。该函数还用于从指定的数据库提取每个表的名称。下面的示例将结果赋值给变量 `$rs`，并将其作为 `mysql_num_rows()` 函数的参数列出每个数据库名称。
 
 ```php
 <?php
@@ -4469,20 +4076,14 @@ for ($row = 0; $row < mysql_num_rows($rs); $row++) {
 <html><head><title>Listing databases</title></head>
 <body><h3><?php echo $db_list; ?></h3></body></html>
 ```
-![](img/7faa63a7fa0add8f53300594ebae949f_143_0.png)
 
-| 列出数据库 |
-| :--- |
-| File | Edit | Favorites | Help |
-| Address | http://localhost/list_db.php | Go |
-| test |
-| Done | Local intranet |
+![](img/7faa63a7fa0add8f53300594ebae949f_143_0.png)
 
 ### 列出表名
 
 与 `mysql_list_db()` 函数类似，PHP `mysql_list_tables()` 函数返回数据库中所有表的信息的结果集。
 
-通过指定结果集的行号作为 `mysql_tablename()` 函数的参数，可以提取每个表名。下面的示例显示了添加到 test 数据库的三个表的名称。
+通过指定结果集的行号作为 `mysql_tablename()` 函数的参数，可以提取每个表名。下面的示例显示了添加到 `test` 数据库的三个表的名称。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_144_0.png)
 
@@ -4504,22 +4105,11 @@ for($row = 0; $row < mysql_num_rows($rs1); $row++) {
 ?>
 ```
 
-必须排除 MySQL 自身的数据库（名为 "mysql"），因为出于安全考虑，不能这种方式读取表。
+必须排除 MySQL 自身的数据库（名为 `"mysql"`），因为出于安全考虑，不能这种方式读取表。
 
 ```html
 <html><head><title>Listing Tables</title></head><body><?php echo ($list); ?></body></html>
 ```
-
-| 列出表 |
-| :--- |
-| File | Edit | Favorites | Tools | Help |
-| Address | http://localhost/list-tables.php | Go |
-| mysql |
-| test |
-| - first_table |
-| - second_table |
-| - third_table |
-| Done | Local intranet |
 
 ### 创建数据库
 
@@ -4531,13 +4121,16 @@ PHP `mysql_create_db()` 尝试根据其参数提供的名称创建一个数据�
 $conn = @mysql_connect("localhost","mike","bingo");
 or die("Sorry - could not connect to MySQL");
 ```
+
 ![](img/7faa63a7fa0add8f53300594ebae949f_145_1.png)
 
 ```php
 $rs1 = @mysql_create_db($_REQUEST['db_name']);
 ```
 
-如果数据库创建成功，该函数返回 true；如果尝试失败则返回 false。
+如果数据库创建成功，该函数返回 `true`；如果尝试失败则返回 `false`。
+
+
 
 ```php
 $rs2 = @mysql_list_db($conn);
@@ -4556,12 +4149,10 @@ Current databases: <?php echo $list; ?>
 </body>
 </html>
 ```
+
 ![](img/7faa63a7fa0add8f53300594ebae949f_145_2.png)
+
 ![](img/7faa63a7fa0add8f53300594ebae949f_145_3.png)
-
-
-
-
 
 ### 删除数据库
 
@@ -4628,10 +4219,15 @@ echo ($form );
 ```
 
 | 创建表 | 文件 | 编辑 | 收藏 | 工具 | 帮助 |
+
 |---|---|---|---|---|
+
 | 地址 | http://localhost/create_table.php | 转 | | |
+
 | 新表需要多少字段？ | | | | |
+
 | 3 | 提交 | | | |
+
 | 完成 | 本地内网 | | | |
 
 146 | PHP 5 个简单步骤
@@ -4673,9 +4269,13 @@ else if ($db) {
 ### 创建表
 
 | 数据库: my_database |
+
 | 表名: my_table |
+
 | 列名 | id | 类型: int | 大小: |
+
 | 列名 | first_name | 类型: char | 大小: 16 |
+
 | 列名 | last_name | 类型: char | 大小: 16 |
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_148_3.png)
@@ -4726,9 +4326,6 @@ if ($id && $fname && $lname) {
 </body></html>
 ```
 
-
-
-
 ### 修改表
 
 可以使用 SQL 命令 `alter table table-name modify column-name property` 修改现有的表列属性。
@@ -4758,16 +4355,20 @@ $rs = mysql_query($query, $conn) or die("Err:Query 2");
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_152_1.png)
 
-alter 语句必须包含列的数据类型，否则将不会被修改。
+`alter` 语句必须包含列的数据类型，否则将不会被修改。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_152_2.png)
 
 在 MySQL 监器中检查新的表格式，以确认修改已应用。
 
 | Field | Type | Null | Key | Default | Extra |
+
 |---|---|---|---|---|---|
+
 | id | int(3) | YES | | NULL | |
+
 | first_name | char(16) | YES | | NULL | |
+
 | last_name | char(32) | YES | | NULL | |
 
 ```
@@ -4836,9 +4437,13 @@ while ($row = mysql_fetch_array($rs)) {
 通过 PHP 操作 MySQL 的方法遵循此模式——
 
 - 1) 连接到 MySQL
+
 - 2) 选择要使用的数据库
+
 - 3) 构建 SQL 查询
+
 - 4) 执行查询
+
 - 5) 使用返回的结果集数据。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_154_3.png)
@@ -4861,74 +4466,13 @@ while ($row = mysql_fetch_array($rs)) {
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_155_1.png)
 
-[/content] (Wait, I noticed the source text had some repetition in the last block, I should translate exactly as provided per the instructions "don't miss any line").
-
-*Self-correction on last block:*
-The source text provided in the prompt for the last section was:
-"As testimony to the popularity of MySQL, it is used in many web applications. To discover ways to make MySQL even more flexible it is recommended that you download the MySQL manual.
-The manual is available from the MySQL website at http://mysql.com/documentation, or one of its mirror sites."
-Wait, looking back at the prompt's "Below is text to be translated" section:
-Actually, the text provided in the prompt's final block was:
-"As testimony to the popularity of MySQL, it is used in many web applications. To discover ways to make MySQL even more flexible it is recommended that you download the MySQL manual.
-The manual is available from the MySQL website at http://mysql.com/documentation, or one of its mirror sites."
-(Wait, I see I hallucinated repetition in my thought process. Let me re-read the prompt text carefully).
-
-Actually, the prompt ends with:
-"As testimony to the popularity of MySQL, it is used in many web applications. To discover ways to make MySQL even more flexible it is recommended that you download the MySQL manual.
-The manual is available from the MySQL website at http://mysql.com/documentation, or one of its mirror sites."
-Wait, I see what happened. I was looking at my own notes. I will just translate what is actually in the prompt block.
-
-Final check of the prompt's last lines:
-"As testimony to the popularity of MySQL, it is used in many web applications. To discover ways to make MySQL even more flexible it is recommended that you download the MySQL manual.
-The manual is available from the MySQL website at http://mysql.com/documentation, or one of its mirror sites."
-
-Okay, I will translate that. (Wait, looking at the user prompt again, it actually doesn't have the repetition in the source block, I just misread it).
-
-Wait, I see the user's prompt text at the end is:
-"As testimony to the popularity of MySQL, it is used in many web applications. To discover ways to make MySQL even more flexible it is recommended that you download the MySQL manual.
-The manual is available from the MySQL website at http://mysql.com/documentation, or one of its mirror sites."
-
-Okay, I will provide the clean translation. (Wait, I just noticed the user's prompt actually *did* have some repetition in my view... no, I'll just be careful).
-
-Actually, the user's prompt ends with:
-"As testimony to the popularity of MySQL, it is used in many web applications. To discover ways to make MySQL even more flexible it is recommended that you download the MySQL manual.
-The manual is available from the MySQL website at http://mysql.com/documentation, or one of its mirror sites."
-
-Wait, I see it now. I am overthinking. I will just output the translation.
-
-One more look at the prompt's provided text...
-There is no repetition. My bad.
-
-Final check of translation:
-"popularity" -> "受欢迎/流行"
-"ways to make MySQL even more flexible" -> "让 MySQL 更加灵活的方法"
-"MySQL manual" -> "MySQL手册"
-"mirror sites" -> "镜像站点"
-
-Ready. (Wait, I see the prompt's text *did* have a repetition in my internal buffer? No, I'll just translate the text provided).
-
-Actually, looking at the prompt one last time: own"As testimony to the popularity of MySQL, it is used in many web applications. To discover ways to make MySQL even more flexible it is recommended that you download the MySQL manual. 
-The manual is available from the MySQL website at http://mysql.com/documentation, or one of its mirror sites."
-
-Yes, that's what I will translate. (Wait, I just noticed the user's prompt *actually* is slightly different from what I'm looking at... I will just follow the text in the prompt).
-
-Wait, the text in the prompt is actually:
-"As testimony to the popularity of MySQL, it is used in many web applications. To discover ways to make MySQL even more flexible it is recommended that you download the MySQL manual.
-The manual is available from the MySQL website at http://mysql.com/documentation, or one of its mirror sites."
-
-Okay, I'll just go. (Wait, I'll check "testimony" -> "证词" or "证明").
-"flexible" -> "灵活".
-"recommended" -> "建议".
-
-Final check on the `content` tags. It must be wrapped in [content]...
-
 
 
 ### 添加授权用户
 
-可以使用表单将每个新用户的详细信息添加到上一页创建的“users”数据库表中。四个文本输入框分别对应表的四个字段，命名为 "firstname" "lastname" "username" 和 "password"。
+可以使用表单将每个新用户的详细信息添加到上一页创建的“users”数据库表中。四个文本输入框分别对应表的四个字段，命名为 `firstname` `lastname` `username` 和 `password`。
 
-当页面首次加载时，PHP 脚本中的一个 if-else 语句会测试这些文本输入框是否存在值。如果不存在，脚本将动态写入一个表单，可以在其中输入这些值。包含表单的脚本部分如下：
+当页面首次加载时，PHP 脚本中的一个 `if-else` 语句会测试这些文本输入框是否存在值。如果不存在，脚本将动态写入一个表单，可以在其中输入这些值。包含表单的脚本部分如下：
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_159_0.png)
 
@@ -4965,37 +4509,52 @@ if ($result) { echo("New user $username added"); }
 ![](img/7faa63a7fa0add8f53300594ebae949f_160_2.png)
 
 | 添加用户 |
+
 | 文件 | 编辑 | 查看 | 收藏 | 工具 | 帮助 |
+
 |---|---|---|---|---|---|
+
 | 地址 | http://localhost/add_user.php | 转到 | | | |
+
 | 请输入所有新用户的详细信息... | | | | | | |
+
 | 名字: Robert | | | | | | |
+
 | 姓: Evans | | | | | | |
+
 | 用户名: bob | | | | | | |
+
 | 密码: tomato999 | | | | | | |
+
 | 提交 | | | | | | |
+
 | 局域网 | | | | | | |
 
 img/7faa63a7fa0add8f53300594ebae949f_160_3.png)
 
 | 添加用户 |
+
 | 文件 | 编辑 | 查看 | 收藏 | 工具 | 帮助 |
+
 |---|---|---|---|---|---|
+
 | 地址 | http://localhost/add_user.php | 转到 | | | |
+
 | 已添加新用户 bob | | | | | | |
+
 | 局域网 | | | | | | |
 
 12. 用户身份验证 | 159
 
 ### 显示授权用户
 
-上一页的 add_user.php 接口已用于向在本章开头创建的“users”数据库表中添加了共 10 个用户。
+上一页的 `add_user.php` 接口已用于向在本章开头创建的“users”数据库表中添加了共 10 个用户。
 
-可以从 users 数据库表中检索每个用户的完整详细信息并显示在 HTML 表格中。
+可以从 `users` 数据库表中检索每个用户的完整详细信息并显示在 HTML 表格中。
 
-此脚本使用 SQL 命令 "select * from table-name" 从 users 数据库表中收集所有数据。
+此脚本使用 SQL 命令 `select * from table-name` 从 `users` 数据库表中收集所有数据。
 
-使用一个名为 `$list` 的变量来构建包含完整 HTML 表格的字符串。它从一行包含名、姓、用户名和密码的列标题开始。然后将 users 数据库表的每行数据都以 HTML 表格的形式添加到字符串中。一旦 HTML 表格完成，它就会被写入页面以显示所有用户的详细信息。
+使用一个名为 `$list` 的变量来构建包含完整 HTML 表格的字符串。它从一行包含名、姓、用户名和密码的列标题开始。然后将 `users` 数据库表的每行数据都以 HTML 表格的形式添加到字符串中。一旦 HTML 表格完成，它就会被写入页面以显示所有用户的详细信息。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_161_0.png)
 
@@ -5053,17 +4612,26 @@ echo $list;
 ![](img/7faa63a7fa0add8f53300594ebae949f_162_1.png)
 
 | 名字 | 姓 | 用户名 | 密码 |
+
 |---|---|---|---|
+
 | Robert | Evans | bob | tomato999 |
+
 | Sandra | Rhodes | sandy | |
+
 | Tom | Barrett | tommy | |
+
 | Ann | Sanderson | annie | |
+
 | Geoff | Clark | darkly | |
+
 | Barbara | Harris | barbie | |
 
 ### 登录表单
 
 典型的登录页面请求“用户名”和“密码”字段。
+
+
 
 ```html
 <html><head><title>登录</title></head>
@@ -5081,7 +4649,7 @@ echo $list;
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_163_0.png)
 
-表单的 action 属性是登录处理程序的名称。
+表单的 `action` 属性是登录处理程序的名称。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_163_1.png)
 
@@ -5089,7 +4657,7 @@ echo $list;
 
 ### 登录处理
 
-登录处理脚本检查“用户名”和“密码”字段中是否有输入。如果是，脚本将在在本章早之前的“users”数据库表中查找 $username 和 $password 值的匹配项。
+登录处理脚本检查“用户名”和“密码”字段中是否有输入。如果是，脚本将在在本章早之前的“users”数据库表中查找 `$username` 和 `$password` 值的匹配项。
 
 ```php
 <?php
@@ -5132,10 +4700,6 @@ if ($num == 1) {
 <body><?php echo ($msg); ?></body></html>
 ```
 
-
-
-
-
 ### 经过验证的登录尝试
 
 下所示登录页面显示了 `authenticate.html` 文本字段中的用户输入，该文件位于第 162 页。用户名与第 161 页所示用户数据库表第一行中名为 Robert Evans 的用户匹配。
@@ -5163,7 +4727,7 @@ if ($num == 1) {
 
 留言板应用首先需要一个数据库表来存储访问者留下的消息。可以直接在 MySQL 监控器中创建，也可以通过 PHP 脚本创建。
 
-以下脚本使用了现有的数据库 "my_database"。它创建一个名为 "guestbook" 的表，包含 "id""name""email address""comments" 以及一个记录消息时日期和时间的自动时间戳字段。
+以下脚本使用了现有的数据库 `my_database`。它创建一个名为 `guestbook` 的表，包含 `id` `name` `email address` `comments` 以及一个记录消息时日期和时间的自动时间戳字段。
 
 此脚本只需要运行一次来构建留言板。
 
@@ -5179,7 +4743,8 @@ if ($num == 1) {
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_168_1.png)
 
-欢迎来到 MySQL 监控器。命令以 ; 或 \q 结束。
+欢迎来到 MySQL 监控器。命令以 ; 或 `\q` 结束。
+
 你的 MySQL 连接到服务器版本: 4.0.18-nt
 
 输入 'help'; 或 '\h' 获取帮助。输入 '\c' 清空缓冲区。
@@ -5197,6 +4762,7 @@ mysql> explain guestbook;
 | email | varchar(50) | YES | | NULL | |
 | comments | text | | | NULL | |
 | time | timestamp(14) | YES | | NULL | |
+
 5 rows in set (0.04 sec)|
 
 ```
@@ -5208,6 +4774,7 @@ mysql> _
 后续尝试运行此脚本将失败，因为留言板表已经创建。
 
 无法创建 guestbook 表
+
 它已存在吗？
 
 13. 一个 PHP 留言板 | 167
@@ -5220,56 +4787,90 @@ mysql> _
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_169_0.png)
 
-当页面首次加载时，$submit 变量不存在。
+当页面首次加载时，`$submit` 变量不存在。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_169_1.png)
 
 ### 在打开时显示表单
+
 if (!$submit) {
+
     $msg = $form;
+
 }
+
 # 或者在不完整时显示消息和表单
+
 else if (!$name || !$email || !$comments) {
+
     $msg = "<br>填写所有字段</br>";
+
     $msg = $form;
+
 }
+
 # 将表单数据添加到留言板数据库
+
 else {
+
     $conn = @mysql_connect("localhost", "mike", "bingo")
+
 or die("连接到数据库");
+
 }
 
 ### ...续
 
 ### 选择数据库
+
 $rs = @mysql_select_db("my_database", $conn)
+
 or die("选择数据库");
+
 ```
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_170_0.png)
 
 ```
+
 ### 创建 SQL 查询
+
 if ($name && $comments) {
+
   $sql = "insert into guestbook (name, email, comments) values ($name,$email,$comments)";
+
   $rs = @mysql_query($sql, $conn)
+
 or die("执行 SQL 查询");
+
 }
+
 ```
 
 ```
+
 ### 确认条目并显示留言板链接
+
 if ($rs) {
+
   $msg = "<h3>您的留言已保存。</h3>";
+
   $msg = "<br><a=\"guestbook-view.php\">查看留言板</a>";
+
 }
+
 ```
 
 ```
+
 ### 写入页面
+
 echo ($msg);
+
 ?>
+
 </body></html>
+
 ```
 
 此图显示了不完整表单后的 —— comments 字段没有条目。通过 HTML 属性保留了之前的条目。成功提交在下一个页面所示。
@@ -5290,26 +4891,43 @@ echo ($msg);
 当上一页创建的表单提交所有字段时，数据被添加到留言板表，并显示确认信息。
 
 ```
+
 ### 签署留言板
+
 文件 编辑 帮助
+
 地址: http://localhost/guestbook-sign.php [ Go]
+
 名称: Tony
+
 邮箱: tony@abc.com
+
 评论: PHP 太棒了!
+
 完成
+
 内网
+
 ```
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_171_0.png)
 
 ```
+
 ### 签署留言板
+
 文件 编辑 帮助
+
 地址: http://localhost/guestbook-sign.php [ Go]
+
 您的留言已保存。
+
 查看留言板
+
 http://localhost/guestbook-view.php
+
 内网
+
 ```
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_171_1.png)
@@ -5317,14 +4935,21 @@ http://localhost/guestbook-view.php
 现在可以在 MySQL 监控器中查看该记录。注意数据自动添加到 id 和 time 字段。
 
 9f_171_2.png)```
+
 ### MySQL 监控器
+
 mys> use my_database;
+
 Database changed
+
 mys> select * from guestbook;
+
 | id | name | email | comments | time |
 |---|---|---|---|---|
 | 1 | Tony | tony@abc.com | PHP 太棒了! | 2005061812201 |
+
 1 row in set (0.00 sec)
+
 ```
 
 PHP 5 教程
@@ -5336,12 +4961,19 @@ MySQL 14 位时间戳记录了日期和时间，前四个数字是年份，随�
 ![](img/7faa63a7fa0add8f53300594ebae949f_172_0.png)
 
 ```html
+
 <html><head><title>使用时间戳</title></head><body>
+
 <?php
+
 $conn = @mysql_connect("localhost", "mike", "bingo");
+
 $rs = @mysql_select_db("my_database", $conn);
+
 $sql = "select * from guestbook where id=1";
+
 ### ...
+
 ```
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_172_1.png)
@@ -5363,28 +4995,43 @@ $sql = "select * from guestbook where id=1";
 脚本为每个记录写入一个表格，并显示存储的名称、邮箱地址、评论和格式化的时间条目。
 
 ```html
+
 <html><head><title>查看留言板</title></head><body><h3>最近的3条留言条目...</h3></body>
+
 ```
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_173_0.png)
 
 ```php
+
 <?php
+
 $rs = @mysql_connect("localhost", "mike", "bingo");
+
 $rs = @mysql_select_db("my_database");
+
 ```
 
 ```php
+
 # 按时间倒序查询3 条条目的 SQL 查询
+
 $sql =
+
 "select * from guestbook order by time desc limit 3"
+
 $rs = @mysql_query($sql, $conn);
+
 ```
 
 ```php
+
 ### 遍历记录并为每个记录写入表格
+
 while ($row = $mysql_fetch_array($rs)) {
+
 ?>
+
 ```
 
 <table border="1" width="375">
@@ -5405,14 +5052,21 @@ while ($row = $mysql_fetch_array($rs)) {
 ### ...续
 
 ```
+
 Date: <?php echo $orgdate; ?><td></td></tr>
+
 <tr><td colspan="2">Comments:</td></tr>
+
 <?php echo $row["comments"]; ?><td></td></tr>
+
 </table>
+
 <br>
+
 <?php ?>
 
 </body></html>
+
 ```
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_174_0.png)
@@ -5440,15 +5094,17 @@ Date: <?php echo $orgdate; ?><td></td></tr>
 
 ### 保存访客簿
 
-mysqldump 程序 位于 MySQL 的 bin 目录下，可将任何 MySQL 数据库或表保存为文本文件。
+`mysqldump` 程序 位于 MySQL 的 bin 目录下，可将任何 MySQL 数据库或表保存为文本文件。
 
-要保存在本章创建的访客簿表，首先从命令提示符导航到 MySQL 的 bin 目录。输入“mysqldump --help”查看选项列表。保存简单表的命令语法为：
+要保存在本章创建的访客簿表，首先从命令提示符导航到 MySQL 的 bin 目录。输入“`mysqldump --help`”查看选项列表。保存简单表的命令语法为：
 
 ```
 mysqldump [ options ] database-name table-name > file-name
 ```
 
-使用“-t”选项（以抑制表创建信息），后跟上“my_database”数据库名和“guestbook”表名。最后，使用“>”字符将输出重定向到名为“guestbook.txt”的文件。
+
+
+使用`-t`选项（以抑制表创建信息），后跟上`my_database`数据库名和`guestbook`表名。最后，使用`>`字符将输出重定向到名为`guestbook.txt`的文件。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_175_0.png)
 
@@ -5456,9 +5112,9 @@ mysqldump [ options ] database-name table-name > file-name
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_175_2.png)
 
-除非在文件名之前指定了路径，否则文本文件将在当前目录创建，例如 > C:\guestbook.txt
+除非在文件名之前指定了路径，否则文本文件将在当前目录创建，例如 `> C:\guestbook.txt`
 
-PHP 5 快速入门
+# PHP 5 快速入门
 
 ## PHP 与 XML
 
@@ -5485,8 +5141,8 @@ XML 是一种流行的数据存储方式，采用了严格的语法。它看起�
 
 ```
 <?xml version="1.0" encoding="iso-8859-1"?>
-
-```指定该文档是用 XML 1.0 版本编写的。所有 XML 文档必须有一个包含所有其他标签的主标签。这个标签被称为“root”（根）元素。![](img/7faa63a7fa0add8f53300594ebae949f_177_0.png)
+```
+指定该文档是用 XML 1.0 版本编写的。所有 XML 文档必须有一个包含所有其他标签的主标签。这个标签被称为“root”（根）元素。![](img/7faa63a7fa0add8f53300594ebae949f_177_0.png)
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -5497,9 +5153,9 @@ XML 是一种流行的数据存储方式，采用了严格的语法。它看起�
 
 ### ...续
 
-在对应的良好的 XML 文档 hello.xml 中，根元素实际名为“root”。名为“greeting”的嵌套元素包含“Hello World”文本内容。
+在对应的良好的 XML 文档 `hello.xml` 中，根元素实际名为“root”。名为“greeting”的嵌套元素包含“Hello World”文本内容。
 
-在实践中，大多数 XML 文档包含许多标签来描述数据。例如，下方列出的 books.xml 文档描述了一些书籍。在“books”根元素内，每个“title”元素包含“topic”的嵌套标签、“series”名称以及名为“pic”的内容。![](img/7faa63a7fa0add8f53300594ebae949f_178_0.png)
+在实践中，大多数 XML 文档包含许多标签来描述数据。例如，下方列出的 `books.xml` 文档描述了一些书籍。在“books”根元素内，每个“title”元素包含“topic”的嵌套标签、“series”名称以及名为“pic”的内容。![](img/7faa63a7fa0add8f53300594ebae949f_178_0.png)
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -5537,19 +5193,19 @@ XML 是一种流行的数据存储方式，采用了严格的语法。它看起�
 
 PHP 5 内置了对 W3C 标准指定的文档对象模型（DOM）的支持。这提供了一个包含预定义变量和方法（或函数）的“DomDocument”模板类。
 
-在 PHP 脚本可以使用“new”关键字创建 DomDocument 对象，将类的实例赋值给变量。例如，`$dom = new DomDocument;` 在 `$dom` 变量中创建一个 DomDocument 对象。
+在 PHP 脚本可以使用`new`关键字创建 `DomDocument` 对象，将类的实例赋值给变量。例如，`$dom = new DomDocument;` 在 `$dom` 变量中创建一个 `DomDocument` 对象。
 
-可以使用特殊的类运算符“->”来引用对象的属性和方法。例如，DomDocument 对象有一个 `load()` 方法来加载 XML 文件，因此 `$dom -> load("books.xml")` 将数据从文件“books.xml”加载到 `$dom` 对象中。
+可以使用特殊的类运算符`->`来引用对象的属性和方法。例如，`DomDocument` 对象有一个 `load()` 方法来加载 XML 文件，因此 `$dom -> load("books.xml")` 将数据从文件`books.xml`加载到 `$dom` 对象中。
 
 XML 文档的每个元素都被描述为“node”（节点）。
 
-可以使用 DomDocument 的“documentElement”属性访问 XML 文档的根元素，并从其固有的“nodeName”部分引用其标签名。例如，`$dom -> documentElement -> nodeName`。
+可以使用 `DomDocument` 的`documentElement`属性访问 XML 文档的根元素，并从其固有的`nodeName`部分引用其标签名。例如，`$dom -> documentElement -> nodeName`。
 
-可以使用 DomDocument 的“getElementsByTagName() 方法访问 XML 文档的特定嵌套元素，该方法将所需的名称作为参数。此方法返回一个“NodeList”，脚本可以使用 `foreach()` 函数轻松地遍历它。可以使用 PHP 提供的“textContent”属性引用每个节点的文本数据。
+可以使用 `DomDocument` 的`getElementsByTagName()` 方法访问 XML 文档的特定嵌套元素，该方法将所需的名称作为参数。此方法返回一个`NodeList`，脚本可以使用 `foreach()` 函数轻松地遍历它。可以使用 PHP 提供的`textContent`属性引用每个节点的文本数据。
 
 `textContent` 属性并非真正的 W3C 标准——它是 PHP 的便利属性，用于快速访问元素的所有文本节点。
 
-脚本创建一个 DomDocument 对象，然后加载“books.xml”文档（列在上一页）。它继续生成 HTML 输出，说明 XML 文档的根元素名称以及所有“topic”元素内包含的文本列表。
+脚本创建一个 `DomDocument` 对象，然后加载`books.xml`文档（列在上一页）。它继续生成 HTML 输出，说明 XML 文档的根元素名称以及所有`topic`元素内包含的文本列表。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_179_0.png)
 
@@ -5561,16 +5217,13 @@ XML 文档的每个元素都被描述为“node”（节点）。
 
 ```php
 <?php
-
 ### 加 XML 文档到 DOM
 $dom = new DomDocument();
 $dom -> load("books.xml");
-
 ### 打印根元素名称
 echo("Root element name is: ");
 echo($dom -> documentElement -> nodeName);
 echo("<hr>");
-
 ## 打印所有主题列表
 echo("Topics include:<ul>");
 $topics = $dom -> getElementsByTagName("topic");
@@ -5578,19 +5231,13 @@ foreach($topics as $node) {
 	echo("<li>" . $node -> textContent . "</li>");
 }
 echo("</ul>");
-
 ?>
-
 </body>
 ```
 
-
-
-
-
 ### 写入 DOM
 
-DOMDocument 对象包含了用于操作写入 DOM 的方法。可以使用 `createElement()` 方法创建新元素，并使用 `createTextNode()` 方法插入文本内容。每个文本节点通过 `appendChild()` 方法添加到其周围的元素中，每个元素通过该方法添加到其更高层级的元素中。
+`DOMDocument` 对象包含了用于操作写入 DOM 的方法。可以使用 `createElement()` 方法创建新元素，并使用 `createTextNode()` 方法插入文本内容。每个文本节点通过 `appendChild()` 方法添加到其周围的元素中，每个元素通过该方法添加到其更高层级的元素中。
 
 此示例向 `books.xml` 中的书籍添加了一本完整的书，并使用 `save()` 方法创建一个新的、较大的 XML 文档。
 
@@ -5600,40 +5247,33 @@ DOMDocument 对象包含了用于操作写入 DOM 的方法。可以使用 `crea
 <?php
 $dom = new DOMDocument();
 $dom -> load("books.xml");
-
 ### 创建元素
 $title = $dom -> createElement("title");
 $topic = $dom -> createElement("topic");
 $series = $dom -> createElement("series");
 $pic = $dom -> createElement("pic");
-
 ### 创建文本节点
 $topictext = $dom -> createTextNode("Linux");
 $seriestext = $dom -> createTextNode("in easy steps");
 $pictext = $dom -> createTextNode("linux.gif");
-
 ### 将文本节点添加到内部嵌套元素中
 $topic -> appendChild($topictext);
 $series -> appendChild($seriestext);
 $pic -> appendChild($pictext);
-
 ### 将内部嵌套元素添加到 <title> 元素
 $title -> appendChild($topic);
 $title -> appendChild($series);
 $title -> appendChild($pic);
-
 ### 现在将 <title> 元素添加到根元素
 $dom -> documentElement -> appendChild($title);
-
 ### 创建一个新的较大的 XML 文档
 $dom -> save("newbooks.xml");
-
 ?>
 ```
 
 ### ...接上
 
-在网页浏览器中打开新的 XML 文档，可以确认每个新元素都已正确添加并嵌套在根元素内部。它们出现在最后一个原始“title”元素之后，并按照指定的适当文本内容作为摘要插入。
+在网页浏览器中打开新的 XML 文档，可以确认每个新元素都已正确添加并嵌套在根元素内部。它们出现在最后一个原始`title`元素之后，并按照指定的适当文本内容作为摘要插入。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_182_0.png)
 
@@ -5675,7 +5315,7 @@ http://localhost/newbooks.xml
 
 ### 使用 XPath 查询
 
-XPath 允许你对 XML 文档查询符合特定标准的特定节点。这比 `getElementsByTagName()` 方法要强大得多，后者简单地返回所有具有指定名称元素的 DomNodeList。例如，对于 XML 文档 `food.xml`（如下所示），调用 `getElementsByTagName("item")` 将返回 "fruit" 和 "veg" 元素中的所有 "item" 子元素。
+XPath 允许你对 XML 文档查询符合特定标准的特定节点。这比 `getElementsByTagName()` 方法要强大得多，后者简单地返回所有具有指定名称元素的 `DomNodeList`。例如，对于 XML 文档 `food.xml`（如下所示），调用 `getElementsByTagName("item")` 将返回 "fruit" 和 "veg" 元素中的所有 "item" 子元素。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_183_0.png)
 
@@ -5695,13 +5335,13 @@ XPath 允许你对 XML 文档查询符合特定标准的特定节点。这比 `g
 
 然而，XPath 可以返回特定的元素。
 
-要在 PHP 5 中开始使用 XPath，必须先使用 "new" 关键字创建一个 DomXPath 对象，并将加载的 DomDocument 名称作为其参数。DomXPath 对象以与创建新 DomDocument 对象相同的方式被赋值给变量。
+要在 PHP 5 中开始使用 XPath，必须先使用 `new` 关键字创建一个 `DomXPath` 对象，并将加载的 `DomDocument` 名称作为其参数。`DomXPath` 对象以与创建新 `DomDocument` 对象相同的方式被赋值给变量。
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_183_1.png)
 
-显著的是，DomXPath 对象有一个 `query()` 方法，可以返回符合其参数所指定标准的 DomNodeList。简单的查询指定了元素的路径，例如 "fruit/item"。
+显著的是，`DomXPath` 对象有一个 `query()` 方法，可以返回符合其参数所指定标准的 `DomNodeList`。简单的查询指定了元素的路径，例如 "fruit/item"。
 
-`query()` 方法用于返回 "fruit" 元素中所有 "item" 元素的 DomNodeList。下文列出的 PHP 脚本将 DomXPath 对象赋值给变量 "$xp"。它们的 textContent 然后以 HTML 列表的形式输出。
+`query()` 方法用于返回 "fruit" 元素中所有 "item" 元素的 `DomNodeList`。下文列出的 PHP 脚本将 `DomXPath` 对象赋值给变量 `"$xp"`。它们的 `textContent` 然后以 HTML 列表的形式输出。
 
 ### 接上文
 
@@ -5713,10 +5353,8 @@ XPath 允许你对 XML 文档查询符合特定标准的特定节点。这比 `g
 ### 将 XML 文档加载到 DOM
 $dom = new DomDocument();
 $dom -> load("food.xml");
-
 ### 创建 XPath 对象
 $xp = new DomXPath($dom);
-
 ### 输出所有 fruit item 的列表
 echo ("Fruit items are:<ul>" );
 $fruits = $xp -> query("/food/fruit/item");
@@ -5741,13 +5379,13 @@ echo("</ul>");
 
 这只是一个简单的示例。进一步的查询可能包括：
 
-- /food/fruit/item[position()=1] 返回第一个
-- /food/fruit/item[@id='2'] 返回 id 为 2 的项目
-- /food/veg/item 返回 veg 中的所有项目
+- `/food/fruit/item[position()=1]` 返回第一个
+- `/food/fruit/item[@id='2']` 返回 id 为 2 的项目
+- `/food/veg/item` 返回 veg 中的所有项目
 
 ### 使用 SimpleXML
 
-SimpleXML 扩展提供了处理 XML 数据的一种方法。它允许你将 XML 元素视为可以通过属性访问的对象。要加载 XML 文件，请使用 `simplexml_load_file()` 函数。它返回一个 SimpleXML 对象，可以用于导航文档。
+`SimpleXML` 扩展提供了处理 XML 数据的一种方法。它允许你将 XML 元素视为可以通过属性访问的对象。要加载 XML 文件，请使用 `simplexml_load_file()` 函数。它返回一个 `SimpleXML` 对象，可以用于导航文档。
 
 ```php
 <?php
@@ -5764,39 +5402,37 @@ foreach($xml->title as $title) {
 
 
 
-
-
 ## 目录
 
-- ! 逻辑非 34
-- ! 不等运算符 38
-- # 单行注释 21
-- % 取模运算符 32
-- && 逻辑与 34
-- * 乘法 32
-- + 加法 32
-- ++ 自增 32
-- - 减法 32
-- - 字符串拼接 32
-- / 除法 32
-- /* ... */ 多行注释 21
-- // 单行注释 21
-- < 小于运算符 38
-- = 赋值运算符 36
-- == 等于运算符 36
-- > 大于运算符 38
-- || 逻辑或 34
-- \backslash 反斜杠字符 22
-- \ 换行符 22, 89, 118
-- \ 回车符 118
-- \t 制表符字符 22
+- `!` 逻辑非 34
+- `!` 不等运算符 38
+- `#` 单行注释 21
+- `%` 取模运算符 32
+- `&&` 逻辑与 34
+- `*` 乘法 32
+- `+` 加法 32
+- `++` 自增 32
+- `-` 减法 32
+- `-` 字符串拼接 32
+- `/` 除法 32
+- `/* ... */` 多行注释 21
+- `//` 单行注释 21
+- `<` 小于运算符 38
+- `=` 赋值运算符 36
+- `==` 等于运算符 36
+- `>` 大于运算符 38
+- `||` 逻辑或 34
+- `\backslash` 反斜杠字符 22
+- `\` 换行符 22, 89, 118
+- `\` 回车符 118
+- `\t` 制表符字符 22
 
-- array_pop() 函数 57
-- array_push() 函数 56
-- array_shift() 函数 57
-- array_slice() 函数 60
-- array_unshift() 函数 56
-- as 关键字 23, 54
+- `array_pop()` 函数 57
+- `array_push()` 函数 56
+- `array_shift()` 函数 57
+- `array_slice()` 函数 60
+- `array_unshift()` 函数 56
+- `as` 关键字 23, 54
 - 赋值数据 24
 - 赋值运算符 36
 - 表单提交 120
@@ -5805,10 +5441,10 @@ foreach($xml->title as $title) {
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_188_0.png)
 
-- 反斜杠字符 \ 22
-- base64_encode() 函数 122
+- 反斜杠字符 `\` 22
+- `base64_encode()` 函数 122
 - 布尔数据类型 25
-- break 关键字 23, 44, 48
+- `break` 关键字 23, 44, 48
 - 浏览器窗口 120
 - 浏览器重定向 76
 
@@ -5817,73 +5453,73 @@ foreach($xml->title as $title) {
 - 访问限制型 cookie 102
 - 加法 32
 - PHP 的优势 9
-- alter table (SQL 命令) 135, 151
-- and 关键字 23
+- `alter table` (SQL 命令) 135, 151
+- `and` 关键字 23
 - Apache
   - 配置 16
   - 安装 12
   - 启动与停止 13
-- appendChild() 方法 180
+- `appendChild()` 方法 180
 - 等待数据 89
 - 数组元素 52
-- array 关键字 23
+- `array` 关键字 23
 - 数组大小 55
-- array() 函数 52
-- array_merge() 函数 26
+- `array()` 函数 52
+- `array_merge()` 函数 26
 
 - 缓存控制 74
-- 回车符 \ 118
-- case 关键字 23, 44
+- 回车符 `\` 118
+- `case` 关键字 23, 44
 - 区分大小 21
-- function 关键字 23
-- chunk_split() 函数 122
-- class 关键字 23
-- 类指针运算符 -> 178
-- closedir() 函数 80
+- `function` 关键字 23
+- `chunk_split()` 函数 122
+- `class` 关键字 23
+- 类指针运算符 `->` 178
+- `closedir()` 函数 80
 - 列 128
 - 注释 21
 - 条件分支 44
-- const 关键字 23
+- `const` 关键字 23
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_188_2.png)
 
 索引 | 187
 
-- continue 23
+- `continue` 23
 - cookie 过期 99
 - cookie 管理器 105
 - cookies 98
 - 复制文件 82
-- copy() 函数 82
-- count() 函数 55
-- create database (SQL 命令) 144, 146
-- create table (SQL 命令) 131
-- createElement() 方法 180
-- createTextNode() 方法 180
+- `copy()` 函数 82
+- `count()` 函数 55
+- `create database` (SQL 命令) 144, 146
+- `create table` (SQL 命令) 131
+- `createElement()` 方法 180
+- `createTextNode()` 方法 180
 
-- echo() 函数 20, 23
+- `echo()` 函数 20, 23
 - 元素索引 52
-- else 关键字 23, 43
-- elseif 关键字 23
+- `else` 关键字 23, 43
+- `elseif` 关键字 23
 - 电子邮件地址格式 126
 - 邮件附件 122
 - 环境变量 99
-- $ _FILES [] [] 94
-- $ _POST_[] 69
-- $ _SERVER['HTTP_REFERER'] 90, 163
-- $ _SERVER['HTTP_USER_AGENT'] 62, 78
-- $ _SERVER['PHP_SELF'] 74, 124
-- $ _SERVER['REMOTE_ADDR'] 90
-- $ _SESSION_[] 106
-- PHPSESSID 104
+- `$ _FILES [] []` 94
+- `$ _POST_[]` 69
+- `$ _SERVER['HTTP_REFERER']` 90, 163
+- `$ _SERVER['HTTP_USER_AGENT']` 62, 78
+- `$ _SERVER['PHP_SELF']` 74, 124
+- `$ _SERVER['REMOTE_ADDR']` 90
+- `$ _SESSION_[]` 106
+- `PHPSESSID` 104
 - 等于运算符 38
 - 错误检查 124
 - 字符转义 22
-- eval 关键字 23
-- exception 关键字 23
-- exit() 函数 23, 76
-- explain (SQL 命令) 129
-- extends 关键字 23
+- `eval` 关键字 23
+- `exception` 关键字 23
+- `exit()` 函数 23, 76
+- `explain` (SQL 命令) 129
+- `extends` 关键字 23
 
 - 数据类型标识符 131
 - 数据库
@@ -5891,70 +5527,70 @@ foreach($xml->title as $title) {
   - 表行 128
   - 表 128
 - 日期格式参数 64
-- date() 函数 64, 171–172
-- decrement 关键字 23
+- `date()` 函数 64, 171–172
+- `decrement` 关键字 23
 - 递减 32
-- default 关键字 23, 44
+- `default` 关键字 23, 44
 - 删除数据 137
 - 删除数据库 145
 - 删除文件 84
-- delete from (SQL 命令) 137
+- `delete from` (SQL 命令) 137
 - 删除表 137
-- desc (SQL 命令) 172
-- die() 函数 23, 94
+- `desc` (SQL 命令) 172
+- `die()` 函数 23, 94
 - 目录句柄 80
 - 显示文件 80
 - 显示提交的值 69
-- do 关键字 23, 47
-- do-loop 47
-- documentElement 属性 178
+- `do` 关键字 23, 47
+- `do-loop` 47
+- `documentElement` 属性 178
 - DOMDocument 对象模型 176
-- DOM_import_simplexml(), SimpleXML 185
-- DomDocument 178, 180
-- DomNodeList 178, 182
-- DomXPath 182
-- drop database (SQL 命令) 131
-- drop table (SQL 命令) 131
+- `DOM_import_simplexml()`, SimpleXML 185
+- `DomDocument` 178, 180
+- `DomNodeList` 178, 182
+- `DomXPath` 182
+- `drop database` (SQL 命令) 131
+- `drop table` (SQL 命令) 131
 
-- false 关键字 23
-- close() 函数 85–86
+- `false` 关键字 23
+- `close()` 函数 85–86
 - 反馈表单 115
 - 文件移动 85
 - 文件指针 85, 88
-- file_exists() 函数 88
-- filesize() 函数 86
-- fopen() 函数 85–86
-- for 关键字 23
-- for 循环 45
-- foreach() 函数 54, 178, 184
+- `file_exists()` 函数 88
+- `filesize()` 函数 86
+- `fopen()` 函数 85–86
+- `for` 关键字 23
+- `for` 循环 45
+- `foreach()` 函数 54, 178, 184
 
 - 表单处理器 70
 - 表单值 68
-- read() 函数 86
-- function 关键字 23, 26
+- `read()` 函数 86
+- `function` 关键字 23, 26
 - 参数 27
 - 默认参数 30
 - 多个 28
 - 多个参数 23
-- write() 函数 88
+- `write()` 函数 88
 
-- if-mode 78
+- `if-mode` 78
 - 浏览器 62
 - 平台 62
-- if 关键字 23
-- if-else 语句 43, 158
+- `if` 关键字 23
+- `if-else` 语句 43, 158
 - 自增 32
 - 不等运算符 38
 - 初始化值 45
-- insert into (SQL 命令) 134, 149
-- insert table data 134, 149
-- is_numeric() 函数 71
-- isset 关键字 23
+- `insert into` (SQL 命令) 134, 149
+- `insert table data` 134, 149
+- `is_numeric()` 函数 71
+- `isset` 关键字 23
 
-- getElementsByTagName() 函数 178
-- getenv() 函数 62
-- global 关键字 23
-- grant 语句 140
+- `getElementsByTagName()` 函数 178
+- `getenv()` 函数 62
+- `global` 关键字 23
+- `grant` 语句 140
 - 猜测数字 74
 - 访客簿
 - 创建表 166
@@ -5967,206 +5603,202 @@ foreach($xml->title as $title) {
 
 - 处理器 80
 - 边界 122
-- header() 函数 74, 76
+- `header()` 函数 74, 76
 - headers
   - Cc: 118
   - Content-Disposition: 123
   - Content-Transfer-Encoding: 123
   - From: 118
   - Location: 76
-- htdocs 文件夹 17
+- `htdocs` 文件夹 17
 - HTML 邮件 118
 - HTML 表单 70
 
-- limit (SQL 命令) 172
+- `limit` (SQL 命令) 172
 - 数据库列表 142, 23
 - 表名列表 143
-- load() 方法 178
+- `load()` 方法 178
 - 访问者 90
 - 登录表单 162
 - 登录处理器 163
 - 循环 45–49
 
-- mysql_fetch_array() 函数 152
-- mysql_list_dbs() 函数 142
-- mysql_list_tables() 函数 143
-- mysql_num_rows() 函数 142
-- mysql_query() 函数 138, 149
-- mysql_select_db() 函数 146
+- `mysql_fetch_array()` 函数 152
+- `mysql_list_dbs()` 函数 142
+- `mysql_list_tables()` 函数 143
+- `mysql_num_rows()` 函数 142
+- `mysql_query()` 函数 138, 149
+- `mysql_select_db()` 函数 146
 
-- mail() 函数 116
-- mailto: 协议 173
+- `mail()` 函数 116
+- `mailto:` 协议 173
 - 处理提交的值 70
-- md5() 函数 122
+- `md5()` 函数 122
 - 成员 ID 128
-- microtime() 函数 66
+- `microtime()` 函数 66
 - MIME 类型 16
-- microtime() 函数 171–172
+- `microtime()` 函数 171–172
 - 移动设备 78
-- modify (SQL 命令) 135
+- `modify` (SQL 命令) 135
 - 取模运算符 32, 42
 
-- new 关键字 23, 178, 182
-- 换行符 \n 22, 89, 118
+- `new` 关键字 23, 178, 182
+- 换行符 `\n` 22, 89, 118
 -  178
-- nodeName 178
-- not 关键字 23
-- null 关键字 23
+- `nodeName` 178
+- `not` 关键字 23
+- `null` 关键字 23
 
 - 数据类型
-- blob 132
-- char() 132
-- date 132
-- datetime 132
-- decimal 132
-- double 132
-- en 132
-- int 132
-- set 132
-- text 132
-- time 132
-- timestamp 126, 166, 170–172
+- `blob` 132
+- `char()` 132
+- `date` 132
+- `datetime` 132
+- `decimal` 132
+- `double` 132
+- `en` 132
+- `int` 132
+- `set` 132
+- `text` 132
+- `time` 132
+- `timestamp` 126, 166, 170–172
 
-- varchar() 132
-- year 132
+- `varchar()` 132
+- `year` 132
 - 数据库 128
 - 图形用户界面 154
 - 安装 14
 - 密码 140
-- password() 函数 159, 164
+- `password()` 函数 159, 164
 - 表字段
-- auto_increment 133
-- decimal 133
+- `auto_increment` 133
+- `decimal` 133
 - 修饰符 133
-- not null 133
-- primary key() 133
-- text 131
-- unique 133
+- `not null` 133
+- `primary key()` 133
+- `text` 131
+- `unique` 133
 
-- open() 函数 85
-- opendir() 函数 80
-- or 关键字 23
-- or 运算符 34
-- order by (SQL 命令) 172
+- `open()` 函数 85
+- `opendir()` 函数 80
+- `or` 关键字 23
+- `or` 运算符 34
+- `order by` (SQL 命令) 172
 - PHP 的起源 9
 
 - 父 23
 - 解析器 10
-- password() 函数 159, 164
+- `password()` 函数 159, 164
 - PHP
   - 安装 15
   - 测试 18
-- varchar() 132
+- `varchar()` 132
 - 测试 18
 - 用户 140
-- mysql_connect() 函数 138, 141
-- mysql_create_db() 函数 144
-- mysql_drop_db() 函数 145
+- `mysql_connect()` 函数 138, 141
+- `mysql_create_db()` 函数 144
+- `mysql_drop_db()` 函数 145
 
 - PHP 手册 186
 
 - PHP 资源
-- php.ini 文件 114
-- php_user_filter 23
+- `php.ini` 文件 114
+- `php_user_filter` 23
 - 浏览器 78
 - 纯文本 116
-- 运算符 -> 178
-- preg_match() 函数 63
+- 运算符 `->` 178
+- `preg_match()` 函数 63
 - 主键 128
 
 ![](img/7faa63a7fa0add8f53300594ebae949f_99_0)
 
-- save() 方法 180
-- select (SQL 命令) 152
+- `save()` 方法 180
+- `select` (SQL 命令) 152
 - 分号 21
-- send_from 指令 114
-- sendmail_from 指令 114
-- session.auto_start 指令 112
-- session 110
-- session_start() 函数 104
-- sessions 104
-- set (SQL 命令) 136
-- set() 99
+- `send_from` 指令 114
+- `sendmail_from` 指令 114
+- `session.auto_start` 指令 112
+- `session` 110
+- `session_start()` 函数 104
+- `sessions` 104
+- `set` (SQL 命令) 136
+- `set()` 99
 - 设置 cookie 100
-- show (SQL 命令) 136
-- show databases 142
-- show tables 129
-- update (SQL 命令) 136
-- update 134
+- `show` (SQL 命令) 136
+- `show databases` 142
+- `show tables` 129
+- `update` (SQL 命令) 136
+- `update` 134
 
-- query() 方法 182
+- `query()` 方法 182
 
-- rand() 函数 66
+- `rand()` 函数 66
 - 随机数 66
 - 重定向浏览器 76
 - 读取文件 86
-- readir() 函数 80
+- `readir()` 函数 80
 - 关系型数据库 128
-- rename() 函数 83
-- require 关键字 23
+- `rename()` 函数 83
+- `require` 关键字 23
 - 保留字 23
 - 结果集 142
 - 获取数据 154
 - 返回语句 50
-- root 用户 140
+- `root` 用户 140
 - SQL 查询 138
 
 - 语句块 42
-- static 关键字 23
+- `static` 关键字 23
 - 字符串拼接 32
 - 字符串类型 25
 - 字符串处理 72
-- strlen() 函数 72
-- strrev() 函数 72
-- strtolower() 函数 72
-- strtoupper() 函数 72
-- substr() 函数 171
+- `strlen()` 函数 72
+- `strrev()` 函数 72
+- `strtolower()` 函数 72
+- `strtoupper()` 函数 72
+- `substr()` 函数 171
 - 减法 32
-- superuser 状态 140
+- `superuser` 状态 140
 - 抑制警告 84
-- switch 关键字 23
+- `switch` 关键字 23
 - 语句 44
 
 - 上传文件 92
 - 上传表单 93
 - 上传脚本 94
-- upload_max_filesize 92
-- upload_tmp_dir 92
-- use 关键字 23
+- `upload_max_filesize` 92
+- `upload_tmp_dir` 92
+- `use` 关键字 23
 - 用户表 156
 
 - 值 (SQL 命令) 134
-- var 关键字 23
+- `var` 关键字 23
 - 变量 24
 - 赋值数据 24
 - 数据类型 25
 - 声明 24
 
-- tab 89
-- tab\t 22
+- `tab` 89
+- `tab\t` 22
 - 表 128
 - 标签 20
 - 结束符 21
-- text/html MIME 类型 118
-- textContent 178
+- `text/html` MIME 类型 118
+- `textContent` 178
 - 时间格式参数 64
-- time() 函数 99, 122
+- `time()` 函数 99, 122
 - 时间特定内容 65
-- timestamp 126, 166, 170–172
-- ttimestamp MySQL 函数 166
-- trim() 函数 126
-- true 关键字 23
+- `timestamp` 126, 166, 170–172
+- `ttimestamp` MySQL 函数 166
+- `trim()` 函数 126
+- `true` 关键字 23
 
 - W3C (万维网联盟) 176
 - 警告信息 84
-- where (SQL 命令) 136, 153
-- while 关键字 23, 47
-- while 循环 46, 152
+- `where` (SQL 命令) 136, 153
+- `while` 关键字 23, 47
+- `while` 循环 46, 152
 - 写入文件 88
-
-
-
-
 
 ### 易从上手
 
@@ -6252,4 +5884,3 @@ PC Home 让它变得简单
 
 ISBN 0-7607-6331-3
 $9.95
-

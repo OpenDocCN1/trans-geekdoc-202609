@@ -1,21 +1,9 @@
+
 # 区块链构建指南：轻松学习 JS 编码
-
-
-
-
-
-
-
-
-
-
-
-
----
 
 ## 用 JavaScript 构建你自己的区块链
 
-要基本了解区块链，请阅读我的电子书，可在各大在线商店购买。点击 **用 JavaScript 构建你自己的区块链**。
+要基本了解区块链，请阅读我的电子书，可在各大在线商店购买。点击 `用 JavaScript 构建你自己的区块链`。
 
 构建区块链是一项复杂的工程，因此深入理解其底层原理和概念至关重要。以下是创建基础区块链的一些通用步骤：
 
@@ -108,10 +96,6 @@ console.log('Blockchain valid? ' + myCoin.isChainValid());
 
 这只是 JavaScript 中区块链的基本实现。根据你的具体需求，还可以添加许多更高级的概念，例如共识算法、点对点网络和智能合约。
 
-
-
-
-
 ## 定义区块结构
 
 区块结构是区块链中的基本数据单元。它包含一组交易和元数据，如时间戳和称为哈希的唯一标识符。以下是区块组件的更详细细分：
@@ -152,7 +136,7 @@ class Block {
 
 在区块链中，哈希用于为每个区块创建唯一的数字指纹或哈希值。然后使用此哈希将区块链接在一起，确保其完整性和不可篡改性。
 
-哈希是一个将任意大小的数据转换为称为哈希的固定大小输出的过程。在 JavaScript 中，SHA-256 算法常用于哈希。以下是在 JavaScript 中使用 SHA-256 算法实现哈希的示例：
+哈希是一个将任意大小的数据转换为称为哈希的固定大小输出的过程。在 JavaScript 中，`SHA-256` 算法常用于哈希。以下是在 JavaScript 中使用 `SHA-256` 算法实现哈希的示例：
 
 ```javascript
 const SHA256 = require('crypto-js/sha256');
@@ -175,7 +159,7 @@ class Block {
 
 `calculateHash()` 方法随后使用 `crypto-js` 库中的 `SHA256` 算法为区块生成唯一的哈希值。`SHA256` 函数的输入是区块的时间戳、前一个哈希和当前数据的连接字符串。
 
-重要的是要注意，SHA-256 算法是单向函数，这意味着从数据生成哈希很容易，但从哈希生成原始数据是不可能的。这一特性使得哈希对于创建安全且防篡改的区块链非常有用。
+重要的是要注意，`SHA-256` 算法是单向函数，这意味着从数据生成哈希很容易，但从哈希生成原始数据是不可能的。这一特性使得哈希对于创建安全且防篡改的区块链非常有用。
 
 ## 创建区块链
 
@@ -256,9 +240,6 @@ myBlockchain.addBlock(new Block(Date.now(), { amount: 100 }));
 
 最后，我们实例化了一个新的 `Blockchain` 对象并向链中添加了两个区块，每个区块都包含一些数据。当我们运行脚本时，可以看到显示每个区块挖掘过程的控制台输出。
 
-
-
-
 ## 添加新区块
 
 向区块链添加新区块涉及创建一个包含数据的 `Block` 类新实例，然后调用 `Blockchain` 类的 `addBlock` 方法将其添加到链中。示例如下：
@@ -291,6 +272,8 @@ myBlockchain.addBlock(anotherBlock);
 工作量证明是一种协议，要求在新区块添加到区块链之前付出一定的计算工作量。这是通过向区块数据添加一个称为“nonce”的随机字符串并对结果进行哈希来完成的。矿工不断更改 nonce，直到区块的哈希值满足特定条件（例如具有特定数量的前导零）。
 
 以下是区块链中实现挖矿的示例：
+
+
 
 ```javascript
 class Blockchain {
@@ -343,7 +326,7 @@ class Block {
 
 在该示例中，我们向 `Blockchain` 类添加了 `difficulty` 属性，用于指定区块哈希值所需的前导零数量。我们还向 `Block` 类添加了接受 `difficulty` 参数的 `mineBlock` 方法。
 
-在 `mineBlock` 方法内部，我们使用 `while` 循环不断增加 nonce 并重新计算哈希，直到区块的哈希值满足难度要求。我们通过将哈希值的前 `difficulty` 个字符与由 `difficulty` 个零组成的字符串进行比较来实现这一点。一旦找到满足此要求的哈希值，我们会向控制台记录一条消息并返回该哈希值。
+在 `mineBlock` 方法内部，我们使用 `while` 循环不断增加 `nonce` 并重新计算哈希，直到区块的哈希值满足难度要求。我们通过将哈希值的前 `difficulty` 个字符与由 `difficulty` 个零组成的字符串进行比较来实现这一点。一旦找到满足此要求的哈希值，我们会向控制台记录一条消息并返回该哈希值。
 
 向链中添加新区块时，我们使用 `Blockchain` 类中指定的难度调用新区块的 `mineBlock` 方法。这确保了仅在完成一定量的计算工作后才将区块添加到链中。
 
@@ -393,9 +376,6 @@ class Blockchain {
 但必须注意，此实现非常简单，缺乏真实区块链中使用的许多高级功能和安全措施。例如，真实区块链拥有更复杂的共识算法，以确保网络中所有节点就链的状态达成一致，并提供安全性以防止攻击。
 
 若想深入了解区块链技术，网上有许多资源可帮助你更好地理解这一令人兴奋的领域。从学术论文到在线课程和教程，有许多途径可探索区块链的内部运作，并发现利用该技术解决现实问题的新方法。
-
-
-
 
 # JavaScript 完整区块链代码
 
@@ -551,12 +531,11 @@ const OkavangoBlockchain = new Blockchain("Okavango Blockchain", "OKA", 1000000,
 
 这将创建一个名为“Okavango Blockchain”、货币符号为“OKA”、总供应量为 1,000,000、挖矿奖励为 50 的新区块链。然后你可以使用 `addBlock` 方法向链中添加新区块。
 
-
-
-
 ## 添加挖矿间隔、减半周期和减半百分比
 
 要向区块链添加挖矿减半周期和减半百分比，可以按如下方式修改 `Blockchain` 类和 `mineBlock` 方法：
+
+
 
 ```javascript
 class Blockchain {
@@ -720,14 +699,11 @@ class Wallet {
 
 通过此修改，您可以在不提供任何密钥的情况下创建新的钱包对象，如下所示：`new Wallet()`。这将生成一个新的密钥对，并返回包含公钥和私钥属性的相应钱包对象。或者，您可以使用特定密钥创建钱包对象，如下所示：`new Wallet('public key', 'private key')`。
 
-
-
-
 ## 生成后打印公钥和私钥
 
 使用 `Wallet` 类生成新钱包后，您可以作为钱包对象的属性访问公钥和私钥。以下是生成新钱包后打印公钥和私钥的示例：
 
-```
+```javascript
 const myWallet = new Wallet();
 console.log('Public key: ' + myWallet.publicKey);
 console.log('Private key: ' + myWallet.privateKey);
@@ -739,9 +715,9 @@ console.log('Private key: ' + myWallet.privateKey);
 
 要从钱包发送和接收币，您需要使用私钥创建并签名交易，然后将交易广播到网络以进行验证并打包入区块链。
 
-以下是如何创建交易对象并使用 JavaScript 中的 elliptic 库通过钱包私钥对其进行签名的示例：
+以下是如何创建交易对象并使用 JavaScript 中的 `elliptic` 库通过钱包私钥对其进行签名的示例：
 
-```
+```javascript
 const EC = require('elliptic').ec;
 const ec = new EC('secp256k1');
 
@@ -777,7 +753,7 @@ class Transaction {
 
 要从钱包发送币，您可以使用发送方、接收方和金额字段创建一个新的交易对象，然后使用交易对象的 `signTransaction` 方法通过您的私钥对其进行签名。示例如下：
 
-```
+```javascript
 const myWallet = new Wallet();
 const recipientAddress = 'recipient public key';
 const amountToSend = 10;
@@ -793,7 +769,9 @@ transaction.signTransaction(myWallet.privateKey);
 
 以下是一个完整的 JavaScript 程序示例，包含区块链实现及新增功能，如自定义币种名称、总供应量、挖矿奖励、挖矿间隔、减半周期，以及带有公私钥生成和交易功能的钱包功能：
 
-```
+
+
+```javascript
 const SHA256 = require('crypto-js/sha256');
 const EC = require('elliptic').ec;
 const ec = new EC('secp256k1');
@@ -913,10 +891,6 @@ class Blockchain {
   }
 }
 ```
-
-
-
-
 
 ## 在 VPS 上编译代码
 
@@ -1138,17 +1112,14 @@ API 可以使用任何支持 HTTP 请求和响应的编程语言或框架构建�
 
 一些流行的区块链 API 包括 `Ethereum` 的 `JSON-RPC API` 和 `Bitcoin` 的 `RESTful API`。然而，对于一种新币，您需要根据币的特性和功能定义并实现自己的 API 端点。
 
-
-
-
 ## 如何为上述币种进行挖矿
 
 要挖掘一种新币种，你需要执行一系列计算密集型的数学计算，以便在区块链网络中生成新区块。使用我们之前讨论的示例代码来挖掘新币种的步骤如下：
 
-1.  使用命令 `node index.js` 在你的系统或 VPS 上运行节点应用程序。
-2.  使用 `/wallet/new` API 端点创建一个新钱包，并将公钥和私钥存储在安全的位置。
-3.  使用 `/mine` API 端点开始挖矿。这将在区块链中生成一个新区块并将其添加到现有链中。挖矿过程涉及反复计算区块的哈希值，直到该哈希值满足所需的难度级别。
-4.  一旦挖矿过程完成，新生成的区块将被添加到区块链中，挖矿奖励将发送到矿工的钱包地址。
+1. 使用命令 `node index.js` 在你的系统或 VPS 上运行节点应用程序。
+2. 使用 `/wallet/new` API 端点创建一个新钱包，并将公钥和私钥存储在安全的位置。
+3. 使用 `/mine` API 端点开始挖矿。这将在区块链中生成一个新区块并将其添加到现有链中。挖矿过程涉及反复计算区块的哈希值，直到该哈希值满足所需的难度级别。
+4. 一旦挖矿过程完成，新生成的区块将被添加到区块链中，挖矿奖励将发送到矿工的钱包地址。
 
 在我们之前讨论的示例代码中，可以通过调用 `/mine` API 端点来启动挖矿。该端点将执行生成新区块并将其添加到区块链所需的计算。挖矿过程涉及反复计算区块的哈希值，直到该哈希值满足所需的难度级别。
 
@@ -1159,6 +1130,8 @@ API 可以使用任何支持 HTTP 请求和响应的编程语言或框架构建�
 要为你的新币种定义 `/mine` API 端点，你需要修改我们之前讨论的代码，以包含一个启动挖矿过程的新 API 路由。以下是定义 `/mine` API 端点的步骤：
 
 ### 在 `index.js` 文件中，添加一个新的 API 路由以启动挖矿：
+
+
 
 ```javascript
 // 启动挖矿的 API 端点
@@ -1197,7 +1170,7 @@ Block.prototype.proofOfWork = function(previousBlockHash, currentBlockData) {
 };
 ```
 
-此函数执行工作量证明算法，以计算满足所需难度级别的区块哈希值。它使用不同的 nonce 反复计算区块的哈希值，直到该哈希值满足所需的难度级别。
+此函数执行工作量证明算法，以计算满足所需难度级别的区块哈希值。它使用不同的 `nonce` 反复计算区块的哈希值，直到该哈希值满足所需的难度级别。
 
 ### 在 `Block.js` 文件中，添加计算区块哈希值的 `hashBlock` 函数：
 
@@ -1209,7 +1182,7 @@ Block.prototype.hashBlock = function(previousBlockHash, currentBlockData, nonce)
 };
 ```
 
-此函数通过将上一个区块的哈希值、nonce 和当前区块的数据连接成一个字符串，然后对该字符串应用 SHA-256 哈希算法来计算区块的哈希值。
+此函数通过将上一个区块的哈希值、`nonce` 和当前区块的数据连接成一个字符串，然后对该字符串应用 SHA-256 哈希算法来计算区块的哈希值。
 
 进行这些更改后，你可以使用命令 `node index.js` 运行节点应用程序，`/mine` API 端点将可用于启动挖矿过程。
 
@@ -1251,6 +1224,7 @@ else:
 谢谢
 
 Sankar Srinivasan
+
 印度国家证券交易所认证市场专业人士
 
 *   https://withkoji.com/@sankarsrinivasan
@@ -1273,7 +1247,7 @@ https://books2read.com/r/B-I-BYHC-JBUIC
 
 ---
 
-Sankar Srinivasan 的其他作品
+### Sankar Srinivasan 的其他作品
 
 *   Fibonacci Retracement : Simplified
 *   Gann Mid Point Theory : Simplified
@@ -1301,10 +1275,6 @@ Sankar Srinivasan 的其他作品
 
 关注 Sankar Srinivasan 的更多作品
 
-
-
-
-
 ![](img/image-fca6wvea.jpg)
 
 ## 关于作者
@@ -1314,4 +1284,3 @@ Sankar Srinivasan 在技术分析和在线交易领域拥有超过 10 年的经�
 他负责全球外汇和印度股票交易的分仓业务。他为南印度的众多股票、商品和外汇交易者提供技术指导。此外，他是印度国家证券交易所认证的市场
 
 在 Sankar Srinivasan 的
-

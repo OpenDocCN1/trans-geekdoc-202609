@@ -1,8 +1,5 @@
+
 # Docker 深度实战
-
-
-
-
 
 ```
 $ docker service inspect --pretty web-fe
@@ -24,16 +21,11 @@ UpdateConfig:
   On failure: pause
 ```
 
-
-
 作者：Docker 队长 (Docker Captain)
+
 igel Poulton
 
-
-
-
 Nigel Poulton @nigelpoulton
-
 
 本版本于 2024 年 5 月出版。
 
@@ -52,7 +44,6 @@ Nigel Poulton @nigelpoulton
 祝你阅读愉快，准备好掌握容器技术吧！
 
 ![](img/aae0230bf8529bd80767c4c780dca8d3_3_0.png)
-
 
 感谢所有阅读我的书籍和观看我培训视频的朋友。我对所有的内容都充满热情，当你们与我联系并提供反馈时，对我意义重大。我也很喜欢我们在活动、机场以及其他其他随机场合相遇。请务必过来打个招呼——不要害羞！
 
@@ -80,13 +71,6 @@ Nigel 是一位 Docker 队长，他最近痴迷领域是服务器端 WebAssembly
 - 网站: nigelpouton.com
 - 邮箱: ddd@nigelpoulton.com
 
-
-
-
-
-
-
-
 我将本书分为两个主要部分：
 
 - 1. 宏观概念
@@ -95,7 +79,6 @@ Nigel 是一位 Docker 队长，他最近痴迷领域是服务器端 WebAssembly
 **宏观概念**将带你快速上手相关内容，如什么是 Docker、为什么我们需要容器，以及**云原生、微服务和编排**等基础术语。
 
 **技术细节**部分涵盖了你关于**镜像、容器、多容器微服务应用**以及日益重要的**编排（orchestration）**的话题所需要了解的所有知识。它甚至涵盖了 WebAssembly、使用 Docker Scout 进行漏洞扫描、容器调试、高可用性等内容。
-
 
 - **第 1 章**：总结了 Docker 和容器的历史和潜在未来
 - **第 2 章**：解释了最重要的与容器相关的标准和项目
@@ -114,7 +97,6 @@ Nigel 是一位 Docker 队长，他最近痴迷领域是服务器端 WebAssembly
 - **第 15 章**：介绍 Docker 中的持久化数据和非持久化数据
 - **第 16 章**：涵盖了所有主要的 Linux 和 Docker 安全技术
 
-
 Docker 和云原生生态系统发展非常快，一本 2-3 年前的 Docker 书已经没有价值。因此，我致力于每年更新这本书。
 
 如果这听起来很过分，那么欢迎来到新常态。
@@ -126,7 +108,6 @@ Docker 和云原生生态系统发展非常快，一本 2-3 年前的 Docker 书
 一个可能的解决方案是访问 http://amzn.to/2153jdg 并选择 Quick Solutions。然后选择 Digital Purchases（数字购买），搜索你的 Docker Deep Dive Kindle 版购买记录，并选择 Content and Devices（内容和设备）。你的购买将出现在列表中，并带有一个“Update Available”（可用更新）的按钮。点击该按钮。删除 Kindle 上的旧版本并下载新版本。
 
 如果这不起作用，你唯一的选择是联系 Kindle 支持。
-
 
 如果你喜欢这本书并且它对你的职业有所帮助，请向朋友推荐它并在 Amazon 或 Goodreads 上留下评论来分享这份喜爱。
 
@@ -150,14 +131,11 @@ Docker 和云原生生态系统发展非常快，一本 2-3 年前的 Docker 书
 
 每当业务需要一个新的应用程序时，就必须购买一台新服务器。不幸的是，我们并不擅长模拟新应用程序的性能需求，IT 部门只能猜测。这通常导致业务购买性能远超应用程序所需的昂贵服务器。毕竟，没有人想要性能过剩的服务器。由于这种限制，我们不得不购买性能远超应用程序所需的昂贵服务器。这通常导致业务购买性能远超应用程序所需的昂贵服务器。由于这种限制，我们不得不购买性能远超应用程序所需的昂贵服务器。
 
-
 由于 Docker 的出现，尽管有了这些伟大的工作，在 Docker 出现之前，容器变得非常复杂。
 
 > 注意：我知道许多容器类技术早于 Docker 存在，但没有一个像 Docker 那样改变世界。
 
-
 Docker 是让 容器变得简单并走向大众的魔法。我们将在下一章讨论更多关于 Docker。
-
 
 微软努力将 Docker 和容器技术带到 Windows 平台。
 
@@ -174,25 +152,19 @@ Windows 系统也可以通过 WSL 2（Windows Linux 子系统）运行 Linux 容
 
 然而，尽管在开发 Windows 容器方面付出了巨大努力，几乎所有容器都是 Linux 容器。因为 Linux 容器更小、更快，且工具更多。
 
-
 ### Windows 容器对比 Linux 容器
 
 理解容器共享其运行的主机内核至关重要。这意味着容器 Windows 应用需要 Windows 内核，而容器 Linux 应用需要 Linux 内核。
 
 然而，如所述，你可以在安装了 WSL 2 后端的 Windows 系统上运行 Linux 容器。
 
-
 不存在 Mac 容器。然而，Mac 是处理容器的绝佳平台，我所有的日常容器工作都在 Mac 上进行。
 
 在 Mac 上处理容器最流行的方法是使用 Docker Desktop。它通过在 Mac 上的轻量级 Linux VM 中运行 Docker 来工作。其他工具如 Podman 和 Rancher Desktop 也是 Mac 上处理容器的好工具。
 
-
 WebAssembly (Wasm) 是一种现代二进制指令集，可以构建比容器更小、更快、更安全且更可移植的应用程序。你使用喜欢的语言编写应用并将其编译为 Wasm 二进制文件，它就可以任何任何 Wasm 运行环境的地方运行。
 
 然而，Wasm 应用有很多局限性，我们仍在制定许多标准。因此，容器仍然是云原生应用的主流模型。
-
-
-
 
 容器生态系统也比 Wasm 生态系统丰富且成熟得多。
 
@@ -200,12 +172,11 @@ WebAssembly (Wasm) 是一种现代二进制指令集，可以构建比容器更�
 
 本书涵盖了 Wasm 和容器领域的最新进展。
 
-
 Kubernetes 是部署和管理容器化应用的行业标准平台。
 
 > **术语：** 容器化应用是指作为容器运行的应用程序：我们将在稍后的部分对此进行详细介绍。
 
-旧版本的 Kubernetes 使用 Docker 来启动和停止容器。然而，较新版本使用了 *containerd*，它是 Docker 的精简版本，针对 Kubernetes 和其他平台的使用进行了优化。
+旧版本的 Kubernetes 使用 Docker 来启动和停止容器。然而，较新版本使用了 `containerd`，它是 Docker 的精简版本，针对 Kubernetes 和其他平台的使用进行了优化。
 
 重要的的关键点是：所有的 Docker 容器都可以在 Kubernetes 上运行。
 
@@ -218,9 +189,7 @@ Kubernetes 是部署和管理容器化应用的行业标准平台。
 
 我每年都会更新这两本书，以确保它们符合云原生生态系统（包括 WebAssembly）的最新进展。
 
-
 我们曾生活在这样一个世界：每当业务需要新应用时，我们必须购买一台全新的服务器。VMware 的出现让我们能够从新旧服务器中压榨出更多价值。然而，在 VMware 和虚拟机程序成功之后，出现了一种更新、更高效且可移植的虚拟化技术——容器。但在 Docker 出现并变得简单之前，容器是非常复杂且难以实现的。WebAssembly 正在推动云计算的第三次浪潮，但 Docker 和容器生态系统正在进化以与 WebAssembly 工作，本书专门有一个章节介绍 Docker 和 WebAssembly。
-
 
 本章将为你介绍 Docker 以及塑造容器生态系统的一些重要标准和项目。目标是为我们后续章节的构建奠定基础。
 
@@ -228,7 +197,6 @@ Kubernetes 是部署和管理容器化应用的行业标准平台。
 
 - Docker
 - 与容器相关的标准和项目
-
 
 Docker 处于容器生态系统的核心。然而，“Docker”这个词可以有两个含义：
 
@@ -246,7 +214,6 @@ Docker, Inc. 是一家总部位于帕罗奥图的科技公司，由法国出生�
 “Docker”一词是一个英国英语表达，意为“码头工人”，指在船上装卸货物的人员。
 
 2013 年，dotCloud 放弃了经营困境的 PaaS 业务，更名为 Docker, Inc.，并专注于将 Docker 和容器引入世界。
-
 
 Docker 平台的设计目的是尽可能容易地构建、交付和运行容器。
 
@@ -271,13 +238,11 @@ CLI 是用于部署和管理容器的熟悉的 `docker` 命令行工具。它将
 
 让我们转换一下，简要查看一些标准和治理机构。
 
-
 有几个影响容器和容器生态系统发展的重要标准和治理机构。其中一些包括：
 
 - OCI
 - CNCF
 - Moby 项目
-
 
 开放容器倡议 (OCI) 是一个负责低级容器相关标准的治理委员会。
 
@@ -305,18 +270,15 @@ OCI 规范对容器生态系统做了同样的事，并从此蓬勃发展。自�
 
 Docker, Inc. 以及许多其他公司在 OCI 的技术监督委员会（TOB）中有成员。
 
-
 云原生计算基金会 (CNCF) 是另一个在容器生态系统中具有影响力的 Linux 基金会项目。它创立于 2015 年，目标是“……推进容器技术的发展……并让云原生计算无处不在”。
 
 CNCF 并不创建和维护容器相关的规范，而是托管了重要的项目，如 Kubernetes、containerd、Notary、Prometheus、Cilium 等许多项目。
 
 当我们说 CNCF 托管了这些项目时，意思是它为项目提供了空间、结构和支持，使其成长和成熟。例如，所有 CNCF 项目都会经历以下三个阶段或时期：
 
-
-
--   沙盒 (Sandbox)
--   孵化中 (Incubating)
--   已毕业 (Graduated)
+- 沙盒 (Sandbox)
+- 孵化中 (Incubating)
+- 已毕业 (Graduated)
 
 每个阶段都会通过对治理、文档、审计、贡献跟踪、营销、社区参与等提出更高标准的要求，提高项目的成熟度。例如，被接受为沙盒的新项目可能有很棒的主意和技术，但需要帮助和资源来建立强大的治理体系等。CNCF 会帮助解决这些问题。
 
@@ -324,23 +286,21 @@ CNCF 并不创建和维护容器相关的规范，而是托管了重要的项目
 
 如果你回顾图 2.2，你会发现 Docker 使用了至少两种 CNCF 技术—— containerd 和 Notary。
 
-
 Docker 创建了 Moby 项目，这是一个由社区引导的地方，供开发者在此构建用于容器平台的专用工具。
 
 平台构建者可以根据需求选择特定的 Moby 工具来构建他们的容器平台。他们甚至可以混合 Moby 工具、内部工具以及其他项目的工具来组合自己的平台。
 
 Docker, Inc. 最初创建了 Moby 项目，但现在其成员包括微软、Mirantis 和 Nvidia。
 
-Docker 平台使用来自各种项目的工具构建，包括 Moby 项目、CNCF 和 OCI。
 
+
+Docker 平台使用来自各种项目的工具构建，包括 Moby 项目、CNCF 和 OCI。
 
 本章向你介绍了 Docker 以及容器生态系统的一些主要影响。
 
 Docker, Inc. 是一家位于帕罗奥的科技公司，正在改变我们开发软件的方式。他们是现代容器革命的先驱和发起者。
 
-
 开放容器倡议（OCI）负责底层容器标准，并维护运行时、镜像格式和注册库的规范。
-
 
 Moby 项目托管开发者可以用于构建容器平台的底层工具。
 
@@ -348,38 +308,37 @@ Moby 项目托管开发者可以用于构建容器平台的底层工具。
 
 本章将向你展示以下方法：
 
--   Docker Desktop
--   Multipass
--   Linux 上的安装
+- `Docker Desktop`
+- `Multipass`
+- Linux 上的安装
 
-Docker Desktop 是使用 Docker 的最佳方式，它可以让你在笔记本电脑上获得包含所有最新工具、插件和扩展的完整 Docker 体验。我每天都在使用，并推荐给每个人。
+`Docker Desktop` 是使用 Docker 的最佳方式，它可以让你在笔记本电脑上获得包含所有最新工具、插件和扩展的完整 Docker 体验。我每天都在使用，并推荐给每个人。
 
-我们还将向你展示如何通过 Multipass 和简单的 Linux 安装在笔记本电脑上使用 Docker。但是，只有在你无法使用 Docker Desktop 时才应该考虑这些方法，因为它们的功能较少。
+我们还将向你展示如何通过 `Multipass` 和简单的 Linux 安装在笔记本电脑上使用 Docker。但是，只有在你无法使用 `Docker Desktop` 时才应该考虑这些方法，因为它们的功能较少。
+
 ### Docker Desktop
 
-Docker Desktop 是 Docker, Inc. 提供的一款桌面应用，是使用容器的最佳方式。你可以获得带有精美 UI 的 Docker Engine、所有最新的插件和功能，以及一个带有市场的的扩展系统。如果你想学习 Kubernetes，甚至还可以获得 Docker Compose 和单节点 Kubernetes 集群。
+`Docker Desktop` 是 Docker, Inc. 提供的一款桌面应用，是使用容器的最佳方式。你可以获得带有精美 UI 的 `Docker Engine`、所有最新的插件和功能，以及一个带有市场的的扩展系统。如果你想学习 Kubernetes，甚至还可以获得 `Docker Compose` 和单节点 Kubernetes 集群。
 
 它对个人使用和教育免费，但如果你将其用于工作，且你的公司员工超过 250 人或年收入超过 1000 万美元，则需要支付许可费用。
 
-Windows 10 和 Windows 11 专业版及企业版的 Docker Desktop 支持 Windows 容器和 Linux 容器。Mac、Linux 以及 Windows 家庭版的 Docker Desktop 仅支持 Linux 容器。书中所有的示例以及现实世界几乎所有的容器都是 Linux 容器。
+Windows 10 和 Windows 11 专业版及企业版的 `Docker Desktop` 支持 Windows 容器和 Linux 容器。Mac、Linux 以及 Windows 家庭版的 `Docker Desktop` 仅支持 Linux 容器。书中所有的示例以及现实世界几乎所有的容器都是 Linux 容器。
 
-让我们 Windows 和 MacOS 上安装 Docker Desktop。
+让我们 Windows 和 MacOS 上安装 `Docker Desktop`。
 
+Windows 版 `Docker Desktop` 需要满足所有条件：
 
-Windows 版 Docker Desktop 需要满足所有条件：
-
--   64 位版本的 Windows 10/11
--   必须在系统的 BIOS 中启用硬件虚拟化支持
--   WSL 2
+- 64 位版本的 Windows 10/11
+- 必须在系统的 BIOS 中启用硬件虚拟化支持
+- `WSL 2`
 
 更改系统 BIOS 中的任何内容时请务必小心。
 
+在互联网上搜索“install Docker Desktop on Windows”。这将带你进入下载页面，你可以在那里下载安装程序并按照说明操作。在提示时，你应该安装并启用 `WSL 2` 后端（适用于 Linux 的 Windows 子系统）。
 
-在互联网上搜索“install Docker Desktop on Windows”。这将带你进入下载页面，你可以在那里下载安装程序并按照说明操作。在提示时，你应该安装并启用 WSL 2 后端（适用于 Linux 的 Windows 子系统）。
+安装完成后，你需要从 Windows 开始菜单手动启动 `Docker Desktop`。启动可能可能需要一分钟，但你可以通过屏幕底部 Windows 栏上的动画鲸鱼图标查看启动进度。
 
-安装完成后，你需要从 Windows 开始菜单手动启动 Docker Desktop。启动可能可能需要一分钟，但你可以通过屏幕底部 Windows 栏上的动画鲸鱼图标查看启动进度。
-
-一旦开始运行，你可以打开终端并输入一些简单的 docker 命令。
+一旦开始运行，你可以打开终端并输入一些简单的 `docker` 命令。
 
 ```
 $ docker version
@@ -395,7 +354,7 @@ OS/Arch: linux/amd64
 <Snip>
 ```
 
-注意 Server 输出如何显示 OS/Arch: linux/amd64。这是因为默认安装假设你将处理 Linux 容器。
+注意 Server 输出如何显示 `OS/Arch: linux/amd64`。这是因为默认安装假设你将处理 Linux 容器。
 
 某些版本的 Windows 允许通过右键点击 Windows 通知区域中的 Docker 鲸鱼图标并选择“切换到 Windows 容器”来切换容器……这样做会让现有的 Linux 容器在后台运行，但在切换回 Linux 容器模式之前你无法管理它们。
 
@@ -403,20 +362,19 @@ OS/Arch: linux/amd64
 
 确保你运行在 Linux 容器模式下，以便之后跟上书中的示例。
 
+Mac 版 `Docker Desktop` 类似于 Windows 版 `Docker Desktop`——一个带有精美 UI 的封装产品，可以让你在笔记本电脑上获得完整的 Docker 体验。你还可以启用内置的单节点 Kubernetes 集群。
 
-Mac 版 Docker Desktop 类似于 Windows 版 Docker Desktop——一个带有精美 UI 的封装产品，可以让你在笔记本电脑上获得完整的 Docker 体验。你还可以启用内置的单节点 Kubernetes 集群。
+在继续安装之前，你需要知道 Mac 上的 `Docker Desktop` 在轻量级 Linux VM 内部安装守护和服务端组件，并无缝地将 API 暴露给你的本地 Mac 环境。这意味着你可以在 Mac 上打开终端并运行 `docker` 命令，而无需知道它们都运行在一个隐藏的 VM 中。这也是为什么 Mac 版 `Docker Desktop` 仅支持 Linux 容器——一切都运行在 Linux VM 内部。
 
-在继续安装之前，你需要知道 Mac 上的 Docker Desktop 在轻量级 Linux VM 内部安装守护和服务端组件，并无缝地将 API 暴露给你的本地 Mac 环境。这意味着你可以在 Mac 上打开终端并运行 docker 命令，而无需知道它们都运行在一个隐藏的 VM 中。这也是为什么 Mac 版 Docker Desktop 仅支持 Linux 容器——一切都运行在 Linux VM 内部。
-
-图 3.1 显示了 Mac 版 Docker Desktop 的高层架构。
+图 3.1 显示了 Mac 版 `Docker Desktop` 的高层架构。
 
 ![](img/aae0230bf8529bd80767c4c780dca8d3_41_0.png)
 
 图 3.1
 
-在 Mac 上安装 Docker Desktop 的简单方法是在网页上搜索“install Docker Desktop on macOS”，按照链接下载，然后完成简单的安装程序。
+在 Mac 上安装 `Docker Desktop` 的简单方法是在网页上搜索“install Docker Desktop on macOS”，按照链接下载，然后完成简单的安装程序。
 
-当安装程序完成后完成后，你必须从 MacOS Launchpad 手动启动 Docker Desktop。启动可能需要一分钟，但你可以观察屏幕顶部状态栏中的动画 Docker 鲸鱼图标。一旦启动，你就可以点击鲸鱼图标来管理 Docker Desktop。
+当安装程序完成后完成后，你必须从 MacOS Launchpad 手动启动 `Docker Desktop`。启动可能需要一分钟，但你可以观察屏幕顶部状态栏中的动画 Docker 鲸鱼图标。一旦启动，你就可以点击鲸鱼图标来管理 `Docker Desktop`。
 
 打开终端窗口并运行一些常规 Docker 命令。尝试以下：
 
@@ -442,14 +400,13 @@ Version: 0.19.0
 <Snip>
 ```
 
-注意 **Server** 组件的 **OS/Arch:** 显示为 **linux/amd64** 或 **Linux/arm64**。这是因为守护进程运行在前面提到的 Linux VM 内部。**Client** 组件是一个原生 Mac 应用，直接在 Mac OS Darwin 内核上运行。这就是为什么它显示为 `darwin/amd64` 或 `darwin/arm64`。
+注意 `Server` 组件的 `OS/Arch:` 显示为 `linux/amd64` 或 `Linux/arm64`。这是因为守护进程运行在前面提到的 Linux VM 内部。`Client` 组件是一个原生 Mac 应用，直接在 Mac OS Darwin 内核上运行。这就是为什么它显示为 `darwin/amd64` 或 `darwin/arm64`。
 
 你现在可以在 Mac 上使用 Docker 了。
 
+只有在你无法使用 `Docker Desktop` 时才考虑本节，因为 `Multipass` 安装版没有开箱支持 `docker scout`、`docker debug` 或 `docker init`。
 
-只有在你无法使用 Docker Desktop 时才考虑本节，因为 Multipass 安装版没有开箱支持 `docker scout`、`docker debug` 或 `docker init`。
-
-Multipass 是一个免费工具，用于在 Linux、Mac 或 Windows 机器上创建云风格的 Linux VM，且安装和使用极其简单。它是创建多节点生产级 Docker 集群的简单方法。
+`Multipass` 是一个免费工具，用于在 Linux、Mac 或 Windows 机器上创建云风格的 Linux VM，且安装和使用极其简单。它是创建多节点生产级 Docker 集群的简单方法。
 
 访问 `https://multipass.run/install` 并安装适用于你硬件和操作系统的版本。
 
@@ -463,10 +420,7 @@ $ multipass shell
 
 让我们看看如何启动并连接一个预装了 Docker 的新 VM。
 
-
-
-
-运行以下命令来基于 **docker** 镜像创建一个名为 **node1** 的新虚拟机。该 docker 镜像已预装了 Docker，开箱即用。
+运行以下命令来基于 `docker` 镜像创建一个名为 `node1` 的新虚拟机。该 docker 镜像已预装了 Docker，开箱即用。
 
 ```
 $ multipass launch docker --name node1
@@ -478,9 +432,9 @@ $ multipass launch docker --name node1
 
 | 名称 | 状态 | IPv4 | 镜像 |
 |---|---|---|---|
-| node1 | Running | 192.168.64.37<br>172.17.0.1<br>172.18.0.1 | | Ubuntu |
+| node1 | Running | 192.168.64.37<br>172.17.0.1<br>172.18.0.1 | Ubuntu |
 
-在处理书中后的示例时，你将使用 **192** 开头的 IP 地址。
+在处理书中后的示例时，你将使用 `192` 开头的 IP 地址。
 
 使用以下命令连接到虚拟机。
 
@@ -508,12 +462,11 @@ compose: Docker Compose (Docker Inc.)
   Path: /usr/libexec/docker/cli-plugins/docker-compose
 ```
 
-示例中的安装仅包含 **buildx** 和 **compose** CLI 插件。如果你想遵循书中后面的 Docker Scout、Docker Init 和 Docker Debug 示例，你必须手动安装相关的插件。
+示例中的安装仅包含 `buildx` 和 `compose` CLI 插件。如果你想遵循书中后面的 Docker Scout、Docker Init 和 Docker Debug 示例，你必须手动安装相关的插件。
 
-你可以输入 **exit** 退出虚拟机，并输入 **multipass shell node1** 重新登录。你也可以输入 **multipass delete node1** 然后运行 **multipass purge** 来将其删除。
+你可以输入 `exit` 退出虚拟机，并输入 `multipass shell node1` 重新登录。你也可以输入 `multipass delete node1` 然后运行 `multipass purge` 来将其删除。
 
-
-只有当你无法使用 Docker Desktop 时，才需要考虑本节。此安装方式不会安装安装我们在后续某些章节中用到的 docker scout、docker debug 或 docker init CLI 插件。
+只有当你无法使用 `Docker Desktop` 时，才需要考虑本节。此安装方式不会安装安装我们在后续某些章节中用到的 `docker scout`、`docker debug` 或 `docker init` CLI 插件。
 
 这些指令向你展示了如何在 Ubuntu Linux 22.04 上安装 Docker，仅供参考。还有许多其他安装方法，你应该在网上搜索最新的指令。
 
@@ -522,7 +475,7 @@ $ sudo snap install docker
 docker 24.0.5 from Canonical ✓ installed
 ```
 
-运行一些命令来测试安装情况。你需要在命令前加上 sudo。
+运行一些命令来测试安装情况。你需要在命令前加上 `sudo`。
 
 ```
 $ sudo docker --version
@@ -540,13 +493,11 @@ Server Version: 24.0.5
 <Snip>
 ```
 
-
 你几乎可以在任何地方运行 Docker，而且安装它比以往任何时候都简单。
 
-Docker Desktop 在你的 Linux、Mac 或 Windows 机器上提供了一个功能完的 Docker 环境，是在本地机器上获取 Docker 开发环境的最佳方式。它易于安装，包含了 Docker Engine，拥有美观的 UI，并有一个包含许多扩展程序以增强其功能的市场。它可以与 `docker scout`、`docker debug` 和 `docker init` 配合使用，甚至让你启动一个单节点 Kubernetes 集群。
+`Docker Desktop` 在你的 Linux、Mac 或 Windows 机器上提供了一个功能完的 Docker 环境，是在本地机器上获取 Docker 开发环境的最佳方式。它易于安装，包含了 `Docker Engine`，拥有美观的 UI，并有一个包含许多扩展程序以增强其功能的市场。它可以与 `docker scout`、`docker debug` 和 `docker init` 配合使用，甚至让你启动一个单节点 Kubernetes 集群。
 
-Multipass 是启动一个运行 Docker 的本地虚拟机的极佳方法，而且在 Linux 服务器上安装 Docker 还有许多方法。这些方法让你能够访问大多数 Docker 免费功能，但缺少 Docker Desktop 的某些功能。
-
+`Multipass` 是启动一个运行 Docker 的本地虚拟机的极佳方法，而且在 Linux 服务器上安装 Docker 还有许多方法。这些方法让你能够访问大多数 Docker 免费功能，但缺少 `Docker Desktop` 的某些功能。
 
 本章将为你提供一些实操经验以及对镜像和容器的高级视角。其目标是为你后续章节中更详细的内容做好准备。
 
@@ -557,18 +508,15 @@ Multipass 是启动一个运行 Docker 的本地虚拟机的极佳方法，而�
 
 运维视角侧重于启动、停止、删除容器以及执行命令。开发视角则侧重于构建镜像、运行容器以及在容器内部进行操作。通过这两个视角，你将理解 Docker 的核心工作原理。
 
-
-
-运行以下命令来验证你的 **test** 容器仍在运行。
+运行以下命令来验证你的 `test` 容器仍在运行。
 
 | CONTAINER ID | IMAGE | COMMAND | CREATED | STATUS | NAME |
-|---|---|---|---|---|--|
+|---|---|---|---|---|---|
 | bbd2e5ad1817 | ubuntu:latest | "/bin/bash" | 7 mins | Up 7 min | test container |
 
-输出显示了你的 **test** 容器，你可以看到它是在 7 分前创建的，并且已经运行了 7 分钟。
+输出显示了你的 `test` 容器，你可以看到它是在 7 分前创建的，并且已经运行了 7 分钟。
 
-
-你可以使用 **docker attach** 命令将你的 shell 附加到容器的主进程。
+你可以使用 `docker attach` 命令将你的 shell 附加到容器的主进程。
 
 运行以下命令将你的 shell 附加到容器内的 Bash 进程。
 
@@ -579,15 +527,14 @@ root@bbd2e5ad1817:/#
 
 确保你的 shell 提示符发生了变化，这意味着你已成功连接到容器。
 
-输入 **Ctrl-C** 再次退出容器，并验证你的 shell 提示符恢复到本地机器。
+输入 `Ctrl-C` 再次退出容器，并验证你的 shell 提示符恢复到本地机器。
 
-
-运行另一个 **docker ps** 来验证你的容器仍在运行。
+运行另一个 `docker ps` 来验证你的容器仍在运行。
 
 | CONTAINER ID | IMAGE | COMMAND | CREATED | STATUS | NAMES |
 | bbd2e5ad1817 | ubuntu:latest | "/bin/bash" | 9 mins | Up 9 min | test |
 
-使用 **docker stop** 和 **docker rm** 命令停止并删除容器。
+使用 `docker stop` 和 `docker rm` 命令停止并删除容器。
 
 ```
 $ docker stop test
@@ -601,14 +548,14 @@ $ docker rm test
 test
 ```
 
-运行带有 **-a** 标志的 **docker ps** 命令来验证容器已成功删除，该标志会列出所有容器，即使是已停止状态的。
+运行带有 `-a` 标志的 `docker ps` 命令来验证容器已成功删除，该标志会列出所有容器，即使是已停止状态的。
 
 ```
 $ docker ps -a
 CONTAINER ID | IMAGE | COMMAND | CREATED | STATUS | PORTS
+```
 
 恭喜你，你拉取了一个 Docker 镜像，从中启动了一个容器，登录了它，在其中执行了命令，停止了它并删除了它。
-
 
 容器的核心是应用程序。
 
@@ -619,72 +566,102 @@ CONTAINER ID | IMAGE | COMMAND | CREATED | STATUS | PORTS
 - 将应用容器化
 - 以容器形式运行应用
 
-运行以下命令对仓库进行本地克隆。这将应用程序代码复制到你的机器，以便在随后的步骤中对其进行容器化。你需要 git CLI 才能完成此操作。
+运行以下命令对仓库进行本地克隆。这将应用程序代码复制到你的机器，以便在随后的步骤中对其进行容器化。你需要 `git` CLI 才能完成此操作。
 
 ```
 $ git clone https://github.com/nigelpoulton/psweb.git
+
 Cloning into 'psweb'...
+
 remote: Enumerating objects: 63, done.
+
 remote: Counting objects: 100% (34/34), done.
+
 remote: Compressing objects: 100% (22/22), done.
+
 remote: Total 63 (delta 13), reused 25 (delta 9), pack-reused 29
 ```
 
 Receiving objects: 100% (63/63), 13.29 KiB | 4.43 MiB/s, done.
 Resolving deltas: 100% (21/21), done.
 
-进入 psweb 目录并列出内容。
+进入 `psweb` 目录并列出内容。
 
 ```
 $ cd psweb
+
 $ ls -l
+
 total 32
+
 -rw-r--r-- 1 nigelpoulton staff 324 5 Feb 12:31 Dockerfile
+
 -rw-r--r-- 1 nigelpoulton staff 378 5 Feb 12:31 README.md
+
 -rw-r--r-- 1 nigelpoulton staff 341 5 Feb 12:31 app.js
+
 -rw-r--r-- 1 nigelpoulton staff 355 5 Feb 12:47 package.json
+
 drwxrxr-xr-x 3 nigelpoulton staff 96 5 Feb 12:31 views
 ```
 
 该应用是一个运行某些静态 HTML 的简单 Node.js Web 应用。
 
-检查应用的 Dockerfile。Dockerfile 是一个纯文本文档，告诉 Docker 如何构建它。
+检查应用的 `Dockerfile`。`Dockerfile` 是一个纯文本文档，告诉 Docker 如何构建它。
 
 ```dockerfile
 FROM alpine
+
 LABEL maintainer="nigelpoulton@hotmail.com"
+
 RUN apk add --update nodejs npm
+
 COPY . /src
+
 WORKDIR /src
+
 RUN npm install
+
 EXPOSE 8080
+
 ENTRYPOINT ["node", "app.js"]
 ```
 
-现在，你只需要知道 Dockerfile 中的每一行都代表构建镜像的指令。
+现在，你只需要知道 `Dockerfile` 中的每一行都代表构建镜像的指令。
 
-列出 Dockerfile 的内容。
+列出 `Dockerfile` 的内容。
 
 ```bash
 $ cat Dockerfile
 ```
 
-
-运行以下命令根据 Dockerfile 中的指令创建镜像。如果你正在跟随操作，请运行：
+运行以下命令根据 `Dockerfile` 中的指令创建镜像。如果你正在跟随操作，请运行：
 
 ```
 $ docker build -t test .
-[+] Stage 1/1 : FROM alpine
-[+] Stage 1/1 : LABEL maintainer="nigelpoulton@hotmail.com"
-[+] Stage 1/1 : RUN apk add --update nodejs npm
-[+] Stage 1/1 : COPY . /src
-[+] Stage 1/1 : WORKDIR /src
-[+] Stage 1/1 : RUN npm install
-[+] Stage 1/1 : EXPOSE 8080
-[+] Stage 1/1 : ENTRYPOINT ["node", "app.js"]
-Successfully built bbd2e5ad1817
-docker: test: bbd2e5ad1817
 ```
+
+[+] Stage 1/1 : FROM alpine
+
+[+] Stage 1/1 : LABEL maintainer="nigelpoulton@hotmail.com"
+
+
+
+[+] Stage 1/1 : RUN apk add --update nodejs npm
+
+[+] Stage 1/1 : COPY . /src
+
+[+] Stage 1/1 : WORKDIR /src
+
+[+] Stage 1/1 : RUN npm install
+
+[+] Stage 1/1 : EXPOSE 8080
+
+[+] Stage 1/1 : ENTRYPOINT ["node", "app.js"]
+
+Successfully built bbd2e5ad1817
+
+docker: test: bbd2e5ad1817
 
 恭喜你，你拉取了一个 Docker 镜像，从中启动了一个容器，登录了它，在其中执行了命令，停止了它并删除了它。
 
@@ -705,7 +682,7 @@ docker: test: bbd2e5ad1817
 
 让我们学习 Docker Engine 吧。
 
-
+## Docker Engine
 
 Docker Engine 是模块化的，并从 OCI、CNCF 和 Moby 项目等项目引提取的许多小型专业化组件构建的。
 
@@ -716,15 +693,11 @@ Docker Engine 是模块化的，并从 OCI、CNCF 和 Moby 项目等项目引提
 
 图 5.1 显示了用于创建和运行容器的 Docker Engine 组件。虽然存在其他组件，但这个简化的图关注启动和运行容器的组件。
 
-
-
-
 ![](img/aae0230bf8529bd80767c4c780dca8d3_65_0.png)
 
 图 5.1
 
-在本书中，我们提到 runc 和 containerd 时会使用小写的“r”和“c”，这是它们在官方项目文档中的写法。这意味着以 runc 或 containerd 开头的句子将不以大写字母开头。
-
+在本书中，我们提到 `runc` 和 `containerd` 时会使用小写的“r”和“c”，这是它们在官方项目文档中的写法。这意味着以 `runc` 或 `containerd` 开头的句子将不以大写字母开头。
 
 当 Docker 首次发布时，Docker Engine 有两个主要组件：
 
@@ -735,17 +708,15 @@ Docker Engine 是模块化的，并从 OCI、CNCF 和 Moby 项目等项目引提
 
 LXC 负责了最艰出的工作，即与 Linux 内核进行交互，并构建所需的命名空间（namespaces）和控制组（cgroups）来构建和启动容器。
 
-
 依赖 LXC 给 Docker 项目带来了几个问题。
 
 首先，LXC 是特定于 Linux 的，而 Docker 具有成为多平台的愿景。
 
 其次，Docker 的演进非常快，没有办法确保 LXC 能按照 Docker 需要的方式进行演进。
 
-为了改进体验并帮助项目更快速演进，Docker 用自己的工具 *libcontainer* 替换了 LXC。libcontainer 的目标是作为一个平台无关的工具，让 Docker 能够访问宿主机内核中基础的容器构建模块。
+为了改进体验并帮助项目更快速演进，Docker 用自己的工具 *libcontainer* 替换了 LXC。`libcontainer` 的目标是作为一个平台无关的工具，让 Docker 能够访问宿主机内核中基础的容器构建模块。
 
-Libcontainer 在很早以前就已经替换了 Docker 中的 LXC。
-
+`Libcontainer` 在很早以前就已经替换了 Docker 中的 LXC。
 
 如前所述，Docker Engine 原本是一个单体结构，几乎所有功能都编码在守护进程中。然而，随着时间的推移，由于以下原因，这变得越来越成问题：
 
@@ -755,7 +726,7 @@ Libcontainer 在很早以前就已经替换了 Docker 中的 LXC。
 
 项目组意识到这些挑战，并启动了一项长期计划，以拆分并重构 Engine，使每个功能都变成自己独立的小型专用工具。平台构建者就可以重用这些工具来构建其他平台。
 
-拆分 Docker 守护进程的工作是一个持续的过程，所有用于构建镜像和执行容器的代码都已移除并重构为小型、专用的工具。显著的例子包括移除高层和低层运行时功能，并在名为 containerd 和 runc 的独立工具中重新实现它们，这两个工具都被 Docker、Kubernetes、Firecracker 和 Fargate 等许多不同项目使用。从 Docker Desktop 4.27.0 开始，Docker 已从守护进程中移除了镜像管理，现在使用 containerd 的镜像管理能力。
+拆分 Docker 守护进程的工作是一个持续的过程，所有用于构建镜像和执行容器的代码都已移除并重构为小型、专用的工具。显著的例子包括移除高层和低层运行时功能，并在名为 `containerd` 和 `runc` 的独立工具中重新实现它们，这两个工具都被 Docker、Kubernetes、Firecracker 和 Fargate 等许多不同项目使用。从 Docker Desktop 4.27.0 开始，Docker 已从守护进程中移除了镜像管理，现在使用 `containerd` 的镜像管理能力。
 
 图 5.2 显示了用于运行容器的 Docker Engine 主要组件的视图，并列出了每个组件的主要职责。
 
@@ -765,6 +736,7 @@ Libcontainer 在很早以前就已经替换了 Docker 中的 LXC。
 
 其他其他 Engine 组件。
 
+## 开放容器标准 (OCI) 的影响
 
 在 Docker, Inc. 重构 Engine 的同时，OCI 正在定义两个容器相关的标准：
 
@@ -775,52 +747,54 @@ Libcontainer 在很早以前就已经替换了 Docker 中的 LXC。
 
 他们甚至添加了第三种称为“分发规范”（distribution-spec）的规范，用于规定如何通过注册表分发镜像。
 
-在编写时，runtime-spec 版本为 1.1.0，image-spec 版本为 1.0.2，distribution-spec 版本为 1.0.1。然而，正在制定 image-spec 和 distribution-spec 的 1.1 版本。我们提到这一点是为了强调这些底层规范的缓慢而稳健的特性，因为它们被许多其他项目深度依赖——稳定性是底层 OCI 规范的重中之义。
+在编写时，`runtime-spec` 版本为 1.1.0，`image-spec` 版本为 1.0.2，`distribution-spec` 版本为 1.0.1。然而，正在制定 `image-spec` 和 `distribution-spec` 的 1.1 版本。我们提到这一点是为了强调这些底层规范的缓慢而稳健的特性，因为它们被许多其他项目深度依赖——稳定性是底层 OCI 规范的重中之义。
 
 Docker, Inc. 是 OCI 的创始成员，并深度参与了规范的定义。它继续通过贡献代码和帮助指导规范来参与其中。
 
-自 2016 年以来的所有版本的 Docker 都实现了 OCI 规范。例如，Docker 使用 runc（OCI runtime-spec 的参考实现）创建符合 OCI 规范的容器（runtime-spec）。它还使用 BuildKit 构建符合 OCI 规范的镜像（image-spec），而 Docker Hub 是一个符合 OCI 规范的注册表（registry-spec）。
+自 2016 年以来的所有版本的 Docker 都实现了 OCI 规范。例如，Docker 使用 `runc`（OCI `runtime-spec` 的参考实现）创建符合 OCI 规范的容器（`runtime-spec`）。它还使用 `BuildKit` 构建符合 OCI 规范的镜像（`image-spec`），而 Docker Hub 是一个符合 OCI 规范的注册表（`registry-spec`）。
 
+## runc
 
-如前所述，runc（读音为“run see”，且始终用小写“r”写入）是 OCI runtime-spec 的参考实现。Docker, Inc. 深度参与了该规范的定义并贡献了 runc 的初始代码。
+如前所述，`runc`（读音为“run see”，且始终用小写“r”写入）是 OCI `runtime-spec` 的参考实现。Docker, Inc. 深度参与了该规范的定义并贡献了 `runc` 的初始代码。
 
-runc 是 libcontainer 的轻量级 CLI 封装，你可以下载并使用它来管理符合 OCI 规范的容器。然而，它是一个非常底层工具，缺乏你在 Docker Engine 中获得几乎的所有功能和插件。幸运的是，如图 5.2 所示，Docker 使用 runc 作为其底层运行时。这意味着你既可以获得 OCI 规范的容器，又能获得 Docker 用户体验。
+`runc` 是 `libcontainer` 的轻量级 CLI 封装，你可以下载并使用它来管理符合 OCI 规范的容器。然而，它是一个非常底层工具，缺乏你在 Docker Engine 中获得几乎的所有功能和插件。幸运的是，如图 5.2 所示，Docker 使用 `runc` 作为其底层运行时。这意味着你既可以获得 OCI 规范的容器，又能获得 Docker 用户体验。
 
-在术语方面，我们有时说 runc 运行在 OCI 层，并且我们经常将其称为底层运行时。
+在术语方面，我们有时说 `runc` 运行在 OCI 层，并且我们经常将其称为底层运行时。
 
-Docker 和 Kubernetes 都将 runc 作为它们的默认底层运行时，并且都将其与 containerd 高层运行时配对：
+Docker 和 Kubernetes 都将 `runc` 作为它们的默认底层运行时，并且都将其与 `containerd` 高层运行时配对：
 
-- containerd 作为高层运行时运行，管理生命周期事件
-- runc 作为底层运行时运行，通过与内核交互执行生命周期事件，完成实际构建和删除容器的工作
+- `containerd` 作为高层运行时运行，管理生命周期事件
+- `runc` 作为底层运行时运行，通过与内核交互执行生命周期事件，完成实际构建和删除容器的工作
 
 你可以在这里查看最新发布：
 
 - https://github.com/opencontainers/runc/releases
 
+## containerd
 
-containerd（读音为“container dee”，且始终用小写“c”写入）是 Docker 在从守护进程中剥离功能时的另一个工具。
+`containerd`（读音为“container dee”，且始终用小写“c”写入）是 Docker 在从守护进程中剥离功能时的另一个工具。
 
-我们将 containerd 称为高层运行时，因为它管理启动、停止和删除容器等生命周期事件。然而，它需要一个运行时来执行实际工作。大多数情况下，containerd 与 runc 配对作为其底层运行时。正如你在图 5.3 中看到的，它使用了 shim（垫片），可以使用其他底层运行时替换 runc。我们将在 WebAssembly 章节中详细介绍，届时你将看到如何使用 Docker 运行 WebAssembly 应用。
+我们将 `containerd` 称为高层运行时，因为它管理启动、停止和删除容器等生命周期事件。然而，它需要一个运行时来执行实际工作。大多数情况下，`containerd` 与 `runc` 配对作为其底层运行时。正如你在图 5.3 中看到的，它使用了 shim（垫片），可以使用其他底层运行时替换 `runc`。我们将在 WebAssembly 章节中详细介绍，届时你将看到如何使用 Docker 运行 WebAssembly 应用。
 
-最初的计划是让 containerd 成为管理容器生命周期事件的小型专用工具。然而它它增长到包含了管理镜像、网络和卷的能力。
+最初的计划是让 `containerd` 成为管理容器生命周期事件的小型专用工具。然而它它增长到包含了管理镜像、网络和卷的能力。
 
-添加更多功能的原因之一是为了像 Kubernetes 这样的项目希望 containerd 能够推取镜像。幸运的是，这些额外功能是模块化的，这意味着 Kubernetes 等项目可以包含 containerd 但只选取它们需要的部分。
+添加更多功能的原因之一是为了像 Kubernetes 这样的项目希望 `containerd` 能够推取镜像。幸运的是，这些额外功能是模块化的，这意味着 Kubernetes 等项目可以包含 `containerd` 但只选取它们需要的部分。
 
-containerd 最初由 Docker, Inc. 开发并捐赠给了云原生计算基金会 (CNCF)。在编写时，containerd 是一个 CNCF 成毕业项目，意味着它是稳定且适用于生产环境的。你可以在这里查看最新发布：
+`containerd` 最初由 Docker, Inc. 开发并捐赠给了云原生计算基金会 (CNCF)。在编写时，`containerd` 是一个 CNCF 成毕业项目，意味着它是稳定且适用于生产环境的。你可以在这里查看最新发布：
 
 - https://github.com/containerd/containerd/releases
 
-#### 启动新容器（示例）
+### 启动新容器（示例）
 
 现在你已经对全局有了了解，让我们看看如何使用 Docker 创建新容器。
 
-启动容器最常见方法是使用 Docker CLI。可以尝试运行以下命令基于 nginx 镜像启动一个名为 ctr1 的新容器。
+启动容器最常见方法是使用 Docker CLI。可以尝试运行以下命令基于 nginx 镜像启动一个名为 `ctr1` 的新容器。
 
 ```
 $ docker run -d --name ctr1 nginx
 ```
 
-运行 docker ps 命令查看容器是否正在运行。
+运行 `docker ps` 命令查看容器是否正在运行。
 
 | CONTAINER ID | IMAGE | COMMAND | CREATED |
 |--- | --- | --- | --- |
@@ -828,23 +802,19 @@ $ docker run -d --name ctr1 nginx
 
 当你运行此类命令时，Docker 客户端将其转换为 API 请求并发送到守护进程暴露的 API。
 
-守护进程接收请求，将其解释为创建新容器的请求，并传递给 containerd。请记住，守护进程不再包含任何创建容器的代码。
+守护进程接收请求，将其解释为创建新容器的请求，并传递给 `containerd`。请记住，守护进程不再包含任何创建容器的代码。
 
+守护进程通过 gRPC CRUD 风格 API 与 `containerd` 通信。
 
+尽管名字如此，即使是 `containerd` 也无法创建容器。它将所需的 Docker 镜像转换为 OCI 边界，并告诉 `runc` 使用它来创建一个新容器。
 
-
-守护进程通过 gRPC  CRUD 风格 API 与 containerd 通信。
-
-尽管名字如此，即使是 containerd 也无法创建容器。它将所需的 Docker 镜像转换为 OCI 边界，并告诉 runc 使用它来创建一个新容器。
-
-runc 与操作系统内核交互，拉取创建容器所需的所有构建体（命名空间、cgroups 等）。容器作为 runc 的子进程启动，一旦容器启动，runc 就会退出。
+`runc` 与操作系统内核交互，拉取创建容器所需的所有构建体（命名空间、cgroups 等）。容器作为 `runc` 的子进程启动，一旦容器启动，`runc` 就会退出。
 
 图 5.3 总结了这一过程。
 
 ![](img/aae0230bf8529bd80767c4c780dca8d3_74_0.png)
 
-
-通过将容器的创建和管理与 Docker 守护进程解耦，并在 containerd 和 run 中实现，使得可以停止、重启甚至更新守护进程而不影响正在运行的容器。我们有时将其称为无守护进程容器。
+通过将容器的创建和管理与 Docker 守护进程解耦，并在 `containerd` 和 `run` 中实现，使得可以停止、重启甚至更新守护进程而不影响正在运行的容器。我们有时将其称为无守护进程容器。
 
 如果你之前启动了 NGINX 容器，应该使用以下命令删除它。
 
@@ -853,9 +823,10 @@ $ docker rm ctrl -f
 ```
 
 
-本章中的一些图表显示了 shim 组件。
 
-shim 是一种流行的软件工程模式，Docker Engine 在 containerd 和 OCI 层之间使用它们，带来了以下益处：
+本章中的一些图表显示了 `shim` 组件。
+
+`shim` 是一种流行的软件工程模式，Docker Engine 在 `containerd` 和 OCI 层之间使用它们，带来了以下益处：
 
 - 无守护进程容器
 - 提高效率
@@ -863,20 +834,18 @@ shim 是一种流行的软件工程模式，Docker Engine 在 containerd 和 OCI
 
 我们已经提到过无守护进程容器。
 
-在效率方面，containerd 为每个新容器 fork 出一个 shim 和一个 runc 进程。然而，每个 runc 进程在容器开始运行后就会退出，留下 shim 进程作为容器的父进程。shim 是轻量级的，位于 containerd 和容器之间。它报告容器状态并执行低级任务，例如保持容器的 STDIN 和 STDOUT 流打开。
+在效率方面，`containerd` 为每个新容器 `fork` 出一个 `shim` 和一个 `runc` 进程。然而，每个 `runc` 进程在容器开始运行后就会退出，留下 `shim` 进程作为容器的父进程。`shim` 是轻量级的，位于 `containerd` 和容器之间。它报告容器状态并执行低级任务，例如保持容器的 STDIN 和 STDOUT 流打开。
 
-shim 还让将 runc 替换为其他低级运行时成为可能。
-
+`shim` 还让将 `runc` 替换为其他低级运行时成为可能。
 
 在 Linux 系统上，Docker 将我们讨论的组件实现为以下独立的二进制文件：
 
-- /usr/bin/dockerd（Docker 守护进程）
-- /usr/bin/containerd
-- /usr/bin/containerd-shim-runc-v2
-- /usr/bin/runc
+- `/usr/bin/dockerd`（Docker 守护进程）
+- `/usr/bin/containerd`
+- `/usr/bin/containerd-shim-runc-v2`
+- `/usr/bin/runc`
 
-你可以通过运行 ps 命令在基于 Linux 的 Docker 宿主机看到所有这些内容。某些进程只有在系统有运行的容器时才会存在，如果你在 Mac 上使用 Docker Desktop，则看不到它们，因为 Docker Engine 运行在虚拟机内部。
-
+你可以通过运行 `ps` 命令在基于 Linux 的 Docker 宿主机看到所有这些内容。某些进程只有在系统有运行的容器时才会存在，如果你在 Mac 上使用 Docker Desktop，则看不到它们，因为 Docker Engine 运行在虚拟机内部。
 
 在编写本文时，Docker 已经剥离了守护进程的大部分功能，让守护进程专注于提供 API。
 
@@ -884,15 +853,15 @@ shim 还让将 runc 替换为其他低级运行时成为可能。
 
 Docker Engine 是一个能够轻松构建、分发和运行容器的平台。它实现了 OCI 标准，是一个由许多微小、专用组件组成的模块化应用程序。
 
-Docker 守护进程实现了 Docker API，但大多数其他功能已被剥离，并作为 containerd 和 runc 等独立的可组合工具实现。
+Docker 守护进程实现了 Docker API，但大多数其他功能已被剥离，并作为 `containerd` 和 `runc` 等独立的可组合工具实现。
 
-containerd 执行镜像管理任务并监督容器的生命周期管理，例如启动、停止和删除容器。Docker, Inc. 最初编写了它，然后将其贡献给了 CNCF。它被归类为高级运行时，并被许多其他项目（包括 Kubernetes、Firecracker 和 Fargate）使用。
+`containerd` 执行镜像管理任务并监督容器的生命周期管理，例如启动、停止和删除容器。Docker, Inc. 最初编写了它，然后将其贡献给了 CNCF。它被归类为高级运行时，并被许多其他项目（包括 Kubernetes、Firecracker 和 Fargate）使用。
 
-containerd 依赖于名为 runc 的低级运行时与宿主机内核交互并构建容器。runc 是 OCI runtime-spec 的参考实现，并期望从符合 OCI 规范的边界中启动容器。containerd 与 runc 通信，并确保 Docker 镜像作为符合 OCI 规范的边界呈现给 runc。
+`containerd` 依赖于名为 `runc` 的低级运行时与宿主机内核交互并构建容器。`runc` 是 OCI runtime-spec 的参考实现，并期望从符合 OCI 规范的边界中启动容器。`containerd` 与 `runc` 通信，并确保 Docker 镜像作为符合 OCI 规范的边界呈现给 `runc`。
 
-runc 基于 libcontainer 的代码，你可以将其作为独立的 CLI 工具运行以创建容器，它几乎用在所有使用 containerd 的地方。
+`runc` 基于 `libcontainer` 的代码，你可以将其作为独立的 CLI 工具运行以创建容器，它几乎用在所有使用 `containerd` 的地方。
 
-shim 让将 containerd 与其他低级运行时成为可能。
+`shim` 让将 `containerd` 与其他低级运行时成为可能。
 
 ## 6：与镜像配合
 
@@ -935,7 +904,7 @@ shim 让将 containerd 与其他低级运行时成为可能。
 
 图 6.1
 
-docker run 命令启动容器的最常用方式。一旦容器运行，镜像和容器就绑定了，只有当你删除了使用它的容器后才能删除该镜像。
+`docker run` 命令启动容器的最常用方式。一旦容器运行，镜像和容器就绑定了，只有当你删除了使用它的容器后才能删除该镜像。
 
 容器设计用于运行单个应用程序或微服务。因此，它们应该只包含代码和依赖项。
 
@@ -949,7 +918,7 @@ docker run 命令启动容器的最常用方式。一旦容器运行，镜像和
 
 干净的 Docker 安装有一个本地仓库。
 
-本地仓库是本地机器上用于存储镜像以便方便访问的区域。我们有时称之为镜像缓存，在 Linux 上它通常位于 /var/lib/docker/<storage-driver>。然而，如果你使用 Docker Desktop，它将在 Docker 虚拟机内部。
+本地仓库是本地机器上用于存储镜像以便方便访问的区域。我们有时称之为镜像缓存，在 Linux 上它通常位于 `/var/lib/docker/<storage-driver>`。然而，如果你使用 Docker Desktop，它将在 Docker 虚拟机内部。
 
 运行以下命令检查你的本地仓库内容。此示例中有三个与运行的三个 Docker Desktop 扩展相关的镜像。你的将会不同，并且可能是空的。
 
@@ -961,34 +930,45 @@ docker run 命令启动容器的最常用方式。一旦容器运行，镜像和
 
 获取镜像的过程被称为*拉取 (pulling)*。
 
-
-
-
-
-运行以下命令拉取 redis 镜像并验证它是否存在于你的本地仓库中。
+运行以下命令拉取 `redis` 镜像并验证它是否存在于你的本地仓库中。
 
 **注意：如果你在 Linux 上进行操作，且尚未将用户账户添加到本地 docker Unix 组，你可能需要在所有后续命令的开头加上 `sudo`。**
 
 ```
 $ docker pull redis
+
 Using default tag: latest ----- Assume the 'latest'
+
 latest: Pulling from library/redis ----- Assume you want to
+
 08df40659127: Download complete ----- Pulling layer
+
 4f4b700ef54: Already exists ----- Pulling layer (loca
+
 4fe7aaab04: Download complete ----- Pulling layer
+
 57de0f129a55: Download complete ----- Pulling layer
+
 546e941f15b: Download complete ----- Pulling layer
+
 f7f7da262cd8: Download complete ----- Pulling layer
+
 f45ab649e450: Download complete ----- Pulling layer
+
 983f900bbc88: Download complete ----- Pulling layer
+
 Digest: sha256:76d5908f5e19fdd73daf956a38826f79033ee4707d90283
+
 Status: Downloaded new image for redis:latest
+
 docker.io/redis:latest ----- docker.io = Docker
 ```
 
 ```
 $ docker images
+
 REPOSITORY TAG CREATED SIZE
+
 redis latest 11c3e418c296 2 weeks ago 223MB
 ```
 
@@ -1049,7 +1029,7 @@ Docker Hub 有*官方仓库*的概念，这些是由 Docker 和应用供应商�
 - nigelpoulton/gsd — https://hub.docker.com/r/nigelpoulton/gsd/
 - nigelpoulton/k8sbook — https://hub.docker.com/r/nigelpoulton/k8book/
 
-注意它们存在于 **nigelpoulton** 二级命名空间之下。这是表明它们不是官方仓库的几个迹象之一。
+注意它们存在于 `nigelpoulton` 二级命名空间之下。这是表明它们不是官方仓库的几个迹象之一。
 
 虽然非官方仓库中有许多优秀的镜像，但你应该始终假设任何来自非官方仓库的镜像都是**不安全的**。这基于永远不信任互联网软件的良好实践。事实上，在下载和使用 Docker 官方镜像时你也应该保持谨慎。
 
@@ -1075,8 +1055,8 @@ $ docker pull mongo:7.0.5 从官方仓库拉取标记为 7.0.5 的镜像
 $ docker pull busybox:glibc 从官方仓库拉取标记为 glibc 的镜像
 
 $ docker pull alpine 从官方仓库拉取标记为 latest 的镜像
-
-```几点需要注意：
+```
+几点需要注意：
 
 - 如前所述，如果你在存储名称后没有指定镜像标签，Docker 假设你要 `latest`。如果仓库没有标记为 `latest` 的镜像，命令将失败。
 - 标记为 `latest` 的镜像并不保证是最新的。
@@ -1087,24 +1067,29 @@ $ docker pull alpine 从官方仓库拉取标记为 latest 的镜像
 $ docker pull nigelpoulton/tu-demo:v2
 ```
 
-要从不同的仓库拉取镜像，你只需要在存储名称之前添加仓库的 DNS 名称。例如，以下命令从 GitHub Container Registry (ghcr.io) 上 Brandon Mitchell 的 regclient/regsync 仓库拉取最新镜像。
+要从不同的仓库拉取镜像，你只需要在存储名称之前添加仓库的 DNS 名称。例如，以下命令从 GitHub Container Registry (`ghcr.io`) 上 Brandon Mitchell 的 `regclient/regsync` 仓库拉取最新镜像。
 
 ```
 $ docker pull ghcr.io/regclient/regsync:latest
+
 latest: Pulling from regclient/regsync
+
 614f2b64ccf9: Download complete
+
 7746d6728537: Download complete
+
 685af2c79c31: Download complete
+
 4c377311167a: Download complete
+
 662e9541e042: Download complete
+
 digest: sha256:149a95d473d6beed2a1404d7c3b000ddffa583a94836587ba8e33
+
 Status: Downloaded newer image for ghcr.io/regclient/regsync:latest
+
 ghcr.io/regclient/regsync:latest
 ```
-
-
-
-
 
 注意拉取（pull）的操作与 Docker Hub 看起来完全相同。这是因为 GHCR 支持 OCI 镜像规范并实现了 Docker Registry v2 API。
 
@@ -1112,17 +1097,23 @@ ghcr.io/regclient/regsync:latest
 
 你可以为单个镜像赋予任意数量的标签。
 
-从表面上看，以下输出似乎列出了三个镜像。但仔细观察会发现，其实只有两个 —— **b4210d0aa52f** 镜像被标记为 **latest** 和 **v1**。
+从表面上看，以下输出似乎列出了三个镜像。但仔细观察会发现，其实只有两个 —— `b4210d0aa52f` 镜像被标记为 `latest` 和 `v1`。
 
 ```
 $ docker images
+
 REPOSITORY             TAG      IMAGE ID        CREATED
+
 igelpoulton/tu-demo  latest   b4210d0aa52f  2 days ago
+
 igelpoulton/tu-demo  v1       b4210d0aa52f  2 days ago
-igelpoulton/tu-demo  v2       6ba12825d092  12 minutes ago
 ```
 
-这是一个说明 **latest** 标签与仓库中最新镜像并不相关的绝佳例子。在这个例子中，**latest** 标签指向的是与 **v1** 标签相同的镜像，而该镜像实际上比 **v2** 镜像更旧。
+
+
+igelpoulton/tu-demo  v2       6ba12825d092  12 minutes ago
+
+这是一个说明 `latest` 标签与仓库中最新镜像并不相关的绝佳例子。在这个例子中，`latest` 标签指向的是与 `v1` 标签相同的镜像，而该镜像实际上比 `v2` 镜像更旧。
 
 ### 镜像与层
 
@@ -1134,7 +1125,7 @@ igelpoulton/tu-demo  v2       6ba12825d092  12 minutes ago
 
 你将查看以下所有检查层信息的方法：
 
-- * 拉取（Pull）操作
+- 拉取（Pull）操作
 - `docker inspect` 命令
 - `docker history` 命令
 
@@ -1142,14 +1133,23 @@ igelpoulton/tu-demo  v2       6ba12825d092  12 minutes ago
 
 ```
 $ docker pull node:latest
+
 latest: Pulling from library/ubuntu
+
 952132ac251a: Pull complete
+
 82659f8f1b76: Pull complete
+
 c19118ca682d: Pull complete
+
 8296858250fe: Pull complete
+
 24e0251a02c: Pull complete
+
 digest: sha256:f4691c96ebbaa9d..28ae95a60369c506dd6e6f6ab
+
 Status: Downloaded newer image for node:latest
+
 docker.io/node:latest
 ```
 
@@ -1159,10 +1159,11 @@ docker.io/node:latest
 
 图 6.7 - 镜像层与 ID
 
-查看镜像层的另一种方法是通过 **docker inspect** 命令检查镜像。以下示例检查了上一步拉取的同一个 **node:latest** 镜像。
+查看镜像层的另一种方法是通过 `docker inspect` 命令检查镜像。以下示例检查了上一步拉取的同一个 `node:latest` 镜像。
 
 ```
 docker inspect node:latest
+
 {
   "Id": "sha256:bd3d4369ae......fa2645f5699037d7d8c6b415a
   "RepoTags": [
@@ -1182,11 +1183,11 @@ docker inspect node:latest
 }
 ```
 
-截取后的输出显示了五层。然而，它显示的是它们的 SHA256 哈希值，这与 **docker pull** 输出中显示的短 ID 不同。
+截取后的输出显示了五层。然而，它显示的是它们的 SHA256 哈希值，这与 `docker pull` 输出中显示的短 ID 不同。
 
 `docker inspect` 命令对于获取详细的镜像信息非常有用。
 
-你还可以使用 `docker history` 命令检查镜像并查看其层数据。然而，此命令显示的是镜像的构建历史，而不是最终镜像中层的严格列表。例如，某些 Dockerfile 指令（ENV、EXPOSE、CMD 和 ENTRYPOINT）只添加元数据而不会创建层。
+你还可以使用 `docker history` 命令检查镜像并查看其层数据。然而，此命令显示的是镜像的构建历史，而不是最终镜像中层的严格列表。例如，某些 Dockerfile 指令（`ENV`、`EXPOSE`、`CMD` 和 `ENTRYPOINT`）只添加元数据而不会创建层。
 
 #### 基础层
 
@@ -1222,14 +1223,23 @@ docker inspect node:latest
 
 ```
 $ docker pull node:latest
+
 latest: Pulling from library/ubuntu
+
 952132ac251a: Pull complete
+
 82659f8f1b76: Pull complete
+
 c19118ca682d: Pull complete
+
 8296858250fe: Pull complete
+
 24e0251a02c: Pull complete
+
 digest: sha256:f4691c96ebbaa9d..28ae95a60369c506dd6e6f6ab
+
 Status: Downloaded newer image for node:latest
+
 docker.io/node:latest
 ```
 
@@ -1237,14 +1247,13 @@ docker.io/node:latest
 
 ### 通过哈希值拉取镜像
 
-到目前为止，你已经学习了如何使用名称（标签）拉取和操作镜像。虽然这是最常见的方法，但它有一个问题——标签是可变的。这意味着你可能会错误标记镜像，或者为新镜像赋予与旧镜像相同的标签。一个极其常见的例子是 **latest** 标签。例如，以前拉取的 **alpine:latest** 标签与今天拉取的可能不是同一个镜像。
+到目前为止，你已经学习了如何使用名称（标签）拉取和操作镜像。虽然这是最常见的方法，但它有一个问题——标签是可变的。这意味着你可能会错误标记镜像，或者为新镜像赋予与旧镜像相同的标签。一个极其常见的例子是 `latest` 标签。例如，以前拉取的 `alpine:latest` 标签与今天拉取的可能不是同一个镜像。
 
-考虑一个概述信任可变标签的潜在影响的快速示例。假设你有一个名为 **goltrack:1.5** 的镜像，你收到警告说它存在严重漏洞。你构建了一个包含修复的新镜像，但随后你犯了错误。你在相同的仓库中推送了新镜像，使用了与漏洞镜像相同的标签。
+考虑一个概述信任可变标签的潜在影响的快速示例。假设你有一个名为 `goltrack:1.5` 的镜像，你收到警告说它存在严重漏洞。你构建了一个包含修复的新镜像，但随后你犯了错误。你在相同的仓库中推送了新镜像，使用了与漏洞镜像相同的标签。
 
 花时间考虑刚刚发生了什么以及影响。
 
-你有一个名为 **goltrack:1.5** 的镜像，它正被你生产环境中的许多容器使用，并且它有一个严重缺陷。你创建了一个包含修复的版本。这太棒了，但随后你犯了错误。你在相同的仓库中推送了新镜像，使用了与漏洞镜像相同的标签。这覆盖了原始镜像，导致你没有很好的方法来确定哪些生产容器正在使用该漏洞镜像和
-
+你有一个名为 `goltrack:1.5` 的镜像，它正被你生产环境中的许多容器使用，并且它有一个严重缺陷。你创建了一个包含修复的版本。这太棒了，但随后你犯了错误。你在相同的仓库中推送了新镜像，使用了与漏洞镜像相同的标签。这覆盖了原始镜像，导致你没有很好的方法来确定哪些生产容器正在使用该漏洞镜像和
 
 它们正在使用固定镜像——两个镜像具有相同的标签！
 
@@ -1256,7 +1265,9 @@ Docker 使用内容寻址的存储模型，每个镜像都会获得一个加密�
 
 ```
 $ docker images --digests alpine
+
 REPOSITORY TAG DIGEST IMAGE ID
+
 alpine  latest sha256:c5b1261d...8elad6b c5b1261d6d3e
 ```
 
@@ -1264,8 +1275,11 @@ alpine  latest sha256:c5b1261d...8elad6b c5b1261d6d3e
 
 ```
 $ docker build imagetools inspect nigelpoulton/k8sbook:latest
+
 Name: docker.io/nigelpoulton/k8sbook:latest
+
 MediaType: application/vnd.docker.distribution.manifest.v2+json
+
 Digest: sha256:13dd59a0c74e9a147800039b1ff4d61201375c0088b96a29
 <Snip>
 ```
@@ -1274,16 +1288,27 @@ Digest: sha256:13dd59a0c74e9a147800039b1ff4d61201375c0088b96a29
 
 ```
 $ docker pull nigelpoulton/k8sbook@sha256:13dd59a0...bce2e14b
+
 docker.io/nigelpoulton/k8sbook@sha256:13dd59a0...bce2e14b: Pulling
+
 59f164fb787: Download complete
+
 a052f188b3e: Download complete
+
 94a9f4efa5: Download complete
+
 b7e60677fa: Download complete
+
 edfb0c26f1fb: Download complete
+
 5b1423465504: Download complete
+
 2f23a362cd9: Download complete
+
 Digest: sha256:13dd59a0...bce2e14b
+
 Status: Downloaded newer image for nigoulton/k8sbook@sha256:13
+
 docker.io/nigelpoulton/k8sbook:latest@sha256:13dd59a0...bce2e14b
 ```
 
@@ -1336,16 +1361,16 @@ Docker 的优点之一是它的简单性。然而，随着技术不断的发展�
 
 ```
 $ docker buildx imagetools inspect alpine
+
 Name: docker.io/library/alpine:latest
+
 MediaType: application/vnd.docker.distribution.manifest.list.v2+json
+
 Digest: sha256:c5b1261d6d3e43071626931fc04f70149baeba2c8ec62
 ```
 
 Manifests:
 Name: docker.io/library/alpine:latest@sha256:6457d53f...645
-
-
-
 
 为你的系统拉取正确的镜像是一回事，但为所有不同的架构构建镜像又是呢？
 
@@ -1381,9 +1406,13 @@ docker scout quickview nigelpoulton/tu-demo:latest
   SBOM of image already cached, 66 packages indexed
 
 | Target | nigelpoulton/tu-demo:latest | 0C |
+
 | :--- | :--- | :--- |
+
 | digest | b4210d0aa52f | |
+
 | Base image | python:3-alpine | 0C |
+
 | Updated base image | python:3.11-alpine | 0C |
 ```
 
@@ -1391,39 +1420,45 @@ docker scout quickview nigelpoulton/tu-demo:latest
 
 你可以使用 `docker scout cves` 命令获取更详细的信息，包括修复建议。
 
-```
-docker scout cves nigelpoulton/tu-demo:latest
+
+
+`docker scout cves nigelpoulton/tu-demo:latest`
 
 ✓ SBOM of image already cached, 66 packages indexed
+
 ✗ Detected 1 vulnerable package with 2 vulnerabilities
-```
 
 ### 概述
 
 分析的镜像
-| Target | nigelpoulton/tu-demo:latest |
+| Target | `nigelpoulton/tu-demo:latest` |
 | :--- | :--- |
-| digest | b4210d0aa52f |
-| platform | linux/arm64/v8 |
+| digest | `b4210d0aa52f` |
+| platform | `linux/arm64/v8` |
 | vulnerabilities | 0C 1H 1M 0L |
 | size | 26 MB |
 | packages | 66 |
 
 ### 软件包与漏洞
-0C 1H 1M 0L expat 2.5.0-r2
-pkg:apk/alpine/expat@2.5.0-r27os_name=alpine&os_version=31
+0C 1H 1M 0L `expat` `2.5.0-r2`
+`pkg:apk/alpine/expat@2.5.0-r27os_name=alpine&os_version=31`
 
-x HIGH CVE-2023-52425
+x HIGH `CVE-2023-52425`
 https://cve.docker.com/v/CVE-2023-52425
-Affected range : <2.6.0-r0
-Fixed version : 2.6.0-r0
-```我截取了输出，使其只显示严重和高风险漏洞，但有几点是很清楚的：
+Affected range : `<2.6.0-r0`
+Fixed version : `2.6.0-r0`
+
+我截取了输出，使其只显示严重和高风险漏洞，但有几点是很清楚的：
 
 - 它检测到了一个包含两个漏洞的受影响包
-- 受影响的包名为 expat，我们正在运行的漏洞版本是 2.5.0-r2
-- 它列出的漏洞为 CVE-2023-52425
+
+- 受影响的包名为 `expat`，我们正在运行的漏洞版本是 `2.5.0-r2`
+
+- 它列出的漏洞为 `CVE-2023-52425`
+
 - 它包含一个指向更多信息的 Scout 报告链接
-- 它建议我们更新到包含修复的的2.6.0-r0 版本
+
+- 它建议我们更新到包含修复的的`2.6.0-r0` 版本
 
 图 6.14 显示了这在 Docker Desktop 中的外观，你可以在 Docker Hub 中获得类似的集成和视图。
 
@@ -1431,11 +1466,11 @@ Fixed version : 2.6.0-r0
 
 图 6.14 - Scout 与 Docker Desktop 的集成
 
-scout.docker.com 门户提供概述仪表板，允许你配置策略，并让你设置与 Docker Hub 以及其他注册表的集成，以远程扫描和监控多个仓库。
+`scout.docker.com` 门户提供概述仪表板，允许你配置策略，并让你设置与 Docker Hub 以及其他注册表的集成，以远程扫描和监控多个仓库。
 
 ### 删除镜像
 
-你可以使用 `docker rmi` 命令删除镜像。rmi 是 remove image 的缩写。
+你可以使用 `docker rmi` 命令删除镜像。`rmi` 是 `remove image` 的缩写。
 
 删除镜像会将它们从本地仓库中移除，不再出现在 `docker images` 命令中。该操作还会删除本地文件系统中包含层数据的所有目录。然而，在删除所有引用这些镜像之前，Docker 不会删除多个镜像共享的层。
 
@@ -1449,13 +1484,9 @@ Untagged: redis:latest
 Deleted: sha256:76d5908f5e19fdd73daf956a38826f790336ee4707d9028f
 ```
 
-Untagged: nigelpoulton/tu-demo:v2
-Deleted: sha256:af111729d35a09fd
-```
+Untagged: `nigelpoulton/tu-demo:v2`
 
-
-
-
+Deleted: `sha256:af111729d35a09fd`
 
 ### 章节总结
 
@@ -1465,15 +1496,15 @@ Deleted: sha256:af111729d35a09fd
 
 你可以从单个镜像启动一个或多个容器。
 
-在底层，Docker 通过堆叠一个或多个只读层来构建镜像，并将它们呈现为一个统一的整体。每个镜像都有一个清单（manifest），其中列出了构成镜像的层以及如何堆叠这些层。
+在底层，Docker 通过堆叠一个或多个只读层来构建镜像，并将它们呈现为一个统一的整体。每个镜像都有一个清单（`manifest`），其中列出了构成镜像的层以及如何堆叠这些层。
 
-你学习了镜像名称也称为标签（tags），它们是可变的，并且并不总是拉取到相同的镜像。例如，今天拉取 `alpine:latest` 标签的镜像与一年后拉取的镜像是不同一个。幸运的是，每个镜像都有一个不可变的摘要（digest），你可以使用它来保证始终拉取到相同的镜像。
+你学习了镜像名称也称为标签（`tags`），它们是可变的，并且并不总是拉取到相同的镜像。例如，今天拉取 `alpine:latest` 标签的镜像与一年后拉取的镜像是不同一个。幸运的是，每个镜像都有一个不可变的摘要（`digest`），你可以使用它来保证始终拉取到相同的镜像。
 
 Docker Hub 有精选官方镜像的概念，这些镜像用起来比非官方镜像更安全。然而，在从互联网下载软件时（即使是来自 Docker Hub 的官方镜像），你也应该始终保持谨慎。
 
 镜像可以共享层以提高效率，并且 Docker 能够轻松地为许多不同的 CPU 架构（如 ARM 和 AMD）构建和拉取镜像。
 
-Docker Scout 可以扫描镜像的已知漏洞并提供修复建议。它需要 Docker 订阅，并已集成到 docker CLI、Docker Hub 和 Docker Desktop 中。
+Docker Scout 可以扫描镜像的已知漏洞并提供修复建议。它需要 Docker 订阅，并已集成到 `docker` CLI、Docker Hub 和 Docker Desktop 中。
 
 在下一章中，我们将对容器进行类似的介绍——它们是镜像的运行时兄弟。
 
@@ -1491,7 +1522,7 @@ Docker 实现了开放容器倡议（OCI）规范。这意味着你在本章中�
 - 容器如何启动应用
 - 连接到容器
 - 检查容器进程
-- docker inspect 命令
+- `docker inspect` 命令
 - 向容器写入数据
 - 停止、重启和删除容器
 - 杀死容器的主进程
@@ -1522,7 +1553,7 @@ Docker 实现了开放容器倡议（OCI）规范。这意味着你在本章中�
 - 虚拟机虚拟化硬件
 - 容器虚拟化操作系统
 
-在虚拟机模型中，你启动一台服务器并引导一个管理程序（hypervisor）。当管理程序启动时，它会占用所有硬件资源，如 CPU、内存、存储和网络适配器。要部署应用，你要求管理程序创建一个虚拟机。它通过将硬件资源划分成虚拟版本（如虚拟 CPU 和虚拟内存）并将它们封装成一个看起来完全像物理服务器的虚拟机。一旦有了虚拟机，你就安装操作系统，然后安装应用。
+在虚拟机模型中，你启动一台服务器并引导一个管理程序（`hypervisor`）。当管理程序启动时，它会占用所有硬件资源，如 CPU、内存、存储和网络适配器。要部署应用，你要求管理程序创建一个虚拟机。它通过将硬件资源划分成虚拟版本（如虚拟 CPU 和虚拟内存）并将它们封装成一个看起来完全像物理服务器的虚拟机。一旦有了虚拟机，你就安装操作系统，然后安装应用。
 
 在容器模型中，你启动同一台服务器，操作系统启动并占用所有硬件资源。然后你安装像 Docker 这样的容器引擎。要部署应用，你要求 Docker 创建容器。它通过将操作系统资源（如进程树和文件系统）划分成虚拟版本，然后将其封装成一个看起来完全像普通操作系统的容器。然后你告诉 Docker 在容器中运行应用。
 
@@ -1564,10 +1595,6 @@ Docker 实现了开放容器倡议（OCI）规范。这意味着你在本章中�
 
 如前所述，你可以从单个镜像启动多个容器。在这种关系中，镜像是只读的，但每个容器都是读写。。如图 7.3 所示，Docker 通过为每个容器创建一个薄的读写层并将其放置在共享镜像之上来实现这一点。
 
-
-
-
-
 ![](img/aae0230bf8529bd80767c4c780dca8d3_131_0.png)
 
 在这个示例中，每个容器都有自己的薄层 R/W 层（读写层），它们共享同一个镜像。容器*通过*自己的 R/W 层查看并访问镜像中的文件和应用程序，如果它们进行了任何更改，这些更改将被写入它们的 R/W 层。当你停止容器时，Docker 会保留该 R/W 层并在重启容器时恢复它。然而，当你删除容器时，Docker 会删除其 R/W 层。这样，每个容器都不更改共享镜像的情况下创建并保留自己的更改。
@@ -1578,18 +1605,25 @@ Docker 实现了开放容器倡议（OCI）规范。这意味着你在本章中�
 
 ```
 $ docker version
+
 Client:  v24.0.7
+
 API version: v1.43
+
 OS/Arch:  darwin/arm64
+
 Server: Docker Desktop 4.30.0
+
 Engine: 26.1.1
+
 API version: 1.45
+
 OS/Arch: linux/64
 ```
 
-只要你从 Client 和 Server 获得响应，你就可以继续并跳过下一节。如果你收到错误，这通常意味着你的 Docker 守护进程没有运行，或者你的用户账户没有访问它的权限。如果你在 Linux 上运行，你需要确保你的用户账户是 docker 组的成员。如果不是，你可以通过运行 `usermod -aG docker <username>` 并重启 shell 来添加它。或者，你可以在所有 docker 命令前加上 `sudo` 以访问访问 API 套接字 `/var/run/docker.sock`。
+只要你从 Client 和 Server 获得响应，你就可以继续并跳过下一节。如果你收到错误，这通常意味着你的 Docker 守护进程没有运行，或者你的用户账户没有访问它的权限。如果你在 Linux 上运行，你需要确保你的用户账户是 `docker` 组的成员。如果不是，你可以通过运行 `usermod -aG docker <username>` 并重启 shell 来添加它。或者，你可以在所有 `docker` 命令前加上 `sudo` 以访问访问 API 套接字 `/var/run/docker.sock`。
 
-如果你的用户账户已经是 docker 组的成员，但你仍然收到来自守护进程的错误，很有可能是 Docker 没有运行。运行以下命令之一来在使用 Systemd 的 Linux 系统上检查守护进程的状态：
+如果你的用户账户已经是 `docker` 组的成员，但你仍然收到来自守护进程的错误，很有可能是 Docker 没有运行。运行以下命令之一来在使用 Systemd 的 Linux 系统上检查守护进程的状态：
 
 ```
 $ service docker status
@@ -1604,39 +1638,54 @@ $ systemctl is-active docker
 
 ```
 $ docker run -d --name webserver -p 5005:8080 ngelpoulton/ddd-book
+
 unable to find image 'nigelpoulton/ddd-book:web0.1' locally
+
 web0.1: Pulling from ngelpoulton/ddd-book
+
 4f4fb70ef54: Already exists
+
 c2fa07f3ff77: Download complete
+
 0a1f0c11ea9: Download complete
+
 claf4b5db42: Download complete
+
 digest: sha256:3f5b281b914b39df8a1fbc189270a5672ff9e98bf0319
+
 status: Downloaded newer image for ngelpoulton/ddd-book:web0.1
+
 b5594b3b8b3bfdce544d2ca048e340d176be9c9fdc43081a20f1852c395e96b
 ```
 
 让我们仔细观察一下该命令和输出。
 
-- **docker run** 告诉 Docker 运行一个新容器
-- **-d** 标志告诉 Docker 在后台作为守护进程运行，并脱离你的本地终端
-- **--name** 标志告诉 Docker 将此容器命名为 **webserver**。
-- **-p 5005:8080** 标志将你本地系统上的 **5005** 端口映射到容器内部的 **8080** 端口。这之所以有效，是因为容器的 Web 服务器正在监听 **8080** 端口。
+- **`docker run`** 告诉 Docker 运行一个新容器
+- **`-d`** 标志告诉 Docker 在后台作为守护进程运行，并脱离你的本地终端
+- **`--name`** 标志告诉 Docker 将此容器命名为 **webserver**。
+- **`-p 5005:8080`** 标志将你本地系统上的 **5005** 端口映射到容器内部的 **8080** 端口。这之所以有效，是因为容器的 Web 服务器正在监听 **8080** 端口。
 
 `nigelpoulton/ddd-book:web0.1` 参数告诉 Docker 使用哪个镜像来启动容器。当你按下 **Return** 时，Docker 客户端将命令转换为 API 请求并将其提交给 Docker 守护进程。Docker 守护进程接受了该命令并在其本地镜像仓库中搜索 `nigelpoulton/ddd-book:web0.1` 镜像的副本。它没有找到，于是搜索了 Docker。在示例中，它在 Docker Hub 上找到了并拉取了本地副本。
 
-一旦有了镜像的本地副本，守护进程就会向 containerd 发请求请求新容器。然后 containerd 指令 runc 创建容器并启动应用程序。它还执行了端口映射。
+一旦有了镜像的本地副本，守护进程就会向 `containerd` 发请求请求新容器。然后 `containerd` 指令 `runc` 创建容器并启动应用程序。它还执行了端口映射。
 
 运行以下命令验证镜像是否已拉取到本地，以及名为 **webserver** 的新容器正在运行。
 
 ```
 $ docker images
+
 | TAG | IMAGE ID | CREATED |
+
 | :--- | :--- | :--- | :--- |
+
 | ngelpoulton/ddd-book | web0.1 | 3f5b281b914b | 12 minutes ago |
 
 $ docker ps
+
 | IMAGE | COMMAND | STATUS | PORT |
+
 | :--- | :--- | :--- | :--- |
+
 | b5594b3b8b3f | ngelpoulton... | "node ./app.js" | Up 2 mins | 0.0.0.0:5005 |
 ```
 
@@ -1650,39 +1699,48 @@ $ docker ps
 
 1. 镜像中定义的 Entrypoint
 2. 镜像中定义的 CMD
-3. 传递给 docker run 命令的参数
+3. 传递给 `docker run` 命令的参数
 
 Entrypoint 和 CMD 定义在 Dockerfile 中，但它们在运行容器时可以被覆盖。如果你指定了 `<command>`，它将覆盖 CMD 指令。
 
-如所述，`<command>` 是可选的；你将在下一章学习更多关于这些的内容。docker run 命令的格式如下：
+如所述，`<command>` 是可选的；你将在下一章学习更多关于这些的内容。`docker run` 命令的格式如下：
 
 ```
 docker run <arguments> <image> <command>
 ```
 
-
-
-
 示例展示了两个命令——一个成功，另一个失败了。
 
-示例列出了你当前目录的内容，并尝试使用 vim 编辑器编辑 `app.py` 文件。
+示例列出了你当前目录的内容，并尝试使用 `vim` 编辑器编辑 `app.py` 文件。
 
 ```
 /src # ls -l
+
 total 100
+
 -rw-r--r--r-- 1 root 324 Feb 20 12:35 Dockerfile
+
 -rw-r--r--r-- 1 root 377 Feb 20 12:35 README.md
+
 -rw-r--r--r-- 1 root 341 Feb 20 12:35 app.js
+
 drwxr-xr-x 183 root 4096 Feb 20 12:41 node_modules
+
 -rw-r--r--r-- 1 root 74342 Feb 20 12:41 package-json
+
 -rw-r--r--r-- 1 root 404 Feb 20 12:38 package-lock
-drwxr-xr-x 2 root 4096 Feb 20 12:35 views
 
-/src # vim app.js
-sh: vim: not found
+
+
+`drwxr-xr-x 2 root 4096 Feb 20 12:35 views`
+
+`/src` # `vim app.js`
+
+`sh: vim: not found`
+
 ```
-
 `vim` 命令失败了是因为容器内没有安装它。
+```
 
 ### 检查容器进程
 
@@ -1692,40 +1750,47 @@ sh: vim: not found
 
 ```
 /src # ps
+
 PID USER TIME COMMAND
+
  1 root 0:00 ./app.js
+
  13 root 0:00 sh
+
  22 root 0:00 ps
 ```
 
 输出显示了三个进程：
 
 - PID 1 是运行 Node.js Web 应用的主应用程序进程
-- PID 13 是你交互式 exec 会话连接的 shell 进程
-- PID 22 是你刚刚运行的 ps 命令
+- PID 13 是你交互式 `exec` 会话连接的 `shell` 进程
+- PID 22 是你刚刚运行的 `ps` 命令
 
-ps 进程在显示输出后立即终止了，而 sh 进程将在会在你退出 exec 会话时终止。这意味着唯一的长时间运行的进程是运行 Node 应用的 PID 1。
+`ps` 进程在显示输出后立即终止了，而 `sh` 进程将在会在你退出 `exec` 会话时终止。这意味着唯一的长时间运行的进程是运行 Node 应用的 PID 1。
 
 如果你杀掉容器的主进程（PID 1），也将杀死容器。这是因为容器只有在主进程运行时才会运行——当该进程不再运行时，容器就没有理由继续运行了。我们稍后会演示这一点。
 
-输入 **exit** 退出 exec 会话并返回本地终端。
+输入 **`exit`** 退出 `exec` 会话并返回本地终端。
 
-运行另一个没有指定 **it** 标志的 **docker exec** 命令。这将远程执行命令而不创建交互式会话。命令的格式为 **docker exec <container> <command>**，并且只有在你正在执行的命令安装在容器中时，它才会起作用。
+运行另一个没有指定 **`it`** 标志的 **`docker exec`** 命令。这将远程执行命令而不创建交互式会话。命令的格式为 **`docker exec <container> <command>`**，并且只有在你正在执行的命令安装在容器中时，它才会起作用。
 
 ```
 $ docker exec webserver ps
+
 PID USER TIME COMMAND
+
 1 root 0:00 node ./app.js
+
 42 root 0:00 ps
 ```
 
-这一次只有两个进程在运行，因为你会在输入 **exit** 退出之前的交互式 exec 会话时终止了 **sh** 进程。
+这一次只有两个进程在运行，因为你会在输入 **`exit`** 退出之前的交互式 `exec` 会话时终止了 **`sh`** 进程。
 
-### **docker inspect** 命令
+### `docker inspect` 命令
 
-你一定会喜欢 **docker inspect** 命令，因为它是镜像和容器详细信息的宝库。
+你一定会喜欢 **`docker inspect`** 命令，因为它是镜像和容器详细信息的宝库。
 
-以下命令获取了运行中的 webserver 容器的完整细节，我截取了输出以突出几个有趣的地方。不过，我建议你在自己的系统上运行该命令并研究完整的输出，因为你将学到很多。
+以下命令获取了运行中的 `webserver` 容器的完整细节，我截取了输出以突出几个有趣的地方。不过，我建议你在自己的系统上运行该命令并研究完整的输出，因为你将学到很多。
 
 ```
 $ docker inspect webserver
@@ -1756,9 +1821,9 @@ $ docker inspect webserver
 <Snip>
 ```
 
-截取的输出显示容器正在运行，名为 webserver，将容器内的端口 8080 绑定到宿主机上的 5005，没有重启策略，并且基于 nigelpoulton/ddd-book:web0.1 镜像。Entrypoint 块列出了每次容器启动时都会自动运行的命令。
+截取的输出显示容器正在运行，名为 `webserver`，将容器内的端口 `8080` 绑定到宿主机上的 `5005`，没有重启策略，并且基于 `nigelpoulton/ddd-book:web0.1` 镜像。`Entrypoint` 块列出了每次容器启动时都会自动运行的命令。
 
-我们稍后会更详细介绍，但这个容器是从你启动它的镜像中继承了 Entrypoint 指令。你可以通过对镜像运行以下 docker inspect 命令来验证这一点。我截取了输出以突出相关部分。
+我们稍后会更详细介绍，但这个容器是从你启动它的镜像中继承了 `Entrypoint` 指令。你可以通过对镜像运行以下 `docker inspect` 命令来验证这一点。我截取了输出以突出相关部分。
 
 ```
 $ docker inspect nigelpoulton/ddd-book:web0.1
@@ -1772,43 +1837,43 @@ $ docker inspect nigelpoulton/ddd-book:web0.1
 <Snip>
 ```
 
-我建议你花时间研究 docker inspect 命令的输出。你将学到很多。
+我建议你花时间研究 `docker inspect` 命令的输出。你将学到很多。
 
 ### 向容器写入数据
 
-在本节中，你将 exec 进入 webserver 容器并编辑 Web 服务器配置，以便在主页上显示新消息。在下一节中，你将停止并重启容器，并验证你的更改没有丢失。
+在本节中，你将 `exec` 进入 `webserver` 容器并编辑 Web 服务器配置，以便在主页上显示新消息。在下一节中，你将停止并重启容器，并验证你的更改没有丢失。
 
 **警告：本节仅用于演示目的。在现实世界中，你不应该这样修改运行容器。每当你需要更改运行容器时，都应该创建并测试带有更改的新容器，然后用新容器替换现有容器。
 
-使用以下命令为 webserver 容器打开一个新的交互式 exec 会话。
+使用以下命令为 `webserver` 容器打开一个新的交互式 `exec` 会话。
 
 ```
 $ docker exec -it webserver sh
 /src #
 ```
 
-容器运行着一个简单的 Node.js Web 应用，它使用 views/home.pug 文件来构建应用的主页。
+容器运行着一个简单的 Node.js Web 应用，它使用 `views/home.pug` 文件来构建应用的主页。
 
-运行以下命令在 vi 编辑器中打开 home.pug 文件。Windows 用户可以使用记事本或其他编辑器。
+运行以下命令在 `vi` 编辑器中打开 `home.pug` 文件。Windows 用户可以使用记事本或其他编辑器。
 
 ```
 % vi views/home.pug
 ```
 
-如果你知道如何使用 vi，可以继续将 h1 标签之后第 8 行的文本改为你喜欢的任何内容并保存更改。
+如果你知道如何使用 `vi`，可以继续将 `h1` 标签之后第 8 行的文本改为你喜欢的任何内容并保存更改。
 
-如果你不熟悉 vi，请仔细按照以下步骤操作：
+如果你不熟悉 `vi`，请仔细按照以下步骤操作：
 
-- 1. 按 i 键让 vi 进入插入模式（insert mode）
+- 1. 按 `i` 键让 `vi` 进入插入模式（insert mode）
 - 2. 使用方向键导航到第 8 行
-- 3. 使用 delete 键删除第 8 行 h1 标签后的文本
+- 3. 使用 `delete` 键删除第 8 行 `h1` 标签后的文本
 - 4. 输入你选择的新消息
-- 5. 按 escape 键退出插入模式并返回命令模式
-- 6. 输入 :wq 并按回车保存你的更改并退出（:wq 是写入 write 和退出 quit 的缩写）
+- 5. 按 `escape` 键退出插入模式并返回命令模式
+- 6. 输入 `:wq` 并按回车保存你的更改并退出（`:wq` 是写入 `write` 和退出 `quit` 的缩写）
 
 一旦你保存了更改，刷新浏览器查看更新。
 
-输入 exit 退出 exec 会话并返回本地终端。
+输入 `exit` 退出 `exec` 会话并返回本地终端。
 
 恭喜，你已经更新了 Web 服务器配置。
 
@@ -1816,7 +1881,7 @@ $ docker exec -it webserver sh
 
 在本节中，你将执行典型的容器生命周期事件，并查看它们如何影响你对容器所做的更改。
 
-以下命令仅在你退出交互式 exec 会话后才会生效。
+以下命令仅在你退出交互式 `exec` 会话后才会生效。
 
 检查你的容器是否仍在运行。
 
@@ -1826,21 +1891,21 @@ CONTAINER ID    IMAGE               COMMAND             STATUS      PORTS
 b5594b3b8b3f  nigelpoulton...    Up 5 mins
 ```
 
-使用 **docker stop** 命令停止它。它需要最多 10 秒来优雅地停止。
+使用 **`docker stop`** 命令停止它。它需要最多 10 秒来优雅地停止。
 
 ```
 $ docker stop webserver
 webserver
 ```
 
-运行另一个 **docker ps** 命令。
+运行另一个 **`docker ps`** 命令。
 
 ```
 $ docker ps
 CONTAINER ID    IMAGE               COMMAND             STATUS      PORTS
 ```
 
-容器不再出现在运行容器列表中。然而，如果你运行带有 **a** 标志的相同命令就可以看到它，包括已停止的容器。
+容器不再出现在运行容器列表中。然而，如果你运行带有 **`a`** 标志的相同命令就可以看到它，包括已停止的容器。
 
 ```
 $ docker ps -a
@@ -1848,14 +1913,14 @@ CONTAINER ID IMAGE COMMAND STATUS
 b5594b3b8b3f nigelpou... "node /app.js" Exited (137)
 ```
 
-如输出所示，它仍然存在但处于 **Exited** 状态。使用以下命令重启它。
+如输出所示，它仍然存在但处于 **`Exited`** 状态。使用以下命令重启它。
 
 ```
 $ docker restart webserver
 webserver
 ```
 
-如果你再次运行 **docker ps**，你会看到它处于 **Up** 状态。
+如果你再次运行 **`docker ps`**，你会看到它处于 **`Up`** 状态。
 
 刷新浏览器查看 Docker 是否保存了你在主页上的更改。
 
@@ -1865,7 +1930,6 @@ webserver
 
 ```
 $ docker exec webserver cat views/home.pug
-
 html
 head
     title='Docker FTW'
@@ -1879,19 +1943,16 @@ body
 
 到为止，你已经看到启动和停止容器不会丢失更改。你还看到重启它们非常快。
 
-运行以下命令删除容器。-f 标志强制执行，而不允许通常的 10 秒刷新缓冲区和优雅退出。在强制此类操作时要小心，因为 Docker 不会询问确认。
+运行以下命令删除容器。`-f` 标志强制执行，而不允许通常的 10 秒刷新缓冲区和优雅退出。在强制此类操作时要小心，因为 Docker 不会询问确认。
 
 ```
 $ docker rm webserver -f
 webserver
 ```
 
-运行 docker ps -a 查看容器是否有任何迹象。
+运行 `docker ps -a` 查看容器是否有任何迹象。
 
 | CONTAINER ID | IMAGE | COMMAND | STATUS | PORTS |
-
-
-
 
 容器的所有迹象都消失了，你无法重启它。你可以执行另一个 `docker run` 命令并指定相同的镜像来启动新实例，但它将不会包含你所做的更改。
 
@@ -1917,7 +1978,7 @@ root@d3c892adeb3:#
 
 该命令拉取 Ubuntu 镜像并将你的终端附加到容器的 Bash shell 进程。
 
-运行 ps 命令列出所有运行的进程。
+运行 `ps` 命令列出所有运行的进程。
 
 ```
 root@d3c892adeb3:# ps
@@ -1926,40 +1987,37 @@ PID TTY TIME CMD
 9 pts/0 00:00:00 ps
 ```
 
-1 是容器的主进程，是你告诉容器运行的 Bash shell。另一个是 ps 命令，它已经退出了。这意味着 Bash 进程是容器中运行的唯一进程。
+1 是容器的主进程，是你告诉容器运行的 Bash shell。另一个是 `ps` 命令，它已经退出了。这意味着 Bash 进程是容器中运行的唯一进程。
 
-如果你输入 exit，你将终止 Bash 进程并杀死容器。这是因为容器只有在主进程执行时才会运行。
+如果你输入 `exit`，你将终止 Bash 进程并杀死容器。这是因为容器只有在主进程执行时才会运行。
 
-通过输入 **exit** 返回你的本地终端，然后运行 **docker ps -a** 命令查看容器是否已终止，以此进行测试。
+通过输入 **`exit`** 返回你的本地终端，然后运行 **`docker ps -a`** 命令查看容器是否已终止，以此进行测试。
 
 ```
 root@d3c892ad0eb3:#
-
 $ docker ps -a
 CONTAINER ID   COMMAND STATUS NAMES
 d3c892ad0eb3  ubuntu:24.04 "bash" Exited (0) 3 secs ago d
 ```
 
-如所预期，容器处于 **exited**（退出）状态且没有运行。然而，你可以运行以下两个命令来重启它并将你的 shell 附加到它的主进程。
+如所预期，容器处于 **`exited`**（退出）状态且没有运行。然而，你可以运行以下两个命令来重启它并将你的 shell 附加到它的主进程。
 
 ```
 $ docker restart ddd-ctr
 dd-ctr
-
 $ docker attach ddd-ctr
 root@d3c892ade0eb3:#
 ```
 
 你的终端再次附加到容器中的 Bash shell。
 
-你可以输入 **Ctrl+Q** 退出容器，而不杀死你所附加的进程。
+你可以输入 **`Ctrl+Q`** 退出容器，而不杀死你所附加的进程。
 
-输入 Ctrl+Q 退出容器，并运行另一个 docker ps 命令以验证这次容器仍在运行。
+输入 `Ctrl+Q` 退出容器，并运行另一个 `docker ps` 命令以验证这次容器仍在运行。
 
 ```
 root@d3c892ade0b3:/# <Ctrl+Q>
 read escape sequence
-
 $ docker ps
 CONTAINER ID IMAGE COMMAND STATUS NAMES
 d3c892ad0eb3 ubuntu:24.04  "bash"  Up 27 seconds ddd-ctr
@@ -1975,17 +2033,17 @@ d3c892ad0eb3 ubuntu:24.04  "bash"  Up 27 seconds ddd-ctr
 
 部署仅包含应用代码和依赖项的小镜像是一种被广泛接受的实践。这意味着不包含 shell 或调试工具是使镜像和容器更小更安全的一部分。然而，当出现问题时，这使得调试它们变得困难。
 
-这就是 **Docker Debug** 出现的地方，它允许你获取不包含 shell 的镜像和容器的 shell 权限，并无缝地向它们注入强大的调试工具。
+这就是 **`Docker Debug`** 出现的地方，它允许你获取不包含 shell 的镜像和容器的 shell 权限，并无缝地向它们注入强大的调试工具。
 
 从高层次来说，Docker Debug 通过向容器附加 shell 并挂载一个加载了调试工具的工具箱来工作。这个*工具箱*被挂载为名为 `/nix` 的目录，并在你的调试会话期间可用但对容器永远不可见。一旦你退出 Docker Debug 会话，`/nix` 目录就会被移除。如果你正在调试运行中的容器，你所做的任何更改对容器立即可见，并跨容器重启持久化。例如，在 Docker Debug 会话期间更新 `index.html` 将立即更新运行的 Web 应用，并且如果容器停止并重启，更改将持久存在。如果你正在调试镜像或停止的容器，Docker Debug 会话会创建一个调试沙箱并将其作为 R/W 层添加到镜像中，使其感觉像一个运行的容器。然而，你在调试镜像或停止的容器时所做的更改**不会**持久化，并在你退出调试会话后就会丢失。
 
-如果你一直在一直操作，你将有一个名为 **ddd-ctr** 的运行容器。如果没有，你可以运行以下命令启动一个：
+如果你一直在一直操作，你将有一个名为 **`ddd-ctr`** 的运行容器。如果没有，你可以运行以下命令启动一个：
 
 ```
 docker run --name ddd-ctr -it ubuntu:24.04 bash
 ```
 
-运行以下命令附加到容器并查看它是否有任何调试工具。接接的 docker attach 命令与你之前学习的 docker exec 命令类似，但它会自动连接到容器的主进程。如果你已经连接到容器，则不需要运行 docker attach 命令。
+运行以下命令附加到容器并查看它是否有任何调试工具。接接的 `docker attach` 命令与你之前学习的 `docker exec` 命令类似，但它会自动连接到容器的主进程。如果你已经连接到容器，则不需要运行 `docker attach` 命令。
 
 ```
 $ docker attach ddd-ctr
@@ -2000,7 +2058,7 @@ bash: vim: command not found
 
 所有命令都失败了，因为此容器中没有安装任何工具。这会导致没有 Docker Debug 的情况下调试此容器变得困难。
 
-输入 Ctrl+Q 安全地从容器断开而不杀死 Bash 进程。
+输入 `Ctrl+Q` 安全地从容器断开而不杀死 Bash 进程。
 
 在接下来的步骤中，你将使用 Docker Debug 获取容器的 shell 会话，并运行容器中未安装的命令。你甚至可以使用 Docker Debug 获取不包含 shell 的容器和镜像的访问。
 
@@ -2023,7 +2081,7 @@ Plugins:
 debug: Get a shell into any image or container
 ```
 
-一旦你登录并安装了插件，就可以使用 Docker Debug 了。命令的格式为 **docker debug <image>|<container>**。我们将为运行的容器 **ddd-ctr** 打开一个 Docker Debug 会话。
+一旦你登录并安装了插件，就可以使用 Docker Debug 了。命令的格式为 **`docker debug <image>|<container>`**。我们将为运行的容器 **`ddd-ctr`** 打开一个 Docker Debug 会话。
 
 ```
 $ docker debug ddd-ctr
@@ -2033,55 +2091,74 @@ $ docker debug ddd-ctr
 
 > 这是一个附加 shell，即：
 > - 对容器的更改对容器可见
-> - /nix 目录对容器不可见
+> - `/nix` 目录对容器不可见
 
 Version root@d3c892adeb3 / [ddd-ctr]
 docker >
 
-你已成功连接到运行的容器并获得了一个新的 shell 提示符 (docker >)。你还获得了关于容器短 ID 和名称的有用信息，以及你所做的更改将可见的提醒。
+你已成功连接到运行的容器并获得了一个新的 shell 提示符 (`docker >`)。你还获得了关于容器短 ID 和名称的有用信息，以及你所做的更改将可见的提醒。
 
-尝试运行上一节失败的 **ping、nslookup 和 vim** 命令。如果你在 **vim** 会话中卡住了，只需输入 **:q** 并按 **Enter**。
+尝试运行上一节失败的 **`ping`、`nslookup` 和 `vim`** 命令。如果你在 **`vim`** 会话中卡住了，只需输入 **`:q`** 并按 **Enter**。
 
 ```
 docker > ping nigeroulton.com
 PING nigeroulton.com (192.124.249.126) 56(84) bytes of data.
+
+
+
 64 bytes from cloudproxy10126.sucuri.net (192.124.249.126): icmp
+
 64 bytes from cloudproxy10126.sucuri.net (192.124.249.126): icmp~
+
 ^C
-docker > nslookup nigeroulton.com
-zsh: command not found: nslookup
-docker > vim
+
+`docker` > `nslookup` nigeroulton.com
+
+zsh: command not found: `nslookup`
+
+`docker` > `vim`
+
 VIM - Vi IMImproved
+
 ~ version 9.0.1441
+
 ~ by Bram Moolenaar et al.
+
 ~ Vim is open source and freely distributable
+
 <Snip>
+
 :q
+
 ```
 
 **ping** 和 **vim** 命令有效，但 **nslookup** 仍然失败了。这是因为默认的 Docker Debug 工具箱包含 **ping** 和 **vim**，但不包含 **nslookup**。别担心，你可以使用 Docker Debug 内置的 **install** 命令添加 **search.nixos.org** 上列出的任何包。
 
 运行以下命令安装 **bind** 包（包含 **nslookup** 工具），然后运行
 
-
-
-
-
 # 再次使用 nslookup 命令。
 
 ```
 docker > install bind
+
 Tip: 你可以在此处安装任何可用包：https://search.nix
+
 正在安装 'bind-9.18.19'
+
 <Snip>
 
 docker > nslookup nigelpoulton.com
+
 Server:       192.168.65.7
+
 Address:      192.168.65.7#53
 
 非权威回答:
+
 Name:               nigelpoulton.com
+
 Address:      192.124.249.126
+
 ```
 
 该命令生效了，`nslookup` 现在已安装在你的工具箱中，并将在未来的 Docker Debug 会话中可用。
@@ -2109,12 +2186,17 @@ $ docker debug nigelpoulton/ddd-book:web0.1
 
 ```
 docker > nslookup craigalanson.com
+
 Server: 192.168.65.7
+
 Address: 192.168.65.7#53
 
 非权威回答:
+
 Name: craigalanson.com
+
 Address: 198.185.159.144
+
 <Snip>
 ```
 
@@ -2124,6 +2206,7 @@ Docker Debug 有一个内置的 `entrypoint` 命令，允许你打印、检查�
 
 ```
 docker > entrypoint --print
+
 node ./app.js
 ```
 
@@ -2184,21 +2267,25 @@ $ docker ps
 
 ```
 $ docker rm $(docker ps -aq) -f
+
 ac16541921f
+
 5bd3741185fa
 
 $docker rmi $(docker images -q)
+
 Untagged: nigelpoulton/ddd-book:web0.1
+
 Deleted: sha256:3f5b281b914b1e39df8a1fc189270a567ff9ebaeba2c8672bd
+
 Untagged: ubuntu:24.04
+
 Deleted: sha256:ff0b5139e74bb0dee9ca8b5724d69ea2795deb8dc4c8672
+
 Untagged: alpine:latest
+
 Deleted: sha256:c5b1261d6d3e43071626931fc004f70149eba2c8672
 ```
-
-
-
-
 
 - **docker stop** 停止正在运行的容器并将其置 **Exited (137)** 状态。它向容器的 PID 1 进程发送 SIGTERM 信号，允许容器有 10 秒时间优雅退出。如果进程在 10 秒内未清理并停止，它将发送 SIGKILL 强制容器立即终止。
 - **docker restart** 重启已停止的容器。
@@ -2267,11 +2354,17 @@ Docker 旨在轻松地构建、发布和运行应用程序。我们称之为容�
 $ git clone https://github.com/nigelpoulton/ddd-book.git
 
 Cloning into 'ddd-book'...
+
 remote: Enumerating objects: 47, done.
+
 remote: Counting objects: 47/47, done.
+
 remote: Compressing objects: 100% (32), done.
+
 remote: Total: 47 (delta 11), pack 0
+
 Receiving objects: 100% (47/47), 167.30 KiB | 1.66 Mi/s, done.
+
 Resolving deltas: 100% (11/11), done.
 ```
 
@@ -2279,11 +2372,17 @@ Resolving deltas: 100% (11/11), done.
 
 ```bash
 $ cd ddd-book/node-app
+
 $ ls -l
+
 total 98
+
 -rw-r--r-- 1 nigelpton staff 341 Feb 12:35 app.js
+
 drwx-xr-x 2 nigelpton staff 4296 Mar 12:18 node_modules
+
 -rw-r--r-- 1 nigelpton staff 355 Mar 12:10 package.json
+
 drwxr-xr-x 2 nigelpton staff 96 Feb 12:35 .
 ```
 
@@ -2297,16 +2396,25 @@ drwxr-xr-x 2 nigelpton staff 96 Feb 12:35 .
 
 ```bash
 $ docker init
+
 Welcome to the Docker Init!
+
 ? What application platform does your project use? Node 20.8.0
+
 ? What version of Node do you want to use? 20.8.0
+
 ? What package manager do you want to use? npm
+
 ? What command do you want to use to start the app? app.js
+
 ? What port does your server listen on? 8080
 
 CREATED: .dockerignore
+
 CREATED: Dockerfile
+
 CREATED: compose.yaml
+
 CREATED: README.md
 ```
 
@@ -2316,18 +2424,25 @@ CREATED: README.md
 
 ```dockerfile
 1. ARG NODE_VERSION=20.8.0
+
 2. FROM ${NODE_VERSION}-alpine
+
 3. ENV NODE_ENV production
+
 4. WORKDIR /usr/src/app
+
 5. RUN --mount=type=bind,source=package.json,target=package.json \
    --mount=type=cache,source=package-lock.json,target=package-lock.json \
    npm ci --omit=dev
+
 6. USER node
 ```
 
 ```dockerfile
 7. COPY .
+
 8. EXPOSE 8080
+
 9. CMD app.js
 ```
 
@@ -2355,18 +2470,31 @@ CREATED: README.md
 $ docker build -t ddd-book:ch8.node .
 
 [+] Building 16.2s (12/12) FINISHED
+
 => [internal] load build definition from Dockerfile 0
+
 => => transferring dockerfile: 1.21kB
+
 => => transferring context: 659B
+
 => [stage-0 1/4] FROM docker.io/library/node:20.8.0-alpine
+
 => [stage-0 2/4] WORKDIR /usr/src/app
+
 => [stage-0 3/4] RUN --mount=type=bind,source=package.json,target=package...
+
 => [stage-0 4/4] COPY .
+
 => exporting to image 0
+
 => => exporting layers 0
+
 => => writing image sha256:f282569b8bd0f...016clada91
+
 => => naming docker.io/library/ddd-book:ch8.node
 ```
+
+
 
 我截取了输出内容，但你可以看到创建四个镜像层的四个编号步骤。
 
@@ -2378,12 +2506,9 @@ $ docker build -t ddd-book:ch8.node .
 
 运行 `docker inspect ddd-book:ch8.node` 命令来验证镜像并查看 Dockerfile 中的设置。你应该能够看到镜像层以及元数据，例如暴露端口、工作目录和 Entrypoint 值。
 
-
-
-
-
 ```bash
 $ docker inspect ddd-book:ch8.node
+
 [
   {
     "Id": "sha256:24dd040fa06baf6e40144c5a59f9a749159a932ece",
@@ -2417,7 +2542,7 @@ $ docker inspect ddd-book:ch8.node
 
 图 8.2 - Dockerfile 和镜像层
 
-### 将镜像推送到 Docker Hub
+## 将镜像推送到 Docker Hub
 
 这是一个可选部分，你需要一个 Docker Hub 账户才能操作。访问 hub.docker.com 并注册一个账号。你需要完成以下步骤：
 
@@ -2431,9 +2556,13 @@ $ docker inspect ddd-book:ch8.node
 
 ```bash
 $ docker login
+
 使用你的 Docker ID 登录并推送镜像
+
 Username: nigelpout
+
 Password:
+
 警告！你的密码将以加密存储在 /home/ubuntu
 ```
 
@@ -2456,15 +2585,25 @@ $ docker tag ddd-book:ch8.node nigelpoulton/ddd-book:ch8.node
 
 ```bash
 $ docker push nigelpoulton/ddd-book:ch8.node
+
 ref 指向 [docker.io/nigelpoulton/ddd-book]
+
 e64ef261755c8: 推送
+
 d25f74b85615: 推送
+
 71ebde14d1: 推送
+
 7b3f8039e3c4: 推送
+
 2a279ae89a2: 从 library/node 挂载
+
 4927cb899c33: 从 library/node 挂载
+
 579b34f0a95b: 推送
+
 ced319b3ffb5: 推送
+
 ch8.node: digest: sha256:24dd040fa06baf...1f7f8629635274a size: 85
 ```
 
@@ -2474,7 +2613,7 @@ ch8.node: digest: sha256:24dd040fa06baf...1f7f8629635274a size: 85
 
 现在你已经将镜像推送到仓库，可以在任何连接互联网的地方访问它。你还可以授予其他人权限拉取并推送更改。
 
-### 运行应用
+## 运行应用
 
 如前所述，应用程序是一个监听 `8080` 端口的 Web 服务器。
 
@@ -2487,10 +2626,6 @@ $ docker run -d -p 8080:8080 --name ddd-book nigelpoulton/ddd-book:ch8.node
 `-d` 标志在后台运行容器。`--name` 标志为容器命名。`-p 8080:8080` 标志将宿主机上的 8080 端口映射到容器内的 8080 端口。
 
 一旦容器运行，你可以在浏览器中访问 `http://localhost:8080` 来使用应用程序。
-
-
-
-
 
 ```
 "sha256:a48b3b3d0c5a693840e7e4abd7971f130b444753,
@@ -2510,13 +2645,13 @@ $ docker run -d -p 8080:8080 --name ddd-book nigelpoulton/ddd-book:ch8.node
 
 通常认为，使用 Docker 官方镜像和验证发布者镜像作为你创建的新镜像的基础层是一项良好实践。这是因为它们保持了高标准，并能对已知漏洞快速修复。
 
-### 使用多阶段构建进入生产环境
+## 使用多阶段构建进入生产环境
 
 在容器镜像方面……越大越坏！例如：
 
--   大意味着速度慢
--   大意味着更多的潜在漏洞
--   大意味着更大的攻击面
+- 大意味着速度慢
+- 大意味着更多的潜在漏洞
+- 大意味着更大的攻击面
 
 由于这些原因，你的容器镜像应该只包含在生产环境中运行你的应用程序**需要**的内容。
 
@@ -2542,13 +2677,10 @@ WORKDIR /src
 COPY go.mod go.sum .
 RUN go mod download
 COPY . .
-
 FROM base AS build-client << Stage 1
 RUN go build -o /bin/client ./cmd/client
-
 FROM base AS build-server << Stage 2
 RUN go build -o /bin/server ./bin/server
-
 FROM scratch AS prod << Stage 3
 COPY --from=build-client /bin/client /bin/
 COPY --from=build-server /bin/server /bin/
@@ -2567,10 +2699,6 @@ ENTRYPOINT [ "/bin/server" ]
 base 阶段的目标是创建一个可重用的构建镜像，包含阶段 1 和 2 构建客户端和服务器应用所需的所有工具。此阶段创建的镜像仅用于编译可执行文件，而不用于生产。它拉取了 `golang:1.22.1-alpine` 镜像，该镜像解压缩后超过 300MB。它将工作目录设置为 `/src` 并从你的目录中拷贝 `go.mod` 和 `go.sum` 文件。这些文件列出了应用程序的依赖。之后，它使用 `RUN` 指令安装依赖，然后使用 `COPY` 指令将应用程序代码拷贝到镜像中。这一切创建一个包含许多构建内容的巨大镜像。当此构建阶段完成后，它会输出一个后续阶段可以使用的大镜像。build-client 阶段没有拉取新镜像。相反，它使用 `FROM base AS build-client` 指令使用 base 阶段创建的中间镜像。然后它发布一个 RUN 指令将客户端应用编译为二进制文件。该阶段的目标是创建一个包含编译后的客户端二进制文件的镜像，供后续阶段引用。build-server 阶段对服务器执行了相同的操作，并输出一个类似的镜像供后续阶段使用。prod 阶段拉取了最小的 `scratch` 镜像。它运行运行两个 `COPY --from=` 指令，从 build-client 阶段拷贝编译后的客户端应用，从 build-server 阶段拷贝编译后的服务器应用。然后它告诉 Docker 在作为容器启动时运行服务器应用。该阶段输出最终的生产镜像，极小的镜像内仅包含客户端和服务器二进制文件以及告知如何启动应用的元数据。构建器将首先运行 base 阶段，然后并行运行 build-client 和 build-server 阶段，最后运行 prod 阶段。
 
 它始终尝试并行运行阶段，但只有在不存在依赖关系时才能这样做。例如，build-client 和 build-server 阶段依赖于 base 阶段，在 във阶段完成之前无法运行（两者都从 FROM 开始）。然而，build-client 和 build-server 阶段之间没有相互依赖，因此它们之间可以并行运行。
-
-
-
-
 
 ```docker
 FROM scratch AS prod-client         <----- 新阶段
@@ -2593,7 +2721,6 @@ ENTRYPOINT [ "/bin/server" ]
 ```bash
 $ docker build -t multi:client --target prod-client -f Dockerfile
 <Snip>
-
 docker build -t multi:server --target prod-server -f Dockerfile
 <Snip>
 ```
@@ -2637,16 +2764,18 @@ Buildx 是 Docker 最新最强大的构建客户端。它以 CLI 插件的形式
 
 ```bash
 $ docker buildx ls
+
 NAME/NODE DRIVER/ENDPOINT PLATFORMS
+
 builder * docker-container linux/arm64, l
+
 builder0 desktop-linux linux/arm64, l
+
 cloud-nlpout-dd cloud linux/arm64, 
-linux-amd64 cloud/amd64,
-```
 
 
 
-
+`linux-amd64 cloud/amd64,`
 
 我截取了输出内容，但你仍然可以看到两个重要的点：
 
@@ -2663,7 +2792,7 @@ linux-amd64 cloud/amd64,
 
 你也可以使用 Docker Build Cloud 进行构建。这是一个基于云的服务，提供快速构建功能并允许你与团队成员共享构建缓存。它需要付费订阅。
 
-如果你拥有允许访问 Build Cloud 的 Docker 订阅，可以访问 build.docker.com 并配置你的第一个云构建器。你也可以通过 CLI 创建云构建器，如下所示。如果你正在跟着操作，需要给你的构建器起一个不同的名字。
+如果你拥有允许访问 Build Cloud 的 Docker 订阅，可以访问 `build.docker.com` 并配置你的第一个云构建器。你也可以通过 CLI 创建云构建器，如下所示。如果你正在跟着操作，需要给你的构建器起一个不同的名字。
 
 ```
 $ docker buildx create --driver cloud nigelpoulton/ddd cloud-nigelpoulton-ddd
@@ -2678,7 +2807,6 @@ $ docker buildx build \
   --builder=cloud-nigelpoulton-ddd \
   --platform=linux/amd64,linux/arm64 \
   -t nigelpoulton-ddd-book:ch8.1 --push
-
 => [internal] connected to docker build cloud service <Snip>
 ```
 
@@ -2702,9 +2830,13 @@ BuildKit 使用缓存来加速构建。查看影响的最佳方法是在干净�
 
 ```
 FROM alpine
+
 RUN apk add --update nodejs npm
+
 COPY . /src
+
 WORKDIR /src
+
 RUN npm install
 ```
 
@@ -2774,9 +2906,6 @@ multi:full multi:client multi:server ddd-book:ch8.node nigelpoulton
 
 ### 章节总结
 
-
-
-
 本章教了你如何将应用程序容器化。这是将应用程序构建成容器镜像并将其作为容器运行的过程。
 
 你从 GitHub 拉取了一些应用程序源代码，并使用 `docker init` 命令自动生成了一个 Dockerfile，其中包含的指令告诉 Docker 如何将该应用构建为容器镜像。接着，你使用 `docker build` 创建镜像，使用 `docker push` 将其推送到 Docker Hub，并使用 `docker run` 将其作为容器运行。
@@ -2843,6 +2972,7 @@ Fig 非常非常出色，以至于 Docker, Inc. 收购了 Orchard Labs，并将 
 
 ```
 $ docker compose version
+
 Docker Compose version v2.25.0
 ```
 
@@ -2852,7 +2982,7 @@ Docker Compose version v2.25.0
 
 ![](img/a0230bf8529bd07674c78d0d3.png) 图 9.1 - 示例应用
 
-web-fe 服务在每次接收请求时都会通过 Web 服务器增加计数器。两个服务都连接到 counter-net 网络。web-fe 服务挂载了 counter-vol 卷。
+`web-fe` 服务在每次接收请求时都会通过 Web 服务器增加计数器。两个服务都连接到 `counter-net` 网络。`web-fe` 服务挂载了 `counter-vol` 卷。
 
 `compose.yaml` 文件定义了这些内容。
 
@@ -2860,62 +2990,95 @@ web-fe 服务在每次接收请求时都会通过 Web 服务器增加计数器�
 
 ```
 $ git clone https://github.com/example/ddd-book
+
 Cloning into 'ddd-book'...
+
 remote: Enumerating objects: 67,
+
 remote: Counting objects: 100% (67/67),
+
 remote: Compressing objects: 100% (67/67),
+
 remote: Receiving objects: 100% (73.6 KiB | 1.83 MiB/s), done.
+
 remote: Resolving deltas: 100% (67/67), done.
+
 remote: Delta summary: 100% (67/67), done.
+
 Checking out 67 files, delta compression used.
+
 67 files | created 00.
 ```
 
-进入 ddd-book/multi-container 目录并列出内容：
+进入 `ddd-book/multi-container` 目录并列出内容：
 
 ```
 $ cd ddd-book/multi-container
+
 $ ls -l
+
 total 20
+
 drwxr-xr-x 2 user group 4096 May 21 10:00 .
+
 drwxr-xr-x 2 user group 4096 May 21 10:00 ..
+
 -rw-r--r-- 1 user group  355 May 21 10:00 Dockerfile
+
 -rw-r--r-- 1 user group  332 May 21 10:00 compose.yaml
+
 -rw-r--r-- 1 user group  248 May 21 10:00 app.py
+
 -rw-r--r-- 1 user group   188 May 21 10:00 requirements.txt
 ```
 
-
 ```yaml
+
 services:
+
   web-fe:             <----- 服务名称。容器将
+
   deploy:
+
     replicas: 1          <----- 为该服务部署单个容器
+
     build:               <----- 从当前目录下的 Dockerfile 构建
+
     command: python app.py <----- 启动时执行此命令
+
     ports:
+
       target: 8080       <----- 映射容器内的端口
+
       published: 5001 <----- ...映射到 Docker 宿机的 5001 端口
+
   networks:
+
     counter-net          <----- 将容器连接到 "counter" 网络
+
   volumes:
+
     type: volume
+
     source: counter-vol <----- 挂载 "counter-vol" 卷
+
     target: /app         <----- ...挂载到容器内的 "/app"
 ```
 
+
+
 让我们逐一分析。
 
-- **web-fe:** 是服务的名称，所有作为此服务创建创建的容器其名称中都包含“web-fe”。
-- **deploy.replicas: 1** 告诉 Docker 为此服务部署单个容器。你可以指定不同的副本数量来为该服务部署多个相同的容器。然而，这在 Docker 安装上无法实现，因为你只有一个 Docker 宿主机，且只有一个容器可以使用 Docker Desktop 宿主机上的 5001 端口。你将在 **Deploying apps with Docker stacks** 章节中学习如何为此服务部署多个副本。
+- `web-fe`：是服务的名称，所有作为此服务创建创建的容器其名称中都包含“web-fe”。
+- `deploy.replicas: 1` 告诉 Docker 为此服务部署单个容器。你可以指定不同的副本数量来为该服务部署多个相同的容器。然而，这在 Docker 安装上无法实现，因为你只有一个 Docker 宿主机，且只有一个容器可以使用 Docker Desktop 宿主机上的 5001 端口。你将在 **Deploying apps with Docker stacks** 章节中学习如何为此服务部署多个副本。
 
-- **build:** 告诉 Docker 根据当前目录下的 Dockerfile 构建此服务容器的镜像。
-- **command: python app.py** 是 Docker 在为此服务创建的每个容器内部执行的命令。镜像中必须存在 **app.py** 文件，且镜像必须安装了 Python。Dockerfile 会处理这两个需求。
-- **ports:** 在此处将服务容器的网络端口映射到 Docker 宿主机。此示例映射了容器内部的 5001 端口。
-- **networks:** 告诉 Docker 将此服务的容器连接到 **counter-net** 网络。该网络应该已经存在或者在 **networks** 顶层键中定义。
-- **volumes:** 告诉 Docker 将 **counter-vol** 卷挂载到所有服务容器内部的 `/app` 目录。该卷应该已经存在或者在 **volumes** 顶层键中定义。
+- `build`：告诉 Docker 根据当前目录下的 Dockerfile 构建此服务容器的镜像。
+- `command: python app.py` 是 Docker 在为此服务创建的每个容器内部执行的命令。镜像中必须存在 `app.py` 文件，且镜像必须安装了 Python。Dockerfile 会处理这两个需求。
+- `ports`：在此处将服务容器的网络端口映射到 Docker 宿主机。此示例映射了容器内部的 5001 端口。
+- `networks`：告诉 Docker 将此服务的容器连接到 `counter-net` 网络。该网络应该已经存在或者在 `networks` 顶层键中定义。
+- `volumes`：告诉 Docker 将 `counter-vol` 卷挂载到所有服务容器内部的 `/app` 目录。该卷应该已经存在或者在 `volumes` 顶层键中定义。
 
-总之，Compose 将指示 Docker 为 **web-fe** 服务部署单个容器。它将从相同目录下的 Dockerfile 构建新镜像，并从该镜像启动容器。当容器启动时，其名称将包含 **web-fe** 并运行 **python app.py** 命令。它将连接到 **counter-net** 网络，在宿主机的 5001 端口上暴露 Web 服务，并将 counter-vol 卷挂载到 /app。如果你定义了多个副本（容器），它们将是完全相同的。
+总之，Compose 将指示 Docker 为 `web-fe` 服务部署单个容器。它将从相同目录下的 Dockerfile 构建新镜像，并从该镜像启动容器。当容器启动时，其名称将包含 `web-fe` 并运行 `python app.py` 命令。它将连接到 `counter-net` 网络，在宿主机的 5001 端口上暴露 Web 服务，并将 `counter-vol` 卷挂载到 `/app`。如果你定义了多个副本（容器），它们将是完全相同的。
 
 **注意：** 你不需要在 Compose 文件中指定 `command: python app.py` 选项，因为它已经在 Dockerfile 中定义过了。不过，我在这里展示它是为了让你知道它是如何工作的。你也可以使用 Compose 来覆盖 Dockerfile 中的指令。
 
@@ -2923,12 +3086,12 @@ services:
 
 让我们来看这一个。
 
-- **redis:** 是服务的名称，所有作为此服务创建的容器其名称中都包含“redis”部分。
-- **deploy.replicas: 1** 告诉 Docker 为此服务部署单个容器。
-- **image: redis:alpine** 告诉 Docker 从 Docker Hub 拉取 redis:alpine 镜像并使用它启动服务的容器。
-- **networks:** 告诉 Docker 将服务的容器连接到 counter-net 网络。
+- `redis`：是服务的名称，所有作为此服务创建的容器其名称中都包含“redis”部分。
+- `deploy.replicas: 1` 告诉 Docker 为此服务部署单个容器。
+- `image: redis:alpine` 告诉 Docker 从 Docker Hub 拉取 `redis:alpine` 镜像并使用它启动服务的容器。
+- `networks`：告诉 Docker 将服务的容器连接到 `counter-net` 网络。
 
-将两个服务都连接到 counter-net 网络意味着它们可以通过名称相互解析并进行通信。这是重要的，因为下面 app.py 文件的片段显示了 Web 应用通过名称与 redis 服务进行通信。
+将两个服务都连接到 `counter-net` 网络意味着它们可以通过名称相互解析并进行通信。这是重要的，因为下面 `app.py` 文件的片段显示了 Web 应用通过名称与 `redis` 服务进行通信。
 
 ```python
 import time
@@ -2939,7 +3102,7 @@ cache = redis.Redis(host='redis', port=6379) <----- "redis" 是
 <Snip>
 ```
 
-networks 和 volumes 块非常简单，定义了一个名为 counter-net 的网络和一个名为 counter-vol 的卷。
+`networks` 和 `volumes` 块非常简单，定义了一个名为 `counter-net` 的网络和一个名为 `counter-vol` 的卷。
 
 ```yaml
 networks: <----- 此块定义了一个新网络
@@ -2952,7 +3115,7 @@ volumes: <----- 此块定义了一个新卷
 
 ### 使用 Compose 部署应用
 
-在本节中，你将使用 Compose 文件来部署应用。你需要该书籍 GitHub 仓库的本地副本，并且需要在 **multi-container** 文件夹中运行所有命令。
+在本节中，你将使用 Compose 文件来部署应用。你需要该书籍 GitHub 仓库的本地副本，并且需要在 `multi-container` 文件夹中运行所有命令。
 
 运行以下命令来部署应用：
 
@@ -2961,13 +3124,9 @@ docker compose -f docker-compose.yml up -d
 ```
 （注：根据上下文推断上述命令，因为 OCR 文字被裁剪了）。
 
+容器名称末后的数字允许每个服务拥有多个副本。例如，如果 `web-fe` 服务有三个副本，它们将被命名为 `multi-container-fe-1`、`multi-container-fe-2` 和 `multi-container-fe-3`。
 
-
-
-
-容器名称末后的数字允许每个服务拥有多个副本。例如，如果 web-fe 服务有三个副本，它们将被命名为 multi-container-fe-1、multi-container-fe-2 和 multi-container-fe-3。
-
-运行以下命令来查看 counter-net 网络和 counter-vol 卷。
+运行以下命令来查看 `counter-net` 网络和 `counter-vol` 卷。
 
 | NETWORK ID | NAME | DRIVER | SCOPE |
 | :--- | :--- | :--- | :--- |
@@ -2976,7 +3135,7 @@ docker compose -f docker-compose.yml up -d
 $ docker volume ls
 local multi-container-counter-vol
 
-应用程序部署好后，你可以将 Web 浏览器指向 Docker 主机的 5001 端口进行查看。如果你正在运行 Docker Desktop，可以连接到 localhost:5001 (img/ae0230bf8529bd076c8d237_0.png)。
+应用程序部署好后，你可以将 Web 浏览器指向 Docker 主机的 5001 端口进行查看。如果你正在运行 Docker Desktop，可以连接到 `localhost:5001` (img/ae0230bf8529bd076c8d237_0.png)。
 
 刷新页面会导致计数器增加。这是因为程序会统计访问次数并将计数器存储在 Redis 服务中。如果你按照教程并在前台运行了应用程序，你将在终端中看到每次刷新时的响应代码。如果你使用 `--detach` 标志在后台启动它，则看不到这些内容。
 
@@ -3042,10 +3201,6 @@ NAME COMMAND SERVICE STATUS PORTS
 | NAME | IMAGE | ... | SERVICE |
 | multi-container-redis-1 | redis:alpine | ... | redis |
 | multi-container-fe-1 | ... | ... | web-fe |
-
-
-
-
 
 ## 10: Docker Swarm
 
@@ -3121,21 +3276,17 @@ Swarm 使用 TLS 加密通信、身份验证节点并授权角色（managers 和
 
 运行以下五个 `multipass launch` 命令来创建运行 Docker 的虚拟机。我们将每个虚拟机称为 *node*（节点），每个节点需要 2 个 CPU、40GB 磁盘空间和 4GB 内存。如果你的机器没有这些资源，请前往 Play with Docker。
 
-将三个节点命名为 mgr1、mgr2 和 mgr3，另外两个命名为 wrk1 和 wrk2。你的 IP 会不同，但这没关系。创建每个虚拟机可能需要一两分钟。
+将三个节点命名为 `mgr1`、`mgr2` 和 `mgr3`，另外两个命名为 `wrk1` 和 `wrk2`。你的 IP 会不同，但这没关系。创建每个虚拟机可能需要一两分钟。
 
 ```
 $ multipass launch --name mgr1
 Launched: mgr1
-
 $ multipass launch --name mgr2
 Launched: mgr2
-
 $ multipass launch --name mgr3
 Launched: mgr3
-
 $ multipass launch --name wrk1
 Launched: wrk1
-
 $ multipass launch --name wrk2
 Launched: wrk2
 ```
@@ -3160,7 +3311,9 @@ $ docker --version
 Docker version 26.1.1, build 2ae903e
 ```
 
-输入 exit 退出节点并返回本地 shell。
+
+
+输入 `exit` 退出节点并返回本地 shell。
 
 一旦确认你的节点工作正常，就可以移动到下一节并构建 swarm。
 
@@ -3178,34 +3331,30 @@ Docker version 26.1.1, build 2ae903e
 
 你将完成以下所有操作：
 
-1. 从 mgr1 初始化一个新的 swarm
-2. 将 wrk1 和 wrk2 加入工作节点
-3. 将 mgr2 和 mgr3 作为额外的管理器
+1. 从 `mgr1` 初始化一个新的 swarm
+2. 将 `wrk1` 和 `wrk2` 加入工作节点
+3. 将 `mgr2` 和 `mgr3` 作为额外的管理器
 
 完成程序后，所有五个节点将处于 swarm 模式并属于同一个 swarm。
 
 示例将使用图 10.2 中的名称和 IP。你的地址会不同，你应该使用自己的。
 
-1. 登录 **mgr1** 并初始化一个新的 swarm。务必使用**你的 mgr1** 节点的私有 IP 地址。
+1. 登录 `mgr1` 并初始化一个新的 swarm。务必使用你的 `mgr1` 节点的私有 IP 地址。
 
 ```bash
 docker swarm init \
   --advertise-addr 192.168.64.61:2377 \
   --listen-addr 192.168.64.61:2377
 ```
+
 Swarm initialized: current node (d21lyz...c79qzkx) is now a manager.
 <Snip>
-
-```
 
 让我们逐步解析命令的不同部分：
 
 1. `docker swarm init` 告诉 Docker 以此节点作为第一个管理器初始化一个新的 swarm。
 2. `--advertise-addr` 标志是可选的，它告诉 Docker 将节点的哪一个 IP 地址作为 swarm API 端点进行广播。它通常是节点的一个 IP 地址，也可以是外部负载均衡器。
 3. `--listen-addr` 标志告诉 Docker 在结的哪些接口上接收 swarm 流量。如果你没有指定，它的默认值与 `--advertise-addr` 相同。
-```
-
-
 
 然而，如果 `--advertise-addr` 是负载均衡器，你必须使用 `--listen-addr` 来指定本地 IP。
 我建议在重要的生产环境中同时指定这两个标志。不过，对于大多数实验室环境，你只需要运行不带任何标志的 `docker swarm init` 即可。
@@ -3217,23 +3366,28 @@ Swarm initialized: current node (d21lyz...c79qzkx) is now a manager.
 |---|---|---|---|---|
 | d21...qzkx | mgr1 | Ready | Active | Leader |
 
-mgr1 是集群中唯一的节点，并列为 Leader（领导者）。我们稍后会讨论 Leader。
+`mgr1` 是集群中唯一的节点，并列为 Leader（领导者）。我们稍后会讨论 Leader。
 
-- 3. 在 mgr1 上运行以下命令，查看添加新工作节点和管理器所需的命令和令牌（tokens）。
+- 3. 在 `mgr1` 上运行以下命令，查看添加新工作节点和管理器所需的命令和令牌（tokens）。
 
 ```
 $ docker swarm join-token worker
-要向此集群添加一个管理器，请运行以下命令：
-docker swarm join --token SMTKN-1-0uahebax...c87udx2c 192
-
-docker swarm join-token manager
-要向此集群添加一个管理器，请运行以下命令：
-docker swarm join --token SMTKN-1-0uahebax...ue4hv6ps3p 192
 ```
 
-注意这些命令除了 join 令牌（ SMTKN…）之外是完全相同的。你应该将 join 令牌保存在安全的地方，因为它们是其他节点加入你的集群所需的全部内容！
+要向此集群添加一个管理器，请运行以下命令：
 
-- 1. 登录 wrk1 并使用正确的命令和令牌将其作为工作节点加入集群。我在示例中添加了可选的 `advertise-addr` 和 `listen-addr` 标志，以便你了解如何使用它们。你可以不使用它们，但如果你使用了，请务必为你的环境使用正确的 IP。
+`docker swarm join --token SMTKN-1-0uahebax...c87udx2c 192`
+
+`docker swarm join-token manager`
+
+要向此集群添加一个管理器，请运行以下命令：
+
+`docker swarm join --token SMTKN-1-0uahebax...ue4hv6ps3p 192`
+```
+
+注意这些命令除了 join 令牌（`SMTKN…`）之外是完全相同的。你应该将 join 令牌保存在安全的地方，因为它们是其他节点加入你的集群所需的全部内容！
+
+- 1. 登录 `wrk1` 并使用正确的命令和令牌将其作为工作节点加入集群。我在示例中添加了可选的 `advertise-addr` 和 `listen-addr` 标志，以便你了解如何使用它们。你可以不使用它们，但如果你使用了，请务必为你的环境使用正确的 IP。
 
 ```
 $ docker swarm join \
@@ -3247,13 +3401,13 @@ $ docker swarm join \
 
 如果你遇到加入集群的问题，请确保所有节点之间开放了以下网络端口：
 
-- 1. 2377/tcp: 用于安全的客户端到集群的通信
-- 2. 7946/tcp 和 udp: 用于控制平面 gossip 协议（ gossiper）
-- 3. 4789/udp: 用于基于 VXLAN 的叠加网络
+- 1. `2377/tcp`: 用于安全的客户端到集群的通信
+- 2. `7946/tcp` 和 `udp`: 用于控制平面 gossip 协议（gossiper）
+- 3. `4789/udp`: 用于基于 VXLAN 的叠加网络
 
-- 5. 在 wrk2 上重复上一步操作，以便你有两个工作节点。如果你指定了 `--advertise-addr` 和 `--listen-addr` 标志，请确保使用 wrk2 的 IP 地址。
+- 5. 在 `wrk2` 上重复上一步操作，以便你有两个工作节点。如果你指定了 `--advertise-addr` 和 `--listen-addr` 标志，请确保使用 `wrk2` 的 IP 地址。
 
-- 6. 登录 mgr2 和 mgr3，并使用步骤 3 中的管理器令牌将它们加入为管理器。同样，你不需要使用 `--advertise-addr` 和 `--listen-addr` 标志，但如果你使用了，请务必为你的环境使用正确的 IP。
+- 6. 登录 `mgr2` 和 `mgr3`，并使用步骤 3 中的管理器令牌将它们加入为管理器。同样，你不需要使用 `--advertise-addr` 和 `--listen-addr` 标志，但如果你使用了，请务必为你的环境使用正确的 IP。
 
 ```
 $ docker swarm join \
@@ -3303,14 +3457,18 @@ Swarm 自带许多安全功能，例如证书颁发机构（CA）、双向 TLS�
 
 ```
 $ docker swarm update --autock=true
-Swarm updated.
 ```
+
+Swarm updated.
 
 要在重启后解锁集群管理器，请运行 `docker swarm unlock` 命令为重启的管理器解锁集群，并提供解锁密钥。
 
 ```
 $ docker swarm unlock
+```
+
 Please enter unlock key: <enter your key>
+
 WMKEY-1-XDeU3XC75Ku7rvGvIx0vV7ehdVJGgIAvq0D8VuEaw
 ```
 
@@ -3320,7 +3478,7 @@ Docker 将重新把节点加入集群，在后续命令中，它将显示为 **r
 
 ### 专用管理器节点
 
-默认情况下，Swarm 在工作节点（workers）**和**管理器（managers）上运行用户应用程序。但是，你可能希望配置你的生产集群仅在工作节点上运行用户应用程序。这允许管理器专门负责控制平面的职责。
+默认情况下，Swarm 在工作节点（workers）和管理器（managers）上运行用户应用程序。但是，你可能希望配置你的生产集群仅在工作节点上运行用户应用程序。这允许管理器专门负责控制平面的职责。
 
 在任何管理器节点上运行以下命令以防止其运行用户应用程序。你需要使用管理节点的名称，如果你想强制用户应用程序仅运行在工作节点上，则需要在所有管理器节点上运行该命令。
 
@@ -3330,7 +3488,7 @@ $ docker node update --availability drain mgr1
 
 你将在之后部署具有多个副本的服务时看到此操作产生的影响。
 
-现在你已经构建了集群并理解了**领导者**（leaders）和**管理器**（manager）高可用的概念，让我们转向应用端。
+现在你已经构建了集群并理解了领导者（leaders）和管理器（manager）高可用的概念，让我们转向应用端。
 
 ### 在集群上部署和管理应用
 
@@ -3345,7 +3503,7 @@ Swarm 允许通过两种方式创建和管理服务：
 
 我们将在下一节介绍 Compose 文件。现在我们将关注命令式方法。
 
-运行以下命令部署一个名为 **web-fe** 的新服务，并带有五个相同的副本。
+运行以下命令部署一个名为 `web-fe` 的新服务，并带有五个相同的副本。
 
 ```
 $ docker service create --name web-fe \
@@ -3365,7 +3523,7 @@ overall progress: 5 out 5 tasks
 verify: Service converged
 ```
 
-`docker service create` 命令告诉 Docker 部署一个新的服务。`--name` 标志将其称为 web-fe，`-p` 标志将每个节点的 8080 端口映射到每个副本（容器）内部的 8080 端口，`--replicas` 标志告诉 Swarm 部署五个副本。
+`docker service create` 命令告诉 Docker 部署一个新的服务。`--name` 标志将其称为 `web-fe`，`-p` 标志将每个节点的 8080 端口映射到每个副本（容器）内部的 8080 端口，`--replicas` 标志告诉 Swarm 部署五个副本。
 
 当我们指代服务时，交叉使用 replicas（副本）和 containers（容器）术语。你的 Docker 客户端将命令发送给集群管理器，领导管理器（leader manager）启动了部署五个副本的任务。你配置此集群使得用户应用程序不在管理器上运行，这意味着五个副本将运行在你的工作节点上。每个接收任务的工作节点拉取了镜像，启动了容器并创建了端口映射。
 
@@ -3430,6 +3588,8 @@ TargetPort = 8080
 PublishMode = ingress
 ```
 
+
+
 示例使用了 `--pretty` 标志将输出限制为易读的格式。如果你去掉 `--pretty` 标志，将通过 `docker inspect` 命令的输出获取更多关于底层运行的信息。
 
 我们将稍后回来看这些输出。
@@ -3449,32 +3609,42 @@ Swarm 部署副本有两种两种模式：
 
 假设业务兴隆，你的前端收到的请求数翻倍。幸运的是，你可以使用 `docker scale` 命令轻松扩展副本数量。
 
-运行以下命令将 web-fe 服务从 5 个副本扩展到 10 个。
+运行以下命令将 `web-fe` 服务从 5 个副本扩展到 10 个。
 
 ```
 $ docker service scale web-fe=10
+
 web-fe scaled to 10
+
 overall progress: 10 out of 10 tasks
+
 1/10: running [================================]
+
 ```
 
 ```
 2/10: running [============================]
+
 3/10: running [============================]
+
 4/10: running [============================]
+
 5/10: running [============================]
+
 6/10: running [============================]
+
 7/10: running [============================]
+
 8/10: running [============================]
+
 9/10: running [============================]
+
 10/10: running [============================]
 ```
 
-在后台，命令更新了集群存储中 web-fe 服务的期望状态从 5 个副本变为 10 个。协调循环读取了 10 个副本的新期望状态，将其与当前 5 个副本的观测状态进行比较，并增加了 5 个以使观测状态与新的期望状态同步。
+在后台，命令更新了集群存储中 `web-fe` 服务的期望状态从 5 个副本变为 10 个。协调循环读取了 10 个副本的新期望状态，将其与当前 5 个副本的观测状态进行比较，并增加了 5 个以使观测状态与新的期望状态同步。
 
 再次运行 `docker service ls` 以验证操作成功完成。
-
-
 
 如果有十个工作节点，你可能在每个工作节点上运行一个副本。
 
@@ -3497,17 +3667,25 @@ overall progress: 10 out of 10 tasks
 
 ```
 $ docker service scale web-fe=5
+
 web-fe scaled to 5
+
 overall progress: 5 of 5 tasks
+
 1/5: running [========================================]
+
 2/5: running [========================================]
+
 3/5: running [========================================]
+
 4/5: running [========================================]
+
 5/5: running [========================================]
 ```
 
 ```
 5/5: running [============================================]
+
 verify: Service web-fe converged
 ```
 
@@ -3521,6 +3699,7 @@ verify: Service web-fe converged
 
 ```
 $ docker service rm web-fe
+
 web-fe
 ```
 
@@ -3541,17 +3720,21 @@ web-fe
 
 你即将部署一个新服务来演示滚动更新。但在之前，你将为该服务创建一个新的覆盖网络（overlay network）。这并不是必须，但我想让你看到如何将服务连接到网络。
 
-运行以下两个命令创建一个名为 **uber-net** 的新覆盖网络，然后检查它是否存在。
+运行以下两个命令创建一个名为 `uber-net` 的新覆盖网络，然后检查它是否存在。
 
 ```
 $ docker network create -d overlay uber-net
+
 43wp6pzea470et4d57udn9ws
 ```
 
 ```
 $ docker network ls
+
 | NETWORK ID | NAME | DRIVER | SCOPE |
+
 | 43wp6pzea47 | uber-net | overlay | swarm |
+
 | <Snip> | | | |
 ```
 
@@ -3570,20 +3753,26 @@ $ docker service create --name uber-svc \
 
 ```
 overall progress: 12 of 12 tasks
+
 1/12: running [====================================]
+
 2/12: running [====================================]
+
 3/12: running [====================================]
+
 <Snip>
+
 12/12: running [====================================]
+
 verify: Service converged
 ```
 
-让我们逐步分析发生了什么。在第一行中，你将服务命名为 `uber-svc`。然后你使用 **--network** 标志，告诉 Docker 将所有服务副本连接到新的 `uber-net`。接着，你将每个 swarm 节点上的 8080 端口映射到 12 个副本的 8080 端口。最后，你告诉 Docker 使用哪个镜像来创建副本。这种在每个 swarm 节点（包括未运行副本的节点）上发布服务的模式被称为 **ingress mode**（接入模式），它是默认设置。另一种方案是 **host mode**（主机模式），它只在运行副本的节点上发布服务。
+让我们逐步分析发生了什么。在第一行中，你将服务命名为 `uber-svc`。然后你使用 `--network` 标志，告诉 Docker 将所有服务副本连接到新的 `uber-net`。接着，你将每个 swarm 节点上的 8080 端口映射到 12 个副本的 8080 端口。最后，你告诉 Docker 使用哪个镜像来创建副本。这种在每个 swarm 节点（包括未运行副本的节点）上发布服务的模式被称为 `ingress mode`（接入模式），它是默认设置。另一种方案是 `host mode`（主机模式），它只在运行副本的节点上发布服务。
 
 运行 `docker service ls` 和 `docker service ps` 来验证服务以及每个副本的状态。
 
 | ID | NAME | REPLICAS | IMAGE | NODE | DESIRED | CURRENT |
-|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|
 | ...7e5 | uber-svc | 12/12 | nigelpton/ddd-book:web0.1 | wrk1 | | Running |
 | ...wa0 | uber-svc | 12/12 | nigelpton/ddd-book:web0.1 | wrk2 | | Running |
 | ...u97 | uber-svc | 12/12 | nigelpton/ddd-book:web0.1 | | |
@@ -3598,14 +3787,23 @@ verify: Service converged
 
 ```
 $ docker service inspect --pretty uber-svc
+
 ID: mub0dgdtc8szm8ez5bs8wlt19
+
 Name: uber-svc
+
 Service Mode: Replicated
+
 Replicas: 12
+
 <Snap>
+
 UpdateConfig:
+
 Parallelism: 2 <<-----
+
 Delay: 20s <<-----
+
 </Snap>
 ```
 
@@ -3613,27 +3811,36 @@ Delay: 20s <<-----
 
 你可以使用 `docker service logs` 命令检查服务的日志。它会收集来自每个副本的日志并将它们显示在单个输出中。
 
-如果你一直在跟着操作，你现在应该有一个名为 **uber-svc** 的服务，它具有 12 个副本，并映射到每个集群节点上的 `8080` 端口。打开浏览器标签页，访问任意集群节点 `8080` 端口的 IP 地址并刷新几次。
+如果你一直在跟着操作，你现在应该有一个名为 `uber-svc` 的服务，它具有 12 个副本，并映射到每个集群节点上的 `8080` 端口。打开浏览器标签页，访问任意集群节点 `8080` 端口的 IP 地址并刷新几次。
 
 现在运行 `docker service logs` 命令来查看服务生成的任何日志消息。
 
 ```
 docker service logs uber-svc
+
 uber-svc.8.r33cra80eeut@wrk1
+
 uber-svc.2.vid8752oj48@wrk1
+
 uber-svc.7.jv67x3zfkyar@wrk2
+
 uber-svc.1.zlmvo5k156@wrk2
+
 uber-svc.3.kleeiyovue5@wrk2  | {"level":"info","message":"/"}
+
 | {"level":"info","message":"/"}
+
 | {"level":"info","message":"/"}
+
 | {"level":"info","message":"/"}
+
 | {"level":"info","message":"/"}
 ```
 
 输出显示了五行，与五个不同副本服务的五个请求相关。每行左侧的长字符串是副本的名称，Docker 通过拼接服务名称、副本数量、副本 ID 以及其调度的节点名称来创建它。下表映射了请求服务的五个副本名称。
 
 | 服务名称 | 副本数量 | 副本 ID | 节点 |
-|---|---|---|--- |
+|---|---|---|---|
 | uber-svc | 8 | r33cra80eeut | @wrk1 |
 | uber-svc | 2 | vid8752oj48 | @wrk1 |
 | uber-svc | 7 | jv67x3zfkyar | @wrk2 |
@@ -3650,9 +3857,9 @@ uber-svc.3.kleeiyovue5@wrk2  | {"level":"info","message":"/"}
 - splunk
 - syslog
 
-**json-file** 和 **journald** 是容易配置的，且它们都与 **docker service logs** 命令配合。然而，其他驱动程序并不总是与 Docker 原生命令兼容，你可能需要使用日志平台的原生工具。
+`json-file` 和 `journald` 是容易配置的，且它们都与 `docker service logs` 命令配合。然而，其他驱动程序并不总是与 Docker 原生命令兼容，你可能需要使用日志平台的原生工具。
 
-以下片段来自配置为使用 **syslog** 驱动程序的 Docker 宿主机上的 **daemon.json** 文件。**daemon.json** 文件通常位于 **/etc/docker/daemon.json**，但除非你手动为自定义设置创建，否则它有时不存在。
+以下片段来自配置为使用 `syslog` 驱动程序的 Docker 宿主机上的 `daemon.json` 文件。`daemon.json` 文件通常位于 `/etc/docker/daemon.json`，但除非你手动为自定义设置创建，否则它有时不存在。
 
 ```
 {
@@ -3660,23 +3867,25 @@ uber-svc.3.kleeiyovue5@wrk2  | {"level":"info","message":"/"}
 }
 ```
 
-你可以通过在启动服务时使用 **--log-driver** 和 **--log-opts** 标志强制新服务使用特定的日志驱动程序。这将覆盖 **daemon.json** 文件中的任何设置。
+
+
+你可以通过在启动服务时使用 `--log-driver` 和 `--log-opts` 标志强制新服务使用特定的日志驱动程序。这将覆盖 `daemon.json` 文件中的任何设置。
 
 服务日志期望应用程序作为 PID 1 并将日志发送到 STDOUT，错误发送到 STDERR。日志驱动程序会将日志转发到通过日志驱动程序配置的位置。
 
 ### Docker Swarm – 命令
 
-- docker swarm init 创建一个新的 swarm。你运行命令的节点将成为第一个管理器，该节点上的 Docker Engine 将切换到 swarm 模式。
-- docker swarm join-token 显示将 workers 和 managers 加入 swarm 所需的命令和令牌。在命令中添加 manager 以获取管理器加入令牌，添加 worker 以获取工作节点令牌。请确保你的加入令牌安全！
-- docker node ls 列出 managers 和 workers，包括哪个管理器是 leader。
-- docker service create 创建一个新的服务。
-- docker service ls 列出正在运行的服务并提供有关其状态和运行副本数量的基本信息。
-- docker service ps <service> 提供有关单个服务副本的更详细信息。
-- docker service inspect 提供有关服务的详细信息。
-- docker service scale 缩放副本数量。
-- docker service update 更新服务的属性。
-- docker service logs 显示日志。
-- docker service rm 删除服务。
+- `docker swarm init` 创建一个新的 swarm。你运行命令的节点将成为第一个管理器，该节点上的 Docker Engine 将切换到 swarm 模式。
+- `docker swarm join-token` 显示将 workers 和 managers 加入 swarm 所需的命令和令牌。在命令中添加 manager 以获取管理器加入令牌，添加 worker 以获取工作节点令牌。请确保你的加入令牌安全！
+- `docker node ls` 列出 managers 和 workers，包括哪个管理器是 leader。
+- `docker service create` 创建一个新的服务。
+- `docker service ls` 列出正在运行的服务并提供有关其状态和运行副本数量的基本信息。
+- `docker service ps <service>` 提供有关单个服务副本的更详细信息。
+- `docker service inspect` 提供有关服务的详细信息。
+- `docker service scale` 缩放副本数量。
+- `docker service update` 更新服务的属性。
+- `docker service logs` 显示日志。
+- `docker service rm` 删除服务。
 
 Swarm 是 Docker 用于集群的原生技术。它类似于 Kubernetes 但更容易使用。编排组件部署并管理微服务。Swarm 是 Docker 用于集群的原生技术。它类似于 Kubernetes 但更容易使用。编排组件部署并管理微服务。Swarm 是 Docker 用于集群的原生技术。它类似于 Kubernetes 但更容易使用。编排组件部署并管理微服务。Swarm 是 Docker 用于集群的原生技术。它类似于 Kubernetes 但更容易使用。编排组件部署并管理微服务。
 
@@ -3700,16 +3909,19 @@ Docker stacks 结合了 Compose 和 Swarm，创建一个用于部署和管理多
 
 ```
 $ docker swarm init
+
 Swarm initialized: current node (lhma...w4nn) is now a manager.
+
 <Snap>
 ```
 
-复制显示的 docker swarm join 命令并将其粘贴到你想作为 worker 的节点中。
+复制显示的 `docker swarm join` 命令并将其粘贴到你想作为 worker 的节点中。
 
 #### 工作节点 1
 
 ```
 $ docker swarm join --token SWMTKN-1-2hl6....31lgq 172.31.40.19
+
 This node joined a swarm as a worker.
 ```
 
@@ -3717,6 +3929,7 @@ This node joined a swarm as a worker.
 
 ```
 $ docker swarm join --token SWMTKN-1-2hl6....31lgq 172.31.40.19
+
 This node joined a swarm as a worker.
 ```
 
@@ -3734,13 +3947,10 @@ This node joined a swarm as a worker.
 
 图 11.2 显示了本章剩余部分使用的应用程序。这是一个多容器微服务应用，包含：
 
-- 两个服务 (**web-fe** **redis**)
-- 一个加密的覆盖网络 (**counter-net**)
-- 一个卷 (**counter-vol**)
-- 一个发布的端口 (** 5001**)
-
-
-
+- 两个服务 (`web-fe` `redis`)
+- 一个加密的覆盖网络 (`counter-net`)
+- 一个卷 (`counter-vol`)
+- 一个发布的端口 (` 5001`)
 
 ### 图 11.2
 
@@ -3750,12 +3960,19 @@ This node joined a swarm as a worker.
 
 ```
 $ git clone https://github.com/nigelpoulton/ddd-book.git
+
 Cloning into 'ddd-book'...
+
 remote: Enumerating objects: 8904, done.
+
 remote: Counting objects: 100% (74/74), done.
+
 remote: Compressing objects: 100% (52/52), done.
+
 remote: Total 8904 (delta 21), reused 70 (delta 18), pack-used
+
 Receiving objects: 100% (8904/8904), 74.00 MiB | 4.18 MiB/s, done
+
 Resolving deltas: 100% (1378/1378), done.
 ```
 
@@ -3775,7 +3992,7 @@ $ cd ddd-book/swarm-app
 
 **Networks**（网络）是你定义应用程序所需的网络，**volumes**（卷）定义了所需的卷，而 **services**（服务）定义了构成应用程序的微服务。该文件是*基础设施即代码*（infrastructure as code）简单示例——应用程序和基础设施定义在一个配置文件中，你从该文件中进行部署和管理。
 
-如果你展开每个顶层键，你会看到它们是如何映射到图 11.2 的，其中包含名为 **counter-net** 的网络，一个名为 **counter-vol** 的卷，以及两个名为 **web-fe** 和 **redis** 的服务。
+如果你展开每个顶层键，你会看到它们是如何映射到图 11.2 的，其中包含名为 `counter-net` 的网络，一个名为 `counter-vol` 的卷，以及两个名为 `web-fe` 和 `redis` 的服务。
 
 ```yaml
 networks:
@@ -3797,9 +4014,9 @@ services:
 
 ## 网络与网络化
 
-当你从栈文件部署应用程序时，Docker 执行的第一件事之一就是创建 **networks** 键下列出的网络。如果它们已经存在，Docker 不需要做任何操作。但如果它们不存在，它就会创建它们。
+当你从栈文件部署应用程序时，Docker 执行的第一件事之一就是创建 `networks` 键下列出的网络。如果它们已经存在，Docker 不需要做任何操作。但如果它们不存在，它就会创建它们。
 
-此应用程序定义了一个名为 **counter-net** 的单一加密覆盖网络。
+此应用程序定义了一个名为 `counter-net` 的单一加密覆盖网络。
 
 ```yaml
 networks:
@@ -3828,12 +4045,11 @@ services:
 
 ## 卷与挂载
 
-应用程序定义了一个名为 counter-vol 的单一卷，并将其挂载到所有 web-fe 副本的 /app 目录。这意味着对 /app 文件夹的所有读写操作都将在卷中进行。
+应用程序定义了一个名为 counter-vol 的单一卷，并将其挂载到所有 web-fe 副本的 `/app` 目录。这意味着对 `/app` 文件夹的所有读写操作都将在卷中进行。
 
 ```yaml
 volumes:
   counter-vol: <<----- 卷名称
-
 services:
   web-fe:
     <Snip
@@ -3885,8 +4101,7 @@ volumes:
     target: /app
 ```
 
-
-最后，**volumes** 块将 **counter-vol** 卷挂载到每个服务副本的 **/app** 目录。
+最后，`volumes` 块将 `counter-vol` 卷挂载到每个服务副本的 `/app` 目录。
 
 ```yaml
 web-fe:
@@ -3898,13 +4113,14 @@ web-fe:
 
 #### redis 服务
 
-**redis** 服务要简单得多。它拉取 **redis:alpine** 镜像，启动单个副本，并将其附加到 **counter-net** 网络。这与 **web-fe** 服务使用的是同一个网络，这意味着这两个服务能够通过名称（“redis”和“web-fe”）进行相互通信。
+`redis` 服务要简单得多。它拉取 `redis:alpine` 镜像，启动单个副本，并将其附加到 `counter-net` 网络。这与 `web-fe` 服务使用的是同一个网络，这意味着这两个服务能够通过名称（“redis”和“web-fe”）进行相互通信。
 
 ```yaml
 redis:
   image: "redis:alpine"
 networks:
-  counter-net:```
+  counter-net:
+```
 
 如前提到的，Compose 文件是应用程序文档的极佳来源。我们可以阅读这个文件并知道应用程序包含两个服务、两个网络和一个卷。我们知道服务是如何通信的、它们如何在集群（swarm）之外发布，以及关于它们将如何部署、更新和从故障中重启的某些信息。
 
@@ -3912,7 +4128,7 @@ networks:
 
 #### 部署应用程序
 
-如果你计划遵循本节，你需要书籍的 GitHub 仓库副本和一个集群。示例使用一个三节点集群，其中包含一个名为 **mgr1** 的管理器和两个名为 **wrk1** 和 **wrk2** 的工作节点。
+如果你计划遵循本节，你需要书籍的 GitHub 仓库副本和一个集群。示例使用一个三节点集群，其中包含一个名为 `mgr1` 的管理器和两个名为 `wrk1` 和 `wrk2` 的工作节点。
 
 ### 部署应用
 
@@ -3929,8 +4145,11 @@ networks:
 
 ```bash
 $ docker stack deploy -c compose.yaml ddd
+
 Creating network ddd_counter-net
+
 Creating service ddd_web-fe
+
 Creating service ddd_web-redis
 ```
 
@@ -3954,16 +4173,25 @@ Docker 还会在每个资源的名称前加上栈的前缀。我们将栈命名�
 
 ```bash
 $ docker stack ls
+
 NAME SERVICES
+
 ddd 2
 
 $ docker stack ps ddd
+
 NAME IMAGE NODE DESIRED S
+
 ddd_redis.1 redis:alpine mgr1 Running
+
 ddd_web-fe.1 nigelppton/ddd-book:swarm-app wrk1 Running
+
 ddd_web-fe.2 nigelppton/ddd-book:swarm-app wrk2 Running
+
 ddd_web-fe.3 nigelppton/ddd-book:swarm-app wrk2 Running
+
 <Snip>
+
 ddd_web-fe.10 nigelppton/ddd-book:swarm-app wrk1 Running
 ```
 
@@ -3973,40 +4201,44 @@ ddd_web-fe.10 nigelppton/ddd-book:swarm-app wrk1 Running
 
 ```bash
 $ docker stack ps ddd
+
 NAME NODE DESIRED CURRENT ERROR
 ```
 
-你也可以使用 **docker service logs** 命令来检查服务日志。如果你传递服务名称或 ID，你将获得所有服务副本的日志。如果你传递特定的副本名称或 ID，你将只获得该副本的日志。
+你也可以使用 `docker service logs` 命令来检查服务日志。如果你传递服务名称或 ID，你将获得所有服务副本的日志。如果你传递特定的副本名称或 ID，你将只获得该副本的日志。
 
-接下来的示例显示了 **ddd_web-fe** 服务中所有副本的日志。
+接下来的示例显示了 `ddd_web-fe` 服务中所有副本的日志。
 
 | 命令 | 输出 |
 | :--- | :--- |
 | docker service logs ddd_web-fe | ddd_web-fe.9.i23pu71kq12@node2 ddd_web-fe.5.z4otpnjrvc58@node2 <Snip> \| * Serving Flask app 'app' \| ddd_web-fe.6.novrixi5iuxy@node2 ddd_web-fe.6.novrixi5iuxy@node2 ddd_web-fe.6.novrixi5iuxy@node2 | * Debug mode: on * Debugger is active! * Debugger PIN: 127-233-15 |
 
-你可以跟踪日志 (**--follow**）、查看尾部日志，并且有时可以获取额外细节（--details**）。
+你可以跟踪日志（`--follow`）、查看尾部日志，并且有时可以获取额外细节（--details**）。
 
 到目前为止，你已经使用 Docker 命令证明了栈已启动运行。然而，你也可以用浏览器进行测试。
 
-运行 **docker stack services** 命令来发现 **web-fe** 服务发布的端口。
+运行 `docker stack services` 命令来发现 `web-fe` 服务发布的端口。
 
 | NAME | MODE | REPLICAS | IMAGE |
 | :--- | :--- | :--- | :--- |
 | ddd_redis | replicated | 1/1 | redis-alpine |
 | ddd_web-fe | replicated | 4/4 | nigelppton/ddd-book:swarm-app |
 
-
-
-
-
 ```
 $ docker stack ps ddd
-NAME          IMAGE NODE DESIRED
-ddd_web-fe.1  nigelpoulton/ddd-book:swarm-app node2 Running
-ddd_web-fe.2  nigelpoulton/ddd-book:swarm-appv2 node2 Running
-ddd_web-fe.2  nigelpoulton/ddd-book:swarm-app node2 Shutdown
-ddd_web-fe.3  nigelpoulton/ddd-book:swarm-app node1 Running
 ```
+
+
+
+NAME          IMAGE NODE DESIRED
+
+ddd_web-fe.1  nigelpoulton/ddd-book:swarm-app node2 Running
+
+ddd_web-fe.2  nigelpoulton/ddd-book:swarm-appv2 node2 Running
+
+ddd_web-fe.2  nigelpoulton/ddd-book:swarm-app node2 Shutdown
+
+ddd_web-fe.3  nigelpoulton/ddd-book:swarm-app node1 Running
 
 我为了适应书籍的内容精简了输出结果，并且只列出了部分副本。不过，你可以看到其中的几点。
 
@@ -4080,7 +4312,7 @@ Updating service ddd_web-fe (id: zbbplw0hul2gbr593mvwlz5i)
 
 如果你一直在跟着操作，你部署了一个包含两个服务、一个网络和一个卷的应用。
 
-你可以使用 **docker stack rm** 命令删除栈。但请注意，它会在不询问确认的情况下删除栈。
+你可以使用 `docker stack rm` 命令删除栈。但请注意，它会在不询问确认的情况下删除栈。
 
 ```
 $ docker stack rm ddd
@@ -4140,10 +4372,6 @@ WebAssembly 是云计算的未来。![](img/aae0230bf8529bd80767c4c780dca8d3_314
 
 在编写时，Docker 的 Wasm 支持是一个测试功能，且不支持 Multipass Docker 虚拟机。这意味着可能会有 Bug。我在本章的示例是在 Docker Desktop 4.30.0 上测试的。
 
-
-
-
-
 ### Wasm 与 Wasm 容器简介
 
 Wasm 是一种新型应用程序，比传统的 Linux 容器更小、更快且更具可移植性。然而，传统的 Linux 容器能的功能比 Wasm 应用多得多。例如，Wasm 应用目前非常适合 AI 工作负载、无服务器函数、插件和边缘设备，但在处理复杂网络或密集型 I/O 方面并不理想。
@@ -4167,15 +4395,15 @@ io.containerd.wasmedge.v1
 io.containerd.wasmer.v1
 ```
 
-我的安装包含七个 Wasm 运行时，包括我们在示例中使用的 **io.containerd.spin.v2** 运行时。
+我的安装包含七个 Wasm 运行时，包括我们在示例中使用的 `io.containerd.spin.v2` 运行时。
 
-这些 Wasm 运行时允许 **containerd** 部署和管理 **Wasm 容器**。**Wasm 容器**是运行在极化 **scratch** 容器内部的 Wasm，这样你就可以使用熟悉的 Docker 工具（如 **docker run** 命令和 Docker Hub）来构建、分发和运行它们。
+这些 Wasm 运行时允许 `containerd` 部署和管理 `Wasm 容器`。`Wasm 容器`是运行在极化 `scratch` 容器内部的 Wasm，这样你就可以使用熟悉的 Docker 工具（如 `docker run` 命令和 Docker Hub）来构建、分发和运行它们。
 
 说得容易容易，让我们来看看实际操作吧。
 
 ### 编写一个 Wasm 应用
 
-我们将使用 **spin** 创建一个简单的 Web 服务器，并将其编译为 Wasm 应用。在后续步骤中，你将作为 Wasm 容器构建、分发并运行该应用。
+我们将使用 `spin` 创建一个简单的 Web 服务器，并将其编译为 Wasm 应用。在后续步骤中，你将作为 Wasm 容器构建、分发并运行该应用。
 
 进入新目录，然后运行以下命令创建一个名为 `hello-world` 的新 Wasm 应用。
 
@@ -4187,7 +4415,7 @@ Description: Wasm app
 HTTP path: /hello
 ```
 
-该命令创建了一个新的 **hello-world** 目录，并搭建了一个基于 Rust 的简单 Web 应用。进入此目录并检查应用文件。如果你没有安装 **tree** 命令，可以运行 **ls -l** 获取类似的结果。
+该命令创建了一个新的 `hello-world` 目录，并搭建了一个基于 Rust 的简单 Web 应用。进入此目录并检查应用文件。如果你没有安装 `tree` 命令，可以运行 `ls -l` 获取类似的结果。
 
 ```
 $ cd hello-world
@@ -4199,9 +4427,9 @@ $ tree
     └── lib.rs
 ```
 
-我们只对 **spin.toml** 和 **src/lib.rs** 文件感兴趣。
+我们只对 `spin.toml` 和 `src/lib.rs` 文件感兴趣。
 
-编辑 **src/lib.rs** 文件，并按照下方代码段所示更改双引号内的文本。此配置将应用显示 **Docker loves Wasm.**。
+编辑 `src/lib.rs` 文件，并按照下方代码段所示更改双引号内的文本。此配置将应用显示 **Docker loves Wasm.**。
 
 ```
 use spin_sdk::http::{IntoResponse, Request};
@@ -4241,7 +4469,6 @@ $ tree
 ```
 $ spin up
 Logging component stdio to ".spin/logs"
-
 Serving http://127.0.0.1:3000
 Available Routes:
   hello-world: http://127.0.0.1:3000/hello
@@ -4253,7 +4480,7 @@ Available Routes:
 
 图 12.3 本地运行的 Wasm 应用
 
-恭喜！你刚刚构建了一个简单的 Web 服务器，将其编译为 Wasm，并使用 **spin** 在本地执行。按下 `Ctrl-C` 杀死应用。
+恭喜！你刚刚构建了一个简单的 Web 服务器，将其编译为 Wasm，并使用 `spin` 在本地执行。按下 `Ctrl-C` 杀死应用。
 
 ### 将 Wasm 应用容器化
 
@@ -4277,7 +4504,7 @@ source = "hello_world.wasm"
 $ docker build --platform wasi/wasm --provenance=false -t jorpoulton/ddd-book:wasm
 ```
 
---platform wasi/wasm 参数将镜像设置为 Wasm 镜像。某些旧版本的 Docker 没有构建器会导致失败。如果发生这种情况，尝试运行相同的命令但将第一行改为 `docker build`。列出系统上的镜像。
+`--platform wasi/wasm` 参数将镜像设置为 Wasm 镜像。某些旧版本的 Docker 没有构建器会导致失败。如果发生这种情况，尝试运行相同的命令但将第一行改为 `docker build`。列出系统上的镜像。
 
 | REPOSITORY | TAG | IMAGE ID | CREATED | SIZE |
 | :--- | :--- | :--- | :--- | :--- |
@@ -4303,7 +4530,7 @@ wasm: digest: sha256:7b5588f1006285ed6c39cc7a56aca89551075b
 
 ### 运行 Wasm 容器
 
-现在你已经将 Wasm 应用打包为 OCI 镜像并推送到仓库，可以将其作为容器运行。以下命令将其在一个名为 wasm-ctr 的新容器中运行，并映射到 Docker 宿主机端口 5556。--runtime 参数确保 Docker 使用 spin Wasm 运行时执行容器。比 4.24 旧的 Docker 可能没有 spin 运行时会导致失败。
+现在你已经将 Wasm 应用打包为 OCI 镜像并推送到仓库，可以将其作为容器运行。以下命令将其在一个名为 wasm-ctr 的新容器中运行，并映射到 Docker 宿主机端口 5556。`--runtime` 参数确保 Docker 使用 spin Wasm 运行时执行容器。比 4.24 旧的 Docker 可能没有 spin 运行时会导致失败。
 
 ```
 $ docker run -d --name wasm-ctr --runtime=io.containerd.spin.v2 --platform=wasi/wasm -p 5556:80 jorpoulton/ddd-book:wasm
@@ -4324,11 +4551,12 @@ $ docker run -d --name wasm-ctr --runtime=io.containerd.spin.v2 --platform=wasi/
 ```
 $ docker rm wasm-ctr -f
 wasm-ctr
-
 $ docker rmi jorpoulton/ddd-book:wasm
 Untagged: jorpoulton/ddd-book:wasm
 Deleted: sha256:7b5588f1006285ed6c39dc77a56aca895510758b22163
 ```
+
+
 
 你仍然在 Docker Hub 上有一个镜像副本，并在本地文件系统中 spin 应用。可以随意删除这些。
 
@@ -4337,9 +4565,6 @@ Deleted: sha256:7b5588f1006285ed6c39dc77a56aca895510758b22163
 在本章中，你将一个 Wasm 应用容器化并在 Wasm 容器中运行了它。
 
 Wasm 是驱动云计算下一一浪潮的新技术。Wasm 应用比传统的 Linux 容器更小、更快、更安全且更具移植性。然而，它们并不那么灵活。例如，在编写时，Wasm 应用对于具有密集 I/O 要求或复杂网络的应用并不理想。
-
-
-
 
 幸运的是，Docker 已经支持了 Wasm，并且 Docker Desktop 配带了许多流行的 Wasm 运行时。这意味着你可以使用 `docker build` 和 `docker run` 等行业标准工具来对 Wasm 应用进行容器化并运行。你甚至可以将它们推送到如 Docker Hub 等 OCI 注册表中。
 
@@ -4404,7 +4629,7 @@ Libnetwork 是 CNM 的真实实现。它作为 Moby 项目的一部分开源，�
 
 让我们仔细观察每一个。
 
-### 容器网络模型 (CNM)
+#### 容器网络模型 (CNM)
 
 一切都始于设计。
 
@@ -4442,7 +4667,7 @@ Docker 网络的设计指南是 CNM，它概述了 Docker 网络的基础构建�
 
 图 13.4
 
-### Libnetwork
+#### Libnetwork
 
 Libnetwork 是 CNM 的参考实现。它是开源的、跨平台的（Linux 和 Windows），由 Moby 项目维护并被 Docker 使用。
 
@@ -4450,11 +4675,11 @@ Libnetwork 是 CNM 的参考实现。它是开源的、跨平台的（Linux 和 
 
 除了实现 CNM 的核心组件外，libnetwork 还实现了网络控制面，包括管理 API、服务发现和基于入口的容器负载均衡。
 
-### 驱动程序 (Drivers)
+#### 驱动程序 (Drivers)
 
 libnetwork 实现了控制面，但它依赖驱动程序来实现数据面。例如，驱动程序负责创建网络并确保隔离性和连通性。
 
-Docker 自带了几个驱动程序，我们有时称它们为原生驱动或本地驱动。这些包括 bridge、overlay 和 macvlan，它们构建了最常见的网络拓扑。第三方也可以编写网络驱动程序来实现其他网络拓扑和更高级配置。
+Docker 自带了几个驱动程序，我们有时称它们为原生驱动或本地驱动。这些包括 `bridge`、`overlay` 和 `macvlan`，它们构建了最常见的网络拓扑。第三方也可以编写网络驱动程序来实现其他网络拓扑和更高级配置。
 
 图 13.5 显示了 libnetwork 和驱动程序的作用，以及它们与控制面和数据面职责的关系。
 
@@ -4467,9 +4692,6 @@ Docker 自带了几个驱动程序，我们有时称它们为原生驱动或本�
 让我们来看看单主机桥接网络以及连接到现有网络。你将在下一章中学习叠加网络。
 
 ### 单主机桥接网络
-
-
-
 
 最简单的 Docker 网络类型是单主机桥接网络。
 
@@ -4488,14 +4710,19 @@ Docker 使用内置的桥接驱动创建单主机桥接网络。如果你运行 
 
 每个新的 Docker 节点都会获得一个名为 **bridge** 的默认单主机桥接网络，除非你使用 `--network` 标志对其进行覆盖，否则 Docker 会将新容器连接到。
 
-以下命令显示了在 Docker 安装上运行 **docker network ls** 命令的输出。
+以下命令显示了在 Docker 安装上运行 `docker network ls` 命令的输出。
 
 ```
 $ docker network ls
+
 | NETWORK ID | NAME | DRIVER | SCOPE |
+
 | :--- | :--- | :--- | :--- |
+
 | c7464dce29ce | bridge | bridge | local default |
+
 | c65ab180d580 | host | host | local |
+
 | 42a783df0fbe | none | null | local |
 ```
 
@@ -4503,6 +4730,7 @@ $ docker network ls
 
 ```
 $ docker network inspect bridge
+
 [
   {
     "Name": "bridge",
@@ -4539,7 +4767,7 @@ $ docker network inspect bridge
 
 **图 13.7 - 将默认 Docker "bridge" 网络映射到主机内核中的 "docker0" 桥接器**
 
-你可以运行 docker network inspect 命令来确认桥接网络是否基于主机内核中的 docker0。如果你在 Windows 上使用 PowerShell，你将需要 grep 替换为 Select-String。
+你可以运行 `docker network inspect` 命令来确认桥接网络是否基于主机内核中的 docker0。如果你在 Windows 上使用 PowerShell，你将需要 grep 替换为 Select-String。
 
 ```
 $ docker network inspect bridge | grep bridge.name
@@ -4553,7 +4781,6 @@ $ brctl show
 bridge name     bridge id STP enabled interfaces
 docker0         8000.0242aff9eb4f no
 docker_gwbridge 8000.02427abba76b no
-
 $ ip link show docker0
 3: docker0:<BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc...\link/ether 02:42:af:f9:eb:4f brd ff:ff:ff:ff
 ```
@@ -4651,12 +4878,21 @@ fetch https://dl-cdn.alpinelinux.org/alpine/v3.19/community/aarch6
 现在连接到 Docker 宿主机端口 **5005** 的 IP，看看是否可以到达容器。
 
 ```bash
-### curl 192.168.64.69:5005
+
+
+
+### `curl 192.168.64.69:5005`
+
 <!DOCTYPE html>
+
 <html>
+
 <head>
+
 <title>Welcome to nginx!</title>
+
 ...
+
 ```
 
 你已经通过映射到 Docker 宿主机 IP 了运行在 web 容器中的 nginx 服务器。
@@ -4667,13 +4903,13 @@ fetch https://dl-cdn.alpinelinux.org/alpine/v3.19/community/aarch6
 
 将容器化应用连接到外部系统和物理网络是非常重要的。一个常见的例子是部分容器化的应用，运行在容器中的部分需要与运行在容器之外的部分通信。
 
-内置的 MACVLAN 驱动（如果你使用 Windows 容器它是透明的）是为此而创建的。它让每个容器在物理网络上拥有自己的 IP 和 MAC 地址，使其看起来和感觉像是一个物理服务器或虚拟机。这在图 13.12 中所示。
+内置的 `MACVLAN` 驱动（如果你使用 Windows 容器它是透明的）是为此而创建的。它让每个容器在物理网络上拥有自己的 IP 和 MAC 地址，使其看起来和感觉像是一个物理服务器或虚拟机。这在图 13.12 中所示。
 
 ![](img/aae0230bf8529bd80767c4c780dca8d3_360_0.png)
 
 图 13.12 - 使外部网络可见的 MACVLAN 驱动
 
-优点是 MACVLAN 的性能良好，因为不需要端口映射或额外的桥。但是，你需要将宿主机网卡设置为杂散模式（promiscuous mode），这在许多企业网络和公有云中是不允许的。因此，如果你的网络允许杂散模式，MACVLAN 将你的数据中心网络上工作。
+优点是 `MACVLAN` 的性能良好，因为不需要端口映射或额外的桥。但是，你需要将宿主机网卡设置为杂散模式（promiscuous mode），这在许多企业网络和公有云中是不允许的。因此，如果你的网络允许杂散模式，`MACVLAN` 将你的数据中心网络上工作。
 
 让我们通过一些图片和一个假设的示例深入研究。这个示例只有在你的宿主机网卡处于允许杂散模式的网络上才能工作。它还需要一个现有的 VLAN 100。如果你的物理网络 VLAN 配置不同，你可以调整它。你可以遵循没有 VLAN 的操作，但不会获得完整的体验。
 
@@ -4703,18 +4939,19 @@ docker network create -d macvlan \
   # <-- 确保这匹配你的 macvlan100
 ```
 
-Docker 将创建 **macvlan100** 网络和宿主机上名为 **eth0.100@eth0** 的新子接口。现在的配置如下。
+Docker 将创建 `macvlan100` 网络和宿主机上名为 `eth0.100@eth0` 的新子接口。现在的配置如下。
 
 ![](img/aae0230bf8529bd80767c4c780dca8d3_363_0.png)
 
 ### 图 13.15
 
-MACVLAN 驱动创建标准的 Linux 子接口，并用它们连接的 VLAN ID 对进行标记。在示例中，我们连接到 VLAN 100，所以我们将子接口标记为 .100 (-o parent=eth0.100)。
+`MACVLAN` 驱动创建标准的 Linux 子接口，并用它们连接的 VLAN ID 对进行标记。在示例中，我们连接到 VLAN 100，所以我们将子接口标记为 .100 (`-o parent=eth0.100`)。
 
 我们还使用了 `--ip-range` 标志来告诉新网络它可以分配的地址集。如果你检查网络，你将能够看到重要信息。
 
 ```json
 docker network inspect macvlan100
+
 {
   "Name": "macvlan100",
   "Driver": "macvlan",
@@ -4731,7 +4968,7 @@ docker network inspect macvlan100
 }
 ```
 
-一旦创建了 macvlan100 网络，你就可以将容器连接上去，它们对其他系统可见。
+一旦创建了 `macvlan100` 网络，你就可以将容器连接上去，它们对其他系统可见。
 
 ```bash
 $ docker run -d --name cainer1 \
@@ -4745,7 +4982,7 @@ alpine sleep 1
 
 图 13.16
 
-然而，请记住底层网络（VLAN 100）看不到 MACVLAN 的魔法，它只看到带有 MAC 和 IP 地址的容器，这意味着 **ctainer1** 容器将与 100 上的其他系统通信！
+然而，请记住底层网络（VLAN 100）看不到 MACVLAN 的魔法，它只看到带有 MAC 和 IP 地址的容器，这意味着 `ctainer1` 容器将与 100 上的其他系统通信！
 
 **注意**：*如果你无法使其工作，可能是因为宿主机网卡不是杂散模式。此外，请记住公云平台通常禁止杂散模式。*
 
@@ -4757,20 +4994,19 @@ alpine sleep 1
 
 如果你运行的是 Windows 容器，可以在 Windows 事件查看器中查看或直接在 `~AppData\Local\Docker` 中查看。对于 Linux 容器，取决于你使用的 `init` 系统。如果你正在运行 systemd，
 
-
 Docker 会将日志发布到 journald，你可以通过 `journalctl -u docker.service` 命令查看它们。如果你正在使用不同的初始化系统，你可能需要检查以下位置：
 
-- 运行 upstart 的 Ubuntu 系统：/var/log/upstart/docker.log
-- 基于 RHEL 的系统：/var/log/messages
-- Debian：/var/log/daemon.log
+- 运行 upstart 的 Ubuntu 系统：`/var/log/upstart/docker.log`
+- 基于 RHEL 的系统：`/var/log/messages`
+- Debian：`/var/log/daemon.log`
 
-你也可以告诉 Docker 守护进程日志的详细程度。要执行此操作，请编辑位于 `/etc/docker/daemon.json` 的守护进程配置文件，将 "debug" 设置为 "true"，并将 "log-level" 设置为以下之一：
+你也可以告诉 Docker 守护进程日志的详细程度。要执行此操作，请编辑位于 `/etc/docker/daemon.json` 的守护进程配置文件，将 `"debug"` 设置为 `"true"`，并将 `"log-level"` 设置为以下之一：
 
-- debug - 最详细的选项
-- info - 默认值和第二详细的选项
-- warn - 第三详细的选项
-- error - 第四详细的选项
-- fatal - 最不详细的选项
+- `debug` - 最详细的选项
+- `info` - 默认值和第二详细的选项
+- `warn` - 第三详细的选项
+- `error` - 第四详细的选项
+- `fatal` - 最不详细的选项
 
 以下摘自 `daemon.json` 的代码片段启用了调试功能，并将级别设置为 debug。它适用于所有 Docker 平台。
 
@@ -4803,7 +5039,7 @@ Docker 会将日志发布到 journald，你可以通过 `journalctl -u docker.se
 
 容器日志运行在你的应用程序作为 PID 1 运行，并将日志发送到 STDOUT，将错误发送到 STDERR。随后日志驱动程序会将所有内容转发到通过日志驱动程序配置的位置。
 
-以下是一个针对名为 vantage-db 的容器运行 `docker logs` 命令的示例，该容器配置了使用 `json-file` 日志驱动程序。
+以下是一个针对名为 `vantage-db` 的容器运行 `docker logs` 命令的示例，该容器配置了使用 `json-file` 日志驱动程序。
 
 ```bash
 $ docker logs vantage-db
@@ -4816,6 +5052,8 @@ $ docker logs vantage-db
 1:M 2 Feb 09:53:22.906 # WARNING overcommit_memory is set to 0!
 ```
 
+
+
 你很有可能在守护进程日志或容器日志中发现网络连接错误。
 
 ### 服务发现
@@ -4824,7 +5062,7 @@ $ docker logs vantage-db
 
 在底层，Docker 实现了一个原生的 DNS 服务器，并配置每个容器使用它进行名称解析。
 
-图 13.18 显示了一个名为 c1 的容器通过名称 ping 另一个名为 c2 的容器。同样的原理也适用于 Swarm 服务副本。
+图 13.18 显示了一个名为 `c1` 的容器通过名称 `ping` 另一个名为 `c2` 的容器。同样的原理也适用于 Swarm 服务副本。
 
 ![](img/aae0230bf8529bd80767c4c780dca8d3_371_0.png)
 
@@ -4832,17 +5070,15 @@ $ docker logs vantage-db
 
 让我们逐步了解这一过程。
 
-- **步骤 1：** c1 容器发出了 `ping c2` 命令。容器的本地 DNS 解析器检查其缓存，查看是否拥有 c2 的 IP 地址。所有 Docker 容器都有本地 DNS 解析器。
-- **步骤 2：** 本地解析器没有 c2 的 IP 地址，因此它向嵌入的 Docker DNS 服务器发起递归查询。所有 Docker 容器都预配置了如何向嵌入的 DNS 服务器发送查询。
-- **步骤 3：** Docker DNS 服务器为你使用每个使用 `--name` 和 `--net-alias` 标志创建的容器维护名称到 IP 的映射。这意味着它知道 c2 容器的 IP 地址。
-- **步骤 4：** DNS 服务器将 c2 容器的 IP 地址返回给 c1 容器中的本地解析器。如果 c1 和 c2 位于不同的 Docker 网络上，它将不会返回 IP 地址——名称解析仅适用于同一网络上的容器。
-- **步骤 5：** c1 容器向 c2 的 IP 地址发送 ping 请求（ICMP echo 请求）。
+- **步骤 1：** `c1` 容器发出了 `ping c2` 命令。容器的本地 DNS 解析器检查其缓存，查看是否拥有 `c2` 的 IP 地址。所有 Docker 容器都有本地 DNS 解析器。
+- **步骤 2：** 本地解析器没有 `c2` 的 IP 地址，因此它向嵌入的 Docker DNS 服务器发起递归查询。所有 Docker 容器都预配置了如何向嵌入的 DNS 服务器发送查询。
+- **步骤 3：** Docker DNS 服务器为你使用 `--name` 和 `--net-alias` 标志创建的容器维护名称到 IP 的映射。这意味着它知道 `c2` 容器的 IP 地址。
+- **步骤 4：** DNS 服务器将 `c2` 容器的 IP 地址返回给 `c1` 容器中的本地解析器。如果 `c1` 和 `c2` 位于不同的 Docker 网络上，它将不会返回 IP 地址——名称解析仅适用于同一网络上的容器。
+- **步骤 5：** `c1` 容器向 `c2` 的 IP 地址发送 `ping` 请求（ICMP echo 请求）。
 
 在此确认几点。
 
-Docker 会自动将你使用 `--name` 或 `net-alias` 标志创建的每个容器的名称和 IP 注册到嵌入的 Docker DNS 服务中。它还会自动配置每个容器使用嵌入的 DNS 服务将名称转换为 IP。名称解析（服务发现）是网络范围的，这意味着它仅适用于同一网络上的容器。你可能会在守护进程日志或容器日志中发现网络连接错误。Docker 会自动将你使用 `--name` 或 `net-alias` 标志创建的每个容器的名称和 IP 注册到嵌入的 Docker DNS 服务中。它还会自动配置每个容器使用嵌入的 DNS 服务将名称转换为 IP。名称解析（服务发现）是网络范围的，这意味着它仅适用于同一网络上的容器。你可能会在守护进程日志或容器日志中发现网络连接错误。Docker 会自动将你使用 `--name` 或 `net-alias` 标志创建的每个容器的名称和 IP 注册到嵌入的 Docker DNS 服务中。它还会自动配置每个容器使用嵌入的 DNS 服务将名称转换为 IP。名称解析（服务发现）是网络范围的，这意味着它仅适用于同一网络上的容器。你可能会在守护进程日志或容器日志中发现网络连接错误。Docker 会自动将你使用 `--name` 或 `net-alias` 标志创建的每个容器的名称和 IP 注册到嵌入的 Docker DNS 服务中。它还会自动配置每个容器使用嵌入的 DNS 服务将名称转换为 IP。名称解析（服务发现）是网络范围的，这意味着它仅适用于同一网络上的容器。你可能会在守护进程日志或容器日志中发现网络连接错误。Docker 会自动将你使用 `--name` 或 `net-alias` 标志创建的每个容器的名称和 IP 注册到嵌入的 Docker DNS 服务中。它还会自动配置每个容器使用嵌入的 DNS 服务将名称转换为 IP。名称解析（服务发现）是网络范围的，这意味着它仅适用于同一网络上的容器。你可能会在守护进程日志或容器日志中发现网络连接错误。Docker 会自动将你使用 `--name` 或 `net-alias` 标志创建的每个容器的名称和 IP 注册到嵌入的 Docker DNS 服务中。它还会自动配置每个容器使用嵌入的 DNS 服务将名称转换为 IP。名称解析（服务发现）是网络范围的，这意味着它仅适用于同一网络上的容器。你可能会在守护进程日志或容器日志中发现网络连接错误。Docker 会自动将你使用 `--name` 或 `net-alias` 标志创建的每个容器的名称和 IP 注册到嵌入的 Docker DNS 服务中。它还会自动配置每个容器使用嵌入的 DNS 服务将名称转换为 IP。名称解析（服务发现）是网络范围的，这意味着它仅适用于同一网络上的容器。你可能会在守护进程日志或容器日志中发现网络连接错误。Docker 会自动将你使用 `--name` 或 `net-alias` 标志创建的每个容器的名称和 IP 注册到嵌入的 Docker DNS 服务中。它还会自动配置每个容器使用嵌入的 DNS 服务将名称转换为 IP。名称解析（服务发现）是网络范围的，这意味着它仅适用于同一网络上的容器。你可能会在守护进程日志或容器日志中发现网络连接错误。Docker 会自动将你使用 `--name` 或 `net-alias` 标志创建的每个容器的名称和 IP 注册到嵌入的 Docker DNS 服务中。它还会自动配置每个容器使用嵌入的 DNS 服务将名称转换为 IP。名称解析（服务发现）是网络范围的，这意味着它仅适用于同一网络上的容器。你可能会在守护进程日志或容器日志中发现网络连接错误。Docker 会自动将你使用 `--name` 或 `net-alias` 标志创建的每个容器的名称和 IP 注册到嵌入的 Docker DNS 服务中。它还会自动配置每个容器使用嵌入的 DNS 服务将名称转换为 IP。名称解析（服务发现）是网络范围的，这意味着它仅适用于同一网络上的容器。你可能会在守护进程日志或容器日志中发现网络连接错误。Docker 会自动将你使用 `--name` 或 `net-alias` 标志创建的每个容器的名称和 IP 注册到嵌入的 Docker DNS 服务中。它还会自动配置每个容器使用嵌入的 DNS 服务将名称转换为 IP。名称解析（服务发现）是网络范围的，这意味着它仅适用于同一网络上的容器。你可能会在守护进程日志或容器日志中发现网络连接错误。Docker 会自动将你使用 `--name` 或 `net-alias` 标志创建的每个容器的名称和 IP 注册到嵌入的 Docker DNS 服务中。它还会自动配置每个容器使用嵌入的 DNS 服务将名称转换为 IP。名称解析（服务发现）是网络范围的，这意味着它仅适用于同一网络上的容器。你可能会在守护进程日志或容器日志中发现网络连接错误。Docker 会自动将你使用 `--name` 或 `net-alias` 标志创建的每个容器的名称和 IP 注册到嵌入的 Docker DNS 服务中。它还会自动配置每个容器使用嵌入的 DNS 服务将名称转换为 IP。网络连接错误。Docker 会自动将你使用 `--name` 或 `net-alias` 标志创建的每个容器的名称和 IP 注册到嵌入的 Docker DNS 服务中。它还会自动配置每个容器使用嵌入的 DNS 服务将名称转换为 IP。名称解析（服务发现）是网络范围的，这意味着它仅适用于同一网络上的容器。你可能会在守护进程日志或容器日志中发现网络连接错误。Docker 会自动将你使用 `--name` 或 `net-alias` 标志创建的每个容器的名称和 IP 注册到嵌入的 Docker DNS 服务中。它还会自动配置每个容器使用嵌入的 DNS 服务将名称转换为 IP。名称解析（服务发现）是网络范围的，这意味着它仅适用于同一网络上的容器。你可能会在守护进程日志或容器日志中发现网络连接错误。Docker 会自动将你使用 `--name` 或 `net-alias` 标志创建的每个容器的名称和 IP 注册到嵌入的 Docker DNS 服务中。它还会自动配置每个容器使用嵌入的 DNS 服务将名称转换为 IP。名称解析（服务发现）是网络范围的，这意味着它仅适用于同一网络上的容器。你可能会在守护进程日志或容器日志中发现网络连接错误。Docker 会自动将你使用 `--name` 或 `net-alias` 标志创建的每个容器的名称和 IP 注册到嵌入的 Docker DNS 服务中。它还会自动配置每个容器使用嵌入的 DNS 服务将名称转换为 IP。名称解析（服务发现）是网络范围的，这意味着它仅适用于同一网络上的容器。你可能会在守护进程日志或容器日志中发现网络连接错误。Docker 会自动将你使用 `--name` 或 `net-alias` 标志创建的每个容器的名称和 IP 注册到嵌入的 Docker DNS 服务中。它还会自动配置每个容器使用嵌入的 DNS 服务将名称转换为 IP。名称解析（服务发现）是网络范围的，这意味着它仅适用于同一网络上的容器。你可能会在守护进程日志或容器日志中发现网络连接错误。Docker 会自动将你使用 `--name` 或 `net-alias` 标志创建的每个容器的名称和 IP 注册到嵌入的 Docker DNS 服务中。它还会自动配置每个容器使用嵌入的 DNS 服务将名称转换为 IP。名称解析（服务发现）是网络范围的，这意味着它仅适用于同一网络上的容器。你可能会在守护进程日志或容器日志中发现网络连接错误。Docker 会自动将你使用 `--name` 或 `net-alias` 标志创建的每个容器的名称和 IP 注册到嵌入的 Docker DNS 服务中。它还会自动配置每个容器使用嵌入的 DNS 服务将名称转换为 IP。名称解析（服务发现）是网络范围的，这意味着它仅适用于同一网络上的容器。你可能会在守护进程日志或容器日志中发现网络连接错误。
-
-(注：由于原文中存在大量重复的段落，翻译时已根据“不要重复输出原文”的原则进行了处理，确保了核心内容的完整性。)
+Docker 会自动将你使用 `--name` 或 `net-alias` 标志创建的每个容器的名称和 IP 注册到嵌入的 Docker DNS 服务中。它还会自动配置每个容器使用嵌入的 DNS 服务将名称转换为 IP。名称解析（服务发现）是网络范围的，这意味着它仅适用于同一网络上的容器。你可能会在守护进程日志或容器日志中发现网络连接错误。
 
 ### Ingress 负载均衡
 
@@ -4874,8 +5110,6 @@ nginx
 ![](img/aae0230bf8529bd80767c4c780dca8d3_377_0.png)
 
 图 13.20
-
-
 
 集群（swarm），并将其每个节点都连接到它。在端口 5005 上发布服务的操作，使得该服务可以通过每个 swarm 节点的 5005 端口进行访问，因为每个节点都连接到了入站网络（ingress network）。Docker 还会创建一个全 swarm 的规则，将所有命中节点 5005 端口的流量通过入站网络路由到 `svc1` 副本的 80 端口。
 
@@ -4917,15 +5151,14 @@ Docker 网络有其自有的 `docker network` 子命令，主要命令包括：
 - `docker network ls` 列出主机上所有用的 Docker 网络。
 - `docker network create` 是创建新 Docker 网络的方法。你必须为网络命名，并可以使用 `-d` 标志来指定它创建哪种驱动程序。
 - `docker network prune` 删除 Docker 主机上所有未使用的网络。
-- **docker network rm** 删除 Docker 主机或 swarm 上的特定网络。
+- `docker network rm` 删除 Docker 主机或 swarm 上的特定网络。
 
 你还运行了一些原生 Linux 命令。
 
-- **brctl show** 打印 Docker 主机上所有内核桥接器的列表，并显示是否有任何容器已连接。
+- `brctl show` 打印 Docker 主机上所有内核桥接器的列表，并显示是否有任何容器已连接。
+- `ip link show` 打印桥接配置数据。你运行了 `ip link show docker0` 来查看 Docker 主机上 `docker0` 桥接器的配置。
 
-- **ip link show** 打印桥接配置数据。你运行了 **ip link show docker0** 来查看 Docker 主机上 **docker0** 桥接器的配置。
-
- 章节总结
+### 章节总结
 
 容器网络模型（CNM）是 Docker 网络的设计文档，它定义了三个主要结构——沙箱（sandboxes）、端点（endpoints）和网络（networks）。
 
@@ -4983,9 +5216,9 @@ Docker 提供了原生叠加网络，配置简单且默认安全。
 
 ### 创建一个新的叠加网络
 
-让我们创建一个名为 **uber-net** 的加密叠加网络。
+让我们创建一个名为 `uber-net` 的加密叠加网络。
 
-从你的管理节点 **(node1)** 运行以下命令。
+从你的管理节点 `node1` 运行以下命令。
 
 ```
 $ docker network create -d overlay -o encrypted uber-net
@@ -4996,42 +5229,49 @@ dvuly429jvt04hgdm0q6
 
 如果不指定 `-o encrypted` 标志，Docker 仍然加密控制面（管理流量），但不会加密数据面（应用流量）。这可能很重要，因为加密数据面会导致网络性能下降约 10%。
 
-列出 **node1** 上的网络。
+列出 `node1` 上的网络。
 
 ```
 $ docker network ls
 NETWORK ID     NAME             DRIVER    SCOPE
 65585dda7500 bridge          bridge    local
-7e368a105c7 docker_gwbridge bridge    local
-a3083cdablic host             host      local
-4dsq70jc36ip ingress         overlay   swarm
-d97e92a23945 none           null      local
-dvulyly429jv uber-net       overlay   swarm
 ```
 
-新网络位于列表底部，其范围（SCOPE）是整个 swarm（SCOPE = swarm）。这意味着它跨越了 swarm 中的每个节点。然而，如果你在 **node2** 上列出网络，你将看不到 **uber-net** 网络。这是因为 Docker 仅在工作节点需要时才会扩展叠加网络。在我们的示例中，当运行需要它的容器时，Docker 将把 **uber-net** 网络扩展到 **node2**。这种懒加载网络部署方法通过减少 swarm 中的网络风风（gossip）提高了可扩展性。
+
+
+7e368a105c7 docker_gwbridge bridge    local
+
+a3083cdablic host             host      local
+
+4dsq70jc36ip ingress         overlay   swarm
+
+d97e92a23945 none           null      local
+
+dvulyly429jv uber-net       overlay   swarm
+
+新网络位于列表底部，其范围（`SCOPE`）是整个 swarm（`SCOPE = swarm`）。这意味着它跨越了 swarm 中的每个节点。然而，如果你在 **`node2`** 上列出网络，你将看不到 **`uber-net`** 网络。这是因为 Docker 仅在工作节点需要时才会扩展叠加网络。在我们的示例中，当运行需要它的容器时，Docker 将把 **`uber-net`** 网络扩展到 **`node2`**。这种懒加载网络部署方法通过减少 swarm 中的网络风风（gossip）提高了可扩展性。
 
 连接容器到叠加网络
 
-在 **node1** 上运行以下命令。
+在 **`node1`** 上运行以下命令。
 
 ```
 $ docker swarm init
+
 Swarm 已初始化：当前节点现在是节点。
 ```
 
-命令输出包含一个 **docker swarm join** 命令。复制此命令并在 **node2** 上运行。
+命令输出包含一个 **`docker swarm join`** 命令。复制此命令并在 **`node2`** 上运行。
 
 ```
 $ docker swarm join \
   --token SMTKN-1-0hz2ec \
   172.31.1.5:2377
+
 该节点已加入 swarm。
 ```
 
-你现在拥有了一个双节点的 Swarm，**node1** 是节点，**node2** 是工作节点。
-
-
+你现在拥有了一个双节点的 Swarm，**`node1`** 是节点，**`node2`** 是工作节点。
 
 现在你已经有一个叠加网络（overlay network），让我们将容器连接到它。
 
@@ -5055,7 +5295,7 @@ $ docker service create --name test \
 | sml...nw | test.1 | ubuntu:latest | node1 | Running | Run |
 | tro...kgk | test.2 | ubuntu:latest | node2 | Running | Run |
 
-NODE 列显示了每个节点上各运行一个副本。
+`NODE` 列显示了每个节点上各运行一个副本。
 
 切换到 node2 并运行 `docker network ls` 以验证它现在可以看到 `uber-net` 网络。
 
@@ -5069,10 +5309,11 @@ NODE 列显示了每个节点上各运行一个副本。
 
 接下来的步骤将引导你获取容器的名称和 IP 地址，然后查看它们是否可以相互 ping 通。
 
-切换回 **node1** 并运行 `docker network inspect` 以查看叠加网络的子网信息以及分配给服务副本的任何 IP 地址。
+切换回 **`node1`** 并运行 `docker network inspect` 以查看叠加网络的子网信息以及分配给服务副本的任何 IP 地址。
 
 ```
 $ docker network inspect uber-net
+
 {
   "Name": "uber-net",
   "Id": "vdulyly429jvt04hgdm0mjqc6",
@@ -5094,6 +5335,7 @@ $ docker network inspect uber-net
     }
   ]
 }
+
 <Snip>
 ```
 
@@ -5110,6 +5352,7 @@ $ docker network inspect uber-net
 ```
 $ docker inspect \
  --format='{{{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end
+
 10.0.0.3
 ```
 
@@ -5132,29 +5375,45 @@ $ docker inspect \
 $ docker exec -it d7766923a5a7 bash
 
 ### apt update && apt-get install iputils-ping -y
+
 <Snip>
+
 Reading package lists...
+
 Building dependency tree
+
 Reading state information... Done
+
 <Snip>
+
 Setting up iputils-ping (3:2019-3) ...
+
 Processing triggers for libc-bin (2.3) ...
 ```
 
-现在通过 IP 和副本 ID  ping 远程容器。
+现在通过 IP 和副本 ID ping 远程容器。
 
 ```
 ### ping 10.0.0.4
+
 PING 10.0.0.4 (10.0.0.4) 56(84) bytes of data
+
 64 bytes from 10.0.0.4: icmp_seq=1 time=0.06 ms
+
 64 bytes from 10.0.0.4: icmp_seq=2 time=0.07 ms
+
 64 bytes from 10.0.0.4: icmp_seq=3 time=0.03 ms
+
 64 bytes from 10.0.0.4: icmp_seq=4 time=0.26 ms
 
 # ping test.2.sm180xqwm7kl1bsyn3mt1nw
+
 PING test.2.sm180xqwm7kl1bsyn3mt1nw (10.0.0.4) 56(84) bytes of
+
 64 bytes from test.2.sm180xqwm7kl1bsyn3mt1nw.uber-net (10.0.0.4) time=0.05
+
 64 bytes from test.2.sm180xqwm7kl1bsyn3mt1nw.uber-net (10.0.0.4) time=0.05
+
 64 bytes from test.2.sm180xqwm7kl1bsyn3mt1nw.uber-net (10.0.0.4) time=0.04
 ```
 
@@ -5168,10 +5427,11 @@ PING test.2.sm180xqwm7kl1bsyn3mt1nw (10.0.0.4) 56(84) bytes of
 
 接下来的步骤将引导你获取容器的名称和 IP 地址，然后查看它们是否可以相互 ping 通。
 
-切换回 **node1** 并运行 `docker network inspect` 以查看叠加网络的子网信息以及分配给服务副本的任何 IP 地址。
+切换回 **`node1`** 并运行 `docker network inspect` 以查看叠加网络的子网信息以及分配给服务副本的任何 IP 地址。
 
 ```
 $ docker network inspect uber-net
+
 {
   "Name": "uber-net",
   "Id": "vdulyly429jvt04hgdm0mjqc6",
@@ -5193,6 +5453,7 @@ $ docker network inspect uber-net
     }
   ]
 }
+
 <Snip>
 ```
 
@@ -5209,6 +5470,7 @@ $ docker network inspect uber-net
 ```
 $ docker inspect \
  --format='{{{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end
+
 10.0.0.3
 ```
 
@@ -5231,12 +5493,19 @@ $ docker inspect \
 $ docker exec -it d7766923a5a7 bash
 
 ### apt update && apt-get install iputils-ping -y
+
 <Snip>
+
 Reading package lists...
+
 Building dependency tree
+
 Reading state information... Done
+
 <Snip>
+
 Setting up iputils-ping (3:2019-3) ...
+
 Processing triggers for libc-bin (2.3) ...
 ```
 
@@ -5244,48 +5513,56 @@ Processing triggers for libc-bin (2.3) ...
 
 ```
 ### ping 10.0.0.4
+
 PING 10.0.0.4 (10.0.0.4) 56(84) bytes of data
+
 64 bytes from 10.0.0.4: icmp_seq=1 time=0.06 ms
+
 64 bytes from 10.0.0.4: icmp_seq=2 time=0.07 ms
+
 64 bytes from 10.0.0.4: icmp_seq=3 time=0.03 ms
+
 64 bytes from 10.0.0.4: icmp_seq=4 time=0.26 ms
 
 # ping test.2.sm180xqwm7kl1bsyn3mt1nw
+
 PING test.2.sm180xqwm7kl1bsyn3mt1nw (10.0.0.4) 56(84) bytes of
+
 64 bytes from test.2.sm180xqwm7kl1bsyn3mt1nw.uber-net (10.0.0.4) time=0.05
+
 64 bytes from test.2.sm180xqwm7kl1bsyn3mt1nw.uber-net (10.0.0.4) time=0.05
+
 64 bytes from test.2.sm180xqwm7kl1bsyn3mt1nw.uber-net (10.0.0.4) time=0.04
-```
+
+
 
 恭喜。你创建了一个跨越两个不同底层网络节点的新叠加网络，并向其附加了两个容器。当我们到达理论部分并学习背后极其惊人的复杂性时，你会体会到你所做操作的多么简单！
 
 现在你已经将容器连接到叠加网络，让我们看看 Docker 在背后到底做了什么。
 
-### 叠加网络原理
+## 叠加网络原理
 
-首先，Docker 使用 VXLAN 在现有层 3 网络之上创建层 2 叠加网络。
+首先，Docker 使用 `VXLAN` 在现有层 3 网络之上创建层 2 叠加网络。
 
-幸运的是，VXLAN 是一种封装（encapsulation）技术，因此对于路由器和网络基础设施是透明的。
+幸运的是，`VXLAN` 是一种封装（encapsulation）技术，因此对于路由器和网络基础设施是透明的。
 
-为了创建叠加网络（overlay network），Docker 会通过底层网络创建 VXLAN 隧道，这个隧道允许叠加流量自由流动，无需对底层网络进行更改。
+为了创建叠加网络（overlay network），Docker 会通过底层网络创建 `VXLAN` 隧道，这个隧道允许叠加流量自由流动，无需对底层网络进行更改。
 
-### 流量流示例
+## 流量流示例
 
 之前的上手示例中有两个主机通过 IP 网络连接。你跨越两个主机部署了叠加网络，向其附加了两个容器，并进行了 ping 测试。让我们解释一下背后发生的一些事情。
 
-Docker 在每个主机上创建一个新的沙箱（网络命名空间），并带名为 `Br0` 的新交换机。它还创建了一个 VTEP，一端连接到 `Br0` 虚拟交换机，另一端连接到主机的网络栈。连接到主机网络栈的一端获得了主机所在底层网络的 IP 地址，并绑定到 UDP 端口 4789。最后，每个主机上的两个 VTEP 创建了一个 VXLAN 隧道作为叠加网络的骨干。
+Docker 在每个主机上创建一个新的沙箱（网络命名空间），并带名为 `Br0` 的新交换机。它还创建了一个 `VTEP`，一端连接到 `Br0` 虚拟交换机，另一端连接到主机的网络栈。连接到主机网络栈的一端获得了主机所在底层网络的 IP 地址，并绑定到 UDP 端口 `4789`。最后，每个主机上的两个 `VTEP` 创建了一个 `VXLAN` 隧道作为叠加网络的骨干。
 
-
-
-图 14.6 显示了配置。记住，VXLAN 隧道穿过图底部的网络；为了易读性，我只是把它画得高一些。
+图 14.6 显示了配置。记住，`VXLAN` 隧道穿过图底部的网络；为了易读性，我只是把它画得高一些。
 
 ![](img/aae0230bf8529bd80767c4c780dca8d3_399_0.png)
 
 图 14.6
 
-此时，你已经创建了 VXLAN 覆盖网络（overlay），准备好连接容器了。
+此时，你已经创建了 `VXLAN` 覆盖网络（overlay），准备好连接容器了。
 
-Docker 现在会在每个容器中创建一个虚拟以太网适配器（veth），并将其连接到本地 Br0 虚拟交换机。最终的拓扑结构如图 14.7 所示，尽管很复杂，但现在你应该看到尽管位于两个不同的网络，容器是如何通过 VXLAN 覆盖网络进行通信的——覆盖网络是一个通过底层网络（underlay）传输的虚拟网络。
+Docker 现在会在每个容器中创建一个虚拟以太网适配器（veth），并将其连接到本地 `Br0` 虚拟交换机。最终的拓扑结构如图 14.7 所示，尽管很复杂，但现在你应该看到尽管位于两个不同的网络，容器是如何通过 `VXLAN` 覆盖网络进行通信的——覆盖网络是一个通过底层网络（underlay）传输的虚拟网络。
 
 ![](img/aae0230bf8529bd80767c4c780dca8d3_400_0.png)
 
@@ -5301,19 +5578,19 @@ Docker 现在会在每个容器中创建一个虚拟以太网适配器（veth）
 
 ### 图 14.8
 
-**C1** 向 10.0.0.4 发起 ping 请求——这是 **C2** 的 IP 地址。
+**C1** 向 `10.0.0.4` 发起 ping 请求——这是 **C2** 的 IP 地址。
 
-**C1** 在其本地 MAC 地址表（ARP 缓存）中没有 10.0.0.4 的条目，因此它在所有接口上泛洪数据包，包括连接到 **Br0** 桥接器的 veth 接口。**Br0** 桥接器知道可以将指向 10.0.0.4 的流量转发到连接的 VTEP 接口，并向容器发送代理 ARP 响应。这导致 veth 通过更新自己的 MAC 表来**学习**如何转发数据包，以便将未来所有指向 10.0.0.4 的数据包直接发送到本地 VTEP。**Br0** 交换机知道 **C2** 容器是因为 Docker 会通过网络内置的 gossip 协议将所有新容器的细节传播到每个 swarm 节点。
+**C1** 在其本地 MAC 地址表（ARP 缓存）中没有 `10.0.0.4` 的条目，因此它在所有接口上泛洪数据包，包括连接到 **Br0** 桥接器的 veth 接口。**Br0** 桥接器知道可以将指向 `10.0.0.4` 的流量转发到连接的 `VTEP` 接口，并向容器发送代理 ARP 响应。这导致 veth 通过更新自己的 MAC 表来**学习**如何转发数据包，以便将未来所有指向 `10.0.0.4` 的数据包直接发送到本地 `VTEP`。**Br0** 交换机知道 **C2** 容器是因为 Docker 会通过网络内置的 gossip 协议将所有新容器的细节传播到每个 swarm 节点。
 
-接下来，C1 容器中的 veth 将 ping 发送到 VTEP 接口，接口对其进行封装以通过 VXLAN 隧道传输。封装添加了一个 VXLAN 头部，其中包含 VXLAN 网络 ID（VNID），该 ID 将流量从 VLAN 映射到 VXLAN，反之亦然——每个 VLAN 被映射到其自己的 VNID，这样数据包就可以在接收端被解封装并转发到正确的 VLAN。这维护了网络隔离。
+接下来，C1 容器中的 veth 将 ping 发送到 `VTEP` 接口，接口对其进行封装以通过 `VXLAN` 隧道传输。封装添加了一个 `VXLAN` 头部，其中包含 `VXLAN` 网络 ID（`VNID`），该 ID 将流量从 VLAN 映射到 `VXLAN`，反之亦然——每个 VLAN 被映射到其自己的 `VNID`，这样数据包就可以在接收端被解封装并转发到正确的 VLAN。这维护了网络隔离。
 
-封装还将将帧封装在 UDP 数据包中，并将 node2 上远程 VTEP 的 IP 添加到*目的 IP 字段*中。它还添加了 UDP/4789 套接字信息。这种封装允许数据包跨越底层网络进行路由，而底层网络无需了解任何关于 VXLAN 的信息。
+封装还将将帧封装在 UDP 数据包中，并将 node2 上远程 `VTEP` 的 IP 添加到*目的 IP 字段*中。它还添加了 UDP/`4789` 套接字信息。这种封装允许数据包跨越底层网络进行路由，而底层网络无需了解任何关于 `VXLAN` 的信息。
 
-当数据包到达 node2 时，主机内核看到它的目标是 UDP 端口 4789，并知道有一个绑定到该套接字的 VTEP。这意味着它将数据包发送到 VTEP，VTEP 读取 VNID，对其解封装，并将其发送到与 VNID 对应的本地 Br0 交换机。从那里，它将其交付给 C2 容器。
+当数据包到达 node2 时，主机内核看到它的目标是 UDP 端口 `4789`，并知道有一个绑定到该套接字的 `VTEP`。这意味着它将数据包发送到 `VTEP`，`VTEP` 读取 `VNID`，对其解封装，并将其发送到与 `VNID` 对应的本地 `Br0` 交换机。从那里，它将其交付给 C2 容器。
 
-朋友们，这就是 Docker 如何使用 VXLAN 构建和运行覆盖网络——这一系列令人惊叹的复杂性被完美地隐藏在单个 Docker 命令之后。
+朋友们，这就是 Docker 如何使用 `VXLAN` 构建和运行覆盖网络——这一系列令人惊叹的复杂性被完美地隐藏在单个 Docker 命令之后。
 
-我希望这些内容足够让你开始，并在你与网络团队讨论 Docker 基础设施的网络方面时为你提供帮助。关于与网络团队交流的话题……千万不要想着你现在已经了解了 VXLAN 的一切就去接触他们。如果你真的那样，你可能会让自己难脸。我是经验之谈 ;-)-
+我希望这些内容足够让你开始，并在你与网络团队讨论 Docker 基础设施的网络方面时为你提供帮助。关于与网络团队交流的话题……千万不要想着你现在已经了解了 `VXLAN` 的一切就去接触他们。如果你真的那样，你可能会让自己难脸。我是经验之谈 ;-)-
 
 最后一点。Docker 还支持在覆盖网络内部进行层3 路由。例如，你可以创建一个带有两个子网的单一覆盖网络，Docker 将处理路由。以下命令将创建一个名为 **prod-net** 的新覆盖网络，带有两个子网。Docker 将在沙箱内自动创建两个名为 **Br0** 和 **Br1** 的虚拟交换机并处理所有路由。
 
@@ -5321,7 +5598,7 @@ Docker 现在会在每个容器中创建一个虚拟以太网适配器（veth）
 $ docker network create --subnet=10.1.1.0/24 --subnet=11.1.1.0/24
 ```
 
-### 清理
+## 清理
 
 如果你一直跟着操作，你已经创建了一个名为 **uber-net** 的覆盖网络并部署了一个名为 **test** 的服务。你可能 true了一个 swarm。
 
@@ -5337,13 +5614,11 @@ $ docker service rm test
 $ docker network rm uber-net
 ```
 
-如果你不再需要 swarm，可以运行 docker swarm leave -
-
-
+如果你不再需要 swarm，可以运行 `docker swarm leave -`
 
 - Linux 容器：`/var/lib/docker/<storage-driver>/...`
 - Windows 容器：
-  C:\ProgramData\Docker\windowsfilter\...
+  `C:\ProgramData\Docker\windowsfilter\...`
 
 尽管本地存储层允许你更新运行中的容器，但你不应该这样做这样做。相反，你应该将容器视为不可变对象，一旦部署就永远不要更改它们。例如，如果你需要修复或更改运行中容器的配置，你应该创建一个并测试带有更改的新容器，然后用新容器替换运行中的容器。
 
@@ -5360,7 +5635,7 @@ $ docker network rm uber-net
 
 从高层次来说，你创建一个卷，然后创建一个容器，最后将卷挂载到容器中。当你将其挂载时，你将其挂载到容器文件系统中的一个目录，写入该目录的任何内容将存储在卷中。如果你删除了容器，卷和数据仍然存在。你甚至可以将存存的卷挂载到另一个容器中。
 
-图 15.2 显示了容器外的独立对象 Docker 卷。卷被挂载到容器文件系统的 /data，写入该目录的任何内容都将存储在卷中，并在你删除容器后仍然存在。
+图 15.2 显示了容器外的独立对象 Docker 卷。卷被挂载到容器文件系统的 `/data`，写入该目录的任何内容都将存储在卷中，并在你删除容器后仍然存在。
 
 ![](img/aae0230bf8529bd80767c4c780dca8d3_411_0.png)
 
@@ -5370,16 +5645,17 @@ $ docker network rm uber-net
 
 ### 创建和管理 Docker 卷
 
-卷是 Docker 中的一等公民。这意味着存在 **docker volume** 子命令，以及 API 中的 **volume** 资源。
+卷是 Docker 中的一等公民。这意味着存在 `docker volume` 子命令，以及 API 中的 `volume` 资源。
 
 运行以下命令创建一个名为 **myvol** 的新卷。
 
 ```
 $ docker volume create myvol
+
 myvol
 ```
 
-默认情况下，Docker 使用内置的 local 驱动程序创建新卷。正如该驱动程序的名称所示，这些卷仅对与卷相同节点上的容器可用。你可以使用 -d 标志来指定不同的驱动程序，但你需要先安装该驱动程序。
+默认情况下，Docker 使用内置的 `local` 驱动程序创建新卷。正如该驱动程序的名称所示，这些卷仅对与卷相同节点上的容器可用。你可以使用 `-d` 标志来指定不同的驱动程序，但你需要先安装该驱动程序。
 
 第三方驱动程序提供了高级功能以及访问外部存储系统的权限，例如云存储服务和本地存储系统（如 SAN 和 NAS）。图 15.3 显示了通过插件（驱动程序）连接到外部存储系统的 Docker 主机。
 
@@ -5387,16 +5663,19 @@ myvol
 
 图 15.3 将外部存储接入 Docker
 
-一旦创建了卷，你可以使用 **docker volume ls** 命令查看它，并使用 **docker volume inspect** 命令对其进行检查。
+一旦创建了卷，你可以使用 `docker volume ls` 命令查看它，并使用 `docker volume inspect` 命令对其进行检查。
 
 ```
 $ docker volume ls
+
 DRIVER VOLUME NAME
+
 local myvol
 ```
 
 ```
 $ docker volume inspect myvol
+
 {
   "CreatedAt": "2024-05-15T12:23:14Z",
   "Driver": "local",
@@ -5414,23 +5693,26 @@ $ docker volume inspect myvol
 
 现在你已经创建了卷，可以创建容器来使用它。然而，在在此之前，有两种删除 Docker 卷的方法：
 
-- docker volume prune
-- docker volume rm
+- `docker volume prune`
+- `docker volume rm`
 
-docker volume prune 命令会删除所有未挂载到容器或服务副本的卷，因此请谨慎使用！
+`docker volume prune` 命令会删除所有未挂载到容器或服务副本的卷，因此请谨慎使用！
 
-docker volume rm 命令更精确，允许你指定要删除的卷。
+`docker volume rm` 命令更精确，允许你指定要删除的卷。
 
 这两个命令都不会删除正被容器或服务副本使用的卷。
 
-由于由于你创建的 myvol 卷没有被容器使用，因此你可以使用任何一个命令删除它。如果你使用 prune 命令，请小心，因为它可能删除其他卷。
+由于由于你创建的 `myvol` 卷没有被容器使用，因此你可以使用任何一个命令删除它。如果你使用 `prune` 命令，请小心，因为它可能删除其他卷。
 
 ```
 $ docker volume prune --all
 
 WARNING! This will remove all local volumes not used by at least
+
 Are sure you want to continue? [y/N] y
+
 Deleted Volumes:
+
 myvol
 
 Total reclaimed space: 0B
@@ -5444,7 +5726,7 @@ Total reclaimed space: 0B
 
 让我们看看如何在容器中使用卷卷。
 
-运行以下命令创建一个名为 voltainer 的新独立容器，该容器挂载了一个名为 bizvol 的卷。
+运行以下命令创建一个名为 `voltainer` 的新独立容器，该容器挂载了一个名为 `bizvol` 的卷。
 
 ```
 $ docker run -it --name voltainer \
@@ -5452,20 +5734,21 @@ $ docker run -it --name voltainer \
   alpine
 ```
 
-该命令指定了 --mount 标志，告诉 Docker 将名为 bizvol 的卷挂载到容器的 /vol。尽管你没有名为 bizvol 的卷，命令也成功执行了。这提出了一个重要的点：
+该命令指定了 `--mount` 标志，告诉 Docker 将名为 `bizvol` 的卷挂载到容器的 `/vol`。尽管你没有名为 `bizvol` 的卷，命令也成功执行了。这提出了一个重要的点：
 
 - 如果指定了一个已经存在的卷，Docker 将使用它
 - 如果指定了一个不存在的卷，Docker 将创建它
 
-在我们的案例中，bizvol 不存在，所以 Docker 创建了它并将其挂载到容器中。
+在我们的案例中，`bizvol` 不存在，所以 Docker 创建了它并将其挂载到容器中。
 
 输入 **Ctrl-PQ** 返回本地 shell，然后列出卷以确保 Docker 已创建了它。
 
 ```
 ### <Ctrl-PQ>
-
 $ docker volume ls
+
 DRIVER          VOLUME NAME
+
 local           bizvol
 ```
 
@@ -5475,6 +5758,7 @@ local           bizvol
 
 ```
 $ docker volume rm bizvol
+
 Error response from daemon: remove bizvol: volume is in use - by
 ```
 
@@ -5494,10 +5778,13 @@ $ docker exec -it voltainer sh
 
 ```
 # ls -l /vol
+
 total 4
+
 -rw-r--r-- 1 root root 50 May 23 08:49 file1
 
 # cat /vol/file1
+
 I promise to write a book review on Amazon
 ```
 
@@ -5506,6 +5793,7 @@ I promise to write a book review on Amazon
 ```
 # exit
 $ docker rm voltainer -f
+
 volrainer
 ```
 
@@ -5513,14 +5801,15 @@ volrainer
 
 ```
 $ docker ps -a
+
 CONTAINER ID IMAGE COMMAND CREATED STATUS
 
 $ docker volume ls
+
 DRIVER VOLUME NAME
+
 local bizvol
 ```
-
-
 
 由于卷仍然存在，你可以在 Docker 宿机的本地文件系统中查看其内容。但记住，不建议通过宿主机文件系统直接访问卷。我们这样做只是出于演示教学目的向你展示如何操作。
 
@@ -5530,16 +5819,19 @@ local bizvol
 
 ```
 $ ls -l /var/lib/docker/volumes/bizvol/_data/
+
 total 4
+
 -rw-r--r-- 1 root root 50 Jan 12 14:25 file1
 
 $ cat /var/lib/docker/volumes/bizvol/_data/file1
+
 I promise to write a book review on Amazon
 ```
 
 太棒了，卷和数据仍然存在。
 
-看看你是否能将现有 **bizvol** 卷挂载到一个新的服务或容器中。运行以下命令创建一个名为 **newctr** 的新容器，并将 bizvol 挂载到 `/vol`。
+看看你是否能将现有 **bizvol** 卷挂载到一个新的服务或容器中。运行以下命令创建一个名为 **newctr** 的新容器，并将 `bizvol` 挂载到 `/vol`。
 
 ```
 $ docker run -it \
@@ -5552,18 +5844,21 @@ alpine sh
 
 ```
 # cat /vol/file1
+
 I promise to write a book review on Amazon
 ```
 
+
+
 恭喜。你创建了一个卷，向其中写入了一些数据，删除了原始容器，在第二个容器中挂载了它，并验证了数据仍然存在。
 
-输入 **exit** 退出容器并跳转到 Amazon 写下你承诺要写的书评。
+输入 `exit` 退出容器并跳转到 Amazon 写下你承诺要写的书评。
 
 如果你留了评论，谢谢！如果你没留，我会哭的 :-)
 
 ### 在跨集群节点间共享存储
 
-将 Docker 与*外部存储系统* 集成，可以让你 能够向多个节点呈现共享存储，使得运行在不同节点上的容器可以共享同一个卷。这些外部系统可以是云存储服务，也可以是你本地数据中心中的企业级存储系统。例如，你可以向多个 Docker 宿主机呈现单个存储 LUN 或 NFS 共享（共享卷），以便这些宿主机上的任何容器都可以访问并共享该卷。图 15.4 显示了一个外部存储系统向两个 Docker 节点呈现共享卷。Docker 节点使用对应外部系统的适当驱动程序，使共享卷对一个或两个容器可用。
+将 Docker 与*外部存储系统*集成，可以让你能够向多个节点呈现共享存储，使得运行在不同节点上的容器可以共享同一个卷。这些外部系统可以是云存储服务，也可以是你本地数据中心中的企业级存储系统。例如，你可以向多个 Docker 宿主机呈现单个存储 LUN 或 NFS 共享（共享卷），以便这些宿主机上的任何容器都可以访问并共享该卷。图 15.4 显示了一个外部存储系统向两个 Docker 节点呈现共享卷。Docker 节点使用对应外部系统的适当驱动程序，使共享卷对一个或两个容器可用。
 
 ![](img/aae0230bf8529bd80767c4c780dca8d3_421_0.png)
 
@@ -5599,11 +5894,11 @@ $ docker volume rm bizvol
 
 ### 卷与持久化数据 – 命令列表
 
-- **docker volume create** 创建新卷。默认情况下，它使用 **local** 驱动程序创建，但你可以使用 **-d** 标志指定不同的驱动程序。
-- **docker volume ls** 列出 Docker 宿主机上所有的卷。
-- **docker volume inspect** 显示卷的详尽信息。你可以使用此命令查看卷在 Docker 宿主机文件系统中的位置。
-- **docker volume prune** 删除**所有**未被容器或服务副本使用的卷。**请谨慎使用！**
-- **docker volume rm** 删除未使用的特定卷。
+- `docker volume create` 创建新卷。默认情况下，它使用 `local` 驱动程序创建，但你可以使用 `-d` 标志指定不同的驱动程序。
+- `docker volume ls` 列出 Docker 宿主机上所有的卷。
+- `docker volume inspect` 显示卷的详尽信息。你可以使用此命令查看卷在 Docker 宿主机文件系统中的位置。
+- `docker volume prune` 删除**所有**未被容器或服务副本使用的卷。**请谨慎使用！**
+- `docker volume rm` 删除未使用的特定卷。
 
 ### 章节总结
 
@@ -5662,9 +5957,6 @@ Docker Scout 提供了领先的漏洞扫描功能，可以扫描你的镜像，�
 
 内核命名空间（Kernel namespaces，通常简称为 namespaces）是构建容器的主要技术。
 
-
-
-
 让我们快速比较一下命名空间（namespaces）、容器与虚拟机管理程序（hypervisors）以及虚拟机（VM）。
 
 命名空间将进程树和文件系统等操作系统结构虚拟化，而虚拟机管理程序则将 CPU 和磁盘等物理资源虚拟化。在虚拟机模型中，虚拟机管理程序通过组合虚拟 CPU、虚拟磁盘和虚拟网卡来创建虚拟机，使得每个虚拟机看起来、用起来和感觉就像一台物理机器。在容器模型中，命名空间（容器）通过组合虚拟进程树、虚拟文件系统和虚拟网络接口，使得每个容器看起来、用起来和感觉完全像一个普通的操作系统。
@@ -5673,7 +5965,7 @@ Docker Scout 提供了领先的漏洞扫描功能，可以扫描你的镜像，�
 
 不过不用担心。Docker 等平台实现了额外的安全技术，如 cgroups、capabilities 和 seccomp，以提高容器安全性。
 
-命名空间是一项经过测试的技术，在 Linux 内核中已经存在很长时间。然而，在 Docker 出现之前，它们非常复杂且难以使用，直到 Docker 通过简单的 **docker run** 命令和开发者友好的 API 隐藏了所有复杂性。
+命名空间是一项经过测试的技术，在 Linux 内核中已经存在很长时间。然而，在 Docker 出现之前，它们非常复杂且难以使用，直到 Docker 通过简单的 `docker run` 命令和开发者友好的 API 隐藏了所有复杂性。
 
 在编写本文时，每个 Docker 容器都会获得以下命名各自的独立实例：
 
@@ -5691,15 +5983,10 @@ Docker Scout 提供了领先的漏洞扫描功能，可以扫描你的镜像，�
 让我们简要查看 Docker 如何使用每个命名空间：
 
 - **Process ID 命名空间：** Docker 使用 pid 命名空间为每个容器提供独立的隔离进程树。这意味着每个容器都有自己的 PID 1，无法看到或访问运行在其他容器中的进程。任何容器也无法看到或访问运行在宿主机上的进程。
-
 - **Network 命名空间：** Docker 使用 net 命名空间为每个容器提供隔离的网络栈。该堆栈包括接口、IP 地址、端口范围和路由表。例如，每个容器都拥有自己的 eth0 接口，具有其唯一的 IP 和端口范围。
-
 - **Mount 命名空间：** 每个容器都有自己的 mnt 命名空间，具有其独特的隔离根（ / ）文件系统。这意味着每个容器都可以拥有自己的 /etc、/var、/dev 以及其他重要的文件系统结构。容器内的进程无法访问宿主机的文件系统或其他容器的文件系统。
-
 - **Inter-process Communication 命名空间：** Docker 使用 ipc 命名空间用于容器内部的共享内存访问。它还将容器与宿主机或其他容器的共享内存隔离开。
-
 - **User 命名空间：** Docker 为每个容器提供仅在容器内有效的用户。它还允许将这些用户映射到 Docker 主机上的不同用户。例如，你可以将容器的根用户（root）映射到宿主机上的非 root 用户。
-
 - **UTS 命名空间：** Docker 使用 uts 命名空间为每个容器提供自己的主机名。
 
 请记住，容器是 Docker 组织的看起来像普通操作系统的命名空间集合。这些命名空间提供了隔离，但它们本身并不是足够的安全边界。这就是为什么 Docker 使用我们即将讨论的技术来增强容器安全性。
@@ -5720,12 +6007,12 @@ Linux root 用户极其强大，你不应该使用它来运行应用和容器。
 
 在底层，Linux root 用户是多种能力的组合。其中一些包括：
 
-- CAP_CHOWN: 允许更改文件所有者
-- CAP_NET_SERVICE: 允许将 socket 绑定到低端口
-- CAP_SETUID: 允许提升进程的权限级别
-- CAP_SYS_BOOT: 允许重启系统
+- `CAP_CHOWN`: 允许更改文件所有者
+- `CAP_NET_SERVICE`: 允许将 socket 绑定到低端口
+- `CAP_SETUID`: 允许提升进程的权限级别
+- `CAP_SYS_BOOT`: 允许重启系统
 
-列表还有很多，非常长。Docker 利用 capabilities，使你能够以 root 身份运行容器，但剥离所有你需要的能力。例如，假设你的容器唯一能力是绑定到低端口。在这种情况下，Docker 可以以 root 身份启动容器，删除所有能力，然后重新添加 CAP_NET_SERVICE。
+列表还有很多，非常长。Docker 利用 capabilities，使你能够以 root 身份运行容器，但剥离所有你需要的能力。例如，假设你的容器唯一能力是绑定到低端口。在这种情况下，Docker 可以以 root 身份启动容器，删除所有能力，然后重新添加 `CAP_NET_SERVICE`。
 
 Docker 自带了合理的开箱即用能力，但你应该为你的应用和容器配置自己的能力。然而，配置自己的能力需要巨大的精力。
 
@@ -5776,14 +6063,15 @@ Docker Swarm 允许你对多个 Docker 主机进行集群并声明式管理应�
 
 让我们逐步学习构建一个安全的 swarm 并配置一些安全方面的 Aspect。
 
-如果你正在跟进操作，你需要三个能够通过名称相互 ping 通的 Docker 主机。示例使用了三个名为 mgr1、mgr2 和 wrk1 的主机。
+如果你正在跟进操作，你需要三个能够通过名称相互 ping 通的 Docker 主机。示例使用了三个名为 `mgr1`、`mgr2` 和 `wrk1` 的主机。
 
-### 配置安全的 Swarm
+#### 配置安全的 Swarm
 
-在你想要作为第一个节点的节点上运行以下命令。我们将从 mgr1 运行示例。
+在你想要作为第一个节点的节点上运行以下命令。我们将从 `mgr1` 运行示例。
 
 ```
 $ docker swarm init
+
 Swarm initialized: current node (7xam...662z) is now a manager.
 ```
 
@@ -5795,17 +6083,18 @@ Swarm initialized: current node (7xam...662z) is now a manager.
 
 图 16.4
 
-让我们加入 mgr2 作为额外的管理节点。
+让我们加入 `mgr2` 作为额外的管理节点。
 
 加入新的管理节点有两个步骤：
 
 - 提取安全的加入令牌
-- 在要添加的节点上执行带有加入令牌的 docker swarm join 命令
+- 在要添加的节点上执行带有加入令牌的 `docker swarm join` 命令
 
-从 mgr1 运行以下命令以提取节点加入令牌。
+从 `mgr1` 运行以下命令以提取节点加入令牌。
 
 ```
 $ docker swarm join-token manager
+
 要向此 swarm 添加管理节点，请运行以下命令：
 
 docker swarm join --token \
@@ -5813,17 +6102,17 @@ SwMTKN-1-ldmtwu...r17stb-2axi5...8p7glz \
 172.31.5.251:2377
 ```
 
-输出为你提供了在 mgr2 上运行的完整命令和加入令牌。加入令牌和 IP 地址在你的实验环境中会有所不同。
+输出为你提供了在 `mgr2` 上运行的完整命令和加入令牌。加入令牌和 IP 地址在你的实验环境中会有所不同。
 
 加入命令的格式为：
 
-- docker swarm join --token <manager-join-token>:<ip-of-existing-manager>:<swarm-port>
+- `docker swarm join --token <manager-join-token>:<ip-of-existing-manager>:<swarm-port>`
 
 令牌的格式为：
 
-- SWMTKN-1-<hash-of-cluster-certificate>--<manager-join-token>
+- `SWMTKN-1-<hash-of-cluster-certificate>--<manager-join-token>`
 
-复制命令并在 mgr2 上运行：
+复制命令并在 `mgr2` 上运行：
 
 ```
 $ docker swarm join --token SWMTKN-1-1dmtwu...r17stb-2axi5...8p7g
@@ -5838,7 +6127,7 @@ $ docker swarm join --token SWMTKN-1-1dmtwu...r17stb-2axi5...8p7g
 | 7xamk...ge662z | mgr1 | Ready | Active | Leader |
 | i0ue4...zcjm7f * | mgr2 | Ready | Active | Reachable |
 
-现在你拥有有一个由 mgr1 和 mgr2 作为管理节点的双节点 swarm。它们都可以访问集群存储，并配置了用于双向 TLS 的客户端证书。
+现在你拥有有一个由 `mgr1` 和 `mgr2` 作为管理节点的双节点 swarm。它们都可以访问集群存储，并配置了用于双向 TLS 的客户端证书。
 
 在现实世界中，为了高可用性，你总是会运行三个或五个管理节点。
 
@@ -5852,20 +6141,25 @@ $ docker swarm join --token SWMTKN-1-1dmtwu...r17stb-2axi5...8p7g
 
 ```
 $ docker swarm join-token worker
+```
+
+
+
 要向此 swarm 添加工作节点，请运行以下命令：
 
+```
 docker swarm join --token \
 SWMTKN-1-ldmtwu...r17stb-2axi5...8p7glz \
 172.31.5.251:2377
 ```
 
-复制命令并在 **wrk1** 上运行：
+复制命令并在 `wrk1` 上运行：
 
 ```
 $ docker swarm join --token SWMTKN-1-1dmtwu...r17stb-2axi5...8p7g
+```
 
 此节点已加入 swarm。
-```
 
 从你的任一管理节点运行另一个 `docker node ls`。
 
@@ -5875,7 +6169,7 @@ $ docker swarm join --token SWMTKN-1-1dmtwu...r17stb-2axi5...8p7g
 | airdl...ofzvlu | wrkl | Ready | Active | |
 | i10eue4...zcjm7f | mgr2 | Ready | Active | Reachable |
 
-你的 swarm 有两个管理节点和一个工作节点。管理节点配置了高可用性 (HA)，且集群存储复制到两个节点。工作节点是 swarm 的一部分，但无法访问集群存储。图 16.6 显示了最终配置。
+你的 swarm 有两个管理节点和一个工作节点。管理节点配置了高可用性 (HA)，且集群存储复制到两个节点。图 16.6 显示了最终配置。
 
 ![](img/aae0230bf8529bd80767c4c780dca8d3_442_0.png)
 
@@ -5894,14 +6188,11 @@ $ docker swarm join --token SWMTKN-1-1dmtwu...r17stb-2axi5...8p7g
 
 每个加入令牌都有四个由连线分隔的字段：
 
-PREFIX - VERSION - SWARM ID - TOKEN
+`PREFIX` - `VERSION` - `SWARM ID` - `TOKEN`
 
-前缀始终是 SWMTKN，允许你对它进行模式匹配以防止人们意外发布。VERSION 字段指示 swarm 的版本。Swarm ID 字段是集群证书的哈希值。TOKEN 字段是工作节点或管理节点的令牌。
+前缀始终是 `SWMTKN`，允许你对它进行模式匹配以防止人们意外发布。`VERSION` 字段指示 swarm 的版本。`Swarm ID` 字段是集群证书的哈希值。`TOKEN` 字段是工作节点或管理节点的令牌。
 
-如下表所示，对于任何给 swarm，管理节点和工作节点的令牌除了最后的 TOKEN 字段外都是相同的。
-
-
-
+如下表所示，对于任何给 swarm，管理节点和工作节点的令牌除了最后的 `TOKEN` 字段外都是相同的。
 
 你可以通过向 `docker swarm init` 命令传递 `--external-ca` 标志来配置新集群使用外部 CA，并可以使用 `docker swarm ca` 命令管理其他 CA 相关的设置。
 
@@ -5913,20 +6204,27 @@ Usage: docker swarm ca [OPTIONS]
 显示并轮换根 CA
 
 Options:
+
   --ca-cert pem-file      新集群 PEM 格式根证书的路径
+
   --ca-key pem-file       新集群 PEM 格式私钥的路径
+
   --cert-expiry duration 节点证书的有效期（默认为 2160h0m0）
+
   -d, --detach           立即退出而不是等待收敛
+
   --external-ca external-ca 一个或多个 ca 的规范
+
   -q, --quiet            抑制进度输出
+
   --rotate               轮换 swarm CA - 如果未提供 ca，则将生成新的 ca
 ```
 
 ### 集群存储 (The cluster store)
 
-集群存储是 Docker 存放 swarm 集群配置和状态的地方。它对于其他 Docker 技术（如叠加网络 overlay 和 secrets）也至关重要。这就是为什么叠加网络许多许多高级安全功能仅在 swarm 模式下运行的原因。
+集群存储是 Docker 存放 swarm 集群配置和状态的地方。它对于其他 Docker 技术（如叠加网络 `overlay` 和 `secrets`）也至关重要。这就是为什么叠加网络许多许多高级安全功能仅在 swarm 模式下运行的原因。
 
-集群存储基于流行的 etcd 分布式数据库，并会自动加密和复制到所有管理节点（managers）。
+集群存储基于流行的 `etcd` 分布式数据库，并会自动加密和复制到所有管理节点（`managers`）。
 
 Docker 处理日常维护，但你应该为生产集群实现强力的备份和恢复程序。
 
@@ -5936,11 +6234,11 @@ Docker 处理日常维护，但你应该为生产集群实现强力的备份和�
 
 每个容器运行着多个软件软件包，这些软件包可能存在漏洞，恶意者可以利用这些漏洞。
 
-镜像扫描会分析你的镜像并生成一份所有使用的软件软件包的详细列表。我们将此列表称为软件材料清单 (SBOM)，镜像扫描系统会将 SBOM 与已知漏洞数据库进行对比，并提供软件漏洞的报告。大多数漏洞扫描器会对漏洞进行排序并提供修复建议。
+镜像扫描会分析你的镜像并生成一份所有使用的软件软件包的详细列表。我们将此列表称为软件材料清单 (`SBOM`)，镜像扫描系统会将 `SBOM` 与已知漏洞数据库进行对比，并提供软件漏洞的报告。大多数漏洞扫描器会对漏洞进行排序并提供修复建议。
 
 漏洞扫描现在是大多数软件供应链中不可或缺的一部分。
 
-**Docker Scout** 是 Docker 的原生扫描平台，与 Docker Hub、Docker Desktop、Docker CLI 工作，甚至有自己的 Docker Scout Dashboard。然而，它是一项基于订阅的服务。
+`Docker Scout` 是 Docker 的原生扫描平台，与 Docker Hub、Docker Desktop、Docker CLI 工作，甚至有自己的 Docker Scout Dashboard。然而，它是一项基于订阅的服务。
 
 其他扫描平台可用，但大部分也需要某种形式的订阅。
 
@@ -5950,18 +6248,25 @@ Docker 处理日常维护，但你应该为生产集群实现强力的备份和�
 $ docker scout quickview nigelpoulton/tu-demo:latest
 
 ✓ 已从证明获取来源
+
 ✓ 已拉取
+
 ✓ 镜像已存储用于索引
+
 ✓ 已索引 66 个软件包
 
 | Target | nigelpoulton/tu-demo:latest | 0C |
+
 | :--- | :--- | :--- |
+
 | digest | b4210d0aa52f | |
+
 | Base image | python:3-alpine | 0C |
+
 | Updated base image | python:3.11-alpine | 0C |
 ```
 
-输出显示为零关键漏洞 (0C)、四个高危 (4H)、两个中 (2M) 和零低级 (0L)。
+输出显示为零关键漏洞 (`0C`)、四个高危 (`4H`)、两个中 (`2M`) 和零低级 (`0L`)。
 
 你还可以运行 `docker scout cves` 命令来获取更详细的信息，包括修复建议。
 
@@ -5969,46 +6274,65 @@ $ docker scout quickview nigelpoulton/tu-demo:latest
 $ docker scout cves nigelpoulton/tu-demo:latest
 
 ✓ 镜像 SBOM 已缓存，66 个软件包已索引
+
 ✓ 检测到 6 个漏洞软件包，总共 8 个漏洞
+
 ### 概述
+
 已分析镜像
 
 | Target | nigelpoulton/tu-demo:latest
+
 | :--- | :--- |
+
 | digest | b4210d0aa52f |
+
 | platform | linux/arm64 |
+
 | vulnerabilities | 0C 4H 2M 0L |
+
 | size | 26 MB |
+
 | packages | 66
+
 ### 软件包与漏洞
+
 0C 1H 1M 0L expat 2.5.0-r2
+
 pkg:apk/alpine/expat@2.5.0-r27os_name=alpine&os_version=3.14
 
 * 高危 CVE-2023-52425
+
 https://scout.docker.com/v/CVE-2023-52425
+
 影响范围：<2.6.0-r0
+
 修复版本： 2.6.0-r0
 
 * 中危 CVE-2023-52426
+
 https://scout.docker.com/v/CVE-2023-52426
+
 影响范围：<2.6.0-r0
+
 修复版本： 2.6.0-r0
+
 <Snip>
 ```
 
 我截取了输出，所以它只显示了部分漏洞。然而，即使从书中的截取输出中，你可以看到：
 
 - Scout 扫描了 66 个软件包并检测到几个漏洞
-- 我们正在使用 2.5.0-r2  expat 软件包，它包含一个高危 (1H) 和一个中 (1M) 漏洞
-- 高危漏洞列为 CVE-2023-52425，中危为 CVE-2023-52426
+- 我们正在使用 2.5.0-r2  `expat` 软件包，它包含一个高危 (`1H`) 和一个中 (`1M`) 漏洞
+- 高危漏洞列为 `CVE-2023-52425`，中危为 `CVE-2023-52426`
 - 报告包含了指向 Scout 报告的链接，其中包含每个漏洞的更多信息
-- Scout 建议更新到 expat 版本 2.6.0-r0，该版本包含了这两个漏洞的修复
+- Scout 建议更新到 `expat` 版本 `2.6.0-r0`，该版本包含了这两个漏洞的修复
 
 图 16.8 显示了在 Docker Desktop 中的外观，你也可以在 Docker Hub 中获得类似的集成和视图。
 
 ![](img/aae0230bf8529bd80767c4c780dca8d3_453_0.png)
 
-如果你订阅了 Docker Scout，可以使用 scout.docker.com 门户配置策略以及与 Docker Hub 和其他注册表的集成。
+如果你订阅了 Docker Scout，可以使用 `scout.docker.com` 门户配置策略以及与 Docker Hub 和其他注册表的集成。
 
 尽管漏洞扫描很有用，但它只扫描镜像，不会检测网络、节点或编排器的安全问题。此外，并不是所有扫描器都是同等的。例如，最好的扫描器执行深层二进制级扫描，而其他可能只查看包名而不仔细检查内容。
 
@@ -6016,9 +6340,9 @@ https://scout.docker.com/v/CVE-2023-52426
 
 ### 使用 Docker Content Trust 签名并验证镜像 (Signing and verifying images with Docker Content Trust)
 
-Docker Content Trust (DCT) 让你能够轻松验证镜像的完整性和发布者，当你通过互联网等不可信的网络拉取镜像时，这一点尤为重要。
+Docker Content Trust (`DCT`) 让你能够轻松验证镜像的完整性和发布者，当你通过互联网等不可信的网络拉取镜像时，这一点尤为重要。
 
-从高层次来说，DCT 允许你在将镜像推送到 Docker Hub 等仓库时对其签名。它还允许你验证拉取并作为容器运行的镜像。
+从高层次来说，`DCT` 允许你在将镜像推送到 Docker Hub 等仓库时对其签名。它还允许你验证拉取并作为容器运行的镜像。
 
 图 16.9 显示了高层流程。
 
@@ -6026,47 +6350,68 @@ Docker Content Trust (DCT) 让你能够轻松验证镜像的完整性和发布�
 
 图 16.9 - Docker Content Trust 镜像签名与验证
 
-你还可以使用 DCT 提供*上下文*信息，例如开发者是否已对在特定环境（如 **prod** 或 **dev**）中使用的镜像进行了签名，或者某个镜像是否已被新版本取代，因此已过时。
+你还可以使用 `DCT` 提供*上下文*信息，例如开发者是否已对在特定环境（如 `prod` 或 `dev`）中使用的镜像进行了签名，或者某个镜像是否已被新版本取代，因此已过时。
 
 以下步骤将引导你完成配置 Docker Content Trust、签名并推送镜像，然后拉取已签名的镜像。
 
-如果你计划跟着操作，你需要一个加密密钥对。如果你还没有，可以运行以下 **docker trust** 命令来生成一个。该命令会生成一个名为 **nickel** 的新密钥对，并将其加载到本地信任存储库中备用。它会提示你输入密码语；别忘记它 :-)
+如果你计划跟着操作，你需要一个加密密钥对。如果你还没有，可以运行以下 `docker trust` 命令来生成一个。该命令会生成一个名为 `nickel` 的新密钥对，并将其加载到本地信任存储库中备用。它会提示你输入密码语；别忘记它 :-)
 
 ```
 $ docker trust key generate niger
+
 Generating key for niger...
+
 Enter passphrase for new niger key with ID 1f78609
 ```
-如果你已经有一对密钥了，可以使用 **docker trust key load** 导入它。下一步是将你的密钥对与你将推送镜像的仓库关联。此示例会将 **niger.pub** 密钥与 Docker Hub 上的 **ddd-** 仓库关联。你的文件和仓库将会不同，且在运行命令前仓库不需要存在。
+如果你已经有一对密钥了，可以使用 `docker trust key load` 导入它。下一步是将你的密钥对与你将推送镜像的仓库关联。此示例会将 `niger.pub` 密钥与 Docker Hub 上的 `ddd-` 仓库关联。你的文件和仓库将会不同，且在运行命令前仓库不需要存在。
 
 ```
 $ docker trust signer add --key niger.pub nigpoun/ddd-
+
 Adding signer "niger" to nigpoun/dct...
+
 Initializing signed repository for nigpoun/dct...
+
 Enter passphrase for root key with ID aee3314:
+
 Enter passphrase for new repository key with ID 1a18dd1:
+
 Repeat passphrase for new repository key with ID 1a18dd1:
+
 Successfully initialized "nigpoun/dct"
+
 Successfully added signer: niger to nigpoun/dct
 ```
 
 现在你加载了密钥对并将其与仓库关联，最后一步是对镜像签名并推送。
 
-以下命令会对本地镜像 **nigelpoulton/ddd-trust:signed** 进行签名并推送到 Docker Hub。你的镜像将具有不同的名称，并且将其推送到不同的仓库。
+以下命令会对本地镜像 `nigelpoulton/ddd-trust:signed` 进行签名并推送到 Docker Hub。你的镜像将具有不同的名称，并且将其推送到不同的仓库。
 
 ```
 $ docker trust sign nigelpoulton/ddd-trust:signed
+
 Signing and pushing trust data for local image nigelpoulton/ddd-t
+
 The push refers to repository [docker.io/nigelpoulton/ddd-trust]
+
 6495b414566f:7ef8b: Mounted from nigelpoulton/ddd-book
+
 79867f7ef8b: Mounted from nigelpoulton/ddd-book
+
 bca2a409639: Mounted from nigelpoulton/ddd-book
+
 28ad2149d870: Mounted from nigelpoulton/ddd-book
+
 4f4fb700ef54: Mounted from nigelpoulton/ddd-book
+
 5elfc7f5df34: Mounted from nigelpoulton/ddd-book
+
 signed: sha256:b65f91aa4e670bbafad0fbb91281ea95f9cdc7528a
+
 Signing and pushing trust metadata
+
 Enter passphrase for nigel key with ID 92330ea:
+
 Successfully signed docker.io/nigelpoulton/ddd-trust:signed
 ```
 
@@ -6077,10 +6422,6 @@ $ docker trust inspect nigelpoulton/ddd-trust:signed --pretty
 
 Signatures for nigelpoulton/ddd-trust:signed
 ```
-
-
-
-
 
 已签名标签摘要 签名者
 signed 30e6d35703c578ee...4fcbbbb0f281 nigel
@@ -6093,7 +6434,7 @@ nigel 4d6f1bf55702
 仓库密钥: 5e72e54afafb8444f...6b27444b32010ad22
 根密钥: 40418fc47544ca630...69a2cb89028c22092
 
-你可以导出一个值为 **1** 的 **DOCKER_CONTENT_TRUST** 变量，以强制 Docker 宿主机对所有镜像进行签名和验证。
+你可以导出一个值为 `1` 的 `DOCKER_CONTENT_TRUST` 变量，以强制 Docker 宿主机对所有镜像进行签名和验证。
 
 ```
 $ export DOCKER_CONTENT_TRUST=1
@@ -6105,6 +6446,7 @@ $ export DOCKER_CONTENT_TRUST=1
 
 ```
 $ docker pull nigerpoulton/ddd-book:web0.2
+
 Error: remote trust data does not exist for docker.io/nigerpoulton does not have trust data for docker.io/nigerpoulton/ddd-book
 ```
 
@@ -6114,6 +6456,7 @@ Error: remote trust data does not exist for docker.io/nigerpoulton does not have
 
 ```
 $ docker rmi nigelpoulton/ddd-trust:signed
+
 Untagged: nigelpoulton/ddd-trust:signed@sha256...
 <Snip>
 ```
@@ -6122,12 +6465,18 @@ Untagged: nigelpoulton/ddd-trust:signed@sha256...
 
 ```
 $ docker pull nigelpoulton/ddd-trust:signed
+
 Pull (1 of 1): nigelpoulton/ddd-trust:signed@sha256:30e6...
+
 docker.io/nigelpoulton/ddd-trust@sha256:30e6... Pulling from nige08409417260: Pull complete
+
 digest: sha256:30e6d37053c578e70323b9dc87ada2ba958c1928615ac8a6
+
 Status: Downloaded newer image for nigelpoulton/ddd-trust@sha256:
+
 Tagging nigelpoulton/ddd-trust@sha256:30e6... as nigelpoulton/docker.io/nigelpoulton/ddd-trust:signed
-```
+
+
 
 拉取成功，因为该镜像具有有效的信任数据。
 
@@ -6135,11 +6484,11 @@ Tagging nigelpoulton/ddd-trust@sha256:30e6... as nigelpoulton/docker.io/nigelpou
 
 ## Docker Secrets（秘密）
 
-大多数应用程序都会利用密码、证书和 SSH 密钥等敏感数据。幸运的是，Docker 允许将它们封装在*secrets*（秘密）内部以保持安全。
+大多数应用程序都会利用密码、证书和 SSH 密钥等敏感数据。幸运的是，Docker 允许将它们封装在 `secrets` 内部以保持安全。
 
-**注意：** *Secrets 只在 swarm 模式下有效，因为它们利用了集群存储。*
+**注意：** `Secrets` 只在 swarm 模式下有效，因为它们利用了集群存储。
 
-在后台，Docker 会在 secrets 集群存储中*静态存储*（at rest）以及在网络中*传输中*（in flight）时对其进行加密。它还使用*内存文件系统*将 secrets 挂载到容器中，并采用最小权限模型，即只有被显式授予访问权限的服务可以使用 secrets。甚至还有一个 `docker secret` 命令。
+在后台，Docker 会在 `secrets` 集群存储中 `静态存储`（at rest）以及在网络中 `传输中`（in flight）时对其进行加密。它还使用 `内存文件系统` 将 `secrets` 挂载到容器中，并采用最小权限模型，即只有被显式授予访问权限的服务可以使用 `secrets`。甚至还有一个 `docker secret` 命令。
 
 图 16.10 显示了创建 secret 并将其部署到服务副本的高级工作流：
 
@@ -6161,7 +6510,7 @@ Tagging nigelpoulton/ddd-trust@sha256:30e6... as nigelpoulton/docker.io/nigelpou
 
 Docker 以未加密的形式挂载 secrets，以便应用程序可以使用它们，而无需解密所需的密钥。
 
-你可以使用 **docker secret** 命令创建和管理 secrets，并通过向 **docker service create** 命令传递 **--secret** 标志将它们附加到服务。
+你可以使用 `docker secret` 命令创建和管理 secrets，并通过向 `docker service create` 命令传递 `--secret` 标志将它们附加到服务。
 
 ### 清理
 
@@ -6177,11 +6526,13 @@ $ unset DOCKER_CONTENT_TRUST
 
 ```
 $ docker trust signer remove nigelpoulton/ddd-trust
+
 Removing signer "nigel" from nigerpoulton/ddd-trust...
+
 all signed tags are currently revoked, use docker trust sign to f
 ```
 
-此外，你可能还想删除在 Docker Hub 上创建的仓库，并删除系统上的本地密钥文件（通常是 .pub 文件）。
+此外，你可能还想删除在 Docker Hub 上创建的仓库，并删除系统上的本地密钥文件（通常是 `.pub` 文件）。
 
 通过运行以下命令删除 swarm：
 
@@ -6229,7 +6580,7 @@ Docker 内容信任可以配置得非常简单。它允许你签名并验证镜�
 
 | 术语 | 定义 (根据 Nigel) |
 | --- | --- |
-| API | 应用程序接口。在 Docker 的情况下，所有资源都定义在 Docker API 中，它是 RESTful 的，并通过 *Docker Daemon* 暴露。 |
+| API | 应用程序接口。在 Docker 的情况下，所有资源都定义在 Docker API 中，它是 RESTful 的，并通过 `Docker Daemon` 暴露。 |
 
 | 术语 | 定义 (根据 Nigel) |
 | --- | --- |
@@ -6237,16 +6588,12 @@ Docker 内容信任可以配置得非常简单。它允许你签名并验证镜�
 
 | 术语 | 定义 (根据 Nigel) |
 | --- | --- |
-| Build | 构建新容器镜像的过程。Docker 通过执行 Dockerfile 中定义的指令集来*构建*镜像。 |
+| Build | 构建新容器镜像的过程。Docker 通过执行 Dockerfile 中定义的指令集来 `构建` 镜像。 |
 
 | 术语 | 定义 (根据 Nigel) |
 | --- | --- |
 | Build Cloud | 一项订阅服务，在 Docker 云端基础设施中执行快速高效的镜像构建。它允许团队之间共享公共构建缓存以实现极速构建。 |
 | BuildKit | Docker 的构建引擎，实现了高级构建功能，如高级缓存、多阶段构建和多架构构建。 |
-
-
-
-
 
 | 术语 | 定义（根据 Nigel 的观点） |
 |---|---|
@@ -6256,11 +6603,11 @@ Docker 内容信任可以配置得非常简单。它允许你签名并验证镜�
 | Cluster store (集群存储库) | Docker Swarm 的分布式数据库，用于保存集群和应用的状态。它基于 etcd 分布式数据库，会自动加密并自动分布在所有 swarm 管理节点上，以实现高可用性。 |
 | Compose | 一种用于定义、部署和管理多容器微服务应用的开放规范。Docker 实现了 Compose 规范并提供了 `docker compose` 命令，使得处理 Compose 应用变得简单。 |
 
-容器是内核命名空间的集合，使其看起来、闻起来和感觉起来都像一个普通的操作系统。每个容器运行单个应用程序，并且容器比虚拟机更小、更快、更具移植性。我们有时称之为 Docker 容器或 OCI 容器。 |
+容器是内核命名空间的集合，使其看起来、闻起来和感觉起来都像一个普通的操作系统。每个容器运行单个应用程序，并且容器比虚拟机更小、更快、更具移植性。我们有时称之为 Docker 容器或 OCI 容器。
 
 | Container Network (容器网络) | 可扩展的接口，允许不同的网络拓扑和架构。 |
 | Model (模型) | 第三方为覆盖网络和 BGP 网络提供 CNM 插件，以及它们的各种实现。 |
-| 运行在每个 Docker 节点上的软件，负责拉取容器镜像、启动容器、停止容器以及其他底层容器操作。Docker 使用两个协同工作的运行时：**containerd** 是 Docker 的高级运行时，负责管理启动和停止容器等生命周期事件；而 **runc** 是 Docker 的低级运行时，与命名空间和 cgroups 等内核构造体交互。 |
+| 运行在每个 Docker 节点上的软件，负责拉取容器镜像、启动容器、停止容器以及其他底层容器操作。Docker 使用两个协同工作的运行时：`containerd` 是 Docker 的高级运行时，负责管理启动和停止容器等生命周期事件；而 `runc` 是 Docker 的低级运行时，与命名空间和 cgroups 等内核构造体交互。 |
 
 | containerd | Docker 和大多数 Kubernetes 集群使用的行业标准容器运行时。由 Docker, Inc. 捐赠给 CNCF。发音为“container dee”。 |
 | Containerize (容器化) | 将应用程序及其所有依赖打包成容器镜像的过程。 |
@@ -6279,19 +6626,15 @@ Docker 内容信任可以配置得非常简单。它允许你签名并验证镜�
 | Ingress network (接入网络) | 所有 Docker Swarm 集群上的隐藏网络，用于将服务发布给外部客户端。 |
 | Kernel (内核) | Docker 使用的 Linux 内核特性，用于将容器与主机或其他容器上运行的进程隔离。 |
 | Layer (层) | 镜像层包含了对基础镜像或下方层的修改。Docker 通过堆叠层来构建镜像，每层都包含其下方层的所有更改。一个简单的例子是具有基础操作系统构造的底层，随后是带有应用程序的层。这两个层结合创建了包含操作系统和应用程序的镜像。 |
-| libcontainer | 一个使用命名空间、cgroups 和能力来构建容器的 Go 库。Docker 通过 runc 低级运行时使用 libcontainer，runc 是 libcontainer 的 CLI 封装器。 |
+| libcontainer | 一个使用命名空间、cgroups 和能力来构建容器的 Go 库。Docker 通过 `runc` 低级运行时使用 libcontainer，runc 是 libcontainer 的 CLI 封装器。 |
 | libnetwork | Docker 用于创建和管理容器网络的 Go 库。 |
 | Microservices (微服务) | 现代应用程序的设计模式。单个应用程序功能被开发为独立的小型应用程序（微服务/容器），并通过 API 进行通信。它们共同工作形成一个实用的应用程序。 |
-| Multi-architecture builds (多架构构建，有时也称为多平台构建) | 允许通过单个 **docker build** 命令为多个架构和平台构建镜像。例如，你可以在基于 AMD 的 Windows 系统上运行单个 **docker build** 命令来同时构建 AMD 镜像**和** ARM 镜像。 |
-| Multi-state build (多阶段构建) | 允许你创建非常小的镜像（精简镜像）。你分阶段构建镜像，并且为每个阶段传递必要的产物。每个构建阶段由 Dockerfile 中自有的 **FROM** 指令表示，随后的构建阶段使用 **COPY --from** 指令使用之前阶段的产物并丢弃其他所有内容。 |
+| Multi-architecture builds (多架构构建，有时也称为多平台构建) | 允许通过单个 `docker build` 命令为多个架构和平台构建镜像。例如，你可以在基于 AMD 的 Windows 系统上运行单个 `docker build` 命令来同时构建 AMD 镜像 **和** ARM 镜像。 |
+| Multi-state build (多阶段构建) | 允许你创建非常小的镜像（精简镜像）。你分阶段构建镜像，并且为每个阶段传递必要的产物。每个构建阶段由 Dockerfile 中自有的 `FROM` 指令表示，随后的构建阶段使用 `COPY --from` 指令使用之前阶段的产物并丢弃其他所有内容。 |
 | Observed state (观测状态) | 也称为当前状态或实际状态。集群和运行应用程序的最新视图。Docker Swarm 一直努力使观测状态匹配期望状态。 |
 | Open Container Initiative (OCI，开放容器倡议) | 负责创建和维护底层容器技术（镜像、运行时和仓库）标准的轻量级治理机构。Docker 创建符合 OCI 标准的镜像，实现符合 OCI 标准的运行时，Docker Hub 是符合 OCI 标准的仓库。 |
 | Orchestrator (编排器) | 部署和管理应用的软件。Docker Swarm 和 Kubernetes 是管理微服务应用的示例，它们负责保持应用健康、进行扩展和缩容等…… |
 | Overlay network (覆盖网络) | 跨越多个 swarm 节点的大型扁二层网络。同一覆盖网络上的所有容器即使位于不同网络的不同 Docker 主机上也可以相互通信。内置覆盖驱动程序使用先进的 VXLAN 技术创建覆盖网络。它们仅由 Docker Swarm 支持。 |
-
-
-
-
 
 | 术语 | 定义（根据 Nigel 的观点） |
 | --- | --- |
@@ -6332,22 +6675,39 @@ Nigel Poulton
 
 ```
 $ kubectl get pod jump-pod -o yaml
+
 apiVersion: v1
+
 kind: Pod
+
 metadata:
+
   name: jump-pod
+
   namespace: default
+
 spec:
+
   containers:
+
     - image: nigel-poulton/curl:1.0
+
       imagePullPolicy: IfNotPresent
+
       name: jump-ctr
+
       stdin: true
+
       tty: true
+
   volumeMounts:
+
     - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+
       name: default-token-2g29h
+
       readOnly: true
+
 dnsPolicy: ClusterFirst
 ```
 
@@ -6371,4 +6731,3 @@ Nigel Poulton™
 
 写书极其困难，我花了许多深夜和清晨，只为了让这本书尽可能完美。如果你能花几分钟时间留个评论，将不胜感激。
 感谢！
-

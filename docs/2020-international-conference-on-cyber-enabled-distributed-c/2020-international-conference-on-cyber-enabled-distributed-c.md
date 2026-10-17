@@ -1,14 +1,12 @@
+
 # 2020年网络赋能分布式计算与知识发现国际会议（中国重庆 2020.10.29-2020.10.30）
 
-
-
-
-
-
-
 ^1 通信安全实验室，成都市 610041，中国
+
 2 中国电子科技集团有限公司，第30研究所，成都市 610041，中国
+
 3 中国电子科技安全有限公司
+
 239282759@qq.com
 
 **摘要—** 搜索加密（SE）通过提供在线搜索功能来保护加密数据和用户查询隐私。但实际应用中面临着巨大的带宽和存储开销挑战，需要进行缓解。在本文中，我们提出了一种基于区块链的SE用户管理方案，能够去中心化带宽管理，并增强隐私安全性以防止由于信任第三方（TTP）带来的身份丢失或篡改。我们利用区块链提供安全效率，并通过理论分析验证了其可行性和安全性。进一步的实验证明了SE的有效性。
@@ -41,9 +39,9 @@ SE中的用户管理通常由TTP实现，但TTP与用户之间存在许多问题
 
 对于任意具有相同素数阶的两个群 $G_1, G_2$，存在一个满足 $G_1 \times G_2 \rightarrow G_2$ 的双线性映射 $e$，它具有如下属性：
 
-- 1) 双线性：对于群 $G_1$ 中的任意 $a_1, a_2$ 和群 $G_2$ 中的任意 $b_1, b_2，$e(a_1a_2, b_1b_2) = e(a_1, b_1)^{a_2b_2}$；
+- 1) 双线性：对于群 $G_1$ 中的任意 $a_1, a_2$ 和群 $G_2$ 中的任意 $b_1, b_2$，$e(a_1a_2, b_1b_2) = e(a_1, b_1)^{a_2b_2}$；
 - 2) 非退化：如果 $g_1, g_2$ 是 $G_1$ 的生成器，则 $e(g_1, g_2)$ 是 $G_2$ 的生成器；
-- 3) 计算性：对于群 $G_1$ 中的任意元素 $g^a, g^b$，其中a, b \in Z_p，$e(g^a, g^b)$ 可以在多项式时间内计算。
+- 3) 计算性：对于群 $G_1$ 中的任意元素 $g^a, g^b$，其中 $a, b \in Z_p$，$e(g^a, g^b)$ 可以在多项式时间内计算。
 
 ## B. 区块链与智能合约
 
@@ -66,14 +64,10 @@ SE中的用户管理通常由TTP实现，但TTP与用户之间存在许多问题
 
 # III. 系统模型与方案流程
 
-方案涉及区块链管理的两个参与者
+方案涉及区块链管理的两个参与者：
 
 - 用户：U代表一个用户组 $U_1, U_2, ...$，这些用户负责加密和查询。组中的每个用户拥有许多权限，包括加密、解密和搜索。此外，每个用户都可以搜索并解密其他用户的加密文档。
 - CSP（云服务提供商）：CSP提供用户服务器存储、服务加密和密钥服务。通常，CSP是诚实的，不会违反服务合同，但可能会好奇并分析用户行为以获取隐私。区块链负责为每个组员计算、计算和分配公钥，以实现组管理，包括密钥分配和权限撤销。规则写在智能合约中以便预先共识，并由触发的事件自动执行。
-
-
-
-
 
 ![](img/2a600712fcb0af2f22fbfb36492ba977_2_0.png)
 
@@ -90,8 +84,8 @@ SE中的用户管理通常由TTP实现，但TTP与用户之间存在许多问题
 
 ## A. 初始化
 
-- 系统启动：SystemSetup($r) \rightarrow (param, MSK)$。初始参数由 SystemSetup 生成并插入智能合约中。输入参数 $r$ 是生成群 $(G_1, G_2, p, g, h)$ 的素数位长度。$g_i$ 在 $G_1$ 中分别生成；$G_2$ 包含阶为 $p$ 的素数群 $G_1, G_2$、一个二进制映射 $g: G_i \rightarrow H$ 和一个抗冲突函数 $f \rightarrow H$。智能合约随机选择生成的 $x$ 并将其存储为主密钥(MSK)，而其他部分可以公开。
-- 密钥生成与分：KeyGen(MSK) $\rightarrow (K_u, K_s)$，在我们方案中，为用户和云端分别生成两组密钥，这是动态成员管理的基础。密钥生成函数也写在智能合约中。成员管理智能合约为每个用户从 $Z_p^*$ 生成 $x_i$，该 $x_i$ 满足 $x_i^r = MSK(id)$。之后，它通过此类通道将 $(id_u, x_u^{-1})$ 发给用户 $u$，将 $(id_u, x_u)$ 发给 CSP（云服务提供商）。CSP 将用户的另一半密钥保留在表中，用于加密、解密和查询。（参考图 3。）
+- 系统启动：`SystemSetup(r) → (param, MSK)`。初始参数由 `SystemSetup` 生成并插入智能合约中。输入参数 `r` 是生成群 $(G_1, G_2, p, g, h)$ 的素数位长度。$g_i$ 在 $G_1$ 中分别生成；$G_2$ 包含阶为 $p$ 的素数群 $G_1, G_2$、一个二进制映射 $g: G_i \rightarrow H$ 和一个抗冲突函数 $f \rightarrow H$。智能合约随机选择生成的 $x$ 并将其存储为主密钥(MSK)，而其他部分可以公开。
+- 密钥生成与分发：`KeyGen(MSK) → (K_u, K_s)`，在我们方案中，为用户和云端分别生成两组密钥，这是动态成员管理的基础。密钥生成函数也写在智能合约中。成员管理智能合约为每个用户从 $Z_p^*$ 生成 $x_i$，该 $x_i$ 满足 $x_i^r = MSK(id)$。之后，它通过此类通道将 $(id_u, x_u^{-1})$ 发给用户 $u$，将 $(id_u, x_u)$ 发给 CSP（云服务提供商）。CSP 将用户的另一半密钥保留在表中，用于加密、解密和查询。（参考图 3。）
 
 ![](img/2a600712fcb0af2f22fbfb36492ba977_2_1.png)
 
@@ -99,7 +93,7 @@ SE中的用户管理通常由TTP实现，但TTP与用户之间存在许多问题
 
 ## B. 索引构建
 
-- 用户端：$Ek_I = E_K(D)$ 用户密钥 $K_u = x_u$。对于第 $i$ 个文档 $D$ 的第 $j$ 个关键词 $w_j$，最终云服务器生成 $E_{K_c}(I(D)) = E_{K_c}(E_k(D), f^{MSK})$，即文档 $d$ 的密索引。
+- 用户端：`Ek_I = E_K(D)` 用户密钥 $K_u = x_u$。对于第 $i$ 个文档 $D$ 的第 $j$ 个关键词 $w_j$，最终云服务器生成 $E_{K_c}(I(D)) = E_{K_c}(E_k(D), f^{MSK})$，即文档 $d$ 的密索引。
 
 # V. 原理验证与可行性分析
 
@@ -109,23 +103,23 @@ SE中的用户管理通常由TTP实现，但TTP与用户之间存在许多问题
 
 方程验证：考虑方程(4)。
 
-1. 用户搜索：用户使用关键词陷阱 $Trap \equiv (id_u, g^{\gamma_u}, g^{\sigma_u}, \sigma_{i_1}, ..., \sigma_{i_m})$，其由 $Z_u$ 生成，$y = g^{\gamma_u} = g^{\delta}$，且 $g^{\sigma_u} = y^{g_{i_2}}(I_{i_1}, ..., I_{i_m})$ 是超出关键词范围的索引，具有：
+1. 用户搜索：用户使用关键词陷阱 `Trap ≡ (id_u, g^γ_u, g^σ_u, σ_i_1, ..., σ_i_m)`，其由 $Z_u$ 生成，$y = g^{γ_u} = g^δ$，且 $g^{σ_u} = y^{g_{i_2}}(I_{i_1}, ..., I_{i_m})$ 是超出关键词范围的索引，具有：
 
 ![](img/2a600712fcb0af2f22fbfb36492ba977_3_0.png)
 
-2. 客户端：当客户端发送 $Trap = (id_u, g^{\gamma_u}, g^{\sigma_u}, \sigma_{i_1}, ..., \sigma_{i_m})$ 时，如果使用 $id_u$ 首次搜索 $x_2$，则使用 $x_2$ 加密 $\gamma$ 和 $\delta$，由于 $g^{\gamma_u} = g^{\delta}$，最终陷阱将是 $Trap$，这意味着只有服务器能够搜索，有效防止了中间人攻击。
+2. 客户端：当客户端发送 `Trap = (id_u, g^γ_u, g^σ_u, σ_i_1, ..., σ_i_m)` 时，如果使用 $id_u$ 首次搜索 $x_2$，则使用 $x_2$ 加密 $γ$ 和 $δ$，由于 $g^{γ_u} = g^δ$，最终陷阱将是 `Trap`，这意味着只有服务器能够搜索，有效防止了中间人攻击。
 
 结合之前的存储
 
 同时考虑方程(4)的左侧：
 
-$E_{K_c,K_k}(I(D)) = E_{K_c}(E_k(D), w_1), ..., I_{d_1}, ..., I_{d_m} = g^{\sigma_{i_1}}, ..., g^{\sigma_{i_m}}, (C_m)$，检查：这些
+$E_{K_c,K_k}(I(D)) = E_{K_c}(E_k(D), w_1), ..., I_{d_1}, ..., I_{d_m} = g^{σ_{i_1}}, ..., g^{σ_{i_m}}, (C_m)$，检查：这些
 
-$e(\delta^2, g^{\sigma}) = e(e(\delta,x_{x_2})^{\sum \sigma_i}, C) = e(C,x_{x_2}^2)^{\sum \sigma_i}}$
+$e(δ^2, g^σ) = e(e(δ,x_{x_2})^{∑ σ_i}, C) = e(C,x_{x_2}^2)^{∑ σ_i}}$
 
 ![](img/2a600712fcb0af2f22fbfb36492ba977_3_1.png)
 
-是否在云存储中，这意味着搜索成功了。根据之前的方案 $E_{K_c,K_k}(I(D)) = E_{K_c}(E_k(D), f^{MSK})$，CSP 首先使用 $x_{x_2}^2$ 计算 $f^{MSK}y^{\sigma_i}$，返回结果 $E_{K_c}(E_k(D))$。否则，返回 1。
+是否在云存储中，这意味着搜索成功了。根据之前的方案 $E_{K_c,K_k}(I(D)) = E_{K_c}(E_k(D), f^{MSK})$，CSP 首先使用 $x_{x_2}^2$ 计算 $f^{MSK}y^{σ_i}$，返回结果 $E_{K_c}(E_k(D))$。否则，返回 1。
 
 当用户获得结果 $E_{K_c}(E_k(D))$ 时，他随后使用私钥 $x_{x_1}^{-1}$ 计算文件密钥来解密 $E_k(D)$。
 
@@ -133,7 +127,7 @@ $e(\delta^2, g^{\sigma}) = e(e(\delta,x_{x_2})^{\sum \sigma_i}, C) = e(C,x_{x_2}
 
 ## E. 基于区块链的成员管理
 
-防止中间人攻击 (MITM)：据我们所知，我们是第一个利用区块链和 TTP（三重信任）实现用户管理的。攻击者监控 CSP 与注册用户之间的通信，搜索查询 $Trap \equiv (id_u, g^{\gamma_u}, g^{\sigma_u}, \sigma_{i_1}, ..., \sigma_{i_m})$ 被注册，结果为 $rs = (E_{K_c}(E_k(D)))$。由于 $x_{x_1}^{-1}$ 是离散数问题（DLP），攻击者解密 $x_1$ 的可能性不存在。
+防止中间人攻击 (MITM)：据我们所知，我们是第一个利用区块链和 TTP（三重信任）实现用户管理的。攻击者监控 CSP 与注册用户之间的通信，搜索查询 `Trap ≡ (id_u, g^γ_u, g^σ_u, σ_i_1, ..., σ_i_m)` 被注册，结果为 `rs = (E_{K_c}(E_k(D)))`。由于 $x_{x_1}^{-1}$ 是离散数问题（DLP），攻击者解密 $x_1$ 的可能性不存在。
 
 关于问题，如图 3 所示，智能合约为用户和 CSP 分离了 $x_1, x_2$MSK$ 被放入区块链，这意味着用户加入的成功。我们已经证明了该方案可以防止 MITM 攻击。除了新用户外，用户管理还可能撤销用户身份。当用户需要注销时，智能合约将发送指令，要求 CSP 删除部分存储 $(id_u, x_2^{-1})$，然后用户既无法搜索，也无法使用其私钥 $x_{x_1}^{-1}$ 区分其他用户共享的加密文档结果。
 
@@ -174,10 +168,6 @@ $e(\delta^2, g^{\sigma}) = e(e(\delta,x_{x_2})^{\sum \sigma_i}, C) = e(C,x_{x_2}
 
 [1] Lu Y, Tsudik G. Enhancing data privacy in the blockchain[J]. Trust Management V. 2011:117-132.
 
-
-
-
-
 | 标签 | 样本数 | 平均值 | 最小值 | 最大值 | 90%线 | 标准差 | 错误率 | 吞吐量 | 接收量 | 平均字节 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 指标 | | 802775 | 315 | | 9401 | 1064 | 530.5 | 10.75% | | 1324 | 958.4 |
@@ -194,21 +184,41 @@ $e(\delta^2, g^{\sigma}) = e(e(\delta,x_{x_2})^{\sum \sigma_i}, C) = e(C,x_{x_2}
 
 - [2] D. Practical Searches for Data: Proceedings of IEEE 2000 Symposium on Privacy and Security. IEEE, 2000:44-55.
 - [3] Chang Y, M Munchver P. Searching Keywords in Remote Data: International Conference on Applied Connectivity and Network Security. Springer, Berlin, 2014:361-369.
-- [4] Cash, David, et al. "Fast, scalable highly searchable keyword search with boolean queries." In CRYPTO 2013. Springer, Berlin, 2013:251-268.
-- [5] Boyd, Steven F. "Forward Searchable Encryption." Proceedings of the 2016 ACM SIGSAC Conference on Computer and Communications Security. ACM, 2016.
-- [6] Li, Hongkai. "Enabling granular multi-keyword search by partitioned sub-domains over encrypted cloud data." IEEE Transactions on Database and Knowledge Systems 33(2016):312-325.
-- [7] Boyd, Raphael, Bryce Rice, and Olga Olshansky. "Forward and backward searchable encodings from constrained primitives." Proceedings of the 2017 ACM SIGSAC Conference on Computer and Communications Security. ACM, 2017.
-- [8] Lu, Qi, Cong W, et al. Keyword Search over Encrypted Cloud Data: INFOCOM 2010, IEEE 2010:1-4-15.
-- [9] Wang, C, N, Li, J, et al. Ranked Keyword Search over Encrypted Cloud Data: International Conference on Distributed Computing (ICDC), 2010, IEEE, Genoa, Italy, July 21-25, 2010:253-266.
-- [10] Hor B, Meredith S, Treidais G. A privacy-preserving index for encrypted data. Tenth International Conference on Large Data Bases. VLDB Endowment, 2004:720-731.
-- [11] Hagan, Aaron Yi, et al. Encryptable SQL over an encrypted server-provider-model: Proceedings of the ACM SIGMOD International Conference on Data Management. 2002:216-227.
-- [12] Gentry. A fully homomorphic encryption scheme. Stanford University, 2009.
-- [13] Yong H, Lee J C, Lee I. Public Key Encryption with Conjunctive Keyword Search with Attention to a Multi-user Setting/International Conference on Pairing-based Cryptography. 2007:2-22.
-- [14] Doug C, Russello G, Gully N. Sharded and Searchable Encrypted Data for Queries: Proceedings of the IEEE 113 Working Conference on Data and Applications Science. 2008:127-143.
-- [15] Li, Hongkai, et al. "Enabling fine-grained multi-keyword search sporty by partitioned sub-domains over encrypted cloud data." IEEE Transactions on Database and Knowledge Systems 33(2016):312-325.
-- [16] Agado, Guido N, Giumazato G, et al. Cryptography Goes to the Cloud/C/FTRA International Conference on Security and Trust, Data Management, and Application. Springer Berlin Heidelberg, 2011:1-8.
-- [17] Hyperledger Project. Charles Ledger. https://hyperledger.org/character. 最后访问于 4 April 2018.
-- [18] Tsai, W, Yu, Wang, R, Li, N, et al. Blockchain application for healthcare. IEEE International Conference on Information Processing, IEEE 2018:1477-1487.
-- [19] Yuan, Yong, Wang-Fei. Blockchain: the state of the art and future directions. Automata and Systems 52(4),2019:481-494.
-- [20] Cloud Computing and Application Development White Paper, http://www.stanford.edu/index/rub-6.html. 最后访问于 4 April 2018.
 
+
+
+## 参考文献
+
+- [4] Cash, David, et al. "Fast, scalable highly searchable keyword search with boolean queries." In *CRYPTO 2013*. Springer, Berlin, 2013: 251-268.
+
+- [5] Boyd, Steven F. "Forward Searchable Encryption." *Proceedings of the 2016 ACM SIGSAC Conference on Computer and Communications Security*. ACM, 2016.
+
+- [6] Li, Hongkai. "Enabling granular multi-keyword search by partitioned sub-domains over encrypted cloud data." *IEEE Transactions on Database and Knowledge Systems* 33 (2016): 312-325.
+
+- [7] Boyd, Raphael, Bryce Rice, and Olga Olshansky. "Forward and backward searchable encodings from constrained primitives." *Proceedings of the 2017 ACM SIGSAC Conference on Computer and Communications Security*. ACM, 2017.
+
+- [8] Lu, Qi, Cong W, et al. "Keyword Search over Encrypted Cloud Data." *INFOCOM 2010*, IEEE 2010: 1-4-15.
+
+- [9] Wang, C, N, Li, J, et al. "Ranked Keyword Search over Encrypted Cloud Data." *International Conference on Distributed Computing (ICDC)*, 2010, IEEE, Genoa, Italy, July 21-25, 2010: 253-266.
+
+- [10] Hor B, Meredith S, Treidais G. "A privacy-preserving index for encrypted data." *Tenth International Conference on Large Data Bases*. VLDB Endowment, 2004: 720-731.
+
+- [11] Hagan, Aaron Yi, et al. "Encryptable SQL over an encrypted server-provider-model." *Proceedings of the ACM SIGMOD International Conference on Data Management*. 2002: 216-227.
+
+- [12] Gentry. "A fully homomorphic encryption scheme." Stanford University, 2009.
+
+- [13] Yong H, Lee J C, Lee I. "Public Key Encryption with Conjunctive Keyword Search with Attention to a Multi-user Setting." *International Conference on Pairing-based Cryptography*. 2007: 2-22.
+
+- [14] Doug C, Russello G, Gully N. "Sharded and Searchable Encrypted Data for Queries." *Proceedings of the IEEE 113 Working Conference on Data and Applications Science*. 2008: 127-143.
+
+- [15] Li, Hongkai, et al. "Enabling fine-grained multi-keyword search sporty by partitioned sub-domains over encrypted cloud data." *IEEE Transactions on Database and Knowledge Systems* 33 (2016): 312-325.
+
+- [16] Agado, Guido N, Giumazato G, et al. "Cryptography Goes to the Cloud." *C/FTRA International Conference on Security and Trust, Data Management, and Application*. Springer Berlin Heidelberg, 2011: 1-8.
+
+- [17] Hyperledger Project. "Charles Ledger." https://hyperledger.org/character. 最后访问于 4 April 2018.
+
+- [18] Tsai, W, Yu, Wang, R, Li, N, et al. "Blockchain application for healthcare." *IEEE International Conference on Information Processing*, IEEE 2018: 1477-1487.
+
+- [19] Yuan, Yong, Wang-Fei. "Blockchain: the state of the art and future directions." *Automata and Systems* 52(4), 2019: 481-494.
+
+- [20] "Cloud Computing and Application Development White Paper." http://www.stanford.edu/index/rub-6.html. 最后访问于 4 April 2018.

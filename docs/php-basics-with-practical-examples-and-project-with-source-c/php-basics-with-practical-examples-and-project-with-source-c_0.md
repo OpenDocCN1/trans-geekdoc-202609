@@ -1,14 +1,9 @@
+
 # PHP 基础实例与项目实战源码指南
-
-
-
-
 
 嗨，朋友们！本书主要讲解 PHP 和 MySQL。它涵盖了 PHP 中几乎所有的核心主题。每个主题都配有实战示例进行解释，以便您能清晰地理解主题，并能自行进行练习。
 
 本书最后一章包含一个带有完整源代码的小型项目。它涵盖了主要主题，让您了解如何从零开始使用 PHP 和 MySQL 构建动态网站。© 2021 Dipti Sahay 版权所有 http://readerscollection.in
-
-
 
 # 第 1 章：PHP 简介
 
@@ -100,25 +95,24 @@ PHP 代码以开始标签开头，以结束标签结尾。那么 PHP 中的开�
 ```php
 $var = "This is a string variable";
 ```
+
 由于上述 `$var` 变量存储文本。它是一个数据类型为 String 的变量。
 
 ```php
 $var = 10;
 ```
+
 由于上述 `$var` 变量存储数字。它是一个数据类型为 Integer 的变量。
 
 ```php
 $var = array("a", "b", "c");
 ```
+
 由于 `$var` 存储数组数据，所以它是一个数组变量。
 
 ```php
 $var = 2.5;
 ```
-
-
-
-
 
 ## PHP 变量与常量
 
@@ -209,6 +203,7 @@ echo $object->demo();
 这里我们声明了一个类 `A`。它包含 `$var` 属性和一个 `demo()` 方法。属性是类中的变量，方法是类中的函数。
 
 ![](img/image_rsrcDV.jpg)
+
 图 2：类数据类型
 
 `demo()` 方法访问变量 `$var`，将打印值 "hello"。`$object` 是为类 `A` 创建的对象。请查看下面代码的输出：
@@ -223,6 +218,7 @@ var_dump($x);
 ```
 
 ![](img/image_rsrcDW.jpg)
+
 图 3：NULL 数据类型
 
 # 第 7 章：PHP 运算符
@@ -255,6 +251,7 @@ echo $x + $y;
 ```
 
 ![](img/image_rsrcDX.jpg)
+
 图 4：加法运算符
 
 ### 减法
@@ -272,6 +269,7 @@ echo $x - $y;
 这里通过使用减法运算符，从 `$x` 变量中减去了 `$y` 变量。请查看下面的输出：
 
 ![](img/image_rsrcDY.jpg)
+
 图 5：减法运算符
 
 ### 乘法
@@ -289,6 +287,7 @@ echo $x * $y;
 在上面的示例中，我们有两个变量 `$x` 和 `$y`。我们将它们相乘以获得两个变量的乘积。请查看下面的输出：
 
 ![](img/image_rsrcDZ.jpg)
+
 图 6：乘法运算符
 
 ### 除法
@@ -322,6 +321,7 @@ echo $x % $y;
 在上述示例中，我们取了一个变量 `$x`，它被 `$y` 除。结果将是两个变量相除得到的余数。请查看下面的输出：
 
 ![](img/image_rsrcE1.jpg)
+
 图 7：取模运算符
 
 ### 幂运算
@@ -339,6 +339,7 @@ echo $x ** $y;
 在上述示例中，我们计算 2 的 3 次幂。请查看下面的输出：
 
 ![](img/image_rsrcE2.jpg)
+
 图 8：幂运算符
 
 ## 赋值运算符
@@ -381,19 +382,12 @@ echo $x ** $y;
 - **`||` 运算符**：`$x || $y` 如果 `$x` 和 `$y` 任一为 true，则结果为 true。
 - **`!` 非运算符**：`!$x` 如果 `$x` 不为 true，则结果为 true。
 
-# 第 8 章
-
-
-
-
-## PHP 字符串运算符
+# 第 8 章：PHP 字符串运算符
 
 PHP 字符串运算符包含两种运算符：连接运算符（`.`）和连接赋值运算符（`.=`）。
 
 - **连接运算符**：`$x . $y` 将 `$x` 和 `$y` 连接起来。
 - **连接赋值运算符**：`$x .= $y` 将 `$y` 追加到 `$x` 后面。
-
----
 
 # 第 9 章：PHP 中的字符串
 
@@ -421,8 +415,6 @@ PHP 中有各种字符串函数可用于应用程序，下面讨论其中一些�
 
 还有许多其他的 PHP 字符串函数，如 `strstr()`、`strlen()`、`strpos()` 等。
 
----
-
 ## PHP 数组
 
 数组用于在单个变量中存储多个值。
@@ -446,8 +438,16 @@ $fruits = ['guava', 'apple', 'orange', 'pineapple', 'mango'];
 数组主要有三种类型：
 
 1. **索引数组**：索引为数字。
-2. **关联数组**：索引不为数字（通常为字符串）。
-3. **多维数组**：包含一个或多个数组的数组。
+
+
+
+## 数组类型
+
+### 关联数组
+索引不为数字（通常为字符串）。
+
+### 多维数组
+包含一个或多个数组的数组。
 
 ---
 
@@ -469,11 +469,13 @@ if ($var == 10) {
 ```
 
 在上面的示例中：
+
 1. 定义变量 `$var` 并赋值为 10。
 2. 应用 `if` 条件：如果变量值为 10 则打印 "hello"，否则执行 `else` 块打印 "bye"。
 3. 由于变量值满足 `if` 条件（值为 10），屏幕将显示 "hello"。
 
 输出示意图：
+
 ![图解 9：If .. Else 语句块](img/image_rsrcE3.jpg)
 
 ---
@@ -483,6 +485,7 @@ if ($var == 10) {
 当需要在满足特定条件时重复执行代码块时使用循环。
 
 循环类型：
+
 - `while`
 - `do ... while`
 - `for`
@@ -493,6 +496,7 @@ if ($var == 10) {
 当条件为真时持续执行。
 
 **语法**：
+
 ```php
 while (condition is true) {
     // code to be executed
@@ -500,6 +504,7 @@ while (condition is true) {
 ```
 
 **示例**：
+
 ```php
 $var = 1;
 while ($var <= 6) {
@@ -507,7 +512,9 @@ while ($var <= 6) {
     $var++;
 }
 ```
+
 **输出**：`123456`
+
 变量每次增加 1 并显示，直到其值小于或等于 6。
 
 ## Do...While 循环
@@ -515,6 +522,7 @@ while ($var <= 6) {
 先执行一次代码块，然后在条件为真时重复循环。
 
 **语法**：
+
 ```php
 do {
     // code to be executed
@@ -522,6 +530,7 @@ do {
 ```
 
 **示例**：
+
 ```php
 $var = 1;
 do {
@@ -529,6 +538,7 @@ do {
     $var++;
 } while ($var <= 6);
 ```
+
 **输出**：`123456`
 
 ## For 循环
@@ -536,6 +546,7 @@ do {
 在条件为真时，按指定次数迭代代码块。
 
 **语法**：
+
 ```php
 for (initialization; condition; increment) {
     // code to be executed
@@ -543,11 +554,13 @@ for (initialization; condition; increment) {
 ```
 
 **示例**：
+
 ```php
 for ($x = 1; $x <= 5; $x++) {
     echo $x;
 }
 ```
+
 **输出**：`12345`
 
 ## Foreach 循环
@@ -555,6 +568,7 @@ for ($x = 1; $x <= 5; $x++) {
 遍历数组中的每个元素。
 
 **语法**：
+
 ```php
 foreach ($array as $key => $value) {
     echo $key;
@@ -564,7 +578,9 @@ foreach ($array as $key => $value) {
 ```
 
 **示例**：
+
 假设有数组变量 `$arr`：
+
 ```php
 $arr = ['a' => 'yellow', 'b' => 'red', 'c' => 'white'];
 foreach ($arr as $key => $value) {
@@ -573,7 +589,9 @@ foreach ($arr as $key => $value) {
     echo $value;
 }
 ```
+
 **输出**：
+
 ```text
 a
 yellow
@@ -590,6 +608,7 @@ white
 预定义的全局作用域变量，即可在脚本任何位置访问。无需特殊操作即可调用。
 
 主要超全局变量：
+
 - `$GLOBALS`
 - `$_SERVER`
 - `$_POST`
@@ -601,6 +620,7 @@ white
 - `$_SESSION`
 
 功能说明：
+
 - `$_SERVER`：返回与头部和路径相关的信息。
 - `$_POST`：用于获取从表单提交的数据值。
 - `$_GET`：用于获取 GET 变量的值。
@@ -625,6 +645,7 @@ white
 - 每个表单有 `action` 属性：提交后重定向到指定页面处理表单。
 
 **语法**：
+
 ```html
 <form action="action.php" method="post">
     <field1...>
@@ -633,6 +654,7 @@ white
 ```
 
 **示例**：客人预订餐桌表单
+
 ```html
 <form method="post" action="process.php">
     Name: <input type="text" name="name">
@@ -677,6 +699,7 @@ MySQL 中包含表，每个表包含行和列。适用于大小型应用，速�
 可使用 `mysqli` 扩展连接 MySQL。
 
 **语法**：
+
 ```php
 <?php
 $host = 'localhost';
@@ -695,14 +718,14 @@ echo 'Connected Successfully';
 ```
 
 **输出**：
+
 ```text
 Connected Successfully
 ```
 
 在上面的代码中，我们创建了 `mysqli` 类的实例。
 
-
-
+---
 
 # 第 17 章：创建数据库和表
 
@@ -748,11 +771,13 @@ echo "Connected successfully";
 
 你可以通过两种方式创建数据库：
 
-1.  进入 phpMyAdmin 并点击 **Databases（数据库）** 选项卡。点击后，将出现一个选项，你可以在其中输入所需的数据库名称并点击 **Create（创建）** 按钮。
-2.  进入 phpMyAdmin 并点击 **SQL** 选项卡。粘贴查询：
+1. 进入 phpMyAdmin 并点击 **Databases（数据库）** 选项卡。点击后，将出现一个选项，你可以在其中输入所需的数据库名称并点击 **Create（创建）** 按钮。
+2. 进入 phpMyAdmin 并点击 **SQL** 选项卡。粘贴查询：
+
     ```sql
     CREATE DATABASE `database_name`;
     ```
+
     然后点击 **Go（执行）** 按钮。上述查询将被执行，数据库将被创建。
 
 ## 创建表
@@ -780,6 +805,8 @@ CREATE TABLE `myproject`.`category` (
   PRIMARY KEY (`id`)
 ) ENGINE = InnoDB;
 ```
+
+---
 
 # 第 18 章：PHP 中的 Session
 
@@ -819,6 +846,8 @@ session_destroy();
 ## 我们在哪里使用 Session？
 
 Session 用于存储任何用户的登录详细信息，以便他们可以访问其他网页，我们也可以跟踪用户。当用户通常注销时，他们的 Session 会过期并离开应用程序。
+
+---
 
 # 第 19 章：PHP 项目 - 用户注册
 
@@ -891,70 +920,13 @@ if (!$connection) {
 
 ### `index.php` 的代码
 
-```php
-<!DOCTYPE html>
-<?php
-include "connection.php";
-?>
-<html>
-<head>
-    <title></title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <script src="js/bootstrap.js"></script>
-</head>
-<body>
-    <div class="container text-center">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <ul class="navbar-nav mr-auto">
-                <?php
-                if (isset($_SESSION['username'])) {
-                ?>
-                <li class="nav-item active"><a href="restricted.php">Restricted Page | </a></li>
-                <?php } ?>
-                <?php if (!isset($_SESSION['username'])) { ?>
-                <li class="nav-item active"><a href="login.php">Login |</a></li>
-                <?php } ?>
-                <?php if (isset($_SESSION['username'])) { ?>
-                <li class="nav-item active"><a href="process.php?action=logout">Logout</a></li>
-                <?php } ?>
-            </ul>
-        </nav>
-
-        <?php if (!isset($_SESSION['username'])) { ?>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="row"><strong>Register here</strong></div>
-            </div>
-        </div>
-
-        <form name="frm" method="post" action="process.php?action=register">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="col-md-6">Name:</div>
-                    <div class="col-md-6"><input type="text" name="name" value=""></div>
-                </div>
-                <div class="col-md-12">
-                    <div class="col-md-6">UserName:</div>
-                    <div class="col-md-6"><input type="text" name="username" value=""></div>
-                </div>
-            </div>
-        </form>
-        <?php } ?>
-    </div>
-</body>
-</html>
-```
 
 
+# 用户注册、登录、受限页面与注销功能实现
 
+## 注册功能
 
-## 用户注册、登录、受限页面与注销功能实现
-
-### 注册功能
-
-#### 表单页面 (index.php)
+### 表单页面 (index.php)
 
 页面包含一个注册表单，包含三个输入字段：`name`、`username` 和 `password`。访问者填写详情并点击 `SUBMIT` 按钮后，信息将被插入数据库表中，用户完成注册，随后重定向到受限区域。
 
@@ -972,7 +944,7 @@ include "connection.php";
 <div class="row"><input type="submit" name="submit" value="SUBMIT"></div>
 ```
 
-#### 处理逻辑 (process.php?action=register)
+### 处理逻辑 (process.php?action=register)
 
 ```php
 <?php
@@ -1004,6 +976,7 @@ if (isset($_REQUEST['action']) && ($_REQUEST['action'] == 'register')) {
 ```
 
 **逻辑说明：**
+
 1.  `if(isset($_REQUEST['action']) && ($_REQUEST['action']=='register'))` 检查 `action` 值是否为 `register`，是则继续执行，否则退出。
 2.  `$username_check` 查询用户名是否已存在于数据库。
 3.  若用户名存在，使用 `rand()` 函数追加随机数以保证唯一性。
@@ -1012,13 +985,14 @@ if (isset($_REQUEST['action']) && ($_REQUEST['action'] == 'register')) {
 
 ---
 
-### 登录功能
+## 登录功能
 
-#### 登录页面 (login.php)
+### 登录页面 (login.php)
 
 页面包含两个输入字段：`username` 和 `password` 以及一个提交按钮。用户提交数据后，代码验证用户名和密码。若匹配成功，将登录详情（`name` 和 `username`）存入会话，并重定向到受限页面。
 
 **页面截图：**
+
 ![](img/image_rsrcE9.jpg)
 
 **页面代码结构：**
@@ -1073,7 +1047,7 @@ if (isset($_REQUEST['action']) && ($_REQUEST['action'] == 'register')) {
 </html>
 ```
 
-#### 登录处理逻辑 (process.php?action=login)
+### 登录处理逻辑 (process.php?action=login)
 
 ```php
 if (isset($_REQUEST['action']) && ($_REQUEST['action'] == 'login')) {
@@ -1096,15 +1070,18 @@ if (isset($_REQUEST['action']) && ($_REQUEST['action'] == 'login')) {
 ```
 
 **逻辑说明：**
+
 由于密码使用 `md5` 哈希加密存储，用户输入的密码会被转换为加密形式后再与数据库值比对。若匹配成功则重定向到受限页面；否则重定向回 `index.php` 并提示 "Incorrect username or password"。
 
 ---
 
-### 受限页面功能
+## 受限页面功能
 
-#### 页面逻辑 (restricted.php)
+### 页面逻辑 (restricted.php)
 
 页面检查会话变量 `$_SESSION['username']` 是否已设置。若已设置，显示 "Welcome to restricted access"；否则重定向到 `index.php`。
+
+
 
 ```php
 <?php
@@ -1157,7 +1134,7 @@ if (!isset($_SESSION['username'])) {
 
 当用户点击注销按钮时，会话将被销毁，用户重定向到 `index.php` 并提示 "Logged out successfully"。
 
-**注销处理代码 (位于各页面顶部公共区域)：**
+**注销处理代码（位于各页面顶部公共区域）：**
 
 ```php
 if (isset($_REQUEST['action']) && ($_REQUEST['action'] == 'logout')) {

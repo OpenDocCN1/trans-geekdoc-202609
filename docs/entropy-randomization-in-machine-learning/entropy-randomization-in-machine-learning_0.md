@@ -1,37 +1,7 @@
+
 # 机器学习中的熵随机化
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Preface
+## Preface
 
 文明发展的根本重要属性之一在于知识的积累，并进一步转化为提取新知识的解决方案。这种转化以不同方式实现，包括从积累的数据中提取知识。`model` 作为积累知识的基本工具，具有定量测量的特征。然而，除了定量（数字）数据之外，还可能存在非定量数据，例如音频、视频、图形、文本和其他数据。最终，知识提取和积累的问题归结为对由 `estimating` 其特征而形式化的 `model` 的知识。这一过程可以解释为使用数据对 `model` 进行 `learning`。由于 `model` 学习是通过使用计算机器进行数据处理来执行的，因此 `model` 与其计算机实现之间的概念差异相应消失，导致一种自然的信念，即学习的客体是计算机器。这种方法解释了 `Machine Learning` (`ML`) 的出现，这是一个术语甚至是一门科学，其出发点是数学统计、优化、数值方法和信息技术的理论基础。
 
@@ -43,11 +13,7 @@
 
 一种可能的方式由 G. Piatetsky-Shapiro 于 1991 年提出，作为 `Data Mining (DM)` 的概念；参见 [55, 191]。在此概念中，建议在用户友好的信息技术环境中整合数学统计和概率论的不同方法，而与知识的定性描述、也许定量描述以及适当的数据数组相关联的基本问题的陈述则留给研究者。开创性的数据挖掘实验发现了数据的一系列负面特征（错误、可靠性、充分性、使用不同尺度、时间不规则性等），这使所得知识的可信度受到质疑。这些特征对于大量异构数据变得更加重要。这种数据在广义上的验证被证明是一个严峻的挑战。
 
-
-
-
-
-# 数据科学与机器学习概述
+## 数据科学与机器学习概述
 
 The data problem magnetized a part of the scientific community so much that the first volume of *Journal of Data Science* appeared in 2002, announcing a new branch of science called *Data Science* (*DS*). This branch was intended to absorb *all* sciences related to data usage and processing.
 
@@ -67,41 +33,35 @@ This book suggests using **information entropy** to characterize the quality of 
 
 This book includes ten chapters covering the general issues of data generation and qualitative specifics, as well as the theoretical foundations of randomized machine learning and its applications to the problems of classification and dynamic regression.
 
-# Chapter 1
+## Chapter 1
 
 Chapter 1 is of methodological character, discussing machine learning problems in general as a tool for knowledge extraction and further transformation into solutions. We consider the structure of a machine learning procedure that represents a man-machine system with feedback. The basic elements of this system are data blocks, parameterized models and algorithms. We introduce the main notions related to these blocks in a rigorous way. Data arrays are described by a fixed-dimension matrix consisting of the vectors of observable input variables or by a matrix containing a “sliding” set of vectors. A parameterized model is defined by a parameterized input–output mapping with a formal description in terms of a vector functional whose properties have a close relation to the qualitative peculiarities of a corresponding applied problem. In addition, we introduce the notions of deterministic and probabilistic ML algorithms that are used for model parameter estimation. In the former case, these are empirical risk minimization algorithms and in the latter case, likelihood maximization algorithms (or relative likelihood minimization algorithms). Section 1.4 presents the main material of this chapter, devoted to the concept of a randomized machine learning procedure based on maximization of an information entropy functional on a set configured by an existing data array. The information entropy functional is defined on the class of probability density functions for the characteristics of the parameterized model and measurement noises that simulate data errors. Finally, we discuss the relation between the maximization principle of the information entropy functional and the minimization principle of the log-likelihood ratio. Several examples illustrate the cognitive capabilities of randomized models.
 
-# Chapter 2
+## Chapter 2
+
+
 
 Chapter 2 deals with data, to be more precise, data sources and primary data processing. We consider analog and digital data sources. Analog sources generate deterministic and also random functions. Some background on the classes of deterministic and random functions is given, with focus on analog-to-digital conversions. Such conversions (amplitude and time quantization) cause errors. According to standard assumptions, they are random with definite probability density functions. We also estimate quantization errors. Certain types of digital data are studied, namely, audio, graphical and text data as well as official government statistics. The technology used to generate data depends on their nature. In particular, audio data conversion is often performed by a pulse-code modulator with subsequent spectral representation using the discrete Fourier transform. There exist two methods to convert images into digital form—bit image graphics (arrays or matrices of pixels) and vector graphics (mathematical models of primitives). A special class of data is texts, as their digital representation contains word-usage frequency characteristics and also semantic features. Among important primary data processing methods, we mention restoration methods for missing data and reduction methods for data arrays. In the former group of methods, our analysis covers the methods of interpolation, design of auxiliary models and entropy decomposition.
 
-
-
-
-
 # 第三章
 
-为模型学习准备数据的一个重要阶段是降低其维度。该阶段在第三章中进行了讨论。更具体地说，第三章中概述了常见的数据降维方法，例如数据矩阵的奇异分解、PCA 和随机投影。第三章特别关注直接和逆投影的方法及其以顺序和并行过程形式实现的问题。投影矩阵通过最小化 Kullback–Leibler 散度进行优化，同时考虑对数据矩阵施加的信息容量约束。降维中的一个关键问题是估计其在求解 RML 问题时的效率。考虑了用于预测和二元分类的线性模型的效率估计技术。第三章的最后一段专门讨论熵随机投影方法，其中投影矩阵被假定为随机。引入了数据矩阵的紧凑性指标的概念，即其行之间的平均距离。将投影矩阵的概率密度函数的优化问题表述为在对投影矩阵的紧凑性指标施加约束的条件下最大化相应的熵泛函的问题。考虑了该方法的一种改进，其中已知的投影矩阵是从给定集合中随机选择的。
+为模型学习准备数据的一个重要阶段是降低其维度。该阶段在第三章中进行了讨论。更具体地说，第三章中概述了常见的数据降维方法，例如数据矩阵的奇异分解、`PCA` 和随机投影。第三章特别关注直接和逆投影的方法及其以顺序和并行过程形式实现的问题。投影矩阵通过最小化 `Kullback–Leibler` 散度进行优化，同时考虑对数据矩阵施加的信息容量约束。降维中的一个关键问题是估计其在求解 `RML` 问题时的效率。考虑了用于预测和二元分类的线性模型的效率估计技术。第三章的最后一段专门讨论熵随机投影方法，其中投影矩阵被假定为随机。引入了数据矩阵的紧凑性指标的概念，即其行之间的平均距离。将投影矩阵的概率密度函数的优化问题表述为在对投影矩阵的紧凑性指标施加约束的条件下最大化相应的熵泛函的问题。考虑了该方法的一种改进，其中已知的投影矩阵是从给定集合中随机选择的。
 
 # 第四章
 
-第四章专门讨论 RML 过程中的随机参数模型。随机模型的一个区别特征使其成为一个独立类别，即其输出形式为随机向量的集合或随机轨迹。我们考虑随机参数模型（RPMs）的两个子类，即单输入-集合输出模型和（单输入，反馈）-集合输出模型。两个子类的 RPM 都使用参数化向量泛函来描述，其性质（连续性、可微性、有界性等）与被建模对象的性质一致。我们研究了具有区间型参数的线性和非线性版本（幂和多项式非线性）。由于 RPM 的输出是随机事件的集合，我们引入经验概率特征（经验均值、方差、PDF、中位数、*α*\-分位数、置信区间和概率）以及 *k*\-矩和 *k*\-均值特征用于定量评估。
+第四章专门讨论 `RML` 过程中的随机参数模型。随机模型的一个区别特征使其成为一个独立类别，即其输出形式为随机向量的集合或随机轨迹。我们考虑随机参数模型（`RPMs`）的两个子类，即单输入-集合输出模型和（单输入，反馈）-集合输出模型。两个子类的 `RPM` 都使用参数化向量泛函来描述，其性质（连续性、可微性、有界性等）与被建模对象的性质一致。我们研究了具有区间型参数的线性和非线性版本（幂和多项式非线性）。由于 `RPM` 的输出是随机事件的集合，我们引入经验概率特征（经验均值、方差、`PDF`、中位数、*α*\-分位数、置信区间和概率）以及 *k*\-矩和 *k*\-均值特征用于定量评估。
 
 # 第五章
 
-在阅读了第一章–第四章之后，读者将进入第五章，该章详细处理了模型参数和测量噪声的 PDF 的熵鲁棒估计问题。该问题是 RML 过程的核心。RPM 可能具有所谓的原始参数，属于 *n*\-维平行六面体，以及属于 *n*\-维非负单位立方体的相对非负参数。测量误差也适用相同的分类。参数和噪声由相应的 PDF 刻画。输出数据数组与 RPM 的输出集合的数值特征，即其 *k*\-均值保持平衡。熵鲁棒估计算法被表述为一个泛函熵线性规划问题。我们证明该问题属于 Lyapunov 型优化问题类；因此，可以使用 Gateaux 导数和 Lagrange 乘子求解。我们建立了相应估计问题的最优性条件，从而得出由 Lagrange 乘子参数化的最优 PDF 的结构表示。后者由以通用形式书写的平衡方程的解定义。这些方程的一个特点在于所谓的积分项，即确定 RPM 的输出集合的 *k*\-均值特征的参数化 Riemann 积分。
+在阅读了第一章–第四章之后，读者将进入第五章，该章详细处理了模型参数和测量噪声的 `PDF` 的熵鲁棒估计问题。该问题是 `RML` 过程的核心。`RPM` 可能具有所谓的原始参数，属于 *n*\-维平行六面体，以及属于 *n*\-维非负单位立方体的相对非负参数。测量误差也适用相同的分类。参数和噪声由相应的 `PDF` 刻画。输出数据数组与 `RPM` 的输出集合的数值特征，即其 *k*\-均值保持平衡。熵鲁棒估计算法被表述为一个泛函熵线性规划问题。我们证明该问题属于 Lyapunov 型优化问题类；因此，可以使用 Gateaux 导数和 Lagrange 乘子求解。我们建立了相应估计问题的最优性条件，从而得出由 Lagrange 乘子参数化的最优 `PDF` 的结构表示。后者由以通用形式书写的平衡方程的解定义。这些方程的一个特点在于所谓的积分项，即确定 `RPM` 的输出集合的 *k*\-均值特征的参数化 Riemann 积分。
 
 # 第六章
 
-第六章考虑了 RPM 的一种特殊情况——具有非随机化参数的模型。回顾一下，不确定的模型参数和测量噪声位于给定区间内。因此，它们可以转换为属于非负单位立方体的非负辅助变量。这些变量被解释为原始参数和噪声属于相应原始区间的概率。换句话说，辅助变量（属于的概率）是非随机化的，因此参数化模型输出的向量或轨迹由这些概率的值定义。用于估计属于概率的 ML 算法被表述为在由经验平衡方程定义集合上信息熵的约束最大化问题。ML 算法的性质取决于所考虑的参数化模型类。如果模型是线性的，则 ML 算法简化为熵线性规划问题。在一般情况下，它简化为熵非线性规划问题。
+第六章考虑了 `RPM` 的一种特殊情况——具有非随机化参数的模型。回顾一下，不确定的模型参数和测量噪声位于给定区间内。因此，它们可以转换为属于非负单位立方体的非负辅助变量。这些变量被解释为原始参数和噪声属于相应原始区间的概率。换句话说，辅助变量（属于的概率）是非随机化的，因此参数化模型输出的向量或轨迹由这些概率的值定义。用于估计属于概率的 `ML` 算法被表述为在由经验平衡方程定义集合上信息熵的约束最大化问题。`ML` 算法的性质取决于所考虑的参数化模型类。如果模型是线性的，则 `ML` 算法简化为熵线性规划问题。在一般情况下，它简化为熵非线性规划问题。
 
 # 第七章
 
-第七章集中于随机机器学习的计算方法，旨在求解 RPM 的泛函熵线性规划问题以及熵非线性规划问题，以估计非随机化模型参数属于相应区间的概率。这些问题的最优性条件被表述为非线性经验平衡方程。对于泛函熵线性规划问题，这些方程包含积分项。我们的思路是通过最小化残差函数来求解方程，即解被简化为在紧集上的最小化问题。该问题有一些特殊性：关于目标残差函数的信息以其算法计算的值的形式提供。相当一部分计算包括使用 Monte Carlo 方法对非线性指数函数进行数值积分。我们估计了实现给定精度所需的随机序列的大小。残差最小化问题被视为在由连续函数的不等式系统定义的紧集上的全局最小化问题的特例。该系统的求解过程也采用 Monte Carlo 方法，更准确地说，采用分组 Monte Carlo 迭代。该过程生成具有非负单位立方体上均匀分布的随机向量包，对所得向量进行过滤以构建属于可接受紧集的向量包，并为每个包选择记录。通过分析记录序列，我们估计残差函数的某些数值特征（Hölder 常数）。所述算法具有几乎必然收敛性（概率为 1）。在有限次迭代下，我们计算精确全局最小值的 *r*\-邻域以及迭代过程达到该邻域的概率。熵非线性规划问题使用具有 *p*\-活动变量的乘法算法求解。最后，研究了其收敛性（包括收敛速率）并给出一系列示例。
-
-
-
-
+第七章集中于随机机器学习的计算方法，旨在求解 `RPM` 的泛函熵线性规划问题以及熵非线性规划问题，以估计非随机化模型参数属于相应区间的概率。这些问题的最优性条件被表述为非线性经验平衡方程。对于泛函熵线性规划问题，这些方程包含积分项。我们的思路是通过最小化残差函数来求解方程，即解被简化为在紧集上的最小化问题。该问题有一些特殊性：关于目标残差函数的信息以其算法计算的值的形式提供。相当一部分计算包括使用 `Monte Carlo` 方法对非线性指数函数进行数值积分。我们估计了实现给定精度所需的随机序列的大小。残差最小化问题被视为在由连续函数的不等式系统定义的紧集上的全局最小化问题的特例。该系统的求解过程也采用 `Monte Carlo` 方法，更准确地说，采用分组 `Monte Carlo` 迭代。该过程生成具有非负单位立方体上均匀分布的随机向量包，对所得向量进行过滤以构建属于可接受紧集的向量包，并为每个包选择记录。通过分析记录序列，我们估计残差函数的某些数值特征（Hölder 常数）。所述算法具有几乎必然收敛性（概率为 1）。在有限次迭代下，我们计算精确全局最小值的 *r*\-邻域以及迭代过程达到该邻域的概率。熵非线性规划问题使用具有 *p*\-活动变量的乘法算法求解。最后，研究了其收敛性（包括收敛速率）并给出一系列示例。
 
 `RML` 算法为模型参数和测量误差的 `PDFs` 提供了熵最优估计。`RML` 过程的下一阶段是利用最优 `PDFs` 生成随机参数和测量噪声。一般来说，这个问题是 `Monte Carlo` 方法的传统问题。关于生成具有经典 `PDFs`（`Gaussian`、均匀等）的随机序列，已有大量文献。困难在于需要生成具有任意形式给定 `PDF` 的随机序列和随机向量时出现。这些困难对于高维随机向量更为明显。
 
@@ -132,10 +92,6 @@ DOI: [10.1201/9781003306566-1](https://doi.org/10.1201/9781003306566-1)
 机器学习过程是生成面向问题的支持不同决策的信息工具箱的核心要素。这些过程形成中的一个重要方面是在由对真实对象或现象运行的不完美知识以及各种数据缺陷（误差、不完整、遗漏等）引起的不确定性下对其进行结构化。在本章中，我们将机器学习工具箱分为三种方法论方法，每种方法都基于根本不同的原理——确定性、概率性和随机化。第一种方法涉及确定性模型、测量数据阵列和非随机参数估计。第二种方法基于模型参数和测量噪声的随机起源假设及其概率特征，用于构建非随机参数估计。在这两种方法中，被学习模型保持确定性，其参数值是学习得到的最佳估计。最后，第三种方法源于模型参数和测量噪声的人工随机化以及对其 `PDFs` 的估计。
 
 ## 1.1 Transformation of Knowledge into Decisions
-
-
-
-
 
 一个个体必不可少、有用且有时是喜爱的活动就是做出短期、中期和长期的决策。与此同时，我们希望了解个体的准则，即其做出某项决策的动机背景。不幸的是，并不存在发现这种背景的通用或科学依据的方法。也许这种方法原则上是不可能的，因为个体决策是个性化的，其动机是隐含的。即使是提问程序或民意调查技术也无法保证个体在回答时是坦诚的。表面上看，人们可以考虑某些集体（平均）决策及其动机。
 
@@ -177,8 +133,6 @@ Figure 1.2
 
 
 
-
-
 因此，可以谈论一个整体的人口-经济（`PE`）系统，该系统由人口（`P`）子系统和经济（`E`）子系统组成，二者形成闭环，如图 1.2(c)所示。对该整体系统进行分析的一个重要领域涉及情势评估（状态估计）和预测，即随时间推移的演化。对每个子系统，这些问题由相应的科学研究。例如，人口的结构动态是宏观人口学的主题。一大批经济学科（政治经济学、宏观和微观经济学、数理经济学等）研究经济结构的形成和演化。注意，影响人口子系统中不同过程的经济因素在宏观人口学中被视为与元系统影响相关的外部因素。实际上，在经济学科中也出现了类似的情况。经济子系统的行为是在人口子系统再生产一定数量和结构的劳动资源这一条件下研究的。
 
 特别地，人口学研究的一个流行方向是在给定的经济情景下预测人口状态指标，该情景以定量形式描述[40]。而且，这些情景反映了某些经济目标，这些目标（通常）与预测期内人口的潜在变化无关。但这些变化会显著影响要实现经济发展的指标。上述反馈关系客观存在，试图忽视它往往会导致无法实现的预测。
@@ -200,10 +154,6 @@ Figure 1.3
 在大多数情况下，概念模型表示一个图，其中节点对应于其功能元素，弧对应于它们之间的相互关系。事实上，这种对概念模型的理解首次在[54]中引入。进一步复杂化和更深入地具体化不同系统类别固有的属性，勾勒出向更有效的描述的逐渐过渡，即称为本体[169]的专门结构化列表。尽管如此，图形和本体对类别的描述仍保留在功能元素的水平上。这些元素使用各种数学工具进行描述，具体取决于其运行机制中嵌入的规律性以及其特征。在 `parametric characteristics` 的情况下，元素的数学模型是函数关系（用于描述静态元素）或不同类型的微分方程系统（用于描述动态元素）[50, 161]。一种相当有效的静态关系参数化方法涉及神经网络[96]。这些模型的基本元素和参数调优算法的相对简单性使得神经网络能够用于高维空间。
 
 有时，为方便起见，对象的动态使用具有 `functional characteristics` 的数学模型来描述。例如，该类别包括由积分方程或函数级数定义的模型[111, 137, 146, 152]。在这些模型中，函数特征由积分方程的核或函数级数扮演。
-
-
-
-
 
 对于有限状态对象，合适的模型是自动机 [72, 107]、非线性顺序机 [18, 177]，以及按照一定规则运行的动态智能系统 [126]。
 
@@ -255,39 +205,47 @@ $$
 
 其中一种假设将数据和参数视为实数或整数的 *deterministic* 集合，而不对它们的性质做出额外假设。然后，模型参数的最优估计以 *vector loss function* 的形式进行
 
-
-
-
-
-$$\\begin{array}{r} \\left. {\\overset{\\rightarrow}{e}}^{(j)}(\\overset{\\rightarrow}{a}\\, \\middle| \\, X^{(j)},{\\overset{\\rightarrow}{y}}^{(j)}) = {\\overset{\\rightarrow}{y}}^{(j)} - {\\hat{\\overset{\\rightarrow}{y}}}^{(j)}(X^{(j)},\\overset{\\rightarrow}{a}),\\quad j = \\overline{1,s}, \\right. \\\\ \\end{array}$$  
+$$
+\begin{array}{r} {\overset{\rightarrow}{e}}^{(j)}(\overset{\rightarrow}{a}\\, \middle| \, X^{(j)},{\overset{\rightarrow}{y}}^{(j)}) = {\overset{\rightarrow}{y}}^{(j)} - {\hat{\overset{\rightarrow}{y}}}^{(j)}(X^{(j)},\overset{\rightarrow}{a}),\quad j = \overline{1,s}, \\ \end{array}
+$$
 
 (1.4)
 
 and the closeness of the PM output to the output data of the object is characterized by its norm known as *the empirical risk*, i.e.,
 
-$$\\begin{array}{r} \\left. \\mathcal{Q}\_{X,Y}(\\overset{\\rightarrow}{a}) = \\frac{1}{s}{\\sum\\limits\_{j = 1}^{s}{\\|{\\overset{\\rightarrow}{e}}^{(j)}(}}\\overset{\\rightarrow}{a}\\, \\middle| \\, X^{(j)},{\\overset{\\rightarrow}{y}}^{(j)})\\|. \\right. \\\\ \\end{array}$$  
+$$
+\begin{array}{r} {\mathcal{Q}_{X,Y}(\overset{\rightarrow}{a}) = \frac{1}{s}{\sum\limits_{j = 1}^{s}{\|{\overset{\rightarrow}{e}}^{(j)}(\overset{\rightarrow}{a}\, \middle| \, X^{(j)},{\overset{\rightarrow}{y}}^{(j)})\|}. \\ \end{array}
+$$
 
 (1.5)
 
 The empirical risk minimization methods are defined by the family of ML algorithms [53, 106, 188] in which
 
-$$\\begin{array}{r} {\\hat{\\overset{\\rightarrow}{a}}(X,\\overset{\\rightarrow}{y}) = \\arg\\min\\mathcal{Q}\_{X,Y}(\\overset{\\rightarrow}{a}).} \\\\ \\end{array}$$  
+$$
+\begin{array}{r} {\hat{\overset{\rightarrow}{a}}(X,\overset{\rightarrow}{y}) = \arg\min\mathcal{Q}_{X,Y}(\overset{\rightarrow}{a}).} \\ \end{array}
+$$
 
 (1.6)
 
-An additional hypothesis about the properties of the data and parameters often lies in the assumption that the data *Z* = (*X*, *Y*) and the parameters $\\overset{\\rightarrow}{a}$ are *random objects* with a joint probability density function $P(Z,\\overset{\\rightarrow}{a}).$ Here *Z* denotes the universe of data and $\\overset{\\rightarrow}{a}$ is a random vector. In this case, the observable data arrays represent samples *Z*^((*j*)) from the universe *Z*. Note that each of them is random and independent with the PDF $P(Z^{(j)},\\overset{\\rightarrow}{a}).$
+An additional hypothesis about the properties of the data and parameters often lies in the assumption that the data *Z* = (*X*, *Y*) and the parameters $\overset{\rightarrow}{a}$ are *random objects* with a joint probability density function $P(Z,\overset{\rightarrow}{a}).$ Here *Z* denotes the universe of data and $\overset{\rightarrow}{a}$ is a random vector. In this case, the observable data arrays represent samples *Z*^((*j*)) from the universe *Z*. Note that each of them is random and independent with the PDF $P(Z^{(j)},\overset{\rightarrow}{a}).$
 
 The joint probability density function
 
-$$\\begin{array}{r} {L(Z^{(1)},\\ldots,Z^{(s)};\\overset{\\rightarrow}{a}) = {\\prod\\limits\_{j = 1}^{s}P}(Z^{(j)},\\overset{\\rightarrow}{a})} \\\\ \\end{array}$$  
+$$
+\begin{array}{r} {L(Z^{(1)},\ldots,Z^{(s)};\overset{\rightarrow}{a}) = {\prod\limits_{j = 1}^{s}P}(Z^{(j)},\overset{\rightarrow}{a})} \\ \end{array}
+$$
 
 (1.7)
 
-is called the *likelihood* function for a sample {*Z*^((1)),…,*Z*^((*s*))} [41, 51]. Under a fixed sample, the likelihood function depends on the parameter $\\overset{\\rightarrow}{a}.$ A quite natural estimate of this parameter is the vector that maximizes the likelihood function. Instead of the likelihood function, a convenient approach is to use its logarithm *L̃* = log *L*, i.e.,
+is called the *likelihood* function for a sample {*Z*^((1)),…,*Z*^((*s*))} [41, 51]. Under a fixed sample, the likelihood function depends on the parameter $\overset{\rightarrow}{a}.$ A quite natural estimate of this parameter is the vector that maximizes the likelihood function. Instead of the likelihood function, a convenient approach is to use its logarithm *L̃* = log *L*, i.e.,
 
-$$\\begin{array}{r} {\\hat{\\overset{\\rightarrow}{a}}(Z^{(1)},\\ldots,Z^{(s)}) = \\arg\\max\_{\\overset{\\rightarrow}{a}}\\widetilde{L}(Z^{(1)},\\ldots,Z^{(s)};\\overset{\\rightarrow}{a}).} \\\\ \\end{array}$$  
+$$
+\begin{array}{r} {\hat{\overset{\rightarrow}{a}}(Z^{(1)},\ldots,Z^{(s)}) = \arg\max_{\overset{\rightarrow}{a}}\widetilde{L}(Z^{(1)},\ldots,Z^{(s)};\overset{\rightarrow}{a}).} \\ \end{array}
+$$
 
 (1.8)
+
+
 
 The hypothesis about the random origin of the pair (*Z*, $\\overset{\\rightarrow}{a}$) also has another interpretation related to the accumulation of information about this pair during experiments. Here, we mean its characteristics expected *before experiments* and the real characteristics obtained *after experiments*. To describe this evolution, Bayes suggested the concept of conditional probability, distinguishing between the *prior* and *posterior* probabilistic characteristics of the data and parameters. As a result, the posterior conditional probability density function (or simply posterior conditional density) $\\left. p({\\mathbb{Z}}\\, \\middle| \\,\\overset{\\rightarrow}{a}) \\right.$ of data under fixed parameters, the prior conditional probability density function $\\left. w(\\overset{\\rightarrow}{a}\\, \\middle| \\,{\\mathbb{Z}}) \\right.$ of parameters under fixed data, and the prior probability density function *g*(ℤ) were introduced accordingly. They have a clear relation defined by Bayes' formula
 
@@ -318,10 +276,6 @@ In the sequel, **the information entropy functional** will be used to characteri
 # CHAPTER 2 DATA SOURCES AND MODELS
 
 DOI: [`10.1201/9781003306566-2`](https://doi.org/10.1201/9781003306566-2)
-
-
-
-
 
 对于机器学习流程，数据很重要，如其来源、充分性程度（测量误差）、体积、属性和特征。我们将数据理解为与特定时间相关联的数字集合，并以适当的属性组织在数组中。如果数据源不是自然起源的（例如，模拟示波图），则数据必须转换为结构化的数值数组。
 
@@ -358,10 +312,15 @@ DOI: [`10.1201/9781003306566-2`](https://doi.org/10.1201/9781003306566-2)
 连续性（和一致连续性）可以推广到函数 `x(t)` 的导数，前提是它们存在。相应地，产生具有确定光滑程度的 *光滑函数* 的类。光滑程度是给定类函数存在的导数的最大阶数。例如，类 `C((1))` 包含连续可微函数（一阶导数），而类 `C((r))` 包含 `r` 阶导数。记为 `C((∞))` 的光滑函数的重要子类由 *解析函数* 组成，它们在其定义域上可无限次微分。特别地，在时间区间 `𝒯` 上定义的解析函数 `x(t)` 在该区间上具有无限多个导数 `x((k))(t), k = 1, 2, ...`。在区间 `𝒯` 的任意点 `t[0]` 处，它可以展开为一致收敛的泰勒级数：
 
 $$
+
 \begin{array}{r}
+
 {x(t) = x(t_{0}) + \left. ~{\sum\limits_{i = 1}^{\infty}\frac{d^{i}x(t)}{dt^{i}}} \right|_{t_{0}}{(t_{0} - t)}^{i},\quad t_{0} \in \mathcal{T}.}
+
 \\
+
 \end{array}
+
 $$
 
 (2.1)
@@ -369,10 +328,15 @@ $$
 可以为连续性这一函数的定性属性赋予某种定量特征。更具体地说，可以引入所谓的 *连续模*
 
 $$
+
 \begin{array}{r}
+
 \left. \omega(h) = \max_{|t_{i} - t_{j}| \leq h} \middle| x(t_{i}) - x(t_{j}) \middle| . \right.
+
 \\
+
 \end{array}
+
 $$
 
 (2.2)
@@ -380,10 +344,15 @@ $$
 如果函数 `x(t)` 的连续模为
 
 $$
+
 \begin{array}{r}
+
 {\omega(h) \leq Hh^{s},\quad(H,s) \geq 0,}
+
 \\
+
 \end{array}
+
 $$
 
 (2.3)
@@ -393,10 +362,15 @@ $$
 如果函数 `x(t)` 的连续模为
 
 $$
+
 \begin{array}{r}
+
 {\omega(h) \leq Lh,\quad L \geq 0,}
+
 \\
+
 \end{array}
+
 $$
 
 (2.4)
@@ -406,10 +380,15 @@ $$
 任何函数的一个重要特征是其在时间区间 `𝒯` 上的变差，更具体地说，这种变差是有限还是无限。变差有限的函数构成有界变差函数类。为了定义此性质，考虑时间区间 `𝒯` 的任意划分，划分为有序点序列 `t[0], t[1], …, t[n]` 以及函数 `x(t)` 在这些点处的增量（减量）。如果
 
 $$
+
 \begin{array}{r}
+
 \left. \left. \sum\limits_{i = 0}^{n} \right|x(t_{i + 1}) - x(t_{i}) \middle| = X_{\mathcal{T}} < + \infty \right.
+
 \\
+
 \end{array}
+
 $$
 
 (2.5)
@@ -419,10 +398,15 @@ $$
 有界变差函数类包括具有额外属性的函数。例如，连续函数和具有任意光滑程度的函数都属于有界变差函数类。如果函数 `x(t)` 是单调的，即表达式
 
 $$
+
 \begin{array}{r}
+
 \frac{x(t_{i}) - x(t_{j})}{t_{i} - t_{j}}
+
 \\
+
 \end{array}
+
 $$
 
 对于 `𝒯` 中的任意 `t[i], t[j]` 具有相同符号或为零，则它属于有界变差函数类，其总导数为 `X[𝒯] = x(T) − x(t[0])`。请注意，所考虑的类还包含具有跳跃（简单）间断的函数。
@@ -433,19 +417,17 @@ $$
 
 
 
-
-
 $$\\begin{array}{r} \\left. C = \\max\_{\\mathcal{T}} \\middle| x(t) - x\_{a}(t) \\middle| ; \\right. \\\\ \\end{array}$$  
 
 (2.6)
 
-*   积分二次泛函
+### 积分二次泛函
 
 $$\\begin{array}{r} \\left. J\_{2} = \\left. \\int\\limits\_{\\mathcal{T}} \\right|x(t) - x\_{a}(t) \\middle| {}\_{2}dt; \\right. \\\\ \\end{array}$$  
 
 (2.7)
 
-*   归一化积分二次泛函
+### 归一化积分二次泛函
 
 $$\\begin{array}{r} {\\Delta\_{2} = \\frac{\\left. \\left. \\int\\limits\_{\\mathcal{T}} \\right|x(t) - x\_{a}(t) \\middle| {}\_{2}dt \\right.}{{\\int\\limits\_{\\mathcal{T}}x^{2}}(t)dt + {\\int\\limits\_{\\mathcal{T}}x\_{a}^{2}}(t)dt}.} \\\\ \\end{array}$$  
 
@@ -533,24 +515,24 @@ $$\\begin{array}{r} {m\_{i\_{1},\\ldots,i\_{s}}(t\_{1},\\ldots,t\_{s}) = \\mathc
 
 (2.19)
 
-
-
-
-
 值 `$q = {\sum\limits_{k = 1}^{s}i_{k}}$` 称为矩函数的阶。在矩函数类中，阶为 1 和 2 的矩函数占有特殊地位，即
 
-### 均值
+#### 均值
 
 $$
+
 \begin{array}{r} {m(t_{1}) = m_{1}(t_{1}) = \mathcal{M}\left\{ x(t_{1}) \right\};} \\ \end{array}
+
 $$
 
 (2.20)
 
-### 相关函数
+#### 相关函数
 
 $$
+
 \begin{array}{r} {R(t_{1},t_{2}) = m_{11}(t_{1},t_{2}) = \mathcal{M}\left\{ \lbrack x(t_{1}) - m(t_{1})\rbrack\lbrack x(t_{2}) - m(t_{2})\rbrack \right\}.} \\ \end{array}
+
 $$
 
 (2.21)
@@ -560,7 +542,9 @@ $$
 连续性是函数的重要性质。对于随机函数，该性质具有概率意义，可形式化为所有对 `x(t[1]), x(t[2])` 的分布。在集合 `mathcal{T}` 上引入距离 `rho(t[1],t[1])=|t[1]-t[2]|`。随机函数 `x(t), t in mathcal{T}`, 在点 `t^*` 处称为 *随机连续* 的，如果对所有 `epsilon > 0`，
 
 $$
+
 \begin{array}{r} \left. \mathbf{P}\left\{ \middle| x(t^{*}) - x(t) \middle| > \varepsilon \right\}\rightarrow 0\quad\text{as}\,\,\rho(t^{*},t)\rightarrow 0. \right. \\ \end{array}
+
 $$
 
 (2.22)
@@ -570,7 +554,9 @@ $$
 根据定义 (2.22)，随机连续性是一种“渐近”性质，仅需声明。更具构造性的定义应涉及某些定量值。事实上，*一致随机连续性* 构成了这种性质。随机函数在 `mathcal{T}` 上一致随机连续，如果对任意 `epsilon > 0`，存在 `delta > 0` 使得
 
 $$
+
 \begin{array}{r} {\mathbf{P}\left\{ \middle| x(t) - x(\widetilde{t}) \middle| > \varepsilon \right\} < \varepsilon} \\ \end{array}
+
 $$
 
 (2.23)
@@ -586,7 +572,9 @@ $$
 在许多应用中，具有高斯有限维概率分布的随机函数起着关键作用。就有限维分布而言，随机函数可由随机 `n` 维向量 `overset{rightarrow}{x} = { x(t_{1}),...,x(t_{n}) }.` 描述。随机向量 `overset{rightarrow}{x}` 服从高斯分布，如果其特征函数可表示为
 
 $$
+
 \begin{array}{r} {\Phi(\overset{rightarrow}{u}) = \mathcal{M}\left\{ \exp\left( {j\left\langle \overset{rightarrow}{u},\overset{rightarrow}{x} \right\rangle} \right) \right\} = \exp\left( {j\left\langle \overset{rightarrow}{u},\overset{rightarrow}{m} \right\rangle - \frac{1}{2}\left\langle G\,\overset{rightarrow}{u},\overset{rightarrow}{u} \right\rangle} \right).} \\ \end{array}
+
 $$
 
 (2.24)
@@ -595,8 +583,10 @@ $$
 
 高斯随机函数的矩可通过展开其特征函数计算。若仅中心矩 (`m1 = 0`) 足够，则
 
-$$
+
+
 \begin{aligned} {\Phi(\overset{rightarrow}{u})} & {= \exp\left( {- \frac{1}{2}\left\langle G\,\overset{rightarrow}{u},\overset{rightarrow}{u} \right\rangle} \right) = 1 - \frac{1}{2}\left\langle G\,\overset{rightarrow}{u},\overset{rightarrow}{u} \right\rangle + \frac{1}{2^{2}2!}\left\langle G\,\overset{rightarrow}{u},\overset{rightarrow}{u} \right\rangle^{2} - \ldots} \\ & {+ {( - 1)}^{n}\frac{1}{2^{n}n!}\left\langle G\,\overset{rightarrow}{u},\overset{rightarrow}{u} \right\rangle^{n} + \ldots.} \\ \end{aligned}
+
 $$
 
 (2.25)
@@ -604,7 +594,9 @@ $$
 因此，奇数阶矩函数为
 
 $$
+
 \begin{array}{r} {m_{i_{1},\ldots,i_{s}}(t_{1},\ldots,t_{s}) = 0,\text{\\quad\\quad}{\sum\limits_{k = 1}^{s}i_{k}} = 2n + 1;} \\ \end{array}
+
 $$
 
 (2.26)
@@ -612,7 +604,9 @@ $$
 偶数阶矩函数形式为
 
 $$
+
 \begin{aligned} {m_{i_{1},\ldots,i_{s}}(t_{1},\ldots,t_{s})} & {= \frac{\partial^{2n}}{\partial t_{1}^{i_{1}}\cdots\partial_{s}^{i_{s}}}\left( {\frac{1}{2^{n}n!}\left\langle G\,\overset{rightarrow}{u},\overset{rightarrow}{u} \right\rangle} \right),} \\ {\sum\limits_{k = 1}^{s}i_{k}} & {= 2n.} \\ \end{aligned}
+
 $$
 
 (2.27)
@@ -629,16 +623,14 @@ $$
 
 如果分布 `P(t, h, mathcal{B})` 与 `t` 无关，即 `P(t, h, mathcal{B}) = P(h, mathcal{B})`，则相应的具有独立增量的过程称为 *齐次* 的。
 
-
-
-
-
 考虑具有独立增量的一些过程的例子。让我们从 `Brownian motion` 开始。对于该过程，概率分布 `P(t, h, ℬ)` 是高斯的。该过程的物理模型是液体中小颗粒的运动，可以用高倍显微镜观察到。这样的颗粒具有恒定的运动，其路径代表一条非常复杂的折线，具有混乱方向的线段。这种运动可以用颗粒与液体分子的碰撞来解释。颗粒相对于每个分子的尺寸具有相对较大的尺寸，并且每秒遭受大量与它们的碰撞。颗粒的可见运动称为布朗运动。在粗略近似下，颗粒因碰撞而产生的位移可以认为彼此独立，因此布朗运动可以被视为具有独立增量的过程。由于位移很小，我们可以假设其总和满足中心极限定理；换句话说，布朗运动可以用具有独立增量的高斯随机过程来描述。
 
 特别地，均质布朗随机过程由两个参数 `m` 和 `σ` 定义：
 
 $$
+
 \begin{array}{r} {\mathcal{M}\left\{ x(t) \right\} = mt,\quad\mathcal{M}\left\{ x^{2}(t) \right\} = \sigma^{2}t.} \\ \end{array}
+
 $$
 
 (2.28)
@@ -650,7 +642,9 @@ $$
 设 `x(t[0])` = 0。则变量 `x(t)` 具有概率分布
 
 $$
+
 \begin{array}{r} {\mathbf{P}\left\{ x(t) = m \right\} = \frac{a^{m}(t)}{m!}\exp( - a(t)),\quad\mathcal{M}\left\{ x(t) \right\} = a(t).} \\ \end{array}
+
 $$
 
 (2.29)
@@ -658,7 +652,9 @@ $$
 由此可得
 
 $$
+
 \begin{aligned} {\mathbf{P}\left\{ x(t) - x(s) = m \right\}} & {= \frac{[a(t) - a(s)]^{m}}{m!}\exp\left( - [a(t) - a(s)] \right),} \\ & {\quad m = 0,1,2,\ldots} \\ \end{aligned}
+
 $$
 
 (2.30)
@@ -666,7 +662,9 @@ $$
 如果过程是均质的，则
 
 $$
+
 \begin{aligned} & {a(t) = at,} \\ {\mathbf{P}\left\{ x(t) - x(s) = m \right\}} & {= \frac{a^{m}{(t - s)}^{m}}{m!}\exp( - a(t - s)),} \\ {s < t,} & {m = 0,1,2,\ldots} \\ \end{aligned}
+
 $$
 
 (2.31)
@@ -678,7 +676,9 @@ $$
 假设在状态 `x(s)` 和 `x(t)` 之间存在中间状态 `x(u)`，其中 `s` < `u` < `t`。用 `P(s, x, u, y, t, B)` 表示在给定 `x(s) = x` 且 `x(u) = y` 的条件下事件 `{ x(t) ∈ B }` 的条件概率。利用条件概率的一般性质，写出
 
 $$
+
 \begin{array}{r} {P(s, x, t, B) = \int_{X}P(s, x, u, y, t, B)\, P(s, x, u, y)\, d y.} \\ \end{array}
+
 $$
 
 (2.32)
@@ -686,7 +686,9 @@ $$
 对于非遗传系统，一个自然的假设是
 
 $$
+
 \begin{array}{r} {P(s, x, u, y, t, B) = P(u, y, t, B).} \\ \end{array}
+
 $$
 
 (2.33)
@@ -694,7 +696,9 @@ $$
 在这种情况下，等式 (2.34) 取形式
 
 $$
+
 \begin{array}{r} {P(s, x, t, B) = \int_{X}P(u, y, t, B)\, P(s, x, u)\, d y.} \\ \end{array}
+
 $$
 
 (2.34)
@@ -704,7 +708,9 @@ $$
 马尔可夫过程称为 `homogeneous` 如果转移概率仅取决于参数 `t` 和 `s` 的差，即
 
 $$
+
 \begin{array}{r} {P(s, x, t, B) = P(t - s, x, B) = P_{t - s}(x, B).} \\ \end{array}
+
 $$
 
 (2.35)
@@ -712,7 +718,9 @@ $$
 对于齐次马尔可夫过程，Chapman–Kolmogorov 方程 (2.34) 可以写成更简单的形式
 
 $$
+
 \begin{array}{r} {P_{u + v}(x, B) = \int_{X}P_{u}(x)P_{v}(y, B)\, d y.} \\ \end{array}
+
 $$
 
 (2.36)
@@ -730,10 +738,6 @@ $$
 对于上述马尔可夫过程类，也有可能对 Chapman–Kolmogorov 方程进行线性化，将其转化为线性偏微分方程或积分微分方程。
 
 ### 2.2 Digital Source of Data
-
-
-
-
 
 事实上，数字数据由十进制或二进制数字的数组表示。它们是使用数字测量设备生成的。然而，我们经常处理的是模拟测量设备。那么这些数组就是对所研究对象或现象的初始模拟信息的数字转换结果。换句话说，如图 2.1 所示，模拟-数字转换器（`ADC`）放置在所研究对象或现象之后。例如，如果所研究对象在一个给定的时间间隔 `𝒯` 上运行，从而产生一个连续过程，则 `ADC` 将该过程转换为数字数组。`ADC` 对初始连续过程进行幅度和时间量化。照片是另一个例子，其中视觉图像充当模拟源。然而，照片使用带有扫描的略有不同的 `ADC` 转换为数字数组。
 
@@ -821,6 +825,8 @@ Figure 2.5
 
 再次考虑由连续函数 `x(t)` 描述的模拟信号。设该函数在无限区间 `(−∞, +∞)` 上有定义且平方可积。那么该函数的傅里叶变换由下式给出
 
+
+
 ```
 \begin{aligned}
 {\Phi_{1}(\nu)} & {= {\int\limits_{- \infty}^{+ \infty}x}(t)\exp( - 2\pi\iota\nu t)dt = \Phi(2\pi\nu),}
@@ -846,10 +852,6 @@ Figure 2.5
 (2.41)
 
 函数 `Φ(ω)` 对于 `ω ∈ (−∞, +∞)` 是连续的。
-
-
-
-
 
 真实的模拟信号定义在有限时间区间 𝒯 = \[0, *T*\] 上。对该信号进行数字化变换后得到一组量化值序列，称为采样，其形式为
 
@@ -921,10 +923,6 @@ Figure 2.7
 
 外部信息包括关于来源、作者、文档创建或修改日期、主题分类、用户对文档的行为（例如用户的访问率等）的信息。
 
-
-
-
-
 文档的频率特征最广泛使用，首先是同质属性的直方图，例如关键词条目的向量 [160]。在这种情况下，必须为所有分析的文档管理一个通用的术语表。每个文档表示为一个向量，其元素显示相应术语在文档中出现的次数。该向量的维度非常大，与术语表中的总术语数相匹配。
 
 在一般设置中，该向量的一个元素表示术语在文档中的信息权重。实际上，术语的信息权重以更广的意义处理，具有附加属性，例如字母短序列的信息权重（例如两个字母的组合）、音节、单词或规范形式词组合 [175]。元素的权重通常使用其在文本中出现的某些统计特征来定义，并带有反映该元素在给定文档中的格式和位置的某些系数。
@@ -943,7 +941,7 @@ Figure 2.7
 
 存在许多对象由政府统计服务使用与特定时间尺度相关的问题导向登记册进行评估。首先，注意对经济系统（宏观指标、劳动资源、GDP、财政等）、人口系统（生育率、死亡率和迁移率）以及环境系统（大气、地球、水、土壤等）的测量和国家评估。相当一部分统计测量是针对一个国家的各个地区进行的。
 
-政府统计系统实施所有测量参数的获取、分析和结构化，以及根据接受的登记册将其进一步转换为数据。这些阶段中的每一个，从从现有来源获取信息到以表格形式对数据进行结构化，都伴随着不可避免的错误，也导致政府统计数据出现错误。存在两种类型的错误，即系统性错误和覆盖错误。前者由于将初始信息转换为数据的<|message|> 方法不完善而发生，而后者由于目标对象与实际观察的元素之间不匹配而发生。
+政府统计系统实施所有测量参数的获取、分析和结构化，以及根据接受的登记册将其进一步转换为数据。这些阶段中的每一个，从从现有来源获取信息到以表格形式对数据进行结构化，都伴随着不可避免的错误，也导致政府统计数据出现错误。存在两种类型的错误，即系统性错误和覆盖错误。前者由于将初始信息转换为数据的 方法不完善而发生，而后者由于目标对象与实际观察的元素之间不匹配而发生。
 
 为了阐明这一点，让我们考虑一个形成数据以计算人均国民收入的例子。这个问题似乎很简单：只需将货币形式的年 GDP 除以适龄人口数量即可。然而，货币形式的年 GDP 是使用广义价格计算的，而广义价格由某些模型定义。这些模型输入变量和特征（参数）的测量和估计存在误差（通常解释为随机变量）。因此，年 GDP 是按月计算的算术平均值，具有估计方差。适龄人口的情况类似，因为其规模在一年中不可预测地变化。换句话说，计算的年 GDP 值同时包含两种类型的错误。
 
@@ -972,10 +970,6 @@ $$
 ### 2.3.1 插值
 
 数字数据源生成模拟函数 `x(t)` 的值序列，其自变量为有限集。作为规则，这些值与具有步长 `h` 的某个时间尺度相关联。取另一个函数 `y(t)`，其生成的序列值在不同的时间尺度中，步长为 `s` < `h`，使得 {`h/s`} 为整数。然后我们自然会得到这些函数的同步，即有必要以步长 `s` 恢复 `x(t)` 在区间 [`i h`, (`i` + 1)`h`] 内的值（所谓的 数据插值问题）。解决该问题的经典方法是构造一个相当简单的函数 `z(t)`，使得其在 `h` 尺度中的值与函数 `x(t)` 在同一尺度中的值一致，即 `z[0]` = `x[0]`, …, `z[i h]` = `x[i h]`。
-
-
-
-
 
 考虑一个任意的实函数 `x(t)` ∈ `R`，其定义在区间 𝒯 = [0, T] 上。在空间 `R` 中选取一组有限的初等（简单）函数 `{φk}[0]^(n)`，使得它们线性无关。在大多数情况下，这是一组幂函数 1, t, t², …；或三角函数 1, sin t, cos t, sin 2t, cos 2t, …；或指数函数 1, exp(α[1]t), exp(α[2]t), …，其中 {α[i]} 表示一个数列。
 
@@ -1069,6 +1063,8 @@ $$
 $$
 
 (2.53)
+
+
 
 由于 `Φi = 1`，可得
 
@@ -1214,21 +1210,27 @@ $$
 
 (2.65)
 
-
-
-
-
 在该表达式中，ℒ 表示一个泛函，其表征了具有参数 **a** ∈ *R*^(*m*) 的系统的动态特性，其中 *m* 是参数向量的维数。参数 **a** 实际上会影响函数 *y*(*t*)，即 *y*(*t*, **a**)。对于向量 **a** 的元素取某些值时，系统在离散时刻 *ih* 输出数据包 𝒴[*h*]^(*N*) = {*y*\[0,**a**\],*y*\[*h*,**a**\],…,*y*\[(*N*−1)*h*,**a**\]}。
 
 定义数据包 𝒳[*h*]^(*N*)、𝒴[*h*]^(*N*) 之间的总残差为
 
-$$\\begin{array}{r} {J(\\mathbf{a}) = {\\sum\\limits\_{i = 0}^{N}{(x\\lbrack ih\\rbrack - y\\lbrack ih,\\mathbf{a}\\rbrack)}^{2}}.} \\\\ \\end{array}$$
+$$
+\begin{array}{r}
+{J(\mathbf{a}) = \sum\limits_{i = 0}^{N}{(x\lbrack ih\rbrack - y\lbrack ih,\mathbf{a}\rbrack)}^{2}.}
+\\
+\end{array}
+$$
 
 (2.66)
 
 该残差的最小值给出最优参数，在该参数下，以上所述数据包在 *h*\-尺度的节点处的差异尽可能小（以泛函 *J* (2.66) 为准），即
 
-$$\\begin{array}{r} {\\mathbf{a}^{\*} = \\arg\\min J(\\mathbf{a}).} \\\\ \\end{array}$$
+$$
+\begin{array}{r}
+{\mathbf{a}^{\*} = \arg\min J(\mathbf{a}).}
+\\
+\end{array}
+$$
 
 (2.67)
 
@@ -1236,7 +1238,12 @@ $$\\begin{array}{r} {\\mathbf{a}^{\*} = \\arg\\min J(\\mathbf{a}).} \\\\ \\end{a
 
 该方法将以具有脉冲响应 *w*(*t*, **a**)、*t* ≥ 0 的线性动态系统为例进行说明。设
 
-$$\\begin{array}{r} {w(t) = a\_{1}\\exp( - a\_{2}t),} \\\\ \\end{array}$$
+$$
+\begin{array}{r}
+{w(t) = a_{1}\exp( - a_{2}t),}
+\\
+\end{array}
+$$
 
 (2.68)
 
@@ -1244,31 +1251,61 @@ $$\\begin{array}{r} {w(t) = a\_{1}\\exp( - a\_{2}t),} \\\\ \\end{array}$$
 
 向该系统的输入供给阶跃函数 *x̃*(*t*) 以产生输出
 
-$$\\begin{array}{r} {y(t) = a\_{1}{\\int\\limits\_{0}^{t}\\exp}( - a\_{2}(t - \\tau))\\widetilde{x}(\\tau)d\\tau.} \\\\ \\end{array}$$
+$$
+\begin{array}{r}
+{y(t) = a_{1}\int\limits_{0}^{t}\exp( - a_{2}(t - \tau))\widetilde{x}(\tau)d\tau.}
+\\
+\end{array}
+$$
 
 (2.69)
 
 区间 \[0,*t*\] 包含整数个子区间 *N* = {*t*/*h*} 且 *t* = *N**h* + *μ*，其中 0 ≤ *μ* < (*N* + 1)*h*。于是表达式 (2.69) 可写为
 
-$$\\begin{array}{r} {y(t) = \\frac{a\_{1}}{a\_{2}}\\exp( - a\_{2}t)\\,{\\sum\\limits\_{i = 0}^{N}x}\\lbrack ih\\rbrack\\exp(a\_{2}ih)\\left( {\\exp(a\_{2}h) - 1} \\right).} \\\\ \\end{array}$$
+$$
+\begin{array}{r}
+{y(t) = \frac{a_{1}}{a_{2}}\exp( - a_{2}t)\,\sum\limits_{i = 0}^{N}x\lbrack ih\rbrack\exp(a_{2}ih)\left( \exp(a_{2}h) - 1 \right).}
+\\
+\end{array}
+$$
 
 (2.70)
 
 系统在 *h*\-尺度节点处的输出为
 
-$$\\begin{array}{r} {y\\lbrack ih\\rbrack = \\frac{a\_{1}}{a\_{2}}\\left( {\\exp(a\_{2}h) - 1} \\right)\\exp( - a\_{2}ih)\\,{\\sum\\limits\_{j = 0}^{i}x}\\lbrack jh\\rbrack\\exp(a\_{2}jh).} \\\\ \\end{array}$$
+$$
+\begin{array}{r}
+{y\lbrack ih\rbrack = \frac{a_{1}}{a_{2}}\left( \exp(a_{2}h) - 1 \right)\exp( - a_{2}ih)\,\sum\limits_{j = 0}^{i}x\lbrack jh\rbrack\exp(a_{2}jh).}
+\\
+\end{array}
+$$
 
 (2.71)
 
 因此，总残差泛函 (2.66) 的形式为
 
-$$\\begin{array}{r} \\left. J(a\_{1},a\_{2}) = {\\sum\\limits\_{i = 0}^{N}{\\sum\\limits\_{j = 0}^{i}\\left( {A\_{i,j}(a\_{1},a\_{2})x\\lbrack jh\\rbrack} \\right)^{2}}}\\Rightarrow\\min, \\right. \\\\ \\end{array}$$
+$$
+\begin{array}{r}
+\left. J(a_{1},a_{2}) = \sum\limits_{i = 0}^{N}\sum\limits_{j = 0}^{i}\left( {A_{i,j}(a_{1},a_{2})x\lbrack jh\rbrack} \right)^{2}\right\}\Rightarrow\min, \right.
+\\
+\end{array}
+$$
 
 (2.72)
 
 其中
 
-$$\\begin{array}{r} {A\_{i,j} = \\left\\{ \\begin{aligned} {\\frac{a\_{1}}{a\_{2}}\\left( {\\exp(a\_{2}h) - 1} \\right)\\exp(a\_{2}h(j - i))} & {\\text{for}\\, j < i,} \\\\ {\\frac{a\_{1}}{a\_{2}}\\left( {\\exp(a\_{2}h) - 1} \\right) - 1} & {\\text{~for}\\, j = i.} \\\\ \\end{aligned}~ \\right.} \\\\ \\end{array}$$
+$$
+\begin{array}{r}
+{A_{i,j} = \left\{ \begin{aligned}
+{\frac{a_{1}}{a_{2}}\left( \exp(a_{2}h) - 1 \right)\exp(a_{2}h(j - i))} & {\text{for}\, j < i,}
+\\
+{\frac{a_{1}}{a_{2}}\left( \exp(a_{2}h) - 1 \right) - 1} & {\text{~for}\, j = i.}
+\\
+\end{aligned}~ \right.}
+\\
+\end{array}
+$$
 
 (2.73)
 
@@ -1276,7 +1313,14 @@ $$\\begin{array}{r} {A\_{i,j} = \\left\\{ \\begin{aligned} {\\frac{a\_{1}}{a\_{2
 
 一旦参数 *a*[1] 和 *a*[2] 计算出来，步长为 *s* 的缺失数据可由下式恢复
 
-$$\\begin{aligned} {y\\lbrack ih + ks\\rbrack} & {= \\frac{a\_{1}}{a\_{2}}\\exp( - a\_{2}(ih + ks))\\,{\\sum\\limits\_{i = 0}^{N}x}\\lbrack ih\\rbrack\\exp(a\_{2}ih)\\left( {\\exp(a\_{2}h) - 1} \\right),} \\\\ i & {= \\overline{0,N},\\,\\, k = \\overline{0,M},\\,\\, M = \\left\\{ h/s \\right\\}.} \\\\ \\end{aligned}$$
+$$
+\begin{aligned}
+{y\lbrack ih + ks\rbrack} & {= \frac{a_{1}}{a_{2}}\exp( - a_{2}(ih + ks))\,\sum\limits_{i = 0}^{N}x\lbrack ih\rbrack\exp(a_{2}ih)\left( \exp(a_{2}h) - 1 \right),}
+\\
+i & {= \overline{0,N},\, k = \overline{0,M},\, M = \left\{ h/s \right\}.}
+\\
+\end{aligned}
+$$
 
 (2.74)
 
@@ -1286,7 +1330,12 @@ $$\\begin{aligned} {y\\lbrack ih + ks\\rbrack} & {= \\frac{a\_{1}}{a\_{2}}\\exp(
 
 考虑由 *I* 个区域组成的经济空间 𝔼。每个区域 *i* 包含 *M*[*i*] 个区，如 Fig. 2.8 所示。设区域 *i* 及其内部的区 (*i*, *j*) 由唯一的齐次指标 *S*[*i*] 和 *S*[*i**j*] 表征，分别。例如，可能的指标列表包括人口规模、生产密度、服务配备等。区域和区指标 *S*[*i*] 和 *S*[*i**j*] 满足平衡约束
 
-$$\\begin{array}{r} {S\_{i} = {\\sum\\limits\_{j = 1}^{M\_{i}}S\_{ij}},\\text{\\quad\\quad}i = \\overline{1,I}.} \\\\ \\end{array}$$
+$$
+\begin{array}{r}
+{S_{i} = \sum\limits_{j = 1}^{M_{i}}S_{ij},\text{\quad\quad}i = \overline{1,I}.}
+\\
+\end{array}
+$$
 
 (2.75)
 
@@ -1294,39 +1343,57 @@ $$\\begin{array}{r} {S\_{i} = {\\sum\\limits\_{j = 1}^{M\_{i}}S\_{ij}},\\text{\\
 
 Figure 2.8
 
-每个区域因此每个区都生产 *r* 种类型的商品或处置 *r* 种类型的资源。假设对于每种商品（资源）类型 *k*，区域 *i* 的生产函数依赖于所有区域的状态指标，即 $\\overset{\\rightarrow}{S} = \\left\\{ S\_{1},\\ldots,S\_{I} \\right\\}.$ 用 $Q\_{ik}(\\overset{\\rightarrow}{S}),\\, i = \\overline{1,I},\\, k = \\overline{1,r}.$ 表示这些函数。同一假设也适用于区；用 *q**i**j**k* 表示其生产函数，其中 𝕊 = {*S*[11],…,*S*[1, *M*[1]];…;*S*[*I*, 1],…,*S*[*I*, *M*[*I*]]}。于是资源约束具有形式
+每个区域因此每个区都生产 *r* 种类型的商品或处置 *r* 种类型的资源。假设对于每种商品（资源）类型 *k*，区域 *i* 的生产函数依赖于所有区域的状态指标，即 $\overset{\rightarrow}{S} = \left\{ S_{1},\ldots,S_{I} \right\}.$ 用 $Q_{ik}(\overset{\rightarrow}{S}),\, i = \overline{1,I},\, k = \overline{1,r}.$ 表示这些函数。同一假设也适用于区；用 *q**i**j**k* 表示其生产函数，其中 𝕊 = {*S*[11],…,*S*[1, *M*[1]];…;*S*[*I*, 1],…,*S*[*I*, *M*[*I*]]}。于是资源约束具有形式
 
-$$\\begin{array}{r} {{\\sum\\limits\_{j = 1}^{M\_{i}}q\_{ijk}}(\\mathbb{S}) = Q\_{ik}(\\mathbf{S}),\\text{\\quad\\quad}i = \\overline{1,I},\\,\\, k = \\overline{1,r}.} \\\\ \\end{array}$$
+$$
+\begin{array}{r}
+{\sum\limits_{j = 1}^{M_{i}}q_{ijk}(\mathbb{S}) = Q_{ik}(\mathbf{S}),\text{\quad\quad}i = \overline{1,I},\, k = \overline{1,r}.}
+\\
+\end{array}
+$$
 
 (2.76)
 
-假设区域指标 **S** 已知而区指标 𝕊 未知。问题是求出区指标，同时考虑由 (2.75) 和 (2.76) 给出的平衡和资源约束。区指标的总数量为 $m = {\\sum\\limits\_{i = 1}^{I}M\_{i}},$ 因为按假设每个区和区域都有单一指标。此外，问题共包含 (*r* + 1)*I* 个平衡和资源约束，且 *m* > (*r* + 1)*I*。因此，满足等式 (2.75, 2.76) 的区指标集合众多。
+假设区域指标 **S** 已知而区指标 𝕊 未知。问题是求出区指标，同时考虑由 (2.75) 和 (2.76) 给出的平衡和资源约束。区指标的总数量为 $m = \sum\limits_{i = 1}^{I}M_{i},$ 因为按假设每个区和区域都有单一指标。此外，问题共包含 (*r* + 1)*I* 个平衡和资源约束，且 *m* > (*r* + 1)*I*。因此，满足等式 (2.75, 2.76) 的区指标集合众多。
 
 获得唯一的区指标集合的一种方法源于熵最大化原理。事实上，熵是区域指标在相应区之间分布的不确定性度量 \[138\]，即
 
-$$\\begin{array}{r} {H(\\mathbb{S}) = - {\\sum\\limits\_{i = 1,j = 1}^{I,M\_{i}}S\_{ij}}\\ln\\frac{S\_{ij}}{a\_{ij}e},} \\\\ \\end{array}$$
+$$
+\begin{array}{r}
+{H(\mathbb{S}) = - \sum\limits_{i = 1,j = 1}^{I,M_{i}}S_{ij}\ln\frac{S_{ij}}{a_{ij}e},}
+\\
+\end{array}
+$$
 
 (2.77)
 
 其中 𝕊 是表征区指标分布的矩阵，其元素为 *S*[*i**j*]。具有最高不确定性的分布 **S** 对应于在平衡和资源约束 (2.75, 2.76) 下熵 *H* 的最大值。关于感兴趣区域内各区的任何先验信息均可纳入熵函数 *H* 的参数 *a*[*i**j*] 中。
 
-
-
-
-
 因此，区域指标在各区间的分布，称为*熵分解*，是优化问题的解
 
-$$\\begin{array}{r} \\left. H(\\mathbb{S})\\Rightarrow\\max,\\quad\\mathbb{S} \\in D, \\right. \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+\left. H(\mathbb{S})\Rightarrow\max,\quad\mathbb{S} \in D, \right.
+\\
+\end{array}
+$$
 
 (2.78)
 
 其中
 
-$$\\begin{array}{r} {D = \\left\\{ S\_{ij} \\middle| {\\sum\\limits\_{j = 1}^{M\_{i}}S\_{ij}} = S\_{i};\\,\\,{\\sum\\limits\_{j = 1}^{M\_{i}}q\_{ijk}}(\\mathbb{S}) = Q\_{ik}(S),\\quad i = \\overline{1,I},\\,\\, k = \\overline{1,r} \\right\\}.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+{D = \left\{ S_{ij} \middle| \sum\limits_{j = 1}^{M_{i}}S_{ij} = S_{i};\,\sum\limits_{j = 1}^{M_{i}}q_{ijk}(\mathbb{S}) = Q_{ik}(S),\quad i = \overline{1,I},\, k = \overline{1,r} \right\}.}
+\\
+\end{array}
+$$
 
 (2.79)
 
 在此一般表述中，所有区域和区都通过相应的生产函数相互关联。另一个极端情况是所有区域和区都是孤立的，即区域和区生产函数仅依赖于其自身区域或区的状态指标：
+
+
 
 $$\\begin{array}{r} {q\_{ijk}(\\mathbb{S}) = q\_{ijk}(S\_{ij}),\\quad Q\_{ik}(\\mathbf{S}) = Q\_{ik}(S\_{i});\\,\\, i = \\overline{1,I}\\,\\, k = \\overline{1,r}.} \\\\ \\end{array}$$  
 
@@ -1481,14 +1548,12 @@ $$\\begin{array}{r} {c\_{j} < 0\\,\\,\\text{for}\\,\\, j = 1,\\ldots,l,\\text{\\
 
 #### 1. 缺失数据随机恢复程序的结构
 
-
-
-
-
 考虑机器学习问题的信息支持（`infoware`）的组成部分和属性。学习集合包含关于对象 `O` 的功能的一些数据 `O`（Fig. 2.10）以及测量的输入 `x(t)` ∈ `R^(m)` 和输出 `y(t)` ∈ `R^(n)`。变量 `x(t)` 和 `y(t)` 分别包含测量误差 `η(t)` ∈ `R^(m)` 和 `ξ(t)` ∈ `R^(n)`。通常，关于它们的信息具有假设性特征。一种常见假设是它们以加性形式出现在学习集合中：
 
 $$
+
 \begin{array}{r} {\mathbf{x}(t) = \mathbf{x}^{0}(t) + \eta(t);\quad\quad\mathbf{y}(t) = \mathbf{y}^{0}(t) + \xi(t),} \\ \end{array}
+
 $$
 
 (2.100)
@@ -1532,7 +1597,9 @@ Figure 2.12: Diagrams of RPMs.
 构造矩阵
 
 $$
+
 \begin{array}{r} {X_{(k - \varrho)} = \left[ {\mathbf{x}[k - \varrho],\mathbf{x}[k - \varrho + 1],\ldots,\mathbf{x}[k]} \right] } \\ \end{array}
+
 $$
 
 (2.101)
@@ -1542,7 +1609,9 @@ $$
 输出数据包含区间类型的加性误差 `ξ[k] ∈ R^(n)`：
 
 $$
+
 \begin{array}{r} {\xi[k] \in \Xi_{k} = [\xi^{-},\xi^{+}]. } \\ \end{array}
+
 $$
 
 (2.102)
@@ -1552,7 +1621,9 @@ $$
 一般情况下，对象 `O` 的输入和输出关系由随机化参数动态模型 `RDM-O` 描述，其形式为
 
 $$
+
 \begin{array}{r} {\hat{\mathbf{y}}[k] = \mathbb{B}\left( {\mathbf{a},X_{(k - \varrho)}} \right),} \\ \end{array}
+
 $$
 
 (2.103)
@@ -1560,7 +1631,9 @@ $$
 其中 `𝔹` 为具有随机参数 `a ∈ R^(r)` 的非线性泛函，参数为区间类型：
 
 $$
+
 \begin{array}{r} {\mathbf{a} \in \mathcal{A} = [\mathbf{a}^{-},\mathbf{a}^{+}]. } \\ \end{array}
+
 $$
 
 (2.104)
@@ -1570,12 +1643,16 @@ $$
 `RDM-O` 的观测输出为
 
 $$
+
 \begin{array}{r} {\mathbf{v}[k] = \hat{\mathbf{y}}[k] + \xi[k],\quad\quad k = \overline{0,N}.} \\ \end{array}
+
 $$
 
 (2.105)
 
-为确定最优 PDF，应用 [148] 中提出的随机化机器学习（`RML`）算法。在所考虑的情况下，其形式为
+
+
+为确定最优 `PDF`，应用 [148] 中提出的随机化机器学习（`RML`）算法。在所考虑的情况下，其形式为
 
 $$
 \begin{aligned} & {\quad\mathcal{H}[ P(\mathbf{a}),Q(\xi)] = - {\int_{\mathcal{A}}P}(\mathbf{a})\ln P(\mathbf{a})d\mathbf{a} -} \\ & \left. - {\sum\limits_{k = 0}^{T}{\int_{\Xi_{k}}Q_{k}}}(\xi[k])\ln Q_{k}(\xi[k])d\xi[k]\Rightarrow\max, \right. \\ & {\quad{\int_{\mathcal{A}}P}(\mathbf{a})d\mathbf{a} = 1;\quad{\int_{\Xi_{k}}Q_{k}}(\xi[k])d\xi[k] = 1,\, \, k = \overline{0,N},} \\ & {\quad{\int_{A}P}(\mathbf{a})\mathbb{B}\left( {\mathbf{a},X_{(k - \varrho)}} \right)d\mathbf{a} + {\int_{\Xi_{k}}Q_{k}}(\xi[k])\xi[k] d\xi[k] = \mathbf{y}[k],} \\ & {\quad k \neq k^{-},\ldots,k^{+};k = \overline{0,N}.} \\ \end{aligned}
@@ -1583,7 +1660,7 @@ $$
 
 (2.106)
 
-PDF 是连续可微的，且问题 (2.106) 属于 Lyapunov 型泛函优化问题类 [77]。因此，可以构造由拉格朗日乘子 `{θ^{(0)},…,θ^{(k⁻ − 1)},θ^{(k⁺ + 1)},…,θ^{((N))}}` 参数化的解析解：
+`PDF` 是连续可微的，且问题 (2.106) 属于 Lyapunov 型泛函优化问题类 [77]。因此，可以构造由拉格朗日乘子 `{θ^{(0)},…,θ^{(k⁻ − 1)},θ^{(k⁺ + 1)},…,θ^{((N))}}` 参数化的解析解：
 
 $$
 \begin{aligned} & {P^{\*}(\mathbf{a},\theta) = \frac{\exp\left[ - {\sum\limits_{k = 0}^{N}\langle}\theta^{(k)},\mathbb{B}\left( \left. \mathbf{a},X_{(k - \varrho)} \right\rangle \right)} \right]}{\mathcal{P}(\theta)},} \\ & {\quad\quad Q_{k}^{\*}(\xi[k],\theta^{(k)}) = \frac{\exp\left( {- \left\langle \theta^{(k)},\xi[k] \right\rangle} \right)}{\mathcal{Q}_{k}(\theta^{(k)})},} \\ & {\quad\text{\quad\quad}k \neq k^{-},\ldots,k^{+};\quad k = \overline{0,N}.} \\ \end{aligned}
@@ -1591,109 +1668,135 @@ $$
 
 (2.107)
 
-
-
-
-
 Here
 
-$$\begin{aligned} & {\mathcal{P}(\theta) = {\int_{\mathcal{A}}\exp}\left\lbrack {- {\sum\limits_{k = 0}^{N}\langle}\theta^{(k)},\mathbb{B}\left( \left. \mathbf{a},X_{(k - \varrho)} \right\rangle \right)} \right\rbrack d\mathbf{a},} \\ & {\text{\quad\quad}\mathcal{Q}_{k}(\theta^{(k)}) = {\int_{\Xi_{k}}\exp}\left( {- \left\langle \theta^{(k)},\xi\lbrack k\rbrack \right\rangle} \right)d\xi\lbrack k\rbrack,} \\ & {\text{\quad\quad}\quad k \neq k^{-},\ldots,k^{+};\quad k = \overline{0,N}.} \\ \end{aligned}$$
+$$
+\begin{aligned} & {\mathcal{P}(\theta) = {\int_{\mathcal{A}}\exp}\left\lbrack {- {\sum\limits_{k = 0}^{N}\langle}\theta^{(k)},\mathbb{B}\left( \left. \mathbf{a},X_{(k - \varrho)} \right\rangle \right)} \right\rbrack d\mathbf{a},} \\ & {\text{\quad\quad}\mathcal{Q}_{k}(\theta^{(k)}) = {\int_{\Xi_{k}}\exp}\left( {- \left\langle \theta^{(k)},\xi\lbrack k\rbrack \right\rangle} \right)d\xi\lbrack k\rbrack,} \\ & {\text{\quad\quad}\quad k \neq k^{-},\ldots,k^{+};\quad k = \overline{0,N}.} \\ \end{aligned}
+$$
 
 (2.108)
 
 The Lagrange multipliers are determined from the system of equations
 
-$$\begin{array}{r} {\frac{\mathbf{M}_{k}(\theta)}{\mathcal{P}(\theta)} + \frac{\mathbf{N}_{k}(\theta^{(k)})}{\mathcal{Q}_{k}(\theta^{(k)})} = \mathbf{y}\lbrack k\rbrack,\text{\quad\quad}k \neq k^{-},\ldots,k^{+};k = \overline{0,N},} \\ \end{array}$$
+$$
+\begin{array}{r} {\frac{\mathbf{M}_{k}(\theta)}{\mathcal{P}(\theta)} + \frac{\mathbf{N}_{k}(\theta^{(k)})}{\mathcal{Q}_{k}(\theta^{(k)})} = \mathbf{y}\lbrack k\rbrack,\text{\quad\quad}k \neq k^{-},\ldots,k^{+};k = \overline{0,N},} \\ \end{array}
+$$
 
 (2.109)
 
 where
 
-$$\begin{aligned} {\mathbf{M}_{k}(\theta) = \int_{\mathcal{A}}} & {\exp\left\lbrack {- {\sum\limits_{k = 0}^{T}\left\langle \theta^{(k)},\mathbb{B}\left( {\mathbf{a},X_{(k - \varrho)}} \right) \right\rangle}} \right\rbrack\mathbb{B}\left( {\mathbf{a},X_{(k - \varrho)}} \right)d\mathbf{a},} \\ \end{aligned}$$
+$$
+\begin{aligned} {\mathbf{M}_{k}(\theta) = \int_{\mathcal{A}}} & {\exp\left\lbrack {- {\sum\limits_{k = 0}^{T}\left\langle \theta^{(k)},\mathbb{B}\left( {\mathbf{a},X_{(k - \varrho)}} \right) \right\rangle}} \right\rbrack\mathbb{B}\left( {\mathbf{a},X_{(k - \varrho)}} \right)d\mathbf{a},} \\ \end{aligned}
+$$
 
 (2.110)
 
-$$\begin{aligned} & {\mathbf{N}_{k}(\theta^{(k)}) = {\int_{\Xi_{k}}\exp}\left( {- \left\langle \theta^{(k)},\xi\lbrack k\rbrack \right\rangle} \right)\xi\lbrack k\rbrack d\xi\lbrack k\rbrack.} \\ \end{aligned}$$
+$$
+\begin{aligned} & {\mathbf{N}_{k}(\theta^{(k)}) = {\int_{\Xi_{k}}\exp}\left( {- \left\langle \theta^{(k)},\xi\lbrack k\rbrack \right\rangle} \right)\xi\lbrack k\rbrack d\xi\lbrack k\rbrack.} \\ \end{aligned}
+$$
 
 (2.111)
 
-**b. Omissions in input data**
+## b. Omissions in input data
 
 Restoring omissions in input data is more difficult than the ones in output data. Really, the origin mechanism of input data and the source of its excitation are both unknown. In terms of the approach adopted here, this means that the model generating input data and also the process exciting it are unknown. All these factors increase the level of uncertainty in the problem, motivating the choice of randomization.
 
-The randomized approach consists in using a sequence of independent random vectors $\zeta\lbrack k\rbrack \in R^{q}\\, \,(k\overline{0,N})$ with special probabilistic characteristics, and a randomized parametric model, the choice of which is determined by its complexity.
+The randomized approach consists in using a sequence of independent random vectors `ζ[k] ∈ R^{q}  (k\overline{0,N})` with special probabilistic characteristics, and a randomized parametric model, the choice of which is determined by its complexity.
 
 Well, consider the observation interval *τ* = \[0, *N*\] and an input data set **x** ∈ *R*^(*m*) with omissions **x**\[0\], …, **x**\[*k*^− − 1\], **x**\[*k*^+ + 1\], …, **x**\[*T*\]. The data **x**\[*k*^−\], …, **x**\[*k*^+\] are missing.
 
-To restore the missing input data, assume that they are the result of transforming a sequence of independent random vectors *ζ*\[*k*\] ∈ *R*^(*q*), *k* ∈ *τ*. Let the vectors *ζ*\[*k*\] be of the interval type, i.e.,
+To restore the missing input data, assume that they are the result of transforming a sequence of independent random vectors `ζ[k] ∈ R^{(q)}`, `k ∈ τ`. Let the vectors `ζ[k]` be of the interval type, i.e.,
 
-$$\begin{array}{r} {\zeta\lbrack k\rbrack \in \mathcal{Z}_{k} = \lbrack\zeta^{-}\lbrack k\rbrack,\zeta^{+}\lbrack k\rbrack\rbrack,\text{\quad\quad}k = \overline{0,N},} \\ \end{array}$$
+$$
+\begin{array}{r} {\zeta\lbrack k\rbrack \in \mathcal{Z}_{k} = \lbrack\zeta^{-}\lbrack k\rbrack,\zeta^{+}\lbrack k\rbrack\rbrack,\text{\quad\quad}k = \overline{0,N},} \\ \end{array}
+$$
 
 (2.112)
 
 Due to the uncertainty and insufficient knowledge about the process and its transformation, choose the randomized parametric (RPM-I) model
 
-$$\begin{array}{r} {\hat{\mathbf{x}}\lbrack k\rbrack = \mathbb{F}\left( {\mathbf{c},Z_{(k - \rho)}} \right),} \\ \end{array}$$
+$$
+\begin{array}{r} {\hat{\mathbf{x}}\lbrack k\rbrack = \mathbb{F}\left( {\mathbf{c},Z_{(k - \rho)}} \right),} \\ \end{array}
+$$
 
 (2.113)
 
-where 𝔽 is a nonlinear vector functional with random parameters **c** ∈ *R*^(*s*) and *Z*[(*k* − *ρ*)] is the input matrix of dimensions (*q* × *ρ*) composed of the column vectors *ζ*\[*k*\] ∈ *R*^(*q*), i.e.,
+where `𝔽` is a nonlinear vector functional with random parameters `c ∈ R^{(s)}` and `Z[(k − ρ)]` is the input matrix of dimensions (`q × ρ`) composed of the column vectors `ζ[k] ∈ R^{(q)}`, i.e.,
 
-$$\begin{array}{r} {Z_{(k - \rho)} = \left\lbrack {\zeta\lbrack k - \rho\rbrack,\zeta\lbrack k - \rho + 1\rbrack,\ldots,\zeta\lbrack k\rbrack} \right\rbrack.} \\ \end{array}$$
+$$
+\begin{array}{r} {Z_{(k - \rho)} = \left\lbrack {\zeta\lbrack k - \rho\rbrack,\zeta\lbrack k - \rho + 1\rbrack,\ldots,\zeta\lbrack k\rbrack} \right\rbrack.} \\ \end{array}
+$$
 
 (2.114)
 
 Introduce the matrix
 
-$$\begin{array}{r} {Z = \left\lbrack {Z_{( - \rho)},Z_{(1 - \rho)},\ldots,Z_{(N - \rho)}} \right\rbrack,} \\ \end{array}$$
+$$
+\begin{array}{r} {Z = \left\lbrack {Z_{( - \rho)},Z_{(1 - \rho)},\ldots,Z_{(N - \rho)}} \right\rbrack,} \\ \end{array}
+$$
 
 (2.115)
 
-which characterizes the input of the RPM-I model (2.113) on the time interval $k = \overline{0,N}.$ The matrix *Z* is random and of the interval type:
+which characterizes the input of the RPM-I model (2.113) on the time interval `k = \overline{0,N}.` The matrix `Z` is random and of the interval type:
 
-$$\begin{array}{r} {Z \in \mathcal{Z} = {\underset{k = 0}{\overset{N}{\cup}}\mathcal{Z}_{k}} = \lbrack Z^{-},Z^{+}\rbrack.} \\ \end{array}$$
+$$
+\begin{array}{r} {Z \in \mathcal{Z} = {\underset{k = 0}{\overset{N}{\cup}}\mathcal{Z}_{k}} = \lbrack Z^{-},Z^{+}\rbrack.} \\ \end{array}
+$$
 
 (2.116)
 
 The random parameters of this model are
 
-$$\begin{array}{r} {\mathbf{c} \in \mathcal{C} = \lbrack\mathbf{c}^{-},\mathbf{c}^{+}\rbrack.} \\ \end{array}$$
+$$
+\begin{array}{r} {\mathbf{c} \in \mathcal{C} = \lbrack\mathbf{c}^{-},\mathbf{c}^{+}\rbrack.} \\ \end{array}
+$$
 
 (2.117)
 
-The probabilistic properties of the parameters **c** and matrix *Z* (2.115) are characterized by a joint probability density function (PDF) *W*(**c**, *Z*) with the domain of definition
+The probabilistic properties of the parameters `c` and matrix `Z` (2.115) are characterized by a joint probability density function (PDF) `W(c, Z)` with the domain of definition
 
-$$\begin{array}{r} {\mathcal{F} = \mathcal{C}{\cup \mathcal{Z}}.} \\ \end{array}$$
+$$
+\begin{array}{r} {\mathcal{F} = \mathcal{C}{\cup \mathcal{Z}}.} \\ \end{array}
+$$
 
 (2.118)
 
 This function is assumed to be continuously differentiable.
 
-Let the available input data **x**\[*k*\] contain errors *η*\[*k*\] ∈ *R*^(*m*) of the interval type:
+Let the available input data `x[k]` contain errors `η[k] ∈ R^{(m)}` of the interval type:
 
-$$\begin{array}{r} {\eta\lbrack k\rbrack \in \mathcal{E}_{k} = \lbrack\eta^{-},\eta^{+}\rbrack.} \\ \end{array}$$
+$$
+\begin{array}{r} {\eta\lbrack k\rbrack \in \mathcal{E}_{k} = \lbrack\eta^{-},\eta^{+}\rbrack.} \\ \end{array}
+$$
 
 (2.119)
 
-The probabilistic properties of the errors are characterized by PDFs $G_{k}(\eta\lbrack k\rbrack),k = \overline{0,N},$ which are assumed to be continuously differentiable as well.
+The probabilistic properties of the errors are characterized by PDFs `G_{k}(η[k]),k = \overline{0,N},` which are assumed to be continuously differentiable as well.
 
 The observed output of the RPM-I model is given by
 
-$$\begin{array}{r} {\mathbf{z}\lbrack k\rbrack = \hat{\mathbf{x}}\lbrack k\rbrack + \eta\lbrack k\rbrack,\text{\quad\quad}k = \overline{0,N}.} \\ \end{array}$$
+$$
+\begin{array}{r} {\mathbf{z}\lbrack k\rbrack = \hat{\mathbf{x}}\lbrack k\rbrack + \eta\lbrack k\rbrack,\text{\quad\quad}k = \overline{0,N}.} \\ \end{array}
+$$
 
 (2.120)
 
-Clearly, the missing input data are restored using a model similar to RDM-O, but with the random input *ζ*\[*k*\].
+Clearly, the missing input data are restored using a model similar to RDM-O, but with the random input `ζ[k]`.
 
-Apply the RML algorithm \[148\] for determining the PDFs *W*(**c**, *Z*) and $G_{k}(\zeta\lbrack k\rbrack),\, k = \overline{0,N}.$ In the case under consideration, this algorithm has the form
+Apply the RML algorithm \[148\] for determining the PDFs `W(c, Z)` and `G_{k}(ζ[k]), k = \overline{0,N}.` In the case under consideration, this algorithm has the form
 
-$$\begin{aligned} & {\quad\mathcal{H}\lbrack W(\mathbf{c},Z),G(\eta)\rbrack = - {\int_{\mathcal{F}}W}(\mathbf{c},Z)\ln W(\mathbf{c},Z)\, d\mathbf{c}\, dZ -} \\ & \left. - {\sum\limits_{k \in \mathcal{K}}{\int_{\mathcal{E}_{k}}G_{k}}}(\eta\lbrack k\rbrack)\ln G_{k}(\eta\lbrack k\rbrack)d\eta\lbrack k\rbrack\Rightarrow\max, \right. \\ & {\quad{\int_{\mathcal{F}}W}(\mathbf{c},Z)\, d\mathbf{c}\, dZ = 1;\quad{\int_{\mathcal{E}_{k}}G_{k}}(\eta\lbrack k\rbrack)d\eta\lbrack k\rbrack = 1,} \\ & {\quad{\int_{\mathcal{F}}W}(\mathbf{c},Z)\mathbb{F}\left( {\mathbf{c},Z_{(k - \rho)}} \right)d\mathbf{c}\, dZ + {\int_{\mathcal{E}_{k}}G_{k}}(\eta\lbrack k\rbrack)\eta\lbrack k\rbrack d\eta\lbrack k\rbrack = \mathbf{x}\lbrack k\rbrack,} \\ & {\quad k \in \mathcal{K},} \\ \end{aligned}$$
+$$
+\begin{aligned} & {\quad\mathcal{H}\lbrack W(\mathbf{c},Z),G(\eta)\rbrack = - {\int_{\mathcal{F}}W}(\mathbf{c},Z)\ln W(\mathbf{c},Z)\, d\mathbf{c}\, dZ -} \\ & \left. - {\sum\limits_{k \in \mathcal{K}}{\int_{\mathcal{E}_{k}}G_{k}}}(\eta\lbrack k\rbrack)\ln G_{k}(\eta\lbrack k\rbrack)d\eta\lbrack k\rbrack\Rightarrow\max, \right. \\ & {\quad{\int_{\mathcal{F}}W}(\mathbf{c},Z)\, d\mathbf{c}\, dZ = 1;\quad{\int_{\mathcal{E}_{k}}G_{k}}(\eta\lbrack k\rbrack)d\eta\lbrack k\rbrack = 1,} \\ & {\quad{\int_{\mathcal{F}}W}(\mathbf{c},Z)\mathbb{F}\left( {\mathbf{c},Z_{(k - \rho)}} \right)d\mathbf{c}\, dZ + {\int_{\mathcal{E}_{k}}G_{k}}(\eta\lbrack k\rbrack)\eta\lbrack k\rbrack d\eta\lbrack k\rbrack = \mathbf{x}\lbrack k\rbrack,} \\ & {\quad k \in \mathcal{K},} \\ \end{aligned}
+$$
 
 (2.121)
 
-where the indexing set $\mathcal{K} = \overline{0,N}$ does not include *k* = *k*^−, …, *k*^+.
+where the indexing set `𝒦 = \overline{0,N}` does not include `k = k⁻, …, k⁺`.
 
 This problem belongs to the same class as (2.106). Its solution is given by
+
+
 
 $$\begin{array}{rll} & {W^{\*}(\mathbf{c},Z,\lambda) = \frac{\exp\left\lbrack {- {\sum\limits_{k \in \mathcal{K}}\langle}\lambda^{(k)},\mathbb{F}\left( \left. \mathbf{c},Z_{(k - \rho)} \right\rangle \right)} \right\rbrack}{\mathcal{W}(\lambda)},} & \\ & {G_{k}^{\*}(\eta\lbrack k\rbrack,\lambda^{(k)}) = \frac{\exp\left( {- \left\langle \lambda^{(k)},\eta\lbrack k\rbrack \right\rangle} \right)}{\mathcal{G}_{k}(\lambda^{(k)})},} & \\ & {k \in \mathcal{K},} & \\ \end{array}$$
 
@@ -1706,10 +1809,6 @@ $$\begin{aligned} {\mathcal{W}(\lambda) = \int_{\mathcal{F}}} & {\exp\left\lbrac
 (2.123)
 
 In the equalities presented above, *λ*^((*k*)) is the vector of Lagrange multipliers corresponding to the *k*th balance constraint. This vector satisfies the system of equations
-
-
-
-
 
 $$
 \begin{array}{r} {\frac{{\widetilde{\mathbf{M}}}_{k}(\lambda)}{\mathcal{W}(\lambda)} + \frac{{\widetilde{\mathbf{S}}}_{k}(\lambda^{(k)})}{\mathcal{G}_{k}(\lambda^{(k)})} = \mathbf{x}\lbrack k\rbrack,\quad k \neq k^{-},\ldots,k^{+};k \in \mathcal{K},} \\ \end{array}
@@ -1840,12 +1939,6 @@ DOI: [10.1201/9781003306566-3](https://doi.org/10.1201/9781003306566-3)
 
 前几节所述的问题导向数据阵列可能包含意义不大的信息。这一假设构成了降维方法的理论基础。虽然任何降维都会导致对研究对象的信息损失，但考虑“最小损失”的降维是合理的。解决不同机器学习问题所积累的经验表明，降维问题与在所得降维数据上解决的问题是相互关联的。因此，不存在适用于任何问题的通用高效方法。需要注意的是，由于得到最优“随机化”估计的方程的特定性质，降维对于 RML 程序来说是一个相当紧迫的问题。这一特点解释了下面所选降维方法的选择。
 
-
-
-
-
-事实上，降维方法采用以下三种基本思想之一。第一个思想与描述来源不明的数据的矩阵有关。根据假设，该矩阵具有一个较小维度的核心，它集中了关于研究对象的[content]
-
 事实上，降维方法采用以下三种基本思想之一。第一个思想与描述来源不明的数据的矩阵有关。根据假设，该矩阵具有一个较小维度的核心，它集中了关于研究对象的主要信息。在这种情况下，降维工具是数据矩阵的奇异分解及其奇异值按绝对大小的排序。
 
 第二个思想是将现有数据视为随机数据，有时带有额外的统计性质。然后，进一步分析集中在协方差矩阵上，使用两种标准方法之一。按照第一种方法，应为变量分配某个连通性阈值，并消除两个变量中相关系数超过该阈值的一个变量。第二种方法基于协方差矩阵的奇异分解。
@@ -1892,6 +1985,8 @@ $$\begin{array}{r} {\varepsilon^{2} = \text{tr}(CC^{\prime})} \\ \end{array}$$
 
 受归一化条件约束
 
+
+
 $$\begin{array}{r} {U^{\prime}U = VV^{\prime} = I.} \\ \end{array}$$
 
 (3.6)
@@ -1930,13 +2025,8 @@ Figure 3.1
 
 * 识别现有数据集的中心并将原点（即零阶主成分）置于该中心；
 * 找到最大数据变化的方向（第一个主成分）；
-
-
-
-
-
-*   求数据在第一主成分上的投影及其方差；
-*   若方差较大，则寻找与第一主成分正交的最大变化新主方向，如此继续。
+* 求数据在第一主成分上的投影及其方差；
+* 若方差较大，则寻找与第一主成分正交的最大变化新主方向，如此继续。
 
 该过程允许将初始数据矩阵 `X` 的维度为 (*s* × *m*) 替换为两个矩阵 `T` 和 `P`，其维度分别为 (*s* × *k*) 和 (*k* × *s*)，其中 *k* < *m*。该表示使用新的变量得到
 
@@ -2052,10 +2142,6 @@ $$
 
 因此，为了计算投影 `X^(RP)`，需要将矩阵 `R` 和 `X` 相乘，该变换的复杂度为 𝒪(`k n N`)。在主成分分析中，投影矩阵是维度为 [*n* × *n*] 的方阵，投影变换的复杂度为 𝒪(`n² N`)。因此，就计算效率而言，对于降维，随机投影方法优于主成分分析。
 
-
-
-
-
 此外，还要注意为加速投影而进行的现有研究。其中一条研究方向聚焦于稀疏矩阵：正如 \[20\] 中所示，如果数据矩阵 `X` 的每一列最多有 `c` 个非零分量，则变换的复杂度降低为 𝒪(`c`*`k`*`N`)。数据稀疏性对随机投影方法效率的影响已在论文 \[38, 87\] 中研究。另一种加速投影的方法基于快速 Johnson–Lindenstrauss 变换 (`FJLT`) \[9\]，即一种随机傅里叶变换。
 
 随机投影方法用于降维的可能应用范围包括具有多维数据的广泛问题类。由于不同对象之间的相对距离在低维空间中得以保持，因此该集合的结构也得以保持，这在将对象划分为组时尤其重要，例如在分类和聚类中。因此，随机投影成为度量数据分析方法中的有效降维解决方案，例如用于聚类的 `k`-最近邻 (`kNN`) \[30\]、用于分类的支持向量机 (`SVM`) \[27\]，以及用于回归的最小二乘 (`LS`) 方法 \[116\]。
@@ -2084,9 +2170,12 @@ $$\\begin{array}{r} {y\_{ij} = \\ln\\frac{x\_{ij}}{a\_{ij}}.} \\\\ \\end{array}$
 
 (3.22)
 
-此后，该熵将被称为 *信息交叉熵*\[158\]。上面描述的直接-逆投影方法是随机数据矩阵压缩方法的核心。考虑一个非负数据矩阵 `U`，其维度为 (`m` × `s`)。需要将该矩阵压缩为维度为 (`n` × `r`) 的矩阵 `Z`，其中 `r` < `s` 且 `n` < `m`。该问题将分两阶段依次求解如下。首先，将矩阵 `U`[( `m` × `s` )] 降维为矩阵 `Y`[( `m` × `r` )]，然后将后者压缩为矩阵 `Z`[( `n` × `r` )]。下面提出的方法将被称为 *熵降维 (EDR) 方法*。
 
-*阶段 1* 引入矩阵 `Q`[( `s` × `r` )] 并执行直接投影以获得列压缩矩阵
+
+此后，该熵将被称为*信息交叉熵*\[158\]。上面描述的直接-逆投影方法是随机数据矩阵压缩方法的核心。考虑一个非负数据矩阵 `U`，其维度为 (`m` × `s`)。需要将该矩阵压缩为维度为 (`n` × `r`) 的矩阵 `Z`，其中 `r` < `s` 且 `n` < `m`。该问题将分两阶段依次求解如下。首先，将矩阵 `U`[( `m` × `s` )] 降维为矩阵 `Y`[( `m` × `r` )]，然后将后者压缩为矩阵 `Z`[( `n` × `r` )]。下面提出的方法将被称为*熵降维 (EDR) 方法*。
+
+### 阶段 1
+引入矩阵 `Q`[( `s` × `r` )] 并执行直接投影以获得列压缩矩阵
 
 $$\\begin{array}{r} {Y\_{(m \\times r)} = U\_{(m \\times s)}Q\_{(s \\times r)}.} \\\\ \\end{array}$$
 
@@ -2118,7 +2207,8 @@ $$\\begin{array}{r} {Y\_{(m \\times r)}^{\*} = U\_{(m \\times s)}Q\_{(s \\times 
 
 (3.27)
 
-*阶段 2* 第二阶段数据矩阵 `Y`[( `m` × `r` )] 的列数 `r` < `s` 已被降低。需要将该矩阵压缩到给定行数 `n` < `m`。引入矩阵 `B`[( `n` × `m` )] 和 `A`[( `m` × `n` )] 分别执行直接和逆投影操作，类似于阶段 1：
+### 阶段 2
+第二阶段数据矩阵 `Y`[( `m` × `r` )] 的列数 `r` < `s` 已被降低。需要将该矩阵压缩到给定行数 `n` < `m`。引入矩阵 `B`[( `n` × `m` )] 和 `A`[( `m` × `n` )] 分别执行直接和逆投影操作，类似于阶段 1：
 
 $$\\begin{array}{r} {Z\_{(n \\times r)} = B\_{(n \\times m)}Y\_{(m \\times r)},\\text{\\quad\\quad}G\_{(m \\times r)} = A\_{(m \\times n)}Z\_{(n \\times r)}.} \\\\ \\end{array}$$
 
@@ -2131,10 +2221,6 @@ $$\\begin{aligned} \\left. H\_{2}(G\\, \\middle| \\, Y^{\*}) \\right. & \\left. 
 (3.29)
 
 其中
-
-
-
-
 
 $$\\begin{array}{r} \\left. g_{ij}(B,A\\, \\middle| \\, Y^{*}) = {\\sum\\limits_{\\beta = 1}^{n}{\\sum\\limits_{\\alpha = 1}^{m}a_{i,\\beta}}}b_{\\beta,\\alpha}y_{\\alpha,j}^{*} \\right. \\\\ \\end{array}$$  
 
@@ -2178,7 +2264,7 @@ $$\\begin{aligned} \\frac{\\left. \\partial x_{ij}((Q,T\\, \\middle| \\, U)) \\r
 
 (3.36)
 
-对矩阵 `Q` 和 `T` 进行 *向量化*（参见 [115]) 以得到相应的向量 `q` 和 `t`。用 `∇Q` 表示信息交叉熵泛函 `H(Q,T | U)` 的梯度，其分量为 (3.2.2)，用 `∇T` 表示信息交叉熵泛函 `H(Q,T | U)` 的梯度，其分量为 (3.33–3.36)。
+对矩阵 `Q` 和 `T` 进行*向量化*（参见 [115]) 以得到相应的向量 `q` 和 `t`。用 `∇Q` 表示信息交叉熵泛函 `H(Q,T | U)` 的梯度，其分量为 (3.2.2)，用 `∇T` 表示信息交叉熵泛函 `H(Q,T | U)` 的梯度，其分量为 (3.33–3.36)。
 
 算法 `max H[1]` 具有以下结构。
 
@@ -2244,7 +2330,11 @@ $$\\begin{array}{r} {\\bigtriangleup_{Q}(Q,T) = \\frac{\\left. \\partial{\\widet
 
 (3.42)
 
-$$\\begin{array}{r} {\\bigtriangleup_{T}(Q,T) = \\frac{\\left. \\partial{\\widetilde{H}}_{1}(Q,T\\, \\middle| \\, U) \\right.}{\\partial X}\\frac{\\partial X}{\\partial T} = 2Q^{\\intercal}PQT - Q^{\\intercal}P,} \\\\ \\end{array}$$  
+
+
+$$
+\begin{array}{r} {\bigtriangleup_{T}(Q,T) = \frac{\left. \partial{\widetilde{H}}_{1}(Q,T\, \middle| \, U) \right.}{\partial X}\frac{\partial X}{\partial T} = 2Q^{\intercal}PQT - Q^{\intercal}P,} \\ \end{array}
+$$
 
 (3.43)
 
@@ -2254,37 +2344,51 @@ $$\\begin{array}{r} {\\bigtriangleup_{T}(Q,T) = \\frac{\\left. \\partial{\\widet
 
 算法 `max H̃[1]` 具有以下结构。
 
-* *a) 初始步骤：*
+*a) 初始步骤：*
 
-$$\\begin{array}{r} {T^{0} > 0,\\quad Q^{0} > 0.} \\\\ \\end{array}$$
+$$
+\begin{array}{r} {T^{0} > 0,\quad Q^{0} > 0.} \\ \end{array}
+$$
 
-* *b) 第 n 次迭代步骤：*
+*b) 第 n 次迭代步骤：*
 
+$$
+\begin{array}{r} {X^{n} = U\, Q^{n}\, T^{n},} \\ \end{array}
+$$
 
+$$
+\begin{array}{r} \left. H(Q^{n},T^{n}\, \middle| \, U) = {\sum\limits_{i = 1}^{m}{\sum\limits_{j = 1}^{r}x_{ij}^{n}}}\ln\frac{x_{ij}^{n}}{u_{ij}} = H^{n}; \right. \\ \end{array}
+$$
 
+$$
+\begin{array}{r} {Q^{(n + 1)} = \left\{ \begin{aligned} \left. Q^{n} + \gamma_{Q} \bigtriangleup_{Q}(\widetilde{H}(Q^{n},T^{n}\, \middle| \, U) \geq 0 \right. & {\text{if~}Q^{(n + 1)} \geq 0,} \\ Q^{n} & {\text{if~}Q^{(n + 1)} < 0;} \\ \end{aligned}~ \right.} \\ \end{array}
+$$
 
+$$
+\begin{array}{r} {T^{(n + 1)} = \left\{ \begin{aligned} \left. T^{n} + \gamma_{T} \bigtriangleup_{T}(\widetilde{H}(Q^{n},T^{n}\, \middle| \, U) \geq 0 \right. & {\text{if~}T^{(n + 1)} \geq 0,} \\ T^{n} & {\text{if~}T^{(n + 1)} < 0;} \\ \end{aligned}~ \right.} \\ \end{array}
+$$
 
-$$\\begin{array}{r} {X^{n} = U\\, Q^{n}\\, T^{n},} \\\\ \\end{array}$$  
+$$
+\begin{array}{r} {X^{(n + 1)} = U\, Q^{(n + 1)}\, T^{(n + 1)};} \\ \end{array}
+$$
 
-$$\\begin{array}{r} \\left. H(Q^{n},T^{n}\\, \\middle| \\, U) = {\\sum\\limits\_{i = 1}^{m}{\\sum\\limits\_{j = 1}^{r}x\_{ij}^{n}}}\\ln\\frac{x\_{ij}^{n}}{u\_{ij}} = H^{n}; \\right. \\\\ \\end{array}$$  
-
-$$\\begin{array}{r} {Q^{(n + 1)} = \\left\\{ \\begin{aligned} \\left. Q^{n} + \\gamma\_{Q} \\bigtriangleup\_{Q}(\\widetilde{H}(Q^{n},T^{n}\\, \\middle| \\, U) \\geq 0 \\right. & {\\text{if~}Q^{(n + 1)} \\geq 0,} \\\\ Q^{n} & {\\text{if~}Q^{(n + 1)} < 0;} \\\\ \\end{aligned}~ \\right.} \\\\ \\end{array}$$  
-
-$$\\begin{array}{r} {T^{(n + 1)} = \\left\\{ \\begin{aligned} \\left. T^{n} + \\gamma\_{T} \\bigtriangleup\_{T}(\\widetilde{H}(Q^{n},T^{n}\\, \\middle| \\, U) \\geq 0 \\right. & {\\text{if~}T^{(n + 1)} \\geq 0,} \\\\ T^{n} & {\\text{if~}T^{(n + 1)} < 0;} \\\\ \\end{aligned}~ \\right.} \\\\ \\end{array}$$  
-
-$$\\begin{array}{r} {X^{(n + 1)} = U\\, Q^{(n + 1)}\\, T^{(n + 1)};} \\\\ \\end{array}$$  
-
-$$\\begin{array}{r} \\left. H(Q^{(n + 1)},T^{(n + 1)}\\, \\middle| \\, U) = {\\sum\\limits\_{i = 1}^{m}{\\sum\\limits\_{j = 1}^{r}x\_{ij}^{(n + 1)}}}\\ln\\frac{x\_{ij}^{(n + 1)}}{u\_{ij}} = H^{(n + 1)}. \\right. \\\\ \\end{array}$$  
+$$
+\begin{array}{r} \left. H(Q^{(n + 1)},T^{(n + 1)}\, \middle| \, U) = {\sum\limits_{i = 1}^{m}{\sum\limits_{j = 1}^{r}x_{ij}^{(n + 1)}}}\ln\frac{x_{ij}^{(n + 1)}}{u_{ij}} = H^{(n + 1)}. \right. \\ \end{array}
+$$
 
 *c) 停止条件：*
 
-$$\\begin{array}{r} {\\text{If}\\,\\, H^{(n + 1)} - H^{n} \\leq \\delta,\\,\\,\\text{then}\\, STOP.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r} {\text{If}\,\, H^{(n + 1)} - H^{n} \leq \delta,\,\,\text{then}\, STOP.} \\ \end{array}
+$$
 
-算法 **max *H*[1]** 或 **max *H̃*[1]** 给出熵最优的投影矩阵 `Q`((*s* × *r*) )^(*). 因此，可以确定矩阵 `Y`((*m* × *r*) )^(*) (1.5) 以传递到矩阵 `U` 的压缩过程的第二阶段，该过程由投影矩阵 `B`((*n* × *m*)) 和 `A`((*m* × *n*)) 刻画。
+算法 **max *H*[1]** 或 **max *H̃*[1]** 给出熵最优的投影矩阵 `Q`((*s* × *r*))^*。因此，可以确定矩阵 `Y`((*m* × *r*))^* (1.5) 以传递到矩阵 `U` 的压缩过程的第二阶段，该过程由投影矩阵 `B`((*n* × *m*)) 和 `A`((*m* × *n*)) 刻画。
 
 非负矩阵 `B` 和 `A` 的最优元素由下式给出
 
-$$\\begin{array}{r} \\left. (B^{\*},A^{\*}) = \\arg\\max\_{(B,A) \\geq 0}H\_{2}(B,A\\, \\middle| \\, Y^{\*}). \\right. \\\\ \\end{array}$$  
+$$
+\begin{array}{r} \left. (B^{\*},A^{\*}) = \arg\max_{(B,A) \geq 0}H_{2}(B,A\, \middle| \, Y^{\*}). \right. \\ \end{array}
+$$
 
 (3.44)
 
@@ -2292,21 +2396,29 @@ $$\\begin{array}{r} \\left. (B^{\*},A^{\*}) = \\arg\\max\_{(B,A) \\geq 0}H\_{2}(
 
 函数 `H2` 相对于矩阵 `B` 和 `A` 的元素的梯度具有分量
 
-$$\\begin{aligned} \\frac{\\left. \\partial H\_{2}(B,A\\, \\middle| \\, Y^{\*}) \\right.}{\\partial a\_{i,\\beta}} & {= {\\sum\\limits\_{i = 1}^{m}{\\sum\\limits\_{j = 1}^{r}\\frac{\\left. \\partial s\_{ij}(B,A\\, \\middle| \\, Y^{\*}) \\right.}{\\partial g\_{ij}}}}\\frac{\\left. \\partial g\_{ij}(B,A\\, \\middle| \\, Y^{\*}) \\right.}{\\partial a\_{i,\\beta}},} \\\\ & {\\quad i = \\overline{1,n},\\, j = \\overline{1,r},\\,\\beta = \\overline{1,n},} \\\\ \\end{aligned}$$  
+$$
+\begin{aligned} \frac{\left. \partial H_{2}(B,A\, \middle| \, Y^{\*}) \right.}{\partial a_{i,\beta}} & {= {\sum\limits_{i = 1}^{m}{\sum\limits_{j = 1}^{r}\frac{\left. \partial s_{ij}(B,A\, \middle| \, Y^{\*}) \right.}{\partial g_{ij}}}}\frac{\left. \partial g_{ij}(B,A\, \middle| \, Y^{\*}) \right.}{\partial a_{i,\beta}},} \\ & {\quad i = \overline{1,n},\, j = \overline{1,r},\,\beta = \overline{1,n},} \\ \end{aligned}
+$$
 
 (3.45)
 
-$$\\begin{aligned} \\frac{\\left. \\partial H\_{2}(B,A\\, \\middle| \\, Y^{\*}) \\right.}{\\partial b\_{\\beta,\\alpha}} & {= {\\sum\\limits\_{i = 1}^{m}{\\sum\\limits\_{j = 1}^{r}\\frac{\\left. \\partial s\_{ij}(B,A\\, \\middle| \\, Y^{\*}) \\right.}{\\partial g\_{ij}}}}\\frac{\\left. \\partial g\_{ij}(B,A\\, \\middle| \\, Y^{\*}) \\right.}{\\partial b\_{\\beta,\\alpha}},} \\\\ {i =} & {\\overline{1,n},\\, j = \\overline{1,r},\\,\\beta = \\overline{1,n},\\,\\alpha = \\overline{1,m},} \\\\ \\end{aligned}$$  
+$$
+\begin{aligned} \frac{\left. \partial H_{2}(B,A\, \middle| \, Y^{\*}) \right.}{\partial b_{\beta,\alpha}} & {= {\sum\limits_{i = 1}^{m}{\sum\limits_{j = 1}^{r}\frac{\left. \partial s_{ij}(B,A\, \middle| \, Y^{\*}) \right.}{\partial g_{ij}}}}\frac{\left. \partial g_{ij}(B,A\, \middle| \, Y^{\*}) \right.}{\partial b_{\beta,\alpha}},} \\ {i =} & {\overline{1,n},\, j = \overline{1,r},\,\beta = \overline{1,n},\,\alpha = \overline{1,m},} \\ \end{aligned}
+$$
 
 (3.46)
 
 其中
 
-$$\\begin{array}{r} {\\frac{\\left. \\partial s\_{ij}(B,A\\, \\middle| \\, Y^{\*}) \\right.}{\\partial g\_{ij}} = \\ln\\frac{g\_{ij}}{y\_{ij}^{\*}} + 1,\\text{\\quad\\quad}i = \\overline{1,n},\\, j = \\overline{1,r};} \\\\ \\end{array}$$  
+$$
+\begin{array}{r} {\frac{\left. \partial s_{ij}(B,A\, \middle| \, Y^{\*}) \right.}{\partial g_{ij}} = \ln\frac{g_{ij}}{y_{ij}^{\*}} + 1,\text{\quad\quad}i = \overline{1,n},\, j = \overline{1,r};} \\ \end{array}
+$$
 
 (3.47)
 
-$$\\begin{aligned} \\frac{\\left. \\partial g\_{ij}((B,A\\, \\middle| \\, Y^{\*})) \\right.}{\\partial a\_{i,\\beta}} & {= {\\sum\\limits\_{\\alpha = 1}^{m}b\_{\\beta,\\alpha}}y\_{\\alpha,j}^{\*},\\text{\\quad\\quad}\\beta = \\overline{1,n};} \\\\ \\frac{\\left. \\partial g\_{ij}((B,A\\, \\middle| \\, Y^{\*})) \\right.}{\\partial b\_{\\beta,\\alpha}} & {= a\_{i,\\beta}y\_{\\alpha,j}^{\*},\\text{\\quad\\quad}\\beta = \\overline{1,n},\\alpha = \\overline{1,m};} \\\\ i & {= \\overline{1,m},\\quad j = \\overline{1,r}.} \\\\ \\end{aligned}$$  
+$$
+\begin{aligned} \frac{\left. \partial g_{ij}((B,A\, \middle| \, Y^{\*})) \right.}{\partial a_{i,\beta}} & {= {\sum\limits_{\alpha = 1}^{m}b_{\beta,\alpha}}y_{\alpha,j}^{\*},\text{\quad\quad}\beta = \overline{1,n};} \\ \frac{\left. \partial g_{ij}((B,A\, \middle| \, Y^{\*})) \right.}{\partial b_{\beta,\alpha}} & {= a_{i,\beta}y_{\alpha,j}^{\*},\text{\quad\quad}\beta = \overline{1,n},\alpha = \overline{1,m};} \\ i & {= \overline{1,m},\quad j = \overline{1,r}.} \\ \end{aligned}
+$$
 
 (3.48)
 
@@ -2316,29 +2428,49 @@ $$\\begin{aligned} \\frac{\\left. \\partial g\_{ij}((B,A\\, \\middle| \\, Y^{\*}
 
 *a) 初始步骤：*
 
-$$\\begin{array}{r} {\\mathbf{b}^{0} > \\mathbf{0},\\quad\\mathbf{a}^{0} > \\mathbf{0}.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r} {\mathbf{b}^{0} > \mathbf{0},\quad\mathbf{a}^{0} > \mathbf{0}.} \\ \end{array}
+$$
 
 *b) 第 n 次迭代步骤：*
 
-$$\\begin{array}{r} {G^{n} = A^{n}B^{n}Y^{\*},} \\\\ \\end{array}$$  
+$$
+\begin{array}{r} {G^{n} = A^{n}B^{n}Y^{\*},} \\ \end{array}
+$$
 
-$$\\begin{array}{r} \\left. H(B^{n},A^{n}\\, \\middle| \\, Y^{\*}) = {\\sum\\limits\_{i = 1}^{n}{\\sum\\limits\_{j = 1}^{r}g\_{ij}^{n}}}\\ln\\frac{g\_{ij}^{n}}{y\_{ij}^{\*}} = H^{n}; \\right. \\\\ \\end{array}$$  
+$$
+\begin{array}{r} \left. H(B^{n},A^{n}\, \middle| \, Y^{\*}) = {\sum\limits_{i = 1}^{n}{\sum\limits_{j = 1}^{r}g_{ij}^{n}}}\ln\frac{g_{ij}^{n}}{y_{ij}^{\*}} = H^{n}; \right. \\ \end{array}
+$$
 
-$$\\begin{array}{r} {\\mathbf{b}^{(n + 1)} = \\left\\{ \\begin{array}{r} {\\mathbf{b}^{n} + \\gamma\_{\\mathbf{b}}\\nabla\_{B}(\\mathbf{b}^{n},\\mathbf{a}^{n})\\text{if}\\,\\mathbf{b}^{(n + 1)} \\geq \\mathbf{0},} \\\\ {\\mathbf{b}^{n}\\text{if}\\,\\mathbf{b}^{(n + 1)} < \\mathbf{0};} \\\\ \\end{array}~ \\right.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r} {\mathbf{b}^{(n + 1)} = \left\{ \begin{array}{r} {\mathbf{b}^{n} + \gamma_{\mathbf{b}}\nabla_{B}(\mathbf{b}^{n},\mathbf{a}^{n})\text{if}\,\mathbf{b}^{(n + 1)} \geq \mathbf{0},} \\ {\mathbf{b}^{n}\text{if}\,\mathbf{b}^{(n + 1)} < \mathbf{0};} \\ \end{array}~ \right.} \\ \end{array}
+$$
 
-$$\\begin{array}{r} \\left. \\text{\\quad\\quad}\\mathbf{b}^{(n + 1)}\\Rightarrow Q^{(n + 1)}; \\right. \\\\ \\end{array}$$  
+$$
+\begin{array}{r} \left. \text{\quad\quad}\mathbf{b}^{(n + 1)}\Rightarrow Q^{(n + 1)}; \right. \\ \end{array}
+$$
 
-$$\\begin{array}{r} {\\mathbf{a}^{(n + 1)} = \\left\\{ \\begin{array}{r} {\\mathbf{a}^{n} + \\gamma\_{\\mathbf{a}}\\nabla\_{A}(\\mathbf{b}^{n},\\mathbf{a}^{n})\\text{if}\\,\\mathbf{a} \\geq \\mathbf{0},} \\\\ {\\mathbf{a}^{n}\\text{if}\\,\\mathbf{a}^{(n + 1)} < \\mathbf{0};} \\\\ \\end{array}~ \\right.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r} {\mathbf{a}^{(n + 1)} = \left\{ \begin{array}{r} {\mathbf{a}^{n} + \gamma_{\mathbf{a}}\nabla_{A}(\mathbf{b}^{n},\mathbf{a}^{n})\text{if}\,\mathbf{a} \geq \mathbf{0},} \\ {\mathbf{a}^{n}\text{if}\,\mathbf{a}^{(n + 1)} < \mathbf{0};} \\ \end{array}~ \right.} \\ \end{array}
+$$
 
-$$\\begin{array}{r} \\left. \\text{\\quad\\quad}\\mathbf{a}^{(n + 1)}\\Rightarrow A^{(n + 1)}; \\right. \\\\ \\end{array}$$  
+$$
+\begin{array}{r} \left. \text{\quad\quad}\mathbf{a}^{(n + 1)}\Rightarrow A^{(n + 1)}; \right. \\ \end{array}
+$$
 
-$$\\begin{array}{r} {G^{(n + 1)} = A^{(n + 1)}B^{(n + 1)}Y^{\*};} \\\\ \\end{array}$$  
+$$
+\begin{array}{r} {G^{(n + 1)} = A^{(n + 1)}B^{(n + 1)}Y^{\*};} \\ \end{array}
+$$
 
-$$\\begin{array}{r} \\left. H(B^{(n + 1)},A^{(n + 1)}\\, \\middle| \\, Y^{\*}) = {\\sum\\limits\_{i = 1}^{n}{\\sum\\limits\_{j = 1}^{r}g\_{ij}^{(n + 1)}}}\\ln\\frac{g\_{ij}^{(n + 1)}}{y\_{ij}^{\*}} = H^{(n + 1)}. \\right. \\\\ \\end{array}$$  
+$$
+\begin{array}{r} \left. H(B^{(n + 1)},A^{(n + 1)}\, \middle| \, Y^{\*}) = {\sum\limits_{i = 1}^{n}{\sum\limits_{j = 1}^{r}g_{ij}^{(n + 1)}}}\ln\frac{g_{ij}^{(n + 1)}}{y_{ij}^{\*}} = H^{(n + 1)}. \right. \\ \end{array}
+$$
 
 *c) 停止条件：*
 
-$$\\begin{array}{r} {\\text{If}\\,\\, H^{(n + 1)} - H^{(n)} \\leq \\delta,\\,\\,\\text{then}\\, STOP.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r} {\text{If}\,\, H^{(n + 1)} - H^{(n)} \leq \delta,\,\,\text{then}\, STOP.} \\ \end{array}
+$$
 
 ## 3.3 并行过程的熵优化
 
@@ -2346,7 +2478,9 @@ $$\\begin{array}{r} {\\text{If}\\,\\, H^{(n + 1)} - H^{(n)} \\leq \\delta,\\,\\,
 
 直接-逆投影过程的并行实现导致矩阵等式
 
-$$\\begin{array}{r} {U\_{(m \\times s)}Q\_{s \\times r} = Y\_{(m \\times r)},\\quad B\_{(n \\times m)}Y\_{(m \\times r)} = Z\_{(n \\times r)},} \\\\ {Z\_{(n \\times r)}W\_{(r \\times s)} = D\_{(n \\times s)},\\quad E\_{(m \\times n)}D\_{(n \\times s)} = X\_{(m \\times s)}.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r} {U_{(m \times s)}Q_{s \times r} = Y_{(m \times r)},\quad B_{(n \times m)}Y_{(m \times r)} = Z_{(n \times r)},} \\ {Z_{(n \times r)}W_{(r \times s)} = D_{(n \times s)},\quad E_{(m \times n)}D_{(n \times s)} = X_{(m \times s)}.} \\ \end{array}
+$$
 
 (3.49)
 
@@ -2354,17 +2488,17 @@ $$\\begin{array}{r} {U\_{(m \\times s)}Q\_{s \\times r} = Y\_{(m \\times r)},\\q
 
 由等式 (3.49) 可得
 
-$$\\begin{array}{r} {X\_{(m \\times s)} = E\_{(m \\times n)}\\left\\{ {\\left\\lbrack {B\_{(n \\times m)}\\left( {U\_{(m \\times s)}Q\_{(s \\times r)}} \\right)} \\right\\rbrack W\_{(r \\times s)}} \\right\\}.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r} {X_{(m \times s)} = E_{(m \times n)}\left\{ {\left\lbrack {B_{(n \times m)}\left( {U_{(m \times s)}Q_{(s \times r)}} \right)} \right\rbrack W_{(r \times s)}} \right\}.} \\ \end{array}
+$$
 
 (3.50)
 
 这里圆括号、方括号和花括号表示投影操作的顺序。矩阵 `X`((*m* × *s*)) 的元素具有形式
 
-
-
-
-
-$$\\begin{array}{r} {x\_{ij} = {\\sum\\limits\_{\\mu = 1}^{n}e\_{i,\\mu}}{\\sum\\limits\_{\\nu = 1}^{r}w\_{\\nu,j}}{\\sum\\limits\_{\\beta = 1}^{m}b\_{\\mu,\\beta}}{\\sum\\limits\_{\\alpha = 1}^{s}u\_{\\beta,\\alpha}}q\_{\\alpha,\\nu},\\text{\\quad\\quad}i = \\overline{1,m},\\, j = \\overline{1,s}.} \\\\ \\end{array}$$
+$$
+\begin{array}{r} {x_{ij} = {\sum\limits_{\mu = 1}^{n}e_{i,\mu}}{\sum\limits_{\nu = 1}^{r}w_{\nu,j}}{\sum\limits_{\beta = 1}^{m}b_{\mu,\beta}}{\sum\limits_{\alpha = 1}^{s}u_{\beta,\alpha}}q_{\alpha,\nu},\text{\quad\quad}i = \overline{1,m},\, j = \overline{1,s}.} \\ \end{array}
+$$
 
 (3.51)
 
@@ -2372,33 +2506,43 @@ $$\\begin{array}{r} {x\_{ij} = {\\sum\\limits\_{\\mu = 1}^{n}e\_{i,\\mu}}{\\sum\
 
 为衡量变换后矩阵 `X`(*m* × *s*) 与原始矩阵 `U`(*m* × *s*) 的偏差，选择 *信息交叉熵*
 
-$$\\begin{array}{r} \\left. \\mathcal{H}(X\\, \\middle| \\, U) = - {\\sum\\limits\_{i = 1}^{m}{\\sum\\limits\_{j = 1}^{s}s\_{ij}}}(X\\, \\middle| \\, U), \\right. \\\\ \\end{array}$$
+$$
+\begin{array}{r} \left. \mathcal{H}(X\, \middle| \, U) = - {\sum\limits_{i = 1}^{m}{\sum\limits_{j = 1}^{s}s_{ij}}}(X\, \middle| \, U), \right. \\ \end{array}
+$$
 
 (3.52)
 
 其中
 
-$$\\begin{array}{r} {s\_{ij} = x\_{ij}\\ln\\frac{x\_{ij}}{u\_{ij}}.} \\\\ \\end{array}$$
+$$
+\begin{array}{r} {s_{ij} = x_{ij}\ln\frac{x_{ij}}{u_{ij}}.} \\ \end{array}
+$$
 
 (3.53)
 
 由于 (3.51)，信息交叉熵 (3.52) 是矩阵 (`Q`, `B`, `W`, `E`) ≥ 0 的标量函数，即
 
-$$\\begin{array}{r} {\\mathcal{H} = \\mathcal{H}(Q,B,W,E).} \\\\ \\end{array}$$
+$$
+\begin{array}{r} {\mathcal{H} = \mathcal{H}(Q,B,W,E).} \\ \end{array}
+$$
 
 (3.54)
 
 矩阵的最优元素通过最大化函数 `ℋ` 得到：
 
-$$\\begin{array}{r} {(Q^{\*},B^{\*},W^{\*},E^{\*}) = \\arg\\max\_{(Q,B,W,E) \\geq 0}\\mathcal{H}(Q,B,W,E).} \\\\ \\end{array}$$
+$$
+\begin{array}{r} {(Q^{\*},B^{\*},W^{\*},E^{\*}) = \arg\max_{(Q,B,W,E) \geq 0}\mathcal{H}(Q,B,W,E).} \\ \end{array}
+$$
 
 (3.55)
 
+
+
 该问题将使用投影梯度下降的坐标式方案求解。
 
-在并行程序中，有一对矩阵 (`Q`, `B`) 用于相对于第一个变量 (*r* < *s*) 降低原始矩阵 `U`，以及一对矩阵 (`W`, `E`) 用于相对于第二个变量 (*n* < *m*) 压缩矩阵 `U`。坐标式投影梯度下降方案中的每个迭代步由两个子步组成，分别与 (`Q`, `B`)-梯度上的迭代和 (`W`, `E`)-梯度上的迭代相关。
+在并行程序中，有一对矩阵（`Q`，`B`）用于相对于第一个变量（*r* < *s*）降低原始矩阵`U`，以及一对矩阵（`W`，`E`）用于相对于第二个变量（*n* < *m*）压缩矩阵`U`。坐标式投影梯度下降方案中的每个迭代步由两个子步组成，分别与（`Q`，`B`）-梯度上的迭代和（`W`，`E`）-梯度上的迭代相关。
 
-根据 (3.51–3.53)，函数 `ℋ`(`Q`, `B`, `W`, `E`) 的梯度具有分量
+根据（3.51–3.53），函数`ℋ`（`Q`，`B`，`W`，`E`）的梯度具有分量
 
 $$\\begin{array}{r} {\\frac{\\partial\\mathcal{H}}{\\partial q\_{\\alpha,\\nu}} = {\\sum\\limits\_{i = 1}^{m}{\\sum\\limits\_{j = 1}^{s}\\frac{\\partial s\_{ij}}{\\partial x\_{ij}}}}\\,\\frac{\\partial x\_{ij}}{\\partial q\_{\\alpha,\\nu}},} \\\\ {\\frac{\\partial\\mathcal{H}}{\\partial b\_{\\mu,\\beta}} = {\\sum\\limits\_{i = 1}^{m}{\\sum\\limits\_{j = 1}^{s}\\frac{\\partial s\_{ij}}{\\partial x\_{ij}}}}\\,\\frac{\\partial x\_{ij}}{\\partial b\_{\\mu,\\beta}},} \\\\ {\\frac{\\partial\\mathcal{H}}{\\partial w\_{\\nu,j}} = {\\sum\\limits\_{i = 1}^{m}{\\sum\\limits\_{j = 1}^{s}\\frac{\\partial s\_{ij}}{\\partial x\_{ij}}}}\\,\\frac{\\partial x\_{ij}}{\\partial w\_{\\nu,j}},} \\\\ {\\frac{\\partial\\mathcal{H}}{\\partial e\_{i,\\mu}} = {\\sum\\limits\_{i = 1}^{m}{\\sum\\limits\_{j = 1}^{s}\\frac{\\partial s\_{ij}}{\\partial x\_{ij}}}}\\,\\frac{\\partial x\_{ij}}{\\partial e\_{i,\\mu}},} \\\\ \\end{array}$$
 
@@ -2410,9 +2554,9 @@ $$\\begin{aligned} & {\\frac{\\partial s\_{ij}}{\\partial x\_{ij}} = \\ln\\frac{
 
 (3.57)
 
-应用 *矩阵向量化*，过渡到相应的向量 `q`、`b`、`w` 和 `e`。用 `∇[q]`、`∇[b]`、`∇[w]` 和 `∇[e]` 表示相对于这些向量的梯度的分量。
+应用*矩阵向量化*，过渡到相应的向量`q`、`b`、`w`和`e`。用`∇[q]`、`∇[b]`、`∇[w]`和`∇[e]`表示相对于这些向量的梯度的分量。
 
-算法 `max ℋ` 具有以下结构。
+算法`max ℋ`具有以下结构。
 
 * *a) 初始步：*
 
@@ -2452,19 +2596,15 @@ $$\\begin{array}{r} {\\text{If}\\,\\,\\mathcal{H}^{(n + 1)} - \\mathcal{H}^{(n)}
 
 在应用数据矩阵的熵降低时，希望得到具有确定性质的降维矩阵。就 EDR 方法而言，这意味着对投影矩阵的类引入一些限制，这间接影响得到的降维矩阵。考虑投影矩阵的一些有用特征。
 
-
-
-
-
 ### 1. 矩阵的 Frobenius 范数
 
-上面，已假设直接 `Q` 和逆 `T` 投影矩阵具有非负元素。这种假设是由于使用交叉熵来表征它们之间的“距离”。然而，在应用相关机器学习问题中，缩小投影矩阵的类通常是有意义的。这可以通过考虑 Frobenius 矩阵范数来实现：
+上面，已假设直接`Q`和逆`T`投影矩阵具有非负元素。这种假设是由于使用交叉熵来表征它们之间的“距离”。然而，在应用相关机器学习问题中，缩小投影矩阵的类通常是有意义的。这可以通过考虑 Frobenius 矩阵范数来实现：
 
 ![](img/math3_268.jpg)
 
 ### 2. 数据矩阵的信息容量
 
-在降维过程中，数据矩阵中包含的部分信息会丢失。因此，应该以某种方式对其进行度量。引入非负矩阵 `A[n × q]` 的 *信息容量* `ℐ(A)` 的概念，其由下式给出
+在降维过程中，数据矩阵中包含的部分信息会丢失。因此，应该以某种方式对其进行度量。引入非负矩阵`A[n × q]`的信息容量`ℐ(A)`的概念，其由下式给出
 
 $$\begin{array}{r} {\mathcal{I}(A) = {\sum\limits_{i = 1}^{n}{\sum\limits_{j = 1}^{q}a_{ij}}}\ln a_{ij}.} \\ \\ \end{array}$$
 
@@ -2498,13 +2638,13 @@ $$\begin{array}{r} {Q \geq 0,\text{\quad\quad}T \geq 0;} \\ \\ \end{array}$$
 
 (3.63)
 
-* —投影矩阵范数的上界（`a`, `b`），
+* —投影矩阵范数的上界（`a`，`b`），
 
 $$\begin{array}{r} {n_{Q}(Q) = {\sum\limits_{i = 1}^{s}{\sum\limits_{j = 1}^{r}q_{ij}^{2}}} \leq a,\quad n_{T}(T) = {\sum\limits_{i = 1}^{r}{\sum\limits_{j = 1}^{s}t_{ij}^{2}}} \leq b;} \\ \\ \end{array}$$
 
 (3.64)
 
-* —信息容量的 `δ`-可容许减小，
+* —信息容量的`δ`-可容许减小，
 
 $$\begin{array}{r} {\frac{\left. \mathcal{I}(U) - \mathcal{I}(Y(Q \middle| U)) \right.}{\mathcal{I}(U)} \leq \delta.} \\ \\ \end{array}$$
 
@@ -2520,13 +2660,15 @@ $$\begin{array}{r} \left. y_{ij}(Q\, \middle| \, U) = {\sum\limits_{\nu = 1}^{s}
 
 (3.67)
 
-由于目标函数（熵-双线性形式）的性质以及由二次熵不等式指定的约束，交叉熵约减问题 (3.60)–(3.64) 是非凸的；详情参见 [134, 171]。因此，存在一定（先验未知）的局部最优解个数，该问题应作为全局优化问题处理。
+由于目标函数（熵-双线性形式）的性质以及由二次熵不等式指定的约束，交叉熵约减问题（3.60）–（3.64）是非凸的；详情参见[134, 171]。因此，存在一定（先验未知）的局部最优解个数，该问题应作为全局优化问题处理。
 
-将问题 (3.60)–(3.64) 视为非负象限 `R+` 上的局部最小化问题。这里变量是矩阵 `Q` 和 `T` 的元素，每个矩阵包含 `rs` 个条目。利用 *矩阵向量化*，即通过行顺序连接过渡到复向量，构造对应于矩阵 `Q`、`T` 和 `U` 的向量 `q`、`t` 和 `u`。然后交叉熵最小化问题可以表示为
+将问题（3.60）–（3.64）视为非负象限`R+`上的局部最小化问题。这里变量是矩阵`Q`和`T`的元素，每个矩阵包含`rs`个条目。利用*矩阵向量化*，即通过行顺序连接过渡到复向量，构造对应于矩阵`Q`、`T`和`U`的向量`q`、`t`和`u`。然后交叉熵最小化问题可以表示为
 
 $$\begin{array}{r} \left. \mathcal{H}(\mathbf{q},\mathbf{t}\, \middle| \,\mathbf{u})\Rightarrow\min, \right. \\ \\ \end{array}$$
 
 (3.68)
+
+
 
 $$\begin{aligned} & {(\mathbf{q},\mathbf{t}) \in R_{+}^{(2sr)},} \\ & {N_{Q}(\mathbf{q}) = - {\widetilde{N}}_{Q}(\mathbf{q}) + a \geq 0,\quad N_{T}(\mathbf{t}) = - {\widetilde{N}}_{T}(\mathbf{t}) + b \geq 0,} \\ & \left. \mathcal{I}_{Y}(\mathbf{q}) = I_{Y}(\mathbf{q}\, \middle| \,\mathbf{u}) - \gamma(\delta) \geq 0,\quad\gamma(\delta) = (1 - \delta)I_{U}. \right. \\ \end{aligned}$$
 
@@ -2566,7 +2708,7 @@ $$\begin{aligned} & {\mathbf{G}_{\mathbf{q}}(\mathbf{q},\mathbf{t},\gamma) = \ma
 
 (3.74)
 
-乘性算法，以下简称为 **带约束的最小交叉熵 (MCEC)**，具有以下结构。
+乘性算法，以下简称为 `带约束的最小交叉熵 (MCEC)`，具有以下结构。
 
 * *a) 初始步骤：*
 
@@ -2576,167 +2718,201 @@ $$\begin{array}{r} {\mathbf{q}^{0} > \mathbf{0},\quad\mathbf{t}^{0} > \mathbf{0}
 
 $$\begin{array}{r} {\mathbf{q}^{(n + 1)} = \mathbf{q}^{n} \otimes \mathbf{G}_{\mathbf{q}}(\mathbf{q}^{n},\mathbf{t}^{n},\gamma^{n}),} \\ \\ \end{array}$$
 
-
-
-
-
 $$
+
 \begin{array}{r} {\mathbf{t}^{(n + 1)} = \mathbf{t}^{n} \otimes \mathbf{G}_{\mathbf{t}}(\mathbf{q}^{n},\mathbf{t}^{n},\gamma^{n});} \\ \end{array}
+
 $$
 
 $$
+
 \begin{array}{r} \left. \mathbf{t}^{(n + 1)}\rightarrow T^{(n + 1)}; \right. \\ \end{array}
+
 $$
 
 $$
+
 \begin{array}{r} {\gamma^{n + 1} = \gamma^{n} \otimes \mathbf{K}_{\gamma}(\mathbf{q}^{n},\mathbf{t}^{n},\gamma^{n})} \\ \end{array}
+
 $$
 
 $$
+
 \begin{array}{r} \left. \mathbf{q}^{(n + 1)}\rightarrow Q^{(n + 1)}; \right. \\ \end{array}
+
 $$
 
 $$
+
 \begin{array}{r} \left. \mathbf{t}^{(n + 1)}\rightarrow T^{(n + 1)}; \right. \\ \end{array}
+
 $$
 
 $$
+
 \begin{array}{r} {X^{(n + 1)} = U\, Q^{(n + 1)}\, T^{(n + 1)};} \\ \end{array}
+
 $$
 
 $$
+
 \begin{array}{r} \left. H(Q^{(n + 1)},T^{(n + 1)}\, \middle| \, U) = {\sum\limits_{i = 1}^{m}{\sum\limits_{j = 1}^{r}x_{ij}^{(n + 1)}}}\ln\frac{x_{ij}^{(n + 1)}}{u_{ij}} = H^{(n + 1)}. \right. \\ \end{array}
+
 $$
 
 * *c) 停止条件：*
 
 $$
+
 \begin{array}{r} {H^{(n + 1)} - H^{(n)} \leq \Delta.} \\ \end{array}
+
 $$
 
 该算法在初始点为正的情况下收敛到局部最小值 \[143\]。
 
 ## 3.5 线性模型学习中降维效率的估计
 
-线性静态模型被广泛用于描述 RML 问题中的对象。详细考虑原始和降维输入学习集合的这种描述。
+线性静态模型被广泛用于描述 `RML` 问题中的对象。详细考虑原始和降维输入学习集合的这种描述。
 
 ### 3.5.1 线性模型
 
-线性静态对象具有单个输出 *z* 和 *s* 个输入 **u** ∈ *R*^(*s*)。该对象的状态由具有参数权重 **a** 的 *s* 个属性表征。对象的数学模型是随机化的，即参数 **a** 是区间类型的随机变量：
+线性静态对象具有单个输出 `z` 和 `s` 个输入 `u` ∈ `R^(s)`。该对象的状态由具有参数权重 `a` 的 `s` 个属性表征。对象的数学模型是随机化的，即参数 `a` 是区间类型的随机变量：
 
 $$
+
 \begin{array}{r} {\mathbf{a} \in \mathcal{A} = \left\{ \mathbf{a}^{-} \leq \mathbf{a} \leq \mathbf{a}^{+} \right\}.} \\ \end{array}
+
 $$
 
 (3.75)
 
-这些参数的概率特性由概率密度函数 (PDF) *P*(**a**) 刻画。由于对象是线性和静态的，其模型的输出 *z* 与输入具有线性关系：
+这些参数的概率特性由概率密度函数 (PDF) `P(a)` 刻画。由于对象是线性和静态的，其模型的输出 `z` 与输入具有线性关系：
 
 $$
+
 \begin{array}{r} {z = \left\langle \mathbf{u},\mathbf{a} \right\rangle,} \\ \end{array}
+
 $$
 
 (3.76)
 
 其中 ⟨,⟩ 表示向量的标量积。
 
-假设存在一个由 *m* 个此类对象组成的输入学习集合 𝒰，其状态由属性空间 *R*^(*s*) 中的向量 **u**^((1)), …, **u**^((*m*)) 刻画，输出由向量 **y** = {*y*[1],…,*y*[*m*]} 刻画。由于对象的线性性，模型的输出形式为
+假设存在一个由 `m` 个此类对象组成的输入学习集合 `𝒰`，其状态由属性空间 `R^(s)` 中的向量 `u^(1)`, …, `u^((m))` 刻画，输出由向量 `y` = `{y[1],…,y[m]}` 刻画。由于对象的线性性，模型的输出形式为
 
 $$
+
 \begin{array}{r} {\mathbf{z} = U\mathbf{a},\text{\quad\quad}\mathbf{z} = \left\{ z_{1},\ldots,z_{m} \right\},} \\ \end{array}
+
 $$
 
 (3.77)
 
-其中 *U* = *U*[(*m* × *s*)] 是尺寸为 (*m* × *s*) 的非负矩阵，且
+其中 `U` = `U[(m × s)]` 是尺寸为 `(m × s)` 的非负矩阵，且
 
 $$
+
 \begin{array}{r} {\mathbf{z} \in \mathcal{Z} = \lbrack\mathbf{z}^{-},\mathbf{z}^{+}\rbrack,\text{\quad\quad}\mathbf{z}^{-} = U\mathbf{a}^{-};\,\,\mathbf{z}^{+} = U\mathbf{a}^{+}.} \\ \end{array}
+
 $$
 
 (3.78)
 
-一个常见的假设是对象的输出包含由随机向量 $\overline{\xi} = \left\{ \xi_{1},\ldots,\xi_{m} \right\}$ 描述的测量误差，该向量为区间类型，即
+一个常见的假设是对象的输出包含由随机向量 `overline{ξ} = {ξ_1,…,ξ_m}` 描述的测量误差，该向量为区间类型，即
 
 $$
+
 \begin{array}{r} {\overline{\xi} \in \mathcal{K} = \left\{ {\overline{\xi}}^{-} \leq \overline{\xi} \leq {\overline{\xi}}^{+} \right\},} \\ \end{array}
+
 $$
 
 (3.79)
 
-其概率密度函数为 $L(\overline{\xi}).$ 此外，假设模型参数和测量噪声的 PDF 都是连续可微的。
+其概率密度函数为 `L(overline{ξ})`. 此外，假设模型参数和测量噪声的 PDF 都是连续可微的。
 
 模型的观测输出被某些噪声扭曲，形式为
 
 $$
+
 \begin{array}{r} {\mathbf{v} = \mathbf{z} + \overline{\xi} = U_{(m \times s)}\,\mathbf{a} + \overline{\xi}.} \\ \end{array}
+
 $$
 
 (3.80)
 
-向量 **v** 属于 *m* 维平行六面体
+向量 `v` 属于 `m` 维平行六面体
 
 $$
+
 \begin{array}{r} {\mathcal{V} = \lbrack\mathbf{v}^{-},\mathbf{v}^{+}\rbrack,\text{\quad\quad}\mathbf{v}^{-} = \mathbf{z}^{-} + {\overline{\xi}}^{-};\,\,\mathbf{v}^{+} = \mathbf{z}^{+} + {\overline{\xi}}^{+}.} \\ \end{array}
+
 $$
 
 (3.81)
 
-RML 过程产生对应 PDF 的估计 *P̂*(**a**) 和 $\hat{L}(\overline{\xi})$。这是利用学习集合 (𝒰,**y**) 和随机化模型 (3.80) 完成的。所得估计用于实现该模型，即生成随机向量 **v** ∈ *R*^(*m*) 的集合 𝒱。生成此类集合是随机化机器学习问题之一 \[145\]，进一步称为 *RML 的 s 问题*。
+`RML` 过程产生对应 PDF 的估计 `P̂(a)` 和 `hat{L}(overline{ξ})`。这是利用学习集合 `(𝒰,y)` 和随机化模型 (3.80) 完成的。所得估计用于实现该模型，即生成随机向量 `v` ∈ `R^m` 的集合 `𝒱`。生成此类集合是随机化机器学习问题之一 \[145\]，进一步称为 `RML 的 s 问题`。
 
-在许多情况下，属性空间的维度 *s* 对于现有计算能力来说非常高。因此，将该空间降至给定维度 *r* < *s* 是有意义的。
+在许多情况下，属性空间的维度 `s` 对于现有计算能力来说非常高。因此，将该空间降至给定维度 `r` < `s` 是有意义的。
 
-引入输入数据矩阵 *W*[(*m* × *r*)]，它将表征在降维属性空间 *R*^(*r*) 中 *m* 个对象的集合 𝒲，以及具有参数 **b** = {*b*[1],…,*b*[*r*]} ∈ *R*^(*r*) 的随机化模型：
+引入输入数据矩阵 `W[(m × r)]`，它将表征在降维属性空间 `R^(r)` 中 `m` 个对象的集合 `𝒲`，以及具有参数 `b` = `{b[1],…,b[r]}` ∈ `R^r` 的随机化模型：
 
 $$
+
 \begin{array}{r} {\mathbf{w} = W_{(m \times r)}\mathbf{b},\text{\quad\quad}\mathbf{b} \in R^{r},\,\, \mathbf{w} \in R^{m}.} \\ \end{array}
+
 $$
 
 (3.82)
 
-参数向量 **b** 由区间类型的随机分量组成，即
+参数向量 `b` 由区间类型的随机分量组成，即
 
 $$
+
 \begin{array}{r} {\mathbf{b} \in \mathcal{B} = \lbrack\mathbf{b}^{-},\mathbf{b}^{+}\rbrack,} \\ \end{array}
+
 $$
 
 (3.83)
 
-其 PDF 为 *B*(**b**)。观测向量形式为
+其 PDF 为 `B(b)`。观测向量形式为
 
 $$
+
 \begin{array}{r} {\mathbf{t} = \mathbf{w} + \overline{\zeta},\text{\quad\quad}\overline{\zeta} \in R^{m}.} \\ \end{array}
+
 $$
 
 (3.84)
 
-随机向量 $\overline{\zeta}$ 描述测量误差且为区间类型，即
+随机向量 `overline{ζ}` 描述测量误差且为区间类型，即
 
 $$
+
 \begin{array}{r} {\overline{\zeta} \in \mathcal{J} = \lbrack{\overline{\zeta}}^{-},{\overline{\zeta}}^{+}\rbrack,} \\ \end{array}
+
 $$
 
 (3.85)
 
-其 PDF 为 $Q(\overline{\zeta}).$ 最后，
+其 PDF 为 `Q(overline{ζ})`. 最后，
 
 $$
+
 \begin{array}{r} {\mathbf{t} \in \mathcal{T} = \lbrack\mathbf{t}^{-},\mathbf{t}^{+}\rbrack,\text{\quad\quad}\mathbf{t}^{-} = W\mathbf{b}^{-} + {\overline{\zeta}}^{-},\,\, \mathbf{t}^{+} = W\mathbf{b}^{+} + {\overline{\zeta}}^{+}.} \\ \end{array}
+
 $$
 
 (3.86)
 
-所有表征模型参数和测量噪声的 PDF 均假定为连续可微函数。PDF *B*(**b**) 的估计以及相应集合 𝒯 的生成是另一个随机化机器学习问题，称为 *RML 的 r 问题*。
+所有表征模型参数和测量噪声的 PDF 均假定为连续可微函数。PDF `B(b)` 的估计以及相应集合 `𝒯` 的生成是另一个随机化机器学习问题，称为 `RML 的 r 问题`。
 
-### 3.5.2 比较 RML 的 *s* 与 *r* 问题
+### 3.5.2 比较 RML 的 s 与 r 问题
 
-这些问题将通过三阶段方法进行比较，如下。第一阶段，使用学习集合 (𝒰,**y**) 和 (𝒲,**y**) 分别由 RML 过程求解 *s* 和 *r* 问题。该阶段得到模型参数和测量噪声的熵最优 PDF，*s* 问题为 *P*^(\*)(**a**) 和 $L^{\*}(\overline{\xi})$，*r* 问题为 *B*^(\*)(**b**) 和 $Q^{\*}(\overline{\zeta})$。第二阶段，利用线性模型 (3.80, 3.84) 计算在集合 𝒞 = 𝒱 ∩ 𝒯 上归一化的 PDF *F**s* 和 *F**r*。最后，第三阶段计算 Kullback–Leibler 相对熵 \[102\]，它表征 PDF *F**s* 和 *F**r* 之间的绝对差异。该方法称为 *s&r 比较* (SRC)。
+这些问题将通过三阶段方法进行比较，如下。第一阶段，使用学习集合 `(𝒰,y)` 和 `(𝒲,y)` 分别由 `RML` 过程求解 `s` 和 `r` 问题。该阶段得到模型参数和测量噪声的熵最优 PDF，`s` 问题为 `P*(a)` 和 `L*(overline{ξ})`，`r` 问题为 `B*(b)` 和 `Q*(overline{ζ})`。第二阶段，利用线性模型 (3.80, 3.84) 计算在集合 `𝒞` = `𝒱` ∩ `𝒯` 上归一化的 PDF `F_s` 和 `F_r`。最后，第三阶段计算 Kullback–Leibler 相对熵 \[102\]，它表征 PDF `F_s` 和 `F_r` 之间的绝对差异。该方法称为 `s&r 比较 (SRC)`。
 
-考虑 *第一阶段*，并回顾求解 *s* 问题的 RML 过程；参见由 (3.80) 描述的模型。
+考虑 `第一阶段`，并回顾求解 `s` 问题的 `RML` 过程；参见由 (3.80) 描述的模型。
 
-为了在最大不确定性下获得最佳估计（学习质量最高），最大化定义在 PDF *P*(**a**) 和 $L(\overline{\xi})$ 上的熵泛函，
-
-
+为了在最大不确定性下获得最佳估计（学习质量最高），最大化定义在 PDF `P(a)` 和 `L(overline{ξ})` 上的熵泛函，
 
 
 
@@ -2840,42 +3016,39 @@ $$\begin{aligned} H_{s} & {= {\int_{\mathcal{C}}{\widetilde{F}}_{s}}(\mathbf{c})
 
 ## 3.6 EDR 在二分类问题中效率的估计
 
-EDR 方法将通过计算实验在真实数据上与主成分分析 (PCA) 和随机投影 (RP) 方法进行表征和比较效率，该实验针对具有线性分类器的二分类问题。
+EDR 方法将通过计算实验在真实数据上与主成分分析 `PCA` 和随机投影 `RP` 方法进行表征和比较效率，该实验针对具有线性分类器的二分类问题。
 
 ### 3.6.1 线性分类器
 
 ### 3.6.2 计算实验方案
 
-遵循 \[162, 190\]，EDR 方法通过求解原始属性空间和缩减属性空间中的二分类问题，并在分类准确率 (3.107) 方面与 PCA 和 RP 方法进行比较，从而进行了实验研究。为了使结果稳定，使用了蒙特卡洛模拟和交叉验证。
+遵循 \[162, 190\]，EDR 方法通过求解原始属性空间和缩减属性空间中的二分类问题，并在分类准确率 (3.107) 方面与 `PCA` 和 `RP` 方法进行比较，从而进行了实验研究。为了使结果稳定，使用了蒙特卡洛模拟和交叉验证。
 
 实验包含若干阶段：
 
 1. 在原始空间中求解分类问题；
-2. 在 PCA 缩减空间中求解分类问题；
-3. 在 RP 缩减空间中求解分类问题；
-4. 在 EDR 缩减空间中求解分类问题。
+2. 在 `PCA` 缩减空间中求解分类问题；
+3. 在 `RP` 缩减空间中求解分类问题；
+4. 在 `EDR` 缩减空间中求解分类问题。
 
-阶段 2–4 依次针对维度每次减少 1 实现，即 *r* = *s* − 1, …, 1，其中 *r* 表示缩减空间的维度。阶段 4 对 *δ* 的不同取值实现，即信息容量的允许下降量。
+阶段 2–4 依次针对维度每次减少 1 实现，即 `r` = `s` − 1, …, 1，其中 `r` 表示缩减空间的维度。阶段 4 对 `δ` 的不同取值实现，即信息容量的允许下降量。
 
 实验研究用的 Python 程序在 OS Linux 上开发，使用了 `numpy 1.14.3`、`scipy 1.1.0`、`sklearn 0.19.1` 库。通过 scikit-learn 库 \[128\] 的相应类 `PCA` 和 `GaussianRandomProjection` 进行主成分分析和随机投影方法降维。分类问题使用支持向量机 \[70\] 求解，即使用线性核的 `SVC` 类。
 
-实验研究基于两组数据集如下。第一组 (*simulation*) 是一个包含 100 个对象、10 个属性的合成数据集。数据由 `make_classification` 函数 \[26\] 生成，参数为 `n_classes=2`、`n_clusters_per_class=2`、`n_informative=10`、`n_redundant=0` 和 `class_sep=1.0`。该函数在维度为 `n_informative` 的空间中生成点，围绕超立方体的边缘呈正态分布（零均值、单位方差），并加入少量噪声。
+实验研究基于两组数据集如下。第一组 (`simulation`) 是一个包含 100 个对象、10 个属性的合成数据集。数据由 `make_classification` 函数 \[26\] 生成，参数为 `n_classes=2`、`n_clusters_per_class=2`、`n_informative=10`、`n_redundant=0` 和 `class_sep=1.0`。该函数在维度为 `n_informative` 的空间中生成点，围绕超立方体的边缘呈正态分布（零均值、单位方差），并加入少量噪声。
 
-第二组数据集 (*heart*) 由心脏病研究中收集的真实数据组成 \[2\]。该数据集包含 270 个对象、13 个属性。
+第二组数据集 (`heart`) 由心脏病研究中收集的真实数据组成 \[2\]。该数据集包含 270 个对象、13 个属性。
 
 所有实验中，数据均归一化到区间 \[0,1\]。
 
 ### 3.6.3 实验结果
-
-
-
-
 
 所有实验均采用自助法 \[70\] 进行交叉验证。更具体地说，从原始数据集中随机选择 30 个对象 2 次；其中 20 个用于学习分类器，其余 10 个用于测试；对每个样本的结果取平均值。然后重复实验 10 次，结果也取平均值。每个阶段的降维均针对整个学习样本（30 个对象）进行。
 
 问题 (3.32)–(3.35) 使用非负正交集上的约束优化方法 `SLSQP` \[97\] 求解，由 `scipy` 库中的 `minimize` 函数实现，参数为 `ftol=1e-4` 和 `maxiter=1000`。请注意，对于某些 `δ` 值，在给定的优化参数下该方法未得到解。在这种情况下，使用找到的最后一个解。
 
 #### 1. ε 随对象数（样本量 m）的依赖关系
+
 研究三种降维方法对此依赖关系十分重要，以便确定其应用范围。众所周知，熵最大化方法及其衍生方法，特别是 `EDR` 方法，通常在属性空间维度相比之下数据量有限的情况下使用。在“大数据”的情况下，其应用没有根本限制，但计算困难会显著增加。至于 `PCA`，对于大量数据（足够大的 `m`）及其异质性，方法变得不稳定 \[136\]。
 
 对 `simulation` 数据集在小样本量下的分类准确率进行了研究。结果分别列于 表 3.1、表 3.2、表 3.3 中，`$m = \overline{5,10}.$` 对于这些集合中的每一个，属性空间被降维至大小 `$r = \overline{5,10}.$`
@@ -2925,6 +3098,7 @@ EDR 方法将通过计算实验在真实数据上与主成分分析 (PCA) 和随
 根据 表 3.1、表 3.2、表 3.3，`EDR` 和 `RP` 方法在样本量与属性空间维度的任意比例下均可操作。同时，`PCA` 在 `m` < `r` 时无法工作。
 
 #### 2. m ≫ r 时的分类准确率
+
 表 3.4 和 3.5，以及 图 3.2，显示了不同降维空间维度的分类准确率。该准确率针对 `simulation` 和 `heart` 两个数据集进行了估计，以便分析其相对于数据集的稳定性。
 
 表 3.4: 数据集 `simulation` 的分类准确率。
@@ -2954,7 +3128,10 @@ EDR 方法将通过计算实验在真实数据上与主成分分析 (PCA) 和随
 图 3.2: 数据集 `simulation` 和 `heart` 的分类准确率。
 
 #### 3. ε 随信息容量允许下降 δ 的依赖关系（EDR 方法）
+
 表 3.6 给出了不同 `δ` 值下的数据集 `simulation` 的分类准确率，而 图 3.3 展示了相应的曲线图。此外，表 3.7 和 图 3.3 呈现了数据集 `heart` 的相同特征。
+
+
 
 表 3.6: 数据集 `simulation` 的 `ε(δ)` 依赖关系（EDR 方法）。
 
@@ -2987,6 +3164,7 @@ EDR 方法将通过计算实验在真实数据上与主成分分析 (PCA) 和随
 |  |
 
 #### 4. 降维引起的的信息损失
+
 如上所述，属性空间的降维会导致信息损失。
 
 此类损失的相对值可由
@@ -3016,90 +3194,60 @@ $$
 
 |  |
 | --- |
-
-
-
-
-
-| *r* || 12 || 11 || 10 || 9 || 8 || 7 |
-
-| PCA || 0.2935 || 0.3317 || 0.3857 || 0.4399 || 0.4941 || 0.5671 |
-
-| --- | --- | --- | --- | --- | --- | --- |
-
-| RP || 0.1444 || 0.3708 || 0.5190 || 0.6051 || 0.6736 || 0.8167 |
-
-| EDR || 0.3083 || 0.3013 || 0.3184 || 0.2772 || 0.2589 || 0.2792 |
-
+| `r` || 12 || 11 || 10 || 9 || 8 || 7 |
+| `PCA` || 0.2935 || 0.3317 || 0.3857 || 0.4399 || 0.4941 || 0.5671 |
+| --- | --- | --- | --- | --- | --- |
+| `RP` || 0.1444 || 0.3708 || 0.5190 || 0.6051 || 0.6736 || 0.8167 |
+| `EDR` || 0.3083 || 0.3013 || 0.3184 || 0.2772 || 0.2589 || 0.2792 |
 |  |
 
-Figure 3.4 显示了数据集 *simulation* 和 *heart* 的相对信息损失图。
+Figure 3.4 显示了数据集 `simulation` 和 `heart` 的相对信息损失图。
 
 ![Figure 3.4: Relative information losses for data sets simulation and heart.](img/fig3_4.jpg)
 
-Figure 3.4: 数据集 *simulation* 和 *heart* 的相对信息损失。
+Figure 3.4: 数据集 `simulation` 和 `heart` 的相对信息损失。
 
-不同 *δ* 值下 EDR 方法引起的相对信息损失汇总在 Tables 3.10–3.11 中。
+不同 `δ` 值下 EDR 方法引起的相对信息损失汇总在 Tables 3.10–3.11 中。
 
-Table 3.10: 数据集 *simulation* 的依赖关系 *I*(*δ*)（EDR 方法）。
+Table 3.10: 数据集 `simulation` 的依赖关系 `I(δ)`（EDR 方法）。
 
 |  |
-
 | --- |
-
-| *δ / r* || 9 || 8 || 7 || 6 || 5 |
-
+| `δ / r` || 9 || 8 || 7 || 6 || 5 |
 | 0.1 || 0.0959 || 0.0997 || 0.1594 || 0.2795 || 0.3996 |
-
 | --- | --- | --- | --- | --- | --- |
-
 | 0.2 || 0.2000 || 0.1932 || 0.1982 || 0.2656 || 0.3880 |
-
 | 0.3 || 0.2896 || 0.2896 || 0.2952 || 0.2943 || 0.3805 |
-
 | 0.4 || 0.3615 || 0.3887 || 0.3933 || 0.3981 || 0.3992 |
-
 | 0.5 || 0.3971 || 0.4842 || 0.4707 || 0.5130 || 0.4954 |
-
 |  |
 
 ![Figure 3.5: Dependence I(\\delta) for data sets simulation and heart (EDR method).](img/fig3_5.jpg)
 
-Figure 3.5: 数据集 *simulation* 和 *heart* 的依赖关系 *I*(*δ*)（EDR 方法）。
+Figure 3.5: 数据集 `simulation` 和 `heart` 的依赖关系 `I(δ)`（EDR 方法）。
 
-Table 3.11: 数据集 *heart* 的依赖关系 *I*(*δ*)（EDR 方法）。
+Table 3.11: 数据集 `heart` 的依赖关系 `I(δ)`（EDR 方法）。
 
 |  |
-
 | --- |
-
-| *δ / r* || 12 || 11 || 10 || 9 || 8 || 7 |
-
+| `δ / r` || 12 || 11 || 10 || 9 || 8 || 7 |
 | 0.1 || 0.1071 || 0.0478 || 0.0821 || 0.1244 || 0.1065 || 0.1254 |
-
-| --- | --- | --- | --- | --- | --- | --- |
-
+| --- | --- | --- | --- | --- | --- |
 | 0.2 || 0.5947 || 0.0898 || 0.0676 || 0.0568 || 0.1435 || 0.1428 |
-
 | 0.3 || 0.3344 || 0.7126 || 0.6659 || 0.3530 || 0.2961 || 0.2992 |
-
 | 0.4 || 0.2921 || 0.3878 || 0.3833 || 0.4066 || 0.2814 || 0.3974 |
-
 | 0.5 || 0.2134 || 0.2683 || 0.3932 || 0.4452 || 0.4670 || 0.4310 |
-
 |  |
 
 计算实验的结果允许得出以下结论：
 
-*   EDR 方法对于学习和测试数据集合中的任意数据量都是可操作的；当数据量小于属性空间的维度时，PCA 不起作用；RP 方法的可操作性需要进一步研究。
+*   `EDR` 方法对于学习和测试数据集合中的任意数据量都是可操作的；当数据量小于属性空间的维度时，`PCA` 不起作用；`RP` 方法的可操作性需要进一步研究。
+*   应用 `EDR` 方法时，信息损失水平在属性空间减半时仍保持；对于 `PCA` 和 `RP` 方法，随着属性空间维度减小，信息损失水平显著增长。
+*   由于 `EDR` 方法中的控制参数 `δ`，相对信息损失水平可以被调节。同时，这种可能性在 `PCA` 和 `RP` 方法中不存在。
 
-*   应用 EDR 方法时，信息损失水平在属性空间减半时仍保持；对于 PCA 和 RP 方法，随着属性空间维度减小，信息损失水平显著增长。
+### 3.7 随机投影的熵方法
 
-*   由于 EDR 方法中的控制参数 *δ*，相对信息损失水平可以被调节。同时，这种可能性在 PCA 和 RP 方法中不存在。
-
-## 3.7 随机投影的熵方法
-
-### 3.7.1 熵随机投影问题的陈述
+#### 3.7.1 熵随机投影问题的陈述
 
 **1. 数据矩阵的点集表示：紧凑性指标**
 
@@ -3111,13 +3259,13 @@ $$
 
 (3.109)
 
-这里 *m* 和 *s* 分别是对象数及其属性数；*R*^(*s*) 表示属性空间。假设该数据矩阵的元素是标准化的，即 $u\_{ij} \in \lbrack 0,1\rbrack,\, i = \overline{1,m},\, j = \overline{1,s}.$
+这里 `m` 和 `s` 分别是对象数及其属性数；`R^(s)` 表示属性空间。假设该数据矩阵的元素是标准化的，即 `u_ij ∈ [0,1] , i = \overline{1,m}, j = \overline{1,s}.`
 
-*矩阵 *U*[(*m* × *s*)] 在属性空间 *R*[(*m*)]^(*s*) 中的点集表示是点 {**u**^((1)),…,**u**^((*m*))} 的集合 𝔘[*m*]^(*s*)*。
+*矩阵 `U[(m × s)]` 在属性空间 `R[(m)]^(s)` 中的点集表示是点 {**u**^((1)),…,**u**^((*m*))} 的集合 `𝔘[m]^(s)`*。
 
-例如，100 个二维点的集合 𝔘[100]² 表示矩阵 *U*[(100 × 2)]。
+例如，100 个二维点的集合 `𝔘[100]²` 表示矩阵 `U[(100 × 2)]`。
 
-点集 𝔘[*m*]^(*s*) 中点的分散程度可以用 *紧凑性指标* *ρ*[*U*] 来表征，它定义为点之间距离的算术平均值：
+点集 `𝔘[m]^(s)` 中点的分散程度可以用 *紧凑性指标* `ρ[U]` 来表征，它定义为点之间距离的算术平均值：
 
 $$
 \begin{array}{r} {\rho\_{U} = \frac{2}{m(m - 1)}{\sum\limits_{(\alpha,\beta) = 1,\mspace{2mu}\alpha \neq \beta}^{m}\varrho}(\mathbf{u}^{(\alpha)},\mathbf{u}^{(\beta)}),} \\ \end{array}
@@ -3125,7 +3273,7 @@ $$
 
 (3.110)
 
-其中 𝜚(**u**^((*α*)), **u**^((*β*))) 给出点 **u**^((*α*)) 和 **u**^((*β*)) 之间的距离。如果数据矩阵的元素是标准化的，则
+其中 `𝜚(u^(α), u^(β))` 给出点 `u^(α)` 和 `u^(β)` 之间的距离。如果数据矩阵的元素是标准化的，则
 
 $$
 \begin{array}{r} {0 \leq \varrho(\mathbf{u}^{(\alpha)},\mathbf{u}^{(\beta)}) \leq \sqrt{2}\quad\quad\text{for~all}\,(\alpha,\beta) = \overline{1,m},} \\ {0 \leq \rho\_{U} \leq 1.} \\ \end{array}
@@ -3135,15 +3283,13 @@ $$
 
 引入以下数据矩阵的变换类：
 
-*   (*m**r*) *\-类*: *U*[(*m* × *s*)]→*Y*[(*m* × *r*)]，集合 𝔜[*m*]^(*r*) 在空间 *R*[(*m*)]^(*r*) 中；
-
-*   (*n**s*) *\-类*: *U*[(*m* × *s*)]→*B*[(*n* × *s*)]，集合 𝔅[*n*]^(*s*) 在空间 *R*[(*n*)]^(*s*) 中；
-
-*   (*n**r*) *\-类*: *U*[(*m* × *s*)]→*Z*[(*n* × *r*)]，集合 ℨ[*n*]^(*r*) 在空间 *R*[(*n*)]^(*r*) 中。
+*   (`m r`) \-类: `U[(m × s)]→Y[(m × r)]`，集合 `𝔜[m]^(r)` 在空间 `R[(m)]^(r)` 中；
+*   (`n s`) \-类: `U[(m × s)]→B[(n × s)]`，集合 `𝔅[n]^(s)` 在空间 `R[(n)]^(s)` 中；
+*   (`n r`) \-类: `U[(m × s)]→Z[(n × r)]`，集合 `ℨ[n]^(r)` 在空间 `R[(n)]^(r)` 中。
 
 **2. 随机投影矩阵及其概率特征**
 
-*1. 投影到空间 *R*[(*m*)]^(*r*)（生成集合 𝔜[*m*]^(*r*)）* 该操作将使用投影矩阵 *Q*[(*s* × *r*)] 执行：
+*1. 投影到空间 `R[(m)]^(r)`（生成集合 `𝔜[m]^(r)`）* 该操作将使用投影矩阵 `Q[(s × r)]` 执行：
 
 $$
 \begin{aligned} & {Y\_{(m \times r)} = \left( \begin{array}{l} \mathbf{y}^{(1)} \\ \cdots \\ \mathbf{y}^{(m)} \\ \end{array} \right) = U\_{(m \times s)}Q\_{(s \times r)};} \\ & {\quad y\_{j}^{(i)} = {\sum\limits\_{k = 1}^{s}u\_{ik}}q\_{kj},\, \, i = \overline{1,m};\, j = \overline{1,r}.} \\ \end{aligned}
@@ -3151,7 +3297,7 @@ $$
 
 (3.112)
 
-投影矩阵 *Q*[(*s* × *r*)] 是随机的且为区间类型，即
+投影矩阵 `Q[(s × r)]` 是随机的且为区间类型，即
 
 $$
 \begin{array}{r} {Q\_{(s \times r)} \in \mathcal{Q} = \lbrack Q^{-},Q^{+}\rbrack.} \\ \end{array}
@@ -3159,9 +3305,9 @@ $$
 
 (3.113)
 
-投影矩阵的概率性质由定义在 𝒬 上的连续可微概率密度函数（PDF） *P*(*Q*) 表征。
+投影矩阵的概率性质由定义在 `𝒬` 上的连续可微概率密度函数（PDF） `P(Q)` 表征。
 
-向量 **y**^((*i*)) 形成 *r* 维点的集合 𝒴[*m*]^(*r*)，共 *m* 个。定义它们之间的距离 𝜚(**y**^((*α*)),**y**^((*β*)) | *Q*[(*s* × *r*)]) 和紧凑性指标
+向量 `y^(i)` 形成 `r` 维点的集合 `𝒴[m]^(r)`，共 `m` 个。定义它们之间的距离 `𝜚(y^(α),y^(β) | Q[(s × r)])` 和紧凑性指标
 
 $$
 \begin{array}{r} \left. \rho\_{Y}(Q) = \frac{2}{m(m - 1)}{\sum\limits_{(\alpha,\beta) = 1,\mspace{2mu}\alpha \neq \beta}^{m}\varrho}(\mathbf{y}^{(\alpha)},\mathbf{y}^{(\beta)}\, \middle| \, Q\_{(s \times r)}). \right. \\ \end{array}
@@ -3179,7 +3325,7 @@ $$
 
 (3.115)
 
-*2. 投影到空间 *R*^((*n* × *s*))（生成集合 𝔅[*n*]^(*s*)）* 该操作将使用具有随机元素的投影矩阵 *T*[(*n* × *m*)] 执行：
+*2. 投影到空间 `R^((n × s))`（生成集合 `𝔅[n]^(s)`）* 该操作将使用具有随机元素的投影矩阵 `T[(n × m)]` 执行：
 
 $$
 \begin{aligned} B\_{(n \times s)} & {= \left( \begin{array}{l} \mathbf{b}^{(1)} \\ \cdots \\ \mathbf{b}^{(n)} \\ \end{array} \right) = T\_{(n \times m)}U\_{(m \times s)};\quad b\_{j}^{(i)} = {\sum\limits\_{k = 1}^{m}t\_{ik}}\, u\_{kj},} \\ & {\quad i = \overline{1,n};\, j = \overline{1,s}.} \\ \end{aligned}
@@ -3187,7 +3333,7 @@ $$
 
 (3.116)
 
-投影矩阵 *T*[(*n* × *m*)] 是随机的且为区间类型，即
+投影矩阵 `T[(n × m)]` 是随机的且为区间类型，即
 
 $$
 \begin{array}{r} {T\_{(n \times m)} \in \mathcal{T} = \lbrack T^{-},T^{+}\rbrack.} \\ \end{array}
@@ -3195,53 +3341,59 @@ $$
 
 (3.117)
 
-其概率性质由定义在 𝒯 上的 PDF *W*(*T*) 表征。
+其概率性质由定义在 `𝒯` 上的 PDF `W(T)` 表征。
 
-向量 **b**^((*i*)) 形成 *s* 维点的集合 𝔅[*n*]^(*s*)，共 *n* < *m* 个。定义紧凑性指标
+向量 `b^(i)` 形成 `s` 维点的集合 `𝔅[n]^(s)`，共 `n < m` 个。定义紧凑性指标
 
-
-
-
-
-$$\\begin{array}{r} \\left. \\rho\_{B}(T) = \\frac{2}{n(n - 1)}{\\sum\\limits\_{(\\alpha,\\beta),\\mspace{2mu}\\alpha \\neq \\beta}^{n}\\varrho}(\\mathbf{b}^{(\\alpha)},\\mathbf{b}^{(\\beta)}\\, \\middle| \\, T) \\right. \\\\ \\end{array}$$  
+$$
+\begin{array}{r} \left. \rho\_{B}(T) = \frac{2}{n(n - 1)}{\sum\limits_{(\alpha,\beta),\mspace{2mu}\alpha \neq \beta}^{n}\varrho}(\mathbf{b}^{(\alpha)},\mathbf{b}^{(\beta)}\, \middle| \, T) \right. \\ \end{array}
+$$
 
 (3.118)
 
 and its mathematical expectation
 
-$$\\begin{array}{r} {{\\overline{\\rho}}\_{B} = {\\int\_{\\mathcal{T}}W}(T)\\rho\_{B}(T)dT.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r} {{\overline{\rho}}\_{B} = {\int\_{\mathcal{T}}W}(T)\rho\_{B}(T)dT.} \\ \end{array}
+$$
 
 (3.119)
 
-### 3. 投影到空间 *R*[*n*]^(*r*) (生成集合 ℨ[*n*]^(*r*))
+### 3. 投影到空间 `R[n]^(r)` (生成集合 `ℨ[n]^(r)`)
 
 此操作将使用随机投影矩阵 `T[n × m]` 和 `Q[(s × r)]` 执行：
 
-$$\\begin{aligned} Z\_{(n \\times r)} & {= \\left( \\begin{array}{l} \\mathbf{z}^{(1)} \\\\ \\cdots \\\\ \\mathbf{z}^{(n)} \\\\ \\end{array} \\right) = T\_{(n \\times m)}U\_{(m \\times s)}Q\_{(s \\times r)};} \\\\ z\_{j}^{(i)} & {= {\\sum\\limits\_{p = 1}^{m}t\_{ip}}\\,{\\sum\\limits\_{k = 1}^{s}u\_{pk}}\\, q\_{kj},\\text{\\quad\\quad}i = \\overline{1,n};\\, j = \\overline{1,r}.} \\\\ \\end{aligned}$$  
+$$
+\begin{aligned} Z\_{(n \times r)} & {= \left( \begin{array}{l} \mathbf{z}^{(1)} \\ \cdots \\ \mathbf{z}^{(n)} \\ \end{array} \right) = T\_{(n \times m)}U\_{(m \times s)}Q\_{(s \times r)};} \\ z\_{j}^{(i)} & {= {\sum\limits\_{p = 1}^{m}t\_{ip}}\,{\sum\limits\_{k = 1}^{s}u\_{pk}}\, q\_{kj},\quad\quad i = \overline{1,n};\, j = \overline{1,r}.} \\ \end{aligned}
+$$
 
 (3.120)
 
 这些投影矩阵为区间类型：
 
-$$\\begin{array}{r} {T\_{(n \\times m)} \\in \\mathcal{T} = \\lbrack T^{-},T^{+}\\rbrack,} \\\\ {Q\_{(s \\times r)} \\in \\mathcal{Q} = \\lbrack Q^{-},Q^{+}\\rbrack.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r} {T\_{(n \times m)} \in \mathcal{T} = \lbrack T^{-},T^{+}\rbrack,} \\ {Q\_{(s \times r)} \in \mathcal{Q} = \lbrack Q^{-},Q^{+}\rbrack.} \\ \end{array}
+$$
 
 (3.121)
 
+
+
 投影矩阵的概率特性由在集合上定义的联合 PDF `F(T, Q)` 刻画
 
-$$\\begin{array}{r} {\\mathcal{F} = \\mathcal{T} \\otimes \\mathcal{Q}.} \\\\ \\end{array}$$  
+$$\begin{array}{r} {\mathcal{F} = \mathcal{T} \otimes \mathcal{Q}.} \\ \end{array}$$
 
 (3.122)
 
 向量 `z^{(i)}` 构成 *r* 维点集 ℨ[*n*]^(*r*)。该集合的紧致性指标由下式给出
 
-$$\\begin{array}{r} \\left. \\rho\_{Z}(T,Q) = \\frac{2}{n(n - 1)}{\\sum\\limits\_{(\\alpha,\\beta),\\mspace{2mu}\\alpha \\neq \\beta}^{n}\\varrho}(\\mathbf{z}^{\\alpha},\\mathbf{z}^{\\beta}\\, \\middle| \\, T,Q). \\right. \\\\ \\end{array}$$  
+$$\begin{array}{r} \left. \rho_{Z}(T,Q) = \frac{2}{n(n - 1)}{\sum\limits_{(\alpha,\beta),\mspace{2mu}\alpha \neq \beta}^{n}\varrho}(\mathbf{z}^{\alpha},\mathbf{z}^{\beta}\, \middle| \, T,Q). \right. \\ \end{array}$$
 
 (3.123)
 
 紧致性指标的数学期望形式为
 
-$$\\begin{array}{r} {{\\overline{\\rho}}\_{Z} = {\\int\_{\\mathcal{F}}F}(T,Q)\\rho\_{Z}(T,Q)dTdQ.} \\\\ \\end{array}$$  
+$$\begin{array}{r} {{\overline{\rho}}_{Z} = {\int_{\mathcal{F}}F}(T,Q)\rho_{Z}(T,Q)dTdQ.} \\ \end{array}$$
 
 (3.124)
 
@@ -3255,7 +3407,7 @@ $$\\begin{array}{r} {{\\overline{\\rho}}\_{Z} = {\\int\_{\\mathcal{F}}F}(T,Q)\\r
 
 `MEE`-估计的函数 `F(B, Q)`（参见 Chapter A）计算为
 
-$$\\begin{aligned} {\\mathcal{H}\\lbrack F(T,Q)\\rbrack} & \\left. = - {\\int\_{\\mathcal{F}}F}(T,Q)\\,\\ln\\, F(T,Q)\\, dTdQ\\Rightarrow\\max, \\right. \\\\ & {{\\int\_{\\mathcal{F}}F}(T,Q)dTdQ = 1,} \\\\ & {{\\int\_{\\mathcal{F}}F}(T,Q)\\rho\_{Z}(T,Q)dTdQ = \\rho\_{U}.} \\\\ \\end{aligned}$$  
+$$\begin{aligned} {\mathcal{H}\lbrack F(T,Q)\rbrack} & \left. = - {\int_{\mathcal{F}}F}(T,Q)\,\ln\, F(T,Q)\, dTdQ\Rightarrow\max, \right. \\ & {{\int_{\mathcal{F}}F}(T,Q)dTdQ = 1,} \\ & {{\int_{\mathcal{F}}F}(T,Q)\rho_{Z}(T,Q)dTdQ = \rho_{U}.} \\ \end{aligned}$$
 
 (3.125)
 
@@ -3263,31 +3415,31 @@ $$\\begin{aligned} {\\mathcal{H}\\lbrack F(T,Q)\\rbrack} & \\left. = - {\\int\_{
 
 由于该问题的积分形式，最优性条件涉及带标量 Lagrange 乘子的以下 Lagrange 泛函：
 
-$$\\begin{aligned} {\\mathcal{L}\\lbrack F(T,Q)\\rbrack} & {= \\mathcal{H}\\lbrack F(T,Q)\\rbrack + \\mu(\\left( {1 - {\\int\_{\\mathcal{F}}F}(T,Q)dTdQ} \\right) +} \\\\ & {+ \\lambda\\left( {\\rho\_{U} - {\\int\_{\\mathcal{F}}F}(T,Q)\\rho\_{Z}(T,Q)dTdQ} \\right).} \\\\ \\end{aligned}$$  
+$$\begin{aligned} {\mathcal{L}\lbrack F(T,Q)\rbrack} & {= \mathcal{H}\lbrack F(T,Q)\rbrack + \mu(\left( {1 - {\int_{\mathcal{F}}F}(T,Q)dTdQ} \right) +} \\ & {+ \lambda\left( {\rho_{U} - {\int_{\mathcal{F}}F}(T,Q)\rho_{Z}(T,Q)dTdQ} \right).} \\ \end{aligned}$$
 
 (3.126)
 
 该泛函关于 Gâteaux 导数 \[77\] (`𝔊[F]`) 的一阶最优性条件形式为
 
-$$\\begin{array}{r} {\\mathfrak{G}\_{F}\\mathcal{L}\\lbrack F(T,Q)\\rbrack = 0.} \\\\ \\end{array}$$  
+$$\begin{array}{r} {{\mathfrak{G}}_{F}\mathcal{L}\lbrack F(T,Q)\rbrack = 0.} \\ \end{array}$$
 
 (3.127)
 
 投影矩阵的熵最优 PDF 由下式给出
 
-$$\\begin{aligned} \\left. F^{\*}(T,Q\\, \\middle| \\,\\lambda) \\right. & {= \\frac{\\exp\\left( {- \\lambda\\,\\,\\rho\_{Z}(T,Q)} \\right)}{\\mathbb{F}(\\lambda)},} \\\\ {\\mathbb{F}(\\lambda)} & {= {\\int\_{\\mathcal{F}}\\exp}\\left( {- \\lambda\\,\\,\\rho\_{Z}(T,Q)} \\right)dTdQ.} \\\\ \\end{aligned}$$  
+$$\begin{aligned} \left. F^{\*}(T,Q\, \middle| \,\lambda) \right. & {= \frac{\exp\left( {- \lambda\,\,\rho_{Z}(T,Q)} \right)}{\mathbb{F}(\lambda)},} \\ {\mathbb{F}(\lambda)} & {= {\int_{\mathcal{F}}\exp}\left( {- \lambda\,\,\rho_{Z}(T,Q)} \right)dTdQ.} \\ \end{aligned}$$
 
 (3.128)
 
 根据 (3.128)，PDF 的结构取决于距离 (3.123) 且与参数 `λ` 无关。该参数满足紧致性指标的平衡方程：
 
-$$\\begin{array}{r} {\\Phi(\\lambda) = {\\int\_{\\mathcal{F}}\\exp}\\left( {- \\lambda\\,\\rho\_{Z}(T,Q)} \\right)\\left( {\\rho\_{Z}(T,Q) - \\rho\_{U}} \\right)dTdQ = 0.} \\\\ \\end{array}$$  
+$$\begin{array}{r} {\Phi(\lambda) = {\int_{\mathcal{F}}\exp}\left( {- \lambda\,\rho_{Z}(T,Q)} \right)\left( {\rho_{Z}(T,Q) - \rho_{U}} \right)dTdQ = 0.} \\ \end{array}$$
 
 (3.129)
 
 由于 `λ` 是尺度参数，可能只需从线性化方程 (3.129) 求其近似值：
 
-$$\\begin{array}{r} {\\widetilde{\\lambda} = \\frac{{\\int\_{\\mathcal{F}}\\left( {\\rho\_{Z}(T,Q) - \\rho\_{U}} \\right)}dTdQ}{{\\int\_{\\mathcal{F}}\\rho\_{Z}}(T,Q)\\left( {\\rho\_{Z}(T,Q) - \\rho\_{U}} \\right)dTdQ}.} \\\\ \\end{array}$$  
+$$\begin{array}{r} {\widetilde{\lambda} = \frac{{\int_{\mathcal{F}}\left( {\rho_{Z}(T,Q) - \rho_{U}} \right)}dTdQ}{{\int_{\mathcal{F}}\rho_{Z}}(T,Q)\left( {\rho_{Z}(T,Q) - \rho_{U}} \right)dTdQ}.} \\ \end{array}$$
 
 (3.130)
 
@@ -3295,19 +3447,19 @@ $$\\begin{array}{r} {\\widetilde{\\lambda} = \\frac{{\\int\_{\\mathcal{F}}\\left
 
 实现随机投影器的标准方法是采样熵最优 PDF `P(Q)`、`W(T)` 和 `F(T, Q)`，它们在投影矩阵中保持数据矩阵的向量间距离。采样结果将 PDF 转化为随机投影矩阵序列：
 
-$$\\begin{array}{r} \\left. F^{\*}(T,Q)\\Rightarrow(T^{(1)},Q^{(1)}),(T^{(2)},Q^{(2)}),\\ldots,(T^{(N)},Q^{(N)}),\\ldots \\right. \\\\ \\end{array}$$  
+$$\begin{array}{r} \left. F^{\*}(T,Q)\Rightarrow(T^{(1)},Q^{(1)}),(T^{(2)},Q^{(2)},\ldots,(T^{(N)},Q^{(N)},\ldots \right. \\ \end{array}$$
 
 (3.134)
 
 生成具有给定 PDF 的随机序列的通用方法在 \[36\] 中提出。平衡性质（见上文）可能不适用于该序列的每个单独元素，但它必然在“平均”意义下成立。因此，用于实现的经验投影器可以是矩阵
 
-$$\\begin{array}{r} {\\overline{T} \\approx \\frac{1}{N}{\\sum\\limits\_{i = 1}^{N}T^{(i)}},\\text{\\quad\\quad}\\overline{Q} \\approx \\frac{1}{N}{\\sum\\limits\_{i = 1}^{N}Q^{(i)}}.} \\\\ \\end{array}$$  
+$$\begin{array}{r} {\overline{T} \approx \frac{1}{N}{\sum\limits_{i = 1}^{N}T^{(i)}},\text{\quad\quad}\overline{Q} \approx \frac{1}{N}{\sum\limits_{i = 1}^{N}Q^{(i)}}.} \\ \end{array}$$
 
 (3.135)
 
 “平均”投影矩阵的精确值由下式给出
 
-$$\\begin{array}{r} {\\overline{T} = {\\int\_{\\mathcal{F}}T}\\, F(T,Q)dTdQ,\\text{\\quad\\quad}\\overline{Q} = {\\int\_{\\mathcal{F}}Q}\\, F(T,Q)dTdQ.} \\\\ \\end{array}$$  
+$$\begin{array}{r} {\overline{T} = {\int_{\mathcal{F}}T}\, F(T,Q)dTdQ,\text{\quad\quad}\overline{Q} = {\int_{\mathcal{F}}Q}\, F(T,Q)dTdQ.} \\ \end{array}$$
 
 (3.136)
 
@@ -3317,7 +3469,7 @@ $$\\begin{array}{r} {\\overline{T} = {\\int\_{\\mathcal{F}}T}\\, F(T,Q)dTdQ,\\te
 
 PDF `F*(T, Q)` 定义在有界集 ℱ (3.122) 上。因此，用于实现的投影器可以是矩阵对
 
-$$\\begin{array}{r} {(T^{\*},Q^{\*}) = \\arg\\max\_{\\mathcal{F}}F(T,Q).} \\\\ \\end{array}$$  
+$$\begin{array}{r} {(T^{\*},Q^{\*}) = \arg\max_{\mathcal{F}}F(T,Q).} \\ \end{array}$$
 
 (3.137)
 
@@ -3329,45 +3481,41 @@ $$\\begin{array}{r} {(T^{\*},Q^{\*}) = \\arg\\max\_{\\mathcal{F}}F(T,Q).} \\\\ \
 
 将该矩阵写为长度为 `sr` 的行向量。由零和一组成的序列数，即不同行向量的数量为 `N = 2^(r s)`。例如，对于 `s = 3` 且 `r = 1`，有 8 个此类向量：
 
-$$\\begin{array}{r} {000,100,010,001,110,011,101,111;} \\\\ \\end{array}$$  
+$$\begin{array}{r} {000,100,010,001,110,011,101,111;} \\ \end{array}$$
 
 对于 `s = 4` 且 `r = 1`，有 16 个此类向量：
 
-$$\\begin{array}{r} {0000,1000,0100,0010,0001,1100,0110,0011,} \\\\ \\end{array}$$
+$$\begin{array}{r} {0000,1000,0100,0010,0001,1100,0110,0011,} \\ \end{array}$$
 
-
-
-
-
-$$\\begin{array}{r} {1001,0101,1010,1111,1110,0111,1011,1101.} \\\\ \\end{array}$$
+$$\begin{array}{r} {1001,0101,1010,1111,1110,0111,1011,1101.} \\ \end{array}$$
 
 对于投影矩阵 `Q`((*s* × *r*)), 存在其 (0, 1)-实现的有限集合 `ℚ`：
 
-$$\\begin{array}{r} {{\\mathbb{Q}} = \\left\\{ Q^{(1)},\\ldots,Q^{(N)} \\right\\},\\text{\\quad\\quad}N = 2^{sr}.} \\\\ \\end{array}$$
+$$\begin{array}{r} {{\mathbb{Q}} = \left\{ Q^{(1)},\ldots,Q^{(N)} \right\},\text{\quad\quad}N = 2^{sr}.} \\ \end{array}$$
 
 (3.138)
 
 假设实现是随机的，则其概率特性可由离散分布函数 (DDF) `W(α)` 刻画，其离散支撑 `α` ∈ 𝒜 = \[1, *N*\]，其中
 
-$$\\begin{array}{r} {W(\\alpha) = \\mathbf{w} = \\left\\{ w\_{\\alpha}\\,\\alpha = \\overline{1,N} \\right\\}.} \\\\ \\end{array}$$
+$$\begin{array}{r} {W(\alpha) = \mathbf{w} = \left\{ w_{\alpha}\,\alpha = \overline{1,N} \right\}.} \\ \end{array}$$
 
 (3.139)
 
 投影矩阵由下式给出
 
-$$\\begin{aligned} {Y\_{(m \\times r)}^{(\\alpha)} = \\left( \\begin{array}{l} \\mathbf{y}\_{(1)}^{(\\alpha)} \\\\ \\cdots \\\\ \\mathbf{y}\_{(m)}^{(\\alpha)} \\\\ \\end{array} \\right)} & {= U\_{(m \\times s)}Q\_{(s \\times r)}^{(\\alpha)};\\quad y\_{j}^{(\\alpha,i)} = {\\sum\\limits\_{k = 1}^{s}u\_{ik}}q\_{kj}^{(\\alpha)},} \\\\ & {\\quad i = \\overline{1,m};\\, j = \\overline{1,r}.} \\\\ \\end{aligned}$$
+$$\begin{aligned} {Y_{(m \times r)}^{(\alpha)} = \left( \begin{array}{l} \mathbf{y}_{(1)}^{(\alpha)} \\ \cdots \\ \mathbf{y}_{(m)}^{(\alpha)} \\ \end{array} \right)} & {= U_{(m \times s)}Q_{(s \times r)}^{(\alpha)};\quad y_{j}^{(\alpha,i)} = {\sum\limits_{k = 1}^{s}u_{ik}}q_{kj}^{(\alpha)},} \\ & {\quad i = \overline{1,m};\, j = \overline{1,r}.} \\ \end{aligned}$$
 
 (3.140)
 
 集合 𝔜^((*α*)) 紧致性指标的形式为
 
-$$\\begin{array}{r} \\left. \\rho\_{Y}^{(\\alpha)}(Q) = \\frac{2}{m(m - 1)}{\\sum\\limits\_{(\\kappa,\\beta) = 1,\\mspace{2mu}\\kappa \\neq \\beta}^{m}\\varrho^{(\\alpha)}}(\\mathbf{y}^{(\\kappa)},\\mathbf{y}^{(\\beta)}\\, \\middle| \\, Q\_{(s \\times r)}^{(\\alpha)}). \\right. \\\\ \\end{array}$$
+$$\begin{array}{r} \left. \rho_{Y}^{(\alpha)}(Q) = \frac{2}{m(m - 1)}{\sum\limits_{(\kappa,\beta) = 1,\mspace{2mu}\kappa \neq \beta}^{m}\varrho^{(\alpha)}}(\mathbf{y}^{(\kappa)},\mathbf{y}^{(\beta)}\, \middle| \, Q_{(s \times r)}^{(\alpha)}). \right. \\ \end{array}$$
 
 (3.141)
 
 按不等式序列对序列 (3.138) 进行排序
 
-$$\\begin{array}{r} {0 < \\rho\_{Y}^{(1)}(Q) < \\rho\_{Y}^{(2)}(Q) < \\cdots < \\rho\_{Y}^{(N)}(Q).} \\\\ \\end{array}$$
+$$\begin{array}{r} {0 < \rho_{Y}^{(1)}(Q) < \rho_{Y}^{(2)}(Q) < \cdots < \rho_{Y}^{(N)}(Q).} \\ \end{array}$$
 
 (3.142)
 
@@ -3375,7 +3523,7 @@ $$\\begin{array}{r} {0 < \\rho\_{Y}^{(1)}(Q) < \\rho\_{Y}^{(2)}(Q) < \\cdots < \
 
 DDF `W(α)` 的 *MEE*-估计计算为
 
-$$\\begin{array}{r} \\left. H(\\mathbf{w}) = - {\\sum\\limits\_{\\alpha = 1}^{N}w\_{\\alpha}}\\ln w\_{\\alpha}\\Rightarrow\\max, \\right. \\\\ \\end{array}$$
+$$\begin{array}{r} \left. H(\mathbf{w}) = - {\sum\limits_{\alpha = 1}^{N}w_{\alpha}}\ln w_{\alpha}\Rightarrow\max, \right. \\ \end{array}$$
 
 (3.143)
 
@@ -3383,13 +3531,13 @@ $$\\begin{array}{r} \\left. H(\\mathbf{w}) = - {\\sum\\limits\_{\\alpha = 1}^{N}
 
 * —归一化条件
 
-$$\\begin{array}{r} {{\\sum\\limits\_{\\alpha = 1}^{N}w\_{\\alpha}} = 1;} \\\\ \\end{array}$$
+$$\begin{array}{r} {{\sum\limits_{\alpha = 1}^{N}w_{\alpha}} = 1;} \\ \end{array}$$
 
 (3.144)
 
 * —紧致性指标的平衡条件
 
-$$\\begin{array}{r} {{\\sum\\limits\_{\\alpha = 1}^{N}w\_{\\alpha}}\\,\\rho\_{Y}^{(\\alpha)}(Q) = \\rho\_{U}.} \\\\ \\end{array}$$
+$$\begin{array}{r} {{\sum\limits_{\alpha = 1}^{N}w_{\alpha}}\,\rho_{Y}^{(\alpha)}(Q) = \rho_{U}.} \\ \end{array}$$
 
 (3.145)
 
@@ -3397,35 +3545,35 @@ $$\\begin{array}{r} {{\\sum\\limits\_{\\alpha = 1}^{N}w\_{\\alpha}}\\,\\rho\_{Y}
 
 考虑拉格朗日函数
 
-$$\\begin{array}{r} {L(\\mathbf{w},\\lambda) = H(\\mathbf{w}) + \\mu\\left( {1 - {\\sum\\limits\_{\\alpha = 1}^{N}w\_{\\alpha}}} \\right) + \\lambda\\left( {\\rho\_{U} - {\\sum\\limits\_{\\alpha = 1}^{N}w\_{\\alpha}}\\rho\_{Y}^{(\\alpha)}(Q)} \\right).} \\\\ \\end{array}$$
+$$\begin{array}{r} {L(\mathbf{w},\lambda) = H(\mathbf{w}) + \mu\left( {1 - {\sum\limits_{\alpha = 1}^{N}w_{\alpha}}} \right) + \lambda\left( {\rho_{U} - {\sum\limits_{\alpha = 1}^{N}w_{\alpha}}\rho_{Y}^{(\alpha)}(Q)} \right).} \\ \end{array}$$
 
 (3.146)
 
 由一阶最优性条件可知，对于该函数，熵最优离散概率分布为
 
-$$\\begin{array}{r} {w\_{\\alpha}^{\*} = \\frac{\\exp\\left( {- \\lambda\\rho\_{Y}^{(\\alpha)}(Q)} \\right)}{{\\sum\\limits\_{\\alpha = 1}^{N}\\exp}\\left( {- \\lambda\\rho\_{Y}^{(\\alpha)}(Q)} \\right)},\\text{\\quad\\quad}\\alpha = \\overline{1,N},} \\\\ \\end{array}$$
+$$\begin{array}{r} {w_{\alpha}^{\*} = \frac{\exp\left( {- \lambda\rho_{Y}^{(\alpha)}(Q)} \right)}{{\sum\limits_{\alpha = 1}^{N}\exp}\left( {- \lambda\rho_{Y}^{(\alpha)}(Q)} \right)},\text{\quad\quad}\alpha = \overline{1,N},} \\ \end{array}$$
 
 (3.147)
 
 其中参数 `λ` 满足方程
 
-$$\\begin{array}{r} {{\\sum\\limits\_{\\alpha = 1}^{N}\\exp}( - \\lambda\\rho\_{Y}^{(\\alpha)}(Q))(\\rho\_{Y}^{(\\alpha)}(Q) - \\rho\_{U}) = 0,\\text{\\quad\\quad} - \\infty < \\lambda < \\infty.} \\\\ \\end{array}$$
+$$\begin{array}{r} {{\sum\limits_{\alpha = 1}^{N}\exp}( - \lambda\rho_{Y}^{(\alpha)}(Q))(\rho_{Y}^{(\alpha)}(Q) - \rho_{U}) = 0,\text{\quad\quad} - \infty < \lambda < \infty.} \\ \end{array}$$
 
 (3.148)
 
 引入变量替换 `z` = exp ( − `λ`). 则方程 (3.148) 可写为
 
-$$\\begin{array}{r} {\\varphi(z) = {\\sum\\limits\_{\\alpha = 1}^{N}z^{h\_{\\alpha}}}\\, c\_{\\alpha} = 0,\\,\\,\\, z \\geq 0;\\quad c\_{\\alpha} = (h\_{\\alpha} - \\rho\_{U}),\\,\\, h\_{\\alpha} = \\rho\_{Y}^{(\\alpha)}.} \\\\ \\end{array}$$
+$$\begin{array}{r} {\varphi(z) = {\sum\limits_{\alpha = 1}^{N}z^{h_{\alpha}}}\, c_{\alpha} = 0,\, \, \, z \geq 0;\quad c_{\alpha} = (h_{\alpha} - \rho_{U}),\, \, h_{\alpha} = \rho_{Y}^{(\alpha)}.} \\ \end{array}$$
 
 (3.149)
 
 ### 3.7.5 从 `ℚ` (3.138) 中选择合适的投影矩阵
 
-熵最优 DDF `$W^{\*}(\\alpha) = w\_{\\alpha}^{\*},\\,\\alpha = \\overline{1,N},$` (3.149) 刻画了集合 `ℚ` (3.138) 中元素（投影矩阵）实现的概率。然而，为了获得特定投影矩阵 `Y`[(*m* × *r*)]，需要从集合 `ℚ` 中选取特定的投影矩阵。特定矩阵可采用以下不同策略进行选择。
+熵最优 DDF `$W^{\*}(\alpha) = w_{\alpha}^{\*},\, \alpha = \overline{1,N},$` (3.149) 刻画了集合 `ℚ` (3.138) 中元素（投影矩阵）实现的概率。然而，为了获得特定投影矩阵 `Y`[(*m* × *r*)]，需要从集合 `ℚ` 中选取特定的投影矩阵。特定矩阵可采用以下不同策略进行选择。
 
 *1. 概率最大投影矩阵* 设 (3.142) 中差值 `Δ[ρ]` = `ρ[Y]^{((N))}` − `ρ[Y]^{((1))}` 足够大。这意味着 DDF (3.149) 中概率的最大值明显大于最小值。则实现的投影矩阵编号为
 
-$$\\begin{array}{r} {\\alpha^{\*} = \\arg\\max\_{1 \\leq \\alpha \\leq N}w\_{\\alpha}^{\*}.} \\\\ \\end{array}$$
+$$\begin{array}{r} {\alpha^{\*} = \arg\max_{1 \leq \alpha \leq N}w_{\alpha}^{\*}.} \\ \end{array}$$
 
 (3.156)
 
@@ -3437,15 +3585,19 @@ $$\\begin{array}{r} {\\alpha^{\*} = \\arg\\max\_{1 \\leq \\alpha \\leq N}w\_{\\a
 
 *3. 中位数投影矩阵* 由下式给出
 
+
+
 $$\\begin{array}{r} {{\\sum\\limits\_{\\alpha = 1}^{\\alpha^{\*}}w\_{\\alpha}^{\*}} = {\\sum\\limits\_{\\alpha = \\alpha^{\*} + 1}^{N}w\_{\\alpha}^{\*}}.} \\\\ \\end{array}$$
 
 (3.158)
 
-*4. 投影矩阵的平均* 该策略包括以下阶段。第一阶段，选择具有特定属性的投影矩阵子集。第二阶段，形成相应的投影矩阵子集。然后计算平均投影矩阵。
+# 4. 投影矩阵的平均
+
+该策略包括以下阶段。第一阶段，选择具有特定属性的投影矩阵子集。第二阶段，形成相应的投影矩阵子集。然后计算平均投影矩阵。
 
 而第二和第三阶段与数学统计的标准计算有关，第一阶段需要额外说明。投影矩阵子集是根据反映其期望属性的规则选择的。根据选择此类子集的规则，下面将研究所谓的方差和四分位距投影矩阵子集。
 
-首先考虑 *方差子集*。为此，求变量 `α` 的均方根 (RMS) 值：
+首先考虑 *方差子集*。为此，求变量 `α` 的均方根 RMS 值：
 
 ![](img/math3_605.jpg)
 
@@ -3483,28 +3635,28 @@ $$\\begin{array}{r} {F^{\*}(\\kappa) = {\\sum\\limits\_{\\alpha = 1}^{\\kappa}w\
 
 考虑两个四分位数集合，`𝒜^{((κ[1]*))}` 和 `𝒜^{((κ[2]*))}`，其中 `κ[1]*` > `κ[2]*`。与每个集合关联的投影矩阵子集为：
 
-
-
-
-
 $$\\begin{array}{r} {{\\mathbb{Q}}(\\kappa\*\_{1}) = \\left\\{ Q^{(1)},\\ldots,Q^{(\\alpha(\\kappa\_{1}^{\*}))} \\right\\},} \\\\ {{\\mathbb{Q}}(\\kappa\*\_{2}) = \\left\\{ Q^{(1)},\\ldots,Q^{(\\alpha(\\kappa\_{2}^{\*}))} \\right\\}.} \\\\ \\end{array}$$  
+
 (3.165)
 
 构造投影矩阵的子集
 
 $$\\begin{array}{r} {{\\mathbb{Q}}(\\kappa\_{1}^{\*} - \\kappa\_{2}^{\*}) = \\left\\{ Q^{(\\alpha(\\kappa\_{2}^{\*}))},\\ldots,Q^{(\\alpha(\\kappa\_{1}^{\*}))} \\right\\},} \\\\ \\end{array}$$  
+
 (3.166)
 
 它即为熵最优投影矩阵的 (*κ*[1]^(\*) − *κ*[2]^(\*))\-分位数子集 ℐ^((*κ*[1]^(\*) − *κ*[2]^(\*)))。该子集中元素的个数为 *M*[(*κ*[1]^(\*) − *κ*[2]^(\*))] = *α*(*κ*[1]^(\*)) − *α*(*κ*[2]^(\*))。
 
-对于子集 𝒬(*κ*[1]^(\*) − *κ*[2]^(\*)) (3.166) 的每个元素，计算对应的投影矩阵
+对于子集 `𝒬(κ[1]* − κ[2]*)` (3.166) 的每个元素，计算对应的投影矩阵
 
 $$\\begin{array}{r} {\\mathcal{Y}(\\kappa\_{1}^{\*} - \\kappa\_{2}^{\*}) = \\left\\{ Y\_{(m \\times r)}^{\\alpha(\\kappa\_{2}^{\*})},\\ldots,Y\_{(m \\times r)}^{\\alpha(\\kappa\_{1}^{\*})} \\right\\}.} \\\\ \\end{array}$$  
+
 (3.167)
 
 子集 ℐ^((*κ*[1]^(\*) − *κ*[2]^(\*))) 上的平均投影矩阵由下式给出
 
 $$\\begin{array}{r} {{\\overline{Y}}\_{(m \\times r)}^{K} = \\frac{1}{M\_{(\\kappa\_{1}^{\*} - \\kappa\_{2}^{\*})}}{\\sum\\limits\_{\\alpha = \\alpha(\\kappa\_{2}^{\*})}^{\\alpha(\\kappa\_{1}^{\*})}Y\_{(m \\times r)}^{\\alpha}}.} \\\\ \\end{array}$$  
+
 (3.168)
 
 对分位数集进行平均可得到具有给定 (*κ*[1], *κ*[2])\-分位数的投影矩阵。
@@ -3515,7 +3667,7 @@ DOI: [10.1201/9781003306566-4](https://doi.org/10.1201/9781003306566-4)
 
 RML 过程的一个重要组成部分是具有随机参数的模型，将其称为 *随机参数模型 (RPM)*。由此我们强调，该模型中的随机参数是人为的，并且具有最优的概率特性。RPM 参数的概率特性的最优性是根据质量泛函和特定问题中允许的参数值集合来考虑的。由于 RML 过程可用于广泛的机器学习问题，我们将研究静态和动态 RPM。
 
-## 4.1Definition, Characteristics and Classification
+## 4.1 Definition, Characteristics and Classification
 
 随机参数模型 (`RPM`) 将输入数据变换为输出数据的 *ensemble*，该 *ensemble* 由模型根据其参数的给定概率密度函数 (`PDFs`) 生成。
 
@@ -3532,6 +3684,7 @@ Figure 4.1
 在上述所有示例中，`RPM` 将确定性输入数据变换为随机化输出数据的 *ensemble*。这种变换将由映射
 
 $$\\begin{array}{r} {\\mathbb{M}(P(\\mathbf{a}),\\tau,t,T) = :\\mathcal{X}\_{\\tau}\\overset{P(\\mathbf{a})}{\\rightarrow}\\hat{\\mathcal{Y}},} \\\\ \\end{array}$$  
+
 (4.1)
 
 来表征，并且相应的 `RPM` 将被赋予“*输入–输出 ensemble*” *\[I–OE\]* 类；见 Fig. 4.2(a)。
@@ -3543,13 +3696,15 @@ Figure 4.2
 有时，有必要对映射 `𝕄(P(**a**), τ, T)` 进行结构化。特别地，我们可以将其表示为反馈回路中的两个映射 `𝕄1)), τ, λ, t, T)` 和 `𝕄2)), t, λ)`（见 Fig. 4.2(b)），即
 
 $$\\begin{aligned} {\\mathbb{M}\_{1}(P\_{1}(\\mathbf{a}^{(1)}),\\tau,\\lambda,t,T)} & {= :(X\_{\\tau},{\\hat{\\mathcal{Z}}}\_{\\lambda})\\overset{P\_{1}(\\mathbf{a}^{(1)})}{\\rightarrow}\\mathcal{Y};} \\\\ {\\mathbb{M}\_{1}(P\_{2}(\\mathbf{a}^{(2)}),t,\\lambda)} & {= :\\hat{\\mathcal{Y}}\\overset{P\_{2}(\\mathbf{a}^{(2)})}{\\rightarrow}{\\hat{\\mathcal{Z}}}\_{\\lambda}.} \\\\ \\end{aligned}$$  
+
 (4.2)
 
 这里 (`λ`, `τ`, `t`) ∈ `𝒯` = `[0, T]`。由映射 (4.1, 4.2) 描述的模型将被归类为“*(输入, 反馈)–输出 ensemble*” *\[(I,FB)–OE\]* `RPM`。
 
 这些 `RPM` 具有随机区间-时间参数，即
 
-$$\\begin{array}{r} {\\mathbf{a} \\in \\mathcal{A} = \\lbrack\\mathbf{a}^{-},\\mathbf{a}^{+}\\rbrack,\\text{\\quad\\quad}\\mathbf{a}^{\\pm} = \\left\\{ a\_{1}^{\\pm},\\ldots,a\_{r}^{\\pm} \\right\\}.} \\\\ \\end{array}$$  
+$$\\begin{array}{r} {\\mathbf{a} \\in \\mathcal{A} = \\lbrack\\mathbf{a}^{-},\\mathbf{a}^{+}\\rbrack,\\text{\\quad\\quad}\\mathbf{a}^{\\pm} = \\left\\{ a\_{1}^{\\pm},\\ldots,a\_{r}^{\\pm} \\right\\}.} \\\\ \\end{array}$$
+
 (4.3)
 
 此外，两类 `RPM` 都将根据其时间特性和数学建模方法细分为子类。基于第一个分类属性，存在静态和动态 `RPM`。对于静态模型，映射 (4.1) 中 `τ` = `t`，即此类模型在时间 `t` 生成的 *ensemble* 仅依赖于该时刻的数据。在动态 `RPM` 中，*ensemble* `𝒴̂` 依赖于数据 `X[τ]`，其中 `t[0]` ≤ `τ` ≤ `t`。
@@ -3560,9 +3715,9 @@ $$\\begin{array}{r} {\\mathbf{a} \\in \\mathcal{A} = \\lbrack\\mathbf{a}^{-},\\m
 
 Figure 4.3
 
-## 4.2“Single Input–Ensemble Output” Randomized Parametric Model
+## 4.2 “Single Input–Ensemble Output” Randomized Parametric Model
 
-### 4.2.1Static models
+### 4.2.1 Static models
 
 对于此类模型，时间 `t` 上的输出数据 *ensemble* 依赖于该时刻的输入数据以及随机化参数的实现。因此可以省略指标 `t`，此类映射可使用随机参数 `**a**` 的向量函数来描述。
 
@@ -3571,10 +3726,6 @@ Figure 4.3
 静态 `RPM` 将输入矩阵 `X` 变换为输出矩阵 `$\\left. \\hat{Y} = \\lbrack{\\hat{y}}\_{kj}\\, \\middle| \\, k = \\overline{1,m},\\, j = \\overline{1,s}\\rbrack. \\right.$` 该矩阵的列是第 `j` 个向量 `${\\hat{\\mathbf{y}}}^{(j)} = \\left\\{ {\\hat{y}}\_{1}^{(j)},\\ldots,{\\hat{y}}\_{m}^{(j)} \\right\\},$` 的元素，其中 `j = \\overline{1,s}`。
 
 引入由随机化参数组成的矩阵 `$\\left. A = \\lbrack a\_{hp}\\, \\middle| \\, h = \\overline{1,m},p = \\overline{1,n}\\rbrack, \\right.$` 该矩阵的元素是取值于区间内的随机变量
-
-
-
-
 
 $$
 \begin{array}{r} {\mathcal{A}_{hp} = \lbrack a_{hp}^{-},a_{hp}^{+}\rbrack,} \\ \\ \end{array}
@@ -3612,11 +3763,15 @@ $$
 
 Then equality (4.6) takes the form
 
+
+
 $$
 \begin{array}{r} {\hat{\mathcal{Y}} = \mathcal{F}\left( {X,\mathbf{a},P(\mathbf{a})} \right),} \\ \\ \end{array}
 $$
 
+$$
 (4.8)
+$$
 
 where $\hat{\mathcal{Y}}$ denotes an ensemble of random vectors $\hat{\mathbf{y}}.$
 
@@ -3628,7 +3783,9 @@ $$
 \begin{array}{r} {\hat{\mathcal{Y}} = A\, X,} \\ \\ \end{array}
 $$
 
+$$
 (4.9)
+$$
 
 where *A* is a matrix of dimensions (*m* × *n*) with the randomized elements (4.4, 4.5) and the probabilistic properties characterized by a PDF *P*(*A*).
 
@@ -3638,7 +3795,9 @@ $$
 \begin{array}{r} {\hat{y} = \left\langle \mathbf{x},\mathbf{a} \right\rangle.} \\ \\ \end{array}
 $$
 
+$$
 (4.10)
+$$
 
 ### 2. Nonlinear static RPMs.
 
@@ -3652,7 +3811,9 @@ $$
 \begin{array}{r} {\hat{\mathcal{Y}} = {\sum\limits_{h = 1}^{R}B^{(h)}}\, Z^{(h)}.} \\ \\ \end{array}
 $$
 
+$$
 (4.11)
+$$
 
 Here *B*^((*h*)) denotes a matrix of dimensions (*s* × *φ*(*h*)) with interval-type randomized elements, and *Z*^((*h*)) is a matrix of dimensions (*φ*(*h*)) × *r* whose entries represent the products of degree *h* from the elements of the input matrix *X*. The matrices *B*^((*h*)) are defined on the intervals
 
@@ -3660,7 +3821,9 @@ $$
 \begin{array}{r} {\mathcal{B}_{h} = \lbrack\mathcal{B}_{h}^{-},\mathcal{B}_{h}^{+}\rbrack,\text{\quad\quad}h = \overline{1,R}.} \\ \\ \end{array}
 $$
 
+$$
 (4.12)
+$$
 
 For a one-dimensional static object (with one input and one output), equality (4.11) takes the simpler form
 
@@ -3668,7 +3831,9 @@ $$
 \begin{array}{r} {\hat{y} = {\sum\limits_{h = 1}^{R}b_{h}}x^{h},} \\ \\ \end{array}
 $$
 
+$$
 (4.13)
+$$
 
 where the parameters *b*[1], …, *b*[*R*] are randomized and independent. The domain of definition of the parameters *b*[1], …, *b*[*R*] is given by
 
@@ -3676,7 +3841,9 @@ $$
 \begin{array}{r} {b_{h} \in \mathcal{B}_{h} = \lbrack b_{h}^{-},b_{h}^{+}\rbrack,\text{\quad\quad}h = \overline{1,R}.} \\ \\ \end{array}
 $$
 
+$$
 (4.14)
+$$
 
 #### 2.2. Continuous nonlinearities.
 
@@ -3744,17 +3911,15 @@ $$
 \begin{array}{r} {\hat{\Phi}(x) = {\sum\limits_{i = 0}^{R}a_{i}}\psi_{i}(x).} \\ \\ \end{array}
 $$
 
+$$
 (4.15)
+$$
 
 In contrast to the classical approach to approximation, the parameters of an approximating function will be treated as randomized ones taking values within an interval \[**a**^−, **a**^+\].
 
 ### 4.2.2 Functional description of dynamic models
 
 An output ensemble of dynamic models at a time *t* is characterized by a mapping 𝕄\[*P*(**a**), *τ*, *t*\] of the form (4.1) and depends on the input data on a time interval \[*t* − *τ*, *t*\] and a realization of the randomized parameters.
-
-
-
-
 
 用 **x**(*τ*) 表示由独立观测 *x*1, …, *x**n* 组成 的输入向量，它们定义在时间区间 𝒯[*t*] = [0, *t*] 上，其中 *τ* ∈ 𝒯[*t*]。在每个时间 *t* > 0 时，模型输出一个由观测 *ŷ*1, …, *ŷ**m* 组成的向量 $\hat{\mathbf{y}}(t)$，其中 *t* ∈ 𝒯 = [0, *T*]。输入 **x**(*τ* | *τ*∈𝒯[*t*]) 与输出 $\hat{\mathbf{y}}(t)$ 之间的关系由泛函 ℬ 描述，即
 
@@ -3767,7 +3932,9 @@ $$
 \end{array}
 $$
 
+$$
 (4.16)
+$$
 
 假设该泛函由随机元向量 **a** = {*a*[1],…,*a*[*r*]} 参数化，它们属于区间
 
@@ -3779,7 +3946,9 @@ $$
 \end{aligned}
 $$
 
+$$
 (4.17)
+$$
 
 将考虑三类动态“单输入-集合输出”RPM，即线性模型，以及具有幂非线性和多项式非线性的非线性模型。
 
@@ -3794,7 +3963,9 @@ $$
 \end{array}
 $$
 
+$$
 (4.18)
+$$
 
 在此式中，矩阵 *B*(*t*, *τ*, **a**) 的维数为 (*m* × *n*)，由脉冲特性 $\left. \lbrack b_{ij}(t,\tau\, \middle| \,\mathbf{a}^{(ij)}),\, \middle| \, i = \overline{1,m},\, j = \overline{1,n}\rbrack \right.$ 组成，其中随机参数 $\mathbf{a}^{(ij)} = \{a[1]^{(ij)},\dots,a[k[ij]]^{(ij)}\}$，*k*[*i**j*] 为脉冲特性 *b**i**j* 的参数个数。
 
@@ -3807,18 +3978,27 @@ $$
 \end{array}
 $$
 
+$$
 (4.19)
+$$
 
 模型 (4.19) 生成随机轨迹 $\hat{\mathbf{y}}(t),\, t \in \mathcal{T}.$ 的集合 ${\hat{\mathcal{Y}}}_{\mathcal{T}}$。这些脉冲特性可以以不同方式参数化。下面将讨论其中一些。
 
 #### 1.1. 具有未知参数的给定函数
+
 通常，脉冲特性是指数函数或具有指数衰减的谐波函数，即
 
 $$
 \begin{array}{r}
+
+
+
 {b_{ij}(t,\tau) = \alpha_{ij}(t)\exp\left( {-\beta_{ij}(t)\tau} \right)\text{or}b_{ij}(t,\tau)\exp\left( {-\beta_{ij}\tau} \right)\,\sin(\omega_{ij}(t)\tau + \phi_{ij}(t)),}
+
 \\
+
 \end{array}
+
 $$
 
 (4.20)
@@ -3826,11 +4006,17 @@ $$
 其中，例如，时变参数具有形式
 
 $$
+
 \begin{aligned}
+
 {\alpha_{ij}(t)} & {= \alpha_{ij}^{0} + \alpha_{ij}^{1}t;\quad\beta_{ij}(t) = \beta_{ij}^{0} + \beta_{ij}^{1}t,} \\
+
 {\omega_{ij}(t)} & {= \omega_{ij}^{0}\ln t;\quad\quad\phi_{ij}(t) = \phi_{ij}^{0} + \phi_{ij}^{1}t.}
+
 \\
+
 \end{aligned}
+
 $$
 
 (4.21)
@@ -3838,13 +4024,19 @@ $$
 在此表达式中，*α*[*i**j*]⁰, *α*[*i**j*]¹, *β*[*i**j*]⁰, *β*[*i**j*]¹, *ω*[*i**j*]⁰, *ϕ*[*i**j*]⁰ 和 *ϕ*[*i**j*]¹ 是取值在相应区间内的随机变量。
 
 #### 1.2. 用具有未知权重的给定函数族逼近
+
 考虑由 *v* 个确定性函数组成的族 ℛ[*v*]，以下称为 *基* 函数：
 
 $$
+
 \begin{array}{r}
+
 {\mathcal{R}_{v} = \left\{ \phi_{1}(t,\tau),\ldots,\phi_{v}(t,\tau) \right\}.}
+
 \\
+
 \end{array}
+
 $$
 
 (4.22)
@@ -3852,10 +4044,15 @@ $$
 则脉冲特性写为
 
 $$
+
 \begin{array}{r}
+
 {b_{ij}(t,\tau) = {\sum\limits_{k = 1}^{K_{ij}}b_{k}^{(ij)}}\,\phi_{k}(t,\tau),}
+
 \\
+
 \end{array}
+
 $$
 
 (4.23)
@@ -3867,10 +4064,15 @@ $$
 如果矩阵 *B* 的元素具有随机时不变参数，则式 (4.18) 变为
 
 $$
+
 \begin{array}{r}
+
 {\mathbf{y}(t) = {\int_{0}^{t}B}(t - \tau)\,\mathbf{x}(\tau)d\tau.}
+
 \\
+
 \end{array}
+
 $$
 
 (4.24)
@@ -3882,18 +4084,27 @@ $$
 Figure 4.5
 
 #### 1.3. 离散输入函数
+
 在大多数情况下，对象的输入和输出以固定步长 `Δ` 在离散时刻测量。对象在有限时间区间上运行，因此其输入和输出的可用信息表示为一维数值数据数组。这些数组用于形成对象的输入和输出的格点函数向量，**x**[*k*Δ*] = **x**[*k*] 和 $\hat{\mathbf{y}}[k\Delta] = \hat{\mathbf{y}}[k]$。详情请参阅 [176]。
 
 在线性近似下，输入和输出格点函数向量 **x**[*k*] 和 $\hat{\mathbf{y}}[k],$ 之间的动态关系可由矩阵 `B[k,q]` 描述，该矩阵由具有时变参数的 RPM 的格点脉冲特性 `b[i j][k,q]` 组成，或由具有恒定参数的 RPM 的格点脉冲特性 `b[i j][q]` 组成的矩阵描述。在两种情况下，RPM 均包含取值在给定区间内的独立随机参数。脉冲特性假定具有所谓的有限记忆。对于具有时变参数的 RPM，这意味着
 
 $$
+
 \begin{array}{r}
+
 {b_{ij}[k,q] = \left\{ \begin{aligned}
+
 {b_{ij}[k,q]} & {\text{if}\, 0 \leq l \leq L_{ij}\,\text{and}\, k \geq 0,} \\
+
 0 & {\text{if}\, l > L_{ij}\,\text{and}\, k \geq 0;} \\
+
 \end{aligned}~ \right.}
+
 \\
+
 \end{array}
+
 $$
 
 (4.25)
@@ -3901,13 +4112,21 @@ $$
 对于具有恒定参数的 RPM，
 
 $$
+
 \begin{array}{r}
+
 {b_{ij}[q] = \left\{ \begin{aligned}
+
 {b_{ij}[q]} & {\text{if}\, 0 \leq l \leq L_{ij},} \\
+
 0 & {\text{if}\, l > L_{ij}.} \\
+
 \end{aligned}~ \right.}
+
 \\
+
 \end{array}
+
 $$
 
 (4.26)
@@ -3917,10 +4136,15 @@ $$
 * 对于时变参数，
 
 $$
+
 \begin{array}{r}
+
 {\hat{\mathbf{y}}[k] = {\sum\limits_{q = 0}^{L^{*}}B}[k,q]\,\mathbf{x}[q],\quad\quad k \geq L^{*};}
+
 \\
+
 \end{array}
+
 $$
 
 (4.27)
@@ -3928,30 +4152,37 @@ $$
 * 对于恒定参数，
 
 $$
+
 \begin{array}{r}
+
 {\hat{\mathbf{y}}[k] = {\sum\limits_{q = 0}^{L^{*}}B}[q]\,\mathbf{x}[k - q],\quad\quad k \geq L^{*}.}
+
 \\
+
 \end{array}
+
 $$
 
 (4.28)
 
 这里 `L*` = max[*i**j*] *L*[*i**j*]。
 
-
-
-
-
 与具有连续输入函数的线性 RPM 相比，在这种情况下，参数可以是相应脉冲特性的纵坐标。
 
 Table 4.2
 
 |  |
+
 | --- |
+
 | *k* || 1 || 2 || 3 || 4 || 5 || 6 || 7 || 8 || 9 || 10 |
+
 | *x*\[*k*\] || 2.5 || 3.5 || 5.7 || 2.8 || 2.1 || 1.9 || 1.7 || 2.1 || 3.1 || 4.4 |
+
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
 | *x*\[*k* − 1\] || 1.8 || 2.5 || 3.5 || 5.7 || 2.8 || 2.1 || 1.9 || 1.7 || 2.1 || 3.1 |
+
 |  |
 
 ![Figure 4.6](img/fig4_6.jpg)
@@ -4044,55 +4275,55 @@ $$\\begin{array}{r} {w\_{i,k\_{h}}^{(h)}\\lbrack n\_{1},\\ldots,n\_{h}\\rbrack \
 
 (4.38)
 
-
-
-
-
 在该表达式中，*w̃*[*i*, *k*[*h*]]^((*h*,  ± ))\[*n*[1], …, *n*[*h*]\] 是描述上述区间左右极限的给定函数。例如，它们可以定义为指数函数
 
-$$
-\\begin{aligned} {{\\widetilde{w}}\_{i,k\_{h}}^{(h, - )}\\lbrack n\_{1},\\ldots,n\_{h}\\rbrack} & {= {\\prod\\limits\_{j = 1}^{h}\\beta\_{(i,k\_{h})}^{(h, - )}}(j)\\,\\exp\\left( {- \\alpha\_{(i,k\_{h})}^{(h, - )}(j)\\, n\_{j}} \\right),} \\\\ {{\\widetilde{w}}\_{i,k\_{h}}^{(h, + )}\\lbrack n\_{1},\\ldots,n\_{h}\\rbrack} & {= {\\prod\\limits\_{j = 1}^{h}\\beta\_{(i,k\_{h})}^{(h, + )}}(j)\\,\\exp\\left( {- \\alpha\_{(i,k\_{h})}^{(h, + )}(j)\\, n\_{j}} \\right).} \\\\ \\end{aligned}
-$$
+
+
+### 4.2.4
+
+```
+\begin{aligned} {{\widetilde{w}}_{i,k_{h}}^{(h, - )}\lbrack n_{1},\ldots,n_{h}\rbrack} & {= {\prod\limits_{j = 1}^{h}\beta_{(i,k_{h})}^{(h, - )}}(j)\,\exp\left( {-\alpha_{(i,k_{h})}^{(h, - )}(j)\, n_{j}} \right),} \\ {{\widetilde{w}}_{i,k_{h}}^{(h, + )}\lbrack n_{1},\ldots,n_{h}\rbrack} & {= {\prod\limits_{j = 1}^{h}\beta_{(i,k_{h})}^{(h, + )}}(j)\,\exp\left( {-\alpha_{(i,k_{h})}^{(h, + )}(j)\, n_{j}} \right).} \\ \end{aligned}
+```
 
 (4.39)
 
 一种方便的方法是将它们的纵坐标视为 RPM 参数。这使我们能够将非线性 RPM 变换为维数明显更高的线性类比。一维 RPM（一个输入一个输出）的变换过程由下式给出
 
-$$
-\\begin{array}{r} {\\hat{y}\\lbrack k\\rbrack = {\\sum\\limits\_{h = 1}^{H}\\sum\\limits^{K}}(n\_{1},\\ldots,n\_{h}) = 0w^{(h)}\\lbrack n\_{1},\\ldots,n\_{h}\\rbrack\\,{\\prod\\limits\_{i = 1}^{h}x}\\lbrack k - n\_{i}\\rbrack,\\text{\\quad\\quad}k \\geq K.} \\\\ \\end{array}
-$$
+```
+\begin{array}{r} {\hat{y}\lbrack k\rbrack = {\sum\limits_{h = 1}^{H}\sum\limits^{K}}(n_{1},\ldots,n_{h}) = 0w^{(h)}\lbrack n_{1},\ldots,n_{h}\rbrack\,{\prod\limits_{i = 1}^{h}x}\lbrack k - n_{i}\rbrack,\text{\quad\quad}k \geq K.} \\ \end{array}
+```
 
 (4.40)
 
 用从 0 到 *t*[*h*] = (*K* + 1)^(*h*) − 1 的数字重新分配给结果集合，对变量 {*n*[1],…,*n*[*h*]} 引入字典序。然后
 
-$$
-\\begin{array}{r} \\left. \\left\\{ n\_{1},\\ldots,n\_{h} \\right\\}\\rightarrow i^{(h)},\\text{\\quad\\quad}i^{(h)} \\in \\lbrack 0,t\_{h}\\rbrack. \\right. \\\\ \\end{array}
-$$
+```
+\begin{array}{r} \left. \left\{ n_{1},\ldots,n_{h} \right\}\rightarrow i^{(h)},\text{\quad\quad}i^{(h)} \in \lbrack 0,t_{h}\rbrack. \right. \\ \end{array}
+```
 
 (4.41)
 
 根据此编号方案，定义对应于脉冲特性在离散时间 0, 1, …, *K* 处取值的随机参数的以下索引：
 
-$$
-\\begin{array}{r} \\left. a\_{i^{(h)}}^{(h)}\\rightarrow w^{(h)}\\lbrack n\_{1},\\ldots,n\_{h}\\rbrack,\\text{\\quad\\quad}i^{(h)} \\in \\lbrack 0,t\_{h}\\rbrack. \\right. \\\\ \\end{array}
-$$
+```
+\begin{array}{r} \left. a_{i^{(h)}}^{(h)}\rightarrow w^{(h)}\lbrack n_{1},\ldots,n_{h}\rbrack,\text{\quad\quad}i^{(h)} \in \lbrack 0,t_{h}\rbrack. \right. \\ \end{array}
+```
 
 (4.42)
 
 构造随机向量
 
-$$
-\\begin{array}{r} {\\mathbf{a}(h) = \\left\\{ a\_{0}^{(h)},\\ldots,a\_{t\_{h}}^{(h)} \\right\\}.} \\\\ \\end{array}
-$$
+```
+\begin{array}{r} {\mathbf{a}(h) = \left\{ a_{0}^{(h)},\ldots,a_{t_{h}}^{(h)} \right\}.} \\ \end{array}
+```
 
 (4.43)
 
 向量 **a**(*h*) 的元素——见 (4.38)—取值于区间内
 
-$$
-\\begin{array}{r} {\\mathcal{A}^{(h)}(i^{(h)}) = \\left\\lbrack {a\_{-}^{(h)}(i^{(h)}),\\, a\_{+}^{(h)}(i^{(h)})} \\right\\rbrack.} \\\\ \\end{array}
-$$
+```
+\begin{array}{r} {\mathcal{A}^{(h)}(i^{(h)}) = \left\lbrack {a_{-}^{(h)}(i^{(h)}),\, a_{+}^{(h)}(i^{(h)})} \right\rbrack.} \\ \end{array}
+```
 
 (4.44)
 
@@ -4100,25 +4331,25 @@ $$
 
 对每个固定的 *k*，按如下方式重新编号结果集合：
 
-$$
-\\begin{array}{r} \\left. \\left\\{ k - n\_{1},\\ldots,k - n\_{h} \\right\\}\\rightarrow(k,i^{(h)}). \\right. \\\\ \\end{array}
-$$
+```
+\begin{array}{r} \left. \left\{ k - n_{1},\ldots,k - n_{h} \right\}\rightarrow(k,i^{(h)}). \right. \\ \end{array}
+```
 
 (4.45)
 
 然后，变量 *x*\[*k* − *n*[1]\], …, *x*\[*k* − *n*[*h*]\] 的字典序乘积在 *k* 固定时形成向量
 
-$$
-\\begin{array}{r} {\\mathbf{x}^{(h)}\\lbrack k\\rbrack = \\left\\{ {x\_{k,0}^{(h)},\\ldots,x\_{k,t\_{h}}^{(h)}} \\right\\}.} \\\\ \\end{array}
-$$
+```
+\begin{array}{r} {\mathbf{x}^{(h)}\lbrack k\rbrack = \left\{ {x_{k,0}^{(h)},\ldots,x_{k,t_{h}}^{(h)}} \right\}.} \\ \end{array}
+```
 
 (4.46)
 
 因此，表达式 (4.40) 可以写为
 
-$$
-\\begin{array}{r} {\\hat{y}\\lbrack k\\rbrack = {\\sum\\limits\_{h = 1}^{H}\\left\\langle \\mathbf{a}^{(h)},\\,\\mathbf{x}^{(h)}\\lbrack k\\rbrack \\right\\rangle},} \\\\ \\end{array}
-$$
+```
+\begin{array}{r} {\hat{y}\lbrack k\rbrack = {\sum\limits_{h = 1}^{H}\left\langle \mathbf{a}^{(h)},\,\mathbf{x}^{(h)}\lbrack k\rbrack \right\rangle},} \\ \end{array}
+```
 
 (4.47)
 
@@ -4126,69 +4357,69 @@ $$
 
 考虑具有结构化非线性的一维 RPM（见 Fig. 4.11(a)）并以以下离散时变函数作为其输入：
 
-$$
-\\begin{array}{r} {\\hat{y}\\lbrack k\\rbrack = {\\sum\\limits\_{h = 1}^{H}\\left( {{\\sum\\limits\_{n = 0}^{K}w^{(h)}}\\lbrack n\\rbrack x\\lbrack k - n\\rbrack} \\right)^{h}},\\text{\\quad\\quad}k \\geq K.} \\\\ \\end{array}
-$$
+```
+\begin{array}{r} {\hat{y}\lbrack k\rbrack = {\sum\limits_{h = 1}^{H}\left( {{\sum\limits_{n = 0}^{K}w^{(h)}}\lbrack n\rbrack x\lbrack k - n\rbrack} \right)^{h}},\text{\quad\quad}k \geq K.} \\ \end{array}
+```
 
 (4.48)
 
 脉冲特性 *w*^((*h*))\[*n*\] 具有有限记忆 *K* 且为随机参数。同样，作为后者选择其纵坐标，即
 
-$$
-\\begin{array}{r} {w^{(h)}\\lbrack n\\rbrack = a\_{n}^{(h)},\\quad n = \\overline{0,K}.} \\\\ \\end{array}
-$$
+```
+\begin{array}{r} {w^{(h)}\lbrack n\rbrack = a_{n}^{(h)},\quad n = \overline{0,K}.} \\ \end{array}
+```
 
 (4.49)
 
 构造向量
 
-$$
-\\begin{array}{r} {\\mathbf{a}^{(h)} = \\left\\{ a\_{0}^{(h)},\\ldots,a\_{K}^{(h)} \\right\\}.} \\\\ \\end{array}
-$$
+```
+\begin{array}{r} {\mathbf{a}^{(h)} = \left\{ a_{0}^{(h)},\ldots,a_{K}^{(h)} \right\}.} \\ \end{array}
+```
 
 (4.50)
 
 参数 *a*[*n*]^((*h*)) 是随机的、独立的，并在区间内取值
 
-$$
-\\begin{array}{r} {\\mathcal{A}\_{n}^{(h)} = \\lbrack - A\_{n}^{(h)},\\, A\_{n}^{(h)}\\rbrack,\\quad A\_{n}^{(h)} = \\beta\_{n}^{(h)}\\exp( - \\alpha\_{n}^{(h)}).} \\\\ \\end{array}
-$$
+```
+\begin{array}{r} {\mathcal{A}_{n}^{(h)} = \lbrack - A_{n}^{(h)},\, A_{n}^{(h)}\rbrack,\quad A_{n}^{(h)} = \beta_{n}^{(h)}\exp( -\alpha_{n}^{(h)}).} \\ \end{array}
+```
 
 (4.51)
 
-PDF $p\_{n}^{(h)}(a\_{n}^{(h)}),\\,\\, n = \\overline{0,K},$ 在这些区间上定义。
+PDF $p_{n}^{(h)}(a_{n}^{(h)}),\,\, n = \overline{0,K},$ 在这些区间上定义。
 
 回到等式 (4.48) 并引入以下记号：
 
 * 指标集
 
-$$
-\\begin{array}{r} {\\mathcal{I}\_{h}(K) = \\left\\{ i\_{n}:\\,{\\sum\\limits\_{n = 0}^{K}i\_{n}} = h,\\, i\_{n} = \\overline{0,K} \\right\\};} \\\\ \\end{array}
-$$
+```
+\begin{array}{r} {\mathcal{I}_{h}(K) = \left\{ i_{n}:{\sum\limits_{n = 0}^{K}i_{n}} = h,\, i_{n} = \overline{0,K} \right\};} \\ \end{array}
+```
 
 (4.52)
 
 * 向量
 
-$$
-\\begin{array}{r} {\\mathbf{i} = \\left\\{ i\_{0},\\ldots,i\_{K} \\right\\};} \\\\ \\end{array}
-$$
+```
+\begin{array}{r} {\mathbf{i} = \left\{ i_{0},\ldots,i_{K} \right\};} \\ \end{array}
+```
 
 (4.53)
 
 * 函数
 
-$$
-\\begin{array}{r} {C\_{(k,i\_{n})}(x) = \\frac{1}{i\_{n}!}\\, x^{i\_{n}}\\lbrack k - n\\rbrack.} \\\\ \\end{array}
-$$
+```
+\begin{array}{r} {C_{(k,i_{n})}(x) = \frac{1}{i_{n}!}\,\, x^{i_{n}}\lbrack k - n\rbrack.} \\ \end{array}
+```
 
 (4.54)
 
 则公式 (4.48) 可以写为
 
-$$
-\\begin{aligned} {\\hat{y}\\lbrack k\\rbrack} & {= {\\sum\\limits\_{h = 1}^{H}V\_{k}^{(h)}}(\\mathbf{a}^{(h)},x),} \\\\ {V\_{k}^{(h)}(\\mathbf{a}^{(h)},x)} & {= {\\sum\\limits\_{\\mathbf{i} \\in \\mathcal{I}\_{h}(K)}\\,}{\\prod\\limits\_{n = 0}^{K}\\,}C\_{(k,i\_{n})}(x)\\,{\\lbrack a\_{n}^{(h)}\\rbrack}^{i\_{n}}.} \\\\ \\end{aligned}
-$$
+```
+\begin{aligned} {\hat{y}\lbrack k\rbrack} & {= {\sum\limits_{h = 1}^{H}V_{k}^{(h)}}( \mathbf{a}^{(h)},x),} \\ {V_{k}^{(h)}(\mathbf{a}^{(h)},x)} & {= {\sum\limits_{\mathbf{i} \in \mathcal{I}_{h}(K)}}\,{\prod\limits_{n = 0}^{K}\,}C_{(k,i_{n})}(x)\,{ \lbrack a_{n}^{(h)}\rbrack}^{i_{n}}.} \\ \end{aligned}
+```
 
 (4.55)
 
@@ -4202,37 +4433,35 @@ $$
 
 Figure 4.13
 
-考虑 Fig. 4.13(a) 中给出的结构的 RPM。利用正交多项式 *g**k*，我们将此 RPM 写为以下形式：
+考虑 Fig. 4.13(a) 中给出的结构的 RPM。利用正交多项式 `g_k`，我们将此 RPM 写为以下形式：
 
-$$
-\\begin{array}{r} \\left. \\hat{y}(t) = {\\sum\\limits\_{k = 0}^{K}c\_{k}}{\\int\_{0}^{t}w}(t - \\tau\\, \\middle| \\mathbf{b})\\, g\_{k}(x(\\tau))d\\tau, \\right. \\\\ \\end{array}
-$$
+```
+\begin{array}{r} \left. \hat{y}(t) = {\sum\limits_{k = 0}^{K}c_{k}}{\int_{0}^{t}w}(t - \tau\, \middle| \mathbf{b})\, g_{k}(x(\tau))d\tau, \right. \\ \end{array}
+```
 
 (4.56)
 
-其中系数 *c*[0], …, *c*[*K*] 是区间型的独立随机变量，即
+其中系数 `c[0]`, …, `c[K]` 是区间型的独立随机变量，即
 
-$$
-\\begin{array}{r} {c\_{k} \\in \\mathcal{C}\_{k} = \\lbrack c\_{k}^{-},c\_{k}^{+}\\rbrack,\\text{\\quad\\quad}k = \\overline{0,K}.} \\\\ \\end{array}
-$$
+```
+\begin{array}{r} {c_{k} \in \mathcal{C}_{k} = \lbrack c_{k}^{-},c_{k}^{+}\rbrack,\text{\quad\quad}k = \overline{0,K}.} \\ \end{array}
+```
 
 (4.57)
 
-脉冲特性 *w*(*t* |**b**) 的参数 **b** 是随机的并属于区间
+脉冲特性 `w(t | b)` 的参数 `b` 是随机的并属于区间
 
-$$
-\\begin{array}{r} {\\mathbf{b} \\in \\mathcal{B} = \\lbrack\\mathbf{b}^{-},\\mathbf{b}^{+}\\rbrack.} \\\\ \\end{array}
-$$
+```
+\begin{array}{r} {\mathbf{b} \in \mathcal{B} = \lbrack\mathbf{b}^{-},\mathbf{b}^{+}\rbrack.} \\ \end{array}
+```
 
 (4.58)
 
-现在回到 Fig. 4.13(b) 中的框图。显然，对象的线性和非线性动态元件交换了位置。对象的输入是函数 *x*(*t*)。让我们使用具有随机参数 *w*(*τ* | **b**) 的脉冲特性来构造该对象的 RPM 用于线性元件，并使用具有随机系数的正交多项式集合用于非线性元件。然后 RPM 可以写为
+现在回到 Fig. 4.13(b) 中的框图。显然，对象的线性和非线性动态元件交换了位置。对象的输入是函数 `x(t)`。让我们使用具有随机参数 `w(τ | b)` 的脉冲特性来构造该对象的 RPM 用于线性元件，并使用具有随机系数的正交多项式集合用于非线性元件。然后 RPM 可以写为
 
-
-
-
-
-$$\\begin{aligned} {\\hat{y}(t) = \\sum\_{k = 1}^{K}\\,\\sum\_{i = 0}^{k}} & \\left. c\_{k}a\_{ki}\\int\_{0}^{t}\\cdots\\int\_{0}^{t}w(t - \\tau\_{0} \\middle| \\mathbf{b})\\cdots w(t - \\tau\_{i} \\middle| \\mathbf{b}) \\times \\right. \\\\ & {\\times x(\\tau\_{0})\\cdots x(\\tau\_{i})d\\tau\_{1}\\cdots d\\tau\_{i}.} \\\\ \\end{aligned}$$  
+```
+\begin{aligned} {\hat{y}(t) = \sum_{k = 1}^{K}\,\sum_{i = 0}^{k}} & \left. c_{k}a_{ki}\int_{0}^{t}\cdots\int_{0}^{t}w(t - \tau_{0} \middle| \mathbf{b})\cdots w(t - \tau_{i} \middle| \mathbf{b}) \times \right. \\ & {\times x(\tau_{0})\cdots x(\tau_{i})d\tau_{1}\cdots d\tau_{i}.} \\ \end{aligned}
+```
 
 (4.59)
 
@@ -4242,13 +4471,17 @@ $$\\begin{aligned} {\\hat{y}(t) = \\sum\_{k = 1}^{K}\\,\\sum\_{i = 0}^{k}} & \\l
 
 * 对于 图 4.13(a) 中的 RPM，
 
-$$\\begin{array}{r} \\left. \\hat{y}\\lbrack n\\rbrack = {\\sum\\limits\_{k = 0}^{K}\\,}{\\sum\\limits\_{i = 0}^{k}c\_{k}}a\_{ki}{\\sum\\limits\_{m = 0}^{n}w}\\lbrack n - m\\, \\middle| \\,\\mathbf{b}\\rbrack\\, x^{i}\\lbrack m\\rbrack; \\right. \\\\ \\end{array}$$  
+```
+\begin{array}{r} \left. \hat{y}\lbrack n\rbrack = {\sum\limits_{k = 0}^{K}\,}{\sum\limits_{i = 0}^{k}c_{k}}a_{ki}{\sum\limits_{m = 0}^{n}w}\lbrack n - m\, \middle| \,\mathbf{b}\rbrack\, x^{i}\lbrack m\rbrack; \right. \\ \end{array}
+```
 
 (4.60)
 
 * 对于 图 4.13(b) 中的 RPM，
 
-$$\\begin{array}{r} \\left. \\hat{y}\\lbrack n\\rbrack = {\\sum\\limits\_{k = 1}^{K}{\\sum\\limits\_{i = 0}^{k}c\_{k}}}a\_{ki}{\\sum\\limits\_{(m\_{0},\\ldots,m\_{i}) = 0}^{n}{\\prod\\limits\_{j = 0}^{i}w}}\\lbrack n - m\_{j}\\, \\middle| \\,\\mathbf{b}\\rbrack\\, x\\lbrack m\_{j}\\rbrack. \\right. \\\\ \\end{array}$$  
+```
+\begin{array}{r} \left. \hat{y}\lbrack n\rbrack = {\sum\limits_{k = 1}^{K}{\sum\limits_{i = 0}^{k}c_{k}}}a_{ki}{\sum\limits_{(m_{0},\ldots,m_{i}) = 0}^{n}{\prod\limits_{j = 0}^{i}w}}\lbrack n - m_{j}\, \middle| \,\mathbf{b}\rbrack\, x\lbrack m_{j}\rbrack. \right. \\ \end{array}
+```
 
 (4.61)
 
@@ -4258,7 +4491,9 @@ $$\\begin{array}{r} \\left. \\hat{y}\\lbrack n\\rbrack = {\\sum\\limits\_{k = 1}
 
 神经网络是一种用于机器学习程序的参数化模型。神经网络的结构基础是 Kolmogorov 定理 [94]，该定理指出，非负单位立方体上 `n` 个变量的连续函数可以写成单变量函数的叠加并求和：
 
-$$\\begin{array}{r} {f(x\_{1},\\ldots,x\_{n}) = {\\sum\\limits\_{k = 1}^{(2n + 1)}h\_{k}}\\left( {{\\sum\\limits\_{i = 1}^{n}\\phi\_{ik}}(x\_{i})} \\right);} \\\\ \\end{array}$$  
+```
+\begin{array}{r} {f(x_{1},\ldots,x_{n}) = {\sum\limits_{k = 1}^{(2n + 1)}h_{k}}\left( {{\sum\limits_{i = 1}^{n}\phi_{ik}}(x_{i})} \right);} \\ \end{array}
+```
 
 (4.62)
 
@@ -4268,25 +4503,33 @@ $$\\begin{array}{r} {f(x\_{1},\\ldots,x\_{n}) = {\\sum\\limits\_{k = 1}^{(2n + 1
 
 * —线性激活函数（参见 图 4.17(a)）
 
-$$\\begin{array}{r} {\\phi(u) = \\left\\{ \\begin{aligned} 0 & {\\text{if}\\, u \\leq \\Delta,} \\\\ u & {\\text{if}\\, u \\geq \\Delta;} \\\\ \\end{aligned}~ \\right.} \\\\ \\end{array}$$  
+```
+\begin{array}{r} {\phi(u) = \left\{ \begin{aligned} 0 & {\text{if}\, u \leq \Delta,} \\ u & {\text{if}\, u \geq \Delta;} \\ \end{aligned}~ \right.} \\ \end{array}
+```
 
 (4.63)
 
 * —sigmoid 激活函数（参见 图 4.17(b)）
 
-$$\\begin{array}{r} {\\phi(u) = \\frac{1}{1 + \\exp(u - \\Delta)};} \\\\ \\end{array}$$  
+```
+\begin{array}{r} {\phi(u) = \frac{1}{1 + \exp(u - \Delta)};} \\ \end{array}
+```
 
 (4.64)
 
 * —tangent 激活函数（参见 图 4.17(c)）
 
-$$\\begin{array}{r} {\\phi(u) = \\tan(u).} \\\\ \\end{array}$$  
+```
+\begin{array}{r} {\phi(u) = \tan(u).} \\ \end{array}
+```
 
 (4.65)
 
 图 4.16(b) 所示结构的网络称为单层神经网络。单层神经网络的串联构成多层神经网络。其内部层称为隐藏层，而最后一层称为输出层。大多数应用涉及一层隐藏层，如 图 4.18 所示。输入层有一组突触系数 `w[11]`，… `w[n h]`；隐藏层有 `g[11]`，…，`g[h s]`。
 
 因此，单层和多层神经网络（图 4.16 和 4.18）是统计系统，即网络在当前时刻的输入理论上取决于其在此时刻的输入。例如，单层神经网络的输出形式为
+
+
 
 ![Figure 4.16](img/fig4_16.jpg)
 
@@ -4341,10 +4584,6 @@ $$\\begin{aligned} \\mathbb{G} & {= \\mathcal{G}\\left( \\mathbf{x}(\\tau),\\mat
 $$\\begin{array}{r} {\\mathbf{a} \\in \\mathcal{A} = \\lbrack\\mathbf{a}^{-},\\mathbf{a}^{+}\\rbrack,\\text{\\quad\\quad}\\mathbf{c} \\in \\mathcal{S} = \\lbrack\\mathbf{c}\_{-},\\mathbf{c}^{+}\\rbrack.} \\\\ \\end{array}$$  
 
 (4.69)
-
-
-
-
 
 Consequently, the \[(SI,FB)–EO\] RPM can be written as
 
@@ -4412,6 +4651,8 @@ $$\\begin{array}{r} {\\varepsilon(t) = x(t) - z(t).} \\\\ \\end{array}$$
 
 Here the pulse characteristics have random parameters, namely, the random independent vectors **a**^((*i*)) and **c**^((*j*)) with independent elements taking values within the intervals
 
+
+
 $$\\begin{aligned} {\\mathbf{a}^{(i)} \\in \\mathcal{A}^{(i)}} & {= \\lbrack\\mathbf{a}\_{-}^{(i)},\\,\\mathbf{a}\_{+}^{(i)}\\rbrack,\\text{\\quad\\quad}i \\in \\lbrack 1,\\infty),} \\\\ {\\mathbf{c}^{(j)} \\in \\mathcal{S}^{(j)}} & {= \\lbrack\\mathbf{c}\_{-}^{(j)},\\,\\mathbf{c}\_{+}^{(j)}\\rbrack,\\text{\\quad\\quad}j \\in \\lbrack 1,\\infty).} \\\\ \\end{aligned}$$  
 
 (4.86)
@@ -4423,10 +4664,6 @@ $$\\begin{aligned} {\\mathbf{y}(t)} & \\left. = \\mathcal{B}(\\mathbf{x}(\\tau),
 (4.87)
 
 Define the pulse characteristics in this formula so that equations (4.3.3) turn into identities \[146\]. First, substitute the last-mentioned equation into the first one to obtain an integral equation in the variable *y*(*t*):
-
-
-
-
 
 $$\\begin{aligned} & \\left. y(t) = {\\int\_{\\tau\_{1} \\in \\mathcal{T}}g\_{1}}(t - \\tau\_{1}\\, \\middle| \\,\\mathbf{a})\\lbrack x(\\tau\_{1}) - {\\int\_{\\lambda\_{1} \\in \\mathcal{T}}\\,}c\_{1}(\\tau\_{1} - \\lambda\_{1}\\, \\middle| \\,\\mathbf{c})\\, y(\\lambda\_{1})\\, d\\lambda\_{1} + \\right. \\\\ & \\left. \\quad + {\\int\_{\\lambda\_{1} \\in \\mathcal{T}}{\\int\_{\\lambda\_{2} \\in \\mathcal{T}}\\,}}c\_{2}(t - \\lambda\_{1},t - \\lambda\_{2}\\, \\middle| \\,\\mathbf{c})\\, y(\\lambda\_{1})y(\\lambda\_{2})\\, d\\lambda\_{1}d\\lambda\_{2} + \\ldots \\right. \\\\ \\end{aligned}$$  
 
@@ -4482,23 +4719,22 @@ $$\\begin{array}{r} {\\mathbf{w} \\in \\mathcal{W} = \\lbrack\\mathbf{w}^{-},\\m
 
 Section 3.2 中正交多项式的使用过程自然地推广到 \[(SI,FB)–EO\] RPMs。
 
-
-
-
-
 ## 4.4 随机参数和系综的概率特性
 
 RML 程序中使用的模型具有 *随机化参数* 的实现，它们在这些模型的输出处生成随机对象（向量、轨迹、事件）的 *系综*。两者均以适当的概率特性来描述。
 
+
+
 ### 1. 随机化参数的概率特性
 
-所研究的 RPM 涉及具有期望概率特性的随机化区间型参数。我们将区分
+所研究的 `RPM` 涉及具有期望概率特性的随机化区间型参数。我们将区分
 
 * *原始* 参数 `a` = {`a[1]`,…,`a[n]`}，其取值在具有任意大小面的 *n* 维平行六面体 `𝒜` 内，即
 
 ```
 \begin{array}{r} {\mathcal{A} = \lbrack\mathbf{a}^{-},\mathbf{a}^{+}\rbrack = \otimes_{i = 1}^{n}\mathcal{A}_{i} = \lbrack a_{i}^{-},a_{i}^{+}\rbrack,\quad\quad\text{and}} \\ \end{array}
 ```
+
 (4.95)
 
 * *相对非负* 参数 `u` = {`u[1]`,…,`u[n]`}，其取值在具有单位面的 *n* 维非负平行六面体 `𝒰` 内，即
@@ -4506,6 +4742,7 @@ RML 程序中使用的模型具有 *随机化参数* 的实现，它们在这些
 ```
 \begin{array}{r} {\mathcal{U} = \lbrack\mathbf{0},\mathbf{1}\rbrack.} \\ \end{array}
 ```
+
 (4.96)
 
 相对非负参数与原始参数的关系为
@@ -4513,13 +4750,15 @@ RML 程序中使用的模型具有 *随机化参数* 的实现，它们在这些
 ```
 \begin{aligned} a_{i} & {= a_{i}^{-} + u_{i}\delta_{i},\quad\delta_{i} = a_{i}^{+} - a_{i}^{-},\quad\quad i = \overline{1,n},} \\ \mathbf{a} & {= \mathbf{a}^{-} + \Delta\mathbf{u},\quad\quad\Delta = \text{diag}\lbrack(a_{i}^{+} - a_{i}^{-})\,,\, i = \overline{1,n}\rbrack.} \\ \end{aligned}
 ```
+
 (4.97)
 
-这些类型的模型参数根据期望的概率特性进行随机化，更具体地说，根据原始参数 `a` 的 PDF `P(a)` 和相对非负参数 `u` 的 PDF `W(u)` 进行随机化。一般情况下，向量 `a` 和 `u` 的元素可以相互关联。它们的 PDF 表示一般形式的多个变量函数。如果参数是独立的，则相应的 PDF 具有乘性结构：
+这些类型的模型参数根据期望的概率特性进行随机化，更具体地说，根据原始参数 `a` 的 `PDF` `P(a)` 和相对非负参数 `u` 的 `PDF` `W(u)` 进行随机化。一般情况下，向量 `a` 和 `u` 的元素可以相互关联。它们的 `PDF` 表示一般形式的多个变量函数。如果参数是独立的，则相应的 `PDF` 具有乘性结构：
 
 ```
 \begin{array}{r} {P(\mathbf{a}) = {\prod\limits_{i = 1}^{n}P_{i}}(a_{i}),\quad\quad W(\mathbf{u}) = {\prod\limits_{i = 1}^{n}w_{i}}(u_{i}).} \\ \end{array}
 ```
+
 (4.98)
 
 为了使表述简洁，让我们引入以下术语缩写：
@@ -4531,28 +4770,34 @@ RML 程序中使用的模型具有 *随机化参数* 的实现，它们在这些
 
 随机化模型输出随机向量（静态模型）的系综、时变函数即轨迹（动态模型）的系综，或随机事件的系综。对于每个模型，这些系综都是通过生成其随机化参数而出现的。系综可以用数理统计的众所周知的概率特性以定量方式描述。
 
-考虑在有限时间区间 `𝒯` = `[0, T]` 上的一组任意轨迹 `${\hat{\mathcal{Y}}}_{T}$` `ŷ(t)`，即由具有给定 PDF 的一维 `RPM-Orig` 模型生成的。这样的系综的示例在 Fig. 4.23 中给出。假设它包含 `N` 条轨迹。用 `ŷ(t*)` 表示其在固定值 `t` = `t*` 下的截集。该截集形成随机变量 `ŷ(t*)` 的值（实现）的集合，将用于经验估计。
+考虑在有限时间区间 `𝒯` = `[0, T]` 上的一组任意轨迹 `${\hat{\mathcal{Y}}}_{T}$` `ŷ(t)`，即由具有给定 `PDF` 的一维 `RPM-Orig` 模型生成的。这样的系综的示例在 Fig. 4.23 中给出。假设它包含 `N` 条轨迹。用 `ŷ(t*)` 表示其在固定值 `t` = `t*` 下的截集。该截集形成随机变量 `ŷ(t*)` 的值（实现）的集合，将用于经验估计。
 
 ![Figure 4.23](img/fig4_24.jpg)
 
 Figure 4.23
 
-*A) 均值轨迹的演化*。随机变量 `ŷ(t*)` 的均值由下式给出
+#### A) 均值轨迹的演化
+
+随机变量 `ŷ(t*)` 的均值由下式给出
 
 ```
 \begin{array}{r} {\overline{y}(t^{\*}) = \frac{1}{N}{\sum\limits_{k = 1}^{N}{\hat{y}}^{(k)}}(t^{\*}),} \\ \end{array}
 ```
+
 (4.99)
 
 其中 `ŷ^{(k)}(t*)` 表示随机变量 `ŷ(t*)` 的实现。
 
 对不同的时间 `t*` ∈ `𝒯` 计算这些均值，我们得到经验估计 `\overline{y}(t_u^*), u ∈ \overline{1,U}.` 的集合。它们可以用连续曲线 `\overline{y}(t),` 来近似，该曲线形成均值轨迹 [104]。
 
-*B) 经验方差管的演化*。取 Fig. 4.23 中所示的系综 `${\hat{\mathcal{Y}}}_{T}$`，并考虑其截集 `ŷ(t*)`。定义随机变量
+#### B) 经验方差管的演化
+
+取 Fig. 4.23 中所示的系综 `${\hat{\mathcal{Y}}}_{T}$`，并考虑其截集 `ŷ(t*)`。定义随机变量
 
 ```
 \begin{array}{r} {D(t^{\*}) = {\lbrack\hat{y}(t^{\*}) - \overline{y}(t^{\*})\rbrack}^{2}.} \\ \end{array}
 ```
+
 (4.100)
 
 该随机变量的均值（即随机变量 `ŷ(t*)` 的方差）由下式给出
@@ -4560,6 +4805,7 @@ Figure 4.23
 ```
 \begin{array}{r} {\overline{D}(t^{\*}) = \frac{1}{N - 1}{\sum\limits_{k = 1}^{N}D^{(k)}}(t^{\*}),} \\ \end{array}
 ```
+
 (4.101)
 
 其中 `D^{(k)}(t*)` 表示随机变量 `D(t*)` (4.100) 的实现。
@@ -4569,6 +4815,7 @@ Figure 4.23
 ```
 \begin{array}{r} {\sigma(t^{\*}) = \sqrt{\overline{D}(t^{\*})}.} \\ \end{array}
 ```
+
 (4.102)
 
 在假设 `t*` 取值于区间 `𝒯` 内的条件下，让我们用连续曲线——标准差轨迹 `σ(t)` 来近似得到的结果点。
@@ -4578,17 +4825,21 @@ Figure 4.23
 ```
 \begin{array}{r} {\mathcal{D} = \left\{ \hat{y}:\delta_{-}(t) \leq \hat{y}(t) \leq \delta_{+}(t) \right\}} \\ \end{array}
 ```
+
 (4.103)
 
 将被称作 *标准差管*。 Figure 4.23 展示了关于均值轨迹 `\overline{y}(t).` 的标准差管 `𝒟`。
 
-*C) 经验概率密度函数的演化*。经验 PDF 的估计值可以用固定时间 `t*` 下随机变量实现 `ŷ(t*)` 构造。
+#### C) 经验概率密度函数的演化
 
-经验 PDF，即直方图 `p[ŷ(t*)]`，是根据众所周知的规则 [104] 构造的。用 `ŷ^-(t*)` 和 `ŷ^+(t*)` 分别表示随机变量 `ŷ(t*)` 的左、右极限。接下来，将区间 `[ŷ^-(t*), ŷ^+(t*)]` 分成 `J` 个子区间 `η_j, (j = \overline{1,J})`，其长度为 (`ŷ^+(t*)` − `ŷ^-(t*)`) / `J`。经验概率密度函数是随机变量 `ŷ(t*)` 的值落入子区间 `η_j, (j = \overline{1,J}),` 的频率，即
+经验 `PDF` 的估计值可以用固定时间 `t*` 下随机变量实现 `ŷ(t*)` 构造。
+
+经验 `PDF`，即直方图 `p[ŷ(t*)]`，是根据众所周知的规则 [104] 构造的。用 `ŷ^-(t*)` 和 `ŷ^+(t*)` 分别表示随机变量 `ŷ(t*)` 的左、右极限。接下来，将区间 `[ŷ^-(t*), ŷ^+(t*)]` 分成 `J` 个子区间 `η_j, (j = \overline{1,J})`，其长度为 (`ŷ^+(t*)` − `ŷ^-(t*)`) / `J`。经验概率密度函数是随机变量 `ŷ(t*)` 的值落入子区间 `η_j, (j = \overline{1,J}),` 的频率，即
 
 ```
 \begin{array}{r} {p_{j} = \frac{M_{j}}{M},} \\ \end{array}
 ```
+
 (4.104)
 
 其中 `M[j]` 给出子区间 `η[j]` 内 `ŷ(t*)` 的值的数量，`M` 是系综中轨迹的总数量。 Figure 4.24 提供了直方图 `p[ŷ(t*)]` 的示例。通过改变时间 `t*` 可以观察到直方图的演化。通常，系综包含非常多的轨迹。因此，直方图可以用连续曲线 `\hat{P}[ŷ(t*)]` 以良好的精度近似。
@@ -4597,20 +4848,20 @@ Figure 4.23
 
 Figure 4.24
 
-*D). 经验中位轨迹的演化*。通常经验 PDF 没有对称性。在这种情况下，中位轨迹似乎更有信息量。考虑 PDF `\hat{P}[ŷ(t*)]`，并定义值 `z(t*)` 使得
+#### D) 经验中位轨迹的演化
+
+通常经验 `PDF` 没有对称性。在这种情况下，中位轨迹似乎更有信息量。考虑 `PDF` `\hat{P}[ŷ(t*)]`，并定义值 `z(t*)` 使得
 
 ```
 \begin{array}{r} {{\int_{\hat{y}^{-}(t^{\*})}^{z(t^{\*})}\hat{P}}(x)dx = {\int_{z(t^{\*})}^{\hat{y}^{-}(t^{\*})}\hat{P}}(x)dx.} \\ \end{array}
 ```
+
 (4.105)
-
-
-
-
 
 The value `z(t*)` of the random variable `ŷ(t*)` is called the median for the time `t*`. Performing these calculations for all `t* ∈ 𝒯`, obtain a continuous curve, which will be called the median trajectory of the ensemble.
 
-### E). The evolution of the α-quantiles of the empirical PDF
+#### E) 经验 PDF 的 α-分位数的演化
+
 For a fixed time `t*`, introduce the empirical probability density function
 
 $$\begin{array}{r} {{\hat{F}}_{t^{\*}}(y) = {\int_{{\hat{y}}^{-}(t^{\*})}^{y}{\hat{P}}_{t^{\*}}}(v)dv.} \\ \\ \end{array}$$
@@ -4631,7 +4882,8 @@ $$\begin{array}{r} {Pb\left\{ y > y_{\alpha_{t^{\*}}} \right\} \leq 1 - \alpha_{
 
 where `Pb` denotes probability. The `α[t*]`-quantile is illustrated in Fig. 4.25(b). By analogy with items A)–C), consider different cutsets `t* ∈ 𝒯` of the ensemble to get the `α[t]`-quantile trajectory, see Fig. 4.25(b).
 
-### F). The evolution of the empirical confidence intervals and confidence levels
+#### F) 经验置信区间和置信水平的演化
+
 The `α[t*]`-quantile allows us to define an interval (known as *the confidence interval*) that covers the values of the random variable `ŷ(t*)` with the probability `α[t*]` (*the confidence level*).
 
 By definition, the confidence interval
@@ -4652,9 +4904,9 @@ Letting `t* = t ∈ 𝒯` in both formulas, construct the confidence domain `C(t
 
 Figure 4.25
 
-### 3. The moment characteristics of the ensemble
+### 3. 系综的矩特性
 
-Consider a one-dimensional ensemble `${\hat{\mathcal{Y}}}_{T}$` consisting of random trajectories `ŷ(t | a)`, where `t ∈ 𝒯`. The parameters `a` are randomized with a given PDF `P(a)`. Let `t = t*` be fixed. Then `ŷ(t* | a)` represents a function of the random argument `a`.
+Consider a one-dimensional ensemble `${\hat{\mathcal{Y}}}_{T}$` consisting of random trajectories `ŷ(t | a)`, where `t ∈ 𝒯`. The parameters `a` are randomized with a given `PDF` `P(a)`. Let `t = t*` be fixed. Then `ŷ(t* | a)` represents a function of the random argument `a`.
 
 Define its `kth moments` by
 
@@ -4672,7 +4924,7 @@ For `k = 1`, the moment coincides with its mean, i.e., `M[1] = m[1]`.
 
 Assuming `t*` to be a variable that takes values within the interval `𝒯`, find the `kth moment trajectory Mk` and the `k`-mean trajectory `mk`.
 
-In some applications, the object's output vector consists of the elements acting as the average functionals with random parameters. For example, consider option trading [15, 182]. Each of `r` financial derivatives contains `p` random parameters `a[1], …, a[p]`, which are realized in the course of trading with some PDF `P(a)`. The relations between the financial derivatives and parameters are described by functionals `𝒢1, …, 𝒢r`. As a rule, they belong to the class of power functionals; in the elementary statement, these functionals have the form
+In some applications, the object's output vector consists of the elements acting as the average functionals with random parameters. For example, consider option trading [15, 182]. Each of `r` financial derivatives contains `p` random parameters `a[1], …, a[p]`, which are realized in the course of trading with some `PDF` `P(a)`. The relations between the financial derivatives and parameters are described by functionals `𝒢1, …, 𝒢r`. As a rule, they belong to the class of power functionals; in the elementary statement, these functionals have the form
 
 $$\begin{array}{r} {\mathcal{G}_{1}(\mathbf{a}) = {\sum\limits_{k = 1}^{p}c_{k}}a_{k},} \\ \\ \end{array}$$
 
@@ -4683,6 +4935,8 @@ $$\ldots \\ \\$$
 $$\begin{array}{r} {\mathcal{G}_{r}(\mathbf{a}) = {\sum\limits_{k = 1}c_{k}}a_{k} + {\sum\limits_{k_{1},k_{2}}c_{k_{1},k_{2}}}a_{k_{1}}a_{k_{2}} + \ldots + {\sum\limits_{k_{1},\ldots,k_{r}}c_{k_{1},\ldots,k_{r}}}a_{k_{1}}\cdots a_{k_{r}}.} \\ \\ \end{array}$$
 
 The more efficient models that are used to predict future mean prices involve the integral power functionals; their cores depend on the time variables, `c(τ), c(τ[1], τ[2]), …`.
+
+
 
 In both statements, the relations under consideration give the mean prices of the financial derivatives, i.e.,
 
@@ -4710,10 +4964,6 @@ Figure 5.1
 
 **2. Randomized parametric model (RPM)** generally represents a dynamic system with randomized *original* parameters `a ∈ R^(r)` that take values within the `r`-dimensional parallelepiped
 
-
-
-
-
 $$
 \begin{array}{r}
 {\mathbf{a} \in \mathcal{A} = \lbrack\mathbf{a}^{-},\mathbf{a}^{+}\rbrack \in R^{r},\quad\mathcal{A} = {\underset{i = 1}{\overset{r}{\cup}}\mathcal{A}_{i}},\text{\quad\quad}\mathcal{A}_{i} = \lbrack a_{i}^{-},a_{i}^{+}\rbrack.}
@@ -4723,9 +4973,9 @@ $$
 
 (5.1)
 
-随机原始参数的概率性质由概率密度函数 *P*(**a**) 描述。此类模型的模型将被称为 *RPM-Orig* 模型。
+随机原始参数的概率性质由概率密度函数 `P(a)` 描述。此类模型的模型将被称为 `RPM-Orig` 模型。
 
-在许多情况下，使用非负 *相对* 随机参数 **u** ∈ ℐ = \[**0**, **1**\]; ℐ ∈ *R*[+]^(*r*) 是合理的。回想一下它们与原始参数之间的关系为：
+在许多情况下，使用非负 *相对* 随机参数 `u ∈ I = [0, 1]; I ∈ R[+](r)` 是合理的。回想一下它们与原始参数之间的关系为：
 
 $$
 \begin{array}{r}
@@ -4747,11 +4997,11 @@ $$
 
 (5.3)
 
-随机相对参数的概率性质用概率密度函数 *W*(**u**) 来表征。此类模型的模型将被称为 *RPM-Rel* 模型。
+随机相对参数的概率性质用概率密度函数 `W(u)` 来表征。此类模型的模型将被称为 `RPM-Rel` 模型。
 
 对于随机参数的 *每个实现*，模型生成具有给定概率密度函数的轨迹，其具有以下函数描述：
 
-* 对于 RPM-Orig 模型，
+* 对于 `RPM-Orig` 模型，
 
 $$
 \begin{aligned}
@@ -4764,7 +5014,7 @@ $$
 
 (5.4)
 
-* 对于 RPM-Rel 模型，
+* 对于 `RPM-Rel` 模型，
 
 $$
 \begin{array}{r}
@@ -4773,11 +5023,11 @@ $$
 \end{array}
 $$
 
-公式 (5.4, 5.5) 中，ℬ 和 𝒟 是积分泛函。
+公式 (5.4, 5.5) 中，`B` 和 `D` 是积分泛函。
 
 在离散测量时刻，随机模型输出相应轨迹的集合，即
 
-* 对于 RPM-Orig 模型，
+* 对于 `RPM-Orig` 模型，
 
 $$
 \begin{array}{r}
@@ -4788,7 +5038,7 @@ $$
 
 (5.5)
 
-* 对于 RPM-Rel 模型，
+* 对于 `RPM-Rel` 模型，
 
 $$
 \begin{array}{r}
@@ -4801,9 +5051,9 @@ $$
 
 ### 3. 测量误差生成器 (MEG)
 
-旨在模拟输出数据中的测量误差。该装置产生具有特定概率性质的随机向量集合。它由具有标准概率密度函数的向量随机化器 (*VR*) 和将这些向量转换为具有给定概率密度函数的向量的转换器 (*C*) 组成。标准概率密度函数是随机向量在单位非负 *m*\-维立方体上具有均匀分布的密度。转换器将这些向量转换为由模型机器学习定义的概率密度函数的随机向量。
+旨在模拟输出数据中的测量误差。该装置产生具有特定概率性质的随机向量集合。它由具有标准概率密度函数的向量随机化器 (`VR`) 和将这些向量转换为具有给定概率密度函数的向量的转换器 (`C`) 组成。标准概率密度函数是随机向量在单位非负 `m`-维立方体上具有均匀分布的密度。转换器将这些向量转换为由模型机器学习定义的概率密度函数的随机向量。
 
-因此，MEG 输出随机噪声向量 $\overline{\xi}(t_{j}) = {\overline{\xi}}^{(j)}, \,(j = \overline{1,s}\,),$ 其中 ${\overline{\xi}}^{(j)} \in R^{m}.$ 以同样的方式描述通过矩阵 $\left. \Xi = \lbrack\,\xi_{ij}\, \middle| \, i = \overline{1,m};\, j = \overline{1,s}\,\rbrack. \right.$ 积累数据后出现的噪声数组。
+因此，MEG 输出随机噪声向量 `\overline{\xi}(t_{j}) = {\overline{\xi}}^{(j)}, \,(j = \overline{1,s}\,),$` 其中 `${\overline{\xi}}^{(j)} \in R^{m}.$` 以同样的方式描述通过矩阵 `\left. \Xi = \lbrack\,\xi_{ij}\, \middle| \, i = \overline{1,m};\, j = \overline{1,s}\,\rbrack. \right.` 积累数据后出现的噪声数组。
 
 假设噪声向量的元素是独立的并且属于区间
 
@@ -4818,7 +5068,7 @@ $$
 
 (5.7)
 
-通常很有用引入相对非负向量 ${\overline{\eta}}^{(j)}$，其取值在单位非负 *m*\-维立方体 ℰ[*j*] = \[**0**, **1**\] 内。此外，定义辅助变量矩阵 $\left. E = \lbrack\,\eta_{ij}\, \middle| \, i = \overline{1,m};\, j = \overline{1,s}\,\rbrack. \right.$ 随机向量 ${\overline{\xi}}^{(j)}$ 到向量 *η*^((*j*)) 的变换如下：
+通常很有用引入相对非负向量 `{\overline{\eta}}^{(j)}`，其取值在单位非负 `m`-维立方体 `E[j] = [0, 1]` 内。此外，定义辅助变量矩阵 `\left. E = \lbrack\,\eta_{ij}\, \middle| \, i = \overline{1,m};\, j = \overline{1,s}\,\rbrack. \right.` 随机向量 `{\overline{\xi}}^{(j)}` 到向量 `η^{(j)}` 的变换如下：
 
 $$
 \begin{aligned}
@@ -4831,7 +5081,7 @@ $$
 
 (5.8)
 
-噪声的概率性质由在 𝒦[*j*] (5.7) 上定义的概率密度函数 $Q_{j}({\overline{\xi}}^{(j)})$ 或在单位立方体 ℰ 上定义的概率密度函数 $G_{j}({\overline{\eta}}^{(j)})$ 表征。如果指定了这些密度函数，则 MEG 产生模拟的随机向量集合
+噪声的概率性质由在 `K[j]` (5.7) 上定义的概率密度函数 `Q_j(\overline{\xi}^{(j)})` 或在单位立方体 `E` 上定义的概率密度函数 `G_j(\overline{\eta}^{(j)})` 表征。如果指定了这些密度函数，则 MEG 产生模拟的随机向量集合
 
 * 原始噪声
 
@@ -4859,7 +5109,7 @@ $$
 
 模拟测量误差对估计结果的影响。根据假设，这种影响可以用加性测量模型很好地描述。测量模型输出的集合具有以下形式：
 
-* 对于 RPM-Orig 模型，
+* 对于 `RPM-Orig` 模型，
 
 $$
 \begin{aligned}
@@ -4872,7 +5122,7 @@ $$
 
 (5.11)
 
-* 对于 RPM-Rel 模型，
+* 对于 `RPM-Rel` 模型，
 
 ![](img/math5_39.jpg)
 
@@ -4882,7 +5132,7 @@ $$
 
 对于随机模型，集合由以下随机轨迹组成：
 
-* 对于 RPM-Orig 模型，
+* 对于 `RPM-Orig` 模型，
 
 $$
 \begin{array}{r}
@@ -4893,7 +5143,7 @@ $$
 
 (5.12)
 
-* 对于 RPM-Rel 模型，
+* 对于 `RPM-Rel` 模型，
 
 $$
 \begin{array}{r}
@@ -4904,26 +5154,30 @@ $$
 
 (5.13)
 
-作为集合 𝒱[*j*] 和 ℱ[*j*] 的数值特征，采用由 *k*\-均值组成的向量，即第 *k* 个矩的 *k* 次方根（见 (4.111, 4.112)），即
+作为集合 `V[j]` 和 `F[j]` 的数值特征，采用由 `k`-均值组成的向量，即第 `k` 个矩的 `k` 次方根（见 (4.111, 4.112)），即
 
-* 对于 RPM-Orig 模型，
+* 对于 `RPM-Orig` 模型，
 
 $$
 \begin{aligned}
+
+
+
 {\mathbf{m}^{(k)}\lbrack P(\mathbf{a}),Q_{j}({\overline{\xi}}^{(j)}),j\rbrack} & {\left\{ \lbrack M_{i}^{(k)}(j)\rbrack^{1/k},\, \middle| \, i = \overline{1,m} \right\},}
+
 \\
+
 & {j = \overline{1,s};}
+
 \\
+
 \end{aligned}
+
 $$
 
 (5.14)
 
 * 对于 RPM-Rel 模型，
-
-
-
-
 
 $$\\begin{aligned} {\\mathbf{n}^{(k)}\\lbrack W(\\mathbf{u}),G_{j}({\\overline{\\eta}}^{(j)},j)\\rbrack} & {= \\left\\{ {\\lbrack N_{i}^{(k)}(j)\\rbrack}^{1/k},\\, \\middle| \\, i = \\overline{1,m} \\right\\},} \\\\ & {j = \\overline{1,s}.} \\\\ \\end{aligned}$$  
 
@@ -5003,20 +5257,20 @@ $$\\begin{array}{r} {\\left. S \\right.\\sim C + H_{F}(\\mathbf{N}).} \\\\ \\end
 
 $$\\begin{array}{r} {H_{F}(\\mathbf{N}) = - {\\sum\\limits_{k = 1}^{m}\\left\\lbrack {\\, N_{k}\\frac{N_{k}}{{\\widetilde{a}}_{k}} + (G_{k} - N_{k})\\ln(G_{k} - N_{k})\\,} \\right\\rbrack},\\quad{\\widetilde{a}}_{k} = \\frac{a_{k}}{1 - a_{k}},} \\\\ \\end{array}$$
 
-
-
-
-
 is called *广义费米信息熵*。对于该函数，定义域为 *m* 维平行六面体 `𝒩` = [`0`, `G`]，即容许宏观态的集合。若参数 `a` 和 `G` 满足条件
 
 $$
+
 \begin{array}{r} {G_{k}a_{k} = \text{const},\text{\quad\quad}N_{k} \ll G_{k},} \\ \end{array}
+
 $$
 
 则 `H[F]`(`N`) 可变换为熵函数
 
 $$
+
 \begin{array}{r} {H_{B}(\mathbf{N}) = - {\sum\limits_{k = 1}^{m}N_{k}}\ln\frac{N_{k}}{a_{k}G_{k}e},} \\ \end{array}
+
 $$
 
 其被称为 *广义玻尔兹曼信息熵*。该函数定义在非负象限 `𝒩` ∈ *R*+ 上，表示容许宏观态的集合。
@@ -5026,19 +5280,25 @@ $$
 由于分布过程需要资源，只能实现满足条件的宏观态
 
 $$
+
 \begin{array}{r} {\Phi_{i}(\mathbf{t},\mathbf{N}) = q_{i},\quad i = \overline{1,s};\text{\quad\quad}\Phi_{i + s}(\mathbf{t},\mathbf{N}) = q_{i + s},\quad i = \overline{1,r-s}.} \\ \end{array}
+
 $$
 
 这些约束定义了所谓的资源集 `𝒟`。该集合与容许宏观态的相应集合的交集给出 *容许集*
 
 $$
+
 \begin{array}{r} {\mathcal{F} = \mathcal{N}{\cap \mathcal{D}}.} \\ \end{array}
+
 $$
 
 利用上述概念和术语，我们可以表述 *广义变分原理* 如下。*在宏观系统中实现的宏观态对应于广义信息熵的约束最大值*，即
 
 $$
+
 \begin{array}{r} \left. H(\mathbf{N})\Rightarrow\max\text{~subject~to~}\,\, \mathbf{N} \in \mathcal{F}. \right. \\ \end{array}
+
 $$
 
 ## 5.2 用于概率密度函数的熵鲁棒估计算法
@@ -5050,7 +5310,9 @@ PDF 的估计算法构成了随机化机器学习程序的核心。它们面向�
 根据 (5.4, 5.12)，在时刻 `t[j]` 时 RPM-Orig 模型的观测输出由下式描述
 
 $$
+
 \begin{aligned} {\mathbf{v}(t_{j}) = \mathbf{y}\lbrack t_{j}} & \left| \, P(\mathbf{a})\rbrack + {\overline{\xi}}^{(j)}\lbrack Q_{j}({\overline{\xi}}^{(j)})\rbrack, \right. \\ \left. \mathbf{y}\lbrack t_{j}\, \middle| \, P(\mathbf{a})\rbrack = \mathcal{B}\lbrack\mathbf{x} \right. & \left. ((t_{j},\tau_{l}),\, \middle| \, l = \overline{1,(j-1)}),\mathbf{a}\rbrack, \right. \\ & {j = \overline{1,s}.} \\ \end{aligned}
+
 $$
 
 (5.19)
@@ -5062,7 +5324,9 @@ $$
 * 最大化广义玻尔兹曼信息熵泛函 [149]
 
 $$
+
 \begin{aligned} {\mathcal{H}\lbrack P(\mathbf{a}),\overline{Q}(\xi)\rbrack =} & {- {\int_{\mathcal{A}}P}(\mathbf{a})\,\ln\frac{P(\mathbf{a})}{P_{0}(\mathbf{a})}\, d\,\mathbf{a} -} \\ {- {\sum\limits_{j = 1}^{s}\,}{\int_{\Xi_{j}}Q_{j}}({\overline{\xi}}^{(j)})} & \left. \ln\frac{Q_{j}({\overline{\xi}}^{(j)})}{Q_{j}^{0}({\overline{\xi}}^{(j)})}d{\overline{\xi}}^{(j)}\Rightarrow\min_{P,Q_{1},...,Q_{s}} \right. \\ \end{aligned}
+
 $$
 
 (5.20)
@@ -5072,7 +5336,9 @@ $$
   * –PDF 的归一化条件，即
 
 $$
+
 \begin{array}{r} {{\int_{\mathcal{A}}P}(\mathbf{a})d\mathbf{a} = 1,\quad{\int_{\Xi_{j}}Q_{j}}({\overline{\xi}}^{(j)})\,\ d{\overline{\xi}}^{(j)} = 1,\quad j = \overline{1,s},} \\ \end{array}
+
 $$
 
 (5.21)
@@ -5082,18 +5348,22 @@ $$
   * –RPM-Orig 模型 (5.14) 输出的 *k*-均值与对象输出测量的平衡约束，即
 
 $$
+
 \begin{array}{r} {\mathbf{m}^{(k)}\lbrack P(\mathbf{a}),Q_{j}({\overline{\xi}}^{(j)}),j\rbrack = \mathbf{y}(t_{j}),\quad j = \overline{1,s}.} \\ \end{array}
+
 $$
 
 (5.22)
 
 由于 (5.13)，这些等式约束中的向量 `$\mathbf{m}^{(k)}\lbrack P(\mathbf{a}),Q_{j}({\overline{\xi}}^{(j)}),j\rbrack$` 的分量为
 
-$$
-\begin{aligned} & {m_{i}^{(k)}\lbrack j\rbrack = \left\lbrack {\int_{\mathcal{A}}P}(\mathbf{a})y_{i}^{k}\lbrack t_{j}\, \middle| \, P(\mathbf{a})\rbrack\, d\mathbf{a} \right\rbrack^{1/k} +} \\ & {\text{\quad\quad} + \left\lbrack {{\int_{\Xi_{j}}\,}Q_{j}({\overline{\xi}}^{(j)})\,{\lbrack\xi_{i}^{(j)}\rbrack}^{k}\, d\xi_{i}^{(j)}} \right\rbrack^{1/k},} \\ & {\quad\text{\quad\quad}\text{\quad\quad}i = \overline{1,m},\, j = \overline{1,s}.} \\ \end{aligned}
-$$
 
+
+\begin{aligned} & {m_{i}^{(k)}\lbrack j\rbrack = \left\lbrack {\int_{\mathcal{A}}P}(\mathbf{a})y_{i}^{k}\lbrack t_{j}\, \middle| \, P(\mathbf{a})\rbrack\, d\mathbf{a} \right\rbrack^{1/k} +} \\ & {\text{\quad\quad} + \left\lbrack {{\int_{\Xi_{j}}\,}Q_{j}({\overline{\xi}}^{(j)})\,{\lbrack\xi_{i}^{(j)}\rbrack}^{k}\, d\xi_{i}^{(j)}} \right\rbrack^{1/k},} \\ & {\quad\text{\quad\quad}\text{\quad\quad}i = \overline{1,m},\, j = \overline{1,s}.} \\ \end{aligned}
+
+$$
 (5.23)
+$$
 
 考虑平衡约束涉及 RPM-Orig 模型输出的 1-均值的情况：
 
@@ -5112,10 +5382,6 @@ $$
 $$
 
 (5.25)
-
-
-
-
 
 其中容许集 `Ω` 由归一化条件 (5.21) 和经验平衡约束 (5.24) 给出。
 
@@ -5227,13 +5493,11 @@ $$
 
   * —PDF 的归一化条件，即
 
-
-
-
-
 $$
 \begin{array}{r}
+
 {{\int_{\mathcal{R}}F}(\mathbf{a},\overline{\mu})\, d\mathbf{a}\, d\,\overline{\mu} = 1,\quad\quad{\int_{\Xi_{j}}Q_{j}}({\overline{\xi}}^{(j)})\, d{\overline{\xi}}^{(j)} = 1,\quad j = \overline{1,s};} \\
+
 \end{array}
 $$
 
@@ -5243,7 +5507,9 @@ $$
 
 $$
 \begin{array}{r}
+
 {\mathbf{m}^{(k)}\lbrack F(\mathbf{a},\overline{\mu}),Q_{j}({\overline{\xi}}^{(j)}),j\rbrack = \mathbf{y}(t_{j}),\quad\quad j = \overline{1,s}.} \\
+
 \end{array}
 $$
 
@@ -5253,9 +5519,13 @@ Due to (5.15), the vector $\mathbf{m}^{(k)}\lbrack F(\mathbf{a},\overline{\mu}),
 
 $$
 \begin{aligned}
+
 {m_{i}^{(k)}\lbrack j\rbrack =} & {\left\lbrack {\int_{\mathcal{R}}F}(\mathbf{a},\overline{\mu})\mathbf{y}\lbrack t_{j}\, \middle| \, F(\mathbf{a},{\overline{\mu}}^{(t_{j})})\rbrack\, d\mathbf{a}d\overline{\mu} \right\rbrack^{1/k} +} \\
+
 & {\left\lbrack {{\int_{\Xi_{j}}}\,}Q_{j}({\overline{\xi}}^{(j)})\,{\lbrack\xi_{i}^{(j)}\rbrack}^{k}\, d\xi_{i}^{(j)}} \right\rbrack^{1/k},} \\
+
 & {\quad\quad\quad i = \overline{1,m},\, j = \overline{1,s}.} \\
+
 \end{aligned}
 $$
 
@@ -5265,10 +5535,17 @@ Consider the case in which the balance constraints involve the 1-mean of the RPM
 
 $$
 \begin{aligned}
+
+
+
 {m_{i}^{(1)}\lbrack j\rbrack =} & \left. {\int_{\mathcal{R}}F}(\mathbf{a},\overline{\mu})\mathbf{y}\lbrack t_{j}\, \middle| \, F(\mathbf{a},{\overline{\mu}}^{(t_{j})})\rbrack\, d\mathbf{a}d\overline{\mu} + \right. \\
+
 & {{\int_{\Xi_{j}}}\,}Q_{j}({\overline{\xi}}^{(j)})\,\lbrack\xi_{i}^{(j)}\rbrack d\xi_{i}^{(j)},} \\
+
 & {\quad i = \overline{1,m},\, j = \overline{1,s}.} \\
+
 \end{aligned}
+
 $$
 
 (5.39)
@@ -5278,9 +5555,13 @@ Like in the optimization problem presented above, the functional constraints ext
 *For the RPM-F model with input and output data errors, the entropy-robust RML algorithm* has the form
 
 $$
+
 \begin{array}{r}
+
 {\left\lbrack {F(\mathbf{a},\overline{\mu}),\overline{Q}(\overline{\xi})} \right\rbrack^{\*} = \arg\max_{\lbrack F(\mathbf{a},\overline{\mu}),\overline{Q}(\overline{\xi})\rbrack}\left\{ \mathcal{H},\, \middle| \,\lbrack F(\mathbf{a},\overline{\mu}),\overline{Q}(\overline{\xi})\rbrack \in \Gamma \right\},} \\
+
 \end{array}
+
 $$
 
 (5.40)
@@ -5294,9 +5575,13 @@ A comprehensive study of the Lyapunov-type functional programming problems, incl
 A minimization problem with integral nonlinear functionals (a Lyapunov-type problem) can be written as
 
 $$
+
 \begin{array}{r}
+
 \left. \mathcal{J}\lbrack f(\mathbf{x})\rbrack = {\int_{\mathcal{X}}\Phi}\left\lbrack {f(\mathbf{x})} \right\rbrack d\mathbf{x}\Rightarrow\min_{f(\mathbf{x})} \right. \\
+
 \end{array}
+
 $$
 
 (5.41)
@@ -5304,9 +5589,13 @@ $$
 subject to the constraints
 
 $$
+
 \begin{array}{r}
+
 {\mathcal{G}_{i}\lbrack f(\mathbf{x})\rbrack = {\int_{\mathcal{X}}\Psi_{i}}\left\lbrack {f(\mathbf{x})} \right\rbrack d\mathbf{x} = 0,\quad\quad i = \overline{1,m}.} \\
+
 \end{array}
+
 $$
 
 (5.42)
@@ -5316,9 +5605,13 @@ Here **x** ∈ *R*^(*n*), the functions *Φ*\[ • \], *Ψ*[1]\[ •
 Define the Lagrange functional by
 
 $$
+
 \begin{array}{r}
+
 {\mathcal{L}\lbrack f(\mathbf{x})\rbrack = {\int_{\mathcal{X}}\mathcal{J}}\lbrack f(\mathbf{x})\rbrack - {\sum\limits_{i = 1}^{m}\lambda_{i}}{\int_{\mathcal{X}}\Psi_{i}}\left\lbrack {f(\mathbf{x})} \right\rbrack d\mathbf{x}.} \\
+
 \end{array}
+
 $$
 
 (5.43)
@@ -5326,9 +5619,13 @@ $$
 The first-order optimality condition claims that the variation of this functional with respect to the function *f*(**x**) is zero, i.e.,
 
 $$
+
 \begin{array}{r}
+
 {\delta\mathcal{L} = 0.} \\
+
 \end{array}
+
 $$
 
 (5.44)
@@ -5338,9 +5635,13 @@ Because the function under variation belongs to the class ℂ¹, condition (5.44
 Recall the definition of the Gateaux derivative. Consider a functional ℰ\[*w*(**u**)\], where *w*(**u**) ∈ ℂ¹ is a scalar function, **u** ∈ *R*^(*n*). Take an arbitrary function *h*(**u**) ∈ ℂ¹, and introduce a linear combination *w*^(\*)(**u**) + *α**h*(**u**), where *α* denotes a real variable and *w*^(\*)(**u**) is a certain fixed function from *ℂ*¹ that possesses some necessary properties (e.g., minimizes the functional ℰ). For a chosen function *h*(**u**), the functional ℰ becomes a function of the real variable *α*. The Gateaux derivative of the functional ℰ is given by
 
 $$
+
 \begin{array}{r}
+
 \left. D\mathcal{E} = \frac{d}{d\alpha}\mathcal{E}\lbrack w^{\*}(\mathbf{u}) + \alpha h(\mathbf{u})\rbrack \middle| {}_{\alpha = 0}. \right. \\
+
 \end{array}
+
 $$
 
 (5.45)
@@ -5348,9 +5649,13 @@ $$
 Getting back to the Lagrange functional (5.43), consider an arbitrary function *h*(**x**) from the class *ℂ*¹ and the real variable *α*. Denote by *f*^(\*)(**x**) the function that yields minimum in the problem (5.41, 5.42). Represent an arbitrary function *f*(**x**) as the linear combination
 
 $$
+
 \begin{array}{r}
+
 {f(\mathbf{x}) = f^{\*}(\mathbf{x}) + \alpha h(\mathbf{x}).} \\
+
 \end{array}
+
 $$
 
 (5.46)
@@ -5358,9 +5663,13 @@ $$
 Under fixed *f*^(\*)(**x**) and *h*(**x**), the Lagrange functional (5.43) turns out to be a function of the real variable *α*, i.e.,
 
 $$
+
 \begin{array}{r}
+
 {\mathcal{L} = {\int_{X}\Phi}\left\lbrack {f^{\*}(\mathbf{x}) + \alpha h(\mathbf{x})} \right\rbrack d\mathbf{x} - {\sum\limits_{i = 1}^{m}\lambda_{i}}{\int_{X}\Psi_{i}}\left\lbrack {f^{\*}(\mathbf{x}) + \alpha h(\mathbf{x})} \right\rbrack d\mathbf{x}.} \\
+
 \end{array}
+
 $$
 
 (5.47)
@@ -5368,9 +5677,13 @@ $$
 Then the first-order optimality condition for the Lagrange functional takes the form
 
 $$
+
 \begin{array}{r}
+
 {D\mathcal{L} = {\int_{X}h}(\mathbf{x})\left( {\frac{d\Phi(y)}{dy} - {\sum\limits_{i = 1}^{m}\lambda_{i}}\,\frac{d\Psi_{i}(y)}{dy}} \right)d\mathbf{x} = 0,} \\
+
 \end{array}
+
 $$
 
 (5.48)
@@ -5380,9 +5693,13 @@ where *y* is a scalar argument of the functions Φ and *Ψ*[1], …, *Ψ*[*m
 Consequently, *the first-order optimality condition in the problem (5.41, 5.42)* can be written as
 
 $$
+
 \begin{array}{r}
+
 {\frac{d\Phi(y)}{dy} = {\sum\limits_{i = 1}^{m}\lambda_{i}}\frac{d\Psi_{i}(y)}{dy}.} \\
+
 \end{array}
+
 $$
 
 (5.49)
@@ -5390,9 +5707,13 @@ $$
 Here the derivatives of the functions *Φ*, *Ψ*[1], …, *Ψ*[*m*] depend on *f*^(\*)(**x**), the function that minimizes the functional (5.41), i.e.,
 
 $$
+
 \begin{array}{r}
+
 {d\Phi(y)dy = \phi\lbrack f^{\*}(\mathbf{x})\rbrack,\quad\quad d\Psi_{i}(y)dy = \psi_{i}\lbrack f^{\*}(\mathbf{x})\rbrack,\quad i = \overline{1,m}.} \\
+
 \end{array}
+
 $$
 
 (5.50)
@@ -5400,21 +5721,23 @@ $$
 Hence, equality (5.49) can be transformed into
 
 $$
+
 \begin{array}{r}
+
 {\phi\lbrack f^{\*}(\mathbf{x})\rbrack = {\sum\limits_{i = 1}^{m}\lambda_{i}}\psi_{i}\lbrack f^{\*}(\mathbf{x})\rbrack.} \\
+
 \end{array}
+
 $$
 
 (5.51)
 
-
-
-
-
 该等式定义了最优函数 `f*`(x) 关于拉格朗日乘子 `λ`[1], …, `λ`[m] 的参数化。在某些情况下，参数化可以用解析形式表示。特别地，设 (5.41, 5.42) 中的函数 `Φ` 为二次的，即
 
 $$
+
 \begin{array}{r} {\Phi\lbrack f(\mathbf{x})\rbrack = a_{0} + a_{1}f(\mathbf{x}) + a_{2}f^{2}(\mathbf{x}),} \\ \end{array}
+
 $$
 
 (5.52)
@@ -5422,7 +5745,9 @@ $$
 并且函数 `Ψ`[1], …, `Ψ`[m] 为线性的，即
 
 $$
+
 \begin{array}{r} {\Psi_{i}\lbrack f(\mathbf{x})\rbrack = b_{0}^{i} + b_{1}^{i}f(\mathbf{x}),\quad\quad i = \overline{1,m},} \\ \end{array}
+
 $$
 
 (5.53)
@@ -5430,7 +5755,9 @@ $$
 这就导致了泛函二次规划问题。则
 
 $$
+
 \begin{array}{r} {\phi\lbrack f^{*}(\mathbf{x})\rbrack = a_{1} + a_{2}f^{*}(\mathbf{x}),\quad\quad\psi_{i}\lbrack f^{*}(\mathbf{x})\rbrack = b_{1}^{i},} \\ \end{array}
+
 $$
 
 (5.54)
@@ -5438,7 +5765,9 @@ $$
 并且最优性条件 (5.51) 给出最优函数 `f*` 的如下参数表示：
 
 $$
+
 \begin{array}{r} {f^{*}(\mathbf{x}) = {\sum\limits_{i = 1}^{m}\lambda_{i}}b_{1}^{i}.} \\ \end{array}
+
 $$
 
 (5.55)
@@ -5449,12 +5778,14 @@ $$
 
 熵鲁棒估计问题 (5.2.1–5.22) 和 (5.27–5.29) 是在由积分等式定义的 admissible 集上，关于类 `ℂ¹` 函数的积分泛函的约束最大化问题。为了建立最优性条件并对所得解（最优 PDF）进行结构分析，我们将利用拉格朗日乘子法和 Gateaux 导数。
 
-### 5.4.1 具有输出误差的 RPM-Orig 类随机模型
+#### 5.4.1 具有输出误差的 RPM-Orig 类随机模型
 
 考虑问题 (5.2.1–5.22)。定义拉格朗日泛函的形式为
 
 $$
+
 \begin{aligned} {\mathcal{L}\lbrack P(\mathbf{a}),Q(\overline{\xi})\rbrack} & {\mathcal{H}\lbrack P(\mathbf{a}),Q(\overline{\xi})\rbrack + \lambda p\lbrack P(\mathbf{a})\rbrack + \left\langle \overline{\mu},\mathbf{q}\lbrack Q(\overline{\xi}\rbrack \right\rangle +} \\ & {+ \left\langle {\overline{\theta}}^{(j)},\mathbf{l}^{(j)}\lbrack P(\mathbf{a}),Q(\overline{\xi})\rbrack \right\rangle,} \\ \end{aligned}
+
 $$
 
 (5.56)
@@ -5462,7 +5793,9 @@ $$
 其中 `λ`, `μ`[1], …, `μ`[s], 和 `θ`[1], …, `θ`[s] 表示对应约束的拉格朗日乘子，即
 
 $$
+
 \begin{array}{r} {p\lbrack P(\mathbf{a})\rbrack = 1 - {\int_{\mathcal{A}}P}(\mathbf{a})d\mathbf{a} = 0,} \\ \end{array}
+
 $$
 
 (5.57)
@@ -5470,12 +5803,16 @@ $$
 ![](img/math5_212.jpg)
 
 $$
+
+
+
 \begin{aligned} {\mathbf{l}^{(j)}\lbrack P(\mathbf{a}),Q(\overline{\xi})\rbrack =} & {\mathbf{y}^{(j)} - \left\lbrack {{\int_{\mathcal{A}}P}(\mathbf{a})\hat{\mathbf{y}}(t_{j},\mathbf{a})\, d\mathbf{a}} \right\rbrack +} \\ {+ {\int_{\Xi_{j}}}\,Q_{j}} & {({\overline{\xi}}^{(j)})\,{\overline{\xi}}^{(j)}\, d{\overline{\xi}}^{(j)} = 0,} \\ & {j = \overline{1,s}.} \\ \end{aligned}
+
+$$
+(5.59)
 $$
 
-(5.59)
-
-为了获得拉格朗日泛函的最优性条件，使用 Section 4.3 中描述的基于 Gateaux 导数的方法。
+为了获得拉格朗日泛函的最优性条件，使用 `Section 4.3` 中描述的基于 `Gateaux` 导数的方法。
 
 设 PDF `P*`(a) 和 `$Q_{1}^{*}({\overline{\xi}}^{(1)}),\ldots,Q_{s}^{*}({\overline{\xi}}^{(s)})$` 满足泛函 (5.56) 的一阶最优性条件。考虑任意函数 `h`(a) 和 `$g_{1}({\overline{\xi}}^{(1)}),\ldots,g_{s}({\overline{\xi}}^{(s)}),$` 均来自类 `ℂ¹`，以及实变量 `α` 和 `β`[1], …, `β`[s]。将 (5.56) 中的 PDF 写成形式
 
@@ -5485,7 +5822,7 @@ $$
 
 (5.60)
 
-则拉格朗日泛函成为实变量 `𝕎` = {`α`;`β`[1],…,`β`[s]} 的函数。这些变量的 Gateaux 导数由下式给出
+则拉格朗日泛函成为实变量 `𝕎` = {`α`;`β`[1],…,`β`[s]} 的函数。这些变量的 `Gateaux` 导数由下式给出
 
 $$
 \begin{aligned} \left. \frac{\partial\mathcal{L}}{\partial\alpha} \middle| {}_{\mathbb{W} = 0} = \right. & {- {\int_{\mathcal{A}}h}(\mathbf{a})(\ln\frac{P^{*}(\mathbf{a})}{P_{0}(\mathbf{a})} + 1 + \lambda +} \\ {+ {\sum\limits_{j = 1}^{s}\langle}{\overline{\theta}}^{(j)},\mathbf{B}^{(j)}} & {\left. \lbrack\mathbf{x}(t_{j},\tau_{h},\, \middle| \, h = \overline{1,(j-1)}),\mathbf{a}\rbrack \right\rangle)d\mathbf{a},} \\ \left. \frac{\partial\mathcal{L}}{\partial\beta_{j}} \middle| {}_{\mathbb{W} = 0} = - {\int_{\Xi_{j}}g_{j}}({\overline{\xi}}^{(j)}) \right. & {\left\lbrack {\ln\frac{Q_{j}^{*}({\overline{\xi}}^{(j)})}{Q_{j}^{0}({\overline{\xi}}^{(j)})} + 1 + \mu_{j} + \left\langle {\overline{\theta}}^{(j)},{\overline{\xi}}^{(j)} \right\rangle} \right\rbrack d{\overline{\xi}}^{(j)},} \\ & {\text{\quad\quad}j = \overline{1,s}.} \\ \end{aligned}
@@ -5509,11 +5846,7 @@ $$
 
 (5.63)
 
-拉格朗日乘子 `λ` 和 `μ`[1], …, `μ`[s] 可以利用归一化条件 (5.21) 消去。然后公式 (5.4.1) 给出 RPM-Orig 模型参数和测量噪声的 PDF 的如下熵最优估计：
-
-
-
-
+拉格朗日乘子 `λ` 和 `μ`[1], …, `μ`[s] 可以利用归一化条件 (5.21) 消去。然后公式 (5.4.1) 给出 `RPM-Orig` 模型参数和测量噪声的 PDF 的如下熵最优估计：
 
 $$\\begin{aligned} & {P^{\*}(\\mathbf{a}) = P\_{0}(\\mathbf{a})\\frac{\\exp\\left\\lbrack \\left. - {\\sum\\limits\_{j = 1}^{s}\\left\\langle {\\overline{\\theta}}^{(j)},\\mathbf{B}^{(j)}\\lbrack\\mathbf{x}((t\_{j},\\tau\_{h}) \\right.},\\, \\middle| \\, h = \\overline{1,(j-1)}),\\mathbf{a}\\rbrack \\right\\rangle \\right\\rbrack}{\\mathcal{P}({\\overline{\\theta}}^{(1)},\\ldots,{\\overline{\\theta}}^{(s)})},} \\\\ & {Q\_{j}^{\*}({\\overline{\\xi}}^{(j)}) = Q\_{j}^{0}({\\overline{\\xi}}^{(j)})\\frac{\\exp\\left\\lbrack {- \\left\\langle {\\overline{\\theta}}^{(j)},{\\overline{\\xi}}^{(j)} \\right\\rangle} \\right\\rbrack}{\\mathcal{Q}\_{j}({\\overline{\\theta}}^{(j)}),}\\quad j = \\overline{1,s}.} \\\\ \\end{aligned}$$
 
@@ -5525,7 +5858,7 @@ $$\\begin{aligned} & {\\text{\\quad\\quad}\\text{\\quad\\quad}\\text{\\quad\\qua
 
 (5.65)
 
-Clearly, the entropy-optimal PDFs are parameterized by the Lagrange multipliers and represent exponential functions. However, they may have any form, depending on the parameters `a`. 图 5.2, 图 5.3, 图 5.4, 图 5.5 demonstrate some examples of the estimated PDFs of the model parameters. For the linear RPM-Orig model, the estimated PDFs are always exponential functions; see 图 5.2. Note that their form is affected by the input and output measurements.
+Clearly, the entropy-optimal PDFs are parameterized by the Lagrange multipliers and represent exponential functions. However, they may have any form, depending on the parameters `a`. 图 5.2, 图 5.3, 图 5.4, 图 5.5 demonstrate some examples of the estimated PDFs of the model parameters. For the linear `RPM-Orig` model, the estimated PDFs are always exponential functions; see 图 5.2. Note that their form is affected by the input and output measurements.
 
 ![图 5.2: p(a\_{1},a\_{2}) = \\exp( - 0.3a\_{1} + 2.5a\_{2}).](img/fig5_2.jpg)
 
@@ -5543,7 +5876,7 @@ Clearly, the entropy-optimal PDFs are parameterized by the Lagrange multipliers 
 
 图 5.5: *p*(*a*[1], *a*[2]) = *e**x**p*(0.5*a*[1] + 3.5*a*[2] + 2*a*[1]² − *a*[1]³ − 0.2*a*[2]² − 0.2*a*[2]³).
 
-For the nonlinear RPMs, the estimates have a wider variety of structural forms. For example, the estimated PDFs for the RPM-Orig models with the quadratic, quadratic-linear and cubic nonlinearities are shown in 图 5.3, 图 5.4, 图 5.5.
+For the nonlinear `RPMs`, the estimates have a wider variety of structural forms. For example, the estimated PDFs for the `RPM-Orig` models with the quadratic, quadratic-linear and cubic nonlinearities are shown in 图 5.3, 图 5.4, 图 5.5.
 
 ### 5.4.2 Randomized models of the RPM-Rel class with output errors
 
@@ -5561,38 +5894,38 @@ $$\\begin{aligned} & {\\mathbf{g}\\lbrack G(\\overline{\\eta})\\rbrack = \\left\
 
 (5.67)
 
-* the vectors `${\\overline{\\theta}}^{(j)} = \\left\\{ \\theta\_{1}^{(j)},\\ldots,\\theta\_{m}^{(j)} \\right\\},\\, j = \\overline{1,s},$` composed of the Lagrange multipliers for the constraints (5.22), writing them in the form
 
-$$\\begin{aligned} & {\\text{\\quad\\quad}\\mathbf{h}^{(j)}\\lbrack W(\\mathbf{u}),G\_{j}({\\overline{\\eta}}^{(j)})\\rbrack = \\mathbf{y}(t\_{j}) -} \\\\ & \\left. - {\\int\_{\\mathcal{U}}W}(\\mathbf{u})\\mathbf{D}^{(j)}\\lbrack\\mathbf{x}((t\_{j},\\tau\_{h}),\\, \\middle| \\, h = \\overline{1,(j-1)}),\\mathbf{a}^{-} + A\\,\\mathbf{u}\\rbrack\\, d\\mathbf{u} - \\right. \\\\ & {+ {\\int\_{\\mathcal{E}\_{j}}\\,}G\_{j}({\\overline{\\eta}}^{(j)})\\,{\\overline{\\eta}}^{(j)}\\, d{\\overline{\\eta}}^{(j)},\\quad j = \\overline{1,s}.} \\\\ \\end{aligned}$$
+
+* the vectors `${\overline{\theta}}^{(j)} = \left\{ \theta_{1}^{(j)},\ldots,\theta_{m}^{(j)} \right\},\, j = \overline{1,s},$` composed of the Lagrange multipliers for the constraints (5.22), writing them in the form
+
+$$\begin{aligned} & {\text{\quad\quad}\mathbf{h}^{(j)}\lbrack W(\mathbf{u}),G_{j}({\overline{\eta}}^{(j)})\rbrack = \mathbf{y}(t_{j}) -} \\\\ & \left. - {\int_{\mathcal{U}}W}(\mathbf{u})\mathbf{D}^{(j)}\lbrack\mathbf{x}((t_{j},\tau_{h}),\, \middle| \, h = \overline{1,(j-1)}),\mathbf{a}^{-} + A\,\mathbf{u}\rbrack\, d\mathbf{u} - \right. \\\\ & {+ {\int_{\mathcal{E}_{j}}}\,G_{j}({\overline{\eta}}^{(j)})\,{\overline{\eta}}^{(j)}\, d{\overline{\eta}}^{(j)},\quad j = \overline{1,s}.} \\\\ \end{aligned}$$
 
 (5.68)
 
 Using these notations, define the Lagrange functional
 
-$$\\begin{aligned} {\\mathcal{L}\\lbrack W(\\mathbf{u}),G(\\overline{\\eta})\\rbrack} & {= \\mathcal{H}\\lbrack W(\\mathbf{u}),G(\\overline{\\eta})\\rbrack + \\lambda w\\lbrack W(\\mathbf{u})\\rbrack + \\left\\langle \\overline{\\mu},\\mathbf{g}\\lbrack G(\\overline{\\eta})\\rbrack \\right\\rangle +} \\\\ & {\\left. + {\\sum\\limits\_{j = 1}^{s}\\left\\langle {\\overline{\\theta}}^{(j)},\\mathbf{h}^{(j)}\\lbrack W(\\mathbf{u}),G\_{j}( \\right.}{\\overline{\\eta}}^{(j)})\\rbrack \\right\\rangle.} \\\\ \\end{aligned}$$
+$$\begin{aligned} {\mathcal{L}\lbrack W(\mathbf{u}),G(\overline{\eta})\rbrack} & {\mathcal{H}\lbrack W(\mathbf{u}),G(\overline{\eta})\rbrack + \lambda w\lbrack W(\mathbf{u})\rbrack + \left\langle \overline{\mu},\mathbf{g}\lbrack G(\overline{\eta})\rbrack \right\rangle +} \\\\ & {\left. + {\sum\limits_{j = 1}^{s}\left\langle {\overline{\theta}}^{(j)},\mathbf{h}^{(j)}\lbrack W(\mathbf{u}),G_{j}( \right.}{\overline{\eta}}^{(j)})\rbrack \right\rangle.} \\\\ \end{aligned}$$
 
 (5.69)
 
 To get optimality conditions for the Lagrange functional, we will again employ the Gateaux derivative-based method; see (5.60, 5.4.1). The corresponding first-order optimality conditions have the form
 
-$$\\begin{aligned} {\\ln\\frac{W^{\*}(\\mathbf{u})}{W\_{0}(\\mathbf{u})}} & {+ 1 + \\lambda +} \\\\ \\left. + {\\sum\\limits\_{j = 1}^{s}\\left\\langle {\\overline{\\theta}}^{j},\\mathbf{D}^{(j)}\\lbrack\\mathbf{x}((t\_{j},\\tau\_{h}) \\right.},\\, \\middle| \\, h = \\right. & {\\left. \\overline{1,(j-1)}),\\mathbf{a}^{-} + A\\,\\mathbf{u}\\rbrack \\right\\rangle = 0,} \\\\ {\\ln\\frac{G\_{j}^{\*}({\\overline{\\eta}}^{(j)})}{G\_{j}^{0}({\\overline{\\eta}}^{(j)})} + 1 + \\mu\_{j}} & {+ \\left\\langle {\\overline{\\theta}}^{(j)},{\\overline{\\eta}}^{(j)} \\right\\rangle = 0,} \\\\ {j =} & {\\overline{1,s}.} \\\\ \\end{aligned}$$
+$$\begin{aligned} {\ln\frac{W^{\*}(\mathbf{u})}{W_{0}(\mathbf{u})}} & {+ 1 + \lambda +} \\\\ \left. + {\sum\limits_{j = 1}^{s}\left\langle {\overline{\theta}}^{j},\mathbf{D}^{(j)}\lbrack\mathbf{x}((t_{j},\tau_{h}) \right.},\, \middle| \, h = \right. & {\left. \overline{1,(j-1)}),\mathbf{a}^{-} + A\,\mathbf{u}\rbrack \right\rangle = 0,} \\\\ {\ln\frac{G_{j}^{\*}({\overline{\eta}}^{(j)})}{G_{j}^{0}({\overline{\eta}}^{(j)})} + 1 + \mu_{j}} & {+ \left\langle {\overline{\theta}}^{(j)},{\overline{\eta}}^{(j)} \right\rangle = 0,} \\\\ {j =} & {\overline{1,s}.} \\\\ \end{aligned}$$
 
 (5.70)
 
-The solution of these equations within the Lagrange multipliers `λ`, `μ[1]`, …, `μ[s]`, and `${\\overline{\\theta}}^{(1)},\\ldots,{\\overline{\\theta}}^{(s)}$` is given by
+The solution of these equations within the Lagrange multipliers `λ`, `μ[1]`, …, `μ[s]`, and `${\overline{\theta}}^{(1)},\ldots,{\overline{\theta}}^{(s)}$` is given by
 
-$$\\begin{aligned} {W^{\*}(\\mathbf{u}) = W\_{0}} & {(\\mathbf{u})\\exp\\lbrack - 1 - \\lambda -} \\\\ {{\\sum\\limits\_{j = 1}^{s}\\left\\langle {\\overline{\\theta}}^{j},\\mathbf{D}^{(j)}\\lbrack\\mathbf{x}((t\_{j},\\tau\_{h}) \\right.},} & {\\,\\left| \\, r = \\overline{1,(j-1)}),\\mathbf{a}^{-} + A\\,\\mathbf{u}\\rbrack \\right\\rangle\\rbrack,} \\\\ {G\_{j}^{\*}({\\overline{\\eta}}^{(j)}) = G\_{j}^{0}({\\overline{\\eta}}^{(j)})} & {\\exp\\left\\lbrack {- 1 - \\mu\_{j} - \\left\\langle {\\overline{\\theta}}^{(j)},{\\overline{\\eta}}^{(j)} \\right\\rangle} \\right\\rbrack,} \\\\ & {j = \\overline{1,s}.} \\\\ \\end{aligned}$$
+$$\begin{aligned} {W^{\*}(\mathbf{u}) = W_{0}} & {(\mathbf{u})\exp\lbrack - 1 - \lambda -} \\\\ {{ \sum\limits_{j = 1}^{s}\left\langle {\overline{\theta}}^{j},\mathbf{D}^{(j)}\lbrack\mathbf{x}((t_{j},\tau_{h}) \right.},} & {\, \left| \, r = \overline{1,(j-1)}),\mathbf{a}^{-} + A\,\mathbf{u}\rbrack \right\rangle\rbrack,} \\\\ {G_{j}^{\*}({\overline{\eta}}^{(j)}) = G_{j}^{0}({\overline{\eta}}^{(j)})} & {\exp\left\lbrack {- 1 - \mu_{j} - \left\langle {\overline{\theta}}^{(j)},{\overline{\eta}}^{(j)} \right\rangle} \right\rbrack,} \\\\ & {j = \overline{1,s}.} \\\\ \end{aligned}$$
 
 (5.71)
 
 The Lagrange multipliers `λ` and `μ[1]`, …, `μ[s]` can be eliminated using the normalization conditions (5.28). Then formulas (5.4.2) yield the following entropy-optimal estimates for the PDFs of the RPM-Rel model parameters and measurement noises:
 
-
-
-
-
 $$
+
 \begin{aligned} & {\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}W^{*}\mathbf{u}) = W_{0}\mathbf{u}) \times} \\ & {\times \frac{\exp\left\lbrack \left. - {\sum\limits_{j = 1}^{s}\left\langle {\overline{\theta}}^{j},\mathbf{D}^{(j)}\lbrack\mathbf{x}((t_{j},\tau_{r}) \right.},\, \middle| \, r = \overline{1,(j-1)}),\mathbf{a}^{-} + \Delta\,\mathbf{u}\rbrack \right\rangle \right\rbrack}{\mathcal{W}({\overline{\theta}}^{(1)},\ldots,{\overline{\theta}}^{(s)})},} \\ & {\text{\quad\quad}\quad\quad G_{j}^{*}({\overline{\eta}}^{(j)}) = G_{j}^{0}({\overline{\eta}}^{(j)})\frac{\exp\left\lbrack {- {\sum\limits_{j = 1}^{s}\left\langle {\overline{\theta}}^{(j)},{\overline{\eta}}^{(j)} \right\rangle}} \right\rbrack}{\mathcal{G}_{j}({\overline{\theta}}^{(j)})},} \\ & {\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}j = \overline{1,s},} \\ \end{aligned}
+
 $$
 
 (5.72)
@@ -5600,7 +5933,9 @@ $$
 where
 
 $$
+
 \begin{aligned} & {\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\mathcal{W}({\overline{\theta}}^{(1)},\ldots,{\overline{\theta}}^{(s)}) = {\int_{\mathcal{U}}W_{0}}(\mathbf{u}) \times} \\ & {\times \exp\left\lbrack \left. - {\sum\limits_{j = 1}^{s}\left\langle {\overline{\theta}}^{(j)},\mathbf{D}^{(j)}\lbrack\mathbf{x}((t_{j},\tau_{r}) \right.},\, \middle| \, r = \overline{1,(j-1)}),\mathbf{a}^{-} + \Delta\,\mathbf{u}\rbrack \right\rangle \right\rbrack d\mathbf{u},} \\ & {\text{\quad\quad}\text{\quad\quad}\quad\mathcal{G}_{j}({\overline{\theta}}^{(j)}) = {\int_{\mathcal{E}}G_{j}^{0}}({\overline{\eta}}^{(j)})\exp\left\lbrack {- \left\langle {\overline{\theta}}^{(j)},{\overline{\eta}}^{(j)} \right\rangle} \right\rbrack d{\overline{\eta}}^{(j)},} \\ & {\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\quad\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}j = \overline{1,s}.} \\ \end{aligned}
+
 $$
 
 (5.73)
@@ -5612,7 +5947,9 @@ $$
 考虑问题 (5.2.3, 5.36, 5.2.3) 并写出拉格朗日泛函：
 
 $$
+
 \begin{aligned} {\mathcal{L}\lbrack F(\mathbf{a},\mu),\overline{Q}(\overline{\xi})\rbrack} & {\mathcal{H}\lbrack F(\mathbf{a},\mu),\overline{Q}(\overline{\xi})\rbrack + \lambda w\lbrack F(\mathbf{a},\mu)\rbrack + \left\langle \overline{\eta},\mathbf{q}\lbrack\overline{Q}(\overline{\xi}\rbrack \right\rangle +} \\ & {+ \left\langle {\overline{\theta}}^{(j)},\mathbf{c}^{(j)}\lbrack F(\mathbf{a},\mu),\overline{Q}(\overline{\xi})\rbrack \right\rangle,} \\ \end{aligned}
+
 $$
 
 (5.74)
@@ -5620,7 +5957,9 @@ $$
 其中 $\lambda;\overline{\eta};\overline{\theta}$ — 对应约束的拉格朗日乘子：
 
 $$
+
 \begin{array}{r} {w\lbrack P(\mathbf{a})\rbrack = 1 - {\int_{\mathcal{R}}F}(\mathbf{a},\mu)d\mathbf{a}d\mu = 0,} \\ \end{array}
+
 $$
 
 (5.75)
@@ -5628,7 +5967,9 @@ $$
 ![](img/math5_252.jpg)
 
 $$
+
 \begin{aligned} & {\mathbf{c}^{(j)}\lbrack F(\mathbf{a},\mu),\overline{Q}(\overline{\xi})\rbrack = \mathbf{y}^{(j)} - \left\lbrack {{\int_{\mathcal{R}}F}(\mathbf{a},\mu)\hat{\mathbf{y}}(t_{j},\mathbf{a},\mu)\, d\mathbf{a}\, d\mu} \right\rbrack +} \\ & {\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad} + {\int_{\Xi_{j}}\,}Q_{j}({\overline{\xi}}^{(j)})\,{\overline{\xi}}^{(j)}\, d{\overline{\xi}}^{(j)} = 0,} \\ & {\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\quad\text{\quad\quad}\text{\quad\quad}j = \overline{1,s}.} \\ \end{aligned}
+
 $$
 
 (5.77)
@@ -5636,18 +5977,22 @@ $$
 为了得到拉格朗日泛函的最优性条件，我们再次采用基于 Gâteaux 导数的方法。相应的一阶最优性条件具有如下形式
 
 $$
+
 \begin{aligned} & {\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\quad\text{\quad\quad}F^{*}(\mathbf{a},\mu) = F_{0}(\mathbf{a},\mu) \times} \\ & {\times \frac{\left. \exp\lbrack - {\sum\limits_{j = 1}^{s}\left\langle {\overline{\theta}}^{(j)},\mathbf{B}^{(j)}\lbrack\mathbf{x}((t_{j},\tau_{h}) \right.} + \mu(t_{j},\tau_{h}),\, \middle| \, h = \overline{1,(j-1)}),\mathbf{a}\rbrack \right\rangle\rbrack}{\mathcal{F}({\overline{\theta}}^{(1)},\ldots,{\overline{\theta}}^{(s)})},} \\ & {\text{\quad\quad}\text{\quad\quad}Q_{j}^{*}({\overline{\xi}}^{(j)}) = Q_{j}^{0}({\overline{\xi}}^{(j)})\frac{\exp\lbrack - \left\langle {\overline{\theta}}^{(j)},{\overline{\xi}}^{(j)} \right\rangle\rbrack}{\mathcal{Q}_{j}({\overline{\theta}}^{(j)})},\quad j = \overline{1,s}.} \\ \end{aligned}
+
 $$
 
 (5.78)
 
 其中
 
-$$
-\begin{aligned} & {\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\mathcal{F}({\overline{\theta}}^{(1)},\ldots,{\overline{\theta}}^{(s)}) = {\int_{\mathcal{R}}F_{0}}(\mathbf{a},\mu) \times} \\ & {\exp\left\lbrack \left. - {\sum\limits_{j = 1}^{s}\left\langle {\overline{\theta}}^{(j)},\mathbf{B}^{(j)}\lbrack\mathbf{x}((t_{j},\tau_{h}) \right.} + \mu(t_{j},\tau_{h}),\, \middle| \, h = \overline{1,(j-1)}),\mathbf{a}\rbrack \right\rangle \right\rbrack d\mathbf{a},} \\ & {\quad\text{\quad\quad}\text{\quad\quad}\mathcal{Q}_{j}({\overline{\theta}}^{(j)}) = {\int_{\Xi}Q_{j}^{0}}({\overline{\xi}}^{(j)})\exp\left\lbrack {- \left\langle {\overline{\theta}}^{(j)},{\overline{\xi}}^{(j)} \right\rangle} \right\rbrack d{\overline{\xi}}^{(j)},} \\ & {\text{\quad\quad}\text{\quad\quad}\quad\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}j = \overline{1,s}.} \\ \end{aligned}
-$$
 
+
+\begin{aligned} & {\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\mathcal{F}({\overline{\theta}}^{(1)},\ldots,{\overline{\theta}}^{(s)}) = {\int_{\mathcal{R}}F_{0}}(\mathbf{a},\mu) \times} \\ & {\exp\left\lbrack \left. - {\sum\limits_{j = 1}^{s}\left\langle {\overline{\theta}}^{(j)},\mathbf{B}^{(j)}\lbrack\mathbf{x}((t_{j},\tau_{h}) \right.} + \mu(t_{j},\tau_{h}),\, \middle| \, h = \overline{1,(j-1)}),\mathbf{a}\rbrack \right\rangle \right\rbrack d\mathbf{a},} \\ & {\quad\text{\quad\quad}\text{\quad\quad}\mathcal{Q}_{j}({\overline{\theta}}^{(j)}) = {\int_{\Xi}Q_{j}^{0}}({\overline{\xi}}^{(j)})\exp\left\lbrack {- \left\langle {\overline{\theta}}^{(j)},{\overline{\xi}}^{(j)} \right\rangle} \right\rbrack d{\overline{\xi}}^{(j)},} \\ & {\text{\quad\quad}\text{\quad\quad}\quad\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}j = \overline{1,s}.} \\ \end{aligned}
+
+$$
 (5.79)
+$$
 
 得到的 PDF 函数由拉格朗日乘子 $\overline{\theta}$ 参数化，$\overline{\theta}$ 由平衡方程确定。
 
@@ -5655,7 +6000,7 @@ $$
 
 所有熵最优 PDF 都属于由拉格朗日乘子 ${\overline{\theta}}^{1},\ldots,{\overline{\theta}}^{s}$ 参数化的指数函数类；参见上一节推导的公式。为了计算拉格朗日乘子，我们需要求解由平衡约束 (5.24, 5.31) 与熵最优 PDF (5.64, 5.4.2) 得到的方程。
 
-**1. 具有输出误差的 RPM-Orig 模型**
+### 1. 具有输出误差的 RPM-Orig 模型
 
 为了形成相应的方程，引入以下辅助记号。
 
@@ -5668,10 +6013,6 @@ $$
 (5.80)
 
 * 平均熵-“最差”测量噪声
-
-
-
-
 
 $$
 \begin{aligned} {{\mathbb{Q}}_{j}({\overline{\theta}}^{(j)}) = \mathcal{Q}_{j}^{( - 1)}({\overline{\theta}}^{(j)})\int_{\Xi_{j}}} & {Q_{j}^{0}({\overline{\xi}}^{(j)})\exp\left\lbrack {- \left\langle {\overline{\theta}}^{(j)},{\overline{\xi}}^{(j)} \right\rangle} \right\rbrack d{\overline{\xi}}^{(j)},} \\ & {j = \overline{1,s}.} \\ \end{aligned}
@@ -5689,7 +6030,7 @@ $$
 
 (5.82)
 
-## 2. 输出误差的 RPM-Rel 模型
+### 2. 输出误差的 RPM-Rel 模型
 
 类比于前一种情况，引入以下辅助记号：
 
@@ -5717,7 +6058,7 @@ $$
 
 (5.85)
 
-## 3. 输入和输出误差的 RPM-Orig 模型
+### 3. 输入和输出误差的 RPM-Orig 模型
 
 为了形成相应的方程，引入以下辅助记号。
 
@@ -5789,10 +6130,6 @@ $$
 
 (6.4)
 
-
-
-
-
 属于概率的定义及其性质（6.3，6.4）形式上与相对参数（4.96，4.97）的定义相匹配。然而，它们之间存在原则上的差异。相对参数 `u` 是由给定 PDF 特征化的随机化变量。相比之下，属于概率 `p` 是非随机变量，取值在单位非负立方体内。
 
 RPM-QuaRand 类的动态模型生成唯一的轨迹，即在离散时刻 $j = \overline{0,s} = \mathcal{T}_{s}$ 下由以下等式描述：
@@ -5816,6 +6153,8 @@ $$\begin{array}{r} {\mathbf{q}^{(j)} \in \mathcal{I} = \lbrack\mathbf{0} \leq \m
 (6.7)
 
 在某些情况下，如模型参数的属于概率，需要考虑归一化条件
+
+
 
 $$\begin{array}{r} {{\sum\limits_{i = 1}^{m}q_{i}^{(j)}} = 1,\quad\quad j = \overline{1,s}.} \\ \end{array}$$
 
@@ -5917,10 +6256,6 @@ $$\begin{array}{r} \left. {(\mathbf{p},Q)}^{*} = \arg\max_{(\mathbf{p},Q)}\lbrac
 
 在某些应用中，有必要选择广义费米信息熵以消除区间型条件：
 
-
-
-
-
 $$\\begin{aligned} & {\\text{\\quad\\quad}H_{F}(\\mathbf{p},Q) = - \\left\\langle \\mathbf{p},\\mathbf{ln}\\frac{\\mathbf{p}}{\\mathbf{p}_{0}} \\right\\rangle - \\left\\langle (\\mathbf{1} - \\mathbf{p}),\\mathbf{ln}(\\mathbf{1} - \\mathbf{p}) \\right\\rangle -} \\\\ & {- {\\sum\\limits_{j = 1}^{s}\\left( {\\left\\langle \\mathbf{q}^{(j)},\\mathbf{ln}\\frac{\\mathbf{q}^{(j)}}{\\mathbf{q}_{0}^{(j)}} \\right\\rangle + \\left\\langle (\\mathbf{1} - \\mathbf{q}^{(j)}),\\mathbf{ln}(\\mathbf{1} - \\mathbf{q}^{(j)}) \\right\\rangle} \\right)},} \\\\ \\end{aligned}$$  
 
 (6.20)
@@ -6013,27 +6348,29 @@ $$\\begin{array}{r} {s\\lbrack j\\rbrack = {\\sum\\limits_{h = 1}^{R}{\\sum\\lim
 
 (6.31)
 
-(另见 Fig. 4.11a。) 这里动态特性由脉冲特性 $w_{h}\\lbrack n\\rbrack,\\, h = \\overline{1,R},$ 反映，具有有限的“记忆” *K*[*h*]，即
 
-$$\\begin{array}{r} {w_{h}\\lbrack n\\rbrack \\neq 0,\\quad\\text{for}\\,\\, 0 \\leq n \\leq K_{h};\\text{\\quad\\quad}r_{h}\\lbrack n\\rbrack = 0,\\quad\\text{for}\\,\\, n > K_{h}.} \\\\ \\end{array}$$  
+
+(另见 Fig. 4.11a。) 这里动态特性由脉冲特性 $w_{h}\lbrack n\rbrack,\, h = \overline{1,R},$ 反映，具有有限的“记忆” *K*[*h*]，即
+
+$$\begin{array}{r} {w_{h}\lbrack n\rbrack \neq 0,\quad\text{for}\,\, 0 \leq n \leq K_{h};\text{\quad\quad}r_{h}\lbrack n\rbrack = 0,\quad\text{for}\,\, n > K_{h}.} \\ \end{array}$$
 
 (6.32)
 
 将脉冲特性的纵坐标作为模型参数。换句话说，参数构成向量
 
-$$\\begin{array}{r} {\\mathbf{c}^{(h)} = \\left\\{ c_{1}^{(h)},\\ldots,c_{K_{h}}^{(h)} \\right\\},} \\\\ \\end{array}$$  
+$$\begin{array}{r} {\mathbf{c}^{(h)} = \left\{ c_{1}^{(h)},\ldots,c_{K_{h}}^{(h)} \right\},} \\ \end{array}$$
 
 (6.33)
 
 其中
 
-$$\\begin{array}{r} {c_{n}^{(h)} = w_{h}\\lbrack n\\rbrack,\\text{\\quad\\quad}n = \\overline{0,K_{h}}.} \\\\ \\end{array}$$  
+$$\begin{array}{r} {c_{n}^{(h)} = w_{h}\lbrack n\rbrack,\text{\quad\quad}n = \overline{0,K_{h}}.} \\ \end{array}$$
 
 (6.34)
 
 利用隶属概率 **p**，将参数向量 **c**^((*h*)) 写成形式 (6.29)。将这些等式代入 (6.31) 得到模型方程
 
-$$\\begin{array}{r} {s\\lbrack j\\rbrack = {\\sum\\limits_{h = 1}^{R}\\left( {\\left\\langle \\mathbf{c}_{-}^{(h)},\\mathbf{x}\\lbrack j\\rbrack \\right\\rangle + \\left\\langle C_{h}\\,\\mathbf{p}^{(h)},\\mathbf{x}\\lbrack j\\rbrack \\right\\rangle} \\right)^{h}},} \\\\ \\end{array}$$  
+$$\begin{array}{r} {s\lbrack j\rbrack = {\sum\limits_{h = 1}^{R}\left( {\left\langle \mathbf{c}_{-}^{(h)},\mathbf{x}\lbrack j\rbrack \right\rangle + \left\langle C_{h}\,\mathbf{p}^{(h)},\mathbf{x}\lbrack j\rbrack \right\rangle} \right)^{h}},} \\ \end{array}$$
 
 (6.35)
 
@@ -6045,23 +6382,19 @@ $$\\begin{array}{r} {s\\lbrack j\\rbrack = {\\sum\\limits_{h = 1}^{R}\\left( {\\
 
 对于此类动态模型，函数描述具有以下形式：
 
-
-
-
-
-$$\\begin{array}{r} {s\\lbrack j\\rbrack = {\\sum\\limits\_{h = 1}^{R}{\\sum\\limits\_{n = 0}^{K\_{h}}w\_{h}}}\\lbrack n\\rbrack x^{h}\\lbrack j - n\\rbrack,\\text{\\quad\\quad}j > K.} \\\\ \\end{array}$$  
+$$\begin{array}{r} {s\lbrack j\rbrack = {\sum\limits_{h = 1}^{R}{\sum\limits_{n = 0}^{K_{h}}w_{h}}}\\lbrack n\rbrack x^{h}\lbrack j - n\rbrack,\text{\quad\quad}j > K.} \\ \end{array}$$
 
 (6.36)
 
-(另见 图 4.11b。) 其动态特性由脉冲特性 $w\_{h}\\lbrack n\\rbrack,\\, h = \\overline{1,R},$ 描述，具有有限的“记忆” *K*[*h*] (6.32)。当该模型的参数采用其脉冲特性的纵坐标时，即参数向量为 **c**^((*h*)) (6.34)。定义由 *x*^(*h*)\[*j*\], …, *x*^(*h*)\[*j* − *K*[*h*]\] 组成的向量 ${\\widetilde{\\mathbf{X}}}^{h}\\lbrack j\\rbrack$。则模型方程 (6.36) 可变换为
+(另见 图 4.11b。) 其动态特性由脉冲特性 $w_{h}\lbrack n\rbrack,\, h = \overline{1,R},$ 描述，具有有限的“记忆” *K*[*h*] (6.32)。当该模型的参数采用其脉冲特性的纵坐标时，即参数向量为 **c**^((*h*)) (6.34)。定义由 *x*^(*h*)\[*j*\], …, *x*^(*h*)\[*j* − *K*[*h*]\] 组成的向量 ${\widetilde{\mathbf{X}}}^{h}\lbrack j\rbrack$。则模型方程 (6.36) 可变换为
 
-$$\\begin{array}{r} {s\\lbrack j\\rbrack = {\\sum\\limits\_{h = 1}^{R}\\left\\langle \\mathbf{c},{\\widetilde{\\mathbf{X}}}^{(h)}\\lbrack j\\rbrack \\right\\rangle},\\text{\\quad\\quad}j > K.} \\\\ \\end{array}$$  
+$$\begin{array}{r} {s\lbrack j\rbrack = {\sum\limits_{h = 1}^{R}\left\langle \mathbf{c},{\widetilde{\mathbf{X}}}^{(h)}\lbrack j\rbrack \right\rangle},\text{\quad\quad}j > K.} \\ \end{array}$$
 
 (6.37)
 
 利用表达式 (6.29) 在该等式中写出
 
-$$\\begin{aligned} {s\\lbrack j\\rbrack} & {= \\hat{s}\\lbrack j\\rbrack + {\\sum\\limits\_{h = 1}^{R}\\left\\langle C\_{h}\\,\\mathbf{p}^{(h)},{\\widetilde{\\mathbf{X}}}^{(h)}\\lbrack j\\rbrack \\right\\rangle},} \\\\ {\\hat{s}\\lbrack j\\rbrack} & {= {\\sum\\limits\_{h = 1}^{R}\\left\\langle \\mathbf{c}\_{-}^{(h)},{\\widetilde{\\mathbf{X}}}^{(h)}\\lbrack j\\rbrack \\right\\rangle}.} \\\\ \\end{aligned}$$  
+$$\begin{aligned} {s\lbrack j\rbrack} & {= \hat{s}\lbrack j\rbrack + {\sum\limits_{h = 1}^{R}\left\langle C_{h}\,\mathbf{p}^{(h)},{\widetilde{\mathbf{X}}}^{(h)}\lbrack j\rbrack \right\rangle},} \\ {\hat{s}\lbrack j\rbrack} & {= {\sum\limits_{h = 1}^{R}\left\langle \mathbf{c}_{-}^{(h)},{\widetilde{\mathbf{X}}}^{(h)}\lbrack j\rbrack \right\rangle}.} \\ \end{aligned}$$
 
 (6.38)
 
@@ -6075,43 +6408,43 @@ RPM-QuaRand 模型的熵鲁棒估计问题被归类为有限维熵非线性规�
 
 在泛函模型框架内的一般问题由等式 (6.12–6.14) 刻画。它将被改编为泛函模型为一维且可化为线性形式 (6.30) 的情况：
 
-$$\\begin{aligned} {s\\lbrack j\\rbrack} & {= \\hat{s}\\lbrack j\\rbrack + {\\sum\\limits\_{h = 1}^{R}{\\sum\\limits\_{i = 1}^{V\_{h}}p\_{i}^{(h)}}}z\_{i}^{(h)}\\lbrack j\\rbrack + \\zeta\_{j}^{-} + Z\_{j}q\_{j},} \\\\ \\end{aligned}$$  
+$$\begin{aligned} {s\lbrack j\rbrack} & {= \hat{s}\lbrack j\rbrack + {\sum\limits_{h = 1}^{R}{\sum\limits_{i = 1}^{V_{h}}p_{i}^{(h)}}}z_{i}^{(h)}\lbrack j\rbrack + \zeta_{j}^{-} + Z_{j}q_{j},} \\ \end{aligned}$$
 
 (6.39)
 
-$$\\begin{aligned} {\\hat{s}\\lbrack j\\rbrack} & {= {\\sum\\limits\_{h = 1}^{R}{\\sum\\limits\_{i = 1}^{V\_{h}}c\_{-}^{(h)}}}(i)z\_{i}^{(h)}\\lbrack j\\rbrack,} \\\\ {z\_{i}^{(h)}\\lbrack j\\rbrack} & {= \\delta\_{i}^{(h)}x\_{i}^{(h)}\\lbrack j\\rbrack,\\text{\\quad\\quad}\\delta\_{i}^{(h)} = c\_{i}^{(h, + )} - c\_{i}^{(h, - )},\\quad i = \\overline{1,V\_{h}},} \\\\ Z\_{j} & {= \\zeta\_{j}^{+} - \\zeta\_{j}^{-},\\text{\\quad\\quad}j = \\overline{1,s}.} \\\\ \\end{aligned}$$  
+$$\begin{aligned} {\hat{s}\lbrack j\rbrack} & {= {\sum\limits_{h = 1}^{R}{\sum\limits_{i = 1}^{V_{h}}c_{-}^{(h)}}(i)z_{i}^{(h)}\lbrack j\rbrack,} \\ {z_{i}^{(h)}\lbrack j\rbrack} & {= \delta_{i}^{(h)}x_{i}^{(h)}\lbrack j\rbrack,\text{\quad\quad}\delta_{i}^{(h)} = c_{i}^{(h, + )} - c_{i}^{(h, - )},\quad i = \overline{1,V_{h}},} \\ Z_{j} & {= \zeta_{j}^{+} - \zeta_{j}^{-},\text{\quad\quad}j = \overline{1,s}.} \\ \end{aligned}$$
 
 (6.40)
 
 然后估计问题 (6.12) 中的约束 (6.13, 6.14) 采用以下形式。
 
-*   泛函模型功率块中模型参数归属概率的归一化条件为
+* 泛函模型功率块中模型参数归属概率的归一化条件为
 
-    $$\\begin{array}{r} {{\\sum\\limits\_{i = 1}^{V\_{h}}p\_{i}^{(h)}} = 1,\\quad h = \\overline{1,R};} \\\\ \\end{array}$$  
+$$\begin{array}{r} {{\sum\limits_{i = 1}^{V_{h}}p_{i}^{(h)}} = 1,\quad h = \overline{1,R};} \\ \end{array}$$
 
-    (6.41)
+(6.41)
 
-*   测量噪声归属概率的归一化条件为
+* 测量噪声归属概率的归一化条件为
 
-    $$\\begin{array}{r} {{\\sum\\limits\_{j = 1}^{s}q\_{j}} = 1;} \\\\ \\end{array}$$  
+$$\begin{array}{r} {{\sum\limits_{j = 1}^{s}q_{j}} = 1;} \\ \end{array}$$
 
-    (6.42)
+(6.42)
 
-*   经验平衡条件为
+* 经验平衡条件为
 
-    $$\\begin{aligned} & {\\widetilde{s}\\lbrack j\\rbrack + {\\sum\\limits\_{h = 1}^{R}{\\sum\\limits\_{i = 1}^{V\_{h}}p\_{i}^{(h)}}}z\_{i}^{(h)}\\lbrack j\\rbrack + Z\_{j}q\_{j} - y\\lbrack j\\rbrack = 0,\\quad j = \\overline{1,s},} \\\\ & {\\widetilde{s}\\lbrack j\\rbrack = \\hat{s}\\lbrack j\\rbrack + \\zeta\_{j}^{-}.} \\\\ \\end{aligned}$$  
+$$\begin{aligned} & {\widetilde{s}\lbrack j\rbrack + {\sum\limits_{h = 1}^{R}{\sum\limits_{i = 1}^{V_{h}}p_{i}^{(h)}}}z_{i}^{(h)}\lbrack j\rbrack + Z_{j}q_{j} - y\lbrack j\rbrack = 0,\quad j = \overline{1,s},} \\ & {\widetilde{s}\lbrack j\rbrack = \hat{s}\lbrack j\rbrack + \zeta_{j}^{-}.} \\ \end{aligned}$$
 
-    (6.43)
+(6.43)
 
 熵函数由下式给出
 
-$$\\begin{array}{r} {H\_{B}(P,Q) = - {\\sum\\limits\_{h = 1}^{R}{\\sum\\limits\_{i = 1}^{V\_{h}}p\_{i}^{(h)}}}\\,\\ln\\frac{p\_{i}^{(h)}}{{\\widetilde{p}}\_{i}^{(h)}} - {\\sum\\limits\_{j = 1}^{s}q\_{j}}\\,\\ln\\frac{q\_{j}}{{\\widetilde{q}}\_{j}}.} \\\\ \\end{array}$$  
+$$\begin{array}{r} {H_{B}(P,Q) = - {\sum\limits_{h = 1}^{R}{\sum\limits_{i = 1}^{V_{h}}p_{i}^{(h)}}}\,\ln\frac{p_{i}^{(h)}}{{\widetilde{p}}_{i}^{(h)}} - {\sum\limits_{j = 1}^{s}q_{j}}\,\ln\frac{q_{j}}{{\widetilde{q}}_{j}}.} \\ \end{array}$$
 
 (6.44)
 
 因此，估计问题可写为
 
-$$\\begin{array}{r} \\left. H\_{B}(P,Q)\\Rightarrow\\max \\right. \\\\ \\end{array}$$  
+$$\begin{array}{r} \left. H_{B}(P,Q)\Rightarrow\max \right. \\ \end{array}$$
 
 (6.45)
 
@@ -6119,33 +6452,29 @@ $$\\begin{array}{r} \\left. H\_{B}(P,Q)\\Rightarrow\\max \\right. \\\\ \\end{arr
 
 在此问题中，容许集 Υ 由等式系统描述，因此它代表一个约束优化问题。为了得到最优性条件，让我们定义拉格朗日函数
 
-$$\\begin{aligned} L\_{B} & {= H\_{B}(P,Q) + {\\sum\\limits\_{h = 1}^{R}\\lambda\_{h}}\\left( {1 - {\\sum\\limits\_{i = 1}^{V\_{h}}p\_{i}^{(h)}}} \\right) + \\mu\\left( {1 - {\\sum\\limits\_{j = 1}^{s}q\_{j}}} \\right)} \\\\ & {+ {\\sum\\limits\_{j = 1}^{s}\\theta^{(j)}}\\left( {y\\lbrack j\\rbrack - \\widetilde{s}\\lbrack j\\rbrack - {\\sum\\limits\_{h = 1}^{R}{\\sum\\limits\_{i = 1}^{V\_{h}}p\_{i}^{(h)}}}\\delta\_{i}^{(h)}x\_{i}^{(h)}\\lbrack j\\rbrack + Z\_{j}q\_{j}} \\right).} \\\\ \\end{aligned}$$  
+$$\begin{aligned} L_{B} & {= H_{B}(P,Q) + {\sum\limits_{h = 1}^{R}\lambda_{h}}\left( {1 - {\sum\limits_{i = 1}^{V_{h}}p_{i}^{(h)}}} \right) + \mu\left( {1 - {\sum\limits_{j = 1}^{s}q_{j}}} \right)} \\ & {+ {\sum\limits_{j = 1}^{s}\theta^{(j)}}\left( {y\lbrack j\rbrack - \widetilde{s}\lbrack j\rbrack - {\sum\limits_{h = 1}^{R}{\sum\limits_{i = 1}^{V_{h}}p_{i}^{(h)}}}\delta_{i}^{(h)}x_{i}^{(h)}\lbrack j\rbrack + Z_{j}q_{j}} \right).} \\ \end{aligned}$$
 
 (6.46)
 
 这里 *λ*[1], …, *λ*[*R*]； *μ*； *θ*[1], …, *θ*[*s*] 表示对应约束 (6.41, 6.42, 6.43) 的拉格朗日乘子。直接变量 (*P*， *Q*) 上的第一阶最优性条件给出以下方程组：
 
-$$\\begin{aligned} \\frac{\\partial L}{\\partial p\_{i}^{(h)}} & {= - \\ln\\frac{p\_{i}^{(h)}}{{\\widetilde{p}}\_{i}^{(h)}} - 1 - \\lambda\_{h} - {\\sum\\limits\_{j = 1}^{s}\\theta\_{j}}z\_{i}^{(h)}\\lbrack j\\rbrack = 0,} \\\\ h & {= \\overline{1,s};\\text{\\quad\\quad}i = \\overline{1,V\_{h}}.} \\\\ \\end{aligned}$$  
+$$\begin{aligned} \frac{\partial L}{\partial p_{i}^{(h)}} & {= - \ln\frac{p_{i}^{(h)}}{{\widetilde{p}}_{i}^{(h)}} - 1 - \lambda_{h} - {\sum\limits_{j = 1}^{s}\theta_{j}}z_{i}^{(h)}\lbrack j\rbrack = 0,} \\ h & {= \overline{1,s};\text{\quad\quad}i = \overline{1,V_{h}}.} \\ \end{aligned}$$
 
 (6.47)
 
-$$\\begin{array}{r} {\\frac{\\partial L}{\\partial q\_{j}} = \\ln\\frac{(1 - q\_{j}){\\widetilde{q}}\_{j}}{q\_{j}} - \\mu - Z\_{j} = 0,\\text{\\quad\\quad}j = \\overline{1,s}.} \\\\ \\end{array}$$  
+$$\begin{array}{r} {\frac{\partial L}{\partial q_{j}} = \ln\frac{(1 - q_{j}){\widetilde{q}}_{j}}{q_{j}} - \mu - Z_{j} = 0,\text{\quad\quad}j = \overline{1,s}.} \\ \end{array}$$
 
 (6.48)
 
 结合归一化条件 (6.41, 6.42)，方程 (6.47, 6.48) 导出模型参数和测量噪声的熵最优归属概率的以下表达式，其参数化为拉格朗日乘子 *θ*[1], …, *θ*[*s*]：
 
-$$\\begin{aligned} {\\lbrack p\_{i}^{(h)}\\rbrack}^{\*} & {= \\frac{{\\widetilde{p}}\_{i}^{(h)}\\exp\\left( {- {\\sum\\limits\_{j = 1}^{s}\\theta\_{j}}z\_{i}^{(h)}\\lbrack j\\rbrack} \\right)}{{\\sum\\limits\_{k = 1}^{V\_{h}}{\\widetilde{p}}\_{k}^{(h)}}\\exp\\left( {- {\\sum\\limits\_{m = 1}^{s}\\theta\_{j}}z\_{k}^{(h)}\\lbrack m\\rbrack} \\right)},} \\\\ q\_{j}^{\*} & {= \\frac{{\\widetilde{q}}\_{j}\\exp( - \\theta\_{j}Z\_{j})}{{\\sum\\limits\_{m = 1}^{s}{\\widetilde{q}}\_{m}}\\exp( - \\theta\_{m}Z\_{m})}.} \\\\ \\end{aligned}$$  
+$$\begin{aligned} {\lbrack p_{i}^{(h)}\rbrack}^{\*} & {= \frac{{\widetilde{p}}_{i}^{(h)}\exp\left( {- {\sum\limits_{j = 1}^{s}\theta_{j}}z_{i}^{(h)}\lbrack j\rbrack} \right)}{{\sum\limits_{k = 1}^{V_{h}}{\widetilde{p}}_{k}^{(h)}}\exp\left( {- {\sum\limits_{m = 1}^{s}\theta_{j}}z_{k}^{(h)}\lbrack m\rbrack} \right)},} \\ q_{j}^{\*} & {= \frac{{\widetilde{q}}_{j}\exp( - \theta_{j}Z_{j})}{{\sum\limits_{m = 1}^{s}{\widetilde{q}}_{m}}\exp( - \theta_{m}Z_{m})}.} \\ \end{aligned}$$
 
 (6.49)
 
-$$\\begin{array}{r} {h = \\overline{1,R},\\quad i = \\overline{1,V\_{h}},\\quad j = \\overline{1,s}} \\\\ \\end{array}$$  
+$$\begin{array}{r} {h = \overline{1,R},\quad i = \overline{1,V_{h}},\quad j = \overline{1,s}} \\ \end{array}$$
 
-引入 *V*[*h*] 个整数自变量函数 $P^{(h)}\\lbrack i\\rbrack,\\, i = \\overline{}1,V\_{h},$ 其值由熵最优归属概率定义。按此定义，$P^{(h)}\\lbrack i\\rbrack,\\, i = \\overline{}1,V\_{h},$ 表示归属概率的分布函数。根据 (6.49)，它们是指数函数。
-
-
-
-
+引入 *V*[*h*] 个整数自变量函数 $P^{(h)}\lbrack i\rbrack,\, i = \overline{}1,V_{h},$ 其值由熵最优归属概率定义。按此定义，$P^{(h)}\lbrack i\rbrack,\, i = \overline{}1,V_{h},$ 表示归属概率的分布函数。根据 (6.49)，它们是指数函数。
 
 拉格朗日乘子 *θ*[1], …, *θ*[*s*] 由经验平衡约束 (6.43) 计算得出，并在其中代入了熵最优的归属概率 (6.49)。为便于记号，引入
 
@@ -6172,6 +6501,8 @@ $$\\begin{array}{r} {h = \\overline{1,R},\\quad i = \\overline{1,V\_{h}},\\quad 
 (6.52)
 
 ## 2. 区间型归属概率
+
+
 
 RPM-QuaRand 模型的熵最优估计问题可利用广义玻尔兹曼信息熵 (6.16–6.18) 提出。这种估计问题的形式涉及比前一种更多的约束条件（其中一些为不等式）。因此它进入了有限维数学规划问题的范畴，最优性条件由 Kuhn–Tucker 定理 \[134\] 定义。
 
@@ -6238,10 +6569,6 @@ RML 问题的一个重要特殊类包括具有归属概率和线性模型的机�
 在 第 4 章 和 第 5 章 中，我们已为 RPM-Orig、RPM-Rel 和 RPM-CauRand 模型推导出经验平衡方程，其中变量的角色由拉格朗日乘子扮演。对这些方程的分析（更具体地说，对构成其分量的函数）使我们能够分离出两类非线性方程以供进一步研究。
 
 ### 1. 具有积分分量的方程
-
-
-
-
 
 该类方程出现在 RML 过程的 RPM-Orig 和 RPM-Rel 模型中（5.74–5.76）。请注意，所考虑的方程包含由拉格朗日乘子参数化的定积分多维积分。例如，对于具有原始参数的 RPM（RPM-Orig），积分分量具有形式
 
@@ -6335,6 +6662,8 @@ $$\\begin{array}{r} {\\mathbf{C}(\\mathbf{z}) = {\\int\_{I^{r}}\\exp}\\left( {- 
 
 或
 
+
+
 $$\\begin{aligned} {\\mathbf{G}(\\mathbf{z}) = \\int\_{I^{r}}} & {\\exp\\left( {- E(\\mathbf{z},\\mathbf{w})} \\right)\\exp\\left( {- E(\\mathbf{z},\\mathbf{w})} \\right)d\\mathbf{w} = \\mathbf{0},} \\\\ & {\\text{\\quad\\quad}\\mathbf{z} \\in I^{s},\\quad\\mathbf{w} \\in I^{r},} \\\\ \\end{aligned}$$  
 
 (7.14)
@@ -6355,11 +6684,7 @@ $$\\begin{array}{r} \\left. F(\\mathbf{z}) = \\|\\mathbf{W}(\\mathbf{z})\\|\\Rig
 
 ## 具有解析函数的方程
 
-
-
-
-
-该类平衡方程出现在具有 RPM-QuaRand 模型的 ML 问题中。表征这些模型参数的归属概率可以是归一化的或区间类型的。在前一种情况下，基于 ML 的估计算法被表述为广义玻尔兹曼信息熵的约束最大化问题。在后一种情况下，选择广义费米信息熵似乎更为方便。
+该类平衡方程出现在具有 `RPM-QuaRand` 模型的 `ML` 问题中。表征这些模型参数的归属概率可以是归一化的或区间类型的。在前一种情况下，基于 `ML` 的估计算法被表述为广义玻尔兹曼信息熵的约束最大化问题。在后一种情况下，选择广义费米信息熵似乎更为方便。
 
 将归一化归属概率的经验平衡方程 (6.52) 写成形式
 
@@ -6391,7 +6716,7 @@ $$\begin{array}{r} {n_{j}(\mathbf{v}) = {\sum\limits_{h = 1}^{R}\varrho_{j}^{(h)
 
 ### 7.2 用于全局优化的蒙特卡洛分组迭代
 
-RPM-Orig 和 RPM-Rel 模型的 RML 算法旨在求解经验平衡方程，其中变量的角色由拉格朗日乘子或取值在单位非负立方体内的辅助变量扮演。设计数值方法的方法是从残差函数（通常是二次范数）的最小化出发。在 RML 问题中，残差函数与变量之间存在算法定义的关联，这一问题特征最终将其简化为全局最小化问题。在这种条件下，蒙特卡洛方法似乎是 RML 算法设计的一个合适的工具。
+`RPM-Orig` 和 `RPM-Rel` 模型的 `RML` 算法旨在求解经验平衡方程，其中变量的角色由拉格朗日乘子或取值在单位非负立方体内的辅助变量扮演。设计数值方法的方法是从残差函数（通常是二次范数）的最小化出发。在 `RML` 问题中，残差函数与变量之间存在算法定义的关联，这一问题特征最终将其简化为全局最小化问题。在这种条件下，蒙特卡洛方法似乎是 `RML` 算法设计的一个合适的工具。
 
 大量文献已发表，涉及蒙特卡洛方法在不同全局优化问题中的应用。关于这些问题及其求解方法的一些见解可从 \135, 158, 171–[173, 196, 199\] 获得。
 
@@ -6451,10 +6776,6 @@ $$\begin{array}{r} \left. \omega(h) = \max_{(\mathbf{v},\mathbf{y}) \in \mathcal
 
 用 *ℤ*^(*) 表示所有全局最小点 **z**^(*) 的集合，并用 *F*(**z**^(*)) = *F*^(*) 表示问题 (7.23) 中的全局最小值。换句话说，假设全局最小值不是在唯一点取得，而是在有限集合 ℤ^(*) 上取得。
 
-
-
-
-
 如何理解问题 `(7.23)` 的 `solution`？该问题至关重要，因为其明显性在实际计算过程中消失了。实际上，即使计算精度任意高，也无法获得全局最小值 `F^*` 的精确值。我们可以谈论进入精确全局最小值值的某个 `r`-邻域。换句话说，问题涉及 `r`-邻域内的近似全局最小值 `F̃^*`。在开始时，我们已声明采用 `Monte Carlo` 方法进行全局最小化。因此，值 `F̃^*` 以某个概率进入 `r`-邻域，该概率小于或等于 1。
 
 还要注意，计算是通过迭代过程实现的，该过程表示为具有编号 `k` 的步骤序列。每一步都会产生一个中间结果。在问题 `(7.23)` 中，中间结果是值 `$\\widetilde{F_{1}^{*},\\ldots,\\widetilde{F_{k}^{*},\\ldots}}$`。假设在某一步 `k^*`，近似全局最小值 `F̃[k^*]^ *` 已进入 `r`-邻域。尽管如此，该事件是随机的，可能发生的情况是，在步骤 `(k^* + 1)`，该值会离开邻域。为了提高近似全局最小化的可靠性，引入一个正数 `ϱ`，它表征在首次于步骤 `k^*` 进入后，值 `F̃[k^*]^ *`、`F̃[(k^* + k[1])]^ *`、…、`F̃[(k^* + k[ϱ])]^ *` 保持在 `r`-邻域内的步骤数。
@@ -6472,6 +6793,7 @@ $$\begin{array}{r} \left. \omega(h) = \max_{(\mathbf{v},\mathbf{y}) \in \mathcal
 ```
 \begin{array}{r} {M_{k + 1} = \alpha M_{k},\quad\quad\alpha > 1,} \\ \end{array}
 ```
+
 (7.32)
 
 并为第 `(k + 1)` 个包计算新的记录 `F[k + 1]^ *`。这产生一个单调递减序列
@@ -6479,6 +6801,7 @@ $$\begin{array}{r} \left. \omega(h) = \max_{(\mathbf{v},\mathbf{y}) \in \mathcal
 ```
 \begin{array}{r} {\mathcal{F} = \left\{ F_{0}^{*} \geq \ldots, \geq F_{k}^{*},\ldots \right\}.} \\ \end{array}
 ```
+
 (7.33)
 
 除了记录序列 (7.33) 外，算法还构造其递减序列
@@ -6486,6 +6809,7 @@ $$\begin{array}{r} \left. \omega(h) = \max_{(\mathbf{v},\mathbf{y}) \in \mathcal
 ```
 \begin{array}{r} {\mathcal{U} = \left\{ u_{1},\ldots, \, u_{k},\ldots \right\},} \\ \end{array}
 ```
+
 (7.34)
 
 其中 `u[k]=|F[k]^ *−F[k + 1]^ *|`。
@@ -6495,6 +6819,7 @@ $$\begin{array}{r} \left. \omega(h) = \max_{(\mathbf{v},\mathbf{y}) \in \mathcal
 ```
 \begin{array}{r} {\tau = \min\left\{ k:\max_{k - \rho \leq s \leq k}u_{s} \leq \delta \right\}.} \\ \end{array}
 ```
+
 (7.35)
 
 在下文中，该算法将被称为 `GFS algorithm (Generation, Filtration, Selection)`。
@@ -6504,6 +6829,7 @@ $$\begin{array}{r} \left. \omega(h) = \max_{(\mathbf{v},\mathbf{y}) \in \mathcal
 ```
 \begin{array}{r} {S = \left\{ F_{\tau}^{*},\mathbf{z}_{\tau}^{*},r_{\tau}^{*},\mathbf{P}(\mathcal{E}_{r_{\tau}}) \right\},} \\ \end{array}
 ```
+
 (7.36)
 
 其中
@@ -6515,6 +6841,7 @@ $$\begin{array}{r} \left. \omega(h) = \max_{(\mathbf{v},\mathbf{y}) \in \mathcal
 ```
 \begin{array}{r} {\mathcal{E}_{r_{\tau}^{*}} = \left\{ F_{\tau}^{*} - F^{*} \leq r_{\tau} \right\},} \\ \end{array}
 ```
+
 (7.37)
 
 其中 `F^*` 给出集合 `Z[+]^(d)` 上精确全局最小值；
@@ -6525,15 +6852,18 @@ $$\begin{array}{r} \left. \omega(h) = \max_{(\mathbf{v},\mathbf{y}) \in \mathcal
 ```
 \begin{array}{r} {\mathbb{F}^{*} = \left\{ F_{1}^{*} > \ldots, > F_{k}^{*},\ldots \right\}} \\ \end{array}
 ```
+
 (7.38)
 
 序列 `ℱ^*` (7.33)。下面的理论分析基于探索序列 `ℱ^*` 的性质。由于 `𝔽^*` 构成 `ℱ^*` 的子序列，在定性上分析结果对子序列 `𝔽^*` 保持不变。
 
 ### 7.2.3 随机序列 ℱ 和 𝒰 的概率特征
 
+
+
 对由简单蒙特卡洛模拟的包生成的随机序列进行研究，是研究 GFS 算法在计算方面的基本性质的重要阶段。这些性质包括收敛性分析（特别是收敛条件）和所得解 `[35]` 的数值特征估计。
 
-**1. 包 𝒵[k] 的概率特征**
+## 1. 包 𝒵[k] 的概率特征
 
 在每个阶段 `k`，算法生成一个包含 `N[k]` 个独立随机向量的包 `𝒵[k]`，其在 `d` 维立方体上服从均匀分布。包 `𝒵[k]` 的来源是随机生成器：在步骤 `k`，它为每个 `d` 个坐标产生 `M[k]` 个独立均匀分布在区间 `[0, 1]` 上的随机变量数组（简单蒙特卡洛模拟）。结果，在步骤 `k` 时，我们有一个 `(M[k])^(d)` 个随机向量的包，它们服从单位立方体上的均匀分布。
 
@@ -6542,6 +6872,7 @@ $$\begin{array}{r} \left. \omega(h) = \max_{(\mathbf{v},\mathbf{y}) \in \mathcal
 ```
 \begin{array}{r} {\eta_{k} = M_{k}^{- q}} \\ \end{array}
 ```
+
 (7.39)
 
 对于每个 `d` 个坐标。这里 `q` 指定格点参数，使得
@@ -6549,11 +6880,12 @@ $$\begin{array}{r} \left. \omega(h) = \max_{(\mathbf{v},\mathbf{y}) \in \mathcal
 ```
 \begin{array}{r} {0 < \gamma \leq q \leq \beta < 1.} \\ \end{array}
 ```
+
 (7.40)
 
 用 `P(M[k], d, q)` 表示存在一个不包含在步骤 `k` 生成的随机 `(M[k])^(d)` 个向量中的 `virtual` 元素立方体的概率。该概率可以估计如下。
 
-**2. 序列 ℱ^* 的概率性质**
+## 2. 序列 ℱ^* 的概率性质
 
 考虑“准全局”最小值序列 `ℱ^* = {F[0]^ *,…,F[k]^ *,…}` 和相应的参数序列 `𝒵^* = {z[0]^ *,…,z[k]^ *,…}`。
 
@@ -6562,6 +6894,7 @@ $$\begin{array}{r} \left. \omega(h) = \max_{(\mathbf{v},\mathbf{y}) \in \mathcal
 ```
 \begin{array}{r} {l(\mathbf{z},{\mathbb{Z}}^{*}) = \min_{\mathbf{y} \in {\mathbb{Z}}^{*}}\|\mathbf{z} - \mathbf{y}\|.} \\ \end{array}
 ```
+
 (7.46)
 
 注意，上界 (7.53)–(7.54) 依赖于参数 `q`，它影响具有边长 (7.39) 的每个坐标的 `virtual` 元素立方体的体积。式 (7.40) 中的常数 `β` 和 `γ` 应调整以达到关于所需邻域大小和相应概率的可接受结果。
@@ -6572,40 +6905,36 @@ $$\begin{array}{r} \left. \omega(h) = \max_{(\mathbf{v},\mathbf{y}) \in \mathcal
 
 ### 7.2.5 递减序列 𝒰 的研究
 
-
-
-
-
 对于 Hölder 型函数，上界 (7.53) 以概率 `1 − Q(M[k], d, q)` 成立；见推论 2。 因为 `rk + 1 < rk`，
 
-$$
+```
 \begin{array}{r}
 \left. u_{k} = \middle| F_{k + 1}^{*} - F_{k}^{*} \middle| \leq DM_{k}^{- p}. \right.
 \\
 \end{array}
-$$
+```
 
 (7.66)
 
 于是，对于充分大的 `k`，
 
-$$
+```
 \begin{array}{r}
 {u_{k} \approx DM_{k}^{- p}.}
 \\
 \end{array}
-$$
+```
 
 (7.67)
 
 对该近似表达式两边取对数：
 
-$$
+```
 \begin{array}{r}
 {v_{k} = \log u_{k} \approx \log D - p\log M_{k}.}
 \\
 \end{array}
-$$
+```
 
 (7.68)
 
@@ -6617,23 +6946,23 @@ Figure 7.2
 
 考虑一列独立随机变量 `ζ[k]`，均值为零，方差有限 `σ²`。 将该序列加到近似表达式的右端以模拟 `v[k]` 序列的随机性，即
 
-$$
+```
 \begin{array}{r}
 {v_{k} = A - Bn_{k} + \zeta_{k},}
 \\
 \end{array}
-$$
+```
 
 (7.69)
 
 其中
 
-$$
+```
 \begin{array}{r}
 {A = \log D,\quad\quad B = p,\quad n_{k} = \log M_{k}.}
 \\
 \end{array}
-$$
+```
 
 (7.70)
 
@@ -6641,34 +6970,34 @@ $$
 
 有了这些估计，我们还可以估计相应邻域的大小 `rk`，即精确全局最小值的邻域。 根据 (7.53)，
 
-$$
+```
 \begin{array}{r}
 {r_{k}(q) = \log{\hat{A}}^{(k)}M_{k}^{(\frac{{\hat{B}}^{(k)}}{q})}.}
 \\
 \end{array}
-$$
+```
 
 (7.71)
 
 显然，关系 `rk` 在区间 `[γ, β]` (7.40) 上单调递减。 故其在 `q = β` 处取得最小值。 在停止时刻 `τ` 处邻域的估计大小为
 
-$$
+```
 \begin{array}{r}
 {r_{\tau}(\beta) = \log{\hat{A}}^{(\tau)}M_{\tau}^{(\frac{{\hat{B}}^{(\tau)}}{\beta})},}
 \\
 \end{array}
-$$
+```
 
 (7.72)
 
 其概率 (7.54) 的下界（见推论 2）具有形式
 
-$$
+```
 \begin{array}{r}
 {P\left\{ 0 \leq F_{\tau}^{*} - F^{*} \leq r_{\tau} \right\} \geq M_{\tau}^{\beta d}\exp\left( {- M_{\tau}^{(1 - \beta)d}} \right).}
 \\
 \end{array}
-$$
+```
 
 (7.73)
 
@@ -6682,12 +7011,12 @@ $$
 
 首先，分析值 `ν` 已知的情形。 那么，从单位立方体上均匀分布的独立随机向量序列中生成的特定向量落入容许域的概率为 `ν`。 设在第 `k` 步生成 `N[k]` 个独立随机向量，均匀分布于 `Z+` 上，其中 `N̂[k]` 个向量在容许域内。 用 `κ[N[k]]` 表示生成的向量在容许集 `𝒦[z]` 内的出现频率，即
 
-$$
+```
 \begin{array}{r}
 {\kappa_{N_{k}} = \frac{{\hat{N}}_{k}}{N_{k}}.}
 \\
 \end{array}
-$$
+```
 
 (7.74)
 
@@ -6695,23 +7024,23 @@ $$
 
 因此，对于 `N[k] > N0`，不等式
 
-$$
+```
 \begin{array}{r}
 {\kappa_{N_{k}} \geq (1 - \epsilon)\nu}
 \\
 \end{array}
-$$
+```
 
 (7.75)
 
 以不小于 `(1 − η)` 的概率成立。 故由 `N[k]` 个向量组成的包中容许向量的数目 `N̂[k]` 满足不等式
 
-$$
+```
 \begin{array}{r}
 {{\hat{N}}_{k} \geq N_{k}(1 - \epsilon)\nu}
 \\
 \end{array}
-$$
+```
 
 (7.76)
 
@@ -6721,45 +7050,45 @@ $$
 
 现在估计数目 `N0`。 对于 `η > 0`，利用条件定义函数 `c(η)`
 
-$$
+```
 \begin{array}{r}
 {\frac{1}{\sqrt{2\pi}}{\int_{- c(\eta)}^{c(\eta)}\exp}( - x^{2}/2)dx = 1 - \eta.}
 \\
 \end{array}
-$$
+```
 
 (7.77)
 
 则数目 `N0` 可由关系式求得
 
-$$
+```
 \begin{array}{r}
 {N_{0}(\epsilon,\eta,\nu) \geq \frac{c^{2}(\eta)(1 - \nu)}{\epsilon^{2}\nu}.}
 \\
 \end{array}
-$$
+```
 
 (7.78)
 
 其次，考虑值 `ν` 未知但我们已知满足 `0 < ν[0] ≤ ν` 的值 `ν[0]` 的情形。 用 `ν[0]` 代替 (7.78) 中的 `ν` 可得到在该频率下容许向量的频率与未知值 `ν` 的偏差至多为 `ϵ ν` 且概率不小于 `(1 − η)` 的最小生成向量数估计。 在此情形下，对于 `N > N0`，值 `ν` 可估计为
 
-$$
+```
 \begin{array}{r}
 {\hat{\nu} = \kappa_{N},}
 \\
 \end{array}
-$$
+```
 
 (7.79)
 
 并且以不小于 `(1 − η)` 的概率，`|κ[N]−ν|≤ϵ ν`，即
 
-$$
+```
 \begin{array}{r}
 {\frac{\kappa_{N}}{1 - \epsilon} \geq \nu \geq \frac{\kappa_{N}}{1 + \epsilon}.}
 \\
 \end{array}
-$$
+```
 
 (7.80)
 
@@ -6780,33 +7109,23 @@ GFS 算法用于计算问题 (7.23) 规范形式下的全局最小值。 它包�
 2. *过滤*—容许向量的选择：
    1. `(k, 3)` 从包 `𝒵[k]` 中选择属于容许集 `𝒦[z]` 的向量并形成大小为 `Ñ[k]` 的容许包 `${\widetilde{\mathcal{Z}}}_{k}$`。
 
+3. *Selection*—definition of the quasi global minimum for the packet and calculation of the decrements:
+   1. `(*k*, 4)` calculate the values `$F({\widetilde{\mathbf{z}}}^{i}),\, i = \overline{1,{\widetilde{N}}_{k}},$` of the objective function for the vectors from the packet `${\widetilde{\mathcal{Z}}}_{k};$`
+   2. `(*k*, 5)` choose the minimum value `$F_{k}^{*} = \min F({\widetilde{\mathbf{z}}}^{i}),\, 1 \leq i \leq {\widetilde{N}}_{k};$`
+   3. `(*k*, 6)` calculate the decrements `u[k]=|F[k + 1]*−F[k]*|` and the decrement logarithms `v[k]=log u[k]` and `n[k]=log N[k]`; form the sequences `𝒰={u[k]}`, `𝒱={v[k]}`, `𝒩={n[k]}`.
 
+If `v[k] ≤ log δ`, the value `v[k]` is included in the sequence `${\widetilde{\mathcal{V}}}.$` As soon as the sequence `${\overset{\text{˜}}{\mathcal{V}}}_{k}$` accumulates `ρ` elements, `k = τ` and the algorithm stops. Then a transition to the `EstProb` procedure is performed.
 
-
-
-### 3. *Selection*—definition of the quasi global minimum for the packet and calculation of the decrements:
-
-1. (*k*, 4) calculate the values $F({\widetilde{\mathbf{z}}}^{i}),\, i = \overline{1,{\widetilde{N}}_{k}},$ of the objective function for the vectors from the packet ${\widetilde{\mathcal{Z}}}_{k};$
-
-2. (*k*, 5) choose the minimum value $F_{k}^{*} = \min F({\widetilde{\mathbf{z}}}^{i}),\, 1 \leq i \leq {\widetilde{N}}_{k};$
-
-3. (*k*, 6) calculate the decrements `u[k]=|F[k + 1]*−F[k]*|` and the decrement logarithms `v[k]=log u[k]` and `n[k]=log N[k]`; form the sequences `𝒰={u[k]}`, `𝒱={v[k]}`, `𝒩={n[k]}`.
-
-If `v[k] ≤ log δ`, the value `v[k]` is included in the sequence ${\widetilde{\mathcal{V}}}.$ As soon as the sequence ${\overset{\text{˜}}{\mathcal{V}}}_{k}$ accumulates `ρ` elements, `k = τ` and the algorithm stops. Then a transition to the `EstProb` procedure is performed.
-
-#### **EstProb procedure**
+#### EstProb procedure
 
 The computational scheme of this procedure consists in the following.
 
 1. *Parameter estimation for the regression model of decrements*:
-
-    1. (*τ*, 1) using sequences `𝒩` and `𝒱`, estimate parameters `Â[τ]` and `B̂[τ]` by the least-squares method.
+   1. `(*τ*, 1)` using sequences `𝒩` and `𝒱`, estimate parameters `Â[τ]` and `B̂[τ]` by the least-squares method.
 
 2. *Estimation of solution characteristics (quality indicators)*:
-
-    1. (*τ*, 2) estimate the size `r[τ]` (7.72) for the neighborhood of the global minimum value;
-
-    2. (*τ*, 3) calculate the lower bound for the probability `P̂[τ]` (7.73).
+   1. `(*τ*, 2)` estimate the size `r[τ]` (7.72) for the neighborhood of the global minimum value;
+   2. `(*τ*, 3)` calculate the lower bound for the probability `P̂[τ]` (7.73).
 
 The logical structure of the GFS algorithm is presented in Fig. 7.3.
 
@@ -6818,13 +7137,15 @@ Figure 7.3
 
 According to the previous subsections, the probabilistic properties of the GFS algorithm established by analytical study possess an asymptotical character. In other words, they hold for a sufficiently large number of iterations. Even the estimates derived under a finite number of steps assume that it is great enough. The aim of an experimental study, which always has a finite number of steps, is to test the operability of this algorithm in typical problems. More specifically, we will check the estimates for the size of the exact global minimum neighborhood and the probability of getting into it. Recall that these estimates have been obtained using the least-squares-based estimation of the Hölder constants for the objective function. Therefore, in the course of a computational experiment, we will confirm or doubt the hypothesis about the linear regression in the log-log scale.
 
+
+
 In the general statement, the GFS algorithm is intended for solving the global minimization problems in which it is possible to calculate the values of the associated functions (the objective function and constraints). Below we will consider the entropy estimation problem for the PDFs of the parameters of a randomized model that possesses these properties. Let us begin the experimental study of the GFS algorithm with test problems using analytical functions.
 
-**1. Analytical tests**
+# 1. Analytical tests
 
 Our testing employs some minimization problems from [4, 5, 58, 173], in which the admissible domain is the *d*-dimensional parallelepiped `Π[z]`.
 
-*A1. The Shekel function*
+## A1. The Shekel function
 
 $$
 \begin{aligned}
@@ -6858,7 +7179,7 @@ $$
 \\ \end{array}
 $$
 
-*A2. The Rosenbrock function*
+## A2. The Rosenbrock function
 
 $$
 \begin{aligned}
@@ -6869,7 +7190,7 @@ $$
 
 (7.82)
 
-*A3. The Powell function*
+## A3. The Powell function
 
 $$
 \begin{aligned}
@@ -6881,7 +7202,7 @@ $$
 
 (7.83)
 
-*A4. The trigonometric function*
+## A4. The trigonometric function
 
 $$
 \begin{aligned}
@@ -6892,7 +7213,7 @@ $$
 
 (7.84)
 
-*A5. The Griewank function*
+## A5. The Griewank function
 
 $$
 \begin{aligned}
@@ -6941,34 +7262,17 @@ Table 7.1: Results of computations.
 | *d*=5 ||  ||  || -0.0140 ||  ||  ||  ||  |
 |  ||  ||  || -0.0206 ||  ||  ||  ||  |
 |  ||  ||  || -0.0036 ||  ||  ||  ||  |
-
-
-
-
-
 |  ||  ||  || \-0.1094 ||  ||  ||  ||  |
-
 | A5 || \[ − 5, 5\] || 0.1245 || 3.0566 || 0.1245 || 0.1889 ||  ≈ 1.0 || 1594 |
-
 | *d* = 10 ||  ||  || \-4.4010 ||  ||  ||  ||  |
-
 |  ||  ||  || \-0.3254 ||  ||  ||  ||  |
-
 |  ||  ||  || \-0.0586 ||  ||  ||  ||  |
-
 |  ||  ||  || 0.2304 ||  ||  ||  ||  |
-
 |  ||  ||  || 0.3659 ||  ||  ||  ||  |
-
 |  ||  ||  || 0.1528 ||  ||  ||  ||  |
-
 |  ||  ||  || \-0.9495 ||  ||  ||  ||  |
-
 |  ||  ||  || 0.6693 ||  ||  ||  ||  |
-
 |  ||  ||  || 0.1680 ||  ||  ||  ||  |
-
-|  |
 
 该算法的一个特征在于基于记录序列的 Hölder 常数的估计方法。利用该方法进行的计算结果可以在 图 7.5 的图中观察到，其中包括记录序列 *F*[*k*]^(\*) 以及通过逼近递减序列得到的 Hölder 常数 *L̂* 和 *ŝ* 的估计值。
 
@@ -6982,11 +7286,16 @@ Figure 7.5
 
 对于这组测试，GFS 算法在具有 NVIDIA 加速器的混合架构计算机上用 C++ 实现。我们的计算系统由两个节点组成，CPU 为 Intel Xeon X5650 和 E5-2650，加速器为 Tesla M2050 和 K20Xm。
 
-**2. 算法测试（随机模型参数 PDF 的熵估计 \[149\]）**
+# 2. 算法测试（随机模型参数 PDF 的熵估计 \[149\]）
 
 考虑某个动态非线性对象的输入和输出数据的数组。用 **y** = {*y*\[*m*\],…,*y*\[*m*+*s*\]} 表示输出数据的向量（包），用 **x**{*x*\[0\],…,*x*\[*m*\],…,*x*\[*m*+*s*\]} 表示输入数据的向量（包）。假设输入测量是完美的，而输出测量存在误差，该误差由随机向量 $\\overline{\\xi} = \\left\\{ \\xi\\lbrack m\\rbrack,\\ldots,\\xi\\lbrack m + s\\rbrack \\right\\}$ 模拟，其元素相互独立。设该向量的元素为区间类型，即
 
-$$\\begin{array}{r} {\\xi\\lbrack j + m\\rbrack \\in \\Xi\_{j} = \\lbrack\\xi\_{j}^{-},\\xi\_{j}^{+}\\rbrack,\\,\\,\\text{for~all}\\, j = \\overline{0,s}.} \\\\ \\end{array}$$
+$$
+\begin{array}{r}
+{\\xi\\lbrack j + m\\rbrack \\in \\Xi\_{j} = \\lbrack\\xi\_{j}^{-},\\xi\_{j}^{+}\\rbrack,\\,\\,\\text{for~all}\\, j = \\overline{0,s}.}
+\\\\
+\\end{array}
+$$
 
 (7.86)
 
@@ -6994,7 +7303,12 @@ $$\\begin{array}{r} {\\xi\\lbrack j + m\\rbrack \\in \\Xi\_{j} = \\lbrack\\xi\_{
 
 输入包与输出包之间的关系由具有二阶结构非线性和附加随机噪声的离散动态随机模型描述，其形式为
 
-$$\\begin{array}{r} {v\\lbrack j + 1\\rbrack = {\\sum\\limits\_{h = 1}^{R}\\left( {{\\sum\\limits\_{n = 0}^{m}w^{(h)}}\\lbrack n\\rbrack x\\lbrack j + m - n\\rbrack} \\right)^{h}} + \\xi\\lbrack j + m\\rbrack,\\quad j = \\overline{0,s},} \\\\ \\end{array}$$
+$$
+\begin{array}{r}
+{v\\lbrack j + 1\\rbrack = {\\sum\\limits\_{h = 1}^{R}\\left( {{\\sum\\limits\_{n = 0}^{m}w^{(h)}}\\lbrack n\\rbrack x\\lbrack j + m - n\\rbrack} \\right)^{h}} + \\xi\\lbrack j + m\\rbrack,\\quad j = \\overline{0,s},}
+\\\\
+\\end{array}
+$$
 
 (7.87)
 
@@ -7002,7 +7316,16 @@ $$\\begin{array}{r} {v\\lbrack j + 1\\rbrack = {\\sum\\limits\_{h = 1}^{R}\\left
 
 离散随机权重函数（随机脉冲特性）*w*^((1))\[*n*\] = *w*^((2))\[*n*\] = 0, *n* > 1，反映了该模型线性块和非线性块的动态特性。引入记号
 
-$$\\begin{aligned} & {a\_{0}^{(1)} = w^{(1)}\\lbrack 0\\rbrack,\\, a\_{1}^{(1)} = w^{(1)}\\lbrack 1\\rbrack;\\quad\\mathbf{a}^{(1)} = \\left\\{ a\_{0}^{(1)},a\_{1}^{(1)} \\right\\};} \\\\ & {a\_{0}^{(2)} = w^{(2)}\\lbrack 0\\rbrack,\\, a\_{1}^{(2)} = w^{(2)}\\lbrack 1\\rbrack;\\quad\\mathbf{a}^{(2)} = \\left\\{ a\_{0}^{(2)},a\_{1}^{(2)} \\right\\};} \\\\ & {\\text{\\quad\\quad}\\text{\\quad\\quad}\\text{\\quad\\quad}\\mathbf{x}\\lbrack j\\rbrack = \\left\\{ x\\lbrack j + 1\\rbrack,x\\lbrack j\\rbrack \\right\\}.} \\\\ \\end{aligned}$$
+$$
+\begin{aligned}
+& {a\_{0}^{(1)} = w^{(1)}\\lbrack 0\\rbrack,\\, a\_{1}^{(1)} = w^{(1)}\\lbrack 1\\rbrack;\\quad\\mathbf{a}^{(1)} = \\left\\{ a\_{0}^{(1)},a\_{1}^{(1)} \\right\\};}
+\\\\
+& {a\_{0}^{(2)} = w^{(2)}\\lbrack 0\\rbrack,\\, a\_{1}^{(2)} = w^{(2)}\\lbrack 1\\rbrack;\\quad\\mathbf{a}^{(2)} = \\left\\{ a\_{0}^{(2)},a\_{1}^{(2)} \\right\\};}
+\\\\
+& {\\text{\\quad\\quad}\\text{\\quad\\quad}\\text{\\quad\\quad}\\mathbf{x}\\lbrack j\\rbrack = \\left\\{ x\\lbrack j + 1\\rbrack,x\\lbrack j\\rbrack \\right\\}.}
+\\\\
+\\end{aligned}
+$$
 
 (7.88)
 
@@ -7010,7 +7333,12 @@ $$\\begin{aligned} & {a\_{0}^{(1)} = w^{(1)}\\lbrack 0\\rbrack,\\, a\_{1}^{(1)} 
 
 随机参数 *a*[*n*]^((*h*)) 在区间内取值
 
-$$\\begin{array}{r} {\\mathcal{A}\_{n}^{(h)} = \\lbrack - A\_{n}^{(h)},A\_{n}^{(h)}\\rbrack,\\quad A\_{n}^{(h)} = \\beta\_{n}^{(h)}\\exp( - \\alpha\_{n}^{(h)}\\, n).} \\\\ \\end{array}$$
+$$
+\begin{array}{r}
+{\\mathcal{A}\_{n}^{(h)} = \\lbrack - A\_{n}^{(h)},A\_{n}^{(h)}\\rbrack,\\quad A\_{n}^{(h)} = \\beta\_{n}^{(h)}\\exp( - \\alpha\_{n}^{(h)}\\, n).}
+\\\\
+\\end{array}
+$$
 
 (7.89)
 
@@ -7019,20 +7347,17 @@ $$\\begin{array}{r} {\\mathcal{A}\_{n}^{(h)} = \\lbrack - A\_{n}^{(h)},A\_{n}^{(
 Table 7.2: 参数的区间。
 
 |  |
-
 | --- |
-
 | Parameters || *α*[0]^((1)) || *α*[1]^((1)) || *β*[0]^((1)) || *β*[1]^((1)) |
-
 | Values || 0.5 || 1.0 || 1.0 || 2.0 |
-
 | --- | --- | --- | --- | --- |
-
 |  |
 
 PDF *P*^((1))(**a**^((1))) 和 *P*^((2))(**a**^((2))) 在区间 (7.89) 上定义。
 
 根据 RML 算法，模型参数和测量噪声的熵最优 PDF 具有形式
+
+
 
 $$\\begin{aligned} {{\\widetilde{P}}^{(h)}\\left( \\mathbf{a} \\right)} & {= \\frac{1}{\\mathcal{R}^{(h)}(\\theta)}\\,\\exp\\left( {- {\\sum\\limits\_{j = 0}^{s}\\,}\\theta\_{j}\\, V\_{j}^{(h)}\\left( {\\mathbf{a}^{(h)},\\mathbf{x}\\lbrack j\\rbrack} \\right)} \\right),\\quad h = \\overline{1,R};} \\\\ {{\\widetilde{q}}\_{j}(\\xi)} & {= \\frac{1}{\\mathcal{Q}\_{j}(\\theta\_{j})}\\,\\exp\\left( {- \\theta\_{j}\\,\\xi} \\right),\\, j = \\overline{0,s},} \\\\ \\end{aligned}$$
 
@@ -7074,18 +7399,20 @@ $$\\begin{array}{r} {J(\\theta) = \\|\\Phi(\\theta)\\|\_{L\_{2}}} \\\\ \\end{arr
 
 计算结果在 Table 7.3 中给出，并在 Fig. 7.6 中示意。由于存在积分分量 (7.94)，目标函数是算法定义的。对于这组测试，算法在 MATLAB 中使用 Parallel Computing Toolbox 实现。积分分量 (7.94) 由 integral2 函数计算，而最小值由 GFS 算法计算。所有计算均在与分析测试相同的计算系统上使用 32 个工作处理器（通常称为 worker）执行。方程 (7.95) 的解是在两个搜索域 *Π*[*θ*] 上得到的：*θ* ∈ \[ − 10, 10\] × \[ − 10, 10\] 用于变体 1，*θ* ∈ \[ − 3,  − 2\] × \[ − 0.5, 0.5\] 用于变体 2；见 Table 7.3。
 
-
-
-
-
 表 7.3: 计算结果。
 
 |  |
+
 | --- |
+
 | Var || *J*[*τ*]^(\*) || *θ*[*τ*]^(\*) || *ε*[*τ*] || *r̂*[*τ*] || *P̂*[*τ*] || *t*, s |
+
 | 1 || 0.0025 || \-2.4457\-0.0537 || 0.0025 || 0.1200 ||  ≈ 1.0 || 1576 |
+
 | --- | --- | --- | --- | --- | --- | --- |
+
 | 2 || 0.0001 || \-2.4042\-0.0634 || 0.0001 || 0.0051 ||  ≈ 1.0 || 1573 |
+
 |  |
 
 ![Figure 7.6](img/fig7_6.jpg)
@@ -7216,6 +7543,8 @@ $$\\begin{array}{r} {J(\\theta) = \\|\\Phi(\\theta)\\|\_{L\_{2}}} \\\\ \\end{arr
 
 注意变量 *h*[*k*]^(*i*) 是随机的。考虑事件
 
+
+
 ```
 \\begin{array}{r} {\\mathcal{V}^{k} = \\left\\{ \\max\_{i} \\middle| h\_{k}^{i} - h \\middle| < \\gamma \\right\\},} \\\\ \\end{array}
 ```
@@ -7250,11 +7579,8 @@ $$\\begin{array}{r} {J(\\theta) = \\|\\Phi(\\theta)\\|\_{L\_{2}}} \\\\ \\end{arr
 
 以事件 (7.111) 的概率成立。
 
-
-
-
-
 ### 2.
+
 求事件 (7.111) 概率的下界。考虑差值 |*h*[*k*]^((*i*))−*h*| 并取一个足够小的正值 *γ* 使得 |*h*[*k*]^((*i*))−*h*|>*γ* 对随机格点 $\hat{\mathbb{S}}$ 的所有步长 *h*[*k*]^((*i*)) 都成立。计算该事件的概率。若随机点数很大（*h* 很小）且它们均匀分布，则这些点之间的距离必须接近 *h*。
 
 事件 max[*i*]|*h*[*k*]^((*i*))−*h*|>*γ* 意味着可以找到一对随机变量 (*ξ*, *η*) ∈ \[0, 1\] 具有以下性质：如果其中一个（例如 *ξ*）取值为 *y* ∈ \[0, 1\]，则另一个 *η* ≠ ℒ = \[*y* + *h* − *γ*, *y* + *h* + *γ*\]。因此，以 *y* + *h* 为中心的区间 ℒ，其长度为 2*γ*，为空。实际上，假设随机变量 *η* 落入区间 ℒ，即 *η* = *ξ* − *h* ± *δ*，其中 0 < *δ* < *γ*；在这种情况下，可得 |*h*[*k*]^((*i*))−*h*|<*γ*。
@@ -7286,6 +7612,7 @@ $$\begin{array}{r} {P(\mathcal{V}) > 1 - ({\lbrack - 2\left( \frac{l}{N} \right)
 因此，不等式 (7.113) 以不小于 *P*(*N*, *m*) 的概率成立。
 
 ### 3.
+
 考虑 (7.3) 中的第二项。以下估计成立：
 
 $$\begin{array}{r} \left. v\left. \sum\limits_{i = 1}^{N} \right|\phi(\zeta^{i},\mathbf{z}) - \phi(\mathbf{w}^{i},\mathbf{z}) \middle| \leq \left( \frac{1}{N} \right)^{n}\,\max_{(\zeta,\mathbf{w}) \in I^{n}} \middle| \phi(\zeta,\mathbf{z}) - \phi(\mathbf{w},\mathbf{z}) \middle| . \right. \\ \end{array}$$
@@ -7345,6 +7672,7 @@ $$\begin{array}{r} \left| \mathbb{B}(\mathbf{z}) - \widetilde{\mathbb{B}}(\mathb
 以不小于 *P*(*N*, *m*) (7.117) 的概率成立。
 
 ### 4.
+
 现在转向不等式 (7.3)。它们在结构上与不等式 (7.3) 相似，唯一的区别在于函数 *φ*(**w**, **z**) (7.98)。因此，
 
 $$\begin{array}{r} \left. \left. \sum\limits_{i = 1}^{N} \right|v^{i} - v \middle| \middle| \varphi(\zeta,\mathbf{z}) \middle| \leq \max_{\zeta \in I^{n}} \middle| \varphi(\zeta,\mathbf{z}) \middle| \left. \sum\limits_{i = 1}^{N} \right|v^{i} - v \middle| \leq N\left( \frac{l}{N} \right)^{n + 1}\max_{\zeta \in I^{n}} \middle| \varphi(\zeta,\mathbf{z}) \middle| . \right. \\ \end{array}$$
@@ -7377,16 +7705,18 @@ $$\begin{array}{r} \left. \max_{\mathbf{w} \in I^{n},\mspace{2mu} k \in \lbrack 
 
 因此，不等式
 
-
-
-
-
 $$
+
 \begin{array}{r}
+
 \left| \mathbb{G}(\mathbf{z}) - \widetilde{\mathbb{G}}(\mathbf{z}) \middle| \leq N\left( \frac{l}{N} \right)^{n + 1}G\exp(G)\left\lbrack {1 + \frac{l}{N}(1 + G^{2})} \right\rbrack = \widetilde{\kappa}(N,n)
+
 \right.
+
 \\
+
 \end{array}
+
 $$
 
 (7.132)
@@ -7396,10 +7726,15 @@ $$
 上界 *N*（或 *M*）的值可由条件计算得出
 
 $$
+
 \begin{array}{r}
+
 {N^{\*} = \max(\widetilde{\epsilon}(N,n) = \delta;\,\, \widetilde{\kappa}(N,n) = \delta).}
+
 \\
+
 \end{array}
+
 $$
 
 (7.133)
@@ -7411,10 +7746,15 @@ RML 和 ML 程序中出现的许多问题都归结为非线性方程组，例如
 考虑一组等式，将其解释为数据 **q** ∈ *R*^(*r*) 与线性参数模型输出 **y** ∈ *R*^(*n*) 之间的平衡约束：
 
 $$
+
 \begin{array}{r}
+
 {T\mathbf{y} = \mathbf{q},\quad(T,\mathbf{y}) \geq 0,\,\,\mathbf{q} \geq \varepsilon > 0,\text{\quad\quad}r < n.}
+
 \\
+
 \end{array}
+
 $$
 
 (7.134)
@@ -7422,10 +7762,15 @@ $$
 这里 *T* 表示秩为 *r* 的满秩矩阵。对于系统 (7.134)，存在解集，并且在其中存在唯一解，该解最大化熵
 
 $$
+
 \begin{array}{r}
+
 {H(\mathbf{y}) = - {\sum\limits_{i = 1}^{n}y_{i}}\ln\frac{y_{i}}{ea_{i}},\text{\quad\quad}e = 2.71,}
+
 \\
+
 \end{array}
+
 $$
 
 (7.135)
@@ -7435,12 +7780,19 @@ $$
 考虑熵 (7.135) 的以下约束优化问题：
 
 $$
+
 \begin{aligned}
+
 & \left. H(\mathbf{y})\Rightarrow\max, \right.
+
 \\
+
 & {T\,\mathbf{y} = \mathbf{q}.}
+
 \\
+
 \end{aligned}
+
 $$
 
 (7.136)
@@ -7448,10 +7800,15 @@ $$
 相应的拉格朗日函数具有形式
 
 $$
+
 \begin{array}{r}
+
 {L(\mathbf{y},\overline{\lambda}) = H(\mathbf{y}) + {\sum\limits_{k = 1}^{r}\lambda_{k}}\left( {q_{k} - {\sum\limits_{i = 1}^{n}t_{ki}}y_{i}} \right).}
+
 \\
+
 \end{array}
+
 $$
 
 (7.137)
@@ -7459,12 +7816,21 @@ $$
 一阶最优性条件为
 
 $$
+
 \begin{aligned}
+
+
+
 {\nabla_{y_{i}}L(\mathbf{y},\overline{\lambda})} & {\frac{\partial H(\mathbf{y})}{\partial y_{i}} - {\sum\limits_{k = 1}^{r}\lambda_{k}}t_{ki} = 0,\quad i = \overline{1,n};}
+
 \\
+
 {\nabla_{\lambda_{k}}L(\mathbf{y},\overline{\lambda})} & {q_{k} - {\sum\limits_{i = 1}^{n}t_{ki}}y_{i} = 0,\quad k = \overline{1,r}.}
+
 \\
+
 \end{aligned}
+
 $$
 
 (7.138)
@@ -7472,10 +7838,15 @@ $$
 第一组方程给出变量 **y** 与拉格朗日乘子 $\overline{\lambda}$ 之间的关系，形式为
 
 $$
+
 \begin{array}{r}
+
 {y_{i}(\overline{\lambda}) = \frac{a_{i}}{{\sum\limits_{k = 1}^{r}\exp}(t_{k}i\lambda_{k})},\text{\quad\quad}i = \overline{1,n}.}
+
 \\
+
 \end{array}
+
 $$
 
 (7.139)
@@ -7483,10 +7854,15 @@ $$
 该关系使我们能够从拉格朗日函数 (7.137) 的定义中消去原变量 **y**，从而得到对偶函数（取决于对偶变量——拉格朗日乘子）的以下表达式：
 
 $$
+
 \begin{array}{r}
+
 {\widetilde{L}(\overline{\lambda}) = L\lbrack\mathbf{y}(\overline{\lambda}),\overline{\lambda}\rbrack.}
+
 \\
+
 \end{array}
+
 $$
 
 (7.140)
@@ -7494,10 +7870,15 @@ $$
 其梯度的元素为
 
 $$
+
 \begin{array}{r}
+
 {\nabla_{\lambda_{k}}\widetilde{L}(\overline{\lambda}) = q_{k} - {\sum\limits_{i = 1}^{n}y_{i}}(\overline{\lambda}),\text{\quad\quad}k = \overline{1,r}.}
+
 \\
+
 \end{array}
+
 $$
 
 (7.141)
@@ -7505,10 +7886,15 @@ $$
 就对偶函数而言，最优性条件 (7.138) 的第二组可以写成
 
 $$
+
 \begin{array}{r}
+
 {\nabla_{\lambda_{k}}\widetilde{L}(\overline{\lambda}) = 0,\text{\quad\quad}k = \overline{1,r}.}
+
 \\
+
 \end{array}
+
 $$
 
 (7.142)
@@ -7516,10 +7902,15 @@ $$
 因此，平衡约束具有形式
 
 $$
+
 \begin{array}{r}
+
 {{\widetilde{B}}_{k}(\overline{\lambda}) = \frac{1}{q_{k}}{\sum\limits_{i = 1}^{n}t_{ki}}\frac{a_{i}}{{\sum\limits_{j = 1}^{r}\exp}\left( {\lambda_{j}t_{ji}} \right)} = 1,\quad\overline{\lambda} \in R^{r},\text{\quad\quad}k = \overline{1,r}.}
+
 \\
+
 \end{array}
+
 $$
 
 (7.143)
@@ -7527,10 +7918,15 @@ $$
 通常将这些方程用非负变量 $z_{k} = \exp(\lambda_{k}),\, k = \overline{1,r},$ 即指数拉格朗日乘子进行变换是方便的。然后方程 (7.143) 化为
 
 $$
+
 \begin{array}{r}
+
 {B_{k}(\mathbf{z}) = \frac{1}{q_{k}}{\sum\limits_{i = 1}^{n}t_{ki}}a_{i}\left( {\prod\limits_{j = 1}^{r}z_{k}^{- t_{ji}}} \right) = 1,\quad\mathbf{z} \in R_{+}^{r},\text{\quad\quad}k = \overline{1,r}.}
+
 \\
+
 \end{array}
+
 $$
 
 (7.144)
@@ -7538,10 +7934,15 @@ $$
 现在，对于对偶函数 (7.140)，Hessian 矩阵具有形式
 
 $$
+
 \begin{array}{r}
+
 \left. \Gamma(\overline{\lambda}) = \lbrack\nabla_{\lambda_{j},\lambda_{l}}\widetilde{L}(\overline{\lambda})\, \middle| \,(j,l) = \overline{1,r}\rbrack, \right.
+
 \\
+
 \end{array}
+
 $$
 
 (7.145)
@@ -7549,10 +7950,15 @@ $$
 其中
 
 $$
+
 \begin{array}{r}
+
 {\nabla_{\lambda_{j},\lambda_{l}}\widetilde{L}(\overline{\lambda}) = - {\sum\limits_{i = 1}^{n}t_{kj}}\frac{\partial y_{j}}{\partial\lambda_{l}}.}
+
 \\
+
 \end{array}
+
 $$
 
 (7.146)
@@ -7560,10 +7966,15 @@ $$
 原变量表达式 (7.139) 意味着不等式
 
 $$
+
 \begin{array}{r}
+
 {\frac{\partial y_{j}}{\partial\lambda_{l}} \leq 0,}
+
 \\
+
 \end{array}
+
 $$
 
 (7.147)
@@ -7575,27 +7986,45 @@ $$
 *初始步骤：*
 
 $$
+
 \begin{array}{r}
+
 {\mathbf{z}^{0} > \mathbf{0}.}
+
 \\
+
 \end{array}
+
 $$
 
 *迭代步骤：*
 
 $$
+
 \begin{aligned}
+
 z_{k_{1}(s)}^{(s + 1)} & {= z_{k_{1}(s)}^{s}B_{k_{1}(s)}^{\gamma}(\mathbf{z}^{s}),}
+
 \\
+
 \cdots & {= \cdots\cdots\cdots,}
+
 \\
+
 z_{k_{p}(s)}^{(s + 1)} & {= z_{k_{p}(s)}^{s}B_{k_{p}(s)}^{\gamma}(\mathbf{z}^{s})}
+
 \\
+
 z_{k}^{(s + 1)} & {= z_{k}^{s},\quad k \neq k_{1}(s),\ldots,k_{p}(s),}
+
 \\
+
 & {(k,k_{1}(s),\ldots,k_{p}(s)) \in \overline{1,n}.}
+
 \\
+
 \end{aligned}
+
 $$
 
 (7.148)
@@ -7605,27 +8034,45 @@ $$
 *初始步骤：*
 
 $$
+
 \begin{array}{r}
+
 {{\overline{\lambda}}^{0} \in R^{n}.}
+
 \\
+
 \end{array}
+
 $$
 
 *迭代步骤：*
 
 $$
+
 \begin{aligned}
+
 \lambda_{k_{1}(s)}^{(s + 1)} & {= \lambda_{k_{1}(s)}^{s} + \gamma\ln{\widetilde{B}}_{k_{1}(s)}({\overline{\lambda}}^{s}),}
+
 \\
+
 \cdots & {= \cdots\cdots\cdots,}
+
 \\
+
 \lambda_{k_{p}(s)}^{(s + 1)} & {= \lambda_{k_{p}(s)}^{s} + \gamma\ln{\widetilde{B}}_{k_{p}(s)}({\overline{\lambda}}^{s})}
+
 \\
+
 \lambda_{k}^{(s + 1)} & {= \lambda_{k}^{s},\quad k \neq k_{1}(s),\ldots,k_{p}(s),}
+
 \\
+
 & {(k,k_{1}(s),\ldots,k_{p}(s)) \in \overline{1,n},}
+
 \\
+
 \end{aligned}
+
 $$
 
 (7.149)
@@ -7635,41 +8082,47 @@ $$
 此类算法的一个主要困难是选择活动变量。该选择可以通过循环规则来组织，例如对于 *p* = 1，
 
 $$
+
 \begin{array}{r}
+
 {k_{1}(s) = s(\text{mod}\, n + 1).}
+
 \\
+
 \end{array}
+
 $$
 
 (7.150)
 
 更有效的方法涉及残差反馈，即
 
-
-
-
-
 $$\\begin{array}{r} \\left. \\vartheta_{k}(\\mathbf{z}^{s}) = \\middle| 1 - B_{k}(\\mathbf{z}^{s}) \\middle| ,\\text{\\quad\\quad}k = \\overline{1,n}. \\right. \\\\ \\end{array}$$  
+
 (7.151)
 
 引入以下记号：
 
 $$\\begin{aligned} \\frac{r}{p} & {= I + \\delta,\\text{\\quad\\quad}\\rho = s\\lbrack\\text{(}mod)\\,(I + 1)\\rbrack,} \\\\ I & {= \\left\\lbrack \\frac{r}{p} \\right\\rbrack,\\text{\\quad\\quad}0 \\leq \\delta \\leq p - 1.} \\\\ \\end{aligned}$$  
+
 (7.152)
 
 这里 \[ ⋅ \] 表示值  ⋅  的整数部分。考虑指标集
 
 $$\\begin{array}{r} {K = \\left\\{ 1,\\ldots,r \\right\\},\\text{\\quad\\quad}K_{m}(s) = \\left\\{ k_{1}(s),\\ldots,k_{m}(s) \\right\\},} \\\\ \\end{array}$$  
+
 (7.153)
 
 其中
 
 $$\\begin{array}{r} {m = \\left\\{ \\begin{array}{r} {1,\\ldots,p\\text{if}\\,\\rho < I;} \\\\ {1,\\ldots,\\delta\\text{if}\\,\\rho = I.} \\\\ \\end{array}~ \\right.} \\\\ \\end{array}$$  
+
 (7.154)
 
 令
 
 $$\\begin{aligned} {P_{m - 1}(s)} & {= \\left\\lbrack {{\\underset{v = 1}{\\overset{\\rho}{\\cup}}K_{p}}(s - v)} \\right\\rbrack{\\cup K_{m - 1}}(s),} \\\\ {G_{m - 1}(s)} & {= K\\smallsetminus P_{m - 1}(s),} \\\\ \\end{aligned}$$  
+
 (7.155)
 
 其中 `K`0 = `P`0 = `G`0 = ⌀.
@@ -7677,11 +8130,13 @@ $$\\begin{aligned} {P_{m - 1}(s)} & {= \\left\\lbrack {{\\underset{v = 1}{\\over
 现在我们可以陈述活动变量的选择规则：*活动变量的包由残差最大的 p 个变量的指标构成*，即
 
 $$\\begin{array}{r} {k_{m}(s) = \\arg\\max_{i \\in G_{m - 1}(s)}\\vartheta_{i}(\\mathbf{z}^{s}).} \\\\ \\end{array}$$  
+
 (7.156)
 
 该规则得到不等式链
 
 $$\\begin{array}{r} {\\vartheta_{k_{p}(s)}(\\mathbf{z}^{s}) < \\vartheta_{k_{p - 1}(s)}(\\mathbf{z}^{s}) < \\cdots\\vartheta_{k_{1}(s)}(\\mathbf{z}^{s}).} \\\\ \\end{array}$$  
+
 (7.157)
 
 应用规则 (7.156, 7.157) 使所有变量在 (`I` + 1) 次迭代中变为活动，并在周期 (`I` + 1) 下再次出现。
@@ -7722,114 +8177,190 @@ RML 过程的最后阶段是使用熵最优随机模型生成随机向量或轨�
 
 ## 8.2 具有给定概率密度函数的随机向量的直接生成方法
 
+
+
 该方法使用对给定 PDF 的阶梯函数近似，随后在随机选择的初等立方体内生成均匀分布的独立随机向量。考虑 PDF `w`(**x**)， **x** ∈ `Q` ⊂ `R`^(`n`)。
 
 ### 8.2.1 单位立方体 `Q`
 
 为单位立方体 `Q` 的每个坐标引入步长为 `h` 的均匀格点。于是该立方体被划分为体积为 `V`[`i`] = `h`^(`n`) 的初等立方体。设 (1/`h`) 为整数值。则初等立方体的数量为 `N` = (1/`h`)^(`n`) 且 `$i = \\overline{1,N}.$` 对每个初等立方体，引入步长为 `η` 的另一格点。结果，每个初等立方体由体积为 `v`[`i`]^(`j`) = `η`^(`n`) 的内部子立方体组成。用 `M` = (1/`η`)^(`n`) 表示其数量，`$j = \\overline{1,M}.$` 假设所有初等立方体的总体积与所有子立方体的总体积一致。在每个内部子立方体中选取任意点 **x**[`i`]^(`j`) 并定义值
 
-$$\\begin{array}{r} {C_{i} = \\frac{1}{M}{\\sum\\limits_{j = 1}^{M}w}(\\mathbf{x}_{i}^{j}).} \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+{C_{i} = \frac{1}{M}{\sum\limits_{j = 1}^{M}w}(\mathbf{x}_{i}^{j}).}
+\\
+\end{array}
+$$
+
 (8.15)
 
 对于足够大的 `M`，
 
-
-
-
-
-$$\\begin{array}{r} {\\left. C_{i} \\right.\\sim\\frac{1}{V_{i}}{\\int_{V_{i}}w}(\\mathbf{x})d\\mathbf{x}.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+{\left. C_{i} \right.\sim\frac{1}{V_{i}}{\int_{V_{i}}w}(\mathbf{x})d\mathbf{x}.}
+\\
+\end{array}
+$$
 
 (8.16)
 
 因此，
 
-$$\\begin{array}{r} {\\left. C_{i} \\right.\\sim w(\\mathbf{x})\\quad\\text{if}\\,\\mathbf{x} \\in V_{i}.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+{\left. C_{i} \right.\sim w(\mathbf{x})\quad\text{if}\,\mathbf{x} \in V_{i}.}
+\\
+\end{array}
+$$
 
 (8.17)
 
-记 ${\\overline{\\xi}}^{i},\\, i = \\overline{1,N},$ 为服从基本立方体上均匀分布的独立随机向量。此类向量的密度在基本立方体内部为 1/*V*[*i*]，外部为 0。这些向量可使用方法 (8.6, 8.7) 生成。
+记 ${\overline{\xi}}^{i},\, i = \overline{1,N},$ 为服从基本立方体上均匀分布的独立随机向量。此类向量的密度在基本立方体内部为 1/*V*[*i*]，外部为 0。这些向量可使用方法 (8.6, 8.7) 生成。
 
-设 *β* 为不依赖于 $\\left\\{ {\\overline{\\xi}}^{i} \\right\\}$ 的整数随机变量，取值为 1, …, *N*，其概率为 *p*[*i*] = *C*[*i*]*V*[*i*]。则生成的向量具有形式
+设 *β* 为不依赖于 $\left\{ {\overline{\xi}}^{i} \right\}$ 的整数随机变量，取值为 1, …, *N*，其概率为 *p*[*i*] = *C*[*i*]*V*[*i*]。则生成的向量具有形式
 
-$$\\begin{array}{r} {\\mathbf{x} = {\\sum\\limits_{i = 1}^{N}{\\overline{\\xi}}^{i}}\\Lambda(\\beta = i),} \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+{\mathbf{x} = {\sum\limits_{i = 1}^{N}{\overline{\xi}}^{i}}\Lambda(\beta = i),}
+\\
+\end{array}
+$$
 
 (8.18)
 
 其中 *Λ*(*A*) 表示集合 *A* 的示性函数。向量 **x** 的 PDF 可写为
 
-$$\\begin{aligned} & \\left. P(\\mathbf{x} = d\\mathbf{x}) = {\\sum\\limits_{i = 1}^{N}P}(\\mathbf{x} = d\\mathbf{x}\\, \\middle| \\,\\beta = i)P(\\beta = i) = \\right. \\\\ & {\\left. \\text{\\quad\\quad}{\\sum\\limits_{i = 1}^{N}C_{i}}d\\mathbf{x}\\Lambda(V_{i}) \\right.\\sim{\\sum\\limits_{i = 1}^{N}w}(\\mathbf{x})d\\mathbf{x}\\Lambda(V_{i}).} \\\\ \\end{aligned}$$  
+$$
+\begin{aligned}
+& \left. P(\mathbf{x} = d\mathbf{x}) = {\sum\limits_{i = 1}^{N}P}(\mathbf{x} = d\mathbf{x}\, \middle| \,\beta = i)P(\beta = i) = \right.
+\\
+& {\left. \text{\quad\quad}{\sum\limits_{i = 1}^{N}C_{i}}d\mathbf{x}\Lambda(V_{i}) \right.\sim{\sum\limits_{i = 1}^{N}w}(\mathbf{x})d\mathbf{x}\Lambda(V_{i}).}
+\\
+\end{aligned}
+$$
 
 (8.19)
 
-## 8.2.2 紧集 *Q*
+## 8.2.2 紧集 `Q`
 
-### 1. *Q*—平行六面体 Π
+### 1. `Q`—平行六面体 Π
 
-考虑集合 *P**i* = {**x**:**a**≤**x**≤**b**}，其中 **a** 和 **b** 为给定向量。用 $l_{i} = b_{i} - a_{i},\\, i = \\overline{1,n}.$ 表示其边的长度。在该集合上引入非均匀格网，可按每个坐标固定 *K* 个元素设计，也可按固定步长 *h* 设计。前一种情况下，各坐标步长不同，即
+考虑集合 `P`[*i*] = {**x**:**a**≤**x**≤**b**}，其中 **a** 和 **b** 为给定向量。用 $l_{i} = b_{i} - a_{i},\, i = \overline{1,n}.$ 表示其边的长度。在该集合上引入非均匀格网，可按每个坐标固定 *K* 个元素设计，也可按固定步长 *h* 设计。前一种情况下，各坐标步长不同，即
 
-$$\\begin{array}{r} {h_{i} = l_{i}/K;} \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+{h_{i} = l_{i}/K;}
+\\
+\end{array}
+$$
 
 (8.20)
 
 后一种情况下，各格网元素数不同，即
 
-$$\\begin{array}{r} {K_{i} = l_{i}/h.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+{K_{i} = l_{i}/h.}
+\\
+\end{array}
+$$
 
 (8.21)
 
-事实上，固定步长的情况已在上面讨论过。因此，我们将研究前一种具有可变步长的情况。由于格网在每个坐标上具有相同数量的元素，全部基本平行六面体 *Π*[*i*] 的数量为 *N* = *K*^(*n*)。基本平行六面体具有相同的体积
+事实上，固定步长的情况已在上面讨论过。因此，我们将研究前一种具有可变步长的情况。由于格网在每个坐标上具有相同数量的元素，全部基本平行六面体 `Π`[*i*] 的数量为 `N` = *K*^(*n*)。基本平行六面体具有相同的体积
 
-$$\\begin{array}{r} {V = {\\prod\\limits_{i = 1}^{n}h_{i}}.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+{V = {\prod\limits_{i = 1}^{n}h_{i}}.}
+\\
+\end{array}
+$$
 
 (8.22)
 
-在每个平行六面体内部，引入另一个每个坐标有 *M* 个元素的格网。则每个坐标的格网步长为
+在每个平行六面体内部，引入另一个每个坐标有 `M` 个元素的格网。则每个坐标的格网步长为
 
-$$\\begin{array}{r} {\\eta_{i} = h_{i}/M,} \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+{\eta_{i} = h_{i}/M,}
+\\
+\end{array}
+$$
 
 (8.23)
 
-第 *j* 个内部子平行六面体 *π*[*i*]^(*j*) 的体积为
+第 `j` 个内部子平行六面体 `π`[*i*]^(`j`) 的体积为
 
-$$\\begin{array}{r} {v = {\\prod\\limits_{i = 1}^{n}\\eta_{i}}.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+{v = {\prod\limits_{i = 1}^{n}\eta_{i}}.}
+\\
+\end{array}
+$$
 
 (8.24)
 
-（这里 *j* 表示第 *i* 个基本平行六面体内部的内部子平行六面体的索引）。基本平行六面体 *Π*[*i*] 内部全部内部子平行六面体 *π*[*i*]^(*j*) 的数量为
+（这里 `j` 表示第 `i` 个基本平行六面体内部的内部子平行六面体的索引）。基本平行六面体 `Π`[*i*] 内部全部内部子平行六面体 `π`[*i*]^(`j`) 的数量为
 
-$$\\begin{array}{r} {L = M^{n}.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+{L = M^{n}.}
+\\
+\end{array}
+$$
 
 (8.25)
 
-在 *π*[*i*]^(*j*) 中任取一点 **x**[*i*]^(*j*) 并计算值
+在 `π`[*i*]^(`j`) 中任取一点 **x**[*i*]^(`j`) 并计算值
 
-$$\\begin{array}{r} {C_{i} = \\frac{1}{M}{\\sum\\limits_{j = 1}^{M}w}(\\mathbf{x}_{i}^{j}).} \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+{C_{i} = \frac{1}{M}{\sum\limits_{j = 1}^{M}w}(\mathbf{x}_{i}^{j}).}
+\\
+\end{array}
+$$
 
 (8.26)
 
-当 *M* 足够大时，
+当 `M` 足够大时，
 
-$$\\begin{array}{r} {\\left. C_{i} \\right.\\sim\\frac{1}{V_{i}}{\\int_{V_{i}}w}(\\mathbf{x})d\\mathbf{x}.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+{\left. C_{i} \right.\sim\frac{1}{V_{i}}{\int_{V_{i}}w}(\mathbf{x})d\mathbf{x}.}
+\\
+\end{array}
+$$
 
 (8.27)
 
 该生成过程的其余部分与单位立方体的情况组织方式相同；见上文。
 
-### 2. 任意紧集 *Q*
+### 2. 任意紧集 `Q`
 
-在这种情况下，将集合 *Q* 置于平行六面体 *Π* = {**x**:**a**≤**x**≤**b**} 中。边的定义可以任意，但需满足 *Q* ⊂ *Π*。一种更高效的生成随机向量的方法是将集合 *Q* 置于形为平行六面体 *Π*^(\*)* 的包围盒中。这些可能性在 Figs. 8.1(a) 和 8.1(b) 中示出 (*a*—任意平行六面体 *Π*，*b*—包围盒)。显然，包围盒的构造需要预先计算极值点 (*A*, *B*, *C*, *D*)。
+在这种情况下，将集合 `Q` 置于平行六面体 `Π` = {**x**:**a**≤**x**≤**b**} 中。边的定义可以任意，但需满足 `Q` ⊂ `Π`。一种更高效的生成随机向量的方法是将集合 `Q` 置于形为平行六面体 `Π`^(\*)* 的包围盒中。这些可能性在 Figs. 8.1(a) 和 8.1(b) 中示出 (*a*—任意平行六面体 `Π`，*b*—包围盒)。显然，包围盒的构造需要预先计算极值点 (*A*, *B*, *C*, *D*)。
 
 ![Figure 8.1](img/fig8_1.jpg)
 
 Figure 8.1
 
-回想一下，PDF *w*(**x**) 在集合 *Q* 上定义。引入形如
+回想一下，PDF `w`(**x**) 在集合 `Q` 上定义。引入形如
 
-$$\\begin{array}{r} {W(\\mathbf{x}) = \\left\\{ \\begin{aligned} {w(\\mathbf{x})} & {\\text{if}\\,\\mathbf{x} \\in Q,} \\\\ 0 & {\\text{if}\\,\\mathbf{x} \\in \\Pi\\smallsetminus Q.} \\\\ \\end{aligned}~ \\right.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+{W(\mathbf{x}) = \left\{ \begin{aligned}
+{w(\mathbf{x})} & {\text{if}\,\mathbf{x} \in Q,}
+\\
+0 & {\text{if}\,\mathbf{x} \in \Pi\smallsetminus Q.}
+\\
+\end{aligned}~ \right.}
+\\
+\end{array}
+$$
 
 (8.28)
 
-的辅助 PDF。显而易见，平行六面体 Π 构成了 PDF *W*(**x**) 的定义域。我们将使用第 2 项的生成过程对 PDF *W*(**x**) 进行处理。注意 *W*(**x**) = 0 在基本平行六面体 *Π*[*i*] 上以及在集合 *Π*^(\*) ∖ *Q* 内的内部子平行六面体 *π*[*i*]^(*j*) 上。因此，由 (8.2.1) 得 *P*(**x** = *d***x**) = 0。
+的辅助 PDF。显而易见，平行六面体 Π 构成了 PDF `W`(**x**) 的定义域。我们将使用第 2 项的生成过程对 PDF `W`(**x**) 进行处理。注意 `W`(**x**) = 0 在基本平行六面体 `Π`[*i*] 上以及在集合 `Π`^(\*) ∖ *Q* 内的内部子平行六面体 `π`[*i*]^(`j`) 上。因此，由 (8.2.1) 得 `P`(**x** = *d***x**) = 0。
 
 ## 8.3 给定概率密度函数的近似
 
@@ -7837,167 +8368,227 @@ $$\\begin{array}{r} {W(\\mathbf{x}) = \\left\\{ \\begin{aligned} {w(\\mathbf{x})
 
 ### 1. 近似精度估计
 
-考虑 PDF *w*(**x**)，其中 **x** ∈ *Q* ⊂ *R*^(*n*). 集合 *Q* 是紧的，即具有非零体积 *V*[*Q*] ≠ 0。假设集合 *Q* 置于 *n*\-维平行六面体 *Π* 中。函数 *w*(**x**) 是平方可积的。
+考虑 PDF `w`(**x**)，其中 **x** ∈ `Q` ⊂ `R`^(`n`). 集合 `Q` 是紧的，即具有非零体积 `V`[`Q*] ≠ 0。假设集合 `Q` 置于 *n*\-维平行六面体 `Π` 中。函数 `w`(**x**) 是平方可积的。
 
-为了生成具有 PDF *w*(**x**) 的随机向量，将其用分段常数函数 *g*(**x**)， **x** ∈ *Π* 近似。此近似的质量由泛函
+为了生成具有 PDF `w`(**x**) 的随机向量，将其用分段常数函数 `g`(**x**)， **x** ∈ `Π` 近似。此近似的质量由泛函
 
-$$\\begin{array}{r} \\left. J(A) = \\middle| {\\int_{A}\\left( {w(\\mathbf{x}) - g(\\mathbf{x})} \\right)}d\\mathbf{x} \\middle| , \\right. \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+\left. J(A) = \middle| {\int_{A}\left( {w(\mathbf{x}) - g(\mathbf{x})} \right)}d\mathbf{x} \middle| , \right.
+\\
+\end{array}
+$$
 
 (8.29)
 
-衡量，其中 *A* 表示 *Π* 中任意集合。
+衡量，其中 `A` 表示 `Π` 中任意集合。
 
-在体积为 *V*[*Π*] 的集合 Π 上定义每个坐标步长为 $h_{k},\\, k = \\overline{1,n},$ 的均匀格网。该格网的每个元素都是边长为 *h*[*k*] 的基本平行六面体 $\\Pi_{i},\\, i = \\overline{1,N},$。不失一般性，假设
+在体积为 `V`[`Π*] 的集合 Π 上定义每个坐标步长为 $h_{k},\, k = \overline{1,n},$ 的均匀格网。该格网的每个元素都是边长为 *h*[*k*] 的基本平行六面体 $\Pi_{i},\, i = \overline{1,N},$。不失一般性，假设
 
-$$\\begin{array}{r} {N = \\frac{V_{\\Pi}}{V_{\\Pi_{i}}} = \\frac{V_{\\Pi}}{\\prod\\limits_{k = 1}^{n}h_{k}}.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+{N = \frac{V_{\Pi}}{V_{\Pi_{i}}} = \frac{V_{\Pi}}{\prod\limits_{k = 1}^{n}h_{k}}.}
+\\
+\end{array}
+$$
 
 (8.30)
 
-并且该值是整数。注意所有基本平行六面体 *Π*[*i*] 具有相同的体积。在每个集合 *Π*[*i*] 中，用常数 *B*[*i*] 替换函数 *w*(**x**) 。对所有基本平行六面体执行此操作后，得到分段常数线性逼近函数 *g*(**x**).
+并且该值是整数。注意所有基本平行六面体 `Π`[*i*] 具有相同的体积。在每个集合 `Π`[*i*] 中，用常数 `B`[*i*] 替换函数 `w`(**x**) 。对所有基本平行六面体执行此操作后，得到分段常数线性逼近函数 `g`(**x**).
 
-考虑 *Π* 中的某一集合 *A* ∈ *Π*。它被基本平行六面体的并集覆盖，即
+考虑 `Π` 中的某一集合 `A` ∈ `Π`。它被基本平行六面体的并集覆盖，即
 
-$$\\begin{array}{r} {A = {\\underset{i = 1}{\\overset{N}{\\cup}}\\Pi_{i}}.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+{A = {\underset{i = 1}{\overset{N}{\cup}}\Pi_{i}}.}
+\\
+\end{array}
+$$
 
 (8.31)
 
 然后，利用 Cauchy–Bunyakovsky–Schwarz 不等式，写出上界
 
-$$\\begin{array}{r} {J(A) \\leq \\sqrt{{\\int_{A}\\left( {w(\\mathbf{x}) - g(\\mathbf{x})} \\right)^{2}}d\\mathbf{x}{\\int_{A}\\Lambda}(A)d\\mathbf{x}}.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+{J(A) \leq \sqrt{{\int_{A}\left( {w(\mathbf{x}) - g(\mathbf{x})} \right)^{2}}d\mathbf{x}{\int_{A}\Lambda}(A)d\mathbf{x}}.}
+\\
+\end{array}
+$$
 
 (8.32)
 
-这里 *Λ*(*A*) 表示集合 *A* 的示性函数。由 (8.32) 可得
+这里 `Λ`(*A*) 表示集合 *A* 的示性函数。由 (8.32) 可得
 
-$$\\begin{array}{r} {{\\int_{A}\\left( {w(\\mathbf{x}) - g(\\mathbf{x})} \\right)^{2}}d\\mathbf{x} \\leq {\\sum\\limits_{i = 1}^{N}{\\int_{\\Pi_{i}}\\left( {w(\\mathbf{x}) - B_{i}} \\right)^{2}}}d\\mathbf{x}.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+{{\int_{A}\left( {w(\mathbf{x}) - g(\mathbf{x})} \right)^{2}}d\mathbf{x} \leq {\sum\limits_{i = 1}^{N}{\int_{\Pi_{i}}\left( {w(\mathbf{x}) - B_{i}} \right)^{2}}}d\mathbf{x}.}
+\\
+\end{array}
+$$
 
 (8.33)
 
 因此，
 
-$$\\begin{array}{r} {\\sup\\limits_{A}J(A) \\leq {\\sum\\limits_{i = 1}^{N}{\\int_{\\Pi_{i}}\\left( {w(\\mathbf{x}) - B_{i}} \\right)^{2}}}d\\mathbf{x}.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+{\sup\limits_{A}J(A) \leq {\sum\limits_{i = 1}^{N}{\int_{\Pi_{i}}\left( {w(\mathbf{x}) - B_{i}} \right)^{2}}}d\mathbf{x}.}
+\\
+\end{array}
+$$
 
 (8.34)
 
-作为结果，常数 *B*[1], …, *B*[*N*] 的最佳估计可通过最小化泛函
+作为结果，常数 `B`[1], …, `B`[*N*] 的最佳估计可通过最小化泛函
 
-
-
-
-
-$$\\begin{array}{r} \\left. {\\sum\\limits\_{i = 1}^{N}{\\int\_{\\Pi\_{i}}\\left( {w(\\mathbf{x}) - B\_{i}} \\right)^{2}}}d\\mathbf{x}\\Rightarrow\\min\_{B\_{1},\\ldots,B\_{N}} \\right. \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+\left. {\sum\limits_{i = 1}^{N}{\int_{\Pi_{i}}\left( {w(\mathbf{x}) - B_{i}} \right)^{2}}}d\mathbf{x}\Rightarrow\min_{B_{1},\ldots,B_{N}} \right.
+\\
+\end{array}
+$$
 
 (8.35)
 
 subject to the condition
 
-$$\\begin{array}{r} {V\_{\\Pi\_{i}}{\\sum\\limits\_{i = 1}^{N}B\_{i}} = 1.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+{V_{\Pi_{i}}{\sum\limits_{i = 1}^{N}B_{i}} = 1.}
+\\
+\end{array}
+$$
 
 (8.36)
 
 This equality expresses the normalization condition of the PDF. The solution of the minimization problem is given by
 
-$$\\begin{array}{r} {B\_{i}^{\*} = \\frac{1}{V\_{\\Pi\_{i}}}{\\int\_{\\Pi\_{i}}w}(\\mathbf{x})d\\mathbf{x}.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+{B_{i}^{*} = \frac{1}{V_{\Pi_{i}}}{\int_{\Pi_{i}}w}(\mathbf{x})d\mathbf{x}.}
+\\
+\end{array}
+$$
 
 (8.37)
 
-Thus, the described approximation procedure yields the optimal piecewise constant PDF *g*^(\*)(**x**) with the approximation accuracy
+Thus, the described approximation procedure yields the optimal piecewise constant PDF `g`^(\*)(**x**) with the approximation accuracy
 
-$$\\begin{array}{r} {\\sup\\limits\_{A}J(A) \\leq \\sqrt{V\_{\\Pi}}\\sqrt{{\\sum\\limits\_{i = 1}^{N}{\\int\_{\\Pi\_{i}}\\left( {w(\\mathbf{x}) - B\_{i}^{\*}} \\right)^{2}}}d\\mathbf{x}} \\leq \\delta.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+{\sup\limits_{A}J(A) \leq \sqrt{V_{\Pi}}\sqrt{{\sum\limits_{i = 1}^{N}{\int_{\Pi_{i}}\left( {w(\mathbf{x}) - B_{i}^{*}} \right)^{2}}}d\mathbf{x}} \leq \delta.}
+\\
+\end{array}
+$$
 
 (8.38)
 
-## 2. Optimization of lattice step (estimation of Lipschitz constant)
+### 2. Optimization of lattice step (estimation of Lipschitz constant)
 
-The procedure suggested below employs an estimate of the Lipschitz constant for the function *w*(**x**), which is assumed to be continuous. We have *B*[*i*]^(\*) = *w*(**x**[*i*]^(\*)), where **x**[*i*]^(\*) ∈ *Π*[*i*] but the point **x**[*i*]^(\*) is unknown. Let the function *w*(**x**) satisfy the Lipschitz condition with a constant *L*, i.e.,
+The procedure suggested below employs an estimate of the Lipschitz constant for the function `w`(**x**), which is assumed to be continuous. We have `B`[*i*]^(\*) = `w`(**x**[*i*]^(\*)), where **x**[*i*]^(\*) ∈ `Π`[*i*] but the point **x**[*i*]^(\*) is unknown. Let the function `w`(**x**) satisfy the Lipschitz condition with a constant `L`, i.e.,
 
-$$\\begin{array}{r} {\\max\_{\\mathbf{x} \\in \\Pi\_{i}}\\left( {w(\\mathbf{x}) - B\_{i}^{\*}} \\right)^{2} \\leq L^{2}\\|\\mathbf{x} - \\mathbf{x}\_{i}^{\*}\\|.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+{\max_{\mathbf{x} \in \Pi_{i}}\left( {w(\mathbf{x}) - B_{i}^{*}} \right)^{2} \leq L^{2}\|\mathbf{x} - \mathbf{x}_{i}^{*}\|.}
+\\
+\end{array}
+$$
 
 (8.39)
 
 The integral form of this inequality on the intervals \[0, *h*[1]\] × \[0, *h*[2]\] × ⋯ × \[0, *h*[*n*]\] can be written as
 
-$$\\begin{array}{r} {{\\int\_{|pi\_{i}}\\left( {w(\\mathbf{x}) - B\_{i}^{\*}} \\right)^{2}}d\\mathbf{x} \\leq L^{2}{\\int\_{0}^{h\_{1}}\\cdots}{\\int\_{0}^{h\_{n}}\\left( {x\_{1}^{2} + \\cdots + x\_{n}^{2}} \\right)}dx\_{1}\\cdots dx\_{n} =} \\\\ {L^{2}\\left( {\\frac{h\_{1}^{3}}{3}h\_{2}h\_{3}\\cdots h\_{n} + \\frac{h\_{2}^{3}}{3}h\_{1}h\_{3}\\cdots h\_{n} + \\cdots + \\frac{h\_{n}^{3}}{3}h\_{1}h\_{2}\\cdots h\_{n - 1}} \\right) = L^{2}\\varrho.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+{{\int_{|pi_{i}}\left( {w(\mathbf{x}) - B_{i}^{*}} \right)^{2}}d\mathbf{x} \leq L^{2}{\int_{0}^{h_{1}}\cdots}{\int_{0}^{h_{n}}\left( {x_{1}^{2} + \cdots + x_{n}^{2}} \right)}dx_{1}\cdots dx_{n} =}
+\\
+{L^{2}\left( {\frac{h_{1}^{3}}{3}h_{2}h_{3}\cdots h_{n} + \frac{h_{2}^{3}}{3}h_{1}h_{3}\cdots h_{n} + \cdots + \frac{h_{n}^{3}}{3}h_{1}h_{2}\cdots h_{n - 1}} \right) = L^{2}\varrho.}
+\\
+\end{array}
+$$
 
 (8.40)
 
-The variable *ϱ* is independent of the index *i* of an elementary parallelepiped because all of them have the same sizes. Taking into account (8.40), transform inequality (8.34) into
 
-$$\\begin{array}{r} {\\sup J(A) \\leq L\\sqrt{V\_{\\Pi}{\\sum\\limits\_{i = 1}^{N}\\varrho}} = L\\sqrt{V\_{\\Pi}N\\varrho}.} \\\\ \\end{array}$$  
+
+The variable `ϱ` is independent of the index `i` of an elementary parallelepiped because all of them have the same sizes. Taking into account (8.40), transform inequality (8.34) into
+
+$$\begin{array}{r} {\sup J(A) \leq L\sqrt{V_{\Pi}\sum\limits_{i = 1}^{N}\varrho}} = L\sqrt{V_{\Pi}N\varrho}.} \\ \\ \end{array}$$
 
 (8.41)
 
 Then
 
-$$\\begin{array}{r} {V\_{\\Pi} = NV\_{\\Pi\_{i}} = N{\\prod\\limits\_{j = 1}^{n}h\_{j}}.} \\\\ \\end{array}$$  
+$$\begin{array}{r} {V_{\Pi} = NV_{\Pi_{i}} = N\prod\limits_{j = 1}^{n}h_{j}.} \\ \\ \end{array}$$
 
 (8.42)
 
 Hence, using (8.40), the right-hand side of inequality (8.41) can be reduced to
 
-$$\\begin{array}{r} {L\\sqrt{V\_{\\Pi}N\\varrho} = L\\sqrt{V\_{\\Pi}}N\\varrho = L\\sqrt{V\_{\\Pi}^{2}}\\frac{\\varrho}{\\prod\\limits\_{j = 1}^{n}h\_{j}} = \\frac{L}{\\sqrt{3}}V\_{\\Pi}\\sqrt{\\sum\\limits\_{j = 1}^{n}h\_{j}^{2}}.} \\\\ \\end{array}$$  
+$$\begin{array}{r} {L\sqrt{V_{\Pi}N\varrho} = L\sqrt{V_{\Pi}}N\varrho = L\sqrt{V_{\Pi}^{2}}\frac{\varrho}{\prod\limits_{j = 1}^{n}h_{j}} = \frac{L}{\sqrt{3}}V_{\Pi}\sqrt{\sum\limits_{j = 1}^{n}h_{j}^{2}}.} \\ \\ \end{array}$$
 
 (8.43)
 
-Denote *h* = max[1 ≤ *j* ≤ *n*]*h*[*j*]. Then it follows from (8.41, 8.43) that
+Denote `h` = max[1 ≤ `j` ≤ `n`]`h`[`j`]. Then it follows from (8.41, 8.43) that
 
-$$\\begin{array}{r} {\\sup J(A) \\leq L\\sqrt{n/3}hV\_{\\Pi}.} \\\\ \\end{array}$$  
+$$\begin{array}{r} {\sup J(A) \leq L\sqrt{n/3}hV_{\Pi}.} \\ \\ \end{array}$$
 
 (8.44)
 
-For a given approximation accuracy *δ* of the PDF *w*(**x**), the corresponding maximum lattice step is
+For a given approximation accuracy `δ` of the PDF `w`(**x**), the corresponding maximum lattice step is
 
-$$\\begin{array}{r} {h = \\frac{\\delta}{L\\sqrt{\\frac{n}{3}}V\_{\\Pi}}.} \\\\ \\end{array}$$  
+$$\begin{array}{r} {h = \frac{\delta}{L\sqrt{\frac{n}{3}}V_{\Pi}}.} \\ \\ \end{array}$$
 
 (8.45)
 
-The maximum step for the longest edge of the parallelepiped allows us to find the number *N* of points and, using it, the steps *h*[*j*] for all other coordinates.
+The maximum step for the longest edge of the parallelepiped allows us to find the number `N` of points and, using it, the steps `h`[`j`] for all other coordinates.
 
 ## 3. Rough estimate of step
 
-The estimation method of the Lipschitz constant *L* and the maximum step *h* for elementary parallelepipeds design rests on the assumption that the integral in (8.37) can be calculated analytically (without errors). Unfortunately, this is not always the case. A given PDF often has a complex structure, which requires numerical calculation of the integral in formula (8.37). Such calculations are performed using an inner lattice with a step *η*[*i*] that is considerably smaller than the step *h*[*i*] of the main lattice.
+The estimation method of the Lipschitz constant `L` and the maximum step `h` for elementary parallelepipeds design rests on the assumption that the integral in (8.37) can be calculated analytically (without errors). Unfortunately, this is not always the case. A given PDF often has a complex structure, which requires numerical calculation of the integral in formula (8.37). Such calculations are performed using an inner lattice with a step `η`[`i`] that is considerably smaller than the step `h`[`i`] of the main lattice.
 
-The step *η*[*i*] can be chosen using a simple technique as follows. First, specify a certain step *η*[*i*]^(*j*), and calculate the number *M*[*i*]^(*j*) = *l*[*i*]/*η*[*i*]^(*j*) of points in the integral sum *S*[*i*]^(*j*). Then repeat these operations, and check the variability of the resulting integral sums. If |*S*[*i*]^(*j*)−*S*[*i*]^((*j* − 1))|≤*δ*, where *δ* is a given accuracy, then stop further partition of the inner lattice. The integral can be estimated by
+The step `η`[`i`] can be chosen using a simple technique as follows. First, specify a certain step `η`[`i`]^(j), and calculate the number `M`[`i`]^(j) = `l`[`i`]/`η`[`i`]^(j) of points in the integral sum `S`[`i`]^(j). Then repeat these operations, and check the variability of the resulting integral sums. If |`S`[`i`]^(j)−`S`[`i`]^(j − 1)|≤`δ`, where `δ` is a given accuracy, then stop further partition of the inner lattice. The integral can be estimated by
 
-$$\\begin{array}{r} {{\\int\_{\\Pi\_{i}}\\left( {w(\\mathbf{x}) - {\\hat{B}}\_{i}^{\*}} \\right)^{2}}d\\mathbf{x} \\leq {\\hat{J}}\_{i} = S\_{i}^{j^{\*}} + \\delta/2.} \\\\ \\end{array}$$  
+$$\begin{array}{r} {{\int_{\Pi_{i}}\left( {w(\mathbf{x}) - {\hat{B}}_{i}^{*}} \right)^{2}}d\mathbf{x} \leq {\hat{J}}_{i} = S_{i}^{j^{*}} + \delta/2.} \\ \\ \end{array}$$
 
 (8.46)
 
-Here *j*^(\*) denotes the index of the inner lattice for which the calculations are stopped. Then, according to (8.38),
+Here `j`^(∗) denotes the index of the inner lattice for which the calculations are stopped. Then, according to (8.38),
 
-$$\\begin{array}{r} {\\sup\\limits\_{A}J(A) \\leq \\sqrt{V\_{\\Pi}}\\sqrt{{\\sum\\limits\_{i = 1}^{N}{\\hat{J}}\_{i}} + N\\delta/2}.} \\\\ \\end{array}$$  
+$$\begin{array}{r} {\sup\limits_{A}J(A) \leq \sqrt{V_{\Pi}}\sqrt{{\sum\limits_{i = 1}^{N}{\hat{J}}_{i}} + N\delta/2}.} \\ \\ \end{array}$$
 
 (8.47)
 
-The constants *B̂*[1]^(\*), …, *B̂*[*N*]^(\*) and the estimates *Ĵ*[1], …, *Ĵ*[*N*] are obtained numerically.
+The constants `B̂`[1]^(∗), …, `B̂`[`N`]^(∗) and the estimates `Ĵ`[1], …, `Ĵ`[`N`] are obtained numerically.
 
-Because all the calculations have a rough character, it makes sense to consider an accuracy estimate based on another metric. Let $A \\subseteq {\\underset{i = 1}{\\overset{N}{\\cup}}Q\_{i}}.$ Since *V*[*Q*[*i*]] is independent of *i*,
+Because all the calculations have a rough character, it makes sense to consider an accuracy estimate based on another metric. Let $A \subseteq {\underset{i = 1}{\overset{N}{\cup}}Q_{i}}.$ Since `V`[`Q`[`i`]] is independent of `i`,
 
-$$\\begin{array}{r} \\left. \\sup\\limits\_{A}J(A) \\leq V\_{Q}{\\sum\\limits\_{i = 1}^{N}\\max\_{\\mathbf{x} \\in Q\_{i}}} \\middle| w(\\mathbf{x} - C\_{i}) \\middle| . \\right. \\\\ \\end{array}$$  
+$$\begin{array}{r} \left. \sup\limits_{A}J(A) \leq V_{Q}{\sum\limits_{i = 1}^{N}\max_{\mathbf{x} \in Q_{i}}} \middle| w(\mathbf{x} - C_{i}) \middle| . \right. \\ \\ \end{array}$$
 
 (8.48)
 
-The optimal constants $C\_{i},i = \\overline{1,N},$ are yielded by solving the optimization problem
+The optimal constants $C_{i},i = \overline{1,N},$ are yielded by solving the optimization problem
 
-$$\\begin{array}{r} \\left. {\\sum\\limits\_{i = 1}^{N}\\max\_{\\mathbf{x} \\in Q\_{i}}} \\middle| w(\\mathbf{x} - C\_{i}) \\middle| \\Rightarrow\\max\_{C\_{1},\\ldots,C\_{N}}. \\right. \\\\ \\end{array}$$  
+$$\begin{array}{r} \left. {\sum\limits_{i = 1}^{N}\max_{\mathbf{x} \in Q_{i}}} \middle| w(\mathbf{x} - C_{i}) \middle| \Rightarrow\max_{C_{1},\ldots,C_{N}}. \right. \\ \\ \end{array}$$
 
 (8.49)
 
 The solution has the form
 
-$$\\begin{array}{r} {{\\widetilde{C}}\_{i} = \\frac{\\max\_{\\mathbf{x} \\in Q\_{i}}w(\\mathbf{x}) + \\min\_{\\mathbf{x} \\in Q\_{i}}w(\\mathbf{x})}{2}.} \\\\ \\end{array}$$  
+$$\begin{array}{r} {{\widetilde{C}}_{i} = \frac{\max_{\mathbf{x} \in Q_{i}}w(\mathbf{x}) + \min_{\mathbf{x} \in Q_{i}}w(\mathbf{x})}{2}.} \\ \\ \end{array}$$
 
 (8.50)
 
 Recall that these constants are used to construct an approximating function for the PDF. Hence, they must be normalized in the following way:
 
-$$\\begin{array}{r} {C\_{i}^{\*} = \\frac{{\\widetilde{C}}\_{i}}{V\_{Q}{\\sum\\limits\_{i = 1}^{N}{\\widetilde{C}}\_{i}}}.} \\\\ \\end{array}$$  
+$$\begin{array}{r} {C_{i}^{*} = \frac{{\widetilde{C}}_{i}}{V_{Q}{\sum\limits_{i = 1}^{N}{\widetilde{C}}_{i}}}.} \\ \\ \end{array}$$
 
 (8.51)
 
 In the final analysis, the error can be estimated as
 
-$$\\begin{array}{r} \\left. \\sup\\limits\_{A}J(A) \\leq V\_{Q}{\\sum\\limits\_{i = 1}^{N}\\max\_{\\mathbf{x} \\in Q\_{i}}} \\middle| w(\\mathbf{x} - C\_{i}^{\*}) \\middle| . \\right. \\\\ \\end{array}$$  
+$$\begin{array}{r} \left. \sup\limits_{A}J(A) \leq V_{Q}{\sum\limits_{i = 1}^{N}\max_{\mathbf{x} \in Q_{i}}} \middle| w(\mathbf{x} - C_{i}^{*}) \middle| . \right. \\ \\ \end{array}$$
 
 (8.52)
 
@@ -8008,10 +8599,6 @@ Consequently, we have derived two estimates for the approximation error, (8.47) 
 DOI: [10.1201/9781003306566-9](https://doi.org/10.1201/9781003306566-9)
 
 By now the computer systems of various performance levels have evolved towards a heterogeneous structure that is characterized by an availability of computing devices of different types. A standard system includes a universal multi-core processor in combination with a massive-parallel architecture accelerator (also called a computational processor or a coprocessor). An overwhelming majority of modern high-performance systems is based on the concept of horizontal scaling, integrating thousands of heterogeneous computation modules within a uniform organization.
-
-
-
-
 
 计算模块的异构架构极大地增加了计算机系统高效利用的复杂性，这通常被理解为所有计算设备的几乎 100% 负载。这里的主要困难在于架构特性，以及在许多情况下，针对不同类型计算设备可用的应用程序编程接口（`API`）存在显著差异。对于大规模并行加速器，前者因素导致了需要并行数据处理并使用相应的算法。后者因素决定了实现不同编程模型的软件工具在开发和集成方面具有很高的复杂性。
 
@@ -8025,13 +8612,13 @@ By now the computer systems of various performance levels have evolved towards a
 
 基于冯·诺依曼架构的当代计算机系统可以根据处理器数量和类型、内存容量和结构以及加速器（协处理器）的存在而具有不同的配置。这些系统可以使用内存的逻辑结构进行分类，该结构定义了由处理器执行的程序代码的内存访问规则。这种方法区分了两类系统，即具有共享内存和分布式内存的系统。当然，这种分类存在一定的缺点，但为系统导向算法的开发和分析提供了方便且高效的计算机系统表示。
 
-在此分类中，处理器访问的内存地址空间要么是统一的，要么是独立的。这一特性决定了利用计算机系统资源适当的*编程模型*。
+在此分类中，处理器访问的内存地址空间要么是统一的，要么是独立的。这一特性决定了利用计算机系统资源适当的`编程模型`。
 
 请注意，所研究的分类并非唯一。存在允许用户将物理上分布式内存的计算机系统视为具有统一地址空间的系统的技术。相反，具有分布式内存的系统可以在具有共享内存的系统上进行仿真。
 
-到目前为止，在这些类别中已广泛使用两种标准编程模型，即基于*共享内存*的模型和基于*消息传递*的模型。前者模型具有统一地址空间的优势，因为它直接使用共享内存进行处理器之间的数据传输。后者模型包含数据阻塞机制，数据块以消息的形式发送到其他处理器。目前，这些机制的详细组织并不那么重要：请注意，消息传输比直接内存访问操作更慢。这一特性必须在算法开发过程中予以考虑。
+到目前为止，在这些类别中已广泛使用两种标准编程模型，即基于`共享内存`的模型和基于`消息传递`的模型。前者模型具有统一地址空间的优势，因为它直接使用共享内存进行处理器之间的数据传输。后者模型包含数据阻塞机制，数据块以消息的形式发送到其他处理器。目前，这些机制的详细组织并不那么重要：请注意，消息传输比直接内存访问操作更慢。这一特性必须在算法开发过程中予以考虑。
 
-首先，计算机系统的进一步发展旨在减少解决现有问题所需的时间，或提出和解决更大规模的新问题（或当前问题）。历史上，计算机性能的提升使用了两种方法，最终形成了*垂直*和*水平扩展*的概念。垂直扩展是通过提高单个计算模块的性能来实现的，而水平扩展则是通过增加计算模块的数量来实现的。
+首先，计算机系统的进一步发展旨在减少解决现有问题所需的时间，或提出和解决更大规模的新问题（或当前问题）。历史上，计算机性能的提升使用了两种方法，最终形成了`垂直`和`水平扩展`的概念。垂直扩展是通过提高单个计算模块的性能来实现的，而水平扩展则是通过增加计算模块的数量来实现的。
 
 通常，计算模块代表具有共享内存的单处理器或多处理器系统，即具有统一地址空间的计算机系统，可被任何处理器访问。这种一般描述涵盖了常见的单处理器工作站，也涵盖了相当大的多处理器计算机系统。
 
@@ -8047,19 +8634,17 @@ By now the computer systems of various performance levels have evolved towards a
 
 Figure 9.1
 
-底层负责硬件支持（*硬件层*）；根据冯·诺依曼架构，该层可以用指令处理节点（处理器）和用于指令和数据的存储内存来描述。当然，实际系统具有更复杂的组织，但此简单图表足以满足我们的详细程度。第二层称为*系统层*，形成系统软件，用于用户不考虑其功能的情况下对所有硬件工具进行抽象操作。最后，用户（或应用软件）占据架构的最高层级，这被称为*用户层*。
+底层负责硬件支持（`硬件层`）；根据冯·诺依曼架构，该层可以用指令处理节点（处理器）和用于指令和数据的存储内存来描述。当然，实际系统具有更复杂的组织，但此简单图表足以满足我们的详细程度。第二层称为`系统层`，形成系统软件，用于用户不考虑其功能的情况下对所有硬件工具进行抽象操作。最后，用户（或应用软件）占据架构的最高层级，这被称为`用户层`。
 
-现在让我们更深入地讨论该架构的元素，如 Fig. 9.2 所示。由处理器执行的指令具有一定的组织结构并按顺序到来，从而形成*执行线程*。这是计算机系统硬件级并行化的主要概念 [45]。
+现在让我们更深入地讨论该架构的元素，如 Fig. 9.2 所示。由处理器执行的指令具有一定的组织结构并按顺序到来，从而形成`执行线程`。这是计算机系统硬件级并行化的主要概念 [45]。
 
 ![Figure 9.2](img/fig9_2.jpg)
 
 Figure 9.2
 
-
-
-
-
 并行是通过同时执行多个命令或线程来实现的。这里一种广泛采用的方法就是所谓的 `simultaneous multi-threading`（`SMT`），尤其是英特尔开发的超线程技术。这种方法允许在单个处理器（`processor core`）上执行多个线程，从而实现并非物理而是逻辑上的并行化。尽管如此，性能仍可获得相当大的提升，因为在大多数程序中，执行过程也包括潜在操作（与内存和存储设备的工作）。等待其完成时，处理器可以执行来自另一个线程的多个命令。如果存在许多可用的处理器或核心（在大规模计算机系统术语中称为 `processing elements`（`PEs`）），则可以为线程组织真正的并行。
+
+
 
 用户通过相应的软件工具提供的应用程序编程接口（`API`）来管理硬件工具（就我们而言，是处理器线程）。因此，对于用户而言，处理器线程作为物理对象以不依赖硬件支持的逻辑对象的形式呈现。这些对象实现了计算机系统用户创建的程序代码。此类对象的主要对象是操作系统的线程和进程。
 
@@ -8091,10 +8676,6 @@ Figure 9.2
 
 假设计算机系统的用户层提供了一定数量的此类虚拟线程，并且在共享内存模型内为它们提供并行执行的可能性，从而定义了虚拟 `multithread execution environment`。根据任务（算法）的具体情况，这种面向并行的计算环境的一般表示有助于在基本元素上更有效地分析算法的不同特征（在一方面），并有助于用户层到系统层的有效映射（在另一方面）。
 
-
-
-
-
 有趣的是，如今类似的思路在不同的技术中盛行，因此抽象被“绑定”到相应的实现对象。例如，请注意众所周知的程序平台，如 `Java`、`MPI`、`OpenMP` 等。在这里，可以视为所考虑的虚拟线程的抽象，与实现它们的程序对象具有唯一对应关系。特别是，这适用于 `Java` 和 `OpenMP` 线程以及 `MPI` 进程。所建议的方法由于其抽象性，提供了具有各种实现能力的必要且充分的工具。
 
 这种方法可以轻松扩展，垂直扩展（随着线程中计算量的增加，导致计算粒度更高）以及水平扩展（随着线程数量的增加）。此外，通过考虑多个虚拟执行环境，可以对具有不同内存结构的计算机系统进行建模，例如分布式内存。
@@ -8110,6 +8691,7 @@ Figure 9.2
 可以以几种模式与加速器工作，这些模式具有由具体设备或设备系列的实现所决定的逻辑和物理方面。例如，众所周知的大规模并行架构 `MIC` [7] 或 `CUDA` [6]，按如下方式将处理器用作卸载模式：当前计算任务被“卸载”到处理器并在其上执行，然后结果被发送回调用程序。这种组织方式允许设备从调用程序的不同线程异步运行。
 
 对于设计为具有异构架构的计算模块集合的系统，存在三个并行实现层级（见 图 9.4），即
+
 * 计算模块层级，由操作系统进程在系统层实现；
 * 中央处理器层级，由处理器线程实现；
 * 加速器层级，由加速器线程实现。
@@ -8129,6 +8711,7 @@ Figure 9.2
 信息技术实现的结果显然与计算机系统主题领域相关，代表该主题领域的产物。因此，旨在解决特定问题的 信息技术可以被视为对应主题领域的工具，在一方面补充基本工具，在另一方面为更高层技术形成中间层。
 
 机器学习过程（见 第 1 章 和 图 1.3）可以描述为具有以下阶段的抽象技术：
+
 1. 参数化模型开发 (`PM`)；
 2. 参数估计 (`PE`)；
 3. 模型测试 (`MT`)；
@@ -8150,17 +8733,13 @@ Figure 9.2
 
 图 9.6
 
-**1. 模型开发 (`MD`)**
+### 1. 模型开发 (`MD`)
 
 该模块根据对建模现象的现有认识构建参数化模型。如前所述，为了成功解决实际问题，可以勾勒出模型类型的狭窄范围。该模块输出已开发的模型 (`M`)。
 
-**2. 模型学习 (`ML`)**
+### 2. 模型学习 (`ML`)
 
 模型学习模块接收模型 `M` 作为其输入数据。该模块的主要任务是估计模型参数（模块 `PE`）并测试模型本身（模块 `MT`）。两个模块都使用数据 (`D`) 操作，这些数据在技术实现阶段以计算机形式表示，可以分为学习数据 (`LD`) 和测试数据 (`TD`)。该模块输出最优 PDFs (`F`)，即模型参数的 PDFs `F[*P*]` 和测量噪声的 PDFs `F[*Q*]`。
-
-
-
-
 
 `ML` 块由于其任务而“负载”最重，首先是求解优化问题。我们已在本书前几章中讨论了该问题的固有困难。因此，`ML` 块必须包含高效的全局优化算法或能够访问这些算法。
 
@@ -8210,10 +8789,6 @@ Figure 9.8
 
 如前所述，实现 `RML` 技术的主要困难是为随机化模型的熵最优 `PDFs` 求解全局优化问题。考虑 Chapter 6 中所述的全局优化方法的一些一般实现方面。
 
-
-
-
-
 数据包迭代方法需要大量的计算。然而，它们是相似的并且涉及非常多的*数据元素*，对于这些数据元素，需要计算特定函数的值。因此，*数据并行*在这里似乎很自然。我们的想法是根据 `UMA` 为每个数据元素使用虚拟线程来实现计算。
 
 算法每个阶段中的数据元素通过不同的对象实现。在生成阶段，它们具有随机点的序列号（索引）；在过滤和选择阶段，数据元素就是这些点本身（见 Fig. 9.9）。
@@ -8242,10 +8817,10 @@ DOI: [10.1201/9781003306566-10](https://doi.org/10.1201/9781003306566-10)
 
 分类算法可能因其对学习样本的处理、分类错误的表示、收敛速度等而有所不同。在本节中，我们将概述最广泛的分类算法，即
 
-*   决策树 (`DT`)；
-*   `k`-最近邻 (`kNN`)；
-*   朴素贝叶斯；
-*   线性分类器（逻辑回归、支持向量机等）。
+* 决策树 (`DT`)；
+* `k`-最近邻 (`kNN`)；
+* 朴素贝叶斯；
+* 线性分类器（逻辑回归、支持向量机等）。
 
 感兴趣的读者可以在机器学习的经典书籍中找到有关这些和其他分类方法的更多信息，例如 \10, [118, 180, 194\] 为俄文和 \[21, 57\] 为英文。
 
@@ -8256,6 +8831,8 @@ DOI: [10.1201/9781003306566-10](https://doi.org/10.1201/9781003306566-10)
 决策树的概念由 Breiman 及其同事开创 \[23\]。随着时间的推移，原算法不断发展和修改。如今，决策树是世界上最流行的分类方法，其修改版 `C4.5` 在十大数据分析算法中排名第一 \[193\]。
 
 对于决策树设计，主要困难是选择适当的分支准则，即应考虑属性的顺序。由于最优决策树设计是一个 `NP-complete` 问题 \[75\]，分支准则通常基于“贪婪”启发式，例如信息增益 \[117\] 和基尼不纯度 \[23, 57\]。
+
+
 
 决策树具有清晰的含义和结果的简单解释。此外，它们不需要特殊的数据准备，并且可以在没有辅助工具的情况下应用于大量数据。然而，决策树设计存在相当大的缺点如下。
 
@@ -8270,10 +8847,6 @@ DOI: [10.1201/9781003306566-10](https://doi.org/10.1201/9781003306566-10)
 与其他度量分类器一样，`k`-最近邻基于紧凑性假设，该假设声称在适当选择的相似性度量下，相似的对象更倾向于同一类而不是不同类。也就是说，类在对象空间中形成紧凑的局部子集 \[14\]。
 
 在应用中，对象之间的距离通常定义为欧几里得距离，这对于数值属性具有高效率。另一方面，对于具有分类的（特别是二元的）属性的问题，`k`-最近邻可能比其他分类算法，例如决策树 \[33\] 的结果更差。
-
-
-
-
 
 限制该分类器适用性的另一个重要因素与维度灾难有关 [19]。如果一个问题具有高维，并且对象之间的距离被计算为所有属性上偏差的总和，那么根据大数定律，这些和值以高概率取接近的值。换句话说，在多维空间中所有对象几乎彼此之间的距离相同，这使得选择最优的邻居数 `k` 变得复杂。
 
@@ -8415,11 +8988,8 @@ $$
 
 在从每个对象的属性向量中减去对应类别的中心向量条件下使用 [52]。
 
-
-
-
-
 ### 单层感知器
+
 `Single-Layer Perceptron` 是由 sigmoid 函数近似得到的
 
 $$
@@ -8431,6 +9001,7 @@ $$
 常用于神经网络，但需要额外的启发式方法以避免重新学习 \[122, 187\]。
 
 ### 逻辑回归
+
 `Logistic Regression` 是如下形式的对数近似
 
 $$
@@ -8442,6 +9013,7 @@ $$
 允许计算属于不同类别的概率。在类别似然函数上做出相当强的假设下，使用该损失函数的经验风险最小化等价于似然最大化 \[73, 187\]。
 
 ### 支持向量机
+
 `Support Vector Machines` 是如下形式的分段线性近似
 
 $$
@@ -8453,6 +9025,7 @@ $$
 与二次正则化一起使用。相应的优化问题由特殊的二次规划方法求解 \[57, 180\]。
 
 ### 指数近似
+
 `Exponential Approximation` 由下式给出
 
 $$
@@ -8521,10 +9094,6 @@ $$
 
 两个子集合中的对象根据其所属的适当类别进行标记：如果对象 `e`[*l*] 或 `t`[*k*] 是第一类（第二类）的成员，则它具有标签 1（标签 0，分别）。因此，学习子集合由答案向量 `y` = {*y*[1],…,*y*[*h*]} 刻画，由一和零组成；测试子集合由答案向量 `z` = {*z*[1],…,*z*[*r*]} 刻画。这些向量中元素的索引对应于学习和测试样本中对象的索引。
 
-
-
-
-
 分类器学习问题是设计一个算法 `a`:ℰ→`y`，该算法基于学习样本，利用对象的属性描述来恢复对象的类别。
 
 ### 10.3.2 学习阶段
@@ -8554,6 +9123,8 @@ $$
 ![Figure 10.1: Structure of single-layer neural network.
 
 Figure 10.1: Structure of single-layer neural network.
+
+
 
 在随机化模型 (10.16, 10.17) 中，参数 **a** = {*a*[1],…,*a*[(*n* + 2)]} 为区间类型，其概率特性由集合 𝒜 上的联合概率密度函数 `P`(**a**) 刻画，即
 
@@ -8617,15 +9188,15 @@ $$
 
 (10.24)
 
-拉格朗日乘子由平衡约束 (10.22) 计算得出。这里一种可能的方法是采用 *L*²\-norm 最小化方程 (10.22) 的一般残差函数。
+拉格朗日乘子由平衡约束 (10.22) 计算得出。这里一种可能的方法是采用 `L`²\-norm 最小化方程 (10.22) 的一般残差函数。
 
 ### 10.3.3 测试阶段
 
-该阶段利用测试子集 𝒯，其对象由答案向量 **z** = {*z*[1],…,*z*[*r*]} 刻画，具有已知的分类（其属于第一类或第二类）。向量 **z** 将用于测试过程的质量评估。后者本身涉及子集 𝒯 以及学习阶段得到的决策规则模型。
+该阶段利用测试子集 `𝒯`，其对象由答案向量 **z** = {*z*[1],…,*z*[*r*]} 刻画，具有已知的分类（其属于第一类或第二类）。向量 **z** 将用于测试过程的质量评估。后者本身涉及子集 `𝒯` 以及学习阶段得到的决策规则模型。
 
-需要根据公式 (10.23, 10.24) 测试具有模型参数熵最优 PDF 的随机化决策规则 (10.16, 10.17)。该过程执行大小为 *N* 的蒙特卡洛模拟序列，在每次模拟中生成一个服从熵最优 PDF `P*`(**a**) 的随机向量 **a**。
+需要根据公式 (10.23, 10.24) 测试具有模型参数熵最优 PDF 的随机化决策规则 (10.16, 10.17)。该过程执行大小为 `N` 的蒙特卡洛模拟序列，在每次模拟中生成一个服从熵最优 PDF `P*`(**a**) 的随机向量 **a**。
 
-假设作为此类模拟的结果，测试子集中第一个对象被分配 *N*[1] 次到第一类和 *N* − *N*[1] 次到第二类，…，第 *k* 个对象被分配 *N*[*k*] 次到第一类和 *N* − *N*[*k*] 次到第二类，依此类推。在足够多的模拟次数下，定义经验概率
+假设作为此类模拟的结果，测试子集中第一个对象被分配 `N[1]` 次到第一类和 `N` − `N[1]` 次到第二类，…，第 *k* 个对象被分配 `N[k]` 次到第一类和 `N` − `N[k]` 次到第二类，依此类推。在足够多的模拟次数下，定义经验概率
 
 $$
 \begin{aligned} p_{1}^{(1)} & {= \frac{N_{1}}{N},\ldots,p_{1}^{(k)} = \frac{N_{k}}{N},\ldots,...} \\ p_{2}^{(1)} & {= \frac{N - N_{1}}{N},\ldots,p_{2}^{(k)} = \frac{N - N_{k}}{N},\ldots,...} \\ \end{aligned}
@@ -8635,9 +9206,9 @@ $$
 
 因此，对于测试样本中的每个对象 *i*，测试算法可以写成以下形式。
 
-*Step 1-i.* 按照最优 PDF，生成熵最优决策规则模型 (10.23, 10.24) 的输出值集合，其中包含 *N* 个来自区间 {0,1} 的随机数。
+*Step 1-i.* 按照最优 PDF，生成熵最优决策规则模型 (10.23, 10.24) 的输出值集合，其中包含 `N` 个来自区间 {0,1} 的随机数。
 
-*Step 2-i.* 对于模型的每一次实现（即对于大小为 *N* 的集合中的每个参数向量），使用公式 (10.16, 10.17) 计算决策规则值。如果所得值超过 1/2，则对象 `t`^((*i*)) 被分配到第一类；否则分配到第二类。
+*Step 2-i.* 对于模型的每一次实现（即对于大小为 `N` 的集合中的每个参数向量），使用公式 (10.16, 10.17) 计算决策规则值。如果所得值超过 1/2，则对象 `t`^((*i*)) 被分配到第一类；否则分配到第二类。
 
 *Step 3-i.* 根据公式 (10.25) 求出属于这些类的经验概率。
 
@@ -8646,10 +9217,6 @@ $$
 请注意，通常学习和测试子集的对象被视为独立的复制品。在此假设下，Step 1-i 可以组织为一个共同的预处理程序来生成一组随机变量，该变量将以相同的方式用于所有测试对象。
 
 可以通过引入一个阈值概率来进行硬分类转换，当对象被分配到相应类时的概率超过该阈值。用于正确硬分类的对象数量取决于该阈值。如易证实，对于超过 0.5 的阈值，一些对象未被分类，但分类结果具有更高的可靠性。另一方面，对于小于 0.5 的阈值，所有对象都被分类（因为两个概率之和为 1），但结果可能类似于猜测，如果所属概率彼此接近。
-
-
-
-
 
 ### 10.3.4 数值示例
 
@@ -8662,13 +9229,21 @@ $$
 表 10.1
 
 |  |
+
 | --- |
+
 | *i* || `e[1]^{(i)}` || `e[2]^{(i)}` || `e[3]^{(i)}` || `e[4]^{(i)}` |
+
 |  |
+
 | --- |
+
 | 1 || 0.11 || 0.75 || 0.08 || 0.21 |
+
 | 2 || 0.91 || 0.65 || 0.11 || 0.81 |
+
 | 3 || 0.57 || 0.17 || 0.31 || 0.91 |
+
 |  |
 
 随机决策规则模型 (10.16, 10.17) 的参数为 `α` = 1.0 和 `Δ` = 0。学习答案向量为 `y` = {0.18; 0.81; 0.43}（同前，`y[i]` < 0.5 对应第二类，`y[i]` ≥ 0.5 对应第一类）。熵最优 PDF (10.23) 的拉格朗日乘子取值为 `${\overline{\theta}}^{*} = \left\{ 0.2524;\, 1.7678;\, 1.6563 \right\}.$` 参数属于区间 `a_i ∈ [ - 10,10], i = \overline{1,4}.`
@@ -8749,11 +9324,9 @@ $$
 
 DOI: [10.1201/9781003306566-11](https://doi.org/10.1201/9781003306566-11)
 
-
-
-
-
 The restoration of relations between two groups of variables is a basic class of problems arising in econometric research. Generally, these problems are treated as *static regression problems*, which involve retrospective data. In many cases one needs to restore a relation and also to forecast its future dynamics. As “future” data are unavailable for some period of time, such forecasts assist in making more or less reasonable decisions. An obvious recommendation here is to use *dynamic regressions*, which have a remarkable property of looking into the future. In other words, given some initial conditions at a time `t[0]`, a dynamic regression generates trajectories on a time interval [`t[0]`, `t`], where `t` > `t[0]`. A dynamic regression rests on a parameterized dynamic model with a two-stage procedure as follows. First, like for a static regression, it is necessary to estimate regression parameters based on retrospective data on a time interval [`t[-]`, `t[0]`], where `t[-]` < `t[0]`. In fact, this stage implements machine learning of the model. Then, the resulting model acts as a generator of forecasted trajectories on a second time interval [`t[0]`, `t[+]`].
+
+
 
 In this chapter, we will apply RML procedures for estimating the probabilistic characteristics of parameterized dynamic models. Recall that the general concept of randomized machine learning employs randomized parameters with entropy-optimal PDFs. Due to this circumstance, a randomized dynamic model generates an ensemble of entropy-optimal
 
@@ -8910,56 +9483,43 @@ Table 11.2: Testing interval `𝒯[tst]`.
 | `n` || 0 || 1 || 2 || 3 || 4 |
 | year || 1995 || 2000 || 2005 || 2010 || 2014 |
 | --- | --- | --- | --- | --- |
-
-
-
-
-
 | *E*[*r**e**a**l*]^(*t**s**t*) || 5.724 || 6.128 || 6.514 || 6.916 || 7.260 |
-
 | *E*[1985]^(*p**r**n*) || 5,400 || 5,968 || 6,596 || 7,284 || 8,056 |
-
 |  |
 
-表 11.3: 预测区间 𝒯[*f**r**c*].
+表 11.3: 预测区间 `𝒯[*f**r**c*]`.
 
 |  |
-
 | --- |
-
 | *n* || 0 || 1 || 2 || 3 || 4 || 5 || 6 |
-
 | 年 || 2015 || 2020 || 2025 || 2030 || 2040 || 2050 || 2060 |
-
 | --- | --- | --- | --- | --- | --- | --- | --- |
-
 | *E*[*U**N*]^(*f**r**c*) || 7.324 || 7.644 || 7.964 || 8.284 || 8.924 || 9.564 || 9.884 |
-
 |  |
 
 在所有阶段，模拟数据均以相应的初始值生成：
 
-*   在估计区间，
+* 在估计区间，
 
-$$
+```
 \begin{array}{r} \left. v\lbrack 1960 + nh\rbrack = E\lbrack 1960 + 5n\, \middle| \, r,u,E_{real}^{est}\lbrack 0\rbrack\rbrack + \xi\lbrack 5n\rbrack,\text{\quad\quad}n = \lbrack 0,7\rbrack; \right. \\ \end{array}
-$$
+```
 
 (11.13)
 
-*   在测试区间，
+* 在测试区间，
 
-$$
+```
 \begin{array}{r} \left. v\lbrack 1995 + nh\rbrack = E\lbrack 1995 + 5n\, \middle| \, r,u,E_{real}^{tst}\lbrack 0\rbrack\rbrack + \xi\lbrack 5n\rbrack,\text{\quad\quad}n = \lbrack 0,4\rbrack; \right. \\ \end{array}
-$$
+```
 
 (11.14)
 
-*   在预测区间，
+* 在预测区间，
 
-$$
+```
 \begin{array}{r} \left. v\lbrack 2015 + nh\rbrack = E\lbrack 2015 + 5n\, \middle| \, r,u,E_{real}^{prn}\lbrack 0\rbrack\rbrack + \xi\lbrack 5n\rbrack,\text{\quad\quad}n = \lbrack 0,5\rbrack. \right. \\ \end{array}
-$$
+```
 
 (11.15)
 
@@ -8967,18 +9527,20 @@ $$
 
 根据随机化机器学习的概念，参数和噪声的熵最优 PDF 将具有以下形式：
 
-*   再生系数 *r* 及其速度 *u* 的 PDF
+* 再生系数 *r* 及其速度 *u* 的 PDF
 
-$$
+```
 \begin{aligned} & \left. P^{\*}(r,u) = \frac{1}{\mathcal{R}(\overline{\theta})}{\prod\limits_{n = 0}^{7}p_{n}^{\*}}(r,u \middle| \theta_{n}), \right. \\ \left. p_{n}^{\*}(r,u \middle| \theta_{n}) = \right. & {\exp\left( - \theta_{n}E\lbrack 1960 + nh\, \middle| \, r,u,E_{real}^{est}\lbrack 0\rbrack\rbrack \right);} \\ \end{aligned}
-$$
+```
 
 (11.16)
 
-*   噪声的 PDF
+* 噪声的 PDF
 
-$$
+
+
 \begin{array}{r} \left. Q^{\*}(\overline{\xi}) = \frac{1}{\mathcal{Q}(\overline{\theta})}{\prod\limits_{n = 0}^{7}q_{n}^{\*}}(\xi\lbrack nh\rbrack \middle| \theta_{n}),\quad q_{n}^{\*}(\xi\lbrack nh\rbrack \middle| \theta_{n}) = \exp\left( {- \theta_{n}\xi\lbrack nh\rbrack} \right), \right. \\ \end{array}
+
 $$
 
 (11.17)
@@ -8986,7 +9548,9 @@ $$
 其中
 
 $$
+
 \begin{aligned} {\mathcal{R}(\overline{\theta})} & {= {\int_{\mathcal{J}}{\prod\limits_{n = 0}^{7}\exp}}( - \theta_{n}E\lbrack 1960 +} \\ & \left. + nh\, \middle| \, r,u,E_{real}^{est}\lbrack 0\rbrack\rbrack)drdu, \right. \\ {\mathcal{Q}(\overline{\theta}) =} & {{\prod\limits_{n = 0}^{7}\int^{\Xi_{n}}}}\exp( - \theta_{n}\xi\lbrack nh\rbrack)d\xi\lbrack nh\rbrack =} \\ {= {\prod\limits_{n = 0}^{7}\frac{1}{\theta_{n}}}} & {\left( {\exp( - \theta_{n}\xi_{n}^{-}) - \exp( - \theta_{n}\xi_{n}^{+})} \right).} \\ \end{aligned}
+
 $$
 
 (11.18)
@@ -8994,7 +9558,9 @@ $$
 拉格朗日乘子由平衡方程组 (1.9, 1.10) 确定：
 
 $$
+
 \begin{aligned} & \left. \text{\quad\quad}\text{\quad\quad}\frac{1}{\mathcal{R}(\overline{\theta})}{\int_{\mathcal{J}}E}\lbrack 1960 + nh\, \middle| \, r,u,E_{real}^{est}\lbrack 0\rbrack\rbrack \times \right. \\ & {\quad \times {\prod\limits_{n = 0}^{7}\exp}\left( - \theta_{n}E\lbrack 1960 + nh\, \middle| \, r,u,E_{real}^{est}\lbrack 0\rbrack\rbrack \right)\, dr\, du +} \\ & {\quad\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\quad + \frac{1}{\mathcal{Q}(\overline{\theta})}{\int_{\Xi_{n}}\xi}\lbrack nh\rbrack \times} \\ & {\times {\prod\limits_{n = 0}^{7}\exp}\left( {- \theta_{n}\xi\lbrack nh\rbrack} \right)d\xi\lbrack nh\rbrack - E_{real}^{est}\lbrack nh\rbrack = G_{n}(\overline{\theta}) = 0,} \\ & {\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\quad\text{\quad\quad}n = \overline{0,7}.} \\ \end{aligned}
+
 $$
 
 (11.19)
@@ -9002,7 +9568,9 @@ $$
 为求解该系统，采用残差最小化方法。
 
 $$
+
 \begin{array}{r} \left. J(\overline{\theta}) = \|\mathbf{G}(\overline{\theta})\| \Rightarrow \min. \right. \\ \end{array}
+
 $$
 
 (11.20)
@@ -9014,7 +9582,9 @@ $$
 估计、测试和预测的所有阶段均在模拟这些参数值增长和下降的再生系数和趋势系数区间上实现
 
 $$
+
 \begin{array}{r} {\mathcal{J}_{r} = \lbrack - 0.025, - 0.075\rbrack,\text{\quad\quad}\mathcal{J}_{u} = \lbrack 0.002,0.001\rbrack.} \\ \end{array}
+
 $$
 
 (11.21)
@@ -9022,7 +9592,9 @@ $$
 假设每个观测值的测量噪声值相同且属于区间
 
 $$
+
 \begin{array}{r} {\Xi_{n} = \lbrack - 0.5,0.5\rbrack,\text{\quad\quad}n = \overline{0,7}.} \\ \end{array}
+
 $$
 
 (11.22)
@@ -9064,14 +9636,12 @@ $$
 每一对随机值 *r* 和 *u* 定义一条单独的指数增长曲线；此外，对于每个点 *\[nh\]* 根据其 PDF 添加随机噪声值。因此，构建的世界人口动力学轨迹不是指数函数。在测试阶段，
 
 $$
+
 \begin{array}{r} {E^{tst}\lbrack 0\rbrack = E_{real}^{tst}\lbrack 0\rbrack.} \\ \end{array}
+
 $$
 
 (11.23)
-
-
-
-
 
 该集合显示在 图 11.3 中，其中 1——平均轨迹 平均轨迹的平均轨迹；2——测试区间 11.3 上的实际人口动态，3——根据联合国预测的测试区间上的人口动态；4——方差的边界。
 
@@ -9168,6 +9738,7 @@ $$\\begin{array}{r} {\\xi\\lbrack n\\rbrack \\in \\Xi\_{n} = \\lbrack\\xi\_{n}^{
 因此，描述电力系统中电负荷动态的方程 (11.28, 11.31) 由以下概率密度函数刻画：
 
 * `LT` 模型，由模型参数的概率密度函数 `P(a)` 和 `F(b)` 以及测量噪声的概率密度函数 `Mn`，$n = \\overline{n^{-},n^{+}};$ 组成；
+
 * `Tξ` 模型，由模型参数的概率密度函数 `W(c)` 以及测量噪声的概率密度函数 `Qn`，$n = \\overline{n^{-},n^{+}}.$ 组成。
 
 ### 11.3.2 学习数据集
@@ -9179,8 +9750,6 @@ $$\\begin{array}{r} {\\xi\\lbrack n\\rbrack \\in \\Xi\_{n} = \\lbrack\\xi\_{n}^{
 $$\\begin{aligned} {L\_{r}^{(i)}\\lbrack n\\rbrack} & {= \\frac{{\\hat{L}}\_{r}^{(i)}\\lbrack n\\rbrack - {\\hat{L}}\_{min}^{(i)}}{{\\hat{L}}\_{max}^{(i)} - {\\hat{L}}\_{min}^{(i)}},} \\\\ {\\tau\_{r}^{(i)}\\lbrack n\\rbrack} & {= \\frac{{\\hat{\\tau}}\_{r}^{(i)}\\lbrack n\\rbrack - {\\hat{\\tau}}\_{min}^{(i)}}{{\\hat{\\tau}}\_{max}^{(i)} - {\\hat{\\tau}}\_{min}^{(i)}},} \\\\ t\_{r}^{(i)} & {= \\frac{1}{24}{\\sum\\limits\_{n = 1}^{24}\\tau\_{r}^{(i)}}\\lbrack n\\rbrack,} \\\\ \\end{aligned}$$  
 
 (11.34)
-
-
 
 
 
@@ -9218,7 +9787,7 @@ $$\\begin{array}{r} {\\mathcal{M}\_{n} = \\lbrack - 0.1;0,1\\rbrack,\\quad\\Xi\_
 
 (11.37)
 
-### 11.3.3Entropy-optimal probability density functions of parameters and noises
+### 11.3.3 Entropy-optimal probability density functions of parameters and noises
 
 According to the approach described in Section 5, for the *LT* model (11.28)–(11.30) the PDFs parameterized by the Lagrange multipliers *θ*^((*i*)) = {*θ*[1]^((*i*)),…,*θ*[24]^((*i*))} have the form
 
@@ -9250,15 +9819,17 @@ $$\\begin{aligned} & {W\_{i}^{\*}(c,\\eta^{(i)}) = \\frac{{\\widetilde{h}}\_{r}^
 
 where
 
-
-
-
-
 $$
 \begin{array}{r}
+
+
+
 {{\widetilde{h}}_{r}^{(i)}(\eta) = {\sum\limits_{n = 1}^{24}\eta_{n}}(2T_{r}^{(i)}[n - 1] - T_{r}^{(i)}[n - 2]),\quad q^{(i)}(\eta^{(i)}) = {\sum\limits_{n = 1}^{24}\eta_{n}^{(i)}}.}
+
 \\
+
 \end{array}
+
 $$
 
 (11.42)
@@ -9266,10 +9837,15 @@ $$
 拉格朗日乘子 *η*^((*i*)) 通过求解平衡方程组来计算
 
 $$
+
 \begin{array}{r}
+
 {D^{(i)}(\eta^{(i)}) + N^{(i)}(\eta^{(i)}) + K_{n}^{(i)}(\eta_{n}^{(i)}) = T_{r}^{(i)}[n],\text{\quad\quad}n = \overline{1,24},}
+
 \\
+
 \end{array}
+
 $$
 
 (11.43)
@@ -9277,26 +9853,47 @@ $$
 其中
 
 $$
+
 \begin{aligned}
+
 & {D^{(i)}(\eta^{(i)}) = \frac{1}{\exp( - t^{-}q^{(i)}(\eta^{(i)})) - \exp( - t^{+}q^{(i)}(\eta^{(i)}))} \times}
+
 \\
+
 & {\text{\quad\quad}\text{\quad\quad} \times (\exp( - t^{-}q^{(i)}(\eta^{(i)}))(t^{-}q^{(i)}(\eta^{(i)}) + 1) -}
+
 \\
+
 & {\text{\quad\quad}\text{\quad\quad} - \exp( - t^{+}q^{(i)}(\eta^{(i)}))(t^{+}q^{(i)}(\eta^{(i)}) + 1)),}
+
 \\
+
 & {N^{(i)}(\eta^{(i)}) = \frac{1}{\exp( - c^{-}{\widetilde{h}}^{(i)}(\eta^{(i)})) - \exp( - c^{+}{\widetilde{h}}^{(i)}(\eta^{(i)}))} \times}
+
 \\
+
 & {\text{\quad\quad}\text{\quad\quad} \times (\exp( - c^{-}{\widetilde{h}}_{r}^{(i)}(\eta^{(i)}))(c^{-}{\widetilde{h}}^{(i)}(\eta^{(i)}) + 1) -}
+
 \\
+
 & {\text{\quad\quad}\text{\quad\quad} - \exp( - c^{+}{\widetilde{h}}_{r}^{(i)}(\eta^{(i)}))(c^{+}{\widetilde{h}}^{(i)}(\eta^{(i)}) + 1)),}
+
 \\
+
 & {K_{n}^{(i)}(\eta_{n}^{(i)}) = \frac{1}{\eta_{n}^{(i)}\left( {\exp( - \xi^{-}[n]\eta_{n}^{(i)}) - \exp( - \xi^{+}[n]\eta_{n}^{(i)})} \right)} \times}
+
 \\
+
 & {\text{\quad\quad}\text{\quad\quad}\quad \times (\exp( - \xi^{-}[n]\eta_{n}^{(i)})(\xi^{-}[n]\eta_{n}^{(i)}) + 1) -}
+
 \\
+
 & {\text{\quad\quad}\text{\quad\quad}\quad - \exp( - \xi^{+}[n]\eta_{n}^{(i)})(\xi^{+}[n]\eta_{n}^{(i)}) + 1)).}
+
 \\
+
 \end{aligned}
+
 $$
 
 (11.44)
@@ -9308,58 +9905,103 @@ $$
 Table 11.5: 拉格朗日乘子 *θ*, *η*。
 
 |  |
+
 | --- |
+
 | Time || `θ`^((1)) || `θ`^((2)) || `θ`^((3)) || `η`^((1)) || `η`^((2)) || `η`^((3)) |
+
 | 1 || \-29.72 || 7009.28 || 1038.07 || 14.63 || 21.22 || 17.34 |
+
 | --- | --- | --- | --- | --- | --- | --- |
+
 | 2 || 1.58 || 230.89 || 35.35 || 19.52 || 26.71 || 28.32 |
+
 | 3 || \-4.09 || 369.96 || 26.23 || 35.91 || 31.60 || 26.33 |
+
 | 4 || \-4.68 || 29.93 || 11.96 || 55.83 || 127.82 || 52.08 |
+
 | 5 || \-7.21 || 24.25 || 1.03 || 96.85 || 642.35 || 110.94 |
+
 | 6 || \-9.26 || 13.72 || \-15.76 || 592.99 || 7009.28 || 4729.52 |
+
 | 7 || \-59.09 || \-5.96 || \-7009.28 || 7009.28 || 183.92 || 7009.28 |
+
 | 8 || \-7009.28 || \-33.99 || \-767.99 || 48.21 || 39.94 || 23.16 |
+
 | 9 || \-766.00 || \-1409.28 || \-22.91 || 66.58 || 12.28 || \-1.26 |
+
 | 10 || \-50.90 || \-4229.90 || \-4.27 || 37.38 || 2.35 || \-19.78 |
+
 | 11 || \-18.97 || \-45.22 || 3.72 || 22.51 || \-8.82 || \-22.73 |
+
 | 12 || \-11.42 || \-15.07 || 9.17 || 7.16 || \-27.06 || \-23.06 |
+
 | 13 || \-13.94 || 2.59 || 17.38 || 5.72 || \-172.25 || \-27.06 |
+
 | 14 || \-17.62 || 5.82 || 14.94 || 2.83 || \-65.29 || \-23.02 |
+
 | 15 || \-18.18 || 9.33 || 17.74 || \-0.30 || \-57.45 || \-23.15 |
+
 | 16 || \-27.28 || 11.35 || 21.85 || \-1.24 || \-482.69 || \-47.78 |
+
 | 17 || \-49.55 || 4.50 || 22.68 || \-5.49 || \-889.02 || \-130.49 |
+
 | 18 || \-25.41 || \-7.09 || 29.39 || \-0.89 || \-28.12 || \-60.71 |
+
 | 19 || \-8.20 || \-4.66 || 98.03 || \-4.23 || \-14.20 || \-270.17 |
+
 | 20 || 0.95 || \-4.89 || 52.27 || 3.70 || \-6.41 || \-31.47 |
+
 | 21 || 1.01 || \-16.37 || 8.15 || 21.16 || 2.48 || \-1.23 |
+
 | 22 || 22.00 || \-8.24 || 7.45 || 17.85 || 12.15 || 14.86 |
+
 | 23 || 2881.43 || 17.00 || 902.73 || 26.78 || 9.98 || 26.39 |
+
 | 24 || 512.14 || 36.30 || 355.47 || 27.32 || 24.65 || 121.44 |
+
 | `l[r]^{(i)}(θ^(*))` || 9.71 || 6.04 || 6.09 ||  ||  ||  |
+
 | `h[r]^{(i)}(θ^(*))` || 0.06 || 0.58 || 0.81 ||  ||  ||  |
+
 | `h̃[r]^{(i)}(η^(*))` ||  ||  ||  || 0.41 || 0.05 || 0.19 |
+
 |  |
 
 由于 `LT` 模型的参数相互独立，参数和噪声的联合 PDF `U[i]^(*)(a, b)` = `P[i]^(*)(a)` `F[i]^(*)(b)` 具有形式
 
 $$
+
 \begin{aligned}
+
 {U_{1}^{*}(a,b)} & {= 53,09\exp( - 9,72a)\, \exp(0,06b),}
+
 \\
+
 {U_{2}^{*}(a,b)} & {= 55,49\exp( - 6,04a)\, \exp(0,58b),}
+
 \\
+
 {U_{3}^{*}(a,b)} & {= 65,81\exp( - 6,09a)\, \exp( - 0,81b),}
+
 \\
+
 \end{aligned}
+
 $$
 
 (11.45)
 
 $$
+
 \begin{array}{r}
+
 {(a,b) \in \lbrack 0,05;0,15\rbrack \cup \lbrack 0,5;1,0\rbrack,\quad\mu \in \lbrack - 0,1,0,1\rbrack,\quad i = \overline{1,24}.}
+
 \\
+
 \end{array}
+
 $$
 
 显然，PDFs 为指数型。对于 `i` = 1，图示见 Fig. 11.6。
@@ -9371,21 +10013,35 @@ Figure 11.6
 对于 `Tξ` 模型，参数和噪声的 PDFs 具有形式
 
 $$
+
 \begin{aligned}
+
 {W_{1}^{*}(c)} & {= 13,90\exp( - 0,41c),}
+
 \\
+
 {W_{2}^{*}(c)} & {= 10,43\exp( - 0,05c),}
+
 \\
+
 {W_{3}^{*}(c)} & {= 11,65\exp( - 0,19c),}
+
 \\
+
 \end{aligned}
+
 $$
 
 $$
+
 \begin{array}{r}
+
 {c \in \lbrack 0,75;0,85\rbrack,\quad\xi \in \lbrack - 0,1;0,1\rbrack,\quad i = \overline{1,24}.}
+
 \\
+
 \end{array}
+
 $$
 
 对于 `i` = 1，图示见 Fig. 11.7。
@@ -9397,36 +10053,45 @@ Figure 11.7
 因此，随机化的 `L T ξ` 模型生成具有熵最优参数和测量噪声 PDF 的随机轨迹：
 
 $$
+
 \begin{aligned}
+
 {L[n]} & {= aL[n - 1] + bT[n],\quad\left( {P^{*}(a),F^{*}(b)} \right),}
+
 \\
+
 {v[n]} & {= L[n] + \mu[n],\quad M_{n}^{*}(\mu[n]);}
+
 \\
+
 {\tau[n]} & {= c\left( {2\tau[n - 1] - \tau[n - 2]} \right),\quad W^{*}(c),\, \, i = \overline{1,3},}
+
 \\
+
 {T[n]} & {= t + \tau[n] + \xi[n],\quad Q_{n}^{*}(\xi[n]).}
+
 \\
+
 \end{aligned}
+
 $$
 
 (11.46)
 
-相应的集合由使用接受-拒绝 (AR) 方法（也称为拒绝采样 RS；见 [186]）对所得参数和噪声 PDF 的采样过程生成。在计算过程中，每个参数使用 100 个样本，每个噪声使用 100 个样本；换句话说，集合由 10⁴ 条轨迹组成。
+相应的集合由使用接受-拒绝 `AR` 方法（也称为拒绝采样 `RS`；见 [186]）对所得参数和噪声 PDF 的采样过程生成。在计算过程中，每个参数使用 100 个样本，每个噪声使用 100 个样本；换句话说，集合由 10⁴ 条轨迹组成。
 
 ### 11.3.5 模型测试
 
 通过对 2016 年 7 月 3 日至 5 日 (`i` = 1, 2, 3) 的实际负荷-温度数据进行 `LT` 和 `Tξ` 模型的自测和交叉测试来分析模型的适用性。自测意味着使用第 `i` 天的熵最优参数和噪声生成轨迹集合，计算均值 (`mean`) 和中位数 (`med`) 轨迹以及集合的方差管 (`std±`)，并将均值轨迹与同一天 `i` 的实际用电负荷和环境温度进行比较。近似质量由相对误差表征，
 
-
-
-
-
 $$\\begin{array}{r} {\\delta\_{L}^{(i)} = \\frac{\\sum\\limits\_{n = 1}^{24}\\left( {L\_{mean}^{(i)}\\lbrack n\\rbrack - L\_{r}^{(i)}\\lbrack n\\rbrack} \\right)^{2}}{{\\sum\\limits\_{n = 1}^{24}{(L\_{mean}^{(i)}\\lbrack n\\rbrack)}^{2}} + {\\sum\\limits\_{n = 1}^{24}{(L\_{r}^{(i)}\\lbrack n\\rbrack)}^{2}}},\\quad i = \\overline{1,3},} \\\\ \\end{array}$$  
+
 (11.47)
 
 in electrical load and
 
 $$\\begin{array}{r} {\\delta\_{T}^{(i)} = \\frac{\\sum\\limits\_{n = 1}^{24}\\left( {T\_{mean}^{(i)}\\lbrack n\\rbrack - T\_{r}^{(i)}\\lbrack n\\rbrack} \\right)^{2}}{{\\sum\\limits\_{n = 1}^{24}{(T\_{mean}^{(i)}\\lbrack n\\rbrack)}^{2}} + {\\sum\\limits\_{n = 1}^{24}{(T\_{r}^{(i)}\\lbrack n\\rbrack)}^{2}}},\\quad i = \\overline{1,3}.} \\\\ \\end{array}$$  
+
 (11.48)
 
 in ambient temperature.
@@ -9434,28 +10099,34 @@ in ambient temperature.
 Cross-testing represents a similar procedure in which the mean trajectories are compared with the real counterparts in terms of electrical load and ambient temperature for days *j* ≠ *i*. The quality of approximation is characterized by relative errors,
 
 $$\\begin{array}{r} {\\delta\_{L}^{(i,j)} = \\frac{\\sum\\limits\_{n = 1}^{24}\\left( {L\_{mean}^{(i)}\\lbrack n\\rbrack - L\_{r}^{(j)}\\lbrack n\\rbrack} \\right)^{2}}{{\\sum\\limits\_{n = 1}^{24}{(L\_{mean}^{(i)}\\lbrack n\\rbrack)}^{2}} + {\\sum\\limits\_{n = 1}^{24}{(L\_{r}^{(j)}\\lbrack n\\rbrack)}^{2}}},\\quad i = \\overline{1,3},\\, i \\neq j,} \\\\ \\end{array}$$  
+
 (11.49)
 
 in electrical load and
 
 $$\\begin{array}{r} {\\delta\_{T}^{(i,j)} = \\frac{\\sum\\limits\_{n = 1}^{24}\\left( {T\_{mean}^{(i)}\\lbrack n\\rbrack - T\_{r}^{(j)}\\lbrack n\\rbrack} \\right)^{2}}{{\\sum\\limits\_{n = 1}^{24}{(T\_{mean}^{(i)}\\lbrack n\\rbrack)}^{2}} + {\\sum\\limits\_{n = 1}^{24}{(T\_{r}^{(j)}\\lbrack n\\rbrack)}^{2}}},\\quad i = \\overline{1,3},i \\neq j.} \\\\ \\end{array}$$  
+
 (11.50)
 
 in ambient temperature.
 
-*Self-testing*. For the `LT` model, the real ambient temperature data `T[r]^(i)[n]`, as well as the entropy-optimal PDFs `P[i]^(*)(a)` and `F[i]^(*)(b)` of the parameters `(a, b)` and the PDFs `M[1]^(*)(μ[1]), …, M[24]^(*)(μ[24])` of the measurement noises `μ[n]`, were used. The ensembles `𝕃^(i)` were generated using the `sampling procedure` of the above PDFs. The mean trajectory `L[mean]^(i)[n]`, the median trajectory `L[med]^(i)[n]` and also the trajectories `L[std±]^(i)[n]` corresponding to the limits of the variance graph were found. The errors `δ[L]^(i)` were calculated. The resulting ensembles and relative errors `δ[L]^(i)` for the three indicated days are demonstrated in Fig. 11.8.
+
+
+## Self-testing
+对于 `LT` 模型，使用了真实的环境温度数据 `T[r]^(i)[n]`，以及参数 `(a, b)` 的熵最优 PDF `P[i]^(*)(a)` 和 `F[i]^(*)(b)`，以及测量噪声 `μ[n]` 的 PDF `M[1]^(*)(μ[1]), …, M[24]^(*)(μ[24])`。集合 `𝕃^(i)` 使用上述 PDF 的 `sampling procedure` 生成。求得均值轨迹 `L[mean]^(i)[n]`、中值轨迹 `L[med]^(i)[n]` 以及对应方差图限值的轨迹 `L[std±]^(i)[n]`。计算误差 `δ[L]^(i)`。三个所示日的 resulting 集合和相对误差 `δ[L]^(i)` 示于 Fig. 11.8。
 
 ![Figure 11.8: Ensembles of LT model.](img/fig11_8.jpg)
 
 Figure 11.8: Ensembles of `LT` model.
 
-The `Tξ` model was tested by generating the ensemble `𝕋^(i)` of random trajectories `T^(i)[n]`, $n = \\overline{1,24}$ with the entropy-optimal PDFs `W^(i)(c)` and `Q[1]^(*)(ξ[1]), …, Q[24]^(*)(ξ[24])` through sampling. The mean trajectory `T[mean]^(i)[n]`, the median trajectory `T[med]^(i)[n]` and the trajectory `T[std±]^(i)[n]` corresponding to the limits of the variance pipe are calculated. The resulting ensembles and relative errors `δ[T]^(i)` for the three days are shown in Fig. 11.9
+`Tξ` 模型通过生成随机轨迹 `T^(i)[n]` 的集合 `𝕋^(i)`，$n = \overline{1,24}$，使用熵最优 PDF `W^(i)(c)` 和 `Q[1]^(*)(ξ[1]), …, Q[24]^(*)(ξ[24])` 通过采样进行测试。计算均值轨迹 `T[mean]^(i)[n]`、中值轨迹 `T[med]^(i)[n]` 以及对应方差管限值的轨迹 `T[std±]^(i)[n]`。三个日的 resulting 集合和相对误差 `δ[T]^(i)` 示于 Fig. 11.9
 
 ![Figure 11.9: Ensembles of T\\xi-model.](img/fig11_9.jpg)
 
 Figure 11.9: Ensembles of `Tξ`-model.
 
-*Cross-testing.* For cross-testing, the `LT` and `LTξ` models learned on the data for day `i` were used, and their mean trajectories were compared with the data for days `j` ≠ *i*. The resulting errors are combined in Table 11.6, Table 11.7, Table 11.8.
+## Cross-testing
+对于交叉测试，使用在第 `i` 日数据上学习得到的 `LT` 和 `LTξ` 模型，并将其均值轨迹与第 `j` ≠ *i* 日的数据进行比较。所得误差汇总于 Table 11.6、Table 11.7、Table 11.8。
 
 Table 11.6: Values `δ[L]` obtained by cross-testing of `LT` model. Mean value `δ[L]` = 0.0530.
 
@@ -9491,12 +10162,11 @@ Table 11.8: Values `δ[T]` obtained by cross-testing of `LTξ` model. Mean value
 |  |
 
 ### 11.3.6 Randomized prediction of `N`-daily load
+在 `N` 日负荷的随机化预测中，使用在区间 `𝒯[l]` 上学习的 `LTξ` 模型。预报质量使用在真实数据上得到的熵最优 PDF 的 `LTξ` 模型进行表征，该模型基于 *first*（`i` = 1）日。
 
-In the randomized prediction of the `N`-daily load, the `LTξ` model learned on the interval `𝒯[l]` was used. The quality of the forecast was characterized using the `LTξ` model with the entropy-optimal PDFs obtained on the real data for the *first* (`i` = 1) day.
+通过上述 PDF 的采样程序构建 1 日（`n` ∈ \[1, 24\]）、2 日（`n` ∈ \[1, 48\]）和 3 日（`n` ∈ \[1, 72\]）集合。对于这些集合，求得均值轨迹 `L[mean][n]`、中值轨迹 `L[med][n]` 以及方差管的限值轨迹 `L[std±][n]`。将预报结果与 2006 年 7 月 3–7 日的真实数据进行比较（$i = \overline{1,4}$）。预报质量由类似于 (11.49)–(11.50) 计算的相对误差表征。
 
-The 1-day (`n` ∈ \[1, 24\]), 2-day (`n` ∈ \[1, 48\]) and 3-day (`n` ∈ \[1, 72\]) ensembles were constructed by the sampling procedure of the above PDFs. For these ensembles, the mean trajectories `L[mean][n]`, the median trajectories `L[med][n]` and also the limiting trajectories `L[std±][n]` of the variance pipe were found. The forecast results were compared with the real data for July 3–7, 2006 ($i = \\overline{1,4}$). The forecasting quality was characterized by the relative errors calculated similar to (11.49)–(11.50).
-
-The resulting 24-h, 48-h and 72-h randomized forecasts of electrical load and their probabilistic characteristics (the mean and median trajectories, the limit trajectories of the variance pipes) are presented in Fig. 11.10. The errors, i.e., the deviations between the model forecasts and real data, can be seen in Table 11.9.
+所得 24-h、48-h 和 72-h 电力负荷随机化预报及其概率特征（均值和中值轨迹、方差管的限值轨迹）示于 Fig. 11.10。误差，即模型预报与真实数据的偏差，可见于 Table 11.9。
 
 ![Figure 11.10: 24-h, 48-h and 72-h forecasts using LT\\xi model.](img/fig11_10.jpg)
 
@@ -9511,26 +10181,20 @@ Table 11.9: Accuracy of 24-h, 48-h and 72-h forecasts using `LTξ` model.
 | --- | --- | --- | --- |
 |  |
 
-An important feature of the described method is the formation of predictive trajectories under “entropy-worst” measurement errors.
+该描述方法的一个重要特征是在“熵最差”测量误差下形成预测轨迹。
 
 ## 11.4 Entropy Randomized Modelling and Forecasting of Thermokarst Lake Area Evolution in Western Siberia
 
 ### 11.4.1 Thermokarst lakes and climate change
-
 Permafrost zones, occupying a significant part of the earth's surface, are the localization of thermokarst lakes, which accumulate greenhouse gases (methane and carbon dioxide). These gases have a considerable contribution to global climate change. Climate warming may cause a positive inverse reaction: an increase in temperature will lead to melting of frozen rocks and additional release of methane and carbon dioxide produced by the vital activity of microorganisms that process thawed organic matter.
 
 A thorough understanding of this global cycle and its catastrophic consequences motivates researchers to study the origin, evolution and transformation of thermokarst lakes in permafrost zones \[92, 200\]. The source data in such studies are acquired by the remote sensing of the earth surface and measurements of meteorological parameters \[24, 89, 112, 113, 129, 154\].
-
-
-
-
 
 可用的历史数据允许追踪热喀斯特湖泊时空演化的过去。然而，要预测时空演化，需要*环境模型*（`EnMd`）来适应历史数据。为此，`EnMd` 首先通过机器学习算法进行训练，然后用于获得预测。
 
 热喀斯特湖泊的形成和演化过程研究不足。此外，关于这些过程的历史数据，尤其是来自卫星的数据，包含显著误差。由于所有这些因素，预测性 `EnMd` 必须在足够高的不确定性条件下运行。因此，我们考虑*随机化预测*（`RF`）方法，相对于传统机器学习方法而言是一种替代方法。
 
 ### 11.4.2 西西伯利亚热喀斯特湖泊、其研究工具和问题
-
 对西西伯利亚多年冻土区热喀斯特湖泊（其数量和大小）的时空动态进行遥感研究，是基于使用中等（30 m）和高分辨率（从几分之一米到数米）图像组合对地球表面进行传感。这种组合允许检测浅水湖泊，其产生的温室气体远多于大型湖泊。
 
 本文研究的西西伯利亚多年冻土区领土面积约为 105 万平方公里。该领土包括三种典型区域（Fig. 11.11）：岛状（`I`，南部）、不连续（`D`，中部）和连续（`C`，北部）。多年冻土区的湖泊具有极其宽泛的尺寸范围，从几平方米到数十万公顷。为了探索这一空间，我们使用中等分辨率光学和雷达图像（`Landsat`、`ERS-2` 和 `ENVISAT`）、高分辨率图像（`Kanopus-V`、`BKA` 和 `Alos`）以及超高分辨率图像（`Resurs-P`、`QuickBird` 和 `GeoEye-1`）。为了最大限度地减少湖泊水位季节性波动的影响，我们选择夏季季节的较短时期内的图像，从七月到八月。在此期间，湖泊上的冰盖完全消失，湖泊可以在解译图像时被识别。我们使用地理信息系统的标准手段 `ArcGIS` 和 `ENVI` 处理图像。
@@ -9550,18 +10214,27 @@ Figure 11.12: Satellite images.
 西西伯利亚多年冻土区湖泊总数达到 870 万个，总面积约为 640 万 *ha*。其中，近一半（44%）被超小型湖泊（小于 500 *m* ²）占据，它们仅占所有热喀斯特湖泊总面积的 0.1%。大型湖泊（大于 2 × 10⁴ *m* ²）占总面积的 86.6%，但其数量不超过所有热喀斯特湖泊总数的 3.6%。
 
 ### 11.4.3 热喀斯特湖泊状态随机化模型的结构
-
 随机化预测技术中的一个重要阶段是构建热喀斯特湖泊面积演化的随机化模型以及影响该演化的年平均温度和年降水的随机化模型。这些变量将使用具有随机参数的线性动态随机回归 \[10\]（`LDRR`）进行建模。
 
 湖泊面积 `S[n]`（`LDRR-LA`）的时间演化由以下具有两个影响因素的动态随机回归方程描述，即年平均温度 `T[n]` 和年降水总量 `R[n]`：
 
-$$\\begin{aligned} {S\\lbrack n\\rbrack} & {= a\_{0} + {\\sum\\limits\_{k = 1}^{p}a\_{k}}S\\lbrack n - k\\rbrack + a\_{(p + 1)}T\\lbrack n\\rbrack + a\_{(p + 2)}R\\lbrack n\\rbrack,} \\\\ {v\\lbrack n\\rbrack} & {= S\\lbrack n\\rbrack + \\xi\\lbrack n\\rbrack.} \\\\ \\end{aligned}$$
+$$
+\begin{aligned}
+{S\lbrack n\rbrack} & {= a_{0} + {\sum\limits_{k = 1}^{p}a_{k}}S\lbrack n - k\rbrack + a_{(p + 1)}T\lbrack n\rbrack + a_{(p + 2)}R\lbrack n\rbrack,} \\
+{v\lbrack n\rbrack} & {= S\lbrack n\rbrack + \xi\lbrack n\rbrack.}
+\end{aligned}
+$$
 
 (11.51)
 
 参数
 
-$$\\begin{aligned} & {a\_{k} \\in \\mathcal{A}\_{k} = \\lbrack a\_{k}^{-},a\_{k}^{+}\\rbrack,\\quad k = \\overline{0,(p+2)},} \\\\ & {\\mathbf{a} = \\left\\{ a\_{0},\\ldots,a\_{p},a\_{p + 1},a\_{p + 2} \\right\\} \\in \\mathcal{A} = {\\underset{k = 0}{\\overset{p + 2}{\\cup}}\\mathcal{A}\_{k}}} \\\\ \\end{aligned}$$
+$$
+\begin{aligned}
+& {a_{k} \in \mathcal{A}_{k} = \lbrack a_{k}^{-},a_{k}^{+}\rbrack,\quad k = \overline{0,(p+2)},} \\
+& {\mathbf{a} = \left\{ a_{0},\ldots,a_{p},a_{p + 1},a_{p + 2} \right\} \in \mathcal{A} = {\underset{k = 0}{\overset{p + 2}{\cup}}\mathcal{A}_{k}}}
+\end{aligned}
+$$
 
 (11.52)
 
@@ -9569,7 +10242,11 @@ $$\\begin{aligned} & {a\_{k} \\in \\mathcal{A}\_{k} = \\lbrack a\_{k}^{-},a\_{k}
 
 变量 `v[n]` 是模型的观测输出，且随机测量噪声 `ξ[n]` 在不同时间瞬间 `n` 的取值可能属于不同范围：
 
-$$\\begin{array}{r} {\\xi\\lbrack n\\rbrack \\in \\Xi\_{n} = \\lbrack\\xi^{-}\\lbrack n\\rbrack,\\xi^{+}\\lbrack n\\rbrack\\rbrack,} \\\\ \\end{array}$$
+$$
+\begin{array}{r}
+{\xi\lbrack n\rbrack \in \Xi_{n} = \lbrack\xi^{-}\lbrack n\rbrack,\xi^{+}\lbrack n\rbrack\rbrack,}
+\end{array}
+$$
 
 (11.53)
 
@@ -9578,6 +10255,8 @@ $$\\begin{array}{r} {\\xi\\lbrack n\\rbrack \\in \\Xi\_{n} = \\lbrack\\xi^{-}\\l
 为了训练该模型（估计 PDF `P(a)` 和 `Qn`），我们利用湖泊面积、年平均温度和年降水量的历史数据集合。
 
 然而，在湖泊面积预测阶段，温度和降水数据不可用。为了在此阶段生成必要数据，我们构建温度（`LDRR-T`）和降水（`LDRR-P`）的辅助模型，并分别向其输入提供随机序列 `μ[n]` 和 `ζ[n]`。
+
+
 
 考虑温度模型（`LDRR-T`）：
 
@@ -9599,16 +10278,14 @@ $$\\begin{aligned} & {\\mu\\lbrack n\\rbrack \\in \\mathcal{M}\_{n} = \\lbrack\\
 
 随机参数和输入序列由联合 PDF `W(b, μ)` 刻画。
 
-
-
-
-
 The variable `t[n]` is the observed output of the model, and the measurement noise `η[n]` ∈ ℰ[n] = [`η⁻[n]`, `η⁺[n]`] is of the interval type with PDFs `En`.
 
 The precipitation model (`LDRR-P`) has the form:
 
 $$
+
 \begin{aligned} {R\lbrack n\rbrack} & {= c_{0} + {\sum\limits_{k = 1}^{p}c_{k}}R\lbrack n - k\rbrack + \zeta\lbrack n\rbrack,} \\ {r\lbrack n\rbrack} & {= R\lbrack n\rbrack + \chi\lbrack n\rbrack.} \\ \end{aligned}
+
 $$
 
 (11.57)
@@ -9616,7 +10293,9 @@ $$
 The random parameters of this model are independent and of the interval type:
 
 $$
+
 \begin{aligned} & {c_{k} \in \mathcal{C}_{k} = \lbrack c_{k}^{-},c_{k}^{+}\rbrack,\quad k = \overline{0,p},} \\ & {\mathbf{c} = \left\{ c_{0},\ldots,c_{p} \right\},\quad\mathbf{c} \in \mathcal{C} = {\underset{k = 0}{\overset{p}{\cup}}\mathcal{C}_{k}}.} \\ \end{aligned}
+
 $$
 
 (11.58)
@@ -9624,7 +10303,9 @@ $$
 The random input sequence is
 
 $$
+
 \begin{aligned} & {\zeta\lbrack n\rbrack \in \mathcal{Z}_{n} = \lbrack\zeta^{-}\lbrack n\rbrack,\zeta^{+}\lbrack n\rbrack\rbrack,\quad\, n = \overline{0,N},} \\ & {\zeta = \left\{ \zeta\lbrack 0\rbrack,\ldots,\zeta\lbrack N\rbrack \right\},\quad\zeta \in \mathcal{Z} = {\underset{n = 0}{\overset{N}{\cup}}\mathcal{Z}_{n}}.} \\ \end{aligned}
+
 $$
 
 (11.59)
@@ -9654,7 +10335,9 @@ The distribution of test regions by zones is as follows:
 The data characterizing the state of these test domains were presented in [1]. To eliminate the scale effect, they are normalized, i.e., reduced to the interval [0,1], using the relations
 
 $$
+
 \begin{aligned} {S_{t}^{\prime}\lbrack n\rbrack} & {= \frac{S_{t}^{(r)}\lbrack n\rbrack - S_{t}^{min}}{S_{t}^{max} - S_{t}^{min}},\, \, T_{t}^{\prime}\lbrack n\rbrack = \frac{T_{t}^{(r)}\lbrack n\rbrack - T_{t}^{min}}{T_{t}^{max} - T_{t}^{min}},} \\ & {\text{\quad\quad}R_{t}^{\prime}\lbrack n\rbrack = \frac{R_{t}^{(r)}\lbrack n\rbrack - R_{t}^{min}}{R_{t}^{max} - T_{t}^{min}},} \\ & {\text{\quad\quad}\quad t = \overline{1,30},\quad n = \overline{0,34}.} \\ \end{aligned}
+
 $$
 
 (11.60)
@@ -9666,7 +10349,9 @@ Since the test domains are located in their zones rather compactly, the collecti
 * —for zone `C`,
 
 $$
+
 \begin{aligned} {{\overline{S}}^{(r)}\lbrack n\rbrack} & {= \frac{1}{12}{\sum\limits_{t \in C}S_{t}^{\prime}}\lbrack n\rbrack,\, \,{\overline{T}}^{(r)}\lbrack n\rbrack = \frac{1}{12}{\sum\limits_{t \in C}T_{t}^{\prime}}\lbrack n\rbrack,} \\ & {\quad{\overline{R}}^{(r)}\lbrack n\rbrack = \frac{1}{12}{\sum\limits_{t \in C}R_{t}^{\prime}}\lbrack n\rbrack;} \\ \end{aligned}
+
 $$
 
 (11.61)
@@ -9674,13 +10359,17 @@ $$
 * —for zone `D`,
 
 $$
+
 \begin{array}{r} {{\overline{S}}^{(r)}\lbrack n\rbrack = \frac{1}{10}{\sum\limits_{t \in D}S_{t}^{\prime}}\lbrack n\rbrack,\, \,{\overline{T}}^{(r)}\lbrack n\rbrack = \frac{1}{10}{\sum\limits_{t \in D}T_{t}^{\prime}}\lbrack n\rbrack,{\overline{R}}^{(r)}\lbrack n\rbrack = \frac{1}{10}{\sum\limits_{t \in D}R_{t}^{\prime}}\lbrack n\rbrack;} \\ \end{array}
+
 $$
 
 * —for zone `I`,
 
 $$
+
 \begin{array}{r} {{\overline{S}}^{(r)}\lbrack n\rbrack = \frac{1}{8}{\sum\limits_{t \in I}S_{t}^{\prime}}\lbrack n\rbrack,\, \,{\overline{T}}^{(r)}\lbrack n\rbrack = \frac{1}{8}{\sum\limits_{t \in I}T_{t}^{\prime}}\lbrack n\rbrack,{\overline{R}}^{(r)}\lbrack n\rbrack = \frac{1}{8}{\sum\limits_{t \in I}R_{t}^{\prime}}\lbrack n\rbrack.} \\ \end{array}
+
 $$
 
 We use these data to calculate the structural characteristics of the LDRR model, namely, the order `p` as well as the lower and upper limits of the ranges for the model parameters and measurement noises. The algorithm takes the form:
@@ -9737,25 +10426,34 @@ Table 11.11: Structural characteristics of LDRR
 | `b[1]` || \-0.1742 || 1.0105 |
 | `b[2]` || \-0.8446 || 0.3379 |
 | `b[3]` || \-0.7874 || 0.4332 |
+
+
+
 | `R` || 4 || `c[0]` || \-0.4305 || 0.6808 || \-0.5006 || 0.5006 |
+
 | `c[1]` || 0.2060 || 1.3253 |
+
 | `c[1]` || \-0.7124 || 0.6210 |
+
 | `c[2]` || \-0.3067 || 1.0510 |
+
 | `c[3]` || \-0.9575 || 0.3755 |
+
 |  |
 
 Table 11.12: Structural characteristics of LDRR.
 
 |  |
+
 | --- |
+
 | **Zone I** |
+
 | Model || Order || Parameter || Parameter range || Noise range |
+
 | --- | --- | --- | --- | --- |
+
 | `p` || lower limit || upper limit || lower limit || upper limit |
-
-
-
-
 
 | *S* || 5 || *a*[0] || \-0.3191 || 0.1600 || \-0.2210 || 0.2210 |
 
@@ -9797,29 +10495,41 @@ Table 11.12: Structural characteristics of LDRR.
 
 因此，每个区域都有三个时间序列，每个包含 35 个值。我们将其分为以下两组：
 
-*   训练集合 ($n = \\overline{0,24}$)
+* 训练集合 ($n = \overline{0,24}$)
 
-    $$\\begin{array}{r} {{\\mathfrak{C}}\_{tn}\\lbrack n\\rbrack = \\left( {S^{(r)}\\lbrack n\\rbrack,T^{(r)}\\lbrack n\\rbrack,R^{(r)}\\lbrack n\\rbrack} \\right),} \\\\ \\end{array}$$  
+$$
+\begin{array}{r} {{\mathfrak{C}}_{tn}\lbrack n\rbrack = \left( {S^{(r)}\lbrack n\rbrack,T^{(r)}\lbrack n\rbrack,R^{(r)}\lbrack n\rbrack} \right),} \\ \end{array}
+$$
 
-    $$\\begin{array}{r} {\\mathfrak{D}\_{tn}\\lbrack n\\rbrack = \\left( {S^{(r)}\\lbrack n\\rbrack,T^{(r)\\lbrack n\\rbrack},R^{(r)}\\lbrack n\\rbrack} \\right),} \\\\ \\end{array}$$  
+$$
+\begin{array}{r} {\mathfrak{D}_{tn}\lbrack n\rbrack = \left( {S^{(r)}\lbrack n\rbrack,T^{(r)\lbrack n\rbrack},R^{(r)}\lbrack n\rbrack} \right),} \\ \end{array}
+$$
 
-    和
+和
 
-    $$\\begin{array}{r} {\\Im\_{tn}\\lbrack n\\rbrack = \\left( {S^{(r)}\\lbrack n\\rbrack,T^{(r)\\lbrack n\\rbrack},R^{(r)}\\lbrack n\\rbrack} \\right)} \\\\ \\end{array}$$  
+$$
+\begin{array}{r} {\Im_{tn}\lbrack n\rbrack = \left( {S^{(r)}\lbrack n\rbrack,T^{(r)\lbrack n\rbrack},R^{(r)}\lbrack n\rbrack} \right)} \\ \end{array}
+$$
 
-    分别对应区域 *C*、*D* 和 *I*；
+分别对应区域 *C*、*D* 和 *I*；
 
-*   测试集合 ($n = \\overline{25,34}$)
+* 测试集合 ($n = \overline{25,34}$)
 
-    $$\\begin{array}{r} {{\\mathfrak{C}}\_{ts}\\lbrack n\\rbrack = \\left( {S^{(r)}\\lbrack n\\rbrack,T^{(r)}\\lbrack n\\rbrack,R^{(r)}\\lbrack n\\rbrack} \\right),} \\\\ \\end{array}$$  
+$$
+\begin{array}{r} {{\mathfrak{C}}_{ts}\lbrack n\rbrack = \left( {S^{(r)}\lbrack n\rbrack,T^{(r)}\lbrack n\rbrack,R^{(r)}\lbrack n\rbrack} \right),} \\ \end{array}
+$$
 
-    $$\\begin{array}{r} {\\mathfrak{D}\_{ts}\\lbrack n\\rbrack = \\left( {S^{(r)}\\lbrack n\\rbrack,T^{(r)\\lbrack n\\rbrack},R^{(r)}\\lbrack n\\rbrack} \\right),} \\\\ \\end{array}$$  
+$$
+\begin{array}{r} {\mathfrak{D}_{ts}\lbrack n\rbrack = \left( {S^{(r)}\lbrack n\rbrack,T^{(r)\lbrack n\rbrack},R^{(r)}\lbrack n\rbrack} \right),} \\ \end{array}
+$$
 
-    和
+和
 
-    $$\\begin{array}{r} {\\Im\_{ts}\\lbrack n\\rbrack = \\left( {S^{(r)}\\lbrack n\\rbrack,T^{(r)}\\lbrack n\\rbrack,R^{(r)}\\lbrack n\\rbrack} \\right)} \\\\ \\end{array}$$  
+$$
+\begin{array}{r} {\Im_{ts}\lbrack n\rbrack = \left( {S^{(r)}\lbrack n\rbrack,T^{(r)}\lbrack n\rbrack,R^{(r)}\lbrack n\rbrack} \right)} \\ \end{array}
+$$
 
-    分别对应区域 *C*、*D* 和 *I*。
+分别对应区域 *C*、*D* 和 *I*。
 
 ### 11.4.5 熵随机化 *LDRR* 机器学习
 
@@ -9827,21 +10537,27 @@ Table 11.12: Structural characteristics of LDRR.
 
 可用数据集按 70% 到 30% 的比例分为模型训练和测试。训练过程将分别针对 *LDRR-LA*、*LDRR-T* 和 *LDRR-P* 进行。
 
-为了训练模型，我们使用训练集合的数据 (${\\mathfrak{C}}\_{tn}\\lbrack n\\rbrack,\\,\\mathfrak{D}\_{tn}\\lbrack n\\rbrack,\\,\\Im\_{tn}\\lbrack n\\rbrack,\\,\\, n = \\overline{0,24}$)。
+为了训练模型，我们使用训练集合的数据 (${\mathfrak{C}}_{tn}\lbrack n\rbrack,\, \mathfrak{D}_{tn}\lbrack n\rbrack,\, \Im_{tn}\lbrack n\rbrack,\, \, n = \overline{0,24}$)。
 
 从历史数据我们构造列向量
 
-$$\\begin{aligned} & {\\mathbf{S}\_{(n - p)}^{(r)} = \\left\\{ 1,S^{r}\\lbrack n - 1\\rbrack,\\ldots,S^{(r)}\\lbrack n - p\\rbrack \\right\\},} \\\\ & {\\text{\\quad\\quad}\\mathbf{S}\_{(p)}^{(r)} = \\left\\{ S^{(r)}\\lbrack p\\rbrack,\\ldots,S^{(r)}\\lbrack 24\\rbrack \\right\\},} \\\\ & {\\mathbf{T}\_{(n - p)}^{(r)} = \\left\\{ 1,T^{(r)}\\lbrack n - 1\\rbrack,\\ldots,T^{(r)}\\lbrack n - p\\rbrack \\right\\},} \\\\ & {\\text{\\quad\\quad}\\mathbf{T}\_{(p)}^{(r)} = \\left\\{ T^{(r)}\\lbrack p\\rbrack,\\ldots,T^{(r)}\\lbrack 24\\rbrack \\right\\},} \\\\ \\end{aligned}$$  
+$$
+\begin{aligned} & {\mathbf{S}_{(n - p)}^{(r)} = \left\{ 1,S^{r}\lbrack n - 1\rbrack,\ldots,S^{(r)}\lbrack n - p\rbrack \right\},} \\ & {\text{\quad\quad}\mathbf{S}_{(p)}^{(r)} = \left\{ S^{(r)}\lbrack p\rbrack,\ldots,S^{(r)}\lbrack 24\rbrack \right\},} \\ & {\mathbf{T}_{(n - p)}^{(r)} = \left\{ 1,T^{(r)}\lbrack n - 1\rbrack,\ldots,T^{(r)}\lbrack n - p\rbrack \right\},} \\ & {\text{\quad\quad}\mathbf{T}_{(p)}^{(r)} = \left\{ T^{(r)}\lbrack p\rbrack,\ldots,T^{(r)}\lbrack 24\rbrack \right\},} \\ \end{aligned}
+$$
 
 (11.62)
 
-$$\\begin{aligned} & {\\mathbf{R}\_{(n - p)}^{(r)} = \\left\\{ 1,R^{(r)}\\lbrack n - 1\\rbrack,\\ldots,R^{(r)}\\lbrack n - p\\rbrack \\right\\},} \\\\ & {\\text{\\quad\\quad}\\mathbf{R}\_{(p)}^{(r)} = \\left\\{ R^{(r)}\\lbrack p\\rbrack,\\ldots,R^{(r)}\\lbrack 24\\rbrack \\right\\},} \\\\ & {\\text{\\quad\\quad}\\text{\\quad\\quad}\\text{\\quad\\quad}n = \\overline{p,24},} \\\\ \\end{aligned}$$  
+$$
+\begin{aligned} & {\mathbf{R}_{(n - p)}^{(r)} = \left\{ 1,R^{(r)}\lbrack n - 1\rbrack,\ldots,R^{(r)}\lbrack n - p\rbrack \right\},} \\ & {\text{\quad\quad}\mathbf{R}_{(p)}^{(r)} = \left\{ R^{(r)}\lbrack p\rbrack,\ldots,R^{(r)}\lbrack 24\rbrack \right\},} \\ & {\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}n = \overline{p,24},} \\ \end{aligned}
+$$
 
 (11.63)
 
 以及矩阵
 
-$$\\begin{array}{r} {S\_{p}^{(r)} = \\left( \\begin{array}{l} \\mathbf{S}\_{(0)} \\\\ \\cdots \\\\ \\mathbf{S}\_{(24 - p)} \\\\ \\end{array} \\right),\\quad T\_{p}^{(r)} = \\left( \\begin{array}{l} \\mathbf{T}\_{(0)} \\\\ \\cdots \\\\ \\mathbf{T}\_{(24 - p)} \\\\ \\end{array} \\right),\\quad R\_{p}^{(r)} = \\left( \\begin{array}{l} \\mathbf{R}\_{(0)} \\\\ \\cdots \\\\ \\mathbf{R}\_{(24 - p)} \\\\ \\end{array} \\right).} \\\\ \\end{array}$$  
+$$
+\begin{array}{r} {S_{p}^{(r)} = \left( \begin{array}{l} \mathbf{S}_{(0)} \\ \cdots \\ \mathbf{S}_{(24 - p)} \\ \end{array} \right),\quad T_{p}^{(r)} = \left( \begin{array}{l} \mathbf{T}_{(0)} \\ \cdots \\ \mathbf{T}_{(24 - p)} \\ \end{array} \right),\quad R_{p}^{(r)} = \left( \begin{array}{l} \mathbf{R}_{(0)} \\ \cdots \\ \mathbf{R}_{(24 - p)} \\ \end{array} \right).} \\ \end{array}
+$$
 
 (11.64)
 
@@ -9849,37 +10565,49 @@ $$\\begin{array}{r} {S\_{p}^{(r)} = \\left( \\begin{array}{l} \\mathbf{S}\_{(0)}
 
 我们应用随机化机器学习方法（参见第 3 节）来估计模型参数和测量噪声的 PDF。*LDRR-LA* 的 ERML 算法形式为
 
-$$\\begin{aligned} & {\\mathcal{H}\\lbrack P(\\mathbf{a},Q(\\xi)\\rbrack = - {\\int\_{\\mathcal{A}}\\,}P(\\mathbf{a})\\,\\ln P(\\mathbf{a})\\, d\\mathbf{a} -} \\\\ & \\left. {\\sum\\limits\_{n = p}^{24}{\\int\_{\\Xi\_{n}}\\,}}Q\_{n}(\\xi\\lbrack n\\rbrack)\\,\\ln Q\_{n}(\\xi\\lbrack n\\rbrack)\\, d\\xi\\lbrack n\\rbrack\\Rightarrow\\max \\right. \\\\ \\end{aligned}$$  
+$$
+\begin{aligned} & {\mathcal{H}\lbrack P(\mathbf{a},Q(\xi)\rbrack = - {\int_{\mathcal{A}}\,}P(\mathbf{a})\,\ln P(\mathbf{a})\, d\mathbf{a} -} \\ & \left. {\sum\limits_{n = p}^{24}{\int_{\Xi_{n}}\,}}Q_{n}(\xi\lbrack n\rbrack)\,\ln Q_{n}(\xi\lbrack n\rbrack)\, d\xi\lbrack n\rbrack\Rightarrow\max \right. \\ \end{aligned}
+$$
 
 (11.65)
 
 受约束条件限制
 
-$$\\begin{aligned} {{\\int\_{\\mathcal{A}}P}(\\mathbf{a})\\, d\\mathbf{a} = 1,} & {\\quad{\\int\_{\\Xi\_{n}}Q\_{n}}(\\xi\\lbrack n\\rbrack)\\, d\\xi\\lbrack n\\rbrack = 1,} \\\\ {{\\int\_{\\mathcal{A}}P}(\\mathbf{a})D\_{(n - p)}^{(r)}\\,\\mathbf{a}\\, d\\mathbf{a} +} & {{\\int\_{\\Xi\_{n}}Q}(\\xi\\lbrack n\\rbrack)\\xi\\lbrack n\\rbrack\\, d\\xi\\lbrack n\\rbrack = S^{(r)}\\lbrack n\\rbrack,} \\\\ & {\\text{\\quad\\quad}n = \\overline{p,24},} \\\\ \\end{aligned}$$  
+$$
+\begin{aligned} {{\int_{\mathcal{A}}P}(\mathbf{a})\, d\mathbf{a} = 1,} & {\quad{\int_{\Xi_{n}}Q_{n}}(\xi\lbrack n\rbrack)\, d\xi\lbrack n\rbrack = 1,} \\ {{\int_{\mathcal{A}}P}(\mathbf{a})D_{(n - p)}^{(r)}\,\mathbf{a}\, d\mathbf{a} +} & {{\int_{\Xi_{n}}Q}(\xi\lbrack n\rbrack)\xi\lbrack n\rbrack\, d\xi\lbrack n\rbrack = S^{(r)}\lbrack n\rbrack,} \\ & {\text{\quad\quad}n = \overline{p,24},} \\ \end{aligned}
+$$
 
 (11.66)
 
 带块矩阵
 
-$$\\begin{array}{r} {D\_{(n - p)}^{(r)} = \\left\\lbrack {\\mathbf{S}\_{(n - p)}^{(r)},\\, T\_{(p)}^{(r)}\\lbrack n\\rbrack,\\, R\_{(p)}^{(r)}\\lbrack n\\rbrack} \\right\\rbrack.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r} {D_{(n - p)}^{(r)} = \left\lbrack {\mathbf{S}_{(n - p)}^{(r)},\, T_{(p)}^{(r)}\lbrack n\rbrack,\, R_{(p)}^{(r)}\lbrack n\rbrack} \right\rbrack.} \\ \end{array}
+$$
 
 (11.67)
 
 该问题的解，以拉格朗日乘子 *θ* = {*θ*[*p*],…,*θ*[24]} 为参数，给出为
 
-$$\\begin{aligned} & {P^{\*}(\\mathbf{a},\\theta) = \\frac{\\exp\\left( {- \\left\\langle \\theta,D\_{(n - p)}^{(r)}\\,\\mathbf{a} \\right\\rangle} \\right)}{\\mathcal{P}(\\theta)},} \\\\ & {\\mathcal{P}(\\theta) = {\\int\_{\\mathcal{A}}\\exp}\\left( {- \\left\\langle \\theta,D\_{(n - p)}^{(r)}\\,\\mathbf{a} \\right\\rangle} \\right)\\, d\\mathbf{a}.} \\\\ \\end{aligned}$$  
+$$
+\begin{aligned} & {P^{\*}(\mathbf{a},\theta) = \frac{\exp\left( {- \left\langle \theta,D_{(n - p)}^{(r)}\,\mathbf{a} \right\rangle} \right)}{\mathcal{P}(\theta)},} \\ & {\mathcal{P}(\theta) = {\int_{\mathcal{A}}\exp}\left( {- \left\langle \theta,D_{(n - p)}^{(r)}\,\mathbf{a} \right\rangle} \right)\, d\mathbf{a}.} \\ \end{aligned}
+$$
 
 (11.68)
 
 *LDRR-LA* 的测量噪声具有熵最优 PDF
 
-$$\\begin{aligned} & {Q\_{n}^{\*}(\\xi\\lbrack n\\rbrack,\\theta\_{n}) = \\frac{\\exp( - \\xi\\lbrack n\\rbrack\\theta\_{n})}{\\mathcal{Q}\_{n}(\\theta\_{n})},} \\\\ & {\\mathcal{Q}\_{n}(\\theta\_{n}) = {\\int\_{\\Xi\_{n}}\\exp}( - \\xi\\lbrack n\\rbrack\\,\\theta\_{n})d\\,\\xi\\lbrack n\\rbrack.} \\\\ \\end{aligned}$$  
+$$
+\begin{aligned} & {Q_{n}^{\*}(\xi\lbrack n\rbrack,\theta_{n}) = \frac{\exp( - \xi\lbrack n\rbrack\theta_{n})}{\mathcal{Q}_{n}(\theta_{n})},} \\ & {\mathcal{Q}_{n}(\theta_{n}) = {\int_{\Xi_{n}}\exp}( - \xi\lbrack n\rbrack\,\theta_{n})d\,\xi\lbrack n\rbrack.} \\ \end{aligned}
+$$
 
 (11.69)
 
 拉格朗日乘子 *θ* 由方程组计算得出
 
-$$\\begin{aligned} {\\mathcal{P}^{- 1}(\\theta)\\int\_{\\mathcal{A}}\\exp} & {\\left( {- \\left\\langle \\theta,D\_{(n - p)}^{(r)}\\,\\mathbf{a} \\right\\rangle} \\right)\\, D\_{(n - p)}^{(r)}\\mathbf{a}\\, d\\,\\mathbf{a} +} \\\\ {+ \\mathcal{Q}\_{n}^{- 1}(\\theta)\\int\_{\\Xi}} & {\\exp( - \\xi\\lbrack n\\rbrack\\,\\theta\_{n})\\, d\\xi\\lbrack n\\rbrack = S^{(r)}\\lbrack n\\rbrack,} \\\\ & {\\quad n = \\overline{p,24}.} \\\\ \\end{aligned}$$  
+$$
+\begin{aligned} {\mathcal{P}^{- 1}(\theta)\int_{\mathcal{A}}\exp} & {\left( {- \left\langle \theta,D_{(n - p)}^{(r)}\,\mathbf{a} \right\rangle} \right)\, D_{(n - p)}^{(r)}\mathbf{a}\, d\,\mathbf{a} +} \\ {+ \mathcal{Q}_{n}^{- 1}(\theta)\int_{\Xi}} & {\exp( - \xi\lbrack n\rbrack\,\theta_{n})\, d\xi\lbrack n\rbrack = S^{(r)}\lbrack n\rbrack,} \\ & {\quad n = \overline{p,24}.} \\ \end{aligned}
+$$
 
 (11.70)
 
@@ -9887,7 +10615,9 @@ $$\\begin{aligned} {\\mathcal{P}^{- 1}(\\theta)\\int\_{\\mathcal{A}}\\exp} & {\\
 
 将 ERML 算法适配到 *LDRR-T*，我们得到以下优化问题：
 
-$$\\begin{aligned} & {\\mathcal{H}\\lbrack W(\\mathbf{b},\\mu),E(\\eta)\\rbrack = - {\\int\_{\\mathcal{B}{\\cap \\mathcal{M}}}\\,}W(\\mathbf{b},\\mu)\\,\\ln W(\\mathbf{b},\\mu)\\, d\\mathbf{b}\\, d\\mu -} \\\\ & \\left. \\text{\\quad\\quad} - {\\sum\\limits\_{n = p}^{24}{\\int\_{\\mathcal{E}\_{n}}\\,}}E\_{n}(\\eta\\lbrack n\\rbrack)\\,\\ln E\_{n}(\\eta\\lbrack n\\rbrack)\\, d\\eta\\lbrack n\\rbrack\\Rightarrow\\max \\right. \\\\ \\end{aligned}$$  
+$$
+\begin{aligned} & {\mathcal{H}\lbrack W(\mathbf{b},\mu),E(\eta)\rbrack = - {\int_{\mathcal{B}{\cap \mathcal{M}}}\,}W(\mathbf{b},\mu)\,\ln W(\mathbf{b},\mu)\, d\mathbf{b}\, d\mu -} \\ & \left. \text{\quad\quad} - {\sum\limits_{n = p}^{24}{\int_{\mathcal{E}_{n}}\,}}E_{n}(\eta\lbrack n\rbrack)\,\ln E_{n}(\eta\lbrack n\rbrack)\, d\eta\lbrack n\rbrack\Rightarrow\max \right. \\ \end{aligned}
+$$
 
 (11.71)
 
@@ -9895,34 +10625,108 @@ $$\\begin{aligned} & {\\mathcal{H}\\lbrack W(\\mathbf{b},\\mu),E(\\eta)\\rbrack 
 
 
 
+$$
+\begin{aligned}
+& {{\int_{\mathcal{B}\cap \mathcal{M}}}W}(\mathbf{b},\mu)\, d\mathbf{b}d\mu = 1,\quad{\int_{\mathcal{E}_{n}}E_{n}}(\eta\lbrack n\rbrack)\, d\,\eta\lbrack n\rbrack = 1,}
+\\
+& {\text{\quad\quad}{\int_{\mathcal{B}\cap \mathcal{M}}}\,}W(\mathbf{b},\mu)\left\lbrack {T_{(n - p)}^{(r)}\mathbf{b} + \mu\lbrack n\rbrack} \right\rbrack\, d\,\mathbf{b}\, d\,\mu\lbrack n\rbrack +}
+\\
+& {\text{\quad\quad}\quad + {\int_{\mathcal{E}_{n}}E_{n}}(\eta\lbrack n\rbrack)\eta\lbrack n\rbrack\, d\,\eta\lbrack n\rbrack = T^{(r)}\lbrack n\rbrack,}
+\\
+& {\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}n = \overline{p,24}.}
+\\
+\end{aligned}
+$$
 
-
-$$\\begin{aligned} & {{\\int\_{\\mathcal{B}{\\cap \\mathcal{M}}}W}(\\mathbf{b},\\mu)\\, d\\mathbf{b}d\\mu = 1,\\quad{\\int\_{\\mathcal{E}\_{n}}E\_{n}}(\\eta\\lbrack n\\rbrack)\\, d\\,\\eta\\lbrack n\\rbrack = 1,} \\\\ & {\\text{\\quad\\quad}{\\int\_{\\mathcal{B}{\\cap \\mathcal{M}}}\\,}W(\\mathbf{b},\\mu)\\left\\lbrack {T\_{(n - p)}^{(r)}\\mathbf{b} + \\mu\\lbrack n\\rbrack} \\right\\rbrack\\, d\\,\\mathbf{b}\\, d\\,\\mu\\lbrack n\\rbrack +} \\\\ & {\\text{\\quad\\quad}\\quad + {\\int\_{\\mathcal{E}\_{n}}E\_{n}}(\\eta\\lbrack n\\rbrack)\\eta\\lbrack n\\rbrack\\, d\\,\\eta\\lbrack n\\rbrack = T^{(r)}\\lbrack n\\rbrack,} \\\\ & {\\text{\\quad\\quad}\\text{\\quad\\quad}\\text{\\quad\\quad}\\text{\\quad\\quad}n = \\overline{p,24}.} \\\\ \\end{aligned}$$  
 (11.72)
 
 表达式 (11.4.5.2, 11.4.5.2) 包含了向量 *μ* = {*μ*\[*p*\],…,*μ*\[24\]}。
 
 令 *ϑ* = {*ϑ*[*p*],…,*ϑ*[7 + *p*]} 为该问题的拉格朗日乘子。该线性模型具有随机参数和输入上的辅助随机序列。因此该问题的解，表示最优 PDF，可写为
 
-$$\\begin{aligned} {W^{\*}(\\mathbf{b},\\mu,\\vartheta) =} & {L^{\*}(\\mathbf{b},\\vartheta)\\, M^{\*}(\\mu,\\vartheta),\\quad M^{\*}(\\mu,\\vartheta) = {\\prod\\limits\_{n = p}^{24}M\_{n}^{\*}}(\\mu\\lbrack n\\rbrack,\\vartheta\_{n})} \\\\ & {\\quad L^{\*}(\\mathbf{b},\\vartheta) = \\frac{\\exp\\left( {- \\left\\langle \\vartheta,T\_{(n - p)}^{(r)}\\,\\mathbf{b} \\right\\rangle} \\right)}{\\mathcal{L}(\\vartheta)},} \\\\ & {\\quad\\mathcal{L}(\\vartheta) = {\\int\_{\\mathcal{B}}\\exp}\\left( {- \\left\\langle \\vartheta,T\_{(n - p)}^{(r)}\\,\\mathbf{b} \\right\\rangle} \\right)\\, d\\,\\mathbf{b},} \\\\ & {\\quad M\_{n}^{\*}(\\mu\\lbrack n\\rbrack,\\,\\vartheta\_{n}) = \\mathbb{M}\_{n}^{- 1}(\\vartheta\_{n})\\exp\\left( {- \\vartheta\_{n}\\mu\\lbrack n\\rbrack} \\right),} \\\\ & {\\quad\\mathbb{M}\_{n}(\\vartheta\_{n}) = {\\int\_{\\mathcal{M}\_{n}}\\,}\\exp\\left( {- \\vartheta\_{n}\\mu\\lbrack n\\rbrack} \\right)d\\,\\mu\\lbrack n\\rbrack,} \\\\ & {\\quad E\_{n}^{\*}(\\eta\\lbrack n\\rbrack,\\vartheta\_{n}) = \\mathbb{E}\_{n}^{- 1}(\\vartheta\_{n})\\exp\\left( {- \\eta\\lbrack n\\rbrack\\,\\vartheta\_{n}} \\right),} \\\\ & {\\quad\\mathbb{E}\_{n}(\\vartheta\_{n}) = {\\int\_{\\mathcal{E}\_{n}}\\exp}\\left( {- \\eta\\lbrack n\\rbrack\\,\\vartheta\_{n}} \\right)d\\,\\eta\\lbrack n\\rbrack,} \\\\ \\end{aligned}$$  
+$$
+\begin{aligned}
+{W^{*}\mathbf{b},\mu,\vartheta) =} & {L^{*}\mathbf{b},\vartheta)\, M^{*}\mu,\vartheta),\quad M^{*}\mu,\vartheta) = {\prod\limits_{n = p}^{24}M_{n}^{*}\mu\lbrack n\rbrack,\vartheta_{n})}
+\\
+& {\quad L^{*}\mathbf{b},\vartheta) = \frac{\exp\left( {- \left\langle \vartheta,T_{(n - p)}^{(r)}\,\mathbf{b} \right\rangle} \right)}{\mathcal{L}\vartheta)},}
+\\
+& {\quad\mathcal{L}\vartheta) = {\int_{\mathcal{B}}\exp}\left( {- \left\langle \vartheta,T_{(n - p)}^{(r)}\,\mathbf{b} \right\rangle} \right)\, d\,\mathbf{b},}
+\\
+& {\quad M_{n}^{*}\mu\lbrack n\rbrack,\,\vartheta_{n}) = \mathbb{M}_{n}^{- 1}\vartheta_{n})\exp\left( {- \vartheta_{n}\mu\lbrack n\rbrack} \right),}
+\\
+& {\quad\mathbb{M}_{n}\vartheta_{n}) = {\int_{\mathcal{M}_{n}}}\,}\exp\left( {- \vartheta_{n}\mu\lbrack n\rbrack} \right)d\,\mu\lbrack n\rbrack,}
+\\
+& {\quad E_{n}^{*}\eta\lbrack n\rbrack,\vartheta_{n}) = \mathbb{E}_{n}^{- 1}\vartheta_{n})\exp\left( {- \eta\lbrack n\rbrack\,\vartheta_{n}} \right),}
+\\
+& {\quad\mathbb{E}_{n}\vartheta_{n}) = {\int_{\mathcal{E}_{n}}\exp}\left( {- \eta\lbrack n\rbrack\,\vartheta_{n}} \right)d\,\eta\lbrack n\rbrack,}
+\\
+\end{aligned}
+$$
+
 (11.73)
 
 其中拉格朗日乘子 *ϑ* 满足方程组
 
-$$\\begin{aligned} & {\\text{\\quad\\quad}\\mathcal{L}^{- 1}(\\vartheta)\\,{\\int\_{\\mathcal{B}}\\,}\\exp\\left( {- \\left\\langle \\vartheta,T\_{(n - p)}^{(r)}\\,\\mathbf{b} \\right\\rangle} \\right)T\_{(n - p)}^{(r)}\\,\\mathbf{b}\\, d\\mathbf{b} +} \\\\ & {\\quad\\text{\\quad\\quad} + \\mathbb{M}\_{n}^{- 1}(\\vartheta\_{n}){\\int\_{\\mathcal{M}\_{n}}M\_{n}^{\*}}(\\mu\\lbrack n\\rbrack,\\,\\vartheta\_{n})\\,\\mu\\lbrack n\\rbrack d\\mu\\lbrack n\\rbrack +} \\\\ & {+ \\mathbb{E}\_{n}^{- 1}(\\vartheta\_{n}){\\int\_{\\mathcal{E}\_{n}}E\_{n}^{\*}}(\\eta\\lbrack n\\rbrack,\\vartheta\_{n})\\,\\eta\\lbrack n\\rbrack d\\eta\\lbrack n\\rbrack = T^{(r)}\\lbrack n\\rbrack,} \\\\ & {\\text{\\quad\\quad}\\text{\\quad\\quad}\\text{\\quad\\quad}\\quad\\text{\\quad\\quad}n = \\overline{p,24}.} \\\\ \\end{aligned}$$  
+$$
+\begin{aligned}
+& {\text{\quad\quad}\mathcal{L}^{- 1}\vartheta)\,{{\int_{\mathcal{B}}}\,}\exp\left( {- \left\langle \vartheta,T_{(n - p)}^{(r)}\,\mathbf{b} \right\rangle} \right)T_{(n - p)}^{(r)}\,\mathbf{b}\, d\mathbf{b} +}
+\\
+& {\quad\text{\quad\quad} + \mathbb{M}_{n}^{- 1}\vartheta_{n}){{\int_{\mathcal{M}_{n}}M_{n}^{*}\mu\lbrack n\rbrack,\,\vartheta_{n})\,}\mu\lbrack n\rbrack d\mu\lbrack n\rbrack +}
+\\
+& {+ \mathbb{E}_{n}^{- 1}\vartheta_{n}){{\int_{\mathcal{E}_{n}}E_{n}^{*}\eta\lbrack n\rbrack,\vartheta_{n})\,}\eta\lbrack n\rbrack d\eta\lbrack n\rbrack = T^{(r)}\lbrack n\rbrack,}
+\\
+& {\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}n = \overline{p,24}.}
+\\
+\end{aligned}
+$$
+
 (11.74)
 
 对于 `LDRR-P`，`RML` 算法的形式类似于 (11.4.5.2, 11.4.5.2)：
 
-$$\\begin{aligned} {F^{\*}(\\mathbf{c},\\zeta,\\lambda) =} & {V^{\*}(\\mathbf{c},\\lambda)\\, Z^{\*}(\\zeta,\\lambda),\\quad Z^{\*}(\\zeta,\\lambda) = {\\prod\\limits\_{n = p}^{24}Z\_{n}^{\*}}(\\zeta\\lbrack n\\rbrack,\\lambda\_{n}),} \\\\ & {V^{\*}(\\mathbf{c},\\lambda) = \\frac{\\exp\\left( {- \\left\\langle \\lambda,R\_{(n - p)}^{(r)}\\,\\mathbf{c} \\right\\rangle} \\right)}{\\mathcal{V}(\\lambda)},} \\\\ & {\\mathcal{V}(\\lambda) = {\\int\_{\\mathcal{C}}\\exp}\\left( {- \\left\\langle \\lambda,R\_{(n - p)}^{(r)}\\,\\mathbf{c} \\right\\rangle} \\right)\\, d\\,\\mathbf{c},} \\\\ & {Z\_{n}^{\*}(\\zeta\\lbrack n\\rbrack,\\lambda\_{n}) = {\\mathbb{Z}}\_{n}^{- 1}(\\lambda\_{n})\\exp\\left( {- \\lambda\_{n}\\,\\zeta\\lbrack n\\rbrack} \\right),} \\\\ & {{\\mathbb{Z}}\_{n}(\\lambda\_{n}) = {\\int\_{\\mathcal{Z}\_{n}}\\,}\\exp\\left( {- \\lambda\_{n}\\,\\zeta\\lbrack n\\rbrack} \\right)d\\,\\zeta\\lbrack n\\rbrack,} \\\\ & {G\_{n}^{\*}(\\chi\\lbrack n\\rbrack,\\lambda\_{n}) = \\mathbb{G}\_{n}^{- 1}(\\lambda)\\exp\\left( {- \\chi\\lbrack n\\rbrack\\lambda\_{n}} \\right),} \\\\ \\end{aligned}$$  
+$$
+\begin{aligned}
+{F^{*}\mathbf{c},\zeta,\lambda) =} & {V^{*}\mathbf{c},\lambda)\, Z^{*}\zeta,\lambda),\quad Z^{*}\zeta,\lambda) = {\prod\limits_{n = p}^{24}Z_{n}^{*}\zeta\lbrack n\rbrack,\lambda_{n})}
+\\
+& {V^{*}\mathbf{c},\lambda) = \frac{\exp\left( {- \left\langle \lambda,R_{(n - p)}^{(r)}\,\mathbf{c} \right\rangle} \right)}{\mathcal{V}\lambda)},}
+\\
+& {\mathcal{V}\lambda) = {\int_{\mathcal{C}}\exp}\left( {- \left\langle \lambda,R_{(n - p)}^{(r)}\,\mathbf{c} \right\rangle} \right)\, d\,\mathbf{c},}
+\\
+& {Z_{n}^{*}\zeta\lbrack n\rbrack,\lambda_{n}) = {\mathbb{Z}}_{n}^{- 1}\lambda_{n})\exp\left( {- \lambda_{n}\,\zeta\lbrack n\rbrack} \right),}
+\\
+& {{\mathbb{Z}}_{n}\lambda_{n}) = {\int_{\mathcal{Z}_{n}}}\,}\exp\left( {- \lambda_{n}\,\zeta\lbrack n\rbrack} \right)d\,\zeta\lbrack n\rbrack,}
+\\
+& {G_{n}^{*}\chi\lbrack n\rbrack,\lambda_{n}) = \mathbb{G}_{n}^{- 1}\lambda)\exp\left( {- \chi\lbrack n\rbrack\lambda_{n}} \right),}
+\\
+\end{aligned}
+$$
+
 (11.75)
 
-$$\\begin{aligned} & {\\mathbb{G}\_{n}(\\lambda\_{n}) = {\\int\_{\\mathcal{G}\_{n}}\\exp}\\left( {- \\chi\\lbrack n\\rbrack\\,\\lambda\_{n}} \\right)d\\,\\chi\\lbrack n\\rbrack,} \\\\ \\end{aligned}$$  
+$$
+\begin{aligned}
+& {{\mathbb{G}}_{n}\lambda_{n}) = {\int_{\mathcal{G}_{n}}\exp}\left( {- \chi\lbrack n\rbrack\,\lambda_{n}} \right)d\,\chi\lbrack n\rbrack,}
+\\
+\end{aligned}
+$$
+
 (11.76)
 
 其中拉格朗日乘子 *λ* = {*λ*[*p*],…,*λ*[24]} 由方程组确定
 
-$$\\begin{array}{r} {\\text{\\quad\\quad}\\mathcal{V}^{- 1}(\\lambda)\\,{\\int\_{\\mathcal{C}}\\,}\\exp\\left( {- \\left\\langle \\lambda,R\_{(n - p)}^{(r)}\\,\\mathbf{c} \\right\\rangle} \\right)\\, R\_{(n - p)}^{(r)}\\,\\mathbf{c}\\, d\\mathbf{c} +} \\\\ {\\text{\\quad\\quad}\\text{\\quad\\quad}{\\mathbb{Z}}\_{n}^{- 1}(\\lambda\_{n}){\\int\_{\\mathcal{Z}\_{n}}Z\_{n}^{\*}}(\\zeta\\lbrack n\\rbrack,\\lambda\_{n})\\,\\zeta\\lbrack n\\rbrack d\\zeta\\lbrack n\\rbrack +} \\\\ {+ \\mathbb{G}\_{n}^{- 1}(\\lambda\_{n}){\\int\_{\\mathcal{G}\_{n}}G\_{n}^{\*}}(\\chi\\lbrack n\\rbrack,\\lambda\_{n})\\,\\chi\\lbrack n\\rbrack\\, d\\chi\\lbrack n\\rbrack = R^{(r)}\\lbrack n\\rbrack,} \\\\ {\\text{\\quad\\quad}\\text{\\quad\\quad}\\text{\\quad\\quad}\\text{\\quad\\quad}\\text{\\quad\\quad}n = \\overline{p,24}.} \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+{\text{\quad\quad}\mathcal{V}^{- 1}\lambda)\,{{\int_{\mathcal{C}}}\,}\exp\left( {- \left\langle \lambda,R_{(n - p)}^{(r)}\,\mathbf{c} \right\rangle} \right)\, R_{(n - p)}^{(r)}\,\mathbf{c}\, d\mathbf{c} +}
+\\
+{\text{\quad\quad}\text{\quad\quad}{{\mathbb{Z}}}_{n}^{- 1}\lambda_{n}){{\int_{\mathcal{Z}_{n}}Z_{n}^{*}\zeta\lbrack n\rbrack,\lambda_{n})\,}\zeta\lbrack n\rbrack d\zeta\lbrack n\rbrack +}
+\\
+{+ \mathbb{G}_{n}^{- 1}\lambda_{n}){{\int_{\mathcal{G}_{n}}G_{n}^{*}\chi\lbrack n\rbrack,\lambda_{n})\,}\chi\lbrack n\rbrack\, d\chi\lbrack n\rbrack = R^{(r)}\lbrack n\rbrack,}
+\\
+{\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}n = \overline{p,24}.}
+\\
+\end{array}
+$$
+
 (11.77)
 
 根据 (11.4.5.2, 11.4.5.2, 11.4.5.2, 11.4.5.2)，熵最优 PDF 属于由相应拉格朗日乘子参数化的指数类，这些乘子由平衡方程 (11.4.5.2, 11.4.5.2, 11.4.5.2) 给出。
@@ -9930,9 +10734,11 @@ $$\\begin{array}{r} {\\text{\\quad\\quad}\\mathcal{V}^{- 1}(\\lambda)\\,{\\int\_
 算法 2 和 3 旨在计算平衡方程的残差并恢复熵最优 PDF。
 
 ![Algorithm 2 Residual for balance equations.](img/comp11_2.jpg)
+
 Algorithm 2 Residual for balance equations.
 
 ![Algorithm 3 Restoration of entropy-optimal PDFs.](img/comp11_3.jpg)
+
 Algorithm 3 Restoration of entropy-optimal PDFs.
 
 ### 11.4.6 Testing procedure, data and accuracy estimates
@@ -9940,12 +10746,15 @@ Algorithm 3 Restoration of entropy-optimal PDFs.
 测试程序应用于以下训练模型的组合：
 
 * `LDRR-LA`，测试集合 ℭ[*t**s*]\[*n*\]、 𝔇[*t**s*]\[*n*\]、 ℑ[*t**s*]\[*n*\]；
+
 * `LDRR-T`，使用测试集合中的 `T`^((*r*))\[*n*\]；
+
 * `LDRR-P`，使用测试集合中的 `R`^((*r*))\[*n*\]。
 
 测试 `LDRR-LA` 时，使用测试集合的所有分量，模型通过采样其参数和测量噪声的熵最优 PDF 生成输出集合（湖泊面积的值）。
 
 ![Algorithm 4 Sampling algorithm for PDFs.](img/comp11_4.jpg)
+
 Algorithm 4 Sampling algorithm for PDFs.
 
 测试训练好的 `LDRR-T` 和 `LDRR-P` 模型时，仅使用测试集合中的温度和降水数据。这些模型通过采样其参数和输入序列的熵最优 PDF 生成相应输出的集合，用于温度和降水。
@@ -9954,17 +10763,24 @@ Algorithm 4 Sampling algorithm for PDFs.
 
 * —绝对均方误差（以自然单位计）
 
-$$\\begin{array}{r} {AbsErr = \\Delta = \\sqrt{\\frac{1}{10}{\\sum\\limits\_{n = 25}^{34}\\left( {\\bullet^{(r)}\\lbrack n\\rbrack - \\hat{\\bullet}\\lbrack n\\rbrack} \\right)^{2}}};} \\\\ \\end{array}$$  
+$$
+\begin{array}{r}
+{AbsErr = \Delta = \sqrt{\frac{1}{10}{\sum\limits_{n = 25}^{34}\left( {\bullet^{(r)}\lbrack n\rbrack - \hat{\bullet}\lbrack n\rbrack} \right)^{2}}};}
+\\
+\end{array}
+$$
+
 (11.78)
 
 * —相对均方误差
 
-
-
-
-
 $$
-\begin{aligned} {RelErr =} & {\frac{\Delta}{\Delta_{1} + \Delta_{2}},} \\ {\Delta_{1} = \sqrt{\frac{1}{10}{\sum\limits_{n = 25}^{34}{( \bullet^{(r)}\lbrack n\rbrack)}^{2}}},} & {\Delta_{2} = \sqrt{\frac{1}{10}{\sum\limits_{n = 25}^{34}{(\hat{\bullet}\lbrack n\rbrack)}^{2}}}.} \\ \end{aligned}
+\begin{aligned}
+{RelErr =} & {\frac{\Delta}{\Delta_{1} + \Delta_{2}},}
+\\
+{\Delta_{1} = \sqrt{\frac{1}{10}{\sum\limits_{n = 25}^{34}{( \bullet^{(r)}\lbrack n\rbrack)}^{2}}},} & {\Delta_{2} = \sqrt{\frac{1}{10}{\sum\limits_{n = 25}^{34}{(\hat{\bullet}\lbrack n\rbrack)}^{2}}}.}
+\\
+\end{aligned}
 $$
 
 (11.79)
@@ -9974,7 +10790,9 @@ $$
 热喀斯特湖面积的时间演化在超过可用面积和气候参数数据的时间间隔的时间间隔上进行预测。在所考虑的情况下，每个预测间隔的开始都指 2008 年。我们考虑以下三个时间间隔：
 
 * —短期，2008 年至 2013 年之间（$n = \overline{35,40}$）；
+
 * —中期，2008 年至 2018 年之间（$n = \overline{35,45}$）；
+
 * —长期，2008 年至 2023 年之间（$n = \overline{35,50}$）。
 
 热喀斯特湖面积的时间演化使用训练好的随机化模型的组合（见 Fig. 11.13）在上述指定的预测间隔上进行预测。该组合中的模型以其参数的熵最优 PDF、辅助随机序列和测量噪声为特征。测量噪声的 PDF 在训练间隔上的时间瞬间是不同的：它们取决于时间瞬间和相应的拉格朗日乘子。例如，*LDRR-LA* 的测量噪声具有 PDF $Q_{n}^{\*}(\xi\lbrack n\rbrack,\theta_{n}),\, n = \overline{0,34}.$ 对于预测过程，我们应用对拉格朗日乘子取平均的 PDF。
@@ -9982,7 +10800,9 @@ $$
 好吧，复合模型的块由以下 PDF 表征：
 
 * 对于 *LDRR-LA*，$P^{*}(a)$ 和 $Q^{*}(\xi,\overline{\theta}),\,\,\overline{\theta} = \frac{1}{34 - p}{\sum\limits_{n = p}^{34}\theta_{n}}$；
+
 * 对于 *LDRR-T*，$L^{*}(b)$，$M^{*}(\mu,\overline{\vartheta})$，和 $E^{*}(\eta,\overline{\vartheta}),\,\overline{\vartheta} = \frac{1}{34 - p}{\sum\limits_{n = p}^{34}\vartheta_{n}}$；
+
 * 对于 *LDRR-P*，$V^{*}(c)$，$Z^{*}(\zeta,\overline{\lambda})$，和 $G^{*}(\chi,\overline{\lambda}),\,\overline{\lambda} = \frac{1}{34 - p}{\sum\limits_{n = p}^{34}\lambda_{n}}.$
 
 这些 PDF 在相应的预测间隔上采样，并且通过蒙特卡洛模拟生成轨迹（湖泊面积变化）的预测集合。
@@ -9991,13 +10811,15 @@ $$
 
 #### 11.4.8.1 随机化训练（1973–1997）
 
+
+
 使用 ERML，我们找到了模型参数、辅助随机序列和测量噪声的熵最优 PDF。后者的 PDF 由拉格朗日乘子参数化。
 
 *LDRR-LA* 相应的参数化 PDF 的解析表达式由 (11.4.5.2, 11.4.5.2) 给出。由于 *LDRR-LA* 是线性的，这些 PDF 属于指数类：
 
-$$
+```
 \begin{aligned} {P^{*}(a,\theta) =} & {{\prod\limits_{k = 0}^{(p + 2)}P_{k}^{*}}\left( a_{k} \right),\,\, P_{k}^{*}(a_{k}) = \frac{\exp( - q_{k}\\, a_{k})}{\mathcal{P}_{k}},} \\ & {\mathcal{P}_{k} = \int_{\mathcal{A}_{k}}\,\exp( - q_{k}\\, a_{k})\, da_{k},} \\ {q_{0} = \sum_{n = p}^{24}\,\theta_{n},} & {q_{k} = \sum_{n = p}^{24}\,\theta_{n}\, S^{(r)}\lbrack n - k\rbrack,\quad k = \overline{1,p},} \\ {q_{p + 1} = \sum_{n = p}^{24}} & {\theta_{n}\, T^{(r)}\lbrack n\rbrack,\,\, q_{p + 2} = \sum_{n = p}^{24}\,\theta_{n}\, R^{(r)}\lbrack n\rbrack,} \\ {Q^{*}(\xi,\overline{\theta}) = \frac{\exp( - \overline{\theta}\,\xi)}{\mathcal{Q}},} & {\mathcal{Q} = \int_{\Xi}\,\exp( - \overline{\theta}\,\xi)\, d\,\xi,\,\,\overline{\theta} = \frac{q_{0}}{24 - p}.} \\ \end{aligned}
-$$
+```
 
 (11.80)
 
@@ -10031,9 +10853,9 @@ Figure 11.14: 重建的 PDF 示例。
 
 *LDRR-T* 相应的 PDF 的解析表达式由 (11.4.5.2, 11.4.5.2) 给出。由于模型的线性，我们有：
 
-$$
+```
 \begin{aligned} & {W^{*}(b,\mu,\vartheta) = L^{*}(b,\vartheta)\, M^{*}(\mu,\vartheta),\,\, M^{*}(\mu,\vartheta) = {\prod\limits_{n = p}^{(24)}M_{n}^{*}}(\mu\lbrack n\rbrack,\vartheta_{n}),} \\ & {\text{\quad\quad}\text{\quad\quad}L^{*}(b,\vartheta) = {\prod\limits_{k = 0}^{p}L_{k}^{*}}\left( b_{k} \right),\,\, L_{k}^{*}(b_{k}) = \frac{\exp( - w_{k}\, b_{k})}{\mathcal{L}_{k}},} \\ & {\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\mathcal{L}_{k} = {\int_{\mathcal{B}_{k}}\,}\exp( - w_{k}\, b_{k})\, db_{k},} \\ & {\text{\quad\quad}\text{\quad\quad}w_{0} = {\sum\limits_{n = p}^{24}\,}\vartheta_{n},\,\, w_{k} = {\sum\limits_{n = p}^{24}\,}\vartheta_{n}\, T^{(r)}\lbrack n - k\rbrack,\quad k = \overline{1,p},} \\ & {M_{n}^{*}(\mu\lbrack n\rbrack,\vartheta_{n}) = \frac{\exp( - \vartheta_{n}\,\mu\lbrack n\rbrack)}{\mathfrak{M}_{n}},\quad\mathfrak{M}_{n} = {\int_{\mathcal{M}_{n}}\exp}( - \vartheta_{n}\,\mu\lbrack n\rbrack)\, d\mu\lbrack n\rbrack,} \\ & {\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}E^{*}(\eta,\overline{\vartheta}) = \frac{\exp( - \overline{\vartheta}\,\eta)}{\mathfrak{E}},} \\ & {\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\mathfrak{E} = {\int_{\mathcal{E}}\,}\exp( - \overline{\vartheta}\,\eta)\, d\,\eta,\,\,\overline{\vartheta} = \frac{w_{0}}{24 - p}.} \\ \end{aligned}
-$$
+```
 
 (11.81)
 
@@ -10053,11 +10875,9 @@ Table 11.14: *LDRR-T*: PDF 参数值。
 
 *LDRR-P* 相应的 PDF 的解析表达式由 (11.4.5.2, 11.4.5.2) 给出。由于模型的线性，我们有：
 
-
-
-
-
-$$\\begin{aligned} & {F^{\*}(\\mathbf{c},\\zeta,\\chi) = V^{\*}(\\mathbf{c},\\lambda)\\, Z^{\*}(\\zeta,\\lambda),\\,\\, Z^{\*}(\\zeta,\\lambda) = {\\prod\\limits\_{n = p}^{(24)}Z\_{n}^{\*}}(\\zeta\\lbrack n\\rbrack,\\lambda\_{n}),} \\\\ & {\\text{\\quad\\quad}\\text{\\quad\\quad}V^{\*}(\\mathbf{c},\\lambda) = {\\prod\\limits\_{k = 0}^{p}V\_{k}^{\*}}(c\_{k}),\\,\\, V\_{k}^{\*}(b\_{k}) = \\frac{\\exp( - s\_{k}\\, c\_{k})}{\\mathcal{V}\_{k}},} \\\\ & {\\text{\\quad\\quad}\\text{\\quad\\quad}\\text{\\quad\\quad}\\text{\\quad\\quad}\\mathcal{V}\_{k} = {\\int\_{\\mathcal{C}\_{k}}\\,}\\exp( - s\_{k}\\, c\_{k})\\, dc\_{k},} \\\\ & {\\text{\\quad\\quad}\\text{\\quad\\quad}s\_{0} = {\\sum\\limits\_{n = p}^{24}\\,}\\lambda\_{n},\\,\\, s\_{k} = {\\sum\\limits\_{n = p}^{24}\\,}\\lambda\_{n}\\, R^{(r)}\\lbrack n - k\\rbrack,\\quad k = \\overline{1,p},} \\\\ & {Z\_{n}^{\*}(\\zeta\\lbrack n\\rbrack,\\lambda\_{n}) = \\frac{\\exp( - \\lambda\_{n}\\,\\zeta\\lbrack n\\rbrack)}{{\\mathfrak{Z}}\_{n}},\\quad{\\mathfrak{Z}}\_{n} = {\\int\_{\\mathcal{Z}\_{n}}\\exp}( - \\lambda\_{n}\\,\\zeta\\lbrack n\\rbrack)\\, d\\zeta\\lbrack n\\rbrack,} \\\\ & {\\text{\\quad\\quad}\\text{\\quad\\quad}\\text{\\quad\\quad}\\text{\\quad\\quad}G^{\*}(\\chi,\\overline{\\lambda}) = \\frac{\\exp( - \\overline{\\lambda}\\,\\chi)}{\\mathfrak{G}},} \\\\ & {\\text{\\quad\\quad}\\text{\\quad\\quad}\\text{\\quad\\quad}\\mathfrak{G} = {\\int\_{\\mathcal{G}}\\,}\\exp( - \\overline{\\lambda}\\,\\chi)\\, d\\,\\chi,\\,\\,\\overline{\\lambda} = \\frac{w\_{0}}{24 - p}.} \\\\ \\end{aligned}$$  
+```
+\begin{aligned} & {F^{\*}(\\mathbf{c},\\zeta,\\chi) = V^{\*}(\\mathbf{c},\\lambda)\\, Z^{\*}(\\zeta,\\lambda),\\,\\, Z^{\*}(\\zeta,\\lambda) = {\\prod\\limits\_{n = p}^{(24)}Z\_{n}^{\*}}(\\zeta\\lbrack n\\rbrack,\\lambda\_{n}),} \\\\ & {\\text{\\quad\\quad}\\text{\\quad\\quad}V^{\*}(\\mathbf{c},\\lambda) = {\\prod\\limits\_{k = 0}^{p}V\_{k}^{\*}}(c\_{k}),\\,\\, V\_{k}^{\*}(b\_{k}) = \\frac{\\exp( - s\_{k}\\, c\_{k})}{\\mathcal{V}\_{k}},} \\\\ & {\\text{\\quad\\quad}\\text{\\quad\\quad}\\text{\\quad\\quad}\\text{\\quad\\quad}\\mathcal{V}\_{k} = {\\int\_{\\mathcal{C}\_{k}}\\,}\\exp( - s\_{k}\\, c\_{k})\\, dc\_{k},} \\\\ & {\\text{\\quad\\quad}\\text{\\quad\\quad}s\_{0} = {\\sum\\limits\_{n = p}^{24}\\,}\\lambda\_{n},\\,\\, s\_{k} = {\\sum\\limits\_{n = p}^{24}\\,}\\lambda\_{n}\\, R^{(r)}\\lbrack n - k\\rbrack,\\quad k = \\overline{1,p},} \\\\ & {Z\_{n}^{\*}(\\zeta\\lbrack n\\rbrack,\\lambda\_{n}) = \\frac{\\exp( - \\lambda\_{n}\\,\\zeta\\lbrack n\\rbrack)}{{\\mathfrak{Z}}\_{n}},\\quad{\\mathfrak{Z}}\_{n} = {\\int\_{\\mathcal{Z}\_{n}}\\exp}( - \\lambda\_{n}\\,\\zeta\\lbrack n\\rbrack)\\, d\\zeta\\lbrack n\\rbrack,} \\\\ & {\\text{\\quad\\quad}\\text{\\quad\\quad}\\text{\\quad\\quad}\\text{\\quad\\quad}G^{\*}(\\chi,\\overline{\\lambda}) = \\frac{\\exp( - \\overline{\\lambda}\\,\\chi)}{\\mathfrak{G}},} \\\\ & {\\text{\\quad\\quad}\\text{\\quad\\quad}\\text{\\quad\\quad}\\mathfrak{G} = {\\int\_{\\mathcal{G}}\\,}\\exp( - \\overline{\\lambda}\\,\\chi)\\, d\\,\\chi,\\,\\,\\overline{\\lambda} = \\frac{w\_{0}}{24 - p}.} \\\\ \\end{aligned}
+```
 
 (11.82)
 
@@ -10154,30 +10974,28 @@ Table 11.18: 热喀斯特湖泊面积演化的预测至 2017 年。
 | *C* − `std` || 0.6205 || 0.6542 || 0.6878 || 0.6878 || 0.6713 |
 |  |
 | *D* − `mean` || 19.922 || 19.5528 || 19.8171 || 19.6082 || 19.7359 |
+
+
+
 | *D* − `std` || 1.1424 || 1.0787 || 1.1133 || 1.0887 || 1.1053 |
-|  |
+
 | *I* − `mean` || 48.6890 || 47.3009 || 48.2036 || 47.4963 || 47.8111 |
+
 | *I* − `std` || 2.0383 || 2.0673 || 2.0253 || 2.0554 || 2.0402 |
-|  |
 
 Table 11.19: 热喀斯特湖泊面积演化的预测至 2022 年。
 
-|  |
 | --- |
 | Year || 2018 || 2019 || 2020 || 2021 || 2022 |
-|  |
 | --- |
 | *C* − `mean` || 19.6453 || 19.5491 || 19.4576 || 19.3742 || 19.3070 |
 | *C* − `std` || 0.6367 || 0.5969 || 0.5569 || 0.5215 || 0.4901 |
-|  |
 | *D* − `mean` || 19.6215 || 19.6897 || 19.6372 || 19.6780 || 19.6546 |
 | *D* − `std` || 1.0913 || 1.0979 || 1.0885 || 1.0911 || 1.0867 |
-|  |
 | *I* − `mean` || 47.5081 || 47.6778 || 47.6040 || 47.6912 || 47.6729 |
 | *I* − `std` || 2.0584 || 2.0421 || 2.0484 || 2.0405 || 2.0443 |
-|  |
 
-Figure 11.18 展示了区域 *C, D* 和 *I* 的预测集合。这里均值轨迹和标准差区域分别用 (`mean`) 和 (`std`) 标示。
+Figure 11.18 展示了区域 *C*, *D* 和 *I* 的预测集合。这里均值轨迹和标准差区域分别用 (`mean`) 和 (`std`) 标示。
 
 ![Figure 11.18: Forecast for 15 years.](img/fig11_18.jpg)
 
@@ -10190,10 +11008,6 @@ Figure 11.18: 15 年预测。
 DOI: [10.1201/9781003306566-A](https://doi.org/10.1201/9781003306566-A)
 
 ## A.1 最大熵估计问题的陈述
-
-
-
-
 
 考虑一个标量连续函数 `φ`(`x`, `θ`)，其参数为 `θ` = {`θ`[1],…,`θ`[*n*]}。假设该函数是具有输入 `x` 和输出 `y` 的对象模型的一个特征。设 `x`^((*r*)) = {`x`[1],…,`x`[*r*]} 和 `y`^((*r*)) = {`y`[1],…,`y`[*r*]} 为给定的测量值。注意后者是在随机误差 `ξ` = {`ξ`[1],…,`ξ`[*r*]} 下获得的，在一般情况下，不同时间瞬时不同。
 
@@ -10361,11 +11175,12 @@ $$
 
 其元素为
 
-
-
-
-
-$$\\begin{aligned} & {\\frac{\\partial W\_{t}}{\\partial\\lambda\_{i}} = {\\int\_{Q}\\left( {\\varphi(x\\lbrack t\\rbrack,\\theta) - \\widetilde{y}\\lbrack t\\rbrack} \\right)}\\varphi(x\\lbrack i\\rbrack,\\theta) \\times} \\\\ & {\\quad \\times {\\sum\\limits\_{j = 1}^{r}\\exp}\\left( {- {\\sum\\limits\_{j = 1}^{r}\\lambda\_{j}}\\varphi(x\\lbrack j\\rbrack,\\theta)} \\right)d\\theta.} \\\\ \\end{aligned}$$  
+$$
+\begin{aligned}
+& {\frac{\partial W_{t}}{\partial\lambda_{i}} = {\int_{Q}\left( {\varphi(x\lbrack t\rbrack,\theta) - \widetilde{y}\lbrack t\rbrack} \right)}\varphi(x\lbrack i\rbrack,\theta) \times} \\
+& {\quad \times {\sum\limits_{j = 1}^{r}\exp}\left( {- {\sum\limits_{j = 1}^{r}\lambda_{j}}\varphi(x\lbrack j\rbrack,\theta)} \right)d\theta.} \\
+\end{aligned}
+$$
 
 (A.18)
 
@@ -10373,11 +11188,13 @@ $$\\begin{aligned} & {\\frac{\\partial W\_{t}}{\\partial\\lambda\_{i}} = {\\int\
 
 MEE 给出输入和输出数据数组的熵最优 PDFs（A.1），每个数组的大小为 *r*。为方便起见，考虑由指数拉格朗日乘子 *z* = exp ( − *λ*) 参数化的 PDFs。则等式 (A.1) 取形式
 
-$$\\begin{aligned} {P^{\*}\\left( {\\theta,\\,\\mathbf{z}(\\mathbf{y}^{(r)},\\mathbf{x}^{(r)})} \\right)} & {= \\frac{\\prod\_{j = 1}^{r}{\\lbrack z\_{j}(\\mathbf{y}^{(r)},\\mathbf{x}^{r})\\rbrack}^{\\varphi(x\\lbrack j\\rbrack,\\theta)}}{\\int\_{\\Theta}\\prod\_{j = 1}^{r}{\\lbrack z\_{j}(\\mathbf{y}^{(r)},\\mathbf{x}^{r})\\rbrack}^{\\varphi(x\\lbrack j\\rbrack,\\theta)}d\\theta},} \\\\ {Q\_{t}^{\*}(\\xi\\lbrack t\\rbrack,\\, z\_{t}(\\mathbf{y}^{(r)},\\mathbf{x}^{(r)}))} & {= \\frac{{\\lbrack z\_{t}(\\mathbf{y}^{(r)},\\mathbf{x}^{(r)})\\rbrack}^{\\xi\\lbrack t\\rbrack}}{\\int\_{\\Xi\_{t}}{\\lbrack z\_{t}(\\mathbf{y}^{(r)},\\mathbf{x}^{(r)})\\rbrack}^{\\xi\\lbrack t\\rbrack}d\\xi\\lbrack t\\rbrack},} \\\\ \\end{aligned}$$  
+
+
+$$\\begin{aligned} {P^{\*}\\left( {\\theta,\\,\\mathbf{z}(\\mathbf{y}^{(r)},\\mathbf{x}^{(r)})} \\right)} & {= \\frac{\\prod\_{j = 1}^{r}{\\lbrack z\_{j}(\\mathbf{y}^{(r)},\\mathbf{x}^{r})\\rbrack}^{\\varphi(x\\lbrack j\\rbrack,\\theta)}}{\\int\_{\\Theta}\\prod\_{j = 1}^{r}{\\lbrack z\_{j}(\\mathbf{y}^{(r)},\\mathbf{x}^{r})\\rbrack}^{\\varphi(x\\lbrack j\\rbrack,\\theta)}d\\theta},} \\\\ {Q\_{t}^{\*}(\\xi\\lbrack t\\rbrack,\\, z\_{t}(\\mathbf{y}^{(r)},\\mathbf{x}^{(r)}))} & {= \\frac{{\\lbrack z\_{t}(\\mathbf{y}^{(r)},\\mathbf{x}^{(r)})\\rbrack}^{\\xi\\lbrack t\\rbrack}}{\\int\_{\\Xi\_{t}}{\\lbrack z\_{t}(\\mathbf{y}^{(r)},\\mathbf{x}^{(r)})\\rbrack}^{\\xi\\lbrack t\\rbrack}d\\xi\\lbrack t\\rbrack},} \\\\ \\end{aligned}$$
 
 (A.21)
 
-$$\\begin{aligned} & {\\quad t = \\overline{1,r}.} \\\\ \\end{aligned}$$  
+$$\\begin{aligned} & {\\quad t = \\overline{1,r}.} \\\\ \\end{aligned}$$
 
 (A.22)
 
@@ -10385,13 +11202,13 @@ $$\\begin{aligned} & {\\quad t = \\overline{1,r}.} \\\\ \\end{aligned}$$
 
 引理 1 可应用于逆矩阵的范数 $\\|\\left\\lbrack \\frac{\\partial\\Phi}{\\partial\\mathbf{z}} \\right\\rbrack^{- 1}\\|$。结果为
 
-$$\\begin{array}{r} {\\left( {\\|\\frac{\\partial\\Phi}{\\partial\\mathbf{z}}\\|} \\right)^{- 1} \\leq \\|\\left\\lbrack \\frac{\\partial\\Phi}{\\partial\\mathbf{z}} \\right\\rbrack^{- 1}\\| \\leq \\alpha\\left( {\\|\\frac{\\partial\\Phi}{\\partial\\mathbf{z}}\\|} \\right)^{- 1}.} \\\\ \\end{array}$$  
+$$\\begin{array}{r} {\\left( {\\|\\frac{\\partial\\Phi}{\\partial\\mathbf{z}}\\|} \\right)^{- 1} \\leq \\|\\left\\lbrack \\frac{\\partial\\Phi}{\\partial\\mathbf{z}} \\right\\rbrack^{- 1}\\| \\leq \\alpha\\left( {\\|\\frac{\\partial\\Phi}{\\partial\\mathbf{z}}\\|} \\right)^{- 1}.} \\\\ \\end{array}$$
 
 (A.31)
 
 其中
 
-$$\\begin{array}{r} \\left. \\|\\frac{\\partial\\Phi}{\\partial\\mathbf{z}}\\| = r\\max\_{t,j} \\middle| \\frac{\\partial\\Phi\_{t}}{\\partial z\_{j}} \\middle| . \\right. \\\\ \\end{array}$$  
+$$\\begin{array}{r} \\left. \\|\\frac{\\partial\\Phi}{\\partial\\mathbf{z}}\\| = r\\max\_{t,j} \\middle| \\frac{\\partial\\Phi\_{t}}{\\partial z\_{j}} \\middle| . \\right. \\\\ \\end{array}$$
 
 (A.32)
 
@@ -10401,7 +11218,7 @@ DOI: [10.1201/9781003306566-B](https://doi.org/10.1201/9781003306566-B)
 
 考虑形如的线性动态回归模型（LDR）
 
-$$\\begin{array}{r} {\\hat{x}\\lbrack n\\rbrack = a\_{0} + {\\sum\\limits\_{k = 1}^{p}a\_{k}}\\,\\hat{x}\\lbrack n - k\\rbrack + a\_{p + 1}f\\lbrack n\\rbrack + \\varepsilon\\lbrack n\\rbrack,\\quad n = \\overline{p,N},} \\\\ \\end{array}$$  
+$$\\begin{array}{r} {\\hat{x}\\lbrack n\\rbrack = a\_{0} + {\\sum\\limits\_{k = 1}^{p}a\_{k}}\\,\\hat{x}\\lbrack n - k\\rbrack + a\_{p + 1}f\\lbrack n\\rbrack + \\varepsilon\\lbrack n\\rbrack,\\quad n = \\overline{p,N},} \\\\ \\end{array}$$
 
 (B.1)
 
@@ -10409,7 +11226,7 @@ $$\\begin{array}{r} {\\hat{x}\\lbrack n\\rbrack = a\_{0} + {\\sum\\limits\_{k = 
 
 设
 
-$$\\begin{array}{r} {f\\lbrack 0\\rbrack,f\\lbrack 1\\rbrack,\\ldots,f\\lbrack N\\rbrack,\\text{\\quad\\quad}x\\lbrack 0\\rbrack,x\\lbrack 1\\rbrack,\\ldots,x\\lbrack N\\rbrack} \\\\ \\end{array}$$  
+$$\\begin{array}{r} {f\\lbrack 0\\rbrack,f\\lbrack 1\\rbrack,\\ldots,f\\lbrack N\\rbrack,\\text{\\quad\\quad}x\\lbrack 0\\rbrack,x\\lbrack 1\\rbrack,\\ldots,x\\lbrack N\\rbrack} \\\\ \\end{array}$$
 
 (B.2)
 
@@ -10417,16 +11234,17 @@ $$\\begin{array}{r} {f\\lbrack 0\\rbrack,f\\lbrack 1\\rbrack,\\ldots,f\\lbrack N
 
 利用这些数据和方程 (B.1)，我们写出以下向量-矩阵形式的回归方程：
 
-$$\\begin{array}{r} {\\mathbf{x} = X\_{(p + 2)}\\mathbf{a} + \\varepsilon,} \\\\ \\end{array}$$  
+$$\\begin{array}{r} {\\mathbf{x} = X\_{(p + 2)}\\mathbf{a} + \\varepsilon,} \\\\ \\end{array}$$
 
 (B.3)
 
 其中：
 
 * 向量 `x` = {`x[p]`…`x[N]`}, `a` = {`a[0]`…`a[(p+1)]`}, 和 `ε` = {`ε[p]`…`ε[N]`};
+
 * 矩阵
 
-$$\\begin{array}{r} {X\_{(p + 2)} = \\left( \\begin{array}{llllll} 1 & {x\\lbrack p - 1\\rbrack} & {x\\lbrack p - 2\\rbrack} & \\cdots & {x\\lbrack 0\\rbrack} & {f\\lbrack p\\rbrack} \\\\ 1 & {x\\lbrack p\\rbrack} & {x\\lbrack p - 1\\rbrack} & \\cdots & {x\\lbrack 1\\rbrack} & {f\\lbrack p + 1\\rbrack} \\\\ \\cdots & \\cdots & \\cdots & \\cdots & \\cdots & \\cdots \\\\ 1 & {x\\lbrack N - 1\\rbrack} & {x\\lbrack N - 2\\rbrack} & \\cdots & {x\\lbrack N - p\\rbrack} & {f\\lbrack N\\rbrack} \\\\ \\end{array} \\right).} \\\\ \\end{array}$$  
+$$\\begin{array}{r} {X\_{(p + 2)} = \\left( \\begin{array}{llllll} 1 & {x\\lbrack p - 1\\rbrack} & {x\\lbrack p - 2\\rbrack} & \\cdots & {x\\lbrack 0\\rbrack} & {f\\lbrack p\\rbrack} \\\\ 1 & {x\\lbrack p\\rbrack} & {x\\lbrack p - 1\\rbrack} & \\cdots & {x\\lbrack 1\\rbrack} & {f\\lbrack p + 1\\rbrack} \\\\ \\cdots & \\cdots & \\cdots & \\cdots & \\cdots & \\cdots \\\\ 1 & {x\\lbrack N - 1\\rbrack} & {x\\lbrack N - 2\\rbrack} & \\cdots & {x\\lbrack N - p\\rbrack} & {f\\lbrack N\\rbrack} \\\\ \\end{array} \\right).} \\\\ \\end{array}$$
 
 (B.4)
 
@@ -10436,7 +11254,7 @@ $$\\begin{array}{r} {X\_{(p + 2)} = \\left( \\begin{array}{llllll} 1 & {x\\lbrac
 
 该模型的阶数 `p` 通过基于数据 (B.2) 计算变量 `x` 的自相关函数 `r(k)` 来选择：
 
-$$\\begin{aligned} {r(k)} & {= \\frac{c\_{k}}{\\sigma^{2}},\\quad c\_{k} = \\frac{1}{N + 1}{\\sum\\limits\_{n = 0}^{N + 1 - k}\\left( {x\\lbrack n\\rbrack - \\overline{x}} \\right)}\\left( {x\\lbrack n + k\\rbrack - \\overline{x}} \\right),} \\\\ \\sigma^{2} & {= \\frac{1}{N}{\\sum\\limits\_{n = 0}^{N}x^{2}}\\lbrack n\\rbrack.} \\\\ \\end{aligned}$$  
+$$\\begin{aligned} {r(k)} & {= \\frac{c\_{k}}{\\sigma^{2}},\\quad c\_{k} = \\frac{1}{N + 1}{\\sum\\limits\_{n = 0}^{N + 1 - k}\\left( {x\\lbrack n\\rbrack - \\overline{x}} \\right)}\\left( {x\\lbrack n + k\\rbrack - \\overline{x}} \\right),} \\\\ \\sigma^{2} & {= \\frac{1}{N}{\\sum\\limits\_{n = 0}^{N}x^{2}}\\lbrack n\\rbrack.} \\\\ \\end{aligned}$$
 
 (B.5)
 
@@ -10446,25 +11264,25 @@ $$\\begin{aligned} {r(k)} & {= \\frac{c\_{k}}{\\sigma^{2}},\\quad c\_{k} = \\fra
 
 LDR 参数的 PDFs 的近似区间通过计算 LS 估计和残差偏差的样本方差得到。 (B.3) 的 LS 估计形式为
 
-$$\\begin{array}{r} {\\hat{\\mathbf{a}} = \\left( {X\_{(p + 2)}^{\\intercal}X\_{(p + 2)}} \\right)^{- 1}X^{\\intercal}\\mathbf{x}.} \\\\ \\end{array}$$  
+$$\\begin{array}{r} {\\hat{\\mathbf{a}} = \\left( {X\_{(p + 2)}^{\\intercal}X\_{(p + 2)}} \\right)^{- 1}X^{\\intercal}\\mathbf{x}.} \\\\ \\end{array}$$
 
 (B.6)
 
 残差偏差由向量描述
 
-$$\\begin{array}{r} {\\mathbf{e}\_{ls} = \\mathbf{x} - X\_{(p + 2)}\\hat{\\mathbf{a}},} \\\\ \\end{array}$$  
+$$\\begin{array}{r} {\\mathbf{e}\_{ls} = \\mathbf{x} - X\_{(p + 2)}\\hat{\\mathbf{a}},} \\\\ \\end{array}$$
 
 (B.7)
 
 残差偏差的样本方差为
 
-$$\\begin{array}{r} {\\sigma^{2} = \\frac{1}{N - p}{\\sum\\limits\_{n = p}^{N}e^{2}}\\lbrack n\\rbrack.} \\\\ \\end{array}$$  
+$$\\begin{array}{r} {\\sigma^{2} = \\frac{1}{N - p}{\\sum\\limits\_{n = p}^{N}e^{2}}\\lbrack n\\rbrack.} \\\\ \\end{array}$$
 
 (B.8)
 
 模型参数的标准差为
 
-$$\\begin{array}{r} {s\_{a\_{k}} = \\sqrt{\\sigma^{2}Q\_{kk}},\\quad k = \\overline{0,p+1},} \\\\ \\end{array}$$  
+$$\\begin{array}{r} {s\_{a\_{k}} = \\sqrt{\\sigma^{2}Q\_{kk}},\\quad k = \\overline{0,p+1},} \\\\ \\end{array}$$
 
 (B.9)
 
@@ -10472,44 +11290,70 @@ $$\\begin{array}{r} {s\_{a\_{k}} = \\sqrt{\\sigma^{2}Q\_{kk}},\\quad k = \\overl
 
 鉴于 LS 估计的渐近正态性，参数范围按规则选择
 
-$$\\begin{array}{r} {\\left\\{ a\_{k}^{-},a\_{k}^{+} \\right\\} = \\left\\{ {a\_{k} - 3s\_{a\_{k}},a\_{k} + 3s\_{a\_{k}}} \\right\\},\\quad k = \\overline{0,p+1}.} \\\\ \\end{array}$$  
+$$\\begin{array}{r} {\\left\\{ a\_{k}^{-},a\_{k}^{+} \\right\\} = \\left\\{ {a\_{k} - 3s\_{a\_{k}},a\_{k} + 3s\_{a\_{k}}} \\right\\},\\quad k = \\overline{0,p+1}.} \\\\ \\end{array}$$
 
 (B.10)
 
 # 参考文献
 
 * [1] 数据集。
+
 * [2] KEEL 数据集仓库。 https://sci2s.ugr.es. 访问时间：2019-07-03。
+
 * [3] ISO/IEC 2382:2015 信息技术—词汇。，2015。URL：https://www.iso.org （访问时间 2017 年 4 月 6 日）。
+
 * [4] 优化测试函数，2015。（访问时间 2015 年 11 月 2 日）。
+
 * [5] 仿真实验虚拟库：测试函数和数据集，2015。（访问时间 2015 年 11 月 2 日）。
+
 * [6] 关于 CUDA，2017。URL：https://developer.nvidia.com （访问时间 2017 年 4 月 6 日）。
+
 * [7] 英特尔多核集成架构，2017。URL：http://www.intel.com （访问时间 2017 年 4 月 6 日）。
+
 * [8] D. Achlioptas. 数据库友好随机投影。载于 PODS'01，第 274–281 页。Amer. Math. Soc., 2001。
+
 * [9] N. Ailon 和 B. Chazelle. 近似最近邻和快速 Johnson–Lindenstrauss 变换。载于 *Proceedings of the 38th Annual ACM Symposium on Theory of Computing*，第 557–563 页，2006。
 
+* [10] S. A. Aivazyan and V. S. Mkhitaryan. 应用统计学. 分类与降维. Finansy i Statistika, Moscow, 1989.
+
+* [11] S. A. Aivazyan and V. S. Mkhitaryan. 应用统计学与计量经济学基础. Yuniti, 1998.
+
+* [12] M. A. Aizerman, E. M. Braverman, and L. I. Rozonoer. 机器学习理论中的势函数法. Nauka, Moscow, 1970.
+
+* [13] L. F. Amaral, R. C. Souza, and M. Stevenson. 短期负荷预测的平滑转换周期自回归模型. International Journal of Forecasting, 24(4):603–615, 2008.
+
+* [14] A. G. Arkadiev and E. M. Braverman. 图像识别与机器学习. Nauka, Moscow, 1964.
+
+* [15] M. Avellaneda. 资产定价模型的最小相对熵校准. International Journal of Theoretical and Applied Finance, 1(04):447–472, 1998.
+
+* [16] A. N. Averkin, M. G. Gaaze-Rapoport, and D. A. Pospelov. 人工智能词典的定义. Radio i Svyaz, 1992.
+
+* [17] N. S. Bakhvalov, N. P. Zhidkov, and G. M. Kobel'kov. 数值方法. BINOM, 2003.
+
+* [18] A. S. Bernstein, I. V. Pyshkin, Yu. S. Popkov, and R. G. Faradzhev. 二元非线性序列机的解析描述. Automation and Remote Control, 32(12):1920–1927, 1971.
+
+* [19] K. Beyer, J. Goldstein, R. Ramakrishnan, and U. Shaft. 何时“最近邻”是有意义的？ In *International conference on database theory*, pages 217–235. Springer, 1999.
+
+* [20] E. Bingham and H. Mannila. 降维中的随机投影：应用于图像和文本数据. In *Proceedings of the 7th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining*, pages 245–250. ACM, 2001.
+
+* [21] C. Bishop. *Pattern recognition and machine learning (Information Science and Statistics)*, *1st* *ed*. 2006\. corr. 2nd ed. Springer, New York, 2007.
+
+* [22] L. Breiman. 预测的自助聚合. Machine Learning, 24(2):123–140, 1996.
+
+* [23] L. Breiman, J. H. Friedman, R. A. Olshen, and C. J. Stone. 分类与回归树. *1993*. Chapman Hall, New York, 1984.
+
+* [24] NA Bryksina and Yu M Polishchuk. 基于卫星图像的西西伯利亚多年冻土区热喀斯特湖数量变化分析. Earth Cryosphere, 19:100–105, 2015.
+
+* [25] P. Bühlmann and T. Hothorn. 提升算法：正则化、预测与模型拟合. Statistical Science, pages 477–505, 2007.
+
+* [26] L. Buitinck, G. Louppe, M. Blondel, F. Pedregosa, A. Mueller, O. Grisel, V. Niculae, P. Prettenhofer, A. Gramfort, R. Grobler, J. Layton, J. VanderPlas, A. Joly, B. Holt, and G. Varoquaux. 机器学习软件的 API 设计：来自 scikit-learn 项目的经验. In ECML PKDD Workshop: Languages for Data Mining and Machine Learning, pages 108–122, 2013.
+
+* [27] R. Calderbank, S. Jafarpour, and R. Schapire. 压缩学习：测量域中的通用稀疏降维与学习. Technical report, 2009.
+
+* [28] P. Campbell. 关于大数据特刊的社论：需要社区的智慧. Nature, 455(7209):1, 2008.
 
 
 
-* [\[10\]](#chapter3.xhtml#r10b) S. A. Aivazyan and V. S. Mkhitaryan. 应用统计学. 分类与降维. Finansy i Statistika, Moscow, 1989.
-* [\[11\]](#chapter1.xhtml#r11b) S. A. Aivazyan and V. S. Mkhitaryan. 应用统计学与计量经济学基础. Yuniti, 1998.
-* [\[12\]](#preface.xhtml#r12b) M. A. Aizerman, E. M. Braverman, and L. I. Rozonoer. 机器学习理论中的势函数法. Nauka, Moscow, 1970.
-* [\[13\]](#chapter11.xhtml#r13b) L. F. Amaral, R. C. Souza, and M. Stevenson. 短期负荷预测的平滑转换周期自回归模型. International Journal of Forecasting, 24(4):603–615, 2008.
-* [\[14\]](#chapter10.xhtml#r14b) A. G. Arkadiev and E. M. Braverman. 图像识别与机器学习. Nauka, Moscow, 1964.
-* [\[15\]](#chapter4.xhtml#r15b) M. Avellaneda. 资产定价模型的最小相对熵校准. International Journal of Theoretical and Applied Finance, 1(04):447–472, 1998.
-* [\[16\]](#chapter1.xhtml#r16b) A. N. Averkin, M. G. Gaaze-Rapoport, and D. A. Pospelov. 人工智能词典的定义. Radio i Svyaz, 1992.
-* [\[17\]](#chapter2.xhtml#r17b) N. S. Bakhvalov, N. P. Zhidkov, and G. M. Kobel'kov. 数值方法. BINOM, 2003.
-* [\[18\]](#chapter1.xhtml#r18b) A. S. Bernstein, I. V. Pyshkin, Yu. S. Popkov, and R. G. Faradzhev. 二元非线性序列机的解析描述. Automation and Remote Control, 32(12):1920–1927, 1971.
-* [\[19\]](#chapter10.xhtml#r19b) K. Beyer, J. Goldstein, R. Ramakrishnan, and U. Shaft. 何时“最近邻”是有意义的？ In *International conference on database theory*, pages 217–235. Springer, 1999.
-* [\[20\]](#chapter3.xhtml#r20b) E. Bingham and H. Mannila. 降维中的随机投影：应用于图像和文本数据. In *Proceedings of the 7th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining*, pages 245–250. ACM, 2001.
-* [\[21\]](#chapter3.xhtml#r21b) C. Bishop. *Pattern recognition and machine learning (Information Science and Statistics)*, *1st* *ed*. 2006\. corr. 2nd ed. Springer, New York, 2007.
-* [\[22\]](#chapter10.xhtml#r22b) L. Breiman. 预测的自助聚合. Machine Learning, 24(2):123–140, 1996.
-* [\[23\]](#chapter10.xhtml#r23b) L. Breiman, J. H. Friedman, R. A. Olshen, and C. J. Stone. 分类与回归树. *1993*. Chapman Hall, New York, 1984.
-* [\[24\]](#chapter11.xhtml#r24b) NA Bryksina and Yu M Polishchuk. 基于卫星图像的西西伯利亚多年冻土区热喀斯特湖数量变化分析. Earth Cryosphere, 19:100–105, 2015.
-* [\[25\]](#chapter10.xhtml#r25b) P. Bühlmann and T. Hothorn. 提升算法：正则化、预测与模型拟合. Statistical Science, pages 477–505, 2007.
-* [\[26\]](#chapter3.xhtml#r26b) L. Buitinck, G. Louppe, M. Blondel, F. Pedregosa, A. Mueller, O. Grisel, V. Niculae, P. Prettenhofer, A. Gramfort, R. Grobler, J. Layton, J. VanderPlas, A. Joly, B. Holt, and G. Varoquaux. 机器学习软件的 API 设计：来自 scikit-learn 项目的经验. In ECML PKDD Workshop: Languages for Data Mining and Machine Learning, pages 108–122, 2013.
-* [\[27\]](#chapter3.xhtml#r27b) R. Calderbank, S. Jafarpour, and R. Schapire. 压缩学习：测量域中的通用稀疏降维与学习. Technical report, 2009.
-* [\[28\]](#preface.xhtml#r28b) P. Campbell. 关于大数据特刊的社论：需要社区的智慧. Nature, 455(7209):1, 2008.
 * [\[29\]](#chapter3.xhtml#r29b) E. J. Candes and T. Tao. 从随机投影中近乎最优的信号恢复：通用编码策略？ IEEE Transactions on Information Theory, 52(12):5406–5425, 2006.
 * [\[30\]](#chapter3.xhtml#r30b) M. S. Charikar. 基于舍入算法的相似性估计技术. In *Proceedings of the 34th Annual ACM Symposium on Theory of Computing*, pages 380–388, 2002.
 * [\[31\]](#chapter8.xhtml#r31b) S. Chib and E. Greenberg. 理解 Metropolis–Hastings 算法. The American Statistician, 49(4):327–335, 1995.
@@ -10536,57 +11380,55 @@ $$\\begin{array}{r} {\\left\\{ a\_{k}^{-},a\_{k}^{+} \\right\\} = \\left\\{ {a\_
 * [\[52\]](#chapter10.xhtml#r52b) R. A. Fisher. 分类问题中多重测量的使用. Annals of Human Genetics, 7(2):179–188, 1936.
 * [\[53\]](#chapter1.xhtml#r53b) P. Flach. 机器学习：使数据有意义的算法的艺术与科学. Cambridge University Press, 2012.
 * [\[54\]](#chapter1.xhtml#r54b) J. W. Forrester et al. 世界动力学. Waltham, MA, 2nd ed. edition, 1973.
+* [\[55\]](#preface.xhtml#r55b) W. J. Frawley, G. Piatetsky-Shapiro, and C. J. Matheus. 知识发现数据库概述。AI magazine, 13(3):57, 1992.
+* [\[56\]](#chapter10.xhtml#r56b) Y. Freund, R. Schapire, and N. Abe. 提升的简短介绍。Journal of Japanese Society For Artificial Intelligence, 14(771-780):1612, 1999.
+* [\[57\]](#chapter3.xhtml#r57b) J. Friedman, T. Hastie, and R. Tibshirani. 统计学习要素：Springer 统计丛书，第 1 卷。Springer series in statistics Springer, Berlin, 2001.
+* [\[58\]](#chapter7.xhtml#r58b) M. C. Fu, J. Hu, and S. I. Marcus. 用于全局优化的基于模型的随机方法。载于 *Proceedings of the 17th international symposium on mathematical theory of networks and systems*，页码 355–363, 2006.
+* [\[59\]](#chapter9.xhtml#r59b) E. Gamma, R. Helm, R. Johnson, and J. Vlissides. 设计模式：可复用面向对象软件的元素。Addison-Wesley, USA, 1994.
+* [\[60\]](#chapter3.xhtml#r60b) F. R. Gantmakher. 矩阵理论, 1966.
+* [\[61\]](#chapter7.xhtml#r61b) I. M. Gelfand, R. A. Silverman, et al. 变分法。Courier Corporation, 2000.
+* [\[62\]](#chapter9.xhtml#r62b) V. P. Gergel and R. G. Strongin. 多处理器计算机系统的并行计算基础。Lobachevsky State University press, Nizhny Novgorod, 2003.
+* [\[63\]](#chapter10.xhtml#r63b) W. Gerstner and W. Kistler. 脉冲神经元模型, 2002.
+* [\[64\]](#chapter2.xhtml#r64b) J. Geweke and H. Tanizaki. 关于 Metropolis–Hastings 算法抽样分布的说明。Communications in Statistics—Theory and Methods, 32(4):775–789, 2003.
+* [\[65\]](#chapter2.xhtml#r65b) I. I. Gikhman and A. V. Skorokhod. 随机过程理论导论。Nauka, 1977.
+* [\[66\]](#chapter1.xhtml#r66b) A. Golan et al. 信息与熵计量经济学——综述与综合。Foundations and Trends® in Econometrics, 2(1–2):1–145, 2008.
+* [\[67\]](#chapter6.xhtml#r67b) A. Golan, G. Judge, and D. Miller. 最大熵计量经济学：数据有限时的稳健估计。John Wiley & Sons, New York, 1996.
+* [\[68\]](#chapter1.xhtml#r68b) A. V. Gorokhov and V. A. Putilov. 区域发展的系统动力学。Pazori, 2002.
+* [\[69\]](#chapter9.xhtml#r69b) A. Grama, A. Gupta, and G. Karypis. 并行计算导论。Addison-Wesley, Harlow, England, 2nd ed. edition, 2003.
+* [\[70\]](#chapter3.xhtml#r70b) T. Hastie, R. Tibshirani, and J. Friedman. 统计学习要素：数据挖掘、推断与预测。Springer New York, 2009.
+* [\[71\]](#chapter11.xhtml#r71b) T. Hong, P. Pinson, S. Fan, H. Zareipour, A. Troccoli, and R. J. Hyndman. 概率能源预测：全球能源预测竞赛 2014 及以后。International Journal of Forecasting, 32(3):896–913, 2016.
+* [\[72\]](#chapter1.xhtml#r72b) J. Hopcroft, R. Motwani, and J. Ullman. 自动机理论、语言和计算导论。Addison-Wesley, 3rd ed. edition, 2007.
+* [\[73\]](#chapter10.xhtml#r73b) David W. Hosmer J., S. Lemeshow, and R. X. Sturdivant. 应用逻辑回归，第 398 卷。John Wiley & Sons, 2013.
+* [\[74\]](#chapter1.xhtml#r74b) P. J. Huber. 稳健统计。Springer, 2011.
+* [\[75\]](#chapter10.xhtml#r75b) L. Hyafil and R. L. Rivest. 构造最优二叉决策树是 NP-完全的。Information Processing Letters, 5(1):15–17, 1976.
+* [\[76\]](#chapter3.xhtml#r76b) P. Indyk and R. Motwani. 近似最近邻：消除维度诅咒。载于 *Proceedings of the 30th Annual ACM Symposium on Theory of Computing*，页码 604–613, 1998.
+* [\[77\]](#chapter2.xhtml#r77b) A. D. Ioffe and V. M. Tikhomirov. 极值问题理论。1974.
+* [\[78\]](#chapter9.xhtml#r78b) I. Jacobson, G. Booch, and J. Rumbaugh. 统一软件开发过程。Addison-Wesley Longman, USA, 1999.
+* [\[79\]](#chapter10.xhtml#r79b) A. K. Jain, R. P. W. Duin, and J. Mao. 统计模式识别：综述。IEEE Transactions on Pattern Analysis and Machine Intelligence, 22(1):4–37, 2000.
+* [\[80\]](#chapter1.xhtml#r80b) E. T. Jaynes. 信息论与统计力学。Physical Review, 106(4):620–630, 1957.
+* [\[81\]](#preface.xhtml#r81b) E. T. Jaynes. 概率论：科学的逻辑。Cambridge University Press, 2003.
+* [\[82\]](#chapter3.xhtml#r82b) T. S. Jayram and D. P. Woodruff. Johnson–Lindenstrauss 变换和亚常数误差流问题的最优界。ACM Transactions on Algorithms (TALG), 9(3):1–17, 2013.
+* [\[83\]](#chapter3.xhtml#r83b) W. B. Johnson and J. Lindenstrauss. 将 Lipschitz 映射扩展到希尔伯特空间。载于 Modern Analysis and Probability，第 26 卷，页码 189–206。Amer. Math. Soc., 1984.
+* [\[84\]](#chapter3.xhtml#r84b) I. T. Jolliffe. 主成分分析和因子分析。载于 Springer Series of Statistics。Springer, New York, 2002.
+* [\[85\]](#chapter4.xhtml#r85b) M. A. Kaashoek, S. Seatzu, and C. van der Mee. 算子理论及其应用的最新进展：以色列 Gohberg 纪念卷，第 160 卷。Springer Science & Business Media, 2006.
+* [\[86\]](#chapter3.xhtml#r86b) D. Kane, R. Meka, and J. Nelson. 几乎最优的显式 Johnson–Lindenstrauss 族。载于 Approximation, randomization, and combinatorial optimization. Algorithms and techniques，页码 628–639。Springer, 2011.
+* [\[87\]](#chapter3.xhtml#r87b) D. M. Kane and J. Nelson. 更稀疏的 Johnson–Lindenstrauss 变换。Journal of the ACM (JACM), 61(1):1–23, 2014.
+* [\[88\]](#chapter1.xhtml#r88b) J. N. Kapur. 科学和工程中的最大熵模型。John Wiley & Sons, 1989.
+* [\[89\]](#chapter11.xhtml#r89b) Johanna Mård Karlsson, Steve W Lyon, and Georgia Destouni. 西伯利亚西北部冻土融化景观中湖泊尺寸分布的时间行为。Remote sensing, 6(1):621–636, 2014.
 
 
 
-*   [\[55\]](#preface.xhtml#r55b) W. J. Frawley, G. Piatetsky-Shapiro, and C. J. Matheus. 知识发现数据库概述。AI magazine, 13(3):57, 1992.
-*   [\[56\]](#chapter10.xhtml#r56b) Y. Freund, R. Schapire, and N. Abe. 提升的简短介绍。Journal of Japanese Society For Artificial Intelligence, 14(771-780):1612, 1999.
-*   [\[57\]](#chapter3.xhtml#r57b) J. Friedman, T. Hastie, and R. Tibshirani. 统计学习要素：Springer 统计丛书，第 1 卷。Springer series in statistics Springer, Berlin, 2001.
-*   [\[58\]](#chapter7.xhtml#r58b) M. C. Fu, J. Hu, and S. I. Marcus. 用于全局优化的基于模型的随机方法。载于 *Proceedings of the 17th international symposium on mathematical theory of networks and systems*，页码 355–363, 2006.
-*   [\[59\]](#chapter9.xhtml#r59b) E. Gamma, R. Helm, R. Johnson, and J. Vlissides. 设计模式：可复用面向对象软件的元素。Addison-Wesley, USA, 1994.
-*   [\[60\]](#chapter3.xhtml#r60b) F. R. Gantmakher. 矩阵理论, 1966.
-*   [\[61\]](#chapter7.xhtml#r61b) I. M. Gelfand, R. A. Silverman, et al. 变分法。Courier Corporation, 2000.
-*   [\[62\]](#chapter9.xhtml#r62b) V. P. Gergel and R. G. Strongin. 多处理器计算机系统的并行计算基础。Lobachevsky State University press, Nizhny Novgorod, 2003.
-*   [\[63\]](#chapter10.xhtml#r63b) W. Gerstner and W. Kistler. 脉冲神经元模型, 2002.
-*   [\[64\]](#chapter2.xhtml#r64b) J. Geweke and H. Tanizaki. 关于 Metropolis–Hastings 算法抽样分布的说明。Communications in Statistics—Theory and Methods, 32(4):775–789, 2003.
-*   [\[65\]](#chapter2.xhtml#r65b) I. I. Gikhman and A. V. Skorokhod. 随机过程理论导论。Nauka, 1977.
-*   [\[66\]](#chapter1.xhtml#r66b) A. Golan et al. 信息与熵计量经济学——综述与综合。Foundations and Trends® in Econometrics, 2(1–2):1–145, 2008.
-*   [\[67\]](#chapter6.xhtml#r67b) A. Golan, G. Judge, and D. Miller. 最大熵计量经济学：数据有限时的稳健估计。John Wiley & Sons, New York, 1996.
-*   [\[68\]](#chapter1.xhtml#r68b) A. V. Gorokhov and V. A. Putilov. 区域发展的系统动力学。Pazori, 2002.
-*   [\[69\]](#chapter9.xhtml#r69b) A. Grama, A. Gupta, and G. Karypis. 并行计算导论。Addison-Wesley, Harlow, England, 2nd ed. edition, 2003.
-*   [\[70\]](#chapter3.xhtml#r70b) T. Hastie, R. Tibshirani, and J. Friedman. 统计学习要素：数据挖掘、推断与预测。Springer New York, 2009.
-*   [\[71\]](#chapter11.xhtml#r71b) T. Hong, P. Pinson, S. Fan, H. Zareipour, A. Troccoli, and R. J. Hyndman. 概率能源预测：全球能源预测竞赛 2014 及以后。International Journal of Forecasting, 32(3):896–913, 2016.
-*   [\[72\]](#chapter1.xhtml#r72b) J. Hopcroft, R. Motwani, and J. Ullman. 自动机理论、语言和计算导论。Addison-Wesley, 3rd ed. edition, 2007.
-*   [\[73\]](#chapter10.xhtml#r73b) David W. Hosmer J., S. Lemeshow, and R. X. Sturdivant. 应用逻辑回归，第 398 卷。John Wiley & Sons, 2013.
-*   [\[74\]](#chapter1.xhtml#r74b) P. J. Huber. 稳健统计。Springer, 2011.
-*   [\[75\]](#chapter10.xhtml#r75b) L. Hyafil and R. L. Rivest. 构造最优二叉决策树是 NP-完全的。Information Processing Letters, 5(1):15–17, 1976.
-*   [\[76\]](#chapter3.xhtml#r76b) P. Indyk and R. Motwani. 近似最近邻：消除维度诅咒。载于 *Proceedings of the 30th Annual ACM Symposium on Theory of Computing*，页码 604–613, 1998.
-*   [\[77\]](#chapter2.xhtml#r77b) A. D. Ioffe and V. M. Tikhomirov. 极值问题理论。1974.
-*   [\[78\]](#chapter9.xhtml#r78b) I. Jacobson, G. Booch, and J. Rumbaugh. 统一软件开发过程。Addison-Wesley Longman, USA, 1999.
-*   [\[79\]](#chapter10.xhtml#r79b) A. K. Jain, R. P. W. Duin, and J. Mao. 统计模式识别：综述。IEEE Transactions on Pattern Analysis and Machine Intelligence, 22(1):4–37, 2000.
-*   [\[80\]](#chapter1.xhtml#r80b) E. T. Jaynes. 信息论与统计力学。Physical Review, 106(4):620–630, 1957.
-*   [\[81\]](#preface.xhtml#r81b) E. T. Jaynes. 概率论：科学的逻辑。Cambridge University Press, 2003.
-*   [\[82\]](#chapter3.xhtml#r82b) T. S. Jayram and D. P. Woodruff. Johnson–Lindenstrauss 变换和亚常数误差流问题的最优界。ACM Transactions on Algorithms (TALG), 9(3):1–17, 2013.
-*   [\[83\]](#chapter3.xhtml#r83b) W. B. Johnson and J. Lindenstrauss. 将 Lipschitz 映射扩展到希尔伯特空间。载于 Modern Analysis and Probability，第 26 卷，页码 189–206。Amer. Math. Soc., 1984.
-*   [\[84\]](#chapter3.xhtml#r84b) I. T. Jolliffe. 主成分分析和因子分析。载于 Springer Series of Statistics。Springer, New York, 2002.
-*   [\[85\]](#chapter4.xhtml#r85b) M. A. Kaashoek, S. Seatzu, and C. van der Mee. 算子理论及其应用的最新进展：以色列 Gohberg 纪念卷，第 160 卷。Springer Science & Business Media, 2006.
-*   [\[86\]](#chapter3.xhtml#r86b) D. Kane, R. Meka, and J. Nelson. 几乎最优的显式 Johnson–Lindenstrauss 族。载于 Approximation, randomization, and combinatorial optimization. Algorithms and techniques，页码 628–639。Springer, 2011.
-*   [\[87\]](#chapter3.xhtml#r87b) D. M. Kane and J. Nelson. 更稀疏的 Johnson–Lindenstrauss 变换。Journal of the ACM (JACM), 61(1):1–23, 2014.
-*   [\[88\]](#chapter1.xhtml#r88b) J. N. Kapur. 科学和工程中的最大熵模型。John Wiley & Sons, 1989.
-*   [\[89\]](#chapter11.xhtml#r89b) Johanna Mård Karlsson, Steve W Lyon, and Georgia Destouni. 西伯利亚西北部冻土融化景观中湖泊尺寸分布的时间行为。Remote sensing, 6(1):621–636, 2014.
-*   [\[90\]](#chapter1.xhtml#r90b) M. Kendall and A. Stuart. 统计学高级理论。第 2 卷：推断与关系。Griffin, London, 1977.
-*   [\[91\]](#chapter1.xhtml#r91b) N. P. Kirillov. 可控状态技术系统的概念模型（综述与分析）。Artificial Intelligence and Decision Making, 4:81–91, 2011.
-*   [\[92\]](#chapter11.xhtml#r92b) S.N. Kirpotin, Yu Polishchuk, and N. Bryksina. 西西伯利亚热喀斯特湖的突变：气候变暖对永久冻土融化的影响。International Journal of Environmental Studies, 66(4):423–431, 2009.
-*   [\[93\]](#chapter2.xhtml#r93b) M. V. Kiselev, V. S. Pivovarov, and M. M. Shmulevich. 考虑关键词共现的文本聚类方法，并应用于新闻流主题结构动态分析。2005.
-*   [\[94\]](#chapter4.xhtml#r94b) A. N. Kolmogorov. 用低维连续多元函数的叠加表示连续多元函数。114(5):953–956, 1957.
-*   [\[95\]](#chapter2.xhtml#r95b) A.N. Kolmogorov and S. V. Fomin. 函数论与泛函分析基础，第 1 卷。Fizmatlit, Moscow, 1999.
-*   [\[96\]](#chapter1.xhtml#r96b) L. G. Komartsova and A. V. Maksimov. 神经计算机。Bauman Moscow State Technical University Press, 2004.
-*   [\[97\]](#chapter3.xhtml#r97b) D. Kraft. 序列二次规划软件包。Technical Report DFVLR-FB 88-28, DLR German Aerospace Center—Institute for Flight Mechanics, Koln, Germany, 1988.
-*   [\[98\]](#chapter2.xhtml#r98b) S. G. Krantz. 实变量手册：微分方程和傅里叶分析的应用。Springer Science & Business Media, 2011.
+# 参考文献
 
-
-
-
+* [\[90\]](#chapter1.xhtml#r90b) M. Kendall and A. Stuart. 统计学高级理论。第 2 卷：推断与关系。Griffin, London, 1977.
+* [\[91\]](#chapter1.xhtml#r91b) N. P. Kirillov. 可控状态技术系统的概念模型（综述与分析）。Artificial Intelligence and Decision Making, 4:81–91, 2011.
+* [\[92\]](#chapter11.xhtml#r92b) S.N. Kirpotin, Yu Polishchuk, and N. Bryksina. 西西伯利亚热喀斯特湖的突变：气候变暖对永久冻土融化的影响。International Journal of Environmental Studies, 66(4):423–431, 2009.
+* [\[93\]](#chapter2.xhtml#r93b) M. V. Kiselev, V. S. Pivovarov, and M. M. Shmulevich. 考虑关键词共现的文本聚类方法，并应用于新闻流主题结构动态分析。2005.
+* [\[94\]](#chapter4.xhtml#r94b) A. N. Kolmogorov. 用低维连续多元函数的叠加表示连续多元函数。114(5):953–956, 1957.
+* [\[95\]](#chapter2.xhtml#r95b) A.N. Kolmogorov and S. V. Fomin. 函数论与泛函分析基础，第 1 卷。Fizmatlit, Moscow, 1999.
+* [\[96\]](#chapter1.xhtml#r96b) L. G. Komartsova and A. V. Maksimov. 神经计算机。Bauman Moscow State Technical University Press, 2004.
+* [\[97\]](#chapter3.xhtml#r97b) D. Kraft. 序列二次规划软件包。Technical Report DFVLR-FB 88-28, DLR German Aerospace Center—Institute for Flight Mechanics, Koln, Germany, 1988.
+* [\[98\]](#chapter2.xhtml#r98b) S. G. Krantz. 实变量手册：微分方程和傅里叶分析的应用。Springer Science & Business Media, 2011.
 * [\[99\]](#`chapter9.xhtml#r99b`) G. E. Krasner, S. T. Pope, et al. 小谈 Smalltalk-80 系统中的模型-视图-控制器用户界面范式。Journal of Object Oriented Programming, 1(3):26–49, 1988.
 * [\[100\]](#`chapter4.xhtml#r100b`) M. A. Krasnoselskii, G. M. Vainikko, P. P. Zabreiko, Ya. B. Rutitskii, and V. Ya. Stetsenko. 算子方程的近似解。Nauka, Moscow, 1969.
 * [\[101\]](#`appA.xhtml#r101b`) M. A. Krasnosel'skii and P. P. Zabreiko. 非线性分析的几何方法, volume 263. Springer, 1984.
@@ -10596,14 +11438,14 @@ $$\\begin{array}{r} {\\left\\{ a\_{k}^{-},a\_{k}^{+} \\right\\} = \\left\\{ {a\_
 * [\[105\]](#`chapter10.xhtml#r105b`) J. Langford. 分类实用预测理论教程。Journal of Machine Learning Research, 6(Mar):273–306, 2005.
 * [\[106\]](#`chapter1.xhtml#r106b`) A. V. Lapko, S. V. Chentsov, S. I. Krokhov, and L. A. Fel'dman. 数据处理与决策制定的学习系统。Nauka, Novosibirsk, 1996.
 * [\[107\]](#`chapter1.xhtml#r107b`) M. V. Lawson. 有限自动机。CRC Press, 2003.
-* [\[108\]](#`chapter3.xhtml#r108b`) M. Ledoux. *The concentration of measure phenomenon*. Number 89. American Mathematical Soc., 2001.
+* [\[108\]](#`chapter1.xhtml#r108b`) M. Ledoux. `The concentration of measure phenomenon`. Number 89. American Mathematical Soc., 2001.
 * [\[109\]](#`chapter1.xhtml#r109b`) R. D. Levine and M. Tribus. 最大熵形式主义。In Maximum Entropy Formalism Conference (1978: Massachusetts Institute of Technology). MIT Press, 1979.
 * [\[110\]](#`chapter10.xhtml#r110b`) A. V. Levitin. 算法：设计与分析导论。Vil'yams, 2006.
 * [\[111\]](#`chapter1.xhtml#r111b`) P. Lévy. 泛函分析的特定问题。1967.
 * [\[112\]](#`chapter11.xhtml#r112b`) Qianqian Liu, Mark D. Rowe, Eric J. Anderson, Craig A. Stow, Richard P. Stumpf, and Thomas H. Johengen. 利用卫星遥感、原位观测和数值模拟对微囊藻毒素进行概率预测。Environmental Modelling & Software, 128:104705, 2020.
 * [\[113\]](#`chapter11.xhtml#r113b`) Miska Luoto and Matti Seppala. 冻融湖泊作为芬兰拉普兰苔原沼泽前分布的指示物。Permafrost and periglacial processes, 14(1):19–27, 2003.
 * [\[114\]](#`chapter5.xhtml#r114b`) L. A. Lusternik and V. I. Sobolev. 泛函分析基础。1965.
-* [\[115\]](#`chapter3.xhtml#r115b`) J. R. Magnus and H. Neudecker. 具有统计学和计量经济学应用的矩阵微分演算。*Wiley series in probability and mathematical statistics*, 1988.
+* [\[115\]](#`chapter3.xhtml#r115b`) J. R. Magnus and H. Neudecker. 具有统计学和计量经济学应用的矩阵微分演算。`Wiley series in probability and mathematical statistics`, 1988.
 * [\[116\]](#`chapter3.xhtml#r116b`) O. Maillard and R. Munos. 压缩最小二乘回归。In Advances in neural information processing systems, pages 1213–1221, 2009.
 * [\[117\]](#`chapter10.xhtml#r117b`) J. K. Martin. 决策树分裂与停止的精确概率度量。Machine Learning, 28(2):257–291, 1997.
 * [\[118\]](#`chapter10.xhtml#r118b`) A. B. Merkov. 图像识别。统计学习方法导论。URSS, Moscow, 2010.
@@ -10630,15 +11472,14 @@ $$\\begin{array}{r} {\\left\\{ a\_{k}^{-},a\_{k}^{+} \\right\\} = \\left\\{ {a\_
 * [\[139\]](#`chapter3.xhtml#r139b`) Yu. S. Popkov. 大系统理论及其应用 (Lecture Notes in Control and Information Sciences, vol. 203). Springer, 1995.
 * [\[140\]](#`chapter7.xhtml#r140b`) Yu. S. Popkov. 约束熵最大化问题中直接乘性方法的收敛性。Automation and Remote Control, 59(4):534–544, 1998.
 * [\[141\]](#`chapter1.xhtml#r141b`) Yu. S. Popkov. 大系统理论。平衡模型。URSS, Moscow, 1999.
+* [\[142\]](#chapter7.xhtml#r142b) Yu. S. Popkov. 求解熵线性规划的多 plicative 算法新类。European Journal of Operational Research, 174(3):1368–1379, 2006.
+* [\[143\]](#chapter3.xhtml#r143b) Yu. S. Popkov. 大系统理论。平衡模型。URSS, Moscow, 2012.
+* [\[144\]](#chapter10.xhtml#r144b) Yu. S. Popkov, Yu. A. Dubnov, and A. Yu. Popkov. 利用熵鲁棒估计进行随机预测的新方法：应用于世界人口预测。Mathematics, 4(1):1–16, 2016.
+* [\[145\]](#chapter3.xhtml#r145b) Yu. S. Popkov, Yu. A. Dubnov, and A. Yu. Popkov. 随机机器学习：陈述、求解、应用。载于 `Intelligent Systems (IS), 2016 IEEE 8th International Conference on`，页码 27–39。IEEE, 2016.
+* [\[146\]](#chapter1.xhtml#r146b) Yu. S. Popkov, O. N. Kiselev, N. P. Petrov, and B. L. Shmulyan. 非线性随机系统的辨识与优化。Energiya, 1976.
 
 
 
-
-*   [\[142\]](#chapter7.xhtml#r142b) Yu. S. Popkov. 求解熵线性规划的多 plicative 算法新类。European Journal of Operational Research, 174(3):1368–1379, 2006.
-*   [\[143\]](#chapter3.xhtml#r143b) Yu. S. Popkov. 大系统理论。平衡模型。URSS, Moscow, 2012.
-*   [\[144\]](#chapter10.xhtml#r144b) Yu. S. Popkov, Yu. A. Dubnov, and A. Yu. Popkov. 利用熵鲁棒估计进行随机预测的新方法：应用于世界人口预测。Mathematics, 4(1):1–16, 2016.
-*   [\[145\]](#chapter3.xhtml#r145b) Yu. S. Popkov, Yu. A. Dubnov, and A. Yu. Popkov. 随机机器学习：陈述、求解、应用。载于 *Intelligent Systems (IS), 2016 IEEE 8th International Conference on*，页码 27–39。IEEE, 2016.
-*   [\[146\]](#chapter1.xhtml#r146b) Yu. S. Popkov, O. N. Kiselev, N. P. Petrov, and B. L. Shmulyan. 非线性随机系统的辨识与优化。Energiya, 1976.
 *   [\[147\]](#chapter7.xhtml#r147b) Yu. S. Popkov, A. Yu. Popkov, and B. S. Darkhovsky. 熵鲁棒估计的并行蒙特卡洛。Mathematical Models and Computer Simulations, 8(1):27–39, 2016.
 *   [\[148\]](#chapter2.xhtml#r148b) Yu. S. Popkov, A. Yu. Popkov, and Yu. A. Dubnov. 随机机器学习：从经验概率到熵随机化。LENAND, Moscow, 2019.
 *   [\[149\]](#chapter5.xhtml#r149b) Yu. S. Popkov, A. Yu. Popkov, and Yu. N. Lysak. 随机静态数据模型的特征估计（熵鲁棒方法）。Automation and Remote Control, 74(11):1863–1877, 2013.
@@ -10681,11 +11522,6 @@ $$\\begin{array}{r} {\\left\\{ a\_{k}^{-},a\_{k}^{+} \\right\\} = \\left\\{ {a\_
 *   [\[186\]](#chapter11.xhtml#r186b) J. von Neumann. 与随机数字相关的各种技术。Appl. Math Ser., 12:36–38, 1951.
 *   [\[187\]](#chapter10.xhtml#r187b) K. V. Vorontsov. 机器学习（讲座课程），2013。URL=`http://www.machinelearning.ru`.
 *   [\[188\]](#chapter1.xhtml#r188b) K. V. Vorontsov. 依据先例学习的数学方法。讲座课程（控制与应用数学系，莫斯科物理技术学院），2013.
-
-
-
-
-
 *   [\[189\]](#chapter2.xhtml#r189b) W. Weidlich 和 G. Haag. 运输与城市演化的综合模型：以新兴国家大都市为例。Springer, 1999。
 *   [\[190\]](#chapter3.xhtml#r190b) K. Q. Weinberger 和 L. K. Saul. 通过半定规划对图像流形进行无监督学习。International Journal of Computer Vision, 70(1):77–90, 2006。
 *   [\[191\]](#preface.xhtml#r191b) I. H. Witten 和 E. Frank. 数据挖掘：实用机器学习工具与技术。Morgan Kaufmann, 2005。
@@ -10697,7 +11533,7 @@ $$\\begin{array}{r} {\\left\\{ a\_{k}^{-},a\_{k}^{+} \\right\\} = \\left\\{ {a\_
 *   [\[197\]](#chapter2.xhtml#r197b) E. G. Zhilyakov. 高斯过程自相关函数估计中的量化误差。Problems of Information Transmission, 18(3):90–94, 1982。
 *   [\[198\]](#chapter10.xhtml#r198b) Yu. I. Zhuravlev, V. V. Ryazanov, 和 O. V. Sen'ko. 图像识别：数学方法、程序系统、应用。FAZIS, 2006。
 *   [\[199\]](#chapter7.xhtml#r199b) A. V. Zorin 和 M. A. Fedotkin. 并行计算的蒙特卡洛方法。Moscow State University Press, 2013。
-*   [\[200\]](#chapter11.xhtml#r200b) Frieda S Zuidhoff 和 Else Kolstrup. 与气候变化相关的帕尔萨分布变化，瑞典北部 Laivadalen，尤其 1960–1997 年。Permafrost and periglacial processes, 11(1):55–69, 2000。
+*   [\[200\]](#chapter11.xhtml#r200b) Frieda S Zuidhoff 和 Else Kolstrup. 与气候变化相关的帕尔萨分布变化，瑞典北部 Laivadalen，尤其 1960–1997 年。Permafrost and periglacial processes, 11(1):55–69, 2000.
 
 # 索引
 
@@ -10767,448 +11603,34 @@ $$\\begin{array}{r} {\\left\\{ a\_{k}^{-},a\_{k}^{+} \\right\\} = \\left\\{ {a\_
 *   二进制方法 (BI)，38
 *   位图像，35
 *   Boltzmann, L.，163
-*   Boltzmann 常数，163
-*   Boltzmann 熵，187
-    *   Boltzmann 信息熵，166，168，170，186，201
-    *   鲁棒估计，187
-    *   鲁棒 ML 算法，187
-*   提升，275
-*   有界变差，20
-*   布朗运动过程，26–27
-*   布朗随机过程，27
-
-## C
-
-*   Cauchy–Bunyakovsky–Schwarz 不等式，245
-*   不等式链，67
-*   Chapman–Kolmogorov 方程，28–29
-*   Chebyshev 泛函，21
-*   选择和参数化，PM，6–10
-*   分类；*see also* 二元分类问题的 EDR；熵分类
-*   精度，94–97
-*   二元分类问题，267
-*   四维物体，280–282
-*   二维物体，282–285
-*   比例系数，52
-*   集体动机，4
-*   列压缩矩阵，74
-*   紧集
 
 
 
+进入`/path/to/xxx`目录，找到`xxx.json`。
 
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
 
-* 任意紧集 `Q`, 243–244
-* 压缩感知, 72
-* RML 的计算方法, 197–198
-    * 平衡方程的类别, 198
-        * 具有解析函数的方程, 201–202
-        * 具有积分分量的方程, 198–201
-    * 用于全局优化的蒙特卡洛包迭代, 202
-        * 一般形式的容许集, 213–215
-        * 全局优化问题的规范形式, 203–205
-        * GFS 算法的收敛性, 209–213
-        * GFS 算法的实验研究, 217–223
-        * 方法思想和解的概念, 205–206
-        * GFS 算法的逻辑结构, 215–216
-        * 随机序列的概率特征, 206–209
-    * 使用蒙特卡洛方法的多维积分, 223–230
-    * 具有 `P`-活动变量的乘性算法, 230–235
-* 计算处理器, 249
-* 计算机内存, 254
-* 计算机仿真原理, 12
-* 计算机系统
-    * 进展, 251
-    * 多核处理器, 249
-    * 多处理器, 251
-    * 超计算机类, 264
-    * 用户层, 256
-    * 利用率, 250
-* 条件密度最大化, 12
-* 条件概率, 12
-* 孔多塞陪审团定理, 273
-* 一致性条件, 22
-* 连续性, 19
-* 在一点连续, 19
-* 连续函数, 126
-* 连续非线性, 118
-* 连续时变函数, 120, 126
-* 收敛泰勒级数, 19
-* 协处理器, 249
-* 协方差矩阵, 66
-* 覆盖误差, 39
-* 交叉熵, 84
-    * 最小化, 85
-    * 归约算法, 84–87
-* 交叉测试, 305
-* CUDA, 257, 265
-D
-* 数据, 17
-    * 充分性, 18
-    * 近似, 68
-    * 元素, 264
-    * 插值问题, 40
-    * 最大化, 62
-* 数据矩阵, 65, 84, 104
-    * 变换的类别, 101
-    * 的信息容量, 84
-    * 点集表示, 100–101
-    * 奇异分解方法, 66–68
-* 数据集仿真, 98–99
-* 数据源 DS, 17–18, 158–159
-    * 数据的模拟源, 18
-        * 确定性函数, 18–21
-        * 随机函数, 21–29
-    * 数据的数字源, 29
-        * 幅度和时间量化, 30–32
-        * 音频数据, 32–35
-        * 政府统计数据, 38–40
-        * 图形数据, 35–36
-        * 文本数据, 36–38
-    * 缺失数据的恢复方法, 40
-        * 辅助动态模型, 43–45
-        * 插值, 40–43
-        * 随机恢复方法, 52–63
-        * 空间熵分解, 45–52
-* 决策制定 DM, 2, `3`
-* 决策树 DT, 267–268
-* 抽象程度, 7
-* 光滑程度, 19–20, 197
-* Delta 函数, 34
-* Delta 调制 DM, 32
-* 演示经济系统, 4
-* 密度函数, 160
-* 相关元素, 240
-* 确定性函数, 18–21
-* 确定性集合, 10–11
-* 微分方程, 8
-* 扩散过程, 29
-* 数字数据源, 17
-* 数据的数字源, 29
-    * 幅度和时间量化, 30–32
-    * 音频数据, 32–35
-    * 政府统计数据, 38–40
-    * 图形数据, 35–36
-    * 文本数据, 36–38
-* 数字模拟转换器 DACs, 18
-* 降维, 72
-* 降维方法, 65–66
-    * 线性模型学习的降维, 87
-    * 直接和逆投影, 73–75
-    * 二元分类问题的 EDR, 92
-    * 随机投影的熵方法
-        * 熵随机投影的算法, 103–106
-        * 适当的投影矩阵 110–112
-        * 随机投影器的实现和数值特征, 106–107
-        * 随机投影器矩阵, 107–109
-        * 陈述, 100–103
-    * 并行程序的熵优化
-        * 定义和结构, 81
-        * 最优性条件和算法, 81–83
-    * 顺序程序的熵优化, 75
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
 
 
 
-
-
-## E
-
-*   信息交叉熵泛函的近似，77–80
-*   最优性条件和算法，75–77
-*   矩阵范数和信息容量约束下的熵减少，84–87
-    *   交叉熵减少算法，84–87
-    *   矩阵的 Frobenius 范数，84
-    *   数据矩阵的信息容量，84
-*   线性模型学习，87
-*   主成分分析，68–70
-*   随机投影方法，70–73
-*   数据矩阵的奇异分解方法，66–68
-
-*   直接-逆投影，73，81
-*   直接投影，73
-*   离散分布函数 (`DDF`)，107
-*   离散傅里叶变换 (`DFT`)，34
-*   离散输入函数，123
-*   `DS`，*参见* Data source
-*   动态智能系统，8
-*   动态模型
-    *   具有结构化幂非线性，190–191
-    *   具有非结构化幂非线性，189
-*   动态回归；*另见* Randomized machine learning in dynamic regression and prediction
-*   一阶，295–296
-*   二阶，295–296
-
-*   经济活动，4–5
-*   `EDR`，*参见* Entropy dimension reduction
-*   二元分类问题的 `EDR`，92
-*   电力负荷模型，295–296
-*   元素近似函数，21
-*   经验风险，11
-    *   最小化，9
-*   能量谱，35
-*   集成分析 (`EA`) 块，261
-*   决策集成，12
-*   熵，163
-    *   分解，47，52
-    *   表达式，52
-    *   函数，164，192
-*   熵分类，267
-    *   组合算法，273–274
-        *   bagging，274
-        *   boosting，275
-        *   stacking，274–275
-    *   问题表述，275–276
-    *   标准分类方法，267–268
-        *   决策树，268
-        *   指数近似，273
-        *   Fisher 线性判别，272
-        *   `k`-最近邻，269
-        *   线性分类器，271–273
-        *   logistic 回归，273
-        *   naive Bayes，270–271
-        *   单层感知器，272
-        *   支持向量机，273
-    *   测试阶段，278–280
-*   熵维数约简 (`EDR`)，74，98，100
-*   熵-线性规划问题，184
-*   熵最大化原理，16
-*   随机投影的熵方法
-    *   熵随机投影算法，103–106
-    *   适当的投影矩阵，110–112
-    *   随机投影器的实现和数值特征，106–107
-    *   随机投影矩阵，107–109
-    *   陈述，100–103
-*   熵-非线性规划，186
-*   熵最优，105–106
-    *   `DDF`，110
-    *   离散概率分布，109
-    *   分布，48
-    *   PDFs，61，89，104，175，180，222，278，282，*292*
-    *   投影矩阵，74，79
-    *   随机化模型，181，237，294
-    *   robability distribution function，111
-*   熵优化
-    *   并行程序的
-        *   定义和结构，81
-        *   最优性条件和算法，81–83
-    *   顺序程序的，75
-        *   信息交叉熵泛函的近似，77–80
-        *   最优性条件和算法，75–77
-*   `LDRR` 的熵随机化机器学习，317–321
-*   熵随机化建模和预测
-    *   热喀斯特湖状态数据，314–317
-    *   `LDRR` 的熵随机化机器学习，317–321
-    *   热喀斯特湖面积演化的随机化预测，324
-    *   训练、测试和预测结果，324–332
-    *   热喀斯特湖状态随机化模型的结构，311–314
-    *   测试程序、数据和精度估计，321–323
-    *   热喀斯特湖与气候变化，309
-    *   西西伯利亚的热喀斯特湖，309–311
-*   熵随机化投影
-    *   算法，103
-    *   问题，101–102
-*   矩阵范数和信息容量约束下的熵减少，84–87
-    *   交叉熵减少算法，84–87
-    *   矩阵的 Frobenius 范数，84
-    *   数据矩阵的信息容量，84
-*   熵鲁棒估计方法，183–184
-    *   动态 RPM-quarand 模型，188
-        *   结构化幂非线性，190–191
-
-
-
-
-
-* 非结构化幂非线性，189–190
-* 归属的熵最优概率，191
-  * 归属的区间型概率，194–195
-  * 归属的归一化概率，191–194
-* 归属概率，184–185
-  * 具有区间型归属概率的 RPM-QuaRand 模型的 ML 算法，187–188
-  * 具有归一化归属概率的 RPM-QuaRand 模型的 ML 算法，185–186
-* 熵鲁棒估计问题，186
-* 熵鲁棒估计程序，157–158
-  * 概率密度函数的算法，165
-  * 拉格朗日乘子方程
-    * 具有输入和输出误差的 RPM-Orig 模型，182
-    * 具有输出误差的 RPM-Orig 模型，180–181
-    * 具有输出误差的 RPM-Rel 模型，181–182
-  * 熵最优 PDF 的最优性条件和结构，173
-    * 具有输入和输出误差的 RPM-Orig 类随机化模型，179–180
-    * 具有输出误差的 RPM-Orig 类随机化模型，173–175
-    * 具有输出误差的 RPM-Rel 类随机化模型，175–179
-  * Lyapunov 型问题的最优性条件，171–173
-  * 结构，158–165
-* 熵鲁棒 ML 算法，186
-* 熵鲁棒 RML 算法，167
-* 熵“最差”测量噪声，181–182
-* 误差，39
-  * 覆盖误差，39
-  * 系统误差，39
-* 估计算法
-  * 针对 RPM-F 模型，169–171
-  * 针对 RPM-Orig 模型，165–167
-  * 针对 RPM-Rel 模型，167–169
-* 解特征的估计，216
-* EstProb，215–216
-* 欧几里得距离，104–105，269
-* 欧几里得空间，70
-* 欧拉多边形近似，235
-* 偶阶矩函数，25
-* 经验的演化
-  * 置信区间和置信水平，154
-  * 中值轨迹，153
-  * 概率密度函数，152
-  * 方差管道，151
-* 均值轨迹的演化，151
-* 经验 PDF 的 *α*\-分位数的演化，153
-* 指数近似，273
-* 指数拉格朗日乘子，232，234
-* 外部信息，37
-
-### F
-* 快速 Johnson–Lindenstrauss 变换 (FJLT)，72
-* 反馈回路 (FL)，2
-* Fermi 熵，187
-* Fermi 熵鲁棒估计，188
-* Fermi 信息熵，164，201
-*  fertility and mortality coefficients，287
-* 有限维近似，8
-* 信息熵的有限维概念，162
-* 随机函数的有限维分布，22
-* 有限维概率密度函数，22–23
-* 有限维概率分布，22–24
-* 有限状态对象，8
-* 一阶微分方程，12–13
-* 一阶动态回归模型，295–296
-* 一阶最优性，171–172，231
-* 一阶系统，13
-* Fisher 线性判别，272
-* 预测，5，294
-* 四维对象分类，280–282
-* Fourier 积分，23
-* Fourier 变换，23，33–34，142
-* 频率分布，34
-* Frobenius 内积，77
-* Frobenius 矩阵，84
-* Frobenius 范数，78
-  * 矩阵的，84
-* 泛函特征，8
-* 泛函熵线性规划，167
-* 泛函级数，8
-* 泛函 Volterra 级数，126，129
-
-### G
-* Gâteaux 导数法，171，173–174，178，180
-* Gaussian 条件，24
-* Gaussian 分布，71，106
-* Gaussian 有限维概率分布，25
-* Gaussian PDF，239
-* Gaussian 随机函数，25–26
-* Gaussian 随机过程，27
-* Gaussian 随机变量，239
-* Gauss 原理，50–51
-* 广义 Boltzmann 信息熵，165
-* 广义 Fermi 信息熵，164
-* 具有 PDF 的随机向量的生成方法，237
-  * 近似，244–248
-  * 直接生成方法，241
-    * 紧集，242–244
-    * 单位立方体，241–242
-  * 综述，238
-    * 随机变量，238–239
-    * 随机向量，240–241
-* GFS 算法 (Generation, Filtration, Selection)，206，215，223
-* Gini 不纯度，268
-* 政府统计数据，38–40
-* 政府统计系统，39
-* 图形数据，35–36
-* Griewank 函数，218
-* *G*[*λ*]*\-收敛*，234
-
-### H
-
-
-
-
-
-### H
-* 埃尔米特多项式，134，136，149
-* 黑塞矩阵，232
-* 层次系统，7
-* 赫尔德条件，209
-* 赫尔德常数，197，212，217
-* 赫尔德函数，20，204
-* 齐次马尔可夫过程，28
-* 齐次过程，26
-* 超线程技术，253
-
-### I
-* 恒等公理，18
-* 独立元素，240
-* 独立随机过程，8
-* 紧致性指标，100–102
-* 个体动机 (IM)，2，*3*
-* 不等式，154
-* 信息
-    * 容量，84
-    * 交叉熵，73，77，81
-    * 熵，16
-        * 泛函，16
-        * 最大化原理，16
-    * 增益，268
-* 信息系统 (IS)，261–262
-* 随机机器学习的 信息技术，249–250，258–260
-    * 现代计算机系统的架构，250–255
-    * 数据包迭代的实现，264–266
-    * 模型开发 (MD)，260
-    * 模型实现 (MI)，261–264
-    * 模型学习 (ML)，260–261
-    * 通用多线程架构，255–258
-* 初始分布，26
-* (输入，反馈)–输出系综，115
-* 积分方程，8
-* 积分二次泛函，21
-* 积分微分方程，29
-* 插值，40–43
-* 分位数子集，111
-* 区间型隶属概率，194–196
-* 逆文档频率 (IDF)，38
-* 逆函数，238
-* 逆投影，66，73
-* 逆向量，66
-
-### J
-* 雅可比矩阵，235
-* Java，256
-* Jaynes, E.，16
-* 约翰逊-林登施特劳斯引理，70
-* 跳跃过程，29
-
-### K
-* 卡鲁什-库恩-塔克条件，85
-* *k*\-最近邻 (kNN)，72，267，269
-* Kolmogorov 定理，138
-* 库恩-塔克条件，86
-* 库尔贝克-莱布勒散度，91
-
-### L
-* 劳动活动，5
-* 拉格朗日函数，86，108，171–172，178，193，231
-* 拉格朗日插值多项式，41–42
-* 拉格朗日乘子，49，58，86，90，104，174，178，182，193，198，202，222–223，231，278，282，290，300
-    * 方程
-        * 具有输入和输出误差的 RPM-Orig 模型，182
-        * 具有输出误差的 RPM-Orig 模型，180–181
-        * 具有输出误差的 RPM-Rel 模型，181–182
-    * 方法，171，173
+* 具有输入和输出误差的 `RPM-Orig` 模型，182
+* 具有输出误差的 `RPM-Orig` 模型，180–181
+* 具有输出误差的 `RPM-Rel` 模型，181–182
+* 方法，171，173
 * 格函数，144
 * 抽象层，255–256
-* 学习数据 (LD)，260
+* 学习数据 (`LD`)，260
 * 学习数据集，296–299
 * 学习序列，8
 * 基于最小二乘的估计，217
-* 最小二乘 (LS) 方法，72
+* 最小二乘 (`LS`) 方法，72
 * 勒贝格测度，213
 * 似然函数，12
 * 线性激活函数，138
@@ -11225,157 +11647,144 @@ D
 * 利普希茨常数，20，197，238，246–247
 * 利普希茨函数，20
 * *L*²\-范数最小化，278
-* 对数词频 (LOGTF)，38
+* 对数词频 (`LOGTF`)，38
 * 逻辑回归，273
 * 李雅普诺夫型泛函规划问题，171
 * 李雅普诺夫型优化，57–58，103–104，167，170
 
 ### M
-* 机器学习算法 (ML-A)，162–165
-* 机器学习 (ML)，1，*3*，250
+* 机器学习算法 (`ML-A`)，162–165
+* 机器学习 (`ML`)，1，*3*，250
     * 算法，10–11
     * 概念，9–12
-    * 第一阶段 (选择和参数化，PM)，6–10
-    * 第四阶段 (生成优化模型，MI)，9
+    * 第一阶段 (选择和参数化，`PM`)，6–10
+    * 第四阶段 (生成优化模型，`MI`)，9
     * 方法论方法，1
     * 方法和算法，6
     * 最小化，9
     * 随机机器学习程序的原则，12–16
-    * 第二阶段 (形成输入 (原因) 和输出，PE)，8–9
+    * 第二阶段 (形成输入 (原因) 和输出，`PE`)，8–9
     * 结构，6–9
+* 第三阶段（数据阵列的形成，`MT`），9–10
+* 知识向决策的转化，2–6
+* 宏观人口学，5
+* 曼哈顿距离，104–105
+* 映射，115，265
+* 马尔可夫过程，27–29
+    * 扩散过程，29
+    * 具有独立增量的，29
+    * 跳跃过程，29
+    * 事件离散干预的过程，29
+* 大规模并行架构加速器，249，257
+* 数学建模，6，*7*，115
+* 矩阵向量化，78，83，85
+* 最大熵估计（`MEE`）
+    * 最大熵估计的渐近有效性，339–341
+    * 隐函数存在性，335–339
+    * 陈述，333–335
+* 最大熵估计（*MEE*），103
+* `MDE`，*参见* 缺失数据集合
+* *M→D*（*动机–决策*）循环，2–4
+* 均值轨迹，13
+* 测量误差生成器（`MEG`），160–161
+* 测量模型（`MM`），161
+* *MEE*\-估计的 `DDFs`，108
+* 消息传递，250
+* Metropolis-Hastings（`MH`）方法，241
+* 约束最小交叉熵（`MCEC`），87
+* 缺失数据集合（`MDE`），55，*55*
+    * 优化算法
+        * 输入和输出数据的遗漏，61
+        * 输入数据的遗漏，58–61
+        * 输出数据的遗漏，56–58
+    * 最优 `PDF` 的采样，61–63
+* `ML`，*参见* 机器学习
+* 基于模型的分布，52
+* 模型开发（`MD`），260
+* 模型实现（`MI`），259，261–264
+* 模型学习（`ML`），259–261
+* 模型测量，8
+* 模型测试（`MT`），259
+* 模型-视图-控制器（`MVC`）设计，262
+* 连续性模块，19–20
+* 矩评估器（`ME`），161–162
+* （单原子或多原子）气体模型，163
+* 蒙特卡洛方法，61，204，224，237
+* 用于全局优化的蒙特卡洛包迭代，202
+    * 一般形式的容许集，213–215
+    * 全局优化问题的规范形式，203–205
+    * `GFS` 算法的收敛性，209–213
+    * `GFS` 算法的实验研究，217–223
+    * 方法思想和解的概念，205–206
+    * `GFS` 算法的逻辑结构，215–216
+    * 随机序列的概率特征，206–209
+* 蒙特卡洛模拟，93，107，197，202，205–206
+* `MPI`，256
+* 多维 `AR` 方法，240–241
+* 多维欧几里得空间，70
+* 使用蒙特卡洛方法的多维积分，223–230
+* 多维稀疏数据，72
+* 多维权重函数，127
+* 多层神经网络，138
+* 乘法算法，198
+    * 具有 *P*\-活动变量的，230–235
+* 多处理器计算模块，264
+* 多线程执行环境，256
 
+### N
+* Naive Bayes，268，270–271
+* 神经网络，137–140，275
+    * Kolmogorov 定理，137
+    * 结构基础，137
+    * 普适性，138
+* Newton 插值多项式，42
+* 噪声阵列，160
+* 噪声，183
+* 非遗传系统，27–28
+* 非线性模块，128
+* 非线性动态模型
+    * 具有多项式非线性的，147–149
+    * 具有幂非线性的，145–147
+* 非线性方程，199
+* 非负数据矩阵，73
+* 非负象限，201
+* 非负实值函数，18
+* 非随机变量，239
+* 归一化，4，67，184，297
+* 归一化积分二次泛函，21
+* NVIDIA 加速器，218
 
+### O
+* 奇阶矩函数，25
+* 一维 `RPM`，131
+* 一维静态对象，118
+* 本体，8
+* OpenMP，256，265
+* 操作系统，254
+* 最优性条件和算法，75–77
+* 熵最优 `PDF` 的最优性条件和结构，173
+    * 随机化模型
+        * 具有输入和输出误差的 `RPM-Orig` 类，179–180
+        * 具有输出误差的 `RPM-Orig` 类，173–175
+        * 具有输出误差的 `RPM-Rel` 类，175–179
+* 优化原理，12
+* 矩函数的阶，24
+* 正交多项式，148
+* 正交归一多项式，119
 
-
-
-*   第三阶段（数据阵列的形成，MT），9–10
-*   知识向决策的转化，2–6
-*   宏观人口学，5
-*   曼哈顿距离，104–105
-*   映射，115，265
-*   马尔可夫过程，27–29
-    *   扩散过程，29
-    *   具有独立增量的，29
-    *   跳跃过程，29
-    *   事件离散干预的过程，29
-*   大规模并行架构加速器，249，257
-*   数学建模，6，*7*，115
-*   矩阵向量化，78，83，85
-*   最大熵估计（MEE）
-    *   最大熵估计的渐近有效性，339–341
-    *   隐函数存在性，335–339
-    *   陈述，333–335
-*   最大熵估计（*MEE*），103
-*   MDE，*参见* 缺失数据集合
-*   *M→D*（*动机–决策*）循环，2–4
-*   均值轨迹，13
-*   测量误差生成器（MEG），160–161
-*   测量模型（MM），161
-*   *MEE*\-估计的 DDFs，108
-*   消息传递，250
-*   Metropolis-Hastings（MH）方法，241
-*   约束最小交叉熵（MCEC），87
-*   缺失数据集合（MDE），55，*55*
-    *   优化算法
-        *   输入和输出数据的遗漏，61
-        *   输入数据的遗漏，58–61
-        *   输出数据的遗漏，56–58
-    *   最优 PDF 的采样，61–63
-*   ML，*参见* 机器学习
-*   基于模型的分布，52
-*   模型开发（MD），260
-*   模型实现（MI），259，261–264
-*   模型学习（ML），259–261
-*   模型测量，8
-*   模型测试（MT），259
-*   模型-视图-控制器（MVC）设计，262
-*   连续性模块，19–20
-*   矩评估器（ME），161–162
-*   （单原子或多原子）气体模型，163
-*   蒙特卡洛方法，61，204，224，237
-*   用于全局优化的蒙特卡洛包迭代，202
-    *   一般形式的容许集，213–215
-    *   全局优化问题的规范形式，203–205
-    *   GFS 算法的收敛性，209–213
-    *   GFS 算法的实验研究，217–223
-    *   方法思想和解的概念，205–206
-    *   GFS 算法的逻辑结构，215–216
-    *   随机序列的概率特征，206–209
-*   蒙特卡洛模拟，93，107，197，202，205–206
-*   MPI，256
-*   多维 AR 方法，240–241
-*   多维欧几里得空间，70
-*   使用蒙特卡洛方法的多维积分，223–230
-*   多维稀疏数据，72
-*   多维权重函数，127
-*   多层神经网络，138
-*   乘法算法，198
-    *   具有 *P*\-活动变量的，230–235
-*   多处理器计算模块，264
-*   多线程执行环境，256
-
-N
-
-*   Naive Bayes，268，270–271
-*   神经网络，137–140，275
-    *   Kolmogorov 定理，137
-    *   结构基础，137
-    *   普适性，138
-*   Newton 插值多项式，42
-*   噪声阵列，160
-*   噪声，183
-*   非遗传系统，27–28
-*   非线性模块，128
-*   非线性动态模型
-    *   具有多项式非线性的，147–149
-    *   具有幂非线性的，145–147
-*   非线性方程，199
-*   非负数据矩阵，73
-*   非负象限，201
-*   非负实值函数，18
-*   非随机变量，239
-*   归一化，4，67，184，297
-*   归一化积分二次泛函，21
-*   NVIDIA 加速器，218
-
-O
-
-*   奇阶矩函数，25
-*   一维 RPM，131
-*   一维静态对象，118
-*   本体，8
-*   OpenMP，256，265
-*   操作系统，254
-*   最优性条件和算法，75–77
-*   熵最优 PDF 的最优性条件和结构，173
-    *   随机化模型
-        *   具有输入和输出误差的 RPM-Orig 类，179–180
-        *   具有输出误差的 RPM-Orig 类，173–175
-        *   具有输出误差的 RPM-Rel 类，175–179
-*   优化原理，12
-*   矩函数的阶，24
-*   正交多项式，148
-*   正交归一多项式，119
-
-P
-
-*   包迭代，264–266
-*   并行计算，252
-*   并行计算工具箱，223
-
-
-
-
-
+### P
+* 包迭代，264–266
+* 并行计算，252
+* 并行计算工具箱，223
 * 并行性，253，258
-  * 按数据，264
-  * 定向表示，256
-* 参数估计 (PE)，216，259
-* 参数化积分分量 (PICs)，182，197
-* 参数化模型 (PM)，259
+    * 按数据，264
+    * 定向表示，256
+* 参数估计 (`PE`)，216，259
+* 参数化积分分量 (`PICs`)，182，197
+* 参数化模型 (`PM`)，259
 * 参数特性，8
-* PCA，*见* 主成分分析
-* PDF，*见* 概率密度函数
+* `PCA`，*见* 主成分分析
+* `PDF`，*见* 概率密度函数
 * 物理熵，164
 * 分段常数函数，21
 * 矩阵的点集表示，100
@@ -11388,196 +11797,189 @@ P
 * Powell 函数，218
 * 幂非线性，128
 * 原函数，35
-* 主成分分析 (PCA)，68–70，72，92
+* 主成分分析 (`PCA`)，68–70，72，92
 * 主成分矩阵，69
 * 主成分，69
 * 概率特性，149–156
-  * 经验概率特性，150–154
-  * 集合的矩特性，154–156
-* 归属概率 (PO)，184
-* 概率密度函数 (PDF)，11–13，16，23，31，58，88–89，113，140，157，288
-  * 熵最优，158
-  * 估计问题，158
-  * 最优，261
+    * 经验概率特性，150–154
+    * 集合的矩特性，154–156
+* 归属概率 (`PO`)，184
+* 概率密度函数 (`PDF`)，11–13，16，23，31，58，88–89，113，140，157，288
+    * 熵最优，158
+    * 估计问题，158
+    * 最优，261
 * 概率分布函数，4，22，26，164，238
 * 概率论关系，22
 * 概率向量，185
 * 问题导向数据，65
 * 事件离散干扰的过程，29
-* 处理单元 (PEs)，253
+* 处理单元 (`PEs`)，253
 * 编程模型，250
 * 投影矩阵，101–102，105–106
-  * 平均，110
-  * 最大概率，110
-  * 中位数，110
-  * 子集，111
-* 脉冲编码调制 (PCM)，32
+    * 平均，110
+    * 最大概率，110
+    * 中位数，110
+    * 子集，111
+* 脉冲编码调制 (`PCM`)，32
 * 脉冲发生器，30
-Q
+
+### Q
 * 二次块，127
 * 二次熵不等式，85
 * 量化误差，32
 * 准随机化参数，184
-R
+
+### R
 * 非线性元件的随机系数，136
 * 随机函数，21–29
 * 随机发生器，206
 * 随机化方法，197
 * 随机化预测，288
 * 电力系统中日用电负荷的随机化预测，294
-  * 电负荷模型，295–296
-  * 熵最优 PDF，299–301
-  * 学习数据集，296–299
-  * 模型测试，304–305
-  * *N*\-日负荷的随机化预测，305–308
-  * 模型学习结果，301–304
-* 沼泽湖面积演化的随机化预测，324
-* 随机化机器学习 (RML)，12，65
-  * 算法，57
-  * 定义，16
-  * 实现原则，16
-  * 优化原则，16
-  * *r*\-问题，89–92
-  * *s*\-问题，89
-* 动态回归与预测中的随机化机器学习，285–286
-  * 熵随机化建模与预测
-    * 沼泽湖状态数据，314–317
-    * *LDRR* 的熵随机化机器学习，317–321
-    * 沼泽湖面积演化的随机化预测，324
-    * 训练、测试和预测结果，324–332
-    * 沼泽湖状态随机化模型的结构，311–314
-    * 测试程序、数据和精度估计，321–323
-    * 沼泽湖与气候变化，309
-    * 西西伯利亚的沼泽湖，309–311
-  * 电力系统中日用电负荷的随机化预测，294
     * 电负荷模型，295–296
-    * 熵最优 PDF，299–301
+    * 熵最优 `PDF`，299–301
     * 学习数据集，296–299
     * 模型测试，304–305
     * *N*\-日负荷的随机化预测，305–308
     * 模型学习结果，301–304
-  * 世界人口动态的随机化模型，286–289
+* 沼泽湖面积演化的随机化预测，324
+* 随机化机器学习 (`RML`)，12，65
+    * 算法，57
+    * 定义，16
+    * 实现原则，16
+    * 优化原则，16
+    * *r*\-问题，89–92
+    * *s*\-问题，89
+* 动态回归与预测中的随机化机器学习，285–286
+    * 熵随机化建模与预测
+        * 沼泽湖状态数据，314–317
+        * *LDRR* 的熵随机化机器学习，317–321
+        * 沼泽湖面积演化的随机化预测，324
+        * 训练、测试和预测结果，324–332
+        * 沼泽湖状态随机化模型的结构，311–314
+        * 测试程序、数据和精度估计，321–323
+        * 沼泽湖与气候变化，309
+        * 西西伯利亚的沼泽湖，309–311
+    * 电力系统中日用电负荷的随机化预测，294
+        * 电负荷模型，295–296
+        * 熵最优 `PDF`，299–301
+        * 学习数据集，296–299
+        * 模型测试，304–305
+        * *N*\-日负荷的随机化预测，305–308
+        * 模型学习结果，301–304
+    * 世界人口动态的随机化模型，286–289
+        * 学习，289–290
+        * 数值结果，290–294
+    * 应用中动态关系的恢复，286
+* 世界人口动态的随机化模型
     * 学习，289–290
     * 数值结果，290–294
-  * 应用中动态关系的恢复，286
-* 世界人口动态的随机化模型
-  * 学习，289–290
-  * 数值结果，290–294
-* RPM-Orig 类的随机化模型
-  * 具有输入和输出误差，179–180
-  * 具有输出误差，173–175
-* RPM-Rel 类的随机化模型，具有输出误差，175–179
-
-
-
-
-
-*   随机神经网络，137–140
-*   随机参数，149
-    *   概率特性，149–150
-*   随机参数模型 (RPM)，55，*56*，113，159–160，198，276
-    *   定义、特性和分类，113–116
-    *   概率特性，149–156
-        *   经验概率特性，150–154
-        *   集合的矩特性，154–156
-    *   RPM-I 模型，55
-    *   RPM-O 模型，55，61
-    *   （单输入，反馈）–集合输出
-        *   定义和结构，140–142
-        *   线性动态模型，142–144
-        *   具有多项式非线性的非线性动态模型，147–149
-        *   具有幂非线性的非线性动态模型，145–147
-    *   单输入–集合输出
-        *   动态模型的函数描述，120
-        *   线性动态模型，120–125
-        *   具有多项式非线性的非线性动态模型，133–137
-        *   具有幂非线性的非线性动态模型，125–133
-        *   随机神经网络，137–140
-        *   静态模型，116–120
-*   随机参数 (RPM-I) 模型，58–59
-*   随机恢复方法，52–63
-    *   输入和输出数据的遗漏，61
-    *   MDE 的优化算法，56–61
-    *   最优 PDF 的采样，61–63
-    *   结构，52–56
-*   随机噪声，221
-*   随机参数，15，142
-*   随机过程，22
-    *   具有独立增量的，26–27
-*   随机投影方法，70–73
-*   随机投影 (RP)，92
-*   随机投影矩阵，107–109
-*   随机投影器和数值特性，106–107
-*   随机子空间方法 (RSM)，274
-*   随机时不变参数，122
-*   随机向量，22
-    *   相关元素，240
-    *   函数，22
-    *   独立元素，240
-    *   Metropolis-Hastings (MH) 方法，241
-    *   多维 AR 方法，240–241
-*   随机函数的实现，22
-*   递归算法，69
-*   区域状态指标，**53**
-*   内部过程的规律性，7
-*   相对信息误差，91
-*   相对非负参数，150
-*   再现流，287
-*   重新安置函数，4
-*   残差矩阵，69
-*   资源集，165
-*   缺失数据的恢复方法，40
-    *   辅助动态模型，43–45
-    *   插值，40–43
-    *   随机恢复方法，52–63
-    *   空间熵分解，45–52
-*   RML，*参见* 随机机器学习
-*   均方根误差 (RMSE)，293
-*   均方根 (RMS)，110
-*   Rosenbrock 函数，218
-*   RPM-CauRand 模型，198
-*   RPM-Orig 模型，150，159–160
-    *   具有输入和输出误差的，182
-    *   输出，166
-    *   具有输出误差的，180–181
-*   RPM-QuaRand 模型，184–187，201
-*   RPM-Rel 模型，150，159–160，167，169，198
-    *   具有输出误差的，181–182
-*   具有原始参数的 RPMs (RPM-Orig)，198
-*   样本，22
-*   采样程序，305
-*   标量函数，78
-*   矩阵的标量函数，78
-*   二阶微分方程，14
-*   二阶动态回归，295–296
-*   二阶系统，15
-*   自检，305
-*   Shannon, C.，16
-*   共享内存，250
-*   Shekel 函数，217
-*   Sigmoid 激活函数，138
-*   同时多线程 (SMT)，253
-*   （单输入，反馈）–集合输出
-    *   定义和结构，140–142
-    *   线性动态模型，142–144
-    *   具有多项式非线性的非线性动态模型，147–149
-    *   具有幂非线性的非线性动态模型，145–147
-*   单输入–集合输出
-    *   动态模型的函数描述，120
-    *   线性动态模型，120–125
-    *   具有多项式非线性的非线性动态模型，133–137
-    *   具有幂非线性的非线性动态模型，125–133
-    *   随机神经网络，137–140
-    *   静态模型，116–120
-*   单层神经网络，*277*
-*   单层感知器，272，276
-*   态势评估，5
-*   光滑函数，19
-*   软件开发，255
-
-
-
-
+* `RPM-Orig` 类的随机化模型
+    * 具有输入和输出误差，179–180
+    * 具有输出误差，173–175
+* `RPM-Rel` 类的随机化模型，具有输出误差，175–179
+* 随机神经网络，137–140
+* 随机参数，149
+    * 概率特性，149–150
+* 随机参数模型 (`RPM`)，55，*56*，113，159–160，198，276
+    * 定义、特性和分类，113–116
+    * 概率特性，149–156
+        * 经验概率特性，150–154
+        * 集合的矩特性，154–156
+    * `RPM-I` 模型，55
+    * `RPM-O` 模型，55，61
+    * （单输入，反馈）–集合输出
+        * 定义和结构，140–142
+        * 线性动态模型，142–144
+        * 具有多项式非线性的非线性动态模型，147–149
+        * 具有幂非线性的非线性动态模型，145–147
+    * 单输入–集合输出
+        * 动态模型的函数描述，120
+        * 线性动态模型，120–125
+        * 具有多项式非线性的非线性动态模型，133–137
+        * 具有幂非线性的非线性动态模型，125–133
+        * 随机神经网络，137–140
+        * 静态模型，116–120
+* 随机参数 (`RPM-I`) 模型，58–59
+* 随机恢复方法，52–63
+    * 输入和输出数据的遗漏，61
+    * `MDE` 的优化算法，56–61
+    * 最优 `PDF` 的采样，61–63
+    * 结构，52–56
+* 随机噪声，221
+* 随机参数，15，142
+* 随机过程，22
+    * 具有独立增量的，26–27
+* 随机投影方法，70–73
+* 随机投影 (`RP`)，92
+* 随机投影矩阵，107–109
+* 随机投影器和数值特性，106–107
+* 随机子空间方法 (`RSM`)，274
+* 随机时不变参数，122
+* 随机向量，22
+    * 相关元素，240
+    * 函数，22
+    * 独立元素，240
+    * Metropolis-Hastings (`MH`) 方法，241
+    * 多维 `AR` 方法，240–241
+* 随机函数的实现，22
+* 递归算法，69
+* 区域状态指标，**53**
+* 内部过程的规律性，7
+* 相对信息误差，91
+* 相对非负参数，150
+* 再现流，287
+* 重新安置函数，4
+* 残差矩阵，69
+* 资源集，165
+* 缺失数据的恢复方法，40
+    * 辅助动态模型，43–45
+    * 插值，40–43
+    * 随机恢复方法，52–63
+    * 空间熵分解，45–52
+* `RML`，*参见* 随机机器学习
+* 均方根误差 (`RMSE`)，293
+* 均方根 (`RMS`)，110
+* Rosenbrock 函数，218
+* `RPM-CauRand` 模型，198
+* `RPM-Orig` 模型，150，159–160
+    * 具有输入和输出误差的，182
+    * 输出，166
+    * 具有输出误差的，180–181
+* `RPM-QuaRand` 模型，184–187，201
+* `RPM-Rel` 模型，150，159–160，167，169，198
+    * 具有输出误差的，181–182
+* 具有原始参数的 `RPMs` (`RPM-Orig`)，198
+* 样本，22
+* 采样程序，305
+* 标量函数，78
+* 矩阵的标量函数，78
+* 二阶微分方程，14
+* 二阶动态回归，295–296
+* 二阶系统，15
+* 自检，305
+* Shannon, C.，16
+* 共享内存，250
+* Shekel 函数，217
+* Sigmoid 激活函数，138
+* 同时多线程 (`SMT`)，253
+* （单输入，反馈）–集合输出
+    * 定义和结构，140–142
+    * 线性动态模型，142–144
+    * 具有多项式非线性的非线性动态模型，147–149
+    * 具有幂非线性的非线性动态模型，145–147
+* 单输入–集合输出
+    * 动态模型的函数描述，120
+    * 线性动态模型，120–125
+    * 具有多项式非线性的非线性动态模型，133–137
+    * 具有幂非线性的非线性动态模型，125–133
+    * 随机神经网络，137–140
+    * 静态模型，116–120
+* 单层神经网络，*277*
+* 单层感知器，272，276
+* 态势评估，5
+* 光滑函数，19
+* 软件开发，255
 
 ### T
 * 空间离散化，35
@@ -11590,7 +11992,7 @@ R
 * 斯特林近似，164
 * 随机连续性，24
 * 随机框架，3–4
-* 支持向量机（SVM），72，273，275
+* 支持向量机（`SVM`），72，273，275
 * 对称公理，18
 * 同步，40
 * 语法树，37
@@ -11600,8 +12002,8 @@ R
 * 泰勒单项式，118
 * 泰勒级数，19，78
 * 文档中的词条，38
-* 词频（TF），38
-* 测试数据（LD），260–261
+* 词频（`TF`），38
+* 测试数据（`LD`），260–261
 * 文本数据，36–38
     * 文档的格式，37
     * 频率特征，37
@@ -11622,7 +12024,7 @@ R
 * 行程时间利用率，4
 * 截断拉格朗日函数，86
 * 二维数组，113
-* 二维熵最优 PDF，*283*
+* 二维熵最优 `PDF`，*283*
 * 二维对象，分类，282–285
 
 ### U
@@ -11634,7 +12036,7 @@ R
 * 均匀正交格，224
 * 均匀随机连续性，24
 * 单位立方体，241–242
-* 通用多线程架构（UMA），257
+* 通用多线程架构（`UMA`），257
 * 通用多线程架构，255–258
 * 用户层，252
 
@@ -11643,26 +12045,42 @@ R
 * 向量图形数据，35
 * 向量化，75，80
 * 向量损失函数，11
-* 向量随机化器（VR），160
+* 向量随机化器（`VR`），160
 * 向量随机过程，22
 * 虚拟基本立方体，207
 * 视觉退化，73
 * Volterra 级数，129
 
 ### W
-* 西西伯利亚，热喀斯特湖区演化
-    * 气候变化，309
-    * 状态数据，314–317
-    * *LDRR* 的熵随机化机器学习
-        * ERML 算法，318–321
-        * 数据集的形成，317–318
-    * 训练、测试和预测结果
-        * 随机化预测（2008–2023），328–332
-        * 随机化训练（1973–1997），324–327
-        * 测试（1998–2007），327–328
-    * 随机化模型的结构，311–314
-    * 测试程序、数据和精度估计，321–324
-    * 工具和问题，309–311
-* 维纳过程，26
-* 具有独立增量的，29
 
+
+
+# 西西伯利亚，热喀斯特湖区演化
+
+## 气候变化，309
+
+## 状态数据，314–317
+
+## `LDRR` 的熵随机化机器学习
+
+### ERML 算法，318–321
+
+### 数据集的形成，317–318
+
+## 训练、测试和预测结果
+
+### 随机化预测（2008–2023），328–332
+
+### 随机化训练（1973–1997），324–327
+
+### 测试（1998–2007），327–328
+
+## 随机化模型的结构，311–314
+
+## 测试程序、数据和精度估计，321–324
+
+## 工具和问题，309–311
+
+# 维纳过程，26
+
+# 具有独立增量的，29

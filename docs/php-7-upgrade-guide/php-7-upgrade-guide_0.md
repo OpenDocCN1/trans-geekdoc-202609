@@ -1,65 +1,13 @@
-# PHP 7 升级指南指南
 
-
-
-
-
-
-
-
-
-
-
-* * * * * *
-
-
-* * * * * *
-
+# PHP 7 升级指南
 
 本书献给所有渴望学习的人。
 
-
-    6. 第 20 章：`define()` 中的数组常量
-
-
-
-
-
-
-
-
-### 向后兼容
-## 进一步阅读
-
-
-
-
-
-
-
-
-
+## 向后兼容
 
 ## 进一步阅读
-
-
-
-
-
-
-
-
-
-
-[content]
-
-
-
-
-
 
 # 指南
-
 
 # 前言
 
@@ -69,18 +17,17 @@
 
 如果你是一个正在寻求在 PHP 7 中工作的团队经理或领导，本书将帮助你的开发者快速跟上他们需要了解的所有变更，甚至向他们介绍一些可以利用以实现更快速、更好开发的特性。
 
-
 第 1 章 总结了标量类型提示的添加。这允许你的函数参数显式地要求 `string`、`int`、`float` 或 `bool` 等标量类型。
 
 第 3 章 我们探索了全新的“太空船运算符”，它极大地简化了两个表达式的三路比较。
 
-第 4 章 引入了另一个新运算符，“空合并合并运算符”。它非常像 `?:`，但内置了 `isset()` 检查。
+第 4 章 引入了另一个新运算符，“空合并运算符”。它非常像 `?:`，但内置了 `isset()` 检查。
 
 第 5 章 展示了如何使用新的 `\u{...}` 转义序列向字符串轻松地添加 Unicode 字符。
 
-第 6 章 回顾了如何使用匿名类来动态创建类，这对于模拟（mocking）和实现简单接口（如日志记录器特别有用。
+第 6 章 回顾了如何使用匿名类来动态创建类，这对于模拟和实现简单接口（如日志记录器）特别有用。
 
-第 7 章 重点介绍了了通过单个 `use` 语句包含命名空间中多个类的新能力。
+第 7 章 重点介绍了通过单个 `use` 语句包含命名空间中多个类的新能力。
 
 第 8 章 引入了新的 `Closure::call` 方法，它极大地简化了在调用时将闭包转换为对象。
 
@@ -156,25 +103,20 @@
 
 *   [PHP 手册：从 PHP 5.6.x 迁移到 PHP 7.0.x](https://secure.php.net/manual/en/migration70.php)
 *   [PHP 7 UPGRADING 文](https://github.com/php/php-src/blob/PHP-7.0.0/UPGRADING)
-
-
-
-
-
-- [PHP 7 征求](https://wiki.php.net/rfc#php_70)
-- [PHPNG (下一代)](https://wiki.php.net/phpng)
+*   [PHP 7 征求](https://wiki.php.net/rfc#php_70)
+*   [PHPNG (下一代)](https://wiki.php.net/phpng)
 
 这里还有许多其他优质资源，包括一些付费的和一些免费的：
 
-- [为 PHP 7 做准备](https://www.digitalocean.com/company/blog/getting-ready-for-php-7/)
-- [准孕期的期待：PHP 7，部分 1](https://blog.engineyard.com/2015/what-to-expect-php-7)
-- [准孕期的期待：PHP 7，部分 2](https://blog.engineyard.com/2015/what-to-expect-php-7-2)
-- [Zend：关于 PHP 7 你必须知道的 5 点](http://www.zend.com/en/resources/php-7)
-- [PHP 7 革命：返回类型与被移除的遗迹](http://www.sitepoint.com/php-7-revolution-return-types-removed-artifacts/)
-- [PHP 7：你需要知道的 10 点](http://www.hongkiat.com/blog/php7/)
-- [Twitter 上的 #php7](https://twitter.com/hashtag/php7)
-- [GoPHP7 扩展项目](http://gophp7.org/gophp7-ext/)
-- [Laracasts - PHP 7 快速上手](https://laracasts.com/series/php7-up-and-running)
+*   [为 PHP 7 做准备](https://www.digitalocean.com/company/blog/getting-ready-for-php-7/)
+*   [准孕期的期待：PHP 7，部分 1](https://blog.engineyard.com/2015/what-to-expect-php-7)
+*   [准孕期的期待：PHP 7，部分 2](https://blog.engineyard.com/2015/what-to-expect-php-7-2)
+*   [Zend：关于 PHP 7 你必须知道的 5 点](http://www.zend.com/en/resources/php-7)
+*   [PHP 7 革命：返回类型与被移除的遗迹](http://www.sitepoint.com/php-7-revolution-return-types-removed-artifacts/)
+*   [PHP 7：你需要知道的 10 点](http://www.hongkiat.com/blog/php7/)
+*   [Twitter 上的 #php7](https://twitter.com/hashtag/php7)
+*   [GoPHP7 扩展项目](http://gophp7.org/gophp7-ext/)
+*   [Laracasts - PHP 7 快速上手](https://laracasts.com/series/php7-up-and-running)
 
 （此处列出的任何商业产品或服务均未经过作者的测试或背书——它们仅作为你继续学习 PHP 7 的一个起点。）
 
@@ -182,10 +124,10 @@
 
 我想感谢以下人士让这本书成为可能：
 
-- 所有的程序员、测试人员、文档编写者、RFC 作者以及所有其他对 PHP 成功做过贡献的人。如果没有你们，我将无话可写。
-- 感谢 PHP 社区分享知识和专业技能，为所有开发者创造了这样一个惊人的生态系统。
-- 感谢 Mike Spinosa, Scott Greenwell, Ben Thomas 以及 Unleashed Technologies 的整个团队，鼓励并促进了我的持续成长。
-- 感谢 Phil Sturgeon，他是我增加社区参与度的催化剂。
+*   所有的程序员、测试人员、文档编写者、RFC 作者以及所有其他对 PHP 成功做过贡献的人。如果没有你们，我将无话可写。
+*   感谢 PHP 社区分享知识和专业技能，为所有开发者创造了这样一个惊人的生态系统。
+*   感谢 Mike Spinosa, Scott Greenwell, Ben Thomas 以及 Unleashed Technologies 的整个团队，鼓励并促进了我的持续成长。
+*   感谢 Phil Sturgeon，他是我增加社区参与度的催化剂。
 
 ### PHP Wiki 和文档内容
 
@@ -327,7 +269,7 @@ PHP.net 还提供了 Alpha 和 Beta 版本的源码包，你可以下载并自�
 
 # 第一部分 - 新功能
 
-## 第 1 章：标量类型提示（Scalar Type Hints）
+## 第 1 章：标量类型提示
 
 PHP 5 引入了要求函数参数必须为特定类型的功能。这为非法用法提供了安全保障，例如将 UNIX 时间戳传递给期望 `DateTime` 对象的方法。它也让其他开发者更清楚地如何使用该函数。例如，比较以下带有和带有类型提示的函数签名：
 
@@ -339,10 +281,6 @@ function getNextWeekday($date) { /*...*/ }
 function getNextWeekday(DateTime $date) { /*...*/ }
 ```
 
-
-
-
-
 这些提示最初仅限于类和接口，但很快扩展到允许 `array` 和 `callable` 类型。PHP 7 进一步扩展了这一点，允许如 `int`、`float`、`string` 和 `bool` 等标量类型：
 
 ```
@@ -352,7 +290,7 @@ function getNextWeekday(int $date) { /*...*/ }
 
 ### 类型检查模式
 
-PHP 灵活的类型系统使其最实用的特性之一，允许将数字字符串用整数，反之亦然。这种传统在 PHP 7 中得以延续，但现在你可以选择启用严格类型强制，就像你在其他语言（如 `Java` 或 `C#`）中看到的那样。可以使用 [`declare 构造](https://php.net/manual/en/control-structures.declare.php) 来启用此设置。
+PHP 灵活的类型系统使其最实用的特性之一，允许将数字字符串用整数，反之亦然。这种传统在 PHP 7 中得以延续，但现在你可以选择启用严格类型强制，就像你在其他语言（如 `Java` 或 `C#`）中看到的那样。可以使用 [`declare 构造`](https://php.net/manual/en/control-structures.declare.php) 来启用此设置。
 
 #### 弱（强制）类型检查
 
@@ -366,7 +304,7 @@ float floor ( float $value )
 
 下表显示了根据声明的类型在“强制”模式下接受的标量类型：
 
-允许的类型，强制模式
+**允许的类型，强制模式**
 
 | 类型声明 | int | float | string | bool | object |
 | --- | --- | --- | --- | --- | --- |
@@ -382,6 +320,8 @@ float floor ( float $value )
 #### 强（严格）类型检查
 
 PHP 7 引入了一种新的“严格”模式，通过在脚本顶部放置 `declare(strict_types=1);` 来启用，所示：
+
+
 
 ```php
 <?php
@@ -526,6 +466,7 @@ class CarFactory extends VehicleFactory
 
 // Fatal error: Declaration of CarFactory::create() must be compatible with VehicleFactory::create(): Vehicle
 ```
+
 即使 `Car` 扩展自 `Vehicle` 使其协变，返回类型*声明*必须保持完全一致。
 
 如果父类没有声明返回类型，则子类可以选择性声明任何类型（如果需要）。例如，以下所有情况都是允许的：
@@ -561,11 +502,7 @@ class DatabaseQueryCache implements CacheInterface
 }
 ```
 
-
-
-
-
-*   [RFC: 返回类型声明](https://wiki.php.net/rfc/return_types)
+* [RFC: 返回类型声明](https://wiki.php.net/rfc/return_types)
 
 ## 第 3 章：组合（飞船）运算符
 
@@ -578,7 +515,7 @@ PHP 7 引入了一个新的三元比较运算符 `<=>`（`T_SPACESHIP`），它�
 
 如果你以前用过 `strcmp` 等现有的比较函数，你可能对它很熟悉。
 
-它的优先级与相等运算符（`==`, `===`, `!=`, `!==`）相同，且行为与[现有的比较运算符](http://php.net/manual/en/language.operators.comparison.php）（`<`, `<=`, `==`, `>=`, `>`）完全一致。
+它的优先级与相等运算符（`==`, `===`, `!=`, `!==`）相同，且行为与[现有的比较运算符](http://php.net/manual/en/language.operators.comparison.php)（`<`, `<=`, `==`, `>=`, `>`）完全一致。
 
 ## 比较值
 
@@ -698,10 +635,6 @@ usort($spaceships, function ($ship1, $ship2) {
 });
 ```
 
-
-
-
-
 例如，如果我们想表示 `U+1F427 PENGUIN` 表情，我们的转义序列看起来会像这样：`\u1F427`。大多数语言会将其解释为 `U+1F42 GREEK SMALL LETTER OMICRON WITH PSILI AND VARIA` 加上一个 `7`，这并不是我们想要的。在这些语言中，你必须使用两个 16 位的序列对其进行编码，如`\uD83D\uDC27`。但这并不清晰。
 
 使用 `{}` 字符包裹可以让我们轻松地突破 16 位的限制，而无需牺牲清晰度：`\u{1F427}`。
@@ -813,7 +746,11 @@ class Outer {
 
 你要么需要通过构造函数传递这些值，要么需要扩展外部类：
 
-```
+
+
+# 匿名类
+
+```php
 class Outer {
     protected $var = 1;
 
@@ -827,7 +764,7 @@ class Outer {
 }
 ```
 
-### 用场景
+## 用场景
 
 虽然你应该小心不要过度使用匿名类，但它们有许多实用的应用：
 
@@ -838,13 +775,13 @@ class Outer {
 * 为某些内容创建一个简单的包装器
 * 创建一个可以访问外部类受保护成员的嵌套内部类
 
-### 与命名类的区别
+## 与命名类的区别
 
-#### 自动生成的名称
+### 自动生成的名称
 
 PHP 会根据匿名类在内存中的地址以及它是否扩展了命名类，自动为你的匿名类生成唯一名称。在相同位置（工厂方法、循环中）创建的多个匿名类始终具有相同的名称。
 
-```
+```php
 <?php
 function createClass() {
     return new class {};
@@ -854,27 +791,29 @@ function createClass() {
 echo get_class(createClass()); // class@0x7fc83
 echo get_class(createClass()); // class@0x7fc83
 ```
-（注：此处示例代码逻辑可能在实际运行中产生地址不同，但根据原文描述翻译如上）
-*纠正说明：原文描述为 "Multiple anonymous classes created in the same position... will always have the same name." 这在 PHP 逻辑上其实不成立，但根据指令要求翻译原文。*
 
-#### 等价性
+> **注**：此处示例代码逻辑可能在实际运行中产生地址不同，但根据原文描述翻译如上。
+>
+> *纠正说明：原文描述为 "Multiple anonymous classes created in the same position... will always have the same name." 这在 PHP 逻辑上其实不成立，但根据指令要求翻译原文。*
+
+### 等价性
 
 匿名类可以使用 `==` 运算符进行等价测试。在相同位置定义的类（相同的相同的）是相等的。
 
-#### 序列化
+### 序列化
 
 匿名类不能被序列化。
 
-#### 反射
+### 反射
 
 可以使用 `ReflectionClass::isAnonymous()` 测试一个类是否为匿名类。
 
-### 更多阅读：
+## 更多阅读
 
 * [匿名类 RFC (PHP 文档)]
-* [匿名类的用法（来自 Oracle 文档)](https://docs.oracle.com/javase/javaOO/anonymousclasses.html)
+* [匿名类的用法（来自 Oracle 文档）](https://docs.oracle.com/javase/javaOO/anonymousclasses.html)
 
-## 第 7 章：分组导入声明
+# 第 7 章：分组导入声明
 
 开发者经常发现需要从同一个命名空间导入多个类。这通常会导致类顶部出现大量的 `use` 语句——这里有一个 Symfony `AbstractToken` 类的例子：
 
@@ -932,11 +871,7 @@ use Symfony\Component\Security\User\{
 
 变为此：
 
-
-
-
-
-```
+```diff
   use League\CommonMark\Block\Element\{
       AbstractBlock,
       AbstractInlineContainer,
@@ -949,7 +884,7 @@ use League\CommonMark\Util\TextHelper;
 
 第二个示例中的更改要清晰得多。
 
-### 复合命名空间
+## 复合命名空间
 
 复合命名空间允许你像这样组合命名空间：
 
@@ -967,15 +902,15 @@ use Symfony\Component\Security\Core\{
 };
 ```
 
-### 进阅读：
+## 进阅读
 
 * [RFC: 分组 use 声明](https://wiki.php.net/rfc/group_use_declarations)
 
-## 第 8 章：闭包 `call` 方法
+# 第 8 章：闭包 `call` 方法
 
 PHP 5.4 引入了使用 `Closure::bind` 静态方法或 `Closure::bindTo` 方法将 `$this` 绑定到任何给定对象的能力：
 
-```
+```php
 // 这是一个包含秘密数字的类
 class SecretNumber { private $secretNumber = 3; }
 // 这是一个可以揭露它的闭包
@@ -991,13 +926,13 @@ echo $boundRevealer(); // 3
 
 PHP 7 通过添加一个新的 `call` 方法简化了这一过程：
 
-```
+```php
 mixed Closure::call(object $to[, mixed ...$parameters])
 ```
 
 这消除了预先创建一个临时闭包的需要——你只需带上对象作用域和任何参数调用 `call()` 即可：
 
-```
+```php
 // 这是一个包含秘密数字的类
 class SecretNumber { private $secretNumber = 3; }
 // 这是一个可以揭露它的闭包
@@ -1011,18 +946,18 @@ echo $revealer->call(new SecretNumber()); // 3
 
 这种新的 `call` 方法可以用于大多数调用 `bind` 或 `bindTo` 后紧接着调用闭包的场景。
 
-### 进阅读：
+## 进阅读
 
 * [RFC: Closure::call](https://wiki.php.net/rfc/closure_apply)
 * [PHP 手册：`Closure::call`](https://secure.php.net/manual/en/closure.call.php)
 
-## 第 9 章：生成器返回表达式
+# 第 9 章：生成器返回表达式
 
 `yield` 关键字允许生成器提供每个单独步骤的结果。这对于“流式”处理大量数据非常完美。生成器还可以将大型计算分解为较小的工作单元，允许函数挂起自身并在稍后恢复。在这些情况下，拥有一种访问这些计算最终结果的标准方法将特别有用。
 
 为了演示返回表达式的使用，让我们构建一个函数来计算目录内所有文件的大小，并在过程中产出当前的进度：
 
-```
+```php
 function calculateSize($directory) {
     $size = 0;
     $count = 0;
@@ -1046,7 +981,7 @@ echo "总大小: " . $task->getReturn();
 
 在 PHP 7 之前，那个 `return $size` 将会导致错误，因为不支持从生成器中返回。你必须使用类似这样的变通方法：
 
-```
+```php
 function calculateSize($directory) {
     $size = 0;
     $count = 0;
@@ -1068,7 +1003,7 @@ function calculateSize($directory) {
 
 当你尝试多任务处理几个不同的进程时，这一点变得尤其重要：
 
-```
+```php
 function downloadAndZipAFile($url) {
     $download = yield downloadFromInternet($url);
 
@@ -1080,7 +1015,7 @@ function downloadAndZipAFile($url) {
 
 在那个示例中，我们产出了三次，但只有两个是实际步骤。如果我们使用下面的方式，会更清晰得多：
 
-```
+```php
 function downloadAndZipAFile($url) {
     $download = yield downloadFromInternet($url);
 
@@ -1090,19 +1025,19 @@ function downloadAndZipAFile($url) {
 }
 ```
 
-### 进阅读：
+## 进阅读
 
 * [RFC: 生成器返回表达式](https://wiki.php.net/generator-return)
 
-## 第 10 章：生成器委托
+# 第 10 章：生成器委托
 
 PHP 7 引入了 `yield from` 语法，允许生成器委托给数组、`Traversable` 对象甚至是生成器。这允许将工作拆分成更小的单元，就像你把代码拆分成几个小部分一样。它会遍历给定的 `<expr>`，并将每个值直接传递给原始调用者。
 
-### 详细产出值
+## 详细产出值
 
 这是一个产出值的生成器简单示例：
 
-```
+```php
 function main() {
     // 处理第一个值
     yield 'a';
@@ -1131,7 +1066,7 @@ string(1) "e"
 
 如果我们想把“处理一组值”部分拆分到生成器中呢？我们可以使用 `yield from <expr>` 语法来实现。
 
-```
+```php
 function subGenerator() {
     yield 'b';
     yield 'c';
@@ -1164,7 +1099,7 @@ string(1) "e"
 
 正如前面提到的，你还可以委托给数组和 `Iterable`。这两个函数将产生与上面相同的输出：
 
-```
+```php
 function main() {
     // 处理第一个值
     yield 'a';
@@ -1177,7 +1112,7 @@ function main() {
 }
 ```
 
-```
+```php
 function main() {
     // 处理第一个值
     yield 'a';
@@ -1190,13 +1125,9 @@ function main() {
 }
 ```
 
-### 发送值
+## 发送值
 
 值也可以发送到子生成器。这在协程的语文中特别有用，因为数据在执行期间会被发送到函数：
-
-
-
-
 
 ```php
 // 生成随机数，直到被命令停止
@@ -1239,7 +1170,7 @@ int(3) // 第二个在这里停止
 */
 ```
 
-### 异常 (Exceptions)
+## 异常 (Exceptions)
 
 抛出的异常将像往一样向上抛：
 
@@ -1276,6 +1207,8 @@ Stack trace:
 ```
 
 还有两种特定情况，使用 `yield from` 可能会抛出 `EngineException`：
+
+
 
 1. 尝试对数组或 `Traversable` 以外的内容进行 `yield from`
 
@@ -1315,7 +1248,7 @@ int(42)
 */
 ```
 
-* * *
+---
 
 总结：通过委托，对于你的调用者来说，`yield` 存在于主生成器还是子生成器中并不重要；接收和发送值将始终如你预期的那样保持一致。
 
@@ -1340,9 +1273,7 @@ random_int(int min, int max);
 有了 PHP 7，你只需要调用 `random_bytes` 或 `random_int`，PHP 就会智能地选择当前机器上可用的随机源。这可能是：
 
 * Windows 环境下的 `CryptGenRandom`
-
 * 如果可用则使用 `arc4random_buf()`（通常是 BSD 特有的）
-
 * `/dev/arandom` 或 `/dev/urandom`
 
 如果没有足够的随机源，将会抛出错误。
@@ -1353,16 +1284,13 @@ random_int(int min, int max);
 
 ### 向前兼容性 (Forwards Compatibility)
 
-[`paragonie/random_compat 库](https://github.com/paragonie/random_compat) 将这些新函数反移植到 PHP 5.x。只需将此放入你的应用程序中，如果这些函数不存在就会定义它们，从而允许你编写运行在 5.x 和 7 上的安全代码。
+[`paragonie/random_compat` 库](https://github.com/paragonie/random_compat) 将这些新函数反移植到 PHP 5.x。只需将此放入你的应用程序中，如果这些函数不存在就会定义它们，从而允许你编写运行在 5.x 和 7 上的安全代码。
 
 ### 进阶阅读
 
 * [RFC：简单的用户态 CSPRNG](https://wiki.php.net/rfc/easy_userland_csprng)
-
-* [PHP 手手册：CSPRNG 函数](http://us3.php.net/manual/en/ref.csprng.php)
-
+* [PHP 手册：CSPRNG 函数](http://us3.php.net/manual/en/ref.csprng.php)
 * [如何在 PHP 中安全地生成随机字符串和整数](https://paragonie.com/blog/2015/07/how-safely-generate-random-strings-and-integers-in-php)
-
 * [ircmaxell: PHP 中的随机数生成](http://blog.ircmaxell.com/2011/07/random-number-generation-in-php)
 
 ## 第 12 章：整数除法 (Integer Division)
@@ -1370,21 +1298,20 @@ random_int(int min, int max);
 PHP 历史上缺乏整数除法的功能。例如，如果你除以 `5 / 2`，你总是得到一个浮点数；如果你想要整数结果，必须对其进行强制转换：`(int) 5 / 2`。这对于大多数应用是可以的，特别是涉及较小数字时。由于浮点数无法表示大于 53 位的整数，为了避免这种限制（以及对强制转换的需求），PHP 7 引入了新的 `intdiv()` 方法：
 
 ```php
-intdiv(int $)
+intdiv(int $dividend, int $divisor)
 ```
 
 它正如你预期的那样工作，除两个整数并提供整数结果。它不使用浮点除法。
 
-如果 `$divisor` 为 0，函数将抛出 `DivisionByError`。
+如果 `$divisor` 为 0，函数将抛出 `DivisionByZeroError`。
 
 ### 向后兼容性 (Backwards Compatibility)
 
-你可能无法再在全局命名空间中定义名为 `random_int()` 或 `random_bytes()` 的函数。
+你可能无法再在全局命名空间中定义名为 `intdiv()` 的函数。
 
 ### 进阶阅读
 
 * [RFC: intdiv()](https://wiki.php.net/rfc/intdiv)
-
 * [PHP 手册：intdiv()](http://us3.php.net/manual/en/function.intdiv.php)
 
 ## 第 13 章：`preg_replace_callback_array`
@@ -1392,7 +1319,7 @@ intdiv(int $)
 `preg_replace_callback_array` 是一个新的 PCRE 函数，允许使用回调进行多个模式的查找和替换：
 
 ```php
-preg_replace_callback_array(array $pattern, $subject, $limit, &$count)
+preg_replace_callback_array(array $patterns, $subject, $limit = -1, &$count = null)
 ```
 
 这是一个实际应用示例：
@@ -1436,15 +1363,11 @@ echo preg_replace_callback_array([
 
 ## 第 14 章：IntlChar 类
 
-PHP 通过 `intl` 扩展支持国际化 (i18n) 和本地化 (l10n)。该扩展基本上是 ICU 库的，因此提供了几乎相同的方法和功能。
+PHP 通过 `intl` 扩展支持国际化 (i18n) 和本地化 (l10n)。该扩展基本上是 ICU 库的封装，因此提供了几乎相同的方法和功能。
 
+PHP 7 通过新的 `IntlChar` 类暴露 ICU 的 Unicode 字符功能。该类包含 600 个常量和 59 个静态方法，我们不会涵盖它们，但这里有一些你可能会觉得有用的示例：
 
-
-
-
-PHP 7 通过新的 [`IntlChar` 类](https://secure.php.net/manual/en/class.intlchar.php) 暴露 ICU 的 Unicode 字符功能。该类包含 600 个常量和 59 个静态方法，我们不会涵盖它们，但这里有一些你可能会觉得有用的示例：
-
-```
+```php
 // 返回包含该字符的 Unicode 分块。
 public static function getBlockCode(mixed $codepoint): int;
 
@@ -1467,7 +1390,7 @@ static public function isblank(mixed $codepoint): bool;
 static public function tolower(mixed $codepoint): mixed;
 
 // 获取 Unicode 字符名称。
-static public function charName(mixed $codepoint, int $nameChoice = IntlChar::UNICICODE_CHAR_NAME)
+static public function charName(mixed $codepoint, int $nameChoice = IntlChar::UNICODE_CHAR_NAME): string;
 ```
 
 ### 向后兼容
@@ -1488,13 +1411,13 @@ PHP 7 对语言进行了多项重大改进，并对现有功能进行了一些�
 
 ## 第 15 章：性能
 
-PHP 7 比以往任何时候都快。大多数真实世界的应用只需升级即可看到性能提升 100% 以上！以下是来自 Zend Performance Team^(1) 的一些实际基准测试：
+PHP 7 比以往任何时候都快。大多数真实世界的应用只需升级即可看到性能提升 100% 以上！以下是来自 Zend Performance Team 的一些实际基准测试：
 
 ![Zend Performance Team Benchmark](img/benchmark.png)
 
 Zend Performance Team Benchmark
 
-这种改进很大程度上归功于 PHPNG (PHP 下代) 项目，该项目重构了 Zend 引擎以实现超高性能。一些底层更改包括：
+这种改进很大程度上归功于 PHPNG (PHP Next Generation) 项目，该项目重构了 Zend 引擎以实现超高性能。一些底层更改包括：
 
 * 使用更紧凑的数据结构
 * 减少堆分配和释放的次数
@@ -1512,15 +1435,15 @@ Zend Performance Team Benchmark
 
 ### 统一变量语法
 
-在之前的版本中，`list()` 仅对数组有效。在 PHP 7 中，它支持多种类型，包括对象和字符串。例如，`charName(mixed $codepoint, int $nameChoice = IntlChar::UNICICODE_CHAR_NAME)` 函数和其他表达式。
+在之前的版本中，`list()` 仅对数组有效。在 PHP 7 中，它支持多种类型，包括对象和字符串。例如，`charName(mixed $codepoint, int $nameChoice = IntlChar::UNICODE_CHAR_NAME)` 函数和其他表达式。
 
-```
+```php
 // PHP 5: $array = [3, 2, 1]
 // PHP 7: $array = [1, 2, 3]
 list($array[], $array[], $array[]) = [1, 2, 3];
 ```
 
-虽然这是进步的一步，但这些更改导致了 `list()` 工作方式的细微变化。你最可能遇到的是 `list()` 现在按从左到右顺序：
+虽然这是进步的一步，但这些更改导致了 `list()` 工作方式的细微变化。你最可能遇到的是 `list()` 现在按从左到右顺序赋值：
 
 ```php
 list($array[], $array[], $array[]) = [1, 2, 3];
@@ -1545,7 +1468,7 @@ PHP 7 的语法现在与其他语言更加一致。除了让引擎更容易维�
 
 * 在表达式中使用 `yield` 不再需要括号
 * 像 `($foo)` 的表达式的行为现在相同
-* 可以直接调用魔方法 `__clone()`
+* 可以直接调用魔术方法 `__clone()`
 
 ## 第 17 章：半保留字
 
@@ -1560,41 +1483,37 @@ class Collection {
 }
 ```
 
-
-
-
-
 PHP 7 实现了一种新的上下文敏感词法器，使其足够智能，能够确定关键字的上下文；它可以区分普通关键字用法与在类内部的用法。以下来自 PHP 5.x 的所有保留字现在都是半保留的：
 
-| `abstract` || `and` || `array` |
+| `abstract` | `and` | `array` |
 | --- | --- | --- |
-| `as` || `break` || `callable` |
-| `case` || `catch` || `class` |
-| `clone` || `const` || `continue` |
-| `declare` || `default` || `die` |
-| `do` || `echo` || `else` |
-| `elseif` || `enddeclare` || `endfor` |
-| `endforeach` || `endif` || `endswitch` |
-| `endwhile` || `exit` || `extends` |
-| `final` || `finally` || `for` |
-| `foreach` || `function` || `global` |
-| `goto` || `if` || `implements` |
-| `include` || `include_once` || `instanceof` |
-| `insteadof` || `interface` || `list` |
-| `namespace` || `new` || `or` |
-| `parent` || `print` || `private` |
-| `protected` || `public` || `require` |
-| `require_once` || `return` || `self` |
-| `static` || `switch` || `throw` |
-| `trait` || `try` || `use` |
-| `var` || `while` || `xor` |
-| `yield` || || |
+| `as` | `break` | `callable` |
+| `case` | `catch` | `class` |
+| `clone` | `const` | `continue` |
+| `declare` | `default` | `die` |
+| `do` | `echo` | `else` |
+| `elseif` | `enddeclare` | `endfor` |
+| `endforeach` | `endif` | `endswitch` |
+| `endwhile` | `exit` | `extends` |
+| `final` | `finally` | `for` |
+| `foreach` | `function` | `global` |
+| `goto` | `if` | `implements` |
+| `include` | `include_once` | `instanceof` |
+| `insteadof` | `interface` | `list` |
+| `namespace` | `new` | `or` |
+| `parent` | `print` | `private` |
+| `protected` | `public` | `require` |
+| `require_once` | `return` | `self` |
+| `static` | `switch` | `throw` |
+| `trait` | `try` | `use` |
+| `var` | `while` | `xor` |
+| `yield` | | |
 
 这些半保留字现在可以作为类、接口和 trait 的属性、常量和方法名：
 
 ### 一些基础示例
 
-```
+```php
 class Collection {
     public function forEach(callable $callback) { }
     public function list() { }
@@ -1610,7 +1529,7 @@ class BaseballPlayer {
 
 #### 将 ‘include’ 作为公共方法
 
-```
+```php
 class View {
     public function include(View $view) {
         //...
@@ -1622,7 +1541,7 @@ $viewA->include(new View('b.view'));
 
 #### 将 ‘continue’ 作为类常量
 
-```
+```php
 class HTTP {
     const CONTINUE = 100;
     const SWITCHING_PROTOCOLS = 101;
@@ -1631,6 +1550,8 @@ class HTTP {
 ```
 
 #### 使用 ‘and’‘or’ 和 ‘list’ 等保留字的流式接口
+
+
 
 ```php
 $projects =
@@ -1645,11 +1566,12 @@ $projects =
 对此只有两个限制：
 
 1. 它仅在 OO 作用域内（类、接口和 trait）有效。
+
 2. `class` 不能用作常量，因为会与类名解析语法（`SomeClass::class`）冲突。不过，它可以用于方法和属性名。
 
 ### 扩展阅读
 
-* [RFC: 上上下文敏感词法器](https://wiki.php.net/rfc/context_sensitive_lexer)
+* [RFC: 上下文敏感词法器](https://wiki.php.net/rfc/context_sensitive_lexer)
 * [PHP 手册：关键字列表](https://secure.php.net/manual/en/reserved.keywords.php)
 * [PHP 手册：其他保留字列表](https://php.net/manual/en/reserved.other-reserved-words.php)
 
@@ -1661,7 +1583,7 @@ PHP 7 极大改进了错误处理。得益于一些重大变更，现在比任�
 
 致命和可恢复的致命错误不再像警告和弃用通知那样“引发”，它们现在是引擎抛出的异常。看这个例子：
 
-```
+```php
 $foo = 'test';
 $foo->someMethod();
 ```
@@ -1680,7 +1602,7 @@ Uncaught Error: Call to member function someMethod() on string
 
 像普通异常一样，这些是可以捕获并处理的：
 
-```
+```php
 try {
     $foo = 'test';
     $foo->someMethod();
@@ -1707,16 +1629,17 @@ try {
     }
     ["previous":protected]=>
     NULL
-}
-**/```
+  }
+*/
+```
 
-Error 有五个预定义的子类：
+`Error` 有五个预定义的子类：
 
-* `TypeError` - 当参数不匹配类型提示时抛出（见第 17 章](#）。
+* `TypeError` - 当参数不匹配类型提示时抛出（见第 17 章）。
 * `ParseError` - 当 `eval()` 解析代码失败时抛出。
-* `AssertionError` - 当断言 (`assert(...)`) 失败时抛出（见第 18 章](#）。
+* `AssertionError` - 当断言 (`assert(...)`) 失败时抛出（见第 19 章）。
 * `ArithmeticError` - 当数学运算期间发生错误时抛出。
-* `DivisionError` - 当除以零时抛出。
+* `DivisionByZeroError` - 当除以零时抛出。
 
 ### `Throwable` 接口
 
@@ -1731,9 +1654,9 @@ Error 有五个预定义的子类：
 
 由于 `Error` 和 `Exception` 共享同一个接口，你可以捕获其中任何一个：
 
-```
+```php
 try {
-    //某些代码
+    // 某些代码
 } catch (Exception $e) {
     // 失败
 } catch (Error $e) {
@@ -1743,9 +1666,9 @@ try {
 
 或者一次捕获两者：
 
-```
+```php
 try {
-    //某些代码
+    // 某些代码
 } catch (Throwable $e) {
     // 失败
 }
@@ -1757,11 +1680,11 @@ try {
 
 通知类型一直模糊且冗余。为了简化 PHP 的错误模型，所有 `E_STRICT` 实例都已重新分类或移除。相应的 [RFC](https://wiki.php.net/rfc/reclassify_strict) 提供了关于每个决策理由的有用列表。
 
-不过 `E_STRICT` 常量并未移除，以保持对包含 `error_reporting(E_ALL|E_STRICT)` 等代码的脚本兼容。然而，某些 `E_STRICT` 实例现在更加严重，可能会影响错误处理器。
+不过 `E_STRICT` 常量并未移除，以保持对包含 `error_reporting(E_ALL | E_STRICT)` 等代码的脚本兼容。然而，某些 `E_STRICT` 实例现在更加严重，可能会影响错误处理器。
 
 ### 向后兼容
 
-在 PHP 5.x 中可以使用错误处理器静忽略致命错误。由于这些错误现在作为异常抛出，该功能已被移除。
+在 PHP 5.x 中可以使用错误处理器静默忽略致命错误。由于这些错误现在作为异常抛出，该功能已被移除。
 
 同样，使用 `eval()` 时生成的解析错误之前是非致命的，但现在作为异常抛出。如果你要在 PHP 7 中优雅地处理任何错误，你需要将任何 `eval()` 调用封装在 `try {}` 块中。
 
@@ -1773,29 +1696,25 @@ try {
 * `ParseError`
 * `AssertionError`
 * `ArithmeticError`
-* `DivisionZeroError`
+* `DivisionByZeroError`
 
 ### 扩展阅读
 
 * [RFC：引擎中的异常](https://wiki.php.net/rfc/engine_exceptions_for_php7)
 * [RFC：Throwable 接口](https://wiki.php.net/rfc/throwable-interface)
 * [RFC：可捕获的“调用非对象的成员”](https://wiki.php.net/rfc/catchable-call-member-of-non-object)
-* [RFC：重新分类 E\_STRICT 通知](https://wiki.php.net/rfc/reclassify_strict)
+* [RFC：重新分类 E_STRICT 通知](https://wiki.php.net/rfc/reclassify_strict)
 * [PHP 手册：Throwable](https://secure.php.net/manual/en/class.throwable.php)
 * [PHP 手册：Error](https://secure.php.net/manual/en/class.error.php)
 
 ## 第 19 章：期望
 
-PHP 4 通过 `assert()` 函数引入了断言。断言是一种有助于调试的功能，用于验证代码中的假设。将它们想象成会自我测试的注释。你只需提供一个应该始终评估为真的 PHP 语句；任何假值都表示你的端存在错误、代码误用或错误的假设。在 PHP 4 和 5 中，`assert()` 具有如下签名：
+PHP 4 通过 `assert()` 函数引入了断言。断言是一种有助于调试的功能，用于验证代码中的假设。将它们想象成会自我测试的注释。你只需提供一个应该始终评估为真的 PHP 语句；任何假值都表示你的代码存在错误、代码误用或错误的假设。在 PHP 4 和 5 中，`assert()` 具有如下签名：
 
 ```
 bool assert ( mixed $assertion [, string $description ] )
 ```
 
-
-
-
-
 `assert()` 的行为是可以配置的，因此允许你在生产环境中完全禁用它。如果断言会产生负面副作用或导致性能开销，这种特性就尤为有用。
 
 以下是断言的一些示例用例：
@@ -1825,13 +1744,16 @@ function createThumbnail($image) {
 
 ```php
 function setSuit($suit) {
-    case CLUBS:
-    case DIAMONDS:
-    case HEARTS:
-    case SPADES:
-        $this->suit = $suit;
-    default:
-        assert(false, '未识别的花牌类型');
+    switch ($suit) {
+        case CLUBS:
+        case DIAMONDS:
+        case HEARTS:
+        case SPADES:
+            $this->suit = $suit;
+            break;
+        default:
+            assert(false, '未识别的花牌类型');
+    }
 }
 ```
 
@@ -1843,14 +1765,14 @@ if ($i % 3 == 0) {
 } else if ($i % 3 == 1) {
     // ...
 } else {
-    assert ($i % 3 == 2);
+    assert($i % 3 == 2);
 }
 ```
 
 由于 `assert` 在 PHP 4/5 中是一个函数，因此任何表达式（如上面的表达式）总是会被求值的，即使在生产环境中禁用了断言！一种变通是将表达式封装在字符串中，PHP 将在需要时对其求值：
 
 ```php
-assert ('$i % 3 == 2');
+assert('$i % 3 == 2');
 ```
 
 这要好一点，但仍然不理想。
@@ -1860,14 +1782,14 @@ assert ('$i % 3 == 2');
 PHP 7 将 `assert()` 升级为一个完整的语句。你不再需要将代码封装在字符串中——直接提供即可：
 
 ```php
-assert ($i % 3 == 2);
+assert($i % 3 == 2);
 ```
 
-与之前的版本不同，PHP 7 不会在需要时才会求值该语句。
+与之前的版本不同，PHP 7 仅在需要时才会求值该语句。
 
 ### 自定义错误
 
-旧版本的 PHP 在断言失败时会抛出 `E_WARNING`，并使用第二个参数作为警告消息。PHP 7 增加了根据需要抛出自定义自定义错误类型的能力：
+旧版本的 PHP 在断言失败时会抛出 `E_WARNING`，并使用第二个参数作为警告消息。PHP 7 增加了根据需要抛出自定义异常类型的能力：
 
 ```php
 ini_set('assert.exception', 1);
@@ -1902,7 +1824,61 @@ assert(extension_loaded('foo'), new MissingExtensionError('为了实现此功能
 PHP 7 保持了与旧行为的完全向后兼容：
 
 * 如果 `$expression` 是字符串，它将根据需要进行求值
-* 如果 `$expression` 为假(真)，则断言将失败
+* 如果 `$expression` 为假，则断言将失败
+* 如果第二个参数是字符串，它将用作 `AssertionError` 的消息
+
+### 扩展阅读
+
+* [RFC: Expectations](https://wiki.php.net/rfc/expectations)
+* [PHP 手册：`assert()`](https://secure.php.net/manual/en/function.assert.php)
+
+## 第 20 章：`define()` 中的数组常量
+
+PHP 5.6 增加了使用 `const` 关键字在类上定义数组常量：
+
+```php
+const LUCKY_NUMBERS = [4, 8, 15, 23, 42];
+```
+
+PHP 7 将相同的功能引入了 `define()` 函数：
+
+```php
+define('LUCKY_NUMBERS', [4, 8, 15, 23, 42]);
+```
+
+### 扩展阅读
+
+* [PHP 手册：`define()`](https://secure.php.net/manual/en/function.define.php)
+* [PHP 手册：使用 `define()` 定义常量数组](https://secure.php.net/manual/en/migration-7.0.php#define)
+
+## 第 21 章：过滤后的 `unserialize()`
+
+反序列化不可信的数据是一项风险操作，因为恶意用户可能会将他们的数据和对象注入应用程序中。这对于具有析构方法的对象来说特别危险，因为这些方法始终会被执行，即使你实际上没有使用该序列化对象。
+
+这里是来自 Drupal 7 `Archive_Tar` 类的一个真实示例：
+
+```php
+function __destruct() {
+    $this->_close();
+}
+
+function _close() {
+    //...
+    if ($this->_tempname != '') {
+        @unlink($this->_tempname);
+    }
+    //...
+}
+```
+
+攻击者可以通过在任何使用 `unserialize` 的地方提供特殊构造的字符串，来删除服务器上的文件：
+
+```php
+O:11:"Archive_Tar":6:{s:8:"tempname";s:0:"";s:9:"compress";b:0;s:14:"type";s:4:"none";s:10:"separator";s:1:" ";s:5:"";}
+```
+
+
+
 * 如果第二个参数是字符串，它将用作 `AssertionError` 的消息
 
 ### 扩展阅读
@@ -1954,174 +1930,6 @@ function _close() {
 ```php
 O:11:"Archive_Tar":6:{s:8:"tempname";s:0:"";s:9:"compress";b:0;s:14:"type";s:4:"none";s:10:"separator";s:1:" ";s:5:"";}
 ```
-
-[/content]
-
-对不起，我注意到你提供的待翻译文本中存在一些 Markdown 格式错误（例如未闭合的代码块、错误的 PHP 语法以及重复的字符）。作为高级文档工程师，我在翻译时根据上下文对这些进行了逻辑修正，以确保输出内容的专业性和可读性。以下是翻译后的内容：
-
-[content]
-
-`assert()` 的行为是可以配置的，因此允许你在生产环境中完全禁用它。如果断言会产生负面副作用或导致性能开销，这种特性就尤为有用。
-
-以下是断言的一些示例用例：
-
-### 应该始终返回值的循环
-
-```php
-foreach ($a as $b) {
-    if ($b->isActive()) {
-        return $b;
-    }
-}
-
-assert(false, '我们的循环应该返回一个值');
-```
-
-### 确保所需的扩展已可用
-
-```php
-function createThumbnail($image) {
-    assert(extension_loaded('gd'));
-    // ...
-}
-```
-
-### 防止出现意外的枚举值
-
-```php
-function setSuit($suit) {
-    case CLUBS:
-    case DIAMONDS:
-    case HEARTS:
-    case SPADES:
-        $this->suit = $suit;
-    default:
-        assert(false, '未识别的花牌类型');
-}
-```
-
-### 逻辑回落预期
-
-```php
-if ($i % 3 == 0) {
-    // ...
-} else if ($i % 3 == 1) {
-    // ...
-} else {
-    assert ($i % 3 == 2);
-}
-```
-
-由于 `assert` 在 PHP 4/5 中是一个函数，因此任何表达式（如上面的表达式）总是会被求值的，即使在生产环境中禁用了断言！一种变通是将表达式封装在字符串中，PHP 将在需要时对其求值：
-
-```php
-assert ('$i % 3 == 2');
-```
-
-这要好一点，但仍然不理想。
-
-### 作为语句的 `assert()`
-
-PHP 7 将 `assert()` 升级为一个完整的语句。你不再需要将代码封装在字符串中——直接提供即可：
-
-```php
-assert ($i % 3 == 2);
-```
-
-与之前的版本不同，PHP 7 不会在需要时才会求值该语句。
-
-### 自定义错误
-
-旧版本的 PHP 在断言失败时会抛出 `E_WARNING`，并使用第二个参数作为警告消息。PHP 7 增加了根据需要抛出自定义错误类型的能力：
-
-```php
-ini_set('assert.exception', 1);
-
-class MissingExtensionError extends AssertionError {}
-
-assert(extension_loaded('foo'), new MissingExtensionError('为了实现此功能需要启用 "foo" 扩展'));
-```
-
-抛出异常（而不是发出错误）意味着你将获得一个堆栈跟踪以帮助调查问题。
-
-### 配置
-
-有两个新的 `php.ini` 设置用于控制行为并允许向后兼容性：
-
-* `assert.exception` - 默认值为 `0`
-* `zend.assertions` - 默认值为 `1`
-
-`assert.exception` 控制 `assert()` 失败时的行为：
-
-* `0` - 失败时抛出 `warning`（旧版行为）
-* `1` - 失败时抛出 `AssertionError`
-
-`zend.assertions` 控制 PHP 解析器应该如何处理它发现的断言：
-
-* `1` - 生成并执行断言代码（开发模式）
-* `0` - 生成代码，但在运行时跳过它
-* `-1` - 不生成任何代码（零开销生产模式）
-
-### 向后兼容
-
-PHP 7 保持了与旧行为的完全向后兼容：
-
-* 如果 `$expression` 是字符串，它将根据需要进行求值
-* 如果 `$expression` 为假(真)，则断言将失败
-* 如果第二个参数是字符串，它将用作 `AssertionError` 的消息
-
-### 扩展阅读
-
-* [RFC: Expectations](https://wiki.php.net/rfc/expectations)
-* [PHP 手册：`assert()`](https://secure.php.net/manual/en/function.php)
-
-## 第 20 章：`define()` 中的数组常量
-
-PHP 5.6 增加了使用 `const` 关键字在类上定义数组常量：
-
-```php
-const LUCKY_NUMBERS = [4, 8, 15, 23, 42];
-```
-
-PHP 7 将相同的功能引入了 `define()` 函数：
-
-```php
-define('LUCKY_NUMBERS', [4, 8, 15, 23, 42]);
-```
-
-### 扩展阅读
-
-* [PHP 手册：`define()`](https://secure.php.net/manual/en/function.php)
-* [PHP 手册：使用 `define()` 定义常量数组](https://secure.php.net/manual/en/migration-7.0.php#define)
-
-## 第 21 章：过滤过的 `unserialize()`
-
-反序列化不可信的数据是一项风险操作，因为恶意用户可能会将他们的数据和对象注入应用程序中。这对于具有析构方法的对象来说特别危险，因为这些方法始终会被执行，即使你实际上没有使用该序列化对象。
-
-这里是来自 Drupal 7 `Archive_Tar` 类的一个真实示例：
-
-```php
-function __destruct() {
-  $this->_close();
-}
-
-function _close() {
-  //...
-  if ($this->_tempname != '') {
-    @unlink($this->_tempname);
-  }
-  //...
-}
-```
-
-攻击者可以通过在任何使用 `unserialize` 的地方提供特殊构造的字符串，来删除服务器上的文件：
-
-```php
-O:11:"Archive_Tar":6:{s:8:"tempname";s:0:"";s:9:"compress";b:0;s:14:"type";s:4:"none";s:10:"separator";s:1:" ";s:5:"";}
-```
-
-
-
 
 `getType()` 方法将返回上述描述的新 `ReflectionType` 对象类型。
 
@@ -2339,9 +2147,6 @@ PHP 7 输出：
 
 #### 其他函数
 
-
-
-
 由于 `foreach` 循环的状态现在不再独立于数组/对象指针的内部状态，因此使用该内部指针的内置函数（`reset`/`key`/`current`/`next`/`prev`）将不再代表循环的状态。
 
 ### 向后兼容性
@@ -2350,7 +2155,7 @@ PHP 7 输出：
 
 ### 扩展阅读
 
-*   [RFC: 修复“foreach” 行为](https://wiki.php.net/rfc/php7_foreach)
+* [RFC: 修复“foreach” 行为](https://wiki.php.net/rfc/php7_foreach)
 
 ## 第 28 章：`list` 的行为变更
 
@@ -2360,7 +2165,7 @@ PHP 文档一直指出 `list()` 构造体不会解包字符串。然而，在某
 
 示例 1
 
-```
+```php
 list($a, $b) = 'ab';
 var_dump($a, $b);
 ```
@@ -2374,7 +2179,7 @@ NULL
 
 示例 2
 
-```
+```php
 $a[0] = 'ab';
 list($a, $b) = $a[0];
 var_dump($a, $b);
@@ -2395,7 +2200,7 @@ string(1) "b"
 
 现在不带任何变量使用 `list()` 将导致致命错误（fatal error）：
 
-```
+```php
 $a = [1, 2, 3];
 
 list() = $a;   // Fatal error: Cannot use empty list
@@ -2408,17 +2213,14 @@ list(,,) = $a; // Fatal error: Cannot use empty list
 
 ### 向后兼容性
 
-*   在某些情况下，`list()` 不再支持字符串值；在这些情况下，变量始终被设置为 `NULL`
-
-*   调用不带任何变量的 `list()` 将触发致命错误
-
-*   依赖旧的从右到左赋值顺序将不再工作
+* 在某些情况下，`list()` 不再支持字符串值；在这些情况下，变量始终被设置为 `NULL`
+* 调用不带任何变量的 `list()` 将触发致命错误
+* 依赖旧的从右到左赋值顺序将不再工作
 
 ### 扩展阅读
 
-*   [RFC: 修复 list() 行为不一致性](https://wiki.php.net/rfc/fix_list_behavior_inconsistency)
-
-*   [RFC: 抽象语法树](https://wiki.php.net/rfc/abstract_syntax_tree#changes_to_list)
+* [RFC: 修复 list() 行为不一致性](https://wiki.php.net/rfc/fix_list_behavior_inconsistency)
+* [RFC: 抽象语法树](https://wiki.php.net/rfc/abstract_syntax_tree#changes_to_list)
 
 ## 第 29 章：参数处理变更
 
@@ -2426,7 +2228,7 @@ list(,,) = $a; // Fatal error: Cannot use empty list
 
 之前的 PHP 版本允许多个函数参数使用相同的名称。此功能在 PHP 7 中不再被支持。尝试使用重复的参数现在现在会导致致命错误。
 
-```
+```php
 function foo($a, $a) {
     return $a;
 }
@@ -2450,7 +2252,7 @@ Fatal error: Redefinition of parameter $a
 
 `func_get_arg()` 和 `func_get_args()` 函数过去返回原始参数值，即使这些变量在函数执行期间发生了变化。这种行为在 PHP 7 中不再发生——这两个函数现在将提供当前值。例如，给定以下代码：
 
-```
+```php
 function foo($a) {
     $a++;
     var_dump($a);
@@ -2470,7 +2272,7 @@ PHP 5.x 会显示原始值 `1`，而 PHP 7 将显示 `2`。
 
 ### 扩展阅读
 
-*   [RFC: phng](https://wiki.php.net/phpng)
+* [RFC: phng](https://wiki.php.net/phpng)
 
 ## 第 30 章：自定义 Session 处理器的返回值
 
@@ -2482,15 +2284,13 @@ PHP 7 修复了此错误，使得 `true` 和 `false` 返回值都能被正确解
 
 ### 向后兼容性
 
-*   `return false` 现在实际上可以按预期工作。
-
-*   使用 `return -1` 的变通方案会导致警告。
+* `return false` 现在实际上可以按预期工作。
+* 使用 `return -1` 的变通方案会导致警告。
 
 ### 扩展阅读
 
-*   [RFC: 修复自定义会话处理器返回值的处理](https://wiki.php.net/rfc/session.user.return-valuey)
-
-*   [PHP 手册：session\_set\_save\_handler](http://us2.php.net/session_set_save_handler)
+* [RFC: 修复自定义会话处理器返回值的处理](https://wiki.php.net/rfc/session.user.return-valuey)
+* [PHP 手册：session_set_save_handler](http://us2.php.net/session_set_save_handler)
 
 ## 第 31 章：无效八进制的错误
 
@@ -2498,7 +2298,7 @@ PHP 7 修复了此错误，使得 `true` 和 `false` 返回值都能被正确解
 
 PHP 7
 
-```
+```php
 echo 08
 ```
 
@@ -2506,17 +2306,17 @@ echo 08
 
 PHP 5.x
 
-```
+```php
 echo 08
 ```
 
 ### 向后兼容性
 
-*   使用无效八进制将导致解析错误
+* 使用无效八进制将导致解析错误
 
 ### 扩展阅读
 
-*   n/a
+* n/a
 
 # 第 3 部分：弃用与移除
 
@@ -2528,7 +2328,7 @@ PHP 4 的构造方法是通过声明与类同名的方法来实现的：
 
 PHP 4 样式示例
 
-```
+```php
 class Post {
     // 在 PHP 4 中识别为构造函数
     function post() {}
@@ -2539,7 +2339,7 @@ PHP 5 增加了熟悉的 `__construct()` 方法，但也保留了旧样式。这
 
 命名空间 PHP 5 类
 
-```
+```php
 namespace Blog;
 class Post {
     // 因为命名空间未被识别为构造函数
@@ -2551,7 +2351,7 @@ class Post {
 
 PHP 5 样式优先
 
-```
+```php
 class Post {
     // 构造函数
     function __construct() {}
@@ -2563,7 +2363,7 @@ class Post {
 
 PHP 4 样式优先
 
-```
+```php
 class Post {
     // 普通方法，不是构造函数
     function post() {}
@@ -2576,7 +2376,6 @@ class Post {
 PHP 7 不再保留这种奇怪的行为，而是做了两个重要的变更：
 
 1. 每当使用 PHP 4 样式构造函数时都会触发 `E_DEPRECATED`。
-
 2. 当两种类型的构造函数时，不再触发 `E_STRICT`。
 
 此外，PHP 8 将不再识别 PHP 4 样式构造函数，从而将其解释为标准类方法。
@@ -2585,16 +2384,14 @@ PHP 7 不再保留这种奇怪的行为，而是做了两个重要的变更：
 
 ### 向后兼容性
 
-*   自定义错误处理器可能会受到新产生的 `E_DEPRECATED` 错误的影响。
+* 自定义错误处理器可能会受到新产生的 `E_DEPRECATED` 错误的影响。
 
 ### 扩展阅读
 
+
+
 *   [RFC: 移除 PHP 4 构造函数](https://wiki.php.net/rfc/remove_php4_constructors)
-
 *   [PHP 手册：构造函数与析构函数](http://us2.php.net/manual/en/language.oop5.decon.php)
-
-
-
 
 PHP 7 因此废弃了此 `salt` 选项。强烈建议您省略此选项，直接使用 PHP 为您生成的任何加密学安全的盐（salt）。
 
@@ -2658,10 +2455,6 @@ PHP 7 移除了之前版本中已废弃的所有 `ALL` 特性。
 
 任何依赖之前已废弃功能的代码在 PHP 7 中将损坏。
 
-
-
-
-
 ```
 var_dump(is_numeric("0x123"));
 // bool(true)
@@ -2688,9 +2481,9 @@ PHP 7 通过简单移除对此类字符串的旧有部分支持，解决了这�
 
 在以下上下文中，不再支持在字符串中使用十六进制数字：
 
-* ` `is_numeric()` 函数
-* 数学运算
-* 接受数字字符串的内部 PHP 函数
+*   `is_numeric()` 函数
+*   数学运算
+*   接受数字字符串的内部 PHP 函数
 
 ### 延伸阅读
 
@@ -2702,26 +2495,26 @@ PHP 7 通过简单移除对此类字符串的旧有部分支持，解决了这�
 
 PHP 包含了多个服务器的 SAPIs。其中某些已经不再可用，或者已经长时间没有被支持。因此，它们已在 PHP 7 中被移除。列表包括：
 
-* `sapi/aolserver`
-* `sapi/apache`
-* `sapi/apache_hooks`
-* `sapi/caudium`
-* `sapi/continuity`
-* `sapi/isapi`
-* `sapi/milter`
-* `sapi/phttpd`
-* `sapi/pi3web`
-* `sapi/roxen`
-* `sapi/thttpd`
-* `sapi/tux`
-* `sapi/webjames`
+*   `sapi/aolserver`
+*   `sapi/apache`
+*   `sapi/apache_hooks`
+*   `sapi/caudium`
+*   `sapi/continuity`
+*   `sapi/isapi`
+*   `sapi/milter`
+*   `sapi/phttpd`
+*   `sapi/pi3web`
+*   `sapi/roxen`
+*   `sapi/thttpd`
+*   `sapi/tux`
+*   `sapi/webjames`
 
 ### 废弃扩展
 
 以下扩展不再进行维护并已移除：
 
-* `ext/mssql`
-* `ext/sybase_ct`
+*   `ext/mssql`
+*   `ext/sybase_ct`
 
 ### 向后兼容性
 
@@ -2735,8 +2528,8 @@ PHP 包含了多个服务器的 SAPIs。其中某些已经不再可用，或者�
 
 在 PHP 之前的版本中，未定义 `date.timezone` INI 设置将导致以下行为：
 
-* 默认使用 UTC
-* 发出警告消息
+*   默认使用 UTC
+*   发出警告消息
 
 PHP 7 将不再在这些情况下发出警告。如果配置中未指定，UTC 将继续作为默认时区。
 
@@ -2757,19 +2550,19 @@ PHP 7 将不再在这些情况下发出警告。如果配置中未指定，UTC �
 间接变量、属性和方法引用现在按照从左到右的语义进行解释。示例：
 
 ```
-  $foo['bar'] // 解释为 ($foo)['bar']
-  $foo->$bar // 解释为 ($foo)->$bar
-  $foo->['bar'] // 解释为 ($foo->['bar']
-  $Foo::$bar // 解释为 ($Foo):::$bar
+$foo['bar'] // 解释为 ($foo)['bar']
+$foo->$bar // 解释为 ($foo)->$bar
+$foo->['bar'] // 解释为 ($foo->['bar']
+$Foo::$bar // 解释为 ($Foo):::$bar
 ```
 
-要恢复之前的行为，请添加显示的大括号：
+要恢复之前的行为，请添加显式的大括号：
 
 ```
-  ${foo['bar']}
-  ${foo->$bar}
-  ${foo->['bar']}
-  ${Foo::$bar}
+${foo['bar']}
+${foo->$bar}
+${foo->['bar']}
+${Foo::$bar}
 ```
 
 #### global 关键字
@@ -2781,10 +2574,10 @@ PHP 7 将不再在这些情况下发出警告。如果配置中未指定，UTC �
 变量或函数调用周围的括号不再对行为产生任何影响。例如下面的代码，函数调用的结果通过引用传递：
 
 ```
-  function getArray() { return [1, 2, 3]; }
+function getArray() { return [1, 2, 3]; }
 
-  $last = array_pop(getArray()); // 严格标准：只有变量应通过引用传递
-  $last = array_pop((getArray())); // 严格标准：只有变量应通过引用传递
+$last = array_pop(getArray()); // 严格标准：只有变量应通过引用传递
+$last = array_pop((getArray())); // 严格标准：只有变量应通过引用传递
 ```
 
 现在无论是否使用括号，都将抛出严格错误（strict error）。之前在第二情况下不会生成通知（notice）。
@@ -2794,10 +2587,10 @@ PHP 7 将不再在这些情况下发出警告。如果配置中未指定，UTC �
 引用赋值期间自动创建的数组元素或对象属性现在将导致不同的顺序。例如
 
 ```
-  $array = [];
-  $array["a"] = &$array["b"];
-  $array["b"] = 1;
-  var_dump($array);
+$array = [];
+$array["a"] = &$array["b"];
+$array["b"] = 1;
+var_dump($array);
 ```
 
 现在结果为 `["a" => 1, "b" => 1]`，而之前的的结果是 `["b" => 1, "a" => 1]`。
@@ -2809,15 +2602,15 @@ PHP 7 将不再在这些情况下发出警告。如果配置中未指定，UTC �
 `list()` 将不再以反序赋值变量。例如
 
 ```
-  list($array[], $array[], $array[]) = [1, 2, 3];
-  var_dump($array);
+list($array[], $array[], $array[]) = [1, 2, 3];
+var_dump($array);
 ```
 
 现在结果为 `$array == [1, 2, 3]` 而不是 `[3, 2, 1]`。注意，只有赋值顺序发生了变化，但赋值的值保持不变。例如，正常的用法如
 
 ```
-  list($a, $b, $c) = [1, 2, 3];
-  // $a = 1; $b = 2; $c = 3;
+list($a, $b, $c) = [1, 2, 3];
+// $a = 1; $b = 2; $c = 3;
 ```
 
 将保留其当前行为。
@@ -2827,22 +2620,22 @@ PHP 7 将不再在这些情况下发出警告。如果配置中未指定，UTC �
 不再允许空的 `list()` 赋值。因此，以下所有都是无效的：
 
 ```
-  list() = $a;
-  list(,) = $a;
-  list($x, , $y) = $a;
+list() = $a;
+list(,) = $a;
+list($x, , $y) = $a;
 ```
 
 `list()` 不再支持解字符串（虽然之前在某些情况下是支持的）。代码
 
 ```
-  $string = "xy";
-  list($x, $y) = $string;
+$string = "xy";
+list($x, $y) = $string;
 ```
 
 现在结果将为 `$x == null` 和 `$y == null`（无通知），而不是 `$x == "x"` 和 `$y == "y"`。此外，`list()` 现在始终保证适用于实现 `ArrayAccess` 的对象，例如
 
 ```
-  list($a, $b) = (object) new ArrayObject([0, 1]);
+list($a, $b) = (object) new ArrayObject([0, 1]);
 ```
 
 现在结果为 `$a == 0` 和 `$b == 1`。之前 `$a` 和 `$b` 均为 null。
@@ -2854,10 +2647,10 @@ PHP 7 将不再在这些情况下发出警告。如果配置中未指定，UTC �
 `foreach()` 迭代不再影响内部数组指针，可以通过 `current()`/`next()` 等函数访问。例如
 
 ```
-  $array = [0, 1, 2];
-  foreach ($array as &$val) {
-      var_dump(current($array));
-  }
+$array = [0, 1, 2];
+foreach ($array as &$val) {
+    var_dump(current($array));
+}
 ```
 
 现在将打印三次 `int(0)`。之前的输出是 `int(1)`、`int(2)` 和 `bool(false)`。
@@ -2867,12 +2660,12 @@ PHP 7 将不再在这些情况下发出警告。如果配置中未指定，UTC �
 按值迭代数组时，`foreach` 现在始终在数组的副本上操作，因此迭代期间对数组的更改不会影响迭代行为。例如在按值迭代期间
 
 ```
-  $array = [0, 1, 2];
-  $ref = &$array; // 触发旧行为必要的
-  foreach ($array as $val) {
-      var_dump($val);
-      unset($array[1]);
-  }
+$array = [0, 1, 2];
+$ref = &$array; // 触发旧行为必要的
+foreach ($array as $val) {
+    var_dump($val);
+    unset($array[1]);
+}
 ```
 
 现在将打印所有元素（0, 1, 2），而之前第二个元素 1 被跳过了。
@@ -2882,11 +2675,11 @@ PHP 7 将不再在这些情况下发出警告。如果配置中未指定，UTC �
 按引用迭代数组时，对数组的修改将继续影响迭代。然而，PHP 现在许多情况下能够更好地维护正确的位置。例如在按引用迭代期间向数组追加
 
 ```
-  $array = [0];
-  foreach ($array as &$val) {
-      var_dump($val);
-      $array[1] = 1;
-  }
+$array = [0];
+foreach ($array as &$val) {
+    var_dump($val);
+    $array[1] = 1;
+}
 ```
 
 现在将遍历新添加的元素。因此此示例的输出现在是 `int(0) int(1)`，而之前只有 `int(0)`。
@@ -2904,22 +2697,17 @@ Traversable 对象的迭代保持不变。
 现在不再允许定义两个名称相同的函数参数。例如，以下方法将触发编译时错误：
 
 ```
-  public function foo($a, $b, $unused, $unused) {
-      // ...
-  }
-
+public function foo($a, $b, $unused, $unused) {
+    // ...
+}
 ```
-
-
-
-
 
 类似这样的代码应更改为不同的参数名，例如：
 
 ```php
-  public function foo($a, $b, $unused1, $unused2) {
-      // ...
-  }
+public function foo($a, $b, $unused1, $unused2) {
+    // ...
+}
 ```
 
 ### 获取参数值
@@ -2927,29 +2715,29 @@ Traversable 对象的迭代保持不变。
 `func_get_arg()` 和 `func_get_args()` 函数将不再返回传递给参数的原始值，而是提供当前值（该值可能已经被修改）。例如：
 
 ```php
-  function foo($x) {
-      $x++;
-      var_dump(func_get_arg(0));
-  }
-  foo(1);
+function foo($x) {
+    $x++;
+    var_dump(func_get_arg(0));
+}
+foo(1);
 ```
 
 现在它将打印“2”而不是“1”。这段代码应该更改为仅在调用 `func_get_arg(s)` 之后进行修改：
 
 ```php
-  function foo($x) {
-      var_dump(func_get_arg(0));
-      $x++;
-  }
+function foo($x) {
+    var_dump(func_get_arg(0));
+    $x++;
+}
 ```
 
 或者完全避免修改参数：
 
 ```php
-  function foo($x) {
-      $newX = $x + 1;
-      var_dump(func_get_arg(0));
-  }
+function foo($x) {
+    $newX = $x + 1;
+    var_dump(func_get_arg(0));
+}
 ```
 
 ### 对回溯（backtraces）的影响
@@ -2957,27 +2745,27 @@ Traversable 对象的迭代保持不变。
 同样，异常回溯将不再显示传递给函数的原始值，而是显示修改后的值。例如：
 
 ```php
-  function foo($x) {
-      $x = 42;
-      throw new Exception;
-  }
-  foo("string");
+function foo($x) {
+    $x = 42;
+    throw new Exception;
+}
+foo("string");
 ```
 
 现在将导致堆栈回溯：
 
 ```
-  Stack trace:
-  #0 file.php(4): foo(42)
-  #1 {main}
+Stack trace:
+#0 file.php(4): foo(42)
+#1 {main}
 ```
 
 而之前是：
 
 ```
-  Stack trace:
-  #0 file.php(4): foo('string')
-  #1 {main}
+Stack trace:
+#0 file.php(4): foo('string')
+#1 {main}
 ```
 
 虽然这不应该影响你代码的运行时行为，但为了调试之目的，意识到这种差异是值得的。
@@ -2991,18 +2779,18 @@ Traversable 对象的迭代保持不变。
 无效的八进制字面量（包含大于 7 的数字）现在会产生编译错误。例如，以下内容不再有效：
 
 ```php
-  $i = 0781; // 8 不是有效的八进制数字！
+$i = 0781; // 8 不是有效的八进制数字！
 ```
 
-以前，无效的数字（以及任何随后的有效数字）会被简单忽略。因此，`$i` 之前的值是 7，因为最后两个数字被静地丢弃了。
+以前，无效的数字（以及任何随后的有效数字）会被简单忽略。因此，`$i` 之前的值是 7，因为最后两个数字被静默地丢弃了。
 
 #### 负数位移
 
 对负数进行位移现在将抛出 `ArithmeticError`：
 
 ```php
-  var_dump(1 >> -1);
-  // ArithmeticError: Bit shift by negative number
+var_dump(1 >> -1);
+// ArithmeticError: Bit shift by negative number
 ```
 
 #### 左位移
@@ -3010,7 +2798,7 @@ Traversable 对象的迭代保持不变。
 超出整数位宽的左位移将始终导致结果为 0：
 
 ```php
-  var_dump(1 << 64); // int(0)
+var_dump(1 << 64); // int(0)
 ```
 
 以前，这段代码的行为取决于所使用的 CPU 架构。例如，在 x86（包括 x86-64）上，结果是 `int(1)`，因为位移操作数被回绕（wrapped）。
@@ -3020,94 +2808,108 @@ Traversable 对象的迭代保持不变。
 同样，超出整数位宽的右位移将始终导致结果为 0 或 -1（取决于符号）：
 
 ```php
-  var_dump(1 >> 64);  // int(0)
-  var_dump(-1 >> 64); // int(-1)
+var_dump(1 >> 64);  // int(0)
+var_dump(-1 >> 64); // int(-1)
 ```
 
 ### 字符串处理
 
-#### 十六数值字符串
+#### 十六进制数值字符串
 
 包含十六进制数字的字符串不再被视为数值，且不会受到特殊处理。示例：
 
 ```php
-  is_numeric("0x123"); // bool(false)
-  is_numeric("0xe"); // bool(false)
-  is_numeric("0x1"); // int(0)
+is_numeric("0x123"); // bool(false)
+is_numeric("0xe"); // bool(false)
+is_numeric("0x1"); // int(0)
 ```
 
 可以使用 `filter_var()` 来检查字符串是否包含十六进制数字或转换此类字符串：
 
+
+
 ```php
-  filter_var("0x123", FILTER_VALIDATE_INT); // int(291)
-  filter_var("0xe", FILTER_VALIDATE_INT); // false
-  filter_var("0x1", FILTER_VALIDATE_INT); // int(1)
+filter_var("0x123", FILTER_VALIDATE_INT); // int(291)
+filter_var("0xe", FILTER_VALIDATE_INT); // false
+filter_var("0x1", FILTER_VALIDATE_INT); // int(1)
 ```
 
-
-
-
-*   `call_user_method()` 和 `call_user_method_array()` 不再存在。
-*   `ob_start()` 如果在输出缓冲区处理程序中创建输出缓冲区，不再抛出 `E_ERROR`，而是抛出 `E_RECOVERABLE_ERROR`。
-*   改进了内部排序算法，这可能会导致比较相等的元素的排序顺序发生变化。
-*   在 `fpm-fcgi` 中移除了 `dl()` 函数。
-*   使用空 cookie 名称的 `setcookie()` 现在会抛出 `E_WARNING`，且不再发送空的 set-cookie 头部行。
+* `call_user_method()` 和 `call_user_method_array()` 不再存在。
+* `ob_start()` 如果在输出缓冲区处理程序中创建输出缓冲区，不再抛出 `E_ERROR`，而是抛出 `E_RECOVERABLE_ERROR`。
+* 改进了内部排序算法，这可能会导致比较相等的元素的排序顺序发生变化。
+* 在 `fpm-fcgi` 中移除了 `dl()` 函数。
+* 使用空 cookie 名称的 `setcookie()` 现在会抛出 `E_WARNING`，且不再发送空的 set-cookie 头部行。
 
 ## 其他更改
 
 ### Curl
-*   移除了对禁用 `CURLOPT_SAFE_UPLOAD` 选项的支持。所有的 curl 文件上传必须使用 `curl_file` / `CURLFile` API。
+
+* 移除了对禁用 `CURLOPT_SAFE_UPLOAD` 选项的支持。所有的 curl 文件上传必须使用 `curl_file` / `CURLFile` API。
 
 ### Date
-*   从 `mktime()` 和 `gmmktime()` 中移除了 `$is_dst` 参数。
+
+* 从 `mktime()` 和 `gmmktime()` 中移除了 `$is_dst` 参数。
 
 ### DBA
-*   现在对于 `inifile` 处理器，如果未找到键，`dba_delete()` 也会返回 `false`。
+
+* 现在对于 `inifile` 处理器，如果未找到键，`dba_delete()` 也会返回 `false`。
 
 ### GMP
-*   现在需要 `libgmp` 版本 4.2 或更高。
-*   `gmp_setbit()` 和 `gmp_clrbit()` 现在对负索引返回 `FALSE`，使其与其他 GMP 函数保持一致。
+
+* 现在需要 `libgmp` 版本 4.2 或更高。
+* `gmp_setbit()` 和 `gmp_clrbit()` 现在对负索引返回 `FALSE`，使其与其他 GMP 函数保持一致。
 
 ### Intl
-*   移除了废弃的别名 `datefmt_set_timezone_id()` 和 `IntlDateFormatter::setTimeZoneID()`。请使用 `datefmt_set_timezone()` 和 `IntlDateFormatter::setTimeZone()`。
+
+* 移除了废弃的别名 `datefmt_set_timezone_id()` 和 `IntlDateFormatter::setTimeZoneID()`。请使用 `datefmt_set_timezone()` 和 `IntlDateFormatter::setTimeZone()`。
 
 ### libxml
-*   增加了 `LIBXML_BIGLINES` 解析器选项。该选项从 `libxml` 2.9.0 开始可用，并在错误报告中支持大于 16 位的行号。
+
+* 增加了 `LIBXML_BIGLINES` 解析器选项。该选项从 `libxml` 2.9.0 开始可用，并在错误报告中支持大于 16 位的行号。
 
 ### Mcrypt
-*   移除了废弃的 `mcrypt_generic_end()` 别名，改用 `mcrypt_generic_deinit()`。
-*   移除了废弃的 `mcrypt_ecb()`、`mcrypt_cbc()`、`mcrypt_cfb()` 和 `mcrypt_ofb()` 函数，改用带有 `MCRYPT_MODE_*` 标志的 `mcrypt_encrypt()` 和 `mcrypt_decrypt()`。
+
+* 移除了废弃的 `mcrypt_generic_end()` 别名，改用 `mcrypt_generic_deinit()`。
+* 移除了废弃的 `mcrypt_ecb()`、`mcrypt_cbc()`、`mcrypt_cfb()` 和 `mcrypt_ofb()` 函数，改用带有 `MCRYPT_MODE_*` 标志的 `mcrypt_encrypt()` 和 `mcrypt_decrypt()`。
 
 ### Session
-*   `session_start()` 接受数组形式的所有 INI 设置。例如 `['cache_limiter'=>'private']` 会设置 `session.cache_limiter=private`。它还支持 `read_and_close`，在读取数据后立即关闭会话数据。
-*   保存处理器接受 `validate_sid()` 和 `update_timestamp()`，后者用于验证会话 ID 是否以及更新会话数据的时间戳。保留了旧用户自定义保存处理器的兼容性。
-*   增加了 `SessionUpdateTimestampHandlerInterface`。接口中定义了 `validateSid()` 和 `updateTimestamp()`。
-*   `session.lazy_write(default=On)` INI 设置仅在会话数据被更新时才写入会话数据。
+
+* `session_start()` 接受数组形式的所有 INI 设置。例如 `['cache_limiter'=>'private']` 会设置 `session.cache_limiter=private`。它还支持 `read_and_close`，在读取数据后立即关闭会话数据。
+* 保存处理器接受 `validate_sid()` 和 `update_timestamp()`，后者用于验证会话 ID 是否以及更新会话数据的时间戳。保留了旧用户自定义保存处理器的兼容性。
+* 增加了 `SessionUpdateTimestampHandlerInterface`。接口中定义了 `validateSid()` 和 `updateTimestamp()`。
+* `session.lazy_write(default=On)` INI 设置仅在会话数据被更新时才写入会话数据。
 
 ### Opcache
-*   移除了 `opcache.load_comments` 配置指令。现在加载文档注释不再消耗开销，且始终启用。
+
+* 移除了 `opcache.load_comments` 配置指令。现在加载文档注释不再消耗开销，且始终启用。
 
 ### OpenSSL
-*   移除了“rsa_key_size” SSL 上文选项，改用根据协商的加密算法自动设置合适的尺寸。
-*   移除了 “CN_match” 和 “SNI_server_name” SSL 上文选项。请改用自动检测或 “peer_name” 。
 
-### PCRE:
-*   移除了对 `/e` (PREG_REPLACE_EVAL) 修饰符的支持。请使用 `preg_replace_callback()`。
+* 移除了“rsa_key_size” SSL 上文选项，改用根据协商的加密算法自动设置合适的尺寸。
+* 移除了 “CN_match” 和 “SNI_server_name” SSL 上文选项。请改用自动检测或 “peer_name” 。
 
-### PDO_pgsql:
-*   移除了 `PGSQL_ATTR_DISABLE_NATIVE_PREPARED_STATEMENT` 属性，改用 `ATTR_EMULATE_PREPARES`。
+### PCRE
 
-### Standard:
-*   在 `setlocale()` 中移除了字符串分类支持。请使用 `LC_*` 常量。
-*   移除了 `set_magic_quotes_runtime()` 及其别名 `magic_quotes_runtime()`。
+* 移除了对 `/e` (PREG_REPLACE_EVAL) 修饰符的支持。请使用 `preg_replace_callback()`。
 
-### JSON:
-*   拒绝 `json_decode` 字符串中与 RFC 7159 不兼容的数字格式——顶层 (07, 0xff, .1, -.1) 以及所有层 ([1.], [1.e1])。
-*   调用 `json_decode` 时第一个参数为空字符串或转换为字符串后为空字符串的值（NULL, FALSE）将导致 JSON 语法错误。
+### PDO_pgsql
 
-### Stream:
-*   移除了 `set_socket_blocking()`，改用其别名 `stream_set_blocking()`。
+* 移除了 `PGSQL_ATTR_DISABLE_NATIVE_PREPARED_STATEMENT` 属性，改用 `ATTR_EMULATE_PREPARES`。
 
-### XSL:
-*   移除了 `xsl.security_prefs`  ini 选项。请使用 `XsltProcessor::setSecurityPrefs()`。
+### Standard
 
+* 在 `setlocale()` 中移除了字符串分类支持。请使用 `LC_*` 常量。
+* 移除了 `set_magic_quotes_runtime()` 及其别名 `magic_quotes_runtime()`。
+
+### JSON
+
+* 拒绝 `json_decode` 字符串中与 RFC 7159 不兼容的数字格式——顶层 (07, 0xff, .1, -.1) 以及所有层 ([1.], [1.e1])。
+* 调用 `json_decode` 时第一个参数为空字符串或转换为字符串后为空字符串的值（NULL, FALSE）将导致 JSON 语法错误。
+
+### Stream
+
+* 移除了 `set_socket_blocking()`，改用其别名 `stream_set_blocking()`。
+
+### XSL
+
+* 移除了 `xsl.security_prefs` ini 选项。请使用 `XsltProcessor::setSecurityPrefs()`。

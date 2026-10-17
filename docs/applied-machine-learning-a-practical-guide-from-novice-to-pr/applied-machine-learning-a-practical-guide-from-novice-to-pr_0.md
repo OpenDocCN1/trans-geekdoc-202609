@@ -1,13 +1,9 @@
-# 
-从新手到高手的机器学习实践指南
 
+# 从新手到高手的机器学习实践指南
 
 ![](img/image_rsrc502.jpg)应用机器学习：实践指南——从新手到专家。
 
 以商业用例的方法解决学校、银行、零售、保险、电子商务、制造业、供应链等领域的真实问题。
-
-
-
 
 您可以通过以下方式联系作者：
 
@@ -62,9 +58,6 @@ Chigozie Anyasor
 机器学习是一个极具吸引力的领域，它利用计算算法从数据中获取洞察并进行预测，而无需显式编程。它是人工智能的一个子集，专注于创建能够自主从经验中学习和改进的系统。要有效地运用机器学习，数据科学家或有志成为数据科学家的人必须深入理解其原理和内在机制。
 
 在核心层面，机器学习意味着向算法或模型提供相关数据以解决业务问题，使其能够从数据中的模式和关系中学习并改进。随着更多数据被纳入算法或模型，它可以利用已获知识（训练数据）来预测新的数据点。因此，机器学习使企业能够基于观察到的模式做出明智的决策和预测。
-
-
-
 
 -   预测在利用机器学习进行明智决策时发挥关键作用，但必须认识到，仅仅拥有一个预测模型是不够的。真正重要的是如何根据这些预测采取行动。企业必须对模型的结果承担责任并了解其局限性。这凸显了数据科学家或首席数据官在理解模型能力、消除误解并有效利用机器学习以解决业务挑战方面的关键作用。
 
@@ -150,9 +143,6 @@ Chigozie Anyasor
 
 Adefunmi，一家银行的员工，承担了监督一项针对客户的定向营销活动的任务，该活动旨在向同意接收投资机会广告的客户进行推广。为最大化银行的营销投资回报，Adefunmi 采用了系统化的方法，鼓励她的团队依据数据在分配营销资源时做出决策。
 
-
-
-
 -   [为了实现这一目标，她促进了各方利益相关者的协作，最终决定实施机器学习框架。该框架利用已同意类似投资机会的客户过去数据来指导决策。]
 
 1.  Adefunmi 与数据工程师、业务团队和数据科学家紧密合作。这一协作确保数据工程师向数据科学家提供全面的数据访问，数据科学家随后选择使用逻辑回归模型根据历史数据预测客户行为。
@@ -161,19 +151,19 @@ Adefunmi，一家银行的员工，承担了监督一项针对客户的定向营
 
 要导入数据，您首先需要导入下面所示的库：
 
-``` 
+```
 ![](img/image_rsrc50B.jpg)
 ```
 
 如果没有错误，请继续加载数据并查看数据框架，如下图所示：
 
-``` 
+```
 ![](img/image_rsrc50C.jpg)
 ```
 
 下面我们将查看数据框架中的记录总数和列数，如下图所示：
 
-``` 
+```
 ![](img/image_rsrc50D.jpg)
 ```
 
@@ -183,13 +173,13 @@ Adefunmi，一家银行的员工，承担了监督一项针对客户的定向营
 
 将 "invested"（类别）分配给 y
 
-``` 
+```
 ![](img/image_rsrc50E.jpg)
 ```
 
-使用 Python 的 value_counts() 方法检查 "invested" 类别值的分布。
+使用 Python 的 `value_counts()` 方法检查 "invested" 类别值的分布。
 
-``` 
+```
 ![](img/image_rsrc50F.jpg)
 ```
 
@@ -211,31 +201,31 @@ SMOTE（Synthetic Minority Over-sampling Technique）
 
 在实施任何解决 "invested" 类不平衡的方法之前，我们先先可视化当前类的分布，如下图所示：
 
-``` 
+```
 ![](img/image_rsrc50G.jpg)
 ```
 
 我们将使用下采样方法，如下所示：
 
-``` 
+```
 ![](img/image_rsrc50H.jpg)
 ```
 
 应用下采样方法后，类不平衡已得到解决，如下图所示：
 
-``` 
+```
 ![](img/image_rsrc50J.jpg)
 ```
 
 接下来，我们将创建一个散点图，观察更倾向于投资的客户年龄分布，如下图所示：
 
-``` 
+```
 ![](img/image_rsrc50K.jpg)
 ```
 
 输出：
 
-``` 
+```
 ![](img/image_rsrc50M.jpg)
 ```
 
@@ -245,19 +235,19 @@ SMOTE（Synthetic Minority Over-sampling Technique）
 
 接下来，我们将数据划分，80% 用于训练模型，20% 用于测试，如下图所示：
 
-``` 
+```
 ![](img/image_rsrc50N.jpg)
 ```
 
-下图显示，我们实例化 LogisticRegression 类并将其赋值给变量 lc，然后使用 lc.fit 以 X_train 和 y_train 训练模型。注意：模型训练发生在 lc.fit 中。
+下图显示，我们实例化 `LogisticRegression` 类并将其赋值给变量 `lc`，然后使用 `lc.fit` 以 `X_train` 和 `y_train` 训练模型。注意：模型训练发生在 `lc.fit` 中。
 
-``` 
+```
 ![](img/image_rsrc50P.jpg)
 ```
 
-接下来，我们将传入 X_test（包含 20% 预留用于测试模型的数据），如下图所示：
+接下来，我们将传入 `X_test`（包含 20% 预留用于测试模型的数据），如下图所示：
 
-``` 
+```
 ![](img/image_rsrc50R.jpg)
 ```
 
@@ -267,13 +257,13 @@ SMOTE（Synthetic Minority Over-sampling Technique）
 
 根据下图，我输入了年龄 40。模型参考其之前的模式，指出在该年龄段，当受到针对性广告时，客户很可能进行投资。这表明该年龄段的客户是 Adefunmi 所寻找的理想目标受众。
 
-``` 
+```
 ![](img/image_rsrc50S.jpg)
 ```
 
 下图显示，模型预测 72 岁的客户不会对投资导向的广告感兴趣。显然，这些客户不是 Adefunmi 所寻找的目标受众。
 
-``` 
+```
 ![](img/image_rsrc50T.jpg)
 ```
 
@@ -284,7 +274,6 @@ Adefunmi 实施了一套 meticulously（精心）规划且全面的银行营销�
 公司可能决定将机器学习模型集成为 API，以便于企业应用。
 
 令人兴奋，不是吗？这只是开始。
-
 
 Figure 2-21. 模型训练成功，未报错。
 
@@ -302,7 +291,7 @@ R2 得分 0.851227 表示大约 85.12% 的因变量方差可以从模型中的�
 
 ## 使用多项式回归进行预测
 
-要使用多项式回归进行预测，可以在已训练好的模型上调用 predict 函数，并提供必要的输入参数，如图 2-23 所示。
+要使用多项式回归进行预测，可以在已训练好的模型上调用 `predict` 函数，并提供必要的输入参数，如图 2-23 所示。
 
 ![](img/image_rsrc52J.jpg)
 
@@ -314,330 +303,23 @@ Figure 2-23.
 
 在多项式回归的上下文中，模型在进行预测前需要将输入特征转换为多项式特征。代码片段通过两个步骤实现此转换：
 
-1. 将输入特征 `sex`、`smoker`、`region`、`age`、`bmi` 和 `children` 转换为多项式特征，使用 poly_reg.transform 方法。该转换会生成原特征的多项式组合等附加特征。
 
 
+进入`/path/to/xxx`目录，找到`xxx.json`。
 
-预测目标变量：经过转换的特征随后传递给已训练的回归模型 `lr` 的 `lr.predict` 方法，用于预测目标变量。
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
 
-## 多元线性回归
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
 
-多元线性回归通过建模依赖变量（也称为目标变量或响应变量）与多个自变量（也称为预测器或特征）之间的关系，扩展了简单线性回归的原理。虽然简单线性回归仅考虑一个预测器，多元线性回归则纳入两个或更多的预测器，从而提供了更全面的分析，说明各种因素如何共同影响依赖变量。
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
 
-在数据科学中，该方法对于理解和量化多个变量对目标结果的影响至关重要。通过考虑多个预测器，多元线性回归能够实现更准确的预测，并提供对数据中复杂关系的洞察。
+```
+if (condVar > someVal) {console.log("xxx")}
+```
 
-使用以下链接下载数据集：[保险数据集](https://www.google.com/url?q=https://www.kaggle.com/datasets/awaiskaggler/insurance-csv&sa=D&source=editors&ust=1720099681734560&usg=AOvVaw3TzaCJRNZGrbHq9PreHILr)。源代码可在此查看：[多元线性回归](https://www.google.com/url?q=https://github.com/anyasorc/appliedml/blob/main/Medical_Insurance_Multiple_Linear_Reg.ipynb&sa=D&source=editors&ust=1720099681734846&usg=AOvVaw0jy2PLIOHE3Kh20p1ZKiiS)
 
-## 导入库
 
-图 2-24 显示了所有必要的导入库。
-
-![](img/image_rsrc52M.jpg)
-
-图 2-24。
-
-## 导入并查看数据
-
-图 2-25 展示了数据的导入和查看方式，如下所示。
-
-![](img/image_rsrc52N.jpg)
-
-图 2-25。
-
-## 统计 DataFrame 中 'region' 列唯一值的频率
-
-代码 `df.region.value_counts()` 用于计算 DataFrame `df` 中 `region` 列每个唯一值的频率，显示每个地区出现的次数。如图 2-26 所示，该方法同样适用于 `smoker` 特征。
-
-![](img/image_rsrc52P.jpg)
-
-图 2-26。
-
-## 检查缺失值
-
-代码 `df.isna().sum()` 是一系列方法的链式调用，用于计算 DataFrame `df` 中每列的缺失值（NaN）总数，如图 2-27 所示。
-
-![](img/image_rsrc52R.jpg)
-
-图 2-27。
-
-## 为 X 和 y 赋值
-
-`X = df.iloc[:, :-1].values:`
-
-此行选择 DataFrame `df` 的所有行和除最后一列之外的所有列，并将结果转换为 NumPy 数组。得到的数组 `X` 通常包含特征或预测器，如图 2-28 所示。
-
-`y = df.iloc[:, -1].values:`
-
-此行选择 DataFrame `df` 的所有行和仅最后一列，并将结果转换为 NumPy 数组。得到的数组 `y` 通常包含目标或响应变量，如图 2-28 所示。
-
-![](img/image_rsrc52S.jpg)
-
-图 2-28
-
-## 查看 X 中的数据
-
-在新代码单元中输入 `X` 并运行，即可查看已赋值给 `X` 的数据，如图 2-29 所示。对 `y` 也可如此操作。
-
-![](img/image_rsrc52T.jpg)
-
-在图 2-29 中，我为列标记了对应的索引位置：第一列 `Age` 位于索引位置 0；第二列 `Sex` 位于索引位置 1；第三列 `BMI` 位于索引位置 2；第四列 `Number of Children` 位于索引位置 3；第五列 `Smoker` 位于索引位置 4；第六列 `Region` 位于索引位置 5。
-
-## 处理缺失值（NaN）
-
-处理缺失值对于数值特征/列是相关的，如图 2-30 所示。我们选择了索引位置为 0、2、3 的特征/列，对应于 `Age`、`BMI` 和 `Number of Children`，如图 2-29 所示。
-
-![](img/image_rsrc52U.jpg)
-
-图 2-30. `X[:, [0, 2, 3]]` 的含义是“选择所有行和索引位置为 0、2、3 的列”。因此，`X[:, [0, 2, 3]]` 有效提取 `Age`、`BMI` 和 `Number of Children` 列/特征的所有行数据。
-
-在识别出数值列后，我们将使用 `SimpleImputer` 类计算每列的均值，并用这些均值替换缺失值，如图 2-31 所示。
-
-![](img/image_rsrc52V.jpg)
-
-图 2-31.
-
-### 代码说明
-
-`SimpleImputer(missing_values=np.nan, strategy='mean')`
-
-`missing_values=np.nan`: 该参数指定要 impute（填补）的缺失值由 `np.nan` 表示。
-
-`strategy='mean'`: 该参数指定缺失值应替换为其所在列的均值。
-
-`imp.fit(X[:, [0, 2, 3]])`
-
-`X[:, [0, 2, 3]]`: 从数组 `X` 中选择所有行和索引位置为 0、2、3 的列。这些列为数值型。
-
-`.fit(...)`: 该方法基于非缺失值计算每列的均值，并将这些均值存储以供后续使用。
-
-`np.set_printoptions(precision=2)`
-
-该函数用于配置 NumPy 数组的显示方式。此处将打印输出的精度设置为 2 位小数。
-
-`X[:, [0, 2, 3]] = imp.transform(X[:, [0, 2, 3]])`
-
-`X[:, [0, 2, 3]]`: 再次选择从数组 `X` 中所有行和索引位置为 0、2、3 的列。
-
-`imp.transform(...)`: 该方法将在 `.fit(...)` 步骤中计算的均值替换选定列中的缺失值。
-
-`X[:, [0, 2, 3]] = ...`: 此赋值将更新原始数组 `X` 中的选定列，使其包含已用均值替换缺失值的转换后数据。
-
-## ColumnTransformer 和 OneHotEncoder()
-
-机器学习模型本质上不理解文本或 categorical（类别）值，因此需要将它们转换为模型能够处理的数值表示。这就是为什么我们需要将图 2-29 中索引位置 1（`Sex`）、4（`Smoker`）和 5（`Region`）的类别变量进行转换的原因。为此，我们将使用 `ColumnTransformer` 和 `OneHotEncoder`，如图 2-32 所示。
-
-![](img/image_rsrc52W.jpg)
-
-图 2-32.
-
-### 代码说明
-
-`ColumnTransformer`: 来自 `sklearn.compose` 模块的类，用于对数据集的不同列应用不同的预处理转换。
-
-`OneHotEncoder`: 来自 `sklearn.preprocessing` 模块的类，用于将类别特征转换为可以供机器学习算法使用的数值格式。
-
-`np`: 通常用于 NumPy 库的别名，用于进行数组操作。
-
-创建 ColumnTransformer 实例
-
-![](img/image_rsrc52X.jpg)
-
-`ColumnTransformer(...)`:
-
-初始化 `ColumnTransformer` 对象，用于对特定列应用指定的转换。
-
-`transformers=[('encoder', OneHotEncoder(), [1, 4, 5])]`:
-
-`'encoder':` 为该转换器指定的名称，可以是任意字符串。
-
-`OneHotEncoder()`: 指定使用 `OneHotEncoder` 进行转换。
-
-`[1, 4, 5]`: 指定用于转换的列的索引位置列表。此处，索引位置为 1、4、5 的列将被一热编码。
-
-`remainder='passthrough'`:
-
-该参数指定未明确转换的列应如何处理。`passthrough` 表示这些列保持不变，直接包含在输出中。
-
-## 分割训练集和测试集
-
-我们需要使用 80:20 的比例将数据集划分为训练集和测试集。这意味着 80% 的数据用于训练模型，剩余的 20% 用于在未见过的数据上评估模型的性能。图 2-32 描绘了这一过程。
-
-![](img/image_rsrc52Y.jpg)
-
-图 2-32.
-
-
-
-
-train`_`test`_`split : 这是 sklearn.model`_`selection 模块中的一个函数，用于将数据集划分为训练集和测试集。X`_`train 和 y`_`train 用于训练模型，X`_`test 和 y`_`test 用于在未见数据上评估模型的性能。
-
-Components of the Function Call :
-
-X: 这是特征矩阵（输入变量）。它包含独立变量或预测器。
-
-y: 这是目标向量（输出变量）。它包含因变量或响应变量。
-
-test`_`size=0.2: 该参数指定要包含在测试集中的数据集比例。这里，0.2 表示 20% 的数据将用于测试，剩余 80% 用于训练。
-
-random`_`state=0: 该参数控制在将数据划分前对数据进行洗牌的操作。传入整数可确保分割的可重复性，即每次使用相同的 random`_`state 值运行代码时，数据划分结果相同。
-
-Output of the Function Call :
-
-X`_`train: 这是特征矩阵的训练子集。包含 X 中 80% 的行。
-
-X`_`test: 这是特征矩阵的测试子集。包含 X 中剩余的 20% 的行。
-
-y`_`train: 这是目标向量的训练子集。包含与 X`_`train 中行对应的 y 中 80% 的行。
-
-y`_`test: 这是目标向量的测试子集。包含与 X`_`test 中行对应的 y 中 20% 的行。
-
-通过使用 test`_`size=0.2，我们确保 20% 的数据被保留用于测试，这有助于评估模型在新数据上的泛化能力。random`_`state 确保数据划分是可重复的，从而在多次运行代码时保持结果一致。
-
-## Training the model
-
-Figure 2-33  说明了如何使用 X`_`train 和 y`_`train 数据集训练机器学习模型。执行结果表明模型已成功训练。
-
-![](img/image_rsrc52Z.jpg)
-
-Figure 2-33 .
-
-## Code Explanation
-
-lr = LinearRegression()
-
-这一行创建 LinearRegression 类的实例并将其赋值给变量 lr。
-
-实例 lr 将用于将模型拟合到训练数据并进行预测。
-
-lr.fit(X`_`train, y`_`train)
-
-fit: 该方法在训练数据上训练线性回归模型。
-
-X`_`train: 训练数据的特征矩阵，包含独立变量。
-
-y`_`train: 训练数据的目标向量，包含因变量。
-
-运行此代码后，lr 实例包含已训练好的线性回归模型，可通过 predict 方法对新数据进行预测。
-
-## Predicting with the test data
-
-Figure 2-34  展示了如何使用已训练好的模型 (lr) 和测试数据 (X`_`test) 进行预测。
-
-![](img/image_rsrc530.jpg)
-
-Figure 2-34
-
-## Code Explanation
-
-y`_`pred = lr.predict(X`_`test) :
-
-此代码使用已训练好的线性回归模型 (lr) 对测试数据 (X`_`test) 的因变量值进行预测。预测结果存储在变量 y`_`pred 中。
-
-predict 方法将在训练阶段学习到的关系应用于测试数据，生成这些预测，从而提供模型在未见数据上的性能估计。
-
-## Model Evaluation
-
-在训练机器学习模型后，通过检查 R² 分数来评估其性能是很重要的。R² 分数表示模型在训练数据上的拟合程度，如 Figure 2-35 所示。
-
-![](img/image_rsrc531.jpg)
-
-Figure 2-35.
-
-## Code Explanation
-
-r2`_`score(y`_`test, y`_`pred)
-
-R² 分数，也称为决定系数，用于衡量模型预测值与实际值之间的匹配程度。
-
-y`_`test: 测试数据集中因变量的实际观测值。这是我们试图预测的真实输出。
-
-y`_`pred: 训练好的模型对测试数据集 (X`_`test) 生成的因变量预测值。
-
-## Model Result Interpretation
-
-输出 0.7999876970680433 表示大约 80% 的因变量 (y`_`test) 的变异可以通过训练好的模型利用独立变量 (X`_`test) 来预测。  
-
-这表明模型拟合良好，因为模型解释了大部分变异。
-
-# Let’s make a prediction
-
-Figure 2-36  展示了如何使用已训练的机器学习模型进行预测。我们需要提供以下特征进行预测：sex , smoker , region , age , BMI , and number of children，这些特征与训练时使用的特征相同。这些特征作为输入传递给 predict 方法，模型据此返回基于这些特征的预测目标变量值。
-
-![](img/image_rsrc532.jpg)
-
-Figure 2-36.
-
-## Support Vector Regression
-
-Support Vector Regression (SVR) 是一种高度有效且灵活的机器学习方法，常用于解决各种回归问题。其独特的设计使其能够通过确定最佳回归线来管理复杂的回归任务，该回归线准确反映输入变量和输出变量之间的关系。
-
-使用以下链接下载数据集：[Insurance Dataset](https://www.google.com/url?q=https://www.kaggle.com/datasets/awaiskaggler/insurance-csv&sa=D&source=editors&ust=1720099681753988&usg=AOvVaw1qEmRxFcDWzY9jJAm9EsET) 。源代码在此：[Support Vector Regression](https://www.google.com/url?q=https://github.com/anyasorc/appliedml/blob/main/Medical_Insurance_Multiple_Linear_Reg.ipynb&sa=D&source=editors&ust=1720099681754452&usg=AOvVaw2p0VIxTh5aYts45SQmqlOd)  
-
-## Import Libraries
-
-Figure 2-37  展示了所有导入的必需库。
-
-![](img/image_rsrc533.jpg)
-
-Figure 2-37.
-
-Import and View Data
-
-Figure 2-38   展示了数据的导入和查看过程，如下所示。
-
-![](img/image_rsrc534.jpg)
-
-Figure 2-38.
-
-# Calculating the frequency of unique values in a DataFrame column named 'region'.
-
-代码 df.region.value`_`counts()  计算 DataFrame df 中 'region' 列的每个唯一值的频率，并显示每个 region 出现的次数。'smokers' 列的处理方式相同，如 Figure 2-39 所示。
-
-![](img/image_rsrc535.jpg)
-
-Figure 2-39.
-
-## Check for missing values
-
-代码 df.isna().sum() 是一系列方法的组合，用于计算 DataFrame df 中每列的缺失值（NaN）总数，如 Figure 2-40 所示。
-
-![](img/image_rsrc536.jpg)
-
-Figure 2-40.
-
-## Assign values to X and y
-
-X = df.iloc`[:, :-1]`.values:
-
-此行选择 df 中的所有行和除最后一列外的所有列，并将结果转换为 NumPy 数组。 resulting array X 通常包含特征或预测器，如 Figure 2-41 所示。
-
-y = df.iloc`[:, -1]`.values:
-
-此行选择 df 中的所有行和仅最后一列，并将结果转换为 NumPy 数组。 resulting array y 通常包含目标或响应变量，如 Figure 2-41 所示。
-
-![](img/image_rsrc529.jpg)
-
-Figure 2-41
-
-# View data in X
-
-在新的代码单元中输入 X 并运行代码，可以查看 X 中赋值的数据，如 Figure 2-42 所示。y 也可以同理处理。
-
-![](img/image_rsrc52T.jpg)
-
-Figure 2-42 . 我已标记列及其对应的索引位置：第一列 Age 在索引位置 0；第二列 Sex 在索引位置 1；第三列 BMI 在索引位置 2；第四列 Number of Children 在索引位置 3；第五列 Smoker 在索引位置 4；第六列 Region 在索引位置 5。
-
-# Addressing missing values (NaN)
-
-
-
-处理缺失值对于数值特征/列是相关的，如图 2-43 所示。我们选择了索引位置为 0、2、3 的特征/列，分别对应年龄（Age）、BMI 和 孩子数量（Number of Children），如图 2-42 所示。
-
-![](img/image_rsrc52U.jpg)
-
-图 2-43. X[:,[0, 2, 3]] 表示“选择所有行和索引位置为 0、2、3 的列”。因此，X[:,[0, 2, 3]] 实际上从数据集的所有行中提取了年龄、BMI 和 孩子数量 列。
-
-在识别出数值列后，我们将使用 SimpleImputer 类计算每列的平均值，并用这些平均值替换缺失值，如图 2-44 所示。
+在识别出数值列后，我们将使用 `SimpleImputer` 类计算每列的平均值，并用这些平均值替换缺失值，如图 2-44 所示。
 
 ![](img/image_rsrc52V.jpg)
 
@@ -645,63 +327,63 @@ Figure 2-42 . 我已标记列及其对应的索引位置：第一列 Age 在索�
 
 ### 代码说明
 
-SimpleImputer(missing_values=np.nan, strategy='mean')
+`SimpleImputer(missing_values=np.nan, strategy='mean')`
 
-missing_values=np.nan：指定要处理的缺失值用 np.nan 表示。
+`missing_values=np.nan`：指定要处理的缺失值用 `np.nan` 表示。
 
-strategy='mean'：指定缺失值将被用该列的平均值替换。
+`strategy='mean'`：指定缺失值将被用该列的平均值替换。
 
-imp.fit(X[:,[0, 2, 3]])
+`imp.fit(X[:,[0, 2, 3]])`
 
-X[:,[0, 2, 3]]：从数组 X 中选择所有行和索引位置为 0、2、3 的列。这些列被假设为数值型。
+`X[:,[0, 2, 3]]`：从数组 `X` 中选择所有行和索引位置为 0、2、3 的列。这些列被假设为数值型。
 
-.fit(...)：该方法基于非缺失值计算每列的平均值，并将这些平均值存储用于后续使用。
+`.fit(...)`：该方法基于非缺失值计算每列的平均值，并将这些平均值存储用于后续使用。
 
-np.set_printoptions(precision=2)
+`np.set_printoptions(precision=2)`
 
 该函数用于配置 NumPy 数组的显示方式。这里将打印输出的精度设置为 2 位小数。
 
-X[:,[0, 2, 3]] = imp.transform(X[:,[0, 2, 3]])
+`X[:,[0, 2, 3]] = imp.transform(X[:,[0, 2, 3]])`
 
-X[:,[0, 2, 3]]：再次选择从数组 X 中所有行和索引位置为 0、2、3 的列。
+`X[:,[0, 2, 3]]`：再次选择从数组 `X` 中所有行和索引位置为 0、2、3 的列。
 
-imp.transform(...)：该方法将在 .fit(...) 步骤中计算出的平均值用于替换选定列中的缺失值。
+`imp.transform(...)`：该方法将在 `.fit(...)` 步骤中计算出的平均值用于替换选定列中的缺失值。
 
-X[:,[0, 2, 3]] = ...：此赋值将原始数组 X 中的选定列更新为经过转换的数据，缺失值已被替换。
+`X[:,[0, 2, 3]] = ...`：此赋值将原始数组 `X` 中的选定列更新为经过转换的数据，缺失值已被替换。
 
 ## ColumnTransformer 和 OneHotEncoder()
 
-机器学习模型无法理解文本，因此需要将文本特征转换为数值形式，以便模型能够处理。这也是我们需要将索引位置 1（性别）、4（吸烟者）和 5（地区）的类别变量转换为数值形式的原因，如图 2-42 所示。为了实现这一点，我们将使用 ColumnTransformer 和 OneHotEncoder，如图 2-45 所示。
+机器学习模型无法理解文本，因此需要将文本特征转换为数值形式，以便模型能够处理。这也是我们需要将索引位置 1（性别）、4（吸烟者）和 5（地区）的类别变量转换为数值形式的原因，如图 2-42 所示。为了实现这一点，我们将使用 `ColumnTransformer` 和 `OneHotEncoder`，如图 2-45 所示。
 
 ![](img/image_rsrc52W.jpg)
 
 图 2-45.
 
-ColumnTransformer：来自 sklearn.compose 模块的类，用于对数据集的不同列应用不同的预处理转换。
+`ColumnTransformer`：来自 `sklearn.compose` 模块的类，用于对数据集的不同列应用不同的预处理转换。
 
-OneHotEncoder：来自 sklearn.preprocessing 模块的类，用于将类别特征转换为机器学习算法可以更好地进行预测的格式。
+`OneHotEncoder`：来自 `sklearn.preprocessing` 模块的类，用于将类别特征转换为机器学习算法可以更好地进行预测的格式。
 
-np：这是 NumPy 库的常用别名，用于数组操作。
+`np`：这是 NumPy 库的常用别名，用于数组操作。
 
 创建 ColumnTransformer 实例
 
 ![](img/image_rsrc52X.jpg)
 
-ColumnTransformer(...):
+`ColumnTransformer(...)`:
 
-此操作初始化一个 ColumnTransformer 对象，用于对指定列应用特定的转换。
+此操作初始化一个 `ColumnTransformer` 对象，用于对指定列应用特定的转换。
 
-transformers=[('encoder', OneHotEncoder(), \[1, 4, 5\])]：
+`transformers=[('encoder', OneHotEncoder(), [1, 4, 5])]`：
 
-'encoder'：给这个转换器起一个名字，可以是任意字符串。
+`'encoder'`：给这个转换器起一个名字，可以是任意字符串。
 
-OneHotEncoder()：指定使用 OneHotEncoder 进行转换。
+`OneHotEncoder()`：指定使用 `OneHotEncoder` 进行转换。
 
-\[1, 4, 5\]：指定要转换的列的索引位置。这里，索引为 1、4、5 的列将被一热编码。
+`[1, 4, 5]`：指定要转换的列的索引位置。这里，索引为 1、4、5 的列将被一热编码。
 
-remainder='passthrough'：
+`remainder='passthrough'`：
 
-该参数指定对未明确转换的列应如何处理。'passthrough' 表示这些列将保持不变并包含在输出中。
+该参数指定对未明确转换的列应如何处理。`'passthrough'` 表示这些列将保持不变并包含在输出中。
 
 ## 将数据集划分为训练集和测试集
 
@@ -713,29 +395,29 @@ remainder='passthrough'：
 
 ### 代码说明
 
-train_test_split：这是 scikit-learn 库 sklearn.model_selection 模块中的函数，用于将数据集划分为训练集和测试集。X_train 和 y_train 用于训练模型，X_test 和 y_test 用于评估模型在未见数据上的性能。
+`train_test_split`：这是 scikit-learn 库 `sklearn.model_selection` 模块中的函数，用于将数据集划分为训练集和测试集。`X_train` 和 `y_train` 用于训练模型，`X_test` 和 `y_test` 用于评估模型在未见数据上的性能。
 
 函数调用的组成部分：
 
-X：特征矩阵（输入变量），包含独立变量或预测因子。
+`X`：特征矩阵（输入变量），包含独立变量或预测因子。
 
-y：目标向量（输出变量），包含依赖变量或响应变量。
+`y`：目标向量（输出变量），包含依赖变量或响应变量。
 
-test_size=0.2：指定用于测试的数据集比例。这里，0.2 表示 20% 的数据用于测试，剩余的 80% 用于训练。
+`test_size=0.2`：指定用于测试的数据集比例。这里，0.2 表示 20% 的数据用于测试，剩余的 80% 用于训练。
 
-random_state=0：控制在划分前对数据进行混洗的参数。传入整数可以确保分割的可重复性，即每次使用相同的 random_state 值运行代码时，数据分割结果相同。
+`random_state=0`：控制在划分前对数据进行混洗的参数。传入整数可以确保分割的可重复性，即每次使用相同的 `random_state` 值运行代码时，数据分割结果相同。
 
 函数调用的输出：
 
-X_train：特征矩阵的训练子集，包含 X 的 80% 行。
+`X_train`：特征矩阵的训练子集，包含 `X` 的 80% 行。
 
-X_test：特征矩阵的测试子集，包含 X 剩余的 20% 行。
+`X_test`：特征矩阵的测试子集，包含 `X` 剩余的 20% 行。
 
-y_train：目标向量的训练子集，包含与 X_train 中行对应的 y 的 80% 行。
+`y_train`：目标向量的训练子集，包含与 `X_train` 中行对应的 `y` 的 80% 行。
 
-y_test：目标向量的测试子集，包含与 X_test 中行对应的 y 的 20% 行。
+`y_test`：目标向量的测试子集，包含与 `X_test` 中行对应的 `y` 的 20% 行。
 
-使用 test_size=0.2 确保 20% 的数据用于测试，有助于评估模型在新数据上的泛化能力。random_state 确保数据分割可重复，在多次运行代码时结果一致。
+使用 `test_size=0.2` 确保 20% 的数据用于测试，有助于评估模型在新数据上的泛化能力。`random_state` 确保数据分割可重复，在多次运行代码时结果一致。
 
 ## 数据标准化用于 SVR
 
@@ -749,23 +431,23 @@ y_test：目标向量的测试子集，包含与 X_test 中行对应的 y 的 20
 
 ![](img/image_rsrc539.jpg)
 
-创建了两个 StandardScaler 实例：sc_X 用于输入特征 X，sc_y 用于目标变量 y。
+创建了两个 `StandardScaler` 实例：`sc_X` 用于输入特征 `X`，`sc_y` 用于目标变量 `y`。
 
 ![](img/image_rsrc53A.jpg)
 
-fit_transform 是一种方法，先拟合标准化器到数据（计算 X_train 每个特征的均值和标准差），然后根据这些统计量对数据进行转换。
+`fit_transform` 是一种方法，先拟合标准化器到数据（计算 `X_train` 每个特征的均值和标准差），然后根据这些统计量对数据进行转换。
 
-经过转换后，X_train 中的每个特征的均值为零，标准差为一。
+经过转换后，`X_train` 中的每个特征的均值为零，标准差为一。
 
 ![](img/image_rsrc53B.jpg)
 
-同样，fit_transform 也用于目标变量 y_train。
+同样，`fit_transform` 也用于目标变量 `y_train`。
 
 这在某些机器学习上下文中不常见，但在像 SVR 这样的算法中可能很有用，因为它可以使目标变量的尺度与输入特征保持一致。
 
 ## 训练模型
 
-图 2-48 说明了使用 X_train 和 y_train 数据集训练机器学习模型的过程。训练过程的执行表明模型训练成功。
+图 2-48 说明了使用 `X_train` 和 `y_train` 数据集训练机器学习模型的过程。训练过程的执行表明模型训练成功。
 
 ![](img/image_rsrc53C.jpg)
 
@@ -775,16 +457,13 @@ fit_transform 是一种方法，先拟合标准化器到数据（计算 X_train 
 
 ![](img/image_rsrc53D.jpg)
 
-SVR：代表 Support Vector Regression，是一种 Support Vector Machine（SVM）用于回归任务的类型。
-
-
-
+`SVR`：代表 Support Vector Regression，是一种 Support Vector Machine（SVM）用于回归任务的类型。
 
 -   [核心参数 `kernel='rbf'`：该参数指定算法使用的核函数类型。`'rbf'` 代表径向基函数（Radial Basis Function），是一种常用于处理特征与目标变量之间非线性关系的核。RBF 核会将输入特征映射到更高维空间，从而在该空间中可以找到线性分离，使其能够有效捕获复杂模式。]
 
 ![](img/image_rsrc53E.jpg)
 
--   [fit(X_train, y_train)：该方法用于使用训练数据训练 SVR 模型。`X_train` 包含输入特征，`y_train` 包含对应的目标值。  
+-   [`fit(X_train, y_train)`：该方法用于使用训练数据训练 SVR 模型。`X_train` 包含输入特征，`y_train` 包含对应的目标值。  
 
     在拟合过程中，SVR 算法通过寻找最佳超平面（或决策边界），在指定的容差（epsilon-insensitive 区间）内使数据最佳拟合，从而学习输入特征与目标变量之间的关系。]
 
@@ -792,7 +471,7 @@ SVR：代表 Support Vector Regression，是一种 Support Vector Machine（SVM�
 
 ## 使用测试数据进行预测
 
-Figure 2-49  下面的图示了如何使用已训练好的模型（回归器）和测试数据（X_test）进行预测。
+Figure 2-49  下面的图示了如何使用已训练好的模型（回归器）和测试数据（`X_test`）进行预测。
 
 ![](img/image_rsrc53F.jpg)
 
@@ -802,31 +481,31 @@ Figure 2-49.
 
 ![](img/image_rsrc53G.jpg)
 
--   [sc_X.transform(X_test)：将与训练数据 X_train 相同的标准化过程应用于测试数据 X_test。  
+-   [`sc_X.transform(X_test)`：将与训练数据 `X_train` 相同的标准化过程应用于测试数据 `X_test`。  
 
-    `sc_X` 是一个 `StandardScaler` 实例，之前已在 X_train 上拟合。这样可以确保 X_test 使用与训练数据相同的均值和标准差进行标准化，使特征保持相同的尺度。]
+    `sc_X` 是一个 `StandardScaler` 实例，之前已在 `X_train` 上拟合。这样可以确保 `X_test` 使用与训练数据相同的均值和标准差进行标准化，使特征保持相同的尺度。]
 
 ![](img/image_rsrc53H.jpg)
 
--   [regressor.predict(...)：使用已训练好的 SVR 模型对标准化后的测试数据进行预测。  
+-   [`regressor.predict(...)`：使用已训练好的 SVR 模型对标准化后的测试数据进行预测。  
 
     这一步的输出是一个一维数组，包含预测的目标值，但这些预测仍然处于训练时使用的标准化尺度。]
 
 ![](img/image_rsrc53J.jpg)
 
--   [.reshape(-1, 1)：将预测值数组 reshape 为二维数组，列数为 1。`-1` 参数会自动推断行数，基于数组长度。  
+-   [`.reshape(-1, 1)`：将预测值数组 reshape 为二维数组，列数为 1。`-1` 参数会自动推断行数，基于数组长度。  
 
     这种 reshaping 是必要的，因为 `StandardScaler` 的 `inverse_transform` 方法要求输入为二维数组。]
 
 ![](img/image_rsrc53K.jpg)
 
--   [sc_y.inverse_transform(...)：将标准化后的预测值转换回目标变量 y 的原始尺度。  
+-   [`sc_y.inverse_transform(...)`：将标准化后的预测值转换回目标变量 `y` 的原始尺度。  
 
-    `sc_y` 是一个 `StandardScaler` 实例，之前已在 y_train 上拟合。`inverse_transform` 方法撤销标准化，将标准化后的值恢复到原始尺度。]
+    `sc_y` 是一个 `StandardScaler` 实例，之前已在 `y_train` 上拟合。`inverse_transform` 方法撤销标准化，将标准化后的值恢复到原始尺度。]
 
 ![](img/image_rsrc53M.jpg)
 
--   [最终结果 y_pred 是一个数组，包含针对 X_test 的预测目标值，已转换回 y 的原始尺度。]
+-   [最终结果 `y_pred` 是一个数组，包含针对 `X_test` 的预测目标值，已转换回 `y` 的原始尺度。]
 
 ## 模型评估
 
@@ -840,13 +519,13 @@ Figure 2-50.
 
 ![](img/image_rsrc53P.jpg)
 
--   [r2_score 是 scikit-learn 库 `sklearn.metrics` 模块中的函数。  
+-   [`r2_score` 是 scikit-learn 库 `sklearn.metrics` 模块中的函数。  
 
     它用于通过计算决定系数（R-squared，R²）来评估回归模型的性能。]
 
--   [y_test 表示测试数据集的真实目标值，即模型试图预测的实际值。]
+-   [`y_test` 表示测试数据集的真实目标值，即模型试图预测的实际值。]
 
--   [y_pred 表示回归模型为测试数据集生成的预测目标值。]
+-   [`y_pred` 表示回归模型为测试数据集生成的预测目标值。]
 
 ## 模型结果解释
 
@@ -858,7 +537,7 @@ R² 值为 0.8869590298175918，约为 88.70%，这表明 SVR 模型表现非常
 
 Figure 2-51  下面的图示了使用已训练机器学习模型进行预测的过程。预测时需要提供以下特征：sex、smoker、region、age、BMI、children 数量，这些特征与模型训练时使用的特征相同。
 
-这些特征作为输入传递给 predict 方法，模型据此返回基于这些特征的预测目标变量值。
+这些特征作为输入传递给 `predict` 方法，模型据此返回基于这些特征的预测目标变量值。
 
 ![](img/image_rsrc53R.jpg)
 
@@ -904,9 +583,9 @@ Figure 2-55.
 
 ## 为 X 和 y 赋值
 
--   [X = df.iloc[:, :-1].values：该行选取 DataFrame `df` 的所有行和除最后一列之外的所有列，并将结果转换为 NumPy 数组。得到的数组 X 通常包含特征或预测器，如 Figure 2-56 所示。]
+-   [`X = df.iloc[:, :-1].values`：该行选取 DataFrame `df` 的所有行和除最后一列之外的所有列，并将结果转换为 NumPy 数组。得到的数组 `X` 通常包含特征或预测器，如 Figure 2-56 所示。]
 
--   [y = df.iloc[:, -1].values：该行选取 DataFrame `df` 的所有行和仅最后一列，并将结果转换为 NumPy 数组。得到的数组 y 通常包含目标或响应变量，如 Figure 2-56 所示。]
+-   [`y = df.iloc[:, -1].values`：该行选取 DataFrame `df` 的所有行和仅最后一列，并将结果转换为 NumPy 数组。得到的数组 `y` 通常包含目标或响应变量，如 Figure 2-56 所示。]
 
 ![](img/image_rsrc529.jpg)
 
@@ -931,8 +610,6 @@ Figure 2-58. `X[:, [0, 2, 3]]` 表示“选择所有行和索引位置 0、2、3
 ![](img/image_rsrc52V.jpg)
 
 Figure 2-59.
-
-
 
 ## 代码解释
 
@@ -979,6 +656,8 @@ Figure 2-60.
 ## 创建 ColumnTransformer 实例
 
 ![](img/image_rsrc52X.jpg)
+
+
 
 `ColumnTransformer(...)`:
 
@@ -1090,9 +769,7 @@ R² 值为 0.7142644756791616，表明回归模型捕获了目标变量的大部
 
 ## 让我们进行预测
 
-
-
-Figure 2-65 下面的图示了使用经过训练的机器学习模型进行预测的过程。它要求我们提供以下特征用于预测：性别、吸烟状态、地区、年龄、BMI（身体质量指数）以及子女数量，这些特征与模型训练时使用的特征相同。这些特征作为输入传递给 predict 方法，模型根据这些特征返回预测的目标变量值。
+Figure 2-65 下面的图示了使用经过训练的机器学习模型进行预测的过程。它要求我们提供以下特征用于预测：性别、吸烟状态、地区、年龄、BMI（身体质量指数）以及子女数量，这些特征与模型训练时使用的特征相同。这些特征作为输入传递给 `predict` 方法，模型根据这些特征返回预测的目标变量值。
 
 ![](img/image_rsrc543.jpg)
 
@@ -1106,7 +783,7 @@ Figure 2-65.
 
 ## 导入库
 
-Figure 2-66 显示了所有必要的导入库。
+Figure 2-66 显示了所有必要的导入库。
 
 ![](img/image_rsrc544.jpg)
 
@@ -1114,15 +791,15 @@ Figure 2-66.
 
 ## 导入并查看数据
 
-Figure 2-67 展示了数据的导入和查看方式，如下所示。
+Figure 2-67 展示了数据的导入和查看方式，如下所示。
 
 ![](img/image_rsrc545.jpg)
 
 Figure 2-67.
 
-# 计算 DataFrame 中 'region' 列唯一值的频率
+## 计算 `DataFrame` 中 `'region'` 列唯一值的频率
 
-代码 `df.region.value_counts()` 计算 DataFrame `df` 中 `region` 列每个唯一区域的出现次数，显示每个区域出现的次数。同样的方法也适用于 `smoker` 特征，如 Figure 2-68 所示。
+代码 `df.region.value_counts()` 计算 `DataFrame` `df` 中 `region` 列每个唯一区域的出现次数，显示每个区域出现的次数。同样的方法也适用于 `smoker` 特征，如 Figure 2-68 所示。
 
 ![](img/image_rsrc546.jpg)
 
@@ -1130,43 +807,43 @@ Figure 2-68.
 
 ## 检查缺失值
 
-代码 `df.isna().sum()` 是一系列方法的组合，用于计算 DataFrame `df` 每列的缺失值（NaN）总数，如 Figure 2-69 所示。
+代码 `df.isna().sum()` 是一系列方法的组合，用于计算 `DataFrame` `df` 每列的缺失值（`NaN`）总数，如 Figure 2-69 所示。
 
 ![](img/image_rsrc547.jpg)
 
 Figure 2-69.
 
-## 为 X 和 y 赋值
+## 为 `X` 和 `y` 赋值
 
 `X = df.iloc[:, :-1].values:`
 
-此行选择 DataFrame `df` 的所有行和除最后一列之外的所有列，并将结果转换为 NumPy 数组。数组 `X` 通常包含特征或预测器，如 Figure 2-70 所示。
+此行选择 `DataFrame` `df` 的所有行和除最后一列之外的所有列，并将结果转换为 NumPy 数组。数组 `X` 通常包含特征或预测器，如 Figure 2-70 所示。
 
 `y = df.iloc[:, -1].values:`
 
-此行选择 DataFrame `df` 的所有行和仅最后一列，并将结果转换为 NumPy 数组。数组 `y` 通常包含目标或响应变量，如 Figure 2-70 所示。
+此行选择 `DataFrame` `df` 的所有行和仅最后一列，并将结果转换为 NumPy 数组。数组 `y` 通常包含目标或响应变量，如 Figure 2-70 所示。
 
 ![](img/image_rsrc529.jpg)
 
 Figure 2-70.
 
-## 查看 X 中的数据
+## 查看 `X` 中的数据
 
 在新建代码单元格中输入 `X` 并运行代码单元格，即可看到 `X` 中赋值的数据，如 Figure 2-71 所示。对 `y` 也可以如此操作。
 
 ![](img/image_rsrc52T.jpg)
 
-Figure 2-71. 我已将列与其对应的索引位置标记如下：第一列（Age）在索引位置 0；第二列（Sex）在索引位置 1；第三列（BMI）在索引位置 2；第四列（Number of Children）在索引位置 3；第五列（Smoker）在索引位置 4；第六列（Region）在索引位置 5。
+Figure 2-71. 我已将列与其对应的索引位置标记如下：第一列（`Age`）在索引位置 0；第二列（`Sex`）在索引位置 1；第三列（`BMI`）在索引位置 2；第四列（`Number of Children`）在索引位置 3；第五列（`Smoker`）在索引位置 4；第六列（`Region`）在索引位置 5。
 
-## 处理缺失值（NaN）
+## 处理缺失值（`NaN`）
 
-处理缺失值对于数值特征/列是相关的，如 Figure 2-72 所示。我们选择了索引位置 0、2、3 的特征/列，对应于 Age、BMI 和 Number of Children，如 Figure 2-71 所示。
+处理缺失值对于数值特征/列是相关的，如 Figure 2-72 所示。我们选择了索引位置 0、2、3 的特征/列，对应于 `Age`、`BMI` 和 `Number of Children`，如 Figure 2-71 所示。
 
 ![](img/image_rsrc548.jpg)
 
-Figure 2-72. `X[:, [0, 2, 3]]` 表示“选择所有行和索引位置 0、2、3 的列”。因此，`X[:, [0, 2, 3]]` 有效提取了 Age、BMI 和 Number of Children 列的所有行。
+Figure 2-72. `X[:, [0, 2, 3]]` 表示“选择所有行和索引位置 0、2、3 的列”。因此，`X[:, [0, 2, 3]]` 有效提取了 `Age`、`BMI` 和 `Number of Children` 列的所有行。
 
-在确定数值列后，我们将使用 SimpleImputer 类计算每列的均值，并用这些均值替换缺失值，如 Figure 2-73 所示。
+在确定数值列后，我们将使用 `SimpleImputer` 类计算每列的均值，并用这些均值替换缺失值，如 Figure 2-73 所示。
 
 ![](img/image_rsrc52V.jpg)
 
@@ -1174,33 +851,41 @@ Figure 2-73.
 
 ### 代码说明
 
+```
 SimpleImputer(missing_values=np.nan, strategy='mean')
+```
 
-`missing_values=np.nan`：指定要处理的缺失值为 np.nan。
+`missing_values=np.nan`：指定要处理的缺失值为 `np.nan`。
 
 `strategy='mean'`：指定缺失值应替换为该列的均值。
 
+```
 imp.fit(X[:, [0, 2, 3]])
+```
 
 `X[:, [0, 2, 3]]`：选择所有行和索引位置 0、2、3 的列（假设为数值列）。
 
-.fit(...)：计算选定列中非缺失值的均值，并将这些均值存储用于后续使用。
+`.fit(...)`：计算选定列中非缺失值的均值，并将这些均值存储用于后续使用。
 
+```
 np.set_printoptions(precision=2)
+```
 
 该函数配置 NumPy 数组的显示方式，这里将输出精度设置为 2 位小数。
 
+```
 X[:, [0, 2, 3]] = imp.transform(X[:, [0, 2, 3]])
+```
 
 再次选择所有行和索引位置 0、2、3 的列。
 
-imp.transform(...)：将缺失值替换为在 .fit(...) 步骤中计算的均值。
+`imp.transform(...)`：将缺失值替换为在 `.fit(...)` 步骤中计算的均值。
 
-X[:, [0, 2, 3]] = ...：更新原始数组 X 中的选定列，使缺失值被替换为转换后的数据。
+`X[:, [0, 2, 3]] = ...`：更新原始数组 `X` 中的选定列，使缺失值被替换为转换后的数据。
 
-## ColumnTransformer 和 OneHotEncoder()
+## `ColumnTransformer` 和 `OneHotEncoder()`
 
-机器学习模型不理解文本，因此需要将文本特征转换为数值形式，以便模型能够理解并进行预测。这就是我们需要对索引位置 1（性别）、4（吸烟状态）和 5（地区）的分类变量进行处理的原因，如 Figure 2-71 所示。为此，我们将使用 ColumnTransformer 和 OneHotEncoder，如 Figure 2-74 所示。
+机器学习模型不理解文本，因此需要将文本特征转换为数值形式，以便模型能够理解并进行预测。这就是我们需要对索引位置 1（性别）、4（吸烟状态）和 5（地区）的分类变量进行处理的原因，如 Figure 2-71 所示。为此，我们将使用 `ColumnTransformer` 和 `OneHotEncoder`，如 Figure 2-74 所示。
 
 ![](img/image_rsrc549.jpg)
 
@@ -1208,31 +893,31 @@ Figure 2-74.
 
 ### 代码说明
 
-ColumnTransformer：来自 sklearn.compose 模块的类，用于对数据集的不同列应用不同的预处理转换。
+`ColumnTransformer`：来自 `sklearn.compose` 模块的类，用于对数据集的不同列应用不同的预处理转换。
 
-OneHotEncoder：来自 sklearn.preprocessing 模块的类，用于将分类特征转换为可以供机器学习算法使用的格式，以提高预测性能。
+`OneHotEncoder`：来自 `sklearn.preprocessing` 模块的类，用于将分类特征转换为可以供机器学习算法使用的格式，以提高预测性能。
 
-np：通常用于表示 NumPy 库的别名，用于数组操作。
+`np`：通常用于表示 NumPy 库的别名，用于数组操作。
 
-创建 ColumnTransformer 实例
+#### 创建 `ColumnTransformer` 实例
 
 ![](img/image_rsrc52X.jpg)
 
-ColumnTransformer(...):
+`ColumnTransformer(...)`：
 
-初始化一个 ColumnTransformer 对象，用于对指定列应用特定的转换。
+初始化一个 `ColumnTransformer` 对象，用于对指定列应用特定的转换。
 
-transformers=[('encoder', OneHotEncoder(), [1, 4, 5])]:
+`transformers=[('encoder', OneHotEncoder(), [1, 4, 5])]`：
 
-'encoder'：为该转换器指定的名称，可为任意字符串。
+`'encoder'`：为该转换器指定的名称，可为任意字符串。
 
-OneHotEncoder()：指定使用 OneHotEncoder 进行转换。
+`OneHotEncoder()`：指定使用 `OneHotEncoder` 进行转换。
 
-[1, 4, 5]：指定要进行一热编码的列索引。这里，索引位置 1、4、5 的列将被一热编码。
+`[1, 4, 5]`：指定要进行一热编码的列索引。这里，索引位置 1、4、5 的列将被一热编码。
 
-remainder='passthrough'：
+`remainder='passthrough'`：
 
-该参数指定未明确转换的列应如何处理。'passthrough' 表示这些列保持不变，直接包含在输出中。
+该参数指定未明确转换的列应如何处理。`'passthrough'` 表示这些列保持不变，直接包含在输出中。
 
 ## 划分训练集和测试集
 
@@ -1244,36 +929,33 @@ Figure 2-75.
 
 ### 代码说明
 
-train_test_split：来自 sklearn.model_selection 模块的函数，用于将数据集划分为训练集和测试集。X_train 和 y_train 用于训练模型，X_test 和 y_test 用于在未见数据上评估模型性能。
+`train_test_split`：来自 `sklearn.model_selection` 模块的函数，用于将数据集划分为训练集和测试集。`X_train` 和 `y_train` 用于训练模型，`X_test` 和 `y_test` 用于在未见数据上评估模型性能。
 
-函数调用的组成部分：
+#### 函数调用的组成部分：
 
+`X`：这是特征矩阵（输入变量）。它包含独立变量或预测器。
 
+`y`：这是目标向量（输出变量）。它包含因变量或响应值。
 
+`test_size=0.2`：该参数指定要包含在测试集中的数据集比例。这里，0.2 表示 20% 的数据将用于测试，剩余的 80% 将用于训练。
 
-X: 这是特征矩阵（输入变量）。它包含独立变量或预测器。
+`random_state=0`：该参数控制在数据划分前对数据进行随机洗桨的操作。传入整数可确保结果的可重复性，即每次使用相同的 `random_state` 值运行代码时，数据划分结果相同。
 
-y: 这是目标向量（输出变量）。它包含因变量或响应值。
+#### 函数调用的输出：
 
-test_size=0.2：该参数指定要包含在测试集中的数据集比例。这里，0.2 表示 20% 的数据将用于测试，剩余的 80% 将用于训练。
+`X_train`：这是特征矩阵的训练子集。它包含 `X` 中 80% 的行。
 
-random_state=0：该参数控制在数据划分前对数据进行随机洗桨的操作。传入整数可确保结果的可重复性，即每次使用相同的 random_state 值运行代码时，数据划分结果相同。
+`X_test`：这是特征矩阵的测试子集。它包含 `X` 中剩余的 20% 的行。
 
-函数调用的输出：
+`y_train`：这是目标向量的训练子集。它包含与 `X_train` 中行对应的 `y` 中 80% 的值。
 
-X_train：这是特征矩阵的训练子集。它包含 X 中 80% 的行。
+`y_test`：这是目标向量的测试子集。它包含与 `X_test` 中行对应的 `y` 中 20% 的值。
 
-X_test：这是特征矩阵的测试子集。它包含 X 中剩余的 20% 的行。
-
-y_train：这是目标向量的训练子集。它包含与 X_train 中行对应的 y 中 80% 的值。
-
-y_test：这是目标向量的测试子集。它包含与 X_test 中行对应的 y 中 20% 的值。
-
-通过使用 test_size=0.2，我们确保 20% 的数据被保留用于测试，这有助于评估模型在新数据上的泛化能力。random_state 确保数据划分是可重复的，从而在多次运行代码时保持结果一致。
+通过使用 `test_size=0.2`，我们确保 20% 的数据被保留用于测试，这有助于评估模型在新数据上的泛化能力。`random_state` 确保数据划分是可重复的，从而在多次运行代码时保持结果一致。
 
 ## 模型训练
 
-图 2-76 展示了如何使用 X_train 和 y_train 数据集训练机器学习模型。执行结果表明模型训练成功。
+图 2-76 展示了如何使用 `X_train` 和 `y_train` 数据集训练机器学习模型。执行结果表明模型训练成功。
 
 ![](img/image_rsrc54B.jpg)
 
@@ -1281,23 +963,21 @@ Figure 2-76.
 
 ## 代码解释
 
-RandomForestRegressor：这一行创建了 RandomForestRegressor 类的实例。
+`RandomForestRegressor`：这一行创建了 `RandomForestRegressor` 类的实例。
 
-n_estimators=10：指定随机森林中的决策树数量。在此例中，森林包含 10 个决策树。
+`n_estimators=10`：指定随机森林中的决策树数量。在此例中，森林包含 10 个决策树。
 
-random_state=0：设置随机种子以确保可重复性。固定随机状态可保证每次运行代码时得到相同的结果，便于调试和测试。
+`random_state=0`：设置随机种子以确保可重复性。固定随机状态可保证每次运行代码时得到相同的结果，便于调试和测试。
 
-![](img/image_rsrc54D.jpg)
+`fit`：该方法在提供的训练数据上训练随机森林回归模型。
 
-fit：该方法在提供的训练数据上训练随机森林回归模型。
+`X_train`：代表训练数据的特征（输入变量）。
 
-X_train：代表训练数据的特征（输入变量）。
-
-y_train：代表训练数据的目标（输出变量或标签）。
+`y_train`：代表训练数据的目标（输出变量或标签）。
 
 ## 使用测试数据进行预测
 
-下图 2-77 展示了如何使用训练好的模型（lr）和测试数据（X_test）进行预测。
+下图 2-77 展示了如何使用训练好的模型（`lr`）和测试数据（`X_test`）进行预测。
 
 ![](img/image_rsrc54E.jpg)
 
@@ -1305,11 +985,11 @@ Figure 2-77.
 
 ## 代码解释
 
-Rf.predict(X_test)：这一行使用训练好的随机森林模型（Rf）对测试数据（X_test）进行预测。
+`Rf.predict(X_test)`：这一行使用训练好的随机森林模型（`Rf`）对测试数据（`X_test`）进行预测。
 
-X_test：代表待预测的测试数据特征（输入变量）。
+`X_test`：代表待预测的测试数据特征（输入变量）。
 
-预测的目标值存储在变量 y_pred 中。
+预测的目标值存储在变量 `y_pred` 中。
 
 ## 模型评估
 
@@ -1321,11 +1001,11 @@ Figure 2-78.
 
 ## 代码解释
 
-r2_score 是 scikit-learn 库 sklearn.metrics 模块中的函数。它用于通过计算决定系数（R²）来评估回归模型的性能。
+`r2_score` 是 scikit-learn 库 `sklearn.metrics` 模块中的函数。它用于通过计算决定系数（R²）来评估回归模型的性能。
 
-y_test：代表测试数据集的实际目标值。这些是模型试图预测的真实值。
+`y_test`：代表测试数据集的实际目标值。这些是模型试图预测的真实值。
 
-y_pred：代表回归模型为测试数据集生成的预测目标值。
+`y_pred`：代表回归模型为测试数据集生成的预测目标值。
 
 ## 模型结果解释
 
@@ -1335,7 +1015,7 @@ R² 值为 0.8611562299112945，表明回归模型捕获了目标变量的大部
 
 ## 让我们进行预测
 
-图 2-79 展示了使用训练好的机器学习模型进行预测的过程。我们需要提供以下特征进行预测：sex（性别）、smoker（吸烟者）、region（地区）、age（年龄）、BMI（身体质量指数）和 number of children（子女数量），这些特征与训练时使用的相同。将这些特征作为输入传递给 predict 方法，模型会根据这些特征返回预测的目标变量值。
+图 2-79 展示了使用训练好的机器学习模型进行预测的过程。我们需要提供以下特征进行预测：`sex`（性别）、`smoker`（吸烟者）、`region`（地区）、`age`（年龄）、`BMI`（身体质量指数）和 `number of children`（子女数量），这些特征与训练时使用的相同。将这些特征作为输入传递给 `predict` 方法，模型会根据这些特征返回预测的目标变量值。
 
 ![](img/image_rsrc54G.jpg)
 
@@ -1348,6 +1028,9 @@ Figure 2-79.
 | # | Model Name | Model R² Score (%) |
 |---|------------|-------------------|
 | 1 | Polynomial regression | 85.12% |
+
+
+
 | 2 | Multiple linear regression | 80% |
 | 3 | Support Vector Regression | 88.70% |
 | 4 | Decision trees regression | 71.43% |
@@ -1355,9 +1038,7 @@ Figure 2-79.
 
 基于 R² 分数，支持向量回归（SVR）因其最高的 R² 值 88.70% 而被推荐，表明其性能最佳。该高 R² 值意味着 SVR 解释了 88.70% 的目标变量变异，说明 SVR 在提供准确可靠预测方面优于其他模型。
 
-# 第 3 章  
-
-分类
+# 第 3 章 分类
 
 ## 分类
 
@@ -1367,54 +1048,32 @@ Figure 2-79.
 
 ## 分类模型类型
 
-Logistic Regression Model（逻辑回归模型）
-
-K-Nearest Neighbour (K-NN) Model（k 最近邻模型）
-
-Support Vector Machine (SVM) Model（支持向量机模型）
-
-Naïve Bayes Model（朴素贝叶斯模型）
-
-Kernel SVM Model（核支持向量机模型）
-
-Decision Tree Classification Model（决策树分类模型）
-
-Random Forest Classification Model（随机森林分类模型）
+- Logistic Regression Model（逻辑回归模型）
+- K-Nearest Neighbour (K-NN) Model（k 最近邻模型）
+- Support Vector Machine (SVM) Model（支持向量机模型）
+- Naïve Bayes Model（朴素贝叶斯模型）
+- Kernel SVM Model（核支持向量机模型）
+- Decision Tree Classification Model（决策树分类模型）
+- Random Forest Classification Model（随机森林分类模型）
 
 ## 分类问题描述
 
 阿隆佐医院（Alonzo Hospital），一家本地医疗机构，已利用技术提升其所有部门的效率。最近，管理层决定聘请数据科学家，开发一个机器学习模型，根据患者输入解读心脏检测结果。该模型分析特定的心脏特征，例如：
 
-age：患者的年龄（以年为单位）。
-
-sex：患者的性别（1 = 男性；0 = 女性）。
-
-cp：胸痛类型（0 = 典型心绞痛，1 = 不典型心绞痛，2 = 非心绞痛，3 = 无症状）。
-
-trestbps：入院时的静息血压（mm Hg）。
-
-chol：血清胆固醇（mg/dl）。
-
-fbs：空腹血糖 > 120 mg/dl（1 = 真；0 = 假）。
-
-restecg：静息心电图结果（0 = 正常，1 = 有 ST-T 波异常，2 = 根据 Estes 标准显示可能或确定性左心室肥厚）。
-
-thalach：达到的最大心率。
-
-exang：运动诱发心绞痛（1 = 是；0 = 否）。
-
-oldpeak：运动时相对于休息的 ST 段下降。
-
-slope：运动时 ST 段的斜率（0 = 上升，1 = 平坦，2 = 下降）。
-
-
-
-
-ca: Number of major vessels (0-3) colored by fluoroscopy.
-
-thal: Thalassemia (1 = normal; 2 = fixed defect; 3 = reversible defect).
-
-Target: 0 indicates the patient's heart is healthy, while 1 indicates the patient's heart is not healthy.
+- `age`：患者的年龄（以年为单位）。
+- `sex`：患者的性别（1 = 男性；0 = 女性）。
+- `cp`：胸痛类型（0 = 典型心绞痛，1 = 不典型心绞痛，2 = 非心绞痛，3 = 无症状）。
+- `trestbps`：入院时的静息血压（mm Hg）。
+- `chol`：血清胆固醇（mg/dl）。
+- `fbs`：空腹血糖 > 120 mg/dl（1 = 真；0 = 假）。
+- `restecg`：静息心电图结果（0 = 正常，1 = 有 ST-T 波异常，2 = 根据 Estes 标准显示可能或确定性左心室肥厚）。
+- `thalach`：达到的最大心率。
+- `exang`：运动诱发心绞痛（1 = 是；0 = 否）。
+- `oldpeak`：运动时相对于休息的 ST 段下降。
+- `slope`：运动时 ST 段的斜率（0 = 上升，1 = 平坦，2 = 下降）。
+- `ca`：Number of major vessels (0-3) colored by fluoroscopy.
+- `thal`：Thalassemia (1 = normal; 2 = fixed defect; 3 = reversible defect).
+- `Target`：0 indicates the patient's heart is healthy, while 1 indicates the patient's heart is not healthy.
 
 The hospital hired Ade with the primary responsibility of developing a machine learning model to predict the presence of heart disease in patients. Following this, he will collaborate with the front-end development team to create the XYZ Breast Heart Prediction Model.
 
@@ -1422,27 +1081,25 @@ Patients will input parameters from their device readings into the portal. The s
 
 Implementing this model will help:
 
-Reduce the pressure on hospital staff by streamlining the diagnostic process.
+- Reduce the pressure on hospital staff by streamlining the diagnostic process.
+- Manage hospital resources more effectively, ensuring that appointments are evenly distributed among available consultants.
+- Inform decisions about hiring or engaging additional breast cancer specialists as needed.
 
-Manage hospital resources more effectively, ensuring that appointments are evenly distributed among available consultants.
+Note: `accuracy_score` is a metric used to evaluate the performance of a classification model. It measures the proportion of correctly classified instances out of the total instances.
 
-Inform decisions about hiring or engaging additional breast cancer specialists as needed.
+You can download the dataset for classification via this link: [Heart Disease](https://www.google.com/url?q=https://www.kaggle.com/datasets/arezaei81/heartcsv&sa=D&source=editors&ust=1720099681834178&usg=AOvVaw2Ogt5nu6dVZIvv1V3Km2mc)  
 
-Note: accuracy_score is a metric used to evaluate the performance of a classification model. It measures the proportion of correctly classified instances out of the total instances.
+The dataset `heart.csv` includes data pertaining to heart issues, with a target class indicating whether a patient is diagnosed with heart disease (1) or not (0). Our objective is to apply various machine learning classification models to the data and select the model with the highest accuracy score.
 
-You can download the dataset for classification via this link: [Heart Disease](https://www.google.com/url?q=https://www.kaggle.com/datasets/arezaei81/heartcsv&sa=D&source=editors&ust=1720099681834178&usg=AOvVaw2Ogt5nu6dVZIvv1V3Km2mc)  
-
-The dataset 'heart.csv' includes data pertaining to heart issues, with a target class indicating whether a patient is diagnosed with heart disease (1) or not (0). Our objective is to apply various machine learning classification models to the data and select the model with the highest accuracy score.
-
-# Logistic Regression 
+# Logistic Regression
 
 Logistic regression is a statistical technique used to solve binary classification problems. In binary classification, the outcome variable is categorical with only two classes. Despite its name, logistic regression is primarily used for classification tasks rather than regression. It is particularly useful when the dependent variable is binary, meaning it can have only two possible outcomes, such as 0 or 1, Yes or No, or True or False.
 
-The source code is available here: [Logistic Regression](https://www.google.com/url?q=https://github.com/anyasorc/appliedml/blob/main/Classification_Logistic_Regression%2520\(1\).ipynb&sa=D&source=editors&ust=1720099681835062&usg=AOvVaw1h_ACip0MOpvZdDW-X_rRp)  
+The source code is available here: [Logistic Regression](https://www.google.com/url?q=https://github.com/anyasorc/appliedml/blob/main/Classification_Logistic_Regression%2520\(1\).ipynb&sa=D&source=editors&ust=1720099681835062&usg=AOvVaw1h_ACip0MOpvZdDW-X_rRp)  
 
 ## Import Libraries
 
-Figure 3-1  shows all the imported required libraries
+Figure 3-1 shows all the imported required libraries
 
 ![](img/image_rsrc54H.jpg)
 
@@ -1450,21 +1107,25 @@ Figure 3-1.
 
 ## Import and View Data
 
-Figure 3-2  shows how data was imported and viewed as seen below.
+Figure 3-2 shows how data was imported and viewed as seen below.
 
 ![](img/image_rsrc54J.jpg)
 
 Figure 3-2.
 
-## Assign values to X and y
+## Assign values to `X` and `y`
 
+```
 X = df.iloc[:, :-1].values:
+```
 
-This line selects all rows and all columns except the last one from the DataFrame df and converts the result into a NumPy array. The resulting array X typically contains the features or predictors as seen in Figure 3-3 .
+This line selects all rows and all columns except the last one from the DataFrame `df` and converts the result into a NumPy array. The resulting array `X` typically contains the features or predictors as seen in Figure 3-3.
 
+```
 y = df.iloc[:, -1].values:
+```
 
-This line selects all rows and only the last column from the DataFrame df and converts the result into a NumPy array. The resulting array y typically contains the target or response variable as seen in Figure 3-3 .
+This line selects all rows and only the last column from the DataFrame `df` and converts the result into a NumPy array. The resulting array `y` typically contains the target or response variable as seen in Figure 3-3.
 
 ![](img/image_rsrc54K.jpg)
 
@@ -1472,7 +1133,7 @@ Figure 3-3.
 
 ## Splitting into train and test set
 
-We must divide our dataset into training and testing sets. Employing an 80:20 split, 80% of the data will train the model, and the remaining 20% will assess its performance on unseen data. Figure 3-4  visually demonstrates this process.
+We must divide our dataset into training and testing sets. Employing an 80:20 split, 80% of the data will train the model, and the remaining 20% will assess its performance on unseen data. Figure 3-4 visually demonstrates this process.
 
 ![](img/image_rsrc54M.jpg)
 
@@ -1488,39 +1149,45 @@ Figure 3-5.
 
 ## Code Explanation
 
-The code snippet in Figure 3-5  uses the `StandardScaler` class from the `scikit-learn` library to standardize features by removing the mean and scaling to unit variance. This process is essential for many machine learning algorithms to perform optimally. Here's an explanation of each line:
+The code snippet in Figure 3-5 uses the `StandardScaler` class from the `scikit-learn` library to standardize features by removing the mean and scaling to unit variance. This process is essential for many machine learning algorithms to perform optimally. Here's an explanation of each line:
 
-sc = StandardScaler(): This line creates an instance of the `StandardScaler` class. The `StandardScaler` is used to standardize the features of the dataset.
+```
+sc = StandardScaler():
+```
 
+This line creates an instance of the `StandardScaler` class. The `StandardScaler` is used to standardize the features of the dataset.
+
+```
 X_train = sc.fit_transform(X_train):
+```
 
-fit_transform: This method first calculates the mean and standard deviation of the `X_train` data (this is the `fit` part).
+`fit_transform`: This method first calculates the mean and standard deviation of the `X_train` data (this is the `fit` part).
 
 It then uses these statistics to standardize `X_train` by subtracting the mean and dividing by the standard deviation for each feature (this is the `transform` part).
 
 The result is that `X_train` is now a standardized version of the original training data, where each feature has a mean of 0 and a standard deviation of 1.
 
+```
 X_test = sc.transform(X_test):
+```
 
-transform: This method uses the mean and standard deviation calculated from the `X_train` data to standardize `X_test`.
+`transform`: This method uses the mean and standard deviation calculated from the `X_train` data to standardize `X_test`.
 
 This ensures that the test data is transformed in the same way as the training data, which is crucial for the consistency of the model's performance.
 
-X_test is now a standardized version of the original test data, following the same scale as `X_train`.
+`X_test` is now a standardized version of the original test data, following the same scale as `X_train`.
 
 Here's a bit more detail on why standardization is important:
 
-Consistency: It ensures that the training and test data are on the same scale, which is crucial for the performance of many machine learning models.
-
-Algorithm Performance: Algorithms like gradient descent used in logistic regression or neural networks converge faster with standardized data.
-
-Improved Accuracy: Some algorithms, like support vector machines (SVM) and k-nearest neighbors (KNN), are sensitive to the scale of the data and perform better with standardized data.
+- Consistency: It ensures that the training and test data are on the same scale, which is crucial for the performance of many machine learning models.
+- Algorithm Performance: Algorithms like gradient descent used in logistic regression or neural networks converge faster with standardized data.
+- Improved Accuracy: Some algorithms, like support vector machines (SVM) and k-nearest neighbors (KNN), are sensitive to the scale of the data and perform better with standardized data.
 
 By using `StandardScaler`, you help ensure that your machine learning model works more effectively and consistently.
 
 ## Training the Model
 
-Figure 3-6  illustrates the process of using the X_train and y_train datasets to train the machine learning model. The execution of the training process indicates that the model was successfully trained.
+Figure 3-6 illustrates the process of using the `X_train` and `y_train` datasets to train the machine learning model. The execution of the training process indicates that the model was successfully trained.
 
 ![](img/image_rsrc54P.jpg)
 
@@ -1528,27 +1195,31 @@ Figure 3-6.
 
 ## Code Explanation
 
-Looking at the code snippet in Figure 3-6  cs = LogisticRegression(random_state=0); cs.fit(X_train, y_train) is used to create and train a logistic regression model using the scikit-learn library in Python.
+Looking at the code snippet in Figure 3-6, `cs = LogisticRegression(random_state=0); cs.fit(X_train, y_train)` is used to create and train a logistic regression model using the scikit-learn library in Python.
 
+```
 cs = LogisticRegression(random_state=0) :
+```
 
-LogisticRegression is the class for creating logistic regression models.
 
-cs is the variable that will store the instance of the logistic regression model.
 
-random_state=0 is a parameter that ensures the results are reproducible by setting a seed for the random number generator. This way, you get the same results every time you run the code. If random_state is set to None, the seed is randomly selected, which can lead to different results each time you run the model.
+`LogisticRegression` is the class for creating logistic regression models.
 
-cs.fit(X_train, y_train) :
+`cs` is the variable that will store the instance of the logistic regression model.
 
-fit is a method used to train the model.
+`random_state=0` is a parameter that ensures the results are reproducible by setting a seed for the random number generator. This way, you get the same results every time you run the code. If `random_state` is set to `None`, the seed is randomly selected, which can lead to different results each time you run the model.
 
-X_train is the training data containing the features (input variables) that the model will learn from.
+`cs.fit(X_train, y_train)` :
 
-y_train is the training data containing the target labels (output variables) that correspond to the features in X_train.
+`fit` is a method used to train the model.
+
+`X_train` is the training data containing the features (input variables) that the model will learn from.
+
+`y_train` is the training data containing the target labels (output variables) that correspond to the features in `X_train`.
 
 ## Predicting with the test data
 
-Figure 3-7  below illustrates how we made predictions using the trained model (cs) and the test data (X_test).
+Figure 3-7 below illustrates how we made predictions using the trained model (`cs`) and the test data (`X_test`).
 
 ![](img/image_rsrc54R.jpg)
 
@@ -1556,18 +1227,15 @@ Figure 3-7.
 
 ## Code Explanation
 
-The line y_pred = cs.predict(X_test) is specifically using a logistic regression model (cs) to make predictions on a test dataset (X_test). Here's a detailed explanation tailored to logistic regression:
+The line `y_pred = cs.predict(X_test)` is specifically using a logistic regression model (`cs`) to make predictions on a test dataset (`X_test`). Here's a detailed explanation tailored to logistic regression:
 
+`cs`: 这是一个在您的训练数据上训练得到的逻辑回归模型的实例。在 scikit-learn 中，您可以使用 `LogisticRegression()` 创建该模型，然后通过 `cs.fit(X_train, y_train)` 将其拟合到训练数据。
 
+`X_test`: 这是用于预测目标变量的测试数据集，包含特征。这些特征应与训练数据同样进行预处理（例如，标准化）。
 
+`predict(X_test)`: 该方法用于根据逻辑回归模型 `cs` 对输入数据（`X_test`）进行类别标签的预测。
 
-cs: 这是一个在您的训练数据上训练得到的逻辑回归模型的实例。在 scikit-learn 中，您可以使用 `LogisticRegression()` 创建该模型，然后通过 `cs.fit(X_train, y_train)` 将其拟合到训练数据。
-
-X_test: 这是用于预测目标变量的测试数据集，包含特征。这些特征应与训练数据同样进行预处理（例如，标准化）。
-
-predict(X_test): 该方法用于根据逻辑回归模型 cs 对输入数据（X_test）进行类别标签的预测。
-
-y_pred 是 X_test 中每条记录的预测类别标签数组。二分类问题中，y_pred 的值要么是 0，要么是 1。
+`y_pred` 是 `X_test` 中每条记录的预测类别标签数组。二分类问题中，`y_pred` 的值要么是 0，要么是 1。
 
 ## 模型评估
 
@@ -1581,11 +1249,10 @@ Figure 3-8.
 
 `cm = confusion_matrix(y_test, y_pred)` 这行代码使用 scikit-learn 库中的 `confusion_matrix` 函数来评估分类模型的性能。具体解释如下：
 
-confusion_matrix(y_test, y_pred):
+`confusion_matrix(y_test, y_pred)`:
 
-- y_test：测试数据集的真实类别标签数组，即实际需要预测的值。
-
-- y_pred：模型为测试数据集生成的预测类别标签数组，基于测试特征（X_test）。
+- `y_test`：测试数据集的真实类别标签数组，即实际需要预测的值。
+- `y_pred`：模型为测试数据集生成的预测类别标签数组，基于测试特征（`X_test`）。
 
 混淆矩阵：
 
@@ -1600,13 +1267,10 @@ confusion_matrix(y_test, y_pred):
 
 其中：
 
-- TN（True Negative）：模型正确预测的负类实例数量（实际为负且预测为负）。
-
-- FP（False Positive）：模型错误预测的阳性实例数量（实际为负但预测为正）。
-
-- FN（False Negative）：模型错误预测的负类实例数量（实际为正但预测为负）。
-
-- TP（True Positive）：模型正确预测的阳性实例数量（实际为正且预测为正）。
+- `TN`（True Negative）：模型正确预测的负类实例数量（实际为负且预测为负）。
+- `FP`（False Positive）：模型错误预测的阳性实例数量（实际为负但预测为正）。
+- `FN`（False Negative）：模型错误预测的负类实例数量（实际为正但预测为负）。
+- `TP`（True Positive）：模型正确预测的阳性实例数量（实际为正且预测为正）。
 
 ## 混淆矩阵解读
 
@@ -1618,20 +1282,13 @@ Figure 3-9.
 
 下面对该混淆矩阵进行解读：
 
-- True Negatives (TN)：77
-
+- True Negatives (`TN`)：77
   这些是实际为负类（例如，无心脏病）且模型正确预测为负的实例。
-
-- False Positives (FP)：21
-
+- False Positives (`FP`)：21
   这些是实际为负类，但模型错误地预测为正类的实例（例如，预测患有心脏病但实际上没有）。
-
-- False Negatives (FN)：7
-
+- False Negatives (`FN`)：7
   这些是实际为正类（例如，有心脏病）但模型错误地预测为负类的实例（例如，预测无心脏病但实际上有）。
-
-- True Positives (TP)：100
-
+- True Positives (`TP`)：100
   这些是实际为正类，且模型正确预测为正的实例。
 
 基于此混淆矩阵，可以计算多个性能指标（准确率、精确率、召回率和 F1 分数）：
@@ -1640,17 +1297,17 @@ Accuracy：
 
 准确率的公式如下：
 
-![](img/image_rsrc54T.jpg)   
+![](img/image_rsrc54T.jpg)   
 
 在提供的示例中：
 
-TN = 77
+`TN = 77`
 
-TP = 100
+`TP = 100`
 
-FP = 21
+`FP = 21`
 
-FN = 7
+`FN = 7`
 
 将这些值代入公式：
 
@@ -1666,9 +1323,9 @@ Precision：
 
 在提供的示例中：
 
-TP = 100
+`TP = 100`
 
-FP = 21
+`FP = 21`
 
 将这些值代入公式：
 
@@ -1684,9 +1341,9 @@ Recall：
 
 在提供的示例中：
 
-TP = 100
+`TP = 100`
 
-FN = 7
+`FN = 7`
 
 将这些值代入公式：
 
@@ -1702,9 +1359,9 @@ F1 分数的公式如下：
 
 在提供的示例中：
 
-Precision = 0.826
+`Precision = 0.826`
 
-Recall = 0.935
+`Recall = 0.935`
 
 将这些值代入公式：
 
@@ -1734,9 +1391,8 @@ Figure 3-10.
 
 输入：
 
-- y_test：测试数据集的真实标签数组，即实际需要预测的值。
-
-- y_pred：模型为测试数据集生成的预测标签数组，基于测试特征（X_test）。
+- `y_test`：测试数据集的真实标签数组，即实际需要预测的值。
+- `y_pred`：模型为测试数据集生成的预测标签数组，基于测试特征（`X_test`）。
 
 ## 模型结果解读
 
@@ -1746,33 +1402,19 @@ Figure 3-10.
 
 图 3-11 展示了使用已训练的机器学习模型进行预测的过程。它要求我们提供以下特征：
 
-- age：患者的年龄（以年为单位）。
-
-- sex：患者的性别（1 = 男性；0 = 女性）。
-
-- cp：胸痛类型（0 = 典型心绞痛，1 = 不典型心绞痛，2 = 非心绞痛，3 = 无症状）。
-
-- trestbps：入院时的静息血压（单位：mm Hg）。
-
-- chol：血浆胆固醇（单位：mg/dl）。
-
-- fbs：空腹血糖 > 120 mg/dl（1 = 是；0 = 否）。
-
-- restecg：静息心电图结果（0 = 正常，1 = 有 ST-T 波异常，2 = 根据 Estes 标准显示可能或肯定的左心室肥厚）。
-
-- thalach：达到的最大心率。
-
-- exang：运动诱发心绞痛（1 = 有；0 = 无）。
-
-- oldpeak：运动时相对于休息的 ST 段下降。
-
-- slope：运动时 ST 段的斜率（0 = 上升，1 = 平直，2 = 下降）。
-
-- ca：由血管造影显示染色的主要血管数量（0-3）。
-
-- thal：地塞米亚（1 = 正常；2 = 固定缺陷；3 = 可逆缺陷）。
-
-
+- `age`：患者的年龄（以年为单位）。
+- `sex`：患者的性别（1 = 男性；0 = 女性）。
+- `cp`：胸痛类型（0 = 典型心绞痛，1 = 不典型心绞痛，2 = 非心绞痛，3 = 无症状）。
+- `trestbps`：入院时的静息血压（单位：mm Hg）。
+- `chol`：血浆胆固醇（单位：mg/dl）。
+- `fbs`：空腹血糖 > 120 mg/dl（1 = 是；0 = 否）。
+- `restecg`：静息心电图结果（0 = 正常，1 = 有 ST-T 波异常，2 = 根据 Estes 标准显示可能或肯定的左心室肥厚）。
+- `thalach`：达到的最大心率。
+- `exang`：运动诱发心绞痛（1 = 有；0 = 无）。
+- `oldpeak`：运动时相对于休息的 ST 段下降。
+- `slope`：运动时 ST 段的斜率（0 = 上升，1 = 平直，2 = 下降）。
+- `ca`：由血管造影显示染色的主要血管数量（0-3）。
+- `thal`：地塞米亚（1 = 正常；2 = 固定缺陷；3 = 可逆缺陷）。
 
 ![](img/image_rsrc552.jpg)
 
@@ -1780,9 +1422,9 @@ Figure 3-11.
 
 ## K-Nearest Neighbour (K-NN)
 
-K-Nearest Neighbors (K-NN) 是一种监督机器学习算法，用于分类和回归任务。在分类中，它通过查看数据点最近邻的类别来确定给定数据点的类别。在回归中，它通过求平均值来预测数据点的值，基于其最近邻的值。
+K-Nearest Neighbors (`K-NN`) 是一种监督机器学习算法，用于分类和回归任务。在分类中，它通过查看数据点最近邻的类别来确定给定数据点的类别。在回归中，它通过求平均值来预测数据点的值，基于其最近邻的值。
 
-源代码可在此查看：[KNN](https://www.google.com/url?q=https://github.com/anyasorc/appliedml/blob/main/Classification_KNN.ipynb&sa=D&source=editors&ust=1720099681856543&usg=AOvVaw08NazI4n392YBuznNNYIms)  
+源代码可在此查看：[KNN](https://www.google.com/url?q=https://github.com/anyasorc/appliedml/blob/main/Classification_KNN.ipynb&sa=D&source=editors&ust=1720099681856543&usg=AOvVaw08NazI4n392YBuznNNYIms)  
 
 ## 导入库
 
@@ -1802,13 +1444,13 @@ Figure 3-13.
 
 ## 赋值给 X 和 y
 
-X = df.iloc[:, :-1].values：
+`X = df.iloc[:, :-1].values`：
 
-此行选择 DataFrame df 的所有行和除最后一列之外的所有列，并将结果转换为 NumPy 数组。生成的数组 X 通常包含特征或预测器，如 Figure 3-14 所示。
+此行选择 DataFrame `df` 的所有行和除最后一列之外的所有列，并将结果转换为 NumPy 数组。生成的数组 `X` 通常包含特征或预测器，如 Figure 3-14 所示。
 
-y = df.iloc[:, -1].values：
+`y = df.iloc[:, -1].values`：
 
-此行选择 DataFrame df 的所有行和仅最后一列，并将结果转换为 NumPy 数组。生成的数组 y 通常包含目标变量或响应变量，如 Figure 3-14 所示。
+此行选择 DataFrame `df` 的所有行和仅最后一列，并将结果转换为 NumPy 数组。生成的数组 `y` 通常包含目标变量或响应变量，如 Figure 3-14 所示。
 
 ![](img/image_rsrc54K.jpg)
 
@@ -1834,9 +1476,9 @@ Figure 3-16.
 
 Figure 3-16 中的代码片段使用 `scikit-learn` 库的 `StandardScaler` 类来标准化特征，通过消除均值并缩放到单位方差。这一过程对于许多机器学习算法的最佳性能至关重要。以下是每行代码的解释：
 
-sc = StandardScaler()：此行创建 `StandardScaler` 类的实例。`StandardScaler` 用于标准化数据集的特征。
+`sc = StandardScaler()`：此行创建 `StandardScaler` 类的实例。`StandardScaler` 用于标准化数据集的特征。
 
-X_train = sc.fit_transform(X_train)：
+`X_train = sc.fit_transform(X_train)`：
 
 `fit_transform` 方法首先计算 `X_train` 数据的均值和标准差（这是 `fit` 部分）。
 
@@ -1844,13 +1486,13 @@ X_train = sc.fit_transform(X_train)：
 
 结果是 `X_train` 变成了标准化后的原始训练数据，每个特征的均值为 0，标准差为 1。
 
-X_test = sc.transform(X_test)：
+`X_test = sc.transform(X_test)`：
 
 `transform` 方法使用从 `X_train` 数据中计算出的均值和标准差来标准化 `X_test`。
 
 这确保了测试数据以与训练数据相同的方式被转换，这对于模型性能的一致性至关重要。
 
-X_test 现在是标准化后的原始测试数据，与 `X_train` 具有相同的尺度。
+`X_test` 现在是标准化后的原始测试数据，与 `X_train` 具有相同的尺度。
 
 下面是关于标准化为何重要的更多细节：
 
@@ -1858,13 +1500,13 @@ X_test 现在是标准化后的原始测试数据，与 `X_train` 具有相同�
 
 算法性能：像梯度下降用于逻辑回归或神经网络的算法在标准化数据上收敛更快。
 
-改进准确性：一些算法，如支持向量机 (SVM) 和 k-最近邻 (KNN)，对数据尺度敏感，使用标准化数据时表现更好。
+改进准确性：一些算法，如支持向量机 (`SVM`) 和 k-最近邻 (`KNN`)，对数据尺度敏感，使用标准化数据时表现更好。
 
 通过使用 `StandardScaler`，您可以帮助确保您的机器学习模型更有效、更一致地工作。
 
 ## 训练模型
 
-Figure 3-17 展示了使用 X_train 和 y_train 数据集训练机器学习模型的过程。训练过程的执行表明模型已成功训练。
+Figure 3-17 展示了使用 `X_train` 和 `y_train` 数据集训练机器学习模型的过程。训练过程的执行表明模型已成功训练。
 
 ![](img/image_rsrc556.jpg)
 
@@ -1874,37 +1516,37 @@ Figure 3-17.
 
 Referring to the code snippet in Figure 3-17,
 
-cs = KNeighborsClassifier(n_neighbors=5, metric='minkowski', p=2); cs.fit(X_train, y_train) is used to create and train a k-nearest neighbors (K-NN) classifier with the scikit-learn library in Python.
+`cs = KNeighborsClassifier(n_neighbors=5, metric='minkowski', p=2); cs.fit(X_train, y_train)` is used to create and train a k-nearest neighbors (K-NN) classifier with the scikit-learn library in Python.
 
-cs = KNeighborsClassifier(n_neighbors=5, metric='minkowski', p=2):
+`cs = KNeighborsClassifier(n_neighbors=5, metric='minkowski', p=2)`:
 
-KNeighborsClassifier 是用于创建 k-最近邻分类器的类。
+`KNeighborsClassifier` 是用于创建 k-最近邻分类器的类。
 
-cs 是用于存储 K-NN 分类器实例的变量。
+`cs` 是用于存储 K-NN 分类器实例的变量。
 
-n_neighbors=5 指定使用的邻居数量。在此情况下，算法将考虑最近的 5 个邻居来进行预测。
+`n_neighbors=5` 指定使用的邻居数量。在此情况下，算法将考虑最近的 5 个邻居来进行预测。
 
-metric='minkowski' 指定用于查找最近邻的距离度量。Minkowski 距离是一个包含多种特殊情况的广义距离度量。
+`metric='minkowski'` 指定用于查找最近邻的距离度量。Minkowski 距离是一个包含多种特殊情况的广义距离度量。
 
-p=2 设置 Minkowski 度量的参数。当 p=2 时，Minkowski 距离等同于欧几里得距离。
+`p=2` 设置 Minkowski 度量的参数。当 `p=2` 时，Minkowski 距离等同于欧几里得距离。
 
-cs.fit(X_train, y_train)：
+`cs.fit(X_train, y_train)`：
 
-fit 是用于训练模型的方法。
+`fit` 是用于训练模型的方法。
 
-X_train 是包含特征（输入变量）的训练数据，模型将从中学习。
+`X_train` 是包含特征（输入变量）的训练数据，模型将从中学习。
 
-y_train 是包含目标标签（输出变量）的训练数据，与 X_train 中的特征对应。
+`y_train` 是包含目标标签（输出变量）的训练数据，与 `X_train` 中的特征对应。
 
-The line y_pred = cs.predict(X_test) where cs is a k-nearest neighbors (K-NN) classifier:
+The line `y_pred = cs.predict(X_test)` where `cs` is a k-nearest neighbors (K-NN) classifier:
 
-cs 是一个已使用 fit 方法在数据集上进行训练的 KNeighborsClassifier 实例。该实例现在包含训练数据，并准备进行预测。
+`cs` 是一个已使用 `fit` 方法在数据集上进行训练的 `KNeighborsClassifier` 实例。该实例现在包含训练数据，并准备进行预测。
 
-X_test 是测试数据集，包含您希望预测类别标签的特征值（输入变量）。这些是模型在训练过程中未见过的新数据点。
+`X_test` 是测试数据集，包含您希望预测类别标签的特征值（输入变量）。这些是模型在训练过程中未见过的新数据点。
 
-predict 方法用于对新数据进行预测。当您调用 cs.predict(X_test) 时，分类器使用 K-NN 算法确定 X_test 中实例的类别标签。
+`predict` 方法用于对新数据进行预测。当您调用 `cs.predict(X_test)` 时，分类器使用 K-NN 算法确定 `X_test` 中实例的类别标签。
 
-The predicted class labels for all instances in X_test are stored in the array y_pred. 所有 X_test 中实例的预测类别标签存储在数组 y_pred 中。
+The predicted class labels for all instances in `X_test` are stored in the array `y_pred`. 所有 `X_test` 中实例的预测类别标签存储在数组 `y_pred` 中。
 
 ## 模型评估
 
@@ -1918,11 +1560,11 @@ Figure 3-19.
 
 The line `cm = confusion_matrix(y_test, y_pred)` involves using the `confusion_matrix` function from the `scikit-learn` library to evaluate the performance of a classification model. Here’s a detailed explanation:
 
-confusion_matrix(y_test, y_pred):
+`confusion_matrix(y_test, y_pred)`:
 
-y_test: 这是测试数据集的真实类别标签数组。这些是您正在尝试预测的实际值。
+`y_test`: 这是测试数据集的真实类别标签数组。这些是您正在尝试预测的实际值。
 
-y_pred: 这是模型为测试数据集生成的预测类别标签数组。这些预测是由模型根据测试特征 (X_test) 生成的。
+`y_pred`: 这是模型为测试数据集生成的预测类别标签数组。这些预测是由模型根据测试特征 (`X_test`) 生成的。
 
 混淆矩阵：
 
@@ -1935,7 +1577,6 @@ y_pred: 这是模型为测试数据集生成的预测类别标签数组。这些
 [FN, TP]]
 
 其中：
-
 
 
 
@@ -1953,9 +1594,9 @@ TP (True Positive)：正确预测的阳性实例数量（实际为正且预测�
 
 它提供了模型错误类型的详细洞察：
 
-对角线上的高值（TN 和 TP）表明模型表现良好。
+对角线上的高值（`TN` 和 `TP`）表明模型表现良好。
 
-非对角线上的高值（FP 和 FN）表明模型存在错误。
+非对角线上的高值（`FP` 和 `FN`）表明模型存在错误。
 
 通过查看混淆矩阵，你可以获得比单一指标（如准确率）更深入的模型性能理解，这有助于识别模型需要改进的具体领域。
 
@@ -1969,19 +1610,19 @@ TP (True Positive)：正确预测的阳性实例数量（实际为正且预测�
 
 下面解读该混淆矩阵：
 
-真负数（TN）：84
+真负数（`TN`）：84
 
 这些是实际为负类（例如，无心脏病）的实例，模型正确预测为负类。
 
-假阳性（FP）：14
+假阳性（`FP`）：14
 
 这些是实际为负类，但模型错误预测为阳性的实例（例如，预测心脏病但实际并无心脏病）。
 
-假阴性（FN）：10
+假阴性（`FN`）：10
 
 这些是实际为阳性类（例如，恶性肿瘤）的实例，但模型错误预测为负类（例如，预测无心脏病但实际有心脏病）。
 
-真阳性（TP）：97
+真阳性（`TP`）：97
 
 这些是实际为阳性类，且模型正确预测为阳性的实例。
 
@@ -1995,13 +1636,13 @@ TP (True Positive)：正确预测的阳性实例数量（实际为正且预测�
 
 在提供的示例中：
 
-TN = 84
+`TN` = 84
 
-TP = 97
+`TP` = 97
 
-FP = 14
+`FP` = 14
 
-FN = 10
+`FN` = 10
 
 将这些值代入公式：
 
@@ -2017,9 +1658,9 @@ FN = 10
 
 在提供的示例中：
 
-TP = 97
+`TP` = 97
 
-FP = 14
+`FP` = 14
 
 将这些值代入公式：
 
@@ -2035,9 +1676,9 @@ FP = 14
 
 在提供的示例中：
 
-TP = 97
+`TP` = 97
 
-FN = 14
+`FN` = 14
 
 将这些值代入公式：
 
@@ -2081,13 +1722,13 @@ F1 分数（89%）：将精确率和召回率合并为一个指标，提供平�
 
 ## 代码解释
 
-scikit-learn 库中的 accuracy_score(y_test, y_pred) 函数用于计算分类模型的准确率。以下是详细说明：
+`scikit-learn` 库中的 `accuracy_score(y_test, y_pred)` 函数用于计算分类模型的准确率。以下是详细说明：
 
 输入：
 
-y_test：测试数据集的真实标签数组。这些是你试图预测的实际值。
+`y_test`：测试数据集的真实标签数组。这些是你试图预测的实际值。
 
-y_pred：模型为测试数据集生成的预测标签数组。这些预测基于测试特征（X_test）。
+`y_pred`：模型为测试数据集生成的预测标签数组。这些预测基于测试特征（`X_test`）。
 
 ## 模型结果解读
 
@@ -2099,31 +1740,31 @@ y_pred：模型为测试数据集生成的预测标签数组。这些预测基�
 
 图 3-22 如下所示，展示了使用训练好的机器学习模型进行预测的过程。它要求我们提供以下特征进行预测：
 
-age：患者的年龄（以年为单位）。
+`age`：患者的年龄（以年为单位）。
 
-sex：患者的性别（1 = 男性；0 = 女性）。
+`sex`：患者的性别（1 = 男性；0 = 女性）。
 
-cp：胸痛类型（0 = 典型心绞痛，1 = 不典型心绞痛，2 = 非心绞痛，3 = 无症状）。
+`cp`：胸痛类型（0 = 典型心绞痛，1 = 不典型心绞痛，2 = 非心绞痛，3 = 无症状）。
 
-trestbps：入院时的静息血压（毫米汞柱）。
+`trestbps`：入院时的静息血压（毫米汞柱）。
 
-chol：血清胆固醇（mg/dl）。
+`chol`：血清胆固醇（mg/dl）。
 
-fbs：空腹血糖 > 120 mg/dl（1 = 是；0 = 否）。
+`fbs`：空腹血糖 > 120 mg/dl（1 = 是；0 = 否）。
 
-restecg：静息心电图结果（0 = 正常，1 = 有 ST-T 波异常，2 = 根据 Estes 标准显示可能或确定的左心室肥厚）。
+`restecg`：静息心电图结果（0 = 正常，1 = 有 ST-T 波异常，2 = 根据 Estes 标准显示可能或确定的左心室肥厚）。
 
-thalach：达到的最大心率。
+`thalach`：达到的最大心率。
 
-exang：运动诱发心绞痛（1 = 是；0 = 否）。
+`exang`：运动诱发心绞痛（1 = 是；0 = 否）。
 
-oldpeak：运动时相对于休息的 ST 段下降。
+`oldpeak`：运动时相对于休息的 ST 段下降。
 
-slope：运动时 ST 段的斜率（0 = 上升，1 = 平坦，2 = 下降）。
+`slope`：运动时 ST 段的斜率（0 = 上升，1 = 平坦，2 = 下降）。
 
-ca：经 fluoroscopy 显色的主要血管数量（0-3）。
+`ca`：经 fluoroscopy 显色的主要血管数量（0-3）。
 
-thal：瓣膜性贫血（1 = 正常；2 = 固定缺陷；3 = 可逆缺陷）。
+`thal`：瓣膜性贫血（1 = 正常；2 = 固定缺陷；3 = 可逆缺陷）。
 
 ![](img/image_rsrc55E.jpg)
 
@@ -2153,22 +1794,19 @@ thal：瓣膜性贫血（1 = 正常；2 = 固定缺陷；3 = 可逆缺陷）。
 
 ## 赋值给 X 和 y
 
-X = df.iloc\[:, :-1\].values：
+`X = df.iloc[:, :-1].values`：
 
-此行选择 DataFrame df 的所有行和除最后一列外的所有列，并将结果转换为 NumPy 数组。得到的数组 X 通常包含特征或预测器，如图 3-24 所示。
+此行选择 DataFrame `df` 的所有行和除最后一列外的所有列，并将结果转换为 NumPy 数组。得到的数组 `X` 通常包含特征或预测器，如图 3-24 所示。
 
-y = df.iloc\[:, -1\].values：
+`y = df.iloc[:, -1].values`：
 
-此行选择 DataFrame df 的所有行和仅最后一列，并将结果转换为 NumPy 数组。得到的数组 y 通常包含目标或响应变量，如图 3-24 所示。
+此行选择 DataFrame `df` 的所有行和仅最后一列，并将结果转换为 NumPy 数组。得到的数组 `y` 通常包含目标或响应变量，如图 3-24 所示。
 
 ![](img/image_rsrc54K.jpg)
 
 图 3-24.
 
 ## 将数据划分为训练集和测试集
-
-
-
 
 我们需要将我们的数据集分割为训练集和测试集。我们将使用 80:20 的比例进行分割，其中 80% 的数据用于训练模型，剩余的 20% 用于在未见过的数据上进行测试。图 3-25 说明了这一过程。
 
@@ -2230,7 +1868,7 @@ y = df.iloc\[:, -1\].values：
 
 `cs = SVC(kernel='linear', random_state=0)`：
 
-SVC 是用于创建支持向量分类器的类。
+`SVC` 是用于创建支持向量分类器的类。
 
 `cs` 是存储 SVC 实例的变量。
 
@@ -2332,9 +1970,6 @@ TP（True Positive）：正确预测正类的实例数量（实际为正，预�
 
 假阳性（FP）：24
 
-
-
-
 这些是实际类为负，但模型错误预测为正的情况（例如，预测心脏病但实际并无心脏病）。
 
 假阴性（FN）：6
@@ -2355,13 +1990,13 @@ TP（True Positive）：正确预测正类的实例数量（实际为正，预�
 
 在提供的示例中：
 
-TN = 74
+`TN` = 74
 
-TP = 101
+`TP` = 101
 
-FP = 24
+`FP` = 24
 
-FN = 6
+`FN` = 6
 
 将这些值代入公式：
 
@@ -2377,9 +2012,9 @@ FN = 6
 
 在提供的示例中：
 
-TP = 101
+`TP` = 101
 
-FP = 24
+`FP` = 24
 
 将这些值代入公式：
 
@@ -2395,9 +2030,9 @@ FP = 24
 
 在提供的示例中：
 
-TP = 101
+`TP` = 101
 
-FN = 6
+`FN` = 6
 
 将这些值代入公式：
 
@@ -2445,9 +2080,9 @@ F1 分数（87.0%）：该指标结合了精确率和召回率，表明两者之
 
 输入：
 
-y_test：测试数据集的真实标签数组。这些是您试图预测的实际值。
+`y_test`：测试数据集的真实标签数组。这些是您试图预测的实际值。
 
-y_pred：模型为测试数据集生成的预测标签数组。这些预测是基于测试特征（X_test）得出的。
+`y_pred`：模型为测试数据集生成的预测标签数组。这些预测是基于测试特征（`X_test`）得出的。
 
 ## 模型结果解释
 
@@ -2477,15 +2112,17 @@ y_pred：模型为测试数据集生成的预测标签数组。这些预测是�
 
 图 3-33。
 
+
+
 ## 赋值给 X 和 y
 
-X = df.iloc\[:, :-1\].values：
+`X = df.iloc[:, :-1].values`：
 
-这行代码选择 DataFrame df 的所有行和除最后一列外的所有列，并将结果转换为 NumPy 数组。得到的数组 X 通常包含特征或预测器，如图 3-34 所示。
+这行代码选择 DataFrame `df` 的所有行和除最后一列外的所有列，并将结果转换为 NumPy 数组。得到的数组 `X` 通常包含特征或预测器，如图 3-34 所示。
 
-y = df.iloc\[:, -1\].values：
+`y = df.iloc[:, -1].values`：
 
-这行代码选择 DataFrame df 的所有行和仅最后一列，并将结果转换为 NumPy 数组。得到的数组 y 通常包含目标或响应变量，如图 3-34 所示。
+这行代码选择 DataFrame `df` 的所有行和仅最后一列，并将结果转换为 NumPy 数组。得到的数组 `y` 通常包含目标或响应变量，如图 3-34 所示。
 
 ![](img/image_rsrc54K.jpg)
 
@@ -2511,23 +2148,23 @@ y = df.iloc\[:, -1\].values：
 
 图 3-36 中的代码片段使用 scikit-learn 库的 `StandardScaler` 类来标准化特征，即去除均值并缩放到单位方差。这一步对于许多机器学习算法的最优性能至关重要。以下是每行的解释：
 
-sc = StandardScaler()：创建 `StandardScaler` 类的实例。`StandardScaler` 用于标准化数据集的特征。
+`sc = StandardScaler()`：创建 `StandardScaler` 类的实例。`StandardScaler` 用于标准化数据集的特征。
 
-X_train = sc.fit_transform(X_train)：
+`X_train = sc.fit_transform(X_train)`：
 
-`fit_transform` 方法首先计算 `X_train` 数据的均值和标准差（即 `fit` 部分）。
+`fit_transform` 方法首先计算 `X_train` 数据的均值和标准差，即 `fit` 部分。
 
 随后，使用这些统计量对 `X_train` 进行标准化：对每个特征减去均值并除以标准差。
 
 结果是 `X_train` 变为标准化后的版本，每个特征的均值为 0，标准差为 1。
 
-X_test = sc.transform(X_test)：
+`X_test = sc.transform(X_test)`：
 
 `transform` 方法使用从 `X_train` 计算得到的均值和标准差，对 `X_test` 进行标准化。
 
 这确保了测试数据与训练数据在相同的尺度上进行变换，这对于模型性能的一致性至关重要。
 
-X_test 现在是标准化后的原始测试数据，与 `X_train` 具有相同的尺度。
+`X_test` 现在是标准化后的原始测试数据，与 `X_train` 具有相同的尺度。
 
 此外，标准化的重要性如下：
 
@@ -2541,7 +2178,7 @@ X_test 现在是标准化后的原始测试数据，与 `X_train` 具有相同�
 
 ## 训练模型
 
-图 3-37 展示了使用 X_train 和 y_train 数据集训练机器学习模型的过程。执行训练过程表明模型已成功训练。
+图 3-37 展示了使用 `X_train` 和 `y_train` 数据集训练机器学习模型的过程。执行训练过程表明模型已成功训练。
 
 ![](img/image_rsrc55W.jpg)
 
@@ -2549,30 +2186,27 @@ X_test 现在是标准化后的原始测试数据，与 `X_train` 具有相同�
 
 ## 代码解释
 
-cs = GaussianNB()：
+`cs = GaussianNB()`：
 
-GaussianNB 是用于创建高斯朴素贝叶斯分类器的类。
+`GaussianNB` 是用于创建高斯朴素贝叶斯分类器的类。
 
-cs 是用于存储高斯朴素贝叶斯分类器实例的变量。
+`cs` 是用于存储高斯朴素贝叶斯分类器实例的变量。
 
 高斯朴素贝叶斯分类器假设特征服从正态（高斯）分布。
 
+`cs.fit(X_train, y_train)`:
 
+`fit` 是用于训练模型的方法。
 
+`X_train` 是包含特征（输入变量）的训练数据，模型将从中学习。
 
-cs.fit(X_train, y_train):
+`y_train` 是包含目标标签（输出变量）的训练数据，与 `X_train` 中的特征对应。
 
-fit 是用于训练模型的方法。
-
-X_train 是包含特征（输入变量）的训练数据，模型将从中学习。
-
-y_train 是包含目标标签（输出变量）的训练数据，与 X_train 中的特征对应。
-
-在训练过程中，高斯贝努利（Gaussian Naive Bayes）模型会为每个类别（classNameSpace class）计算每个特征的均值和方差，然后利用这些统计量进行预测。
+在训练过程中，高斯贝努利（Gaussian Naive Bayes）模型会为每个类别（`classNameSpace` class）计算每个特征的均值和方差，然后利用这些统计量进行预测。
 
 ## 使用测试数据进行预测
 
-下图 3-38 说明了如何使用已训练好的模型（cs）和测试数据（X_test）来进行预测。
+下图 3-38 说明了如何使用已训练好的模型（`cs`）和测试数据（`X_test`）来进行预测。
 
 ![](img/image_rsrc557.jpg)
 
@@ -2580,15 +2214,15 @@ Figure 3-38.
 
 ## 代码解释
 
-`y_pred = cs.predict(X_test)` 这一行专门用 Gaussian Naive Bayes 回归模型（cs）对测试数据集（X_test）进行预测。下面是针对 Naive Bayes 模型的详细解释：
+`y_pred = cs.predict(X_test)` 这一行专门用 Gaussian Naive Bayes 回归模型（`cs`）对测试数据集（`X_test`）进行预测。下面是针对 Naive Bayes 模型的详细解释：
 
-cs：这是一个已经在训练数据上训练好的 Naive Bayes 模型实例。在 scikit-learn 中，可以通过 `GaussianNB()` 创建该模型，然后使用 `cs.fit(X_train, y_train)` 进行拟合。
+`cs`：这是一个已经在训练数据上训练好的 Naive Bayes 模型实例。在 scikit-learn 中，可以通过 `GaussianNB()` 创建该模型，然后使用 `cs.fit(X_train, y_train)` 进行拟合。
 
-X_test：这是包含待预测目标变量特征的测试数据集。这些特征应与训练数据进行相同的预处理（例如标准化）。
+`X_test`：这是包含待预测目标变量特征的测试数据集。这些特征应与训练数据进行相同的预处理（例如标准化）。
 
-predict(X_test)：该方法用于根据 Naive Bayes 模型 cs 对输入数据（X_test）进行类别标签的预测。
+`predict(X_test)`：该方法用于根据 Naive Bayes 模型 `cs` 对输入数据（`X_test`）进行类别标签的预测。
 
-y_pred 是一个包含 X_test 中每条记录预测类别标签的数组。对于二分类问题，y_pred 中的值只能是 0 或 1。
+`y_pred` 是一个包含 `X_test` 中每条记录预测类别标签的数组。对于二分类问题，`y_pred` 中的值只能是 0 或 1。
 
 ## 模型评估
 
@@ -2602,11 +2236,11 @@ Figure 3-39
 
 `cm = confusion_matrix(y_test, y_pred)` 这行代码使用 scikit-learn 库中的 `confusion_matrix` 函数来评估分类模型的表现。具体解释如下：
 
-confusion_matrix(y_test, y_pred):
+`confusion_matrix(y_test, y_pred)`:
 
-y_test：测试数据集的真实类别标签数组。这些是我们想要预测的实际值。
+`y_test`：测试数据集的真实类别标签数组。这些是我们想要预测的实际值。
 
-y_pred：模型为测试数据集生成的预测类别标签数组。预测是基于测试特征（X_test）得到的。
+`y_pred`：模型为测试数据集生成的预测类别标签数组。预测是基于测试特征（`X_test`）得到的。
 
 混淆矩阵：
 
@@ -2614,9 +2248,10 @@ y_pred：模型为测试数据集生成的预测类别标签数组。预测是�
 
 二分类问题的混淆矩阵为 2×2 矩阵，形式如下：
 
+```
 [["TN", "FP"],
-
 ["FN", "TP"]]
+```
 
 其中：
 
@@ -2766,183 +2401,144 @@ scikit-learn 库中的 `accuracy_score(y_test, y_pred)` 函数用于计算分类
 
 输入：
 
-y_test：测试数据集的真实标签数组。这些是我们想要预测的实际值。
+`y_test`：测试数据集的真实标签数组。这些是我们想要预测的实际值。
 
-y_pred：模型为测试数据集生成的预测标签数组。这些预测是基于测试特征（X_test）得到的。
+`y_pred`：模型为测试数据集生成的预测标签数组。这些预测是基于测试特征（`X_test`）得到的。
 
 ## 模型结果解读
 
-
-
-
--   [准确率 0.8536585365853658 表示模型在数据集中正确预测了约 85.37% 的实例的类别标签。]
-
--   [这表明在模型做出的所有预测中，约 85.37% 是正确的。]
+- [准确率 0.8536585365853658 表示模型在数据集中正确预测了约 85.37% 的实例的类别标签。]
+- [这表明在模型做出的所有预测中，约 85.37% 是正确的。]
 
 # Kernel SVM 模型
 
--   支持向量机器 (SVM) 是一种监督学习算法，用于分类和回归任务。
-
--   源代码在此处提供：[Kernel SVM](https://www.google.com/url?q=https://github.com/anyasorc/appliedml/blob/main/Classification_KernelSVM.ipynb&sa=D&source=editors&ust=1720099681930305&usg=AOvVaw15Y1UPa3yWWLcLQoQ4JQYk) 
+- 支持向量机器 (SVM) 是一种监督学习算法，用于分类和回归任务。
+- 源代码在此处提供：[Kernel SVM](https://www.google.com/url?q=https://github.com/anyasorc/appliedml/blob/main/Classification_KernelSVM.ipynb&sa=D&source=editors&ust=1720099681930305&usg=AOvVaw15Y1UPa3yWWLcLQoQ4JQYk)
 
 ## 导入库
 
--   图 3-41 显示了所有导入的必要库
+- 图 3-41 显示了所有导入的必要库
 
 ![](img/image_rsrc564.jpg)
 
--   图 3-41.
+- 图 3-41.
 
 ## 导入并查看数据
 
--   图 3-42 显示了数据的导入和查看方式，如下所示
+- 图 3-42 显示了数据的导入和查看方式，如下所示
 
 ![](img/image_rsrc565.jpg)
 
--   图 3-42.
+- 图 3-42.
 
 ## 为 X 和 y 赋值
 
--   X = df.iloc[:, :-1].values：
-
--   这行代码从 DataFrame df 中选择所有行和除最后一列之外的所有列，并将结果转换为 NumPy 数组。得到的数组 X 通常包含特征或预测器，如图 3-43 所示。
-
--   y = df.iloc[:, -1].values：
-
--   这行代码从 DataFrame df 中选择所有行和最后一列，并将结果转换为 NumPy 数组。得到的数组 y 通常包含目标或响应变量，如图 3-43 所示。
+- `X = df.iloc[:, :-1].values`：
+- 这行代码从 DataFrame `df` 中选择所有行和除最后一列之外的所有列，并将结果转换为 NumPy 数组。得到的数组 `X` 通常包含特征或预测器，如图 3-43 所示。
+- `y = df.iloc[:, -1].values`：
+- 这行代码从 DataFrame `df` 中选择所有行和最后一列，并将结果转换为 NumPy 数组。得到的数组 `y` 通常包含目标或响应变量，如图 3-43 所示。
 
 ![](img/image_rsrc54K.jpg)
 
--   图 3-43.
+- 图 3-43.
 
 ## 划分训练集和测试集
 
--   我们需要将数据集划分为训练集和测试集。我们将使用 80:20 的比例，其中 80% 的数据用于训练模型，剩余的 20% 用于在未见数据上进行测试。图 3-44 说明了这一过程。
+- 我们需要将数据集划分为训练集和测试集。我们将使用 80:20 的比例，其中 80% 的数据用于训练模型，剩余的 20% 用于在未见数据上进行测试。图 3-44 说明了这一过程。
 
 ![](img/image_rsrc555.jpg)
 
--   图 3-44.
+- 图 3-44.
 
 # 数据标准化
 
--   在机器学习中，特别是使用对输入数据尺度敏感的算法时，通常会对数据进行标准化。标准化将数据转换为均值为零、标准差为一的形式。图 3-45 说明了如何实现。
+- 在机器学习中，特别是使用对输入数据尺度敏感的算法时，通常会对数据进行标准化。标准化将数据转换为均值为零、标准差为一的形式。图 3-45 说明了如何实现。
 
 ![](img/image_rsrc54N.jpg)
 
--   图 3-45.
+- 图 3-45.
 
 ## 代码解释
 
--   图 3-45 中的代码片段使用 `StandardScaler` 类（来自 `scikit-learn` 库）来标准化特征，通过消除均值并缩放到单位方差来实现。这一过程对于许多机器学习算法的最佳性能至关重要。以下是每行代码的解释：
-
--   sc = StandardScaler()：这行代码创建了 `StandardScaler` 类的一个实例。`StandardScaler` 用于标准化数据集的特征。
-
--   X_train = sc.fit_transform(X_train)：
-
--   fit_transform：该方法首先计算 `X_train` 数据的均值和标准差（这是 `fit` 部分）。
-
--   然后使用这些统计量对 `X_train` 进行标准化，即对每个特征减去均值并除以标准差（这是 `transform` 部分）。
-
--   结果是 `X_train` 变成了标准化后的原始训练数据，每个特征的均值为 0，标准差为 1。
-
--   X_test = sc.transform(X_test)：
-
--   transform：该方法使用从 `X_train` 数据中计算出的均值和标准差来标准化 `X_test`。
-
--   这确保了测试数据以与训练数据相同的方式被转换，这对于模型性能的一致性至关重要。
-
--   `X_test` 现在是标准化后的原始测试数据，与 `X_train` 具有相同的尺度。
-
--   关于标准化的重要性的更多细节：
-
--   一致性：它确保训练数据和测试数据处于相同的尺度，这对于许多机器学习模型的性能至关重要。
-
--   算法性能：像逻辑回归或神经网络中使用的梯度下降算法，在数据标准化后收敛更快。
-
--   精度提升：一些算法，如支持向量机器 (SVM) 和 k 最近邻 (KNN)，对数据尺度敏感，使用标准化后表现更好。
-
--   使用 `StandardScaler`，可以帮助确保您的机器学习模型更有效、更一致地工作。
+- 图 3-45 中的代码片段使用 `StandardScaler` 类（来自 `scikit-learn` 库）来标准化特征，通过消除均值并缩放到单位方差来实现。这一过程对于许多机器学习算法的最佳性能至关重要。以下是每行代码的解释：
+- `sc = StandardScaler()`：这行代码创建了 `StandardScaler` 类的一个实例。`StandardScaler` 用于标准化数据集的特征。
+- `X_train = sc.fit_transform(X_train)`：
+- `fit_transform`：该方法首先计算 `X_train` 数据的均值和标准差（这是 `fit` 部分）。
+- 然后使用这些统计量对 `X_train` 进行标准化，即对每个特征减去均值并除以标准差（这是 `transform` 部分）。
+- 结果是 `X_train` 变成了标准化后的原始训练数据，每个特征的均值为 0，标准差为 1。
+- `X_test = sc.transform(X_test)`：
+- `transform`：该方法使用从 `X_train` 数据中计算出的均值和标准差来标准化 `X_test`。
+- 这确保了测试数据以与训练数据相同的方式被转换，这对于模型性能的一致性至关重要。
+- `X_test` 现在是标准化后的原始测试数据，与 `X_train` 具有相同的尺度。
+- 关于标准化的重要性的更多细节：
+- 一致性：它确保训练数据和测试数据处于相同的尺度，这对于许多机器学习模型的性能至关重要。
+- 算法性能：像逻辑回归或神经网络中使用的梯度下降算法，在数据标准化后收敛更快。
+- 精度提升：一些算法，如支持向量机器 (SVM) 和 k 最近邻 (KNN)，对数据尺度敏感，使用标准化后表现更好。
+- 使用 `StandardScaler`，可以帮助确保您的机器学习模型更有效、更一致地工作。
 
 ## 训练模型
 
--   图 3-46 说明了使用 X_train 和 y_train 数据集训练机器学习模型的过程。训练过程的执行表明模型已成功训练。
+- 图 3-46 说明了使用 `X_train` 和 `y_train` 数据集训练机器学习模型的过程。训练过程的执行表明模型已成功训练。
 
 ![](img/image_rsrc566.jpg)
 
--   图 3-46.
+- 图 3-46.
 
 ## 代码解释
 
--   cs = SVC(kernel='rbf', random_state=0) 初始化了一个使用 RBF 核的支持向量分类器。
-
--   RBF 核允许分类器创建非线性决策边界，这对于类别不线性可分的复杂数据集可能更有效。
-
--   cs.fit(X_train, y_train) 使用训练数据 (X_train) 和对应的标签 (y_train) 训练 SVC。
-
--   在这一过程中，SVC 学习 RBF 核的参数，并识别定义最优超平面的支持向量，在变换后的特征空间中。
-
--   训练后的模型可以用于对新的、未见的数据进行预测。
+- `cs = SVC(kernel='rbf', random_state=0)` 初始化了一个使用 RBF 核的支持向量分类器。
+- RBF 核允许分类器创建非线性决策边界，这对于类别不线性可分的复杂数据集可能更有效。
+- `cs.fit(X_train, y_train)` 使用训练数据 (`X_train`) 和对应的标签 (`y_train`) 训练 SVC。
+- 在这一过程中，SVC 学习 RBF 核的参数，并识别定义最优超平面的支持向量，在变换后的特征空间中。
+- 训练后的模型可以用于对新的、未见的数据进行预测。
 
 ## 使用测试数据进行预测
 
--   图 3-47 以下说明了如何使用训练好的模型 (cs) 和测试数据 (X_test) 进行预测。
+- 图 3-47 以下说明了如何使用训练好的模型 (`cs`) 和测试数据 (`X_test`) 进行预测。
 
 ![](img/image_rsrc557.jpg)
 
--   图 3-47.
+- 图 3-47.
 
 ## 代码解释
 
--   y_pred = cs.predict(X_test) 专门使用核心支持向量机模型 (cs) 在测试数据集 (X_test) 上进行预测。以下是针对核心支持向量机模型的详细解释：
-
--   cs：这是一个已经在训练数据上训练的核心支持向量机模型实例。在 scikit-learn 中，这可以通过 SVC() 创建，然后使用 cs.fit(X_train, y_train) 进行拟合。
-
--   X_test：这是包含您希望预测目标变量特征的测试数据集。这些特征应该与训练数据（例如，标准化）处理方式相同。
-
--   predict(X_test)：该方法用于根据核心支持向量机模型 cs 对输入数据 (X_test) 预测类别标签。
-
--   y_pred 是一个包含 X_test 中每个观测的预测类别标签的数组。对于二分类问题，y_pred 中的值将是 0 或 1。
+- `y_pred = cs.predict(X_test)` 专门使用核心支持向量机模型 (`cs`) 在测试数据集 (`X_test`) 上进行预测。以下是针对核心支持向量机模型的详细解释：
+- `cs`：这是一个已经在训练数据上训练的核心支持向量机模型实例。在 scikit-learn 中，这可以通过 `SVC()` 创建，然后使用 `cs.fit(X_train, y_train)` 进行拟合。
+- `X_test`：这是包含您希望预测目标变量特征的测试数据集。这些特征应该与训练数据（例如，标准化）处理方式相同。
+- `predict(X_test)`：该方法用于根据核心支持向量机模型 `cs` 对输入数据 (`X_test`) 预测类别标签。
+- `y_pred` 是一个包含 `X_test` 中每个观测的预测类别标签的数组。对于二分类问题，`y_pred` 中的值将是 0 或 1。
 
 ## 模型评估
 
--   在训练机器学习模型后，评估其性能很重要。让我们首先查看混淆矩阵（如图 3-48 所示），然后再考虑准确率。
+- 在训练机器学习模型后，评估其性能很重要。让我们首先查看混淆矩阵（如图 3-48 所示），然后再考虑准确率。
 
 ![](img/image_rsrc567.jpg)
 
--   图 3-48.
+- 图 3-48.
 
 ## 代码解释
 
--   cm = confusion_matrix(y_test, y_pred) 使用 `scikit-learn` 库中的 `confusion_matrix` 函数来评估分类模型的性能。以下是详细解释：
-
--   confusion_matrix(y_test, y_pred)：
-
--   y_test：这是测试数据集的真实类别标签数组。这些是您正在尝试预测的实际值。
-
--   y_pred：这是模型为测试数据集生成的预测类别标签数组。这些预测是基于测试特征 (X_test) 由模型生成的。
-
--   混淆矩阵：
-
--   混淆矩阵是一个表格，常用于描述分类模型的性能。它显示了模型在实际结果（地面真实）与预测结果之间的正确和错误预测数量。
-
--   对于二分类问题，混淆矩阵是一个 2x2 矩阵，形式如下：
-
--   [[TN, FP],
-
--   [FN, TP]]
-
--   其中：
-
--   TN (True Negative)：正确预测负类实例的数量（实际为负且预测为负）。
-
--   FP (False Positive)：错误预测正类实例的数量（实际为负但预测为正）。
-
--   FN (False Negative)：错误预测负类实例的数量（实际为正但预测为负）。
-
--   TP (True Positive)：正确预测正类实例的数量（实际为正且预测为正）。
+- `cm = confusion_matrix(y_test, y_pred)` 使用 `scikit-learn` 库中的 `confusion_matrix` 函数来评估分类模型的性能。以下是详细解释：
+- `confusion_matrix(y_test, y_pred)`：
+- `y_test`：这是测试数据集的真实类别标签数组。这些是您正在尝试预测的实际值。
+- `y_pred`：这是模型为测试数据集生成的预测类别标签数组。这些预测是基于测试特征 (`X_test`) 由模型生成的。
+- 混淆矩阵：
 
 
 
+- 混淆矩阵是一个表格，常用于描述分类模型的性能。它显示了模型在实际结果（地面真实）与预测结果之间的正确和错误预测数量。
+- 对于二分类问题，混淆矩阵是一个 2x2 矩阵，形式如下：
+
+    ```
+    [[TN, FP],
+    [FN, TP]]
+    ```
+
+- 其中：
+  - `TN` (True Negative)：正确预测负类实例的数量（实际为负且预测为负）。
+  - `FP` (False Positive)：错误预测正类实例的数量（实际为负但预测为正）。
+  - `FN` (False Negative)：错误预测负类实例的数量（实际为正但预测为负）。
+  - `TP` (True Positive)：正确预测正类实例的数量（实际为正且预测为正）。
 
 # 解释混淆矩阵
 
@@ -2950,8 +2546,8 @@ y_pred：模型为测试数据集生成的预测标签数组。这些预测是�
 
 它提供了模型正在犯哪些类型错误的详细洞察：
 
-- 斜线上的高值（TN 和 TP）表示模型表现良好。
-- 斜线外的高值（FP 和 FN）表示模型正在出错的区域。
+- 斜线上的高值（`TN` 和 `TP`）表示模型表现良好。
+- 斜线外的高值（`FP` 和 `FN`）表示模型正在出错的区域。
 
 通过查看混淆矩阵，您可以获得比单一指标（如准确率）更深入的模型性能理解，这有助于识别模型需要改进的具体区域。
 
@@ -2965,21 +2561,10 @@ y_pred：模型为测试数据集生成的预测标签数组。这些预测是�
 
 让我们解释这个混淆矩阵：
 
-- **真阴性 (TN)：92**
-
-  这些是实际类别为负（例如，无心脏病）且模型正确预测为负的情况。
-
-- **假阳性 (FP)：6**
-
-  这些是实际类别为负，但模型错误预测为正的情况（例如，预测有心脏病但实际上没有）。
-
-- **假阴性 (FN)：1**
-
-  这些是实际类别为正（例如，恶性肿瘤），但模型错误预测为负的情况（例如，预测无心脏病但实际上有心脏病）。
-
-- **真阳性 (TP)：106**
-
-  这些是实际类别为正，且模型正确预测为正的情况。
+- **真阴性 (`TN`)：92**：这些是实际类别为负（例如，无心脏病）且模型正确预测为负的情况。
+- **假阳性 (`FP`)：6**：这些是实际类别为负，但模型错误预测为正的情况（例如，预测有心脏病但实际上没有）。
+- **假阴性 (`FN`)：1**：这些是实际类别为正（例如，恶性肿瘤），但模型错误预测为负的情况（例如，预测无心脏病但实际上有心脏病）。
+- **真阳性 (`TP`)：106**：这些是实际类别为正，且模型正确预测为正的情况。
 
 基于此混淆矩阵，我们可以计算多个性能指标（准确率、精确率、召回率和 F1 分数）：
 
@@ -2987,17 +2572,14 @@ y_pred：模型为测试数据集生成的预测标签数组。这些预测是�
 
 准确率的公式如下：
 
-![](img/image_rsrc54T.jpg)   
+![](img/image_rsrc54T.jpg)
 
 在提供的示例中：
 
-TN = 92
-
-TP = 106
-
-FP = 6
-
-FN = 1
+- `TN = 92`
+- `TP = 106`
+- `FP = 6`
+- `FN = 1`
 
 将这些值代入公式：
 
@@ -3013,9 +2595,8 @@ FN = 1
 
 在提供的示例中：
 
-TP = 106
-
-FP = 6
+- `TP = 106`
+- `FP = 6`
 
 将这些值代入公式：
 
@@ -3031,9 +2612,8 @@ FP = 6
 
 在提供的示例中：
 
-TP = 106
-
-FN = 1
+- `TP = 106`
+- `FN = 1`
 
 将这些值代入公式：
 
@@ -3049,9 +2629,8 @@ F1 分数的公式如下：
 
 在提供的示例中：
 
-Precision=0.9464
-
-Recall=0.9907
+- `Precision=0.9464`
+- `Recall=0.9907`
 
 将这些值代入公式：
 
@@ -3060,11 +2639,8 @@ Recall=0.9907
 ## 解释
 
 - **准确率 (96.59%)**：表明模型正确预测了 96.59% 的实例，体现了其预测的整体准确性。
-
 - **精确率 (94.64%)**：在所有被模型预测为正的实例中，94.64% 实际上是正的。这表明模型的假阳性非常低，预测正值的可靠性很高。
-
 - **召回率 (99.07%)**：模型正确识别了 99.07% 的实际正例。这表明假阴性非常低，模型能够有效捕获绝大多数正例。
-
 - **F1 分数 (96.80%)**：将精确率和召回率结合为一个指标，提供了平衡的性能评估。96.80% 的 F1 分数表明模型在平衡精确率和召回率方面表现出色，能够有效分类实例。
 
 ## 模型评估
@@ -3080,10 +2656,8 @@ Recall=0.9907
 scikit-learn 库中的 `accuracy_score(y_test, y_pred)` 函数用于计算分类模型的准确率。以下是详细说明：
 
 - **输入：**
-
   - `y_test`：测试数据集的真实标签数组。这些是您试图预测的实际值。
-
-  - `y_pred`：模型为测试数据集生成的预测标签数组。这些预测基于测试特征（X_test）。
+  - `y_pred`：模型为测试数据集生成的预测标签数组。这些预测基于测试特征（`X_test`）。
 
 ## 模型结果解释
 
@@ -3091,40 +2665,41 @@ scikit-learn 库中的 `accuracy_score(y_test, y_pred)` 函数用于计算分类
 
 这表明模型做出的所有预测中，约 96.59% 是正确的。
 
-## 决策树分类模型
+# 决策树分类模型
 
 决策树是一种强大的监督机器学习算法，能够有效处理分类和回归任务。它通过将数据集分割为子集来构建树状结构，包含决策节点和叶子节点。在每个决策节点，算法会评估一个特征并确定最佳分割方式，以最大化信息增益或最小化杂质。这个递归过程继续进行，直到数据被适当分割或满足预定义的停止条件。
 
 决策树因其简洁性、可解释性以及能够处理数值和类别数据而受到青睐。它们广泛应用于金融、医疗、营销等领域，用于客户细分、风险评估和预测建模等任务，是数据驱动决策的重要工具。
 
-源代码可在此查看：[决策树分类](https://www.google.com/url?q=https://github.com/anyasorc/appliedml/blob/main/Classification_DecisionTree.ipynb&sa=D&source=editors&ust=17200><![CDATA[<https://github.com/anyasorc/appliedml/blob/main/Classification_DecisionTree.ipynb>]]><![CDATA[>]]></a>)
+源代码可在此查看：[决策树分类](https://github.com/anyasorc/appliedml/blob/main/Classification_DecisionTree.ipynb)
 
+- [`StandardScaler`]()：此行创建了 `StandardScaler` 类的一个实例。`StandardScaler` 用于标准化数据集的特征。
 
--   [StandardScaler]()：此行创建了 `StandardScaler` 类的一个实例。`StandardScaler` 用于标准化数据集的特征。
-
+```
 X_train = sc.fit_transform(X_train):
+```
 
-fit_transform：此方法首先计算 `X_train` 数据的均值和标准差（这是 `fit` 部分）。
+`fit_transform`：此方法首先计算 `X_train` 数据的均值和标准差（这是 `fit` 部分）。
 
 然后使用这些统计量对 `X_train` 进行标准化，即对每个特征减去均值并除以标准差（这是 `transform` 部分）。
 
 结果是 `X_train` 变成了标准化后的原始训练数据，每个特征的均值为 0，标准差为 1。
 
+```
 X_test = sc.transform(X_test):
+```
 
-transform：此方法使用从 `X_train` 数据计算出的均值和标准差来标准化 `X_test`。
+`transform`：此方法使用从 `X_train` 数据计算出的均值和标准差来标准化 `X_test`。
 
 这确保了测试数据以与训练数据相同的方式被转换，这对于模型性能的一致性至关重要。
 
-X_test 现在是标准化后的原始测试数据，遵循与 `X_train` 相同的尺度。
+`X_test` 现在是标准化后的原始测试数据，遵循与 `X_train` 相同的尺度。
 
 下面是关于标准化为何重要的更多细节：
 
-一致性：它确保训练数据和测试数据处于相同的尺度，这对许多机器学习模型的性能至关重要。
-
-算法性能：像逻辑回归或神经网络中使用的梯度下降算法，在标准化数据上收敛更快。
-
-改进准确性：一些算法，如支持向量机（SVM）和 k 最近邻（KNN），对数据尺度敏感，使用标准化数据时表现更好。
+- 一致性：它确保训练数据和测试数据处于相同的尺度，这对许多机器学习模型的性能至关重要。
+- 算法性能：像逻辑回归或神经网络中使用的梯度下降算法，在标准化数据上收敛更快。
+- 改进准确性：一些算法，如支持向量机（SVM）和 k 最近邻（KNN），对数据尺度敏感，使用标准化数据时表现更好。
 
 通过使用 `StandardScaler`，你可以帮助确保你的机器学习模型更有效、更一致地工作。
 
@@ -3138,25 +2713,26 @@ X_test 现在是标准化后的原始测试数据，遵循与 `X_train` 相同�
 
 ## 代码解释
 
-参考图 3-55 中的代码片段，
+参考图 3-55 中的代码片段：
 
-这行代码初始化了一个名为 cs 的 `DecisionTreeClassifier` 对象，并指定了特定参数：
+这行代码初始化了一个名为 `cs` 的 `DecisionTreeClassifier` 对象，并指定了特定参数：
 
-criterion='entropy'：此参数指定决策树节点中决策所使用的准则。'Entropy' 是衡量决策树节点杂乱程度的指标。算法会使用熵来决定每个节点的最佳分割，旨在最小化熵并最大化信息增益。
+- `criterion='entropy'`：此参数指定决策树节点中决策所使用的准则。`Entropy` 是衡量决策树节点杂乱程度的指标。算法会使用熵来决定每个节点的最佳分割，旨在最小化熵并最大化信息增益。
+- `random_state=0`：此参数设置随机种子以确保结果的可重复性。当使用相同的种子（这里是 0）时，每次运行模型的结果都相同。这确保了模型性能和输出在不同运行中保持一致。
 
-random_state=0：此参数设置随机种子以确保结果的可重复性。当使用相同的种子（这里是 0）时，每次运行模型的结果都相同。这确保了模型性能和输出在不同运行中保持一致。
-
+```
 cs.fit(X_train, y_train):
+```
 
-fit 是用于训练模型的方法。
+`fit` 是用于训练模型的方法。
 
-X_train 是包含特征（输入变量）的训练数据，模型将从中学习。
+`X_train` 是包含特征（输入变量）的训练数据，模型将从中学习。
 
-y_train 是包含目标标签（输出变量）的训练数据，与 X_train 中的特征对应。
+`y_train` 是包含目标标签（输出变量）的训练数据，与 `X_train` 中的特征对应。
 
 ## 使用测试数据进行预测
 
-图 3-56 展示了如何使用训练好的模型（cs）和测试数据（X_test）进行预测。
+图 3-56 展示了如何使用训练好的模型（`cs`）和测试数据（`X_test`）进行预测。
 
 ![](img/image_rsrc557.jpg)
 
@@ -3164,15 +2740,12 @@ y_train 是包含目标标签（输出变量）的训练数据，与 X_train 中
 
 ## 代码解释
 
-he line y_pred = cs.predict(X_test) 专门使用 `DecisionTreeClassifier` 模型（cs）对测试数据集（X_test）进行预测。以下是针对 `DecisionTreeClassifier` 模型的详细解释：
+The line `y_pred = cs.predict(X_test)` 专门使用 `DecisionTreeClassifier` 模型（`cs`）对测试数据集（`X_test`）进行预测。以下是针对 `DecisionTreeClassifier` 模型的详细解释：
 
-cs：这是一个 `DecisionTreeClassifier` 回归模型的实例，它已在训练数据上进行了训练。在 scikit-learn 中，可以使用 `DecisionTreeClassifier()` 创建该实例，然后通过 `cs.fit(X_train, y_train)` 对其进行拟合。
-
-X_test：这是包含你想预测目标变量特征的测试数据集。这些特征应与训练数据（例如，标准化）进行预处理。
-
-predict(X_test)：此方法用于根据 `DecisionTreeClassifier` 模型 `cs` 对输入数据（X_test）预测类标签。
-
-y_pred 是一个包含 `X_test` 中每个观测的预测类标签的数组。对于二分类问题，y_pred 中的值将是 0 或 1。
+- `cs`：这是一个 `DecisionTreeClassifier` 回归模型的实例，它已在训练数据上进行了训练。在 scikit-learn 中，可以使用 `DecisionTreeClassifier()` 创建该实例，然后通过 `cs.fit(X_train, y_train)` 对其进行拟合。
+- `X_test`：这是包含你想预测目标变量特征的测试数据集。这些特征应与训练数据（例如，标准化）进行预处理。
+- `predict(X_test)`：此方法用于根据 `DecisionTreeClassifier` 模型 `cs` 对输入数据（`X_test`）预测类标签。
+- `y_pred` 是一个包含 `X_test` 中每个观测的预测类标签的数组。对于二分类问题，`y_pred` 中的值将是 0 或 1。
 
 ## 模型评估
 
@@ -3184,33 +2757,29 @@ y_pred 是一个包含 `X_test` 中每个观测的预测类标签的数组。对
 
 ## 代码解释
 
-The line `cm = confusion_matrix(y_test, y_pred)` 使用 `scikit-learn` 库中的 `confusion_matrix` 函数来评估分类模型的性能。以下是详细解释：
+The line `cm = confusion_matrix(y_test, y_pred)` 使用 scikit-learn 库中的 `confusion_matrix` 函数来评估分类模型的性能。以下是详细解释：
 
-confusion_matrix(y_test, y_pred):
+`confusion_matrix(y_test, y_pred)`：
 
-- y_test：这是测试数据集的真实类标签数组。这些是你试图预测的实际值。
-
-- y_pred：这是模型为测试数据集生成的预测类标签数组。这些预测是基于测试特征（X_test）由模型生成的。
+- `y_test`：这是测试数据集的真实类标签数组。这些是你试图预测的实际值。
+- `y_pred`：这是模型为测试数据集生成的预测类标签数组。这些预测是基于测试特征（`X_test`）由模型生成的。
 
 混淆矩阵：
 
 - 混淆矩阵是一张表格，常用于描述分类模型的性能。它显示了模型在实际结果（地面真实）与预测结果之间的正确和错误预测数量。
-
 - 对于二分类问题，混淆矩阵是一个 2x2 矩阵，形式如下：
 
-[["TN", "FP"],
-
-["FN", "TP"]]
+    ```
+    [["TN", "FP"],
+    ["FN", "TP"]]
+    ```
 
 其中：
 
-TN (True Negative)：正确预测负类实例的数量（实际为负，预测为负）。
-
-FP (False Positive)：错误预测正类实例的数量（实际为负，但预测为正）。
-
-FN (False Negative)：错误预测负类实例的数量（实际为正，但预测为负）。
-
-TP (True Positive)：正确预测正类实例的数量（实际为正，预测为正）。
+- `TN` (True Negative)：正确预测负类实例的数量（实际为负，预测为负）。
+- `FP` (False Positive)：错误预测正类实例的数量（实际为负，但预测为正）。
+- `FN` (False Negative)：错误预测负类实例的数量（实际为正，但预测为负）。
+- `TP` (True Positive)：正确预测正类实例的数量（实际为正，预测为正）。
 
 ## 解读混淆矩阵
 
@@ -3218,9 +2787,8 @@ TP (True Positive)：正确预测正类实例的数量（实际为正，预测�
 
 它提供了关于模型错误类型的详细洞察：
 
-- 对角线上的高值（TN 和 TP）表示模型表现良好。
-
-- 对角线外的高值（FP 和 FN）表示模型存在错误。
+- 对角线上的高值（`TN` 和 `TP`）表示模型表现良好。
+- 对角线外的高值（`FP` 和 `FN`）表示模型存在错误。
 
 通过查看混淆矩阵，你可以获得比单一指标（如准确率）更深入的模型性能理解，这有助于识别模型需要改进的具体领域。
 
@@ -3234,21 +2802,10 @@ TP (True Positive)：正确预测正类实例的数量（实际为正，预测�
 
 让我们解读这个混淆矩阵：
 
-真负数（TN）：98
-
-这些是实际为负类（例如，无心脏病）的实例，模型正确预测为负类。
-
-假阳性（FP）：0
-
-这些是实际为负类，但模型错误地预测为正类（例如，预测有心脏病但实际上没有）的实例。
-
-假阴性（FN）：0
-
-这些是实际为正类（例如，恶性肿瘤），但模型错误地预测为负类（例如，预测无心脏病但实际上有）的实例。
-
-真阳数（TP）：107
-
-这些是实际为正类，且模型正确预测为正类的实例。
+- **真负数（`TN`）：98**：这些是实际为负类（例如，无心脏病）的实例，模型正确预测为负类。
+- **假阳性（`FP`）：0**：这些是实际为负类，但模型错误地预测为正类（例如，预测有心脏病但实际上没有）的实例。
+- **假阴性（`FN`）：0**：这些是实际为正类（例如，恶性肿瘤），但模型错误地预测为负类（例如，预测无心脏病但实际上有）的实例。
+- **真阳性（`TP`）：107**：这些是实际为正类，且模型正确预测为正类的实例。
 
 从这个混淆矩阵，我们可以计算出几个性能指标（准确率、精确率、召回率和 F1 分数）：
 
@@ -3256,17 +2813,14 @@ TP (True Positive)：正确预测正类实例的数量（实际为正，预测�
 
 准确率的公式如下：
 
-![](img/image_rsrc54T.jpg)   
+![](img/image_rsrc54T.jpg)
 
 在提供的示例中：
 
-TN = 98
-
-TP = 107
-
-FP = 0
-
-FN = 0
+- `TN = 98`
+- `TP = 107`
+- `FP = 0`
+- `FN = 0`
 
 将这些值代入公式：
 
@@ -3276,18 +2830,14 @@ FN = 0
 
 精确率：
 
-
-
-
 The formula for Precision is given by:
 
 ![](img/image_rsrc54V.jpg)
 
 In the provided example:
 
-TP = 107
-
-FP = 0
+- `TP = 107`
+- `FP = 0`
 
 Plugging these values into the formula:
 
@@ -3303,11 +2853,10 @@ The formula for recall is given by:
 
 In the provided example:
 
-TP = 107
+- `TP = 107`
+- `FN = 0`
 
-FN = 0
-
-Plugging these values into the formula:  
+Plugging these values into the formula:
 
 ![](img/image_rsrc56N.jpg)
 
@@ -3321,9 +2870,8 @@ The formula for F1 Score is given by:
 
 In the provided example:
 
-Precision=1.0
-
-Recall=1.0
+- `Precision=1.0`
+- `Recall=1.0`
 
 Plugging these values into the formula:
 
@@ -3353,9 +2901,11 @@ The function `accuracy_score(y_test, y_pred)` from the scikit-learn library is u
 
 Inputs:
 
-y_test: This is the array of true labels for the test dataset. These labels are the actual values that you are trying to predict.
 
-y_pred: This is the array of predicted labels that the model has generated for the test dataset. These predictions are based on the test features (X_test).
+
+`y_test`: This is the array of true labels for the test dataset. These labels are the actual values that you are trying to predict.
+
+`y_pred`: This is the array of predicted labels that the model has generated for the test dataset. These predictions are based on the test features (`X_test`).
 
 ## Model Result Interpretation
 
@@ -3367,7 +2917,7 @@ This implies that the model is highly reliable and effective in its task, as it 
 
 A Random Forest is a type of ensemble learning method that combines the predictions of multiple decision trees to enhance the overall performance and generalization of the model. It can be applied to both classification and regression tasks.
 
-The source code is available here: [Random Forest Classification](https://www.google.com/url?q=https://github.com/anyasorc/appliedml/blob/main/Classification_RandomForest.ipynb&sa=D&source=editors&ust=1720099681982514&usg=AOvVaw2oZc2qjLhRWr9NsCt5PYlQ)  
+The source code is available here: [Random Forest Classification](https://www.google.com/url?q=https://github.com/anyasorc/appliedml/blob/main/Classification_RandomForest.ipynb&sa=D&source=editors&ust=1720099681982514&usg=AOvVaw2oZc2qjLhRWr9NsCt5PYlQ)
 
 ## Import Libraries
 
@@ -3387,13 +2937,13 @@ Figure 3-60
 
 Assign values to X and y
 
-X = df.iloc[:, :-1].values:
+`X = df.iloc[:, :-1].values`:
 
-This line selects all rows and all columns except the last one from the DataFrame df and converts the result into a NumPy array. The resulting array X typically contains the features or predictors as seen in Figure 3-61 .
+This line selects all rows and all columns except the last one from the DataFrame `df` and converts the result into a NumPy array. The resulting array `X` typically contains the features or predictors as seen in Figure 3-61.
 
-y = df.iloc[:, -1].values:
+`y = df.iloc[:, -1].values`:
 
-This line selects all rows and only the last column from the DataFrame df and converts the result into a NumPy array. The resulting array y typically contains the target or response variable as seen in Figure 3-61 .
+This line selects all rows and only the last column from the DataFrame `df` and converts the result into a NumPy array. The resulting array `y` typically contains the target or response variable as seen in Figure 3-61.
 
 ![](img/image_rsrc54K.jpg)
 
@@ -3419,23 +2969,23 @@ Figure 3-63.
 
 The code snippet in Figure 3-63 uses the `StandardScaler` class from the `scikit-learn` library to standardize features by removing the mean and scaling to unit variance. This process is essential for many machine learning algorithms to perform optimally. Here's an explanation of each line:
 
-sc = StandardScaler(): This line creates an instance of the `StandardScaler` class. The `StandardScaler` is used to standardize the features of the dataset.
+`sc = StandardScaler()`: This line creates an instance of the `StandardScaler` class. The `StandardScaler` is used to standardize the features of the dataset.
 
-X_train = sc.fit_transform(X_train):
+`X_train = sc.fit_transform(X_train)`:
 
-fit_transform: This method first calculates the mean and standard deviation of the `X_train` data (this is the `fit` part).
+`fit_transform`: This method first calculates the mean and standard deviation of the `X_train` data (this is the `fit` part).
 
 It then uses these statistics to standardize `X_train` by subtracting the mean and dividing by the standard deviation for each feature (this is the `transform` part).
 
 The result is that `X_train` is now a standardized version of the original training data, where each feature has a mean of 0 and a standard deviation of 1.
 
-X_test = sc.transform(X_test):
+`X_test = sc.transform(X_test)`:
 
-transform: This method uses the mean and standard deviation calculated from the `X_train` data to standardize `X_test`.
+`transform`: This method uses the mean and standard deviation calculated from the `X_train` data to standardize `X_test`.
 
 This ensures that the test data is transformed in the same way as the training data, which is crucial for the consistency of the model's performance.
 
-X_test is now a standardized version of the original test data, following the same scale as `X_train`.
+`X_test` is now a standardized version of the original test data, following the same scale as `X_train`.
 
 Here's a bit more detail on why standardization is important:
 
@@ -3449,7 +2999,7 @@ By using `StandardScaler`, you help ensure that your machine learning model work
 
 ## Training the Model
 
-Figure 3-64 illustrates the process of using the X_train and y_train datasets to train the machine learning model. The execution of the training process indicates that the model was successfully trained.
+Figure 3-64 illustrates the process of using the `X_train` and `y_train` datasets to train the machine learning model. The execution of the training process indicates that the model was successfully trained.
 
 ![](img/image_rsrc56U.jpg)
 
@@ -3457,19 +3007,17 @@ Figure 3-64.
 
 ## Code Explanation
 
-RandomForestClassifier(n_estimators=10, criterion='entropy', random_state=0):
+`RandomForestClassifier(n_estimators=10, criterion='entropy', random_state=0)`:
 
 This line initializes a Random Forest Classifier object.
 
-n_estimators=10: Specifies the number of decision trees in the random forest. In this case, the random forest will consist of 10 decision trees.
+`n_estimators=10`: Specifies the number of decision trees in the random forest. In this case, the random forest will consist of 10 decision trees.
 
-criterion='entropy': Defines the criterion used for splitting nodes. Entropy is a measure of impurity in a group of samples. The decision tree algorithm will use entropy to determine the best split at each node.
+`criterion='entropy'`: Defines the criterion used for splitting nodes. Entropy is a measure of impurity in a group of samples. The decision tree algorithm will use entropy to determine the best split at each node.
 
-random_state=0: Sets the random seed to ensure reproducibility of results. With the same random seed, the random forest will produce the same results when trained on the same data.
+`random_state=0`: Sets the random seed to ensure reproducibility of results. With the same random seed, the random forest will produce the same results when trained on the same data.
 
-cs.fit(X_train, y_train):
-
-
+`cs.fit(X_train, y_train)`:
 
 这一行在训练随机森林分类器时使用了训练数据（`X_train` 和 `y_train`）。
 
@@ -3542,16 +3090,17 @@ Figure 3-67.
 
 下面对该混淆矩阵进行解释：
 
-- True Negatives (TN)：98  
+- True Negatives (TN)：98
+
   这些是实际为负类（例如，无心脏病）且模型正确预测为负的实例。
+- False Positives (FP)：0
 
-- False Positives (FP)：0  
   这些是实际为负类，但模型错误地预测为正类（例如，预测有心脏病但实际上没有）。
+- False Negatives (FN)：0
 
-- False Negatives (FN)：0  
   这些是实际为正类（例如，恶性肿瘤）但模型错误地预测为负类（例如，预测无心脏病但实际上有心脏病）。
+- True Positives (TP)：107
 
-- True Positives (TP)：107  
   这些是实际为正类，且模型正确预测为正的实例。
 
 从这张混淆矩阵可以计算出多个性能指标（准确率、精确率、召回率和 F1 分数）：
@@ -3560,14 +3109,17 @@ Figure 3-67.
 
 准确率的公式为：
 
-![](img/image_rsrc54T.jpg)  
+![](img/image_rsrc54T.jpg)
 
 在提供的示例中：
 
-TN = 98  
-TP = 107  
-FP = 0  
-FN = 0  
+TN = 98
+
+TP = 107
+
+FP = 0
+
+FN = 0
 
 代入公式：
 
@@ -3583,8 +3135,9 @@ FN = 0
 
 在提供的示例中：
 
-TP = 107  
-FP = 0  
+TP = 107
+
+FP = 0
 
 代入公式：
 
@@ -3600,8 +3153,9 @@ FP = 0
 
 在提供的示例中：
 
-TP = 107  
-FN = 0  
+TP = 107
+
+FN = 0
 
 代入公式：
 
@@ -3617,8 +3171,11 @@ F1 分数的公式为：
 
 在提供的示例中：
 
-Precision = 1.0  
-Recall = 1.0  
+
+
+Precision = 1.0
+
+Recall = 1.0
 
 代入公式：
 
@@ -3656,9 +3213,7 @@ Figure 3-68.
 
 - `y_test`：测试数据集的真实标签数组。这些是我们想要预测的实际值。
 
-
-
-y_pred: 这是模型为测试数据集生成的预测标签数组。这些预测是基于测试特征（X_test）生成的。
+`y_pred`: 这是模型为测试数据集生成的预测标签数组。这些预测是基于测试特征（`X_test`）生成的。
 
 ## Conclusion
 
@@ -3678,7 +3233,7 @@ y_pred: 这是模型为测试数据集生成的预测标签数组。这些预测
 
 这些模型在诊断心脏疾病或预测心血管风险因素等应用中具有巨大的潜力。在这些任务中，精确分类对于做出明智决策和实施有效干预至关重要，这凸显了利用具有如此强大性能和精度的模型的重要性。
 
-## Chapter 4
+# Chapter 4
 
 ## Clustering
 
@@ -3706,7 +3261,7 @@ K-means 聚类广泛应用于图像分割、客户细分和异常检测等领域
 
 Kelly，一家商业银行的新产品经理，希望提升交易量。她邀请数据团队协助开展针对性广告活动。Kelly 的计划是根据年收入和评分对客户进行排序，并将其分组。这种细分能够实现针对性广告投放，利用每个群体的消费习惯。通过以此方式最大化营销努力，银行旨在提高营销参与度，最终增加收入。
 
-源代码在此：[Clustering](https://www.google.com/url?q=https://github.com/anyasorc/appliedml/blob/main/Master_class_week_4_K_MEANS_clustering%2520\(1\).ipynb&sa=D&source=editors&ust=1720099682008589&usg=AOvVaw0QBo2ujXABDk6D9lOu1hg-)  
+源代码在此：[Clustering](https://www.google.com/url?q=https://github.com/anyasorc/appliedml/blob/main/Master_class_week_4_K_MEANS_clustering%2520\(1\).ipynb&sa=D&source=editors&ust=1720099682008589&usg=AOvVaw0QBo2ujXABDk6D9lOu1hg-)
 
 图 4-1 展示了所有导入的必要库。
 
@@ -3724,13 +3279,13 @@ Kelly，一家商业银行的新产品经理，希望提升交易量。她邀请
 
 ## Check for missing values
 
-df.isna().sum() 是一条链式方法，用于计算 DataFrame df 中每列的缺失值（即 NaN 值）的总数，如图 4-3 所示。
+`df.isna().sum()` 是一条链式方法，用于计算 DataFrame `df` 中每列的缺失值（即 NaN 值）的总数，如图 4-3 所示。
 
 ![](img/image_rsrc56Z.jpg)
 
 图 4-3.
 
-根据问题描述，我们将使用的目标列是 Annual_Income 和 Spending_Score，分别可以通过 iloc 位置索引 5 和 6 访问，如图 4-4 所示。
+根据问题描述，我们将使用的目标列是 `Annual_Income` 和 `Spending_Score`，分别可以通过 `iloc` 位置索引 5 和 6 访问，如图 4-4 所示。
 
 ![](img/image_rsrc570.jpg)
 
@@ -3740,19 +3295,19 @@ df.isna().sum() 是一条链式方法，用于计算 DataFrame df 中每列的�
 
 ![](img/image_rsrc571.jpg)
 
-df.iloc[:, \[5, 6\]：这行代码用于从 DataFrame df 中选择特定的列。
+`df.iloc[:, [5, 6]]`：这行代码用于从 DataFrame `df` 中选择特定的列。
 
-: 表示选择所有行。
+`:` 表示选择所有行。
 
-\[5, 6\] 表示选择索引位置为 5 和 6 的列。
+`[5, 6]` 表示选择索引位置为 5 和 6 的列。
 
 此操作从 DataFrame 中获取第 5 和第 6 列的数据。
 
-.values：这一属性返回所选数据的 NumPy 数组形式。
+`.values`：这一属性返回所选数据的 NumPy 数组形式。
 
 它将选取的 DataFrame 片段转换为二维 NumPy 数组。
 
-X\[:10\]：这行代码对 NumPy 数组 X 进行切片，显示前 10 行。
+`X[:10]`：这行代码对 NumPy 数组 `X` 进行切片，显示前 10 行。
 
 它提供了所选数据的前 10 行的预览。
 
@@ -3768,38 +3323,35 @@ X\[:10\]：这行代码对 NumPy 数组 X 进行切片，显示前 10 行。
 
 代码片段执行 KMeans 聚类，并通过肘部法确定最佳簇数。它计算并绘制了簇内总和平方误差（Within-Cluster Sum of Squares, WCSS）值与簇数的关系图，帮助找到“肘点”，即最佳簇数所在的位置。
 
-wcss = \[\]: 初始化一个空列表，用于存储 KMeans 聚类的簇内总和平方误差（WCSS）值。
+`wcss = []`：初始化一个空列表，用于存储 KMeans 聚类的簇内总和平方误差（WCSS）值。
 
 WCSS 是 KMeans 聚类形成簇紧凑性的度量。WCSS 值越小，表示簇越紧凑。
 
-for i in range(1, 11): 循环遍历从 1 到 10 的范围，代表待评估的簇数候选值。
+`for i in range(1, 11)`: 循环遍历从 1 到 10 的范围，代表待评估的簇数候选值。
 
-kmeans = KMeans(n_clusters=i, init='k-means++', random_state=42): 创建一个包含 i 个簇的 KMeans 聚类对象。
+`kmeans = KMeans(n_clusters=i, init='k-means++', random_state=42)`: 创建一个包含 i 个簇的 KMeans 聚类对象。
 
-n_clusters=i：指定当前迭代的簇数。
+`n_clusters=i`：指定当前迭代的簇数。
 
-init='k-means++'：使用 k-means++ 初始化方法选择初始簇中心，这可以改善收敛性。
+`init='k-means++'`：使用 k-means++ 初始化方法选择初始簇中心，这可以改善收敛性。
 
+`random_state=42`: 设置随机种子以确保可重复性。
 
+`kmeans.fit(X)`: 将 KMeans 模型拟合到数据 `X` 上，其中 `X` 为待聚类的数据集。
 
+`wcss.append(kmeans.inertia_)`: 将已拟合模型的 WCSS（Within-Cluster Sum of Squares）值追加到 `wcss` 列表中。
 
-random_state=42: 设置随机种子以确保可重复性。
+`kmeans.inertia_`: 获取已拟合 KMeans 模型的 WCSS 值。
 
-kmeans.fit(X): 将 KMeans 模型拟合到数据 X 上，其中 X 为待聚类的数据集。
+`plt.plot(range(1, 11), wcss)`: 绘制聚类数量（横轴）与对应 WCSS 值（纵轴）的折线图。
 
-wcss.append(kmeans.inertia_): 将已拟合模型的 WCSS（Within-Cluster Sum of Squares）值追加到 wcss 列表中。
+`plt.title('The Elbow method')`: 设置图表标题。
 
-kmeans.inertia_: 获取已拟合 KMeans 模型的 WCSS 值。
+`plt.xlabel('Number of Clusters')`: 设置横轴标签。
 
-plt.plot(range(1, 11), wcss): 绘制聚类数量（横轴）与对应 WCSS 值（纵轴）的折线图。
+`plt.ylabel('WCSS')`: 设置纵轴标签。
 
-plt.title('The Elbow method'): 设置图表标题。
-
-plt.xlabel('Number of Clusters'): 设置横轴标签。
-
-plt.ylabel('WCSS'): 设置纵轴标签。
-
-plt.show(): 显示图表。
+`plt.show()`: 显示图表。
 
 图中“肘点”的作用是指示最佳聚类数量，即在 Figure 4-6 中，增加聚类数后 WCSS 显著下降的拐点。肘点通常被视为曲线的拐点，在此处 WCSS 的下降速度开始减慢。根据数据，这里的肘点对应数值 6。
 
@@ -3817,19 +3369,19 @@ Figure 4-7.
 
 ## Code Explanation
 
-代码片段初始化并训练一个拥有 6 个聚类的 k-means 聚类模型，使用指定的数据集 X。它为每个数据点分配对应的聚类，并将聚类标签存储在变量 y_kmeans 中。
+代码片段初始化并训练一个拥有 6 个聚类的 k-means 聚类模型，使用指定的数据集 `X`。它为每个数据点分配对应的聚类，并将聚类标签存储在变量 `y_kmeans` 中。
 
-kmeans = KMeans(n_clusters=6, init='k-means++', random_state=42): 初始化 k-means 聚类模型。
+`kmeans = KMeans(n_clusters=6, init='k-means++', random_state=42)`: 初始化 k-means 聚类模型。
 
-n_clusters=6: 指定创建的聚类数量，模型在此尝试识别 6 个聚类。
+`n_clusters=6`: 指定创建的聚类数量，模型在此尝试识别 6 个聚类。
 
-init='k-means++': 指定初始簇中心的初始化方法。'k-means++' 是一种智能初始化技术，有助于加速收敛。
+`init='k-means++'`: 指定初始簇中心的初始化方法。'k-means++' 是一种智能初始化技术，有助于加速收敛。
 
-random_state=42: 设置随机种子，确保每次运行时簇中心的初始化保持一致，保证可重复性。
+`random_state=42`: 设置随机种子，确保每次运行时簇中心的初始化保持一致，保证可重复性。
 
 ## Predicting with the test data
 
-下图 Figure 4-8 展示了如何使用已训练好的模型（kmeans）和测试数据（X）进行预测。
+下图 Figure 4-8 展示了如何使用已训练好的模型（`kmeans`）和测试数据（`X`）进行预测。
 
 ![](img/image_rsrc575.jpg)
 
@@ -3837,15 +3389,15 @@ Figure 4-8.
 
 ## Code Explanation
 
-y_kmeans = kmeans.fit_predict(X): 同时拟合 k-means 模型到数据 X 并为每个数据点分配聚类标签，结果存储在 y_kmeans 中。
+`y_kmeans = kmeans.fit_predict(X)`: 同时拟合 k-means 模型到数据 `X` 并为每个数据点分配聚类标签，结果存储在 `y_kmeans` 中。
 
-kmeans.fit(X): 将 k-means 模型拟合到数据 X，其中 X 为待聚类的数据集。
+`kmeans.fit(X)`: 将 k-means 模型拟合到数据 `X`，其中 `X` 为待聚类的数据集。
 
-kmeans.predict(X): 对 X 中的每个数据点预测聚类标签，并将结果赋值给 y_kmeans。
+`kmeans.predict(X)`: 对 `X` 中的每个数据点预测聚类标签，并将结果赋值给 `y_kmeans`。
 
 ## 查看 y_kmeans 中的预测结果
 
-Figure 4-9 展示了变量 y_kmeans 的内容。
+Figure 4-9 展示了变量 `y_kmeans` 的内容。
 
 ![](img/image_rsrc576.jpg)
 
@@ -3881,45 +3433,45 @@ Figure 4-10 中的代码片段创建散点图，用于可视化基于年收入�
 
 散点图：
 
-plt.scatter(x, y, s, c, label): 用于创建散点图。
+`plt.scatter(x, y, s, c, label)`: 用于创建散点图。
 
-x: 数据点的横坐标。
+`x`: 数据点的横坐标。
 
-y: 数据点的纵坐标。
+`y`: 数据点的纵坐标。
 
-s: 标记大小（可选）。
+`s`: 标记大小（可选）。
 
-c: 标记颜色（可选）。
+`c`: 标记颜色（可选）。
 
-label: 散点图的标签（可选）。
+`label`: 散点图的标签（可选）。
 
 数据绘制：
 
-X[y_kmeans == 0, 0]: 选择属于聚类 1 的数据点的横坐标。
+`X[y_kmeans == 0, 0]`: 选择属于聚类 1 的数据点的横坐标。
 
-X[y_kmeans == 0, 1]: 选择属于聚类 1 的数据点的纵坐标。
+`X[y_kmeans == 0, 1]`: 选择属于聚类 1 的数据点的纵坐标。
 
-同理，X[y_kmeans == 1, 0] 和 X[y_kmeans == 1, 1] 分别选择聚类 2 的坐标，以此类推。
+同理，`X[y_kmeans == 1, 0]` 和 `X[y_kmeans == 1, 1]` 分别选择聚类 2 的坐标，以此类推。
 
 中心点绘制：
 
-plt.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1], s=300, c='yellow', label='Centroids'): 绘制各聚类中心点。
+`plt.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1], s=300, c='yellow', label='Centroids')`: 绘制各聚类中心点。
 
-kmeans.cluster_centers_[:, 0]: 获取中心点的横坐标。
+`kmeans.cluster_centers_[:, 0]`: 获取中心点的横坐标。
 
-kmeans.cluster_centers_[:, 1]: 获取中心点的纵坐标。
+`kmeans.cluster_centers_[:, 1]`: 获取中心点的纵坐标。
 
 图表定制：
 
-plt.title("Clusters of Bank Customers"): 设置图表标题。
+`plt.title("Clusters of Bank Customers")`: 设置图表标题。
 
-plt.xlabel("Annual Income of Bank Customers"): 设置横轴标签。
+`plt.xlabel("Annual Income of Bank Customers")`: 设置横轴标签。
 
-plt.ylabel("Spending Score (1-100)"): 设置纵轴标签。
+`plt.ylabel("Spending Score (1-100)")`: 设置纵轴标签。
 
-plt.legend(): 显示图例，标明不同聚类及中心点。
+`plt.legend()`: 显示图例，标明不同聚类及中心点。
 
-plt.show(): 显示图表。
+`plt.show()`: 显示图表。
 
 目的：
 
@@ -3967,10 +3519,7 @@ Figure 4-13.
 
 ### 代码说明
 
-此代码片段按聚类对数据进行分组，为每个聚类创建独立变量。groupby 函数根据 'cluster' 列对数据进行分组，随后使用 get_group 方法提取每个聚类的数据并存储在 cluster_1_data、cluster_2_data 等变量中。
-
-
-
+此代码片段按聚类对数据进行分组，为每个聚类创建独立变量。`groupby` 函数根据 'cluster' 列对数据进行分组，随后使用 `get_group` 方法提取每个聚类的数据并存储在 `cluster_1_data`、`cluster_2_data` 等变量中。
 
 Figure 4-14 说明了将客户数据导出到 CSV 文件的过程，然后可以将其附加到电子邮件并发送给 Kelly。
 
@@ -3987,6 +3536,8 @@ Figure 4-15 下面展示了使用经过训练的机器学习模型进行预测�
 Figure 4-15. 这表明年收入为 $76 且消费评分为 13 的客户属于集群 2。
 
 ## 第 5 章
+
+
 
 ## 将您的 ML 模型投入运行
 
@@ -4006,7 +3557,7 @@ Figure 4-15. 这表明年收入为 $76 且消费评分为 13 的客户属于集�
 
 从开发环境（通常是受控的、有限的环境）过渡到生产环境（实时、运行的环境）涉及以下关键步骤：
 
-a. 模型部署
+### 模型部署
 
 环境配置：配置必要的基础设施，如服务器或云服务，以托管模型。
 
@@ -4014,7 +3565,7 @@ a. 模型部署
 
 可扩展性：确保基础设施能够处理预期负载并按需扩展。这包括负载均衡和自动扩展机制。
 
-b. 监控和维护
+### 监控和维护
 
 性能监控：持续跟踪模型性能，确保其达到要求的标准。这包括设置仪表盘和告警系统。
 
@@ -4044,11 +3595,11 @@ b. 监控和维护
 
 ## 介绍 Python 中的 API
 
-## 什么是 API？
+### 什么是 API？
 
 API（Application Programming Interface，应用编程接口）是构建和交互软件应用程序的规则和协议的集合。API 定义了开发人员可以用于与外部系统或软件组件交互的方法和数据结构。它们使不同软件系统能够通信，实现数据交换和功能共享。
 
-## 为什么使用 API？
+### 为什么使用 API？
 
 API 之所以被广泛使用，有以下几个原因：
 
@@ -4062,13 +3613,13 @@ API 之所以被广泛使用，有以下几个原因：
 
 ## 介绍使用 Flask 创建 API
 
-Flask 是一种轻量级的 WSGI Web 应用框架，设计时注重简洁和灵活性，使其成为构建 Web API 的 excellent 选择。以下是开始使用 Flask 创建 API 的方法。
+`Flask` 是一种轻量级的 WSGI Web 应用框架，设计时注重简洁和灵活性，使其成为构建 Web API 的 excellent 选择。以下是开始使用 Flask 创建 API 的方法。
 
-### 1\. 设置 Flask
+### 设置 Flask
 
-首先，您需要安装 Flask。可以使用 pip 进行安装：
+首先，您需要安装 Flask。可以使用 `pip` 进行安装：
 
-### 2\. 创建简单的 Flask API
+### 创建简单的 Flask API
 
 让我们从创建一个基本的 API 开始，该 API 处理 GET 请求。
 
@@ -4076,7 +3627,7 @@ Flask 是一种轻量级的 WSGI Web 应用框架，设计时注重简洁和灵�
 
 导入 Flask：导入 Flask 库中所需的组件。
 
-初始化 Flask 应用：创建 Flask 类的实例。
+初始化 Flask 应用：创建 `Flask` 类的实例。
 
 定义路由：使用装饰器定义 API 将响应的路由。
 
@@ -4094,45 +3645,45 @@ Figure 5-1.
 
 导入库：
 
-Flask：用于创建 Web 应用的主类。
+`Flask`：用于创建 Web 应用的主类。
 
-jsonify：用于将 Python 字典转换为 JSON 响应。
+`jsonify`：用于将 Python 字典转换为 JSON 响应。
 
-request：用于包含 HTTP 请求的数据（例如 POST 请求中发送的数据）。
+`request`：用于包含 HTTP 请求的数据（例如 POST 请求中发送的数据）。
 
 ## 创建 Flask 应用实例
 
 ![](img/image_rsrc57F.jpg)
 
-这一行创建了 Flask 类的实例。传递的 \_\_name\_\_ 变量有助于 Flask 确定应用的根路径。
+这一行创建了 `Flask` 类的实例。传递的 `__name__` 变量有助于 Flask 确定应用的根路径。
 
 ### 定义路由
 
-定义 /hello 路由：
+定义 `/hello` 路由：
 
 ![](img/image_rsrc57G.jpg)
 
-@app.route('/hello', methods=\['GET'\])：此装饰器将 URL /hello 与 hello 函数绑定，并指定该路由响应 GET 请求。
+`@app.route('/hello', methods=['GET'])`：此装饰器将 URL `/hello` 与 `hello` 函数绑定，并指定该路由响应 GET 请求。
 
-def hello：在客户端向 /hello 发出 GET 请求时执行的函数。
+`def hello`：在客户端向 `/hello` 发出 GET 请求时执行的函数。
 
-return jsonify({'message': 'Hello, World!'})：函数返回一个包含消息 "Hello, World!" 的 JSON 响应。
+`return jsonify({'message': 'Hello, World!'})`：函数返回一个包含消息 "Hello, World!" 的 JSON 响应。
 
-定义 /greet 路由：
+定义 `/greet` 路由：
 
 ![](img/image_rsrc57H.jpg)
 
-@app.route('/greet', methods=\['POST'\])：此装饰器将 URL /greet 与 greet 函数绑定，并指定该路由响应 POST 请求。
+`@app.route('/greet', methods=['POST'])`：此装饰器将 URL `/greet` 与 `greet` 函数绑定，并指定该路由响应 POST 请求。
 
-def greet：在客户端向 /greet 发出 POST 请求时执行的函数。
+`def greet`：在客户端向 `/greet` 发出 POST 请求时执行的函数。
 
-data = request.get\_json()：获取 POST 请求体中的 JSON 数据。
+`data = request.get_json()`：获取 POST 请求体中的 JSON 数据。
 
-name = data.get('name')：从 JSON 数据中提取 'name' 键关联的值。
+`name = data.get('name')`：从 JSON 数据中提取 'name' 键关联的值。
 
-greeting = f"Hello, {name}"：使用提取的 name 创建问候消息。
+`greeting = f"Hello, {name}"`：使用提取的 name 创建问候消息。
 
-return jsonify({'message': greeting})：返回一个包含个性化问候消息的 JSON 响应。
+`return jsonify({'message': greeting})`：返回一个包含个性化问候消息的 JSON 响应。
 
 ## 运行应用
 
@@ -4140,34 +3691,31 @@ return jsonify({'message': greeting})：返回一个包含个性化问候消息�
 
 这段代码确保只有当脚本直接运行时（而不是作为模块导入）才运行 Flask 应用。
 
-app.run(debug=True)：启动 Flask 开发服务器并启用调试模式。调试模式提供详细的错误消息并当代码更改时自动重新加载服务器。
+`app.run(debug=True)`：启动 Flask 开发服务器并启用调试模式。调试模式提供详细的错误消息并当代码更改时自动重新加载服务器。
 
 ### 这些部分是如何协同工作的
 
-GET 请求到 /hello：
+GET 请求到 `/hello`：
 
-当客户端（例如 Web 浏览器或 Postman 等工具）向 http://localhost:5000/hello 发出 GET 请求时，hello 函数被调用。
+当客户端（例如 Web 浏览器或 Postman 等工具）向 `http://localhost:5000/hello` 发出 GET 请求时，`hello` 函数被调用。
 
-服务器响应一个 JSON 对象：{"message": "Hello, World!"} 。
+服务器响应一个 JSON 对象：`{"message": "Hello, World!"}` 。
 
-POST 请求到 /greet：
+POST 请求到 `/greet`：
 
-当客户端向 http://localhost:5000/greet 发送包含 JSON 体 {"name": "Alice"} 的 POST 请求时，greet 函数被调用。
+当客户端向 `http://localhost:5000/greet` 发送包含 JSON 体 `{"name": "Alice"}` 的 POST 请求时，`greet` 函数被调用。
 
-greet 函数处理传入的 JSON 数据，提取 'name' 值，并构建个性化问候语。
+`greet` 函数处理传入的 JSON 数据，提取 'name' 值，并构建个性化问候语。
 
-服务器响应一个 JSON 对象：{"message": "Hello, Alice"} 。
+服务器响应一个 JSON 对象：`{"message": "Hello, Alice"}` 。
 
 ## 测试 API
 
 使用 Postman：
 
+GET 请求：输入 `http://localhost:5000/hello` 并点击“发送”。
 
-
-
-GET 请求：输入`http://localhost:5000/hello` 并点击“发送”。
-
-POST 请求：输入`http://localhost:5000/greet`，选择“POST”，将 Body 设置为原始 JSON，并输入`{"name": "Alice"}`。然后点击“发送”。
+POST 请求：输入 `http://localhost:5000/greet`，选择“POST”，将 Body 设置为原始 JSON，并输入 `{"name": "Alice"}`。然后点击“发送”。
 
 图 5-2 和图 5-3 展示了 Postman 中的操作。
 
@@ -4183,7 +3731,7 @@ POST 请求：输入`http://localhost:5000/greet`，选择“POST”，将 Body 
 
 ## 将机器学习模型转换为 API
 
-训练完成后，可以使用 Pickle 库将模型序列化以保存其状态，后续加载该模型用于进行预测。Pickle 是 Python 中用于序列化和反序列化 Python 对象结构的模块，也称为序列化或展平。序列化是将 Python 对象转换为字节流的过程，以便保存到文件或数据库，或通过网络传输。反序列化则是将字节流转换回 Python 对象的逆过程。
+训练完成后，可以使用 `Pickle` 库将模型序列化以保存其状态，后续加载该模型用于进行预测。`Pickle` 是 Python 中用于序列化和反序列化 Python 对象结构的模块，也称为序列化或展平。序列化是将 Python 对象转换为字节流的过程，以便保存到文件或数据库，或通过网络传输。反序列化则是将字节流转换回 Python 对象的逆过程。
 
 ### 如何使用 Pickle
 
@@ -4239,7 +3787,7 @@ POST 请求：输入`http://localhost:5000/greet`，选择“POST”，将 Body 
 
 ### 代码说明
 
-`import pickle` 语句导入 pickle 模块，该模块提供序列化和反序列化 Python 对象的函数。
+`import pickle` 语句导入 `pickle` 模块，该模块提供序列化和反序列化 Python 对象的函数。
 
 `open('model.pkl', 'wb')` 语句以二进制写入模式打开名为 `model.pkl` 的文件，该文件用于保存序列化对象。
 
@@ -4333,99 +3881,99 @@ JSON 响应中返回的预测消息指示根据年收入和消费评分预测的
 
 这些平台中的许多在初始阶段提供免费托管选项，之后通常会收取信用卡费用。在选择托管提供商时，了解条款和价格细节非常重要，以便有效管理成本并做出明智的托管决策。这将帮助您高效地管理费用并根据需求选择合适的托管方案。
 
-
-
-我们选择使用 Pythonanywhere（[Pythonanywhere](https://www.google.com/url?q=https://www.pythonanywhere.com/&sa=D&source=editors&ust=1720099682040546&usg=AOvVaw1SAR9Jd7pT-ohjVTBx6gpe)）作为本应用的托管平台，因为其稳健性和灵活性，使其非常适合我们的测试部署。Aiven 提供可靠的应用部署环境，并支持 Python 以及必要库的安装。然而，您可以自由选择任何支持 Python 并能够安装所需库或提供管理依赖关系的环境的部署平台。这种灵活性使您能够根据项目需求和运营偏好选择最合适的平台。
+我们选择使用 Pythonanywhere（`https://www.pythonanywhere.com/`）作为本应用的托管平台，因为其稳健性和灵活性，使其非常适合我们的测试部署。Aiven 提供可靠的应用部署环境，并支持 Python 以及必要库的安装。然而，您可以自由选择任何支持 Python 并能够安装所需库或提供管理依赖关系的环境的部署平台。这种灵活性使您能够根据项目需求和运营偏好选择最合适的平台。
 
 ## Step 1: Access PythonAnywhere
 
-在浏览器中访问 [Pythonanywhere](https://www.google.com/url?q=https://www.pythonanywhere.com/&sa=D&source=editors&ust=1720099682041114&usg=AOvVaw0StOAWzfUfgmSVhQZUG3eO) 以访问该平台。图 5-7 展示了 PythonAnywhere 的登陆页面。点击 **plans & pricing** 并点击“Create a Beginner account”按钮，如图 5-8 所示。  
+在浏览器中访问 `https://www.pythonanywhere.com/` 以访问该平台。图 5-7 展示了 PythonAnywhere 的登陆页面。点击 **plans & pricing** 并点击“Create a Beginner account”按钮，如图 5-8 所示。
 
 ![](img/image_rsrc57Y.jpg)Figure 5-7.
 
 ## Step 2: Start the onboarding process
 
-点击图 5-8 中所示的按钮，启动入职流程。完成入职后，继续登录。  
+点击图 5-8 中所示的按钮，启动入职流程。完成入职后，继续登录。
 
 ![](img/image_rsrc57Z.jpg)Figure 5-8.
 
 ## Step 3: Login form
 
-图 5-9 展示了登录表单，您需要在此输入登录信息以进入仪表盘。  
+图 5-9 展示了登录表单，您需要在此输入登录信息以进入仪表盘。
 
 ![](img/image_rsrc580.jpg)Figure 5-9.
 
 ## Step 4: Navigate to Files
 
-从仪表盘点击 **Files** 链接，如图 5-10 所示。  
+从仪表盘点击 **Files** 链接，如图 5-10 所示。
 
 ![](img/image_rsrc581.jpg)Figure 5-10.
 
 ## Step 5: Create a directory
 
-为您的应用文件命名目录，点击 **New directory** 按钮创建它，如图 5-11 所示。  
+为您的应用文件命名目录，点击 **New directory** 按钮创建它，如图 5-11 所示。
 
 ![](img/image_rsrc582.jpg)Figure 5-11.
 
 ## Step 6: Upload files
 
-进入您创建的 **mysite** 目录。点击 **Upload a file** 按钮，选择 `app.py` 并提交。重复此过程上传 `model.pkl`。上传的文件将如图 5-12 所示。  
+进入您创建的 **mysite** 目录。点击 **Upload a file** 按钮，选择 `app.py` 并提交。重复此过程上传 `model.pkl`。上传的文件将如图 5-12 所示。
 
 ![](img/image_rsrc583.jpg)Figure 5-12.
 
 ## Step 7: Access Web setup
 
-点击 **Web** 链接，如图 5-13 所示。这将引导您进入 API 或应用的设置区域。  
+点击 **Web** 链接，如图 5-13 所示。这将引导您进入 API 或应用的设置区域。
+
+
 
 ![](img/image_rsrc584.jpg)Figure 5-13.
 
 ## Step 8: Add a new web app
 
-点击“Add a new web app”按钮，然后选择默认域名的单选按钮，如图 5-14 所示。请注意，显示的名称会根据您的个人入职信息而变化，可能与示例不同。  
+点击“Add a new web app”按钮，然后选择默认域名的单选按钮，如图 5-14 所示。请注意，显示的名称会根据您的个人入职信息而变化，可能与示例不同。
 
 ![](img/image_rsrc585.jpg)Figure 5-14.
 
 ## Step 9: Choose a web framework
 
-选择与开发 API 所用的 Python Web 框架相匹配的框架，例如 Flask，如图 5-15 所示。  
+选择与开发 API 所用的 Python Web 框架相匹配的框架，例如 Flask，如图 5-15 所示。
 
 ![](img/image_rsrc586.jpg)Figure 5-15.
 
 ## Step 10: Choose Python version
 
-选择您的解决方案所基于的 Python 版本。例如，如果您的 API 使用 Python 3.9 开发，请选择该版本，如图 5-16 所示。  
+选择您的解决方案所基于的 Python 版本。例如，如果您的 API 使用 Python 3.9 开发，请选择该版本，如图 5-16 所示。
 
 ![](img/image_rsrc587.jpg)Figure 5-16.
 
 ## Step 11: Set the WSGI configuration file
 
-图 5-17 显示了应用启动时执行的应用文件路径。保持默认设置并点击 **Next**。我们稍后会将路径从 `flask_app.py` 更改为 `app.py`（实际的应用文件名）。目前，点击“Next”按钮进入图 5-18 所示的界面。  
+图 5-17 显示了应用启动时执行的应用文件路径。保持默认设置并点击 **Next**。我们稍后会将路径从 `flask_app.py` 更改为 `app.py`（实际的应用文件名）。目前，点击“Next”按钮进入图 5-18 所示的界面。
 
 ![](img/image_rsrc588.jpg)Figure 5-17.
 
-Web 仪表盘显示我们的应用设置成功，如图 5-18 中的浅绿色指示信息所示。  
+Web 仪表盘显示我们的应用设置成功，如图 5-18 中的浅绿色指示信息所示。
 
 ![](img/image_rsrc589.jpg)Figure 5-18.
 
 ## Step 12: Edit WSGI configuration
 
-向下滚动至图 5-19 所示区域。点击“WSGI configuration file”链接以编辑文件，并将其更新为启动 API 时应指向的文件。当前指向 PythonAnywhere 主机默认创建的文件，如图 5-20 所示。将图中高亮项更改为图 5-21 中的内容。  
+向下滚动至图 5-19 所示区域。点击“WSGI configuration file”链接以编辑文件，并将其更新为启动 API 时应指向的文件。当前指向 PythonAnywhere 主机默认创建的文件，如图 5-20 所示。将图中高亮项更改为图 5-21 中的内容。
 
-![](img/image_rsrc58A.jpg)Figure 5-19.  
+![](img/image_rsrc58A.jpg)Figure 5-19.
 
-![](img/image_rsrc58B.jpg)Figure 5-20.  
+![](img/image_rsrc58B.jpg)Figure 5-20.
 
 ![](img/image_rsrc58C.jpg)Figure 5-21.
 
 ## Step 13: Reload the application
 
-向上滚动并点击“Reload anyasorchigozie.pythonanywhere.com”按钮，以刷新应用配置，如图 5-22 所示。  
+向上滚动并点击“Reload anyasorchigozie.pythonanywhere.com”按钮，以刷新应用配置，如图 5-22 所示。
 
 ![](img/image_rsrc58D.jpg)Figure 5-22.
 
 ## Step 14: Access the API
 
-我们的 API 现在可在以下 URL 访问：[`anyasorchigozie.pythonanywhere.com/api/custype`](https://www.google.com/url?q=http://anyasorchigozie.pythonanywhere.com/api/custype&sa=D&source=editors&ust=1720099682046404&usg=AOvVaw3x0oFS1EKDQMIENm_UZnSC)，如图 5-23 所示。  
+我们的 API 现在可在以下 URL 访问：[`anyasorchigozie.pythonanywhere.com/api/custype`](https://www.google.com/url?q=http://anyasorchigozie.pythonanywhere.com/api/custype&sa=D&source=editors&ust=1720099682046404&usg=AOvVaw3x0oFS1EKDQMIENm_UZnSC)，如图 5-23 所示。
 
 ![](img/image_rsrc58E.jpg)Figure 5-23. 这与本地测试时的输出相同，表明我们的 API 与模型已成功部署，并可供应用调用以解决业务问题。
 
@@ -4433,7 +3981,7 @@ Web 仪表盘显示我们的应用设置成功，如图 5-18 中的浅绿色指�
 
 在第 5 章中，我们探讨了如何将机器学习模型转换为 pickle 文件，并无缝地将其集成到应用作为 API。这一过程使我们能够在真实场景中运营机器学习模型。在支持 Python 应用的平台上托管这些 API 对于最大化机器学习在组织中的实用性至关重要。它使企业能够在全企业范围内充分挖掘机器学习投资的价值。
 
-该方法不仅适用于单一行业；一旦模型训练完成，将其转换为 API 并部署，便可实现跨行业的广泛应用。这种做法确保了机器学习的益处 —  — 从改进决策到自动化 —  — 能在各种行业和场景中得到实现。
+该方法不仅适用于单一行业；一旦模型训练完成，将其转换为 API 并部署，便可实现跨行业的广泛应用。这种做法确保了机器学习的益处 — — 从改进决策到自动化 — — 能在各种行业和场景中得到实现。
 
 随着我们机器学习之旅的结束，我鼓励您继续练习并探索 AI 所提供的自动化和创新机遇。手握创作的力量，充满热情地投身于编码实践。祝编码愉快！
 

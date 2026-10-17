@@ -1,65 +1,32 @@
+
 # PHP & MySQL 快速入门指南
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 安装 Abyss Web 服务器
-## 安装 PHP 引擎
-# 为 Abyss 配置 PHP
-## 嵌入 PHP 脚本
-# 安装 MySQL 服务器
-## 使用 MySQL 客户端
-## 创建 MySQL 用户
-## 连接 PHP 与 MySQL
-## 总结
-
 ## 介绍 PHP 与 MySQL
+
 最具吸引力的现代网站通过动态响应某些当前条件（如用户名、当天时间、最新博客、购物车内容等）来提供定制化的用户体验。这些动态网站中的许多都是使用 PHP 和 MySQL 创建的。
 
 ![image](img/pg8_1.jpg)
 
-## 什么是 PHP？
+### 什么是 PHP？
+
 PHP 是一种广泛使用的通用型脚本语言，特别适用于 Web 开发，并可以嵌入到 HTML 中。它由程序员 Rasmus Lerdorf 创建，最初是一组维护其网站的脚本，并于 1995 年 6 月 8 日作为“个人主页工具（PHP Tools）版本 1.0”发布。这些脚本在 1997 年的 2 版本中得到了扩展，名称在次年的 3 版本中变为一个递归缩写“PHP: Hypertext Preprocessor（超文本预处理器）”。2000 年随着 PHP4 的发布，性能、可靠性和扩展性得到了提高，该版本由新的 Zend 引擎（一个虚拟机）驱动。当前版本 PHP5 由 Zend II 引擎驱动，由 PHP 组作为免费软件制作。今天，PHP 已安装在超过 2000 万个网站和 100 万台 Web 服务器上。
 
 ![image](img/pg8_2.jpg)
 
-## 什么是 MySQL？
+### 什么是 MySQL？
+
 MySQL 是世界上最流行的数据库软件，用于管理存储的数据，被称为数据库管理软件（DBMS）或关系型数据库管理软件（RDBMS）。MySQL 由 Michael Wildenius 和 David Axmark 于 1995 年创建。其名称（正式读作“My-SQL”，但通常读作“My Sequel”）是 Michael 的女儿的名字“My”与“SQL”（结构化查询语言）的组合。MySQL 最初由其创始人创立的 MySQL AB 公司生产，该公司在 2008 年被太阳微系统收购，随后于 2010 年被 Oracle 收购。当前版本 MySQL 8.0 由 InnoDB 存储引擎驱动，MySQL 社区版版作为免费软件提供。今天，MySQL 被用于一些访问频率最频繁的网站，包括 Google、维基百科、Facebook 和 Twitter。
 
 重要的是，PHP 和 MySQL 都是“服务端”技术——也就是说，它们驻留在 Web 服务器上。它们不是驻留在用户计算机上的“客户端”技术。因此，它们的魔力发生在“云端”。
 
-## 理解云端
+### 理解云端
+
 当用户在浏览器中请求查看网页时，浏览器会向 Web 服务器请求页面，并通过 HTTP 协议接收响应页面。如果网页包含 PHP 脚本，Web 服务器可能会先调用 PHP 引擎处理代码，并在需要时在发送响应到浏览器之前从 MySQL 数据库请求数据。
 
 ![image](img/pg9_1.jpg)
 
 接下来的页面将描述如何在本地安装以下服务端技术，为数据驱动型网站创建开发环境：
+
 * Web 服务器 – Abyss Web Server 免费个人版
 * PHP 引擎 – PHP 7.2
 * MySQL 服务器 – MySQL 社区版 8.0
@@ -69,6 +36,7 @@ MySQL 是世界上最流行的数据库软件，用于管理存储的数据，�
 HTTP（超文本传输协议）是通用通信标准，允许任何连接到任何 Web 服务器的计算机访问网络上的文件。书中的示例是用列出的软件创建和测试的，但对于其他版本可能需要修改。
 
 ## 安装 Abyss Web 服务器
+
 Abyss 是一款适用于 Windows、macOS/Mac X 和 Linux 操作系统的免费紧凑型服务器，可以在 `aprelium.com` 下载。尽管占用空间很小，但 Abyss 支持许多强大的功能，包括使用服务器端脚本生成动态内容——因此是 PHP 和 MySQL 的理想伴侣。你可以在自己的电脑上安装 Abyss Web 服务器，为 PHP 和 MySQL 开发提供环境。
 
 ![image](img/1b.jpg)
@@ -100,6 +68,7 @@ Windows 版本的 Abyss 安装包是一个名为 `abws1.exe` 的可执行文件�
 在 Abyss 控制台中，点击 Configure（配置）按钮然后点击 General（常规）图标，查看默认 HTTP 端口为 80，默认 Documents Path（你的网页所在路径）为 `/htdocs`。
 
 ## 安装 PHP 引擎
+
 PHP 解释器“引擎”用于网页中实现 PHP 脚本，适用于 Windows、macOS/Mac X 和 Linux 操作系统，可在 `php.net` 免费下载。
 
 关于 PHP 安装的进一步指导可以在 `php.net/manual/en/install.php` 获取。
@@ -120,10 +89,7 @@ PHP 解释器“引擎”用于网页中实现 PHP 脚本，适用于 Windows、
 
 在为 Abyss Web 服务器配置 PHP 时需要 PHP 的安装位置——请记录目标文件夹。
 
-
-
-
-安装 PHP 后，Web 服务器尚无法执行 PHP 脚本，除非对其进行配置以识别这些脚本并找到 PHP 解释器引擎——所有说明如第 14-15 页 所示。
+安装 PHP 后，Web 服务器尚无法执行 PHP 脚本，除非对其进行配置以识别这些脚本并找到 PHP 解释器引擎——所有说明如第 14-15 页所示。
 
 ## 为 PHP 配置 Abyss
 
@@ -131,7 +97,7 @@ PHP 解释器“引擎”用于网页中实现 PHP 脚本，适用于 Windows、
 
 ![image](img/pg14_1.jpg)
 
-关于 Abyss Web 服务器配置的更多指导，可以在在线访问：**[aprelium.com/abyssws/start.html](http://www.aprelium.com/abyssws/start.html)**。
+关于 Abyss Web 服务器配置的更多指导，可以在线访问：**[aprelium.com/abyssws/start.html](http://www.aprelium.com/abyssws/start.html)**。
 
 ![image](img/1b.jpg)在浏览器地址栏中输入 `http://localhost:9999`（或点击系统托盘中的 Abyss 图标）启动 Abyss 服务器控制台，然后点击 `Configure` 按钮打开配置页面。
 
@@ -153,7 +119,7 @@ PHP 解释器“引擎”用于网页中实现 PHP 脚本，适用于 Windows、
 
 ![image](img/pg15_1.jpg)
 
-现在 Abyss Web 服务器应已在您的系统中运行，并正确配置为识别具有 `.php` 文件扩展名的文档应由 PHP 引擎解释。现在可以通过创建一个简单的 PHP 脚本由 Abyss 为您的 浏览器提供服务来测试配置。
+现在 Abyss Web 服务器应已在您的系统中运行，并正确配置为识别具有 `.php` 文件扩展名的文档应由 PHP 引擎解释。现在可以通过创建一个简单的 PHP 脚本由 Abyss 为您的浏览器提供服务来测试配置。
 
 ![image](img/pg15_2.jpg)
 
@@ -181,7 +147,7 @@ PHP 脚本对大小写敏感，因此您必须仅使用小写字母复制列出�
 
 ## 嵌入 PHP 脚本
 
-PHP 脚本可以嵌入 HTML 文档中——这意味着 PHP 和 HTML 代码可以和谐地存在于同一个文件中。所有嵌入的 PHP 代码必须包含在 `<?php` 和 `?>` 标签内，以便 PHP 引擎能够识别并进行解释。通常，PHP 代码会将内容写入 HTML 文档的 body 部分，然后发送到 浏览器。
+PHP 脚本可以嵌入 HTML 文档中——这意味着 PHP 和 HTML 代码可以和谐地存在于同一个文件中。所有嵌入的 PHP 代码必须包含在 `<?php` 和 `?>` 标签内，以便 PHP 引擎能够识别并进行解释。通常，PHP 代码会将内容写入 HTML 文档的 body 部分，然后发送到浏览器。
 
 ![image](img/pg16_1.jpg)
 
@@ -206,8 +172,6 @@ echo "Hello World!";
 ?>
 ```
 
-
-
 记下你选择的 root 用户密码、用户名和用户密码——你将经常需要它们。
 
 ![image](img/hot.jpg)
@@ -224,13 +188,13 @@ echo "Hello World!";
 
 ![image](img/2b.jpg)在 `mysql>` 提示符下，准确输入此命令以创建一个名为“site\_db”的新数据库
 
-```
+```sql
 CREATE DATABASE IF NOT EXISTS site\_db ;
 ```
 
 ![image](img/3b.jpg)现在，准确输入另一条命令来显示你的 MySQL 服务器上当前的所有数据库
 
-```
+```sql
 SHOW DATABASES ;
 ```
 
@@ -254,14 +218,14 @@ MySQL 命令行客户端也可以通过执行命令 `mysql -u root -p` 从常规
 
 root 用户可以在 MySQL 命令行客户端中通过执行一个识别唯一用户的子句来创建用户，如下所示：
 
-```
+```sql
 CREATE USER IF NOT EXISTS ‘username’@’hostname’*
 IDENTIFIED WITH mysql\_native\_password BY ‘password’* ;
 ```
 
 root 用户随后可以执行一个子句，为特定用户指定特定数据库允许的权限，如下所示：
 
-```
+```sql
 GRANT *privileges* ON database.\* TO ‘username’@‘hostname’* ;
 ```
 
@@ -269,21 +233,21 @@ GRANT *privileges* ON database.\* TO ‘username’@‘hostname’* ;
 
 ![image](img/1b.jpg)以 root 用户身份登录 MySQL 命令行客户端，然后准确输入此子句来创建用户
 
-```
+```sql
 CREATE USER IF NOT EXISTS ‘mike’@’locahost’
 IDENTIFIED WITH mysql\_native\_password BY ‘easysteps’ ;
 ```
 
 ![image](img/2b.jpg)接下来，允许访问“site\_db”数据库的权限
 
-```
+```sql
 GRANT SELECT, INSERT, UPDATE ON site\_db.\*
 TO ‘mike’@‘localhost’ ;
 ```
 
 ![image](img/3b.jpg)现在，执行一个子句来确认此用户的权限
 
-```
+```sql
 SHOW GRANTS FOR ‘mike’@’localhost’ ;
 ```
 
@@ -313,9 +277,11 @@ mysqli\_set\_charset( $dbc, ‘charset’ ) ;
 
 ![image](img/pg22_1.jpg)
 
-connect\_db.php
+`connect_db.php`
 
 ![image](img/1b.jpg)启动纯文本编辑器，并创建一个描述之前页面参数的连接脚本
+
+
 
 ```php
 <?php
@@ -328,11 +294,11 @@ OR die ( mysqli\_connect\_error() ) ;
 mysqli\_set\_charset( $dbc, ‘charset’ ) ;
 ```
 
-![image](img/2b.jpg)将该文件保存在 Web 服务器的 `/htdocs` 的父目录中，命名为 connect\_db.php
+![image](img/2b.jpg)将该文件保存在 Web 服务器的 `/htdocs` 的父目录中，命名为 `connect_db.php`
 
 ![image](img/3b.jpg)
 
-require.php
+`require.php`
 
 ![image](img/4b.jpg)现在，编写一个引入连接脚本的脚本
 
@@ -342,7 +308,7 @@ require.php
 require (../connect_db.php ;
 ```
 
-![image](img/5b.jpg)将脚本保存在 Web 服务器的 `/htdocs` 目录中，命名为 require.php，然后在浏览器中打开它以查看连接详情
+![image](img/5b.jpg)将脚本保存在 Web 服务器的 `/htdocs` 目录中，命名为 `require.php`，然后在浏览器中打开它以查看连接详情
 
 ![image](img/6b.jpg)接下来，通过添加显示指令来完成此脚本
 
@@ -353,11 +319,11 @@ if( mysqli_ping( $dbc ) )
 ’connected on ‘ . mysqli_get_host_info( $dbc ) ; }
 ```
 
-![image](img/pg23_1)临时修改 connect\_db.php 将数据库更改为不存在的名称，然后保存文件并在浏览器中刷新页面以查看错误
+![image](img/pg23_1)临时修改 `connect_db.php` 将数据库更改为不存在的名称，然后保存文件并在浏览器中刷新页面以查看错误
 
 ![image](img/pg23_2)
 
-![image](img/pg23_3)最后，通过将数据库名称改 site\_db 来修正 connect\_db.php 脚本，然后保存文件并刷新页面看到再次成功
+![image](img/pg23_3)最后，通过将数据库名称改 `site_db` 来修正 `connect_db.php` 脚本，然后保存文件并刷新页面看到再次成功
 
 恭喜，你现在已成功配置了用于开发的 Abyss Web Server、PHP 引擎和 MySQL 服务器。
 
@@ -367,49 +333,41 @@ if( mysqli_ping( $dbc ) )
 
 ## 总结
 
-•PHP 是一种脚本语言，特别适用于 Web 开发，因为它可以嵌入 HTML 中。
-
-•MySQL 是一种关系型数据库管理软件（RDBMS），可以为网站提供后端数据存储。
-
-•PHP 和 MySQL 都是服务器端技术，从云端向浏览器交付数据驱动的网站。
-
-•通过安装 Web 服务器、PHP 引擎和 MySQL 服务器可以创建一个本地开发环境。
-
-•Web 服务器必须配置为识别脚本，以便将其重定向到 PHP 引擎进行解释。
-
-
-
-
-*   所有嵌入的 PHP 代码必须包含在 `<?php` 和 `?>` 标签中，以便 PHP 引擎能够识别。
-*   包含 PHP 脚本的文档最好使用流行的 UTF-8 格式进行编码。
-*   MySQL Server 可以安装在 Windows 系统上作为后台服务运行，以便它始终随时可用。
-*   MySQL 命令行客户端随服务器包一起安装，可以创建和操作数据库。
-*   安装 MySQL 时选择的 root 用户密码可用于启动 MySQL 命令行客户端。
-*   在 PHP 中，可以使用标准脚本尝试连接 MySQL 数据库，该脚本描述了 `Host`、`Username`、`Password` 和数据库名称等连接参数。
-*   任何 PHP 脚本都可以通过 `require` 语句并指定另一个脚本的路径来包含另一个 PHP 脚本。
+- PHP 是一种脚本语言，特别适用于 Web 开发，因为它可以嵌入 HTML 中。
+- MySQL 是一种关系型数据库管理软件（RDBMS），可以为网站提供后端数据存储。
+- PHP 和 MySQL 都是服务器端技术，从云端向浏览器交付数据驱动的网站。
+- 通过安装 Web 服务器、PHP 引擎和 MySQL 服务器可以创建一个本地开发环境。
+- Web 服务器必须配置为识别脚本，以便将其重定向到 PHP 引擎进行解释。
+- 所有嵌入的 PHP 代码必须包含在 `<?php` 和 `?>` 标签中，以便 PHP 引擎能够识别。
+- 包含 PHP 脚本的文档最好使用流行的 UTF-8 格式进行编码。
+- MySQL Server 可以安装在 Windows 系统上作为后台服务运行，以便它始终随时可用。
+- MySQL 命令行客户端随服务器包一起安装，可以创建和操作数据库。
+- 安装 MySQL 时选择的 root 用户密码可用于启动 MySQL 命令行客户端。
+- 在 PHP 中，可以使用标准脚本尝试连接 MySQL 数据库，该脚本描述了 `Host`、`Username`、`Password` 和数据库名称等连接参数。
+- 任何 PHP 脚本都可以通过 `require` 语句并指定另一个脚本的路径来包含另一个 PHP 脚本。
 
 # 2 执行操作
 
 本章演示了如何使用 PHP 运算符来存储和处理数据。
 
-* 创建变量
-* 管理字符串
-* 生成数组
-* 排序数组
-* 描述维度
-* 进行算术运算
-* 比较值
-* 评估逻辑
-* 定义常量
-* 总结
+- 创建变量
+- 管理字符串
+- 生成数组
+- 排序数组
+- 描述维度
+- 进行算术运算
+- 比较值
+- 评估逻辑
+- 定义常量
+- 总结
 
 ## 创建变量
 
 “变量”是 PHP 脚本中一个命名的容器，可以在其中存储数据值。存储的值可以使用变量名进行引用，并随着脚本的执行而更改（变化）。脚本作者可以为变量选择任何名称，只要它遵循以下三个命名规范：
 
-*   名称必须以 `$` 美元符号开始——例如 `$name`。
-*   名称可以由字母、数字和下划线字符组成，但不能包含空格——例如 `$subtotal_1`。
-*   `$` 符号后的第一个字符必须是字母或下划线字符——不能是数字。
+- 名称必须以 `$` 美元符号开始——例如 `$name`。
+- 名称可以由字母、数字和下划线字符组成，但不能包含空格——例如 `$subtotal_1`。
+- `$` 符号后的第一个字符必须是字母或下划线字符——不能是数字。
 
 注意，PHP 中的变量名是区分大小写的，因此 `$name`、`$Name` 和 `$NAME` 是三个相互独立的变量。
 
@@ -449,7 +407,7 @@ echo “Body temperature is $body_temp degrees Fahrenheit” ;
 
 ![image](img/pg27_1.jpg)
 
-variable.php
+`variable.php`
 
 ![image](img/2r.jpg)现在，在 PHP 标签之间插入一条语句来创建并初始化一个变量
 
@@ -528,7 +486,7 @@ $song_title = $hi . $bye ; # ‘HelloGoodbye’
 此外，在连接字符串时可以很好地插入空格和标点，因此上面的标题赋值可以修改为包含逗号和空格：
 
 ```php
-$song_title = $hi . ‘‘ . $bye ; # ‘Hello, Goodbye’
+$song_title = $hi . ‘’ . $bye ; # ‘Hello, Goodbye’
 ```
 
 ![image](img/forget.jpg)
@@ -545,7 +503,7 @@ $song_title = $hi . ‘‘ . $bye ; # ‘Hello, Goodbye’
 
 ![image](img/pg29_1.jpg)
 
-string.php
+`string.php`
 
 ![image](img/2r.jpg)现在，在 PHP 标签之间插入两条语句来创建并初始化两个变量
 
@@ -567,10 +525,6 @@ echo “<p>It is often said that <q>$phrase</q> </p>” ;
 ```
 
 ![image](img/5r.jpg)插入一条语句将字符串连接到变量
-
-
-
-
 
 ```php
 $phrase = $phrase . ‘ and never simple’ ;
@@ -662,7 +616,7 @@ foreach( $months as $key => $value )
 
 ![image](img/pg31_1.jpg)
 
-array.php
+`array.php`
 
 ![image](img/2r.jpg)现在，在 PHP 标签之间插入一个语句创建并初始化一个带有值的变量数组
 
@@ -761,7 +715,9 @@ asort( $fruits );
 
 键将被保留。
 
-如果你想按值降序排序但保留键，可以使用 `arsort()`：
+
+
+如果你想按值降序排序但保留键，可以使用`arsort()`：
 
 ```php
 arsort( $fruits );
@@ -769,13 +725,9 @@ arsort( $fruits );
 
 键将被保留。
 
-
-
-
-
 ![image](img/forget.jpg)
 
-在键（key）重要的情况下，请勿使用 `sort()` 或 `rsort()` 函数。
+在键（key）重要的情况下，请勿使用`sort()`或`rsort()`函数。
 
 ### 描述维度
 
@@ -784,17 +736,22 @@ arsort( $fruits );
 ![image](img/pg34_1.jpg)
 
 | 元素内容... || **A** || **B** || **C** || **D** || **E** |
+
 | --- | --- | --- | --- | --- | --- |
+
 | 索引数字... || [0] || [1] || [2] || [3] || [4] |
 
 数组也可以有多个索引——用于表示多个维度。使用两个索引创建的数组是二维数组，其元素出现在多行中：
 
 | 第一个索引 || [0] || **A** || **B** || **C** || **D** || **E** |
+
 | --- | --- | --- | --- | --- | --- |
+
 | 第二个索引 || [1] || **F** || **G** || **H** || **I** || **J** |
+
 | | [0] || [1] || [2] || [3] || [4] |
 
-在多维数组中，每个元素的值通过指定每个索引的数字来引用。例如，对于上面的二维数组，`[1] [2]` 处的元素包含字母 `H`。
+在多维数组中，每个元素的值通过指定每个索引的数字来引用。例如，对于上面的二维数组，`[1] [2]`处的元素包含字母`H`。
 
 二维数组用于存储基于网的信息，例如 XY 坐标。创建一个具有三个索引的三维数组将允许存储 XYZ 坐标。
 
@@ -806,7 +763,7 @@ arsort( $fruits );
 
 `echo “Element value is {$matrix['Letter'][0]} ” ;`
 
-可以使用 `foreach` 循环通过遍历数组来访问多维数组中的所有内部数组。然后可以使用嵌套的 `foreach` 循环依次引用每个元素。
+可以使用`foreach`循环通过遍历数组来访问多维数组中的所有内部数组。然后可以使用嵌套的`foreach`循环依次引用每个元素。
 
 ![image](img/snake.jpg)
 
@@ -827,7 +784,9 @@ matrix.php
 ![image](img/2r.jpg)现在，在 PHP 标签之间插入一条语句，创建并初始化两个普通变量数组和一个带键名的二维数组：
 
 `$letters = array( ‘A’ , ‘B’ , ‘C’ ) ;`
+
 `$numbers = array( 1 , 2 , 3 ) ;`
+
 `$matrix = array( ‘Letter’ => $letters , ‘Number’ => $numbers ) ;`
 
 ![image](img/3r.jpg)接下来，插入一条语句来显示存储的单个值：
@@ -848,7 +807,7 @@ foreach( $matrix as $array => $list )
 }
 ```
 
-![image](img/5r.jpg)将文档保存到 浏览器的 `/htdocs` 目录中作为 `matrix.php`，然后通过 HTTP 打开页面以查看变量数组值的显示：
+![image](img/5r.jpg)将文档保存到 浏览器的`/htdocs`目录中作为`matrix.php`，然后通过 HTTP 打开页面以查看变量数组值的显示：
 
 ![image](img/pg35_2.jpg)
 
@@ -865,29 +824,34 @@ foreach( $matrix as $array => $list )
 PHP 脚本中常用的算术运算符下表所示，以及它们执行的操作：
 
 | 运算符: | 操作: |
+
 | --- | --- |
+
 | `+` | 加法 |
+
 | `-` | 减法 |
+
 | `*` | 乘法 |
+
 | `/` | 除法 |
+
 | `%` | 取模 |
+
 | `++` | 递增 |
+
 | `--` | 递减 |
 
 加、减、乘、除法运算符的作用如你所预期的那样工作。然而，当使用多个运算符时，必须对表达式进行分组以保持清晰度：
 
 `a = b * c -d % e / f ; # 这不清晰.`
+
 `a = ( b * c ) - ( ( d % e ) / f ) ; # 这清晰得多.`
 
+`==`等于运算符会比较两个操作数，如果两者的数值值相等，则返回一个布尔值`TRUE`结果，否则返回`FALSE`。字符和字符串也会根据它们的 ASCII 代码值进行数值比较。相反，`!=`不等运算符在两个操作数不相等时返回`TRUE`，否则返回`FALSE`。
 
+`>`“大于”运算符比较两个操作数，如果第一个操作数的值大于第二个操作数，则返回`TRUE`；如果它的值等于或小于另一个值，则返回`FALSE`。`<`“小于”运算符执行相同的比较，但如果第一个操作数的值小于第二个操作数，则返回`TRUE`，否则返回`FALSE`。在`>`“大于”或`<`“小于”运算符后添加`=`运算符，可以使其在两个操作数完全相等时也返回`TRUE`。
 
-
-
-`==` 等于运算符会比较两个操作数，如果两者的数值值相等，则返回一个布尔值 `TRUE` 结果，否则返回 `FALSE`。字符和字符串也会根据它们的 ASCII 代码值进行数值比较。相反，`!=` 不等运算符在两个操作数不相等时返回 `TRUE`，否则返回 `FALSE`。
-
-`>` “大于”运算符比较两个操作数，如果第一个操作数的值大于第二个操作数，则返回 `TRUE`；如果它的值等于或小于另一个值，则返回 `FALSE`。`<` “小于”运算符执行相同的比较，但如果第一个操作数的值小于第二个操作数，则返回 `TRUE`，否则返回 `FALSE`。在 `>` “大于”或 `<` “小于”运算符后添加 `=` 运算符，可以使其在两个操作数完全相等时也返回 `TRUE`。
-
-`?:` 三元运算符评估一个表达式以得到 `TRUE` 或 `FALSE` 的布尔值，然后根据评估结果执行两个条语句中的一条。可以使用此语法将适当的返回值赋值给变量：
+`?:`三元运算符评估一个表达式以得到`TRUE`或`FALSE`的布尔值，然后根据评估结果执行两条语句中的一条。可以使用此语法将适当的返回值赋值给变量：
 
 `$var = ( *expression*) ? *if-TRUE-return-this* : *if-FALSE-return-this* ;`
 
@@ -945,56 +909,59 @@ comparison.php
 
 `echo “1 <= 0 is $result <br>” ;`
 
-![image](img/5r.jpg)将文档保存在网络浏览器的 `/htdocs` 目录并为 `comparison.php`，然后通过 HTTP 访问页面以查看显示的结果
+![image](img/5r.jpg)将文档保存在网络浏览器的`/htdocs`目录并为`comparison.php`，然后通过 HTTP 访问页面以查看显示的结果
 
 ![image](img/pg39_2.jpg)
 
 ![image](img/hot.jpg)
 
-在 PHP 语言中，布尔值 `TRUE` 在数值上用 1 表示。
+在 PHP 语言中，布尔值`TRUE`在数值上用 1 表示。
 
 ![image](img/hot.jpg)
 
-大写 ‘A’ 的 ASCII 代码值为 65，小写 ‘a’ 的值为 97 —— 所以它们的比较结果为 `FALSE`。
+大写‘A’的 ASCII 代码值为 65，小写‘a’的值为 97 —— 所以它们的比较结果为`FALSE`。
 
 ### 逻辑评估
 
 PHP 中常用的逻辑运算符如下表所示：
 
 | 运算符: 操作: |
+
 | --- | --- |
+
 | `&&` | 逻辑与 |
-| `AND` | 逻辑与（&& 的替代形式）| |
+
+| `AND` | 逻辑与（`&&`的替代形式）| |
+
 | `||` | 逻辑或 |
-| `OR` | 逻辑或（|| 的替代形式）| |
+
+| `OR` | 逻辑或（`||`的替代形式）| |
+
 | `!` | 逻辑非 |
 
-逻辑运算符用于具有 `TRUE` 或 `FALSE` 布尔值的操作数，或者可以转换为 `TRUE` 或 `FALSE` 的表达式。
+逻辑运算符用于具有`TRUE`或`FALSE`布尔值的操作数，或者可以转换为`TRUE`或`FALSE`的表达式。
 
-`&&` 与运算符评估两个操作数，只有当两个操作数均为 `TRUE` 时才返回 `TRUE`；否则，它返回 `FALSE`。这用于条件分支，通过测试两个条件来决定 PHP 脚本的方向。如果两个条件都满足，程序将进入某个方向，否则将进入另一个方向。
+`&&`与运算符评估两个操作数，只有当两个操作数均为`TRUE`时才返回`TRUE`；否则，它返回`FALSE`。这用于条件分支，通过测试两个条件来决定 PHP 脚本的方向。如果两个条件都满足，程序将进入某个方向，否则将进入另一个方向。
 
-与需要两个操作数均为 `TRUE` 的 `&&` 与运算符不同，`||` 或运算符评估两个操作数，如果其中一个操作数为 `TRUE`，则返回 `TRUE`。如果两个操作数都不是 `TRUE`，则 `||` 或运算符将返回 `FALSE`。这在 PHP 脚本中用于满足两个测试条件之一时执行某些操作。
+与需要两个操作数均为`TRUE`的`&&`与运算符不同，`||`或运算符评估两个操作数，如果其中一个操作数为`TRUE`，则返回`TRUE`。如果两个操作数都不是`TRUE`，则`||`或运算符将返回`FALSE`。这在 PHP 脚本中用于满足两个测试条件之一时执行某些操作。
 
-第三种逻辑 `!` 非运算符是一个元运算符 —— 用于单个操作数之前。它返回给定操作数的反值，因此如果变量为 `TRUE` 则为 `FALSE`。`!` 非运算符在 PHP 脚本中像开关一样切换值。
+第三种逻辑`!`非运算符是一个元运算符 —— 用于单个操作数之前。它返回给定操作数的反值，因此如果变量为`TRUE`则为`FALSE`。`!`非运算符在 PHP 脚本中像开关一样切换值。
 
 “布尔”一词指的是由乔治·布尔（George Boole，1815-1864）开发的系统。
 
-PHP 还有一个 `XOR`（**异或**）运算符，如果它的操作数中有一个 `TRUE`，则返回 `TRUE`，但如果两个操作数均为 `TRUE`，则返回 `FALSE`。
+PHP 还有一个`XOR`（异或）运算符，如果它的操作数中有一个`TRUE`，则返回`TRUE`，但如果两个操作数均为`TRUE`，则返回`FALSE`。
 
-注意 `FALSE && FALSE` 的评估返回 `FALSE` —— 这证明了“错错不为对”的格言。
+注意`FALSE && FALSE`的评估返回`FALSE` —— 这证明了“错错不为对”的格言。
 
 ### 定义常量
 
 当脚本需要一个永远 way 的固定数据值时，将其存储在 PHP “常量”中而不是变量中。常量是 PHP 脚本中的命命名容器，可以在其中存储数据值，并通过常量名称进行引用。与变量不同，在脚本执行过程中存储的值无法更改。
 
-PHP 常量的创建方式与变量不同。相反，你必须使用 `define()` 函数来指定常量的名称及其将包含的值，语法如下：
+PHP 常量的创建方式与变量不同。相反，你必须使用`define()`函数来指定常量的名称及其将包含的值，语法如下：
 
 `define('NAME', value) ;`
 
-
-
-
-常量只能包含字母数字值（字符串、整数和浮点数），因此它们不能包含 `TRUE` 或 `FALSE` 的布尔值，也不能表示对象或 `NULL` 空值。
+常量只能包含字母数字值（字符串、整数和浮点数），因此它们不能包含`TRUE`或`FALSE`的布尔值，也不能表示对象或`NULL`空值。
 
 虽然常量值可以像变量值一样被访问（使用其名称来引用它们包含的值），但常量不能包含在用于混合字符串中——因为 PHP 解释器无法将常量名与普通的大写文本区分开来。例如：
 
@@ -1020,7 +987,7 @@ echo USER ;
 echo ‘Hello ‘ . USER ;
 ```
 
-脚本作者定义的常量可以像 PHP 内置的预定义常量一样使用，例如 `PHP_VERSION` 和 `PHP_OS`，它们描述版本和服务器操作系统。
+脚本作者定义的常量可以像 PHP 内置的预定义常量一样使用，例如`PHP_VERSION`和`PHP_OS`，它们描述版本和服务器操作系统。
 
 ![image](img/hot.jpg)
 
@@ -1066,7 +1033,7 @@ echo ‘<p>You are using PHP version ‘ . PHP_VERSION ;
 echo ‘ running on ‘ . PHP_OS . ‘</p>’ ;
 ```
 
-![image](img/6r.jpg)将文档保存到 浏览器的 `/htdocs` 目录并作为 `constant.php`，然后通过 HTTP 打开页面以查看显示的结果
+![image](img/6r.jpg)将文档保存到 浏览器的`/htdocs`目录并作为`constant.php`，然后通过 HTTP 打开页面以查看显示的结果
 
 ![image](img/pg43_2.jpg)
 
@@ -1081,19 +1048,33 @@ echo ‘ running on ‘ . PHP_OS . ‘</p>’ ;
 ## 总结
 
 - 在 PHP 中，变量是一个命名的容器，可以在其中存储更改的数据值，而常量是一个命名的容器，可以在其中存储固定的数据值。
+
 - 存储在变量或常量中的值可以使用其名称引用。
-- 变量名必须以 `$` 美元符号开头，可以由字母、数字和下划线组成，且 `$` 后的第一个字符只能是字母或下划线。
-- 常量名没有 `$` 前缀，且全大写。
-- 变量使用 `=` 赋值运算符初始化，而常量使用 `define()` 函数初始化。
+
+- 变量名必须以`$`美元符号开头，可以由字母、数字和下划线组成，且`$`后的第一个字符只能是字母或下划线。
+
+- 常量名没有`$`前缀，且全大写。
+
+- 变量使用`=`赋值运算符初始化，而常量使用`define()`函数初始化。
+
 - 变量的值可以通过仅将字符串和变量名括在双引号中来作为混合字符串的一部分显示。
+
 - 字符串可以使用单引号或双引号括起来，内部引号可以使用反斜杠进行转义。
-- 字符串值可以使用 `.` 点连接运算符连接成一个单一字符串。
+
+- 字符串值可以使用`.`点连接运算符连接成一个单一字符串。
+
 - 数组变量可以在顺序的数组元素中存储多个数据项，这些元素默认情况下数字从零开始编号。
+
 - 可选，可以为每个数组元素指定键名。
-- `foreach` 循环可以访问数组中的每个元素。
-- `implode()` 和 `explode()` 函数通过添加或删除指定的分隔符在字符串和数组之间转换。
+
+- `foreach`循环可以访问数组中的每个元素。
+
+- `implode()`和`explode()`函数通过添加或删除指定的分隔符在字符串和数组之间转换。
+
 - 数组可以根据值或键按字母数字顺序排序。
+
 - 多维数组简单来说就是元素为数组的数组。
+
 - PHP 拥有执行算术（`+ - * / % ++ --`）、比较（`== != > < >= <= ?:`）和逻辑（`&& || !`）操作的运算符。
 
 # 3 控制进度
@@ -1101,33 +1082,41 @@ echo ‘ running on ‘ . PHP_OS . ‘</p>’ ;
 *本章演示了如何编写 PHP 语句来评估表达式，以确定脚本应该如何进行。*
 
 - 分支选择
+
 - 切换分支
+
 - 执行循环
+
 - 当为真时循环
+
 - 退出循环
+
 - 创建函数
+
 - 传递参数
+
 - 返回值
+
 - 总结
 
 ## 分支选择
 
-`if` 关键字用于执行基本的条件测试，该测试评估给定表达式的布尔值 `TRUE` 或 `FALSE`。评估之后的大括号内的语句仅在表达式被发现为 `TRUE` 时才会执行。`if` 语句的形式如下：
+`if`关键字用于执行基本的条件测试，该测试评估给定表达式的布尔值`TRUE`或`FALSE`。评估之后的大括号内的语句仅在表达式被发现为`TRUE`时才会执行。`if`语句的形式如下：
 
 ```php
 if ( *test-expression* ) { *statements-when-true*
 ```
 
-当测试为 `TRUE` 时，可以有多个语句，但必须以分号结束。
+当测试为`TRUE`时，可以有多个语句，但必须以分号结束。
 
-可以使用逻辑 `&&` 运算符测试多个表达式，以确保当两个表达式都被发现为 `TRUE` 时执行语句：
+可以使用逻辑`&&`运算符测试多个表达式，以确保当两个表达式都被发现为`TRUE`时执行语句：
 
 ```php
 if ( ( *test-expression* ) && ( *test-expression* ) )
 { *statements-when-true* }
 ```
 
-通过附加 `else` 语句来扩展 `if` 语句，当表达式评估为 `FALSE` 时执行大括号内的语句：
+通过附加`else`语句来扩展`if`语句，当表达式评估为`FALSE`时执行大括号内的语句：
 
 ```php
 if ( *test-expression* )
@@ -1136,7 +1125,7 @@ else
 { *statements-when-false* }
 ```
 
-也可以通过添加 `elseif` 语句评估备选表达式，当备选表达式发现为 `TRUE` 时执行大括号内的语句。其语法如下：
+也可以通过添加`elseif`语句评估备选表达式，当备选表达式发现为`TRUE`时执行大括号内的语句。其语法如下：
 
 ```php
 if ( *test-expression* )
@@ -1151,6 +1140,8 @@ else
 
 ![image](img/hot.jpg)
 
+
+
 当要执行的代码只是单个语句时，可以省略大括号。
 
 ![image](img/hot.jpg)
@@ -1159,7 +1150,7 @@ else
 
 ![image](img/pg47_1.jpg)
 
-ifelse.php
+`ifelse.php`
 
 ![image](img/1g)开始一个 PHP 脚本，仅当测试表达式被发现为 `TRUE` 时输出结果：
 
@@ -1185,9 +1176,6 @@ else
 ```
 
 ![image](img/4g)
-
-
-
 
 ```php
 { echo ‘This test is True </p> ; }
@@ -1311,8 +1299,11 @@ default : echo ‘3 or more, or less than zero’ ;
 在 PHP 中，有以下四种用于测试的循环结构：
 
 - `for` 循环——在测试表达式被确定为 `TRUE` 时执行指定的循环次数。
+
 - `while` 循环——只有在循环开始时制作的测试为 `TRUE` 时才执行。
+
 - `do while` 循环——只有在循环结束时制作的测试为 `TRUE` 时才执行。
+
 - `foreach` 循环——遍历数组的每个元素[见第 30 页]。
 
 也许有趣的循环结构是 `for` 循环，它通常具有以下语法：
@@ -1375,9 +1366,6 @@ do { *statements-to-be-executed ; incrementer* }
 while ( *test-expression* ) ;
 ```
 
-
-
-
 `while` 循环和 `do while` 循环都会持续迭代，直到测试表达式的结果为 `FALSE`（假），此时循环将退出。因此，循环体必须包含在某个时刻改变测试表达式评估结果的代码——否则将创建一个导致系统锁定的死循环。
 
 `while` 循环和 `do while` 循环之间的显著区别在于，如果测试表达式在第一次求值时为 `FALSE`，`while` 循环将不会执行任何迭代。相比之下，`do while` 循环至少会执行一次，因为它的语句是在评估之前执行的。如果这是你需要的，那么 `do while` 循环显然是最佳选择；否则在 `for` 循环和 `while` 循环之间的选择很大程度上取决于个人喜好。经验法则建议 `for` 循环最适合执行指定次数的迭代，而 `while` 循环适合迭代直到满足特定条件。
@@ -1394,7 +1382,7 @@ while ( *test-expression* ) ;
 
 ![image](img/pg53_1.jpg)
 
-whileloop.php
+`whileloop.php`
 
 ![image](img/1g.jpg)用创建一个数组的语句开始 PHP 脚本
 
@@ -1441,7 +1429,7 @@ while ( $i < 3 ) ;
 
 ![image](img/pg54_1.jpg)
 
-breakcontinue.php
+`breakcontinue.php`
 
 ![image](img/1g.jpg)用一个执行三次迭代的 `for` 循环开始 PHP 脚本
 
@@ -1519,6 +1507,7 @@ function function_name()
 创建自定义函数时，理解变量访问性如何受其“作用域”限制很重要：
 
 - 函数外部的变量具有全局作用域，但在函数内部无法访问。
+
 - 函数内部创建的变量具有“局部”作用域，因此仅在该函数块内有效。
 
 由于函数内部创建的变量无法外部访问，其名称可以与函数外部或另一个函数块内的变量重名而不产生冲突。这允许全局变量包含与同名局部变量不同的值。
@@ -1529,17 +1518,19 @@ function function_name()
 
 ![image](img/snake.jpg)
 
+
+
 ![image](img/pg57_1.jpg)
 
-function.php
+`function.php`
 
-![image](img/1g.jpg)用创建一个初始化全局变量的语句开始 PHP 脚本
+![image](img/1g.jpg) 用创建一个初始化全局变量的语句开始 PHP 脚本
 
 ```php
 $result = 5 + 5 ;
 ```
 
-![image](img/2g.jpg)接下来，添加一个函数创建一个同名的局部变量并输出其值
+![image](img/2g.jpg) 接下来，添加一个函数创建一个同名的局部变量并输出其值
 
 ```php
 function square()
@@ -1549,7 +1540,7 @@ echo “Local Square Result = $result<br>” ;
 }
 ```
 
-![image](img/3g.jpg)现在，再次添加另一个函数创建一个同名的局部变量并输出其值
+![image](img/3g.jpg) 现在，再次添加另一个函数创建一个同名的局部变量并输出其值
 
 ```php
 function cube()
@@ -1559,11 +1550,7 @@ echo “Local Cube Result = $result<br>” ;
 }
 ```
 
-![image](img/4g.jpg)最后，添加语句输出全局变量的值并调用两个自定义函数
-
-
-
-
+![image](img/4g.jpg) 最后，添加语句输出全局变量的值并调用两个自定义函数
 
 ```php
 echo “Global Sum Result = $result<br>” ;
@@ -1577,11 +1564,11 @@ square() ;
 cube() ;
 ```
 
-![image](img/5g.jpg)将文档保存在网络浏览器的 /htdocs 目录中并命名为 function.php，然后通过 HTTP 打开该页面以查看同名变量值的显示。
+![image](img/5g.jpg) 将文档保存在网络浏览器的 `/htdocs` 目录中并命名为 `function.php`，然后通过 HTTP 打开该页面以查看同名变量值的显示。
 
 ![image](img/pg57_2.jpg)
 
-![image](img/forget.jpg)同名的变量在不同作用域内声明时不会发生冲突——它们之间相互不可见。
+![image](img/forget.jpg) 同名的变量在不同作用域内声明时不会发生冲突——它们之间相互不可见。
 
 ### 传递参数
 
@@ -1625,15 +1612,15 @@ print_name($forename , $surname) ; # Name is Donald Duck
 
 ![image](img/pg59_1.jpg)
 
-argument.php
+`argument.php`
 
-![image](img/1g.jpg)使用语句创建并初始化全局变量开始 PHP 脚本
+![image](img/1g.jpg) 使用语句创建并初始化全局变量开始 PHP 脚本
 
 ```php
 $number = 5 ;
 ```
 
-![image](img/2g.jpg)接下来，添加一个带有一个参数的函数，在计算中使用它的值并输出其结果
+![image](img/2g.jpg) 接下来，添加一个带有一个参数的函数，在计算中使用它的值并输出其结果
 
 ```php
 function square($number)
@@ -1643,7 +1630,7 @@ function square($number)
 }
 ```
 
-![image](img/3g.jpg)现在，添加另一个带有一个参数的函数，在计算中使用它的值并输出其结果
+![image](img/3g.jpg) 现在，添加另一个带有一个参数的函数，在计算中使用它的值并输出其结果
 
 ```php
 function cube($number)
@@ -1653,7 +1640,7 @@ function cube($number)
 }
 ```
 
-![image](img/4g.jpg)最后，添加语句来调用函数并并传递字面量参数和变量参数
+![image](img/4g.jpg) 最后，添加语句来调用函数并并传递字面量参数和变量参数
 
 ```php
 square(3) ;
@@ -1662,47 +1649,62 @@ square($number) ;
 cube($number) ;
 ```
 
-![image](img/5g.jpg)将文档保存在网络浏览器的 /htdocs 目录中并命名为 argument.php，然后通过 HTTP 打开该页面以查看结果显示。
+![image](img/5g.jpg) 将文档保存在网络浏览器的 `/htdocs` 目录中并命名为 `argument.php`，然后通过 HTTP 打开该页面以查看结果显示。
 
 ![image](img/pg59_2.jpg)
 
-![image](img/hot.jpg)你可以对参数和普通变量使用相同的名称。
+![image](img/hot.jpg) 你可以对参数和普通变量使用相同的名称。
 
 ### 返回值
 
 函数在调用时可以传递值，也可以通过 `return` 关键字返回值。通常由调用者决定返回值的函数可以使用 `return` 语句：
 
 | 参数 | 描述 | 示例： |
+
 | --- | --- | --- |
+
 | Y | 数字 | 18 |
+
 | y | 数字 | 14 |
+
 | n | 数字 | 5 |
+
 | m | 数字 | 05 |
+
 | F | 星期名称 | 二月 |
+
 | M | 星期名称 | 二月 |
+
 | d | 星期数字 | 04 |
+
 | S | 星期数字 | 24 |
+
 | l | 星期名称 | 周一 |
+
 | D | 星期数字 | 周一 |
+
 | H | 小时 | 14 |
+
 | i | 分钟 | 45 |
+
 | s | 秒 | 30 |
 
 自定义函数在调用时也可以返回值，只需在语句中使用 `return` 关键字。这些是 `date()` 的某些用法，通过 `return` 语句来实现。
 
 `date()` 函数通常可以通过 `switch` 语句来执行，以返回特定的值。
 
-![image](img/61.jpg)return.php
-
-
-
-
+![image](img/61.jpg) `return.php`
 
 # 处理提交的数据
+
 ## 创建固定表单
+
 ## 包裹表单
+
 ### 附加链接数据
+
 ### 移动位置
+
 ## 总结
 
 ## 执行操作
@@ -1723,9 +1725,9 @@ PHP 提供了一个特殊的“超全局”`$_POST` 数组变量，在其中存�
 
 在提交表单时，PHP 将创建一个名为 `$_POST['email']` 的数组元素，其中包含用户在该表单输入框中输入的值。
 
-为了方便识别，可以为与表单元素同名的 PHP 变量赋值存储在相应 `$_POST` 数组元素中的值。这些值随后就可以在由 action 处理脚本创建的响应页面中显示。
+为了方便识别，可以为与表单元素同名的 PHP 变量赋值存储在相应 `$_POST` 数组元素中的值。这些值随后就可以在由 `action` 处理脚本创建的响应页面中显示。
 
-![image](img/1p.jpg)创建一个包含表单的 HTML 文档，其中包含三个用于数据提交的文本输入字段
+![image](img/1p.jpg) 创建一个包含表单的 HTML 文档，其中包含三个用于数据提交的文本输入字段
 
 ```html
 <form action="action_handler.php" method="POST">
@@ -1743,15 +1745,15 @@ PHP 提供了一个特殊的“超全局”`$_POST` 数组变量，在其中存�
 
 ![image](img/pg70_1.jpg)
 
-action.php
+`action.php`
 
-![image](img/2p.jpg)现在，将文档保存到网页浏览器的 `/htdocs` 目录中，命名为 `action.php`
+![image](img/2p.jpg) 现在，将文档保存到网页浏览器的 `/htdocs` 目录中，命名为 `action.php`
 
 ![image](img/snake.jpg)
 
 PHP 是区分大小写的，因此大小写必须与描述完全一致——例如，`$_POST['EMail']` 或 `$_Post['email']` 是错误的。
 
-![image](img/3p.jpg)接下来，创建一个包含脚本的 HTML 文档，该脚本将表单值赋值给同名的 PHP 变量以便输出
+![image](img/3p.jpg) 接下来，创建一个包含脚本的 HTML 文档，该脚本将表单值赋值给同名的 PHP 变量以便输出
 
 ```php
 <?php
@@ -1764,9 +1766,9 @@ echo "<p>我们将回复到 $mail</p>";
 ?>
 ```
 
-![image](img/pg70_1.jpg)action_handler.php
+![image](img/pg70_1.jpg) `action_handler.php`
 
-![image](img/4p.jpg)将文档保存到网页浏览器的 `/htdocs` 目录中，命名为 `action_handler.php`，然后通过 HTTP 打开 `action.php` 并提交一些数据，查看它们在 PHP 脚本生成的响应页面中的显示
+![image](img/4p.jpg) 将文档保存到网页浏览器的 `/htdocs` 目录中，命名为 `action_handler.php`，然后通过 HTTP 打开 `action.php` 并提交一些数据，查看它们在 PHP 脚本生成的响应页面中的显示
 
 ![image](img/pg65_2.jpg)![image](img/pg65_3.jpg)![image](img/hot.jpg)
 
@@ -1778,7 +1780,7 @@ PHP 可以使用内置的 `isset()` 函数轻松确保用户已在表单字段�
 
 可以使用 `isset()` 函数进行条件测试，以指示哪些表单字段留空，或者为完成的字段提供一个响应页面。
 
-![image](img/1p.jpg)创建一个包含表单的 HTML 文档，其中包含三个单选按钮，提供单个数据提交字段
+![image](img/1p.jpg) 创建一个包含表单的 HTML 文档，其中包含三个单选按钮，提供单个数据提交字段
 
 ```html
 <form action="isset_handler.php" method="POST">
@@ -1792,13 +1794,13 @@ PHP 可以使用内置的 `isset()` 函数轻松确保用户已在表单字段�
 </form>
 ```
 
-![image](img/pg70_1.jpg)isset.php
+![image](img/pg70_1.jpg) `isset.php`
 
-![image](img/2p.jpg)现在，将文档保存到网页浏览器的 `/htdocs` 目录中，命名为 `isset.php`
+![image](img/2p.jpg) 现在，将文档保存到网页浏览器的 `/htdocs` 目录中，命名为 `isset.php`
 
-![image](img/pg70_1.jpg)isset_handler.php
+![image](img/pg70_1.jpg) `isset_handler.php`
 
-![image](img/3p.jpg)接下来，创建一个包含 PHP 脚本的 HTML 文档，用提交的值初始化变量——如果没有提交值则初始化为 `NULL`
+![image](img/3p.jpg) 接下来，创建一个包含 PHP 脚本的 HTML 文档，用提交的值初始化变量——如果没有提交值则初始化为 `NULL`
 
 ```php
 <?php
@@ -1811,7 +1813,7 @@ if (isset($_POST['definition'])) {
 ?>
 ```
 
-![image](img/4p.jpg)最后，根据变量的值输出相应的响应
+![image](img/4p.jpg) 最后，根据变量的值输出相应的响应
 
 ```php
 if ($definition != NULL) {
@@ -1825,7 +1827,7 @@ if ($definition != NULL) {
 }
 ```
 
-![image](img/5p.jpg)将文档保存到网页浏览器的 `/htdocs` 目录，命名为 `isset_handler.php`，然后通过 HTTP 打开 `isset.php` 并提交表单查看响应
+![image](img/5p.jpg) 将文档保存到网页浏览器的 `/htdocs` 目录，命名为 `isset_handler.php`，然后通过 HTTP 打开 `isset.php` 并提交表单查看响应
 
 ![image](img/pg67_1.jpg)![image](img/pg67_2.jpg)![image](img/pg67_3.jpg)![image](img/hot.jpg)
 
@@ -1841,7 +1843,7 @@ if ($definition != NULL) {
 
 更具体的数据验证可以使用 PHP 的 `preg_match()` 函数，它接受一个“正则表达式”参数和一个用于搜索模式的变量参数。这通常用于确保邮箱地址符合预期格式。
 
-![image](img/1p.jpg)创建一个包含表单的 HTML 文档，其中包含两个数据提交的文本字段
+![image](img/1p.jpg) 创建一个包含表单的 HTML 文档，其中包含两个数据提交的文本字段
 
 ```html
 <form action="valid_handler.php" method="POST">
@@ -1854,11 +1856,11 @@ if ($definition != NULL) {
 </form>
 ```
 
-![image](img/pg68_1.jpg)valid.php
+![image](img/pg68_1.jpg) `valid.php`
 
-![image](img/2p.jpg)现在，将文档保存到网页浏览器的 `/htdocs` 目录中，命名为 `valid.php`
+![image](img/2p.jpg) 现在，将文档保存到网页浏览器的 `/htdocs` 目录中，命名为 `valid.php`
 
-![image](img/3p.jpg)接下来，创建一个包含 PHP 脚本的 HTML 文档，用提交的值初始化变量——如果没有提交值则初始化为 `NULL`
+![image](img/3p.jpg) 接下来，创建一个包含 PHP 脚本的 HTML 文档，用提交的值初始化变量——如果没有提交值则初始化为 `NULL`
 
 ```php
 <?php
@@ -1871,23 +1873,19 @@ if (!empty($_POST['quantity'])) {
 ?>
 ```
 
-![image](img/pg68_2.jpg)valid_handler.php
+![image](img/pg68_2.jpg) `valid_handler.php`
 
-![image](img/4p.jpg)插入语句确保格式为数字
+![image](img/4p.jpg) 插入语句确保格式为数字
 
 ```php
 if (!is_numeric($quantity))
 ```
 
-
-
-
-
 ```php
 { $quantity \= NULL ; echo ‘Quantity must be numeric<br>’ ; }
 ```
 
-![image](img/5p.jpg)现在，添加语句用提交的值初始化另一个变量——或者在未提交任何值时初始化为 NULL
+![image](img/5p.jpg) 现在，添加语句用提交的值初始化另一个变量——或者在未提交任何值时初始化为 `NULL`
 
 ```php
 if ( !empty ( $\_POST\[‘email’\] ) )
@@ -1899,7 +1897,7 @@ else
 { $email \= NULL ; echo ‘You must enter an email address’ ; }
 ```
 
-![image](img/6p.jpg)接下来，插入语句以确保电子邮件地址使用符合预期的模式
+![image](img/6p.jpg) 接下来，插入语句以确保电子邮件地址使用符合预期的模式
 
 ```php
 $pattern \= ‘/\\b\[\\w.-\]+@\[\\w.-\]+\\.\[A-Za-z\]{2,6}\\b/ ;
@@ -1907,24 +1905,26 @@ if ( !preg\_match( $pattern ,$email ) )
 { $email \= NULL ; echo ‘Email address is incorrect format’ ; }
 ```
 
-![image](img/7p.jpg)最后，添加语句输出有效的提交数据
+![image](img/7p.jpg) 最后，添加语句输出有效的提交数据
 
 ```php
 if ( ( $quantity != NULL ) && ( $email != NULL )
 { echo “Email : $email<br>Quantity : $quantity “ }
 ```
 
-![image](img/8p.jpg)将文档保存到网络浏览器的 `/htdocs` 目录并为 `valid_handler.php`，然后通过 HTTP 打开 `valid.php` 并提交表单查看响应
+![image](img/8p.jpg) 将文档保存到网络浏览器的 `/htdocs` 目录并为 `valid_handler.php`，然后通过 HTTP 打开 `valid.php` 并提交表单查看响应
 
 ![image](img/pg69_1.jpg)
 
 ![image](img/pg69_2.jpg)
 
+
+
 ![image](img/hot.jpg)严格来说，正则表达式不是本书的内容，但你可以精确复制示例中的模式以确保电子邮件地址符合格式。
 
 ## 发送隐藏数据
 
-除了用户输入到 HTML 表单字段的数据外，可以使用 HTML 隐藏字段提交 PHP 生成的数据。与普通字段一样，它们也向表单处理脚本发送 name=value 对，但此处的值是由 PHP 提供的，而不是用户。
+除了用户输入到 HTML 表单字段的数据外，可以使用 HTML 隐藏字段提交 PHP 生成的数据。与普通字段一样，它们也向表单处理脚本发送 `name=value` 对，但此处的值是由 PHP 提供的，而不是用户。
 
 通常，使用隐藏表单提交的数据可能包括用户名和提交时间戳。
 
@@ -1938,7 +1938,7 @@ $user \= ‘Mike’ ;
 
 ![image](img/pg70_1.jpg)
 
-hidden.php
+`hidden.php`
 
 ![image](img/2p.jpg)现在，添加语句写入一个表单，包含一个普通输入字段和两个由变量设置的隐藏字段
 
@@ -1972,7 +1972,7 @@ else
 
 ![image](img/pg70_1.jpg)
 
-hidden_handler.php
+`hidden_handler.php`
 
 ![image](img/snake.jpg)
 
@@ -2043,15 +2043,16 @@ else
 
 ![image](img/3p.jpg)将文档保存到网络浏览器的 `/htdocs` 目录并为 `single.php`，然后提交表单查看响应
 
-
-
-
-
 <p>Name:</p>
+
 <input type="text" name="name" value="<?php if ( isset( $_POST['name'] ) ) echo $_POST['name'] ; ?>"></p>
+
 <p>Email:</p>
+
 <input type="text" name="email" value="<?php if ( isset( $_POST['email'] ) ) echo $_POST['email'] ; ?>"></p>
+
 <p><input type="submit"></p>
+
 </form>
 
 ![image](img/2p.jpg)
@@ -2077,7 +2078,7 @@ $errors = array() ;
 
 ![image](img/forget.jpg)
 
-if 语句通过检查请求方法是否为 POST 来测试表单是否提交，而不是用于显示空表单的 GET 方法。
+`if` 语句通过检查请求方法是否为 POST 来测试表单是否提交，而不是用于显示空表单的 GET 方法。
 
 ![image](img/4p.jpg)
 
@@ -2106,7 +2107,9 @@ else { echo "Success! Thanks $name " ; }
 将文档保存到 Web 浏览器的 `/htdocs` 目录并命名为 `sticky.php`，然后通过 HTTP 打开并提交表单以查看保留的值和响应消息。
 
 ![image](img/pg75_1.jpg)
+
 ![image](img/pg75_2.jpg)
+
 ![image](img/hot.jpg)
 
 在这里使用 `trim()` 函数是一种良好的做法，它可以移除提交字段值中的任何前导和尾空格。
@@ -2134,6 +2137,7 @@ PHP 还提供了一个 `require()` 函数，它的工作方式与 `include()` �
 <body>
 <header><h1>Page Header</h1></header>
 ```
+
 ![image](img/pg76_1.jpg)
 
 现在，创建一个包含页脚内容的 HTML 文档
@@ -2143,6 +2147,7 @@ PHP 还提供了一个 `require()` 函数，它的工作方式与 `include()` �
 </body>
 </html>
 ```
+
 ![image](img/pg76_2.jpg) 
 
 接下来，在你的 Web 服务器的 `/htdocs` 目录中创建一个名为“includes”的文件夹，并将上述文档分别保存为其中的 `header.html` 和 `footer.html`。
@@ -2159,6 +2164,7 @@ th { color: #FFF; background: #000; text-align: left; }
 td { border-bottom: 1px solid black; padding: 3px; background: #F0F0F0; text-align: left; vertical-align:top; }
 p#err_msg { color: #00; font-weight: bold; }
 ```
+
 ![image](img/pg77_1.jpg)
 
 将样式表保存到你创建的 `/includes` 文件夹中，与 HTML 页眉和页脚文件一起。
@@ -2176,11 +2182,13 @@ echo '<form action="include.php" method="POST">
 <p><input type="submit"></p></form>' ;
 include ( 'includes/footer.html' ) ;
 ```
+
 ![image](img/pg77_2.jpg)
 
 将 PHP 脚本保存到 Web 浏览器的 `/htdocs` 目录并命名为 `include.php`，然后通过 HTTP 打开以查看设置的标题和被静态内容包围的表单。
 
 ![image](img/pg77_3.jpg)
+
 ![image](img/hot.jpg)
 
 你可以使用浏览器的“查看源代码”功能查看整个内容是否已有效地合并到单个网页中。
@@ -2191,7 +2199,7 @@ PHP 预定义的“超级全局”变量，例如存储页面请求方法的 `$_
 
 当 HTML 表单使用 POST 方法提交数据时，`$_POST` 数组存储提交表单值的命名元素。因此，名为“city”的提交值可以通过 `$_POST['city']` 访问。
 
-同样，当使用 GET 方法提交数据时，`$_GET` 数组存储值的命名元素。因此，名为“id”的提交值可以通过 `$_GET['id']` 访问。这通常通过在 HTML 超链接的 URL 中附加 name=value 对来向脚本提交数据，如下：
+同样，当使用 GET 方法提交数据时，`$_GET` 数组存储值的命名元素。因此，名为“id”的提交值可以通过 `$_GET['id']` 访问。这通常通过在 HTML 超链接的 URL 中附加 `name=value` 对来向脚本提交数据，如下：
 
 ```html
 <a href="www.example.com/script.php?id=1">
@@ -2207,6 +2215,7 @@ if ( isset($_GET['id']) )
     # Handler statements to be inserted here.
 }
 ```
+
 ![image](img/pg78_1.jpg)
 
 接下来，插入语句将传递的值赋值给同名的 PHP 变量
@@ -2214,6 +2223,7 @@ if ( isset($_GET['id']) )
 ```php
 $id = $_GET['id'] ;
 ```
+
 ![image](img/3p.jpg)
 
 现在，插入语句根据传递的值输出相应的响应
@@ -2226,6 +2236,7 @@ switch( $id )
     case 3 : echo 'Goat selected<hr>' ; break;
 }
 ```
+
 ![image](img/hot.jpg)
 
 `$_SESSION` 超级全局将在下一个示例中用于存储用户详情。
@@ -2238,13 +2249,10 @@ echo ' <p><a href="link.php?id=1">Cow</a> |' ;
 echo ' <a href="link.php?id=2">Dog</a> | ' ;
 echo ' <a href="link.php?id=3">Goat</a></p>' ;
 ```
+
 ![image](img/5p.jpg)
 
 将 PHP 脚本保存到 Web 浏览器的 `/htdocs` 目录并命名为 `link.php`，然后通过 HTTP 打开并点击链接以查看传递的值的响应。
-
-
-
-
 
 ![image](img/pg79_2.jpg)
 
@@ -2254,15 +2262,17 @@ PHP 还提供了一个 `$_REQUEST` 超全局变量，它包含了 `$_POST` 和 `
 
 ![image](img/forget.jpg)
 
-注意，传递的 name=value 对在浏览器的地址栏中是可见的。
+注意，传递的 `name=value` 对在浏览器的地址栏中是可见的。
 
 ### 移动位置
 
-PHP 提供了一个 `header()` 函数，它接受一个参数来指定要发送到 浏览器的原始 HTTP “头部”（header）。头部在 Web 服务器发送任何其他数据之前就已发送，并且通常对用户不可见。最有用的是，PHP 的 `header()` 函数可以设置“Location”头部将浏览器重定向到新页面，使用此语法：
+PHP 提供了一个 `header()` 函数，它接受一个参数来指定要发送到浏览器的原始 HTTP “头部”（header）。头部在 Web 服务器发送任何其他数据之前就已发送，并且通常对用户不可见。最有用的是，PHP 的 `header()` 函数可以设置“Location”头部将浏览器重定向到新页面，使用此语法：
 
 `header( 'Location: *www.example.com/page.php*' ) ;`
 
 在移动到新页面时，可以通过先将数据存储在特殊的 PHP 超全局变量 `$_SESSION` 数组中来保留用户数据。然而，在脚本调用 `session_start()` 函数之前，该变量并不会自动可用。变量值可以存储在 `$_SESSION` 数组的同名元素中，这样它们在网站的其他页面上可用，直到用户退出或在脚本中调用 `session_destroy()` 函数。
+
+
 
 ![image](img/1p.jpg)创建一个包含 PHP 脚本的 HTML 文档，该脚本在 `$_POST` 数组中查找名为“id”的元素
 
@@ -2276,7 +2286,7 @@ if ( isset ( $_POST['id'] ) )
 
 ![image](img/pg80_1.jpg)
 
-header.php
+`header.php`
 
 ![image](img/2p.jpg)接下来，插入处理语句以将匹配的 id 值存储在 `$_SESSION` 数组元素中并重定向浏览器——或者为任何其他 id 值显示消息
 
@@ -2304,7 +2314,7 @@ echo ‘<form action=”header.php” method=”POST">
 
 在重定向浏览器时，调用 `exit()` 函数停止脚本是一个良好的习惯。
 
-![image](img/4p.jpg)将文档保存到 浏览器的 `/htdocs` 目录并命名为 header.php
+![image](img/4p.jpg)将文档保存到浏览器的 `/htdocs` 目录并命名为 `header.php`
 
 ![image](img/5p.jpg)最后，创建一个目标 HTML 文档，包含一个显示保留的 `$_SESSION` 数组值的 PHP 脚本
 
@@ -2319,123 +2329,15 @@ if ( isset( $_SESSION['id'] ) )
 
 ![image](img/pg81_1.jpg)
 
-location.php
+`location.php`
 
-![image](img/6p.jpg)将此文档保存到 浏览器的 `/htdocs` 目录并命名为 location.php，然后通过 HTTP 打开 header.php 并提交 id 值以查看响应
+![image](img/6p.jpg)将此文档保存到浏览器的 `/htdocs` 目录并命名为 `location.php`，然后通过 HTTP 打开 `header.php` 并提交 id 值以查看响应
 
 ![image](img/pg81_2.jpg)
 
 ![image](img/pg81_3.jpg)
 
 ![image](img/pg81_4.jpg)注意，传递的 name=value 对在浏览器的地址栏中是可见的。
-
-### 移动位置
-
-PHP 提供了一个 `header()` 函数，它接受一个参数来指定要发送到 浏览器的原始 HTTP “头部”（header）。头部在 Web 服务器发送任何其他数据之前就已发送，并且通常对用户不可见。最有用的是，PHP 的 `header()` 函数可以设置“Location”头部将浏览器重定向到新页面，使用此语法：
-
-[content]PHP 还提供了一个 `$_REQUEST` 超全局变量，它包含了 `$_POST` 和 `$_GET` 数组的所有内容。这意味着可以使用 `$_REQUEST['city']` 来访问 `$_POST['city']` 对应的内容，但应该避免这样做。相反，请始终根据提交类型使用特定的数组。
-
-注意，传递的 name=value 对在浏览器的地址栏中是可见的。
-
-### 移动位置
-
-PHP 提供了一个 `header()` 函数，它接受一个参数来指定要发送到 浏览器的原始 HTTP “头部”（header）。头部在 Web 服务器发送任何其他数据之前就已发送，并且通常对用户不可见。最有用的是，PHP 的 `header()` 函数可以设置“Location”头部将浏览器重定向到新页面，使用此语法：
-
-`header( 'Location: *www.example.com/page.php*' ) ;`
-
-在移动到新页面时，可以通过先将数据存储在特殊的 PHP 超全局变量 `$_SESSION` 数组中来保留用户数据。然而，在脚本调用 `session_start()` 函数之前，该变量并不会自动可用。变量值可以存储在 `$_SESSION` 数组的同名元素中，这样它们在网站的其他页面上可用，直到用户退出或在脚本中调用 `session_destroy()` 函数。
-
-创建一个包含 PHP 脚本的 HTML 文档，该脚本在 `$_POST` 数组中查找名为“id”的元素
-
-```php
-if ( isset ( $_POST['id'] ) )
-{
-    $id = $_POST['id'] ;
-    # 在此此处插入处理语句。
-}
-```
-
-接下来，插入处理语句以将匹配的 id 值存储在 `$_SESSION` 数组元素中并重定向浏览器——或者为任何其他 id 值显示消息
-
-```php
-if( $id== 123 )
-{
-    session_start() ;
-    $_SESSION['id'] = $id ;
-    header( 'Location: location.php' ) ;
-    exit() ;
-}
-else { echo “<p>$id is an incorrect ID!</p>” ; }
-```
-
-现在，添加一个语句显示一个表单，用户可以在其中输入 id 值进行提交
-
-```php
-echo ‘<form action=”header.php” method=”POST">
-<fieldset> <legend>Enter Your User ID</legend>
-<p>ID : <input type=”text” name=”id”></p>
-</fieldset> <input type=”submit”> </form> ‘ ;
-```
-
-在重定向浏览器时，调用 `exit()` 函数停止脚本是一个良好的习惯。
-
-将文档保存到 浏览器的 `/htdocs` 目录并命名为 header.php
-
-最后，创建一个目标 HTML 文档，包含一个 PHP 脚本来显示保留的 `$_SESSION` 数组值
-
-```php
-session_start() ;
-if ( isset( $_SESSION['id'] ) )
-{
-    $id = $_SESSION['id'] ;
-    echo “Welcome user ID #$id” ;
-}
-```
-
-将此文档保存到 浏览器的 `/htdocs` 目录并命名为 location.php，然后通过 HTTP 打开 header.php 并提交 id 值以查看响应
-
-注意，传递的 name=value 对在浏览器的地址栏中是可见的。
-
-## 总结
-
-- PHP 还提供了一个 `$_REQUEST` 超全局变量，它包含了 `$_POST` 和 `$_GET` 数组的所有内容。这意味着可以使用 `$_REQUEST['city']` 来访问 `$_POST['city']` 对应的内容，但应该避免这样做。相反，请始终根据提交类型使用特定的数组。
-
-- 注意，传递的 name=value 对在浏览器的地址栏中是可见的。
-
-- PHP 提供了一个 `header()` 函数，它接受一个参数来指定要发送到 浏览器的原始 HTTP “头部”（header）。头部在 Web 服务器发送任何其他数据之前就已发送，并且通常对用户不可见。最有用的是，PHP 的 `header()` 函数可以设置“Location”头部将浏览器重定向到新页面，使用此语法：`header( 'Location: *www.example.com/page.php*' ) ;`
-
-- 在移动到新页面时，可以通过先将数据存储在特殊的 PHP 超全局变量 `$_SESSION` 数组中来保留用户数据。然而，在脚本调用 `session_start()` 函数之前，该变量并不会自动可用。变量值可以存储在 `$_SESSION` 数组的同名元素中，这样它们在网站的其他页面上可用，直到用户退出或在脚本中调用 `session_destroy()` 函数。
-
-- 创建一个包含 PHP 脚本的 HTML 文档，该脚本在 `$_POST` 数组中查找名为“id”的元素。
-
-- 接下来，插入处理语句以将匹配的 id 值存储在 `$_SESSION` 数组元素中并重定向浏览器——或者为任何其他 id 值显示消息。
-
-- 现在，添加一个语句显示一个表单，用户可以在其中输入 id 值进行提交。
-
-- 在重定向浏览器时，调用 `exit()` 函数停止脚本是一个良好的习惯。
-
-- 将文档保存到 浏览器的 `/htdocs` 目录并命名为 header.php。
-
-- 最后，创建一个目标 HTML 文档，包含一个 PHP 脚本来显示保留的 `$_SESSION` 数组值。
-
-- 将此文档保存到 浏览器的 `/htdocs` 目录并命名为 location.php，然后通过 HTTP 打开 header.php 并提交 id 值以查看响应
-
-[/content] (注：由于用户提供的原文包含大量重复的图片描述符，译文已根据“注意不要重复输出原文”的原则进行了去重处理，保留了核心文本翻译)
-
-**抱歉，由于您提供的原始文本中存在大量的重复内容（如多个相同的 `![image](img/...)` 和重复的段落），为了保证翻译质量，我为您提供了核心逻辑部分的中文翻译，并严格按照您的要求“不要重复输出原文”进行了处理。**
-
-以下是去重后的完整译文：
-
-[content]
-![image](img/pg79_2.jpg)
-
-![image](img/snake.jpg)
-
-PHP 还提供了一个 `$_REQUEST` 超全局变量，它包含了 `$_POST` 和 `$_GET` 数组的所有内容。这意味着可以使用 `$_REQUEST['city']` 来访问 `$_POST['city']` 对应的内容，但应该避免这样做。相反，请始终根据提交类型使用特定的数组。
-
-![image](img/forget.jpg)
-
-注意，传递的 name=value 对在浏览器的地址栏中是可见的。
 
 ### 移动位置
 
@@ -2445,78 +2347,21 @@ PHP 提供了一个 `header()` 函数，它接受一个参数来指定要发送�
 
 在移动到新页面时，可以通过先将数据存储在特殊的 PHP 超全局变量 `$_SESSION` 数组中来保留用户数据。然而，在脚本调用 `session_start()` 函数之前，该变量并不会自动可用。变量值可以存储在 `$_SESSION` 数组的同名元素中，这样它们在网站的其他页面上可用，直到用户退出或在脚本中调用 `session_destroy()` 函数。
 
-![image](img/1p.jpg)创建一个包含 PHP 脚本的 HTML 文档，该脚本在 `$_POST` 数组中查找名为“id”的元素
-
-```php
-if ( isset ( $_POST['id'] ) )
-{
-    $id = $_POST['id'] ;
-    # 在此此处插入处理语句。
-}
-```
-
-![image](img/pg80_1.jpg)
-
-header.php
-
-![image](img/2p.jpg)接下来，插入处理语句以将匹配的 id 值存储在 `$_SESSION` 数组元素中并重定向浏览器——或者为任何其他 id 值显示消息
-
-```php
-if( $id== 123 )
-{
-    session_start() ;
-    $_SESSION['id'] = $id ;
-    header( 'Location: location.php' ) ;
-    exit() ;
-}
-else { echo “<p>$id is an incorrect ID!</p>” ; }
-```
-
-![image](img/3p.jpg)现在，添加一个语句显示一个表单，用户可以在其中输入 id 值进行提交
-
-```php
-echo ‘<form action=”header.php” method=”POST">
-<fieldset> <legend>Enter Your User ID</legend>
-<p>ID : <input type=”text” name=”id”></p>
-</fieldset> <input type=”submit”> </form> ‘ ;
-```
-
-![image](img/hot.jpg)
-
-在重定向浏览器时，调用 `exit()` 函数停止脚本是一个良好的习惯。
-
-![image](img/4p.jpg)将文档保存到 浏览器的 `/htdocs` 目录并命名为 header.php
-
-![image](img/5p.jpg)最后，创建一个目标 HTML 文档，包含一个 PHP 脚本来显示保留的 `$_SESSION` 数组值
-
-```php
-session_start() ;
-if ( isset( $_SESSION['id'] ) )
-{
-    $id = $_SESSION['id'] ;
-    echo “Welcome user ID #$id” ;
-}
-```
-
-![image](img/pg81_1.jpg)
-
-location.php
-
-![image](img/6p.jpg)将此文档保存到 浏览器的 `/htdocs` 目录并命名为 location.php，然后通过 HTTP 打开 header.php 并提交 id 值以查看响应
-
-![image](img/pg81_2.jpg)
-
-![image](img/pg81_3.jpg)
-
-![image](img/pg81_4.jpg)注意，传递的 name=value 对在浏览器的地址栏中是可见的。
-
-![image](img/forget.jpg)
+PHP 还提供了一个 `$_REQUEST` 超全局变量，它包含了 `$_POST` 和 `$_GET` 数组的所有内容。这意味着可以使用 `$_REQUEST['city']` 来访问 `$_POST['city']` 对应的内容，但应该避免这样做。相反，请始终根据提交类型使用特定的数组。
 
 ## 总结
-（此处为原文重复的总结部分，已按要求去重处理）
 
-
-
+- PHP 还提供了一个 `$_REQUEST` 超全局变量，它包含了 `$_POST` 和 `$_GET` 数组的所有内容。这意味着可以使用 `$_REQUEST['city']` 来访问 `$_POST['city']` 对应的内容，但应该避免这样做。相反，请始终根据提交类型使用特定的数组。
+- 注意，传递的 name=value 对在浏览器的地址栏中是可见的。
+- PHP 提供了一个 `header()` 函数，它接受一个参数来指定要发送到浏览器的原始 HTTP “头部”（header）。头部在 Web 服务器发送任何其他数据之前就已发送，并且通常对用户不可见。最有用的是，PHP 的 `header()` 函数可以设置“Location”头部将浏览器重定向到新页面，使用此语法：`header( 'Location: *www.example.com/page.php*' ) ;`
+- 在移动到新页面时，可以通过先将数据存储在特殊的 PHP 超全局变量 `$_SESSION` 数组中来保留用户数据。然而，在脚本调用 `session_start()` 函数之前，该变量并不会自动可用。变量值可以存储在 `$_SESSION` 数组的同名元素中，这样它们在网站的其他页面上可用，直到用户退出或在脚本中调用 `session_destroy()` 函数。
+- 创建一个包含 PHP 脚本的 HTML 文档，该脚本在 `$_POST` 数组中查找名为“id”的元素。
+- 接下来，插入处理语句以将匹配的 id 值存储在 `$_SESSION` 数组元素中并重定向浏览器——或者为任何其他 id 值显示消息。
+- 现在，添加一个语句显示一个表单，用户可以在其中输入 id 值进行提交。
+- 在重定向浏览器时，调用 `exit()` 函数停止脚本是一个良好的习惯。
+- 将文档保存到浏览器的 `/htdocs` 目录并命名为 `header.php`。
+- 最后，创建一个目标 HTML 文档，包含一个 PHP 脚本来显示保留的 `$_SESSION` 数组值。
+- 将此文档保存到浏览器的 `/htdocs` 目录并命名为 `location.php`，然后通过 HTTP 打开 `header.php` 并提交 id 值以查看响应。
 
 ![image](img/4o.jpg)现在，执行另一个查询来显示 `site_db` 数据库中存在的所有表
 
@@ -2532,7 +2377,7 @@ SHOW TABLES ;
 
 ![image](img/hot.jpg)
 
-此示例中的 `SHOW TABLES;` 查询返回了“空集”（empty set）消息，因为 `site_db` 数据库中还没有任何表 —— 但本本书的剩余内容中，你将在那里创建表。
+此示例中的 `SHOW TABLES;` 查询返回了“空集”（empty set）消息，因为 `site_db` 数据库中还没有任何表——但本书的剩余内容中，你将在那里创建表。
 
 ## 创建表
 
@@ -2542,7 +2387,7 @@ SHOW TABLES ;
 CREATE TABLE IF NOT EXISTS table-name ( col type , col type ) ;
 ```
 
-该查询语句后面必须跟着括号，括号内包含一个用逗号分隔的列定义列表 —— 定义每个表列的名称以及该列可能包含的数据类型。例如，一个名为“fruit”（水果）的表可能包含三个名为 `id`、`name` 和 `color` 的列。`INT` 关键字可以指定 `id` 列可能只包含整数值，而 `TEXT` 关键字可以指定 `name` 和 `color` 列可能只包含文本值。
+该查询语句后面必须跟着括号，括号内包含一个用逗号分隔的列定义列表——定义每个表列的名称以及该列可能包含的数据类型。例如，一个名为“fruit”（水果）的表可能包含三个名为 `id`、`name` 和 `color` 的列。`INT` 关键字可以指定 `id` 列可能只包含整数值，而 `TEXT` 关键字可以指定 `name` 和 `color` 列可能只包含文本值。
 
 你可以使用此查询来发现任何表的格式：
 
@@ -2560,9 +2405,9 @@ DROP TABLE IF EXISTS table-name ;
 
 ![image](img/pg86_1.jpg)
 
-create_table.sql
+`create_table.sql`
 
-![image](img/1o.jpg)启动一个纯文本编辑器（如记事本），并创建一个定义上述上述“fruit”表示例的查询
+![image](img/1o.jpg)启动一个纯文本编辑器（如记事本），并创建一个定义上述“fruit”表示例的查询
 
 ```sql
 CREATE TABLE IF NOT EXISTS fruit
@@ -2574,7 +2419,7 @@ CREATE TABLE IF NOT EXISTS fruit
 ) ;
 ```
 
-![image](img/2o.jpg)将文件保存到 `C:\SQL` 文件夹中并为 `create_table.sql`，然后启动 MySQL 命令行客户端并以具有完全访问权限的用户（如 root）登录
+![image](img/2o.jpg)将文件保存到 `C:\SQL` 文件夹中并命名为 `create_table.sql`，然后启动 MySQL 命令行客户端并以具有完全访问权限的用户（如 root）登录
 
 ![image](img/3o.jpg)接下来，执行一个查询以使用已建立的数据库
 
@@ -2607,9 +2452,11 @@ SHOW TABLES ;
 
 ![image](img/pg87_1.jpg)
 
+
+
 `EXPLAIN` 查询揭示了“fruit”表的格式，它允许 `id` 字段包含长达 11 位的整数 —— 实际上，这限制在 -2147483648 到 2147483647 之间的值。
 
-在此示例中，“YES”表示每个字段都允许不包含值，即由 `NULL` 关键字定义。事实上，每个字段在创建时都没有设置默认值，因此确实包含 `NULL` 值。请注意，`NULL` 代表完全没有值 —— 这与用 "" 表示的空字符串不同。
+在此示例中，“YES”表示每个字段都允许不包含值，即由 `NULL` 关键字定义。事实上，每个字段在创建时都没有设置默认值，因此确实包含 `NULL` 值。请注意，`NULL` 代表完全没有值 —— 这与用 `""` 表示的空字符串不同。
 
 ![image](img/hot.jpg)
 
@@ -2627,20 +2474,20 @@ Defining data types
 
 | Type: | Value: |
 | --- | --- |
-| INT | 整数 -2,147,483,648 到 2,147,483,647 |
-| DECIMAL | 浮点数，可以指定允许的位数。例如，DECIMAL(5,2) 允许 -999.99 到 999.99 |
-| DOUBLE | 双精度浮点数 |
-| DATE | YYYY-MM-DD 格式的日期 |
-| TIME | HH:MM:SS 格式的时间 |
-| DATETIME | YYYY-MM-DD HH:MM:SS 格式的组合日期和时间 |
-| YEAR | 1901-2155 年，格式为 YY 或 YYYY |
-| TIMESTAMP | 最后输入的日期和时间 |
-| CHAR() | 固定长度的字符串，最大 100 |
-| VARCHAR() | 可变长度字符串，最大 255 |
-| TEXT | 最大 65535 字节的字符串 |
-| BLOB | 二进制类型 |
-| ENUM() | 从定义列表中选择单个字符串 |
-| SET() | 从定义列表中选择一个或多个字符串 |
+| `INT` | 整数 -2,147,483,648 到 2,147,483,647 |
+| `DECIMAL` | 浮点数，可以指定允许的位数。例如，`DECIMAL(5,2)` 允许 -999.99 到 999.99 |
+| `DOUBLE` | 双精度浮点数 |
+| `DATE` | YYYY-MM-DD 格式的日期 |
+| `TIME` | HH:MM:SS 格式的时间 |
+| `DATETIME` | YYYY-MM-DD HH:MM:SS 格式的组合日期和时间 |
+| `YEAR` | 1901-2155 年，格式为 YY 或 YYYY |
+| `TIMESTAMP` | 最后输入的日期和时间 |
+| `CHAR()` | 固定长度的字符串，最大 100 |
+| `VARCHAR()` | 可变长度字符串，最大 255 |
+| `TEXT` | 最大 65535 字节的字符串 |
+| `BLOB` | 二进制类型 |
+| `ENUM()` | 从定义列表中选择单个字符串 |
+| `SET()` | 从定义列表中选择一个或多个字符串 |
 
 相反的 SQL 脚本创建一个具有各种类型的表。`id` 列仅接受整数值。可以记录每条记录的日期和时间。`first_name` 和 `last_name` 列各可以包含 20 个字符。
 
@@ -2657,24 +2504,21 @@ CREATE TABLE IF EXISTS user_log
 
 ![image](img/pg89_1.jpg)
 
-data_types.sql
+`data_types.sql`
 
 ![image](img/2o.jpg)将文件保存到 `C:\SQL` 文件夹中并为 `data_types.sql`，然后启动 MySQL 命令行客户端并以具有完全访问权限的用户（如 root）登录
 
-**添加修饰符**
+## 添加修饰符
 
 除了指定允许的数据类型外，结合上一页的关键字，可以使用下表的修饰关键字来进一步控制列内容：
 
 | Modifier: | Purpose: |
 | --- | --- |
-| NOT NULL | 强制每条记录必须在该列中包含数据值 |
-| UNIQUE | 强制记录不得重复该列中的任何输入 |
-| AUTO_INCREMENT | 仅适用于数值列，自动生成比该列上一个值大 1 的数字 |
-| DEFAULT | 在插入记录时未说明此列值时，指定使用的值 |
-| PRIMARY KEY | 指定列或多个列作为该表的主键 |
-
-
-
+| `NOT NULL` | 强制每条记录必须在该列中包含数据值 |
+| `UNIQUE` | 强制记录不得重复该列中的任何输入 |
+| `AUTO_INCREMENT` | 仅适用于数值列，自动生成比该列上一个值大 1 的数字 |
+| `DEFAULT` | 在插入记录时未说明此列值时，指定使用的值 |
+| `PRIMARY KEY` | 指定列或多个列作为该表的主键 |
 
 当某个记录必须包含某列的值时，该列应定义为 `NOT NULL` 修饰符。这允许在其中存储空字符串 `""`，但不允许该列为空或为 `NULL`。当列中存储的数据永远不应重复时，该列应定义为 `UNIQUE` 修饰符。例如，为了避免产品代码的意外重复。`AUTO_INCREMENT` 修饰符对于每行自动生成递增标识符特别有用——第一行编号为 1，第二行编号为 2，依此类推。设置列的 `DEFAULT` 允许插入记录，而无需繁琐地为通常不变的列提供值。例如，“quantity”列在每条记录中通常包含值 1——因此可以将 1 设置为它的默认值。
 
@@ -2700,7 +2544,7 @@ CREATE TABLE IF NOT EXISTS products
 
 ![image](img/pg91_1.jpg)
 
-modifiers.sql
+`modifiers.sql`
 
 ![image](img/2o.jpg)将文件保存到 `C:\SQL` 文件夹中的 `modifiers.sql`，然后启动 MySQL 命令行客户端并以具有完全访问权限的用户身份登录（如 root）。
 
@@ -2793,13 +2637,13 @@ CREATE TABLE IF NOT EXISTS pans
 | id | INT | NOT NULL , |
 | --- | --- | --- |
 | pattern | VARCHAR(25) | NOT NULL , |
-| price | DECIMAL( 6,2 ) |  |
+| price | DECIMAL( 6,2 ) |  |
 ) ;
 ```
 
 ![image](img/pg94_1.jpg)
 
-alter_table.sql
+`alter_table.sql`
 
 ![image](img/2o.jpg)接下来，发布查询以确认表的格式
 
@@ -2817,11 +2661,8 @@ CHANGE pattern pan_pattern VARCHAR(25) NOT NULL ,
 DROP COLUMN price ;
 ```
 
-
-
-
-
 ![image](img/5o.jpg)
+
 将文件保存到 `C:\SQL` 文件夹并命名为 `alter_table.sql`，然后以 root 登录 MySQL 命令行客户端并执行查询使用已建立的数据库
 
 ```sql
@@ -2886,15 +2727,13 @@ INSERT INTO table-name VALUES ( value , value ) ;
 
 每个 `INSERT INTO` 查询仅向数据库表插入一行。必须为每列指定一个数据值——并按照相应的顺序。要插入的数据还必须匹配数据类型。可以使用 `INSERT INTO` 查询通过指明系统上 SQL 文件的源路径来执行 SQL 查询。
 
- `INSERT INTO` 查询向向 `NULL` 来执行 SQL 如下：
+`INSERT INTO` 查询可以向 `NULL` 来执行 SQL 如下：
 
 ```sql
 INSERT INTO table-name VALUES ( value , value )
-
- 
 ```
 
-如果设计的数据库表已经预见了所有可能的未来需求，则永远不需要进行修改。使用 `DROP COLUMN` 时应小心，因为它将移除该列包含的任何数据——这些数据无法恢复。使用 `INSERT INTO` 查询通过指 `系统上 SQL 文件的源源来执行 SQL SQL 如下：
+如果设计的数据库表已经预见了所有可能的未来需求，则永远不需要进行修改。使用 `DROP COLUMN` 时应小心，因为它将移除该列包含的任何数据——这些数据无法恢复。使用 `INSERT INTO` 查询通过指明系统上 SQL 文件的源路径来执行 SQL 查询如下：
 
 ```sql
 INSERT INTO table-name VALUES ( value , value ) ;
@@ -2906,16 +2745,16 @@ INSERT INTO table-name VALUES ( value , value ) ;
 INSERT INTO table-name VALUES ( value , value ) ;
 ```
 
-`INSERT INTO` 查询可以向 `NULL` `，`````````````````````sql
+`INSERT INTO` 查询可以向 `NULL`
+
+```sql
 INSERT INTO table-name VALUES ( value , value ) ;
 ```
 
 `INSERT INTO` 查询可以向 `NULL`
 
-（抱歉，上述翻译出现了重复错误。以下为您重新生成准确的翻译）：
-
-[content]
 ![image](img/5o.jpg)
+
 将文件保存到 `C:\SQL` 文件夹并命名为 `alter_table.sql`，然后以 root 登录 MySQL 命令行客户端并执行查询使用已建立的数据库
 
 ```sql
@@ -2972,20 +2811,19 @@ SOURCE C:\SQL\alter_table.sql
 
 ## 插入数据
 
-可以使用 `INSERT INTO` 查询向现有的数据库表中插入数据，该查询首先指定表名。然后 SQL `VALUES` 关键字将通过括号内的逗号分隔列表指定要插入的实际数据，如下：
+
+
+可以使用`INSERT INTO`查询向现有的数据库表中插入数据，该查询首先指定表名。然后 SQL `VALUES`关键字将通过括号内的逗号分隔列表指定要插入的实际数据，如下：
 
 ```sql
 INSERT INTO table-name VALUES ( value , value ) ;
 ```
 
-每个 `INSERT INTO` 查询仅向数据库表插入一行。必须为每列指定一个数据值——并按照相应的顺序。要插入的数据还必须匹配数据类型。可以使用 `INSERT INTO` 查询通过指明系统上 SQL 文件的源路径来执行 SQL 查询（此处由于原文文本存在严重重复导致翻译逻辑混乱，已根据上下文重新梳理）。
+每个`INSERT INTO`查询仅向数据库表插入一行。必须为每列指定一个数据值——并按照相应的顺序。要插入的数据还必须匹配数据类型。可以使用`INSERT INTO`查询通过指明系统上 SQL 文件的源路径来执行 SQL 查询（此处由于原文文本存在严重重复导致翻译逻辑混乱，已根据上下文重新梳理）。
 
 （注：由于您提供的待翻译文本中包含大量重复的乱码片段，以上翻译已根据 Markdown 结构逻辑进行了清理和修正。）
 
-
-
-
-![image](img/6bl.jpg)将文件保存到 `C:\SQL` 文件夹下命名为 `update_all.sql`，然后启动 MySQL 命令行客户端并执行查询以使用建立的数据库
+![image](img/6bl.jpg)将文件保存到`C:\SQL`文件夹下命名为`update_all.sql`，然后启动 MySQL 命令行客户端并执行查询以使用建立的数据库
 
 ```sql
 USE site_db ;
@@ -3001,20 +2839,20 @@ SOURCE C:\SQL\update_all.sql
 
 ![image](img/hot.jpg)
 
-有时，使用 `UPDATE` 查询删除列中的所有值并将每个字段设置为 `NULL` 是很有用的——前提是列定义允许 `NULL` 值。
+有时，使用`UPDATE`查询删除列中的所有值并将每个字段设置为`NULL`是很有用的——前提是列定义允许`NULL`值。
 
 ### 更新字段
 
-通常情况下，需要使用 `UPDATE` 查询来更改特定行中特定列所包含的数据。可以通过在 `UPDATE` 查询中添加 `WHERE` 关键字来匹配指定列中的值，从而识别该行。特定 `UPDATE` 查询的语法如下：
+通常情况下，需要使用`UPDATE`查询来更改特定行中特定列所包含的数据。可以通过在`UPDATE`查询中添加`WHERE`关键字来匹配指定列中的值，从而识别该行。特定`UPDATE`查询的语法如下：
 
 ```sql
 UPDATE table-name
 SET column-name = value WHERE column-name = value ;
 ```
 
-单个 `UPDATE` 查询也可以通过在 `SET` 关键字后创建以逗号分隔的多个 `column-name = value` 语句，来更改特定行的多个列值。
+单个`UPDATE`查询也可以通过在`SET`关键字后创建以逗号分隔的多个`column-name = value`语句，来更改特定行的多个列值。
 
-如果 `WHERE` 关键字识别出多行具有相同指定值的行，它们都将用新值更新——这可能会导致意外的数据丢失。因此，通过其 `PRIMARY KEY` 值来识别行更为安全，因为该值保证是唯一的，因此不会意外更新多行。
+如果`WHERE`关键字识别出多行具有相同指定值的行，它们都将用新值更新——这可能会导致意外的数据丢失。因此，通过其`PRIMARY KEY`值来识别行更为安全，因为该值保证是唯一的，因此不会意外更新多行。
 
 ![image](img/pg102_1.jpg)
 
@@ -3060,7 +2898,7 @@ SET pattern = "Fall" WHERE pattern = "Autumn" ;
 
 ![image](img/snake.jpg)
 
-如果 `UPDATE` 查询中省略了 `WHERE` 关键字，所有行都将被更新——丢失的数据无法恢复。
+如果`UPDATE`查询中省略了`WHERE`关键字，所有行都将被更新——丢失的数据无法恢复。
 
 ![image](img/5bl.jpg)添加查询通过识别当前的“color”、“price”和“id”值来更新其他列并显示它们
 
@@ -3071,7 +2909,7 @@ UPDATE tiles SET price = 11.99 WHERE id = 4 ;
 SELECT * FROM tiles ;
 ```
 
-![image](img/6bl.jpg)将文件保存到 `C:\SQL` 文件夹下命名为 `update_where.sql`，然后启动 MySQL 命令行客户端并执行查询以使用建立的数据库
+![image](img/6bl.jpg)将文件保存到`C:\SQL`文件夹下命名为`update_where.sql`，然后启动 MySQL 命令行客户端并执行查询以使用建立的数据库
 
 ```sql
 USE site_db ;
@@ -3085,23 +2923,23 @@ SOURCE C:\SQL\update_where.sql
 
 ![image](img/pg103_1.jpg)
 
-![image](img/hot.jpg)始终通过其 `PRIMARY KEY` 值识别行来尝试 `UPDATE` 表。
+![image](img/hot.jpg)始终通过其`PRIMARY KEY`值识别行来尝试`UPDATE`表。
 
 ### 删除数据
 
-可以使用 `DELETE FROM` 查询从数据库表中删除行。使用此语法删除所有行：
+可以使用`DELETE FROM`查询从数据库表中删除行。使用此语法删除所有行：
 
 ```sql
 DELETE FROM table-name ;
 ```
 
-此外，通过在 `DELETE FROM` 查询中添加 `WHERE` 关键字识别行，可以从表中删除特定行。`DELETE FROM` 查询的语法如下：
+此外，通过在`DELETE FROM`查询中添加`WHERE`关键字识别行，可以从表中删除特定行。`DELETE FROM`查询的语法如下：
 
 ```sql
 DELETE FROM table-name WHERE column-name = value ;
 ```
 
-如果 `WHERE` 关键字识别出多行具有相同值的行，它们都将被删除——可能会导致意外的数据丢失。因此，通过其 `PRIMARY KEY` 值识别行更为安全，因为它是保证唯一的，所以不会意外删除多行。
+如果`WHERE`关键字识别出多行具有相同值的行，它们都将被删除——可能会导致意外的数据丢失。因此，通过其`PRIMARY KEY`值识别行更为安全，因为它是保证唯一的，所以不会意外删除多行。
 
 ![image](img/pg104_1.jpg)
 
@@ -3151,9 +2989,9 @@ DELETE FROM pens WHERE id = 4 ;
 SELECT * FROM pens ;
 ```
 
-![image](img/forget.jpg)`DELETE` 关键字不能用于删除表——你必须使用 `DROP` 关键字进行删除。
+![image](img/forget.jpg)`DELETE`关键字不能用于删除表——你必须使用`DROP`关键字进行删除。
 
-![image](img/5bl.jpg)将文件保存到 `C:\SQL` 文件夹下命名为 `delete_from.sql`，然后启动 MySQL 命令行客户端并执行查询以使用建立的数据库
+![image](img/5bl.jpg)将文件保存到`C:\SQL`文件夹下命名为`delete_from.sql`，然后启动 MySQL 命令行客户端并执行查询以使用建立的数据库
 
 ```sql
 USE site_db ;
@@ -3169,11 +3007,11 @@ SOURCE C:\SQL\delete_from.sql
 
 ![image](img/snake.jpg)
 
-如果 `DELETE FROM` 查询中省略了 `WHERE` 关键字，所有行都将被删除——丢失的数据无法恢复。
+如果`DELETE FROM`查询中省略了`WHERE`关键字，所有行都将被删除——丢失的数据无法恢复。
 
 ### 选择数据
 
-查看数据库表中数据的 SQL 查询在本章开头介绍。通配符 `*` 意味着“所有”，可以替换为列名以仅检索特定列的数据。该查询的语法如下：
+查看数据库表中数据的 SQL 查询在本章开头介绍。通配符`*`意味着“所有”，可以替换为列名以仅检索特定列的数据。该查询的语法如下：
 
 ```sql
 SELECT column-name FROM table-name ;
@@ -3235,7 +3073,7 @@ SELECT titles FROM paintings ;
 SELECT styles FROM paintings ;
 ```
 
-![image](img/7bl.jpg)将文件保存到 `C:\SQL` 文件夹下命名为 `selection.sql`，然后启动 MySQL 命令行客户端并执行查询以使用建立的数据库
+![image](img/7bl.jpg)将文件保存到`C:\SQL`文件夹下命名为`selection.sql`，然后启动 MySQL 命令行客户端并执行查询以使用建立的数据库
 
 ```sql
 USE site_db ;
@@ -3247,29 +3085,29 @@ USE site_db ;
 SOURCE C:\SQL\selection.sql
 ```
 
-
-
-
-
 ![image](img/forget.jpg)
 
 注意，数据的检索顺序与它们在每列中的存储顺序相同，都是“自上而下”的
 
 ## 获取列
 
-`SELECT` 查询可以通过在查询中包含所需的列名作为以逗号分隔的列表，来返回来自多个列的数据。获取多个列数据的语法如下：
+`SELECT`查询可以通过在查询中包含所需的列名作为以逗号分隔的列表，来返回来自多个列的数据。获取多个列数据的语法如下：
 
-`SELECT *column-name* , *column-name* FROM *table-name* ;`
+```sql
+SELECT *column-name* , *column-name* FROM *table-name* ;
+```
 
 接后的脚本创建并显示了整个表，然后选择了多个列进行显示。
 
 ![image](img/pg108_1.jpg)
 
-`select_columns.sql`
+```sql
+select_columns.sql
+```
 
 ![image](img/1bl.jpg)启动一个纯文本编辑器（如记事本），并创建一个查询来定义一个具有四列的表
 
-```
+```sql
 CREATE TABLE IF NOT EXISTS phones
 (
 | id | INT AUTO_INCREMENT PRIMARY KEY , |
@@ -3282,48 +3120,48 @@ CREATE TABLE IF NOT EXISTS phones
 
 ![image](img/2bl.jpg)接下来，添加一个查询向此表插入四条记录
 
-```
+```sql
 INSERT INTO phones ( make , model , platform )
 VALUES
-( “Apple” , “iPhone” , “iOS” ) ,
-( “RIM” , “Curve” , “BlackBerry” ) ,
-( “HTC” , “Desire” , “Android” ) ,
-( “Nokia” , “Lumia” , “Windows” ) ;
+( "Apple" , "iPhone" , "iOS" ) ,
+( "RIM" , "Curve" , "BlackBerry" ) ,
+( "HTC" , "Desire" , "Android" ) ,
+( "Nokia" , "Lumia" , "Windows" ) ;
 ```
 
 ![image](img/3bl.jpg)现在，添加一个查询显示此表中的所有记录
 
-```
+```sql
 SELECT * FROM phones ;
 ```
 
 ![image](img/4bl.jpg)添加一个查询显示“id”和“make”列
 
-```
+```sql
 SELECT id , make FROM phones ;
 ```
 
 ![image](img/5bl.jpg)添加一个查询显示“make”和“model”列
 
-```
+```sql
 SELECT make , model FROM phones ;
 ```
 
 ![image](img/6bl.jpg)添加一个查询显示“id”和“platform”列
 
-```
+```sql
 SELECT id , platform FROM phones ;
 ```
 
-![image](img/7bl.jpg)将文件保存到 `C:\SQL` 文件夹中的 `select_columns.sql`，然后启动 MySQL 命令行客户端并执行查询以使用建立的数据库
+![image](img/7bl.jpg)将文件保存到`C:\SQL`文件夹中的`select_columns.sql`，然后启动 MySQL 命令行客户端并执行查询以使用建立的数据库
 
-```
+```sql
 USE site_db ;
 ```
 
 ![image](img/8bl.jpg)现在，通过指定系统上 SQL 文件的路径来执行 SQL 查询
 
-```
+```sql
 SOURCE C:\SQL\select_columns.sql
 ```
 
@@ -3331,27 +3169,33 @@ SOURCE C:\SQL\select_columns.sql
 
 ![image](img/forget.jpg)
 
-`SELECT` 查询仅检索指定表中包含的数据副本——表本身不会被更改
+`SELECT`查询仅检索指定表中包含的数据副本——表本身不会被更改
 
 ## 获取行
 
-如果 `SELECT` 查询包含 `WHERE` 关键字来标识所需的行，则它可以从数据库表中检索特定的行。应该通过其 `PRIMARY KEY`（主键）值来标识以防止可能的重复。检索特定行的 `SELECT` 查询语法如下：
+如果`SELECT`查询包含`WHERE`关键字来标识所需的行，则它可以从数据库表中检索特定的行。应该通过其`PRIMARY KEY`（主键）值来标识以防止可能的重复。检索特定行的`SELECT`查询语法如下：
 
-`SELECT * FROM *table-name* WHERE *column-name* = *value* ;`
+```sql
+SELECT * FROM *table-name* WHERE *column-name* = *value* ;
+```
 
-此外，`SELECT` 查询中的 `WHERE` 子句可以使用 `IN` 关键字指定一个备选值列表，以便与列数据进行比较。其后跟的是在一个对括号内用逗号分隔的值列表。因此，语法如下：
+此外，`SELECT`查询中的`WHERE`子句可以使用`IN`关键字指定一个备选值列表，以便与列数据进行比较。其后跟的是在一个对括号内用逗号分隔的值列表。因此，语法如下：
 
-`SELECT * FROM *table-name* WHERE *column-name* IN ( value , value ) ;`
+```sql
+SELECT * FROM *table-name* WHERE *column-name* IN ( value , value ) ;
+```
 
-当列数据匹配列表中的任何一个值时，`WHERE` 子句评估为 `TRUE`，并返回该行的数据。可以通过在 `IN` 关键字之前加上 `NOT` 来反转比较。这时，只有当列表中的值都不匹配列数据时，`WHERE` 子句才会被评估为 `TRUE`。
+当列数据匹配列表中的任何一个值时，`WHERE`子句评估为`TRUE`，并返回该行的数据。可以通过在`IN`关键字之前加上`NOT`来反转比较。这时，只有当列表中的值都不匹配列数据时，`WHERE`子句才会被评估为`TRUE`。
 
 ![image](img/pg110_1.jpg)
 
-`select_rows.sql`
+```sql
+select_rows.sql
+```
 
 ![image](img/1bl.jpg)启动一个纯文本编辑器（如记事本），并创建一个查询来定义一个具有四列的表
 
-```
+```sql
 CREATE TABLE IF NOT EXISTS coffee_machines
 (
 | id | INT AUTO_INCREMENT PRIMARY KEY , |
@@ -3364,43 +3208,45 @@ CREATE TABLE IF NOT EXISTS coffee_machines
 
 ![image](img/2bl.jpg)接下来，添加一个查询向此表插入五条记录
 
-```
+```sql
 INSERT INTO coffee_machines ( make , model , price )
 VALUES
-( “Krups” , “Dolce Gusto” , 140.00 ) ,
-( “Gaggia” , “Cubika” , 170.00 ) ,
-( “DeLonghi” , “Magnifica” , 500.00 ) ,
-( “Magimix” , “Nespresso” , 300.00 ) ,
-( “Cuisart” , “Espresso” , 280.00 ) ;
+( "Krups" , "Dolce Gusto" , 140.00 ) ,
+( "Gaggia" , "Cubika" , 170.00 ) ,
+( "DeLonghi" , "Magnifica" , 500.00 ) ,
+( "Magimix" , "Nespresso" , 300.00 ) ,
+( "Cuisart" , "Espresso" , 280.00 ) ;
 ```
 
 ![image](img/3bl.jpg)现在，添加一个查询显示此表中的一行
 
-```
+
+
+```sql
 SELECT * FROM coffee_machines WHERE id= 3 ;
 ```
 
 ![image](img/4bl.jpg)添加一个查询显示两个特定的行
 
-```
+```sql
 SELECT * FROM coffee_machines WHERE make IN (“Krups” , “Gaggia” )
 ```
 
 ![image](img/5bl.jpg)最后，添加一个查询显示所有其他行
 
-```
+```sql
 SELECT * FROM coffee_machines WHERE make NOT (“Krups” , “Gaggia” )
 ```
 
 ![image](img/6bl.jpg)将文件保存到 `C:\SQL` 文件夹中的 `select_rows.sql`，然后启动 MySQL 命令行客户端并执行查询以使用建立的数据库
 
-```
+```sql
 USE site_db ;
 ```
 
 ![image](img/7bl.jpg)现在，通过指定系统上 SQL 文件的路径来执行 SQL 查询
 
-```
+```sql
 SOURCE C:\SQL\select_rows.sql
 ```
 
@@ -3422,8 +3268,6 @@ SOURCE C:\SQL\select_rows.sql
 
 当列数据匹配列表中的任何一个值时，`WHERE` 子句评估为 `TRUE`，并返回该行的数据。可以通过在 `IN` 关键字之前加上 `NOT` 来反转比较。这时，只有当列表中的值都不匹配列数据时，`WHERE` 子句才会被评估为 `TRUE`。
 
-（注：此处由于原文中存在重复内容，已根据指令“不要重复输出原文”进行了去重，仅保留翻译逻辑部分）
-
 ## 排序
 
 SQL 查询可以使用 `ORDER BY` 子句根据指定的列名来对返回的数据进行排序。`ORDER BY` 子句的用法语法如下：
@@ -3440,7 +3284,7 @@ SQL 查询可以使用 `ORDER BY` 子句根据指定的列名来对返回的数�
 
 ![image](img/1bl.jpg)启动一个纯文本编辑器（如记事本），并创建一个查询来定义一个具有四列的表
 
-```
+```sql
 CREATE TABLE IF NOT EXISTS watches
 (
 | id | INT AUTO_INCREMENT PRIMARY KEY , |
@@ -3453,7 +3297,7 @@ CREATE TABLE IF NOT EXISTS watches
 
 ![image](img/2bl.jpg)接下来，添加一个查询向此表插入五条记录
 
-```
+```sql
 INSERT INTO watches ( model , style , price )
 VALUES
 ( “Boston” , “Gents” , 70.00 ) ,
@@ -3465,25 +3309,25 @@ VALUES
 
 ![image](img/3bl.jpg)现在，添加一个查询显示此表中的所有记录，按“price”升序排序
 
-```
+```sql
 SELECT * FROM watches ORDER BY price ;
 ```
 
 ![image](img/4bl.jpg)添加一个查询显示所有模型和价格，按“model”字母序排序
 
-```
+```sql
 SELECT model , price FROM watches ORDER BY model ;
 ```
 
 ![image](img/5bl.jpg)最后，添加一个查询显示所有模型和样式，按“style”字母序排序
 
-```
+```sql
 SELECT model , style FROM watches ORDER BY style ;
 ```
 
 ![image](img/6bl.jpg)将文件保存到 `C:\SQL` 文件夹中的 `order_by.sql`，然后启动 MySQL 命令行客户端并执行查询以使用建立的数据库
 
-```
+```sql
 USE site_db ;
 ```
 
@@ -3496,18 +3340,16 @@ USE site_db ;
 默认情况下，`SELECT` 查询会自动按升序排列。`ORDER BY` 子句可以通过在排序列名后添加 `DESC`（降序）或 `ASC`（升序）关键字来显式指定排序方向，语法如下：
 
 `SELECT *column-name* , *column-name*
+
 FROM *table-name*
+
 ORDER BY *column-name* DESC ;`
 
 列出的 SQL 脚本使用了 `ASC` 和 `DESC` 关键字来确定三列数据的排序方向
 
-
-
-
-
 ![image](img/pg114_1.jpg)
 
-sort_direction.sql
+`sort_direction.sql`
 
 ![image](img/1bl.jpg)启动一个纯文本编辑器（如记事本），并创建一个定义三列表格的查询
 
@@ -3592,7 +3434,7 @@ SOURCE C:\SQL\sort_direction.sql
 
 ![image](img/pg16_1.jpg)
 
-comparison.sql
+`comparison.sql`
 
 ![image](img/1bl.jpg)启动一个纯文本编辑器（如记事本），并创建一个定义五列表格的查询
 
@@ -3607,7 +3449,7 @@ CREATE TABLE IF NOT EXISTS items
 ) ;
 ```
 
-![image](img/hot.jpg)在 dev.mysql.com/doc/refman/8.0/en/ 上的在线 MySQL 8 参考手册中发现更多 MySQL 内置功能
+![image](img/hot.jpg)在 `dev.mysql.com/doc/refman/8.0/en/` 上的在线 MySQL 8 参考手册中发现更多 MySQL 内置功能
 
 ![image](img/2bl.jpg)接下来，添加一个查询向此表中插入四条记录
 
@@ -3680,10 +3522,6 @@ OR die ( mysqli_connect_error() ) ;
 mysqli_set_charset( $dbc , ‘utf8’ ) ;
 ```
 
-
-
-
-
 脚本定义了一个名为 `dbc`（数据库连接）的 PHP 变量，其值赋值为内置函数 `mysqli_connect()` 的返回值。该调用需要四个参数来指定 MySQL 用户详情和要连接的数据库。当调用成功时，`mysqli_connect()` 函数返回一个代表与 MySQL 服务器连接的“对象”。
 
 成功调用 `mysqli_connect()` 返回的对象非常重要，因为它在其他与 MySQL 服务器通信的 PHP 函数调用中被用作参数传递。例如，在上面的脚本中，它必须作为 `mysqli_set_charset()` 函数调用的第一个参数以标识该连接。
@@ -3703,7 +3541,7 @@ if ( mysqli_ping( $dbc ) )
 
 ![image](img/pg120_2.jpg)
 
-require.php
+`require.php`
 
 因此，Web 服务器目录结构中的文件应按所示的分级结构排列，这样当通过 HTTP 请求 `require.php` 脚本时，`connect_db.php` 脚本将从其父目录的位置引入，并建立到 MySQL 服务器的连接。
 
@@ -3723,13 +3561,13 @@ require.php
 
 一旦你的 PHP 脚本建立了与 MySQL 服务器上指定数据库的连接，就可以使用 PHP `mysqli_query()` 函数进行查询，其语法如下：
 
-```
-mysqli_query ( database-connection-object , sql-query )
-```
 
-数据库连接对象是标准脚本在此处第 121 页 中赋值给变量（`$dbc`）的对象。通常，SQL 查询是一个赋值给另一个变量的字符串，该字符串可以作为函数的第二个参数使用。
 
-当调用 `mysqli_query()` 函数时，调用成功则返回一个“结果集”或 TRUE 值，调用失败则返回 FALSE 值。将返回值赋值给变量可以测试查询的执行是成功还是失败。
+`mysqli_query ( database-connection-object , sql-query )`
+
+数据库连接对象是标准脚本在此处第 121 页中赋值给变量（`$dbc`）的对象。通常，SQL 查询是一个赋值给另一个变量的字符串，该字符串可以作为函数的第二个参数使用。
+
+当调用 `mysqli_query()` 函数时，调用成功则返回一个“结果集”或 `TRUE` 值，调用失败则返回 `FALSE` 值。将返回值赋值给变量可以测试查询的执行是成功还是失败。
 
 可选地，你的脚本可以在查询执行后调用 `mysqli_close()` 来显式关闭连接。尽管这在脚本结束时会自动发生，但进行此调用被认为是一种良好的做法。
 
@@ -3801,9 +3639,9 @@ $q \= ‘SHOW TABLE’ ;
 mysqli_query ( database-connection-object , sql-query )
 ```
 
-数据库连接对象是标准脚本在此处第 121 页 中赋值给变量（`$dbc`）的对象。通常，SQL 查询是一个赋值给另一个变量的字符串，该字符串可以作为函数的第二个参数使用。
+数据库连接对象是标准脚本在此处第 121 页中赋值给变量（`$dbc`）的对象。通常，SQL 查询是一个赋值给另一个变量的字符串，该字符串可以作为函数的第二个参数使用。
 
-当调用 `mysqli_query()` 函数时，调用成功则返回一个“结果集”或 TRUE 值，调用失败则返回 FALSE 值。将返回值赋值给变量可以测试查询的执行是成功还是失败。
+当调用 `mysqli_query()` 函数时，调用成功则返回一个“结果集”或 `TRUE` 值，调用失败则返回 `FALSE` 值。将返回值赋值给变量可以测试查询的执行是成功还是失败。
 
 可选地，你的脚本可以在查询执行后调用 `mysqli_close()` 来显式关闭连接。尽管这在脚本结束时会自动发生，但进行此调用被认为是一种良好的做法。
 
@@ -3865,7 +3703,7 @@ $q \= ‘SHOW TABLE’ ;
 
 ### 获取结果
 
-某些 SQL 查询（如 INSERT, UPDATE, DELETE 或 ALTER）不返回数据，因此在执行成功时仅返回 TRUE 值。其他 SQL 查询（如 SHOW 或 SELECT）在执行成功时返回“结果集”。
+某些 SQL 查询（如 `INSERT`、`UPDATE`、`DELETE` 或 `ALTER`）不返回数据，因此在执行成功时仅返回 `TRUE` 值。其他 SQL 查询（如 `SHOW` 或 `SELECT`）在执行成功时返回“结果集”。
 
 结果集包含记录行，可以使用 `while` 循环逐行读取。`mysqli_fetch_array()` 函数需要结果集变量作为第一个参数。可选地，可以通过第二个参数指定返回的数组类型——关联数组、索引数组或两者兼有。可以使用下方列出的内置 PHP 常量：
 
@@ -3935,10 +3773,6 @@ mysqli_close ( $dbc ) ;
 ![image](img/pg125_1.jpg)
 
 如果未显式指定数组类型，`mysqli_fetch_array()` 函数默认返回两种类型。
-
-
-
-
 
 ![image](img/hot.jpg)
 
@@ -4037,7 +3871,7 @@ mysqli_close ( $dbc );
 $num = mysqli_num_rows( $r );
 ```
 
-很有用的是，在执行返回记录的 while 循环之前可以测试返回的行数，以确保结果集不为空。
+很有用的是，在执行返回记录的 `while` 循环之前可以测试返回的行数，以确保结果集不为空。
 
 ![image](img/pg128_1.jpg)
 
@@ -4107,6 +3941,8 @@ require ( '../connect_db.php' );
 
 ![image](img/2v.jpg) 接下来，添加一个函数来显示现有表中的所有记录，或显示错误
 
+
+
 ```php
 function show_records( $dbc )
 {
@@ -4159,10 +3995,6 @@ mysqli_close ( $dbc );
 
 ![image](img/7v.jpg)将 PHP 脚本保存到 Web 服务器的 `/htdocs` 目录并命名为 `update.php`，然后通过 HTTP 打开它以查看数据库表的更改以及受影响的行数
 
-
-
-
-
 PHP 提供了内置函数，允许对数据进行类型测试以进行验证。下表中的每个函数如果数据属于特定类型，则返回 TRUE，否则返回 FALSE：
 
 | 函数: | 验证内容: | 示例: |
@@ -4182,6 +4014,7 @@ PHP 提供了内置函数，允许对数据进行类型测试以进行验证。�
 ### validate.php
 
 ![image](img/1v.jpg)
+
 创建一个 PHP 脚本，首先引入标准脚本以建立与 MySQL 服务器上数据库的连接。
 
 ```php
@@ -4190,6 +4023,7 @@ require ( '../connect_db.php’ );
 ```
 
 ![image](img/2v.jpg)
+
 接下来，添加语句从数据库表中检索单条数据进行验证。
 
 ```php
@@ -4201,6 +4035,7 @@ while ($row = mysqli_fetch_array($r , MYSQL_NUM)) {
 ```
 
 ![image](img/3v.jpg)
+
 现在，添加语句来测试获取到的数据类型并显示适当的结果。
 
 ```php
@@ -4233,6 +4068,7 @@ echo "$var is $result";
 ```
 
 ![image](img/4v.jpg)
+
 最后，关闭 MySQL 服务器连接。
 
 ```php
@@ -4240,13 +4076,17 @@ mysqli_close($dbc);
 ```
 
 ![image](img/5v.jpg)
+
 将 PHP 脚本保存到 Web 服务器的 `/htdocs` 目录下并命名为 `validate.php`，然后通过 HTTP 打开它查看验证结果。
 
 ![image](img/pg133_1.jpg)
+
 ![image](img/forget.jpg)
+
 你应该始终验证 HTML 表单输入的数据，以确保其符合预期的类型。
 
 ![image](img/hot.jpg)
+
 你可以在这里看到小数是以字符串形式存储在变量中的，而不是浮点数。
 
 ### 确保安全性
@@ -4254,9 +4094,11 @@ mysqli_close($dbc);
 在用 PHP 和 MySQL 脚本时，考虑这些问题非常重要，以防止用户输入可能意外或恶意产生不良良影响的数据：
 
 - 不要允许数据库连接脚本被直接访问 –将其放置在 `/htdocs` 的父目录中。
+
 - 使用验证函数来确保数据存在且类型正确 – 频繁使用 `isset()`、`empty()` 和 `is_numeric()`。
 
 ![image](img/hot.jpg)
+
 你可以看到这里小数是以字符串形式存储在变量中的，而不是浮点数。
 
 ### 确保安全性
@@ -4264,9 +4106,11 @@ mysqli_close($dbc);
 在用 PHP 和 MySQL 脚本时，考虑这些问题非常重要，以防止用户输入可能意外或恶意产生不良良影响的数据：
 
 - 不要允许数据库连接脚本被直接访问 –将其放置在 `/htdocs` 的父目录中。
+
 - 使用验证函数来确保数据存在且类型正确 – 频繁使用 `isset()`、`empty()` 和 `is_numeric()`。
 
 ![image](img/hot.jpg)
+
 你可以看到这里小数是以字符串形式存储在变量中的，而不是浮点数。
 
 ### 确保安全性
@@ -4274,9 +4118,11 @@ mysqli_close($dbc);
 在用 PHP 和 MySQL 脚本时，考虑这些问题非常重要，以防止用户输入可能意外或恶意产生不良良影响的数据：
 
 - 不要允许数据库连接脚本被直接访问 –将其放置在 `/htdocs` 的父目录中。
+
 - 使用验证函数来确保数据存在且类型正确 – 频繁使用 `isset()`、`empty()` 和 `is_numeric()`。
 
 ![image](img/hot.jpg)
+
 你可以看到这里小数是以字符串形式存储在变量中的，而不是浮点数。
 
 ### 确保安全性
@@ -4284,9 +4130,11 @@ mysqli_close($dbc);
 在用 PHP 和 MySQL 脚本时，考虑这些问题非常重要，以防止用户输入可能意外或恶意产生不良良影响的数据：
 
 - 不要允许数据库连接脚本被直接访问 –将其放置在 `/htdocs` 的父目录中。
+
 - 使用验证函数来确保数据存在且类型正确 – 频繁使用 `isset()`、`empty()` 和 `is_numeric()`。
 
 ![image](img/hot.jpg)
+
 你可以看到这里小数是以字符串形式存储在变量中的，而不是浮点数。
 
 ### 确保安全性
@@ -4294,9 +4142,11 @@ mysqli_close($dbc);
 在用 PHP 和 MySQL 脚本时，考虑这些问题非常重要，以防止用户输入可能意外或恶意产生不良良影响的数据：
 
 - 不要允许数据库连接脚本被直接访问 –将其放置在 `/htdocs` 的父目录中。
+
 - 使用验证函数来确保数据存在且类型正确 – 频繁使用 `isset()`、`empty()` 和 `is_numeric()`。
 
 ![image](img/hot.jpg)
+
 你可以看到这里小数是以字符串形式存储在变量中的，而不是浮点数。
 
 ### 确保安全性
@@ -4304,9 +4154,11 @@ mysqli_close($dbc);
 在用 PHP 和 MySQL 脚本时，考虑这些问题非常重要，以防止用户输入可能意外或恶意产生不良良影响的数据：
 
 - 不要允许数据库连接脚本被直接访问 –将其放置在 `/htdocs` 的父目录中。
+
 - 使用验证函数来确保数据存在且类型正确 – 频繁使用 `isset()`、`empty()` 和 `is_numeric()`。
 
 ![image](img/hot.jpg)
+
 你可以看到这里小数是以字符串形式存储在变量中的，而不是浮点数。
 
 ### 确保安全性
@@ -4314,9 +4166,11 @@ mysqli_close($dbc);
 在用 PHP 和 MySQL 脚本时，考虑这些问题非常重要，以防止用户输入可能意外或恶意产生不良良影响的数据：
 
 - 不要允许数据库连接脚本被直接访问 –将其放置在 `/htdocs` 的父目录中。
+
 - 使用验证函数来确保数据存在且类型正确 – 频繁使用 `isset()`、`empty()` 和 `is_numeric()`。
 
 ![image](img/hot.jpg)
+
 你可以看到这里小数是以字符串形式存储在变量中的，而不是浮点数。
 
 ### 确保安全性
@@ -4324,9 +4178,11 @@ mysqli_close($dbc);
 在用 PHP 和 MySQL 脚本时，考虑这些问题非常重要，以防止用户输入可能意外或恶意产生不良良影响的数据：
 
 - 不要允许数据库连接脚本被直接访问 –将其放置在 `/htdocs` 的父目录中。
+
 - 使用验证函数来确保数据存在且类型正确 – 频繁使用 `isset()`、`empty()` 和 `is_numeric()`。
 
 ![image](img/hot.jpg)
+
 你可以看到这里小数是以字符串形式存储在变量中的，而不是浮点数。
 
 ### 确保安全性
@@ -4334,9 +4190,11 @@ mysqli_close($dbc);
 在用 PHP 和 MySQL 脚本时，考虑这些问题非常重要，以防止用户输入可能意外或恶意产生不良良影响的数据：
 
 - 不要允许数据库连接脚本被直接访问 –将其放置在 `/htdocs` 的父目录中。
+
 - 使用验证函数来确保数据存在且类型正确 – 频繁使用 `isset()`、`empty()` 和 `is_numeric()`。
 
 ![image](img/hot.jpg)
+
 你可以看到这里小数是以字符串形式存储在变量中的，而不是浮点数。
 
 ### 确保安全性
@@ -4344,9 +4202,11 @@ mysqli_close($dbc);
 在用 PHP 和 MySQL 脚本时，考虑这些问题非常重要，以防止用户输入可能意外或恶意产生不良良影响的数据：
 
 - 不要允许数据库连接脚本被直接访问 –将其放置在 `/htdocs` 的父目录中。
+
 - 使用验证函数来确保数据存在且类型正确 – 频繁使用 `isset()`、`empty()` 和 `is_numeric()`。
 
 ![image](img/hot.jpg)
+
 你可以看到这里小数是以字符串形式存储在变量中的，而不是浮点数。
 
 ### 确保安全性
@@ -4354,9 +4214,11 @@ mysqli_close($dbc);
 在用 PHP 和 MySQL 脚本时，考虑这些问题非常重要，以防止用户输入可能意外或恶意产生不良良影响的数据：
 
 - 不要允许数据库连接脚本被直接访问 –将其放置在 `/htdocs` 的父目录中。
+
 - 使用验证函数来确保数据存在且类型正确 – 频繁使用 `isset()`、`empty()` 和 `is_numeric()`。
 
 ![image](img/hot.jpg)
+
 你可以看到这里小数是以字符串形式存储在变量中的，而不是浮点数。
 
 ### 确保安全性
@@ -4364,9 +4226,11 @@ mysqli_close($dbc);
 在用 PHP 和 MySQL 脚本时，考虑这些问题非常重要，以防止用户输入可能意外或恶意产生不良良影响的数据：
 
 - 不要允许数据库连接脚本被直接访问 –将其放置在 `/htdocs` 的父目录中。
+
 - 使用验证函数来确保数据存在且类型正确 – 频繁使用 `isset()`、`empty()` 和 `is_numeric()`。
 
 ![image](img/hot.jpg)
+
 你可以看到这里小数是以字符串形式存储在变量中的，而不是浮点数。
 
 ### 确保安全性
@@ -4374,19 +4238,11 @@ mysqli_close($dbc);
 在用 PHP 和 MySQL 脚本时，考虑这些问题非常重要，以防止用户输入可能意外或恶意产生不良良影响的数据：
 
 - 不要允许数据库连接脚本被直接访问 –将其放置在 `/htdocs` 的父目录中。
-- 使用验证函数来确保数据存在且类型正确 – 频繁使用 `isset()`、`empty()` 和 `is_numeric()`。
 
-![image](img/hot.jpg)
-你可以看到这里小数是以字符串形式存储在变量中的，而不是浮点数。
-
-### 确保安全性
-
-在用 PHP 和 MySQL 脚本时，考虑这些问题非常重要，以防止用户输入可能意外或恶意产生不良良影响的数据：
-
-- 不要允许数据库连接脚本被直接访问 –将其放置在 `/htdocs` 的父目录中。
 - 使用验证函数来确保数据存在且类型正确 – 频繁使用 `isset()`、`empty()` 和 `is_numeric()`。
 
 ![image](img/snake.jpg)
+
 跨站脚本 (XSS) 通过移除 `<script>` 标签来防止执行。
 
 ### 确保安全性
@@ -4394,9 +4250,11 @@ mysqli_close($dbc);
 在用 PHP 和 MySQL 脚本时，考虑这些问题非常重要，以防止用户输入可能意外或恶意产生不良良影响的数据：
 
 - 不要允许数据库连接脚本被直接访问 –将其放置在 `/htdocs` 的父目录中。
+
 - 使用验证函数来确保数据存在且类型正确 – 频繁使用 `isset()`、`empty()` 和 `is_numeric()`。
 
 ![image](img/hot.jpg)
+
 你可以看到这里小数是以字符串形式存储在变量中的，而不是浮点数。
 
 ### 确保安全性
@@ -4404,14 +4262,17 @@ mysqli_close($dbc);
 在用 PHP 和 MySQL 脚本时，考虑这些问题非常重要，以防止用户输入可能意外或恶意产生不良良影响的数据：
 
 - 不要允许数据库连接脚本被直接访问 –将其放置在 `/htdocs` 的父目录中。
+
 - 使用验证函数来确保数据存在且类型正确 – 频繁使用 `isset()`、`empty()` 和 `is_numeric()`。
 
 ![image](img/hot.jpg)
+
 你可以看到这里小数是以字符串形式存储在变量中的，而不是浮点数。
 
 ### secure.php
 
 ![image](img/1v.jpg)
+
 创建一个包含 HTML 表单的文档，输入数据。
 
 ```html
@@ -4422,6 +4283,7 @@ mysqli_close($dbc);
 ```
 
 ![image](img/2v.jpg)
+
 在 PHP 脚本中，首先引入数据库连接脚本。
 
 ```php
@@ -4430,6 +4292,7 @@ require ( '../connect_db.php’ );
 ```
 
 ![image](img/3v.jpg)
+
 使用 `htmlspecialchars()` 函数将 HTML 字符转换为实体，以防止 SQL 注入或 XSS 攻击。
 
 ```php
@@ -4445,6 +4308,7 @@ while ($row = mysqli_fetch_array($r , MYSQL_NUM)) {
 ```
 
 ![image](img/4v.jpg)
+
 关闭 MySQL 连接。
 
 ```php
@@ -4452,10 +4316,8 @@ mysqli_close($dbc);
 ```
 
 ![image](img/5v.jpg)
+
 将 PHP 脚本保存到 Web 服务器的 `/htdocs` 目录下并命名为 `secure.php`，然后通过 HTTP 打开它查看结果。
-
-
-
 
 在处理用户输入的脚本中，当用户输入不适当的数据时，“触发”错误是非常用的。这通过使用 PHP 的 `trigger_error()` 函数实现，该函数接受两个参数来指定错误消息和级别。由于此函数仅描述用户生成的错误，指定的错误级别必须是上表中的 `E_USER` 常量类型之一。
 
@@ -4465,7 +4327,7 @@ PHP 错误处理通过其配置文件开启，也可以通过调用 `ini_set( �
 
 ![image](img/pg137_1.jpg)
 
-error.php
+### error.php
 
 ![image](img/1v.jpg)创建一个包含 PHP 脚本的 HTML 文档，该脚本开头指定一个自定义的错误处理函数
 
@@ -4474,7 +4336,9 @@ error.php
 set_error_handler( ‘error_handler’ ) ;
 ```
 
-![image](img/2v.jpg)接下来，添加自定义错误处理函数，以便在调用时向用户显示错误详情
+
+
+![image](img/2v.jpg)接下来，添加自定义错误处理函数，以便在调用时向用户显示错误详情：
 
 ```php
 function error_handler ( $level , $message , $file , $line )
@@ -4484,13 +4348,13 @@ function error_handler ( $level , $message , $file , $line )
 }
 ```
 
-![image](img/3v.jpg)现在，初始化一个变量，模拟用户输入值
+![image](img/3v.jpg)现在，初始化一个变量，模拟用户输入值：
 
 ```php
 $num = 500 ;
 ```
 
-![image](img/4v.jpg)最后，设置触发器调用自定义错误处理函数
+![image](img/4v.jpg)最后，设置触发器调用自定义错误处理函数：
 
 ```php
 if ( $num > 100 )
@@ -4500,32 +4364,30 @@ if ( $num > 100 )
 ?>
 ```
 
-![image](img/5v.jpg)将 PHP 脚本保存到 Web 服务器的 `/htdocs` 目录下并命名为 `error.php`，然后通过 HTTP 打开以查看由自定义错误处理函数生成的消息
+![image](img/5v.jpg)将 PHP 脚本保存到 Web 服务器的`/htdocs`目录下并命名为`error.php`，然后通过 HTTP 打开以查看由自定义错误处理函数生成的消息。
 
 ![image](img/pg137_2.jpg)
 
 ![image](img/hot.jpg)
 
-单独表达式错误可以通过在表达式前加上 `@` 错误控制运算符来抑制。因此，$num = @( 8 / 0 ) ;` 会抑制默认的 `Division By Zero` 错误消息。
+单独表达式错误可以通过在表达式前加上`@`错误控制运算符来抑制。因此，`$num = @( 8 / 0 ) ;`会抑制默认的`Division By Zero`错误消息。
 
 ## 总结
 
-- PHP `mysqli_connect()` 函数将用户连接到指定的数据库并返回一个数据库连接对象。
+- PHP `mysqli_connect()`函数将用户连接到指定的数据库并返回一个数据库连接对象。
 - 数据库连接对象被用作与其他数据库通信的其他 PHP 函数的参数。
-- PHP `mysqli_query()` 函数将 SQL 查询发送到 MySQL 服务器上连接的数据库。
-- 当调用 `mysqli_query()` 函数时，成功时返回一个结果集或 `TRUE` 值，失败时返回 `FALSE` 值。
-- 可选，可以调用 `mysqli_close()` 来显式关闭数据库连接。
-- SQL `SELECT` 查询返回一个包含记录行的结果集，可以使用 `while` 循环逐行读取这些行。
-- PHP `mysqli_fetch_array()` 函数将结果集的每行作为关联数组或数字数组返回。
-- 可选，调用 `mysqli_free_result()` 可以显式释放结果集资源。
-- SQL `INSERT`、`UPDATE`、`DELETE` 或 `ALTER` 查询在成功时仅返回 `TRUE` 值。
-- PHP `mysqli_num_rows()` 函数返回一个表示指定结果集中行数的整数。
-- `mysqli_affected_rows()` 函数返回一个表示受 `INSERT`、`UPDATE` 或 `DELETE` 影响的行数的整数。
-- 按类型测试数据的 PHP 函数如果数据为特定类型，则返回 `TRUE`，否则返回 `FALSE`。
-- `mysqli_real_escape_string()` 函数转义字符串中的特殊字符，`strip_tags()` 移除 HTML 标签。
-- `set_error_handler()` 函数指定自定义错误处理程序，`trigger_error()` 可生成错误。
-
-8
+- PHP `mysqli_query()`函数将 SQL 查询发送到 MySQL 服务器上连接的数据库。
+- 当调用`mysqli_query()`函数时，成功时返回一个结果集或`TRUE`值，失败时返回`FALSE`值。
+- 可选，可以调用`mysqli_close()`来显式关闭数据库连接。
+- SQL `SELECT`查询返回一个包含记录行的结果集，可以使用`while`循环逐行读取这些行。
+- PHP `mysqli_fetch_array()`函数将结果集的每行作为关联数组或数字数组返回。
+- 可选，调用`mysqli_free_result()`可以显式释放结果集资源。
+- SQL `INSERT`、`UPDATE`、`DELETE`或`ALTER`查询在成功时仅返回`TRUE`值。
+- PHP `mysqli_num_rows()`函数返回一个表示指定结果集中行数的整数。
+- `mysqli_affected_rows()`函数返回一个表示受`INSERT`、`UPDATE`或`DELETE`影响的行数的整数。
+- 按类型测试数据的 PHP 函数如果数据为特定类型，则返回`TRUE`，否则返回`FALSE`。
+- `mysqli_real_escape_string()`函数转义字符串中的特殊字符，`strip_tags()`移除 HTML 标签。
+- `set_error_handler()`函数指定自定义错误处理程序，`trigger_error()`可生成错误。
 
 # 注册用户
 
@@ -4707,9 +4569,11 @@ if ( $num > 100 )
 | `pass` | 文本 | m00nshine |
 | `reg_date` | 日期/时间 | 2018-05-14 12:30:00 |
 
+
+
 用户详情可以在用户首次注册访问时很有用地存储在 MySQL 数据库表中，这样在随后的访问中，PHP 脚本就可以轻松检索这些详情进行比较。当用户输入的登录详情与数据库表中已存储的信息相匹配时，脚本可以允许访问网站。通常，包含用户详情的数据库表可能会以单独列的形式存储每个用户的用户 ID、名字、姓氏、电子邮件地址、密码和注册日期：
 
-| **列名：** | 内容类型: | 示例: |
+| 列名 | 内容类型 | 示例 |
 | --- | --- | --- |
 | `user_id` | 数字 | 123 |
 | `first_name` | 文本 | Mike |
@@ -4718,23 +4582,10 @@ if ( $num > 100 )
 | `pass` | 文本 | m00nshine |
 | `reg_date` | 日期/时间 | 2018-05-14 12:30:00 |
 
-用户详情可以在用户首次注册访问时很有用地存储在 MySQL 数据库表中，这样在随后的访问中，PHP 脚本就可以轻松检索这些详情进行比较。当用户输入的登录详情与数据库表中已存储的信息相匹配时，脚本可以允许访问网站。通常，包含用户详情的数据库表可能会以单独列的形式存储每个用户的用户 ID、名字、姓氏、电子邮件地址、密码和注册日期：
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-用户详情可以在用户首次注册访问时很有用地存储在 MySQL 数据库表中，这样在随后的访问中，PHP 脚本就可以轻松检索这些详情进行比较。当用户输入的登录详情与数据库表中已存储的信息相匹配时，脚本可以允许访问网站。通常，包含用户详情的数据库表可能会以单独列的形式存储每个用户的用户 ID、名字、姓氏、电子邮件地址、密码和注册日期：
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-用户详情可以在用户首次注册访问时很有用地存储在 MySQL 数据库表中，这样在随后的访问中，PHP 脚本就可以轻松检索这些详情进行比较。当用户输入的登录详情与数据库表中已存储的信息相匹配时，脚本可以允许访问网站。通常，包含用户详情的数据库表可能会以单独列的形式存储每个用户的用户 ID、名字、姓氏、电子邮件地址、密码和注册日期：
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
 `reg_date` 字段使用 `DATETIME` 类型。
 
 用户详情：
+
 - `user_id` 字段是数字。
 - `first_name` 字段是文本。
 - `last_name` 字段是文本。
@@ -4742,177 +4593,56 @@ if ( $num > 100 )
 - `pass` 字段是文本。
 - `reg_date` 字段是日期/时间。
 
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-`reg_date` 字段使用 `DATETIME` 类型。
-
-（抱歉，由于在处理过程中出现了严重的重复错误，以下是针对您提供的原始文本的准确翻译：）
-
-[content]
-在处理用户输入的脚本中，当用户输入不适当的数据时，“触发”错误是非常用的。这通过使用 PHP 的 `trigger_error()` 函数实现，该函数接受两个参数来指定错误消息和级别。由于此函数仅描述用户生成的错误，指定的错误级别必须是上表中的 `E_USER` 常量类型之一。
+在处理用户输入的脚本中，当用户输入不适当的数据时，“触发”错误是非常有用的。这通过使用 PHP 的 `trigger_error()` 函数实现，该函数接受两个参数来指定错误消息和级别。由于此函数仅描述用户生成的错误，指定的错误级别必须是上表中的 `E_USER` 常量类型之一。
 
 ![image](img/hot.jpg)
 
-PHP 错误处理通过其配置文件开启，也可以通过调用 `ini_set( ‘display_errors’,1)` 手动开启。
+PHP 错误处理通过其配置文件开启，也可以通过调用 `ini_set('display_errors', 1)` 手动开启。
 
 ![image](img/pg137_1.jpg)
 
-error.php
+`error.php`
 
-![image](img/1v.jpg)创建一个包含 PHP 脚本的 HTML 文档，该脚本开头指定一个自定义的错误处理函数
+![image](img/1v.jpg) 创建一个包含 PHP 脚本的 HTML 文档，该脚本开头指定一个自定义的错误处理函数：
 
 ```php
 <?php
-set_error_handler( ‘error_handler’ ) ;
+set_error_handler('error_handler');
 ```
 
-![image](img/2v.jpg)接下来，添加自定义错误处理函数，以便在调用时向用户显示错误详情
+![image](img/2v.jpg) 接下来，添加自定义错误处理函数，以便在调用时向用户显示错误详情：
 
 ```php
-function error_handler ( $level , $message , $file , $line )
+function error_handler($level, $message, $file, $line)
 {
-    echo “Error [$level] : $message <br>
-(Check line $line in $file )” ;
+    echo "Error [$level] : $message <br>
+(Check line $line in $file)";
 }
 ```
 
-![image](img/3v.jpg)现在，初始化一个变量，模拟用户输入值
+![image](img/3v.jpg) 现在，初始化一个变量，模拟用户输入值：
 
 ```php
-$num = 500 ;
+$num = 500;
 ```
 
-![image](img/4v.jpg)最后，设置触发器调用自定义错误处理函数
+![image](img/4v.jpg) 最后，设置触发器调用自定义错误处理函数：
 
 ```php
-if ( $num > 100 )
-{ 
-    trigger_error( ‘Number must be less than 100’ , E_USER_ERROR ) ; 
+if ($num > 100)
+{
+    trigger_error('Number must be less than 100', E_USER_ERROR);
 }
 ?>
 ```
 
-![image](img/5v.jpg)将 PHP 脚本保存到 Web 服务器的 `/htdocs` 目录下并命名为 `error.php`，然后通过 HTTP 打开以查看由自定义错误处理函数生成的消息
+![image](img/5v.jpg) 将 PHP 脚本保存到 Web 服务器的 `/htdocs` 目录下并命名为 `error.php`，然后通过 HTTP 打开以查看由自定义错误处理函数生成的消息。
 
 ![image](img/pg137_2.jpg)
 
 ![image](img/hot.jpg)
 
-单独表达式错误可以通过在表达式前加上 `@` 错误控制运算符来抑制。因此，$num = @( 8 / 0 ) ; 会抑制默认的 `Division By Zero` 错误消息。
+单独表达式错误可以通过在表达式前加上 `@` 错误控制运算符来抑制。因此，`$num = @(8 / 0);` 会抑制默认的 `Division By Zero` 错误消息。
 
 ## 总结
 
@@ -4931,8 +4661,6 @@ if ( $num > 100 )
 - `mysqli_real_escape_string()` 函数转义字符串中的特殊字符，`strip_tags()` 移除 HTML 标签。
 - `set_error_handler()` 函数指定自定义错误处理程序，`trigger_error()` 可生成错误。
 
-8
-
 # 注册用户
 
 *本章演示了如何创建一个简单的注册程序和登录应用程序。*
@@ -4950,7 +4678,7 @@ if ( $num > 100 )
 
 用户详情可以在用户首次注册访问时很有用地存储在 MySQL 数据库表中，这样在随后的访问中，PHP 脚本就可以轻松检索这些详情进行比较。当用户输入的登录详情与数据库表中已存储的信息相匹配时，脚本可以允许访问网站。通常，包含用户详情的数据库表可能会以单独列的形式存储每个用户的用户 ID、名字、姓氏、电子邮件地址、密码和注册日期：
 
-| **列名：** | 内容类型: | 示例: |
+| 列名 | 内容类型 | 示例 |
 | --- | --- | --- |
 | `user_id` | 数字 | 123 |
 | `first_name` | 文本 | Mike |
@@ -4958,9 +4686,6 @@ if ( $num > 100 )
 | `email` | 文本 | mike@example.com |
 | `pass` | 文本 | m00nshine |
 | `reg_date` | 日期/时间 | 2018-05-14 12:30:00 |
-
-
-
 
 当用户输入并提交表单后，PHP 脚本将显示消息提示用户任何验证错误，或显示注册成功的确认并提供指向登录页面的超链接。
 
@@ -4970,58 +4695,58 @@ if ( $num > 100 )
 
 ![image](img/pg143_1.jpg)
 
-### register.php
+### `register.php`
 
-![image](img/1b.jpg)启动一个纯文本编辑器，并编写设置页面标题和包含页面头部的 PHP 脚本
+![image](img/1b.jpg) 启动一个纯文本编辑器，并编写设置页面标题和包含页面头部的 PHP 脚本：
 
 ```php
 <?php
-$page_title = ‘Register’ ;
-include ( ‘includes/header.html’ ) ;
+$page_title = 'Register';
+include('includes/header.html');
 ```
 
-![image](img/2b.jpg)现在，添加一个条件测试，只有在表单已提交时才执行其包含的语句
+![image](img/2b.jpg) 现在，添加一个条件测试，只有在表单已提交时才执行其包含的语句：
 
 ```php
-if ($_SERVER['REQUEST_METHOD'] == ‘POST’ )
+if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     # 在此处插入语句（步骤 3-10）。
 }
 ?>
 ```
 
-![image](img/3b.jpg)接下来，插入语句以打开数据库连接并初始化用于错误消息的数组
+![image](img/3b.jpg) 接下来，插入语句以打开数据库连接并初始化用于错误消息的数组：
 
 ```php
-require ( '../connect_db.php’ ) ;
-$errors = array() ;
+require('../connect_db.php');
+$errors = array();
 ```
 
-![image](img/4b.jpg)插入语句：如果姓字段为空，则存储错误消息，或者将其值存储在变量中
+![image](img/4b.jpg) 插入语句：如果姓字段为空，则存储错误消息，或者将其值存储在变量中：
 
 ```php
-if ( empty($_POST['first_name'] ) )
-{ $errors[] = ‘Enter your first name.’ ; }
+if (empty($_POST['first_name']))
+{ $errors[] = 'Enter your first name.'; }
 else
-{ $fn = mysqli_real_escape_string( $dbc, trim($_POST['first_name'] ) ) ; }
+{ $fn = mysqli_real_escape_string($dbc, trim($_POST['first_name'])); }
 ```
 
-![image](img/5b.jpg)现在，插入语句：如果姓字段为空，则存储错误消息，或者将其值存储在变量中
+![image](img/5b.jpg) 现在，插入语句：如果姓字段为空，则存储错误消息，或者将其值存储在变量中：
 
 ```php
-if ( empty($_POST['last_name'] ) )
-{ $errors[] = ‘Enter your last name.’ ; }
+if (empty($_POST['last_name']))
+{ $errors[] = 'Enter your last name.'; }
 else
-{ $ln = mysqli_real_escape_string( $dbc, trim($_POST['last_name'] ) ) ; }
+{ $ln = mysqli_real_escape_string($dbc, trim($_POST['last_name'])); }
 ```
 
-![image](img/6b.jpg)插入语句：如果邮箱地址字段为空，则存储错误消息，或者将其值存储在变量中
+![image](img/6b.jpg) 插入语句：如果邮箱地址字段为空，则存储错误消息，或者将其值存储在变量中：
 
 ```php
-if ( empty($_POST['email'] ) )
-{ $errors[] = ‘Enter your email address.’ ; }
+if (empty($_POST['email']))
+{ $errors[] = 'Enter your email address.'; }
 else
-{ $e = mysqli_real_escape_string( $dbc, trim($_POST['email'] ) ) ; }
+{ $e = mysqli_real_escape_string($dbc, trim($_POST['email'])); }
 ```
 
 ![image](img/forget.jpg)
@@ -5032,56 +4757,54 @@ else
 
 使用 `mysqli_real_escape_string()` 函数转义特殊字符，并使用 `trim()` 函数移除不需要的空格。
 
-![image](img/7b.jpg)接下来，插入语句：如果密码匹配，则将密码值存储在变量中；如果不匹配或第一个字段为空，则存储错误消息
+![image](img/7b.jpg) 接下来，插入语句：如果密码匹配，则将密码值存储在变量中；如果不匹配或第一个字段为空，则存储错误消息：
 
 ```php
-if ( !empty($_POST['pass1'] ) )
+if (!empty($_POST['pass1']))
 {
-    if ($_POST['pass1'] != $_POST['pass2'] )
-    { $errors[] = ‘Passwords do not match.’ ; }
+    if ($_POST['pass1'] != $_POST['pass2'])
+    { $errors[] = 'Passwords do not match.'; }
     else
-    { $p = mysqli_real_escape_string( $dbc, trim($_POST['pass1'] ) ) ; }
+    { $p = mysqli_real_escape_string($dbc, trim($_POST['pass1'])); }
 }
-else { $errors[] = ‘Enter your password.’ ; }
+else { $errors[] = 'Enter your password.'; }
 ```
 
-![image](img/8b.jpg)插入语句：如果邮箱地址已经在“users”数据库表中注册过，则存储错误消息
+![image](img/8b.jpg) 插入语句：如果邮箱地址已经在 `users` 数据库表中注册过，则存储错误消息：
 
 ```php
-if ( empty($errors) )
+if (empty($errors))
 {
-    $q = “SELECT user_id FROM users WHERE email='$e’” ;
-    $r = mysqli_query ( $dbc , $q ) ;
-    if ( mysqli_num_rows( $r ) != 0 )
-    { $errors[] = ‘Email address already registered. <a href=”login.php”>Login</a’ ; }
+    $q = "SELECT user_id FROM users WHERE email='$e'";
+    $r = mysqli_query($dbc, $q);
+    if (mysqli_num_rows($r) != 0)
+    { $errors[] = 'Email address already registered. <a href="login.php">Login</a>'; }
 }
 ```
 
-![image](img/9b.jpg)现在，插入语句将用户数据存入数据库表、注册成功时显示确认、关闭数据库连接、包含页脚并退出脚本
+![image](img/9b.jpg) 现在，插入语句将用户数据存入数据库表、注册成功时显示确认、关闭数据库连接、包含页脚并退出脚本：
 
 ```php
-if ( empty($errors) )
+if (empty($errors))
 {
-    $q = “INSERT INTO users (first_name, last_name, email, pass, reg_date) VALUES (‘$fn’, ‘$ln’, ‘$e’, SHA2(‘$p’, 256 ), NOW() )” ;
-    $r = mysqli_query ( $dbc , $q ) ;
-    if ( $r )
+    $q = "INSERT INTO users (first_name, last_name, email, pass, reg_date) VALUES ('$fn', '$ln', '$e', SHA2('$p', 256), NOW())";
+    $r = mysqli_query($dbc, $q);
+    if ($r)
     {
-        echo ‘<h1>Registered!</h1><p>You are now registered.</p><p><a href=”login.php”>Login</a></p> ;
+        echo '<h1>Registered!</h1><p>You are now registered.</p><p><a href="login.php">Login</a></p>';
     }
-    mysqli_close( $dbc ) ;
-    include ( ‘includes/footer.html’ ) ;
+    mysqli_close($dbc);
+    include('includes/footer.html');
 }
 ```
-
-
-
-
 
 ## 提供登录页面
 
 在完成用户注册过程（详见第 142-147 页介绍）后，你现在可以创建登录页面了。用户可以通过注册时提供的超链接或直接输入登录页面地址来访问该页面。
 
 ![image](img/pg148_1.jpg)
+
+
 
 `login.php`
 
@@ -5286,10 +5009,6 @@ if ( $_SERVER['REQUEST_METHOD'] == ‘POST’ )
 }
 ```
 
-
-
-
-
 ![image](img/2b.jpg)现在，插入一条语句打开数据库连接
 
 ```php
@@ -5431,12 +5150,19 @@ include ( ‘includes/footer.html’ ) ;
 ## 总结
 
 - 用户详情可以存储在 MySQL 数据库表中，以便后续访问网站时进行比较。
+
 - MySQL 数据库表可能会存储 ID、电子邮件地址、密码和注册日期。
+
 - 典型的注册表单可能会请求用户的姓名、电子邮件地址，以及他们选择的密码。
+
 - 注册表单应通过 `POST` 方法提交，并指定 PHP 脚本的名称作为其操作。
+
 - 处理注册尝试的 PHP 脚本应首先确保所有字段数据都是有效的，并在失败时提供错误消息。
+
 - 当所有注册数据有效时，处理注册尝试的 PHP 脚本可以将提交的数据存储在 MySQL 数据库表中。
+
 - 登录工具可以包含在单独的 PHP 脚本中，以便网站的其他页面可以使用。
+
 - 当所有登录数据有效且在数据库中找到用户时，处理登录尝试的 PHP 脚本可以将用户详情设置为会话数据，以便用户在网站的其他页面之间导航时能被识别。
 
 # 9 提供论坛
@@ -5448,19 +5174,22 @@ include ( ‘includes/footer.html’ ) ;
 用户消息可以通过 PHP 脚本存储在 MySQL 数据库表中，以便后续检索并显示在论坛页。通常，包含发布的用户消息的数据库表可能会存储帖子 ID、用户的名和姓、主题、消息本身以及发布日期：
 
 | 列名: | 内容类型: | 示例: |
+
 | --- | --- | --- |
+
 | **post_id** | 数字 | 123 |
+
 | **first_name** | 文本 | Mike |
+
 | **last_name** | 文本 | McGrath |
+
 | **subject** | 文本 | Ice Cream |
+
 | **message** | 文本 | Delicious on a hot day. |
+
 | **post_date** | 日期/时间 | 2018-05-14 12:30:00 |
 
 此数据库表的设计仅要求为存储文本的列指定 `VARCHAR` 或 `TEXT` 数据类型。帖子 ID 应该是正的（`UNSIGNED`）`INT` 值，由表通过 `AUTO_INCREMENT` 自动分配，消息发布时间戳应存储为 `DATETIME` 值。所有这些项目对于向数据库发布消息都是必需的，因此每一列都必须具有 `NOT NULL` 规则。
-
-
-
-
 
 要将此设计生成为名为“forum”的 MySQL 数据库表，所需的 SQL 命令可以在 MySQL 命令行客户端的提示符处执行。或者，可以将 SQL 命令保存在 SQL 文件中，通过在 MySQL 命令行客户端提示符处输入 `SOURCE` 命令并接系统上 SQL 文件的路径来实现。
 
@@ -5473,6 +5202,8 @@ MySQL 数据库表只能由 root MySQL 用户或其他被授予完全访问权�
 `create_forum.sql`
 
 ![image](img/1r.jpg)启动一个纯文本编辑器，并创建一个描述右侧所示表结构要求的 SQL 命令。
+
+
 
 ```sql
 CREATE TABLE IF NOT EXISTS forum (
@@ -5489,15 +5220,21 @@ PRIMARY KEY ( post_id ) ) ;
 
 ![image](img/3r.jpg)接下来，执行命令使用已建立的数据库。
 
-`USE site_db ;`
+```sql
+USE site_db ;
+```
 
 ![image](img/4r.jpg)现在，通过指定系统上 SQL 文件的路径来实现 SQL 命令。
 
-`SOURCE C:\SQL\create_forum.sql`
+```sql
+SOURCE C:\SQL\create_forum.sql
+```
 
 ![image](img/5r.jpg)最后，执行命令确认表格式。
 
-`EXPLAIN forum ;`
+```sql
+EXPLAIN forum ;
+```
 
 ![image](img/pg159_2.jpg)
 
@@ -5507,13 +5244,13 @@ MySQL 的 `TEXT` 数据类型最多可容 65,535 个字符。更大的消息可�
 
 ## 提供论坛页面
 
-通常，显示已发布论坛消息的消息板页面可能对注册用户可用。提供此页面的 PHP 脚本可以通过测试会 数据来检查用户已注册，并在测试失败时重定向到登录页面。测试成功后，可以从 MySQL 论坛数据库表中检索之前发布的消息并在页面上显示，或者脚本也可以简单地提示当前没有消息。论坛消息可以显示页眉和页脚之间，并带有一个指向另一个页面的链接，当前用户可以在该页面发布新的论坛消息。
+通常，显示已发布论坛消息的消息板页面可能对注册用户可用。提供此页面的 PHP 脚本可以通过测试会话数据来检查用户已注册，并在测试失败时重定向到登录页面。测试成功后，可以从 MySQL 论坛数据库表中检索之前发布的消息并在页面上显示，或者脚本也可以简单地提示当前没有消息。论坛消息可以显示页眉和页脚之间，并带有一个指向另一个页面的链接，当前用户可以在该页面发布新的论坛消息。
 
 ![image](img/pg160_1.jpg)
 
 `forum.php`
 
-![image](img/1r.jpg)启动一个纯文本编辑器，并使用允许访问会数据的语句开始 PHP 脚本。
+![image](img/1r.jpg)启动一个纯文本编辑器，并使用允许访问会话数据的语句开始 PHP 脚本。
 
 ```php
 <?php
@@ -5525,7 +5262,7 @@ session_start() ;
 ```php
 if ( !isset($_SESSION['user_id']) ) )
 {
-    require ( ‘login_tools.php’ ;
+    require ( 'login_tools.php' ;
     load() ;
 }
 ```
@@ -5533,57 +5270,57 @@ if ( !isset($_SESSION['user_id']) ) )
 ![image](img/3r.jpg)接下来，添加语句设置页面标题并包含页面页眉。
 
 ```php
-$page_title = ‘Forum’ ;
-include ( ‘includes/header.html’ ) ;
+$page_title = 'Forum' ;
+include ( 'includes/header.html' ) ;
 ```
 
 ![image](img/4r.jpg)添加语句打开数据库连接。
 
 ```php
-require ( '../connect_db.php’ ) ;
+require ( '../connect_db.php' ) ;
 ```
 
 ![image](img/5r.jpg)现在，添加语句从数据库检索消息或提供默认消息。
 
 ```php
-$q = “SELECT * FROM forum” ;
+$q = "SELECT * FROM forum" ;
 $r = mysqli_query( $dbc , $q ) ;
 if ( mysqli_num_rows( $r ) > 0 )
 {
     # 在此处插入语句（步骤 6）。
 }
 else
-{ echo ‘<p>There are currently no messages.</p>’ ; }
+{ echo '<p>There are currently no messages.</p>' ; }
 ```
 
 ![image](img/forget.jpg)
 
-在完成登录过程之前，无法访问论坛页面，在在此期间会话变量将被设置。
+在完成登录过程之前，无法访问论坛页面，在此期间会话变量将被设置。
 
 ![image](img/6r.jpg)接下来，插入语句，如果从数据库表中检索到任何消息，则编写一个显示所有消息的表格。
 
 ```php
-echo ‘<table><tr><th>Posted By</th>
-<th>Subject</th><th id=”msg”>Message</th></tr>’;
+echo '<table><tr><th>Posted By</th>
+<th>Subject</th><th id="msg">Message</th></tr>';
 while ( $row = mysqli_fetch_array( $r , MYSQLI_ASSOC ) )
 {
-    echo ‘<tr>
-<td>’.$row['first_name’].’ ‘.$row['last_name’].‘<br>’
-.$row['post_date’].’</td>
-<td>’.$row['subject’].‘</td><td>’.$row['message’].‘</td>
-</tr>’;
+    echo '<tr>
+<td>'.$row['first_name'].' '.$row['last_name'].'<br>'
+.$row['post_date'].'</td>
+<td>'.$row['subject'].'</td><td>'.$row['message'].'</td>
+</tr>';
 }
-echo ‘</table>’ ;
+echo '</table>' ;
 ```
 
 ![image](img/7r.jpg)添加语句创建指向此网站其他页面的超链接，包括“发布消息”页面。
 
 ```php
-echo ‘<p>
-<a href=”post.php”>Post Message</a> |
-<a href=”shop.php”>Shop</a> |
-<a href=”home.php”>Home</a> |
-<a href=”goodbye.php”>Logout</a></p>’ ;
+echo '<p>
+<a href="post.php">Post Message</a> |
+<a href="shop.php">Shop</a> |
+<a href="home.php">Home</a> |
+<a href="goodbye.php">Logout</a></p>' ;
 ```
 
 ![image](img/8r.jpg)现在，添加语句关闭数据库连接。
@@ -5595,50 +5332,46 @@ mysqli_close( $dbc ) ;
 ![image](img/9r.jpg)添加最后的语句包含页面页脚。
 
 ```php
-include ( ‘includes/footer.html’ ) ; ?>
+include ( 'includes/footer.html' ) ; ?>
 ```
 
-![image](img/10r.jpg)将此脚本保存到 浏览器的 hdocs 中命名为 `forum.php`，然后登录并点击论坛页面上的链接进入此 `forum.php`。表格上的单元格允许用户发布消息。此页面提供返回论坛页面的超链接，如果用户希望返回那里。
+![image](img/10r.jpg)将此脚本保存到浏览器的 hdocs 中命名为 `forum.php`，然后登录并点击论坛页面上的链接进入此 `forum.php`。表格上的单元格允许用户发布消息。此页面提供返回论坛页面的超链接，如果用户希望返回那里。
 
-
-
-
-
-![image](img/1r.jpg)启动一个纯文本编辑器并开始编写 PHP 脚本，添加语句允许访问会话数据
+![image](img/1r.jpg)启动一个纯文本编辑器并开始编写 PHP 脚本，添加语句允许访问会话数据。
 
 ```php
 <?php
 session_start() ;
 ```
 
-![image](img/2r.jpg)接下来，添加一个语句使 `load` 函数可用
+![image](img/2r.jpg)接下来，添加一个语句使 `load` 函数可用。
 
 ```php
-require ( ‘login_tools.php’ ;
+require ( 'login_tools.php' ;
 ```
 
-![image](img/3r.jpg)现在，添加一个语句，如果用户尚未登录，将浏览器重定向到登录页面
+![image](img/3r.jpg)现在，添加一个语句，如果用户尚未登录，将浏览器重定向到登录页面。
 
 ```php
 if ( !isset( $_SESSION['user_id'] ) ) { load() ; }
 ```
 
-![image](img/4r.jpg)添加语句设置页面标题并包含页眉
+![image](img/4r.jpg)添加语句设置页面标题并包含页眉。
 
 ```php
-$page_title = ‘Post Error’ ;
-include ( ‘includes/header.html’ ) ;
+$page_title = 'Post Error' ;
+include ( 'includes/header.html' ) ;
 ```
 
-![image](img/5r.jpg)接下来，添加一个语句块以确保提交的表单字段为空，否则显示错误消息
+![image](img/5r.jpg)接下来，添加一个语句块以确保提交的表单字段为空，否则显示错误消息。
 
 ```php
-if ($_SERVER['REQUEST_METHOD'] == ‘POST’ )
+if ($_SERVER['REQUEST_METHOD'] == 'POST' )
 {
     if ( empty($_POST['subject']) )
-    { echo ‘<p>Please enter a subject for this post.</p> ; }
+    { echo '<p>Please enter a subject for this post.</p>' ; }
     if ( empty($_POST['message']) )
-    { echo ‘<p>Please enter a message for this post.</p’; }
+    { echo '<p>Please enter a message for this post.</p>' ; }
     # Statements to be inserted here (Step 6).
 }
 ```
@@ -5647,50 +5380,50 @@ if ($_SERVER['REQUEST_METHOD'] == ‘POST’ )
 
 此脚本由 `post.php` 中的表单调用，用于处理提交的用户数据消息。
 
-![image](img/6r.jpg)在块中插入语句，将表单数据添加到 MySQL “forum”数据库表中
+![image](img/6r.jpg)在块中插入语句，将表单数据添加到 MySQL `forum` 数据库表中。
 
 ```php
 if( !empty($_POST['subject'])
 && !empty($_POST['message']) )
 {
-    require ( ‘../connect_db.php’ ) ;
-    $q = “INSERT INTO forum (first_name,last_name,subject,message,post_date) VALUES (‘{$_SESSION[first_name]}’ ,
-’{$_SESSION[last_name]}’ ,
-’{$_POST[subject]}’ ,
-’{$_POST[message]}’ ,
-NOW() )” ;
+    require ( '../connect_db.php' ) ;
+    $q = "INSERT INTO forum (first_name,last_name,subject,message,post_date) VALUES ('{$_SESSION[first_name]}' ,
+'{$_SESSION[last_name]}' ,
+'{$_POST[subject]}' ,
+'{$_POST[message]}' ,
+NOW() )" ;
     $r = mysqli_query ( $dbc , $q ) ;
     # Statements to be inserted here (Step 7).
     mysqli_close( $dbc ) ;
 }
 ```
 
-![image](img/7r.jpg)现在，插入语句在成功时显示论坛消息，或失败时显示 MySQL 错误消息
+![image](img/7r.jpg)现在，插入语句在成功时显示论坛消息，或失败时显示 MySQL 错误消息。
 
 ```php
 if ( mysqli_affected_rows( $dbc ) != 1 )
 {
-    echo ‘<p>Error</p>`.mysqli_error( $dbc ) ;
+    echo '<p>Error</p>'.mysqli_error( $dbc ) ;
 }
 else
 {
-    load( ‘forum.php’ ) ;
+    load( 'forum.php' ) ;
 }
 ```
 
-![image](img/8r.jpg)在语句块之后，添加语句创建一个返回论坛页面的超链接
+![image](img/8r.jpg)在语句块之后，添加语句创建一个返回论坛页面的超链接。
 
 ```php
-echo ‘<p><a href=”forum.php”>Forum</a>’ ;
+echo '<p><a href="forum.php">Forum</a>' ;
 ```
 
-![image](img/9r.jpg)添加最后的语句包含页脚
+![image](img/9r.jpg)添加最后的语句包含页脚。
 
 ```php
-include ( ‘includes/footer.html’ ) ?>
+include ( 'includes/footer.html' ) ?>
 ```
 
-![image](img/10r.jpg)将此脚本保存到网络浏览器的 `/htdocs` 目录并为 `post_action.php`，然后提交一个没有主题或消息的表单，以查看脚本显示错误消息
+![image](img/10r.jpg)将此脚本保存到网络浏览器的 `/htdocs` 目录并命名为 `post_action.php`，然后提交一个没有主题或消息的表单，以查看脚本显示错误消息。
 
 ![image](img/hot.jpg)
 
@@ -5704,7 +5437,7 @@ include ( ‘includes/footer.html’ ) ?>
 
 在创建了处理提交论坛消息的 PHP 脚本后（参见第 164-165 页），你现在可以测试留言板流程，以确保验证检查能够正确执行并在适当时显示错误，并且发布的消息出现在论坛页面上。
 
-![image](img/1r.jpg)登录并导航到“发布消息”页面，然后输入主题和消息——提交表单以查看消息出现在留言板上
+![image](img/1r.jpg)登录并导航到“发布消息”页面，然后输入主题和消息——提交表单以查看消息出现在留言板上。
 
 ![image](img/pg166_1.jpg)
 
@@ -5712,13 +5445,13 @@ include ( ‘includes/footer.html’ ) ?>
 
 ![image](img/forget.jpg)
 
-“发布者”详情是从 MySQL “forum”数据库表的 `first_name`、`last_name` 和 `post_date` 列中检索的。
+“发布者”详情是从 MySQL `forum` 数据库表的 `first_name`、`last_name` 和 `post_date` 列中检索的。
 
-![image](img/2r.jpg)接下来，返回到“发布消息”页面，然后只输入主题标题并提交表单以查看错误
+![image](img/2r.jpg)接下来，返回到“发布消息”页面，然后只输入主题标题并提交表单以查看错误。
 
 ![image](img/pg167_1.jpg)
 
-![image](img/3r.jpg)现在，以不同用户登录并提交更多消息，查看它们如何被添加到留言板
+![image](img/3r.jpg)现在，以不同用户登录并提交更多消息，查看它们如何被添加到留言板。
 
 ![image](img/pg167_2.jpg)
 
@@ -5732,14 +5465,10 @@ include ( ‘includes/footer.html’ ) ?>
 
 ## 总结
 
-• 用户消息可以存储在 MySQL 数据库表中并在稍后检索以显示在论坛页面上。
-• 通常，一个 MySQL 数据库论坛表可能会存储帖子 ID、用户姓名、主题、消息和发布日期。
-• 论坛页面通常仅对注册用户可用，因此提供论坛页面的 PHP 脚本将检查用户登录。
-• 论坛页面将显示用户列表。
-
-
-
-
+- 用户消息可以存储在 MySQL 数据库表中并在稍后检索以显示在论坛页面上。
+- 通常，一个 MySQL 数据库论坛表可能会存储帖子 ID、用户姓名、主题、消息和发布日期。
+- 论坛页面通常仅对注册用户可用，因此提供论坛页面的 PHP 脚本将检查用户登录。
+- 论坛页面将显示用户列表。
 
 ![image](img/2g.jpg)现在，创建一个 SQL 命令来填充该表：
 
@@ -5747,26 +5476,26 @@ include ( ‘includes/footer.html’ ) ?>
 INSERT INTO shop
 ( item_name , item_desc , item_img , item_price )
 VALUES
-( “Cow”, “A friendly field buddy.” “images/cow.png”, 19.99 ),
-( “Dog”, “A friendly lap buddy.” “images/dog.png”, 14.99 ),
-( “Goat”, “A friendly mountain buddy.” “images/goat.png”, 16.99 ),
-( “Leopard”, “A friendly spotted buddy.” “images/leopard.png”, 17.99 ),
-( “Rhino”, “A friendly jungle buddy.” “images/rhino.png”, 29.99 );
+( "Cow", "A friendly field buddy." "images/cow.png", 19.99 ),
+( "Dog", "A friendly lap buddy." "images/dog.png", 14.99 ),
+( "Goat", "A friendly mountain buddy." "images/goat.png", 16.99 ),
+( "Leopard", "A friendly spotted buddy." "images/leopard.png", 17.99 ),
+( "Rhino", "A friendly jungle buddy." "images/rhino.png", 29.99 );
 ```
 
-![image](img/3g.jpg)将文件保存到 `C:\SQL` 文件夹并命名为 `create_shop.sql`，然后以 root 用户身份启动 MySQL 命令行客户端，并执行使用已建立数据库的命令
+![image](img/3g.jpg)将文件保存到 `C:\SQL` 文件夹并命名为 `create_shop.sql`，然后以 root 用户身份启动 MySQL 命令行客户端，并执行使用已建立数据库的命令。
 
 ```sql
 USE site_db ;
 ```
 
-![image](img/4g.jpg)现在，通过指明系统中 SQL 文件的源路径来执行 SQL 命令
+![image](img/4g.jpg)现在，通过指明系统中 SQL 文件的源路径来执行 SQL 命令。
 
 ```sql
 SOURCE C:\SQL\create_shop.sql
 ```
 
-![image](img/5g.jpg)最后，执行命令以确认表格式并查看其中包含的所有项目
+![image](img/5g.jpg)最后，执行命令以确认表格式并查看其中包含的所有项目。
 
 ```sql
 EXPLAIN shop ; SELECT * FROM shop ;
@@ -5801,15 +5530,15 @@ EXPLAIN shop ; SELECT * FROM shop ;
 | quantity | 数字 | 2 |
 | price | 小数 | 10.00 |
 
-`order_id`、`content_id` 和 `order_date` 列由 MySQL 生成。`user_id` 由“users”表为当前登录用户提供，`item_id` 由“shop”表为所选项目提供。提交购物车提供价格和数量，并据此计算总额。
+`order_id`、`content_id` 和 `order_date` 列由 MySQL 生成。`user_id` 由 `users` 表为当前登录用户提供，`item_id` 由 `shop` 表为所选项目提供。提交购物车提供价格和数量，并据此计算总额。
 
 ![image](img/hot.jpg)
 
-注意此购物车应用程序使用了四张表（users, shop, orders, order_contents），完美地展示了 MySQL 数据库的“关系型”属性。
+注意此购物车应用程序使用了四张表（`users`、`shop`、`orders`、`order_contents`），完美地展示了 MySQL 数据库的“关系型”属性。
 
 ![image](img/pg173_1.jpg)
 
-create_orders.sql
+`create_orders.sql`
 
 ![image](img/1g.jpg)启动纯文本编辑器，创建一个 SQL 命令来描述右侧显示的第一个表的需求：
 
@@ -5824,7 +5553,7 @@ PRIMARY KEY ( order_id ) ) ;
 
 ![image](img/pg173_2.jpg)
 
-create_order_contents.sql
+`create_order_contents.sql`
 
 ![image](img/2g.jpg)将文件保存到 `C:\SQL` 文件夹并命名为 `create_orders.sql`，然后创建一个 SQL 命令来描述第二张表的需求：
 
@@ -5838,7 +5567,7 @@ price DECIMAL(4,2) NOT NULL,
 PRIMARY KEY ( content_id ) ) ;
 ```
 
-![image](img/3g.jpg)将文件保存为 `create_order_contents.sql`，然后以 root 用户身份启动 MySQL 命令行客户端，并执行使用已建立数据库的命令
+![image](img/3g.jpg)将文件保存为 `create_order_contents.sql`，然后以 root 用户身份启动 MySQL 命令行客户端，并执行使用已建立数据库的命令。
 
 ```sql
 USE site_db ;
@@ -5856,11 +5585,13 @@ EXPLAIN orders ; EXPLAIN order_contents ;
 
 ## 提供商店页面
 
-创建了第 170-171 页 描述的“shop”数据库后，你现在可以创建一个 PHP 脚本来显示所有可以选择添加到购物车的项目。每个项目都将在商店页面的表格单元格中显示，包含项目详情、关联图像，以及一个将该项目添加到购物车的超链接。
+
+
+创建了第 170-171 页描述的“shop”数据库后，你现在可以创建一个 PHP 脚本来显示所有可以选择添加到购物车的项目。每个项目都将在商店页面的表格单元格中显示，包含项目详情、关联图像，以及一个将该项目添加到购物车的超链接。
 
 ![image](img/pg74_1)
 
-shop.php
+`shop.php`
 
 ![image](img/1g.jpg)启动纯文本编辑器并开始编写 PHP 脚本，如果用户未登录则允许访问会话数据：
 
@@ -5919,22 +5650,18 @@ echo '<p><a href="cart.php">查看购物车</a> |
 include ('includes/footer.html');
 ```
 
-![image](img/7g.jpg)将此脚本保存到 浏览器的 htdocs 目录并命名为 shop.php，然后登录并访问商店页面
+![image](img/7g.jpg)将此脚本保存到浏览器的`htdocs`目录并命名为`shop.php`，然后登录并访问商店页面
 
 ## 确认购物车添加
 
 在提供了商店页面后，你现在可以创建一个 PHP 脚本，将用户选择的项目存储在会话变量数组中。这将使用“加入购物车”超链接中附加的项目 ID 数字，从“shop”数据库表中检索关联的项目名称，显示在确认项目已添加到购物车的消息中。
-
-
-
-
 
 ![image](img/2g.jpg)现在，如果用户尚未登录，添加语句将浏览器重定向到登录页面
 
 ```php
 if ( !isset( $_SESSION['user_id'] ) )
 {
-    require ( ‘login_tools.php’ ) ;
+    require ( 'login_tools.php' ) ;
     load() ;
 }
 ```
@@ -5942,8 +5669,8 @@ if ( !isset( $_SESSION['user_id'] ) )
 ![image](img/3g.jpg)接下来，添加语句设置页面标题并包含页头
 
 ```php
-$page_title = ‘加入购物车’ ;
-include ( ‘includes/header.html’ ) ;
+$page_title = '加入购物车' ;
+include ( 'includes/header.html' ) ;
 ```
 
 ![image](img/4g.jpg)将传递的项目 ID 赋值给变量
@@ -5961,7 +5688,7 @@ require ( '../connect_db.php' ) ;
 ![image](img/6g.jpg)接下来，添加语句从数据库中检索所选项目的数据
 
 ```php
-$q = “SELECT \* FROM shop WHERE item\_id = $id ” ;
+$q = "SELECT * FROM shop WHERE item_id = $id" ;
 $r = mysqli_query( $dbc , $q ) ;
 if ( mysqli_num_rows( $r ) == 1 )
 {
@@ -5980,12 +5707,12 @@ if ( mysqli_num_rows( $r ) == 1 )
 if ( isset( $_SESSION['cart'][$id] ) )
 {
     $_SESSION['cart'][$id]['quantity']++ ;
-    echo ‘<p>另一个 ‘.$row["item_name"]..’ 已加入您的购物车</p> ;
+    echo '<p>另一个 '.$row["item_name"].' 已加入您的购物车</p>' ;
 }
 else
 {
-    $_SESSION['cart'][$id] = array ( ‘quantity’ => 1, ‘price’ => $row['item_price'] ) ;
-    echo ‘<p>项目 ‘.$row["item_name"]..’ 已加入您的购物车</p>’ ;
+    $_SESSION['cart'][$id] = array ( 'quantity' => 1, 'price' => $row['item_price'] ) ;
+    echo '<p>项目 '.$row["item_name"].' 已加入您的购物车</p>' ;
 }
 ```
 
@@ -5998,16 +5725,16 @@ mysqli_close( $dbc ) ;
 ![image](img/9g.jpg)现在，添加语句创建指向网站其他页面的超链接
 
 ```php
-echo ‘<p><a href=”shop.php”>商店</a> | <a href=”cart.php”>查看购物车</a> | <a href=”forum.php”>论坛</a> | <a href=”home.php”>首页</a> | <a href=”goodbye.php”>退出</a></p>’ ;
+echo '<p><a href="shop.php">商店</a> | <a href="cart.php">查看购物车</a> | <a href="forum.php">论坛</a> | <a href="home.php">首页</a> | <a href="goodbye.php">退出</a></p>' ;
 ```
 
 ![image](img/10g.jpg)添加最后的语句包含页脚
 
 ```php
-include ( ‘includes/footer.html’ ) ;
+include ( 'includes/footer.html' ) ;
 ```
 
-![image](img/11g.jpg)将此脚本保存到网络浏览器的 `/htdocs` 目录中并命名为 `added.php`，然后在 Shop 页向购物车添加项目
+![image](img/11g.jpg)将此脚本保存到网络浏览器的`/htdocs`目录中并命名为`added.php`，然后在 Shop 页向购物车添加项目
 
 ![image](img/pg177_1.jpg)
 
@@ -6025,7 +5752,7 @@ include ( ‘includes/footer.html’ ) ;
 
 ![image](img/pg178_1.jpg)
 
-### cart.php
+### `cart.php`
 
 ![image](img/1g.jpg)启动纯文本编辑器，并以允许访问会话数据的语句开始 PHP 脚本
 
@@ -6039,7 +5766,7 @@ session_start() ;
 ```php
 if ( !isset( $_SESSION['user_id'] ) )
 {
-    require ( ‘login_tools.php’ ) ;
+    require ( 'login_tools.php' ) ;
     load() ;
 }
 ```
@@ -6047,14 +5774,14 @@ if ( !isset( $_SESSION['user_id'] ) )
 ![image](img/3g.jpg)接下来，添加语句设置页面标题并包含页头
 
 ```php
-$page_title = ‘购物车’ ;
-include ( ‘includes/header.html’ ) ;
+$page_title = '购物车' ;
+include ( 'includes/header.html' ) ;
 ```
 
 ![image](img/4g.jpg)如果页面已提交修改，则添加语句更新数量
 
 ```php
-if ( $_SERVER['REQUEST_METHOD'] == ‘POST’ )
+if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 {
     foreach ( $_POST['qty'] as $item_id => $item_qty )
     {
@@ -6062,12 +5789,14 @@ if ( $_SERVER['REQUEST_METHOD'] == ‘POST’ )
         $id = (int) $item_id ;
         $qty = (int) $item_qty ;
         # 如果为零则更改数量或删除。
-        if ( $qty== 0 )
+        if ( $qty == 0 )
             unset( $_SESSION['cart'][$id] );
         elseif ( $qty > 0 )
             $_SESSION['cart'][$id]['quantity'] = $qty ;
     }
-```![image](img/forget.jpg)用户可能会向数量字段输入非数字值，因此脚本必须确保数量是整数。现在，添加语句初始化总额
+```
+
+![image](img/forget.jpg)用户可能会向数量字段输入非数字值，因此脚本必须确保数量是整数。现在，添加语句初始化总额
 
 ```php
 $total = 0 ;
@@ -6082,7 +5811,7 @@ if ( !empty($_SESSION['cart']) )
 }
 else
 {
-    echo ‘<p>购物车为空。</p>’ ;
+    echo '<p>购物车为空。</p>' ;
 }
 ```
 
@@ -6095,59 +5824,67 @@ require ( '../connect_db.php' ) ;
 ![image](img/7g.jpg)接下来，插入语句从数据库检索数据
 
 ```php
-$q = “SELECT \* FROM shop WHERE item\_id IN (“ ;
+$q = "SELECT * FROM shop WHERE item_id IN (" ;
 foreach ($_SESSION['cart'] as $id => $value)
 {
-    $q .= $id . ‘,’ ;
+    $q .= $id . ',' ;
 }
-$q = substr($q , -1) . “) BY item\_id ASC” ;
+$q = substr($q , 0, -1) . ") ORDER BY item_id ASC" ;
 $r = mysqli_query( $dbc , $q ) ;
-```![image](img/8g.jpg)现在，添加语句创建购物车表单
+```
+
+![image](img/8g.jpg)现在，添加语句创建购物车表单
 
 ```php
 while ( $row = mysqli_fetch_array( $r , MYSQLI_ASSOC ) )
 {
     # 计算小计。
     $subtotal += $row['item_price'] * $_SESSION['cart'][$id]['quantity'];
-    echo ‘<tr><td>’.$row["item_name"]..’</td><td>’.$row["desc"]..’</td><td><input type=""text” name=""qty[$id]” size=""3” value='.$$_SESSION['cart'][$id]['quantity']..’></td><td>’$.number_format($row["item_price"], 2).’</td></tr>’ ;
+    echo '<tr><td>'.$row["item_name"].'</td><td>'.$row["item_desc"].'</td><td><input type="text" name="qty[$id]" size="3" value="'.$_SESSION['cart'][$id]['quantity'].'"></td><td>'.$row["item_price"].'</td></tr>' ;
 }
-```![image](img/9g.jpg)添加语句显示购物车中的表单
+```
+
+![image](img/9g.jpg)添加语句显示购物车中的表单
 
 ```php
-echo ‘<form action=""cart.php” method=""POST”><table><tr><th>项目</th><th>描述</th><th>数量</th><th>单价</th></tr>’ ;
-echo ‘<tr><td colspan=""5”>总计 = ”.number_format($total, 2).’</td></tr>’ ;
-echo ‘</table><input type=""submit” value=""更新购物车”></form>’
-```![image](img/10g.jpg)在表格末尾显示总额，并在表单末尾添加提交按钮
+echo '<form action="cart.php" method="POST"><table><tr><th>项目</th><th>描述</th><th>数量</th><th>单价</th></tr>' ;
+echo '<tr><td colspan="5">总计 = '.number_format($total, 2).'</td></tr>' ;
+echo '</table><input type="submit" value="更新购物车"></form>'
+```
+
+![image](img/10g.jpg)在表格末尾显示总额，并在表单末尾添加提交按钮
 
 ```php
 $total += $subtotal ;
-```![image](img/11g.jpg)现在，添加语句关闭数据库连接
+```
+
+![image](img/11g.jpg)现在，添加语句关闭数据库连接
 
 ```php
 mysqli_close( $dbc ) ;
-```![image](img/12g.jpg)添加语句创建指向网站其他页面的超链接，包括一个将总额附加到 URL 的“结算”页面
-
-```php
-echo ‘<p><a href=”shop.php”>商店</a> | <a href=”checkout.php?total='.$total.’”>结算</a> | <a href=”forum.php”>论坛</a> | <a href=”home.php”>首页</a> | <a href=”goodbye.php”>退出</a></p>’ ;
 ```
 
+![image](img/12g.jpg)添加语句创建指向网站其他页面的超链接，包括一个将总额附加到 URL 的“结算”页面
 
-
-
+```php
+echo '<p><a href="shop.php">商店</a> | <a href="checkout.php?total='.$total.'">结算</a> | <a href="forum.php">论坛</a> | <a href="home.php">首页</a> | <a href="goodbye.php">退出</a></p>' ;
+```
 
 ![image](img/pg181_1.jpg)
+
 ![image](img/pg181_2.jpg)
+
 ![image](img/hot.jpg)
 
 你可以将所有数量更改为零并点击“更新”（Update）按钮查看默认的空购物车消息。
 
 ## 结算订单
 
-在制作了此处第 174-181 页 描述的购物车页面后，你现在可以创建一个 PHP 脚本来处理用户选择的项目并作为一个“结账”订单。这是购物车流程的终点，它将购物车的选择存储在“order”和 `order_contents` 数据库表中，以供供应商后续履行订单。
+在制作了此处第 174-181 页描述的购物车页面后，你现在可以创建一个 PHP 脚本来处理用户选择的项目并作为一个“结账”订单。这是购物车流程的终点，它将购物车的选择存储在“order”和`order_contents`数据库表中，以供供应商后续履行订单。
 
 ![image](img/pg182_1.jpg)
 
-### checkout.php
+### `checkout.php`
 
 ![image](img/1g.jpg)启动一个纯文本编辑器，并使用语句开始 PHP 脚本允许访问会话（session）数据。
 
@@ -6225,6 +5962,8 @@ while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
 
 ![image](img/10g.jpg)现在，插入一条语句关闭数据库连接，显示确认消息并清空购物车。
 
+
+
 ```php
 mysqli_close($dbc);
 echo '<p>Thanks for your order.</p>';
@@ -6238,8 +5977,6 @@ $_SESSION['cart'] = NULL;
 echo '<a href="shop.php">Shop</a> | <a href="forum.php">Forum</a> | <a href="home.php">Home</a> | <a href="goodbye.php">Logout</a>';
 ```
 
-```
-
 添加语句包含页面页脚。
 
 ```php
@@ -6250,7 +5987,7 @@ include ('footer.html');
 
 ## 结算成功
 
-在制作了此处第 182-183 页 描述的结算页面后，你现在可以创建一个 PHP 脚本允许用户从网站注销。这将销毁会话数据，使用户在不登录的情况下无法访问网站。
+在制作了此处第 182-183 页描述的结算页面后，你现在可以创建一个 PHP 脚本允许用户从网站注销。这将销毁会话数据，使用户在不登录的情况下无法访问网站。
 
 ![image](img/pg184_1.jpg)
 
@@ -6303,7 +6040,7 @@ echo '<h1>Goodbye!</h1><p>You are now logged out.</p><p><a href="login.php">Logi
 include ('footer.html');
 ```
 
-![image](img/8g.jpg)将该脚本保存到你浏览器的 `htdocs` 目录并命名为 `goodbye.php`，然后从商店选择项目、结算，最后从网站注销。
+![image](img/8g.jpg)将该脚本保存到你浏览器的`htdocs`目录并命名为`goodbye.php`，然后从商店选择项目、结算，最后从网站注销。
 
 ![image](img/pg185_1.jpg)
 ![image](img/pg185_2.jpg) PHP 和 MySQL 是一个灵活且强大的组合，在 Web 的未来扮演着重要的角色。默认情况下，会话直到用户关闭浏览器才会结束——因此 PHP 脚本必须在用户注销时结束会话。你可以轻松扩展结算页面脚本以包含订单详情。
@@ -6314,4 +6051,3 @@ include ('footer.html');
 - 通常，包含商店项目的数据库表可能存储项目 ID、名称、描述、图像路径和价格。
 - 订单详情可以存储在两个相关的 MySQL 数据库表中，允许多个订单中包含多个项目。
 - 通常，包含订单摘要详情的数据库表可能存储订单 ID、用户 ID、总值和订单日期。
-

@@ -1,23 +1,19 @@
+
 # 边缘计算的人工智能与机器学习
 
+## 第 12 章
 
+### 人工智能与机器学习在区块链技术中的应用
 
-
-
-# 第 12 章
-
-## 人工智能与机器学习在区块链技术中的应用
-
-
-## 1 引言
+#### 1 引言
 
 分布式不可篡改账本是区块链技术的骨干，它促进了在业务网络中实时记录、审计所有交易以及跟踪资产的过程 [1]。人工智能（AI）试图让机器执行那些目前由人类恰当完成的任务。区块链与人工智能的结合可以促进几乎每个行业中软件开发及其维护的进程。例如，我们可以看到在医疗保健领域实施的这两项技术如何为各自做出贡献。然而，供应链、娱乐、网络安全和物流也受到了影响。区块链可以为其中的每一个领域进行构建。人工智能的局限性包括隐私、透明度和信任度，而区块链可以推导出隐私性和透明度。类似地，效率、可扩展性和安全性是区块链技术的主要瓶颈。
 
-每个区块链都包含多个交易。新知的加密工具如哈希算法或工作量证明 [4] 算法、SHA256、伦理等均被用于计算区块的哈希值。前一个区块的哈希值被视为当前区块的基区块（见图 1）[5]。
+每个区块链都包含多个交易。新知的加密工具如哈希算法或工作量证明 [4] 算法、`SHA256`、伦理等均被用于计算区块的哈希值。前一个区块的哈希值被视为当前区块的基区块（见图 1）[5]。
 
 区块链提供了一个不可篡改的账本，能够以更透明、更易理解的方式存储人工智能的决策过程。区块链上的数据是公开的；比特币可以在区块链账本中执行智能合约和数据机密。人工智能和机器学习的进步促进了它们在区块链技术中的应用。在自动驾驶汽车和精通自然语言的个人助手等事物中使用人工智能已成为我们的新常态 [7]。一方面一方面引起了人们巨大的兴趣，但另一方面，人工智能和机器学习可能会导致严重问题，如创建虚假照片、视频、针对虚假的笔记以及色情内容 [8]。借助人工智能的隐私泄露 [9] 对我们来说是一个潜在威胁。在这里，区块链技术可以提供帮助，因为它赋予你控制自己数据的权力。区块链技术为人工智能的实施带来了解释能力、隐私性和信任度。
 
-### 1.1 区块链特性
+##### 1.1 区块链特性
 
 传统银行系统的电子交易成本高昂，且容易受到中间机构的恶意攻击 [10]。然而，区块链网络是一种高效且具有成本效益的技术，因为它通过消除对中间机构的需求消除了努力的差异。使用共识模型来验证信息使其不易受到攻击。区块链技术中的交易是安全的、可验证的经过认证的。
 
@@ -41,7 +37,7 @@
 - 来源：资产的来源对区块链的所有节点都是知的，资产所有权的变更对所有人也可见。
 - 必然性：区块链以单账本的形式提供了一站式解决方案，验证交易的完成情况以及资产的所有权。
 
-### 1.2 区块链的优势
+##### 1.2 区块链的优势
 
 区块链技术对业务具有以下优势：
 
@@ -56,7 +52,7 @@
 
 图 2 区块链信任构建属性
 
-### 1.3 区块链信任构建属性
+##### 1.3 区块链信任构建属性
 
 区块链技术因为它向系统注入的信任而成为人们讨论的焦点。不依赖中间介的构建是这项技术的独特卖点。图 2 显示了区块链信任构建属性 [11]。
 
@@ -72,19 +68,11 @@
 - 协调：参与方可以对区块链平台上的每笔交易协调、设计并达成规则、条款和条件。
 - 弹性：区块链网络非常灵活；所有生活的需求都可以通过智能合约进行设计和开发。不需要中央或最高权威的批准。
 
-## 2 人工智能、机器学习与区块链技术的应用
+#### 2 人工智能、机器学习与区块链技术的应用
 
-### 2.1 区块链技术的领军者
+##### 2.1 区块链技术的领军者
 
-区块链技术已被证明是人工智能之后的热门。行业和普通公众在过去对区块链技术产生了兴趣。随着时间的推移，区块链技术的普及程度正在
-
-
-
-
-
-# 172 第一部分 | 人工智能与机器学习
-
-增长了许多倍。排除中介实体是这项技术的独特卖点。然而，区块链技术专家的“知识隐瞒” [12] 现象正为区块链技术成为行业宠儿的道路上制造障碍。
+区块链技术已被证明是人工智能之后的热门。行业和普通公众在过去对区块链技术产生了兴趣。随着时间的推移，区块链技术的普及程度正在增长了许多倍。排除中介实体是这项技术的独特卖点。然而，区块链技术专家的“知识隐瞒” [12] 现象正为区块链技术成为行业宠儿的道路上制造障碍。
 
 在金融科技之后，区块链技术在医疗保健行业 [13] 证明了其自身的价值最为充分。
 
@@ -125,13 +113,13 @@
 | 29. | Filecoin | 旧金山 | 金融科技 |
 | 30. | Mediachain | 纽约 | 数字媒体、电子商务 |
 
-### 2.2 人工智能与机器学习的领军者
+##### 2.2 人工智能与机器学习的领军者
 
 随着 Alexa、Siri 和 Google Assistant 等个人助理的引入，AI 变得越来越流行。随着特斯拉自动驾驶汽车等创新性突破，AI 现在正以全速运行。AI 的迷之处在于其跨学科的本质；因为它触及了各行各业。在 AI 的庇护下，深度学习和机器学习（ML）正在展现出前所未有的实力。在法医学领域，机器学习在检测犯罪模式以及人脸识别方面非常有帮助 [14]。
 
 许多公司在 AI 领域表现出色。除了微软、谷歌、苹果、特斯拉和亚马逊之外，其他几家提供基于 AI 和机器学习解决方案的知名公司列于表 3 中。
 
-### 2.3 区块链与人工智能的领军者
+##### 2.3 区块链与人工智能的领军者
 
 一方面，AI 凭借其计算和预测能力帮助扩展业务；另一方面，区块链技术提供了一个不可篡改的账本，以防止对业务流程和数据的未经授权访问。表 4 列出的某些公司在监管 AI 和区块链技术的使用方面做出了显著工作。
 
@@ -210,7 +198,7 @@
 | 29. | Vytalx | 德克萨斯州 | 医疗 |
 | 30. | Wealthblock.AI | 芝加哥 | 营销 |
 
-### 2.4 印度政府的区块链倡议
+##### 2.4 印度政府的区块链倡议
 
 NITI Aayog (2020) 的案例研究：
 
@@ -224,7 +212,7 @@ NITI Aayog (2020) 的案例研究：
 - 能源交易。
 - 加密货币。
 
-### 2.5 区块链与人工智能当前的应用领域
+##### 2.5 区块链与人工智能当前的应用领域
 
 在过去几年，研究人员将人工智能和机器学习注入区块链技术中。这种努力现在以该领域成功应用的形式表现出来。表 5 概述了 AI 和区块链链发挥奇作用的应用领域。
 
@@ -246,63 +234,86 @@ NITI Aayog (2020) 的案例研究：
 | 生物信息 | 知识产权 | 预测引擎 |
 | 数据科学 | | |
 
-
-
-
-## 3 舞者共舞：人工智能与机器学习在区块链技术中的未来
+#### 3 舞者共舞：人工智能与机器学习在区块链技术中的未来
 
 安全性是传统电子商务项目中主要的关注领域 [15]。区块链具有许多优势，但也存在一些实现问题。例如，医疗保健领域的区块链威胁和局限性在文献中已有讨论 [16]。图3显示了人工智能和机器学习关注的区块链技术。为了克服这些局限性和问题，人工智能的能力可以被利用。
 
-### 3.1 可持续性
+##### 3.1 可持续性
+
 可持续性是区块链技术中的主要关注问题，因为挖掘需要大量的能量。人工智能在优化能耗方面证明了它的实力。因此，它可以被利用。
 
-### 3.2 可扩展性
+##### 3.2 可扩展性
+
 可扩展性是区块链的另一个关键问题。区块链的大小正以每秒 MB 的速度增长。区块链剪枝 [6] 无法处理此问题。人工智能驱动的联邦学习或新颖可能会在此使用。
 
-### 3.3 安全
+##### 3.3 安全
+
 由于区块链的高能耗，几乎不可能被黑入；但其应用层由程序员编写的智能合约是不安全的。在这里，我们可以利用机器学习的入侵检测能力。
 
-### 3.4 隐私
+##### 3.4 隐私
+
 人工智能和机器学习模型在保护区块链数据隐私方面非常有用。例如，旨在在不违反隐私 [17] 的情况下自动化医疗。
 
-### 3.5 适应性
-人工智能和机器学习模型可以准确预测区块链应用的适应性。区块链的适应性根据业务需求、以及员工转向新技术的意愿进行预测。![](img/d482d976e7e75f102ff440e8522a951e.png)
+##### 3.5 适应性
+
+人工智能和机器学习模型可以准确预测区块链应用的适应性。区块链的适应性根据业务需求、以及员工转向新技术的意愿进行预测。
+
+![](img/d482d976e7e75f102ff440e8522a951e.png)
 
 图3 区块链关注领域。
 
+
+
 ### 3.6 效率
+
 人工智能和机器学习模型通过预测最有前景的节点来最小化某些活动的不确定性。
 
 ### 3.7 交易速度
+
 优化是人工智能和机器学习模型优秀的领域。账本的大小降低了交易速度。这个问题可以通过人工智能优化技术解决。
 
 ### 3.8 性能
+
 性能可以通过机器学习模型的改进。机器学习具有从经验中学习的能力。
 
 ### 3.9 各元素的验证
+
 交易的验证和检查由人工智能驱动的模型自动完成。
 
 ### 3.10 可维护性
+
 区块链的可维护性是一项巨大的任务。人工智能和机器学习模型可以实现区块链的可维护性。
 
 ### 3.11 范围估计
+
 人工智能可以促进机器学习模型检查区块链项目。在垂直处理中的区块链范围可以通过机器学习模型提出。
 
 ### 3.12 成本估计
+
 由于底层架构的原因，无法通过传统方法估计区块链项目/应用的成本。机器学习模型在更高效的方式预测成本估计方面起着重要作用。
 
 ### 3.13 工作估计
+
 区块链应用没有传统的工作估计方法；在这里，机器学习和人工智能工具可能被用于准确预测所需的工作。
 
 ### 3.14 项目特定的模式
+
 有四种区块链项目/应用：
+
 - (i) 公有链或无许可区块链
+
    示例：Bitcoin、Litecoin、Ethereum等
+
 - (ii) 私有链或基于许可的区块链
+
    示例：Sawtooth、Fabric、Corda等
+
 - (iii) 联盟链或去中心化区块链
+
    示例：R3、Energy Web Foundation等
+
 - (iv) 混合区块链（私有链和公有链的结合）
+
    示例：Dragonchain等
 
 可以在项目特定的数据上进行机器学习训练。可以通过人工智能技术设计项目特定的模式。
@@ -314,6 +325,7 @@ NITI Aayog (2020) 的案例研究：
 物联网 (IoT) 是边缘计算的可能用途之一。以服装店为例，库存和销售都需要本地和批量两种类型的处理。地理分布的商店每天统计库存和销售，然后将计算结果发送到总部。在这个例子中，顶层总部对商店（边缘）发生的每次交易感兴趣，而是对商店（边缘设备）计算出的销售和库存最终统计感兴趣。通过利用边缘计算的能力，我们重塑了每一个行业。边缘计算的用例包括电信、健康、金融服务、媒体与娱乐、制造业、供应链、零售、保险、医药以及带有智能和智慧城市的汽车。图5显示了边缘计算的一些用途。
 
 ### 4.1 边缘计算架构
+
 云计算和物联网的架构可以扩展到边缘计算架构的示意图中。基本上，边缘计算利用多层分布式架构在云层、边缘层（边缘网络）以及连接边缘本地服务器层和边缘设备的边缘层之间平衡；图6展示了边缘计算架构的高级示意图。图7表示了基于IBM边缘计算架构的简化边缘架构参考。
 
 顶层（或云微云）用于分析大规模数据。它由一个可能是设备管理和监控焦点的仪表板组成。这一层可能有数百个设备。每一层作为AI服务和模型的软件组件的大小取决于其需要处理的数据量。
@@ -332,28 +344,42 @@ NITI Aayog (2020) 的案例研究：
 
 图5 边缘应用领域。
 
-
 ![](img/d482d976e7e75f102ff440e8522a951e_11_0.png)
 
 图 7 高级边缘计算参考架构。
 
 - Intel Network Builders 边缘生态系统/Intel IoT 市场就绪解决方案 (Intel IMRS)/Intel 数据中心构建：Intel合作伙伴解决方案
+
 - AWS 边缘：
+
     - 基础设施：AWS Wavelength/AWS Local Zones/AWS Outposts
+
     - 网络：Amazon CloudFront
+
     - 物联网：AWS SiteWise/AWS IoT Greengrass/FreeRTOS/用于 AWS IoT Core 的 AWS 语音集成
+
     - 网络：Amazon CloudFront
+
 - 坚固型与离线边缘设备：AWS Snowcone/Snowball Edge
+
 - 存储：AWS Storage Gateway
+
 - 分析：Amazon Kinesis Video Streams
+
 - 机器学习：Amazon SageMaker Edge Manager/Amazon SageMaker Neo/AWS Panorama/Amazon
 
 - Microsoft Azure 边缘：
+
     - 基础设施：Azure Stack (1U, 2 x 10 核 Intel Xeon, 128 GB 设备)
+
     - Azure Stack HCI: 一种超融合基础设施
+
     - Azure Stack Hub: 云原生应用的部署
+
 - Google 边缘：
+
     - 边缘认证
+
     - Google 边缘云
 
 # 人工智能与机器学习的应用 章节 | 12 181
@@ -361,8 +387,11 @@ NITI Aayog (2020) 的案例研究：
 计算中使用的通用协议：
 
 CoAP：这是 IET 受限资源 RESTful 环境 (CoRE) 工作组的智力结晶。它是一种应用层协议。在 HTTP 功能的基础上，该传输协议运行在表述状态转移 (REST) 之上。
+
 AMQP：应用层协议是 TCP 中的一种开放标准，用于消息交换。AMQP 为消息传递提供了三种保证，包括恰好一次、最多一次和至少一次传递。
+
 MQTT：MQTT 由三个部分组成：发布者、代理（broker）和订阅者。它是一种连接协议，用于连接各种边缘设备，如边缘网络、嵌入式设备、中间件和边缘服务。
+
 IoT 通信：机器对机器、物网、物联网模型包括：发布-订阅、请求-响应等。通信模式包括通知、遥测和状态更新。
 
 ### 4.2 边缘计算的领军者
@@ -432,8 +461,6 @@ IoT 通信：机器对机器、物网、物联网模型包括：发布-订阅、
 
 从加密机器人交易加密货币，到 AI 驱动的音乐流媒体平台 MusicLife，再到通过创建在线化身帮助人们拥有数字遗产的 EverLife，这些只是
 
-
-
 区块链与人工智能交织的景象。人工智能的局限性通过区块链消除，而区块链的局限性则通过人工智能量身定制。机器学习正在证明其在区块链自动化方面的能力。边缘计算物联网是与区块链和人工智能结合的另一大武器。通过边缘计算，我们的计算能力可以增加许多倍。缺乏中间方或治理方是区块链技术的魅力所在，但这是一把双刃剑。为了消除围绕区块链的不确定性，人工智能和机器学习可以发挥至关重要的作用。本文讨论了人工智能和机器学习在区块链中的许多应用。我们还讨论了边缘计算作为区块链技术的潜在用途。这些领域的研究欢迎贡献。
 
 ## 致谢
@@ -443,19 +470,37 @@ IoT 通信：机器对机器、物网、物联网模型包括：发布-订阅、
 ## 参考文献
 
 - [1] M. Gupta, Grasping blockchain fundamentals, for Blockchain in Dummies, IBM, Hoboken, NJ, 2017. Limited Edition.
+
 - [2] T.N. Din, M.T. Thai, Ai AI as a disruptive innovation, Computer System, 51 (2018) 48–53.
+
 - [3] M.N.T.I. Ayayog, Blockchain: The Industry Strategy, N.I.T.I. Ayayog, 2020.
+
 - [4] M. Jakobson, A. Jaels, Proof of work and building protocols; in Computer Information Networks, Springer, 1999, pp. 258–272.
+
 - [5] S. Ali, A. Rahman, F. Shafei, Smart Blockchain: Understanding the challenges and needs of blockchain software: a survey, Empir. Soft. Eng., 24 (2019) 2660–2673.
+
 - [6] S. Nakamoto, Bitcoin: A Peer-to-Peer Electronic Cash System, 2008. https://bitcoin.com/bicoin.pdf.
+
 - [7] Y. Leviaqu, Google Duplex: An AI for Automating Real-World Tasks over the Phone, Google AI Blog, 2018. https://ai.google/blog/google-duplex-ai/
+
 - [8] A. Hern, AI for Face-to-face World Stories into Imprintof Fotos, The Guardian, 2018. https://www.theguardian.com/technology/2018/05/25/ai-face-to-face-emotion-recognition-craftsman-johnson-taylor-risley-daily-tracker-marie-miles
+
 - [9] J. McCraft, AI Will Make Smart Homes Autonomous, But Don't Expect Performance or Privacy, Digital Trends, 2018. www.digitaltrends.com/home/ai-will-make-smart-homes-autonomous-but-don-t-expect-performance-or-privacy/
+
 - [10] T. Laurence, Blockchain for Dummies, John Wiley & Sons, 2019.
+
 - [11] T. Chang, Y. Huang, H. Zhang, Q. Q. Li, N. Zhang, M. Amin, How blockchain can enhance financial services-surveys, the challenges and merits from expert interviews, Foretech, Sec. Conf., 158 (2020) 12166.
+
 - [12] S. Tanwar, K. Park, R. Evans, Blockchain-enabled electronic health record system for healthcare 4.0, Int. J. Fe. App., 50 (2020), 10240.
+
 - [13] M. Haron, M. Merouti, F. Tabibi, Application of machine learning in healthcare: Critical Concepts, Standards, and Techniques in Cybersecurity, FIG Global, 2020, pp. 228–239.
+
 - [14] M.S. Hussain, D. Haron, A. Naseem, M. Alharbi, H. Alrajhi, The benefits and threats of blockchain technology in healthcare: a review, IEEE J. Res. Comput. Sci. Technol. 8 (2020) 271–277.
+
+
+
+# References
+
 - [15] F. K. Khan, M. Asif, A. Ahmed, A secure framework for smart grid and its application in has for sustainable development, Cities Soc. 55 (2020), 102018.
 - [16] K. Alaniezi, S. Mishra, Edge-based architecture to support the execution of machine intelligence with the IOP platform, Future Gen. Comput. Syst., 114 (2020) 1–13.
 - [17] Y. Wu, H. Dai, W. Wang, J. Yi, S. Azdari, A. Y. Zomata, Edge intelligence: the fusion of edge computing and artificial intelligence, IEEE Intelligent Syst. 10 (4) (2020) 92–100.
@@ -474,4 +519,3 @@ IoT 通信：机器对机器、物网、物联网模型包括：发布-订阅、
 - [32] V. Havassija, Y. Ding, G. Krishna, N. Kumar, M. Guizani, A blockchain and edge computing-based secure framework for government tender allocation, IEEE Internet Things 8 (4) (2020) 2409–2418.
 - [33] L. Lu, Z. Chen, S. Yang, M. Jing, Q. Li, Y. Zhou, Q. Lu, A blockchain-based containerized edge computing platform for the internet of vehicles, IEEE Internet Things 8 (8) (2020) 2395–2408.
 - [34] Y. Zhu, C. Huang, Z. Hu, A. Al-Dhelaean, M. Al-Dhelaean, Blockchain-enabled access management system for edge computing, Electronics 10 (9) (2021) 10000.
-

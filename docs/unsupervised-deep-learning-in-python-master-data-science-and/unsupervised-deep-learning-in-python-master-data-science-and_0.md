@@ -1,10 +1,5 @@
+
 # Python 无监督深度学习：使用 Python 和 Theano 编写的现代神经网络精通数据科学与机器学习
-
-
-
-
-
-
 
 ## 引言
 
@@ -12,7 +7,7 @@
 
 深度神经网络深受梯度消失问题的困扰，多年来研究人员一直无法解决这个问题——直到新的无监督深度学习方法被发明出来。
 
-这这本书想要教给你的内容。
+这本书想要教给你的内容。
 
 此外，我们还会介绍 `Principal Components Analysis`（`PCA`）和 `t-Distributed Stochastic Neighbor Embedding`（`t-SNE`），它们不仅在数学上与深度学习相关，而且通常是深度学习或机器学习流水线的一部分。
 
@@ -30,7 +25,7 @@
 
 ## 格式
 
-我知道电子书的格式在许多平台上可能非常有限。如果你发现这本书的格式存在缺陷，特别是在代码或图表方面，请向 `info@lazyprogrammer.me` 向我发送电子邮件，我将向你发送创建这本书的原始 `epub` 文件。
+我知道电子书的格式在许多平台上可能非常有限。如果你发现这本书的格式存在缺陷，特别是在代码或图表方面，请向 `info@lazyprogrammer.me` 发送电子邮件，我将向你发送创建这本书的原始 `epub` 文件。
 
 ## 第 1 章：主成分分析
 
@@ -55,12 +50,14 @@
 Z = XQ
 ```
 
-它接收一个输入数据矩阵 `X`（大小为 `Nx`），乘以变换矩阵 `Q`（大小为 `DxD`），并输出转换后的数据 `Z`（也是 `Nx`）。
+它接收一个输入数据矩阵 `X`（大小为 `NxD`），乘以变换矩阵 `Q`（大小为 `DxD`），并输出转换后的数据 `Z`（也是 `NxD`）。
 
 如果你想将单个向量 `x` 转换为对应的单个向量 `z`，那就是：
+
 ```
 z = Qx
 ```
+
 顺序不同是因为当 `x` 在数据矩阵中时，它是一个 `1xD` 行向量，但当我们谈论单个向量时，它们是 `Dx1` 列向量。这只是习惯用法。
 
 让 `PCA` 变得有趣的算法是它选择 `Q` 矩阵的方式。注意，因为这是无监督学习，我们有 `X` 但没有 `Y`，或者没有目标。
@@ -71,7 +68,7 @@ z = Qx
 
 ### 降维
 
-`PCA` 的一个用途是降维。当你查看 de `MNIST` 数据集时（它是 28x28 的图像，或者大小为 784 的向量），维度非常多，这绝对不是你可以可视化的。
+`PCA` 的一个用途是降维。当你查看 `MNIST` 数据集时（它是 28x28 的图像，或者大小为 784 的向量），维度非常多，这绝对不是你可以可视化的。
 
 `28x28` 是一个非常小的图像，而现在的大多数图像都比这大得多——所以我们要么需要处理具有数百万维度数据的资源，要么可以使用像 `PCA` 这样的技术来降低数据维度。
 
@@ -82,9 +79,6 @@ z = Qx
 我们如何衡量这种信息？在传统的 `PCA` 和许多其他传统的统计方法中，我们使用方差。如果某物变化越大，携带的信息就越多。你可以想象相反的情况，即一个变量是完全确定的，也就是说它没有方差。那么测量这个变量就不会带给我们任何新信息，因为我们已经知道它会是什么了。
 
 所以当我们得到转换后的数据 `Z` 时，我们希望第一列拥有最多的信息，第二列拥有第二多的信息，依此类推。
-
-
-
 
 因此，当我们选取信息量最大的 2 列时，意味着选取了前 2 列。
 
@@ -118,13 +112,12 @@ z = Qx
 
 输入：`X`（数据），`Y`（目标）
 
-1) 将 `X` 转换为 `Z` -> `Z = XQ`
-2) 取 `Z` 的前 `K` 列，称为 `Z[K]`
-3) 在 `(Z[K], Y)` 上训练你的模型，即 `model.fit(Z[K], Y)`
-4) 任何进一步预测可以使用相同的模型和流水线：
-
-1) `z[K] = Qx`
-2) `prediction = model.predict(z[K])`
+1. 将 `X` 转换为 `Z` -> `Z = XQ`
+2. 取 `Z` 的前 `K` 列，称为 `Z[K]`
+3. 在 `(Z[K], Y)` 上训练你的模型，即 `model.fit(Z[K], Y)`
+4. 任何进一步预测可以使用相同的模型和流水线：
+   1. `z[K] = Qx`
+   2. `prediction = model.predict(z[K])`
 
 你会发现，这种无监督预训练的思想在我们学习 `autoencoders` 和 `RBMs` 时会再次发挥作用。
 
@@ -140,9 +133,10 @@ z = Qx
 
 事实上，在 `PCA` 中，线性关系是双向的——隐变量 `Z` 是观测变量 `X` 的线性组合，但如果你进行反向变换，观测数据 `X` 也是隐变量 `Z` 的线性组合。
 
-`Z = XQ`
-
-`X = ZQ^(\1)`
+```
+Z = XQ
+X = ZQ^(-1)
+```
 
 你会记得，我们在我的第一门关于聚类和高斯混合模型的无监督学习课程中首次遇到隐变量的概念——因为那些模型假设簇的身份就是隐变量。
 
@@ -152,14 +146,16 @@ z = Qx
 
 回顾一下，我刚刚告诉了你这个 `Q` 矩阵可以做的所有神奇事情：
 
-1) 即使 `X` 是相关的，也能使 `Z` 不相关
-2) 按其信息内容（方差）对 `Z` 的每一列进行排序
+1. 即使 `X` 是相关的，也能使 `Z` 不相关
+2. 按其信息内容（方差）对 `Z` 的每一列进行排序
 
 这里的许多步骤初看起来可能是随意的，但你将看到它们最终如何紧密结合，并产生我之前提到过的所有属性。
 
 第一步是计算 `X` 的协方差。
 
-`C(x(i), x(j)) = E\[ (x(i) - m(i))(x(j) - m(j)) ] = sum(n=1..N){ (xn - m(i))(xn - m(j)) } / N`
+```
+C(x(i), x(j)) = E[ (x(i) - m(i))(x(j) - m(j)) ] = sum(n=1..N){ (xn - m(i))(xn - m(j)) } / N
+```
 
 其中 `m(i)` 是所有 `x(i)` 的平均值。
 
@@ -167,13 +163,13 @@ z = Qx
 
 矩阵形式为：
 
-`C = (X - m)^T(X - m) / N`
+```
+C = (X - m)^T(X - m) / N
+```
 
 这给了我们一个 `DxD` 矩阵。记住，`D` 是维度，`N` 是数量。
 
 ### 特征值与特征向量
-
-（注：提供的文本在后半部分包含大量的重复/乱码字符串。我根据前面部分提供的核心数学背景清理了逻辑流。）
 
 ### PCA 目标
 
@@ -181,10 +177,9 @@ z = Qx
 
 目标函数就是你自然预期的——它是数据的平方重构误差。
 
-`J = || X - XQQ(\-1) ||²`
-
-
-
+```
+J = || X - XQQ^(-1) ||²
+```
 
 `Q[k]` 只是 `X` 的协方差的前 `k` 个特征向量——这意味着它是一个 `Dxk` 矩阵。
 
@@ -192,13 +187,10 @@ z = Qx
 
 由于我们现在没有使用完整的 `Q`，将会存在非零的重构误差。
 
-我们可以通过乘以 `Q[k]^T` 来 get 重构。
+我们可以通过乘以 `Q[k]^T` 来获取重构。
 
 ```
 X[hat] = Z[k]Q[k]^T
-```
-
-```
 J = || X - XQ[k]Q[k]^T ||²
 ```
 
@@ -208,23 +200,24 @@ J = || X - XQ[k]Q[k]^T ||²
 
 在 MNIST 数据集上尝试 PCA。（使用 scikit-learn 库或尝试自己编写 PCA）
 
+## 第 2 章：t-SNE
 
 在这一节课中，我们将讨论另一种名为 t-SNE 的降维和可视化方法。`t` 意味着我们将引入 `t` 分布，而 `SNE` 代表“随机邻域嵌入”（stochastic neighbor embedding）。
 
-t-SNE 的一个大优势是非是非线性方法，因此它比 PCA 更具表达力。
+t-SNE 的一个大优势是它是非线性方法，因此它比 PCA 更具表达力。
 
 ### 为什么要学习 t-SNE？
 
 两个原因：
 
-1) t-SNE 由 Geoffrey Hinton 共同开发，如你所知，他是深度学习的主要人物之一。
-2) 通过使用 t-SNE，我们看到了如何通过更复杂的数学模型来克服 PCA 的局限性。
+1. t-SNE 由 Geoffrey Hinton 共同开发，如你所知，他是深度学习的主要人物之一。
+2. 通过使用 t-SNE，我们看到了如何通过更复杂的数学模型来克服 PCA 的局限性。
 
 除了 t-SNE 是非线性之外，PCA 和 t-SNE 之间的一个关键区别是它没有变换模型。
 
 相反，t-SNE 只是直接修改输出以最小化代价函数。
 
-这意味着你将没有任何任何训练集和测试集，而且在对某些其他数据拟合后，无法转换数据。t-SNE 的工作方式本质上是尝试保持每个输入向量之间的距离。
+这意味着你将没有任何训练集和测试集，而且在对某些其他数据拟合后，无法转换数据。t-SNE 的工作方式本质上是尝试保持每个输入向量之间的距离。
 
 我们将从对称 SNE 开始，因为它在直觉上更合逻辑。
 
@@ -244,7 +237,7 @@ q(i,j) = exp(-||yi - yj||²) / sum[k!=m]{ exp(-||ym - yk||²) }
 
 注意我们只是设置了 `p(i,i) = q(i,i) = 0`。
 
-所以我们了两个概率分布，一个在 `X` 中每对点之间，另一个在 `Y` 中每对点之间。我们通常只是随机初始化 `Y` 中的每个数据点。即：如果我们在寻找 2 维表示，我们将这样创建 `Y`：
+所以我们有了两个概率分布，一个在 `X` 中每对点之间，另一个在 `Y` 中每对点之间。我们通常只是随机初始化 `Y` 中的每个数据点。即：如果我们在寻找 2 维表示，我们将这样创建 `Y`：
 
 ```
 Y = np.randn(N, 2)
@@ -284,19 +277,11 @@ q(i,j) = (1 + ||yi - yj||²)^(-1) / sum[k!=m]{ (1 + ||ym - yk||²)^(-1) }
 
 `Q` 使用 `t` 分布，因此如此。为了让输出在 0 和 1 之间，我们将使用 `sigmoid` 函数。实际上是新的新的，由于我们使用 `sigmoid` 函数在隐藏层和输出层。我们`
 
-```
-X[hat] = Z[k]Q[k]^T
-```
 
-```
-J = || X - XQ[k]Q[k]^T ||²
-```
 
-你需要将这个 PCA 目标函数的想法记在脑里，因为我们以后还会再次遇到它。
+# t-SNE 与自动编码器
 
-### 练习
-
-在 MNIST 数据集上尝试 PCA。（使用 scikit-learn 库或尝试自己编写 PCA）
+## t-SNE 简介
 
 在这一节课中，我们将讨论另一种名为 t-SNE 的降维和可视化方法。`t` 意味着我们将引入 `t` 分布，而 `SNE` 代表“随机邻域嵌入”（stochastic neighbor embedding）。
 
@@ -306,14 +291,12 @@ t-SNE 的一个大优势是非线性方法，因此它比 PCA 更具表达力。
 
 两个原因：
 
-1) t-SNE 由 Geoffrey Hinton 共同开发，如你所知，他是深度学习的主要人物之一。
-2) 通过使用 t-SNE，我们看到了如何通过更复杂的数学模型来克服 PCA 的局限性。
+1. t-SNE 由 Geoffrey Hinton 共同开发，如你所知，他是深度学习的主要人物之一。
+2. 通过使用 t-SNE，我们看到了如何通过更复杂的数学模型来克服 PCA 的局限性。
 
-除了 t-SNE 是非线性之外，PCA 和 t-SNE 之间的一个关键区别是它没有变换模型。
+除了 t-SNE 是非线性之外，PCA 和 t-SNE 之间的一个关键区别是它没有变换模型。相反，t-SNE 只是直接修改输出以最小化代价函数。这意味着你将没有任何训练集和测试集，而且在对某些其他数据拟合后，无法转换数据。t-SNE 的工作方式本质上是尝试保持每个输入向量之间的距离。
 
-相反，t-SNE 只是直接修改输出以最小化代价函数。
-
-这意味着你将没有任何任何训练集和测试集，而且在对某些其他数据拟合后，无法转换数据。t-SNE 的工作方式本质上是尝试保持每个输入向量之间的距离。
+### 对称 SNE
 
 我们将从对称 SNE 开始，因为它在直觉上更合逻辑。
 
@@ -333,7 +316,7 @@ q(i,j) = exp(-||yi - yj||²) / sum[k!=m]{ exp(-||ym - yk||²) }
 
 注意我们只是设置了 `p(i,i) = q(i,i) = 0`。
 
-所以我们了两个概率分布，一个在 `X` 中每对点之间，另一个在 `Y` 中每对点之间。我们通常只是随机初始化 `Y` 中的每个数据点。即：如果我们在寻找 2 维表示，我们将这样创建 `Y`：
+所以我们有了两个概率分布，一个在 `X` 中每对点之间，另一个在 `Y` 中每对点之间。我们通常只是随机初始化 `Y` 中的每个数据点。即：如果我们在寻找 2 维表示，我们将这样创建 `Y`：
 
 ```
 Y = np.randn(N, 2)
@@ -350,6 +333,8 @@ C = DKL = sum[i,j]{ p(i,j)log(p(i,j) / q(i,j)) }
 ```
 Y <- Y - learning_rate*dC/dY
 ```
+
+### t-SNE 改进：解决拥挤问题
 
 对称 SNE 和之前的 SNE 有一个已知问题，被称为“拥挤问题”（crowding problem），它阻止了自然簇周围形成间隙。t-SNE 的做法是对 `Q` 和 `P` 使用不同的分布，这有助于拉开聚类。新的 `P` 和 `Q` 定义如下：
 
@@ -369,7 +354,17 @@ p(j | i) = exp(-||xi - xj||² /(2s²)) / sum[k!=i]{ exp(-||xi - xk||² /(2s²)) 
 q(i,j) = (1 + ||yi - yj||²)^(-1) / sum[k!=m]{ (1 + ||ym - yk||²)^(-1) }
 ```
 
-`Q` 使用 `t` 分布，因此如此。为了让输出在 0 和 1 之间，我们将使用 `sigmoid` 函数在隐藏层和输出层。实际上是新的新的，由于我们使用 `sigmoid` 函数在隐藏层和输出层。我们
+`Q` 使用 `t` 分布，因此如此。
+
+### 练习
+
+在 MNIST 数据集上尝试 PCA。（使用 scikit-learn 库或尝试自己编写 PCA）
+
+---
+
+## PCA 相关补充
+
+为了让输出在 0 和 1 之间，我们将使用 `sigmoid` 函数在隐藏层和输出层。实际上是新的新的，由于我们使用 `sigmoid` 函数在隐藏层和输出层。我们
 
 ```
 X[hat] = Z[k]Q[k]^T
@@ -381,98 +376,9 @@ J = || X - XQ[k]Q[k]^T ||²
 
 你需要将这个 PCA 目标函数的想法记在脑里，因为我们以后还会再次遇到它。
 
-### 练习
+请注意，这并不是真正的全貌，因为我们没有考虑偏置，而且没有要求权重每一列的长度为 1，也没有要求每列之间相互正交，或者要求它们以任何特定的方式排序。所以，虽然函数形式看起来“像”PCA，但它并没有完成 PCA 所执行的所有工作。
 
-在 MNIST 数据集上尝试 PCA。（使用 scikit-learn 库或尝试自己编写 PCA）
-
-
-在这一节课中，我们将讨论另一种名为 t-SNE 的降维和可视化方法。`t` 意味着我们将引入 `t` 分布，而 `SNE` 代表“随机邻域嵌入”（stochastic neighbor embedding）。
-
-t-SNE 的一个大优势是非线性方法，因此它比 PCA 更具表达力。
-
-### 为什么要学习 t-SNE？
-
-两个原因：
-
-1) t-SNE 由 Geoffrey Hinton 共同开发，如你所知，他是深度学习的主要人物之一。
-2) 通过使用 t-SNE，我们看到了如何通过更复杂的数学模型来克服 PCA 的局限性。
-
-除了 t-SNE 是非线性之外，PCA 和 t-SNE 之间的一个关键区别是它没有变换模型。
-
-相反，t-SNE 只是直接修改输出以最小化代价函数。
-
-这意味着你将没有任何任何训练集和测试集，而且在对某些其他数据拟合后，无法转换数据。t-SNE 的工作方式本质上是尝试保持每个输入向量之间的距离。
-
-我们将从对称 SNE 开始，因为它在直觉上更合逻辑。
-
-在原始数据 `X` 上，我们定义了一个联合概率分布 `p(i,j)`，它等于：
-
-```
-p(i,j) = exp(-||xi - xj||² /(2s²)) / sum[k!=m]{ exp(-||xm - xk||² /(2s²)) }
-```
-
-注意，这里的 `i` 和 `j` 不是像我们在做 PCA 时那样的维度索引，而是数据集中的第 `i` 个和第 `j` 个数据点，即 `i` 和 `j` 是第 `i` 和第 `j` 个样本。
-
-注意它看起来有点像高斯分布。你可以把“`s`”看作超参数。它控制着分布的“扩散”。接下来是我们的低维映射 `Y`，我们以相同的方式定义它，但没有 `s` 项。
-
-```
-q(i,j) = exp(-||yi - yj||²) / sum[k!=m]{ exp(-||ym - yk||²) }
-```
-
-注意我们只是设置了 `p(i,i) = q(i,i) = 0`。
-
-所以我们了两个概率分布，一个在 `X` 中每对点之间，另一个在 `Y` 中每对点之间。我们通常只是随机初始化 `Y` 中的每个数据点。即：如果我们在寻找 2 维表示，我们将这样创建 `Y`：
-
-```
-Y = np.randn(N, 2)
-```
-
-一旦完成这些，我们就可以尝试通过优化一个联系 `p(i,j)` 和 `q(i,j)` 的目标函数来寻找更好的 `Y`。如果你不熟悉如何比较两个概率分布，通常使用 Kullback-Leibler 散度或简称 `KL` 散度。
-
-```
-C = DKL = sum[i,j]{ p(i,j)log(p(i,j) / q(i,j)) }
-```
-
-如果 `P` 和 `Q` 完全相同，结果将是 `0`。我们解决这个问题的方法与解决其他问题的方法相同——对目标求导并进行梯度下降。注意在这种类型的模型中我们没有权重——我们只有 `Y`。所以是关于 `Y` 取梯度，即输出本身。即：
-
-```
-Y <- Y - learning_rate*dC/dY
-```
-
-对称 SNE 和之前的 SNE 有一个已知问题，被称为“拥挤问题”（crowding problem），它阻止了自然簇周围形成间隙。t-SNE 的做法是对 `Q` 和 `P` 使用不同的分布，这有助于拉开聚类。新的 `P` 和 `Q` 定义如下：
-
-```
-p(i,j) = [p(i | j) + p(j | i)] / 2N
-```
-
-其中：
-
-```
-p(j | i) = exp(-||xi - xj||² /(2s²)) / sum[k!=i]{ exp(-||xi - xk||² /(2s²)) }
-```
-
-注意这里每个样本都有自己的“`s`”。
-
-```
-q(i,j) = (1 + ||yi - yj||²)^(-1) / sum[k!=m]{ (1 + ||ym - yk||²)^(-1) }
-```
-
-`Q` 使用 `t` 分布，因此如此。为了让输出在 0 和 1 之间，我们将使用 `sigmoid` 函数在隐藏层和输出层。实际上是新的新的，由于我们使用 `sigmoid` 函数在隐藏层和输出层。我们
-
-```
-X[hat] = Z[k]Q[k]^T
-```
-
-```
-J = || X - XQ[k]Q[k]^T ||²
-```
-
-
-
-
-请注意，这并不是真正的全貌，因为我们没有考虑偏置，而且没有要求权重每一列的长度为 1，也没有要求每列之间相互正交，或者要求它们以任何特定的方式排序。
-
-所以，虽然函数形式看起来“像”PCA，但它并没有完成 PCA 所执行的所有工作。
+---
 
 ## 降噪自动编码器 (Denoising Autoencoders)
 
@@ -484,11 +390,9 @@ J = || X - XQ[k]Q[k]^T ||²
 
 除了显式移动物体外，修改数据的另一种方法是添加噪声。
 
-一种方法是对输入添加高斯噪声，另一种方法简单是将某些值置为 0。
+一种方法是对输入添加高斯噪声，另一种方法简单是将某些值置为 0。这几乎是轻而易举的，只需对输入添加一个位掩码（bitmask），换句话说，你生成一个由 0 和 1 组成的随机向量，并对 `X` 进行逐元素相乘，得到新的 `X`。
 
-这几乎是轻而易举的，只需对输入添加一个位掩码（bitmask），换句话说，你生成一个由 0 和 1 组成的随机向量，并对 `X` 进行逐元素相乘，得到新的 `X`。
-
-例如。
+例如：
 
 ```python
 from theano.tensor.shared_randomstreams import RandomStreams
@@ -502,6 +406,8 @@ X = bitmask * X
 
 通常，我们将生成 0 的概率设置为小于 50% 的值，也许可能是 30% 左右，但研究人员发现高达 50% 仍然能产生良好的的结果。
 
+---
+
 ## 堆叠自动编码器 (Stacked Autoencoders)
 
 在本节中，我们将探索当我们将一组自动编码器按层堆叠在一起时会发生什么。
@@ -510,50 +416,67 @@ X = bitmask * X
 
 你训练一个自动编码器，然后固定它的权重。接着丢弃最后一层，只保留到隐藏部分的输入。
 
-接下来，取第一个自动编码器隐藏层的输出，并将其作为另一个自动编码器的输入。
-
-只需对多个自动编码器重复这个过程。
+接下来，取第一个自动编码器隐藏层的输出，并将其作为另一个自动编码器的输入。只需对多个自动编码器重复这个过程。
 
 例：
 
 训练：
+```
 o--o--o
-x z x’
+x z x'
+```
+
 保留：
+```
 o--o
 x z
+```
 
 训练另一个：
+```
 o--o--o
-z z2 z’
+z z2 z'
+```
+
 保留另一个：
+```
 o--o
 z z2
+```
 
 再训练另一个：
+```
 o--o--o
-z2 z3 z2’
+z2 z3 z2'
+```
+
 保留另一个：
+```
 o--o
 z2 z3
+```
 
-最后，你得到了一堆自动编码器，每个的设计都仅仅是为了学习前一层更更紧凑的版本。
+最后，你得到了一堆自动编码器，每个的设计都仅仅是为了学习前一层更紧凑的版本。
 
 你最终得到的是一个深度无监督网络：
+```
 o--o--o--o
 x z z2 z3
+```
 
 由于我们每次使用自动编码器时都在尝试获得比前一层更紧凑的表示，因此我们希望每一层的大小都比前一层小。
 
 请注意，这并不一定如此。事实上，我们可以在中间层拥有大量的隐藏单元。理论上，如果我们有 `N` 个训练样本和 `N` 个隐藏单元，那么我们可以获得完美的重构，因为 `W` 的 `N` 列中的每一列都可以负责一个不同的样本。你可能认为这会导致严重的过拟合，但研究人员发现它不会过拟合，甚至数量大于 `N` 的隐藏单元也可以正常工作。在我们的代码中，我们将使用类和对象来表示 `ANN` 和 `Autoencoder`。鉴于我们可以有任意数量的自动编码器，这将有助于更好地模块化代码。然后我们可以简单地将每个自动编码器的隐藏输出作为下一个自动编码器的输入。
 
-### 贪心逐预训练 (Greedy-wise pretraining)
+### 贪心逐层预训练 (Greedy-wise pretraining)
 
-我们刚刚讨论的过程被称为“贪心逐预训练”。之所以被称为“贪心”，直观上意味着你做了局部最优决策，在我们的情况下仅仅是训练一层自动编码器。虽然这在理论上不是最优的，但它对监督训练非常有帮助，这就是为什么我们预预训练。最后一步是在自动编码器的最后添加一个逻辑回归层。一旦你完成了这一点，你就创建了一个深度神经网络。
+我们刚刚讨论的过程被称为“贪心逐层预训练”。之所以被称为“贪心”，直观上意味着你做了局部最优决策，在我们的情况下仅仅是训练一层自动编码器。虽然这在理论上不是最优的，但它对监督训练非常有帮助，这就是为什么我们预训练。最后一步是在自动编码器的最后添加一个逻辑回归层。一旦你完成了这一点，你就创建了一个深度神经网络。
 
-由于带有逻辑回归的最后层具有随机权重，我们需要进行反向传播。但我们发现在这里进行反向传播并不缓慢，因为自动编码器的权重已经让我们处于正确答案的附近。所以我们只需要进行几次反向传播来微调（fine-tune）网络。在架构方面，这里没有新东西，只有旧的想法。在代码中，注意我们通常有一个函数返回一个 `xD` 矩阵作为输入和一个 `Nx1` 向量作为输出。我们将加载训练数据和测试数据，因此会有大小为 `NxD` 的 `Xtrain`、大小为 `Nx1` 的 `Ytrain`、大小为 `NxD` 的 `Xtest` 以及大小为 `Nx1` 的 `Ytest`。注意，这里有误差目标和交叉熵目标。我们通常使用交叉熵来处理 0/1 目标，但你会发现它比误差目标效果更好。我们稍会在书中解释。
+由于带有逻辑回归的最后层具有随机权重，我们需要进行反向传播。但我们发现在这里进行反向传播并不缓慢，因为自动编码器的权重已经让我们处于正确答案的附近。所以我们只需要进行几次反向传播来微调（fine-tune）网络。
 
-来看代码：
+在架构方面，这里没有新东西，只有旧的想法。在代码中，注意我们通常有一个函数返回一个 `NxD` 矩阵作为输入和一个 `Nx1` 向量作为输出。我们将加载训练数据和测试数据，因此会有大小为 `NxD` 的 `Xtrain`、大小为 `Nx1` 的 `Ytrain`、大小为 `NxD` 的 `Xtest` 以及大小为 `Nx1` 的 `Ytest`。注意，这里有误差目标和交叉熵目标。我们通常使用交叉熵来处理 0/1 目标，但你会发现它比误差目标效果更好。我们稍后在书中解释。
+
+### 代码实现
 
 ```python
 def relu(x):
@@ -644,7 +567,6 @@ class AutoEncoder(object):
         ae.bo = theano.shared(bo)
         return ae
 ```
-
 
 
 
@@ -751,8 +673,8 @@ if __name__ == '__main__':
 
 ### 练习
 
--   为自动编码器添加去噪功能。
--   交叉熵对比 KL 散度（KL Divergence）
+- 为自动编码器添加去噪功能。
+- 交叉熵对比 KL 散度（KL Divergence）
 
 你已经看到 `KL Divergence` 可以用于比较两个概率分布之间的相似性，就像我们在 `t-SNE` 中所做的那样。
 
@@ -760,14 +682,9 @@ if __name__ == '__main__':
 
 即：
 
-`H(P, Q)` = $P$ 与 $Q$ 之间的交叉熵
-
-`H(P)` = $P$ 的熵
-
-`DKL` = $P$ 与 $Q$ 之间的 `KL divergence`
-
-
-
+- `H(P, Q)` = $P$ 与 $Q$ 之间的交叉熵
+- `H(P)` = $P$ 的熵
+- `DKL` = $P$ 与 $Q$ 之间的 `KL divergence`
 
 目前有一些材料从高层面上介绍了如何构建一个高斯单位，但这些其他表述被报道认为存在稳定性问题，因此我们在这里不会介绍它们。
 
@@ -783,9 +700,8 @@ if __name__ == '__main__':
 
 请注意，根据这些变量，我们之前讨论的条件概率是：
 
-`p(h | v) = sigmoid(W^Tv + c)`（正向）
-
-`p(v | h) = sigmoid(Wh + b)`（反向）
+- `p(h | v) = sigmoid(W^Tv + c)`（正向）
+- `p(v | h) = sigmoid(Wh + b)`（反向）
 
 像自动编码器一样，我们再次使用了共享权重。
 
@@ -803,6 +719,7 @@ if __name__ == '__main__':
 
 例如，如果 `M=3`，那么 `h` 的可能值为：
 
+```
 000
 001
 010
@@ -811,6 +728,7 @@ if __name__ == '__main__':
 101
 110
 111
+```
 
 我们必须对所有这些值进行求和。
 
@@ -855,7 +773,6 @@ d(-log(P(v))/dw
 现在你明白我们说的夹紧项和未夹紧项的意思了。我们将通过直接计算得到第一项，但对于第二项（这需要对所有 `v` 进行求和——这是不可行的），将通过采样来获得。
 
 请注意，如果我们使用 `numpy` 编写 `RBM`，我们将使用实际的...
-
 
 
 
@@ -955,148 +872,78 @@ class RBM(object):
         ...
 ```
 
-排版后：
-
-from `theano.tensor.shared_randomstreams` import `RandomStreams`
-
-from `autoencoder` import `DNN`
-
-class `RBM(object)`:
-    def `__init__(self, M)`:
-        `self.M = M`
-        `self.rng = RandomStreams()`
-
-    def `fit(self, X, learning_rate=0.1, epochs=1, batch_sz=100, show_fig=False)`:
-        `N, D = X.shape`
-        `n_batches = N / batch_sz`
-        `W0 = init_weights((D, self.M))`
-        `self.W = theano.shared(W0)`
-        `self.c = theano.shared(np.zeros(self.M))`
-        `self.b = theano.shared(np.zeros(D))`
-        `self.params = [self.W, self.c, self.b]`
-        `self.forward_params = [self.W, self.c]`
-        # we won't use this to fit the RBM but we will use these for backpropagation
-        `self.dW = theano.shared(np.zeros(W0.shape))`
-        `self.dc = theano.shared(np.zeros(self.M))`
-        `self.db = theano.shared(np.zeros(D))`
-        `self.dparams = [self.dW, self.dc, self.db]`
-        `self.forward_dparams = [self.dW, self.dc]`
-        `X_in = T.matrix('X')`
-        # attach it to the object so it can be used later
-        # must be sigmoidal because the output is also a sigmoid
-        `H = T.nnet.sigmoid(X_in.dot(self.W) + self.c)`
-        `self.hidden_op = theano.function(`
-            inputs=[X_in],
-            outputs=H,
-        )`
-        # we won't use this cost to do any updates
-        # but we would like to see how this cost function changes
-        # as we do contrastive divergence
-        `X_hat = self.forward_output(X_in)`
-        `cost = -(X_in * T.log(X_hat) + (1 - X_in) * T.log(1 - X_hat)).sum() / N`
-        `cost_op = theano.function(`
-            inputs=[X_in],
-            outputs=cost,
-        )`
-        # do one round of Gibbs sampling to obtain X_sample
-        `H = self.sample_h_given_v(X_in)`
-        `X_sample = self.sample_v_given_h(H)`
-        # define the objective, updates, and train function
-        `objective = T.mean(self.free_energy(X_in)) - T.mean(self.free_energy(X_sample))`
-        # need to consider X_sample constant because you can't take the gradient of random numbers in Theano
-        `updates = [(p, p - learning_rate*T.grad(objective, p, consider_constant=[X_sample]) for p in self.params]`
-        `train_op = theano.function(`
-            inputs=[X_in],
-            updates=updates,
-        )`
-        `costs = []`
-        for i in xrange(epochs):
-            print "epoch:", i
-            `X = shuffle(X)`
-            for j in xrange(n_batches):
-                `batch = X[j*batch_sz:(j*batch_sz + batch_sz)]`
-                `train_op(batch)`
-                `the_cost = cost_op(X)` # technically we could also get the cost for Xtest here
-                print "j / n_batches:", j, "/", n_batches, "cost:", the_cost
-                `costs.append(the_cost)`
-            if show_fig:
-                plt.plot(costs)
-                plt.show()`
-
-    def `free_energy(self, V)`:
-        return -V.dot(self.b) - T.sum(T.log(1 + T.exp(V.dot(self.W) + self.c)), axis=1)
-
-    def `sample_h_given_v(self, V)`:
-        `p_h_given_v = T.nnet.sigmoid(V.dot(self.W) + self.c)`
-        `h_sample = self.rng.binomial(size=p_h_given_v.shape, n=1, p=p_h_given_v)`
-        return h_sample
-
-    def `sample_v_given_h(self, H)`:
-        `p_v_given_h = T.nnet.sigmoid(H.dot(self.W.T) + self.b)`
-        `v_sample = self.rng.binomial(size=p_v_given_h.shape, n=1, p=p_v_given_h)`
-        return v_sample
-
-    def `forward_hidden(self, X)`:
-        return T.nnet.sigmoid(X.dot(self.W) + self.c)
-
-    def `forward_output(self, X)`:
-        `Z = self.forward_hidden(X)`
-        `Y = T.nnet.sigmoid(Z.dot(self.W.T) + self.b)`
-        return Y
-
-    @staticmethod
-    def `createFromArrays(W, c, b, an_id)`:
-        `rbm = AutoEncoder(W.shape[1], an_id)`
-        `rbm.W = theano.shared(W, 'W_%s' % rbm.id)`
-        `rbm.c = theano.shared(c, 'c_%s' % rbm.id)`
-        ...
-
-
-
-
 你对这些材料已经得心了吗，并想要将你的深度学习技能提升到新的水平？那么，我关于深度学习的 Udemy 后课程非常适合你。与这本书类似，我将带你学习 `Theano` 和 `TensorFlow` 的基础知识——创建函数、变量和表达式，并从零开始构建神经网络。我将教你加速学习过程的方法，包括批量梯度下降、动量和自适应学习率。我还会向你现场演示如何在 Amazon `AWS` `EC2` 上创建 `GPU` 实例，并向你证明使用 `GPU` 优化的神经网络训练比在 `CPU` 上快几个数量级。
 
+
+
+# 推荐课程
+
+## 数据科学：Theano 和 TensorFlow 中的实用深度学习
+
 [数据科学：Theano 和 TensorFlow 中的实用深度学习](https://www.udemy.com/data-science-deep-learning-in-theano-tensorflow/)
+
 [`www.udemy.com/data-science-deep-learning-in-theano-tensorflow`](https://www.udemy.com/data-science-deep-learning-in-theano-tensorflow)
 
-当你掌握了深度学习的基础知识后，就可以准备探索其他的架构了。一种非常流行的替代方案是卷积神经网络，它是专门为图像分类创建的。这些网络在医学影像、自动驾驶车辆等领域具有广阔的应用。在课程中，我将向你如何在 `Theano` 和 `TensorFlow` 中构建卷积网络。
+当你掌握了深度学习的基础知识后，就可以准备探索其他的架构了。一种非常流行的替代方案是卷积神经网络，它是专门为图像分类创建的。这些网络在医学影像、自动驾驶车辆等领域具有广阔的应用。在课程中，我将向你展示如何在 `Theano` 和 `TensorFlow` 中构建卷积网络。
+
+## 深度学习：Python 中的卷积神经网络
 
 [深度学习：Python 中的卷积神经网络](https://www.udemy.com/deep-learning-convolutional-neural-networks-theano-tensorflow)
+
 [`www.udemy.com/deep-learning-convolutional-neural-networks-theano-tensorflow`](https://www.udemy.com/deep-learning-convolutional-neural-networks-theano-tensorflow)
 
-在我深度学习系列的第 4 部分中，我将带你学习无监督深度学习方法（这这本书的内容！）。我们将学习主成分分析 (`PCA`)、`t-SNE`（由深度学习之父 Geoffrey Hinton 共同开发）、深度自动编码器和受限玻尔兹曼机 (`RBMs`)。我将演示如何通过自动编码器和 `RBMs` 对深度网络进行无监督预训练来提高监督学习的性能。
+## 无监督深度学习
+
+在我深度学习系列的第 4 部分中，我将带你学习无监督深度学习方法（这本书的内容！）。我们将学习主成分分析 (`PCA`)、`t-SNE`（由深度学习之父 Geoffrey Hinton 共同开发）、深度自动编码器和受限玻尔兹曼机 (`RBMs`)。我将演示如何通过自动编码器和 `RBMs` 对深度网络进行无监督预训练来提高监督学习的性能。
 
 [Python 中的无监督深度学习](https://www.udemy.com/unsupervised-deep-learning-in-python)
+
 [`www.udemy.com/unsupervised-deep-learning-in-python`](https://www.udemy.com/unsupervised-deep-learning-in-python)
+
+## 数据科学：Python 中的逻辑回归
 
 你想了解神经网络的基础构建模块——逻辑回归吗？在这门课程中，我将教你逻辑回归的理论（我们对神经元的计算模型），并带你深入研究二分类分类、手动创建特征和梯度下降。如果你觉得书中的材料太有挑战性，可能想看看这门课程。
 
 [数据科学：Python 中的逻辑回归](https://udemy.com/data-science-logistic-regression-in-python)
+
 [`udemy.com/data-science-logistic-regression-in-python`](https://udemy.com/data-science-logistic-regression-in-python)
+
+## 数据科学：Python 中的线性回归
 
 为了更简单地了解通用机器学习的概况（在那种情况下我们甚至不需要梯度下降，可以直接通过“闭式解”求解最优模型参数），你可能想查看我第一门关于经典统计方法——线性回归的 Udemy 课程：
 
 [数据科学：Python 中的线性回归](https://www.udemy.com/data-science-linear-regression-in-python)
+
 [`www.udemy.com/data-science-linear-regression-in-python`](https://www.udemy.com/data-science-linear-regression-in-python)
+
+## 数据科学：Python 中的自然语言处理
 
 如果你对学习机器学习如何应用于语言、文本和语音感兴趣，你可能想查看我关于自然语言处理（或 `NLP`）的课程。
 
 [数据科学：Python 中的自然语言处理](https://www.udemy.com/data-science-natural-language-processing-in-python)
+
 [`www.udemy.com/data-science-natural-language-processing-in-python`](https://www.udemy.com/data-science-natural-language-processing-in-python)
+
+## 面向营销人员的 SQL
 
 如果你对学习 `SQL` —— 结构化查询语言——一种可以适用于 iPhone 上的微型数据库，也可以适用于跨越多个大陆的大型数据库，并且不仅想学习语言的机制，还想知道如何将其应用于真实的数据分析和营销问题？请在这里查看我的课程：
 
 [面向营销人员的 SQL：统治数据分析、数据科学和大数据](https://www.udemy.com/sql-for-marketers-data-analytics-data-science-big-data)
+
 [`www.udemy.com/sql-for-marketers-data-analytics-data-science-big-data`](https://www.udemy.com/sql-for-marketers-data-analytics-data-science-big-data)
+
+## 无监督机器学习：Python 中的隐马尔可夫模型
 
 你对股票预测、时间序列和一般的序列感兴趣吗？我的隐马尔可夫模型课程是你的首选。我不仅会教你 `HMMs` 的所有经典理论，还会教你如何使用 `Theano` 和梯度下降来编写它们！这对于编写深度学习模型是非常极佳的练习，并将为它的续集《深度学习第五部分：Python 中的循环神经网络》做好充分准备。你可以在这里获取 HMM 课程：
 
 [无监督机器学习：Python 中的隐马尔可夫模型](https://udemy.com/unsupervised-machine-learning-hidden-markov-models-in-python)
+
 [`udemy.com/unsupervised-machine-learning-hidden-markov-models-in-python`](https://udemy.com/unsupervised-machine-learning-hidden-markov-models-in-python)
+
+## 免费资源获取方式
 
 最后，我一直在发放优惠券，并告诉你何时可以免费获得我的资源。但只有当你是我的现有学生时才能这样做！以下是我通知学生优惠券和免费赠送的几种方式：
 
 - 我的时事通讯，你可以在 `http://lazyprogrammer.me` 注册（附带一个免费的期期 6 周机器学习入门课程）
 - 我的 Twitter，`https://twitter.com/lazy_scientist`
 - 我的 Facebook 页面，`https://facebook.com/lazyprogrammer.me`（别忘记点“赞”！）
-

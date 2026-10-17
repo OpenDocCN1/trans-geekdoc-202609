@@ -1,11 +1,8 @@
+
 # DNS 安全管理 (IEEE 网络与服务管理系列)
 
-
-
-
-
-
 ## IEEE Press 编辑委员会
+
 Tariq Samad, *主编*
 
 | Giancarlo Fortino | Xiaoou Li | Ray Perez |
@@ -13,42 +10,6 @@ Tariq Samad, *主编*
 | Dmitry Goldgof | Andreas Molisch | Linda Shafer |
 | Don Heirman | Saeid Nahavandi | Mohammad Shahidehpour |
 | Ekram Hossain | Jeffrey Nanzer | Zidong Wang |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # 前言
 
@@ -79,9 +40,6 @@ TIMOTHY ROONEY 诺基亚首席技术官兼贝尔实验室总裁
 我们都想感谢 Thomas Plevyak、Veli Sahin 和 Mary Hatcher，我们 IEEE Press 的编辑持续的支持和鼓励。我们还感谢 Scott Rose、Paul Mockapetris、Paul Vixie、Greg Rabil 和 Stu Jacobs 花时间审阅了书的提案和稿并提供了极其宝贵的反馈。他们的反馈大大提升了本书的质量和实用性。
 
 Michael：我想感谢我的家人，我的妻子 Suzanne、儿子 Michael 和女儿 Kelly，感谢他们的爱与支持，并在我写这本书期间允许我在家里分心。我并没有忘记我可爱的狗 Bailey 和疯狂的 Ollie。我还想感谢以下我的朋友和同事。我有幸与世界上最优秀、最聪明的人共事，我深感幸运。不分先后顺序：Karen Pell、Steve Thompson、Greg Rabil、John Ramkawsky、Alex Drescher 和 Bob Lieber。我还想感谢最初的 Quadritek 领导团队，在早期帮助定义和创建 IP 地址管理市场时，我有幸与他们共事，特别的成员包括 Joe D'Andrea、Arun Kapur 和 Keith Larson。
-
-
-
 
 Timothy：首先，我想感谢我的家人，特别是我的妻子 LeeAnn，我的女儿 Maeve 和 Tess，以及 Jimmy 叔叔，感谢他们在本书期间给予的爱与支持。我还要感谢以下个人，我有荣幸与他们合作，并从他们那里学习了关于网络技术等方面的大量知识：Greg Rabil、John Ramkawsky、Andy D'Ambrosio、Alex Drescher、Steve Thompson、David Cross、Marco Mecarelli、Brian Hart、Frank Jennings，以及我在 BT、Diamond IP、INS 和 Lucent 工作过的同事。在我在贝尔实验室（Bell Laboratories）网络领域度过职业生涯的成长期时期，我诚挚地向 John Marciszewski、Anthony Longhitano、Sampath Ramaswami、Maryclaire Brescia, Krishna Murti, Gaston Arredondo、Robert Schoenweisner、Tom Walker,Charlene Paull、Frank DeAngelis、Ray Pennotti 表致意，特别要感谢我的导师 Thomas Chu。我亦想感谢其他激励我坚持完成这本书及相关著作的人，包括 Peter Tsai、Elle Carpenter、Howard Falick、Holly Weller、Steve Wheeler、Ken Schumaker、Martin Wellsted、Craig Hamilton 以及我尊敬的合作者 Michael Dooley。
 
@@ -119,10 +77,6 @@ Timothy：首先，我想感谢我的家人，特别是我的妻子 LeeAnn，我
 
 **图 1.1.** 基本 DNS 解析流程
 
-
-
-
-
 如果解析器缓存中不存在相关信息，设备将查询其 `recursive DNS server`（递归 DNS 服务器）。递归服务器的作用是定位设备查询的答案。递归服务器本身就是 DNS 查询的解析器；我们将源设备设备上的解析器称为 `stub resolver`（存根解析器），因为它负责向其递归服务器发起查询，并且完全依赖递归服务器来定位并返回答案。存根解析器在 IP 网络初始化过程中，被配置有用于 DNS 服务器的 IP 地址以进行查询。例如，当设备启动时，它通常会从动态主机配置协议（`DHCP`）服务器请求 IP 地址。`DHCP` 服务器可以配置为不仅提供 IP 地址，还提供 DNS 查询应该向导的递归 DNS 服务器的 IP 地址。以这种方式使用 `DHCP` 可以便于移动性和效率，因为地址可以共享，并根据与 IP 网络的相应连接点进行分配。
 
 正如我们提到的，递归 DNS 服务器的作用是代表存根解析器解析查询。它通过其对先前解析查询的缓存或通过查询互联网上的 DNS 服务器来执行这一角色。查询互联网 DNS 服务器的过程首先是寻找一个与查询相关的域名（在本例中为 `[example.com](http://example.com)`）具有 `authoritative`（权威性的 DNS 服务器，然后查询权威服务器以获取可以传给客户端的答案，从而完成解析过程。权威服务器的位置通过查询负责问题域名树层“上方”或“右侧”的互联网 DNS 服务器来确定。我们将在第 2 章详细讨论这一过程。递归服务器缓存解析信息，以便更快地响应相似查询，而无需在互联网上重新寻找答案。
@@ -155,10 +109,6 @@ DNS 信任模型指的是 DNS 信息在这些组件之间的流动方式。通�
 
 ### DNS 管理员范围
 
-
-
-
-
 作为一名 DNS 管理员，你通常需要首先关注尝试在你的内部基础设施中解析域名的内部用户或客户，以及位于互联网上的用户。为了访问你的内部系统，你需要配置权威 DNS 服务器，并为内部用户需要访问的系统配置域名到 IP 地址的映射。我们将这种针对内部基础设施的命名和地址映射称为你的 `internal namespace`（内部命名空间）。
 
 为了让用户能够访问互联网网站，你需要管理递归服务器，用户可以通过查询这些服务器来定位外部权威服务器，并从那里处寻求查询答案。
@@ -167,31 +117,43 @@ DNS 信任模型指的是 DNS 信息在这些组件之间的流动方式。通�
 
 # 安全背景与概述
 
+
+
 网络安全实践本质上归结为对网络风险的管理。风险不仅包括恶意攻击，还包括自然灾害或人为灾害、糟糕的架构设计、合法操作的无意副作用以及用户错误。制定安全计划需要列举风险、识别可能被利用以影响风险的漏洞、刻画每个风险发生的概率、确定风险对组织带来的影响，并定义控制措施来限制每种风险的影响。应用控制措施旨在降低风险以消除风险，或者更可能产生一个组织可以接受的较低水平的剩余风险。
 
 我们将美国国家标准与技术研究所（`NIST`）网络安全框架 (1) 作为我们讨论安全方法和策略的背景。该网络安全框架已成为全球的事实标准。虽然没有哪个安全框架是“通用”的，但它为组织提供了一种分类法和方法论，用于表征其当前和预期（计划中）的网络安全状态，优先考虑能够实现当前状态向预期状态改进的计划，并在利益相关者之间进行网络安全风险沟通。该框架为组织执行风险评估提供了指导，并根据每个组织自身的漏洞、威胁和风险容忍度规划风险管理。
 
-该框架依赖于现有的安全标准，包括 `COBIT 5` (2)、`ISA 62443` (3)、`ISO/IEC 27000` (4)、`NIST SP 800-53 Rev4` (5) 等。在每个主要的框架活动中，它引用了这些支持标准的特定章节。因此，该框架本质上在这些各种标准之间提供了一个共同叠加层，定义了表达和管理网络安全风险的语言。
+该框架依赖于现有的安全标准，包括`COBIT 5` (2)、`ISA 62443` (3)、`ISO/IEC 27000` (4)、`NIST SP 800-53 Rev4` (5) 等。在每个主要的框架活动中，它引用了这些支持标准的特定章节。因此，该框架本质上在这些各种标准之间提供了一个共同叠加层，定义了表达和管理网络安全风险的语言。
 
 ## 网络安全框架概述
 
-`NIST` 的网络安全框架旨在促进组织内部及外部在传递安全目标、成熟度状态、改进计划和风险时的沟通。该框架由三个主要部分组成：
+`NIST`的网络安全框架旨在促进组织内部及外部在传递安全目标、成熟度状态、改进计划和风险时的沟通。该框架由三个主要部分组成：
 
-*   `framework core`（框架核心）定义了组织管理网络安全风险生命周期中的安全活动和预期结果。核心包含了对现有标准的详细引用，以实现跨标准的通用活动分类。核心跨五个功能定义了这些活动：
-    *   `Identify`（识别）：涉及哪些系统、资产、数据和能力需要保护
-    *   `Protect`（保护）：实施安全保护措施以限制安全事件的影响
-    *   `Detect`（检测）：识别事件
-    *   `Respond`（响应）：处理安全事件管理，控制事件影响
-    *   `Recover`（恢复）：韧性与恢复能力
-    每个功能都有一组定义的类别和子类别，我们将在本章稍后部分探讨。
+* `framework core`（框架核心）定义了组织管理网络安全风险生命周期中的安全活动和预期结果。核心包含了对现有标准的详细引用，以实现跨标准的通用活动分类。核心跨五个功能定义了这些活动：
 
-*   `framework profile`（框架描述）定义了评估和沟通当前安全实施水平以及预期或计划实施水平的机制。该描述将业务约束、优先级以及风险容忍度应用于框架核心功能中，以表征特定的实施场景。
+  * `Identify`（识别）：涉及哪些系统、资产、数据和能力需要保护
 
-*   `framework implementation tiers`（框架实施层级）定义了安全实施成熟度的四个等级，从非正式和响应式到主动、敏捷且具有沟通性：
-    *   `Tier 1 – Partial`（部分级）：非正式、随意的、响应式风险管理实践，组织层面的风险意识有限，几乎没有与其他实体进行外部参与。
-    *   `Tier 2 – Risk Informed`（风险感知）：经管理层批准，建立了广泛的全组织风险意识，但具有非正式且有限的全组织风险管理实践以及非正式的外部参与。
-    *   `Tier 3 – Repeatable`（可重复）：风险管理实践正式作为政策批准，具有定义的流程和程序，并根据业务需求以及威胁和技术格局定期更新。人员经过培训，组织对事件进行协作。
-    *   `Tier 4 – Adaptive`（自适应）：组织范围的网络安全风险管理方法，能够及时适应变化的网络安全格局。组织管理风险并与伙伴共享信息。
+  * `Protect`（保护）：实施安全保护措施以限制安全事件的影响
+
+  * `Detect`（检测）：识别事件
+
+  * `Respond`（响应）：处理安全事件管理，控制事件影响
+
+  * `Recover`（恢复）：韧性与恢复能力
+
+  每个功能都有一组定义的类别和子类别，我们将在本章稍后部分探讨。
+
+* `framework profile`（框架描述）定义了评估和沟通当前安全实施水平以及预期或计划实施水平的机制。该描述将业务约束、优先级以及风险容忍度应用于框架核心功能中，以表征特定的实施场景。
+
+* `framework implementation tiers`（框架实施层级）定义了安全实施成熟度的四个等级，从非正式和响应式到主动、敏捷且具有沟通性：
+
+  * `Tier 1 – Partial`（部分级）：非正式、随意的、响应式风险管理实践，组织层面的风险意识有限，几乎没有与其他实体进行外部参与。
+
+  * `Tier 2 – Risk Informed`（风险感知）：经管理层批准，建立了广泛的全组织风险意识，但具有非正式且有限的全组织风险管理实践以及非正式的外部参与。
+
+  * `Tier 3 – Repeatable`（可重复）：风险管理实践正式作为政策批准，具有定义的流程和程序，并根据业务需求以及威胁和技术格局定期更新。人员经过培训，组织对事件进行协作。
+
+  * `Tier 4 – Adaptive`（自适应）：组织范围的网络安全风险管理方法，能够及时适应变化的网络安全格局。组织管理风险并与伙伴共享信息。
 
 实施层级使组织能够将所选成熟度的严谨性应用于目标描述定义，使风险管理实践符合特定组织的安全实践、威胁环境、监管要求、业务目标和组织限制。
 
@@ -199,36 +161,35 @@ DNS 信任模型指的是 DNS 信息在这些组件之间的流动方式。通�
 
 框架的实施涉及三个主要组织层级之间的交互和反馈：
 
-*   `Executive level`（执行层）：关注组织和业务风险，执行层将业务优先级、风险容忍度和安全预算设定业务/流程层。
-*   `Business/Process level`（业务/流程层）：考虑到业务优先级、风险容忍度和预算，该层关注关键基础设施风险管理，根据这些输入和当前描述定义组织的网络安全框架目标描述，并相应分配预算以缩小描述之间的差距。该层根据安全威胁和技术向执行层反馈当前和未来风险的变化，并向实施运营层提供实施指令。
-*   `Implementation/Operations level`（实施/运营层）：负责描述实施和风险管理策略。向业务/流程层的反馈包括实施进展、问题以及资产、漏洞和威胁的变化。
+* `Executive level`（执行层）：关注组织和业务风险，执行层将业务优先级、风险容忍度和安全预算设定业务/流程层。
+
+* `Business/Process level`（业务/流程层）：考虑到业务优先级、风险容忍度和预算，该层关注关键基础设施风险管理，根据这些输入和当前描述定义组织的网络安全框架目标描述，并相应分配预算以缩小描述之间的差距。该层根据安全威胁和技术向执行层反馈当前和未来风险的变化，并向实施运营层提供实施指令。
+
+* `Implementation/Operations level`（实施/运营层）：负责描述实施和风险管理策略。向业务/流程层的反馈包括实施进展、问题以及资产、漏洞和威胁的变化。
 
 网络安全框架文档利用这种三层组织结构，确定了定义网络安全计划的基本步骤：
 
-1.  第一步从 `Executive level` 开始，识别业务和组织优先级、目标以及风险容忍度，以便按优先级对网络内的资产和系统划定范围。
+1. 第一步从`Executive level`开始，识别业务和组织优先级、目标以及风险容忍度，以便按优先级对网络内的资产和系统划定范围。
 
-2.  在选定的范围内，第二步涉及组织列举受影响的系统和资产、法律要求、风险容忍度，以及与所定范围系统和资产相关的威胁和漏洞。
+2. 在选定的范围内，第二步涉及组织列举受影响的系统和资产、法律要求、风险容忍度，以及与所定范围系统和资产相关的威胁和漏洞。
 
+3. 这一步骤包括定义网络安全实施的现状。使用框架核心，你可以识别出在实施每个功能类别和子类别时的合规水平和纪律水平。分析结果将成为你的`Current Profile`（当前配置），定义了组织与框架对齐情况的快照。
 
+4. 随后应进行风险评估，从资产漏洞、潜在威胁及相应的可能性，以及每个威胁对网络和业务的潜在影响方面列举风险。
 
+5. 第五步涉及通过定义`Target Profile`（目标配置）来定义所需的网络安全活动和结果。利用框架核心结合业务特定的类别和子类别，可以列出预期的结果。
 
+6. 通过将`Target Profile`与`Current Profile`进行比较，可以定义从当前状态演变为预期状态需要解决的差距。根据每个类别和子类别在考虑相应的安全优先级下实施差距修复的成本，业务可以根据其对业务相应的价值来决定是否投资弥补该差距。这有助于优先考虑哪些差距需要首先处理，哪些可以以后处理，以及从资本、支出和资源的角度来看每个差距的成本如何。
 
-### 3. 这一步骤包括定义网络安全实施的现状。使用框架核心，你可以识别出在实施每个功能类别和子类别时的合规水平和纪律水平。分析结果将成为你的 `Current Profile`（当前配置），定义了组织与框架对齐情况的快照。
+7. 最后一步包括正式定义并实施行动计划以解决优先考虑的差距。随着实施在`Implementation/Operations`（实施/运营）层面进行，可以通过更新`Current Profile`来传达当前或进行中的状态快照。
 
-### 4. 随后应进行风险评估，从资产漏洞、潜在威胁及相应的可能性，以及每个威胁对网络和业务的潜在影响方面列举风险。
-
-### 5. 第五步涉及通过定义 `Target Profile`（目标配置）来定义所需的网络安全活动和结果。利用框架核心结合业务特定的类别和子类别，可以列出预期的结果。
-
-### 6. 通过将 `Target Profile` 与 `Current Profile` 进行比较，可以定义从当前状态演变为预期状态需要解决的差距。根据每个类别和子类别在考虑相应的安全优先级下实施差距修复的成本，业务可以根据其对业务相应的价值来决定是否投资弥补该差距。这有助于优先考虑哪些差距需要首先处理，哪些可以以后处理，以及从资本、支出和资源的角度来看每个差距的成本如何。
-
-### 7. 最后一步包括正式定义并实施行动计划以解决优先考虑的差距。随着实施在 `Implementation/Operations`（实施/运营）层面进行，可以通过更新 `Current Profile` 来传达当前或进行中的状态快照。
-
-`Current` 和 `Target` 配置分别使组织内部或外部能够对其当前和计划中的网络安全实施状态进行通信。这一通用框架的广泛使用有助于这些实体和利益相关者使用定义良好的术语进行通信。
+`Current`和`Target`配置分别使组织内部或外部能够对其当前和计划中的网络安全实施状态进行通信。这一通用框架的广泛使用有助于这些实体和利益相关者使用定义良好的术语进行通信。
 
 ### DNS 范围界定
+
 一旦你的执行团队识别并确定 DNS 属于应用安全控制的优先考虑范围，你的业务团队就需要定义相应的受影响 DNS 组件集。表 1.1 展示了影响 DNS 的基本业务优先级的范围界定示例，对应的受影响 DNS 组件，这些组件可以被考虑应用于安全控制。
 
-****表 1.1**](#c01.xhtml#tableanchor1-1) DNS 范围示例
+**表 1.1** DNS 范围示例
 
 | 广义 DNS 范围 | 受影响的 DNS 组件 |
 | --- | --- |
@@ -237,47 +198,48 @@ DNS 信任模型指的是 DNS 信息在这些组件之间的流动方式。通�
 | 为合法内部用户访问互联网准确解析互联网域名 | * 设备存根解析器 * 配置为解析来自内部设备解析器 DNS 查询的递归 DNS 服务器 |
 
 ### 当前配置 (Current Profile)
-一旦组织定义范围包括这些广泛区域中的一个或全部，就应该针对相关 DNS 组件的当前安全水平开发 `Current Profile`。考虑适用于你当前 DNS 管理和安全策略及程序的每个类别和子类别。与网络安全框架本身一样，你可能在实施中需要考虑额外的流程或预期结果。
+
+一旦组织定义范围包括这些广泛区域中的一个或全部，就应该针对相关 DNS 组件的当前安全水平开发`Current Profile`。考虑适用于你当前 DNS 管理和安全策略及程序的每个类别和子类别。与网络安全框架本身一样，你可能在实施中需要考虑额外的流程或预期结果。
 
 ### 风险评估 (Risk Assessment)
+
 流程中的下一个主要步骤是对受影响 DNS 组件进行风险评估。这一步涉及列举每个可能的威胁事件。威胁事件是指发生后会对网络和业务产生不利影响的事件。威胁事件可能包括安全相关威胁之外的事件，例如自然灾害或人为灾害，因此你可能希望考虑所有可能的威胁以确保你的网络特别是 DNS 的安全。
 
-对于每个识别出的威胁，考虑威胁事件发生的可能性，以及威胁事件发生后对你的网络和业务的影响。给定威胁事件发生的可能性可以通过考虑攻击者可能利用以引发威胁事件的已知漏洞来估算。将每个威胁绘制在图表是有用的，其中 `x` 轴与威胁的相对影响有关，而 `y` 轴反映其相对可能性。相对影响可以通过资源不可用或停机、终端用户或客户不满满意以及/或收入损失来估算。以这种方式绘制风险可以帮助你优先考虑哪些风险需要更紧的修复。
+对于每个识别出的威胁，考虑威胁事件发生的可能性，以及威胁事件发生后对你的网络和业务的影响。给定威胁事件发生的可能性可以通过考虑攻击者可能利用以引发威胁事件的已知漏洞来估算。将每个威胁绘制在图表是有用的，其中`x`轴与威胁的相对影响有关，而`y`轴反映其相对可能性。相对影响可以通过资源不可用或停机、终端用户或客户不满满意以及/或收入损失来估算。以这种方式绘制风险可以帮助你优先考虑哪些风险需要更紧的修复。
 
 如你从图 1.3 中得出的，风险 #4 (`R4`) 具有较高的可能高影响。该风险可能应该以最高优先级进行缓解。影响稍低且可能性较低的风险 #2 应该是下一个。尽管风险 #1 的可能性高于风险 #2，但其影响小得多。通过应用控制措施，目标是将每个未缓解的风险向下向左移动，从而为组织带来更低的整体剩余风险。
 
 ![图 1.3. 风险可能性-影响图](img/c01f003.jpg)
 
-****图 1.3.**](#c01.xhtml#figureanchor1-3) 风险可能性-影响图
+**图 1.3.** 风险可能性-影响图
 
 为了给单系统级风险评估过程增加结构，NIST 发布了联邦信息处理标准 (FIPS) Publication 199 (6)。该出版物定义了信息和信息系统的分类标准，基于发生某些威胁事件时对组织产生的潜在影响，用于评估组织的风险。分类是基于信息和信息系统的三个安全目标进行的。
 
-*   机密性 – 防止信息免受未经授权的泄露
-*   完整性 – 防止信息被未经授权的修改或破坏
-*   可用性 – 防止对信息或系统的访问或使用被中断
+* 机密性 – 防止信息免受未经授权的泄露
+
+* 完整性 – 防止信息被未经授权的修改或破坏
+
+* 可用性 – 防止对信息或系统的访问或使用被中断
 
 FIPS Publication 199 针对这些每个目标对组织的三个影响级别定义如下：
 
-*   低影响 – 预计对组织的运营、资产或个人的影响有限；例如，机密性、完整性可用性的丢失可能会降低组织的能力，尽管有效性明显降低。它还可能导致组织部分或全部资产的轻微损坏、轻微财务损失和/或对个人的轻微伤害。
-*   中度影响 – 预计会对组织的运营、资产或个人产生严重的不利影响；例如，机密性、完整性可用性的丢失会导致组织的能力显著下降，尽管有效性大幅降低。它还可能导致组织资产的重大损害、重大的财务损失和/或对个人造成严重但但不威胁生命的伤害。
-*   高影响 – 预计会对组织的运营、资产或个人产生严重或灾难性的影响；例如，机密性、完整性可用性的丢失会导致组织能力的严重下降，包括无法执行其一个或多个主要功能。它还可能导致组织资产的巨大损害、巨大的财务损失和/或对个人造成严重或灾难性且威胁生命的伤害。
+* 低影响 – 预计对组织的运营、资产或个人的影响有限；例如，机密性、完整性可用性的丢失可能会降低组织的能力，尽管有效性明显降低。它还可能导致组织部分或全部资产的轻微损坏、轻微财务损失和/或对个人的轻微伤害。
 
+* 中度影响 – 预计会对组织的运营、资产或个人产生严重的不利影响；例如，机密性、完整性可用性的丢失会导致组织的能力显著下降，尽管有效性大幅降低。它还可能导致组织资产的重大损害、重大的财务损失和/或对个人造成严重但但不威胁生命的伤害。
 
-
-
+* 高影响 – 预计会对组织的运营、资产或个人产生严重或灾难性的影响；例如，机密性、完整性可用性的丢失会导致组织能力的严重下降，包括无法执行其一个或多个主要功能。它还可能导致组织资产的巨大损害、巨大的财务损失和/或对个人造成严重或灾难性且威胁生命的伤害。
 
 对三个目标中的每一个目标进行分类为低、中等或高，这种分类是针对各种类型的静态存储信息（例如服务器上的文件内）或在传输中的信息（例如穿越您网络的 IP 数据包内）进行的，同时也针对通过网络以及信息系统本身（例如服务器、笔记本电脑等）处理的信息进行的。信息类型的示例可能是已公布的 DNS 区域信息或 DNS 查询事务信息。您组织内部类型和系统的安全分类（`SC`）将以元组的形式表示，如下例所示：
 
-<displayedItem xmlns:cms="http://cms.wiley.com" xmlns:dctm="http://www.documentum.com" xmlns="http://www.wiley.com/namespaces/wiley" xmlns:wiley="http://www.wiley.com/namespaces/wiley/wiley" type="mathematics" id="c01-disp-000A" numbered="no"><math display="block" location="image\_n/c01\_M0001.gif"><mtable><mtr><mtd columnalign="left"><msub><mi mathvariant="bold">SC</mi><mrow><mi> info </mi><mspace width="4pt"/><mi> type </mi><mo>/</mo><mi> system </mi></mrow></msub></mtd><td columnalign="left"><mrow><mo>=</mo><mo>{</mo><mo(\mo><mi mathvariant="bold">confidentiality</mi><mo>,</mo><mi> LOW </mi><mo>)</mo><mo>,</mo><mrow/><mo(\mo><mi mathvariant="bold">integrity</mi><mo>,</mo><mi> HIGH </mi><mo>)</mo><mo>,</mo></mrow></mtd></mtr><mtr><mtd/><td columnalign="left"><mrow><mspace width="1.em"/><mrow/><mo(\mo><mi mathvariant="bold">availability</mi><mo>,</mo><mi> MODERATE </mi><mo>)</mo>mo></mrow></mtd></mtr></mtable></math></displayedItem>
+```
+SC info type / system = {(confidentiality, LOW), (integrity, HIGH), (availability, MODERATE)}
+```
 
 ![images/c01_M0001.gif](img/c01_M0001.gif)
 
+正如我们在第 1 章中介绍的，DNS 是 IP 通信的基础要素。DNS 为提高 IP 应用的可用性提供了手段，例如将终端用户直接在浏览器等应用程序中输入 IP 地址的操作隔离开，并允许 Web 服务器提供由多种链接内容组成的网页。要在 IP 网络上进行通信，IP 设备需要向预定目标发送 IP 数据包；每个 IP 数据包头部都需要源 IP 地址和目的 IP 地址。DNS 提供将用户输入的命名目标（例如，网站 www 地址）翻译为其 IP 地址的功能，以便发送设备可以将目的 IP 地址填充为与所输入的域名相对应的地址。
 
-
-
-正如我们在第 1 章中介绍的，DNS 是 IP 通信的基础要素。DNS 为提高 IP 应用的可用性提供了手段，例如将终端用户直接在 浏览器等应用程序中输入 IP 地址的操作隔离开，并允许 Web 服务器提供由多种链接内容组成的网页。要在 IP 网络上进行通信，IP 设备需要向预定目标发送 IP 数据包；每个 IP 数据包头部都需要源 IP 地址和目的 IP 地址。DNS 提供将用户输入的命名目标（例如，网站 www 地址）翻译为其 IP 地址的功能，以便发送设备可以将目的 IP 地址填充为与所输入的域名相对应的地址。
-
-DNS 不仅对互联网用户有用，对网络管理员也有用。通过在 DNS 中发布名称到 IP 地址的映射，管理员可以自由地根据网络维护、服务提供商更改或常规重编号的需要更改 IP 地址，而不会影响终端用户的连接方式。我今天可以将我的 www 地址映射到 `192.0.2.55`，明天将其更改为 `198.51.100.23`，而不会影响用户访问我的网站。当然，考虑到在我进行更改之前，某些查询过我地址的递归服务器中缓存了之前的映射，我需要保持两个地址都激活一段时间。
+DNS 不仅对互联网用户有用，对网络管理员也有用。通过在 DNS 中发布名称到 IP 地址的映射，管理员可以自由地根据网络维护、服务提供商更改或常规重编号的需要更改 IP 地址，而不会影响终端用户的连接方式。我今天可以将我的 www 地址映射到`192.0.2.55`，明天将其更改为`198.51.100.23`，而不会影响用户访问我的网站。当然，考虑到在我进行更改之前，某些查询过我地址的递归服务器中缓存了之前的映射，我需要保持两个地址都激活一段时间。
 
 这种级别的间接性在配置物联网“事物”时也有用，例如家电、智能汽车、摄像头等，这些设备可以独立于用户发起的命令连接到互联网。此类连接可能首先通过对其配置的 Web 地址进行 DNS 查询来启动，它连接到该地址以通信状态更新、警报或其他信息。该设备的主网站 IP 地址可以通过更改其 DNS 条目来按需更改，其方式与上述描述类似。
 
@@ -285,9 +247,9 @@ DNS 不仅对互联网用户有用，对网络管理员也有用。通过在 DNS
 
 ### 域名层次结构
 
-全球域名系统实际上是一个分布式的层次结构数据库。域名中的每个“点”都表示层次结构中层级之间的边界，点之间的每个名称被称为 `label`（标签）。层次结构的顶端 `.` 或 `root`（根）域名提供了顶级域的引用，如 `.com`、`.net`、`.us`、`.uk`，它们又引用相应的子域名。每个顶级域或 TLD 是根域名的子域。每个 TLD 也有几个子域名，例如 [ipamworldwide.com](http://ipamworldwide.com) 在 `com` 域名之下有 `ipamworldwide` 域名。而这些子域名可能还有子域名，依此类推。
+全球域名系统实际上是一个分布式的层次结构数据库。域名中的每个“点”都表示层次结构中层级之间的边界，点之间的每个名称被称为`label`（标签）。层次结构的顶端`.`或`root`（根）域名提供了顶级域的引用，如`.com`、`.net`、`.us`、`.uk`，它们又引用相应的子域名。每个顶级域或 TLD 是根域名的子域。每个 TLD 也有几个子域名，例如 [ipamworldwide.com](http://ipamworldwide.com) 在`com`域名之下有`ipamworldwide`域名。而这些子域名可能还有子域名，依此类推。
 
-当我们从右向左读取点之间的内容时，可以识别通往我们要找实体的唯一路径。最左侧点的左侧通常是主机名，它位于域名其余部分指示的域名内。`完全限定域名`（`FQDN`）指的是全局 DNS 数据层次结构中节点或主机的唯一完整[绝对]路径名。[图 2.1] 阐述了 FQDN 映射到 DNS 数据库的树形结构。注意，`.com.` 之后的尾点显式地表示域名中的根域名，使其成为完全限定。请记住，如果没有这个显式的 FQDN 尾点表示法，给定的域名可能会被歧义地解释为完全限定的或相对于“当前”域的。这无疑是一种合法且更简单的简写表示法，但请注意潜在的歧义。
+当我们从右向左读取点之间的内容时，可以识别通往我们要找实体的唯一路径。最左侧点的左侧通常是主机名，它位于域名其余部分指示的域名内。`完全限定域名`（`FQDN`）指的是全局 DNS 数据层次结构中节点或主机的唯一完整[绝对]路径名。[图 2.1] 阐述了 FQDN 映射到 DNS 数据库的树形结构。注意，`.com.`之后的尾点显式地表示域名中的根域名，使其成为完全限定。请记住，如果没有这个显式的 FQDN 尾点表示法，给定的域名可能会被歧义地解释为完全限定的或相对于“当前”域的。这无疑是一种合法且更简单的简写表示法，但请注意潜在的歧义。
 
 ![图 2.1. 域名树映射到完全限定域名](img/c02f001.jpg)
 
@@ -295,80 +257,79 @@ DNS 不仅对互联网用户有用，对网络管理员也有用。通过在 DNS
 
 ### 域名解析
 
-为了说明域名信息是如何组织的以及 DNS 服务器如何利用这种层次结构，让我们来看一个域名解析的示例。假设你想连接到 [www.example.com](http://www.example.com)，DNS 服务器利用这种层次数据结构进行解析。在这种情况下，应用程序（套接字编程接口，API）在 TCP/IP 栈中被称为 `resolver`（解析器）。解析器的工作是将你输入的域名翻译成 IP 地址以启动 IP 通信。如果解析器配备了缓存且答案位于缓存中，解析器将向应用程序响应，过程结束。
+为了说明域名信息是如何组织的以及 DNS 服务器如何利用这种层次结构，让我们来看一个域名解析的示例。假设你想连接到 [www.example.com](http://www.example.com)，DNS 服务器利用这种层次数据结构进行解析。在这种情况下，应用程序（套接字编程接口，API）在 TCP/IP 栈中被称为`resolver`（解析器）。解析器的工作是将你输入的域名翻译成 IP 地址以启动 IP 通信。如果解析器配备了缓存且答案位于缓存中，解析器将向应用程序响应，过程结束。
 
-如果没有缓存，解析器向本地 DNS 服务器查询该域名，请求服务器提供答案。本地 DNS 服务器的 IP 地址是通过手动或通过 DHCP 配置的（DHCP 中的 `option 6` 和 `option 23`）。此 DNS 服务器将按照指定的顺序并如 2.2 图所示，在以下区域尝试回答查询。我们建议指定两个本地 DNS 服务器地址，以便在单个 DNS 服务器故障时提供弹性的解析服务。
+如果没有缓存，解析器向本地 DNS 服务器查询该域名，请求服务器提供答案。本地 DNS 服务器的 IP 地址是通过手动或通过 DHCP 配置的（DHCP 中的`option 6`和`option 23`）。此 DNS 服务器将按照指定的顺序并如 2.2 图所示，在以下区域尝试回答查询。我们建议指定两个本地 DNS 服务器地址，以便在单个 DNS 服务器故障时提供弹性的解析服务。
 
 ![图 2.2. 名称解析中的递归与迭代查询](img/c02f002.jpg)
 
 **图 2.2.** 名称解析中的递归与迭代查询
 
-我们将解析器发出查询的 DNS 服务器称为 `recursive server`（递归服务器）。“递归”意味着解析器希望服务器即使自己不知道答案也能尝试找到它。从解析器的角度来看，它发出一个查询并期望答案。从递归服务器的角度来看，它尝试为解析器查找答案。递归服务器是解析器进入域名系统的“门户”。递归服务器直接接收客户端解析器的递归查询，并执行以下步骤代表解析器获取查询答案。
-
-1. 解析器向递归服务器查询解析 `www.example.com`。如所述，解析器根据手动输入或 DHCP 配置知道要查询哪个 DNS 服务器。
-
-2. 被查询服务器将首先搜索其配置的数据文件。也就是说，DNS 服务器通常配置了其具有`权威性`的资源记录信息。这些信息通常使用文本文件、Microsoft Windows 界面或 IP 地址管理 (`IPAM`) 系统配置。例如，贵公司的 DNS 服务器可能配置了贵公司 IP 设备的解析信息。因此，这是权威信息。如果找到答案，则将其返回给解析器，过程停止。
-
-3. 如果被查询服务器对查询域名没有权威性且启用了递归，它将访问其缓存，以确定在之前的解析任务中是否最近从其他 DNS 服务器接收过相同或相似查询的响应。如果 `www.example.com` 的答案位于缓存中，DNS 服务器将用此非权威信息响应解析器，过程停止。
 
 
+我们将解析器发出查询的 DNS 服务器称为`recursive server`（递归服务器）。“递归”意味着解析器希望服务器即使自己不知道答案也能尝试找到它。从解析器的角度来看，它发出一个查询并期望答案。从递归服务器的角度来看，它尝试为解析器查找答案。递归服务器是解析器进入域名系统的“门户”。递归服务器直接接收客户端解析器的递归查询，并执行以下步骤代表解析器获取查询答案。
 
+1. 解析器向递归服务器查询解析`www.example.com`。如所述，解析器根据手动输入或 DHCP 配置知道要查询哪个 DNS 服务器。
+
+2. 被查询服务器将首先搜索其配置的数据文件。也就是说，DNS 服务器通常配置了其具有`权威性`的资源记录信息。这些信息通常使用文本文件、Microsoft Windows 界面或 IP 地址管理（`IPAM`）系统配置。例如，贵公司的 DNS 服务器可能配置了贵公司 IP 设备的解析信息。因此，这是权威信息。如果找到答案，则将其返回给解析器，过程停止。
+
+3. 如果被查询服务器对查询域名没有权威性且启用了递归，它将访问其缓存，以确定在之前的解析任务中是否最近从其他 DNS 服务器接收过相同或相似查询的响应。如果`www.example.com`的答案位于缓存中，DNS 服务器将用此非权威信息响应解析器，过程停止。
 
 4. 如果被查询的 DNS 服务器在缓存中无法找到查询的信息，它将尝试通过另一个拥有该信息的 DNS 服务器来定位该信息。这里有三种方法用于执行这种“升级”。
 
    1. 如果被查询的递归服务器配置为将查询转发到另一个服务器，该服务器将按照其配置或区域文件的设置转发查询，并等待响应。
 
-   2. 如果没有配置转发，且步骤 3 中引用的缓存信息显示是该查询的部分答案，则它将尝试联系该信息的源以找到最终的源和答案。例如，之前对另一个 DNS 服务器 `server X` 的查询可能已经指示 DNS 服务器 `X` 是 `example.com` 域名的权威服务器。随后，递归 DNS 服务器可能会查询 DNS 服务器 `X` 获取用于解析 `www.example.com` 的相关信息。
+   2. 如果没有配置转发，且步骤 3 中引用的缓存信息显示是该查询的部分答案，则它将尝试联系该信息的源以找到最终的源和答案。例如，之前对另一个 DNS 服务器`server X`的查询可能已经指示 DNS 服务器`X`是`example.com`域名的权威服务器。随后，递归 DNS 服务器可能会查询 DNS 服务器`X`获取用于解析`www.example.com`的相关信息。
 
-   3. 如果在缓存中未找到任何信息、服务器无法识别引荐服务器，或者转发未提供响应或未配置，则 DNS 服务器将访问其 `hints` 文件。`hints` 文件提供了一份供查询的 `root name servers`（根服务器）列表，以便开始向下遍历域名层次，直到找到一个能够为查询提供答案的 DNS 服务器。
+   3. 如果在缓存中未找到任何信息、服务器无法识别引荐服务器，或者转发未提供响应或未配置，则 DNS 服务器将访问其`hints`文件。`hints`文件提供了一份供查询的`root name servers`（根服务器）列表，以便开始向下遍历域名层次，直到找到一个能够为查询提供答案的 DNS 服务器。
 
-   根据缓存信息查询根服务器或树中更下游的服务器，被查询的服务器将通过提供 `www.example.com` 请求的 IP 地址来解析查询，或者提供一个指向层次结构中更深、更“接近”所求 FQDN（完全限定域名）的另一个 DNS 服务器的引荐。例如，查询根服务器时，可以保证你不会获得 `www.example.com` 的直接解析答案。然而，根服务器会将 `refer`（引荐）查询 DNS 服务器到对 `com` 权威的名称服务器，如图 2.2 所示。根服务器是“仅限委托”服务器，不直接解析查询，仅通过提供所查询 TLD（顶级域）的委托名称服务器信息进行回答。
+   根据缓存信息查询根服务器或树中更下游的服务器，被查询的服务器将通过提供`www.example.com`请求的 IP 地址来解析查询，或者提供一个指向层次结构中更深、更“接近”所求 FQDN（完全限定域名）的另一个 DNS 服务器的引荐。例如，查询根服务器时，可以保证你不会获得`www.example.com`的直接解析答案。然而，根服务器会将`refer`（引荐）查询 DNS 服务器到对`com`权威的名称服务器，如图 2.2 所示。根服务器是“仅限委托”服务器，不直接解析查询，仅通过提供所查询 TLD（顶级域）的委托名称服务器信息进行回答。
 
-5. 递归服务器根据响应沿域名树 `iterates`（迭代）额外的查询，直到查询可以得到答案为止。继续我们的示例，递归服务器查询根服务器引荐的其中 `.com` 名称服务器之一。从该名称服务器收到的答案也将是指向对 `example.com.` 权威的名称服务器的引荐，并此类推向下树。
+5. 递归服务器根据响应沿域名树`iterates`（迭代）额外的查询，直到查询可以得到答案为止。继续我们的示例，递归服务器查询根服务器引荐的其中`.com`名称服务器之一。从该名称服务器收到的答案也将是指向对`example.com.`权威的名称服务器的引荐，并此类推向下树。
 
    注意，通过向其他 DNS 服务器发布查询以查找解析信息，递归服务器本身执行了解析器功能来执行此查找。`stub resolver`（存根解析器）术语通常用于标识不向下迭代域名树的解析器。典型终端用户客户端内的存根解析器仅配置了要查询哪些递归名称服务器。
 
-6. 收到来自 TLD 服务器的引荐后，其指示了两个或多个被委托给 [example.com](http://example.com) 的名称服务器及相应的 IP 地址，递归服务器将准备其下一次迭代查询并发送给这些服务器之一。响应以一个或多个资源记录的形式提供，这些记录与查询名称、类和资源记录类型匹配，包含了查询的答案。
+6. 收到来自 TLD 服务器的引荐后，其指示了两个或多个被委托给[example.com](http://example.com)的名称服务器及相应的 IP 地址，递归服务器将准备其下一次迭代查询并发送给这些服务器之一。响应以一个或多个资源记录的形式提供，这些记录与查询名称、类和资源记录类型匹配，包含了查询的答案。
 
-   递归服务器通常不仅更新其缓存以存储特定查询的最终答案，还会存储在过程中收到的随答案和引荐消息中提供的任何额外信息。通过这种方式，递归服务器缓存了 `.com` 和 [example.com](http://example.com) 域的名称服务器域名和 IP 地址。当相同或另一个存根解析器查询 `.com` 域子树中的另一个域名时，递归服务器可以利用其缓存直接查询其中一个 `.com` 名称服务器，而无需像步骤 4 提到的那样查询根服务器。如果找不到答案，递归服务器也将缓存此“负”信息，以便用于响应类似的查询。
+   递归服务器通常不仅更新其缓存以存储特定查询的最终答案，还会存储在过程中收到的随答案和引荐消息中提供的任何额外信息。通过这种方式，递归服务器缓存了`.com`和[example.com](http://example.com)域的名称服务器域名和 IP 地址。当相同或另一个存根解析器查询`.com`域子树中的另一个域名时，递归服务器可以利用其缓存直接查询其中一个`.com`名称服务器，而无需像步骤 4 提到的那样查询根服务器。如果找不到答案，递归服务器也将缓存此“负”信息，以便用于响应类似的查询。
 
-7. 当收到答案时，递归 DNS 服务器将根据 [图 2.2] 向存根解析器提供答案，存根解析器可以更新其缓存，过程结束。这个过程似乎很繁琐且耗时，但正如你可能经历过的，这一切发生得非常快。根服务器和 TLD 服务器是“仅限委托”服务器，因为它们只支持引荐。这有助于提高性能，递归 DNS 服务器的缓存也是如此，它可以利用缓存的 DNS 信息来简化解析过程。
+7. 当收到答案时，递归 DNS 服务器将根据[图 2.2]向存根解析器提供答案，存根解析器可以更新其缓存，过程结束。这个过程似乎很繁琐且耗时，但正如你可能经历过的，这一切发生得非常快。根服务器和 TLD 服务器是“仅限委托”服务器，因为它们只支持引荐。这有助于提高性能，递归 DNS 服务器的缓存也是如此，它可以利用缓存的 DNS 信息来简化解析过程。
 
    如前所述，存根解析器也可能配置为缓存这些信息。在这种情况下，只有答案被缓存，而没有其他域名树节点，因为存根解析器只查询其配置的名称服务器。但对于频繁访问常用网站的用户，存根解析器缓存可以提高应用程序的时间。
 
    我们在步骤 4 中提到了 DNS 转发器的使用，其中被存根解析器查询的服务器将所有或部分查询转发到其他 DNS 服务器进行递归。如果你有一组整合的内部缓存服务器（通过它们引导外部 DNS 查询），或者你正在使用第三方 DNS 解析器服务，你可能会部署此配置。在两种情况下，你都可以配置你的内部转发 DNS 服务器解析内部命名空间，并将其他查询分别转发到你的缓存服务器或服务提供者的 DNS 服务器。转发 DNS 服务器通常像递归服务器一样缓存解析答案，以减少 DNS 消息流并提高解析性能。
 
-   总之，解析过程涉及：(a) 找到一组具有该查询权威信息的名称服务器，以及 (b) 查询权威服务器获取所需信息。在示例中，所需的信息是对应于主机域名 `www.example.com` 的 IP 地址。这种将查询域名到 IP 地址的“转换”信息以资源记录的形式存储在 DNS 服务器中。不同类型的查询定义了不同的资源记录。每条资源记录包含一个“键”或查询值。在某些情况下，特定类型的特定查询值在 DNS 服务器中可能有多个条目。在这种情况下，权威 DNS 服务器将返回与查询值（名称）、类和类型匹配的整个资源记录集，即 `resource record set` (`RRSet`)。
+   总之，解析过程涉及：(a) 找到一组具有该查询权威信息的名称服务器，以及 (b) 查询权威服务器获取所需信息。在示例中，所需的信息是对应于主机域名`www.example.com`的 IP 地址。这种将查询域名到 IP 地址的“转换”信息以资源记录的形式存储在 DNS 服务器中。不同类型的查询定义了不同的资源记录。每条资源记录包含一个“键”或查询值。在某些情况下，特定类型的特定查询值在 DNS 服务器中可能有多个条目。在这种情况下，权威 DNS 服务器将返回与查询值（名称）、类和类型匹配的整个资源记录集，即`resource record set`（`RRSet`）。
 
-
-
-
-`zone` 一词用于区分相对于域层次结构的行政控制级别。在我们的示例中，[ipamworldwide.com](http://ipamworldwide.com) 区域包含 [ipamworldwide.com](http://ipamworldwide.com)、[sw.ipamworldwide.com](http://sw.ipamworldwide.com) 以及 [phila.ipamworldwide.com](http://phila.ipamworldwide.com) 域名的权限，而 [dev.ipamworldwide.com](http://dev.ipamworldwide.com) 区域保留了 [dev.ipamworldwide.com](http://dev.ipamworldwide.com) 域名及其子域的权限，如图 2.3（c02.xhtml#figure2-3）所示。
+`zone`一词用于区分相对于域层次结构的行政控制级别。在我们的示例中，[ipamworldwide.com](http://ipamworldwide.com)区域包含[ipamworldwide.com](http://ipamworldwide.com)、[sw.ipamworldwide.com](http://sw.ipamworldwide.com)以及[phila.ipamworldwide.com](http://phila.ipamworldwide.com)域名的权限，而[dev.ipamworldwide.com](http://dev.ipamworldwide.com)区域保留了[dev.ipamworldwide.com](http://dev.ipamworldwide.com)域名及其子域的权限，如图 2.3（c02.xhtml#figure2-3）所示。
 
 ![图 2.3. 作为委托域的区域](img/c02f003.jpg)
 
 图 2.3. 作为委托域的区域
 
+通过委托[dev.ipamworldwide.com](http://dev.ipamworldwide.com)的权限，[ipamworldwide.com](http://ipamworldwide.com)的 DNS 管理员同意将[dev.ipamworldwide.com](http://dev.ipamworldwide.com)（以及域树中[dev.ipamworldwide.com](http://dev.ipamworldwide.com)的任何子域）的所有解析交由由操作[dev.ipamworldwide.com](http://dev.ipamworldwide.com)区域的人员管理的 DNS 服务器处理。这些[dev.ipamworldwide.com](http://dev.ipamworldwide.com)管理员可以自主管理他们的域和资源记录以及任何子级；他们只需要告知父域管理员（针对[ipamworldwide.com](http://ipamworldwide.com)），当解析器或其他 DNS 服务器尝试向下遍历域树以寻求解析时，应将收到的查询请求重定向到何处。
 
-通过委托 [dev.ipamworldwide.com](http://dev.ipamworldwide.com) 的权限，[ipamworldwide.com](http://ipamworldwide.com) 的 DNS 管理员同意将 [dev.ipamworldwide.com](http://dev.ipamworldwide.com)（以及域树中 [dev.ipamworldwide.com](http://dev.ipamworldwide.com) 的任何子域）的所有解析交由由操作 [dev.ipamworldwide.com](http://dev.ipamworldwide.com) 区域的人员管理的 DNS 服务器处理。这些 [dev.ipamworldwide.com](http://dev.ipamworldwide.com) 管理员可以自主管理他们的域和资源记录以及任何子级；他们只需要告知父域管理员（针对 [ipamworldwide.com](http://ipamworldwide.com）），当解析器或其他 DNS 服务器尝试向下遍历域树以寻求解析时，应将收到的查询请求重定向到何处。
+因此，[ipamworldwide.com](http://ipamworldwide.com)区域的管理员必须为[ipamworldwide.com](http://ipamworldwide.com)区域配置所有资源记录和配置属性，包括[ipamworldwide.com](http://ipamworldwide.com)区域内的子域，如[sw.ipamworldwide.com](http://sw.ipamworldwide.com)域。同时，[ipamworldwide.com](http://ipamworldwide.com)管理员必须为任何子区域（如[dev.ipamworldwide.com](http://dev.ipamworldwide.com)）提供委托链接。这种委托链接通过在[ipamworldwide.com](http://ipamworldwide.com)区域文件中输入名称服务器（`NS`）资源记录来支持，这些记录指示了哪些名称服务器对于[dev.ipamworldwide.com](http://dev.ipamworldwide.com)委托区域具有权威性。这些`NS`记录通过引用域树更深处的解析器或其他名称服务器，为委托子区域提供了连续性。通常还会定义称为“粘合记录”（glue records）的`A`或`AAAA`记录，将解析出的`NS`主机域名绑定到 IP 地址，以便对后续查询进行直接寻址。
 
-因此，[ipamworldwide.com](http://ipamworldwide.com) 区域的管理员必须为 [ipamworldwide.com](http://ipamworldwide.com) 区域配置所有资源记录和配置属性，包括 [ipamworldwide.com](http://ipamworldwide.com) 区域内的子域，如 [sw.ipamworldwide.com](http://sw.ipamworldwide.com) 域。同时，[ipamworldwide.com](http://ipamworldwide.com) 管理员必须为任何子区域（如 [dev.ipamworldwide.com](http://dev.ipamworldwide.com)）提供委托链接。这种委托链接通过在 [ipamworldwide.com](http://ipamworldwide.com) 区域文件中输入名称服务器（`NS`）资源记录来支持，这些记录指示了哪些名称服务器对于 [dev.ipamworldwide.com](http://dev.ipamworldwide.com) 委托区域具有权威性。这些 `NS` 记录通过引用域树更深处的解析器或其他名称服务器，为委托子区域提供了连续性。通常还会定义称为“粘合记录”（glue records）的 `A` 或 `AAAA` 记录，将解析出的 `NS` 主机域名绑定到 IP 地址，以便对后续查询进行直接寻址。
+图 2.3 区域包含[ipamworldwide.com](http://ipamworldwide.com)域以及它的两个子域 phila 和 sw。[ipamworldwide.com](http://ipamworldwide.com) DNS 管理员负责维护[ipamworldwide.com](http://ipamworldwide.com)区域的所有 DNS 配置信息，包括在[ipamworldwide.com](http://ipamworldwide.com)区域内管理的子域，以及指向服务委托子区域（如[dev.ipamworldwide.com](http://dev.ipamworldwide.com)）的 DNS 服务器的引荐，如图 2.3 所示。因此，当世界各地的 DNS 服务器代表其客户端解析任何以[ipamworldwide.com](http://ipamworldwide.com)结尾的域名时，它们的查询将遍历[ipamworldwide.com](http://ipamworldwide.com) DNS 服务器以及可能的服务[dev.ipamworldwide.com](http://dev.ipamworldwide.com)区域的其他 DNS 服务器。
 
-图 2.3 区域包含 [ipamworldwide.com](http://ipamworldwide.com) 域以及它的两个子域 phila 和 sw。[ipamworldwide.com](http://ipamworldwide.com) DNS 管理员负责维护 [ipamworldwide.com](http://ipamworldwide.com) 区域的所有 DNS 配置信息，包括在 [ipamworldwide.com](http://ipamworldwide.com) 区域内管理的子域，以及指向服务委托子区域（如 [dev.ipamworldwide.com](http://dev.ipamworldwide.com)）的 DNS 服务器的引荐，如图 2.3 所示。因此，当世界各地的 DNS 服务器代表其客户端解析任何以 [ipamworldwide.com](http://ipamworldwide.com) 结尾的域名时，它们的查询将遍历 [ipamworldwide.com](http://ipamworldwide.com) DNS 服务器以及可能的服务 [dev.ipamworldwide.com](http://dev.ipamworldwide.com) 区域的其他 DNS 服务器。
+命名空间的委托过程实现了 DNS 配置的自主性，同时通过全局 DNS 数据库中的`NS`记录引用提供了链接。正如你可以想象的，如果这些`NS`记录引用的名称服务器不可，域树将在该处中断，阻止该处或域树更深处的名称解析。如果[dev.ipamworldwide.com](http://dev.ipamworldwide.com) DNS 服务器宕机，对[dev.ipamworldwide.com](http://dev.ipamworldwide.com)*及其子域*的权威解析将失败。
 
-命名空间的委托过程实现了 DNS 配置的自主性，同时通过全局 DNS 数据库中的 `NS` 记录引用提供了链接。正如你可以想象的，如果这些 `NS` 记录引用的名称服务器不可，域树将在该处中断，阻止该处或域树更深处的名称解析。如果 [dev.ipamworldwide.com](http://dev.ipamworldwide.com) DNS 服务器宕机，对 [dev.ipamworldwide.com](http://dev.ipamworldwide.com) *及其子域* 的权威解析将失败。
+总结来说，[ipamworldwide.com](http://ipamworldwide.com)区域的管理员必须为[ipamworldwide.com](http://ipamworldwide.com)区域配置所有资源记录和配置属性，包括[ipamworldwide.com](http://ipamworldwide.com)区域内的子域，如[sw.ipamworldwide.com](http://sw.ipamworldwide.com)域。同时，[ipamworldwide.com](http://ipamworldwide.com)管理员必须为任何子区域（如[dev.ipamworldwide.com](http://dev.ipamworldwide.com)）提供委托链接。这种委托链接通过在[ipamworldwide.com](http://ipamworldwide.com)区域文件中输入名称服务器（`NS`）资源记录来支持，这些记录指示了哪些名称服务器对于[dev.ipamworldwide.com](http://dev.ipamworldwide.com)委托区域具有权威性。这些`NS`记录通过引用域树更深处的解析器或其他名称服务器，为委托子区域提供了连续性。通常还会定义称为“粘合记录”（glue records）的`A`或`AAAA`记录，将解析出的`NS`主机域名绑定到 IP 地址，以便对后续查询进行直接寻址。
 
-总结来说，[ipamworldwide.com](http://ipamworldwide.com) 区域的管理员必须为 [ipamworldwide.com](http://ipamworldwide.com) 区域配置所有资源记录和配置属性，包括 [ipamworldwide.com](http://ipamworldwide.com) 区域内的子域，如 [sw.ipamworldwide.com](http://sw.ipamworldwide.com) 域。同时，[ipamworldwide.com](http://ipamworldwide.com) 管理员必须为任何子区域（如 [dev.ipamworldwide.com](http://dev.ipamworldwide.com)）提供委托链接。这种委托链接通过在 [ipamworldwide.com](http://ipamworldwide.com) 区域文件中输入名称服务器（`NS`）资源记录来支持，这些记录指示了哪些名称服务器对于 [dev.ipamworldwide.com](http://dev.ipamworldwide.com) 委托区域具有权威性。这些 `NS` 记录通过引用域树更深处的解析器或其他名称服务器，为委托子区域提供了连续性。通常还会定义称为“粘合记录”（glue records）的 `A` 或 `AAAA` 记录，将解析出的 `NS` 主机域名绑定到 IP 地址，以便对后续查询进行直接寻址。
+图 2.3 区域包含[ipamworldwide.com](http://ipamworldwide.com)域以及它的两个子域 phila 和 sw。[ipamworldwide.com](http://ipamworldwide.com) DNS 管理员负责维护[ipamworldwide.com](http://ipamworldwide.com)区域的所有 DNS 配置信息，包括在[ipamworldwide.com](http://ipamworldwide.com)区域内管理的子域，以及指向服务委托子区域（如[dev.ipamworldwide.com](http://dev.ipamworldwide.com)）的 DNS 服务器的引荐，如图 2.3 所示。因此，当世界各地的 DNS 服务器代表其客户端解析任何以[ipamworldwide.com](http://ipamworldwide.com)结尾的域名时，它们的查询将遍历[ipamworldwide.com](http://ipamworldwide.com) DNS 服务器以及可能的服务[dev.ipamworldwide.com](http://dev.ipamworldwide.com)区域的其他 DNS 服务器。
 
-图 2.3 区域包含 [ipamworldwide.com](http://ipamworldwide.com) 域以及它的两个子域 phila 和 sw。[ipamworldwide.com](http://ipamworldwide.com) DNS 管理员负责维护 [ipamworldwide.com](http://ipamworldwide.com) 区域的所有 DNS 配置信息，包括在 [ipamworldwide.com](http://ipamworldwide.com) 区域内管理的子域，以及指向服务委托子区域（如 [dev.ipamworldwide.com](http://dev.ipamworldwide.com)）的 DNS 服务器的引荐，如图 2.3 所示。因此，当世界各地的 DNS 服务器代表其客户端解析任何以 [ipamworldwide.com](http://ipamworldwide.com) 结尾的域名时，它们的查询将遍历 [ipamworldwide.com](http://ipamworldwide.com) DNS 服务器以及可能的服务 [dev.ipamworldwide.com](http://dev.ipamworldwide.com) 区域的其他 DNS 服务器。
+命名空间的委托过程实现了 DNS 配置的自主性，同时通过全局 DNS 数据库中的`NS`记录引用提供了链接。正如你可以想象的，如果这些`NS`记录引用的名称服务器不可，域树将在该处中断，阻止该处或域树更深处的名称解析。如果[dev.ipamworldwide.com](http://dev.ipamworldwide.com) DNS 服务器宕机，对[dev.ipamworldwide.com](http://dev.ipamworldwide.com)*及其子域*的权威解析将失败。
 
-命名空间的委托过程实现了 DNS 配置的自主性，同时通过全局 DNS 数据库中的 `NS` 记录引用提供了链接。正如你可以想象的，如果这些 `NS` 记录引用的名称服务器不可，域树将在该处中断，阻止该处或域树更深处的名称解析。如果 [dev.ipamworldwide.com](http://dev.ipamworldwide.com) DNS 服务器宕机，对 [dev.ipamworldwide.com](http://dev.ipamworldwide.com) *及其子域* 的权威解析将失败。
+总结来说，[ipamworldwide.com](http://ipamworldwide.com)区域的管理员必须为[ipamworldwide.com](http://ipamworldwide.com)区域配置所有资源记录和配置属性，包括[ipamworldwide.com](http://ipamworldwide.com)区域内的子域，如[sw.ipamworldwide.com](http://sw.ipamworldwide.com)域。同时，[ipamworldwide.com](http://ipamworldwide.com)管理员必须为任何子区域（如[dev.ipamworldwide.com](http://dev.ipamworldwide.com)）提供委托链接。这种委托链接通过在[ipamworldwide.com](http://ipamworldwide.com)区域文件中输入名称服务器（`NS`）资源记录来支持，这些记录指示了哪些名称服务器对于[dev.ipamworldwide.com](http://dev.ipamworldwide.com)委托区域具有权威性。这些`NS`记录通过引用域树更深处的解析器或其他名称服务器，为委托子区域提供了连续性。通常还会定义称为“粘合记录”（glue records）的`A`或`AAAA`记录，将解析出的`NS`主机域名绑定到 IP 地址，以便对后续查询进行直接寻址。
 
-总结来说，[ipamworldwide.com](http://ipamworldwide.com) 区域的管理员必须为 [ipamworldwide.com](http://ipamworldwide.com) 区域配置所有资源记录和配置属性，包括 [ipamworldwide.com](http://ipamworldwide.com) 区域内的子域，如 [sw.ipamworldwide.com](http://sw.ipamworldwide.com) 域。同时，[ipamworldwide.com](http://ipamworldwide.com) 管理员必须为任何子区域（如 [dev.ipamworldwide.com](http://dev.ipamworldwide.com)）提供委托链接。这种委托链接通过在 [ipamworldwide.com](http://ipamworldwide.com) 区域文件中输入名称服务器（`NS`）资源记录来支持，这些记录指示了哪些名称服务器对于 [dev.ipamworldwide.com](http://dev.ipamworldwide.com) 委托区域具有权威性。这些 `NS` 记录通过引用域树更深处的解析器或其他名称服务器，为委托子区域提供了连续性。通常还会定义称为“粘合记录”（glue records）的 `A` 或 `AAAA` 记录，将解析出的 `NS` 主机域名绑定到 IP 地址，以便对后续查询进行直接寻址。
 
-图 2.3 区域包含 [ipamworldwide.com](http://ipamworldwide.com) 域以及它的两个子域 phila 和 sw。[ipamworldwide.com](http://ipamworldwide.com) DNS 管理员负责维护 [ipamworldwide.com](http://ipamworldwide.com) 区域的所有 DNS 配置信息，包括在 [ipamworldwide.com](http://ipamworldwide.com) 区域内管理的子域，以及指向服务委托子区域（如 [dev.ipamworldwide.com](http://dev.ipamworldwide.com)）的 DNS 服务器的引荐，如图 2.3 所示。因此，当世界各地的 DNS 服务器代表其客户端解析任何以 [ipamworldwide.com](http://ipamworldwide.com) 结尾的域名时，它们的查询将遍历 [ipamworldwide.com](http://ipamworldwide.com) DNS 服务器以及可能的服务 [dev.ipamworldwide.com](http://dev.ipamworldwide.com) 区域的其他 DNS 服务器。
 
-命名空间的委托过程实现了 DNS 配置的自主性，同时通过全局 DNS 数据库中的 `NS` 记录引用提供了链接。正如你可以想象的，如果这些 `NS` 记录引用的名称服务器不可，域树将在该处中断，阻止该处或域树更深处的名称解析。如果 [dev.ipamworldwide.com](http://dev.ipamworldwide.com) DNS 服务器宕机，对 [dev.ipamworldwide.com](http://dev.ipamworldwide.com) *及其子域* 的权威解析将失败。
+## 2.3 区域包含与委托
+
+图 2.3 区域包含 [ipamworldwide.com](http://ipamworldwide.com) 域以及它的两个子域 `phila` 和 `sw`。[ipamworldwide.com](http://ipamworldwide.com) DNS 管理员负责维护 [ipamworldwide.com](http://ipamworldwide.com) 区域的所有 DNS 配置信息，包括在 [ipamworldwide.com](http://ipamworldwide.com) 区域内管理的子域，以及指向服务委托子区域（如 [dev.ipamworldwide.com](http://dev.ipamworldwide.com)）的 DNS 服务器的引荐，如图 2.3 所示。因此，当世界各地的 DNS 服务器代表其客户端解析任何以 [ipamworldwide.com](http://ipamworldwide.com) 结尾的域名时，它们的查询将遍历 [ipamworldwide.com](http://ipamworldwide.com) DNS 服务器以及可能的服务 [dev.ipamworldwide.com](http://dev.ipamworldwide.com) 区域的其他 DNS 服务器。
+
+命名空间的委托过程实现了 DNS 配置的自主性，同时通过全局 DNS 数据库中的 `NS` 记录引用提供了链接。正如你可以想象的，如果这些 `NS` 记录引用的名称服务器不可用，域树将在该处中断，阻止该处或域树更深处的名称解析。如果 [dev.ipamworldwide.com](http://dev.ipamworldwide.com) DNS 服务器宕机，对 [dev.ipamworldwide.com](http://dev.ipamworldwide.com) *及其子域* 的权威解析将失败。
 
 ### 区域信息的传播
 
@@ -378,10 +339,6 @@ DNS 不仅对互联网用户有用，对网络管理员也有用。通过在 DNS
 
 区域传输可能包括整个区域配置文件（称为绝对区域传输，`AXFR`）或仅包括增量更新（称为增量区域传输，`IXFR`）。在区域信息相对静态且来自单一源（例如管理员）更新的情况下，根据需要使用 `AXFRs` 进行序列号检查效果良好。这些所谓的*静态区域*的管理比其对面的*动态区域*要简单得多。动态区域顾如其义，接受动态更新，例如 DHCP 服务器向 DNS 更新新分配的 IP 地址和相应的主机域名。动态区域的更新可以利用 `IXFR` 机制来维护主服务器和多个从服务器之间的同步。
 
-
-
-
-
 流行的 BIND DNS 参考实现在每台服务器上利用日志文件（journal files），以提供一种高效跟踪区域信息动态更新的方法。这些日志文件是相应区域文件的临时附加，允许跟踪动态更新，直到服务器将这些日志条目写入区域文件并重新加载该区域。许多服务器实现会将区域文件信息与增量区域更新一起加载到内存中，这些更新也会加载到内存中以实现快速解析。存储区域信息的其他方法包括使用数据库，例如 PowerDNS 和 Knot DNS 的实现方式。
 
 ### 附加区域
@@ -390,9 +347,9 @@ DNS 不仅对互联网用户有用，对网络管理员也有用。通过在 DNS
 
 某些环境可能需要使用内部根服务器集，组织策略限制了互联网访问。在这种情况下，可以使用内部版本的提示文件，列出内部根服务器的名称和地址，而不是互联网根服务器（我们将在第 5 章中讨论这一点）。组织本身需要维护内部根服务器的列表以及所需的根区域配置。
 
-**本地主机区域（Localhost Zones）** 另一个证明关重要的区域文件是 localhost 区域。localhost 区域允许在给服务器上将“localhost”解析为主机名。相应的 `in-addr.arpa.` 区域文件用于解析 `127.0.0.1` 回环地址。`0.0.127.in-addr.arpa` 区域中的单条目会将此回环地址映射到主机本身。由于 `127.in-addr.arpa` 域或其子域没有上游权威机构，因此该区域是必需。同样，需要为相应的 IPv6 回环地址 `::1` 定义 IPv6 等效项。localhost 区域仅通过 `A` 和 `AAAA` 记录分别将 localhost 主机名映射到其 `127.0.0.1` 或 `::1` IP 地址。请参考 *IP Address Management Principles and Practice* (8) 以获得关于此及泛反向区域的完整讨论。
+**本地主机区域（Localhost Zones）** 另一个证明关重要的区域文件是 `localhost` 区域。`localhost` 区域允许在给服务器上将“localhost”解析为主机名。相应的 `in-addr.arpa.` 区域文件用于解析 `127.0.0.1` 回环地址。`0.0.127.in-addr.arpa` 区域中的单条目会将此回环地址映射到主机本身。由于 `127.in-addr.arpa` 域或其子域没有上游权威机构，因此该区域是必需。同样，需要为相应的 IPv6 回环地址 `::1` 定义 IPv6 等效项。`localhost` 区域仅通过 `A` 和 `AAAA` 记录分别将 `localhost` 主机名映射到其 `127.0.0.1` 或 `::1` IP 地址。请参考 *IP Address Management Principles and Practice* (8) 以获得关于此及泛反向区域的完整讨论。
 
-字体 解析器（RESOLVER）配置
+## 解析器（RESOLVER）配置
 
 DNS 在使用之前确实需要一些基本的客户端配置。这种初始配置可以手动执行，也可以从 DHCP 服务器获取这些信息。客户端配置包括配置解析器软件，指明查询哪些 DNS 服务器进行解析。
 
@@ -428,13 +385,9 @@ Microsoft Windows 允许在其图形界面内输入多个用于查询的 DNS 服
 
     *   `no-check-names` – 关闭对用于解析的主机名的名称检查。通常不允许下划线字符，例如，设置此选项允许查询处理在不验证输入主机名的情况下进行。
 
-    *   `inet6` – 导致解析器在尝试 A 记录查询之前对输入的主机名发起 AAAA 查询。
+    *   `inet6` – 导致解析器在尝试 `A` 记录查询之前对输入的主机名发起 `AAAA` 查询。
 
 `search` 和 `options` 设置也可以通过相应的环境变量设置按每个进程进行覆盖。
-
-
-
-
 
 本章描述了 DNS 数据在树形结构中的组织，其中树的每个节点可能由独立实体管理。我们还讨论了查询信息的各种格式，以及 DNS 服务器上通常配置的区域文件（zone files）的基本类型。最后，我们简要概述了设备解析器的配置。这些背景知识为理解 DNS 服务器和解析器上“静态数据”的结构，以及在全局 DNS 树中定位 DNS 信息的流程奠定了基础。现在进入下一章，回顾传输中的 DNS 数据——DNS 协议。
 
@@ -456,7 +409,7 @@ Microsoft Windows 允许在其图形界面内输入多个用于查询的 DNS 服
 
 ### 名称压缩
 
-给定的 DNS 报文可能包含多个域名，其中许多可能包含重复信息，例如 `ipamworldwide.com.` 后缀。DNS 规范允许消息压缩以减少重复信息，从而减小 DNS 报文的大小。这是通过使用指向 DNS 报文内其他位置的`pointers`（指针）来实现的，指针指定公共域后缀。该域后缀随后位于指针所引的位置。
+给定的 DNS 报文可能包含多个域名，其中许多可能包含重复信息，例如 `ipamworldwide.com.` 后缀。DNS 规范允许消息压缩以减少重复信息，从而减小 DNS 报文的大小。这是通过使用指向 DNS 报文内其他位置的 `pointers`（指针）来实现的，指针指定公共域后缀。该域后缀随后位于指针所引的位置。
 
 例如，假设我们对 `www.ipamworldwide.com.` 的查询返回了一对可以查询更多信息的 DNS 服务器：`ns1.ipamworldwide.com.` 和 `ns2.isp.com.`。这些域名中的 `ipamworldwide.com.` 部分在查询和其中一个答案中是通用的，而只有 `.com` 部分在问题、第一个答案和第二个答案之间是通用的。
 
@@ -466,72 +419,68 @@ DNS 解析器和服务器如何区分指针和标准的标签长度字节？DNS 
 
 让我们看看这如何映射我们先前的示例。假设从 DNS 头部开始第 12 字节处，我们包含了域名 `www.ipamworldwide.com.`。现在，在报文后半部分，从头部开始第 56 字节处，我们想要编码 `ns1.ipamworldwide.com` 和 `ns2.isp.com`。
 
-图 3.2 显示了这种形式。第一部分如我们之前讨论的，带有长度字节（深阴影），随后是相应数量的字节（浅阴影）。在示例的第 56 字节处，`ns1` 部分正常编码，使用标签长度“3”，随后是 ns1。然而，接下来的字节不是标准长度字节，而是双字节指针，因为它以 `0b11` 开并在图中以黑色显示。指针的 14 位偏移字段中编码的值为“16”，表示从头部偏移 16 字节开始的域名部分应附加到已指定的 ns1 标签上。下图中第一行字节列出了各个字节偏移（斜体），第 16 字节是值为“13”的长度字节，随后是 ipamworldwide 的编码，随后是值为“3”的长度字节，然后是 com，最后是。（值为“0”的长度字节）。在处理指针后返回下一个域名时，我们发现了 `ns2.isp` 的编码，随后是一个指向字节偏移 30 的指针，该指针指向值为“3”的长度字节，随后是 com，完成域名 `ns2.isp.com`。仅考虑这三个示例域名，报文中这些域名占用的字节数就可以从 59 字节压缩到 39 字节。
+图 3.2 显示了这种形式。第一部分如我们之前讨论的，带有长度字节（深阴影），随后是相应数量的字节（浅阴影）。在示例的第 56 字节处，`ns1` 部分正常编码，使用标签长度“3”，随后是 `ns1`。然而，接下来的字节不是标准长度字节，而是双字节指针，因为它以 `0b11` 开并在图中以黑色显示。指针的 14 位偏移字段中编码的值为“16”，表示从头部偏移 16 字节开始的域名部分应附加到已指定的 `ns1` 标签上。下图中第一行字节列出了各个字节偏移（斜体），第 16 字节是值为“13”的长度字节，随后是 `ipamworldwide` 的编码，随后是值为“3”的长度字节，然后是 `com`，最后是。（值为“0”的长度字节）。在处理指针后返回下一个域名时，我们发现了 `ns2.isp` 的编码，随后是一个指向字节偏移 30 的指针，该指针指向值为“3”的长度字节，随后是 `com`，完成域名 `ns2.isp.com`。仅考虑这三个示例域名，报文中这些域名占用的字节数就可以从 59 字节压缩到 39 字节。
 
 ### 国际化域名
 
 DNS 解析器和服务器使用 ASCII 格式的报文通信主机名查询和响应。配置信息存储在 ASCII 文件中。遗憾的是，虽然 ASCII 字符已定义用于有效表示英语，但它们无法表示其他语言的字符，特别是使用非拉丁字母的语言。这种局限性无疑影响了非英语国家 IP 应用的易用性。RFC 5890 (9) 是一份解决此局限性的标准草案 RFC。
 
-
-
-
 该 RFC 的标题为 `应用程序中的域名称国际化 (IDNA)`。标题中的“在应用程序中”这一修饰词暗示了应用程序在这一过程中的参与。事实上，这项责任被交给了应用程序（例如 Web 浏览器或电子邮件客户端），负责将用户的原生语言输入转换为基于 ASCII 的字符串，以便发送给 `DNS` 服务器进行解析。这种巧妙的方法使得应用程序能够在应用层面为终端用户支持国际字符集，而不会影响 `DNS` 协议（同样也不影响其他基于 ASCII 的 IP 协议，如 `SMTP`）。现有的 `DNS` 服务器可以配置为像处理原生 ASCII 域名一样解析这些 ASCII 编码的域名。
 
 国际字符集被编码为 `Unicode` 字符。根据 Unicode 联盟的网站（[www.unicode.org](http://www.unicode.org)），`Unicode` 标准“**为每个字符提供一个唯一的数字，无论在什么平台、什么程序或什么语言下**”。每个字符都表示为一个唯一的 2–3 字节十六进制数。`RFC 5890` 及其相关的 `RFCs 5891 (10)`、`5892 (11)`、`5893 (12)`、`5894 (13)` 和 `5895 (14)` 描述了将基于 `Unicode` 的域名转换为 ASCII 格式域名的过程。需要注意的是，从技术上来说转换的是每个域标签（domain labels），而不是整个“域名”。记住，域名是通过一系列域标签通信的，每个标签对应一个域级或点点之间的文本字符串，每个标签都用以 `0b00` 开头的长度字节进行编码。
+
+
 
 为了解析国际化域名，`DNS` 服务器必须配置有 ASCII 格式编码的资源记录，特别是称为 `punycode` 的 `Unicode` 映射 ASCII 字符。`punycode` 算法的输出结果是一个 ASCII 字符串，然后在其前面加上 ASCII 兼容编码（ACE）头部 `xn–`。因此，在 `DNS` 基础设施中，标记为 `xn–<额外的 ASCII 字符>` 的域很有可能是某个国际化域名的 `punycode` 表示形式。应用程序（例如 Web 浏览器）负责将用户输入的 `URL` 转换为 `Unicode` 格式，然后转换为 `punycode`。`punycode` 域名被传递给客户端解析器，通过 ASCII 字符使用 `DNS` 解析。`punycode` 算法在 `RFC 3492 (15)` 中规定，并且有多个网站可以执行转换以供输入 DNS。
 
 考虑一个示例 (16)：假设 `źdźbło.com` 域下的一个 Web 服务器主机地址为 `www.źdźbło.com`。该域名包含变音符号以及 ASCII 字符集之外的字符。输入此 `URL` 的 Web 浏览器将其转换为 ASCII 字符或 `punycode`，即 `www.xn–dbo-iwa1zb.com`。在 `DNS` 中为 `www.xn–dbo-iwa1zb.com` 主机相应的 `A` 或 `AAAA` 记录项将允许终端用户输入原生语言 `URL`，同时利用部署在全球的现有 `DNS` 服务器基础，通过目标 Web 服务器的 `IP` 地址进行识别和连接。最终结果是，这些在网络上传输的 `DNS` 消息被编码为 ASCII 字符。
 
-### DNS 消息格式
+## DNS 消息格式
 
 现在让我们更仔细地查看用于执行此整体解析函数的 `DNS` 消息格式，其中包含了我们之前讨论的标签格式化域名。`DNS` 消息默认通过 `UDP` 传输，使用众有的端口 `53`。`TCP` 也可以在端口 `53` 上使用。`DNS` 消息的基本格式所示。
 
-*   消息头部包含定义消息类型和相关信息的字段，包括以下每个字段的记录数量。
-*   `Question`（问题）部分指定要查询的信息。
-*   `Answer`（回答）部分包含对 `Question` 查询的响应。
-*   `Authority`（权威）部分包含指向对查询具有权威性的服务器的记录。
-*   `Additional`（附加）部分包含补充信息。
+- 消息头部包含定义消息类型和相关信息的字段，包括以下每个字段的记录数量。
+- `Question`（问题）部分指定要查询的信息。
+- `Answer`（回答）部分包含对 `Question` 查询的响应。
+- `Authority`（权威）部分包含指向对查询具有权威性的服务器的记录。
+- `Additional`（附加）部分包含补充信息。
 
-**消息头部**：消息头部包含定义消息类型和相关信息的字段，包括以下每个字段的记录数量。
+### 消息头部
+
+消息头部包含定义消息类型和相关信息的字段，包括以下每个字段的记录数量。
 
 [图 3.4] DNS 头部
 
 消息头部由六个 16 位字段组成：
 
-*   `Message ID`（消息 ID）：也称为事务 ID，由解析器分配用于响应的标识符。
-*   `Codes`（状态码）：消息代码。我们将检查这些代码。
-*   `Question Count (QDCOUNT)`（问题计数）：`Question` 部分包含的问题数量。
-*   `Answer Record Count (ANCOUNT)`（回答计数）：`Answer` 部分包含的记录数量。
-*   `Authority Record Count (NSCOUNT)`（权威计数）：`Authority` 部分包含的记录数量。
-*   `Additional Record Count (ARCOUNT)`（附加计数）：`Additional` 部分包含的记录数量。
+- `Message ID`（消息 ID）：也称为事务 ID，由解析器分配用于响应的标识符。
+- `Codes`（状态码）：消息代码。我们将检查这些代码。
+- `Question Count (QDCOUNT)`（问题计数）：`Question` 部分包含的问题数量。
+- `Answer Record Count (ANCOUNT)`（回答计数）：`Answer` 部分包含的记录数量。
+- `Authority Record Count (NSCOUNT)`（权威计数）：`Authority` 部分包含的记录数量。
+- `Additional Record Count (ARCOUNT)`（附加计数）：`Additional` 部分包含的记录数量。
 
 以下 `Codes` 位已定义：
 
-*   `QR`（查询/响应）：此标志指示消息是查询 (0) 还是响应 (1)。
-*   `Opcode`（操作码）：此消息的操作码。目前定义了以下值：
-    *   `0 = Query`（查询）
-    *   `1 = Reserved`（预留）
-    *   `2 = Server status request`（服务器状态请求）
-    *   `3 = Unassigned`（未分配）
-    *   `4 = Notify`（通知）：允许主服务器通知从服务器（并由从服务器确认）区域数据已更改。对于 Notify 消息，Authority 和 Additional 部分不使用，DNS 头部相应的记录计数应设为 0。
-    *   `5 = Update`（更新）：允许 DHCP 服务器或其他实体更新 DNS 服务器上的区域数据。对于 Update 消息，DNS 消息字段和相应的头部字段解释与上述不同。Update 消息的格式在 Update 部分描述。
-    *   `6–15 = Unassigned`（未分配）
-*   `AA`（权威回答）：当响应服务器设置此标志时，此消息包含对问题的权威回答。这意味着响应源自配置了该区域信息的 DNS 服务器。如果未设置，则答案源自非权威 DNS 服务器，很可能是之前查询的缓存信息。在提供多个答案时，此标志适用于 Answer 部分中的第一条记录。当客户端在查询中设置此标志时，表示需要权威回答（而非缓存）。
-*   `TC`（截断响应）：由响应 DNS 服务器设置的代码，指示此消息在传输时被截断。这通常由于 UDP 包（DNS 使用的默认传输层协议）的包长度限制。收到设置了 位的响应通常促使查询者通过 TCP 重新尝试。
-*   `RD`（请求递归）：此标志由查询解析器设置，表示查询器希望 DNS 服务器迭代解析查询，必要时遍历域树。大多数解析器设置此标志以指示查询为递归查询，而 DNS 服务器在查询其他服务器时通常不会设置此标志，除非是在转发查询。
-*   `RA`（递归可用）：此标志指示此响应 DNS 服务器提供递归查询服务。
-*   `Reserved or Z bit`（预留或 Z 位）：预留 (0)。
+- `QR`（查询/响应）：此标志指示消息是查询 (0) 还是响应 (1)。
+- `Opcode`（操作码）：此消息的操作码。目前定义了以下值：
+  - `0 = Query`（查询）
+  - `1 = Reserved`（预留）
+  - `2 = Server status request`（服务器状态请求）
+  - `3 = Unassigned`（未分配）
+  - `4 = Notify`（通知）：允许主服务器通知从服务器（并由从服务器确认）区域数据已更改。对于 Notify 消息，Authority 和 Additional 部分不使用，DNS 头部相应的记录计数应设为 0。
+  - `5 = Update`（更新）：允许 DHCP 服务器或其他实体更新 DNS 服务器上的区域数据。对于 Update 消息，DNS 消息字段和相应的头部字段解释与上述不同。Update 消息的格式在 Update 部分描述。
+  - `6–15 = Unassigned`（未分配）
+- `AA`（权威回答）：当响应服务器设置此标志时，此消息包含对问题的权威回答。这意味着响应源自配置了该区域信息的 DNS 服务器。如果未设置，则答案源自非权威 DNS 服务器，很可能是之前查询的缓存信息。在提供多个答案时，此标志适用于 Answer 部分中的第一条记录。当客户端在查询中设置此标志时，表示需要权威回答（而非缓存）。
+- `TC`（截断响应）：由响应 DNS 服务器设置的代码，指示此消息在传输时被截断。这通常由于 UDP 包（DNS 使用的默认传输层协议）的包长度限制。收到设置了位的响应通常促使查询者通过 TCP 重新尝试。
+- `RD`（请求递归）：此标志由查询解析器设置，表示查询器希望 DNS 服务器迭代解析查询，必要时遍历域树。大多数解析器设置此标志以指示查询为递归查询，而 DNS 服务器在查询其他服务器时通常不会设置此标志，除非是在转发查询。
+- `RA`（递归可用）：此标志指示此响应 DNS 服务器提供递归查询服务。
+- `Reserved or Z bit`（预留或 Z 位）：预留 (0)。
+- `AD` – Authentic Data（真实数据）——用于 DNS 安全扩展（DNSSEC）上下文中，此标志位由响应的 DNS 服务器设置，表示回答（Answer）和权威（Authority）部分中的信息是真实的，意味着它们确实已经通过了验证。
+- `CD` – Checking Disabled（禁用检查）——用于 DNSSEC 上下文中，此标志位允许解析器在 DNS 服务器处理此特定查询时禁用签名验证。
+- `RCODE` – Response Code（响应码）——由响应 DNS 服务器向客户端提供结果状态。当前定义的响应码汇总在表 3.1 中。注意，由于 4 位 `RCODE` 字段，十进制值 1–15 被编码在 DNS 头部 `RCODE` 字段中。
 
-
-
-
-
-*   `AD` – Authentic Data（真实数据）——用于 DNS 安全扩展（DNSSEC）上下文中，此标志位由响应的 DNS 服务器设置，表示回答（Answer）和权威（Authority）部分中的信息是真实的，意味着它们确实已经通过了验证。
-*   `CD` – Checking Disabled（禁用检查）——用于 DNSSEC 上下文中，此标志位允许解析器在 DNS 服务器处理此特定查询时禁用签名验证。
-*   `RCODE` – Response Code（响应码）——由响应 DNS 服务器向客户端提供结果状态。当前定义的响应码汇总在表 3.1 中。注意，由于 4 位 `RCODE` 字段，十进制值 1–15 被编码在 DNS 头部 `RCODE` 字段中。
-
-DNS 扩展（`EDNS0`在本章稍后讨论）的 `OPT` 资源记录增加了 8 个额外的 `RCODE` 位容量，当与头部 `RCODE` 位结合使用时，总数达到 12 位（十进制值最高为 4095）。`TSIG` 和 `TKEY` 资源记录定义了一个 16 位的结果（错误）字段，这与 DNS 头部和 `EDNS0` 扩展头部（`OPT` 记录）中的代码基本一致。唯一的不一致在于代码 16 (`0x10`) 的解释，它根据在 `OPT` 或 `TSIG` 记录中的上下文具有不同的解释。
+DNS 扩展（`EDNS0` 在本章稍后讨论）的 `OPT` 资源记录增加了 8 个额外的 `RCODE` 位容量，当与头部 `RCODE` 位结合使用时，总数达到 12 位（十进制值最高为 4095）。`TSIG` 和 `TKEY` 资源记录定义了一个 16 位的结果（错误）字段，这与 DNS 头部和 `EDNS0` 扩展头部（`OPT` 记录）中的代码基本一致。唯一的不一致在于代码 16 (`0x10`) 的解释，它根据在 `OPT` 或 `TSIG` 记录中的上下文具有不同的解释。
 
 ### 表 3.1 DNS 消息响应码
 
@@ -564,14 +513,18 @@ DNS 扩展（`EDNS0`在本章稍后讨论）的 `OPT` 资源记录增加了 8 �
 | 4096–65534 | 1000–FFFE | 未分配 | | |
 | 65535 | FFFF | 预留 | 预留 | RFC 6895 |
 
-查询部分 这些查询的格式如图图 3.5 所示。DNS 消息中的 `Question` 部分包含了你所猜测的、由 `QDCOUNT` 标识的查询。此部分可以包含多个查询。格式如下：
+### 查询部分
+
+这些查询的格式如图 3.5 所示。DNS 消息中的 `Question` 部分包含了你所猜测的、由 `QDCOUNT` 标识的查询。此部分可以包含多个查询。格式如下：
 
 ![图 3.5. 查询部分](img/c03f00.jpg)
 
-### 图 3.5. 查询格式
+#### 图 3.5. 查询格式
+
 `QNAME` 字段包含域名，格式化为一系列标签。`QTYPE` 字段指示查询类型，或者为了什么目的进行查询。可以包含任何资源记录类型，在附录 B 中汇总。然而，某些 `QTYPE` 值专门用于区域传输，例如如表 3.2 所示。
 
-### 表 3.2 DNS QTYPE
+#### 表 3.2 DNS QTYPE
+
 | 仅 QTypes | 查询目的 | QType ID (十进制) | IETF 状态 | 定义文档 |
 | --- | --- | --- | --- | --- |
 | `ANY` | 所有资源记录 | 255 | 标准 | RFC 1035 |
@@ -582,7 +535,8 @@ DNS 扩展（`EDNS0`在本章稍后讨论）的 `OPT` 资源记录增加了 8 �
 
 `QCLASS` 字段指示查询属于哪个类；例如 Internet 类的 `IN`。类允许管理并行命名空间。当前定义的 `QCLASS`（以及 `CLASS`）通常定义在表 3.3 中。
 
-### 表 3.3 DNS 类
+#### 表 3.3 DNS 类
+
 | 类 | | | | |
 | --- | --- | --- | --- | --- |
 | 十进制 | 十六进制 | 名称 | 描述 | 参考文献 |
@@ -599,42 +553,42 @@ DNS 扩展（`EDNS0`在本章稍后讨论）的 `OPT` 资源记录增加了 8 �
 | 65535 | FFFF | 预留 | 预留 | RFC 6895 |
 
 ### 回答部分
+
 回答部分包含零或多个资源记录形式的回答。答案的数量由 `ANCOUNT` 字段指定。我们在附录 B 中汇总了不同类型的资源记录，它们都共享下面定义的共同通用格式。
 
-**Name** 字段（也称为所有者名称字段）是与此资源记录对应的查找名称（对应原始查询中的查找值或 `QNAME`）。
+`Name` 字段（也称为所有者名称字段）是与此资源记录对应的查找名称（对应原始查询中的查找值或 `QNAME`）。
 
-**Type** 字段指示为该名称提供的信息类型，例如 `RRType`。例如，类型“A”意味着此资源记录提供了 IPv4 地址信息。
+`Type` 字段指示为该名称提供的信息类型，例如 `RRType`。例如，类型“A”意味着此资源记录提供了 IPv4 地址信息。
 
-**Class** 字段代表命名空间类，例如 Internet 类的 `IN`。有效类显示在表 3.3 中。
+`Class` 字段代表命名空间类，例如 Internet 类的 `IN`。有效类显示在表 3.3 中。
 
-**TTL** 或生存时间字段提供了相对于资源记录有效寿命的秒为单位的时间值。此信息的接收者可以缓存此信息 `TTL` 秒，并可靠地使用。然而，在 `TTL` 过期后，必须丢弃缓存信息。
+`TTL` 或生存时间字段提供了相对于资源记录有效寿命的秒为单位的时间值。此信息的接收者可以缓存此信息 `TTL` 秒，并可靠地使用。然而，在 `TTL` 过期后，必须丢弃缓存信息。
 
-**RDLength** 字段指示结果字段 `RData` 的字节长度。
+`RDLength` 字段指示结果字段 `RData` 的字节长度。
 
-**RData** 字段包含在标识 `Class` 下的指定 `Type` 的对应信息。`RData` 字段根据资源记录类型具有可变格式。
-
-
-
-
+`RData` 字段包含在标识 `Class` 下的指定 `Type` 的对应信息。`RData` 字段根据资源记录类型具有可变格式。
 
 Answer（回答）部分本质上包含相应区域文件或数据库中发布的、与查询（`Qname`、`Qclass` 和 `Qtype`）匹配的资源记录。区域文件中发布的资源记录遵循上述相同格式，但省略了 `RDLength` 字段，该字段由服务器在“线路上”格式中计算并填充，详见图 3.6。
 
 ![Figure 3.6. Answer Section Format](img/c03f006.jpg)
 
-**`Figure 3.6.** Answer 部分格式
+#### Figure 3.6. Answer 部分格式
 
 ### Authority（权威）部分
+
 Authority 部分包含 `NSCOUNT` 个的回答，其格式与 Answer 部分讨论的资源记录相同。通常在 Authority 部分中只有 `NS`（名称服务器）资源记录是有效的，但如果查询的名称服务器具有权威性而 Answer 部分为空，大多数名称服务器会在此部分返回一个 `SOA` 记录。该部分还包含关于对查询信息具有权威性的其他服务器的信息。这些信息供查询解析器（更有可能是递归名称服务器）使用，以便在遍历域树以寻找最终答案时确定下一个查询的名称服务器。
 
 ### Additional（附加）部分
+
 Additional 部分包含 `ASCOUNT` 个资源记录形式的回答，为查询提供额外的或相关的信息，其格式与 Answer 部分讨论的相同。
 
 ### DNS Update（更新）消息
-更新消息也称为动态 DNS (DDNS) 消息，允许远程源（推测为终端用户客户端、DHCP 服务器或其他[希望的]合法的源）对区域内的一个或多个资源记录执行更新（添加、修改或删除）。虽然更新消息使用了与前述 DNS 消息相同的基本格式，但大多数字段的解释各不相同。更新消息在 DNS 消息头中标记为 `Op Code = 5`，其编码方式如图 3.7](#c03.xhtml#figure3-7）所示。
+
+更新消息也称为动态 DNS (DDNS) 消息，允许远程源（推测为终端用户客户端、DHCP 服务器或其他[希望的]合法的源）对区域内的一个或多个资源记录执行更新（添加、修改或删除）。虽然更新消息使用了与前述 DNS 消息相同的基本格式，但大多数字段的解释各不相同。更新消息在 DNS 消息头中标记为 `Op Code = 5`，其编码方式如图 3.7 所示。
 
 ![Figure 3.7. DNS Update Message Format](img/c03f007.jpg)
 
-**`Figure 3.7.** DNS 更新消息格式
+#### Figure 3.7. DNS 更新消息格式
 
 将此格式与图 3.3 中所示的非更新 DNS 消息格式进行对比。消息头的结构与“普通”DNS 消息相同，但含义不同。
 
@@ -642,51 +596,47 @@ Additional 部分包含 `ASCOUNT` 个资源记录形式的回答，为查询提�
 
 `Prerequisite`（前提）部分允许指定为了成功执行更新而必须满足的条件。条件和类型由 Prerequisite 部分内每个资源记录编码参数的值决定。表 3.4 定义了如何根据 Prerequisites 部分中 `Owner`、`Class`、`Type` 和 `RData` 字段的值来解释 DNS 更新的前提条件。
 
-**`TABLE 3.4`** DNS 前提条件解释
+#### TABLE 3.4 DNS 前提条件解释
 
-| Owner || Class || Type || RData || Prerequisite 解释 |
-| --- | --- | --- | --- | --- |
-| Match | ANY (255) | ANY | Empty | 此区域内正在使用匹配的所有者名称 |
-| --- | --- | --- | --- | --- |
-| Match | ANY (255) | Match | Empty | 存在具有匹配的所有者和类型的 RRSet（与值无关，即任何 RData 匹配） |
-| Match | NONE (254) | ANY | Empty | 此区域内未使用匹配的所有者名称 |
-| Match | NONE (254) | Match | Empty | 此区域内不存在匹配的所有者和类型的 RRSet |
-| Match | Same as Zone Class | Match | Match | 此区域内存在匹配的所有者、类型和 RData 的 RRSet（依赖于值，即 RData 匹配） |
+| Owner | | Class | | Type | | RData | | Prerequisite 解释 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Match | | ANY (255) | | ANY | | Empty | | 此区域内正在使用匹配的所有者名称 |
+| Match | | ANY (255) | | Match | | Empty | | 存在具有匹配的所有者和类型的 RRSet（与值无关，即任何 RData 匹配） |
+| Match | | NONE (254) | | ANY | | Empty | | 此区域内未使用匹配的所有者名称 |
+| Match | | NONE (254) | | Match | | Empty | | 此区域内不存在匹配的所有者和类型的 RRSet |
+| Match | | Same as Zone Class | | Match | | Match | | 此区域内存在匹配的所有者、类型和 RData 的 RRSet（依赖于值，即 RData 匹配） |
 
-`Update`（更新）部分包含要添加到区域或从区域中删除的资源记录，其使用的编码方式与表 3.5 中指定的 Prerequisite 部分类似。```
 
-**`TABLE 3.5`** DNS 更新解释
 
-| Owner || Class || Type || RData || Update 解释 |
+`Update`（更新）部分包含要添加到区域或从区域中删除的资源记录，其使用的编码方式与表 3.5 中指定的 `Prerequisite` 部分类似。
+
+**表 3.5** DNS 更新解释
+
+| Owner | Class | Type | RData | Update 解释 |
 | --- | --- | --- | --- | --- |
 | Owner to add | Same as Zone Class | RR type | RR RData | 向区域的 RRSet 中添加指定的所有者、类型和 RData 的此资源记录 |
-| --- | --- | --- | --- | --- |
 | Owner to delete | ANY (255) | RR type | Empty | 删除指定的所有者和类型的资源记录 |
 | Owner to delete | ANY (255) | ANY | Empty | 删除指定的所有者名称的所有资源记录 |
 | Owner to delete | NONE (254) | RR type | RR RData | 从区域中删除指定的所有者、类型和 RData 的资源记录 |
 
 `Additional Data`（附加数据）部分包含与此更新相关的资源记录；例如 TSIG 签名记录。考虑一个收到的更新消息示例，其前提和更新字段按照表 3.6 指定的编码。
 
-**`TABLE 3.6`** DNS 更新示例
+**表 3.6** DNS 更新示例
 
-| Field || Owner || Class || Type || RData |
+| Field | Owner | Class | Type | RData |
 | --- | --- | --- | --- | --- |
 | Prerequisite | host.ipamworldwide.com. | IN | DHCID | H8349+3jLeES1 |
-| --- | --- | --- | --- | --- |
-| Update | host.ipamworldwide.com. | IN | A | 10.0.0.2
+| Update | host.ipamworldwide.com. | IN | A | 10.0.0.2 |
 
-只有在满足前提条件时，才会考虑 Update 部分的内容。在这种情况下，前提条件是 host.ipamworldwide.com. IN DHCID H8349+3jLeES1 存在于区域中。如果存在，则 host.ipamworldwide.com. IN A 10.0.0.2 将添加到区域中。否则，将不执行更新。
+只有在满足前提条件时，才会考虑 `Update` 部分的内容。在这种情况下，前提条件是 `host.ipamworldwide.com. IN DHCID H8349+3jLeES1` 存在于区域中。如果存在，则 `host.ipamworldwide.com. IN A 10.0.0.2` 将添加到区域中。否则，将不执行更新。
 
-这个特定示例说明了实体如何在分配 IP 地址（在本例中为 10.0.0.2）时对 DNS 数据进行动态更新。此示例使用的 DHCID 记录提供了主机硬件地址的哈希值，用于唯一标识该主机。
+这个特定示例说明了实体如何在分配 IP 地址（在本例中为 `10.0.0.2`）时对 DNS 数据进行动态更新。此示例使用的 `DHCID` 记录提供了主机硬件地址的哈希值，用于唯一标识该主机。
 
-### DNS 扩展 (EDNS0)
-在目前对 DNS 消息头的讨论中，人们可能会观察到除一个外，所有的代码位已分配，且如今许多主机处理的 UDP 包大小超过了最初规定的 512 字节。由于这些限制，以及添加额外域名标签类型的愿望，DNS 扩展在 RFC 6891 (20) 中以其当前形式被定义。RFC 6891 定义了 DNS 扩展机制的 0 版本，它本质上为对 DNS 组件（例如递归和权威 DNS 服务器）提供了一个信令通道，用于指示高级功能支持和兼容性。扩展标签类型允许对 DNS 消息中的标签定义唯一的解释。其中一种此类解释是将标签数据解释为二进制或位流标签。在实践中，这在互联网上的实现被证明非常困难，因此二进制标签随后被降为实验性状态。尽管如此，EDNS0 确实具有扩展域标签类型的能力，但由于在互联网上部署时遇到的困难，不建议使用它们。正如我们讨论过的，域标签的前两个位唯一地标识该标签为长度字节（前两个位 = 00）或指针（前两个位 = 11）。扩展标签类型已被分配 01 作为其前两个位。
+## DNS 扩展 (EDNS0)
 
+在目前对 DNS 消息头的讨论中，人们可能会观察到除一个外，所有的代码位已分配，且如今许多主机处理的 UDP 包大小超过了最初规定的 512 字节。由于这些限制，以及添加额外域名标签类型的愿望，DNS 扩展在 RFC 6891 (20) 中以其当前形式被定义。RFC 6891 定义了 DNS 扩展机制的 0 版本，它本质上为对 DNS 组件（例如递归和权威 DNS 服务器）提供了一个信令通道，用于指示高级功能支持和兼容性。扩展标签类型允许对 DNS 消息中的标签定义唯一的解释。其中一种此类解释是将标签数据解释为二进制或位流标签。在实践中，这在互联网上的实现被证明非常困难，因此二进制标签随后被降为实验性状态。尽管如此，`EDNS0` 确实具有扩展域标签类型的能力，但由于在互联网上部署时遇到的困难，不建议使用它们。正如我们讨论过的，域标签的前两个位唯一地标识该标签为长度字节（前两个位 = 00）或指针（前两个位 = 11）。扩展标签类型已被分配 01 作为其前两个位。
 
-
-
-
-*   `EDNS0` 定义了一个伪资源记录，即 `OPT` 记录（符号 `RRType = OPT`）。`OPT` 记录由解析器或服务器放置在附加部分（Additional section），用于发布其各自的能力。`OPT` 资源记录用于向接收者发布发送者（客户端或服务器）的能力，且每个包应只存在一个 `OPT` 记录。
+`EDNS0` 定义了一个伪资源记录，即 `OPT` 记录（符号 `RRType = OPT`）。`OPT` 记录由解析器或服务器放置在附加部分（Additional section），用于发布其各自的能力。`OPT` 资源记录用于向接收者发布发送者（客户端或服务器）的能力，且每个包应只存在一个 `OPT` 记录。
 
 `OPT` 伪资源记录的编码方式如图 3.8 所示，它允许指定发送者的 UDP 数据包大小和额外的响应码位。
 
@@ -697,51 +647,39 @@ Additional 部分包含 `ASCOUNT` 个资源记录形式的回答，为查询提�
 作为一种伪资源记录，`OPT` 记录不应出现在区域文件（zone file）中。因此，虽然 `OPT` 记录使用了与其他资源记录相同的线缆格式，但标准字段的定义已经过修改以提供扩展信息。`NAME`（又名 Owner）字段对于 `OPT` 记录为零。`TYPE` 为 `OPT`，`CLASS` 字段指示发送者 UDP 负载的最大 own。32 位的 `TTL` 字段被分为三个字段：
 
 *   扩展响应码（Extended Response Code）——在 DNS 消息头中的 4 位 `RCODE` 基础上增加 8 位，总共提供 12 位。
-
 *   EDNS 版本号。
-
 *   扩展头部标志（Extended Header Flags）——位 0 目前定义为“DNSSEC OK”，意味着查询服务器能够处理 DNSSEC 资源记录。扩展头部的其余 15 位目前保留保留。
 
 `RDLENGTH` 字段指示 `RDATA` 字段的长度，该字段由一组零或多个选项组成，每个选项都用选项代码、选项长度和选项值编码。表 3.7 列出了截至目前由 IANA 分配的选项。
 
 **表 3.7** 当前分配的 EDNS0 选项
 
-| 选项代码  ||  ||  ||  ||  | |
-
+| 十进制 | 十六进制 | 名称 | 描述 | 状态 | 引用 |
 | --- | --- | --- | --- | --- | --- |
-
-| 十进制 || 十六进制 || 名称 | 描述 | 状态 | 引用 |
-
-| 0 || 0 || 预留 | 预留 |  || RFC 6891 |
-| --- | --- | --- | --- | --- | --- |
-
-| 1 || 1 || LLQ | 长查询 | 待定 | [`files.dns-sd.org/draft-sekar-dns-llq.txt`](http://files.dns-sd.org/draft-sekar-dns-llq.txt) |
-| 2 || 2 || UL | 租约寿命 | 待定 | [`files.dns-sd.org/draft-sekar-dns-llq.txt`](http://files.dns-sd.org/draft-sekar-dns-llq.txt) |
-| 3 || 3 || NSID | 名称服务器标识符 | 标准 | RFC 5001 (27) |
-| 4 || 4 || 预留 | 预留 |  || [`www.iana.org/go/draft-cheshire-edns0-owner-option`](http://www.iana.org/go/draft-cheshire-edns0-owner-option) |
-| 5 || 5 || DAU | DNSSEC 算法 | 标准 | RFC 6975 |
-| 6 || 6 || DHU | DNSSEC 哈希值 | 标准 | RFC 6975 |
-| 7 || 7 || N3U | NSEC3 哈希值 | 标准 | RFC 6975 |
-| 8 || 8 || edns-subnet | IP 地址 | 可选 | RFC 6975 |
-| 9 || 9 || EXPIRE | 区域过期 | 可选 | RFC 7814 |
-| 10 || 10 || A | 事务安全 | 标准 | RFC 7873 |
-| 11 || 11 || B | 保活 | 标准 | RFC 7828 |
-| 12 || 12 || C | 数据包大小 | 标准 | RFC 7830 |
-| 13 || 13 || D | DNSSEC 验证 | 标准 | RFC 7901 |
-| 14 || 14 || E | 未分配 | 预留 |  || |
-| 15-65000 || 15-65000 || F-E | 未分配 | 预留 |  || |
-| 65001-65534 || 65001-65534 || F9-FF | 未分配 | 预留 |  || |
-| 65535 || 65535 || FFFF | 未分配 | 预留 |  ||
+| 0 | 0 | 预留 | 预留 |  | RFC 6891 |
+| 1 | 1 | LLQ | 长查询 | 待定 | [`files.dns-sd.org/draft-sekar-dns-llq.txt`](http://files.dns-sd.org/draft-sekar-dns-llq.txt) |
+| 2 | 2 | UL | 租约寿命 | 待定 | [`files.dns-sd.org/draft-sekar-dns-llq.txt`](http://files.dns-sd.org/draft-sekar-dns-llq.txt) |
+| 3 | 3 | NSID | 名称服务器标识符 | 标准 | RFC 5001 (27) |
+| 4 | 4 | 预留 | 预留 |  | [`www.iana.org/go/draft-cheshire-edns0-owner-option`](http://www.iana.org/go/draft-cheshire-edns0-owner-option) |
+| 5 | 5 | DAU | DNSSEC 算法 | 标准 | RFC 6975 |
+| 6 | 6 | DHU | DNSSEC 哈希值 | 标准 | RFC 6975 |
+| 7 | 7 | N3U | NSEC3 哈希值 | 标准 | RFC 6975 |
+| 8 | 8 | edns-subnet | IP 地址 | 可选 | RFC 6975 |
+| 9 | 9 | EXPIRE | 区域过期 | 可选 | RFC 7814 |
+| 10 | 10 | A | 事务安全 | 标准 | RFC 7873 |
+| 11 | 11 | B | 保活 | 标准 | RFC 7828 |
+| 12 | 12 | C | 数据包大小 | 标准 | RFC 7830 |
+| 13 | 13 | D | DNSSEC 验证 | 标准 | RFC 7901 |
+| 14 | 14 | E | 未分配 | 预留 |  |
+| 15-65000 | 15-65000 | F-E | 未分配 | 预留 |  |
+| 65001-65534 | 65001-65534 | F9-FF | 未分配 | 预留 |  |
+| 65535 | 65535 | FFFF | 未分配 | 预留 |  |
 
 ## 重新回顾解析过程
 
 现在我们探索了 DNS 协议的细节，让我们深入探讨 DNS 解析过程，以说明相对于特定 DNS 协议参数的查询处理。请考虑图 3.9，它与图 2.2 相同，为了方便起见在此复制。递归服务器直接接受客户端（存根）解析器的递归查询，并执行以下步骤代表解析器获取查询答案。
 
-
-
-
-
-1.  stub 解析器（stub resolver）向递归 DNS 服务器发起查询。解析器根据手动输入或通过 DHCP 的配置知道应查询哪个 DNS 服务器。图 3.10 展示了一个由 stub 解析器客户端发出的 DNS 数据包示例。客户端的 IP 地址为 `10.10.0.23`，而递归服务器的内部 IP 地址为 `10.20.5.100`（例如通过解析器中的 DHCP 配置）。解析器使用随机的源 UDP 端口（在此例中 `12510`）和标准的 DNS 目的端口 `53`。解析器还将将事务 ID（transaction ID）字段设置为随机值（此处为 `37321`）。标志位设置表示这是一个需要递归服务的标准查询，请求递归服务器执行解析该查询所需的所有查询。最后，这个单一问题（在这里以问题的形式表述，但在实际数据包中仅包含 `Qname`（[www.example.com](http://www.example.com））、`Qclass`（`IN`）和 `Qtype`（`A`）。
+1.  stub 解析器（stub resolver）向递归 DNS 服务器发起查询。解析器根据手动输入或通过 DHCP 的配置知道应查询哪个 DNS 服务器。图 3.10 展示了一个由 stub 解析器客户端发出的 DNS 数据包示例。客户端的 IP 地址为 `10.10.0.23`，而递归服务器的内部 IP 地址为 `10.20.5.100`（例如通过解析器中的 DHCP 配置）。解析器使用随机的源 UDP 端口（在此例中 `12510`）和标准的 DNS 目的端口 `53`。解析器还将将事务 ID（transaction ID）字段设置为随机值（此处为 `37321`）。标志位设置表示这是一个需要递归服务的标准查询，请求递归服务器执行解析该查询所需的所有查询。最后，这个单一问题（在这里以问题的形式表述，但在实际数据包中仅包含 `Qname`（[www.example.com](http://www.example.com)）、`Qclass`（`IN`）和 `Qtype`（`A`）。
 
     ![图 3.10. 解析器发出的 DNS 查询数据包示例](img/c03f010.jpg)
 
@@ -800,22 +738,14 @@ Additional 部分包含 `ASCOUNT` 个资源记录形式的回答，为查询提�
     递归服务器用于匹配响应与待处理查询的关键参数包含以下内容：
 
     *   源 IP 地址匹配查询发送到的 IP 地址，目的 IP 地址匹配作为出站源地址使用的地址。
-
-
-
-
-
-- 目标 UDP（或 TCP）端口与出站查询中使用的源端口号匹配。源端口也应与出站目标端口匹配，尽管这几乎总是端口 `53`，即众知的 DNS 端口。
-
-- DNS 报头事务标识符与出站查询中使用的标识符匹配。
-
-- 问题（名称、类和类型）与出站查询中提出的问题匹配，且答案（answer）名称也匹配。如果支持字符大小写匹配，则 `Qname` 的大小写必须与响应中的 `Answer` 。
-
-- 权威（名称服务器）名称位于一个常见的域名分支（例如，[example.com](http://example.com)）内作为答案（Answer）部分的名称。
+    *   目标 UDP（或 TCP）端口与出站查询中使用的源端口号匹配。源端口也应与出站目标端口匹配，尽管这几乎总是端口 `53`，即众知的 DNS 端口。
+    *   DNS 报头事务标识符与出站查询中使用的标识符匹配。
+    *   问题（名称、类和类型）与出站查询中提出的问题匹配，且答案（answer）名称也匹配。如果支持字符大小写匹配，则 `Qname` 的大小写必须与响应中的 `Answer` 匹配。
+    *   权威（名称服务器）名称位于一个常见的域名分支（例如，[example.com](http://example.com)）内作为答案（Answer）部分的名称。
 
 如果所有这些参数都匹配，递归服务器将认为答案是有效的，并通过将记录添加到缓存中来继续处理，向解析器提供答案，并在答案记录的 `TTL` 有效范围内为未来的解析器查询提供答案。在第 8 章中，我们将分析针对递归服务器的攻击，特别是缓存污染攻击，以及此类攻击如何渗透这些服务器。
 
-### DNS 解析隐私扩展
+## DNS 解析隐私扩展
 
 在先前的解析示例中，请注意问题（Question）部分始终包含寻求答案的查询名的完全限定域名（FQDN）。在我们的示例中，三个单独的数据包带有此查询 FQDN 从递归服务器 IP 地址穿越互联网。嗅听查询流量或服务器缓存的人可能根据他们查询的内容推断出关于客户端的信息。根服务器和 TLD 名称服务器永远不会为典型查询提供完整答案，因为它们设计上是委托服务器。因此，查询 FQDN 为根服务器和 TLD 服务器（以及长标签域名中的任何其他祖先域名）提供了此类查询信息，这在现实中是“信息过多”。
 
@@ -829,9 +759,7 @@ Additional 部分包含 `ASCOUNT` 个资源记录形式的回答，为查询提�
 
 ## Notes
 
-# 4
-
-# DNS 漏洞
+# 4 DNS 漏洞
 
 ## 引言
 
@@ -841,26 +769,9 @@ Additional 部分包含 `ASCOUNT` 个资源记录形式的回答，为查询提�
 
 作为一种网络服务，DNS 服务器配置和服务器实现至关重要。我们首先在 DNS 架构的基础上定义一个信任模型，这有助于确定潜在漏洞源的范围。然后，我们通过示例简要介绍每种漏洞。
 
-作为一种网络服务，DNS 服务器配置和服务器实现至关重要。我们首先在 DNS 架构的基础上定义一个信任模型，这有助于确定潜在漏洞源的范围。然后，我们通过示例简要介绍每种漏洞。
-
-作为一种网络服务，DNS 服务器配置和服务器实现至关重要。我们首先在 DNS 架构的基础上定义一个信任模型，这有助于确定潜在漏洞源的范围。然后，我们通过示例简要介绍每种漏洞。
-
-作为一种网络服务，DNS 服务器配置和服务器实现至关重要。我们首先在 DNS 架构的基础上定义一个信任模型，这有助于确定潜在漏洞源的范围。然后，我们通过示例简要介绍每种漏洞。
-
-作为一种网络服务，DNS 服务器配置和服务器实现至关重要。我们首先在 DNS 架构的基础上定义一个信任模型，这有助于确定潜在漏洞源的范围。然后，我们通过示例简要介绍每种漏洞。
-
-作为一种网络服务，DNS 服务器配置和服务器实现至关重要。我们首先在 DNS 架构的基础上定义一个信任模型，这有助于确定潜在漏洞源的范围。然后，我们通过示例简要介绍每种漏洞。
-
-作为一种网络服务，DNS 服务器配置和服务器实现至关重要。我们首先在 DNS 架构的基础上定义一个信任模型，这有助于确定潜在漏洞源的范围。然后，我们通过示例简要介绍每种漏洞。
-
-作为一种网络服务，DNS 服务器配置和服务器实现至关重要。我们首先在 DNS 架构的基础上定义一个信任模型，这有助于确定潜在漏洞源的范围。然后，我们通过示例简要介绍每种漏洞。
-
-
-
-
 这里的 `DNS 信息信任模型`指的是 DNS 信息在 DNS 系统的这些组件之间如何流转、如何被接受为来自可信源，以及如何存储在特定组件上。每个组件的角色定义了其执行功能时需要哪些信息以及从哪些来源获取。利用这一基础操作，攻击者可能会尝试对静态存储或传输中的数据进行操纵，以达到不法目的，我们将在本书的剩余部分中讨论这一点。当然，DNS 安全管理员必须实施控制措施，以界定某些其他组件接收到的信息可以被信任和存储，以及任何验证和身份认证机制以提高可信度。
 
-从客户端存根解析器（stub resolver）的角度来看，解析器信任其对查询哪些 DNS 服务器的配置、其解析器缓存，以及所查询的递归服务器（以及中间网络）的可用性和完整性，从而为 DNS 查询提供答案。如果任何可信数据源被损坏，解析器可能会无意中将用户应用程序重定向到不恰的目标。如果被查询服务器未能响应查询，DNS 服务将实际上被禁用，导致用户无法浏览网页。
+从客户端存根解析器（stub resolver）的角度来看，解析器信任其对查询哪些 DNS 服务器的配置、其解析器缓存，以及所查询的递归服务器（以及中间网络）的可用性和完整性，从而为 DNS 查询提供答案。如果任何可信数据源被损坏，解析器可能会无意中将用户应用程序重定向到不恰当的目标。如果被查询服务器未能响应查询，DNS 服务将实际上被禁用，导致用户无法浏览网页。
 
 如果使用了转发 DNS 服务器，它依赖于其缓存、其转发配置，以及它转发查询到的递归 DNS 服务器的可用性和完整性。如果它是某些区域的权威服务器，该服务器依赖于相应区域数据的准确配置，这意味着需要准确、安全的存储，并在如果配置了远程访问的情况下进行数据加密和验证。
 
@@ -878,23 +789,19 @@ DNS 信任模型为我们提供了关于组件间信息流以及解析过程中�
 
 表 4.1 分别总结了这些信息的潜在来源。引用 DNS 服务器包括根服务器、TLD 服务器以及域树内的其他`祖先`（例如父级、祖父级）DNS 服务器，这些服务器引导递归 DNS 服务器向下引导最终指向对查询的完全限定域名（FQDN）具有权威性的 DNS 服务器。这些服务器由外部组织管理，其中 IANA 管理互联网根区域，TLD 管理员管理相应的 DNS 服务器以发布子域到相应权威或引用 DNS 服务器的正确映射。
 
-### 4.1 DNS 信息来源
+### 表 4.1 DNS 信息来源
 
 | 组件 | 配置数据来源 | DNS 数据来源 |
 | --- | --- | --- |
-| 客户端解析器 | ** 配置或属性文件<br>** DHCP/PPP 服务器提供的参数 | ** 解析器缓存（如果已配备）<br>** 递归 DNS 服务器 |
-| 转发 DNS 服务器 | ** 配置或属性文件<br>** DNS 控制通道 | ** 服务器缓存<br>** 递归 DNS 服务器 |
-| 递归 DNS 服务器 | ** 配置或属性文件<br>** DNS 控制通道<br>** 根 DNS 服务器提示文件 | ** 服务器缓存<br>** 引用 DNS 服务器<br>** 权威 DNS 服务器 |
-| 引用 DNS 服务器 | ** 域级 DNS 管理员和工具 | ** 子域管理员提供的 DNS 服务器名称/IP 地址（NS/粘合记录） |
-| 内部或外部命名空间的权威 DNS 服务器 | ** 配置文件或属性<br>** 区域文件<br>** DNS 控制通道 | ** 通过文本编辑器、DNS GUI 或 IPAM  DNS 管理员<br>** 区域文件的 DDNS 更新<br>** 区域传输 |
+| 客户端解析器 | 配置或属性文件<br>DHCP/PPP 服务器提供的参数 | 解析器缓存（如果已配备）<br>递归 DNS 服务器 |
+| 转发 DNS 服务器 | 配置或属性文件<br>DNS 控制通道 | 服务器缓存<br>递归 DNS 服务器 |
+| 递归 DNS 服务器 | 配置或属性文件<br>DNS 控制通道<br>根 DNS 服务器提示文件 | 服务器缓存<br>引用 DNS 服务器<br>权威 DNS 服务器 |
+| 引用 DNS 服务器 | 域级 DNS 管理员和工具 | 子域管理员提供的 DNS 服务器名称/IP 地址（NS/粘合记录） |
+| 内部或外部命名空间的权威 DNS 服务器 | 配置文件或属性<br>区域文件<br>DNS 控制通道 | 通过文本编辑器、DNS GUI 或 IPAM DNS 管理员<br>区域文件的 DDNS 更新<br>区域传输 |
 
 ### DNS 风险
 
 你的 DNS 服务对组成部分的可行性要求你对这些 DNS 服务完整性和可用性的风险或漏洞进行尽职管理。风险不仅包括安全风险（例如恶意攻击），还包括设计和管理程序。冗余设计不足可能会导致在网络分段或多个 DNS 服务器故障时 DNS 服务无法使用。自然灾害或人为错误同样可能导致 DNS 离线。
-
-
-
-
 
 通过 DNS 基础设施，我们指的是之前讨论过的 DNS 组件：服务器本身、代表终端用户设备上的用户应用程序进行地址查询的 DNS 解析器、DNS 信息的完整性，以及代表解析器解析主机名的集体 DNS 服务。在在本章的剩余部分中，我们将介绍关键的风险和漏洞，并在随后的章节中随之介绍相应的缓解策略。
 
@@ -918,10 +825,10 @@ DNS 信任模型为我们提供了关于组件间信息流以及解析过程中�
 
 此类攻击可能会影响所有 DNS 组件，如表 4.2 所示。
 
-TABLE 4.2 服务器和操作系统攻击
+**表 4.2** 服务器和操作系统攻击
 
 | 攻击类型 | 目标组件 | 潜在影响 |
-| : --- | :--- | :--- |
+| :--- | :--- | :--- |
 | 服务器和操作系统攻击 | 根解析器 (Stub resolver) | 根解析器或系统的渗透可能会禁用解析或将解析重定向到攻击者的递归 DNS 服务器，引导客户端应用程序访问攻击者定义的目的地，从而可能损害敏感信息 |
 | | 转发 DNS 服务器 | 攻击者可以关闭解析或查询转发，或重新配置转发器以指向攻击者的 DNS 服务器 |
 | | 递归 DNS 服务器 | 攻击者可以关闭递归服务或可能替换提示文件 (hints file)，将非缓存查询重定向到攻击者的“根”服务器以实现完全的解析控制 |
@@ -937,12 +844,12 @@ TABLE 4.2 服务器和操作系统攻击
 
 ![图 4.2 拒绝服务攻击](img/c04f002.jpg)
 
-FIGURE 4.2 拒绝服务攻击
+**图 4.2** 拒绝服务攻击
 
 DoS/DDoS 攻击类型可能的形式如下：
 
 * DNS 查询洪水 – 攻击者发布超过其解析能力的大量 DNS 查询。
-* UDP 数据包洪水 – 攻击者可能使用随机 UDP 目标端口发布大量 UDP 数据包，强制服务器对每个数据包响应 ICMP 不可达 消息。
+* UDP 数据包洪水 – 攻击者可能使用随机 UDP 目标端口发布大量 UDP 数据包，强制服务器对每个数据包响应 ICMP 不可达消息。
 * TCP SYN 攻击 – 虽然 DNS 通常使用 UDP，但允许 TCP，SYN 攻击涉及攻击者通过不同的源 IP 地址和/或端口发送 TCP SYN 消息开启 TCP 连接，然后忽略 `SYN-ACK`，从而不完成三次握手中第三条消息的建立。在等待每个 `ACK` 时，服务器保持半开 TCP 连接挂起，最终耗尽其 TCP 连接容量。
 * ICMP 洪水 – 攻击者向服务器发送持续的 ICMP 数据包流，用白占据了其处理能力。
 
@@ -950,13 +857,9 @@ DoS/DDoS 攻击类型可能的形式如下：
 
 ![图 4.3 分布式拒绝服务攻击](img/c04f003.jpg)
 
-FIGURE 4.3 分布式拒绝服务攻击
+**图 4.3** 分布式拒绝服务攻击
 
 攻击者可以招募他人同时对目标发起攻击。但在许多情况下，可以使用安装在企业内部或互联网上其他计算机上的僵尸网络来参与攻击。
-
-
-
-
 
 这基本上就是 2016 年 10 月 21 日 DynDNS 遭受 DDoS 攻击时的情况。根据 Dyn (35) 对该攻击的声明，来自数千万与 `Mirai` 僵尸网络相关 IP 地址的 DNS 数据包攻击了 Dyn 的 DNS 基础设施。`Mirai` 恶意软件感染了超过 100,000 台设备，主要是非人员实体（NPEs），又被称为物联网（IoT）设备，并让这些设备参与了攻击。
 
@@ -966,7 +869,7 @@ FIGURE 4.3 分布式拒绝服务攻击
 
 ![图 4.4. 虚假域名查询](img/c04f004.jpg)
 
-图 4.4. 虚假域名查询
+**图 4.4.** 虚假域名查询
 
 除了像典型 DoS 攻击那样处理大量的此类查询外，递归服务器还会花费资源迭代查询域树内的名称服务器，以尝试识别每个虚假域名的权威服务器。最终，将为无效委托（lame delegations）或 `NXDOMAIN` 响应返回查询错误，但此类待处理查询的巨大数量可能会其对合法查询的处理。
 
@@ -978,16 +881,16 @@ FIGURE 4.3 分布式拒绝服务攻击
 
 图 4.5 显示了基本的攻击流程。攻击者可以利用由某个特定 ISP 的一组被恶意软件感染的家用设备构成的僵尸网络。当攻击发生时，攻击者的解析器向 ISP 的递归服务器发送大量查询，请求对上文所述的目标域名下的 PRSD 名称进行解析。随着针对权威 DNS 服务器的查询不断积聚，合法查询被淹没，最终权威服务器可能会崩溃。与此同时，由于由于（误）递归 DNS 服务器继续发起查询时，它们可能会因为等待目标权威 DNS 服务器对未答复查询的响应而耗尽资源。这种拒绝服务不仅影响了目标域名的 DNS 服务器，还影响了 ISP 的递归服务器。表 4.3 总结了攻击类型及其潜在影响。
 
-表 4.3 拒绝服务攻击总结
+**表 4.3** 拒绝服务攻击总结
 
 | 攻击类型 | 目标组件 | 潜在影响 |
 | :--- | :--- | :--- |
-| DoS 和 DDoS |  Stub 解析器 | 运行解析器的主机支持网络的能力变慢或无法支持 |
-| --- | 转发 DNS 服务器 | 所有内部用户或客户无法或变慢使用该转发服务器解析名称 |
-| --- | 递归 DNS 服务器 | 所有内部用户或客户无法或变慢使用该递归服务器解析名称 |
-| --- | 引用 DNS 服务器 | TLD 名称服务器集无法或变慢拒绝解析子域 |
-| --- | 内部命名空间的权威 DNS 服务器 | 内部用户（如内网）无法或变慢解析 |
-| --- | 外部命名空间的权威 DNS 服务器 | Internet 用户解析外部（公共）命名空间的速度变慢 |
+| DoS 和 DDoS | Stub 解析器 | 运行解析器的主机支持网络的能力变慢或无法支持 |
+| | 转发 DNS 服务器 | 所有内部用户或客户无法或变慢使用该转发服务器解析名称 |
+| | 递归 DNS 服务器 | 所有内部用户或客户无法或变慢使用该递归服务器解析名称 |
+| | 引用 DNS 服务器 | TLD 名称服务器集无法或变慢拒绝解析子域 |
+| | 内部命名空间的权威 DNS 服务器 | 内部用户（如内网）无法或变慢解析 |
+| | 外部命名空间的权威 DNS 服务器 | Internet 用户解析外部（公共）命名空间的速度变慢 |
 | 虚假域名查询 | Stub 解析器 | 如果 Stub 解析器正确配置为忽略传入查询，则没有影响 |
 | 伪随机子域名 (PRSD) 攻击 | Stub 解析器 | 如果 Stub 解析器正确配置为忽略传入查询，则没有影响 |
 
@@ -995,16 +898,11 @@ FIGURE 4.3 分布式拒绝服务攻击
 
 DNS 解析器和递归缓存服务器维护已解析资源记录的缓存以提高解析性能，如前所述。如果攻击者成功破坏了递归服务器的缓存，则被破坏的信息可能会提供给请求相同或相似域名信息的多个用户。破坏缓存需要攻击者提供一个看似合法的查询答案，但其中部分或全部是伪造的解析信息。
 
-
-
-
-[content]
-
 此类攻击通常如图 4.6 所示，其中攻击者在递归服务器面前表现为其发布查询的合法权威服务器。在这种攻击的各种形式中，攻击者最终试图破坏递归服务器的缓存，例如，通过将合法甚至流行的网站或服务器地址的解析指向由攻击者运行的服务器。伪造的解析数据将返回给查询源，并被返回给其他查询此类信息的解析器，而受损坏的信息将留存在缓存中，即在 `TTL` 持续期间。这将导致可能存在的多个解析器以及随之应用程序被重定向到错误的目的地（例如网站）。
 
 ![图 4.6. DNS 缓存污染](img/c04f006.jpg)
 
-`图 4.6.` DNS 缓存污染
+**图 4.6.** DNS 缓存污染
 
 要破坏缓存，攻击者的 DNS 查询响应必须在合法响应之前到达服务器，并映射到递归服务器等待响应的待处理查询上。服务器将通过匹配响应中的以下字段，将接收到的答案映射到之前发布的查询：
 
@@ -1018,13 +916,13 @@ DNS 解析器和递归缓存服务器维护已解析资源记录的缓存以提�
 
 ![图 4.7. 有效与伪造响应；哪个正确？](img/c04f007.jpg)
 
-`图 4.7.` 有效与伪造响应；哪个正确？
+**图 4.7.** 有效与伪造响应；哪个正确？
 
 考虑一个递归名称服务器接收到这样的答案消息，该消息了 IP 地址、UDP 端口号、事务 ID、查询参数和越权验证，但在一个或多个记录部分具有伪造的资源记录信息。大多数缓存污染攻击修改答案本身，将 [www.example.com](http://www.example.com) 指向由攻击者运行的 IPv4 地址。Kaminsky 攻击实际上操纵了 `Authority` 或 `Additional` 部分记录的名称或地址，甚至可能在 `Answer` 部分提供准确的答案。我们将在第 8 章中详细讨论这种以及其他常见的缓存污染攻击形式。同时，表 4.4 总结了这些缓存污染攻击的影响。
 
-`表 4.4` 缓存污染攻击总结
+**表 4.4** 缓存污染攻击总结
 
-| 攻击类型 || 目标组件 || 潜在影响 |
+| 攻击类型 | 目标组件 | 潜在影响 |
 | --- | --- | --- |
 | 缓存污染 | 存根解析器 | 渗透存根解析器缓存将允许客户端应用程序重定向到攻击者定义的目的地，可能危害该客户端的敏感信息 |
 | | 转发 DNS 服务器 | 缓存污染的潜在目标，因为缓存操作可以影响多个用户，即那些向受影响的转发 DNS 服务器查询被操纵域的用户 |
@@ -1042,9 +940,9 @@ DNS 解析器和递归缓存服务器维护已解析资源记录的缓存以提�
 
 表 4.5 总结了权威污染的影响。
 
-`表 4.5` 权威污染攻击
+**表 4.5** 权威污染攻击
 
-| 攻击类型 || 目标组件 || 潜在影响 |
+| 攻击类型 | 目标组件 | 潜在影响 |
 | --- | --- | --- |
 | 权威污染 | 存根解析器 | 由于解析器不是任何区域信息的权威，因此不应产生影响 |
 | | 转发 DNS 服务器 | 在转发服务器也是一个或多个区域的权威的情况下，对转发服务器的攻击可能会抑制或重定向某些或所有查询解析 |
@@ -1054,11 +952,6 @@ DNS 解析器和递归缓存服务器维护已解析资源记录的缓存以提�
 | | 外部命名空间的权威 DNS 服务器 | 攻击可能会重命名或删除关键的外部域名（例如 www）和子域 |
 
 ### 解析器重定向攻击
-
-[/content]
-
-
-
 
 客户端设备上的存根解析器（stub resolver）必须初始化至少一个 DNS 服务器 IP 地址，以便可以发布 DNS 查询。该 IP 地址是所有来自客户端的 DNS 查询的目标地址。其他解析器配置信息（如域名后缀）也可以像我们在第 2 章中讨论的那样进行定义。解析器的配置可以通过在 TCP/IP 栈中硬编码 DNS 服务器 IP 地址来手动完成，也可以通过 `DHCP` 或 `PPP` 自动完成。如果攻击者可以将递归查询重定向到其控制的服务器，那么任何和所有的解析信息都可以被随意篡改。
 
@@ -1072,21 +965,20 @@ DNS 解析器和递归缓存服务器维护已解析资源记录的缓存以提�
 
 ![图 4.8. 用于中间人攻击的解析器渗透](img/c04f008.jpg)
 
-图 4.8. 用于中间人攻击的解析器渗透
+**图 4.8.** 用于中间人攻击的解析器渗透
 
 单个客户端解析器攻击会严重影响相应的客户端设备，但通常对表 4.6 所示，对其他 DNS 组件的影响很小。
 
-表 4.6 客户端解析器攻击
+**表 4.6** 客户端解析器攻击
 
-| 攻击类型 || 目标组件 | 潜在影响 |
+| 攻击类型 | 目标组件 | 潜在影响 |
 | --- | --- | --- |
-| 客户端解析器攻击 || 存根解析器 | 篡改解析器配置可能导致解析器失效或将此特定 DNS 客户端的查询重定向到攻击者的 DNS 服务器 |
-| --- | --- | --- |
-|  || 转发 DNS 服务器 | 客户端解析器攻击不应影响转发 DNS 服务器 |
-|  || 递归 DNS 服务器 | 客户端解析器攻击不应影响递归 DNS 服务器 |
-|  || 引用 DNS 服务器 | 客户端解析器攻击不应影响引用 DNS 服务器 |
-|  || 内部命名空间的权威 DNS 服务器 | 客户端解析器攻击不应影响权威 DNS 服务器 |
-|  || 外部命名空间的权威 DNS 服务器 | 客户端解析器攻击不应影响权威 DNS 服务器 |
+| 客户端解析器攻击 | 存根解析器 | 篡改解析器配置可能导致解析器失效或将此特定 DNS 客户端的查询重定向到攻击者的 DNS 服务器 |
+| | 转发 DNS 服务器 | 客户端解析器攻击不应影响转发 DNS 服务器 |
+| | 递归 DNS 服务器 | 客户端解析器攻击不应影响递归 DNS 服务器 |
+| | 引用 DNS 服务器 | 客户端解析器攻击不应影响引用 DNS 服务器 |
+| | 内部命名空间的权威 DNS 服务器 | 客户端解析器攻击不应影响权威 DNS 服务器 |
+| | 外部命名空间的权威 DNS 服务器 | 客户端解析器攻击不应影响权威 DNS 服务器 |
 
 ## 利用 DNS 的更广泛攻击
 
@@ -1102,30 +994,26 @@ DNS 在设计上包含了主机名到 IP 地址的映射库等信息。如果攻
 *   **区域传输** – 冒充 DNS 备服务器并尝试从主服务器执行区域传输，是一种试图映射或标记区域轮廓的攻击形式。也就是说，通过识别主机到 IP 地址的映射以及其他资源记录，攻击者试图识别目标。
 *   **下一个安全查询** – 如果给定的区域通过 `DNSSEC` 签名，并使用 Next Secure (`NSEC`) 资源记录来支持资源不存在的验证（而不是哈希的 `NSEC3` 版本），攻击者可能通过连续查询 NSEC 记录来识别区域内的主机名。对不同 DNS 组件进行网络侦察的潜在影响总结在表 4.7 中。
 
-表 4.7 网络侦察风险
+**表 4.7** 网络侦察风险
 
-| 攻击类型 || 目标组件 | 潜在影响 |
+| 攻击类型 | 目标组件 | 潜在影响 |
 | --- | --- | --- |
-| 网络侦察 || 存根解析器 | 由于解析器对任何区域信息都不权威，因此影响很小，但对于“高级用户”，某些查询和答案可能证明有用 |
-| --- | --- | --- |
-|  || 转发 DNS 服务器 | 攻击者监控查询和答案流量以识别目标的影响较小，但不是高效的侦察方法 |
-|  || 递归 DNS 服务器 | 攻击者监控查询和答案流量以识别目标的影响较小，但不是高效的侦察方法 |
-|  || 引用 DNS 服务器 | 没有影响，因为引用服务器只提供通用方向，而不提供特定的主机解析数据 |
-|  || 内部命名空间的权威 DNS 服务器 | 攻击者可以请求区域传输，发布随机或 ANY 查询以获取解析数据；使用 NSEC 签名的区域可以通过跳转到每个资源记录来识别潜在目标 |
-|  || 外部命名空间的权威 DNS 服务器 | 攻击者可以请求区域传输，发布随机或 ANY 查询以获取解析数据；使用 NSEC 签名的区域可以通过跳转到每个资源记录来识别潜在目标 |
+| 网络侦察 | 存根解析器 | 由于解析器对任何区域信息都不权威，因此影响很小，但对于“高级用户”，某些查询和答案可能证明有用 |
+| | 转发 DNS 服务器 | 攻击者监控查询和答案流量以识别目标的影响较小，但不是高效的侦察方法 |
+| | 递归 DNS 服务器 | 攻击者监控查询和答案流量以识别目标的影响较小，但不是高效的侦察方法 |
+| | 引用 DNS 服务器 | 没有影响，因为引用服务器只提供通用方向，而不提供特定的主机解析数据 |
+| | 内部命名空间的权威 DNS 服务器 | 攻击者可以请求区域传输，发布随机或 ANY 查询以获取解析数据；使用 NSEC 签名的区域可以通过跳转到每个资源记录来识别潜在目标 |
+| | 外部命名空间的权威 DNS 服务器 | 攻击者可以请求区域传输，发布随机或 ANY 查询以获取解析数据；使用 NSEC 签名的区域可以通过跳转到每个资源记录来识别潜在目标 |
 
 ### DNS 重绑定攻击
 
 DNS 重绑定攻击之所以这样命名，是因为相同问题的解析数据按如下方式被修改的。当用户受内容、钓鱼攻击、社会工程或其他形式的微妙强制而浏览到攻击者网站时，解析 Web 地址的 IP 地址是“合法的”攻击者 Web 服务器 IP 地址。该 `RRSet` 的 `TTL` 被配置为非常短的时间间隔。相应的网页包含恶意的浏览器端代码，如 flash 或 javascript。
 
-
-
-
 当浏览器代码执行时，代码中再次包含了指向网站 URL 的链接，由于较短的 TTL（生存时间）或初始查询，解析器的缓存已经超时。当根据浏览器端代码发起对攻击者 DNS 服务器的后续查询时，DNS 服务器将返回内部目标的 IP 地址，这很可能是一个私有 IP 地址。因此，相同域名的 IP 地址已被更改或发生了重绑定，浏览器代码借此发起了攻击，可能以 DDoS 或其他攻击的形式进行。
 
 这种攻击通常需要先使用 DNS 或其他形式的发现进行初始网络侦查，以识别攻击目标。目标的 IP 地址在重绑定阶段被用作攻击者 Web 服务器的解析 RData。反复查询攻击者的域名有助于绕过浏览器的同源策略（Origin Enforcement）。表 4.8 强调了 DNS 重绑定攻击的影响。
 
-#### 表 4.8 DNS 重绑定攻击**
+**表 4.8** DNS 重绑定攻击
 
 | 攻击类型 | 目标组件 | 潜在影响 |
 | --- | --- | --- |
@@ -1142,29 +1030,9 @@ DNS 重绑定攻击之所以这样命名，是因为相同问题的解析数据�
 
 ![图 4.9 反射器攻击](img/c04f009.jpg)
 
-#### 图 4.9 反射器攻击**
+**图 4.9** 反射器攻击
 
 反射器形式的攻击尝试使用一个或多个 DNS 服务器向特定目标发送大量数据，如图 4.9 所示，从而拒绝目标机器的服务。这种类型攻击的实现依赖于利用不进行入站 IP 过滤的 DNS 服务器（或指向 DNS 服务器的路由），以及配置为启用递归的 DNS 服务器。通常，这种形式的攻击的特征是攻击者查询“开放解析器”或配置为启用查询递归的面向互联网的 DNS 服务器。
-
-图 4.9 反射器攻击** 
-
-反射器形式的攻击尝试使用一个或多个 DNS 服务器向特定目标发送大量数据，如图 4.9 所示，从而拒绝目标机器的服务。这种类型攻击的实现依赖于利用不进行入站 IP 过滤的 DNS 服务器（或指向 DNS 服务器的路由），以及配置为启用递归的 DNS 服务器。通常，这种形式的攻击的特征是攻击者查询“开放解析器”或配置为启用查询递归的面向互联网的 DNS 服务器。
-
-![图 4.9 反射器攻击](img/c04f009.jpg)
-
-#### 图 4.9 反射器攻击**
-
-反射器形式的攻击尝试使用一个或多个 DNS 服务器向特定目标发送大量数据，如图 4.9 所示，从而拒绝目标机器的服务。这种类型攻击的实现依赖于利用不进行入站 IP 过滤的 DNS 服务器（或指向 DNS 服务器的路由），以及配置为启用递归的 DNS 服务器。通常，这种形式的攻击的特征是攻击者查询“开放解析器”或配置为启用查询递归的面向互联网的 DNS 服务器。
-
-图 4.9 反射器攻击**
-
-反射器形式的攻击尝试使用一个或多个 DNS 服务器向特定目标发送大量数据，如图 4.9 所示，从而拒绝目标机器的服务。这种类型攻击的实现依赖于利用不进行入站 IP 过滤的 DNS 服务器（或指向 DNS 服务器的路由），以及配置为启用递归的 DNS 服务器。通常，这种形式的攻击的特征是攻击者查询“开放解析器”或配置为启用查询递归的面向互联网的 DNS 服务器。
-
-![图 4.9 反射器攻击](img/c04f009.jpg)
-
-#### 图 4.9 反射器攻击**
-
-反射器形式的攻击
 
 在禁用递归的 DNS 服务器上，反射器形式的攻击类似于对 ICMP（网报控制协议）的 ping 攻击，通过通过大量的 DNS 数据包来响应伪造的 IP 地址。除非是针对内部目标，否则该攻击不应影响权威 DNS 服务器。外部权威 DNS 服务器可能成为此类攻击的无意参与者。这指的是数据从一个安全域（例如企业网络）传输到另一个实体或组织。使用 DNS 有两种基本形式：
 
@@ -1179,23 +1047,21 @@ DNS 隧道是指利用 DNS 协议作为数据通道。这种方法利用了 DNS 
 
 ![图 4.10. DNS 隧道](img/c04f010.jpg)
 
-
-
 隧道服务器解码 `Qname` 并将应用请求传递到目标地。鉴于 DNS 标签长度限制（63 字节）和全名长度限制（255 字节），在隧道上可能需要进行某种程度的分片和重组。客户端可能会发布多个 `A` 记录查询以获取完整文件，而 DNS 服务器隧道端点可能会返回 `CNAME` 记录，其响应数据编码在 `RData` 部分中。
 
 使用 `EDNS0` 允许更长的响应，这可能消除了基于中间基础设施 MTU 支持而进行分片和重组的需求。隧道服务器处理来自互联网目的地的响应，并将响应编码后传输给解析器。通常，在出站隧道事务中使用 `base32` 编码，在响应中使用 `base64`，以支持响应字节的大小写敏感性，客户端隧道端点对其进行解码并呈现给应用软件。
 
 ### DNS 作为资源定位符
+
 攻击者可能尝试在设备上安装恶意软件，将此类设备纳入攻击者的控制并成为僵尸网络。此类恶意软件可能通过钓鱼或鱼叉式钓鱼攻击安装，诱导用户打开可执行的邮件附件或从攻击者网站安装软件。无论设备是在企业网络内部受到攻击，还是用户设备被物理带入网络，只要它在企业网络范围内被受信任，它就可能访问敏感信息。恶意软件可能会执行数据收集，利用 DNS 侦察定位内部资源。此外，DNS 可被用于识别攻击者外部目的地的当前 IP 地址，以便外泄信息。
 
 如您从表 4.10 中所示，对 DNS 组件本身的影响微乎其微；然而，真正的威胁是窃取可能具有高价值的信息。
 
-### 表 4.10 数据泄露影响
+**表 4.10** 数据泄露影响
 
 | 攻击类型 | 目标组件 | 潜在影响 |
 | --- | --- | --- |
 | 数据泄露攻击 | 递归解析器 | 装备有 DNS 隧道软件的设备可以通过 DNS 泄露数据 |
-| --- | --- | --- |
 | | 转发 DNS 服务器 | 转发服务器可能参与转发隧道“查询”和响应 |
 | | 递归 DNS 服务器 | 递归服务器可能参与“解析”隧道查询和响应 |
 | | 建议 DNS 服务器 | 数据泄露攻击不应影响建议型 DNS 服务器 |
@@ -1203,6 +1069,7 @@ DNS 隧道是指利用 DNS 协议作为数据通道。这种方法利用了 DNS 
 | | 外部命名空间的权威 DNS 服务器 | 大多数攻击将由攻击者配置的 DNS 服务器作为隧道端点，而不是安装了 DNS 隧道软件的被黑外部权威 DNS 服务器，因此影响应该是极小的 |
 
 ### 高级持续性威胁
+
 高级持续性威胁（APT）是一种有组织、隐蔽的网络入侵形式，攻击者获取目标网络内的访问权限以窃取数据、中断通信或其他方式渗透网络组件。APT 的持续性体现在其意图是长时间（甚至无限）保留网络访问权限，因此它们需要持续的规避技术来避免检测。
 
 攻击者可能通过钓鱼式攻击、社会工程学、暴力破解或其他方法在网络内部部署恶意软件。设备上恶意软件的安装通常不会被用户察觉。只需打开邮件附件、下载看似合法的软件或点击广告就可能启动安装过程。安装在您的设备上的防病毒软件可以帮助防止已知恶意软件的安装。但新形式的恶意软件不断被开发，以规避此类保护并安装在受害者机器上。
@@ -1213,12 +1080,11 @@ DNS 隧道是指利用 DNS 协议作为数据通道。这种方法利用了 DNS 
 
 如果 IT 管理员发现其网络中存在恶意软件，并能根据 DNS 查询识别出 C&C IP 地址，他可以通过网络或 DNS 防火封拦截该 IP 地址。为了避免这种“简单的”检测，许多僵尸网络管理员利用 DNS 的能力来调制 C&C 中心的 IP 地址和域名以增强隐蔽性。APT 攻击对 DNS 组件的影响总结在表 4.11 中，我们将在第 11 章讨论避免检测各种方法，包括 DNS 抖动和动态域名生成。
 
-### 表 4.11 高级持续性威胁
+**表 4.11** 高级持续性威胁
 
 | 攻击类型 | 目标组件 | 潜在影响 |
 | --- | --- | --- |
 | APT 攻击 | 递归解析器 | 被渗透恶意软件的设备可以参与僵尸网络以执行非法功能 |
-| --- | --- | --- |
 | | 转发 DNS 服务器 | 转发服务器可能参与转发 C&C 查询和响应 |
 | | 递归 DNS 服务器 | 递归服务器可能参与解析到 C&C 中心的查询 |
 | | 建议 DNS 服务器 | APT 攻击不直接影响建议 DNS 服务器，尽管它们可能使用建议服务 |
@@ -1226,14 +1092,12 @@ DNS 隧道是指利用 DNS 协议作为数据通道。这种方法利用了 DNS 
 | | 外部命名空间的权威 DNS 服务器 | APT 攻击不影响外部权威 DNS 服务器 |
 
 ## 总结
+
 正如我们所看到的，多种 DNS 攻击可能会干扰 DNS 或一般的网络通信，或者利用 DNS 的预期用途来识别目标或带有恶意意图攻击系统。没有单一的缓解方法可以消除所有威胁的漏洞；因此，需要多管齐下的缓解策略来减少攻击暴露。随后的章节将详细介绍这些威胁领域的每一个领域，并讨论您可能采用的策略，通过防御您的 DNS 来保护您的网络。
 
 # 5 DNS 信任区域
 
 ## 引言
-
-
-
 
 我们在书中用于保护 DNS 仿制品的方法模仿了并尝试符合更广泛的信息技术（IT）网络安全方法。此类方法的两个基本原则包括根据`信任区域`（trust zones）对 DNS 服务器部署及相应功能进行划分，并采用多层的`深度防御`（defense in depth）风格。鉴于“区域”（zone）一词在 DNS 语境下的歧义性，我们将使用“信任扇区”（trust sectors）代替“信任区域”。建立有效的防御至关重要，准备工作、监控、事件检测以快速识别进行中的攻击，以及实施恢复计划以执行缓解措施以最大限度地减少或消除影响也同样关键。事件后分析对于反馈给安全计划至关重要，以便应用学到的经验来改进检测和恢复时间。
 
@@ -1271,11 +1135,7 @@ DNS 隧道是指利用 DNS 协议作为数据通道。这种方法利用了 DNS 
 
 *   `基础网络操作和预期数据流 (DE.AE-1)`：部署计划寻求为可接受的 DNS 解析性能提供足够的 DNS 资源，同时考虑到潜在的宕机情况。持续监控 DNS 协议和管理数据流可以跟踪相对于提供容量的需求，并为补充相关容量提供反馈。
 
-
-
-
-
--   **图 5.1.** 基础 DNS 信任区域
+**图 5.1.** 基础 DNS 信任区域
 
 你可能还会叠加一个 DNS 管理信任区域，该区域可能对应于一个物理或虚拟上独立的网络，用于配置和管理每个 DNS 服务器。此外，我们还将讨论一些适用于所有信任区域的异常场景，例如上述的 DNS 管理扇区。由于这些区域提供了特殊的解析或可用性功能，它们可能适用于一类或多个类别。
 
@@ -1311,12 +1171,9 @@ DNS 隧道是指利用 DNS 协议作为数据通道。这种方法利用了 DNS 
 
 外部 DNS 信任扇区涉及处理来自组织外部的 DNS 查询。必须为你的外部命名空间提供解析服务，即你组织的网站、电子邮件和其他应用程序。但由于这些服务器服务外部客户端时的暴露性和潜在漏洞，必须小心保护这些服务器的信息完整性。
 
-建议的方法是部署两个或多个从服务器来解析外部请求，并为这些服务器配置 IPv4 和 IPv6 地址。这些从服务器可以直接部署在面向 Internet 的外部 DMZ 中，位于“第一道”防火墙之后，如图 5.2
+建议的方法是部署两个或多个从服务器来解析外部请求，并为这些服务器配置 IPv4 和 IPv6 地址。这些从服务器可以直接部署在面向 Internet 的外部 DMZ 中，位于“第一道”防火墙之后，如图 5.2 所示。
 
 **图 5.2.** 外部信任扇区部署
-
-
-
 
 在本示例中，我们对每个 DNS 服务器都配置了双栈（IPv4 和 IPv6），以便通过任一协议实现可访问性。我们将每个外部 DNS 服务器放置在各自独立的物理子网中，并且在理想情况下，如图所示使用具有公网 IP 地址的路由器/接口，但内部也必须分配内部可达的 IP 地址，用于服务器管理以及从主服务器进行区域传输。
 
@@ -1326,86 +1183,115 @@ DNS 隧道是指利用 DNS 协议作为数据通道。这种方法利用了 DNS 
 
 此外部信任扇区应通过在内部和外部防火墙上设置适当的防火墙规则来隔离。在启用 DNS 流量方面，外部防火墙应配置为允许来自任何源且目的地址匹配任何 DMZ 从 DNS 服务器的入站 DNS 查询，其端口为目的 UDP 和/或 TCP 端口 `53`。同样，也需要允许响应。在表 5.1 中显示了一个外部防火墙规则集示例。这些 DNS 服务器必须配置为不允许递归查询。
 
-表 5.1 DNS 消息示例外部防火墙规则
+**表 5.1** DNS 消息示例外部防火墙规则
 
-| 消息/ | || || 源 | || 目的 |
+| 消息/方向 | 控制 | 源地址 | 端口 | 目的地址 | 端口 |
 | --- | --- | --- | --- | --- | --- |
-| 方向 | 控制 | 源地址 | 端口 | 目的地址 | 端口 |
 | 来自互联网的 DNS 查询 | 允许 | 所有 | >1023 | 192.0.2.34, 192.0.2.42, 192.0.2.50, 2001:db8:4af0:2010::a, 2001:db8:4af0:2011::11, 2001:db8:4af0:2006::9 | 53 |
-| --- | --- | --- | --- | --- | --- |
 | DNS 查询的响应 | 允许 | 192.0.2.34, 192.0.2.42, 192.0.2.50, 2001:db8:4af0:2010::a, 2001:db8:4af0:2011::11, 2001:db8:4af0:2006::9 | 53 | 所有 | >1023 |
 | 其他所有 | 拒绝 | 所有 | 所有 | 所有 | 所有 |
 
 至于内部防火墙，应配置 ACL 以拒绝所有源自互联网的 DNS 查询。此防火墙应仅允许隐藏主服务器与从 DNS 服务器之间用于区域维护的 DNS 查询和答复，包括刷新查询、通知（notify）和区域传输消息。请注意，主要的 DNS 实现均允许您在需要时为通知和区域传输消息定义特定的端口号。表 5.2 提供了一个内部防火墙规则集示例。对于出站查询需要设置额外的防火墙权限。
 
-表 5.2 DNS 消息示例内部防火墙规则
+**表 5.2** DNS 消息示例内部防火墙规则
 
 | 消息/方向 | 控制 | 源地址 | 端口 | 目的地址 | 端口 |
 | --- | --- | --- | --- | --- | --- |
-| 隐藏主服务器与从 DNS 服务器之间的区域维护 | 允许 | | | | |
-| （包括刷新查询、通知和区域传输消息） | | | | | |
-|  | | | | | |
+| 隐藏主服务器与从 DNS 服务器之间的区域维护（包括刷新查询、通知和区域传输消息） | 允许 | | | | |
 | 注意：主要 DNS 实现允许在需要时定义特定端口 | | | | | |
 | 拒绝所有源自互联网的 DNS 查询 | | | | | |
 | 防火墙仅允许隐藏主服务器与从 DNS 服务器之间的 DNS 查询和答复 | | | | | |
 
-
-
 例如，为了定义我们一直在使用的相同 TSIG 密钥，并要求在从主 DNS 服务器请求区域传输时使用该密钥，可以通过 SQL 向后端插入以下记录：
 
 ```
+
+
+
 $ insert into tsigkeys (name, algorithm, secret) values
+
 ('master-slave.ipamworldwide.com.', 'hmac-sha256',
+
 'MKWCLOu2s4IsZy60sH4q6a4qAud3xk0rinx4FVKut/0=');
- 
+
 $ select id from domains where name='ipamworldwide.com';
+
 7
- 
+
 $ insert into domainmetadata (domain_id, kind, content)
+
 values (7, 'AXFR-MASTER-TSIG', ' master-slave.ipamworldwide.com.');
+
 ```
 
 首先，通过 `insert into` `tsigkeys` 表定义密钥。然后，在确定了我们的 [ipamworldwide.com](http://ipamworldwide.com) 域的域 ID 后，使用 `AXFR-MASTER-TSIG` 元数据类型将密钥插入到域的元数据中。`pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。某些 DNS 设置也可以在 `pdns.conf` 文件中或在调用 `pdns` 二进制文件时的命令行中定义。
 
 ```
+
 allow-notify-from=172.16.0.5
+
 allow-recursion=none
+
 version-string=anonymous
+
 ```
 
 Knot DNS 后面是类似的 Knot DNS 服务器配置示例。Knot 产生独立的仅权威服务器和递归服务器。在此示例中，使用权威版本时，默认禁用了递归。
 
 ```
+
 # 示例 Knot DNS 服务器配置 (版本 2.3.3)
+
 # 忽略版本查询
+
 server:
+
    version: none
- 
+
 # 定义 TSIG 密钥
+
 key:
+
   - id: master-slave.ipamworldwide.com.
+
     algorithm: hmac-sha256
+
     secret: "MKWCLOu2s4IsZy60sH4q6a4qAud3xk0rinx4FVKut/0="
- 
+
 # 定义一个通知 acl
+
 acl:
+
   - id: accept_notify
+
     address: 172.16.0.5
+
     key: master-slave.ipamworldwide.com.
+
     action: notify
- 
+
 # 使用主服务器签名所有事务
+
 remote:
+
   - id: master
+
     address: 172.16.0.5
+
     key: master-slave.ipamworldwide.com.
- 
+
 zone:
+
   - domain: ipamworldwide.com
+
     storage: /var/lib/knot/zones/
+
     # file: ipamworldwide.com.zone   # 默认值
+
     master: master
+
     acl: accept_notify
+
 ```
 
 ### 外部区域的 DNS 托管
@@ -1493,10 +1379,8 @@ Internet 名称解析需要组织向互联网的出站流量，这从安全角�
 *   配置 DNS 防火墙（第 11 章）。
 
 ***示例 BIND 配置*** 这是一个简单的 BIND 配置示例。
+
 ```
-
-
-
 
 ```
 acl internal-nets { 10.0.0.0/8; 172.16.0.0/12; } ;
@@ -1571,66 +1455,84 @@ policy.add(policy.all(policy.PASS, '172.16.0.0/12'))
 内部权威服务器配置应模仿外部服务器配置，以提供足够的安全控制和一致性，这有助于减少管理员错误。在所选产品支持范围内，应实现以下功能：
 
 *   禁止递归查询
+
 *   对主从之间的区域传输进行签名
+
 *   仅允许主从服务器之间的 notify 和区域传输
+
 *   对于隐藏主，仅允许来自从服务器 IP 地址的查询
+
 *   防止来自“管理”IP 地址空间以外的访问
-*   在可能范围内限制对服务器实现的暴露，例如禁用供应商和版本信息，例如通过 `dig @<dns\_server\_ip\_address> version.bind chaos txt`
+
+*   在可能范围内限制对服务器实现的暴露，例如禁用供应商和版本信息，例如通过 `dig @<dns_server_ip_address> version.bind chaos txt`
+
 *   安全加固（见第 6 章）
+
 *   防御 DDoS 攻击（第 7 章）
+
 *   保护权威数据免受攻击并考虑使用签名（第 9 章）
 
 ***ISC BIND 示例*** 以下是一个 BIND 配置示例，重点展示了内部 DNS 从服务器的 BIND 级控制。在此示例中，我们将启用控制通道，但使用 ACL 和 `rndc` 密钥对其进行保护。我们假设授权 `rndc` 命令的管理网络位于 `172.20.254.0/24`，并相应地定义 ACL `mgmt.-net`。在这里，我们将使用独立的服务器接口（监听在 `172.16.50.6`）作为控制通道。
 
 
 
-
-
-```markdown
 # 从节点 172.16.50.5 的示例配置
-# 定义用于控制通道的匹配列表和密钥
+
+定义用于控制通道的匹配列表和密钥：
+
+```
 acl mgmt-net { 172.20.254.0/24; };
 key "internal-2-rndc.ipamworldwide.com." {
         algorithm hmac-md5;
         secret "UJfGhXM1e1YFLC5UJI0MAQ==";
 };
+```
 
-# 定义此从机与主服务器之间的 TSIG 密钥
+定义此从机与主服务器之间的 TSIG 密钥：
+
+```
 key "internal-2-ipamworlwide.com." {
         algorithm hmac-sha256;
         secret "itPaWJ6xSOqNn2no/SZ2ex5nXZIJF3dUj1OXtmG8FBA=";
 };
+```
 
-# 将 TSIG 密钥与主服务器关联以对通信签名
+将 TSIG 密钥与主服务器关联以对通信签名：
+
+```
 server 172.16.30.5 {
-     keys { “internal-2-ipamworldwide.com.” ;};
+     keys { "internal-2-ipamworldwide.com." ;};
 };
+```
 
-# 安全（或禁用）rndc 控制通道
+安全（或禁用）rndc 控制通道：
+
+```
 controls {
-     inet 172.16.50.6 port 953 allow { “mgmt-net”; }
-          keys { “internal-2-rndc.ipamworldwide.com.”; };
+     inet 172.16.50.6 port 953 allow { "mgmt-net"; }
+          keys { "internal-2-rndc.ipamworldwide.com."; };
 };
+```
 
-# 配置选项用于禁用递归查询处理，
-# 对版本查询提供空响应，仅接受来自主服务器的通知 (notify)，
-# 忽略区域传输请求，并从主服务器的内部
-# IP 地址执行区域传输。
+配置选项用于禁用递归查询处理，对版本查询提供空响应，仅接受来自主服务器的通知（notify），忽略区域传输请求，并从主服务器的内部 IP 地址执行区域传输：
+
+```
 options {
      recursion no;
-     version “”;
-     allow-notify {  key “internal-2-ipamworldwide.com.”; };
+     version "";
+     allow-notify { key "internal-2-ipamworldwide.com."; };
      allow-transfer { none; };
      transfer-source 172.16.50.5;
 };
 ```
 
-**NLnet NSD 示例**
+## NLnet NSD 示例
+
 以下是 NLnet NSD 服务器示例配置子集。注意，NSD 是一个仅权威的 DNS 服务器，无法配置为执行递归。ACL 需要按每个区域定义，但可以定义通用的区域 `pattern` 并将其应用到多个区域。
 
-```markdown
+```
 # NSD 服务器示例配置 (版本 4.1.11)
-# 下方的 server 选项忽略版本查询并限制# 控制通道
+# 下方的 server 选项忽略版本查询并限制控制通道
 server:
      hide-version: yes
 remote-control:
@@ -1648,20 +1550,21 @@ key:
 # 区域传输请求，以及使用哪个出站地址查询
 # 并接收区域传输
 zone:
-     name: “ipamworldwide.com”
-     zonefile: “db.ipamworldwide.com”
+     name: "ipamworldwide.com"
+     zonefile: "db.ipamworldwide.com"
      allow-notify: 172.16.30.5 internal-2-ipamworldwide.com.
      request-xfr: 172.16.30.5 internal-2-ipamworldwide.com.
      outgoing-interface: 172.16.50.5
 ```
 
-**PowerDNS 权威服务器示例配置**
+## PowerDNS 权威服务器示例配置
+
 以下是 PowerDNS 权威服务器的类似配置。我们通过 SQL 在后端数据库中定义 TSIG 密钥。
 
-```sql
+```
 $ insert into tsigkeys (name, algorithm, secret) values
 ('internal-2-ipamworlwide.com.', 'hmac-sha256',
-'itPaWJ6xSOqNn2no/SZ2ex5nXZIJF3dUj1OXtmG8FBA=);
+'itPaWJ6xSOqNn2no/SZ2ex5nXZIJF3dUj1OXtmG8FBA=');
 
 $ select id from domains where name='ipamworldwide.com';
 7
@@ -1670,339 +1573,21 @@ $ insert into domainmetadata (domain_id, kind, content)
 values (7, 'AXFR-MASTER-TSIG', 'internal-2-ipamworldwide.com.');
 ```
 
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
+`pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
 
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
 
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
 
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
-
-The `pdns.conf` 文件允许配置数据库连接参数。
+`pdns.conf` 文件允许配置数据库连接参数，以便 PowerDNS 连接到后端。
 
 ## 额外配置选项
 
 ### Knot 配置
+
 `options` 块允许对 DNS 服务器进行细粒度控制。
 
-### Knot 配置
-以下是 NLnet NSD 服务器示例配置子集。注意，NSD 是一个仅权威的 DNS 服务器，无法配置为执行递归。以下是 NLnet NSD 服务器示例配置子集。
+以下是 NLnet NSD 服务器示例配置子集。注意，NSD 是一个仅权威的 DNS 服务器，无法配置为执行递归。
 
-### Knot 配置
-
-```markdown
+```
 # NSD 服务器示例配置 (版本 4.1.11)
 # 下方的 server 选项忽略版本查询并限制
 # 控制通道
@@ -2023,15 +1608,12 @@ key:
 # 区域传输请求，以及使用哪个出站地址查询
 # 并接收区域传输
 zone:
-     name: “ipamworldwide.com”
-     zonefile: “db.ipamworldwide.com”
+     name: "ipamworldwide.com"
+     zonefile: "db.ipamworldwide.com"
      allow-notify: 172.16.30.5 internal-2-ipamworldwide.com.
      request-xfr: 172.16.30.5 internal-2-ipamworldwide.com.
      outgoing-interface: 172.16.50.5
 ```
-
-
-
 
 我们将此顶层 DNS 服务器称为一级（Tier 1）服务器。它被配置为所有区域的“主服务器”（master）类型。我们之前的主服务器 `172.16.30.5` 和 `172.16.130.5` 将其称为二级（Tier 2）服务器，现在被配置为从服务器（slave），从的一级主服务器拉取区域传输。三级（Tier 3）的原始从服务器集保持不变，并继续从它们各自的二级服务器拉取区域传输。这些二级服务器虽然是从服务器，但在每个三级服务器的区域语句（zone statements）的 `masters` 语句中进行了配置。因此，不需要对三级服务器的配置进行任何更改。但是，对于每个已配置的区域，我们必须将二级服务器修改为从服务器模式，并将一级服务器标识为每个区域的主服务器。在此配置中，一级服务器被称为 `primary master`（主主服务器），因为它是可以直接进行区域更新的服务器，区域传输将相继发送到二级和三级服务器，以相应地更新所有权威服务器。
 
@@ -2087,10 +1669,6 @@ root3.ipamworldwide.com    IN A    10.251.0.5
                            IN AAAA 2001:db8:4af0:c001::1
 ```
 
-（注：原文中重复了多次相同的配置块示例，此处根据指令“不要重复输出原文”，仅保留翻译后的逻辑和核心示例结构）
-
-
-
 使用带有任播地址（anycast addresses）的自有 DNS 服务器可以让多个 DNS 服务器使用同一个 IP 地址。任播地址是分配给多个接口的地址，通常位于不同的节点上。当尝试访问任何一个任播地址的主机而不关心访问的是哪一个时，就会使用任播。路由基础设施负责处理路由指标更新以跟踪可达性，并将流量路由到配置了目标任播地址的最近主机。图 5.8 展示了一个配置三个配置任播地址 `10.4.23.1` 的 DNS 服务器的示例。
 
 ![图 5.8. 任播路由表示例](img/c05f008.jpg)
@@ -2137,12 +1715,11 @@ dig +nsid <query> @<anycast-address>
 
 参与路由协议更新是最大化您的 DNS 任播实现优势的关键。第一步是将您选择的任播地址分配给共享该地址的 DNS 服务器群组。该地址通常被分配给服务器的环回地址。在 Linux 或 Unix 系统上，可以使用 `ip` 命令执行此操作，如下：
 
+
+
 ```
 ifconfig lo:0 10.4.23.1 netmask 255.255.255.255
 ```
-
-
-
 
 路由参与的最简单形式是应用静态路由，它只是告诉本地路由器将任播地址路由到连接到 DNS 服务器的接口，然后在对等路由器之间重新发布此静态路由。
 
@@ -2150,9 +1727,9 @@ ifconfig lo:0 10.4.23.1 netmask 255.255.255.255
 ip route 10.4.23.1 255.255.255.255 172.20.23.1
 ```
 
-但使用静态路由无法提供根据路由协议指标（如网络负载）进行重路由的优势，更不用说前面讨论的服务器可可用性了。在 DNS 服务器本身运行路由守护进程可以使服务器动态提供可可用性信息，从而从路由角度优化所有任播服务器之间的性能。。
+但使用静态路由无法提供根据路由协议指标（如网络负载）进行重路由的优势，更不用说前面讨论的服务器可可用性了。在 DNS 服务器本身运行路由守护进程可以使服务器动态提供可可用性信息，从而从路由角度优化所有任播服务器之间的性能。
 
-开源路由包 `quagga` 常用于此目的。`quagga` 支持多种路由协议，包括 `RIP`、`RIPng`、`OSFP-v2` 和 `v3` 以及 `BGP`。`quagga` 的配置相对简单，涉及配置 `quagga` 的 `zebra` 内核路由管理器组件，使其包含服务器的网络接口，例如：
+开源路由包`quagga`常用于此目的。`quagga`支持多种路由协议，包括`RIP`、`RIPng`、`OSFP-v2`和`v3`以及`BGP`。`quagga`的配置相对简单，涉及配置`quagga`的`zebra`内核路由管理器组件，使其包含服务器的网络接口，例如：
 
 ```
 interface eth0
@@ -2161,7 +1738,7 @@ interface lo
 line vty
 ```
 
-虚拟电传打 (`vty`) 接口允许在 `zebra` 运行时对配置进行交互式访问。当 `zebra` 作为内核的接口运行时，请配置相应的路由协议配置。例如，要运行 `OSPF`，`ospfd.conf` 文件应包含接口和 `OSFP` 声明。
+虚拟电传打 (`vty`) 接口允许在`zebra`运行时对配置进行交互式访问。当`zebra`作为内核的接口运行时，请配置相应的路由协议配置。例如，要运行`OSPF`，`ospfd.conf`文件应包含接口和`OSFP`声明。
 
 ```
 interface eth0
@@ -2174,303 +1751,380 @@ router ospf
 line vty
 ```
 
-配置好 `quagga` 的 `zebra` 组件和路由协议的路由组件后，你需要更新连接的路由器配置，将路由器接口与分配的 `OSPF` 区域（在本例中为 100）关联。
+配置好`quagga`的`zebra`组件和路由协议的路由组件后，你需要更新连接的路由器配置，将路由器接口与分配的`OSPF`区域（在本例中为 100）关联。
 
 # 其他部署考虑因素
 
-### 高可用性
+## 高可用性
 
 我们在整个章节中隐含地处理了这一点，但仍需强调。在每个信任扇内部署多个服务器，并调整服务器规模，以便当一个或多个服务器不可用时，查询负载可以由总服务器数量的一个子处理。
 
-### 多厂商
+## 多厂商
 
-部署运行不同厂商软件的多个 DNS 服务器可以帮助防止利用特定厂商实现实现的攻击所带来的广泛影响。例如，在你的递归服务器信任扇内，你可能选择部署一组运行 `ISC BIND` 的 DNS 服务器和另一组运行 `Unbound` 的服务器。这增加了服务器管理的复杂性，但这种多样化方法可以帮助防御针对特定的攻击。
+部署运行不同厂商软件的多个 DNS 服务器可以帮助防止利用特定厂商实现实现的攻击所带来的广泛影响。例如，在你的递归服务器信任扇内，你可能选择部署一组运行`ISC BIND`的 DNS 服务器和另一组运行`Unbound`的服务器。这增加了服务器管理的复杂性，但这种多样化方法可以帮助防御针对特定的攻击。
 
-### 规模与可扩展性
+## 规模与可扩展性
 
 在每个信任扇内，你还必须调整数量、位置和服务器规格以实现高可用性和韧性。一种逻辑部署方法是将服务器放置在人口密集的区域，以通过接近性提供性能。然而，如果首选，足够大的冗余链路可以实现更集中的方法。
 
 服务器规格需要根据预期的查询负载，韧性要求增加一几台服务器，以完全满足查询负载的设计；其目的是减轻单台服务器的负载，同时确保一个两个服务器（或其链路）的故障不会影响整体查询。
 
-
-
-
 与 DNS 安全相关的框架预期结果完整示例可以在附录 A 中找到。该附录还包含一个框架核心配置示例，并引用了相关的安全标准，您可以访问这些标准以获取更多细节。请注意，您的具体实现可能需要对讨论的一些任务进行添加、修改或删除。
 
-## 识别：资产管理
+# 识别：资产管理
 
 基础的资产管理需要对所管理的资产进行了解和记录。在这种情况下，它意味着根据漏洞水平相对于网络或业务的关键性进行资产优先级排序。
 
-### 物理清单 (ID.AM-1)
-第一个 `ID.AM` 子类别规定要对组织内的物理设备和系统进行清单。应努力实现该子类别规定的结果。应维护一个集中的、受控文档或存储库，按角色、站点、资产信息、联系人姓名以及相关的资产跟踪信息记录 DNS 组件的清单。
+## 物理清单 (ID.AM-1)
 
-*   记录递归 DNS 服务器的清单
-*   记录内部权威 DNS 服务器的清单
-*   记录外部权威 DNS 服务器的清单
-*   记录使用外部 DNS 提供商进行递归或权威 DNS 的情况
-*   记录解析器（客户端、存根解析器）的清单
+第一个`ID.AM`子类别规定要对组织内的物理设备和系统进行清单。应努力实现该子类别规定的结果。应维护一个集中的、受控文档或存储库，按角色、站点、资产信息、联系人姓名以及相关的资产跟踪信息记录 DNS 组件的清单。
 
-### 软件清单 (ID.AM-2)
-该子类别规定要对组织内的软件平台和应用程序进行清单。这应该包括您管理的每个 DNS 服务器所使用的 DNS 软件，这些软件可能来自同一供应商，也可以针对不同的角色采用不同供应商的软件；例如，内部权威 DNS 使用 `Microsoft DNS`，而外部 DNS 使用 `Linux NSD`。还要跟踪每个组件的当前版本和补丁级别。运行在端用户和其他使用 DNS 的无人值设备上的解析器软件也必须记录清单。必须维护以下文档以实现与此类别相关的结果。
+- 记录递归 DNS 服务器的清单
+- 记录内部权威 DNS 服务器的清单
+- 记录外部权威 DNS 服务器的清单
+- 记录使用外部 DNS 提供商进行递归或权威 DNS 的情况
+- 记录解析器（客户端、存根解析器）的清单
 
-*   记录递归 DNS 服务器的 DNS 供应商和软件版本
-*   记录权威 DNS 服务器的 DNS 供应商和软件版本
-*   记录外部 DNS 的 DNS 供应商和软件版本
-*   记录解析器（客户端、存根解析器）
+## 软件清单 (ID.AM-2)
 
-### 外部系统 (ID.AM-4)
+该子类别规定要对组织内的软件平台和应用程序进行清单。这应该包括您管理的每个 DNS 服务器所使用的 DNS 软件，这些软件可能来自同一供应商，也可以针对不同的角色采用不同供应商的软件；例如，内部权威 DNS 使用`Microsoft DNS`，而外部 DNS 使用`Linux NSD`。还要跟踪每个组件的当前版本和补丁级别。运行在端用户和其他使用 DNS 的无人值设备上的解析器软件也必须记录清单。必须维护以下文档以实现与此类别相关的结果。
+
+- 记录递归 DNS 服务器的 DNS 供应商和软件版本
+- 记录权威 DNS 服务器的 DNS 供应商和软件版本
+- 记录外部 DNS 的 DNS 供应商和软件版本
+- 记录解析器（客户端、存根解析器）
+
+## 外部系统 (ID.AM-4)
+
 如果您使用外部 DNS 提供商进行递归或权威 DNS，请记录相关内容。应当记录威胁和漏洞。
 
-*   记录递归 DNS 服务器的 DNS 供应商和软件版本
-*   记录权威 DNS 服务器的 DNS 供应商和软件版本
-*   记录外部 DNS 的 DNS 供应商和软件版本
-*   记录解析器（客户端、存根解析器）
+- 记录递归 DNS 服务器的 DNS 供应商和软件版本
+- 记录权威 DNS 服务器的 DNS 供应商和软件版本
+- 记录外部 DNS 的 DNS 供应商和软件版本
+- 记录解析器（客户端、存根解析器）
 
-### 资源优先级 (ID.AM-5)
+## 资源优先级 (ID.AM-5)
+
 该子类别规定根据分类、关键性和业务价值对资源进行优先级排序。
 
-*   记录递归 DNS 服务器的 DNS 供应商和软件版本
-*   记录权威 DNS 服务器的 DNS 供应商和软件版本
-*   记录外部 DNS 的 DNS 供应商和软件版本
-*   记录解析器（客户端、存根解析器）
+- 记录递归 DNS 服务器的 DNS 供应商和软件版本
+- 记录权威 DNS 服务器的 DNS 供应商和软件版本
+- 记录外部 DNS 的 DNS 供应商和软件版本
+- 记录解析器（客户端、存根解析器）
 
-## 识别：业务环境
+# 识别：业务环境
 
-### 关键服务 (ID.BE-5)
-该子类别建议建立支持关键服务交付的弹性需求。这包括多站点冗余、硬件集群、任播、负载均衡器和 `IP virtual server (IPVS)`。
+## 关键服务 (ID.BE-5)
 
-*   多站点冗余、硬件集群、任播、负载均衡器和 `IP virtual server (IPVS)`
+该子类别建议建立支持关键服务交付的弹性需求。这包括多站点冗余、硬件集群、任播、负载均衡器和`IP virtual server (IPVS)`。
 
-## 识别：风险评估
+- 多站点冗余、硬件集群、任播、负载均衡器和`IP virtual server (IPVS)`
+
+# 识别：风险评估
 
 此子类别规定了识别和维护威胁列表的过程，以及应用可能性、业务影响和风险评估。
 
-### 记录漏洞 (ID.RA-1)
-第一个 `ID.RA` 子类别规定要识别并记录资产漏洞。这需要研究您已部署的系统的漏洞，并持续监控漏洞报告网站以及供应商网站的漏洞和补丁公告，并及时相应应用。这适用于从每个 DNS 组件到堆栈的所有层。
+## 记录漏洞 (ID.RA-1)
 
-*   记录并跟踪 DNS 服务器硬件组件的漏洞
-*   记录并跟踪 DNS 服务器内核的漏洞
-*   记录并跟踪 DNS 服务器操作系统的漏洞
-*   记录并跟踪 DNS 服务器软件应用程序的漏洞
-*   记录并跟踪端用户和其他设备上 DNS 解析器应用程序的漏洞
-*   记录并跟踪 DNS 协议的漏洞，包括我们在第 7-11 章中讨论的内容
-*   记录服务器配置错误、漏检、误报等人为错误导致的风险
-*   根据 DNS 服务器的部署位置，记录与站点安全和环境风险有关的风险
+第一个`ID.RA`子类别规定要识别并记录资产漏洞。这需要研究您已部署的系统的漏洞，并持续监控漏洞报告网站以及供应商网站的漏洞和补丁公告，并及时相应应用。这适用于从每个 DNS 组件到堆栈的所有层。
 
-### 寻求多个漏洞报告来源 (ID.RA-2)
+- 记录并跟踪 DNS 服务器硬件组件的漏洞
+- 记录并跟踪 DNS 服务器内核的漏洞
+- 记录并跟踪 DNS 服务器操作系统的漏洞
+- 记录并跟踪 DNS 服务器软件应用程序的漏洞
+- 记录并跟踪端用户和其他设备上 DNS 解析器应用程序的漏洞
+- 记录并跟踪 DNS 协议的漏洞，包括我们在第 7-11 章中讨论的内容
+- 记录服务器配置错误、漏检、误报等人为错误导致的风险
+- 根据 DNS 服务器的部署位置，记录与站点安全和环境风险有关的风险
+
+## 寻求多个漏洞报告来源 (ID.RA-2)
+
 应从多个声誉良好的来源寻求威胁和漏洞信息，包括信息共享论坛和来源。我们建议您订阅美国计算机应急响应小组 (US-CERT) 邮件列表。
 
-*   积极监控威胁和漏洞信息源，如 `US-CERT`、`CVE`（由 `US-CERT` 赞助）以及相关的良好的网络资源
-*   与其他安全人员（特别是您行业内的人员）合作，促进威胁、漏洞和缓解措施的开放共享
-*   订阅网络中使用的操作系统、操作系统实用程序或守护进程以及应用程序 (DNS) 软件的每个供应商所提供的安全馈送
+- 积极监控威胁和漏洞信息源，如`US-CERT`、`CVE`（由`US-CERT`赞助）以及相关的良好的网络资源
+- 与其他安全人员（特别是您行业内的人员）合作，促进威胁、漏洞和缓解措施的开放共享
+- 订阅网络中使用的操作系统、操作系统实用程序或守护进程以及应用程序 (DNS) 软件的每个供应商所提供的安全馈送
 
+# 威胁文档 (ID.RA-3)
 
+根据你对 DNS 服务中使用组件的威胁研究，记录每个威胁（包括内部和外部威胁）。此主列表将是一个动态文档，随着时间的推移发现新威胁不断更新，并将作为你的网络特别是 DNS 威胁的枚举清单。
 
+- 记录并跟踪 DNS 服务器硬件组件的威胁
+- 记录并跟踪 DNS 服务器内核的威胁
+- 记录并跟踪 DNS 服务器操作系统的威胁
+- 记录并跟踪 DNS 服务器软件应用程序的威胁
+- 记录并跟踪终端用户及其他设备上 DNS 解析器软件应用程序的威胁
+- 记录并跟踪 DNS 协议的威胁，包括我们将在第 7 至 11 章中讨论的威胁
+- 记录与人员问题相关以及自然灾害和非自然灾害相关的威胁
 
+# 识别威胁影响 (ID.RA-4)
 
-# 威胁文档 (ID.RA-3) 根据你对 DNS 服务中使用组件的威胁研究，记录每个威胁（包括内部和外部威胁）。此主列表将是一个动态文档，随着时间的推移发现新威胁不断更新，并将作为你的网络特别是 DNS 威胁的枚举清单。
+分析你记录的每个威胁，以评估其潜在的业务影响和发生概率。正如你记录的威胁列表是一个动态文档一样，相关的威胁影响也是如此。例如，某些与天气相关的威胁可能具有季节性；某些新发现攻击威胁对于某些类型的组织或网站可能更为普遍，或者会产生更高的业务影响严重性等。而且，当你实施针对某些威胁的控制措施时，可能会留下剩余威胁，尽管其影响可能较低。
 
-*   记录并跟踪 DNS 服务器硬件组件的威胁
-*   记录并跟踪 DNS 服务器内核的威胁
-*   记录并跟踪 DNS 服务器操作系统的威胁
-*   记录并跟踪 DNS 服务器软件应用程序的威胁
-*   记录并跟踪终端用户及其他设备上 DNS 解析器软件应用程序的威胁
-*   记录并跟踪 DNS 协议的威胁，包括我们将在第 7 至 11 章中讨论的威胁
-*   记录与人员问题相关以及自然灾害和非自然灾害相关的威胁
+- 对于每个识别出的威胁和漏洞，记录其发生的概率。
+- 对于每个识别出的威胁和漏洞，记录在威胁发生时可能相关的业务影响。
 
-## 识别威胁影响 (ID.RA-4) 分析你记录的每个威胁，以评估其潜在的业务影响和发生概率。正如你记录的威胁列表是一个动态文档一样，相关的威胁影响也是如此。例如，某些与天气相关的威胁可能具有季节性；某些新发现攻击威胁对于某些类型的组织或网站可能更为普遍，或者会产生更高的业务影响严重性等。而且，当你实施针对某些威胁的控制措施时，可能会留下剩余威胁，尽管其影响可能较低。
+# 确定风险 (ID.RA-5)
 
-*   对于每个识别出的威胁和漏洞，记录其发生的概率。
-*   对于每个识别出的威胁和漏洞，记录在威胁发生时可能相关的业务影响。
-
-## 确定风险 (ID.RA-5) 鉴于之前的子分类 `ID.RA-1-4`，你应该拥有一份列出网络和 DNS 威胁、漏洞、概率和影响的文档。根据你的分析，你可以确定每个威胁的相对风险。你可以图形化描绘每个威胁的风险，类似于我们在第 1 章图 1.3 中引入的风险概率影响图示例，为了方便起见，此处复制为 图 6.1。
+鉴于之前的子分类`ID.RA-1-4`，你应该拥有一份列出网络和 DNS 威胁、漏洞、概率和影响的文档。根据你的分析，你可以确定每个威胁的相对风险。你可以图形化描绘每个威胁的风险，类似于我们在第 1 章图 1.3 中引入的风险概率影响图示例，为了方便起见，此处复制为 图 6.1。
 
 ![图 6.1. 风险概率-影响图](img/c06f001.jpg)
 
 图 6.1. 风险概率-影响图
 
-*   根据发生的概率和相关的业务影响，评估每个识别出的威胁和漏洞的风险。
-*   反复你的分析，以考虑高优先级资产的相对风险，例如在子分类 `ID.AM-5` 中识别的 DNS 服务器。例如，给定的威胁施加在主 DNS 服务器上的影响可能比在从服务器上更高。
+- 根据发生的概率和相关的业务影响，评估每个识别出的威胁和漏洞的风险。
+- 反复你的分析，以考虑高优先级资产的相对风险，例如在子分类`ID.AM-5`中识别的 DNS 服务器。例如，给定的威胁施加在主 DNS 服务器上的影响可能比在从服务器上更高。
 
-## 保护：访问控制
+# 保护：访问控制
 
 进入“保护”功能，DNS 组件的访问控制是我们的第一个类别。
 
-### 身份与凭证 (PR.AC-1) 对于所有 DNS 组件，需要管理授权的用户身份和凭证。应当记录获得访问每个组件权限的用户身份。应允许工作职责和责任范围需要访问服务器的授权用户进行访问。访问权限（授权）应尽可能仅限制在用户角色和身份所必需的功能范围内。应定期审计用户活动，并对于工作职责不再需要访问的用户删除其用户身份，包括离开小组或组织的人。组织的凭证策略（如密码长度、字符组成、更改频率、锁定机制）应适用于获得访问 DNS 组件权限的用户。
+## 身份与凭证 (PR.AC-1)
 
-### 物理访问控制 (PR.AC-2) 访问控制子分类二规定对资产的物理访问进行管理和保护。在安全的数据中心内部署物理和/虚拟 DNS 服务器是良好的第一步。仅允许工作职责和责任范围需要访问数据中心的人员进行访问；物理访问应通过卡片阅读器或类似的电子跟踪机制进行控制以备审计。建立一个从数据中心移除服务器的流程，并要求记录和审批，可以实现对数据中心人员就有意识地移除资产进行适当的授权和沟通。这当然也会反馈到物理库存清单子分类 `ID.AM-1`。
+对于所有 DNS 组件，需要管理授权的用户身份和凭证。应当记录获得访问每个组件权限的用户身份。应允许工作职责和责任范围需要访问服务器的授权用户进行访问。访问权限（授权）应尽可能仅限制在用户角色和身份所必需的功能范围内。应定期审计用户活动，并对于工作职责不再需要访问的用户删除其用户身份，包括离开小组或组织的人。组织的凭证策略（如密码长度、字符组成、更改频率、锁定机制）应适用于获得访问 DNS 组件权限的用户。
 
-### 远程访问控制 (PR.AC-3) 应实施策略以确保用于管理目的的 DNS 服务器远程访问的安全。仅允许工作职责和责任范围需要远程访问的人员（内部人员或承包商）进行访问。应要求登录/密码验证，且通信需要加密连接。如果可能，应将命令集限制为每个用户所需的命令。
+## 物理访问控制 (PR.AC-2)
 
-### 访问权限 (PR.AC-4) 访问权限经过管理，结合了最小特权和职责分离原则。对于每个用户身份，访问级别应仅提供该用户执行其工作职责所需的命令或功能。
+访问控制子分类二规定对资产的物理访问进行管理和保护。在安全的数据中心内部署物理和/虚拟 DNS 服务器是良好的第一步。仅允许工作职责和责任范围需要访问数据中心的人员进行访问；物理访问应通过卡片阅读器或类似的电子跟踪机制进行控制以备审计。建立一个从数据中心移除服务器的流程，并要求记录和审批，可以实现对数据中心人员就有意识地移除资产进行适当的授权和沟通。这当然也会反馈到物理库存清单子分类`ID.AM-1`。
 
-## 保护：数据安全
+## 远程访问控制 (PR.AC-3)
+
+应实施策略以确保用于管理目的的 DNS 服务器远程访问的安全。仅允许工作职责和责任范围需要远程访问的人员（内部人员或承包商）进行访问。应要求登录/密码验证，且通信需要加密连接。如果可能，应将命令集限制为每个用户所需的命令。
+
+## 访问权限 (PR.AC-4)
+
+访问权限经过管理，结合了最小特权和职责分离原则。对于每个用户身份，访问级别应仅提供该用户执行其工作职责所需的命令或功能。
+
+# 保护：数据安全
 
 在此语境下，存储在 DNS 组件上或与 DNS 组件之间通信的数据安全适用于设备内核、操作系统和 DNS 应用数据。我们将在后续章节中讨论 DNS 配置数据的安全性，包括资源记录，以防御对 DNS 缓存或权威配置数据的投毒攻击。
 
-### 静态数据 (PR.DS-1) 静态数据指的是驻留在服务器上的数据，例如内核和操作系统配置，包括配置的服务、端口、用户、分区、文件系统和文件内容。应就计划更改的时间和内容记录并遵循变更控制程序。定期备份并将此类数据存储在外部，可以为服务器故障提供恢复支持。存储在外部的数据必须通过加密进行传输和存储。这些过程应适用于 DNS 应用数据、配置信息、区域存储以及缓存或待更新记录，将在后续章节中讨论。
+## 静态数据 (PR.DS-1)
 
-### 传输中数据 (PR.DS-2) 数据安全的另一个方面涉及传输中的数据。正如我们在本书第一章中所讨论的，DNS 必须支持各种 DNS 和非 DNS 组件之间用于名称解析以及配置和更新的传输路径。后续讨论大部分漏洞与移动数据有关，并将进行相应的讨论。
+静态数据指的是驻留在服务器上的数据，例如内核和操作系统配置，包括配置的服务、端口、用户、分区、文件系统和文件内容。应就计划更改的时间和内容记录并遵循变更控制程序。定期备份并将此类数据存储在外部，可以为服务器故障提供恢复支持。存储在外部的数据必须通过加密进行传输和存储。这些过程应适用于 DNS 应用数据、配置信息、区域存储以及缓存或待更新记录，将在后续章节中讨论。
 
-确保传输数据安全意味着加密或至少是数字签名，这些技术可以应用于大多数路径，尽管这种应用需要实施和维护工作，例如 `DNSSEC`。但持续的努力对于安全来说是值得的代价！其他路径，例如从解析器到递归服务器或转发器的路径较少加密，但最近在 `ISC B (9.10.3)` 中引入的 `DNS cookie` 支持例如提供了从零连接安全性的飞跃。DNS cookie 提供了一种轻量级的 DNS 消息身份验证机制 (24)。表 6.1 总结了图 1.2 中的基本 DNS 数据流及相关的通信安全机制。
+## 传输中数据 (PR.DS-2)
+
+数据安全的另一个方面涉及传输中的数据。正如我们在本书第一章中所讨论的，DNS 必须支持各种 DNS 和非 DNS 组件之间用于名称解析以及配置和更新的传输路径。后续讨论大部分漏洞与移动数据有关，并将进行相应的讨论。
+
+确保传输数据安全意味着加密或至少是数字签名，这些技术可以应用于大多数路径，尽管这种应用需要实施和维护工作，例如`DNSSEC`。但持续的努力对于安全来说是值得的代价！其他路径，例如从解析器到递归服务器或转发器的路径较少加密，但最近在`ISC B (9.10.3)`中引入的`DNS cookie`支持例如提供了从零连接安全性的飞跃。DNS cookie 提供了一种轻量级的 DNS 消息身份验证机制 (24)。表 6.1 总结了图 1.2 中的基本 DNS 数据流及相关的通信安全机制。
 
 | 传输路径 | 传输端点 | 关键安全机制 |
 | --- | --- | --- |
 | 递归查询 | 解析器–递归 DNS 服务器 | ACLs, DNS cookies, TCP, DNSCrypt; DNSSEC 可能但在递归解析器上很少实现 |
 | 迭代查询 | 递归 DNS 服务器-引导服务器和权威 DNS 服务器 | DNSSEC |
-
-
-
-
-
 | 动态更新 | IPAM 系统、客户端、DHCP 服务器和权威 DNS 服务器 | ACL、事务签名 (TSIG, GSS-TSIG) |
-| :--- | :--- | :--- |
 | 区域传输 | 主 DNS 服务器和从用 DNS 服务器 | ACL、事务签名 (TSIG) |
 | DNS 配置 | IPAM 系统、文件编辑器或传输至和 DNS 服务器 | 安全外壳 (SSH)、安全复制 (SCP)、安全 FTP、传输层安全 (TLS) |
 
-### 资产移动 (PR.DS-3) 此子类规定，在移除、传输和处置过程中对资产进行形式化管理。所有 DNS 服务器和解析器（物理或虚拟）都必须根据 `ID.AM-1` 进行清单，并且任何进入、移出清单以及在清单内部的移动都必须根据此子类进行控制。这意味着任何提议的 DNS 组件的添加、移动或移除都必须在开始之前由相关方进行文档记录、审核和批准。
+## 资产移动 (PR.DS-3)
 
-数据泄露 (PR.DS-5) 防止数据泄露的要求对于一个其目的就是自由提供查询答案并指示是否存在此类答案的服务来说，似乎看似无关。但在处理泄露时，关注的并非此类“数据”。必须实施控制措施，以防止有关 DNS 部署、IP 地址、服务器实现和版本、服务器凭据、安全策略以及可能为潜在攻击者提供信息的相关细节泄露。
+此子类规定，在移除、传输和处置过程中对资产进行形式化管理。所有 DNS 服务器和解析器（物理或虚拟）都必须根据`ID.AM-1`进行清单，并且任何进入、移出清单以及在清单内部的移动都必须根据此子类进行控制。这意味着任何提议的 DNS 组件的添加、移动或移除都必须在开始之前由相关方进行文档记录、审核和批准。
+
+## 数据泄露 (PR.DS-5)
+
+防止数据泄露的要求对于一个其目的就是自由提供查询答案并指示是否存在此类答案的服务来说，似乎看似无关。但在处理泄露时，关注的并非此类“数据”。必须实施控制措施，以防止有关 DNS 部署、IP 地址、服务器实现和版本、服务器凭据、安全策略以及可能为潜在攻击者提供信息的相关细节泄露。
 
 此类信息可以通过 DNS 侦察、服务器黑客攻击、流量嗅探、钓鱼，或通过社会工程方法泄露，例如向毫无防备的员工提出有关此类信息的看似无害的问题。保护需要技术控制和员工培训控制以降低数据泄露的风险。
 
-完整性检查 (PR.DS-6) 使用完整性检查机制来验证软件、固件和信息的完整性。配置文件的校验和和数字及事务签名可以提供针对软件或配置文件有效性以及 DNS 事务完整性的有效性检查。
+## 完整性检查 (PR.DS-6)
 
-## 保护：信息保护
+使用完整性检查机制来验证软件、固件和信息的完整性。配置文件的校验和和数字及事务签名可以提供针对软件或配置文件有效性以及 DNS 事务完整性的有效性检查。
 
-基准配置 (PR.IP-1) 应该创建并维护网络系统的基准配置，包括 DNS 服务器和带有存根解析器的主机系统。此类“标准构建模板”通过统一性提供一致性，这有助于限制在各种类型设备上安装的软件范围；因此，减少了由于使用非标准软件或硬件而引入的漏洞。对于终端用户系统，解析器软件应定义为构建中包含的一部分，这几乎总是与相应的设备操作系统一起提供的。对于 DNS 服务器，应记录硬件和软件组件列表，包括操作系统、DNS 软件、安全、监控和审计工具等。
+# 保护：信息保护
 
-变更控制 (PR.IP-3) 基准配置应该是一个受控文档，这意味着任何添加、更改或删除都应在相关方之间进行提议、审核、批准和沟通。对授权软件的配置（例如 DNS 配置）的更改也应经过计划、审核、批准和分阶段实施。
+## 基准配置 (PR.IP-1)
 
-运行环境 (PR.IP-5) 贵组织应记录并维护有关组织资产（如 DNS 服务器）物理运行环境的政策和法规。这包括提供紧急断电、防火保护、温度和湿度控制、防水保护以及服务器机房或数据中心的访问控制和审计。
+应该创建并维护网络系统的基准配置，包括 DNS 服务器和带有存根解析器的主机系统。此类“标准构建模板”通过统一性提供一致性，这有助于限制在各种类型设备上安装的软件范围；因此，减少了由于使用非标准软件或硬件而引入的漏洞。对于终端用户系统，解析器软件应定义为构建中包含的一部分，这几乎总是与相应的设备操作系统一起提供的。对于 DNS 服务器，应记录硬件和软件组件列表，包括操作系统、DNS 软件、安全、监控和审计工具等。
 
-### 保护：维护
+## 变更控制 (PR.IP-3)
 
-维护与修复 (PR.MA-1) 应该及时进行并记录 DNS 服务器的维护和修复，并使用经过批准和控制的工具。维护和修复应使用预先批准并记录的工具和流程。任何需要外部人员（例如供应商人员）支持的修复都应预先授权，且外部人员应签入和签出，并始终由授权的组织团队成员护送。需要移除 DNS 组件的修复必须连同相关的应急方案一起获得批准，并对组件进行清理，清除用户账户等任何敏感信息。
+基准配置应该是一个受控文档，这意味着任何添加、更改或删除都应在相关方之间进行提议、审核、批准和沟通。对授权软件的配置（例如 DNS 配置）的更改也应经过计划、审核、批准和分阶段实施。
 
-远程维护 (PR.MA-2) 任何远程执行的 DNS 服务器维护或修复都必须预先批准，并在活动期间开启远程连接。身份验证需要强凭据。远程访问应被记录，DNS 服务器命令和诊断操作也同样如此。
+## 运行环境 (PR.IP-5)
 
-可移动介质 (PR.PT-2) 任何可移动介质都必须受到保护，并根据策略限制其使用。供应商可以通过 USB、DVD 或其他移动介质提供软件更新。配置和备份信息也可能复制到可移动介质。可热插硬盘可能包含配置或敏感信息。此类介质必须安全存储以防止未经授权的访问，必要时必须安全运输，并在处置前通过清除介质上的任何敏感信息进行清理。
+贵组织应记录并维护有关组织资产（如 DNS 服务器）物理运行环境的政策和法规。这包括提供紧急断电、防火保护、温度和湿度控制、防水保护以及服务器机房或数据中心的访问控制和审计。
 
-访问控制 (PR.PT-3) 此子类规定对系统和资产的访问是控制的，包含了最小功能原则。只有那些工作职和角色需要访问的用户才被提供访问。用户允许的功能范围应尽可能通过设备上的权限控制进行限制。设备本身的功能应限制在执行该设备角色所需的最小功能。因此，对于 DNS 服务器，任何与 DNS 相关的服务（诊断和审计所需的除外）都应被移除。此外，应对不必要的 TCP/UDP 端口、系统或应用程序文件、进程、用户和文件系统定义限制。
+# 保护：维护
 
-## 检测：异常与事件
+## 维护与修复 (PR.MA-1)
+
+应该及时进行并记录 DNS 服务器的维护和修复，并使用经过批准和控制的工具。维护和修复应使用预先批准并记录的工具和流程。任何需要外部人员（例如供应商人员）支持的修复都应预先授权，且外部人员应签入和签出，并始终由授权的组织团队成员护送。需要移除 DNS 组件的修复必须连同相关的应急方案一起获得批准，并对组件进行清理，清除用户账户等任何敏感信息。
+
+## 远程维护 (PR.MA-2)
+
+任何远程执行的 DNS 服务器维护或修复都必须预先批准，并在活动期间开启远程连接。身份验证需要强凭据。远程访问应被记录，DNS 服务器命令和诊断操作也同样如此。
+
+## 可移动介质 (PR.PT-2)
+
+任何可移动介质都必须受到保护，并根据策略限制其使用。供应商可以通过 USB、DVD 或其他移动介质提供软件更新。配置和备份信息也可能复制到可移动介质。可热插硬盘可能包含配置或敏感信息。此类介质必须安全存储以防止未经授权的访问，必要时必须安全运输，并在处置前通过清除介质上的任何敏感信息进行清理。
+
+## 访问控制 (PR.PT-3)
+
+此子类规定对系统和资产的访问是控制的，包含了最小功能原则。只有那些工作职和角色需要访问的用户才被提供访问。用户允许的功能范围应尽可能通过设备上的权限控制进行限制。设备本身的功能应限制在执行该设备角色所需的最小功能。因此，对于 DNS 服务器，任何与 DNS 相关的服务（诊断和审计所需的除外）都应被移除。此外，应对不必要的 TCP/UDP 端口、系统或应用程序文件、进程、用户和文件系统定义限制。
+
+# 检测：异常与事件
 
 检测功能涵盖了监控和检测由于攻击、人为错误或自然灾害利用漏洞事件。
 
-事件响应 (DE.AE-5) 应该建立事件响应计划，定义可能的事件及相应的响应计划。计划应定期进行审核、批准和更新。监控系统中应建立阈值和告警，以检测并报告潜在的安全事件，例如进程和硬件状态以及 I/O 流量。响应计划还应定义事件分析、抑制、根除和恢复，以及状态报告的通信。
+
+
+# 事件响应 (DE.AE-5)
+
+应建立事件响应计划，定义可能的事件及相应的响应计划。计划应定期进行审核、批准和更新。监控系统中应建立阈值和告警，以检测并报告潜在的安全事件，例如进程和硬件状态以及 `I/O` 流量。响应计划还应定义事件分析、抑制、根除和恢复，以及状态报告的通信。
 
 ## 检测：安全持续监控
 
-必须对 DNS 组件进行持续监控，以便检测可能的事件。
+必须对 `DNS` 组件进行持续监控，以便检测可能的事件。
 
-环境监控 (DE.CM-2) 应该对物理访问控制系统和 DNS 组件所在的物理环境进行监控，以检测可能的事件。访问关键基础设施（包括 DNS 服务器）应刷卡进入。访问日志应进行审核。还应部署并审核监控系统，以检测“尾随”（例如未经授权人员在门关闭前进入）以及资产的物理移除。
+### 环境监控 (DE.CM-2)
 
-恶意代码检测 (DE.CM-4) 恶意代码可能会感染任何计算机系统。预防措施包括 DNS 服务器加固、网络过滤以及通过扫描软件或检测系统文件更改来检测恶意软件。为递归服务器配置 DNS 响应策略区（即 DNS 防火墙），可以检测植入终端用户设备或其他运行存根解析器的设备上的恶意软件。请参阅第 11 章。
+应该对物理访问控制系统和 `DNS` 组件所在的物理环境进行监控，以检测可能的事件。访问关键基础设施（包括 `DNS` 服务器）应刷卡进入。访问日志应进行审核。还应部署并审核监控系统，以检测“尾随”（例如未经授权人员在门关闭前进入）以及资产的物理移除。
 
+### 恶意代码检测 (DE.CM-4)
 
-
+恶意代码可能会感染任何计算机系统。预防措施包括 `DNS` 服务器加固、网络过滤以及通过扫描软件或检测系统文件更改来检测恶意软件。为递归服务器配置 `DNS` 响应策略区（即 `DNS` 防火墙），可以检测植入终端用户设备或其他运行存根解析器的设备上的恶意软件。请参阅第 11 章。
 
 ### 授权合规 (DE.CM-7)
+
 此子分类讨论了对授权人员、连接、设备的监控。这需要对数据中心、连接、端口或凭据以及在设备上安装的软件进行监控。任何此类不合规的事件都应根据响应计划触发调查。
 
 ### 漏洞扫描 (DE.CM-8)
+
 应定期执行漏洞扫描以检测新漏洞并验证已部署的控制。任何新漏洞或不足的缓解措施都应根据发生概率和业务影响进行分析，并定义改进后的方法。
 
 ## 响应：分析
+
 对检测到的事件的响应必须记录并达成一致。响应计划应根据总结的经验进行更新。
 
 ### 事件影响 (RS.AN-2)
+
 在检测到事件后，应分析事件以理解其影响。应遵循响应计划，进行响应、消除和恢复。
 
 ### 取证 (RS.AN-3)
+
 应对对检测到的事件进行取证分析，以超越事件本身，识别根本原因以及被利用的漏洞。这种分析对于识别新的攻击向量以及评估防御控制的有效性非常有帮助。
 
 ### 事件分类 (RS.AN-4)
+
 事件需要按照响应计划的方式进行分类。这有助于让相关人员采取行动，以分析、抑制并及时解决事件。
 
 ## 响应：缓解
+
 ### 事件抑制 (RS.MI-1)
-事件需要根据响应计划进行抑制。通过前文讨论的功能部署组件为相应部门提供抑制。必须根据事件本身采取进一步的抑制措施，以防止对 DNS 解析器或其他系统产生更广泛的影响。
+
+事件需要根据响应计划进行抑制。通过前文讨论的功能部署组件为相应部门提供抑制。必须根据事件本身采取进一步的抑制措施，以防止对 `DNS` 解析器或其他系统产生更广泛的影响。
 
 ### 事件缓解 (RS.MI-2)
+
 在事件被抑制、应急计划实施并完成取证后，应对导致成功事件的缓解方法进行定义并达成一致。相应的更新漏洞列表和响应计划。
 
 ### 新漏洞 (RS.MI-3)
+
 新识别的漏洞需要纳入已知漏洞列表。此类漏洞可能通过漏洞扫描、供应商公告或对流量的分析检测到。每个新漏洞都应根据概率和业务影响进行分析以定义相对风险。基于此评估的风险，应主动缓解或记录为接受风险。
 
 ## 恢复：恢复计划
+
 恢复功能通过应急计划和受影响元素的完全恢复，使系统和网络恢复正常运行。
 
 ### 恢复计划 (RC.RP-1)
+
 事件恢复计划在事件期间或之后执行。在事件期间，实施应急措施和替代方案以便在中断、破坏或停机时恢复服务水平。消除事件后，每个受影响的系统都应恢复到已知的工作状态。
 
 ## 恢复：改进
+
 持续改进的方法能够对响应计划和策略进行，以更有效地应对未来的事件。
 
 ### 更新响应计划 (RS.IM-1)
+
 事件恢复后，与相关人员进行事后讨论有助于审查事件、改进响应的防御和缓解步骤，以及建议的响应计划更新以总结经验。
 
 ### 更新响应策略 (RS.IM-2)
+
 应根据情况对事件响应策略进行审查和更新。例如，更新可能需要某些小组更早介入。
 
 ### 更新恢复计划 (RC.IM-1)
+
 恢复计划也应进行更新，以总结经验。
 
 ### 更新恢复策略 (RC.IM-2)
+
 如果从事件恢复的分析中产生了任何改进，则应对恢复策略进行审查和更新。
 
+# 系统安全
 
-
-
-*   需要配置各种内核设置，以防止常见的网络攻击（例如：路由重定向、源路由欺骗、ICMP 重定向）。
+*   需要配置各种内核设置，以防止常见的网络攻击（例如：路由重定向、源路由欺骗、`ICMP` 重定向）。
 
 ## 文件系统安全
 
-*   文件系统应经过精简，仅包含必要的 DNS 和相关的支持的二进制文件。
+*   文件系统应经过精简，仅包含必要的 `DNS` 和相关的支持的二进制文件。
+
 *   系统配置文件和日志应具有尽可能严格的文件权限，以防向攻击者泄露潜在的有用信息。
-*   在禁闭环境（jailed environment）中运行 DNS 服务。如果您的 DNS 守护进程被攻破，攻击者可能会访问服务器上的其他文件。可以创建一个模拟默认文件系统的替代文件系统，并将守护进程锁定在该模拟文件系统结构内部，使被破解的进程难以越出默认目录系统并破坏其他系统文件。所有主要的 DNS 实现都提供了安装或配置选项，可以为您创建这种 chroot 禁闭监狱环境，但这看起来可能有点奇怪，因为至少在红帽企业级 Linux 中，您最终得到的目录结构如下：`/var/named/chroot/dev/etc/var/named`。从禁闭守护进程的角度来看，文件系统的根实际上位于文件系统的四层深，并且仅包含真实文件系统的一个小重建子集。有关如何手动执行此操作的示例，请参考 Boran 的《Running the BIND9 DNS Server Securely (44)》。
+
+*   在禁闭环境（jailed environment）中运行 `DNS` 服务。如果您的 `DNS` 守护进程被攻破，攻击者可能会访问服务器上的其他文件。可以创建一个模拟默认文件系统的替代文件系统，并将守护进程锁定在该模拟文件系统结构内部，使被破解的进程难以越出默认目录系统并破坏其他系统文件。所有主要的 `DNS` 实现都提供了安装或配置选项，可以为您创建这种 `chroot` 禁闭监狱环境，但这看起来可能有点奇怪，因为至少在红帽企业级 Linux 中，您最终得到的目录结构如下：`/var/named/chroot/dev/etc/var/named`。从禁闭守护进程的角度来看，文件系统的根实际上位于文件系统的四层深，并且仅包含真实文件系统的一个小重建子集。有关如何手动执行此操作的示例，请参考 Boran 的《Running the BIND9 DNS Server Securely (44)》。
+
 *   环境必须是纯净的。如果攻击者渗透了监狱，在该设备上或来自设备的其他设备上几乎没有可以操作或攻击的目标。
-*   DNS 二进制文件和数据文件没有特权属性。
-*   DNS 数据文件受控的。
+
+*   `DNS` 二进制文件和数据文件没有特权属性。
+
+*   `DNS` 数据文件受控的。
+
 *   关键二进制文件是静态链接的。
 
 ## 进程安全
 
-*   以非特权进程运行您的 DNS 服务。服务在给定系统上以特定用户账户身份运行，因此获得该用户的访问级别。如果您的 DNS 守护进程以 `root` 身份运行且该进程被攻破，那么攻击者实际上已经控制了一个具有 root 权限的服务，从而在系统上获得了更大的权限。在大多数运行 ISC BIND 的 Linux 实现中，默认安装程序会创建一个名为 `named` 的用户账户，且 `named` 守护进程以该非特权用户账户运行。其他 DNS 厂商的软件产品也可以配置为此类模式。
-*   DNS 进程在纯净环境中运行。
-*   DNS 库与系统库分离。
+*   以非特权进程运行您的 `DNS` 服务。服务在给定系统上以特定用户账户身份运行，因此获得该用户的访问级别。如果您的 `DNS` 守护进程以 `root` 身份运行且该进程被攻破，那么攻击者实际上已经控制了一个具有 `root` 权限的服务，从而在系统上获得了更大的权限。在大多数运行 `ISC BIND` 的 Linux 实现中，默认安装程序会创建一个名为 `named` 的用户账户，且 `named` 守护进程以该非特权用户账户运行。其他 `DNS` 厂商的软件产品也可以配置为此类模式。
+
+*   `DNS` 进程在纯净环境中运行。
+
+*   `DNS` 库与系统库分离。
 
 ## 网络安全
 
-*   唯一开放的网络端口仅供 DNS 和诊断服务使用。
+*   唯一开放的网络端口仅供 `DNS` 和诊断服务使用。
+
 *   其他端口应处于隐身模式，对连接尝试不做出任何响应。
+
 *   控制台接口应通过 `SSH` 连接进行加密。
+
 *   可以通过 `iptables` 配置防火墙。任何网络组合、单个主机、协议（`TCP` 和 `UDP`）以及单个端口都可以轻松设置为隐身模式，使设备不会对尝试的连接做出响应。
+
 *   可以使用 `iptables` 配置拒绝服务保护，以对入站 `TCP` 和 `UDP` 数据包进行速率限制。
 
 ### 额外的 DNS 服务器控制
 
 根据您所使用的操作系统，硬件控制应涵盖以下领域。根据您特定的网络实现和要求，可能会有或其他或替代控制措施。
 
-*   监控您所使用的操作系统和 DNS 软件的安全公告，并评估其对您的部署带来的风险。根据相应的严重程度和风险评估快速应用安全补丁。
+*   监控您所使用的操作系统和 `DNS` 软件的安全公告，并评估其对您的部署带来的风险。根据相应的严重程度和风险评估快速应用安全补丁。
+
 *   移除或关闭服务器预期功能不需要的系统用户、服务/守护进程和二进制文件。
+
 *   通过关闭关闭服务器功能或服务器管理所需的任何 `IP` 地址、协议和端口来实施主机防火墙。
+
 *   在“禁闭”环境中部署每个服务器功能所需的应用程序。更多细节请见前面的“文件系统安全”章节。
+
 *   实施用户访问控制，更改厂商默认密码，要求每个用户拥有唯一的标识标识符和密码；应用密码方案和老化策略。
+
 *   检查主机/服务器访问日志以发现异常或违反策略的行为，并定期进行渗透测试。
+
 *   对人员进行有关这些策略的培训，并让他们对遵守情况负责。
 
 ## 物理安全控制
 
-包括 DNS 在内的所有网络组件的物理安全控制，旨在防止攻击者获得物理访问权限进行操纵、破坏或盗取。通常，只要您考虑了以下因素以及根据组织政策可能的其他因素，常见的物理控制就足以保护您的 DNS 基础设施。
+包括 `DNS` 在内的所有网络组件的物理安全控制，旨在防止攻击者获得物理访问权限进行操纵、破坏或盗取。通常，只要您考虑了以下因素以及根据组织政策可能的其他因素，常见的物理控制就足以保护您的 `DNS` 基础设施。
 
 *   为访问您的场地（特别是网络和计算设备室，如数据中心或电话间）的人员提供访问控制，可能包括安全摄像头。
+
 *   要求人员和承包商佩戴标识，并为进入设施的访客提供签到和临时标识服务。
-*   对公共 wifi 网络或网络插口实施控制，以防止访问未经授权的组件。
+
+*   对公共 `wifi` 网络或网络插口实施控制，以防止访问未经授权的组件。
+
 *   对包含敏感信息的计算机介质和纸质文档进行分类，并控制其存储、访问和处置。
+
 *   对人员访问及许可的访问范围要求提供文档说明和批准。
+
 *   检查物理访问日志以发现异常或违反策略的行为，并定期对访问控制进行测试。
+
 *   对人员进行有关这些策略的培训，包括对场所内未佩戴标识或不认识的人员进行询问。
 
 ## 操作控制
@@ -2478,47 +2132,48 @@ line vty
 操作控制意味着流程和程序的重复性标准化，包括确保所有人员意识到相关的安全策略和程序。这需要对所有人员进行安全策略培训，学习如何识别潜在的违规行为以及应向谁报告和跟踪此类行为。应定期审查安全程序，特别是在事件检测-响应-恢复周期之后。以下总结了关键的操作控制：
 
 *   编写安全计划，并根据教训和技术更新定期审查和更新。整体安全计划涵盖资产清单详情、已实施的控制、检测机制、事件响应计划和恢复计划。定义涵盖漏洞识别、资产保护、事件检测、响应和恢复所有方面的程序和策略。
+
 *   建立培训计划以教育员工/承包商了解策略和程序，并要求每个团队成员进行确认。
+
 *   获得管理层对策略和程序的批准以及员工和承包商的确认。
 
-## 总结
+# 总结
 
-本章介绍了与 NIST 网络安全框架核心相关的关键 DNS 安全结果，并讨论了为了保护硬件、内核、操作系统和 DNS 应用程序免受漏洞和攻击而应考虑的安全措施。大多数这些措施与您为其他基础设施元素所实施的措施相似或相同。在接下来的五章中，我们将基于这些基础安全结果，并针对相应的 DNS 特有漏洞对其进行强调。特别是，我们将审查每个主要的攻击向量；定义事件检测方法以及抑制和缓解措施，以及数据安全和防御策略。
+本章介绍了与 `NIST` 网络安全框架核心相关的关键 `DNS` 安全结果，并讨论了为了保护硬件、内核、操作系统和 `DNS` 应用程序免受漏洞和攻击而应考虑的安全措施。大多数这些措施与您为其他基础设施元素所实施的措施相似或相同。在接下来的五章中，我们将基于这些基础安全结果，并针对相应的 `DNS` 特有漏洞对其进行强调。特别是，我们将审查每个主要的攻击向量；定义事件检测方法以及抑制和缓解措施，以及数据安全和防御策略。
 
+拒绝服务 (`DoS`) 或分布式拒绝服务 (`DDoS`) 攻击是一种暴力性的高流量数据流量攻击，这些攻击针对目标发起，旨在使目标设备上运行的服务无法供这些服务的合法用户访问。多年来，这类攻击已针对各种类型的网络组件发起，包括 `Web` 服务器、邮件服务器和 `DNS` 服务器。
 
+除了直接的正面拒绝服务攻击外，这种攻击的其他形式还使用伪造的源 `IP` 地址（匹配目标的 `IP` 地址）来产生大量流量；这将向目标 `IP` 地址产生海量的响应包。这种反射器类型的攻击通常利用针对受害者的源 `IP` 地址向 `DNS` 服务器发送大量查询。
 
-
-
-拒绝服务 (`DoS`) 或分布式拒绝服务 (`DDoS`) 攻击是一种暴力性的高流量数据流量攻击，这些攻击针对目标发起，旨在使目标设备上运行的服务无法供这些服务的合法用户访问。多年来，这类攻击已针对各种类型的网络组件发起，包括 Web 服务器、邮件服务器和 DNS 服务器。
-
-除了直接的正面拒绝服务攻击外，这种攻击的其他形式还使用伪造的源 IP 地址（匹配目标的 IP 地址）来产生大量流量；这将向目标 IP 地址产生海量的响应包。这种反射器类型的攻击通常利用针对受害者的源 IP 地址向 DNS 服务器发送大量查询。
-
-我们将讨论这些利用 DNS 协议或通用 IP 数据包来耗尽 DNS 服务器资源的特定 DNS DoS 攻击。我们将首先回顾第 4 章中介绍的各种攻击形式，然后讨论检测和防御方法。
+我们将讨论这些利用 `DNS` 协议或通用 `IP` 数据包来耗尽 `DNS` 服务器资源的特定 `DNS DoS` 攻击。我们将首先回顾第 4 章中介绍的各种攻击形式，然后讨论检测和防御方法。
 
 ## 拒绝服务攻击
 
-`DoS`/DDoS` 攻击由攻击者发起，意图用虚假的 DNS 请求或其他无关的数据包淹没 DNS 服务器，从而使其失去处理合法 DNS 查询的能力。从 DNS 服务器的角度来看，它只是尝试在接收时处理每个数据包。当虚假包的数量增加到超过服务器支持的查询响应率时，处理的合法查询比例就会减少，DNS 解析服务的容量会下降到仅剩被处理的小部分比例。最终，攻击可能会导致服务器崩溃。
+`DoS`/`DDoS` 攻击由攻击者发起，意图用虚假的 `DNS` 请求或其他无关的数据包淹没 `DNS` 服务器，从而使其失去处理合法 `DNS` 查询的能力。从 `DNS` 服务器的角度来看，它只是尝试在接收时处理每个数据包。当虚假包的数量增加到超过服务器支持的查询响应率时，处理的合法查询比例就会减少，`DNS` 解析服务的容量会下降到仅剩被处理的小部分比例。最终，攻击可能会导致服务器崩溃。
 
-如图 7.1 右侧的简单查询处理图所示，在攻击之前，服务器接收的查询远在其响应能力范围内。攻击者大幅增加查询量，试图淹没服务器并减少或消除 DNS 解析。
+如图 7.1 右侧的简单查询处理图所示，在攻击之前，服务器接收的查询远在其响应能力范围内。攻击者大幅增加查询量，试图淹没服务器并减少或消除 `DNS` 解析。
 
 ![图 7.1 拒绝服务攻击](img/c07f001.jpg)
 
 `图 7.1` 拒绝服务攻击
 
-针对 DNS 的 `DoS` 攻击类型可能有以下形式：
+针对 `DNS` 的 `DoS` 攻击类型可能有以下形式：
 
-*   `DNS query flood` – 攻击者发布了大量超过其解析能力的 DNS 查询。
-*   `UDP packet flood` – 攻击者可能使用随机的 UDP 目的端口号发布大量 UDP 数据包，迫使服务器对每个数据包响应 ICMP 目标不可到达消息。
-*   `TCP SYN attack` – 尽管 DNS 通常使用 UDP，但允许使用 TCP。SYN 攻击涉及攻击者通过不同的源 IP 地址和/或端口发送 TCP SYN 消息建立 TCP 连接，然后忽略 SYN-ACK，从而不通过三次握手中的第三条消息完成连接建立。在等待每个 ACK 期间，服务器会保持半开 TCP 连接挂起状态，并最终耗尽其 TCP 连接容量。
-*   `ICMP flood` – 攻击者向服务器发送持续的 ICMP 数据包流，徒劳地占用其处理能力。
+*   `DNS query flood` – 攻击者发布了大量超过其解析能力的 `DNS` 查询。
 
-`Distributed Denial of Service`（分布式拒绝服务）是 `DDoS` 攻击的一种变体，但规模更大。攻击者可以使用僵尸网络从多个位置发起攻击，使得封锁源 IP 变得困难。
+*   `UDP packet flood` – 攻击者可能使用随机的 `UDP` 目的端口号发布大量 `UDP` 数据包，迫使服务器对每个数据包响应 `ICMP` 目标不可到达消息。
+
+*   `TCP SYN attack` – 尽管 `DNS` 通常使用 `UDP`，但允许使用 `TCP`。`SYN` 攻击涉及攻击者通过不同的源 `IP` 地址和/或端口发送 `TCP SYN` 消息建立 `TCP` 连接，然后忽略 `SYN-ACK`，从而不通过三次握手中的第三条消息完成连接建立。在等待每个 `ACK` 期间，服务器会保持半开 `TCP` 连接挂起状态，并最终耗尽其 `TCP` 连接容量。
+
+*   `ICMP flood` – 攻击者向服务器发送持续的 `ICMP` 数据包流，徒劳地占用其处理能力。
+
+`Distributed Denial of Service`（分布式拒绝服务）是 `DDoS` 攻击的一种变体，但规模更大。攻击者可以使用僵尸网络从多个位置发起攻击，使得封锁源 `IP` 变得困难。
 
 ![图 7.2 拒绝服务攻击](img/c07f002.jpg)
 
 `图 7.2` 拒绝服务攻击
 
-`Bogus Queries`（虚假查询）这类 `DoS` 试图使用 DNS 协议来耗尽服务器资源。
+`Bogus Queries`（虚假查询）这类 `DoS` 试图使用 `DNS` 协议来耗尽服务器资源。
 
 ![图 7.3 虚假查询](img/c07f003.jpg)
 
@@ -2534,17 +2189,13 @@ line vty
 
 ## 反射器样式攻击
 
-反射形式的攻击试图利用一个或多个 DNS 服务器向特定目标发送大量数据，从而拒绝该目标的服务。
+反射形式的攻击试图利用一个或多个 `DNS` 服务器向特定目标发送大量数据，从而拒绝该目标的服务。
 
 ![图 7.5 反射样式攻击](img/c07f005.jpg)
 
 `图 7.5` 反射样式攻击
 
-
-
-
-
-*   放大（Amplification）——在查询包含大量数据的资源记录类型（如 `NAPTR-`、`ANY-` 和 `DNSSEC` 签名答案）时使用反射方法，会通过提供更大的响应数据包来放大这种攻击。每个响应服务器都会向伪造的 IP 地址的“请求者”返回数据，从而用大量数据流淹没该目标，与典型的查询响应相比，放大了攻击流量。
+*   放大（Amplification）——在查询包含大量数据的资源记录类型（如 `NAPTR-`、`ANY-` 和 `DNSSEC` 签名答案）时使用反射方法，会通过提供更大的响应数据包来放大这种攻击。每个响应服务器都会向伪造的 `IP` 地址的“请求者”返回数据，从而用大量数据流淹没该目标，与典型的查询响应相比，放大了攻击流量。
 
 ## 检测服务拒绝攻击
 
@@ -2563,12 +2214,19 @@ line vty
 总结，关键的服务拒绝类型攻击指标包括：
 
 *   在您的网络上和/或 `DNS` 服务器上测量的 `IP` 数据包激增
+
 *   在您的 `DNS` 服务器上测量的 `memory` 或 `CPU` 利用率升高
+
 *   流量增加与任何值得关注的公告或营销活动无关
+
 *   流量增加与网络中其他地方的网络或 `DNS` 服务器故障无关
+
 *   发往特定 `IP` 地址的数据包数量大幅增加
+
 *   源 `IP` 地址数量较少，但大部分流量源自这些地址，例如“热门流量源”
+
 *   特别是 `DNS` 事务中查询/答案事务的平衡失调。当查询数量远超过响应数量时，可能表明虚假查询或 `PRSD` 攻击；如果响应远超过查询，这可能标志着反射或放大攻击
+
 *   `NXDOMAIN` 和 `SERVFAIL` 响应数量相对较多（可能的 `PRSD` 攻击）
 
 ## 拒绝服务防护
@@ -2581,96 +2239,96 @@ line vty
 
 但如果您遭受 `DDoS` 攻击，阻塞单个 `IP` 地址不足以阻止攻击；如果可能，可以采取以下策略来阻止或限流所有参与者：
 
-*   服务器级入站 ACL，限制哪些 `IP` 网络或主机处理查询（递归服务器）。
-*   `DNS` 服务级入站 ACL，限制从哪些 `IP` 主机或网络处理给定类型的 `DNS` 事务；例如查询区域传输。
-*   针对特定源和/或类型（`TCP`、`UDP`、`DNS` 等）的入站限流。许多 `DNS` 设备厂商支持在每个网络接口上配置限流。然而，您也可以使用 `iptables` 在 Linux `DNS` 服务器上配置限流，限制来自给定源 `IP` 地址或子网的入站 `DNS` 查询。特别是 `hashlimit` 关允许对给定 CIDR 网络内的每个主机进行限制。
+*   服务器级入站 `ACL`，限制哪些 `IP` 网络或主机处理查询（递归服务器）。
+
+*   `DNS` 服务级入站 `ACL`，限制从哪些 `IP` 主机或网络处理给定类型的 `DNS` 事务；例如查询区域传输。
+
+*   针对特定源和/或类型（`TCP`、`UDP`、`DNS` 等）的入站限流。许多 `DNS` 设备厂商支持在每个网络接口上配置限流。然而，您也可以使用 `iptables` 在 Linux `DNS` 服务器上配置限流，限制来自给定源 `IP` 地址或子网的入站 `DNS` 查询。特别是 `hashlimit` 关允许对给定 `CIDR` 网络内的每个主机进行限制。
+
 *   如果您的递归服务器启用了 `DNS` TCP，您也可以限制入站 `TCP` 连接。
+
 *   `DNS` Any 播部署，多个 `DNS` 服务器使用共同的 `IP` 地址。这种方法在 2007 年 2 月针对互联网 `DNS` 根服务器的 `DoS` 攻击中被证明是有效的。
-*   考虑使用 `DNS` 托管服务来辅助您的内部外部 `DNS` 部署（反之亦然，考虑支持自己的内部部署以辅助您的托管服务）。或者考虑使用多个托管服务商。2016 年 10 月针对 `DynDNS` 基础设施的 DDoS 攻击凸显了“单一来源” `DNS` 托管服务的组织所遭受的额外损害。多样化供应商（包括自己的服务器托管）可以提供多种解决路径，并让您不易受到服务提供商 `DoS` 攻击的影响。
-*   实施 `DNS` Cookie，即可对 `DNS` 请求和响应进行轻量级身份验证而无需配置。
 
 
 
+考虑使用`DNS`托管服务来辅助您的内部外部`DNS`部署（反之亦然，考虑支持自己的内部部署以辅助您的托管服务）。或者考虑使用多个托管服务商。2016 年 10 月针对`DynDNS`基础设施的 DDoS 攻击凸显了“单一来源”`DNS`托管服务的组织所遭受的额外损害。多样化供应商（包括自己的服务器托管）可以提供多种解决路径，并让您不易受到服务提供商`DoS`攻击的影响。
 
+实施`DNS` Cookie，即可对`DNS`请求和响应进行轻量级身份验证而无需配置。
 
-# DNS Cookies
+## DNS Cookies
 
-DNS cookies 定义在 `RFC 7873` (24) 中，它定义了一种无需预配置的轻量级 DNS 身份验证机制。如果客户端和服务器都支持 DNS cookies，该方案可以实现双方的基础身份验证，从而缓解利用伪造源 IP 地址的 DoS 攻击。DNS cookies 无法防止来自正确（非伪造）IP 地址的 DoS 攻击，但它们它们可以帮助快速识别违规主机以便进行修复。
+DNS cookies 定义在`RFC 7873` (24) 中，它定义了一种无需预配置的轻量级 DNS 身份验证机制。如果客户端和服务器都支持 DNS cookies，该方案可以实现双方的基础身份验证，从而缓解利用伪造源 IP 地址的 DoS 攻击。DNS cookies 无法防止来自正确（非伪造）IP 地址的 DoS 攻击，但它们可以帮助快速识别违规主机以便进行修复。
 
-在构建查询时，客户端会在 `EDNS0` “cookie” 选项中填充：要么是针对查询目标服务器的缓存服务器 cookie，要么是由其 IP 地址、服务器 IP 地址和随机数通过伪随机函数生成的自生成 cookie。服务器将返回一个服务器 cookie，该 cookie 是根据客户端 IP 地址、客户端 cookie 和随机数通过伪随机函数生成的。
+在构建查询时，客户端会在`EDNS0`“cookie”选项中填充：要么是针对查询目标服务器的缓存服务器 cookie，要么是由其 IP 地址、服务器 IP 地址和随机数通过伪随机函数生成的自生成 cookie。服务器将返回一个服务器 cookie，该 cookie 是根据客户端 IP 地址、客户端 cookie 和随机数通过伪随机函数生成的。
 
-DNS cookies 目前尚尚未被广泛实现，尽管它在 `ISC BIND 9.11` 和 `Knot Resolver 1.1` 中被原生支持。在配置了响应速率限制 (`RRL`）时，`BIND` 会使用带有 cookie 的查询来白名单（即处理）此类查询。
+DNS cookies 目前尚未被广泛实现，尽管它在`ISC BIND 9.11`和`Knot Resolver 1.1`中被原生支持。在配置了响应速率限制 (`RRL`) 时，`BIND`会使用带有 cookie 的查询来白名单（即处理）此类查询。
 
 ## 伪造查询缓解
 
-伪造查询攻击试图通过发布大量针对随机域名的查询来消耗递归 DNS 服务器的资源。递归服务器在域树中向下寻求解析，但最终对于所查询的长域名并不存在任何委托。例如，形式为 `<random label>.<valid subdomain(s)>.<valid domain>.<TLD>` 的查询，其中随机标签和有效的 `[sub]domains` 可能会被更改。在此期间，服务器有多个正在追踪并尝试解析的待处理查询。`NXDOMAIN` 的最终结果对于所有的努力来说补偿几乎是微乎其微！如果在几乎相同的时间内进行这种操作数千次，递归服务器的资源可能会迅速耗尽。
+伪造查询攻击试图通过发布大量针对随机域名的查询来消耗递归 DNS 服务器的资源。递归服务器在域树中向下寻求解析，但最终对于所查询的长域名并不存在任何委托。例如，形式为`<random label>.<valid subdomain(s)>.<valid domain>.<TLD>`的查询，其中随机标签和有效的`[sub]domains`可能会被更改。在此期间，服务器有多个正在追踪并尝试解析的待处理查询。`NXDOMAIN`的最终结果对于所有的努力来说补偿几乎是微乎其微。如果在几乎相同的时间内进行这种操作数千次，递归服务器的资源可能会迅速耗尽。
 
 虽然上述描述的标准端口和协议速率限制策略通常可以帮助限制从特定主机发出的入站 DNS 查询流，但分布式伪造查询攻击可能会绕过这一点，特别是考虑到一个入站查询会导致递归服务器上产生多个出站查询，并对非缓存条目产生查询状态管理周期。在您的递归服务器上实施入站查询速率限制可以帮助减少处理大量比例查询时的服务器负载。
 
-`Unbound` 服务器提供 `jostle-timeout` 选项，允许在服务器忙碌时指定一个超时值。该参数以毫秒为单位，默认值为 `200`。当到达的查询数量增加，导致查询超时超过此值时，服务器将允许一半的出站查询运行完成，但对另一半查询将应用此参数中指定的超时值。
+`Unbound`服务器提供`jostle-timeout`选项，允许在服务器忙碌时指定一个超时值。该参数以毫秒为单位，默认值为`200`。当到达的查询数量增加，导致查询超时超过此值时，服务器将允许一半的出站查询运行完成，但对另一半查询将应用此参数中指定的超时值。
 
-`ISC BIND` 服务器支持 `fetches-per-server` 选项来限制针对给定服务器的出站待处理查询数量。该选项的第二个参数指示了在超过限制时服务器应如何响应查询：丢弃查询或返回 `SERVFAIL`。请注意，对于 `BIND` 版本 `9.9.8` 和 `9.10.3` 及以上版本，`BIND` 必须使用 `--enable-fetchlimit` 配置选项进行编译构建，而在 `BIND 9.11` 中，此功能是默认启用的。查询配额根据超时与成功解析的比例动态调整大小。您可以使用 `fetch-quota-params` 选项来调整这种动态调整，该选项指定了四个参数：
+`ISC BIND`服务器支持`fetches-per-server`选项来限制针对给定服务器的出站待处理查询数量。该选项的第二个参数指示了在超过限制时服务器应如何响应查询：丢弃查询或返回`SERVFAIL`。请注意，对于`BIND`版本`9.9.8`和`9.10.3`及以上版本，`BIND`必须使用`--enable-fetchlimit`配置选项进行编译构建，而在`BIND 9.11`中，此功能是默认启用的。查询配额根据超时与成功解析的比例动态调整大小。您可以使用`fetch-quota-params`选项来调整这种动态调整，该选项指定了四个参数：
 
-- 重新计算配额之间的查询数量；默认为每 `100` 次查询一次。
-- 超过此阈值的超时比例被认为服务器查询负载是可接受的，配额可能会提高；默认值为 `0.1` (10%)。
-- 超过此阈值的超时比例被认为服务器查询负载过高，配额可能会降低；默认值为 `0.3`。
-- 在与之前测量的超时比例取平均值时，分配给最近测量周期的权重；默认值为 `0.7`。
+- 重新计算配额之间的查询数量；默认为每`100`次查询一次。
+- 超过此阈值的超时比例被认为服务器查询负载是可接受的，配额可能会提高；默认值为`0.1` (10%)。
+- 超过此阈值的超时比例被认为服务器查询负载过高，配额可能会降低；默认值为`0.3`。
+- 在与之前测量的超时比例取平均值时，分配给最近测量周期的权重；默认值为`0.7`。
 
 ## PRSD 攻击缓解
 
-PRSD 攻击是伪造查询攻击的一种变体，其中连续查询的 `<valid domain>` 部分是相同的，攻击目标是递归服务器，`example.com`。如果攻击者利用多个解析器进行此类攻击，递归服务器可能会受到 PRSD 攻击的影响。在我们的情况下，攻击目标是权威服务器 `example.com`。随机域名标签可能位于递归服务器缓存中，递归服务器因等待响应而资源被消耗。
+PRSD 攻击是伪造查询攻击的一种变体，其中连续查询的`<valid domain>`部分是相同的，攻击目标是递归服务器，`example.com`。如果攻击者利用多个解析器进行此类攻击，递归服务器可能会受到 PRSD 攻击的影响。在我们的情况下，攻击目标是权威服务器`example.com`。随机域名标签可能位于递归服务器缓存中，递归服务器因等待响应而资源被消耗。
 
-`jostle-timeout` 和 `fetches-per-server` 选项分别用于 `Unbound` 和 `BIND`，有助于限制发往每个权威服务器的出站查询。`BIND` 还提供了一个 `fetches-per-zone` 配额选项，有助于进一步限制给定域的查询数量。该选项的单一参数设置了允许所有子域的硬限制。
+`jostle-timeout`和`fetches-per-server`选项分别用于`Unbound`和`BIND`，有助于限制发往每个权威服务器的出站查询。`BIND`还提供了一个`fetches-per-zone`配额选项，有助于进一步限制给定域的查询数量。该选项的单一参数设置了允许所有子域的硬限制。
 
-`BIND` 还提供 `max-clients-per-query` 选项，允许相同名称类型的并发查询数。服务器发起迭代查询获取权威响应并相应响应每个客户端。然而，在主机、子域名或名称中的任何标签变化的情况下，此选项不适用。
+`BIND`还提供`max-clients-per-query`选项，允许相同名称类型的并发查询数。服务器发起迭代查询获取权威响应并相应响应每个客户端。然而，在主机、子域名或名称中的任何标签变化的情况下，此选项不适用。
 
-如果这些措施在调整数字后证明无效，您可能需要将您的递归服务器手动配置为目标域的权威以停止对该域的递归。或者您可以将该域名临时添加到 DNS 防火墙。无论何种情况，在攻击恢复后请忘记撤销任何手动更改。
+如果这些措施在调整数字后证明无效，您可能需要将您的递归服务器手动配置为目标域的权威以停止对该域的递归。或者您可以将该域名临时添加到 DNS 防火墙。无论何种情况，在攻击恢复后请记得撤销任何手动更改。
 
 ## 反射缓解
 
 反射式攻击的特征是一系列带有伪造源 IP 地址的 DNS 查询，攻击目标是该地址。攻击者试图发起大量此类查询，以泛洪伪造的源 IP 地址。此类查询意图触发比请求大得多的响应（例如 DNSSEC 签名答案），会放大目标的流量负载，并恰切地称为放大攻击。
 
-- 按照 `BCP38` (39) 在您的（以及您的 ISP 的）路由器上使用反向路径转发配置 IP 地址过滤，有助于减少伪造的成功率。
-- 大多数 DNS 服务器也支持 `RRL` 功能，有助于减少此类攻击的影响。通常，响应速率限制首先需要通过观察指向公共 IP 地址的一系列连续几乎完全相同的查询响应来检测攻击。
+- 按照`BCP38` (39) 在您的（以及您的 ISP 的）路由器上使用反向路径转发配置 IP 地址过滤，有助于减少伪造的成功率。
+- 大多数 DNS 服务器也支持`RRL`功能，有助于减少此类攻击的影响。通常，响应速率限制首先需要通过观察指向公共 IP 地址的一系列连续几乎完全相同的查询响应来检测攻击。
 
-`RRL` 实现通常使用动态响应“信用桶”方案，其中为每个客户端分配信用，并随着响应的交付相应减少响应信用。如果给定客户端的信用为零，则丢弃响应。信用状态会定期进行审查以刷新和重置信用。
+`RRL`实现通常使用动态响应“信用桶”方案，其中为每个客户端分配信用，并随着响应的交付相应减少响应信用。如果给定客户端的信用为零，则丢弃响应。信用状态会定期进行审查以刷新和重置信用。
 
 ### NLnet RRL 参数
 
-NLnet 的 `NSD` 服务器提供了以下 RRL 配置参数，定义在 `nsd.conf` 文件的 server 部分中。`whitelist` 参数对于定义可能应用不同 RRL 策略的流行域名非常有用。以下参数可在 `4.1.12` 版本中定义；请查看您版本的 man 页以获取任何差异。
+NLnet 的`NSD`服务器提供了以下 RRL 配置参数，定义在`nsd.conf`文件的 server 部分中。`whitelist`参数对于定义可能应用不同 RRL 策略的流行域名非常有用。以下参数可在`4.1.12`版本中定义；请查看您版本的 man 页以获取任何差异。
 
-
-
-
-
-* `rrl-size`: `numbuckets` – 客户端桶条的数量，形式为哈希表大小；默认值为 100 万。来自给定地址块的查询将在同一个桶内进行分析。每个地址块的大小分别由 IPv4 和 IPv6 地址的 `rrl-ipv4-prefix-length` 和 `rrl-ipv6-prefix-length` 参数定义。
-* `rrl-ratelimit`: `qps` – 来自单个查询源允许的最大每秒查询数 (`qps`)。
-* `rrl-slip`: `numpackets` – 在发送 SLIP 响应（DNS 头部中截断位 `TC` 置为 1 的响应）之前丢弃 `numpackets` 个数据包。
-* `rrl-ipv4-prefix-length`: `length` – 用于网块地址分组的 IPv4 前缀长度，默认值为 24。
-* `rrl-ipv6-prefix-length`: `length` – 用于网块地址分组的 IPv6 前缀长度，默认值为 64。
-* `rrl-whitelist-ratelimit`: `qps` – 来自一个白名单查询源的最大每秒查询数。
+- `rrl-size`: `numbuckets` – 客户端桶条的数量，形式为哈希表大小；默认值为 100 万。来自给定地址块的查询将在同一个桶内进行分析。每个地址块的大小分别由 IPv4 和 IPv6 地址的`rrl-ipv4-prefix-length`和`rrl-ipv6-prefix-length`参数定义。
+- `rrl-ratelimit`: `qps` – 来自单个查询源允许的最大每秒查询数 (`qps`)。
+- `rrl-slip`: `numpackets` – 在发送 SLIP 响应（DNS 头部中截断位`TC`置为 1 的响应）之前丢弃`numpackets`个数据包。
+- `rrl-ipv4-prefix-length`: `length` – 用于网块地址分组的 IPv4 前缀长度，默认值为 24。
+- `rrl-ipv6-prefix-length`: `length` – 用于网块地址分组的 IPv6 前缀长度，默认值为 64。
+- `rrl-whitelist-ratelimit`: `qps` – 来自一个白名单查询源的最大每秒查询数。
 
 ### ISC BIND 响应速率限制
 
-ISC BIND 实现允许在 options 或 view 块中配置速率限制语句（stanza），其中包含多个参数，包括 `responses-per-second`，该参数设置了用户自定义时间窗口内允许允许的最大响应数，之后可以对该速率进行调整。从 BIND 9.11 开始，速率限制块内可配置的参数包括以下内容。请参考适用于您的 BIND 版本的 BIND 管理参考手册。
+ISC BIND 实现允许在 options 或 view 块中配置速率限制语句（stanza），其中包含多个参数，包括`responses-per-second`，该参数设置了用户自定义时间窗口内允许的最大响应数，之后可以对该速率进行调整。从 BIND 9.11 开始，速率限制块内可配置的参数包括以下内容。请参考适用于您的 BIND 版本的 BIND 管理参考手册。
 
-* `responses-per-second` `number` – 对有效域名 (`qname`) 和资源记录类型 (`qtype`) 的非空响应的限制。
-* `referrals-per-second` `number` – 对有效 `qname` 和 `qtype` 的非空引导（referrals）的限制。
-* `nodata-per-second` `number` – 无论 `qtype` 如何，对有效 `qname` 的 NODATA 响应的限制。
-* `nxdomains-per-second` `number` – 对给定 `qname` 的 NXDOMAIN 响应的限制。
-* `errors-per-second` `number` – 对给定 `qname` 和 `qtype` 的除 NXDOMAIN 外的 DNS 错误（`REFUSED`、`FORMERR` 和 `SERVFAIL`）的限制。
-* `all-per-second` `number` – 任意类型的 UDP 响应限制。
-* `window` `number` – 用于计算和平均响应额度的窗口长度（秒为单位）。
-* `log-only` `yes_or_no` – 设置为 yes 时，不丢弃查询但会记录日志——用于测试目的。
-* `qps-scale` `number` – 用于动态扩展速率限制；当服务器的 qps 超过此 `qps-scale` 参数值时，响应、错误、NXDOMAINS 和“所有”的限制将根据观测到的 qps/qps scale 比例进行缩小。
-* `ipv4-prefix-length` `number` – IPv4 块的大小，在该块内的所有查询被视为同一个桶。
-* `ipv6-prefix-length` `number` – IPv46 块的大小，在该块内的所有查询被视为同一个桶。
-* `slip` `number` – 在发送 SLIP 响应（DNS 头部截断位置为 1 的响应）之前丢弃 `number` 个数据包。
-* `exempt-clients` {`address_match_list`} – 由 `address_match_list` 标识的客户端不受速率限制。
-* `max-table-size` `number` – 用于跟踪请求并应用速率限制的表的最大大小。
-* `min-table-size` `number` – 用于跟踪请求并应用速率限制的表的最小大小。
+- `responses-per-second` `number` – 对有效域名 (`qname`) 和资源记录类型 (`qtype`) 的非空响应的限制。
+- `referrals-per-second` `number` – 对有效`qname`和`qtype`的非空引导（referrals）的限制。
+- `nodata-per-second` `number` – 无论`qtype`如何，对有效`qname`的 NODATA 响应的限制。
+- `nxdomains-per-second` `number` – 对给定`qname`的 NXDOMAIN 响应的限制。
+- `errors-per-second` `number` – 对给定`qname`和`qtype`的除 NXDOMAIN 外的 DNS 错误（`REFUSED`、`FORMERR`和`SERVFAIL`）的限制。
+- `all-per-second` `number` – 任意类型的 UDP 响应限制。
+- `window` `number` – 用于计算和平均响应额度的窗口长度（秒为单位）。
+- `log-only` `yes_or_no` – 设置为 yes 时，不丢弃查询但会记录日志——用于测试目的。
+- `qps-scale` `number` – 用于动态扩展速率限制；当服务器的 qps 超过此`qps-scale`参数值时，响应、错误、NXDOMAINS 和“所有”的限制将根据观测到的 qps/qps scale 比例进行缩小。
+- `ipv4-prefix-length` `number` – IPv4 块的大小，在该块内的所有查询被视为同一个桶。
+- `ipv6-prefix-length` `number` – IPv6 块的大小，在该块内的所有查询被视为同一个桶。
+- `slip` `number` – 在发送 SLIP 响应（DNS 头部截断位置为 1 的响应）之前丢弃`number`个数据包。
+- `exempt-clients` {`address_match_list`} – 由`address_match_list`标识的客户端不受速率限制。
+- `max-table-size` `number` – 用于跟踪请求并应用速率限制的表的最大大小。
+- `min-table-size` `number` – 用于跟踪请求并应用速率限制的表的最小大小。
 
-这两种实现的参数都允许对速率限制行为进行细粒度控制，尽管您可能需要通过调整不同的设置来达到您所需的优化行为。BIND 9.11 还增加了 `minimal-any` 选项，用于配置 BIND 返回随机选择的单个 RRSet，而不是所有匹配的 RRSets，以缓解利用 ANY 查询的反射器攻击。
+这两种实现的参数都允许对速率限制行为进行细粒度控制，尽管您可能需要通过调整不同的设置来达到您所需的优化行为。BIND 9.11 还增加了`minimal-any`选项，用于配置 BIND 返回随机选择的单个 RRSet，而不是所有匹配的 RRSets，以缓解利用 ANY 查询的反射器攻击。
 
 检查服务器关于被丢弃查询和服务器自动速率操纵的日志，以识别攻击的开始，并在恢复阶段审查攻击缓解措施。
 
@@ -2685,7 +2343,7 @@ server:
      rate-limit-slip: 2  # 每隔一个响应 slip 一
 ```
 
-Knot DNS 还提供了通过 `rate-limit-whitelist` 参数对 IP 地址集、子网和范围设置白名单的能力，从而禁用速率限制。
+Knot DNS 还提供了通过`rate-limit-whitelist`参数对 IP 地址集、子网和范围设置白名单的能力，从而禁用速率限制。
 
 ### PowerDNS 参数
 
@@ -2701,22 +2359,18 @@ PowerDNS 允许您配置 lua 脚本来处理 RRL，例如 Mark Scholten (45) 发
 
 递归 DNS 服务器执行从解析器（通常是存根解析器或另一个 DNS 服务器）接收查询并寻求答案的任务。在解析过程中收到的答案缓存在递归服务器的内存中。由于这个原因，递归服务器也称为缓存服务器。缓存允许递归服务器根据其缓存中已“已知”的信息来回答查询。对于答案存在缓存中的给定查询，每当收到相同查询时，服务器都会响应缓存答案，直到记录的 TTL（生存时间）过期。因此，递归服务器可以立即响应，而无需向域树向下发起迭代查询。
 
-缓存此类解析数据提高了查询性能，但这种数据缓存也成为了极具吸引力的攻击目标，可以引导一个或多个客户端进入伪造网站，以收集个人或财务信息。例如，如果攻击者能够修改流行的 `www.example-bank.com` 站点的缓存记录，指向攻击者的网站（该网站看起来像银行网站），许多用户可能会无意中泄露凭据以及账户和个人信息。所有配置为查询此类中毒缓存服务器的客户端在伪造记录缓存期间都会受到这种重定向的影响。
+缓存此类解析数据提高了查询性能，但这种数据缓存也成为了极具吸引力的攻击目标，可以引导一个或多个客户端进入伪造网站，以收集个人或财务信息。例如，如果攻击者能够修改流行的`www.example-bank.com`站点的缓存记录，指向攻击者的网站（该网站看起来像银行网站），许多用户可能会无意中泄露凭据以及账户和个人信息。所有配置为查询此类中毒缓存服务器的客户端在伪造记录缓存期间都会受到这种重定向的影响。
 
 ## 攻击形式
 
 为了污染缓存，来自攻击者的 DNS 查询响应必须在合法响应到达服务器之前到达，并映射到正在等待响应的待处理查询上。服务器将通过匹配响应中的以下字段，将收到的答案映射到之前发布的查询：
 
-* 响应的源 IP 地址映射到查询的目的 IP 地址，且目的地址匹配此服务器的地址。
-* 响应的目标端口匹配查询的源端口，且答案的源端口为 53（或更准确地说匹配查询的目的端口，53 是 DNS 常用端口）。
-* DNS 头部中的 DNS 事务 ID 在查询和响应中匹配。
-* 问题部分中的 `Qname`、`Qclass` 和 `Qtype` 在查询和响应中匹配。
+- 响应的源 IP 地址映射到查询的目的 IP 地址，且目的地址匹配此服务器的地址。
+- 响应的目标端口匹配查询的源端口，且答案的源端口为 53（或更准确地说匹配查询的目的端口，53 是 DNS 常用端口）。
+- DNS 头部中的 DNS 事务 ID 在查询和响应中匹配。
+- 问题部分中的`Qname`、`Qclass`和`Qtype`在查询和响应中匹配。
 
-
-
-
-
-响应中回答（Answer）、权威（Authority）和附加（Additional）部分中的域名必须与 `Qname` 属于同一个域分支。这被称为**越边界检查**（`bailiwick check`）。因此，如果 `Qname` 在 [example-bank.com](http://example-bank.com) 域内，服务器不应在附加部分中缓存针对 [example.com](http://example.com) 的信息。
+响应中回答（Answer）、权威（Authority）和附加（Additional）部分中的域名必须与`Qname`属于同一个域分支。这被称为**越边界检查**（`bailiwick check`）。因此，如果`Qname`在 [example-bank.com](http://example-bank.com) 域内，服务器不应在附加部分中缓存针对 [example.com](http://example.com) 的信息。
 
 攻击者可能会发送多个带有不同参数的响应，在收到合法答案之前，发送的响应越多，成功投毒的概率就越高。目前已经观察到多种缓存投毒攻击向量，每种攻击都试图强制递归服务器接受并缓存针对看似合法 DNS 查询的伪造答案，我们将在下文进行总结。
 
@@ -2724,7 +2378,7 @@ PowerDNS 允许您配置 lua 脚本来处理 RRL，例如 Mark Scholten (45) 发
 
 与其他客户端/服务器应用程序一样，DNS 容易受到“中间人”攻击的影响，攻击者通过虚假或具有误导性的附加信息来响应 DNS 查询。在这种情况下，攻击者拥有到目标递归 DNS 服务器的网络和路由连通性，并伪造合法的 DNS 服务器响应，相应匹配所有字段，导致递归服务器解析并缓存这些信息。
 
-为了成功投毒目标递归服务器的缓存，攻击者通常需要在极短的时间窗口内发送大量响应，其中一个响应必须正确匹配所有 DNS 答案标准。如果攻击者在收到合法响应之前未能匹配这些参数，服务器将不会再次发出类似的查询，直到记录的 `TTL` 过期，这可能需要几小时或几天。如果 [www.example-bank.com](http://www.example-bank.com) 地址记录存在缓存中，则将立即返回缓存答案，而无需进行递归。
+为了成功投毒目标递归服务器的缓存，攻击者通常需要在极短的时间窗口内发送大量响应，其中一个响应必须正确匹配所有 DNS 答案标准。如果攻击者在收到合法响应之前未能匹配这些参数，服务器将不会再次发出类似的查询，直到记录的`TTL`过期，这可能需要几小时或几天。如果 [www.example-bank.com](http://www.example-bank.com) 地址记录存在缓存中，则将立即返回缓存答案，而无需进行递归。
 
 如果攻击者实际上能够像真正的“中间人”攻击那样看到查询消息，那么响应的构造可能会非常简单。然而，如果攻击者能够访问你的互联网流量，则会有更广泛的担忧。在更有可能的情况下，即攻击者触发查询，他随后可能会发回大量响应，并更改每个响应的参数。
 
@@ -2738,73 +2392,71 @@ ID 猜测是指攻击者猜测并匹配 DNS 消息事务 ID 的能力。DNS 数�
 
 这种攻击的特征是在 DNS 响应数据包的附加部分甚至权威部分提供补充解析信息，从而用恶意解析信息投毒缓存。通常，攻击者提供的资源记录的域名位于域树的不同分支。
 
-1997 年的 Kashpureff 攻击利用了这种形式的攻击，试图破坏当时互联网 DNS 根名称和地址机构 InterNIC 的权威性。Eugene Kashpureff 向递归服务器发出查询，查询他的备用 NIC `alternic.net`。这些 DNS 查询顺着域树向下到达 Kashpureff 的 `alternic.net` 权威名称服务器，后者也给出了相应的响应；然而，它们在响应的附加部分包含了伪造的 `internic.net` IP 地址。递归服务器不仅缓存了 `altnernic.net` 的答案，还缓存了 `internic.net` 的答案，两者都指向 Kashpureff 的站点。未来对 `internic.net` 的查询将被重定向到 `alternic.net`。
+1997 年的 Kashpureff 攻击利用了这种形式的攻击，试图破坏当时互联网 DNS 根名称和地址机构 InterNIC 的权威性。Eugene Kashpureff 向递归服务器发出查询，查询他的备用 NIC `alternic.net`。这些 DNS 查询顺着域树向下到达 Kashpureff 的`alternic.net`权威名称服务器，后者也给出了相应的响应；然而，它们在响应的附加部分包含了伪造的`internic.net` IP 地址。递归服务器不仅缓存了`altnernic.net`的答案，还缓存了`internic.net`的答案，两者都指向 Kashpureff 的站点。未来对`internic.net`的查询将被重定向到`alternic.net`。
 
-实现了**越边界检查**（`bailiwick check`）的递归服务器不受这种攻击的影响。所有现代递归服务器都实现了 `越边界检查`，它应该抑制这些强制递归服务器缓存此类“无关”域信息的尝试。这种检查消除了攻击者简单添加落在查询域分支之外投毒记录的能力。因此，攻击者不能再触发对其控制的域的任意查询来提供投毒辅助数据，而必须通过为目标域本身提供伪造的查询答案来投毒服务器缓存。因此，为了投毒 [www.example-bank.com](http://www.example-bank.com) 的缓存，攻击者必须检测或发起对该域的查询，并在合法服务器之前提供被接受的（伪造的）答案。
 
-### Kaminsky DNS 漏洞
 
-到目前，我们看到攻击者必须在相应记录的 `TTL` 过期后、且在另一个用户发出相同查询之前发出目标查询。如果攻击者已经准备就绪，并观测或发起对 [www.example-bank.com](http://www.example-bank.com) 的查询，攻击者就可以构造一个响应，并在答案部分伪造指向他们 Web 服务器的地址。但他们仍然需要匹配查询的其他参数：IP 地址、UDP 端口号、DNS 事务 ID、越边界以及问题。因此，虽然并非不可能，但成功投毒 DNS 服务器缓存仍然具有挑战性。真的如此吗？
+实现了越边界检查（`bailiwick check`）的递归服务器不受这种攻击的影响。所有现代递归服务器都实现了`越边界检查`，它应该抑制这些强制递归服务器缓存此类“无关”域信息的尝试。这种检查消除了攻击者简单添加落在查询域分支之外投毒记录的能力。因此，攻击者不能再触发对其控制的域的任意查询来提供投毒辅助数据，而必须通过为目标域本身提供伪造的查询答案来投毒服务器缓存。因此，为了投毒 [www.example-bank.com](http://www.example-bank.com) 的缓存，攻击者必须检测或发起对该域的查询，并在合法服务器之前提供被接受的（伪造的）答案。
+
+## Kaminsky DNS 漏洞
+
+到目前，我们看到攻击者必须在相应记录的`TTL`过期后、且在另一个用户发出相同查询之前发出目标查询。如果攻击者已经准备就绪，并观测或发起对 [www.example-bank.com](http://www.example-bank.com) 的查询，攻击者就可以构造一个响应，并在答案部分伪造指向他们 Web 服务器的地址。但他们仍然需要匹配查询的其他参数：IP 地址、UDP 端口号、DNS 事务 ID、越边界以及问题。因此，虽然并非不可能，但成功投毒 DNS 服务器缓存仍然具有挑战性。真的如此吗？
 
 如果攻击者可以随意触发对目标域内资源记录的查询来发起攻击呢？假设攻击者位于你的网络之外，如果你在外部服务器上正确禁用了递归并阻止了入站 DNS 查询，任意查询应该被忽略。如果攻击者位于你的网络内部（无论是直接还是通过恶意软件安装），你的递归服务器就是脆弱的。但即使没有恶意软件感染，你的递归服务器也是脆弱的。如果攻击者能够钓鱼用户访问其网站，他们的网页可能包含多个触发 DNS 查询的链接，为投毒打开大门。此外，大多数电子邮件服务器在接收邮件时会发出 DNS 查询以检查配置为 DNS 记录的垃圾过滤器。如果你没有配置反向路径过滤，攻击者可以使用伪造的内部地址（你的互联网缓存服务器的公共地址）直接发布 DNS 查询，以触发外部查询。
 
 当时 IOActive 的渗透测试总监 Dan Kaminsky 发现了一个扩大缓存投毒攻击范围的漏洞 (48)。典型的缓存投毒攻击尝试操纵特定目标答案部分内的资源记录，而 Kaminsky 攻击试图通过填充权威和/或附加部分的资源记录来操纵缓存，同时保持在同一个边界范围内。这使得攻击者可以将查询重定向到自己的名称服务器，作为目标域的权威机构。
 
+假设一个攻击者想要针对一个热门域名，例如 [example.com](http://example.com)。一次“标准”缓存投毒攻击可能会尝试破坏 [www.example.com](http://www.example.com) 记录的缓存。但如果攻击者本质上可以假设获得了 [example.com](http://example.com) 域名的控制权，他就可以随欲地为`www`记录或域名内的任何其他记录提供伪造答案。然而，如果该记录被频繁查询，合法的答案可能已经存在于缓存中，并且很难预测缓存记录何时过期，从而触发新的出站查询，这便为攻击提供了机会。
 
-
-
-假设一个攻击者想要针对一个热门域名，例如 [example.com](http://example.com)。一次“标准”缓存投毒攻击可能会尝试破坏 [www.example.com](http://www.example.com) 记录的缓存。但如果攻击者本质上可以假设获得了 [example.com](http://example.com) 域名的控制权，他就可以随欲地为 `www` 记录或域名内的任何其他记录提供伪造答案。然而，如果该记录被频繁查询，合法的答案可能已经存在于缓存中，并且很难预测缓存记录何时过期，从而触发新的出站查询，这便为攻击提供了机会。
-
-### Kaminsky 攻击
+## Kaminsky 攻击
 
 在 Kaminsky 攻击下，攻击者会针对目标域名内的随机主机名发起查询，例如 [1.example.com](http://1.example.com)、[www83932.example.com](http://www83932.example.com)。这种对目标辖区（bailiwick）内不太可能已存在于缓存的域名查询应该促使服务器通过查询其他名称服务器来解析这些域名。当此类查询启动时，攻击者随后可能会向该查询发送响应，每个响应都带有不同的目标 UDP 端口号和事务 ID（transaction ID），试图通过匹配来说服递归服务器其响应的表面合法性。
 
-攻击者可以通过创建一个带有多个 URL 标签（如 `img` 或 `link` 标签）的网页来发起此类查询，导致网络浏览器尝试使用 DNS 解析每个 URL。如果你查看几乎任何网页的源代码，你会看到几个指向域名的 `href` 和 `src` 标签，每个标签都需要解析以获取相应的图像或资源。因此，攻击者知道哪些查询会被请求，即 `Qname`（查询名称），以及将在目标域名内进行查询的有效名称服务器集，因此挑战就简化为正确地猜测 `transaction ID` 和 `UDP port`，正如我们之前讨论的，这两者的成功概率会随着多次尝试而提高。
+攻击者可以通过创建一个带有多个 URL 标签（如`img`或`link`标签）的网页来发起此类查询，导致网络浏览器尝试使用 DNS 解析每个 URL。如果你查看几乎任何网页的源代码，你会看到几个指向域名的`href`和`src`标签，每个标签都需要解析以获取相应的图像或资源。因此，攻击者知道哪些查询会被请求，即`Qname`（查询名称），以及将在目标域名内进行查询的有效名称服务器集，因此挑战就简化为正确地猜测`transaction ID`和`UDP port`，正如我们之前讨论的，这两者的成功概率会随着多次尝试而提高。
 
-所以我们可以发起查询，但我们为什么要投毒一个像 [1.example.com](http://1.example.com) 这样没有人会查询的记录呢？我们并不想，但这里正是第二个要素发挥作用：我们可以为 `n.[example.com](http://example.com)` 的查询提供一个引荐答案，其中包含目标主机名 [www.example.com](http://www.example.com) 的 `NS` 记录。相应的粘记录（glue record）将包含攻击者 Web 服务器 IP 地址的 `A` 和/或 `AAAA` 记录。
+所以我们可以发起查询，但我们为什么要投毒一个像 [1.example.com](http://1.example.com) 这样没有人会查询的记录呢？我们并不想，但这里正是第二个要素发挥作用：我们可以为`n.[example.com](http://example.com)`的查询提供一个引荐答案，其中包含目标主机名 [www.example.com](http://www.example.com) 的`NS`记录。相应的粘记录（glue record）将包含攻击者 Web 服务器 IP 地址的`A`和/或`AAAA`记录。
 
 因此，我们触发了一个针对查询：
 
 *   [1.example.com](http://1.example.com) IN A
 
-我们的伪造答案返回了一个空的 `Answer` 部分，但包含：
+我们的伪造答案返回了一个空的`Answer`部分，但包含：
 
 *   `example.com IN NS www.example.com`（Authority）
+
 *   `www.example.com IN A {攻击者 IP 地址}`（Additional）
 
-我们仍然必须在响应中匹配 `transaction ID`、`UDP ports` 和 IP 地址。但我们通过了辖区检查，并且可以通过增加或随机化可能并不存在于缓存中的主机名标签，来触发多次查询。最终，我们将正确猜中它。
+我们仍然必须在响应中匹配`transaction ID`、`UDP ports`和 IP 地址。但我们通过了辖区检查，并且可以通过增加或随机化可能并不存在于缓存中的主机名标签，来触发多次查询。最终，我们将正确猜中它。
 
-但这种攻击还有进一步的影响。攻击者的响应可以提供查询答案，并为 `example.com` 域名提供其自己的名称服务器名称和 IP 地址。这将在响应的 `Authority` 部分进行传递；即如图图 8.1 所示的 [example.com](http://example.com) 域的 `NS` 和`glue`记录。攻击者的答案符合辖区要求，因此他们需要正确匹配 IP 地址、端口和 `transaction ID` 以获得接受并投毒缓存。
+但这种攻击还有进一步的影响。攻击者的响应可以提供查询答案，并为`example.com`域名提供其自己的名称服务器名称和 IP 地址。这将在响应的`Authority`部分进行传递；即如图图 8.1 所示的 [example.com](http://example.com) 域的`NS`和`glue`记录。攻击者的答案符合辖区要求，因此他们需要正确匹配 IP 地址、端口和`transaction ID`以获得接受并投毒缓存。
 
 ![图 8.1. 合法响应与投毒响应](img/c08f000)
 
 图 8.1 合法响应与投毒响应图 8.1 合法响应与投毒响应图 8.1 合法响应与投毒响应
 
-对于 [1.example.com](http://1.example.com) 的合法响应显示在左侧，而对于 [1.example.com](http://1.example.com) 的伪造响应显示在右侧。对于 [1.example.com](http://1.example.com) 的合法响应可能是 `NXDOMAIN`，但如果 [example.com](http://example.com) 的响应匹配了 `IP`、端口和 `transaction ID`，则可以投毒缓存。由于 `Authority` 和 `Additional` 部分，`NS` 和 `glue` 记录允许攻击者劫持整个域名分支，而 `TTL` 仍然有效。
+对于 [1.example.com](http://1.example.com) 的合法响应显示在左侧，而对于 [1.example.com](http://1.example.com) 的伪造响应显示在右侧。对于 [1.example.com](http://1.example.com) 的合法响应可能是`NXDOMAIN`，但如果 [example.com](http://example.com) 的响应匹配了`IP`、端口和`transaction ID`，则可以投毒缓存。由于`Authority`和`Additional`部分，`NS`和`glue`记录允许攻击者劫持整个域名分支，而`TTL`仍然有效。
 
 这种攻击的威力在于，它不仅允许攻击者劫持整个域名分支，还为攻击者提供了被请求的问题以及重要的是何时被请求。
 
 总之，Dan Kaminsky 发现了一个影响大多数 DNS 供应商的漏洞，该漏洞允许攻击者通过以下方式获得更多控制权：
 
 *   允许攻击者发起可能不存在于缓存的多次 DNS 查询
+
 *   通过使用目标名称作为引荐投毒递归服务器的缓存
 
-如果攻击者想要投毒不仅仅是一个记录，而是整个 [example.com](http://example.com) 域名，他们可以将自己的名称服务器作为响应中的 `NS` 记录。并没有要求给定域名的 `NS` 名称必须位于该域名内；辖区检查并不适用。因此，攻击者可以使用 `example.com IN NS ns.attacker-domain.com` 以及以及相应的粘记录进行回答。显然，这种形式的域名劫持对域名管理员和终端用户来说可能是毁灭性的。
+如果攻击者想要投毒不仅仅是一个记录，而是整个 [example.com](http://example.com) 域名，他们可以将自己的名称服务器作为响应中的`NS`记录。并没有要求给定域名的`NS`名称必须位于该域名内；辖区检查并不适用。因此，攻击者可以使用`example.com IN NS ns.attacker-domain.com`以及以及相应的粘记录进行回答。显然，这种形式的域名劫持对域名管理员和终端用户来说可能是毁灭性的。
 
 ## 缓存投毒检测
 
-正如我们看到的，投毒 缓存的主要攻击向量是攻击者通过向给定查询发送带有不同 `IP` 和 `DNS header` 参数的答案来操纵 DNS 响应。与输出查询不成比例的大量传入响应可能表明存在缓存投毒攻击。当然，`DoS` 攻击也具有大量传入的数据包，但缓存投毒攻击通常表现为在更碎片性的流量流中出现相似的响应。
+正如我们看到的，投毒 缓存的主要攻击向量是攻击者通过向给定查询发送带有不同`IP`和`DNS header`参数的答案来操纵 DNS 响应。与输出查询不成比例的大量传入响应可能表明存在缓存投毒攻击。当然，`DoS`攻击也具有大量传入的数据包，但缓存投毒攻击通常表现为在更碎片性的流量流中出现相似的响应。
 
-如果你能够跟踪给定域名的历史答案并识别出响应数据的变化，这可能是投毒尝试的指标；也可能不是。从管理员的角度来看，DNS 的优点在于他们可以由于一般的重编号、ISP 的更改或其他管理原因更改 `IP 地址`，只需更新 DNS 将相同的域名映射到不同的 `IP 地址`。响应的变化是预料中的。但如果检测到针对特定问题的大量传入答案，就可以调用验证步骤确认收到的答案。
+如果你能够跟踪给定域名的历史答案并识别出响应数据的变化，这可能是投毒尝试的指标；也可能不是。从管理员的角度来看，DNS 的优点在于他们可以由于一般的重编号、ISP 的更改或其他管理原因更改`IP 地址`，只需更新 DNS 将相同的域名映射到不同的`IP 地址`。响应的变化是预料中的。但如果检测到针对特定问题的大量传入答案，就可以调用验证步骤确认收到的答案。
 
 通过再次查询来验证响应可以有效地突出伪造数据，因为攻击者不太可能成功响应查询。当然，查询需要指向不同的递归服务器，因为后者可能已经缓存了可疑答案。这种过程不是 DNS 服务器的原生功能，而是需要第三方解决方案或手动处理。
 
+检测到攻击后，你应当尝试识别攻击源，并在可能的情况下封锁发送者。然而，由于攻击者使用了伪造的 IP 地址，这可能会很困难。与此同时，转储你的递归 DNS 服务器缓存以备后后的取证分析，然后清空缓存以防止中毒的解析数据进一步扩散。如果你正在使用`BIND`，可以使用`dumpdb -cache remote name daemon controls (rndc)`命令导出缓存，并使用`flushname`、`flushtree`或`flush rndc`命令分别刷新特定域名、该域名及其子域或整个缓存。
 
-
-
-检测到攻击后，你应当尝试识别攻击源，并在可能的情况下封锁发送者。然而，由于攻击者使用了伪造的 IP 地址，这可能会很困难。与此同时，转储你的递归 DNS 服务器缓存以备后后的取证分析，然后清空缓存以防止中毒的解析数据进一步扩散。如果你正在使用 `BIND`，可以使用 `dumpdb -cache remote name daemon controls (rndc)` 命令导出缓存，并使用 `flushname`、`flushtree` 或 `flush rndc` 命令分别刷新特定域名、该域名及其子域或整个缓存。
-
-对于 `Unbound`，使用 `dump_cache` 导出缓存，并结合区域名称使用 `flush` 来刷新适用于 `A`、`AAAA`、`NS`、`SOA`、`CNAME`、`DNAME`、`MX`、`PTR`、`SRV` 和 `NAPTR` 类型的缓存。使用 `flush_zone` 刷新指定域名及其子域的缓存。对于 `PowerDNS`，使用 `dump-cache` 将缓存保存到指定的文件，并使用 `wipe-cache` 清除 `wipe-cache` 命令中与指定域相关的缓存。对于 `Knot DNS`，`cache.clear` 命令可以清除缓存，你也可以指定一个域名来仅清除与该域名相关的缓存项。
+对于`Unbound`，使用`dump_cache`导出缓存，并结合区域名称使用`flush`来刷新适用于`A`、`AAAA`、`NS`、`SOA`、`CNAME`、`DNAME`、`MX`、`PTR`、`SRV`和`NAPTR`类型的缓存。使用`flush_zone`刷新指定域名及其子域的缓存。对于`PowerDNS`，使用`dump-cache`将缓存保存到指定的文件，并使用`wipe-cache`清除`wipe-cache`命令中与指定域相关的缓存。对于`Knot DNS`，`cache.clear`命令可以清除缓存，你也可以指定一个域名来仅清除与该域名相关的缓存项。
 
 你可以检查查询日志来确定哪些存根解析器（stub resolver）设备接收了伪造响应；然后指示这些设备的用户刷新缓存，例如关闭并重启浏览器。联系攻击者中毒你缓存的域名 DNS 员。他们需要知道其命名空间遭到了攻击，以便制定安全计划，即通过对其区域进行签名。
 
@@ -2814,21 +2466,19 @@ ID 猜测是指攻击者猜测并匹配 DNS 消息事务 ID 的能力。DNS 数�
 
 ### UDP 端口随机化
 
-除了这些准备步骤外，为了保护你的递归服务器，最简单的缓解措施包括不仅随机化事务 ID 字段，还随机化 UDP 源端口。主流 DNS 服务器厂商的所有最新版本都会自动执行此操作，因此请确保你的服务器也是如此。正如我们讨论过的，16 位的事务 ID 字段仅提供 65,536 种可能值。通过随机化 UDP 端口字段，我们在已知端口号之外又增加了 11 位，产生了 `16 + 11 = 27` 位或 `2²⁷ = 1.34 亿` 种可能值。同时这两个值的概率远低于仅猜测事务 ID 的概率。
+除了这些准备步骤外，为了保护你的递归服务器，最简单的缓解措施包括不仅随机化事务 ID 字段，还随机化 UDP 源端口。主流 DNS 服务器厂商的所有最新版本都会自动执行此操作，因此请确保你的服务器也是如此。正如我们讨论过的，16 位的事务 ID 字段仅提供 65,536 种可能值。通过随机化 UDP 端口字段，我们在已知端口号之外又增加了 11 位，产生了`16 + 11 = 27`位或`2²⁷ = 1.34 亿`种可能值。同时这两个值的概率远低于仅猜测事务 ID 的概率。
 
 例如，如果攻击者能够在合法答案到达之前发送 1000 个响应，他们正确猜中这两个字段的概率仅为 0.37%，而猜中事务 ID 值的概率为 99.95%。这假设了极高程度的熵，随着真随机程度的降低，攻击者成功猜中的概率就会增加。尽管如此，这种策略仍然提供了保护。
 
 ### DNS 扩展
 
-目前 DNSSEC 支持的哈希和签名算法包括 `Diffie-Hellman`、`DSA/SHA1`、`DSA-NSEC3-SHA1`、`RSA/SHA1`、`RSASHA1-NSEC3-SHA1`、`RSA/SHA-256`、`RSA/SHA-512`、`ECC-GOST`、带有 `SHA256` 的 `ECDSA Curve P-256` 以及带有 `SHA384` 的 `ECDSA Curve P-384`。加密算法通过私钥转换哈希值以产生签名。
+目前 DNSSEC 支持的哈希和签名算法包括`Diffie-Hellman`、`DSA/SHA1`、`DSA-NSEC3-SHA1`、`RSA/SHA1`、`RSASHA1-NSEC3-SHA1`、`RSA/SHA-256`、`RSA/SHA-512`、`ECC-GOST`、带有`SHA256`的`ECDSA Curve P-256`以及带有`SHA384`的`ECDSA Curve P-384`。加密算法通过私钥转换哈希值以产生签名。
 
-
-
-
-当解析器发布查询时，答案可能包含多个资源记录。为了高可用性或性能，通常会部署许多服务器，因此在对给定名称的查询时可能会返回多个地址记录。答案中的资源记录集合被称为资源记录集（`RRSet`），它由一个或多个具有相同所有者/名称、`RRType` 和类（class）的资源记录组成。DNSSEC 支持对 `RRSet` 进行签名，提供一个覆盖响应中答案数据集的签名。在通往目的途中任何试图伪造或修改 `RRSet` 数据的尝试都会被接收者检测到，即解析器，或者更常见的，是代表解析器运行的递归/缓存 DNS 服务器。这一特性使 DNSSEC 成为防止中间人攻击和缓存污染攻击的有效缓解策略。
+当解析器发布查询时，答案可能包含多个资源记录。为了高可用性或性能，通常会部署许多服务器，因此在对给定名称的查询时可能会返回多个地址记录。答案中的资源记录集合被称为资源记录集（`RRSet`），它由一个或多个具有相同所有者/名称、`RRType`和类（class）的资源记录组成。DNSSEC 支持对`RRSet`进行签名，提供一个覆盖响应中答案数据集的签名。在通往目的途中任何试图伪造或修改`RRSet`数据的尝试都会被接收者检测到，即解析器，或者更常见的，是代表解析器运行的递归/缓存 DNS 服务器。这一特性使 DNSSEC 成为防止中间人攻击和缓存污染攻击的有效缓解策略。
 
 ### DNSSEC 信任模型
-但仅仅因为 `RRSet` 经过了签名就意味着它是安全的吗？显然不是，因为攻击者可以定义一个伪造的 `RRSet`，使用任意私钥对其进行签名，并自愿地提供相应的公钥来验证该签名。数字签名标准 (49) 要求一种机制，不仅要验证签名，还要确认签名与预期签名者匹配的保证。
+
+但仅仅因为`RRSet`经过了签名就意味着它是安全的吗？显然不是，因为攻击者可以定义一个伪造的`RRSet`，使用任意私钥对其进行签名，并自愿地提供相应的公钥来验证该签名。数字签名标准 (49) 要求一种机制，不仅要验证签名，还要确认签名与预期签名者匹配的保证。
 
 DNSSEC 规范没有考虑安全的密钥分发系统，因此必须在解析器或递归名称服务器上手动配置一个或多个信任密钥。信任密钥是由域管理员为给定的 DNS 区域授权并发布的公钥。对于每个已签名的查询答案，解析器不仅必须验证签名，还必须确认用于验证的公钥与该区域的信任密钥相对应。
 
@@ -2839,10 +2489,12 @@ DNSSEC 规范没有考虑安全的密钥分发系统，因此必须在解析器�
 就像密码应该定期更改一样，签名密钥也应该定期更改。我们将在第 9 章讨论有关更改（轮换）密钥机制的细节，但对递归服务器的影响是，如果根区域密钥更改而未更新信任锚点配置，DNSSEC 验证将失败。幸运的是，RFC 5011 (50) 定义了递归服务器自动检测信任锚点变化并更新相应信任锚点配置的方法。RFC 5011 定义了基于手动配置的初始信任密钥验证新密钥和撤销信任密钥的程序。这个“初始密钥”作为随着时间推移通过新的、已撤销和已删除的根区域密钥向前滚动的“初始条件”。
 
 ### 配置 DNSSEC 信任锚点
+
 BIND、Knot 和 Unbound 都支持 RFC 5011 规定的自动化信任锚点管理。因此，配置初始密钥包含了启用这些参考实现 DNSSEC 验证的大部分工作。使用安全网络时间协议（NTP）设置服务器的时间和日期，因为 DNSSEC 签名利用签名有效时间的绝对表示（从...直到...），而不是相对时间。
 
 #### BIND 配置
-对于所有当前支持的 BIND 版本，请在 `named.conf` 文件中使用 `managed-keys` 语句配置初始信任锚点，或者直接使用 BIND 分发版中 `bind.keys` 文件中提供的默认值。
+
+对于所有当前支持的 BIND 版本，请在`named.conf`文件中使用`managed-keys`语句配置初始信任锚点，或者直接使用 BIND 分发版中`bind.keys`文件中提供的默认值。
 
 ```
 managed-keys {
@@ -2856,9 +2508,11 @@ ihz0=";
 };
 ```
 
-接下来，在服务器 `named.conf` 文件的 options 中配置 `dnssec-enable yes;` 和 `dnssec-validation auto;`。考虑到 `managed-keys` 和 `dnssec-enable` 语句的默认配置，你真正需要做的就是将 dnssec 验证设置为 auto。
+接下来，在服务器`named.conf`文件的 options 中配置`dnssec-enable yes;`和`dnssec-validation auto;`。考虑到`managed-keys`和`dnssec-enable`语句的默认配置，你真正需要做的就是将 dnssec 验证设置为 auto。
 
-如果你需要配置非根信任锚点，或者你需要内部根服务器以仅启用内部域名的解析（例如，用于工厂应用），你可以通过设置 `dnssec-validation auto;` 并使用 `trusted-keys` 语句来配置信任锚点。
+如果你需要配置非根信任锚点，或者你需要内部根服务器以仅启用内部域名的解析（例如，用于工厂应用），你可以通过设置`dnssec-validation auto;`并使用`trusted-keys`语句来配置信任锚点。
+
+
 
 ```
 trusted-keys {
@@ -2873,7 +2527,8 @@ ihz0=";
 ```
 
 #### UNBOUND 配置
-使用 `unbound-anchor` 命令 (52) 获取根区域密钥。信任锚点默认存储在 `/usr/local/etc/unbound/root.key`，尽管你可以通过 `unbound-anchor` 命令的 `-a` 切换移动它。Unbound 必须能够读写此文件。
+
+使用`unbound-anchor`命令 (52) 获取根区域密钥。信任锚点默认存储在`/usr/local/etc/unbound/root.key`，尽管你可以通过`unbound-anchor`命令的`-a`切换移动它。Unbound 必须能够读写此文件。
 
 接下来，配置 Unbound 服务器使用此文件作为信任锚点并根据根区域的变化自动更新它。
 
@@ -2882,71 +2537,74 @@ server:
     auto-trust-anchor-file: "/usr/local/etc/unbound/root.key"
 ```
 
-你也可以定义手动信任锚点，例如对于内部根，使用 server 块中的 `trust-anchor-file` 或 `trust-anchor` 语句。
+你也可以定义手动信任锚点，例如对于内部根，使用 server 块中的`trust-anchor-file`或`trust-anchor`语句。
 
 #### POWERDNS 配置
-PowerDNS 解析器在 4.0.1 版本中不支持 RFC 5011。因此，你需要为解析器配置信任锚点，并在密钥轮换时手动更新。在 `lua-config-file` 中使用 `addDS` 函数输入你的信任锚点，输入参数为信任锚点所应用的区域，即根区域的 `.`，以及根公钥的 DS RData。在 `recursor.conf` 文件中使用 `dnssec` 参数启用 DNSSEC 验证。
+
+PowerDNS 解析器在 4.0.1 版本中不支持 RFC 5011。因此，你需要为解析器配置信任锚点，并在密钥轮换时手动更新。在`lua-config-file`中使用`addDS`函数输入你的信任锚点，输入参数为信任锚点所应用的区域，即根区域的`.`，以及根公钥的 DS RData。在`recursor.conf`文件中使用`dnssec`参数启用 DNSSEC 验证。
 
 #### KNOT RECURSOR 配置
-Knot 解析器启用手动或自动信任锚点配置。使用 `kresd` 命令的 `-k` 切换触发自动根信任锚点查找并存储在指定的文件中。
+
+Knot 解析器启用手动或自动信任锚点配置。使用`kresd`命令的`-k`切换触发自动根信任锚点查找并存储在指定的文件中。
 
 ```bash
 $ kresd -k root.keys
 ```
 
-或者，你可以在配置文件中使用 `trust_anchors.file = 'root.keys'` 语句手动配置信任锚点。
-
-
-
-
+或者，你可以在配置文件中使用`trust_anchors.file = 'root.keys'`语句手动配置信任锚点。
 
 # 旁路验证 (Lookaside Validation)
+
 DNSSEC 旁路验证 (DLV) 在根区域签名之前设计，旨在提供一种“替代”的上游信任链。DLV 利用中心化的签名区域密钥注册表。通过将 DLV 注册表配置为信任锚点，你从而信任 DLV 注册表以及它经过验证的所有“子”区域。
 
 这些区域并非 DLV 的实际子区域，而是由 DLV 注册表验证的区域。区域管理员可以通过安全的方式向 DLV 注册表注册其签名密钥，以维护这种“旁路”或“侧向”的信任链，而不是标准的“向上”域名树父子关系信任链。随着 2010 年根区域的签名以及之后大多数顶级域名（TLD）的签名，管理 DLV 链接的吸引力大幅下降，因此我们建议使用根信任锚点而不是 DLV。提供 DLV 注册服务的 ISC DLV 服务计划于 2017 年禁用。
 
 # 负信任锚点 (Negative Trust Anchors)
+
 当 DNS 管理员首次实施 DNSSEC 时，有时会在密钥对齐、区域签名、定时以及链接信任链方面出现错误。毕竟，公钥加密法并非 DNS 管理员的本职领域。然而，此类配置错误会导致 DNSSEC 验证出错，从而破坏信任链。
 
 如果你检测到某个域名的验证失败，请联系域名管理员以传达问题，并确认该问题确实是错误状态而非攻击（例如密钥泄露）。如果确认是用户错误，你可以将该域名定义为负信任锚点，这将临时挂起该域名 DNSSEC 验证以实现成功解析。你的用户将能够解析该域名的 DNS 信息，尽管没有 DNSSEC 验证。
 
 询问域名管理员他们预计何时修复 DNSSEC 配置。你可以从区域的 SOA 记录或可能通过 whois 获取域名管理员的电子邮件地址。尝试在指定时间对该域名中的记录执行 DNSSEC 查询。如果问题仍然存在，请通知域名管理员。没有人喜欢被催促，但如果该域名相对流行，催促可能是你促使问题解决的唯一手段。一旦问题解决，你应该移除负信任锚点，以重新对该域名启用 DNSSEC 验证。
 
-ISC BIND 允许通过 `rndc` 控制通道设置负信任锚点。使用 `rndc nta` 命令将指定的域名配置为负信任锚点。你可以在 `named.conf` 的 options 块中配置 `nta-lifetime` 和 `nta-recheck` 选项，分别配置负信任锚点过期并恢复域名 DNSSEC 验证的默认时间，以及对该域名执行自动启用 DNSSEC 查询以检测正常 DNSSEC 验证是否恢复的间隔。这些选项有助于自动化检测区域签名的恢复，而无需反复催促区域管理员。
+ISC BIND 允许通过`rndc`控制通道设置负信任锚点。使用`rndc nta`命令将指定的域名配置为负信任锚点。你可以在`named.conf`的 options 块中配置`nta-lifetime`和`nta-recheck`选项，分别配置负信任锚点过期并恢复域名 DNSSEC 验证的默认时间，以及对该域名执行自动启用 DNSSEC 查询以检测正常 DNSSEC 验证是否恢复的间隔。这些选项有助于自动化检测区域签名的恢复，而无需反复催促区域管理员。
 
-使用 Unbound 时，你可以在 server 块中使用 `domain-insecure` 指令配置负信任锚点，或使用 `unbound-controls` 命令行配合 `insecure-add` 命令。Unbound 目前不会自动检测区域签名的恢复。你可以通过移除相应区域的 `domain-insecure` 语句，或从命令行使用 `insecure-remove` 来重新启用 DNSSEC 验证。
+使用 Unbound 时，你可以在 server 块中使用`domain-insecure`指令配置负信任锚点，或使用`unbound-controls`命令行配合`insecure-add`命令。Unbound 目前不会自动检测区域签名的恢复。你可以通过移除相应区域的`domain-insecure`语句，或从命令行使用`insecure-remove`来重新启用 DNSSEC 验证。
 
-如果你正在使用 PowerDNS，可以使用 `addNTA` 配合域名名和可选注释来配置 `lua-config-file`，例如：`addNTA('example.com.', "Bad delegation pending repair")`。你也可以改为从命令行使用 `add-nta`、`show-ntas` 和 `clear-nta` 分别添加、显示和清除负信任锚点。
+如果你正在使用 PowerDNS，可以使用`addNTA`配合域名名和可选注释来配置`lua-config-file`，例如：`addNTA('example.com.', "Bad delegation pending repair")`。你也可以改为从命令行使用`add-nta`、`show-ntas`和`clear-nta`分别添加、显示和清除负信任锚点。
 
-对于 Knot Recursor，请在配置文件中使用 `trust_anchor.set_insecure (domain list)` 语句。
+对于 Knot Recursor，请在配置文件中使用`trust_anchor.set_insecure (domain list)`语句。
 
 # DNSSEC 部署
+
 为了验证每个 DNS 查询答案，答案必须经过签名。因此，权威服务器必须发布签名的区域，递归服务器必须执行 DNSSEC 验证。遗憾的是，根据 NIST 的估计 (54)，88% 的美国政府区域已签名，但只有 8% 的大学区域和 2% 的工业区域已签名。因此，截至今天，大多数非美国政府区域仍未签名。在 DNSSEC 验证解析器方面，APNIC 的测量结果显示约 15% 的 DNS 解析器支持 DNSSEC 验证 (55)。
 
 我们已经看到配置 DNSSEC 验证有多简单，建议你相应地配置递归服务器。然而，考虑到签名区域的部署有限，必须实施随机事务 ID 和 UDP 端口号等额外措施来保护你的 DNS 缓存。如果你的服务器支持，也可以使用案例随机化来增加熵。
 
 ## 最后一路保护 (Last Mile Protection)
+
 由于通常递归服务器执行 DNSSEC 验证而非存根解析器（stub resolver），解析数据仅在递归服务器和权威服务器之间进行验证。通常，存根解析器和递归服务器之间存在一个隐式信任网络。然而，事实可能并非如此，这条被称为“最后一路”的链路可能加密。
 
 # DNS Cookies
+
 我们在第 7 章中引入了 DNS cookies 作为缓解 DDoS 攻击的手段。DNS cookies 为 DNS 客户端和服务器提供了一种轻量级验证机制，无需预先配置。客户端通过对其 IP 地址、服务器地址和随机数进行哈希处理创建一个 cookie，并传递给服务器。服务器可以返回自己的 cookie，客户端将在随后的查询中使用它。
 
 # DNS over TLS (DNS over TLS)
+
 DNS cookies 可作为一种弱形式的身份验证。或者，微软要求 Windows 客户端到 Windows DNS 服务器之间建立 SSL 连接以保护此链路。也可以使用其他形式的身份验证和加密。传输层安全 DNS (TLS) 为支持 TLS 的解析器和递归服务器提供了 DNS 查询和响应的加密。TLS 可用于 TCP 的 DNS 查询和响应，而 UDP DNS 事务可以使用数据报 TLS (DTLS) 进行加密。然而，DTLS 实施了包大小限制，因此带有大有效负载的事务（如 DNSSEC 响应）可能需要分片。
 
 # DNSCrypt
+
 DNSCrypt 是一种在 DNS 客户端（解析器）和 DNS 递归服务器之间提供安全的协议，它通过对 DNS 消息应用加密签名来验证 DNS 解析器与服务器之间的消息是真实的。DNSCrypt 是开源的，并有多种参考实现，可以在多种操作系统和设备上运行，包括 Windows、OSX、Linux、Unix、Android、iOS 以及多个版本的路由器。
 
-
-
-
-目前有多个公共 DNS 解析器托管了 DNSCrypt 功能。你可以在 [`dnscrypt.org/`](https://dnscrypt.org/) 网站上找到这些服务器的列表。你可以在本地实现 DNSCrypt 客户端并指向其中一个服务器来使用该协议，或者你也可以托管一个自己的启用 DNSCrypt 的 DNS 服务器。DNSCrypt 协议仅允许对 DNS 流量进行身份验证，但无法防止 DNS 窃听，因为 DNS 流量并不是加密的。为了防止 DNS 窃听，你需要查看替代技术，例如虚拟专用网络（VPN），它可以对流量进行加密。
+目前有多个公共 DNS 解析器托管了 DNSCrypt 功能。你可以在[`dnscrypt.org/`](https://dnscrypt.org/)网站上找到这些服务器的列表。你可以在本地实现 DNSCrypt 客户端并指向其中一个服务器来使用该协议，或者你也可以托管一个自己的启用 DNSCrypt 的 DNS 服务器。DNSCrypt 协议仅允许对 DNS 流量进行身份验证，但无法防止 DNS 窃听，因为 DNS 流量并不是加密的。为了防止 DNS 窃听，你需要查看替代技术，例如虚拟专用网络（VPN），它可以对流量进行加密。
 
 ## 注意
 
 ## 保护权威 DNS 数据安全
 
 ## 引言
+
 本章描述了你希望发布的 DNS 信息的安全性，这些信息将允许来自组织内部、合作伙伴 VPN 链路或整个互联网的解析器进行解析。作为你 DNS 区域信息的管理员，**你有责任**发布你的受众在访问他们所需的且你所支持的服务和应用时需要的主机和 IP 地址信息（以及其他信息）。你可能希望某些受众比其他受众拥有更广泛的解析数据。
 
 我们在第 5 章中讨论了这一点，即针对主要解析器受众部署信任扇区，即内部、外部或外网信任扇区。这种基础划分可以简化每个受众的解析数据配置并最大限度地减少泄露，尽管你可能需要更细粒的粒度，特别是对于划分内部受众时。
@@ -2954,17 +2612,20 @@ DNSCrypt 是一种在 DNS 客户端（解析器）和 DNS 递归服务器之间�
 如果你确实需要更细粒的粒度，例如为高层发布包含机密信息的资源，你可以部署一组独立的权威服务器，如我们在第 5 章中讨论的那样，建立额外的信任扇区。
 
 ### 攻击形式
+
 攻击者试图操纵权威数据的主要目标包括修改解析数据。有了这种权力，攻击者本质上可以使域名消失，或者他/她可以重新指向解析数据，使流量引导向攻击者的资源，以收集个人或财务数据。操纵解析数据可以通过修改权威服务器本身的静态数据来实现，也可以通过对该服务器具有权威性的区域对给定的查询提供伪造答案（即缓存投毒攻击）来实现。后一种形式不会渗透进权威服务器本身，而是通过向查询的递归服务器提供一个看似有效但经过伪造的响应来“冒充”权威服务器。
 
 #### 静态解析数据
+
 在攻击者操纵静态权威数据的种场景中，攻击者能够修改发布在你区域文件中的资源记录信息。他们可以通过黑入 DNS 服务器并编辑 DNS 配置或区域文件来实现。这种攻击向量可以通过我们在第 6 章中讨论过的主机控制（host controls）来缓解。
 
-另一种更微妙的操纵已发布 DNS 信息的方法是利用 DNS 协议本身，使用 `DNS Update` 消息来添加或修改目标区域中的资源记录信息。攻击者可能尝试通过向你的权威主 DNS 服务器发送 `DNS Updates` 来修改区域信息，例如尝试修改你的 www 资源记录。这种类型的“攻击”也可能由 DHCP 服务器无意中触发，DHCP 服务器通过主机域名和 IP 地址映射来更新 DNS 服务器。这种错误的更新可能是无意的，但它可能会对你命名空间的完整性产生破坏性影响，因此代表了必须解决的风险。
+另一种更微妙的操纵已发布 DNS 信息的方法是利用 DNS 协议本身，使用`DNS Update`消息来添加或修改目标区域中的资源记录信息。攻击者可能尝试通过向你的权威主 DNS 服务器发送`DNS Updates`来修改区域信息，例如尝试修改你的 www 资源记录。这种类型的“攻击”也可能由 DHCP 服务器无意中触发，DHCP 服务器通过主机域名和 IP 地址映射来更新 DNS 服务器。这种错误的更新可能是无意的，但它可能会对你命名空间的完整性产生破坏性影响，因此代表了必须解决的风险。
 
-使用 `DNS Update` 消息操纵区域信息的变体则模拟了你用于管理和配置 DNS 服务器的机制。你可能通过文件编辑（这需要主机访问权限，因此可以通过主机控制来缓解）、文件传输（例如，从 IP 地址管理 (IPAM) 系统）或其他你的服务器可能支持的其它技术（如 `rsync`）来更新 DNS 配置。
+使用`DNS Update`消息操纵区域信息的变体则模拟了你用于管理和配置 DNS 服务器的机制。你可能通过文件编辑（这需要主机访问权限，因此可以通过主机控制来缓解）、文件传输（例如，从 IP 地址管理 (IPAM) 系统）或其他你的服务器可能支持的其它技术（如`rsync`）来更新 DNS 配置。
 
 #### 域名注册局
-解析器定位你域名信息能力的另一个漏洞与你的父域及任何其他祖域的完整性有关。攻击者修改你的名称服务器信息，通过将域名树上的指针指向攻击者的名称服务器而不是你的服务器，从而有效地劫持了你的域名。通常，组织会向域名注册处为所需的顶级域名（TLD）注册二级域名。例如，人们可以在 .com 注册处注册 [example.com](http://example.com)。
+
+解析器定位你域名信息能力的另一个漏洞与你的父域及任何其他祖域的完整性有关。攻击者修改你的名称服务器信息，通过将域名树上的指针指向攻击者的名称服务器而不是你的服务器，从而有效地劫持了你的域名。通常，组织会向域名注册处为所需的顶级域名（TLD）注册二级域名。例如，人们可以在 .com 注册处注册[example.com](http://example.com)。
 
 域名注册处获得域名注册局授权唯一分配子域（在本例中为 .com）。换句话说，注册局在技术上管理域名，并负责存储包含直接子域名注册信息的库内的数据和访问策略。注册局发布域名区域文件。域名注册处受相应注册局认证，并管理注册库内域名的预留。
 
@@ -2976,20 +2637,17 @@ DNSCrypt 是一种在 DNS 客户端（解析器）和 DNS 递归服务器之间�
 
 另一个需要考虑的问题是，你是否希望将个人联系信息发布在全球可访问的 whois 数据库中。该数据库允许人们查询给定域名的信息，包括联系人、地址、电子邮件和电话号码。大多数注册处都提供匿名化这些信息的选项，通过使用“hostmaster”或类似的通用标签作为联系人，以及使用注册处的地址、电子邮件和电话号码。如果你在涉及各种个人信息国际传输的法规下运营跨国网络，这可能对你特别感兴趣。
 
+如果你使用第三方 DNS 服务商（或在内部运行外部 DNS 服务器之外）发布你的外部 DNS 命名空间，你应该考虑与对待域名注册商时类似的预防措施。验证你的提供商是否具备适当的安全实践，包括身份验证和授权方法、事务加密以及对`DNSSEC`的支持，以确保你命名空间的完整性。
 
+与注册局或注册商被攻破不同，能够访问你外部命名空间的攻击者可以进行更具针对性的修改。虽然攻击者仍然可以将你的域名（以及子域名）重定向到他们自己的服务器，他们也可以简单地更新一两个记录（例如你的`www`或`mail`记录）来拦截某些交易。事实上，攻击者可能仅将他们的记录添加到你现有的`RRSet`中，试图抽走部分流量，同时尝试通过解析流量的下降来规避检测。
 
-
-如果你使用第三方 DNS 服务商（或在内部运行外部 DNS 服务器之外）发布你的外部 DNS 命名空间，你应该考虑与对待域名注册商时类似的预防措施。验证你的提供商是否具备适当的安全实践，包括身份验证和授权方法、事务加密以及对 `DNSSEC` 的支持，以确保你命名空间的完整性。
-
-与注册局或注册商被攻破不同，能够访问你外部命名空间的攻击者可以进行更具针对性的修改。虽然攻击者仍然可以将你的域名（以及子域名）重定向到他们自己的服务器，他们也可以简单地更新一两个记录（例如你的 `www` 或 `mail` 记录）来拦截某些交易。事实上，攻击者可能仅将他们的记录添加到你现有的 `RRSet` 中，试图抽走部分流量，同时尝试通过解析流量的下降来规避检测。
-
-在这种情况下，通过 `RRType` 监控流量可能很有用，但预期范围内的下降可能不会触发报警。检测此类攻击的更好方法是简单地确认你的区域信息仅包含你想要的内容。你可以通过服务提供商的通知和/或通过定期获取区域并扫描其更改来检测这些更改是否经过授权。这种“差异”方法需要相当定期的轮询，因为这将定义你在检测到之前的暴露窗口。
+在这种情况下，通过`RRType`监控流量可能很有用，但预期范围内的下降可能不会触发报警。检测此类攻击的更好方法是简单地确认你的区域信息仅包含你想要的内容。你可以通过服务提供商的通知和/或通过定期获取区域并扫描其更改来检测这些更改是否经过授权。这种“差异”方法需要相当定期的轮询，因为这将定义你在检测到之前的暴露窗口。
 
 仅仅查询每个区域的序列号无疑是一种更简单的方法，但如果攻击者可以修改区域而无需强制更新序列号，那么这种方法可能无法检测到此类攻击。
 
 ### 传输中的 DNS 数据
 
-正如我们在前章节中讨论的，操纵他人看到的你权威数据的缓存投毒攻击，最好通过 `DNSSEC` 对你的命名空间进行签名来缓解。事实上，`DNSSEC` 是权威区域发布者缓解解析过程中通信的域名信息投毒的唯一手段。当然，这种缓解措施仅在解析器验证 `DNSSEC` 签名时才有效。
+正如我们在前章节中讨论的，操纵他人看到的你权威数据的缓存投毒攻击，最好通过`DNSSEC`对你的命名空间进行签名来缓解。事实上，`DNSSEC`是权威区域发布者缓解解析过程中通信的域名信息投毒的唯一手段。当然，这种缓解措施仅在解析器验证`DNSSEC`签名时才有效。
 
 ## 攻击检测
 
@@ -3001,19 +2659,21 @@ DNSCrypt 是一种在 DNS 客户端（解析器）和 DNS 递归服务器之间�
 
 ### 域名注册局
 
-如果与你名称服务器相关的域名信息被攻破，你会注意到入站查询流量急剧下降。由于攻击者更改了你父域名中的 `NS`、`glue` 和 `DS` 信息，从根服务器开始沿着域名树寻找你域名的递归服务器将被指向其他地方。你应该登录注册商账户查看当前配置。如果信息确实已被修改，请更正信息、更改密码并通知注册商泄露事件。
+如果与你名称服务器相关的域名信息被攻破，你会注意到入站查询流量急剧下降。由于攻击者更改了你父域名中的`NS`、`glue`和`DS`信息，从根服务器开始沿着域名树寻找你域名的递归服务器将被指向其他地方。你应该登录注册商账户查看当前配置。如果信息确实已被修改，请更正信息、更改密码并通知注册商泄露事件。
 
-针对你的域名信息查询提供的任何伪造资源记录将由攻击者的服务器提供，并在递归服务器中缓存持续 `TTL` 期间（这通常长达一周）。你需要联系你的订阅者或客户，告知他们此问题以及如何通过刷新相关的缓存信息来纠正局面。
+针对你的域名信息查询提供的任何伪造资源记录将由攻击者的服务器提供，并在递归服务器中缓存持续`TTL`期间（这通常长达一周）。你需要联系你的订阅者或客户，告知他们此问题以及如何通过刷新相关的缓存信息来纠正局面。
 
 ### 域名托管
 
 取决于攻击的形式，如果攻击者修改或删除了区域信息，你可能会看到与注册局或注册商被攻破类似的症状。如果你看到 DNS 流量真空，你应该访问你的域名账户进行验证。如果攻击者更改了你的凭据，在你与域名提供商合作重新身份验证以重新获得访问权限时，你可以对你在区域中配置的记录发布查询。这假设你拥有一份你外部区域的记录或副本。在这方面，你可能希望设置一个 DNS 服务器作为你服务提供商 DNS 服务器的从机，这样你就可以在更改发生时接收区域级别的更改通知，除非攻击者足够聪明也修改了这一点。
 
+
+
 如果你在主服务器的“允许传输（allow-transfer）”列表中有一个有效的服务器，那么通过区域传输验证你的区域内容将是查看世界如何看待你区域的简单方法。除此之外，定期对你已发布的解析数据发布查询，并在检测到更改时发出警报是另一种检测更改的方法。你当然可以忽略授权的更改，但这可以提供未经授权更改的警报。
 
 如果你的域名账户被攻破，请立即通知你的服务提供商并重置凭据。
 
-### 伪造解析
+## 伪造解析
 
 作为权威 DNS 服务器的管理员，你并不一定能看到尝试解析你命名空间的递归服务器上的缓存投毒攻击。缓存投毒攻击试图在权威服务器响应之前为给定查询提供伪造响应。从权威的角度来看，你的服务器接收了查询并发布了答案，但你无法看到命中递归服务器的其他响应，假设这些响应源于你网络边界之外。通过使用 `DNSSEC` 对你的权威命名空间进行签名，你可以向验证解析器保证你命名空间的完整性。
 
@@ -3027,11 +2687,7 @@ DNSCrypt 是一种在 DNS 客户端（解析器）和 DNS 递归服务器之间�
 
 防御域名注册局、注册商或托管提供商的攻击主要取决于这些相应服务的提供商。主动定期检查你的命名空间在互联网上的状态，对于检测可能指示完整性被破坏的异常情况至关重要。
 
-
-
-
-
-如果你使用 IPAM 系统来管理 DNS 配置，请考虑 IPAM 系统与每个 DNS 服务器之间的通信通道。使用经过身份验证且加密的连接来保护此连接，例如传输层安全协议 (`TLS`)、安全文件传输协议 (`SFTP`)、安全复制 (`scp`) 或其他标准或私有协议。将相应的守护进程添加到你的软件监控列表中，以便对这些的漏洞和补丁进行监控。
+如果你使用 IPAM 系统来管理 DNS 配置，请考虑 IPAM 系统与每个 DNS 服务器之间的通信通道。使用经过身份验证且加密的连接来保护此连接，例如传输层安全协议（`TLS`）、安全文件传输协议（`SFTP`）、安全复制（`scp`）或其他标准或私有协议。将相应的守护进程添加到你的软件监控列表中，以便对这些的漏洞和补丁进行监控。
 
 如果你在 DNS 服务器上启用了控制通道以执行配置或区域更新，请务必确保该通道的安全性。`BIND` 允许你定义 `listen-on` IP 地址和端口，并允许 `controls` 语句内的地址匹配列表（包含 IP 地址、子网、`TSIG` 密钥和其他匹配列表）配置允许和拒绝的访问控制。对于 `NSD`，运行 `nsd-control-setup` 命令来生成 `TLS` 密钥（自签名证书）以保护控制通道事务。你可以在 `remote-control` 语句块中使用 `control-enable` 指令，在 `nsd.conf` 文件中配置控制 IP 地址、端口以及证书和密钥文件。对于 `Knot DNS`，可以在 `control` 语句块内配置 `listen-on` 地址以及 ACL 或 Unix 套接字路径。
 
@@ -3052,8 +2708,8 @@ ISC BIND 提供了以下 DNS 事务 ACL：
 NSD 不支持动态更新。这提供了更新安全性，但它没有提供动态更新的机制。对于外部权威 DNS 服务器，你不应该允许动态更新；应通过在主服务器上配置区域文件来执行所有区域更新，然后允许通知/区域传输过程将这些更新传播到从服务器。为了控制此过程的访问，NSD 支持以下 DNS 信息更新权限的服务器守护进程级访问控制。
 
 *   `allow-notify` – 接受或阻止来自此指令指定的 IP 地址或 IP 块（带或不带事务密钥）的主机的 `Notify` 消息。
-*   `request-xfr` – 查询列出的 `[master]` DNS 服务器以进行区域传输 (`IXFR`/`AXFR`)。
-*   `provide-xfr` – 允许列出的地址从此服务器请求 `AXFR`。区域数据将提供给该地址。可以在绝对区域传输 (`AXFR`) 期间指定用于事务密钥。
+*   `request-xfr` – 查询列出的 `[master]` DNS 服务器以进行区域传输（`IXFR`/`AXFR`）。
+*   `provide-xfr` – 允许列出的地址从此服务器请求 `AXFR`。区域数据将提供给该地址。可以在绝对区域传输（`AXFR`）期间指定用于事务密钥。
 
 ## PowerDNS 权威保护
 
@@ -3076,7 +2732,7 @@ acl:
       action: update
 ```
 
-与 BIND 一样，此 ACL 随后可以全局或应用于特定区域(区域)。
+与 BIND 一样，此 ACL 随后可以全局或应用于特定区域（区域）。
 
 ```
 zone:
@@ -3099,17 +2755,13 @@ zone:
 
 图 9.1. DNSSEC Chain of Trust Traversal
 
+假设我的递归服务器接收到了一个 `Qname` 为 `www.example.com`、`Qclass` 为 IN 且 `Qtype` 为 A 的查询。我的递归服务器配置了验证 `DNSSEC`，并配置了与 `KSK` ID 1025 对应的信任锚点（trust anchor）。我的递归服务器在 DNS 头部中设置了 DNSSEC OK（`DO`）位，并沿着域名树向下发布迭代查询。`DNSSEC` 需要 `EDNS0` 来支持这种扩展的 `Rcode` 字段，并且为了处理可能超过 512 字节 UDP 数据包限制的大型响应包。`example.com` 的管理员对该区域进行了签名，权威 DNS 服务器返回了我的查询答复，并以 `RRSIG` 资源记录的形式包含了针对 `www.example.com` A RRSet 的签名。
 
-
-
-
-假设我的递归服务器接收到了一个 `Qname` 为 `www.example.com`、`Qclass` 为 IN 且 `Qtype` 为 A 的查询。我的递归服务器配置了验证 `DNSSEC`，并配置了与 `KSK` ID 1025 对应的信任锚点（trust anchor）。我的递归服务器在 DNS 头部中设置了 DNSSEC OK (`DO`) 位，并沿着域名树向下发布迭代查询。`DNSSEC` 需要 `EDNS0` 来支持这种扩展的 `Rcode` 字段，并且为了处理可能超过 512 字节 UDP 数据包限制的大型响应包。`example.com` 的管理员对该区域进行了签名，权威 DNS 服务器返回了我的查询答复，并以 `RRSIG` 资源记录的形式包含了针对 `www.example.com` A RRSet 的签名。
-
-为了验证此签名，我需要与用于签名区域的私钥对应的区域公钥（或多个密钥）。区域通常使用两个密钥进行签名：一个区域签名密钥 (`ZSK`)，用于签名区域内所有的 `RRSets`；另一个是 `KSK`，这是一个更长的密钥，仅对区域的公钥进行签名。我们稍后会讨论这种方法的动机，但这些公钥以 `DNSKEY` RRSet 的形式发布在区域文件中。
+为了验证此签名，我需要与用于签名区域的私钥对应的区域公钥（或多个密钥）。区域通常使用两个密钥进行签名：一个区域签名密钥（`ZSK`），用于签名区域内所有的 `RRSets`；另一个是 `KSK`，这是一个更长的密钥，仅对区域的公钥进行签名。我们稍后会讨论这种方法的动机，但这些公钥以 `DNSKEY` RRSet 的形式发布在区域文件中。
 
 递归服务器首先通过对查询答复（`A` 记录答复）进行哈希处理并应用 `ZSK` 与 `RRSIG` 签名进行对比，来验证查询答复。如果匹配（如 [图 9.1] 中的步骤 1 所示），递归服务器应重复此过程，通过验证 `DNSKEY` RRset 上的签名来验证 `ZSK` 和 `KSK`（即步骤 2）。在完成这两次验证后，我的递归服务器就可以确认查询答复是由 `example.com` 管理员签名的，且答复与管理员公布的内容一致。但我真的信任 `example.com` 的密钥吗？不，此密钥并未被配置为信任锚点。
 
-因此，递归服务器必须确定 `example.com` 是否通过其父级区域 `.com` 链接在信任链中。这种信任链链接以委托签名者 (`DS`) 资源记录的形式的形式发布在 DNS 中。`DS` 记录提供了相应子区域 `KSK` 的哈希，以此作为验证子 `KSK` 的手段。我们流程中的步骤 3 验证父区域是否拥有与 `example.com` `KSK` 对应的 `DS` 记录。步骤 4 使用 `.com` 的 ZSK 验证 `DS` 记录的签名，而步骤 5 验证 `.com` 的密钥。通过在步骤 6–8 中重复这些步骤到根区域，我们完成了从根区域到 `KSK` 的签名验证，该 `KSK` 已链接到我们对 `www.example.com` 的查询答复。由于我们信任 `KSK`，因此认为此答复是安全的。虽然 [图 9.1] 意味着“向上”域名树查询，但通常签名、密钥和 `DS` 记录会被递归服务器缓存，以加速验证过程。
+因此，递归服务器必须确定 `example.com` 是否通过其父级区域 `.com` 链接在信任链中。这种信任链链接以委托签名者（`DS`）资源记录的形式的形式发布在 DNS 中。`DS` 记录提供了相应子区域 `KSK` 的哈希，以此作为验证子 `KSK` 的手段。我们流程中的步骤 3 验证父区域是否拥有与 `example.com` `KSK` 对应的 `DS` 记录。步骤 4 使用 `.com` 的 ZSK 验证 `DS` 记录的签名，而步骤 5 验证 `.com` 的密钥。通过在步骤 6–8 中重复这些步骤到根区域，我们完成了从根区域到 `KSK` 的签名验证，该 `KSK` 已链接到我们对 `www.example.com` 的查询答复。由于我们信任 `KSK`，因此认为此答复是安全的。虽然 [图 9.1] 意味着“向上”域名树查询，但通常签名、密钥和 `DS` 记录会被递归服务器缓存，以加速验证过程。
 
 `DNSSEC` 还提供了经过验证的否定存在（authenticated denial of existence），因此如果我写错了查询，递归服务器可以验证“所查询名称在区域管理员公布的区域中不存在”这一事实。这一过程依赖于 `NSEC` 或 `NSEC3` 资源记录类型，这些记录提供了一种方法来识别查询无法证明有答案的“间隙”。如果 `DNSSEC` 不提供此功能，攻击者可能会通过对其他有效数据发送 `NXDOMAIN` 响应来尝试污染解析器缓存。想象一下，一个 `NXDOMAIN` 答复被缓存服务器采纳用于你的 `www` 地址。幸运的是，有了 `DNSSEC`，这种漏洞是可以控制的。
 
@@ -3119,7 +2771,7 @@ zone:
 
 递归服务器首先对查询答复（`A` 记录答复）进行哈希处理并应用 `ZSK` 与 `RRSIG` 签名进行对比，来验证查询答复。如果匹配（如 [图 9.1] 中的步骤 1 所示），递归服务器应重复此过程，通过验证 `DNSKEY` RRset 上的签名来验证 `ZSK` 和 `KSK`（即步骤 2）。在完成这两次验证后，我的递归服务器就可以确认查询答复是由 `example.com` 管理员签名的，且答复与管理员公布的内容一致。但我真的信任 `example.com` 的密钥吗？不，此密钥并未被配置为信任锚点。
 
-因此，递归服务器必须确定 `example.com` 是否通过其父级区域 `.com` 链接在信任链中。这种信任链链接以委托签名者 (`DS`) 资源记录的形式的形式发布在 DNS 中。`DS` 记录提供了相应子区域 `KSK` 的哈希，以此作为验证子 `KSK` 的手段。我们流程中的步骤 3 验证父区域是否拥有与 `example.com` `KSK` 对应的 `DS` 记录。步骤 4 使用 `.com` 的 ZSK 验证 `DS` 记录的签名，而步骤 5 验证 `.com` 的密钥。通过在步骤 6–8 中重复这些步骤到根区域，我们完成了从根区域到 `KSK` 的签名验证，该 `KSK` 已链接到我们对 `www.example.com` 的查询答复。由于我们信任 `KSK`，因此认为此答复是安全的。虽然 [图 9.1] 意味着“向上”域名树查询，但通常签名、密钥和 `DS` 记录会被递归服务器缓存，以加速验证过程。
+因此，递归服务器必须确定 `example.com` 是否通过其父级区域 `.com` 链接在信任链中。这种信任链链接以委托签名者（`DS`）资源记录的形式的形式发布在 DNS 中。`DS` 记录提供了相应子区域 `KSK` 的哈希，以此作为验证子 `KSK` 的手段。我们流程中的步骤 3 验证父区域是否拥有与 `example.com` `KSK` 对应的 `DS` 记录。步骤 4 使用 `.com` 的 ZSK 验证 `DS` 记录的签名，而步骤 5 验证 `.com` 的密钥。通过在步骤 6–8 中重复这些步骤到根区域，我们完成了从根区域到 `KSK` 的签名验证，该 `KSK` 已链接到我们对 `www.example.com` 的查询答复。由于我们信任 `KSK`，因此认为此答复是安全的。虽然 [图 9.1] 意味着“向上”域名树查询，但通常签名、密钥和 `DS` 记录会被递归服务器缓存，以加速验证过程。
 
 `DNSSEC` 还提供了经过验证的否定存在，因此如果我写错了查询，递归服务器可以验证“所查询名称在区域管理员公布的区域中不存在”这一事实。这一过程依赖于 `NSEC` 或 `NSEC3` 资源记录类型，这些记录提供了一种方法来识别查询无法证明有答案的“间隙”。如果 `DNSSEC` 不提供此功能，攻击者可能会通过对其他有效数据发送 `NXDOMAIN` 响应来尝试污染解析器缓存。想象一下，一个 `NXDOMAIN` 答复被缓存服务器采纳用于你的 `www` 地址。幸运的是，有了 `DNSSEC`，这种漏洞是可以控制的。
 
@@ -3145,143 +2797,159 @@ zone:
 
 
 
+例如，如果递归服务器昨天查询了`mail.example.com`，且该记录已过签名，那么递归服务器将需要查询该区域的公钥来验证 RRSet 的签名。假设我的公钥（`DNSKEY`）记录的 TTL 为 2 天。如果我今天再次查询`www.example.com`，该记录也经过了签名，那么我的递归服务器必须再次验证此 RRSet 的签名。由于 TTL 尚未过期，缓存中已存在该区域的`DNSKEY`记录，它将尝试使用缓存的密钥进行验证。如果 `www` RRSet 在今天使用新密钥进行了签名，则验证将失败，解析结果被视为无效（bogus）。递归服务器缓存中可能包含带有签名的解析数据、公钥或两者兼有。密钥滚动过程需要考虑到解析器可能仅拥有其中之一而非两者兼有，以便能够根据区域中当前发布的内容对缓存数据进行验证。
 
+因此，在滚动密钥时，你需要在一段时间内发布两个密钥，要么只用其中一个进行签名，要么同时使用两个进行签名。在一种情况下，即“预发布”（prepublish）滚动方法，区域文件中包含两个密钥：用于签名区域的现任密钥（incumbent key）和已发布但未用于签名的新密钥。寻求验证签名的递归服务器将在`DNSKEY` RRSet 中获取两个密钥，并在验证过程中尝试这两个密钥；在这种情况下，现任密钥通过验证。如果新密钥也用于对区域进行签名，则区域中的每个 RRSet 都将有两个签名，分别对应两个密钥。这种双签名方法由于每个 RRSet 都有两个签名，将极大地增加区域文件和解析数据有效负载的大小。因此，通常建议使用预发布方法来滚动 ZSK，以确保每个 RRSet 仅有一个签名。由于 KSK 仅对`DNSKEY` RRSet 进行签名，并且由于父区域对应的 DS 记录滚动必须同步，因此双签名方法通常用于 KSK 的滚动。
 
-例如，如果递归服务器昨天查询了 mail.example.com，且该记录已过签名，那么递归服务器将需要查询该区域的公钥来验证 RRSet 的签名。假设我的公钥（`DNSKEY`）记录的 TTL 为 2 天。如果我今天再次查询 [www.example.com](http://www.example.com)，该记录也经过了签名，那么我的递归服务器必须再次验证此 RRSet 的签名。由于 TTL 尚未过期，缓存中已存在该区域的 `DNSKEY` 记录，它将尝试使用缓存的密钥进行验证。如果 www RRSet 在今天使用新密钥进行了签名，则验证将失败，解析结果被视为无效（bogus）。递归服务器缓存中可能包含带有签名的解析数据、公钥或两者兼有。密钥滚动过程需要考虑到解析器可能仅拥有其中之一而非两者兼有，以便能够根据区域中当前发布的内容对缓存数据进行验证。
+## 预发布滚动 (PREPUBLISH ROLLOVER)
 
-因此，在滚动密钥时，你需要在一段时间内发布两个密钥，要么只用其中一个进行签名，要么同时使用两个进行签名。在一种情况下，即“预发布”（prepublish）滚动方法，区域文件中包含两个密钥：用于签名区域的现任密钥（incumbent key）和已发布但未用于签名的新密钥。寻求验证签名的递归服务器将在 `DNSKEY` RRSet 中获取两个密钥，并在验证过程中尝试这两个密钥；在这种情况下，现任密钥通过验证。如果新密钥也用于对区域进行签名，则区域中的每个 RRSet 都将有两个签名，分别对应两个密钥。这种双签名方法由于每个 RRSet 都有两个签名，将极大地增加区域文件和解析数据有效负载的大小。因此，通常建议使用预发布方法来滚动 ZSK，以确保每个 RRSet 仅有一个签名。由于 KSK 仅对 `DNSKEY` RRSet 进行签名，并且由于父区域对应的 DS 记录滚动必须同步，因此双签名方法通常用于 KSK 的滚动。
-
-### 预发布滚动 (PREPUBLISH ROLLOVER)
-让我们通过首先考虑图 9.3 中的预发布滚动方法，深入研究这两种滚动策略。我们的初始条件是区域已使用密钥 ID 为 14522 的 ZSK 和密钥 ID 为 6082 的 KSK 签名。如图 9.3 中对应密钥旁边的笔图标所示，这两个密钥都用于对区域签名。我们在时间 `t[0]` 启动滚动过程，通过在区域文件中发布一个密钥 ID 为 28004 的第二个 ZSK `DNSKEY` 资源记录。我们的 `DNSKEY` RRSet 现在由这三个密钥组成。通过此更改，我们使用 KSK 6082 和 ZSK 14522 重新对区域签名。
+让我们通过首先考虑图 9.3 中的预发布滚动方法，深入研究这两种滚动策略。我们的初始条件是区域已使用密钥 ID 为 14522 的 ZSK 和密钥 ID 为 6082 的 KSK 签名。如图 9.3 中对应密钥旁边的笔图标所示，这两个密钥都用于对区域签名。我们在时间`t[0]`启动滚动过程，通过在区域文件中发布一个密钥 ID 为 28004 的第二个 ZSK`DNSKEY`资源记录。我们的`DNSKEY` RRSet 现在由这三个密钥组成。通过此更改，我们使用 KSK 6082 和 ZSK 14522 重新对区域签名。
 
 ![图 9.3. 预发布滚动](img/c09f003.jpg)
 
 **图 9.3.** 预发布滚动
 
-新的 ZSK (28004) 目前未对区域进行签名，但该密钥已供解析器和递归服务器缓存。因此，我们需要等待一段时间，约等于从主服务器向所有从服务器分区域更新所需的时间（上限由区域过期时间决定）加上 `DNSKEY` RRSet 的 TTL。当这段时间过去后，我们达到了时间 `t[1]`，现在我们可以重新对区域签名，在 `DNSKEY` RRSet 中保留所有三个密钥，但现在使用 KSK 6082 和 ZSK 28004 进行签名。
+新的 ZSK (28004) 目前未对区域进行签名，但该密钥已供解析器和递归服务器缓存。因此，我们需要等待一段时间，约等于从主服务器向所有从服务器分区域更新所需的时间（上限由区域过期时间决定）加上`DNSKEY` RRSet 的 TTL。当这段时间过去后，我们达到了时间`t[1]`，现在我们可以重新对区域签名，在`DNSKEY` RRSet 中保留所有三个密钥，但现在使用 KSK 6082 和 ZSK 28004 进行签名。
 
-我们需要在区域中保留旧 ZSK 一段时间，以便拥有带有旧密钥签名解析数据的解析器（例如在时间 `t[1]` 之前获取的）仍然可以被认为是有效的。因此，我们应该在区域文件中保留先签名的 ZSK，其时间间隔为从主服务器到从服务器分区域更新所需的时间加上区域数据的最大 TTL 值。当这段时间过去后，我们达到了时间 `t[2]`，我们可以移除 ZSK 14522 并重新对区域签名。
+我们需要在区域中保留旧 ZSK 一段时间，以便拥有带有旧密钥签名解析数据的解析器（例如在时间`t[1]`之前获取的）仍然可以被认为是有效的。因此，我们应该在区域文件中保留先签名的 ZSK，其时间间隔为从主服务器到从服务器分区域更新所需的时间加上区域数据的最大 TTL 值。当这段时间过去后，我们达到了时间`t[2]`，我们可以移除 ZSK 14522 并重新对区域签名。
 
-在某些情况下，从操作角度来看，始终发布两个 ZSK 可能更简单：一个激活的，另一个处于准备阶段或等待移除状态。因此，在时间 `t[2]`，我们可以引入第三个 ZSK，它最终将在下一次滚动时用于签名区域。这第三个 ZSK 将保持发布直到下一次滚动时间（通常为 30–90 天），这对应于时间 `t[1]`，届时新的 ZSK 将被用于签名区域。`t[2]` – `t[1]` 间隔应保持上述相同的时间段，在 `t[2]`，旧的 ZSK 可以被新的 ZSK 取替，并在下一次滚动时用于签名。
+在某些情况下，从操作角度来看，始终发布两个 ZSK 可能更简单：一个激活的，另一个处于准备阶段或等待移除状态。因此，在时间`t[2]`，我们可以引入第三个 ZSK，它最终将在下一次滚动时用于签名区域。这第三个 ZSK 将保持发布直到下一次滚动时间（通常为 30–90 天），这对应于时间`t[1]`，届时新的 ZSK 将被用于签名区域。`t[2]` – `t[1]` 间隔应保持上述相同的时间段，在`t[2]`，旧的 ZSK 可以被新的 ZSK 取替，并在下一次滚动时用于签名。
 
-### 双签名滚动 (DUAL-SIGNATURE ROLLOVER)
+## 双签名滚动 (DUAL-SIGNATURE ROLLOVER)
+
 双签名方法通常建议用于 KSK 滚动，其基本过程如图图 9.4 所示。由于父区域的 DS 记录必须引用该区域中有效的 KSK 以建立信任链，我们将在图 9.4 中说明父区域 DS 记录的状态。我们的初始条件与之前相同，具有密钥 ID 为 6082 的 KSK 和密钥 ID 为 14522 的 ZSK。父区域 DS 记录正确引用该 KSK。
 
 ![图 9.4. 双签名 KSK 滚动](img/c09f004.jpg)
 
 **图 9.4.** 双签名 KSK 滚动
 
-我们通过创建新的 KSK 密钥对并在区域文件中发布公钥启动滚动过程。使用两个 KSK 对区域签名（当然还有 ZSK）。接下来，我们需要通知父区域管理员正在滚动 ZSK，父区域对应的 DS 记录必须更新。执行此更新的方法取决于父区域管理员的策略。你可能需要安全地登录门户并上传你的 `DNSKEY` 或相应的 DS。IETF 在 RFC 7344 (59) 中定义的另一种机制是通过在区域中发布 `CDS` 和 `CDNSKEY` 资源记录来发布更改，父区域可能会轮询其子区域是否存在这些记录。父区域的带外通知机制也可启动 DS 更新。
+我们通过创建新的 KSK 密钥对并在区域文件中发布公钥启动滚动过程。使用两个 KSK 对区域签名（当然还有 ZSK）。接下来，我们需要通知父区域管理员正在滚动 ZSK，父区域对应的 DS 记录必须更新。执行此更新的方法取决于父区域管理员的策略。你可能需要安全地登录门户并上传你的`DNSKEY`或相应的 DS。IETF 在 RFC 7344 (59) 中定义的另一种机制是通过在区域中发布`CDS`和`CDNSKEY`资源记录来发布更改，父区域可能会轮询其子区域是否存在这些记录。父区域的带外通知机制也可启动 DS 更新。
 
-一旦你确认父区域已发布对应你新 KSK 的 DS 记录，并且自双 KSK 签名以来最长的 TTL 已过期，即可从区域中移除旧 KSK (14522) 并重新对区域签名。注意，如果你的 KSK 在利用 RFC 5011 (50) 管理信任锚点的递归解析器中配置为信任点，你需要为输出密钥设置“撤销”（revoke）位，以向此类解析器发出其退出的信号。在这种情况下，图 9.4 将时间 `t[2]` 处被修改，此时两个 KSK 将保持发布并签名，但 KSK 6082 将带有时长等于最大区域 TTL 的撤销位，之后可以移除 KSK 6082。
+一旦你确认父区域已发布对应你新 KSK 的 DS 记录，并且自双 KSK 签名以来最长的 TTL 已过期，即可从区域中移除旧 KSK (14522) 并重新对区域签名。注意，如果你的 KSK 在利用 RFC 5011 (50) 管理信任锚点的递归解析器中配置为信任点，你需要为输出密钥设置“撤销”（revoke）位，以向此类解析器发出其退出的信号。在这种情况下，图 9.4 将时间`t[2]`处被修改，此时两个 KSK 将保持发布并签名，但 KSK 6082 将带有时长等于最大区域 TTL 的撤销位，之后可以移除 KSK 6082。
 
-### 算法滚动 (Algorithm Rollover)
+## 算法滚动 (Algorithm Rollover)
+
 随着加密技术演进以及新的签名算法引入 DNSSEC 标准，你可能希望添加或删除用于签名区域的算法。注意，验证解析器也需要支持你实现的一个或多个算法，以便进行正确的验证。
 
-算法滚动过程涉及在发布密钥之前，预先使用新算法对一组密钥进行签名。这种要求源于：每个 RRSet 必须为区域 `DNSKEY` 中表示的每种算法都有一个有效的签名。考虑图 9.5，我们从 KSK 6082 和 ZSK 14522 开始，父 DS 正确引用了我们的 KSK。
+算法滚动过程涉及在发布密钥之前，预先使用新算法对一组密钥进行签名。这种要求源于：每个 RRSet 必须为区域`DNSKEY`中表示的每种算法都有一个有效的签名。考虑图 9.5，我们从 KSK 6082 和 ZSK 14522 开始，父 DS 正确引用了我们的 KSK。
 
 ![图 9.5. 算法滚动](img/c09f005.jpg)
 
 **图 9.5.** 算法滚动
 
+在`t[0]`时刻，我们首先利用新算法使用私钥对区域进行签名，并发布相应的签名但不发布公钥。我们在图 9.5 中将其表示为将`KSK`或`ZSK`置于方括号内，并用笔触标记表示已发布相应的签名。因此，私钥对区域数据进行了签名，但公钥尚未发布。这使得解析器缓存能够获取当前密钥和新密钥的签名。如果密钥此时也发布了，解析器将获取`DNSKEY`s，而之前缓存的解析数据将还没有新密钥的签名，从而违反相关要求。
 
+一旦区域主-从传播时间加上区域 TTL 时间过后，就可以在`t[1]`时刻将相应的`DNSKEY`记录添加到区域中。此时，带有两套签名的新解析数据应该已经存在于缓存中。在`t[2]`时刻，在`DNSKEY`的 TTL 到期后，父区域管理员可能会替换`DS`记录以引用新的`KSK` 70810。一旦此`DS(70810)`在父区域发布，一旦`DS` TTL 在`t[3]`时刻到期，使用旧算法的密钥即可移除。请注意，被移除密钥的签名应保留在区域中，直到再次达到区域传播加 TTL 时间。在此时，即`t[4]`，用旧密钥生成的签名可以被移除。如果你的`KSK`是信任锚点，请在更新`DS`记录后插入步骤`t[2.5]`，在移除`KSK`之前留出`DNSKEY` TTL 时间来撤销退出的`KSK`。
 
+你也可以使用此密钥轮滚过程从`NSEC`切换到`NSEC3`认证的存在性否定。这些记录通过`NSEC`发布区域内的“下一个安全”记录来验证对签名区域查询的不存在性，而`NSEC3`则发布哈希处理后的后续记录以防止简单的区域指纹扫描。
 
+## 安全安全
 
-在 `t[0]` 时刻，我们首先利用新算法使用私钥对区域进行签名，并发布相应的签名但不发布公钥。我们在图 9.5 中将其表示为将 `KSK` 或 `ZSK` 置于方括号内，并用笔触标记表示已发布相应的签名。因此，私钥对区域数据进行了签名，但公钥尚未发布。这使得解析器缓存能够获取当前密钥和新密钥的签名。如果密钥此时也发布了，解析器将获取 `DNSKEY`s，而之前缓存的解析数据将还没有新密钥的签名，从而违反相关要求。
+与你发布的公钥对应的私钥必须防止被盗取。如果攻击者获取了当前用于为你其中一个区域签名的私钥，他可以签署任意 DNS 资源记录并使用你的私钥对其进行签名，从而成功污染验证解析器的缓存。可以部署硬件安全模块 (`HSMs`) 来安全地存储私钥，并使用`PKCS #11`加密令牌接口执行区域签名 (60)。
 
-一旦区域主-从传播时间加上区域 TTL 时间过后，就可以在 `t[1]` 时刻将相应的 `DNSKEY` 记录添加到区域中。此时，带有两套签名的新解析数据应该已经存在于缓存中。在 `t[2]` 时刻，在 `DNSKEY` 的 TTL 到期后，父区域管理员可能会替换 `DS` 记录以引用新的 `KSK` 70810。一旦此 `DS(70810)` 在父区域发布，一旦 `DS` TTL 在 `t[3]` 时刻到期，使用旧算法的密钥即可移除。请注意，被移除密钥的签名应保留在区域中，直到再次达到区域传播加 TTL 时间。在此时，即 `t[4]`，用旧密钥生成的签名可以被移除。如果你的 `KSK` 是信任锚点，请在更新 `DS` 记录后插入步骤 `t[2.5]`，在移除 `KSK` 之前留出 `DNSKEY` TTL 时间来撤销退出的 `KSK`。
+在对应于活动`KSK`或`ZSK`的私钥发生泄露时，应制定并记录紧急轮滚程序。如果攻击者获取了私钥，他/她可以伪造区域数据并使用该私钥进行签名。解析器和递归服务器将根据发布的相应公钥验证这些伪造数据。正如我们所见，`ZSK`可以自主更改并应立即更改。这可能会由于缓存数据冲突导致验证问题。请注意，在由受影响密钥生成的签名的 TTL 到期之前，你的区域仍然处于脆弱状态。
 
-你也可以使用此密钥轮滚过程从 `NSEC` 切换到 `NSEC3` 认证的存在性否定。这些记录通过 `NSEC` 发布区域内的“下一个安全”记录来验证对签名区域查询的不存在性，而 `NSEC3` 则发布哈希处理后的后续记录以防止简单的区域指纹扫描。
-
-### 安全安全
-与你发布的公钥对应的私钥必须防止被盗取。如果攻击者获取了当前用于为你其中一个区域签名的私钥，他可以签署任意 DNS 资源记录并使用你的私钥对其进行签名，从而成功污染验证解析器的缓存。可以部署硬件安全模块 (`HSMs`) 来安全地存储私钥，并使用 `PKCS #11` 加密令牌接口执行区域签名 (60)。
-
-在对应于活动 `KSK` 或 `ZSK` 的私钥发生泄露时，应制定并记录紧急轮滚程序。如果攻击者获取了私钥，他/她可以伪造区域数据并使用该私钥进行签名。解析器和递归服务器将根据发布的相应公钥验证这些伪造数据。正如我们所见，`ZSK` 可以自主更改并应立即更改。这可能会由于缓存数据冲突导致验证问题。请注意，在由受影响密钥生成的签名的 TTL 到期之前，你的区域仍然处于脆弱状态。
-
-然而，更改 `KSK` 则需要更广泛的参与和协调。我们建议记录一个包含父区域管理员的紧急轮滚流程，并提供一种向已将 `KSK` 配置为信任锚点的用户进行通信的方法。这可以通过注册的邮件列表或安全网站发布来实现。你有三种方法可以执行紧急 `KSK` 轮滚，每种方法都有相应的风险。
+然而，更改`KSK`则需要更广泛的参与和协调。我们建议记录一个包含父区域管理员的紧急轮滚流程，并提供一种向已将`KSK`配置为信任锚点的用户进行通信的方法。这可以通过注册的邮件列表或安全网站发布来实现。你有三种方法可以执行紧急`KSK`轮滚，每种方法都有相应的风险。
 
 1. 维护信任链
-    1. 生成一个新的 `KSK` 并将相应的 `DNSKEY` 记录添加到 `DNSKEY` RRSet 中，保持受泄露的密钥已发布。降低 `DNSKEY`s 的 TTL 值以促进在此轮滚期间快速过期。
-    2. 使用新旧两个受泄露的 `KSK` 对 `DNSKEY` 进行签名。我们继续使用受泄露的 `KSK` 发布和签名的原因是父区域仍然引用它。
-    3. 一旦 `DS` TTL 在 `t[3]` 时刻到期，使用旧算法的密钥即可移除。注意，被移除密钥的签名应保留在区域中，直到再次达到区域传播加 TTL 时间。
-    4. 在此时，即 `t[4]`，用旧密钥生成的签名可以被移除。
-2. 破坏信任链
-    1. 生成一个新的 `KSK` 并将相应的 `DNSKEY` 记录添加到 `DNSKEY` RRSet，保持受泄露的密钥已发布。
-    2. 使用新旧两个受泄露的 `KSK` 对 `DNSKEY` 进行签名。我们继续使用受泄露的 `KSK` 发布和签名的原因是父区域仍然引用它。
-    3. 一旦 `DS` TTL 在 `t[3]` 时刻到期，使用旧算法的密钥即可移除。
-3. 使区域不安全
-    1. 生成一个新的 `KSK` 并将相应的 `DNSKEY` 记录添加到 `DNSKEY` RRSet，保持受泄露的密钥已发布。
 
-### 厂商实现
+   1. 生成一个新的`KSK`并将相应的`DNSKEY`记录添加到`DNSKEY` RRSet 中，保持受泄露的密钥已发布。降低`DNSKEY`s 的 TTL 值以促进在此轮滚期间快速过期。
+
+   2. 使用新旧两个受泄露的`KSK`对`DNSKEY`进行签名。我们继续使用受泄露的`KSK`发布和签名的原因是父区域仍然引用它。
+
+   3. 一旦`DS` TTL 在`t[3]`时刻到期，使用旧算法的密钥即可移除。注意，被移除密钥的签名应保留在区域中，直到再次达到区域传播加 TTL 时间。
+
+   4. 在此时，即`t[4]`，用旧密钥生成的签名可以被移除。
+
+2. 破坏信任链
+
+   1. 生成一个新的`KSK`并将相应的`DNSKEY`记录添加到`DNSKEY` RRSet，保持受泄露的密钥已发布。
+
+   2. 使用新旧两个受泄露的`KSK`对`DNSKEY`进行签名。我们继续使用受泄露的`KSK`发布和签名的原因是父区域仍然引用它。
+
+   3. 一旦`DS` TTL 在`t[3]`时刻到期，使用旧算法的密钥即可移除。
+
+3. 使区域不安全
+
+   1. 生成一个新的`KSK`并将相应的`DNSKEY`记录添加到`DNSKEY` RRSet，保持受泄露的密钥已发布。
+
+## 厂商实现
+
 大多数领先厂商都提供某种程度的区域签名自动化功能，可以简化 DNSSEC 实现和管理。尽管如此，你必须监控你的实现并维护紧急轮滚程序。
 
-INTERNET SYSTEMS CONSORTIUM 从 BIND 9.11 开始，ISC BIND 通过新的 `dnssec-keymgr` Python 封装 (61) 完全自动化 DNSSEC 签名和维护功能。你可以在配置文件中定义 DNSSEC 策略，指定密钥参数、发布和轮滚策略，并应用于所有区域或为不同区域设置不同策略。有关 DNSSEC 配置的细节，请参考 (7) 和 (51)。
+INTERNET SYSTEMS CONSORTIUM 从 BIND 9.11 开始，ISC BIND 通过新的`dnssec-keymgr` Python 封装 (61) 完全自动化 DNSSEC 签名和维护功能。你可以在配置文件中定义 DNSSEC 策略，指定密钥参数、发布和轮滚策略，并应用于所有区域或为不同区域设置不同策略。有关 DNSSEC 配置的细节，请参考 (7) 和 (51)。
 
 NL NSD 支持安全解析，但不自动生成 DNSSEC 密钥或区域签名。NSD 可以加载并解析预签名区域。
 
-POWERDNS PowerDNS 权威服务器支持 DNS 解析响应的内联签名和预签名区域文件解析。`pdnsutil` 工具 (62) 允许密钥的生成、激活、禁用、导出和导入以及各种区域管理命令。该工具允许你创建、分阶段、激活和轮滚密钥。你可以直接使用 `pdnsutil secure-zone` 命令指定区域进行签名。
+POWERDNS PowerDNS 权威服务器支持 DNS 解析响应的内联签名和预签名区域文件解析。`pdnsutil`工具 (62) 允许密钥的生成、激活、禁用、导出和导入以及各种区域管理命令。该工具允许你创建、分阶段、激活和轮滚密钥。你可以直接使用`pdnsutil secure-zone`命令指定区域进行签名。
 
-KNOT DNS Knot DNS 根据配置文件定义的签名策略 (63) 提供手动或自动区域签名。可以使用 `keymgr` 工具手动生成和激活密钥。在自动模式下，根据区域签名策略生成新密钥并自动轮滚 ZSK（而非 KSK）。
-
-
-
-
+KNOT DNS Knot DNS 根据配置文件定义的签名策略 (63) 提供手动或自动区域签名。可以使用`keymgr`工具手动生成和激活密钥。在自动模式下，根据区域签名策略生成新密钥并自动轮滚 ZSK（而非 KSK）。
 
 本章描述了通过保护权威数据的更新过程来确保 DNS 权威数据的安全性。这种安全性对于内部 DNS 服务器以及外部 DNS 服务提供商都是必要的。我们还描述了如何使用 DNSSEC 对区域数据进行签名。DNSSEC 保护您的解析数据，使解析器能够验证其是否由您发布。您应该记录您的签名计划，以定义您的 DNSSEC 策略，包括：
 
-* `ZSKs` 和 `KSKs` 的密钥长度
+* `ZSKs`和`KSKs`的密钥长度
+
 * 列出需要签名的区域
+
 * 签名时间间隔
+
 * 密钥轮转间隔
 
 此外，还要为以下活动定义程序。
 
 * 密钥轮转程序
+
 * 与每个父区域协同工作的 DS 记录程序
+
 * 紧急密钥轮转程序
 
 # 10 攻击者对 DNS 的利用
 
 ## 引言
-正如我们所见到的，`DNS` 是几乎每个 IP 网络应用程序正常运行的基础，从网页浏览、电子邮件到多媒体应用等等。它的核心功能和去中心化的架构吸引了攻击者，攻击者试图利用其去中心化的架构和丰富的数据存储来进行不法活动。由于 `DNS` 的无处不在以及通常允许在网络中自由流动，攻击者也可能利用并使用 `DNS`，使网络暴露于利用这种通信自由的攻击之中。
 
-`DNS` 流量的自由流动暴露出的主要漏洞分为两大类：网络侦察和隧道。第三类——恶意软件利用 `DNS` 进行“正常”解析将在第 11 章中介绍。
+正如我们所见到的，`DNS`是几乎每个 IP 网络应用程序正常运行的基础，从网页浏览、电子邮件到多媒体应用等等。它的核心功能和去中心化的架构吸引了攻击者，攻击者试图利用其去中心化的架构和丰富的数据存储来进行不法活动。由于`DNS`的无处不在以及通常允许在网络中自由流动，攻击者也可能利用并使用`DNS`，使网络暴露于利用这种通信自由的攻击之中。
+
+`DNS`流量的自由流动暴露出的主要漏洞分为两大类：网络侦察和隧道。第三类——恶意软件利用`DNS`进行“正常”解析将在第 11 章中介绍。
 
 ### 网络侦察
-`DNS` 设计上包含主机名到 IP 地址的映射库等。许多攻击通常始于侦察阶段，使攻击者能够识别有价值的目标。在攻击者眼中，“价值”可能取决于攻击者的目标。无聊的大学生可能仅仅为了在朋友面前炫耀而尝试击垮网站、改变选举结果或其他方式以获得“名声”。寻求财务利益的攻击者可能想要针对看似持有个人或财务数据的系统。国家赞助的攻击者可能会寻找包含情报或机密材料的目标。如果攻击者希望获取关于某些比其他主机更具攻击价值的信息，他/她可能会从 `DNS` 开始。
 
-* **名称猜测** – 这种侦察的一种暴力破解方法是猜测感兴趣的主机（例如“payroll”），并发出标准的 `DNS` 查询以获取相应的 IP 地址（如果它们存在）。
-* **区域传输** – 通过伪充 `DNS` 从用服务器并尝试从主服务器执行区域传输，这是一种试图映射或足取区域指纹的攻击形式。也就是说，通过识别主机到 IP 地址的映射以及其他资源记录信息，攻击者试图识别直接攻击的目标。
-* **区域指纹识别** – 利用 `DNSSEC` 记录跳过已签名的区域以识别已配置的资源记录。“下一个安全”的 `NSEC` 和 `NSEC3` 资源记录标识了已签名区域内的下一个资源记录集，以便真实地否定中间名称的存在。
+`DNS`设计上包含主机名到 IP 地址的映射库等。许多攻击通常始于侦察阶段，使攻击者能够识别有价值的目标。在攻击者眼中，“价值”可能取决于攻击者的目标。无聊的大学生可能仅仅为了在朋友面前炫耀而尝试击垮网站、改变选举结果或其他方式以获得“名声”。寻求财务利益的攻击者可能想要针对看似持有个人或财务数据的系统。国家赞助的攻击者可能会寻找包含情报或机密材料的目标。如果攻击者希望获取关于某些比其他主机更具攻击价值的信息，他/她可能会从`DNS`开始。
+
+* **名称猜测** – 这种侦察的一种暴力破解方法是猜测感兴趣的主机（例如“payroll”），并发出标准的`DNS`查询以获取相应的 IP 地址（如果它们存在）。
+
+* **区域传输** – 通过伪充`DNS`从用服务器并尝试从主服务器执行区域传输，这是一种试图映射或足取区域指纹的攻击形式。也就是说，通过识别主机到 IP 地址的映射以及其他资源记录信息，攻击者试图识别直接攻击的目标。
+
+* **区域指纹识别** – 利用`DNSSEC`记录跳过已签名的区域以识别已配置的资源记录。“下一个安全”的`NSEC`和`NSEC3`资源记录标识了已签名区域内的下一个资源记录集，以便真实地否定中间名称的存在。
 
 ### 数据外泄
-数据外泄是指将源自一个安全域（例如企业网络）的数据传输到另一个实体或组织。使用 `DNS` 进行数据外泄主要有两种基本形式。
 
-* **作为数据协议的 DNS（隧道技术）** – `DNS` 隧道涉及将 `DNS` 协议用数据通信协议。这种技术允许网络内的用户或设备与外部目标通信，轻松地穿过防火墙（`DNS` 通常允许通过防火墙）。
-* **作为资源定位符的 DNS** – 攻击者可能尝试通过钓鱼或其他攻击在设备上安装恶意软件，诱导用户打开可执行的邮件附件或从攻击者网站安装软件。无论设备是在企业网络内部受到攻击，还是受感染的用户设备被物理性带入网络，只要它们在企业网络的范围内是受信任的，它们就可能访问敏感信息。恶意软件可能会执行数据收集，使用 `DNS` 侦察来定位内部资源。此外，`DNS` 可用于识别攻击者外部目的地的当前 IP 地址，以便外泄信息。
+数据外泄是指将源自一个安全域（例如企业网络）的数据传输到另一个实体或组织。使用`DNS`进行数据外泄主要有两种基本形式。
+
+* **作为数据协议的 DNS（隧道技术）** – `DNS`隧道涉及将`DNS`协议用数据通信协议。这种技术允许网络内的用户或设备与外部目标通信，轻松地穿过防火墙（`DNS`通常允许通过防火墙）。
+
+* **作为资源定位符的 DNS** – 攻击者可能尝试通过钓鱼或其他攻击在设备上安装恶意软件，诱导用户打开可执行的邮件附件或从攻击者网站安装软件。无论设备是在企业网络内部受到攻击，还是受感染的用户设备被物理性带入网络，只要它们在企业网络的范围内是受信任的，它们就可能访问敏感信息。恶意软件可能会执行数据收集，使用`DNS`侦察来定位内部资源。此外，`DNS`可用于识别攻击者外部目的地的当前 IP 地址，以便外泄信息。
 
 ## 检测对 DNS 的恶意使用
-当攻击者利用 `DNS` 查询网络信息时，其预期的意图是什么？人们如何检测此类活动？显然，人们无法检测发布查询者的意图，但某些查询模式可能会引起对其意图的怀疑。
+
+当攻击者利用`DNS`查询网络信息时，其预期的意图是什么？人们如何检测此类活动？显然，人们无法检测发布查询者的意图，但某些查询模式可能会引起对其意图的怀疑。
 
 ### 检测网络侦察
-如果您的某个 `DNS` 服务器接收到来自 IP 地址的区域传输请求，而该地址并非对相同区域具有权威性的 `DNS` 服务器，那么潜在的攻击者可能正在寻找您网络的命名和 IP 地址信息。您应该在区域传输事务中定义 `ACLs`，以便防止并记录任何此类信息尝试。对任何检测到的区域传输尝试都应进行调查，以尝试识别来源。如果区域传输区域信息失败，攻击者可能会尝试对已 `DNSSEC` 签名的区域进行指纹识别以获取区域信息。`NSEC`/NSEC3` 资源记录类型标识区域内按规范排序的下一个资源记录集，使用户连续查询区域文件以识别其资源记录。您还可以指定共享秘密事务密钥，这为区域传输请求提供了额外的认证，并抑制此类使用伪造 IP 地址的请求。
 
-攻击者可能尝试发布 `ANY` 查询以检索给定网域的所有资源记录。这对于识别服务器上运行的某些应用程序可能很有帮助。虽然您可能不想禁止 `ANY` 查询，但您应该审核查询日志以识别来源。某些实现（如 `BIND`）允许您配置 DNS 服务器使用 `minimal-any` 选项用极少数的区域信息响应 `ANY` 查询。
+如果您的某个`DNS`服务器接收到来自 IP 地址的区域传输请求，而该地址并非对相同区域具有权威性的`DNS`服务器，那么潜在的攻击者可能正在寻找您网络的命名和 IP 地址信息。您应该在区域传输事务中定义`ACLs`，以便防止并记录任何此类信息尝试。对任何检测到的区域传输尝试都应进行调查，以尝试识别来源。如果区域传输区域信息失败，攻击者可能会尝试对已`DNSSEC`签名的区域进行指纹识别以获取区域信息。`NSEC`/NSEC3`资源记录类型标识区域内按规范排序的下一个资源记录集，使用户连续查询区域文件以识别其资源记录。您还可以指定共享秘密事务密钥，这为区域传输请求提供了额外的认证，并抑制此类使用伪造 IP 地址的请求。
 
-`NSEC` 记录明文发布下一个 RRset 所有者名称，而 `NSEC3` 发布的是哈希版本，这增加了但并未阻止指纹识别尝试。`IETF` 提出了一种新的 `NSEC5` 记录，它使用非对称密钥对哈希来更有效地防止指纹识别。
+攻击者可能尝试发布`ANY`查询以检索给定网域的所有资源记录。这对于识别服务器上运行的某些应用程序可能很有帮助。虽然您可能不想禁止`ANY`查询，但您应该审核查询日志以识别来源。某些实现（如`BIND`）允许您配置 DNS 服务器使用`minimal-any`选项用极少数的区域信息响应`ANY`查询。
 
-定期检查查询日志，以识别来自给定 IP 地址的高频查询或处理过的 `ANY` 查询。这些日志可能指示了指纹识别尝试，但绝非证明这一点。例如，如果您的内网站点包含许多浏览器会自动解析的图像或链接，那么出现这种查询潮是预期的。如果查询激增，例如比这种正常流量高出数量级，至少应该触发警报，以调查是否存在指纹识别尝试或可能是低效的网页。
+`NSEC`记录明文发布下一个 RRset 所有者名称，而`NSEC3`发布的是哈希版本，这增加了但并未阻止指纹识别尝试。`IETF`提出了一种新的`NSEC5`记录，它使用非对称密钥对哈希来更有效地防止指纹识别。
+
+定期检查查询日志，以识别来自给定 IP 地址的高频查询或处理过的`ANY`查询。这些日志可能指示了指纹识别尝试，但绝非证明这一点。例如，如果您的内网站点包含许多浏览器会自动解析的图像或链接，那么出现这种查询潮是预期的。如果查询激增，例如比这种正常流量高出数量级，至少应该触发警报，以调查是否存在指纹识别尝试或可能是低效的网页。
+
+数据外泄可以通过使用`DNS`作为数据外泄传输协议，或者通过使用`DNS`定位外泄数据的互联网目标，或两者兼具。我们将在章中考虑前者，而后者将在第 11 章中介绍。
 
 
 
+`DNS`隧道涉及通过`DNS`协议传输数据载荷。隧道端点包括一个可能位于组织内部充当解析器且带有待外泄数据的`DNS`客户端，以及一个终止隧道并最终将数据转发到目标地点的`DNS`服务器。对于给定域名的权威`DNS`服务器必须在域树内进行配置，例如，通过父区域的`NS`/`glue`记录。存根解析器（stub resolvers）发起查询的递归服务器会定位权威服务器，然后发出“query.”。数据被编码在`DNS`查询中，服务器可以通过其响应确认并发送额外信息。当使用标准解析器（例如驻留在客户端机器上的解析器）时，隧道会必须由客户端发起，因为解析器不会监听未请求的查询答复。
 
-
-数据外泄可以通过使用 `DNS` 作为数据外泄传输协议，或者通过使用 `DNS` 定位外泄数据的互联网目标，或两者兼具。我们将在章中考虑前者，而后者将在第 11 章中介绍。
-
-`DNS` 隧道涉及通过 `DNS` 协议传输数据载荷。隧道端点包括一个可能位于组织内部充当解析器且带有待外泄数据的 `DNS` 客户端，以及一个终止隧道并最终将数据转发到目标地点的 `DNS` 服务器。对于给定域名的权威 `DNS` 服务器必须在域树内进行配置，例如，通过父区域的 `NS`/`glue` 记录。存根解析器（stub resolvers）发起查询的递归服务器会定位权威服务器，然后发出“query.”。数据被编码在 `DNS` 查询中，服务器可以通过其响应确认并发送额外信息。当使用标准解析器（例如驻留在客户端机器上的解析器）时，隧道会必须由客户端发起，因为解析器不会监听未请求的查询答复。
-
-客户端使用 `base32`、`base64`、`binary`、`hex` 或 `NetBIOS` 编码待传输的数据作为“主机名”标签，并加上隧道服务器的权威域名后缀。因此，`Qname` 由对应用数据（最常见的是 浏览器 `http` 请求）进行 `base32` 或 `base64` 编码形成，以便字符限制在 `DNS` 协议允许的范围内。例如，假设攻击者想要使用 `HTTP` 复制文件。`HTTP PUT` 事务可能从 HTTP 头的这部分开始。
+客户端使用`base32`、`base64`、`binary`、`hex`或`NetBIOS`编码待传输的数据作为“主机名”标签，并加上隧道服务器的权威域名后缀。因此，`Qname`由对应用数据（最常见的是浏览器`http`请求）进行`base32`或`base64`编码形成，以便字符限制在`DNS`协议允许的范围内。例如，假设攻击者想要使用`HTTP`复制文件。`HTTP PUT`事务可能从HTTP头的这部分开始。
 
 ```
 PUT doc/stolen/examplecorp HTTP 1.1
@@ -3290,7 +2958,7 @@ Accept-Encoding: gzip
 Content-Length: 24
 ```
 
-以及 `Qname`、`class` 和 `type`。
+以及`Qname`、`class`和`type`。
 
 ```
 Qname.example.com. IN A
@@ -3300,7 +2968,8 @@ Qname.example.com. IN NS
 Qname.example.com. IN TXT
 ```
 
-`Qname` 可能包含 `tunnel-example.com`。
+`Qname`可能包含`tunnel-example.com`。
+
 ```
 Qname.example.com. IN A
 Qname.example.com. IN AAAA
@@ -3311,47 +2980,43 @@ Qname.example.com. IN TXT
 
 已经开发出多种隧道工具并免费提供，包括以下：
 
-- `dns2tcp` – 支持 `A` 和 `TXT`
-- `dnscat-P` – 支持 `CNAME` 和- Windows
-- `dnscat-B` – 支持 `A`、`AAAA`、`CNAME`、`NS` 和 `TXT`
-- `dnsapy` – 支持 `A`、`CNAME`、`NS` 和 `TXT`
-- `Heyoka` – 支持 `EDNS` 和 binary
-- `iodine` – 支持 `A`、`AAAA` 和- Android
-- `OzymDNS` – 支持 `CNAME` 和 `TXT`
-- `psudp` – 支持 `CNAME` 和 `TCP`
-- `NSTX` – 支持 Linux
-- `tcp-over-dns` – 支持 `A`、`AAAA`、`CNAME` 和 `UDP`
-- `squeeza` – 支持 `SQL` 和 `DNS`
-- `TUNS` – 支持 `CNAME`
-- `DeNiSe` – 支持 `TCP`
+- `dns2tcp` – 支持`A`和`TXT`
+- `dnscat-P` – 支持`CNAME`和Windows
+- `dnscat-B` – 支持`A`、`AAAA`、`CNAME`、`NS`和`TXT`
+- `dnsapy` – 支持`A`、`CNAME`、`NS`和`TXT`
+- `Heyoka` – 支持`EDNS`和binary
+- `iodine` – 支持`A`、`AAAA`和Android
+- `OzymDNS` – 支持`CNAME`和`TXT`
+- `psudp` – 支持`CNAME`和`TCP`
+- `NSTX` – 支持Linux
+- `tcp-over-dns` – 支持`A`、`AAAA`、`CNAME`和`UDP`
+- `squeeza` – 支持`SQL`和`DNS`
+- `TUNS` – 支持`CNAME`
+- `DeNiSe` – 支持`TCP`
 
-检测 DNS 隧道的方法包括检查 `DNS` 载荷。这些方法也适用于使用动态生成算法（`DGAs`）的查询，我们将在第 11 章讨论。SANS 学院发布了一篇关于使用 `Splunk` 进行 DNS 隧道的论文。
+检测DNS隧道的方法包括检查`DNS`载荷。这些方法也适用于使用动态生成算法（`DGAs`）的查询，我们将在第11章讨论。SANS学院发布了一篇关于使用`Splunk`进行DNS隧道的论文。
 
-### DNS  Payload 分析
+## DNS Payload分析
 
-DNS 载荷分析涉及对 `DNS` 请求和响应的消息大小进行评估。请求或查询包含带有 `Qname`、`class` 和 `type` 的部分。在 DNS 隧道场景下，客户端可能会尝试每个包封装尽可能的数据，以便为用户提供合理的时间。标签接近或达到 64 字节且总 `Qname` 长度接近 255 字节的 `Qname` 可能可疑。
+DNS载荷分析涉及对`DNS`请求和响应的消息大小进行评估。请求或查询包含带有`Qname`、`class`和`type`的部分。在DNS隧道场景下，客户端可能会尝试每个包封装尽可能的数据，以便为用户提供合理的时间。标签接近或达到64字节且总`Qname`长度接近255字节的`Qname`可能可疑。
 
-`Qname` 主机标签的熵也可能引起对 DNS 隧道的怀疑。大多数主机名是有意义且基于字典的，与编码数据不同，但对于并非人类输入的主机名（如图像或内容交付网络链接）则不然。其他形式的主机签名分析（例如数字与字母的比例，或与已知签名模式的对齐）也可用于检测隧道。
+`Qname`主机标签的熵也可能引起对DNS隧道的怀疑。大多数主机名是有意义且基于字典的，与编码数据不同，但对于并非人类输入的主机名（如图像或内容交付网络链接）则不然。其他形式的主机签名分析（例如数字与字母的比例，或与已知签名模式的对齐）也可用于检测隧道。
 
-使用不常见的 `types` 也可能指示隧道。附录 B 列出了当前定义的类型集合，尽管在大多数网络的实践中并未看到其中大多数类型。如果你随时间跟踪查询，你可能检测到你网络中不常见的 `types`。使用 `IN` 以外的 `class` 也可能提示 DNS 隧道的存在。
+使用不常见的`types`也可能指示隧道。附录B列出了当前定义的类型集合，尽管在大多数网络的实践中并未看到其中大多数类型。如果你随时间跟踪查询，你可能检测到你网络中不常见的`types`。使用`IN`以外的`class`也可能提示DNS隧道的存在。
 
-某些隧道软件可能表现出确定性特征（如签名），如果监控并分析 `DNS` 数据包，这些特征可以被识别。例如，`Qname` 前三个字符中出现字符 `cT`，可能表明存在通过 `DNS` 的 `NSTX` 隧道。
+某些隧道软件可能表现出确定性特征（如签名），如果监控并分析`DNS`数据包，这些特征可以被识别。例如，`Qname`前三个字符中出现字符`cT`，可能表明存在通过`DNS`的`NSTX`隧道。
 
-### DNS 流量分析
+## DNS流量分析
 
-隧道意味着两个固定的端点（至少在隧道会话期间），它们之间交换 `DNS` 数据包。因此，特定客户端与外部 `DNS` 服务器（该服务器是查询域名后缀的权威）之间出现大量的流量突发可能表明存在隧道。如果关联双向 `DNS` 事务很困难，你可以监控来自给定 IP 地址（客户端）的高 `DNS` 流量，或针对 `Qname` 中给定域名的流量。针对给定域名查询大量唯一的主机名也可能引起怀疑。编码数据可能会产生位于隧道端点域名后缀之前的唯一 `Qname` 标签。异常大量的 `NXDOMAIN` 突发可能是 DNS 隧道指示，特别是 `Heyoka` 实现，尽管该指标也可能指示其他攻击形式，如伪查询 DOS 攻击。
+隧道意味着两个固定的端点（至少在隧道会话期间），它们之间交换`DNS`数据包。因此，特定客户端与外部`DNS`服务器（该服务器是查询域名后缀的权威）之间出现大量的流量突发可能表明存在隧道。如果关联双向`DNS`事务很困难，你可以监控来自给定IP地址（客户端）的高`DNS`流量，或针对`Qname`中给定域名的流量。针对给定域名查询大量唯一的主机名也可能引起怀疑。编码数据可能会产生位于隧道端点域名后缀之前的唯一`Qname`标签。异常大量的`NXDOMAIN`突发可能是DNS隧道指示，特别是`Heyoka`实现，尽管该指标也可能指示其他攻击形式，如伪查询DOS攻击。
 
-某些隧道工具可能会尝试绕过本地递归服务器并直接执行递归，表现为递归服务器。这里的目的是避免在递归服务器被监控时被发现。然而，正确部署递归服务器，并使用相应的防火墙规则限制 `DNS` 请求的源 IP 地址为部署的缓存服务器，可以缓解此类尝试。
+某些隧道工具可能会尝试绕过本地递归服务器并直接执行递归，表现为递归服务器。这里的目的是避免在递归服务器被监控时被发现。然而，正确部署递归服务器，并使用相应的防火墙规则限制`DNS`请求的源IP地址为部署的缓存服务器，可以缓解此类尝试。
+
+权威DNS服务器的地理位置如果其位于一个历史上极少发布过查询的区域，则可能表明存在隧道行为。此外，如果该DNS服务器所权威的域名后缀年龄相对较小（例如，这是一个新域名），则该域名可能被认为是可疑的，或者至少引起警惕。攻击者往往会专门购买一个新域名，用于实施攻击，例如提供DNS隧道端点或作为恶意软件的命令与控制中心。
+
+如果你能够将DNS请求与应用程序活动相关起来，那么在没有后续应用程序活动的情况下出现DNS活动，可能代表了利用DNS进行隧道传输。例如，浏览器通常会发出DNS查询以定位网络资源；如果在发出此类请求后没有出现HTTP请求，那么DNS可能被用于非解析目的。
 
 
-
-
-
-权威 DNS 服务器的地理位置如果其位于一个历史上极少发布过查询的区域，则可能表明存在隧道行为。此外，如果该 DNS 服务器所权威的域名后缀年龄相对较小（例如，这是一个新域名），则该域名可能被认为是可疑的，或者至少引起警惕。攻击者往往会专门购买一个新域名，用于实施攻击，例如提供 DNS 隧道端点或作为恶意软件的命令与控制中心。
-
-如果你能够将 DNS 请求与应用程序活动相关起来，那么在没有后续应用程序活动的情况下出现 DNS 活动，可能代表了利用 DNS 进行隧道传输。例如，浏览器通常会发出 DNS 查询以定位网络资源；如果在发出此类请求后没有出现 HTTP 请求，那么 DNS 可能被用于非解析目的。
-
-```]
 
 # 缓解对非合规 DNS 使用的措施
 
@@ -3361,30 +3026,30 @@ DNS 载荷分析涉及对 `DNS` 请求和响应的消息大小进行评估。请
 
 可以配置以下策略以降低攻击者侦察你区域信息的能力。
 
-*   定义区域传输 ACL（访问控制列表），作为防止非法区域传输请求的关键防御策略。
-*   记录区域传输请求并定期检查日志，以识别任何来自权威 DNS 服务器集之外 IP 地址的请求。
-*   要求对区域传输进行签名，以对请求区域传输的 DNS 服务器进行额外的身份身份验证。
-*   虽然你可以定义哪些 IP 地址可以查询你的服务器的 ACL，但这种控制不适用于外部 DNS 服务器。对于外部服务器，仅发布你的外部可访问主机名和 IP 地址，例如你的 Web 服务器和电子邮件服务器。
-*   切勿在你的外部服务器上发布内部主机名。
-*   对于合作伙伴链接，部署独立的 DNS 服务器以仅发布合作伙伴可访问的主机信息。
-*   你应当在内部 DNS 服务器上定义 ACL，以限制处理查询的地址空间。
-*   你甚至可以进一步部署单独的服务器或使用 DNS 视图（DNS views）来限制某些高度敏感主机名的解析。
+* 定义区域传输 ACL（访问控制列表），作为防止非法区域传输请求的关键防御策略。
+* 记录区域传输请求并定期检查日志，以识别任何来自权威 DNS 服务器集之外 IP 地址的请求。
+* 要求对区域传输进行签名，以对请求区域传输的 DNS 服务器进行额外的身份验证。
+* 虽然你可以定义哪些 IP 地址可以查询你的服务器的 ACL，但这种控制不适用于外部 DNS 服务器。对于外部服务器，仅发布你的外部可访问主机名和 IP 地址，例如你的 Web 服务器和电子邮件服务器。
+* 切勿在你的外部服务器上发布内部主机名。
+* 对于合作伙伴链接，部署独立的 DNS 服务器以仅发布合作伙伴可访问的主机信息。
+* 你应当在内部 DNS 服务器上定义 ACL，以限制处理查询的地址空间。
+* 你甚至可以进一步部署单独的服务器或使用 DNS 视图（DNS views）来限制某些高度敏感主机名的解析。
 
-## DNS 隧的缓解
+## DNS 隧道的缓解
 
 可以实施以下策略以促进 DNS 隧道检测。一旦检测到，对隧道端点进行调查可以导致禁用隧道。
 
-*   定期扫描你网络内的主机系统是否存在已知的隧道工具，这有助于主动识别潜在的隧道端点。可能会出现新的 DNS 隧道工具，或将其包含在恶意软件中。
-*   分析和关联 DNS 流量，以识别一对 IP 地址（客户端和服务器）之间相对爆发性的查询和响应交换，双方分别带有大型 `QNAME` 和 `RDATA` 有效负载，这对于检测 DNS 隧道可能非常有用。结合我们在“DNS 隧道检测”章节中讨论的技术进行隧道检测，有助于发现正在运行的可能隧道。
-*   将作为隧道端点的主机设备进行隔离，允许你通过调查和移除可疑代码来缓解威胁。
-*   更密切地监控隧道域名 DNS 服务器可以提供取证数据，用于刻画攻击特征以便未来预防。
-*   使用 DNS 防火墙方法封锁域名可以有效切断相关隧道。
+* 定期扫描你网络内的主机系统是否存在已知的隧道工具，这有助于主动识别潜在的隧道端点。可能会出现新的 DNS 隧道工具，或将其包含在恶意软件中。
+* 分析和关联 DNS 流量，以识别一对 IP 地址（客户端和服务器）之间相对爆发性的查询和响应交换，双方分别带有大型 `QNAME` 和 `RDATA` 有效负载，这对于检测 DNS 隧道可能非常有用。结合我们在“DNS 隧道检测”章节中讨论的技术进行隧道检测，有助于发现正在运行的可能隧道。
+* 将作为隧道端点的主机设备进行隔离，允许你通过调查和移除可疑代码来缓解威胁。
+* 更密切地监控隧道域名 DNS 服务器可以提供取证数据，用于刻画攻击特征以便未来预防。
+* 使用 DNS 防火墙方法封锁域名可以有效切断相关隧道。
 
 # 恶意软件与 APT（高级持续性威胁）
 
 ## 引言
 
-恶意软件已成为企业网络中一种威胁性力量。在早些时候，恶意软件由静默安装在设备上的恶意软件组成，以执行预设形式的攻击。遗憾的是，这种静态形式的恶意软件在今天已属罕见，恶意软件变得日益复杂，以便在主机系统中隐藏自己、隐蔽操作以规避检测和修复，并联系外部命令与控制（C&C）中心获取新软件和指令。此类恶意软件有效地将主机转变为攻击者远程使用的机器人，而安装在多个设备上的此类恶意软件可以组成兵僵尸网络，攻击者可以从多个端点发起各种攻击。
+恶意软件已成为企业网络中一种威胁性力量。在早些时候，恶意软件由静默安装在设备上的恶意软件组成，以执行预设形式的攻击。遗憾的是，这种静态形式的恶意软件在今天已属罕见，恶意软件变得日益复杂，以便在主机系统中隐藏自己、隐蔽操作以规避检测和修复，并联系外部命令与控制（C&C）中心获取新软件和指令。此类恶意软件有效地将主机转变为攻击者远程使用的机器人，而安装在多个设备上的此类恶意软件可以组成僵尸网络，攻击者可以从多个端点发起各种攻击。
 
 隐蔽且具韧性的恶意软件被认为是高级持续性威胁（APT）。恶意软件的先进性体现在它能通过 C&C 中心的软件更新进行适应；其持久性体现在它利用多种策略规避检测从而在网络中持续存在；而其威胁性则体现在攻击形式涵盖了从 DDoS 到数据外泄的各种范围。APT 经常利用 DNS 定位 C&C 中心。毕竟，如果恶意软件使用硬编码的 IP 地址，一旦检测只需阻止该 IP 地址即可。
 
@@ -3392,9 +3057,9 @@ DNS 载荷分析涉及对 `DNS` 请求和响应的消息大小进行评估。请
 
 ## 恶意软件传播技术
 
-由于员工带入办公室并连接的移动设备无处不在，你对终端安全的控制受到了极大限制。你的边界防御对于保护网络免受来自的攻击可能是有效的，但如果用户将受感染的设备物理带入网络，你将受到无意安装在用户设备上的恶意软件的攻击。
+由于员工带入办公室并连接的移动设备无处不在，你对终端安全的控制受到了极大限制。你的边界防御对于保护网络免受来自外部的攻击可能是有效的，但如果用户将受感染的设备物理带入网络，你将受到无意安装在用户设备上的恶意软件的攻击。
 
-恶意软件也可以安装在住宅或非用户设备上，这些设备对来自的攻击保护较少。2016 年 9 月利用 Mirai 恶意软件对 Brian Krebs 安全博客进行的攻击攻击凸显了这一漏洞。几周后，2016 年 10 月针对 DynDNS 发起了类似的攻击，超过十万台感染 Mirai 恶意软件的 IoT 设备发起了超过 1.2 Tbps 的 DDoS 攻击。该僵尸网络是通过利用摄像头和家用路由器等 IoT 设备上的默认用户名和密码来访问并安装恶意软件形成的。
+恶意软件也可以安装在住宅或非用户设备上，这些设备对来自外部的攻击保护较少。2016 年 9 月利用 Mirai 恶意软件对 Brian Krebs 安全博客进行的攻击凸显了这一漏洞。几周后，2016 年 10 月针对 DynDNS 发起了类似的攻击，超过十万台感染 Mirai 恶意软件的 IoT 设备发起了超过 1.2 Tbps 的 DDoS 攻击。该僵尸网络是通过利用摄像头和家用路由器等 IoT 设备上的默认用户名和密码来访问并安装恶意软件形成的。
 
 除了利用制造商默认的用户 ID 和密码访问并安装恶意软件外，其他安装恶意软件的方法也非常广泛，包括以下策略。
 
@@ -3402,15 +3067,11 @@ DNS 载荷分析涉及对 `DNS` 请求和响应的消息大小进行评估。请
 
 攻击者可能会发送通用的电子邮件，诱导用户点击指向其网站的链接以安装恶意软件。此类电子邮件可能承诺财富，或告知读者验证个人信息或对即将发生的危险情况做出反应，或任何其他形式的诱惑。其目标是编写一封看起来足够可信的邮件，让多个用户点击嵌入的链接以下载并静默安装恶意软件。
 
-### 叉式钓鱼
+### 鱼叉式钓鱼
 
 鱼叉式钓鱼是一种更具针对性的攻击，攻击者针对特定个人，意在联系时显得“熟悉”。通过研究社交媒体帖子、公开的互联网信息或社交工程，攻击者可能能够发送一封邮件，引导目标点击以下载并安装攻击者的恶意软件。
 
 ### 下载
-
-
-
-
 
 谁不想拥有免费软件呢？这种免费赠品确实会吸引注意力，并可能成为钓鱼相关攻击中一种有效的策略。但每当用户从互联网网站下载软件（即使是免费的恶意软件删除软件）、音乐、游戏等时，他们就会受到恶意软件安装的威胁。病毒（恶意软件）防护软件可以帮助识别并防止安装，但正如稍后我们将讨论的，新的恶意软件可能尚未被病毒防护软件识别。
 
@@ -3420,7 +3081,7 @@ DNS 载荷分析涉及对 `DNS` 请求和响应的消息大小进行评估。请
 
 ## 邮件附件
 
-点击看似无害的邮件附件可能会利用嵌入的宏在相应的机器上安装恶意软件。`Locky` 勒索软件通常通过垃圾邮件以 `Microsoft Word`（或 `Excel`）附件的形式到达目标机器。当打开附件并允许宏运行时时，宏会运行并下载恶意软件，锁定受害者机器上的文件并显示赎索信息。
+点击看似无害的邮件附件可能会利用嵌入的宏在相应的机器上安装恶意软件。`Locky` 勒索软件通常通过垃圾邮件以 `Microsoft Word`（或 `Excel`）附件的形式到达目标机器。当打开附件并允许宏运行时，宏会运行并下载恶意软件，锁定受害者机器上的文件并显示赎金信息。
 
 这种攻击形式的变体更为微妙，攻击者在 `Microsoft document` 中嵌入了 `OLE`（对象链接与嵌入）对象。例如，当用户点击嵌入的 `Word document` 时，文档会打开并运行宏或嵌入代码来安装恶意软件。
 
@@ -3434,7 +3095,7 @@ DNS 载荷分析涉及对 `DNS` 请求和响应的消息大小进行评估。请
 
 ## 植入
 
-前所述，攻击过 `krebsonsecurity.com` 和 `DynDNS` 的 `Mirai` 尸网是在攻击者入侵大量 IoT 设备（如监控摄像头和其他互联网联网的无人“物”）时形成的。在大多数情况下，攻击者仅通过使用厂商默认的用户 ID 和密码登录就黑入了这些 IoT 设备。获得访问权限后，安装恶意软件，建立了一个可以发起攻击的巨大僵尸网。随后攻击者将此 `Mirai` 恶意软件的代码发布在网上，供志同道合的攻击者免费使用以利用这种策略。
+如前所述，攻击过 `krebsonsecurity.com` 和 `DynDNS` 的 `Mirai` 僵尸网络是在攻击者入侵大量 IoT 设备（如监控摄像头和其他互联网联网的无人“物”）时形成的。在大多数情况下，攻击者仅通过使用厂商默认的用户 ID 和密码登录就黑入了这些 IoT 设备。获得访问权限后，安装恶意软件，建立了一个可以发起攻击的巨大僵尸网络。随后攻击者将此 `Mirai` 恶意软件的代码发布在网上，供志同道合的攻击者免费使用以利用这种策略。
 
 ## 恶意软件示例
 
@@ -3445,47 +3106,44 @@ DNS 载荷分析涉及对 `DNS` 请求和响应的消息大小进行评估。请
 - `Dridex` (69) – `P2P` 恶意软件，旨在感染计算机、收集凭据并从用户的金融账户中窃取资金，以及参与 `DDoS` 攻击和发送垃圾邮件。
 - `Locky` (70) – 勒索软件，通常由于用户打开邮件附件触发文档宏的运行而安装。
 - `Masque` (71) – 可安装在 `iOS` 设备上的恶意软件，可以窃取登录凭据、访问本地缓存中的敏感数据并获取 `iOS` 根权限。
-- `Mirai` (72) – 公开发布的恶意软件，通过安装在数万个 IoT 设备上形成僵尸网，对 `Krebs Security` 和 `DynDNS` 发起了高关注攻击。
+- `Mirai` (72) – 公开发布的恶意软件，通过安装在数万个 IoT 设备上形成僵尸网络，对 `Krebs Security` 和 `DynDNS` 发起了高关注攻击。
 - `Nivdort` (73) – 可以删除 `Microsoft Windows` 系统文件、更改安全设置并损坏 `Windows 注册表` 的恶意软件。
-- `Simda` (74) – 具有自传播能力的僵尸网，可以将用户的 `Internet` 流量重定向到攻击者网站，获取用户凭据、安装额外的恶意软件或执行其他恶意活动。
+- `Simda` (74) – 具有自传播能力的僵尸网络，可以将用户的 `Internet` 流量重定向到攻击者网站，获取用户凭据、安装额外的恶意软件或执行其他恶意活动。
 - `Zeus` 或 `GameOverZeuS` (68) – 运行在 `Microsoft Windows` 目标上的木马软件，通常用于记录击键或截图以窃取财务信息。
 
 ## 恶意软件对 DNS 的利用
 
 ### DNS 波动 (DNS Fluxing)
 
-使用 `DNS` 使攻击者能够快速更改 `IP` 地址和域名以避免检测。为了避免快速更改 `C&C` 中心本身的 `IP` 地址，僵尸网管理员可能会征用一组机器人作为代理。代理提供了一层抽象，以隐藏 `C&C` 中心的 IP 地址。攻击者快速更改 `IP` 地址关联，以防止安全人员对这些 `IP` 地址进行响应性拦截。如果某个 `IP` 地址被牵入，攻击者可能已经转移到一组新的 `IP` 地址作为 `C&C` 系统的代理。
+使用 `DNS` 使攻击者能够快速更改 `IP` 地址和域名以避免检测。为了避免快速更改 `C&C` 中心本身的 `IP` 地址，僵尸网络管理员可能会征用一组机器人作为代理。代理提供了一层抽象，以隐藏 `C&C` 中心的 IP 地址。攻击者快速更改 `IP` 地址关联，以防止安全人员对这些 `IP` 地址进行响应性拦截。如果某个 `IP` 地址被牵入，攻击者可能已经转移到一组新的 `IP` 地址作为 `C&C` 系统的代理。
 
 移动这些 `IP` 地址的方法是攻击者配置一组机器人作为 `C&C` 系统的代理，假设通过域名 `cc.example.com` 访问。攻击者注册 `example.com` 域名并运行 `DNS` 服务器来解析 `cc.example.com`。
 
-考虑图 11.1。在图的左侧，在 `t` 时，僵尸网管理员选择了两个代理机器人并在 `example.com` 文件中配置了它们各自的 `IP` 地址。左侧的机器人查询 `example.com` `DNS` 服务器以接收指向 `192.0.62` 或 `192.88.99.5` 的解析数据。机器人尝试连接这些 `IP` 地址之一（在本例中为 `192.88.99.5`），并连接到该机器人，由其代理到 `C&C` 中心。`cc.example.com` 主机的解析数据（资源记录）在资源记录中配置了非常短的 `TTL`，约为 5 分钟或更短。
+考虑图 11.1。在图的左侧，在 `t` 时，僵尸网络管理员选择了两个代理机器人并在 `example.com` 文件中配置了它们各自的 `IP` 地址。左侧的机器人查询 `example.com` `DNS` 服务器以接收指向 `192.0.62` 或 `192.88.99.5` 的解析数据。机器人尝试连接这些 `IP` 地址之一（在本例中为 `192.88.99.5`），并连接到该机器人，由其代理到 `C&C` 中心。`cc.example.com` 主机的解析数据（资源记录）在资源记录中配置了非常短的 `TTL`，约为 5 分钟或更短。
 
 ![图 11.1. DNS 网络](img/c1f001.jpg)
 
 **图 11.1.** DNS 网络
 
-如果在 `TTL` 过期后机器人需要再次连接，它（其递归服务器）将不再拥有缓存响应，并将再次查询 `example.com` `DNS` 服务器，例如图 11.1 右侧的 `t` 时。此时僵尸网管理员已修改了解析数据，现在将 `cc.example.com` 的查询重定向到 `192.0.0.207` 或 `198.18.0.193`。恶意软件通过这些代理之一连接到 `C&C` 中心。
+如果在 `TTL` 过期后机器人需要再次连接，它（其递归服务器）将不再拥有缓存响应，并将再次查询 `example.com` `DNS` 服务器，例如图 11.1 右侧的 `t` 时。此时僵尸网络管理员已修改了解析数据，现在将 `cc.example.com` 的查询重定向到 `192.0.0.207` 或 `198.18.0.193`。恶意软件通过这些代理之一连接到 `C&C` 中心。
 
-这种用于僵尸网控制器的 `C&C` 域名的 `A` 或 `AAAA` 记录的快速更改被称为*快速波动 (fast fluxing)*。当机器人和 `DNS` 服务器受僵尸网管理员控制时，检测 `C&C` IP 地址具有挑战性；但如果你能识别出 `cc.example.com` `DNS` 服务器地址为攻击者的 `DNS` 服务器，你可以通过阻止对该 `DNS` 服务器的查询来关闭通信，尽管如果攻击者使用的是公共 `DNS` 服务（即许多域名托管在一组 `DNS` 服务器上），这可能会导致有效域名查询的关闭。
+这种用于僵尸网络控制器的 `C&C` 域名的 `A` 或 `AAAA` 记录的快速更改被称为*快速波动 (fast fluxing)*。当机器人和 `DNS` 服务器受僵尸网络管理员控制时，检测 `C&C` IP 地址具有挑战性；但如果你能识别出 `cc.example.com` `DNS` 服务器地址为攻击者的 `DNS` 服务器，你可以通过阻止对该 `DNS` 服务器的查询来关闭通信，尽管如果攻击者使用的是公共 `DNS` 服务（即许多域名托管在一组 `DNS` 服务器上），这可能会导致有效域名查询的关闭。
 
-
-
-
-为了提高隐蔽性，某些攻击还会配置某些机器人执行 DNS 服务器的功能，为僵尸网络提供 C&C 代理。图 11.2 展示了这种场景。当机器人对 [example.com](http://example.com) 发起查询时，相应的递归服务器可能从根 DNS 服务器开始，引用顶级域名（`.com`），然后到达僵尸网络的域名 [example.com](http://example.com)。对于该域名，DNS 服务器 Flux 要求攻击者快速修改其 `NS` 和粘接记录。在 `t` 时间内，如图 11.2 左侧，`NS` 记录（实际上是粘接记录）指向一对 IP 地址，即 `255.255.7`。
+为了提高隐蔽性，某些攻击还会配置某些机器人执行 DNS 服务器的功能，为僵尸网络提供 C&C 代理。图 11.2 展示了这种场景。当机器人对 `example.com` 发起查询时，相应的递归服务器可能从根 DNS 服务器开始，引用顶级域名（`.com`），然后到达僵尸网络的域名 `example.com`。对于该域名，DNS 服务器 Flux 要求攻击者快速修改其 `NS` 和粘接记录。在 `t` 时间内，如图 11.2 左侧，`NS` 记录（实际上是粘接记录）指向一对 IP 地址，即 `255.255.7`。
 
 ![图 11.2. 双速网络](img/c11f002.jpg)
 
-**图 11.2.**](#figureanchor11-2) 双速网络
+**图 11.2.** 双速网络
 
-递归服务器随后查询这些“DNS 服务器”中的一个，在这种情况下是机器人本身，它们将 [example.com](http://example.com) 查询解析到 IP 地址 `192.0.2.62` 或 `192.88.99.5`。机器人随后通过这些代理连接到 C&C 中心。顶级域名中的粘接记录还利用短的 `TTL` 来使僵尸网络的 DNS 服务器 IP 地址超时。
+递归服务器随后查询这些“DNS 服务器”中的一个，在这种情况下是机器人本身，它们将 `example.com` 查询解析到 IP 地址 `192.0.2.62` 或 `192.88.99.5`。机器人随后通过这些代理连接到 C&C 中心。顶级域名中的粘接记录还利用短的 `TTL` 来使僵尸网络的 DNS 服务器 IP 地址超时。
 
-到 `t` 时间，机器人递归服务器对 [example.com](http://example.com) 目的地的缓存以及 [example.com](http://example.com) 的 `NS` 和粘接记录已过期，从而触发对顶级域名（`.com`）的查询。粘接记录现在反映出不同的 IP 地址，`192.0.0.238` 和 `192.0.2.23`。当查询 [example.com](http://example.com)，任何一个都会返回一组新的僵尸网络代理 IP 地址。鉴于 C&C 中心及其 DNS 服务器具有动态 IP 地址，这种快速 Flux（fast flux）形式被称为*双速（double flux）*。
+到 `t` 时间，机器人递归服务器对 `example.com` 目的地的缓存以及 `example.com` 的 `NS` 和粘接记录已过期，从而触发对顶级域名（`.com`）的查询。粘接记录现在反映出不同的 IP 地址，`192.0.0.238` 和 `192.0.2.23`。当查询 `example.com`，任何一个都会返回一组新的僵尸网络代理 IP 地址。鉴于 C&C 中心及其 DNS 服务器具有动态 IP 地址，这种快速 Flux（fast flux）形式被称为*双速（double flux）*。
 
-快速 Flux 和双速检测使得给定域名能够快速修改与攻击者域名服务器和主机相关的 IP 地址。但如果可以防止 [example.com](http://example.com) 域名解析，C&C 中心就可以被有效关闭。正如我们在本章稍后详细讨论的，可以部署 DNS 防火墙来阻止或修改给定域名以及 DNS 服务器名称或 IP 地址的查询响应。
+快速 Flux 和双速检测使得给定域名能够快速修改与攻击者域名服务器和主机相关的 IP 地址。但如果可以防止 `example.com` 域名解析，C&C 中心就可以被有效关闭。正如我们在本章稍后详细讨论的，可以部署 DNS 防火墙来阻止或修改给定域名以及 DNS 服务器名称或 IP 地址的查询响应。
 
 ### 动态域名生成
 
-在攻击威胁与攻击防御之间不断升级的军备竞赛中，动态生成域名本身的策略也为查询名称提供了一个可移动的目标。域名生成算法（`DGAs`）可以被恶意软件用于定期动态生成一组候选域名以到达 C&C 中心。僵尸网络运营者同样使用 `DGA` 计算一个他们可以注册的域名，使得 `DGA` 域名在机器人尝试查询它以建立通信时是可解析的。例如，这种技术被 CryptoLocker 勒索软件和 Conficker 蠕虫家族使用过，它们在各种形式下每天生成 250 到 50,000 个域名。这种在动态名称服务器 IP 地址和解析 IP 地址之上具有动态域名的第三种 Flux 形式，使得恶意软件能够作为一个持续移动的目标更好地地规避检测。
+在攻击威胁与攻击防御之间不断升级的军备竞赛中，动态生成域名本身的策略也为查询名称提供了一个可移动的目标。域名生成算法（`DGAs`）可以被恶意软件用于定期动态生成一组候选域名以到达 C&C 中心。僵尸网络运营者同样使用 `DGA` 计算一个他们可以注册的域名，使得 `DGA` 域名在机器人尝试查询它以建立通信时是可解析的。例如，这种技术被 CryptoLocker 勒索软件和 Conficker 蠕虫家族使用过，它们在各种形式下每天生成 250 到 50,000 个域名。这种在动态名称服务器 IP 地址和解析 IP 地址之上具有动态域名的第三种 Flux 形式，使得恶意软件能够作为一个持续移动的目标更好地规避检测。
 
 ## 检测恶意软件
 
@@ -3507,27 +3165,29 @@ DNS 本身可以用于阻塞某些恶意软件通信并识别受感染主机，�
 
 快速 Flux 网络的主要特征包括以下内容。根据这些属性对域名进行评分，可以表征具有快速 Flux 性质域名的可能性：
 
-*   低 `TTL`（300 秒级）
-*   随着时间的推移，该域名解析出的 IP 地址数量大
-*   随着时间的推移，该域名解析 IP 地址的变化率高
-*   随着时间的推移，域名解析 IP 地址分散在多个不同的网络中，表现为与多个自治系统编号（`ASNs`）、网络名称和组织名称关联
-*   解析 IP 地址的国家与其相应的国家代码顶级域名下的域名所隐含的国家不同
-*   短的域名寿命
-*   爆发性的解析活动
-*   域名注册商和 ASN 的声誉资质
-
+* 低 `TTL`（300 秒级）
+* 随着时间的推移，该域名解析出的 IP 地址数量大
+* 随着时间的推移，该域名解析 IP 地址的变化率高
+* 随着时间的推移，域名解析 IP 地址分散在多个不同的网络中，表现为与多个自治系统编号（`ASNs`）、网络名称和组织名称关联
+* 解析 IP 地址的国家与其相应的国家代码顶级域名下的域名所隐含的国家不同
+* 短的域名寿命
+* 爆发性的解析活动
+* 域名注册商和 ASN 的声誉资质
 
 请注意，这些特征中的某些是合法的内容分发网络（CDN）所共有的，因此必须小心避免将此类内容识别为误报。研究社区已经提出了几种检测快速流转（fast-flux）网络的方法。某些方法涉及监控带内流量特征，例如 HTTP 事务延迟，或关联存根网络（例如住宅宽带）内的入站和出站 TCP 连接。我们在这里不会讨论这些，而是将重点关注那些依赖 DNS 查询数据检测快速流转网络的方法。目前已提出了两种基本的检测形式。
 
 ### 主动检测
+
 `active` 方法涉及对垃圾邮件存档捕获的域名进行编译，然后通过反复查询这些域名来识别 `TTL` 值、解析出的 IP 地址以及解析出 IP 地址来源的网络。根据查询数据，对给定域名是否具有快速流转性质做出判断。主动方法可以支持更快速地检测恶意软件查询，但它的缺点是基于一个已经定义的潜在流转域名源集，而且反复查询可能会让快速流转网络操作者察觉到检测尝试，迫使他们暂时“隐身”以规避检测。此外，主动探测本身无法捕获其他快速流转特征，例如域名生存时间和域名-IP 地址历史。
 
 ### 被动 DNS
+
 `passive` 方法利用在更长时间范围内从更广泛的样本集（例如互联网）收集的 DNS 查询数据。`Passive DNS 复制` 最初由 Florian Weimer 提出，“从生产网络中获取域名系统数据，并将其存储在数据库中以备日后参考”（75）。被动 DNS 架构由捕获 DNS 数据包的传感器组成。传感器被放置在缓存服务器与互联网之间面向网络的网络中；例如在 DMZ（解密区）内。这使得能够收集不存在缓存数据的查询，减少了数据包量，并将查询匿名化为源自递归服务器而非单个客户端。如果你希望部署传感器为被动 DNS 聚合器提供输入，这种做法是有益的，因为该聚合器可以基于多个传感器的输入提供更广泛的 DNS 查询数据集的价值。
 
 包括 `TotalPassive`、`Circl` 和 `Farsight Security` 在内的多个被动 DNS 提供者接受来自部署传感器的馈送，以收集 DNS 查询流量并存储在每个提供者的中央存储库中。订阅者随后查询该存储库以获取全网 DNS 数据。
 
 此类信息在帮助回答以下 DNS 问题方面具有指导意义：
+
 * 哪些域名托管在特定的 DNS 服务器上？
 * 哪些域名将地址信息解析到给定的 IP 地址或网络？
 * 给定域名过去解析到了哪些 IP 地址？
@@ -3536,17 +3196,11 @@ DNS 本身可以用于阻塞某些恶意软件通信并识别受感染主机，�
 
 对此类问题的回答有助于对新或可疑域名、DNS 服务器或可疑 IP 地址段进行调查。考虑给定域名、DNS 服务器名称或 IP 地址的历史，或者其 IP 地址的 `ASN`，可以为给定域名提供声誉评估。利用被动 DNS 数据发表的研究包括 `FluxBuster` (76)、`Fast-flux hunter` (77) 以及在 (78) 中提出的其他若干研究。
 
-主动和被动检测方法都有助于为中央安全信息和事件管理（SIEM）系统提供多样化的 DNS 数据，其中主动监控可以提供早期警报，而被动数据可以证实或否定主动检测。这两个数据集对于历史分析和取证分析都是用的。
+主动和被动检测方法都有助于为中央安全信息和事件管理（SIEM）系统提供多样化的 DNS 数据，其中主动监控可以提供早期警报，而被动数据可以证实或否定主动检测。这两个数据集对于历史分析和取证分析都是有用的。
 
 ### 域名生成算法 (DGAs)
+
 DGA 允许机器人网络控制器向其安装的恶意软件提供算法，使得恶意软件可以计算出一组可能的域名，并对这些域名发布查询以定位 C&C（控制）中心。机器人网络操作者利用相同的算法在相应的时间发布相应的域名以便 DNS 汇合。许多此类域名仅激活 1 天甚至仅几个小时，用于与机器人通信，并规避域名关闭的有效性。
-
-安装的恶意软件每天可能会对看似随机的域名发布几十次查询。候选域名基于 `salt` 参数和 `random seed`（随机种子）、以及当前的日期/时间生成。输出是一串随机字符，用于查询 C&C 中心。在 C&C 中心发布在 DNS 对应数据之前，可能会接收到大量的 `NXDOMAIN`。
-
-两种主动和被动检测方法都可以用于向中央安全信息和事件管理（SIEM）系统提供多样化的 DNS 数据，其中主动监控可以提供早期警报，而被动数据可以证实或否定主动检测。这两个数据集对于历史分析和取证分析都是有用的。
-
-### 域名生成算法 (DGAs)
-DGA 允许机器人网络控制器向其安装的恶意软件提供算法，使得恶意软件可以计算出一组可能的域名，并对这些域名发布查询以定位 C&C 中心。机器人网络操作者利用相同的算法在相应的时间发布相应的域名以便 DNS 汇合。许多此类域名仅激活 1 天甚至仅几个小时，用于与机器人通信，并规避域名关闭的有效性。
 
 安装的恶意软件每天可能会对看似随机的域名发布几十次查询。候选域名基于 `salt` 参数和 `random seed`（随机种子）、以及当前的日期/时间生成。输出是一串随机字符，用于查询 C&C 中心。在 C&C 中心发布在 DNS 对应数据之前，可能会接收到大量的 `NXDOMAIN`。
 
@@ -3555,16 +3209,14 @@ DGA 允许机器人网络控制器向其安装的恶意软件提供算法，使�
 ## 使用 DNS 缓解恶意软件
 
 ### 恶意软件提取
+
 如果安装的反恶意软件尚未更新以识别和防御攻击系统的恶意软件变体，这可能是一个新形式或变种。此类攻击被称为 `零日攻击`，因为目标没有零的时间来准备防御。通过将检测到的事件追溯到关联的 `IP 地址` 来识别受感染的系统。如果可能，将设备从生产网络中隔离以防止进一步扩散，并重新映像受感染设备，应用备份数据以尽可能恢复设备。
 
 审查网络和 DNS 日志以识别可疑活动，例如包含较高比例 `NXDOMAIN` 响应或大型查询负载的异常 DNS 流量。研究攻击期间的查询域名，尝试识别潜在的恶意软件 C&C 中心并进行阻止。可疑域名可能是基于流转或 DGA 的新或短寿命域名。你可以订阅被动 DNS 服务以启用此类信息的查询。
 
-进一步提高行业对新攻击和尝试防御策略（无论成功否）的意识至关重要。让我们共同互联网更安全。向你的反恶意软件供应商、相关行业小组和/或 `US-CERT 恶意软件分析` 站点报告可用信息。
+进一步提高行业对新攻击和尝试防御策略（无论成功与否）的意识至关重要。让我们共同让互联网更安全。向你的反恶意软件供应商、相关行业小组和/或 `US-CERT 恶意软件分析` 站点报告可用信息。
 
 ### DNS 防火墙
-
-
-
 
 正如我们在第 5 章中看到的，递归 DNS 服务器的配置通常非常简单，它包含一个 `hints` 文件，其中列出了根服务器列表，在查找查询答案时可以从这些服务器开始域名树遍历，可能还包含额外的 `ACLs` 和缓存管理参数。安全配置则更为复杂，正如我们将看到的那样。由于递归服务器充当每个客户端访问全局 DNS 的网关，它不仅是获取查询答案的点，也是将内部或外部网络的查询答案返回给这些客户端的终点。
 
@@ -3574,64 +3226,91 @@ DNS 防火墙允许你配置 DNS 修改某些查询的答案，或来自特定�
 
 DNS 防火墙技术提供了基于已知恶意实体域名的查询等标准阻止某些 DNS 响应的能力。它还允许修改给客户端的 DNS 响应，例如将客户端重定向到内部“围墙”。DNS 防火墙技术使企业和服务提供商能够减少网络内恶意软件传播的概率。它还让服务提供商能够提供增量收入功能，如家长控制和相关的域名拦截，同时遵守执法部门实施的域名或终端用户拦截。
 
-DNS 防火墙也被称为响应策略区域（Response Policy Zones，`RPZs`），这是提供 DNS 防火墙功能的 DNS 实现术。`RPZ` 是一个特殊的区域，它为匹配每个触发器的查询或答案定义了触发器以及关联的查询响应策略。
+DNS 防火墙也被称为响应策略区域（Response Policy Zones，`RPZs`），这是提供 DNS 防火墙功能的 DNS 实现术语。`RPZ` 是一个特殊的区域，它为匹配每个触发器的查询或答案定义了触发器以及关联的查询响应策略。
 
-要查看其工作原理，请参考图 11.3。图中左侧客户端笔记本上安装的恶意软件发出一个查询，以定位其 C&C 中心 `bad-[example.com](http://example.com)`。递归服务器正常处理该查询，在没有缓存信息的情况下遍历域名树，从 `bad-[example.com](http://example.com)` DNS 服务器获取权威答案。然而，我们的 DNS 管理员配置了一个 `RPZ` 区域，旨在将用户引导到强制门户（captive portal）。
+要查看其工作原理，请参考图 11.3。图中左侧客户端笔记本上安装的恶意软件发出一个查询，以定位其 C&C 中心 `bad-example.com`。递归服务器正常处理该查询，在没有缓存信息的情况下遍历域名树，从 `bad-example.com` DNS 服务器获取权威答案。然而，我们的 DNS 管理员配置了一个 `RPZ` 区域，旨在将用户引导到强制门户（captive portal）。
 
 ![图 11.3. DNS 防火墙示例](img/c11f003.jpg)
 
 图 11.3 DNS 防火墙示例
 
-在上述场景中，递归服务器根据收到的答案检查其 `RPZ`，该答案将问题解析为 `192.0.2.254`。在这种情况下，为 `Qname` 为 `bad-[example.com](http://example.com)` 的查询定义了一种响应策略。此匹配指示递归服务器根据策略修改提供给客户端的响应，在这种情况下，该策略具有将解析重定向到 `172.16.100.1`（我们的强制门户服务器）的功能。
+在上述场景中，递归服务器根据收到的答案检查其 `RPZ`，该答案将问题解析为 `192.0.2.254`。在这种情况下，为 `Qname` 为 `bad-example.com` 的查询定义了一种响应策略。此匹配指示递归服务器根据策略修改提供给客户端的响应，在这种情况下，该策略具有将解析重定向到 `172.16.100.1`（我们的强制门户服务器）的功能。
 
 `RPZ` 馈可以在内部生成和管理，或利用外部 `RPZ` 数据提供商，如 `Farsight Security`、`DissectCyber`、`SpamHaus`、`SURBL`、`Diamondback Networks` 和 `ThreatStop`。`RPZ` 信息定义了各种策略触发器和相应的查询处置策略。触发器可以定义为：
 
-*   `Qname` 匹配 – 查询的域名（或域名分支内）匹配 `RPZ` 资源记录的所有者字段。例如，所有者名称为 `good.example.com](http://good.example.com)` 的 `RPZ` 资源记录将策略应用于具有匹配 `Qname` 的查询响应。
-*   `RPZ-IP` – 查询答案 IP 地址（或块）匹配通用格式 `<prefix length>.<reversed IP address>.rpz-ip`。例如，匹配来自 `192.0.2.0/25` 块的 IP 地址的答案，这将编码为 `25.0.2.0.192.rpz-ip`。IPv6 地址可以类似地使用双冒号缩写“zz”进行编码；例如，可以匹配答案来自 `2001:db8:11b::1025/128` 的答案中的 IPv6 地址为 `128.1025.zz.11b.db8.2001.rpz-ip`。
-*   `RPZ-NSIP` – 权威名称服务器 IP 地址，编码方式与 `rpz-ip` 类似，但带有 `rpz.nsip` 后缀。
-*   `RPZ-NSDNAME` – 权威名称服务器域名，例如 `ns1.bad-example.com.rpz-nsdname`。
-*   `RPZ-CLIENT-IP` – 客户端 IP 地址，格式如上，带有前缀长度、反转 IP 地址以及 `rpz-client-ip` 后缀。
+* `Qname` 匹配 – 查询的域名（或域名分支内）匹配 `RPZ` 资源记录的所有者字段。例如，所有者名称为 `good.example.com` 的 `RPZ` 资源记录将策略应用于具有匹配 `Qname` 的查询响应。
+* `RPZ-IP` – 查询答案 IP 地址（或块）匹配通用格式 `<prefix length>.<reversed IP address>.rpz-ip`。例如，匹配来自 `192.0.2.0/25` 块的 IP 地址的答案，这将编码为 `25.0.2.0.192.rpz-ip`。IPv6 地址可以类似地使用双冒号缩写“zz”进行编码；例如，可以匹配答案来自 `2001:db8:11b::1025/128` 的答案中的 IPv6 地址为 `128.1025.zz.11b.db8.2001.rpz-ip`。
+* `RPZ-NSIP` – 权威名称服务器 IP 地址，编码方式与 `rpz-ip` 类似，但带有 `rpz.nsip` 后缀。
+* `RPZ-NSDNAME` – 权威名称服务器域名，例如 `ns1.bad-example.com.rpz-nsdname`。
+* `RPZ-CLIENT-IP` – 客户端 IP 地址，格式如上，带有前缀长度、反转 IP 地址以及 `rpz-client-ip` 后缀。
 
 触发器基于最佳匹配（best fit）原则进行匹配。也就是说，所有触发器匹配查询或答案的记录都按最佳匹配（例如，IP 地址的最长前缀匹配）进行排序；然后应用此类最佳匹配的策略。根据特定的触发器，可以定义策略响应：
 
-*   `NXDOMAIN` – 响应查询者未找到该名称。
-*   `NODATA` – 响应查询者名称存在但没有请求类型。
-*   `Pass-through` – 允许查询继续。
-*   `Drop` – 完全阻止查询响应。
-*   `TCP-Only` – 设置截断位响应以强制客户端使用 TCP 重试。
-*   `Local` – 例如将查询者重定向到围墙页面的策略。此策略可以指定为带有相应 IP 地址或域名的常规 `RRType`（`A`、`AAAA`、`CNAME`）。
+* `NXDOMAIN` – 响应查询者未找到该名称。
+* `NODATA` – 响应查询者名称存在但没有请求类型。
+* `Pass-through` – 允许查询继续。
+* `Drop` – 完全阻止查询响应。
+* `TCP-Only` – 设置截断位响应以强制客户端使用 TCP 重试。
+* `Local` – 例如将查询者重定向到围墙页面的策略。此策略可以指定为带有相应 IP 地址或域名的常规 `RRType`（`A`、`AAAA`、`CNAME`）。
 
 参考以下 RPZ 文件了解如何为定义的触发器定义策略。
 
 ```
+
+
+
+```
 $TTL 1h
+
 @     SOA   localhost.example.com (1 1h 15m 28d 2h)
+
       NS       localhost.
+```
 
 ; Qname 触发器（字段后无点）
+
+```
 badanswer.example.com   CNAME  .   ;NXDOMAIN 策略
 *.badanswer.example.com CNAME  .   ;应用于子域名
+```
 
 ; 答案中的 IP 地址触发器
+
 ; 在此示例中，当查询答案
-; 在 192.0.2.0/24 范围内时，回答“无数据”，但我们将通过 192.0.2.5
+
+; 在 `192.0.2.0/24` 范围内时，回答“无数据”，但我们将通过 `192.0.2.5`
+
 ; 因为其匹配 32 位掩码是最佳匹配
+
+```
 24.0.2.0.192.rpz-ip     CNAME  *.            ;NODATA 策略
 32.5.2.0.192.rpz-ip     CNAME  rpz-passthru ;通过
+```
 
 ; 拦截来自这些名称服务器的查询答案：
-;     ns.hack.example.com 和 IP 地址 2001:db8::1f72
+
+;     `ns.hack.example.com` 和 IP 地址 `2001:db8::1f72`
+
+```
 ns.hack.example.com.rpz-nsdname  CNAME   rpz-drop.
 128.1f72.zz.db8.2001.rpz-nsip    CNAME   rpz-drop.
+```
 
-; 强制查询者 192.0.2.1 使用 tcp
+; 强制查询者 `192.0.2.1` 使用 tcp
+
+```
 32.1.2.0.192.rpz-client-ip   CNAME  rpz-tcp-only.
+```
 
 ; 重定向到门户页面（本地数据）
+
+```
 wrongway.example.com   A   192.168.0.1 ; Qname 触发器
 ```
 
 
+
+# 配置您的 DNS 服务器以记录 `RPZ` 数据命中情况
 
 配置您的 DNS 服务器以记录 `RPZ` 数据命中情况非常重要。这意味着记录每次触发和应用响应策略的事件。源 IP 地址对于识别可能感染了恶意软件的查询设备是必不可缺的。如果您的 `DNS 防火墙` 配置在被 `stub resolvers`（递归解析器）直接查询的递归服务器上，日志应该直接指示罪魁祸首。然而，如果您部署了分层递归 DNS 服务器架构，并在你的互联网缓存服务器上配置了 `DNS 防火墙`，则这些服务器的日志会将查询源指示为源头递归服务器。此时有必要对相应的递归服务器日志进行进一步调查，以尝试识别发起查询的终端设备。
 
@@ -3675,10 +3354,6 @@ wrongway.example.com   A   192.168.0.1 ; Qname 触发器
 | 权威投毒 | 非法动态更新：攻击者向主 DNS 服务器发送 DNS 更新消息，在目标区域添加、修改或删除资源记录。 | 对 `allow-update`、`allow-notify`、`notify-source` 使用 `ACLs`<br>定义更新策略以限制更新范围，例如按 `RRType`<br>定义 `ACLs` 要求事务签名以进行源身份验证和数据完整性 |
 | 权威投毒 | 服务器攻击/劫持：攻击者黑入 DNS 服务器，从而在其他服务器功能之外操纵 DNS 数据。 | 加固您的操作系统<br>管理主机访问控制<br>使用隐藏主以防止探测区域主服务器<br>监控漏洞网站并保持软件更新<br>限制端口或控制台访问 |
 | DNS 服务配置错误 | 配置错误漏洞导致 DNS 服务暴露在不当配置的风险。 | 使用 `checkzone` 和 `checkconf` 或类似工具<br>使用带有错误检查的 `IPAM` 系统<br>保留需要时重新加载的配置备份<br>监控服务提供商服务器上的 DNS 异常情况 |
-
-
-
-
 
 | 域名劫持 | 攻击者破解你的域名注册商账户或邮箱以更改你的域名信息 |
 
@@ -3783,53 +3458,49 @@ DNS 服务器与所有网络基础设施一样，必须通过实施“通用控�
 在你的转发 DNS 服务器上应考虑实施以下策略：
 
 *   在递归信任区域内规划部署——服务器的大小、数量和容量
-
-
-
-
-* 主机控制，包括物理、加固、操作系统和 DNS 软件
-* 服务器网络接口 ACL
-* DNS 软件“allow-query” ACL
-* 限制每个客户端的查询次数
-* DNS cookies
-* 客户端连接加密，如 DNSCrypt
+*   主机控制，包括物理、加固、操作系统和 DNS 软件
+*   服务器网络接口 ACL
+*   DNS 软件“allow-query” ACL
+*   限制每个客户端的查询次数
+*   DNS cookies
+*   客户端连接加密，如 DNSCrypt
 
 ### 递归服务器
 
 在您的递归 DNS 服务器上实施时，应考虑以下策略：
 
-* 在递归信任区域内规划部署——确定服务器的数量和容量
-* 使用任播（Anycast）寻址
-* 主机控制，包括物理、加固、操作系统和 DNS 软件
-* 服务器网络接口 ACL
-* DNS 软件“allow-query” ACL
-* 源端口和事务 ID 随机化
-* 查询大小随机化
-* DNSSEC 验证
-* DNS 防火墙
-* 获取（fetch）或干扰（jostle）超时控制
-* 限制每个客户端的查询次数
-* 针对隧道和恶意软件连接的查询日志审计
-* DNS cookies
-* 客户端连接加密，如 DNSCrypt
+*   在递归信任区域内规划部署——确定服务器的数量和容量
+*   使用任播（Anycast）寻址
+*   主机控制，包括物理、加固、操作系统和 DNS 软件
+*   服务器网络接口 ACL
+*   DNS 软件“allow-query” ACL
+*   源端口和事务 ID 随机化
+*   查询大小随机化
+*   DNSSEC 验证
+*   DNS 防火墙
+*   获取（fetch）或干扰（jostle）超时控制
+*   限制每个客户端的查询次数
+*   针对隧道和恶意软件连接的查询日志审计
+*   DNS cookies
+*   客户端连接加密，如 DNSCrypt
 
 ### 权威服务器
 
 在您的内部、外部和外网权威 DNS 服务器上实施时，应考虑以下策略：
 
-* 在适当的权威信任区域内（外部、外网或内部命名空间）规划部署——确定服务器的数量和容量
-* 外部 DNS 服务提供商备份或多样化
-* 主机控制，包括物理、加固、操作系统和 DNS 软件
-* 禁用递归
-* 使用任播（Anycast）寻址
-* 使用 DNSSEC 签名
-* 将区域更新限制在特定的服务器、用户、IPAM 系统等
-* 将区域传输限制在需要签名的特定服务器
-* 根据部署情况适当设置查询 ACL
-    * 内部权威服务器——仅允许内部客户端查询
-    * 外网权威服务器——可能的话允许合作伙伴客户端查询
-    * 外部权威服务器——由于其作为互联网可查询资源的性质，通常不进行范围限制
-* 响应速率限制（Rate Limiting）
+*   在适当的权威信任区域内（外部、外网或内部命名空间）规划部署——确定服务器的数量和容量
+*   外部 DNS 服务提供商备份或多样化
+*   主机控制，包括物理、加固、操作系统和 DNS 软件
+*   禁用递归
+*   使用任播（Anycast）寻址
+*   使用 DNSSEC 签名
+*   将区域更新限制在特定的服务器、用户、IPAM 系统等
+*   将区域传输限制在需要签名的特定服务器
+*   根据部署情况适当设置查询 ACL
+    *   内部权威服务器——仅允许内部客户端查询
+    *   外网权威服务器——可能的话允许合作伙伴客户端查询
+    *   外部权威服务器——由于其作为互联网可查询资源的性质，通常不进行范围限制
+*   响应速率限制（Rate Limiting）
 
 ## 更广泛的安全策略
 
@@ -3843,85 +3514,77 @@ DNS 服务器与所有网络基础设施一样，必须通过实施“通用控�
 
 “识别”类别中的资产和访问管理子类别项目主要涉及第 5 章和第 6 章中讨论的部署和服务器控制，而风险管理项目则适用于前七章涵盖的所有特定 DNS 威胁。其他大多数子类别项目总结如下：
 
-* `ID.AM-3` – 绘制了组织通信和数据流图——绘制从事件检测、响应到恢复的信息流图，包括在过程的各个要点与相关利益相关者的通信。
-* `ID.AM-6` – 建立了全体员工和第三方利益相关者的网络安全角色和职责——在组织所有层级的定期员工培训中包含安全要素，包括观察什么以及报告可能事件时应联系谁。
-* `ID.BE-1` – 识别并告知了组织在供应链中的角色——在从供应商处采购货物时纳入安全需求和功能，并针对供应短缺、全球性事件和其他可能影响供应的事件定义并告知应急预案。
-* `ID.BE-2` – 识别并告知了组织在关键基础设施及其所属行业中的位置——在关键组织基础设施的规划和管理方面包含并传达了安全需求。
-* `ID.BE-3` – 建立了并告知了组织使命、目标和活动的优先级——将安全融入到公司使命、目标和活动的各个方面，并向所有利益相关者传达。
-* `ID.BE-4` – 建立了交付关键服务的依赖关系和关键功能——将安全纳入业务流程定义中，并对关键网络服务进行冗余部署。
-* `ID.BE-5` – 建立了支持关键服务交付的韧性要求——在采购决策中考虑安全需求，包括冗余、高可用性和安全功能。
-* `ID.GV-1` – 建立了组织信息安全策略——发布一份经管理层批准并面向利益相关者的信息安全策略文档。
-* `ID.GV-2` – 协调并使信息安全角色与职责符合内部角色和外部合作伙伴——记录安全功能和过程的角色与职责，并向内部及相关的外部关联人员告知。
-* `ID.GV-3` – 理解并管理了有关网络安全的法律和法规要求，包括隐私和民权义务——在经管理层批准并面向利益相关者的信息安全策略文档中包含相关的法律和法规影响。
-* `ID.GV-4` – 治理和风险管理过程解决了网络安全风险——记录风险管理过程，并获得管理层批准，向员工和外部利益相关者传达。
-* `ID.RA-6` – 识别并优先考虑风险响应——记录组织的威胁、漏洞、概率和业务影响的累积列表，并根据防御优先级进行排序。
-* `ID.RM-1` – 建立了、管理并让组织利益相关者的风险管理过程——建立风险管理流程，包括对识别出的风险进行识别、分类和业务影响评估。获得利益相关者的认可。
-* `ID.RM-2` – 确定并清晰表达了组织的风险承受度——就确定和记录组织风险的过程定义并共识。
-* `ID.RM-3` – 组织对风险承受度的判定参考了其在关键基础设施中的角色以及特定行业的风险分析——就对每个识别出的风险进行风险承受度评估定义并达成共识。
+*   `ID.AM-3` – 绘制了组织通信和数据流图——绘制从事件检测、响应到恢复的信息流图，包括在过程的各个要点与相关利益相关者的通信。
+*   `ID.AM-6` – 建立了全体员工和第三方利益相关者的网络安全角色和职责——在组织所有层级的定期员工培训中包含安全要素，包括观察什么以及报告可能事件时应联系谁。
+*   `ID.BE-1` – 识别并告知了组织在供应链中的角色——在从供应商处采购货物时纳入安全需求和功能，并针对供应短缺、全球性事件和其他可能影响供应的事件定义并告知应急预案。
+*   `ID.BE-2` – 识别并告知了组织在关键基础设施及其所属行业中的位置——在关键组织基础设施的规划和管理方面包含并传达了安全需求。
+*   `ID.BE-3` – 建立了并告知了组织使命、目标和活动的优先级——将安全融入到公司使命、目标和活动的各个方面，并向所有利益相关者传达。
+*   `ID.BE-4` – 建立了交付关键服务的依赖关系和关键功能——将安全纳入业务流程定义中，并对关键网络服务进行冗余部署。
+*   `ID.BE-5` – 建立了支持关键服务交付的韧性要求——在采购决策中考虑安全需求，包括冗余、高可用性和安全功能。
+*   `ID.GV-1` – 建立了组织信息安全策略——发布一份经管理层批准并面向利益相关者的信息安全策略文档。
+*   `ID.GV-2` – 协调并使信息安全角色与职责符合内部角色和外部合作伙伴——记录安全功能和过程的角色与职责，并向内部及相关的外部关联人员告知。
+*   `ID.GV-3` – 理解并管理了有关网络安全的法律和法规要求，包括隐私和民权义务——在经管理层批准并面向利益相关者的信息安全策略文档中包含相关的法律和法规影响。
+*   `ID.GV-4` – 治理和风险管理过程解决了网络安全风险——记录风险管理过程，并获得管理层批准，向员工和外部利益相关者传达。
+*   `ID.RA-6` – 识别并优先考虑风险响应——记录组织的威胁、漏洞、概率和业务影响的累积列表，并根据防御优先级进行排序。
+*   `ID.RM-1` – 建立了、管理并让组织利益相关者的风险管理过程——建立风险管理流程，包括对识别出的风险进行识别、分类和业务影响评估。获得利益相关者的认可。
+*   `ID.RM-2` – 确定并清晰表达了组织的风险承受度——就确定和记录组织风险的过程定义并共识。
+*   `ID.RM-3` – 组织对风险承受度的判定参考了其在关键基础设施中的角色以及特定行业的风险分析——就对每个识别出的风险进行风险承受度评估定义并达成共识。
 
 ### 保护（Protect）功能
 
 在前七章中已针对相应的漏洞和风险讨论了保护策略。以下项目涉及这些项目以及网络安全的所有组件。
 
-* `PR.AT-1` – 所有用户均得到告知并接受培训——设计、开发并交付 IT 安全培训。保持培训材料更新并提供定期的培训更新。
-
-
-
-
-* `PR.AT-2` – 特权用户理解角色和职责 – 编写定义良好的职位描述，概述包括安全方面在内的角色和职责，并获得相关用户的认可。
-* `PR.AT-3` – 第三方利益相关者（如供应商、客户、合作伙伴）理解角色和职责 – 获得第三方利益相关者对安全相关角色和职责的认可。
-* `PR.AT-4` – 高级管理用户理解角色和职责 – 为管理层提供培训并获得对其角色和职责的认可。
-* `PR.AT-5` – 物理和信息安全人员理解角色和职责 – 为物理和信息安全人员提供培训并获得对其角色和职责的认可。
-* `PR-IP-2` – 实施了管理系统的系统开发生命周期 – 在 IT 网络和系统中应用安全工程原理，包括内部开发项目和产品采购分析。
-* `PR.IP-6` – 根据策略销毁数据 – 认为需要处理的写入和计算设备数据根据策略进行销毁，以防止信息泄露。
-* `PR.IP-7` – 保护过程持续改进 – 通过定期审查、新技术和教训持续改进数据保护过程。
-* `PR.IP-8` – 保护技术的有效性与相关方共享 – DNS 数据保护技术的有效性与相关方共享。
-* `PR.IP-9` – 响应计划（事件响应和业务连续性）和恢复计划（事件恢复和灾难恢复）已到位并得到管理 – 事件响应和恢复计划已记录、沟通和管理，业务连续性和灾难恢复计划也是如此。
-* `PR.IP-10` – 响应和恢复计划经过测试 – 事件响应和恢复计划经过测试，并将结果反馈以改进此类计划。
-* `PR.IP-11` – 网络安全包含在人力资源实践中（如离职处理、人员筛选） – 将安全性整合到与招聘、聘用、适当评估、培训和离职相关的人力资源过程中。
-* `PR.IP-12` – 开发并实施了漏洞管理计划 – 开发并实施了描述漏洞识别、评估、可能性分析和潜在影响过程的漏洞管理计划。
+*   `PR.AT-1` – 所有用户均得到告知并接受培训——设计、开发并交付 IT 安全培训。保持培训材料更新并提供定期的培训更新。
+*   `PR.AT-2` – 特权用户理解角色和职责 – 编写定义良好的职位描述，概述包括安全方面在内的角色和职责，并获得相关用户的认可。
+*   `PR.AT-3` – 第三方利益相关者（如供应商、客户、合作伙伴）理解角色和职责 – 获得第三方利益相关者对安全相关角色和职责的认可。
+*   `PR.AT-4` – 高级管理用户理解角色和职责 – 为管理层提供培训并获得对其角色和职责的认可。
+*   `PR.AT-5` – 物理和信息安全人员理解角色和职责 – 为物理和信息安全人员提供培训并获得对其角色和职责的认可。
+*   `PR-IP-2` – 实施了管理系统的系统开发生命周期 – 在 IT 网络和系统中应用安全工程原理，包括内部开发项目和产品采购分析。
+*   `PR.IP-6` – 根据策略销毁数据 – 认为需要处理的写入和计算设备数据根据策略进行销毁，以防止信息泄露。
+*   `PR.IP-7` – 保护过程持续改进 – 通过定期审查、新技术和教训持续改进数据保护过程。
+*   `PR.IP-8` – 保护技术的有效性与相关方共享 – DNS 数据保护技术的有效性与相关方共享。
+*   `PR.IP-9` – 响应计划（事件响应和业务连续性）和恢复计划（事件恢复和灾难恢复）已到位并得到管理 – 事件响应和恢复计划已记录、沟通和管理，业务连续性和灾难恢复计划也是如此。
+*   `PR.IP-10` – 响应和恢复计划经过测试 – 事件响应和恢复计划经过测试，并将结果反馈以改进此类计划。
+*   `PR.IP-11` – 网络安全包含在人力资源实践中（如离职处理、人员筛选） – 将安全性整合到与招聘、聘用、适当评估、培训和离职相关的人力资源过程中。
+*   `PR.IP-12` – 开发并实施了漏洞管理计划 – 开发并实施了描述漏洞识别、评估、可能性分析和潜在影响过程的漏洞管理计划。
 
 ### 检测功能 (Detect Function)
 
 在之前的七章中，已经针对相应的攻击向量讨论了检测攻击或风险实例的策略。以下项目涉及“检测过程”类别，该类别适用于这些以及网络安全的所有组件。
 
-* `DE.DP-1` – 检测的角色和职责定义良好，以确保问责制 – 组织内部网络和 DNS 安全事件检测的人员角色和职责定义良好。
-* `DE.DP-2` – 检测活动符合所有适用要求 – 根据事件检测要求记录并执行安全事件检测活动。
-* `DE.DP-3` – 检测过程经过测试 – 对安全事件检测活动和系统进行测试，以表征检测的有效性。
-* `DE.DP-4` – 事件检测信息已传给相关方 – 根据事件响应计划将安全事件检测信息传给相关方。
-* `DE.DP-5` – 检测过程持续改进 – 根据技术或流程改进以及以往事件的教训，持续改进安全事件检测过程。
+*   `DE.DP-1` – 检测的角色和职责定义良好，以确保问责制 – 组织内部网络和 DNS 安全事件检测的人员角色和职责定义良好。
+*   `DE.DP-2` – 检测活动符合所有适用要求 – 根据事件检测要求记录并执行安全事件检测活动。
+*   `DE.DP-3` – 检测过程经过测试 – 对安全事件检测活动和系统进行测试，以表征检测的有效性。
+*   `DE.DP-4` – 事件检测信息已传给相关方 – 根据事件响应计划将安全事件检测信息传给相关方。
+*   `DE.DP-5` – 检测过程持续改进 – 根据技术或流程改进以及以往事件的教训，持续改进安全事件检测过程。
 
 ### 响应功能 (Respond Function)
 
 我们在之前的各相关章节中讨论了针对特定漏洞的分析和缓解策略。然而，在网络安全框架内，建议汇总各种输入的信息以帮助全面分类攻击范围和影响；因此，我们在此对这些进行了总结。
 
-* `RS.RP-1` – 在事件期间或事件后执行响应计划 – 当检测并表征 DNS 安全事件时，执行事件响应计划中的相关行动。
-* `RS.CO-1` – 人员在需要响应时了解其角色和操作顺序 – 事件响应计划中明确定义了组织内部 DNS 安全事件响应的人员角色和职责。
-* `RS.CO-2` – 事件报告符合既定标准 – 根据既定标准检测并表征 DNS 安全事件。
-* `RS.CO-3` – 信息共享符合响应计划 – 根据事件响应计划向相关方传达（共享）安全事件响应信息。
-* `RS.CO-4` – 与利益相关者的协调符合响应计划 – 根据事件响应计划向利益相关者传达安全事件响应信息。
-* `RS.CO-5` – 与外部利益相关者进行自愿信息共享以实现更广泛的网络意识 – 根据事件响应计划向外部利益相关者共享安全事件响应信息，以促进行业对攻击和有效防御措施的认知。
-* `RS.AN-1` – 调查检测系统的通知 – 对事件检测系统进行调查，以将事件表征为潜在攻击。
-* `RS.AN-2` – 理解事件的影响 – 检测到事件后，应对事件进行分析以评估并理解其影响。应遵循事件响应计划，由参与响应的小组进行控制、消除和恢复，同时根据响应计划传达状态。应根据组织适当成员的审查、一致和批准，将新信息或教训纳入响应计划的更新中。
-* `RS.AN-3` – 执行取证 – 对检测到的事件进行取证分析，超越事件表象以识别根本原因并列出被利用或攻击的漏洞。这种分析对于识别新的或演变的攻击向量和漏洞，并评估旨在防御此类攻击的防御控制的有效性很有帮助。
-* `RS.AN-4` – 事件分类符合响应计划 – 需要按照事件响应计划对事件进行分类。这对于优先考虑行动以及纳入适当人员及时分析、控制、消除和解决事件非常有。
-* `RS.IM-1` – 响应计划纳入了教训 – 事件恢复后，与参与人员进行事后讨论有助于回顾事件、改进响应的防御和缓解步骤，以及纳入教训的响应计划更新建议。
-* `RS.IM-2` – 响应策略已更新 – 应根据情况审查并更新响应策略。
+*   `RS.RP-1` – 在事件期间或事件后执行响应计划 – 当检测并表征 DNS 安全事件时，执行事件响应计划中的相关行动。
+*   `RS.CO-1` – 人员在需要响应时了解其角色和操作顺序 – 事件响应计划中明确定义了组织内部 DNS 安全事件响应的人员角色和职责。
+*   `RS.CO-2` – 事件报告符合既定标准 – 根据既定标准检测并表征 DNS 安全事件。
+*   `RS.CO-3` – 信息共享符合响应计划 – 根据事件响应计划向相关方传达（共享）安全事件响应信息。
+*   `RS.CO-4` – 与利益相关者的协调符合响应计划 – 根据事件响应计划向利益相关者传达安全事件响应信息。
+*   `RS.CO-5` – 与外部利益相关者进行自愿信息共享以实现更广泛的网络意识 – 根据事件响应计划向外部利益相关者共享安全事件响应信息，以促进行业对攻击和有效防御措施的认知。
+*   `RS.AN-1` – 调查检测系统的通知 – 对事件检测系统进行调查，以将事件表征为潜在攻击。
+*   `RS.AN-2` – 理解事件的影响 – 检测到事件后，应对事件进行分析以评估并理解其影响。应遵循事件响应计划，由参与响应的小组进行控制、消除和恢复，同时根据响应计划传达状态。应根据组织适当成员的审查、一致和批准，将新信息或教训纳入响应计划的更新中。
+*   `RS.AN-3` – 执行取证 – 对检测到的事件进行取证分析，超越事件表象以识别根本原因并列出被利用或攻击的漏洞。这种分析对于识别新的或演变的攻击向量和漏洞，并评估旨在防御此类攻击的防御控制的有效性很有帮助。
+*   `RS.AN-4` – 事件分类符合响应计划 – 需要按照事件响应计划对事件进行分类。这对于优先考虑行动以及纳入适当人员及时分析、控制、消除和解决事件非常有。
+*   `RS.IM-1` – 响应计划纳入了教训 – 事件恢复后，与参与人员进行事后讨论有助于回顾事件、改进响应的防御和缓解步骤，以及纳入教训的响应计划更新建议。
+*   `RS.IM-2` – 响应策略已更新 – 应根据情况审查并更新响应策略。
 
 ### 恢复功能 (Recover Function)
 
 由于响应功能允许在 DNS 服务器及相关网络和服务器上应用更完整、有效的响应，恢复功能广泛应用于实现受影响系统和网络的全面恢复。
 
-
-
-
-
-* `RC.RP-1` – 恢复计划在事件期间或之后执行 – 事件恢复计划在事件发生期间或之后执行。在事件期间，将采取应急措施和替代方案，以便在遭遇中断、破坏或故障时恢复服务水平。在消除事件后，受影响的系统应恢复到之前的功能，以完全恢复到已知的正常状态。
-* `RC.IM-1` – 恢复计划包含教训 – 应该更新恢复计划，以包含吸得的教训。
-* `RC.IM-2` – 恢复策略已更新 – 如果从事件恢复的分析中得出任何改进建议，应对应恢复策略进行审查和更新。
-* `RC.CO-1` – 公共关系得到管理 – 对客户和普通公众的通信经过了仔细管理，以传达有关事件的信息、响应和恢复的状态以及计划采取的行动。
-* `RC.CO-2` – 事件后的声誉得到修复 – 通常，提供有关事件的有意义信息以及为从事件恢复所做的措施有助于维护声誉，但可能还需要其他步骤。
-* `RC.CO-3` – 恢复活动已告知内部利益相关者及执行和管理团队 – 对包括高管和管理层在内的内部利益相关者的通信对于事件、响应和恢复的状态以及计划的行动（包括在攻击持续时对替代方案的评估）保持透明且直接。
+*   `RC.RP-1` – 恢复计划在事件期间或之后执行 – 事件恢复计划在事件发生期间或之后执行。在事件期间，将采取应急措施和替代方案，以便在遭遇中断、破坏或故障时恢复服务水平。在消除事件后，受影响的系统应恢复到之前的功能，以完全恢复到已知的正常状态。
+*   `RC.IM-1` – 恢复计划包含教训 – 应该更新恢复计划，以包含吸得的教训。
+*   `RC.IM-2` – 恢复策略已更新 – 如果从事件恢复的分析中得出任何改进建议，应对应恢复策略进行审查和更新。
+*   `RC.CO-1` – 公共关系得到管理 – 对客户和普通公众的通信经过了仔细管理，以传达有关事件的信息、响应和恢复的状态以及计划采取的行动。
+*   `RC.CO-2` – 事件后的声誉得到修复 – 通常，提供有关事件的有意义信息以及为从事件恢复所做的措施有助于维护声誉，但可能还需要其他步骤。
+*   `RC.CO-3` – 恢复活动已告知内部利益相关者及执行和管理团队 – 对包括高管和管理层在内的内部利益相关者的通信对于事件、响应和恢复的状态以及计划的行动（包括在攻击持续时对替代方案的评估）保持透明且直接。
 
 # 13 提高网络安全的 DNS 应用
 
@@ -3941,11 +3604,13 @@ DNS 可以通过允许网站发布者发布有关其传输层安全（TLS）凭�
 
 在深入研究 DANE 之前，让我们先回顾 TLS 是如何工作的，以说明 DANE 所缓解的漏洞。TLS（以前称为安全套接层，SSL）实现了 IP 流量的验证和加密以及数据完整性验证。TLS 利用公钥基础设施（PKI）信任模型。考虑图 13.1。在图所示的步骤 1 中，客户端使用 DNS 识别网页服务器地址。在步骤 2 中，客户端连接服务器并开始 TLS 握手，指示其支持的加密能力和一个随机数。
 
-```
-![图 13.1. TLS 握手](img/c13f001.jpg)
-```
 
-图 13.1. TLS 握手
+
+![图 13.1. TLS 握手](img/c13f001.jpg)
+
+
+
+## TLS 握手
 
 服务器使用私钥对随机数进行签名，传递相应的公钥，并出示 ISO X509 证书，该证书传达了服务器域名、颁发机构、公钥和其他信息。如果客户端（浏览器）成功解密随机数并配置为信任所展示的证书，则客户端可能认为服务器是可靠的。这通常是私有网络的情况，其中验证设备上预装了信任证书。在一般情况下，客户端需要通过证书找到签署了服务器证书的信任 CA。如果 CA 按照图 13.1 中的步骤 3 验证了证书，浏览器将信任该网页服务器并启动 HTTPS 连接。
 
@@ -3955,17 +3620,13 @@ DNS 可以通过允许网站发布者发布有关其传输层安全（TLS）凭�
 
 遗憾的是，网站管理员无法控制 CA 的完整性或浏览器中安装的信任根 CA 列表。DANE 允许网站管理员使用 DNS（特别是 DNSSEC）保护其证书认证的完整性。DANE 引入了 TLSA 资源记录类型，允许域管理员在 DNS 中发布证书或公钥信息与端实体（例如域名）或连接端点的信任颁发机构（例如网页服务器）的关联。
 
-
-
-
-
 参考图 13.2，一个连接到网站的浏览器在从 DNS 获取其 IP 地址（图中未显示第 1 步）并从关联的 Web 服务器获取证书（第 2 步）后，通过受信任的 CA 进行验证（第 3 步），可以在第 4 步中为 Web 服务器的域名查询 TLSA 资源记录。TLSA 记录允许 DNS 管理员确认其 Web 服务器的证书，以实现对证书、其公钥或相关根 CA 的直接验证。DANE 需要 DNSSEC 验证以确保身份验证和数据完整性校验。
 
 ![图 13.2. 使用 DANE 进行证书验证](img/c13f002.jpg)
 
 `图 13.2.` 使用 DANE 进行证书验证
 
-# 电子邮件安全
+## 电子邮件安全
 
 DANE 可用于域管理员发布网页地址及相应的证书关联。虽然最初的目标是保护网页浏览，但 DANE 技术在保护电子邮件 TLS 安全方面已获得更广泛的初始部署成功。电子邮件客户端可以验证电子邮件服务器，并且客户端与服务器之间的通信可以被加密。
 
@@ -3977,13 +3638,13 @@ DANE 可用于域管理员发布网页地址及相应的证书关联。虽然最
 
 美国国家网络安全卓越中心 (NCCoE) 最近发布了一份出色的实践指南草案 (87)，该指南为各种电子邮件交易场景提供了用用例、配置示例和测试结果，这些场景利用了本节讨论的大部分技术。在我们深入研究这项技术之前，让我们先来看看电子邮件传输的内部结构，包括 DNS 在电子邮件投递中的作用。
 
-## 电子邮件与 DNS
+### 电子邮件与 DNS
 
-电子邮件通常源自一个人，并发送给一个或多个接收者。每个电子邮件地址的格式为 mailbox@maildomain。邮箱（mailbox）通常指人或邮箱/电子邮件账户的所有者名称，而邮件域（maildomain，通常是公司或互联网服务提供商的名称）是投递到相应邮箱或邮件交换服务器（mail exchange）的站点域名。电子邮件使用电子邮件客户端编写，例如 Microsoft Outlook、Eudora 或 Yahoo、Google 等基于 Web 的客户端。无论如何，当发送者发送时，客户端会连接到简单邮件传输协议（SMTP）服务器（使用 `SMTP` 协议）来发送电子邮件。就像邮件的默认路由器，`SMTP` 服务器负责将电子邮件转发到其目的地。
+电子邮件通常源自一个人，并发送给一个或多个接收者。每个电子邮件地址的格式为 `mailbox@maildomain`。邮箱（`mailbox`）通常指人或邮箱/电子邮件账户的所有者名称，而邮件域（`maildomain`，通常是公司或互联网服务提供商的名称）是投递到相应邮箱或邮件交换服务器（`mail exchange`）的站点域名。电子邮件使用电子邮件客户端编写，例如 Microsoft Outlook、Eudora 或 Yahoo、Google 等基于 Web 的客户端。无论如何，当发送者发送时，客户端会连接到简单邮件传输协议（SMTP）服务器（使用 `SMTP` 协议）来发送电子邮件。就像邮件的默认路由器，`SMTP` 服务器负责将电子邮件转发到其目的地。
 
 `SMTP` 服务器必须将邮件域解析为 IP 地址以便传输消息。自然，这是使用 DNS 完成的，查询邮件交换（MX）记录类型，以及相应的 `A` 或 `AAAA` 记录类型。
 
-***MX – 邮件交换记录*** 邮件交换记录用于定位特定域的电子邮件服务器或服务器。如果我发送一封发往 tim@ipamworldwide.com 的邮件，我的 `SMTP` 服务器将使用 DNS 找到可以接收该用户邮件的主机。对于 [ipamworldwide.com](http://ipamworldwide.com) 域名，可能会创建多个 MX 记录，每个记录都有一个不同的优先级值（preference）。`SMTP` 服务器利用这些优先级值来确定首选的邮件递递目标。优先级值越小，`SMTP` 服务器越倾向于该目标。如果 `smtp1` 不可用，则选择 `smtp2`。在下例所示，对于 [ipamworldwide.com](http://ipamworldwide.com) 域的两个 MX 记录，`smtp1` 优于 `smtp2`。如果 `smtp1` 不可用，该机制提供了备份。
+**MX – 邮件交换记录** 邮件交换记录用于定位特定域的电子邮件服务器或服务器。如果我发送一封发往 `tim@ipamworldwide.com` 的邮件，我的 `SMTP` 服务器将使用 DNS 找到可以接收该用户邮件的主机。对于 [ipamworldwide.com](http://ipamworldwide.com) 域名，可能会创建多个 MX 记录，每个记录都有一个不同的优先级值（`preference`）。`SMTP` 服务器利用这些优先级值来确定首选的邮件递递目标。优先级值越小，`SMTP` 服务器越倾向于该目标。如果 `smtp1` 不可用，则选择 `smtp2`。在下例所示，对于 [ipamworldwide.com](http://ipamworldwide.com) 域的两个 MX 记录，`smtp1` 优于 `smtp2`。如果 `smtp1` 不可用，该机制提供了备份。
 
 | 所有者 | TTL | 类型 | RData |
 | --- | --- | --- | --- |
@@ -3995,7 +3656,7 @@ DANE 可用于域管理员发布网页地址及相应的证书关联。虽然最
 
 在解析了邮件服务器后，SMTP 服务器使用该协议将消息发送到目的地。最终目的地服务器必须支持邮局协议（POP）或互联网消息访问协议（IMAP），以便客户端检索电子邮件。因此，当您的电子邮件客户端执行“发送/接收”时，它利用 `SMTP` 将出站邮件发送到配置的 SMTP 服务器，并利用 `POP` 或 `IMAP` 从配置的服务器接收入站邮件。
 
-图 13.3 显示了两个电子邮件服务器之间简单的 `SMTP` 事务，位于互联网云的两侧。在图左侧，Mike 使用其电子邮件客户端编写了一封发往 tim@ipamworldwide.com 的邮件并发送。他配置的 SMTP 服务器根据 [ipamworldwide.com](http://ipamworldwide.com) 的 MX 记录将邮件转发到目的地服务器。他的 SMTP 服务器在 25 端口与解析出的目的地服务器建立 TCP 连接。两个服务器之间的消息事务在图中突出显示。
+图 13.3 显示了两个电子邮件服务器之间简单的 `SMTP` 事务，位于互联网云的两侧。在图左侧，Mike 使用其电子邮件客户端编写了一封发往 `tim@ipamworldwide.com` 的邮件并发送。他配置的 SMTP 服务器根据 [ipamworldwide.com](http://ipamworldwide.com) 的 MX 记录将邮件转发到目的地服务器。他的 SMTP 服务器在 25 端口与解析出的目的地服务器建立 TCP 连接。两个服务器之间的消息事务在图中突出显示。
 
 ![图 13.3. Simple SMTP 事务示例](img/c13f003.jpg)
 
@@ -4003,19 +3664,15 @@ DANE 可用于域管理员发布网页地址及相应的证书关联。虽然最
 
 一旦建立了 TCP 会话，SMTP 应用程序将利用会话进行握手并处理消息。消息的内容部分从 `HELO`（或 `EHLO`，增强型 HELO）开始，它表示发送方的身份。`MAIL FROM` 语句指示消息来源，随后是 `RCPT TO` 语句指示目标邮箱。在交换的此时，如果目标邮箱未知或被屏蔽，或者“发件地址”被禁止，接收服务器可能会拒绝接受消息并关闭连接。否则，事务继续并传输 `data` 或消息部分^(1)。接收的邮件交换服务器存储电子邮件消息，或将其转发到目标邮箱所在的服务器。
 
+接收邮件服务器使用的“存储并转发”（`store-and-forward`）方法也可由中间邮件网关（又称邮件传输代理）使用，以提供多跳邮件投递。如上所述，将目标邮箱域域名解析为多个 `MX` 记录意味着系统具有识别“目标”邮件服务器的能力，而该服务器可能可能不是预期收件者获取邮件的最终目标。`MX` 记录的优先级字段提供了对入站邮件服务器或网关相对优先级的控制，同时根据可用性和性能从多个选项中进行选择。
 
-
-
-
-接收邮件服务器使用的“存储并转发”（store-and-forward）方法也可由中间邮件网关（又称邮件传输代理）使用，以提供多跳邮件投递。如上所述，将目标邮箱域域名解析为多个 `MX` 记录意味着系统具有识别“目标”邮件服务器的能力，而该服务器可能可能不是预期收件者获取邮件的最终目标。`MX` 记录的优先级字段提供了对入站邮件服务器或网关相对优先级的控制，同时根据可用性和性能从多个选项中进行选择。
-
-图 13.4 展示了一个使用 `SMTP` 的两步邮件投递场景。在此场景中，发送的是同一封邮件，如图 13.3 所示。然而，在这种情况下，可能预期的目标服务器 [smtp.ipamworldwide.com](http://smtp.ipamworldwide.com) 正忙并拒绝了直接连接。在通过 DNS `MX` 查询解析了 `[ipamworldwide.com](http://ipamworldwide.com)` 服务器和 `[mta-gateway.com](http://mta-gateway.com)` 服务器后，我的发件邮件服务器将尝试将邮件发送到第二个选择 `[mta-gateway.com](http://mta-gateway.com)`。
+图 13.4 展示了一个使用 `SMTP` 的两步邮件投递场景。在此场景中，发送的是同一封邮件，如图 13.3 所示。然而，在这种情况下，可能预期的目标服务器 [smtp.ipamworldwide.com](http://smtp.ipamworldwide.com) 正忙并拒绝了直接连接。在通过 DNS `MX` 查询解析了 [ipamworldwide.com](http://ipamworldwide.com) 服务器和 [mta-gateway.com](http://mta-gateway.com) 服务器后，我的发件邮件服务器将尝试将邮件发送到第二个选择 [mta-gateway.com](http://mta-gateway.com)。
 
 ![图 13.4 邮件中继](img/c13f004.jpg)
 
 **图 13.4.** 邮件中继
 
-在接受来自我的邮件服务器的 `SMTP` 传输时，`[mta-gateway.com](http://mta-gateway.com)` 服务器实际上同意代表我将邮件转发到最终目标。我的邮件服务器与 `[mta-gateway.com](http://mta-gateway.com)` 服务器之间的事务在尝试第二阶段投递之前已完成。`SMTP` 使用的是存储并转发的方法，而不是对每条消息进行同步中继。
+在接受来自我的邮件服务器的 `SMTP` 传输时，[mta-gateway.com](http://mta-gateway.com) 服务器实际上同意代表我将邮件转发到最终目标。我的邮件服务器与 [mta-gateway.com](http://mta-gateway.com) 服务器之间的事务在尝试第二阶段投递之前已完成。`SMTP` 使用的是存储并转发的方法，而不是对每条消息进行同步中继。
 
 投递的第一阶段与图 13.3 所示的非常相似，区别在于 `SMTP` 服务器的不同。连接的第二阶段也相似，只是再次由于 `SMTP` 端点的不同。另一个区别是在邮件数据部分的头部部中插入了 `Received:` 行。每个转发该消息的中间 `SMTP` 服务器都会在其前面添加一条“Received”行，标明其域名名称和相应的时间戳。这使得能够从目标回溯邮件的路径。`RCPT TO` 行在两个段落中保持不变，指示了投递出现错误时应发送到的邮箱。
 
@@ -4032,14 +3689,11 @@ DANE 可用于域管理员发布网页地址及相应的证书关联。虽然最
 
 （注：由于原文文本中存在大量重复的乱码/重复，译文已根据核心逻辑进行了准确翻译）
 
-
-
-
-# 机制 (Mechanisms)
+## 机制 (Mechanisms)
 
 机制允许在 `TXT` 记录中指定匹配标准，接收邮件的邮件服务器可以查询这些标准来验证特定邮件消息的发送者。机制在指定 SPF 版本后，被定义在 `TXT` 记录的 `RData` 字段中。机制按照从左到右的进行评估。如果某个机制根据其评估结果通过（pass），则验证通过；否则，将测试下一个机制，直到找到通过或失败的结果，或者没有进一步的机制定义为止。
 
-每个机制都可以用一个限定符（qualifier）来定义，限定符是一个前缀，用于指示邮件或垃圾过滤器服务器如何解释给定的“匹配”。
+每个机制都可以用一个限定符（`qualifier`）来定义，限定符是一个前缀，用于指示邮件或垃圾过滤器服务器如何解释给定的“匹配”。
 
 *   `+` = pass（通过，默认）——如果此机制匹配，则认为此机制为通过。
 *   `−` = fail（失败）——如果机制匹配，则认为此机制为失败。
@@ -4074,24 +3728,31 @@ DANE 可用于域管理员发布网页地址及相应的证书关联。虽然最
     *   `exists:ipamworldwide.com` = 如果 `ipamworldwide.com` 的 `A` 记录查询返回的 IP 地址与源 IP 地址匹配，则为通过。
 *   `all` = 匹配所有。
 
-# 限定符 (Modifiers)
+## 限定符 (Modifiers)
 
 限定符可以用于以下资源记录检查机制，以定义对给定机制的解释，如下文示例所示：
 
 *   `redirect=domain_name` – 解释，用于在 SPF 失败时。在 SPF 记录中以键值对（key-value pairs）的形式提供额外信息，如下示例所示：
     ```
-    hq.ipamworldwide.com IN v=1 redirect=ipamworldwide.com
-    euro.ipamworldwide.com IN v=1 redirect=ipamworldwide.com
-    _spf.ipamworldwide.com IN v=1 +mx
-    ```
-    `exp=domain_name` – 解释，用于在此项检查失败时查询的 `TXT` 记录可以被填充宏，以在失败时呈现的字符串。
+
+
+
+`hq.ipamworldwide.com IN v=1 redirect=ipamworldwide.com`
+
+`euro.ipamworldwide.com IN v=1 redirect=ipamworldwide.com`
+
+`_spf.ipamworldwide.com IN v=1 +mx`
+
+```
+`exp=domain_name` – 解释，用于在此项检查失败时查询的 `TXT` 记录可以被填充宏，以在失败时呈现的字符串。
 *   `max=count` = 限制 DNS 查找次数，如下文示例所示。
 *   `min=count` = 允许的 DNS 查找次数，如下文示例所示。
 *   `all` = 匹配所有内容。
+```
 
 # 宏 (Macros)
 
-技术上，上述任何机制和限定符的 `domain_name` 不必是显式定义的（硬编码）域名，但可以使用宏根据正在评估的消息动态制定域名。通过处理 `exp` 限定符引用的 `TXT` 记录也可以用宏填充。宏使用百分号（%）识别，并用大括号({})括起来。以下是已定义的宏：
+技术上，上述任何机制和限定符的 `domain_name` 不必是显式定义的（硬编码）域名，但可以使用宏根据正在评估的消息动态制定域名。通过处理 `exp` 限定符引用的 `TXT` 记录也可以用宏填充。宏使用百分号（`%`）识别，并用大括号（`{}`）括起来。以下是已定义的宏：
 
 *   `%s` = 发送者地址
 *   `%l` = 发送者地址的本地部分
@@ -4111,15 +3772,11 @@ DANE 可用于域管理员发布网页地址及相应的证书关联。虽然最
 *   `%r` = 执行 SPF 检查的主机域名名
 *   `%t` = 当前时间戳
 
-
-
-
-
 宏转换器（Macro transformers）允许使用宏结果的子集，例如通过指定域名标签的数量，或反转宏的结果（例如反转 IP 地址）。反转通过在宏的大括号中添加一个 `r` 来。
 
 ## 宏示例
 
-考虑图 10-3 中的示例，Mike (mike@ipamww.com) 从 IP 地址 `192.0.2.32` 的 SMTP 主机向 tim@ipamworldwide.com 发送邮件。利用图中的这些和其他信息，我们可以定义该邮件传输的宏值如下：
+考虑图 10-3 中的示例，Mike (`mike@ipamww.com`) 从 IP 地址 `192.0.2.32` 的 SMTP 主机向 `tim@ipamworldwide.com` 发送邮件。利用图中的这些和其他信息，我们可以定义该邮件传输的宏值如下：
 
 * `%{s} = mike@ipamww.com`
 * `%{l} = mike`
@@ -4170,15 +3827,13 @@ SPF 提供了一种强大的宏语言，可以为您的组织细粒度描述邮�
 * 人类阅读注释（`n=updated\_key`）
 * 公钥（`p=Dkjeijf98z…`）
 * 服务类型（`s=email`）
-* 指示此类内容的标志，如 t=y
+* 指示此类内容的标志，如 `t=y`
 
 示例 TXT 记录如下：
 
 ```
 europe._domainkey.ipamworldwide.com IN TXT "v=DKIM1; p=Dkjeijf98z…"
 ```
-
-
 
 
 
@@ -4193,10 +3848,10 @@ DMARC 策略以 `TXT` 记录的形式发布在 DNS 中。当收到来自某个�
 * `adkim` – DKIM 的对齐模式 – 宽松（relaxed）或严格（strict）
 * `aspf` – SPF 的对齐模式 –宽松（relaxed）或严格（strict）
 * `fo` – 失败报告选项 – 在满足以下条件之一时生成失败报告：
-    * 如果所有底层验证机制未能产生“pass”结果，则生成 DMARC 失败报告
-    * 如果任何底层验证机制未能产生“pass”结果，则生成 DMARC 失败报告
-    * 如果邮件的签名验证失败，则生成 DKIM 失败报告
-    * 如果邮件未通过 SPF ，则生成 SPF 失败报告
+  * 如果所有底层验证机制未能产生“pass”结果，则生成 DMARC 失败报告
+  * 如果任何底层验证机制未能产生“pass”结果，则生成 DMARC 失败报告
+  * 如果邮件的签名验证失败，则生成 DKIM 失败报告
+  * 如果邮件未通过 SPF ，则生成 SPF 失败报告
 * `rf` – 当 SPF 和 DKIM 均失败时使用的报告格式，以便为每个失败提供详细信息
 * `ri` – 报告间隔（单位：秒）
 
@@ -4212,9 +3867,9 @@ DMARC 策略以 `TXT` 记录的形式发布在 DNS 中。当收到来自某个�
 
 除了对更新进行签名外，DNS 还提供了额外的机制来验证 DNS 更新消息的来源。这有助于防止攻击者通过动态 DNS 消息修改你的“www”记录等。当然，鉴于你的外部权威 DNS 服务器绝不应允许 DDNS 更新，这个例子有点极端，但请考虑对基础设施中关键服务器进行更改（无论是恶意的错误的）可能产生的影响。
 
-### 动态 DNS 更新唯一性验证
+## 动态 DNS 更新唯一性验证
 
-`DHCID – 动态主机配置标识符记录` 动态 DNS 允许通过 DHCP 客户端分配的 IP 地址信息更新 DNS 信息。因此，DHCP 服务器代表客户端或客户端本身可以通过 `A`/`AAAA` 和 `PTR`^(4) 记录通过客户端的 IP 地址和主机名关联更新 DNS。同一个主机名/FQDN 可能被多个 DHCP 客户端声称为，或者客户端可能会声称为已分配给预定义（例如静态地址）设备的主机。
+`DHCID` – 动态主机配置标识符记录。动态 DNS 允许通过 DHCP 客户端分配的 IP 地址信息更新 DNS 信息。因此，DHCP 服务器代表客户端或客户端本身可以通过 `A`/`AAAA` 和 `PTR`^(4) 记录通过客户端的 IP 地址和主机名关联更新 DNS。同一个主机名/FQDN 可能被多个 DHCP 客户端声称为，或者客户端可能会声称为已分配给预定义（例如静态地址）设备的主机。
 
 `DHCID` 记录在 DNS 中提供客户端识别信息，将特定的 DHCP 客户端与 DHCP 服务器更新的主机名/FQDN 唯一关联。`DHCID` 记录将定义在 DNS 更新消息的先决条件部分，以验证更新记录的“所有者”。
 
@@ -4233,11 +3888,11 @@ DMARC 策略以 `TXT` 记录的形式发布在 DNS 中。当收到来自某个�
 
 作为一种通用访问的可扩展分布式存储库（至少在您允许此类访问的范围内），DNS 可以存储 IP 地址和域名信息以外的数据；甚至是面向安全的信息。
 
-### 其他面向安全的 DNS 资源记录类型
+## 其他面向安全的 DNS 资源记录类型
 
-`TA – 信任权威记录` 虽然没有定义 `TA` 资源记录的 `RFC`，但 IANA 分配了一个值，因此我们在此提到。`TA` 资源记录的格式与 `DS` 记录类型相同，包括用于密钥标记、算法、摘要的 `RData` 字段。使用 `TA` 记录使解析器即使在根区域未签名的情况下也能通过已知的信任权威验证资源签名。此功能被 `DLV` 记录取代，但在根区域已签名的情况下，`TA` 和 `DLV` 记录在互联网上的用处不大。
+`TA` – 信任权威记录。虽然没有定义 `TA` 资源记录的 `RFC`，但 IANA 分配了一个值，因此我们在此提到。`TA` 资源记录的格式与 `DS` 记录类型相同，包括用于密钥标记、算法、摘要的 `RData` 字段。使用 `TA` 记录使解析器即使在根区域未签名的情况下也能通过已知的信任权威验证资源签名。此功能被 `DLV` 记录取代，但在根区域已签名的情况下，`TA` 和 `DLV` 记录在互联网上的用处不大。
 
-`CERT – 证书记录` `RFC4398 (92)` 将 `CERT` 记录定义为在 DNS 中存储证书和吊销列表（CRL）的手段。证书提供识别组织、服务器、个人或其他实体的方法，并将公钥与该身份关联。公钥可用于验证发送方身份，并加密和解密通信以及验证消息完整性。证书是分级的，可以用于验证到已知的信任实体（证书颁发机构）。`CRL` 是过期或手动吊销的证书列表。
+`CERT` – 证书记录。`RFC4398` (92) 将 `CERT` 记录定义为在 DNS 中存储证书和吊销列表（CRL）的手段。证书提供识别组织、服务器、个人或其他实体的方法，并将公钥与该身份关联。公钥可用于验证发送方身份，并加密和解密通信以及验证消息完整性。证书是分级的，可以用于验证到已知的信任实体（证书颁发机构）。`CRL` 是过期或手动吊销的证书列表。
 
 包含证书的 `CERT` 记录存储在 DNS 中，以便解析器通过 DNS 获取证书，而不是从目标证书服务器。`CERT` 资源记录具有以下格式。
 
@@ -4253,13 +3908,9 @@ DMARC 策略以 `TXT` 记录的形式发布在 DNS 中。当收到来自某个�
 * 算法 – 用于生成密钥的算法，其编码方式与 `DNSKEY` 资源类型的 `Algorithm` 字段相同
 * 证书或 `CRL`
 
-
-
-
-
 正如我们在本章开头讨论的那样，DANE 提供了通过 `TLSA` 资源记录验证证书的能力，这为定义关联证书信息提供了进一步的灵活性。DANE 还需要 `DNSSEC`，它用于验证 `TLSA` 响应的完整性以及进行源认证。
 
-### IPSECKEY – IPSec 记录的公钥
+## IPSECKEY – IPSec 记录的公钥
 
 `IPSECKEY` 资源记录类型定义在 `RFC 4025` (93) 中，它提供了一种在 DNS 中存储公密钥以用于 `IPSEC` 的方法。该资源记录允许寻求与远程主机建立 `IPSec` 隧道的客户端识别验证远程主机的方法，并确定是直接连接到该主机还是通过作为网关的另一个节点进行连接。`IPSECKEY` 资源记录与预期的远程主机 IP 地址或主机域名名关联。IP 地址存储在 `.arpa.` 反向域名空间中。`IPSECKEY` 资源记录的格式如下：
 
@@ -4267,23 +3918,22 @@ DMARC 策略以 `TXT` 记录的形式发布在 DNS 中。当收到来自某个�
 | --- | --- | --- | --- | --- |
 | `.arpa.` 域中的 IP 地址或主机域名名 | TTL | IN | `IPSECKEY` | 优先级 | 网关类型 | 算法 | 网关 | 公钥 |
 | `1.0.12.10.in-addr.arpa.` | 86400 | IN | `IPSECKEY` | 10 | 1 | 2 | 10.100.1.2 | Adf4C9lL…. |
-| --- | --- | --- | --- | --- | --- | --- | --- |
 
 `RData` 字段包含以下字段：
 
 - `Precedence`（优先级）——用于对共同 `RRSet` 中的多个记录进行排序，优先使用最低优先级。
 - `Gateway Type`（网关类型）——指示 `Gateway` 字段的格式
-    - `0` = 无网关
-    - `1` = `IPv4` 地址
-    - `2` = `IPv6` 地址
-    - `3` = `FQDN`
+  - `0` = 无网关
+  - `1` = `IPv4` 地址
+  - `2` = `IPv6` 地址
+  - `3` = `FQDN`
 - `Algorithm`（算法）——`Public Key` 字段的格式
-    - `0` = 不存在密钥
-    - `1` = `DSA` 格式的密钥
+  - `0` = 不存在密钥
+  - `1` = `DSA` 格式的密钥
 - `Gateway`（网关）——标识可以建立 `IPSec` 隧道以到达远程主机（由 `owner` 字段标识）的网关。该字段的解释由 `Gateway Type` 字段决定。
 - `Public Key`（公钥）——使用 `Algorithm` 字段指定的算法生成的密钥。
 
-### KEY – 密钥记录
+## KEY – 密钥记录
 
 `KEY` 记录定义于 `DNSSEC` 的最初版本，但被 `DNSKEY` 资源记录取代。但在当前版本的 `DNSSEC`（`DNSSECbis`）发布之前，`KEY` 记录用于存储与 `SIG(0)` 记录关联的公钥。`KEY` 记录的格式与 `DNSKEY` 记录相同。
 
@@ -4291,9 +3941,8 @@ DMARC 策略以 `TXT` 记录的形式发布在 DNS 中。当收到来自某个�
 | --- | --- | --- | --- | --- |
 | 密钥名称 | TTL | IN | `KEY` | 标志 | 协议 | 算法 | 密钥 |
 | `K3941.ipamww.com.` | 86400 | IN | `KEY` | 256 | 3 | 1 | 12S9X-weE8F(le… |
-| --- | --- | --- | --- | --- | --- | --- | --- |
 
-### KX – 密钥交换记录
+## KX – 密钥交换记录
 
 `KX` 记录允许指定一个代表其他主机提供密钥的中间节点。换句话说，如果打算与 `x.ipamworldwide.com` 进行密钥协商，`KX` 记录可以指向应与之进行密钥交换协商的 `y.ipamworldwide.com` 主机域名。偏好字段允许为密钥协商指定具有不同偏好的多个备用域。
 
@@ -4301,16 +3950,11 @@ DMARC 策略以 `TXT` 记录的形式发布在 DNS 中。当收到来自某个�
 | --- | --- | --- | --- | --- |
 | 主机域名 | TTL | IN | `KX` | 偏好 | 密钥交换主机域名 |
 | `x.ipamworldwide.com.` | 86400 | IN | `KX` | 10 | `y.ipamworldwide.com.` |
-| --- | --- | --- | --- | --- | --- |
 | `x.ipamworldwide.com.` | 86400 | IN | `KX` | 20 | `z.ipamworldwide.com.` |
 
-### SIG – 签名记录
+## SIG – 签名记录
 
 `SIG` 资源记录在 `DNSSEC` 范围内已被 `RRSIG` 记录取代，尽管 `SIG` 记录仍用于 `DNSSEC` 范围之外 DNS 更新和区域传输的数字签名。也就是说，你并不使用 `DNSSEC` 来启用更新和区域传输的事务签名。此类事务可以通过 `TSIG`（事务签名）记录使用共享密钥进行签名，或者通过使用私钥/公钥进行签名。
-
-
-
-
 
 # DNS 成熟模型
 
@@ -4320,15 +3964,15 @@ DMARC 策略以 `TXT` 记录的形式发布在 DNS 中。当收到来自某个�
 
 ![图 14.1. DNS 成熟模型](img/c14f001.jpg)
 
-**图 14.1.**](#figure14-1)
+**图 14.1.**
 
 ## 第 1 级：临时安全 (Ad Hoc Security)
 
 第 1 级反映了部分或临时的安全实施。此处定义的措施实施反映了保障 DNS 安全的基础。该层级包含的防御措施包括：
 
-*   部署您的 DNS 基础设施
-*   服务器和硬件控制的加固
-*   使用 ACL 对 DNS 更新、通知和区域传输进行基础身份验证
+* 部署您的 DNS 基础设施
+* 服务器和硬件控制的加固
+* 使用 ACL 对 DNS 更新、通知和区域传输进行基础身份验证
 
 Anycast（任播）寻址是一种有效的 DDoS 措施，该层级的组织也可以实施它。第 1 级安全步骤是组织应实施的最低要求，以提供具有韧性和高性能的 DNS 服务，并具备检测停机和潜在 DDoS/DoS 形式攻击的能力。从检测的角度来看，第 1 级的组织监控服务器基础状况，如守护进程状态以及 CPU、内存、磁盘和 I/O 利用率等硬件指标。如今，大多数组织已经实现了至少部分或全部第 1 级安全措施，但可能缺乏威胁检测、响应和恢复程序的完整文档，以及全组织范围的意识。
 
@@ -4344,7 +3988,7 @@ DNS 防火墙技术是一项较新但发展迅速的技术，它可以帮助您�
 
 考虑记录您的 DNS 事务数据（不仅仅是计数）也是重要的。考虑到您的 DNS 服务器每天可能处理数千或数百万次查询，这听起来可能令人生畏。至少，您应该监控查询率和 DNS 服务器生命指数，以确保 DNS 服务的可用性和适当性能。这些信息对于检测查询激增很有帮助，查询激增可能表明存在拒绝服务、隧道或与恶意软件相关的攻击。虽然查询率监控可以作为一个可能的指标，但如果没有查询细节，您可能无法诊断这种情况是否为攻击，如果是，又是什么类型的。
 
-记录查询并存储历史（即使时间很短）也能帮助您提供坚实的数据，从中您可以诊断正在进行的潜在攻击。无论如何，DNS 查询数据对法证分析也可能有用。随着 DNS 服务器厂商的实现不断演进以简化这一过程（例如 ISC BIND 在其 9.11 版本中原生支持 `dnstap`），日志记录的配置被了。您仍然需要配置日志聚合器和收集器，例如用于通用日志的 `Splunk` (95) 或用于 DNS 特定日志的 `Stratos` (96)，并从中进行搜索。
+记录查询并存储历史（即使时间很短）也能帮助您提供坚实的数据，从中您可以诊断正在进行的潜在攻击。无论如何，DNS 查询数据对法证分析也可能有用。随着 DNS 服务器厂商的实现不断演进以简化这一过程（例如 ISC BIND 在其 9.11 版本中原生支持 `dnstap`），日志记录的配置被简化了。您仍然需要配置日志聚合器和收集器，例如用于通用日志的 `Splunk` (95) 或用于 DNS 特定日志的 `Stratos` (96)，并从中进行搜索。
 
 ## 第 4 级：响应型 (Responsive)
 
@@ -4354,11 +3998,7 @@ DNS 防火墙技术是一项较新但发展迅速的技术，它可以帮助您�
 
 “自适应”是网络安全框架定义的第 4 级的合适术语。这一级在底层配置和分析的基础上关联 DNS 事务，以自动化威胁检测和缓解，同时最大限度地减少误报。更广泛的网络安全系统应该整合并利用 DNS 安全数据，以支持更强大的网络可见性和情报，从而在表征和缓解威胁事件。从手动关联到自动化流程的演进缩短了威胁事件的响应时间。动态应对措施和技术将持续演进 DNS 能够更快地检测和缓解攻击。大规模分析和人工智能技术将在未来几年推动这些产品和服务的发展。
 
-
-
-
-
-通过安全的 DNS 基础设施，你可以利用 DNS 提供的丰富资源。你可以使用 `DANE` 安全网页浏览，并使用 `DANE`、`SPF`、`DKIM` 和 `DMARC` 安全电子邮件。使用 `ENUM` 保护 语音（VoIP）技术（该技术依赖 DNS 进行电话号码查询）可以提高语音服务的稳健性。随着 2016 年 10 月发生大规模 DDoS 攻击，物联网（IoT）内部检测受病毒感染的设备及相关安全措施的重要性引起了关注。随着连接性的泛增，安全漏洞也随之增加，因此安全必须成为一项内置需求。
+通过安全的 DNS 基础设施，你可以利用 DNS 提供的丰富资源。你可以使用 `DANE` 安全网页浏览，并使用 `DANE`、`SPF`、`DKIM` 和 `DMARC` 安全电子邮件。使用 `ENUM` 保护语音（VoIP）技术（该技术依赖 DNS 进行电话号码查询）可以提高语音服务的稳健性。随着 2016 年 10 月发生大规模 DDoS 攻击，物联网（IoT）内部检测受病毒感染的设备及相关安全措施的重要性引起了关注。随着连接性的泛增，安全漏洞也随之增加，因此安全必须成为一项内置需求。
 
 随着近期国际攻击的发生，网络安全学科的可见度将继续增加。互联网已成为国家间最新的战场。利用数据科学和分析等成熟技术，DNS 技术及支持的安全系统必须不断演进，以应对持续的网络安全军备竞赛中日益复杂的攻击策略。
 
@@ -4372,49 +4012,44 @@ DNS 防火墙技术是一项较新但发展迅速的技术，它可以帮助您�
 | **ID.AM-3:** 组织通信和数据流已映射 | • 映射互联网 DNS 解析数据流 – 例如，限制在特定地理范围内的解析器解析到一组给定的递归服务器，这些服务器可能会转发到缓存服务器并连接到互联网<br>• 映射内部 DNS 解析流 – 例如，限制在特定地理范围内的解析器解析到一组给定的递归服务器，这些服务器可能会转发到缓存服务器和内部 DNS 服务器并返回<br>• 外部权威 DNS 服务器仅从互联网源查询并禁用递归功能<br>• 映射用于威胁监控、报告、恢复、事后分析和外部通信的通信流 | CCS CSC 1COBIT 5 DSS05.02ISA 62443-2-1:2009 4.2.3.4ISO/IEC 27001:2013 A.13.2.1NIST SP 800-53 Rev. 4 AC-4, CA-3, CA-9 |
 | **ID.AM-4**: 外部信息系统已编目录 | •记录与企业安全相关的外部设备和服务保持一致的 DNS 策略<br>• 用于递归和权威服务的外部 DNS 服务符合组织相关的安全要求<br>• 记录外部 DNS 服务访问策略（包括恢复程序在内） | COBIT 5 APO02.02ISO/IEC 27001:2013 A.11.2.6NIST SP 800-53 Rev. 4 AC-20, SA-9 |
 | **ID.AM-5**: 根据分类、关键性和业务价值对资源（如硬件、设备、数据和软件）进行优先级排序 | • 相应对 DNS 服务器进行分类和优先级排序，针对受损可能影响 DNS 解析能力（递归、解析器）和重定向外部用户（权威受损）的情况制定应急预案<br>• 对 DNS 软件供应链风险进行分类<br>• 为 DNS 服务器故障或外部 DNS 提供商故障制定应急预案 | COBIT 5 APO03.03, APO03.04, BAI09.02ISA 62443-2-1:2009 4.2.3.6ISO/IEC 27001:2013 A.8.2.1NIST SP 800-53 Rev. 4 CP-2, RA-2, SA-14 |
-| **ID.AM-6**: 建立了涵盖全体员工和第三方利益相关者（如供应商、客户、合作伙伴）的网络安全角色和职责 | • 记录负责人员的角色和职责<br>• 包含第三方及服务提供商在内的 DNS 服务器职责，并在业务考虑 | COBIT 5 APO01.02, DSS06.03ISA 62443-2-1:2009 4.2.3NIST SP 800-53 Rev. 4 CP-2, PS-7, PM-11 | **识别：业务环境 (ID.BE):** 理解并优先考虑组织的使命、目标和利益相关者；这些信息用于指导网络安全角色、职责和风险管理。 | | |
+| **ID.AM-6**: 建立了涵盖全体员工和第三方利益相关者（如供应商、客户、合作伙伴）的网络安全角色和职责 | • 记录负责人员的角色和职责<br>• 包含第三方及服务提供商在内的 DNS 服务器职责，并在业务考虑 | COBIT 5 APO01.02, DSS06.03ISA 62443-2-1:2009 4.2.3NIST SP 800-53 Rev. 4 CP-2, PS-7, PM-11 |
+| **识别：业务环境 (ID.BE):** 理解并优先考虑组织的使命、目标和利益相关者；这些信息用于指导网络安全角色、职责和风险管理。 | | |
 | **ID.BE-1**: 组织在供应链中的角色已识别并告知 | • 从批准的供应商处采购并部署具备所需安全功能、配置的 DNS 服务器或 DNS 服务 | COBIT 5 APO08.04, APO08.05, APO10.03, APO10.04, APO10.05ISO/IEC 27001:2013 A.15.1, A.15.2 |
 | **ID.BE-2**: 组织在关键基础设施中的地位及其所属行业已识别并告知 | • 根据关键性对 DNS 组件进行分类和优先级排序，针对受损可能影响 DNS 解析（转发器、递归、解析器）和重定向外部用户（权威受损）的情况制定应急预案<br>• 为 DNS 服务器故障或外部 DNS 提供商故障制定应急预案 | COBIT 5 APO02.06, APO03.01NIST SP 800-53 Rev. 4 PM-8 |
 | **ID.BE-3**: 建立了并告知组织使命、目标和活动的优先级 | 在业务流程定义中考虑 DNS 安全及其产生的风险、关键性评估以及信息保护需求 | COBIT 5 APO02.01, APO02.06, APO03.01ISA 62443-2-1:2009 4.2.2.1, 4.2.3.6NIST SP 800-53 Rev. 4 PM-11, SA-14 |
 | **ID.BE-4**: 建立了支持关键服务的依赖关系和关键功能 | • 将 DNS 基础设施纳入关键基础设施计划<br>• 适当为 DNS 服务器提供保护和不间断电源<br>• 为通往互联网和 DNS 服务提供商的多样化电信设施制定计划<br>• 为包含内部及多个外部 DNS 服务提供者的外部信任领域制定多样化计划<br>• 在业务流程定义中考虑 DNS 安全及其产生的风险、关键性评估以及信息保护需求 | ISO/IEC 27001:2013 A.11.2.2, A.11.2.3, A.12.1.3NIST SP 800-53 Rev. 4 CP-8, PE-9, PE-11, PM-8, SA-14 |
-| **ID.BE-5**: 建立了支持关键服务的服务的韧性需求 | | |
+| **ID.BE-5**: 建立了支持关键服务的服务的韧性需求 | • 从来自批准国家的已批准供应商列表中，采购并部署包含安全功能、非自定义配置的 DNS 服务器和/或 DNS 服务。<br>• 根据信信部门架构部署 DNS 服务器。<br>• 部署同时具有 `IPv4` 和 `IPv6` 通信能力的 DNS 服务器。<br>• 外部 DNS 服务合同应包含一个或多个提供商的高可用服务等级协议（SLA）。<br>• 在业务流程定义中考虑 DNS 的信息安全及产生的风险、关键性评估以及信息保护需求。 | COBIT 5 DSS04.02`ISO/IEC 27001:2013` A.11.1.4, `A.17.1.1`, `A.17.1.2`, `A.17.2.1``NIST SP 800-53 Rev. 4` `CP-2`, `CP-11`, `SA-14` |
 
+## 识别：治理 (ID.GV)： 理解用于管理和监控组织监管、法律、风险、环境和运营要求的策略、程序和流程，并为网络安全风险管理提供信息。
 
+### ID.GV-1：组织信息安全策略已建立
 
-
-- 从来自批准国家的已批准供应商列表中，采购并部署包含安全功能、非自定义配置的 DNS 服务器和/或 DNS 服务。
-- 根据信信部门架构部署 DNS 服务器。
-- 部署同时具有 `IPv4` 和 `IPv6` 通信能力的 DNS 服务器。
-- 外部 DNS 服务合同应包含一个或多个提供商的高可用服务等级协议（SLA）。
-- 在业务流程定义中考虑 DNS 的信息安全及产生的风险、关键性评估以及信息保护需求。
-
-|| COBIT 5 DSS04.02`ISO/IEC 27001:2013` A.11.1.4, `A.17.1.1`, `A.17.1.2`, `A.17.2.1``NIST SP 800-53 Rev. 4` `CP-2`, `CP-11`, `SA-14` |
-
-### 识别：治理 (ID.GV)： 理解用于管理和监控组织监管、法律、风险、环境和运营要求的策略、程序和流程，并为网络安全风险管理提供信息。
-
-#### ID.GV-1：组织信息安全策略已建立
 - DNS 包含在组织信息安全策略文档中，该文档经管理层批准并发布给员工及相关外部人员。
 
-|| COBIT 5 APO01.03`, `EDM01.01`, `EDM01.02``ISA 62443-2-1:2009` 4.3.2.6``ISO/IEC 27001:2013` A.5.1.1``NIST SP 800-53 Rev. 4` -1 所有系列的控制 |
+| | COBIT 5 APO01.03`, `EDM01.01`, `EDM01.02``ISA 62443-2-1:2009` 4.3.2.6``ISO/IEC 27001:2013` A.5.1.1``NIST SP 800-53 Rev. 4` -1 所有系列的控制 |
 
-#### ID.GV-2：信息安全角色和职责已与内部角色和外部合作伙伴进行协调对齐
+### ID.GV-2：信息安全角色和职责已与内部角色和外部合作伙伴进行协调对齐
+
 - DNS 安全功能和流程的角色与职责已记录，并传达相关员工和/或外部（第三方）关联人员。
 
-|| COBIT 5 APO13.12``ISA 62443-2-1:2009` 4.3.2.3.3``ISO/IEC 27001:2013` A.6.1.1, `A.7.2.1``NIST SP 800-53 Rev. 4` `PM-1`, `PS-7` |
+| | COBIT 5 APO13.12``ISA 62443-2-1:2009` 4.3.2.3.3``ISO/IEC 27001:2013` A.6.1.1, `A.7.2.1``NIST SP 800-53 Rev. 4` `PM-1`, `PS-7` |
 
-#### ID.GV-3：理解并管理有关网络安全（包括隐私和民事自由）的法律法规要求及义务
+### ID.GV-3：理解并管理有关网络安全（包括隐私和民事自由）的法律法规要求及义务
+
 - DNS 包含在组织信息安全策略文档中，该文档经管理层批准并发布给员工及相关外部人员。提供培训并获取对材料内容的理解确认。
 
-|| COBIT 5 MEA03.01`, `MEA03.04``ISA 62443-2-1:2009` 4.4.3.7``ISO/IEC 27001:2013` A.18.1``NIST SP 800-53 Rev. 4` -1 所有系列的控制（除 PM-1 外外） |
+| | COBIT 5 MEA03.01`, `MEA03.04``ISA 62443-2-1:2009` 4.4.3.7``ISO/IEC 27001:2013` A.18.1``NIST SP 800-53 Rev. 4` -1 所有系列的控制（除 PM-1 外外） |
 
-#### ID.GV-4：治理和风险管理流程解决了网络安全风险
+### ID.GV-4：治理和风险管理流程解决了网络安全风险
+
 - DNS 包含在组织的风险管理流程中，该流程经管理层批准并发布给员工及相关外部人员。提供培训并获取对材料内容的理解确认。
 
-|| COBIT 5 DSS04.02``ISA 62443-2-1:2009` 4.2.3.1, `4.2.3.3`, `4.2.3.8`, `4.2.3.9`, `4.2.3.11`, `4.3.2.4.3`, `4.3.2.6.3``NIST SP 800-53 Rev. 4` `PM-9`, `PM-11` |
+| | COBIT 5 DSS04.02``ISA 62443-2-1:2009` 4.2.3.1, `4.2.3.3`, `4.2.3.8`, `4.2.3.9`, `4.2.3.11`, `4.3.2.4.3`, `4.3.2.6.3``NIST SP 800-53 Rev. 4` `PM-9`, `PM-11` |
 
-### 识别：风险评估 (ID.RA)：组织理解对组织运营（包括使命、功能、形象或声誉）、组织资产和个人的网络安全风险。
+## 识别：风险评估 (ID.RA)：组织理解对组织运营（包括使命、功能、形象或声誉）、组织资产和个人的网络安全风险。
 
-#### ID.RA-1：资产漏洞已识别并记录
+### ID.RA-1：资产漏洞已识别并记录
+
 - 记录并跟踪 DNS 服务器硬件组件的漏洞。
 - 记录并跟踪 DNS 服务器内核的漏洞。
 - 记录并跟踪 DNS 服务器操作系统的的漏洞。
@@ -4422,27 +4057,31 @@ DNS 防火墙技术是一项较新但发展迅速的技术，它可以帮助您�
 - 记录并跟踪终端用户和其他设备上 DNS 分解析器软件应用程序的漏洞。
 - 记录并跟踪 DNS 协议的漏洞。
 
-|| CCS CSC 4COBIT 5 APO12.01`, `APO12.02`, `APO12.03`, `APO12.04``ISA 62443-2-1:2009` 4.2.3, `4.2.3.7`, `4.2.3.9`, `4.2.3.12``ISO/IEC 27001:2013` A.12.6.1, `A.18.2.3``NIST SP 800-53 Rev. 4` `CA-2`, `CA-7`, `CA-8`, `RA-3`, `RA-5`, `SA-5`, `SA-11`, `SI-2`, `SI-4`, `SI-5` |
+| | CCS CSC 4COBIT 5 APO12.01`, `APO12.02`, `APO12.03`, `APO12.04``ISA 62443-2-1:2009` 4.2.3, `4.2.3.7`, `4.2.3.9`, `4.2.3.12``ISO/IEC 27001:2013` A.12.6.1, `A.18.2.3``NIST SP 800-53 Rev. 4` `CA-2`, `CA-7`, `CA-8`, `RA-3`, `RA-5`, `SA-5`, `SA-11`, `SI-2`, `SI-4`, `SI-5` |
 
-#### ID.RA-2：从信息共享论坛和来源接收威胁和漏洞信息
+### ID.RA-2：从信息共享论坛和来源接收威胁和漏洞信息
+
 - 积极监控威胁和漏洞信息源，如 `CERT`、DNS 软件供应商警以及相关的权威网络资源。
 - 与与其他安全人员（尤其是同行业内）合作，促进威胁、漏洞和缓解措施的开放共享。
-- 订阅 DNS 的安全馈送。 || `ISA 62443-2-1:2009` 4.2.3, `4.2.3.7`, `4.2.3.9` `4.2.3.12.0.........................--.----------------------------...-........................................................................................................................................................漏洞已识别并记录
-- 记录并跟踪 DNS 服务器硬件组件的漏洞。
-- 记录并跟踪 DNS 服务器内核的漏洞。
-- 记录并跟踪 DNS 服务器操作系统的漏洞。
-- 记录并跟踪 DNS 服务器软件应用程序的漏洞。
-- 记录并跟踪终端用户和其他设备上 DNS 分解析器软件应用程序的漏洞。
-- 记录并跟踪 DNS 协议的漏洞。
+- 订阅 DNS 的安全馈送。
 
-|| COBIT 5 APO12.01`, `APO12.02`, `APO12.03`, `APO12.04```ISA 62443-2-1:2009` 4.2.3, `4.2.3.7`, `4.2.3.9`, `4.2.3.12```ISO/IEC 27001:2013` A.12.6.1, `A.18.2.3``NIST SP 800-53 Rev. 4` `CA-2`, `CA-7`, `CA-8`, `RA-3`, `RA-5`, `SA-5`, `SA-11`, `SI-2`, `SI-4`, `SI-5` |
+| | `ISA 62443-2-1:2009` 4.2.3, `4.2.3.7`, `4.2.3.9` `4.2.3.12.0.........................--.----------------------------...-........................................................................................................................................................漏洞已识别并记录 |
+| --- | --- |
+| | • 记录并跟踪 DNS 服务器硬件组件的漏洞。<br>• 记录并跟踪 DNS 服务器内核的漏洞。<br>• 记录并跟踪 DNS 服务器操作系统的漏洞。<br>• 记录并跟踪 DNS 服务器软件应用程序的漏洞。<br>• 记录并跟踪终端用户和其他设备上 DNS 分解析器软件应用程序的漏洞。<br>• 记录并跟踪 DNS 协议的漏洞。 |
+| | COBIT 5 APO12.01`, `APO12.02`, `APO12.03`, `APO12.04```ISA 62443-2-1:2009` 4.2.3, `4.2.3.7`, `4.2.3.9`, `4.2.3.12```ISO/IEC 27001:2013` A.12.6.1, `A.18.2.3``NIST SP 800-53 Rev. 4` `CA-2`, `CA-7`, `CA-8`, `RA-3`, `RA-5`, `SA-5`, `SA-11`, `SI-2`, `SI-4`, `SI-5` |
 
-#### ID.RA-2：从信息共享论坛和来源接收威胁和漏洞信息
-- 积极监控威胁和漏洞信息源，如 `CERT`、DNS 软件供应商警以及相关的权威网络资源。
+
+
+# ID.RA-2：从信息共享论坛和来源接收威胁和漏洞信息
+
+- 积极监控威胁和漏洞信息源，如`CERT`、DNS 软件供应商警以及相关的权威网络资源。
 - 与其他安全人员（尤其是同行业内）合作，促进威胁、漏洞和缓解措施的开放共享。
-- 订阅 DNS 的安全馈送。 || `ISA 62443-2-1:2009` 4.2.3, `4.2.3.7`, `4.2.3.9` `4.2.3.12` |
+- 订阅 DNS 的安全馈送。
 
-#### ID.RA-3：威胁和漏洞已识别并记录
+> 参考：`ISA 62443-2-1:2009` 4.2.3, `4.2.3.7`, `4.2.3.9`, `4.2.3.12`
+
+# ID.RA-3：威胁和漏洞已识别并记录
+
 - 记录并跟踪 DNS 服务器硬件组件的漏洞。
 - 记录并跟踪 DNS 服务器内核的漏洞。
 - 记录并跟踪 DNS 服务器操作系统的漏洞。
@@ -4450,501 +4089,644 @@ DNS 防火墙技术是一项较新但发展迅速的技术，它可以帮助您�
 - 记录并跟踪终端用户和其他设备上 DNS 分解析器软件应用程序的漏洞。
 - 记录并跟踪 DNS 协议的漏洞。
 
-#### ID.RA-4：潜在的业务影响和可能性已识别
+# ID.RA-4：潜在的业务影响和可能性已识别
+
 - 对于每个识别出的威胁，记录其业务影响。
 - 对于每个识别出的漏洞，记录其可能性。
 
-#### ID.RA-5：利用威胁、漏洞、可能性和影响确定风险
+# ID.RA-5：利用威胁、漏洞、可能性和影响确定风险
+
 - 根据可能性和相关影响评估每个识别威胁的风险。
 - 迭代分析以考虑 DNS 的相对风险。
 
-#### ID.RA-6：风险响应已识别并确定优先级
+# ID.RA-6：风险响应已识别并确定优先级
+
 - 为每个识别出的风险定义响应。
 
-### 识别：风险管理策略 (ID.RM)：建立了组织的优先级、约束、风险容忍度和假设，以支持运营决策。
+## 识别：风险管理策略 (ID.RM)：建立了组织的优先级、约束、风险容忍度和假设，以支持运营决策。
 
-#### ID.RM-1：风险管理流程已建立、管理并获得组织利益相关者的同意
+### ID.RM-1：风险管理流程已建立、管理并获得组织利益相关者的同意
+
 - 根据可能性和相关影响评估每个识别威胁的风险。
 
-|| COBIT 5 APO12.04`, `APO12.05`, `APO13.02`, `BAI02.03`, `BAI04.02``ISA 62443-2-1:2009` 4.3.4.2``NIST SP 800-53 Rev. 4` `PM-9` |
+> 参考：`COBIT 5 APO12.04`, `APO12.05`, `APO13.02`, `BAI02.03`, `BAI04.02`, `ISA 62443-2-1:2009` 4.3.4.2, `NIST SP 800-53 Rev. 4` `PM-9`
 
-#### ID.RM-2：组织风险容忍度已确定并清晰表达
+### ID.RM-2：组织风险容忍度已确定并清晰表达
+
 - 就确定和记录包含 DNS 在组织风险的流程达成共识。
 
-|| COBIT 5 APO12.06``ISA 62443-2-1:2009` 4.3.2.6.5``NIST SP 800-53 Rev. 4` `PM-9` |
+> 参考：`COBIT 5 APO12.06`, `ISA 62443-2-1:2009` 4.3.2.6.5, `NIST SP 800-53 Rev. 4` `PM-9`
 
-#### ID.RM-3：组织对风险容忍度的确定取决于其在关键基础设施中的角色以及行业特定的风险分析
+### ID.RM-3：组织对风险容忍度的确定取决于其在关键基础设施中的角色以及行业特定的风险分析
+
 - 为每个识别出的 DNS 风险确定容忍度并达成共识。
 
-|| NIST SP 800-53 Rev. 4` `PM-8`, `PM-9`, `PM-11`, `SA-14` |
+> 参考：`NIST SP 800-53 Rev. 4` `PM-8`, `PM-9`, `PM-11`, `SA-14`
 
-### 保护：访问控制 (PR.AC)：对资产及相关设施的访问仅限于授权的用户、进程或设备，以及授权的活动和交易。
+## 保护：访问控制 (PR.AC)：对资产及相关设施的访问仅限于授权的用户、进程或设备，以及授权的活动和交易。
 
-#### PR.AC-1：已为授权的设备和用户管理身份和凭证
+### PR.AC-1：已为授权的设备和用户管理身份和凭证
+
 - 对于每个 DNS 组件，识别并记录授权用户。
 - 对于每个 DNS 组件，强制凭证要求。
 - 对于每个 DNS 组件，管理凭证刷新策略。
-
-
-
-
-
 - 针对每个 DNS 组件，记录授权新用户或扩展或缩小现有用户权限的审批流程。
 - 针对每个 DNS 组件，审计谁拥有访问权限以及相应的访问级别，并根据当前工作角色进行确认或修改。
 
-|| CCS CSC 16COBIT 5 DSS05.04, DSS06.03ISA 62443-2-1:2009 4.3.3.5.1ISA 62443-3-3:2013 SR 1.1, SR 1.2, SR 1.3, SR 1.4, SR 1.5, SR 1.7, SR 1.8, SR 1.9ISO/IEC 27001:2013 A.9.2.1, A.9.2.2, A.9.2.4, A.9.3.1, A.9.4.2, A.9.4.3NIST SP 800-53 Rev. 4 AC-2, IA Family |
+> 参考：`CCS CSC 16`, `COBIT 5 DSS05.04`, `DSS06.03`, `ISA 62443-2-1:2009` 4.3.3.5.1, `ISA 62443-3-3:2013` SR 1.1, SR 1.2, SR 1.3, SR 1.4, SR 1.5, SR 1.7, SR 1.8, SR 1.9, `ISO/IEC 27001:2013` A.9.2.1, A.9.2.2, A.9.2.4, A.9.3.1, A.9.4.2, A.9.4.3, `NIST SP 800-53 Rev. 4` AC-2, IA Family
 
-**PR.AC-2:** 资产的物理访问得到管理和保护 ||
+### PR.AC-2：资产的物理访问得到管理和保护
 
 - 针对每个 DNS 组件，定义适当的物理访问保护要求。
 - 针对每个 DNS 组件，根据物理访问要求进行部署，例如部署在门卡访问的数据中心内。
 - 记录部署 DNS 服务器的受限区域的物理访问权限，以确认用户权限与其访问的适当性匹配。
 - 适当审计受限区域的物理访问日志和监控视频，以确保只有适当的用户可以访问。
 
-|| COBIT 5 DSS01.04, DSS05.05ISA 62443-2-1:2009 4.3.3.3.2, 4.3.3.3.8ISO/IEC 27001:2013 A.11.1.1, A.11.1.2, A.11.1.4, A.11.1.6, A.11.2.3NIST SP 800-53 Rev. 4 PE-2, PE-3, PE-4, PE-5, PE-6, PE-9 |
+> 参考：`COBIT 5 DSS01.04`, `DSS05.05`, `ISA 62443-2-1:2009` 4.3.3.3.2, 4.3.3.3.8, `ISO/IEC 27001:2013` A.11.1.1, A.11.1.2, A.11.1.4, A.11.1.6, A.11.2.3, `NIST SP 800-53 Rev. 4` PE-2, PE-3, PE-4, PE-5, PE-6, PE-9
 
-**PR.AC-3:** 远程访问得到管理 ||
+### PR.AC-3：远程访问得到管理
 
 - 部署外网信任扇区，从 DNS 角度将远程访问隔离开。
 - 仅允许工作职能和责任范围需要远程访问的人员（内部人员或承包商）被允许远程访问。
 - 需要登录/密码身份验证，且通信应使用加密连接。
 - 如果可能，将命令集限制为每个用户所需的命令。
 
-|| COBIT 5 APO13.01, DSS01.04, DSS05.03ISA 62443-2-1:2009 4.3.3.6.6ISA 62443-3-3:2013 SR 1.13, SR 2.6ISO/IEC 27001:2013 A.6.2.2, A.13.1.1, A.13.2.1NIST SP 800-53 Rev. 4 AC-17, AC-19, AC-20 |
+> 参考：`COBIT 5 APO13.01`, `DSS01.04`, `DSS05.03`, `ISA 62443-2-1:2009` 4.3.3.6.6, `ISA 62443-3-3:2013` SR 1.13, SR 2.6, `ISO/IEC 27001:2013` A.6.2.2, A.13.1.1, A.13.2.1, `NIST SP 800-53 Rev. 4` AC-17, AC-19, AC-20
 
-**PR.AC-4:** 访问权限得到管理，并结合最小权限和职责分离原则 ||
+### PR.AC-4：访问权限得到管理，并结合最小权限和职责分离原则
 
 - 对于每个用户，访问级别应仅提供该用户执行其工作或功能所需的命令或函数。
 
-|| CCS CSC 12, 15ISA 62443-2-1:2009 4.3.3.7ISA 62443-3-3:2013 SR 2.1ISO/IEC 27001:2013 A.6.1.2, A.9.1.2, A.9.2.3, A.9.4.1, A.9.4.4 |
+> 参考：`CCS CSC 12`, 15, `ISA 62443-2-1:2009` 4.3.3.7, `ISA 62443-3-3:2013` SR 2.1, `ISO/IEC 27001:2013` A.6.1.2, A.9.1.2, A.9.2.3, A.9.4.1, A.9.4.4
 
-**PR.AC-5:** 网络完整性得到保护，并在适当情况下包含网络隔离 ||
+### PR.AC-5：网络完整性得到保护，并在适当情况下包含网络隔离
 
-- 按照定义的信任扇区部署 DNS 组件以提供相应的扇区隔离。ISA 62443-2-1:2009 4.3.3.4ISA 62443-3-3:2013 SR 3.1, SR 3.8ISO/IEC 27001:2013 A.13.1.1, A.13.1.3, A.13.2.1NIST SP 800-53 Rev. 4 AC-4, SC-7 |
+- 按照定义的信任扇区部署 DNS 组件以提供相应的扇区隔离。
 
-**PROTECT: 意识与培训 (PR.AT):** 组织人员和合作伙伴接受网络安全教育，并经过充分培训以根据相关政策和协议履行信息安全职责。
+> 参考：`ISA 62443-2-1:2009` 4.3.3.4, `ISA 62443-3-3:2013` SR 3.1, SR 3.8, `ISO/IEC 27001:2013` A.13.1.1, A.13.1.3, A.13.2.1, `NIST SP 800-53 Rev. 4` AC-4, SC-7
 
-**PR.AT-1:** 所有用户均已通知并经过培训 ||
+## 保护：意识与培训 (PR.AT)：组织人员和合作伙伴接受网络安全教育，并经过充分培训以根据相关政策和协议履行信息安全职责。
+
+### PR.AT-1：所有用户均已通知并经过培训
 
 - 设计并实施包含 DNS 元素的 IT 安全培训计划并确认关键方面。
-- 保持培训材料更新，并对所有用户进行定期培训。CCS CSC 9COBIT 5 APO07.03, BAI05.07ISA 62443-2-1:2009 4.3.2.4ISO/IEC 27001:2013 A.7.2.2NIST SP 800-53 Rev. 4 AT-2, PM-13 |
+- 保持培训材料更新，并对所有用户进行定期培训。
 
-**PR.AT-2:** 特权用户理解角色和职责 ||
+> 参考：`CCS CSC 9`, `COBIT 5 APO07.03`, `BAI05.07`, `ISA 62443-2-1:2009` 4.3.2.4, `ISO/IEC 27001:2013` A.7.2.2, `NIST SP 800-53 Rev. 4` AT-2, PM-13
+
+### PR.AT-2：特权用户理解角色和职责
 
 - 为所有用户编写定义良好的角色和职责说明。
-- 对于需要特权访问的用户，提供培训并确认相应的职责。CCS CSC 9COBIT 5 APO07.02, DSS06.03ISA 62443-2-1:2009 4.3.2.4, 4.3.2.3ISO/IEC 27001:2013 A.6.1.1, A.7.2.2NIST SP 800-53 Rev. 4 AT-3 | |
+- 对于需要特权访问的用户，提供培训并确认相应的职责。
 
-**PR.AT-3:** 第三方利益相关者（例如：供应商、客户、合作伙伴）理解角色和职责 ||
+> 参考：`CCS CSC 9`, `COBIT 5 APO07.02`, `DSS06.03`, `ISA 62443-2-1:2009` 4.3.2.4, 4.3.2.3, `ISO/IEC 27001:2013` A.6.1.1, A.7.2.2, `NIST SP 800-53 Rev. 4` AT-3
+
+### PR.AT-3：第三方利益相关者（例如：供应商、客户、合作伙伴）理解角色和职责
 
 - 对于需要访问的第三方利益相关者提供培训并确认相应的职责。
-- 对于外部 DNS 服务，记录相应的角色和职责。CCS CSC 9COBIT 5 APO07.03, APO10.04, APO10.05ISA 62443-2-1:2009 4.3.2.4ISO/IEC 27001:2013 A.6.1.1, A.7.2.2NIST SP 800-53 Rev. 4 PS-7, SA-9 |
+- 对于外部 DNS 服务，记录相应的角色和职责。
 
-**PR.AT-4:** 高管人员理解角色和职责 ||
+> 参考：`CCS CSC 9`, `COBIT 5 APO07.03`, `APO10.04`, `APO10.05`, `ISA 62443-2-1:2009` 4.3.2.4, `ISO/IEC 27001:2013` A.6.1.1, A.7.2.2, `NIST SP 800-53 Rev. 4` PS-7, SA-9
 
-- 为高管提供培训并确认相应的角色和职责。CCS CSC 9COBIT 5 APO07.03ISA 62443-2-1:2009 4.3.2.4ISO/IEC 27001:2013 A.6.1.1, A.7.2.2,NIST SP 800-53 Rev. 4 AT-3, PM-13 |
+### PR.AT-4：高管人员理解角色和职责
 
-**PR.AT-5:** 物理和信息安全人员理解角色和职责 ||
+- 为高管提供培训并确认相应的角色和职责。
 
-- 为物理和信息安全人员提供培训并确认相应的角色和职责。CCS CSC 9COBIT 5 APO07.03ISA 62443-2-1:2009 4.3.2.4ISO/IEC 27001:2013 A.6.1.1, A.7.2.2,NIST SP 800-53 Rev. 4 AT-3, PM-13 |
+> 参考：`CCS CSC 9`, `COBIT 5 APO07.03`, `ISA 62443-2-1:2009` 4.3.2.4, `ISO/IEC 27001:2013` A.6.1.1, A.7.2.2, `NIST SP 800-53 Rev. 4` AT-3, PM-13
 
-**PROTECT: 数据安全 (PR.DS):** 信息和记录（数据）的管理符合组织的风险策略，以保护信息的机密性、完整性和可用性。
+### PR.AT-5：物理和信息安全人员理解角色和职责
 
-**PR.DS-1:** 静态数据得到保护 ||
+- 为物理和信息安全人员提供培训并确认相应的角色和职责。
+
+> 参考：`CCS CSC 9`, `COBIT 5 APO07.03`, `ISA 62443-2-1:2009` 4.3.2.4, `ISO/IEC 27001:2013` A.6.1.1, A.7.2.2, `NIST SP 800-53 Rev. 4` AT-3, PM-13
+
+## 保护：数据安全 (PR.DS)：信息和记录（数据）的管理符合组织的风险策略，以保护信息的机密性、完整性和可用性。
+
+### PR.DS-1：静态数据得到保护
 
 - 安全 DNS 组件硬件，加固操作系统、内核和软件。
-- 实施 ACL 和事务密钥，以保护权威 DNS 数据免受更新和区域传输的影响。CCS CSC 17COBIT 5 APO01.06, BAI02.01, BAI06.01, DSS06.06ISA 62443-3-3:2013 SR 3.4, SR 4.1 |
-
+- 实施 ACL 和事务密钥，以保护权威 DNS 数据免受更新和区域传输的影响。
 - 定义 ACL 以控制管理访问并对管理事务进行加密。
-- 使用 `DNSSEC` 对 DNS 区域数据进行签名；保护 `DNSSEC` 私钥并记录密钥切换过程（包括紧急切换）。
+- 使用`DNSSEC`对 DNS 区域数据进行签名；保护`DNSSEC`私钥并记录密钥切换过程（包括紧急切换）。
 - 定期备份并在异地存储 DNS 配置数据，为服务器故障提供恢复方案。
 - 存储在外部的 DNS 配置和日志数据必须通过加密进行安全传输和存储。
 - 监控漏洞源并部署影响静态数据的供应商补丁。
-- 定期审计 DNS 组件访问日志和执行的功能，以与角色和职责保持一致 || ISO/IEC 27001:2013 A.8.2.3NIST SP 800-53 Rev. 4 SC-28 |
+- 定期审计 DNS 组件访问日志和执行的功能，以与角色和职责保持一致。
 
-**PR.DS-2:** 传输数据得到保护 ||
+> 参考：`CCS CSC 17`, `COBIT 5 APO01.06`, `BAI02.01`, `BAI06.01`, `DSS06.06`, `ISA 62443-3-3:2013` SR 3.4, SR 4.1, `ISO/IEC 27001:2013` A.8.2.3, `NIST SP 800-53 Rev. 4` SC-28
+
+### PR.DS-2：传输数据得到保护
 
 - 通过控制台、远程访问或 IPAM 系统更新的配置和区域数据已经过身份验证和加密。
-- 使用 `DNSSEC` 对 DNS 解析数据进行签名。权威。递归服务器执行 `DNSSEC` 验证。
-- 查询源端口和 `TXID` 数字随机化。
+- 使用`DNSSEC`对 DNS 解析数据进行签名。权威。递归服务器执行`DNSSEC`验证。
+- 查询源端口和`TXID`数字随机化。
 - 查询大小写随机化。
 - 配置 ACL 以控制查询、缓存访问和区域传输的权限。
 - 区域传输和通知已签名。
-- 使用 Cookie 或 `DNSCrypt` 安全解析器与递归 DNS 服务器之间的链路。
+- 使用 Cookie 或`DNSCrypt`安全解析器与递归 DNS 服务器之间的链路。
 - 监控 DNS 隧道。
 - 实施 DNS 防墙并监控恶意软件 C&C 查询。
 - 监控漏洞源并部署影响传输数据的供应商补丁。
 - 实施 DoS/DDoS 控制，如入站和出站速率限制、查询节流和任播。
-- 定期审计 DNS 组件访问日志和执行的功能，以与角色和职责保持一致 || CCS CSC 17COBIT 5 APO01.06, DSS06.06ISA 62443-3-3:2013 SR 3.1, SR 3.8, SR 4.1, SR 4.2ISO/IEC 27001:2013 A.8.2.3, A.13.1.1, A.13.2.1, A.13.2.3, A.14.1.2, A.14.1.3NIST SP 800-53 Rev. 4 SC-8 |
+- 定期审计 DNS 组件访问日志和执行的功能，以与角色和职责保持一致。
 
-**PR.DS-3:** 资产在移除、转移和处置过程中经过正式管理 ||
+> 参考：`CCS CSC 17`, `COBIT 5 APO01.06`, `DSS06.06`, `ISA 62443-3-3:2013` SR 3.1, SR 3.8, SR 4.1, SR 4.2, `ISO/IEC 27001:2013` A.8.2.3, A.13.1.1, A.13.2.1, A.13.2.3, A.14.1.2, A.14.1.3, `NIST SP 800-53 Rev. 4` SC-8
+
+### PR.DS-3：资产在移除、转移和处置过程中经过正式管理
 
 - 对于所有 DNS 服务器和解析器，任何拟议的 DNS 组件添加、移动或移除必须在开始前记录、审查并获得相关方的批准。
+- DNS 服务提供商参数的添加、更改或删除经过细致管理、跟踪和验证。
+- 在每个信任区域内部署足够的 DNS 容量，以确保在网络和/或 DNS 服务器基础设施发生故障时，仍提供可接受的解析性能。
+- 随时间监控容量利用率，并根据增长的需求适时部署额外的基础设施。
+
+> 参考：`COBIT 5 BAI09.03`, `ISA 62443-2-1:2009` 4.4.3.3.3.9, 4.3.4.4.1, `ISA 62443-3-3:2013` SR 4.2, `ISO/IEC 27001:2013` A.8.2.3, A.8.3.1, A.8.3.2, A.8.3.3, A.11.2.7, `NIST SP 800-53 Rev. 4` CM-8, MP-6, PE-16
+
+### PR.DS-4：具有足够的容量以维持可用性
+
+- 实施访问控制列表（ACL）以保护对内部权威 DNS 数据数据的访问。
+- 外部 DNS 权威数据仅包含在内部或服务提供商 DNS 上发布的与外部服务相关的数据。
+- 已建立 DNS 隧道检测和缓解策略。
+- DNS 防火墙配置有助于防止访问外部站点导致可能的数据外泄。
+
+> 参考：`COBIT 5 APO13.01`, `ISA 62443-3-3:2013` SR 7.1, SR 7.2, `ISO/IEC 27001:2013` A.12.3.1, `NIST SP 800-53 Rev. 4` AU-4, CP-2, SC-5
+
+### PR.DS-5：实施了防护数据泄露
+
+- 实施 DNS 配置和区域文件完整性检查，以验证传输成功并检测更改。
+- `DNSSEC`验证提供了 DNS 解析数据检查以及经过认证的拒绝存在。
+
+> 参考：`CCS CSC 17`, `COBIT 5 APO01.06`, `ISA 62443-3-3:2013` SR 5.2, `ISO/IEC 27001:2013` A.6.1.2, A.7.1.1, A.7.1.2, A.7.3.1, A.8.2.2, A.8.2.3, A.9.1.1, A.9.1.2, A.9.2.3, A.9.4.1, A.9.4.4, A.9.4.5, A.13.1.3, A.13.2.1, A.13.2.3, A.13.2.4, A.14.1.2, A.14.1.3, `NIST SP 800-53 Rev. 4` AC-4, AC-5, AC-6, PE-19, PS-3, PS-6, SC-7, SC-8, SC-13, SC-31, SI-4
+
+### PR.DS-6：使用完整性检查机制验证软件、固件和信息的完整性
+
+> 参考：`ISA 62443-3-3:2013` SR 3.1, SR 3.3, SR 3.4, SR 3.8, `ISO/IEC 27001:2013` A.12.2.1, A.12.5.1, A.14.1.2, A.14.1.3, `NIST SP 800-53 Rev. 4` SI-7
+
+### PR.DS-7：开发和测试环境与生产环境分离
+
+- DNS 解析器和服务器部署在与生产网络隔离的实验室网络中，用于测试新版本、补丁和新功能。
+
+> 参考：`COBIT 5 BAI07.04`, `ISO/IEC 27001:2013` A.12.1.4, `NIST SP 800-53 Rev. 4` CM-2
+
+## 保护：信息保护过程和程序 (PR.IP)
+
+- 维护并使用安全策略（涉及目的、范围、职责、管理承诺以及实体间的协调）、流程和程序，以管理对信息系统和资产的保护。
+
+### PR.IP-1：创建并维护信息技术/工业控制系统的基线配置
+
+- 对于终端用户系统，解析器软件定义为包含在构建中，这几乎由相应的设备系统组成。
+- 对于 DNS 服务器，记录硬件和软件组件列表，包括操作系统、DNS 软件、安全、监控和审计等。
+
+> 参考：`CCS CSC 3`, `COBIT 5 BAI10.01`, `BAI10.02`, `BAI10.03`, `BAI10.05`, `ISA 62443-2-1:2009` 4.3.4.3.2, 4.3.4.3.3, `ISA 62443-3-3:2013` SR 7.6, `ISO/IEC 27001:2013` A.12.1.2, A.12.5.1, A.12.6.2, A.14.2.2, A.14.2.3, A.14.2.4, `NIST SP 800-53 Rev. 4` CM-2, CM-3, CM-4, CM-5, CM-6, CM-7, CM-9, SA-10
+
+### PR.IP-2：实施管理系统的开发周期
+
+- 通过系统生命周期在您的 IT 网络和系统上应用安全工程原则，包括从需求分析到编码的内部开发。
+
+> 参考：`COBIT 5 APO13.01`, `ISA 62443-2-1:2009` 4.3.4.3.3, `ISO/IEC 27001:2013` A.6.1.5, A.14.1.1, A.14.2.1, A.14.2.5, `NIST SP 800-53 Rev. 4` SA-3, SA-4, SA-8, SA-10, SA-11, PL-8
+
+### PR.IP-3：建立配置控制过程
+
+- 基线配置是受控文档，这意味着任何添加或更改应在相关方之间提议、评审并通信。
+- 授权软件（例如 DNS 配置）的更改也应计划、批准并分阶段实施。
+
+> 参考：`COBIT 5 BAI06.01`, `BAI01.06`, `ISA 62443-2-1:2009` 4.3.4.3.2, 4.3.4.3.3, `ISA 62443-3-3:2013` SR 7.6, `ISO/IEC 27001:2013` A.12.1.2, A.12.5.1, A.12.6.2, A.14.2.2, A.14.2.3, A.14.2.4, `NIST SP 800-53 Rev. 4` CM-3, CM-4, SA-10
+
+### PR.IP-4：定期执行、维护和测试备份
+
+- 对每组服务器定期备份 DNS 配置和区域库以及审计日志。
+
+> 参考：`COBIT 5 APO13.01`, `ISA 62443-2-1:2009` 4.3.4.3.9, `ISA 62443-3-3:2013` SR 7.3, SR 7.4, `ISO/IEC 27001:2013` A.12.3.1, A.17.1.2, A.17.1.3, A.18.1.3, `NIST SP 800-53 Rev. 4` CP-4, CP-6, CP-9
+
+### PR.IP-5：符合组织资产物理环境的策略和法规
 
 
 
+# 记录并维护组织资产（如 DNS 服务器）物理环境的策略和法规
 
+这包括提供应急断电、温度湿度、防水以及数据中心控制（`COBIT 5 DSS01.04`、`ISA 62443-2-1:2009 4.3.4.3.2`、`4.3.4.3.3`、`ISA 62443-3-3:2013 SR 7.6`、`ISO/IEC 27001:2013 A.12.1.2`、`A.12.5.1`、`A.12.6.2`、`A.14.2.2`、`A.14.2.3`、`A.14.2.4`、`NIST SP 800-53 Rev. 4 PE-10`、`PE-12`、`PE-13`、`PE-14`、`PE-15`）。
 
--   DNS 服务提供商参数的添加、更改或删除经过细致管理、跟踪和验证（COBIT 5 BAI09.03 ISA 62443-2-1:2009 4.4.3.3.3.9, 4.3.4.4.1 ISA 62443-3-3:2013 SR 4.2 ISO/IEC 27001:2013 A.8.2.3, A.8.3.1, A.8.3.2, A.8.3.3, A.11.2.7 NIST SP 800-53 Rev. 4 CM-8, MP-6, PE-16）
+## PR.IP-6: 根据策略销毁数据
 
--   在每个信任区域内部署足够的 DNS 容量，以确保在网络和/或 DNS 服务器基础设施发生故障时，仍提供可接受的解析性能。
--   随时间监控容量利用率，并根据增长的需求适时部署额外的基础设施（COBIT 5 APO13.01 ISA 62443-3-3:2013 SR 7.1, SR 7.2 ISO/IEC 27001:2013 A.12.3.1 NIST SP 800-53 Rev. 4 AU-4, CP-2, SC-5）
+根据策略处置 DNS 配置、解析和数据（`COBIT 5 BAI09.03`、`ISA 62443-2-1:2009 4.4.3.3.3.9`、`4.3.4.4.1`、`ISA 62443-3-3:2013 SR 4.2`、`ISO/IEC 27001:2013 A.8.2.3`、`A.8.3.1`、`A.8.3.2`、`A.8.3.3`、`A.11.2.7`、`NIST SP 800-53 Rev. 4 MP-6`）。
 
-### PR.DS-4: 具有足够的容量以维持可用性
+## PR.IP-7: 持续改进保护过程
 
--   实施访问控制列表（ACL）以保护对内部权威 DNS 数据数据的访问。
--   外部 DNS 权威数据仅包含在内部或服务提供商 DNS 上发布的与外部服务相关的数据。
--   已建立 DNS 隧道检测和缓解策略。
--   DNS 防火墙配置有助于防止访问外部站点导致可能的数据外泄（CCS CSC 17 COBIT 5 APO01.06 ISA 62443-3-3:2013 SR 5.2 ISO/IEC 27001:2013 A.6.1.2, A.7.1.1, A.7.1.2, A.7.3.1, A.8.2.2, A.8.2.3, A.9.1.1, A.9.1.2, A.9.2.3, A.9.4.1, A.9.4.4, A.9.4.5, A.13.1.3, A.13.2.1, A.13.2.3, A.13.2.4, A.14.1.2, A.14.1.3 NIST SP 800-53 Rev. 4 AC-4, AC-5, AC-6, PE-19, PS-3, PS-6, SC-7, SC-8, SC-13, SC-31, SI-4）
+通过定期评审、新技术和教训持续改进 DNS 数据保护过程（`COBIT 5 APO11.06`、`ISA 62443-2-1:2009 4.4.3.1`、`4.4.3.2`、`4.4.3.3`、`4.4.3.4`、`4.4.3.5`、`4.4.3.6`、`4.4.3.7`、`NIST SP 800-53 Rev. 4 CA-2`、`CA-7`、`CP-2`、`IR-8`、`PM-6`）。
 
-### PR.DS-5: 实施了防护数据泄露
+## PR.IP-8: 与相关方共享保护技术的有效性
 
--   实施 DNS 配置和区域文件完整性检查，以验证传输成功并检测更改。
--   DNSSEC 验证提供了 DNS 解析数据检查以及经过认证的拒绝存在（ISA 62443-3-3:2013 SR 3.1, SR 3.3, SR 3.4, SR 3.8 ISO/IEC 27001:2013 A.12.2.1, A.12.5.1, A.14.1.2, A.14.1.3 NIST SP 800-53 Rev. 4 SI-7）
+与相关方共享 DNS 数据保护技术的有效性（`ISO/IEC 27001:2013 A.16.1.6`、`NIST SP 800-53 Rev. 4 AC-21`、`CA-7`、`SI-4`）。
 
-### PR.DS-6: 使用完整性检查机制验证软件、固件和信息的完整性
+## PR.IP-9: 响应计划（事件响应和业务连续性）和恢复计划（事件恢复和灾难恢复）已建立并管理
 
-### PR.DS-7: 开发和测试环境与生产环境分离
+- 记录、通信并管理 DNS 事件响应和恢复计划。
+- 将 DNS 的业务连续性方面纳入业务连续性和灾难恢复计划中（`COBIT 5 DSS04.03`、`ISA 62443-2-1:2009 4.3.2.5.3`、`4.3.4.5.1`、`ISO/IEC 27001:2013 A.16.1.1`、`A.17.1.1`、`A.17.1.2`、`NIST SP 800-53 Rev. 4 CP-2`、`IR-8`）。
 
--   DNS 解析器和服务器部署在与生产网络隔离的实验室网络中，用于测试新版本、补丁和新功能（COBIT 5 BAI07.04 ISO/IEC 27001:2013 A.12.1.4 NIST SP 800-53 Rev. 4 CM-2）
+## PR.IP-10: 测试响应和恢复计划
 
-### 保护：信息保护过程和程序 (PR.IP)
-
--   维护并使用安全策略（涉及目的、范围、职责、管理承诺以及实体间的协调）、流程和程序，以管理对信息系统和资产的保护。
-
-#### PR.IP-1: 创建并维护信息技术/工业控制系统的基线配置
-
--   对于终端用户系统，解析器软件定义为包含在构建中，这几乎由相应的设备系统组成。
--   对于 DNS 服务器，记录硬件和软件组件列表，包括操作系统、DNS 软件、安全、监控和审计等（CCS CSC 3 COBIT 5 BAI10.01, BAI10.02, BAI10.03, BAI10.05 ISA 62443-2-1:2009 4.3.4.3.2, 4.3.4.3.3 ISA 62443-3-3:2013 SR 7.6 ISO/IEC 27001:2013 A.12.1.2, A.12.5.1, A.12.6.2, A.14.2.2, A.14.2.3, A.14.2.4 NIST SP 800-53 Rev. 4 CM-2, CM-3, CM-4, CM-5, CM-6, CM-7, CM-9, SA-10）
-
-#### PR.IP-2: 实施管理系统的开发周期
-
--   通过系统生命周期在您的 IT 网络和系统上应用安全工程原则，包括从需求分析到编码的内部开发（COBIT 5 APO13.01 ISA 62443-2-1:2009 4.3.4.3.3 ISO/IEC 27001:2013 A.6.1.5, A.14.1.1, A.14.2.1, A.14.2.5 NIST SP 800-53 Rev. 4 SA-3, SA-4, SA-8, SA-10, SA-11, PL-8）
-
-#### PR.IP-3: 建立配置控制过程
-
--   基线配置是受控文档，这意味着任何添加或更改应在相关方之间提议、评审并通信。
--   授权软件（例如 DNS 配置）的更改也应计划、批准并分阶段实施（COBIT 5 BAI06.01, BAI01.06 ISA 62443-2-1:2009 4.3.4.3.2, 4.3.4.3.3 ISA 62443-3-3:2013 SR 7.6 ISO/IEC 27001:2013 A.12.1.2, A.12.5.1, A.12.6.2, A.14.2.2, A.14.2.3, A.14.2.4 NIST SP 800-53 Rev. 4 CM-3, CM-4, SA-10）
-
-#### PR.IP-4: 定期执行、维护和测试备份
-
--   对每组服务器定期备份 DNS 配置和区域库以及审计日志（COBIT 5 APO13.01 ISA 62443-2-1:2009 4.3.4.3.9 ISA 62443-3-3:2013 SR 7.3, SR 7.4 ISO/IEC 27001:2013 A.12.3.1, A.17.1.2, A.17.1.3, A.18.1.3 NIST SP 800-53 Rev. 4 CP-4, CP-6, CP-9）
-
-#### PR.IP-5: 符合组织资产物理环境的策略和法规
-
--   记录并维护组织资产（如 DNS 服务器）物理环境的策略和法规。这包括提供应急断电、温度湿度、防水以及数据中心控制（COBIT 5 DSS01.04 ISA 62443-2-1:2009 4.3.4.3.2, 4.3.4.3.3 ISA 62443-3-3:2013 SR 7.6 ISO/IEC 27001:2013 A.12.1.2, A.12.5.1, A.12.6.2, A.14.2.2, A.14.2.3, A.14.2.4 NIST SP 800-53 Rev. 4 PE-10, PE-12, PE-13, PE-14, PE-15）
-
-#### PR.IP-6: 根据策略销毁数据
-
--   根据策略处置 DNS 配置、解析和数据（COBIT 5 BAI09.03 ISA 62443-2-1:2009 4.4.3.3.3.9, 4.3.4.4.1 ISA 62443-3-3:2013 SR 4.2 ISO/IEC 27001:2013 A.8.2.3, A.8.3.1, A.8.3.2, A.8.3.3, A.11.2.7 NIST SP 800-53 Rev. 4 MP-6）
-
-#### PR.IP-7: 持续改进保护过程
-
--   通过定期评审、新技术和教训持续改进 DNS 数据保护过程（COBIT 5 APO11.06 ISA 62443-2-1:2009 4.4.3.1, 4.4.3.2, 4.4.3.3, 4.4.3.4, 4.4.3.5, 4.4.3.6, 4.4.3.7 NIST SP 800-53 Rev. 4 CA-2, CA-7, CP-2, IR-8, PM-6）
-
-#### PR.IP-8: 与相关方共享保护技术的有效性
-
--   与相关方共享 DNS 数据保护技术的有效性（ISO/IEC 27001:2013 A.16.1.6 NIST SP 800-53 Rev. 4 AC-21, CA-7, SI-4）
-
-#### PR.IP-9: 响应计划（事件响应和业务连续性）和恢复计划（事件恢复和灾难恢复）已建立并管理
-
--   记录、通信并管理 DNS 事件响应和恢复计划。
--   将 DNS 的业务连续性方面纳入业务连续性和灾难恢复计划中（COBIT 5 DSS04.03 ISA 62443-2-1:2009 4.3.2.5.3, 4.3.4.5.1 ISO/IEC 27001:2013 A.16.1.1, A.17.1.1, A.17.1.2 NIST SP 800-53 Rev. 4 CP-2, IR-8）
-
-#### PR.IP-10: 测试响应和恢复计划
-
--   测试 DNS 事件响应和恢复计划，并将结果反馈以改进此类计划（ISA 62443-2-1:2009 4.3.2.5.7, 4.3.4.5.11 ISA 62443-3-3:2013 SR 3.3 ISO/IEC 27001:2013 A.17.1.3 NIST SP 800-53 Rev. 4 CP-4, IR-3, PM-14）
-
-
-
-
+测试 DNS 事件响应和恢复计划，并将结果反馈以改进此类计划（`ISA 62443-2-1:2009 4.3.2.5.7`、`4.3.4.5.11`、`ISA 62443-3-3:2013 SR 3.3`、`ISO/IEC 27001:2013 A.17.1.3`、`NIST SP 800-53 Rev. 4 CP-4`、`IR-3`、`PM-14`）。
 
 # COBIT 5 `APO07.01`, `APO07.02`, `APO07.03`, `APO07.04`, `APO07.05`
+
 ISA `62443-2-1:2009` `4.3.3.2.1`, `4.3.3.2.2`, `4.3.3.2.3`
+
 ISO/IEC `27001:2013` `A.7.1.1`, `A.7.3.1`, `A.8.1.4`
+
 NIST `SP 800-53 Rev. 4` `PS Family`
 
-## `PR.IP-12`: 制定并实施漏洞管理计划
+## PR.IP-12: 制定并实施漏洞管理计划
 
-* 制定并实施了 DNS 漏洞管理计划，并结合了书中讨论的内容
+制定并实施了 DNS 漏洞管理计划，并结合了书中讨论的内容。
 
 ISO/IEC `27001:2013` `A.12.6.1`, `A.18.2.2`
+
 NIST `SP 800-53 Rev. 4` `RA-3`, `RA-5`, `SI-2`
 
-## `PROTECT: 维护 (PR.MA)`：对工业控制和信息系统组件的维护和修理符合策略和程序。
+## PROTECT: 维护 (PR.MA)：对工业控制和信息系统组件的维护和修理符合策略和程序
 
-### `PR.MA-1`: 及时对组织资产进行维护和记录，并使用经过批准和控制的工具
+### PR.MA-1: 及时对组织资产进行维护和记录，并使用经过批准和控制的工具
 
-* 及时对 DNS 服务器进行维护并进行记录，并使用经过批准和控制的工具
-* 维护和修理使用预先批准的文档工具和流程
-* 任何需要外部人员（例如供应商人员）支持的修理需预先授权，且外部人员应签到，并全程由授权的组织团队成员陪同
-* 需要移除 DNS 组件的修理需经过批准，并制定相应的应急措施，对组件进行清理以清除任何敏感信息（如用户账户）
+- 及时对 DNS 服务器进行维护并进行记录，并使用经过批准和控制的工具。
+- 维护和修理使用预先批准的文档工具和流程。
+- 任何需要外部人员（例如供应商人员）支持的修理需预先授权，且外部人员应签到，并全程由授权的组织团队成员陪同。
+- 需要移除 DNS 组件的修理需经过批准，并制定相应的应急措施，对组件进行清理以清除任何敏感信息（如用户账户）。
 
 COBIT 5 `BAI09.03`
+
 ISA `62443-2-1:2009` `4.3.3.3.7`
+
 ISO/IEC `27001:2013` `A.11.1.2`, `A.11.2.4`, `A.11.2.5`
+
 NIST `SP 800-53 Rev. 4` `MA-2`, `MA-3`, `MA-5`
 
-### `PR.MA-2`: 组织资产的远程维护经过批准、记录，并以防止未经授权访问的方式进行
+### PR.MA-2: 组织资产的远程维护经过批准、记录，并以防止未经授权访问的方式进行
 
-* 任何远程执行的 DNS 服务器维护或修理必须经过预先批准，并在活动期间开启远程连接
-* 远程访问需要强身份凭据进行身份验证
-* 远程访问、DNS 服务器命令以及诊断操作均应予以记录
+- 任何远程执行的 DNS 服务器维护或修理必须经过预先批准，并在活动期间开启远程连接。
+- 远程访问需要强身份凭据进行身份验证。
+- 远程访问、DNS 服务器命令以及诊断操作均应予以记录。
 
 COBIT 5 `DSS05.04`
+
 ISA `62443-2-1:2009` `4.3.3.6.5`, `4.3.3.6.6`, `4.3.3.6.7`, `4.4.4.6.8`
+
 ISO/IEC `27001:2013` `A.11.2.4`, `A.15.1.1`, `A.15.2.1`
+
 NIST `SP 800-53 Rev. 4` `MA-4`
 
-## `PROTECT: 保护技术 (PR.PT)`：管理技术安全解决方案，以确保系统和资产的安全性和韧性，符合相关的策略、程序和协议。
+## PROTECT: 保护技术 (PR.PT)：管理技术安全解决方案，以确保系统和资产的安全性和韧性，符合相关的策略、程序和协议
 
-### `PR.PT-1`: 根据策略确定、记录、实施并审查审计/日志记录
+### PR.PT-1: 根据策略确定、记录、实施并审查审计/日志记录
 
-* 识别并配置了 DNS 服务器和管理系统日志，用于跟踪和存储，以记录日志记录档
+识别并配置了 DNS 服务器和管理系统日志，用于跟踪和存储，以记录日志记录档。
 
 CCS CSC `14`
+
 COBIT 5 `APO11.04`
+
 ISA `62443-2-1:2009` `4.3.3.3.9`, `4.3.3.5.8`, `4.3.4.4.7`, `4.4.2.1`, `4.4.2.2`, `4.4.2.4`
+
 ISA `62443-3-3:2013` `SR 2.8`, `SR 2.9`, `SR 2.10`, `SR 2.11`, `SR 2.12`
+
 ISO/IEC `27001:2013` `A.12.4.1`, `A.12.4.2`, `A.12.4.3`, `A.12.4.4`, `A.12.7.1`
+
 NIST `SP 800-53 Rev. 4` `AU Family`
 
-### `PR.PT-2`: 根据策略保护可移除介质并限制其使用
+### PR.PT-2: 根据策略保护可移除介质并限制其使用
 
-* 任何可移除介质必须根据策略进行保护并限制其使用。供应商可通过 `USB`、`DVD`或其他可移除介质格式提供软件更新。配置和备份信息也可以复制到可移除介质进行备份
-* 可插拔硬盘可能包含配置或敏感信息。此类介质必须安全存储以防止未经授权的访问；必要时必须安全运输，并在处置前通过删除介质存储的任何敏感信息进行清理
+- 任何可移除介质必须根据策略进行保护并限制其使用。供应商可通过 `USB`、`DVD` 或其他可移除介质格式提供软件更新。配置和备份信息也可以复制到可移除介质进行备份。
+- 可插拔硬盘可能包含配置或敏感信息。此类介质必须安全存储以防止未经授权的访问；必要时必须安全运输，并在处置前通过删除介质存储的任何敏感信息进行清理。
 
-### `PR.PT-3`: 根据策略控制系统和资产的访问
+### PR.PT-3: 根据策略控制系统和资产的访问
 
-* 只有根据需要通过特定功能才能访问 DNS 流量
-* 审计 DNS 流量以验证其功能需求
-* 系统的访问权限被限制在最小功能范围内，并在处置前通过删除存储的任何敏感信息进行清理
-* 设备的访问被限制在满足其所需的最小范围内
+- 只有根据需要通过特定功能才能访问 DNS 流量。
+- 审计 DNS 流量以验证其功能需求。
+- 系统的访问权限被限制在最小功能范围内，并在处置前通过删除存储的任何敏感信息进行清理。
+- 设备的访问被限制在满足其所需的最小范围内。
 
 COBIT 5 `DSS05.02`, `APO13.01`
+
 ISA `62443-3-3:2013` `SR 2.3`
+
 ISO/IEC `27001:2013` `A.8.2.2`, `A.8.2.3`, `A.8.3.1`, `A.8.3.3`, `A.11.2.9`
+
 NIST `SP 800-53 Rev. 4` `MP-2`
 
-## `DETECT: 异常与事件 (DE.AE)`：及时检测异常活动。
+## DETECT: 异常与事件 (DE.AE)：及时检测异常活动
 
-### `DE.AE-1`: 建立并管理网络操作基线
+### DE.AE-1: 建立并管理网络操作基线
 
-* 监控 DNS 流量
-* 监控服务器的 `CPU`、`memory`、`I/O`
+- 监控 DNS 流量。
+- 监控服务器的 `CPU`、`memory`、`I/O`。
 
 COBIT 5 `DSS03.01`
+
 ISA `62443-2-1:2009` `4.3.3.3`
+
 NIST `SP 800-53 Rev. 4` `AC-4`, `CA-3`, `CM-2`, `SI-4`
 
-### `DE.AE-2`: 分析检测到的事件以了解攻击目标和方法
+### DE.AE-2: 分析检测到的事件以了解攻击目标和方法
 
-* 分析 DNS 流量异常以确定为攻击或其他；如果是攻击，则发现攻击细节并根据以往经验应用先解决方案
+分析 DNS 流量异常以确定为攻击或其他；如果是攻击，则发现攻击细节并根据以往经验应用先解决方案。
 
 ISA `62443-2-1:2009` `4.3.4.6`, `4.3.4.7`, `4.3.4.8`
+
 ISA `62443-3-3:2013` `SR 2.8`, `SR 2.9`, `SR 2.10`, `SR 2.11`, `SR 2.12`, `SR 3.9`, `SR 6.1`, `SR 6.2`
+
 ISO/IEC `27001:2013` `A.16.1.1`, `A.16.1.4`
+
 NIST `SP 800-53 Rev. 4` `AU-6`, `CA-7`, `IR-4`, `SI-4`
 
-### `DE.AE-3`: 从多个源和传感器聚合事件数据
+### DE.AE-3: 从多个源和传感器聚合事件数据
 
-* 将 DNS 事件数据与网络和服务器监控系统的相关数据聚合，以支持攻击特征
-* 将 DNS 事件数据安全地传输到更广泛的网络安全事件系统中，以支持关联和故障排除
+- 将 DNS 事件数据与网络和服务器监控系统的相关数据聚合，以支持攻击特征。
+- 将 DNS 事件数据安全地传输到更广泛的网络安全事件系统中，以支持关联和故障排除。
 
 COBIT 5 `DSS05.02`, `APO13.01`
+
 ISA `62443-3-3:2013` `SR 2.3`
+
 ISO/IEC `27001:2013` `A.8.2.2`, `A.8.2.3`, `A.8.3.1`, `A.8.3.3`, `A.11.2.9`
+
 NIST `SP 800-53 Rev. 4` `MP-2`, `MP-4`, `MP-5`, `MP-7`
 
-### `DE.AE-4`: 确定事件的影响
+### DE.AE-4: 确定事件的影响
 
-* 确定 DNS 事件的影响，以便优先缓解措施
+确定 DNS 事件的影响，以便优先缓解措施。
 
 COBIT 5 `APO12.06`
+
 NIST `SP 800-53 Rev. 4` `CP-2`, `IR-4`, `RA-3`, `SI-4`
 
-### `DE.AE-5`: 建立事件告警阈值
+### DE.AE-5: 建立事件告警阈值
 
-* 建立事件响应计划，定义可能的事件及相应的响应计划
-* 定期对事件响应计划进行审查、批准和更新
+- 建立事件响应计划，定义可能的事件及相应的响应计划。
+- 定期对事件响应计划进行审查、批准和更新。
+- 监控系统中的阈值和告警旨在检测并报告潜在的安全事件，例如针对进程和硬件状态以及 `I/O` 流量。响应计划定义了事件分析、遏制、根除和恢复，以及状态报告的通信。
+- `COBIT 5 APO12.06`、`ISA 62443-2-1:2009 4.2.3.10`、`NIST SP 800-53 Rev. 4 IR-4`、`IR-5`、`IR-8`。
 
+## 监测：安全持续监控 (DE.CM)
 
-
-
-
-- 监控系统中的阈值和告警旨在检测并报告潜在的安全事件，例如针对进程和硬件状态以及 I/O 流量。响应计划定义了事件分析、遏制、根除和恢复，以及状态报告的通信。
-- COBIT 5 APO12.06 ISA 62443-2-1:2009 4.2.3.10 NIST SP 800-53 Rev. 4 IR-4, IR-5, IR-8
-
-### 监测：安全持续监控 (DE.CM)
 对信息系统和资产进行定期间隔监控，以识别网络安全事件并验证保护措施的有效性。
 
-#### DE.CM-1: 监控网络以检测潜在的网络安全事件
-- 监控 DNS 流量以检测网络安全事件，包括通用和 DNS 流量大小（DoS/DDoS、PRSD、反射攻击）、NXDOMAINS（虚假查询、DGA、恶意软件/APT）以及异常流量模式（隧道技术、恶意软件/APT）
-- 监控 DNS 服务器关键指标（CPU、硬盘、内存、I/O）以检测可能指示潜在事件的异常高负载
-- CCS CSC 14, 16 COBIT 5 DSS05.07 ISA 62443-3-3:2013 SR 6.2 NIST SP 800-53 Rev. 4 AC-2, AU-12, CA-7, CM-3, SC-5, SC-7, SI-4
+### DE.CM-1: 监控网络以检测潜在的网络安全事件
 
-#### DE.CM-2: 监控物理环境以检测潜在的网络安全事件
-- 对物理访问控制和 DNS 组件所在的物理环境进行监控，以检测潜在事件
-- 访问包括 DNS 服务器在内的关键基础设施需要刷卡入场
-- 审查访问日志
-- 部署并审查监控系统，以检测“尾随进入”（例如未经授权的人员在门关闭前进入）以及资产的物理移移
-- ISA 62443-2-1:2009 4.3.3.3.8 NIST SP 800-53 Rev. 4 CA-7, PE-3, PE-6, PE-20
+- 监控 DNS 流量以检测网络安全事件，包括通用和 DNS 流量大小（`DoS/DDoS`、`PRSD`、反射攻击）、`NXDOMAINS`（虚假查询、`DGA`、恶意软件/`APT`）以及异常流量模式（隧道技术、恶意软件/`APT`）。
+- 监控 DNS 服务器关键指标（`CPU`、硬盘、内存、`I/O`）以检测可能指示潜在事件的异常高负载。
+- `CCS CSC 14`、`16`、`COBIT 5 DSS05.07`、`ISA 62443-3-3:2013 SR 6.2`、`NIST SP 800-53 Rev. 4 AC-2`、`AU-12`、`CA-7`、`CM-3`、`SC-5`、`SC-7`、`SI-4`。
 
-#### DE.CM-3: 监控人员活动以检测潜在的网络安全事件
-- 定期审查 DNS 服务器和管理系统日志以确认有效的用户访问和活动；任何异常均被视为潜在的安全事件进行调查
-- ISA 62443-3-3:2013 SR 6.2 ISO/IEC 27001:2013 A.12.4.1 NIST SP 800-53 Rev. 4 AC-2, AU-12, AU-13, CA-7, CM-10, CM-11
+### DE.CM-2: 监控物理环境以检测潜在的网络安全事件
 
-#### DE.CM-4: 检测恶意代码
-- 定期病毒病毒以检测恶意代码
-- 监控 DNS 流量以识别恶意软件的特征性 DNS 活动
-- 使用 DNS 防火墙阻止已知的恶意软件 C&C 中心通信尝试
-- CCS CSC 5 COBIT 5 DSS05.01 ISA 62443-2-1:2009 4.3.4.3.8 ISA 62443-3-3:2013 SR 3.2 ISO/IEC 27001:2013 A.12.2.1 NIST SP 800-53 Rev. 4 SI-3
+- 对物理访问控制和 DNS 组件所在的物理环境进行监控，以检测潜在事件。
+- 访问包括 DNS 服务器在内的关键基础设施需要刷卡入场。
+- 审查访问日志。
+- 部署并审查监控系统，以检测“尾随进入”（例如未经授权的人员在门关闭前进入）以及资产的物理移移。
+- `ISA 62443-2-1:2009 4.3.3.3.8`、`NIST SP 800-53 Rev. 4 CA-7`、`PE-3`、`PE-6`、`PE-20`。
 
-#### DE.CM-5: 检测未经授权的移动代码
-- 定期病毒病毒以检测恶意代码
-- 监控 DNS 流量以识别恶意软件的特征性 DNS 活动
-- 使用 DNS 防火墙阻止恶意软件 C&C 中心通信尝试
-- ISA 62443-3-3:2013 SR 2.4 ISO/IEC 27001:2013 A.12.5.1 NIST SP 800-53 Rev. 4 SC-18, SI-4. SC-44
+### DE.CM-3: 监控人员活动以检测潜在的网络安全事件
 
-#### DE.CM-6: 监控外部服务供应商活动以检测潜在的网络安全事件
-- 定期审查外部系统日志（例如外部 DNS 提供商、云托管提供商等），以确认有效的用户访问和活动；任何异常均被视为潜在的安全事件进行调查
-- COBIT 5 APO07.06 ISO/IEC 27001:2013 A.14.2.7, A.15.2.1 NIST SP 800-53 Rev. 4 CA-7, PS-7, SA-4, SA-9, SI-4
+定期审查 DNS 服务器和管理系统日志以确认有效的用户访问和活动；任何异常均被视为潜在的安全事件进行调查。
 
-#### DE.CM-7: 执行对未经授权人员、连接、设备和软件的监控
-- 监控安全区域（如数据中心）出现未经授权人员的情况、来自未经授权 IP 地址、端口或凭据到服务器的连接、资产清单中未指定的任何设备，以及设备上安装的超出设备基准的任何软件
-- 任何此类不合规事件应触发通知，并根据事件响应计划进行调查
-- NIST SP 800-53 Rev. 4 AC-12, CA-7, CM-3, PE-3, PE-6, PE-20, SI-4
+`ISA 62443-3-3:2013 SR 6.2`、`ISO/IEC 27001:2013 A.12.4.1`、`NIST SP 800-53 Rev. 4 AC-2`、`AU-12`、`AU-13`、`CA-7`、`CM-10`、`CM-11`。
 
-#### DE.CM-8: 进行漏洞扫描
-- 定期进行漏洞扫描以检测已知的漏洞
-- 根据可能性和影响实施或改进漏洞缓解措施
-- COBIT 5 BAI03 ISA 62443-2-1:2009 4.2.3.1 ISO/IEC 27001:2013 A.12.6.1 NIST SP 800-53 Rev. 4 SI-2
+### DE.CM-4: 检测恶意代码
 
-### 监测：检测过程 (DE.DP)
+- 定期病毒扫描以检测恶意代码。
+- 监控 DNS 流量以识别恶意软件的特征性 DNS 活动。
+- 使用 DNS 防火墙阻止已知的恶意软件 `C&C` 中心通信尝试。
+- `CCS CSC 5`、`COBIT 5 DSS05.01`、`ISA 62443-2-1:2009 4.3.4.3.8`、`ISA 62443-3-3:2013 SR 3.2`、`ISO/IEC 27001:2013 A.12.2.1`、`NIST SP 800-53 Rev. 4 SI-3`。
+
+### DE.CM-5: 检测未经授权的移动代码
+
+- 定期病毒扫描以检测恶意代码。
+- 监控 DNS 流量以识别恶意软件的特征性 DNS 活动。
+- 使用 DNS 防火墙阻止恶意软件 `C&C` 中心通信尝试。
+- `ISA 62443-3-3:2013 SR 2.4`、`ISO/IEC 27001:2013 A.12.5.1`、`NIST SP 800-53 Rev. 4 SC-18`、`SI-4`、`SC-44`。
+
+### DE.CM-6: 监控外部服务供应商活动以检测潜在的网络安全事件
+
+定期审查外部系统日志（例如外部 DNS 提供商、云托管提供商等），以确认有效的用户访问和活动；任何异常均被视为潜在的安全事件进行调查。
+
+`COBIT 5 APO07.06`、`ISO/IEC 27001:2013 A.14.2.7`、`A.15.2.1`、`NIST SP 800-53 Rev. 4 CA-7`、`PS-7`、`SA-4`、`SA-9`、`SI-4`。
+
+### DE.CM-7: 执行对未经授权人员、连接、设备和软件的监控
+
+- 监控安全区域（如数据中心）出现未经授权人员的情况、来自未经授权 `IP` 地址、端口或凭据到服务器的连接、资产清单中未指定的任何设备，以及设备上安装的超出设备基准的任何软件。
+- 任何此类不合规事件应触发通知，并根据事件响应计划进行调查。
+- `NIST SP 800-53 Rev. 4 AC-12`、`CA-7`、`CM-3`、`PE-3`、`PE-6`、`PE-20`、`SI-4`。
+
+### DE.CM-8: 进行漏洞扫描
+
+- 定期进行漏洞扫描以检测已知的漏洞。
+- 根据可能性和影响实施或改进漏洞缓解措施。
+- `COBIT 5 BAI03`、`ISA 62443-2-1:2009 4.2.3.1`、`ISO/IEC 27001:2013 A.12.6.1`、`NIST SP 800-53 Rev. 4 SI-2`。
+
+## 监测：检测过程 (DE.DP)
+
 对检测过程进行监控，以确保对检测到的事件做出及时响应。
 
-#### DE.DP-1: 定义人员的角色和职责
-- 在事件响应计划中定义组织内部对 DNS 安全事件响应的角色和职责
-- CCS CSC 5 COBIT 5 DSS05.01 ISA 62443-2-1:2009 4.3.4.3 ISO/IEC 27001:2013 A.16.1.1 NIST SP 800-53 Rev. 4
+### DE.DP-1: 定义人员的角色和职责
 
-#### DE.DP-2: 检测活动符合要求
-- 按照要求执行 DNS 安全检测活动
-- ISA 62443-2-1:2009 4.3.3.3 ISO/IEC 27001:2013 A.12.4.1 NIST SP 800-53 Rev. 4 CA-7
+在事件响应计划中定义组织内部对 DNS 安全事件响应的角色和职责。
 
-#### DE.DP-3: 测试检测过程
-- 测试 DNS 安全检测活动以确保其有效性
-- COBIT 5 APO12.06 ISA 62443-2-1:2009 4.2.3.1 ISO/IEC 27001:2013 A.12.4.1 NIST SP 800-53 Rev. 4 CA-7
+`CCS CSC 5`、`COBIT 5 DSS05.01`、`ISA 62443-2-1:2009 4.3.4.3`、`ISO/IEC 27001:2013 A.16.1.1`、`NIST SP 800-53 Rev. 4`。
 
-#### DE.DP-4: 向相关方通报事件
-- 根据事件响应计划向相关方通报 DNS 安全事件检测信息
-- COBIT 5 APO12.06 ISA 62443-2-1:2009 4.3.4.3 ISA 62443-3-3:2013 SR 6.2 ISO/IEC 27001:2013 A.12.4.1 NIST SP 800-53 Rev. 4 AU-6
+### DE.DP-2: 检测活动符合要求
 
-#### DE.DP-5: 持续改进检测过程
-- 根据以往事件持续改进 DNS 安全事件检测过程
-- COBIT 5 APO07.06 ISO/IEC 27001:2013 A.14.2.7, A.15.2.1 NIST SP 800-53 Rev. 4 CA-7
+按照要求执行 DNS 安全检测活动。
 
-### 响应：响应计划 (RS.PL)
+`ISA 62443-2-1:2009 4.3.3.3`、`ISO/IEC 27001:2013 A.12.4.1`、`NIST SP 800-53 Rev. 4 CA-7`。
+
+### DE.DP-3: 测试检测过程
+
+测试 DNS 安全检测活动以确保其有效性。
+
+`COBIT 5 APO12.06`、`ISA 62443-2-1:2009 4.2.3.1`、`ISO/IEC 27001:2013 A.12.4.1`、`NIST SP 800-53 Rev. 4 CA-7`。
+
+### DE.DP-4: 向相关方通报事件
+
+根据事件响应计划向相关方通报 DNS 安全事件检测信息。
+
+`COBIT 5 APO12.06`、`ISA 62443-2-1:2009 4.3.4.3`、`ISA 62443-3-3:2013 SR 6.2`、`ISO/IEC 27001:2013 A.12.4.1`、`NIST SP 800-53 Rev. 4 AU-6`。
+
+### DE.DP-5: 持续改进检测过程
+
+根据以往事件持续改进 DNS 安全事件检测过程。
+
+`COBIT 5 APO07.06`、`ISO/IEC 27001:2013 A.14.2.7`、`A.15.2.1`、`NIST SP 800-53 Rev. 4 CA-7`。
+
+## 响应：响应计划 (RS.PL)
+
 执行并维护响应过程，以确保对检测到的事件做出及时响应。
 
-#### RS.PL-1: 在事件期间后执行响应计划
-- 当 DNS 安全事件被检测和表征后，执行事件响应计划中的相关操作
-- COBIT 5 BAI01 ISA 62443-2-1:2009 4.3.4.1 ISO/IEC 27001:2013 A.16.1.1 NIST SP 800-53 Rev. 4 CP-10
+### RS.PL-1: 在事件期间后执行响应计划
 
-#### RS.PL-2: 根据既定标准报告事件
-- 按照既定标准报告 DNS 安全事件检测
-- ISA 62443-2-1:2009 4.3.3.3 ISO/IEC 27001:2013 A.12.4.1 NIST SP 800-53 Rev. 4 CA-7
+当 DNS 安全事件被检测和表征后，执行事件响应计划中的相关操作。
 
-#### RS.PL-3: 与利益相关者协调响应
+`COBIT 5 BAI01`、`ISA 62443-2-1:2009 4.3.4.1`、`ISO/IEC 27001:2013 A.16.1.1`、`NIST SP 800-53 Rev. 4 CP-10`。
+
+### RS.PL-2: 根据既定标准报告事件
+
+按照既定标准报告 DNS 安全事件检测。
+
+`ISA 62443-2-1:2009 4.3.3.3`、`ISO/IEC 27001:2013 A.12.4.1`、`NIST SP 800-53 Rev. 4 CA-7`。
+
+### RS.PL-3: 与利益相关者协调响应
+
 - 在需要时与内部和外部利益相关者协调响应活动，包括来自执法部门的外部支持。
-
-
-
-
-
 - DNS 安全事件响应信息根据事件响应计划告知适当的相关方。
-  - `ISA 62443-2-1:2009` 4.3.4.5.2, `ISO/IEC 27001:2013` A.16.1.2, `NIST SP 800-53 Rev. 4` CA-2, CA-7, CP-2, IR-4, IR-8, PE-6, RA-5, SI-4
-  - **RS.CO-4:** 与利益相关者的协调与响应计划保持一致。
-
-- DNS 安全事件响应信息根据事件响应计划告知适当利益相关者。
-  - `ISA 62443-2-1:2009` 4.3.4.5.5, `NIST SP 800-53 Rev. 4` CP-2, IR-4, IR-8
-  - **RS.CO-5:** 与外部利益相关者进行自愿信息共享，以实现更广泛的网络安全态势感知。
-
-- DNS 安全事件响应信息根据事件响应计划告知外部利益相关者，以促进行业对攻击的认知以及有效的防御措施。
-  - `NIST SP 800-53 Rev. 4` PM-15, SI-5
-  - **RESPOND: 分析 (RS.AN):** 进行分析以确保充分的响应并支持恢复活动。
-  - **RS.AN-1:** 对来自检测系统的通知进行调查。
-    - 调查 DNS 事件检测系统，将事件表征为潜在的攻击或威胁。
-      - `COBIT 5` DSS02.07, `ISA 62443-2-1:2009` 4.3.4.5.6, 4.3.4.5.7, 4.3.4.5.8, `ISA 62443-3-3:2013` SR 6.1, `ISO/IEC 27001:2013` A.12.4.1, A.12.4.3, A.16.1.5, `NIST SP 800-53 Rev. 4` AU-6, CA-7, IR-4, IR-5, PE-6, SI-4
-  - **RS.AN-2:** 了解事件的影响。
-    - 检测到事件后，对事件进行分析以评估并理解其影响。
-    - 遵循事件响应计划，参与响应的受影响小组对事件进行遏制、根除和恢复，同时根据响应计划沟通状态。
-    - 根据组织适当成员的审查、共识和批准，将新信息或教训整合到响应计划的更新中。
-      - `ISA 62443-2-1:2009` 4.3.4.5.6, 4.3.4.5.7, 4.3.4.5.8, `ISO/IEC 27001:2013` A.16.1.6, `NIST SP 800-53 Rev. 4` CP-2, IR-4
-  - **RS.AN-3:** 执行取证分析。
-    - 对检测到的事件进行取证分析，以超越事件表象，识别根本原因并列出被利用或被攻击的漏洞。这种分析有助于识别新的或变形的攻击向量和漏洞，并验证旨在防止此类攻击的防御措施的有效性。
-      - `ISA 62443-3-3:2013` SR 2.8, SR 2.9, SR 2.10, SR 2.11, SR 2.12, SR 3.9, SR 6.1, `ISO/IEC 27001:2013` A.16.1.7, `NIST SP 800-53 Rev. 4` AU-7, IR-4
-  - **RS.AN-4:** 根据响应计划对事件进行分类。
-    - 以与事件响应计划一致对事件进行分类。这对于优先考虑行动以及纳入适当的人员及时分析、遏制、根除和解决事件非常有帮助。
-      - `ISA 62443-2-1:2009` 4.3.4.5.6, `ISO/IEC 27001:2013` A.16.1.4, `NIST SP 800-53 Rev. 4` CP-2, IR-4, IR-5, IR-8
-
-- **RESPOND: 缓解 (RS.MI):** 执行活动以防止事件扩大、减轻其影响并根除事件。
-  - **RS.MI-1:** 遏制事件。
-    - 按照定义的区域部署组件以遏制事件。
-    - 根据事件本身采取进一步的遏制措施，影响 DNS 服务器或其他网络系统。
-      - `ISA 62443-2-1:2009` 4.3.4.5.6, `ISA 62443-3-3:2013` SR 5.1, SR 5.2, SR 5.4, `NIST SP 800-53 Rev. 4` IR-4
-  - **RS.MI-2:** 缓解事件。
-    - 事件发生后，遵循事件响应计划进行取证分析。
-    - 根据事件实施缓解策略。
-    - 经过审查并实施响应策略。
-      - `ISA 62443-2-1:2009` 4.3.4.5.6, 4.3.4.5.7, 4.3.4.5.8, `ISO/IEC 27001:2013` A.16.1.5, `NIST SP 800-53 Rev. 4` IR-4
-  - **RS.MI-3:** 缓解新发现的漏洞。
-    - 对新发现的漏洞进行概率和影响评估。
-    - 在事件发生后，缓解已知的漏洞。
-      - `ISO/IEC 27001:2013` A.12.4.1
-
-- **RESPOND: 改进 (RS.IM):** 组织响应。
-  - **RS.IM-1:** 响应计划整合教训。
-    - 与相关人员进行事后讨论以改进响应。
-    - 更新响应计划以整合教训。
-      - `COBIT 5` BAI01.13, `ISA 62443-2-1:2009` 4.3.4.5.10, 4.4.3.4, `ISO/IEC 27001:2013` A.16.1.6, `NIST SP 800-53 Rev. 4` IR-4
-  - **RS.IM-2:** 更新响应策略。
-    - 适当审查并更新响应策略。
-      - `NIST SP 800-53 Rev. 4` CP-2
-
-- **RECOVER: 恢复计划 (RC.RP):** 执行恢复程序以确保系统或资产的恢复。
-  - **RC.RP-1:** 在事件期间或后执行恢复计划。
-    - 在事件期间执行恢复计划。
-    - 在中断、损害或故障期间，采取应急措施和变通方案以恢复服务水平。
-    - 事件根除后，将受影响的系统恢复到工作状态。
-      - `COBIT 5` DSS02.05, DSS03.04, `ISO/IEC 27001:2013` A.16.1.5, `NIST SP 800-53 Rev. 4` CP-10, IR-4
-- **RECOVER: 改进 (RC.IM):** 通过将教训整合到未来的活动中改进恢复计划和流程。
-  - **RC.IM-1:** 恢复计划整合教训。
-    - 更新恢复计划以整合教训。
-      - `COBIT 5` BAI05.07, `ISA 62443-2-1` 4.4.3.4, `NIST SP 800-53 Rev. 4` CP-2, IR-4
-  - **RC.IM-2:** 更新恢复策略。
-    - 根据对事件恢复的分析，从中得出的任何改进建议，审查并更新恢复策略。
-      - `COBIT 5` BAI07.08, `NIST SP 800-53 Rev. 4` CP-2, IR-4
-
-- **RECOVER: 通信 (RC.CO):** 与内部和外部实体协调恢复活动，例如协调中心、互联网服务提供者、攻击系统所有者、受害者、其他安全响应小组（CSIRT）和供应商。
-  - **RC.CO-1:** 管理公共关系。
-    - 仔细管理与客户和公众的沟通，传递有关事件、响应和恢复状态以及计划行动的信息。
-      - `COBIT 5` EDM03.02
-  - **RC.CO-2:** 修复事件后的声誉。
-    - 通常，提供有关事件及所采取恢复措施的信息有助于维护声誉，但可能需要其他步骤。
-      - `COBIT 5` MEA03.02
-  - **RC.CO-3:** 向内部利益相关者及执行和管理团队通报恢复活动。
+- `ISA 62443-2-1:2009 4.3.4.5.2`、`ISO/IEC 27001:2013 A.16.1.2`、`NIST SP 800-53 Rev. 4 CA-2`、`CA-7`、`CP-2`、`IR-4`、`IR-8`、`PE-6`、`RA-5`、`SI-4`。
+- **RS.CO-4:** 与利益相关者的协调与响应计划保持一致。
 
 
 
+# DNS 安全事件响应
 
+DNS 安全事件响应信息根据事件响应计划告知适当利益相关者。
 
-- 与内部利益相关者（包括高管和管理层）的通信对于事件、响应状态、恢复以及计划行动保持公开且直接，包括在攻击持续时对替代方案进行评估。
-- `NIST SP 800-53 Rev. 4 CP-2`, `IR-4`
+- `ISA 62443-2-1:2009` 4.3.4.5.5, `NIST SP 800-53 Rev. 4` CP-2, IR-4, IR-8
+- `RS.CO-5`: 与外部利益相关者进行自愿信息共享，以实现更广泛的网络安全态势感知。
+
+DNS 安全事件响应信息根据事件响应计划告知外部利益相关者，以促进行业对攻击的认知以及有效的防御措施。
+
+- `NIST SP 800-53 Rev. 4` PM-15, SI-5
+
+## RESPOND: 分析 (RS.AN)
+
+进行分析以确保充分的响应并支持恢复活动。
+
+### RS.AN-1: 对来自检测系统的通知进行调查
+
+调查 DNS 事件检测系统，将事件表征为潜在的攻击或威胁。
+
+- `COBIT 5` DSS02.07, `ISA 62443-2-1:2009` 4.3.4.5.6, 4.3.4.5.7, 4.3.4.5.8, `ISA 62443-3-3:2013` SR 6.1, `ISO/IEC 27001:2013` A.12.4.1, A.12.4.3, A.16.1.5, `NIST SP 800-53 Rev. 4` AU-6, CA-7, IR-4, IR-5, PE-6, SI-4
+
+### RS.AN-2: 了解事件的影响
+
+检测到事件后，对事件进行分析以评估并理解其影响。
+
+遵循事件响应计划，参与响应的受影响小组对事件进行遏制、根除和恢复，同时根据响应计划沟通状态。
+
+根据组织适当成员的审查、共识和批准，将新信息或教训整合到响应计划的更新中。
+
+- `ISA 62443-2-1:2009` 4.3.4.5.6, 4.3.4.5.7, 4.3.4.5.8, `ISO/IEC 27001:2013` A.16.1.6, `NIST SP 800-53 Rev. 4` CP-2, IR-4
+
+### RS.AN-3: 执行取证分析
+
+对检测到的事件进行取证分析，以超越事件表象，识别根本原因并列出被利用或被攻击的漏洞。这种分析有助于识别新的或变形的攻击向量和漏洞，并验证旨在防止此类攻击的防御措施的有效性。
+
+- `ISA 62443-3-3:2013` SR 2.8, SR 2.9, SR 2.10, SR 2.11, SR 2.12, SR 3.9, SR 6.1, `ISO/IEC 27001:2013` A.16.1.7, `NIST SP 800-53 Rev. 4` AU-7, IR-4
+
+### RS.AN-4: 根据响应计划对事件进行分类
+
+以与事件响应计划一致对事件进行分类。这对于优先考虑行动以及纳入适当的人员及时分析、遏制、根除和解决事件非常有帮助。
+
+- `ISA 62443-2-1:2009` 4.3.4.5.6, `ISO/IEC 27001:2013` A.16.1.4, `NIST SP 800-53 Rev. 4` CP-2, IR-4, IR-5, IR-8
+
+## RESPOND: 缓解 (RS.MI)
+
+执行活动以防止事件扩大、减轻其影响并根除事件。
+
+### RS.MI-1: 遏制事件
+
+按照定义的区域部署组件以遏制事件。
+
+根据事件本身采取进一步的遏制措施，影响 DNS 服务器或其他网络系统。
+
+- `ISA 62443-2-1:2009` 4.3.4.5.6, `ISA 62443-3-3:2013` SR 5.1, SR 5.2, SR 5.4, `NIST SP 800-53 Rev. 4` IR-4
+
+### RS.MI-2: 缓解事件
+
+事件发生后，遵循事件响应计划进行取证分析。
+
+根据事件实施缓解策略。
+
+经过审查并实施响应策略。
+
+- `ISA 62443-2-1:2009` 4.3.4.5.6, 4.3.4.5.7, 4.3.4.5.8, `ISO/IEC 27001:2013` A.16.1.5, `NIST SP 800-53 Rev. 4` IR-4
+
+### RS.MI-3: 缓解新发现的漏洞
+
+对新发现的漏洞进行概率和影响评估。
+
+在事件发生后，缓解已知的漏洞。
+
+- `ISO/IEC 27001:2013` A.12.4.1
+
+## RESPOND: 改进 (RS.IM)
+
+组织响应。
+
+### RS.IM-1: 响应计划整合教训
+
+与相关人员进行事后讨论以改进响应。
+
+更新响应计划以整合教训。
+
+- `COBIT 5` BAI01.13, `ISA 62443-2-1:2009` 4.3.4.5.10, 4.4.3.4, `ISO/IEC 27001:2013` A.16.1.6, `NIST SP 800-53 Rev. 4` IR-4
+
+### RS.IM-2: 更新响应策略
+
+适当审查并更新响应策略。
+
+- `NIST SP 800-53 Rev. 4` CP-2
+
+## RECOVER: 恢复计划 (RC.RP)
+
+执行恢复程序以确保系统或资产的恢复。
+
+### RC.RP-1: 在事件期间或后执行恢复计划
+
+在事件期间执行恢复计划。
+
+在中断、损害或故障期间，采取应急措施和变通方案以恢复服务水平。
+
+事件根除后，将受影响的系统恢复到工作状态。
+
+- `COBIT 5` DSS02.05, DSS03.04, `ISO/IEC 27001:2013` A.16.1.5, `NIST SP 800-53 Rev. 4` CP-10, IR-4
+
+## RECOVER: 改进 (RC.IM)
+
+通过将教训整合到未来的活动中改进恢复计划和流程。
+
+### RC.IM-1: 恢复计划整合教训
+
+更新恢复计划以整合教训。
+
+- `COBIT 5` BAI05.07, `ISA 62443-2-1` 4.4.3.4, `NIST SP 800-53 Rev. 4` CP-2, IR-4
+
+### RC.IM-2: 更新恢复策略
+
+根据对事件恢复的分析，从中得出的任何改进建议，审查并更新恢复策略。
+
+- `COBIT 5` BAI07.08, `NIST SP 800-53 Rev. 4` CP-2, IR-4
+
+## RECOVER: 通信 (RC.CO)
+
+与内部和外部实体协调恢复活动，例如协调中心、互联网服务提供者、攻击系统所有者、受害者、其他安全响应小组（CSIRT）和供应商。
+
+### RC.CO-1: 管理公共关系
+
+仔细管理与客户和公众的沟通，传递有关事件、响应和恢复状态以及计划行动的信息。
+
+- `COBIT 5` EDM03.02
+
+### RC.CO-2: 修复事件后的声誉
+
+通常，提供有关事件及所采取恢复措施的信息有助于维护声誉，但可能需要其他步骤。
+
+- `COBIT 5` MEA03.02
+
+### RC.CO-3: 向内部利益相关者及执行和管理团队通报恢复活动
+
+与内部利益相关者（包括高管和管理层）的通信对于事件、响应状态、恢复以及计划行动保持公开且直接，包括在攻击持续时对替代方案进行评估。
+
+- `NIST SP 800-53 Rev. 4` CP-2, `IR-4`
 
 # B DNS 资源记录类型
 
-`Table B.1` 按资源记录类型（RRType`）字母顺序总结了当前定义的资源记录集（当查询者从 DNS 寻求此类信息时，它对应于 DNS 消息中 Question 部分的 `QType`）。虽然并非所有的资源记录都是 IETF 标准，甚至未在 IETF 内定义，但由 `IANA` 分配了 RR Type ID 的记录在此列出。提供了当前的 IETF 状态以及定义文档，可以通过访问文档获取更多细节。
+`Table B.1` 按资源记录类型（`RRType`）字母顺序总结了当前定义的资源记录集（当查询者从 DNS 寻求此类信息时，它对应于 DNS 消息中 Question 部分的 `QType`）。虽然并非所有的资源记录都是 IETF 标准，甚至未在 IETF 内定义，但由 `IANA` 分配了 RR Type ID 的记录在此列出。提供了当前的 IETF 状态以及定义文档，可以通过访问文档获取更多细节。
 
-### 表 B.1 资源记录和查询类型摘要
+## 表 B.1 资源记录和查询类型摘要
 
 | RRType (或 QType) | RR 目的（即 RData 内容） | RR Type ID | IETF 状态 | 定义文档 |
 | --- | --- | --- | --- | --- |
@@ -5013,52 +4795,75 @@ NIST `SP 800-53 Rev. 4` `CP-2`, `IR-4`, `RA-3`, `SI-4`
 | `SOA` | 区域的权威信息 | 6 | 标准 | RFC 1035 (17) |
 | `SPF` | 发送者策略框架 – 允许域所有识别授权从域发送邮件的主机 | 99 | 实验性 | RFC 7208 (89) |
 
-
-
-
-
 | RR 类型 | 描述 | 长度 | 状态 | 参考文献 |
 | :--- | :--- | :--- | :--- | :--- |
 | `SRV` | 在域内提供指定服务的主机 | 33 | 标准轨道 | `RFC 2782` (121) |
 | `SSHFP` | 安全外壳指纹 – 使用 DNSSEC 验证 SSH 主机密钥 | 44 | 标准轨道 | `RFC 4255` (122) |
 | `TA` | DNSSEC 信任权威 | 32768 | 互联网草案（已过期） | [`www.watson.org/∼weiler/INI1999-19.pdf`](http://www.watson.org/∼weiler/INI1999-19.pdf) |
+
+
+
 | `TALINK` | 信任锚历史链接 | 58 | 互联网草案（已过期） | [`tools.ietf.org/html/draft-wijngaards-dnsop-trust-history-00`](https://tools.ietf.org/html/draft-wijngaards-dnsop-trust-history-00) |
+
 | `TLSA` | 传输层安全关联 (DANE) | 52 | 建议标准 | `RFC 6698` (80) |
+
 | `TXT` | 与主机关联的任意文本 | 16 | 标准 | `RFC 1035` (17) |
+
 | `UID` | 用户 ID | 101 | 预留 | IANA 预留 |
+
 | `UINFO` | 用户信息 | 100 | 预留 | IANA 预留 |
+
 | `UNSPEC` | 未指定 | 103 | 预留 | IANA 预留 |
+
 | `URI` | 统一资源标识符 | 256 | 信息性 | `RFC 7553` (123) |
-| `WKS` | 通过指定协议在主机的指定 IP 地址提供的服务 – 如今 SRV RR 更常用 | 11 | 标准 | `RFC 1035` (17) |
+
+| `WKS` | 通过指定协议在主机的指定 IP 地址提供的服务 – 如今 `SRV` RR 更常用 | 11 | 标准 | `RFC 1035` (17) |
+
 | `X25` | X.25 包交换数据网络 (PSDN) | 19 | 实验性 | `RFC 1183` (100) |
 
 # 参考文献
 
 1. 美国国家标准与技术研究院。*改进关键基础设施网络安全性的框架*。2014 年 2 月 12 日。
+
 2. ISACA. *COBIT 5: 一个 ISACA 框架*。COBIT 在线。[在线] [引用：2016 年 8 月 6 日]。[`cobitonline.isaca.org/`](https://cobitonline.isaca.org/)。
+
 3. ANSI/ISA. *工业自动化与控制系统的安全性：系统安全需求与安全等级*。2013。ANSI/ISA-62443-3 (99.03.03)-2013。
+
 4. ISO/IEC. *信息技术 – 安全技术 – 信息安全管理体系 – 需求*。2013 年 4 月。ISO/IEC 27001。
+
 5. 美国国家标准与技术研究院。*联邦信息系统和组织的安全与隐私控制*。2014。NIST 特别出版 800-53 第 4 版。
+
 6. 美国国家标准与技术研究院信息技术实验室计算机安全部门。*联邦信息和信息系统的安全分类标准*。联邦信息处理标准出版，2004 年 2 月。FIPS Pub. 199。
+
 7. Chandramouli, R., 和 Rose, S. *安全域名系统 (DNS) 部署指南*。马里兰州盖瑟斯堡：美国国家标准与技术研究院，2013 年 9 月。NIST 特别出版 800-81-2。
+
 8. Rooney, T. *IP 地址管理原理与实践*。Wiley & Sons/IEEE Press，2011。
+
 9. Klensinin, J. *应用程序国际化域名 (IDNA): 定义与文档框架*。IETF，2010 年 8 月。`RFC 5890`。
+
 10. Klensinin, J. *应用程序国际化域名 (IDNA): 协议*。IETF，2010 年 8 月。`RFC 5891`。
+
 11. Faltstrom, P., 编辑。*Unicode 代码点与应用程序国际化域名 (IDNA)*。IETF，2010 年 8 月。`RFC 5892`。
+
 12. Karp, C. *应用程序国际化域名 (IDNA) 从右至左脚本*。H. Alvestrand 编。IETF，2010 年 8 月。`RFC 5893`。
+
 13. Klensinin, J. *应用程序国际化域名 (IDNA): 背景、解释与原理*。IETF，2010 年 8 月。`RFC 5894`。
+
 14. Resnick, P., 和 Hoffman, P. *应用程序国际化域名 (IDNA) 字符映射*。2008。IETF，2010 年 9 月。`RFC 5895`。
+
 15. Costello, A. *Punycode: 应用程序国际化域名 (IDNA) 的 Unicode 字符串编码*。IETF，2003 年 3 月。`RFC 3492`。
+
 16. 国际电信联盟。*国际化域名 (IDN)*。[在线] [引用：2009 年 10 月 21 日]。[`www.itu.int/ITU-T/special-projects/idn/introduction.html`](http://www.itu.int/ITU-T/special-projects/idn/introduction.html)。
+
 17. Mockapetris, P. *域名 – 实现与规范*。IETF，1987 年 11 月。`RFC 1035`。
+
 18. Thomson, S., Rekhter, Y., 和 Bound, J. *域名系统的动态更新 (DNS UPDATE)*。P. Vixie 编。IETF，1997 年 4 月。`RFC 2136`。
+
 19. Rose, S., 和 Wijngaards, W. *DNS 中的 DNAME 重定向*。IETF，2012 年 6 月。`RFC 6672`。
+
 20. Damas, J., Graff, M., 和 Vixie, P. *DNS 扩展机制 (EDNS(0))*。IETF，2013 年 4 月。`RFC 6891`。
+
 21. Vixie, P., Gudmundsson, O., Eastlake 3rd, D., 和 Wellington, B. *DNS 事务认证 (TSIG)*。IETF，2000 年 5 月。`RFC 2845`。
-
-
-
-
 
 44. Boran, S. *安全地运行 BIND9 DNS 服务器*. Boran Consulting. [在线] [引用: 2016 年 9 月 9 日]. [`www.boran.com/security/sp/bind9_20010430.html`](http://www.boran.com/security/sp/bind9_20010430.html)
 
@@ -5072,7 +4877,7 @@ NIST `SP 800-53 Rev. 4` `CP-2`, `IR-4`, `RA-3`, `SI-4`
 
 49. 国家标准与技术研究院. *数字签名标准 (DSS)*. 盖瑟斯堡: 国家标准与技术研究院, 2013 年 7 月. FIPS Pub. 186-4.
 
-50. StJohns, M. *DNS 安全 (DNSSEC) 信任锚点的自动化更新*. IETF, 2007 年 9 月. RFC 5011.
+50. StJohns, M. *DNS 安全 (DNSSEC) 信任锚点的自动化更新*. IETF, 2007 年 9 月. `RFC 5011`.
 
 51. Internet Systems Consortium. *BIND DNSSEC 指南*. 红树市: Internet Systems Consortium, 2015.
 
@@ -5088,9 +4893,9 @@ NIST `SP 800-53 Rev. 4` `CP-2`, `IR-4`, `RA-3`, `SI-4`
 
 57. ICANN. *TLD DNSSEC 报告*. ICANN 研究. [在线] [引用: 2016 年 12 月 18 日]. [`stats.research.icann.org/dns/tld_report/`](http://stats.research.icann.org/dns/tld_report/)
 
-58. Kolkman, O., Mekking, W., and Gieben, R. *DNSSEC 实践，版本 2*. IETF, 2012 年 12 月. RFC 6781.
+58. Kolkman, O., Mekking, W., and Gieben, R. *DNSSEC 实践，版本 2*. IETF, 2012 年 12 月. `RFC 6781`.
 
-59. Kumari, W., Gudmundsson, O., and Barwood, G. *DNSSEC 维护*. IETF, 2014 年 9 月. RFC 7344.
+59. Kumari, W., Gudmundsson, O., and Barwood, G. *DNSSEC 维护*. IETF, 2014 年 9 月. `RFC 7344`.
 
 60. Dell EMC. *PKCS11: 加密令牌标准*. RSA 实验室. [在线] [引用: 2016 年 11 月 5 日]. [`www.emc.com/emc-plus/rsa-labs/standards-initiatives/pkcs-11-cryptographic-token-interface.htm`](https://www.emc.com/emc-plus/rsa-labs/standards-initiatives/pkcs-11-cryptographic-token-interface.htm)
 
@@ -5132,17 +4937,15 @@ NIST `SP 800-53 Rev. 4` `CP-2`, `IR-4`, `RA-3`, `SI-4`
 
 79. Antonakakis, M., Perdisci, R., Nadji, Y., Vasiloglou, N., Abu-Nimeh, S., Lee, W., and Dagon, D. *从垃圾流量到机器人：检测基于 DGA 的恶意软件兴起*. 2012.
 
-80. Hoffman, P., and Schlyter, J. *基于 DNS 的实体认证 (DANE) 传输层安全 (TLS) 协议：TLSA*. IETF, 2012 年 8 月. RFC 6698.
+80. Hoffman, P., and Schlyter, J. *基于 DNS 的实体认证 (DANE) 传输层安全 (TLS) 协议：TLSA*. IETF, 2012 年 8 月. `RFC 6698`.
 
-81. Dukhovni, V., and Hardaker, W. *基于 DNS 的实体认证 (DANE) 协议：更新与操作指南*. IETF, 2015 年 10 月. RFC 7671.
-
-
-
-
+81. Dukhovni, V., and Hardaker, W. *基于 DNS 的实体认证 (DANE) 协议：更新与操作指南*. IETF, 2015 年 10 月. `RFC 7671`.
 
 84. Leydon, J. *赛门克解雇卷入伪造 Google SSL 证书事件的员工*. The Register. [在线] [引用：2016 年 10 月 13 日]。 [`www.theregister.co.uk/2015/09/21/symantec_fires_workers_over_rogue_certs/`](http://www.theregister.co.uk/2015/09/21/symantec_fires_workers_over_rogue_certs/)
 
 85. IETF. *基于 DNS 的命名实体认证*. IETF Datatracker. [在线] [引用：2016 年 10 月 15 日]。 [`datatracker.ietf.org/wg/dane/documents/`](https://datatracker.ietf.org/wg/dane/documents/)
+
+
 
 86. Hoffman, P., and Schlyter, J. *使用安全 DNS 为 S/MIME 将证书与域名关联*. IETF, 2016 年 7 月. draft-ietf-dane-smime-12.
 
@@ -5264,7 +5067,7 @@ NIST `SP 800-53 Rev. 4` `CP-2`, `IR-4`, `RA-3`, `SI-4`
     - 区域和域名
 - DNS 封禁
 - DNS 类型
-- DNS  Cookie
+- DNS Cookie
 - DNSCrypt
 - DNS 数据源
 - DNS 数据源和流
@@ -5322,11 +5125,6 @@ NIST `SP 800-53 Rev. 4` `CP-2`, `IR-4`, `RA-3`, `SI-4`
     - 外部网络
     - 内部
     - 递归
-
-
-
-
-
 - `DNS trust zones`, *见* `DNS trust sectors`
 - `DNS tunneling attacks`
     - 探测
@@ -5452,32 +5250,46 @@ NIST `SP 800-53 Rev. 4` `CP-2`, `IR-4`, `RA-3`, `SI-4`
 
 1. *进入 21 世纪的电信管理*
    Thomas Plevyak 与 Salah Aidous 编。
+
 2. *电信网络管理：技术与实现：技术、标准、技术与应用*
    Salah Aidous 与 Thomas Plevyak 编。
+
 3. *电信网络管理基础*
    Lakshmi G. Raman 著。
+
 4. *电信网络安全*
    Moshe Rozen 著。
+
 5. *集成电信管理*
    Graham Chen 与 Qinz Kong 著。
+
 6. *IP 网络管理：挑战与机遇*
    Thomas Plevyak 与 Salah Aidous 编。
+
 7. *下一代电信网络、服务与管理*
    Thomas Plevyak 与 Veli Sahin 编。
+
 8. *IP 地址管理简介*
    Timothy Rooney 著。
+
 9. *IP 地址管理：原理与实践*
    Timothy Rooney 著。
+
 10. *电信系统可靠性工程、理论与实践*
     Mark L. Ayers 著。
+
 11. *IPv6 部署与管理*
     Michael Dooley 与 Timothy Rooney 著。
+
 12. *下一代电信网络服务的安全管理*
     Stuart Jacobs 著。
+
 13. *电缆网络、服务与管理*
     Mehmet Toy 著。
+
 14. *云服务、网络与管理*
     Nelson L. S. da Fonseca 与 Raouf Boutaba 编。
+
 15. *DNS 安全管理*
     Michael Dooley 与 Timothy Rooney 著。
 
@@ -5486,4 +5298,3 @@ NIST `SP 800-53 Rev. 4` `CP-2`, `IR-4`, `RA-3`, `SI-4`
 请访问 [www.wiley.com/go/eula](http://www.wiley.com/go/eula) 获取 Wiley 电子书用户许可协议 (EULA)。
 
 ![](img/cover.jpg)
-

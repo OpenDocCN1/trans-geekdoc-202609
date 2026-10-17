@@ -1,9 +1,5 @@
+
 # 初学者的 Python 机器学习
-
-
-
-
-
 
 ## 免费下载本书的有声书版本
 
@@ -33,12 +29,6 @@
 [面向 Audible 法国站](https://www.audible.fr/pd/B07X227S2V/?source_code=FRAORWS022318903B-BK-ACX0-162611&ref=acx_bty_BK_ACX0_162611_rh_fr)
 
 [面向 Audible 德国站](https://www.audible.de/pd/B07X754TWY/?source_code=EKAORWS0223189009-BK-ACX0-162611&ref=acx_bty_BK_ACX0_162611_rh_de)
-
----
-
-
-
-
 
 ---
 
@@ -117,7 +107,9 @@ file_name = open("D:/Tutorials/lesson.txt")
 **练习**
 
 a. 在您的计算机上找到一个文本文件，并使用 Python `open()` 打开它
+
 b. 在您的计算机上找到一个 doc/docx 文件，并使用 Python `open()` 打开它
+
 c. 在您的计算机上找到一个 Excel 文件，并使用 Python `open()` 打开它
 
 此外，在打开文件时追加 `'a'`、写入 `'w'` 或读取 `'r'` 有助于指示模式。模式由上下文决定，可根据需要进行更改。Python 还允许我们根据编程需求指定二进制或文本模式。默认情况下，文件以文本读取模式打开。图像和非文本文件在二进制模式下处理。
@@ -129,7 +121,9 @@ c. 在您的计算机上找到一个 Excel 文件，并使用 Python `open()` �
 **练习**
 
 a. 在计算机上以 Python 的读取模式打开一个现有的 `.txt` 文件。
+
 b. 以 Python 的写入模式打开练习 a 中的同一个文本文件。
+
 c. 以二进制模式打开计算机上的一张现有图片。
 
 ### 指定文件编码类型
@@ -153,13 +147,6 @@ c. 以二进制模式打开计算机上的一张现有图片。
 **示例**
 
 启动 IDLE。
-
-
-
-
-# Python 文件操作与异常处理
-
-## 打开与关闭文件
 
 导航到 **File** 菜单并点击 **New Window**。
 
@@ -436,10 +423,6 @@ Python 有多个内置异常，当相关错误出现时会被标记。`dir()` �
 
 导航到 **File** 菜单并点击 **New Window**。
 
-
-
-
-
 ## 用户自定义异常
 
 有时用户可能需要创建自己的异常，以最符合您的编程需求，这些被称为用户自定义异常。
@@ -465,21 +448,22 @@ Python 有多个内置异常，当相关错误出现时会被标记。`dir()` �
 *   `Numpy`
 *   `Pandas`
 *   `Sci-kit Learn`
-*   `Matplotlib`
 
-## 机器学习工作流概述
 
-### 理解机器学习工作流
+
+# 机器学习工作流概述
+
+## 理解机器学习工作流
 
 我们可以将机器学习工作流定义为 3 个阶段。
 
-1.  收集数据
-2.  数据预处理
-3.  研究最适合该数据类型的模型
-4.  训练和测试模型
-5.  评估
+1. 收集数据
+2. 数据预处理
+3. 研究最适合该数据类型的模型
+4. 训练和测试模型
+5. 评估
 
-好的，但首先让我们从基础开始
+好的，但首先让我们从基础开始。
 
 ### 什么是机器学习模型？
 
@@ -495,17 +479,17 @@ Python 有多个内置异常，当相关错误出现时会被标记。`dir()` �
 
 因此，遵循特定程序将数据转化为精简干净的数据集；这个过程称为数据预处理。
 
-#### 研究最适合该数据类型的模型
+### 研究最适合该数据类型的模型
 
 我们的主要目标是使用预处理后的数据训练出性能最好的模型。
 
-##### 监督学习
+#### 监督学习
 
 在监督学习中，人工智能系统被提供带标签的信息或数据，这意味着每个数据都标记有正确的标签。
 
 监督学习分为另外两类：回归和分类。
 
-###### 分类
+##### 分类
 
 分类问题是指目标变量是分类型的（意味着输出可以被分类——它属于类别 A 或类别 B 或其他）。
 
@@ -513,44 +497,42 @@ Python 有多个内置异常，当相关错误出现时会被标记。`dir()` �
 
 这些是一些最常用的分类算法。
 
-*   `KNN`
-*   `Naive Bayes`
-*   `Random Forest`
-*   `Logistic`
+* `KNN`
+* `Naive Bayes`
+* `Random Forest`
+* `Logistic`
 
-###### 回归
+##### 回归
 
 当目标变量是连续型时（意味着输出是数值），会发生回归问题。
-
-回归
 
 如上图所示，我们可以想象图表的 X 轴是 `Test scores`（考试分数），Y 轴代表 `IQ`。所以我们尝试在给定的图表中创建[最佳拟合线](https://mathbits.com/MathBits/TISection/Statistics1/LineFit.htm)，以便我们可以使用该线来预测给定数据中不存在的任何近似 IQ 值。
 
 这些是一些最常用的回归算法。
 
-*   `Linear`
-*   `Support Vector`
-*   `Decision Trees`
-*   `Gaussian Progresses`
-*   `Ensemble Methods`
+* `Linear`
+* `Support Vector`
+* `Decision Trees`
+* `Gaussian Progresses`
+* `Ensemble Methods`
 
-##### 无监督学习
+#### 无监督学习
 
 对于无监督学习，人工智能系统被输入未分类和未标记的数据，并且系统的算法在训练前处理数据。结果输出取决于编程或编码的算法。让系统接触无监督学习是测试人工智能的方法之一。
 
 无监督学习分为另外两组，称为聚类和关联。
 
-###### 聚类
+##### 聚类
 
 一组输入被分成若干组。与分类不同，这些组在开始时是未知的，这使其成为一个无监督的过程或任务。
 
 用于聚类的方法有：
 
-*   `K-Means`
-*   `Gaussian`
-*   `Boosting`
-*   `Hierarchical`
-*   `Spectral`
+* `K-Means`
+* `Gaussian`
+* `Boosting`
+* `Hierarchical`
+* `Spectral`
 
 ### 类别下的模型概述
 
@@ -560,16 +542,7 @@ Python 有多个内置异常，当相关错误出现时会被标记。`dir()` �
 
 分类器通常使用训练数据集进行训练，请确保使用验证数据集准备所需的参数，然后使用未见过的测试数据集测试分类器的功能。需要注意的一个关键点是，当你训练分类器时，只有训练和验证数据集可用。训练分类器时不应使用测试数据集。测试数据集通常在测试分类器时可用。
 
-如果我必须用几个标题总结 2018 年机器学习进展的主要亮点，这些可能是我会想到的：
-
-*   AI 炒作和恐惧散布逐渐冷却。
-*   更多地关注公平性、可解释性或因果性等具体问题。
-*   深度学习将长期存在，并且在实践中不仅对图像分类有用（特别是对自然语言处理 NLP）。
-*   AI 框架领域的竞争日益激烈，如果你想出人头地，最好发布一些自己的框架。
-
-
-
-
+---
 
 # 2018 年人工智能回顾：从炒作降温到务实落地
 
@@ -605,8 +578,7 @@ Python 有多个内置异常，当相关错误出现时会被标记。`dir()` �
 
 深度学习似乎消除了对数据精心设计的需求，但事实远非如此。
 
-
-
+---
 
 # 深度学习数据改进的进展
 
@@ -616,11 +588,13 @@ NVIDIA 在其论文 [《使用合成数据训练深度学习》](https://arxiv.o
 
 ## AI 领域的基础性突破
 
-就 AI 更基础性的突破而言，这可能与我及我的关注点有关，但我没有看到太多。我不完全赞同 Hinton 的观点，他认为缺乏创新是因为该领域存在 **“少数资深大牛和海量年轻小伙子”** 的现象，尽管科学界确实存在一种趋势，即 [突破性研究多在较晚年龄完成](https://phys.org/news/2011-11-breakthrough-scientific-discoveries-longer-dominated.html)。
+就 AI 更基础性的突破而言，这可能与我及我的关注点有关，但我没有看到太多。我不完全赞同 Hinton 的观点，他认为缺乏创新是因为该领域存在“少数资深大牛和海量年轻小伙子”的现象，尽管科学界确实存在一种趋势，即 [突破性研究多在较晚年龄完成](https://phys.org/news/2011-11-breakthrough-scientific-discoveries-longer-dominated.html)。
 
 依我之见，目前缺乏突破的主要原因在于，现有方法及其变体仍有许多有趣的实际应用，因此很难冒险去尝试那些可能无法立即见效的新方法。当该领域的大多数研究由大公司赞助时，这一点更为相关。虽然这种做法高度依赖经验且使用已知方法，但它也为发现新方法敞开了大门，因为它证明了通常被视为最优的方法并非如此。另一篇极具探索性的论文是最近获得 NeurIPS 最佳论文奖的 [《神经常微分方程》](https://arxiv.org/abs/1806.07366)，它挑战了深度学习中的一些基本概念，包括层这一概念本身。
 
 有趣的是，这篇论文的动机源于一个项目，作者们在其中研究医疗数据（更具体地说是电子健康记录）。如果不提及 AI 与医疗交叉领域的研究，我就无法结束这篇总结，因为那是我在 Curai 的工作重点。不幸的是，该领域进展太多，我需要另写一篇文章才能覆盖。因此，我仅推荐大家关注 [MLHC 会议](https://www.mlforhc.org/) 和 [ML4H NeurIPS 研讨会](https://ml4health.github.io/2018/) 发布的论文。我们 [Curai](https://www.curai.com/) 团队在这两个会议上都有论文被录用，所以你们可以在那里找到我们的论文，以及许多其他有趣的论文，从而了解我们领域的最新动态。
+
+---
 
 # 使用 Python 进行机器学习中的对象与类
 
@@ -628,14 +602,14 @@ Python 支持不同的编程范式，因为它是一门多范式语言。Python 
 
 ## 示例：汽车作为对象
 
-- **属性**：`color`、`mileage`、`model`、`age`
-- **行为**：`reverse`、`speed`、`turn`、`roll`、`stop`、`start`
+* **属性**：`color`、`mileage`、`model`、`age`
+* **行为**：`reverse`、`speed`、`turn`、`roll`、`stop`、`start`
 
 ## 类
 
 类是创建对象的模板。
 
-#### 示例
+### 示例
 
 ```python
 class Car:
@@ -657,7 +631,7 @@ class Name_of_Class:
 
 从我们的 `Car` 类，我们可以拥有多个对象，如第一辆车、第二辆车或 SUV。
 
-#### 示例
+### 示例
 
 1. 启动 IDLE。
 2. 导航到“文件”菜单并点击“新建窗口”。
@@ -671,8 +645,11 @@ pass
 ## 练习
 
 a. 为学生创建一个类和一个对象。
+
 b. 为医院创建一个类和一个对象。
+
 c. 为银行创建一个类和一个对象。
+
 d. 为警察局创建一个类和一个对象。
 
 ### 带属性的示例
@@ -680,6 +657,8 @@ d. 为警察局创建一个类和一个对象。
 1. 启动 IDLE。
 2. 导航到“文件”菜单并点击“新建窗口”。
 3. 输入以下内容：
+
+
 
 ```python
 class Car:
@@ -702,7 +681,7 @@ print("{} is {}".format(toyota.model, toyota.insurance))
 
 定义在类主体内的函数称为方法，它们是基本函数。方法定义了对象的行为。
 
-#### 示例
+### 示例
 
 1. 启动 IDLE。
 2. 导航到“文件”菜单并点击“新建窗口”。
@@ -734,13 +713,14 @@ print(subaru.stop())
 ## 练习
 
 a. 创建一个 `Dog` 类并实例化它。
+
 b. 创建一个 Python 程序，显示 a 中两条狗的名字及其两个属性。
 
 # 使用 Python 进行机器学习中的继承
 
 在不修改现有类的情况下，利用现有类的细节创建新类的方式称为继承。新形成的类称为派生类或子类，而现有类称为父类或基类。
 
-#### 示例
+### 示例
 
 1. 启动 IDLE。
 2. 导航到“文件”菜单并点击“新建窗口”。
@@ -756,7 +736,7 @@ b. 创建一个 Python 程序，显示 a 中两条狗的名字及其两个属性
 
 Python 面向对象编程方法中的封装旨在帮助防止数据被直接修改。Python 中的私有属性以下划线单下划线或双下划线作为前缀来表示。
 
-#### 示例
+### 示例
 
 1. 启动 IDLE。
 2. 导航到“文件”菜单并点击“新建窗口”。
@@ -785,13 +765,13 @@ t.offer()
 
 ### 解释
 
-
+该程序定义了一个 `Tv` 类，并使用 `__init__` 方法来保存电视的最终报价。在此过程中，我们尝试修改价格但未能成功。无法修改的原因是 Python 将 `__Finalprice` 视为私有属性。修改该值的唯一方法是通过一个接受 price 作为参数的 setter 函数 `set_final_price()`。
 
 # Python OOP 概念
 
 ## 类定义与私有属性
 
-该程序定义了一个 `Tv` 类，并使用 `__init__` 方法来保存电视的最终报价。在此过程中，我们尝试修改价格但未能成功。无法修改的原因是 Python 将 `_finalprice` 视为私有属性。修改该值的唯一方法是通过一个接受 price 作为参数的 setter 函数 `setMaxPrice()`。
+该程序定义了一个 `Tv` 类，并使用 `__init__` 方法来保存电视的最终报价。在此过程中，我们尝试修改价格但未能成功。无法修改的原因是 Python 将 `__Finalprice` 视为私有属性。修改该值的唯一方法是通过一个接受 price 作为参数的 setter 函数 `set_final_price()`。
 
 ## 多态
 
@@ -817,7 +797,7 @@ c. 在杂货店场景中，建议编程类和对象。
 
 ## Python 中的类定义
 
-关键字 `class` 用于在 Python 中定义类。Python 类中的第一个字符串用于描述该类，尽管并非总是需要。
+关键字 `class` 用于在 Python 中定义类。Python 类中的第一个字符串用于描述该类，虽然并非总是需要。
 
 ### 示例 1
 
@@ -831,7 +811,7 @@ class Dog:
     pass
 ```
 
-## 示例 2
+### 示例 2
 
 1. 启动 IDLE。
 2. 导航至“文件”菜单并点击“新建窗口”。
@@ -919,7 +899,7 @@ print((complex2.real, complex2.imaginarynum, complex2.attribute))
 
 `del` 语句用于在任何时候删除对象的属性。
 
-#### 示例
+### 示例
 
 1. 启动 IDLE。
 2. 导航至“文件”菜单并点击“新建窗口”。
@@ -936,7 +916,7 @@ complex1.getData()
 
 ## 删除整个对象
 
-#### 示例
+### 示例
 
 1. 启动 IDLE。
 2. 导航至“文件”菜单并点击“新建窗口”。
@@ -990,7 +970,7 @@ class Rect_mine(Shape):
         print('The rectangle area is: %s' % area)
 ```
 
-## 示例 2
+### 示例 2
 
 ```python
 r = Rect_mine()
@@ -1015,7 +995,7 @@ r.getArea()
 
 ## 多重继承
 
-#### 示例
+### 示例
 
 1. 启动 IDLE。
 2. 导航至“文件”菜单并点击“新建窗口”。
@@ -1029,7 +1009,7 @@ r.getArea()
 
 从派生类继承称为多层继承。
 
-#### 示例
+### 示例
 
 1. 启动 IDLE。
 2. 导航至“文件”菜单并点击“新建窗口”。
@@ -1052,7 +1032,7 @@ class Multilevel2(Multilevel1):
 
 ## 方法解析顺序
 
-#### 示例
+### 示例
 
 1. 启动 IDLE。
 2. 导航至“文件”菜单并点击“新建窗口”。
@@ -1074,7 +1054,7 @@ print(isinstance("Welcome", object))
 
 ## 使类兼容内置特殊函数
 
-#### 示例
+### 示例
 
 1. 启动 IDLE。
 2. 导航至“文件”菜单并点击“新建窗口”。
@@ -1095,7 +1075,7 @@ print(planar1)  # 输出将为 (3,5)
 
 ## 使用更多内置方法
 
-#### 示例
+### 示例
 
 1. 启动 IDLE。
 2. 导航至“文件”菜单并点击“新建窗口”。
@@ -1116,21 +1096,17 @@ format(planar1)
 
 `__str__` 方法允许 `str()` 和 `format()` 函数与自定义对象配合工作。
 
-
-
 由此可见，每当我们调用 `format(planar1)` 或 `str(planar1)` 时，Python 实际上是在执行 `planar1.__str__()`，因此得名“特殊函数”。
 
 ## 运算符 + 重载
 
 在类中添加 `__add__()` 函数将重载 `+` 运算符。
 
-#### 示例
+### 示例
 
-启动 IDLE。
-
-导航到“文件”菜单并点击“新建窗口”。
-
-输入以下内容：
+1. 启动 IDLE。
+2. 导航到“文件”菜单并点击“新建窗口”。
+3. 输入以下内容：
 
 ```python
 class Planar:
@@ -1154,7 +1130,7 @@ a. 打印上述示例中的 `planar1 + planar2`。
 
 ### 解释
 
-当你在 Python 中执行 `planar1 + planar2` 时，它将调用 `planar.__add__(planar2)`，进而调用 `Planar.__add__(planar1, planar2)`。
+当你在 Python 中执行 `planar1 + planar2` 时，它将调用 `planar1.__add__(planar2)`，进而调用 `Planar.__add__(planar1, planar2)`。
 
 ## 重温逻辑与比较运算符
 
@@ -1165,6 +1141,8 @@ a. 给定 `x=8`，`y=9`，编写一个 Python 程序，使用逻辑等于运算�
 b. 编写一个程序，在 Python 编程语言中求值 `x != y`。
 
 c. 编写并运行以下程序：
+
+
 
 ```python
 m = True
@@ -1265,7 +1243,7 @@ i. 访问 Python 下载网站（推荐网站）并点击“Download Python 3.7.2
 
 ii. 下载完成后，通过点击打开安装包并遵循给出的指导原则。Python 安装应以“安装成功”提示完成。
 
-成功安装 Python 后，它还会随之安装一个名为 IDLE 的程序。IDLE 是使用 Python 时的图形用户界面。
+成功安装 Python 后，它还会随之安装一个名为 `IDLE` 的程序。`IDLE` 是使用 Python 时的图形用户界面。
 
 iii. 现在，访问 Notepad++ 下载页面下载文本编辑器，并通过打开安装包和遵循提示信息进行安装。Notepad++ 文本编辑器免费且适合编写源代码（原始文本编程语句）。
 
@@ -1282,8 +1260,6 @@ iii. 现在，访问 Notepad++ 下载页面下载文本编辑器，并通过打�
 ```
 
 Python 提示符指示解释器接受用户输入。例如，输入 `2+2` 并按回车键将显示输出 `4`。在某种程度上，此提示符可用作计算器。如果你需要退出即时模式，请输入 `quit()` 或 `exit()`。
-
-
 
 现在输入 `5 +3`，然后按回车键，输出应为 `8`。下一种模式是脚本模式。
 
@@ -1306,11 +1282,9 @@ IDE 为编写和运行 Python 程序提供了一种便捷的方式。也可以�
 1.  启动 `IDLE`
 2.  转到“文件”菜单并点击“新建窗口”
 3.  输入以下内容：
-
-```
-print (“Hello World!”)
-```
-
+   ```
+   print (“Hello World!”)
+   ```
 4.  在文件菜单上，点击“保存”。输入名称 `myProgram1.py`
 5.  转到“运行”并点击“运行模块”以运行程序。
 
@@ -1318,10 +1292,10 @@ print (“Hello World!”)
 
 **练习：** 现在编写并运行以下 Python 程序：
 
-a.  `print(“I am now a Python Language Coder!”)`
-b.  `print(“This is my second simple program!”)`
-c.  `print(“I love the simplicity of Python”)`
-d.  `print(“I will display whatever is here in quotes such as owyhen2589gdbnz082”)`
+a. `print(“I am now a Python Language Coder!”)`
+b. `print(“This is my second simple program!”)`
+c. `print(“I love the simplicity of Python”)`
+d. `print(“I will display whatever is here in quotes such as owyhen2589gdbnz082”)`
 
 现在我们需要编写一个包含数字的程序，但在编写此类程序之前，我们需要了解一些关于变量和类型的知识。
 
@@ -1334,14 +1308,12 @@ d.  `print(“I will display whatever is here in quotes such as owyhen2589gdbnz0
 1.  启动 `IDLE`
 2.  转到“文件”菜单并点击“新建窗口”
 3.  输入以下内容：
-
-```
-num1=4
-num2=5
-sum=num1+num2
-print(sum)
-```
-
+   ```
+   num1=4
+   num2=5
+   sum=num1+num2
+   print(sum)
+   ```
 4.  在文件菜单上，点击“保存”。输入名称 `myProgram2.py`
 5.  转到“运行”并点击“运行模块”以运行程序。
 
@@ -1368,31 +1340,26 @@ print(sum)
 遵循打开 Python IDE 的步骤并执行以下操作：
 
 1.  输出应为 `54`
-
-```
-num1=43
-num2=11
-sum=num1+num2
-print(sum)
-```
-
+   ```
+   num1=43
+   num2=11
+   sum=num1+num2
+   print(sum)
+   ```
 2.  输出应为 `167`
-
-```
-num1=101
-num2=66
-sum=num1+num2
-print(sum)
-```
-
+   ```
+   num1=101
+   num2=66
+   sum=num1+num2
+   print(sum)
+   ```
 3.  输出应为 `28`
-
-```
-num1=9
-num2=19
-sum=num1+num2
-print(sum)
-```
+   ```
+   num1=9
+   num2=19
+   sum=num1+num2
+   print(sum)
+   ```
 
 ## 变量
 
@@ -1401,28 +1368,21 @@ print(sum)
 ### Python 中命名变量的规则
 
 1.  变量名必须始终以字母或下划线开头，即
-
     `num1`
-    
     `_num1`
-
 2.  变量名的其余部分可以由数字、字母和下划线组成，即
-
     `number1`
-    
     `num_be_r`
-
 3.  变量名区分大小写，意味着大写字母和小写字母被视为不同。
-
     `Num1` 将与 `num1` 区别对待。
 
 **练习**
 
 为以下各项编写/建议五个变量：
 
-a.  医院科室。
-b.  银行。
-c.  媒体机构。
+a. 医院科室。
+b. 银行。
+c. 媒体机构。
 
 已知 `scri=75`，`scr4=9`，`sscr2=13`，`Scr=18`
 
@@ -1433,19 +1393,16 @@ d. 上述变量名旨在表示学生的分数。重写变量名以满足 Python 
 如前所述，约定本身不是规则，而是增加价值和可读性的既定传统，适用于我们在 Python 中命名变量的方式。
 
 1.  **保持可读性。** 你的变量应暗示其处理的内容，因为程序旨在供编写者以外的其他人阅读。
-
     `number1` 比 `n1` 更易读。同样，`first_name` 比 `firstname`、`firstName` 或 `fn` 更易读。这意味着所有这些在 Python 中都是有效/可接受的变量，但约定强制我们以易读的形式编写它们。
 
+### 变量命名规范
 
+#### ii. 使用描述性名称
 
-
-
-## 变量命名规范
-
-### ii. 使用描述性名称
 编写变量时请使用描述性名称。例如，`number1` 作为变量名比 `yale` 或 `mything` 更具描述性。换句话说，我们可以用 `yale` 来存储 `number1` 的值，但该名称并不能直观地暗示我们在做什么。请记住编写程序时要假设其他人会维护它们。维护者应能在运行程序前快速弄清程序的用途。
 
-### iii. 避免混淆字符
+#### iii. 避免混淆字符
+
 为了避免混淆，请避免使用大写字母 `O`、小写字母 `l` 和大写字母 `I`，因为它们容易与数字混淆。换句话说，使用这些字母并不违反变量命名规则，但将它们作为变量名会导致混淆。
 
 ## 练习 1
@@ -1522,7 +1479,11 @@ str = 'I think I am now a Programmer.'
 
 a. 编写一条程序语句以显示上述完整字符串/语句。
 b. 编写一条程序语句以显示从第二个字符到第六个字符的字符串内容。
+
+
+
 c. 编写一条程序语句以显示上述完整字符串两次（使用 `*`）。
+
 d. 编写一条程序语句在上述语句末尾添加 " of Python."。
 
 ## Python 关键字和标识符
@@ -1540,8 +1501,11 @@ Python 中有 33 个关键字，除 `None`、`False` 和 `True` 外均为小写�
 找出以下变量名的错误（需要回顾迄今所学内容）：
 
 a. `for = 1`
+
 b. `yield = 3`
+
 c. `34ball`
+
 d. `m`
 
 ## 注释和语句
@@ -1553,12 +1517,14 @@ Python 中的语句是指 Python 解释器可以处理/执行的指令。例如 
 ## 练习
 
 a. 编写一条 Python 语句，将第一个数字赋值为 `18`。
+
 b. 编写一条编程语句，将第二个数字赋值为 `21`。
+
 c. a 和 b 属于什么类型的语句？
 
 ### 多行 Python 语句
 
-可以将一条语句分散在多行上。这种语句称为多行语句。编程语句的结束由换行符表示。要在 Python 中将语句分散到多行，我们使用反斜杠（`\\`），称为行续行字符。多行语句示例：
+可以将一条语句分散在多行上。这种语句称为多行语句。编程语句的结束由换行符表示。要在 Python 中将语句分散到多行，我们使用反斜杠（`\`），称为行续行字符。多行语句示例：
 
 ```python
 sum = 3 + 6 + 7 + \
@@ -1574,7 +1540,7 @@ sum = (3 + 6 + 7 +
        11 + 4 + 8)
 ```
 
-> **注意**：当我们使用圆括号时，去掉了反斜杠（`\\`）行续行字符，因为圆括号承担了行续行字符 `\\` 的工作。
+> **注意**：当我们使用圆括号时，去掉了反斜杠（`\`）行续行字符，因为圆括号承担了行续行字符 `\` 的工作。
 
 **问题**：为什么需要多行语句？我们可以简单地写在单行上，程序语句也能正常运行。
 
@@ -1582,12 +1548,9 @@ sum = (3 + 6 + 7 +
 
 ## 练习
 
-使用多行操作符（如 `\\`、`[]`、`()` 或 `{}`）重写以下程序语句，以提高程序语句的可读性。
+使用多行操作符（如 `\`、`[]`、`()` 或 `{}`）重写以下程序语句，以提高程序语句的可读性。
 
 a. `total = 2 + 9 + 3 + 6 + 8 + 2 + 5 + 1 + 14 + 5 + 21 + 26 + 4 + 7 + 13 + 31 + 24`
-
-
-
 
 b. `count=13+1+56+3+7+9+5+12+54+4+7+45+71+4+8+5`
 
@@ -1617,7 +1580,7 @@ ii. 导航到“文件”菜单并点击“新建窗口”
 
 iii. 输入以下内容：
 
-```
+```python
 #This is my first comment
 #The program will print Hello World
 Print('Hello World') #This is an inbuilt function to display
@@ -1649,7 +1612,7 @@ c. 编写一个程序来显示学生注册号，其中学生姓名及其注册�
 
 输入以下内容：
 
-```
+```python
 #I am going to write a long comment line
 #the comment will spill over to this line
 #and finally end here.
@@ -1665,7 +1628,7 @@ c. 编写一个程序来显示学生注册号，其中学生姓名及其注册�
 
 输入以下内容：
 
-```
+```python
 "This is also a great 
 illustration of
 a multi-line comment in Python."
@@ -1683,7 +1646,7 @@ a. 给定以下程序语句：`Color1='red'; color1='blue'; CoLor1='yellow'`，�
 
 b. 考虑以下 Python 程序并找出其中的错误。
 
-```
+```python
 student1_age=23 #This is the age of the first student
 student2_age=19 #This is the age of the student
 sotal_age=student1_age +student2_age #Getting the sum of the ages of the 
@@ -1706,7 +1669,7 @@ c. 重写上述 b 使其成为一个有效的 Python 程序
 
 a. 求差
 
-```
+```python
 number1=35 #declaring first number
 number2= 12 #declaring second number
 difference=number2-number1 #declaring what the difference does
@@ -1715,7 +1678,7 @@ print(difference) #Calling the print function to display what difference has
 
 b. 求积
 
-```
+```python
 number1=2 #declaring first number
 number2= 15 #declaring second number
 product=number1*number2 #declaring what the product does
@@ -1724,7 +1687,7 @@ print(product) #Calling the print function to display what product has
 
 c. 求商
 
-```
+```python
 number1=10 #declaring first number
 number2= 50 #declaring second number
 division=number2/number1 #declaring what the division does
@@ -1743,7 +1706,7 @@ print(division) #Calling the print function to display what product has
 
 输入以下内容：
 
-```
+```python
 number1=2 #declaring first number
 number2= 15 #declaring second number
 remainder=number2%number1 #declaring what the remainder does
@@ -1776,7 +1739,7 @@ print(remainder) #Calling the print function to display remainder has
 
 输入以下内容：
 
-```
+```python
 number=3 #declaring variable number and assigning value 3
 square=number**2
 print(square) #Calling the print function to display what square has
@@ -1790,7 +1753,7 @@ print(square) #Calling the print function to display what square has
 
 输入以下内容：
 
-```
+```python
 number=5 #declaring variable number and assigning value 5
 cube=number**3
 print(cube) #Calling the print function to display what cube has
@@ -1824,9 +1787,6 @@ f. 13 的平方
 
 导航到“文件”菜单并点击“新建窗口”。
 
-
-
-
 # 键入以下内容：
 
 ```python
@@ -1846,7 +1806,9 @@ print(many_words)
 a. 使用连接运算符在 Python 中连接以下字符串：
 
 > I have realized
+>
 > that programming is a passion,
+>
 > dedication and frequent practice.
 
 b. 使用运算符生成以下字符串的十倍：
@@ -1915,6 +1877,8 @@ print(number_int + number_str)
 
 启动 IDLE。导航到“文件”菜单并点击“新建窗口”。键入以下内容：
 
+
+
 ```python
 number_int = 431
 number_str = "231"
@@ -1961,12 +1925,14 @@ print("Addition of number_int and number_str-", number_sum)
 利用类型强制转换/显式数据转换的知识编写程序以计算以下各项的和：
 
 a.
+
 ```python
 score_int = 76
 score_str = "61."
 ```
 
 b.
+
 ```python
 count_str = 231
 count_str = "24"
@@ -1975,18 +1941,21 @@ count_str = "24"
 利用类型强制转换/显式数据转换的知识编写程序以求以下各项的积：
 
 c.
+
 ```python
 number_int = 12
 number_str = "5."
 ```
 
 d.
+
 ```python
 odds_int = 6
 odds_str = "2"
 ```
 
 e.
+
 ```python
 minute_int = 45
 minute_str = "7"
@@ -2017,10 +1986,6 @@ print("This is a number stored in the variable number, it is:", number)
 ## 练习
 
 a. 给定 `score = 5`，编写一个 Python 程序来显示 "The score is 5"。该程序应在其 `print()` 函数中引用/提取 `score` 的值。
-
-
-
-
 
 ## Python 练习与基础概念
 
@@ -2101,6 +2066,7 @@ number = input('Type your number here:')  # 将显示：Type a number here:
 > **重要提示**：此阶段 Python 解释器将输入的任何数字视为字符串。要让解释器将其视为数字，必须使用数字类型转换函数 `int()` 和 `float()` 进行转换。
 
 - 转换为整数：`int('number')`
+
 - 转换为浮点数：`float('number')`
 
 ## 练习
@@ -2161,7 +2127,9 @@ print('id(number)=', id(number))
 启动 Python 解释器时，会创建一个包含所有内置名称的命名空间，只要工作区保持活动状态，该空间就存在。内置函数如 `print()` 和 `id()` 在整个程序中均可访问。
 
 - **内置命名空间**：Python 解释器加载后立即可访问的函数、方法及相关数据，可被工作区的每个实例和区域访问。
+
 - **全局命名空间**：模块中可在整个模块范围内访问的内容。模块可包含多个函数和方法。
+
 - **局部命名空间**：主要用于用户自定义函数，局限于特定函数内部，函数外部无法隐式访问。
 
 #### 变量作用域
@@ -2169,7 +2137,9 @@ print('id(number)=', id(number))
 尽管可能存在多个唯一的命名空间，但由于作用域限制，并非所有命名空间都可直接访问。作用域是指程序中可直接访问命名空间而无需前缀的区域。作用域类型如下：
 
 1.  包含局部名称的作用域，即当前函数。
+
 2.  包含全局名称的作用域，即模块的作用域。
+
 3.  包含内置名称的最外层作用域。
 
 ## 总结
@@ -2187,10 +2157,6 @@ print('id(number)=', id(number))
 **比较运算符** 是 Python 中的特殊运算符，用于评估条件的真假（`True` 或 `False`）。
 
 **程序流程控制** 是指程序员显式指定程序代码行执行顺序的方式。通常涉及在代码行上设置条件。本章将探索并测试 Python 中的各种流程控制结构。
-
-
-
-
 
 ## if…else 流程控制
 
@@ -2210,12 +2176,19 @@ Python 程序仅当测试表达式为 `True` 时才会执行语句。程序会�
 ### 挑战：思考现实生活中需要 if…else 条件的场景。
 
 - 如果你没有报名课程，则不能参加考试，否则参加考试。
+
 - 如果你已支付房租，则会收到确认收据，否则请求宽限时间。
+
 - 如果你是持证驾驶员，则可以开车去学校，否则打车。
+
 - 如果你累了，则可以看电影，否则可以完成论文。
+
 - 如果你是正直的人，则会承认错误，否则会忽视造成的损害。
+
 - 如果你致力于编程，则会每天练习，否则会失去兴趣。
+
 - 如果你订阅了邮件提醒，则会频繁收到更新，否则必须每天查看网站。
+
 - 如果你对所有指控认罪，则很可能被定罪，否则你的案件优劣将取决于对证人的交叉盘问和呈堂证供。
 
 > **注意：** 当我们单独使用 `if` 语句而不带 `else` 部分时，仅当条件为真时才会打印/显示内容，它不会处理备选情况，即第一个条件不成立的情况。
@@ -2223,10 +2196,12 @@ Python 程序仅当测试表达式为 `True` 时才会执行语句。程序会�
 ### 示例 1
 
 1. 启动 IDLE。
+
 2. 导航到“文件”菜单并点击“新建窗口”。
+
 3. 输入以下内容：
 
-```
+```python
 number = 5
 
 if number > 0:          # 比较运算符
@@ -2240,10 +2215,12 @@ if number > 0:          # 比较运算符
 ## 示例 2
 
 1. 启动 IDLE。
+
 2. 导航到“文件”菜单并点击“新建窗口”。
+
 3. 输入以下内容：
 
-```
+```python
 number = -9
 
 if number > 0:
@@ -2259,12 +2236,19 @@ if number > 0:
 仅使用 `if` 语句编写 Python 程序以执行以下操作：
 
 a. 给定 `number = 7`，编写程序测试并仅显示偶数。
+
 b. 给定 `number1 = 8`，`number2 = 13`，编写程序仅在总和小于 10 时显示。
+
 c. 给定 `count_int = 57`，编写程序测试计数是否超过 45 并显示“the count is above the recommended number”。
+
 d. 给定 `marks = 34`，编写程序测试分数是否低于 50 并显示消息“the score is below average”。
+
 e. 给定 `marks = 78`，编写程序测试分数是否高于 50 并显示消息“great performance”。
+
 f. 给定 `number = 88`，编写程序测试该数字是否为奇数并显示消息“Yes it is an odd number”。
+
 g. 给定 `number = 24`，编写程序测试并显示该数字是否为偶数。
+
 h. 给定 `number = 21`，编写程序测试该数字是否为奇数并显示字符串“Yes it is an odd number”。
 
 > **注意：** `if` 表达式后的语句仅在 `if` 表达式求值为 `True` 时才会执行，否则将忽略这些语句。
@@ -2287,8 +2271,12 @@ else:
 ### 示例：检查数字是正数还是负数的程序
 
 1. 启动 IDLE。
+
 2. 导航到“文件”菜单并点击“新建窗口”。
+
 3. 输入以下内容：
+
+
 
 ```
 number_mine = -56
@@ -2304,8 +2292,11 @@ else:
 编写使用 `if..else` 流程控制的 Python 程序以执行以下操作：
 
 a. 给定 `number = 9`，编写程序测试并显示该数字是偶数还是奇数。
+
 b. 给定 `marks = 76`，编写程序测试并显示分数是否超过及格线，及格线为 50。
+
 c. 给定 `number = 78`，编写程序测试并显示该数字是偶数还是奇数。
+
 d. 给定 `marks = 27`，编写程序测试并显示分数是否超过及格线，及格线为 50。
 
 ### 挑战
@@ -2323,7 +2314,9 @@ d. 给定 `marks = 27`，编写程序测试并显示分数是否超过及格线�
 ### 示例：涵盖三个条件，但在给定实例中只能执行一个。
 
 1. 启动 IDLE。
+
 2. 导航到“文件”菜单并点击“新建窗口”。
+
 3. 输入以下内容：
 
 ![代码示例](img/image00233.gif)
@@ -2339,10 +2332,12 @@ d. 给定 `marks = 27`，编写程序测试并显示分数是否超过及格线�
 #### 示例
 
 1. 启动 IDLE。
+
 2. 导航到“文件”菜单并点击“新建窗口”。
+
 3. 输入以下内容：
 
-```
+```python
 my_charact = str(input("Type a character here either 'a', 'b' or 'c':"))
 
 if my_charact == 'a':
@@ -2355,10 +2350,6 @@ else:
 ```
 
 ## 练习
-
-
-
-
 
 # Python 程序设计基础
 
@@ -2379,7 +2370,9 @@ Variable_name = [values separated by a comma]
 #### 示例
 
 1. 启动 IDLE。
+
 2. 导航到 **File** 菜单并点击 **New Window**。
+
 3. 输入以下代码：
 
 ```python
@@ -2393,14 +2386,19 @@ print("The sum is", sum)
 ## 练习
 
 1. 启动 IDLE。
+
 2. 导航到 **File** 菜单并点击 **New Window**。
+
 3. 输入以下代码：
 
 编写一个 Python 程序，使用 `for` 循环对以下列表求和。
 
 a. `marks = [3, 8, 19, 6, 18, 29, 15]`
+
 b. `ages = [12, 17, 14, 18, 11, 10, 16]`
+
 c. `mileage = [15, 67, 89, 123, 76, 83]`
+
 d. `cups = [7, 10, 3, 5, 8, 16, 13]`
 
 ## Python 中的 range() 函数
@@ -2412,7 +2410,9 @@ Python 中的 `range()` 函数可用于生成数字。请记住，在编程中�
 #### 示例
 
 1. 启动 IDLE。
+
 2. 导航到 **File** 菜单并点击 **New Window**。
+
 3. 输入以下代码：
 
 ```python
@@ -2426,7 +2426,9 @@ print(range(7))
 不编写和运行 Python 程序，以下表达式的输出是什么？
 
 a. `range(16)`
+
 b. `range(8)`
+
 c. `range(4)`
 
 ## 使用 range()、len() 和索引
@@ -2434,7 +2436,9 @@ c. `range(4)`
 ### 解决示例
 
 1. 启动 IDLE。
+
 2. 导航到 **File** 菜单并点击 **New Window**。
+
 3. 输入以下代码：
 
 ```python
@@ -2465,7 +2469,9 @@ folders = ['Rumba', 'House', 'Rock']
 #### 示例
 
 1. 启动 IDLE。
+
 2. 导航到 **File** 菜单并点击 **New Window**。
+
 3. 输入以下代码：
 
 ```python
@@ -2489,7 +2495,9 @@ else:
 #### 示例
 
 1. 启动 IDLE。
+
 2. 导航到 **File** 菜单并点击 **New Window**。
+
 3. 输入以下代码：
 
 ```python
@@ -2502,7 +2510,9 @@ else:
 ## 练习
 
 a. 编写一个 Python 程序，利用 `while` 流程控制语句显示 1 到 10 之间所有奇数的和。
+
 b. 编写一个 Python 程序，采用 `while` 流程控制语句显示 11 到 21 之间所有数字的和。
+
 c. 编写一个 Python 程序，结合 `while` 流程控制语句显示 1 到 10 之间所有偶数的和。
 
 ## 使用带 else 子句的 while 循环
@@ -2512,7 +2522,9 @@ c. 编写一个 Python 程序，结合 `while` 流程控制语句显示 1 到 10
 #### 示例
 
 1. 启动 IDLE。
+
 2. 导航到 **File** 菜单并点击 **New Window**。
+
 3. 输入以下代码：
 
 ```python
@@ -2531,7 +2543,9 @@ else:
 ### 示例：break 语句
 
 1. 启动 IDLE。
+
 2. 导航到 **File** 菜单并点击 **New Window**。
+
 3. 输入以下代码：
 
 ```python
@@ -2555,7 +2569,9 @@ continue
 #### 示例
 
 1. 启动 IDLE。
+
 2. 导航到 **File** 菜单并点击 **New Window**。
+
 3. 输入以下代码：
 
 ```python
@@ -2581,6 +2597,7 @@ Finished
 ## 练习
 
 a. 编写一个使用 `for` 循环的 Python 程序，在字符串 "Oliver" 中遇到 "v" 时中断。
+
 b. 编写一个 Python 程序，在字符串 "Lemon" 中跳过 "m" 后继续。
 
 ## Python 中的 pass 语句
@@ -2598,7 +2615,9 @@ pass
 #### 示例
 
 1. 启动 IDLE。
+
 2. 导航到 **File** 菜单并点击 **New Window**。
+
 3. 输入以下代码：
 
 ```python
@@ -2622,7 +2641,9 @@ def name_of_function(arguments):
 #### 示例
 
 1. 启动 IDLE。
+
 2. 导航到 **File** 菜单并点击 **New Window**。
+
 3. 输入以下代码：
 
 ```python
@@ -2640,7 +2661,9 @@ def welcome(salute):
 调用函数只需键入函数名并附上合适的参数。
 
 1. 启动 IDLE。
+
 2. 导航到 **File** 菜单并点击 **New Window**。
+
 3. 输入以下代码：
 
 ```python
@@ -2662,7 +2685,9 @@ welcome('Brenda')
 #### 示例
 
 1. 启动 IDLE。
+
 2. 导航到 **File** 菜单并点击 **New Window**。
+
 3. 输入以下代码：
 
 ```python
@@ -2706,7 +2731,9 @@ print(welcome("Richard"))  # 传递参数并调用函数
 ### 示例：返回非 None 值
 
 1. 启动 IDLE。
+
 2. 导航到 **File** 菜单并点击 **New Window**。
+
 3. 输入以下代码：
 
 ```python
@@ -2714,23 +2741,19 @@ print(welcome("Richard"))  # 传递参数并调用函数
 # 图片路径: Images/image00236.gif
 ```
 
-
-
-
-
 ## Python 函数中的变量作用域与生命周期
 
 在 Python 函数内部定义的变量和参数具有局部作用域，这意味着它们从外部不可见。在 Python 中，变量的生命周期在函数执行期间有效，即变量在内存中存在的整个时期。函数返回时会销毁函数变量。
 
 #### 示例
 
-启动 IDLE。
+1. 启动 IDLE。
 
-导航到 **File** 菜单并点击 **New Window**。
+2. 导航到 **File** 菜单并点击 **New Window**。
 
-输入以下内容：
+3. 输入以下内容：
 
-```
+```python
 def function_my():
     marks = 15
     print("The value inside the function is:", marks)
@@ -2754,13 +2777,13 @@ print("The value outside the function is:", marks)
 
 ## 说明
 
-启动 IDLE。
+1. 启动 IDLE。
 
-导航到 **File** 菜单并点击 **New Window**。
+2. 导航到 **File** 菜单并点击 **New Window**。
 
-输入以下内容：
+3. 输入以下内容：
 
-```
+```python
 def salute(name, message):
     """This function welcomes the student with the provided message"""
     print("Welcome", name + ', ' + message)
@@ -2770,7 +2793,7 @@ salute("Brenda", "Lovely Day!")
 
 > **Note:** 函数 `salute()` 有两个参数。因为我们传入了两个实参，所以不会报错。让我们尝试只传一个实参调用函数，看看会发生什么：
 
-```
+```python
 salute("Brenda")  # only one argument passed
 ```
 
@@ -2778,13 +2801,13 @@ salute("Brenda")  # only one argument passed
 
 ## 示例 2
 
-启动 IDLE。
+1. 启动 IDLE。
 
-导航到 **File** 菜单并点击 **New Window**。
+2. 导航到 **File** 菜单并点击 **New Window**。
 
-输入以下内容：
+3. 输入以下内容：
 
-```
+```python
 salute()
 ```
 
@@ -2794,7 +2817,10 @@ salute()
 
 Python 提供了一种使用关键字参数调用函数的方式。使用关键字参数调用函数时，参数的顺序可以改变。函数的值按位置与参数逐一匹配。
 
+
+
 > **Note:**
+>
 > 在前面的示例中，函数 `salute` 作为 `salute("Brenda", "Lovely Day!")` 调用时，将值 `"Brenda"` 赋给参数 `name`，将 `"Lovely Day!"` 赋给 `message`。
 
 ## 使用关键字调用函数
@@ -2829,7 +2855,7 @@ salute(message="Lovely Day!", name="Brenda")
 
 输入以下内容：
 
-```
+```python
 def welcome(*names):
     """This welcome function salutes all students in the names tuple."""
     for name in names:
@@ -2861,7 +2887,7 @@ Welcome James
 
 输入以下内容：
 
-```
+```python
 def factorial(n):
     if n == 1:
         return 1
@@ -2895,7 +2921,7 @@ Lambda 函数必须始终包含一个表达式，但可以有多个参数。
 
 输入以下内容：
 
-```
+```python
 double = lambda y: y * 2
 # Output: 10
 print(double(5))
@@ -2911,7 +2937,7 @@ print(double(5))
 
 输入以下内容：
 
-```
+```python
 first_marks = [3, 7, 14, 16, 18, 21, 13, 32]
 fresh_marks = list(filter(lambda n: (n % 2 == 0), first_marks))
 # Output: [14, 16, 18, 32]
@@ -2928,7 +2954,7 @@ print(fresh_marks)
 
 输入以下内容：
 
-```
+```python
 first_score = [3, 7, 14, 16, 18, 21, 13, 32]
 fresh_score = list(map(lambda m: m * 2, first_score))
 # Output: [6, 14, 28, 32, 36, 42, 26, 64]
@@ -2949,7 +2975,7 @@ print(fresh_score)
 
 输入以下内容：
 
-```
+```python
 y = "global"
 
 def foo():
@@ -2975,7 +3001,7 @@ print("y outside the function:", y)
 
 输入以下内容：
 
-```
+```python
 def foo():
     x = "local"
 
@@ -2993,7 +3019,7 @@ print(x)
 
 通过在函数内声明变量来创建局部变量。
 
-```
+```python
 def foo():
     x = "local"
     print(x)
@@ -3007,7 +3033,7 @@ foo()
 
 输入以下内容：
 
-```
+```python
 def foo():
     x = "local"
     print(x)
@@ -3035,7 +3061,7 @@ local
 
 输入以下内容：
 
-```
+```python
 y = "global"
 
 def foo():
@@ -3067,7 +3093,7 @@ local
 
 输入以下内容：
 
-```
+```python
 y = 6
 
 def foo():
@@ -3092,7 +3118,7 @@ Python nonlocal 变量用于嵌套函数，其局部作用域未指定。它既�
 
 输入以下内容：
 
-```
+```python
 def outer():
     y = "local variable"
     def inner():
@@ -3111,9 +3137,6 @@ Python 中的 `global` 关键字允许修改当前作用域之外的变量。`gl
 
 - 当我们在函数内部创建变量时，global 关键字默认为局部。
 - 当我们在函数外部定义变量时，它默认为全局，你不需要使用 `global` 关键字。
-
-
-
 
 # Python 全局变量与模块
 
@@ -3461,14 +3484,18 @@ print(0o710)          # 输出: 456
 编写一个 Python 程序以显示以下内容：
 
 a. `0011 1111` (二进制)
+
 b. `747` (八进制)
+
 c. `93` (十六进制)
 
 ## 类型转换
 
+
+
 有时称为强制转换，类型转换允许我们将一种数字类型转换为另一种。预加载的函数如 `float()`、`int()` 和 `complex()` 支持隐式和显式类型转换。这些相同的函数也可用于从字符串进行转换。
 
-#### 示例
+### 示例
 
 启动 IDLE。
 
@@ -3494,24 +3521,29 @@ float(6)            # 结果为 6.0
 complex('4+2j')     # 结果为 (4+2j)
 ```
 
-## 练习
+### 练习
 
 对以下数值应用 `int()` 转换：
 
 a. `4.1`
+
 b. `4.7`
+
 c. `13.3`
+
 d. `13.9`
 
 对以下数值应用 `float()` 转换：
 
 e. `7`
+
 f. `16`
+
 g. `19`
 
-## ✓ Python 中的 Decimal（十进制精确数）
+## Python 中的 Decimal（十进制精确数）
 
-#### 示例
+### 示例
 
 启动 IDLE。
 
@@ -3525,9 +3557,6 @@ g. `19`
 
 **解释**
 
-
-
-
 # Python 编程概念
 
 ## Python 中的分数
@@ -3536,7 +3565,7 @@ g. `19`
 
 Python 中的 `fractions` 模块允许对分数进行运算。
 
-#### 示例
+### 示例
 
 启动 IDLE。
 
@@ -3553,13 +3582,14 @@ print(fractions.my_fraction(2,5))  # 输出 2/5
 ```
 
 > **重要**
+>
 > 从浮点数创建 `my_fraction` 可能会导致异常结果，这是由于二进制浮点数的误导性表示造成的。
 
 ## Python 中的数学运算
 
 要执行数学函数，Python 提供了 `random` 和 `math` 等模块。
 
-#### 示例
+### 示例
 
 启动 IDLE。
 
@@ -3577,18 +3607,21 @@ print(math.log10(100))      # 输出将为 2
 print(math.factorial(5))    # 输出将为 120
 ```
 
-## 练习
+### 练习
 
 编写一个 Python 程序，使用 `math` 模块中的数学函数执行以下操作：
 
 a. 34 的平方
+
 b. Log10 10000
+
 c. Cos 45 x sin 90
+
 d. 20 的指数
 
 ## Python 中的随机函数
 
-#### 示例
+### 示例
 
 启动 IDLE。
 
@@ -3614,7 +3647,7 @@ print(your_pick.random())
 
 我们通过将称为元素的项目放在方括号内并用逗号分隔来在 Python 中创建列表。列表中的项目可以是混合数据类型。
 
-#### 示例
+### 示例
 
 启动 IDLE。
 
@@ -3628,7 +3661,7 @@ list_mine = [2, 5, 8]       # 整数列表
 list_mine = [5, "Happy", 5.2]  # 包含混合数据类型的列表
 ```
 
-## 练习
+### 练习
 
 编写一个程序，将以下内容捕获到列表中："Best", 26, 89, 3.9
 
@@ -3636,7 +3669,7 @@ list_mine = [5, "Happy", 5.2]  # 包含混合数据类型的列表
 
 嵌套列表是作为另一个列表中的项目而存在的列表。
 
-#### 示例
+### 示例
 
 启动 IDLE。
 
@@ -3648,7 +3681,7 @@ list_mine = [5, "Happy", 5.2]  # 包含混合数据类型的列表
 list_mine = ["carrot", [9, 3, 6], ['g']]
 ```
 
-## 练习
+### 练习
 
 为以下元素编写一个嵌套列表：`[36, 2, 1]`，"Writer"，'t'，`[3.0, 2.5]`
 
@@ -3656,7 +3689,7 @@ list_mine = ["carrot", [9, 3, 6], ['g']]
 
 在编程中，特别是在 Python 中，第一个项目的索引始终为零。对于包含五个项目的列表，我们将从索引 0 访问到索引 4。未能以这种方式访问列表中的项目将导致索引错误。索引始终是整数，因为使用其他数字类型将导致类型错误。对于嵌套列表，则通过嵌套索引进行访问。
 
-#### 示例
+### 示例
 
 启动 IDLE。
 
@@ -3672,7 +3705,7 @@ print(list_mine[2])  # 输出将为 s
 print(list_mine[3])  # 输出将为 t
 ```
 
-## 练习
+### 练习
 
 给定以下列表：
 
@@ -3681,12 +3714,14 @@ your_collection = ['t', 'k', 'v', 'w', 'z', 'n', 'f']
 ```
 
 a. 编写一个 Python 程序来显示列表中的第二个项目
+
 b. 编写一个 Python 程序来显示列表中的第六个项目
+
 c. 编写一个 Python 程序来显示列表中的最后一个项目。
 
 ## 嵌套列表索引
 
-#### 示例
+### 示例
 
 启动 IDLE。
 
@@ -3704,7 +3739,7 @@ print(nested_list[0][1])
 
 对于其序列，Python 允许负索引。列表中的最后一个项目索引为 -1，倒数第二个项目索引为 -2，以此类推。
 
-#### 示例
+### 示例
 
 启动 IDLE。
 
@@ -3749,19 +3784,21 @@ print(list_mine[:-6])
 print(list_mine[2:])
 ```
 
-## 练习
+### 练习
 
 给定 `class_names = ['John', 'Kelly', 'Yvonne', 'Una', 'Lovy', 'Pius', 'Tracy']`
 
 a. 编写一个使用切片运算符的 Python 程序，显示从第二个学生开始及其后的所有学生。
+
 b. 编写一个使用切片运算符的 Python 程序，使用负索引功能显示从第一个学生到第三个学生。
+
 c. 编写一个使用切片运算符的 Python 程序，仅显示第四个和第五个学生。
 
 ## 使用赋值运算符操作列表中的元素
 
 列表中的项目可以被更改，这意味着列表是可变的。
 
-#### 示例
+### 示例
 
 启动 IDLE。
 
@@ -3779,7 +3816,7 @@ print(list_yours)  # 输出将为 [4, 6, 5, 2, 1]
 
 ## 更改列表中的一系列项目
 
-#### 示例
+### 示例
 
 启动 IDLE。
 
@@ -3831,7 +3868,7 @@ print(list_yours)  # 输出将为 [4, 6, 5, 13, 7, 9]
 
 加号运算符（`+`）也可用于合并两个列表。`*` 运算符可用于将列表重复指定次数。
 
-#### 示例
+### 示例
 
 启动 IDLE。
 
@@ -3891,7 +3928,7 @@ print(list_mine)  # 将生成错误: name 'list_mine' is not defined
 
 `remove()` 方法或 `pop()` 方法可用于移除指定项目。如果不给定索引，`pop()` 方法将移除并返回最后一个项目，并有助于将列表实现为栈。`clear()` 方法用于清空列表。
 
-#### 示例
+### 示例
 
 启动 IDLE。
 
@@ -3909,18 +3946,21 @@ print(list_mine.pop(1))  # 输出将为 'b'
 print(list_mine.pop())   # 输出将为 'v'
 ```
 
-## 练习
+### 练习
 
 给定 `list_yours = ['K', 'N', 'O', 'C', 'K', 'E', 'D']`
 
 a. 弹出列表中的第三个项目，将程序保存为 `list1`。
+
 b. 使用 `remove()` 方法移除第四个项目并将程序保存为 `list2`。
+
 c. 删除列表中的第二个项目并将程序保存为 `list3`。
+
 d. 不指定索引弹出列表并将程序保存为 `list4`。
 
 ## 使用空列表删除整个或特定元素
 
-#### 示例
+### 示例
 
 启动 IDLE。
 
@@ -3934,19 +3974,18 @@ list_mine = ['t', 'k', 'b', 'd', 'w', 'q', 'v']
 list_mine[1:2] = []
 ```
 
-
-
-
 print(`list_mine`)#输出将为 `['t','w','q','v']`
 
 # Python 列表方法总结
 
 ![](img/image00238.gif)
 
-## 练习
+### 练习
 
 1.  使用列表访问方法按逆序显示以下项目 `list_yours=[4,9,2,1,6,7]`
+
 2.  使用列表访问方法计算 a 中的元素数量。
+
 3.  使用列表访问方法按升序/默认顺序对 a 中的项目进行排序。
 
 ## 用于操作 Python 列表的内置 Python 函数
@@ -3957,7 +3996,7 @@ print(`list_mine`)#输出将为 `['t','w','q','v']`
 
 元组类似于列表，但我们无法更改元组中的元素。
 
-#### 示例
+### 示例
 
 启动 IDLE。
 
@@ -3965,7 +4004,7 @@ print(`list_mine`)#输出将为 `['t','w','q','v']`
 
 输入以下内容：
 
-```
+```python
 tuple_mine = (21, 12, 31)
 print(tuple_mine)
 tuple_mine = (31, "Green", 4.7)
@@ -3974,7 +4013,7 @@ print(tuple_mine)
 
 ## 访问 Python 元组元素
 
-#### 示例
+### 示例
 
 启动 IDLE。
 
@@ -3982,7 +4021,7 @@ print(tuple_mine)
 
 输入以下内容：
 
-```
+```python
 tuple_mine=['t','r','o','g','r','a','m']
 print(tuple_mine[1])#输出:'r'
 print(tuple_mine[3])#输出:'g'
@@ -3994,7 +4033,7 @@ print(tuple_mine[3])#输出:'g'
 
 同列表一样，`-1` 指向列表中的最后一个元素，`-2` 指向倒数第二个元素。
 
-#### 示例
+### 示例
 
 启动 IDLE。
 
@@ -4002,7 +4041,7 @@ print(tuple_mine[3])#输出:'g'
 
 输入以下内容：
 
-```
+```python
 tuple_mine=['t','r','o','g','r','a','m']
 print(tuple_mine [-2])#输出将为 'a'
 ```
@@ -4011,7 +4050,7 @@ print(tuple_mine [-2])#输出将为 'a'
 
 切片运算符（全冒号）用于访问元组中一定范围内的项目。
 
-#### 示例
+### 示例
 
 启动 IDLE。
 
@@ -4019,7 +4058,7 @@ print(tuple_mine [-2])#输出将为 'a'
 
 输入以下内容：
 
-```
+```python
 tuple_mine=['t','r','o','g','r','a','m']
 print(tuple_mine [2:5])#输出: 'o','g','r','a'
 print(tuple_mine[:-4])#'g','r','a','m'
@@ -4029,7 +4068,7 @@ print(tuple_mine[:-4])#'g','r','a','m'
 
 元组元素是不可变的，意味着它们不能被更改。但是，我们可以使用 `+`（连接运算符）组合元组中的元素。我们也可以使用 `*` 运算符重复元组中的元素，就像列表一样。
 
-#### 示例
+### 示例
 
 启动 IDLE。
 
@@ -4037,7 +4076,7 @@ print(tuple_mine[:-4])#'g','r','a','m'
 
 输入以下内容：
 
-```
+```python
 print((7, 45, 13) + (17, 25, 76))
 print(("Several",) * 4)
 ```
@@ -4046,7 +4085,7 @@ print(("Several",) * 4)
 
 既然我们无法更改元组中的元素，也就无法删除这些元素。但是，可以使用关键字 `del` 删除整个元组。
 
-#### 示例
+### 示例
 
 启动 IDLE。
 
@@ -4054,7 +4093,7 @@ print(("Several",) * 4)
 
 输入以下内容：
 
-```
+```python
 t_mine=['t','k','q','v','y','c','d']
 del t_mine
 ```
@@ -4064,9 +4103,10 @@ del t_mine
 用于处理 Python 元组的方法只有两个。
 
 *   `count(y)`：调用时将给出等于 y 的项目数量。
+
 *   `index(y)`：调用时将给出等于 y 的第一个项目的索引。
 
-#### 示例
+### 示例
 
 启动 IDLE。
 
@@ -4074,7 +4114,7 @@ del t_mine
 
 输入以下内容：
 
-```
+```python
 t_mine=['t','k','q','v','y','c','d']
 print(t_mine.count('t'))
 print(t_mine.index('l'))
@@ -4084,7 +4124,7 @@ print(t_mine.index('l'))
 
 关键字 `in` 用于检查指定元素是否存在于元组中。
 
-#### 示例
+### 示例
 
 启动 IDLE。
 
@@ -4092,7 +4132,7 @@ print(t_mine.index('l'))
 
 输入以下内容：
 
-```
+```python
 t_mine=['t','k','q','v','y','c','d']
 print('a' in t_mine)#输出: True
 print('k' in t_mine)#输出: False
@@ -4104,7 +4144,7 @@ print('k' in t_mine)#输出: False
 
 # Python 中的字符串
 
-#### 示例
+### 示例
 
 启动 IDLE。
 
@@ -4112,7 +4152,13 @@ print('k' in t_mine)#输出: False
 
 输入以下内容：
 
-```
+
+
+# Python 字符串与机器学习基础
+
+## 字符串基础
+
+```python
 string_mine = 'Colorful'
 print(string_mine)
 string_mine = "Hello"
@@ -4126,7 +4172,7 @@ print(string_mine)
 
 ## 访问字符串中的项目
 
-#### 示例
+### 示例
 
 启动 IDLE。
 
@@ -4134,19 +4180,19 @@ print(string_mine)
 
 输入以下内容：
 
-```
+```python
 str = 'Colorful'
 print('str = ', str)
-print('str[1] = ', str[1])#输出第二个项目
-print('str[-2] = ', str[-2])#输出倒数第二个项目
-print('str[2:4] = ', str[2:4])#输出第三个到第五个项目
+print('str[1] = ', str[1])  # 输出第二个项目
+print('str[-2] = ', str[-2])  # 输出倒数第二个项目
+print('str[2:4] = ', str[2:4])  # 输出第三个到第五个项目
 ```
 
 ## 在 Python 中删除或更改
 
 在 Python 中，字符串是不可变的，因此一旦赋值就无法更改。但是，删除整个字符串是可能的。
 
-#### 示例
+### 示例
 
 启动 IDLE。
 
@@ -4154,7 +4200,7 @@ print('str[2:4] = ', str[2:4])#输出第三个到第五个项目
 
 输入以下内容：
 
-```
+```python
 del string_mine
 ```
 
@@ -4162,7 +4208,7 @@ del string_mine
 
 可以对字符串执行多种操作，使其成为 Python 中广泛使用的数据类型。
 
-使用 `+` 运算符进行连接，使用 `*` 运算符进行重复
+### 使用 `+` 运算符进行连接，使用 `*` 运算符进行重复
 
 #### 示例
 
@@ -4172,22 +4218,22 @@ del string_mine
 
 输入以下内容：
 
-```
-string1='Welcome'
-string2='Again'
-print('string1+string2=',string1+string2)
+```python
+string1 = 'Welcome'
+string2 = 'Again'
+print('string1+string2=', string1 + string2)
 print(' string1 * 3 =', string1 * 3)
 ```
 
 ## 练习
 
-给定 `string_a="I am awake"` 和 `string_b="coding in Python in a pajama"`
+给定 `string_a = "I am awake"` 和 `string_b = "coding in Python in a pajama"`
 
 ## 字符串迭代
 
 `for` 控制语句用于持续扫描整个序列，直到达到指定的次数后终止扫描。
 
-#### 示例
+### 示例
 
 启动 IDLE。
 
@@ -4201,10 +4247,10 @@ print(' string1 * 3 =', string1 * 3)
 
 关键字 `in` 用于测试子字符串是否存在。
 
-#### 示例
+### 示例
 
-```
-'t' in "triumph"#将返回 True
+```python
+'t' in "triumph"  # 将返回 True
 ```
 
 ## 用于处理字符串的内置 Python 函数
@@ -4217,7 +4263,7 @@ print(' string1 * 3 =', string1 * 3)
 
 #### 单引号和双引号
 
-#### 示例
+##### 示例
 
 启动 IDLE。
 
@@ -4225,8 +4271,8 @@ print(' string1 * 3 =', string1 * 3)
 
 输入以下内容：
 
-```
-print('They said, "We need a new team?"')# 使用单引号转义
+```python
+print('They said, "We need a new team?"')  # 使用单引号转义
 ##### 转义双引号
 print("They said, \" We  need a new team\"")
 ```
@@ -4245,7 +4291,7 @@ print("They said, \" We  need a new team\"")
 
 输入以下内容：
 
-```
+```python
 print("D:\\\\Lessons\\\\Programming")
 print("Prints\\n in two lines")
 ```
@@ -4263,10 +4309,6 @@ print("Prints\\n in two lines")
 > **注意：** 您可能需要考虑参加 [Python 机器学习](https://www.datacamp.com/tracks/machine-learning-with-python) 课程，或者为了了解机器学习是如何发展的以及更多背景知识，请考虑阅读 [此章节](https://www.datacamp.com/community/tutorials/machine-deep-learning)。
 
 ## 简介
-
-
-
-
 
 ## 机器学习概述
 
@@ -4405,9 +4447,6 @@ import matplotlib.pyplot as plt
 
 ![散点图输出](img/image00248.jpeg)
 
-
-
-
 从上图可以看出，鸢尾花（Setosa）的花萼长度和花萼宽度之间存在高度相关性。另一方面，鸢尾花（Versicolor）和鸢尾花（Virginica）之间的相关性较低。Versicolor 和 Virginica 的数据点比密集的 Setosa 更分散。
 
 让我们也快速绘制花瓣长度和花瓣宽度的图表。
@@ -4420,7 +4459,7 @@ import matplotlib.pyplot as plt
 
 接下来，为了进一步验证花瓣长度和花瓣宽度相关的说法，让我们为所有三个物种绘制相关性矩阵。
 
-```
+```python
 dataset.iloc[:,2:].corr()
 ```
 
@@ -4443,7 +4482,7 @@ dataset.iloc[:,2:].corr()
 
 接下来，让我们通过绘制直方图来可视化特征分布：
 
-```
+```python
 fig = plt.figure(figsize = (8,8))
 ax = fig.gca()
 dataset.hist(ax=ax)
@@ -4456,7 +4495,7 @@ plt.show()
 
 接下来，你将分析这四个属性是否在同一尺度上；这是机器学习的一个基本方面。pandas DataFrame 有一个名为 `describe()` 的内置函数，它以表格形式给出数据的计数、平均值、最大值、最小值。
 
-```
+```python
 dataset.describe()
 ```
 
@@ -4464,7 +4503,9 @@ dataset.describe()
 
 你可以看到，所有四个属性都在 0 到 8 之间具有相似的尺度，单位为厘米。如果你愿意，可以进一步将其缩放到 0 和 1 之间。
 
-即使你们都知道每个类别有 50 个样本，即总分布的 ~33.3%，但还是让我们重新检查一下！ ![](img/image00256.gif)
+即使你们都知道每个类别有 50 个样本，即总分布的 ~33.3%，但还是让我们重新检查一下！
+
+![](img/image00256.gif)
 
 ## 数据预处理
 
@@ -4487,7 +4528,7 @@ dataset.describe()
 
 让我们再次打印 `describe()` 函数，看看为什么不需要任何归一化。
 
-```
+```python
 dataset.describe()
 ```
 
@@ -4498,6 +4539,9 @@ dataset.describe()
 | std | 0.828066 | 0.435866 | 1.765298 | 0.762238 |
 | min | 4.300000 | 2.000000 | 1.000000 | 0.100000 |
 | 25% | 5.100000 | 2.800000 | 1.600000 | 0.300000 |
+
+
+
 | 50% | 5.800000 | 3.000000 | 4.350000 | 1.300000 |
 | 75% | 6.400000 | 3.300000 | 5.100000 | 1.800000 |
 | max | 7.900000 | 4.400000 | 6.900000 | 2.500000 |
@@ -4514,7 +4558,9 @@ dataset.describe()
 
 对于训练集和测试集的拆分，你将使用 `sklearn` 库，它有一个名为 `train_test_split` 的内置拆分函数。那么，让我们拆分数据。
 
-![](img/image00257.gif)注意 `random_state` 是一个种子，它接受 `random_state` 作为输入；如果你更改数字，数据的拆分也会改变。但是，如果你保持 `random_state` 相同并多次运行单元格，数据拆分将保持不变。
+![](img/image00257.gif)
+
+注意 `random_state` 是一个种子，它接受 `random_state` 作为输入；如果你更改数字，数据的拆分也会改变。但是，如果你保持 `random_state` 相同并多次运行单元格，数据拆分将保持不变。
 
 让我们快速打印训练和测试数据及其标签的形状。
 
@@ -4538,9 +4584,9 @@ from sklearn.neighbors import KNeighborsClassifier
 
 ![](img/image00259.gif)
 
-接下来的代码是奇迹发生的地方。你将枚举所有九个邻居值，并对每个邻居在训练和测试数据上进行预测。最后，将准确率存储在 `train_accuracy` 和 `test_accuracy` numpy 数组中。 ![](img/image00260.gif)
+接下来的代码是奇迹发生的地方。你将枚举所有九个邻居值，并对每个邻居在训练和测试数据上进行预测。最后，将准确率存储在 `train_accuracy` 和 `test_accuracy` numpy 数组中。
 
-
+![](img/image00260.gif)
 
 接下来，你将使用 `matplotlib` 绘制训练和测试准确率，通过准确率与不同邻居数量变化的图表，你将能够选择模型表现最佳的最佳 `k` 值。
 
@@ -4634,9 +4680,9 @@ PyViz 的一些重要目标包括：
 
 *   重点应放在任何规模的数据上，而非编码
 *   完整的功能和交互性应直接在浏览器中可用（而非桌面端）
-*   重点应更多地关注 Python 用户，而非 Web 程序员。
-*   同样应更多地关注 2D 可视化而非 3D。
-*   利用 Python 用户已经熟悉的通用 SciPy/PyData 工具。
+*   重点应更多地关注 Python 用户，而非 Web 程序员
+*   同样应更多地关注 2D 可视化而非 3D
+*   利用 Python 用户已经熟悉的通用 SciPy/PyData 工具
 
 除此之外，PyViz 核心工具可以与 `HoloViews` 和 `Plotly` 等库无缝协作。
 
@@ -4645,6 +4691,7 @@ PyViz 的一些重要目标包括：
 PyViz 提供示例、演示和培训材料，记录如何解决可视化问题。本教程为解决你的可视化问题提供了起点。所有教程材料也托管在他们的 [Github 仓库](https://github.com/pyviz/pyviz) 中。
 
 [PyViz Tutorial — PyViz 0.9.13a3 documentation  
+
 How to solve visualization problems with Python tools.pyviz.org](http://pyviz.org/tutorial/index.html)
 
 一切安装完成后，以下单元格应打印 `1.11.0a4` 或更高版本：
@@ -4659,7 +4706,7 @@ How to solve visualization problems with Python tools.pyviz.org](http://pyviz.or
 
 ### 数据集
 
-所用数据集涉及美国每个州随时间推移每 100,000 人中[麻疹和百日咳的病例数](http://graphics.wsj.com/infectious-diseases-and-vaccines/#b02g20t20w15)。该数据集随 PyViz 教程预装。
+所用数据集涉及美国每个州随时间推移每 100,000 人中麻疹和百日咳的病例数。该数据集随 PyViz 教程预装。
 
 ### 使用 Pandas 进行数据探索
 
@@ -4690,8 +4737,6 @@ diseases_data.plot();
 
 ![Description: https://cdn-images-1.medium.com/max/800/1*7HNhHq15hKe7Fj6EQlEfrg.png](img/image00274.jpeg)
 
-
-
 ## 使用 HVPlot 和 Bokeh 进行数据探索
 
 这讲得更通顺了。在这里我们可以推断，1970 年左右发生了某些事情，使得麻疹发病率降至近乎为零。这是事实，因为麻疹疫苗于 1963 年左右在美国推出。
@@ -4700,7 +4745,7 @@ diseases_data.plot();
 
 ### 导入 hvplot.pandas
 
-```python
+```
 diseases_by_year.hvplot()
 ```
 
@@ -4720,9 +4765,8 @@ diseases_by_year.hvplot()
 
 与其他绘图库不同，Holoviews 对象保留了原始数据。例如，可以以表格格式访问原始数据。
 
-```python
+```
 print(vaccination_introduced)
-
 vaccination_introduced.Curve.I.data.head()
 ```
 
@@ -4736,7 +4780,7 @@ vaccination_introduced.Curve.I.data.head()
 
 我们可以将图表并排放置以便更好地对比，而不使用下拉菜单。
 
-```python
+```
 by_state["Alabama"].relabel('Alabama') + by_state["Florida"].relabel('Florida')
 ```
 
@@ -4778,6 +4822,10 @@ PyViz 工具帮助我们仅用少量代码即可创建美观的可视化效果�
 
 云、敏捷和 DevOps 提出了新需求，信息技术只能通过使用人工智能及其同类技术来满足。希望未来在信息技术运营职业上取得进步的专业人士，将需要掌握 [人工智能运维](https://techbeacon.com/enterprise-it/essential-guide-aiops-top-tools-implementation-tips)（AIOps），该术语用于描述信息技术运营应对数字化转型所需的条件。
 
+
+
+# AI 与机器学习趋势展望
+
 获取在即将到来的信息技术运营崭新世界中取得进步所需知识的一种途径，是参加专家讨论人工智能、分析和机器学习发展及趋势的会议，并可在会上就同行对人工智能运维的经验进行咨询。
 
 今年人们不仅将见证机器学习的巨大进步，还将看到难以想象的步骤和新应用，这些将迫使人们回到起点，重新考虑机器学习是祸是福。我倾向于认为它可能就像其他任何技术进步一样——关键在于你如何使用它。话虽如此，让我们深入了解今年即将推出的人工智能和机器学习应用。这些应用大多处于研发阶段，即将面向公众发布，或已面向公众但处于测试阶段，再次等待正式发布。
@@ -4789,9 +4837,6 @@ PyViz 工具帮助我们仅用少量代码即可创建美观的可视化效果�
 AI 赋能芯片已在 iPhone XR、华为荣耀 Play 和 Galaxy Note 8 等少数手机中首次亮相。在这些手机中，专用 AI 芯片在基于 ML 的语音助手、AI 智能相机等功能中承担繁重计算任务。这样，AI 芯片减轻了主处理器的工作负载，防止手机卡顿。但手机中的 AI 赋能芯片只是冰山一角。
 
 Google、Microsoft、Amazon、Intel 和 Facebook 都在大力投资专用基础设施，以增强基于 AI 的功能，无论是可购买插拔的芯片，还是可用于 ML 和神经网络的云端 CPU。其中最新的新闻包括 [Intel Nervana](https://www.intel.ai/nervana-nnp/#gs.C5HAvM5Q)（由 Intel 开发，Facebook 是重要开发合作伙伴）、[Google Cloud TPU](https://cloud.google.com/tpu/)、[Microsoft 的 Project Brainwave](https://www.microsoft.com/en-us/research/project/project-brainwave/) 和 [Amazon 的 AWS Inferentia](https://aws.amazon.com/machine-learning/inferentia/)。
-
-
-
 
 提到的大多数项目尚未公开发布，或仍处于 Beta 阶段。因此，2019 年可能是这些项目面世之时，更强大的 AI 芯片将使实时 AI 应用成为现实。
 
@@ -4827,22 +4872,19 @@ ML 将帮助分析患者数据以决定最适合的药物，彻底摒弃“千�
 
 GE 创建的[数字孪生](https://www.ge.com/digital/applications/digital-twin)即此类实现：为大型机器构建虚拟模型，利用数百个传感器确保孪生体实时同步真实机器状态，从而管理和维护当前部署的 65 万个孪生体。预计今年全球智能工厂将进一步推广数字孪生应用。
 
-### 8. 计算机视觉将塑造监控未来
+## 计算机视觉将塑造监控未来
 
 计算机视觉与监控已成商场、机场、城市十字路口等场所的刚需。多家[科技公司](https://www.rocketspace.com/corporate-innovation/5-breakthrough-computer-vision-startups-to-watch-in-2019)在全球多地悄悄部署软件，以发现、追踪并上报态势。但应用不止于此：若家庭摄像头发现陌生人闯入，Google Assistant 立即报警，岂不惊艳？
 
 Google 等公司在计算机视觉上投入巨资（还记得访问网站时它让你标记汽车或路牌图片吗？），2019 年将有更多玩家入局。监控系统将大幅提速，监控将不再只是视频流，而是能根据现场态势充当自动化响应的触发器。
 
-### 9. 医疗健康将见证更多 AI 落地
+## 医疗健康将见证更多 AI 落地
 
 医疗健康历经多年演进，ML 带来的变革远不止个性化药物兴起。近期中国宣称诞全球首例[基因编辑婴儿](https://www.theguardian.com/science/2018/nov/26/worlds-first-gene-edited-babies-created-in-china-claims-scientist)。所用工具 CRISPR-CAS9 本意是操作 DNA，植入所需基因或敲除致病基因。尽管该成果未经同行评审刊登、真实性待验证，但 AI 已被用于[预测导致癌症的基因组变化](https://www.icr.ac.uk/news-archive/artificial-intelligence-can-predict-how-cancers-will-evolve-and-spread)。
 
 今年将出现更多利用 AI 进行基因修饰的应用，以对抗新型疾病、优化人类。然而，此类医学奇迹背后的伦理法律困境与争论，仍是科学界的辩论焦点。
 
-### 10. 社会信用体系
-
-
-
+## 社会信用体系
 
 ### 中国的社会信用体系：机器学习的新应用
 
@@ -4863,4 +4905,3 @@ Google 等公司在计算机视觉上投入巨资（还记得访问网站时它�
 日后您可能还需要查阅本书。请妥善保管，随时复习。读完本书不代表在 Python 和机器学习方面已无新知。广泛阅读，拓宽视野，这是您追求精通的唯一途径。请特别关注人工智能，因为没有它，机器学习就不可能存在。利用书中技巧，通过自己的发明创造，尤其是在人工智能领域，让世界变得更美好。
 
 最后，如果您觉得本书对您有用，在 Amazon 上留下评价将不胜感激！
-

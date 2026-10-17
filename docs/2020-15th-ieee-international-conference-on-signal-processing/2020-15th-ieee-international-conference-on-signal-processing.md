@@ -1,13 +1,12 @@
+
 # 2020 第15届 IEEE 国际信号处理会议 (ICSP) ｜｜ CASPER：常规 CT
 
-
-
-
-
-
 Pierre-Jean Lartaud¹, Aymeric Rouchaud¹, Hamid Dessousky², Anna Vlakhmitrou³, Jean-Michel Rouet², Olivier Nemment³, Loïc
+
 ¹ CREATIS UM5820 INSERM, 里昂大学，法国
+
 ² 飞浦研究中心，Sures，法国
+
 ³ 里昂医院（Hospices de Lyon），里昂，法国
 
 邮箱：pierre-jean.lartaud@creats-insa.fr, aymeric.rouchaud@chu-lyon.fr, hamid.dessousky@creats-insa-lyon.fr, anna.vlakhmitrou@gmail.com, jean-michael.rouet@philips.com, olivier.nemment@philips.com, loic.bussel@chu-lyon.fr, philippic.douc@chu-lyon.fr.
@@ -41,8 +40,11 @@ $monoE_{keV} = \alpha\mu_{I}^{keV} + \beta\mu_{W}^{keV}$
 其中 $\alpha$ 和 $\beta$ 是碘和水浓度图，单位为 $cm^{-1}$，$\mu_{I}^{keV}$ 和 $\mu_{W}^{keV}$ 是 $keV$ 处的衰减系数 [9]。因此，从两个单能图像或两个材料图，可以反推方程 (1) 以重建任何光谱图像。高能光子被患者吸收的少于低能，因此单能图像的对比度较低，如图 2 所示。最后，VNC 是缩放到亨斯菲德单位的水图。
 
 A - monoE 54 keV
+
 B - HU
+
 C - monoE 100 keV
+
 D - VNC
 
 图 1. 从光谱 CT 重建的图像示例。应用 600-1600 窗。
@@ -60,7 +62,9 @@ D - VNC
 ![](img/48d50055dd4767983291bb704afd7575_1.png)
 
 步骤 1 – HuSpecNet
+
 步骤 2 – 数据增强
+
 图 2. CASPER 工作流。HuSpecNet 在 2500 次扫描上训练。在该方法中，前两行是 HuSpecNet 训练。根据不同目的，光谱图像是混合的。最后一行显示了图的真值。
 
 ### A. HuSpecNet
@@ -68,11 +72,17 @@ D - VNC
 表 I HUSPECNET 统计
 
 | 类型 | 范围 | 均值 ± 标准差 | 最小值 - 最大值 |
+
 | --- | --- | --- | --- |
+
 | Mono-54 | 307 | 16.893 ± 5.096 | 11.378-50.223 |
+
 | Mono-100 | 307 | 14.690 ± 1.676 | 7.453 - 18.926 |
+
 | Mono-100 | 307 | 11.796 ± 2.349 | 8.807 - 23.653 |
+
 | VNC | 307 | 22.066 ± 3.316 | 14.182-51.358 |
+
 | VNC | 307 | 13.469 ± 2.295 | 8.517 - 21.637 |
 
 图 3. 光谱图像与生成扫描的对比。对每个图像应用了 600-1600 窗。
@@ -86,10 +96,6 @@ D - VNC
 为了评估方法的益处并与真实的光谱增强进行比较，我们训练了分割网络。HuOnly 仅在真实图像上训练。真实光谱图像和生成图像通过 HuSpecNet 进行训练。由于每个策略都是从相同的 143 名患者进行训练，光谱增强的存在与否彼此不同。
 
 该网络由 3D-Net [12] 组成，具有五个通过残差线性层（ReLU）激活的分层和一个最大池化，每层的特征通道数从 16 翻倍到 26。
-
-
-
-
 
 ![](img/48d50055dd4767983291bb704afd7575_3_0.png)
 
@@ -118,15 +124,25 @@ D - VNC
 ## 参考文献
 
 - [1] S. Senquarta 等， "医学架构、模式和近期趋势中深度学习应用的综," Knowledge-Based Systems 199, 2020.
-- [2] A. Maier, C. Tyler, T. Lasker 和 C. Ries, "医学图像处理中深度学习的性介绍," Zeitschrift für Medical Physics, vol. 64, no. 2, 81–103, 2019.
-- [3] G. Singh, 等., 心脏 CT 中的机器学习: 基础概念与当代数据, 12, 2020.
-- [4] S. Schneider, M. Wolteren, R. W. van Hamersfelt, M. Treik, T. Liner 和 I. Igum, "利用分割信息改进心脏 CT 血管造的心肌分割," 2018.
-- [5] P. Lamont, J. M. Roset, O. Nempont, 和 L. Boussel, "常规 CT 分割的光谱 CT 训练数据集生成与增强," 医学影像与计算机辅助干预 – MICCAI 2019, Cham, 2019, pp. 768–775.
-- [6] S. Chen 等， "基于 3D 全卷积断层的双能 CT (DECT) 自动多器官分割," Medical Physics, vol. 47, no. 5, 552–562, 2020.
-- [7] C. H. Mcclough, S. Long, L. Yu, 和 J. G. Fischer, "分光与多能 CT: 技术方法与临床应用," Medical Physics, vol. 47, no. 6, 786–795, 2020.
-- [8] R. E. Alvareaz 和 A. Macovicki, "X射线计算机断层中的能量选择重建," Medical Phys Biol, vol. 21, no. 5, 97.
-- [9] NIST XCOM: 合物/混合, https://nist.gov/PubData/Datas/xcom/index.html
-- [10] P. Hola, J. Zhou, T. Zhao, 和 J. Efos, "生成对抗网络," 2017 IEEE 视觉与模式识别会议 (CVPR), 2017, pp. 5994–5976.
-- [11] J. Tran, J. Zhou, 和 J. Efos, "使用循环一致对抗网络的非成对图像到图像翻译," 2017 IEEE 计算机视觉国际会议, pp. 2241–2249.
-- [12] X. Sun 和 J. Tang, "图像分割引导学习," Pattern Analysis and Machine Intelligence, vol. 35, no. 6, 1499–1509, 2023.
 
+- [2] A. Maier, C. Tyler, T. Lasker 和 C. Ries, "医学图像处理中深度学习的性介绍," Zeitschrift für Medical Physics, vol. 64, no. 2, 81–103, 2019.
+
+- [3] G. Singh, 等., 心脏 CT 中的机器学习: 基础概念与当代数据, 12, 2020.
+
+- [4] S. Schneider, M. Wolteren, R. W. van Hamersfelt, M. Treik, T. Liner 和 I. Igum, "利用分割信息改进心脏 CT 血管造的心肌分割," 2018.
+
+- [5] P. Lamont, J. M. Roset, O. Nempont, 和 L. Boussel, "常规 CT 分割的光谱 CT 训练数据集生成与增强," 医学影像与计算机辅助干预 – MICCAI 2019, Cham, 2019, pp. 768–775.
+
+- [6] S. Chen 等， "基于 3D 全卷积断层的双能 CT (DECT) 自动多器官分割," Medical Physics, vol. 47, no. 5, 552–562, 2020.
+
+- [7] C. H. Mcclough, S. Long, L. Yu, 和 J. G. Fischer, "分光与多能 CT: 技术方法与临床应用," Medical Physics, vol. 47, no. 6, 786–795, 2020.
+
+- [8] R. E. Alvareaz 和 A. Macovicki, "X射线计算机断层中的能量选择重建," Medical Phys Biol, vol. 21, no. 5, 97.
+
+- [9] NIST XCOM: 合物/混合, https://nist.gov/PubData/Datas/xcom/index.html
+
+- [10] P. Hola, J. Zhou, T. Zhao, 和 J. Efos, "生成对抗网络," 2017 IEEE 视觉与模式识别会议 (CVPR), 2017, pp. 5994–5976.
+
+- [11] J. Tran, J. Zhou, 和 J. Efos, "使用循环一致对抗网络的非成对图像到图像翻译," 2017 IEEE 计算机视觉国际会议, pp. 2241–2249.
+
+- [12] X. Sun 和 J. Tang, "图像分割引导学习," Pattern Analysis and Machine Intelligence, vol. 35, no. 6, 1499–1509, 2023.

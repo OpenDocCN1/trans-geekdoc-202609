@@ -1,35 +1,19 @@
-## 数据、区块链、物联网与网络防护高级网络安全技术
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# 数据、区块链、物联网与网络防护高级网络安全技术
 
 > 本书深情献给我的父亲 Shri Shyam Kishor Chaubey，他是我们的灯塔；以及我的母亲、已故的 Mrs. Subhraji Chaubey，她激励我有目的、有意义地生活，始终专注于回馈社会。他们的爱、勇气、奉献一直是我奋斗的力量源泉。
 >
-> **Nirbhay S. Chaubey**  
+> **Nirbhay S. Chaubey**
+>
 > 甘帕特大学，印度古吉拉特邦
-
+>
 > 本书献给我的父母，Neelam Chaubey 和 Nirbhay Chaubey，你们都是我的榜样，教导我践行真理与诚实，激励我成为一个有价值观的好人。我的妹妹 Medha Chaubey 和弟弟 Om Chaubey，感谢你们持续不断的支持。感谢我的外祖父 Shri Hiramani Shukla 和外祖母 Smt. Shubhadra Shukla，以及家人、老师和朋友们，你们总是鼓励我所做的一切。
 >
-> **Neha N. Chaubey**  
+> **Neha N. Chaubey**
+>
 > 伦敦帝国理工学院，英国
 
-### 编辑顾问委员会
+## 编辑顾问委员会
 
 Kalpdrum Passi，加拿大劳伦森大学  
 Om Prakash Vyas，印度阿拉哈巴德 IIIT  
@@ -77,7 +61,7 @@ Jignesh Doshi，印度 L. J. 大学
 Padmapriya Praveenkumar，印度 SASTRA 大学  
 Parvej Faruki，印度古吉拉特技术大学
 
-### 前言
+## 前言
 
 我非常荣幸能为这部重要的新书——《面向数据、区块链、物联网与网络防护的高级网络安全技术》撰写前言。本书由 Nirbhay Kumar Chaubey 教授（博士）和 Neha Chaubey 女士编辑。这部包含 16 章的综合性著作探讨了传统与量子密码学方法的交汇点，提供了关于网络安全最紧迫关切与网络防御机遇的专家视角，展示了保护复杂系统、区块链、物联网和网络基础设施的尖端技术。向编辑和作者们致以祝贺，感谢你们取得的这一卓越成就，它必将启迪寻求高级网络安全知识的研究人员、从业者和学生。本书是一项合作成果，汇聚了杰出作者、编辑、审稿人和顾问委员会成员的专业知识，他们以在计算机科学、网络安全、网络与通信工程领域的学术卓越而闻名。最终成果是一部权威的研究手册。
 
@@ -86,58 +70,13 @@ Parvej Faruki，印度古吉拉特技术大学
 **Akshai Aggarwal**  
 古吉拉特技术大学 (GTU)，印度
 
-### 序言
+## 序言
 
-由物联网、区块链和网络物理系统驱动的数字化革命，已经改变了全球互动与商业模式。然而，这种日益增强的连通性也加剧了网络安全漏洞，亟需创新且具韧性的安全措施，以应对日益猖獗的网络威胁，包括数据泄露、APT 攻击（高级持续性威胁）和新兴的基于量子的攻击。
+由物联网、区块链和网络物理系统驱动的数字化革命，已经改变了全球互动与商业模式。然而，这种日益增强的连通性也加剧了网络安全漏洞，亟需创新且具韧性的安全措施，以应对日益猖獗的网络威胁，包括数据泄露、`APT` 攻击（高级持续性威胁）和新兴的基于量子的攻击。
 
 曾经作为安全通信支柱的经典密码学的局限性，正变得日益明显。随着量子计算的进步并超越当今系统的计算能力，传统加密方法面临过时的风险。计算机算力的不断增强和量子计算即将取得的突破所带来的漏洞，使得保护数字基础设施的方法必须发生范式转变。量子密码学的出现，为加强网络安全提供了一条令人振奋且充满希望的途径。其固有的、理论上不可破解的加密能力，使其成为依赖安全数据传输和保护的行业的游戏规则改变者。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### 致谢
+## 致谢
 
 编辑们想向所有参与该项目的人员表达谢意，特别是作者们。没有他们的贡献和支持，本书就不会问世。我们向每一位作者为其宝贵的投入表示衷心的感谢。我们还想感谢审稿人和编委会成员的重大贡献，他们的见解有助于提高章节的质量、连贯性和呈现效果。此外，我们非常感激那些承担了额外审稿人职责的作者们。
 
@@ -158,7 +97,7 @@ BVM Engineering College, India
 
 随着语义网架构的演进和生成式 AI 的进步，网络安全领域对通用接受的本体的需求显著增加。本文综述了五个著名的本体框架：`STIX`、`STUCCO`、`UCO`、`CTIM`和`WAVED`。它评估了它们的优势和局限性，提供了比较分析。该研究为开发最优本体提供了建议，旨在增强网络安全系统的互操作性、安全性和自动化，从而解决当前的差距，促进更统一的网络安全格局。
 
-### 1. 简介
+### 1.1 简介
 
 网络安全领域长期以来一直在为开发统一本体而争论不休。已经提出了几种本体作为该问题的通用解决方案，但迄今为止，尚无任何一种达成集体共识，被公认为通用的、权威的本体。通用本体的接受将使网络安全从业者受益，并将显著降低未来系统对各种恶意威胁的脆弱性。
 
@@ -179,21 +118,19 @@ BVM Engineering College, India
 
 从所有这些来源收集信息，并在过滤、消除冗余、预处理和修正后将它们与现有系统集成，将阻碍打算有效利用它们的组织。此外，在可预见的未来，自动化系统的效率和使用预计将显著提高，并且随着生成式 AI 的当前趋势，完全自动化的基于 AI 的系统可能会进一步推动该领域的发展。在本文中，我们考察了提出其本体的五种独特方法，并提供了关于它们大致效用以及它们在当前场景中表现如何的各种见解。本文的结构如下。第 2 节将简要描述我们采用的方法论，而第 3 节包含每个小节中相关本体的考察。每个小节包含两个进一步的小节，分别代表它们的优点和缺点。第 4 节包含结论和未来工作展望。本文着重于为开发通用本体方法所做的工作及其详尽总结，以帮助在该领域工作的研究人员。结论和未来工作部分提供了关于此的进一步见解。
 
-## 2. 方法论
+### 1.2 方法论
 
 对发表原始本体的每篇论文进行了彻底分析。提供了每个本体框架的简要描述，以及直接来自源头的本体架构图，以增强可读性。检查了源论文和现有综述论文以提取优点和缺点，主要是分别助益和阻碍本体的因素。一个简洁的汇总表包含在审查最后一个本体的章节中，列出了每个本体的优点和缺点。
 
-## 3. 本体考察
+### 1.3 本体考察
 
-### 3.1 漏洞管理本体 (OVM)
+#### 1.3.1 漏洞管理本体 (OVM)
 
-
-
-# 我们要研究的第一个本体是漏洞管理本体（OVM），由 Wang & Guo (2009) 发布。
+我们要研究的第一个本体是漏洞管理本体（OVM），由 Wang & Guo (2009) 发布。
 
 它包含 NVD（国家漏洞数据库）中的所有现有漏洞（Booth et al., 2013）。诸如漏洞推理、漏洞表征及其影响分析等问题主要由它处理。它是遵循 DL 知识工程方法论构建的。遵循了 Fenz et al. (2008) 提出的设计标准，即本体清晰性、连贯性、可扩展性、最小编码偏见和最小本体论承诺。它建立在 `CVE`（通用漏洞披露）及其相关协议和标准的基础之上，如 `CWE`（通用弱点枚举）、`CPE`（通用平台枚举）和 `CAPEC`（通用攻击模式枚举与分类）。基本的漏洞表征表达被表示为 OVM 架构的高层概念。它包含十二个顶层概念：`Vulnerability`（漏洞）、`Introduction Phase`（引入阶段）、`Active Location`（活动位置）、`IT Product`（IT 产品）、`IT Vendor`（IT 厂商）、`Product Category`（产品类别）、`Attack`（攻击）、`Attack Intent`（攻击意图）、`Attack Method`（攻击方法）、`Attacker`（攻击者）、`Consequence`（后果）和 `Countermeasure`（对策）。这些概念中的每一个都包含一个子系统层级，包含不同的子类和关键概念。OVM 还提供了实用工具和一个集中式存储库，可用于系统安全领域所有参与者之间的共享与通信。
 
-## 图 1. 漏洞本体的概念模型
+**图 1. 漏洞本体的概念模型**
 
 ![979-8-3693-9225-6.ch001.f01](img/979-8-3693-9225-6.ch001.f01.png)
 
@@ -201,54 +138,54 @@ BVM Engineering College, India
 
 它支持有限的自动化和查询。它是发布在漏洞领域的最早本体之一，并在信息安全自动化计划（ISAP）下发布。总体而言，它可被归类为领域特定本体。
 
-### 3.1.1 OVM 的优点
+##### 1.3.1.1 OVM 的优点
 
 *   高互操作性和各方间更好的交换
 *   结构良好的架构
 *   易于融入现有概念
 *   增强的自动化
 
-### 3.1.2 OVM 的缺点
+##### 1.3.1.2 OVM 的缺点
 
 *   有限的推理和查询
 *   难以融入不存在的概念
 *   通用目的的适用范围有限
 *   复杂性较高 (Wang & Cui, 2019)
 
-### 3.2 结构化威胁信息表达（STIX）
+#### 1.3.2 结构化威胁信息表达（STIX）
 
 第二个被分析的本体方法是 STIX 标准。虽然根据教科书定义它不是一个本体，但 STIX 尽管类似于一种语言或标准，却遵循系统化方法并以结构化方式表示数据。因此，在本文的范围内，它被视为一个本体。必须注意的是，整篇论文中提到 STIX 时，均指 Barnum (2012) 论文中发布的本体以及 MITRE 公司旗下的本体。STIX 的突出之处在于，它更侧重于一种社区驱动的方法，而非建立一个必须融入新信息的僵化结构。它更侧重于灵活性、表达性、可扩展性、自动化能力和可读性。它为网络威胁信息提供了通用机制和统一架构。它包含一组核心的必需指导原则，即表达性、可集成性、灵活性、可扩展性、自动化能力、可读性和架构。STIX 结构由可观测对象、指标、事件、战术技术与程序（TTP）、活动、威胁行为者、利用目标和行动方案（COA）组成。由于其灵活的方法，它拥有比其他本体更多的用例，以及更长的生命周期。它最常与可信自动化情报信息交换（TAXII）一起使用。尽管两者完全独立，但协同工作时能产生最佳效果。
 
-## 图 2. 结构化威胁信息表达（STIX）架构 v0.3
+**图 2. 结构化威胁信息表达（STIX）架构 v0.3**
 
 ![979-8-3693-9225-6.ch001.f02](img/979-8-3693-9225-6.ch001.f02.png)
 
 (Barnum, 2012)
 
-## 图 3. STIX 关键构造与关键相互关系
+**图 3. STIX 关键构造与关键相互关系**
 
 ![979-8-3693-9225-6.ch001.f03](img/979-8-3693-9225-6.ch001.f03.png)
 
 (STIX 项目 [`stixproject.github.io/about/`](https://stixproject.github.io/about/))
 
-### 3.2.1 STIX 的优点
+##### 1.3.2.1 STIX 的优点
 
 *   灵活性和可扩展性
 *   自动化能力
 *   部分实现
 *   多样化的用例
 
-### 3.2.2 STIX 的缺点
+##### 1.3.2.2 STIX 的缺点
 
 *   复杂性和计算开销
 *   互操作性和集成问题
 *   匿名性和隐私担忧
 
-### 3.3 安全工具箱：攻击与对策本体（STAC）
+#### 1.3.3 安全工具箱：攻击与对策本体（STAC）
 
 第三个被研究的本体是 STAC 本体，由 Gyrard et al. (2013) 在第 22 届国际万维网会议论文集中开发。旨在为非安全专家创建一个本体，帮助他们设计安全应用并了解多个领域的安全概念和风险，STAC 融合了 `Application`（应用）、`Requirement`（需求）、`Domain`（领域）、`Attack`（攻击）、`Countermeasures`（对策）、`Feature`（特性）、`SecurityProperty`（安全属性）和 OSI 模型的概念。这些概念之间的关系及其结构在 STAC 中定义明确。除了这些主要概念外，它还包含子概念、方法和属性。它采用 `OWL`（Web 本体语言）框架表示。其 UI 利用以下技术：`Java`、`REST Web Services` (Jersey)、`Google Application Engine` (GAE)、`Jena framework`、`SPARSQL` 语言、`HTML5`、`CSS3`、`Javascript` 和 `AJAX`。STAC 支持的用例包括：针对攻击和对策的领域特定查询、额外信息检索（如对策的优缺点及满足的安全属性）、针对特定 OSI 模型层的攻击和对策搜索。
 
-## 图 4. STAC 本体的顶层部分
+**图 4. STAC 本体的顶层部分**
 
 ![979-8-3693-9225-6.ch001.f04](img/979-8-3693-9225-6.ch001.f04.png)
 
@@ -256,24 +193,24 @@ BVM Engineering College, India
 
 它融合了来自各种来源的信息。STAC 的构建方式使得第三方难以修改，这使其略显不适合即时添加关于新型网络安全概念、攻击和对策的信息。它的特定目的是帮助新手软件开发人员以更稳健可靠的方式开发安全软件。
 
-### 3.3.1 STAC 的优点
+##### 1.3.3.1 STAC 的优点
 
 *   域外高度互操作
 *   开源框架利用
 *   支持领域特定检索
 
-### 3.3.2 STAC 的缺点
+##### 1.3.3.2 STAC 的缺点
 
 *   临时更新过程困难
 *   特定范围
 *   领域密集型任务的用例有限
 *   实现复杂 (Gong & Tian, 2020)
 
-### 3.4 通过关联上下文观测进行态势与威胁理解（STUCCO）本体
+#### 1.3.4 通过关联上下文观测进行态势与威胁理解（STUCCO）本体
 
 
 
-第四个被研究的本体是 STUCCO 本体 (Iannacone et al., 2015)。该本体由国家实验室和斯坦福大学的研究人员开发，多年来表现良好，在网络安全专业人员中普遍备受推崇。该本体的主要设计目标是确保人类和自动化系统的互操作性。这是一个相对简洁的本体，能够恰当地对网络安全的关键概念进行分类，并定义它们与其他相关概念的关系。它使用 `JSON Schema` 定义本体，查询使用 `GraphSON` 格式。这种有意摒弃普遍使用的框架（`RDF` 或 `OWL`）而采用 `JSON` 的选择，有其自身的优势和权衡。它确实存在问题，即现有文献中术语定义模糊或分配不当。由于其固有局限性，它也缺乏来自非结构化数据源的潜在洞察信息。相反，`STUCCO` 对人类具有高度可解释性，使其易于使用。由于其更通用的性质，Lie 等人将其归类为统一安全本体。总体而言，`STUCCO` 更像是一个需要不断更新或操作的维基百科页面，而不是网络安全领域的灵丹妙药。从选择将 `STUCCO` 作为数据源的本体数量来看，可以恰当地评估这一点。此后的大多数本体在一定程度上都受到了它的影响。
+第四个被研究的本体是 `STUCCO` 本体 (Iannacone et al., 2015)。该本体由国家实验室和斯坦福大学的研究人员开发，多年来表现良好，在网络安全专业人员中普遍备受推崇。该本体的主要设计目标是确保人类和自动化系统的互操作性。这是一个相对简洁的本体，能够恰当地对网络安全的关键概念进行分类，并定义它们与其他相关概念的关系。它使用 `JSON Schema` 定义本体，查询使用 `GraphSON` 格式。这种有意摒弃普遍使用的框架（`RDF` 或 `OWL`）而采用 `JSON` 的选择，有其自身的优势和权衡。它确实存在问题，即现有文献中术语定义模糊或分配不当。由于其固有局限性，它也缺乏来自非结构化数据源的潜在洞察信息。相反，`STUCCO` 对人类具有高度可解释性，使其易于使用。由于其更通用的性质，Lie 等人将其归类为统一安全本体。总体而言，`STUCCO` 更像是一个需要不断更新或操作的维基百科页面，而不是网络安全领域的灵丹妙药。从选择将 `STUCCO` 作为数据源的本体数量来看，可以恰当地评估这一点。此后的大多数本体在一定程度上都受到了它的影响。
 
 #### 图 5. STUCCO 本体中的实体和关系
 
@@ -283,16 +220,16 @@ BVM Engineering College, India
 
 ### 3.4.1 STUCCO 的优点
 
-*   • 高人类可解释性
-*   • 易于验证和模式定义
-*   • 融合用于推理的元数据
+*   高人类可解释性
+*   易于验证和模式定义
+*   融合用于推理的元数据
 
 ### 3.4.2 STUCCO 的缺点
 
-*   • 无法使用 `OWL-DL`
-*   • 缺乏来源
-*   • 有限的用例
-*   • 无法融合非结构化的、潜在有用的数据
+*   无法使用 `OWL-DL`
+*   缺乏来源
+*   有限的用例
+*   无法融合非结构化的、潜在有用的数据
 
 ### 3.5 统一网络安全本体 (UCO)
 
@@ -306,17 +243,17 @@ BVM Engineering College, India
 
 ### 3.5.1 UCO 的优点
 
-*   • 使用语义框架 (`OWL`) 而非语法框架 (`XML`)
-*   • 支持推理/查询
-*   • 可扩展
-*   • 范围广泛/通用
+*   使用语义框架 (`OWL`) 而非语法框架 (`XML`)
+*   支持推理/查询
+*   可扩展
+*   范围广泛/通用
 
 ### 3.5.2 UCO 的缺点
 
-*   • 有限的用例
-*   • 难以集成新概念
-*   • 部分实现不便
-*   • 依赖人工工作
+*   有限的用例
+*   难以集成新概念
+*   部分实现不便
+*   依赖人工工作
 
 ### 3.6 网络威胁情报模型 (CTIM)
 
@@ -336,15 +273,15 @@ BVM Engineering College, India
 
 ### 3.6.1 CTIM 的优点
 
-*   • 支持推理/查询
-*   • 结构定义良好
-*   • 高互操作性
+*   支持推理/查询
+*   结构定义良好
+*   高互操作性
 
 ### 3.6.2 CTIM 的缺点
 
-*   • 范围/领域有限
-*   • 表示中的歧义
-*   • 不可扩展
+*   范围/领域有限
+*   表示中的歧义
+*   不可扩展
 
 ### 3.7 WAVED：统一本体
 
@@ -358,17 +295,17 @@ BVM Engineering College, India
 
 ### 3.7.1 WAVED 的优点
 
-*   • 支持 `SPARSQL`
-*   • 可部分实现
-*   • 双向性
-*   • 易于集成新数据
-*   • 多样化的用例
+*   支持 `SPARQL`
+*   可部分实现
+*   双向性
+*   易于集成新数据
+*   多样化的用例
 
 ### 3.7.2 WAVED 的缺点
 
-*   • 范围有限
-*   • 关联困难
-*   • 缺乏测试用例
+*   范围有限
+*   关联困难
+*   缺乏测试用例
 
 #### 表 1. 各本体优缺点表格摘要
 
@@ -378,21 +315,18 @@ BVM Engineering College, India
 | STIX | 1. 灵活性和可扩展性<br>2. 可自动化<br>3. 部分实现和用例 | 1. 复杂性和认知开销<br>2. 互操作性和集成问题<br>3. 匿名化和隐私担忧 |
 | STAX | 1. 域外高度互操作<br>2. 开源框架利用<br>3. 支持特定领域检索 | 1. 临时更新过程困难<br>2. 特定范围<br>3. 领域密集型任务的用例有限 |
 
-
-
-
 ## 4. 复杂实现 (Gong and Tian, 2020)
 
 | 框架 | 优势 | 劣势 |
 | :--- | :--- | :--- |
-| **STUCCO** | 1. 高人类可解释性<br>2. 易于验证和模式定义<br>3. 融合元数据用于推理 | 1. 无法使用 OWL/DL<br>2. 缺乏来源<br>3. 使用案例有限<br>4. 无法融合非结构化/潜在有用数据 |
-| **UCO** | 1. 使用语义框架 (OWL) 而非语法框架 (XML)<br>2. 支持推理/查询<br>3. 可扩展<br>4. 范围广泛 (通用) | 1. 使用案例有限<br>2. 难以集成新来源<br>3. 不便于对部分匿名化/常规工作进行推理 |
+| **STUCCO** | 1. 高人类可解释性<br>2. 易于验证和模式定义<br>3. 融合元数据用于推理 | 1. 无法使用 `OWL/DL`<br>2. 缺乏来源<br>3. 使用案例有限<br>4. 无法融合非结构化/潜在有用数据 |
+| **UCO** | 1. 使用语义框架 (`OWL`) 而非语法框架 (`XML`)<br>2. 支持推理/查询<br>3. 可扩展<br>4. 范围广泛 (通用) | 1. 使用案例有限<br>2. 难以集成新来源<br>3. 不便于对部分匿名化/常规工作进行推理 |
 | **CTIM** | 1. 支持推理/查询<br>2. 结构定义良好<br>3. 高互操作性 | 1. 范围/领域有限<br>2. 表示存在歧义<br>3. 使用案例有限 |
-| **WAVED** | 1. 支持 SPARQL<br>2. 部分实现<br>3. 灵活的关系/自然结构<br>4. 易于集成新数据<br>5. 使用案例广泛 | 1. 范围有限<br>2. 难以关联关系<br>3. 缺乏测试用例 |
+| **WAVED** | 1. 支持 `SPARQL`<br>2. 部分实现<br>3. 灵活的关系/自然结构<br>4. 易于集成新数据<br>5. 使用案例广泛 | 1. 范围有限<br>2. 难以关联关系<br>3. 缺乏测试用例 |
 
 ### 4. 结论与未来工作
 
-随着网络安全社区提供了各种不同的方法来解决通用本体问题，基于各种参数持续分析和评估这些方法显得尤为重要。在实施成功本体的最佳特性并消除其缺陷方面，仍有大量工作有待完成。如果标准本体能在管理复杂性、适应性和可演化性之间达到平衡，通常表现良好。近期出现了一种利用 NLP 从文本来源提取信息的趋势。包括 WAVED 在内的早期结果令人鼓舞。语义 Web 技术结合这种方法已彻底改变了该领域的格局。发表本文旨在希望此次考察能对当前正在开发本体的人员有所帮助，并协助他们确定应实施哪些特性以使其本体达到最优。
+随着网络安全社区提供了各种不同的方法来解决通用本体问题，基于各种参数持续分析和评估这些方法显得尤为重要。在实施成功本体的最佳特性并消除其缺陷方面，仍有大量工作有待完成。如果标准本体能在管理复杂性、适应性和可演化性之间达到平衡，通常表现良好。近期出现了一种利用 `NLP` 从文本来源提取信息的趋势。包括 `WAVED` 在内的早期结果令人鼓舞。语义 Web 技术结合这种方法已彻底改变了该领域的格局。发表本文旨在希望此次考察能对当前正在开发本体的人员有所帮助，并协助他们确定应实施哪些特性以使其本体达到最优。
 
 ## 参考文献
 
@@ -430,35 +364,35 @@ Wang, J. A., & Guo, M. (2009, April). OVM: an ontology for vulnerability managem
 
 **Prerna Agrawal**
 
-![Orcid Imagehttps://orcid.org/0000-0003-3097-639X](https://orcid.org/0000-0003-3097-639X)
+![Orcid Image](https://orcid.org/0000-0003-3097-639X)
 
 GLS University, India
 
 **Savita Gandhi**
 
-![Orcid Imagehttps://orcid.org/0000-0002-6581-2814](https://orcid.org/0000-0002-6581-2814)
+![Orcid Image](https://orcid.org/0000-0002-6581-2814)
 
 GLS University, India
 
 ## 摘要
 
-社交媒体的使用普及率正在迅速攀升。仅在 2024 年 1 月，印度就记录了总计 4.62 亿社交媒体用户。在线用户的激增导致网络安全欺诈相应激增。网络安全专家可以利用大数据分析工具来识别、预防和缓解网络攻击，因为这些技术能够处理从不同来源收集的海量数据。本章探讨了可利用大数据分析 (BDA) 识别的网络犯罪。本章的主要目的是让读者全面了解大数据分析 (BDA) 在网络安全领域的应用。同时也旨在让读者了解 BDA 在网络安全应用中的当前进展以及该领域面临的挑战。
+
+
+# 社交媒体的使用普及率正在迅速攀升
+
+仅在 2024 年 1 月，印度就记录了总计 4.62 亿社交媒体用户。在线用户的激增导致网络安全欺诈相应激增。网络安全专家可以利用大数据分析工具来识别、预防和缓解网络攻击，因为这些技术能够处理从不同来源收集的海量数据。本章探讨了可利用大数据分析 (BDA) 识别的网络犯罪。本章的主要目的是让读者全面了解大数据分析 (BDA) 在网络安全领域的应用。同时也旨在让读者了解 BDA 在网络安全应用中的当前进展以及该领域面临的挑战。
 
 ## 引言
 
 网络安全这一关键学科致力于防止未经授权的访问、中断、破坏和窃取电子设备、互联网络和记录 (Mahmood & Afzal, 2013)。在二十一世纪相互互联的数字世界中，网络安全对于保护个人、组织和政府免受各种威胁至关重要 (Apurva, 2017; Alpana, 2021)。在线上，信息持续存储和交换。网络安全主要关注维护机密性、完整性、可用性、真实性和不可抵赖性。
 
-
-
-
-
 ## 大数据与网络安全分析
 
-**大数据** 一词是指极其庞大且复杂的信息汇编，其规模超出了传统数据处理系统分析和有效管理的能力。 **大数据** 由三个 V 定义：速度、容量和多样性 (Mahmood, 2013; Apurva, 2017; Rajsekhar, 2018; Alpana, 2021; Srivastava, 2019; Suraj, 2018)。大数据领域涵盖了大量数据，通常范围从 TB 级到 PB 级。信息可能源自传感器数据、社交媒体互动、商业交易和其他来源。 **速度** 涉及大数据的快速涌现，要求及时管理以便及时提取有价值的见解。以下数据源需要实时或近实时处理：传感器数据、社交媒体流和网站访问流。这些源能够快速生成数据。 **大数据** 可以以多种格式存在，包括非结构化、半结构化和结构化数据。 **非结构化数据** ，如图像、视频和文本文档，不遵循预定义的数据模型； **结构化数据** ，如数据库，组织良好且易于搜索。 **大数据** 存在于所有领域，包括金融、智慧城市、医疗保健、商业与营销以及供应链管理 (Mahmood & Afzal, 2013)。普通人每月平均使用 6.7 个不同的社交网络，到 2024 年底，全球将有 51.7 亿人使用社交媒体 (West, 2024)。到 2028 年，移动广告将为 2024 年预计 2198 亿美元的社交媒体广告支出贡献 2558 亿美元 (West, 2024)。截至 2024 年初，印度有 7.515 亿人上网，占人口的 52.4%。2024 年 1 月，印度有 4.62 亿社交媒体用户 (Kemp, 2024)。
+**大数据** 一词是指极其庞大且复杂的信息汇编，其规模超出了传统数据处理系统分析和有效管理的能力。**大数据** 由三个 V 定义：速度、容量和多样性 (Mahmood, 2013; Apurva, 2017; Rajsekhar, 2018; Alpana, 2021; Srivastava, 2019; Suraj, 2018)。大数据领域涵盖了大量数据，通常范围从 TB 级到 PB 级。信息可能源自传感器数据、社交媒体互动、商业交易和其他来源。**速度** 涉及大数据的快速涌现，要求及时管理以便及时提取有价值的见解。以下数据源需要实时或近实时处理：传感器数据、社交媒体流和网站访问流。这些源能够快速生成数据。**大数据** 可以以多种格式存在，包括非结构化、半结构化和结构化数据。**非结构化数据**，如图像、视频和文本文档，不遵循预定义的数据模型；**结构化数据**，如数据库，组织良好且易于搜索。**大数据** 存在于所有领域，包括金融、智慧城市、医疗保健、商业与营销以及供应链管理 (Mahmood & Afzal, 2013)。普通人每月平均使用 6.7 个不同的社交网络，到 2024 年底，全球将有 51.7 亿人使用社交媒体 (West, 2024)。到 2028 年，移动广告将为 2024 年预计 2198 亿美元的社交媒体广告支出贡献 2558 亿美元 (West, 2024)。截至 2024 年初，印度有 7.515 亿人上网，占人口的 52.4%。2024 年 1 月，印度有 4.62 亿社交媒体用户 (Kemp, 2024)。
 
 ## 大数据网络安全分析
 
-**大数据网络安全分析** 致力于通过实施先进分析技术和大数据技术来增强网络安全运营 (Mahmood & Afzal, 2013)。由于网络威胁在数量、速度和多样性上的激增，传统网络安全措施在征服和最小化复杂的网络攻击方面已被证明极其困难。 **大数据网络安全分析** 通过允许组织实时或近实时地从多个来源收集、处理和评估海量的安全相关数据，为这一问题提供了解决方案 (Mahmood, 2013; Apurva, 2017; Rajsekhar, 2018; Alpana, 2021; Srivastava, 2019; Suraj, 2018)。
+**大数据网络安全分析** 致力于通过实施先进分析技术和大数据技术来增强网络安全运营 (Mahmood & Afzal, 2013)。由于网络威胁在数量、速度和多样性上的激增，传统网络安全措施在征服和最小化复杂的网络攻击方面已被证明极其困难。**大数据网络安全分析** 通过允许组织实时或近实时地从多个来源收集、处理和评估海量的安全相关数据，为这一问题提供了解决方案 (Mahmood, 2013; Apurva, 2017; Rajsekhar, 2018; Alpana, 2021; Srivastava, 2019; Suraj, 2018)。
 
 ## 章节目标
 
@@ -466,7 +400,7 @@ GLS University, India
 
 ## 印度网络犯罪现状
 
-**网络欺诈** 是指利用数字设备、计算机和互联网愚弄个人、组织或政府，以获取钱财或实现其他邪恶目的。 “网络欺诈” 一词包含各种各样的欺诈计谋和手段，这些手段往往利用人性、组织流程或技术中的缺陷 (Mahmood, 2013; Apurva, 2017; Alpana, 2021)。网络犯罪的来源来自于通过商业、金融交易、基于位置的数据、社交媒体等产生的海量数据 (Apurva et al., 2017)。
+**网络欺诈** 是指利用数字设备、计算机和互联网愚弄个人、组织或政府，以获取钱财或实现其他邪恶目的。“网络欺诈” 一词包含各种各样的欺诈计谋和手段，这些手段往往利用人性、组织流程或技术中的缺陷 (Mahmood, 2013; Apurva, 2017; Alpana, 2021)。网络犯罪的来源来自于通过商业、金融交易、基于位置的数据、社交媒体等产生的海量数据 (Apurva et al., 2017)。
 
 国家犯罪记录局 (**NCRB**) 2023 年报告显示，印度各邦总共收到 1,128,265 起网络欺诈投诉 (Cases of Cyber Frauds, 2024)。
 
@@ -474,7 +408,7 @@ GLS University, India
 
 ![979-8-3693-9225-6.ch002.f01](img/979-8-3693-9225-6.ch002.f01.png)
 
-图 1 显示了印度各邦的网络欺诈投诉总数。随着在线数据的增长，网络犯罪将随之增加，这要求开发能够检测数据趋势、防止网络攻击并保护数据的强大网络安全系统。 **BDA** 在网络安全领域的应用有助于增强检测能力，从而降低网络犯罪的发生率。
+图 1 显示了印度各邦的网络欺诈投诉总数。随着在线数据的增长，网络犯罪将随之增加，这要求开发能够检测数据趋势、防止网络攻击并保护数据的强大网络安全系统。**BDA** 在网络安全领域的应用有助于增强检测能力，从而降低网络犯罪的发生率。
 
 ## 当前时代对网络安全的需求
 
@@ -492,14 +426,7 @@ GLS University, India
 
 **网络犯罪** 包括通过使用计算机或互联网实施的非法活动。窃取和分发企业数据、勒索赎金以防止数据丢失、在目标计算机上植入漏洞、入侵企业或政府计算机都是网络犯罪的例子 (Mahmood, 2013; Apurva, 2017; Rajsekhar, 2018; Alpana, 2021; Srivastava, 2019; Suraj, 2018; Rawat, 2021; Alani, 2017)。以下是常见的网络犯罪形式：
 
-*   **恶意软件**：恶意软件的缩写，包含一系列专门设计用于造成损害、干扰或非法进入计算机系统的软件应用程序。 **恶意软件** 包括间谍软件、广告软件、病毒、蠕虫和特洛伊木马等。
-
-
-
-
-
-### 网络犯罪类型
-
+*   **恶意软件**：恶意软件的缩写，包含一系列专门设计用于造成损害、干扰或非法进入计算机系统的软件应用程序。**恶意软件** 包括间谍软件、广告软件、病毒、蠕虫和特洛伊木马等。
 *   **Phishing（网络钓鱼）**：被归类为一种网络犯罪，攻击者通过欺诈性网站、电子邮件或消息，诱导受害者泄露敏感信息（包括财务详情、登录凭证或机密数据）。为了欺骗受害者，网络钓鱼攻击经常伪装成合法组织，如政府机构或机构。
 *   **Identity Theft（身份盗窃）**：为了实施欺诈或冒充他人，攻击者获取受害者的机密信息，如姓名、社会安全号码（SSN）或信用卡详情。网络犯罪分子可能采用多种手段获取这些记录，包括网络钓鱼、数据泄露和社会工程学。
 *   **Data Breaches（数据泄露）**：当恶意行为者非法进入组织或公司的系统并窃取机密数据（包括但不限于财务记录、客户信息或知识产权）时发生。数据窃取可能导致受影响组织遭受声誉损害、财务损失和法律责任。
@@ -534,23 +461,15 @@ GLS University, India
 
 ## 大数据的价值
 
-
-
-
-#### 大数据
+### 大数据
 
 大数据适用于来自多个来源的海量数据的处理、分析和存储。当传统的数据处理、存储和分析手段不足时，大数据方法和解决方案变得至关重要。大数据的核心在于快速发现隐藏信息、分析海量非结构化数据以及整合不相关的数据集。大数据环境从各种来源收集数据，包括内部应用程序、传感器和外部来源。大数据解决方案可为企业应用分析数据，或丰富数据仓库中的现有数据（Erl et al. 2015）。以下关键原因清晰地展示了大数据的价值（Mahmood, 2013; Apurva, 2017; Rajsekhar, 2018; Alpana, 2021; Srivastava, 2019; Suraj, 2018; Erl, 2015）：
 
 *   **知识驱动决策**：组织可以利用大数据分析，基于事实而非猜测或直觉做出明智判断。通过分析来自不同来源的海量数据，组织能够增强对消费者行为、市场趋势和运营低效环节的理解。
-
 *   **提升绩效与生产力**：通过识别流程和运营中的低效环节，大数据分析使组织能够优化工作流、更有效地分配资源并精简运营。这将带来生产力提升、成本节约和效率改善。
-
 *   **深化客户洞察**：大数据分析的应用使组织能够全面了解客户的偏好、行为和需求。企业能够通过分析来自不同渠道的客户数据（如社交媒体互动、网站交易和购买记录），提升客户满意度和忠诚度，定制营销举措，并量身打造产品和服务。
-
 *   **创新与新兴商业前景**：大数据中蕴含的海量信息具有激发创新和创造新商业机会的潜力。通过分析新兴技术、市场趋势和消费者行为，组织可以识别未被满足的需求、开发新产品和服务，并进入新市场。
-
 *   **风险管理与欺诈预防**：大数据分析有助于组织更有效地识别和降低风险。通过实时分析海量数据集，组织能够检测异常、识别潜在安全威胁，并在欺诈发生前将其防范。这在保险、金融和网络安全等行业尤为关键。
-
 *   **医疗与生命科学创新**：大数据分析在医疗和生命科学领域的应用有潜力彻底改变患者护理、药物研发和疾病控制。研究人员可通过分析海量数据集（包括临床试验、基因组数据和患者记录），加速新药和疗法的发现、识别疾病模式，并制定个性化治疗方案。
 
 ## 大数据生命周期
@@ -576,11 +495,8 @@ GLS University, India
 来源：(Hurwitz et al., 2013)
 
 *   **数据源**：第一步是从广泛的来源收集记录，如传感器、数据库、物联网设备、社交媒体等。视情况而定，数据可以是结构化、半结构化或非结构化的。
-
 *   **数据摄取**：收集完成后，必须将数据保存在一个系统中，该系统可以是存储或处理设备。在此步骤中，数据从其原始源传输到存储信息或数据的平台。此类平台的示例包括数据仓库、数据湖或分布式文件系统 (DFS)。在“数据存储”阶段，获取的信息保存在适合该目的的存储系统中。这可能包含分布式文件系统，如 NoSQL 数据库、`HDFS` (Hadoop 分布式文件系统)、基于云的存储服务、数据仓库、`Amazon S3` 或 `Google Cloud Storage`。
-
 *   **数据处理**：数据存储后，将对其进行处理以获取见解和有用信息。在此步骤中，会使用各种数据处理方法，如数据修改、数据清洗、数据增强、数据分组和数据统一。根据情况需求，信息可实时、批量或流式处理。
-
 *   **数据可视化**：数据分析结果通常通过图表、仪表盘、图形和其他工具进行展示。此阶段包括数据呈现。
 
 ## 大数据来源
@@ -588,7 +504,6 @@ GLS University, India
 大数据可从广泛的来源收集，包括传统的结构化数据库，以及社交媒体平台信息流和传感器监控数据等非结构化来源。以下是一些常用的海量数据来源（Mahmood, 2013; Apurva, 2017; Rajsekhar, 2018; Alpana, 2021; Srivastava, 2019; Suraj, 2018）：
 
 *   **事务数据**：通过公司交易创建的数据，如销售记录、发票和客户联系，称为事务数据源。通常存储在关系型数据库或数据仓库中。
-
 
 
 
@@ -616,7 +531,7 @@ GLS University, India
 
 ## 大数据分析概述
 
-大数据分析（BDA）是一个研究领域，专注于从海量数据集中提取价值，特别是主要的、先前隐含的、未披露的以及潜在有用的洞察。这些发现直接影响当前公司计划的制定或调整，并作为通常被称为“以数据驱动决策”项目的驱动力。据推测，大量数据中包含可单独识别的使用模式、事件或行为。为了将数学模型应用于这些模式，会使用 BDA 和各种其他数据挖掘方法，如聚类分析、处方分析和关联规则挖掘。应用这些方法时，获得的发现通常显示在交互式仪表板上。这些仪表板帮助企业保持竞争优势、增加收入并改善客户关系管理（Mahmood, 2013; Apurva, 2017; Rajsekhar, 2018; Alpana, 2021; Srivastava, 2019; Suraj, 2018)。
+大数据分析（BDA）是一个研究领域，专注于从海量数据集中提取价值，特别是主要的、先前隐含的、未披露的以及潜在有用的洞察。这些发现直接影响当前公司计划的制定或调整，并作为通常被称为“以数据驱动决策”项目的驱动力。据推测，大量数据中包含可单独识别的使用模式、事件或行为。为了将数学模型应用于这些模式，会使用 BDA 和各种其他数据挖掘方法，如聚类分析、处方分析和关联规则挖掘。应用这些方法时，获得的发现通常显示在交互式仪表板上。这些仪表板帮助企业保持竞争优势、增加收入并改善客户关系管理（Mahmood, 2013; Apurva, 2017; Rajsekhar, 2018; Alpana, 2021; Srivastava, 2019; Suraj, 2018）。
 
 ### 图 4. 大数据分析流程
 
@@ -640,9 +555,6 @@ GLS University, India
 
 诊断性分析的目标是通过聚焦于事件原因的询查，确定过去现象的根本原因。这种分析的目标是确定与现象相关的信息，以回答旨在查明发生原因的问题。虽然诊断性分析比描述性分析更有用，但也要求更复杂的技能组合。通常，诊断性分析需要从各种来源获取数据，并将其存储在便于下钻和上卷分析的格式中。诊断性分析的结果通过便于检测趋势和模式的交互式可视化技术交付给用户。
 
-
-
-
 ## 大数据中的预测分析与规范分析
 
 ### 预测分析
@@ -658,15 +570,25 @@ GLS University, India
 为了应对现代技术产生的数据洪流，BDA 方法和技术已取得长足进步。以下列出了一些工具和技术（Srivastav, 2019; Arya, 2017; Rassam, 2017; Raju, 2016; Quinto, 2018）：
 
 *   **Hadoop**：`Hadoop` 由 Apache 开发，是一个用于在分布式计算环境中存储和分析海量信息的免费开源平台。其两个主要部分是用于存储数据的 `Hadoop Distributed File System (HDFS)` 和用于处理该数据的 `Map Reduce` 编程模型。
+
 *   **Spark**：`Apache Spark` 提供内存数据处理能力，是一个快速的通用集群计算系统。它提供的应用仅举几例就包括批处理、图处理、机器学习和实时流处理。
+
 *   **NoSQL 数据库**：`NoSQL` 数据库（如 `Cassandra`、`Couchbase` 和 `MongoDB`）可轻松管理海量的半结构化或非结构化数据。由于其灵活性和可扩展性，它们非常适合大数据分析应用。
+
 *   **Apache Kafka**：`Apache Kafka` 是一个分布式流式平台，是开发流式应用和实时数据管道的热门工具。它使得在海量数据流被摄取后能够对其进行实时分析。
+
 *   **Apache Flink**：借助 `Apache Flink` 这一流处理框架，可对连续数据流进行低延迟、高吞吐量的处理。它支持有状态计算、精确一次语义和事件时间处理。
+
 *   **Apache Hive**：`Apache Hive` 是一个基于 `Hadoop` 的数据仓库引擎，允许用户使用类 `SQL` 的接口查询和分析存储在 `Hadoop Distributed File System (HDFS)` 中的海量数据集。
+
 *   **Apache HBase**：`Apache HBase` 是一个基于 `Hadoop` 的 `NoSQL` 数据库，具有分布式、可扩展和一致性的特点。凭借对 `HDFS` 数据的随机读/写访问，它能轻松管理包含数十亿行的海量表。
+
 *   **Apache Storm**：对于连续数据流的处理和分析，可使用 `Apache Storm` 这一分布式实时流处理系统。它有助于以最低延迟处理数据，并具备容错能力。
+
 *   **Apache Drill**：`Apache Drill` 促进了对来自 `Hadoop`、`NoSQL` 数据库和云存储等众多数据源的海量数据集进行交互式分析。`Drill` 是一个分布式 `SQL` 查询引擎。
+
 *   **机器学习库**：`Tensor Flow`、`scikit-learn` 和 `PyTorch` 等库为在大数据集上创建和部署机器学习模型提供了强大工具。这些库与 `Spark` 及其他大数据 (`BD`) 系统兼容，支持分布式推理和训练。
+
 *   **数据可视化工具**：`Tableau`、`Power BI` 和 `Apache Super Set` 只是数据可视化工具的几个例子，它们允许用户构建交互式仪表板和可视化图表，以在海量数据集中发现并共享洞见。
 
 ## 网络安全中对大数据分析的需求
@@ -680,33 +602,34 @@ BDA 已被积极研究并应用于各个业务领域，随着网络日益复杂�
 网络犯罪的检测和预防高度依赖 `BDA`，它帮助企业从各种来源收集、评估海量数据并得出结论。以下是大数据分析在网络犯罪检测中的一些应用示例（Mahmood, 2013; Apurva, 2017; Rajsekhar, 2018; Alpana, 2021; Srivastava, 2019; Suraj, 2018; Arya, 2017; Rassam, 2017; Rawat,2021; Alani,2021; Angin, 2019）：
 
 *   **异常检测**：大数据分析算法可分析网络流量、系统日志和用户活动数据以检测异常，这些异常可能是网络攻击的迹象。如果企业建立基线行为模式并监控偏离这些模式的变化，就能更快地发现安全问题。
+
 *   **网络攻击趋势与模式识别**：机器学习、数据挖掘 (`DM`) 和其他大数据分析工具可以识别网络攻击策略和战术中的趋势和模式。组织可通过回顾过去的攻击数据并寻找趋势，提高预见和应对网络攻击的能力。
+
 *   **行为分析**：通过使用 `BDA`，企业可分析用户行为并发现可疑模式，如非法访问尝试、数据渗出或权限提升。通过跨多个平台和应用跟踪用户活动，可检测出公司内部威胁和被攻陷的账户。
+
 *   **威胁情报整合**：为了发现新的漏洞和威胁，`BDA` 系统可摄取并处理来自多种来源的数据，如威胁情报源和暗网。组织可通过将内部安全数据与外部威胁信息进行比对以检测渗透迹象，从而主动防御和保护自己免受网络攻击。
 
-
-
-
-
 ### 事件关联
+
 为了发现潜在的安全问题，大数据分析技术可以关联来自多个来源的安全警报和事件，包括防火墙、入侵检测系统和端点安全解决方案。通过整合和关联来自多个来源的数据，组织可以改进响应工作的优先级排序并减少误报。
 
 ### 取证调查
+
 通过检查海量的日志数据、网络流量和系统工件，大数据分析使企业能够对安全事件进行取证调查。企业为调查和法律行动做准备的最佳方式是重现攻击场景并确定导致安全漏洞的原因。
 
 ### 实时监控与响应
+
 借助 BDA 系统的实时监控和分析能力，组织可以实时识别网络威胁并做出反应。为了防止安全问题恶化，企业可以使用流处理和实时分析。
 
 ### 预测性分析
+
 将 BDA 应用于预测性分析，可以利用模式和历史数据来预测未来的网络危险和漏洞。网络威胁缓解措施可以按优先级排序，未来的攻击场景可以被预测，从而使企业能够采取主动防御立场。
 
 大数据分析用于检测各种网络攻击，如恶意软件感染、网络钓鱼攻击、DoS 和 DDoS 攻击、内部威胁、勒索软件攻击、SQL 注入攻击、暴力破解攻击、零日攻击、加密劫持攻击、社会工程学攻击等。大数据分析使企业能够分析海量数据、发现趋势和异常、整合威胁情报、进行取证分析并实时响应安全事件，所有这些都对网络犯罪的检测有重要贡献。组织可以通过利用大数据分析的力量来强化其网络安全防御，保护自己免受各种网络威胁。
 
 ## 相关工作
+
 大规模数据的实时分析对于网络安全（CS）而言始终是一个重大问题。多年来，针对该问题已开展了大量研究。本节讨论了迄今为止关于 BDA 开展的不同研究。
-
-
-
 
 This paper emphasizes the problems faced by the cybersecurity domain in the context of big data (Mahmood & Afzal, 2013). The authors argue that security analytics—i.e., using big data analytics techniques to extract valuable information from streams in real-time—is becoming an increasingly important requirement for cybersecurity systems. This paper thoroughly examines the state of the art of security analytics, including its description, tools, techniques, and trends, aiming to convince the reader that analytics will soon become the supreme cybersecurity solution.
 
@@ -716,42 +639,45 @@ The literature (Rajsekhar & Pawan, 2018) highlights the cutting-edge difficultie
 
 The literature (Alpana, 2021) highlights some applications of big data technology in cybersecurity in the digital age. It proposes a theoretical framework based on the TAM model, stating that the deployment of big data technology in cybersecurity depends on its ease of use and usefulness. A qualitative research method is subsequently adopted to evaluate materials from credible sources.
 
-The literature (Srivastava & Umesh, 2019) examines the significance of big data, various definitions of big data security and privacy, the value of secured big data analytics, various obstacles in BDA, and privacy concerns in BDA.
-
-The literature (Suraj et al., 2018) examines various types of attacks on big data, its storage mechanisms, and real-time analytics methods. The study also covers various social network attacks.
-
-The literature (Arya & Dayanand, 2017) examines the significance of big data and cybersecurity, various big data technologies, and the utility of big data analytics in the cybersecurity domain.
-
-The literature (Rassam et al., 2017) examines traditional systems/techniques and Security Information and Event Management Tools (`SIEMT`), arguing their inadequacy in addressing advanced sophisticated threats and massive data volumes. It also delves into the prerequisites for the successful implementation of big data analytics and cyber threat intelligence in the cybersecurity domain to counter sophisticated threats and high data volumes. Furthermore, it highlights obstacles arising from the adoption of this technology and provides some recommendations for future research to overcome these obstacles.
-
-The literature (He et al., 2019) discusses the retrieval of papers related to big data cyber applications using third-party databases. Subsequently, using `Citespace` and other bibliometric methods, a co-citation analysis and co-word analysis of these papers were conducted. The survey indicates that big data technology is widely used in cyberspace, and its scope and complexity of implementation are expanding every year.
-
-The literature (Rawat et al., 2021) examines current research work in the cybersecurity domain in the context of big data. It also highlights measures to secure big data and its potential as a cybersecurity tool. The document briefly summarizes current research findings in tabular form, highlighting emerging patterns, unresolved research questions, and issues requiring further investigation. It aims to provide the reader with a comprehensive understanding of cybersecurity in the big data era, covering the latest research trends and unresolved puzzles in this dynamic field.
-
-The literature (Alani, 2021) comprehensively evaluates the application of BDA in developing, upgrading, or countering cybersecurity systems. It examines cutting-edge research on various applications of big data in cybersecurity. Applications are categorized into anomaly detection and intrusion, malware detection, spam and deception detection, ransomware detection, cloud security, code security, and another category investigating other research directions in big data and cybersecurity.
-
-The literature (Angin et al., 2019) explores the significance of big data and cybersecurity, as well as the significance of BDA in the cybersecurity domain, asserting that the demand for BDA will inevitably increase in the future.
-
-The literature (Romil et al., 2023) indicates that evolving challenges and risks facing big data security have rendered traditional approaches obsolete, calling for a new intelligent framework to address the issue. The authors conduct a comprehensive examination of the big data protection literature review domain to better grasp the current state. Using Machine Learning (`ML`) methods, they propose an integrated solution for large-scale data encryption.
-
-The literature (Nwobodo, 2024) explores the necessity of improving cybersecurity measures to protect sensitive data and safeguard the reliability of digital infrastructure in an era defined by massive data generation and advanced analytics methods. The paper also concludes that in the era of big data and sophisticated analytics, better cybersecurity policies are needed to protect critical digital assets and maintain trust in digital ecosystems. To mitigate cyber risks and fully leverage big data for sustained growth and innovation, enterprises should implement data governance frameworks and use state-of-the-art analytics tools.
-
-The literature (Tank & Chaubey, 2020) investigates cybersecurity risks and solutions in the context of cloud computing from a virtualization perspective. The authors also introduce the creation process of a `Flush+Flush` cache attack detection method based on its unique virtualization environment.
-
-The literature (Jani & Chaubey, 2020) acquires a basic understanding of the Internet of Things (`IoT`), identifies various types of risks that may invade IoT systems, and takes measures to limit the impact of such attacks.
-
-Table 1 presents a comparison of the application of BDA in the cybersecurity domain. The papers are compared based on the following three factors:
-
-*   Paper objective
-*   Challenges faced by BDA
-*   Future rating of BDA application in cybersecurity
-
-#### Table 1. Comparison of BDA Usage in Cybersecurity
 
 
+# 文献综述
 
+## 相关研究
 
-## 文献综述表
+文献 (Srivastava & Umesh, 2019) 探讨了大数据的重要性、大数据安全与隐私的各种定义、安全大数据分析的价值、BDA 面临的各种障碍以及 BDA 中的隐私问题。
+
+文献 (Suraj et al., 2018) 探讨了针对大数据的各类攻击、其存储机制以及实时分析方法。该研究还涵盖了各种社交网络攻击。
+
+文献 (Arya & Dayanand, 2017) 探讨了大数据与网络安全的重要性、各种大数据技术，以及大数据分析在网络安全领域的效用。
+
+文献 (Rassam et al., 2017) 探讨了传统系统/技术和安全信息与事件管理工具 (`SIEMT`)，论证了它们在应对高级复杂威胁和海量数据量方面的不足。它还深入探讨了在网络安全领域成功实施大数据分析和网络威胁情报的先决条件，以应对复杂威胁和高数据量。此外，它还强调了采用该技术产生的障碍，并提供了一些未来研究建议以克服这些障碍。
+
+文献 (He et al., 2019) 讨论了使用第三方数据库检索与大数据网络应用相关的论文。随后，使用 `Citespace` 和其他文献计量方法，对这些论文进行了共引分析和共词分析。调查表明，大数据技术广泛应用于网络空间，其实施范围和复杂性每年都在扩大。
+
+文献 (Rawat et al., 2021) 在大数据背景下探讨了网络安全领域的当前研究工作。它还强调了保护大数据的措施及其作为网络安全工具的潜力。该文档以表格形式简要总结了当前的研究发现，突出了新兴模式、未解决的研究问题以及需要进一步调查的问题。其旨在为读者提供对大数据时代网络安全的全面理解，涵盖该动态领域的最新研究趋势和未解之谜。
+
+文献 (Alani, 2021) 全面评估了 BDA 在开发、升级或对抗网络安全系统中的应用。它探讨了大数据在网络安全中各种应用的前沿研究。应用被分类为异常检测与入侵、恶意软件检测、垃圾邮件与欺骗检测、勒索软件检测、云安全、代码安全，以及另一类探讨大数据与网络安全其他研究方向的类别。
+
+文献 (Angin et al., 2019) 探讨了大数据与网络安全的重要性，以及 BDA 在网络安全领域的重要性，断言未来对 BDA 的需求必将增加。
+
+文献 (Romil et al., 2023) 指出，大数据安全面临的不断演变的挑战和风险已使传统方法过时，呼吁建立新的智能框架来解决该问题。作者对大数据保护文献综述领域进行了全面考察，以更好地掌握现状。使用机器学习 (`ML`) 方法，他们提出了一个用于大规模数据加密的集成解决方案。
+
+文献 (Nwobodo, 2024) 探讨了在大规模数据生成和高级分析方法定义的时代，改进网络安全措施以保护敏感数据和保障数字基础设施可靠性的必要性。论文还得出结论：在大数据和复杂分析时代，需要更好的网络安全政策来保护关键数字资产并维持对数字生态系统的信任。为了减轻网络风险并充分利用大数据实现持续增长和创新，企业应实施数据治理框架并使用最先进的分析工具。
+
+文献 (Tank & Chaubey, 2020) 从虚拟化角度探讨了云计算背景下的网络安全风险和解决方案。作者还介绍了基于其独特虚拟化环境创建 `Flush+Flush` 缓存攻击检测方法的过程。
+
+文献 (Jani & Chaubey, 2020) 获取了对物联网 (`IoT`) 的基本理解，识别了可能入侵 IoT 系统的各类风险，并采取措施限制此类攻击的影响。
+
+## BDA 在网络安全中应用的比较
+
+表 1 展示了 BDA 在网络安全领域应用的比较。论文基于以下三个因素进行比较：
+
+*   论文目的
+*   BDA 面临的挑战
+*   BDA 在网络安全中应用的未来展望
+
+### 表 1. 网络安全中 BDA 使用情况的比较
 
 | Paper | Purpose | Challenges with BDA | Future Scope of Using BDA in Cyber Security |
 | --- | --- | --- | --- |
@@ -770,7 +696,7 @@ Table 1 presents a comparison of the application of BDA in the cybersecurity dom
 
 ## 结论
 
-随着社交媒体用户数量的快速增长，网络欺诈的发生率也随之上升。为了在网络攻击者之前保持领先，BDA 技术将在检测、预防和缓解网络犯罪方面发挥关键作用。各种形式的大数据分析（BDA）已被证明在理解趋势、发掘新型漏洞和威胁方面行之有效。尽管在网络安全中使用大数据分析（BDA）面临诸多挑战，但它具有巨大的未来增长和发展潜力。
+随着社交媒体用户数量的快速增长，网络欺诈的发生率也随之上升。为了在网络攻击者之前保持领先，BDA 技术将在检测、预防和缓解网络犯罪方面发挥关键作用。各种形式的大数据分析 (BDA) 已被证明在理解趋势、发掘新型漏洞和威胁方面行之有效。尽管在网络安全中使用大数据分析 (BDA) 面临诸多挑战，但它具有巨大的未来增长和发展潜力。
 
 ## 参考文献
 
@@ -784,25 +710,23 @@ Aviral Apurva, Pranshu Ranakoti, Yadav, S., Tomer, S., & Nihar Ranjan Roy. (2017
 
 Arya, D. (2017). Big data Analytics in Cyber Security. International Journal of Engineering Research & Technology (Ahmedabad), 5(10).
 
-Buyuaa, R., & Calheiros, R. N. (2016). Big Data Principles and Paradigms (1st ed.). Elsevier.
-
-Cases of Cyber Frauds. (2024). Pib.gov.in. [`https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2003158`](https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2003158)
-
-Erl, T., Khattak, W., & Buhler, P. (2015). Big data fundamentals: Concepts, drivers & techniques. Prentice Hall.
-
-He, J., Xian, M., & Liu, J. (2019). The Application of big Data in cyberspace: A Survey. In International Conference on Communications, Information System and Computer Engineering e (pp. 570–574). IEEE Xplore. DOI: [`10.1109/CISCE.2019.00132`](http://dx.doi.org/10.1109/CISCE.2019.00132)
-
-Hurwitz, J. Alan Nugent, & Dr. Fern Halper. (2013). Big Data For Dummies (1st ed.). Wiley.
 
 
+# 参考文献
 
+Buyuaa, R., & Calheiros, R. N. (2016). *Big Data Principles and Paradigms* (1st ed.). Elsevier.
 
+Cases of Cyber Frauds. (2024). *Pib.gov.in*. [`https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2003158`](https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2003158)
 
-## 参考文献
+Erl, T., Khattak, W., & Buhler, P. (2015). *Big data fundamentals: Concepts, drivers & techniques*. Prentice Hall.
 
-Jani, K. A., & Chaubey, N. (2020). IoT and Cyber Security: Introduction, Attacks, and Preventive Steps. In Chaubey, N., & Prajapati, B. (Eds.), *Quantum Cryptography and the Future of Cyber Security* (pp. 203–235). IGI Global. DOI: [`10.4018/978-1-7998-2253-0.ch010`](http://dx.doi.org/10.4018/978-1-7998-2253-0.ch010)
+He, J., Xian, M., & Liu, J. (2019). The Application of big Data in cyberspace: A Survey. In *International Conference on Communications, Information System and Computer Engineering* (pp. 570–574). IEEE Xplore. DOI: [`10.1109/CISCE.2019.00132`](http://dx.doi.org/10.1109/CISCE.2019.00132)
 
-Kemp, S. (2024, February 20). Digital 2024: India — DataReportal – Global Digital Insights. *DataReportal – Global Digital Insights*. [`https://datareportal.com/reports/digital-2024-india`](https://datareportal.com/reports/digital-2024-india#:~:text=The%20state%20of%20digital%20in%20India%20in%202024&text=There%20were%20751.5%20million%20internet,percent%20of%20the%20total%20population)
+Hurwitz, J., Alan Nugent, & Dr. Fern Halper. (2013). *Big Data For Dummies* (1st ed.). Wiley.
+
+Jani, K. A., & Chaubey, N. (2020). IoT and Cyber Security: Introduction, Attacks, and Preventive Steps. In N. Chaubey & B. Prajapati (Eds.), *Quantum Cryptography and the Future of Cyber Security* (pp. 203–235). IGI Global. DOI: [`10.4018/978-1-7998-2253-0.ch010`](http://dx.doi.org/10.4018/978-1-7998-2253-0.ch010)
+
+Kemp, S. (2024, February 20). Digital 2024: India — DataReportal – Global Digital Insights. *DataReportal – Global Digital Insights*. [`https://datareportal.com/reports/digital-2024-india`](https://datareportal.com/reports/digital-2024-india)
 
 M. V., Nikhil Kumar Singh, & Deepak Singh Tomar. (2018). Big data Analytics of cyber attacks: a review. *2018 IEEE International Conference on System, Computation, Automation and Networking (ICSCA)*. DOI: [`10.1109/ICSCAN.2018.8541263`](http://dx.doi.org/10.1109/ICSCAN.2018.8541263)
 
@@ -810,7 +734,7 @@ Mahmood, T., & Afzal, U. (2013). Security Analytics: Big Data Analytics for cybe
 
 Nwobodo, N. L. K., Nwaimo, N. C. S., & Adegbola, N. E. (2024). Enhancing cybersecurity protocols in the era of big data and advanced analytics. *GSC Advanced Research and Reviews*, 19(3), 203–214. DOI: [`10.30574/gscarr.2024.19.3.0211`](http://dx.doi.org/10.30574/gscarr.2024.19.3.0211)
 
-Quinto, B. (2018, June 12). *Next-Generation Big Data*. Apress. [`http://books.google.ie/books?id=teZfDwAAQBAJ`](http://books.google.ie/books?id=teZfDwAAQBAJ&printsec=frontcover&dq=Next-Generation+Big+Data&hl=&cd=1&source=gbs_api)
+Quinto, B. (2018, June 12). *Next-Generation Big Data*. Apress. [`http://books.google.ie/books?id=teZfDwAAQBAJ`](http://books.google.ie/books?id=teZfDwAAQBAJ)
 
 Rao, N. R., & Pandey, P. K. (2018). Security Analytics: Big Data Analytics for Cybersecurity A Review of Trends, Techniques and Tools. *IJCRT*, 6(1), 579-584. [`https://www.ijcrt.org/papers/IJCRT1802412.pdf`](https://www.ijcrt.org/papers/IJCRT1802412.pdf)
 
@@ -822,7 +746,7 @@ Rawat, R., Oki, O. A., Sankaran, K. S., Olasupo, O., Ebong, G. N., & Ajagbe, S. 
 
 Srivastava, N., & Chandra Jaiswal, U. (2019). Big Data Analytics Technique in Cyber Security. *RE:view*, 579–585. Advance online publication. DOI: [`10.1109/ICCMC.2019.8819634`](http://dx.doi.org/10.1109/ICCMC.2019.8819634)
 
-Tank, D. M., Aggarwal, A., & Chaubey, N. K. (2020). Cyber Security Aspects of Virtualization in Cloud Computing Environments: Analyzing Virtualization-Specific Cyber Security Risks. In Chaubey, N., & Prajapati, B. (Eds.), *Quantum Cryptography and the Future of Cyber Security* (pp. 283–299). IGI Global. DOI: [`10.4018/978-1-7998-2253-0.ch013`](http://dx.doi.org/10.4018/978-1-7998-2253-0.ch013)
+Tank, D. M., Aggarwal, A., & Chaubey, N. K. (2020). Cyber Security Aspects of Virtualization in Cloud Computing Environments: Analyzing Virtualization-Specific Cyber Security Risks. In N. Chaubey & B. Prajapati (Eds.), *Quantum Cryptography and the Future of Cyber Security* (pp. 283–299). IGI Global. DOI: [`10.4018/978-1-7998-2253-0.ch013`](http://dx.doi.org/10.4018/978-1-7998-2253-0.ch013)
 
 West, C., & West, C. (2024, April 26). 50+ Must-know social media marketing statistics for 2024. *Sprout Social*. [`https://sproutsocial.com/insights/social-media-statistics/`](https://sproutsocial.com/insights/social-media-statistics/)
 
@@ -850,13 +774,9 @@ PBMEIT，印度
 
 由于多种原因，网络安全现在比以往任何时候都更加关键。数字化程度和互联网连接的不断提高、网络威胁形势的演变、对技术的过度依赖、数据价值的日益增长、国家支持的网络攻击、网络犯罪即服务的出现，以及缺乏网络安全意识，可能是造成这一现象的关键原因。考虑到这些原因，组织，尤其是大型企业，正在投入大量资源来保护其数据、系统和基础设施，以改善其网络安全措施。全球网络安全市场预计将经历显著增长，从 2021 年估计的 1904 亿美元扩大至 2028 年预计的 2985 亿美元，在预测期内的复合年增长率（`CAGR`）为 9.4%（Markets & Markets, 2024）。个人也越来越重视网络安全，并采取主动措施保护其数据和设备。
 
-区块链等新兴技术为构建可靠且网络安全的基础设施提供了革命性方法，帮助组织实现韧性。区块链因其固有特性而闻名，为增强数字安全提供了坚实基础。德勤的一项调查发现，大多数受访者（58%）表示，网络安全是影响其整体区块链或数字资产相关战略的几个问题之一（Deloitte, 2020）。根据另一项调查，基于区块链的安全信息交换是 45%受访者的首要用例（Deloitte, 2021）。
+区块链等新兴技术为构建可靠且网络安全的基础设施提供了革命性方法，帮助组织实现韧性。区块链因其固有特性而闻名，为增强数字安全提供了坚实基础。德勤的一项调查发现，大多数受访者（58%）表示，网络安全是影响其整体区块链或数字资产相关战略的几个问题之一（Deloitte, 2020）。根据另一项调查，基于区块链的安全信息交换是 45% 受访者的首要用例（Deloitte, 2021）。
 
 ## 章节大纲
-
-
-
-
 
 ## 简介
 
@@ -874,7 +794,7 @@ PBMEIT，印度
 
 去中心化是区块链所提供功能的核心。这一特性有助于将数据存储在区块中。出于优化原因，每个区块会等待足够的数据，并打包大量数据（例如打包多笔交易），然后才完成区块并将其广播到区块链网络。这种架构不同于传统的中心化系统。如图 1 所示，典型的区块链区块包含一个区块头（带有时间戳）、要存储的实际数据（例如一组或一批交易）以及前一个区块的加密哈希值。区块相互连接形成一条链。网络参与者（称为节点）验证区块。节点确保数据不可变且无法被篡改（Tripathi 等，2023）。
 
-### 图 1. 区块链中的区块结构
+#### 图 1. 区块链中的区块结构
 
 ![979-8-3693-9225-6.ch003.f01](img/979-8-3693-9225-6.ch003.f01.png)
 
@@ -886,7 +806,7 @@ PBMEIT，印度
 
 矿工（指网络节点组）将这些交易打包进一个区块并加上时间戳。然后使用共识机制挖掘该区块，并将其集成到网络中。图 2 展示了区块链的工作流程。
 
-### 图 2. 区块链网络的工作流程
+#### 图 2. 区块链网络的工作流程
 
 ![979-8-3693-9225-6.ch003.f02](img/979-8-3693-9225-6.ch003.f02.png)
 
@@ -906,16 +826,16 @@ PBMEIT，印度
 
 | 共识协议名称 | 节点机制 |
 | --- | --- |
+
+
+
 | 工作量证明（`PoW`） | 节点相互竞争以解决复杂的数学问题。获胜节点将获得授权交易并在区块链中创建新区块的权力。 |
+| --- | --- |
 | 权益证明（`PoS`） | 节点根据需求用于验证交易和创建新区块。然而，这一权力是基于其持有的加密货币数量授予的。 |
 | 实用拜占庭容错（`PBFT`） | 它使用固定数量的节点达成一致。即使发现某些节点是恶意的或已失效，节点仍会被选中。 |
 | `Raft` | 一种无领导者的共识协议，利用大多数节点达成共识。 |
 | `Paxos` | 一种为分布式系统设计的共识协议，其中节点可能失效或经历延迟。 |
 | 委托权益证明（`DPoS`） | 只有少数节点通过投票过程被选为验证者，并拥有更高的机会获得添加节点的权力。 |
-
-
-
-
 
 ### 权威证明
 
@@ -937,9 +857,9 @@ PBMEIT，印度
 
 **去中心化治理与安全：** 去中心化、真实性、一致性和假名性是区块链的核心特征（Schlatt et al., 2023）。这些特征增强了现有安全网络的安全强度。由于去中心化架构，数据副本分布在各个节点上。这使得数据篡改比现有解决方案困难得多（或不可能）。采用传统机制存储的数据容易被攻破，因为它们依赖单一受信机构进行验证和存储加密数据（Taylor et al., 2020）。这一特性有助于数字证书管理的网络安全背景，从而提高在线交易和通信的安全性。然而，尽管有这些增强，应注意到这些只能部分替代现有的网络安全解决方案。
 
-**免疫 DDoS 攻击：** 区块链的去中心化特性和存储主要是公开的，且能抵御分布式拒绝服务（DDoS）攻击。DDoS 攻击的性质是通过洪水般的互联网流量来破坏可用服务。传统的 DDoS 攻击难以控制，因为它们来自多个来源。然而，由于分布式架构，不存在单点故障，使区块链网络对 DDoS 攻击具有免疫力（Rodrigues et al., 2017）。此外，区块链交易由网络中的多个节点验证。这使得攻击者很难用虚假交易淹没网络并使系统不堪重负。
+**免疫 DDoS 攻击：** 区块链的去中心化特性和存储主要是公开的，且能抵御分布式拒绝服务（`DDoS`）攻击。`DDoS` 攻击的性质是通过洪水般的互联网流量来破坏可用服务。传统的 `DDoS` 攻击难以控制，因为它们来自多个来源。然而，由于分布式架构，不存在单点故障，使区块链网络对 `DDoS` 攻击具有免疫力（Rodrigues et al., 2017）。此外，区块链交易由网络中的多个节点验证。这使得攻击者很难用虚假交易淹没网络并使系统不堪重负。
 
-以太坊网络在 2017 年曾遭受 DDoS 攻击。然而，攻击未遂，网络能够继续正常运行。这证明了区块链技术对 DDoS 攻击的韧性。
+以太坊网络在 2017 年曾遭受 `DDoS` 攻击。然而，攻击未遂，网络能够继续正常运行。这证明了区块链技术对 `DDoS` 攻击的韧性。
 
 **数据篡改与欺诈：** 传统的中心化数据存储行为产生安全问题，且容易遭受数据篡改。然而，区块链技术防篡改，因为它除了分布式架构外还使用了密码学（Zhang & Chen, 2019）。
 
@@ -959,7 +879,7 @@ PBMEIT，印度
 
 ### 透明度与信任
 
-区块链技术是开创性的网络安全力量，促进透明度、安全性和信任。公有链、私有链和联盟链目前是流行的区块链类型。在公有链中，账本的可见性对所有成员开放，因为每个人都可以查看同一个账本。在联盟链和私有链中，只有群组成员可以查看。使用区块链账本确保数据绝不能被篡改或破坏（Leteane & Ayalew, 2024）。区块链技术因其防篡改、不可变和去中心化的特性，能威慑 DDoS 和 DoS 等网络安全攻击。它无意中促进了网络参与者之间的信任，通过共识机制保护数据（Hasan et al., 2024）
+区块链技术是开创性的网络安全力量，促进透明度、安全性和信任。公有链、私有链和联盟链目前是流行的区块链类型。在公有链中，账本的可见性对所有成员开放，因为每个人都可以查看同一个账本。在联盟链和私有链中，只有群组成员可以查看。使用区块链账本确保数据绝不能被篡改或破坏（Leteane & Ayalew, 2024）。区块链技术因其防篡改、不可变和去中心化的特性，能威慑 `DDoS` 和 `DoS` 等网络安全攻击。它无意中促进了网络参与者之间的信任，通过共识机制保护数据（Hasan et al., 2024）
 
 ### 面向企业的区块链安全
 
@@ -967,20 +887,17 @@ PBMEIT，印度
 
 包含敏感信息（如密码、身份和关键组织数据）的数据必须始终得到保护，无论处于静止、处理中还是传输中。必须在所有阶段保护此数据免受威胁行为者的未经授权的更改或篡改。因此，维护数据完整性是一项必要且复杂的工作。凭借其不可变账本和安全交易，区块链技术是一个全面的解决方案，在加强安全性和隐私的同时维护数据完整性。
 
-
-
-
 区块链仅允许添加数据。一旦成功添加，若无参与者共识，数据无法被移除、删除或修改。这是因为区块链中的每个区块都包含前一个区块的哈希值。因此，区块链在密码学上是相互关联的。试图修改一个区块将需要修改所有后续区块，这在计算上是不可行的。区块链的这一特性被称为**不可变性**，适用于数据完整性和安全性至关重要的场景。它有助于组织简化决策流程，并提升信任度与透明度。区块链的加密特性增强了数据完整性。其与进一步网络安全措施的集成对于保护信息和确保充分的数据治理至关重要（Salagrama et al., 2023）。
 
 ### 身份治理与验证
 
-考虑到每个人都需要数字身份来验证身份、访问资源并领取权威机构提供的福利，身份与访问管理（IAM）变得至关重要。典型示例包括美国的社会安全号码（SSN）、英国的政府网关、新加坡的 SingPass 以及印度的 Aadhaar 卡等唯一身份系统。该系统允许我们：
+考虑到每个人都需要数字身份来验证身份、访问资源并领取权威机构提供的福利，身份与访问管理（`IAM`）变得至关重要。典型示例包括美国的社会安全号码（`SSN`）、英国的政府网关、新加坡的 `SingPass` 以及印度的 `Aadhaar` 卡等唯一身份系统。该系统允许我们：
 
 1.  证明公民身份
 2.  进行数字认证
 3.  允许公民访问各类服务
 
-研究表明，当前的 IAM 系统缺乏足够的安全措施。现有的系统通常不足以抵御迫在眉睫的网络威胁。这引发了担忧，使其容易遭受身份盗窃和信息滥用。在未经用户明确同意的情况下与外部服务提供商共享数据，引发了对现有同意机制是否充分的质疑。基于区块链的身份管理系统的去中心化特性为应对这些挑战提供了稳健的解决方案。区块链提供了增强的安全性、隐私性和用户控制权，使其成为安全高效管理数字身份的有前景的替代方案（Agarkar et al., 2024）。
+研究表明，当前的 `IAM` 系统缺乏足够的安全措施。现有的系统通常不足以抵御迫在眉睫的网络威胁。这引发了担忧，使其容易遭受身份盗窃和信息滥用。在未经用户明确同意的情况下与外部服务提供商共享数据，引发了对现有同意机制是否充分的质疑。基于区块链的身份管理系统的去中心化特性为应对这些挑战提供了稳健的解决方案。区块链提供了增强的安全性、隐私性和用户控制权，使其成为安全高效管理数字身份的有前景的替代方案（Agarkar et al., 2024）。
 
 ### 不可变性与可信度
 
@@ -1022,8 +939,6 @@ PBMEIT，印度
 
 ### 数字签名与智能合约
 
-
-
 区块链技术使用数字签名来确认身份的真实性和验证。另一方面，智能合约根据预定义条件自动验证签名（Monrat et al., 2019）。
 
 ### 安全平台交易
@@ -1056,7 +971,7 @@ PBMEIT，印度
 
 #### 私有安全密钥
 
-区块链技术使用公钥基础设施（PKI）（Pal et al., 2021）。授权网络用户使用私钥对数字交易进行签名和验证（Bhushan et al., 2021）。在加密系统中，胜任且安全的密钥管理是必要的（Pal et al., 2021）。
+区块链技术使用公钥基础设施（`PKI`）（Pal et al., 2021）。授权网络用户使用私钥对数字交易进行签名和验证（Bhushan et al., 2021）。在加密系统中，胜任且安全的密钥管理是必要的（Pal et al., 2021）。
 
 ### 密钥轮换
 
@@ -1064,7 +979,7 @@ PBMEIT，印度
 
 #### 多方计算（MPC）
 
-安全多方计算（MPC）技术将密钥的生成和管理分发给各方，以增强隐私并建立信任。安全 MPC 很难被威胁行为者攻破（J. Zhou et al., 2021）。
+安全多方计算（`MPC`）技术将密钥的生成和管理分发给各方，以增强隐私并建立信任。安全 `MPC` 很难被威胁行为者攻破（J. Zhou et al., 2021）。
 
 ### 网络安全
 
@@ -1094,7 +1009,7 @@ PBMEIT，印度
 
 ### 密码管理
 
-区块链技术必须通过教育用户使用至少 14 个字符的强密码并启用多因素认证（MFA）来增强安全性（Andryukhin, 2019）。
+区块链技术必须通过教育用户使用至少 14 个字符的强密码并启用多因素认证（`MFA`）来增强安全性（Andryukhin, 2019）。
 
 ### 定期安全评估
 
@@ -1108,8 +1023,6 @@ PBMEIT，印度
 
 ### 响应策略
 
-
-
 由于区块链技术的采用增加，安全威胁正在激增。区块链工程主要侧重于开发应用程序，而极少关注安全威胁。区块链目前的安全事件报告系统是中心化的，且需要更多结构。实施结构化的事件报告和快速响应机制将限制损害影响，并促进即时响应和恢复。图 7 以去中心化方式描绘了六个步骤中的安全事件报告和及时响应（Putz 等人，2022）。同样，通过追踪恶意软件的传播并识别受感染设备，可以检测和预防恶意软件。
 
 #### 图 7. 事件报告的六步流程
@@ -1122,7 +1035,7 @@ PBMEIT，印度
 
 ### 区块链采用中的隐私保护
 
-区块链技术面临各种可扩展性和隐私挑战，例如 GDPR（通用数据保护条例）带来的挑战。尽管有多种隐私保护解决方案可供实施，但由于担心在公共平台上泄露隐私，组织和个人必须更加开放地采用区块链技术。自主身份（SSI）、零知识证明（ZKPs）和环签名可以隐藏用户的身份和交易。复杂的隐私程序确保了零知识方法在区块链技术中的有效性（Bernabe 等人，2019）。
+区块链技术面临各种可扩展性和隐私挑战，例如 `GDPR`（通用数据保护条例）带来的挑战。尽管有多种隐私保护解决方案可供实施，但由于担心在公共平台上泄露隐私，组织和个人必须更加开放地采用区块链技术。自主身份（`SSI`）、零知识证明（`ZKPs`）和环签名可以隐藏用户的身份和交易。复杂的隐私程序确保了零知识方法在区块链技术中的有效性（Bernabe 等人，2019）。
 
 ### 软件更新
 
@@ -1134,24 +1047,26 @@ PBMEIT，印度
 
 ### 数据安全
 
+
+
 在区块链技术中，数据是去中心化的，并存储在分布在网络中的区块里，从而将数据勒索的影响降至最低。区块链数据防篡改且经过加密，使得威胁行为者无法对其进行操纵（Ismail 等人，2024）。
 
-### 协同网络安全举措
+## 协同网络安全举措
 
 区块链技术用户必须共享威胁情报信息，共同应对威胁，并集体缓解威胁。集体网络安全有助于根除威胁并消除单点故障（Miller 和 Pahl，2024）。
 
-### 区块链安全考量
+## 区块链安全考量
 
 尽管区块链技术具有去中心化、不可篡改和防篡改的特性，但由于数字化以及组织和个人的日益接受，它仍易受某些安全风险的影响。网络攻击可能给组织造成重大损失，影响其品牌声誉、财务稳定性和技术基础设施（Ibarra 等人，2019）。
 
-### 理解双重支付和 51% 攻击
+## 理解双重支付和 51% 攻击
 
 51% 网络攻击会破坏区块链的完整性，属于高风险类别。威胁行为者可以重写区块链并创建新版本以进行恶意活动，这被称为双重支付攻击。任何持有 51% 算力哈希率的授权用户或矿工都可以恶意执行攻击，篡改网络中的区块链凭证和交易。一些潜在的操纵手段包括：
 
-1.  a. 逆转交易，导致双重支付攻击
-2.  b. 篡改或修改交易
-3.  c. 干扰其他矿工的操作
-4.  d. 阻止交易确认（Apone-Novoa 等人，2021）。
+1.  逆转交易，导致双重支付攻击
+2.  篡改或修改交易
+3.  干扰其他矿工的操作
+4.  阻止交易确认（Apone-Novoa 等人，2021）。
 
 51% 攻击的著名案例包括（Y. Chen 等人，2022）：
 
@@ -1168,100 +1083,85 @@ PBMEIT，印度
 *   实施强健的安全协议
 *   定期更新和修补软件
 
-### 缓解策略
+## 缓解策略
 
 *   **惩罚系统**：在延迟区块方法系统中，威胁行为者必须付出高昂代价才能实施攻击。攻击者必须连续挖掘更多区块才能加入真实链。
 *   **延迟工作量证明**：该系统必须遵循最长链规则，使攻击者难以获得控制权。
 *   **PirlGuard**：与延迟工作量证明 (DPoW) 和惩罚系统类似，PirlGuard 对威胁行为者施加重罚，从而将风险降至最低。
 *   **ChainLocks**：该过程速度快，因为只需一个区块确认即可执行交易。
-*   **合并挖矿**：该过程对威胁行为者成本更高，因为它结合了两种加密货币的算力（Sayeed 和 Marco-Gisbert，2019）。图 8 展示了针对 51% 攻击的防御机制。
+*   **合并挖矿**：该过程对威胁行为者成本更高，因为它结合了两种加密货币的算力（Sayeed 和 Marco-Gisbert，2019）。
 
-#### 图 8. 针对 51% 攻击的防御机制
+### 图 8. 针对 51% 攻击的防御机制
 
 ![979-8-3693-9225-6.ch003.f08](img/979-8-3693-9225-6.ch003.f08.png)
 
 来源：(Sayeed 和 Marco-Gisbert，2019)
 
-### 密钥窃取
+## 密钥窃取
 
-### 保护数字资产
+## 保护数字资产
 
 私钥是区块链技术中的一种数字身份形式，允许网络中的授权用户执行交易。区块链技术承诺隐私和匿名性；私钥对于保护数字资产至关重要。然而，如果威胁行为者窃取了私钥，资产将丢失且无法恢复（Efanov 和 Roschin，2018）。
 
-### 缓解策略
+## 缓解策略
 
-### 安全存储解决方案
+## 安全存储解决方案
 
 加密硬件安全模块 (HSM) 通过存储和管理密钥及密码来保障数据完整性和机密性。它具有防篡改、加密和物理保护设备安全的特性（Alrubei 等人，2022）。
 
-### 基于区块链的多因素认证 (BMFA)
+## 基于区块链的多因素认证 (BMFA)
 
 它通过将多因素认证 (MFA) 与区块链特性相结合，提供安全认证。这种组合称为基于区块链的 MFA (BMFA)。BMFA 利用去中心化且不可篡改的账本存储敏感数据，通过增加对恶意行为者的进一步保护来增强安全性（Almadani 等人，2023）。MFA 通过要求用户在访问区块链系统前提供多种形式的身份验证，增加了一层额外的安全防护。
 
-### 密钥轮换
-
-
+## 密钥轮换
 
 安全密钥应定期轮换，以最大程度地降低安全风险。对于威胁行为者而言，要构成重大安全风险，他们需要在短时间内攻破每个用户，以获得进行更改所需的用户数量，这极其困难（Šimunić et al., 2021）。
 
-### 代码漏洞利用
+## 代码漏洞利用
 
 尽管区块链技术具有不可变性，但威胁行为者仍可利用代码漏洞，导致无法挽回的损失。2016 年的 DAO 攻击即是著名案例，威胁行为者利用漏洞造成了约 6000 万美元的以太币损失（He et al., 2024）。
 
-### 缓解策略
+## 缓解策略
 
 *   **审计**：将定期进行审计，以检查和审查区块链系统中的漏洞、弱点和潜在攻击向量（Moubarak et al., 2018）。定期审计至关重要，尤其是在重大更新或发布之前。审计类型包括智能合约审计、安全审计、合规审计、性能审计、基础设施审计、治理审计，以及代码审计和漏洞扫描。这有助于防止攻击、确保合规并建立用户信任。
-
 *   **安全代码**：应遵循安全编码标准，以防范漏洞（Bhardwaj et al., 2021）。
-
 *   **代码分析工具**：代码分析工具通常用于检查软件应用程序的源代码。其目的是对潜在漏洞和安全弱点进行分类。这些工具有助于执行手动和自动化渗透测试。它们通过模拟网络攻击来识别可利用的漏洞。
-
 *   **渗透测试**是一种安全评估技术，用于识别系统或网络中的弱点。这是通过模拟对网络的外部或内部攻击来完成的。渗透测试人员拥有丰富的工具和技术储备，他们的工作是发现恶意行为者可能利用的漏洞。目前已有多种可用于区块链应用程序的渗透测试框架（K. Chen et al., 2024）。
 
 横向移动是另一个维度。它指攻击者在获得对系统的初始访问权限后，在网络中逐步深入的能力。其目标是寻找高价值资产。攻击者可能利用多种技术进行横向移动，例如利用操作系统、应用程序或网络协议中的漏洞（Smiliotopoulos et al., 2024）。
 
 组织会定期进行渗透测试和横向移动测试。这些测试可以手动进行，也可以使用自动化工具。测试的目的是识别网络中可能横向扩散的薄弱环节和漏洞（Bhardwaj et al., 2021）。
 
-### 物理安全措施
+## 物理安全措施
 
 物理安全在保护区块链基础设施的过程中至关重要。这通过保护节点免受威胁行为者侵害来实现。组织必须采用防篡改检测和预防解决方案，以保护系统免受入侵者侵害（Alrubei et al., 2022）。
 
-### 其他缓解策略
+## 其他缓解策略
 
 *   其他缓解策略包括：
-
     *   **漏洞赏金计划**：激励道德黑客发现并报告漏洞。
-
     *   **形式化验证**：使用数学方法证明智能合约和协议的正确性。
-
     *   **共识机制改进**：实施更安全的共识算法。也可考虑混合共识机制，以平衡安全性和效率。
-
     *   **实时监控系统**：特别是网络监控，以检测异常活动或潜在攻击。
-
     *   **安全密钥管理**：实施强大的关键管理实践，包括硬件安全模块（HSM）。
-
     *   **定期更新和补丁**：保持所有区块链软件组件为最新状态。
-
     *   **互操作性标准**：制定并遵守跨链交互的安全标准。
-
     *   **治理机制**：制定包括针对关键漏洞的应急响应程序在内的治理机制。
-
     *   **教育和培训**：面向开发人员、运营人员和用户的区块链安全最佳实践教育和培训，可持续进行。
 
-### 法规合规
+## 法规合规
 
 企业在部署区块链解决方案时，始终关注法规和合规性。遵守数据保护法和行业特定法规是规避法律和声誉风险的必要条件。遵守现有法律和监管框架是任何技术（无论新旧）的先决条件。区块链技术在网络安全中的实施也不例外。区块链部署应遵循监管法律和标准。参与将区块链技术集成到网络安全框架中的专业人员必须彻底了解法律和监管环境。虽然隐私和监管合规并不总是相辅相成，但隐私机制对于某些交易仍然必要。执法机关尽管无法看到用户身份，但可以访问用户交易（Buterin et al., 2024）。本节重点关注两项关键法规——通用数据保护条例（GDPR）和健康保险流通与责任法案（HIPAA）。
 
-### 通用数据保护条例 (GDPR)
+## 通用数据保护条例 (GDPR)
 
-通用数据保护条例 (GDPR) 是欧盟 (EU) 于 2018 年 5 月颁布的关键框架。它是一项全面的个人数据保护法，已成为多个国家颁布类似数据保护法的典范。它适用于处理欧盟居民个人数据的任何组织，无论其所在地为何。GDPR 要求组织采取适当的技术和组织措施，确保个人数据的安全性和机密性。违反 GDPR 将付出高昂代价。剑桥分析丑闻（2018 年）、谷歌、Facebook 和 Uber 的 GDPR 罚款（2019 年）即是合规成本的例证。图 9 列出了 GDPR 的关键条款。
+通用数据保护条例 (GDPR) 是欧盟 (EU) 于 2018 年 5 月颁布的关键框架。它是一项全面的个人数据保护法，已成为多个国家颁布类似数据保护法的典范。它适用于处理欧盟居民个人数据的任何组织，无论其所在地为何。GDPR 要求组织采取适当的技术和组织措施，确保个人数据的安全性和机密性。违反 GDPR 将付出高昂代价。剑桥分析丑闻（2018 年）、谷歌、Facebook 和 Uber 的 GDPR 罚款（2019 年）即是合规成本的例证。
 
-#### 图 9. GDPR 关键条款
+### 图 9. GDPR 关键条款
 
 ![979-8-3693-9225-6.ch003.f09](img/979-8-3693-9225-6.ch003.f09.png)
 
 *   现已有多个区块链用例可用于满足 GDPR 合规要求。其中包括：
-
     1.  以太坊的 GDPR 合规措施
     2.  IBM 的区块链与 GDPR 平台
     3.  基于自主身份 (SSI) 的区块链身份验证
@@ -1269,17 +1169,15 @@ PBMEIT，印度
 
 区块链技术提供的去中心化和透明的数据交易记录，可以通过促进数据控制者和处理者的工作，增强数据安全性和 GDPR 合规性（Hristov & Dimitrov, 2018）。然而，GDPR 对数据控制者和处理者有严格要求。组织有义务通知数据主体数据泄露事件，并提供其访问自身数据的权利。
 
-
-
-欧盟区块链观察站 2018 年报告指出，GDPR 与区块链技术之间不存在原则性矛盾，因为 GDPR 并非针对技术本身，而是关乎技术如何被使用（Patrick & Haie, 2018）。此外，还曾讨论过某些区块链（如许可型区块链）是否应豁免 GDPR，考虑到用户所拥有的控制权（Anisha, 2019）。这场辩论导致了两种倾向——纯粹主义者和原教旨主义者（Poelman & Iqbal, 2021）。去中心化特性引发了对数据所有权和控制权的担忧，这可能与 GDPR 的基本原则相冲突（Zemler & Westner, 2019）。此外，跨多个节点共享个人数据也是一个问题。由于不可篡改特性使得删除个人数据变得困难（甚至不可能），**被遗忘权**对区块链构成了挑战。
+欧盟区块链观察站 2018 年报告指出，GDPR 与区块链技术之间不存在原则性矛盾，因为 GDPR 并非针对技术本身，而是关乎技术如何被使用（Patrick & Haie, 2018）。此外，还曾讨论过某些区块链（如许可型区块链）是否应豁免 GDPR，考虑到用户所拥有的控制权（Anisha, 2019）。这场辩论导致了两种倾向——纯粹主义者和原教旨主义者（Poelman & Iqbal, 2021）。去中心化特性引发了对数据所有权和控制权的担忧，这可能与 GDPR 的基本原则相冲突（Zemler & Westner, 2019）。此外，跨多个节点共享个人数据也是一个问题。由于不可篡改特性使得删除个人数据变得困难（甚至不可能），`被遗忘权`对区块链构成了挑战。
 
 组织机构已设计出替代方案来应对这一挑战，催生了一波新的符合 GDPR 要求的区块链网络（Haque et al., 2021）。诸如加密混淆、零知识证明或链下存储等技术，有助于在保留区块链技术优势的同时确保 GDPR 合规。
 
-### 1996 年健康保险流通与责任法案 (HIPAA)
+## 1996 年健康保险流通与责任法案 (HIPAA)
 
-1996 年健康保险流通与责任法案 (HIPAA) 是医疗保健领域的关键框架。它是美国于 1996 年颁布的联邦法律，旨在确保患者数据得到保护。HIPAA 适用于医疗保健组织。表 4 列出了 HIPAA 适用的利益相关者部分名单。
+1996 年健康保险流通与责任法案 (HIPAA) 是医疗保健领域的关键框架。它是美国于 1996 年颁布的联邦法律，旨在确保患者数据得到保护。HIPAA 适用于医疗保健组织。
 
-#### 表 4. HIPAA 利益相关者及其受影响的原因
+### 表 4. HIPAA 利益相关者及其受影响的原因
 
 | 利益相关者 | 影响 |
 | --- | --- |
@@ -1288,15 +1186,15 @@ PBMEIT，印度
 | 医疗信息清算机构 | 这些实体将从另一实体接收的非标准健康信息加工为特定的标准格式或数据。 |
 | 业务关联方 | 这些包括为受保护实体执行或提供职能、活动或服务而使用或披露个人 PHI 的个人或组织（通常为第三方）。业务关联方包括索赔处理商、数据分析师、利用审查员和账单服务提供商。 |
 
-这些实体应采取适当的技术和组织措施，以保障患者数据的安全性和机密性。HIPAA 的目标是保护受保护健康信息 (PHI) 的机密性和安全性。这是通过建立全国性指导方针来实现的，这些指导方针规范电子共享、隐私保护和 PHI 的安全性。图 10 列出了关键条款。
+这些实体应采取适当的技术和组织措施，以保障患者数据的安全性和机密性。HIPAA 的目标是保护受保护健康信息 (PHI) 的机密性和安全性。这是通过建立全国性指导方针来实现的，这些指导方针规范电子共享、隐私保护和 PHI 的安全性。
 
-#### 图 10. HIPAA 关键条款
+### 图 10. HIPAA 关键条款
 
 ![979-8-3693-9225-6.ch003.f10](img/979-8-3693-9225-6.ch003.f10.png)
 
 区块链提供了患者数据交易的去中心化和透明记录。这可以增强数据安全性和 HIPAA 合规性。HIPAA 还对医疗保健组织施加了严格要求。它要求我们有义务通知患者数据泄露事件，并向他们提供访问其医疗记录的权限。区块链技术给 HIPAA 合规性带来了独特挑战。安全规则要求受保护实体和关联方采取管理、物理和技术防护措施，以确保电子 PHI 的隐私性、准确性和可访问性。组织必须实施特定技术来应对这一挑战。一些标准方法包括加密和访问控制。
 
-### 其他法规
+## 其他法规
 
 除上述讨论的法规外，还有其他几项相关法规适用于不同情境下的企业。以下列举几项：
 
@@ -1312,15 +1210,11 @@ PBMEIT，印度
 
 组织应考虑聘请具备技术专长和合规经验的法律顾问。顾问应就具体监管要求提供指导，并确保符合这些要求。法律顾问还可就区块链技术的潜在法律影响提供指导，包括责任、知识产权和管辖权等相关问题。
 
-## 未来趋势与挑战
+# 未来趋势与挑战
 
 随着技术采用频率的增加，一些新挑战正逐渐显现。其中一些挑战将与网络安全相关。本节将介绍采用 AI 和其他技术与区块链及安全相结合的全球趋势。重点关注利用量子计算增强网络攻击防御，超越传统方法并彻底变革网络安全。
 
-1.  **不可能三角**：区块链网络面临一种被称为**区块链不可能三角**的困境。它指出区块链网络最多只能同时实现三个理想属性中的两个：安全性、可扩展性和去中心化。如果在追求可扩展性和去中心化的过程中，区块链实施中所选的安全因素权重不足，网络安全强度就会被削弱。这种情况严重阻碍了 IT 从业者实施稳健的系统（Vijaya Kittu & Gupta, 2024）。目前正在研究和探索分片等一些初步解决方案。
-
-
-
-
+1.  **不可能三角**：区块链网络面临一种被称为`区块链不可能三角`的困境。它指出区块链网络最多只能同时实现三个理想属性中的两个：安全性、可扩展性和去中心化。如果在追求可扩展性和去中心化的过程中，区块链实施中所选的安全因素权重不足，网络安全强度就会被削弱。这种情况严重阻碍了 IT 从业者实施稳健的系统（Vijaya Kittu & Gupta, 2024）。目前正在研究和探索分片等一些初步解决方案。
 
 ## 2. 加密资产
 
@@ -1360,15 +1254,17 @@ AI 可帮助企业制定并维持主动的安全态势。这可通过识别和�
 
 ## 6. 用于数据分析的 AI
 
+
+
 区块链数据可结合 AI 用于数据分析。可从交易数据中获取洞察。可识别可能表明恶意活动的模式和异常。安全分析师可利用这些输入来确定威胁调查的优先级并发现潜在漏洞。这能降低风险和欺诈活动，尤其是在 B2B 网络中。
 
 ## 7. AI 与数据隐私
 
-生成式 AI 算法使用大语言模型（LLM）。LLM 需要访问大量数据进行训练和分析。这引发了对数据隐私和个人信息潜在滥用的担忧。被攻破的信息技术系统可以成为良好的训练数据来源，因为其拥有丰富的交易数据源。然而，由于去中心化，区块链系统极难被攻破。
+生成式 AI 算法使用大语言模型（`LLM`）。`LLM` 需要访问大量数据进行训练和分析。这引发了对数据隐私和个人信息潜在滥用的担忧。被攻破的信息技术系统可以成为良好的训练数据来源，因为其拥有丰富的交易数据源。然而，由于去中心化，区块链系统极难被攻破。
 
 ## 8. 破解现有加密
 
-量子计算机有可能破解现有加密算法，如 RSA 和 ECC（Sharma et al., 2021）。这对区块链安全构成重大威胁，因为这些是许多区块链系统运行所依赖的常见且流行的算法。组织必须通过探索后量子密码学和制定缓解策略来应对这一可能性。
+量子计算机有可能破解现有加密算法，如 `RSA` 和 `ECC`（Sharma et al., 2021）。这对区块链安全构成重大威胁，因为这些是许多区块链系统运行所依赖的常见且流行的算法。组织必须通过探索后量子密码学和制定缓解策略来应对这一可能性。
 
 ## 9. 抗量子密码学
 
@@ -1383,9 +1279,6 @@ AI 可帮助企业制定并维持主动的安全态势。这可通过识别和�
 ## 结论
 
 企业可利用区块链改进其网络安全系统。它们可实现增强的数据安全、改进的威胁检测与响应、强化的认证与授权，以及增强的网络威胁情报共享。这些能力大多源于区块链的基本特征。诸如不可变账本等特性有助于保障交易数据存储安全。它还通过仅向授权参与者提供访问权限来帮助监控资产并建立信任。其去中心化和分布式账本系统为改善数字安全和应对不断演变的网络威胁环境提供了结构。
-
-
-
 
 然而，将区块链技术与现有的网络安全措施相结合也面临一些挑战。本章通过提出网络安全最佳实践带来了创新。这些实践有助于系统集成专家应对这些挑战，确保区块链与网络安全的平滑且有效实施。企业应考虑隐私顾虑、可扩展性问题、对熟练专业人员的需求以及法规合规性。组织在处理敏感数据时，必须根据适用性重新评估其对 `GDPR` 和 `HIPAA` 的合规情况。尽管存在挑战，但区块链技术用于网络安全提供了显著优势。通过利用该技术及其独特功能，企业可以提升其安全水平，保护其关键数据和资产免受网络威胁。
 
@@ -1445,8 +1338,7 @@ Guo, H., & Yu, X. (2022). A survey on blockchain technology and its security. El
 
 
 
-
-## 参考文献
+# 参考文献
 
 Haque, A. B., Islam, A. K. M. N., Hyrynsalmi, S., Naqvi, B., & Smolander, K. (2021). 符合 GDPR 的区块链——系统文献综述。 *IEEE Access : Practical Innovations, Open Solutions*, 9, 50593–50606. DOI: [10.1109/ACCESS.2021.3069877](http://dx.doi.org/10.1109/ACCESS.2021.3069877)
 
@@ -1508,12 +1400,6 @@ Rodrigues, B., Bocek, T., Lareida, A., Hausheer, D., Rafati, S., & Stiller, B. (
 
 Salagrama, S., Bibhu, V., & Rana, A. (2023). 基于区块链的数据完整性安全管理。 *Elsevier*, 215, 331–339. DOI: [10.1016/j.procs.2022.12.035](http://dx.doi.org/10.1016/j.procs.2022.12.035)
 
-
-
-
-
-## 参考文献
-
 Sami Berkani, A., Moumen, H., Benharzallah, S., Yahiaoui, S., & Bounceur, A. (2023). 体育产业中的区块链用例：系统性综述。Springer。DOI：[10.1007/s44227-024-00022-3](http://dx.doi.org/10.1007/s44227-024-00022-3)
 
 Sayeed, S., & Marco-Gisbert, H. (2019). 评估区块链共识与安全机制对抗 51% 攻击的能力。应用科学（瑞士巴塞尔），9(9)，1788。在线预出版。DOI：[10.3390/app9091788](http://dx.doi.org/10.3390/app9091788)
@@ -1535,6 +1421,10 @@ Taylor, P. J., Dargahi, T., Dehghantanha, A., Parizi, R. M., & Choo, K.-K. R. (2
 Tripathi, G., Abdul Ahad, M., & Casalino, G. (2023). 区块链技术综述：基本原理与历史背景及未来挑战。Elsevier，9，1–6。
 
 Uikey, D. Brarskar, Dr. R., & Ahirwar, Dr. M. (2024). 基于区块链的数字公证系统为数字文档提供可靠且防篡改的时间戳和验证服务：综述。多学科研究国际期刊 (IJFMR)，6(2)。[`www.ijfmr.com/papers/2024/2/17429.pdf`](https://www.ijfmr.com/papers/2024/2/17429.pdf)
+
+
+
+# 参考文献
 
 Varun Shah. (2022). 网络安全机器学习算法：检测与预防威胁。DOI：[10.5281/ZENODO.10779509](http://dx.doi.org/10.5281/ZENODO.10779509)
 
@@ -1586,10 +1476,6 @@ Zhou, S., Li, K., Xiao, L., Cai, J., Liang, W., & Castiglione, A. (2023). 区块
 
 Astitva Bhardwaj
 
-
-
-
-
 ## 摘要
 
 云计算是一个已经被广泛采用且预计将显著增长的概念，代表了未来的信息时代。尽管使用了现代术语，但其基本思想诞生于 20 世纪 50 年代，当时大型企业和组织开始探索远程数据和应用程序存储。平台即服务、基础设施即服务和软件即服务这三个术语在云计算的数据共享与访问方面处于领先地位，具有经济高效的特点，并能给社会带来革命性变化。因此，本章探讨了过去至今云计算中见证的一些安全问题，这些问题亟需一套用于安全交换数据的完整系统。此外，文章概述了云环境中固有的安全问题，并指出需要建立适当的安全通信机制。最后，本章分析了企业如何通过了解自身弱点和行业现状，借助云计算获得额外的市场份额。
@@ -1609,11 +1495,7 @@ Astitva Bhardwaj
 *   本文通过探讨云计算的背景及云计算中的各类安全顾虑，提供了云计算的概览，并简要介绍了其架构。
 *   探讨了云计算中的各种漏洞。
 *   重点强调了内部威胁和外部攻击。
-
-
-
-
-* 它强调了 CC 的最新进展
+*   它强调了 CC 的最新进展。
 
 本文其余部分安排如下：第 2 节概述 CC 领域，提供全面综述。第 3 节深入探讨困扰 CC 的漏洞。第 4 节转向 CC 行业的最新进展。第 5 节通过总结前几节讨论的关键点来结束本文。
 
@@ -1643,10 +1525,10 @@ Astitva Bhardwaj
 
 云提供商使用互联网作为其通信信道来传输数据。安全有效地传输信息的能力是信息管理和其他业务运营赖以建立的基础，也是 CC 的核心。
 
-* 它涉及将脚本注入用户浏览器，通过网站修改控制其会话，以及注入蠕虫等其他恶意行为。
-* 注入缺陷：当 Web 应用程序的用户输入未经过充分验证时，可被用于修改服务器查询。
-* 恶意文件执行：此攻击可针对 XML 或任何其他接受用户文件的框架，因为这些文件可能包含恶意脚本。
-* 未使用加密函数保护数据传输的 Web 应用程序容易受到攻击（Saripalli and Walters, 2010）。
+*   它涉及将脚本注入用户浏览器，通过网站修改控制其会话，以及注入蠕虫等其他恶意行为。
+*   注入缺陷：当 Web 应用程序的用户输入未经过充分验证时，可被用于修改服务器查询。
+*   恶意文件执行：此攻击可针对 XML 或任何其他接受用户文件的框架，因为这些文件可能包含恶意脚本。
+*   未使用加密函数保护数据传输的 Web 应用程序容易受到攻击（Saripalli and Walters, 2010）。
 
 #### 2.2.3 应用安全
 
@@ -1660,9 +1542,6 @@ Astitva Bhardwaj
 
 #### 表 1. 云安全顾虑
 
-
-
-
 | 安全方面 | 描述 |
 | --- | --- |
 | 数据存储安全 (Wang,Q.,2009) | 云数据需要备份以确保安全性和准确性。由于数据频繁变更，新的完整性解决方案至关重要。 |
@@ -1675,18 +1554,33 @@ Astitva Bhardwaj
 云架构的各个组件如图 2 所示，并在下面的小节中进行探讨。
 
 *   **前端**：前端由客户端使用。包含访问云计算服务所需的客户端 API 和应用程序。前端由平板电脑、智能手机、瘦客户机和胖客户机以及 Web 服务器（如 Internet Explorer、Firefox、Chrome 等）组成。
+
+
+
 *   **后端**：后端由服务提供商使用。它负责管理提供云计算服务所需的所有资源。包括服务器、虚拟计算机、流量管理系统、服务器、安全程序和海量数据存储。
-*   **客户端基础设施**：客户端基础设施是前端的一个组成部分。为云通信提供 GUI（图形用户界面）。
+
+*   **客户端基础设施**：客户端基础设施是前端的一个组成部分。为云通信提供 `GUI`（图形用户界面）。
+
 *   **应用**：客户希望使用的任何程序或平台均可视为应用。
+
 *   **服务**：云服务根据客户的需求管理可访问的服务。
-*   **SAAS**：另一种称呼为云应用服务。大多数 SAAS 程序无需下载或安装，即可在 Web 浏览器中快速运行。
+
+*   **SAAS**：另一种称呼为云应用服务。大多数 `SAAS` 程序无需下载或安装，即可在 Web 浏览器中快速运行。
+
 *   **PAAS**：它提供开发、运行和管理软件应用所需的所有服务和工具，使您能够访问平台，从而免去对基础设施和技术细节的担忧。
+
 *   **IAAS**：另一种术语为云基础设施服务。它负责管理应用数据、运行时环境和中间件。
+
 *   **存储**：存储是云计算的主要组件之一。它提供足够的云存储容量用于数据管理和归档。
+
 *   **运行时云**：运行时云为虚拟计算机提供执行环境和运行时环境的访问权限。
+
 *   **基础设施**：它提供主机、网络和应用服务。构成云基础设施、实现云计算理念所需的硬件和软件组件示例包括服务器、存储、网络设备和虚拟化软件。
+
 *   **管理**：后端管理促进运行时云、存储、基础设施和应用等多个组件之间的协调。
+
 *   **安全**：安全是云计算后端的一项功能。安全机制部署在后端。
+
 *   **互联网**：通信可连接互联网的前端和后端。
 
 #### 图 2. 云计算架构
@@ -1695,29 +1589,27 @@ Astitva Bhardwaj
 
 ## 3. 相关漏洞
 
-这指的是系统的薄弱环节，即攻击者可能利用的安全缺陷。导致这些弱点的因素包括错误配置、无效的访问控制、不安全的 API 和软件漏洞。
+这指的是系统的薄弱环节，即攻击者可能利用的安全缺陷。导致这些弱点的因素包括错误配置、无效的访问控制、不安全的 `API` 和软件漏洞。
 
 ### 3.1 内部威胁
 
-对供应商和云消费者而言，最坏的情况是云服务商雇佣了一名恶意系统管理员。由于与云提供商存在业务关系，内部人员拥有授权用户凭证，从而能够访问关键数据。例如，负责定期备份托管客户资源的系统（虚拟机、数据存储）的管理员，可能会利用其对备份的访问权限窃取敏感的客户信息。这种间接数据访问可能难以被发现。取决于内部人员的目的，内部攻击对云基础设施造成的后果可能从数据泄露到对受影响系统和数据的灾难性破坏。无论如何，供应商都将面临严厉的商业后果。如果内部人员有权访问数据中心或云管理系统，内部攻击将是所有主流云类型（IaaS、PaaS 和 SaaS）关注的问题 (Bohn,R. B.,2011)。
+对供应商和云消费者而言，最坏的情况是云服务商雇佣了一名恶意系统管理员。由于与云提供商存在业务关系，内部人员拥有授权用户凭证，从而能够访问关键数据。例如，负责定期备份托管客户资源的系统（虚拟机、数据存储）的管理员，可能会利用其对备份的访问权限窃取敏感的客户信息。这种间接数据访问可能难以被发现。取决于内部人员的目的，内部攻击对云基础设施造成的后果可能从数据泄露到对受影响系统和数据的灾难性破坏。无论如何，供应商都将面临严厉的商业后果。如果内部人员有权访问数据中心或云管理系统，内部攻击将是所有主流云类型（`IaaS`、`PaaS` 和 `SaaS`）关注的问题 (Bohn,R. B.,2011)。
 
-有人可能会辩称，如前所述，云中内部威胁的后果类似于传统外包模式中的内部人员。这在一定程度上是准确的，因为外包可能会向未经授权的方泄露私人信息，但云计算不同，因为它通过 IaaS 和 PaaS 为外包提供了完全的替代方案。因此，云计算范式可用于外包大部分基础设施，而非 Web 托管或应用托管等特定服务 (Bishop,M.,2008)。下节将讨论三种与云相关的内部威胁类型。
+有人可能会辩称，如前所述，云中内部威胁的后果类似于传统外包模式中的内部人员。这在一定程度上是准确的，因为外包可能会向未经授权的方泄露私人信息，但云计算不同，因为它通过 `IaaS` 和 `PaaS` 为外包提供了完全的替代方案。因此，云计算范式可用于外包大部分基础设施，而非 Web 托管或应用托管等特定服务 (Bishop,M.,2008)。下节将讨论三种与云相关的内部威胁类型。
 
 #### 3.1.1 恶意管理员
 
-首先让我们考察云安全联盟 (CSA) 所指的那类内部人员，即为云提供商工作的恶意管理员。在工作中，研究人员通常处理与云相关的此类内部人员。此类内部人员通常提出通过窃取个人信息来破坏数据完整性和机密性的攻击。这种威胁引发了一种可能性，即内部人员可能受金钱驱动，这在欺诈和知识产权盗窃案件中经常发生。另一种可能是信息技术 (IT) 破坏，即员工试图破坏其公司的 IT 系统。由于云系统中的管理员为提供商工作，而非为使用它们的企业工作，因此一些人可能会忽视这种犯罪行为 (Alliance, C.S, 2010)。
+首先让我们考察云安全联盟 (`CSA`) 所指的那类内部人员，即为云提供商工作的恶意管理员。在工作中，研究人员通常处理与云相关的此类内部人员。此类内部人员通常提出通过窃取个人信息来破坏数据完整性和机密性的攻击。这种威胁引发了一种可能性，即内部人员可能受金钱驱动，这在欺诈和知识产权盗窃案件中经常发生。另一种可能是信息技术 (`IT`) 破坏，即员工试图破坏其公司的 `IT` 系统。由于云系统中的管理员为提供商工作，而非为使用它们的企业工作，因此一些人可能会忽视这种犯罪行为 (Alliance, C.S, 2010)。
 
 然而，这不能完全排除。尽管内部人员怀恨受害组织的情况不寻常，但这种敌意可能对受害组织和云提供商的声誉均造成损害。该内部人员受雇于一家公司，受害企业聘请该公司担任系统管理员，负责为数据挖掘处理客户数据。尽管并非工作所需，该内部人员仍拥有对受害组织系统和数据的访问权限。人们发现，这些服务器之一上有一个无密码保护的文件，其中包含加密的密码数据。
 
-该内部人员访问了目标组织多个客户的数据，窃取了数百万条个人记录，并暴力破解了 300 多个密码。幸运的是，该内部人员从未被发现出售或泄露该信息。该案例研究演示了一个涉及可信任业务合作伙伴且配置非常类似云计算的场景。即使有计算机应急响应小组 (CERT) 持续汇总当前的内部威胁事件，这也是我们拥有的极少数云相关问题示例之一。尽管如此，仍有大量示例显示，可信任业务合作伙伴的员工、独立承包商和合同工利用其对网络和数据的访问权限实施身份盗窃。重要的是要记住，不同类型的恶意管理员构成的威胁，在云架构中与传统商业环境有所不同。
+该内部人员访问了目标组织多个客户的数据，窃取了数百万条个人记录，并暴力破解了 300 多个密码。幸运的是，该内部人员从未被发现出售或泄露该信息。该案例研究演示了一个涉及可信任业务合作伙伴且配置非常类似云计算的场景。即使有计算机应急响应小组 (`CERT`) 持续汇总当前的内部威胁事件，这也是我们拥有的极少数云相关问题示例之一。尽管如此，仍有大量示例显示，可信任业务合作伙伴的员工、独立承包商和合同工利用其对网络和数据的访问权限实施身份盗窃。重要的是要记住，不同类型的恶意管理员构成的威胁，在云架构中与传统商业环境有所不同。
 
 *   云中有四个管理层级需要考虑：
+
     *   **托管公司管理员**
+
     *   **虚拟镜像管理员**
-
-
-
-
 
 #### 3.1.2 云弱点利用
 
@@ -1732,17 +1624,23 @@ Astitva Bhardwaj
 第三类云内部人员是利用云服务损害其组织的人员。这类内部人员与针对云托管数据或系统的前一类人员类似。然而，第三类内部人员是通过使用云来攻击不一定与基于云的服务相连的特定系统或数据。以下情况可能导致此类攻击：
 
 *   陷入财务困境的员工利用云服务破解密码，不受限制地访问公司银行账户。
+
 *   怀恨在心的内部人员利用许多廉价、易于设置的云服务，对其组织发起分布式拒绝服务攻击，以阻碍取证分析和事件调查。
+
 *   计划离职的员工通过云存储收集并窃取敏感信息，以便跳槽到竞争对手公司。
 
-另一方面，CERT 有大量第三方内部人员利用基于云的服务窃取信息的案例。通常，这些都是知识产权窃取的实例。攻击者通常使用像 Dropbox 这样的文件共享服务，或像 Gmail、Hotmail 等基于 Web 的电子邮件，以绕过过滤和监控商务电子邮件附件的安全措施。(Moore,A.P,2011)。以下是 表 2 中所有内部威胁的综合摘要。
+另一方面，`CERT` 有大量第三方内部人员利用基于云的服务窃取信息的案例。通常，这些都是知识产权窃取的实例。攻击者通常使用像 `Dropbox` 这样的文件共享服务，或像 `Gmail`、`Hotmail` 等基于 Web 的电子邮件，以绕过过滤和监控商务电子邮件附件的安全措施。(Moore,A.P,2011)。以下是 表 2 中所有内部威胁的综合摘要。
 
 #### 表 2. 内部威胁摘要
 
 | 内部威胁 | 描述 |
+
 | --- | --- |
+
 | 叛变管理员 (Alliance, C. S.,2010) | 不可靠的内部人员可能玷污云公司声誉、窃取数据、中断访问并滥用管理员权限。 |
+
 | 云弱点利用 (Lamport,L.,1982) | 内部人员可利用云漏洞进行非法访问、欺诈、数据窃取、复制延迟和缺乏控制。 |
+
 | 云渎职/不当行为 (Moore,A.P,2011) | 内部人员利用云进行攻击、数据窃取、DDoS 攻击，并利用外部云进行数据窃取。 |
 
 ### 3.2 外部攻击
@@ -1751,29 +1649,29 @@ Astitva Bhardwaj
 
 #### 3.2.1 分布式拒绝服务 (DDoS) 攻击
 
-DDoS 通过大量流量淹没云服务，阻止合法用户使用。攻击者利用僵尸网络或大量被攻陷的设备来组织这种洪水攻击。图 3 概述了 DDoS 攻击的架构方面 (Deshmukh, R.V.,2015)。
+`DDoS` 通过大量流量淹没云服务，阻止合法用户使用。攻击者利用僵尸网络或大量被攻陷的设备来组织这种洪水攻击。图 3 概述了 `DDoS` 攻击的架构方面 (Deshmukh, R.V.,2015)。
 
-DDoS 攻击的主要类型包括：
+`DDoS` 攻击的主要类型包括：
 
-*   来自多个来源的攻击，如暴力破解或经典 DDoS
+*   来自多个来源的攻击，如暴力破解或经典 `DDoS`
+
 *   系统漏洞利用攻击（攻击目标指向特定系统，如流媒体、图像渲染或内容分发）
 
-存在各种类型的 DDoS 攻击，例如可耗尽网络所有资源、所有带宽或两者混合的 DDoS 攻击。DDoS 攻击的三种形式是容量型 (Gbps)、协议型 (pps) 和应用层型 (reps) (Somani,G.,2017)。针对网络带宽的攻击或洪水可利用僵尸网络或放大技术发起。协议攻击通常在 OSI 模型的第 3 层和第 4 层对路由器等网络设备进行操作，以此攻击服务器和中间设备的 CPU 和内存。根据攻击向量和数据包大小，大多数攻击都可被分类，且类别经常重叠 [33]。通过云计算的视角来看 DDoS 攻击类型。根据攻击者的意图和潜在漏洞，各种云组件都可能受到攻击。易受 DDoS 攻击的云组件包括云基础设施（虚拟机、管理程序和云调度器）、云服务（SaaS 和 Web 服务）以及云客户（成本问责组件）。
+存在各种类型的 `DDoS` 攻击，例如可耗尽网络所有资源、所有带宽或两者混合的 `DDoS` 攻击。`DDoS` 攻击的三种形式是容量型 (`Gbps`)、协议型 (`pps`) 和应用层型 (`reps`) (Somani,G.,2017)。针对网络带宽的攻击或洪水可利用僵尸网络或放大技术发起。协议攻击通常在 `OSI` 模型的第 3 层和第 4 层对路由器等网络设备进行操作，以此攻击服务器和中间设备的 `CPU` 和内存。根据攻击向量和数据包大小，大多数攻击都可被分类，且类别经常重叠 [33]。通过云计算的视角来看 `DDoS` 攻击类型。根据攻击者的意图和潜在漏洞，各种云组件都可能受到攻击。易受 `DDoS` 攻击的云组件包括云基础设施（虚拟机、管理程序和云调度器）、云服务（`SaaS` 和 Web 服务）以及云客户（成本问责组件）。
 
-以下讨论了一些针对 DDoS 攻击的防御策略：
+以下讨论了一些针对 `DDoS` 攻击的防御策略：
 
 *   **显著的 IDS**：部署的入侵检测系统需要精准且最新。系统必须能够定位后端流量，并基于凭证和行为变量提供早期预警。它充当云安全入侵的警报器 (Yu,S.,2013)。
-*   **防火墙流量类型检查功能**：它将利用 IDS 等技术检查传入流量的源和目的，以及流量的性质。在检查期间，此功能可在良性和恶意流量之间进行裁决 (Wahab,O.A.,2017)。
-*   **限制源速率**：DoS 攻击的主要问题之一是它会耗尽所有可用带宽。定位攻击源并阻止或限制相关 IP 地址至关重要 (Kautish,S.,2022)。
+
+*   **防火墙流量类型检查功能**：它将利用 `IDS` 等技术检查传入流量的源和目的，以及流量的性质。在检查期间，此功能可在良性和恶意流量之间进行裁决 (Wahab,O.A.,2017)。
+
+*   **限制源速率**：`DoS` 攻击的主要问题之一是它会耗尽所有可用带宽。定位攻击源并阻止或限制相关 `IP` 地址至关重要 (Kautish,S.,2022)。
 
 #### 图 3. 分布式拒绝服务 (DDoS) 攻击
 
 ![979-8-3693-9225-6.ch004.f03](img/979-8-3693-9225-6.ch004.f03.png)
 
 #### 3.2.2 恶意软件注入攻击
-
-
-
 
 # 云恶意软件注入攻击和洪水攻击
 
@@ -1783,18 +1681,26 @@ DDoS 攻击的主要类型包括：
 
 这些攻击的正常序列如下：
 
-*   **注入点**：恶意软件注入攻击经常利用 Web 应用程序、API 或配置不当的云服务中的漏洞。这些缺陷可能包括不充分的访问控制、不安全的 API 以及在线表单中的未清理输入。
+*   **注入点**：恶意软件注入攻击经常利用 Web 应用程序、`API` 或配置不当的云服务中的漏洞。这些缺陷可能包括不充分的访问控制、不安全的 `API` 以及在线表单中的未清理输入。
+
 *   **恶意软件载荷**：被注入的恶意软件可以是病毒、特洛伊木马、勒索软件或间谍软件的形式。一旦进入云环境，它就可能破坏数据安全、窃取机密数据或干扰云服务。
+
 *   **传播**：云环境中受感染的恶意软件实例可以跨连接的资源传播，从而可能危害大量用户和数据。
 
 ## 针对恶意软件注入攻击的防御策略
 
 *   **定期安全审计**：对云应用程序和基础设施进行定期安全审计和漏洞评估。尽早识别漏洞并进行修补，以减少攻击面。
+
 *   **实施强访问控制**：应用最小权限和严格的访问控制原则。确保用户仅拥有其角色和职责所需的权限 (Bi, J., 2022)。
-*   **Web 应用程序防火墙 (WAF)**：使用 `WAF` 来阻止针对 Web 应用和 API 的恶意请求和载荷，过滤传入流量并对其进行检测。
+
+*   **Web 应用程序防火墙 (WAF)**：使用 `WAF` 来阻止针对 Web 应用和 `API` 的恶意请求和载荷，过滤传入流量并对其进行检测。
+
 *   **入侵检测和防御系统 (IDPS)**：使用 `IDPS` 监控网络流量，识别可能表明试图用恶意软件渗透系统的异常活动。
+
 *   **安全教育和培训**：让员工和云管理员了解安全最佳实践、社会工程学风险，以及如何识别和处理网络钓鱼骗局。
+
 *   **安全补丁和更新**：及时为所有云硬件和软件应用最新的安全更新，以减少已知漏洞。
+
 *   **云安全解决方案**：通过利用云服务提供商 (`CSP`) 提供的云安全服务和解决方案，您可以加强云环境的安全性 (Khan, H.A., 2019)。
 
 ### Figure 4. 云恶意软件注入攻击
@@ -1810,24 +1716,30 @@ DDoS 攻击的主要类型包括：
 在 `CC` 的背景下，洪水攻击可以采取几种不同的形式：
 
 *   **传统 DoS 攻击**：在典型的 `DoS` 攻击中，单个攻击者或一小群攻击者用流量淹没云服务或服务器，耗尽其资源，导致短暂或长时间的中断 (Nishanth, N., 2021)。
+
 *   **DDoS 攻击**：在 `DDoS` 攻击中，众多被黑设备或僵尸网络协同努力，用流量淹没目标，这使得缓解和防御变得更加困难 (Wu, Z., 2023)。
+
 *   **应用层攻击**：某些洪水攻击针对特定的基于云的服务或应用程序，利用漏洞或耗尽其资源。
 
 ### 针对洪水攻击的防御策略
 
-*   **流量过滤和访问控制**：在网络层使用防火墙和访问控制列表 (`ACLs`) 过滤传入流量。拒绝来自已知恶意 IP 地址或地区的流量，仅允许来自可靠来源的流量。使用基于云的安全服务或本地安全设备在流量到达云资源之前进行过滤。
+*   **流量过滤和访问控制**：在网络层使用防火墙和访问控制列表 (`ACLs`) 过滤传入流量。拒绝来自已知恶意 `IP` 地址或地区的流量，仅允许来自可靠来源的流量。使用基于云的安全服务或本地安全设备在流量到达云资源之前进行过滤。
+
 *   **内容分发网络 (CDNs)**：使用 `CDNs` 可帮助您分发流量并将内容缓存得更靠近客户。因为 `CDNs` 可以处理流量高峰并过滤有害流量，所以您的云基础设施负担会减轻。
+
 *   **负载均衡器**：使用负载均衡器将传入流量均匀地分发到多台云服务器或实例中。在遭受攻击时，负载均衡器有助于防止单台服务器过载。使用自动扩展技术根据流量需求动态调整服务器实例的数量 (Wu, Z., 2023)。
-*   **速率限制和流量整形**：使用速率限制来限制来自单个客户端或 IP 地址的请求或连接数量。这可以防止攻击者用请求淹没您的服务。使用流量整形来优先处理合法流量并减轻 `DoS` 攻击的影响。
+
+*   **速率限制和流量整形**：使用速率限制来限制来自单个客户端或 `IP` 地址的请求或连接数量。这可以防止攻击者用请求淹没您的服务。使用流量整形来优先处理合法流量并减轻 `DoS` 攻击的影响。
+
 *   **异常检测系统**：使用专门的异常检测软件或入侵检测和防御系统 (`IDPS`) 监控网络流量，发现可能表明攻击的异常模式或行为。设置警报系统，在发现攻击时向管理员发送通知或启动自动防御机制。
+
 *   **内容安全解决方案**：使用 Web 应用程序防火墙 (`WAFs`) 在应用层分析和过滤流量。`WAFs` 允许正常流量通过，同时阻止恶意请求和载荷。使用反恶意软件和防病毒软件检查传入和传出流量中的已知威胁。
+
 *   **冗余和故障转移**：设计云基础设施时应考虑冗余。使用多个数据中心或可用区，确保如果一个站点成为攻击目标，流量可以被转移到未受影响的资源。实施故障转移系统，在发生攻击时迅速将流量重定向到备用服务器或区域。
+
 *   **DDoS 缓解服务**：使用擅长识别和防止大规模攻击的第三方 `DDoS` 缓解服务。多家云服务提供商也提供 `DDoS` 防护服务。
+
 *   **事件响应计划**：定期制定并测试专门针对洪水攻击的事件响应策略。确保您的团队在发生攻击时能够迅速果断地采取行动。建立沟通准则，例如如何通知相关方，以及在必要时如何联系执法部门。
-
-
-
-
 
 ## 持续监控与分析
 
@@ -1839,22 +1751,27 @@ DDoS 攻击的主要类型包括：
 
 #### 3.2.4 侧信道攻击
 
-攻击者将部署攻击，使恶意虚拟机靠近目标云服务器。在执行加密操作和解读计算机加密信息的同时收集整个主机数据时，这属于安全漏洞（Miki, T., 2019）。与之前的安全攻击不同，侧信道攻击同时影响软件和硬件平台。它不关注软件漏洞如何导致编码错误或代码不匹配，而是会影响硬件规格，例如设备操作系统（Sayyah Ensan, S., 2021）。这种攻击可能发生在任何操作系统上，无论是 Linux、Windows 还是其他系统。与仅限于软件或硬件平台的先前安全攻击不同，侧信道攻击具有两个维度，即硬件和软件。与其关注什么导致软件漏洞引起糟糕的编码或代码位不匹配，不如考虑对硬件可能造成的影响，例如设备应具有哪种类型的操作系统（Das, D., 2018）。此类攻击的一个示例适用于所有操作系统：例如 Linux、Windows 等。如图 6 所示，展示了侧信道攻击的结构。各类侧信道攻击如下：
+攻击者将部署攻击，使恶意虚拟机靠近目标云服务器。在执行加密操作和解读计算机加密信息的同时收集整个主机数据时，这属于安全漏洞（Miki, T., 2019）。与之前的安全攻击不同，侧信道攻击同时影响软件和硬件平台。它不关注软件漏洞如何导致编码错误或代码不匹配，而是会影响硬件规格，例如设备操作系统（Sayyah Ensan, S., 2021）。这种攻击可能发生在任何操作系统上，无论是 `Linux`、`Windows` 还是其他系统。与仅限于软件或硬件平台的先前安全攻击不同，侧信道攻击具有两个维度，即硬件和软件。与其关注什么导致软件漏洞引起糟糕的编码或代码位不匹配，不如考虑对硬件可能造成的影响，例如设备应具有哪种类型的操作系统（Das, D., 2018）。此类攻击的一个示例适用于所有操作系统：例如 `Linux`、`Windows` 等。如图 6 所示，展示了侧信道攻击的结构。各类侧信道攻击如下：
 
 *   **声学密码分析攻击**：当一个人使用计算机时，该组件可能会监视释放到环境中的电子电路。此外，它还可能收集关于设备电力使用和电磁场的数据。
+
 *   **缓存攻击**：在物理系统环境下，缓存攻击利用缓存处理的时机和方式。
+
 *   **故障分析攻击**：这些攻击在系统计算过程中发生故障时从系统收集数据。
-*   **时序攻击**：此类攻击监控 CPU 和内存之间的数据传输。
+
+*   **时序攻击**：此类攻击监控 `CPU` 和内存之间的数据传输。
 
 以下讨论了针对侧信道攻击的防御策略：
 
+
+
 为了防范侧信道攻击，虚拟防火墙设备与随机生成的加密解密相结合。通过这种组合，云计算架构的前端和后端都将得到保障（Liu, W., 2022）。首先，企业应高度重视使用安全的加密方法和侧信道攻击防御。为了阻止跨虚拟机数据泄露，隔离和保护虚拟机及容器至关重要。硬件选择和 Hypervisor 安全都应被仔细考量。必须建立严格的访问控制程序和持续监控，以捕捉异常情况。此外，在时序和功耗信道中引入噪声和随机化，有助于挫败攻击者（Aljuffri, A., 2021）。在表 3 中，我们总结了之前所有的外部攻击。
 
-#### 图 6. 侧信道攻击
+### 图 6. 侧信道攻击
 
 ![979-8-3693-9225-6.ch004.f06](img/979-8-3693-9225-6.ch004.f06.png)
 
-#### 表 3. 攻击总结
+### 表 3. 攻击总结
 
 | 攻击 | 攻击类型 | 漏洞原因 | 安全违规 | 后果 |
 | --- | --- | --- | --- | --- |
@@ -1864,10 +1781,6 @@ DDoS 攻击的主要类型包括：
 | 侧信道攻击 | 被动/主动攻击 | 操作系统漏洞 | 利用恶意跨虚拟机攻击云 | 将同时影响软件和硬件平台 |
 
 ## 4. 近期进展
-
-
-
-
 
 # 相关研究综述
 
@@ -1881,7 +1794,7 @@ DDoS 攻击的主要类型包括：
 
 (Ding, R., 2023) 提出应实施有效的完整性检查系统以实现完全的身份匿名性。该方法还能简化密钥管理，并最小化与证书管理相关的职责。
 
-(Hao, K., 2023) 针对 IBD 中的安全数据交换问题，引入混合链方法以安全有效地执行数据共享交易。首先提出了一种名为“可互操作共识组”（ICG）的独特概念，将多个基础共识节点分组，每个节点至少监管一条本地区块链。
+(Hao, K., 2023) 针对 IBD 中的安全数据交换问题，引入混合链方法以安全有效地执行数据共享交易。首先提出了一种名为“可互操作共识组”（`ICG`）的独特概念，将多个基础共识节点分组，每个节点至少监管一条本地区块链。
 
 (Ali, S.A., 2023) 综述了利用机器学习技术预测软件缺陷的著名研究。最常用的技术包括支持向量机（`SVM`）、随机森林（`RF`）和朴素贝叶斯（`NB`）。研究发现随机森林和朴素贝叶斯表现最佳。
 
@@ -1940,10 +1853,6 @@ DDoS 攻击的主要类型包括：
 | (Sudarsa, D., 2023) | 2023 | 云数据隐私：9 步骤——设置、注册、密钥管理、文件处理、加密。 |
 | (Ali, M., 2023) | 2023 | `C2aaS` 根据安全级别调整数据处理，实现安全云存储。 |
 
-
-
-
-
 ## 文献综述表
 
 | 引用 | 年份 | 核心贡献 |
@@ -1992,6 +1901,10 @@ Ameur, Y., Bouzefrane, S., & Vinh, T. L. (2023). Handling security issues by usi
 
 An, S., Leung, A., Hong, J. B., Eom, T., & Park, J. S. (2022). Toward Automated Security Analysis and Enforcement for Cloud Computing Using Graphical Models for Security. *IEEE Access : Practical Innovations, Open Solutions*, 10, 75117–75134. DOI: [10.1109/ACCESS.2022.3190545](http://dx.doi.org/10.1109/ACCESS.2022.3190545)
 
+
+
+## 参考文献
+
 A. Aydeger, M. H. Manshaei, M. A. Rahman and K. Akkaya, “Strategic Defense Against Stealthy Link Flooding Attacks: A Signaling Game Approach,” in *IEEE Transactions on Network Science and Engineering*, vol. 8, no. 1, pp. 751-764, 1 Jan.-March 2021. DOI: [10.1109/TNSE.2021.3052090](http://dx.doi.org/10.1109/TNSE.2021.3052090)
 
 Bharadwaj, D. R., Bhattacharya, A., & Chakkaravarthy, M. “Cloud Threat Defense – A Threat Protection and Security Compliance Solution,” 2018 *IEEE International Conference on Cloud Computing in Emerging Markets (CCEM)*, Bangalore, India, 2018, pp. 95-99. DOI: [10.1109/CCEM.2018.00024](http://dx.doi.org/10.1109/CCEM.2018.00024)
@@ -1999,12 +1912,6 @@ Bharadwaj, D. R., Bhattacharya, A., & Chakkaravarthy, M. “Cloud Threat Defense
 Bi, J., Luo, F., He, S., Liang, G., Meng, W., & Sun, M. (2022, September). False Data Injection- and Propagation-Aware Game Theoretical Approach for Microgrids. *IEEE Transactions on Smart Grid*, 13(5), 3342–3353. DOI: [10.1109/TSG.2022.3174918](http://dx.doi.org/10.1109/TSG.2022.3174918)
 
 Bishop, M., & Gates, C. “Defining the Insider Threat”, in *Proc. of the 4th Annual Workshop on Cyber Security and Information Intelligence Research*, Tennessee, Vol. 288, 2008.
-
-
-
-
-
-## 参考文献
 
 Burra, M. S., & Maity, S. (2023). A Distributed and Decentralized Certificateless Framework for Reliable Shared Data Auditing for FOG-CPS Networks. *IEEE Access : Practical Innovations, Open Solutions*, 11, 42595–42618. DOI: [10.1109/ACCESS.2023.3271605](http://dx.doi.org/10.1109/ACCESS.2023.3271605)
 
@@ -2054,17 +1961,15 @@ Luo, J.-L., Yu, S.-Z., & Peng, S.-J. (2020). SDN/NFV-Based Security Service Func
 
 Mell, P., & Grance, T. (2009). Version 15 The NIST definition of cloud computing October 7. *National Institute of Standards and Technology*. [`csrc.nist.gov/groups/SNS/cloud-computing`](https://csrc.nist.gov/groups/SNS/cloud-computing)
 
+
+
+# 参考文献
+
 Miki, T., Miura, N., Sonoda, H., Mizuta, K., & Nagata, M. (2020, January). A Random Interrupt Dithering SAR Technique for Secure ADC Against Reference-Charge Side-Channel Attack. *IEEE Transactions on Circuits and Systems. II, Express Briefs*, 67(1), 14–18. DOI: [10.1109/TCSII.2019.2901534](http://dx.doi.org/10.1109/TCSII.2019.2901534)
 
 Moore, A. P., Capelli, D. M., Caron, T. C., Shaw, E., Spooner, D., & Trzeciak, R. F. (2011). A preliminary model of insider theft of intellectual property. *Journal of Wireless Mobile Networks, Ubiquitous Computing and Dependable Applications*, 2(1).
 
 Musleh, A. S., Chen, G., & Dong, Z. Y. (2020, May). A Survey on the Detection Algorithms for False Data Injection Attacks in Smart Grids. *IEEE Transactions on Smart Grid*, 11(3), 2218–2234. DOI: [10.1109/TSG.2019.2949998](http://dx.doi.org/10.1109/TSG.2019.2949998)
-
-
-
-
-
-## 参考文献
 
 Naval, S., Laxmi, V., Rajarajan, M., Gaur, M. S., & Conti, M. (2015, December). 利用程序语义进行恶意软件检测。 *IEEE Transactions on Information Forensics and Security*（IEEE 信息取证与安全汇刊），10(12)，2591–2604。DOI：[10.1109/TIFS.2015.2469253](http://dx.doi.org/10.1109/TIFS.2015.2469253)
 
@@ -2118,26 +2023,28 @@ Y. Yang, X. Liu, X. Zheng, C. Rong and W. Guo, “面向安全云存储的高效
 
 Yu, S., Tian, Y., Guo, S., & Wu, D. O. (2014, September). 我们能战胜云中的 DDoS 攻击吗？ *IEEE Transactions on Parallel and Distributed Systems*（IEEE 并行与分布式系统汇刊），25(9)，2245–2254。DOI：[10.1109/TPDS.2013.181](http://dx.doi.org/10.1109/TPDS.2013.181)
 
-
-
-
-
 # 5G 网络的网络安全技术
 
-**Himadri Sekhar Das**  
-![Orcid Imagehttps://orcid.org/0000-0002-3509-3388](https://orcid.org/0000-0002-3509-3388)  
+**Himadri Sekhar Das**
+
+![Orcid Imagehttps://orcid.org/0000-0002-3509-3388](https://orcid.org/0000-0002-3509-3388)
+
 哈尔迪亚理工学院，印度
 
-**Sandipan Samanta**  
+**Sandipan Samanta**
+
 CGI，班加罗尔，印度
 
-**Rajrupa Metia**  
+**Rajrupa Metia**
+
 哈尔迪亚理工学院，印度
 
-**Debasish Samanta**  
+**Debasish Samanta**
+
 IBM 加尔各答，印度
 
-**Banibrata Bag**  
+**Banibrata Bag**
+
 哈尔迪亚理工学院，印度
 
 ## 摘要
@@ -2146,9 +2053,15 @@ IBM 加尔各答，印度
 
 ## 引言
 
+
+
+# 5G 网络安全技术演进与前沿应用
+
+## 5G 技术概述
+
 5G 作为第五代移动网络，标志着电信领域的重大飞跃，有望给各行业和日常生活带来变革性的变化。与前几代不同，5G 旨在提供最快的数据速度、海量连接和高可靠性通信，使其成为物联网（`IoT`）、智慧城市、自动驾驶汽车和先进医疗应用等创新的基石（Huseien, F. G. & Shah, W. K., 2022）。凭借每平方公里支持多达数百万台设备的能力，5G 网络有能力应对联网设备和业务的爆发式增长，实现此前仅存在于科幻电影中的新可能。
 
-5G 网络的架构建立在几项关键技术之上，包括毫米波频谱、大规模 `MIMO`（多输入多输出）、网络切片、软件定义网络（`SDN`）和网络功能虚拟化（`NFV`）。这些技术协同工作，提供前所未有的性能和灵活性，使网络运营商能够根据特定用例和客户需求定制服务（Lorincz et al., 2024）。网络切片尤为先锋，它允许在单一物理网络基础设施内创建多个虚拟网络，每个网络都针对不同类型的服务进行了优化，例如高速移动宽带、低延迟应用和大规模 `IoT` 连接。图 1. 5G 技术的不同特性，如大容量、快速响应、广覆盖等。
+5G 网络的架构建立在几项关键技术之上，包括毫米波频谱、大规模 `MIMO`（多输入多输出）、网络切片、软件定义网络（`SDN`）和网络功能虚拟化（`NFV`）。这些技术协同工作，提供前所未有的性能和灵活性，使网络运营商能够根据特定用例和客户需求定制服务（Lorincz et al., 2024）。网络切片尤为先锋，它允许在单一物理网络基础设施内创建多个虚拟网络，每个网络都针对不同类型的服务进行了优化，例如高速移动宽带、低延迟应用和大规模 `IoT` 连接。
 
 ### 图 1. 5G 技术的不同特性
 
@@ -2169,10 +2082,6 @@ IBM 加尔各答，印度
 本章范围广泛，涵盖 5G 网络安全的理论和实践两方面。它将深入探讨网络切片、`SDN` 和 `NFV` 等技术带来的具体挑战，并探索这些挑战如何通过创新安全解决方案得到解决。本章还将审视 5G 安全对关键基础设施和 `IoT` 设备的影响，为保护 5G 生态系统中这些关键组件的最佳实践提供见解。
 
 ### 背景与动机
-
-
-
-
 
 ## 移动网络的演进与 5G 安全挑战
 
@@ -2196,7 +2105,7 @@ IBM 加尔各答，印度
 
 5G 网络中最重要的安全挑战之一是设备密度的空前增加以及物联网的广泛融合。5G 网络计划支持每平方公里多达一百万台设备，比前几代有了巨大提升（O’Connell 等，2020）。这种海量的连接设备，从智能手机到智慧城市中的传感器，极大地扩展了攻击面，使得网络攻击者更容易瞄准漏洞。
 
-许多物联网设备处理能力和存储有限，这限制了它们实施强安全措施的能力。这些设备经常运行过时或不安全的软件，使其易受恶意软件注入、分布式拒绝服务（DDoS）攻击和未授权访问等攻击。此外，连接到 5G 网络的海量物联网设备意味着，即使是一个微小的安全缺口也可能产生级联效应，危及整个网络。
+许多物联网设备处理能力和存储有限，这限制了它们实施强安全措施的能力。这些设备经常运行过时或不安全的软件，使其易受恶意软件注入、分布式拒绝服务（`DDoS`）攻击和未授权访问等攻击。此外，连接到 5G 网络的海量物联网设备意味着，即使是一个微小的安全缺口也可能产生级联效应，危及整个网络。
 
 **图 2. 5G 网络中的不同安全挑战**
 
@@ -2208,7 +2117,7 @@ IBM 加尔各答，印度
 
 ### 虚拟化与软件定义网络（SDN）
 
-5G 网络采用虚拟化和软件定义网络（SDN）带来了诸多优势，如灵活性、可扩展性和成本效益。虚拟化将网络功能与底层硬件解耦，支持创建可动态部署和管理的虚拟网络功能（VNF）（Kim, J. 2023）。另一方面，SDN 允许对网络流量进行集中控制，为网络管理提供了更大的敏捷性。
+5G 网络采用虚拟化和软件定义网络（`SDN`）带来了诸多优势，如灵活性、可扩展性和成本效益。虚拟化将网络功能与底层硬件解耦，支持创建可动态部署和管理的虚拟网络功能（`VNF`）（Kim, J. 2023）。另一方面，`SDN` 允许对网络流量进行集中控制，为网络管理提供了更大的敏捷性。
 
 ### 网络切片及其安全隐患
 
@@ -2220,17 +2129,13 @@ IBM 加尔各答，印度
 
 隐私是 5G 网络中的另一个关键问题，由连接设备生成和传输的海量个人及敏感数据驱动。5G 网络收集数据的颗粒度极细，包括位置数据、使用模式和个人偏好，引发了重大的隐私担忧。不充分的隐私保护可能导致未授权的数据收集、追踪和用户画像分析，潜在地侵犯用户隐私权。
 
-
-
-
-
 将物联网设备集成到 5G 网络中加剧了这些担忧，因为许多物联网设备缺乏强有力的隐私保护。例如，智能家居设备、可穿戴设备和健康监测器可以收集关于个人日常活动、健康状况等的详细信息。如果这些数据被拦截或滥用，可能会导致严重的隐私泄露（Popoola, O. 2024）。此外，边缘计算等技术的使用（数据处理发生在更靠近数据源头的地方）引入了新的隐私风险，因为敏感数据分布在各个位置，可能处于用户控制之外。
 
 解决这些隐私问题需要实施强大的数据保护机制，包括加密、匿名化和用户同意管理，以及制定监管框架来规范 5G 网络中的数据收集和使用。
 
 ## 网络安全技术的演进
 
-在 5G 发展的初期阶段，研究人员和行业利益相关者开始探索支持这种下一代网络所需的基础安全框架。重点在于理解 5G 的独特需求，包含其支持海量设备连接、超高可靠低延迟通信和增强型移动宽带的能力。早期研究确定了对强大安全机制的需求，以应对预期的挑战，例如攻击面的扩大和网络管理的复杂性。图 3 展示了网络安全的不同工具和技术，如网络安全、运营安全、信息安全、应用安全等。
+在 5G 发展的初期阶段，研究人员和行业利益相关者开始探索支持这种下一代网络所需的基础安全框架。重点在于理解 5G 的独特需求，包含其支持海量设备连接、超高可靠低延迟通信和增强型移动宽带的能力。早期研究确定了对强大安全机制的需求，以应对预期的挑战，例如攻击面的扩大和网络管理的复杂性。
 
 ### 图 3. 网络安全中的不同工具和技术
 
@@ -2256,9 +2161,6 @@ IBM 加尔各答，印度
 
 **自适应安全模型：** 随着 5G 网络复杂性的增加，自适应安全模型成为维持强大防护所必需的。这些模型旨在根据当前的威胁形势、网络状况和用户行为动态调整安全措施。自适应安全系统利用 `AI` 和机器学习持续评估风险并实施适当的对策，确保 5G 网络在面对不断演变的威胁时保持安全。
 
-
-
-
 ## 面向 IoT 设备的轻量级密码学
 
 将 IoT 设备集成到 5G 网络中，要求开发适合这些设备有限计算资源的轻量级密码学解决方案。研究重点在于创建高效的加密算法，在不牺牲性能的前提下提供强安全性。轻量级密码学成为保障 5G 网络内 IoT 生态系统安全的关键组件，保护敏感数据并确保设备通信的完整性 (Sikder, S. 2022)。
@@ -2281,11 +2183,11 @@ IBM 加尔各答，印度
 
 ### 在威胁检测与响应中的作用
 
-人工智能 (AI) 和机器学习 (ML) 在强化 5G 网络内部网络安全方面扮演着越来越关键的角色。这些技术被用于处理 5G 网络产生的海量数据，识别可能预示潜在威胁的模式和异常。AI 驱动的威胁检测系统可以实时监控网络流量，快速识别并缓解诸如未授权访问、恶意软件和分布式拒绝服务 (DDoS) 攻击等风险。AI 适应并从新数据中学习的能力，使其成为应对 5G 环境中动态且不断演变的威胁格局的有力工具。
+人工智能（`AI`）和机器学习（`ML`）在强化 5G 网络内部网络安全方面扮演着越来越关键的角色。这些技术被用于处理 5G 网络产生的海量数据，识别可能预示潜在威胁的模式和异常。`AI` 驱动的威胁检测系统可以实时监控网络流量，快速识别并缓解诸如未授权访问、恶意软件和分布式拒绝服务（`DDoS`）攻击等风险。`AI` 适应并从新数据中学习的能力，使其成为应对 5G 环境中动态且不断演变的威胁格局的有力工具。
 
 ### 用于预测性安全建模的 AI
 
-除了实时威胁检测，AI 和 ML 还越来越多地用于 5G 网络中的预测性安全建模。通过分析历史数据并识别趋势，AI 可以在潜在安全事件发生前预测它们。预测模型可以预判漏洞、预测攻击模式，并提供对最可能发生的未来威胁的洞察，从而实现主动安全措施。这种能力在 5G 网络中尤为宝贵，因为海量且复杂的连接设备规模要求采取前瞻性方法来维护安全 (Bibri, E. S. 2023)。
+除了实时威胁检测，`AI` 和 `ML` 还越来越多地用于 5G 网络中的预测性安全建模。通过分析历史数据并识别趋势，`AI` 可以在潜在安全事件发生前预测它们。预测模型可以预判漏洞、预测攻击模式，并提供对最可能发生的未来威胁的洞察，从而实现主动安全措施。这种能力在 5G 网络中尤为宝贵，因为海量且复杂的连接设备规模要求采取前瞻性方法来维护安全 (Bibri, E. S. 2023)。
 
 ### 区块链技术
 
@@ -2295,107 +2197,103 @@ IBM 加尔各答，印度
 
 ### 量子密码学：量子密钥分发 (QKD)
 
-量子密码学，特别是量子密钥分发 (QKD)，正作为一种当代解决方案崭露头角，用于保障 5G 网络免受未来威胁。QKD 利用量子力学原理在各方之间安全地分发加密密钥。任何试图拦截或测量量子密钥的行为都会改变其状态，立即向各方发出潜在窃听尝试的警报。量子密码学这一固有特性使其成为保障 5G 网络中敏感通信安全的理想解决方案，确保加密密钥保持机密且未被篡改 (Adnan, M. H. 2022)。
+量子密码学，特别是量子密钥分发（`QKD`），正作为一种当代解决方案崭露头角，用于保障 5G 网络免受未来威胁。`QKD` 利用量子力学原理在各方之间安全地分发加密密钥。任何试图拦截或测量量子密钥的行为都会改变其状态，立即向各方发出潜在窃听尝试的警报。量子密码学这一固有特性使其成为保障 5G 网络中敏感通信安全的理想解决方案，确保加密密钥保持机密且未被篡改 (Adnan, M. H. 2022)。
 
 #### 在 5G 安全中的未来应用
 
-虽然 QKD 目前是量子密码学在 5G 中最突出的应用，但未来的应用很可能会扩展到密钥分发之外。随着量子计算的进步，传统加密方案可能变得容易受到量子攻击。为了应对这一问题，研究人员正在探索能够抵御此类攻击的后量子密码算法。未来，量子密码学可被整合到更广泛的 5G 安全基础设施中，不仅保护密钥交换，还保护跨网络传输的所有数据的完整性和机密性。
+虽然 `QKD` 目前是量子密码学在 5G 中最突出的应用，但未来的应用很可能会扩展到密钥分发之外。随着量子计算的进步，传统加密方案可能变得容易受到量子攻击。为了应对这一问题，研究人员正在探索能够抵御此类攻击的后量子密码算法。未来，量子密码学可被整合到更广泛的 5G 安全基础设施中，不仅保护密钥交换，还保护跨网络传输的所有数据的完整性和机密性。
 
 ### 同态加密：确保 5G 中的数据隐私
 
+
+
+# 同态加密在 5G 网络中的应用
+
 同态加密是一项有前景的技术，用于确保 5G 网络中的数据隐私。与常规加密系统不同，同态加密允许以加密形式处理数据，这意味着敏感数据可以在从未被解密的情况下被分析或操作。这种能力在数据隐私至关重要的 5G 环境中（如医疗和智慧城市应用）尤为宝贵。同态加密实现了安全的数据共享和处理，确保私人和敏感数据即使在计算过程中也受到保护 (Shi, S. 2020)。
 
-#### 潜在用例与挑战
+## 潜在用例与挑战
 
 同态加密在 5G 中的潜在用例非常广泛，包括安全数据分析、隐私保护机器学习和加密云计算。例如，在医疗领域，同态加密可允许第三方服务提供商分析医疗数据而不暴露原始数据，从而保护患者隐私。然而，在 5G 网络中广泛采用同态加密也面临重大挑战。主要挑战之一是计算开销，因为同态加密目前比传统加密方法消耗更多资源。此外，确保与现有系统和标准的兼容性，对于同态加密成功融入 5G 网络安全框架至关重要。
 
 这些前沿技术有望彻底改变 5G 网络的网络安全格局，提供先进的解决方案来应对这项下一代技术带来的独特挑战。每项技术都带来了自身的优势和挑战，它们的成功实施将是保障 5G 未来的关键。
 
-## 5G 网络切片中的网络安全
+# 5G 网络切片中的网络安全
 
-
-
-
-
-### 网络切片概述
+## 网络切片概述
 
 网络切片是 5G 技术的一项重要功能，它支持在单一物理网络基础设施上创建多样化的虚拟网络，即“切片”。每个切片均经过定制，以满足特定的性能、容量和服务需求，从而使得在同一网络上支持多种类型的服务成为可能。例如，一个切片可能针对增强移动宽带进行优化，而另一个切片则可专门用于任务关键型应用的超可靠低时延通信。
 
 网络切片的概念使网络运营商能够根据不同应用和用户的需求，高效地管理和分配资源。这种虚拟化方法支持提供定制化服务的灵活性，并提高整体网络效率。每个切片独立运行，拥有自己的网络功能和资源集合，从而能够支持自动驾驶汽车、智慧城市和工业物联网等各种用例。
 
-### 切片网络中的安全挑战
+## 切片网络中的安全挑战
 
 网络切片引入了若干独特的安全挑战，必须加以解决以确保 5G 网络的整体完整性和安全性：
 
-#### 隔离与分离
+### 隔离与分离
 
 主要安全顾虑之一是确保切片之间的有效隔离。由于每个切片独立运行但共享相同的物理基础设施，一个切片中的安全漏洞可能会影响其他切片。确保一个切片中的数据和功能不干扰或危及另一个切片中的数据和功能，对于维护整体网络安全至关重要。
 
-#### 切片的动态特性
+### 切片的动态特性
 
 网络切片的动态创建、修改和终止增加了安全管理的复杂性。快速部署和扩展切片的能力意味着安全策略和配置必须具有适应性，并在整个网络中得到一致执行。这种动态特性使得有效监控和管理安全变得困难。
 
-#### 资源分配与管理
+### 资源分配与管理
 
 网络切片共享物理资源，如算力和存储。确保资源得到安全高效的分配，且不产生漏洞或资源争用，至关重要。攻击者可能利用资源共享发起攻击或降低其他切片的性能。
 
-#### 管理复杂性
+### 管理复杂性
 
 管理多个切片（每个切片具有不同的安全需求和策略）增加了维护安全网络环境的复杂性。跨各切片协调安全措施并确保符合不同的安全策略，可能是一项重大挑战。
 
-### 隔离与保护切片的技术
+## 隔离与保护切片的技术
 
 为应对与网络切片相关的安全挑战，采用了若干技术和策略：
 
-#### 基于虚拟化的隔离
+### 基于虚拟化的隔离
 
-利用虚拟化技术为每个网络切片创建隔离环境。这种隔离通过使用虚拟机或容器来实现，确保每个切片独立运行，无法直接访问或干扰其他切片的资源。虚拟专用网络 (VPN) 和防火墙等技术用于在切片之间强制执行安全边界。
+利用虚拟化技术为每个网络切片创建隔离环境。这种隔离通过使用虚拟机或容器来实现，确保每个切片独立运行，无法直接访问或干扰其他切片的资源。虚拟专用网络 (`VPN`) 和防火墙等技术用于在切片之间强制执行安全边界。
 
-#### 访问控制与认证
+### 访问控制与认证
 
-实施强有力的访问控制机制，确保只有授权实体才能访问或修改网络切片。这包括健壮的认证协议和基于角色的访问控制 (RBAC)，根据用户的角色和权限限制访问。此外，切片专用的凭证和授权检查有助于维护每个切片的完整性和安全性。
+实施强有力的访问控制机制，确保只有授权实体才能访问或修改网络切片。这包括健壮的认证协议和基于角色的访问控制 (`RBAC`)，根据用户的角色和权限限制访问。此外，切片专用的凭证和授权检查有助于维护每个切片的完整性和安全性。
 
-#### 加密与数据保护
+### 加密与数据保护
 
 采用端到端加密保护在网络切片内部及之间传输的数据。这确保敏感信息保持机密，免受未授权访问。数据保护措施还包括存储数据的加密和安全的密钥管理实践，以防范数据泄露。
 
-#### 监控与威胁检测
+### 监控与威胁检测
 
-持续监控和实时威胁检测对于识别和缓解网络切片中的安全威胁至关重要。采用先进的监控工具和入侵检测系统 (IDS) 来检测异常行为、未授权访问尝试和潜在攻击。机器学习和 AI 驱动的分析增强了有效识别和响应威胁的能力。
+持续监控和实时威胁检测对于识别和缓解网络切片中的安全威胁至关重要。采用先进的监控工具和入侵检测系统 (`IDS`) 来检测异常行为、未授权访问尝试和潜在攻击。机器学习和 AI 驱动的分析增强了有效识别和响应威胁的能力。
 
-#### 策略管理与自动化
+### 策略管理与自动化
 
 使用自动化策略管理工具在网络切片间一致地执行安全策略。这包括使用安全编排框架，可根据当前网络状况和威胁等级动态调整策略。自动化有助于简化策略管理，并确保策略在所有切片中统一应用。
 
-### 案例研究与实际实施
+## 案例研究与实际实施
 
-#### 案例研究：智慧城市的安全网络切片
+### 案例研究：智慧城市的安全网络切片
 
 在一个智慧城市部署中，网络切片被用于为各种智慧城市应用创建专用切片，如交通管理、公共安全和环境监测。为保护这些切片，实施了基于虚拟化的隔离，确保每个切片中的数据和功能保持分离。采用访问控制和加密来保护敏感数据，并使用持续监控来检测和响应潜在安全事件。该部署展示了网络切片如何在保持强大安全措施的同时提供定制化服务。
 
-#### 案例研究：采用网络切片的工业物联网
+### 案例研究：采用网络切片的工业物联网
 
-一家大型工业设施利用网络切片支持其工业物联网 (IIoT) 应用，包括实时监控和自动化。每个 IIoT 应用被分配专属网络切片，以满足特定的性能和安全要求。采用加密、访问控制和策略管理等技术保护工业数据的完整性和机密性。该实施凸显了在管理复杂多变的工业环境时，自适应安全措施的重要性。
+一家大型工业设施利用网络切片支持其工业物联网 (`IIoT`) 应用，包括实时监控和自动化。每个 IIoT 应用被分配专属网络切片，以满足特定的性能和安全要求。采用加密、访问控制和策略管理等技术保护工业数据的完整性和机密性。该实施凸显了在管理复杂多变的工业环境时，自适应安全措施的重要性。
 
-#### 实际实施：面向医疗保健的 5G 网络切片
+### 实际实施：面向医疗保健的 5G 网络切片
 
-在医疗保健场景中，网络切片被用于为远程医疗、电子健康记录 (EHR) 和医疗设备通信创建安全、低时延的切片。安全措施包括医疗数据加密、面向医疗服务提供者的访问控制，以及针对潜在安全威胁的监控。该实施展示了网络切片如何定制以满足关键医疗应用严格的安全性和性能要求 (Gao, S. 2024)。
+在医疗保健场景中，网络切片被用于为远程医疗、电子健康记录 (`EHR`) 和医疗设备通信创建安全、低时延的切片。安全措施包括医疗数据加密、面向医疗服务提供者的访问控制，以及针对潜在安全威胁的监控。该实施展示了网络切片如何定制以满足关键医疗应用严格的安全性和性能要求 (Gao, S. 2024)。
 
 这些案例研究和实际实施展示了各种技术在应对网络切片相关安全挑战方面的有效性。它们为如何在不同场景下安全地部署网络切片提供了宝贵见解，确保在实现 5G 技术优势的同时，保持强大的安全性和隐私保护。
 
-## 5G 网络中的物联网安全
+# 5G 网络中的物联网安全
 
-### 5G 中物联网带来的独特挑战
+## 5G 中物联网带来的独特挑战
 
-物联网 (IoT) 融入 5G 网络引入了若干独特的安全挑战，这是由于连接设备的数量庞大且种类多样所致。这些挑战包括：
-
-
-
-
+物联网 (`IoT`) 融入 5G 网络引入了若干独特的安全挑战，这是由于连接设备的数量庞大且种类多样所致。这些挑战包括：
 
 ### 设备异构性与可扩展性
 
-IoT 工具在配件能力、操作系统和通信义务方面差异巨大。这种多样性使统一安全措施的实施变得复杂。此外，5G 网络中 IoT 部署的巨大规模（每平方公里潜在可达数百万设备）给管理和保护如此庞大且多样化的终端阵列带来了挑战 (Allioui, H. & Mourdi, Y., 2023)。
+IoT 设备在硬件能力、操作系统和通信协议方面差异巨大。这种多样性使统一安全措施的实施变得复杂。此外，5G 网络中 IoT 部署的巨大规模（每平方公里潜在可达数百万设备）给管理和保护如此庞大且多样化的终端阵列带来了挑战 (Allioui, H. & Mourdi, Y., 2023)。
 
 ### 资源限制
 
@@ -2407,23 +2305,23 @@ IoT 工具在配件能力、操作系统和通信义务方面差异巨大。这�
 
 ### 设备间通信
 
-IoT 设备经常相互通信，并通过不同网络与主系统通信。保护这些通信通道至关重要，以防止未授权的数据访问、篡改或窃听。确保跨越多样且潜在不受信网络的安全通信义务增加了 IoT 安全的复杂性。
+IoT 设备经常相互通信，并通过不同网络与主系统通信。保护这些通信通道至关重要，以防止未授权的数据访问、篡改或窃听。确保跨越多样且潜在不受信网络的安全通信协议增加了 IoT 安全的复杂性。
 
 ### 数据隐私与完整性
 
 IoT 设备生成并传输大量敏感数据，包括个人、健康和功能信息。确保该数据的隐私和完整性至关重要，特别是在医疗保健和智慧城市等应用中，数据泄露可能产生重大后果。
 
-### 轻量级密码学与安全固件更新
+## 轻量级密码学与安全固件更新
 
-#### 轻量级密码学
+### 轻量级密码学
 
 轻量级密码学旨在提供强大的安全性，同时适应许多 IoT 设备的有限资源。轻量级密码学的关键方面包括：
 
 **高效算法**：轻量级加密算法针对低功耗和低内存环境进行了优化。示例包括轻量级分组密码如 `PRESENT` 和 `SPECK`，以及专为受限设备设计的轻量级哈希函数，如 `SHA-3` 变体。
 
-### 确保 IoT 生态系统的端到端安全
+## 确保 IoT 生态系统的端到端安全
 
-#### 综合安全框架
+### 综合安全框架
 
 确保 IoT 生态系统的端到端安全需要一种综合方法，解决网络每一层的安全问题。端到端安全框架的关键组件包括：
 
@@ -2439,13 +2337,13 @@ IoT 设备生成并传输大量敏感数据，包括个人、健康和功能信�
 
 **协作与标准**：行业利益相关者、标准化机构和监管机构之间的协作对于建立 IoT 安全的最佳实践和标准至关重要。遵守既定的安全标准和指南有助于确保 IoT 设备和网络免受已知威胁和漏洞的侵害。
 
-## 5G 网络安全的未来方向
+# 5G 网络安全的未来方向
 
-### 预期威胁与新兴挑战
+## 预期威胁与新兴挑战
 
 随着 5G 网络的持续演进和扩展，若干预期威胁和新兴挑战可能会影响其网络安全格局：
 
-**高级持续性威胁 (APTs)**：APTs 即持续且有针对性的高科技攻击，预计将变得更加复杂和频繁。攻击者可利用 5G 的高速、低延迟能力发动复杂攻击，并能在漫长时期内隐蔽持续。
+**高级持续性威胁 (`APTs`)**：APTs 即持续且有针对性的高科技攻击，预计将变得更加复杂和频繁。攻击者可利用 5G 的高速、低延迟能力发动复杂攻击，并能在漫长时期内隐蔽持续。
 
 **攻击面扩大**：大量 IoT 设备的融合和网络切片的增长创造了更广泛的攻击面。每个新设备和网络切片都呈现潜在漏洞，可能被恶意行为者利用。
 
@@ -2455,7 +2353,7 @@ IoT 设备生成并传输大量敏感数据，包括个人、健康和功能信�
 
 **AI 驱动的攻击**：随着 AI 和机器学习技术变得更先进，攻击者可能利用它们来自动化和增强攻击策略。防御 AI 驱动的威胁将需要复杂且自适应的安全措施。
 
-### 6G 及其安全启示
+## 6G 及其安全启示
 
 从 5G 向 6G 的过渡预计将引入新技术和能力，对安全产生重大影响：
 
@@ -2469,20 +2367,17 @@ IoT 设备生成并传输大量敏感数据，包括个人、健康和功能信�
 
 **隐私与数据保护**：随着 6G 数据收集和共享能力的增强，保护用户隐私和确保数据保护将变得更加关键。需要新的隐私保护技术和法规来应对这些担忧。
 
-## 结论
+# 结论
 
-
-
-
-# 5G 网络网络安全概述
+## 5G 网络网络安全概述
 
 5G 网络的网络安全形势以不断演变的威胁和挑战为标志，包括设备密度增加、高级持续性威胁以及量子计算的潜在影响。解决这些问题需要创新方法，例如轻量级密码学、AI 驱动的威胁检测和安全固件更新。向 6G 的过渡将引入新技术和安全隐患，需要面向未来的策略和稳健的政策框架。行业利益相关者、研究人员和监管机构之间的持续创新与合作对于推进安全措施至关重要。保障 5G 的未来要求采取主动和自适应的解决方案，以抵御新兴风险并确保网络完整性。
 
-# 章节贡献：5G 网络网络安全技术
+## 章节贡献：5G 网络网络安全技术
 
 关于 5G 网络网络安全技术的章节提供了一项新颖的贡献，即呈现了针对 5G 技术带来的独特挑战而量身定制的安全措施演变的全面、按年份分析。与主要关注单个方面或静态概述的先前综述不同，本章强调了安全策略的动态演进，展示了它们如何随时间推移适应新出现的威胁和技术进步。它独特地整合了对 AI 驱动的威胁检测、同态加密和基于区块链的去中心化安全等尖端技术的讨论，提供了这些创新如何塑造 5G 安全未来的前瞻性视角。此外，本章还强调了这些技术对 5G 网络中关键基础设施和 IoT 设备的实际意义，使其成为学术研究人员和行业从业者了解并缓解下一代网络复杂安全挑战的宝贵资源。
 
-# 章节结论
+## 章节结论
 
 本章得出结论：5G 网络中的网络安全是一个快速发展的领域，由这项变革性技术带来的复杂挑战和机遇所驱动。多年来，安全策略已从基本概念框架发展为利用 AI、区块链和同态加密等尖端技术的复杂、多层方法。这些创新对于应对 5G 网络面临的多样化和动态威胁至关重要，特别是在保护关键基础设施和 IoT 生态系统方面。持续的研究和开发工作预示着向更具弹性、自适应和去中心化的安全架构发展的趋势，这将随着 5G 在全球范围内的持续扩展而变得至关重要。展望未来，本章强调了学术界、行业和标准化机构之间持续合作的重要性，以确保 5G 网络对所有用户都是安全可靠的。
 
@@ -2501,6 +2396,10 @@ Chaubey, N. (2020). *Quantum Cryptography and the Future of Cyber Security*. IGI
 Chen, S., Liu, Y., & Cui, S. (2019). Security in 5G networks: A survey. *IEEE Access*, vol. 7, pp. 30474-30488. Abbas, R., Jan, S. and Ali, F. (2020). Security and privacy in 5G: A survey of emerging challenges and future directions. *IEEE Access: Practical Innovations, Open Solutions*, 8, 211657–211691.
 
 Fakhouri, H. N., Alawadi, S., Awaysheh, F. M., Hani, I. B., Alkhalaileh, M., & Hamad, F. (2023). A Comprehensive Study on the Role of Machine Learning in 5G Security: Challenges, Technologies, and Solutions. *Electronics (Basel)*, 12(22), 4604. DOI: [10.3390/electronics12224604](http://dx.doi.org/10.3390/electronics12224604)
+
+
+
+# 参考文献
 
 Gao, S., Lin, R., Fu, Y., Li, H., & Cao, J. (2024). Security Threats, Requirements and Recommendations on Creating 5G Network Slicing System: A Survey. *Electronics (Basel)*, 13(10), 1860. DOI: [10.3390/electronics13101860](http://dx.doi.org/10.3390/electronics13101860)
 
@@ -2522,12 +2421,6 @@ Morgado, A., Mohammed, K., Huq, S., Mumtaz, S., & Rodriguez, J. (2018). A survey
 
 O’Connell, E., Moore, D., & Newe, T. (2020). Challenges Associated with Implementing 5G in Manufacturing. *Telecom*, 1(1), 48–67. DOI: [10.3390/telecom1010005](http://dx.doi.org/10.3390/telecom1010005)
 
-
-
-
-
-## 参考文献
-
 Pons, M., Valenzuela, E., Rodríguez, B., Nolazco-Flores, J. A., & Del-Valle-Soto, C. (2023). 物联网应用中 5G 技术的利用：干扰与网络优化困难带来的当前局限性——综述。 *Sensors (Basel)*， 23(8)， 3876。 DOI： [10.3390/s23083876](http://dx.doi.org/10.3390/s23083876) PMID： [37112216](https://pubmed.ncbi.nlm.nih.gov/37112216)
 
 Popoola, O., Rodrigues, M., Marchang, J., Shenfield, A., Ikpehai, A., & Popoola, J. (2024). 采用物联网与区块链的智能家居医疗方案中安全与隐私的关键文献综述：问题、挑战与解决方案。 *Blockchain: Research and Applications* ， 5(2)， 100178。 ISSN 2096-7209。 DOI： [10.1016/j.bcra.2023.100178](http://dx.doi.org/10.1016/j.bcra.2023.100178)
@@ -2547,20 +2440,27 @@ Wang, J., Li, Y., & Wang, Z. (2024). 面向 5G 及未来网络的弹性安全架
 # 第 6 章：利用 AI 和机器学习实现高效的钓鱼邮件检测
 
 **Ritesh Joshi**  
+
 ![Orcid Image](https://orcid.org/0000-0002-0138-8786) [`orcid.org/0000-0002-0138-8786`](https://orcid.org/0000-0002-0138-8786)  
+
 Prestige Institute of Engineering Management and Research, Indore, India
 
 **Nirbhay Kumar Chaubey**  
+
 A.M. Patel Institute of Computer Studies, Ganpat University, India
 
 **Swati Patel**  
+
 A.M. Patel Institute of Computer Studies, Ganpat University, India
 
 **Md Danish Imtiaz**  
+
 ![Orcid Image](https://orcid.org/0009-0003-7341-5506) [`orcid.org/0009-0003-7341-5506`](https://orcid.org/0009-0003-7341-5506)  
+
 A.M. Patel Institute of Computer Studies, Ganpat University, India
 
 **Ankit Kumar**  
+
 A.M. Patel Institute of Computer Studies, Ganpat University, India
 
 ## 摘要
@@ -2578,8 +2478,11 @@ A.M. Patel Institute of Computer Studies, Ganpat University, India
 ### 高效的钓鱼检测至关重要，原因如下：
 
 *   **财务安全：** 钓鱼攻击可能给个人和企业造成巨大的财务损失。检测并拦截这些攻击可防止银行账户被未授权访问、信用卡欺诈和其他金融犯罪。
+
 *   **数据保护：** 钓鱼攻击往往以敏感的个人和企业数据为目标。防范这些攻击有助于保护个人信息和知识产权，降低数据泄露风险并维护隐私。
+
 *   **声誉管理：** 钓鱼攻击会严重损害组织的声誉。消费者和客户可能会质疑公司保护其数据的能力，从而导致业务下滑和法律纠纷。
+
 *   **合规性：** 严格的数据保护法规（包括欧洲的 GDPR 和美国的 HIPAA）适用于众多行业。有效的钓鱼检测有助于组织遵守这些法规，避免高额罚款。
 
 ### 钓鱼检测的演变
@@ -2587,20 +2490,16 @@ A.M. Patel Institute of Computer Studies, Ganpat University, India
 多年来，钓鱼检测已从基础的基于关键词的方法演变为涉及人工智能 (AI) 和机器学习 (ML) 的更先进技术 (Salloum et al., 2021)。传统方法包括：
 
 *   **黑名单：** 这些是已知钓鱼 URL、电子邮件地址和域名的列表。虽然有用，但它们是被动而非主动的，且需要持续更新以保持有效性。
+
 *   **基于规则的系统：** 这些系统使用预定义规则，根据某些特征（如可疑链接或特定措辞）识别钓鱼邮件。然而，它们难以处理误报，且无法轻易适应新的钓鱼策略。
+
 *   **启发式方法：** 这些方法涉及手工制作的规则和模式来检测钓鱼。尽管比黑名单更灵活，但它们仍缺乏处理复杂钓鱼攻击所需的适应性和准确性。
 
 ### AI 和机器学习简介
 
-
-
-
-
-## 人工智能与机器学习在网络钓鱼检测中的应用
-
 人工智能和机器学习改变了网络安全行业，提供了强大的工具来检测和缓解网络钓鱼攻击（Atawneh & Aljehani, 2023）。人工智能（AI）是指在具有思维和学习程序的机器中模拟人类智能。作为人工智能的一个分支，机器学习利用统计模型和算法，帮助计算机从经验和数据中学习，以更有效地执行任务。
 
-### 本章目标
+## 本章目标
 
 在本章中，我们探讨利用人工智能和机器学习技术开发稳健的网络钓鱼邮件检测系统。我们利用两个公开可用的数据集来训练和评估各种算法的性能。
 
@@ -2618,19 +2517,17 @@ A.M. Patel Institute of Computer Studies, Ganpat University, India
 
 相比之下，基于 AI 和 ML 的网络钓鱼检测方法利用先进算法来检查大量数据，并检测表明网络钓鱼行为的细微模式。机器学习模型可以自动从标记数据集中学习，以识别异常发件人行为、欺骗性内容或可疑 URL 等特征。自然语言处理（NLP）等技术从文本中提取含义，而异常检测算法则标记偏离正常电子邮件行为的偏差。此外，卷积神经网络（CNN）和循环神经网络（RNN）等深度学习模型擅长处理复杂的非结构化数据以发掘隐藏威胁。
 
+
+
 Altwaijry 等人 (2024) 发现，深度学习模型，特别是混合 CNN 和 LSTM，比传统技术更可靠、更准确。他们的工作强调了特征工程和 NLP 技术的重要性。这些算法为现实世界的检测提供了强有力的解决方案，成功捕捉了网络钓鱼邮件中的复杂模式。Sanchez & Duan (2012) 发现 SVM 和集成方法在网络钓鱼检测中表现极佳，强调了强大算法在提高准确性和鲁棒性方面的重要性。Atawneh & Aljehani (2023) 建议了一种混合垃圾邮件过滤器，该过滤器将带有修正线性单元的深度多层感知器神经网络与 N-gram tf-idf 特征选择以及集成的基于分布的平衡技术相结合。在 SpamAssassin 和 Enron 的基准数据集中，该过滤器正确识别了垃圾邮件。此外，Rawal 等人 (2017) 通过使用机器学习方法创建有效的网络钓鱼检测系统，强调了特征选择在提升模型性能方面的重要性。
 
 Salloum 等人 (2021) 在一项关于网络钓鱼检测策略的深入研究中，强调了 NLP 方法结合机器学习的实用性。Khonji 等人 (2013) 进行了一项深入研究，比较了用于网络钓鱼邮件检测的机器学习分类器，包括决策树、随机森林和支持向量机 (SVM)。他们的研究表明，集成方法，特别是随机森林，提供了最佳的检测准确性。Yasin & Abuhasan (2016) 提出了一种智能分类模型，展示了机器学习方法如何能显著提高网络钓鱼邮件的检测准确性。Harikrishnan, Vinayakumar, & Soman (2018) 探讨了多种用于网络钓鱼邮件检测的机器学习技术，展示了不同分类器如何提高检测的鲁棒性和准确性。这进一步支持了向机器学习发展的趋势。
-
-
-
-
 
 ## 文献综述与方法论
 
 ## 文献综述
 
-使用 J48 决策树作为基础分类器，Zareapoor 和 Seeja 2015 年的比较研究考察了钓鱼邮件检测的特征提取和选择策略。研究发现，谨慎的特征选择能极大地提升机器学习模型性能。在 2020 年的研究中，Li et al. (2020) 探讨了深度学习方法在钓鱼邮件检测中的应用，发现与传统机器学习技术相比，长短期记忆（LSTM）网络显著提高了检测准确率并降低了误报率。特征工程已被证明在提高检测准确率方面起着关键作用。正如 Yang et al. (2019) 所展示的，领域特定特征和谨慎的特征选择非常重要，他们的工作证明了 SVM 和集成方法优于其他分类器。PhishNet-NLP 是由 Verma, Shashidhar, & Hossain (2012) 设计的基于自然语言处理的系统，旨在通过利用邮件头、链接和正文中的特征来识别钓鱼邮件。该方法利用上下文来提高区分“可执行”和“信息类”邮件的准确性，以 97% 的检测率优于以往方法。
+使用 `J48` 决策树作为基础分类器，Zareapoor 和 Seeja 2015 年的比较研究考察了钓鱼邮件检测的特征提取和选择策略。研究发现，谨慎的特征选择能极大地提升机器学习模型性能。在 2020 年的研究中，Li et al. (2020) 探讨了深度学习方法在钓鱼邮件检测中的应用，发现与传统机器学习技术相比，长短期记忆（LSTM）网络显著提高了检测准确率并降低了误报率。特征工程已被证明在提高检测准确率方面起着关键作用。正如 Yang et al. (2019) 所展示的，领域特定特征和谨慎的特征选择非常重要，他们的工作证明了 SVM 和集成方法优于其他分类器。PhishNet-NLP 是由 Verma, Shashidhar, & Hossain (2012) 设计的基于自然语言处理的系统，旨在通过利用邮件头、链接和正文中的特征来识别钓鱼邮件。该方法利用上下文来提高区分“可执行”和“信息类”邮件的准确性，以 97% 的检测率优于以往方法。
 
 Hassanpour et al. (2018) 使用字符级卷积神经网络（NN）展示了细粒度模式识别在钓鱼检测中的有效性，实现了卓越的准确性和对混淆战术的鲁棒性。为了提高检测率，Bountakas & Xenakis (2023) 和 Al-Daeef et al. (2014) 强调了混合各种特征类型的重要性。Unnithan et al. (2018) 和 Alhogail & Alsabih (2021) 进行了广泛的综述和比较研究，强调了应对不断演变的钓鱼策略需要自适应模型，以及集成方法的鲁棒性。Zhang & Yuan (2012) 使用神经网络进行钓鱼检测，并展示了卓越的准确性。他们的模型利用 `Encog Java Core` 包在 Java 中构建了多层前馈神经网络。其他算法则使用 MATLAB 包实现。
 
@@ -2659,23 +2556,23 @@ Hassanpour et al. (2018) 使用字符级卷积神经网络（NN）展示了细�
 #### 3.1.1 垃圾/正常邮件分类数据集
 
 *   **Source**: [`https://www.kaggle.com/datasets/yashpaloswal/spamham-email-classification-nlp`](https://www.kaggle.com/datasets/yashpaloswal/spamham-email-classification-nlp)
+
 *   **Description**: 该数据集包含标记为钓鱼或合法的邮件混合体。由于它包含从邮件内容、元数据和补充上下文中提取的各种特征，因此适用于基于 NLP 的特征提取方法，如 TF-IDF。'Text' 列提供文本分析的主要内容，而 'Label' 列指示邮件是钓鱼（垃圾邮件）1 还是合法（正常邮件）0。该数据集同时提供钓鱼和合法邮件的公平样本，为模型训练提供了坚实基础。
 
 #### 3.1.2 钓鱼邮件数据集
 
-
-
-
-
 ## 数据来源
 
 * **Source**: [`www.kaggle.com/datasets/subhajournal/phishingemails`](https://www.kaggle.com/datasets/subhajournal/phishingemails)
+
 * **Description**: 该数据集提供了被检测为网络钓鱼尝试的电子邮件的综合样本，并专门聚焦于网络钓鱼邮件。邮件的主要文本内容在 `Email` 列中提供以供分析，而 `Label` 列指示该邮件是否为网络钓鱼邮件（1）或非钓鱼邮件（0）。该数据集对于理解网络钓鱼邮件中常见的特定特征和趋势至关重要。对该数据集的独立分析为研究提供了关于网络钓鱼攻击独特要素和手法的新视角。
 
 通过分别利用这些数据集，我们的方法确保了：
 
 * **聚焦的模型训练**：每个数据集均被独立用于训练机器学习模型，优化其识别垃圾邮件或网络钓鱼邮件特定特征的能力，且不混淆上下文。
+
 * **精确的评估**：模型在各自数据集上的性能被单独评估，从而能够根据垃圾邮件和网络钓鱼邮件带来的不同挑战进行量身定制的调整和改进。
+
 * **真实场景模拟**：针对独立数据集进行测试模拟了多样化的真实场景，提供了关于模型适应不同类型电子邮件威胁能力的洞见。
 
 这些数据集作为开发稳健网络钓鱼检测方法的关键资源，为旨在降低多样化数字环境中网络钓鱼攻击相关风险的网络安全实践进步做出了贡献。
@@ -2706,11 +2603,7 @@ Hassanpour et al. (2018) 使用字符级卷积神经网络（NN）展示了细�
 
 ### 3.3 特征提取
 
-
-
-
-
-# 特征提取
+## 特征提取
 
 特征提取将预处理后的文本数据转换为结构化格式，供机器学习算法使用，方法是将原始数据转换为可测量的特征或属性。主要方法是词频-逆文档频率（`TF-IDF`）向量化，它评估一个词在文档中的重要性（相对于文档集合），突出可能表明网络钓鱼的独特词汇。此外，还使用了关键词识别和句法模式识别来提取与网络钓鱼邮件相关的特定术语和结构模式。这种技术的组合提高了网络钓鱼检测模型的准确性和鲁棒性。
 
@@ -2748,17 +2641,15 @@ Hassanpour et al. (2018) 使用字符级卷积神经网络（NN）展示了细�
 
 `Random Forest` 的优势之一是其鲁棒性。通过结合多棵树的预测，它降低了单棵树过拟合训练数据的风险。这使其能够生成稳定且准确的预测，特别是在涉及大型数据集和高维特征空间（如文本数据）的任务中。
 
+
+
+# Random Forest 在管理高维数据方面表现出色
+
 `Random Forest` 在管理高维数据方面表现出色，因为它在每次分裂时都专注于信息量大的特征。这种能力在文本分类中至关重要，因为每个单词或标记都可以被视为一个单独的特征。此外，该模型提供特征重要性度量，有助于理解数据模式并指导特征选择。
 
 总之，`Random Forest` 因其鲁棒性、处理复杂特征空间的有效性以及在文本分类任务中产生可靠预测的能力而被选中。其集成方法确保了在不同数据集上的平衡性能，并增强了对过拟合的抵抗力，使其成为检测网络钓鱼邮件的强大工具。
 
-#### 3.4.2 逻辑回归
-
-
-
-
-
-# 逻辑回归
+## 3.4.2 逻辑回归
 
 逻辑回归是一种基础线性模型，广泛用于机器学习和统计学中的二分类任务。它通过一对多等方法扩展到多分类问题。模型使用逻辑（Sigmoid）函数预测输入属于特定类别的概率，该函数将实数映射到 0 到 1 的范围，非常适合概率估计。
 
@@ -2766,7 +2657,7 @@ Hassanpour et al. (2018) 使用字符级卷积神经网络（NN）展示了细�
 
 逻辑回归的优势在于其作为直观基线模型的角色，能提供对数据关系的洞察，这对医疗、金融等领域的可解释性至关重要。它计算效率高，适用于实时和大规模应用，适合线性可分数据，并为复杂模型提供稳健基础。虽然它可能无法像高级算法那样捕捉复杂模式，但其可解释性、易实现性和可靠性使其在机器学习应用中极具价值。
 
-#### 3.4.3 XGBoost
+## 3.4.3 XGBoost
 
 XGBoost（极端梯度提升）是梯度提升的一种稳健实现，凭借其高效性和性能在分类任务中表现出色。它按顺序构建决策树，每棵树修正前一个模型的错误，以逐步提高准确性。一个显著特点是在损失函数中利用二阶梯度（Hessian 矩阵），这提高了更新精度并加快了收敛速度。
 
@@ -2776,7 +2667,7 @@ XGBoost 的另一优势在于其高效利用并行处理，借助多核处理器
 
 XGBoost 的优势在于其捕捉数据中复杂关系和依赖性的能力，这对于网络钓鱼邮件检测等任务至关重要，因为识别细微模式是区分正常邮件和恶意邮件的关键。总体而言，XGBoost 的先进功能和优化策略使其成为在各种分类场景中开发准确高效机器学习模型的强大选择。
 
-#### 3.4.4 K-近邻算法 (KNN)
+## 3.4.4 K-近邻算法 (KNN)
 
 K-近邻算法 (KNN) 是一种非参数机器学习算法，广泛用于分类任务，如网络钓鱼邮件检测。它基于基于实例的学习原理运行，通过在特征空间中将新数据点与其最近邻进行比较来做出决策。这种方法适用于决策边界不规则或数据关系复杂的场景。
 
@@ -2786,15 +2677,15 @@ KNN 的流行源于其简单性和直观性，使机器学习初学者也能轻�
 
 在网络钓鱼邮件检测中，KNN 的基于实例的方法将传入邮件与已知的网络钓鱼示例进行比较，基于特征空间中的邻近性识别可疑模式。其有效处理非线性边界的能力提高了区分正常邮件和恶意邮件的准确性，增强了网络钓鱼检测系统的可靠性。
 
-### 3.5 模型训练
+## 3.5 模型训练
 
 机器学习中的模型训练涉及教导算法从输入数据中识别模式并进行预测。首先，预处理后的数据被分割为训练集和验证/测试集。根据数据特征和问题类型，选择随机森林、逻辑回归、XGBoost 和 K-近邻算法 (KNN) 等算法。训练过程通过梯度下降等优化方法调整模型参数，旨在最小化训练数据中预测结果与实际结果的差异。超参数（如学习率或正则化强度）被调整以优化性能并防止过拟合。评估指标评估模型泛化到新数据的能力，通常使用交叉验证等技术进行验证。目标是开发一个能在新数据上可靠地做出准确预测的预测模型，解决医疗、金融和网络安全等领域的实际问题。
 
-#### 3.5.1 数据分割
+### 3.5.1 数据分割
 
 模型实施的初始步骤是将预处理后的数据集分割为单独的训练集和测试集，以评估模型在未见数据上的性能，从而降低过拟合风险。采用了 80-20 的分割比例，80% 的数据用于训练，剩余 20% 保留用于测试。为确保网络钓鱼邮件和正常邮件的分布在两个集合中保持一致，采用了分层分割。该技术保持了每个类别在数据集中的比例代表性，确保数据整体分布的平衡和准确反映。通过维持这种平衡，模型能更好地将学习泛化到新数据，增强其在检测网络钓鱼邮件方面的鲁棒性和可靠性。
 
-#### 3.5.2 训练
+### 3.5.2 训练
 
 模型训练阶段对于开发稳健的网络钓鱼邮件检测系统至关重要。随机森林、逻辑回归、XGBoost 和 K-近邻算法 (KNN) 等机器学习模型在预处理后的数据集上进行训练，以学习区分网络钓鱼邮件和正常邮件的模式。例如，模型分析了诸如紧迫语言和提及金钱等特征。
 
@@ -2802,20 +2693,17 @@ KNN 的流行源于其简单性和直观性，使机器学习初学者也能轻�
 
 训练阶段结束时，模型已具备高准确率识别网络钓鱼尝试的能力，为抵御网络威胁提供了稳健防线。
 
-#### 3.5.3 交叉验证
+### 3.5.3 交叉验证
 
 交叉验证是机器学习中评估模型性能的关键技术，通过将数据划分为多个子集或折来实现。它不是进行单次训练-测试分割，而是迭代地在不同子集上训练和测试模型。
 
 其工作原理如下：数据集被分割为 k 折。在每次迭代中，一折作为验证集，其余 k-1 折用于训练。此过程重复 k 次，并跨所有迭代平均准确率或 F1 分数等评估指标，以获得可靠的性能估计。
 
+交叉验证的优势在于其能提供模型在未见数据上泛化能力的更稳健估计，降低过拟合或欠拟合的风险。它还通过在每次迭代中测试不同的超参数集来协助超参数调整，确保在不过拟合特定数据子集的情况下实现最优性能。
 
+总之，交叉验证增强了模型的可靠性和泛化能力，为跨不同数据集的更好性能提供了全面的评估和优化。
 
-
-The advantage of cross-validation lies in its ability to provide a more robust estimate of a model's generalization capability on unseen data, reducing the risk of overfitting or underfitting. It also assists in hyperparameter tuning by testing different sets of hyperparameters in each iteration, ensuring optimal performance without overfitting to a specific data subset.
-
-In summary, cross-validation enhances model reliability and generalizability, providing comprehensive evaluation and optimization for better performance across diverse datasets.
-
-## 4 Performance Evaluation
+# 4 Performance Evaluation
 
 Performance evaluation in phishing detection involves testing the ability of machine learning models to distinguish between legitimate and phishing emails. After training a model on labeled data, an unseen test set (e.g., 1,000 emails labeled as phishing or legitimate) is used to measure its performance. Key metrics include Accuracy, Precision, Recall, and F1 Score.
 
@@ -2823,7 +2711,7 @@ Two evaluation methods were used: the Test Dataset method and 10-Fold Cross-Vali
 
 These evaluations reveal model strengths and weaknesses, informing decisions on deployment or further improvements, ensuring reliable performance across various scenarios. An overview of the key steps and metrics involved in the performance evaluation process is as follows:
 
-### 4.1 Accuracy
+## 4.1 Accuracy
 
 Accuracy is a key performance metric for machine learning models, particularly those used to identify phishing emails. In the context of phishing detection, accuracy refers to the percentage of emails (both phishing and legitimate) that the model correctly classifies out of all emails it analyzes.
 
@@ -2844,7 +2732,7 @@ Thus, the model's accuracy in this example is 85%.
 
 Accuracy provides a straightforward measure of how often the model's predictions match the actual labels. However, in imbalanced datasets (e.g., where legitimate emails outnumber phishing ones), accuracy alone can be misleading. In such cases, Precision, Recall, and F1 Score offer a more nuanced evaluation, highlighting the model's ability to correctly identify phishing emails and avoid false positives.
 
-### 4.2 Precision
+## 4.2 Precision
 
 Precision is a critical metric for evaluating the performance of a machine learning model, particularly in tasks like phishing email detection. In this context, precision measures the proportion of emails accurately identified as phishing out of all emails the model predicts as phishing.
 
@@ -2858,7 +2746,7 @@ Thus, the model's precision is 80%. This indicates that when the model identifie
 
 Precision is crucial when false positives (legitimate emails flagged as phishing) carry significant consequences, such as in cybersecurity, where minimizing false positives is essential to avoid blocking legitimate communications. However, for a comprehensive evaluation of model performance, precision should be interpreted alongside Recall and F1 Score.
 
-### 4.3 Recall
+## 4.3 Recall
 
 Recall, also known as Sensitivity or True Positive Rate, is a fundamental metric for evaluating the performance of a machine learning model, particularly in tasks like phishing email detection. Recall measures the proportion of actual phishing emails in the dataset that were correctly identified by the model.
 
@@ -2871,6 +2759,8 @@ Recall = True Positives / (True Positives + False Negatives) = 70 / (70 + 30) = 
 ```
 
 Thus, the model's recall is 70%. This means the model correctly identifies 70% of the actual phishing emails in the dataset.
+
+
 
 Recall is especially important in scenarios where missing phishing emails (False Negatives) can lead to severe consequences, such as security breaches or financial loss. A high recall indicates the model effectively captures most actual phishing attempts, reducing the risk of such harmful incidents.
 
@@ -2901,8 +2791,6 @@ In phishing detection, a high F1 Score signifies that the model correctly identi
 10-Fold Cross-Validation is a robust technique widely used in machine learning to evaluate model performance. It divides the dataset into 10 equal folds, using 9 folds for training and 1 for validation, repeated 10 times so that each fold serves as the validation set once. This method provides a more accurate estimate of the model's generalization to new data compared to a single train-test split. By averaging performance metrics across iterations, it reduces the risk of skewed results from a specific data split, helps detect issues like overfitting, and ensures consistent model performance. This comprehensive approach maximizes data utilization and enhances confidence in the model's predictive accuracy on unseen data.
 
 #### Dataset Performance Metrics
-
-
 
 下表汇总了两个数据集的性能指标（准确率、精确率、召回率和 F1 分数），这些指标是在单次训练-测试集划分上评估得出的。表 1 和 表 2 分别汇总了垃圾/正常邮件数据集和钓鱼邮件数据集上的分类准确率。
 
@@ -2972,20 +2860,20 @@ In phishing detection, a high F1 Score signifies that the model correctly identi
 
 Al-Daeef, M. M., Basir, N., & Saudi, M. M. (2014). A method to measure the efficiency of phishing emails detection features. In 2014 International Conference on Information Science & Applications (ICISA) (pp. 1-5). IEEE. DOI: [10.1109/ICISA.2014.6847332](http://dx.doi.org/10.1109/ICISA.2014.6847332)
 
-
-
-
 # 使用机器学习的网络入侵检测系统
 
 ## 第 7 章
 
 **R. Gunasundari**  
+
 本地治里技术大学，印度
 
 **Ra Srinethe**  
+
 本地治里技术大学，印度
 
 **V. Thilagavathianu**  
+
 本地治里技术大学，印度
 
 ## 摘要
@@ -3011,6 +2899,10 @@ Bountakas, P., & Xenakis, C. (2023). Helphed: Hybrid ensemble learning phishing 
 Harikrishnan, N. B., Vinayakumar, R., & Soman, K. P. (2018). A machine learning approach towards phishing email detection. In *Proceedings of the anti-phishing pilot at ACM international workshop on security and privacy analytics (IWSPA AP)* (Vol. 2013, pp. 1-6).
 
 Hassanpour, R., Dogdu, E., Choupani, R., Goker, O., & Nazli, N. (2018, March). Phishing e-mail detection by using deep learning algorithms. In *ACM Southeast Regional Conference* (pp. 45-1). DOI: [10.1145/3190645.3190719](http://dx.doi.org/10.1145/3190645.3190719)
+
+
+
+# 参考文献
 
 Khonji, M., Iraqi, Y., & Jones, A. (2013). Phishing detection: A literature survey. *IEEE Communications Surveys and Tutorials*, 15(4), 2091–2121. DOI: [10.1109/SURV.2013.032213.00009](http://dx.doi.org/10.1109/SURV.2013.032213.00009)
 
@@ -3038,26 +2930,23 @@ Zareapoor, M., & Seeja, K. R. (2015). Feature extraction or feature selection fo
 
 Zhang, N., & Yuan, Y. (2012). Phishing detection using neural network. *CS229 Lecture Notes*, 301. DOI: [10.1145/3180445.3180464](http://dx.doi.org/10.1145/3180445.3180464)
 
-
-
-
-## 基于异常的网络入侵检测系统
+# 基于异常的网络入侵检测系统
 
 基于异常的网络入侵检测系统通过检测网络模式中的偏差来识别潜在威胁。它最初监控正常的网络流量以确定基线，然后以此为基础（而非数据库）来识别偏差。这有助于检测新的和未知的威胁。然而，它也存在一些缺点，例如误报数量增加，且在基线建立方面面临困难。它还消耗大量资源，需要计算资源来持续监控和分析网络流量。
 
-## 利用机器学习构建稳健的 IDS
+# 利用机器学习构建稳健的 IDS
 
 在减轻传统网络入侵检测系统局限性的同时发挥其优势，对于开发稳健的网络入侵检测系统至关重要。机器学习是实现这一目标的工具。由于机器学习算法是在包含正常和恶意流量的大型数据集上训练的，因此具有改进的模式识别能力，从而有助于减少误报。此外，特征工程技术（Venkatesan, 2023）可用于提高检测准确性。由于机器学习模型可以持续学习，它们能够适应新模式，从而为异常检测建立动态且自适应的基线。机器学习算法旨在处理大型数据集。它们还能更高效地预处理和分析数据，并可并行处理，从而降低计算开销并提高资源效率。
 
-## 应对高容量数据挑战
+# 应对高容量数据挑战
 
 现有的基于机器学习的网络入侵检测面临超大数据量的问题，这影响了检测准确率和检测率。这可以通过使用特征选择技术（Pudjihartono et al., 2022）来缓解，而不是使用数据中存在的所有特征。这将减少计算过载，缩短检测时间，减少误报数量，并有助于整体提升网络入侵检测系统的性能。此外，对用于该目的的不同机器学习算法进行超参数调优（Kusumaputri & Arifin, 2022），有助于识别哪些算法是最优的。这也有助于选择表现最佳的算法并对它们进行集成。集成是一种利用不同超参数调优后的机器学习算法优势的方法。这有助于构建一个稳健的网络入侵检测系统——即一个在不同场景下都能工作的系统。
 
-## 使用 CICIDS-2017 数据集实施
+# 使用 CICIDS-2017 数据集实施
 
 为了实施所提出的想法，使用了 `CICIDS-2017` （Panigrahi & Borah, 2018）数据集。该数据集包含为期七天观察到的正常和恶意网络模式，因此数据量很大。用于模式识别的各种机器学习算法包括 `Random Forest`、`Decision Tree` 等（将在后文讨论）。`Optuna` 用于超参数调优。最后，模型被集成并进行了测试。
 
-## 章节结构
+# 章节结构
 
 以下呈现本章的总体结构：
 
@@ -3068,7 +2957,7 @@ Zhang, N., & Yuan, Y. (2012). Phishing detection using neural network. *CS229 Le
 - 本章以所提出系统的结论和未来展望作为结尾。
 - 关键术语和定义见附录。
 
-## 文献综述
+# 文献综述
 
 所提出的模型专注于特征选择技术，以提高预测准确性，从而实现对未见攻击的检测。模型使用 `CIC IDS 2017` 数据集进行训练。执行探索性数据分析以观察数据集中的趋势，然后对数据进行预处理，随后采用特征选择技术 `Particle Swarm Optimization`（粒子群优化），然后使用 `RUS` 和 `ADASYN` 采样算法对数据集进行平衡。使用的机器学习算法包括 `K-Nearest Neighbours`、`Random Forest`、`Decision tree`、`Gaussian Naïve Bayes`、`XGBoost`、`Catboost`、`LightGBM`、`Adaboost` 和 `Logistic regression`。这些单独的模型使用 `Optuna` 进行超参数调优并进行集成，以确保在存在外部噪声时的稳健性和稳定性。训练好的集成模型的性能通过三种方式进行评估，并通过改变扰动大小使用稳定性分数验证模型的稳定性。通过添加随机噪声验证模型的鲁棒性。最后，执行了 `5 fold cross validation`（5 折交叉验证）以检查过拟合。
 
@@ -3080,46 +2969,45 @@ Zhang, N., & Yuan, Y. (2012). Phishing detection using neural network. *CS229 Le
 
 详细研究了这篇论文，并得出了关于所提出模型的重要结论。在上述模型中被证明能产生最佳结果的数据平衡和特征选择技术也被用于所提出的模型。彻底研究了 `UNSW-NB15` 数据集，并在为所提出的模型选择数据集时考虑了其优缺点。
 
-
-
-
-## 文献综述
-
-### 基于特征选择的入侵检测系统设计 (2023)
+## 基于特征选择的入侵检测系统设计 (2023)
 
 Srinath Venkatesan (2023) 在论文“Design an Intrusion Detection System based on Feature Selection Using ML Algorithms”中提出了一种使用机器学习算法进行入侵检测的模型。该论文对决策树、随机森林和 SVM 等机器学习算法进行了比较研究，以构建高效的入侵检测系统，并得出结论：**随机森林算法在选定特征下表现最佳**。
 
 **局限性**：
+
 - 存在重复记录，可能导致误报结果
 - 需要使用不同的 ML 算法和特征选择技术进行进一步研究
 
 该论文记录了特征选择过程后决策树、随机森林和支持向量机等不同分类器算法的响应和预测。这有助于单独分析各种机器学习分类器算法，并进一步研究了文中特征选择方法的优势。
 
-### 面向入侵检测系统的可解释机器学习框架 (2020)
+## 面向入侵检测系统的可解释机器学习框架 (2020)
 
 M. Wang, K. Zheng, Y. Yang & X. Wang (2020) 在论文“An Explainable Machine Learning Framework for Intrusion Detection Systems”中提出了一种使用 SHAP 为 IDS 提供解释的框架；这是将 SHAP 方法应用于提高 IDS 透明度的首次尝试。该框架提供局部和全局解释，以提高任何入侵检测系统 (IDS) 的可解释性。
 
 该框架帮助网络安全专家更好地理解 IDS 做出的预测以及不同网络攻击的特征，并允许专家根据不同分类器之间解释的差异来优化 IDS 的结构。
 
 **研究方向**：
+
 - 在 APT 等更复杂的攻击上探索 SHAP 方法
 - 不同分类器之间的不同解释也有助于安全专家更好地设计 IDS 的结构
 
 **局限性**：
+
 - SHAP 方法无法实时工作
 - 需要在更多数据集上进行实验
 
 该论文主要关注入侵检测系统的透明度，使模型更易理解，并将模型应用于复杂攻击，模型的解释详细且有助于设计更好的 IDS。
 
-### 粒子群优化与入侵检测系统特征选择 (2020)
+## 粒子群优化与入侵检测系统特征选择 (2020)
 
 Kunhare, N., Tiwari, R. & Dhar, J. (2020) 在论文“Particle Swarm Optimization and Feature Selection for Intrusion Detection System”提出了一种方法论，涉及对 NIDS 指标的不同分类器进行比较研究，使用 RF 进行特征选择，使用 PSO 进行优化，灵感来源于群体智能。在 NSL-KDD 数据集上，结合特征选择的粒子群优化方法比其他机器学习算法实现了更好的准确性和性能，且仅使用了 10 个特征，优于在同一数据集上使用特征选择的其他现有算法。
 
 该论文使用的特征选择方法——粒子群优化被用于拟议模型中，该技术已被广泛研究和详细探讨。论文中使用的 NSL-KDD 数据集已被研究，其优缺点被仔细观察并记录以供进一步参考。这是拟议模型的核心论文之一。
 
-### 数据集选择与预处理决策
+## 数据集选择与预处理决策
 
 在回顾文献后得出重要结论：彻底研究了各论文中使用的 NSL-KDD、UNSW-NB15 等数据集以及 KDD-Cup 99 和 CIC IDS 等其他可用数据集，决定使用 **CIC IDS 2017 数据集**。理由如下：
+
 - 这是一个包含真实网络流量数据的最新数据集
 - 相比 KDD-Cup 99 和 NSL-KDD 提供了更详细的标注
 - 包含 2,830,743 条记录，涵盖与网络攻击相关的各类网络活动
@@ -3128,15 +3016,20 @@ Kunhare, N., Tiwari, R. & Dhar, J. (2020) 在论文“Particle Swarm Optimizatio
 
 在彻底研究文献中的各种模型并考虑其优缺点后，确定了拟议模型的工作流程。执行了**探索性数据分析 (EDA)**，以从数据集中获得重要见解、详细的可视化和统计摘要，分三步进行：单变量分析、双变量分析和多变量分析。随后在粒子群优化之前进行了独热编码和对数变换等预处理技术，然后应用了不同的分类器算法。为防止对特定类别的偏见，进行了数据平衡，之后应用不同的分类器算法，然后使用 Optuna 对单个模型进行超参数调优，使用软投票进行集成，并使用稳定性评分和交叉验证等测试方法进行测试。
 
-## 方法论
+# 方法论
+
+
+
+# 拟议模型实现流程
 
 拟议模型通过一系列步骤实现，重点在于特征选择，旨在提高网络入侵检测系统的准确性和对未见攻击类型的识别能力。此外，该模型基于多个超参数调优模型的集成构建，使其即使在存在外部噪声的情况下也具有鲁棒性和稳定性。该过程涉及的步骤包括：数据集收集、探索性数据分析、独热编码、特征选择、数据平衡、分类、超参数调优、集成和模型验证。本节将详细介绍该模型中执行的每一步。
 
-### 数据集
+## 数据集
 
 数据集是按行和列结构化的数据集合，行代表样本或实例，列代表特征或属性。数据集用于机器学习模型训练；在监督学习中，数据集包含特征和标签，这有利于模型训练和预测。特征可以包含数值或分类值。
 
-拟议模型使用的数据集是 **CICIDS2017**，这是一个具有详细标注和真实网络流量的最新数据集。它包含的网络攻击类型如下：
+拟议模型使用的数据集是 `CICIDS2017`，这是一个具有详细标注和真实网络流量的最新数据集。它包含的网络攻击类型如下：
+
 - 拒绝服务 (DoS)
 - 分布式拒绝服务 (DDoS)
 - 暴力破解攻击
@@ -3149,28 +3042,26 @@ Kunhare, N., Tiwari, R. & Dhar, J. (2020) 在论文“Particle Swarm Optimizatio
 - Web 攻击 SQL 注入
 - SSH Patator
 
-### 探索性数据分析
+## 探索性数据分析
 
 探索性数据分析旨在获得重要见解和模式，理解属性之间的关系、统计趋势和数据集中的特征。它包括统计摘要、数据可视化和降维等方法的组合。在拟议模型中，进行了单变量、双变量和多变量分析：
+
 - **单变量分析**：单独观察一个变量的分布
 - **双变量分析**：展示两个变量如何相关以及一个如何影响另一个
 - **多变量分析**：考虑多个变量以理解数据集中的复杂关系和模式
 
-### 独热编码
+## 独热编码
 
 独热编码是一种数据预处理技术，用于将分类变量转换为适合机器学习算法处理的数值变量。这种方法允许在需要数值输入的模型中使用分类变量，并避免了序数性问题。
 
 在独热编码中，分类参数将为每个标签创建单独的列，对应正确标签的列用 `1` 表示，其他列的值为 `0`。涉及的步骤包括：
+
 1. 识别分类变量
 2. 为每个类别创建哑变量
 3. 分配二进制值以表示每个类别的存在或不存在
 4. 组合哑变量以形成独热编码表示 (Karthiga et al., 2021)
 
-
-
-
-
-### 特征选择
+## 特征选择
 
 特征选择侧重于识别并选择属于原始数据集中最相关的特征。它是一种消除维度灾难的技术，能够提升模型性能并减少过拟合 (Venkatesan, 2023)。特征选择技术的各种类型包括：
 
@@ -3178,7 +3069,7 @@ Kunhare, N., Tiwari, R. & Dhar, J. (2020) 在论文“Particle Swarm Optimizatio
 - **包装法**，通过在不同特征组合上迭代训练模型来形成特征子集。
 - **嵌入法**，根据特征对模型预测的贡献来选择特征 (Pudjihartono et al., 2022)。
 
-## 粒子群优化 (PSO)
+### 粒子群优化 (PSO)
 
 **粒子群优化 (PSO)** 是一种机器学习算法，其灵感源于鱼群或鸟群中观察到的集体动力学。其应用广泛，跨越许多不同领域，最著名的是用于解决优化问题，例如机器学习中的复杂特征选择任务 (Gad, 2022)。
 
@@ -3192,7 +3083,7 @@ PSO 过程通过一系列迭代阶段推进：
 
 这一结构化的步骤系列使 PSO 能够有效地探索和利用搜索空间，最终收敛于复杂优化挑战的最优或近似最优解。
 
-### 数据平衡
+## 数据平衡
 
 **数据平衡** 是一种机器学习技术，用于纠正数据集中遇到的类别不平衡问题。它解决了模型偏向某一类别的问题 (Mooijman et al., 2023)。在提出的模型中，使用了两种技术进行数据平衡：**随机欠采样 (RUS)** (Ramu et al., 2024) 和 **自适应合成采样 (ADASYN)** (He et al., 2008)。
 
@@ -3218,9 +3109,9 @@ ADASYN 有几个优势。它能动态适应具有挑战性的数据区域，通�
 
 ### 超参数调优
 
-**超参数调优**，也称为超调，涉及调整机器学习模型的超参数以提升其性能。在机器学习中，超参数是在学习过程开始前设定的配置设置，而非从数据中学习得出。超参数调优涉及系统地搜索预定义的超参数空间，以找到导致最佳性能的组合，通常使用准确率、精确率、召回率或 F1 分数等指标进行衡量，具体取决于手头的问题。在提出的模型中，使用了 **Optuna**，一个开源的超参数优化框架。
+**超参数调优**，也称为超调，涉及调整机器学习模型的超参数以提升其性能。在机器学习中，超参数是在学习过程开始前设定的配置设置，而非从数据中学习得出。超参数调优涉及系统地搜索预定义的超参数空间，以找到导致最佳性能的组合，通常使用准确率、精确率、召回率或 F1 分数等指标进行衡量，具体取决于手头的问题。在提出的模型中，使用了 `Optuna`，一个开源的超参数优化框架。
 
-### Optuna
+#### Optuna
 
 **Optuna** 是一个通用的超参数优化框架，旨在通过自动配置范围、分布和约束来简化搜索空间的探索。Optuna 支持各种优化算法，如 **树状帕泽估计器 (TPE)**、**贝叶斯优化** 和 **遗传算法**，确保对最优超参数进行稳健探索。
 
@@ -3248,10 +3139,6 @@ ADASYN 有几个优势。它能动态适应具有挑战性的数据区域，通�
 
 **噪声准确率** 衡量模型在暴露于嘈杂或损坏数据时保持准确性的能力，揭示其在逆境中的韧性。通过模拟嘈杂条件或向数据集引入扰动，噪声准确率提供了关于模型承受逆境能力的见解。
 
-
-
-
-
 ## 交叉验证与模型评估
 
 交叉验证提供了一种结构化的方法，用于估计模型在不同数据样本上的泛化能力，降低过拟合的风险。该过程涉及将数据划分为子集，在一个子集上训练模型。所提出的模型采用了 5 折交叉验证。
@@ -3262,7 +3149,7 @@ ADASYN 有几个优势。它能动态适应具有挑战性的数据区域，通�
 
 所实现思路的工作流程可通过以下框图给出：
 
-## 图 1. 框图
+### 图 1. 框图
 
 ![979-8-3693-9225-6.ch007.f01](img/979-8-3693-9225-6.ch007.f01.png)
 
@@ -3278,9 +3165,6 @@ ADASYN 有几个优势。它能动态适应具有挑战性的数据区域，通�
 
 使用了九种不同的分类器算法对数据集进行分类。算法包括 `random forest`、`K-nearest neighbor`、`Logistic regression`、`decision tree`、`LightGBM`，以及 `Adaboost`、`Catboost`、`XGBoost` 和 `Gradient boost` 等提升算法。这些算法的评估指标为：预测准确率、精确率、`F1 score`、召回率、模型训练耗时和模型测试耗时。随后，这些模型使用 `Optuna` (Kusumaputri & Arifin, 2022)——一种超参数优化框架——进行了超参数调优。定义了特征空间，并为上述每种机器学习算法指定了待调优的超参数（以提高准确率为目标函数）。采用并行处理以加速计算并降低计算开销。观察了每种算法的准确率、精确率、`F1 score` 和召回率。根据上述四个评估指标选出表现最好的算法，并对其进行超参数调优。
 
-
-
-
 集成的机器学习算法包括 `XGBoost`、`Catboost`、`Random Forest` 和 `LightGBM`。`XGBoost` 以其高效性和有效性著称。它具有高速度和内置正则化功能以防止过拟合，还能处理缺失值。`Catboost` 无需单独预处理数据即可处理分类变量。它能自动处理缺失数据，且对过拟合具有鲁棒性。`Random forest` 是多棵决策树的集成模型，具备处理大型数据集的能力，且对过拟合具有鲁棒性。`LightGBM` 是一种梯度提升算法，旨在处理大型数据集。它速度快且内存效率极高。基于上述原因，以及基于分类和超参数调优期间建立的评估指标所表现出的高性能，选择了上述模型进行集成。集成采用软投票方式完成，最终获得了集成模型（Dietterich, 2000）。
 
 随后，使用不同方法对获得的集成模型进行了测试。首先，通过改变扰动级别计算模型的稳定性得分。然后，向数据集注入合成噪声，并使用集成模型对数据集进行分类。最后，进行了五折交叉验证，以确保不存在过拟合。从而验证了模型的鲁棒性。关于所获得的各种中间结果和最终结果及其推论的详细解释，将在本章的“结果与讨论”部分阐述。
@@ -3289,34 +3173,36 @@ ADASYN 有几个优势。它能动态适应具有挑战性的数据区域，通�
 
 ### 探索性数据分析 (EDA)
 
-**统计摘要** - 对数据集中进行的不同统计分析结果的摘要。
+#### 统计摘要
 
-#### 图 2. 统计摘要
+对数据集中进行的不同统计分析结果的摘要。
+
+##### 图 2. 统计摘要
 
 ![979-8-3693-9225-6.ch007.f02](img/979-8-3693-9225-6.ch007.f02.png)
 
-#### 推论
+##### 推论
 
-*   从上述统计摘要得出的推论如下：
+从上述统计摘要得出的推论如下：
 
-    1.  少数特征的均值与中位数之间存在巨大差异，表明潜在的偏态。
-        *   例如：流持续时间和后向数据包总长度
-    2.  少数特征（如流持续时间和后向数据包总长度）的第 75 百分位数与最大值之间存在巨大差距，表明存在异常值。
-    3.  与数据包长度和流相关的特征显示出高变异性和宽广的取值范围。这些特征可能具有潜在重要性。
-    4.  然而，标志计数特征显示出较低的均值和较低的标准差。这表明它们在数据集中不常被观测到，可能不具备太大重要性。
-        *   例如：FIN 标志计数、SYN 标志计数、RST 标志计数等。
+1.  少数特征的均值与中位数之间存在巨大差异，表明潜在的偏态。
+    *   例如：流持续时间和后向数据包总长度
+2.  少数特征（如流持续时间和后向数据包总长度）的第 75 百分位数与最大值之间存在巨大差距，表明存在异常值。
+3.  与数据包长度和流相关的特征显示出高变异性和宽广的取值范围。这些特征可能具有潜在重要性。
+4.  然而，标志计数特征显示出较低的均值和较低的标准差。这表明它们在数据集中不常被观测到，可能不具备太大重要性。
+    *   例如：FIN 标志计数、SYN 标志计数、RST 标志计数等。
 
-### 直方图与箱线图
+#### 直方图与箱线图
 
-#### 图 3. 流持续时间：接收流中第一个和最后一个数据包之间的时间间隔。
+##### 图 3. 流持续时间：接收流中第一个和最后一个数据包之间的时间间隔
 
 ![979-8-3693-9225-6.ch007.f03](img/979-8-3693-9225-6.ch007.f03.png)
 
-#### 图 4. 流数据包：网络流中每秒的数据包数量
+##### 图 4. 流数据包：网络流中每秒的数据包数量
 
 ![979-8-3693-9225-6.ch007.f04](img/979-8-3693-9225-6.ch007.f04.png)
 
-为了进行单变量分析，为所有 78 个特征绘制了直方图和箱线图。直方图是以矩形形式直观展示数值数据的图表。箱线图利用箱体和线条描绘数值数据分组情况。图 3 和 图 4 分别展示了流持续时间（图 3）和流数据包/秒（图 4）这两个特征的直方图和箱线图。
+为了进行单变量分析，为所有 78 个特征绘制了直方图和箱线图。直方图是以矩形形式直观展示数值数据的图表。箱线图利用箱体和线条描绘数值数据分组情况。图 3 和图 4 分别展示了流持续时间（图 3）和流数据包/秒（图 4）这两个特征的直方图和箱线图。
 
 直方图（图 3）显示了流持续时间的分布。它展示了每个流持续时间范围（显示在 x 轴）在数据中出现的频率。
 
@@ -3324,21 +3210,21 @@ ADASYN 有几个优势。它能动态适应具有挑战性的数据区域，通�
 
 x 轴（流数据包/秒）表示观测到的数据包速率范围，y 轴（计数）表示特定数据包速率（显示在 x 轴）在数据中被观测到的次数。
 
-箱线图（图 3 和 图 4）用关键统计量总结了流持续时间的分布：
+箱线图（图 3 和图 4）用关键统计量总结了流持续时间的分布：
 
-图 3 中箱体内的中心线（水平线）代表约 1.25 毫秒的流持续时间中位数。这是第 50 百分位数，表明一半的流持续时间小于或等于此值，另一半大于或等于此值。在 图 4 中，这代表 1.4×10⁶ 数据包/秒的中位数数据包速率。这是第 50 百分位数，表明一半时间观测到的数据包速率小于或等于此值，另一半时间大于或等于此值。
+图 3 中箱体内的中心线（水平线）代表约 1.25 毫秒的流持续时间中位数。这是第 50 百分位数，表明一半的流持续时间小于或等于此值，另一半大于或等于此值。在图 4 中，这代表 1.4×10⁶ 数据包/秒的中位数数据包速率。这是第 50 百分位数，表明一半时间观测到的数据包速率小于或等于此值，另一半时间大于或等于此值。
 
 箱体代表四分位距 (IQR)。这显示了包含中间 50% 流持续时间和流数据包/秒的范围。箱体从第一四分位数 (Q1，第 25 百分位数) 延伸到第三四分位数 (Q3，第 75 百分位数)。
 
 须线从箱体延伸出，可能指示潜在异常值。这些是流持续时间落在第一四分位数以下或第三四分位数以上 1.5 倍 IQR 范围之外的数据点。
 
-#### 图 5. 计数图：不同类别数据出现次数的图形化表示
+##### 图 5. 计数图：不同类别数据出现次数的图形化表示
 
 ![979-8-3693-9225-6.ch007.f05](img/979-8-3693-9225-6.ch007.f05.png)
 
 上图显示了数据集中目标变量（攻击类型）的计数图。可以看到良性变量（无攻击）的值非常高，而 DoS Goldeneye、FTP-Patator 等攻击类型的实例非常少。下表显示了每个标签的实际实例数量：
 
-#### 表 1. 数据集中不同标签的计数
+##### 表 1. 数据集中不同标签的计数
 
 | 标签 | 计数 |
 | --- | --- |
@@ -3354,8 +3240,13 @@ x 轴（流数据包/秒）表示观测到的数据包速率范围，y 轴（计
 | Bot | 1956 |
 | Web Attack Brute Force | 1507 |
 | Web Attack XSS | 652 |
+
+
+
 | Infiltration | 36 |
+
 | Web Attack Sql Injection | 21 |
+
 | Heartbleed | 11 |
 
 ### 散点图
@@ -3368,14 +3259,11 @@ x 轴（流数据包/秒）表示观测到的数据包速率范围，y 轴（计
 
 *   可以看出 `Total fwd packets vs total bck packets`（总前向数据包 vs 总后向数据包）、`Total length of bck packets vs total fwd packets`（后向数据包总长度 vs 总前向数据包）、`Total bck packets vs total length of bck packets`（总后向数据包 vs 后向数据包总长度）、`Flow_IAT_std vs Flow_IAT_mean`、`Flow_IAT_max vs Flow_IAT_mean`、`Flow_IAT_min vs Flow_IAT_mean`、`Flow_IAT_max vs Flow_IAT_std`、`Flow_IAT_min vs Flow_IAT_max`、`bck_packet_length_mean vs bck_packet_length_min`、`Fwd_IAT` 和 `Bck_IAT` 变量（min、mean、max、total、std）具有强正相关性；`Packet_length_var vs Packet_length_std`、`active_mean vs act_data_pkt_fwd`、`active_std vs act_data_pkt_fwd`、`active_mean vs min_seg_size_fwd`、`active_std vs active_mean`、`active_min vs active_max`、`idle_mean vs active_min`、`idle_max vs idle_min` 具有强正相关性。
 
+*   可以看出，`fwd_packet_length_mean` 与 `fwd_packet_length_std`、`fwd_packet_length_mean` 与 `fwd_packet_length_max`、`fwd_packet_length_std` 与 `fwd_packet_length_max`、`bck_packet_length_mean` 与 `bck_packet_length_max`、`bck_packet_length_std` 与 `bck_packet_length_max`、`fwd_packets` 与 `bck_packets`、`packet_length_var` 与 `packet_length_mean`、`packet_length_std` 与 `packet_length_mean`、`avg_fwd_seg_size` 与 `avg_packet_size`、`avg_bck_segment_size` 与 `avg_packet_size`、`min_seg_size_fwd` 与 `act_data_pkt_fwd` 存在中等正相关。
 
+*   可以看出，`idle_std` 与 `active_min`、`fwd_IAT_min` 与 `fwd_IAT_std` 存在强负相关。
 
-
-• 可以看出，`fwd_packet_length_mean` 与 `fwd_packet_length_std`、`fwd_packet_length_mean` 与 `fwd_packet_length_max`、`fwd_packet_length_std` 与 `fwd_packet_length_max`、`bck_packet_length_mean` 与 `bck_packet_length_max`、`bck_packet_length_std` 与 `bck_packet_length_max`、`fwd_packets` 与 `bck_packets`、`packet_length_var` 与 `packet_length_mean`、`packet_length_std` 与 `packet_length_mean`、`avg_fwd_seg_size` 与 `avg_packet_size`、`avg_bck_segment_size` 与 `avg_packet_size`、`min_seg_size_fwd` 与 `act_data_pkt_fwd` 存在中等正相关。
-
-• 可以看出，`idle_std` 与 `active_min`、`fwd_IAT_min` 与 `fwd_IAT_std` 存在强负相关。
-
-• 可以看出，`avg_bck_seg_size` 与 `avg_fwd_seg_size` 存在中等负相关。
+*   可以看出，`avg_bck_seg_size` 与 `avg_fwd_seg_size` 存在中等负相关。
 
 从上述散点图观察中，我们可以推断：在这些具有负相关的特征变量中，只有对输出影响较大的特征才可能在进一步分析后被选中。
 
@@ -3389,12 +3277,17 @@ x 轴（流数据包/秒）表示观测到的数据包速率范围，y 轴（计
 
 可以看出，少数变量表现出强正相关（由热力图的对角线指示），这些可能是具有潜在重要性的特征。此外，少数变量表现出弱正相关和弱负相关。举几个例子：
 
-*   ▪ 前向数据包总数与前向数据包总长度之间存在弱负相关。
-*   ▪ 前向数据包总长度与前向数据包长度均值之间存在弱正相关。
-*   ▪ 前向数据包长度均值与后向数据包长度均值之间存在弱负相关。
-*   ▪ 流字节数/秒与流 IAT 均值之间存在弱正相关。
-*   ▪ 前向 IAT 总计与后向 IAT 均值之间存在弱正相关。
-*   ▪ 后向 IAT 均值与后向数据包长度均值之间存在弱负相关。
+*   前向数据包总数与前向数据包总长度之间存在弱负相关。
+
+*   前向数据包总长度与前向数据包长度均值之间存在弱正相关。
+
+*   前向数据包长度均值与后向数据包长度均值之间存在弱负相关。
+
+*   流字节数/秒与流 IAT 均值之间存在弱正相关。
+
+*   前向 IAT 总计与后向 IAT 均值之间存在弱正相关。
+
+*   后向 IAT 均值与后向数据包长度均值之间存在弱负相关。
 
 由于这些特征表现出弱相关性，它们可能不包含太多信息，因此在这些特征对中只能选择一个。
 
@@ -3486,9 +3379,6 @@ x 轴（流数据包/秒）表示观测到的数据包速率范围，y 轴（计
 
 ### 获得的评估指标
 
-
-
-
 #### 图 15. 获得的评估指标-集成- 给出了集成模型的准确率、精确率、F1 值和召回率得分
 
 ![979-8-3693-9225-6.ch007.f15](img/979-8-3693-9225-6.ch007.f15.png)
@@ -3563,17 +3453,15 @@ NIDS 应持续监控网络流量，并适应不断演变的威胁和网络行为
 
 Corea, P. M., Liu, Y., Wang, J., Niu, S., & Song, H. (2024). Explainable AI for comparative analysis of intrusion detection models. DOI: [10.1109/MeditCom61057.2024.10621339](http://dx.doi.org/10.1109/MeditCom61057.2024.10621339)
 
-
-
-
-
-## 参考文献
-
 Dietterich, T. G. (2000). Ensemble methods in machine learning. In *Multiple Classifier Systems. MCS 2000*. Springer. DOI: [10.1007/3-540-45014-9_1](http://dx.doi.org/10.1007/3-540-45014-9_1)
 
 Gad, A. G. (2022). Particle swarm optimization algorithm and its applications: A systematic review. *Archives of Computational Methods in Engineering*, 29(5), 2531–2561. DOI: [10.1007/s11831-021-09694-4](http://dx.doi.org/10.1007/s11831-021-09694-4)
 
 Grolemund, G., & Wickham, H. (2017). *R for data science*. O’Reilly Media.
+
+
+
+# 参考文献
 
 He, H. (2008). ADASYN: Adaptive synthetic sampling approach for imbalanced learning. In *2008 IEEE International Joint Conference on Neural Networks (IEEE World Congress on Computational Intelligence)* (pp. 1322-1328). Hong Kong. DOI: [10.4018/978-1-7998-8023-2](http://dx.doi.org/10.4018/978-1-7998-8023-2)
 
@@ -3623,57 +3511,60 @@ Wang, M., Zheng, K., Yang, Y., & Wang, X. (2020). An explainable machine learnin
 
 Xia, X. (2024). Optimizing and hyper-tuning machine learning models for the water absorption of eggshell and glass-based cementitious composite. *PLoS One*, 19(1), e0296494. Advance online publication. DOI: [10.1371/journal.pone.0296494](http://dx.doi.org/10.1371/journal.pone.0296494) PMID: [38165942](https://pubmed.ncbi.nlm.nih.gov/38165942)
 
-## 附录
+# 附录
 
-### CIC IDS 2017 数据集
+## CIC IDS 2017 数据集
+
 由加拿大网络安全研究所创建的数据集，包含正常和恶意网络流量详情（Maseer 等，2021；Panigrahi 和 Borah，2018）。
 
-### 探索性数据分析 (EDA)
+## 探索性数据分析 (EDA)
+
 为发现不同特征间的相关性并获取数据集洞察而进行的分析（Oyelakin 等，2023；Tukey，1977）。
 
-### 特征选择
+## 特征选择
+
 从数据集中选择相关特征以提升模型性能并降低计算负担的过程（Pudjihartono 等，2022）。实现中采用粒子群优化来选择最优特征子集（Kunhare 等，2020）。
 
-### 数据平衡
+## 数据平衡
+
 用于解决类别不平衡问题的技术。包括过采样和欠采样（Mooijman 等，2023；He 等，2008）。
 
-### 机器学习算法
+## 机器学习算法
+
 可用于数据分类并观察准确率、精确率、F1 分数和召回率的算法。
 
-
-
-
-
-### 超参数调优
+## 超参数调优
 
 一种针对模型参数的优化技术，旨在提升模型性能（Xia, 2024）。
 
-#### 集成学习
+### 集成学习
 
 一种将多个机器学习模型的预测结果相结合的技术，以提高整体性能并使系统更加稳健（Dietterich, 2000）。
 
-### 稳定性评分
+## 稳定性评分
 
 一种在不同扰动水平下衡量模型稳定性的指标，用于评估其鲁棒性。
 
-### 交叉验证
+## 交叉验证
 
 一种统计方法，通过将数据集划分为子集并迭代地用于训练和测试，来评估模型性能。
 
-## 威胁情报
+# 威胁情报
 
 威胁情报是关于网络攻击的基于证据的信息，由网络安全专家组织和分析（Jani et al., 2019）。
 
-## 可解释 AI
+# 可解释 AI
 
 可解释 AI 是一组工具和框架，帮助您理解和解释机器学习模型做出的预测（Corea et al., 2024）。
 
 # 第 8 章：利用区块链技术实现刑事档案存储与处理的安全协作
 
 **Hima Bindu**  
+
 QIS College of Engineering and Technology, India
 
 **Sanjana Muvvala**  
+
 QIS College of Engineering and Technology, India
 
 ## 摘要
@@ -3690,6 +3581,8 @@ QIS College of Engineering and Technology, India
 
 ### 1.1 区块链架构
 
+
+
 在区块链中，该部分存放经过哈希处理并编码进默克尔树的官方交易。区块链中区块的结构如图 1 所示。
 
 #### 图 1. 区块链结构
@@ -3700,17 +3593,17 @@ QIS College of Engineering and Technology, India
 
 区块链包含的每个区块包括：
 
-*   **区块头**：通过区块头可更容易地识别整条链中的特定区块。矿工会定期更改 nonce 值以对区块头进行哈希运算。
+*   **区块头**：通过区块头可更容易地识别整条链中的特定区块。矿工会定期更改 `nonce` 值以对区块头进行哈希运算。
 *   **前一区块地址/哈希**：包含前一区块哈希的值。
 *   **时间戳**：区块验证后，会标注其创建的具体时间。
-*   **Nonce**：每个区块使用一个 nonce 数值来解决工作量证明，并将其与实时目标值进行比较。矿工在哈希计算时，每次都会更改一个四字节的随机字段。
+*   **Nonce**：每个区块使用一个 `nonce` 数值来解决工作量证明，并将其与实时目标值进行比较。矿工在哈希计算时，每次都会更改一个四字节的随机字段。
 *   **默克尔根**：通过提供整个交易的数字蓝图，存储所有交易数据。
 
-每个区块的哈希值由前序区块的哈希之和、交易信息以及当前区块的 nonce 值共同决定。区块按顺序依次添加到区块链中，第一个区块被称为创世区块，或第 0 号区块。为确保账本一致性和用户安全，区块链通常由两项技术组成：P2P 分布式共识和非对称加密（Alaa Haddad 2022）。在区块链技术中，验证交易记录的节点称为矿工。区块的创建利用了不可篡改性、透明性和假名性（Yumna 2019, Abid Haleem 2021, Alaa Haddad 2022）。
+每个区块的哈希值由前序区块的哈希之和、交易信息以及当前区块的 `nonce` 值共同决定。区块按顺序依次添加到区块链中，第一个区块被称为创世区块，或第 0 号区块。为确保账本一致性和用户安全，区块链通常由两项技术组成：P2P 分布式共识和非对称加密（Alaa Haddad 2022）。在区块链技术中，验证交易记录的节点称为矿工。区块的创建利用了不可篡改性、透明性和假名性（Yumna 2019, Abid Haleem 2021, Alaa Haddad 2022）。
 
 ### 1.2 共识算法
 
-由于区块链网络缺乏单一联系点，一个基本挑战是拜占庭将军问题（Alaa Haddad 2022），该问题于 1982 年在分布式网络研究中被提出。一组节点的决策过程及网络内节点间的达成一致构成了共识（Abdullah Almamun 2022, Khezr 2019）。区块链网络使用传统的共识方法，如 PoW、PoS、PBFT 等。这些共识算法在能耗、节点管理和对抗节点容忍度方面的特性如图 2 所示。
+由于区块链网络缺乏单一联系点，一个基本挑战是拜占庭将军问题（Alaa Haddad 2022），该问题于 1982 年在分布式网络研究中被提出。一组节点的决策过程及网络内节点间的达成一致构成了共识（Abdullah Almamun 2022, Khezr 2019）。区块链网络使用传统的共识方法，如 `PoW`、`PoS`、`PBFT` 等。这些共识算法在能耗、节点管理和对抗节点容忍度方面的特性如图 2 所示。
 
 #### 图 2. 共识算法对比
 
@@ -3718,26 +3611,18 @@ QIS College of Engineering and Technology, India
 
 （来源：(Kherbouche 2022)）
 
-
-
-
-
 ## 共识机制
 
 *   ➢ **工作量证明** 是最流行且鲁棒性最高的共识机制。它用于验证和创建区块链中的新区块。该机制最早由 Cynthia Dwork 和 Moni Naor 于 1993 年发表，通过挖矿过程中的资源消耗进行验证。最初，矿工通过寻找低于预定值的哈希值来解谜。由于需要大量计算，该任务在处理资源方面成本高昂。例如，对区块链网络发起 51% 攻击将付出高昂代价 (Alaa Haddad 2022, Zheng 2017)。
-
-*   ➢ **权益证明** 是一种处理交易和在区块链中创建新区块的机制。它解决了 PoW 过度消耗 CPU 算力的缺点。在 PoS 中，矿工（验证者）根据其持有的货币或财富（称为“权益”）被选中。第二大加密货币以太坊现正计划将其共识算法从 PoW 更改为 PoS (Kherbouche 2022, Castro 2019)。
-
-*   ➢ **实用拜占庭容错** 建立在拜占庭协议之上 (King 2012, Kherbouche 2022)。PBFT 要求每个节点都为网络所知，这限制了其在公有链中的应用。PBFT 共识过程可分为三个阶段：预准备、准备和提交。节点需要获得所有其他节点三分之二的投票才能推进这三个阶段。Hyperledger Fabric 目前采用 PBFT (Zheng 2019, Kherbouche 2022)。
+*   ➢ **权益证明** 是一种处理交易和在区块链中创建新区块的机制。它解决了 `PoW` 过度消耗 CPU 算力的缺点。在 `PoS` 中，矿工（验证者）根据其持有的货币或财富（称为“权益”）被选中。第二大加密货币以太坊现正计划将其共识算法从 `PoW` 更改为 `PoS` (Kherbouche 2022, Castro 2019)。
+*   ➢ **实用拜占庭容错** 建立在拜占庭协议之上 (King 2012, Kherbouche 2022)。`PBFT` 要求每个节点都为网络所知，这限制了其在公有链中的应用。`PBFT` 共识过程可分为三个阶段：预准备、准备和提交。节点需要获得所有其他节点三分之二的投票才能推进这三个阶段。Hyperledger Fabric 目前采用 `PBFT` (Zheng 2019, Kherbouche 2022)。
 
 ## 1.3 区块链类型
 
 区块链的基本类型如下 (Bushra Hameed 2019)：
 
 *   ➢ **许可/私有链**：在私有环境中作为封闭网络运行，或由单一组织管理的区块链网络。用户无法自由加入社区、查看记录或进行独立交易。利用网络优势进行内部业务活动的中心化组织倾向于使用许可链。雇主联盟也可能使用私有链以安全的方式进行数据交换和交易记录。
-
 *   ➢ **无许可/公有链**：对所有人开放的区块链。任何用户均可创建私有协议、在网络上发送交易，并随后向账本添加条目以开始与网络交互。比特币及其他加密货币衍生的区块链技术原始形式称为公有链。公有链网络进一步推动了分布式账本技术（DLT）的发展。
-
 *   ➢ **混合/联盟链**：同时利用公有链和私有链技术的区块链。混合网络使用无许可链代替许可链。虽然不公开访问，但该链隐蔽地提供了可追溯性、完整性和安全性等基本功能。
 
 ## 1.4 区块链特性
@@ -3745,19 +3630,15 @@ QIS College of Engineering and Technology, India
 区块链的基本特征包括：图 3。
 
 *   ➢ **去中心化**：区块链将网络中的每个节点相互连接，维护所有交易的透明且全面的日志 (Yumna 2019)。依赖分布式框架结构，在区块链上进行的数据确认、存储、保存和传输过程被称为去中心化。
-
 *   ➢ **可追溯性**：区块链上的每笔交易按时间顺序编索引，区块通过其加密哈希值与两个相邻区块相连。区块链由矿池维护，允许基于云的网站浏览区块 (Yumna 2019)。
-
-*   ➢ **共识机制**：在 PC 和区块链框架中，容错机制即共识机制，使分布式进程或多智能体系统能就单一网络状态数据达成一致。它有助于记录保存。三种共识机制过程为 POW、POS 和 DPOS (Yumna 2019)。
+*   ➢ **共识机制**：在 PC 和区块链框架中，容错机制即共识机制，使分布式进程或多智能体系统能就单一网络状态数据达成一致。它有助于记录保存。三种共识机制过程为 `POW`、`POS` 和 `DPOS` (Yumna 2019)。
 
 ### 图 3. 区块链基本特征
 
 ![979-8-3693-9225-6.ch008.f03](img/979-8-3693-9225-6.ch008.f03.png)
 
 *   ➢ **货币**：在所有提议的加密货币中，比特币是革命性世界中的第一种数字货币。加密货币是区块链技术的一项特性，它是一种保证端到端交易安全性和可靠性的数字或虚拟货币。这些货币通过多种挖矿算法创建。因此，区块链与加密货币的结合产品在会计和金融等领域具有多种应用 (Yumna 2019)。
-
 *   ➢ **智能合约**：开发者需要智能合约（一种必需的区块链协议）来在区块链上创建由相关方触发的金融协议 (Yumna 2019)。它不仅降低了传统交易相关的“外部成本”，还极大地提高了交易的安全性和质量。
-
 *   ➢ **不可篡改性**：数据一旦录入便无法更改。要成功篡改或进行非法更改，需要更改系统中存储的 51% 以上的记录。
 
 ## 1.5 区块链技术工作步骤
@@ -3784,35 +3665,29 @@ QIS College of Engineering and Technology, India
 
 ### ➢ 版权与版税保护
 
-
-
-
-
-## 区块链应用
-
 目前，许多版权和所有权法律适用于音乐、电影、博客和其他在线内容。借助区块链技术，这些法律的实施可以更容易且更安全。此外，它为艺术家和内容制作者提供了关于版税分配的准确、最新统计数据。任何类型的数字内容下载均可被追踪，以确保创作者或艺术家因其作品获得应有的认可。
 
-### 投票
+### ➢ 投票
 
 区块链的概念已应用于安全投票领域。电子投票流程解决了传统人工投票的问题，但仍存在一些主要顾虑，包括选民欺诈、选民隐私以及传统数字投票技术的高昂成本。区块链有潜力通过智能合约和加密技术提高安全性、透明度和隐私性，从而改善选民的投票体验。这些目标可以通过区块链实现，区块链还使得通过使用不同类型的选票和基于逻辑的投票来定制投票程序成为可能。大学层面的选举已在使用它。
 
-### 加密货币
+### ➢ 加密货币
 
 区块链最熟悉的应用是在加密货币领域。采用区块链用于加密货币是由于其众多优势，其中之一是其无国界的特性。因此，加密货币可用于国际交易。一个重要的问题是汇率可能会波动，导致买家最终亏损。另一方面，这一选项明显优于区域性支付应用（如印度的 Paytm），但后者的功能仅限于国内使用。
 
-### 物联网
+### ➢ 物联网
 
 物联网是一个由相互连接的设备组成的网络，它们共享信息以提供有价值的洞察。智能家居是一个典型示例，各种家电连接在一个平台上。然而，确保此类分布式系统的安全性至关重要。区块链在这方面发挥着重要作用。通过利用区块链，物联网设备可以确保其接收的信息安全，且仅授权方可访问，从而增强整体系统安全性。
 
-### 资产管理
+### ➢ 资产管理
 
 资产管理也不例外，区块链在金融领域的重要性日益凸显。一般来说，资产管理涉及个人可能拥有的各类资产的管理和交换，包括但不限于大宗商品、共同基金、房地产、股票、固定收益和另类投资。传统的资产管理交易技术成本高昂，特别是在涉及多个国家和跨境支付时。由于区块链消除了对经纪人、托管人、结算经理等中介的需求，在这些情况下可以提供显著帮助。相反，区块链技术提供了一种透明且明确的方法，从而消除了出错的可能性。
 
-### 区块链在反洗钱中的应用
+### ➢ 区块链在反洗钱中的应用
 
 基于区块链的反洗钱应用的固有特性有助于阻止洗钱活动。每笔区块链交易都会创建一条不可逆转的永久记录轨迹。因此，当局很容易确定资金来源。区块链账本可以执行记录、验证和记录每笔交易完整历史等任务。如果任何步骤（如目标钱包、货币类型、源钱包和金额）未得到确认，交易将被立即取消。区块链还使风险评估和洗钱报告工具成为可能。它允许进行全系统分析，而不仅仅是监控进出点。
 
-### 区块链在广告中的应用
+### ➢ 区块链在广告中的应用
 
 区块链应用广告是一种分布式数字账本技术，在提供最高级别的安全性、可追溯性和透明度的同时促进去中心化。一旦数字记录被放置在区块链上，它们就是不可变的；有访问权限的人可以查看交易，但无法更改它们。因为区块链实时记录交易和信息，广告商可以利用它来追踪广告支出。最终，它能提供现有系统无法提供的公开性。好处不仅限于透明度。在广告领域，速度至关重要。维护库存控制和保证高质量商品是具有挑战性的任务。区块链技术能够保持最新状态。
 
@@ -3849,10 +3724,6 @@ QIS College of Engineering and Technology, India
 ### 数字资产管理
 
 区块链技术现在使得以可预测、自动化、可追溯和可靠的方式完全管理数字资产成为可能。每个区块链中的“区块”相互关联并加密的方式正是其独特之处（Haleem 2021）。
-
-
-
-
 
 ### 2. 文献综述
 
@@ -3896,9 +3767,7 @@ ABDULLAH ALMAMUN, (2022). “Blockchain-Based Electronic Health Records Manageme
 
 
 
-
-
-## 参考文献
+# 参考文献
 
 Ahmed. (2022). “Emerging Trends in Blockchain Technology and Applications: A Review Outlook”. *Journal of King Saud University - Computer and Information Sciences*, Vol. 34, pp. 6719–6742.
 
@@ -3970,29 +3839,33 @@ Zheng, Z., Xie, S., Dai, H., Chen, X., & Wang, H. (2017). “An overview of bloc
 
 ## Wireshark 在网络安全中数据包检测与密码嗅探中的作用
 
-**Manvi Mishra**  
+**Manvi Mishra**
+
 SRMSCET&R Bareilly, India
 
-**Md Shadab Hussain**  
+**Md Shadab Hussain**
+
 SRMSCET&R Bareilly, India
 
-**Nirbhay Chaubey**  
-![Orcid Image](https://orcid.org/0000-0001-6575-7723)  
+**Nirbhay Chaubey**
+
+![Orcid Image](https://orcid.org/0000-0001-6575-7723)
+
 Ganpat University, India
 
 **Prabhakar Gupta**
 
-
-
-
-
-# SRMSCET, Bareilly, India
+SRMSCET, Bareilly, India
 
 ## 摘要
 
-在当今互联的数字环境中，网络完整性、效率和安全性对于商业、机构和个人交互至关重要。本章重点深入探讨 Wireshark 的功能，广泛探索数据包检查方法论以及缓解密码嗅探攻击相关风险的有效策略。内容涉及捕获和分析网络流量，检查 `HTTP`、`DNS`、`SMTP` 等关键协议，并演示网络中的数据传输。通过实际演示，指导读器完成部署 Wireshark 以实时捕获和分析网络数据包的过程。针对密码嗅探——攻击者用于拦截和解密敏感数据（包括登录凭据）的常见手段——Wireshark 能帮助读者识别并应对常见的密码嗅探技术。本章还涵盖了主动防范措施，如采用安全协议、加密算法和最佳密码管理实践。
 
-### 1. 简介
+
+# 网络完整性、效率与安全性：Wireshark 数据包检查与密码嗅探防范
+
+在当今互联的数字环境中，网络完整性、效率和安全性对于商业、机构和个人交互至关重要。本章重点深入探讨 Wireshark 的功能，广泛探索数据包检查方法论以及缓解密码嗅探攻击相关风险的有效策略。内容涉及捕获和分析网络流量，检查 `HTTP`、`DNS`、`SMTP` 等关键协议，并演示网络中的数据传输。通过实际演示，指导读者完成部署 Wireshark 以实时捕获和分析网络数据包的过程。针对密码嗅探——攻击者用于拦截和解密敏感数据（包括登录凭据）的常见手段——Wireshark 能帮助读者识别并应对常见的密码嗅探技术。本章还涵盖了主动防范措施，如采用安全协议、加密算法和最佳密码管理实践。
+
+## 1. 简介
 
 Wireshark 是一款流行的开源网络协议分析器，使用户能够捕获并主动检查计算机网络上的实时流量。其用途延伸至网络故障排除、分析、软件与协议开发以及教育目的。得益于对众多协议的支持，Wireshark 成为跨 OSI 模型不同层审视网络流量的多功能解决方案。凭借其直观的图形用户界面和强大的功能，Wireshark 仍然是网络专业人员、爱好者和研究人员的首选工具。
 
@@ -4010,90 +3883,103 @@ Wireshark 可用于多种目的，例如诊断网络中的性能问题。网络�
 
 本章其余部分安排如下。第 2 节详述关于 Wireshark 重要性的文献综述。第 3 节重点介绍使用 Wireshark 进行数据包检查。第 4 节描述使用 Wireshark 进行密码嗅探。第 5 节讨论结论与未来展望。
 
-### 2. 文献综述
+## 2. 文献综述
 
 Wireshark 的文献综述至关重要，因为它提供了对这款网络协议分析器在各种背景下如何被利用和研究的全面理解。通过考察现有研究，它确定了 Wireshark 如何为网络故障排除、安全分析和教育目的做出贡献。它强调了最佳实践、常见挑战和创新应用，有助于指导和改进该工具的未来使用与开发。此外，它揭示了当前文献中的空白，指引新的研究方向，并增强与网络分析和网络安全相关的整体知识库。
 
-本文通过一个实验装置演示了 Wireshark 作为网络嗅探工具的功能，展示了其检测恶意数据包的效率。通过 Wireshark 分析的实时网络测试凸显了其能力，表明其有潜力发展成为一个强大的入侵检测系统。本文强调了 Wireshark 作为网络协议分析器的角色及其作为开源实用程序的灵活性，允许开发者通过额外的入侵检测功能对其进行增强。 (Banerjee et al., 2010)
+本文通过一个实验装置演示了 Wireshark 作为网络嗅探工具的功能，展示了其检测恶意数据包的效率。通过 Wireshark 分析的实时网络测试凸显了其能力，表明其有潜力发展成为一个强大的入侵检测系统。本文强调了 Wireshark 作为网络协议分析器的角色及其作为开源实用程序的灵活性，允许开发者通过额外的入侵检测功能对其进行增强。(Banerjee et al., 2010)
 
-网络计算机系统遭受攻击的数量和种类不断增加，凸显了对强大网络安全的迫切需求。如今，网络管理员必须能够调查和分析网络流量，以了解正在进行的活动并迅速响应以识别威胁。Wireshark 作为一款研究网络数据包及其行为的有效开源工具，在该过程中发挥着关键作用。它可用于识别和分类不同类型的攻击特征。本文旨在演示 Wireshark 如何应用于诊断网络协议并揭露传统网络攻击，如端口扫描、隐蔽 `FTP` 和 `IRC` 通道、基于 `ICMP` 的攻击以及由 `Bit Torrent` 驱动的拒绝服务攻击。此外，所呈现的案例研究说明了如何利用 Wireshark 识别新兴攻击向量。 (Ndatinya et al., 2015)
+网络计算机系统遭受攻击的数量和种类不断增加，凸显了对强大网络安全的迫切需求。如今，网络管理员必须能够调查和分析网络流量，以了解正在进行的活动并迅速响应以识别威胁。Wireshark 作为一款研究网络数据包及其行为的有效开源工具，在该过程中发挥着关键作用。它可用于识别和分类不同类型的攻击特征。本文旨在演示 Wireshark 如何应用于诊断网络协议并揭露传统网络攻击，如端口扫描、隐蔽 `FTP` 和 `IRC` 通道、基于 `ICMP` 的攻击以及由 `Bit Torrent` 驱动的拒绝服务攻击。此外，所呈现的案例研究说明了如何利用 Wireshark 识别新兴攻击向量。(Ndatinya et al., 2015)
 
+### 2.1 网络取证与安全研究综述
 
+#### 物联网环境下的网络取证与 5G 安全
 
-
-
-## 网络取证与安全研究综述
-
-### 物联网环境下的网络取证与 5G 安全
 电信技术的最新进展使物联网成为焦点，物联网通过互联网连接对象，预示着一个海量设备形成广泛网络的时代。随着无线网络技术的进步，5G 网络正超越 2.4G 频段，移动运营商正在商用化 5G。这一发展使得更快、更可靠的无线连接成为可能，但无线网络仍易受攻击。网络取证通过分析网络活动并通过数据包分析响应攻击，至关重要。本文利用软件（`Wireshark`）和硬件（`Observer`）收集和分析数据包，对比了各工具在数据包收集和分析方面的性能。(Kim et al., 2020)
 
-### 网络安全威胁与 BitTorrent 流量取证分析
+#### 网络安全威胁与 BitTorrent 流量取证分析
+
 本文针对网络安全威胁和攻击日益普遍这一现状，该现状推动了网络取证领域的广泛研究。网络系统中收集的数据通常用于调查这些安全威胁。数据包分析作为一项关键的网络安全技术，专注于研究不安全的协议。为协助取证调查并应对安全与隐私威胁，我们对 BitTorrent 客户端上的网络数据包进行了主动检测。本文提出了一种使用 `Wireshark` 捕获和分析网络数据包的方法。对 P2P 网络流量进行监控、捕获和分析表明，该技术成功识别了威胁来源和位置，为取证调查提供了可信的数字证据。(Nusa, 2020)
 
-### 物联网系统攻击面与防护策略
+#### 物联网系统攻击面与防护策略
+
 本文解释了物联网的基础知识，涵盖了针对物联网系统的不同攻击类型，并提出了防御这些威胁的方法。文章探讨了各类物联网设备及其用途，以及它们面临的安全问题和预防措施。(Jani & Chaubey, 2020)
 
-### 云计算虚拟化环境安全与 Flush+Flush 攻击检测
+#### 云计算虚拟化环境安全与 Flush+Flush 攻击检测
+
 研究表明，网络安全威胁在不断演变，且可能影响任何规模的企业。为保障云计算安全，保护底层虚拟化系统并使用强有力的工具来发现和处理威胁至关重要。研究探讨了不同的网络安全问题及其解决方案，包括一种用于检测虚拟化环境中攻击的新型 `Flush+Flush` 方法。(Tank et al., 2020)
 
-### 量子密码学：突破与网络安全影响
+#### 量子密码学：突破与网络安全影响
+
 该研究展示了密码学的缺陷、弱点及其预防措施。量子密码学探讨了量子密码学领域的最新突破及其对网络安全的影响。(Chaubey, 2020)
 
-### 基于 Wireshark 与 SNORT 的入侵检测系统协同分析
+#### 基于 Wireshark 与 SNORT 的入侵检测系统协同分析
+
 如今，我们对互联网的依赖导致了各类入侵事件。为检测这些入侵，我们需要无需用户介入即可工作的入侵检测工具。入侵检测系统 (IDS) 分析入侵行为以确保数据传输安全。`Wireshark` 作为一款流行的数据包分析工具，可拦截并分析加密网络流量，识别 DoS 和 DDoS 等攻击。`SNORT` 利用预定义规则捕获实时互联网数据包，若无匹配则向用户发出警报。通过路由器实现精确的数据流向，生成捕获数据包的日志文件。随后由 `Wireshark` 分析该日志，详细记录数据包流向、流量、TCP 错误和增量时间。(Jain, 2021)
 
-### 软件定义网络 (SDN) 环境下的 DDoS 攻击检测模型
+#### 软件定义网络 (SDN) 环境下的 DDoS 攻击检测模型
+
 研究指出，洪泛攻击的重要性日益凸显，推动了软件定义网络 (SDN) 等创新网络架构的出现。SDN 的问世将网络从硬件转向软件，提供了可管理性、成本效益和适应性。其在安全性、网络数据收集和攻击检测框架构建方面的作用显著。SDN 环境下的实时案例研究分析了正常与攻击场景下的网络统计数据。流量分析以图形化方式描绘往返时间和吞吐量等参数，阐明了网络指标在检测 DDoS 攻击中的重要性。这项初步研究最终形成了一个用于 SDN 内 DDoS 检测的概念模型，展示了其应对不断演变的安全挑战的潜力。(Verghese, 2021)
 
-### 网络取证中的数据包分析与恶意软件指标识别
-本文作者探讨了数据包分析，也称为数据包嗅探或协议分析，这是网络取证中的关键技术。它涉及捕获和解读实时网络数据以了解网络活动。该方法可检测恶意行为迹象、数据泄露、未授权访问、恶意软件感染和入侵尝试。数据包分析允许重建通过网络发送的图像文件、文档和电子邮件附件。通常使用数据包嗅探器执行，如开源工具 `Wireshark`，有助于识别和分类攻击特征。本文演示了 `Wireshark` 如何协助网络协议诊断并识别恶意软件妥指标的基本指标。(Dodiya, 2022)
+#### 网络取证中的数据包分析与恶意软件指标识别
 
-### SS7 信令系统漏洞分析与异常流量检测方法
+本文作者探讨了数据包分析，也称为数据包嗅探或协议分析，这是网络取证中的关键技术。它涉及捕获和解读实时网络数据以了解网络活动。该方法可检测恶意行为迹象、数据泄露、未授权访问、恶意软件感染和入侵尝试。数据包分析允许重建通过网络发送的图像文件、文档和电子邮件附件。通常使用数据包嗅探器执行，如开源工具 `Wireshark`，有助于识别和分类攻击特征。本文演示了 `Wireshark` 如何协助网络协议诊断并识别恶意软件指标的基本指标。(Dodiya, 2022)
+
+#### SS7 信令系统漏洞分析与异常流量检测方法
+
 20 世纪 70 年代，蜂窝网络的漫游互联是为少数受信方设计的，因此安全性并非主要考量。如今，有着数十年历史的 SS7 (Signalling System No. 7) 仍被广泛使用，尽管因放松管制、扩张及与基于 IP 的 LTE 网络融合而存在漏洞。SS7 无法验证用户位置和身份，也无法过滤非法消息，使其面临通话拦截、追踪和拒绝服务等攻击。虽然 LTE 和 Diameter 协议提供了更好的安全性，但仍存在缺陷。本研究引入了一种利用 `Wireshark` 和 `Snort IDS` 检测 SS7 流量异常的方法，凸显了 SS7 的严重漏洞。(Afzal, 2022)
 
-### 嗅探器技术原理与 Sniffit 工具设计实现
+#### 嗅探器技术原理与 Sniffit 工具设计实现
+
 本文介绍了嗅探器，其具备监控和验证互联网流量的最高能力，在高效管理计算机网络中发挥关键作用。它们在不篡改数据的前提下，控制、观察和记录 telnet、用户登录和 FTP 连接的密码，检查数据包在网络中传输时的情况。网络管理员使用嗅探器解码捕获的数据包，提取相关信息。嗅探器虽对组织有益，但黑客也利用其进行恶意活动，获取未授权数据。本研究旨在开发并实现一款名为 `Sniffit` 的新型嗅探工具，引入数据包分析协议。结果显示，`Sniffit` 可创建编码数据包数据库，并根据用户请求显示相关数据。(Rajawa, 2022)
 
-### 基于 Wireshark 的 LMS 系统 HTTP 流量安全审计与加固建议
+#### 基于 Wireshark 的 LMS 系统 HTTP 流量安全审计与加固建议
+
 本文探讨了数据安全，这对网络通信和软件安全至关重要。HTTP 常用于网站访问，是关键的互联网协议。在 LMS 网站上，学生访问讲座资料、讨论论坛和作业。`Wireshark` 分析网络协议，记录并显示数据包数据。本研究利用 `Wireshark` 嗅探 LMS 流量并识别漏洞。结果显示，使用 HTTP 的 LMS 缺乏加密，存在安全风险。建议包括使用 HTTPS、实施多因素认证、监控网站日志和管理密码。建议的密码管理措施包括定期更改、字符规范化和哈希处理。实施这些措施将增强 LMS 安全性并降低数据通信风险。(Jaya, 2022)
 
-
-
-
-
-## Paper Review: The Application of Wireshark in Network Analysis and Security
+## 3. Paper Review: The Application of Wireshark in Network Analysis and Security
 
 ### Abstract
+
 This paper reviews multiple research papers exploring the core role of **Wireshark** as a leading network analysis software in network traffic monitoring, troubleshooting, security auditing, and educational simulation. The studies consistently agree that Wireshark, with its deep packet capture and parsing capabilities, is an indispensable analysis tool in the contemporary digital environment.
 
 ---
 
-### 1. Overview of Related Research
+### 3.1 Overview of Related Research
 
-#### 1.1 Network Forensics and Protocol Analysis
+#### 3.1.1 Network Forensics and Protocol Analysis
+
 **Soepeno (2023)** notes that Wireshark acts as a "digital investigator" in the virtual realm, capable of capturing and analyzing packets in real-time with exceptional precision and depth. Through four weeks of network analysis, it systematically revealed the complexities of various protocols, accumulating a valuable database of packet behaviors, making it an essential tool for investigators and analysts delving into the intricacies of internet-based operations.
 
-#### 1.2 Local Area Network (LAN) Security and Credential Theft
+#### 3.1.2 Local Area Network (LAN) Security and Credential Theft
+
 **Hussain (2024)**'s research focuses on the rising LAN security risks in a digitally interconnected world. The paper discusses how attackers utilize Wireshark to capture **HTTP** packets to steal login credentials (IP addresses, emails, financial details, etc.). The study points out that while LANs are often considered secure, vulnerabilities exist. Wireshark can capture protocols such as **HTTP**, **ARP (Address Resolution Protocol)**, **TCP (Transmission Control Protocol)**, etc. To secure LANs, the study recommends implementing data encryption, firewalls, **IDS/IPS**, network segmentation, using Ethernet cables, **HTTPS**, and Multi-Factor Authentication (MFA), and mitigating threats through traffic monitoring, port security, and MAC address whitelisting.
 
-#### 1.3 Satellite Communication (VSAT) Network Feasibility Analysis
+#### 3.1.3 Satellite Communication (VSAT) Network Feasibility Analysis
+
 **Yusuf (2024)** addresses the issue of limited internet access in remote areas by recommending the use of **VSAT (Very Small Aperture Terminal)**. By using Wireshark to measure **jitter**, **packet loss**, **latency**, and **throughput**, the feasibility of the VSAT network in the SD 65 scenario was successfully analyzed. The results provided valuable diagnostic data for technicians to facilitate maintenance and repair.
 
-#### 1.4 Quality of Service (QoS) Monitoring and Online Education
+#### 3.1.4 Quality of Service (QoS) Monitoring and Online Education
+
 **Hamidah (2024)** studied the case of Indonesian **4G** networks supporting online education during the pandemic. An-Najiyah Surabaya High School achieved excellent network quality with **2.6 Mbps throughput, 0% packet loss, and 0.12 ms latency** through QoS monitoring (focusing on packet loss, throughput, and latency), ensuring optimal performance for online learning.
 
+
+
 #### 1.5 The Active Defense Role of Network Sniffing in Cybersecurity
+
 **Shaw (2024)** emphasizes that network packet sniffing is key to understanding network behavior, identifying vulnerabilities, and enhancing security. The research details its methodology and applications, affirming its effectiveness as a proactive security tool, while also discussing ethical concerns regarding user privacy, data protection, and legal compliance. Case studies demonstrated its value in detecting anomalies, thwarting malicious activities, and hardening infrastructure.
 
 #### 1.6 Large-Scale Network Traffic Monitoring and Protocol Filtering
-**Paravathi (2024)** points out that with network expansion and traffic surges, monitoring user behavior is crucial for smooth operation. Sniffing tools like Wireshark can capture and analyze traffic, supporting the implementation and filtering of protocols such as **TCP**, **IP**, **UDP**, etc., helping administrators pinpoint weak links in large-scale networks, with applications ranging from network security to compliance monitoring.
+
+**Paravathi (2024)** points out that with network expansion and traffic surges, monitoring user behavior is crucial for smooth operation. Sniffing tools like `Wireshark` can capture and analyze traffic, supporting the implementation and filtering of protocols such as `TCP`, `IP`, `UDP`, etc., helping administrators pinpoint weak links in large-scale networks, with applications ranging from network security to compliance monitoring.
 
 ---
 
 ### 2. Comparative Tool Analysis
 
 #### 2.1 Differences Between Wireshark and Cisco Packet Tracer
-To analyze the characteristics of Wireshark, **Cisco Packet Tracer** is introduced for comparison (Čabarkapa, 2015), as detailed in **Table 1**. The comparison aims to highlight the strengths and weaknesses of both and clarify their applicable scenarios in network analysis and troubleshooting.
+
+To analyze the characteristics of `Wireshark`, `Cisco Packet Tracer` is introduced for comparison (Čabarkapa, 2015), as detailed in **Table 1**. The comparison aims to highlight the strengths and weaknesses of both and clarify their applicable scenarios in network analysis and troubleshooting.
 
 #### Table 1. Comparison of Wireshark and Cisco Packet Tracer
 
@@ -4116,151 +4002,116 @@ To analyze the characteristics of Wireshark, **Cisco Packet Tracer** is introduc
 
 ### 3. Basic Steps for Packet Inspection Based on Wireshark
 
-The basic steps for performing fundamental packet inspection using Wireshark are as follows:
+The basic steps for performing fundamental packet inspection using `Wireshark` are as follows:
 
-1.  **Obtain Wireshark**: First, download and install Wireshark from the official website (if not already installed).
+1.  **Obtain Wireshark**: First, download and install `Wireshark` from the official website (if not already installed).
+2.  **Launch the Program**: After installation, open `Wireshark`. Depending on your system, you may need administrator privileges to capture network data.
+3.  **Select Network Interface**: In the `Wireshark` main interface, select the network interface from which you intend to capture packets, whether it is Ethernet, Wi-Fi, or another interface.
+4.  **Start Capturing Packets**: Click the selected interface, then click the "Start" button to initiate packet capture.
+5.  **Analyze Packets**: As packets traverse the selected interface, `Wireshark` will display captured packets in real-time. You will see various details such as source and destination IP addresses, protocol, packet length, and timestamp.
+6.  **Apply Packet Filters**: Utilize `Wireshark`'s powerful filtering options to pinpoint specific packet types or traffic. Apply filters based on protocol, IP address, port number, etc., to simplify your analysis.
+7.  **Inspect Individual Packets**: Click any packet in the list to view detailed information in the packet details pane at the bottom of the `Wireshark` window. Here, you can meticulously examine packet headers, payloads, and other relevant data.
+8.  **Follow TCP/UDP Streams**: `Wireshark` supports following TCP or UDP streams, simplifying the analysis of communication between different hosts. Right-click a packet, then select "Follow TCP Stream" or "Follow UDP Stream" to view the complete session.
+9.  **Stop Capturing Packets**: When you have collected enough data or completed your analysis, click the "Stop" button to halt packet capture.
+10. **Save or Export Results**: Save your captured packets for future reference, or export them in various formats for sharing or further inspection.
 
+Figure 1 shows the `Wireshark` software homepage, displaying all networks connected to the system.
 
-
-
-
-### 2. 启动程序
-
-安装完成后，打开 Wireshark。根据您的系统，您可能需要管理员权限才能捕获网络数据。
-
-### 3. 选择网络接口
-
-在 Wireshark 主界面中，选择您打算从中捕获数据包的网络接口，无论是以太网、Wi-Fi 还是其他接口。
-
-### 4. 开始捕获数据包
-
-点击选定的接口，然后点击“开始”按钮以启动数据包捕获。
-
-### 5. 分析数据包
-
-当数据包穿过选定的接口时，Wireshark 将实时显示捕获的数据包。您将看到各种详细信息，如源 IP 地址和目标 IP 地址、协议、数据包长度和时间戳。
-
-### 6. 应用数据包过滤器
-
-利用 Wireshark 强大的过滤选项来锁定特定的数据包类型或流量。根据协议、IP 地址、端口号等应用过滤器，以简化您的分析。
-
-### 7. 检查单个数据包
-
-点击列表中的任意数据包，即可在 Wireshark 窗口底部的数据包详细信息面板中查看详细信息。在这里，您可以仔细检查数据包头部、载荷和其他相关数据。
-
-### 8. 追踪 TCP/UDP 流
-
-Wireshark 支持追踪 TCP 或 UDP 流，简化了不同主机间通信的分析。右键点击一个数据包，然后选择“追踪 TCP 流”或“追踪 UDP 流”以查看完整的会话。
-
-### 9. 停止捕获数据包
-
-当您收集了足够的数据或完成了分析，点击“停止”按钮以停止数据包捕获。
-
-### 10. 保存或导出结果
-
-保存您捕获的数据包以备将来参考，或将其以多种格式导出以便共享或进一步检查。
-
-图 1 展示了 Wireshark 软件的主页，其中显示了连接到系统的所有网络。
-
-#### 图 1. Wireshark 网络分析器主页
+#### Figure 1. Wireshark Network Analyzer Homepage
 
 ![979-8-3693-9225-6.ch009.f01](img/979-8-3693-9225-6.ch009.f01.png)
 
-图 2 显示了当前的数据包信息，包括源 IP 地址、目标 IP 地址、协议 TCP、长度 60 以及其他信息。
+Figure 2 displays current packet information, including source IP address, destination IP address, protocol `TCP`, length 60, and other information.
 
-#### 图 2. 当前数据包信息与原始数据的表示
+#### Figure 2. Current Packet Information and Raw Data Representation
 
 ![979-8-3693-9225-6.ch009.f02](img/979-8-3693-9225-6.ch009.f02.png)
 
-图 3 说明了如果您想获取用于访问网站的特定 IP 地址的信息，应应用 HTTP 过滤器并分析结果。此过滤将隔离相关流量，使识别和检查涉及该特定 IP 地址的交互变得更加容易。
+Figure 3 illustrates that if you want to obtain information for a specific IP address used to access a website, you should apply an `HTTP` filter and analyze the results. This filtering isolates relevant traffic, making it easier to identify and inspect interactions involving that specific IP address.
 
-#### 图 3. 通过应用过滤器选择网络 HTTP
+#### Figure 3. Selecting Network HTTP by Applying Filter
 
 ![979-8-3693-9225-6.ch009.f03](img/979-8-3693-9225-6.ch009.f03.png)
 
-#### 图 4. 数据包信息
+#### Figure 4. Packet Information
 
 ![979-8-3693-9225-6.ch009.f04](img/979-8-3693-9225-6.ch009.f04.png)
 
-利用 Wireshark 捕获密码不仅在道德上令人质疑，而且很可能是非法的，因为这涉及在未经同意的情况下拦截机密信息。Wireshark 是一款强大的网络协议分析器，旨在用于合法的网络诊断、分析和教育工作。未经适当授权使用 Wireshark 进行密码拦截违反了隐私和安全法规及协议。
+Using `Wireshark` to capture passwords is not only ethically questionable but also likely illegal, as it involves intercepting confidential information without consent. `Wireshark` is a powerful network protocol analyzer designed for legitimate network diagnostics, analysis, and educational work. Using `Wireshark` for password interception without proper authorization violates privacy and security regulations and protocols.
 
-在保护您的网络时，必须实施强有力的安全措施，例如加密连接（如 HTTPS）和强健的认证协议（如多因素认证），而不是诉诸非法的密码捕获。
+When securing your network, it is imperative to implement robust security measures, such as encrypted connections (e.g., `HTTPS`) and strong authentication protocols (e.g., multi-factor authentication), rather than resorting to illegal password capturing.
 
-如果您有合法理由监控网络流量，请确保获得所有相关方的明确同意并遵守相关法律法规。未经授权拦截密码或任何敏感数据不仅是不道德的，而且是非法的，可能会带来严重的后果。
+If you have a legitimate reason to monitor network traffic, ensure you obtain explicit consent from all relevant parties and comply with applicable laws and regulations. Unauthorized interception of passwords or any sensitive data is not only unethical but also illegal, potentially carrying severe consequences.
 
-### 4. 使用 Wireshark 进行密码嗅探
+### 4. Password Sniffing Using Wireshark
 
-在此，我们将探讨使用 Wireshark 网络捕获分析器捕获密码的过程，并检查每一步的结果。
+Here, we will explore the process of capturing passwords using the `Wireshark` network capture analyzer and examine the results of each step.
 
-#### 步骤 1
+#### Step 1
 
-首先，在您的 Windows 系统上或 Linux 虚拟机中启动 Wireshark 工具，并开始网络捕获。例如，假设我正在捕获我的 Wi-Fi 网络流量。图 5 显示了网络数据包分析器的主页。
+First, launch the `Wireshark` tool on your Windows system or Linux virtual machine and start network capture. For example, assume I am capturing my Wi-Fi network traffic. Figure 5 shows the network packet analyzer homepage.
 
-#### 图 5. 网络数据包分析器主页
+#### Figure 5. Network Packet Analyzer Homepage
 
 ![979-8-3693-9225-6.ch009.f05](img/979-8-3693-9225-6.ch009.f05.png)
 
-#### 步骤 2
+#### Step 2
 
-数据包捕获开始后，前往网站并使用您的凭据登录，如图 6 所示。
+After packet capture begins, navigate to a website and log in using your credentials, as shown in Figure 6.
 
-#### 图 6. Acunetix Web 漏洞扫描器登录页面
+#### Figure 6. Acunetix Web Vulnerability Scanner Login Page
 
 ![979-8-3693-9225-6.ch009.f06](img/979-8-3693-9225-6.ch009.f06.png)
 
-#### 步骤 3
+#### Step 3
 
-成功输入登录凭据后，我们将继续在 Wireshark 中捕获密码。为此，我们使用数据包捕获期间识别登录凭据所需的特定过滤器。
+After successfully entering login credentials, we will proceed to capture the password in `Wireshark`. To do this, we use the specific filter required to identify login credentials during packet capture.
 
-#### 步骤 4
+#### Step 4
 
-Wireshark 捕获了各种数据包，但我们的重点是定位 HTTP 数据包。因此，我们在显示过滤器栏中应用特定命令以隔离所有捕获的 HTTP 数据包，如图 7 所示，绿色栏指示过滤器的应用。
+`Wireshark` captures various packets, but our focus is on locating `HTTP` packets. Therefore, we apply a specific command in the display filter bar to isolate all captured `HTTP` packets, as shown in Figure 7, where the green bar indicates the filter application.
 
-#### 图 7. 表示所有捕获的 HTTP 数据包
+#### Figure 7. Representation of All Captured HTTP Packets
 
 ![979-8-3693-9225-6.ch009.f07](img/979-8-3693-9225-6.ch009.f07.png)
 
-#### 步骤 5
+#### Step 5
 
-在捕获的 HTTP 数据包中，我们的关注点在于识别用户在网站上提交的表单数据。为此，我们采用一个不同的过滤器。
+Among the captured `HTTP` packets, our interest lies in identifying the form data submitted by the user on the website. For this, we employ a different filter.
 
-我们知道，主要有两种方法用于将网页（如登录表单）的表单数据提交给服务器。这些方法包括：GET 和 POST。
+We know there are primarily two methods for submitting form data from a web page (such as a login form) to a server. These methods include: `GET` and `POST`.
 
-#### 步骤 6
+#### Step 6
 
-首先，在我们确定凭据的探索中，我们最初选择第一种方法并实施 GET 方法的过滤器，如下所示。
+First, in our quest to determine credentials, we initially select the first method and implement the filter for the `GET` method, as shown below.
 
 ```
-http.request.method == “GET”
+http.request.method == "GET"
 ```
 
-#### 图 8. 实施 GET 方法的过滤器
+#### Figure 8. Implementing GET Method Filter
 
 ![979-8-3693-9225-6.ch009.f08](img/979-8-3693-9225-6.ch009.f08.png)
 
-#### 步骤 7
+#### Step 7
 
-如果在检查 GET 方法时未能找到表单数据，我们的下一步是尝试 POST 方法。我们通过在 Wireshark 中应用过滤器来实现这一点，如图 9 所示。
+If the inspection of the `GET` method fails to reveal form data, our next step is to attempt the `POST` method. We achieve this by applying a filter in `Wireshark`, as shown in Figure 9.
 
 ```
-http.request.method == “POST”
+http.request.method == "POST"
 ```
 
-#### 图 9. 实施 POST 方法的过滤器
+#### Figure 9. Implementing POST Method Filter
 
 ![979-8-3693-9225-6.ch009.f09](img/979-8-3693-9225-6.ch009.f09.png)
 
-图 9 突出显示了用户名为 `Tonystark_44`，密码为 `tony@1234`。清晰可见，任何人都可以轻松捕获它。
+Figure 9 highlights the username as `Tonystark_44` and the password as `tony@1234`. It is clearly visible and can be easily captured by anyone.
 
-### 5. 结论与未来展望
+### 5. Conclusion and Future Outlook
 
-Wireshark 是一款强大的工具，可以提供每个数据包的详细信息，包括头部和内部的实际数据 (Mishra, 2024)。该研究具有独特性，因为它将理论与实践相结合，利用 Wireshark 进行网络安全。这一贡献使学习体验更加完整。此外，还使用了图形工具来可视化和理解网络流量及趋势。总之，本章是负责保护网络基础设施免受恶意实体侵害的个人的宝贵资源。通过将理论见解与实践练习相结合，它使读者能够充分利用 Wireshark 的功能来加强其网络以抵御网络威胁，从而确保其数字资产的弹性。未来将通过 Wireshark 演示 ARP 欺骗、跨站请求伪造 (CSRF)、跨站脚本和 SQL 注入攻击。
+`Wireshark` is a powerful tool that provides detailed information for every packet, including headers and the actual data inside (Mishra, 2024). This study is unique because it combines theory with practice, utilizing `Wireshark` for network security. This contribution makes the learning experience more complete. Additionally, graphical tools were used to visualize and understand network traffic and trends. In summary, this chapter serves as a valuable resource for individuals responsible for protecting network infrastructure from malicious entities. By combining theoretical insights with practical exercises, it empowers readers to fully leverage `Wireshark`'s capabilities to strengthen their networks against cyber threats, thereby ensuring the resilience of their digital assets. Future work will demonstrate ARP spoofing, Cross-Site Request Forgery (CSRF), Cross-Site Scripting, and SQL Injection attacks using `Wireshark`.
 
-
-
-
-
-## 参考文献
+## References
 
 Afzal, R., & Murugesan, R. K. (2022). Implementation of a malicious traffic filter using snort and wireshark as a proof of concept to enhance mobile network security. *Journal of Telecommunications and Information Technology*, (1).
 
@@ -4272,11 +4123,15 @@ Chaubey, N. K., & Prajapati, B. B. (Eds.). (2020). *Quantum Cryptography and the
 
 Dodiya, B., & Singh, U. K. (2022). Malicious Traffic analysis using Wireshark by collection of Indicators of Compromise. *International Journal of Computer Applications*, 183(53), 1–6. DOI: [`10.5120/ijca2022921876`](http://dx.doi.org/10.5120/ijca2022921876)
 
+
+
+# 参考文献
+
 Hamidah, M. N., Tias, R. F., & Zainal, R. F. (2024). Quality of Service (QoS) Analysis using Wireshark on the LAN Network at An Najiyah High School Surabaya. *Jurnal Mandiri IT*, 12(4), 222–228.
 
 Hussain, A., Hussain, A., Qadri, S., Razzaq, A., Nazir, H., & Ullah, M. S. (2024). Enhancing LAN Security by Mitigating Credential Threats via HTTP Packet Analysis with Wireshark. *Journal of Computing & Biomedical Informatics*, 6(02), 433–440.
 
-Jain, G., & Anubha, . (2021, March). Application of snort and wireshark in network traffic analysis. IOP Publishing. *IOP Conference Series. Materials Science and Engineering*, 1119(1), 012007. DOI: [`10.1088/1757-899X/1119/1/012007`](http://dx.doi.org/10.1088/1757-899X/1119/1/012007)
+Jain, G., & Anubha. (2021, March). Application of snort and wireshark in network traffic analysis. IOP Publishing. *IOP Conference Series. Materials Science and Engineering*, 1119(1), 012007. DOI: [`10.1088/1757-899X/1119/1/012007`](http://dx.doi.org/10.1088/1757-899X/1119/1/012007)
 
 Jani, K. A., & Chaubey, N. (2020). IoT and cyber security: introduction, attacks, and preventive steps. In *Quantum Cryptography and the Future of Cyber Security* (pp. 203–235). IGI Global. DOI: [`10.4018/978-1-7998-2253-0.ch010`](http://dx.doi.org/10.4018/978-1-7998-2253-0.ch010)
 
@@ -4304,9 +4159,7 @@ Varghese, J. E., & Muniyal, B. (2021). A pilot study in software-defined network
 
 Yusuf, A., Khairil, K., & Rohmawan, E. P. (2024). AN ANALYSIS OF SERVICE QUALITY ON VSAT NETWORK USING WIRESHARK. *JURNAL MEDIA INFOTAMA*, 20(1), 73–78.
 
-# 第 10 章
-
-# 无声的威胁：利用智能检测防范基于 PDF 的恶意软件
+# 第 10 章 无声的威胁：利用智能检测防范基于 PDF 的恶意软件
 
 **Ravi Kirtivadan Sheth**
 
@@ -4328,22 +4181,28 @@ Rashtriya Raksha University, India
 
 PDF 因其可移植性和可靠性而长期流行。与`.doc`等可能跨平台显示不一致的格式不同，PDF 确保在所有平台上的一致渲染。尽管外观简单，PDF 却拥有复杂的底层结构，由二进制和 ASCII 数据的混合组成。事实上，PDF 可以被视为一种独立的编程语言，查看时能够执行代码。此外，PDF 支持嵌入式多媒体、JavaScript 和系统命令等高级功能，使其既灵活又高效（Martsinkevich et al., 2023；Issakhani et al., 2022）。
 
-
-
-
 ## PDF 文件结构与安全风险
 
 许多用户将 PDF 视为简单、静态的文档，但它们实际上功能强大。您看到的内容是后台程序运行的结果。虽然人们越来越了解其他文档格式（如带宏的 Microsoft Office 文件）的风险，但往往忽视 PDF 中存在的类似风险 (Endignoux, G., 2016), (Elingiusti et al., 2018)。PDF 文件内部包含预定义的结构，可在其框架内复现文本、图像、图形和交互元素。以下是 PDF 文件基本结构的概述 (Martsinkevich et al., 2023), (Endignoux, G., 2016)：
 
 *   **Header（文件头）**：PDF 文件以文件头开头，标识其为 PDF 文档。通常，文件头部分包含 PDF 规范的版本号，指示创建文件所用的特定 PDF 标准。
+
 *   **Body（文件体）**：PDF 文件的文件体由按顺序排列的对象组成，本质上是内容格式。对象是 PDF 文件中的主要部分，可能以某种方式呈现文本、图像、字体和其他主要内容。因此，我们应重视 PDF 文件的灵活性，这使得理解和处理复杂信息变得更加容易。
+
 *   **Cross-Reference Table / Xref（交叉引用表）**：交叉引用表可说是 PDF 文件中最重要的元素。它存储文件中对象位置和结构的元数据，支持对这些对象的轻松导航和快速检索。
+
 *   **Trailer（尾部）**：尾部部分通过列出关键信息（包括引用对象、交叉引用组的大小和其他基本详情），提供整个 PDF 文档的综合概览。
+
 *   **Objects（对象）**：PDF 由表单字段和文本块等对象的排列构成。对象具有虚拟标识符，每个对象存储一个定义对象属性的字典，以及一个包含对象真实数据的流或字符串。
+
 *   **Catalog（目录）**：目录是电子文档中的关键细节。它作为基础，被其他关键根对象引用，涵盖文档和大纲，以及文档元数据。
+
 *   **Pages（页面）**：`Pages` 对象以树结构定义页面的结构层级。每个页面都有缩略图，其中内容流、注释和资源等其他对象直接相连。
+
 *   **Content Streams（内容流）**：内容流包含在页面上渲染文本、图像和其他图形元素的指令。它们通常使用可移植文档格式 (PDF) 语法编码。
+
 *   **Fonts and Resources（字体与资源）**：构成文档的字体、图像和其他元素通常放置在“资源”部分以供后续使用。例如，此类部分包含字典，指定必须按第 II 节所述方式使用的资源。
+
 *   **Annotations（注释）**：注释（例如链接、评论和表单字段）是创建交互性并为 PDF 文档提供更多信息的对象。另一方面，位置名称主要与页面的精确区域相关联。
 
 从 Figure 1 可获取 PDF 文件结构的基础知识，该图最初出自 (Martsinkevich et al., 2023), (Endignoux, G., 2016)。PDF 格式的规范已公开发布，全球软件开发人员可设计出与 PDF 文件完美配合的工具和应用程序。
@@ -4358,9 +4217,6 @@ PDF 文档在阅读、下载或共享单个文档时非常方便。因此，PDF 
 
 现代网络危险（特别是 PDF）的发展程度日益加深。HP Wolf Security 近期的一份报告揭示了一个令人担忧的趋势：网络犯罪分子越来越多地利用 PDF 传播 Wiki Loader、Ursnif 和 DarkGate 等恶意软件。与 2023 年第一季度相比，2023 年第四季度 PDF 相关威胁增加了 7%。这些威胁已从网络钓鱼尝试演变为通过 PDF 文档直接分发恶意软件。事实上，2023 年第四季度分析的恶意软件中有 11% 使用 PDF 作为投递方式，而第一季度仅为 4%。一个显著的例子是 Wiki Loader 活动，它使用虚假的包裹投递 PDF 诱骗用户安装 Ursnif 恶意软件 (Maundrill, B., 2024)。
 
-
-
-
 ## PDF 恶意软件检测：智能方法综述
 
 恶意软件创建者经常利用 PDF 文件中嵌入 JavaScript 的能力来运行其代码。尽管这些代码通常被包含在沙箱中以保证安全，但它们仍可利用未修补的漏洞逃逸并在用户设备上执行有害命令。恶意 PDF 可能包含复杂、伪装的有效载荷以逃避检测，或者一旦攻击者获得控制权，恶意软件会从互联网下载。这些危险的 PDF 通过多种方式分发，包括路过式下载、定向攻击或大规模电子邮件活动（Li et al., 2021；Tzermias et al., 2011）。依赖基于特征的检测的传统防病毒软件难以捕获隐藏在 PDF 中的此类恶意软件。随着 PDF 文件在个人和专业环境中的广泛使用，其中嵌入的恶意软件风险也在增加。防范 PDF 中的恶意软件已成为网络安全专家的首要任务（Li et al., 2020；[Shijo et al., 2015]；Mohammed et al., 2021）。网络安全专家与恶意软件创建者之间的持续博弈凸显了对更智能检测方法的需求，这些方法能够将未知威胁与其他恶意活动区分开来。不仅是基于 PDF 的恶意软件，现代恶意软件在当今的数字环境中也对所有数字设备（包括 IoT 设备）构成重大威胁（Jani, K. A., & Nirbhay, Chaubey., 2020）。恶意软件分析过程非常复杂，需要高计算加密和解密设备。随着计算机性能增强，现代密码学的弱点暴露无遗。在这种情况下，量子密码学是一个有前景的解决方案，为在线交易、通信等各种应用提供强大保护。它正在专家中获得关注，且理由充分——它是安全数据交换的未来（Chaubey, N. K., & Prajapati, B. B., 2020）。
@@ -4368,6 +4224,10 @@ PDF 文档在阅读、下载或共享单个文档时非常方便。因此，PDF 
 2020 年，研究人员提出了一种基于 API 函数调用的恶意软件检测新方法（Tank et al., 2020）。该方法能够追踪恶意软件行为，并表明特定 API 函数调用的存在可暗示恶意软件的存在（Tank et al., 2020）。
 
 智能检测方法的使用是对抗软件病毒/恶意软件的一种非常强有力的手段。它结合了现有的尖端智能识别方法，包含机器学习模型和其他类型的先进技术。通过利用这些技术分析能力和发现漏洞，将有可能为网络安全解决方案的改进提供关键贡献，这些解决方案本质上旨在应对 PDF 下载环境中新出现的挑战（Rieck et al., 2011；Li et al., 2020）。
+
+
+
+# 基于 PDF 的恶意软件智能检测研究
 
 基本上，智能检测技术采用现代技术，包含机器学习、人工智能和威胁行为科学，以发现任何恶意行为倾向的迹象。随着更复杂的设备和技术出现，网络犯罪分子开发其恶意特征，并逼近不断变化的网络威胁前景。为了在不断演变的威胁形势中保持领先，需超越静态特征，采用动态分析。在多样化数据集上训练的机器学习模型将有能力仅凭其 PDF 基础就区分出该恶意软件的最细微指标，提供卓越的阻断功能。
 
@@ -4379,21 +4239,17 @@ PDF 文档在阅读、下载或共享单个文档时非常方便。因此，PDF 
 
 ## 2 文献综述
 
-针对基于 PDF 的恶意软件采用智能检测进行防护的文献反映了一个动态且不断发展的领域。已使用各种模型，以及静态、动态和混合方法。下表 1 简要概述了迄今为止该领域开展的工作及显著观察。深度学习方法（如深度神经网络`DNN`）在学术和工业环境中广泛使用（Al-Haija et al., 2022）。它们应用于恶意软件分析等领域。`DNN`在语音识别、自然语言处理和图像识别等繁重任务中表现出色。然而，已证明这些系统在敌对环境中可能难以应对复杂的逃避技术（Li et al., 2021）。
+针对基于 PDF 的恶意软件采用智能检测进行防护的文献反映了一个动态且不断发展的领域。已使用各种模型，以及静态、动态和混合方法。下表 1 简要概述了迄今为止该领域开展的工作及显著观察。深度学习方法（如深度神经网络 `DNN`）在学术和工业环境中广泛使用（Al-Haija et al., 2022）。它们应用于恶意软件分析等领域。`DNN` 在语音识别、自然语言处理和图像识别等繁重任务中表现出色。然而，已证明这些系统在敌对环境中可能难以应对复杂的逃避技术（Li et al., 2021）。
 
-
-
-
-
-## 相关工作综述
+### 相关工作综述
 
 在 Falah et al. (2020) 中，作者开发了一种方法，用于从现有工具中识别一组特征并创建新特征。这改进了 PDF 恶意软件检测，并延长了当前分析和检测技术的生命周期。
 
-在 Li et al. (2020) 中，引入了一种利用特征向量生成对抗网络（fvGAN）的新型逃逸技术，以攻击基于学习的恶意软件分类器。该方法使用 fvGAN 在特征空间中创建对抗特征向量，然后将其转换为实际的对抗恶意软件样本。结果表明，fvGAN 模型能在短时间内实现较高的逃逸率。此外，与现有的两种攻击算法 Mimicry 和 GD-KDE 相比，该技术在逃逸率和执行成本方面表现更优。
+在 Li et al. (2020) 中，引入了一种利用特征向量生成对抗网络（`fvGAN`）的新型逃逸技术，以攻击基于学习的恶意软件分类器。该方法使用 `fvGAN` 在特征空间中创建对抗特征向量，然后将其转换为实际的对抗恶意软件样本。结果表明，`fvGAN` 模型能在短时间内实现较高的逃逸率。此外，与现有的两种攻击算法 Mimicry 和 `GD-KDE` 相比，该技术在逃逸率和执行成本方面表现更优。
 
 作者 Shijo, P. V., & Salim, A. (2015) 提出了用于恶意软件检测的集成静态与动态分析。该方法利用了静态分析和动态分析各自的优势。
 
-在 Li et al. (2019) 中，研究强调了典型 K 近邻（KNN）分类算法在对抗环境下的脆弱性。作者使用梯度下降攻击方法修改测试集中的恶意样本，以逃避分类器检测。他们提出了一种将这些对抗样本加入训练集、并创建新的 KNN 分类器以测试其对不同攻击强度鲁棒性的方法。结果表明，在训练集中包含由梯度下降攻击生成的对抗样本，能显著增强 KNN 分类器的鲁棒性，且不影响其整体性能。
+在 Li et al. (2019) 中，研究强调了典型 K 近邻（`KNN`）分类算法在对抗环境下的脆弱性。作者使用梯度下降攻击方法修改测试集中的恶意样本，以逃避分类器检测。他们提出了一种将这些对抗样本加入训练集、并创建新的 `KNN` 分类器以测试其对不同攻击强度鲁棒性的方法。结果表明，在训练集中包含由梯度下降攻击生成的对抗样本，能显著增强 `KNN` 分类器的鲁棒性，且不影响其整体性能。
 
 在 Smutz, C., & Stavrou, A. (2016) 中，作者介绍了一种识别集成分类器中数据问题的新方法。他们发现，当单个分类器的投票在检测期间发生冲突时，集成分类器的预测可能不正确。他们的方法称为集成分类器相互一致性分析，允许在不需要额外外部真实标签的情况下检测各类分类器逃逸。
 
@@ -4421,15 +4277,11 @@ Table 1 给出了基于 PDF 的恶意软件检测技术的综合调查。
 | Smutz, C., & Stavrou, A. (2016) | Ensemble classifier (random sampling/bagging) | Contagio | ▪ 使用动态方法<br>▪ 未检查任何可能的嵌入式 PDF 有效载荷<br>▪ 使用真实数据 |
 | M. Zubair Shafiq et al. (2008) | Markov n-gram | 37,000 malware and 1800 benign | ▪ 使用静态方法<br>▪ 与其他恶意软件相比，检测率和误报率较高<br>▪ 无可用逃逸测试 |
 
-
-
-
-
-### 3. 建议方法论
+## 3. 建议方法论
 
 本研究专注于实现一种基于机器学习的模型，以检测嵌入 PDF 文件中的恶意软件。该工作的基础在于利用 `CIC-Evasive-PDFMal2022` 数据集，该数据集被广泛认可为标准数据集，并已被用于众多其他研究中。为了全面了解本研究采用的方法论，读者可以参考图 2，该图提供了实现过程的详细概述。
 
-## 图 2. 建议框架
+### 图 2. 建议框架
 
 ![979-8-3693-9225-6.ch010.f02](img/979-8-3693-9225-6.ch010.f02.png)
 
@@ -4477,15 +4329,18 @@ Table 1 给出了基于 PDF 的恶意软件检测技术的综合调查。
 
 ### 3.2 机器学习模型/分类器
 
-**朴素贝叶斯 (NB)** 是一种利用贝叶斯定理的分类方法，并假设在给定类标签时所用特征相互独立。尽管其性质简单并假设特征独立，NB 在各种实际场景中往往能产生令人印象深刻的结果。其最大优势在于高效和快速，使其成为分析大量数据集的高价值工具。本质上，NB 可描述为 (Ray, S., 2019).：
+**朴素贝叶斯 (NB)** 是一种利用贝叶斯定理的分类方法，并假设在给定类标签时所用特征相互独立。尽管其性质简单并假设特征独立，NB 在各种实际场景中往往能产生令人印象深刻的结果。其最大优势在于高效和快速，使其成为分析大量数据集的高价值工具。本质上，NB 可描述为 (Ray, S., 2019)：
 
 $$
+
 P\left( A \middle| B \right) = \frac{P\left( B \middle| A \right)*P\left( A \right)}{P\left( B \right)}
+
 $$
 
 (1)
 
 *   **上述公式中，**
+
     *   `P(A|B)` 是在给定预测变量 (B, 属性) 的情况下类别 (A, 目标) 的后验概率。
     *   `P(A)` 是类别的先验概率。
     *   `P(B|A)` 是似然度，即在给定类别的情况下预测变量的概率。
@@ -4494,22 +4349,27 @@ $$
 **逻辑回归 (LR)**：逻辑回归是一种强大的统计技术，常用于解决二分类问题。其特征是结果变量为分类型且有两个可能的类别，其名称源于回归分析。但重要的是要注意，逻辑回归主要用于分类而非回归。
 
 $$
+
 f\left( x \right) = \frac{L}{1 + e^{- k(x - x0)}}
+
 $$
 
 (2)
 
 *   **上述公式中，**
+
     *   `f(x)` 是函数的输出
     *   `L` 是曲线的最大值
     *   `K` 是逻辑增长率或曲线的陡峭程度
     *   `x0` 是 Sigmoid 中点的 x 值
     *   `x` 是实数
 
-**K-近邻 (KNN)**：K-近邻 (KNN) 是一种用途极广的机器学习算法，能轻松处理分类和回归任务。其有效性在于其基本原理，即具有相似特征的模型获得相似的结果。这意味着分类器严重依赖可靠的测度。该度量越准确地记录相似性，分类就越准确。KNN 通常采用的距离度量是闵可夫斯基距离。
+**K-近邻 (KNN)**：K-近邻 (`KNN`) 是一种用途极广的机器学习算法，能轻松处理分类和回归任务。其有效性在于其基本原理，即具有相似特征的模型获得相似的结果。这意味着分类器严重依赖可靠的测度。该度量越准确地记录相似性，分类就越准确。`KNN` 通常采用的距离度量是闵可夫斯基距离。
 
 $$
+
 D\left( {X_{i},X_{j}} \right) = \left\lbrack \left\lbrack {\sum_{l = 1}^{d}\left| X_{il} - X_{jl} \right|} \right\rbrack^{1/p} \right\rbrack^{p}
+
 $$
 
 (3)
@@ -4519,20 +4379,20 @@ $$
 **决策树 (DT)**：决策树是一种备受青睐的机器学习技术，用于分类和回归任务。它创建树状结构来表示决策，其中节点象征具体细节或实验，分支代表可能的结果，叶节点代表最终或预测的决策结果。其受欢迎的原因之一是其直观的特性，以及轻松处理统计和分组信息的能力。该算法依赖熵和增益等关键参数对数据进行分类并做出准确决策。这些决策可解释如下 (Capable Machine. (2020))：
 
 $$
+
 Entropy\left( S \right) = {\sum_{i = 1}^{c}{- p_{i}{log}_{2}p_{i}}}
+
 $$
 
 (4)
 
 $$
+
 Gain\left( {S,A} \right) = Entropy\left( S \right) - {\sum\limits_{v\epsilon Values(A)}{\frac{\left| S_{v} \right|}{S}Entropy\left( S_{v} \right)}}
+
 $$
 
 (5)
-
-
-
-
 
 #### 熵
 
@@ -4549,21 +4409,25 @@ $$
 ```
 RFfi_i = \frac{\sum\limits_{j\epsilon all~tress}{norm{fi}_{ij}}}{T}
 ```
+
 (5)
 
 ```
 norm{fi}_{i} = \frac{{fi}_{i}}{\sum\limits_{j\epsilon all~features}{fi}_{j}}
 ```
+
 (6)
 
 ```
 {fi}_{i} = \frac{\sum\limits_{j:node~j~splits~on~features~i}{ni}_{j}}{\sum\limits_{k\epsilon all~nodes}{ni}_{k}}
 ```
+
 (7)
 
 ```
 n_i[j] = w[j]C[j] - w[left(j)]C[left(j)] - w[right(j)]C[right(j)]
 ```
+
 (8)
 
 其中：
@@ -4578,7 +4442,7 @@ n_i[j] = w[j]C[j] - w[left(j)]C[left(j)] - w[right(j)]C[right(j)]
 
 ## 4. 实现与结果分析
 
-为实验目的，实现了前一节讨论的四种不同分类器：朴素贝叶斯（NB）、逻辑回归（LR）、K-近邻（KNN）、决策树（DT）和随机森林（RF）。表 5 和 表 6 分别解释了训练和测试准确率以及交叉验证分数。很明显，DT 和 RF 相比其他模型给出了最佳结果。
+为实验目的，实现了前一节讨论的四种不同分类器：朴素贝叶斯（`NB`）、逻辑回归（`LR`）、K-近邻（`KNN`）、决策树（`DT`）和随机森林（`RF`）。表 5 和表 6 分别解释了训练和测试准确率以及交叉验证分数。很明显，`DT` 和 `RF` 相比其他模型给出了最佳结果。
 
 ### 表 5. 验证与训练准确率
 
@@ -4589,6 +4453,8 @@ n_i[j] = w[j]C[j] - w[left(j)]C[left(j)] - w[right(j)]C[right(j)]
 | KNN | 0.8249 | 0.735 |
 | DT | 1 | 0.9873 |
 | RF | 1 | 0.9923 |
+
+
 
 ### 表 6. 测试准确率
 
@@ -4604,9 +4470,9 @@ n_i[j] = w[j]C[j] - w[left(j)]C[left(j)] - w[right(j)]C[right(j)]
 
 ![979-8-3693-9225-6.ch010.f04](img/979-8-3693-9225-6.ch010.f04.png)
 
-从上图图 4 可以清晰地看到，实现了随机森林（RF）、决策树（DT）、K-近邻（KNN）、朴素贝叶斯（NB）和逻辑回归（LR）等各种模型。在所有这些模型中，RF 提供了最高的准确率。RF 成功达到了 99.30% 的最高总体准确率。
+从上图图 4 可以清晰地看到，实现了随机森林（`RF`）、决策树（`DT`）、K-近邻（`KNN`）、朴素贝叶斯（`NB`）和逻辑回归（`LR`）等各种模型。在所有这些模型中，`RF` 提供了最高的准确率。`RF` 成功达到了 99.30% 的最高总体准确率。
 
-图 5 提供了各分类器混淆矩阵的整体图景，即从左到右、从上到下依次为朴素贝叶斯（NB）、逻辑回归（LOG）、K-近邻（KNN）、决策树（DT）和随机森林（RF）。可以清晰地看到，在检测恶意软件方面，RF 在假阳性率和真阳性率方面提供了更好的检测率。RF 分类器成功达到了 0.9930（99.30%）的准确率，且错误率极低，使其优于其他分类器。RF 分类器在恶意和良性两类中均表现出最低的误检率。表 7 通过适当的统计数据突出了同样的结论。
+图 5 提供了各分类器混淆矩阵的整体图景，即从左到右、从上到下依次为朴素贝叶斯（`NB`）、逻辑回归（`LOG`）、K-近邻（`KNN`）、决策树（`DT`）和随机森林（`RF`）。可以清晰地看到，在检测恶意软件方面，`RF` 在假阳性率和真阳性率方面提供了更好的检测率。`RF` 分类器成功达到了 0.9930（99.30%）的准确率，且错误率极低，使其优于其他分类器。`RF` 分类器在恶意和良性两类中均表现出最低的误检率。表 7 通过适当的统计数据突出了同样的结论。
 
 ### 表 7. 不同分类器/模型的总体对比
 
@@ -4630,7 +4496,7 @@ n_i[j] = w[j]C[j] - w[left(j)]C[left(j)] - w[right(j)]C[right(j)]
 
 ![979-8-3693-9225-6.ch010.f05](img/979-8-3693-9225-6.ch010.f05.png)
 
-图 6 和 表 7 说明了恶意和良性标签数据总体分析的影响。在两个类别中，RF 都提供了更好的准确率和更低的错误率。此外，RF 的误分类计数非常低。在 RF 的情况下，两类中的误分类错误率都非常低，恶意情况为 0.5%，良性情况为 0.8%，与其他分类器相比显著更低。因此，我们可以在统计上得出结论：RF 有能力非常有效地处理此类分类问题。
+图 6 和 表 7 说明了恶意和良性标签数据总体分析的影响。在两个类别中，`RF` 都提供了更好的准确率和更低的错误率。此外，`RF` 的误分类计数非常低。在 `RF` 的情况下，两类中的误分类错误率都非常低，恶意情况为 0.5%，良性情况为 0.8%，与其他分类器相比显著更低。因此，我们可以在统计上得出结论：`RF` 有能力非常有效地处理此类分类问题。
 
 ### 图 6. 恶意与良性在误分类、错误率和准确率方面的总体分析
 
@@ -4638,7 +4504,7 @@ n_i[j] = w[j]C[j] - w[left(j)]C[left(j)] - w[right(j)]C[right(j)]
 
 ### 表 8. 各模型在精确率、召回率和 F1 分数方面的总体对比
 
-### 恶意
+#### 恶意
 
 | 模型 | 精确率 | 召回率 | F1 分数 |
 | --- | --- | --- | --- |
@@ -4648,7 +4514,7 @@ n_i[j] = w[j]C[j] - w[left(j)]C[left(j)] - w[right(j)]C[right(j)]
 | DT | 0.99 | 0.99 | 0.99 |
 | RF | 0.99 | 0.99 | 0.99 |
 
-### 良性
+#### 良性
 
 | 模型 | 精确率 | 召回率 | F1 分数 |
 | --- | --- | --- | --- |
@@ -4658,17 +4524,13 @@ n_i[j] = w[j]C[j] - w[left(j)]C[left(j)] - w[right(j)]C[right(j)]
 | DT | 0.99 | 0.98 | 0.98 |
 | RF | 0.99 | 0.99 | 0.99 |
 
-从表 8 和图 7 也可以清晰地看到，与其他分类器/模型相比，RF 提供了更高的精确率、召回率和 F1 分数。RF 成功达到了 99% 的精确率、召回率和 F1 分数。这一数值本身就说明了 RF 相比其他分类器的有效性。在其他分类器中，DT 在精确率方面与 RF 结果略微接近，但在召回率和 F1 分数方面与 RF 相比表现较差。
+从表 8 和图 7 也可以清晰地看到，与其他分类器/模型相比，`RF` 提供了更高的精确率、召回率和 F1 分数。`RF` 成功达到了 99% 的精确率、召回率和 F1 分数。这一数值本身就说明了 `RF` 相比其他分类器的有效性。在其他分类器中，`DT` 在精确率方面与 `RF` 结果略微接近，但在召回率和 F1 分数方面与 `RF` 相比表现较差。
 
 精确率是模型做出的所有正向预测中准确正向预测的比例，而召回率是数据中所有正向实例中准确正向预测的比例。F1 分数，也称为 F1 度量或 F1 值，是一个将精确率和召回率结合到单一分数中的有价值指标。当模型在精确率和召回率之间取得平衡时，它特别有用。F1 分数范围从 0 到 1，分数越高表示性能越好。在类别分布不均或假阳性产生后果的情况下，F1 分数提供了模型的平衡评估。总体而言，F1 分数通过同时考虑精确率和召回率，提供了模型性能的良好度量。
 
 ### 图 7. 各模型在精确率、召回率和 F1 分数方面的总体对比
 
 ![979-8-3693-9225-6.ch010.f07](img/979-8-3693-9225-6.ch010.f07.png)
-
-
-
-
 
 #### 表 9. 训练数据与测试数据的总体对比
 
@@ -4680,7 +4542,9 @@ n_i[j] = w[j]C[j] - w[left(j)]C[left(j)] - w[right(j)]C[right(j)]
 | KNN | | 0.15 | 0.8532 | 0.2 | 0.7962 |
 | DT | | 0.000 | 1.000 | 0.011 | 0.9888 |
 | RF | | 0.000 | 1.000 | 0.005 | 0.9947 |
+
 | 良性 | | 训练 | | 测试 |
+| --- | --- | --- | --- | --- |
 | 模型/分类器 | | 错误率 | 准确率 | 错误率 | 准确率 |
 | NB | | 0.08 | 0.9169 | 0.08 | 0.9178 |
 | Log | | 0.18 | 0.8244 | 0.19 | 0.8128 |
@@ -4741,11 +4605,9 @@ Jiang, , Song, N., Yu, M., Chow, K.-P., Li, G., Liu, C., & Huang, W. (2021). DET
 
 Lakshmanan Nataraj 等 (2021). OMD: Orthogonal Malware Detection Using Audio, Image, and Static Features. ArXiv (Cornell University). https://doi.org//arxiv.2111.04710 DOI: [10.48550](http://dx.doi.org/10.48550)
 
+
+
 Li, . (2019). Research on KNN Algorithm in Malicious PDF Files Classification under Adversarial Environment. Proceedings of the 2019 4th International Conference on Big Data and Computing - ICBDC 2019. DOI: [10.1145/3335484.3335527](http://dx.doi.org/10.1145/3335484.3335527)
-
-
-
-
 
 ## 参考文献
 
@@ -4803,7 +4665,7 @@ IKG Punjab Technical University，印度
 
 ![979-8-3693-9225-6.ch011.f01](img/979-8-3693-9225-6.ch011.f01.png)
 
-这些“智能”小工具可以通过一个中心化系统相互连接，从而实现众多流程和服务的无缝集成与自动化（Saqlain, Jahangir, 2018）。从智能家居和城市到工业自动化和医疗保健，物联网技术有望改变大规模的组织形式，并改善全球人民的生活质量。医疗保健行业包括远程患者监测、医院运营管理、血糖监测、联网吸入器、联网隐形眼镜、机器人手术、高效药物管理、癌症识别等物联网设备；智能门锁、智能花园、视频门铃，以及用于智能照明、咖啡机和冰箱的个人伴侣，只是当前可用的家庭自动化物联网设备的几个例子。智慧城市行业已开发出用于智能路灯、智能垃圾收集或自动停车的物联网设备（Phillip Williams et al., 2022）。Ayush G Ingole 先生（2024）指出，家庭安全系统开发中采用了包括物联网和 Telegram 在内的多种方法，以及用于远程监控和控制的 ESP32，为寻求通过智能技术提升安全性的房主提供了一种经济高效的替代方案。
+这些“智能”小工具可以通过一个中心化系统相互连接，从而实现众多流程和服务的无缝集成与自动化（Saqlain, Jahangir, 2018）。从智能家居和城市到工业自动化和医疗保健，物联网技术有望改变大规模的组织形式，并改善全球人民的生活质量。医疗保健行业包括远程患者监测、医院运营管理、血糖监测、联网吸入器、联网隐形眼镜、机器人手术、高效药物管理、癌症识别等物联网设备；智能门锁、智能花园、视频门铃，以及用于智能照明、咖啡机和冰箱的个人伴侣，只是当前可用的家庭自动化物联网设备的几个例子。智慧城市行业已开发出用于智能路灯、智能垃圾收集或自动停车的物联网设备（Phillip Williams et al., 2022）。Ayush G Ingole 先生（2024）指出，家庭安全系统开发中采用了包括物联网和 Telegram 在内的多种方法，以及用于远程监控和控制的 `ESP32`，为寻求通过智能技术提升安全性的房主提供了一种经济高效的替代方案。
 
 IEEE 标准协会将物联网网络描述为“一个用于对象（包括网络物理设备、数据资产或个人）的框架，这些对象通过检测、分析数据或做出反应来共享数据并与现实世界进行通信”（IEEE SA, 2018）（Rajmohan, T. et al., 2022）。
 
@@ -4812,10 +4674,6 @@ IEEE 标准协会将物联网网络描述为“一个用于对象（包括网络
 然而，物联网设备的日益普及导致了相当大的问题和担忧，特别是在安全、隐私、互操作性和可扩展性方面。联网系统的数量急剧增加。网络威胁和漏洞的潜在攻击面也随之扩大。
 
 ## 2. 物联网的历史
-
-
-
-
 
 ## 物联网的演进与组成
 
@@ -4846,7 +4704,7 @@ IEEE 标准协会将物联网网络描述为“一个用于对象（包括网络
 
 物联网是将我们的智能设备和产品连接到一个系统中，以使其高效运行并可被远程访问的过程。
 
-### 表 2. 物联网的组成
+## 表 2. 物联网的组成
 
 | 组件 | 描述 |
 | :--- | :--- |
@@ -4862,53 +4720,47 @@ IEEE 标准协会将物联网网络描述为“一个用于对象（包括网络
 
 利用物联网技术的企业可创建智能设备、个性化体验和预测性维护解决方案，以满足不断变化的客户需求和偏好。这有助于组织在市场中脱颖而出并保持领先优势。
 
-
-
-
 在日常事务中，物联网应用可以提升便利性、安全性和可持续性。智能家居技术、可穿戴技术和联网家电让人们能够实现工作自动化、追踪健康状况并节约能源。医疗、交通和城市规划领域的物联网应用能够提高生活质量、促进可持续发展并改善公共服务。Rahmani, A.M. 等人（2022）[¹] 指出，物联网如今已影响人类生存的方方面面，构建了一个互联设备网络。如今，由于智能工具、传感器和应用程序与人类生活错综复杂地融合在一起，如果设想一种没有它们的生活方式，显得既奇怪又充满挑战。物联网应用的范围不仅体现在宏大和工业维度，还涵盖个人、生活方式和医疗保健等层面，例如智能手机和智能手表。易用的在线服务让用户能够使用这些服务并获得所需的分析结果。物联网已迅速成为全球性刚需，并建立了一套用于快速交换人、物、数据和流程的体系。
 
 以下展示了物联网对多个行业变革的影响：
 
 ### 4.1 医疗保健
 
-*   **远程患者监护：** 可穿戴健康追踪器和智能吸入器等物联网设备可持续监测患者的生命体征和健康参数。例如，`Fitbit` 和 `Apple Watch` 可监测心率和身体活动，并检测可能预示健康问题的异常情况。
 
+
+## 4.1 医疗保健
+
+*   **远程患者监护：** 可穿戴健康追踪器和智能吸入器等物联网设备可持续监测患者的生命体征和健康参数。例如，`Fitbit` 和 `Apple Watch` 可监测心率和身体活动，并检测可能预示健康问题的异常情况。
 *   **智慧医院：** 医院正在引入物联网解决方案以提高效率。例如，`Medtronic` 提供联网胰岛素泵，可根据实时血糖水平自动调节胰岛素供给，从而实现更好的糖尿病管理。
 
-### 4.2 制造业
+## 4.2 制造业
 
 *   **预测性维护：** 机器上的物联网传感器提供设备性能数据，并在故障发生前识别隐患。例如，`GE's Predix platform` 协助 `Caterpillar` 等制造商预判维护需求，从而减少停机时间和维修成本。
-
 *   **智能工厂：** `Siemens' MindSphere software` 将制造设备连接至云端，实现实时数据分析和流程优化。这种集成提高了效率，同时减少了浪费。
 
-### 4.3 农业
+## 4.3 农业
 
 *   **精准农业：** 农民可利用土壤湿度传感器和气候监测系统等物联网设备优化灌溉和作物管理。`John Deere's linked machinery` 通过分析数据来改进播种和收割作业。
-
 *   **牲畜监测：** 可穿戴物联网牲畜设备（如 `Allflex's smart collars`）监测动物健康状况和位置，提供实时洞察以改善畜群管理和生产效率。
 
-### 4.4 零售
+## 4.4 零售
 
 *   **智能库存管理：** 支持物联网的货架和库存系统（如 `Amazon Go` 所用）可自动追踪产品库存并管理补货，降低库存成本并提升消费者满意度。
-
 *   **个性化购物体验：** 零售业中信标技术的应用，是指在零售行业利用信标进行邻近营销。在零售场景下，信标可与开启了蓝牙并下载了零售商应用的顾客移动设备通信，并根据顾客的位置和购买记录向其手机推送定向促销信息。
 
-### 4.5 交通与物流
+## 4.5 交通与物流
 
 *   **车队管理：** 车辆中的物联网传感器监测位置、燃油消耗和维护需求。`UPS` 等公司利用这些信息优化配送路线、降低燃油消耗并提高整体效率。
-
 *   **智能交通管理：** 城市部署物联网技术以监测和控制交通流量。例如，`Barcelona` 已采用智能红绿灯，可根据交通状况实时调整，从而缓解拥堵和减少排放。
 
-### 4.6 建筑业
+## 4.6 建筑业
 
 *   **工地监测：** 建筑设备和材料上的物联网传感器便于进度追踪和安全保障。`Trimble` 提供实时工地监测解决方案，可最大限度减少错误并提高项目效率。
-
 *   **楼宇管理系统：** 智能建筑中的物联网设备监测和控制照明、空调和安防等系统。例如，`Johnson Controls` 提供物联网解决方案，以最大限度降低能耗并提高建筑安全性。
 
-### 4.7 环境监测
+## 4.7 环境监测
 
 *   **空气质量监测：** 城市地区安装的物联网传感器监测污染水平，并提供数据以改善空气质量。例如，`PurpleAir` 提供实时空气质量监测，助力城市采取行动对抗污染。
-
 *   **野生动物追踪：** 利用支持物联网的追踪设备监测野生动物的移动和活动。`Wildlife Conservation Network` 利用该技术研究动物迁徙模式并保护濒危物种。
 
 总之，物联网是各行业的**游戏规则改变者**，它提高了效率、改善了决策并催生了新的商业模式。将物联网技术融入各个行业，不仅增强了运营能力，还为创新和增长开辟了新途径。
@@ -4918,18 +4770,12 @@ IEEE 标准协会将物联网网络描述为“一个用于对象（包括网络
 网络安全是保护计算机系统、网络和数据免受数字威胁的过程。这包括采取措施防止未经授权的访问、信息泄露和其他网络危害。在当今的数字环境中，网络安全在保护敏感信息、确保数据机密性和完整性方面发挥着至关重要的作用。Amit Jaykumar 和 Lamba (2018) 指出，万物互联 (IoE) 为企业、个人和国家创造了前所未有的经济机遇。万物互联 (IoE) 中的安全和隐私面临重大挑战，这归因于 IoE 网络的巨大规模和分散特性。IoE 迫切需要强健的认证和安全方法，本文建议在拟议工作中实施此类程序。为保障网络和物联网的安全性与可靠性，网络安全至关重要。此外，这也是有益的。
 
 *   **数据保护：** 物联网设备收集并传输海量数据。网络安全技术（包括访问控制和加密）保护这些数据免遭拦截和未经授权的访问。
-
 *   **防止未经授权的访问：** 采用授权和认证等安全协议，可防止未经授权的用户进入网络和物联网设备。这通过确保只有授权用户才能操作或与物联网设备通信，降低了被篡改或滥用的可能性 (Y. Li & Q. Liu, 2021)。
-
 *   **设备完整性：** 网络安全措施通过保护物联网设备免受病毒、恶意软件和其他在线威胁的侵害，有助于维护设备完整性。可定期应用安全更新和补丁来修复漏洞，确保设备安全运行。
-
 *   **隐私保护：** 物联网设备经常收集私人和敏感数据。安全的数据处理和仅限授权方访问是利用强有力的网络安全措施保护用户隐私的两种方式。
-
 *   **网络安全防护：** 物联网设备经常连接到更大的网络。网络安全可防止 DDoS 攻击和其他网络攻击。
 
 ### 5.1 网络安全对物联网的重要性
-
-
 
 ## 物联网安全：挑战与考量
 
@@ -5000,9 +4846,6 @@ IEEE 标准协会将物联网网络描述为“一个用于对象（包括网络
 *   **资产管理**：保持物联网设备配置记录的最新状态，以高效地维护和跟踪设备。
 *   **异常检测**：使用监控工具识别物联网设备活动中任何异常行为或异常情况，这可能预示着安全风险。
 
-
-
-
 简而言之，随着物联网的扩展，确立网络安全优先级对于保护敏感数据、维护运营完整性以及确保合规性至关重要。实施强有力的安全措施并时刻警惕新威胁，将有助于降低风险并保障物联网技术的效益。
 
 ### 网络安全挑战与解决方案示例
@@ -5064,8 +4907,6 @@ IEEE 标准协会将物联网网络描述为“一个用于对象（包括网络
 
 ### 7.1 拒绝服务
 
-
-
 由于 DOS 攻击（图 3），电信服务的常规使用或治理受到阻碍或无法进行。此类攻击针对特定目标；例如，某个单元确实可能会抑制所有指向相应目的地的消息。中断现有的 IoT 网络是另一种服务拒绝形式；通过停用系统或使其过载来降低性能。Hanan、Mustapha 等人（2018）指出，物联网（IoT）漏洞是僵尸网络的绝佳目标，显著导致了分布式拒绝服务（DDoS）攻击数量的上升。DDoS 攻击的激增凸显了解决其对物联网行业影响的重要性，这是主要原因之一。本文旨在对避免 DDoS 攻击的尝试进行考察，主要集中在网络层面。这些解决方案的敏感性源于其对解决物联网漏洞的影响。
 
 ### 图 3. 拒绝服务
@@ -5082,11 +4923,13 @@ IEEE 标准协会将物联网网络描述为“一个用于对象（包括网络
 
 ### 7.4 躁进攻
 
-为了限制路由发现开销，网络中的每个节点针对任何路由发现仅生成一个 RREQ。通常，它是最先到达的。攻击者可以利用这一特性。结果，RREQ 数据包开始在网络中快速传播，抑制了任何后续到达的 RREQ 数据包。因此，发起者无法找到任何可行的替代路径（即不含攻击者的路由）。每个实体都包含一个不同的位置以参与路由路径。这个唯一地址标识节点。然而，在 MANET 中也没有中央机构来验证这些身份。在女巫攻击中，恶意节点可以为多个其他节点生成虚假身份。女巫节点可以为自己构建不同的身份，或窃取另一个节点的身份。这会在网络中制造混乱。
+
+
+为了限制路由发现开销，网络中的每个节点针对任何路由发现仅生成一个 `RREQ`。通常，它是最先到达的。攻击者可以利用这一特性。结果，`RREQ` 数据包开始在网络中快速传播，抑制了任何后续到达的 `RREQ` 数据包。因此，发起者无法找到任何可行的替代路径（即不含攻击者的路由）。每个实体都包含一个不同的位置以参与路由路径。这个唯一地址标识节点。然而，在 `MANET` 中也没有中央机构来验证这些身份。在女巫攻击中，恶意节点可以为多个其他节点生成虚假身份。女巫节点可以为自己构建不同的身份，或窃取另一个节点的身份。这会在网络中制造混乱。
 
 ### 7.5 睡眠剥夺攻击
 
-在此攻击中，流氓节点可能会通过将电池用于不必要的路由确定，或在无需求的情况下向目标发送数据包来耗尽电池寿命。这是一种 DDoS 恶意活动，恶意节点以看似合法的方式与合法节点通信。然而，该交互的功能是阻止受害节点进入其省电睡眠模式。
+在此攻击中，流氓节点可能会通过将电池用于不必要的路由确定，或在无需求的情况下向目标发送数据包来耗尽电池寿命。这是一种 `DDoS` 恶意活动，恶意节点以看似合法的方式与合法节点通信。然而，该交互的功能是阻止受害节点进入其省电睡眠模式。
 
 ### 7.6 窃听
 
@@ -5094,7 +4937,7 @@ IEEE 标准协会将物联网网络描述为“一个用于对象（包括网络
 
 ### 7.7 干扰攻击
 
-当 IoT 系统使用无线连接进行自组网、接收人工指令或向云存储发送信息时，可能会发生干扰攻击（Mohindru V. & Garg A., 2021）。第三方可以通过使用相同的通信频率来干扰 IoT 设备与网关之间的通信。这种方法常用于移动和射频干扰 WSN 节点（P.N. Mahalle 等, 2013）。
+当 `IoT` 系统使用无线连接进行自组网、接收人工指令或向云存储发送信息时，可能会发生干扰攻击（Mohindru V. & Garg A., 2021）。第三方可以通过使用相同的通信频率来干扰 `IoT` 设备与网关之间的通信。这种方法常用于移动和射频干扰 `WSN` 节点（P.N. Mahalle 等, 2013）。
 
 ### 7.8 流量分析与位置泄露
 
@@ -5110,24 +4953,22 @@ IEEE 标准协会将物联网网络描述为“一个用于对象（包括网络
 
 ### 7.10 克隆攻击
 
-拥有对 IoT 设备物理或无线访问权限的敌对实体可能会生成精确的克隆体。这些设备有可能危害 IoT 网络基础设施。在克隆攻击中，攻击者首先以网络节点为目标或重新配置该节点（Sathish 等, 2013）。攻击者复制重新编程的节点并将其分布在整个系统中以获取网络访问权限（Sher Alia, Syed Babar 等, 2020）。Anubha, R P S Bedi. (2020) 该研究专注于在 MANET 中检测克隆攻击，其中攻击者节点获取合法节点的 ID，将其复制，并吸引所有数据流向自身。ACO 识别了克隆攻击，并使用丢包率、数据包投递率和网络吞吐量评估了性能。
+拥有对 `IoT` 设备物理或无线访问权限的敌对实体可能会生成精确的克隆体。这些设备有可能危害 `IoT` 网络基础设施。在克隆攻击中，攻击者首先以网络节点为目标或重新配置该节点（Sathish 等, 2013）。攻击者复制重新编程的节点并将其分布在整个系统中以获取网络访问权限（Sher Alia, Syed Babar 等, 2020）。Anubha, R P S Bedi. (2020) 该研究专注于在 `MANET` 中检测克隆攻击，其中攻击者节点获取合法节点的 ID，将其复制，并吸引所有数据流向自身。`ACO` 识别了克隆攻击，并使用丢包率、数据包投递率和网络吞吐量评估了性能。
 
 ### 7.11 数据与身份盗窃
 
-
-
-物联网设备的数据存储在云端。如前所述，云信息安全在很大程度上依赖于 SaaS（软件即服务）。第三方公司通常会备份来自物联网云的数据。备份对数据完整性构成重大风险（B. Ondiege 等人, 2017）。
+物联网设备的数据存储在云端。如前所述，云信息安全在很大程度上依赖于 `SaaS`（软件即服务）。第三方公司通常会备份来自物联网云的数据。备份对数据完整性构成重大风险（B. Ondiege 等人, 2017）。
 
 #### 表 4. 基于近期研究文章的物联网攻击比较分析。
 
 | 作者 | 物联网攻击与防范 | 使用的方法 | 实际意义 | 局限性 |
 | --- | --- | --- | --- | --- |
-| Abdul Hanan K. Mohammed 等人, 2021 | 各种物联网攻击包括恶意软件、DDoS 和中间人攻击 | 随机森林、逻辑回归、SVM、KNN、MLP | • 可利用机器学习和深度学习方法识别物联网网络攻击。<br>• 对六种检测技术进行了比较分析。 | • 传统策略在检测网络攻击方面效率低下。<br>• 日益增加的安全风险要求防御措施不断创新。 |
-| Nader Karmous 等人, 2022 | • 物联网攻击：DDoS、恶意软件、勒索软件、欺骗、窃听、物理篡改<br>• 防范方法：网络分段、加密、强认证、定期软件更新 | 监督机器学习方法及 RF、SVM、KNN 等分类算法 | 采用监督机器学习方法以提高精度。 | • 研究缺乏对所用机器学习模型可解释性的完整描述，而这对于理解入侵检测系统 (IDS) 如何做出决策以及识别潜在偏差或错误至关重要。<br>• 文章未彻底考察所提框架的可扩展性，特别是在数据量和设备数量巨大的大规模物联网部署中，这可能影响实际应用。 |
-| Inayat U, Zia MF, 2022 | • 常见物联网攻击包括 DoS、DDoS、探测、欺骗和 MITM。<br>• 利用机器学习和深度学习识别并防范攻击。 | 用于检测物联网网络中网络攻击的基于学习的技术（机器学习和深度学习） | 已针对物联网设备中的网络攻击识别研究了机器学习和深度学习方法，详细综述了它们在保护物联网环境方面的实用性。 | • 物联网网络易受网络安全攻击。<br>• 威胁可能造成物理和经济损失。 |
-| Anika Tasnim, Nigah Hossain, 2022 | • 物联网威胁包括数据泄露、网络漏洞、非法访问和 DDoS 攻击。<br>• 实施强加密、执行频繁安全更新并分割网络。 | • 多种方法，包括 DT、RF、AdaBoost、XGBoost、ANN、MLP<br>• 对数据集应用了欠采样、过采样和 SMOTE。 | • 研究人员利用 DT 和 RF 改进了物联网网络攻击的识别。<br>• 探讨了多种机器学习和深度学习算法以提高物联网安全性。 | • 物联网网络安全功能不足。<br>• Adaboost 技术和人工神经网络在多分类任务中表现不佳。 |
-| Celil Okur, Murat Dener, 2020 | • 针对智能医疗物联网设备的僵尸网络攻击。<br>• 使用机器学习算法区分正常流量和攻击流量作为防范手段。 | • 统计测量（皮尔逊系数、熵）<br>• 使用数据预处理技术的机器学习方法 | • 增强物联网设备安全性。<br>• 使用机器学习算法检测网络攻击。 | • 使用 tcpdump 程序进行耗时的调查。<br>• 高速网络需要高处理吞吐量。 |
-| Qifeng Chen, Haoming Chen 等人, 2018 | • 使用 Kali Linux 在物联网系统上模拟 DoS 攻击。<br>• 提供了各种 DoS 攻击战术效率的比较。 | • 使用 Kali Linux 作为攻击端、Arduino 作为受害端的模拟物联网搭建。<br>• 研究比较了三种主要类型的 DoS 攻击。 | • 物联网安全问题、DoS 攻击及基于仿真的效率比较。 | • 物联网系统周围的安全问题和针对物联网系统的攻击可能造成重大损害。 |
+| Abdul Hanan K. Mohammed 等人, 2021 | 各种物联网攻击包括恶意软件、`DDoS` 和中间人攻击 | 随机森林、逻辑回归、`SVM`、`KNN`、`MLP` | • 可利用机器学习和深度学习方法识别物联网网络攻击。<br>• 对六种检测技术进行了比较分析。 | • 传统策略在检测网络攻击方面效率低下。<br>• 日益增加的安全风险要求防御措施不断创新。 |
+| Nader Karmous 等人, 2022 | • 物联网攻击：`DDoS`、恶意软件、勒索软件、欺骗、窃听、物理篡改<br>• 防范方法：网络分段、加密、强认证、定期软件更新 | 监督机器学习方法及 `RF`、`SVM`、`KNN` 等分类算法 | 采用监督机器学习方法以提高精度。 | • 研究缺乏对所用机器学习模型可解释性的完整描述，而这对于理解入侵检测系统 (`IDS`) 如何做出决策以及识别潜在偏差或错误至关重要。<br>• 文章未彻底考察所提框架的可扩展性，特别是在数据量和设备数量巨大的大规模物联网部署中，这可能影响实际应用。 |
+| Inayat U, Zia MF, 2022 | • 常见物联网攻击包括 `DoS`、`DDoS`、探测、欺骗和 `MITM`。<br>• 利用机器学习和深度学习识别并防范攻击。 | 用于检测物联网网络中网络攻击的基于学习的技术（机器学习和深度学习） | 已针对物联网设备中的网络攻击识别研究了机器学习和深度学习方法，详细综述了它们在保护物联网环境方面的实用性。 | • 物联网网络易受网络安全攻击。<br>• 威胁可能造成物理和经济损失。 |
+| Anika Tasnim, Nigah Hossain, 2022 | • 物联网威胁包括数据泄露、网络漏洞、非法访问和 `DDoS` 攻击。<br>• 实施强加密、执行频繁安全更新并分割网络。 | • 多种方法，包括 `DT`、`RF`、`AdaBoost`、`XGBoost`、`ANN`、`MLP`<br>• 对数据集应用了欠采样、过采样和 `SMOTE`。 | • 研究人员利用 `DT` 和 `RF` 改进了物联网网络攻击的识别。<br>• 探讨了多种机器学习和深度学习算法以提高物联网安全性。 | • 物联网网络安全功能不足。<br>• `Adaboost` 技术和人工神经网络在多分类任务中表现不佳。 |
+| Celil Okur, Murat Dener, 2020 | • 针对智能医疗物联网设备的僵尸网络攻击。<br>• 使用机器学习算法区分正常流量和攻击流量作为防范手段。 | • 统计测量（皮尔逊系数、熵）<br>• 使用数据预处理技术的机器学习方法 | • 增强物联网设备安全性。<br>• 使用机器学习算法检测网络攻击。 | • 使用 `tcpdump` 程序进行耗时的调查。<br>• 高速网络需要高处理吞吐量。 |
+| Qifeng Chen, Haoming Chen 等人, 2018 | • 使用 `Kali Linux` 在物联网系统上模拟 `DoS` 攻击。<br>• 提供了各种 `DoS` 攻击战术效率的比较。 | • 使用 `Kali Linux` 作为攻击端、`Arduino` 作为受害端的模拟物联网搭建。<br>• 研究比较了三种主要类型的 `DoS` 攻击。 | • 物联网安全问题、`DoS` 攻击及基于仿真的效率比较。 | • 物联网系统周围的安全问题和针对物联网系统的攻击可能造成重大损害。 |
 
 ## 8 用于安全物联网的预防措施
 
@@ -5157,9 +4998,6 @@ IEEE 标准协会将物联网网络描述为“一个用于对象（包括网络
 
 总而言之，加密是物联网网络安全的关键组成部分，可防范窃听、篡改、非法访问和数据泄露等多种威胁。
 
-
-
-
 ## 加密方法
 
 以下加密方法结合有效的加密密钥管理指令，对于保护数据和系统免受未经授权的访问、拦截、篡改及其他网络安全风险至关重要。
@@ -5188,13 +5026,9 @@ IEEE 标准协会将物联网网络描述为“一个用于对象（包括网络
 
 *   **椭圆曲线密码学 (ECC)：** `ECC` 是 `RSA` 密码学方法的一种变体，最常用于 `Bitcoin` 和 `Ethereum` 等虚拟货币的数字签名，以及电子邮件、信息和程序的单向加密（Shruti.P., Chandraleka.R., 2017）。`ECC` 通过提供比 `RSA` 等标准方法更高效的加密和认证方式，有助于保护资源受限的物联网设备。`ECC` 使用 256 位密钥即可提供相当于 3,072 位 `RSA` 密钥的保护强度（Di Matteo et al., 2021）。`ECC` 在提供同等安全性的同时，比 `RSA` 消耗更少的计算能力和电池资源；因此常用于具有特定 CPU 资源的移动应用和物联网设备（Miller, S.D. 等，2009）。
 
-*   **区块链技术：** 物联网区块链，常被称为“物联区块链” (`BoT`)，意味着将区块链技术与物联网设备和系统相结合，以提升物联网部署的安全性、可靠性和信任度。（Ahmed A. Abd El-Latif 等，2021）。以下是区块链在物联网背景下的应用方式。Mohit, Singh, and Daliya1 (2024) 本研究强调了网络安全在区块链技术中的关键重要性，重点关注密码学原理、共识机制和智能合约漏洞以改进安全措施，并评估针对区块链环境量身定制的现有网络安全实践和解决方案。这包括加密、共识程序改进和去中心化身份管理等方法。区块链技术有潜力以多种方式极大地提升物联网 (IoT) 设备的网络安全：
+*   **区块链技术：** 物联网区块链，常被称为“物联区块链” (`BoT`)，意味着将区块链技术与物联网设备和系统相结合，以提升物联网部署的安全性、可靠性和信任度。（Ahmed A. Abd El-Latif 等，2021）。以下是区块链在物联网背景下的应用方式。Mohit, Singh, and Daliya1 (2024) 本研究强调了网络安全在区块链技术中的关键重要性，重点关注密码学原理、共识机制和智能合约漏洞以改进安全措施，并评估针对区块链环境量身定制的现有网络安全实践和解决方案。这包括加密、共识程序改进和去中心化身份管理等方法。区块链技术有潜力以多种方式极大地提升物联网 (`IoT`) 设备的网络安全：
 
 *   **设备检测与认证：** 每个物联网设备可被分配一个存储在区块链上的唯一标识号。该标识可被加密验证；确保只有授权系统能连接到系统。基于公私钥对或数字签名的认证系统可用于验证设备身份。
-
-
-
-
 
 ## 区块链与量子计算在物联网安全中的应用
 
@@ -5202,47 +5036,63 @@ IEEE 标准协会将物联网网络描述为“一个用于对象（包括网络
 
 *   **安全数据交换**：区块链使物联网设备能够在无需中介的情况下进行安全的点对点数据交换。设备间传输的数据可被加密并记录在区块链上，以保证真实性和准确性。智能合约的使用可规范特定的数据交换规范，实现完全自动化且无篡改的交易 (Yegireddi et al., 2021)。
 
-*   **数据完整性与不可篡改性**：存储在区块链上的物联网数据不可更改且无懈可击。数据一旦写入区块链，即通过加密哈希与前一区块链接，未经所有网络参与者同意，无法更改或销毁。这使得在不修改所有后续区块并获取网络多数控制权的情况下，篡改历史交易几乎成为不可能。这保证了物联网数据的可靠性和有效性，使其非常适合供应链管理 (SCM) 或资产追踪等要求数据完整性的应用。这确保了来自传感器或设备的数据无法被篡改或更改，从而形成可信、安全的交易或传感器读数记录。
+*   **数据完整性与不可篡改性**：存储在区块链上的物联网数据不可更改且无懈可击。数据一旦写入区块链，即通过加密哈希与前一区块链接，未经所有网络参与者同意，无法更改或销毁。这使得在不修改所有后续区块并获取网络多数控制权的情况下，篡改历史交易几乎成为不可能。这保证了物联网数据的可靠性和有效性，使其非常适合供应链管理 (`SCM`) 或资产追踪等要求数据完整性的应用。这确保了来自传感器或设备的数据无法被篡改或更改，从而形成可信、安全的交易或传感器读数记录。
 
 *   **去中心化网络基础设施**：区块链作为物联网网络的去中心化基础设施，消除了单点故障，降低了网络攻击风险。分布式共识机制（如 `PoW` 或 `PoS`）在无需中心化权威的情况下保障网络安全与稳定 (Rasane et al., 2023)。中心化系统依赖中央服务器进行数据管理，该核心节点一旦遭受攻击或妥协即变得脆弱。区块链去中心化依赖分布式节点网络管理和验证交易。每个节点均保存一份区块链副本，因此不存在单点故障。这种去中心化使攻击者难以入侵系统，因为他们必须同时攻击多个节点才能篡改数据。
 
-*   **供应链中的端到端可追溯性与透明度**：区块链技术通过记录产品和资金的流向，实现了供应链的端到端可追溯性与透明度。每笔交易（如支持物联网的仓库或运输车辆间的货物移动）均可作为一个区块记录在区块链上，从而创建可验证的供应链历史记录。
 
-*   **物联网数据变现**：基于区块链的系统允许物联网设备所有者通过安全地向第三方出售数据来获得收益。智能合约基于既定条件实现自动化支付，确保数据贡献者获得公平报酬，同时保障数据机密性和安全性。
 
-*   **合规性与审计**：区块链创建了可见且可审计的物联网交易记录，便于满足法律规范和行业标准。组织可利用区块链的不可逆审计追踪和数据透明度属性，证明符合 `GDPR` 等隐私法规 (Ravi Prakash, V.S. Anoop et al., 2022)。
+## 供应链中的端到端可追溯性与透明度
 
-*   **安全透明的交易**：区块链交易记录在公共账本（公有链）或许可账本（私有链）中。每笔交易在上链前均由多个节点确认。该验证机制防范非法交易并确保透明度。这意味着物联网操作（如固件更新 `firmware updates` 或数据传输）可被验证和授权，降低恶意干预风险。
+区块链技术通过记录产品和资金的流向，实现了供应链的端到端可追溯性与透明度。每笔交易（如支持物联网的仓库或运输车辆间的货物移动）均可作为一个区块记录在区块链上，从而创建可验证的供应链历史记录。
 
-*   **增强隐私保护**：区块链技术可采用零知识证明验证交易，且无需透露物联网设备的敏感数据。这确保了隐私与安全，仅在必要时向授权方披露信息。
+## 物联网数据变现
 
-    *   **量子计算提升物联网网络安全**：量子计算可利用其比传统计算机快得多的复杂计算能力，改善物联网网络安全。一种应用方式是 `QKD` (Quantum Key Distribution)，它基于量子力学原理生成加密密钥，实现安全通信 (Alekha Parimal Bhatt & Anand Sharma, 2019)。这些密钥理论上难以在不被发现的情况下拦截，为物联网设备提供更高安全性。此外，量子算法可用于增强加密协议，如提高加解密过程的效率。量子计算的主要优势之一是其改变密码学、优化和机器学习等领域的潜力。`Shor` 算法用于整数分解，`Grover` 算法用于非结构化搜索，它们有能力打破现有加密标准，并比经典算法更快地解决优化问题 (Abdulbast A. & Abushgra, 2023)。
+基于区块链的系统允许物联网设备所有者通过安全地向第三方出售数据来获得收益。智能合约基于既定条件实现自动化支付，确保数据贡献者获得公平报酬，同时保障数据机密性和安全性。
+
+## 合规性与审计
+
+区块链创建了可见且可审计的物联网交易记录，便于满足法律规范和行业标准。组织可利用区块链的不可逆审计追踪和数据透明度属性，证明符合 `GDPR` 等隐私法规 (Ravi Prakash, V.S. Anoop et al., 2022)。
+
+## 安全透明的交易
+
+区块链交易记录在公共账本（公有链）或许可账本（私有链）中。每笔交易在上链前均由多个节点确认。该验证机制防范非法交易并确保透明度。这意味着物联网操作（如固件更新 `firmware updates` 或数据传输）可被验证和授权，降低恶意干预风险。
+
+## 增强隐私保护
+
+区块链技术可采用零知识证明验证交易，且无需透露物联网设备的敏感数据。这确保了隐私与安全，仅在必要时向授权方披露信息。
+
+### 量子计算提升物联网网络安全
+
+量子计算可利用其比传统计算机快得多的复杂计算能力，改善物联网网络安全。一种应用方式是 `QKD` (Quantum Key Distribution)，它基于量子力学原理生成加密密钥，实现安全通信 (Alekha Parimal Bhatt & Anand Sharma, 2019)。这些密钥理论上难以在不被发现的情况下拦截，为物联网设备提供更高安全性。此外，量子算法可用于增强加密协议，如提高加解密过程的效率。量子计算的主要优势之一是其改变密码学、优化和机器学习等领域的潜力。`Shor` 算法用于整数分解，`Grover` 算法用于非结构化搜索，它们有能力打破现有加密标准，并比经典算法更快地解决优化问题 (Abdulbast A. & Abushgra, 2023)。
 
 量子计算通过为数据和通信安全提供更好的解决方案，有潜力改变物联网 (IoT) 的网络安全。以下是量子计算可能影响物联网网络安全的方式。
 
-*   **量子密钥分发 (QKD)**：量子密钥分发利用量子力学原理创建安全通信通路。任何窃听尝试都会改变量子态，从而通知通信双方。在物联网中采用 `QKD` 加密设备间通信，可防止攻击者拦截或篡改数据。
+### 量子密钥分发 (QKD)
 
-*   **抗量子算法**：经典加密技术（如 `RSA` 或 `ECC`）基于特定数学问题的复杂性。量子计算机能更快地解决这些问题，使经典加密变得脆弱。抗量子算法（如基于格的密码学）旨在抵御量子攻击。将抗量子算法集成到物联网设备中，可确保即使在量子计算机强大且普及的世界里，设备依然安全。
+量子密钥分发利用量子力学原理创建安全通信通路。任何窃听尝试都会改变量子态，从而通知通信双方。在物联网中采用 `QKD` 加密设备间通信，可防止攻击者拦截或篡改数据。
 
-*   **增强随机数生成**：量子计算可生成真正的随机数，这对于创建强加密密钥至关重要。传统随机数生成器依赖确定性过程，易受预测。物联网设备利用量子生成的随机数可建立更安全的加密密钥，从而提升整体系统安全性。
+### 抗量子算法
 
-*   **改进威胁检测与响应**：量子计算有潜力比传统计算机更快地处理海量数据。这可用于增强威胁检测系统，通过实时分析模式和异常来识别潜在网络攻击。量子增强的威胁检测系统能更快、更准确地响应物联网网络中的网络威胁，降低泄露风险并限制损失。
+经典加密技术（如 `RSA` 或 `ECC`）基于特定数学问题的复杂性。量子计算机能更快地解决这些问题，使经典加密变得脆弱。抗量子算法（如基于格的密码学）旨在抵御量子攻击。将抗量子算法集成到物联网设备中，可确保即使在量子计算机强大且普及的世界里，设备依然安全。
+
+### 增强随机数生成
+
+量子计算可生成真正的随机数，这对于创建强加密密钥至关重要。传统随机数生成器依赖确定性过程，易受预测。物联网设备利用量子生成的随机数可建立更安全的加密密钥，从而提升整体系统安全性。
+
+### 改进威胁检测与响应
+
+量子计算有潜力比传统计算机更快地处理海量数据。这可用于增强威胁检测系统，通过实时分析模式和异常来识别潜在网络攻击。量子增强的威胁检测系统能更快、更准确地响应物联网网络中的网络威胁，降低泄露风险并限制损失。
 
 量子计算有潜力极大地提高物联网安全性，但也带来了新挑战。随着量子技术进步，物联网安全措施必须同步演进，融入抗量子解决方案，并在可能的情况下利用量子优势。
 
-### 挑战与考量
+## 挑战与考量
 
 1.  **资源限制**：物联网设备通常算力、内存和能源有限。在特定设备上实施抗量子算法或量子增强安全措施可能面临困难。
-
 2.  **可扩展性**：量子技术仍处于早期阶段，要将这些解决方案扩展以适应物联网网络多样且普遍的特性，需要重大突破和成本降低。
-
 3.  **互操作性**：为确保平稳过渡，量子安全解决方案必须与现有物联网基础设施兼容。
 
-
-
-
-
-#### 表 7. 展示研究人员采用的各种模型的比较分析
+### 表 7. 展示研究人员采用的各种模型的比较分析
 
 | 作者与年份 | 标题 | 协议 | 实际意义 | 局限性 |
 | --- | --- | --- | --- | --- |
@@ -5282,10 +5132,6 @@ Abdulbast, A. Abushgra, 量子计算如何影响网络安全 (2023), IEEE 会议
 
 Alekha Parimal Bhatt, Anand Sharma (2019), 面向物联网安全的量子密码学, 电子科学与技术期刊, DOI:.DOI: [10.11989/JEST.1674-862X.90523016](http://dx.doi.org/10.11989/JEST.1674-862X.90523016)
 
-
-
-
-
 ## 参考文献
 
 Alia, S., & Babar, S. (2020). Review Article: Survey Paper on IOT Attacks And Its Prevention Mechanisms. *Information Management and Computer Science (IMCS)*. DOI: [10.26480/imcs.02.2020.38.41](http://dx.doi.org/10.26480/imcs.02.2020.38.41)
@@ -5309,6 +5155,12 @@ Deogirikar, J., & Vidhate, A. (2017). Security Attacks in IoT: A Survey. *Intern
 Di Matteo, S., Baldanzi, L., Crocetti, L., Nannipieri, P., Fanucci, L., & Saponara, S. (2021). Secure Elliptic Curve Crypto-Processor for Real-Time IoT Applications. *Energies*, 14(15), 4676. DOI: [10.3390/en14154676](http://dx.doi.org/10.3390/en14154676)
 
 Fagan, M., Megas, K., Scarfone, K., & Smith, M. (2020). Foundational Cyber security Activities for IoT Device Manufacturers. *NIST IR 8259*.
+
+
+
+# 参考文献
+
+## 英文文献
 
 Ge, C., Susilo, W., Baek, J., Liu, Z., Xia, J., & Fang, L. (2022). Revocable Attribute-Based Encryption With Data Integrity in Clouds. *IEEE Transactions on Dependable and Secure Computing*, 19(5), 2864–2872. DOI: [10.1109/TDSC.2021.3065999](http://dx.doi.org/10.1109/TDSC.2021.3065999)
 
@@ -5354,52 +5206,80 @@ Rahmani, A. M., Bayramov, S., & Kiani Kalejahi, B. (2022). Internet of Things Ap
 
 Rajmohan, T., Nguyen, P., & Ferry, N. (2022). A decade of research on patterns and architectures for IoT security. *Cybersecurity*, 5(1), 2. DOI: [10.1186/s42400-021-00104-7](http://dx.doi.org/10.1186/s42400-021-00104-7)
 
-
-
-
-
-## 参考文献
+## 中文文献
 
 - Rasane, T. (2023). 网络安全中的区块链 [JETIR]. *新兴技术与创新研究期刊*, 10(5), •••.
+
 - Ravi Prakash, V.S. Anoop 等. (2022). 用于网络安全的区块链技术：基于文本挖掘的文献分析. *国际信息管理数据洞察期刊*, 第 2 卷, 第 2 期.
+
 - Sakhi, Bandyopadhyay., Sunita, Sarkar., Somnath, Mukhopadhyay. (2023). 利用 AES 加密和 DFS 图遍历在 3D 图像中隐藏秘密数据. 1–4. DOI: [10.1109/ICEEICT56924.2023.10156957](http://dx.doi.org/10.1109/ICEEICT56924.2023.10156957)
+
 - Samah Osama Kamel, Nadia H Hegazi. (2018). 基于物联网安全研究的物联网安全管理系统建议模型. *国际科学与工程研究期刊*.
+
 - Sambana, B. (2020). 面向网络安全漏洞攻击及潜在对策的区块链方法. *国际安全及其应用期刊*, 14(1), 1–14. DOI: [10.33832/ijsia.2020.14.1.01](http://dx.doi.org/10.33832/ijsia.2020.14.1.01)
+
 - Saqlain, J. (2018). "物联网与 5G：历史演变及其架构、兼容性与未来". 梅特罗波利应用科学大学.
+
 - Safa Ahmed 等. (2018). 物联网概述：基础、组件与应用. *安巴尔大学纯科学期刊*, 第 12 卷: 第 3 期, ISSN: 1991-8941.
+
 - Tinshu Sasi; Arash Habibi Lashkari 等. (2023). 物联网攻击综述：分类、检测机制与挑战. *信息与智能期刊*. DOI: [10.1016/j.jiixd.2023.12.001](http://dx.doi.org/10.1016/j.jiixd.2023.12.001)
+
 - 科学与技术. 第 4 卷, 第 1 期, 2018, pp. 1-5. doi: DOI: [10.11648/j.ijdst.20180401.1](http://dx.doi.org/10.11648/j.ijdst.20180401.1)
+
 - Sharma, A., & Bhatt, A. P. (2021). 用于保护基于物联网的医疗系统的量子密码学. 在 *信息安全、隐私与伦理进展丛书* 中 (pp. 124–147). DOI: [10.4018/978-1-7998-6677-0.ch007](http://dx.doi.org/10.4018/978-1-7998-6677-0.ch007)
+
 - Sharma, N., Shamkuwar, M., & Singh, I. (2019). 物联网的历史、现状与未来. 在 Balas, V., Solanki, V., Kumar, R., & Khari, M. (Eds.) 中, *面向智能一代的物联网与大数据分析*. 智能系统参考库 (第 154 卷). Springer. DOI: [10.1007/978-3-030-04203-5_3](http://dx.doi.org/10.1007/978-3-030-04203-5_3)
+
 - Sharma, R. (2012). 网络安全最新新兴趋势及其对社会挑战的研究. *国际科学与工程研究期刊*, 第 3 卷, 第 6 期, 1ISSN 2229-5518.
+
 - Sheth, A., & Bhosale, S. (2021). 网络安全研究论文. *印度当代研究* (ISSN 2231-2137).
+
 - Shruti, P., & Chandraleka, R. (2017). 物联网背景下的椭圆曲线密码学安全性. *国际科学与工程研究期刊*, 第 8 卷, 第 5 期, ISSN 2229-5518.
+
 - Singh, D., Tripathi, G., & Jara, A. J. (2014). 物联网综述：未来愿景、架构、挑战与服务. *IEEE 物联网世界论坛*, 韩国首尔, p. 287–92.
+
 - Singh, G., & Kinger, S. (2013). 加密算法研究 (RSA, DES, 3DES 和 AES) 用于信息安全. *国际计算机应用期刊*, 67(19), 33–38. DOI: [10.5120/11507-7224](http://dx.doi.org/10.5120/11507-7224)
+
 - Tasnim, A., & Hossain, N. (2022). 利用机器学习和深度学习对不同物联网网络攻击进行分类的实验分析. *决策辅助科学与应用国际会议 (DASA)*. DOI: [10.1109/DASA54658.2022.9765108](http://dx.doi.org/10.1109/DASA54658.2022.9765108)
+
 - Tseng F-H, Chou L-D, Chao H-C. (2011). 无线移动自组网中黑洞攻击综述. *Hum Cent Comput Inf Sci*. DOI: [10.1186/2192-1962-1-4](http://dx.doi.org/10.1186/2192-1962-1-4)
+
 - Veenoo Upadhyay, SuryakantYadav (2018). 网络安全挑战及其新兴趋势研究：当前技术. *国际工程研究与管理期刊 (IJERM)*, ISSN: 2349-2058, 第 05 卷, 第 07 期.
+
 - Vella, H. (2022). 量子抗性密码学竞赛 [quantum - cyber security]. *工程与技术*, 17(1), 56–59. DOI: [10.1049/et.2022.0109](http://dx.doi.org/10.1049/et.2022.0109)
+
 - Vutukuru, S. R., & Lade, S. C. (2023). 安全物联网：用于检测和防范物联网设备攻击的新型机器学习算法. *J. Electrical Systems*.
+
+
+
 - Wander, A. S., Gura, N., Eberle, H., Gupta, V., & Shantz, S. C. (2005). 无线传感器网络中公钥密码学的能量分析. *IEEE 普适计算与通信国际会议*, 考艾岛. DOI: [10.1109/PERCOM.2005.18](http://dx.doi.org/10.1109/PERCOM.2005.18)
+
 - Wang, Z., Zhu, H., Liu, P., & Sun, L. (2021). 网络安全中的社会工程学：领域本体与知识图谱应用示例. *网络安全*, 4(1), 31. DOI: [10.1186/s42400-021-00094-6](http://dx.doi.org/10.1186/s42400-021-00094-6)
+
 - Xu, T. (2017). 针对基于 SDN 的物联网中新流攻击的防御. *IEEE*. DOI: [10.1109/ACCESS.2017.2666270](http://dx.doi.org/10.1109/ACCESS.2017.2666270)
+
 - Zainab H. Ali 等. (2015). 物联网：定义、挑战与近期研究方向. *国际计算机应用期刊* (0975 – 8887), 第 128 卷 – 第 1 期.
+
 - Zhixian, C. (2020). 基于 3DES-ECC 算法的移动网络语音传输加密技术. *移动网络与应用*, 25(6), 2398–2408. DOI: [10.1007/s11036-020-01617-0](http://dx.doi.org/10.1007/s11036-020-01617-0)
 
 # 第 12 章：释放软件定义网络 (SDN) 在革新网络管理中的力量
 
-**Manasa Kulkarni**  
-![Orcid Image](https://orcid.org/0000-0002-0129-2557) https://orcid.org/0000-0002-0129-2557  
+**Manasa Kulkarni**
+
+![Orcid Image](https://orcid.org/0000-0002-0129-2557) https://orcid.org/0000-0002-0129-2557
+
 Christ University, India
 
-**Bhargavi Goswami**  
+**Bhargavi Goswami**
+
 Queensland University, Australia
 
-**Joy Paulose**  
+**Joy Paulose**
+
 Christ University, India
 
-**Lavanya Malakalapalli**  
+**Lavanya Malakalapalli**
+
 IIT Dharwad, India
 
 ## 摘要
@@ -5410,11 +5290,7 @@ IIT Dharwad, India
 
 在一个由快速技术进步和对高速、可靠网络连接无处不在的需求所定义的时代，传统网络基础设施的局限性变得日益明显 (McKeown et al., 2008)。随着企业努力满足现代应用、服务和用户期望的动态需求，对更敏捷、可扩展和高效的网络管理解决方案的需求从未像现在这样关键。这一迫切需求为 SDN 的出现铺平了道路，SDN 是一种变革性方法，有望彻底改变网络的设计、部署和管理方式 (Abdallah et al., 2018)。
 
-
-
-
-
-## 软件定义网络 (SDN)
+### 1.1 软件定义网络 (SDN)
 
 从本质上讲，SDN 建立在将网络控制平面与数据平面解耦的基础之上，从而实现对网络的集中控制和管理 (Sharma et al., 2013)。这种分离带来了前所未有的灵活性和可编程性，使网络管理员能够动态调整网络行为以满足特定需求和条件。通过利用软件控制硬件，SDN 将静态、以硬件为中心的网络转变为能够快速适应和优化的动态、软件驱动环境 (Kim & Feamster, 2013)。
 
@@ -5422,15 +5298,15 @@ SDN 的演进始于对传统网络模型固有挑战的认识。传统网络的�
 
 SDN 通过引入可编程网络架构来应对这些挑战，该架构允许进行自动化的、策略驱动的网络管理。这一架构的核心是 SDN 控制器，它作为网络的“大脑”，对流量路由、安全策略和资源分配做出智能决策 (Aliyu et al., 2020)。这个集中的控制平面通过标准化协议（如 `OpenFlow`）与底层的物理和虚拟网络基础设施进行通信，从而实现对网络流量的细粒度控制，并促进不同网络设备的无缝集成 (Wickboldt et al., 2015)。
 
-SDN 的优势延伸至网络管理的各个维度，在敏捷性、效率和成本效益方面带来了显著提升。最引人注目的优势之一是能够迅速部署和修改网络服务，以响应不断变化的业务需求。通过将网络控制与物理基础设施抽象分离，SDN 允许管理员以编程方式定义和实施网络策略，从而加快服务供应速度，并缩短新应用的上市时间 (Kim et al., 2013)。此外，SDN 增强了网络可见性和监控能力，为管理员提供了网络性能的全局视图，并促进了主动管理。这种全面的可见性对于在问题升级之前识别和缓解网络问题至关重要，从而提高了整体网络的可靠性和性能。另外，集中控制模型通过减少人工干预的需求，并实现自动化配置和故障排除流程，简化了网络管理 (Tsagkaris et al., 2015)。
+SDN 的优势延伸至网络管理的各个维度，在敏捷性、效率和成本效益方面带来了显著提升。最引人注目的优势之一是能够迅速部署和修改网络服务，以响应不断变化的业务需求。通过将网络控制与物理基础设施抽象分离，SDN 允许管理员以编程方式定义和实施网络策略，从而加快服务供给速度，并缩短新应用的上市时间 (Kim et al., 2013)。此外，SDN 增强了网络可见性和监控能力，为管理员提供了网络性能的全局视图，并促进了主动管理。这种全面的可见性对于在问题升级之前识别和缓解网络问题至关重要，从而提高了整体网络的可靠性和性能。另外，集中控制模型通过减少人工干预的需求，并实现自动化配置和故障排除流程，简化了网络管理 (Tsagkaris et al., 2015)。
 
 总之，SDN 代表了网络管理的一次范式转变，为传统网络的局限性提供了强有力的解决方案。通过解耦控制平面和数据平面，SDN 实现了集中式、可编程和自动化的网络管理，带来了前所未有的敏捷性、效率和成本节约。随着 SDN 的不断演进和成熟，它不仅有望改变网络的管理方式，还将改变企业在数字时代的运营方式，为一个更加互联和创新的未来铺平道路。
 
-### 1.1 理解软件定义网络
+### 1.2 理解软件定义网络
 
 SDN 是一种设计、构建和管理网络的革命性方法。SDN 旨在通过将网络的控制平面（决定数据包如何在网络中流动）与数据平面（实际将数据包从一处移动到另一处）分离，来提高网络的敏捷性和灵活性。这种分离使网络管理员能够通过软件应用程序以编程方式管理网络行为，提供了一种更集中、更动态的网络流量控制方式。
 
-#### 1.1.1 SDN 的核心组件
+#### 1.2.1 SDN 的核心组件
 
 *   **应用层**：这个最顶层包含与 SDN 控制器通信以定义网络行为的网络应用程序和服务。应用程序可以包括负载均衡器、防火墙、入侵检测系统等。通过将网络功能抽象为软件，应用程序可以直接与网络基础设施通信，从而实现更高效、更有效的网络管理。
 
@@ -5438,7 +5314,7 @@ SDN 是一种设计、构建和管理网络的革命性方法。SDN 旨在通过
 
 *   **数据层**：这个底层由物理和虚拟网络设备组成，如交换机、路由器和其他转发设备，它们实际处理数据流量。这些设备负责根据从控制层接收到的指令转发数据包。标准化协议（如 `OpenFlow`）的使用使 SDN 控制器能够与这些设备通信，而不受硬件供应商的限制，从而促进了互操作性和灵活性。
 
-### 1.2 演进与历史
+### 1.3 演进与历史
 
 SDN 的概念源于传统网络架构带来的挑战。传统网络通常采用静态且紧密耦合的控制平面和数据平面构建，这导致了多种低效率和复杂性。
 
@@ -5452,25 +5328,21 @@ SDN 的概念源于传统网络架构带来的挑战。传统网络通常采用�
 
 *   **SDN 控制器和平台的开发**：随着对 SDN 兴趣的日益增长，开发了大量开源和商业 SDN 控制器。`OpenDaylight`、`Ryu` 和 `ONOS` 等项目为在各种环境中部署 SDN 提供了强大的平台。这些控制器为构建和管理基于 SDN 的网络提供了全面的框架。
 
-### 1.3 架构框架
-
-
-
-
-## SDN 架构框架
+### 1.4 架构框架
 
 SDN 架构框架旨在为网络管理提供一种模块化且灵活的方法，实现集中控制、策略执行和自动化。SDN 架构如图 1 所示。以下章节将详细解释所有三个层。该框架的主要组件包括：
 
-### 1.3.1 数据平面
+#### 1.4.1 数据平面
 
 数据平面由物理和虚拟网络设备组成，它们根据控制平面的指令转发数据包。这些设备（如交换机和路由器）配备了由 SDN 控制器填充的流表。数据平面负责实际处理和转发网络流量。
 
-#### 数据平面的关键功能
+##### 数据平面的关键功能
 
 *   **包转发**：数据平面设备根据控制器安装的流表条目转发数据包。
+
 *   **流量监控**：数据平面设备可向控制器提供实时统计和遥测数据，用于监控和分析。
 
-### 1.3.2 控制平面
+#### 1.4.2 控制平面
 
 控制平面负责网络中的整体逻辑和决策。位于控制平面的 SDN 控制器监督全网操作，并为网络管理提供集中式接口。控制器维护网络的全局视图，从而能够就流量路径、资源分配和策略执行做出明智决策。
 
@@ -5478,23 +5350,27 @@ SDN 架构框架旨在为网络管理提供一种模块化且灵活的方法，�
 
 ![979-8-3693-9225-6.ch012.f01](img/979-8-3693-9225-6.ch012.f01.png)
 
-#### 控制平面的关键功能
+##### 控制平面的关键功能
 
 *   **网络拓扑管理**：控制器维护网络拓扑的实时地图，跟踪网络设备的状态和连接性。
+
 *   **路径计算**：控制器根据网络策略、流量状况和资源可用性计算数据包的最优路径。
+
 *   **策略执行**：控制器在整个网络中一致地执行安全、服务质量 (QoS) 和其他网络策略。
 
-### 1.3.3 应用平面
+#### 1.4.3 应用平面
 
 应用平面承载网络应用和服务，它们与 SDN 控制器交互以请求特定的网络行为。这些应用利用网络的可编程性来实现高级功能，如动态流量工程、负载均衡和安全执行。
 
-#### 应用平面的关键功能
+##### 应用平面的关键功能
 
 *   **网络优化**：应用可通过动态调整流量路径和资源分配来优化网络性能。
+
 *   **安全管理**：安全应用可实施细粒度的访问控制、入侵检测和威胁缓解。
+
 *   **服务供给**：应用可自动化网络服务的部署和管理，减少人工干预和运维复杂性。
 
-### 1.4 SDN 的优势
+### 1.5 SDN 的优势
 
 SDN 提供了众多优势，解决了传统网络架构的局限性，并增强了网络管理能力：
 
@@ -5503,89 +5379,100 @@ SDN 提供了众多优势，解决了传统网络架构的局限性，并增强�
 ![979-8-3693-9225-6.ch012.f02](img/979-8-3693-9225-6.ch012.f02.png)
 
 *   **集中控制与可见性**：SDN 为管理整个网络提供了一个集中式平台，提供全面的可见性和控制。这种集中化简化了网络管理、故障排除和策略执行。
+
 *   **提升网络敏捷性**：SDN 的可编程性允许快速适应不断变化的网络状况和业务需求。网络管理员可以快速部署新服务、调整策略，并实时重新配置网络。
+
 *   **成本效益**：通过利用商用硬件和开放标准，SDN 减少了对昂贵专有设备的依赖。此外，网络管理任务的自动化降低了运营成本和对人工干预的需求。
+
 *   **增强安全性**：SDN 实现了整个网络安全策略的一致性执行，并提供了对流量的细粒度控制。集中控制允许快速响应安全威胁，并更容易实施安全措施。
+
 *   **可扩展性与灵活性**：SDN 的模块化架构允许轻松扩展网络资源并集成新技术。这种灵活性支持现代应用和服务的动态需求。
 
-### 1.5 挑战与未来方向
+### 1.6 挑战与未来方向
 
 虽然 SDN 提供了显著优势，但其采用和实施也面临着需要解决的挑战：
 
 *   **安全顾虑**：SDN 中控制的集中化引入了潜在的单点故障和新的攻击向量。确保 SDN 控制器的安全性和弹性至关重要。
+
 *   **互操作性与标准化**：确保不同供应商 SDN 解决方案之间的互操作性并遵循开放标准，对于广泛采用至关重要。
+
 *   **技能差距与培训**：向 SDN 的转变要求网络专业人员掌握新技能和知识。全面的培训计划和教育资源对于弥补这一技能差距是必要的。
+
 *   **性能与可扩展性**：随着 SDN 部署规模的增长，确保 SDN 控制器和底层基础设施的性能和可扩展性变得日益重要。
 
 总之，软件定义网络代表了一种变革性的网络管理方法，提供了前所未有的敏捷性、效率和控制水平。通过解耦控制平面和数据平面，SDN 实现了集中式、可编程和自动化的网络管理，彻底改变了网络的设计、部署和管理方式。随着 SDN 的不断发展和成熟，它有望推动网络运营的创新和效率，为更加互联和动态的未来铺平道路。
 
-## 1.6 SDN 在网络管理中的优势
+## 1.7 SDN 在网络管理中的优势
 
 SDN 通过在控制、灵活性和效率方面提供显著改进，正在改变网络管理的格局。本节深入探讨 SDN 的多方面优势，说明它如何解决传统网络架构的局限性并提升整体网络性能。
 
-### 1.6.1 集中式网络控制
+### 1.7.1 集中式网络控制
 
 SDN 的标志性优势之一是其集中式控制模型，该模型将网络智能整合到单个实体中——SDN 控制器。这种集中化带来了几个优势：
 
 *   **简化网络管理**：在传统网络中，单独管理每个网络设备既繁琐又容易出错。使用 SDN，控制器为管理所有网络设备提供了一个统一平台，降低了与设备特定配置相关的复杂性。管理员可以在高层定义策略和配置，控制器随后将其转换为设备特定的指令。这种抽象简化了网络管理，并降低了配置错误的可能性。
+
 *   **提升网络可见性**：SDN 通过集中式控制器提供了对整个网络的全面可见性。管理员可以从单一界面监控流量、设备状态和网络性能。这种整体视图实现了更有效的故障排除和性能优化。增强的可见性还促进了主动网络管理，使管理员能够在问题影响用户之前检测并解决它们。
 
-### 1.6.2 增强网络敏捷性与灵活性
+### 1.7.2 增强网络敏捷性与灵活性
 
 SDN 的可编程性和动态特性显著增强了网络敏捷性和灵活性，使网络能够快速适应不断变化的需求和条件。
 
-
-
-
-
-#### 1.6.2 敏捷性与自动化
+#### 1.7.2.1 敏捷性与自动化
 
 SDN 显著增强了网络的敏捷性和自动化能力，使组织能够快速响应不断变化的业务需求。
 
 *   **服务快速部署**：SDN 允许快速部署新服务和应用程序。网络管理员可以通过编程方式定义网络行为并部署配置，而无需大量人工干预。这种快速部署能力在必须迅速上线新服务以满足业务需求的环境中尤为宝贵。
+
 *   **自动化网络供给**：自动化是 SDN 的基石。自动化网络供给的能力减少了配置和管理网络资源所需的时间和精力。自动化流程将人为错误的风险降至最低，确保网络配置的一致性和可靠性。这种自动化延伸至 VLAN 分配、IP 地址管理和策略执行等任务，所有这些都可以通过软件进行管理。
+
 *   **动态流量管理**：SDN 通过允许控制器根据当前网络状况实时调整流量，实现了动态流量管理。此功能对于优化网络性能和确保网络资源的高效利用至关重要。例如，SDN 可以动态重新路由流量以避免拥塞、跨多条路径平衡负载，并为关键应用程序提供优先级。
 
-##### 1.6.3 成本效益
+### 1.7.3 成本效益
 
 SDN 提供了多项与成本相关的优势，使其成为网络管理的一个极具吸引力的选择。
 
 *   **降低资本支出**：传统网络通常依赖昂贵的专有硬件。另一方面，SDN 利用商用现货硬件和开放标准，这些通常更具成本效益。这种转变降低了与购买和升级网络设备相关的资本支出。通过将控制平面与数据平面解耦，SDN 允许组织投资于更实惠、更通用的硬件，而不牺牲性能。
+
 *   **降低运营成本**：与运行网络相关的运营支出可通过 SDN 大幅降低。网络管理任务的集中化和自动化简化了运营，并减少了对大量人工干预的需求。网络管理员可以专注于更高层级的任务和战略规划，而不是日常维护和故障排除。此外，自动化网络管理减少了停机时间并提高了服务可靠性，进一步降低了运营成本。
+
 *   **高效利用网络资源**：SDN 优化了网络资源的利用率，从而节省成本。通过根据实时需求动态分配资源，SDN 确保网络容量得到高效使用。这种优化将过度配置的需求降至最低，并使组织能够更经济地扩展其网络。
 
-##### 1.6.4 改进的安全性与合规性
+### 1.7.4 改进的安全性与合规性
 
 安全性是网络管理中的关键考量，SDN 提供了多项增强网络安全并确保符合策略和法规的功能。
 
 *   **细粒度策略执行**：SDN 实现了跨网络的细粒度策略执行。管理员可以定义详细的安全策略，由 SDN 控制器在整个网络中一致地实施。这种集中式方法简化了访问控制、防火墙规则和其他安全措施的执行，确保所有网络段获得统一的保护。
+
 *   **动态威胁缓解**：SDN 的可编程性允许动态威胁缓解。SDN 控制器可以实时响应安全事件，调整流量流并实施对策以隔离和缓解威胁。例如，如果入侵检测系统 (IDS) 识别出安全漏洞，SDN 控制器可以自动将流量从受损区域重定向并应用额外的安全措施。
+
 *   **增强的监控与分析**：SDN 提供了增强的监控和分析能力，这对于维护网络安全至关重要。集中式控制器从网络设备收集详细的遥测数据，从而能够全面分析流量模式和潜在威胁。这些数据可用于检测异常、进行取证调查和优化安全策略。
 
-#### 1.7 可扩展性与前瞻性
+### 1.7.5 可扩展性与前瞻性
 
 SDN 的模块化架构支持可扩展性和前瞻性，确保网络能够增长和演进以满足不断变化的需求。
 
 *   **可扩展性**：SDN 通过允许管理员添加新设备和服务而无需大量重新配置，促进了可扩展的网络设计。集中式控制模型简化了额外网络元素的集成，确保网络能够无缝扩展。这种可扩展性在数据中心和服务提供商网络等大规模环境中尤为宝贵。
+
+
+
 *   **前瞻性**：SDN 的灵活性和可编程性确保网络能够适应新兴技术和不断演变的业务需求。随着新协议、应用程序和设备的开发，它们可以以最小的干扰集成到 SDN 框架中。这种前瞻性能力保护了网络基础设施投资并确保了长期生存能力。
 
-##### 1.7.1 增强的性能与服务质量 (QoS)
+### 1.7.1 增强的性能与服务质量 (QoS)
 
 SDN 动态管理流量流和分配资源的能力增强了网络性能，并确保关键应用程序获得高质量的服务 (QoS)。
 
 *   **流量优化**：SDN 支持高级流量优化技术，如负载均衡、流量整形和拥塞管理。SDN 控制器可以动态调整流量路径，以跨网络平衡负载、防止瓶颈并确保带宽的高效使用。这些优化提升了整体网络性能并改善了用户体验。
+
 *   **服务质量 (QoS)**：SDN 通过允许管理员在细粒度层面定义和执行 QoS 策略，实现了精确的 QoS 管理。关键应用程序可获得优先级，确保其接收必要的带宽和低延迟。此功能对于需要高性能的应用程序（如视频会议、在线游戏和实时数据分析）至关重要。
 
-#### 1.8 结论
+### 1.8 结论
 
 SDN 在网络管理中的优势深远且多方面，解决了与传统网络架构相关的许多局限性和挑战。通过集中控制、增强敏捷性、降低成本、提高安全性和支持可扩展性，SDN 为管理现代网络提供了一个稳健的框架。随着组织继续采用和实施 SDN，他们可以期望实现更高的效率、灵活性和性能，最终实现更有效和响应更迅速的网络运营。
 
 ## 2 相关工作
 
 对“释放软件定义网络 (SDN) 在革新网络管理中的力量”这一主题的重要论文进行的综合回顾，揭示了一个专注于 SDN 变革潜力的多元化研究领域。文献共同强调了 SDN 对控制平面与数据平面的解耦、集中式控制机制和增强的可编程性，如何实现动态、灵活且高效的网络管理。例如，Kreutz 等人 (2014) 和 Nunes 等人 (2014) 的研究强调了 SDN 的架构优势，展示了其简化网络管理、提高可扩展性以及通过可编程接口支持快速创新的能力。这些基础性工作为理解 SDN 的核心原则及其对现代网络基础设施的影响奠定了基础。
-
-
-
 
 进一步的研究深入探讨了 SDN 在各种网络环境中的具体应用和优势。Jain 等人 (2013) 和 Benson 等人 (2010) 的论文阐述了 SDN 在优化数据中心网络方面的有效性，重点强调了在资源分配、流量工程和容错方面的改进。同样，Hong 等人 (2013) 和 Curtis 等人 (2011) 的著作探讨了 SDN 在广域网 (WAN) 中的作用，展示了其增强带宽管理、降低延迟和提升整体网络性能的能力。这些研究为 SDN 在实际大规模部署中的优势提供了实证证据，强化了其对网络运营商和企业的价值主张。SDN 研究中的挑战与未来方向也是所评述文献中的显著主题。Phemius 等人 (2014) 和 Hassas Yeganeh 与 Ganjali (2012) 的论文探讨了与可扩展性、安全性和互操作性相关的问题，提出了分层控制结构和高级安全框架等解决方案。此外，Lara 和 Kolasani (2013) 以及 Handigol 等人 (2012) 的研究讨论了 SDN 与网络功能虚拟化 (NFV) 和物联网 (IoT) 等新兴技术的融合，凸显了进一步创新和增强网络能力的潜力。总的来说，这些论文凸显了 SDN 的持续演进、其对网络管理的变革性影响，以及为充分发挥其潜力而持续应对挑战的必要性。
 
@@ -5598,13 +5485,17 @@ SDN 代表了网络架构的一次范式转变，承诺提供前所未有的灵�
 `OpenFlow` 是 SDN 中最广泛使用的协议之一。它定义了控制器与网络设备通信的标准化方法，促进了 SDN 模型的实施。`OpenFlow` 的工作原理如下所述：
 
 *   **流表**：网络设备维护流表，定义数据包应如何处理。这些表可由 SDN 控制器动态编程。
+
 *   **匹配-动作范式**：`OpenFlow` 遵循匹配-动作范式，即传入数据包与流表条目进行匹配，并根据这些匹配执行预定义动作（如转发、丢弃、修改）。
+
 *   **安全通道**：SDN 控制器与网络设备之间的通信通过安全通道进行，确保所传递指令的完整性和安全性。
 
 `OpenFlow` 的优势：
 
 *   **互操作性**：`OpenFlow` 的标准化确保了不同厂商设备之间的互操作性。
+
 *   **动态控制**：支持基于实时网络调整和优化。
+
 *   **简洁性**：通过提供统一的设备管理接口，简化了网络架构。
 
 ### 3.2 控制平面与数据平面的分离
@@ -5620,7 +5511,9 @@ SDN 控制器是 SDN 架构的核心组件，充当网络的中心管理和控�
 SDN 控制器的主要作用是集中控制和决策过程（Kulkarni 等人, 2021），从而实现：
 
 *   **全局网络视图**：通过维护网络的全局视图，控制器能做出更明智的决策，优化网络性能和资源利用率。
+
 *   **策略执行**：控制器在整个网络中一致地实施和执行网络策略，确保合规性和安全性。
+
 *   **动态调整**：它们支持基于当前状况（如流量模式、应用需求和安全威胁）进行实时网络调整。
 
 ### 4.2 SDN 控制器的关键功能
@@ -5630,33 +5523,32 @@ SDN 控制器执行一系列对高效网络管理至关重要的功能：
 #### 4.2.1 网络拓扑发现与管理
 
 *   **拓扑发现**：控制器发现并维护一张最新的网络拓扑图，包含所有设备及其互连关系。
+
 *   **拓扑管理**：它们管理网络拓扑的变更，如设备增减、链路故障，确保网络持续运行。
 
 #### 4.2.2 流量工程与路径计算
 
 *   **流量工程**：控制器通过根据当前网络状况和性能指标动态调整路径，优化网络流量流向。
+
 *   **路径计算**：利用算法和策略，控制器计算数据传输的最优路径，提高网络效率并降低延迟。
 
 #### 4.2.3 网络监控与分析
 
 *   **监控**：控制器持续监控网络性能，收集带宽使用率、延迟、丢包率和设备状态等指标数据。
+
 *   **分析**：它们分析收集的数据以识别趋势、检测异常并预测未来网络状况，为主动管理提供洞察。
 
 #### 4.2.4 安全与策略执行
 
 *   **安全策略**：控制器实施安全策略以保护网络免受威胁，如访问控制列表 (ACL)、防火墙规则和入侵检测系统 (IDS)。
+
 *   **策略执行**：它们确保安全策略在整个网络中一致应用，缓解潜在漏洞。
 
 ### 4.3 著名 SDN 控制器
 
 由于其健壮性、可扩展性和功能集，有几款 SDN 控制器脱颖而出。以下是其中最著名的几款：
 
-#### 4.3.1 OpenDayLight
-
-
-
-
-### OpenDaylight
+#### 4.3.1 OpenDaylight
 
 OpenDaylight 是一个在 Linux 基金会主导下开发的开源 SDN 控制器平台。它旨在加速 SDN 的采用，并为网络功能虚拟化 (NFV) 创建一个稳健的基础。高度模块化，支持各种南向和北向协议，拥有广泛的社区支持，以及大量的插件和应用程序。设置和配置可能比较复杂，大规模部署需要大量资源。图 3 详细展示了 ODL 架构。
 
@@ -5666,7 +5558,7 @@ ONOS 旨在通过提供高性能、可扩展性和高可用性来满足服务提
 
 #### 4.3.3 Ryu
 
-Ryu 是一个基于组件的 SDN 框架，为构建 SDN 应用程序提供软件组件。它使用 Python 安装，设计初衷是简单易用。它轻量级，易于部署和扩展，对 OpenFlow 和其他协议提供强有力的支持。缺乏其他控制器中所具备的一些高级功能和可扩展性。图 5 详细展示了 Ryu 架构。
+Ryu 是一个基于组件的 SDN 框架，为构建 SDN 应用程序提供软件组件。它使用 Python 安装，设计初衷是简单易用。它轻量级，易于部署和扩展，对 `OpenFlow` 和其他协议提供强有力的支持。缺乏其他控制器中所具备的一些高级功能和可扩展性。图 5 详细展示了 Ryu 架构。
 
 ### 图 3. OpenDaylight 控制器架构
 
@@ -5682,7 +5574,7 @@ Ryu 是一个基于组件的 SDN 框架，为构建 SDN 应用程序提供软件
 
 #### 4.3.4 Floodlight
 
-Floodlight 是一个用 Java 编写的开源 SDN 控制器。它以易用性和集成能力著称。用户友好，文档完善，并支持多种网络应用。对非 OpenFlow 协议的支持有限，且较少关注大规模部署。图 6 详细展示了 Floodlight 架构。
+Floodlight 是一个用 Java 编写的开源 SDN 控制器。它以易用性和集成能力著称。用户友好，文档完善，并支持多种网络应用。对非 `OpenFlow` 协议的支持有限，且较少关注大规模部署。图 6 详细展示了 Floodlight 架构。
 
 ## 5 现代网络中 SDN 的用例
 
@@ -5701,6 +5593,7 @@ SDN 在网络管理、优化和安全的方式上引入了革命性的变革。�
 SDN 可根据实时需求动态分配网络资源，确保高效利用。
 
 - **优势**：降低延迟，避免拥塞，并最大化资源利用率。
+
 - **示例**：Google 的 B4 SDN 项目在数据中心之间动态重新分配网络资源，提高了带宽利用率。
 
 #### 5.1.2 流量工程
@@ -5708,6 +5601,7 @@ SDN 可根据实时需求动态分配网络资源，确保高效利用。
 SDN 控制器可动态调整流量路径，以优化网络性能并减少瓶颈。
 
 - **优势**：提升网络吞吐量，降低延迟，并改善整体性能。
+
 - **示例**：Microsoft Azure 的 SWAN 项目利用 SDN 进行流量工程，实现了显著的性能提升。
 
 #### 5.1.3 网络虚拟化
@@ -5715,6 +5609,7 @@ SDN 控制器可动态调整流量路径，以优化网络性能并减少瓶颈�
 SDN 支持创建隔离且可独立管理的虚拟网络。
 
 - **优势**：增强安全性，支持多租户，并简化网络管理。
+
 - **示例**：VMware NSX 利用 SDN 在数据中心内创建虚拟网络，为不同租户提供隔离和安全性。
 
 ### 5.2 广域网 (WAN) 优化
@@ -5726,6 +5621,7 @@ SDN 通过提供集中式控制和优化能力，也在改变广域网 (WAN)。
 SDN 可根据当前网络状况，跨 WAN 动态选择数据传输的最优路径。
 
 - **优势**：提高网络效率，降低延迟，并确保可靠的数据传输。
+
 - **示例**：Cisco 的 IWAN 利用 SDN 为 WAN 流量动态选择最佳路径，优化性能和可靠性。
 
 #### 5.2.2 带宽管理
@@ -5733,6 +5629,7 @@ SDN 可根据当前网络状况，跨 WAN 动态选择数据传输的最优路�
 SDN 控制器可根据应用程序需求和网络策略动态分配带宽。
 
 - **优势**：确保关键应用获得必要的带宽，同时优化整体网络利用率。
+
 - **示例**：Google 的 Espresso 利用 SDN 动态管理带宽，提高性能和成本效益。
 
 #### 5.2.3 多路径路由
@@ -5740,6 +5637,7 @@ SDN 控制器可根据应用程序需求和网络策略动态分配带宽。
 SDN 支持多路径路由，允许使用多条路径进行数据传输，以提高冗余性和负载均衡。
 
 - **优势**：增强网络弹性，并在多条路径间平衡流量负载。
+
 - **示例**：Facebook 的 Express Backbone 利用 SDN 进行多路径路由，确保高可用性和性能。
 
 ### 5.3 网络安全
@@ -5751,6 +5649,7 @@ SDN 通过提供集中式控制和动态执行安全策略的能力，增强了�
 SDN 可通过动态重新路由或过滤恶意流量，实时检测和缓解 DDoS 攻击。
 
 - **优势**：保护网络资源，确保可用性，并最大程度减少攻击影响。
+
 - **示例**：AT&T 利用 SDN 通过动态将流量重路由至清洗中心来缓解 DDoS 攻击
 
 #### 5.3.2 访问控制
@@ -5758,6 +5657,7 @@ SDN 可通过动态重新路由或过滤恶意流量，实时检测和缓解 DDo
 SDN 通过根据用户角色、设备类型和网络段动态应用安全策略，实现细粒度的访问控制。
 
 - **优势**：通过确保只有授权用户和设备才能访问关键资源来增强安全性。
+
 - **示例**：Google 的 BeyondCorp 安全模型利用 SDN 原则实施细粒度访问控制，增强远程和移动用户的安全性。
 
 #### 5.3.3 网络分段
@@ -5765,6 +5665,7 @@ SDN 通过根据用户角色、设备类型和网络段动态应用安全策略�
 SDN 通过为不同的应用程序、用户或服务创建隔离的网络段，促进网络分段。
 
 - **优势**：通过将潜在威胁限制在隔离段内并防止横向移动来提高安全性。
+
 - **示例**：医疗网络利用 SDN 对患者数据进行分段，确保合规性并增强安全性。
 
 ### 5.4 网络自动化与编排
@@ -5776,6 +5677,7 @@ SDN 在自动化和编排网络运营中发挥着关键作用，减少人工干�
 SDN 根据预定义策略和实时需求自动供给网络资源和服务。
 
 - **优势**：缩短部署时间，最小化错误，并提高运营效率。
+
 - **示例**：电信运营商利用 SDN 实现虚拟网络功能 (VNF) 的自动化供给，加速服务交付。
 
 #### 5.4.2 基于策略的管理
@@ -5784,76 +5686,45 @@ SDN 实现基于策略的网络管理，策略可集中定义并动态在整个�
 
 - **优势**：确保一致的策略执行，简化管理，并改善合规性。
 
+- **示例**：企业利用 SDN 动态实施安全和服务质量策略，确保合规性和最佳性能。
 
-
-
-* 示例：企业利用 SDN 动态实施安全和服务质量策略，确保合规性和最佳性能。
-
-##### 5.4.3 故障管理与恢复
+#### 5.4.3 故障管理与恢复
 
 SDN 控制器能够实时检测网络故障并启动自动化恢复程序，例如重新路由流量或重新分配资源。
 
-* 优势：增强网络可靠性，减少停机时间，并确保持续运行。
-* 示例：电信运营商利用 SDN 进行自动化故障管理，缩短平均修复时间 (MTTR) 并提高服务可用性。
+- **优势**：增强网络可靠性，减少停机时间，并确保持续运行。
 
-#### 5.5 边缘计算与物联网
+- **示例**：电信运营商利用 SDN 进行自动化故障管理，缩短平均修复时间 (MTTR) 并提高服务可用性。
+
+### 5.5 边缘计算与物联网
 
 SDN 在管理边缘计算和物联网环境的复杂性与动态特性方面发挥着关键作用。
 
-##### 5.5.1 边缘网络管理
+#### 5.5.1 边缘网络管理
 
 SDN 提供对边缘网络的集中管理和控制，优化网络边缘的数据处理和传输。
 
-* 优势：降低延迟，提升性能，并增强边缘应用的可扩展性。
-* 示例：智慧城市利用 SDN 管理边缘网络，确保物联网应用的高效数据处理。
+- **优势**：降低延迟，提升性能，并增强边缘应用的可扩展性。
 
-##### 5.5.2 物联网安全
+- **示例**：智慧城市利用 SDN 管理边缘网络，确保物联网应用的高效数据处理。
+
+#### 5.5.2 物联网安全
 
 SDN 通过动态应用安全策略和监控物联网设备行为来增强物联网安全。
 
-* 优势：保护物联网设备和数据，确保安全可靠的运行。
-* 示例：工业物联网部署利用 SDN 实施安全策略并监控设备流量，缓解潜在威胁。
+- **优势**：保护物联网设备和数据，确保安全可靠的运行。
+
+- **示例**：工业物联网部署利用 SDN 实施安全策略并监控设备流量，缓解潜在威胁。
 
 ## 6 结论
 
-“释放软件定义网络 (SDN) 在革新网络管理中的潜力”凸显了 SDN 在现代网络环境中的变革潜力。SDN 将控制平面与数据平面解耦，集中网络控制，并引入可编程性，从根本上改变了网络的管理和优化方式。关键技术如控制平面与数据平面的分离、OpenFlow 等协议、集中式控制器、网络虚拟化和 API 共同增强了网络的灵活性、效率和安全性。本章探讨了各种用例，包括数据中心网络管理、广域网优化、网络安全、网络自动化，以及边缘计算和物联网环境的管理。这些用例展示了 SDN 如何实现动态资源分配、流量工程、自动化配置、基于策略的管理和增强的安全措施。尽管面临可扩展性、可靠性、安全性和互操作性相关的挑战，SDN 在提供全局视图、实现实时调整和促进创新方面的优势显而易见。总体而言，SDN 代表了网络管理的重大进步，为构建更具适应性、高效和安全的网络基础设施铺平了道路，使其能更好地满足现代数字环境不断演变的需求。
+“释放软件定义网络 (SDN) 在革新网络管理中的潜力”凸显了 SDN 在现代网络环境中的变革潜力。SDN 将控制平面与数据平面解耦，集中网络控制，并引入可编程性，从根本上改变了网络的管理和优化方式。关键技术如控制平面与数据平面的分离、`OpenFlow` 等协议、集中式控制器、网络虚拟化和 API 共同增强了网络的灵活性、效率和安全性。本章探讨了各种用例，包括数据中心网络管理、广域网优化、网络安全、网络自动化，以及边缘计算和物联网环境的管理。这些用例展示了 SDN 如何实现动态资源分配、流量工程、自动化配置、基于策略的管理和增强的安全措施。尽管面临可扩展性、可靠性、安全性和互操作性相关的挑战，SDN 在提供全局视图、实现实时调整和促进创新方面的优势显而易见。总体而言，SDN 代表了网络管理的重大进步，为构建更具适应性、高效和安全的网络基础设施铺平了道路，使其能更好地满足现代数字环境不断演变的需求。
 
 ## 参考文献
 
 Abdallah, S., Elhajj, I. H., Chehab, A., & Kayssi, A. (2018, February). A network management framework for SDN. In 2018 9th IFIP International Conference on New Technologies, Mobility and Security (NTMS) (pp. 1-4). IEEE. DOI: [10.1109/NTMS.2018.8328672](http://dx.doi.org/10.1109/NTMS.2018.8328672)
 
 Ahmad, S., & Mir, A. H. (2021). Scalability, consistency, reliability and security in SDN controllers: A survey of diverse SDN controllers. Journal of Network and Systems Management, 29(1), 1–59. DOI: [10.1007/s10922-020-09575-4](http://dx.doi.org/10.1007/s10922-020-09575-4)
-
-Aliyu, A. L., Aneiba, A., Patwary, M., & Bull, P. (2020). A trust management framework for software defined network (SDN) controller and network applications. Computer Networks, 181, 107421. DOI: [10.1016/j.comnet.2020.107421](http://dx.doi.org/10.1016/j.comnet.2020.107421)
-
-Benson, T., Akella, A., & Maltz, D. A. (2010, November). Network traffic characteristics of data centers in the wild. In Proceedings of the 10th ACM SIGCOMM conference on Internet measurement (pp. 267-280). DOI: [10.1145/1879141.1879175](http://dx.doi.org/10.1145/1879141.1879175)
-
-Curtis, A. R., Mogul, J. C., Tourrilhes, J., Yalagandula, P., & Sharma, P., Banerjee, S. (2011, August). DevoFlow: Scaling flow management for high-performance networks. In Proceedings of the ACM SIGCOMM 2011 Conference (pp. 254-265). DOI: [10.1145/2018436.2018466](http://dx.doi.org/10.1145/2018436.2018466)
-
-Handigol, N., Heller, B., Jeyakumar, V., Lantz, B., & McKeown, N. (2012, December). Reproducible network experiments using container-based emulation. In Proceedings of the 8th international conference on Emerging networking experiments and technologies (pp. 253-264). DOI: [10.1145/2413176.2413206](http://dx.doi.org/10.1145/2413176.2413206)
-
-Hassas Yeganeh, S., & Ganjali, Y. (2012, August). Kandoo: a framework for efficient and scalable offloading of control applications. In Proceedings of the first workshop on Hot topics in software defined networks (pp. 19-24). DOI: [10.1145/2342441.2342446](http://dx.doi.org/10.1145/2342441.2342446)
-
-Hong, C. Y., Kandula, S., Mahajan, R., Zhang, M., Gill, V., & Nanduri, M., Wattenhofer, R. (2013, August). Achieving high utilization with software-driven WAN. In Proceedings of the ACM SIGCOMM 2013 Conference on SIGCOMM (pp. 15-26).
-
-Jain, S., Kumar, A., Mandal, S., Ong, J., Poutievski, L., Singh, A., Venkata, S., Wanderer, J., Zhou, J., Zhu, M., Zolla, J., Hölzle, U., Stuart, S., & Vahdat, A. (2013). B4: Experience with a globally-deployed software defined WAN. Computer Communication Review, 43(4), 3–14. DOI: [10.1145/2534169.2486019](http://dx.doi.org/10.1145/2534169.2486019)
-
-Kim, D., Gil, J. M., Wang, G., & Kim, S. H. (2013). Integrated SDN and non-SDN network management approaches for future internet environment. In Multimedia 20 and Ubiquitous Engineering: MUE 2013 (pp. 529-536). Springer Netherlands. DOI: [10.1007/978-94-007-6738-6_64](http://dx.doi.org/10.1007/978-94-007-6738-6_64)
-
-Kim, H., & Feamster, N. (2013). Improving network management with software defined networking. IEEE Communications Magazine, 51(2), 114–119. DOI: [10.1109/MCOM.2013.6461195](http://dx.doi.org/10.1109/MCOM.2013.6461195)
-
-Kreutz, D., Ramos, F. M., Verissimo, P. E., Rothenberg, C. E., Azodolmolky, S., & Uhlig, S. (2014). Software-defined networking: A comprehensive survey. Proceedings of the IEEE, 103(1), 14–76. DOI: [10.1109/JPROC.2014.2371999](http://dx.doi.org/10.1109/JPROC.2014.2371999)
-
-Kulkarni, M., Goswami, B., & Paulose, J. (2021, February). Experimenting with scalability of software defined networks using pyretic and frenetic. In International Conference on Computing Science, Communication and Security (pp. 168-192). Cham: Springer International Publishing. DOI: [10.1007/978-3-030-76776-1_12](http://dx.doi.org/10.1007/978-3-030-76776-1_12)
-
-Lara, A., Kolasani, A., & Ramamurthy, B. (2013). Network innovation using openflow: A survey. IEEE Communications Surveys and Tutorials, 16(1), 493–512. DOI: [10.1109/SURV.2013.081313.00105](http://dx.doi.org/10.1109/SURV.2013.081313.00105)
-
-Mamushiane, L., Lysko, A., Dlamini, S. (2018, April). A comparative evaluation of the performance of popular SDN controllers. In 2018 Wireless Days (WD) (pp. 54-59). IEEE.
-
-McKeown, N., Anderson, T., Balakrishnan, H., Parulkar, G., Peterson, L., Rexford, J., Shenker, S., & Turner, J. (2008). OpenFlow: Enabling innovation in campus networks. Computer Communication Review, 38(2), 69–74. DOI: [10.1145/1355734.1355746](http://dx.doi.org/10.1145/1355734.1355746)
-
-Nunes, B. A. A., Mendonca, M., Nguyen, X. N., Obraczka, K., & Turletti, T. (2014). A survey of software-defined networking: Past, present, and future of programmable networks. IEEE Communications Surveys and Tutorials, 16(3), 1617–1634. DOI: [10.1109/SURV.2014.012214.00180](http://dx.doi.org/10.1109/SURV.2014.012214.00180)
-
 
 
 
@@ -5867,9 +5738,39 @@ L.J. University, India
 
 ## 参考文献
 
+Aliyu, A. L., Aneiba, A., Patwary, M., & Bull, P. (2020). A trust management framework for software defined network (SDN) controller and network applications. *Computer Networks*, 181, 107421. DOI: [10.1016/j.comnet.2020.107421](http://dx.doi.org/10.1016/j.comnet.2020.107421)
+
+Benson, T., Akella, A., & Maltz, D. A. (2010, November). Network traffic characteristics of data centers in the wild. In *Proceedings of the 10th ACM SIGCOMM conference on Internet measurement* (pp. 267-280). DOI: [10.1145/1879141.1879175](http://dx.doi.org/10.1145/1879141.1879175)
+
+Curtis, A. R., Mogul, J. C., Tourrilhes, J., Yalagandula, P., Sharma, P., & Banerjee, S. (2011, August). DevoFlow: Scaling flow management for high-performance networks. In *Proceedings of the ACM SIGCOMM 2011 Conference* (pp. 254-265). DOI: [10.1145/2018436.2018466](http://dx.doi.org/10.1145/2018436.2018466)
+
+Handigol, N., Heller, B., Jeyakumar, V., Lantz, B., & McKeown, N. (2012, December). Reproducible network experiments using container-based emulation. In *Proceedings of the 8th international conference on Emerging networking experiments and technologies* (pp. 253-264). DOI: [10.1145/2413176.2413206](http://dx.doi.org/10.1145/2413176.2413206)
+
+Hassas Yeganeh, S., & Ganjali, Y. (2012, August). Kandoo: a framework for efficient and scalable offloading of control applications. In *Proceedings of the first workshop on Hot topics in software defined networks* (pp. 19-24). DOI: [10.1145/2342441.2342446](http://dx.doi.org/10.1145/2342441.2342446)
+
+Hong, C. Y., Kandula, S., Mahajan, R., Zhang, M., Gill, V., Nanduri, M., & Wattenhofer, R. (2013, August). Achieving high utilization with software-driven WAN. In *Proceedings of the ACM SIGCOMM 2013 Conference on SIGCOMM* (pp. 15-26).
+
+Jain, S., Kumar, A., Mandal, S., Ong, J., Poutievski, L., Singh, A., Venkata, S., Wanderer, J., Zhou, J., Zhu, M., Zolla, J., Hölzle, U., Stuart, S., & Vahdat, A. (2013). B4: Experience with a globally-deployed software defined WAN. *Computer Communication Review*, 43(4), 3–14. DOI: [10.1145/2534169.2486019](http://dx.doi.org/10.1145/2534169.2486019)
+
+Kim, D., Gil, J. M., Wang, G., & Kim, S. H. (2013). Integrated SDN and non-SDN network management approaches for future internet environment. In *Multimedia 20 and Ubiquitous Engineering: MUE 2013* (pp. 529-536). Springer Netherlands. DOI: [10.1007/978-94-007-6738-6_64](http://dx.doi.org/10.1007/978-94-007-6738-6_64)
+
+Kim, H., & Feamster, N. (2013). Improving network management with software defined networking. *IEEE Communications Magazine*, 51(2), 114–119. DOI: [10.1109/MCOM.2013.6461195](http://dx.doi.org/10.1109/MCOM.2013.6461195)
+
+Kreutz, D., Ramos, F. M., Verissimo, P. E., Rothenberg, C. E., Azodolmolky, S., & Uhlig, S. (2014). Software-defined networking: A comprehensive survey. *Proceedings of the IEEE*, 103(1), 14–76. DOI: [10.1109/JPROC.2014.2371999](http://dx.doi.org/10.1109/JPROC.2014.2371999)
+
+Kulkarni, M., Goswami, B., & Paulose, J. (2021, February). Experimenting with scalability of software defined networks using pyretic and frenetic. In *International Conference on Computing Science, Communication and Security* (pp. 168-192). Cham: Springer International Publishing. DOI: [10.1007/978-3-030-76776-1_12](http://dx.doi.org/10.1007/978-3-030-76776-1_12)
+
+Lara, A., Kolasani, A., & Ramamurthy, B. (2013). Network innovation using openflow: A survey. *IEEE Communications Surveys and Tutorials*, 16(1), 493–512. DOI: [10.1109/SURV.2013.081313.00105](http://dx.doi.org/10.1109/SURV.2013.081313.00105)
+
+Mamushiane, L., Lysko, A., & Dlamini, S. (2018, April). A comparative evaluation of the performance of popular SDN controllers. In *2018 Wireless Days (WD)* (pp. 54-59). IEEE.
+
+McKeown, N., Anderson, T., Balakrishnan, H., Parulkar, G., Peterson, L., Rexford, J., Shenker, S., & Turner, J. (2008). OpenFlow: Enabling innovation in campus networks. *Computer Communication Review*, 38(2), 69–74. DOI: [10.1145/1355734.1355746](http://dx.doi.org/10.1145/1355734.1355746)
+
+Nunes, B. A. A., Mendonca, M., Nguyen, X. N., Obraczka, K., & Turletti, T. (2014). A survey of software-defined networking: Past, present, and future of programmable networks. *IEEE Communications Surveys and Tutorials*, 16(3), 1617–1634. DOI: [10.1109/SURV.2014.012214.00180](http://dx.doi.org/10.1109/SURV.2014.012214.00180)
+
 Phemius, K., Bouet, M., & Leguay, J. (2014, May). DISCO: Distributed SDN controllers in a multi-domain environment. In *2014 IEEE Network Operations and Management Symposium (NOMS)* (pp. 1-2). IEEE.
 
-Rasool, Z. I., Abd Ali, R. S., & Abdulzahra, M. M. (2021, February). Network management in software-defined network: A survey. IOP Publishing. *IOP Conference Series. Materials Science and Engineering*, 1094(1), 012055. DOI: [10.1088/1757-899X/1094/1/012055](http://dx.doi.org/10.1088/1757-899X/1094/1/012055)
+Rasool, Z. I., Abd Ali, R. S., & Abdulzahra, M. M. (2021, February). Network management in software-defined network: A survey. *IOP Conference Series: Materials Science and Engineering*, 1094(1), 012055. DOI: [10.1088/1757-899X/1094/1/012055](http://dx.doi.org/10.1088/1757-899X/1094/1/012055)
 
 Salman, O., Elhajj, I. H., Kayssi, A., & Chehab, A. (2016, April). SDN controllers: A comparative study. In *2016 18th mediterranean electrotechnical conference (MELECON)* (pp. 1-6). IEEE. DOI: [10.1109/MELCON.2016.7495430](http://dx.doi.org/10.1109/MELCON.2016.7495430)
 
@@ -5881,7 +5782,7 @@ Tsagkaris, K., Logothetis, M., Foteinos, V., Poulios, G., Michaloliakos, M., & D
 
 Wickboldt, J. A., De Jesus, W. P., Isolani, P. H., Both, C. B., Rochol, J., & Granville, L. Z. (2015). Software-defined networking: Management requirements and challenges. *IEEE Communications Magazine*, 53(1), 278–285. DOI: [10.1109/MCOM.2015.7010546](http://dx.doi.org/10.1109/MCOM.2015.7010546)
 
-Zhu, L., Karim, M. M., Sharif, K., Li, F., Du, X., & Guizani, M. SDN controllers: Benchmarking performance evaluation. *arXiv* 2019. arXiv preprint arXiv:1902.04491. 22
+Zhu, L., Karim, M. M., Sharif, K., Li, F., Du, X., & Guizani, M. SDN controllers: Benchmarking performance evaluation. *arXiv* preprint arXiv:1902.04491, 2019.
 
 ## 摘要
 
@@ -5895,13 +5796,13 @@ Zhu, L., Karim, M. M., Sharif, K., Li, F., Du, X., & Guizani, M. SDN controllers
 
 在此场景下，作为敏感数据的重要守护者，数据库经常成为寻求非法访问、造成破坏或泄露数据的恶意人员的攻击目标 (Chen, 2011)。鉴于广泛使用的数据库中存在的风险，需要采取全面的安全策略，从而引入大数据分析以加强针对潜在威胁的防御。人工智能 (AI) 在网络安全中的日益广泛应用，增加了对安全去中心化系统的需求，以防范网络威胁。区块链技术因其去中心化和不可篡改的数据存储能力，已成为增强 AI 系统安全性和隐私性的有效解决方案 (Saleh, 2024)。另一篇文章分析了来自 14,993 个暗网网站的数据，并展示了三个案例研究，证明了这种调查方法在识别非法网站运营者方面的有效性。这些方法有助于更广泛的网络安全策略，包括数据保护、区块链分析、物联网安全和网络防御 (Jin et al., 2024)。
 
-
-
-
-
 ## 导航大数据隐私与安全：来自 Neptune Security 的洞见
 
-一项研究旨在探讨大数据背景下隐私担忧的复杂动态，并强调 Neptune Security 在解决这些问题中发挥的重要作用，特别是在印度快速变化的技术环境下。为了提供对过去五年中大数据如何被用于改善安全和隐私保护的透彻理解，该研究考察了来自各类学术出版物的统计趋势和洞见，包括专家研究。将传统数据库与大数据的分析能力相结合，正成为企业应对针对其数据库的日益增长的网络攻击风险的重要策略 (Kaur & Randhawa, 2020)。一篇论文的作者提出了一种基于 CNN 的数据区域定位方法和一种视觉信息分割算法，以改进数据提取。该方法在商业网站上经过测试，提高了识别数据区域的准确性和提取的效率。这种方法在网络安全方面具有潜在应用，特别是用于自动化数据提取，以及保护区块链、物联网和网络系统中的敏感信息 (Liu et al., 2024)。
+
+
+# 大数据背景下的隐私担忧与 Neptune Security 的角色
+
+一项研究旨在探讨大数据背景下隐私担忧的复杂动态，并强调 `Neptune Security` 在解决这些问题中发挥的重要作用，特别是在印度快速变化的技术环境下。为了提供对过去五年中大数据如何被用于改善安全和隐私保护的透彻理解，该研究考察了来自各类学术出版物的统计趋势和洞见，包括专家研究。将传统数据库与大数据的分析能力相结合，正成为企业应对针对其数据库的日益增长的网络攻击风险的重要策略 (Kaur & Randhawa, 2020)。一篇论文的作者提出了一种基于 CNN 的数据区域定位方法和一种视觉信息分割算法，以改进数据提取。该方法在商业网站上经过测试，提高了识别数据区域的准确性和提取的效率。这种方法在网络安全方面具有潜在应用，特别是用于自动化数据提取，以及保护区块链、物联网和网络系统中的敏感信息 (Liu et al., 2024)。
 
 将传统数据库与大数据的分析能力相结合，正成为企业应对针对其数据库的日益增长的网络攻击风险的重要策略。
 
@@ -5915,13 +5816,13 @@ Zhu, L., Karim, M. M., Sharif, K., Li, F., Du, X., & Guizani, M. SDN controllers
 
 ## 未来之路
 
-大数据的前景取决于安全与隐私。Neptune Security 的承诺确保数据驱动的创新保持道德、安全并尊重隐私。共同努力，我们在未知水域中航行，迈向更安全、数据驱动的未来。
+大数据的前景取决于安全与隐私。`Neptune Security` 的承诺确保数据驱动的创新保持道德、安全并尊重隐私。共同努力，我们在未知水域中航行，迈向更安全、数据驱动的未来。
 
 ## II. 文献综述
 
 ### A. 动机
 
-技术领域大数据的爆发式增长改变了信息的处理方式，并带来了严重的安全问题。需要强有力的安全措施来确保用户数据的安全。本文献综述考察了大数据安全挑战，突出了创新在解决隐私问题中的必要性。受技术快速发展速度的启发，它旨在分享最新研究的知识，同时强调 Neptune Security 等积极进取的组织的作用。通过整合知名学者的研究，该综述阐明了安全话语的演变，并强调了灵活方法的价值。自然语言处理 (NLP) 被用于分析暗网上的大量文本，有助于从论坛帖子、聊天记录和其他通信中提取有价值的洞见。情感分析、主题建模和实体识别等技术有助于检测与网络威胁相关的对话 (Gopireddy, 2020)。
+技术领域大数据的爆发式增长改变了信息的处理方式，并带来了严重的安全问题。需要强有力的安全措施来确保用户数据的安全。本文献综述考察了大数据安全挑战，突出了创新在解决隐私问题中的必要性。受技术快速发展速度的启发，它旨在分享最新研究的知识，同时强调 `Neptune Security` 等积极进取的组织的作用。通过整合知名学者的研究，该综述阐明了安全话语的演变，并强调了灵活方法的价值。自然语言处理 (NLP) 被用于分析暗网上的大量文本，有助于从论坛帖子、聊天记录和其他通信中提取有价值的洞见。情感分析、主题建模和实体识别等技术有助于检测与网络威胁相关的对话 (Gopireddy, 2020)。
 
 ### B. 大数据中的安全担忧
 
@@ -5931,46 +5832,62 @@ Zhu, L., Karim, M. M., Sharif, K., Li, F., Du, X., & Guizani, M. SDN controllers
 
 大数据安全问题至关重要，特别是在管理海量数据时。保护用户数据不仅需要管理海量信息的体量和复杂性，还需要建立强有力的安全协议。当前的研究强调，在技术迅速进步的背景下，保护用户隐私面临的挑战日益严峻，凸显了创新解决方案的必要性。
 
-### 大数据安全挑战：驾驭数据洪流
+#### 大数据安全挑战：驾驭数据洪流
 
 在数字化转型时代，大数据已成为一把双刃剑。组织利用海量数据集的力量获取洞见、推动创新并增强决策能力。然而，这场数据驱动的革命伴随着固有风险，特别是在安全和隐私方面。
 
-#### 挑战的规模
+##### 挑战的规模
 
 1.  **巨大的体量与复杂性：**
+
     *   大数据存储库从不同来源（交易日志、社交媒体、传感器等）积累 PB 级信息 (Gehl, 2016)。
+
     *   管理这种数据洪流需要强大的基础设施、高效的存储和可扩展的处理框架。
 
 2.  **速度与实时处理：**
+
     *   数据实时流式传输，要求快速分析和即时行动。
+
     *   安全机制必须跟上数据摄取的速度。
 
-#### 安全与隐私的关键作用
+##### 安全与隐私的关键作用
 
 1.  **机密性与信任：**
+
     *   组织收集敏感数据——个人标识符、财务记录、健康信息。
+
     *   违规会破坏信任、损害声誉并招致法律后果。
 
 2.  **威胁形势：**
+
     *   网络威胁不断演变——恶意软件、勒索软件、内部攻击和复杂的对手。
+
     *   大数据系统因其价值和互联性而成为主要目标。
 
 3.  **隐私保护：**
+
     *   在数据效用与隐私保护之间取得平衡是一项微妙的工作。
+
     *   差分隐私、匿名化和安全多方计算等技术可降低风险。
 
-#### 复杂局面的创新解决方案
+##### 复杂局面的创新解决方案
 
 1.  **区块链集成：**
+
     *   探索区块链在透明、防篡改数据管理方面的潜力。
+
     *   不可变账本增强数据完整性和可审计性。
 
 2.  **伦理考量：**
+
     *   解决算法和模型中的偏见。
+
     *   确保数据驱动决策的公平性和问责制。
 
 3.  **自动化威胁检测：**
+
     *   机器学习和异常检测识别可疑模式。
+
     *   预警系统防止违规。
 
 ## 图 4.
@@ -5982,24 +5899,20 @@ Zhu, L., Karim, M. M., Sharif, K., Li, F., Du, X., & Guizani, M. SDN controllers
 当前大数据安全中的关键问题包括：
 
 1.  **数据访问控制：** 确保只有授权实体才能根据不断变化的用户访问需求访问敏感信息。
+
 2.  **数据管理：** 有效处理海量数据，考虑到不断增长的数据集和对复杂管理技术的需求。
+
 3.  **数据投毒：** 防范恶意篡改或破坏数据完整性的企图，尤其是在网络威胁日益增加的情况下。
 
+4.  **数据隐私：** 在利用用户数据获取洞察与保护个人隐私之间取得微妙平衡，应对当代日益严峻的隐私担忧。
 
+5.  **员工窃密：** 调查内部人员未经授权访问或恶意活动相关的风险，承认内部威胁形势的不断演变。
 
+6.  **虚假数据：** 解决引入误导性数据所引发的担忧，考虑到破坏分析准确性的攻击手段日益复杂。
 
+7.  **数据存储：** 强调安全存储实践以防止未经授权的访问或泄露，符合当代数据保密措施。
 
-## 4. 数据隐私
-在利用用户数据获取洞察与保护个人隐私之间取得微妙平衡，应对当代日益严峻的隐私担忧。
-
-## 5. 员工窃密
-调查内部人员未经授权访问或恶意活动相关的风险，承认内部威胁形势的不断演变。
-
-## 6. 虚假数据
-解决引入误导性数据所引发的担忧，考虑到破坏分析准确性的攻击手段日益复杂。
-
-## 7. 数据存储
-强调安全存储实践以防止未经授权的访问或泄露，符合当代数据保密措施。总而言之，当前关于大数据用户安全担忧的文献凸显了多方面的挑战以及对创新安全措施的需求。这些措施必须适应海量数据集的动态处理，解决大数据安全不断演变领域中的担忧，并与当代研究分析相关联。
+总而言之，当前关于大数据用户安全担忧的文献凸显了多方面的挑战以及对创新安全措施的需求。这些措施必须适应海量数据集的动态处理，解决大数据安全不断演变领域中的担忧，并与当代研究分析相关联。
 
 ### C. 缓解大数据安全担忧
 
@@ -6019,17 +5932,17 @@ Zhu, L., Karim, M. M., Sharif, K., Li, F., Du, X., & Guizani, M. SDN controllers
 
 ![979-8-3693-9225-6.ch013.f05](img/979-8-3693-9225-6.ch013.f05.png)
 
-#### i. 改进的访问控制机制
+##### i. 改进的访问控制机制
 
 为限制对敏感信息的访问，必须实施强有力的访问控制。增强访问控制和身份认证机制对于缓解大数据安全担忧至关重要。这涉及实施稳健的身份验证和授权流程，以确保只有授权人员才能访问敏感数据。双因素认证、生物识别访问控制和基于角色的访问控制是一些用于增强安全性的先进方法。此外，为用户认证实施安全协议和加密在维护数据完整性和机密性方面发挥着至关重要的作用。
 
 组织还可以通过实施访问监控和日志记录来跟踪用户活动并检测任何未经授权的访问尝试，从而帮助降低安全风险并确保遵守数据保护法规。
 
-#### ii. 先进的数据管理策略
+##### ii. 先进的数据管理策略
 
 鉴于数据量呈指数级增长，有效处理数据至关重要。企业应投资于数据生命周期管理程序、分析工具和可扩展存储解决方案。对数据管理程序进行常规评估有助于找出改进机会，并确保符合企业目标和法律要求。
 
-#### iii. 主动的数据完整性保护
+##### iii. 主动的数据完整性保护
 
 采取主动措施避免数据投毒。可以利用用于异常检测的机器学习算法、完整性验证方法和定期审计来识别和减轻威胁。必须持续监控和评估数据完整性流程，以检测新威胁并相应地修改安全协议。
 
@@ -6037,171 +5950,234 @@ Zhu, L., Karim, M. M., Sharif, K., Li, F., Du, X., & Guizani, M. SDN controllers
 
 我们提出的大数据隐私保护和安全模型旨在为广泛的网络威胁提供强有力的防护，同时确保敏感数据的隐私。它基于一种多层方法，在数据生命周期的不同阶段整合各种安全措施。弥合研究空白有助于改善大数据时代的隐私实践。
 
-基于证据的洞察可以强化 Neptune Security 在保护隐私方面的作用。
+基于证据的洞察可以强化 `Neptune Security` 在保护隐私方面的作用。
 
 ### 3.1. 研究空白
 
 #### i. 大数据隐私挑战
 
 *   ▪ 尽管大数据技术的使用日益频繁，但关于大数据如何影响隐私的知识仍然匮乏。
+
 *   ▪ 大数据隐私研究需要扩展范围，不仅涵盖技术层面，还要包括伦理和人为因素。
 
 #### ii. 应对复杂性与隐私
 
 *   ▪ 大数据的特征在于其巨大的规模和复杂性。但这种海量数据本质上威胁着个人隐私。
+
 *   ▪ 缺乏关于在隐私保护与大数据分析优势之间取得平衡的实用策略的研究。
 
 #### iii. 自适应访问与加密算法
 
-*   ▪ Neptune Security 采用了现代加密技术和自适应访问控制，但仍有必要评估其有效性。研究可以探讨这些方法对隐私、可用性和数据识别可用性的影响。
+*   ▪ `Neptune Security` 采用了现代加密技术和自适应访问控制，但仍有必要评估其有效性。研究可以探讨这些方法对隐私、可用性和数据识别可用性的影响。
 
 ### 3.2. 研究目标
 
 #### i. 理解大数据隐私影响
 
 *   ▪ 探索大数据如何影响隐私，同时考虑社会伦理和技术因素。
+
 *   ▪ 分析数据收集、存储和分析过程中所做决策对个人隐私的影响。
 
 #### ii. 评估安全的自适应访问控制
 
-*   ▪ 评估 Neptune Security 自适应访问控制在维护数据隐私方面的有效性。
+*   ▪ 评估 `Neptune Security` 自适应访问控制在维护数据隐私方面的有效性。
+
 *   ▪ 调查动态访问策略是否在可用性和隐私之间取得了适当的平衡。
 
 #### iii. 提出隐私增强策略
 
-*   ▪ 为 Neptune Security 等组织制定增强数据隐私的实用指南。
+*   ▪ 为 `Neptune Security` 等组织制定增强数据隐私的实用指南。
+
 *   ▪ 探索新方法，如差分隐私、同态加密和数据掩码。
 
 #### iv. 与利益相关者合作
 
 *   ▪ 与用户、监管机构和法律专业人士互动，确保隐私政策符合不断变化的法律。
+
 *   ▪ 促进数据处理和隐私选择的公开性与用户教育。
 
 ## IV. NEPTUNE SECURITY: 全生命周期强化数据
 
-Neptune Security 是我们建议模型实施的基石，提供了一套全面的工具和服务，经过精心设计，旨在强化数据生命周期的每个阶段。通过与 Neptune Security 无缝集成，组织可以确信其数据在整个流转过程中都受到强大的安全和隐私保护。
+`Neptune Security` 是我们建议模型实施的基石，提供了一套全面的工具和服务，经过精心设计，旨在强化数据生命周期的每个阶段。通过与 `Neptune Security` 无缝集成，组织可以确信其数据在整个流转过程中都受到强大的安全和隐私保护。
 
 #### 图 6.
 
 ![979-8-3693-9225-6.ch013.f06](img/979-8-3693-9225-6.ch013.f06.png)
 
 *   **1. 规划与界定：**
+
     *   ▪ 确定数据所有者：识别负责数据管理的个人。
+
     *   ▪ 数据分类：确定数据的安全等级。
+
     *   ▪ 最小化数据：仅收集必要数据以降低安全风险。
 
 *   **2. 创建/收集：**
 
 *   **4. 使用：**
+
     *   ▪ 选择具备强大安全控制的平台。
+
     *   ▪ 在数据分析和处理过程中保护敏感和个人信息。
 
 *   **5. 归档/删除：**
 
 ## V. 评估
 
-
-
-
-
 我们提出的模型的有效性将接受全面评估，根据成功网络攻击的频率、实现的隐私保护程度以及用户对已实施隐私保障措施的满意度等关键指标来衡量其性能。通过系统评估这些指标，我们旨在验证我们的方法在大数据分析领域保护敏感数据的有效性。
 
 该模型从大量研究文章中汲取灵感并得到验证，利用来自不同来源的见解和方法论，将最先进的安全措施和技术无缝集成到大数据生命周期的各个方面。这种方法的核心在于认识到 `Neptune Security` 在协调和管理数据安全与隐私之间复杂博弈中的关键作用。
 
-## 评估效率：大数据隐私与安全的指标
+### 评估效率：大数据隐私与安全的指标
 
 随着大数据时代的帷幕拉开，组织面临着双重使命：利用数据的力量，同时保障其完整性和隐私。我们提出的模型作为抵御网络威胁的哨兵，矗立在创新与责任的交汇点。但我们如何衡量其有效性？让我们深入探讨指引我们道路的指标。
 
-### 关键指标
+#### 关键指标
 
-#### 1. 成功网络攻击的频率
+##### 1. 成功网络攻击的频率
 
 *   **目标**：衡量模型抵御恶意入侵的韧性。
+
 *   **测量**：统计我们的模型成功阻止的网络攻击数量。
+
 *   **意义**：频率越低，意味着安全性越强。
 
-#### 2. 隐私保护程度
+##### 2. 隐私保护程度
 
 *   **目标**：评估我们的模型保护敏感数据的效果。
+
 *   **测量**：
+
     *   评估数据匿名化技术。
+
     *   量化信息泄露的减少量。
+
 *   **意义**：更高的保护得分表明隐私保障措施有效。
 
-#### 3. 用户满意度
+##### 3. 用户满意度
 
 *   **目标**：了解用户的感知和接受度。
+
 *   **测量**：
+
     *   进行调查或访谈以收集反馈。
+
     *   评估用户对数据共享和模型预测的舒适度。
+
 *   **意义**：满意的用户更有可能采用并遵守隐私准则。
 
-### 评估中的挑战
+#### 评估中的挑战
 
 1.  **权衡**：
+
     *   平衡安全性和实用性是微妙的。
+
     *   指标必须兼顾两者——不能以牺牲可用性为代价换取隐私。
+
 2.  **情境相关性**：
+
     *   指标因领域而异（医疗、金融、社交媒体）。
+
     *   定制化的评估标准至关重要。
+
 3.  **动态环境**：
+
     *   大数据格局不断演变。
+
     *   指标必须适应不断变化的威胁和技术。
 
-### 定量与定性评估
+#### 定量与定性评估
 
 1.  **定量指标**：
+
     *   精确率、召回率、F1 分数：评估模型准确性。
+
     *   误报率：将误报降至最低。
+
     *   隐私损失：量化信息泄露。
+
 2.  **定性洞察**：
+
     *   用户反馈：了解现实世界的影响。
+
     *   伦理考量：评估公平性和偏见。
 
 ## VI. 未来工作
 
 1.  **整体隐私框架**：
+
     *   **目标**：开发一个集成技术、法律和伦理层面的综合隐私框架。
+
     *   **组件**：
+
         *   **隐私设计**：将隐私考量嵌入数据处理的每个阶段。
+
         *   **隐私影响评估**：定期进行评估以识别和缓解隐私风险。
+
         *   **以用户为中心的方法**：优先考虑用户对其数据的同意、透明度和控制权。
 
 2.  **先进加密技术**：
+
     *   **目标**：通过利用尖端加密技术提高数据安全性。
+
     *   **方法**：
+
         *   **同态加密**：在无需解密的情况下对加密数据进行计算。
+
         *   **抗量子加密**：使用抗量子技术为后量子时代做准备。
+
         *   **基于区块链的加密**：探索去中心化加密解决方案。
 
 3.  **用于隐私保护分析的联邦学习**：
+
     *   **目标**：在不共享原始数据的情况下实现协作模型训练。
+
     *   **方法论**：
+
         *   **分布式学习**：在用户设备上本地训练模型。
+
         *   **聚合模型更新**：在不暴露个人数据的情况下合并模型更新。
 
 4.  **与监管机构合作**：
+
     *   **目标**：遵守不断演变的隐私法规。
+
     *   **行动**：
+
         *   **定期审计**：评估对数据保护法的合规性。
+
         *   **法律咨询**：与法律专家合作以解释和实施法规。
 
 以下是关于大数据隐私保护及其安全领域未来工作的更多补充要点：
 
 1.  **区块链集成**：
+
     *   探索区块链技术如何增强数据隐私和安全性。
+
     *   研究利用区块链进行去中心化身份管理和安全数据共享。
+
 2.  **差分隐私增强**：
+
     *   研究并实施用于大数据分析的差分隐私技术。
+
     *   确保聚合结果保持准确的同时保护个人隐私。
+
 3.  **安全数据溯源**：
+
     *   开发机制以追踪和验证数据的来源和历史。
+
     *   实施安全的数据血缘和审计。
+
 4.  **隐私保护分析**：
+
     *   研究安全多方计算和联邦学习等技术。
+
     *   实现无需暴露原始数据的协作分析。
+
 5.  **自动化隐私影响评估**：
+
     *   开发用于自动化隐私影响评估的工具或框架。
+
     *   评估新数据处理活动对隐私和合规性的影响。
 
 ## VII. 结论
@@ -6212,36 +6188,43 @@ Neptune Security 是我们建议模型实施的基石，提供了一套全面的
 
 ## VII. 参考文献
 
-Chen, H. “Dark Web: Exploring and Mining the Dark Side of the Web,” 2011 European Intelligence and Security Informatics Conference, Athens, Greece, 2011, pp. 1-2, . keywords: {Educational institutions;Informatics;Libraries;Awards activities;Terrorism;Conferences;Presses} DOI: [10.1109/EISIC.2011.78](http://dx.doi.org/10.1109/EISIC.2011.78)
-
-Faizan, M., & Khan, R. A. (2019). Exploring and analyzing the dark Web: A new alchemy. First Monday, 24(5). Advance online publication. DOI: [10.5210/fm.v24i5.9473](http://dx.doi.org/10.5210/fm.v24i5.9473)
-
-Gehl, R. W. (2016). Power/freedom on the dark web: A digital ethnography of the Dark Web Social Network. New Media & Society, 18(7), 1219–1235. DOI: [10.1177/1461444814554900](http://dx.doi.org/10.1177/1461444814554900)
-
-Gopireddy, R. R. (2020). Dark Web Monitoring: Extracting and Analyzing Threat Intelligence. [1]
 
 
+# 参考文献
 
+- Chen, H. “Dark Web: Exploring and Mining the Dark Side of the Web,” 2011 European Intelligence and Security Informatics Conference, Athens, Greece, 2011, pp. 1-2. Keywords: {Educational institutions; Informatics; Libraries; Awards activities; Terrorism; Conferences; Presses}. DOI: [10.1109/EISIC.2011.78](http://dx.doi.org/10.1109/EISIC.2011.78)
 
+- Faizan, M., & Khan, R. A. (2019). Exploring and analyzing the dark Web: A new alchemy. *First Monday*, 24(5). Advance online publication. DOI: [10.5210/fm.v24i5.9473](http://dx.doi.org/10.5210/fm.v24i5.9473)
+
+- Gehl, R. W. (2016). Power/freedom on the dark web: A digital ethnography of the Dark Web Social Network. *New Media & Society*, 18(7), 1219–1235. DOI: [10.1177/1461444814554900](http://dx.doi.org/10.1177/1461444814554900)
+
+- Gopireddy, R. R. (2020). Dark Web Monitoring: Extracting and Analyzing Threat Intelligence. [1]
+
+- Jin, P., Kim, N., Lee, S., & Jeong, D. (2024). Forensic investigation of the dark web on the Tor network: Pathway toward the surface web. *International Journal of Information Security*, 23(1), 331–346. DOI: [10.1007/s10207-023-00745-4](http://dx.doi.org/10.1007/s10207-023-00745-4)
+
+- Kaur, S., & Randhawa, S. (2020). Dark Web: A Web of Crimes. *Wireless Personal Communications*, 112(4), 2131–2158. DOI: [10.1007/s11277-020-07143-2](http://dx.doi.org/10.1007/s11277-020-07143-2)
+
+- Liu, J., Lin, L., Cai, Z., Wang, J., & Kim, H. (2024). Deep web data extraction based on visual information processing. *Journal of Ambient Intelligence and Humanized Computing*, 15(2), 1481–1491. DOI: [10.1007/s12652-017-0587-0](http://dx.doi.org/10.1007/s12652-017-0587-0)
+
+- Saleh, A. M. S. (2024). Blockchain for secure and decentralized artificial intelligence in cybersecurity: A comprehensive review. *Blockchain: Research and Applications*, 100193.
+
+- Shakarian, P., & Shakarian, J. (2016, March). Socio-cultural modeling for cyber threat actors. In *Workshops at the Thirtieth AAAI Conference on Artificial Intelligence*.
+
+- Weimann, G. (2015). Going Dark: Terrorism on the Dark Web. *Studies in Conflict and Terrorism*, 39(3), 195–206. DOI: [10.1080/1057610X.2015.1119546](http://dx.doi.org/10.1080/1057610X.2015.1119546)
 
 # 第 14 章：物联网中的安全挑战
 
-**Purva Joshi**  
-![Orcid Image](https://orcid.org/0000-0002-2748-8742)  
+**Purva Joshi**
+
+![Orcid Image](https://orcid.org/0000-0002-2748-8742)
+
 Institute for Communications and Navigations, Deutsches Zentrum für Luft- und Raumfahrt e.V. (DLR), Germany
 
-**Seema Joshi**  
-![Orcid Image](https://orcid.org/0000-0002-3298-4230)  
+**Seema Joshi**
+
+![Orcid Image](https://orcid.org/0000-0002-3298-4230)
+
 Gujarat Technological University, India
-
-## 参考文献
-
-- Jin, P., Kim, N., Lee, S., & Jeong, D. (2024). Forensic investigation of the dark web on the Tor network: Pathway toward the surface web. *International Journal of Information Security*, 23(1), 331–346. DOI: [10.1007/s10207-023-00745-4](http://dx.doi.org/10.1007/s10207-023-00745-4)
-- Kaur, S., & Randhawa, S. (2020). Dark Web: A Web of Crimes. *Wireless Personal Communications*, 112(4), 2131–2158. DOI: [10.1007/s11277-020-07143-2](http://dx.doi.org/10.1007/s11277-020-07143-2)
-- Liu, J., Lin, L., Cai, Z., Wang, J., & Kim, H. (2024). Deep web data extraction based on visual information processing. *Journal of Ambient Intelligence and Humanized Computing*, 15(2), 1481–1491. DOI: [10.1007/s12652-017-0587-0](http://dx.doi.org/10.1007/s12652-017-0587-0)
-- Saleh, A. M. S. (2024). Blockchain for secure and decentralized artificial intelligence in cybersecurity: A comprehensive review. *Blockchain: Research and Applications*, 100193.
-- Shakarian, P., & Shakarian, J. (2016, March). Socio-cultural modeling for cyber threat actors. In *Workshops at the Thirtieth AAAI Conference on Artificial Intelligence*.
-- Weimann, G. (2015). Going Dark: Terrorism on the Dark Web. *Studies in Conflict and Terrorism*, 39(3), 195–206. DOI: [10.1080/1057610X.2015.1119546](http://dx.doi.org/10.1080/1057610X.2015.1119546)
 
 ## 摘要
 
@@ -6259,11 +6242,7 @@ Gujarat Technological University, India
 
 ## 2 文献综述
 
-
-
-
-
-## 相关文献综述
+### 相关文献综述
 
 Furstenau L. B. 等 (2023) 探讨了 IoT 技术的概念框架、主要挑战和未来进展。Sott M. K. 等 (2020) 详细考察了咖啡行业培育可持续性的当前进展、挑战和未来模式。Bel & Sabeen (2022) 调查了 IoT 安全，包括攻击、困难和响应，以及 IoT 架构、尖端技术、安全风险和安全解决方案。Jurcut A 等 (2020) 和 Taherdoost H (2023) 探讨了 IoT 安全的重要主题，强调了保障连接设备安全的困难和解决方案。Meneghello F. 等 (2019) 对物联网 (IoT) 行业的物理安全问题进行了彻底检查，并详细讨论了缓解这些漏洞的方法。Gopalan S. S. 等 (2021) 探讨了物联网 (IoT) 和人工智能 (AI) 在当前医疗保健中的融合，特别关注网络安全在保护私人医疗数据方面的重要性。Ahmad W. 等 (2021) 和 Abba Ari A. A. 等 (2024) 检查了基于 IoT 的云计算安全问题、弱点和解决方案。Ogonji M. M. 等 (2020) 分析了 IoT 安全问题、漏洞和解决方案，以改善用户隐私和安全，并管理这个不断增长的行业中的困难和机遇。
 
@@ -6274,7 +6253,7 @@ Shirvani & Masdari (2023) 对物联网应用中基于信任的安全问题进行
 #### 表 1. 现有综述文章概述，包括其贡献和局限性
 
 | Ref no & year | Paper contribution | Limitation |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | Neshenko N. 等 (2019) | 物联网 (IoT) 漏洞和安全问题的原创分类体系及彻底检查。 | 缺乏 IoT 特定的威胁特征和实证数据。 |
 | Hassan W. H. (2019) | IoT 安全研究趋势、问题及重要工具，包括 IoT 建模器和模拟器。 | 专注于 2016–2018 年的 IoT 安全研究趋势，可能忽略近期进展。 |
 | Hassija V. 等 (2019) | 涵盖 IoT 安全挑战，包括应用分类、威胁源识别、基础设施增强建议和对策。 | 由于 IoT 安全性广泛且动态，未涵盖所有要素，需要未来对新兴问题进行广泛调查。 |
@@ -6283,11 +6262,7 @@ Shirvani & Masdari (2023) 对物联网应用中基于信任的安全问题进行
 | Omolara A. E. 等 (2022) | IoT 安全问题、解决方案和未来前景，解决主要问题并建议改进安全性的新方法。 | 侧重于当前研究发现而非原始证据，潜在的文献来源偏见，以及需要额外的科学检验来测试提出的解决方案和见解。 |
 | Hameed & Alomary (2019) | 考虑设备限制的轻量级算法和认证方法，以处理 IoT 安全挑战。 | IoT 设备包括 |
 
-
-
-
-
-## 文献综述表
+### 文献综述表
 
 | 参考文献 | 研究重点 | 局限性 |
 | :--- | :--- | :--- |
@@ -6300,7 +6275,7 @@ Shirvani & Masdari (2023) 对物联网应用中基于信任的安全问题进行
 | Babun L. et al (2021) | 基于七项技术标准的完整评估框架，用于分析和比较 IoT 平台，辅助用户做出明智决策。 | 侧重流行 IoT 平台，可能遗漏具有创新能力的新平台。 |
 | Yugha & Chithra (2020) | 调查 IoT 安全关注点、协议、攻击及实现工具，供未来研究开发参考。 | 除认证和访问控制外，缺乏对 IoT 安全问题的深入讨论。 |
 | Tournier J. et al (2021) | 描述 IoT 网络的基本安全挑战（与协议栈无关），提供通用的比较和分析方法。 | 无法分析所有 IoT 协议及其安全方法，可能限制研究范围。 |
-| Sartayeva Chan (2023) | 提供室内定位安全和隐私的系统完整概述，对定位方法分类，识别安全挑战，描述提出的解决方案 | 因主要关注基于射频的方法，可能无法解决替代定位系统中的安全和隐私问题。 |
+| Sartayeva Chan (2023) | 提供室内定位安全和隐私的系统完整概述，对定位方法分类，识别安全挑战，描述提出的解决方案。 | 因主要关注基于射频的方法，可能无法解决替代定位系统中的安全和隐私问题。 |
 | Sun P. et al (2024) | 为 IoT 设备提出全面的隐私保护框架，扩展隐私安全技术、法律隐私研究、当前安全关注点及未来发展前景。 | 与其他综述相比，该文献的 IoT 安全覆盖面和技术广度有限。 |
 | Prakash R. et al (2024) | 强调 IoT 安全关注点、攻击和解决方案，以保障设备和网络的安全性、隐私性和可靠性。 | 缺乏对特定攻击场景的深入分析，侧重宏观安全关注点，无案例研究或真实案例。 |
 | Adil M. et al (2024) | 综述医疗物联网应用中安全需求和问题的文献，突显研究进展并识别未来可能性。 | 难以在一篇综述中涵盖所有相关材料，准确呈现相关工作，并满足所有医疗物联网应用安全标准。 |
@@ -6309,23 +6284,25 @@ Shirvani & Masdari (2023) 对物联网应用中基于信任的安全问题进行
 
 IoT 架构由硬件、云端服务器和网络架构组成，实现设备间通信。基本 IoT 架构包含四个不同层级：
 
-## Figure 1. IoT 框架层级
+### Figure 1. IoT 框架层级
 
 ![979-8-3693-9225-6.ch014.f01](img/979-8-3693-9225-6.ch014.f01.png)
 
-**感知层（传感器、装置及其他设备）**：该框架包含多种传感器，用于检测和测量环境变化，包括温度、湿度、运动、光照、声音及其他因素。执行器是根据传感器收集的信息执行特定动作的机器，例如当室温达到特定阈值时开启风扇。传感器从环境收集数据，执行器基于数据执行动作，从而在 IoT 生态系统中实现即时响应。选择感知层 IoT 设备的关键考量因素包括安全能力、能源效率、设备兼容性和成本效益。感知层将采集的数据转换为数字格式，并通过安全连接发送至上层。感知层设备包含温度传感器、湿度传感器、运动探测器、智能锁、智能灯及其他能够检测和/或响应周围环境的 IoT 设备。感知层可能面临的攻击包括：网络干扰、节点篡改、RFID 传感器攻击、窃听和制造干扰攻击。
-
-**中间件层（API、Web 服务、云存储）**：中间件层作为管理和创建可访问 API（应用程序编程接口）的中心化平台，使各种应用和服务能够相互交互。它承担多项职责，包括 API 认证、速率限制、缓存和监控。中间件层作为应用与云存储服务间的中介，简化了各云服务商 API 和协议的复杂细节。中间件层通过服务发现、编排和数据格式转换工具，实现 Web 服务的集成。中间件解决方案通常具备监控和日志记录功能，使开发者能够监控集成系统的性能、使用情况和潜在缺陷。中间件层面临的相关攻击与感知层和网络层类似，因其位于这两层之间。已有多项研究表明云存储被黑或云数据认证被篡改的事件屡见不鲜。
 
 
+# 感知层（传感器、装置及其他设备）
 
+该框架包含多种传感器，用于检测和测量环境变化，包括温度、湿度、运动、光照、声音及其他因素。执行器是根据传感器收集的信息执行特定动作的机器，例如当室温达到特定阈值时开启风扇。传感器从环境收集数据，执行器基于数据执行动作，从而在 IoT 生态系统中实现即时响应。选择感知层 IoT 设备的关键考量因素包括安全能力、能源效率、设备兼容性和成本效益。感知层将采集的数据转换为数字格式，并通过安全连接发送至上层。感知层设备包含温度传感器、湿度传感器、运动探测器、智能锁、智能灯及其他能够检测和/或响应周围环境的 IoT 设备。感知层可能面临的攻击包括：网络干扰、节点篡改、RFID 传感器攻击、窃听和制造干扰攻击。
 
+# 中间件层（API、Web 服务、云存储）
 
-## 网络（连接设备的能力）
+中间件层作为管理和创建可访问 `API`（应用程序编程接口）的中心化平台，使各种应用和服务能够相互交互。它承担多项职责，包括 `API` 认证、速率限制、缓存和监控。中间件层作为应用与云存储服务间的中介，简化了各云服务商 `API` 和协议的复杂细节。中间件层通过服务发现、编排和数据格式转换工具，实现 `Web` 服务的集成。中间件解决方案通常具备监控和日志记录功能，使开发者能够监控集成系统的性能、使用情况和潜在缺陷。中间件层面临的相关攻击与感知层和网络层类似，因其位于这两层之间。已有多项研究表明云存储被黑或云数据认证被篡改的事件屡见不鲜。
 
-网络连接是指计算机、服务器、智能手机和物联网设备等设备在网络中相互建立并维持连接的能力。设备通过有线（如以太网线缆）或无线（如 Wi-Fi 或蜂窝网络）方式互联，从而实现它们之间的数据传输。标准化协议（如 `TCP/IP`、`HTTP` 和 `FTP`）确立了传输数据的标准和结构，为各种设备和网络提供了兼容性。连接性允许跨设备交换数据和服务，支持文件共享、打印机共享、电子邮件通信、网页浏览和远程访问等活动。这促进了连接设备之间的协作和资源共享。网络连接需要采用防火墙、加密和访问控制等安全措施，以防范未经授权的访问、数据泄露和网络威胁。重要的网络层攻击包括女巫攻击、中间人攻击、分布式拒绝服务攻击、重放攻击等。
+# 网络（连接设备的能力）
 
-## 应用（用户交互的层）
+网络连接是指计算机、服务器、智能手机和物联网设备等设备在网络中相互建立并维持连接的能力。设备通过有线（如以太网线缆）或无线（如 `Wi-Fi` 或蜂窝网络）方式互联，从而实现它们之间的数据传输。标准化协议（如 `TCP/IP`、`HTTP` 和 `FTP`）确立了传输数据的标准和结构，为各种设备和网络提供了兼容性。连接性允许跨设备交换数据和服务，支持文件共享、打印机共享、电子邮件通信、网页浏览和远程访问等活动。这促进了连接设备之间的协作和资源共享。网络连接需要采用防火墙、加密和访问控制等安全措施，以防范未经授权的访问、数据泄露和网络威胁。重要的网络层攻击包括女巫攻击、中间人攻击、分布式拒绝服务攻击、重放攻击等。
+
+# 应用（用户交互的层）
 
 应用层是物联网架构中的最顶层，它充当用户或应用程序与底层物联网系统之间的中介。物联网设备收集的数据以用户友好的方式呈现，包括仪表板、报表、可视化图表和移动应用程序。用户可通过用户界面或应用程序与物联网设备、系统和操作进行交互和管理。物联网系统提供 `API`（应用程序编程接口），使外部应用程序和服务能够连接并与其交互，从而访问其数据和功能。系统利用从物联网设备获取的数据进行数据分析、处理和决策，通常采用机器学习、人工智能和大数据分析等技术。系统管理用户认证、访问控制和安全协议，以保证对物联网系统及其数据的安全合法访问。应用层的一些安全漏洞或潜在攻击示例包括 Mirai 僵尸网络攻击、IPC Telnet 恶意软件、跨站脚本攻击、Slowloris 攻击和 SQL 注入攻击。
 
@@ -6337,84 +6314,73 @@ IoT 架构由硬件、云端服务器和网络架构组成，实现设备间通�
 
 图 1 展示了这四层中存在的一系列技术进步、设备和应用。本节将探讨这四层中物联网应用潜在的安全漏洞。图 2 说明了可能发生在这四层上的潜在攻击。这些层通过收集和分析数据来支持物联网设备。该设计包括将数据转化为有用信息，超越了 OSI 模型。
 
-## 3.1 重要的物联网应用及其安全
+# 3.1 重要的物联网应用及其安全
 
-### 3.1.1 智能建筑
+## 3.1.1 智能建筑
 
 智能家居或建筑是一个技术先进的生活或工作区域，它结合了互联设备、传感器和自动化系统，以最大化舒适度、安全性、能源效率和便利性。这些环境集成了一系列技术，包括家庭自动化、物联网设备和智能控制系统，以便于对不同操作和流程进行简单的监控、控制和优化（Shaharuddin S. 等, 2023）。传感器收集使用情况、温度、湿度、能耗和其他因素的数据，从而实现智能决策和自动化。例如，系统能够根据在场人数、一天中的时间以及用户偏好，自动调节照明、温度和通风。这带来了更高的能源效率和更低的开支。智能家居和建筑提供先进的安全功能，包括远程访问控制、监控摄像头和集成报警系统。此外，它们通过语音控制、移动应用程序以及与其他智能设备和服务的轻松连接，提供了便捷的体验。
 
-### 3.1.2 智能医疗
+## 3.1.2 智能医疗
 
-智能医疗设施或医院是一个高效且技术先进的医疗机构，它利用联网设备、传感器、人工智能和自动化系统来改善患者护理、运营效率和整体医疗服务（Karthik S. A. 等, 2023）。医疗行业无缝融合了物联网、可穿戴设备、远程医疗、机器人技术和大数据分析等先进技术。在技术先进的医疗机构中，患者监护持续且即时地进行，利用可穿戴传感器监测关键身体机能。人工智能算法被用于通过分析收集的数据，快速识别任何异常事件或健康恶化问题。AI 驱动的解决方案通过协助图像分析、诊断和治疗规划来增强医学影像。机器人设备协助复杂的手术过程，提高精度并减少人为错误。智能楼宇管理系统优化能源效率、通风和物资监控。远程医疗系统提供远程患者咨询和监护，从而增加医疗服务的可及性。此外，电子健康记录和数据分析平台支持制定特定治疗方案、预测建模和基于证据的决策（Adil M. 等 2024）。
+智能医疗设施或医院是一个高效且技术先进的医疗机构，它利用联网设备、传感器、人工智能和自动化系统来改善患者护理、运营效率和整体医疗服务（Karthik S. A. 等, 2023）。医疗行业无缝融合了物联网、可穿戴设备、远程医疗、机器人技术和大数据分析等先进技术。在技术先进的医疗机构中，患者监护持续且即时地进行，利用可穿戴传感器监测关键身体机能。人工智能算法被用于通过分析收集的数据，快速识别任何异常事件或健康恶化问题。`AI` 驱动的解决方案通过协助图像分析、诊断和治疗规划来增强医学影像。机器人设备协助复杂的手术过程，提高精度并减少人为错误。智能楼宇管理系统优化能源效率、通风和物资监控。远程医疗系统提供远程患者咨询和监护，从而增加医疗服务的可及性。此外，电子健康记录和数据分析平台支持制定特定治疗方案、预测建模和基于证据的决策（Adil M. 等 2024）。
 
-### 3.1.3 智能交通与道路
+## 3.1.3 智能交通与道路
 
-智能交通和道路包括将物联网、人工智能、传感器和通信网络等尖端技术引入交通网络和系统。这使得对交通相关的多种因素能够进行持续监控、数据收集、分析和智能控制。智能交通系统使用一个由联网传感器、摄像头和通信设备组成的网络，这些设备集成在道路、汽车、交通信号灯和其他基础设施组件中。这些设备采集关于交通流量、路况、车辆移动和环境变量的数据。随后，这些数据通过 AI 和机器学习算法进行分析，以优化交通信号灯时序、提供即时路线建议、识别事故或问题、支持道路和桥梁的自适应维修，并实现智能停车系统。此外，车对车（V2V）和车对基础设施（V2I）通信技术的利用，使得避免事故和自动驾驶能力等高级安全功能得以实现。
+智能交通和道路包括将物联网、人工智能、传感器和通信网络等尖端技术引入交通网络和系统。这使得对交通相关的多种因素能够进行持续监控、数据收集、分析和智能控制。智能交通系统使用一个由联网传感器、摄像头和通信设备组成的网络，这些设备集成在道路、汽车、交通信号灯和其他基础设施组件中。这些设备采集关于交通流量、路况、车辆移动和环境变量的数据。随后，这些数据通过 `AI` 和机器学习算法进行分析，以优化交通信号灯时序、提供即时路线建议、识别事故或问题、支持道路和桥梁的自适应维修，并实现智能停车系统。此外，车对车（`V2V`）和车对基础设施（`V2I`）通信技术的利用，使得避免事故和自动驾驶能力等高级安全功能得以实现。
 
-### 3.1.4 智慧城市
-
-
-
-
-
-## 智慧城市
+## 3.1.4 智慧城市
 
 智慧城市是指利用尖端技术和集成系统来优化效率、可持续性及居民整体福祉的大都市区域。它包含在城市基础设施的多个领域部署各类数字解决方案、物联网设备、传感器和数据分析。智慧城市利用信息和通信技术来改善和精简城市生活的诸多方面，包括交通、能源管理、供水、垃圾处理、公共安全、医疗保健和市民服务（Sharma & Arya 2023）。城市配备了可收集交通模式、能源使用、空气质量及其他变量的实时信息的传感器。这些数据用于做出明智决策并有效分配资源。智慧出行解决方案（包括智能交通管理系统、智慧停车和一体化公共交通）旨在减少拥堵和环境破坏。智慧建筑和智能电网利用节能技术和可再生能源以尽量减少对环境的影响。此外，智慧城市项目通常包含电子政务系统，以实现市民参与、促进透明度并提高市政服务的高效提供。
 
-### 3.1.5 智能电网
+## 3.1.5 智能电网
 
-智能电网是一种复杂且智能的电力网系统，它利用数字通信技术、传感器和自动化控制系统来提高发电、输电和配电的效率、可靠性和可持续性。传统电网的升级涉及在公司和客户之间实现双向通信和数据交换。智能电网是一种结合了高级计量基础设施（AMI）、智能电子设备和通信网络的系统，可实时监控和调节电力系统的不同部分（Sharma K. et al., 2023）。它使供应商能够远程监控和调节用电情况，识别并处理停电事故，接入太阳能和风能等分布式能源，并建立需求响应策略以鼓励消费者在高峰时段减少用电。智能电网技术还支持储能系统、电动汽车和微电网的接入，从而增强灵活性和韧性。
+智能电网是一种复杂且智能的电力网系统，它利用数字通信技术、传感器和自动化控制系统来提高发电、输电和配电的效率、可靠性和可持续性。传统电网的升级涉及在公司和客户之间实现双向通信和数据交换。智能电网是一种结合了高级计量基础设施（`AMI`）、智能电子设备和通信网络的系统，可实时监控和调节电力系统的不同部分（Sharma K. et al., 2023）。它使供应商能够远程监控和调节用电情况，识别并处理停电事故，接入太阳能和风能等分布式能源，并建立需求响应策略以鼓励消费者在高峰时段减少用电。智能电网技术还支持储能系统、电动汽车和微电网的接入，从而增强灵活性和韧性。
 
-### 3.1.6 智慧农业
+## 3.1.6 智慧农业
 
-智慧农业是指将传感器、通信网络、数据分析和自动化系统等先进技术应用于农业作业，以提高产量、效率和可持续性。该过程要求在农场和农业区域部署由相互连接的物联网设备和传感器组成的网络（AlZubi & Galyna, 2023）。这些设备和传感器收集土壤湿度、温度、湿度、作物健康、畜禽产品状态和环境因素等多个变量的实时数据。随后，这些数据通过无线网络发送到基于云的平台，利用机器学习和人工智能算法进行分析和处理。数据分析提供有价值的见解，使农民能就灌溉执行、施肥、病虫害防治和其他农业实践做出明智决策。此外，由物联网（IoT）驱动的自动化系统能够根据接收到的数据自动启动操作，如开启灌溉系统或调整温室条件。智慧农业采用无人机进行空中监测、机器人进行精准作业、精准农业技术进行理想资源分配等先进技术。
+智慧农业是指将传感器、通信网络、数据分析和自动化系统等先进技术应用于农业作业，以提高产量、效率和可持续性。该过程要求在农场和农业区域部署由相互连接的物联网设备和传感器组成的网络（AlZubi & Galyna, 2023）。这些设备和传感器收集土壤湿度、温度、湿度、作物健康、畜禽产品状态和环境因素等多个变量的实时数据。随后，这些数据通过无线网络发送到基于云的平台，利用机器学习和人工智能算法进行分析和处理。数据分析提供有价值的见解，使农民能就灌溉执行、施肥、病虫害防治和其他农业实践做出明智决策。此外，由物联网（`IoT`）驱动的自动化系统能够根据接收到的数据自动启动操作，如开启灌溉系统或调整温室条件。智慧农业采用无人机进行空中监测、机器人进行精准作业、精准农业技术进行理想资源分配等先进技术。
 
-## 4 基于区块链的物联网安全
+# 4 基于区块链的物联网安全
 
-区块链技术的持续发展不断改进物联网设备的安全解决方案。当前研究聚焦于去中心化安全框架、节能共识机制（如权益证明 PoS）、用于自动化安全协议的智能合约集成，以及用于安全数据传输的加密技术（如零知识证明）等创新理念。这些进步不仅解决了传统物联网安全的缺陷，还为利用互联互联的不断增长的设备网络建立了稳健高效的安全框架。随着区块链技术的进步，以去中心化和透明方式保护物联网设备的概念正日益流行。区块链技术、边缘计算和隐私保护解案增强了物联网的安全性。
+区块链技术的持续发展不断改进物联网设备的安全解决方案。当前研究聚焦于去中心化安全框架、节能共识机制（如权益证明 `PoS`）、用于自动化安全协议的智能合约集成，以及用于安全数据传输的加密技术（如零知识证明）等创新理念。这些进步不仅解决了传统物联网安全的缺陷，还为利用互联互联的不断增长的设备网络建立了稳健高效的安全框架。随着区块链技术的进步，以去中心化和透明方式保护物联网设备的概念正日益流行。区块链技术、边缘计算和隐私保护解案增强了物联网的安全性。
 
-### 4.1 通过去中心化安全框架利用区块链技术增强物联网安全的进展
+## 4.1 通过去中心化安全框架利用区块链技术增强物联网安全的进展
 
 近期研究建议采用利用区块链技术的去中心化安全框架，以降低单点故障导致漏洞的风险。这些框架提供强健的认证流程，并加强对分散在多个平台上的攻击的防御。区块链技术具有优势，能使物联网设备相互安全地交换数据，无需中央权威机构，从而增强物联网网络的隐私和安全性。边缘计算使物联网设备能在靠近数据源头的地方进行数据处理。这可降低延迟、增强实时处理能力，并降低潜在安全风险的敏感性。我们可以采用零知识证明等隐私增强技术，确保存储在区块链上的敏感数据的加密和匿名性。这些技术进步的集合形成了一种保护物联网系统和应对网络攻击的整体方法（Shah A. et al, 2020）。
 
-### 4.2 轻量级共识机制
+## 4.2 轻量级共识机制
 
+传统的共识机制（如**工作量证明 (`PoW`）**）由于计算和能源成本高昂，不适合资源受限的物联网设备。研究人员正在开发更节能、更适合物联网环境的轻量级共识机制。这些轻量级共识机制旨在为物联网设备提供必要的安全性和效率，同时将计算和能源需求降至最低。
 
+其中一种机制是**权益证明 (`PoS`)**，它允许用户根据持有的代币数量创建区块和验证交易。另一种方法是**有向无环图 (`DAG`)**，它无需挖矿即可实现交易的并行处理。
 
+高效的共识机制（如**工作量证明 (`PoW`）**）需要大量的计算能力和能源，这使得它们对于资源有限的物联网 (`IoT`) 设备来说并不切实际。研究人员目前正专注于开发优先考虑能源效率且与物联网应用高度契合的高效共识算法。这些精简共识方法的主要目标是在保证物联网设备安全性和有效性的同时，降低其能耗和计算需求。
 
-## 轻量级共识机制
+**权益证明 (`PoS`)** 就是这种方法的典范。**权益证明 (`PoS`)** 是一种共识机制，用户可利用其持有的货币数量来创建区块和验证交易。这项技术使个人能够构建区块和验证交易。
 
-传统的共识机制（如**工作量证明 (PoW)**）由于计算和能源成本高昂，不适合资源受限的物联网设备。研究人员正在开发更节能、更适合物联网环境的轻量级共识机制。这些轻量级共识机制旨在为物联网设备提供必要的安全性和效率，同时将计算和能源需求降至最低。
+将**有向无环图 (`DAG`)** 作为一种替代方案，它允许在无需挖矿的情况下同时处理多笔交易。确保这些共识技术高效至关重要，以推动区块链技术在基于物联网的智能家居中的广泛采用。这些技术可为资源有限、低能耗的设备带来优势，因为它们提供了替代的安全方法 (Singh & Kim, 2021)。
 
-其中一种机制是**权益证明 (PoS)**，它允许用户根据持有的代币数量创建区块和验证交易。另一种方法是**有向无环图 (DAG)**，它无需挖矿即可实现交易的并行处理。
+## 4.3 与边缘计算的融合
 
-高效的共识机制（如**工作量证明 (PoW)**）需要大量的计算能力和能源，这使得它们对于资源有限的物联网 (IoT) 设备来说并不切实际。研究人员目前正专注于开发优先考虑能源效率且与物联网应用高度契合的高效共识算法。这些精简共识方法的主要目标是在保证物联网设备安全性和有效性的同时，降低其能耗和计算需求。
-
-**权益证明 (PoS)** 就是这种方法的典范。**权益证明 (PoS)** 是一种共识机制，用户可利用其持有的货币数量来创建区块和验证交易。这项技术使个人能够构建区块和验证交易。
-
-将**有向无环图 (DAG)** 作为一种替代方案，它允许在无需挖矿的情况下同时处理多笔交易。确保这些共识技术高效至关重要，以推动区块链技术在基于物联网的智能家居中的广泛采用。这些技术可为资源有限、低能耗的设备带来优势，因为它们提供了替代的安全方法 (Singh & Kim, 2021)。
-
-### 4.3 与边缘计算的融合
-
-将区块链与边缘计算相结合有望提升物联网 (IoT) 的安全性。边缘计算支持在数据源附近处理数据，从而降低延迟和带宽消耗。当与区块链技术集成时，它能够促进实时数据的安全处理。
+将区块链与边缘计算相结合有望提升物联网 (`IoT`) 的安全性。边缘计算支持在数据源附近处理数据，从而降低延迟和带宽消耗。当与区块链技术集成时，它能够促进实时数据的安全处理。
 
 区块链与边缘计算的融合促进了智能家居中各类物联网设备之间的增强通信，从而提高了其效率和安全性。由于区块链技术具有去中心化特性，边缘计算存储和使用的数据免受篡改。此外，这种组合通过促进有效的数据处理、最小化延迟并确保设备间的安全连接，提升了智能家居物联网系统的效率、可靠性和安全性 (Panarello A. et al, 2018)。
 
-### 4.4 隐私保护技术
+## 4.4 隐私保护技术
 
-区块链可支持**零知识证明 (ZKPs)** 和**环签名**等隐私保护技术。这些技术能够在不披露实际数据的情况下实现数据验证，从而保护机密性和完整性。这些策略对于维护物联网应用中的隐私至关重要。
+区块链可支持**零知识证明 (`ZKPs`)** 和**环签名**等隐私保护技术。这些技术能够在不披露实际数据的情况下实现数据验证，从而保护机密性和完整性。这些策略对于维护物联网应用中的隐私至关重要。
 
-此外，区块链技术有能力促进物联网设备间安全且不可追踪的交易，从而增强消费者的隐私和安全。智能住宅中的物联网 (IoT) 系统可通过整合这些增强隐私的方法，确保机密信息得到保护，仅授权实体可访问。区块链与物联网的融合不仅增强了机密性，还提升了智能家居系统的整体效率和可靠性，使其对用户更加可信和安全 (Fan K. et al, 2020)。
+此外，区块链技术有能力促进物联网设备间安全且不可追踪的交易，从而增强消费者的隐私和安全。智能住宅中的物联网 (`IoT`) 系统可通过整合这些增强隐私的方法，确保机密信息得到保护，仅授权实体可访问。区块链与物联网的融合不仅增强了机密性，还提升了智能家居系统的整体效率和可靠性，使其对用户更加可信和安全 (Fan K. et al, 2020)。
 
-### 4.5 区块链在物联网安全中的新兴应用
+## 4.5 区块链在物联网安全中的新兴应用
 
-#### 4.5.1 医疗物联网
+### 4.5.1 医疗物联网
 
 区块链技术有潜力通过提供一种安全高效的方式来存储和共享患者数据，从而改变医疗行业。区块链可保护物联网设备收集的敏感医疗数据，确保数据完整性和患者隐私。最新框架利用区块链实现医疗服务提供者间的安全数据共享。
 
 患者通过在医疗物联网安全中使用区块链，确保敏感信息保持私密且防篡改。这通过保护患者敏感医疗数据并促进医疗服务提供者间的安全数据共享、改善协作，最终提升患者护理质量，从而使患者受益 (McGhin T. et al, 2019)。
 
-#### 4.5.2 智慧城市
+### 4.5.2 智慧城市
 
 将区块链技术融入智慧城市可确保物联网设备的安全。这保障了大多数民众赖以进行日常活动的结构性和关键服务（如公共交通、电力和公用事业服务及其他服务）免受潜在风险侵害。
 
@@ -6422,47 +6388,48 @@ IoT 架构由硬件、云端服务器和网络架构组成，实现设备间通�
 
 这不仅增强了关键设施的物理防护及其结构完整性，还提高了高效且可持续地处理城市流程及其他相关事务的潜力 (Biswas & Muthukkumarasamy, 2019)。
 
-#### 4.5.3 供应链管理
+### 4.5.3 供应链管理
 
 作为一种分布式账本，区块链可为整个供应链中的运输提供可追溯性和可见性。区块链通过确保链上数据保持不可篡改来消除数据完整性风险，而物联网设备持续监控产品的状况和状态。
 
 就其本身而言，在供应链中使用物联网和区块链有助于追踪欺诈者、窃贼和造假者对供应系统造成的部分影响。通过整合区块链技术以追踪货物流向并验证产品真伪，企业可以维护消费者和合作伙伴对供应链流程的信心，从而增强问责制。这种新的运营模式彻底改变了企业的运作方式，并已在影响智慧城市中供应链系统的形态 (Tian F., 2017)。
 
-### 4.6 挑战与未来方向
+## 4.6 挑战与未来方向
 
 尽管取得了令人期待的进展，但仍存在若干挑战：
 
 *   **可扩展性**：这确保区块链网络能够容纳大量物联网设备、物品以及交易。2018 年一家加密货币交易平台遭受攻击，因区块链网络薄弱导致 5.3 亿美元数字货币被盗，这一事件体现了该策略的独特性。此次事件还引发了关于区块链技术是否足够安全可靠、能否处理大量交易或数据的讨论。
 
-
-
-
-
 ### 互操作性
-开发用于连接各种区块链环境和 IoT 结构的指南。一个详细的反例是各平台区块链网络之间存在的不兼容程度，这给连接 IoT 设备带来了挑战。如果没有集体努力，兼容性问题可能会极大地影响区块链技术在 IoT 中的应用。
+
+开发用于连接各种区块链环境和 `IoT` 结构的指南。一个详细的反例是各平台区块链网络之间存在的不兼容程度，这给连接 `IoT` 设备带来了挑战。如果没有集体努力，兼容性问题可能会极大地影响区块链技术在 `IoT` 中的应用。
 
 ### 法规与合规
-物联网 (IoT) 方法涉及建立法律框架或标准，以指导区块链技术在 IoT 应用中的使用。一个更精确的反例是不同地区盛行的规则存在差异，这使得公司难以遵守不同的程序以满足不同的规则。此外，由于技术的快速发展，法规制定和执行过程滞后的可能性增加。未来的研究应主要集中在实施区块链平台和去中心化政策以解决这些因素。
 
-## 5 工业 4.0 与 5.0
+物联网 (`IoT`) 方法涉及建立法律框架或标准，以指导区块链技术在 `IoT` 应用中的使用。一个更精确的反例是不同地区盛行的规则存在差异，这使得公司难以遵守不同的程序以满足不同的规则。此外，由于技术的快速发展，法规制定和执行过程滞后的可能性增加。未来的研究应主要集中在实施区块链平台和去中心化政策以解决这些因素。
 
-Industry 4.0 和 Industry 5.0 在关注点和方法论上存在显著差异，它们标志着工业流程演进中的两个不同阶段。图 3 展示了工业环境中从 1.0 到 5.0 的工业革命，其中提到的年份为近似值而非精确值。第 1 次革命的开始以机械化的引入以及蒸汽和水力的利用为标志。随后，第 2 次革命引入了电力利用、大规模生产和装配线，而第 3 次革命带来了工业计算机、自动化和电子技术的发展。前三次革命从根本上改变了文明的运作方式和生活方式。目前，组织因实施先进技术、新能源和创新工作组织方法而提高了生产力和效率。我们正处于当前的网络革命中，通常称为 Industry 4.0 或网络物理人类智能。Industry 4.0 的重点围绕人工智能 (AI)、网络物理系统、网络和云服务器、机器学习、3D 打印、自动化、虚拟现实 (VR) 以及计算机的优势。
+# 5 工业 4.0 与 5.0
 
-### 5.1 Industry 4.0
+`Industry 4.0` 和 `Industry 5.0` 在关注点和方法论上存在显著差异，它们标志着工业流程演进中的两个不同阶段。图 3 展示了工业环境中从 1.0 到 5.0 的工业革命，其中提到的年份为近似值而非精确值。第 1 次革命的开始以机械化的引入以及蒸汽和水力的利用为标志。随后，第 2 次革命引入了电力利用、大规模生产和装配线，而第 3 次革命带来了工业计算机、自动化和电子技术的发展。前三次革命从根本上改变了文明的运作方式和生活方式。目前，组织因实施先进技术、新能源和创新工作组织方法而提高了生产力和效率。我们正处于当前的网络革命中，通常称为 `Industry 4.0` 或网络物理人类智能。`Industry 4.0` 的重点围绕人工智能 (`AI`)、网络物理系统、网络和云服务器、机器学习、3D 打印、自动化、虚拟现实 (`VR`) 以及计算机的优势。
 
-Industry 4.0，即第四次工业革命，其标志是将尖端技术和数字化融入制造流程。互联设备和机器进行实时通信和数据共享。数据驱动的决策制定和预测分析涉及大量数据的收集和分析。AI 和 ML 功能被集成到机器和系统中，以实现自主决策和模式识别。物理世界和数字世界错综复杂地互联，在机器、传感器和人员之间建立了无缝连接。智能机器和机器人接管单调和例行任务，从而提高效率和生产力。Industry 4.0 主要强调自动化、连接性和数字化，以增强制造流程并提高效率。
+## 5.1 Industry 4.0
 
-### 5.2 Industry 5.0
+`Industry 4.0`，即第四次工业革命，其标志是将尖端技术和数字化融入制造流程。互联设备和机器进行实时通信和数据共享。数据驱动的决策制定和预测分析涉及大量数据的收集和分析。`AI` 和 `ML` 功能被集成到机器和系统中，以实现自主决策和模式识别。物理世界和数字世界错综复杂地互联，在机器、传感器和人员之间建立了无缝连接。智能机器和机器人接管单调和例行任务，从而提高效率和生产力。`Industry 4.0` 主要强调自动化、连接性和数字化，以增强制造流程并提高效率。
 
-Industry 5.0，也称为第五次工业革命，标志着从 Industry 4.0 的根本性转变。其重点在于将人类能力与先进技术相结合，促进人类与智能机器之间的协作。机器人被设计为以确保人类安全的方式运行，辅助人类而非完全取代他们。促进和增强人类创造力：认可并利用个人的独特能力，如创造力、解决问题的能力和适应性，以刺激创新并提高效率。促进大规模定制，通过定制产品和服务以满足个别客户的特定需求。利用这些技术改善人机交互，并在工作场所提供沉浸式体验。Industry 5.0 旨在实现自动化与人类独创性的和谐融合，特别强调协作、个性化和伦理考量。
+## 5.2 Industry 5.0
+
+`Industry 5.0`，也称为第五次工业革命，标志着从 `Industry 4.0` 的根本性转变。其重点在于将人类能力与先进技术相结合，促进人类与智能机器之间的协作。机器人被设计为以确保人类安全的方式运行，辅助人类而非完全取代他们。促进和增强人类创造力：认可并利用个人的独特能力，如创造力、解决问题的能力和适应性，以刺激创新并提高效率。促进大规模定制，通过定制产品和服务以满足个别客户的特定需求。利用这些技术改善人机交互，并在工作场所提供沉浸式体验。`Industry 5.0` 旨在实现自动化与人类独创性的和谐融合，特别强调协作、个性化和伦理考量。
 
 #### 图 3. 从工业 1.0 到工业 5.0 的工业革命
 
 ![979-8-3693-9225-6.ch014.f03](img/979-8-3693-9225-6.ch014.f03.png)
 
-Industry 4.0 主要由自动化和机器驱动程序推动，而 Industry 5.0 则承认人类创造力、解决问题的技能和适应性的重要性 [56]。目标是通过协同人类和机器的能力来实现平衡，促进它们的无缝协作。此外，Industry 5.0 强调可持续性、韧性和道德实践，确保技术进步符合社会价值观和环境考量。
+`Industry 4.0` 主要由自动化和机器驱动程序推动，而 `Industry 5.0` 则承认人类创造力、解决问题的技能和适应性的重要性 [56]。目标是通过协同人类和机器的能力来实现平衡，促进它们的无缝协作。此外，`Industry 5.0` 强调可持续性、韧性和道德实践，确保技术进步符合社会价值观和环境考量。
 
-Industry 5.0 实施中的几个重要挑战包括：
+
+
+# Industry 5.0 实施中的几个重要挑战包括：
+
 *   结合不同的系统，并确保新旧技术能够顺利协同工作。
 *   确保涉及多设备数据交换的互联生态系统中的数据安全和隐私。
 *   成功实施该技术需要在硬件（包括协作机器人和传感器）和软件方面进行大量投资。然而，这种资金投入对小公司来说可能是一个挑战。
@@ -6470,11 +6437,7 @@ Industry 5.0 实施中的几个重要挑战包括：
 *   改进和修改现有生产线和系统以融入 Industry 5.0 技术 (Guruswamy S. et al, 2022)。
 *   监督各行业和地理区域中变革发生的速度和新技术的实施情况。
 
-## 6 IoT 网络中的安全需求
-
-
-
-
+# 6 IoT 网络中的安全需求
 
 ## 物联网安全威胁与挑战
 
@@ -6497,10 +6460,6 @@ Industry 5.0 实施中的几个重要挑战包括：
 #### 缺乏标准化
 
 缺乏标准给物联网网络的安全带来了重大挑战。显而易见，缺乏全球公认的物联网设备通信、认证、加密和安全措施标准及协议。在缺乏广泛认可的安全标准的情况下，组织可能会采用创造性的或特定供应商的安全方法，导致其物联网安全框架出现不一致和潜在漏洞。针对认为 5G 不适合不太先进的物联网应用的观点，3GPP 标准组织已将 NB-IoT 和 LTE-M 技术（这是为物联网设备提供无线连接的更经济、不太先进的方法）整合到 5G 网络中（Ahmed S. F. et al, 2024）。最新的移动通信标准旨在灵活且适应性强，作为无线通信的综合解决方案。它提供适合许多应用（包括物联网）的广泛连接选项。互操作性对物联网标准化至关重要，但遗憾的是，它也可能给使用该技术的组织带来重大问题（Cirne A. et al, 2022）。物联网设备在连接标准方面各不相同，这可能阻碍设备间的通信。标准化的连接层是任何组织物联网战略的必要基础。
-
-
-
-
 
 ### 网络与物理安全
 
@@ -6540,10 +6499,6 @@ Industry 5.0 实施中的几个重要挑战包括：
 
 (来源: data.gov.in)
 
-
-
-
-
 ## 物联网系统中的入侵相关威胁
 
 入侵相关威胁有能力危害物联网系统的安全。嗅探方法涉及恶意安全标签模仿真实标签，以获取对网络的不当访问。一种可比拟的威胁类型被称为侦察，即黑客进入网络以收集有关漏洞的信息。中间人攻击是一种危险类型，攻击者将自己置于两个端点之间，秘密拦截并窃听它们的通信。另一个潜在危害是流氓设备的存在，这些是保持连接到系统并试图在网络内访问和运行的不需要的设备。
@@ -6564,25 +6519,25 @@ Industry 5.0 实施中的几个重要挑战包括：
 
 *   **Target 信用卡泄露事件**：2013 年 Target 数据泄露事件是一起重大黑客攻击，泄露了数百万客户的个人和财务数据。事件始于黑客利用从第三方暖通空调 (HVAC) 供应商处窃取的凭据进入 Target 的网络。随后，攻击者在 Target 的支付终端上安装了先进的恶意软件，包括“BlackPOS”内存刮取恶意软件的一个变种。在 2013 年 11 月 27 日至 12 月 15 日期间，当顾客在美国 Target 商店刷卡消费时，该恶意软件悄无声息地收集了信用卡和借记卡号、有效期、CVV 码和加密 PIN 码等宝贵信息。仅在几周内，黑客就成功窃取了超过 4000 万张信用卡和借记卡的数据。此外，他们还获取了额外 7000 万客户的个人信息，如姓名、电子邮件地址和电话号码。尽管 Target 的安全系统发出了警报，但该泄露事件在很长一段时间内未被发现。随后，被盗数据在黑市网络犯罪市场上出现，导致大量欺诈和身份盗窃案件。该攻击不同寻常的规模和后果暴露了 Target 系统中危险的安全弱点，促使零售业在数据保护标准、支付卡技术和网络安全投资方面进行了重大改革。
 
-
-
-
-
 ### Akuvox 智能对讲机攻击
 
 研究人员发现 Akuvox E11 智能对讲系统存在多个严重的安全漏洞，这些漏洞可能使远程攻击者获得对设备的完全控制权。Claroty 的一个研究团队在该系统中识别出了 13 个漏洞。这些漏洞包括关键任务缺乏身份验证、命令注入缺陷，以及在未经适当授权的情况下远程激活设备摄像头和麦克风的能力。这些漏洞导致了三种主要的攻击方式：局域网内的远程代码执行、通过激活摄像头和麦克风并将数据传输给攻击者进行远程监视，以及访问不安全的 FTP 服务器以下载设备中存储的照片和录音。这些问题的范围带来了重大的隐私危险，特别是在医疗机构等敏感环境中，受损设备可能会影响患者隐私要求。尽管研究人员和网络安全机构（如 `CISA`）自 2022 年 1 月以来已多次努力通知 Akuvox 这些漏洞，但供应商尚未确认或解决这些问题。因此，这些缺陷仍未修复，使全球组织面临通过其智能对讲系统遭受网络攻击、数据泄露和未经授权监视的风险。
 
 ### 电动汽车充电站的安全性
 
-由于电动汽车充电站连接到网络、云服务和电网，它们越来越容易受到网络攻击。一个重要的安全漏洞是未经授权的访问，攻击者可能会夺取充电站的控制权并中断充电程序，窃取敏感数据，如支付信息（Pourmirza & Walker, 2021）。研究人员展示了诸如 “Brokenwire” 之类的方法，该方法利用电磁干扰远程破坏电动汽车 (EV) 和充电器之间的通信。监督充电基础设施的管理系统中存在额外的弱点。这些基于云的平台可被用来对电网本身发动更大规模的攻击。数据泄露是一个重要问题，因为充电站收集的个人和财务信息可能在网络入侵期间被拦截或窃取。拒绝服务攻构成重大风险，因为黑客会使系统不堪重负，导致充电站停止运行。这导致电动汽车无法充电，并可能导致电网不稳定。
+由于电动汽车充电站连接到网络、云服务和电网，它们越来越容易受到网络攻击。一个重要的安全漏洞是未经授权的访问，攻击者可能会夺取充电站的控制权并中断充电程序，窃取敏感数据，如支付信息（Pourmirza & Walker, 2021）。研究人员展示了诸如 “Brokenwire” 之类的方法，该方法利用电磁干扰远程破坏电动汽车 (EV) 和充电器之间的通信。监督充电基础设施的管理系统中存在额外的弱点。这些基于云的平台可被用来对电网本身发动更大规模的攻击。数据泄露是一个重要问题，因为充电站收集的个人和财务信息可能在网络入侵期间被拦截或窃取。拒绝服务攻击构成重大风险，因为黑客会使系统不堪重负，导致充电站停止运行。这导致电动汽车无法充电，并可能导致电网不稳定。
 
 ### 6.3.1 未来方向
 
 该相关领域的一些未来研究方向如下：
 
-*   为了降低物联网应用带来的安全风险，未来的研究重点必须放在开发能够利用机器学习及其衍生技术抵御对抗攻击的弹性模型上。实现这一目标的一种方法是创建标准化深度学习网络的技术或实施对抗训练方法。
-*   解决区块链赋能的物联网系统中的安全问题可能是一项艰巨的任务，特别是在应用可扩展性、数据隐私和集成方面。软件定义网络 (`SDN`) 技术通过利用分散式控制器来解决该问题，提供了一个可行的解决方案。它们有能力高效地处理大量物联网设备，并保证敏感传感数据的保护。
-*   为了应对当前物联网应用面临的挑战，必须认识到边缘计算、雾计算和移动计算以及机器学习、深度学习和强化学习算法的重要性。这些算法能够在客户端评估网络流量数据，利用训练好的模型或过去的经验来检测各种攻击。
+
+
+为了降低物联网应用带来的安全风险，未来的研究重点必须放在开发能够利用机器学习及其衍生技术抵御对抗攻击的弹性模型上。实现这一目标的一种方法是创建标准化深度学习网络的技术或实施对抗训练方法。
+
+解决区块链赋能的物联网系统中的安全问题可能是一项艰巨的任务，特别是在应用可扩展性、数据隐私和集成方面。软件定义网络（`SDN`）技术通过利用分散式控制器来解决该问题，提供了一个可行的解决方案。它们有能力高效地处理大量物联网设备，并保证敏感传感数据的保护。
+
+为了应对当前物联网应用面临的挑战，必须认识到边缘计算、雾计算和移动计算以及机器学习、深度学习和强化学习算法的重要性。这些算法能够在客户端评估网络流量数据，利用训练好的模型或过去的经验来检测各种攻击。
 
 ## 7 结论
 
@@ -6607,10 +6562,6 @@ Alotaibi, Y., & Ilyas, M. (2023). Ensemble-learning framework for intrusion dete
 Alqarawi, G., Alkhalifah, B., Alharbi, N., & El Khediri, S. (2023). Internet-of-things security and vulnerabilities: Case study. *Journal of Applied Security Research*, 18(3), 559–575. DOI: [10.1080/19361610.2022.2031841](http://dx.doi.org/10.1080/19361610.2022.2031841)
 
 AlZubi, A. A., & Galyna, K. (2023). Artificial intelligence and internet of things for sustainable farming and smart agriculture. *IEEE Access : Practical Innovations, Open Solutions*, 11, 78686–78692. DOI: [10.1109/ACCESS.2023.3298215](http://dx.doi.org/10.1109/ACCESS.2023.3298215)
-
-
-
-
 
 ## 参考文献
 
@@ -6656,9 +6607,13 @@ Jurcut, A., Niculcea, T., Ranaweera, P., & Le-Khac, N. A. (2020). 物联网安�
 
 Kannan, Y. (2024). 物联网设备对金融机构网络安全的影响。 *Authorea Preprints*. DOI: [10.22541/au.171011417.76922216/v1](http://dx.doi.org/10.22541/au.171011417.76922216/v1)
 
-Karthik, S. A., Hemalatha, R., Aruna, R., Deivakani, M., Reddy, R. V. K., & Boopathi, S. (2023). 集成物联网的医疗安全系统研究。 在 *Perspectives and Considerations on the Evolution of Smart Systems* (pp. 342-362). IGI Global.
 
-Liang, X., & Kim, Y. (2021, January). 物联网络中安全攻击与解决方案综述。 在 *2021 IEEE 11th Annual Computing and Communication Workshop and Conference (CCWC)* (pp. 0853-0859). IEEE. DOI: [10.1109/CCWC51732.2021.9376174](http://dx.doi.org/10.1109/CCWC51732.2021.9376174)
+
+# 参考文献
+
+Karthik, S. A., Hemalatha, R., Aruna, R., Deivakani, M., Reddy, R. V. K., & Boopathi, S. (2023). 集成物联网的医疗安全系统研究。在 *Perspectives and Considerations on the Evolution of Smart Systems* (pp. 342-362). IGI Global.
+
+Liang, X., & Kim, Y. (2021, January). 物联网络中安全攻击与解决方案综述。在 *2021 IEEE 11th Annual Computing and Communication Workshop and Conference (CCWC)* (pp. 0853-0859). IEEE. DOI: [10.1109/CCWC51732.2021.9376174](http://dx.doi.org/10.1109/CCWC51732.2021.9376174)
 
 Liu, Y., Wang, J., Yan, Z., Wan, Z., & Ja¨ntti, R. (2023). 面向物联网的基于区块链的信任管理综述。 *IEEE Internet of Things Journal*, 10(7), 5898–5922. DOI: [10.1109/JIOT.2023.3237893](http://dx.doi.org/10.1109/JIOT.2023.3237893)
 
@@ -6672,12 +6627,6 @@ Mentsiev, A. U., Guzueva, E. R., & Magomaev, T. R. (2020, April). 工业 4.0 的
 
 Mousavi, S. K., Ghaffari, A., Besharat, S., & Afshari, H. (2021). 基于加密算法的物联网安全：综述。 *Wireless Networks*, 27(2), 1515–1555. DOI: [10.1007/s11276-020-02535-5](http://dx.doi.org/10.1007/s11276-020-02535-5)
 
-
-
-
-
-## 参考文献
-
 Mrabet, H., Belguith, S., Alhomoud, A., & Jemai, A. (2020). 基于感知与数据分析分层架构的物联网安全综述。 *Sensors (Basel)*, 20(13), 3625. DOI: [10.3390/s20133625](http://dx.doi.org/10.3390/s20133625) PMID: [32605178](https://pubmed.ncbi.nlm.nih.gov/32605178)
 
 Najmi, K. Y., AlZain, M. A., Masud, M., Jhanjhi, N. Z., Al-Amri, J., & Baz, M. (2023). 为实现用户机密性与可靠性的物联网安全威胁与对策综述。 *Materials Today: Proceedings*, 81, 377–382. DOI: [10.1016/j.matpr.2021.03.417](http://dx.doi.org/10.1016/j.matpr.2021.03.417)
@@ -6690,9 +6639,9 @@ Omolara, A. E., Alabdulatif, A., Abiodun, O. I., Alawida, M., Alabdulatif, A., &
 
 Panarello, A., Tapas, N., Merlino, G., Longo, F., & Puliafito, A. (2018). 区块链与物联网融合：系统性综述。 *Sensors (Basel)*, 18(8), 2575. DOI: [10.3390/s18082575](http://dx.doi.org/10.3390/s18082575) PMID: [30082633](https://pubmed.ncbi.nlm.nih.gov/30082633)
 
-Pourmirza, Z., & Walker, S. (2021 年 8 月). 电动汽车充电站：网络安全挑战与展望。 在 *2021 IEEE 第 9 届智慧能源电网工程国际会议 (SEGE)* (pp. 111-116). IEEE.
+Pourmirza, Z., & Walker, S. (2021 年 8 月). 电动汽车充电站：网络安全挑战与展望。在 *2021 IEEE 第 9 届智慧能源电网工程国际会议 (SEGE)* (pp. 111-116). IEEE.
 
-Prakash, R., Jyoti, N., & Manjunatha, S. (2024). 物联网安全挑战与攻击综述。 在 *E3S Web of Conferences* (Vol. 491, p. 04018). EDP Sciences.
+Prakash, R., Jyoti, N., & Manjunatha, S. (2024). 物联网安全挑战与攻击综述。在 *E3S Web of Conferences* (Vol. 491, p. 04018). EDP Sciences.
 
 Rachit, B., Bhatt, S., & Ragiri, P. R. (2021). 物联网安全趋势：综述。 *SN Applied Sciences*, 3(1), 1–14. DOI: [10.1007/s42452-021-04156-9](http://dx.doi.org/10.1007/s42452-021-04156-9)
 
@@ -6726,7 +6675,7 @@ Sott, M. K., Furstenau, L. B., Kipper, L. M., Giraldo, F. D., Lopez-Robles, J. R
 
 Sun, P., Shen, S., Wan, Y., Wu, Z., Fang, Z., & Gao, X. Z. (2024). 物联网隐私安全综述：架构、技术、挑战与趋势。 *IEEE Internet of Things Journal*.
 
-Syed, A., & Gadgay, B. (2023). 基于 RLNC 的物联网应用黑洞攻击防护方法。 在 *网络安全与数据隐私的当代挑战* (pp. 151–165). IGI Global. DOI: [10.4018/979-8-3693-1528-6.ch009](http://dx.doi.org/10.4018/979-8-3693-1528-6.ch009)
+Syed, A., & Gadgay, B. (2023). 基于 RLNC 的物联网应用黑洞攻击防护方法。在 *网络安全与数据隐私的当代挑战* (pp. 151–165). IGI Global. DOI: [10.4018/979-8-3693-1528-6.ch009](http://dx.doi.org/10.4018/979-8-3693-1528-6.ch009)
 
 Taherdoost, H. (2023). 安全与物联网：效益、挑战与未来展望。 *Electronics (Basel)*, 12(8), 1901. DOI: [10.3390/electronics12081901](http://dx.doi.org/10.3390/electronics12081901)
 
@@ -6734,15 +6683,12 @@ Thabit, F., Can, O., Aljahdali, A. O., Al-Gaphari, G. H., & Alkhzaimi, H. A. (20
 
 Tian, F. (2017). 基于 HACCP、区块链与物联网的食品安全供应链溯源系统。 *2017 年服务系统与服务管理国际会议*, 1-6. DOI: [10.1109/ICSSSM.2017.7996119](http://dx.doi.org/10.1109/ICSSSM.2017.7996119)
 
-
-
-
-
 # 第 15 章：去中心化安全推文平台的实现
 
 ## 推文应用的安全性
 
 **作者：**
+
 - Sumathi Pawar，信息科学与工程，NMAMIT，Nitte，印度
 - K. Suma，曼加罗尔理工与管理学院，Moodabidri，印度
 - Ankitha P.，信息科学与工程，NMAMIT，Nitte，印度
@@ -6750,6 +6696,10 @@ Tian, F. (2017). 基于 HACCP、区块链与物联网的食品安全供应链溯
 - RajaLakshmi Samaga，信息科学与工程，NMAMIT，Nitte，印度
 
 ## 摘要
+
+
+
+# 去中心化安全推文平台
 
 去中心化安全推文平台利用区块链技术将控制权和数据分布在参与者网络中，挑战了中心化模式。它提供了增强的隐私、减少的内容操纵，以及对用户内容中心化控制的抵抗力。该系统代表了一个去中心化的推文社交媒体平台，旨在为用户提供一个既安全又以透明为特征的通信环境。通过集成智能合约，用户可以直接且安全地进行交易，而无需中介。`ReactJS` 赋能了响应式且用户友好的界面，促进用户间的实时交互，以创建一个去中心化社交媒体平台，将安全性和透明度提升至前所未有的水平。区块链技术确保数据被安全存储、不可篡改且透明。所提系统使用户能够发布推文、关注其他用户、点赞和评论帖子，并进行实时消息传递。本文还展示了该系统的实现。
 
@@ -6775,21 +6725,12 @@ Tian, F. (2017). 基于 HACCP、区块链与物联网的食品安全供应链溯
 
 ## 参考文献
 
-Tournier, J., Lesueur, F., Le Moue¨l, F., Guyon, L., & Ben-Hassine, H. (2021). A survey of IoT protocols and their security issues through the lens of a generic IoT stack. *Internet of Things: Engineering Cyber Physical Human Systems*, 16, 100264. DOI: [10.1016/j.iot.2020.100264](http://dx.doi.org/10.1016/j.iot.2020.100264)
-
-Venkatraman, S., & Overmars, A. (2020, November). IoT Authentication and Security Challenges. In *Proceedings of the 3rd International Conference on Research in Applied Science*, Munich, Germany (pp. 6-8).
-
-Wang, N., Wang, P., Alipour-Fanid, A., Jiao, L., & Zeng, K. (2019). Physical-layer security of 5G wireless networks for IoT: Challenges and opportunities. *IEEE Internet of Things Journal*, 6(5), 8169–8181. DOI: [10.1109/JIOT.2019.2927379](http://dx.doi.org/10.1109/JIOT.2019.2927379)
-
-Yu, D., Zhang, L., Chen, Y., Ma, Y., & Chen, J. (2020). Large-scale IoT devices firmware identification based on weak password. *IEEE Access: Practical Innovations, Open Solutions*, 8, 7981–7992. DOI: [10.1109/ACCESS.2020.2964646](http://dx.doi.org/10.1109/ACCESS.2020.2964646)
-
-Yu, M., Zhuge, J., Cao, M., Shi, Z., & Jiang, L. (2020). A survey of security vulnerability analysis, discovery, detection, and mitigation on IoT devices. *Future Internet*, 12(2), 27. DOI: [10.3390/fi12020027](http://dx.doi.org/10.3390/fi12020027)
-
-Yugha, R., & Chithra, S. (2020). A survey on technologies and security protocols: Reference for future generation IoT. *Journal of Network and Computer Applications*, 169, 102763. DOI: [10.1016/j.jnca.2020.102763](http://dx.doi.org/10.1016/j.jnca.2020.102763)
-
-
-
-
+- Tournier, J., Lesueur, F., Le Moue¨l, F., Guyon, L., & Ben-Hassine, H. (2021). A survey of IoT protocols and their security issues through the lens of a generic IoT stack. *Internet of Things: Engineering Cyber Physical Human Systems*, 16, 100264. DOI: [10.1016/j.iot.2020.100264](http://dx.doi.org/10.1016/j.iot.2020.100264)
+- Venkatraman, S., & Overmars, A. (2020, November). IoT Authentication and Security Challenges. In *Proceedings of the 3rd International Conference on Research in Applied Science*, Munich, Germany (pp. 6-8).
+- Wang, N., Wang, P., Alipour-Fanid, A., Jiao, L., & Zeng, K. (2019). Physical-layer security of 5G wireless networks for IoT: Challenges and opportunities. *IEEE Internet of Things Journal*, 6(5), 8169–8181. DOI: [10.1109/JIOT.2019.2927379](http://dx.doi.org/10.1109/JIOT.2019.2927379)
+- Yu, D., Zhang, L., Chen, Y., Ma, Y., & Chen, J. (2020). Large-scale IoT devices firmware identification based on weak password. *IEEE Access: Practical Innovations, Open Solutions*, 8, 7981–7992. DOI: [10.1109/ACCESS.2020.2964646](http://dx.doi.org/10.1109/ACCESS.2020.2964646)
+- Yu, M., Zhuge, J., Cao, M., Shi, Z., & Jiang, L. (2020). A survey of security vulnerability analysis, discovery, detection, and mitigation on IoT devices. *Future Internet*, 12(2), 27. DOI: [10.3390/fi12020027](http://dx.doi.org/10.3390/fi12020027)
+- Yugha, R., & Chithra, S. (2020). A survey on technologies and security protocols: Reference for future generation IoT. *Journal of Network and Computer Applications*, 169, 102763. DOI: [10.1016/j.jnca.2020.102763](http://dx.doi.org/10.1016/j.jnca.2020.102763)
 
 ## 区块链技术在去中心化社交媒体中的应用
 
@@ -6845,10 +6786,6 @@ Liu (2023) 综述了关于央行数字货币（CBDC）的研究。最新研究�
 
 ### 分布式账本技术 (DLT)
 
-
-
-
-
 ## 去中心化系统与区块链技术
 
 在区块链等去中心化系统中，会使用这项技术。交易会在多个地方同时以数字形式记录。分布式账本不像传统数据库那样拥有中央数据存储。在 DLT 系统中，多个节点（计算机）参与网络，每个节点维护一份账本副本。决策和验证由网络共同完成，而非中央权威机构，这增强了透明度并减少了单点故障。运行全节点涉及维护整个区块链的副本并验证交易。节点运营商可通过提供网络稳定性和促进去中心化来获得奖励。去中心化金融应用通常涉及创建智能合约并与之交互。这些合约是具有预定义规则的自执行程序。开发者可以通过设计实用且创新的智能合约来吸引用户并产生交易费，从而为其应用变现。智能合约具有灵活性，可部署在以太坊等公共区块链网络上，也可部署在私有网络上。
@@ -6897,20 +6834,18 @@ Liu (2023) 综述了关于央行数字货币（CBDC）的研究。最新研究�
 
 ### 安全 API
 
+
+
 安全 API 的特点是输入验证、清理、速率限制和安全默认值。输入验证可防止 SQL 注入和跨站脚本攻击。实施速率限制有助于防止因过多请求而滥用 API，防范拒绝服务攻击。安全默认值确保所有默认配置均为安全状态，避免不必要的功能或服务。渗透测试是保障推文应用安全的重要环节。它涉及模拟对应用程序的攻击，以便在恶意行为者利用漏洞之前识别出漏洞。自动化工具用于扫描 API 的常见漏洞，例如 OWASP Top Ten 中列出的漏洞。
 
-### 内容变现
+## 内容变现
 
+### 区块链变现
 
-
-
-
-## 区块链变现
-
-在区块链技术的背景下，变现通常指从区块链相关活动中产生收入或利润。这可以涵盖各个方面，例如加密货币挖矿、质押、运行节点以及开发去中心化应用（dApps）。以下概述了区块链变现中涉及的一些数学概念和机制：
+在区块链技术的背景下，变现通常指从区块链相关活动中产生收入或利润。这可以涵盖各个方面，例如加密货币挖矿、质押、运行节点以及开发去中心化应用（`dApps`）。以下概述了区块链变现中涉及的一些数学概念和机制：
 
 *   **工作量证明：** 在比特币等区块链中，矿工通过解决复杂的数学难题来验证交易并创建新区块。这些难题的数学难度会进行调整，以维持稳定的区块生成速率。
-*   **权益证明：** 在基于 PoS 的区块链中，验证者（通常称为“质押者”）被选中创建新区块并验证交易。验证者通过确定性程序选出，该程序通常考虑质押代币数量、代币持有期限，偶尔也会引入随机因素。
+*   **权益证明：** 在基于 `PoS` 的区块链中，验证者（通常称为“质押者”）被选中创建新区块并验证交易。验证者通过确定性程序选出，该程序通常考虑质押代币数量、代币持有期限，偶尔也会引入随机因素。
 *   **代币经济学：** 变现在很大程度上受区块链原生代币的设计及其供应动态影响。代币可用于支付交易费、访问特定功能或参与治理决策。博弈论和经济模型在区块链变现中发挥作用，其中激励机制的设计旨在鼓励参与者以有利于网络安全性和整体功能的方式行事。
 
 区块链变现涉及密码学、博弈论、经济学和数学建模的结合。每个方面背后的具体数学原理可能因区块链的共识机制、代币设计和生态系统目标而异。
@@ -6932,7 +6867,7 @@ Liu (2023) 综述了关于央行数字货币（CBDC）的研究。最新研究�
 创建智能合约以管理推文在区块链上的创建和存储。合约可能包含创建、读取、更新和删除推文的函数。通过将 `ABI` 和地址传递给 `web3.eth.Contract` 构造函数来创建智能合约实例。与智能合约的交互涉及定义一个 `async` 函数，该函数通过调用 `createTweet` 方法并传入推文文本来创建推文。`web3.eth.getAccounts` 方法用于检索用户的以太坊账户，`send` 方法用于从该账户向智能合约发送交易。以下是创建并发送推文的示例代码：
 
 ```solidity
-pragma solidity ⁰.8.0;
+pragma solidity ^0.8.0;
 
 contract MyTweetingApp {
     struct Tweet {
@@ -6965,7 +6900,7 @@ contract MyTweetingApp {
 
 ### 选择区块链网络
 
-有许多可用的区块链网络，包括 `Ethereum`、`Binance Smart Chain` 和 `Polygon`。选择时应优先考虑支持智能合约且拥有庞大开发者社区的区块链网络。本系统使用了采用 `Ethereum` 货币的 `Ganache` 区块链网络。`Ganache` 是一款流行的 `Ethereum` 区块链开发工具，利用其在本地区块链网络上创建和测试去中心化应用（DApps）的能力，用于安全通信。选择区块链网络后，需要搭建必要的基础设施。
+有许多可用的区块链网络，包括 `Ethereum`、`Binance Smart Chain` 和 `Polygon`。选择时应优先考虑支持智能合约且拥有庞大开发者社区的区块链网络。本系统使用了采用 `Ethereum` 货币的 `Ganache` 区块链网络。`Ganache` 是一款流行的 `Ethereum` 区块链开发工具，利用其在本地区块链网络上创建和测试去中心化应用（`DApps`）的能力，用于安全通信。选择区块链网络后，需要搭建必要的基础设施。
 
 ```bash
 npm install -g ganache-cli truffle
@@ -6986,10 +6921,6 @@ npm install -g ganache-cli truffle
 *   **成本：** Gas 成本可能很高，特别是对于频繁或数据量大的通信。
 *   **网络拥堵：** 高峰期 Gas 价格可能飙升，导致延迟或成本增加。
 *   **安全性：** 区块链固有的安全特性（如不可篡改性和透明度）增强了通信安全，但敏感信息应谨慎处理以维护隐私。
-
-
-
-
 *   **去中心化消息平台**：区块链可以创建去中心化且安全的消息平台，用户通过支付 Gas 费来发送加密消息。
 *   **身份验证**：基于区块链的身份系统可以在不泄露敏感信息的情况下安全地验证用户身份，使用 Gas 进行涉及身份验证的交易。
 *   **安全数据共享**：区块链可用于安全地共享数据，并提供可验证的访问和修改记录。
@@ -7002,7 +6933,7 @@ npm install -g ganache-cli truffle
 
 下一步是使用 `web3.js` 将区块链网络与前端集成。这涉及使用提供者 URL 连接到区块链网络，并创建合约实例以与智能合约交互。`MetaMask`（一种浏览器扩展）用于连接到区块链网络并签署交易。最后一步是彻底测试 Twitter 克隆应用，以确保其功能符合预期。`Ganache` 工具，一种用于以太坊的个人区块链……
 
-### 结果
+## 结果
 
 #### 图 3. MetaMask 账户的创建
 
@@ -7016,9 +6947,9 @@ npm install -g ganache-cli truffle
 
 ![979-8-3693-9225-6.ch015.f05](img/979-8-3693-9225-6.ch015.f05.png)
 
-图 3 和 图 4 展示了结果快照。在创建 `MetaMask` 账户期间，系统会要求输入密码，并显示以太坊初始余额为零。安装 `Ganache` 网络后，会导入少量以太币加密货币单位，这些将用于用户交易。登录系统后，用户可以关注和取消关注用户，以及创建或分享公开推文。关注用户后，该用户的推文将显示在推文部分。另一项功能是资料管理，用于管理用户资料。图 5 显示了通过 `Ganache` 网络消耗 Gas 价格的情况。
+图 3 和图 4 展示了结果快照。在创建 `MetaMask` 账户期间，系统会要求输入密码，并显示以太坊初始余额为零。安装 `Ganache` 网络后，会导入少量以太币加密货币单位，这些将用于用户交易。登录系统后，用户可以关注和取消关注用户，以及创建或分享公开推文。关注用户后，该用户的推文将显示在推文部分。另一项功能是资料管理，用于管理用户资料。图 5 显示了通过 `Ganache` 网络消耗 Gas 价格的情况。
 
-编写基于 Solidity 的智能合约后，系统部署在“以太坊”区块链上，并构建为一个 Twitter 克隆 Web 应用，允许用户发推文和查看所有推文。安装 `MetaMask` 后，会创建一个新的以太坊钱包。该钱包将存储用户的私钥和公钥，用于在区块链上进行交易。为了与区块链建立连接，有必要指定所需的网络。例如，可以选择以太坊 `mainnet`（主网）或 `testnet`（测试网）作为网络。网络选择通过从 `MetaMask` 中可用的下拉菜单中选择适当的选项来完成。
+编写基于 `Solidity` 的智能合约后，系统部署在“以太坊”区块链上，并构建为一个 Twitter 克隆 Web 应用，允许用户发推文和查看所有推文。安装 `MetaMask` 后，会创建一个新的以太坊钱包。该钱包将存储用户的私钥和公钥，用于在区块链上进行交易。为了与区块链建立连接，有必要指定所需的网络。例如，可以选择以太坊 `mainnet`（主网）或 `testnet`（测试网）作为网络。网络选择通过从 `MetaMask` 中可用的下拉菜单中选择适当的选项来完成。
 
 系统需要构建一个智能合约，用于处理用户与 Twitter 应用之间的交互。智能合约定义了创建推文、评论推文和点赞推文的函数。需要使用 `web3.js` 将智能合约与应用集成。在该系统中，`web3.js` 用于连接到智能合约并调用其函数。UI 允许用户创建推文、评论推文和点赞推文。当用户执行这些操作之一时，会调用智能合约以更新区块链的状态。
 
@@ -7042,12 +6973,11 @@ Greschbach, B., Kreitz, G., & Buchegger, S. (2012). New privacy challenges in de
 
 Handayani, F. (2022). Design and legal aspect of central bank digital currency: A literature review. *Journal of Central Banking Law and Institutions*, 1(3), 509–536. DOI: [`10.21098/jcli.v1i3.35`](http://dx.doi.org/10.21098/jcli.v1i3.35)
 
+Jani, K. A., & Chaubey, N. (2020). IoT and cyber security: Introduction, attacks, and preventive steps. In Chaubey, N., & Prajapati, B. (Eds.), *Quantum cryptography and the future of cyber security* (pp. 203–235). IGI Global. DOI: [`10.4018/978-1-7998-2253-0.ch010`](http://dx.doi.org/10.4018/978-1-7998-2253-0.ch010)
 
 
 
-## 参考文献
-
-Jani, K. A., & Chaubey, N. (2020). IoT and cyber security: Introduction, attacks, and preventive steps. In Chaubey, N., & Prajapati, B. (Eds.), *Quantum cryptography and the future of cyber security* (pp. 203–235). IGI Global. DOI: [10.4018/978-1-7998-2253-0.ch010](http://dx.doi.org/10.4018/978-1-7998-2253-0.ch010)
+# 参考文献
 
 Lavania, G., & Sharma, G. (2023). Security on social media platform using private blockchain. *Lecture Notes in Networks and Systems*. DOI: [10.1007/978-3-031-22018-0_20](http://dx.doi.org/10.1007/978-3-031-22018-0_20)
 
@@ -7088,25 +7018,35 @@ Zheng, Z., Xie, S., Dai, H., Chen, X., & Wang, H. (2017). An overview of blockch
 # 第 16 章：利用对抗网络和加权编码器组件进行网络入侵检测
 
 **Nirbhay Kumar Chaubey**  
+
 ![Orcid Image](https://orcid.org/0000-0001-6575-7723) https://orcid.org/0000-0001-6575-7723  
+
 甘帕特大学，印度
 
 **Ruby Dahiya**  
+
 加尔戈蒂亚斯大学，印度
 
 **R. Venkateswaran**  
+
 ![Orcid Image](https://orcid.org/0000-0003-1096-0278) https://orcid.org/0000-0003-1096-0278  
+
 科技与应用科学大学，阿曼
 
 **Praveen R. V. S.**  
+
 ![Orcid Image](https://orcid.org/0009-0009-6683-5573) https://orcid.org/0009-0009-6683-5573  
+
 LTIMindtree，印度
 
 **U. Hemavathi**  
+
 维尔理工学院拉加拉詹·萨古恩塔拉研发科学技术学院，印度
 
 **Sangeetha Subramaniam**  
+
 ![Orcid Image](https://orcid.org/0000-0003-4661-6284) https://orcid.org/0000-0003-4661-6284  
+
 贡古纳杜工程技术学院，印度
 
 ## 摘要
@@ -7115,12 +7055,7 @@ LTIMindtree，印度
 
 ## 1. 引言
 
-
-
-
-## 无线传感器网络与入侵检测：深度学习视角
-
-### 1. 简介
+### 1.1 无线传感器网络与入侵检测：深度学习视角
 
 在当今现代世界，无线网络已无缝融入我们生活的各个方面，服务于广泛的目的，包括促进通信、提供互联网服务，以及实现室内外监控功能（Huang 等，2020）。这些网络构成了各类数据传输的骨干，使其在我们互联互通的社会中不可或缺。然而，这种高度的连通性也使这些网络面临各种潜在安全威胁和入侵的风险。随着数据交换在众多平台和实体间持续激增，迫切需要采取安全措施来强化这些网络，以抵御潜在威胁。无线传感器网络（WSN）已成为实现多样化目标的关键技术，包括数据聚合、大气监测、数字农业、智慧农业、远程感知、医疗应用、军事任务和边境监视（Ferdowsi 等，2020）。
 
@@ -7130,57 +7065,55 @@ WSN 本质上是自组织 Wi-Fi 网络，由大量 Wi-Fi 传感器组成，负�
 
 近年来，我们观察到网络数据量大幅激增，且网络攻击技术手段快速演变。建立在浅层机器学习算法基础上的传统入侵检测模型，面临着一系列挑战（Swaminathan 等，2023）。这些挑战包括：处理大规模网络入侵数据的复杂性、识别新型攻击模式的能力不足、较高的误报率，以及对学者设计和选择相关特征的显著依赖。尽管如此，深度学习在入侵检测中的应用前景显而易见，但仍存在诸多挑战。一个主要障碍在于用于开发和优化模型的高质量数据集的可用性。现实世界的网络入侵数据通常包含大量正常行为数据，远超少数攻击行为实例。这种数据不平衡构成了重大挑战，并可能损害模型准确识别少数类入侵的能力。此外，网络技术发展的日益加快催生了持续不断的网络攻击手段变革（Idrissi 等，2023）。这些动态挑战要求持续的研究与创新，以跟上并主动应对新兴的网络威胁。随着数字格局的持续演变，入侵检测技术在保障网络系统完整性方面的作用依然至关重要（Nie 等，2021）。
 
-### 2. 文献综述
+### 1.2 文献综述
 
-#### 2.1 基于深度学习的研究方法
+#### 1.2.1 基于深度学习的研究方法
 
 深度学习的应用为提高网络入侵检测的精度和效力开辟了新可能（Yilmaz 等，2020）。通过允许算法从数据中自主提取抽象特征，深度学习模型能有效区分正常网络行为和潜在恶意活动（Jeong 等，2021）。这在应对现代网络的复杂性方面显得尤为有益，现代网络往往涉及海量数据和复杂模式，这些可能难以通过传统方法轻易辨别（Alhajjar 等，2021）。该领域的学者们报告了值得注意的结果，凸显了深度学习在网络入侵检测中的潜力。这些成果涵盖了检测精度的提升、处理大规模复杂数据集的能力，以及对不断演变的网络威胁格局的更深入理解（Kumar 等，2018）。随着深度学习技术的持续演进和成熟，它们有望在强化网络安全、应对不断变化的数字格局所带来的挑战中发挥日益重要的作用（Sood 等，2022）。
 
 在他们的研究中，Salem 等（2018）提出了一种基于深度学习原理的新型网络入侵检测方法。该方法包含几个关键组件。首先，他们设计了一种图像转换技术来预处理网络数据集（Geetha 等，2023）。这一预处理步骤对于将原始网络数据转换为更适合深度学习分析的格式至关重要。这些 CNN 架构非常适合图像相关任务，使其成为处理图像格式下的转换网络数据的自然选择（Zhang 等，2020）。
 
-
-
 他们的机制实验结果产生了有价值的见解。具体而言，他们发现 CNN 框架对源自攻击数据的图像表现出高度敏感性（Kalyanaraman et al., 2023）。这种敏感性意味着基于 CNN 的框架擅长检测和响应潜在的入侵尝试，因为它能够有效识别与网络攻击相关的特征和模式。总之，参考文献 (17-18) 中提出的研究引入了一种网络威胁识别方法，该方法利用深层分层学习、图像转换和 CNN 模型来提高威胁识别的敏感性和精度（Yang et al., 2018）。
 
-Shu et al. (2018) 的研究工作提出了一种用于智能基于异常的威胁识别系统 (IDS) 的两阶段分类器集成，称为 TSE-IDS。该机制涉及一系列步骤，旨在提高威胁识别的精度和有效性（Sekhar et al., 2022）。以下是关键组件的细分：
+Shu et al. (2018) 的研究工作提出了一种用于智能基于异常的威胁识别系统 (IDS) 的两阶段分类器集成，称为 `TSE-IDS`。该机制涉及一系列步骤，旨在提高威胁识别的精度和有效性（Sekhar et al., 2022）。以下是关键组件的细分：
 
-##### 1. 混合特征选择
+##### 1.2.1.1 混合特征选择
 
 在第一阶段，学者们采用了一种混合特征选择技术。该技术对于减少数据收集开发过程中的特征（或属性）数量至关重要（Lee et al., 2021）。通过选择最相关的特征子集并消除不太重要的特征，数据收集变得更易于管理且复杂度更低。特征选择对于提高机器学习模型的功效和有效性至关重要。它有助于关注数据中最重要的特征，从而提高威胁识别系统的整体精度（Yang et al., 2021）。
 
-##### 2. 两级分类器
+##### 1.2.1.2 两级分类器
 
 在第二阶段，采用两级分类器进行分类。该分类器集成涉及两层协同工作的分类器，共同做出最终的威胁识别决策（Sangeetha et al., 2023）。两级分类器的使用是集成学习中的常见机制，多个分类器协作以提高系统的整体精度。在此背景下，两级分类器负责将网络活动或数据分类为正常和异常类别。不同层级分类器的组合有助于捕获数据中广泛的模式和异常，使威胁识别系统更具适应性（Liao et al., 2020）。
 
+
+
 通过结合这两个阶段，TSE-IDS 旨在实现更准确和智能的入侵检测。特征选择步骤减少了数据的属性，使其更易于管理且不易过拟合。两级分类器集成利用多个分类器的优势来提高系统识别异常和检测潜在网络入侵的能力。该机制旨在为入侵检测提供全面有效的解决方案，这对于维护计算机网络的安全至关重要。
 
-#### 2.2 基于数据收集的研究工作
+## 2.2 基于数据收集的研究工作
 
 处理威胁识别中类别不平衡的挑战是一个重大问题，特别是在开发机器学习模型时。在不平衡数据收集上训练的模型往往会产生偏差，表现出过度关注正常行为的倾向。这种对正常性的过度强调导致识别攻击行为的能力下降，特别是那些仅有少量样本的攻击行为。
 
-针对这一挑战，国内外学者进行了广泛研究，以解决网络入侵检测中的类别不平衡问题。一个值得注意的解决方案，如参考文献所述，是 GAN-RF 威胁识别方法。该机制利用生成对抗网络 (GAN) 的能力，并将其与随机森林算法相结合。GAN 擅长生成平衡数据收集的合成样本，确保框架获得足够的少数类样本曝光。通过生成与欠代表类别特征非常相似的人工样本，GAN 有效地抵消了对正常行为的偏见。
+针对这一挑战，国内外学者进行了广泛研究，以解决网络入侵检测中的类别不平衡问题。一个值得注意的解决方案，如参考文献所述，是 GAN-RF 威胁识别方法。该机制利用生成对抗网络（`GAN`）的能力，并将其与随机森林算法相结合。`GAN` 擅长生成平衡数据收集的合成样本，确保框架获得足够的少数类样本曝光。通过生成与欠代表类别特征非常相似的人工样本，`GAN` 有效地抵消了对正常行为的偏见。
 
-此外，GAN 与随机森林方法的结合显著提高了威胁识别模型的整体有效性。随机森林以其有效处理不平衡数据收集的能力而闻名，通过聚合多个决策树的输出来做出自适应决策。实证结果提供了 GAN-RF 威胁识别模型在处理不平衡数据收集时有效性的确凿证据。即使在类别不平衡明显的场景下，该框架在识别入侵行为方面也表现出强有效性。因此，GAN-RF 机制作为解决网络入侵检测中类别不平衡挑战的有前景的解决方案脱颖而出，最终有助于增强网络安全和威胁检测的有效性。
+此外，`GAN` 与随机森林方法的结合显著提高了威胁识别模型的整体有效性。随机森林以其有效处理不平衡数据收集的能力而闻名，通过聚合多个决策树的输出来做出自适应决策。实证结果提供了 GAN-RF 威胁识别模型在处理不平衡数据收集时有效性的确凿证据。即使在类别不平衡明显的场景下，该框架在识别入侵行为方面也表现出强有效性。因此，GAN-RF 机制作为解决网络入侵检测中类别不平衡挑战的有前景的解决方案脱颖而出，最终有助于增强网络安全和威胁检测的有效性。
 
-在参考文献 Kumar et al. (2018) 中，介绍了一种基于迁移生成对抗网络 (tGAN) 的前沿零日攻击检测框架。该机制特别创新之处在于他们创造性地使用自编码器结构对 GAN 进行预训练。这一预开发步骤显著增强了 GAN 在开发过程中的能力，从而产生了一个更自适应和有效的模型。此外，他们采用 t-SNE (t-分布随机邻域嵌入) 方法可视化恶意软件的聚类模式，为恶意软件的组织和行为提供了有价值的见解。该研究的实验结果表明，其框架优于传统机器学习算法。这一成功凸显了利用 tGAN 和自编码器进行零日攻击检测的潜力，提供了改进的安全性和威胁识别能力。
+在参考文献 Kumar et al. (2018) 中，介绍了一种基于迁移生成对抗网络（`tGAN`）的前沿零日攻击检测框架。该机制特别创新之处在于他们创造性地使用自编码器结构对 `GAN` 进行预训练。这一预开发步骤显著增强了 `GAN` 在开发过程中的能力，从而产生了一个更自适应和有效的模型。此外，他们采用 t-SNE (t-分布随机邻域嵌入) 方法可视化恶意软件的聚类模式，为恶意软件的组织和行为提供了有价值的见解。该研究的实验结果表明，其框架优于传统机器学习算法。这一成功凸显了利用 `tGAN` 和自编码器进行零日攻击检测的潜力，提供了改进的安全性和威胁识别能力。
 
 Salem (2019) 提出的基于威胁识别数据收集的方法，证明了其方法的有效性。通过主动考虑与不同类型攻击相关的误分类成本，该方法提高了威胁识别系统的整体精度和功效，最终实现了更好的威胁识别和网络安全。
 
-#### 2.3 拟议系统的贡献
+## 2.3 拟议系统的贡献
 
 上述方法在应用于具有不平衡类别的网络入侵数据收集时已显示出显著成功。基于从先前研究中获得的见解，本文引入了一种新型混合威胁识别框架，称为 ID-ANWE。该框架在数据和方法两个层面解决类别不平衡问题，为该问题提供了一个综合解决方案。
 
 *   ✓ 首先，ID-ANWE 框架融入了梯度惩罚和正则化的概念。这被用于生成特定的少数类攻击实例，同时将这些新生成的攻击整合到原始开发数据收集中。该过程的结果是创建了一个丰富且更多样化的开发数据收集。通过这样做，该框架有效解决了数据收集不平衡问题，确保了用于训练的样本集更具代表性和包容性。
 
-
-
 *   ✓ 其次，随着新平衡的开发数据收集到位，该框架考虑了样本的不平衡分布，并引入了代价敏感学习框架。该框架根据不平衡样本的比例设置误分类代价，使框架能够有效地确定不同类别的优先级和权重。
 
 通过引入这两个关键组件，ID-ANWE 威胁识别框架提供了一种整体机制，以缓解入侵检测中的类别不平衡问题。该机制不仅增强了开发数据的多样性和代表性，还确保了框架能够在类别不平衡普遍存在的场景中做出明智的决策。ID-ANWE 框架代表了解决威胁识别和网络安全中基本挑战的一个有希望的进步步骤。
 
-### 3. 建议方法论
+## 3. 建议方法论
 
-#### 3.1 建议的对抗网络模块
+### 3.1 建议的对抗网络模块
 
 条件生成对抗网络（`cGAN`）将是传统生成对抗网络（`GAN`）的扩展，它将条件信息引入生成事件中。在 `cGAN` 中，生成器模块和判别器单元都接收额外信息（称为条件信息），以控制和引导生成过程。这种条件可以采取类别标签、属性或任何其他相关信息的形式，有助于生成符合特定特征的数据，如图 1 所示。
 
@@ -7198,13 +7131,13 @@ L_D = E (log (D(x, c))) + E (log (1 - D (G (z, c), c))) (1)
 L_G = E (log (1 - D (G (z, c), c))) (2)
 ```
 
-#### 图 1. 建议的对抗网络模块
+### 图 1. 建议的对抗网络模块
 
 ![979-8-3693-9225-6.ch016.f01](img/979-8-3693-9225-6.ch016.f01.png)
 
 一旦 `cGAN` 训练完成，您可以通过向生成器提供条件向量 (`c`) 和随机噪声 (`z`) 来采样新数据。这将生成基于指定属性或特征的数据样本。
 
-#### 3.2 加权编码器组件
+### 3.2 加权编码器组件
 
 加权编码器组件是一种基于深度神经网络，通常由多层自编码器组成，自编码器是一种用于属性降维、特征学习和数据重构的基于神经网络。这些组件常用于特征选择和提取等应用。它是一个由编码器和解码器组成的基于神经网络。编码器将输入数据压缩为低维表示，而解码器尝试从这种压缩表示中重构原始数据。编码器函数 (`E`) 和解码器函数 (`D`) 可定义如下，见 (3)、(4)：
 
@@ -7230,7 +7163,7 @@ z = w_1 * E_1(x) + w_2 * E_2(E_1(x)) + ... + w_n * E_n(...E_2(E_1(x))) (6)
 
 此处，`E_i(x)` 表示第 i 个编码器层对输入 `x` 的输出。权重 (`w_i`) 通常在训练过程中学习。网络学会为每一层分配不同的权重，以优化特定目标，如特征选择或属性降维。加权编码器组件是传统自编码器的扩展，其中编码器的每一层都分配一个权重，以在特征学习过程中强调或弱化不同层的重要性。
 
-### 4. 建议方法论
+## 4. 建议方法论
 
 建议的 ID-ANWE（基于对抗网络和加权编码器的威胁识别）利用生成对抗网络（`GANs`）的优势，解决有效生成少数类攻击样本的挑战。ID-ANWE 专注于提高新给定的少数类攻击数据样本的有效性，旨在解决框架崩溃和开发过程中的无能开发等问题。ID-ANWE 生成器的目标是生成既高质量又多样化的合成少数类攻击样本。为此，生成器被训练以最小化一个损失函数，该函数鼓励其生成难以被判别单元与真实攻击样本区分开来的样本。这鼓励生成器单元生成高质量的攻击样本，如公式 (7)所示：
 
@@ -7254,22 +7187,19 @@ L_s = f(G(z, c), M) (9)
 
 其中 `G(z, c)` 为生成样本，`M` 代表少数类攻击类别的指定框架，`f` 表示测量生成样本与指定模型之间差异的差异或损失函数。ID-ANWE 的整体目标结合了生成器的目标、判别器的目标和指定框架损失，如 (10) 所示。
 
-
-
-
 $$L_{\text{total}} = L_G + \lambda \times L_s - L_D$$
 
 (10)
 
 其中 $\lambda$ 是一个控制指定框架损失影响的超参数。减去 $L_D$ 是因为生成器旨在最小化其损失，而判别器旨在最大化它。通过在训练阶段优化此组合函数，ID-ANWE 激励生成器生成高质量、多样化的少数类攻击样本，这些样本与指定框架一致，同时缓解模式崩溃和训练不稳定等问题。
 
-### 5. 结果与讨论
+## 5. 结果与讨论
 
 带加权编码器的入侵检测对抗网络（IDAN）在网络安全领域展现出了令人期待的结果。在实验评估中，与传统方法相比，IDAN 框架表现出了显著提升的检测和分类网络入侵的能力。通过引入加权编码器，IDAN 架构在有效捕捉底层数据模式的同时降低了输入特征的维度，这有助于提高有效性。在 IDAN 框架中引入加权编码器被证明是实现卓越威胁检测精度的关键要素。该编码器使框架能够为不同特征分配不同程度的重要性，有效地突出了与入侵检测最相关的属性。因此，该框架展示了区分合法网络流量和恶意入侵的增强能力。加权编码器不仅提高了框架的整体精度，还增强了其对对抗攻击和数据噪声的鲁棒性。
 
 总之，带加权编码器的入侵检测对抗网络在网络安全领域提供了显著优势。其有效检测和分类网络入侵的能力，加上其鲁棒性和适应性，使其成为抵御不断演变的威胁、保护网络基础设施的宝贵工具。进一步的研究和优化有望释放该方法论更大的潜力。
 
-#### 5.1 拟议系统的训练损失
+### 5.1 拟议系统的训练损失
 
 训练损失是评估带加权编码器的入侵检测对抗网络（IDAN）有效性和训练进度的重要方面。在训练过程中，网络的损失函数作为模型从数据中学习并调整其参数情况的重要指标。在我们对 IDAN 的实验中，我们观察到了与训练损失相关的几个关键发现。
 
@@ -7279,11 +7209,11 @@ $$L_{\text{total}} = L_G + \lambda \times L_s - L_D$$
 
 此外，监控训练损失的轨迹帮助我们识别出潜在问题，如过拟合或欠拟合，如图 2 所示。训练损失的稳步下降表明模型泛化良好。值得注意的是，网络在训练期间表现出高度的稳定性，进一步强调了 IDAN 架构的鲁棒性。因此，带加权编码器的入侵检测对抗网络的训练损失为模型的学习过程及其适应入侵检测复杂性的能力提供了重要见解。加权编码器与持续下降的损失相结合，凸显了模型的有效性及其在网络安全实际应用中的潜力。进一步的细化和微调可能会继续提高网络的有效性。
 
-#### 图 2. 拟议系统的训练损失
+### 图 2. 拟议系统的训练损失
 
 ![979-8-3693-9225-6.ch016.f02](img/979-8-3693-9225-6.ch016.f02.png)
 
-#### 5.2 拟议系统生成与判别模块的有效性
+### 5.2 拟议系统生成与判别模块的有效性
 
 ID-ANWE 方法论中生成器和判别器模块损失的有效性，为网络在不同轮次中的学习动态提供了宝贵见解。在我们的实验中，我们观察到这些损失中存在显著模式。在初始轮次期间，生成器和判别器模块损失均表现出相对较高的值，这是预期的，因为网络从随机权重开始，尚未学习底层数据分布。随着训练的进行，我们观察到生成器损失下降，表明生成器网络在生成类似于合法网络流量特征的合成数据样本方面变得越来越熟练。相反，判别器损失也随之下降，标志着判别器网络区分真实数据和合成数据的能力得到了提高。
 
@@ -7291,17 +7221,13 @@ ID-ANWE 方法论中生成器和判别器模块损失的有效性，为网络在
 
 此外，随着训练继续进入更多轮次，生成器和判别器模块损失达到了平衡点，表明网络已实现一种平衡：生成器产生高度逼真的样本，而判别器在区分真实和合成数据方面面临越来越大的困难。这种平衡标志着 ID-ANWE 模型训练成功，表明它能够生成网络流量的准确表示并有效检测入侵。总之，监控 ID-ANWE 方法论中不同轮次的生成器和判别器模块损失对于跟踪训练进度和实现平衡良好的对抗网络至关重要，如图 3 所示。这证明了网络适应和提高其性能的能力，最终增强了其在威胁检测任务中的有效性。进一步的优化和实验可能会在网络安全应用中带来更具适应性和准确性的结果。
 
-#### 图 3. 拟议系统的总体损失
+### 图 3. 拟议系统的总体损失
 
 ![979-8-3693-9225-6.ch016.f03](img/979-8-3693-9225-6.ch016.f03.png)
 
-#### 5.3 拟议系统在各种场景下的精度
+### 5.3 拟议系统在各种场景下的精度
 
 评估拟议的 ID-ANWE（带加权编码器的入侵检测对抗网络）系统在各种场景下的精度，对于理解其鲁棒性和实际适用性非常重要。
-
-
-
-
 
 所提出的 ID-ANWE 系统在一系列场景中展现了令人印象深刻的精确度，证实了其作为一种多功能威胁识别解决方案的有效性。在我们的广泛评估中，我们考察了该系统在多样化网络环境中的有效性，环境范围涵盖从低流量时段到高流量突发期，以及从标准攻击模式到新颖的、此前未见过的威胁。值得注意的是，ID-ANWE 在这些场景中始终表现出高度的精确度。
 
@@ -7311,7 +7237,7 @@ ID-ANWE 方法论中生成器和判别器模块损失的有效性，为网络在
 
 ![979-8-3693-9225-6.ch016.f04](img/979-8-3693-9225-6.ch016.f04.png)
 
-#### 5.4 负样本轮次的识别
+### 5.4 负样本轮次的识别
 
 在跨不同时间戳对 ID-ANWE 方法论的评估中，实际负样本和真负样本的识别在衡量系统检测正常网络行为的精确度方面发挥了关键作用。实际负样本代表系统正确识别出良性网络活动的实例，而真负样本则表示那些系统不仅正确分类了合法流量，而且未引发误报或将其错误标记为可疑的案例。
 
@@ -7331,6 +7257,8 @@ ID-ANWE 方法论始终展现出其在不同时间戳下识别实际负样本和
 
 就整体训练损失而言，ID-ANWE 方法论表现出随时间持续的改进。随着系统学习并适应网络流量的细微差别，训练损失稳步下降，突显了其适应能力和学习能力。此外，系统输出中实际负样本和真负样本的识别，是衡量其检测良性网络活动精确度的关键指标。ID-ANWE 始终实现了约 97.5% 的高真负样本率，这凸显了其在不引发误报的情况下可靠过滤合法网络通信的能力。
 
+
+
 总之，ID-ANWE 方法论中对抗网络、智能特征提取和优先编码器组件的融合，产生了一种适应性强且智能的网络入侵检测解决方案。凭借令人印象深刻的精确度、生成器和判别器损失的平衡、不断下降的训练损失以及高真负样本率，该研究显著推进了网络安全和面对不断演变威胁时的弹性。它为在不断变化的网络安全格局中加强网络防御的持续努力做出了显著贡献。
 
 ## 参考文献
@@ -7344,12 +7272,6 @@ Geetha, K., Srivani, A., Gunasekaran, S., Ananthi, S., & Sangeetha, S. "Geospati
 Huang, S., & Lei, K. (2020). IGAN-IDS: An imbalanced generative adversarial network towards threat identifying system in ad-hoc networks. *Ad Hoc Networks*, 105, 102177. DOI: [10.1016/j.adhoc.2020.102177](http://dx.doi.org/10.1016/j.adhoc.2020.102177)
 
 Idrissi, I., Azizi, M., & Moussaoui, O. (2022). An unsupervised generative adversarial network based-host threat identifying system for internet of things devices. *Indonesian Journal of Electrical Engineering and Computer Science*, 25(2), 1140–1150. DOI: [10.11591/ijeecs.v25.i2.pp1140-1150](http://dx.doi.org/10.11591/ijeecs.v25.i2.pp1140-1150)
-
-
-
-
-
-## 参考文献
 
 ## GAN 在网络威胁识别中的应用研究
 
@@ -7397,6 +7319,10 @@ Zhang, G., Wang, X., Li, R., Song, Y., He, J., & Lai, J. (2020). Network threat 
 
 ## 综合参考文献汇编
 
+
+
+# 参考文献列表
+
 A, Thi, Na. (2022). Secure Data Sharing Using 3DES Algorithm. *International Journal For Science Technology And Engineering*, 10(6), 5101-5104. DOI: [10.22214/ijraset.2022.45107](http://dx.doi.org/10.22214/ijraset.2022.45107)
 
 Aydeger, A., Manshaei, M. H., Rahman, M. A., & Akkaya, K. (2021). Strategic Defense Against Stealthy Link Flooding Attacks: A Signaling Game Approach. *IEEE Transactions on Network Science and Engineering*, 8(1), 751-764. DOI: [10.1109/TNSE.2021.3052090](http://dx.doi.org/10.1109/TNSE.2021.3052090)
@@ -7406,12 +7332,6 @@ Nhlabatsi, A., et al. (2021). Threat-Specific Security Risk Evaluation in the Cl
 Abba Ari, A. A., Ngangmo, O. K., Titouna, C., Thiare, O., Mohamadou, A., & Gueroui, A. M. (2024). Enabling privacy and security in Cloud of Things: Architecture, applications, security & privacy challenges. *Applied Computing and Informatics*, 20(1/2), 119–141. DOI: [10.1016/j.aci.2019.11.005](http://dx.doi.org/10.1016/j.aci.2019.11.005)
 
 Sangeetha, S., Baskar, K., Kalaivaani, P. C. D., & Kumaravel, T. (2023). Deep-hierarchical learning-based Early Parkinson’s Disease Detection from Brain MRI Image. In *2023 7th International Conference on Smart Computing and Control Systems (ICICCS)* (pp. 490-495). Madurai, India. DOI: [10.1109/ICICCS56967.2023.10142754](http://dx.doi.org/10.1109/ICICCS56967.2023.10142754)
-
-
-
-
-
-## 参考文献列表
 
 Abd El-Latif, A. A., Abd-El-Atty, B., Mehmood, I., Muhammad, K., Venegas-Andraca, S. E., & Peng, J. (2021, July). Quantum-Inspired Block chain-Based Cyber security: Securing Smart Edge Utilities in IoT-Based Smart Cities. *Information Processing & Management*, 58(4), 102549. DOI: [10.1016/j.ipm.2021.102549](http://dx.doi.org/10.1016/j.ipm.2021.102549)
 
@@ -7461,6 +7381,10 @@ Alhajjar, E., Maxwell, P., & Bastian, N. (2021). Adversarial machine learning in
 
 Alhogail, A., & Alsabih, A. (2021). Applying machine learning and natural language processing to detect phishing email. *Computers & Security*, 110, 102414. DOI: [10.1016/j.cose.2021.102414](http://dx.doi.org/10.1016/j.cose.2021.102414)
 
+
+
+# 参考文献列表
+
 Ali, S. A., Roy, N. R., & Raj, D. (2023). Software Defect Prediction using Machine Learning. *Proceedings of the 17th INDIACom; 10th International Conference on Computing for Sustainable Global Development, INDIACom 2023*, PP: 639-642.
 
 Sudarsa, D., A, N. R., & AP, S. (2023). An effective and secured authentication and sharing of data with dynamic groups in cloud. *Data and Knowledge Engineering*, 145, 102125. DOI: [10.1016/j.datak.2022.102125](http://dx.doi.org/10.1016/j.datak.2022.102125)
@@ -7473,11 +7397,7 @@ Ali, M., Tang Jung, L., Hassan Sodhro, A., Ali Laghari, A., Birahim Belhaouari, 
 
 Ali, V., Norman, A. A., & Azzuhri, S. R. B. (2023). Characteristics of Blockchain and Its Relationship With Trust. *IEEE Access : Practical Innovations, Open Solutions*, 11, 15364–15374. DOI: [10.1109/ACCESS.2023.3243700](http://dx.doi.org/10.1109/ACCESS.2023.3243700)
 
-
-
-
-
-## 参考文献列表
+## 参考文献
 
 Aliyu, A. L., Aneiba, A., Patwary, M., & Bull, P. (2020). 面向软件定义网络（SDN）控制器与网络应用的信任管理框架。*Computer Networks*, 181, 107421. DOI: [10.1016/j.comnet.2020.107421](http://dx.doi.org/10.1016/j.comnet.2020.107421)
 
@@ -7539,13 +7459,11 @@ Banerjee, U., Vashishtha, A., & Saxena, M. (2010). 评估 WireShark 作为入侵
 
 Barnum, S. (2012). 利用结构化威胁信息表达（STIX）标准化网络威胁情报信息。*Mitre Corporation*, 11, 1–22.
 
-
-
-
-
-## 参考文献
-
 Belchior, R., Vasconcelos, A., Guerreiro, S., & Correia, M. (2021). 区块链互操作性综述：过去、现在与未来趋势。*ACM Computing Surveys*, 54(8), 41. DOI: [10.1145/3471140](http://dx.doi.org/10.1145/3471140)
+
+
+
+# 参考文献
 
 Bel, H. F., & Sabeen, S. (2022). 物联网安全综述：攻击、挑战与对策。*Webology*, 19(1), 3741–3763. DOI: [10.14704/WEB/V19I1/WEB19246](http://dx.doi.org/10.14704/WEB/V19I1/WEB19246)
 
@@ -7605,11 +7523,7 @@ Chen, S., Liu, Y., & Cui, S. (2019). 5G 网络安全：综述。*IEEE Access*, v
 
 Chui, K. T., Gupta, B. B., Liu, J., Arya, V., Nedjah, N., Almomani, A., & Chaurasia, P. (2023). 物联网与网络物理系统综述：标准、算法、应用、安全、挑战与未来方向。*Information (Basel)*, 14(7), 388。DOI: [10.3390/info14070388](http://dx.doi.org/10.3390/info14070388)
 
-
-
-
-
-## 参考文献
+## 参考文献 (续)
 
 CIC-Evasive-PDFMal2022 | 数据集 | 加拿大网络安全研究所 | UNB. (n.d.). [`www.unb.ca/cic/datasets/pdfmal-2022.html`](https://www.unb.ca/cic/datasets/pdfmal-2022.html)
 
@@ -7632,6 +7546,10 @@ Deloitte. (2021). 德勤 2021 年全球区块链调查：数字资产新时代 (
 Deogirikar, J., & Vidhate, A. (2017). IoT 中的安全攻击：综述。 *I-SMAC 国际会议 (IoT in Social, Mobile, Analytics and Cloud)*。 DOI: [10.1109/I-SMAC.2017.8058363](http://dx.doi.org/10.1109/I-SMAC.2017.8058363)
 
 Deshmukh, R. V., & Devadkar, K. K. (2015). 理解 DDoS 攻击及其在云环境中的影响。 *Procedia Computer Science*, 49, 202–210. DOI: [10.1016/j.procs.2015.04.245](http://dx.doi.org/10.1016/j.procs.2015.04.245)
+
+
+
+## 参考文献
 
 Di Matteo, S., Baldanzi, L., Crocetti, L., Nannipieri, P., Fanucci, L., & Saponara, S. (2021). 用于实时 IoT 应用的安全椭圆曲线加密处理器。 *Energies*, 14(15), 4676. DOI: [10.3390/en14154676](http://dx.doi.org/10.3390/en14154676)
 
@@ -7673,12 +7591,6 @@ Furht, B., & Escalante, A. (2010). *云计算手册* (Vol. 3)。 Springer. DOI: 
 
 Furstenau, L. B., Rodrigues, Y. P. R., Sott, M. K., Leivas, P., Dohan, M. S., Lo’pez-Robles, J. R., Cobo, M. J., Bragazzi, N. L., & Choo, K. K. R. (2023). 物联网：概念网络结构、主要挑战与未来方向。 *Digital Communications and Networks*, 9(3), 677–687. DOI: [10.1016/j.dcan.2022.04.027](http://dx.doi.org/10.1016/j.dcan.2022.04.027)
 
-
-
-
-
-## 参考文献
-
 G. Somani, M. S. Gaur, D. Sanghi, M. Conti and M. Rajarajan, “Scale Inside-Out: Rapid Mitigation of Cloud DDoS Attacks,” in *IEEE Transactions on Dependable and Secure Computing*, vol. 15, no. 6, pp. 959-973, 1 Nov.-Dec. 2018. DOI: [10.1109/TDSC.2017.2763160](http://dx.doi.org/10.1109/TDSC.2017.2763160)
 
 Gad, A. G. (2022). Particle swarm optimization algorithm and its applications: A systematic review. *Archives of Computational Methods in Engineering*, 29(5), 2531–2561. DOI: [10.1007/s11831-021-09694-4](http://dx.doi.org/10.1007/s11831-021-09694-4)
@@ -7713,6 +7625,10 @@ Greschbach, B., Kreitz, G., & Buchegger, S. (2012). New privacy challenges in de
 
 Grolemund, G., & Wickham, H. (2017). *R for data science*. O’Reilly Media.
 
+
+
+# 参考文献
+
 Guo, H., & Yu, X. (2022). A survey on blockchain technology and its security. *Elsevier*, 3(2). DOI: [10.1016/j.bcra.2022.100067](http://dx.doi.org/10.1016/j.bcra.2022.100067)
 
 Guruswamy, S., Pojic´, M., Subramanian, J., Mastilovic´, J., Sarang, S., Subbanagounder, A., Stojanović, G., & Jeoti, V. (2022). Toward better food security using concepts from industry 5.0. *Sensors (Basel)*, 22(21), 8377. DOI: [10.3390/s22218377](http://dx.doi.org/10.3390/s22218377) PMID: [36366073](https://pubmed.ncbi.nlm.nih.gov/36366073)
@@ -7738,12 +7654,6 @@ Handigol, N., Heller, B., Jeyakumar, V., Lantz, B., & McKeown, N. (2012, Decembe
 Hao, K., Xin, J., Wang, Z., Yao, Z., & Wang, G. (2023, August 1). Efficient and Secure Data Sharing Scheme on Interoperable Blockchain Database. *IEEE Transactions on Big Data*, 9(4), 1171–1185. DOI: [10.1109/TBDATA.2023.3265178](http://dx.doi.org/10.1109/TBDATA.2023.3265178)
 
 Haque, A. B., Islam, A. K. M. N., Hyrynsalmi, S., Naqvi, B., & Smolander, K. (2021). GDPR Compliant Blockchains–A Systematic Literature Review. *IEEE Access : Practical Innovations, Open Solutions*, 9, 50593–50606. DOI: [10.1109/ACCESS.2021.3069877](http://dx.doi.org/10.1109/ACCESS.2021.3069877)
-
-
-
-
-
-## 参考文献
 
 Harbi, Y., Aliouat, Z., Refoufi, A., & Harous, S. (2021). 物联网近期安全趋势：综合综述。 *IEEE Access : Practical Innovations, Open Solutions*, 9, 113292–113314. DOI: [10.1109/ACCESS.2021.3103725](http://dx.doi.org/10.1109/ACCESS.2021.3103725)
 
@@ -7789,6 +7699,10 @@ Huynh, T. T., Nguyen, T. D., Hoang, T., Tran, L., & Choi, D. (2021). 一种面�
 
 Iannacone, M., Bohn, S., Nakamura, G., Gerth, J., Huffer, K., Bridges, R., & Goodall, J. (2015, April). 开发用于网络安全知识图谱的本体。载于 *第十届网络与信息安全研究年会论文集* (pp. 1-4)。 DOI: [10.1145/2746266.2746278](http://dx.doi.org/10.1145/2746266.2746278)
 
+
+
+# 参考文献
+
 Ibarra, J., Jahankhani, H., & Kendzierskyj, S. (2019). 网络物理攻击与医疗数据价值：面对网络勒索与有组织犯罪时代。 Springer。 [`link.springer.com/book/10.1007/978-3-030-11289-9`](https://link.springer.com/book/10.1007/978-3-030-11289-9)
 
 Idrees, S., Nowostawski, M., Jameel, R., & Mourya, A. (2021). 面向工业应用的区块链技术安全层面。 *Electronics (Basel)*, 10(8), 951. DOI: [10.3390/electronics10080951](http://dx.doi.org/10.3390/electronics10080951)
@@ -7800,10 +7714,6 @@ Iliyasu, A. S., & Deng, H. N.-G. A. N. (2022, December). 一种基于生成对�
 Inayat, U., Zia, M. F., Mahmood, S., Khalid, H. M., & Benbouzid, M. (2022). 物联网系统中网络攻击检测的基于学习的方法：方法、分析与未来展望综述。 *Electronics (Basel)*, 11(9), 1502. 网络先行出版。 DOI: [10.3390/electronics11091502](http://dx.doi.org/10.3390/electronics11091502)
 
 决策树简介。 (2020)。 *Capable Machine*。 [`capablemachine.wordpress.com/2020/05/05/decision-tree-2/`](https://capablemachine.wordpress.com/2020/05/05/decision-tree-2/)
-
-
-
-
 
 ## 参考文献
 
@@ -7855,6 +7765,10 @@ Kaur, M., Zubair khan, M., Gupta, S., Noorwali, A., Chakraborty, C., & Kumar Pan
 
 Kaur, R., & Kaur, J. (2015). Cloud computing security issues and its solution: A review. *2015 2nd International Conference on Computing for Sustainable Global Development (INDIACom)*, New Delhi, India, pp. 1198-1200.
 
+
+
+## 参考文献
+
 Kaur, M., & Gupta, S. (2021). Blockchain Consensus Protocols: State-of-the-art and Future Directions. *2021 International Conference on Technological Advancements and Innovations (ICTAI)*, 446–453. DOI: [10.1109/ICTAI53825.2021.9673260](http://dx.doi.org/10.1109/ICTAI53825.2021.9673260)
 
 Kaur, P. (2022). *Encryption Algorithms for Cloud Computing and Quantum Blockchain Book Artificial Intelligence, Machine Learning and Blockchain in Quantum Satellite, Drone and Network* (1st ed.). Isha Sharma, Rahul Kumar Singh.
@@ -7862,12 +7776,6 @@ Kaur, P. (2022). *Encryption Algorithms for Cloud Computing and Quantum Blockcha
 Kaur, S., & Randhawa, S. (2020). Dark Web: A Web of Crimes. *Wireless Personal Communications*, 112(4), 2131–2158. DOI: [10.1007/s11277-020-07143-2](http://dx.doi.org/10.1007/s11277-020-07143-2)
 
 Kautish, S., A, R., & Vidyarthi, A. (2022, September). SDMTA: Attack Detection and Mitigation Mechanism for DDoS Vulnerabilities in Hybrid Cloud Environment. *IEEE Transactions on Industrial Informatics*, 18(9), 6455–6463. DOI: [10.1109/TII.2022.3146290](http://dx.doi.org/10.1109/TII.2022.3146290)
-
-
-
-
-
-## 参考文献
 
 Kemp, S. (2024, February 20). Digital 2024: India — DataReportal – Global Digital Insights. DataReportal – Global Digital Insights. [`datareportal.com/reports/digital-2024-india`](https://datareportal.com/reports/digital-2024-india)
 
@@ -7921,15 +7829,15 @@ Leteane, O., & Ayalew, Y. (2024). Improving the trustworthiness of traceability 
 
 Li (2019). Research on KNN Algorithm in Malicious PDF Files Classification under Adversarial Environment. Proceedings of the 2019 4th International Conference on Big Data and Computing - ICBDC 2019. DOI: [10.1145/3335484.3335527](http://dx.doi.org/10.1145/3335484.3335527)
 
+
+
+## 参考文献
+
 Liang, X., & Kim, Y. (2021, January). A survey on security attacks and solutions in the IoT network. In 2021 IEEE 11th annual computing and communication workshop and conference (CCWC) (pp. 0853-0859). IEEE. DOI: [10.1109/CCWC51732.2021.9376174](http://dx.doi.org/10.1109/CCWC51732.2021.9376174)
 
 Liao, D., Huang, S., Tan, Y., & Bai, G. (2020). Network threat identifying method based on gan model. In 2020 International Conference on Computer Communication and Network Security (CCNS) (pp. 153-156). IEEE. DOI: [10.1109/CCNS50731.2020.00041](http://dx.doi.org/10.1109/CCNS50731.2020.00041)
 
 Li, Q., Liu, W., Wu, H., Xie, C., & Yang, W. (2020). LSTM based phishing detection for big email data. IEEE Transactions on Big Data, 8(1), 278–288. DOI: [10.1109/TBDATA.2020.2978915](http://dx.doi.org/10.1109/TBDATA.2020.2978915)
-
-
-
-
 
 ## 参考文献
 
@@ -7995,10 +7903,6 @@ Miki, T., Miura, N., Sonoda, H., Mizuta, K., & Nagata, M. (2020). 一种用于�
 
 Miller, L., & Pahl, M.-O. (2024). 基于区块链的协同网络安全：综述。 *arXiv*， 1(1)， 35。
 
-
-
-
-
 ## 参考文献列表
 
 Miller, S. D., & Venkatesan, R. (2009). 基于 GRH 的扩展图及其在椭圆曲线密码学中的应用。*Journal of Number Theory*, 129(6), 1491–1504. DOI: [10.1016/j.jnt.2008.11.006](http://dx.doi.org/10.1016/j.jnt.2008.11.006)
@@ -8020,6 +7924,10 @@ Monrat, A., Schelén, O., & Andersson, K. (2019). 从应用、挑战和机遇视
 Mooijman, P., Catal, C., Tekinerdogan, B., Lommen, A., & Blokland, M. (2023). 数据平衡方法的效果：一个案例研究。*Applied Soft Computing*, 132, 109853. DOI: [10.1016/j.asoc.2022.109853](http://dx.doi.org/10.1016/j.asoc.2022.109853)
 
 Moore, A. P., Capelli, D. M., Caron, T. C., Shaw, E., Spooner, D., & Trzeciak, R. F. (2011). 内部人员窃取知识产权的初步模型。*Journal of Wireless Mobile Networks, Ubiquitous Computing and Dependable Applications*, 2(1)。
+
+
+
+## 参考文献
 
 Morgado, A., Mohammed, K., Huq, S., Mumtaz, S., & Rodriguez, J. (2018). 5G 技术综述：监管、标准化和工业视角。*Digital Communications and Networks*, 4, 2, 2018, 87-97, ISSN 2352-8648. https://doi.org/DOI: [10.1016/j.dcan.2017.09.010](http://dx.doi.org/10.1016/j.dcan.2017.09.010)
 
@@ -8065,12 +7973,6 @@ O’Connell, E., Moore, D., & Newe, T. (2020). 在制造业实施 5G 面临的�
 
 Ogonji, M. M., Okeyo, G., & Wafula, J. M. (2020). 物联网隐私与安全综述。*Computer Science Review*, 38, 100312. DOI: [10.1016/j.cosrev.2020.100312](http://dx.doi.org/10.1016/j.cosrev.2020.100312)
 
-
-
-
-
-## 参考文献
-
 Okur, C., & Dener, M. (2020). 使用机器学习方法检测物联网僵尸网络攻击。*信息安全与密码学国际会议 (ISCTURKEY)*。电子 ISBN：978-1-6654-1863-8。
 
 Omolara, A. E., Alabdulatif, A., Abiodun, O. I., Alawida, M., Alabdulatif, A., & Arshad, H. (2022). 物联网安全：一项涵盖未探索领域和新见解的综述。*计算机与安全*，112，102494。DOI：[10.1016/j.cose.2021.102494](http://dx.doi.org/10.1016/j.cose.2021.102494)
@@ -8111,6 +8013,10 @@ Phemius, K., Bouet, M., & Leguay, J. (2014, May). DISCO：多域环境中的分�
 
 Phillip Williams et al. (2022). 物联网安全综述，重点关注新兴技术的影响。*物联网*，第 19 卷，ISSN 2542-6605。DOI：[10.1016/j.iot.2022.100564](http://dx.doi.org/10.1016/j.iot.2022.100564)
 
+
+
+# 参考文献
+
 Pinkston, J., Joshi, A., & Finin, T. (2003, July). 面向目标的入侵检测本体。载于 *分布式系统本体研讨会*，于第 18 届国际人工智能联合会议期间举行。
 
 Mavroeidis, V., & Bromander, S. (2017, September). 网络威胁情报模型：网络威胁情报中分类法、共享标准和本体的评估。载于 *2017 欧洲情报与安全信息学会议 (EISIC)* (pp. 91-98)。IEEE。
@@ -8132,12 +8038,6 @@ Pudjihartono, N., Fadason, T., Kempa-Liehr, A. W., & O’Sullivan, J. M. (2022).
 Putz, B., Vielberth, M., & Pernul, G. (2022). BISCUIT - 基于人工观察的区块链安全事件报告。*ACM*，1–6。DOI：[10.1145/3538969.3538984](http://dx.doi.org/10.1145/3538969.3538984)
 
 Q. Huang, Y. Yang, W. Yue and Y. He, “云计算中多所有者的安全数据组共享与条件分发”，载于 *IEEE Transactions on Cloud Computing*，vol. 9, no. 4, pp. 1607-1618, 1 Oct.-Dec. 2021. DOI：[10.1109/TCC.2019.2908163](http://dx.doi.org/10.1109/TCC.2019.2908163)
-
-
-
-
-
-## 参考文献
 
 Quinto, B. (2018, June 12). *Next-Generation Big Data*. Apress. [`books.google.ie/books?id=teZfDwAAQBAJ&printsec=frontcover&dq=Next-Generation+Big+Data&hl=&cd=1&source=gbs_api`](http://books.google.ie/books?id=teZfDwAAQBAJ&printsec=frontcover&dq=Next-Generation+Big+Data&hl=&cd=1&source=gbs_api)
 
@@ -8183,6 +8083,10 @@ Rawat, D. B., Doku, R., & Garuba, M. (2021). Cybersecurity in big data era: From
 
 Ray, S. (2019). 6 Easy Steps to Learn Naive Bayes Algorithm (with code in Python). *Analytics Vidhya*. [`www.analyticsvidhya.com/blog/2017/09/naive-bayes-explained/`](https://www.analyticsvidhya.com/blog/2017/09/naive-bayes-explained/)
 
+
+
+# 参考文献
+
 Rhee, J., Riley, R., Lin, Z., Jiang, X., & Xu, D. (2014, January). Data-Centric OS Kernel Malware Characterization. *IEEE Transactions on Information Forensics and Security*, 9(1), 72–87. DOI: [10.1109/TIFS.2013.2291964](http://dx.doi.org/10.1109/TIFS.2013.2291964)
 
 Rieck, K., Trinius, P., Willems, C., & Holz, T. (2011). Automatic analysis of malware behaviour using machine learning. *Journal of Computer Security*, 19(4), 639–668. DOI: [10.3233/JCS-2010-0410](http://dx.doi.org/10.3233/JCS-2010-0410)
@@ -8198,12 +8102,6 @@ Sabrina De Capitani di Vimercati, Sara Foresti, Stefano Paraboschi, Member, Gera
 Sadhu, P. K., Yanambaka, V. P., & Abdelgawad, A. (2022). Internet of things: Security and solutions survey. *Sensors (Basel)*, 22(19), 7433. DOI: [10.3390/s22197433](http://dx.doi.org/10.3390/s22197433) PMID: [36236531](https://pubmed.ncbi.nlm.nih.gov/36236531)
 
 Saha, S., Karar, K., & Karmakar, R. (2024). Ethnos: An Ethereum-based online social networking system with two-factor authentication and trust score. In *Proceedings - 2nd International Conference on Advancement in Computation and Computer Technologies (InCACCT 2024)*。
-
-
-
-
-
-## 参考文献
 
 Sakhi, Bandyopadhyay., Sunita, Sarkar., Somnath, Mukhopadhyay. (2023). 利用 AES 加密和 3D 图像中的 DFS 图遍历隐藏秘密数据。1-4。DOI: [10.1109/ICEEICT56924.2023.10156957](http://dx.doi.org/10.1109/ICEEICT56924.2023.10156957)
 
@@ -8257,13 +8155,11 @@ Shaharuddin, S., Maulud, K. N. A., Rahman, S. A. F. S. A., Ani, A. I. C., & Prad
 
 Shahriar, M. H., Haque, N. I., Rahman, M. A., & Alonso, M. G-ids: 生成对抗网络辅助的威胁识别系统。载于 2020 IEEE 44th Annual Computers, Software, and Applications Conference (COMPSAC) 2020 Jul 13 (pp. 376-385)。IEEE。
 
-Shakarian, P., & Shakarian, J. 2016, March. 面向网络威胁行为者的社会文化建模。载于第三十届 AAAI 人工智能会议研讨会。
 
 
+# 参考文献
 
-
-
-## 参考文献
+Shakarian, P., & Shakarian, J. (2016, March). 面向网络威胁行为者的社会文化建模。载于第三十届 AAAI 人工智能会议研讨会。
 
 Shammar, E. A., Zahary, A. T., & Al-Shargabi, A. A. (2021). 物联网与区块链融合综述：安全视角。 *IEEE Access : Practical Innovations, Open Solutions*, 9, 156114–156150. DOI: [10.1109/ACCESS.2021.3129697](http://dx.doi.org/10.1109/ACCESS.2021.3129697)
 
@@ -8325,12 +8221,6 @@ Sood, T., Prakash, S., Sharma, S., Singh, A., & Choubey, H. (2022). 基于条件
 
 Sott, M. K., Furstenau, L. B., Kipper, L. M., Giraldo, F. D., Lopez-Robles, J. R., Cobo, M. J., Zahid, A., Abbasi, Q. H., & Imran, M. A. (2020). 精准技术与农业 4.0 技术促进咖啡行业可持续发展：现状、挑战与未来趋势。 *IEEE Access : Practical Innovations, Open Solutions*, 8, 149854–149867. DOI: [10.1109/ACCESS.2020.3016325](http://dx.doi.org/10.1109/ACCESS.2020.3016325)
 
-
-
-
-
-## 参考文献
-
 Srivastava, N., & Chandra Jaiswal, U. (2019). 网络安全中的大数据分析技术。 *RE:view*, 579–585. 网络先行出版。 DOI: [10.1109/ICCMC.2019.8819634](http://dx.doi.org/10.1109/ICCMC.2019.8819634)
 
 Stillions, R. (2014). DML 模型。 2022 年 1 月 29 日检索。
@@ -8352,6 +8242,10 @@ Taherdoost, H. (2023). 安全与物联网：效益、挑战与未来展望。 *E
 Tama, D., & Wicaksana, A. (2023). Near Protocol 区块链上去中心化社交媒体的性能评估。 在 *2023 年第 17 届泛在信息管理与通信国际会议论文集 (IMCOM 2023)* 中。 DOI: [10.1109/IMCOM56909.2023.10035654](http://dx.doi.org/10.1109/IMCOM56909.2023.10035654)
 
 Tank, . (2020). 虚拟化环境中的恶意软件检测方法。 *计算机与信息科学通讯* (Vol. 1235)。 Springer。 DOI: [10.1007/978-981-15-6648-6_21](http://dx.doi.org/10.1007/978-981-15-6648-6_21)
+
+
+
+# 参考文献
 
 Tan, T. M., & Saraniemi, S. (2023). 区块链赋能交易中的信任：区块链营销的未来方向。 *Journal of the Academy of Marketing Science*, 51(4), 914–939。 DOI: [10.1007/s11747-022-00889-0](http://dx.doi.org/10.1007/s11747-022-00889-0)
 
@@ -8392,12 +8286,6 @@ Vanin, P., Newe, T., Dhirani, L. L., O’Connell, E., O’Shea, D., Lee, B., & R
 Varghese, J. E., & Muniyal, B. (2021). 利用 Wireshark 进行软件定义网络试点研究，分析网络参数以检测 DDoS 攻击。 在 *竞争策略信息与通信技术 (ICTCS 2020) ICT 智能策略* 中 (pp. 475-487)。 Springer Singapore。 DOI: [10.1007/978-981-16-0882-7_41](http://dx.doi.org/10.1007/978-981-16-0882-7_41)
 
 Varun Shah. (2022). 网络安全的机器学习算法：检测与预防威胁。 DOI: [10.5281/ZENODO.10779509](http://dx.doi.org/10.5281/ZENODO.10779509)
-
-
-
-
-
-## 参考文献
 
 Veenoo Upadhyay, SuryakantYadav (2018). 网络安全挑战及其新兴趋势研究：当前技术。*International Journal of Engineering Research and Management (IJERM)*，ISSN: 2349-2058，Volume-05，Issue-07。
 
@@ -8443,6 +8331,10 @@ Xiao, M., Guo, M., & Zhu, W. (2022). 基于私有云安全平台的网络安全�
 
 Xiao, Y., Zhang, N., Lou, W., & Hou, Y. T. (2020). 区块链网络分布式共识协议综述。*IEEE Communications Surveys and Tutorials*，22(2)，1432–1465。DOI: [10.1109/COMST.2020.2969706](http://dx.doi.org/10.1109/COMST.2020.2969706)
 
+
+
+# 参考文献
+
 Xia, X. (2024). 优化和超参数调整机器学习模型以预测蛋壳和玻璃基胶凝复合材料的吸水率。*PLoS One*，19(1)，e0296494。Advance online publication。DOI: [10.1371/journal.pone.0296494](http://dx.doi.org/10.1371/journal.pone.0296494) PMID: [38165942](https://pubmed.ncbi.nlm.nih.gov/38165942)
 
 Xu, J., Wang, C., & Jia, X. (2023). 区块链共识协议综述。*ACM Computing Surveys*，55(13s)，1–35。DOI: [10.1145/3579845](http://dx.doi.org/10.1145/3579845)
@@ -8460,12 +8352,6 @@ Yang, Y., Zheng, K., Wu, B., Yang, Y., & Wang, X. (2020). 基于带正则化的�
 Yang, Z., Chen, Z., Xiao, W., Liu, Q., & Zhang, Y. (2019). 基于混合特征的钓鱼邮件检测。*IOP Conference Series: Earth and Environmental Science*，252(4)，042039。DOI: [10.1088/1755-1315/252/4/042051](http://dx.doi.org/10.1088/1755-1315/252/4/042051)
 
 Yasin, A., & Abuhasan, A. (2016). 用于钓鱼邮件检测的智能分类模型。*arXiv preprint arXiv:1608.02196*。
-
-
-
-
-
-## 参考文献
 
 Yilmaz, I., Masum, R., & Siraj, A. “利用生成对抗网络解决入侵检测中的数据不平衡问题。”载于 *2020 IEEE 第 21 届数据科学信息复用与集成国际会议 (IRI)*，第 25-30 页。IEEE, 2020。DOI: [10.1109/IRI49571.2020.00012](http://dx.doi.org/10.1109/IRI49571.2020.00012)
 
@@ -8503,7 +8389,7 @@ Zhao, W., Tian, C., Tian, W., & Zhang, Y. (2020). 通过云计算安全高效地
 
 Zheng, Z., Xie, S., Dai, H.-N., Chen, X., & Wang, H. (2018). 区块链的挑战与机遇。*International Journal of Web and Grid Services*, 14(4), 352。DOI: [10.1504/IJWGS.2018.095647](http://dx.doi.org/10.1504/IJWGS.2018.095647)
 
-Zhixian, C. (2020). 基于 3DES-ECC 算法的移动网络语音传输加密技术。*Mobile Networks and Applications*, 25(6), 2398–2408。DOI: [10.1007/s11036\-020\-01617\-0](http://dx.doi.org/10.1007/s11036-020-01617-0)
+Zhixian, C. (2020). 基于 3DES-ECC 算法的移动网络语音传输加密技术。*Mobile Networks and Applications*, 25(6), 2398–2408。DOI: [10.1007/s11036-020-01617-0](http://dx.doi.org/10.1007/s11036-020-01617-0)
 
 Zhou, L., Diro, A., Saini, A., Kaisar, S., & Hiep, P. (2024). 利用零知识证明实现基于区块链的身份共享：进展、挑战与机遇综述。*Elsevier*, 80。DOI: [10.1016/j.jisa.2023.103678](http://dx.doi.org/10.1016/j.jisa.2023.103678)
 
@@ -8515,21 +8401,18 @@ Zhu, L., Karim, M. M., Sharif, K., Li, F., Du, X., & Guizani, M. SDN 控制器�
 
 Zissis, D., & Lekkas, D. (2010). 解决云计算安全问题。*Future Generation Computer Systems*, •••, 1–10。
 
-Zubair Shafiq, M.. (2008). 基于马尔可夫 n-gram 的嵌入式恶意软件检测。*Lecture Notes in Computer Science*, 5137, 88–107。DOI: [10.1007/978\-3\-540\-70542\-0\_5](http://dx.doi.org/10.1007/978-3-540-70542-0_5)
+Zubair Shafiq, M.. (2008). 基于马尔可夫 n-gram 的嵌入式恶意软件检测。*Lecture Notes in Computer Science*, 5137, 88–107。DOI: [10.1007/978-3-540-70542-0_5](http://dx.doi.org/10.1007/978-3-540-70542-0_5)
 
-## 关于贡献者
+# 关于贡献者
 
-
-
-
-
-### Nirbhay Kumar Chaubey
+## Nirbhay Kumar Chaubey
 
 目前担任印度古吉拉特邦甘帕特大学计算机科学教授兼院长。此前曾任古吉拉特技术大学计算机科学副院长。拥有 25 年以上计算机科学研究生课程教学经验，具备学术、科研及行政领导能力。
 
 **研究领域**：无线网络（架构、协议设计、QoS、路由、移动性、安全）、网络安全、量子计算、物联网、自组网、传感器网络、云计算。
 
 **学术成果**：
+
 - 创办 Scopus 收录的 Springer 国际会议 COMS2（每年举办）
 - 发表 70+ 篇 Scopus 和 Web of Science 收录的国际期刊/会议论文
 - 出版 10 章 Scopus 收录书籍章节
@@ -8538,35 +8421,43 @@ Zubair Shafiq, M.. (2008). 基于马尔可夫 n-gram 的嵌入式恶意软件检
 - Google Scholar 引用 740 次，H-index 18
 
 **学术服务**：
+
 - 多本国际期刊编委会成员、国际会议程序委员会成员
 - IEEE、Springer、Elsevier、Wiley 期刊审稿人
 - 指导 7 名博士、 14 名硕士、 160 名 MCA 学生毕业；6 名博士在读
 - 1 名博士生获印度科技部 (DST) AWSAR Award-2020
 
 **专业会员**：
+
 - IEEE 高级会员、ACM 高级会员、印度计算机学会终身会员
 - 长期活跃于 IEEE 印度理事会和 IEEE 古吉拉特分会，担任多个志愿者职务
 
 **荣誉奖项**：
+
 - IEEE Outstanding Volunteer Award (IEEE Region 10 Asia Pacific, 2015)
 - GTU Pedagogical Innovation Awards (2015)
 - IEEE Outstanding Branch Counselor Award (IEEE Region 10 Asia Pacific, 2010)
 
 ---
 
-### Neha Chaubey
+## Neha Chaubey
 
 就读于英国伦敦帝国理工学院模拟与数字 IC 设计理学硕士 (MSc) 专业（QS 世界大学排名第 6 位）。
 
 **研究兴趣**：量子计算、数字 IC 设计、无线网络、网络安全。
 
 **经历**：
+
 - Cadence Design Systems 实习生
 - eInfochips (Arrow 公司) 实习生
 
 **成果**：
+
 - 发表 3 篇会议论文、 1 项专利
 - 本科期间获最佳研究论文奖：《An Efficient Cluster Based Energy Routing Protocol (E-CBERP) for Wireless Body Area Networks Using Soft Computing Technique》
+
+
+
 - 论文《Training locomotion skills to a legged robot using Machine Learning and Trajectory control》于 2022/2023 年在 Springer CCIS 系列 COMS2 国际会议发表
 
 ---
@@ -8586,6 +8477,7 @@ Zubair Shafiq, M.. (2008). 基于马尔可夫 n-gram 的嵌入式恶意软件检
 现任 I.K. Gujral Punjab Technical University 联合注册官。拥有 MCA 学位和计算机科学工程博士学位，持有 Microsoft Certified Systems Engineer (MCSE) 认证，并完成旁遮普大学工程学院计算机科学与工程第二个博士学位。
 
 **学术活动**：
+
 - 在国际期刊发表计算机科学和教育研究论文
 - 主持国际会议 "WORLDCOMP10" 网络专题分会（美国拉斯维加斯）
 - 参加印度驻英国高级专员公署在伦敦举办的技能发展国际会议
@@ -8597,6 +8489,7 @@ Zubair Shafiq, M.. (2008). 基于马尔可夫 n-gram 的嵌入式恶意软件检
 在 JNTUK Kakinada 完成硕士和博士研究。现任安得拉邦 Ongole QIS 工程技术学院电子与通信工程系教授。
 
 **成果**：
+
 - 多次参加国际会议，在知名期刊、教材发表论文及专利
 - 获 AICTE、DST、UGC 等机构科研资助
 - 指导 5 名以上博士生
@@ -8608,6 +8501,7 @@ Zubair Shafiq, M.. (2008). 基于马尔可夫 n-gram 的嵌入式恶意软件检
 现任 GLS 大学计算机应用与信息技术学院 (PG) 院长。2021 年 7 月加入前，曾任古吉拉特大学计算机科学系教授兼系主任。
 
 **资历**：
+
 - 45 年教学经验（含博士/研究生指导、学术创新、科研监督、实习管理、行政职务）
 - M.Sc. (数学)、Ph.D. (数学)、A.A.S.I. (英国精算师学会 "A" 组六门考试通过准会员)
 - M.Sc. 以 93% 高分获金牌，M.Sc. 和 B.Sc. 多次获最高分奖项 (M.S. University, Baroda)
@@ -8625,14 +8519,13 @@ Zubair Shafiq, M.. (2008). 基于马尔可夫 n-gram 的嵌入式恶意软件检
 现任比卡内尔政府工程学院计算机应用系助理教授，兼任该校研发部协调员。
 
 **成果**：
+
 - 在国家/国际会议和期刊发表多篇论文
 - 在国际会议、研讨会、工作坊作多次报告
 - 多家国内外出版社出版著作
 - 组织多次会议和 FDP (Faculty Development Program)
 
-
-
-
+---
 
 ## 编辑与作者简介
 
@@ -8664,10 +8557,6 @@ Manvi Mishra 现任印度北方邦 Bareilly Shri Ram Murti Smarak College of Eng
 
 Sanjana Muvvala 目前在印度 QISCET 攻读计算机科学与工程 B.Tech 学位。她担任 IEEE 计算机科学分会主席，积极参与所有课外和课内活动。她在 Scopus 期刊上发表过论文并拥有专利。
 
-
-
-
-
 ### Chandresh Parekha
 
 Chandresh Parekha 是一位拥有 21 年以上从教经验的学者。他于 1994 年在 BVM 工程学院（Vallabh Vidhyanagar）获得电子工程学士（B.E.）学位，并于 2009 年在 DDIT（Nadiad）获得电子通信系统工程硕士（M.E.）学位。2020 年，他在古吉拉特技术大学（Ahmedabad）获得电子与通信工程博士（Ph.D.）学位。他曾在 Crown Television Limited（Gandhinagar）担任研发工程师，开启职业生涯。随后也曾在 Videocon International Limited（Gandhinagar）担任研发工程师。2002 年开始从事教学工作，任职于电子与通信系。2002 年 7 月 24 日至 2011 年 10 月 24 日期间，他在 Sankalchand Patel 工程学院（Visnagar）电子与通信系担任助理教授。自 2011 年 10 月 25 日起，他在 Rashtriya Raksha University（Lavad）担任助理教授——电信（高级职级）。他积极投身学术研究，在知名期刊/会议上发表 50 余篇研究论文，承担多项资助研究项目，发表专家演讲并组织技术活动。2014 年，因研究项目“基于 GIS 的艾哈迈达巴德市犯罪制图”荣获地理空间卓越奖。
@@ -8692,9 +8581,7 @@ Chithirai Pon Selvan 在工程学生教学方面拥有丰富经验，从事学�
 
 Ravi Sheth 拥有 15 年以上教学经验。其核心研究兴趣在于多媒体安全、机器学习、模式识别、VAPT 和网络取证。他融合了教学、科研与培训的综合经验。Dr. Sheth 为来自全印度的法律专业人士、教师和学生组织过多场高质量培训和推广项目。他在网络安全、网络取证和人工智能领域的国际权威期刊上发表 50 余篇研究文章。曾作为技术委员会成员和审稿人参与多个会议。在多个国际/国内会议和研讨会上发表研究论文。多次受邀担任研讨会/讲座/培训项目的资源人员。曾为来自全印度的法律专业人士、教师和学生就多媒体安全、社交媒体调查、网络取证、模式识别和暗网调查等方面发表多场专家演讲。他已为“便携式移动取证数据采集工具”申请专利（原文 pattern 疑为 patent 之误）。他在网络安全、网络取证、机器学习和模式识别领域为 Rashtriya Raksha University 的学生提供研究指导。
 
-
-
-
+---
 
 ### 5G 网络
 
@@ -8706,41 +8593,31 @@ Ravi Sheth 拥有 15 年以上教学经验。其核心研究兴趣在于多媒�
 
 18, 19, 42, 49, 84, 87, 115, 123, 126, 127, 132, 134, 144, 147, 148, 149, 150, 200, 202, 218, 249, 273, 305, 338, 343, 354, 357, 364, 365, 366, 367, 372, 374, 377, 386, 410, 430
 
-
-
-
 这是一个索引条目列表，包含大量指向书籍不同章节（`ch001` 至 `ch016`）的锚点链接。条目格式为 `Attacks 数字`。
 
 由于原文仅包含原始索引标记数据，无正文叙述内容、代码块或可执行的技术命令，故保留核心数据结构，去除多余空行，并将文件路径、锚点标识符等技术标识符用反引号标记。
+
+
 
 ```
 Attacks 7, 8, 18, 22, 23, 25, 26, 27, 37, 38, 41, 43, 46, 47, 50, 51, 55, 56, 62, 63, 64, 67, 68, 69, 70, 71, 77, 78, 79, 81, 82, 83, 85, 92, 95, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 110, 112, 114, 115, 116, 117, 118, 119, 120, 121, 125, 127, 128, 129, 132, 134, 135, 137, 139, 140, 141, 142, 145, 147, 148, 149, 150, 151, 155, 168, 169, 174, 175, 177, 178, 179, 181, 184, 188, 194, 198, 199, 203, 225, 228, 229, 230, 231, 242, 243, 244, 248, 251, 279, 281, 283, 284, 286, 287, 288, 290, 291, 292, 295, 297, 298, 299, 300, 301, 303, 304, 305, 306, 307, 308, 330, 338, 339, 342, 343, 349, 350, 355, 356, 357, 359, 360, 361, 363, 364, 368, 374, 375, 376, 377, 379, 381, 382, 383, 384, 385, 387, 389, 390, 391, 400, 401, 409, 415, 416, 418, 419, 423, 432
 ```
 
-
-
-
 ### B
 
 #### 自动化
+
 1, 4, 16, 44, 47, 138, 142, 199, 265, 272, 275, 313, 318, 319, 323, 331, 333, 356, 357, 365, 367, 372, 373
 
 #### 大数据
+
 19, 21, 22, 28, 29, 30, 31, 32, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 116, 171, 223, 268, 275, 305, 307, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 349, 350, 352, 353, 364, 365, 411
 
 #### 大数据分析
+
 21, 28, 32, 34, 35, 37, 38, 39, 40, 42, 43, 44, 45, 46, 47, 307, 338, 346, 349, 352, 364, 365
 
-
-
-
-这是一个索引条目列表，包含术语“区块链”及其在书中出现的页码引用链接。
-
-由于原文为纯索引数据，无标题层级、代码块或代码实体（变量、函数、类、路径、命令），故仅保留核心内容并优化格式：
-
 区块链 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 109, 111, 115, 116, 123, 126, 127, 131, 132, 134, 135, 142, 143, 144, 145, 146, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 296, 297, 302, 303, 305, 306, 338, 339, 342, 351, 352, 354, 357, 358, 359, 368, 369, 370, 371, 384, 385, 387, 388, 389, 390, 391, 392, 393, 394, 395, 396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411
-
-
 
 ## 索引
 
@@ -8762,22 +8639,19 @@ Attacks 7, 8, 18, 22, 23, 25, 26, 27, 37, 38, 41, 43, 46, 47, 50, 51, 55, 56, 62
 
 **犯罪记录** 205
 
-
-
-
 ## 索引
 
 ### 网络攻击
+
 22, 23, 26, 37, 38, 47, 50, 127, 177, 178, 181, 198, 203, 305, 349, 350
 
 ### 网络犯罪
+
 23, 24, 45
 
 ### 网络安全
+
 1, 2, 8, 9, 10, 17, 19, 21, 22, 23, 24, 28, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 49, 50, 51, 54, 55, 56, 57, 58, 59, 61, 63, 64, 67, 72, 75, 76, 77, 79, 80, 84, 86, 87, 88, 109, 111, 112, 123, 125, 126, 130, 134, 136, 141, 142, 143, 147, 149, 150, 155, 162, 165, 168, 169, 170, 173, 174, 177, 200, 203, 226, 227, 229, 231, 232, 244, 248, 249, 250, 252, 267, 278, 296, 298, 302, 303, 306, 308, 338, 339, 344, 354, 357, 382, 383, 384, 427, 429
-
-
-
 
 ## 索引
 
@@ -8792,10 +8666,6 @@ Attacks 7, 8, 18, 22, 23, 25, 26, 27, 37, 38, 41, 43, 46, 47, 50, 51, 55, 56, 62
 ### D
 
 **数据共享** 77, 89, 90, 91, 93, 110, 111, 112, 116, 118, 119, 120, 301, 303, 350, 352, 356, 370, 372, 387, 405
-
-
-
-
 
 ### 去中心化安全
 
@@ -8820,10 +8690,6 @@ Attacks 7, 8, 18, 22, 23, 25, 26, 27, 37, 38, 41, 43, 46, 47, 50, 51, 55, 56, 62
 159, 171, 203, 417
 
 ### F
-
-
-
-
 
 ### 特征选择
 
@@ -8851,10 +8717,6 @@ Attacks 7, 8, 18, 22, 23, 25, 26, 27, 37, 38, 41, 43, 46, 47, 50, 51, 55, 56, 62
 
 31, 41, 44, 49, 85, 121, 124, 127, 139, 214, 228, 273, 274, 275, 276, 278, 279, 283, 284, 286, 293, 296, 298, 303, 304, 305, 306, 307, 308, 321, 332, 355, 356, 357, 358, 359, 361, 363, 364, 365, 366, 367, 368, 369, 370, 371, 374, 375, 376, 377, 379, 381, 386, 387, 388, 389, 390, 391, 392, 430, 431, 432
 
-
-
-
-
 ### 入侵检测
 
 10, 18, 38, 101, 103, 105, 116, 132, 173, 174, 175, 176, 177, 178, 198, 199, 200, 201, 202, 228, 229, 243, 282, 285, 311, 315, 319, 324, 377, 386, 413, 416, 417, 418, 419, 423, 424, 428, 429, 430, 431, 432
@@ -8864,10 +8726,6 @@ Attacks 7, 8, 18, 22, 23, 25, 26, 27, 37, 38, 41, 43, 46, 47, 50, 51, 55, 56, 62
 10, 101, 173, 174, 175, 176, 177, 178, 198, 200, 201, 202, 228, 229, 319
 
 ### M
-
-
-
-
 
 ## 索引
 
@@ -8879,33 +8737,27 @@ Attacks 7, 8, 18, 22, 23, 25, 26, 27, 37, 38, 41, 43, 46, 47, 50, 51, 55, 56, 62
 
 151
 
-
-
-
 ## 索引
 
 ### 恶意软件
+
 2, 12, 24, 25, 26, 38, 40, 42, 65, 99, 102, 103, 105, 108, 110, 112, 115, 118, 128, 134, 229, 245, 247, 248, 249, 250, 251, 252, 253, 255, 260, 265, 267, 268, 269, 279, 280, 286, 291, 342, 364, 374, 375, 377, 381, 383, 418
 
 ### 恶意软件检测
+
 40, 118, 249, 250, 251, 252, 265, 267, 268, 269
 
 ### N
 
 #### Neptune Security（海王星安全）
+
 337, 338, 339, 340, 346, 347, 349, 352, 353
 
 #### 网络管理
+
 129, 130, 142, 309, 310, 311, 312, 313, 315, 316, 317, 318, 319, 321, 322, 323, 324, 327, 328, 329, 331, 332, 333, 334, 335, 336
 
-
-
-这是一个索引条目列表，包含术语 "Networks" 及其在书中出现的页码和内部链接锚点。由于原文为纯索引数据，无标题层级、段落或代码结构，故保留原始内容格式。
-
 Networks 22, 26, 27, 32, 37, 43, 44, 46, 53, 74, 77, 78, 79, 81, 83, 86, 87, 88, 94, 95, 96, 99, 105, 115, 116, 117, 118, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 139, 140, 141, 142, 143, 144, 145, 146, 151, 152, 173, 174, 198, 199, 200, 208, 209, 212, 216, 218, 221, 226, 227, 228, 230, 231, 232, 234, 242, 243, 244, 250, 271, 272, 278, 279, 280, 281, 282, 283, 284, 285, 291, 292, 297, 299, 301, 302, 304, 306, 308, 310, 311, 312, 313, 317, 318, 319, 320, 321, 325, 327, 329, 331, 332, 333, 334, 335, 355, 356, 357, 359, 360, 363, 366, 367, 368, 371, 374, 376, 383, 384, 386, 387, 388, 389, 390, 392, 395, 396, 397, 400, 404, 405, 409, 413, 414, 416, 417, 421, 429, 430, 431, 432
-
-
-
 
 ## 索引
 
@@ -8931,27 +8783,27 @@ Networks 22, 26, 27, 32, 37, 43, 44, 46, 53, 74, 77, 78, 79, 81, 83, 86, 87, 88,
 
 **PDF** 47, 82, 85, 86, 114, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 265, 266, 267, 268
 
-
-
-
 ## 索引
 
 ### 钓鱼邮件检测
+
 147, 150, 151, 152, 153, 154, 159, 161, 162, 164, 165, 166, 168, 169, 171, 172
 
 ### 隐私顾虑
+
 7, 16, 39, 79, 129, 130, 338, 339, 340, 343, 377
 
 ### 协议
+
+
+
 3, 24, 47, 53, 54, 68, 71, 76, 84, 85, 86, 87, 93, 109, 111, 128, 132, 199, 206, 225, 226, 228, 230, 231, 232, 233, 237, 244, 279, 280, 283, 284, 294, 295, 298, 300, 304, 311, 312, 320, 322, 325, 327, 333, 341, 345, 346, 359, 360, 363, 364, 368, 374, 376, 377, 382, 389, 392
 
 ### R
 
 #### 随机森林
+
 109, 111, 151, 152, 153, 159, 161, 162, 167, 168, 169, 175, 176, 177, 181, 184, 194, 195, 245, 252, 258, 260, 264, 267, 291, 417, 418
-
-
-
 
 ### 勒索软件
 
@@ -8967,18 +8819,11 @@ Networks 22, 26, 27, 32, 37, 43, 44, 46, 53, 74, 77, 78, 79, 81, 83, 86, 87, 88,
 
 226, 345
 
-
-
-
 ## 索引
 
 ### 安全
 
 1, 3, 4, 7, 9, 18, 19, 21, 22, 23, 24, 25, 27, 28, 29, 37, 38, 39, 40, 41, 42, 43, 44, 46, 47, 48, 49, 50, 53, 54, 55, 56, 57, 58, 60, 62, 63, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 123, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 148, 150, 158, 165, 171, 172, 173, 176, 177, 198, 199, 203, 206, 208, 210, 211, 213, 214, 215, 217, 218, 222, 225, 226, 227, 228, 229, 230, 231, 232, 233, 237, 242, 243, 244, 245, 247, 248, 267, 268, 269, 271, 272, 273, 274, 275, 278, 279, 280, 281, 282, 283, 284, 285, 286, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 314, 315, 316, 319, 321, 322, 323, 324, 328, 329, 330, 331, 332, 333, 334, 335, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364, 365, 368, 369, 370, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 394, 395, 397, 398, 399, 402, 405, 408, 409, 410, 411, 414, 415, 416, 417, 418, 419, 423, 424, 425, 426, 428, 429, 430, 431, 432
-
-
-
-
 
 ## 索引
 
@@ -8998,17 +8843,11 @@ Networks 22, 26, 27, 32, 37, 43, 44, 46, 53, 74, 77, 78, 79, 81, 83, 86, 87, 88,
 
 ### T
 
-
-
-
 这是一个索引条目列表，主要包含“技术”关键词及其在书中各章节的页码引用（包含内部锚点链接）。
 
 由于原文为纯索引数据，无标题层级、代码块或变量/函数/路径/命令等技术实体，故保留核心内容并清理多余空行：
 
 技术 13, 23, 24, 26, 32, 35, 39, 40, 46, 49, 50, 51, 55, 56, 57, 58, 60, 62, 64, 65, 66, 67, 69, 70, 72, 73, 74, 75, 76, 78, 79, 81, 82, 83, 84, 85, 86, 87, 88, 89, 91, 98, 110, 113, 116, 117, 123, 124, 126, 131, 132, 134, 135, 136, 139, 142, 143, 144, 145, 200, 201, 205, 206, 208, 209, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 228, 231, 232, 243, 244, 268, 271, 272, 274, 276, 277, 278, 279, 283, 285, 286, 296, 297, 299, 301, 303, 304, 305, 306, 307, 308, 328, 336, 338, 340, 341, 352, 355, 356, 357, 358, 359, 360, 365, 366, 368, 369, 370, 371, 372, 374, 376, 377, 379, 382, 383, 384, 387, 391, 392, 393, 394, 396, 397, 398, 399, 401, 408, 409, 410, 411, 413, 414, 415, 430
-
-
-
 
 ### 威胁行为体
 
@@ -9023,4 +8862,3 @@ Networks 22, 26, 27, 32, 37, 43, 44, 46, 53, 74, 77, 78, 79, 81, 83, 86, 87, 88,
 #### WSN
 
 84, 279, 289, 414, 415, 430
-

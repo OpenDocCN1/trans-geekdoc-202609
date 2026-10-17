@@ -1,24 +1,7 @@
+
 # 机器学习解决方案架构师手册：构建运行企业级解决方案的机器学习平台
 
-
-
-
-
-
-
-
 ![](img/bd21298357d8484151447cff0b2f138b_1_0.png)
-
-
-
-
-
-
-
-
-
-
-
 
 # 贡献者
 
@@ -38,69 +21,21 @@ David Ping 是一位高级技术领导者，在技术和金融服务行业拥有
 
 **Vishakha Gupta** 是某全球领先科技公司的数据科学家，在机器学习和数据科学领域拥有丰富的背景。她拥有 IIIT Gwalior 的本科学和硕士学位，在数据科学方面表现卓越。她曾在 Nasdaq 和 BNY Mellon 等机构工作，其工作涉及机器学习、深度学习、自然语言处理以及医疗保健领域的预测。她曾在 IEEE 上发表过关于语音识别的论文。
 
-
 前言
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 | --- | --- | --- | --- |
 
-
-
-
-
-
 # 你可能感兴趣的其他书籍
-
-
-
-
-
-
-
-
-
-
 
 第 12 章“**使用 AWS AI 服务构建 ML 解决方案**”介绍了 AWS AI 服务以及将这些 AI 服务集成到 ML 驱动应用程序中的架构模式。
 
-
-
 |---|---|
+
 | TypeScript 3.7 | | |
+
 | ECMAScript 11 | | |
 
-
-
-你可以从 GitHub上的 https://github.com/PacktPublishing/The-Machine-Learning-Solutions-Architect-Handbook 下载本书的示例代码文件。如果代码有更新，将在 GitHub 仓库中进行更新。
-
-
-
+你可以从 GitHub上的 `https://github.com/PacktPublishing/The-Machine-Learning-Solutions-Architect-Handbook` 下载本书的示例代码文件。如果代码有更新，将在 GitHub 仓库中进行更新。
 
 本书中使用了多种文本约定。
 
@@ -127,8 +62,8 @@ churn_data.hist(['CreditScore', 'Age', 'Balance'])
 ```
 ```
 
-
 > 提示或重要备注
+
 其格式所示。
 
 ## 联系我们
@@ -147,295 +82,70 @@ churn_data.hist(['CreditScore', 'Age', 'Balance'])
 
 一旦你读了《Machine Learning Solutions Handbook》，我们非常想听听你的想法！请点击此处直接进入该书的 Amazon 评论页面并分享你的反馈。
 
-
-
-
 - 第 2 章：机器学习的业务案例
 
 ```content
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - 推荐引擎根据客户对不同产品推荐的反馈进行调整，从而优化产品推荐。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 - 业务或运营风险的缓解，例如欺诈和合规。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - **机器学习技术的识别与验证**：针对特定机器学习问题的机器学习技术识别与验证
 
-
 - 机器学习平台自动化：机器学习平台自动化技术设计
-
-
-
-
-
-
-
-
-
 
 - **数据管理与大规模数据处理**：数据科学家或数据工程师需要技术能力来存储、访问和处理大量数据，以进行清洗、转换和特征工程。
 - **模型托管/服务**：机器学习平台需要提供托管和提供模型以生成预测的技术能力，无论是实时、批处理还是兼者。
 - **特征管理**：通用且复用的特征需要被管理和提供，用于模型训练和模型服务。
 
-
-
-
-
-
-
 好了！你刚刚完成了这一章。让我们看看你是否理解并记住了所学的知识。
-
-
-
 
 2. 你将一个机器学习模型部署到了生产环境中。然而，你没有看到业务关键指标（KPI）出现预期的改进。你应该怎么办？
 4. 作为机器学习解决方案架构师，你被要求验证解决业务问题的机器学习方法。你会采取哪些步骤来验证该方法？
 
-
-
-
-
-
 在下一章节中，我们将介绍多个行业的某些 ML 用例，例如金融服务业、媒体和娱乐业。
-
-
 
 在本章中，你将学习跨垂直行业的一些真实 ML 案例。你将对金融服务和零售业等行业的关键业务工作流和挑战建立理解，以及 ML 技术如何帮助解决这些挑战。学习目标并不是让你成为某个行业或其 ML 用例和技术的专家，而是让你在业务需求和工作流的背景下意识到真实的 ML 用例。在读完本章后，你将能够在你的业务领域中应用类似的思维，并能够识别出 ML 解决方案。
 
 在本章中，我们将涵盖以下主题：
 
-
-
-
-
-
-
 在销售交易中，公司的销售人员会监控投资新闻（如财报或兼收购活动），并寻找投资机会向其机构客户推销。随后，交易人员为客户执行交易，这被称为代理交易（agency trading）。交易人员也可以为他们所属的公司执行交易，这被称为自营交易（prop trading）。交易人员通常需要交易大量证券。因此，优化交易策略以优惠价格获取股票而不推高价格至关重要。销售和交易人员受研究团队的支持，研究团队专注于研究和分析股票及固定收益资产，并向销售交易人员提供建议。
-
-
-
-
-
-
-
-
-
-
-
-
 
 - 财富管理客户变得越来越精通技术，除了直接的客户互动外，他们还要求更多的渠道。
 
-
-
-
-
-
-
 下图展示了**下一步最佳行动（Next Best Action）**方法的概念：
-
-
 
 后台是金融服务公司中处理非客户面对和支持活动的部分。其主要功能包括交易结算与清算、记录、监管合规、会计和技术服务。由于基于机器学习的自动化可以带来财务效益和成本节省，并且在满足监管要求（例如反洗钱）和内部控制要求（例如交易监控）方面能力提升，它是早期采用机器学习的领域之一。接下来，让我们来看看一些后台业务流程以及机器学习的应用场景。
 ## 净值审核
 提供共同基金（Mutual Funds）和交易所交易基金（ETFs）的金融服务公司需要为了交易和报告目的准确反映基金的价值。他们使用净值（NAV）计算（即实体资产价值减去其负债价值）来代表基金的价值。净值是投资者可以买卖基金的价格。每天市场收盘后，基金管理公司必须100%准确地计算出净值价格，该过程由五个核心步骤组成：
 
-
 下图展示了净值审核流程的核心步骤：
 
 ![](img/bd21298357d8484151447cff0b2f138b_47_0.png)
 
-
-
-
 下图展示了买卖双方通过各自经纪公司在交易所购买证券的工作流：
-
-
 
 交易执行后，如 DTCC 这样的结算机构将与买卖双方相应的托管人处理交易的清算和结算。
 
 为了保持正确的储备量以降低资本支出成本并优化买卖双方的交易率，经纪公司一直在流程早期使用机器学习模型预测交易失败。这允许经纪人采取预防或纠正措施。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - 将违规行为视为异常，并使用无监督机器学习技术进行异常检测
 许多不同的数据集对于构建交易合规机器学习模型非常有用，例如盈亏（P and L）信息、订单簿详情、电子通信、交易员及其交易之间的关联信息、市场数据、交易历史，以及交易对手详情、交易价格、订单类型和交易所等细节。
 
-
-
-
-
-
-
-
 | * 请求文件 * 完整性和合理性审查 | * 审核文件 * 标准信用评级 * 其他信用相关因素的记录 | * 确定贷款价值比 * 评估风险敞口 | * 完成贷款申请 * 准备信用投票 * 决策者批准贷款 |
-
-
-
-
-
-
-
 
 - 2. 保险公司的承保人员通过考虑不同因素（如申请人的损失和保险历史、精算因素）对申请进行评估，以决定保险公司是否应该承担风险，以及该风险的价格和保费应该是。然后，他们会对保单进行额外调整，例如保额和免赔额。
 - 3. 如果申请被接受，则发放保险保单。
 
-
-
 - 3. 理赔评估员确定损失程度，进行欺诈评估，并将理赔申请提交支付审批。
 
-
-
-
-
-
-
-
 ![](img/bd21298357d8484151447cff0b2f138b_55_0.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 - 医疗设备：这些是制造标准产品和高科技设备的公司。
 - 医疗机构：这些是医院、诊所和实验室。
 
-
-
-
-
-
-
-
-
-
 - **临床前研究**，目标是确定药物的有效性和安全性。
 - **FDA 审查**，对药物进行整体审查，以决定批准或拒绝。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ![](img/bd21298357d8484151447cff0b2f138b_65_0.png)
 
@@ -446,9 +156,6 @@ churn_data.hist(['CreditScore', 'Age', 'Balance'])
 # 目标营销
 
 零售商使用不同的营销活动和广告技术（如直接营销邮件或数字广告），根据购物者的细分对潜在购物者提供激励或折扣。这些活动的有效性在很大程度上取决于正确的客户触达，以实现高转化率，同时降低活动成本或广告支出，并产生更少的用户打扰。
-
-
-
 
 细分（Segmentation）是理解不同客户群体以提高营销活动有效性的传统方法之一。使用机器学习细分有多种方法，例如基于基本人口统计数据等数据对客户进行无监督聚类。这允许你将客户分成几个群体，并为每个群体创建独特的营销活动。
 
@@ -516,7 +223,7 @@ churn_data.hist(['CreditScore', 'Age', 'Balance'])
 
 你需要一台电脑（Mac 或 Windows）来完成上手实验。
 
-你需要从 https://www.kaggle.com/mathchi/chunk-for-customers 下载数据集。具体说明将在上手部分提供。
+你需要从 `https://www.kaggle.com/mathchi/chunk-for-customers` 下载数据集。具体说明将在上手部分提供。
 
 ## 机器如何学习
 
@@ -533,8 +240,6 @@ sales = W * price + B
 ```
 Error = 1/n Σ_{i=1}^n (predicted_i - actual_i)^2
 ```
-
-
 
 
 
@@ -574,7 +279,7 @@ Error = 1/n Σ_{i=1}^n (predicted_i - actual_i)^2
 
 算法复杂度有几个量化标准。**时间复杂度**描述了运行机器学习算法所需的计算时间/操作，**空间复杂度**是运行该算法所需的计算量。**大 O 表示 (Big O)** 是一种描述时间和空间复杂度的符号，它定义了算法的估计上限。例如，线性搜索的时间复杂度为 $O(N)$，而二分搜索的时间复杂度表示为 $O(\log N)$。
 
-- **数据线性****：对于输入和输出之间存在线性关系的数据，线性模型运行得很好。然而，对于具有非线性关系的数据集（即输入变量和输出变量不成比例变化），线性模型可能无法一直捕捉这些关系。
+- **数据线性**：对于输入和输出之间存在线性关系的数据，线性模型运行得很好。然而，对于具有非线性关系的数据集（即输入变量和输出变量不成比例变化），线性模型可能无法一直捕捉这些关系。
 
 - **特征数量**：训练数据集可能包含大量特征，并不是所有特征与模型训练相关。某些机器学习算法可以很好地处理无关或噪声特征，而某些算法会对训练速度或模型性能产生负面影响。不同算法通过名为**正则化 (regularization)** 的技术减少噪声特征的影响。其他方法则使用**丢弃 (dropout)**。
 
@@ -597,9 +302,6 @@ $f(x) = W_1 * X_1 + W_2 * X_2 + ... + W_n * X_n + \varepsilon$
 ### 逻辑回归算法
 
 逻辑回归算法通常用于二分类任务。使用逻辑回归的现实示例包括预测某人点击广告的概率或某人是否符合贷款条件。
-
-
-
 
 逻辑回归模型化了一组输入数据属于某个类别或事件的概率，例如交易欺诈或考试通过/未通过。它也是像线性回归一样的线性模型，其输出是各种输入的线性组合。然而，由于线性回归并不总是产生 0 到 1 之间的数字（概率表示所需的数值），因此逻辑回归被用于返回一个 0 到 1 之间的值来表示概率。逻辑回归背后的直觉是找到一条线或平面/超平面，可以尽可能清晰地分离两组数据点。以下公式是逻辑回归函数，其中 X 是变量的线性组合 (B+WX)。这里，W 是回归系数：
 
@@ -661,9 +363,6 @@ K-NN 工作的基本假设是相似事物具有接近性。确定接近性的方
 
 K-NN 使用简单，除了选择邻居（K）外，不需要用超参数训练或调优模型。数据点只需被加载到 K-NN 算法中。它的结果很容易解释，因为每个预测都可以通过最近邻的属性来解释。除了分类和回归，它还可以用于搜索。然而，随着数据点数量的增加，模型的复杂度会增加，在大数据集上进行预测时速度会变得非常慢。它在数据集维度较高时效果也不佳，且对噪声数据和缺失数据敏感。离群值需要被移除，缺失数据需要填充。
 
-
-
-
 # 多层感知器 (MLP) 网络
 
 如开头所述，人工神经网络（ANN）模拟了人类大脑的学习方式。人类大脑拥有大量的神经元，连接成网络以处理信息。网络中的每个神经元处理来自另一个神经元的输入（电脉冲），处理并转换输入，并将输出发送到网络中的其他神经元。下图展示了人类神经元的图片：
@@ -686,7 +385,7 @@ K-NN 使用简单，除了选择邻居（K）外，不需要用超参数训练�
 
 图 3.7 – 多层感知器
 
-在模型训练期间，每一层中的每个神经元对最终输出都有某些影响，它们的权重 (W) 使用梯度下降进行调整，以优化训练目标。这个过程被称为反向传播，其中总误差被传回每一层的每个神经元中，并根据每个神经元相关的总误差部分来调整每个神经元的权重。
+在模型训练期间，每一层中的每个神经元对最终输出都有某些影响，它们的权重 (`W`) 使用梯度下降进行调整，以优化训练目标。这个过程被称为反向传播，其中总误差被传回每一层的每个神经元中，并根据每个神经元相关的总误差部分来调整每个神经元的权重。
 
 MLP 是一种通用的神经网络，可以用于分类和回归。它可以用于解决与随机森林和 XGBoost 类似的问题。它主要用于表格化数据集，但也可以与其他数据格式配合，如图像和文本。它可以对数据集中的复杂的非线性关系。它在计算上也是高效的，因为它易于并行化。与传统的机器学习算法相比，MLP 通常需要更多的训练数据来训练出高性能的模型。
 
@@ -741,18 +440,17 @@ y_t = \theta_1\epsilon_{t-1} + \theta_2\epsilon_{t-2} + \dots + \theta_q\epsilon
 Y_t - Y_{t-1}
 ```
 
+
+
 ARIMA 非常适用于单时间序列（单变量）预测，因为它不需要其他变量来进行预测。它的性能优于移动平均、指数平滑或线性回归等简单技术。它也具有很高的解释性。然而，ARIMA 主要是一种后视算法，因此它无法预测意外事件。此外，ARIMA 是基于线性的模型，因此不适用于具有复杂非线性关系的时间序列数据。
 
 ## DeepAR 算法
 
-基于深度学习的预测解决了传统预测模型（例如 ARIMA）的某些缺点，例如复杂的非线性关系无法利用多元数据集。深度学习模型还允许训练一个包含许多相似目标时间序列的单一模型（例如所有客户的用电时间序列），而不是为每个时间序列创建一个模型。
+基于深度学习的预测解决了传统预测模型（例如 `ARIMA`）的某些缺点，例如复杂的非线性关系无法利用多元数据集。深度学习模型还允许训练一个包含许多相似目标时间序列的单一模型（例如所有客户的用电时间序列），而不是为每个时间序列创建一个模型。
 
-深度自回归 (DeepAR) 是一种先进的基于神经网络的预测算法，处理具有相似目标时间序列的大数据集。它支持相关时间序列（例如产品价格或假期安排）以提高预测模型的准确性。这对于由于外部变量引起的尖峰事件特别有用。DeepAR 的工作原理是使用称为循环神经网络 (RNN) 的神经网络对目标时间序列建模，并与其他支持时间序列相结合。在每个时间期，神经网络输入不是取单个变量的值，而是取代表变量值的单个输入向量（即多个目标时间序列的数据点值和多个支持时间序列的数据点值），并共同学习向量随时间变化的模式（AR）。这种方法允许网络学习所有不同时间序列之间的内在非线性关系，并提取这些时间序列表现出的共同模式。
+深度自回归 `DeepAR` 是一种先进的基于神经网络的预测算法，处理具有相似目标时间序列的大数据集。它支持相关时间序列（例如产品价格或假期安排）以提高预测模型的准确性。这对于由于外部变量引起的尖峰事件特别有用。`DeepAR` 的工作原理是使用称为循环神经网络 `RNN` 的神经网络对目标时间序列建模，并与其他支持时间序列相结合。在每个时间期，神经网络输入不是取单个变量的值，而是取代表变量值的单个输入向量（即多个目标时间序列的数据点值和多个支持时间序列的数据点值），并共同学习向量随时间变化的模式（AR）。这种方法允许网络学习所有不同时间序列之间的内在非线性关系，并提取这些时间序列表现出的共同模式。
 
-
-
-
-虽然 DeepAR 在处理复杂的多变量数据集时表现良好，但它需要大量的数据才能发挥出性能。现实世界中的实际用例包括对数千或数百万个物品的大规模零售预测，并考虑了外部事件，例如营销活动或假期安排。
+虽然 `DeepAR` 在处理复杂的多变量数据集时表现良好，但它需要大量的数据才能发挥出性能。现实世界中的实际用例包括对数千或数百万个物品的大规模零售预测，并考虑了外部事件，例如营销活动或假期安排。
 
 ## 推荐算法
 
@@ -762,7 +460,7 @@ ARIMA 非常适用于单时间序列（单变量）预测，因为它不需要�
 
 ## 协同过滤算法
 
-**协同过滤**（Collaborative filtering）是一种常见的推荐算法，其基于是：对某组物品具有共同兴趣或品味的不同的人，可能在其他物品上具有具有共同兴趣。本质上，它利用不同人的集体经验来向用户推荐物品。
+`协同过滤`（Collaborative filtering）是一种常见的推荐算法，其基于是：对某组物品具有共同兴趣或品味的不同的人，可能在其他物品上具有具有共同兴趣。本质上，它利用不同人的集体经验来向用户推荐物品。
 
 下图显示了电影评分的物品-用户交互矩阵，如你所示，这是一个**稀疏矩阵**（sparse matrix）。这意味着矩阵中有许多空条目，这是合理的，因为没有人会观看每一部电影：
 
@@ -777,7 +475,7 @@ ARIMA 非常适用于单时间序列（单变量）预测，因为它不需要�
 
 图 3.8 – 用于协同过滤的物品-用户交互矩阵
 
-矩阵分解（Matrix factorization）是协同过滤的一种实现方法。它是一种基于嵌入（embedding-based）的模型，为用户-物品交互矩阵中的所有用户（U）和物品（V）学习向量表示（嵌入）。学习嵌入的方法是确保 $UV^T$ 的积近似原始矩阵，因此，为了预测原始矩阵中缺失条目的值（用户对未见电影的可能评分），我们只需要计算用户嵌入和物品嵌入之间的点积即可。
+矩阵分解（Matrix factorization）是协同过滤的一种实现方法。它是一种基于嵌入（embedding-based）的模型，为用户-物品交互矩阵中的所有用户（U）和物品（V）学习向量表示（嵌入）。学习嵌入的方法是确保 `$UV^T$` 的积近似原始矩阵，因此，为了预测原始矩阵中缺失条目的值（用户对未见电影的可能评分），我们只需要计算用户嵌入和物品嵌入之间的点积即可。
 
 嵌入（Embedding）是机器学习中的一个重要概念，我将在稍后讨论 NLP 算法时进行详细介绍。嵌入的核心思想是为不同的实体创建一种数学表示，使得相似实体的表示在嵌入所代表的多维空间中彼此靠近。你可以将嵌入视为捕获不同对象潜在语义的一种。
 
@@ -822,8 +520,6 @@ NLP 是计算机与人类语言之间交互的研究。具体来说，是对大�
 机器学习算法无法处理原始文本数据。为了训练 NLP 模型，必须将输入文本中的单词转换为其他单词、句子或文档背景下的数值表示。表示词及其在文中相关性的两种流行方法是词袋（BOW）和词频-逆文档频率（TF-IDF）。
 
 BOW 简单是指单词在文本（文档）中出现的次数。例如，如果输入文档是“I need to go to the bank to make a deposit”和“I am taking a walk along the river bank”，你统计输入文档中每个唯一单词的出现次数，将得到单词“I”以及第一个文档中某个单词的计数。如果我们为两个文档中的所有唯一词建立词汇表，第一个文档的向量表示可以是 [1 1 3 1 1 1 1 1 1 0 0 0 0]，其中每个位置代表词汇表中的一个唯一词。现在，该向量可以馈入机器学习算法以训练如文本分类之类的模型。BOW 的核心思想是，在文中频繁出现的单词权重越大。
-
-
 
 TF-IDF 包含两个部分。第一个部分 TF 是词汇词在文档中出现的次数与文档中总单词数之比。使用之前的文档，单词 `I` 在第一句中的 TF 值为 1/11，而单词 `walk` 的 TF 值为 0/11，因为 `walk` 没有出现在第一句中。而 IDF 则 衡量的是一个词在所有文档中的重要性。从数学角度来说，它是文档总数与该词出现的文档数之比的对数。一个单词的 TF-IDF 最终值是 TF 项与 IDF 项的乘积。通常情况下，TF-IDF 的效果优于 BOW。
 
@@ -876,9 +572,6 @@ BERT 代表来自 Transformer 的双向编码表示（Bidirectional Encoder Repr
 
 发布于 2018 年的这种感知上下文的嵌入方法为单词提供了更好的表示，并显著提高了语言任务，如阅读理解、情感分析和命名实体识别。此外，BERT 具有子词级别的嵌入（单词与字符之间的片段，例如，embeddings 被拆分为 em、bed、ding 和 s）。这使得它能够处理词汇外（OOV）问题，这是 Word2Vec 的另一个局限性，它只对已知单词生成嵌入，并将 OOV 单词简单地视为未知。
 
-
-
-
 要使用 BERT 获取词嵌入，而不是像 Word2Vec 那样进行 1:1 的映射查找，而是将句子传递给训练好的 BERT 模型，然后动态提取嵌入。在这种情况下，生成的嵌入将与句子的语境对齐。除了为输入句子中的单词提供嵌入外，BERT 还可以返回整个句子的嵌入。下面的图显示了用于输入标记（tokens）学习的 BERT 模型的构建模块。这也称为预训练。
 
 ![](img/bd21298357d8484151447cff0b2f138b_96_0.png)
@@ -927,10 +620,6 @@ GPT 的最新版本在语言模型、语言翻译和问答等许多任务中取�
 
 LDA 在现实世界有很多实际用途，例如将大量文档总结为主题列表以及文档标记和分类。LDA 是一种无监督算法，它会自动发现主题。它的缺点是很难衡量模型的整体质量（即很难判断生成的主题具有信息量）。你还需要调整主题的数量，并为模型生成的每个主题提供人类可读的名称以解释结果。
 
-
-
-
-
 # 生成对抗网络
 
 **生成对抗网络** (GAN) 是一种生成模型，尝试生成真实的实例数据，例如图像。它的工作原理是让一个判别网络（**判别器** Discriminator）学习判断由*生成器*网络生成的实例是真实的还是伪的：
@@ -971,9 +660,13 @@ GAN 最近在生成可以欺骗人类的真实图像方面取得了巨大成功�
 
 - 在你的 Mac 机器上打开终端（Terminal）。
 - 在终端内部，输入并运行以下命令开始安装 Homebrew：
+
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/HEAD/install.sh)"
-```
+
+
+
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/HEAD/install.sh)"`
+
 - 安装过程中，根据提示输入你的用户密码。
 - 上一个脚本完成后，在终端内运行以下命令获取包的最新版本：
 ```bash
@@ -1048,10 +741,6 @@ pip install jupyter
 2. 启动 Jupyter Notebook：
    (a) 在终端（Windows 为命令提示符）内，导航到 `MLSLab` 文件夹并运行以下命令在你的机器上启动 Jupyter Notebook 服务器。浏览器将打开并显示 Jupyter Notebook 环境（见下）。关于 Jupyter Notebook 如何工作的详细说明不是本实验的范围。如果你不熟悉 Jupyter Notebook 如何工作，可以很容易在互联网上找到信息：
 
-
-
-
-
 ![](img/bd21298357d8484151447cff0b2f138b_105_0.png)
 
 图 3.17 – Jupyter Notebook
@@ -1071,105 +760,121 @@ pip install jupyter
 图 3.19 – 空白 Jupyter notebook
 
 - 5. 首先，让我们通过以下代码块配置 Jupyter 环境以使用正确的 Python 库：在第一个空白单元格中输入该代码，并点击工具栏上的 **Run** 按钮运行单元格。*sys.executable* 指向我们之前安装的 Python3 位置。这里，*sys.path* 需要包含安装额外库包的附加路径。注意，此代码块仅适用于 Mac。在 PC 上无须运行此代码：
-
 ```python
 import sys
+
 sys.executable = "/usr/local/bin/python3"
+
 sys.path = sys.path + ['/usr/local/lib/python3.9/site-packages']
 ```
 
 - 6. 点击工具栏上的 + 按钮添加新单元格，在第一个空白单元格中输入代码块，并点击工具栏上的 **Run** 按钮运行单元格。此代码下载了用于数据处理（**pandas**）、可视化（**matplotlib**）以及模型训练与评估（scikit-learn）的多个 Python 包。我们将在*第5章，开源机器学习库*中详细介绍 scikit-learn。我们将在后续章节中使用这些包：
-
 ```python
 !pip3 install pandas
+
 !pip3 install matplotlib
+
 !pip3 install scikit-learn
 ```
 
 - 7. 现在，我们可以加载并探索数据。在新单元格中添加以下代码块以加载 Python 库包并从 churn.csv 文件加载数据。你将看到一个有 14 列的表格，其中 Existing 列是目标列：
-
 ```python
 import pandas as pd
+
 churn_data = pd.read_csv("churn.csv")
+
 churn_data.head()
 ```
 
-- 8. 你可以使用多种工具探索数据集，并使用后续命令了解信息，例如数据集统计数据、不同特征之间的两两相关性以及数据分布。describe() 函数返回每个数值列的基本统计信息，如均值、标准差、最小值和最大值。hist() 函数为所选列绘制直方图，corr() 计算数据中不同特征之间的相关性矩阵。尝试在一个新的单元格中逐一运行以理解数据：
-
+- 8. 你可以使用多种工具探索数据集，并使用后续命令了解信息，例如数据集统计数据、不同特征之间的两两相关性以及数据分布。`describe()` 函数返回每个数值列的基本统计信息，如均值、标准差、最小值和最大值。`hist()` 函数为所选列绘制直方图，`corr()` 计算数据中不同特征之间的相关性矩阵。尝试在一个新的单元格中逐一运行以理解数据：
 ```python
 ### 以下命令计算各个特征的各种统计数据
+
 for features.
+
 churn_data.describe()
+
 ### 下一个命令显示不同特征的直方图
+
 ### 你可以替换列名来绘制直方图
+
 for other features
+
 churn_data.hist(['CreditScore', 'Age', 'Balance'])
+
 ### 下一个命令计算特征之间的相关性
+
 churn_data.corr()
 ```
 
 - 9. 数据集需要进行转换才能用于模型训练。以下代码块将把 Geography 和 Gender 的值从分类字符串转换为序数，以便之后供 ML 算法处理。请注意，模型的准确性不是本次练习的主要目的，我们进行序数转换仅用于演示。请在新单元格中复制并运行以下代码块：
-
 ```python
 from sklearn.preprocessing import OrdinalEncoder
+
 encoder_1 = OrdinalEncoder()
+
 encoder_2 = OrdinalEncoder()
+
 churn_data['Geography_code'] = encoder_1.fit_transform(churn_data[['Geography']]])
+
 churn_data['Gender_code'] = encoder_2.fit_transform(churn_data[['Gender']]])
 ```
 
 - 10. 模型训练需要一些列。我们可以使用以下代码块删除它们：
-
 ```python
 churn_data.drop(columns=['Geography', 'Gender', 'RowNumber', 'Surname'], inplace=True)
 ```
 
 - 11. 现在，数据集只剩下我们关心的特征。接下来，我们需要对数据进行划分以用于训练和验证。我们还通过将目标变量 Exited 与其他输入特征分离来准备每个数据集。在新单元格中输入并运行以下代码块：
-
 ```python
 ### 我们导入 train_test_split 类用于数据划分
+
 from sklearn.model_selection import train_test_split
 
 ### 将数据集划分为训练集(80%)和测试集(20%)
+
 X_train, X_test, y_train, y_test = train_test_split(churn_data.drop('Exited', axis=1), churn_data['Exited'], test_size=0.2)
 ```
 
 - 12. 现在，我们准备好训练模型了。在新单元格中输入并运行以下代码块。在这里我们将使用随机森林算法来训练模型：
-
 ```python
 ### 我们使用 RandomForest 算法训练模型
+
 from sklearn.ensemble import RandomForestClassifier
+
 model_clf = RandomForestClassifier(max_depth=2, random_state=0)
+
 model_clf.fit(X_train, y_train)
 ```
 
-- 13. 最后，我们将使用测试集测试模型的准确性。在这里我们获取模型返回的预测值，并使用 accuracy_score 根据预测值 (churn_prediction) 和真实值 (y_test) 计算准确性：
-
+- 13. 最后，我们将使用测试集测试模型的准确性。在这里我们获取模型返回的预测值，并使用 `accuracy_score` 根据预测值 (`churn_prediction`) 和真实值 (`y_test`) 计算准确性：
 ```python
 ### 我们使用 sklearn 库中的 accuracy_score 类计算准确性
+
 from sklearn.metrics import accuracy_score
 
 ### 我们使用训练模型对测试集生成预测
+
 churn_prediction = model_clf.predict(X_test)
 
 ### 我们使用 accuracy_score 测量准确性
+
 accuracy_score(y_test, churn_prediction)
 ```
+
+
 
 恭喜！你成功在本地安装了数据科学环境并使用随机森林算法训练了模型。你验证了机器学习方法可以解决这个问题。
 
 ## 总结
 
-本章介绍了用于解决不同类型机器学习任务的多种算法。你现在应该了解哪些算法适用于哪些机器学习问题。你还在本地创建了简单的数据科学环境，使用了 scikit-learn 机器学习库进行数据探索和准备，并训练了机器学习模型。
+本章介绍了用于解决不同类型机器学习任务的多种算法。你现在应该了解哪些算法适用于哪些机器学习问题。你还在本地创建了简单的数据科学环境，使用了 `scikit-learn` 机器学习库进行数据探索和准备，并训练了机器学习模型。
 
 在下一章中，我们将讨论数据管理如何与机器学习生命周期交叉，并在 AWS 上构建数据管理平台。
 
 ## 4 机器学习的数据管理
 
 作为一名**机器学习 (ML)** 解决方案架构师，我经常被请求为机器学习负载的数据管理平台提供架构建议。虽然数据管理平台架构主要被认为是一个独立的学科领域，但它是机器学习负载不可或缺的一部分。为了设计全面的机器学习平台，ML 架构师需要熟悉机器学习的关键数据考虑因素，并了解数据管理的技术细节，以满足数据科学家和自动化机器学习流水线的需求。在本章中，我们将研究数据管理与机器学习交叉点。我们将讨论设计机器学习数据管理平台的关键考虑因素。然后，我们将深入数据管理平台的核心架构组件，以及在 AWS 上构建数据管理平台相关的 **AWS** 技术和服务。最后，你将进行实际操作，在 AWS 上创建一个支持**数据目录**管理、**数据发现**和**数据处理**工作流的**数据湖**。
-
-
-
 
 具体而言，本章将包含以下主要章节：
 
@@ -1246,10 +951,7 @@ ML 工作负载需要来自许多源的不同格式数据，且数据集规模�
 
 为了有效管理云对象存储介质中的大量数据，由云对象存储支持的数据湖架构是集中数据管理和访问的推荐方法。根据范围，数据湖可以涵盖整个企业或单个业务线。数据湖旨在存储无限量的数据并在不同的生命周期阶段管理它们，例如原始数据、转换数据、精选数据和 ML 特征。数据湖应该按不同的区域组织。例如，应建立一个落湖区（Landing Zone）用于从不同源采集初始数据。在进行数据预处理和数据质量管理后，可以将数据移动到原始数据区。原始数据区的数据可以进一步转换和处理，以满足不同的业务和下游消费需求。为了进一步确保数据集使用的可靠性，可以将数据进行精选并存储在精选数据区。对于 ML 任务，ML 特征通常需要预计算并存储在 ML 特征区以供复用。
 
-
-
-
-# AWS Lake Formation
+## AWS Lake Formation
 
 AWS Lake Formation 是一项 AWS 数据管理服务，旨在简化在 AWS 上创建和管理数据湖的流程。它提供了四项核心功能：
 
@@ -1334,10 +1036,6 @@ AWS Lambda 是 AWS 上的无服务器计算平台。它与许多其他 AWS 服�
 
 构建数据目录有不同的技术方案。在这里，我们将讨论如何使用 AWS Glue 进行数据目录化。
 
-
-
-
-
 ### AWS Glue Catalog
 
 除了 ETL 功能外，AWS Glue 还提供了一个内置的数据目录功能，该功能与 AWS Lake Formation 原生集成。Glue 目录可以作为 Hive metastore 目录的无缝替换，因此任何兼容 Hive metastore 的应用程序都可以配合 AWS Glue Catalog。
@@ -1348,7 +1046,7 @@ AWS Glue 目录具有内置的爬虫（crawler），可以自动爬取数据源�
 
 当与 AWS Lake Formation 协作时，目录中数据库和表的访问权限可以通过 Lake Formation 权限层进行管理。
 
-### 数据处理
+## 数据处理
 
 数据湖的数据处理能力为不同的目的（如数据纠错、数据转换、合并、数据划分和 ML 特征工程）提供了数据处理框架和底层资源。一些常见的处理框架包括 Python 脚本和 Apache Spark。数据处理技术的关键需求包括：
 
@@ -1384,98 +1082,97 @@ AWS Lambda 也可以用于小数据量和文件的数据处理。Lambda 可以�
 
 对于每个新创建或更新的数据集，将其保存到新的 S3 分区中，并为每个数据集设置前缀（例如唯一的 S3 文件夹名称）。虽然这种方法可能会导致数据重复，但它是分离模型训练不同数据集的一种清洁且简单的方法。数据集应该由受控流水线生成，以强制命名标准，并应设置为下游应用程序只读，以确保不可变性。以下示例显示了具有多个版本训练集的 S3 分区结构：
 
-```
-s3://project1/<date>/<unique version id 1>/train_1.txt
-s3://project1/<date>/<unique version id 1>/train_2.txt
-s3://project1/<date>/<unique version id 2>/train_1.txt
-s3://project1/<date>/<unique version id 2>/train_2.txt
-```
+
+
+`s3://project1/<date>/<unique version id 1>/train_1.txt`
+
+`s3://project1/<date>/<unique version id 1>/train_2.txt`
+
+`s3://project1/<date>/<unique version id 2>/train_1.txt`
+
+`s3://project1/<date>/<unique version id 2>/train_2.txt`
 
 在这个示例中，两个版本的数据集通过两个不同的 S3 前缀隔离开。
 
 ### 专用数据版本控制工具
 
-有很多开源工具（如 DVC）用于数据版本控制。例如，DVC 可以与任何符合 Git 标准的代码库配合，并可以使用 S3 作为训练数据集的存储后端。每个数据集版本都关联一个唯一的 commit ID，该 ID 可以唯一标识一个数据版本。
+有很多开源工具（如 `DVC`）用于数据版本控制。例如，`DVC` 可以与任何符合 `Git` 标准的代码库配合，并可以使用 `S3` 作为训练数据集的存储后端。每个数据集版本都关联一个唯一的 `commit ID`，该 `ID` 可以唯一标识一个数据版本。
 
 ## ML 特征存储（Feature Store）
 
-对于大型企业，常见的复用 ML 特征（如精选的客户画像数据和标准化的销售数据）应进行集中管理，以缩短 ML 项目生命周期，特别是在数据理解和数据准备阶段。根据规模，你可以构建满足基本要求的特征存储，例如用于 ML 模型训练的组织化特征的插入和查找。或者，你可以实现商业级的特征产品，例如 Amazon SageMaker Feature Store（我们将在后面的章节中介绍的 AWS ML 服务）。SageMaker Feature Store 具有用于训练和推理的在线和离线能力、元数据标记、特征版本控制和高级搜索。
+对于大型企业，常见的复用 ML 特征（如精选的客户画像数据和标准化的销售数据）应进行集中管理，以缩短 ML 项目生命周期，特别是在数据理解和数据准备阶段。根据规模，你可以构建满足基本要求的特征存储，例如用于 ML 模型训练的组织化特征的插入和查找。或者，你可以实现商业级的特征产品，例如 `Amazon SageMaker Feature Store`（我们将在后面的章节中介绍的 AWS ML 服务）。`SageMaker Feature Store` 具有用于训练和推理的在线和离线能力、元数据标记、特征版本控制和高级搜索。
 
 ## 用于客户端的数据
 
-中心数据管理平台需要提供不同的方法（例如 API 或基于 Hive metastore 的方法）用于数据的在线访问。还需要考虑数据传输工具，以支持数据从中心数据管理平台移动到其他数据消费环境，以满足不同的数据消费模式。考虑具有内置数据服务能力或可以轻松集成到外部数据服务工具的工具。
+中心数据管理平台需要提供不同的方法（例如 `API` 或基于 `Hive metastore` 的方法）用于数据的在线访问。还需要考虑数据传输工具，以支持数据从中心数据管理平台移动到其他数据消费环境，以满足不同的数据消费模式。考虑具有内置数据服务能力或可以轻松集成到外部数据服务工具的工具。
 
 为数据科学环境提供数据有几种服务模式。让我们讨论以下两种数据访问模式。
 
 ### 通过 API 消费
 
-在这种模式下，消费环境/应用程序可以使用符合 Hive metastore 的工具或通过直接访问 S3 从数据湖中拉取数据。Amazon 服务如 Amazon Athena（大数据查询工具）、Amazon EMR（大数据处理处理工具）和 Amazon Athena Redshift Spectrum（Amazon Redshift 的一项功能）用于查询在 Glue 目录中索引的数据湖数据。当你不需要制作数据副本，只需要选择数据子集作为下游数据处理任务的一部分时，这种模式非常有用。
+在这种模式下，消费环境/应用程序可以使用符合 `Hive metastore` 的工具或通过直接访问 `S3` 从数据湖中拉取数据。`Amazon` 服务如 `Amazon Athena`（大数据查询工具）、`Amazon EMR`（大数据处理处理工具）和 `Amazon Athena Redshift Spectrum`（`Amazon Redshift` 的一项功能）用于查询在 `Glue` 目录中索引的数据湖数据。当你不需要制作数据副本，只需要选择数据子集作为下游数据处理任务的一部分时，这种模式非常有用。
 
 ### 通过数据拷贝消费
 
-在这种模式下，数据湖中的部分数据被复制到消费环境的存储中，以满足不同的处理和消费需求。较新的数据可以加载到分析环境中的 Amazon Redshift，或交付到数据科学环境拥有的 S3 桶中。
+在这种模式下，数据湖中的部分数据被复制到消费环境的存储中，以满足不同的处理和消费需求。较新的数据可以加载到分析环境中的 `Amazon Redshift`，或交付到数据科学环境拥有的 `S3` 桶中。
 
 ## 数据流水线（Pipeline）
 
 数据流水线自动化数据移动和转换的过程。例如，你可能需要构建一个流水线，从源摄取数据、进行验证和清洗、使用新数据和转换丰富数据集、然后进行特征工程并为 ML 模型训练和验证任务创建训练/验证/测试数据集。构建数据流水线有多种工作流，许多数据管理工具都内置了数据流水线功能。
 
-
-
-
-
 # AWS Glue 工作流
 
-AWS Glue 工作流是 AWS Glue 内置的工作流管理功能，用于编排不同的 Glue 作业，例如数据摄入、数据处理和特征工程。Glue 工作流由两种类型的组件组成：触发器组件和节点。触发器组件可以是计划触发器、事件触发器或按需触发器。节点可以是爬虫作业（crawler job）或 ETL 作业。计划触发器或按需触发器用于启动工作流运行，而事件触发器是在爬虫作业或 ETL 作业完成后发出的成功/失败事件。工作流是一系列触发器和 ETL 或爬虫作业的组合。
+`AWS Glue` 工作流是 `AWS Glue` 内置的工作流管理功能，用于编排不同的 `Glue` 作业，例如数据摄入、数据处理和特征工程。`Glue` 工作流由两种类型的组件组成：触发器组件和节点。触发器组件可以是计划触发器、事件触发器或按需触发器。节点可以是爬虫作业（`crawler job`）或 `ETL` 作业。计划触发器或按需触发器用于启动工作流运行，而事件触发器是在爬虫作业或 `ETL` 作业完成后发出的成功/失败事件。工作流是一系列触发器和 `ETL` 或爬虫作业的组合。
 
 # AWS Step Functions
 
-AWS Step Functions 是一种工作流编排工具。它可以与其他 AWS 处理服务（如 AWS Glue 和 Amazon EMR）集成。它可以用于构建工作流来运行工作中的不同步骤，例如数据摄入、数据处理或特征工程。
+`AWS Step Functions` 是一种工作流编排工具。它可以与其他 `AWS` 处理服务（如 `AWS Glue` 和 `Amazon EMR`）集成。它可以用于构建工作流来运行工作中的不同步骤，例如数据摄入、数据处理或特征工程。
 
 # 身份验证与授权
 
-管理和数据消费的数据湖访问需要经过身份验证和授权。联邦身份验证或 AWS 身份和访问管理 (IAM) 用于验证用户以确认用户身份。对于访问数据目录资源和底层数据存储，AWS Lake Formation 使用内置的 Lake Formation 访问控制和 AWS IAM。内置的 Lake Formation 权限模型使用 `allow/deny` 命令来控制对不同资源（例如数据库和表）以及数据库操作（例如创建表）的权限。当请求者请求访问资源时，在授予访问之前，IAM 策略和 Lake Formation 权限都将经过执行和验证。
+管理和数据消费的数据湖访问需要经过身份验证和授权。联邦身份验证或 `AWS` 身份和访问管理 (`IAM`) 用于验证用户以确认用户身份。对于访问数据目录资源和底层数据存储，`AWS Lake Formation` 使用内置的 `Lake Formation` 访问控制和 `AWS IAM`。内置的 `Lake Formation` 权限模型使用 `allow/deny` 命令来控制对不同资源（例如数据库和表）以及数据库操作（例如创建表）的权限。当请求者请求访问资源时，在授予访问之前，`IAM` 策略和 `Lake Formation` 权限都将经过执行和验证。
 
 数据湖管理和数据资源消费涉及多个人员角色：
 
-- Lake Formation 管理员：Lake Formation 管理员有权限管理 AWS 账户中 Lake Formation 数据湖的所有方面。示例包括向其他用户授予/撤销访问数据资源的权限、在 S3 中注册数据存储器，以及创建/删除数据库。当您创建 Lake Formation 时，需要注册一个管理员。管理员可以是 AWS IAM 用户或 IAM 角色。你可以为 Lake Formation 数据湖添加多个管理员。
+- `Lake Formation` 管理员：`Lake Formation` 管理员有权限管理 `AWS` 账户中 `Lake Formation` 数据湖的所有方面。示例包括向其他用户授予/撤销访问数据资源的权限、在 `S3` 中注册数据存储器，以及创建/删除数据库。当您创建 `Lake Formation` 时，需要注册一个管理员。管理员可以是 `AWS IAM` 用户或 `IAM` 角色。你可以为 `Lake Formation` 数据湖添加多个管理员。
 
-- Lake Formation 数据库创建者：Lake Formation 数据库创建者被授予了在 Lake Formation 中创建数据库的权限。数据库创建者可以是 IAM 用户或 IAM 角色。
+- `Lake Formation` 数据库创建者：`Lake Formation` 数据库创建者被授予了在 `Lake Formation` 中创建数据库的权限。数据库创建者可以是 `IAM` 用户或 `IAM` 角色。
 
-- Lake Formation 数据库用户：Lake Formation 数据库用户可以被授予对数据库执行不同操作的权限。示例权限包括创建表、删除表、描述表和修改表。数据库用户可以是 IAM 用户或 IAM 角色。
+- `Lake Formation` 数据库用户：`Lake Formation` 数据库用户可以被授予对数据库执行不同操作的权限。示例权限包括创建表、删除表、描述表和修改表。数据库用户可以是 `IAM` 用户或 `IAM` 角色。
 
-- Lake Formation 数据用户：Lake Formation 数据用户可以被授予对表和列执行不同操作的权限。示例权限包括插入、查询、描述、删除、修改和删除。数据用户可以是 IAM 用户或 IAM 角色。
+- `Lake Formation` 数据用户：`Lake Formation` 数据用户可以被授予对表和列执行不同操作的权限。示例权限包括插入、查询、描述、删除、修改和删除。数据用户可以是 `IAM` 用户或 `IAM` 角色。
 
-针对 Lake Formation 数据库和表执行查询是通过支持的 AWS 服务（如 Amazon Athena 和 Amazon EMR）完成的。通过这些服务访问 Lake Formation 运行查询时， Lake Formation 会验证与这些服务的实体（IAM 用户、组和角色）是否具有访问数据库、表和数据 S3 位置的相应访问权限。如果允许访问，Lake Formation 将提供临时凭据来运行查询。
+针对 `Lake Formation` 数据库和表执行查询是通过支持的 `AWS` 服务（如 `Amazon Athena` 和 `Amazon EMR`）完成的。通过这些服务访问 `Lake Formation` 运行查询时，`Lake Formation` 会验证与这些服务的实体（`IAM` 用户、组和角色）是否具有访问数据库、表和数据 `S3` 位置的相应访问权限。如果允许访问，`Lake Formation` 将提供临时凭据来运行查询。
 
 # 数据治理
 
 数据治理确保数据资产是受信任、安全、已分类的，并且其访问受到监控和审计。当数据流被识别并记录，且数据质量经过衡量和报告时，数据就是可信的。为了确保数据的保护和安全，需要对数据进行分类，并应用适当的权限。为了能够谁对数据做了什么，某些场景会实施监控和审计。
 
-当数据从落地区（landing zone）摄入并进一步处理到其他区域时，应当建立并记录数据血缘。例如，当使用 AWS Glue、AWS EMR 或 AWS Lambda 等数据摄入和处理工具运行数据流水线时，可以捕捉以下数据点以建立数据血缘：
+当数据从落地区（landing zone）摄入并进一步处理到其他区域时，应当建立并记录数据血缘。例如，当使用 `AWS Glue`、`AWS EMR` 或 `AWS Lambda` 等数据摄入和处理工具运行数据流水线时，可以捕捉以下数据点以建立数据血缘：
 
 - 数据源名称、位置和所有者详情
 
 - 数据处理作业历史和细节（如作业名称、ID、关联的处理脚本和作业所有者）
 
-- 数据处理作业生成的产物（例如目标数据的 S3 uri）
+- 数据处理作业生成的产物（例如目标数据的 `S3 uri`）
 
 - 数据处理产生不同阶段的数据指标（例如记录数、大小、模式定义和特征统计数据）
 
 # 机器学习的数据管理
 
-应该创建一个中央操作存储器，用于存储所有数据血缘和处理指标。AWS DynamoDB 是一种全托管的 NoSQL 数据库，是存储此类数据的良好技术选择，因为它专为低延迟和高事务访问而设计：
+应该创建一个中央操作存储器，用于存储所有数据血缘和处理指标。`AWS DynamoDB` 是一种全托管的 `NoSQL` 数据库，是存储此类数据的良好技术选择，因为它专为低延迟和高事务访问而设计：
 
-- **数据质量**：应在不同阶段实现自动数据质量检查，并报告质量指标。例如，在源数据摄入落地区后，可以运行 AWS 质量检查作业，使用开源 Deequ 库等工具检查数据质量。可以生成数据质量指标（如计数、模式验证、缺失数据类型或偏离基准的统计偏差）和报告以供审阅。可选情况下，应建立手动或自动的操作清理流程来修复数据质量问题。
+- **数据质量**：应在不同阶段实现自动数据质量检查，并报告质量指标。例如，在源数据摄入落地区后，可以运行 `AWS` 质量检查作业，使用开源 `Deequ` 库等工具检查数据质量。可以生成数据质量指标（如计数、模式验证、缺失数据类型或偏离基准的统计偏差）和报告以供审阅。可选情况下，应建立手动或自动的操作清理流程来修复数据质量问题。
 
-- **数据目录化**：创建一个中央数据目录并在湖中的数据集上运行 Glue 爬虫，自动创建数据清单并填充中央数据目录。使用额外的元数据丰富目录，以跟踪支持发现和数据审计的其他信息，如业务所有者、数据分类和数据刷新。对于 ML 工作负载，数据科学团队还会从数据湖中的现有数据集生成新数据集（例如新的 ML 特征）用于模型训练。这些数据集也应在数据目录中注册和跟踪，并为了审计目的保留和存档不同版本的数据。
+- **数据目录化**：创建一个中央数据目录并在湖中的数据集上运行 `Glue` 爬虫，自动创建数据清单并填充中央数据目录。使用额外的元数据丰富目录，以跟踪支持发现和数据审计的其他信息，如业务所有者、数据分类和数据刷新。对于 ML 工作负载，数据科学团队还会从数据湖中的现有数据集生成新数据集（例如新的 ML 特征）用于模型训练。这些数据集也应在数据目录中注册和跟踪，并为了审计目的保留和存档不同版本的数据。
 
-- **数据访问配置**：应建立正式流程来请求和授予对数据集以及 Lake Formation 数据库和表的访问。可以使用外部工单系统来管理请求访问和授予访问的工作流。
+- **数据访问配置**：应建立正式流程来请求和授予对数据集以及 `Lake Formation` 数据库和表的访问。可以使用外部工单系统来管理请求访问和授予访问的工作流。
 
-- **监控与审计**：应当监控数据访问，并维护访问历史。可以启用 Amazon S3 服务器访问日志以跟踪对所有 S3 对象的访问。AWS Lake Formation 还会在 CloudTrail 中记录所有对 Lake Formation 数据集的访问（AWS CloudTrail 提供 AWS 账户中的事件历史，以确保治理、合规性和操作审计）。通过 Lake Formation 审计，你可以获取事件源、事件名称、SQL 查询和数据输出位置等详细信息。
+- **监控与审计**：应当监控数据访问，并维护访问历史。可以启用 `Amazon S3` 服务器访问日志以跟踪对所有 `S3` 对象的访问。`AWS Lake Formation` 还会在 `CloudTrail` 中记录所有对 `Lake Formation` 数据集的访问（`AWS CloudTrail` 提供 `AWS` 账户中的事件历史，以确保治理、合规性和操作审计）。通过 `Lake Formation` 审计，你可以获取事件源、事件名称、`SQL` 查询和数据输出位置等详细信息。
 
 # 操练 – 机器学习的数据管理
 
-在本次练习中，你将为一家虚拟的零售银行构建一个数据管理平台，以支持 ML 工作流。我们将使用各种 AWS 技术在 AWS 上构建数据管理平台。如果你没有 AWS 账户，可以按照 https://aws.amazon.com/console/ 的说明创建一个。
+在本次练习中，你将为一家虚拟的零售银行构建一个数据管理平台，以支持 ML 工作流。我们将使用各种 `AWS` 技术在 `AWS` 上构建数据管理平台。如果你没有 `AWS` 账户，可以按照 `https://aws.amazon.com/console/` 的说明创建一个。
 
 我们创建的数据管理平台将具有以下关键组件：
 
@@ -1490,15 +1187,11 @@ AWS Step Functions 是一种工作流编排工具。它可以与其他 AWS 处�
 
 图 4.6 – 操练的数据管理架构
 
-让我们开始在 AWS 上构建此架构吧。
-
-
-
-
+让我们开始在 `AWS` 上构建此架构吧。
 
 ## 使用 Lake Formation 创建数据湖
 
-我们将使用 AWS Lake Formation 构建数据湖架构。登录 AWS 管理控制台后，创建一个名为 `MLSA-DataLake-<你的首字母缩写>` 的 S3 桶。我们将用它作为数据湖的存储介质。如果收到桶名称已被占用的消息，请尝试在名称中添加一些随机字符以确保唯一性。如果您不熟悉如何创建 S3 桶，请按照以下链接中的说明操作：
+我们将使用 `AWS Lake Formation` 构建数据湖架构。登录 `AWS` 管理控制台后，创建一个名为 `MLSA-DataLake-<你的首字母缩写>` 的 `S3` 桶。我们将用它作为数据湖的存储介质。如果收到桶名称已被占用的消息，请尝试在名称中添加一些随机字符以确保唯一性。如果您不熟悉如何创建 `S3` 桶，请按照以下链接中的说明操作：
 
 ```
 https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-bucket.html
@@ -1506,33 +1199,33 @@ https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-bucket.html
 
 桶创建完成后，按照以下步骤开始创建数据湖：
 
-- **注册 Lake Formation 管理员**：我们需要向数据湖添加 Lake Formation 管理员。管理员将具有全权限管理数据湖的所有方面。要执行此操作，请导航到 Lake Formation 管理控制台，点击 **Admin and data creators**（管理员和数据创建者）链接，点击 **Data lake administrator**（数据湖管理员）部分的 **Grant**（授予）按钮，并将您自己的 IAM 用户 ID 添加到列表中（您当前登录 AWS 管理控制台时使用的用户 ID）。您可以在 AWS 管理控制台横幅的右上部分找到用户 ID。请注意，您需要使用具有管理员权限的用户 ID 登录 AWS 管理控制台以注册新的 Lake Formation 管理员。
+- **注册 Lake Formation 管理员**：我们需要向数据湖添加 `Lake Formation` 管理员。管理员将具有全权限管理数据湖的所有方面。要执行此操作，请导航到 `Lake Formation` 管理控制台，点击 **Admin and data creators**（管理员和数据创建者）链接，点击 **Data lake administrator**（数据湖管理员）部分的 **Grant**（授予）按钮，并将您自己的 `IAM` 用户 `ID` 添加到列表中（您当前登录 `AWS` 管理控制台时使用的用户 `ID`）。您可以在 `AWS` 管理控制台横幅的右上部分找到用户 `ID`。请注意，您需要使用具有管理员权限的用户 `ID` 登录 `AWS` 管理控制台以注册新的 `Lake Formation` 管理员。
 
-- **注册 S3 存储**：接下来我们需要在 Lake Formation 中注册之前创建的 S3 桶（`MLSA-DataLake-<你的首字母缩写>`），以便通过 Lake Formation 进行管理和访问。要执行此操作，点击 **Dashboard**（仪表板）链接，然后点击 **Register Location**（注册位置）。浏览并选择您创建的桶，然后点击 **Register Location**。Lake Formation 将使用此 S3 桶来存储数据库数据并管理其访问权限。
+- **注册 S3 存储**：接下来我们需要在 `Lake Formation` 中注册之前创建的 `S3` 桶（`MLSA-DataLake-<你的首字母缩写>`），以便通过 `Lake Formation` 进行管理和访问。要执行此操作，点击 **Dashboard**（仪表板）链接，然后点击 **Register Location**（注册位置）。浏览并选择您创建的桶，然后点击 **Register Location**。`Lake Formation` 将使用此 `S3` 桶来存储数据库数据并管理其访问权限。
 
-- **创建数据库建立库**：现在，我们准备好为零售客户设置名为 `bank_customer_db` 的数据库。在注册数据库之前，让我们先在 `MLSA-DataLake-<你的首字母缩写>` 桶下创建一个名为 `bank_customer_db` 的文件夹。该文件夹将用于存储与数据库关联的数据文件。要执行此操作，请点击 Lake Formation 仪表板上的 **Create database**（创建数据库）按钮，并按照屏幕上的说明创建数据库。
+- **创建数据库建立库**：现在，我们准备好为零售客户设置名为 `bank_customer_db` 的数据库。在注册数据库之前，让我们先在 `MLSA-DataLake-<你的首字母缩写>` 桶下创建一个名为 `bank_customer_db` 的文件夹。该文件夹将用于存储与数据库关联的数据文件。要执行此操作，请点击 `Lake Formation` 仪表板上的 **Create database**（创建数据库）按钮，并按照屏幕上的说明创建数据库。
 
-您已成功创建了一个由 Lake Formation 驱动的数据湖，并创建了一个用于数据管理的数据库。接下来，让我们创建一个数据摄取管道将文件移动到数据湖中。
+您已成功创建了一个由 `Lake Formation` 驱动的数据湖，并创建了一个用于数据管理的数据库。接下来，让我们创建一个数据摄取管道将文件移动到数据湖中。
 
 ## 创建数据摄取管道
 
-数据库准备好后，我们现在可以将数据摄取到新数据库中。如前面的节所述，可能有许多不同的数据源，如其他 S3 桶、数据库（例如 Amazon RDS）、流数据（例如社交媒体馈）和日志（CloudTrail）。还有许多用于构建数据摄取管道的不同服务，例如 AWS Glue、Amazon Kinesis 和 AWS Lambda。在本次练习中，我们将构建一个 Amazon Lambda 函数任务，该任务将数据从其他 S3 桶摄取到此新数据库：
+数据库准备好后，我们现在可以将数据摄取到新数据库中。如前面的节所述，可能有许多不同的数据源，如其他 `S3` 桶、数据库（例如 `Amazon RDS`）、流数据（例如社交媒体馈）和日志（`CloudTrail`）。还有许多用于构建数据摄取管道的不同服务，例如 `AWS Glue`、`Amazon Kinesis` 和 `AWS Lambda`。在本次练习中，我们将构建一个 `Amazon Lambda` 函数任务，该任务将数据从其他 `S3` 桶摄取到此新数据库：
 
-- 1. 创建源 S3 桶并下载数据文件：
+- 1. 创建源 `S3` 桶并下载数据文件：
 
-让我们创建另一个名为 `customer-data-source` 的 S3 桶，代表我们将摄取数据的数据源。现在，从以下链接下载示例数据文件：
+让我们创建另一个名为 `customer-data-source` 的 `S3` 桶，代表我们将摄取数据的数据源。现在，从以下链接下载示例数据文件：
 
-https://github.com/PacktPublishing/The-Machine-Learning-Solutions-Architect-Handbook/tree/main/Chapter04/Archive。
+`https://github.com/PacktPublishing/The-Machine-Learning-Solutions-Architect-Handbook/tree/main/Chapter04/Archive`。
 
 然后，将其保存到本地机器。解压压缩文件并将其上传到 `customer-data-source` 桶中。应该有两个文件（`customer_data.csv` 和 `churn_list.csv`）。
 
-- 2. 创建 Lambda 函数：
+- 2. 创建 `Lambda` 函数：
 
-现在，我们将创建一个 Lambda 函数，将数据从 `customer-data-source` 桶摄取到 `MLSA-DataLake-<你的首字母缩写>` 桶：
+现在，我们将创建一个 `Lambda` 函数，将数据从 `customer-data-source` 桶摄取到 `MLSA-DataLake-<你的首字母缩写>` 桶：
 
-- I. 为了开始，导航到 AWS Lambda 管理控制台，点击左侧面板中的 **Functions**（函数）链接，点击右侧面板中的 **Create Function**（创建函数）按钮。选择 **Author from scratch**（从零开始），输入函数名称 `datalake-s3-ingest`，并选择 **Python 3.8** 作为运行时。
+- I. 为了开始，导航到 `AWS Lambda` 管理控制台，点击左侧面板中的 **Functions**（函数）链接，点击右侧面板中的 **Create Function**（创建函数）按钮。选择 **Author from scratch**（从零开始），输入函数名称 `datalake-s3-ingest`，并选择 **Python 3.8** 作为运行时。
 
-- II. 在下一个屏幕，点击 **Add trigger**（添加触发器），选择 **S3** 作为触发器，并选择 **customer-data-source** 桶作为源。对于 **Event Type**（事件类型），选择 **Put** 事件并点击 **Add**（添加）按钮完成此步骤。此触发器将允许发生 S3 桶事件（如向桶中保存文件）时调用 Lambda 函数。
+- II. 在下一个屏幕，点击 **Add trigger**（添加触发器），选择 **S3** 作为触发器，并选择 `customer-data-source` 桶作为源。对于 **Event Type**（事件类型），选择 **Put** 事件并点击 **Add**（添加）按钮完成此步骤。此触发器将允许发生 `S3` 桶事件（如向桶中保存文件）时调用 `Lambda` 函数。
 
 # 机器学习的数据管理
 
@@ -1541,6 +1234,7 @@ III. 接下来，通过用以下创建代码块替换默认函数模板来创建
 ```python
 import json
 import boto3
+
 def lambda_handler(event, context):
     s3 = boto3.resource('s3')
     for record in event['Records']:
@@ -1558,9 +1252,11 @@ def lambda_handler(event, context):
     }
 ```
 
-IV. 新函数还需要 S3 权限来从一个桶复制文件到另一个桶。
 
-- 3. 触发数据摄取：
+
+## IV. 新函数还需要 S3 权限来从一个桶复制文件到另一个桶
+
+### 3. 触发数据摄取
 
 通过将 `customer_data.csv` 和 `churn_list.csv` 上传到 `customer-data-source` 桶来触发数据摄取，并通过 `MLSA-DataLake-<你的首字母缩写>/bank_customer_db` 文件夹验证该过程。您已成功创建了基于 AWS Lambda 的数据管道，将数据从源 S3 桶移动到目标 S3 桶。接下来，让我们创建一个 AWS Glue Catalog。
 
@@ -1568,15 +1264,13 @@ IV. 新函数还需要 S3 权限来从一个桶复制文件到另一个桶。
 
 为了允许 `bank_customer_db` 中的数据进行发现和查询，我们需要创建一个目录。在这里我们将使用 AWS Glue Crawler：
 
-- 1. 为 Glue 授予权限：
+### 1. 为 Glue 授予权限
 
-- I. 首先授予 Glue 访问 `bank_customer_db` 数据库的权限。我们将为 Glue 服务创建一个 IAM 角色。创建一个名为 `AWSGlueServiceRole_data_lake` 的新角色，并附加 AWSGlueServiceRole 和 AmazonS3FullAccess 策略。如果您熟悉如何创建角色和附加策略，请参考以下链接中的说明：https://docs.aws.amazon.com/IAM/latest/
-
+- I. 首先授予 Glue 访问 `bank_customer_db` 数据库的权限。我们将为 Glue 服务创建一个 IAM 角色。创建一个名为 `AWSGlueServiceRole_data_lake` 的新角色，并附加 `AWSGlueServiceRole` 和 `AmazonS3FullAccess` 策略。如果您熟悉如何创建角色和附加策略，请参考以下链接中的说明：https://docs.aws.amazon.com/IAM/latest/
 - II. 角色创建后，在 Lake Formation 管理控制台的左侧面板点击 **Data permission**，然后点击右侧的 **Grant**。
-
 - III. 在新的弹出窗口中，选择 `AWSGlueServiceRole_data_lake` 和 `bank_customer_db` 并点击 Grant。
 
-- 2. 配置 Glue 爬虫任务：
+### 2. 配置 Glue 爬虫任务
 
 通过点击 Lake Formation 管理控制台中的 Crawler 链接启动 Glue 爬虫。一个新的浏览器标签页将打开。点击 **Add Crawler** 开始。输入 `bank_customer_db` 作为爬虫名称并点击 Next。在下一个屏幕上，保持勾选 Data store 和 Crawl all folders。在 Add data store 屏幕上，选择 S3 并在 include path 字段中输入 `s3://MLSA-DataLake-<你的首字母缩写>/bank_customer_db/list/`。
 
@@ -1586,15 +1280,11 @@ IV. 新函数还需要 S3 权限来从一个桶复制文件到另一个桶。
 
 在 Create scheduler for 屏幕上选择 Run on demand 作为频率，然后点击 Finish。
 
-
-
-
-
 在“配置爬虫输出屏幕”上选择 `bank_customer_db`，并在最后一个屏幕上点击“完成”以完成设置。
 
 在“爬虫”屏幕上，选择你刚刚创建的 `bank_customer_db_crawler` 任务，点击“运行爬虫”，并等待状态变为“已就绪”。
 
-返回 Lake Formation 管理控制台并点击“表”（Tables）链接。你现在将看到两个新建的表（`churn_list` 和 `customer_data`）。
+返回 Lake Formation 管理控制台并点击“表”链接。你现在将看到两个新建的表：`churn_list` 和 `customer_data`。
 
 你现在已成功配置了一个 AWS Glue 爬虫，它可以自动从数据文件中发现表并为新数据创建数据目录。
 
@@ -1604,7 +1294,7 @@ IV. 新函数还需要 S3 权限来从一个桶复制文件到另一个桶。
 
 为了支持 ML 工作流的数据发现和理解阶段，我们将在数据湖中提供数据发现和查询能力。
 
-默认情况下，Lake Formation 已经为数据库中的表提供了标签列表（例如数据类型分类，如 CSV），以便搜索。让我们为每个表添加更多标签，以提高其可发现性：
+默认情况下，Lake Formation 已经为数据库中的表提供了标签列表，例如数据类型分类，如 CSV，以便搜索。让我们为每个表添加更多标签，以提高其可发现性：
 
 - 1. 选择 `customer_data` 表，点击“操作”下拉菜单并选择“编辑”。在编辑屏幕上添加以下标签并点击“保存”：
   - department: customer
@@ -1616,7 +1306,6 @@ IV. 新函数还需要 S3 权限来从一个桶复制文件到另一个桶。
   - description: credit score is the FICO score for each customer
 - 4. 按照之前的步骤，为 `churn_list` 表中的 `exited` 字段添加以下列属性：
   - description: churn flag
-
 - 5. 我们现在准备好在 Lake Formation 管理控制中使用元数据进行一些搜索了。尝试在“通过属性查找表”的文本框中分别输入单词来搜索表并查看结果：
   - FICO
   - csv
@@ -1642,7 +1331,7 @@ SELECT * FROM "customer db"."customer data", "customer db"."churn list" where "c
 `customer_data` 和 `churn_list` 表包含了对 ML 有用的特征。但是，它们需要进行连接和处理，才能用于训练 ML 模型。一种方案是数据科学家下载这些数据集并在 Jupyter notebook 中进行处理以用于模型训练。另一种方案是使用单独的处理引擎处理数据，以便数据科学家可以直接与处理后的数据工作。在这里，我们将设置 AWS Glue 处理 `customer_data` 和 `churn_list` 表中的数据，并将其转换为准备好模型训练的新 ML 特征：
 
 - 1. 首先，创建一个名为 `MLSA-DataLake-Serving-你的首字母` 的新 S3 桶。我们将使用此桶存储来自 Glue 任务输出的训练数据集。
-- 2. 开始创建 Glue 任务，点击 Lake Formation 控制台上的“作业”（Jobs）。然后点击“添加作业”按钮，并输入 `customer_churn_process` 作为作业名称。
+- 2. 开始创建 Glue 任务，点击 Lake Formation 控制台上的“作业”。然后点击“添加作业”按钮，并输入 `customer_churn_process` 作为作业名称。
 - 3. 选择 `AWSGlueService_Role` 作为 IAM 角色，并在“此作业运行”部分，选择“由你编写脚本”选项。
 - 4. 点击“下一步”进入下一个屏幕，然后点击“保存作业并编辑脚本”。
 - 5. 在脚本编辑屏幕上，将以下代码块复制到代码部分，然后点击“保存”和“运行作业”按钮。请确保将代码中的 `default_bucket` 替换为你的存储桶。以下代码块使用 `customerid` 列作为键连接 `churn_list` 和 `customer_data` 表，然后通过索引转换 `gender` 和 `geo` 列，创建一个仅包含相关列的新 DataFrame，最后使用日期和生成的 ID 作为分区将输出文件保存到 S3 位置。代码对目标桶、前缀变量使用了默认值，并为 S3 位置生成了日期分区和版本分区。该作业还可以接收用于这些参数的输入参数。
@@ -1651,8 +1340,11 @@ SELECT * FROM "customer db"."customer data", "customer db"."churn list" where "c
 
 ```python
 import sys
+
 from awsglue.utils import getResolvedOptions
+
 from awsglue.transforms import Join
+
 from pyspark.context import SparkContext
 ```
 
@@ -1663,6 +1355,7 @@ import pandas as pd
 from datetime import datetime
 import uuid
 from pyspark.ml.feature import StringIndexer
+
 glueContext = GlueContext(SparkContext.getOrCreate())
 logger = glueContext.get_logger()
 current_date = datetime.now()
@@ -1674,6 +1367,7 @@ target_bucket = ""
 prefix = ""
 day_partition = ""
 version_id = ""
+
 try:
     args = getResolvedOptions(sys.argv, ['JOB_NAME','target_bucket','day_partition','version_id'])
     target_bucket = args['target_bucket']
@@ -1682,6 +1376,7 @@ try:
     version_id = args['version_id']
 except:
     logger.error("error getting arguments")
+
 if target_bucket == "":
     target_bucket = default_bucket
 if prefix == "":
@@ -1699,9 +1394,11 @@ if version_id == "":
 db_name = "customer_data"
 tbl_customer = "customer_data"
 tbl_churn_list = "churn_list"
+
 ### 从源表创建动态帧
 customer = glueContext.create_dynamic_frame.from_catalog(database=db_name, table_name=tbl_customer)
 churn = glueContext.create_dynamic_frame.from_catalog(database=db_name, table_name=tbl_churn_list)
+
 ### 连接帧创建 customer
 customer_churn = Join.apply(customer, churn, 'customerid', 'customerid')
 customer_churn.printSchema()
@@ -1716,17 +1413,16 @@ str_current_date = f"{current_date.year}-{current_date.month}-{current_date.day}
 random_version_id = str(uuid.uuid4())
 output_dir = f"s3://{target_bucket}/{prefix}/day_partition/{version_id}"
 s_customer_churn = customer_churn.toDF()
+
 gender_indexer = StringIndexer(inputCol="gender", outputCol="genderindex")
 s_customer_churn = gender_indexer.fit(s_customer_churn).transform(s_customer_churn)
+
 ge_indexer = StringIndexer(inputCol="geography", outputCol="geoindex")
 s_customer_churn = ge_indexer.fit(s_customer_churn).transform(s_customer_churn)
+
 s_customer_churn = s_customer
 churn.select(['geographyindex', 'estimatedalsary', 'hascrcard', 'numofproducts', 'balance', 'age', 'genderindex', 'isactivemember', 'creditscore', 'tenure', 'exited'])
 ```
-
-
-
-
 
 ```python
 s_customer_churn = s_customer_churn.coalesce(1)
@@ -1734,6 +1430,8 @@ s_customer_churn.write.option("header", "true")
 format("csv").mode('overwrite').save(output_dir)
 logger.info("output_dir: " + output_dir)
 ```
+
+
 
 作业完成后，请检查 S3 中的 `s3://MLSA-DataLake-Serving-<your initials>/ml-customer-churn/<date>/<guid>/` 路径，查看是否生成了新的 csv 文件。打开该文件，查看在文件中是否看到了处理后的数据集。
 
@@ -1744,15 +1442,10 @@ logger.info("output_dir: " + output_dir)
 现在，创建一个流水线，它将运行一个数据摄取作业，然后为数据创建数据库目录，并运行数据处理作业以生成训练数据集：
 
 - 首先，点击 Glue 管理控制台左侧面板中的“Workflows”（工作流）链接。
-
 - 点击“Add Workflow”（添加工作流），并在下一个屏幕上为你的工作流输入名称。然后，点击“Add Workflow”按钮。
-
 - 选择你创建的工作流并点击“Add Trigger”（添加触发器）。选择“Add New”（新建）选项卡，然后为触发器输入名称，并选择“on-demand”（按需）触发器类型。
-
 - 在 UI 设计器中，你将看到出现一个新的“Add Node”（添加节点）图标。点击“Add Node”图标，选择“Crawler”（爬虫）选项卡，并选择 `bank_customer_db_crawler`，然后点击“Add”（添加）。
-
 - 在 UI 设计器中，点击爬虫图标，你将看到出现了一个新的“Add Trigger”（添加触发器）图标。点击“Add Trigger”图标，选择“Add new”选项卡，选择“After ANY event”（任何事件发生后）作为触发器逻辑，然后点击“Add”（添加）。
-
 - 在 UI 设计器中，点击“Add Node”图标，选择“jobs”（作业）选项卡，并选择 `customer_churn_process` 作业。
 
 7. 在工作流 UI 设计器上，最终的工作流应该看起来所示所示：
@@ -1775,20 +1468,19 @@ logger.info("output_dir: " + output_dir)
 
 在本章中，我们涵盖了机器学习的数据管理考虑因素，以及企业级数据管理平台对于机器学习的形态。现在，你应该了解数据管理与机器学习生命周期的交点，以及如何在 AWS 上设计数据湖架构。为了将所学付实践，你还使用 Lake Formation 构建了数据湖。你练习了用于数据发现、查询和下游机器学习任务的数据摄取、处理和数据建模。你还培养了使用 AWS 数据管理工具的实战技能。
 
+# scikit-learn 概述
 
-
-
-scikit-learn 主要构建在三个基础库之上：NumPy、SciPy 和 matplotlib。NumPy 是一个基于 Python 的库，用于管理大型多维数组和矩阵，并提供了额外的数学函数来对数组和矩阵进行操作。SciPy 提供了科学计算功能，如优化、线性代数和傅里叶变换。Matplotlib 用于数据可视化的数据图表绘制。scikit-learn 是处理一系列常见数据处理和模型构建任务的既充分又有效的工具。
+`scikit-learn` 主要构建在三个基础库之上：NumPy、SciPy 和 matplotlib。NumPy 是一个基于 Python 的库，用于管理大型多维数组和矩阵，并提供了额外的数学函数来对数组和矩阵进行操作。SciPy 提供了科学计算功能，如优化、线性代数和傅里叶变换。Matplotlib 用于数据可视化的数据图表绘制。`scikit-learn` 是处理一系列常见数据处理和模型构建任务的既充分又有效的工具。
 
 ## 安装 scikit-learn
 
-你可以轻松地在 Mac、Windows 和 Linux 等不同操作系统上安装 scikit-learn 包。scikit-learn 库包托管在 Python 包索引网站（https://pypi.org/）和 Anaconda 包存储库（https://anaconda.org/anaconda/repo）上。若要在你的环境中安装它，你可以使用 PIP 包管理器或 Conda 包管理器。包管理器允许你在你的操作系统中安装和管理库包的安装。
+你可以轻松地在 Mac、Windows 和 Linux 等不同操作系统上安装 `scikit-learn` 包。`scikit-learn` 库包托管在 Python 包索引网站（https://pypi.org/）和 Anaconda 包存储库（https://anaconda.org/anaconda/repo）上。若要在你的环境中安装它，你可以使用 PIP 包管理器或 Conda 包管理器。包管理器允许你在你的操作系统中安装和管理库包的安装。
 
-要使用 PIP 或 Conda 包管理器安装 scikit-learn 库，你可以简单地运行 `pip install -U scikit-learn` 从 PyPI 索引安装它，或者在你想使用 Conda 环境时运行 `conda install scikit-learn`。你可以在 https://pip.pypa.io/ 了解更多关于 PIP 的信息，可以在 http://docs.conda.io 了解 Conda。
+要使用 PIP 或 Conda 包管理器安装 `scikit-learn` 库，你可以简单地运行 `pip install -U scikit-learn` 从 PyPI 索引安装它，或者在你想使用 Conda 环境时运行 `conda install scikit-learn`。你可以在 https://pip.pypa.io/ 了解更多关于 PIP 的信息，可以在 http://docs.conda.io 了解 Conda。
 
 ## scikit-learn 的核心组件
 
-scikit-learn 为机器学习提供了全 Python 类，从数据处理到构建可重复的流水线。图显示了 scikit-learn 库包中的主要组件：
+`scikit-learn` 为机器学习提供了全 Python 类，从数据处理到构建可重复的流水线。图显示了 `scikit-learn` 库包中的主要组件：
 
 ![](img/bd21298357d8484151447cff0b2f138b_146_0.png)
 
@@ -1798,33 +1490,37 @@ scikit-learn 为机器学习提供了全 Python 类，从数据处理到构建�
 
 现在，让我们仔细观察这些组件如何支持机器学习生命周期的不同阶段：
 
-- **准备数据：** 对于数据操作和处理，通常使用 pandas 库。它提供了核心的数据加载和保存函数，以及用于数据操作（如数据选择、数据排列和数据统计测量）的实用程序。pandas 构建在 NumPy 之上。pandas 库还自带一些可视化功能，如饼图、散点图和箱线图。
+- **准备数据：** 对于数据操作和处理，通常使用 `pandas` 库。它提供了核心的数据加载和保存函数，以及用于数据操作（如数据选择、数据排列和数据统计测量）的实用程序。`pandas` 构建在 NumPy 之上。`pandas` 库还自带一些可视化功能，如饼图、散点图和箱线图。
 
-scikit-learn 提供了一系列用于数据处理和转换的转换器（transformers），如填充缺失值、对类别值、归一化以及文本和图像的特征提取。你可以在 https://scikit-learn.org/stable/data_transforms.html 找到转换器的完整列表。你也可以创建自定义转换器的灵活性。
+`scikit-learn` 提供了一系列用于数据处理和转换的转换器（transformers），如填充缺失值、对类别值、归一化以及文本和图像的特征提取。你可以在 https://scikit-learn.org/stable/data_transforms.html 找到转换器的完整列表。你也可以创建自定义转换器的灵活性。
 
-- **模型训练：** scikit-learn 提供了大量的机器学习算法（也称为估计器 estimators），用于分类和回归（例如逻辑回归、K 近邻算法和随机森林），以及聚类（例如 k-means）。你可以在 https://scikit-learn.org/stable/index.html 找到算法的完整列表。下面的示例代码显示了使用 RandomForestClassifier 算法使用带标签数据集训练模型的语法：
+- **模型训练：** `scikit-learn` 提供了大量的机器学习算法（也称为估计器 estimators），用于分类和回归（例如逻辑回归、K 近邻算法和随机森林），以及聚类（例如 k-means）。你可以在 https://scikit-learn.org/stable/index.html 找到算法的完整列表。下面的示例代码显示了使用 `RandomForestClassifier` 算法使用带标签数据集训练模型的语法：
 
 ```python
 from sklearn.ensemble import RandomForestClassifier
+
 model = RandomForestClassifier(max_depth, max_features, n_estimators)
+
 model.fit(train_X, train_y)
 ```
 
-- **模型评估：** scikit-learn 拥有用于超参数调优和交叉验证的实用程序，以及用于模型评估的指标。你可以在 https://scikit-learn.org/stable/model_selection.html 找到模型选择和评估实用程序的完整列表。下面的示例代码显示了用于评估分类模型准确性的 accuracy_score 类：
+- **模型评估：** `scikit-learn` 拥有用于超参数调优和交叉验证的实用程序，以及用于模型评估的指标。你可以在 https://scikit-learn.org/stable/model_selection.html 找到模型选择和评估实用程序的完整列表。下面的示例代码显示了用于评估分类模型准确性的 `accuracy_score` 类：
 
 ```python
 from sklearn.metrics import accuracy_score
+
 acc = accuracy_score(true_label, predicted_label)
 ```
 
-**模型保存：** scikit-learn 可以使用 Python 对象序列化（pickle 或 joblib）保存模型产物。序列化的 pickle 文件可以被加载到内存中进行预测。下面的示例代码显示了使用 joblib 类保存模型的语法：
+- **模型保存：** `scikit-learn` 可以使用 Python 对象序列化（pickle 或 joblib）保存模型产物。序列化的 pickle 文件可以被加载到内存中进行预测。下面的示例代码显示了使用 `joblib` 类保存模型的语法：
 
 ```python
 import joblib
+
 joblib.dump(model, "saved_model_name.joblib")
 ```
 
-**流水线（Pipeline）：** scikit-learn 还提供了一个流水线工具，可以将转换器和估计器连接成单一的处理流水线，并作为一个单一单元重复使用。当你需要为模型训练和模型预测预处理数据时，这特别有用，因为这两部分数据需要相同的方式处理：
+- **流水线（Pipeline）：** `scikit-learn` 还提供了一个流水线工具，可以将转换器和估计器连接成单一的处理流水线，并作为一个单一单元重复使用。当你需要为模型训练和模型预测预处理数据时，这特别有用，因为这两部分数据需要相同的方式处理：
 
 ```python
 from sklearn.pipeline import Pipeline
@@ -1832,16 +1528,17 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestClassifier
 
 pipe = Pipeline([('scaler', StandardScaler()), (RF, RandomForestClassifier())])
+
 pipe.fit(X_train, y_train)
 ```
 
-如你所见，上手 scikit-learn 机器学习包来实验和构建机器学习模型是非常简单的。scikit-learn 非常适用于常见的回归、分类和聚类机器学习任务；如果你需要在大型数据集或多台机器上训练机器学习，scikit-learn 通常不会是正确的选择，除非算法（例如 SGDRegressor）支持增量训练（递进式训练）。接下来，我们将查看一些可以处理大规模机器学习的机器学习库。
+如你所见，上手 `scikit-learn` 机器学习包来实验和构建机器学习模型是非常简单的。`scikit-learn` 非常适用于常见的回归、分类和聚类机器学习任务；如果你需要在大型数据集或多台机器上训练机器学习，`scikit-learn` 通常不会是正确的选择，除非算法（例如 `SGDRegressor`）支持增量训练（递进式训练）。接下来，我们将查看一些可以处理大规模机器学习的机器学习库。
 
 ## 理解 Apache Spark ML 机器学习库
 
 Apache Spark 是一个用于大规模数据处理的分布式数据处理框架。它允许基于 Spark 的应用程序跨分布式机器集群在内存中加载和处理数据，以加速处理时间。
 
-一个 Spark 集群由一个主节点和工作节点组成，用于运行不同的 Spark 应用。（*此处原文存在大量重复段落，已根据要求去重并保留核心逻辑*）它们由集群管理器（例如 Mesos、YARN 或 standalone）协调，负责为应用程序分配资源。具体来说，执行器配置了诸如 CPU 核心数和内存等资源。一旦分配了执行器，集群管理器就会应用程序代码（Java 或 Python 文件）发送给执行器。下面的图显示了驱动程序如何与集群管理器和执行器交互以运行任务：
+一个 Spark 集群由一个主节点和工作节点组成，用于运行不同的 Spark 应用。它们由集群管理器（例如 Mesos、YARN 或 standalone）协调，负责为应用程序分配资源。具体来说，执行器配置了诸如 CPU 核心数和内存等资源。一旦分配了执行器，集群管理器就会应用程序代码（Java 或 Python 文件）发送给执行器。下面的图显示了驱动程序如何与集群管理器和执行器交互以运行任务：
 
 ![](img/bd21298357d8484151447cff0b2f138b_149_0.png)
 
@@ -1849,16 +1546,15 @@ Apache Spark 是一个用于大规模数据处理的分布式数据处理框架�
 
 每个 Spark 应用都获得自己的执行器集，这些执行器在应用程序运行期间保持开启。执行器之间是隔离的，仅通过外部存储共享数据。
 
-Spark 的机器学习包称为 MLlib，它运行在分布式 Spark 架构之上。它可以处理无法放入单机内存的大数据集并训练模型。它提供了不同语言的 API，包括 Python、Java、Scala 和 R。从角度来看，它与 scikit-learn 非常相似。Spark 非常受欢迎被各种规模的公司采用。Netflix、Uber 和 Pinterest 等大公司使用 Spark 进行大规模数据处理和转换以及运行机器学习模型。
-
-
-
+Spark 的机器学习包称为 MLlib，它运行在分布式 Spark 架构之上。它可以处理无法放入单机内存的大数据集并训练模型。它提供了不同语言的 API，包括 Python、Java、Scala 和 R。从角度来看，它与 `scikit-learn` 非常相似。Spark 非常受欢迎被各种规模的公司采用。Netflix、Uber 和 Pinterest 等大公司使用 Spark 进行大规模数据处理和转换以及运行机器学习模型。
 
 # 理解 Apache Spark ML 学习库
 
-要开始使用 Spark 功能，你需要创建一个 Spark session。Spark session 会创建一个 SparkContext 对象，它是 Spark 功能的入口。以下示例代码展示了如何创建一个 Spark session：
+要开始使用 Spark 功能，你需要创建一个 Spark session。Spark session 会创建一个 `SparkContext` 对象，它是 Spark 功能的入口。以下示例代码展示了如何创建一个 Spark session：
 
-``` evenfrom pyspark.sql import SparkSession
+```python
+from pyspark.sql import SparkSession
+
 spark = SparkSession.builder.appName('appname').getOrCreate()
 ```
 
@@ -1868,7 +1564,7 @@ Spark DataFrame 可以从许多不同的数据源构建，例如结构化数据�
 dataFrame = spark.read.format('csv').load(file_path)
 ```
 
-Spark 中有许多用于数据处理和转换的转换器（transformers），例如 Tokenizer（将文本分解为单词）和 StandardScaler（将特征归一化为单位标准差或零均值）。你可以在 https://spark.apache.org/docs/2.1.0/ml-features.html找到支持的转换器列表。
+Spark 中有许多用于数据处理和转换的转换器（transformers），例如 `Tokenizer`（将文本分解为单词）和 `StandardScaler`（将特征归一化为单位标准差或零均值）。你可以在 https://spark.apache.org/docs/2.1.0/ml-features.html找到支持的转换器列表。
 
 要使用转换器，首先你必须用参数初始化它，然后在包含数据的 DataFrame 上调用 `fit()` 函数，最后调用 `transform()` 函数来转换 DataFrame 中的特征：
 
@@ -1876,7 +1572,9 @@ Spark 中有许多用于数据处理和转换的转换器（transformers），�
 from pyspark.ml.feature import StandardScaler
 
 scaler = StandardScaler(inputCol="features", outputCol="scaledFeatures",withStd=True,withMean=False)
+
 scalerModel = scaler.fit(dataFrame)
+
 scaledData = scalerModel.transform(dataFrame)
 ```
 
@@ -1884,7 +1582,9 @@ scaledData = scalerModel.transform(dataFrame)
 
 ```python
 from pyspark.ml.classification import LogisticRegression
+
 lr_algo = LogisticRegression(maxIter=regParam, elasticNetParam=Param)
+
 lr_model = lr_algo.fit(dataFrame)
 ```
 
@@ -1894,13 +1594,15 @@ lr_model = lr_algo.fit(dataFrame)
 from pyspark.ml.evaluation import BinaryClassificationEvaluator
 
 dataset = spark.createDataFrame(scoreLabels, ["raw", "label"])
+
 evaluator = BinaryClassificationEvaluator()
+
 evaluator.setRawPredictionCol("raw")
 
 evaluator.evaluate(dataset, {evaluator.metricName: "areaUnderPR"})
 ```
 
-- **Pipeline（Pipeline）：** Spark ML 还支持类似于 scikit-learn 的流水线概念。通过流水线概念，你可以将一系列转换和模型训练步骤序列化为一个统一的可重复步骤：
+- **Pipeline（Pipeline）：** Spark ML 还支持类似于 `scikit-learn` 的流水线概念。通过流水线概念，你可以将一系列转换和模型训练步骤序列化为一个统一的可重复步骤：
 
 ```python
 from pyspark.ml import Pipeline
@@ -1908,10 +1610,13 @@ from pyspark.ml.classification import LogisticRegression
 from pyspark.ml.feature import HashingTF, Tokenizer
 
 lr_tokenizer = Tokenizer(inputCol, outputCol)
+
 l_hashingTF = HashingTF(inputCol=tokenizer, getOutputCol(), outputCol)
+
 lr_algo = LogisticRegression(maxIter, regParam)
 
 lr_pipeline = Pipeline(stages=[lr_tokenizer, lr_hashingTF, lr_algo])
+
 lr_model = lr_pipeline.fit(training)
 ```
 
@@ -1923,6 +1628,8 @@ from pyspark.ml import Pipeline, PipelineModel
 
 lr_model.serializeToBundle("saved_file_path", lr_model.transform(dataframe))
 ```
+
+
 
 Spark 为大规模数据处理和机器学习训练提供了统一的框架。它还为神经网络提供了一些基础支持，例如多层感知器。接下来，我们将查看一些专注于深度学习的机器学习库。
 
@@ -1937,13 +1644,17 @@ TensorFlow 基于计算图（computational graph）的概念（即数据流图�
 
 在上述计算图中，矩形节点是数学操作，圆形代表张量。此特定图显示了执行人工神经元的 W法加 b，最后应用 ReLU 函数。等效数学公式为：f(x) = ReLU(Wx + b)。
 
-在早期版本中（版本 1.0），所有计算图都是静态的，这意味着图需要预先构建，并且在执行时无法修改。在构建计算图期间，图中定义的数学操作不会执行。需要单独的执行步骤来执行操作并获取结果。静态图性能更高，因为它们在实际执行之前需要编译。以下代码构建了一个两个常量相加的示例图。print(tf.__version__) 显示安装的 TensorFlow 版本：
+在早期版本中（版本 1.0），所有计算图都是静态的，这意味着图需要预先构建，并且在执行时无法修改。在构建计算图期间，图中定义的数学操作不会执行。需要单独的执行步骤来执行操作并获取结果。静态图性能更高，因为它们在实际执行之前需要编译。以下代码构建了一个两个常量相加的示例图。`print(tf.__version__)` 显示安装的 TensorFlow 版本：
 
 ```python
 import tensorflow as tf
+
 print(tf.__version__)
+
 A = tf.constant(1)
+
 B = tf.constant(2)
+
 C = tf.add(A, B)
 ```
 
@@ -1951,16 +1662,21 @@ C = tf.add(A, B)
 
 ```python
 sess = tf.Session()
+
 sess.run(C)
 ```
 
-在 TensorFlow 2.x 中，计算图可以是静态的也可以是动态的。当你使用 TensorFlow 2.x 运行代码时会执行动态图，会在 print (C) 语句得到输出：
+在 TensorFlow 2.x 中，计算图可以是静态的也可以是动态的。当你使用 TensorFlow 2.x 运行代码时会执行动态图，会在 `print(C)` 语句得到输出：
 
 ```python
 import tensorflow as tf
+
 print(tf.__version__)
+
 A = tf.constant(1)
+
 B = tf.constant(2)
+
 C = tf.add(A, B)
 ```
 
@@ -1981,11 +1697,7 @@ TensorFlow 库为不同的机器学习步骤提供了丰富的功能，从数据
 
 - **准备数据集：** TensorFlow 2.x 提供了 `tf.data` 用于从源（如文件）高效加载数据、转换数据（如更改数据集的值）以及为训练设置数据集（如配置批大小或数据预取）。这些数据类提供了将数据传递给训练算法的高效方法，以优化模型训练。TensorFlow Keras API 还提供了内置类列表（MNIST、CIFAR、IMDB、MNIST Fashion 和 Reuters News）用于构建简单的深度学习模型。你也可以使用 NumPy 数组或 Python 生成器（行为类似于迭代器的函数）在 TensorFlow 中进行建模以供训练，但 `tf.data` 是推荐的方法。
 
-- **定义神经网络：** TensorFlow 2.x 提供了多种使用或构建用于模型训练的神经网络的方法。你可以使用预设的估计器（`tf.estimator` 类）作为 DNNRegressor 和 DNNClassifier 来训练模型。或者使用 keras 类创建自定义神经网络，该类提供了作为 `tf.keras.layers` 的原生语来构建神经网络层，以及作为 `tf.keras.activation` 的 ReLU、**Sigmoid** 和 **Softmax** 来构建神经网络。Softmax 通常作为多分类问题神经网络的最后一个输出。它接收实数向量（正负数）作为输入，并将向量归一化为概率分布，以表示不同类别标签的概率，例如不同的手写数字类型。对于二分类问题，通常使用 Sigmoid，它返回 0 到 1 之间的值。
-
-
-
-
+- **定义神经网络：** TensorFlow 2.x 提供了多种使用或构建用于模型训练的神经网络的方法。你可以使用预设的估计器（`tf.estimator` 类）作为 `DNNRegressor` 和 `DNNClassifier` 来训练模型。或者使用 keras 类创建自定义神经网络，该类提供了作为 `tf.keras.layers` 的原生语来构建神经网络层，以及作为 `tf.keras.activation` 的 ReLU、`Sigmoid` 和 `Softmax` 来构建神经网络。`Softmax` 通常作为多分类问题神经网络的最后一个输出。它接收实数向量（正负数）作为输入，并将向量归一化为概率分布，以表示不同类别标签的概率，例如不同的手写数字类型。对于二分类问题，通常使用 `Sigmoid`，它返回 0 到 1 之间的值。
 
 - **定义损失函数：** TensorFlow 2.x 提供了一系列内置的损失函数，例如用于回归任务的均方误差（MSE）和平均绝对误差（MAE），以及用于分类任务的交叉熵损失。你可以在 https://en.wikipedia.org/wiki/Mean_squared_error 和 https://en.wikipedia.org/wiki/Mean_absolute_error 找到更多关于 MSE 和 MAE 的信息。你可以在 `tf.keras.losses` 中找到支持的损失函数列表。你可以在 https://keras.io/api/losses/ 找到更多关于不同损失的信息。如果内置损失函数不能满足需求，你可以自定义损失函数。
 
@@ -2015,14 +1727,21 @@ TensorFlow 库为不同的机器学习步骤提供了丰富的功能，从数据
 2. 现在导入库并加载示例数据。我们将使用 TensorFlow 库自带的内置 `fashion_mnist` 数据集进行加载。接下来，我们将数据加载到 `tf.data.Dataset` 类中，然后调用它的 `batch()` 函数来设置批次大小。
 ```python
 import numpy as np
+
 import tensorflow as tf
+
 tf.enable_eager_execution()
 
 train, test = tf.keras.datasets.fashion_mnist.load_data()
+
 images, labels = train
+
 labels = labels.astype(np.int32)
+
 images = images/255
+
 train_ds = tf.data.Dataset.from_tensor_slices((images, labels))
+
 train_ds = train_ds.batch(32)
 ```
 
@@ -2031,8 +1750,11 @@ train_ds = train_ds.batch(32)
 from matplotlib import pyplot as plt
 
 print("label: " + str(labels[0]))
+
 pixels = images[0]
+
 plt.imshow(pixels, cmap='gray')
+
 plt.show()
 ```
 
@@ -2040,15 +1762,23 @@ plt.show()
 
 ```python
 model = tf.keras.Sequential([
+
     tf.keras.layers.Flatten(),
+
     tf.keras.layers.Dense(100, activation="relu"),
+
     tf.keras.layers.Dense(50, activation="relu"),
+
     tf.keras.layers.Dense(10),
+
     tf.keras.layers.Softmax()
+
 ])
 
 model.compile(optimizer='adam',
+
     loss=tf.keras.losses.SparseCategoricalCrossentropy(),
+
     metrics=[tf.keras.metrics.SparseCategoricalAccuracy()])
 
 model.fit(train_ds, epochs=10)
@@ -2060,14 +1790,19 @@ model.fit(train_ds, epochs=10)
 
 ```python
 images_test, labels_test = test
+
 labels_test = labels_test.astype(np.int32)
+
 images_test = images_test/255
 
 test_ds = tf.data.Dataset.from_tensor_slices((images_test, labels_test))
+
 test_ds = test_ds.batch(32)
+
 test_ds = test_ds.shuffle(1000)
 
 results = model.evaluate(test_ds)
+
 print("test loss, test acc:", results)
 ```
 
@@ -2075,9 +1810,13 @@ print("test loss, test acc:", results)
 
 ```python
 predictions = model.predict(images_test[0])
+
 predicted_labels = np.argmax(predictions, axis=1)
+
 m = tf.keras.metrics.Accuracy()
+
 m.update_state(labels_test[0], predicted_labels)
+
 print(m.result().numpy())
 ```
 
@@ -2087,9 +1826,6 @@ model.save('my_model')
 ```
 
 恭喜！你已经成功安装了 TensorFlow 并训练了一个深度学习模型。
-
-
-
 
 # PyTorch 核心组件
 
@@ -2101,9 +1837,9 @@ model.save('my_model')
 
 训练深度学习模型的步骤与 TensorFlow 非常相似。我们将通过以下步骤查看 PyTorch 的细节：
 
-- 1. **准备数据集**：PyTorch 提供了数据集和数据管理的原语：`torch.utils.data.Dataset` 和 `torch.utils.data.DataLoader`。Dataset 存储数据样本及其对应的标签，而 DataLoader 封装了数据集并为模型训练提供高效的数据访问。DataLoader 提供了 `shuffle`、`batch_size` 和 `prefetch_factor` 等函数来控制如何加载数据喂给算法。
+- 1. **准备数据集**：PyTorch 提供了数据集和数据管理的原语：`torch.utils.data.Dataset` 和 `torch.utils.data.DataLoader`。`Dataset` 存储数据样本及其对应的标签，而 `DataLoader` 封装了数据集并为模型训练提供高效的数据访问。`DataLoader` 提供了 `shuffle`、`batch_size` 和 `prefetch_factor` 等函数来控制如何加载数据喂给算法。
 
-- 2. **定义神经网络**：PyTorch 提供了构建神经网络的高级抽象，其 `torch.nn` 类为神经网络层提供了内置支持，如线性层（linear layers）和卷积层（convolutional layers），以及激活函数如 Sigmoid 和 ReLU。它还拥有 `nn.Sequential` 类可以将不同的层封装成完整的网络。
+- 2. **定义神经网络**：PyTorch 提供了构建神经网络的高级抽象，其 `torch.nn` 类为神经网络层提供了内置支持，如线性层（linear layers）和卷积层（convolutional layers），以及激活函数如 `Sigmoid` 和 `ReLU`。它还拥有 `nn.Sequential` 类可以将不同的层封装成完整的网络。
 
 - 3. **定义损失函数**：PyTorch 在 `torch.nn` 类中提供了多个内置损失函数，如 `nn.MSELoss` 和 `nn.CrossEntropyLoss`。在执行训练之前，数据集可能需要使用自定义函数来转换数据。
 
@@ -2113,7 +1849,7 @@ model.save('my_model')
 
 - 6. **训练模型**：在 PyTorch 中训练模型涉及每个训练循环中的三个主要步骤：前向传播训练数据、反向传播训练数据以计算梯度，以及执行优化器步进以更新梯度。
 
-- 7. **保存/加载模型**：`torch.save()` 函数以序列化的 pickle 格式保存模型。`torch.load()` 函数将序列化的模型加载到内存中进行推理。常见的约定是使用 .pth 或 .pt 扩展保存文件。你也可以将多个模型保存到单个文件中。
+- 7. **保存/加载模型**：`torch.save()` 函数以序列化的 pickle 格式保存模型。`torch.load()` 函数将序列化的模型加载到内存中进行推理。常见的约定是使用 `.pth` 或 `.pt` 扩展保存文件。你也可以将多个模型保存到单个文件中。
 
 - 8. **模型服务**：PyTorch 自带一个名为 TorchServe 的服务库，我们将在第 7 章开源机器学习平台中详细介绍。PyTorch 库支持大规模分布式数据处理和模型训练，我们将在第 10 章高级机器学习中详细介绍。
 
@@ -2123,10 +1859,11 @@ model.save('my_model')
 
 在本次练习中，你将学习如何在本地机器上安装 PyTorch 库并使用 PyTorch 训练简单的深度学习模型。启动你之前在机器上安装的 Jupyter notebook。如果你忘记了如何操作，请访问第 3 章机器学习算法的“动手实验室”部分。现在，我们开始吧：
 
-- 1. 在你的 Jupyter notebook 环境中创建一个新文件夹 `pytorch-lab`，并创建一个名为 `pytorch-lab.ipynb` 的新笔记本。在单元格中运行以下命令安装 PyTorch 和 torchvision 包。torchvision 包含一组计算机视觉模型和数据集。我们将在本次练习中使用 torchvision 包中预构建的 MNIST 数据集：
+- 1. 在你的 Jupyter notebook 环境中创建一个新文件夹 `pytorch-lab`，并创建一个名为 `pytorch-lab.ipynb` 的新笔记本。在单元格中运行以下命令安装 PyTorch 和 torchvision 包。`torchvision` 包含一组计算机视觉模型和数据集。我们将在本次练习中使用 torchvision 包中预构建的 MNIST 数据集：
 
 ```python
 pip install torch
+
 pip install torchvision
 ```
 
@@ -2136,23 +1873,36 @@ pip install torchvision
 
 ```python
 import numpy as np
+
 import matplotlib.pyplot as plt
+
 import torch
+
 from torchvision import datasets, transforms
+
 from torch import nn, optim
 ```
 
 ```python
 transform = transforms.Compose([transforms.ToTensor(),
-transforms.Normalize((0.5,), (0.5, 0.5,))])
-trainset = datasets.MNIST('pytorch_data/train/',
-download=True, train=True, transform=transform)
-valset = datasets.MNIST('pytorch_data/test/',
-download=True, train=False, transform=transform)
-trainloader = torch.utils.data.DataLoader(trainset,
-batch_size=64, shuffle=True)
-```
 
+
+
+`transforms.Normalize((0.5,), (0.5, 0.5,))`])
+
+`trainset = datasets.MNIST('pytorch_data/train/',`
+
+`download=True, train=True, transform=transform)`
+
+`valset = datasets.MNIST('pytorch_data/test/',`
+
+`download=True, train=False, transform=transform)`
+
+`trainloader = torch.utils.data.DataLoader(trainset,`
+
+`batch_size=64, shuffle=True)`
+
+```
 - 3. 接下来，我们必须构建一个用于分类的 MLP 神经网络。这个 MLP 有两个隐藏层，第一层和第二层使用 ReLU 激活。MLP 接收大小为 784 的输入（展平后的数据）。使用 `nn.Sequential` 将不同的层打包进一个网络：
 
 ```python
@@ -2204,7 +1954,6 @@ val_images, val_labels = next(iter(valloader))
 val_images = val_images.view(val_images.shape[0], -1)
 predictions = model(val_images)
 predicted_labels = np.argmax(predictions.detach().numpy(), axis=1)
-
 from sklearn.metrics import accuracy_score
 accuracy_score(val_labels.detach().numpy(), predicted_labels)
 ```
@@ -2214,9 +1963,6 @@ accuracy_score(val_labels.detach().numpy(), predicted_labels)
 ```python
 torch.save(model, './model/my_mnist_model.pt')
 ```
-
-
-
 
 ## 6 Kubernetes 容器编排基础设施管理
 
@@ -2230,9 +1976,9 @@ torch.save(model, './model/my_mnist_model.pt')
 - Kubernetes 安全与访问控制
 - 手动操实验室——在 AWS 上构建 Kubernetes 基础设施
 
-## 技术要求
+### 技术要求
 
-在本章中，你将继续使用 AWS 账户中的服务来完成章节的实践部分。我们将使用多项 AWS 服务，包括 AWS Kubernetes Service (EKS)、AWS CloudShell 和 AWS EC2。本章中使用的所有代码文件均位于 GitHub：
+在本章中，你将继续使用 AWS 账户中的服务来完成章节的实践部分。我们将使用多项 AWS 服务，包括 AWS Kubernetes Service (`EKS`)、AWS CloudShell 和 AWS EC2。本章中使用的所有代码文件均位于 GitHub：
 
 ```
 https://github.com/PacktPublishing/The-Machine-Learning-Solutions-Architect-Handbook/tree/main/Chapter06.
@@ -2240,7 +1986,7 @@ https://github.com/PacktPublishing/The-Machine-Learning-Solutions-Architect-Hand
 
 让我们从容器的简单介绍开始本章。
 
-## 容器简介
+### 容器简介
 
 容器是操作系统虚拟化的一种形式，它一直是软件部署和运行基于微服务架构的现代软件非常流行的计算平台。容器允许你对带有隔离依赖的软件进行打包和运行。与服务器虚拟化（如 Amazon EC2 或 VMware 虚拟机）相比，容器更加轻量且具有可性，因为它们共享相同的操作系统，且每个容器内部都不包含操作系统镜像。每个容器都有自己的文件系统、计算资源份额以及运行在内部自定义应用程序的进程空间。
 
@@ -2273,7 +2019,6 @@ RUN apt-get -update && apt-get install -y --install-recommends \
 wget \
 python3-pip \
 nginx \
-
 ca-certificates \
 && rm -rf /var/lib/apt/lists/*
 ```
@@ -2288,7 +2033,7 @@ RUN pip --no-cache-dir install numpy==1.16.2 scipy==1.2.1 scikit-learn==0.20.2 p
 
 现在我们已经对容器有了了解，接下来，让我们深入研究 Kubernetes。
 
-## Kubernetes 概述与核心概念
+### Kubernetes 概述与核心概念
 
 虽然在计算环境中直接部署和管理少量容器及容器化应用程序的生命周期是行的，但当你有大量容器需要在大量服务器之间进行管理和编排时，就会变得极具挑战性。这就是 Kubernetes 的用用之地。**Kubernetes (K8s)** 最初于 2014 年，是一个用于大规模管理容器的开源系统（K8s 的缩写是用 8 替换 kubernetes 得到的）。
 
@@ -2305,16 +2050,13 @@ Kubernetes 自带一组内置控制器，例如控制器管理器（controller m
 
 图 6.2 – Kubernetes 架构
 
-要与 Kubernetes 集群控制平面进行交互，你可以使用 `kubectl` 命令行工具、Kubernetes Python 客户端（https://github.com/kubernetes-client/python），或直接使用 REST API。你可以在 https://kubernetes.io/docs/reference/kubectl/cheatsheet 获取支持的 kubectl 命令列表。
+要与 Kubernetes 集群控制平面进行交互，你可以使用 `kubectl` 命令行工具、Kubernetes Python 客户端（https://github.com/kubernetes-client/python），或直接使用 REST API。你可以在 https://kubernetes.io/docs/reference/kubectl/cheatsheet 获取支持的 `kubectl` 命令列表。
 
 Kubernetes 架构核心包含许多独特的技术概念。以下是 Kubernetes 运行的一些主要概念：
 
 - **命名空间 (Namespaces)**：命名空间将工作节点集群组织成虚拟子集群。它们用于为不同团队和项目的所有资源提供逻辑隔离，同时允许不同命名空间进行通信。命名空间可以跨多个工作节点，并可以将一组权限归在一个名称下，允许授权用户访问命名空间中的资源。可以对命名空间实施资源使用控制，例如 CPU 和内存资源的配额。命名空间还允许不同命名空间中的资源使用相同的名称以避免冲突。默认情况下，Kubernetes 中有一个默认命名空间。你可以根据需要创建额外的命名空间。如果没有指定命名空间，则使用默认命名空间。
 
 - **Pod**：Kubernetes 在逻辑单元 Pod 中部署计算。所有的 Pod 都属于 Kubernetes 命名空间（默认命名空间或指定的命名空间）。一个或多个容器可以组成一个 Pod，Pod 中的所有容器都作为一个单元一起部署和扩展，并共享相同的上下文（例如 Linux 命名空间和文件系统）。每个 Pod 都有一个唯一的 IP 地址，Pod 中的所有容器共享。Pod 通常作为工作负载资源创建，例如 Kubernetes Deployment 或 Kubernetes Job。
-
-
-
 
 图（图 6.3）显示了 Kubernetes 集群中命名空间（namespaces）、Pod 和容器（containers）之间的关系。在图中，每个命名空间都包含一组 Pod，而每个 Pod 可以包含运行在其内部的一个或多个容器。
 
@@ -2370,7 +2112,11 @@ spec:
       backoffLimit: 0
 ```
 
-- **Kubernetes 自定义资源 (CRs) 和算器 (operators)：** Kubernetes 提供了一系列内置资源，例如满足不同需求的 Pods 或部署。它还允许您像管理内置资源一样创建并管理 CRs，您可以使用相同的工具（如 kubectl）来管理它们。当您在 Kubernetes 中创建自定义资源（CR）时，它会为该资源的每个版本创建一个新的 API（例如，<custom resource name>/<version>）。这也被称为扩展 Kubernetes APIs。要创建 CR，您需要创建一个自定义资源定义（CRD）YAML 文件。要在 Kubernetes 中注册 CRD，只需运行 `kubectl apply -f <name of the CRD yaml file>` 应用该文件。之后，您就可以像使用任何其他 Kubernetes 资源一样使用它。例如，为了在 Kubernetes 上管理自定义训练任务，您可以定义一个包含如下规范的算法名称、数据加密设置、训练镜像、输入数据源、任务失败重试次数、副本数量和任务存活检查频率的 CRD。
+
+
+## Kubernetes 自定义资源 (CRs) 和算器 (operators)
+
+Kubernetes 提供了一系列内置资源，例如满足不同需求的 Pods 或部署。它还允许您像管理内置资源一样创建并管理 CRs，您可以使用相同的工具（如 `kubectl`）来管理它们。当您在 Kubernetes 中创建自定义资源（CR）时，它会为该资源的每个版本创建一个新的 API（例如，`<custom resource name>/<version>`）。这也被称为扩展 Kubernetes APIs。要创建 CR，您需要创建一个自定义资源定义（CRD）YAML 文件。要在 Kubernetes 中注册 CRD，只需运行 `kubectl apply -f <name of the CRD yaml file>` 应用该文件。之后，您就可以像使用任何其他 Kubernetes 资源一样使用它。例如，为了在 Kubernetes 上管理自定义训练任务，您可以定义一个包含如下规范的算法名称、数据加密设置、训练镜像、输入数据源、任务失败重试次数、副本数量和任务存活检查频率的 CRD。
 
 Kubernetes operator 是一种在自定义资源上运行的控制器。它监控集群状态并进行更改使当前状态向期望状态移动。operator 封装了特定领域的知识以管理复杂的应用程序。例如，operator 可以处理数据库备份、扩展或升级。接下来的图显示了 operator 与资源之间的交互：
 
@@ -2397,11 +2143,9 @@ http://localhost:<port number>/api/v1/proxy/namespaces/<NAMESPACE>/services/<SER
 
 图 6.7 – 通过 NodePort 访问 Kubernetes 服务
 
-
-
 NodePort 使用非常简单，但它也有一些局限性，例如每个 NodePort 只能对应一个服务、使用固定端口范围（3000 到 32767），并且你需要知道各个工作节点的 IP 地址。
 
-- 负载均衡器（Load balancer）：负载均衡器是将服务暴露到互联网的标准方式。通过负载均衡器，你可以获得一个可以在互联网上访问的公共 IP 地址，所有发送到该 IP 地址的流量将将转发到负载均衡器后的服务。负载均衡器不是 Kubernetes 的一部分，它由 Kubernetes 集群所所在的任何云基础设施（例如 AWS）提供。下图（图 6.8）显示了从负载均衡器到服务和 Pod 的通信流：
+- **负载均衡器（Load balancer）：** 负载均衡器是将服务暴露到互联网的标准方式。通过负载均衡器，你可以获得一个可以在互联网上访问的公共 IP 地址，所有发送到该 IP 地址的流量将将转发到负载均衡器后的服务。负载均衡器不是 Kubernetes 的一部分，它由 Kubernetes 集群所所在的任何云基础设施（例如 AWS）提供。下图（图 6.8）显示了从负载均衡器到服务和 Pod 的通信流：
 
 ![](img/bd21298357d8484151447cff0b2f138b_182_0.png)
 
@@ -2409,7 +2153,7 @@ NodePort 使用非常简单，但它也有一些局限性，例如每个 NodePor
 
 负载均衡器允许你选择要使用的精确端口，并支持每个服务对应多个端口。然而，它确实需要每个服务配备单独的负载均衡器。
 
-- Ingress：Ingress 网关是集群的入口。它充当负载均衡器，并根据路由规则将入站流量路由到不同的服务。
+- **Ingress：** Ingress 网关是集群的入口。它充当负载均衡器，并根据路由规则将入站流量路由到不同的服务。
 
 ![](img/bd21298357d8484151447cff0b2f138b_183_0.png)
 
@@ -2422,8 +2166,7 @@ Ingress 与负载均衡器和 NodePort 不同之处在于它作为一个代理�
 除了集群外部的网络流量管理外，Kubernetes 网络管理的另一个重要方面是控制集群内部不同 Pod 和服务之间的流量流。例如，你可能允许某些流量访问 Pod 或服务，同时拒绝来自其他来源的流量。这对于构建微服务架构的应用特别为重要，因为可能有许多服务或 Pod 需要协同工作。这种微服务网络也被称为服务网格。随着服务数量的增加，理解和管理网络需求（如服务发现、网络指标和故障恢复）变得具有挑战性。Istio 是一款开源网格管理软件，它使得在 Kubernetes 上管理大型服务网格变得简单，并提供了以下核心功能：
 
 - Istio 提供了一个 Ingress 网关，可将服务网格中的 Pod 和服务暴露到互联网。它充当负载均衡器，管理服务网格的入站和出站流量。网关只允许流量进入/离开服务网格——它不负责流量路由。要将流量从网关路由到服务网格的服务，你需要创建一个名为 Virtual Service（虚拟服务）的对象来提供路由规则，将入站流量路由到集群内部不同的目标，并在虚拟服务与网关对象之间创建绑定以连接两者。
-
-- 网络流量管理：Istio 提供了易于使用的基于规则的网络路由，以控制不同服务之间的流量流和 API 调用。当安装 Istio 时，它会自动检测集群中的服务和端点。Istio 使用名为 Virtual Service 的对象来提供路由规则，将入站流量路由到集群内部不同的目标。Istio 使用负载均衡器来管理网络网格的入站和出站流量。网关负载均衡器只允许流量进入/离开网格——它不负责流量路由。要从网关路由流量，你需要在虚拟服务与网关对象之间创建绑定。
+- **网络流量管理：** Istio 提供了易于使用的基于规则的网络路由，以控制不同服务之间的流量流和 API 调用。当安装 Istio 时，它会自动检测集群中的服务和端点。Istio 使用名为 Virtual Service 的对象来提供路由规则，将入站流量路由到集群内部不同的目标。Istio 使用负载均衡器来管理网络网格的入站和出站流量。网关负载均衡器只允许流量进入/离开网格——它不负责流量路由。要从网关路由流量，你需要在虚拟服务与网关对象之间创建绑定。
 
 为了管理 Pod 的进出流量，一个 Envoy 代理组件（称为 sidecar 侧容器）被注入到 Pod 中，它拦截并决定如何路由所有流量。管理流量配置和服务发现的 Istio 组件称为 Pilot。Citadel 组件负责服务的身份验证。下图显示了 Istio 的架构：
 
@@ -2431,12 +2174,12 @@ Ingress 与负载均衡器和 NodePort 不同之处在于它作为一个代理�
 
 6.10 - Istio 架构
 
-- 安全性（Security）：Istio 提供服务间的身份验证和授权。
-- 可观测性（Observability）：Istio 捕获指标、日志和追踪。
+- **安全性（Security）：** Istio 提供服务间的身份验证和授权。
+- **可观测性（Observability）：** Istio 捕获指标、日志和追踪。
 
 默认情况下，Kubernetes 允许所有 Pod 之间通信。网络策略（network policies）用于身份验证和授权。Istio 可以处理各种部署需求，如负载扩展。
 
-### 安全与访问管理
+## 安全与访问管理
 
 Kubernetes 具有许多安全功能。这些安全功能允许对 API 进行细粒度的访问控制。在本节中，我们将讨论身份验证和授权。
 
@@ -2468,9 +2211,6 @@ Kubernetes API 的访问可以对用户和服务账户（服务账户为运行�
 - **HTTP 基础认证**：HTTP 基础认证要求作为 API 请求的一部分发送用户 ID 和密码，并根据与 API 服务器关联的密码文件验证用户 ID 和密码。
 
 服务账户用于为运行在 Pod 中的进程提供身份。它们由 Kubernetes 创建和管理。服务账户默认位于命名空间内。每个命名空间中还有一个默认服务账户。如果 Pod 未分配服务账户，将分配默认服务账户。服务账户有一个关联的身份验证令牌，以 Kubernetes Secret 的形式保存，用于 API 认证。Secret 用于存储敏感信息，如密码、身份验证令牌和 SSH 密钥。我们将在本章稍后部分详细介绍 Secret。
-
-
-
 
 ```json
 "spec": {
@@ -2603,7 +2343,9 @@ volumes:
       secretName: aws-secret
 ```
 
-在之前的示例中，你将在 /etc/aws 文件夹中看到每个对应 secret 名称（如 SECRET_AWS_ACCESS_KEY）的文件，其中包含了 secrets 的值。
+
+
+在之前的示例中，你将在`/etc/aws`文件夹中看到每个对应 secret 名称（如`SECRET_AWS_ACCESS_KEY`）的文件，其中包含了 secrets 的值。
 
 ## 在 Kubernetes 上运行 ML 负载
 
@@ -2611,29 +2353,23 @@ volumes:
 
 Kubernetes 可以作为运行 ML 负载的基础设施。例如，你可以在 Kubernetes 上运行容器化的 Jupyter Notebook，作为科学实验和模型构建的环境。
 
-（此处后续为原文中的重复/碎片文本，已按要求完成核心内容翻译）
-
-
-
-
-
 现在集群已经启动，让我们来探索一下。请尝试在 CloudShell 终端中运行以下命令并查看返回的结果：
 
 | 探索项目 | kubectl 命令语法 |
 | --- | --- |
-| 获取集群信息 | kubectl cluster-info |
-| 列出所有 API 资源 | kubectl api-resources |
-| 列出所有可用命名空间 | kubectl get namespaces |
-| 列出工作节点 | kubectl get nodes |
-| 列出所有命名空间中的 Pods | kubectl get pods -A |
-| 列出所有命名空间中的服务 | kubectl get services -A |
-| 列出所有集群角色 (clusterroles) | kubectl get clusterroles |
-| 列出所有命名空间中的角色 (roles) | kubectl get roles -A |
-| 列出所有命名空间中的服务账户 (service accounts) | kubectl get sa -A |
-| 描述管理员集群角色 | kubectl describe clusterrole admin |
-| 列出所有密钥 (secrets) | kubectl get secret -A |
-| 列出所有部署 (deployments) | kubectl get deployments -A |
-| 列出网络策略 (networkpolicies) | kubectl get networkpolicies -A |
+| 获取集群信息 | `kubectl cluster-info` |
+| 列出所有 API 资源 | `kubectl api-resources` |
+| 列出所有可用命名空间 | `kubectl get namespaces` |
+| 列出工作节点 | `kubectl get nodes` |
+| 列出所有命名空间中的 Pods | `kubectl get pods -A` |
+| 列出所有命名空间中的服务 | `kubectl get services -A` |
+| 列出所有集群角色 (clusterroles) | `kubectl get clusterroles` |
+| 列出所有命名空间中的角色 (roles) | `kubectl get roles -A` |
+| 列出所有命名空间中的服务账户 (service accounts) | `kubectl get sa -A` |
+| 描述管理员集群角色 | `kubectl describe clusterrole admin` |
+| 列出所有密钥 (secrets) | `kubectl get secret -A` |
+| 列出所有部署 (deployments) | `kubectl get deployments -A` |
+| 列出网络策略 (networkpolicies) | `kubectl get networkpolicies -A` |
 
 表 6.1 – kubectl 命令
 
@@ -2643,40 +2379,61 @@ Kubernetes 可以作为运行 ML 负载的基础设施。例如，你可以在 K
 
 ```
 cat << EOF > deploy_Jupyter_notebook.yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-name: jupyter-notebook
-labels:
-  app: jupyter-notebook
-spec:
-  replicas: 1
-  selector:
-  matchLabels:
-```
 
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+
+name: jupyter-notebook
+
+labels:
+
+  app: jupyter-notebook
+
+spec:
+
+  replicas: 1
+
+  selector:
+
+  matchLabels:
+
+```
 # Kubernetes 容器编排基础设施管理
 
 ```yaml
-app: jupyter-notebook
-template:
-  metadata:
-    labels:
-      app: jupyter-notebook
-spec:
-  containers:
-    - name: minimal-notebook
-      image: jupyter/minimal-notebook:latest
-      ports:
-        - containerPort: 8888
-```
 
+app: jupyter-notebook
+
+template:
+
+  metadata:
+
+    labels:
+
+      app: jupyter-notebook
+
+spec:
+
+  containers:
+
+    - name: minimal-notebook
+
+      image: jupyter/minimal-notebook:latest
+
+      ports:
+
+        - containerPort: 8888
+
+```
 EOF
 现在，通过运行以下命令来创建部署：
 `kubectl apply -f deploy_Jupyter_notebook.yaml`
 
 运行 `kubectl get pods` 检查 Pod 是否正在运行。
-运行 `kubectl logs <name of notebook pod>` 检查 Jupyter 服务器 Pod 的日志。在日志中找到包含 `http://jupyter-notebook-598f56bf4b-spqn4:8888/token-XXXXXX...` 的部分，并复制 token (XXXXXX...) 部分。我们将在*第 8 步*中使用该 token。
+运行 `kubectl logs <name of notebook pod>` 检查 Jupyter 服务器 Pod 的日志。在日志中找到包含 `http://jupyter-notebook-598f56bf4b-spqn4:8888/token-XXXXXX...` 的部分，并复制 token (`XXXXXX...`) 部分。我们将在*第 8 步*中使用该 token。
 
 运行 `kubectl exec --stdin <name of notebook pod> -- /bin/sh` 进入交互式 shell 以查看运行进程列表。你将看到一个与 Jupyter Notebook 相关的进程。
 
@@ -2689,20 +2446,35 @@ EOF
 
 ```
 cat << EOF > jupyter_svc.yaml
+
 apiVersion: v1
+
 kind: Service
+
 metadata:
+
   name: jupyter-service
+
   annotations:
+
     service.beta.kubernetes.io/aws-load-balancer-type: alb
+
 spec:
+
   selector:
+
     app: jupyter-notebook
+
   ports:
+
     - protocol: TCP
+
       port: 80
+
       targetPort: 8888
+
   type: LoadBalancer
+
 EOF
 ```
 
@@ -2710,15 +2482,11 @@ EOF
 
 将 EXTERNAL-IP 地址粘贴到新的浏览器窗口，并输入之前复制的 token 登录（见图 6.11）。你应该能看到 Jupyter Notebook 窗口。
 
+- **模型注册表 (Model registry)**：模型训练完成后，需要在模型注册表中进行跟踪和管理，以便进行模型清单和血缘管理、版本控制、模型发现以及模型生命周期管理（例如在暂存环境或生产环境中）。当有大量模型需要管理时，模型注册表尤为重要。数据科学家可以在数据科学环境中执行实验时直接在注册表中注册模型。模型也可以作为自动化模型流水线执行的一部分进行注册。
 
+- **模型推理环境 (Model serving environment)**：为了使用训练好的 ML 模型为客户端生成预测，你需要通过 API 端点后的模型服务基础设施实时托管模型。该基础设施还应支持批处理能力。存在不同类型的模型推理框架。
 
-
-
--   **模型注册表 (Model registry)**：模型训练完成后，需要在模型注册表中进行跟踪和管理，以便进行模型清单和血缘管理、版本控制、模型发现以及模型生命周期管理（例如在暂存环境或生产环境中）。当有大量模型需要管理时，模型注册表尤为重要。数据科学家可以在数据科学环境中执行实验时直接在注册表中注册模型。模型也可以作为自动化模型流水线执行的一部分进行注册。
-
--   **模型推理环境 (Model serving environment)**：为了使用训练好的 ML 模型为客户端生成预测，你需要通过 API 端点后的模型服务基础设施实时托管模型。该基础设施还应支持批处理能力。存在不同类型的模型推理框架。
-
--   **持续集成 (CI)/持续部署 (CD) 和工作流自动化**：最后，我们需要建立 CI/CD 和工作流自动化能力，以简化数据处理、模型训练和部署过程，从而提高 ML 部署的速度、一致性、可复现性和观测性。
+- **持续集成 (CI)/持续部署 (CD) 和工作流自动化**：最后，我们需要建立 CI/CD 和工作流自动化能力，以简化数据处理、模型训练和部署过程，从而提高 ML 部署的速度、一致性、可复现性和观测性。
 
 除了这些核心组件外，还有其他平台架构因素需要考虑，例如安全和身份验证、日志与监控以及治理与控制。在接下来的章节中，我们将讨论用于构建端到端 ML 平台的开源技术。
 
@@ -2730,11 +2498,11 @@ EOF
 
 Kubeflow 是基于 Kubernetes 的开源 ML 平台，提供了许多特定的 ML 组件。Kubeflow 运行在 Kubernetes 之上，并提供以下能力：
 
--   一个中心 UI 仪表板
--   用于代码编写和模型构建的 Jupyter notebook 服务器
--   用于 ML 排排的 Kubeflow pipeline
--   用于模型服务的 KFServing
--   用于模型训练的训练器 (Training operators)
+- 一个中心 UI 仪表板
+- 用于代码编写和模型构建的 Jupyter notebook 服务器
+- 用于 ML 排排的 Kubeflow pipeline
+- 用于模型服务的 KFServing
+- 用于模型训练的训练器 (Training operators)
 
 下图（图 7.1）展示了 Kubeflow 如何提供数据科学环境所需的各种组件。在这里，我们将关注它的 Jupyter notebook 服务。
 
@@ -2744,36 +2512,56 @@ Kubeflow 是基于 Kubernetes 的开源 ML 平台，提供了许多特定的 ML 
 
 Kubeflow 提供了一个内置身份验证和授权支持的多租户 Jupyter notebook 服务器环境。让我们详细讨论这些每个核心组件：
 
--   **Jupyter notebook**：作为数据科学家，你可以使用 Kubeflow Jupyter notebook 在 Jupyter notebook 内部探索数据并构建模型。Kubeflow 可以启动多个 notebook 服务器，每个服务器属于一个对应于团队、项目或用户的 Kubernetes 命名空间。每个 notebook 服务器运行在 Kubernetes Pod 内部的容器中。默认情况下，Kubeflow notebook 服务器提供一组托管在公共镜像仓库中的 notebook 容器镜像列表供选择。你也可以创建自定义 notebook 容器镜像来运行自定义 notebook 服务器。为了强制标准和一致性，Kubeflow 管理员可以为用户提供标准镜像列表。在创建 notebook 服务器时，你选择运行的命名空间，指定 notebook 服务器容器镜像的通用资源标识符 (URI)，并指定资源需求（例如 CPU/GPU 数量和内存大小）。
+- **Jupyter notebook**：作为数据科学家，你可以使用 Kubeflow Jupyter notebook 在 Jupyter notebook 内部探索数据并构建模型。Kubeflow 可以启动多个 notebook 服务器，每个服务器属于一个对应于团队、项目或用户的 Kubernetes 命名空间。每个 notebook 服务器运行在 Kubernetes Pod 内部的容器中。默认情况下，Kubeflow notebook 服务器提供一组托管在公共镜像仓库中的 notebook 容器镜像列表供选择。你也可以创建自定义 notebook 容器镜像来运行自定义 notebook 服务器。为了强制标准和一致性，Kubeflow 管理员可以为用户提供标准镜像列表。在创建 notebook 服务器时，你选择运行的命名空间，指定 notebook 服务器容器镜像的通用资源标识符 (URI)，并指定资源需求（例如 CPU/GPU 数量和内存大小）。
 
--   **身份验证与授权**：你通过 Kubeflow UI 仪表板访问 notebook 服务器，该仪表板通过 Dex Open Connect (OIDC) 提供者提供身份验证服务。Dex 是一个使用 OIDC 为其他应用程序提供身份验证的身份服务。Dex 可以与 Active Directory 服务等其他身份服务联合。每个 notebook 都关联一个默认 Kubernetes 服务账户 (default-editor)，用于某些目的（例如授予 notebook 访问 Kubernetes 集群中各种资源的权限）。Kubeflow 使用基于 Istio 的访问控制 (RBAC) 来控制集群内流量。以下 YAML 文件通过将 `ml-pipeline-services` 角色绑定到 `default-editor` 服务账户（与 Kubeflow notebook 关联），授予其访问 Kubeflow pipeline 权限：
+- **身份验证与授权**：你通过 Kubeflow UI 仪表板访问 notebook 服务器，该仪表板通过 Dex Open Connect (OIDC) 提供者提供身份验证服务。Dex 是一个使用 OIDC 为其他应用程序提供身份验证的身份服务。Dex 可以与 Active Directory 服务等其他身份服务联合。每个 notebook 都关联一个默认 Kubernetes 服务账户 (`default-editor`)，用于某些目的（例如授予 notebook 访问 Kubernetes 集群中各种资源的权限）。Kubeflow 使用基于 Istio 的访问控制 (RBAC) 来控制集群内流量。以下 YAML 文件通过将 `ml-pipeline-services` 角色绑定到 `default-editor` 服务账户（与 Kubeflow notebook 关联），授予其访问 Kubeflow pipeline 权限：
 
 ```yaml
+
 apiVersion: rbac.istio.io/v1alpha
+
 kind: ServiceRoleBinding
+
 metadata:
+
   name: bind-ml-pipeline-nb-admin
+
   namespace: kubeflow
+
 spec:
+
   roleRef:
+
     kind: ServiceRole
+
     name: ml-pipeline-services
+
 subjects:
+
 -  properties:
+
       source.principal: cluster.local/ns/admin/sa/default-editor
+
 ```
 
--   **多租户**：Kubeflow 允许多个用户访问同一个 Kubeflow 环境，并支持用户级的资源隔离（例如 notebook 服务器等资源）。它通过为每个用户创建一个单独的命名空间来实现，并使用 Kubernetes RBAC 和 Istio RBAC 来控制对不同命名空间及其资源的访问。对于团队协作，命名空间所有者可以使用 Kubeflow 仪表板 UI 内部的**管理贡献者 (Manage Contributor)** 功能直接授予其他用户访问命名空间的权限。
+- **多租户**：Kubeflow 允许多个用户访问同一个 Kubeflow 环境，并支持用户级的资源隔离（例如 notebook 服务器等资源）。它通过为每个用户创建一个单独的命名空间来实现，并使用 Kubernetes RBAC 和 Istio RBAC 来控制对不同命名空间及其资源的访问。对于团队协作，命名空间所有者可以使用 Kubeflow 仪表板 UI 内部的**管理贡献者 (Manage Contributor)** 功能直接授予其他用户访问命名空间的权限。
 
 要添加新的 Kubeflow 用户，你需要创建一个新的用户配置，这反过来创建一个新的命名空间。使用 `kubectl` 应用以下 YAML 文件将创建一个名为 `test-user` 的新用户配置（邮箱为 `test-user@kubeflow.org`），并创建一个新的命名空间：
 
 ```yaml
+
 apiVersion: kubeflow.org/v1beta1
+
 kind: User
+
 metadata:
+
   name: test-user
+
 spec:
+
   owner: test-user@kubeflow.org
+
 ```
 
 你可以运行 `kubectl get profiles` 和 `kubectl get namespaces` 命令来验证配置和命名空间已创建。
@@ -2788,14 +2576,10 @@ spec:
 
 在基于 Kubernetes 的环境中，模型训练有两种主要方法：
 
--   使用 Kubernetes Jobs 进行模型训练
--   使用 Kubeflow 训练器模型训练
+- 使用 Kubernetes Jobs 进行模型训练
+- 使用 Kubeflow 训练器模型训练
 
 你可以根据训练需求选择使用哪种方法。现在，让我们详细查看每种方法：
-
-
-
-
 
 | command: ["python", "train.py"] |
 | restartPolicy: Never |
@@ -2808,29 +2592,53 @@ spec:
 Kubeflow 使用了一组预构建的运算符（如 TensorFlow、PyTorch 和 XGBoost 运算符）来处理复杂的模型训练作业。每个 Kubeflow 训练运算符都有一个自定义资源（CR）（例如用于 TensorFlow 作业的 TFJob），它定义了训练作业的特定配置，例如训练作业中 Pod 的类型（例如 master、worker 或参数 server），或者关于如何清理资源以及作业应运行多久的运行策略。CR 的控制器负责配置训练环境，监控训练作业的特定状态。例如，控制器可以设置环境变量，使得训练集群规范（例如 Pod 的类型和索引）对容器内部的训练代码可用。控制器还可以检查训练进程的退出码，如果退出码表示永久性失败，则会导致训练作业失败。接的 YAML 文件模板代表了使用 TensorFlow 运算符（tf-operator）运行训练作业的规范：
 
 ```yaml
+
 apiVersion: "kubeflow.org/v1"
+
 kind: "TFJob"
+
 metadata:
+
   name: "distributed-tensorflow-job"
+
 spec:
+
   tfReplicaSpecs:
+
     PS:
+
       replicas: 1
+
       restartPolicy: Never
+
       template:
+
         spec:
+
           containers:
+
             - name: tensorflow
+
               image: <model training image uri>
+
     Worker:
+
       replicas: 2
+
       restartPolicy: Never
+
       template:
+
         spec:
+
           containers:
+
             - name: tensorflow
+
               image: <model training image uri>
 ```
+
+
 
 在此示例中，该规范将创建一个参数服务器（用于跨不同容器聚合模型参数）的副本，以及两个 worker（运行模型训练循环并与参数服务器通信）的副本。运算符将根据规范处理 TFJob 对象，将带有实际运行的服务和 Pod 的 TFJob 对象保留在系统中，并将实际状态替换为预期状态。你可以使用 `kubectl apply -f <TFJob specs template>` 提交训练作业，并使用 `kubectl get tfjob` 命令获取 TFJob 的状态。
 
@@ -2865,7 +2673,7 @@ MLflow 模型注册表的主要缺点之一是它不支持用户权限管理，�
 
 ### Gunicorn 和 Flask 推理引擎
 
-对于复杂的推理需求，我们需要考虑一些开源的推理框架。**Gunicorn** 和 **Flask** 通常用于构建自定义推理框架。下图（图 7.3）显示了使用 Flask 和 Gunicorn 的典型架构：
+对于复杂的推理需求，我们需要考虑一些开源的推理框架。`Gunicorn` 和 `Flask` 通常用于构建自定义推理框架。下图（图 7.3）显示了使用 Flask 和 Gunicorn 的典型架构：
 
 ![](img/bd21298357d8484151447cff0b2f138b_210_0.png)
 
@@ -2885,25 +2693,21 @@ Flask 是一个基于 Python 的微框架框架，用于快速构建应用。它
 
 TensorFlow Serving 是一个生产级的开源模型服务框架，并为通过 RESTful 端点提供 TensorFlow 模型提供了开箱即的支持。它管理模型服务的模型生命周期，并允许通过单个端点访问版本化和多个模型。它还内置支持金丝发布（canary deployments）。金丝发布允许你部署模型以支持部分流量。
 
-
-
-
-
 ![](img/bd21298357d8484151447cff0b2f138b_213_0.png)
 
 图 7.4 – TensorFlow Serving 架构
 
-API handler 为 TensorFlow Serving 提供 API。它带有一个内置的轻量级 HTTP 服务器，用于提供基于 RESTful 的 API 请求。它还支持**gRPC（一种远程过程调用）**流量。gRPC 是一种常用且快速的网络协议，但比使用 REST 协议更复杂。TensorFlow Serving 有一个名为 *servable*（可服务对象）的概念，指的是处理任务的实际对象，例如模型推理或查找表。例如，一个训练好的模型被表示为一个 *servable*，它可以包含一个或多个算法以及查找表或嵌入表。API handler 使用 servable 来满足客户端请求。
+API handler 为 TensorFlow Serving 提供 API。它带有一个内置的轻量级 HTTP 服务器，用于提供基于 RESTful 的 API 请求。它还支持 `gRPC`（一种远程过程调用）流量。gRPC 是一种常用且快速的网络协议，但比使用 REST 协议更复杂。TensorFlow Serving 有一个名为 `servable`（可服务对象）的概念，指的是处理任务的实际对象，例如模型推理或查找表。例如，一个训练好的模型被表示为一个 `servable`，它可以包含一个或多个算法以及查找表或嵌入表。API handler 使用 servable 来满足客户端请求。
 
-*model manager*（模型管理器）管理 servables 的生命周期，包括加载 servables、提供 servables 以及卸载 servables。当需要 servable 来执行任务时，模型管理器为客户端提供一个句柄用以访问 servable 实例。模型管理器可以管理多个版本的 servable。这允许逐步发布不同版本的模型。
+`model manager`（模型管理器）管理 servables 的生命周期，包括加载 servables、提供 servables 以及卸载 servables。当需要 servable 来执行任务时，模型管理器为客户端提供一个句柄用以访问 servable 实例。模型管理器可以管理多个版本的 servable。这允许逐步发布不同版本的模型。
 
-*model loader*（模型加载器）负责从不同的源加载模型，例如 **Amazon S3**。当加载一个新模型时，模型加载器会通知模型管理器新模型的可用性，模型管理器将决定下一步应该做什么（例如卸载旧版本并加载新版本）。
+`model loader`（模型加载器）负责从不同的源加载模型，例如 `Amazon S3`。当加载一个新模型时，模型加载器会通知模型管理器新模型的可用性，模型管理器将决定下一步应该做什么（例如卸载旧版本并加载新版本）。
 
 TensorFlow Serving 可以扩展以支持非 TensorFlow 模型。例如，在其他框架中训练的模型可以转换为 ONNX 格式，并使用 TensorFlow Serving 进行模型服务。ONNX 是一种表示模型的常用格式，用于支持不同机器学习框架之间的互操作性。
 
 ## TorchServe 服务框架
 
-**TorchServe** 是一个用于为 PyTorch 模型提供服务的开源框架。与 TensorFlow Serving 类似，TorchServe 通过其内置的 Web 服务器提供 REST API 来提供模型服务。具有多模型服务、模型版本控制、服务端请求批处理和内置监控等核心功能，TorchServe 可以大规模地处理生产工作负载。此外，无需编写自定义代码使用 TorchServe 托管 PyTorch 模型。TorchServe 自带一个用于托管模型的内置 Web 服务器。接下来的图（图 7.5）展示了 TorchServe 框架组件的架构：
+`TorchServe` 是一个用于为 PyTorch 模型提供服务的开源框架。与 TensorFlow Serving 类似，TorchServe 通过其内置的 Web 服务器提供 REST API 来提供模型服务。具有多模型服务、模型版本控制、服务端请求批处理和内置监控等核心功能，TorchServe 可以大规模地处理生产工作负载。此外，无需编写自定义代码使用 TorchServe 托管 PyTorch 模型。TorchServe 自带一个用于托管模型的内置 Web 服务器。接下来的图（图 7.5）展示了 TorchServe 框架组件的架构：
 
 ![](img/bd21298357d8484151447cff0b2f138b_214_0.png)
 
@@ -2911,7 +2715,7 @@ TensorFlow Serving 可以扩展以支持非 TensorFlow 模型。例如，在其�
 
 推理 API 负责使用已加载的 PyTorch 模型处理来自应用程序的预测请求。它支持 REST 协议并提供预测 API，以及其他辅助 API，如健康检查和模型解释 API。推理 API 可以处理多个模型的预测请求。
 
-模型产物（artifacts）被封装成单个归档文件，并存储在 TorchServe 环境内的模型存储中。你使用名为 `torch-archive` 的**命令行界面 (CLI)** 命令来封装模型。
+模型产物（artifacts）被封装成单个归档文件，并存储在 TorchServe 环境内的模型存储中。你使用名为 `torch-archive` 的命令行界面 (CLI) 命令来封装模型。
 
 TorchServe 后端从模型存储中将归档模型加载到不同的工作进程中。这些工作进程与推理 API 交互以处理请求并返回响应。
 
@@ -2977,18 +2781,12 @@ Seldon Core 还支持用于模型服务的高级工作流（也称为推理图�
 - 用于不同预测任务的一个或多个机器学习模型
 - 用于使用模式的流量路由管理，例如为了 A/B 测试将流量分到不同模型
 - 用于合并多个模型结果的组件，例如集成组件
-
-
-
-
-
--   用于转换输入请求（例如执行特征工程）或输出响应（例如将数组格式转换为 JSON 格式）的组件
+- 用于转换输入请求（例如执行特征工程）或输出响应（例如将数组格式转换为 JSON 格式）的组件
 
 为了在 YAML 中构建推理图规范，你需要在 `seldondeployment` YAML 文件包含以下关键组件：
 
--   一个预测器（predictors）列表，每个预测器都有自己的 `componentSpecs` 部分，用于指定容器镜像等详细信息
-
--   一个描述每个 `componentSpecs` 部分中的组件是如何连接在一起的图表
+- 一个预测器（predictors）列表，每个预测器都有自己的 `componentSpecs` 部分，用于指定容器镜像等详细信息
+- 一个描述每个 `componentSpecs` 部分中的组件是如何连接在一起的图表
 
 以下示例模板展示了自定义部署的推理图，用于将流量分到两个不同版本的模型：
 
@@ -3035,7 +2833,9 @@ name: canary
 traffic: 25
 ```
 
-一旦应用了部署清单（manifest），Seldon Core 操作符负责创建提供 ML 模型所需的所有资源。具体而言，操作符将创建清单中定义的资源，在 Pod 中添加编排器（orchestrators）以管理推理图的编排，并使用如 Istio 等入站网关配置流量。
+
+
+一旦应用了部署清单（`manifest`），Seldon Core 操作符负责创建提供 ML 模型所需的所有资源。具体而言，操作符将创建清单中定义的资源，在 Pod 中添加编排器（`orchestrators`）以管理推理图的编排，并使用如 `Istio` 等入站网关配置流量。
 
 ## 自动化 ML 流水线工作
 
@@ -3045,20 +2845,18 @@ traffic: 25
 
 Apache Airflow 是一个开源软件包，用于程序化地编写、调度和监控多步工作流。它是一个通用的工作流编排工具，可以用于定义各种任务（包括 ML 任务）的工作流。首先，让我们回顾一些 Airflow 核心概念：
 
--   **有向无环图 (DAG)：** DAG 定义了在流水线中独立执行的独立任务。执行序列可以可视化为图。
--   **任务 (Tasks)：** 任务是 Airflow 中的基本执行单元。任务在执行期间存在依赖关系。
-
--   **算子 (Operators)：** 算子是 DAG 的组件，描述流水线中的单个任务。算子实现了任务执行逻辑。Airflow 为常见任务提供了算子列表，例如用于运行 Python 代码的 Python 算子，或与 Amazon S3 服务交互的 Amazon S3 算子。任务在实例化算子时创建。
-
--   **调度 (Scheduling)：** DAG 可以按需运行，也可以按照预定的计划运行。
+- **有向无环图 (DAG)：** `DAG` 定义了在流水线中独立执行的独立任务。执行序列可以可视化为图。
+- **任务 (Tasks)：** 任务是 Airflow 中的基本执行单元。任务在执行期间存在依赖关系。
+- **算子 (Operators)：** 算子是 `DAG` 的组件，描述流水线中的单个任务。算子实现了任务执行逻辑。Airflow 为常见任务提供了算子列表，例如用于运行 Python 代码的 Python 算子，或与 Amazon S3 服务交互的 Amazon S3 算子。任务在实例化算子时创建。
+- **调度 (Scheduling)：** `DAG` 可以按需运行，也可以按照预定的计划运行。
 
 Airflow 可以运行在单机上或集群中。它也可以部署在 Kubernetes 基础设施上。下图显示了多节点 Airflow 部署：
 
 ![](img/bd21298357d8484151447cff0b2f138b_220_0.png)
 
-**主节点主要运行 Web 服务器和调度器*。调度器负责调度 DAG 的执行。它将任务发送到队列，工作节点从队列中获取任务并运行它们。元数据存储器用于存储 Airflow 集群和进程的元数据，例如任务实例详情或用户数据。
+**主节点主要运行 Web 服务器和调度器*。调度器负责调度 `DAG` 的执行。它将任务发送到队列，工作节点从队列中获取任务并运行它们。元数据存储器用于存储 Airflow 集群和进程的元数据，例如任务实例详情或用户数据。
 
-你可以使用 Python 编写 Airflow DAG。下面的示例代码展示了如何用 Python 编写包含两个顺序 bash 算子的基础 Airflow DAG：
+你可以使用 Python 编写 Airflow `DAG`。下面的示例代码展示了如何用 Python 编写包含两个顺序 bash 算子的基础 Airflow `DAG`：
 
 ```python
 from airflow import DAG
@@ -3085,12 +2883,12 @@ Airflow 可以连接到许多外部服务，如 Amazon SageMaker。
 
 Kubeflow Pipelines 专为在 Kubernetes 上编排端到端 ML 工作流而构建。首先，让我们回顾一些核心概念：
 
--   **流水线 (Pipeline)：** 流水线描述工作流以及组件之间的关系。
--   **流水线组件 (Pipeline components)：** 流水线组件执行任务。管道组件的示例可以是数据处理或模型训练。
--   **实验 (Experiment)：** 实验组织了不同的运行。
--   **步骤 (Step)：** 流水中一个组件的执行被称为步骤。
--   **运行触发器 (Run trigger)：** 你使用运行触发器启动执行。运行触发器可以是定期的（例如每 2 小时一次），或调度的（在特定时间）。
--   **输出产物 (Output artifacts)：** 输出产物是流水线的输出。输出产物的示例可以是指标或数据集。
+- **流水线 (Pipeline)：** 流水线描述工作流以及组件之间的关系。
+- **流水线组件 (Pipeline components)：** 流水线组件执行任务。管道组件的示例可以是数据处理或模型训练。
+- **实验 (Experiment)：** 实验组织了不同的运行。
+- **步骤 (Step)：** 流水中一个组件的执行被称为步骤。
+- **运行触发器 (Run trigger)：** 你使用运行触发器启动执行。运行触发器可以是定期的（例如每 2 小时一次），或调度的（在特定时间）。
+- **输出产物 (Output artifacts)：** 输出产物是流水线的输出。输出产物的示例可以是指标或数据集。
 
 Kubeflow Pipelines 作为 Kubeflow 的一部分。它自带 UI，即仪表板。该服务管理流水线及其状态，并将其存储在元数据数据库中。下图（图 7.9）显示了核心架构：
 
@@ -3100,10 +2898,10 @@ Kubeflow Pipelines 作为 Kubeflow 的一部分。它自带 UI，即仪表板。
 
 你使用 Python SDK 编写流水线。要创建并运行流水线，请遵循以下步骤：
 
--   使用 SDK 创建流水线定义。流水线定义指定了组件列表以及它们如何在图中连接。
+- 使用 SDK 创建流水线定义。流水线定义指定了组件列表以及它们如何在图中连接。
 将定义编译为供 Kubeflow 服务执行的静态 YAML 规范。
--   向 Kubeflow 服务注册规范并调用静态定义。
--   编排控制器执行各种容器以完成流水线运行。
+- 向 Kubeflow 服务注册规范并调用静态定义。
+- 编排控制器执行各种容器以完成流水线运行。
 
 好了，我们现在涵盖了许多构建 ML 平台的开源工具。现在，让我们付诸实践，使用这些工具构建基础 ML 平台。
 
@@ -3122,21 +2920,14 @@ Kubeflow Pipelines 作为 Kubeflow 的一部分。它自带 UI，即仪表板。
 你将继续使用之前创建的 Amazon (EKS) 基础设施并在上方安装 Kubeflow。开始之前，完成以下步骤：
 
 1. 启动 AWS CloudShell：登录你的 AWS 账户，选择 区域，再次启动 AWS CloudShell。
-2. 安装 kfctl 工具：Kfctl 工具是一个用于安装和管理 Kubeflow 的命令行工具。在 CloudShell 环境中逐条运行以下命令以安装kfctl！
+2. 安装 `kfctl` 工具：`Kfctl` 工具是一个用于安装和管理 Kubeflow 的命令行工具。在 CloudShell 环境中逐条运行以下命令以安装`kfctl`！
 
 ```bash
 sudo yum search tar
-
 curl --silent --location "https://github.com/kubeflow/kfctl/releases/download/v1.2.0/kfctl_v1.2.0-0gbc38f9_linux.tar.gz" | tar xz -C /tmp
-
 chmod +x /tmp/kfctl
-
 sudo mv /tmp/kfctl ./bin/kfctl
 ```
-
-
-
-
 
 - 3. 添加环境变量：添加环境变量以便更方便地执行命令。您需要提供 Amazon EKS 集群名称。您可以在 AWS 管理控制台中查找 EKS 集群名称：
 
@@ -3159,9 +2950,9 @@ wget -O kfctl_aws.yaml $CONFIG_URI
 vim kfctl_aws.yaml
 ```
 
-打开 Vim 文本编辑器后，删除 roles 前的 `#` 符号，并将角色名称替换为新创建的 EKS 集群的角色名称。您可以在 AWS 身份和访问管理 (IAM) 控制台中查找角色名称。搜索包含集群名称作为一部分的角色。
+打开 Vim 文本编辑器后，删除 `roles` 前的 `#` 符号，并将角色名称替换为新创建的 EKS 集群的角色名称。您可以在 AWS 身份和访问管理 (IAM) 控制台中查找角色名称。搜索包含集群名称作为一部分的角色。
 
-您还会在 yaml 文件中找到一对用户名和密码。默认用户名应为 `admin@kubeflow.org`，默认密码密码为为 `1231234`。将其更改其他内容以提高安全性。请记住用户名和密码值，因为您访问 Kubeflow UI 时需要用到它们。
+您还会在 `yaml` 文件中找到一对用户名和密码。默认用户名应为 `admin@kubeflow.org`，默认密码密码为为 `1231234`。将其更改其他内容以提高安全性。请记住用户名和密码值，因为您访问 Kubeflow UI 时需要用到它们。
 
 - 5. 安装 Kubeflow：现在，我们准备好使用 `kubectl` 安装 Kubeflow 了。运行以下命令开始安装 Kubeflow（这需要 3-5 分钟完成）：
 
@@ -3183,7 +2974,7 @@ kubectl apply -f kfctl_aws.yaml
 kubectl get ingress -n istio-system
 ```
 
-您应该会看到类似下方截图的返回。ADDRESS 头部下的 URL 即为 Kubeflow 仪表板的 URL：
+您应该会看到类似下方截图的返回。`ADDRESS` 头部下的 URL 即为 Kubeflow 仪表板的 URL：
 
 | NAME | CLASS | HOSTS | ADDRESS | PORTS | AGE |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -3193,7 +2984,7 @@ kubectl get ingress -n istio-system
 
 打开浏览器窗口并复制粘贴该 URL 以启动仪表板。在提示时，输入第 4 步中的用户名和密码以登录仪表板。
 
-系统将提示您选择工作空间。保留默认的 admin 名称并按照屏幕上的指示完成安装。仪表板启动后，您将看到以下界面：
+系统将提示您选择工作空间。保留默认的 `admin` 名称并按照屏幕上的指示完成安装。仪表板启动后，您将看到以下界面：
 
 ![](img/bd21298357d8484151447cff0b2f138b_225_0.png)
 
@@ -3201,7 +2992,7 @@ kubectl get ingress -n istio-system
 
 Kubeflow 仪表板允许您从此单一界面在 Kubeflow 组件之间导航。我们将使用此仪表板来配置和管理笔记本以及跟踪流水线。
 
-- 7. 扩展集群：为了以笔记本和流水线的形式运行 Kubeflow 应用程序，我们需要更大的集群。让我们扩展集群以添加更多的 Kubernetes 工作节点。工作节点与节点组（nodegroups）关联，我们需要节点组名称来扩展它。您可以通过运行以下命令查找节点组名称：
+- 7. 扩展集群：为了以笔记本和流水线的形式运行 Kubeflow 应用程序，我们需要更大的集群。让我们扩展集群以添加更多的 Kubernetes 工作节点。工作节点与节点组（`nodegroups`）关联，我们需要节点组名称来扩展它。您可以通过运行以下命令查找节点组名称：
 
 ```bash
 kubectl get nodegroup --cluster=<name of cluster>
@@ -3231,24 +3022,16 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OrdinalEncoder
-
 data = pd.read_csv('churn.csv')
 X_train, X_test, y_train, y_test = train_test_split(data.drop('Churn', axis=1), data['Churn'], test_size=0.2)
-
 encoder = OrdinalEncoder()
 data['Geography'] = encoder.fit_transform(data[['Geography']])
 data['Gender'] = encoder.fit_transform(data[['Gender']])
-
 data = data.drop(['Geography', 'Gender'], axis=1, inplace=True)
-
 print(data.head())
 print(data.describe())
 print(data.corr())
 ```
-
-
-
-
 
 ## 动手练习 – 使用开源技术构建数据科学架构 213
 
@@ -3303,32 +3086,45 @@ churn_train_X = churn_train.loc[:, churn_train.columns != 'Exited']
 churn_train_y = churn_train['Exited']
 ```
 
-```python
-churn_test_X = churn_test.loc[:, churn_test.columns != 'Exited']
-churn_test_y = churn_test['Exited']
-```
+
+
+`churn_test_X` = `churn_test.loc[:, churn_test.columns != 'Exited']`
+
+`churn_test_y` = `churn_test['Exited']`
 
 ```python
+
 ### 设置 mlflow 跟踪服务器
+
 tracking_uri = <tracking server uri>
+
 mlflow.set_tracking_uri(tracking_uri)
+
 ```
 
 ```python
+
 mlflow.set_experiment('customer churn')
+
 mlflow.sklearn.autolog()
+
 ```
 
 ```python
+
 with mlflow.start_run():
+
     bank_churn_clf = RandomForestClassifier(max_depth=2, random_state=0)
+
     bank_churn_clf.fit(churn_train_X, churn_train_y)
+
     mlflow.sklearn.log_model(sk_model=bank_churn_clf, artifact_path="sklearn-model", registered_model_name="churn-model")
+
 ```
 
 ## 动手练习 – 使用开源技术构建数据科学架构 215
 
-现在返回跟踪服务器站点并刷新页面。在 `Experiment` 标签下，你将看到一个名为 `customer churn` 的新实验。点击 customer 链接查看运行详情，然后点击 `Model` 标签。你将看到一个名为 `churn` 的新模型。
+现在返回跟踪服务器站点并刷新页面。在 `Experiment` 标签下，你将看到一个名为 `customer churn` 的新实验。点击 `customer` 链接查看运行详情，然后点击 `Model` 标签。你将看到一个名为 `churn` 的新模型。
 
 现在，在 Jupyter notebook 中运行相同的代码。你现在将看到一个新的运行，并创建一个新的模型版本。
 
@@ -3337,55 +3133,75 @@ with mlflow.start_run():
 让我们从模型注册中心下载模型制品并将其保存到 S3 中的部署存储桶中。要做到这一点，首先创建一个名为 `model-deployment-<your initial>` 的新 S3 桶。我们将使用 Seldon Core 的 sklearn 服务程序包来托管模型，它期望模型名称为 `model.joblib`。运行以下代码块从模型注册中心下载模型制品，将 `model.pkl` 文件复制到另一个目录并将其命名为 `model.joblib`：
 
 ```python
+
 import mlflow.sklearn
+
 import shutil
+
 model_name = "churn-model"
+
 model_version = <version>
+
 ```
 
 ```python
+
 sk_model = mlflow.sklearn.load_model(f"models:{model_name}/{model_version}")
+
 mlflow.sklearn.save_model(sk_model, f"{model_name}_{model_version}")
+
 ```
 
 ```python
+
 src = f"{model_name}_{model_version}/model.pkl"
+
 des = f"skserver_{model_name}_{model_version}/model.joblib"
+
 ```
 
 ```python
+
 shutil.copy(src, des)
+
 ```
 
 接下来，运行以下代码将模型上传到 S3：
 
 ```python
+
 import boto3
+
 import os
 
 s3 = boto3.client('s3')
+
 bucket_name = "model-deployment-<your initial>"
+
 s3.upload_file(des, bucket_name, os.path.basename(des))
+
 ```
 
 跟踪服务器现在已就绪，存储桶中包含 `model.joblib` 文件。我们现在可以进行 Seldon Core 部署了。
 
-
-
-
-
-现在，运行以下 curl 命令来调用端点：
+现在，运行以下 `curl` 命令来调用端点：
 
 ```bash
+
 curl -X POST http://bank-churn-default.default:8000/api/v1.0/predictions \
+
   -d '{"data": {"ndarray": [123,544,37,2,7931,1,1,57558,1,1]}}' \
+
   -H "Content-Type: application/json"
+
 ```
 
 你应该能看到一个类似于下面的响应，它代表输出标签（0 和 1）的概率：
 
 ```json
+
 {"data":{"names":["t:0","t:1"],"ndarray":[0.85582949572585,0.144170544271455]},"meta":{}}
+
 ```
 
 下面的图（图 7.13）显示了我们刚刚推理调用的数据流：
@@ -3394,7 +3210,7 @@ curl -X POST http://bank-churn-default.default:8000/api/v1.0/predictions \
 
 图 7.13 – 使用 Seldon Core 托管模型的推理数据流
 
-在图 7.13 中，Ubuntu 容器是启动 curl http 命令的地方。HTTP 调用命中 bank-churn-default 服务，该服务作为 bank-churn-default-0-classifier-xxxx Pod 的抽象层，该 Pod 运行着 Seldon 编排容器和托管训练模型的模型服务器容器。
+在图 7.13 中，Ubuntu 容器是启动 `curl` `http` 命令的地方。HTTP 调用命中 `bank-churn-default` 服务，该服务作为 `bank-churn-default-0-classifier-xxxx` Pod 的抽象层，该 Pod 运行着 Seldon 编排容器和托管训练模型的模型服务器容器。
 
 恭喜！你现在已成功配置了 MLflow 跟踪服务器，并从 Jupyter notebook 使用它来集中管理所有实验，还使用 Seldon Core SKLearn 服务器部署了你的模型。接下来，我们将深入研究如何通过自动化流水线实现一切。
 
@@ -3404,68 +3220,116 @@ ML 过程涉及多个步骤，包括数据准备、特征工程、模型训练�
 
 # 为命名空间服务帐户授予访问 Istio 服务的权限
 
-admin 命名空间供 Kubeflow notebook 使用，它默认带有多个服务账户：default、default-viewer 和 default-editor。当 notebook 运行时，它将使用 default-editor 服务账户。Kubernetes Istio 是一个服务网格，控制 Kubernetes 集群中的微服务如何相互交互。为了让 admin 命名空间中的服务帐户能够访问 Kubeflow pipeline 组件以运行 ML 流线，需要在 Kubeflow 命名空间中 default-editor 服务账户和 ServiceRole (ml-pipeline-services) 对象之间创建一个 servicebinding 对象。在 CloudShell 终端中运行以下代码创建一个 .yaml 定义文件。注意代码中的 admin 是 notebook 环境的 admin 命名空间：
+`admin` 命名空间供 Kubeflow notebook 使用，它默认带有多个服务账户：`default`、`default-viewer` 和 `default-editor`。当 notebook 运行时，它将使用 `default-editor` 服务账户。Kubernetes Istio 是一个服务网格，控制 Kubernetes 集群中的微服务如何相互交互。为了让 `admin` 命名空间中的服务帐户能够访问 Kubeflow pipeline 组件以运行 ML 流线，需要在 Kubeflow 命名空间中 `default-editor` 服务账户和 ServiceRole (`ml-pipeline-services`) 对象之间创建一个 `servicebinding` 对象。在 CloudShell 终端中运行以下代码创建一个 `.yaml` 定义文件。注意代码中的 `admin` 是 notebook 环境的 `admin` 命名空间：
 
 ```yaml
+
 cat << EOF > notebook_rbac.yaml
+
 apiVersion: rbac.istio.io/v1alpha
+
 kind: ServiceRoleBinding
+
 metadata:
+
   name: bind-ml-pipeline-nb-admin
+
   namespace: kubeflow
+
 spec:
+
   roleRef:
+
     kind: ServiceRole
+
     name: ml-pipeline-services
+
 subjects:
+
   - properties:
+
       source.principal: cluster.local/ns/admin/sa/default-editor
+
 EOF
+
 ```
 
 然后，运行以下命令将配置应用到 Kubernetes 环境：
 
 ```bash
+
 kubectl apply -f notebook_rbac.yaml
+
 ```
 
-Envoy 是 Istio 代理，处理服务网格的所有入站和出站流量。notebook 通过服务网格与 ml-pipeline 服务通信，头部信息需要转发到 ml-pipeline 服务以便从 notebook 用户身份。以下 .yaml 文件实现了该功能。在 CloudShell 环境中运行以下内容创建文件：
+Envoy 是 Istio 代理，处理服务网格的所有入站和出站流量。notebook 通过服务网格与 `ml-pipeline` 服务通信，头部信息需要转发到 `ml-pipeline` 服务以便从 notebook 用户身份。以下 `.yaml` 文件实现了该功能。在 CloudShell 环境中运行以下内容创建文件：
 
 ```yaml
+
 cat << EOF > notebook_filter.yaml
+
 apiVersion: networking.istio.io/valpha3
+
 kind: EnvoyFilter
+
 metadata:
+
   name: add-header
+
   namespace: admin
+
 spec:
+
   configPatches:
+
     - applyTo: VIRTUAL_HOST
+
       match:
+
         context: SIDECAR_OUTBOUND
+
       routeConfiguration:
+
         host:
+
           name: ml-pipeline.kubeflow.svc.cluster.local:8888
+
           route:
+
             name: default
+
       patch:
+
       operation: MERGE
+
       value:
+
         request_headers_to_add:
+
           append: true
+
           header:
+
             key: kubeflow-userid
+
             value: admin@kubeflow.org
+
 workloadSelector:
+
   labels:
+
 - notebook-name: david
+
 EOF
+
 ```
 
-创建文件后，运行以下代码在 admin 命名空间中设置头部过滤器：
+创建文件后，运行以下代码在 `admin` 命名空间中设置头部过滤器：
 
 ```bash
+
 kubectl apply -f notebook_filter.yaml
+
 ```
 
 太棒了！现在，让我们创建一个执行以下操作的流水线：
@@ -3487,127 +3351,198 @@ kubectl apply -f notebook_filter.yaml
 接下来，让我们定义第一个步骤：数据处理。为了简单起见，我们将使用以下代码创建数据处理组件：
 
 ```python
+
 @dsl.python_component(
+
 name='data_process',
+
 description='process data',
+
 base_image=BASE_IMAGE
+
 )
+
 def process_data(glue_job_name: str, region: str) -> str:
+
 import os
+
 import boto3
+
 import time
 
 print ('start data processing')
+
 #启动 Glue 处理数据
+
 client = boto3.client('glue', region_name=region)
+
 job_id = client.start_job_run(JobName=glue_job_name)
 
 #等待作业完成
+
 job_state = "RUNNING"
+
 while job_state != "SUCCEEDED":
+
     time.sleep(60)
+
 status = client.get_job_run(JobName=glue_job_name, RunId=job_id['JobRunId'])
+
 job_state = status['JobRun']['JobRunState']
 
 print ('data processing completed')
+
 return f"GLUE job id: {job_id['JobRunId']}"
+
 ```
 
 ```python
+
 process_data_op = components.func_to_container_op(
+
 process_data,
+
 base_image=BASE_IMAGE,
+
 packages_to_install=['boto3'])
+
 ```
 
-接下来，让我们创建一个模型训练组件。与之前所做的类似，我们需要安装一些包。在这里，我们将模型训练组件与 MLflow 集成，以跟踪实验指标和模型产物。此外，请将 <<<<mlflow tracking server url>> 替换为您自己的 mlflow 跟踪服务器 URL：
+接下来，让我们创建一个模型训练组件。与之前所做的类似，我们需要安装一些包。在这里，我们将模型训练组件与 MLflow 集成，以跟踪实验指标和模型产物。此外，请将 `<<<<mlflow tracking server url>>>>` 替换为您自己的 `mlflow` 跟踪服务器 URL：
 
 ```python
+
 @dsl.python_component(
+
 name='model_training_op',
+
 description='model training step',
+
 base_image=BASE_IMAGE
+
 )
+
 def train_model(bucket: str, key: str, region: str, previous_
+
 ```
-
-
-
-
 
 ## 实践练习 – 使用开源技术构建数据科学架构 225
 
 ```python
+
 output: str ) -> str :
+
 import os
 
 import boto3
+
 import mlflow
+
 import pandas as pd
+
 from sklearn.ensemble import RandomForestClassifier
+
 from sklearn.model_selection import train_test_split
+
 ```
 
 ```python
+
 s3 = boto3.client('s3', region_name=region)
+
 response = s3.list_objects(Bucket=bucket, Prefix=key)
 
 key = response['Contents'][0]['Key']
+
 s3.download_file('datalake-demo-dyping', key, 'churn.csv')
+
 ```
 
 ```python
+
 churn_data = pd.read_csv('churn.csv')
+
 ```
 
 ```python
+
 ### 将数据集分为训练集 (80%) 和测试集 (20%)
+
 churn_train, churn_test = train_test_split(churn_data, test_size=0.2)
+
 ```
 
 ```python
+
 churn_train_X = churn_train.loc[:, churn_train.columns != 'exited']
+
 churn_train_y = churn_train['exited']
+
 ```
 
 ```python
+
 churn_test_X = churn_test.loc[:, churn_test.columns != 'exited']
+
 churn_test_y = churn_test['exited']
+
 ```
 
 ```python
+
 tracking_uri = <<your mlflow tracking server url>>
+
 ```
 
 ```python
+
 mlflow.set_tracking_uri(tracking_uri)
+
 mlflow.set_experiment('Churn Experiment 3')
+
 ```
 
 ```python
+
 with mlflow.start_run(run_name="churn_run 2") as run:
+
     bank_churn_clf = RandomForestClassifier(max_depth=2, random_state=0)
+
 ```
 
 ```python
+
 mlflow.sklearn.autolog()
+
 bank_churn_clf.fit(churn_train_X, churn_train_y)
+
 mlflow.sklearn.log_model(sk_model=bank_churn_clf,
+
 artifact_path="sklearn-model", registered_model_name="churn-model")
+
 ```
 
 ```python
+
 print(f"MLflow run id: {run.info.run_id}")
+
 return f"MLflow run_id: {run.info.run_id}"
+
 ```
 
 ```python
+
 train_model_op = components.func_to_container_op(
+
 train_model,
+
 base_image=BASE_IMAGE,
+
 packages_to_install=('boto3', 'mlflow', 'scikit-learn', 'matplotlib'),
+
 )
-```
+
+
 
 前面的训练步骤将把模型注册到 MLflow 模型注册表中。我们需要下载目标模型版本并将其上传到 S3 存储桶，以便进行部署步骤。在 notebook 中添加以下代码块，这将创建一个 `download_model_op` 组件。请记住将 `model-deployment-<your initials>` 替换为自己的存储桶名称，并将 `<<your mlflow server>>` 替换为自己的跟踪服务器地址：
 
@@ -3621,8 +3556,7 @@ base_image=BASE_IMAGE # 你可以在此处定义基础镜像，
 ```
 
 ```python
-def download_model(model_version: int, previous_output: str)
--> str :
+def download_model(model_version: int, previous_output: str) -> str :
     import mlflow
     import os
     import shutil
@@ -3696,7 +3630,7 @@ upload_objects(des, targetbucket)
 
 ```python
 print(f"target bucket: {targetbucket}, prefix: {prefix}")
-return f"target bucket: {targetbucket}, prefix: {prefix}")
+return f"target bucket: {targetbucket}, prefix: {prefix})"
 ```
 
 ```python
@@ -3707,7 +3641,7 @@ packages_to_install=['boto3', 'mlflow', 'scikit-learn'],
 )
 ```
 
-现在我们准备好构建流水线定义了。通过使用 `@dsl.pipeline` 装饰器定义函数来构建流水线。为了运行流水线并将模型部署到集群，我们需要为与流水线相关的服务账户（default-editor）添加权限。正确的方法创建一个具有适当权限的角色。为了简单起见，我们将重用现有的 `cluster-admin` 角色。在 CloudShell 环境中运行以下代码块，为集群创建 `.yaml` 文件，然后运行 `kubectl apply -f sa-binding.yaml` 来建立绑定：
+现在我们准备好构建流水线定义了。通过使用 `@dsl.pipeline` 装饰器定义函数来构建流水线。为了运行流水线并将模型部署到集群，我们需要为与流水线相关的服务账户 `default-editor` 添加权限。正确的方法创建一个具有适当权限的角色。为了简单起见，我们将重用现有的 `cluster-admin` 角色。在 CloudShell 环境中运行以下代码块，为集群创建 `.yaml` 文件，然后运行 `kubectl apply -f sa-binding.yaml` 来建立绑定：
 
 ```yaml
 cat << EOF > sa-binding.yaml
@@ -3745,7 +3679,7 @@ spec:
 EOF
 ```
 
-好了，现在准备好运行以下代码块来构建流水线。注意我们将在某些步骤中使用 AWS 凭据。为了安全地管理 AWS 凭据并将其传递给组件，我们需要在构建流水线之前在 admin 命名空间创建一个新的 secret。在 CloudShell 终端运行以下脚本，然后运行 `kubectl apply -f aws_secret.yaml`。请将 `<<your AWS access key>>` 和 `<<your AWS secret key>>` 替换为你自己的密钥：
+好了，现在准备好运行以下代码块来构建流水线。注意我们将在某些步骤中使用 AWS 凭据。为了安全地管理 AWS 凭据并将其传递给组件，我们需要在构建流水线之前在 `admin` 命名空间创建一个新的 secret。在 CloudShell 终端运行以下脚本，然后运行 `kubectl apply -f aws_secret.yaml`。请将 `<<your AWS access key>>` 和 `<<your AWS secret key>>` 替换为你自己的密钥：
 
 ```yaml
 cat << EOF > aws_secret.yaml
@@ -3763,10 +3697,10 @@ EOF
 
 现在在 Jupyter 单元格中运行以下代码块构建流水线定义。此工作流中有四个步骤：
 
-- preprocess_data_task
-- model_training_task
-- model_download_task
-- seldondeploy
+- `preprocess_data_task`
+- `model_training_task`
+- `model_download_task`
+- `seldondeploy`
 
 为了简单起见，我们在流水线中添加了默认值。请将 `<<aws region>>` 替换为你的区域：
 
@@ -3784,9 +3718,7 @@ def preprocess_train_deploy(
     model_version: int = 1
 ):
     preprocess_data_task = process_data_op(glue_job_name, region).apply(use_aws_secret('aws-secret', 'AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY', 'us-west-1'))
-
     model_training_task = train_model_op(bucket, 'ml-customer-churn/data/', region, preprocess_data_task.output).apply(use_aws_secret())
-
     model_download_task = model_download_op(model_version, model_training_task.output).apply(use_aws_secret())
 ```
 
@@ -3831,6 +3763,7 @@ pipeline_filename, arguments)
 ```
 
 
+
 要监控流水线的执行状态，你可以切换到 Kubeflow Dashboard 界面，选择 Pipelines（流水线），选择 Experiments（实验），展开流水线，并点击 Run（运行）列下的链接。你应该能看到一张类似于下面的图表，它代表了你流水线的执行图：
 
 ![](img/bd21298357d8484151447cff0b2f138b_250_0.png)
@@ -3863,9 +3796,9 @@ pipeline_filename, arguments)
 - AWS CodeCommit
 - Amazon ECR
 
-你还需要从 https://www.kaggle.com/ankurzing/sentiment-analysis-for-financial-news 下载数据集。
+你还需要从 `https://www.kaggle.com/ankurzing/sentiment-analysis-for-financial-news` 下载数据集。
 
-本章使用的示例源码可以在 https://github.com/PacktPublishing/The-Machine-Learning-Solutions-Architect-Handbook/tree/main/Chapter08 找到。
+本章使用的示例源码可以在 `https://github.com/PacktPublishing/The-Machine-Learning-Solutions-Architect-Handbook/tree/main/Chapter08` 找到。
 
 ## 使用 SageMaker 的数据科学环境架构
 
@@ -3893,7 +3826,7 @@ SageMaker Studio 是适用于 SageMaker 的科学集成开发环境 (IDE)。它�
 
 在 Studio 中创建的 Notebook 将由 EC2 服务器支持。SageMaker 为 Notebook 提供各种 CPU 和 GPU 实例。用户可以根据需要选择不同的 EC2 服务器类型。
 
-# SageMaker Processing
+### SageMaker Processing
 
 SageMaker Processing 为大规模数据处理（如大型数据集的数据清洗和特征工程）提供了独立的基础设施。它可以通过 Notebook 环境通过 SageMaker Python SDK 或 Boto3 SDK 直接访问。SageMaker Processing 使用 Docker 容器运行数据处理任务。系统提供了一些内置容器，例如 scikit-learn 和 Spark 容器。你也可以选择使用自定义容器进行处理。下面的图显示了 SageMaker Processing 架构：
 
@@ -3902,9 +3835,6 @@ SageMaker Processing 为大规模数据处理（如大型数据集的数据清�
 图 8.3 – SageMaker Processing 架构
 
 当启动 SageMaker Processing 任务时，处理容器从 Amazon ECR 拉取并加载到 EC2 计算集群中。S3 中的数据会被复制到附加到计算节点存储上，供数据处理脚本进行访问和处理。一旦处理过程完成，输出数据将复制回 S3 输出位置。
-
-
-
 
 ## SageMaker 训练服务
 
@@ -3969,7 +3899,7 @@ AWS CodeCommit 提供三种不同的连接方式：HTTPS，允许 Git 客户端�
 
 ### 数据集
 
-数据科学家表示他们喜欢使用 BERT 模型来解决情感分析问题，并计划使用金融短语数据集：https://www.kaggle.com/ankurzing/sentiment-analysis-for-financial-news。
+数据科学家表示他们喜欢使用 BERT 模型来解决情感分析问题，并计划使用金融短语数据集：`https://www.kaggle.com/ankurzing/sentiment-analysis-for-financial-news`。
 
 ### 实验说明
 
@@ -3985,7 +3915,7 @@ AWS CodeCommit 提供三种不同的连接方式：HTTPS，允许 Git 客户端�
 
 在此过程中还创建了以下资源：
 
-- 用于域的 S3 桶：域的名称看起来类似于 sagemaker-studio-<AWS 账号数>-XXXX。该桶可用于存储数据集和模型产物。
+- 用于域的 S3 桶：域的名称看起来类似于 `sagemaker-studio-<AWS 账号数>-XXXX`。该桶可用于存储数据集和模型产物。
 - 弹性文件系统（EFS）卷：该卷用于 Studio 域存储用户数据。如果你导航到 EFS 管理控制台，你应该看到创建了一个新的文件系统。
 
 设置完成后，你应该看到以下屏幕：
@@ -3993,10 +3923,6 @@ AWS CodeCommit 提供三种不同的连接方式：HTTPS，允许 Git 客户端�
 ![](img/bd21298357d8484151447cff0b2f138b_261_0.png)
 
 图 8.5 – Studio 设置界面
-
-
-
-
 
 要为新的用户启动 Studio 环境，请点击 Launch app 下拉菜单并选择 Studio。Studio 环境需要几分钟才能出现。一旦准备就绪，你将看到一个类似下面的屏幕：
 
@@ -4010,11 +3936,11 @@ AWS CodeCommit 提供三种不同的连接方式：HTTPS，允许 Git 客户端�
 
 现在我们已经创建了一个新仓库，让我们配置新创建的 Studio 环境使用此仓库。我们有几种方法可以设置 CodeCommit 仓库的身份验证凭据：
 
-- IAM 用户凭据：要执行此操作，请创建一个新的 IAM 用户并为其附加 AWSCodeCommitPowerUser 策略以简化操作。将 AWS 凭据下载到本地机器，并在文件中查找 IAM 凭据。接下来，通过从下拉菜单选择 File > New > Terminal 在 Studio 中打开 Terminal。一旦新的 Terminal 窗口打开，运行 AWS Config 命令来设置 IAM 凭据。
+- IAM 用户凭据：要执行此操作，请创建一个新的 IAM 用户并为其附加 `AWSCodeCommitPowerUser` 策略以简化操作。将 AWS 凭据下载到本地机器，并在文件中查找 IAM 凭据。接下来，通过从下拉菜单选择 File > New > Terminal 在 Studio 中打开 Terminal。一旦新的 Terminal 窗口打开，运行 AWS Config 命令来设置 IAM 凭据。
 
 ## 动手实践——使用 AWS 服务构建数据科学环境
 
-- Studio Notebook 执行角色：你可以将 AWSCodeCommitPowerUser 策略附加到上一会话创建的 Studio notebook 执行角色。要执行此操作，请在 Studio 控制面板中使用正在使用的 Studio 名称下的 SageMaker Execution role。然后，使用 AWS IAM 服务将策略附加到该角色。
+- Studio Notebook 执行角色：你可以将 `AWSCodeCommitPowerUser` 策略附加到上一会话创建的 Studio notebook 执行角色。要执行此操作，请在 Studio 控制面板中使用正在使用的 Studio 名称下的 SageMaker Execution role。然后，使用 AWS IAM 服务将策略附加到该角色。
 
 你可以使用上述两种方法之一来配置 CodeCommit 的身份验证。完成后，你就可以克隆之前创建的 CodeCommit 仓库。要执行此操作，在 Studio UI 中选择 **Git** 下拉菜单，选择 **Clone a Repository** 选项（见下截图），并粘贴 CodeCommit 管理控制台中仓库的 HTTPS URL：
 
@@ -4026,18 +3952,19 @@ AWS CodeCommit 提供三种不同的连接方式：HTTPS，允许 Git 客户端�
 
 在本部分的实践练习中，我们将使用 BERT transformer 训练一个金融情感分析 NLP 模型，这是我们在*第 3 章，机器学习算法*中学习过的。开始之前，双击新克隆的文件夹视图，并从文件夹中的下拉菜单选择 **File** > **New** > **Notebook** 创建一个新的 notebook 来编写代码。当提示选择内核时，选择 **Python 3 (PyTorch Python 3.6 GPU Optimized)**。你可以通过从菜单选择 **File** > **Rename Notebook** 来重命名文件，使其更有意义。
 
-我们将使用金融新闻情感数据集进行模型训练。从 Kaggle 的 https://www.kaggle.com/ankursing/sentiment-analysis-for-financial-news 下载数据集。你需要一个 Kaggle 账户才能下载它。下载完成后，你应该将其保存为 archive.zip 文件。
+我们将使用金融新闻情感数据集进行模型训练。从 Kaggle 的 `https://www.kaggle.com/ankursing/sentiment-analysis-for-financial-news` 下载数据集。你需要一个 Kaggle 账户才能下载它。下载完成后，你应该将其保存为 `archive.zip` 文件。
 
-接下来，将 archive.zip 文件上传到 Studio notebook。在新建 notebook 所在的相同目录下创建一个名为 data 的新文件夹，并使用 Studio UI 中的 File Upload 工具（向上箭头图标）将其上传到 data 目录，或直接将其拖入文件夹。你可以使用 Terminal 窗口中的 unzip 工具解压 ZIP 文件。请注意，Amazon Linux 环境默认不带 unzip 工具。要安装此工具，请在 Terminal 窗口中运行 yum install unzip。你会在文件夹中看到多个文件。你会看到文件夹内名为 all_data.csv 的文件。
+接下来，将 `archive.zip` 文件上传到 Studio notebook。在新建 notebook 所在的相同目录下创建一个名为 `data` 的新文件夹，并使用 Studio UI 中的 File Upload 工具（向上箭头图标）将其上传到 `data` 目录，或直接将其拖入文件夹。你可以使用 Terminal 窗口中的 `unzip` 工具解压 ZIP 文件。请注意，Amazon Linux 环境默认不带 `unzip` 工具。要安装此工具，请在 Terminal 窗口中运行 `yum install unzip`。你会在文件夹中看到多个文件。你会看到文件夹内名为 `all_data.csv` 的文件。
 
-现在，让我们为练习安装一些额外的包。在 notebook 单元格中运行以下代码块来安装 transformer 包。transformer 提供了一系列如 BERT 之类的预训练 transformers。你将使用这些 transformers 来微调 ML 任务。注意，某些代码示例是不完整的。你可以在 https://github.com/PacktPublishing/The-Machine-Learning-Solutions-Architect-Handbook/blob/main/Chapter08/bert-financial-sentiment.ipynb 找到完整的代码示例。
+现在，让我们为练习安装一些额外的包。在 notebook 单元格中运行以下代码块来安装 transformer 包。transformer 提供了一系列如 BERT 之类的预训练 transformers。你将使用这些 transformers 来微调 ML 任务。注意，某些代码示例是不完整的。你可以在 `https://github.com/PacktPublishing/The-Machine-Learning-Solutions-Architect-Handbook/blob/main/Chapter08/bert-financial-sentiment.ipynb` 找到完整的代码示例。
 
-```
-!pip install transformers
-!pip install ipywidgets
-```
 
-安装 ipywidgets 后重启 notebook 的内核。接下来，将一些库导入 notebook 并设置 logger 用于日志记录目的：
+
+`!pip install transformers`
+
+`!pip install ipywidgets`
+
+安装 `ipywidgets` 后重启 notebook 的内核。接下来，将一些库导入 notebook 并设置 logger 用于日志记录目的：
 
 ```python
 import logging
@@ -4054,12 +3981,12 @@ from types import SimpleNamespace
 logger = logging.getLogger(__name__)
 ```
 
-```
+```python
 logger.setLevel(logging.DEBUG)
 logger.addHandler(logging.StreamHandler(sys.stdout))
 ```
 
-现在，我们准备好加载数据文件并处理它。以下代码块读取文件并将数据拆分为训练数据集。我们将从文件中选择前两列并将其命名为 sentiment 和 article。sentiment 是标签列，它包含三个唯一值（negative, neutral 和 positive）。由于它们是字符串值，我们将使用 scikit-library 中的 OrdinalEncoder 将它们转换为整数（0,1）。我们还需要确定 article 列的最大长度。该最大长度用于准备 transformer 的输入，因为 transformer 需要固定长度：
+现在，我们准备好加载数据文件并处理它。以下代码块读取文件并将数据拆分为训练数据集。我们将从文件中选择前两列并将其命名为 `sentiment` 和 `article`。`sentiment` 是标签列，它包含三个唯一值（negative, neutral 和 positive）。由于它们是字符串值，我们将使用 scikit-library 中的 `OrdinalEncoder` 将它们转换为整数（0,1）。我们还需要确定 `article` 列的最大长度。该最大长度用于准备 transformer 的输入，因为 transformer 需要固定长度：
 
 ```python
 filepath = './data/all-data-v1.csv'
@@ -4083,7 +4010,7 @@ MAX_LEN = data.article.str.len().max() # 这是句子的最大
 #长度
 ```
 
-现在，我们将构建一个工具函数列表以支持数据加载和模型训练。我们需要分批将数据馈给 transformer 模型。以下 get_loader() 函数根据指定的批次大小（batch size）将数据集加载到 PyTorch DataLoader 类中。注意，我们还使用 BertTokenizer 将文章编码为标记（tokens）：
+现在，我们将构建一个工具函数列表以支持数据加载和模型训练。我们需要分批将数据馈给 transformer 模型。以下 `get_loader()` 函数根据指定的批次大小（batch size）将数据集加载到 PyTorch `DataLoader` 类中。注意，我们还使用 `BertTokenizer` 将文章编码为标记（tokens）：
 
 ```python
 def get_loader(batch_size, training_dir, filename):
@@ -4098,7 +4025,7 @@ def get_loader(batch_size, training_dir, filename):
         input_ids.append(encoded_articles)
 ```
 
-接下来的 train() 函数将使用 BertForSequenceClassification 类运行训练循环。我们将使用预训练的 BERT 模型进行微调，而不是从头训练。我们将每次向 BERT 模型馈送一批数据。注意，我们还会检查服务器上是否有 GPU 设备。如果有，我们将使用 cuda 设备进行 GPU 训练，而不是使用 cpu 进行 CPU 训练。我们需要使用 .to(device) 函数将数据和 BERT 模型移动到相同的目标设备，以便训练就可以在目标设备上进行，且数据驻留在同一设备的内存中。我们在这里使用的优化器是 AdamW，它是梯度下降优化算法的一种变体。训练循环将运行指定的 epoch 次数（epochs）。一个 epoch 运行一遍整个训练数据集：
+接下来的 `train()` 函数将使用 `BertForSequenceClassification` 类运行训练循环。我们将使用预训练的 BERT 模型进行微调，而不是从头训练。我们将每次向 BERT 模型馈送一批数据。注意，我们还会检查服务器上是否有 GPU 设备。如果有，我们将使用 `cuda` 设备进行 GPU 训练，而不是使用 `cpu` 进行 CPU 训练。我们需要使用 `.to(device)` 函数将数据和 BERT 模型移动到相同的目标设备，以便训练就可以在目标设备上进行，且数据驻留在同一设备的内存中。我们在这里使用的优化器是 `AdamW`，它是梯度下降优化算法的一种变体。训练循环将运行指定的 `epoch` 次数（epochs）。一个 `epoch` 运行一遍整个训练数据集：
 
 ```python
 def train(args):
@@ -4127,7 +4054,6 @@ def test(model, test_loader, device):
         pred_flat = np.argmax(preds, axis=1).flatten()
         labels_flat = labels.flatten()
         return np.sum(pred_flat == labels_flat), len(labels_flat)
-
     model.eval()
     _, accuracy = 0, 0
     total_correct = 0
@@ -4159,18 +4085,14 @@ def input_fn(request_body, request_content_type):
             pass
         else:
             raise ValueError("Unsupported input type. Input type can be a string or a non-empty list. I got(\"{}\".format(data))
-
         tokenizer = BertTokenizer.from_pretrained("bert-uncased", lower_case=True)
         input_ids = [tokenizer.encode(x, add_special_tokens=True) for x in data]
-
         # pad shorter sentence
         padded = torch.zeros(len(input_ids), MAX_LEN)
         for i, p in enumerate(input_ids):
             padded[i, :len(p)] = torch.tensor(p)
-
         # create mask
         mask = (padded != 0)
-
         return padded.long(), mask.long()
     raise ValueError("Unsupported content type: {}".format(request_content_type))
 ```
@@ -4182,6 +4104,7 @@ def predict_fn(input_data, model):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model.to(device)
     model.eval()
+```
 
 # Hands-on exercise – building a data science environment using AWS services
 
@@ -4264,15 +4187,14 @@ transformers==2.3.0
 
 以下代码指定了保存训练和测试数据集以及模型产品的 S3 桶。你可以可以使用之前在设置 SageMaker Studio 节中配置 Studio 域时创建的桶。我们之前创建的训练和测试数据集将上传到该桶。`get_execution_role()` 函数返回与笔记本关联的 IAM 角色，我们将稍后用它运行训练作业：
 
+
+
 ```python
 import os
 import numpy as np
 import pandas as pd
 import sagemaker
 ```
-
-
-
 
 ```python
 sagemaker_session = sagemaker.Session()
@@ -4402,24 +4324,13 @@ predictor.delete_endpoint()
 
 在本章，我们讨论了数据科学环境如何支持实验、训练和部署。你学习了使用 SageMaker 等 AWS 服务构建数据科学环境的关键组件。此时，你应该已经能够谈论环境以及模型训练和部署了。在下一章中，我们将专注于模型构建的架构。
 
-
-
-
-
-- *  支持持续集成 (CI)、持续训练 (CT) 和持续部署 (CD)：企业级 ML 平台提供的能力不仅限于测试和验证代码及组件，还为数据和模型提供此类能力。ML 的 CD 能力也不仅仅是部署单个软件；它是 ML 模型和推理引擎的结合。CT 是 ML 特有的，它可以对模型进行持续监控，当检测到数据漂移或模型漂移或训练数据发生变化时，可以触发自动模型重训练。**数据漂移**是指数据的变化，即生产环境中数据的特征与训练数据在统计上存在差异。**模型漂移**是指模型性能的变化，即模型性能较模型训练期间实现的性能有所下降。
-
-- *  MLOps 支持：企业级 ML 平台提供监控不同流水线工作流、处理/训练作业以及模型推理引擎的状态、错误和指标的能力。它还监控基础设施级别的状态和资源使用情况。自动告警机制也是 MLOps 的关键组件。在可能的情况下，应该实现自动故障恢复机制。
-
-- *  支持不同的语言和 ML 框架：企业级 ML 平台允许科学家和 ML 工程师使用他们选择的编程语言和 ML 库来处理不同的 ML 问题。它需要支持 Python 和 R 等流行语言，以及 TensorFlow、PyTorch 和 scikit-learn 等 ML 软件包。
-
-- *  计算硬件管理：根据模型训练和推理的需求以及成本考量，企业级 ML 平台需要支持不同类型的计算硬件，例如 CPU 和 GPU。在适用情况下，它还应该支持特殊的 ML 硬件，如 AWS 的 Inferia 芯片。
-
-- *  与其他第三方系统和软件集成：企业级 ML 平台很少孤立运行。它需要提供与其他第三方软件或平台集成的能力，例如工作流编排工具、容器仓库和代码库。
-
-- *  身份验证与授权：企业级 ML 平台需要提供不同级别的身份验证和授权控制，以管理对数据、制品和 ML 平台资源的安全访问。这种身份验证和授权可以是 ML 平台的内置功能，也可以由外部身份验证和授权服务提供。
-
+- 支持持续集成 `CI`、持续训练 `CT` 和持续部署 `CD`：企业级 ML 平台提供的能力不仅限于测试和验证代码及组件，还为数据和模型提供此类能力。ML 的 CD 能力也不仅仅是部署单个软件；它是 ML 模型和推理引擎的结合。`CT` 是 ML 特有的，它可以对模型进行持续监控，当检测到数据漂移或模型漂移或训练数据发生变化时，可以触发自动模型重训练。**数据漂移**是指数据的变化，即生产环境中数据的特征与训练数据在统计上存在差异。**模型漂移**是指模型性能的变化，即模型性能较模型训练期间实现的性能有所下降。
+- MLOps 支持：企业级 ML 平台提供监控不同流水线工作流、处理/训练作业以及模型推理引擎的状态、错误和指标的能力。它还监控基础设施级别的状态和资源使用情况。自动告警机制也是 MLOps 的关键组件。在可能的情况下，应该实现自动故障恢复机制。
+- 支持不同的语言和 ML 框架：企业级 ML 平台允许科学家和 ML 工程师使用他们选择的编程语言和 ML 库来处理不同的 ML 问题。它需要支持 Python 和 R 等流行语言，以及 TensorFlow、PyTorch 和 scikit-learn 等 ML 软件包。
+- 计算硬件管理：根据模型训练和推理的需求以及成本考量，企业级 ML 平台需要支持不同类型的计算硬件，例如 CPU 和 GPU。在适用情况下，它还应该支持特殊的 ML 硬件，如 AWS 的 Inferia 芯片。
+- 与其他第三方系统和软件集成：企业级 ML 平台很少孤立运行。它需要提供与其他第三方软件或平台集成的能力，例如工作流编排工具、容器仓库和代码库。
+- 身份验证与授权：企业级 ML 平台需要提供不同级别的身份验证和授权控制，以管理对数据、制品和 ML 平台资源的安全访问。这种身份验证和授权可以是 ML 平台的内置功能，也可以由外部身份验证和授权服务提供。
 - 数据加密：对于金融服务和医疗等受监管行业，数据加密是一项关键需求。企业级 ML 平台需要对静态数据和传输中数据进行加密的能力，通常使用客户管理的加密密钥。
-
 - 制品管理：企业级 ML 平台在 ML 生命周期的不同阶段处理数据集并产生不同的制品。为了建立可复现性并满足治理和合规性要求，企业级 ML 平台需要能够对这些制品进行跟踪、管理和版本控制。
 
 我们讨论了企业级 ML 平台的关键需求。接下来，让我们讨论如何使用 AWS 和 DevOps 服务（如 SageMaker、CodePipeline 和 Step Functions）来构建企业级 ML 平台。
@@ -4434,16 +4345,13 @@ predictor.delete_endpoint()
 
 正如我们在第 8 章《使用 AWS ML 服务构建数据科学环境》中所过的，数据科学家使用数据科学环境进行实验、模型构建和调优。一旦完成这些实验，数据科学家会将他们的工作提交到适当的代码和数据仓库中。下一步是使用数据科学家创建的算法、数据和训练脚本，在受控的自动环境中训练并调优 ML 模型。这种受控且自动的模型训练过程将有助于确保大规模模型构建的一性、可复现性和追溯性。以下是训练、托管和共享环境提供的核心功能和技术选项：
 
-- - 模型训练环境管理模型训练的全生命周期，从计算和基础设施资源配置到训练作业监控和模型持久化。从技术选项的角度来看，您可以使用专有或开源技术构建您的训练基础设施，也可以选择全托管的 ML 服务，例如 SageMaker 服务。
-
-- - 模型托管环境用于通过 Web 服务端点或批模式提供已训练模型。模型托管环境可以包含 SageMaker 端点、SageMaker 批量转换或无服务器推理等服务。
-
-- - 共享服务环境托管常用服务，如工作流编排工具、容器仓库和私有包仓库。模型中心也可以运行在共享服务环境中。通过基础设施即代码 (IaC) 进行基础设施配置以及服务管理工具也运行在此环境中。
+- 模型训练环境管理模型训练的全生命周期，从计算和基础设施资源配置到训练作业监控和模型持久化。从技术选项的角度来看，您可以使用专有或开源技术构建您的训练基础设施，也可以选择全托管的 ML 服务，例如 SageMaker 服务。
+- 模型托管环境用于通过 Web 服务端点或批模式提供已训练模型。模型托管环境可以包含 SageMaker 端点、SageMaker 批量转换或无服务器推理等服务。
+- 共享服务环境托管常用服务，如工作流编排工具、容器仓库和私有包仓库。模型中心也可以运行在共享服务环境中。通过基础设施即代码 `IaC` 进行基础设施配置以及服务管理工具也运行在此环境中。
 
 除了核心 ML 环境外，企业平台还需要其他环境，如安全、治理、监控和日志：
 
 - 安全和治理环境集中管理身份验证、授权和数据加密。安全审计和报告流程也运行在此环境中。原生 AWS 服务（如 IAM、AWS KMS 和 AWS Config）可用于各种安全治理功能。
-
 - 监控和日志环境集中汇总来自其他环境的监控和日志数据以便进行进一步的处理和报告。通常会开发自定义仪表板和告警机制，以便从底层监控和日志数据中轻松访问关键指标和告警。
 
 到此，您已经对企业平台的核心构建块有了概述。接下来，让我们深入探讨几个领域。请注意，我们可以使用不同的模式和服务在 AWS 上构建 ML 平台。在本章中，我们将介绍其中一种企业级模式。
@@ -4458,15 +4366,11 @@ predictor.delete_endpoint()
 
 接下来，让我们学习如何在企业级设置的受控模型训练环境中使用 SageMaker 训练服务。
 
-
-
-
-
 # 模型训练引擎
 
 SageMaker 训练服务为一系列 ML/DL 库提供了内置的模型训练能力。此外，您也可以携带自己的 Docker 容器来满足定制化的模型训练需求。以下是 SageMaker Python SDK 支持的选项子集：
 
-- *训练 TensorFlow 模型：SageMaker 为 TensorFlow 模型提供了一个内置的训练容器。以下代码示例展示了如何使用 TensorFlow 估计器 API 通过内置容器训练 TensorFlow 模型：
+- 训练 TensorFlow 模型：SageMaker 为 TensorFlow 模型提供了一个内置的训练容器。以下代码示例展示了如何使用 TensorFlow 估计器 API 通过内置容器训练 TensorFlow 模型：
 
 ```python
 from sagemaker.tensorflow import TensorFlow
@@ -4481,7 +4385,7 @@ tf = TensorFlow(
 tf.fit("<Training data location>")
 ```
 
-- *训练 PyTorch 模型：SageMaker 为 PyTorch 模型提供一个内置的训练容器。以下代码示例展示了如何使用 PyTorch 估计器训练 PyTorch 模型：
+- 训练 PyTorch 模型：SageMaker 为 PyTorch 模型提供一个内置的训练容器。以下代码示例展示了如何使用 PyTorch 估计器训练 PyTorch 模型：
 
 ```python
 from sagemaker.pytorch import PyTorch
@@ -4496,7 +4400,7 @@ pytorch_estimator = PyTorch(
 pytorch_estimator.fit("<Training data location>")
 ```
 
-- *训练 XGBoost 模型：通过内置容器也支持 XGBoost 训练。以下代码示例展示了使用 XGBoost 估计器训练 XGBoost 模型的语法：
+- 训练 XGBoost 模型：通过内置容器也支持 XGBoost 训练。以下代码示例展示了使用 XGBoost 估计器训练 XGBoost 模型的语法：
 
 ```python
 from sagemaker.xgboost.estimator import XGBoost
@@ -4511,7 +4415,9 @@ xgb_estimator = XGBoost (
 xgb_estimator.fit("train data location")
 ```
 
-- *训练 scikit-learn 模型：以下代码示例展示了如何使用内置容器训练 scikit-learn 模型：
+- 训练 scikit-learn 模型：以下代码示例展示了如何使用内置容器训练 scikit-learn 模型：
+
+
 
 ```python
 from sagemaker.estimator import SKLearn
@@ -4537,11 +4443,11 @@ custom_estimator = Estimator (
 custom_estimator.fit("training data location")
 ```
 
-除了使用 SageMaker Python SDK 启动训练外，您还可以使用 boto3 库和 SageMaker CLI 命令启动训练作业。
+除了使用 SageMaker Python SDK 启动训练外，您还可以使用 `boto3` 库和 SageMaker CLI 命令启动训练作业。
 
 # 自动化支持
 
-SageMaker 训练服务通过一组 API 暴露，可以通过集成外部应用程序或工作流工具（如 Airflow 和 AWS Step Functions）来实现自动化。例如，它可以作为基于 Airflow 的端到端 ML 工作流中的步骤之一。某些工作流工具（如 Airflow 和 AWS Step Functions）提供了 SageMaker 特有的连接器，以便更无缝地与 SageMaker 训练服务交互。SageMaker 训练服务还提供了 Kubernetes 运算符，因此它可以作为 Kubernetes 工作流的一部分进行集成和自动化。示例代码显示了如何通过 AWS boto3 SDK 使用底层 API 启动训练作业：
+SageMaker 训练服务通过一组 API 暴露，可以通过集成外部应用程序或工作流工具（如 `Airflow` 和 `AWS Step Functions`）来实现自动化。例如，它可以作为基于 `Airflow` 的端到端 ML 工作流中的步骤之一。某些工作流工具（如 `Airflow` 和 `AWS Step Functions`）提供了 SageMaker 特有的连接器，以便更无缝地与 SageMaker 训练服务交互。SageMaker 训练服务还提供了 Kubernetes 运算符，因此它可以作为 Kubernetes 工作流的一部分进行集成和自动化。示例代码显示了如何通过 AWS `boto3` SDK 使用底层 API 启动训练作业：
 
 ```python
 import boto3
@@ -4558,7 +4464,7 @@ response = client.create_training_job(
 )
 ```
 
-关于使用 Airflow 作为工作流工具，以下示例展示了如何将 Airflow SageMaker operator 作为工作流定义的一部分。这里，train_config 包含了训练配置细节，例如训练估计器、训练实例类型和数量以及训练数据位置：
+关于使用 `Airflow` 作为工作流工具，以下示例展示了如何将 `Airflow` SageMaker operator 作为工作流定义的一部分。这里，`train_config` 包含了训练配置细节，例如训练估计器、训练实例类型和数量以及训练数据位置：
 
 ```python
 import airflow
@@ -4581,31 +4487,31 @@ train_op = SageMakerTrainingOperator(
   dag=dag)
 ```
 
-SageMaker 还有一个一个名为 SageMakerPipelines 的内置工作流自动化工具。可以使用 SageMaker TrainingStep API 创建训练步骤，并成为更大的 SageMaker Pipelines 工作流的一部分。
+SageMaker 还有一个一个名为 `SageMakerPipelines` 的内置工作流自动化工具。可以使用 `SageMaker TrainingStep` API 创建训练步骤，并成为更大的 SageMaker Pipelines 工作流的一部分。
 
 # 模型训练生命周期管理
 
-SageMaker 训练管理模型训练过程的生命周期。它使用 AWS IAM 作为对其功能进行身份验证和授权的机制。一旦授权，它将提供所需的设施，为不同的模型训练需求部署软件栈，将数据从源端移动到训练节点，并启动训练作业。训练作业完成后，模型产物将保存到 S3 输出桶中，并拆毁基础设施。对于血缘追踪，会捕获训练元数据，例如源数据集、模型训练容器、超参数和模型输出。作业运行中的任何日志都会保存在 CloudWatch Logs 中，而 CPU 和 GPU 利用率等系统指标会被采集到 CloudWatch 指标中。
+SageMaker 训练管理模型训练过程的生命周期。它使用 `AWS IAM` 作为对其功能进行身份验证和授权的机制。一旦授权，它将提供所需的设施，为不同的模型训练需求部署软件栈，将数据从源端移动到训练节点，并启动训练作业。训练作业完成后，模型产物将保存到 S3 输出桶中，并拆毁基础设施。对于血缘追踪，会捕获训练元数据，例如源数据集、模型训练容器、超参数和模型输出。作业运行中的任何日志都会保存在 `CloudWatch Logs` 中，而 CPU 和 GPU 利用率等系统指标会被采集到 `CloudWatch` 指标中。
 
-取决于整体端到端 ML 平台架构，训练环境还可以托管数据预处理、模型验证和模型训练后处理的服务，因为这些是端到端 ML 流中的重要步骤。对于这些有多种技术选项可用，例如 SageMaker 处理服务和 AWS Lambda。
+取决于整体端到端 ML 平台架构，训练环境还可以托管数据预处理、模型验证和模型训练后处理的服务，因为这些是端到端 ML 流中的重要步骤。对于这些有多种技术选项可用，例如 SageMaker 处理服务和 `AWS Lambda`。
 
 # 模型托管环境深度解析
 
-企业级模型托管环境需要以安全、高效且可扩展的方式支持广泛的 ML 框架。它应该配备一组预构建的推理引擎，能够通过 RESTful API 或 grpc 协议开箱即用提供模型服务。它还需要提供灵活性，以托管满足独特需求的自定义构建的推理引擎。用户还应该能够访问不同的硬件设备，例如 CPU、GPU 和专用芯片。
+企业级模型托管环境需要以安全、高效且可扩展的方式支持广泛的 ML 框架。它应该配备一组预构建的推理引擎，能够通过 RESTful API 或 `grpc` 协议开箱即用提供模型服务。它还需要提供灵活性，以托管满足独特需求的自定义构建的推理引擎。用户还应该能够访问不同的硬件设备，例如 CPU、GPU 和专用芯片。
 
-某些推理模式需要更复杂的推理图，例如流量分 own、请求转换或模型集成支持。模型托管环境可以作为开箱功能提供这种能力，或者为构建推理图提供技术选项。其他常见的模型托管能力包括概念漂移检测和模型性能检测。当生产数据的统计特征偏离用于训练的数据时，就会发生概念漂移。概念漂移的一个示例是特征在生产环境中的均值和标准差与训练环境相比发生了变化。
+某些推理模式需要更复杂的推理图，例如流量分 `own`、请求转换或模型集成支持。模型托管环境可以作为开箱功能提供这种能力，或者为构建推理图提供技术选项。其他常见的模型托管能力包括概念漂移检测和模型性能检测。当生产数据的统计特征偏离用于训练的数据时，就会发生概念漂移。概念漂移的一个示例是特征在生产环境中的均值和标准差与训练环境相比发生了变化。
 
-模型托管环境中的组件可以通过其 API、脚本或 IaC 部署（如 AWS CloudFormation）参与工作流。例如，可以使用 CloudFormation 模板部署 RESTful 端点，或者作为自动化工作流的一部分调用其 API。
+模型托管环境中的组件可以通过其 API、脚本或 IaC 部署（如 `AWS CloudFormation`）参与工作流。例如，可以使用 `CloudFormation` 模板部署 RESTful 端点，或者作为自动化工作流的一部分调用其 API。
 
 从安全角度来看，模型托管环境需要提供身份验证和授权控制，以管理对控制平面（管理功能）和数据平面（模型端点）的访问。针对托管环境执行的访问和操作应该记录审计。为了操作支持，托管环境需要启用状态日志和系统监控，以支持系统观测性和问题排查。
 
-SageMaker 托管服务是一个全托管的模型托管服务。与我们在书中之前回顾的 KFServing 和 Seldon Core 类似，SageMaker 托管服务也是多框架模型服务服务。接下来，让我们仔细查看其企业级模型托管的能力。
+SageMaker 托管服务是一个全托管的模型托管服务。与我们在书中之前回顾的 `KFServing` 和 `Seldon Core` 类似，SageMaker 托管服务也是多框架模型服务服务。接下来，让我们仔细查看其企业级模型托管的能力。
 
 # 推理引擎
 
-SageMaker 为多个 ML 框架提供了内置的推理引擎，包括 scikit-learn、XGBoost、TensorFlow、PyTorch 和 Spark ML。SageMaker 以 Docker 容器的形式提供这些内置推理引擎。要建立 API 端点来服务模型，您只需要提供模型产物基础设施配置。以下是模型服务的选项列表：
+SageMaker 为多个 ML 框架提供了内置的推理引擎，包括 `scikit-learn`、`XGBoost`、`TensorFlow`、`PyTorch` 和 `Spark ML`。SageMaker 以 Docker 容器的形式提供这些内置推理引擎。要建立 API 端点来服务模型，您只需要提供模型产物基础设施配置。以下是模型服务的选项列表：
 
-- *提供 TensorFlow 模型：SageMaker 使用 TensorFlow Serving 作为 TensorFlow 模型的推理引擎。以下代码示例展示了如何使用 SageMaker 托管服务部署 TensorFlow Serving 模型：
+- *提供 TensorFlow 模型：SageMaker 使用 `TensorFlow Serving` 作为 TensorFlow 模型的推理引擎。以下代码示例展示了如何使用 SageMaker 托管服务部署 TensorFlow Serving 模型：
 
 ```python
 from sagemaker.tensorflow.serving import Model
@@ -4615,11 +4521,11 @@ tensorflow_model = Model(
 )
 ```
 
-
 | framework_version=<tensorflow version |
+
 | ) tensorflow_model.deploy( initial_instance_count=<instance count>, instance_type=<instance type> ) |
 
-- 部署 PyTorch 模型：SageMaker 托管在底层使用 TorchServe 来部署 PyTorch 模型。以下代码示例展示了如何部署 PyTorch 模型：
+- 部署 PyTorch 模型：SageMaker 托管在底层使用 `TorchServe` 来部署 PyTorch 模型。以下代码示例展示了如何部署 PyTorch 模型：
 
 ```python
 from sagemaker.pytorch.model import PyTorchModel
@@ -4630,7 +4536,7 @@ pytorch_model = PyTorchModel( model_data=<S3 location of the PyTorch model artif
 pyorch_model.deploy( initial_instance_count=<instance count>, instance_type=<instance type> )
 ```
 
-- 部署 Spark ML 模型：对于基于 Spark ML 模型，SageMaker 使用 MLEap 作为后端来部署 Spark ML 模型。这些 Spark ML 模型需要序列化为 MLeap 格式。以下代码示例展示了如何使用 SageMaker 托管服务部署 Spark ML 模型：
+- 部署 Spark ML 模型：对于基于 Spark ML 模型，SageMaker 使用 `MLEap` 作为后端来部署 Spark ML 模型。这些 Spark ML 模型需要序列化为 MLeap 格式。以下代码示例展示了如何使用 SageMaker 托管服务部署 Spark ML 模型：
 
 ```python
 import sagemaker
@@ -4675,7 +4581,7 @@ sklearn_model.deploy(instance_type=<instance type>,
 initial_instance_count=<instance count>)
 ```
 
-- 使用自定义容器部署模型：对于自定义创建的推理容器，您可以遵循类似的语法来部署模型。主要的区别在于需要提供自定义推理容器镜像的 uri。您可以在 https://docs.aws.amazon.com/sagemaker/latest/dg/adapt-inference-container.html 找到构建自定义推理容器的详细文档。
+- 使用自定义容器部署模型：对于自定义创建的推理容器，您可以遵循类似的语法来部署模型。主要的区别在于需要提供自定义推理容器镜像的 uri。您可以在 `https://docs.aws.amazon.com/sagemaker/latest/dg/adapt-inference-container.html` 找到构建自定义推理容器的详细文档。
 
 ```python
 from sagemaker.model import Model
@@ -4691,35 +4597,57 @@ initial_instance_count=<instance count>)
 
 SageMaker 托管提供推理流水线功能，允许您创建一个线性序列的容器（最多 15 个），以便在调用模型进行预测前后执行数据处理。SageMaker 托管可以支持多个版本模型之间的流量划分，以进行 A/B 测试。
 
-SageMaker 托管可以使用 AWS CloudFormation 模板进行配置。还支持使用 AWS CLI 进行脚本自动化，并可以通过其 API 集成到自定义应用程序中。以下是不同端点自动化方法的代码示例：
+SageMaker 托管可以使用 `AWS CloudFormation` 模板进行配置。还支持使用 `AWS CLI` 进行脚本自动化，并可以通过其 API 集成到自定义应用程序中。以下是不同端点自动化方法的代码示例：
 
-- 以下是一个用于 SageMaker 端点部署的 CloudFormation 代码示例。您可以在 https://github.com/PacktPublishing/The-Machine-Learning-Solutions-Architect-Handbook/blob/main/Chapter09/sagemaker_hosting.yaml 找到完整代码。
+- 以下是一个用于 SageMaker 端点部署的 CloudFormation 代码示例。您可以在 `https://github.com/PacktPublishing/The-Machine-Learning-Solutions-Architect-Handbook/blob/main/Chapter09/sagemaker_hosting.yaml` 找到完整代码。
 
 | Description: "Model hosting cloudformation template" |
+
 | :--- |
+
 | Resources: |
+
 | Endpoint: |
+
 | Type: "AWS::SageMaker::Endpoint" |
+
 | Properties: |
+
 | EndpointConfig: | !GetAtt EndpointConfig.EndpointConfigName |
+
 | EndpointConfig:| |
+
 | Type: "AWS::SageMaker::EndpointConfig" |
+
 | Properties: |
+
 | ProductionVariants: |
+
 | - InitialInstanceCount: 1 |
+
 | InitialVariantWeight: 1.0 |
+
 | InstanceType: ml_t2.large |
+
 | ModelName: !GetAtt Model.ModelName |
+
 | VariantName: !GetAtt Model.ModelName |
+
 | Model: |
+
 | Type: "AWS::SageMaker::Model" |
+
 | Properties: |
+
 | PrimaryContainer: |
+
 | Image: <container uri> |
+
 | ExecutionRoleArn: !GetAtt ExecutionRole.Arn |
+
 | ... |
 
-- * 以下是一个用于 SageMaker 端点部署的 AWS CLI 示例：
+- * 以下是一个用于 SageMaker 端点部署的 `AWS CLI` 示例：
 
 ```bash
 aws sagemaker create-model --model-name <value>
@@ -4730,32 +4658,36 @@ aws sagemaker create-endpoint --endpoint-name <value>
 
 ## 身份验证与安全
 
-SageMaker 托管服务使用 AWS IAM 作为控制控制平面 API（例如，创建端点）和数据平面 API（例如，调用托管端点）访问的机制。如果您需要为数据平面支持其他身份验证方法（如 OpenID Connect OIDC），可以使用代理服务作为前端来管理用户身份验证，以及流量限制等 API 管理功能。
+SageMaker 托管服务使用 `AWS IAM` 作为控制控制平面 API（例如，创建端点）和数据平面 API（例如，调用托管端点）访问的机制。如果您需要为数据平面支持其他身份验证方法（如 OpenID Connect `OIDC`），可以使用代理服务作为前端来管理用户身份验证，以及流量限制等 API 管理功能。
 
 ## 监控与日志
 
-SageMaker 提供开箱即用的监控和日志功能以协助运维。它监控系统资源指标（例如 CPU/GPU 利用率）以及模型调用指标（例如调用次数、模型延迟和失败）。这些监控指标和任何模型处理日志都会被 CloudWatch 指标和 CloudWatch Logs 。
+SageMaker 提供开箱即用的监控和日志功能以协助运维。它监控系统资源指标（例如 CPU/GPU 利用率）以及模型调用指标（例如调用次数、模型延迟和失败）。这些监控指标和任何模型处理日志都会被 `CloudWatch` 指标和 `CloudWatch Logs` 。
 
 ## 在 ML 工作中引入 MLOps
 
-类似于适用于传统软件开发和部署的 DevOps 实践，MLOps 实践旨在简化 ML 流水线的构建和部署过程，并改进数据科学家/机器学习工程师、数据工程师和运维团队之间的协作。具体而言，MLOps 实践旨在端到端的 ML 生命周期中带来以下主要收益：
-
-- 流程一致性：MLOps 实践旨在建立 ML 模型构建和部署过程的一致性。一致的流程提高了 ML 工作流的效率，并确保了 ML 工作流输入输出的高度确定性。
-
-- 工具和流程的易用性：MLOps 实践的核心目标之一是创建可复用的技术工具和模板，以便更快地采用和部署新用例。这些包括通用工具，如代码库库、包和镜像构建工具、流水线编排工具、模型注册，以及用于模型训练和部署的基础设施。从可复用模板的角度来看，这些包括通用的 Docker 镜像构建脚本、工作流编排定义以及用于模型构建和部署的 CloudFormation 脚本。
-
-- 模型可复现性：ML 是高度迭代的，可能涉及不同数据集、算法和超参数的大量实验和模型训练。MLOps 流程需要捕捉构建 ML 模型所需的所有数据、源代码和产物，并从这些输入数据、代码和产物建立最终模型的血缘。这对于实验跟踪以及治理和控制目的都至关重要。
+类似于适用于传统软件开发和部署的 DevOps 实践，`MLOps` 实践旨在简化 ML 流水线的构建和部署过程，并改进数据科学家/机器学习工程师、数据工程师和运维团队之间的协作。具体而言，`MLOps` 实践旨在端到端的 ML 生命周期中带来以下主要收益：
 
 
 
+## 流程一致性
+MLOps 实践旨在建立 ML 模型构建和部署过程的一致性。一致的流程提高了 ML 工作流的效率，并确保了 ML 工作流输入输出的高度确定性。
 
+## 工具和流程的易用性
+MLOps 实践的核心目标之一是创建可复用的技术工具和模板，以便更快地采用和部署新用例。这些包括通用工具，如代码库库、包和镜像构建工具、流水线编排工具、模型注册，以及用于模型训练和部署的基础设施。从可复用模板的角度来看，这些包括通用的 Docker 镜像构建脚本、工作流编排定义以及用于模型构建和部署的 CloudFormation 脚本。
 
-- **交付扩展性：** MLOps 流程及相关工具使得 ML 流水线能够并行运行以实现高交付吞吐量。不同的 ML 项目团队可以独立使用标准的 MLOps 流程和通用工具，而不会在资源竞争、环境隔离和治理方面产生冲突。
-- **流程和操作的可审计性：** MLOps 提升了流程和 ML 流水线的可审计性。这包括捕获机器流水线执行的细节、跨步骤的依赖关系和血缘、作业执行状态、模型训练和部署细节、审批跟踪，以及人工操作员执行的操作。
+## 模型可复现性
+ML 是高度迭代的，可能涉及不同数据集、算法和超参数的大量实验和模型训练。MLOps 流程需要捕捉构建 ML 模型所需的所有数据、源代码和产物，并从这些输入数据、代码和产物建立最终模型的血缘。这对于实验跟踪以及治理和控制目的都至关重要。
+
+## 交付扩展性
+MLOps 流程及相关工具使得 ML 流水线能够并行运行以实现高交付吞吐量。不同的 ML 项目团队可以独立使用标准的 MLOps 流程和通用工具，而不会在资源竞争、环境隔离和治理方面产生冲突。
+
+## 流程和操作的可审计性
+MLOps 提升了流程和 ML 流水线的可审计性。这包括捕获机器流水线执行的细节、跨步骤的依赖关系和血缘、作业执行状态、模型训练和部署细节、审批跟踪，以及人工操作员执行的操作。
 
 既然我们已经熟悉了 MLOps 实践的预期目标和收益，让我们来看看 AWS 上实现 MLOps 的具体操作流程和具体技术架构。
 
-## MLOps 架构的组件
+# MLOps 架构的组件
 
 MLOps 最重要的概念之一是自动化流水线，它执行一系列任务，例如数据处理、模型训练和模型部署。该流水线可以是步骤的线性序列，也可以是具有多个任务并行执行功能的更复杂的 DAG（有向无环图）。MLOps 架构还包含几个仓库，用于存储作为流水线执行部分的资产和元数据。下图显示了涉及 MLOps 操作的核心组件和任务：
 
@@ -4803,9 +4735,6 @@ AWS 为实现 MLOps 架构提供了多种技术选项。下图显示这些技术
 **流水线仓库**维护自动化流水线的定义以及不同流水线作业执行的状态。
 
 **SageMaker Experiments** 用于跟踪实验和尝试。例如，流水线中的处理步骤可以包含输入数据和处理后数据等元数据，而模型训练步骤可以包含算法、超参数和模型指标等元数据。这些元数据可以用于比较模型训练的不同运行，也可以用于建立模型血缘。
-
-
-
 
 有多个原生 AWS 服务用于在 AWS 上构建模型训练架构。下面的图展示了一个构建基于 SageMaker 的模型训练环境的示例架构：
 
@@ -4856,10 +4785,6 @@ SageMaker Debugger 组件可以检测模型训练问题，例如非收敛状态�
 图 9.6 – SageMaker Model Monitor 流程
 
 对于偏见检测，SageMaker Clarify 可以持续监控部署模型的偏见指标，并在指标超过阈值时通过 CloudWatch 告警。我们将在第 11 章“ML 治理、偏见、可解释性和隐私”中详细介绍偏见检测。
-
-
-
-
 
 # ML 流水线监控
 
@@ -4917,16 +4842,22 @@ AWS CDK 允许你创建部署在 AWS 上的不同产品。这些产品可以包�
 
 在高级别，你将使用 CloudFormation 创建两个流水线：一个用于模型训练，一个用于模型部署。
 
- 为 ML 训练流水线创建 CloudFormation 模板
+## 为 ML 训练流水线创建 CloudFormation 模板
 
 在本节中，我们将创建两个执行以下操作的 CloudFormation 模板
 
-- 第一个模板为 ML 模型训练工作流创建 AWS Step Functions，用于执行数据处理、模型训练和模型注册。这将训练流水线的一个组件。
-- 第二个模板创建一个 CodePipeline ML 模型训练流水线定义，包含两个阶段：
-    - 源阶段（source stage）：监听 CodeCommit 存储库的变化，以启动我们创建的 Step Functions 工作流的执行。
-    - 部署阶段（deployment stage）：启动 ML 模型训练工作流的执行。
 
-现在，让我们开始编写 Step Functions 工作流的 CloudFormation 模板：
+
+# ML 模型训练工作流与 CodePipeline 流水线
+
+- 第一个模板为 ML 模型训练工作流创建 AWS Step Functions，用于执行数据处理、模型训练和模型注册。这将训练流水线的组件。
+
+- 第二个模板创建一个 CodePipeline ML 模型训练流水线定义，包含两个阶段：
+
+  - 源阶段（source stage）：监听 CodeCommit 存储库的变化，以启动我们创建的 Step Functions 工作流的执行。
+  - 部署阶段（deployment stage）：启动 ML 模型训练工作流的执行。
+
+## 编写 Step Functions 工作流的 CloudFormation 模板
 
 - 创建一个名为 `AmazonSageMaker-StepFunctionsWorkflowExecutionRole` 的 Step Functions 执行角色。然后，创建并将其附加以下 IAM 策略。该角色将被 Step Functions 工作流使用，提供调用 SageMaker API 的权限。请记住新创建的 IAM 角色的 ARN，你将在下一步中需要它。你可以在此处找到完整的代码示例：https://github.com/PacktPublishing/The-Machine-Learning-Solutions-Architect-Handbook/blob/main/Chapter09/AmazonSageMaker-StepFunctionsWorkflowExecution-policy.json:
 
@@ -4955,14 +4886,11 @@ AWS CDK 允许你创建部署在 AWS 上的不同产品。这些产品可以包�
 }
 ```
 
-
-
-
-
 ```
 ...
 }
 ```
+
 将以下代码块复制并保存到本地文件中，并命名为 `training_workflow.yaml`。你可以在 https://github.com/PacktPublishing/The-Machine-Learning-Solutions-Architect-Handbook/blob/main/Chapter09/training_workflow.yaml 找到完整文件。此 CloudFormation 模板将创建一个包含训练步骤和模型注册的状态机（State machine）。训练步骤将训练我们在第 8 章《使用 AWS ML 服务构建数据科学环境》中训练的 BERT 模型。为了简单起见，我们还将重用相同的源数据和训练脚本，以演示我们在本章中学习的 MLOps 概念。注意，我们在这里使用 CloudFormation 来演示 IaC（基础设施即代码）的管理。数据科学家可以使用 Step Functions Data Science SDK 使用 Python 脚本来创建流水线：
 
 ```
@@ -4995,7 +4923,7 @@ Resources:
 
 - 3. 在 CloudFormation 控制台中启动新创建的云模板。确保在提示符时为 `StepFunctionExecutionRoleArn` 字段提供值。这是你从上一步中记录的 ARN。一旦 CloudFormation 执行完成，请进入 Step Functions 控制台进行测试。
 
-- 4. 在 Step Functions 控制台中测试该流水线以确保其工作正常。导航到新创建的 Step Functions 状态机并点击“Start Execution”（开始执行）以启动执行。当系统提示输入任何内容时，将以下 JSON 复制并粘贴作为执行的输入。这些是 Step Functions 流水线将使用的输入值。请确保将实际值替换为你对应环境的值。对于训练镜像的 AWS 托管账户信息，你可以在 https://github.com/aws/deep-learning-containers/blob/available_images 查找账户号。
+- 4. 在 Step Functions 控制台中测试该流水线以确保其工作正常。导航到新创建的 Step Functions 状态机并点击“Start Execution”以启动执行。当系统提示输入任何内容时，将以下 JSON 复制并粘贴作为执行的输入。这些是 Step Functions 流水线将使用的输入值。请确保将实际值替换为你对应环境的值。对于训练镜像的 AWS 托管账户信息，你可以在 https://github.com/aws/deep-learning-containers/blob/available_images 查找账户号。
 
 ```
 {
@@ -5046,7 +4974,7 @@ Resources:
 | Type: AWS::CodePipeline::Pipeline |
 | ... |
 
-- 2. 同样，在 CloudFormation 控制台中启动此模板以创建流水线定义。一旦 CloudFormation 执行完成，导航到 CodePipeline 控制台验证其已创建。你可以通过点击 SageMaker 控制台中的“Release changes”（发布更改）再次测试它。
+- 2. 同样，在 CloudFormation 控制台中启动此模板以创建流水线定义。一旦 CloudFormation 执行完成，导航到 CodePipeline 控制台验证其已创建。你可以通过点击 SageMaker 控制台中的“Release changes”再次测试它。
 
 我们希望在 CodeCommit 仓库中发生更改（例如代码提交）时能够启动 CodePipeline 执行。为了实现这一点，我们需要创建一个 CloudWatch 事件来监控此处并启动流水线。让我们开始：
 
@@ -5097,8 +5025,6 @@ Resources:
 | EndpointConfigName: !GetAtt EndpointConfig |
 | EndpointConfig |
 
-
-
 ```yaml
 EndpointConfig:
   Type: AWS::SageMaker::EndpointConfig
@@ -5127,13 +5053,17 @@ EndpointConfig:
 }
 ```
 
-- 4 现在，我们可以创建一个用于自动模型部署的 CodePipeline 流水线 CloudFormation 模板。该流水线有两个阶段：
-    - I. 第一阶段从 CodeCommit 仓库获取源代码（例如我们刚刚创建的配置文件和 `mldeployment.yaml` 模板）。
-    - II. 第二阶段为我们之前创建的 `mldeployment.yaml` 文件创建一个 CloudFormation 更改集（更改集是新模板与现有 CloudFormation 栈之间的差异）。它添加了一个手动审批步骤并部署 CloudFormation 模板文件 `mldeployment.yaml`。
+
+
+### 4
+现在，我们可以创建一个用于自动模型部署的 CodePipeline 流水线 CloudFormation 模板。该流水线有两个阶段：
+- I. 第一阶段从 CodeCommit 仓库获取源代码（例如我们刚刚创建的配置文件和 `mldeployment.yaml` 模板）。
+- II. 第二阶段为我们之前创建的 `mldeployment.yaml` 文件创建一个 CloudFormation 更改集（更改集是新模板与现有 CloudFormation 栈之间的差异）。它添加了一个手动审批步骤并部署 CloudFormation 模板文件 `mldeployment.yaml`。
 
 此 CloudFormation 模板还会创建辅助资源，包括一个用于存储 CodePipeline 产物的 S3 桶、一个供 CodePipeline 运行的 IAM 角色，以及另一个供 CloudFormation 使用以执行 `mldeployment.yaml` 栈 IAM 角色。
 
-- 5 复制以下代码块并将文件保存为 `mdeployment-pipeline.yaml`。你可以在 https://github.com/PacktPublishing/The-Machine-Learning-Solutions-Architect-Handbook/blob/main/Chapter09/mdeployment-pipeline.yaml 找到完整的代码集。
+### 5
+复制以下代码块并将文件保存为 `mdeployment-pipeline.yaml`。你可以在 https://github.com/PacktPublishing/The-Machine-Learning-Solutions-Architect-Handbook/blob/main/Chapter09/mdeployment-pipeline.yaml 找到完整的代码集。
 
 | Parameters |
 | :--- | :--- |
@@ -5169,7 +5099,8 @@ EndpointConfig:
 | DeletionPolicy: Delete |
 | Pipeline: ... |
 
-- 6 现在，在 CloudFormation 控制台中启动新创建的 `mldeployment-pipeline.yaml` 模板以创建部署流水线，然后从 CodePipeline 控制台运行流水线。
+### 6
+现在，在 CloudFormation 控制台中启动新创建的 `mldeployment-pipeline.yaml` 模板以创建部署流水线，然后从 CodePipeline 控制台运行流水线。
 
 恭喜！你已成功创建并运行了一个 CodePipeline 部署流水线，从 SageMaker 模型注册表部署了一个模型。
 
@@ -5216,9 +5147,6 @@ EndpointConfig:
 
 数据并行分布式训练允许你将大型训练数据集拆分为较小的子集，并在不同的设备和节点上并行训练这些较小的子集。这允许你在可用设备上并行运行多个训练进程以加速训练。使用数据并行分布式训练需要底层的 ML 框架和或算法支持它。
 
-
-
-
 如前所述，深度学习（DL）训练中的一项关键任务是为每批次数据计算损失函数的梯度，然后利用梯度信息逐渐更新模型参数。与其在单个设备上运行梯度计算和参数更新，分布式分布式训练的基本概念是通过相同的算法并行运行多个训练进程，每个进程使用训练数据集的子集。下图显示了这种原理：
 
 ![](img/bd21298357d8484151447cff0b2f138b_322_0.png)
@@ -5249,7 +5177,7 @@ EndpointConfig:
 
 ## 在框架中实现 PS
 
-多个 DL 框架原生支持 PS 分布式训练，例如 TensorFlow。具体来说，TensorFlow 通过其 ParameterServerStrategy API 支持基于 PS 的分布式训练。以下代码示例了如何为 TensorFlow 实例化该 API：
+多个 DL 框架原生支持 PS 分布式训练，例如 TensorFlow。具体来说，TensorFlow 通过其 `ParameterServerStrategy` API 支持基于 PS 的分布式训练。以下代码示例了如何为 TensorFlow 实例化该 API：
 
 ```python
 strategy = tf.distribute.experimental.ParameterServerStrategy(cluster_resolver)
@@ -5290,9 +5218,6 @@ AllReduce 和 Ring AllReduce 架构被多个 DL 框架原生支持，包括 Tens
 
 TensorFlow 通过其 `tf.distribute.MirroredStrategy` API 支持支持单机多 GPU 的 AllReduce 分布式训练。
 
-
-
-
 # 使用分布式训练进行大规模模型训练
 
 对于多机分布式训练，TensorFlow 使用 `tf.distribute.MultiWorkerMirroredStrategy` API。与 `MirroredStrategy` 类似，`MultiWorkerMirroredStrategy` 在所有机器上的所有设备上创建所有参数的副本，并通过 AllReduce 机制对其进行同步。下面的代码示例展示了如何实例化 `MultiWorkerMirroredStrategy` API：
@@ -5301,7 +5226,7 @@ TensorFlow 通过其 `tf.distribute.MirroredStrategy` API 支持支持单机多 
 strategy = tf.distribute.MultiWorkerMirroredStrategy()
 ```
 
-与 `ParameterServerStrategy` 类似，`MirroredStrategy` 和 `MultiWorkerMirroredStrategy` 可以配合 keras model.fit() 或自定义训练循环工作。要将模型与训练策略关联，你可以使用 `strategy.scope()` 语法。
+与 `ParameterServerStrategy` 类似，`MirroredStrategy` 和 `MultiWorkerMirroredStrategy` 可以配合 keras `model.fit()` 或自定义训练循环工作。要将模型与训练策略关联，你可以使用 `strategy.scope()` 语法。
 
 PyTorch 通过其 `torch.nn.DataParallel` 和 `torch.nn.parallel.DistributedDataParallel` API 提供了基于 AllReduce 的分布式训练原生支持。`torch.nn.DataParallel` API 支持同一机器上跨 GPU 的单进程多线程，而 `torch.nn.parallel.DistributedDataParallel` 支持跨 GPU 和机器的多进程。下面的代码示例展示了如何初始化分布式训练集群并使用 `DistributedDataParallel` API 为模型进行分布式训练封装：
 
@@ -5310,19 +5235,21 @@ torch.distributed.init_process_group...
 model = torch.nn.parallel.DistributedDataParallel(model, ...)
 ```
 
-通用 Ring AllReduce 架构的另一种实现是 Horovod，它由 Uber 的工程师创建。Horovod 支持 TensorFlow 和 PyTorch 在内的多个框架。你可以在 https://github.com/horovod/horovod 找到有关 Horovod 的信息。
+
+
+通用 Ring AllReduce 架构的另一种实现是 Horovod，它由 Uber 的工程师创建。Horovod 支持 TensorFlow 和 PyTorch 在内的多个框架。你可以在 `https://github.com/horovod/horovod` 找到有关 Horovod 的信息。
 
 # 使用模型并行进行分布式模型训练
 
 模型并行在应用方面仍处于起步阶段，因为大多数发生的分布式训练都涉及处理大型数据集的数据并行。然而，BERT、GPT 和 T5 等先进深度学习算法的应用正在推动模型并行日益普及。众周知，这些模型的特性随着模型尺寸的增大而增强，这些大型 NLP 模型需要大量的内存来存储模型状态（包括参数、优化器状态和梯度）以及用于其他开销的内存。
 
-因此，这些模型无法再放入单个 GPU 的内存中。虽然大规模并行有助于解决大型数据集的挑战，但由于其对内存的需求巨大，它无法帮助训练大模型。模型并行允许你将单个大模型拆分到多个设备上，使得多个设备的总内存足够容纳模型的副本。此外，由于多个设备更大的集合内存，模型并行还允许在模型训练中使用更大的批大小（batch size）。
+因此，这些模型无法再放入单个 GPU 的内存中。虽然大规模并行有助于解决大型数据集的挑战，但由于其对内存的需求巨大，它无法帮助训练大模型。模型并行允许你将单个大模型拆分到多个设备上，使得多个设备的总内存足够容纳模型的副本。此外，由于多个设备更大的集合内存，模型并行还允许在模型训练中使用更大的批大小（`batch size`）。
 
 模型并行分布式训练中拆分模型有很多方法：按层拆分和按张量拆分。让我们仔细查看这两种方法。
 
 # 简单模型并行概述
 
-由于人工神经网络由许多层组成，拆分模型的一种方法是将层分布在多个设备上。例如，如果你有一个 8 层的多层感知器网络（MLP）和两个 GPU（GPU0, GPU1），你可以简单地将前四层放在 GPU0，后四层放在 GPU1。在训练期间，模型的前四层的训练方式就像你正常在单设备中训练模型一样。当前四层完成后，第四层的输出将从 GPU0 复制到 GPU1，这将产生通信开销。从 GPU0 获取输出后，GPU1 继续训练第五层到第八层。下面的图展示了跨多个设备按层拆分模型：
+由于人工神经网络由许多层组成，拆分模型的一种方法是将层分布在多个设备上。例如，如果你有一个 8 层的多层感知器网络（MLP）和两个 GPU（`GPU0`, `GPU1`），你可以简单地将前四层放在 `GPU0`，后四层放在 `GPU1`。在训练期间，模型的前四层的训练方式就像你正常在单设备中训练模型一样。当前四层完成后，第四层的输出将从 `GPU0` 复制到 `GPU1`，这将产生通信开销。从 `GPU0` 获取输出后，`GPU1` 继续训练第五层到第八层。下面的图展示了跨多个设备按层拆分模型：
 
 ![](img/bd21298357d8484151447cff0b2f138b_328_0.png)
 
@@ -5344,11 +5271,11 @@ model = torch.nn.parallel.DistributedDataParallel(model, ...)
 
 ![](img/bd21298357d8484151447cff0b2f138b_329_0.png)
 
-在前面的图中，F0、F1 和 F2 是每个设备上神经网络层的正向传播。B2、B1 和 B0 是每个设备上层的反向传播。如你所见，当其中一个设备忙于正向传播或反向传播时，其他设备是空闲的。接下来，让我们看看一种可以增加资源利用的方法（流水线模型并行）。
+在前面的图中，`F0`、`F1` 和 `F2` 是每个设备上神经网络层的正向传播。`B2`、`B1` 和 `B0` 是每个设备上层的反向传播。如你所见，当其中一个设备忙于正向传播或反向传播时，其他设备是空闲的。接下来，让我们看看一种可以增加资源利用的方法（流水线模型并行）。
 
 # 流水线模型并行概述
 
-为了解决资源空闲问题，可以实现流水线模型并行。它改进了简单模型并行，使得不同的设备可以在较小批次数据（通常称为微批，micro-batch）的训练流水线的不同阶段上并行工作。。图图展示了流水线并行的工作原理：
+为了解决资源空闲问题，可以实现流水线模型并行。它改进了简单模型并行，使得不同的设备可以在较小批次数据（通常称为微批，`micro-batch`）的训练流水线的不同阶段上并行工作。。图图展示了流水线并行的工作原理：
 
 Device 2
 
@@ -5395,9 +5322,6 @@ Megatron-LM 实现了基于微批的流水线模型并行以提高设备利用�
 - 默认阶段调度在完成所有微批次的正向传播之前首先完成所有批次的正向传播。
 - 交式阶段调度在单个设备上运行多个不同的子集，而不是运行单一连续的层集。
 
-
-
-
 Megatron-LM 为基于 Transformer 模型实现了一种特定的张量并行策略。一个 Transformer 主要由自注意力块组成，随后是一个双层 MLP 层。对于 MLP 部分，Megatron-LM 按列拆分权重矩阵。注意力头的矩阵也按列进行拆分。下面的图显示了 Transformer 的不同部分是如何拆分的：
 
 ![](img/bd21298357d8484151447cff0b2f138b_333_0.png)
@@ -5435,7 +5359,7 @@ DeepSpeed 框架的一个特性是其零冗余优化器（ZeRO）。ZeRO 能够�
 - 1. 使用 `deepspeed.initialize()` 函数封装模型并返回一个 DeepSpeed 模型引擎。该模型引擎将用于运行前向传播和反向传播。
 - 2. 使用返回的 DeepSpeed 模型引擎运行前向传播、反向传播和执行 step 函数来更新模型参数。
 
-DeepSpeed 主要支持 PyTorch，只需少量的代码更改即可采用 PyTorch 进行模型训练。DeepSpeed 已用于训练具有数百百亿参数的模型，并交付了一些最快的模型时长。你可以在 https://www.deepspeed.ai 了解更多关于 DeepSpeed 信息。
+DeepSpeed 主要支持 PyTorch，只需少量的代码更改即可采用 PyTorch 进行模型训练。DeepSpeed 已用于训练具有数百百亿参数的模型，并交付了一些最快的模型时长。你可以在 `https://www.deepspeed.ai` 了解更多关于 DeepSpeed 信息。
 
 ## SageMaker Distributed Training 库概述
 
@@ -5463,9 +5387,7 @@ Amazon 的 SageMaker Distributed Training (SMD) 库是 Amazon SageMaker 服务�
 
 ### 模型推理的工作原理及优化机会
 
-正如之前提到的，DL 模型被构建为带有节点和边的计算图，节点表示不同的操作，边表示数据流。此类操作的示例包括加、乘法、激活（例如 Sigmoid 和 ReLU）和池化。这些操作对输入张量进行计算并产生输出张量。例如，$c=matmul(a,b)$ 取 $a$ 和 $b$ 作为输入张量并产生 $c$ 作为输出张量。深度学习框架（如 TensorFlow 和 PyTorch）拥有内置算子来支持不同的操作。算子的实现也称为内核（kernel）。
-
-
+正如之前提到的，DL 模型被构建为带有节点和边的计算图，节点表示不同的操作，边表示数据流。此类操作的示例包括加、乘法、激活（例如 Sigmoid 和 ReLU）和池化。这些操作对输入张量进行计算并产生输出张量。例如，`c=matmul(a,b)` 取 `a` 和 `b` 作为输入张量并产生 `c` 作为输出张量。深度学习框架（如 TensorFlow 和 PyTorch）拥有内置算子来支持不同的操作。算子的实现也称为内核（`kernel`）。
 
 在训练后的模型推理阶段，深度学习（DL）框架的运行时将遍历计算图，并为图中的每个节点调用相应的内核（如加法或 Sigmoid）。内核将从前一个算子获取各种输入，例如推理数据样本、学习到的模型参数以及前置的中间输出，并根据计算图定义的数据流执行特定计算，以产生最终预测。训练模型的大小主要取决于图中的节点数量，以及模型参数的数量及其数值精度（例如：32 位浮点数、16 位浮点数或 8 位整数）。
 
@@ -5522,9 +5444,6 @@ Inferentia 芯片可以直接配合 SageMaker 进行推理，以提高延迟。�
 
 量化算法有很多，包括均匀量化和非均匀量化。这两种方法将连续域映射到量化域中的离散低精度值。在均匀量化的情况下，量化域中的量化值是等距的，而非均匀量化的量化值间距是变化的。
 
-
-
-
 ![](img/bd21298357d8484151447cff0b2f138b_341_0.png)
 
 图 10.15 – 均匀与非均匀量化
@@ -5571,7 +5490,7 @@ DL 框架（如 TensorFlow 和 PyTorch）提供了剪枝模型的 API。例如�
 
 在前面的图中，**矩阵乘法、加法**和**ReLU** 算子被融合为一个单个算子以便在单个内核中执行，以减少内存访问和启动多个内核所需的时间。
 
-常数折叠是在编译时评估常量而不是在运行时评估它们的过程，以加速运行时的处理。例如，以下表达式 $A$ 可以在编译时被赋值为 300，而不是在运行时动态计算（后者需要更多的计算周期）：$A = 100 + 200$。
+常数折叠是在编译时评估常量而不是在运行时评估它们的过程，以加速运行时的处理。例如，以下表达式 `A` 可以在编译时被赋值为 300，而不是在运行时动态计算（后者需要更多的计算周期）：`A = 100 + 200`。
 
 ## 算子优化
 
@@ -5604,17 +5523,13 @@ TVM 的一个关键特性是 AutoTVM，它使用 ML 为不同的硬件设备搜�
 
 Amazon SageMaker Neo 是 SageMaker 中的模型编译功能。它主要使用 Apache TVM 作为底层编译器库。通过 SageMaker Neo，你可以获取在 TensorFlow 和 PyTorch 等不同框架训练的模型，选择目标处理器（如 Intel、Apple、ARM 和 Nvidia），然后 SageMaker Neo 会为目标硬件编译优化后的模型。Neo 还为每个目标平台提供运行时库，用于加载和执行编译后的模型。
 
-
-
-
-
 ## 推理引擎优化
 
 一种常见的模型部署模式是使用开源推理引擎或商业托管平台进行模型服务。因此，推理引擎优化是另一种减少模型延迟和提高推理吞吐量的方法。在本节中，我们将讨论一些考虑因素。请注意，推理引擎优化没有通用的规则，因为它们可能取决于特定的引擎和模型。对于最终部署，测试并验证不同的配置至关重要。
 
 ## 推理批处理 (Inference batching)
 
-如果你有大量的推理请求，并且对单个预测请求没有严格的延迟要求，那么推理批处理是一种可以帮助减少请求总推理时间的技术。通过批处理，不再是一个一个地运行预测，而是将多个请求进行打包并发送到推理引擎。这种技术减少了总往返次数，从而缩短了总推理时间。TensorFlow Serving 和 TorchServe 等推理引擎提供了内置的批处理支持。你可以分别 https://pytorch.org/serve/batch_inference_with_ts.html 和 https://www.tensorflow.org/tfx/serving/serving_config#batching_configuration 找到 TorchServe 和 TensorFlow Serving 处理的配置详情。
+如果你有大量的推理请求，并且对单个预测请求没有严格的延迟要求，那么推理批处理是一种可以帮助减少请求总推理时间的技术。通过批处理，不再是一个一个地运行预测，而是将多个请求进行打包并发送到推理引擎。这种技术减少了总往返次数，从而缩短了总推理时间。TensorFlow Serving 和 TorchServe 等推理引擎提供了内置的批处理支持。你可以分别 `https://pytorch.org/serve/batch_inference_with_ts.html` 和 `https://www.tensorflow.org/tfx/serving/serving_config#batching_configuration` 找到 TorchServe 和 TensorFlow Serving 处理的配置详情。
 
 ## 启用并行服务会话
 
@@ -5634,7 +5549,7 @@ TensorFlow 和 TorchServe 等推理引擎支持 gRPC 协议，这是一种比 RE
 
 ## 修改训练脚本
 
-首先，我们需要在训练脚本中添加分布式训练支持。首先，创建 `train.py` 文件的副本，将其重命名为 `train-dis.py`，并打开 `train-dis.py` 文件。你需要对以下三个函数进行修改。这些函数旨在突出所需的关键更改。要运行实验，你可以从 https://github.com/PacktPublishing/The-Machine-Learning-Solutions-Architect-Handbook/tree/main/Chapter10 下载修改后的 `train-dis.py` 文件。
+首先，我们需要在训练脚本中添加分布式训练支持。首先，创建 `train.py` 文件的副本，将其重命名为 `train-dis.py`，并打开 `train-dis.py` 文件。你需要对以下三个函数进行修改。这些函数旨在突出所需的关键更改。要运行实验，你可以从 `https://github.com/PacktPublishing/The-Machine-Learning-Solutions-Architect-Handbook/tree/main/Chapter10` 下载修改后的 `train-dis.py` 文件。
 
 ## 修改 train() 函数
 
@@ -5670,12 +5585,15 @@ TensorFlow 和 TorchServe 等推理引擎支持 gRPC 协议，这是一种比 RE
 
 - 1. 首先，初始化 SageMaker PyTorch 估计器并设置输出目录：
 
-```python
-from sagemaker.pytorch import PyTorch
-output_path = f"s3://{bucket}/{prefix}" 
-```
 
-- 2. 现在，使用输入参数构建 PyTorch 估计器。我们将使用两个 `ml.g4dn.12xlarge` 服务器，这意味着我们将使用共八个 GPU：
+
+`from sagemaker.pytorch import PyTorch`
+
+`output_path = f"s3://{bucket}/{prefix}"`
+
+## 2. 现在，使用输入参数构建 PyTorch 估计器
+
+我们将使用两个 `ml.g4dn.12xlarge` 服务器，这意味着我们将使用共八个 GPU：
 
 ```python
 estimator = PyTorch(
@@ -5696,10 +5614,6 @@ estimator = PyTorch(
     })
 ```
 
-
-
-
-
 ```json
 "MAX LEN" : 315,
 "batch_size" : 64,
@@ -5707,6 +5621,8 @@ estimator = PyTorch(
 "backend" : "nccl"
 }
 ```
+
+
 
 你可以在 https://github.com/PacktPublishing/The-Machine-Learning-Solutions-Architect-Handbook/blob/main/Chapter10/bert-financial-sentiment-launcher.ipynb 下载修订后的启动器笔记本（notebook）。
 
@@ -5769,10 +5685,6 @@ ML 治理是一套策略、流程和活动，组织通过这些活动管理、�
 - 数据分布不一致：当训练数据和推理数据的分布不同时，模型在生产环境中可能会做出错误的预测。这些数据分布随着时间的推移而变化，这被称为数据漂移。分布外错误的预测可能会导致潜在的财务、声誉或法律风险。
 - 模型测试和验证不足：在模型投入生产环境之前，应该根据建立的接受指标进行彻底的测试和验证。还应该进行稳健性测试以识别失败点。
 
-
-
-
-
 # 理解机器学习（ML）治理框架
 
 ML 治理是非常复杂的，因为它涉及到复杂的内部政策和监管政策。整个 ML 全生命周期中涉及许多利益相关者和技术系统。此外，许多 ML 模型的不透明性、数据依赖性、ML 隐私以及许多算法的随机行为，使得 ML 治理更具挑战性。
@@ -5833,10 +5745,6 @@ SageMaker 中还有一个用于偏差检测的组件，我们将在本章后面�
 - 局部可解释性（Local explainability）：这是模型针对单个数据点（实例）的局部行为，指定哪些特征对该点的预测影响最大。例如，当你尝试解释影响某个贷款申请人决策的特征时，可能会发现教育是最重要的特征，即使在全局范围内收入是最重要的特征。
 
 某些 ML 算法（如线性回归和决策树）被认为是可以解释的算法，具有内置的模型解释能力。例如，线性回归模型的系数直接代表了输入特征的相对重要性，而决策树中的分裂点代表了用于决策的规则。
-
-
-
-
 
 对于神经网络等黑盒模型，解释决策是如何做出的非常困难，这在很大程度上归于非线性和模型复杂性。解决这一问题的一种技术是使用白盒代理模型来帮助解释黑盒模型的决策。例如，你可以使用相同的输入数据，与黑盒神经网络并行训练一个线性回归模型。虽然线性回归模型的性能可能没有黑盒模型那么，但它可以用来从高层上解释决策是如何做出的。
 
@@ -5905,10 +5813,6 @@ Amazon SageMaker 可以产生用于模型文档的数据和文档。具体而言
 有多种工具可以生成数据质量报告。例如，AWS DataBrew 可对输入数据进行分析并生成数据质量报告。它报告数据分布、相关性和缺失值等数据统计。
 
 这些数据点可以通过 SageMaker 获取，并手动从 DataBrew UI 和 API 提取以满足需求。但为了流程化，你应该实施自动化提取任务，从 SageMaker 和 DataBrew 中提取数据点，并将其存储在专门用于模型风险管理的数据存储中。根据业务需求，可以从数据科学环境、测试环境或生产托管环境提取用于文档的数据。
-
-
-
-
 
 # 模型清单
 
@@ -5980,10 +5884,6 @@ SageMaker 以及相关服务可以作为支持整个审计过程的数据源。�
 
 - 禁用互联网访问：默认情况下，你的 SageMaker 笔记本、训练作业和托管服务可以访问互联网。这种互联网访问可以通过配置来禁用。
 
-
-
-
-
 除了基础设施安全外，你还需要考虑数据隐私和模型隐私，以保护敏感信息免受对抗攻击，例如从匿名化数据中反向工程敏感数据。机器学习中数据隐私保护主要有三种技术：
 
 - **差分隐私 (Differential privacy)**：差分隐私允许你在共享数据集的同时，不泄露数据内个人的信息。该方法通过在计算中添加随机噪声来实现，使得原始数据难以被反向工程（如果并非不可能的话）。例如，你可以对训练数据或模型梯度添加噪声来混淆敏感数据。
@@ -6021,14 +5921,22 @@ ML 模型容易受到隐私攻击。例如，从训练模型中提取直接映�
 - 导入 tensorflow_privacy。选择你的差分隐私优化器：
 
 ```
-optimizer = tensorflow_privacy.DPKererasSGDOptimizer(
-l2_norm_clip=l2_norm_clip,
-noise_multiplier=noise_multiplier,
-num_microbatches=num_microbatches,
-learning_rate=learning_rate)
-```
 
+
+
+`optimizer = tensorflow_privacy.DPKererasSGDOptimizer(`
+
+`l2_norm_clip=l2_norm_clip,`
+
+`noise_multiplier=noise_multiplier,`
+
+`num_microbatches=num_microbatches,`
+
+`learning_rate=learning_rate)`
+
+```
 - 选择你的函数：
+```
 
 ```
 loss = tf.keras.losses.CategoricalCrossentropy(
@@ -6036,14 +5944,16 @@ from_logits=True,
 reduction=tf.losses.Reduction.NONE)
 ```
 
+```
 - 编译你的模型：
+```
 
 ```
 model.compile(optimizer=optimizer, loss=loss,
 metrics=['accuracy'])
 ```
 
-PyTorch 通过其 opacus 包支持差分隐私。使用 opacus 包开启隐私训练也相当简单。以下代码显示了如何将优化器封装在 PrivacyEngine 对象中，并在 PyTorch 训练循环中像以前一样使用该优化器：
+PyTorch 通过其 `opacus` 包支持差分隐私。使用 `opacus` 包开启隐私训练也相当简单。以下代码显示了如何将优化器封装在 `PrivacyEngine` 对象中，并在 PyTorch 训练循环中像以前一样使用该优化器：
 
 ```
 from opacus import PrivacyEngine
@@ -6058,10 +5968,6 @@ noise_multiplier = noise_multiplier
 )
 private_engine.attach(optimizer)
 ```
-
-
-
-
 
 在本章中，我们涵盖了几个治理和安全概念。正如我们在章节开头提到的，ML 解决方案架构通常不负责建立 ML 治理框架或实现隐私保护的训练架构。然而，ML SA（机器学习解决方案架构师）可能会被要求提供有关如何使用不同 ML 工具支持 ML 治理的技术指导。因此，了解这些工具以及它们如何在整体 ML 治理框架中发挥作用是非常重要的。
 
@@ -6085,8 +5991,8 @@ private_engine.attach(optimizer)
     - C. 在 `chapter11` 文件夹创建一个名为 `data` 的新文件夹。我们将在此文件夹存储训练和测试数据。
 
 - 2. 上传训练数据：
-    - A. 我们将使用之前章节中使用的客户流失数据 (churn.csv)。如果你没有它，可以从这里访问：https://github.com/PacktPublishing/The-Machine-Learning-Solutions-Architect-Handbook/tree/main/Chapter11/data。
-    - B. 将数据下载到本地目录，然后将两个文件上传到新创建的 data 目录。
+    - A. 我们将使用之前章节中使用的客户流失数据 (`churn.csv`)。如果你没有它，可以从这里访问：https://github.com/PacktPublishing/The-Machine-Learning-Solutions-Architect-Handbook/tree/main/Chapter11/data。
+    - B. 将数据下载到本地目录，然后将两个文件上传到新创建的 `data` 目录。
 
 - 3. 使用以下代码块初始化 sagemaker 环境：
 
@@ -6106,7 +6012,7 @@ role = get_execution_role()
 s3_client = boto3.client("s3")
 ```
 
-- 4. 从数据目录加载数据并显示前几行。Exited 列是目标：
+- 4. 从数据目录加载数据并显示前几行。`Exited` 列是目标：
 
 ```
 training_data = pd.read_csv("data/churn.csv").dropna()
@@ -6130,8 +6036,6 @@ def number_encode_features(df):
     result = df.copy()
 ```
 
-## 动手实验 — 检测偏见、模型可解释性和训练隐私保护模型 355
-
 ```
 encoders = {}
 for column in result.columns:
@@ -6146,7 +6050,7 @@ transform(result[column].fillna("None")
 return result, encoders
 ```
 
-为 SageMaker xgboost 模型处理数据，该模型需要目标位于第一列。然后将文件保存到 data 目录：
+为 SageMaker xgboost 模型处理数据，该模型需要目标位于第一列。然后将文件保存到 `data` 目录：
 
 ```
 churn_train = pd.concat ([churn_train["Exited"], churn_
@@ -6252,7 +6156,7 @@ processor.run_bias(
 
 我们将继续使用为为偏见创建的笔记本：
 
-- 指定 SHAP 配置。在这里，number_samples 是为了计算 SHAP 值而生成的合成数据点数量，而 baseline 是数据集中用于基准计算的行列表：
+- 指定 SHAP 配置。在这里，`number_samples` 是为了计算 SHAP 值而生成的合成数据点数量，而 `baseline` 是数据集中用于基准计算的行列表：
 
 ```
 shap_config = clarify.SHAPConfig(
@@ -6283,9 +6187,6 @@ clarify_processor.run_explainability(
   explainability_config=shap_config)
 ```
 
-
-
-
 模型可解释性报告也可以通过 Studio UI 直接访问。你可以通过进入 SageMaker Components and Registries | Experiments and trials | Unassigned trials 来找到报告。然后，右键点击最新的 clarify-explainability-XXXX 任务并选择 Open in trial details（在试验详情中打开）。最后，在模型解释图中。在本示例，你将看到这是影响预测最重要的特征。
 
 ## 训练隐私保护模型
@@ -6298,7 +6199,7 @@ clarify_processor.run_explainability(
 
 - 现在，我们必须修改此笔记本，使用 PyTorch opacus 包来实现差分隐私模型训练。你也可以从 https://github.com/PackPublishing/The-Machine-Learning-Solutions-Architect-Handbook/blob/main/Chapter11/churn_privacy-modified.ipynb 下载修改后的笔记本。
 
-- 为 opacus 包的 PrivacyEngine 对象指定参数。这里，`noise_multiplier` 是添加到噪声的高斯噪声标准差与函数敏感度之间的比例，而 `max_per_sample_grad_norm` 是大于此范数的值将进行裁剪的最大值。`sample_rate` 值用于确定如何构建训练批次：
+- 为 opacus 包的 `PrivacyEngine` 对象指定参数。这里，`noise_multiplier` 是添加到噪声的高斯噪声标准差与函数敏感度之间的比例，而 `max_per_sample_grad_norm` 是大于此范数的值将进行裁剪的最大值。`sample_rate` 值用于确定如何构建训练批次：
 
 ```
 max_per_sample_grad_norm = 1.5
@@ -6323,6 +6224,8 @@ privacy_engine.attach(optimizer)
 model = train(trainloader, net, optimizer, batch_size)
 ```
 
+
+
 如果你将训练损失与之前没有使用隐私引擎时观察到的损失进行比较，你会发现所有轮次（epochs）的损失都有了一些轻微的下降。
 
 6. 现在，让我们衡量该模型的潜在隐私损失：
@@ -6331,7 +6234,7 @@ model = train(trainloader, net, optimizer, batch_size)
 epsilon
 ```
 
-你将看到 $\epsilon$ 和 $\delta$ 的取值。正如我们之前讨论的，$\epsilon$ 是隐私损失预算，即通过在训练数据中添加或删除一条记录导致输出发生变化的概率。$\delta$ 是信息意外泄露的失败概率。
+你将看到 `$\epsilon$` 和 `$\delta$` 的取值。正如我们之前讨论的，`$\epsilon$` 是隐私损失预算，即通过在训练数据中添加或删除一条记录导致输出发生变化的概率。`$\delta$` 是信息意外泄露的失败概率。
 
 恭喜！你已成功使用 SageMaker 检测了数据和模型偏差，解释了模型的特征重要性，并使用差分隐私训练了模型。所有这些能力与 ML 治理（治理）高度相关。
 
@@ -6352,36 +6255,29 @@ epsilon
 - 为 AI 服务设计 MLOps 架构
 - 动手实验——为 AI 服务运行 ML 任务
 
-## 技术要求
+### 技术要求
 
-你将继续使用我们的 AWS 环境进行本书的动手部分。相关的代码示例可以在 https://github.com/PacktPublishing/The-Machine-Learning-Solutions-Architect-Handbook/tree/main/Chapter12 找到。
+你将继续使用我们的 AWS 环境进行本书的动手部分。相关的代码示例可以在 `https://github.com/PacktPublishing/The-Machine-Learning-Solutions-Architect-Handbook/tree/main/Chapter12` 找到。
 
-## 什么是 AI 服务？
+### 什么是 AI 服务？
 
 AI 服务是预构建的全托管服务，开箱即用执行一组特定的 ML 任务，例如面部分析或文本分析。AI 服务的主要目标用户是希望构建 AI 应用而无需从零开始构建 ML 模型的应用程序开发者。相比之下，ML 平台的目标受众是数据科学家和 ML 工程师，他们需要通过整个 ML 生命周期周期来构建和部署 ML 模型。对于组织而言，AI 服务主要解决以下挑战：
 
 - 缺乏 ML 模型开发所需的高质量训练数据：为了训练高质量模型，你需要大量高质量的精选数据。对于许多组织来说，数据在数据源、数据工程和数据标注方面面临许多挑战。
-
 - 缺乏构建和部署自定义模型的数据科学技能：数据科学和 ML 工程技能在市场上稀缺且获取成本高昂。
-
 - 产品上市时间慢：构建和部署自定义模型以及工程基础设施是非常耗时的。这可能成为快速实现产品交付目标的的障碍。
-
 - 无差异化能力：许多 ML 问题可以使用通用的 ML 能力解决，这些能力并不提供独特的竞争优势。在构建无差异化能力上花费资源是对稀缺资源的浪费。
-
 - 系统扩展性挑战：管理可扩展的基础以满足动态市场需求和增长是一项工程挑战。
 
 虽然 AI 服务可以为快速构建支持 ML 的提供一种成本效益的方法，但它们也有局限性。主要的局限性是对于特定的功能和技术要求缺乏定制灵活性。AI 服务通常关注具有预定义算法集的特定 ML 任务，因此通常你没有更改 AI 服务功能的灵活性。通过 AI 服务，你通常无法访问底层模型，从而限制了你向其他地方部署模型的能力。
 
 近年来，AI 服务的供应数量大幅增加，我们预计这一趋势将以加速的速度继续。接下来，我们将讨论几种 AWS AI 服务。
 
-## AI 服务概览
+### AI 服务概览
 
 AWS 在多个机器学习领域提供 AI 服务，例如文本和视觉，以及用于工业级用例的 AI 服务，如制造异常检测和预测性维护。在本节中，我们将涵盖 AWS AI 服务的一个集。本节的目标将不是深入研究单个服务，而是让你意识到这些 AI 服务所提供的基本能力。这将让你知道在何时以及如何将这些服务集成到你的应用程序中。
 
-
-
-
-# Amazon Comprehend
+#### Amazon Comprehend
 
 自然语言处理（NLP）在解决各种业务问题方面已引起不同行业的关注，例如自动文档处理、文本摘要、文档理解以及文档管理和检索。Amazon Comprehend 是一项 AI 服务，可以对非结构化文本文档进行 NLP 分析。其核心为 Amazon Comprehend 提供了以下主要能力：
 
@@ -6392,7 +6288,6 @@ Comprehend 提供了 API（例如 `DetectEntities`），通过其内置的识别
 如果内置模型无法满足您的需求，您还可以使用 Comprehend 为您的自定义实体训练自定义实体识别器。要训练自定义实体识别器，可以使用 `CreateEntityRecognizer` API 并使用以下格式的训练数据：
 
 - **标注**：您在大量文档中提供实体的位置（目标字符的起始和结束偏移量），并为每对偏移量提供实体类型。这有助于 Comprehend 针对实体及其所处的上下文进行训练。
-
 - **实体列表**：您提供一个纯文本格式的实体及其实体类型列表，Comprehend 将训练检测这些特定实体。
 
 您可以使用 Comprehend 自定义模型训练作业发出的指标来评估自定义模型。示例评估指标包括精确率、召回率和 F1 分。有关 Comprehend 评估指标的更多详细信息可以在此处找到：`https://docs.aws.amazon.com/comprehend/latest/dg/custom-metrics.html`。
@@ -6400,44 +6295,41 @@ Comprehend 提供了 API（例如 `DetectEntities`），通过其内置的识别
 模型完成训练后，您可以选择将模型部署在私有预测端点之后以提供预测。
 
 - **情感分析**：Comprehend 可以通过其 `DetectSentiment` API 检测文本中的情感。情感分析广泛应用于许多业务用例，例如分析客户支持电话中的客户情绪，或通过评论理解客户对产品和服务的感知。
-
 - **主题建模**：主题建模具有广泛的用途，包括文档分类和组织、信息检索和内容推荐。Comprehend 可以通过其 `StartTopicsDetectionJob` API 发现文档之间的共同主题。
-
 - **语言检测**：Comprehend 可以通过其 `DetectDominantLanguage` API 检测文本中使用的主要语言。此功能有助于某些用例，例如根据语言将客户支持路由到正确的通道，或根据不同语言对文档进行分类。
-
 - **句法分析**：Comprehend 可以使用 `DetectSyntax` API 对句子进行词性（POS）分析。POS 示例包括句子中的名词、代词、动词、副词和形容词。POS 分析有助于某些用例，例如检查写文本中句法和语法的正确性。
+- **事件检测**：Comprehend 可以检测预定义的金融事件列表，如 IPO、拆股和破产。它还检测与事件关联，例如申请破产的人或公司。这种关系有助于构建知识图谱，帮助我们理解不同事件中“谁做了什么”。您可以在 `https://docs.amazon.com/comprehend/latest/dg/cer-doc-class.html` 找到完整的事件和角度类型列表。
+- **文本分类**：您可以使用 Comprehend 结合您的训练数据来训练自定义文本分类器。Comprehend 允许您通过其 `CreateDocumentClassifier` API 训练多分类和多标签分类器。多分类为文本分配单个标签，而多标签为文本分配多个标签。要评估自定义分类器的性能，Comprehend 提供了一份包含准确率、召回率和 F1 分在内的指标列表。您可以在此处找到完整的指标列表：`https://docs.amazon.com/comprehend/latest/dg/doc-class.html`。
 
-- **事件检测**：Comprehend 可以检测预定义的金融事件列表，如 IPO、拆股和破产。它还检测与事件关联，例如申请破产的人或公司。这种关系有助于构建知识图谱，帮助我们理解不同事件中“谁做了什么”。您可以在 https://docs.amazon.com/comprehend/latest/dg/cer-doc-class.html 找到完整的事件和角度类型列表。
+可以使用 `boto3` 库和 AWS 命令行界面（CLI）调用 Comprehend API。您可以在此处找到用于 Comprehend 的支持的 `boto3` 方法的完整列表：`https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/comprehend.html`。以下显示了调用 Comprehend 实体检测函数的 Python 语法：
 
-- **文本分类**：您可以使用 Comprehend 结合您的训练数据来训练自定义文本分类器。Comprehend 允许您通过其 `CreateDocumentClassifier` API 训练多分类和多标签分类器。多分类为文本分配单个标签，而多标签为文本分配多个标签。要评估自定义分类器的性能，Comprehend 提供了一份包含准确率、召回率和 F1 分在内的指标列表。您可以在此处找到完整的指标列表：https://docs.amazon.com/comprehend/latest/dg/doc-class.html。
-
-可以使用 boto3 库和 AWS 命令行界面（CLI）调用 Comprehend API。您可以在此处找到用于 Comprehend 的支持的 boto3 方法的完整列表：https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/comprehend.html。以下显示了调用 Comprehend 实体检测函数的 Python 语法：
-
-```
+```python
 import boto3
+
 client = boto3.client('comprehend')
+
 response = client.detect_entities(Text='<input>')
 ```
 
 Amazon Comprehend 非常适合用于构建智能文档处理解决方案和其他 NLP 产品。它也可以作为基准工具，与自定义的 NLP 模型进行比较。
 
-# Amazon Textract
+#### Amazon Textract
 
 许多业务流程（如贷款申请处理、费用报销处理和医疗理赔处理）需要从图像和文档中提取文本和数字。目前，许多组织在很大程度上仍通过手动处理这些流程，该过程可能非常耗时且缓慢。
 
 **Amazon Textract 是一项光学字符识别 (OCR)** AI 服务，主要用于从图像和 PDF 文档中提取打印文本、手写文本和数字。Textract 通常作为下游任务（如文档分析和数据输入）的处理步骤。Textract 的核心功能如下：
 
 - **OCR**：OCR 是一种计算机视觉任务，用于从 PDF 文档和图像中检测并提取文本。Textract 中的 OCR 组件从输入文档中提取原始，并提供有关文档的额外结构信息。例如，Textract 输出包含文档中不同对象（如页面、段落、句子和单词）的层级结构关系。Textract 还捕捉输入文档中不同对象的位置信息。当您从文档的不同位置提取特定信息时，层级结构信息和对象位置数据非常有用。OCR API 包括用于同步检测文本的 `DetectText` 和异步检测的 `StartDocumentText`。
-
 - **表格提取**：许多文档包含表格数据结构并需要作为表格处理。例如，您可能有一份保险理赔文档，其中包含理赔项目列表及其在不同列中的详细信息，您可能希望将这些理赔项目输入到系统中。Textract 中的表格提取组件可以从文档中提取表格和表格中的单元格。要使用表格提取功能，可以使用 `AnalyzeDocument` API 进行同步操作，使用 `StartDocumentAnalysis` 进行异步操作。
-
 - **表单提取**：工资单和贷款申请表等文档包含许多键值对，在自动处理时需要保留它们的关系。Textract 中的表单提取组件可以检测这些键值对及其关系，以便进行下游处理，例如将这些名称输入系统。表单提取组件与表格提取组件共享 `AnalyzeDocument` 和 `StartDocumentAnalysis` API。
 
-boto3 库支持 Extract API。下面的示例显示了如何使用 boto3 库检测文本。boto3 的 Extract API 列表可以在此处找到：https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/extract.html。
+`boto3` 库支持 Extract API。下面的示例显示了如何使用 `boto3` 库检测文本。`boto3` 的 Extract API 列表可以在此处找到：`https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/extract.html`。
 
-```
+```python
 import boto3
+
 client = boto3.client('textract')
+
 response = client.detect_document_text(
     Document={
         'Bytes': 'bbytes',
@@ -6446,12 +6338,12 @@ response = client.detect_document_text(
             'Name': '<name of the file>'
         }
     }
-})
+)
 ```
 
-Text 还整合了 Amazon Augmented AI (A2I) 服务，以实现人工参与的工作流，检索 Text 的低置信度预测结果。您可以在此处获取更多关于 A2I 服务的信息：https://aws.amazon.com/augmented-ai。
+Text 还整合了 Amazon Augmented AI (A2I) 服务，以实现人工参与的工作流，检索 Text 的低置信度预测结果。您可以在此处获取更多关于 A2I 服务的信息：`https://aws.amazon.com/augmented-ai`。
 
-# Amazon Rekognition
+#### Amazon Rekognition
 
 是一项视频和图像分析 AI 服务。它支持多种用例，例如从图像和视频中提取元数据、内容审核以及安全监控。Rekognition 的核心能力如下：
 
@@ -6459,27 +6351,21 @@ Text 还整合了 Amazon Augmented AI (A2I) 服务，以实现人工参与的工
 
 Rekognition 可以检测视频中的不同对象、场景和活动，并为它们分配诸如足球、户外和玩足球等标签。对于检测到的常见对象，它还提供对象的边界框（bounding boxes）以指示它们在图像或视频中的特定位置。要使用 Rekognition 进行标签检测，可以调用 `DetectLabels` API。
 
-
-
-
-人脸分析与识别：人脸分析与识别适用于视频监控和安全、图像和视频中的自动人员标记（用于内容搜索）以及人口统计理解等用例。
+- **人脸分析与识别**：人脸分析与识别适用于视频监控和安全、图像和视频中的自动人员标记（用于内容搜索）以及人口统计理解等用例。
 
 Rekognition 可以识别并分析图像和视频中的人脸。例如，你可以对人脸进行分析以检测性别、年龄和情感。你还可以建立人脸索引并为其分配名称。如果找到匹配项，Rekognition 可以将检测到的人脸映射到索引中的人脸。
 
-人脸分析与识别的主要 API 有 DetectFaces、SearchFaces、IndexFaces 和 CompareFaces。
+人脸分析与识别的主要 API 有 `DetectFaces`、`SearchFaces`、`IndexFaces` 和 `CompareFaces`。
+- **内容审核**：Rekognition 提供了 API (`StartContentModeration`)，用于检测包含显内容和场景（如暴力）的图像和视频。组织可以使用此功能在将内容提供给消费者之前过滤掉不当和攻击性的内容。
+- **短文本检测**：Rekognition 可以检测图像中的短文本，并使用 `DetectText` 和 `StartTextDetection` API 在检测到的文本周围提供边界框。此功能可用于检测街名、商店名称和车牌号。
+- **个人防护装备 (PPE) 检测**：Rekognition 提供了一个内置功能，可以使用 `DetectProtectedEquipment` API 检测图像和视频中的 PPE。此功能可用于自动 PPE 合规性监控。
+- **名人识别**：Rekognition 还维护了一个名人数据库，用于识别图像和视频中的已知名人。它为此功能提供了一系列 API：`RecognizeCelebrities` 和 `GetCelebrityInfo`。
 
-内容审核：Rekognition 提供了 API (StartContentModeration)，用于检测包含显内容和场景（如暴力）的图像和视频。组织可以使用此功能在将内容提供给消费者之前过滤掉不当和攻击性的内容。
-
-短文本检测：Rekognition 可以检测图像中的短文本，并使用 `DetectText` 和 `StartTextDetection` API 在检测到的文本周围提供边界框。此功能可用于检测街名、商店名称和车牌号。
-
-个人防护装备 (PPE) 检测：Rekognition 提供了一个内置功能，可以使用 `DetectProtectedEquipment` API 检测图像和视频中的 PPE。此功能可用于自动 PPE 合规性监控。
-
-名人识别：Rekognition 还维护了一个名人数据库，用于识别图像和视频中的已知名人。它为此功能提供了一系列 API：RecognizeCelebrities 和 GetCelebrityInfo。
-
-你可以使用 boto3 库访问这些 API。以下代码段显示了标签检测功能的语法。Rekognition 的完整 boto3 API 列表可以在 https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/rekognition.html 处找到：
+你可以使用 `boto3` 库访问这些 API。以下代码段显示了标签检测功能的语法。Rekognition 的完整 `boto3` API 列表可以在 `https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/rekognition.html` 处找到：
 
 ```python
 import boto3
+
 client = boto3.client('rekognition')
 response = client.detect_labels(
     'Bytes': b'imagebytes',
@@ -6489,88 +6375,82 @@ response = client.detect_labels(
     })
 ```
 
+
+
 Rekognition 还与 Amazon Kinesis Video（AWS 的的一项视频流服务）具有原生集成。你可以构建解决方案来检测实时视频流中的人脸。
 
 # Amazon Transcribe
 
-Amazon Transcribe (Transcribe) 是一种语音转文本的 AI 服务。它可以将视频和音频文件及流转为文本，适用于多种用例，例如媒体内容和会议字幕、通话分析以及将医疗对话转换为电子健康记录。
+Amazon Transcribe (`Transcribe`) 是一种语音转文本的 AI 服务。它可以将视频和音频文件及流转为文本，适用于多种用例，例如媒体内容和会议字幕、通话分析以及将医疗对话转换为电子健康记录。
 
 Amazon Transcribe 支持实时转录和批处理转录，并具有以下能力：
 
-- **媒体转录：** Transcribe 拥有预训练模型，可以将媒体文件或流转换为不同的语言（如英语、中文和西班牙语）。它还会添加标点和大写字母，使转录的文本更具读性。要启动转录，你可以使用 StartTranscriptionJob 和 StartMedicalTranscriptionJob API 进行转录，使用 StartTranscriptionAPI 进行流转录，以及使用 StartMedicalTranscriptionAPI 进行流医疗输入。
+- **媒体转录：** `Transcribe` 拥有预训练模型，可以将媒体文件或流转换为不同的语言（如英语、中文和西班牙语）。它还会添加标点和大写字母，使转录的文本更具读性。要启动转录，你可以使用 `StartTranscriptionJob` 和 `StartMedicalTranscriptionJob` API 进行转录，使用 `StartTranscriptionAPI` 进行流转录，以及使用 `StartMedicalTranscriptionAPI` 进行流医疗输入。
+- **自定义模型：** 你可以提供训练数据来创建自定义语言模型，以提高对特定行业术语或缩写的转录准确性。创建自定义模型的 API 是 `CreateLanguageModel`。
+- **通话分析：** `Transcribe` 为通话提供了构建分析的能力。通话转录以逐轮对话的格式显示。支持的分析示例包括情感分析、通话分类、问题检测（通话背后的原因）和通话指标（非说话时间、音量、中断）。启动通话分析作业的 API 是 `StartCallAnalyticsJob`。
+- **脱敏：** `Transcribe` 可以自动从转录中掩盖或移除敏感身份识别信息 (`PII`) 以保护隐私。在带有脱敏的转录时，`Transcribe` 将转录中的 PII 信息替换为 `[PII]`。要启用脱敏，你可以在批处理转录作业中配置 `ContentRedaction` 参数。
+- **字幕：** `Transcribe` 可以生成 WebVTT 和 SubRip 格式的开箱可用字幕文件用于视频字幕。要启用字幕文件生成，你可以为转录作业配置 `Subtitles` 参数。
 
-- **自定义模型：** 你可以提供训练数据来创建自定义语言模型，以提高对特定行业术语或缩写的转录准确性。创建自定义模型的 API 是 CreateLanguageModel。
-
-- **通话分析：** Transcribe 为通话提供了构建分析的能力。通话转录以逐轮对话的格式显示。支持的分析示例包括情感分析、通话分类、问题检测（通话背后的原因）和通话指标（非说话时间、音量、中断）。启动通话分析作业的 API 是 StartCallAnalyticsJob。
-
-- **脱敏：** Transcribe 可以自动从转录中掩盖或移除敏感身份识别信息 (PII) 以保护隐私。在带有脱敏的转录时，Transcribe 将转录中的 PII 信息替换为 [PII]。要启用脱敏，你可以在批处理转录作业中配置 ContentRedaction 参数。
-
-- **字幕：** Transcribe 可以生成 WebVTT 和 SubRip 格式的开箱可用字幕文件用于视频字幕。要启用字幕文件生成，你可以为转录作业配置 Subtitles 参数。
-
-Transcribe 拥有一组这些不同操作的 API。以下代码示例显示了如何使用 boto3 库启动转录作业：
+`Transcribe` 拥有一组这些不同操作的 API。以下代码示例显示了如何使用 `boto3` 库启动转录作业：
 
 ```python
 import boto3
+
 transcribe_client = boto3.client('transcribe')
+
 transcribe_job = transcribe_client.start_transcription_job(**job_args)
 ```
 
-你可以在 https://amazonaws.com/v1/documentation/api/latest/reference/services/transcribe.html 找到 Transcribe 的完整 boto3 API 列表。
+你可以在 https://amazonaws.com/v1/documentation/api/latest/reference/services/transcribe.html 找到 `Transcribe` 的完整 `boto3` API 列表。
 
 # Amazon Personalize
 
-个性化推荐可以帮助许多业务（如电子商务、金融产品推荐和媒体内容传递）优化用户参与度和收入。**Amazon Personalize** 允许你使用自己的数据构建个性化推荐模型。你可以将 Personalize 作为推荐引擎，根据个人喜好和行为驱动产品和内容推荐。从高层面上说，Personalize 服务提供了以下三个核心功能：
+个性化推荐可以帮助许多业务（如电子商务、金融产品推荐和媒体内容传递）优化用户参与度和收入。`Amazon Personalize` 允许你使用自己的数据构建个性化推荐模型。你可以将 `Personalize` 作为推荐引擎，根据个人喜好和行为驱动产品和内容推荐。从高层面上说，`Personalize` 服务提供了以下三个核心功能：
 
 - **用户个性化：** 预测用户将交互或探索的项目
 - **相似项目：** 根据项目和项目元数据的共同出现情况计算相似项目
 - **个性化重排序：** 为给定的用户对输入的项目列表进行重排序
 
-Amazon Personalize 不提供用于推荐的预训练模型。相反，你需要使用 Personalize 提供的内置算法使用你的数据来训练自定义模型。要训练个性化模型，你需要提供三个数据集：
+`Amazon Personalize` 不提供用于推荐的预训练模型。相反，你需要使用 `Personalize` 提供的内置算法使用你的数据来训练自定义模型。要训练个性化模型，你需要提供三个数据集：
 
-- **项目数据集 (Item dataset)：** 项目数据集包含你想要推荐的项目属性。该数据集帮助 Personalize 学习有关项目的上上下文信息。此数据集是可选的。
+- **项目数据集 (Item dataset)：** 项目数据集包含你想要推荐的项目属性。该数据集帮助 `Personalize` 学习有关项目的上上下文信息。此数据集是可选的。
+- **用户数据集 (User dataset)：** 用户数据集包含关于用户的属性。这使得 `Personalize` 能够更好地表示每个用户，以提供高度个性化的推荐。此数据集是可选的。
+- **用户-项目交互数据集 (User-item interaction dataset)：** 这是一个必需的数据集，提供了用户和项目之间的历史交互，例如观看电影或购买产品。`Personalize` 使用这些数据学习个人用户对不同项目的行为。
 
-- **用户数据集 (User dataset)：** 用户数据集包含关于用户的属性。这使得 Personalize 能够更好地表示每个用户，以提供高度个性化的推荐。此数据集是可选的。
-
-- **用户-项目交互数据集 (User-item interaction dataset)：** 这是一个必需的数据集，提供了用户和项目之间的历史交互，例如观看电影或购买产品。Personalize 使用这些数据学习个人用户对不同项目的行为。
-
-为了帮助理解 Personalize 是如何工作的，让我们回顾一些 Personalize 概念：
+为了帮助理解 `Personalize` 是如何工作的，让我们回顾一些 `Personalize` 概念：
 
 - **数据集组 (Dataset group)：** 数据集组包含用于模型训练的相关数据集（项目、用户和交互数据集）。
+- **配方 (Recipe)：** 配方是用于模型训练的 ML 算法。`Personalize` 为主要功能提供了多种配方。
+- **解决方案 (Solution)：** 解决方案代表一个已过的 `Personalize` 模型。
+- **活动 (Campaign)：** `Personalize` 活动是已训练 `Personalize` 模型的托管节点，用于处理推荐和请求。
 
-- **配方 (Recipe)：** 配方是用于模型训练的 ML 算法。Personalize 为主要功能提供了多种配方。
+要使用 `Personalize` 训练并部署自定义模型，必须遵循以下步骤：
 
-- **解决方案 (Solution)：** 解决方案代表一个已过的 Personalize 模型。
-
-- **活动 (Campaign)：** Personalize 活动是已训练 Personalize 模型的托管节点，用于处理推荐和请求。
-
-要使用 Personalize 训练并部署自定义模型，必须遵循以下步骤：
-
-1. **准备并摄入数据集：** 在此步骤中，你按所需的格式准备数据集并存储在 S3 中，然后将数据集加载到 Personalize。此步骤涉及三个 API 操作——`CreateDatasetGroup`、`CreateDataset` 和 `CreateDatasetJob`。`CreateDatasetGroup` 创建空的数据集组。`CreateDataset` 将数据集（例如项目数据集和交互数据集）添加到数据集组，`CreateDatasetJob` 启动数据摄入作业，将数据从 S3 加载到 Personalize 仓库供后续模型训练。
-
-2. **为模型训练选择配方：** 在此步骤中，你选择用于不同模型训练过程的配方（ML 算法）。Personalize 为用户个性化、相关项目和个性化排序提供了多种配方。你可以使用 ListRecipes API 获取完整的配方列表。
-
+1. **准备并摄入数据集：** 在此步骤中，你按所需的格式准备数据集并存储在 S3 中，然后将数据集加载到 `Personalize`。此步骤涉及三个 API 操作——`CreateDatasetGroup`、`CreateDataset` 和 `CreateDatasetJob`。`CreateDatasetGroup` 创建空的数据集组。`CreateDataset` 将数据集（例如项目数据集和交互数据集）添加到数据集组，`CreateDatasetJob` 启动数据摄入作业，将数据从 S3 加载到 `Personalize` 仓库供后续模型训练。
+2. **为模型训练选择配方：** 在此步骤中，你选择用于不同模型训练过程的配方（ML 算法）。`Personalize` 为用户个性化、相关项目和个性化排序提供了多种配方。你可以使用 `ListRecipes` API 获取完整的配方列表。
 3. **创建解决方案：** 在此步骤中，你使用 `CreateSolution` API 通过数据集组和配方为模型训练作业配置解决方案。然后，你使用 `CreateSolutionVersion` API 启动训练作业。
+4. **评估模型：** 在这一步中，你将评估模型指标并确定它们是否符合性能目标。如果不符合，请考虑使用更高质量和/或更多数据重新训练模型。针对训练后的模型对多个评估指标进行个性化，例如覆盖率、平均倒数召回率、精确率和归一化折叠累计增。你可以在 https://docs.aws.amazon.com/personalize/latest/dg/working-with-training-metrics.html 找到有关这些指标的更多细节。性能指标可在 `Personalize` 管理控制台中查看。你可以使用 `GetSolutionMetrics` API 以编程方式获取指标。
+5. **创建活动：** 在这最后一步中，你将解决方案（训练后的模型）部署到预测端点，以便在应用程序中使用它。要执行此操作，你可以使用 `CreateCampaign` API。你还可以提供额外的配置，例如**每秒最小预留事务数 (`minProvisionedTPS`)** 吞吐量以及项目探索配置。项目探索配置允许 `Personalize` 对未进行用户个性化的用户显示百分比的随机项目。其理念是让用户探索他们尚未交互过的项目，以衡量兴趣。项目探索配置仅适用于用户个性化。
 
-
-
-4. **评估模型：** 在这一步中，你将评估模型指标并确定它们是否符合性能目标。如果不符合，请考虑使用更高质量和/或更多数据重新训练模型。针对训练后的模型对多个评估指标进行个性化，例如覆盖率、平均倒数召回率、精确率和归一化折叠累计增。你可以在 https://docs.aws.amazon.com/personalize/latest/dg/working-with-training-metrics.html 找到有关这些指标的更多细节。性能指标可在 Personalize 管理控制台中查看。你可以使用 GetSolutionMetrics API 以编程方式获取指标。
-
-5. **创建活动：** 在这最后一步中，你将解决方案（训练后的模型）部署到预测端点，以便在应用程序中使用它。要执行此操作，你可以使用 CreateCampaign API。你还可以提供额外的配置，例如**每秒最小预留事务数 (minProvisionedTPS)** 吞吐量以及项目探索配置。项目探索配置允许 Personalize 对未进行用户个性化的用户显示百分比的随机项目。其理念是让用户探索他们尚未交互过的项目，以衡量兴趣。项目探索配置仅适用于用户个性化。
-
-你可以使用 Personalize 管理控制台构建 Personalize 解决方案和活动。或者，你可以使用 boto3 访问 Personalize API。以下代码示例显示了创建活动的 Python 语法。你可以在此处找到 Personalize boto3 API 的完整列表：https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/personalize.html：
+你可以使用 `Personalize` 管理控制台构建 `Personalize` 解决方案和活动。或者，你可以使用 `boto3` 访问 `Personalize` API。以下代码示例显示了创建活动的 Python 语法。你可以在此处找到 `Personalize boto3` API 的完整列表：https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/personalize.html：
 
 ```python
 import boto3
+
 client = boto3.client('personalize')
+
 response = client.create_campaign(
-name='name of the campaign',
-solutionArn='AWS Arn to the solution',
-minProvisionedTPS=<provisioned TPS>,
-campaignConfig={
-'itemExplorationConfig': {
-'<name of configuration>': '<value of configuration>'
-}}))
+    name='name of the campaign',
+    solutionArn='AWS Arn to the solution',
+    minProvisionedTPS=<provisioned TPS>,
+    campaignConfig={
+        'itemExplorationConfig': {
+            '<name of configuration>': '<value of configuration>'
+        }
+    })
 ```
+
+
 
 Personalize 还提供了若干高级功能，例如过滤器，它允许你根据规则从项目列表中删除项目。你还可以使用业务目标（如客户忠诚度）优化模型训练。此功能允许你提供优化特定业务结果的建议。
 
@@ -6615,9 +6495,6 @@ Amazon Kendra 是一个全托管搜索服务，它使用机器学习来查找企
 - **查询 (Queries)**：查询用于从索引获取结果。查询可以是包含标准和过滤器的自然语言。
 - **标签 (Tags)**：标签是可以分配给索引、数据源和 FAQ 的元数据。
 
-
-
-
 # 针对 ML 用例评估 AWS AI 服务
 
 若要确定某项 AI 服务是否适用于你的用例，你需要从多个维度对其进行评估：
@@ -6652,7 +6529,7 @@ AI 服务可用于构建不同的智能解决方案。要确定你是否可以�
 
 在此架构中，我们结合使用 Textract、Comprehend 和 Amazon Augmented AI 服务，以支持贷款文件分类和贷款数据处理流。
 
-# 贷款文件分类工作流
+## 贷款文件分类工作流
 
 首先，我们需要训练一个自定义文本分类模型，用于分类每类文档中出现的文本。在这里，我们将使用 Comprehend 训练自定义分类模型。Comprehend 自定义分类器的训练数据由必要的输入文本和标签组成。注意，Comprehend 对输入文本的大小最大类别数量有限制，这些限制可能会发生。请查看官方文档获取最新的限制详情。一旦模型训练完成，你将获得该分类器的私有 API 端点。
 
@@ -6665,7 +6542,7 @@ AI 服务可用于构建不同的智能解决方案。要确定你是否可以�
 
 存在其他架构选项。例如，你也可以将文档视为图像并使用识别服务进行分类。另一种方案是使用算法训练自定义模型并使用 Textract 的输出准备训练数据集。在决定技术时，验证多种方案以实现最佳的性能平衡是明智的。
 
-# 贷款数据处理流
+## 贷款数据处理流
 
 贷款数据处理流关注处理来自数据提取的 JSON 输出。整个文档只需要部分文本用于下游处理和存储。处理脚本可以解析 JSON 文件中的结构以识别并提取特定的数据点。然后，可以将这些数据点输入下游数据库或系统。
 
@@ -6689,16 +6566,10 @@ AI 服务可用于构建不同的智能解决方案。要确定你是否可以�
 
 对于直播视频源，AWS Elemental 服务可以接收直播推流、对其进行处理并存储在 S3 中。你可以在 https://aws.amazon.com/elemental-live/ 找到有关 Elemental 服务的更多详情。图像和视频文件数据源可以使用多种功能摄取到 S3，包括 S3 API 或更高级的服务如 AWS 安全文件协议传输（AWS Transfer for Secure File Protocol (SFTP)）。
 
-
-
-
-
 由于流水线中存在多个并行流，我们可以使用 AWS Step Functions 来协调不同流的并行执行。这些流可以生成以下输出流：
 
 - **字幕和文本分析流：** 该流主要使用 Amazon Transcribe 和 Amazon Comprehend AI 服务。Transcribe 转录视频的音频部分并生成字幕文件和普通转录。随后，Comprehend 使用这些转录来运行文本分析。从该流中提取的某些示例元数据包括人物和地点实体、使用的语言以及针对转录不同部分的情感分析。
-
 - **视频标记和分析流：** 该流可以识别不同视频帧中带有时间戳的物体、场景、活动、人物、名人以及文本。
-
 - **图像标记和分析流：** 该流可以识别不同图像中的物体、场景、名人以及文本。
 
 媒体处理流的输出可以被进一步处理和组织，作为媒体资产的有用元数据。一旦完成这些操作，它们将被存储在媒体元数据仓库中，以支持内容的搜索和发现。
@@ -6710,9 +6581,7 @@ AI 服务可用于构建不同的智能解决方案。要确定你是否可以�
 在电子商务产品推荐中，多个功能需求可以被建模为机器学习问题：
 
 - **基于客户行为和画像的推荐：** 机器学习算法从客户过去的电子商务交互中学习客户的内在特征和购买模式，以预测他们会喜欢的产品。
-
 - **处理冷启动物品（无历史记录物品）推荐的能力：** 机器学习算法可以探索客户对冷启动物品的反应，并调整推荐以平衡探索（推荐新物品）和利用（推荐已知物品）。
-
 - **推荐相似物品的能力：** 机器学习算法可以根据产品属性和一组客户的集体互动模式学习产品的内在特征，以确定产品的相似性。
 
 考虑到这些功能需求，下方的架构图展示了一个使用 Amazon Personalize 作为推荐引擎的电子商务架构：
@@ -6750,7 +6619,7 @@ Lex 机器人支持多种不同的意图，例如查询账户信息、更新客�
 
 根据意图的不同，Lex 机器人会将履行请求路由到不同的后端。对于与客户账户相关的查询，它将使用 Lambda 函数进行履行。对于与信息搜索相关的问题，Lex 机器人将查询发送到 Kendra 索引进行履行。
 
-## 为 AI 服务设计 MLOps 架构
+# 为 AI 服务设计 MLOps 架构
 
 实现自定义 AI 服务模型需要数据工程、模型训练和模型部署流水线。这一过程与使用机器学习平台构建、训练和部署模型的过程相似。因此，在大规模运行 AI 服务时，也可以为 AI 服务采用 MLOps 实践。
 
@@ -6768,10 +6637,6 @@ Lex 机器人支持多种不同的意图，例如查询账户信息、更新客�
 
 - **CodePipeline 定义：** 该定义将包含一个 CodeBuild 步骤、一个 CloudFormation 执行步骤和一个 Step Functions 工作流执行步骤。
 - **CodeBuild 步骤：** CodeBuild 步骤为 CloudFormation 模板提供所需的额外输入，以创建 Step Functions 工作流，从而协调数据工程、数据集创建、数据摄取、模型训练和模型部署。
-
-
-
-
 
 - CloudFormation 执行步骤：此步骤执行 CloudFormation 模板以创建 Step Functions 工作流。
 - Step Function 工作流执行步骤：此步骤启动 Step Function 工作流以运行工作流的各个步骤，例如数据工程和模型训练。例如，如果我们为 Personalize 模型训练和部署构建一个 Step Functions 工作流，该工作流将包含六个步骤：创建数据集组、创建数据集、导入数据集、创建解决方案、创建解决方案版本以及创建活动（campaign）。
@@ -6796,7 +6661,7 @@ AI 服务会将运行状态发布到 CloudWatch。例如，Amazon Personalize �
 
 您还可以将类似的监控架构模式添加到其他 AI 服务中，例如 Comprehend 和 Rekognition。
 
-## 动手实验 – 使用 AI 服务运行 ML 任务
+# 动手实验 – 使用 AI 服务运行 ML 任务
 
 在本次实验中，你将使用 Rekognition、Comprehend、Textract 和 Transcribe 执行一系列 ML 任务。按照以下步骤开始：
 
@@ -6822,10 +6687,6 @@ AI 服务会将运行状态发布到 CloudWatch。例如，Amazon Personalize �
     - F. 转到 Transcribe 控制台。在转录任务部分，你将看到新创建的转录任务。
     - G. 等待状态变为 Complete 后点击任务链接；你将在转录预览部分的 Text 选项卡中看到转录文本。
 
-
-
-
-
 # 6. 使用 Rekognition 运行计算机视觉：
 
 A. 打开 Chapter12 目录下的 `rekognition.ipynb` 笔记本。此笔记本运行了一系列文本提取任务，包括文本提取、表格提取和表单提取。
@@ -6835,8 +6696,23 @@ B. 在 data 目录中将一个示例图像保存为 `textract_sample.jpeg` 以�
 C. 在笔记本中运行以下代码以为 Textract 设置 boto3 客户端：
 
 ```python
+```
+
+
+
+# 6. 使用 Rekognition 运行计算机视觉：
+
+A. 打开 `Chapter12` 目录下的 `rekognition.ipynb` 笔记本。此笔记本运行了一系列文本提取任务，包括文本提取、表格提取和表单提取。
+
+B. 在 `data` 目录中将一个示例图像保存为 `textract_sample.jpeg` 以供分析。尝试使用一张包含文本、表格和表单的示例图像。
+
+C. 在笔记本中运行以下代码以为 Textract 设置 `boto3` 客户端：
+
+```python
 from pprint import pprint
+
 import boto3
+
 textract_client = boto3.client('textract')
 ```
 
@@ -6844,6 +6720,7 @@ D. 在笔记本中运行以下代码以加载图像：
 
 ```python
 document_file_name = 'data/textract_sample.png'
+
 with open(document_file_name, 'rb') as document_file:
     document_bytes = document_file.read()
 ```
@@ -6852,11 +6729,15 @@ E. 在笔记本中运行以下代码以检测表格和表单：
 
 ```python
 print('Detecting tables and forms')
+
 feature_types = ['TABLES', 'FORMS']
+
 tables_forms = textract_client.analyze_document(
     Document={'Bytes': document_bytes},
     FeatureTypes=feature_types)
+
 blocks_to_show = 10
+
 print(tables_forms['Blocks'][:blocks_to_show])
 ```
 
@@ -6864,16 +6745,20 @@ F. 在笔记本中运行以下代码以检测文本：
 
 ```python
 print('Detect text')
+
 text = textract_client.detect_document_text(
     Document={'Bytes': document_bytes})
+
 blocks_to_show = 20
+
 print(text['Blocks'][:blocks_to_show])
 ```
 
-7. 使用 Personalize 训练推荐模型：
 
-- A. 打开 Chapter12 目录下的 `personalize.ipynb` 笔记本。此笔记本使用 movie lens 数据集训练了一个用于电影评论推荐的 Personalize 模型。它经历了创建数据集组/数据集、导入数据、构建解决方案以及创建 Personalize 活动的过程。
 
+## 7. 使用 Personalize 训练推荐模型：
+
+- A. 打开 `Chapter12` 目录下的 `personalize.ipynb` 笔记本。此笔记本使用 movie lens 数据集训练了一个用于电影评论推荐的 Personalize 模型。它经历了创建数据集组/数据集、导入数据、构建解决方案以及创建 Personalize 活动的过程。
 - B. 按照笔记本中的指令并顺序运行所有单元格，以完成所有步骤。
 
 恭喜你！你已成功使用了多项 AWS 服务及其 API。如你所见，使用带有预训练模型的 AI 服务来执行不同的 ML 任务是非常简单的。使用 AI 服务训练自定义模型涉及一些额外的步骤，但底层的基础设施和数据科学细节被抽象掉了，使得非数据科学家也能轻松使用这些服务。
@@ -7074,262 +6959,6 @@ print(text['Blocks'][:blocks_to_show])
 - inadequate model testing deployment stage 290 source stage 290
 - inconsistent data distributions 336
 - lack of documentation 336
-[/content] (Wait，我注意到索引部分出现了一些重复，由于源文本的 de-identification 像 de-identification。让我提供干净的索引逻辑。）
-
-实际上，提示要求“仅输出处理后的最终文本”。我将现在提供最终文本。
-
-[content]
-# 6. 使用 Rekognition 运行计算机视觉：
-
-A. 打开 Chapter12 目录下的 `rekognition.ipynb` 笔记本。此笔记本运行了一系列文本提取任务，包括文本提取、表格提取和表单提取。
-
-B. 在 data 目录中将一个示例图像保存为 `textract_sample.jpeg` 以供分析。尝试使用一张包含文本、表格和表单的示例图像。
-
-C. 在笔记本中运行以下代码以为 Textract 设置 boto3 客户端：
-
-```python
-from pprint import pprint
-import boto3
-textract_client = boto3.client('textract')
-```
-
-D. 在笔记本中运行以下代码以加载图像：
-
-```python
-document_file_name = 'data/textract_sample.png'
-with open(document_file_name, 'rb') as document_file:
-    document_bytes = document_file.read()
-```
-
-E. 在笔记本中运行以下代码以检测表格和表单：
-
-```python
-print('Detecting tables and forms')
-feature_types = ['TABLES', 'FORMS']
-tables_forms = textract_client.analyze_document(
-    Document={'Bytes': document_bytes},
-    FeatureTypes=feature_types)
-blocks_to_show = 10
-print(tables_forms['Blocks'][:blocks_to_show])
-```
-
-F. 在笔记本中运行以下代码以检测文本：
-
-```python
-print('Detect text')
-text = textract_client.detect_document_text(
-    Document={'Bytes': document_bytes})
-blocks_to_show = 20
-print(text['Blocks'][:blocks_to_show])
-```
-
-7. 使用 Personalize 训练推荐模型：
-
-- A. 打开 Chapter12 目录下的 `personalize.ipynb` 笔记本。此笔记本使用 movie lens 数据集训练了一个用于电影评论推荐的 Personalize 模型。它经历了创建数据集组/数据集、导入数据、构建解决方案以及创建 Personalize 活动的过程。
-
-- B. 按照笔记本中的指令并顺序运行所有单元格，以完成所有步骤。
-
-恭喜你！你已成功使用了多项 AWS 服务及其 API。如你所见，使用带有预训练模型的 AI 服务来执行不同的 ML 任务是非常简单的。使用 AI 服务训练自定义模型涉及一些额外的步骤，但底层的基础设施和数据科学细节被抽象掉了，使得非数据科学家也能轻松使用这些服务。
-
-## 总结
-
-在本章中，我们涵盖了围绕 AI 服务的话题。我们回顾了 AWS AI 服务列表以及它们可以用于构建 ML 解决方案的地方。我们还讨论了在 AI 服务部署中采用 MLOps。现在，你应该对什么是 AI 服务有了良好的理解，并知道你并不总是构建自定义模型来解决 ML 问题。当 AI 服务适用时，它们可以为你提供构建支持 AI 应用程序的快速方法。
-
-希望这本书能为你提供关于 ML 解决方案架构的良好视角，并学会如何将各种数据科学知识和 ML 技能应用于各种不同的 ML 任务（例如构建 ML 平台）。现在成为一名 ML 解决方案架构师是非常令人兴奋的，因为你对 ML 领域有了广泛的了解，可以帮助不同组织推动跨行业的数字化和业务转型。
-
-那么，接下来是什么？AI/ML 是一个拥有许多子领域的广泛领域，因此在所有子领域中开发技术深度将具有挑战性。如果你觉得 ML 解决方案架构听起来很有，你可以在未来的学习中关注几个领域，同时保持对 ML 布局的广泛理解。AI/ML 正在以加速的速度发展，因此预计不同学科之间将不断出现新的快速创新和变革。
-
-# 索引
-
-- accuracy 10
-- accuracy score 14
-- activation function 64
-- Active Directory 187
-- Adam optimizer 139, 141
-- administration, data lake resources
-- Lake Formation administrator 108
-- Lake Formation database creator 109
-- Lake Formation database user 109
-- Lake Formation data user 25
-- Aequitas
-- reference link 340
-- agency trading 25
-- Airbnb 143
-- Airflow 185
-- AI services
-- about 364
-- challenges, solving 364, 365
-- evaluating, for ML use cases 378
-- MLOps architecture, designing for 386
-- operational metrics, monitoring for 388
-- overview 365
-- used, for building intelligent solutions 379
-- used, for running ML tasks 389-394
-- algorithmic trading 25
-- algorithms, scikit-learn
-- link 129
-- AllReduce
-- implementing, in frameworks 308, 309
-- overview 307, 308
-- Amazon Augmented AI (A2I) service
-- reference link 369
-- Amazon Comprehend
-- about 366
-- entity recognition 366
-- event detection 367
-- language detection 367
-- sentiment analysis 366
-- syntax analysis 367
-- text classification 367
-- topic modeling 367
-- Amazon DocumentDB 100
-- Amazon Echo virtual assistant 4
-- Amazon ECR 241
-- Amazon EKS
-- used, for creating Kubernetes environment 174-180
-- Amazon ElasticSearch 101
-- Amazon EMR 105
-- Amazon Kendra
-- about 376
-- data sources 377
-- document ranking 376
-- document reading understanding 376
-- documents 377
-- frequently asked question (FAQ) matching 376
-- index 377
-- intelligent search, performing against documents 377
-- queries 377
-- tags 377
-- Amazon Lex
-- about 375
-- fulfillment 375
-- intent 375
-- prompt 375
-- lots 375
-- utterance 375
-- Amazon Personalize
-- about 372
-- campaign 373
-- custom model, deploying 373, 373
-- custom model, training 373, 374
-- dataset group 373
-- personalized re-ranking 372
-- recipe 373
-- similar items, computing 372
-- solution 373
-- user personalization 372
-- Amazon Pinpoint 384
-- Amazon RDS 100
-- Amazon Redshift 101
-- Amazon Rekognition
-- about 369
-- celebrity identification 370
-- content moderation 370
-- facial analysis and recognition 370
-- label detection 369
-- personal protection equipment (PPE) detection 370
-- reference link 370
-- short text detection 370
-- Amazon S3 195
-- Amazon SageMaker Feature Store 106
-- Amazon SageMaker Neo 327
-- Amazon Textract
-- about 368
-- form extraction 368
-- OCR 368
-- table extraction 368
-- Amazon Transcribe
-- about 371
-- call analytics 371
-- custom models 371
-- media transcription 371
-- redaction 371
-- subtitle 372
-- Anaconda package repository
-- reference link 128
-- anti-money laundering (AML)
-- about 31
-- analysis 32
-- detection flow 32
-- machine learning-based solutions, 31, 322
-- Apache Airflow
-- about 201, 202
-- Directed Acyclic Graph (DAG) 201
-- operators 202
-- scheduling 202
-- tasks 201
-- Apache Hive 105
-- Apache Hudi 105
-- Apache Spark 102, 130
-- Apache Tensor Virtual Machine AWS CloudTrail (TVM) 327
-- CodeCommit 241
-- Data Migration Service (DMS) 101
-- Elastic Container Registry (ECR) 278
-- Elastic EMR 203
-- Glue 102
-- Lake Formation 99
-- Lambda 103
-- Managed Streaming for Kafka 101
-- Management Console 175
-- SDK 179
-- Step Functions 199
-- Azure Blob Storage 199
-- backpropagation 66
-- bag-of-words(BOW) 73
-- BERT
-- about 77
-- fine-tuning 79
-- model, training in Jupyter Notebook 245
-- model, training with SageMaker Training Service 251
-- pre-training 78
-- bias metrics 339
-- class imbalance 339
-- demographic disparity, in labels 339
-- conditional (ABAC) 169
-- configuration changes 348
-- lineage tracking 348
-- model approval 368
-- model tracking 348
-- model interpretability 336
-- de-identification 336
-- de-identification 336
-- difference in positive proportion of observed labels 339
-- de-identification
-- Kullback and Leibniz (KL) divergence 339
-- central processing units (CPUs) 319, 320
-- centroids 66
-- chroot system 152
-- examples 339
-- classification and regression algorithms
-- Big O 57
-- bootstrap sampling 61
-- clustering 66
-- decision tree algorithm 59
-- gradient boosting 62
-- K-means clustering 66
-- K-nearest neighbor algorithm 63
-- linear regression algorithm 58
-- logistic regression algorithm 58
-- C# 102
-- (MLP) network 64
-- random forest algorithm 61
-- click-through rate (CTR) 48
-- XGBoost 62
-- canary deployment 194
-- CloudFormation template
-- Net Asset Value (NAV) 29 creating, for ML deployment pipeline 295-298
-- Net Asset Value (NAV) review 29 creating, for ML training prediction 30
-- post-trade settlement failure prediction 30
-- CloudWatch logs 283
-- CloudWatch metrics 283
-- AWS account setup 244, 245
-- inadequate change management source code, saving to 257
-- inadequate model testing deployment stage 290 source stage 290
-- inconsistent data distributions 336
-- lack of documentation 336
-
-
-
 
 - 跨环境不同数据的代码提升支持 388 源和目标 101
 - 代码存储库 276
@@ -7533,9 +7162,6 @@ print(text['Blocks'][:blocks_to_show])
 - get_data_loader 函数修改 329, 330
 - 多进程启动节点 331
 - train() 函数修改 329, 330
-
-
-
 
 - 医疗数据管理 43
 - 医疗影像分析 40, 41
@@ -7835,21 +7461,16 @@ print(text['Blocks'][:blocks_to_show])
 - 安全控制 273 关于 184, 264
 - 模型推理自动化 267
 - 工作 318, 319 构建 189-191
-- 模型库存 345 引擎 255, 266
-- 模型加载 127 生命周期管理 268
-- 模型指标 344 模型训练监控
-- 模型监控 345 关于 279
-- 模型优化 322 关键指标 279-281
-- 模型并行 303, 309 MongoDB DB 100
+- 引擎 255, 266 生命周期管理 268
+- 模型训练监控
+- 关于 279
+- 关键指标 279-281
 - 模型并行训练监控 279
-- 实现 314 移动平均值 (MA) 组件 68 多臂老虎机 (MAB) 70
-- 模型性能漂移检测 269 多层感知机网络
-- 模型注册 185, 192, 276 (MLP) 64-66, 310
-- 模型风险管理框架 (MRM) 335 多租户 188
-
-
-
-
+- MongoDB DB 100
+- 移动平均值 (MA) 组件 68 多臂老虎机 (MAB) 70
+- 多层感知机网络
+- (MLP) 64-66, 310
+- 多租户 188
 
 # N
 
@@ -8159,9 +7780,6 @@ print(text['Blocks'][:blocks_to_show])
 - 零冗余优化器 (ZeRO) 316
 - 零样本学习 80
 
-
-
-
 # 其他你可能喜欢的书籍
 
 如果你喜欢这本书，你可能对 Packt 出出的其他书籍感兴趣：
@@ -8198,4 +7816,3 @@ ISBN: 9781801070522
 - 探索用于优化的 SageMaker Neo
 - 使用 Amazon Model Monitor 实现数据和模型质量监控
 - 通过 SageMaker 数据和模型并行缩短训练时间并降低成本
-

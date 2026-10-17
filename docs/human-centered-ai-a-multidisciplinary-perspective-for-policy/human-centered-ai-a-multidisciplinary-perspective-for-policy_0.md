@@ -1,30 +1,5 @@
+
 # 人本 AI：政策制定者、审计员和用户的跨学科视角
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Acknowledgments
 
@@ -57,7 +32,9 @@ Régis, Denis, Axente, and Kishimoto’s book is among the pioneering works emph
 **Professor Yoshua Bengio**
 
 *Full professor of Computer Science at Université de Montréal*
+
 *Founder and Scientific Director of Mila—Québec AI Institute*
+
 *2018 Co-recipient of the AM Turing Award*
 
 ### Notes
@@ -73,9 +50,6 @@ Régis, Denis, Axente, and Kishimoto’s book is among the pioneering works emph
 University of Cambridge
 
 Cambridge, UK
-
-
-
 
 Oshri Bar-Gil
 
@@ -543,100 +517,87 @@ DOI: [10.1201/9781003320791-1](https://dx.doi.org/10.1201/9781003320791-1)
 
 本书项目由蒙特利尔大学的学者 Catherine Régis 和 Jean-Louis Denis 发起，他们是 HAICU Lab 的联合负责人，以及大阪大学的学者 Atsuo Kishimoto，他是该实验室的成员之一。从一开始，他们就得到了 Maria Axente 的加入，她是英国负责任人工智能在工业领域的一位先驱实践者。HAICU Lab 由世界大学 U7+ 联盟创立，该组织包括来自 6 大洲 20 个国家的 45 多家机构。实验室的使命是鼓励学术界与公共机构、企业和民间社会组织之间的合作。其目标是针对人工智能在社会中实施所带来的重大挑战和机遇，开发以人为本的应对措施——本质上，促进 `human-centered AI (HCAI)` 的创造和应用。
 
-本书的创作历时 16 个月。国际征文征集于 2022 年 3 月启动，并通过各种渠道传播。入选作者于 2022 年秋季开始撰写其文章。投稿人受邀参加于 2023 年冬季举行的在线研讨会。这些论坛为与会者提供了提供和接受同行反馈的机会，并在他们各自的视角下交流关于 HCAI 作用的想法。在随后的几个月里，作者们——来自加拿大、法国、意大利、日本、新西兰、英国等 12 多个国家，以及计算机科学、教育、法律、管理、政治学、社会学等 12 多个学科——撰写了论文的修订稿并收到了同行评审意见。因此，本书中体现了不同的学术传统和探究与论证方法。
 
 
+本书的创作历时 16 个月。国际征文征集于 2022 年 3 月启动，并通过各种渠道传播。入选作者于 2022 年秋季开始撰写其文章。投稿人受邀参加于 2023 年冬季举行的在线研讨会。这些论坛为与会者提供了提供和接受同行反馈的机会，并在他们各自的视角下交流关于 `HCAI` 作用的想法。在随后的几个月里，作者们——来自加拿大、法国、意大利、日本、新西兰、英国等 12 多个国家，以及计算机科学、教育、法律、管理、政治学、社会学等 12 多个学科——撰写了论文的修订稿并收到了同行评审意见。因此，本书中体现了不同的学术传统和探究与论证方法。
 
-
-我们为本书增添了一系列与关键机构参与者的访谈（如 Partnership on AI 首席执行官 Rebecca Finlay；Mastercard Foundation 创新教学与学习中心主任 Joseph Nsengimana；或为工会和政府提供服务的咨询公司 The Why Not Lab 主管 Christian Colclough），以丰富我们对各章节中探讨的人工智能的多种含义的理解，以及对未来挑战和机遇的理解。这一补充旨在为 HCAI 增加另一层讨论，并鼓励新兴的 HCAI 科学与监管者、开发者和各活动领域用户之间的互动讨论。最终手稿于 2023 年 7 月提交给出版社。
+我们为本书增添了一系列与关键机构参与者的访谈（如 Partnership on AI 首席执行官 Rebecca Finlay；Mastercard Foundation 创新教学与学习中心主任 Joseph Nsengimana；或为工会和政府提供服务的咨询公司 The Why Not Lab 主管 Christian Colclough），以丰富我们对各章节中探讨的人工智能的多种含义的理解，以及对未来挑战和机遇的理解。这一补充旨在为 `HCAI` 增加另一层讨论，并鼓励新兴的 `HCAI` 科学与监管者、开发者和各活动领域用户之间的互动讨论。最终手稿于 2023 年 7 月提交给出版社。
 
 ### 人工智能的重要性
 
 我们周围的信息环境正因数字化与数字转型而迅速扩张。为了应对这一新的信息环境，人工智能已成为对信息进行分类、组织和快速识别我们所需内容的不可或缺的工具。然而，关于以往由人类执行的任务在多大程度上应或能被托付给人工智能的争论仍在持续。我们必须持续保持意识并反思我们将哪些责任委托给人工智能，哪些责任我们保留下来。特别是，我们对高风险决策，例如招聘、录取、贷款决策和法庭裁决完全交由机器数据处理的做法一直非常谨慎。已经观察到人工智能仅仅因为数据可用就被应用，而未考虑其对数据主体的益处。在这些情况下，“以人为中心的人工智能”概念应运而生，成为一种引人注目的方法。
 
-各种策略和指南都强调了 HCAI 作为一个至关重要的目标。经合组织于 2019 年制定的五项原则中的第二项是“以人为本的价值观与公平”，其主张“人工智能行为者应在人工智能系统生命周期内尊重法治、人权和民主价值观”。在欧洲，人工智能高级别专家组于 2019 年发布了《值得信赖的人工智能伦理准则》，其中宣布人工智能系统必须以人为中心。七项“值得信赖的人工智能”要求中的第一项是“人类自主与监督”，涵盖基本权利、人类自主和人类监督。此外，2018 年发布的《蒙特利尔人工智能负责任发展宣言》将其十项原则锚定在人类福祉和尊重自主权的观念上，这与以人为中心的人工智能的理念深度共鸣。
+各种策略和指南都强调了 `HCAI` 作为一个至关重要的目标。经合组织于 2019 年制定的五项原则中的第二项是“以人为本的价值观与公平”，其主张“人工智能行为者应在人工智能系统生命周期内尊重法治、人权和民主价值观”。在欧洲，人工智能高级别专家组于 2019 年发布了《值得信赖的人工智能伦理准则》，其中宣布人工智能系统必须以人为中心。七项“值得信赖的人工智能”要求中的第一项是“人类自主与监督”，涵盖基本权利、人类自主和人类监督。此外，2018 年发布的《蒙特利尔人工智能负责任发展宣言》将其十项原则锚定在人类福祉和尊重自主权的观念上，这与以人为中心的人工智能的理念深度共鸣。
 
-到 2020 年左右，全球、国家和企业层面已制定了众多人工智能伦理指南和原则。近年来，重点转向将这些原则转化为研究人员和员工日常实践。原则与实践之间的差距，通常被称为“实施差距”，是本书多章讨论的话题。如本介绍后面所述，实现 HCAI 在实践层面的具体条件在书中各处都有讨论。
+到 2020 年左右，全球、国家和企业层面已制定了众多人工智能伦理指南和原则。近年来，重点转向将这些原则转化为研究人员和员工日常实践。原则与实践之间的差距，通常被称为“实施差距”，是本书多章讨论的话题。如本介绍后面所述，实现 `HCAI` 在实践层面的具体条件在书中各处都有讨论。
 
-自 2022 年中以来，由于各公司发布了文本到文本、文本到图像和文本到音乐的生成式人工智能模型，人工智能变得显著更容易获取。现在，即使没有编程技能的个人也能利用人工智能生成文本和图像。生成式人工智能的快速普及迫使我们重新评估 HCAI 的概念。直到最近，人工智能技术主要通过预测和识别等任务来提高人类活动的效率，公众主要处于接收端。然而，生成式人工智能与以往的人工智能技术不同，它能够赋予普通人生成文本和图像的能力。虽然人工智能技术的这种民主化是一个积极的发展，但它也意味着潜在的滥用和误用的“民主化”。就此而言，需要更以人为中心的<|message|> 设计。
+自 2022 年中以来，由于各公司发布了文本到文本、文本到图像和文本到音乐的生成式人工智能模型，人工智能变得显著更容易获取。现在，即使没有编程技能的个人也能利用人工智能生成文本和图像。生成式人工智能的快速普及迫使我们重新评估 `HCAI` 的概念。直到最近，人工智能技术主要通过预测和识别等任务来提高人类活动的效率，公众主要处于接收端。然而，生成式人工智能与以往的人工智能技术不同，它能够赋予普通人生成文本和图像的能力。虽然人工智能技术的这种民主化是一个积极的发展，但它也意味着潜在的滥用和误用的“民主化”。就此而言，需要更以人为中心的 设计。
 
 ### 人工智能的定义和范围
 
-HCAI 的概念涵盖了众多方面，因此无法用单一、确定的解释来概括。一般而言，对 HCAI 的定义努力可分为以过程为中心和以结果为中心的方法。
+`HCAI` 的概念涵盖了众多方面，因此无法用单一、确定的解释来概括。一般而言，对 `HCAI` 的定义努力可分为以过程为中心和以结果为中心的方法。
 
-以过程为中心的视角侧重于将人工智能置于人类控制之下。它强调尊重人类自主性和问责制的重要性，特别是在自动化决策以及欧盟《通用数据保护条例》 GDPR 中规定的“人类在环”原则方面。重点在于自主性和责任：人类可能会犯错，但只有人类才能为错误承担责任。
+以过程为中心的视角侧重于将人工智能置于人类控制之下。它强调尊重人类自主性和问责制的重要性，特别是在自动化决策以及欧盟《通用数据保护条例》 `GDPR` 中规定的“人类在环”原则方面。重点在于自主性和责任：人类可能会犯错，但只有人类才能为错误承担责任。
 
-以结果为中心的观点欣赏人工智能系统满足人类需求和价值观或从人体工学角度来看用户友好的能力。这种视角与以人为中心的设计方法一致，该方法在产品和服务的设计中优先考虑终端用户。为了创建满足用户需求的产品，有利于在产品和服务开发的早期阶段就让潜在用户参与其中。因此，包容性的研发过程是必不可少的。即使以结果为导向，过程相关的人类价值观也很重要，而一种对人类以不可预测的方式不安全算法从 HCAI 的角度来看是不令人满意的。因此，过程和结果方法密切相关；关键区别在于哪个被视为目标，哪个是实现该目标的手段。最终，两者之间的区别可能不会显著改变为实现 HCAI 应强调的内容。
+以结果为中心的观点欣赏人工智能系统满足人类需求和价值观或从人体工学角度来看用户友好的能力。这种视角与以人为中心的设计方法一致，该方法在产品和服务的设计中优先考虑终端用户。为了创建满足用户需求的产品，有利于在产品和服务开发的早期阶段就让潜在用户参与其中。因此，包容性的研发过程是必不可少的。即使以结果为导向，过程相关的人类价值观也很重要，而一种对人类以不可预测的方式不安全算法从 `HCAI` 的角度来看是不令人满意的。因此，过程和结果方法密切相关；关键区别在于哪个被视为目标，哪个是实现该目标的手段。最终，两者之间的区别可能不会显著改变为实现 `HCAI` 应强调的内容。
 
 #### 人工智能技术带来的潜在风险
 
-用于预测和识别的机器学习人工智能的开发过程如图 Figure I.1 所示。为了创建以人为中心的方法，正确收集训练数据至关重要，确保其无偏见，并审查模型的算法是否存在潜在偏见。还必须在高风险决策中引入人类监督，而不是盲目接受输出结果。例如，面部识别技术出现问题，当训练数据集中存在偏见导致算法偏见时，导致不同性别和种族的准确性差异，从而导致歧视性对待。作为回应，人们已努力重新评估训练数据、审计算法并限制某些面部识别输出的使用。
+用于预测和识别的机器学习人工智能的开发过程如图 `Figure I.1` 所示。为了创建以人为中心的方法，正确收集训练数据至关重要，确保其无偏见，并审查模型的算法是否存在潜在偏见。还必须在高风险决策中引入人类监督，而不是盲目接受输出结果。例如，面部识别技术出现问题，当训练数据集中存在偏见导致算法偏见时，导致不同性别和种族的准确性差异，从而导致歧视性对待。作为回应，人们已努力重新评估训练数据、审计算法并限制某些面部识别输出的使用。
 
 ![Figure I.1 Flow diagram for the development of AI models used for prediction and recognition.](img/figi_1_B.jpg)
 
-Figure I.1 Flow diagram for the development of AI models used for prediction and recognition.
+`Figure I.1` Flow diagram for the development of AI models used for prediction and recognition.
 
-对于生成式人工智能，图中的下半部分描绘了生成过程，该过程始于提示输入并以生成数据的创建结束。像 ChatGPT 这样的文本生成人工智能会产生模仿人类写作的句子，但在事实信息中已知会出现许多“幻觉”（即错误）。已经出现许多问题，因为输出被直接使用而未经过人工核实。还观察到此类输出往往反映并甚至放大现实世界的刻板印象和偏见。
+对于生成式人工智能，图中的下半部分描绘了生成过程，该过程始于提示输入并以生成数据的创建结束。像 `ChatGPT` 这样的文本生成人工智能会产生模仿人类写作的句子，但在事实信息中已知会出现许多“幻觉”（即错误）。已经出现许多问题，因为输出被直接使用而未经过人工核实。还观察到此类输出往往反映并甚至放大现实世界的刻板印象和偏见。
 
 #### 面向各利益相关者的 HCAI
 
-
-
-
-
-包容性的方法对于 HCAI 的实施至关重要，需要在治理中让多元化的利益相关者各司其职。同时，HCAI 的概念和方针对广泛的利益相关者都有益处。通过其能动性，生态系统中的行动者影响着社会期望和社会规范将如何形成、推广或受到质疑，从而对 AI 生态系统内的决策和选择产生后果（Hallett & Ventresca, 2006）。AI 生态系统的演变以及该领域创新发展的轨迹，是在多个分析层面——如社会、领域、组织和个人——的结构、活动和行动共同作用的结果（Scott, 2013）。在这一生态系统中，权力与制衡权力（例如各群体施加的健康压力）是主要决定因素。在此我们探讨一些代表性利益相关者如何使用本书。
+包容性的方法对于 `HCAI` 的实施至关重要，需要在治理中让多元化的利益相关者各司其职。同时，`HCAI` 的概念和方针对广泛的利益相关者都有益处。通过其能动性，生态系统中的行动者影响着社会期望和社会规范将如何形成、推广或受到质疑，从而对 `AI` 生态系统内的决策和选择产生后果（Hallett & Ventresca, 2006）。`AI` 生态系统的演变以及该领域创新发展的轨迹，是在多个分析层面——如社会、领域、组织和个人——的结构、活动和行动共同作用的结果（Scott, 2013）。在这一生态系统中，权力与制衡权力（例如各群体施加的健康压力）是主要决定因素。在此我们探讨一些代表性利益相关者如何使用本书。
 
 ### 政策制定者
 
-AI 技术，包括生成式 AI，将继续进步并实施今天尚不可预测的技术。HCAI 的概念应适用于任何先进技术，并有助于制定法律、法规和使用指南，以及识别伦理、法律和社会问题。同时，HCAI 还可以帮助政策制定者获得更准确的数据和预测；AI 分析和预测可以为政策决策提供依据，并帮助制定更有效的政策。
+`AI` 技术，包括生成式 `AI`，将继续进步并实施今天尚不可预测的技术。`HCAI` 的概念应适用于任何先进技术，并有助于制定法律、法规和使用指南，以及识别伦理、法律和社会问题。同时，`HCAI` 还可以帮助政策制定者获得更准确的数据和预测；`AI` 分析和预测可以为政策决策提供依据，并帮助制定更有效的政策。
 
 ### 行业从业者
 
-技术发展的速度往往超过法律和法规的修订。因此，仅遵守法律和法规是不够的。有必要不断地进行自我反思，评估业务活动是否符合 HCAI 的规范。为此，需要建立一个系统和适当的激励机制，使整个数据和技术生命周期都能够得到审查，从最初的内部研发审查到实施后的监控。本书的第二部分可作为参考，因为它为每个领域提供了单独的讨论。
+技术发展的速度往往超过法律和法规的修订。因此，仅遵守法律和法规是不够的。有必要不断地进行自我反思，评估业务活动是否符合 `HCAI` 的规范。为此，需要建立一个系统和适当的激励机制，使整个数据和技术生命周期都能够得到审查，从最初的内部研发审查到实施后的监控。本书的第二部分可作为参考，因为它为每个领域提供了单独的讨论。
 
 ### 研究人员
 
-随着生成式 AI 的普及，AI 产生重大社会影响的可能性日益增加，既有积极的也有消极的。HCAI 的方针可以有助于增强积极面并减轻消极面。研究人员必须将“以人为本”的概念纳入技术开发中，并评估 AI 的影响，提出合适的对策和缓解策略。对社会层面和伦理问题的研究可以提高 AI 技术的社会可接受性和可持续性。
+随着生成式 `AI` 的普及，`AI` 产生重大社会影响的可能性日益增加，既有积极的也有消极的。`HCAI` 的方针可以有助于增强积极面并减轻消极面。研究人员必须将“以人为本”的概念纳入技术开发中，并评估 `AI` 的影响，提出合适的对策和缓解策略。对社会层面和伦理问题的研究可以提高 `AI` 技术的社会可接受性和可持续性。
 
 ### 普通公众
 
-随着生成式 AI 的出现，普通公众成员可以成为 AI 的更积极使用者，而不仅仅是 AI 应用的被动接受者。因此，了解更多关于 AI、其机制和特征变得越来越重要。重要的是要知道，虽然像 ChatGPT 这样的聊天机器人可以用完整句子回应并且经过训练以模仿人类，但它们的行为可能并不像人类那样或不可靠。AI 素养也有助于最大限度地减少无恶意传播虚假信息的情况，并避免将 AI 系统拟人化。
+随着生成式 `AI` 的出现，普通公众成员可以成为 `AI` 的更积极使用者，而不仅仅是 `AI` 应用的被动接受者。因此，了解更多关于 `AI`、其机制和特征变得越来越重要。重要的是要知道，虽然像 `ChatGPT` 这样的聊天机器人可以用完整句子回应并且经过训练以模仿人类，但它们的行为可能并不像人类那样或不可靠。`AI` 素养也有助于最大限度地减少无恶意传播虚假信息的情况，并避免将 `AI` 系统拟人化。
 
 ### 讨论的三个角度
 
 本书分为三部分。
 
-`Section I`，基础与定义部分，包含章节讨论并评估 HCAI 的众多含义，以及 HCAI 研究的主要趋势和方法。其中，`Vallor` 解释了负责任 AI 与 HCAI 之间的区别；阐述了 HCAI 是什么或不是什么的特征（例如讨论 ChatGPT 是否是 HCAI 技术）；并解释了她为何对 AI 的未来“谨慎乐观”，同时批评了最近的工程文化。`Wójcik` 将算法不平等和社会排斥的根源归结于西方理性主义和个人主义观念，并认为 Ubuntu——一种将人的尊严置于人与他人和谐相处能力之上的撒哈拉以南非洲哲学——可能有助于构建 AI 的伦理和法律框架。`Bar Gil` 聚焦于推荐引擎——帮助管理信息洪流的机器学习算法。他以 Google 的推荐服务为研究对象，讨论 HCAI 对自我感知的关键概念的影响：自主性、主体性、理性和记忆。他的章节还简要讨论了生成式 AI。`Quintana` 从用户体验的角度切入 HCAI。他审视了人类与机器之间以及伦理与用户体验设计之间的“交叉点”上的伦理挑战。`Larouche` 聚焦于将 AI 伦理转化为法律法规的方面。他首先指出了概念审查阶段的不足，然后讨论了立法行动阶段的挑战。近期关于 AI 的讨论在创新相关方面被组织为宽容与保护性方法的对比。最后，这些论点被应用于欧洲和加拿大的最新立法。`Malone` 从隐私的角度审视 HCAI，隐私是一个难以捉摸的概念。基于隐私概念的历史发展，作者审视了随着我们越来越多地让 AI 占据更多时间、注意力和信任，以及对 HCAI 的需求增加，隐私概念将如何发生变化。最后，`Pistilli` 讨论了通用大型语言模型（LLM），引用了若干伦理挑战并探讨了使 LLM 成为 HCAI 的潜在解决方案。在此过程中，强调了工程师与哲学家之间合作的必要性。综上所述，本书的 `Section I` 讨论了在各个领域考虑 HCAI 实践时必须考虑的跨领域主题。它涵盖了算法不平等、推荐引擎、人机交互中的伦理挑战、将 AI 伦理转化为法律规范、隐私概念以及大型语言模型（LLMs）的最新发展等主题。
-
-
-
-
+`Section I`，基础与定义部分，包含章节讨论并评估 `HCAI` 的众多含义，以及 `HCAI` 研究的主要趋势和方法。其中，`Vallor` 解释了负责任 `AI` 与 `HCAI` 之间的区别；阐述了 `HCAI` 是什么或不是什么的特征（例如讨论 `ChatGPT` 是否是 `HCAI` 技术）；并解释了她为何对 `AI` 的未来“谨慎乐观”，同时批评了最近的工程文化。`Wójcik` 将算法不平等和社会排斥的根源归结于西方理性主义和个人主义观念，并认为 Ubuntu——一种将人的尊严置于人与他人和谐相处能力之上的撒哈拉以南非洲哲学——可能有助于构建 `AI` 的伦理和法律框架。`Bar Gil` 聚焦于推荐引擎——帮助管理信息洪流的机器学习算法。他以 Google 的推荐服务为研究对象，讨论 `HCAI` 对自我感知的关键概念的影响：自主性、主体性、理性和记忆。他的章节还简要讨论了生成式 `AI`。`Quintana` 从用户体验的角度切入 `HCAI`。他审视了人类与机器之间以及伦理与用户体验设计之间的“交叉点”上的伦理挑战。`Larouche` 聚焦于将 `AI` 伦理转化为法律法规的方面。他首先指出了概念审查阶段的不足，然后讨论了立法行动阶段的挑战。近期关于 `AI` 的讨论在创新相关方面被组织为宽容与保护性方法的对比。最后，这些论点被应用于欧洲和加拿大的最新立法。`Malone` 从隐私的角度审视 `HCAI`，隐私是一个难以捉摸的概念。基于隐私概念的历史发展，作者审视了随着我们越来越多地让 `AI` 占据更多时间、注意力和信任，以及对 `HCAI` 的需求增加，隐私概念将如何发生变化。最后，`Pistilli` 讨论了通用大型语言模型（`LLM`），引用了若干伦理挑战并探讨了使 `LLM` 成为 `HCAI` 的潜在解决方案。在此过程中，强调了工程师与哲学家之间合作的必要性。综上所述，本书的 `Section I` 讨论了在各个领域考虑 `HCAI` 实践时必须考虑的跨领域主题。它涵盖了算法不平等、推荐引擎、人机交互中的伦理挑战、将 `AI` 伦理转化为法律规范、隐私概念以及大型语言模型（`LLMs`）的最新发展等主题。
 
 ### 第二部分
 
-第二部分包含探讨不同群体和利益相关者在不同机构（司法系统、卫生系统、高等教育机构等）中 HCAI 的潜力和表征的章节。换句话说，它深入探讨了 HCAI 在社会活动特定领域中可能发挥的积极和消极作用。对 AI 生态系统的制度视角强调，技术发展及其在社会、组织和实践中嵌入的方式并非纯粹理性或对效率考虑的回应，而是由广泛的社会期望和规范塑造的（Hinings et al., 2018）。激励结构、社会期望和规范是塑造新兴 AI 生态系统的重要因素。
+第二部分包含探讨不同群体和利益相关者在不同机构（司法系统、卫生系统、高等教育机构等）中 `HCAI` 的潜力和表征的章节。换句话说，它深入探讨了 `HCAI` 在社会活动特定领域中可能发挥的积极和消极作用。对 `AI` 生态系统的制度视角强调，技术发展及其在社会、组织和实践中嵌入的方式并非纯粹理性或对效率考虑的回应，而是由广泛的社会期望和规范塑造的（Hinings et al., 2018）。激励结构、社会期望和规范是塑造新兴 `AI` 生态系统的重要因素。
 
-DaSilva、Denis 和 Regis 探讨了医疗保健领域，AI 在该领域正日益在医疗保健系统的各个方面得到开发和部署。他们认为 HCAI 需要两种相互依存且相互作用的治理方法：（1）规范性方法，确保医疗保健行为者的利益在监管层面得到保护，以及（2）情境性方法，允许在实践层面理解、回应和适应这些利益。他们讨论了如何实际实施这一两步治理策略。
+DaSilva、Denis 和 Regis 探讨了医疗保健领域，`AI` 在该领域正日益在医疗保健系统的各个方面得到开发和部署。他们认为 `HCAI` 需要两种相互依存且相互作用的治理方法：（1）规范性方法，确保医疗保健行为者的利益在监管层面得到保护，以及（2）情境性方法，允许在实践层面理解、回应和适应这些利益。他们讨论了如何实际实施这一两步治理策略。
 
-Garard 等人讨论了 HCAI 对可持续性和农业领域可能意味着什么，这对许多国家而言是一个非常重要领域。他们为此情境下的 HCAI 提出了四项指导原则：包容性数据管理、稳健的 AI 应用、对合作伙伴和技术的信任，以及问责制体系。他们以数据驱动的可持续农业洞察项目为例，展示了其建议的具体说明。
+Garard 等人讨论了 `HCAI` 对可持续性和农业领域可能意味着什么，这对许多国家而言是一个非常重要领域。他们为此情境下的 `HCAI` 提出了四项指导原则：包容性数据管理、稳健的 `AI` 应用、对合作伙伴和技术的信任，以及问责制体系。他们以数据驱动的可持续农业洞察项目为例，展示了其建议的具体说明。
 
-Ohya 解决了在司法领域，特别是司法系统实施 HCAI 的挑战。通过创造性的分析视角，作者解释了 AI 如何改变司法推理的基础，以及我们应要求 AI 系统在司法相关决策中具备什么，以确保尊重民主要求和基本权利。
+Ohya 解决了在司法领域，特别是司法系统实施 `HCAI` 的挑战。通过创造性的分析视角，作者解释了 `AI` 如何改变司法推理的基础，以及我们应要求 `AI` 系统在司法相关决策中具备什么，以确保尊重民主要求和基本权利。
 
-Lévesque 等人探讨了工作场所领域，AI 的变革性影响在该领域尚不确定且存在争议。他们提供了关于如何以 HCAI 促进更好工作的观点，包括提高工人的自主性。他们认为，除其他观点外，所有利益相关者都需要认真审视更好工作与更好社会之间的联系。通过日益增长的经济和社会不安全、技能退化以及无意义的工作而导致的失权，可能会对社会团结和民主造成破坏性后果。因此，需要制定改变激励措施并鼓励社会负责任创新的具体政策。
+Lévesque 等人探讨了工作场所领域，`AI` 的变革性影响在该领域尚不确定且存在争议。他们提供了关于如何以 `HCAI` 促进更好工作的观点，包括提高工人的自主性。他们认为，除其他观点外，所有利益相关者都需要认真审视更好工作与更好社会之间的联系。通过日益增长的经济和社会不安全、技能退化以及无意义的工作而导致的失权，可能会对社会团结和民主造成破坏性后果。因此，需要制定改变激励措施并鼓励社会负责任创新的具体政策。
 
-Poellhuber 及其同事讨论了 AI 在高等教育中的话题，该领域在生成式 AI 近期发布后一直处于许多公众辩论的前沿，展示了此类技术如何转变信息技能、方法技能和写作技能。具体而言，作者审视了 AI 在高等教育中具有重大潜力的三个领域：学习分析、自适应学习和生成式人工智能。对于这三个领域中的每一个，作者分析了它们增强教育体验的潜力，以及相关的局限性。
+Poellhuber 及其同事讨论了 `AI` 在高等教育中的话题，该领域在生成式 `AI` 近期发布后一直处于许多公众辩论的前沿，展示了此类技术如何转变信息技能、方法技能和写作技能。具体而言，作者审视了 `AI` 在高等教育中具有重大潜力的三个领域：学习分析、自适应学习和生成式人工智能。对于这三个领域中的每一个，作者分析了它们增强教育体验的潜力，以及相关的局限性。
 
-转向大学的具体现实，Mele 及其同事探讨了 HCAI 如何帮助大学推进他们确定的三个关键使命，即参与式教育、参与式研究和参与式社会。这种“参与式大学”将受益于基于 AI 的技术，通过研究和创新应对社会挑战，同时提高教育质量。
+转向大学的具体现实，Mele 及其同事探讨了 `HCAI` 如何帮助大学推进他们确定的三个关键使命，即参与式教育、参与式研究和参与式社会。这种“参与式大学”将受益于基于 `AI` 的技术，通过研究和创新应对社会挑战，同时提高教育质量。
 
-Knott、Chakraborti 和 Pedreschi 深入探讨了备受争议且影响深远的社交媒体平台领域，AI 在其中带来了众多机遇和挑战。他们解释说，AI 系统在社交媒体平台上主要运行两种类型：推荐系统和内容分类器。在这样的解释之后，他们最终将缺乏透明度确定为此类 AI 使用带来的主要问题，社交媒体平台必须将其作为优先事项解决，以确保其能够被视为以人为中心。
+Knott、Chakraborti 和 Pedreschi 深入探讨了备受争议且影响深远的社交媒体平台领域，`AI` 在其中带来了众多机遇和挑战。他们解释说，`AI` 系统在社交媒体平台上主要运行两种类型：推荐系统和内容分类器。在这样的解释之后，他们最终将缺乏透明度确定为此类 `AI` 使用带来的主要问题，社交媒体平台必须将其作为优先事项解决，以确保其能够被视为以人为中心。
 
-最后，Rodriguez 接受了反思文化和艺术工作与 HCAI 之间相互作用的挑战，从名为 CHOM5KY vs CHOMSKY 的研究创作项目中汲取教训。在该项目中，访客与 AI 实体对话，以更好地理解 AI 系统如何运作并重新思考其陷阱和机遇。本章以原创方式探讨了艺术工作在更好地传达 AI 现实以及培养人类探究、协作和创造技能方面的作用。
+最后，Rodriguez 接受了反思文化和艺术工作与 `HCAI` 之间相互作用的挑战，从名为 CHOM5KY vs CHOMSKY 的研究创作项目中汲取教训。在该项目中，访客与 `AI` 实体对话，以更好地理解 `AI` 系统如何运作并重新思考其陷阱和机遇。本章以原创方式探讨了艺术工作在更好地传达 `AI` 现实以及培养人类探究、协作和创造技能方面的作用。
 
-总之，本书的第二部分提供了 AI 在一些关键活动领域可能发挥的挑战和机遇的部门性和跨部门性概述，并展示了 HCAI 不一定是“一刀切”的视角和方法，尽管存在一些强有力的共同特征，如与终端用户需求、权利和价值保持一致。它可以对情境敏感，因此需要根据其所嵌入的机构的独特现实及其相关行为者进行调整。
-
-
-
-
+总之，本书的第二部分提供了 `AI` 在一些关键活动领域可能发挥的挑战和机遇的部门性和跨部门性概述，并展示了 `HCAI` 不一定是“一刀切”的视角和方法，尽管存在一些强有力的共同特征，如与终端用户需求、权利和价值保持一致。它可以对情境敏感，因此需要根据其所嵌入的机构的独特现实及其相关行为者进行调整。
 
 ### 第三部分
 
@@ -666,8 +627,12 @@ Atsuo, Catherine, Jean-Louis, Maria
 
 ### 参考文献
 
+
+
 * Hallett, T., & Ventresca, M. J. (2006). Inhabited institutions: Social interactions and organizational forms in Gouldner’s Patterns of Industrial Bureaucracy. Theory and Society, *35*, 213–236.
+
 * Hinings, B., Gegenhuber, T., & Greenwood, R. (2018). Digital innovation and transformation: An institutional perspective. Information and Organization, *28*(1), 52–61.
+
 * Scott, W.R. (2013). Institutions and Organizations: Ideas, Interests, and Identities, SAGE.
 
 # 第一部分 人本中心人工智能研究中的意义、趋势和方法
@@ -687,10 +652,6 @@ DOI: [10.1201/9781003320791-3](https://dx.doi.org/10.1201/9781003320791-3)
 当然，没有技术不是由人类设计和开发的，但通常人类开发人工智能系统是为了让该系统服务于机构、经济、工业流程和市场。这本身并不是以人为中心的，对吧？所以仅仅让人类参与人工智能的设计和部署是微不足道的，因为所有技术都是以这种方式以人为中心的。人本中心人工智能真正关乎的是推动技术的人类与技术所指向中心的人类之间的对齐。
 
 **人本中心人工智能的概念与其他在人工智能领域常用的概念有何不同？例如，它与“负责任的人工智能”有何不同？**
-
-
-
-
 
 显然这些理想之间存在相当大的重叠。但我认为它们的不同之处在于，责任的概念（这也是我现在正在研究的东西）在很大程度上关乎支撑例如社会信任的具体人际关系。因此，责任以及负责任的 AI 的概念，是关于人类使用他们手中的权力（或他们创造的权力）如何影响其他人的脆弱性——个人之间、人与组织之间、社区之间乃至更广泛的社会信任之间的关系。
 
@@ -718,10 +679,6 @@ DOI: [10.1201/9781003320791-3](https://dx.doi.org/10.1201/9781003320791-3)
 
 但我认为回答这个问题是否偶然还是有意为之很重要，对吧？它们是否以以人为中心的哲学设计，这是一个你无法轻易从外部回答的问题。你必须真正能够很好地了解该过程是如何产生的，该技术是如何产生的，从一开始就融入了哪些假设，哪些激励和目标决定了其最终形式，以及在多大程度上更广泛的人类利益被保持在设计过程和设计材料的中心。
 
-
-
-
-
 即使你能为这些技术识别出特定的好处，也很清楚，这些工具所针对的人类并不是其预期的受益者，这些工具的设计目的是为了某些*其他*机构或流程对人类进行分类、操纵和控制。这与以人为中心的人工智能正好相反。
 
 也很清楚，ChatGPT 并不是一种以人为中心的技术。想想它现在正在如何改变课堂。我们也许能找到在课堂上善用它的方法——部分原因是我们将被迫这样做。但这正是重点所在：ChatGPT 并不是在为回答这样一个问题而开发的：“人类、人目前最需要技术提供什么？”相反，它是在这样一种思路下开发的：“如果我们把这些技术尽可能地扩大规模，并投入尽可能多的计算能力，会得到什么？而我们得到的是一种我们必须去应对的东西，而不是一种由我们为我们设计并造福于我们的东西。
@@ -740,17 +697,15 @@ DOI: [10.1201/9781003320791-3](https://dx.doi.org/10.1201/9781003320791-3)
 
 ### 你需要什么样的团队来构建以人为中心的人工智能？
 
-这才是真正重要的部分。如果你要设计以完整的人为中心的科技，那么这些科技背后的知识——它们的<|message|>设计、开发和部署——需要代表这种完整性。这意味着你需要的不仅仅是计算机科学家、伦理学家和哲学家。你需要人类学、社会学、心理学、历史、媒体和艺术方面的专家，这取决于你在做什么。
+这才是真正重要的部分。如果你要设计以完整的人为中心的科技，那么这些科技背后的知识——它们的
+
+设计、开发和部署——需要代表这种完整性。这意味着你需要的不仅仅是计算机科学家、伦理学家和哲学家。你需要人类学、社会学、心理学、历史、媒体和艺术方面的专家，这取决于你在做什么。
 
 并非每项技术都必须由一整个大学来设计，但根据你在做什么，以及 AI 工具将影响人类体验的哪些方面，你必须能够有选择地借鉴与该应用在该情境中相关的、关于人类体验和人的全面知识。举另一个例子，有很多关于为养老院的老年人护理构建机器人的讨论。
 
 这其中有一整套问题，但首先需要问的问题是：“为了做好这件事，需要什么样知识？”它绝对不仅仅是机器学习、机器人技术和医疗法规的知识。你需要老年医学、老年心理学以及老年人繁荣与福祉方面的专家。而且你需要有在你期望部署该机器人的特定文化和地区中，这意味着什么的经验。所以，如果我设计一个工具要部署在韩国的养老院，我不能仅仅依靠了解斯堪的纳维亚老年人护理经验的人，或了解斯堪的纳维亚老年人通常重视什么、什么活动最有利于该文化背景下人们幸福的人来设计它。
 
 但我们实际上已经看到具体的例子，其中没有这样做——实际上，在我所知的情况下，情况正好相反：机器人在韩国设计，然后被带到斯堪的纳维亚在养老院进行测试。而这些养老院的居民对这些社交机器人的情感化设计反应要负面得多。而在韩国，机器人的情感表达——它的说话方式、移动方式和互动方式——被视为温暖而迷人，但在这种特定的斯堪的纳维亚测试环境中，机器人被视为幼稚、 Infantilizing 和令人厌烦。显然，在设计中根本没有为这种不同的文化规范和价值观做好准备。
-
-
-
-
 
 所以，当我们做以人为中心的人工智能时，真正重要的是，我们要理解“谁？”、“在哪里？”以及“如何？”——这项技术将被部署到哪里。然后，我们必须识别出与理解在*那里*、在*那个情境*中人类繁荣是什么样相关的多样化知识形式。然后，我们必须有点逆向工程人类繁荣，倒回去说：“好吧，我们如何实现那个目标？”以及“我们如何构建一项技术，使这种繁荣得以更充分地实现，或使其对更广泛的人群变得可及，或使其更可持续？”
 
@@ -796,13 +751,11 @@ DOI: [10.1201/9781003320791-4](https://dx.doi.org/10.1201/9781003320791-4)
 
 算法决策（ADM）在公共生活的关键领域兴起，包括司法系统、就业、医疗保健、社会福利和信用评分，为实现*égale dignité*带来了新的挑战。首先，历史上被边缘化的社区在人工智能技术的设计和开发中没有发挥有意义的作用。技术团队缺乏多样性，以及少数群体利益相关者在充满价值的算法设计过程中参与机制匮乏，导致了既有权力叙事的固化。其次，正如广泛记录的那样，ADM 系统倾向于反映并加剧现有的社会偏见 (Wachter et al., 2021)。关于少数群体的相关数据不可用，或他们在数据集中被刻板化、不准确地表示，导致算法进行非法歧视。第三，不平等部署和使用 ADM 系统扩大了权力差距。算法反馈循环导致弱势群体受到过度数字监控，例如通过使用预测性警务工具 (EFRA, 2022)。此外，人工智能技术的益处往往被拒之门外，并集中在特权阶层手中。
 
-
-
-
-
 Sabelo Mhlambi，一位研究人权、伦理、文化与技术交叉领域的学者，认为克服这些挑战需要摆脱支撑人工智能发展的西方人格观（Mhlambi, 2020）。从将人类描述为“理性动物”的亚里士多德，到笛卡尔著名的“我思故我在”宣言，欧洲哲学将人格根植于理性的概念，指导着开发模仿人类智能的机器的追求。在这一叙事中，理性被构建为一种个体品质，对于使人类成为“完整、统治者且自主”不可或缺。然而，据 Mhlambi 称，个人主义的人格观存在固有缺陷，包括正当化并加剧不平等，正如历史上理性被武器化为排斥工具所证明的那样。启蒙时代关于自由、平等和人权的思想的适用范围仅限于被认为足够理性而被视为人的那些人，这正当化了对非欧洲人的奴役和压迫，以及对女性的劣等对待。
 
 因此，女性主义哲学家是首批批评以理性为人类尊严基础的人之一，主张一种关系性的自主概念（Stoljar, 2013）。
+
+
 
 同样，Mhlambi 提出了一种基于南非 Ubuntu 哲学的替代性人工智能伦理方法，该哲学以关系性术语诠释人格与人类尊严，其前提是个体福祉只能通过整个社会繁荣来实现（Mhlambi, 2020）。正如 Tom Zwart 所强调的，Ubuntu 敦促人类超越个人利益，要求“合作、相互依存和集体责任”（Zwart, 2012: 555）。
 
@@ -832,10 +785,6 @@ Ubuntu 指向人与人之间的亲缘感（Ramose, 1999），并且与人类尊�
 
 在南非宪法法院的判例法中，歧视和社会排斥被视为对 Ubuntu 的侵犯和对尊严的攻击，因为它们阻止人类作为社区成员蓬勃发展。因此，在 *Mahlangu* 中，
 
-
-
-
-
 根据 `Khosa` 案法院的观点，穷人的福祉与社区其他成员以及整个社区的福祉相连。这种方法说明了西方社会契约观念与乌班图之间的对比。前者将社会纽带解释为个人决定放弃其自然自由的结果。后者则基于这样一个前提：人实际上是生来就处于社会纽带之中（Cornell, 2014）。这一推理的一个重要后果是，由于人类的身份，人们同时获得权利和义务。因此，在乌班图哲学中，自由与责任相互关联，在个人与社区之间架起了一座桥梁（Cornell et van Marle, 2022）。属于一个社区，需要同时具备作为群体成员的身份认同以及与群体保持团结，即真诚地为了他人的缘故而帮助他人的意愿（Metz, 2014）。因此，排斥弱势群体与乌班图不相容，乌班图要求以同情和理解对待他们。
 
 #### 关系性自主——通过有意义的参与平衡个人与群体权利
@@ -860,10 +809,6 @@ Ubuntu 指向人与人之间的亲缘感（Ramose, 1999），并且与人类尊�
 
 免受负面偏见的自由已在自动化系统的价值敏感设计框架中得到考虑 (Friedman et al., 2013)。根据 Batya Friedman 等人，价值敏感设计应涵盖三重方法论：概念性研究、实证性研究和技术性研究。乌班图影响这三个要素中的每一个 (Friedman et al., 2013)。
 
-
-
-
-
 概念性研究的目的是确定相关利益相关者和价值，并探讨技术如何影响它们以及应如何平衡相互竞争的价值（Friedman et al., 2013）。在此阶段，Ubuntu 的贡献在于强调间接利益相关者的作用，他们虽然不直接与系统交互，但可能严重受其影响。因此，ADM 技术的实施始终应伴随对其主要受益者的评估，确保弱势群体不会因技术负担和利益分配不均而受害。因此，算法偏见的解决方案应以受问题不成比例影响的人为中心，凸显歧视的亲身经历的重要性（Birhane, 2021）。因此，通过 Ubuntu 视角设想的 HCAI 视角要求新技术不应基于使多数人受益的功利主义论点而部署。相反，增强人的尊严要求其影响必须以最脆弱者的经历为检验标准。
 
 实证研究的目的是确定利益相关者如何理解和优先考虑相关价值（Friedman et al., 2013）。正如南非宪法法院的判例法所回应的那样，Ubuntu 在实现价值权衡方面发挥着重要作用，要求优先保护最脆弱和最弱势者。例如，*Port Elizabeth* 和 *Olivia Road* 的判决强调，财产权不能被视为绝对权利，因为它必须与生活在贫困中的人们的权利相平衡。因此，可以认为在 Ubuntu 传统中，价值敏感设计应优先考虑社区中最脆弱成员的权利。从这个意义上说，Ubuntu 的社会理想唤起了恢复性正义，要求技术有助于实现一个更加公正和公平的社会，纠正历史上的排斥模式。
@@ -884,93 +829,155 @@ Ubuntu 的伦理影响了 AI 系统与其用户之间的关系，对公平的 AD
 
 ### 结论——迈向 HCAI 的跨文化对话
 
-
-
-
-
 如果要认真对待激发关于值得信赖和合乎伦理的 AI 的真正全球性讨论，欧盟的国际政策倡议，例如以人为中心的 人工智能国际外联 (European Commission, 2021)，应涉及与非西方传统的跨文化对话。这种对话对于消除权力不平衡并避免查尔斯·埃斯所称的伦理信息“帝国主义式同质化” (Ess, 2006) 至关重要。他认为，伦理多元主义的视角在承认不可化约的差异的同时，可以帮助在这些差异之间激发参与，从而丰富讨论的双方。欧洲伦理和法律传统与 Ubuntu 之间的跨文化对话可能导致在两种文化之间找到相交点，同时与其各自的身份相兼容。例如，Ubuntu 的社群主义和关系性视角与欧盟团结价值观之间也可以得出一些平行之处，团结意味着负担和利益的平等分享。在 HCAI 框架中，团结意味着对 AI 系统的长期影响进行评估，确保其负担和利益得到平等分配，并且不会固化不平等 (Luengo-Oroz, 2019)。遗憾的是，虽然草案《人工智能法案》在其序言中提及了《欧盟条约》第 2 条的其他价值，但它完全没有提到团结 (European Parliament and Council, 2021)。与 Ubuntu 提供的 HCAI 视角进行对话可能导致重新审视欧盟的团结价值，并在伦理和监管的 AI 框架中加以运用。
 
 ### Notes
 
 1. Art. 2 of the Treaty on European Union (TEU) provides: “The Union is founded on the values of respect for human dignity, freedom, democracy, equality, the rule of law and respect for human rights, including the rights of persons belonging to minorities. These values are common to the Member States in a society in which pluralism, non-discrimination, tolerance, justice, solidarity and equality between women and men prevail.”
+
 2. Art. 1 of the Charter of Fundamental Rights (CFR) provides: “Human dignity is inviolable. It must be respected and protected.”
+
 3. Case C-36/02 *Omega Spielhallen- und Automatenaufstellungs-GmbH v Oberbürgermeisterin der Bundesstadt Bonn* ECLI:EU:C:2004:162, para 80.
+
 4. *S v* *Makwanyane* 1995 (3) SA 391 (CC), para 237.
+
 5. Ibid, para 224.
+
 6. *Mahlangu and Another v Minister of Labour and Others* 2021 (2) SA 54 (CC).
+
 7. Ibid, para 65.
+
 8. *Khosa and Others v Minister of Social Development and Others* 2004 (6) SA 505 (CC).
+
 9. Ibid, para 76.
+
 10. *Hoffmann v. South African Airways* 2000 (11) BCLR 1211 (CC), para 38.
-11. *Port Elizabeth Municipality v Various Occupiers* 2005 (1) SA 217 (CC).
+
+
+
+11. `Port Elizabeth Municipality v Various Occupiers` 2005 (1) SA 217 (CC).
+
 12. Ibid, para 37.
+
 13. Ibid.
+
 14. Ibid.
-15. *Occupiers of 51 Olivia Road, Berea Township, and 197 Main Street, Johannesburg v City of Johannesburg* 2008 (3) SA 208 (CC).
+
+15. `Occupiers of 51 Olivia Road, Berea Township, and 197 Main Street, Johannesburg v City of Johannesburg` 2008 (3) SA 208 (CC).
+
 16. Ibid, para 16.
-17. *Olivia Road*, para 20.
-18. *Port Elizabeth*, para 37.
+
+17. `Olivia Road`, para 20.
+
+18. `Port Elizabeth`, para 37.
 
 ### References
 
 * Bennett, T. (2011). Ubuntu: An African Equity. Potchefstroom Electronic Law Journal, *14*, 30.
+
 * Binns, R. (2019). On the apparent conflict between individual and group fairness. In Conference on Fairness, Accountability, and Transparency (FAT*’20), January 27–30, 2020, 514-524. New York, NY: Association for Computer Machinery. [`doi.org/10.1145/3351095.3372864`](https://doi.org/10.1145/3351095.3372864).
+
 * Birhane, A. (2021). Algorithmic injustice: A relational ethics approach. Patterns, *2*(2), 100205.
+
 * Birhane, A., et al. (2022). Power to the People? Opportunities and Challenges for Participatory AI. In Equity and Access in Algorithms, Mechanisms, and Optimization (EAAMO ’22), Article 6, 1–8. New York, NY: Association for Computing Machinery, [`doi.org/10.1145/3551624.3555290`](https://doi.org/10.1145/3551624.3555290)
+
 * Bohler-Muller, N. (2005). The Story of an African Value: Focus: Ten Years after Makwanyane. SA Public Law, *20*, 266.
+
 * Bohler-Müller, N. (2012). Some Thoughts on the Ubuntu Jurisprudence of the Constitutional Court. In D. Cornell & N. Muvangua (Eds.), UBuntu and the Law: African Ideals and Post-Apartheid Jurisprudence (pp. 367–376). Fordham University Press.
+
 * Christman, J. (2004). Relational autonomy, liberal individualism, and the social constitution of selves. Philosophical Studies: An International Journal for Philosophy in the Analytic Tradition, *177*, 143.
+
 * Chuwa, L. T. (2014). African indigenous ethics in global bioethics: Interpreting Ubuntu. Springer.
+
 * Cornell, D. (2014). Is There a Difference That Makes a Difference between Dignity and Ubuntu? In Law and revolution in South Africa: UBuntu, Dignity, and the struggle for constitutional transformation (pp. 149–168). Fordham University Press.
+
 * Cornell, D., & van Marle, K. (2022). Exploring UBuntu: Tentative Reflections. In Exploring UBuntu: Tentative Reflections (pp. 344–366). Fordham University Press.
+
 * EFRA. (2022). Bias in Algorithms: Artificial Intelligence and Discrimination. LU: Publications Office.
+
 * Ess, C. (2006). Ethical Pluralism and Global Information Ethics. Ethics and Information Technology, *8*, 215.
+
 * European Commission, Directorate-General for Communications Networks, Content and Technology. (2019). Ethics guidelines for trustworthy AI, Publications Office. [`data.europa.eu/doi/10.2759/346720`](https://data.europa.eu)
+
 * European Commission. (2021). International Outreach for Human-Centric Artificial Intelligence Initiative|Shaping Europe’s Digital Future. Retrieved January 25, 2023, from [`digital-strategy.ec.europa.eu/en/policies/international-outreach-ai`](https://digital-strategy.ec.europa.eu/en/policies/international-outreach-ai)
-* European Court of Justice. (2004). Case C-36/02, *Omega Spielhallen- und Automatenaufstellungs-GmbH v Oberbürgermeisterin der Bundesstadt Bonn*. ECLI:EU:C:2004:162, para 80.
+
+* European Court of Justice. (2004). Case C-36/02, `Omega Spielhallen- und Automatenaufstellungs-GmbH v Oberbürgermeisterin der Bundesstadt Bonn`. ECLI:EU:C:2004:162, para 80.
+
 * European Parliament and Council. (2021). Proposal for a Regulation of the European Parliament and the Council Laying Down Harmonised Rules on Artificial Intelligence (Artificial Intelligence Act) and Amending Certain Union Acts, COM/2021/206 final, Recital 15.
+
 * European Union. (1997). Consolidated versions of the treaty on European Union and of the treaty establishing the European community. Office for Official Publications of the European Communities.
+
 * European Union. (2010). Charter of Fundamental Rights of the European Union. Official Journal of the European Union C83, *53*. European Union.
+
 * Friedman, B., et al. (2013). Value Sensitive Design and Information Systems. In N. Doorn et al. (Eds.), Early Engagement and New Technologies: Opening up the Laboratory (pp. 55–95). Springer.
+
 * Frischhut, M. (2019). The Ethical Spirit of EU Law. Springer International Publishing.
 
+* Gyekye, K. (1997). Tradition and Modernity: Philosophical Reflections on the African Experience. Oxford University Press.
+
+* Himonga, C. (2013). The Right to Health in an African Cultural Context: The Role of Ubuntu in the Realization of the Right to Health with Special Reference to South Africa. Journal of African Law, *57*, 165–195.
+
+* Hoffmann v. South African Airways, 2000 (11) BCLR 1211 (CC).
+
+* The IEEE Global Initiative on Ethics of Autonomous and Intelligent Systems. (n.d.). Classical Ethics in A/IS. Retrieved from [`standards.ieee.org/wp-content/uploads/import/documents/other/ead1e_classical_ethics.pdf`](https://standards.ieee.org) (Accessed May 25, 2023).
+
+* Johnson, M., & Vera, A. (2019). No AI Is an Island: The Case for Teaming Intelligence. AI Magazine, *40*(1), 16–28.
+
+* Khosa and Others v Minister of Social Development and Others, 2004 (6) SA 505 (CC).
+
+* Kleinberg, J., Mullainathan, S., & Raghavan, M. (2016). Inherent trade-offs in the fair determination of risk scores. *arXiv:1609.05807*.
+
+* Liebenberg, S. (2012). Engaging the Paradoxes of the Universal and Particular in Human Rights Adjudication: The Possibilities and Pitfalls of “Meaningful Engagement.” African Human Rights Law Journal, *12*, 1.
+
+* Luengo-Oroz, M. (2019). Solidarity Should Be a Core Ethical Principle of AI. Nature Machine Intelligence, *1*, 494.
+
+* Mahlangu and Another v Minister of Labour and Others, 2021 (2) SA 54 (CC).
+
+* Makwanyane, S. V. 1995 (3) SA 391 (CC).
+
+* Mbiti, J. S. (1990). African Religions & Philosophy. Heinemann.
+
+* Menkiti, I. (2004). On the Normative Conception of a Person. In K. Wiredu (Ed.), A Companion to African Philosophy (pp. 324–331). Blackwell.
+
+* Metz, T. (2014). Dignity in the Ubuntu Tradition. In D. Mieth et al. (Eds.), The Cambridge Handbook of Human Dignity: Interdisciplinary Perspectives (pp. 310–318). Cambridge University Press.
+
+* Metz, T. (2020). Human Dignity, Capital Punishment, and an African Moral Theory: Toward a New Philosophy of Human Rights. Journal of Human Rights, *9*, 81–99.
+
+* Mhlambi, S. (2020). `From Rationality to Relationality: Ubuntu as an Ethical and Human Rights Framework for Artificial Intelligence Governance`. Carr Center Discussion Paper Series, no. 2020–009.
+
+* Mokgoro, Y. (2012). UBuntu and the Law in South Africa. In D. Cornell & N. Muvangua (Eds.), UBuntu and the Law: African Ideals and Post-Apartheid Jurisprudence (pp. 317–323). Fordham University Press.
+
+* Murungi, J. (2004). The Question of an African Jurisprudence: Some Hermeneutic Reflections. In K. Wiredu (Ed.), A Companion to African Philosophy (pp. 519–526). Blackwell.
+
+* Occupiers of 51 Olivia Road, Berea Township, and 197 Main Street, Johannesburg v City of Johannesburg, 2008 (3) SA 208 (CC).
+
+* Organizers of Queer in AI et al. (2023). Queer In AI: A Case Study in Community-Led Participatory AI. In *Proceedings of the 2023 ACM Conference on Fairness, Accountability, and Transparency (FAccT ’23)* (pp. 1882–1895). Association for Computing Machinery, New York, NY. [`doi.org/10.1145/3593013.3594134`](https://doi.org/10.1145/3593013.3594134)
+
+* Peeters, M. M. M., et al. (2021). Hybrid Collective Intelligence in a Human–AI Society. AI & Society, *36*, 218.
+
+* Port Elizabeth Municipality v Various Occupiers, 2005 (1) SA 217 (CC).
+
+* Ramose, M. B. (1999). African Philosophy Through Ubuntu. Mond Books.
+
+* Reviglio, U., & Alunge, R. (2020). “I Am Datafied Because We Are Datafied”: An Ubuntu Perspective on (Relational) Privacy. Philosophy & Technology, *33*, 595–612.
+
+* Shneiderman, B. (2022). Human-Centered AI. Oxford University Press.
+
+* Sporle, A., Hudson, M., & West, K. (2020). Indigenous data and policy in Aotearoa New Zealand. In M. Walter et al. (Eds.), Indigenous Data Sovereignty and Policy (pp. 62–80). Routledge.
 
 
 
+* Stoljar, N. (2013). Feminist Perspectives on Autonomy. In Stanford Encyclopedia of Philosophy. Retrieved May 23, 2023, from [`plato.stanford.edu/entries/feminism-autonomy/`](https://plato.stanford.edu)
 
-*   Gyekye, K. (1997). Tradition and Modernity: Philosophical Reflections on the African Experience. Oxford University Press.
-*   Himonga, C. (2013). The Right to Health in an African Cultural Context: The Role of Ubuntu in the Realization of the Right to Health with Special Reference to South Africa. Journal of African Law, *57*, 165–195.
-*   Hoffmann v. South African Airways, 2000 (11) BCLR 1211 (CC).
-*   The IEEE Global Initiative on Ethics of Autonomous and Intelligent Systems. (n.d.). Classical Ethics in A/IS. Retrieved from [`standards.ieee.org/wp-content/uploads/import/documents/other/ead1e_classical_ethics.pdf`](https://standards.ieee.org) (Accessed May 25, 2023).
-*   Johnson, M., & Vera, A. (2019). No AI Is an Island: The Case for Teaming Intelligence. AI Magazine, *40*(1), 16–28.
-*   Khosa and Others v Minister of Social Development and Others, 2004 (6) SA 505 (CC).
-*   Kleinberg, J., Mullainathan, S., & Raghavan, M. (2016). Inherent trade-offs in the fair determination of risk scores. *arXiv:1609.05807*.
-*   Liebenberg, S. (2012). Engaging the Paradoxes of the Universal and Particular in Human Rights Adjudication: The Possibilities and Pitfalls of “Meaningful Engagement.” African Human Rights Law Journal, *12*, 1.
-*   Luengo-Oroz, M. (2019). Solidarity Should Be a Core Ethical Principle of AI. Nature Machine Intelligence, *1*, 494.
-*   Mahlangu and Another v Minister of Labour and Others, 2021 (2) SA 54 (CC).
-*   Makwanyane, S. V. 1995 (3) SA 391 (CC).
-*   Mbiti, J. S. (1990). African Religions & Philosophy. Heinemann.
-*   Menkiti, I. (2004). On the Normative Conception of a Person. In K. Wiredu (Ed.), A Companion to African Philosophy (pp. 324–331). Blackwell.
-*   Metz, T. (2014). Dignity in the Ubuntu Tradition. In D. Mieth et al. (Eds.), The Cambridge Handbook of Human Dignity: Interdisciplinary Perspectives (pp. 310–318). Cambridge University Press.
-*   Metz, T. (2020). Human Dignity, Capital Punishment, and an African Moral Theory: Toward a New Philosophy of Human Rights. Journal of Human Rights, *9*, 81–99.
-*   Mhlambi, S. (2020). *From Rationality to Relationality: Ubuntu as an Ethical and Human Rights Framework for Artificial Intelligence Governance*. Carr Center Discussion Paper Series, no. 2020–009.
-*   Mokgoro, Y. (2012). UBuntu and the Law in South Africa. In D. Cornell & N. Muvangua (Eds.), UBuntu and the Law: African Ideals and Post-Apartheid Jurisprudence (pp. 317–323). Fordham University Press.
-*   Murungi, J. (2004). The Question of an African Jurisprudence: Some Hermeneutic Reflections. In K. Wiredu (Ed.), A Companion to African Philosophy (pp. 519–526). Blackwell.
-*   Occupiers of 51 Olivia Road, Berea Township, and 197 Main Street, Johannesburg v City of Johannesburg, 2008 (3) SA 208 (CC).
-*   Organizers of Queer in AI et al. (2023). Queer In AI: A Case Study in Community-Led Participatory AI. In *Proceedings of the 2023 ACM Conference on Fairness, Accountability, and Transparency (FAccT ’23)* (pp. 1882–1895). Association for Computing Machinery, New York, NY. [`doi.org/10.1145/3593013.3594134`](https://doi.org/10.1145/3593013.3594134)
-*   Peeters, M. M. M., et al. (2021). Hybrid Collective Intelligence in a Human–AI Society. AI & Society, *36*, 218.
-*   Port Elizabeth Municipality v Various Occupiers, 2005 (1) SA 217 (CC).
-*   Ramose, M. B. (1999). African Philosophy Through Ubuntu. Mond Books.
-*   Reviglio, U., & Alunge, R. (2020). “I Am Datafied Because We Are Datafied”: An Ubuntu Perspective on (Relational) Privacy. Philosophy & Technology, *33*, 595–612.
-*   Shneiderman, B. (2022). Human-Centered AI. Oxford University Press.
-*   Sporle, A., Hudson, M., & West, K. (2020). Indigenous data and policy in Aotearoa New Zealand. In M. Walter et al. (Eds.), Indigenous Data Sovereignty and Policy (pp. 62–80). Routledge.
-*   Stoljar, N. (2013). Feminist Perspectives on Autonomy. In Stanford Encyclopedia of Philosophy. Retrieved May 23, 2023, from [`plato.stanford.edu/entries/feminism-autonomy/`](https://plato.stanford.edu)
-*   van Norren, D. E. (2022). The Ethics of Artificial Intelligence, UNESCO and the African Ubuntu Perspective. Journal of Information, Communication and Ethics in Society, *21*, 112.
-*   Wachter, S., Mittelstadt, B., & Russell, C. (2021). *Bias Preservation in Machine Learning: The Legality of Fairness Metrics Under EU Non-Discrimination Law*. 123 W. Va. L. Rev. 735.
-*   Zehlike, M., et al. (2022). Beyond Incompatibility: Interpolation between Mutually Exclusive Fairness Criteria in Classification Problems. arXiv:2212.00469.
-*   Zwart, T. (2012). Using Local Culture to Further the Implementation of International Human Rights: The Receptor Approach. Human Rights Quarterly, *34*, 546–569.
+* van Norren, D. E. (2022). The Ethics of Artificial Intelligence, UNESCO and the African Ubuntu Perspective. Journal of Information, Communication and Ethics in Society, *21*, 112.
 
-## 3 重新定义以人为中心的人工智能 *人工智能推荐引擎的人类影响*
+* Wachter, S., Mittelstadt, B., & Russell, C. (2021). *Bias Preservation in Machine Learning: The Legality of Fairness Metrics Under EU Non-Discrimination Law*. 123 W. Va. L. Rev. 735.
+
+* Zehlike, M., et al. (2022). Beyond Incompatibility: Interpolation between Mutually Exclusive Fairness Criteria in Classification Problems. arXiv:2212.00469.
+
+* Zwart, T. (2012). Using Local Culture to Further the Implementation of International Human Rights: The Receptor Approach. Human Rights Quarterly, *34*, 546–569.
+
+# 3 重新定义以人为中心的人工智能 *人工智能推荐引擎的人类影响*
 
 Oshri Bar-Gil
 
@@ -978,17 +985,13 @@ Behavioral Science Research Institute, Israel
 
 DOI: [10.1201/9781003320791-5](https://dx.doi.org/10.1201/9781003320791-5)
 
-### 引言
+## 引言
 
 近年来，信息流不断增长，我们在日常决策中不断被源源不断的信息轰炸。正如数字文化倡导者 Kevin Kelly 在其著作 *The Inevitable*（2016）中所说，这个星球上增长最快的数量是我们所产生的信息量。这些信息不仅存在于科技公司的服务器上，也在各个方向包围着我们。无论是新闻、社交媒体信息流，还是会议的议程和时间安排，都有太多信息淹没我们并要求我们的关注（Andrejevic, 2013）。
 
 Evans et al. (2017, p. 36) 将可供性定义为对象/技术与用户之间用于行动的可能性，它能够在特定情境下使潜在的行为结果得以实现或受限。某些社会技术可供性，尤其是机器学习（`ML`）算法和大数据分析，承诺能够增强我们对信息的使用，并在信息处理和决策中“帮助”我们，使生活“更快”、更少压力且“无摩擦”（Rosa, 2013; Virilio, 2005）。通常，这些可供性被组织在平台提供的服务中，这些服务运用 `ML` 算法应用于用户由平台本身精心策划和保存的数字数据分身。平台利用它来推荐，并可能影响用户的未来行动，通过直接或间接匹配广告来更好地对用户进行画像（Zuboff, 2018）。这些推荐可能涉及最适合我们搜索的信息、我们想阅读的下一条新闻，以及音乐、商业等其他领域（Karakayali et al., 2018）。
 
 本章基于一个大型研究项目，该项目利用 Google 产品和服务的用户评论，对利用平台化服务所导致的自我和自我概念的变化进行现象学探究（Bar-Gil, 2021）。研究中选定的平台是 Google 及其众多个性化基于人工智能的服务，这些服务作为推荐引擎，在过去十年中已成为我们的个人思维助手。
-
-
-
-
 
 当前创建个性化 AI 推荐引擎服务的努力，使用我们在各种服务中积累的个人数据作为我们的数据分身，以及我们信息处理和决策的原型。这些增强的自我服务可以被视为我们应对信息过载的当代超能力——讨论、思考、行动和决策的伙伴。
 
@@ -1000,7 +1003,7 @@ Evans et al. (2017, p. 36) 将可供性定义为对象/技术与用户之间用�
 
 本章将首先描述当代信息环境，然后描述适应这一环境的各种技术努力，其中包括使用外部“认知技术”如推荐引擎，并详细说明其对用户的潜在影响。通过将推荐引擎用户形象添加到经典的扩展认知思想实验中并探索其对行为、认知和决策的潜在影响，将解释和说明这些认知技术的潜在影响。从那里，本章将阐述意图、理性以及记忆模式的可能变化，以形成关于如何使人工智能更以人为中心的讨论，考虑到其对我们作为人类的影响。
 
-### 新机遇
+## 新机遇
 
 今天的科技饱和环境被赋予了各种名称，例如第四次工业革命（Schwab, 2017）、第二次机器时代（Brynjolfsson & McAfee, 2016）或晚期信息时代（Fuchs, 2008）。它们都指向信息传输的广泛增加，具有高速通信网络、增加的存储能力以及具有强大计算能力的先进算法（McAfee & Brynjolfsson, 2017）。这些可供性为数字服务用户提供了新的机会，但也带来了更频繁、更迅速地做出决策的压力。据德国哲学家 Hartmut Rosa (2013) 称，随着技术发展速度的加快，人类进入了加速循环。技术加速导致生活方式加快，这需要新的技术来应对这种加速，等等。
 
@@ -1008,11 +1011,7 @@ Evans et al. (2017, p. 36) 将可供性定义为对象/技术与用户之间用�
 
 目前，HCAI 这一概念主要用于指实现人类和基本权利（Sigfrids et al., 2023）。然而，上述潜在影响要求扩大当前对 HCAI 是什么的定义。例如，Shneiderman (2022) 将其定义为使用人工智能“服务于人类集体的需求”，通过理解“人类语言、情感、意图和行为”。其他人，如 Wang et al. (2021, p. 1) 将其定义为设计和实施“人工智能技术以支持各种人类任务，同时考虑人类需求并保留人类控制。”
 
-#### AI 作为扩展认知辅助
-
-
-
-
+### AI 作为扩展认知辅助
 
 意识哲学家安迪·克拉克和大卫·查默斯（1998）提出了“扩展心智”假说。他们认为我们不能简单地以皮肤和颅骨的边界作为我们心智或自我的界限。他们提出了一个思想实验，旨在检验个体的认知如何被扩展，以评估其想法的有效性。让我们想象两个角色，奥托和英加，他们都想去博物馆。英加可以通过查看地图并记住路线找到方向。奥托患有阿尔茨海默病，因此必须在纸上写下方向，然后按照指示到达目的地。这个思想实验以圆满结局结束，两位角色都到达了博物馆。分析他们的思维过程可以发现，英加仅依靠她的“生物”认知来记住计划路线并做出关于走哪条路的判断和决定。相比之下，奥托的认知是“扩展”的。他前往博物馆的旅程涉及使用外部“记忆技术”，即一张纸，来帮助他在沿途的转弯处进行审慎和决策。克拉克和查默斯认为，奥托使用铅笔和纸张来替代其生物记忆证明了人类能够借助外部技术进行思考。按照他们的发现，两种结果背后的认知决策过程是相同的，即使参与该过程的心智组成部分不同，甚至是外部的。为本章的核心主题服务，即理解使用推荐引擎对我们人类的影响，让我们在这个思想实验中加入娜迪亚这个角色。娜迪亚依靠 Google Maps 应用程序前往博物馆。当娜迪亚在应用中输入博物馆名称时，它会显示机构的位置，提供多条路线，并提示她选择其中一条，也许还会微妙地建议最佳路线。然后它会利用她手机的 GPS 引导她前进，在需要时进行路径修正，甚至预判潜在的“更好”路线。
 
@@ -1028,11 +1027,7 @@ Evans et al. (2017, p. 36) 将可供性定义为对象/技术与用户之间用�
 
 这在将更多信息相关判断、决策和互动任务委托出去时产生了滚雪球效应。对技术的依赖增加以及基于自我表征数据的服务平台的发展不仅改变了我们获取知识的方式，也改变了我们在日常生活中评估知识、选择选项和处理知识的方式。一个人能够在现实世界或虚拟世界中行动的能力越来越多地被此类服务中介，几乎被控制。想想选择路线的决定有多少是你的，多少是算法的。如果没有谷歌服务，执行诸如查找信息、出行等各种任务会困难得多！经常有人迟到会把延迟归咎于“导航应用告诉他他会准时”，
 
-### 意图
-
-
-
-
+## 意图
 
 简化关于自主性的哲学争论，可以将其视为个体自我决定或自我治理的能力（Pham et al., 2021）。从这一观点来看，主体性是指我们能够为自己选择什么是对错，而不受他人不当影响的能力。意图指的是行动背后的目的或目标。在此语境中，意图可被视为与主体性和自主性密切相关，因为它反映了个体做出选择并付诸行动的能力（Smith, 2017）。上文提到的 Ihde (2009)认为，技术不仅仅帮助我们实现计划或改变我们做事的方式。它还影响这些计划形成过程本身——我们的意图。因此，正如思想实验所示，它削弱了使用者自主性和主体性。另一个例子可能是当用户开始搜索某个概念的信息时，却被谷歌搜索引擎的自动完成功能中途导向了不同的概念。
 
@@ -1042,7 +1037,7 @@ Evans et al. (2017, p. 36) 将可供性定义为对象/技术与用户之间用�
 
 这使得这些服务对我们非常有用——我们甚至不必明确告诉它我们的意图是什么；它会提出“自己的”想法来满足它所理解的我们的愿望，成为“中介主体”，从而削弱了人类主体性（Pickering, 2010）。
 
-### Rationality Engines
+## Rationality Engines
 
 我们倾向于遗忘、缺乏意识、处理速度受限、注意力不足以及规划能力薄弱，这些都是人类认知的特征。Herbert Simon (1971)创造了“有限理性”一词，指的就是这些限制导致我们在解决问题和做决策时使用心理捷径，而非彻底的计算和准备。它指的是思维过程本身，我们试图尽可能少地使用心理资源，以及决策过程，该过程可能以计算、优化和准确的方式获得，也可能不是——从而反映了人类理性的局限性。
 
@@ -1056,9 +1051,7 @@ Evans et al. (2017, p. 36) 将可供性定义为对象/技术与用户之间用�
 
 然而，这不仅仅是能够在不“浪费”时间进行计划和组织的情况下协调一切；谷歌日历甚至鼓励其用户更积极地完成任务，利用行为助推和提醒来引导注意力和决策以实现先前的意图，这就引出了问题：谁的议程为谁设定？算法的理性与效率对我们人类来说是好事吗？或者，也许，为了尊重我们的有限理性并允许人类自主，我们的 HCAI 系统需要做一些不同的事情？
 
-### Remembering in the Cloud
-
-
+## Remembering in the Cloud
 
 
 
@@ -1083,72 +1076,65 @@ HCAI 不能被视为一种技术设计。它必须包括伦理、心理、社会
 ### 注释
 
 1. 科技记者 Kashmir Hill 进行了一项实验，她每周屏蔽一家不同的科技公司。谷歌每天 104,000 次访问请求可以与 Facebook 的 15,880 次请求、Microsoft 的 15,600 次请求以及亚马逊的约 292,000 次访问请求相比较，亚马逊在其云存储服务（AWS）中存储了大量服务器。
-
 2. 这是一个非常简单的程序。参见：[`support.google.com/accounts/answer/3024190?hl=en`](https://support.google.com/accounts/answer/3024190?hl=en)
-
 3. 关于对导航系统依赖的更奇怪的故事请参见：[`www.telegraph.co.uk/technology/5081143/When-satnav-systems-go-awry.html`](https://www.telegraph.co.uk/technology/5081143/When-satnav-systems-go-awry.html)
-
 4. 我们塑造我们的建筑；此后它们塑造我们。参见：[`automatedbuildings.com/news/aug20/articles/lynxspring/200721102909lynxspring.html`](http://automatedbuildings.com/news/aug20/articles/lynxspring/200721102909lynxspring.html)
 
 ### 参考文献
 
 * Airoldi, M., Beraldo, D., & Gandini, A. (2016). Follow the algorithm: An exploratory investigation of music on YouTube. Poetics, *57*, 1–13. [`doi.org/10.1016/j.poetic.2016.05.001`](https://doi.org/10.1016/j.poetic.2016.05.001)
-
 * Andrejevic, M. (2013). Infoglut: How too much information is changing the way we think and know. Routledge.
-
 * Asara, F. (2016, September 29). Save time with smart scheduling in Google Calendar. Google. [`blog.google/products/calendar/save-time-with-smart-scheduling-in-google-calendar/`](https://blog.google/products/calendar/save-time-with-smart-scheduling-in-google-calendar/)
-
 * Bar-Gil, O. (2020). Clipping us together: The case of the Google Clips camera. NECSUS European Journal of Media Studies, *9*, 215–236. [`doi.org/10.25969/mediarep/14308`](https://doi.org/10.25969/mediarep/14308)
-
 * Bar-Gil, O. (2021). *Google’s self: Self-perception at the age of information*. [Doctoral Thesis, Bar-Ilan University].
-
 * Bratman, M. (1987). Intention, plans, and practical reason. Center for the Study of Language and Information.
+* Browne, K. (2022). 谁（或什么）是人工智能艺术家？ Leonardo, *55*(2), 130–134. [`doi.org/10.1162/leon\_a\_02092`](https://doi.org/10.1162/leon_a_02092)
+* Brynjolfsson, E., & McAfee, A. (2016). 第二台机器时代：在辉煌技术时代的工作、进步与繁荣 (第 1 版). W. W. Norton & Company.
+* Bullock, G. (2017, May 17). 在 Gmail 中使用智能回复节省时间. Google. [`blog.google/products/gmail/save-time-with-smart-reply-in-gmail/`](https://blog.google)
+* Castoriadis, C. (2011). 无意义的后记：与康斯坦丁·卡斯托里亚迪斯的对话 (英文版). Continuum.
+* Clark, A., & Chalmers, D. J. (1998). 扩展心智. Analysis, *58*(1), 7–19.
+* Clowes, R. (2015). 云端思考：云技术认知融合. Philosophy & Technology, *28*(2), 261–296. [`doi.org/10.1007/s13347-014-0153-z`](https://doi.org/10.1007/s13347-014-0153-z)
+* Deahl, D. (2018, May 10). 如何使用 Gmail 的新智能撰写 \[Blog\]. The Verge. [`www.theverge.com/2018/5/10/17340224/google-gmail-how-to-use-smart-compose-io-2018`](https://www.theverge.com)
+* Doneson, D. (2019). 命运的征服：关于算法判断的马基雅维利式特征. Social Research: An International Quarterly, *86*(4), 871–883.
+* Duong, Q. (2017, November 7). 跳过排队：在搜索和地图上查看餐厅等待时间. Google. [`www.blog.google/products/maps/skip-line-restaurant-wait-times-search-and-maps/`](https://www.blog.google)
+* Evans, S. K., Pearce, K. E., Vitak, J., & Treem, J. W. (2017). 阐释可供性：理解传播研究中可供性的概念框架. Journal of Computer-Mediated Communication, *22*(1), 35–52. [`doi.org/10.1111/jcc4.12180`](https://doi.org/10.1111/jcc4.12180)
+* Fisher, E. (2020). 账本与日记：算法知识与主体性. Continuum, 1–20. [`doi.org/10.1080/10304312.2020.1717445`](https://doi.org/10.1080/10304312.2020.1717445)
+* Fuchs, C. (2008). 互联网与社会：信息时代的社会理论. Routledge.
+* Hill, K. (2019, January 29). 我把 Google 从我的生活中剔除。它搞砸了一切. Gizmodo. [`gizmodo.com/i-cut-google-out-of-my-life-it-screwed-up-everything-1830565500`](https://gizmodo.com)
+* Hoskins, A. (2017). 群众的记忆：集体记忆的终结. In A. Hoskins (Ed.), 数字记忆研究：媒体过去的转型. Routledge.
+* Ihde, D. (2009). 后现象学与技术科学：北京大学讲座. SUNY Press.
+* Karakayali, N., Kostem, B., & Galip, I. (2018). 推荐系统作为自我技术：算法控制与音乐品味的形成. Theory Culture & Society, *35*, 3–24. [`doi.org/10.1177/0263276417722391`](https://doi.org/10.1177/0263276417722391)
+* Kelly, K. (2016). 不可避免：理解塑造我们未来的 12 项技术力量. Viking.
+* Lardinois, F. (2018, June 26). 带有个性化推荐的新版 Google 地图现已上线. TechCrunch. [`techcrunch.com/2018/06/26/the-new-google-maps-with-personalized-recommendations-is-now-live/`](https://techcrunch.com)
+* McAfee, A., & Brynjolfsson, E. (2017). 机器、平台、群体：利用我们的数字未来. W. W. Norton & Company.
+* Menary, R. (Ed.). (2010). 扩展心智. MIT Press.
+* Merleau-Ponty, M. (2002). 知觉现象学 (C. Smith, Trans.). Routledge. (Original work published 1945).
+* Milner, G. (2016). 精准定位：GPS 如何改变技术、文化和我们的思维. W. W. Norton & Company.
+* Nayak, P. (2020, September 10). 我们在搜索和新闻中的信息质量最新投资. Google. [`blog.google/products/search/our-latest-investments-information-quality-search-and-news/`](https://blog.google)
+* Newton, C. (2017, July 19). Google 在 iOS 和 Android 上推出个性化新闻流 Feed. The Verge. [`www.theverge.com/2017/7/19/15994156/google-feed-personalized-news-stream-android-ios-app`](https://www.theverge.com)
+* Nietzsche, F. W. (2006). 这样说的人：查拉图斯特拉：献给所有人也献给无人 (A. Del Caro & R. B. Pippin, Trans.). Cambridge University Press. [`dx.doi.org/10.1017/CBO9780511812095`](http://dx.doi.org/10.1017/CBO9780511812095) (Original work published 1883)
+* Pham, A., Rubel, A., & Castro, C. (Eds.). (2021). 自主性、能动性与责任. In Algorithms and autonomy: The ethics of automated decision systems (pp. 21–42). Cambridge University Press. [`doi.org/10.1017/9781108895057.002`](https://doi.org/10.1017/9781108895057.002)
+* Pickering, A. (2010). 物质文化与能动性的舞蹈. In The Oxford handbook of material culture studies. [`doi.org/10.1093/oxfordhb/9780199218714.013.0007`](https://doi.org/10.1093/oxfordhb/9780199218714.013.0007)
+* Ramnath, J. (2016, April 12). 使用 Google 日历为你的目标安排时间. The Keyword. [`www.blog.google/products/calendar/find-time-goals-google-calendar/`](https://www.blog.google)
+* Rosa, H. (2013). 社会加速：现代性新理论 (J. Trejo-Mathys, Trans.). Columbia University Press.
+* Schwab, K. (2017). 第四次工业革命. Crown Business.
+* Searle, J. R. (1983). 意向性：心灵哲学论文. Cambridge University Press.
+* Shneiderman, B. (2022). 以人为中心的 AI. Oxford University Press.
+* Sigfrids, A., Leikas, J., Salo-Pöntinen, H., & Koskimies, E. (2023). AI 治理中的以人为中心：系统性方法. Frontiers in Artificial Intelligence, *6*. [`www.frontiersin.org/articles/10.3389/frai.2023.976887`](https://www.frontiersin.org)
 
 
 
+* Simon, H. A. (1971). 为信息丰富世界设计组织. In M. Greenberger (Ed.), Computers, communication, and the public interest (pp. 37–72). The Johns Hopkins Press. [`digitalcollections.library.cmu.edu/awweb/awarchive?type=file&item=33748`](https://digitalcollections.library.cmu.edu)
 
-*   Browne, K. (2022). 谁（或什么）是人工智能艺术家？ Leonardo, *55*(2), 130–134. [`doi.org/10.1162/leon\_a\_02092`](https://doi.org/10.1162/leon_a_02092)
-*   Brynjolfsson, E., & McAfee, A. (2016). 第二台机器时代：在辉煌技术时代的工作、进步与繁荣 (第 1 版). W. W. Norton & Company.
-*   Bullock, G. (2017, May 17). 在 Gmail 中使用智能回复节省时间. Google. [`blog.google/products/gmail/save-time-with-smart-reply-in-gmail/`](https://blog.google)
-*   Castoriadis, C. (2011). 无意义的后记：与康斯坦丁·卡斯托里亚迪斯的对话 (英文版). Continuum.
-*   Clark, A., & Chalmers, D. J. (1998). 扩展心智. Analysis, *58*(1), 7–19.
-*   Clowes, R. (2015). 云端思考：云技术认知融合. Philosophy & Technology, *28*(2), 261–296. [`doi.org/10.1007/s13347-014-0153-z`](https://doi.org/10.1007/s13347-014-0153-z)
-*   Deahl, D. (2018, May 10). 如何使用 Gmail 的新智能撰写 \[Blog\]. The Verge. [`www.theverge.com/2018/5/10/17340224/google-gmail-how-to-use-smart-compose-io-2018`](https://www.theverge.com)
-*   Doneson, D. (2019). 命运的征服：关于算法判断的马基雅维利式特征. Social Research: An International Quarterly, *86*(4), 871–883.
-*   Duong, Q. (2017, November 7). 跳过排队：在搜索和地图上查看餐厅等待时间. Google. [`www.blog.google/products/maps/skip-line-restaurant-wait-times-search-and-maps/`](https://www.blog.google)
-*   Evans, S. K., Pearce, K. E., Vitak, J., & Treem, J. W. (2017). 阐释可供性：理解传播研究中可供性的概念框架. Journal of Computer-Mediated Communication, *22*(1), 35–52. [`doi.org/10.1111/jcc4.12180`](https://doi.org/10.1111/jcc4.12180)
-*   Fisher, E. (2020). 账本与日记：算法知识与主体性. Continuum, 1–20. [`doi.org/10.1080/10304312.2020.1717445`](https://doi.org/10.1080/10304312.2020.1717445)
-*   Fuchs, C. (2008). 互联网与社会：信息时代的社会理论. Routledge.
-*   Hill, K. (2019, January 29). 我把 Google 从我的生活中剔除。它搞砸了一切. Gizmodo. [`gizmodo.com/i-cut-google-out-of-my-life-it-screwed-up-everything-1830565500`](https://gizmodo.com)
-*   Hoskins, A. (2017). 群众的记忆：集体记忆的终结. In A. Hoskins (Ed.), 数字记忆研究：媒体过去的转型. Routledge.
-*   Ihde, D. (2009). 后现象学与技术科学：北京大学讲座. SUNY Press.
-*   Karakayali, N., Kostem, B., & Galip, I. (2018). 推荐系统作为自我技术：算法控制与音乐品味的形成. Theory Culture & Society, *35*, 3–24. [`doi.org/10.1177/0263276417722391`](https://doi.org/10.1177/0263276417722391)
-*   Kelly, K. (2016). 不可避免：理解塑造我们未来的 12 项技术力量. Viking.
-*   Lardinois, F. (2018, June 26). 带有个性化推荐的新版 Google 地图现已上线. TechCrunch. [`techcrunch.com/2018/06/26/the-new-google-maps-with-personalized-recommendations-is-now-live/`](https://techcrunch.com)
-*   McAfee, A., & Brynjolfsson, E. (2017). 机器、平台、群体：利用我们的数字未来. W. W. Norton & Company.
-*   Menary, R. (Ed.). (2010). 扩展心智. MIT Press.
-*   Merleau-Ponty, M. (2002). 知觉现象学 (C. Smith, Trans.). Routledge. (Original work published 1945).
-*   Milner, G. (2016). 精准定位：GPS 如何改变技术、文化和我们的思维. W. W. Norton & Company.
-*   Nayak, P. (2020, September 10). 我们在搜索和新闻中的信息质量最新投资. Google. [`blog.google/products/search/our-latest-investments-information-quality-search-and-news/`](https://blog.google)
-*   Newton, C. (2017, July 19). Google 在 iOS 和 Android 上推出个性化新闻流 Feed. The Verge. [`www.theverge.com/2017/7/19/15994156/google-feed-personalized-news-stream-android-ios-app`](https://www.theverge.com)
-*   Nietzsche, F. W. (2006). 这样说的人：查拉图斯特拉：献给所有人也献给无人 (A. Del Caro & R. B. Pippin, Trans.). Cambridge University Press. [`dx.doi.org/10.1017/CBO9780511812095`](http://dx.doi.org/10.1017/CBO9780511812095) (Original work published 1883)
-*   Pham, A., Rubel, A., & Castro, C. (Eds.). (2021). 自主性、能动性与责任. In Algorithms and autonomy: The ethics of automated decision systems (pp. 21–42). Cambridge University Press. [`doi.org/10.1017/9781108895057.002`](https://doi.org/10.1017/9781108895057.002)
-*   Pickering, A. (2010). 物质文化与能动性的舞蹈. In The Oxford handbook of material culture studies. [`doi.org/10.1093/oxfordhb/9780199218714.013.0007`](https://doi.org/10.1093/oxfordhb/9780199218714.013.0007)
-*   Ramnath, J. (2016, April 12). 使用 Google 日历为你的目标安排时间. The Keyword. [`www.blog.google/products/calendar/find-time-goals-google-calendar/`](https://www.blog.google)
-*   Rosa, H. (2013). 社会加速：现代性新理论 (J. Trejo-Mathys, Trans.). Columbia University Press.
-*   Schwab, K. (2017). 第四次工业革命. Crown Business.
-*   Searle, J. R. (1983). 意向性：心灵哲学论文. Cambridge University Press.
-*   Shneiderman, B. (2022). 以人为中心的 AI. Oxford University Press.
-*   Sigfrids, A., Leikas, J., Salo-Pöntinen, H., & Koskimies, E. (2023). AI 治理中的以人为中心：系统性方法. Frontiers in Artificial Intelligence, *6*. [`www.frontiersin.org/articles/10.3389/frai.2023.976887`](https://www.frontiersin.org)
-*   Simon, H. A. (1971). 为信息丰富世界设计组织. In M. Greenberger (Ed.), Computers, communication, and the public interest (pp. 37–72). The Johns Hopkins Press. [`digitalcollections.library.cmu.edu/awweb/awarchive?type=file&item=33748`](https://digitalcollections.library.cmu.edu)
-*   Smith, M. N. (2017). 意图：过去、现在、未来. Philosophical Explorations, *20*(sup2), 1–12. [`doi.org/10.1080/13869795.2017.1356360`](https://doi.org/10.1080/13869795.2017.1356360)
-*   Sorgner, S. L. (2009). 尼采、超人以及超人类主义. Journal of Evolution and Technology, *20*(1), 29–42.
-*   Sparrow, B., Liu, J., & Wegner, D. M. (2011). 谷歌对记忆的影响：信息触手可及的认知后果. Science, *333*(6043), 776–778. [`doi.org/10.1126/science.1207745`](https://doi.org/10.1126/science.1207745)
-*   Stephens-Davidowitz, S. (2017). 人人说谎：大数据、新数据以及互联网能告诉我们关于我们真实自我的事情. Dey St.
-*   Stiegler, B. (1998). 技术与时间：厄皮米修斯的过错. Stanford University Press.
+* Smith, M. N. (2017). 意图：过去、现在、未来. Philosophical Explorations, *20*(sup2), 1–12. [`doi.org/10.1080/13869795.2017.1356360`](https://doi.org/10.1080/13869795.2017.1356360)
 
+* Sorgner, S. L. (2009). 尼采、超人以及超人类主义. Journal of Evolution and Technology, *20*(1), 29–42.
 
+* Sparrow, B., Liu, J., & Wegner, D. M. (2011). 谷歌对记忆的影响：信息触手可及的认知后果. Science, *333*(6043), 776–778. [`doi.org/10.1126/science.1207745`](https://doi.org/10.1126/science.1207745)
 
+* Stephens-Davidowitz, S. (2017). 人人说谎：大数据、新数据以及互联网能告诉我们关于我们真实自我的事情. Dey St.
+
+* Stiegler, B. (1998). 技术与时间：厄皮米修斯的过错. Stanford University Press.
 
 * Umapathy, V. (2015 年 12 月 7 日). 使用 Reminders 将待办事项添加到您的 Google 日历中。The Keyword。 [`blog.google/products/calendar/add-to-dos-to-your-google-calendar/`](https://blog.google)
 
@@ -1164,7 +1150,7 @@ HCAI 不能被视为一种技术设计。它必须包括伦理、心理、社会
 
 * Zuboff, S. (2018). 监控资本主义时代：在权力新前沿为人类的未来而战。PublicAffairs。
 
-## 4 人本主义人工智能与用户体验设计交叉处的伦理
+# 4 人本主义人工智能与用户体验设计交叉处的伦理
 
 Christopher D. Quintana
 
@@ -1174,7 +1160,7 @@ DOI: [10.1201/9781003320791-6](https://dx.doi.org/10.1201/9781003320791-6)
 
 在试图理解和开发人本主义人工智能的概念时，越来越呼吁认识到人机交互理论与实践、人工智能开发以及道德和社会哲学中常被审视的道德关切之间丰富的协作可能性。与其中一个或全部领域相交的工作往往强调用户使用情境、用户所导航的数字环境性质，以及被整合用于创造用户体验的广泛设计实践之间的相互作用。在本章中，我旨在突出在用户与不同形式人工智能之间的这些交互点上可能出现的道德和社会关切。我认为，人与机器之间的交互点是审视伦理问题的本质以及导致这些问题的机制的丰富来源。因此，标题中的交叉点既指用户交互，也指伦理和哲学可以与用户体验设计洞见相遇的点。我首先简要概述一些对人工智能哲学伦理有影响的方法，然后转向探索上述交叉点，以便更广泛地理解设计人本主义人工智能系统所涉及的内容以及由此引发的道德问题。
 
-### 人工智能伦理中的主流思潮
+## 人工智能伦理中的主流思潮
 
 在本章中，我遵循现有的 AI 伦理文献，认为“将算法的伦理与它们在计算机程序、软件和信息系统中的实现和执行分开考虑是没有意义的”，并且从技术伦理学家关注“基于复杂规则做出通常可靠……决策的决策算法”中获益良多，这些规则挑战或困扰人类行动和理解的能力……算法的行动难以预测，或其决策逻辑事后难以解释” (Mittelstadt et al., 2016) 或突出那些根本未被解决的重要问题或问题。当前人工智能的部署现实，通常被称为狭义人工智能，
 
@@ -1192,39 +1178,31 @@ DOI: [10.1201/9781003320791-6](https://dx.doi.org/10.1201/9781003320791-6)
 
 规范性问题，例如导致偏见和歧视的不公平结果，仍然与前面提到的认识论关切密切相关。有偏见的数据和画像算法参与了这些问题的延续。例如，个性化算法可以强化现有的社会劣势，并导致自我实现的预言和对某些群体的污名化，最终破坏他们参与社会的潜力。此外，个人在更广泛群体内的画像和聚合，以及所使用的不透明流程和数据，都引发了关于信息隐私的问题。信息隐私的概念通常被理解为将个人数据屏蔽于第三方、控制自己的信息、并要求他人付出努力才能获取的权利。研究人员指出，个体身份的特异性并非信息隐私关切产生的必要条件，因为算法倾向于根据共同特征对人群进行聚合。
 
-
-
-
-
 另一种相关的可追溯性关乎道德责任（VII）。当技术出现故障时，通常希望将指责、制裁或问责追溯到具有控制权的行动者。计算机程序员历史上对程序效果和潜在故障有一种总体把握。然而，随着信息通信技术和编程的快速发展，由于复杂性和数量庞大，追溯责任变得越来越困难。伦理学家和研究者（Bozdag, 2013；Kramer et al., 2011）认为，对于非学习算法，程序员仍保留一定责任。然而，在追溯责任时，面对庞大且不透明的数据集，这些数据集违背透明度和人类监督，问题就出现了。当算法具备学习能力时，问题变得更加复杂，因为其不确定性使得难以将责任 pinpoint 到特定的程序员或群体，他们无法预测算法将如何学习并对新的数据输入做出反应。是否可以将自我学习算法归为具有能动性、道德地位和伦理决策能力，仍然存在争议。同样，在这种情况下开发者的责任也在争论之中：
 
 > 将道德能动性赋予人工智能代理可能会让人类利益相关者将责任转移给算法。否认人工智能代理的能动性会使设计者对其半自主创造物的不道德行为负责；不良后果反映了糟糕的设计。鉴于监督的复杂性和决策结构的波动性，两种极端都不完全令人满意。
-
+>
 > (Mittelstadt et al., 2016, p. 11)
 
 最后一个主题聚焦于算法对自主性的变革性影响，研究者主要分析个性化算法。Tsamados et al. (2022) 识别出关于用户自主性的三个担忧来源：（i）主动学习算法的普遍分发，影响用户选择，（ii）用户对算法的有限理解，以及（iii）对算法结果缺乏申诉渠道。许多用户缺乏对学习算法如何运作的深入理解。缺乏理解会阻碍用户充分利用算法来实现其目标。然而，自 Tsamados 等人发表以来，已取得了一些进展，许多普通人发展出了对算法依赖于显式数据输入进行策展的默会知识，并且对算法结果的申诉渠道有限化有所转向。这种意识仍然不足以涵盖完全的理解和对结果施加控制的能力。因此，审视学习和个性化算法对自主选择的威胁，揭示了技术、伦理和政治问题的复杂交集。公众对算法的着迷和担忧反映了学者对回音室、认识论泡沫、错误信息、信息多样性缺乏以及整体上对用户人格和意识形态塑造的担忧。
 
-### 技术社会人工智能伦理
+## 技术社会人工智能伦理
 
 上述所讨论的规范性和认识论问题是正当且重要的研究和行动领域。然而，更广阔的系统愿景重新构想了我们对自主性等事物如何受到影响的认知。例如，一种理解上述规范性和认识论问题的方式是，一方面想象一个稳定的“主体”，即用户配备有一套稳定的能力（例如理性与选择）以及某种权利（例如自主性或隐私）。另一方面，你拥有一种技术或算法 *in medias res*，似乎没有历史，也无视设计它所涉及的众多人之手。然而，这种框架存在掩盖使某种技术得以实现的社会生产过程的风险。
 
-#### 技术社会工程
+### 技术社会工程
 
 学者 Brett Frischmann 和 Evan Selinger 表达了对他们所称的人类技术社会再工程的担忧。对于 Frischmann and Selinger (2018) 而言，信息通信技术（ICTs）提供了可供性（即工具与使用者关系所启用的能力），最终削弱了人类实践能动性所赋予的自由。
 
 > Facebook 用户已被编程为对刺激做出反应，而不去思考其真实性，即使他们可能有理由这样做。Facebook 平台通过提供一个自动化系统来推动个人发送问候，从而改变了祝朋友生日快乐的社会实践，导致比原本会给予或收到的生日祝福数量大幅增加。
-
+>
 > (Haenschen et al., 2021), p. 1479)
 
-值得注意的是，当某人陷入 Facebook 用户体验时，发生的事情不仅仅是粗暴的信息推动，即基于信息可用性而推动行动的 nudge。毫无疑问，生日发生的原始信息至关重要，但界面设计在文本信息之外更深入地调动用户：界面部署了色彩理论的使用（例如为通知使用红色）、情感和象征性设计（例如使用相关的生日图像）以及量身定制的呈现（例如显示其他人正在该生日者的个人资料上积极发布）。对拉斯维加斯机器赌博的开创性研究提供了一个有用的平行案例 (Schüll, 2014)。不仅仅是赌博相对少量金钱可能带来巨大收益的信息让赌场老虎机区域挤满了渴望的用户——尽管这可能不可或缺。赌场设计师很早就理解了赌场内部设计和布局的好处：建筑、氛围和情感反应，由在赌场楼层行走产生以保持用户参与——更不用说机器提供的令人满意的视觉奇观、触觉反馈和听觉参与。各种数字平台的设计者和使用者同样应该认识到，他们的设计以及其中部署的狭窄形式的<|message|> 人工智能如何创造一个能够从根本上改变用户行为和习惯的数字环境。
+值得注意的是，当某人陷入 Facebook 用户体验时，发生的事情不仅仅是粗暴的信息推动，即基于信息可用性而推动行动的 nudge。毫无疑问，生日发生的原始信息至关重要，但界面设计在文本信息之外更深入地调动用户：界面部署了色彩理论的使用（例如为通知使用红色）、情感和象征性设计（例如使用相关的生日图像）以及量身定制的呈现（例如显示其他人正在该生日者的个人资料上积极发布）。对拉斯维加斯机器赌博的开创性研究提供了一个有用的平行案例 (Schüll, 2014)。不仅仅是赌博相对少量金钱可能带来巨大收益的信息让赌场老虎机区域挤满了渴望的用户——尽管这可能不可或缺。赌场设计师很早就理解了赌场内部设计和布局的好处：建筑、氛围和情感反应，由在赌场楼层行走产生以保持用户参与——更不用说机器提供的令人满意的视觉奇观、触觉反馈和听觉参与。各种数字平台的设计者和使用者同样应该认识到，他们的设计以及其中部署的狭窄形式的
 
-#### 道德去技能化与习惯化
+### 道德去技能化与习惯化
 
 在技术哲学伦理学中，越来越担心技术不仅改变用户的行为和习惯，还可能导致关键道德技能或能力的萎缩。首次尝试解决信息通信技术可能对道德技能培养产生的影响，如在美德理论中所理解的，可以在 Vallor (2015) 中找到。在这篇里程碑式的论文中，Vallor 试图“借鉴社会学关于经济去技能化的辩论的概念工具，以阐明技术去技能/增技能的不同潜力，即 ICTs 有助于人类用户道德去技能的能力。”
-
-
-
-
 
 要进行此类审视，瓦洛尔从道德技能在品格培养中的作用开始。在新亚里士多德的基础之上，她强调在美德理论文献中，美德是通过培养获得的，而非品格的先天状态。在这种框架下，某人是否发展出某种特定美德的可能性，将取决于他们是否“反复参与培养该美德的类型实践”，具体而言是“成功在特定道德情境中培养正确行动技能的实践”(Vallor, 2015，第 109 页)。
 
@@ -1248,129 +1226,121 @@ DOI: [10.1201/9781003320791-6](https://dx.doi.org/10.1201/9781003320791-6)
 
 该示例强调，我对设计师在此情境中角色的描绘无疑是有限的，且只是更大图景的一部分。通过聚焦用户体验设计师，我无意将责任负担放在产品开发中一个经常缺乏投资或成熟度阶段的部分。
 
-### 讨论
+## 讨论
 
 
 
+动态和自适应人工智能系统的普遍存在，例如内容推荐器（例如新闻、视频、音频）、预测模型（例如金融建模）、决策（例如抵押贷款）和自然语言理解系统（例如聊天机器人），给以人为中心的<|message|>设计带来了挑战。鉴于人工智能的社会影响，研究人员认为可解释性超出了法律要求，而“支持用户掌控”并帮助“设计师提高正确性、识别训练数据改进、应对不断变化的现实”（Shneiderman, 2020，第 26:9 页）。对于 Shneiderman（2020），发展的这一方面是开发可解释和探索性用户界面的技术实践的一部分，这一方面创造了可靠的软件工程系统。这里“可解释和探索性用户界面”指的是配备组件以允许用户理解和控制这些过程的界面。
 
+一个典型案例是对 Google Flights 服务的案例研究，该服务使用机器学习预测航班价格（Polonski, 2020）。认识到客户会持续比较价格，其设计师旨在通过提供清晰易懂的信息来促进“价格智能”。这通过纳入设计元素来实现，这些元素显示当前价格的好坏、简单的文本解释、关于潜在价格变化的预测信息以及视觉元素。例如，价格可视化条使用数字和颜色绿色、黄色和红色在滑块上指示良好与平均与不良的价格。在条下方，用户可以点击访问显示价格历史的图表。除了这些元素之外，还有一种简单的方式来访问用于进行计算的数据源。因此，设计师在使用户能够获取信息并探索其选项的同时避免了认知过载。这种方法促进了知情决策，避免了认知过载，并与 Shneiderman’s（2020）的可解释和探索性界面概念保持一致。
 
-动态和自适应人工智能系统的普遍存在，例如内容推荐器（例如新闻、视频、音频）、预测模型（例如金融建模）、决策（例如抵押贷款）和自然语言理解系统（例如聊天机器人），给以人为中心的<|message|>设计带来了挑战。鉴于人工智能的社会影响，研究人员认为可解释性超出了法律要求，而“支持用户掌控”并帮助“设计师提高正确性、识别训练数据改进、应对不断变化的现实” (Shneiderman, 2020，第 26:9 页)。对于 Shneiderman (2020)，发展的这一方面是开发可解释和探索性用户界面的技术实践的一部分，这一方面创造了可靠的软件工程系统。这里“可解释和探索性用户界面”指的是配备组件以允许用户理解和控制这些过程的界面。
-
-一个典型案例是对 Google Flights 服务的案例研究，该服务使用机器学习预测航班价格 (Polonski, 2020)。认识到客户会持续比较价格，其设计师旨在通过提供清晰易懂的信息来促进“价格智能”。这通过纳入设计元素来实现，这些元素显示当前价格的好坏、简单的文本解释、关于潜在价格变化的预测信息以及视觉元素。例如，价格可视化条使用数字和颜色绿色、黄色和红色在滑块上指示良好与平均与不良的价格。在条下方，用户可以点击访问显示价格历史的图表。除了这些元素之外，还有一种简单的方式来访问用于进行计算的数据源。因此，设计师在使用户能够获取信息并探索其选项的同时避免了认知过载。这种方法促进了知情决策，避免了认知过载，并与 Shneiderman’s (2020) 的可解释和探索性界面概念保持一致。
-
-从本章“道德去技能化和习惯化”部分所述的“去技能化和习惯化”模型的角度来看，一个关键的考虑因素是通过这些交互培养的技能和习惯的性质。这不仅仅是变得擅长购买航班的问题，尽管这可能很有帮助，而是通过促进探索、反馈和理解，培养用户频繁使用的数字环境的熟练参与。相反，模糊人工智能交互的界面可能导致用户习惯于错误地放置信任并对能力产生错误的期望。这种习惯化的影响远远超出了消费者选择，因为数字界面涵盖了社会、政治、美学和教育实践的许多方面。从美德伦理学和认识论的角度来看，对认识论和道德美德都存在风险，例如智力谦逊 (Heersmink, 2018) 或同理心和适当的或明辨的关注 (Vallor, 2018)。然而，这种美德理论视角可以为产品规划阶段和产品分析提供信息，通过识别产品可能培养的习惯和技能类型及其道德影响。这种方法试图超越对公平、透明和问责的呼吁，并有助于呼吁促进“提高自我效能、鼓励创造力、明确责任并促进社会参与”的实践 (Shneiderman, 2020)。
+从本章“道德去技能化和习惯化”部分所述的“去技能化和习惯化”模型的角度来看，一个关键的考虑因素是通过这些交互培养的技能和习惯的性质。这不仅仅是变得擅长购买航班的问题，尽管这可能很有帮助，而是通过促进探索、反馈和理解，培养用户频繁使用的数字环境的熟练参与。相反，模糊人工智能交互的界面可能导致用户习惯于错误地放置信任并对能力产生错误的期望。这种习惯化的影响远远超出了消费者选择，因为数字界面涵盖了社会、政治、美学和教育实践的许多方面。从美德伦理学和认识论的角度来看，对认识论和道德美德都存在风险，例如智力谦逊（Heersmink, 2018）或同理心和适当的或明辨的关注（Vallor, 2018）。然而，这种美德理论视角可以为产品规划阶段和产品分析提供信息，通过识别产品可能培养的习惯和技能类型及其道德影响。这种方法试图超越对公平、透明和问责的呼吁，并有助于呼吁促进“提高自我效能、鼓励创造力、明确责任并促进社会参与”的实践（Shneiderman, 2020）。
 
 虽然本章重点关注嵌入在人机交互中的技术社会工程，但“设计在情境中”部分中 FTC 对 Epic Games 的案例强调，可解释和探索性界面的决策制定往往因管理或商业压力而复杂化。因此，Shneiderman 认为，可靠、以人为中心的系统的创建不仅需要良好的设计实践，还需要在组织层面（例如领导力承诺、招聘和培训以及内部审查）的安全文化以及值得信赖的外部审查（例如审计公司、专业组织和治理）的某种组合。这些是在组织和政治层面都复杂且有争议的行动区域。此外，如果以人为中心的設計需要阐明人工智能系统为用户提供的价值，那么组织就确保人工智能实施与用户需求、能力和期望保持一致。如果人工智能系统的益处不明确，或其性能存疑，就存在不必要部署的风险。这种反思性旨在遏制一种技术文化的形成，这种文化威胁到无反思地部署人工智能驱动的产品，并以牺牲人类能力和实践为代价。
 
-### 致谢
+## 致谢
 
 感谢 Sally Scholz 对本工作的早期版本的评论。随着工作的进展，我还要感谢本卷的 fellow 作家以及本卷的编辑对他们的评论和建议。任何不足之处均由我一人承担。
 
-### 注释
+## 注释
 
-1. 我遵循 Tasioulas (2022) 将狭义人工智能理解为“能够执行有限任务（例如面部识别或医学诊断）的 AI 驱动技术”。相比之下，通用人工智能在理论上将能够进行一系列人类认知能力，并且可能学会将能力用于未在预定训练中包含的任务。
+1. 我遵循 Tasioulas（2022）将狭义人工智能理解为“能够执行有限任务（例如面部识别或医学诊断）的 AI 驱动技术”。相比之下，通用人工智能在理论上将能够进行一系列人类认知能力，并且可能学会将能力用于未在预定训练中包含的任务。
 
-2. Van Otterlo 的隐喻在这里特别有帮助：“即使我作为个人——用木头（即保护我的数据）替换了我自己的 \[玻璃\] 房子里的所有玻璃，也仍然可能构建我所有邻居的个人资料并从中推断出关于我的信息。”（Van Otterlo, 2013, 第 3 页），引自 Mittelstadt et al. (2016)。
+2. Van Otterlo 的隐喻在这里特别有帮助：“即使我作为个人——用木头（即保护我的数据）替换了我自己的 \[玻璃\] 房子里的所有玻璃，也仍然可能构建我所有邻居的个人资料并从中推断出关于我的信息。”（Van Otterlo, 2013, 第 3 页），引自 Mittelstadt et al.（2016）。
 
-3. 这一另类传统中的重要技术哲学家包括 Jeroen van den Hoven、Peter-Paul Verbeek、Albert Borgmann 和 Bruno Latour 等人。尤其是参见 Verbeek (2005)。
+3. 这一另类传统中的重要技术哲学家包括 Jeroen van den Hoven、Peter-Paul Verbeek、Albert Borgmann 和 Bruno Latour 等人。尤其是参见 Verbeek（2005）。
 
-4. Cf. Paul Dourish (2004) 的序言，*Where the Action Is: The Foundations of Embodied Interaction*，“当代认知科学的很大一部分基于心智与物质、认知与行动之间严格的笛卡尔分离……\[相比之下\]一种新方法放弃了无身体理性的观念，并将其替换为情境化主体在世界中行动并与之互动的模型。”请注意，我在这里更关注解释“笛卡尔主义”在所探索的语境中的含义，而不是哲学史项目中将立场归于经典思想家的任务。
+4. Cf. Paul Dourish（2004）的序言，*Where the Action Is: The Foundations of Embodied Interaction*，“当代认知科学的很大一部分基于心智与物质、认知与行动之间严格的笛卡尔分离……\[相比之下\]一种新方法放弃了无身体理性的观念，并将其替换为情境化主体在世界中行动并与之互动的模型。”请注意，我在这里更关注解释“笛卡尔主义”在所探索的语境中的含义，而不是哲学史项目中将立场归于经典思想家的任务。
 
-5. 关于信息通信技术的哲学和伦理方法的广泛概述，参见 Quintana (2023)。
+5. 关于信息通信技术的哲学和伦理方法的广泛概述，参见 Quintana（2023）。
 
-6. (Vallor, 2015, 第 108 页)。Vallor 还强调了提升技能或再技能化的可能性。例如，她指出该现象的模糊特征，引用计算机革命如何使白领工人摆脱了归档或复印等一系列任务。然而，就目前而言，我关注的是论文中采取批判性方法对待熟练行动的部分。
+6. （Vallor, 2015, 第 108 页）。Vallor 还强调了提升技能或再技能化的可能性。例如，她指出该现象的模糊特征，引用计算机革命如何使白领工人摆脱了归档或复印等一系列任务。然而，就目前而言，我关注的是论文中采取批判性方法对待熟练行动的部分。
 
-7. Shourmasti et al. (2021)。另见 Alenljung et al. (2017)。
+7. Shourmasti et al.（2021）。另见 Alenljung et al.（2017）。
 
-8. Fallman (2011)。相比之下，Fallman 认为人机交互需要转向一种新的、受道德哲学启发的关于构成“良好”——在道德意义上的良好——用户体验的解释。
+8. Fallman（2011）。相比之下，Fallman 认为人机交互需要转向一种新的、受道德哲学启发的关于构成“良好”——在道德意义上的良好——用户体验的解释。
 
+9. （Papaoikonomou et al., 2011）提供了对伦理消费需求如何促使该主题产生大量实证研究的窥见。
 
-
-
-
-9. (Papaoikonomou et al., 2011) 提供了对伦理消费需求如何促使该主题产生大量实证研究的窥见。
-
-10. Nevertheless，必须强调，从德性伦理学的角度来看，仅基于工具价值的善良行为动机是不够的。如此行事的个人或组织并未达到德性。关于此，请参阅 Hursthouse (2010) 中的“德性行动者的行动理由”，MacIntyre (2006) 的 第 9 章，以及 Moore (2019) 的 第 7 章。
+10. Nevertheless，必须强调，从德性伦理学的角度来看，仅基于工具价值的善良行为动机是不够的。如此行事的个人或组织并未达到德性。关于此，请参阅 Hursthouse（2010）中的“德性行动者的行动理由”，MacIntyre（2006）的 第 9 章，以及 Moore（2019）的 第 7 章。
 
 11. 参见 Lesley Fair，“$245 million FTC settlement alleges Fortnite owner Epic Games used digital dark patterns to charge players for unwanted in-game purchases,” 2022: [`www.ftc.gov/business-guidance/blog/2022/12/245-million-ftc-settlement-alleges-fortnite-owner-epic-games-used-digital-dark-patterns-charge`](https://www.ftc.gov)
 
-12. 参见 Pernice et al. (2021)：[`www.nngroup.com/articles/ux-maturity-model/`](https://www.nngroup.com) 关于这一用户体验成熟度的概念。
+12. 参见 Pernice et al.（2021）：[`www.nngroup.com/articles/ux-maturity-model/`](https://www.nngroup.com) 关于这一用户体验成熟度的概念。
 
-### 参考文献
+## 参考文献
 
-* Alenljung, B., Lindblom, J., Andreasson, R., & Ziemke, T. (2017). 社会人机交互中的用户体验. International Journal of Ambient Computing and Intelligence, *8*(2), 12–31. [`doi.org/10.4018/ijaci.2017040102`](https://doi.org/10.4018/ijaci.2017040102)
+* Alenljung, B., Lindblom, J., Andreasson, R., & Ziemke, T.（2017）. 社会人机交互中的用户体验. International Journal of Ambient Computing and Intelligence, *8*(2), 12–31. [`doi.org/10.4018/ijaci.2017040102`](https://doi.org/10.4018/ijaci.2017040102)
 
-* Bozdag, E. (2013). 算法过滤和个性化中的偏见. Ethics and Information Technology, *15*, 209–227. [`doi.org/10.1007/s10676-013-9321-6`](https://doi.org/10.1007/s10676-013-9321-6)
+* Bozdag, E.（2013）. 算法过滤和个性化中的偏见. Ethics and Information Technology, *15*, 209–227. [`doi.org/10.1007/s10676-013-9321-6`](https://doi.org/10.1007/s10676-013-9321-6)
 
-* Clark, A. (2004). 天生的赛博格：心智、技术与人类智能的未来. Oxford University Press.
+* Clark, A.（2004）. 天生的赛博格：心智、技术与人类智能的未来. Oxford University Press.
 
-* Dautenhahn, K. (2013). 人机交互. The Interaction Design Foundation. [`www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed/human-robot-interaction`](https://www.interaction-design.org)
+* Dautenhahn, K.（2013）. 人机交互. The Interaction Design Foundation. [`www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed/human-robot-interaction`](https://www.interaction-design.org)
 
-* Dourish, P. (2004). 行动所在：具身交互的基础. MIT Press.
+* Dourish, P.（2004）. 行动所在：具身交互的基础. MIT Press.
 
-* Dreyfus, H., & Kelly, S. D. (2011). 一切闪耀：阅读西方经典以在世俗时代寻找意义. Amsterdam University Press.
+* Dreyfus, H., & Kelly, S. D.（2011）. 一切闪耀：阅读西方经典以在世俗时代寻找意义. Amsterdam University Press.
 
-* Fallman, D. (2011). 新的善. Proceedings of the SIGCHI Conference on Human Factors in Computing Systems. [`doi.org/10.1145/1978942.1979099`](https://doi.org/10.1145/1978942.1979099)
+* Fallman, D.（2011）. 新的善. Proceedings of the SIGCHI Conference on Human Factors in Computing Systems. [`doi.org/10.1145/1978942.1979099`](https://doi.org/10.1145/1978942.1979099)
 
-* Frischmann, B., & Selinger, E. (2018). 重新设计人类. Cambridge University Press.
+* Frischmann, B., & Selinger, E.（2018）. 重新设计人类. Cambridge University Press.
 
-* Haenschen, K., Frischmann, B. M., & Ellenbogen, P. (2021). 通过操纵 Facebook 的通知系统提供技术社会工程证据. Social Science Computer Review, *40*(6), 1478–1495. [`doi.org/10.1177/08944393211008855`](https://doi.org/10.1177/08944393211008855)
+* Haenschen, K., Frischmann, B. M., & Ellenbogen, P.（2021）. 通过操纵 Facebook 的通知系统提供技术社会工程证据. Social Science Computer Review, *40*(6), 1478–1495. [`doi.org/10.1177/08944393211008855`](https://doi.org/10.1177/08944393211008855)
 
-* Hagendorff, T. (2020). AI 德性——将 AI 伦理付诸实践的缺失环节. *ArXiv* [`arxiv.org/pdf/2011.12750.pdf`](http://arxiv.org)
+* Hagendorff, T.（2020）. AI 德性——将 AI 伦理付诸实践的缺失环节. *ArXiv* [`arxiv.org/pdf/2011.12750.pdf`](http://arxiv.org)
 
-* Heersmink, R. (2018). 互联网的德性认识论：搜索引擎、智力美德与教育. Social Epistemology, *32*(1). [`doi.org/10.1080/02691728.2017.1383530`](https://doi.org/10.1080/02691728.2017.1383530)
+* Heersmink, R.（2018）. 互联网的德性认识论：搜索引擎、智力美德与教育. Social Epistemology, *32*(1). [`doi.org/10.1080/02691728.2017.1383530`](https://doi.org/10.1080/02691728.2017.1383530)
 
-* Hursthouse, R. (2010). 关于德性伦理学. Oxford University Press.
+* Hursthouse, R.（2010）. 关于德性伦理学. Oxford University Press.
 
-* Kraemer, F., van Overveld, K. & Peterson, M. (2011). 是否存在算法伦理？ Ethics and Information Technology, *13*, 251–260. [`doi.org/10.1007/s10676-010-9233-7`](https://doi.org/10.1007/s10676-010-9233-7)
+* Kraemer, F., van Overveld, K. & Peterson, M.（2011）. 是否存在算法伦理？ Ethics and Information Technology, *13*, 251–260. [`doi.org/10.1007/s10676-010-9233-7`](https://doi.org/10.1007/s10676-010-9233-7)
 
-* MacIntyre, A. (1981). 之后美德：道德理论研究. University of Notre Dame Press.
+* MacIntyre, A.（1981）. 之后美德：道德理论研究. University of Notre Dame Press.
 
-* MacIntyre, A. (2006). 依赖的理性动物：人类为何需要美德. Open Court.
+* MacIntyre, A.（2006）. 依赖的理性动物：人类为何需要美德. Open Court.
 
-* Mittelstadt, B. D., Allo, P., Taddeo, M., Wachter, S., & Floridi, L. (2016). 算法伦理：绘制辩论图景. Big Data & Society, *3*(2). [`doi.org/10.1177/2053951716679679`](https://doi.org/10.1177/2053951716679679)
+* Mittelstadt, B. D., Allo, P., Taddeo, M., Wachter, S., & Floridi, L.（2016）. 算法伦理：绘制辩论图景. Big Data & Society, *3*(2). [`doi.org/10.1177/2053951716679679`](https://doi.org/10.1177/2053951716679679)
 
-* Moore, G. (2019). 工作中的德性：个人、经理和组织的伦理. Oxford University Press.
+* Moore, G.（2019）. 工作中的德性：个人、经理和组织的伦理. Oxford University Press.
 
-* Papaoikonomou, E., Ryan, G., & Valverde, M. (2011). 绘制伦理消费者行为图谱：整合实证研究并确定未来方向. Ethics & Behavior, *21*(3), 197–221. [`doi.org/10.1080/10508422.2011.570165`](https://doi.org/10.1080/10508422.2011.570165)
+* Papaoikonomou, E., Ryan, G., & Valverde, M.（2011）. 绘制伦理消费者行为图谱：整合实证研究并确定未来方向. Ethics & Behavior, *21*(3), 197–221. [`doi.org/10.1080/10508422.2011.570165`](https://doi.org/10.1080/10508422.2011.570165)
 
-* Pernice, K., Gibbons, S., Moran, K., & Whitenton, K. (2021). 用户体验成熟度的 6 个层级. Nielsan Norman Group. [`www.nngroup.com/articles/ux-maturity-model/`](https://www.nngroup.com)
+* Pernice, K., Gibbons, S., Moran, K., & Whitenton, K.（2021）. 用户体验成熟度的 6 个层级. Nielsan Norman Group. [`www.nngroup.com/articles/ux-maturity-model/`](https://www.nngroup.com)
 
-* Polonski, S. (2020). 何时预订何时飞行？解释 Google Flights 中的价格. Medium. [`medium.com/people-ai-research/pair-guidebook-google-flights-case-study-1ba8c7352141`](https://medium.com)
+* Polonski, S.（2020）. 何时预订何时飞行？解释 Google Flights 中的价格. Medium. [`medium.com/people-ai-research/pair-guidebook-google-flights-case-study-1ba8c7352141`](https://medium.com)
 
-* Quintana, C. D. (2023). 信息通信技术. In M. Sellers & S. Kirste (Eds.), Encyclopedia of the philosophy of law and social philosophy. Springer. [`doi.org/10.1007/978-94-007-6730-0\_1037-2`](https://doi.org/10.1007/978-94-007-6730-0_1037-2)
+* Quintana, C. D.（2023）. 信息通信技术. In M. Sellers & S. Kirste（Eds.）, Encyclopedia of the philosophy of law and social philosophy. Springer. [`doi.org/10.1007/978-94-007-6730-0\_1037-2`](https://doi.org/10.1007/978-94-007-6730-0_1037-2)
 
-* Ruttkamp-Bloem, E. (2022). 重新构想当前 AI 伦理政策辩论：来自技术伦理学的视角. Artificial Intelligence Research, 319–334. [`doi.org/10.1007/978-3-030-95070-5\_21`](https://doi.org/10.1007/978-3-030-95070-5_21)
+* Ruttkamp-Bloem, E.（2022）. 重新构想当前 AI 伦理政策辩论：来自技术伦理学的视角. Artificial Intelligence Research, 319–334. [`doi.org/10.1007/978-3-030-95070-5\_21`](https://doi.org/10.1007/978-3-030-95070-5_21)
 
-* Schüll, N. D. (2014). 设计成瘾：拉斯维加斯的机器赌博. Princeton University Press.
+* Schüll, N. D.（2014）. 设计成瘾：拉斯维加斯的机器赌博. Princeton University Press.
 
-* Shneiderman, B. (2020). 弥合伦理与实践之间的差距. ACM Transactions on Interactive Intelligent Systems, *10*(4), 1–31. [`doi.org/10.1145/3419764`](https://doi.org/10.1145/3419764)
+* Shneiderman, B.（2020）. 弥合伦理与实践之间的差距. ACM Transactions on Interactive Intelligent Systems, *10*(4), 1–31. [`doi.org/10.1145/3419764`](https://doi.org/10.1145/3419764)
 
-* Shourmasti, E. S., Colomo-Palacios, R., Holone, H., & Demi, S. (2021). 社会机器人的用户体验. Sensors, *21*(15), 5052. [`doi.org/10.3390/s21155052`](https://doi.org/10.3390/s21155052)
+* Shourmasti, E. S., Colomo-Palacios, R., Holone, H., & Demi, S.（2021）. 社会机器人的用户体验. Sensors, *21*(15), 5052. [`doi.org/10.3390/s21155052`](https://doi.org/10.3390/s21155052)
 
-* Tasioulas, J. (2022). 人工智能，人本主义伦理. Daedalus, *151*(2), 232–243. [`doi.org/10.1162/daed\_a\_01912`](https://doi.org/10.1162/daed_a_01912)
+* Tasioulas, J.（2022）. 人工智能，人本主义伦理. Daedalus, *151*(2), 232–243. [`doi.org/10.1162/daed\_a\_01912`](https://doi.org/10.1162/daed_a_01912)
 
-* Tsamados, A., Aggarwal, N., Cowls, J., Morley, J., Roberts, H., Taddeo, M., & Floridi, L. (2022). 算法伦理：关键问题与解决方案. AI & Society [`doi.org/10.2139/ssrn.3662302`](https://doi.org/10.2139/ssrn.3662302)
+* Tsamados, A., Aggarwal, N., Cowls, J., Morley, J., Roberts, H., Taddeo, M., & Floridi, L.（2022）. 算法伦理：关键问题与解决方案. AI & Society [`doi.org/10.2139/ssrn.3662302`](https://doi.org/10.2139/ssrn.3662302)
 
-* Vallor, S. (2015). 新机器时代的道德去技能化与再技能化：对品格模糊未来的反思. Philosophy & Technology *28*(1) (February 21, 2014): 107–124. [`doi.org/10.1007/s13347-014-0156-9`](https://doi.org/10.1007/s13347-014-0156-9)
+* Vallor, S.（2015）. 新机器时代的道德去技能化与再技能化：对品格模糊未来的反思. Philosophy & Technology *28*(1)（February 21, 2014）: 107–124. [`doi.org/10.1007/s13347-014-0156-9`](https://doi.org/10.1007/s13347-014-0156-9)
 
-* Vallor, S. (2018). 技术与美德：通向值得渴望的未来的哲学指南. Oxford University Press.
+* Vallor, S.（2018）. 技术与美德：通向值得渴望的未来的哲学指南. Oxford University Press.
 
-* Verbeek, P.-P. (2005). 事物所为：关于技术、能动性与设计的哲学反思. Pennsylvania State University Press.
+* Verbeek, P.-P.（2005）. 事物所为：关于技术、能动性与设计的哲学反思. Pennsylvania State University Press.
 
-## 5 人本中心人工智能 HCAI 从概念审视到立法行动
+# 5 人本中心人工智能 HCAI 从概念审视到立法行动
 
 Pierre Larouche
 
 Université de Montréal, Montréal, Québec, Canada
 
-DOI: [10.1201/9781003320791-7](https://dx.doi.org/10.1201/9781003320791-7)
-
-
-
-
+DOI: [`10.1201/9781003320791-7`](https://dx.doi.org/10.1201/9781003320791-7)
 
 当 ChatGPT 在 2022 年秋季突然进入公众视野时，它吸引了人们的注意，并使一个在专业圈子中已讨论多年关于当前 AI 浪潮的法律应对方式的辩论变得突出。媒体上目前呼吁公共当局进行干预的呼声，正值专业辩论从长期的概念审视阶段转向具体立法行动之际。这一行动由欧盟牵头，其中提出了“人工智能法案”
+
+
 
 本章将聚焦于从概念审视向具体法律行动过渡所带来的机遇与挑战。第一部分指出概念审视阶段的不足之处，这些不足必须在向具体法律行动过渡时得到克服。第二部分介绍了立法行动阶段的主要挑战，即对创新的应对方式选择。第三部分说明了《人工智能法案》如何应对这些不足并处理该挑战。第四部分将《人工智能法案》置于更广阔的背景中，以突出其全部影响。
 
@@ -1409,10 +1379,6 @@ DOI: [10.1201/9781003320791-7](https://dx.doi.org/10.1201/9781003320791-7)
 从更广阔的视角来看，这两个不足之处——尤其是白纸综合征——反映了数字经济中盛行的创新文化，
 
 简而言之，数字经济是在对创新的宽容方法下发展起来的。在法律术语中，宽容的方法通常允许任何发明进入市场并转化为创新，仅受适用于一般法律（合同、责任等）的约束，这些法律在发明进入市场后才*a posteriori*适用。*如果并且一旦*发明被证明会造成伤害，那么法律后果就会随之而来，必须采取纠正措施。在宽容的方法下，重点是避免第一类错误（假阳性），即由于不恰当的*a priori*担忧而阻止发明进入市场。一旦这种法律框架被企业和用户文化所内化，这就转化为将发明尽快推出的冲动，即使它们后来需要“更新”，正如我们每天都能见证软件的情况一样。
-
-
-
-
 
 与此相反，一些主要经济部门深陷于一种更具保护性的创新方法。从法律上讲，除非发明首先被证明符合必要的安全和无害标准，否则任何发明都不能推向市场。这就是制药和医疗器械法规以及航空法规的本质，仅举几例。在这种保护性方法下，重点更多地放在避免 II 类错误（假阴性）上，即由于 *a priori* 控制失败，发明最终被证明是有害的。当转化为企业文化时，这种保护性方法通常意味着产品开发团队在产品开发过程中尽可能彻底地评估造成伤害的风险。特别是，他们还试图预测和遏制发明的错误使用和恶意使用（误用和滥用）。这使得产品开发能够更顺畅地通过法律框架，直到发明最终投放市场。
 
@@ -1457,10 +1423,6 @@ DOI: [10.1201/9781003320791-7](https://dx.doi.org/10.1201/9781003320791-7)
 
 为了把握人工智能法案的全部影响，有必要将其置于自 2020 年以来一系列重大欧盟立法倡议的更广泛背景中。这些倡议包括 2022 年的《数字服务法》（DSA），该法更新了规范在线中介的法律：在对本世纪初以来生效的责任豁免制度表示口头支持的同时（European Union, 2020），DSA 对在线中介在其平台上流通的内容进行监管提出了更沉重的义务（European Union, 2022a）。也在 2022 年颁布的《数字市场法》（DMA）对大型平台（守门人）施加义务，以防止影响使用这些平台接触客户的企业的反竞争行为（European Union, 2022b）。与人工智能法案并行，欧盟机构也在考虑一项《数据法案》提案（European Union, 2022c），以促进非个人数据在企业之间的自由流通，从而促进欧盟工业。
 
-
-
-
-
 这些立法倡议的一个关键共同特征是，它们都适用于主要数字平台（通常被称为 GAFA
 
 此外，从这些倡议的字里行间可以看出一个整体的欧盟战略正在浮现，即欧盟旨在成为先行者，以便其立法在国外得到效仿并在全球范围内成为典范。
@@ -1473,7 +1435,7 @@ DOI: [10.1201/9781003320791-7](https://dx.doi.org/10.1201/9781003320791-7)
 
 拟议的欧盟《人工智能法案》是全球首个重大的人工智能监管倡议。可以看出，《人工智能法案》避免了闪亮物体综合征和空白页谬误。《法案》还指向一种“负责任创新”方法，这将要求习惯于在宽容性创新方法下运营的企业在文化上进行重大改变。
 
-从更广泛的背景来看，《人工智能法案》以及欧盟关于数字经济的其他主要立法倡议很可能成为其他司法管辖区的典范，或至少成为基准。它们指向一个漫长而迭代的过程，逐步制定和实施针对人工智能的现有法律、现有法律的延伸以及一些新法律的混合体。在所有阶段，行业参与——以协同监管的形式——不仅有用，而且对于确保法律的有效性至关重要，鉴于公共当局在人工智能方面面临严重的<|message|>信息不平衡。
+从更广泛的背景来看，《人工智能法案》以及欧盟关于数字经济的其他主要立法倡议很可能成为其他司法管辖区的典范，或至少成为基准。它们指向一个漫长而迭代的过程，逐步制定和实施针对人工智能的现有法律、现有法律的延伸以及一些新法律的混合体。在所有阶段，行业参与——以协同监管的形式——不仅有用，而且对于确保法律的有效性至关重要，鉴于公共当局在人工智能方面面临严重的
 
 ### 注释
 
@@ -1547,10 +1509,6 @@ DOI: [10.1201/9781003320791-7](https://dx.doi.org/10.1201/9781003320791-7)
 
 35. Art。 40. 要求已列于 *supra*
 
-
-
-
-
 36. 作为《C-27 法案》第 3 部分，*《消费者隐私保护法、个人信息和数据保护法庭法以及人工智能和数据法案，并对其他法案作出相应和相关修正案》*，于 2022 年 6 月 16 日提交。AIDA 紧随 2019 年财政委员会通过的开创性 *《自动化决策指令》* 的脚步（最新版本 加拿大政府 (2023)），该指令为加拿大联邦政府用于决策的人工智能系统采购引入了算法影响评估。
 
 37. 在实施法规中仍有许多关键要素有待制定。
@@ -1568,6 +1526,8 @@ DOI: [10.1201/9781003320791-7](https://dx.doi.org/10.1201/9781003320791-7)
 * Butenko, A., & Larouche, P. (2015). “Regulation for Innovativeness or Regulation of Innovation?” Journal of Law, Innovation and Technology, *7*(1), 52–82.
 
 * Canada. (2022). Bill C-27, An Act to enact the Consumer Privacy Protection Act, the Personal Information and Data Protection Tribunal Act and the Artificial Intelligence and Data Act and to make consequential and related amendments to other Acts, tabled on 16 June 2022.
+
+
 
 * Chesterman, S. (2020). “Artificial Intelligence and the Limits of Legal Personality.” International & Comparative Law Quarterly, *69*(4), 819.
 
@@ -1627,10 +1587,6 @@ DOI: [`10.1201/9781003320791-8`](https://dx.doi.org/10.1201/9781003320791-8)
 
 人工智能技术以两种重要方式挑战隐私。首先，存在同意差距。旨在赋予个人和群体权力的同意和知情机制正受到为人工智能系统提供燃料的、日益多样化和无处不在的数据收集方式的挑战。如今，个人很少能够完全理解其数据在何处、何时以及如何被收集，然后被人工智能系统使用。其次，存在知识差距。对大多数人工智能系统所使用的大多数流程进行充分理解是不现实的。即便对于专家而言，复杂——通常是黑箱——算法使用海量数据集进行的综合和推断也超出了人类认知能力。此外，由于人工智能系统经常将“无约束变量设定为极端值\[,\] 如果其中一个无约束变量实际上是我们关心的东西”，系统就能将其从我们控制中夺走，并使它产生的“解决方案”变得极其不理想（Russell, 2014）——这引发了关于人类价值观与技术发展之间一致性的重大问题。缺乏透明度加剧了这一现实，导致人工智能系统在有时产生非预期、有害影响的情况下实现其目标，或产生脱离人类监督的涌现目标。
 
-
-
-
-
 这些同意和知识的缺口导致了对本应由隐私控制的领域进行永久性侵入。例如，为了使人工智能系统更符合人类价值观，包括更尊重隐私，政府正在寻求监管人工智能的输入和流程。在输入层面，这些努力包括加强通知和同意制度，并要求健全的数据处理保障措施（Canada, 2021a）；在流程层面，它们包括解释权和其他形式的问责，例如验证研究、错误报告等等（Canada, 2021b）。但鉴于人工智能系统输出的有用性，任何对输入或流程的控制欲望，很快就会对除最狂热的隐私倡导者之外的所有人失去优先性或紧迫感。人工智能输出具有惊人的有用性、精确性、效率、准确性和可靠性——有助于其不断占据人类的時間、注意力和信任——往往使试图控制人工智能输入或流程的尝试变得毫无意义。关于我们是否能将人类对齐引入新兴且可进化的智能的争论，导致谨慎的专家认为，虽然我们在取得技术进步，但人工智能可能会超越对其施加的初始约束，以实现自身最好的目标。
 
 虽然我们并未同意这一交易的所有权衡——而且很少有能力做到这一点——但我们越来越同意将我们最宝贵的资源交给人工智能系统：我们的时间、注意力和信任。理解这种权力转移的后果是本文的主要关注点之一，本文试图探索隐私作为过去、现在和未来中的横向概念。隐私不仅仅是一种价值，而是一种对技术的*反应*。隐私决定了我们允许技术深入到人类生活和意识领域的程度。随着人工智能 arguably 超越了人类进化的速度，鉴于可以在更短的时间内引入和评估的突变和变异的数量，隐私已变得控制论的——与人工智能技术本身处于波动状态，并不断与其互动以重新勾勒其轮廓。就像那些持续告知我们隐私利益因个人信息的全新用途而受到新侵蚀的“使用条款”表格一样，隐私利益的性质也在不断变化。偶尔，戏剧性事件会爆发，隐私利益提醒我们不受欢迎的侵入（Nissenbaum, 2010：10）。但随着这些冲击消退，隐私很快会被重新定义和重新构想，并且随着人工智能占据更多的时间、注意力和信任，隐私将继续在划定人类与技术之间的边界中发挥决定性作用。
@@ -1655,10 +1611,6 @@ DOI: [`10.1201/9781003320791-8`](https://dx.doi.org/10.1201/9781003320791-8)
 
 如果隐私是语义战场，语言就成了其武器；由此可见，最有效的监管形式往往是规范化误导和虚假广告处罚的消费者保护立法（Roth, 2022）。
 
-
-
-
-
 尽管隐私的现代界面常常让用户感觉拥有控制权，但它们的前提是已不再适用的原则。随着数据交易开始在几乎每个社会机构中运作，这种动态变得愈发明显（Véliz, 2020）。个人数据的几乎不受阻碍的收集、保留和使用正在造成重大的权力不对称。从个人身上以及关于个人的数据被摄取后，其目的在于识别模式、联系、分类、归类和相关性。这是在大多数情况下技术也既不透明又专有的情况下发生的——受贸易秘密或保密信息的法律原则保护。这些形式的权力和脆弱性并不总是可以触及的。首先，人工智能指数级地复杂化了数据用于“在收集时未向用户披露的非预期目的”的范式（Manheim & Kaplan, 2018: 121）。其次，人工智能模型的快速演进使透明度和问责变得难以捉摸，因为算法的训练可能会改变其本质（Kaminski, 2019）。这双重针对人类控制的攻击还必须面对技术产出所带来的诱惑。随着人工智能技术获得人类的时光、信任和关注，它们经常“准备好取代我们人类所做的许多事情”（Lobel, 2022）——无论任务是增强搜索、起草电子邮件、指挥车辆，还是提醒人类即将到来的风险。这些技术的益处常常让我们忽视其代价。正如国家安全和安全的修辞被国家用来为侵犯隐私辩护一样，国家行为者持续且经常援引公共安全来驳回隐私和数据保护法律（Malone, 2022a）。在 COVID-19 危机期间推动采用此类技术的最新举动中也可以观察到类似的动态（American Civil Liberties Union, n.d.）。
 
 当然，现在仍然有很多例子说明人类对隐私的依恋。事实上，隐私往往被设计和拥有人工智能系统的人所重视。访问硅谷会发现没有短缺的人在人工智能经济的中心工作，他们拒绝采用其技术（或让其家庭成员这样做）。为了加强他们的隐私，Meta 首席执行官马克·扎克伯格购买了他周围的房屋（Bayly, 2016），前 Alphabet 首席执行官埃里克·施密特要求删除谷歌搜索功能上的记录（Rosoff, 2011），而 Twitter 首席执行官埃隆·马斯克暂停了追踪其私人飞机位置的账户（Wile, Collier, & Helsel, 2022）。“名人以及有权力的人们勤勉地保护他们的隐私不足为奇，”Véliz (2020)写道。“这是我们所有人都看重的东西。否则，我们会自由地提供我们的密码。”
@@ -1671,24 +1623,21 @@ DOI: [`10.1201/9781003320791-8`](https://dx.doi.org/10.1201/9781003320791-8)
 
 > 人工与自然的区别是一个非常人工的区别。\[技术\]人类构造的东西并不比蜜蜂的巢和鸟的巢更不自然，也不是动物和昆虫生物的构造。*它们是我们自身的延伸*。
 
+
+
 将这种命题推向极端认为人工智能为人类持续进化的道路提供了可能，而不是生物进化——也就是说，最初由人类创造但现在独立于人类的 AI 代表了进化的下一个阶段。这种末日版本的命题是人工智能可能是地球上生命的下一个进化步骤，人类正在退出。
 
 “So, what，”Watts (n.d.)问道，“关于我们都计算机化的情况出现时会怎样？”在不久的将来，当越来越多的生活将在网上进行，而头像和数字分身无处不在时，很容易想象“电子回声”从我们身上提取的数据中回荡，但存在于电子网络和计算机中，独立于我们。 这些电子回声是否会从根本上使隐私变得虚幻？我们关于我们的任何事情真的会是私人的吗？挑战这个问题的一种方式是质疑隐私本身的本质。人类是社会输入的累积；即使我们有先天的语法，也很难否认语言是通过复制外部社会网络的表达而习得的。从这些输入中有机获得的知识，在某种程度上不是我们的——不是私人的。 遵循这一论点，影响和作用于个体的来源表明，即使个人的思想也不是私人区域，而是公共影响的区域。 （有趣的是，在许多科幻描绘中，读心术或无需物理渠道或互动的交流是与未来化社会相关的常见套路；这种对私人领域的如此深层入侵的常见套路可能对我们如何预期为新技术重新构想隐私有所启示。）
 
-
-
-
-
 这一观察让我们面对根植于人权话语的社会所必须面对的独特问题——在这些社会中，人类的尊严是社会法律架构的试金石。即使人工智能创造了更大的 *平等*，它也不太可能产生更大的 *个性*——这是过去三个世纪以来西方民主的基础概念。在 *The Equality Machine* 中，Orly Lobel (2022: 3) 对人工智能提出了激昂的辩护，认为其有望提升平等，她称之为“当今的首要 imperative”。Lobel 认为人工智能最终可能比以往任何时候都更容易确保我们的职场反映出满足各种平等 imperative 所必需的平均值，例如在招聘、代表等方面——充当这些问题的有效“烟雾探测器”。(Lobel, 2022) 正如她所写：“我们担心算法是黑箱——换句话说，不透明且难以理解（它们通常确实如此）。但人类的心智的黑箱又如何呢？”(Lobel, 2022 : 46)。Lobel (2022: 46) 指出“\[h\]招聘领域的 人类决策”这一例子，其中“涉及数十名招聘人员、面试官、同事、客户和主管，每个人都是自己的一小块黑箱。”她认为人工智能通常可以挫败此类过程中可能发生的歧视等不利影响。人工智能可能有助于评估和监控就业或服务交付中的公平问题，承诺比由人类驱动的系统产生的更 *平等* 的结果。尽管她也指出的明显反驳是，人工智能从提供的输入和规则中学习；因此当它们不完美时，人工智能可能会产生自己的偏见。
+
 旨在衡量或遏制这些技术过度行为的法规——例如，报告和监控过度行为（就像要求污染者报告和监控其外部性一样）——可能有助于解决人工智能的一些不利影响。其中一项努力就是本书的呼吁——使人工智能以人为中心。但 Floridi 将此类术语称为“过时”的，因为它“既平凡地正确又危险地模糊”(Floridi, 2021)。他并非没有道理。举一例来说，Lobel 所颂扬的 *平等* 可能与人类希望行使其 *个性* 的方式相悖，而后者是当前以个人权利如通知、同意和控制为前提的隐私监管方法的根基。这也是为什么监管人工智能的输入和流程如此难以捉摸的核心原因。即使是宣称致力于以人类个体尊严为根基的权利框架的民主政府，也越来越多地部署人工智能以在提供商品和服务时获得成本、速度和准确性的优势——将公民扁平化为数据，以便以极度物化和侵入性的方式进行提取和决策。正如上文所述，对数据收集缺乏同意以及这些流程不可审查，意味着输出往往削弱人的尊严。然而我们仍在继续选择加入，正如这些系统现在所获得的人类时间、信任和关注的数量所证明的那样。过去 50 年来，信任机构的崩溃——民主社会中宗教机构的消亡 (Pew Research, 2022)、婚姻等社会关系的崩溃 (Pew Research, 2010) 以及民主国家选民参与度的下降 (Kopf, 2017)——都表明自由民主国家的信任已经在下降。人工智能技术超越人类的表现提供了进一步远离人类机构的理由。大多数人已经放弃了人类策划的新闻（例如报纸）(Kabani, 2022)，转而使用人工智能策划的新闻（例如收集新闻并为受众策划的社交媒体网站）(Shearer, 2021)。此类转变是信任从人类向技术迁移的自然演变。这种权衡改变了人类愿意如何思考隐私。
+
 今天，我们经常准备好通过给予人工智能系统我们的时间、注意力和信任，在无数其他例子中向其让渡权力。例如，我们中的许多人佩戴电子设备来捕获和操纵我们的健康数据，以换取人工智能系统可以提供的分析。许多人选择乘坐使用人工智能技术的交通工具（例如自动驾驶或驾驶辅助程序；使用人工智能的全球定位和地图应用；以及使用自动驾驶和自动着陆的飞机）以节省时间、提高效率、增加安全性、降低风险、节省燃料、降低碳排放或实现类似目标。我们中的许多人会与社交媒体平台互动，其算法提供根据我们的兴趣量身定制的內容流。我在撰写本章时也用它来识别拼写和语法缺陷。人工智能的输出似乎令人震惊地 *个人化*，即使它们是通过深深的 *非个人化* 流程生成的——通过将个人数据与其它数据扁平化以识别模式、类别和推断。
+
 已经提出了几种隐私增强解决方案来规划这一时代的前进道路。其中之一是更频繁地使用联邦学习或联邦分析——将数据去中心化的想法，以便算法和学习模型的隐私敏感训练数据不会在单一位置或来源中聚合 (McMahan, 2017)。然而，此类呼吁面临着来自致力于打破数据流动壁垒并禁止数据本地化的企业行为者的巨大阻力。在某些情况下，其他人主张采用差分隐私方法——在数据集中添加“噪声”形式的假数据以抵御“隐私威胁，包括数据链接和重建攻击”(Office of the Privacy Commissioner, 2021)。然而，在某些情况下使用假数据会引发棘手的伦理和道德问题。最后，使用合成数据的提议——使用生成模型将源数据转化为 *假* 数据——已被建议作为增强隐私和应对数据集再识别风险的解决方案。然而，这一发展存在过时风险，因为推断生成人工智能技术的进步无疑将发展到对抗合成数据的防御系统。每一个提议都在人工智能崛起的背景下增强了隐私，尽管每一个都面临着重要挑战。
 
 ### Conclusion
-
-
-
-
 
 “醒来始于 *am* 和 *now*，”克里斯托弗 伊舍伍德 (1964) 在他的哀悼小说《*A Single Man*》开头写道。伊舍伍德用罗马体来描述主人公的身体，用斜体来描述主人公的意识。“随后醒来的东西会躺上一会儿，凝视着天花板并沉入自身，直到它认出 I，并由此推导出 *I am*，*I am now*。”在伊舍伍德的叙事中，这些离散的片段凝聚成主人公乔治，他既是身体也是存在。有时，乔治以积极的自觉态度书写自己的经历，并在所有意义上都是一个单身男人；有时，他只是处于自动驾驶状态，成为一个世界的一部分，在这个世界里他根本不是一个单身男人，而只是一个与更广阔的外部生态系统相连的生物学单位，其中包括不仅仅是人类，还包括动物和自然。这种内在与外在之间的二元性一直是人类生活的一部分。我们是有意识的、独特且个体的存在，同时也是一个更大系统的成员，在这个系统中我们根本不重要。随着人工智能越来越多地占据我们的时间、注意力和信任——正如它现在已经对我们中的许多人从早晨醒来时到夜晚最后做的事所做的那样——夺走我们部分自主权，并将我们归类到类别中而不是拥抱我们的个性——它进一步侵蚀了被视为 *I am*、*I am now* 的这些空间。现在和未来，隐私将是我们在这种分歧两侧找到自己的界限。如果人工智能技术以以人为中心的方式——在适用的情境中增强人类，以推进他们的发展和他们的利益——那么此类问题不应难以解决，任何权衡也都易于协商。但当技术以取代、贬低或损害人类尊严的方式攫取权力时，其最终威胁仍然是驱使人类走向这样一个地步：这种分歧根本不存在。
 
@@ -1699,93 +1648,162 @@ DOI: [`10.1201/9781003320791-8`](https://dx.doi.org/10.1201/9781003320791-8)
 ### Notes
 
 1. Hunt，指出“\[d\]espite the many persistent and serious attempts at elucidation, privacy remains a deeply—arguably an *essentially*—contested concept”。另见 Thomson (1975, 295) 和 Gavison (1980, 424–426)。
+
 2. *Olmstead v United States*，277 U.S. 438, 478 (1928) (Brandeis, J dissenting)。
+
 3. One authority，尤其是提出这一主张的是 Carissa Véliz (2020)，她在自己呼吁终结监控资本主义经济的呼吁中采用了这一主张（尤其是涉及数据经纪和定向广告的做法）。
+
 4. See e.g., Blecher (1975: 279) 和 Müller (2020)。
+
 5. *Griswold v Connecticut*，381 U.S. 479 (1965)。
+
 6. *Eisenstadt v Baird*，405 U.S. 438 (1972)。
+
 7. *Roe v Wade*，410 U.S. 113, 152 (1973)。
+
 8. *Lawrence v Texas*，539 U.S. 558 (2003)。
+
 9. *Obergefell v Hodges*，576 U.S. 644 (2015)。
+
 10. See European Parliament and Council of the European Union (2016)，GDPR，第 12–24 条。
+
 11. See European Parliament and Council of the European Union (2016)，第 7 条。
+
 12. *The Common Law’s Hodgepodge*，
+
 13. See e.g., Danielle Keats Citron (2022)。
+
 14. See Diab (forthcoming)。
+
 15. For example，见 Privacy Act, RSC 1985, c P-21。该法律阐明了维护准确信息的明确权利（s 6），但对实际获取和汇编个人信息仅提供非常低的标准（只要“与一项运营计划直接相关”——s 4）。
+
 16. As an example，见 Canada (2021a)。
+
 17. See e.g., Sierra Club of Canada v. Canada (Minister of Finance), 2002 SCC 41 at paras 53-55, \[2002\] 2 SCR 522。
+
 18. Apple Inc (accessed online February 18, 2023)，Google Finance，网上：[`www.google.com/finance/quote/AAPL:NASDAQ?sa=X&ved=2ahUKEwj1iLiqzaD9AhVKGjQIHSZPCWAQ3ecFegQINRAg`](https://www.google.com) 和 G7 (accessed online February 18, 2023) Wikipedia，网上：[`en.wikipedia.org/wiki/G7`](https://en.wikipedia.org)
+
 19. I owe this observation to a very memorable discussion with my research assistant Russell Walton，我不敢声称对这个想法拥有任何隐私利益，因为我清楚地欠下他多次讨论带来的好处。
+
 20. Ibid。
+
 21. See e.g., Reuters (2018) 和 Vartan (2019)。
+
 22. Even when AI’s outputs are not always personal，它们往往显得个人化，而事实上，它们与向成千上万其他人展示的内容相似或相同——与魔术师和心理学家所做的“冷读”不无相似之处，以制造个性化的错觉。
+
 23. This insight is gleaned in particular from Newport’s (2019) 关于数字极简主义和数字技术一般的讨论。另见 Hendrycks et al. (2022)。
 
 ### References
 
 * American Civil Liberties Union. (2015, February). Informational Privacy in the Digital Age. [`www.aclu.org/other/human-right-privacy-digital-age`](https://www.aclu.org)
+
 * American Civil Liberties Union. (n.d.). Surveillance Under the Patriot Act. Retrieved from [`www.aclu.org/issues/national-security/privacy-and-surveillance/surveillance-under-patriot-act`](https://www.aclu.org)
+
 * Bayly, L. (2016, May 25). Zuckerberg to Demolish $30M in Real Estate to Keep Things Private. NBC. Retrieved from [`www.nbcnews.com/tech/tech-news/zuckerberg-demolish-30m-real-estate-keep-things-private-n580216`](https://www.nbcnews.com)
+
 * Blecher, M.D. (1975). Aspects of Privacy in the Civil Law. The Legal History Review 43, 3–4 at 279.
+
 * Canada (2021a). First Session, Forty-fourth Parliament, 70-71 Elizabeth II, 2021-2022, Bill C-27 (An Act to enact the Consumer Privacy Protection Act, the Personal Information and Data Protection Tribunal Act and the Artificial Intelligence and Data Act and to make consequential and related amendments to other Acts) (November 22, 2021) House of Commons, online at: [`www.parl.ca/legisinfo/en/bill/44-1/c-27`](https://www.parl.ca)
+
 * Canada (2021b). First Session, Forty-fourth Parliament, 70-71 Elizabeth II, 2021-2022, Bill C-292 (An Act respecting transparency for online algorithms) (November 22, 2021) House of Commons, online at: [`www.parl.ca/legisinfo/en/bill/44-1/c-292`](https://www.parl.ca)
+
 * Carlsmith, J. (2021). Is Power-Seeking AI an Existential Risk? Open Philanthropy. Retrieved from [`arxiv.org/pdf/2206.13353.pdf`](https://arxiv.org)
+
 * Chander, A., Kaminski, M.E., & McGeveran, W. (2021). Catalyzing Privacy Law. 105 Minnesota Law Review 1733.
+
 * Citron, D. K. (2022). The Fight for Privacy: Protecting Dignity, Identity, and Love in the Digital Age. WW Norton.
 
-
-
-
 * Diab, R. (Forthcoming). 自我认同的伤害：重读戈夫曼以重新评估秘密录音作为证据的使用。
+
 * *Eisenstadt v Baird*，405 U.S. 438 (1972)。
+
 * 欧洲议会和欧盟理事会。(2016)。《2016 年 4 月 27 日欧洲议会和理事会关于自然人在个人数据处理方面的保护以及此类数据自由流动，并废除第 95/46/EC 号指令的(EU) 2016/679 号条例》(第 12-24 条) [《通用数据保护条例》]。欧盟官方公报，L 119，1–88。
+
 * Floridi, L. (2005)。信息隐私的本体论解释。《伦理与信息技术》，7，185–194。
+
 * Floridi, L. (2021)。欧盟人工智能立法：对其哲学方法的简要分析。
+
 * Gavison, R. (1980)。隐私与法律的界限。《耶鲁法律杂志》，89(3)，421–426。
+
 * *Griswold v Connecticut*，381 U.S. 479 (1965)。
+
 * Hendrycks, D., Carlini, N., Schulman, J., & Steinhardt, J. (2022 年 6 月 16 日)。机器学习安全中的未解问题。[`arxiv.org/pdf/2109.13916.pdf`](https://arxiv.org)
+
 * Hunt, C. D. L. (2015)。普通法对隐私的拼凑式保护。《UNBLJ》，66，161–162。
+
+
+
 * Isherwood, C. (1964)。《一个男人》。Farrar, Straus and Giroux。
+
 * Kabani, M. (2022 年 2 月 25 日)。全国各地的知名报纸纷纷停刊。CBS News。[`www.cbsnews.com/news/local-news-60-minutes-2022-02-25/`](https://www.cbsnews.com)
+
 * Kaminski, M. E. (2019)。二元治理：从 GDPR 对算法问责的方法中汲取的教训。《南加州法律评论》，92(6)，1529–1553。
+
 * Kopf, D. (2017 年 2 月 1 日)。“自由世界”选民投票率急剧下降。Quartz。[`qz.com/899586/global-voter-turnout-is-dropping-dramatically-across-the-world/`](https://qz.com)
+
 * *Lawrence v Texas*，539 U.S. 558 (2003)。
+
 * Lobel, O. (2022)。《平等机器》。利用数字技术为更光明、更具包容性的未来服务。Public Affairs。
+
 * Malone, M. (2022a)。知识产权、加密技术与公共安全威胁。曼尼托巴法律杂志。[`papers.ssrn.com/sol3/papers.cfm?abstract_id=3783519`](https://papers.ssrn.com)
+
 * Malone, M. (2022b 年 12 月 16 日)。卡车车队抗议凸显了我们对个人信息披露的双重标准。《环球邮报》。[`www.theglobeandmail.com/opinion/article-the-truck-convoy-demonstrates-our-double-standard-on-releasing/`](https://www.theglobeandmail.com)
+
 * Manheim, K. M., & Kaplan, L. (2018)。人工智能：对隐私和民主的风险。《耶鲁法律与技术杂志》，21，107–121。
+
 * McLuhan, M. (1964)。《理解媒介：人的延伸》。McGraw-Hill。
+
 * McMahan, H. B. (2017)。来自分散数据的深度网络通信高效训练。《第 20 届人工智能与统计国际会议 (AISTATS)》。
+
 * Müller, V. C. (2020)。人工智能与机器人伦理。斯坦福哲学百科全书。检索自[`plato.stanford.edu/entries/ethics-ai/`](https://plato.stanford.edu)
+
 * Newport, C. (2019)。《数字极简主义：在嘈杂世界中选择专注的生活》。Portfolio。
+
 * Nissenbaum, H. (2010)。《情境中的隐私：技术、政策与社会生活的完整性》。斯坦福大学出版社。
+
 * *Obergefell v Hodges*，576 U.S. 644 (2015)。
+
 * 隐私专员办公室。(2021 年 4 月 21 日)。隐私科技博客：企业隐私增强技术。[`www.priv.gc.ca/en/blog/20210412`](https://www.priv.gc.ca)
+
 * Olmstead v United States，277 U.S. 438, 478 (1928) (Brandeis, J dissenting)。
+
 * Orwell, G. (1949)。《1984》。Secker & Warburg。
+
 * Orwell, G. (2006)。《政治与英语》。Broadview Press。
+
 * 皮尤研究中心。(2010 年 11 月 18 日)。婚姻的衰落与新家庭的兴起。[`www.pewresearch.org/social-trends/2010/11/18/the-decline-of-marriage-and-rise-of-new-families/`](https://www.pewresearch.org)
+
 * 皮尤研究中心。(2022 年 9 月 13 日)。美国宗教未来的模型。[`www.pewresearch.org/religion/2022/09/13/modeling-the-future-of-religion-in-america/`](https://www.pewresearch.org)
+
 * Posner, R. A. (1983)。《正义的经济学》。
+
 * Reuters。(2018 年 10 月 11 日)。亚马逊放弃了偏爱男性技术岗位的 AI 招聘工具。《卫报》。[`www.theguardian.com/technology/2018/oct/10/amazon-hiring-ai-gender-bias-recruiting-engine`](https://www.theguardian.com)
+
 * *Roe v Wade*，410 U.S. 113, 152 (1973)。
+
 * Rosoff, M. (2011 年 4 月 1 日)。埃里克·施密特曾试图让谷歌在搜索结果中隐藏他的政治捐款。Bloomberg。[`www.businessinsider.com/eric-schmidt-tried-to-get-google-to-hide-his-political-donation-in-search-results-2011-4`](https://www.businessinsider.com)
+
 * Roth, E. (2022 年 8 月 6 日)。加州车管所指控特斯拉对 Autopilot 和完全自动驾驶做出虚假宣传。《The Verge》。[`www.theverge.com/2022/8/6/23294658/california-dmv-accuses-tesla-false-claims-autopilot-full-self-driving-autonomous-vehicles`](https://www.theverge.com)
+
 * Russell, S. (2014 年 11 月 14 日)。人工智能的神话。Edge。检索自[`www.edge.org/conversation/the-myth-of-ai#26015`](https://www.edge.org)
+
 * Sepulveda, M., van Banning, T., Gudmundsdottir, G. D., Chamoun, C., & van Genugten, W. J. M. (2004)。《人权参考手册》(第 3 版)。和平大学。
+
 * Shearer, E. (2021 年 1 月 12 日)。超过八成的美国人从数字设备获取新闻。皮尤研究中心。[`www.pewresearch.org/fact-tank/2021/01/12/more-than-eight-in-ten-americans-get-news-from-digital-devices/`](https://www.pewresearch.org)
+
 * Smolan, S. (2016 年 2 月 24 日)。《大数据的人性面孔》。PBS 纪录片。
+
 * Solove, D. (2008)。《理解隐私》。哈佛大学出版社，1。
+
 * Solove, D. (2013)。《无所遁形：隐私与安全的虚假权衡》。耶鲁大学出版社，24。
+
 * Solove, D. (2023 年 1 月 11 日)。数据即数据之所为：对使用、伤害和风险而非敏感数据的监管。[`papers.ssrn.com/sol3/papers.cfm?abstract_id=4322198`](https://papers.ssrn.com)
+
 * 第 44 届议会第 1 届会议下议院信息获取、隐私与伦理常设委员会，“加拿大政府收集和使用流动性数据及相关问题”(2022 年 5 月)，在线收录于：[`www.ourcommons.ca/DocumentViewer/en/44-1/ETHI/report-4/`](https://www.ourcommons.ca)
+
 * Thomson, J. J. (1975)。隐私权。《哲学与公共事务》，4(4)，295。
+
 * Turner, A. M., Smith, L., Shah, R., Critch, A., & Tadepalli, P. (2021)。最优策略倾向于寻求权力。《第 35 届神经信息处理系统会议》。[`arxiv.org/pdf/1912.01683.pdf`](https://arxiv.org)
-
-
-
-
 
 * Vartan, S. (2019 年 10 月 24 日). 医疗风险算法中发现种族偏见。Scientific American。 [`www.scientificamerican.com/article/racial-bias-found-in-a-major-health-care-risk-algorithm/`](https://www.scientificamerican.com/article/racial-bias-found-in-a-major-health-care-risk-algorithm/)
 
@@ -1805,7 +1823,7 @@ Giada Pistilli
 
 Sorbonne University, Paris, France
 
-DOI: [10.1201/9781003320791-9](https://dx.doi.org/10.1201/9781003320791-9)
+DOI: [`10.1201/9781003320791-9`](https://dx.doi.org/10.1201/9781003320791-9)
 
 ### 引言
 
@@ -1841,20 +1859,6 @@ GPT-3 的多任务能力使其成为通向看似通用人工智能的进步的�
 
 GPT-3 API 的另一个用例是公司 Copy.ai。
 
-
-
-
-
-然而，当我们将这些系统集成到最终产品中并推向市场，像推广一部新智能手机那样轻描淡写地宣传它们时，我们真的能够信任它们吗？GPT-3 自信而有说服力的输出，存在让其用户陷入修辞艺术的陷阱的风险。它的最新继任者，被过度报道的 ChatGPT，
-
-如果我们无法信任语言模型产生的内容，当人类内容与 AI 生成内容无法区分时，会发生什么？用户——作为在线内容的消费者——是否需要区分真实与虚假、人造与人类？这种缺乏区分会产生什么影响和道德后果？
-
-### 人工“通用”智能（AGI）的问题
-
-让我们现在设想语言模型能力的扩展，以多种目标作为主要——但通用的——目的。正如上文所述，AGI 有多种定义。对我们的分析而言另一个有趣的定义，是 Goertzel 和 Pennacin 在其 2007 年著作 *Artificial General Intelligence* 中提出的：
-
-> 人工通用智能（AGI）指的是 AI 研究，其中“智能”被理解为通用能力，不限于任何狭窄的问题或领域集合，并包括广泛泛化到全新领域的[content]
-
 然而，当我们将这些系统集成到最终产品中并推向市场，像推广一部新智能手机那样轻描淡写地宣传它们时，我们真的能够信任它们吗？GPT-3 自信而有说服力的输出，存在让其用户陷入修辞艺术的陷阱的风险。它的最新继任者，被过度报道的 ChatGPT，
 
 如果我们无法信任语言模型产生的内容，当人类内容与 AI 生成内容无法区分时，会发生什么？用户——作为在线内容的消费者——是否需要区分真实与虚假、人造与人类？这种缺乏区分会产生什么影响和道德后果？
@@ -1866,15 +1870,18 @@ GPT-3 API 的另一个用例是公司 Copy.ai。
 > 人工通用智能（AGI）指的是 AI 研究，其中“智能”被理解为通用能力，不限于任何狭窄的问题或领域集合，并包括广泛泛化到全新领域的能力。
 
 > 
+
 > (Goertzel & Pennachin, 2007)
 
-各种 AGI 定义往往都回溯到语言模型的一种跨领域能力，被定义为“通用”。此外，在其最新的博客文章“How should AI systems behave, and who should decide?，
+
+
+各种 AGI 定义往往都回溯到语言模型的一种跨领域能力，被定义为“通用”。此外，在其最新的博客文章“How should AI systems behave, and who should decide?”，
 
 ### 关于通用大型语言模型的若干伦理关切
 
 开发通用大型语言模型而没有特定目标，而是具有广泛的能力，旨在迈向 AGI，这在各个层面引发了若干伦理关切。我不会探讨所有伦理关切，而是重点关注其中三个。
 
-1. 我们面临的第一个伦理张力与 AI 模型的无数能力有关。在道德哲学中，道德哲学处理定义、建议和评估使个人处于福祉状况的选择和行动，很难对具有多种不同范围的制品进行道德评估。此外，像 GPT-3 这样的大型语言模型的能力往往被定义，但在使用中会不断增加。鉴于自然语言中可能的用途之广，如果未被事先定义并由其开发者框定，该模型的能力可能是无限的。如果 AGI 的目标不再是将其自身识别为技能清单，而是拥有无限的技能，那么情况就会变得极其复杂难以控制。评估并对范围尚不完全了解的事物做出价值判断将不会容易。此外，控制可能的恶意用途也将具有挑战性，例如：网络钓鱼、虚假产品评论、错误信息和虚假信息等。一个例子来自新加坡政府科技局的一项研究。研究人员将 GPT-3 与其他专注于人格分析的 AI 产品结合使用，以生成针对同事背景和特征量身定制的网络钓鱼邮件。研究人员发现，更多人点击了 AI 生成消息中的链接，比人类撰写的邮件高出显著幅度（Hay Newman, 2021）。此外，GPT-3 还被用于创建在线农场的內容，这些农场通常重新利用知名网站的新闻以吸引广告收入。其中一些 AI 驱动的网站已被发现传播虚假信息（Vincent, 2023）。
+1. 我们面临的第一个伦理张力与 AI 模型的无数能力有关。在道德哲学中，道德哲学处理定义、建议和评估使个人处于福祉状况的选择和行动，很难对具有多种不同范围的制品进行道德评估。此外，像 `GPT-3` 这样的大型语言模型的能力往往被定义，但在使用中会不断增加。鉴于自然语言中可能的用途之广，如果未被事先定义并由其开发者框定，该模型的能力可能是无限的。如果 AGI 的目标不再是将其自身识别为技能清单，而是拥有无限的技能，那么情况就会变得极其复杂难以控制。评估并对范围尚不完全了解的事物做出价值判断将不会容易。此外，控制可能的恶意用途也将具有挑战性，例如：网络钓鱼、虚假产品评论、错误信息和虚假信息等。一个例子来自新加坡政府科技局的一项研究。研究人员将 `GPT-3` 与其他专注于人格分析的 AI 产品结合使用，以生成针对同事背景和特征量身定制的网络钓鱼邮件。研究人员发现，更多人点击了 AI 生成消息中的链接，比人类撰写的邮件高出显著幅度（Hay Newman, 2021）。此外，`GPT-3` 还被用于创建在线农场的內容，这些农场通常重新利用知名网站的新闻以吸引广告收入。其中一些 AI 驱动的网站已被发现传播虚假信息（Vincent, 2023）。
 
 因此，我认为为了对技术制品做出道德判断，知道并定义其目标至关重要。在缺乏这些条件的情况下，伦理几乎找不到其用武之地。如果其能力和用例是无限的，计算风险、后果、背景和模型使用将非常具有挑战性甚至不可能。
 
@@ -1885,10 +1892,6 @@ GPT-3 API 的另一个用例是公司 Copy.ai。
 例如，著名的 ImageNet 数据集由同样著名的众包平台 Amazon’s Mechanical Turk 进行标注，该平台提供定制服务以调整和改进 AI 系统的数据和知识库，同时训练它们以实现自动化（Crawford, 2021）。这些大型语言模型的训练方式有些模糊，并在为面向全球的 AI 模型提供数据的标注数据时引发了社会正义和相关性问题。所提出的一系列问题似乎指向一些当代哲学家所称的“技术经济”逻辑（Sadin, 2018）。根据这一逻辑，经济将推动技术和技术发展，寻求以最小成本生产最大利益。
 
 另一个例子涉及 OpenAI 创建 ChatGPT 安全系统的最新丑闻，该系统可检测并过滤有毒语言。OpenAI 与肯尼亚的一家外包公司签约，对数万条文本片段进行标注，其中许多包含明确且令人不安的内容，例如儿童性虐待、谋杀、自杀和酷刑的描述（Perrigo, 2023）。据报道，标注数据的工人时薪不到 2 美元，这引发了关于公平报酬和工人剥削的伦理关切，正如上述学者所报道的那样。此案例也说明，即使是最善意的意图，如果后续实施未能考虑与社会正义相关的伦理影响，也可能产生有限的行动和结果。
-
-
-
-
 
 #### 3. 语言
 
@@ -1905,10 +1908,6 @@ GPT-3 API 的另一个用例是公司 Copy.ai。
 其次，我们需要开始揭开 AI 产业背后关于我们社会正义问题的这些黑暗过程。`black box` 不仅存在于算法内部，也存在于那些往往将世界上最贫穷的部分绑定起来让我们相信这些过程是自动化的——但事实并非如此——的剥削性流程中。为了运行这些大型语言模型所需的数据集，人类劳动的需求呈指数级增长。因此，国家和国际机构需要迅速开始提问，以便提供答案和这些新 `data labeler-proletarians` 的明确立法框架。
 
 最后，关于语言的问题，在我看来，是最棘手的问题之一。除了在 `AGI` 先驱者中发现的隐蔽虚伪，他们将产品作为 `universal` 出售，这里的问题是结构性的。今天我们谈论的是大型语言模型，但我想指出的是，整个互联网生态系统都由英语和渗透其每个角落的美国单一文化所主导。今天我们面临的困难我们可以转化为一种可能性：我们可以修复语言模型中的这类问题，并尽可能整合其用户的反馈。这一过程无疑会更长，但它可能是富有成效合作的开始。此外，它可能有助于改变 `AGI` 的范式，使其更偏向 `narrow AI`：面向特定能力并限定于其上下文。这样，每个上下文都可以占有其模型并使其成为自己的，从而确保与其实社会背景相关的价值观的多样性。
-
-
-
-
 
 从伦理角度来看，与追求通用人工智能（AGI）相比，开发狭窄且基于文化的 AI 模型可能提供若干益处。一个值得注意的优势是，这些模型针对特定情境量身定制，能够满足特定社区的需求和价值观。通过这样做，这些模型可以减轻延续偏见和非预期后果的风险，因为它们与当地的伦理和文化规范保持一致。专注于狭窄的 AI 模型，利益相关者可以确保开发过程更具可控性、透明度，并接受更严格的审查和问责。此外，鉴于英语在 AI 生态系统中的主导地位，优先开发非英语语言的语言模型对于确保多元的语言和文化视角在话语中得到代表至关重要。综合来看，优先开发狭窄且基于文化的 AI 模型可以解决与 AI 相关的伦理问题，并以符合当地价值观和需求的方式促进技术的伦理使用。
 
@@ -1927,19 +1926,33 @@ GPT-3 API 的另一个用例是公司 Copy.ai。
 ### 注释
 
 1. 在本章中，我不区分伦理与道德，二者均有相同的词源，分别源自希腊语和拉丁语。
+
 2. 语言被定义为“自然”语言，当它特属于人类时（例如，中文、西班牙语和德语），与机器的“人工”语言（例如不同的代码语言）相对。
+
 3. 尽管 ChatGPT 和 GPT-4 将会是更相关的分析对象，但本章及其相关研究是在其发布数月前完成的。
+
 4. API，即应用程序编程接口，是一套用于访问基于网络的软件应用程序或网络工具的规则和协议。
+
 5. 网站： [`www.algolia.com/about/`](https://www.algolia.com/about/)
+
 6. 网站： [`www.copy.ai`](https://www.copy.ai)
+
 7. GPT-3 的改进版本，同样由 OpenAI 开发，仅专注于问答任务，因此与我们的分析无关。在签署平台注册后即可访问任何人可访问，可通过以下链接访问：[`chat.openai.com/chat`](https://chat.openai.com)
+
 8. 为进一步探讨信任问题，我建议阅读最近发表在 *Nature* 的这篇文章：[`www.nature.com/articles/d41586-023-00423-4`](https://www.nature.com)
+
 9. 网站： [`openai.com/blog/how-should-ai-systems-behave/`](https://openai.com/blog/how-should-ai-systems-behave/)
+
 10. 他们对 AGI 的定义为：“我们所说的 AGI 是指在大多数经济上有价值的工作上表现优于人类的高度自主系统。”
+
 11. 同上。
+
 12. 提示是指给大型语言模型提供的初始输入集，以便根据提供的上下文生成输出。
+
 13. 网站： [`www.masakhane.io/`](https://www.masakhane.io/)
+
 14. 网站： [`tehiku.nz/`](https://tehiku.nz/)
+
 15. 网站： [`bigscience.huggingface.co/`](https://bigscience.huggingface.co/)
 
 ### References
@@ -1947,37 +1960,61 @@ GPT-3 API 的另一个用例是公司 Copy.ai。
 ### 参考文献
 
 * Altman, S. (2023). Planning for AGI and beyond. OpenAI blog. Retrieved from [`openai.com/blog/planning-for-agi-and-beyond`](https://openai.com)
+
 * Armengol-Estapé, J., Bonet, O. D., & Melero, M. (2021). On the Multilingual Capabilities of Very Large-Scale English Language Models. *arXiv*, abs/2108.13349.
+
 * Broackman, G., et al. (2020). OpenAI API. OpenAI Blog. Retrieved from [`openai.com/blog/openai-api`](https://openai.com/blog/openai-api)
+
 * Brown, T. B., et al. (2020). Language Models are Few-Shot Learners. *arXiv*, arXiv:2005.14165.
+
 * Casilli, A. (2019). En attentant les robots. Editions Seuil, Paris.
+
 * Crawford, K. (2021). Atlas of AI. Yale University Press, Yale.
+
 * Devlin, J., et al. (2018). Bert: Pre-training of deep bidirectional transformers for language understanding. *arXiv preprint*, arXiv:1810.04805.
+
 * Goertzel, B. (2014). Artificial General Intelligence: Concept, State of the Art, and Future Prospects. Journal of Artificial General Intelligence, 5(1), 1–46.
+
 * Goertzel, B., & Pennachin, C. (2007). Artificial General Intelligence. Springer-Verlag, Berlin Heidelberg, Berlin.
+
 * Goetze, T. S., & Abramson, D. (2021). Bigger Isn’t Better: The Ethical and Scientific Vices of Extra-Large Datasets in Language Models. In *WebSci ’21 Proceedings of the 13th Annual ACM Web Science Conference (Companion Volume)*.
+
 * Habermas, J. (1990). Moral consciousness and communicative action. MIT Press.
+
 * Hao, K. (2021). The Facebook whistleblower says its algorithms are dangerous. Here’s why. MIT Technology Review. Retrieved from [`www.technologyreview.com/2021/10/05/1036519/facebook-whistleblower-frances-haugen-algorithms/`](https://www.technologyreview.com/2021/10/05/1036519/facebook-whistleblower-frances-haugen-algorithms/)
+
 * Hao, K. (2022). A new vision of artificial intelligence for the people. MIT Technology Review. Retrieved from [`www.technologyreview.com/2022/04/22/1050394/artificial-intelligence-for-the-people/`](https://www.technologyreview.com/2022/04/22/1050394/artificial-intelligence-for-the-people/)
+
+
+
 * Hay Newman, L. (2021). AI Wrote Better Phishing Emails Than Humans in a Recent Test. Wired. Retrieved from [`www.wired.com/story/ai-phishing-emails/`](https://www.wired.com/story/ai-phishing-emails/)
+
 * Jernite, Y., et al. (2022). Data governance in the age of large-scale data-driven language technology. In *2022 ACM Conference on Fairness, Accountability, and Transparency*.
+
 * Johnson, K. (2022). LaMDA and the Sentient AI Trap. Wired. Retrieved from [`www.wired.com/story/lamda-sentient-ai-bias-google-blake-lemoine/`](https://www.wired.com/story/lamda-sentient-ai-bias-google-blake-lemoine/)
 
-
-
-
-
 * Johnson, R. L., Pistilli, G., Menédez-González, N., Duran, L. D. D., Panai, E., Kalpokiene, J., & Bertulfo, D. J. (2022). The Ghost in the Machine has an American accent: value conflict in GPT-3. *arXiv preprint*, arXiv:2203.07785.
+
 * Legg, S., & Hutter, M. (2007). Universal Intelligence: A Definition of Machine Intelligence. Minds and Machines, 17(4), 391–444.
+
 * Nilsson, N. J. (2010). Quest for Artificial Intelligence: A History of Ideas and Achievements. Cambridge University Press, Cambridge.
+
 * Noble, S. U. (2018). Algorithms of Oppression: How Search Engines Reinforce Racism. New York University Press, New York. [`doi.org/10.18574/nyu/9781479833641.001.0001`](https://doi.org/10.18574/nyu/9781479833641.001.0001)
+
 * Perrigo, B. (2023). Exclusive: OpenAI Used Kenyan Workers on Less Than $2 Per Hour to Make ChatGPT Less Toxic. Time. Retrieved from [`time.com/6247678/openai-chatgpt-kenya-workers/`](https://time.com)
+
 * Pichai, S. (2023). An important next step on our AI journey. Google Blog. Retrieved from [`blog.google/technology/ai/bard-google-ai-search-updates/`](https://blog.google)
+
 * Sadin, E. (2018). Le technolibéralisme nous conduit à un ‘avenir régressif’. Hermès, La Revue, 80(1), 255–258.
+
 * Searle, J. (1980). Minds, brains, and programs. Behavioral and Brain Sciences, 3(3), 417–424. doi:[10.1017/S0140525X00005756](http://dx.doi.org/10.1017/S0140525X00005756)
+
 * Tiku, N. (2022). The Google engineer who thinks the company’s AI has come to life. The Washington Post. Retrieved from [`www.washingtonpost.com/technology/2022/06/11/google-ai-lamda-blake-lemoine/`](https://www.washingtonpost.com)
+
 * Vaswani, A. et al. (2017). Attention is All you Need. *ArXiv abs/1706.03762*.
+
 * Vincent, J. (2023). AI is being used to generate whole spam sites. The Verge. Retrieved from [`www.theverge.com/2023/5/2/23707788/ai-spam-content-farm-misinformation-reports-newsguard`](https://www.theverge.com)
+
 * Wittgenstein, L. (1953). Philosophische Untersuchungen (Philosophical Investigations), translated by G. E. M. Anscombe, 1953.
 
 ## 8 Anand Rao’s Commentary
@@ -1986,23 +2023,23 @@ Anand Rao
 
 PwC, Greater Boston, MA, USA
 
-DOI: [10.1201/9781003320791-10](https://dx.doi.org/10.1201/9781003320791-10)
+DOI: [`10.1201/9781003320791-10`](https://dx.doi.org/10.1201/9781003320791-10)
 
-**What, in your opinion, is human-centered AI and what is its potential, its importance?**
+### What, in your opinion, is human-centered AI and what is its potential, its importance?
 
 When I first encountered the term, I thought, “That’s a bit odd … If you go back to the beginning of AI, it has always been about understanding human intelligence and mimicking it—scholars like Roger Schank, in the ′70s and ′80s were very influenced by psychology.” So, at first, the idea of human-centered AI felt anachronistic to me. But then, as I thought about it, I realized that AI isn’t as closely related to psychology as it used to be. So, I felt that calling into question the lack of interaction between humans and AI could make a lot of sense. And when I started reading more about value alignment, especially what Stuart Russell wrote about that, it made even more sense to focus on a human-centric approach to AI—to reflect on common values we share as humans and think about how to implement them in AI. So I went from “human-centered AI is odd …” to “Yes, I understand now what human-centered AI means, and I get its appeal.”
 
 However, one thing that still bothers me with the idea of human-centered AI is that it elevates humans as the highest form of the ecosystem that we have. I come from an Eastern tradition. In the Indian philosophical tradition, life pervades everything and consciousness and sentience pervade everything: animals, objects, and even rocks. So, I worry that human-centered AI will focus on human benefits to the detriment of other things, both animate and inanimate. I think human-centered AI is too narrow. AI should really be for everything.
 
-**What would be the right label to use to capture the wider ecosystem?**
+### What would be the right label to use to capture the wider ecosystem?
 
 Maybe we should be talking about something like human-led AI for the benefit of everything? Or human-enabled AI for the good of all? Or AI for all? But “for all” could be interpreted as including only people, so “AI for everything” is probably better. You know the Gaia concept? AI should be for the whole planet—human-led, of course, but not only centered on human needs.
 
-**Maybe we can dive into the articles you’ve read to see how they’ve changed some of your views on AI and your ideas about the challenges we’re facing. What article did you read?**
+### Maybe we can dive into the articles you’ve read to see how they’ve changed some of your views on AI and your ideas about the challenges we’re facing. What article did you read?
 
 I read “The Moral Landscape of General-Purpose Large Language Model” by Pistilli; “Privacy in the Era of AI” by Malone; and “Towards Addressing Inequality and Social Exclusion by Algorithms: Human-Centric AI through the Lens of Ubuntu” by Wójcik.
 
-**What did you make of them?**
+### What did you make of them?
 
 I liked the first one on general-purpose AI. It was very interesting. Pistilli highlights three issues with large language models, and I agree with most of what she says, but I’d like to focus on one fundamental question she raises: “What is the ultimate goal of large language models? What is the purpose of artificial general intelligence (AGI)?”
 
@@ -2016,40 +2053,45 @@ Think of the way we’re assessing ChatGPT’s creativity. AGI would need to be 
 
 
 
-
-
 And that’s just for creativity—that is a subset of intelligence! So, will we ever agree on a definition of AGI? Probably not, and that’s where it gets tricky. AI systems are more “general purpose” than ever before. At what point do we stop calling something narrow intelligence and start calling it general intelligence? Since I don’t think we’ll get to any agreeable answer among all of us, from the philosophers and linguists to the AI scientists, I think that’s going to be a problem. That said, Pistilli’s paper was very good, and I agree with her other points.
 
 ### The other two articles you read deal with questions like privacy and the risk of social exclusion
 
 I was keen on Wójcik’s paper. She discusses something I made a point of talking about in a couple of responsible AI forums. Responsible AI principles are very much based on a libertarian view of what human values are. The example I generally use to illustrate the difference is that of individual liberty vs. social good. Western society essentially elevates individual liberty to a very, very high level, whereas it associates the promotion of social good with totalitarianism. For example, Western countries look at China and say, “That’s such a totalitarian regime, everyone has to give their information.” Okay, but let’s leave China alone for a minute. Let’s take India, Korea, or Japan, where I think many people consider the common good is as important or even more important than individual liberties. What do we make of their view? Why should AI support human individual liberty instead of the common good?
+
 I remember reading a South-East Asian author on this, someone who was writing with Buddhist philosophy in mind. But I was not at all aware of the African contribution to this important debate. The notion behind Ubuntu—the idea that identity is about relations between different people, that who you are and what you do is defined by a complex web of interactions—is important and should be taken into consideration in the whole responsible AI world, which I think has embraced the Western view much too tightly. Allowing for alternative values would be very welcome. Maybe we want to come up with some basic human values that everyone should be able to agree on and then allow for variations between cultures. But as of now, I don’t think anyone has drawn such a straight line, and I don’t envy anyone who is supposed to get any agreement on that minimal threshold.
 
 ### What about Malone’s article on privacy?
 
 It was very good. I learned a lot about the origins of the notions of individual liberty and privacy, the fact that they go back as far as 1604, but what I really liked in this paper is the section about the future, in which Malone presents what he calls a cybernetic view of privacy. According to this vision, it’s what AI does that is going to define how we think about privacy, and it’s the way we think about privacy that determines what AI will be doing.
+
 I like this idea of a constant flow of information going back and forth between AI and humans. I think it’s the most fruitful way forward for us to understand AI. That’s why I prefer talking about augmented intelligence instead of artificial intelligence. I don’t think we should be focusing on whether AI will be replacing workers or not. Yes, AI will be able to perform some tasks better than humans. But can we find ways for AI to increase human capabilities instead of trying to replace humans? Malone touches on the idea of AI as “extensions” of humans at the end of his paper. That’s something we’re interested in at my firm, “How can we raise the performance of the human-AI combo?”
+
 In the business world, we often talk about change management, but in order to raise the performance of the human–AI combo, I think we should focus on trust management.
+
 I was introduced to this idea of managing people’s trust in AI when I worked on developing an air traffic management system for the Sydney Airport. We could prove that our algorithm was coming up with the optimal solution to land all aircraft effectively. But traffic controllers were managing airplanes heuristically. And even though we would have been able to prove that our algorithm was more effective than their heuristics, they would not have accepted it.
+
 So, we didn’t force the system onto them. What we did instead was provide them with multiple options: they could choose the optimal option or choose the heuristic option. When we first rolled out the system, controllers always used the heuristic option, but they were provided with additional information like, “That’s great, you landed all of the aircraft, but, by the way, had you chosen this route instead, you would have saved them X gallons of fuel and Y minutes.” Over time, controllers started trying the AI option once in a while. They’d say, “Why don’t I try that tool just for that one aircraft? I’ll do everything else as usual.” And slowly, they gained confidence in our algorithm. That’s what I mean by trust management.
+
 Since Malone argues that the adoption of technology shapes the way we envision the notion of privacy, I think this idea of trust management is somewhat related to his cybernetic view of privacy.
 
 ### If you had one or two recommendations for policymakers, what would they be? What would you do to increase this trust that you are talking about, or to achieve any objectives that you consider crucial?
 
 First, I think there needs to be a real conversation involving all stakeholders concerned with AI policy: governments, large companies developing and promoting the technology, citizen groups, and academics. Each of them has a different mindset: citizen groups are looking at social justice; academics are thinking about what technology can do from a theoretical standpoint, or about the philosophical issues stemming from new AI developments; policymakers are saying, “Tell me what to do to make sure my people are protected”; and then, corporations, of course, are interested in making money out of AI.
+
 So how do you reconcile all of these interests? I think that’s the biggest challenge. Everyone has different incentives. Most academics, for instance, are interested in solving academic issues, and they’re not necessarily paying close attention to social or corporate issues. Whereas businesspeople, for their part, don’t care all that much about what academics have to say. They want something practical that they can do tomorrow—which is unfortunate given that they could learn so much from what academics have thought through, they could avoid a lot of mistakes. So bringing together all of these stakeholders is one thing policymakers should do.
+
 My second recommendation would be about sandboxes. I know that the UK, the European Union, and various countries have tried implementing them. But for sandboxes to be truly effective, there are a couple of pillars that need to be put in place. In particular, we have to think about amnesty for what was done in the past. The reason why some firms are hesitant to get involved in sandboxes is they feel regulators might be gathering information about them. They think, “I’m doing these things, if I tell them what I’m actually doing, they’re going to come back later and say, ‘Your underwriting algorithm was biased’ and I might face sanctions.” So there needs to be some amnesty for those involved in regulatory sandboxes.
+
 Another thing is that it’s not always possible for us to understand the full social implications of regulations before rolling them out, so sandboxes should serve as parallel runs to test things out. This has been done with a financial regulation called Basel II.
-
-
-
-
 
 在四到五年的时间里，对新框架进行了定量影响研究。机构被要求并行进行两套计算：他们会用旧方法进行计算，同时也会按照一套新规则进行计算。只有在经历了四次迭代之后——只有在完成定量影响研究 #1、#2、#3 和 #4 之后——巴塞尔 II 监管才正式出台。这一过程让监管机构得以理顺许多细微差别：抵押贷款是这样运作的，信用卡是那样运作的，对小国不能那样做，对大国也不能那样做，等等。
 
 这对公司来说是额外负担，因为要做两次计算，但仍然……我认为对 AI 这样做是个好主意。以有限的人群并行测试法规，然后再推广，是监管机构应该认真考虑的事情。这在建立人们的信任方面可能产生重大差异。
 
 ## 9 Benjamin Prud’homme’s Commentary
+
+
 
 Benjamin Prud’homme
 
@@ -2063,13 +2105,13 @@ Mila—Québec Artificial Intelligence Institute 是一个由超过 1,000 名机
 
 我经常将后者这条工作线称为能力建设，这一点我非常关心。例如，我们与政策制定者合作，提高他们对 AI 的理解：“什么是 AI？”、“什么是生成式 AI？”、“这些技术如何运作？”、或“可以采用哪些方法来监管它们？”我们的意图不是规定具体的监管方法，而是支持我们的政策制定者——最终是我们的民主制度——理解 AI 的能力。我们还为来自技术背景的人提供学习和培训机会——无论是在研究还是行业——关于如何将负责任 AI 的反思和实践整合到 AI 研究、项目或公司中。
 
-某种程度上，我们在 AI for Humanity 的总体目标是促进某些负责任/伦理 AI 原则的[content]
+某种程度上，我们在 AI for Humanity 的总体目标是促进某些负责任/伦理 AI 原则的落地
 
 在四到五年的时间里，对新框架进行了定量影响研究。机构被要求并行进行两套计算：他们会用旧方法进行计算，同时也会按照一套新规则进行计算。只有在经历了四次迭代之后——只有在完成定量影响研究 #1、#2、#3 和 #4 之后——巴塞尔 II 监管才正式出台。这一过程让监管机构得以理顺许多细微差别：抵押贷款是这样运作的，信用卡是那样运作的，对小国不能那样做，对大国也不能那样做，等等。
 
 这对公司来说是额外负担，因为要做两次计算，但仍然……我认为对 AI 这样做是个好主意。以有限的人群并行测试法规，然后再推广，是监管机构应该认真考虑的事情。这在建立人们的信任方面可能产生重大差异。
 
-## 9 Benjamin Prud’homme’s Commentary
+# 9 Benjamin Prud’homme’s Commentary
 
 Benjamin Prud’homme
 
@@ -2098,10 +2140,6 @@ Mila—Québec Artificial Intelligence Institute 是一个由超过 1,000 名机
 首先，三篇论文各自以不同方式指出了跨学科性对以人为中心 AI 的根本重要性。然而——这并不是批评，而更像是邀请继续对话——我认为这些论文并未充分讨论有意义的跨学科合作有多困难，以及我们如何使其奏效。我们似乎正接近一个大多数人都喜欢并认同跨学科理念的阶段，但却没有投入足够的精力使其发挥作用。你知道，让一位伦理学家、社会学家或语言学家加入你的项目是一回事；创造必要的结构环境以将他们的观点整合到真正影响 AI 系统开发的方式中又是另一回事。跨学科合作极其困难，尤其是在有截止日期、交付成果，以及需要相互协作以创造产品或提出解决方案的人类团队的实际环境中。我不认为任何人已经完全弄清楚正确的做法。因此，对我而言，这些文章邀请我们思考如何在 AI 中开展有意义的跨学科工作。
 
 现在，另一件我很高兴在文章中看到的——特别是在 Larouche 的论文中——是对摆脱创新与监管之间虚假二分法的邀请。该论文提供了解决常被视为不可调和的困境的有趣思路。这非常有价值。我认为创新与治理之间的这种张力很危险，我们应该找到克服它的方法。Larouche 提出的一种细致的中庸方法，结合了技术监管的宽容和保护性两种做法的元素，为应对这一挑战提供了一个有趣的角度。
-
-
-
-
 
 我非常喜欢 Shannon Valor 的文章，特别是她将以人为中心的人工智能拆分为两个主要维度的方式：流程和产出——实际上，我不认为她明确使用了“产出”或“最终结果”这两个词，但这个想法无处不在——对我来说，这种区分非常有用，因为关注流程为我们打开了大门，可以采取具体的日常行动，在我们的工作中实施以人为中心的人工智能。例如，如何框定问题？Valor 建议——我也同意这一点——技术人员应避免自行框定问题。相反，他们应与受影响的利益相关者和社区密切合作，并向他们提问：“你需要什么？技术如何支持你？”这种自下而上的方法与她所称的“逆向适应”形成鲜明对比，后者简单来说，是一个技术人员群体提出解决方案，然后再尝试调整它以使其适用于（或被）一线人员购买的过程。
 
@@ -2139,10 +2177,6 @@ DOI: [10.1201/9781003320791-13](https://dx.doi.org/10.1201/9781003320791-13)
 
 ### Introduction
 
-
-
-
-
 许多利益相关者对人工智能（AI）在医疗保健领域的发展和应用感到兴奋，尤其是在大多数医疗系统面临人力和财务资源短缺的背景下。AI 可以为专业人员提供“时间的礼物”(Topol, 2019a)，以提供更有同情心的护理——并帮助患者获取医疗知识，使其能够在健康相关决策中发挥更积极的作用。美国护士平均有 25% 的工作时间用于 AI 可部分协助的监管和行政活动(Davenport & Kalakota, 2019)。AI 驱动的诊断和医疗治疗反过来又可以带来实质性的健康改善(Topol, 2019a)。虽然许多人对 AI 将如何影响护理提出了可以理解的担忧，但市场趋势表明与健康相关的 AI 已然到来：全球（非健康特定）AI 市场预计到 2030 年价值将达到 1,8110 亿美元(Research & Markets, 2023)。设计良好的 AI 可以提高医疗保健和服务的质量和效率以及人口健康(Topol, 2019b)；然而，必须寻求确保其实现有益目标，而非制造虚假价值感的方式。
 
 问题是如何确保与健康相关的 AI 促进人类价值。医疗保健学者至少以两种方式使用“以人为本的 AI”（HCAI）这一表述。一种侧重于开发促进医疗行为者利益或需求的 AI 的必要性，如患者、医疗提供者和管理人员。另一种侧重于 AI 在人体工学特征方面的“可用性”，以及是否与使用环境相契合。即使是安全有效且具有巨大潜在益处的 AI，如果设计问题导致提供者在特定环境中不太可能为善而使用该技术，也无法确保其实现这些益处。因此这两种观点是互补的。未能解决这种相互依赖性将导致 AI 开发与现实部署之间的实施差距扩大(Seneviratne et al., 2019)并削弱对创新的信任。
@@ -2157,13 +2191,11 @@ AI 的发展已出现在健康研究、预防、健康管理、临床护理和�
 
 健康相关 AI 的使用也引发了严重担忧。例如，医疗 AI 可以产生歧视性影响，例如当 AI 在有问题的、代表性不足的数据上训练或使用有偏见的代理时(Guo et al., 2022; Obermeyer et al., 2019)。其他担忧包括隐私侵犯（即 AI 工具处理大量个人健康信息）、医疗关系的非人化、AI 技术成本与其他医疗保健优先事项相比、以及环境影响（AI 消耗大量能源）(Flood & Régis, 2021)。以下讨论“以人为本”的方法如何帮助解决这种潜在益处与风险混合所带来的一些艰难选择。
 
+
+
 实现适当的平衡需要关注一个复杂的行动者契约，有时是相互依存的。AI 是为许多行动者开发并被他们使用。即使监管存在，仍需要其他机制来确保工具在特定环境中是合适的。监管设定了规范性的底线。从业者还必须以“合法”的方式使用 AI，使其真正促进人类利益，并且用户利益应在每个阶段指导决策。
 
-#### 以人为本的健康相关 AI 和以人为本的设计
-
-
-
-
+## 以人为本的健康相关 AI 和以人为本的设计
 
 尽管关于 HCAI 在医疗保健中含义的文献仍然有限，但总体上趋向于认为它应有利于响应医疗保健使用者需求或利益的 AI 发展。这有时被表述为规范性目标。另一个常见建议是 AI 与人类之间的互动应有助于提升人类绩效。例如，Shneiderman (2022: v) 强调了 HCAI 中“人类价值如权利、正义和尊严的首要性”。这些定义可能与该术语更常见的技术性用法脱节（其中 HCAI 意味着 AI 被设计为可被现实世界中的人使用），但两种方法有着重要的联系。例如，英国医疗和保健监管局 \[MHRA\] 的一份近期监管文件 (2022) 指出，
 
@@ -2173,7 +2205,7 @@ AI 的发展已出现在健康研究、预防、健康管理、临床护理和�
 
 我们在此关注以人为本设计在“可用性”方面的含义，但超越了工效学，从更广泛的背景来看待可用性。健康相关 AI 学者建议 HCAI 可能需要的许多其他特征，包括“人在回路中” (Chancellor et al., 2019; Doncieux et al., 2022)；透明性或可解释性 (Schmidt, 2020; Liang et al., 2021)；以及值得信赖 AI 的特征，包括隐私保护和数据治理规范以及反歧视保护 (Doncieux et al., 2022)。还有其他人建议，只有在整个开发过程中都有利益相关者参与时，AI 才有资格被称为“以人为本” (Melles et al., 2021)。每项建议是否对权利、正义或尊严是必需的，这是一个现实问题，可能需要通过实证检验来验证。然而，关注有助于实际使用的设计要素在任何方法中似乎都很有价值。能够治愈疾病的 AI 如果人们无法使用就不会发挥作用。在这种意义上，即使从经验上看，似乎自主的 AI 能够促进人类价值 (Shneiderman, 2022)，关注人类在 AI 开发和使用“回路”中的作用也很重要。
 
-*以用户为中心的设计* 关注终端用户的体验及其对技术创新设计和使用的意义。它提供了一种实用的分步方法来记录和共同开发某一创新的潜力。Seneviratne et al. (2022) 提出了一个由四个要素组成的模型，以提高技术对终端用户的可用性和益处，重点关注机器学习案例，但很可能更广泛地适用：(1) 可解决的痛点识别，(2) 挖掘 AI 的独特价值（例如自动化和增强）以解决痛点或被视为有问题的情境，(3) 提供给终端用户实用指导的可操作性路径，以及 (4) 模型的奖励函数。可解决的痛点是在行为者估计技术能够创造价值的情境中被感知的[content]
+`以用户为中心的设计` 关注终端用户的体验及其对技术创新设计和使用的意义。它提供了一种实用的分步方法来记录和共同开发某一创新的潜力。Seneviratne et al. (2022) 提出了一个由四个要素组成的模型，以提高技术对终端用户的可用性和益处，重点关注机器学习案例，但很可能更广泛地适用：(1) 可解决的痛点识别，(2) 挖掘 AI 的独特价值（例如自动化和增强）以解决痛点或被视为有问题的情境，(3) 提供给终端用户实用指导的可操作性路径，以及 (4) 模型的奖励函数。可解决的痛点是在行为者估计技术能够创造价值的情境中被感知的
 
 尽管关于 HCAI 在医疗保健中含义的文献仍然有限，但总体上趋向于认为它应有利于响应医疗保健使用者需求或利益的 AI 发展。这有时被表述为规范性目标。另一个常见建议是 AI 与人类之间的互动应有助于提升人类绩效。Shneiderman (2022: v)，例如，强调“人类价值如权利、正义和尊严”在 HCAI 中的首要性。这些定义可能与该术语更常见的技术性用法脱节（其中 HCAI 意味着 AI 被设计为可被现实世界中的人使用），但两种方法有着重要的联系。例如，英国医疗和保健监管局 \[MHRA\] 的一份近期监管文件 (2022) 指出，
 
@@ -2183,10 +2215,7 @@ AI 的发展已出现在健康研究、预防、健康管理、临床护理和�
 
 我们在此关注以人为本设计在“可用性”方面的含义，但超越了工效学，从更广泛的背景来看待可用性。健康相关 AI 学者建议 HCAI 可能需要的许多其他特征，包括“人类在回路中” (Chancellor et al., 2019; Doncieux et al., 2022)；透明性或可解释性 (Schmidt, 2020; Liang et al., 2021)；以及值得信赖 AI 的特征，包括隐私保护和数据治理规范以及反歧视保护 (Doncieux et al., 2022)。还有其他人建议，只有在整个开发过程中都有利益相关者参与时，AI 才有资格被称为“以人为本” (Melles et al., 2021)。每项建议是否对权利、正义或尊严是必需的，这是一个现实问题，可能需要通过实证检验来验证。然而，关注有助于实际使用的设计要素在任何方法中似乎都很有价值。能够治愈疾病的 AI 如果人们无法使用就不会发挥作用。在这种意义上，即使从经验上看，似乎自主的 AI 能够促进人类价值 (Shneiderman, 2022)，关注人类在 AI 开发和使用“回路”中的作用也很重要。
 
-*以用户为中心的设计* 关注终端用户的体验及其对技术创新设计和使用的意义。它提供了一种实用的分步方法来记录和共同开发某一创新的潜力。Seneviratne et al. (2022) 提出了一个由四个要素组成的模型，以提高技术对终端用户的可用性和益处，重点关注机器学习案例，但很可能更广泛地适用：(1) 可解决的痛点识别，(2) 挖掘 AI 的独特价值（例如自动化和增强）以解决痛点或被视为有问题的情境，(3) 提供给终端用户实用指导的可操作性路径，以及 (4) 模型的奖励函数。可解决的痛点是在行为者估计技术能够创造价值的情境中被感知的
-
-
-
+`以用户为中心的设计` 关注终端用户的体验及其对技术创新设计和使用的意义。它提供了一种实用的分步方法来记录和共同开发某一创新的潜力。Seneviratne et al. (2022) 提出了一个由四个要素组成的模型，以提高技术对终端用户的可用性和益处，重点关注机器学习案例，但很可能更广泛地适用：(1) 可解决的痛点识别，(2) 挖掘 AI 的独特价值（例如自动化和增强）以解决痛点或被视为有问题的情境，(3) 提供给终端用户实用指导的可操作性路径，以及 (4) 模型的奖励函数。可解决的痛点是在行为者估计技术能够创造价值的情境中被感知的
 
 监管机构在此可以提出的首个问题是：“该 AI 工具在进入医疗市场之前是否符合适当的性能（效能和安全性）标准？” 然而，以人为中心的方法会促使他们提问：“该 AI 工具与医疗环境中人类用户之间的互动组合，在其可获得并使用的医疗情境中是否符合此类标准？” 这个第二个问题呼应了英国的做法，其中 MHRA (2022) 建议，“\[I\]t 是人机团队的性能，而不仅仅是模型的性能，才是确保 … \[AI\] 安全有效 的关键。” 因此，需要设定足够高的性能标准，以确保 AI 按预期运行，至少在对患者的风险水平证明其合理时（风险越高，监管要求越高）。但关注其使用方式以及由谁使用也很有价值。确保产品进一步体现人类价值观并在情境中发挥作用，需要正式的 ex-ante 审计或评估流程（主要基于控制设置数据）*和* 在 AI 系统将被使用的那种情境中的 ex-post 流程。
 
@@ -2196,15 +2225,11 @@ AI 的发展已出现在健康研究、预防、健康管理、临床护理和�
 
 这三个提出的监管规范并非详尽无遗，并且只有在情境中应用时才能实现其预期目的。监管机构必须为 HCAI 在特定情境中适当繁荣留下空间。来自情境化设置的发现随后可反馈到监管情境中以在需要时修改规范。
 
-#### 情境的重要性
+## 情境的重要性
 
 将监管世界与实践世界连接起来是多层治理的练习。多层治理“指的是治理系统，其中权力向上、下和横向分散于政府各层级——地方、区域、国家和超国家——以及跨领域和部门，包括国家、市场和公民社会”（Daniell & Kay, 2017: 4）。AI 开发、实施和评估是否“以人为中心”将是众多行为者、部门和决策与干预层级之间持续协调和谈判的结果；监管规则仅提供考虑工具是否以人为中心的所需底线。HCAI 的其他领先定义据此建议价值和技术查询必须关注更广泛的情境。Riedl (2019) 强调理解 AI 角色作为“由人类利益相关者组成的大型系统的一部分”的重要性。再次，MHRA (2022) 指出，人机团队的性能（而不仅仅是模型的性能）是确保 AI 安全有效的关键。而 Shneiderman (2022) 建议，即使是“自主”AI 的价值也必须考虑到其服务人类目的的能力，并且关于是否允许其使用的疑问必须检查它将如何与人类互动。此类分析需要检查 AI 在实践环境中的潜力，例如临床护理情境。
 
 我们在此关注这种互动的两个方面，似乎尤其相关：终端用户群体的多样性以及将价值用作情境中实验、实践和反思的属性。当然，AI-人类互动不会发生在单一情境中。关于可用性和效能的问题需要针对其拟实施的特定情境。 这又带来另一个挑战：每个使用情境都包含具有不同价值观、利益、期望和权力的行为者多样性，这些行为者相互作用以塑造 AI 作为创新的旅程。必须做出努力来调和它们产生的冲突（Denis et al., 2007）。
-
-
-
-
 
 HCAI，换句话说，必须对 AI 可能与不同类型的人类产生的各种交互保持敏感，以及这对其整体价值可能产生的影响。技术的价值是特定情境中多层交互的结果（Pettigrew, 1985；Latour, 1997）。因此，结果无法 *ex-ante* 预测，而是会发展并成为相关行动者及公众在其 *context of application* 中协商的地方评估的产物。某些结果甚至可能无法 *ex-ante* 定义：众多行动者协商“成功”条件。因此，将规范性要求与技术要求对齐以实现人类目标，需要理解行动者网络及其立场如何解释并塑造技术的开发与部署。跨专业以及专业人员与卫生管理者之间的合作程度、一线工作者对政策制定者的信任、行动者的倾向与能力、患者的参与，以及 AI 设备的感知属性与益处，都会影响一项创新的采纳。
 
@@ -2222,10 +2247,6 @@ May (2013) 和 Murray et al. (2010) 的 *normalization process theory* 在此具
 
 ### Conclusion
 
-
-
-
-
 面向“促进人类价值”和“确保人类可用性”的 HCAI 方法可以相关联，因为“以人为中心”需要在规范上是 desirable 的，并且实际上以促进人类价值的方式被使用。将这些规范性需求和技术性需求融合起来不能仅通过监管或专业规范来严格实现，并且人工智能要“以人为中心”所需的内容必须随着时间的推移通过监管层面和床边层面的反思性过程重新定义，因为实际使用案例凸显了规范性和技术性的益处和挑战。这并不免除监管健康相关人工智能的责任。以人为中心的分析反而为适当的监管提供了起点。其中其他方面，例如，前文表明，创新的生命周期审查过程是必要的，并且应在每个阶段关注可用性。
 
 ### Acknowledgment
@@ -2235,49 +2256,82 @@ May (2013) 和 Murray et al. (2010) 的 *normalization process theory* 在此具
 ### References
 
 * Chancellor, S., Baumer, E. P. S., & De Choudhury, M. (2019). Who is the “Human” in Human-Centered Machine Learning: The Case of Predicting Mental Health From Social Media. Proceedings of the ACM on Human-Computer Interaction, *3*(CSCW), 1–32.
+
 * Cohen, G. (2020). Informed consent and medical Artificial Intelligence: What to tell the patient? The Georgetown Law Journal, *108*, 1425–1470.
+
+
+
+## 参考文献
+
 * Da Silva, M., Flood, C. M., & Herder, M. (2022). Regulation of Health-Related Artificial Intelligence in Medical Devices: The Canadian Story. UBC Law Review, *55*(3), 635–682.
+
 * Daniell, K. A., & Kay, A. (2017). Multi-level governance: An introduction. In Multi-level Governance: Conceptual challenges and case studies from Australia, edited by Katherine A. Daniell, Adrian Kay, Australia: Anu Press, 3–32.
+
 * Davenport, T., & Kalakota, R. (2019). The potential for artificial intelligence in healthcare. Future Health, *6*(2), 94–98.
+
 * Denis, J. L., Langley, A., & Rouleau, L. (2007). Strategizing in pluralistic contexts: Rethinking theoretical frames. Human Relations, *60*(1), 179–215.
+
 * Doncieux, S., Chatila, R., Straube, S., & Kirchner, F. (2022). Human-centered AI and robotics. AI Perspectives, *4*(1), 1.
+
 * Flood, C. M., & Régis, C. (2021). AI and Health Law. In Martin-Bariteau, F. & Scassa, T. (Eds.), Artificial Intelligence and the law in Canada. LexisNexis, Toronto, Ontario.
+
 * Gioia, D. A., & Chittipeddi, K. (1991). Sensemaking and sensegiving in strategic change initiation. Strategic Management Journal, *12*(6), 433–448.
+
 * Guo, L. N., Lee, M. S., Kassamali, B., Mita, C., & Nambudiri, V. E. (2022). Bias in, bias out: Underreporting and underrepresentation of diverse skin types in machine learning research for skin cancer detection—a scoping review. Journal of the American Academy of Dermatology, *87*(1), 157–159.
+
 * Haug, C. J., & Drazen, J. M. (2023). Artificial intelligence and machine learning in clinical medicine, 2023. New England Journal of Medicine, *388*(13), 1201–1208.
+
 * Jarzabkowski, P., & Kaplan, S. (2015). Strategy tools-in-use: A framework for understanding “technologies of rationality” in practice. Strategic Management Journal, *36*(4), 537–558.
+
 * Langlois, L., & Régis, C. (2021). Analyzing the contribution of ethical charters to building the future of Artificial Intelligence Governance. In Reflections on AI for humanity, edited by B. Braunschweig, M. Ghallab. Springer, 150–170, https://doi.org/10.1007/978-3-030-69128-8_10
+
 * Latour, B. (1997). Nous n’avons jamais été modernes: essai d’anthropologie symétrique. Paris: La Découverte.
+
 * Laverdière, M. et Régis, C. (2023). Soutenir l’encadrement des pratiques professionnelles en matière d’intelligence artificielle dans le secteur de la santé et des relations humaines. Proposition d’un prototype de code de déontologie (online).
+
 * Liang, Y., He, L., & Chen, X. A. (2021). Human-Centered AI for Medical Imaging. In Y. Li & O. Hilliges (Eds.), Artificial Intelligence for human computer interaction: A modern approach (pp. 539–570). Human-Computer Interaction Series. Cham: Springer International Publishing.
+
 * May, C. (2013). Agency and implementation: understanding the embedding of healthcare innovations in practice. Social Science & Medicine, *78*, 26–33.
+
 * McGann, M., Wells, T., & Blomkamp, E. (2021). Innovation labs and co-production in public problem solving. Public Management Review, *23*(2), 297–316.
+
 * Medicines & Healthcare products Regulatory Agency (MHRA). (2022). Software and AI as a Medical Device Change Programme – Roadmap.
+
 * Melles, M., Albayrak, A., & Goossens, R. (2021). Innovating health care: Key characteristics of human-centered design. International Journal for Quality in Health Care, *33*(Supp. 1), 37–44.
+
 * Morriet, O. (2022). Intelligence artificielle & santé. Montréal: Fonds de recherche du Québec et CHUM.
+
 * Murray, E. et al. (2010). Normalisation process theory: A framework for developing, evaluating and implementing complex interventions. BMC Medicine, *8*(1), 1–11.
+
 * Obermeyer, Z., Powers, B., Vogeli, C., & Mullainathan, S. (2019). Dissecting racial bias in an algorithm used to manage the health of populations. Science (New York, N.Y.), *366*(6464), 447–453.
+
 * Passalacqua, A. et al., (2021). Guide des principes d’innovation et d’IA responsables en santé (available online).
+
 * Patton, M. Q., McKegg, K., & Wehipeihana, N. (Eds.). (2015). Developmental evaluation exemplars: Principles in practice. Guilford Publications.
+
 * Pettigrew, A. M. (1985). Contextualist research and the study of organizational change processes. Research Methods in Information Systems, *1*(1985), 53–78.
+
 * Research and Markets. (2023). *Artificial Intelligence Market Size, Share & Trends Analysis Report By Solution, By Technology (Deep Learning, Machine Learning), By End-use, By Region, And Segment Forecasts, 2023–2030*.
+
 * Riedl, M. O. (2019). Human-Centered Artificial Intelligence and Machine Learning. Human Behavior and Emerging Technologies, *1*(1), 33–36.
+
 * Schmidt, A. (2020). Interactive human centered Artificial Intelligence: A definition and research challenges. In *Proceedings of the International Conference on Advanced Visual Interfaces* (pp. 1–4). AVI ’20. New York, NY: Association for Computing Machinery.
+
 * Seneviratne, M.G. et al. (2019). Bridging the implementation gap of machine learning in health care. BMJ Innovations, *6*, 45–47.
+
 * Seneviratne, M. G., et al. (2022). User-centred design for machine learning in health care: A case study from care management. BMJ Health & Care Informatics, *29*(1), e100656.
+
 * Shneiderman, B. (2022). Human-centered AI. Oxford University Press.
+
 * Topol, E. (2019a). Deep medicine: How Artificial Intelligence can make healthcare human again. USA: Basic Books, Inc.
+
 * Topol, E. (2019b). High-performance medicine: the convergence of human and artificial intelligence. Nature Medicine, *25*(1), 44–56.
 
+* 美国食品药品监督管理局（FDA）。 (2022)。 人工智能和机器学习（AI/ML）驱动的医疗器械。 数字健康卓越中心。 [`www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-aiml-enabled-medical-devices`](https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-aiml-enabled-medical-devices)
 
+* WHO。 (2021)。 健康领域人工智能的伦理与治理：世卫组织指南。 日内瓦：世界卫生组织。
 
-
-
-*   美国食品药品监督管理局（FDA）。 (2022)。 人工智能和机器学习（AI/ML）驱动的医疗器械。 数字健康卓越中心。 [`www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-aiml-enabled-medical-devices`](https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-aiml-enabled-medical-devices)
-
-*   WHO。 (2021)。 健康领域人工智能的伦理与治理：世卫组织指南。 日内瓦：世界卫生组织。
-
-*   Wiklund, M. et al. (2016)。 医疗器械可用性测试，第二版。 CRC Press。
+* Wiklund, M. et al. (2016)。 医疗器械可用性测试，第二版。 CRC Press。
 
 ## 11 以人为本的人工智能助力可持续发展与农业
 
@@ -2335,6 +2389,8 @@ DOI: [10.1201/9781003320791-14](https://dx.doi.org/10.1201/9781003320791-14)
 
 人工智能（AI）和机器学习（ML）具有巨大的潜力来帮助应对这些问题，例如，通过自动化向可再生能源的转变、优化供应链管理、监测生态系统健康、预测极端天气以便及早应对，以及实现精准农业和综合农业投入管理 (Rolnick et al., 2019; McLennon et al., 2021)。一份最新报告还发现，AI 在治理中可以发挥重要作用，通过动员数据、优化策略、改变行为并赋能公民 (Sustainability in the Digital Age, Future Earth, & Climate Works Foundation, 2022)。AI 有潜力成为可持续发展的变革性工具，并推动系统变革中最有力的杠杆（见 Figure 11.1），由 Donella Meadows 所述，聚焦于规则、权力动态和思维模式 (Meadows, 1999)。然而，如果治理不当，AI 以及作为 AI 子集的 ML 存在加剧不平等、侵犯隐私和安全权利以及加速环境退化的合理担忧 (Luers et al., 2020; Bohnsack et al., 2022)。在农业领域，农民互联网接入不足、数据可用性和利益分配不均、难以大规模推广 ML 模型，以及发展中国家缺乏足够受过培训的人员来开发、部署和维护 AI 应用等进一步挑战，使得 AI 难以实现其变革潜力 (Delgado et al., 2019)。
 
+
+
 ![Figure 11.1 Visualizing how AI and other digital innovations can unleash agricultural systems change. This mapping of digitally empowered governance strategies along Donella Meadows’ levers of systems change (adapted from Meadows, 1999; Luers et al., 2020) informed the development of the DISA project. Digital strategies that prioritize participation and empowerment have the strongest potential to bring about systems change.](img/fig11_1_B.jpg)
 
 Figure 11.1 Visualizing how AI and other digital innovations can unleash agricultural systems change. This mapping of digitally empowered governance strategies along Donella Meadows’ levers of systems change (adapted from Meadows, 1999; Luers et al., 2020) informed the development of the DISA project. Digital strategies that prioritize participation and empowerment have the strongest potential to bring about systems change.
@@ -2345,15 +2401,11 @@ Figure 11.1 Visualizing how AI and other digital innovations can unleash agricul
 
 ### 社会情境下 HCAI 的指导原则
 
-
-
-
-
 在应用的、社会情境中将 HCAI 付诸实践，需要在项目的早期阶段投入大量时间。HCAI 必须包容多元观点，并在设计阶段起就提升边缘群体的声音。与一线利益相关者互动有助于促进人工智能开发者之间的理解以及相关社区内的学习，共同测试和共同开发数字工具，并对项目活动进行情境化并清晰传达（Sustainability in the Digital Age, Future Earth, & ClimateWorks Foundation, 2022; Chuard et al., 2022），同时始终遵循 HCAI 指导原则。
 
 本文讨论的四项 HCAI 指导原则并非旨在全面，也并非相互排斥。相反，它们是从文献中涌现出的相关、可操作且相互关联的原则，可以为可持续性和农业这一复杂领域中的 HCAI 铺平道路。
 
-##### 指导原则 1：包容性数据管理
+#### 指导原则 1：包容性数据管理
 
 机器学习模型的准确性取决于用于训练、评估和测试的数据质量。因此，收集、存储和使用数据的过程必须经过深思熟虑，才能使人工智能开发过程被视为以人为中心。学习不同框架、准则和原则对于促进以人为中心的有效和合乎道德的数据管理非常重要。由学术界和工业界利益相关者创建的 FAIR 原则指出，数据和数字资产应可发现、可访问、可互操作和可重用（Wilkinson et al., 2016）。作为对 FAIR 的批评回应，国际原住民数据主权利益集团制定了原住民数据治理的 CARE 原则——集体利益、控制权、责任和伦理（Research Data Alliance International Indigenous Data Sovereignty Interest Group, 2019）。这些原则强调尊重所有相关利益相关者的权利和利益（Carroll et al., 2020）。全球农业与营养开放数据（GODAN）行为准则推进了一个共同设计的伦理框架，以促进农业数据负责任共享，涵盖数据隐私和安全、知识产权、数据质量和数据可访问性等议题（Ubalijoro et al., 2021），这在国家法律缺失的情况下尤为关键。以尊重原住民和社区的权利、利益和价值观的方式推进人工智能的负责任发展也至关重要（Lewis et al., 2020）。有趣的是，“17 Rooms Initiative” 的第 9 间室召集了一组数据科学家、发展专家和当地利益相关者，包括合著者 Éliane Ubalijoro，他们原型化了一个数字数据合作社，并正在开发一份配套指南，支持数字资产的创建和所有权，以增强价值和自主权。
 
@@ -2361,15 +2413,11 @@ Figure 11.1 Visualizing how AI and other digital innovations can unleash agricul
 
 基于可访问和可复制的算法（Pineau et al., 2020）开发稳健的人工智能应用，其底层架构和假设对开发者和终端用户而言清晰可知（Margetis et al., 2021）至关重要，鉴于算法输出可能产生的影响（Dietterich, 2017; Buolamwini et Gebru, 2018）。正如我们所知，人工智能完全依赖于用于训练算法的数据——数据必然是对现实的抽象化和有偏见的表征（LeCun et al., 2015）。这些数据集往往缺乏足够的稳健性，无法让模型在所有场景下提供一致、高质量的输出。可以理解的是，机器学习模型预测中的错误会削弱信任；然而，这些错误很容易被忽略，因为可能出现的错误种类繁多而难以检测。一个例子是仅训练用于在农田中检测牛的计算机视觉算法。由于该数据集缺乏牛在其他位置的示例，算法推断农田是与牛的存在（或不存在）相关的重要特征（Beery et al., 2018）。虽然牛可能不常出现在海滩环境中，但评估机器学习模型泛化到训练数据集之外的能力很重要，以确定其是否能在尽可能多的情境和条件下得出准确结论。更全面的系统随后可以指导机器学习科学家改进稳健性、评估部署、监控错误并随时间评估性能。
 
-### 指导原则 3：对合作伙伴、项目和技术的信任
+#### 指导原则 3：对合作伙伴、项目和技术的信任
 
 在项目中参与和受影响者之间建立信任是 HCAI 的关键组成部分。这意味着建立对项目目标和流程的信任，以及对每个团队成员以集成、透明的方式交付其部分工作的相应能力的信任（Osburg et Lohrmann, 2017; Schulz et Feist, 2021）。在训练机器学习模型之前，进行信任建设练习很重要，以促进公平、放大边缘群体的声音并赋能当地利益相关者。这些活动应确保所有相关利益相关者具备必要的理解能力，并能有意义地参与项目（Chuard et al., 2022; Colfer et Prabhu, 2023）。这使得数字工具能够通过跨学科见解的整合而共同创造。另一个信任建设的机会来自于对数据集的优势和局限性的认识（Druce et al., 2021），因为对算法性能能力及其适用条件的透明度，可以在工具部署周围建立一种审慎态度，从而随着时间的推移建立信任。信任可以通过在项目开发生命周期中建立可靠性、一致性（Lankton et al., 2015）和敏捷性（Lien et al., 2021）来维持。
 
-### 指导原则 4：问责制体系
-
-
-
-
+#### 指导原则 4：问责制体系
 
 问责制是 HCAI 的关键组成部分，但实施问责制的方法尚未得到广泛研究。虽然 HCAI 的大量文献将问责制等同于透明度（例如，Lepri 等，2021），但数据、知识和方法方面的透明度可能不足以确保问责制（Gupta 等，2020）。提高透明度确实有可能增强问责制，但在缺乏适当保障措施的情况下也可能带来风险（Luers 等，2020）。实施有意的问责制体系有助于解决透明度自动导致问责制的误导性假设。去中心化的问责结构通常更具响应性、包容性，并使当地合作者能够自主运作（Shah，2004）。非等级制的问责网络可以促进对问责制不同视角的共同理解并增强沟通（Bäckstrand，2008）。数据管理中的问责制与隐私和开放科学尤其相关（Young 等，2019）。机器学习社区正在涌现新的工具来促进透明度和问责制，例如数据集的数据表（Gebru 等，2021）和用于模型报告的模型卡（Mitchell 等，2019）。这些工具有助于对数据进行情境化，使预期用途和局限性明确，并识别数据收集者。许可也可以增强问责制并在开源社区中标准化实践（使用各种可用的许可证，例如来自开源倡议）。
 
@@ -2393,21 +2441,17 @@ DISA 的初始阶段涉及广泛的知识交流，由合著者 Éliane Ubalijoro
 
 ##### 指导原则 2：稳健的 AI 模型
 
-
-
-
-
 DISA 采用包容性的方法创建我们的数据集，使用来自全国各地的多样化数据点，并与当地农民合作收集。地面实况数据是通过在卢旺达由调查员进行的面对面 extensive 调查收集的。调查的开发是一个迭代过程，历经数月的磋商。这段时间被用来解决 DISA 的“鸡生蛋蛋生鸡”困境，例如 ML 团队在没有看到一些数据并进行测试之前，很难准确确定需要训练模型的信息，而其他团队成员则需要了解 ML 方面所需的信息，以便设计调查中包含的问题。同时也需要时间来支持 ML 团队充分理解当地背景，并在再生农业的使用方面建立直觉。
 
 调查收集了来自 APCNF 采用的再生农业九项原则的信息（AFSA et APCNF, 2022）以及感兴趣的产出，如土壤肥力和土壤侵蚀。这些数据点被 ML 团队用来确定再生农业实践在规模上的程度。DISA 团队将首先使用地面实况数据来训练 ML 模型，以识别再生农业的九项原则并将这些实践与产出变量相关联。该过程将涉及参与式研究，以确保 ML 模型产生与农民需求相关的可操作见解。在短期内，这些见解包括作物产量预测和对极端天气事件的韧性信息。下一步，DISA 团队有兴趣探索创新的方法来绘制土壤有机碳图，该方法结合了遥感数据、机器学习模型和土壤光谱学（Vågen et al., 2018），以支持小农获得碳融资。
 
-### 指导原则 3：对合作伙伴、项目和技术的信任
+##### 指导原则 3：对合作伙伴、项目和技术的信任
 
 在 DISA 的讨论中，始终围绕着就实现共同商定目标的最佳前进路径达成共识展开，这与 HCAI 的一个主要方面一致——通过合作和多样性建立信任。项目核心团队在数月内定期举行会议，锻造了牢固的伙伴关系，并使团队成员能够通过对话建立相互理解并使项目愿景和价值观保持一致。与其他组织的长期而有意义的接触，包括政府官员、当地非政府组织、私营部门组织、学术机构和资助组织，有助于建立信任并促进核心团队之外的创新合作。建立信任的一个主要挑战是为此所需的时间寻找资金，这一点至关重要，但可能被低估（Sustainability in the Digital Age, Future Earth, & ClimateWorks Foundation, 2022）。
 
 与小农合作，DISA 团队旨在通过能力建设和知识交流支持持续的学习机会。培训培训师项目，借鉴 APCNF 的积极经验，有可能在以受信任的当地模范农民为先导的情况下，随着时间的推移支持向再生农业实践过渡的指数级增长。最终，随着农民体验到再生农业的积极影响，我们希望这种信任会继续增长。
 
-### 指导原则 4：问责制体系
+##### 指导原则 4：问责制体系
 
 DISA 团队开始通过数据管理框架探索问责制体系，该框架优先考虑隐私和同意，并考虑到在与来自更边缘化社区的利益相关者互动时相关的权力动态。在收集地面实况数据时，由当地调查员口头提供一份针对小农关切和能力的知情同意书，并获得了卢旺达国家统计研究所的调查许可。该团队现在正在探索创建去中心化问责网络的选项。该网络将涉及一个清晰的非等级结构，涉及项目所有阶段的合作伙伴和相关利益相关者，借鉴治理文献中的关键见解（Shah, 2004；Bäckstrand, 2008）。建立这种网络化安排的一个关键组成部分是与所有相互问责的群体建立信任关系。
 
@@ -2417,11 +2461,9 @@ DISA 团队开始通过数据管理框架探索问责制体系，该框架优先
 
 前所未有的环境挑战正在创造集体行为改变的需求。在这种背景下，AI 可以成为一种有用的工具，为激励政策响应和行为改变所需的证据创造依据。HCAI 是一种重要的方法，以确保 AI 开发具有包容性并从不同视角纳入适当的指导原则，尽管挑战仍然存在。
 
+
+
 实施 HCAI 的关键挑战是在项目所有成员之间建立和维持信任。这要求项目合作者在项目甚至开始之前定期和有意义地参与，有时需要数月时间，以讨论角色和责任的分工，并就他们希望如何合作达成一致。虽然对 HCAI 成功指标的讨论超出了本文的范围，但在项目早期共同制定 HCAI 的明确计划并将组成部分与可衡量的结果联系起来，为进一步加强信任和问责提供了更多机会。这些是未来采用 HCAI 方法的项目需要牢记的关键点。
-
-
-
-
 
 The Reimagining Climate Governance in the Digital Age initiative recognizes the need to integrate fragmented approaches across scales to accelerate collective climate action and provide insights on creating sustainable, inclusive climate solutions. It is critically important to deeply integrate the cultural and social contexts in which technologies are developed and deployed (Sustainability in the Digital Age, Future Earth, & ClimateWorks Foundation, 2022). The field of AI is advancing rapidly, including developments like ChatGPT, for example (OpenAI, 2023), but there is a need to amplify insights and accessibility from the Global South, currently underrepresented due to biases and lack of training data from certain countries. Furthermore, inclusive access to information and emerging technologies that serve the needs of real people will be critical to ensure that innovations in AI do not further deepen the digital divide but instead contribute to bridging it (Ubalijoro et al., 2023). Future research is needed to integrate insights from governance in adapting and evaluating guiding principles for data stewardship, robustness, trust, and accountability into actionable, context-specific frameworks. Sharing the work done in DISA to date and highlighting the challenges faced is intended to assist others seeking to leverage HCAI for sustainability and agriculture.
 
@@ -2430,36 +2472,58 @@ DISA’s goal is to advance the exploration of outcomes of the Reimagining Clima
 ### References
 
 * AFSA & APCNF. (2022). Taking Agroecology to Scale: Learning from the Experiences of Natural Farming in India. Retrieved from [`afsafrica.org/wp-content/uploads/2022/10/natural-farming-guide-digital-lr.pdf`](https://afsafrica.org)
+
 * Bäckstrand, K. (2008). Accountability of Networked Climate Governance: The Rise of Transnational Climate Partnerships. Global Environmental Politics, *8*, 74–102.
+
 * Beery, S., Van Horn, G., & Perona, P. (2018). Recognition in Terra Incognita. Retrieved from [`openaccess.thecvf.com/content_ECCV_2018/html/Beery_Recognition_in_Terra_ECCV_2018_paper.html`](https://openaccess.thecvf.com)
+
 * Bohnsack, R., Bidmon, C.M., & Pinkse, J. (2022). Sustainability in the digital age: Intended and unintended consequences of digital technologies for sustainable development. Business Strategy and the Environment, *31*, 599–602.
+
 * Buolamwini, J., & Gebru, T. (2018). Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification. Proceedings of Machine Learning Research, *81*, 1–15.
+
 * Carroll, S.R. et al. (2020). The CARE Principles for Indigenous Data Governance. Data Science Journal, *19*, 43.
+
 * CBD COP-15. (2022). Kunming-Montreal Global Biodiversity Framework. Retrieved from [`www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf`](https://www.cbd.int)
+
 * Chancellor, S., Baumer, E.P.S., & De Choudhury, M. (2019). Who is the ‘Human’ in Human-Centered Machine Learning: The Case of Predicting Mental Health from Social Media. *Proceedings of the ACM on Human-Computer Interaction*, *3*(147,1-147:32).
+
 * Chuard, P., Garard, J., Schulz, K., Kumarasinghe, N., & Matthews, D. (2022). A portrait of the different configurations between digitally-enabled innovations and climate governance. Earth System Governance, *13*, 100147.
+
 * Colfer, C., & Prabhu, R. (2023). Responding to Environmental Issues through Adaptive Collaborative Management: From Forest Communities to Global Actors. Taylor & Francis.
+
 * de Beer, J., Oguamanam, C., & Ubalijoro, É. (2022). Ownership, Control, and Governance of the Benefits of Data for Food and Agriculture: A Conceptual Analysis and Strategic Framework for Governance.
+
 * Delgado, J.A., Short, N.M., Roberts, D.P., & Vandenberg, B. (2019). Big Data analysis for sustainable agriculture on a geospatial cloud framework. Frontiers in Sustainable Food Systems, *3*.
+
 * Dietterich, T.G. (2017). Steps toward Robust Artificial Intelligence. AI Magazine, *38*, 3–24.
+
 * Druce, J., Niehaus, J., Moody, V., Jensen, D., & Littman, M.L. (2021). Brittle AI, Causal Confusion, and Bad Mental Models: Challenges and Successes in the XAI Program. Preprint. Retrieved from [`arxiv.org/abs/2106.05506`](http://arxiv.org)
+
 * FAO. (2022). Soils for nutrition: State of the art. Retrieved from [`www.fao.org/documents/card/en/c/cc0900en`](https://www.fao.org)
+
 * Gebru, T., et al. (2021). Datasheets for Datasets. Preprint. Retrieved from [`arxiv.org/abs/1803.09010`](http://arxiv.org)
+
 * Gupta, A., Boas, I., & Oosterveer, P. (2020). Transparency in global sustainability governance: To what effect? Journal of Environmental Politics and Planning, *22*, 84–97.
+
 * India-Rwanda Knowledge Exchange on Natural Farming: Webinar 2 - The Rwandan Perspective (2020). Retrieved from [`www.youtube.com/watch?v=2m1Q0a7rJHM&list=PLeRVyCRL9PkQDf2PtBDoC5XC7ozhzjsSf&index=42&t=149s`](https://www.youtube.com)
+
 * IPCC. (2018). Global Warming of 1.5°C: An IPCC Special Report on the impacts of global warming of 1.5°C above pre-industrial levels and related global greenhouse gas emission pathways, in the context of strengthening the global response to the threat of climate change, sustainable development, and efforts to eradicate poverty. Cambridge University Press.
+
 * Lankton, N., McKnight, D.H., & Tripp, J. (2015). Technology, humanness, and trust: Rethinking trust in technology. JAIS, *16*, 880–918.
+
 * LeCun, Y., Bengio, Y., & Hinton, G. (2015). Deep learning. Nature, *521*, 436–444.
+
 * Lepri, B., Oliver, N., & Pentland, A. (2021). Ethical machines: The human-centric use of artificial intelligence. iScience, 24.
+
 * Lewis, J.E. et al. (2020). Indigenous protocol and Artificial Intelligence position paper. Retrieved from [`www.indigenous-ai.net/position-paper/`](https://www.indigenous-ai.net)
+
 * Lien, A., et al. (2021). Trust is essential to the implementation of adaptive management on public lands. Rangeland Ecology & Management, *77*, 46–56.
+
 * Luers, A. et al. (2020). Leveraging digital disruptions for a climate-safe and equitable world: The Dˆ2S Agenda. IEEE Technology and Society Magazine, *39*, 18–31.
+
 * Margetis, G., Ntoa, S., Antona, M., & Stephanidis, C. (2021). Human-centered design of artificial intelligence. In Handbook of Human Factors and Ergonomics (pp. 1085–1106). John Wiley & Sons, Ltd.
+
 * McLennon, E., Dari, B., Jha, G., Sihi, D., & Kankarla, V. (2021). Regenerative agriculture and integrative permaculture for sustainable and technology-driven global food production and security. Agronomy Journal, *113*, 4541–4559.
-
-
-
-
 
 * Meadows, D. (1999). 杠杆点：干预系统的场所。检索自 [`donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system/`](http://donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system/)
 
@@ -2470,6 +2534,8 @@ DISA’s goal is to advance the exploration of outcomes of the Reimagining Clima
 * Osburg, T., & Lohrmann, C. (2017). 数字世界的永续性：新技术带来的新机遇。Springer International Publishing。
 
 * Pathak, M. et al. (2022). 气候变化 2022：气候变化的减缓。政府间气候变化专门委员会第六次评估报告第三工作组贡献。载于 P.R. Shukla 等编，Cambridge University Press。
+
+
 
 * Pineau, J. et al. (2020). 改善机器学习研究的可重复性：来自 NeurIPS 2019 可重复性计划的报告。预印本。检索自 [`arxiv.org/abs/2003.12206`](http://arxiv.org)
 
@@ -2517,7 +2583,7 @@ Sara Pérez-Lauzon
 
 HEC Montréal, Montréal, Québec, Canada
 
-DOI: [10.1201/9781003320791-15](https://dx.doi.org/10.1201/9781003320791-15)
+DOI: [`10.1201/9781003320791-15`](https://dx.doi.org/10.1201/9781003320791-15)
 
 ### 引言
 
@@ -2530,10 +2596,6 @@ DOI: [10.1201/9781003320791-15](https://dx.doi.org/10.1201/9781003320791-15)
 本章的后续安排如下。下一节概述了我们的框架并回顾了关于人工智能与更好工作的现有文献。随后是对两个范例“工业 4.0”和“平台工作”的分析。基于我们自己的材料和二手数据，我们对每个范例的工作质量、工人赋权和治理形式之间的相互作用进行了考察。下一节讨论了为更好工作和更好社会而进行的人工智能治理问题。结论部分对实现以人为中心的人工智能以获得更好工作的途径进行了反思。
 
 ### 为未来和更好的工作而使用人工智能
-
-
-
-
 
 AI 作为一种通用目的技术，可以有多种用途和溢出效应，并显著影响我们的思维和行动习惯。AI 尽管是社会建构的，其产生的不同结果取决于社会环境和发展的背景。在工作世界中，AI 的部署有可能分裂并侵蚀就业关系制度的基础，这些基础建立在工作场所的统一性（车间、工厂、办公室）、工作时间的统一性（每周工作时间表、休息时间）以及行动的统一性（工作的集体组织）之上（Degryse, 2020）。其结果可能是有偿劳动与自由劳动、工作与非工作之间界限的模糊，以及需要增强技能和高回报的工作与仅需要低技能和低回报的工作之间的界限模糊。
 
@@ -2563,10 +2625,6 @@ Figure 12.1 Constitutive dimensions of the quality of work.
 
 #### 通过 I4.0 实现生产的数字化
 
-
-
-
-
 在 2011 年汉诺威工业博览会上推出并被誉为可能革新制造业和服务业的新范式（Kagermann, Helbig, Hellinger, & Wahlster, 2013），工业 4.0：(I.40) 的概念意味着通过捕获和格式化数据以及系统和工作团队的互联来实现流程的同步。关于 I4.0 实施的一个关键问题是它是否会取代劳动力，还是在提高其能力的同时增强工人的任务。技术、工作组织实践和能力之间存在相互依存关系（Brynjolfsson, Rock, & Syverson, 2019），并塑造了工作在风险、自主性和表达性方面的构成性维度。
 
 与 I4.0 相关最明显的风险是因失业而导致经济安全的风险。对雇主而言，I4.0 是一种提高生产率和灵活性的方式，同时降低成本，包括劳动力成本；对工人而言，I4.0 是对工作和经济安全的威胁（Marenco & Seidl, 2021）。尽管关于数字技术是否会取代劳动力存在诸多争论（Doellgast & Wagner, 2022），但经验证据表明其影响各不相同（Gautié et al., 2018；Stroud, Timperley, & Weinel, 2020）。机器人技术的引入似乎不会减少总体就业，但会加剧两极分化，高工资/高技能工作和低工资/低技能工作均有所增加，而中间的中等收入/半熟练工作则减少（Dixon, 2020）。如果 I4.0 对经济风险的影响是多样的，那么 I4.0 似乎为集体行动者改善健康和安全提供了新的可能性（Haipeter, 2020），降低身体/心理风险。在对加拿大汽车行业的研究中 Rutherford and Frangi (2020) 认为工人和工会代表已利用 I4.0 的实施来改善工作场所的人体工学。同样，Stroud, Timperley, and Weinel (2020) 展示了工人及其代表如何利用新技术的引入来减少德国和意大利钢铁厂中的危险任务。
@@ -2582,8 +2640,6 @@ I4.0 对工人自主性和自由裁量权的影响更为明显且不那么模棱
 ### 通过平台工作实现工作的数字化
 
 对于平台范例，我们关注 Uber，这是一家主要的网约车配送平台，因其对工作数字化的影响而受到研究人员和政策制定者的高度关注。作为一种应用，Uber 寻求将消费者与司机联系起来，后者将为他们提供服务，例如交通运输。Uber 将自己定位为一家技术公司，通过其将司机与客户连接起来的应用程序。工会和工人的行动则将 Uber 视为“雇主”，挑战 Uber 对其司机的责任。这些挑战的范围涵盖了 Uber 如何将风险转移给司机，特别是与不遵守就业法规（薪酬、社会保障和福利）相关的风险，而 Uber 庞大的算法管理实践扩大了公司对司机自主性和表达性的控制，导致司机从属（Garneau & Bernier, 2023）。
-
-
 
 
 
@@ -2608,10 +2664,6 @@ I4.0 在制造业中的实施并未从根本上改变生产发生的地点（车
 在平台典型案例中，Uber 案例中，工人认为他们对工作地点和时间有更大的自主权，但这是以牺牲工人集体性和统一行动（工作的集体组织）为代价的。在这里，Uber 如何构建其商业模式并使用人工智能，基于其是一家科技公司而非雇主的理念，这对就业保护和监管产生了重大破坏性和破坏性影响。Uber 将雇主风险和责任转移给个人工人，增加不稳定性。为了保持对任务和工作的控制，Uber 对司机进行大量监控和监视。对司机作为工人的缺乏认可减少了 Uber 为工人提供发言机制的责任。
 
 然而，存在大量实验，各种参与者参与设计和实施能够通过更好工作赋能工人的技术。这些实验发生在多个层面（工作场所、部门、区域、国家和超国家），在制度上有所定位，并根据人工智能治理而有所不同。
-
-
-
-
 
 人工智能治理的层级和空间多种多样，并以独特的方式塑造了 HCAI 的定义以及其对未来工作的塑造。然而，越来越多的证据表明，仅靠企业和市场机构无法通过包容性和参与式的治理创造更好的工作条件。公共和非营利机构，如非政府组织、工会以及行业和区域中介组织，必须纳入数字治理中，以实现更好的工作。
 
@@ -2667,17 +2719,13 @@ I4.0 在制造业中的实施并未从根本上改变生产发生的地点（车
 
 * Floridi, L. (2018). Soft ethics, the governance of the digital and the General Data Protection Regulation. Philosophical Transactions of the Royal Society A, *376*, 20180081.
 
-
-
-
-
 ## 13 人工智能与司法决策
 
 Takehiro Ohya
 
 Keio University, Tokyo, Japan
 
-DOI: [10.1201/9781003320791-16](https://dx.doi.org/10.1201/9781003320791-16)
+DOI: [`10.1201/9781003320791-16`](https://dx.doi.org/10.1201/9781003320791-16)
 
 ### 现代审判与理性
 
@@ -2688,37 +2736,62 @@ DOI: [10.1201/9781003320791-16](https://dx.doi.org/10.1201/9781003320791-16)
 > (Kafka, 1925: chapter 10)
 
 * Garneau, J., & Bernier, J. (2023). Défis et enjeux du travail sur les plateformes numériques au Canada et au Québec. In M. Vultur (Ed.), Les plateformes de travail numérique. Polygraphie d’un nouveau modèle organisationnel (pp. 67–93). Québec: PUL.
+
+
+
 * Garneau, J., Pérez-Lauzon, S., & Lévesque, C. (2023). Digitalisation of work in aerospace manufacturing: expanding union frames and repertoires of action in Belgium, Canada and Denmark. Transfer: European Review of Labour and Research, *49*(1). [`doi.org/10.1177/10242589221146876`](https://doi.org/10.1177/10242589221146876)
+
 * Gautié, J., Ahlstrand, R., Wright, S., & Green, A. (2018). Innovation, Job Quality and Employment Outcomes in the Aerospace Industry: Evidence from France, Sweden and the UK.
+
 * Guest, D., Knox, A., & Warhurst, C. (2022). Humanizing work in the digital age: Lessons from socio-technical systems and quality of working life initiatives. Human Relations, *75*(8), 1461–1482.
+
 * Haipeter, T. (2020). Digitalisation, unions and participation: the German case of ‘industry 4.0’. Industrial Relations Journal, *51*(3), 242–260. [`doi.org/10.1111/irj.12291`](https://doi.org/10.1111/irj.12291)
+
 * Jarrahi, M. H., Newlands, G., Lee, M. K., Wolf, C. T., Kinder, E., & Sutherland, W. (2021). Algorithmic management in a work context. Big Data & Society, *8*(2). [`doi.org/10.1177/20539517211020332`](https://doi.org/10.1177/20539517211020332)
+
 * Kagermann, H., Helbig, J., Hellinger, A., & Wahlster, W. (2013). *Recommendations for implementing the strategic initiative INDUSTRIE 4.0: Securing the future of German manufacturing industry; final report of the Industrie 4.0 Working Group*: Forschungsunion.
+
 * Krzywdzinski, M., Gerst, D., & Butollo, F. (2022). Promoting human-centred AI in the workplace. Trade unions and their strategies for regulating the use of AI in Germany. Transfer: European Review of Labour and Research. [`doi.org/10.1177/10242589221142273`](https://doi.org/10.1177/10242589221142273)
+
 * Lévesque, C., Bowkett, C., Perez-Lauzon, S., & Emilien, B. (2021). *Industry 4.0, the Future of Work & Skills. Building Collective Resources for the Canadian Aerospace Industry*: The Future Skills Centre.
+
 * Maffie, M. D. (2022a). Becoming a pirate: Independence as an alternative to exit in the gig economy. British Journal of Industrial Relations, *61*(1), 46–67. [`doi.org/10.1111/bjir.12668`](https://doi.org/10.1111/bjir.12668)
+
 * Maffie, M. D. (2022b). The perils of laundering control through customers: A study of control and resistance in the ride-hail industry. ILR Review, *75*(2), 348–372.
+
 * Marenco, M., & Seidl, T. (2021). The discursive construction of digitalization: a comparative analysis of national discourses on the digital future of work. European Political Science Review, *13*(3), 391–409. [`doi.org/10.1017/s175577392100014x`](https://doi.org/10.1017/s175577392100014x)
+
 * Murray, G., Gesualdi-Fecteau, D., Lévesque, C. & Roby. N. (2023). What makes work better or worse? An analytical framework. Transfer: European Review of Labour and Research, *29*(3), 305–322.
+
 * Rosenblat, A. (2018). Uberland: How algorithms are rewriting the rules of work: University of California Press.
+
 * Rosenblat, A., & Stark, L. (2016). Algorithmic labor and information asymmetries: A case study of Uber’s drivers. International Journal of Communication, *10*, 27.
+
 * Rutherford, T. D. (2021). ‘Negotiate the Algorithm’: Labor Unions, Scale and Industry 4.0 Experimentation. In T. Schulze-Cleven & T. E. Vachon (Eds.), Revaluing Work(ers): Towards a Democratic and Sustainable Future (pp. 79–100). Champaign, IL: Labor and Employment Relations Association Series.
+
 * Rutherford, T. D., & Frangi, L. (2020). Is Industry 4.0 a Good Fit for High Performance Work Systems? Trade Unions and Workplace Change in the Southern Ontario Automotive Assembly Sector. Relations industrielles, *75*(4). [`doi.org/10.7202/1074563ar`](https://doi.org/10.7202/1074563ar)
+
 * Shneiderman, B. (2021). Human-centered AI: How human-centered AI could empower humans. Issues in Science and Technology, *37*(2). Retrieved from [`issues.org/issue/37-2/`](https://issues.org)
+
 * Stroud, D., Timperley, V., & Weinel, M. (2020). Digitalized drones in the steel industry: The social shaping of technology. Relations industrielles/Industrial Relations, *75*(4), 730–750.
+
 * Tasioulas, J. (2022). Artificial Intelligence, humanistic ethics. Daedalus, *151*(2), 232–243.
+
 * Thelen, K. (2018). Regulating Uber: The politics of the platform economy in Europe and the United States. Perspectives on Politics, *16*(4), 938–953.
+
 * Vandaele, K. (2018). Will trade unions survive in the platform economy? Emerging patterns of platform workers’ collective voice and representation in Europe. ETUI RP-WP, *2018*(5), 33.
+
 * Vasudevan, K., & Chan, N. K. (2022). Gamification and work games: Examining consent and resistance among Uber drivers. New Media & Society, *24*(4), 866–886.
+
 * Warhurst, C., & Knox, A. (2022). Manifesto for a new quality of working life. Human Relations, *75*(2), 304–321.
+
 * Wells, K. J., Attoh, K., & Cullen, D. (2021). “Just-in-Place” labor: Driver organizing in the Uber workplace. Environment and Planning A: Economy and Space, *53*(2), 315–331.
+
 * Wood, A. J. (2021). *Algorithmic management consequences for work organisation and working conditions*. JRC Working Papers Series on Labour, Education and Technology.
+
 * Yudken, J. S., & Jacobs, D. C. (2021). Worker voice in technological change: The potential of recrafting. In T. E. Vachon & T. Schulze-Cleven (Eds.), Revaluing Work (ers): Toward a Democratic and Sustainable Future (pp. 141): Labor and Employment Relations Association Series.
+
 * Zuboff, S. (2022). Surveillance capitalism or democracy? The death match of institutional orders and the politics of knowledge in our information civilization. Organization Theory, *3*(3). [`doi.org/10.1177/26317877221129290`](https://doi.org/10.1177/26317877221129290)
-
-
-
-
 
 这段文字是弗朗茨·卡夫卡《判决》的结尾，该书是荒诞派书籍的经典之作。主人公约瑟夫·K.注定要在一种不可解释的程序以及促成这一程序的人们神秘的行为的摆布下，走向执拗的死亡。但他的命运荒诞之处——在哲学荒诞主义的意义上，是非理性的、缺乏意义、因而不可理解的？将关键要素放在这样一个事实是合适的，即正如小说中反复提到的那样，没有任何东西被完全解释，也没有对他为何被以某种方式对待的原因提出任何问题的答案。
 
@@ -2740,6 +2813,7 @@ DOI: [10.1201/9781003320791-16](https://dx.doi.org/10.1201/9781003320791-16)
 考虑路德维希·维特根斯坦关于“家族相似性”（familienähnlichkeit）的说法。例如，各种被称为游戏的实体之间是否存在一个共同的本质，一个定义其是或不是游戏的单一要素？
 
 > 例如看看棋盘游戏，它们之间有着多种多样的关系。现在转向纸牌游戏；在这里你会发现与第一组有许多对应之处，但许多共同特征消失了，其他特征出现了。当我们接下来转向球类游戏时，很多共同之处得以保留，但很多又丢失了。 (…) 我们看到一个复杂的相似网络相互重叠和交叉：有时是整体相似。
+
 > 
 > (Wittgenstein, 1953：66)
 
@@ -2750,8 +2824,6 @@ DOI: [10.1201/9781003320791-16](https://dx.doi.org/10.1201/9781003320791-16)
 AI 技术的问题，至少在目前这个时间点上，是*它没有告诉我们*决策过程或它为何得出特定结论的理由。假设 AI 的特征是返回适当的结果，即使我们不知道为什么，在游戏中使用它（一个非常强大的象棋 AI，尽管我们不知道为什么）或在提醒专家的系统中（AI 标记*可能*异常的数据，当医生检查血液检查结果时）可能没有多大问题。然而，它能被用作刑事法庭判决或税收的工具吗？或者，如果使用本身是可能的，我们能接受它吗？
 
 特别是最后一点，鉴于司法机构做出直接影响公民权利和义务并执行后果的决定的性质，将变得极其重要。例如，如果 AI 被用来交易个人所有者的股票，它可能被认为属于自我决定的范畴，包括使用什么系统以及对它的依赖程度。由于受系统影响的是他的财产，可以说应该允许个人随心所欲。然而，围绕司法机构的情况不能用这种自我负责的逻辑来证明合理。
-
-
 
 
 
@@ -2781,10 +2853,6 @@ AI 技术的问题，至少在目前这个时间点上，是*它没有告诉我�
 
 但问题是什么？有一种观点认为，由于 AI 在物理上是计算机程序的算术过程，其运行过程可以被记录下来（只要有足够的存储空间）并得到验证（除去需要多少努力和时间的问题）——因此 AI 不是黑箱，或者如果能构建适当的验证方法，就不会是黑箱。然而，这一观点忽略了这样一点：对解释请求应给予的是行动的`reason`，它表示语义关系，而不是表示因果关系的`cause`——正如我们无法接受“因为太阳”作为射杀阿拉伯人致死的适当动机，即使这是事实的准确描述（Camus, 1942）。
 
-
-
-
-
 我们要注意，维特根斯坦在《哲学研究》之前的时期引入了两组不同的术语。第一组是“标准”和“症状”，第二组是“理由”和“原因”。“对于‘你怎么知道某某情况成立？’这个问题，我们有时用‘标准’来回答，有时用‘症状’来回答（Wittgenstein, 1969：24）。在这里，标准是用来确定某种情况是否成立的定义，而症状则意味着‘经验告诉我们它与（……）我们所定义的标准现象同时出现的一种现象’（Wittgenstein, 1969：24）。
 
 例如，我们都知道患流感的人会突然发高烧并抱怨关节疼痛和其他症状。在这种意义上，这些要素——高烧和关节疼痛——是经经验得知的现象，是伴随流感感染的征兆。但由于流感并不是唯一会产生这些症状的疾病，因此这些症状的存在是对流感诊断的必要但不充分条件。一个在社会上可接受的、足以回答为何诊断为流感的充分标准将是*通过检测发现流感病毒*。当然，前提是该检测在社会上被认可为对流感有效，例如经卫生部批准。因此，标准将被理解为一种社会定义的要件，是导致结果的必要且充分条件。
@@ -2809,10 +2877,6 @@ AI 技术的问题，至少在目前这个时间点上，是*它没有告诉我�
 
 换句话说，问题在于作为事实做某项行动的层面与按照一套规则做它的层面之间的差异。我们可以在不知情的情况下实践一种行动，而我们不能在没有意识到并且没有理由认为自己能做到时进行规范意识的行动。另一方面，我们不能在不知情且没有理由认为自己能做到时进行规范意识的行动。而造成差异的是，“理由”一词意味着规范性的正当化，而不仅仅是事件的原因。
 
-
-
-
-
 “我因为太阳而射杀了阿拉伯人”在法庭上不会被接受为合理的答案，因为这违背了我们的常识，即正常人不会因这种理由而杀害他人。任何人们不认为合理的解释都会被驳回为蓄意的谎言，或者，如果他确实真诚地相信它是真实的，则是其自身失调的反映。在真实的司法程序中，可能会发生警察、检察官，甚至辩护律师会试图说服被告改变其陈述，理由是这种动机无法说服法官，从而使他因蓄意撒谎而被怀疑企图掩盖其真实动机。出现在法律适用过程中的理由不仅仅是客观事实，而且往往共同产生为社会认可的语义关系的指示。
 
 我们要注意，在某些情况下，被告本人也有动机与其合作。假设我驾驶的汽车造成事故并伤害了某人。如果不存在导致事故且无我过错的身体状况，或汽车缺陷，警察会说一定存在伤害受害者的故意或疏忽驾驶，而我自己也必须承认，逻辑上这两种情况是它可能发生的唯一方式。即使我对自己犯错没有意识或清晰的记忆，我也会推断我一定在没有意识到的情况下粗心大意，我会试图将此作为事故的原因陈述，因为鉴于故意伤害通常比疏忽受到更严厉的惩罚，我有动机避免前者。因此，理由往往是通过从后果进行回顾性推断而逻辑构建的。
@@ -2828,32 +2892,50 @@ AI 技术的问题，至少在目前这个时间点上，是*它没有告诉我�
 ### 注释
 
 1. 存在某些例外，例如当女性因不忠指控被起诉时，她可以有人为她而战（“冠军”）。
+
 2. 在某些法律体系中，可随机从公民中选出的陪审团可能会被添加，但即使在这种情况下，目标也是通过排除利益相关者来确保与职业法官相同的中立性。
+
 3. 当然，法律体系是通过各国民主程序形成的，其内容因国家而异。作者的知识有限，可能不适用于所有国家。
+
 4. 一般而言，从 1956 年达特茅斯会议创造“人工智能”一词到 1960 年代追求推理和搜索方法的发展，被称为第一次 AI 热潮，与 1980 年代和 1990 年代旨在通过知识表示实现专家系统的第二次热潮，以及从 Jeffrey Hinton 于 2006 年开发深度学习开始的第三次热潮相区别。
+
 5. 威斯康星州法院系统，巡回法院案件统计，[`www.wicourts.gov/publications/statistics/circuit/historicalcircuitstats.htm`](https://www.wicourts.gov/publications/statistics/circuit/historicalcircuitstats.htm)
+
 6. Loomis v. Wisconsin, 881 N.W. 2d 749 (Wis. 2016))，经美国最高法院拒绝受理其调卷令而确认。
+
 7. 本章草案最初是用日文撰写的，即作者的母语，并由 DeepL ([`www.deepl.com/translator`](https://www.deepl.com/translator)) 翻译成英文。自然地，结果由作者本人仔细核查并根据其意图进行了修改。在作者看来，这是 AI 的合理使用。
+
 ### 参考文献
 
 * Ambrose, A. (Ed.). (1979). Wittgenstein’s Lecture: Cambridge, 1932–1935, from the Notes of Alice Ambrose and Margaret Macdonald. Basil Blackwell. (Vol. I, p. 4).
+
 * Angwin, J., Larson, J., Mattu, S., & Kirchner, L. (2016, May 23). Machine Bias. ProPublica. Retrieved from [`www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing`](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing) (Checked on February 17, 2023).
+
 * Austin, J. (1832). The Province of Jurisprudence Determined. John Murray.
+
 * Camus, A. (1942). L’Étranger. Éditions Gallimard.
+
 * Dummett, M. (1991). The Logical Basis of Metaphysics. Harvard University Press.
+
 * Equivant. (2019). Practitioner’s Guide to the COMPAS Core (pp. 1–2).
+
 * European Parliament and Council. (2021). Proposal for a Regulation of the European Parliament and of the Council Laying Down Harmonised Rules on Artificial Intelligence (Artificial Intelligence Act) and Amending Certain Union Legislative Acts. COM/2021/206 final.
+
 * Hart, H. L. A. (2012). The Concept of Law (3rd ed. with an Introduction by Leslie Green). Oxford University Press. (1st ed. 1961).
+
 * Independent High-Level Expert Group on Artificial Intelligence set up by the European Commission. (2019). Ethics Guidelines for Trustworthy AI.
+
 * Kafka, F. (1925). Der Prozeß. Verlag Die Schmiede. (Trans. by D. Wyllie). Project Gutenberg. [`gutenberg.org/ebooks/7849`](https://gutenberg.org/ebooks/7849)
+
 * OECD. (2019). Recommendation of the Council on Artificial Intelligence, OECD/LEGAL/0449, adopted on 22/05/2019.
+
 * Tao, K. (2019, June). China’s commitment to strengthening IP judicial protection and creating a bright future for IP rights. WIPO Magazine. Retrieved from [`www.wipo.int/wipo_magazine/en/2019/03/article_0004.html`](https://www.wipo.int/wipo_magazine/en/2019/03/article_0004.html) (Checked on June 27, 2023).
+
+
+
 * Wisconsin Court System. Circuit Court Caseload Statistics. Retrieved from [`www.wicourts.gov/publications/statistics/circuit/historicalcircuitstats.htm`](https://www.wicourts.gov/publications/statistics/circuit/historicalcircuitstats.htm)
+
 * Wittgenstein, L. (1953). Philosophical Investigations (G. E. M. Anscombe, Trans.). Macmillan. (I. s. 66).
-
-
-
-
 
 * 维特根斯坦, L. (1969). 《蓝书与棕书》。Basil Blackwell。 (原作出版于 1958 年)。
 
@@ -2885,10 +2967,6 @@ Humble and Mozelius (2019) 强调了 AIED 的跨学科性质及其不仅支持�
 
 学习分析（LAK）可能是 AIED 中工作量最多的领域。教学和学习越来越多地通过学习管理系统（LMS）如 Moodle 进行。LMS 不仅允许教师整合不同类型的教育资源（文件、HTML 页面、超链接等），还可创建学习活动（形成性或总结性评估、论坛或协作文档中的交流或协作活动等）。得益于从学生活动收集的痕迹（鼠标点击、查阅资源、连接时间、发送消息、提交测验等），教师可以追踪学生参与度。许多人认为痕迹是行为甚至认知参与的指标（Poellhuber et al., 2019）。这就是 LAK 的目标，即利用有关学习者在 LMS 中活动的收集数据来理解和改进学习、学习过程或学习环境。
 
-
-
-
-
 该领域的工作主要集中在四个主题上：性能预测、为教师和学习者提供决策支持、行为模式检测和学习者建模，以及辍学预测（Du et al., 2021）。因此，LAK 被用于预测性分析（Alhadad et al., 2015），包括识别有辍学或不及格风险的学生，并为他们及其教师提供仪表板以支持其自我调节和辅导（Peraya, 2019）。在 Du et al. (2021) 识别的研究中，只有少数研究关注辍学预测（901 项中的 19 项），其总体思路是实施早期检测和干预。大多数研究侧重于概念验证（29.4%）或与 LAK 相关的概念或框架（33.3%）。少数论文（35.2%）专注于进行实际数据分析；这些通常与单一课程或 MOOC 相关，只有少数值得注意的例外。
 
 首批举措是在普渡大学进行的，在那里，使用 Blackboard LMS 构建的 Course Signals 系统被开发出来，旨在利用预测模型引导有风险的学生获得适当的帮助资源（Arnold & Pistilli, 2012）。作者报告，与其他有风险的学生相比，使用 Course Signal 课程的有风险学生的保留率显著提高。作为开放学术分析计划的一部分，基于 Sakai 环境以及学生记录中的其他信息开发的预测模型已在马里斯特学院和另外四所机构中使用。该举措也被证明相当成功（Jayaprakashe et al., 2014）。被识别为有风险并接受干预的学生在课程中的表现优于其他有风险的学生。
@@ -2911,10 +2989,6 @@ Figure 14.1 Adaptive learning model.
 
 AI 能否比教师更好地传授知识？有时可以。只要学习者模型足够复杂，AI 就可以更快、更个性化地做到这一点（Kay et al., 2022）。教师缺乏时间在大规模上进行这种适应工作，而在这种情况下，教学有时会提供给数百人的群体。
 
-
-
-
-
 这引发了关于高等教育目的的疑问。当目标是以机械、快速、高效的方式传递知识时，自适应学习可以非常有效。技术进步甚至可能允许对某些专家（条件性）知识给予更大程度的考虑，超越理论（陈述性）或实践（程序性）知识。对于旨在与同伴社交、研究社交、核心价值观的分享、发展社会情感能力、针对某个问题或建议文本进行批判的情况，AI 生成工具会从其数据库中提出最可能的答案，或生成最符合所表达想法的图像。这可能会如何影响学习和高等教育？大量讨论已致力于抄袭问题，但使用 ChatGPT 的积极可能性也被勾勒出来：作为智能导师（Pardos & Bhandari, 2023），用于自适应学习（Qadir, 2022），作为笔记助手（Saini et al., 2023），或作为写作助手（Salvagano et al., 2023），更不用说协助各种艺术创作的可能性（歌曲、诗歌、故事等）。
 
 在以人为中心的方法中，生成式 AI 可以充当一种个性化导师，随时回答学习者的问题并建议修改或丰富想法的方式，从而体现出一种自适应学习的形式；或者它可以从“智能增强”的角度使用，“旨在与人协作并专注于构建系统，利用 AI 增强和支持人类认知”，（Hassani et al., 2020），如 图 14.2 所示，用于 AI 辅助的研究和写作流程（图 14.2）。最近，生成式 AI 已能够模拟更自然的“人类”对话，用日常语言回答提出的问题。这使得答案看起来更准确、更合理。生成式 AI 的快速采用正是由这种有用且高效的感觉所解释的（Gatzioufa & Saprikis, 2022），这与传统的技术采纳模型一致，其中易用性和感知有用性是使用的主要决定因素。
@@ -2926,10 +3000,6 @@ AI 能否比教师更好地传授知识？有时可以。只要学习者模型�
 然而，ChatGPT 和其他生成式 AI 工具不应被视为可靠的，因为它们无法区分真假信息，更糟糕的是，它们可以字面地提出捏造的答案，甚至编造虚假的参考文献。它们的优势在于能够有效地综合现有信息或重新表述信息，以帮助总结思想或以不同风格呈现。因此，只要它们由经过验证且可验证的数据提供，产生的文本质量可以很好。然而，ChatGPT 并非完全如此，它以 2021 年之前在互联网上找到的内容为食，这部分作品在许多方面存在偏见，且许多主题曾受到大规模的虚假信息宣传。
 
 对于学生而言，ChatGPT 通过帮助他们撰写各种文本，例如计算机代码，提供了有趣的途径。对于教师而言，ChatGPT 和生成式 AI 也可以充当自适应助手，帮助进行课程规划、制定学习目标、综合思想，或为学生启发复杂的练习（Sok & Heng, 2023）。其中最有趣的方面之一是利用生成式 AI 来丰富和个性化对学习者在多项选择测验中或书面作业开发阶段所提供的反馈，因为反馈已被确定为一种非常有效的教学干预，而教师在形成性评估中缺乏提供反馈的时间。
-
-
-
-
 
 尽管如此，生成式人工智能工具对复杂主题的“理解”能力有限。`ChatGPT` 无法充分应用逻辑推理的步骤，并在许多复杂主题上停留在非常肤浅的水平。对于生成式人工智能要发挥作用，人类发挥着关键作用：他们必须能够制定正确的提示序列并逐步调整，以达到既定目标。这不仅需要对 `ChatGPT` 的工作原理有所了解，还需要深厚的领域专业知识来判断所提出的建议。像校对软件或 YouTube 教程一样，生成式人工智能可以帮助构建学习者的知识，但像 `pharmakon` 一样，它也可能使他们变得懒惰或助长抄袭。
 
@@ -2945,6 +3015,8 @@ AI 能否比教师更好地传授知识？有时可以。只要学习者模型�
 
 深度伪造的出现涉及使用人工智能操纵真实人物的声音和/或视频于捏造的场景或讨论中，这使得虚假信息成为与人工智能相关的突出风险。这具有重大的政治和经济影响。抄袭、个人信息隐私、偏见、缺乏透明度和依赖性是一些其他被广泛引用的风险，必须在以人为中心的人工智能方法中加以解决。另一个值得注意的担忧是人际互动的潜在下降，尤其是在教育中。
 
+
+
 将人工智能作为伙伴纳入某些涉及人类参与和在不同阶段对人工智能输出进行批判性评估的教育过程中，是抵消其中一些风险的方式之一。另一种方式也对真正以人为中心的人工智能提出了挑战，即人工智能素养或使用者对人工智能的总体理解。魁北克数字能力框架的第 2 维度（即开发和动员技术技能）涉及 *发展对人工智能及其对教育、社会、文化或政治影响的整体理解*，这种视角呼吁哲学、法律、政治科学等。为此，人工智能的整体运作不仅应在计算机或数据科学中教授，还应在所有学科中教授，以便涵盖不同的可能用途。每位教师都应熟悉教育中使用人工智能，否则他们可能无法正确使用这些工具或理解与之相关的风险（Wilton et al., 2022）。最终，我们认为人工智能素养不仅是教育机会，也是教师、学生、教育顾问、教育管理人员和政策制定者理解人工智能如何运作、其可能性及其在各自学科领域的局限性的必要条件。人工智能素养也将使这些行为者能够参与对其社会、伦理、法律和经济影响的讨论，以便对其进行相关、深思熟虑和合乎道德的使用。
 
 最后，生成式人工智能似乎有能力改变多种基本技能的发展（信息技能、方法技能、写作技能等）。生成式人工智能不应被动员来取代学习者或教师的任务，而应被视为协助教学和学习的工具。此外，随着目前正在出现的各种专业人工智能工具，特别是文献研究和文献计量分析领域，我们可以将其想象成一套工具，未来可能协助教师和学生，更符合增强智能而非人工智能。对这些工具、其运作方式、其局限性和其偏见的充分了解，将对相关和合乎道德的以人为中心的使用至关重要。
@@ -2953,51 +3025,71 @@ AI 能否比教师更好地传授知识？有时可以。只要学习者模型�
 
 与此同时，必须采取措施确保关于用途、算法和所用数据库的最大程度的透明度。至于研究，它必须通过确保其采用的方法包括主要相关者来审视各种系统。让这些行为者更多地参与设计过程和与其相关的研究不仅促进了真正以人为中心的人工智能的整合，也促进了真正人工智能素养的发展。对于其余行为者，必须建立培训和资源来普及人工智能——有些作者称之为可解释人工智能（Khosravi et al., 2022）。只有当所有这些条件得到满足时，我们才会看到高等教育中合乎道德、相关且可持续的变革。
 
-### 参考文献
+## 参考文献
 
 * Alhadad, S., Arnold, K., Baron, J., Bayer, I., Brooks, C., Little, R. R., Rocchio, R. A., Shehata, S., & Whitmer, J. (2015). The Predictive Learning Analytics Revolution : Leveraging Learning Data for Student Success (ECAR Working Group Paper, p. 23). Educause Center for Analysis and Research. https://library.educause.edu/resources/2015/10/the-predictive-learning-analytics-revolution-leveraging-learning-data-for-student-success
 
-
-
-
-
-### 参考文献
-
 * Allal-Chérif, O., Yela Aránega, A., & Castaño Sánchez, R. (2021). Intelligent recruitment: How to identify, select, and retain talents from around the world using artificial intelligence. Technological Forecasting and Social Change, *169*, 120822. https://doi.org/10.1016/j.techfore.2021.120822
+
 * Arnold, K. E., & Pistilli, M. D. (2012). Course signals at Purdue: Using learning analytics to increase student success. In *Proceedings of the 2nd International Conference on Learning Analytics and Knowledge* (pp. 267–270). https://doi.org/10.1145/2330601.2330666
+
 * Brusilovsky, P., & Peylo, C. (2003). Adaptive and intelligent web-based educational systems. International Journal of Artificial Intelligence in Education, *13*, 159–172.
+
 * Carbonell, J. (1970). AI in CAI: An artificial-intelligence approach to computer-assisted instruction. IEEE Transactions on Man Machine Systems, *11*(4), 190–202. https://doi.org/10.1109/TMMS.1970.299942
+
 * Collin, S. et Marceau, E. (2023). Enjeux éthiques et critiques de l’intelligence artificielle en enseignement supérieur. Éthique publique, *24*(2).
+
 * Du, X., Yang, J., Shelton, B. E., Hung, J. L., & Zhang, M. (2021). A systematic meta-review and analysis of learning analytics research. Behaviour and Information Technology, *40*(1), 49–62. https://doi.org/10.1080/0144929X.2019.1669712
+
 * Gasevic, D., Tsai, Y. S., Dawson, S., & Pardo, A. (2019). How do we start? An approach to learning analytics adoption in higher education. International Journal of Information and Learning Technology, *36*(4), 342–353. https://doi.org/10.1108/IJILT-02-2019-0024
+
 * Gatzioufa, P., & Saprikis, V. (2022). A literature review on users’ behavioral intention toward chatbots’ adoption. Applied Computing and Informatics. https://doi.org/10.1108/ACI-01-2022-0021
+
 * Hassani, H., Silva, E. S., Unger, S., TajMazinani, M., & Mac Feely, S. (2020). Artificial Intelligence (AI) or Intelligence Augmentation (IA): What is the future? AI, *1*(2), Article 2. https://doi.org/10.3390/ai1020008
+
 * Heryandi, A. (2020, July). Developing chatbot for academic record monitoring in higher education institution. In IOP Conference Series. *IOP Conference Series: Materials Science and Engineering*, *879*(1), 01204. https://doi.org/10.1088/1757-899X/879/1/012049
+
 * Holmes, W., Bialik, M., Fadel, C., & Center for Curriculum Redesign. (2019). Artificial intelligence in education: Promises and implications for teaching and learning. Center for Curriculum Redesign.
+
 * Humble, N., & Mozelius, P. (2019). Teacher-supported AI or AI-supported teachers? https://doi.org/10.34190/ECIAIR.19
+
 * Hwang, G.-J., Xie, H., Wah, B. W., & Gašević, D. (2020). Vision, challenges, roles and research issues of Artificial Intelligence in Education. Computers and Education, *1*, 100001. https://doi.org/10.1016/j.caeai.2020.100001
+
 * Ifenthaler, D., & Yau, J. Y. K. (2020). Utilising learning analytics to support study success in higher education: A systematic review. Educational Technology Research and Development, *68*(4), 1961–1990. https://doi.org/10.1007/s11423-020-09788-z
+
 * Jayaprakash, S. M., Moody, E. W., Lauría, E. J. M., Regan, J. R., & Baron, J. D. (2014). Early alert of academically at-risk students: An open source analytics initiative. Journal of Learning Analytics, *1*(1), 6–47. https://doi.org/10.18608/jla.2014.11.3
+
 * Kay, J., Bartimote, K., Kitto, K., Kummerfeld, B., Liu, D., & Reimann, P. (2022). Enhancing learning by Open Learner Model (OLM) driven data design. Computers and Education, *3*, 100069. https://doi.org/10.1016/j.caeai.2022.100069
+
 * Khalil, M., & Er, E. (2023). Will ChatGPT get you caught? Rethinking of plagiarism detection. *arXiv preprint arXiv:2302.04335*. https://doi.org/10.48550/arXiv.2302.04335
+
 * Khosravi, H., Shum, S. B., Chen, G., Conati, C., Tsai, Y., Kay, J., Knight, S., Maldonado, R. M., Sadiq, S. W., & Gašević, D. (2022). Explainable Artificial Intelligence in education. Computer Education Artificial Intelligence, *3*, 100074. https://doi.org/10.1016/j.caeai.2022.100074
+
 * Kolb, D. A. (2014). Experiential learning: Experience as the source of learning and development. FT Press.
+
 * Leiter, C., Zhang, R., Chen, Y., Belouadi, J., Larionov, D., Fresen, V., & Eger, S. (2023). ChatGPT: A meta-analysis after 2.5 months. *Arxiv, Admin./2302.13795*.
+
 * Ministère de l’Éducation et de l’Enseignement Supérieur du Québec. (2019). Digital Competencies Framework. Gouvernement du Québec.
+
 * Mirata, V., Hirt, F., Bergamin, P., & van der Westhuizen, C. (2020). Challenges and contexts in establishing adaptive learning in higher education: Findings from a Delphi study. International Journal of Educational Technology in Higher Education, *17*(1), 32. https://doi.org/10.1186/s41239-020-00209-y
+
 * Pardos, Z. A., & Bhandari, S. (2023). Learning gain differences between ChatGPT and human tutor generated algebra hints. *Arxiv, Admin./2302.06871*.
+
 * Peraya, D. (2019). Les Learning Analytics en question. \[Panorama, limites, enjeux et visions d’avenir\]. *Distances et médiations des savoirs* \[T2\]. Distance and Mediation of Knowledge, *25*\[T3\], 77–95.
+
 * Poellhuber, B., Roy, N., & Bouchoucha, I. (2019). Understanding participant’s behaviour in massively open online courses. International Review of Research in Open and Distributed Learning, *20*(1). https://doi.org/10.19173/irrodl.v20i1.3709
+
 * Qadir, J. (2022, décembre 30). Engineering education in the era of ChatGPT: Promise and pitfalls of generative AI for education. Tech. Rxiv\[T4\]. https://doi.org/10.36227/techrxiv.21789434.v1
+
 * Saini, M., Arora, V., Singh, M., Singh, J., & Adebayo, S. O. (2023). Artificial intelligence inspired multilanguage framework for note-taking and qualitative content-based analysis of lectures. Education and Information Technologies, *28*(1), 1141–1163. https://doi.org/10.1007/s10639-022-11229-8
+
 * Salvagno, M., et al. (2023) Can artificial intelligence help for scientific writing? Critical Care, *27*(1), 75. https://doi.org/10.1186/s13054-023-04380-2
+
 * Sejnowski, T. (2023). AI chatbot ChatGPT mirrors its users. Intelligent. Today. https://today.ucsd.edu/story/ai-chatbot-chatgpt-mirrors-its-users-to-appear-intelligent
 
-
-
-
-
 * Sok, S., & Heng, K. (2023). ChatGPT for education and research: A review of benefits and risks. SSRN Electronic Journal. [`doi.org/10.2139/ssrn.4378735`](http://doi.org/10.2139/ssrn.4378735)
+
+
 
 * Southgate, E. (2020). *Artificial intelligence, ethics, equity and higher education: A ‘beginning-of-the-discussion’ paper*. National Centre for Student Equity in Higher Education.
 
@@ -3035,10 +3127,6 @@ DOI: [10.1201/9781003320791-18](https://dx.doi.org/10.1201/9781003320791-18)
 
 遵循这一视角，Calma and Dickson-Deane (2020) 指出，大学曾经被视为产生知识的机构，现在被认可为关心知识的服务提供者，并整合技术以改善、强化并建立学习成果之间的直接联系。通过采用这一更广泛的角色，大学提供资源并提供获取教育机会的途径，促进知识共享，并通过创新工具提高参与度（Keenan et al., 2020）。更近来，学术机构已拥抱更广泛的使命，即通过为当地社区服务并促进社会和经济发展来为公民和公共福利参与做出贡献（Chankselian & McCowan, 2021）。
 
-
-
-
-
 在这种情况下，有必要考虑塑造大学作为服务生态系统中的行动者的多重组成部分，而该生态系统正随着新兴的社会挑战而演变。需要从单纯提供教育服务转变为大学在服务提供中发挥更主动、更具参与性的角色。
 
 ### 参与式大学
@@ -3053,7 +3141,7 @@ Watson et al. (2011, p. 281)将参与式大学定义为*“高等教育全球公
 
 ### 基于人工智能的技术与教育科技
 
-基于人工智能的技术正在提高先进学习系统的能力，该系统基于不断增长的数据分析流程，自动化、支持和增强人类决策（Huang et al., 2019）。它们还通过识别、模拟和适当回应人类情感来支持基于情感的互动。基于这些能力，服务文献已广泛证明人工智能如何用于简化服务流程、提供有效的个性化互动并提供引人注目的客户体验（Wedel & Kannan, 2016）。连接人类、数据和数字技术（即以人为中心的<|message|>人工智能——HCAI）的机会实现了智能服务提供并影响价值共创（Mele & Russo-Spena, 2023）。
+基于人工智能的技术正在提高先进学习系统的能力，该系统基于不断增长的数据分析流程，自动化、支持和增强人类决策（Huang et al., 2019）。它们还通过识别、模拟和适当回应人类情感来支持基于情感的互动。基于这些能力，服务文献已广泛证明人工智能如何用于简化服务流程、提供有效的个性化互动并提供引人注目的客户体验（Wedel & Kannan, 2016）。连接人类、数据和数字技术（即以人为中心的`人工智能——HCAI`）的机会实现了智能服务提供并影响价值共创（Mele & Russo-Spena, 2023）。
 
 关于人工智能技术与大学的研究仍处于萌芽阶段。其中许多研究分析了人工智能技术如何促进服务体验中与各种受益者（学生、教授和研究人员）的互动。信息支持和协作活动是重点。
 
@@ -3068,10 +3156,6 @@ Watson et al. (2011, p. 281)将参与式大学定义为*“高等教育全球公
 所有这些研究在其分析中都采用了特定的大学服务范围，并未更深入地分析 HCAI 如何有效影响整个社会。大学的变革性角色需要对 HCAI 如何影响参与式服务提供进行更整合、更深刻的愿景。
 
 ### 利用人工智能实现参与式大学
-
-
-
-
 
 AI 技术的应用使得改善或实现新的大学服务供给成为可能。大学在日常活动中越来越多地采用新技术，以更好地与教师、研究人员、学生以及更广泛的社会进行互动。 Figure 15.1 所呈现的框架。 展示了大学如何与对“积极参与型大学”这一新概念化的理解同步，提供更新的服务。该框架是通过对文献和真实案例研究的综合理解而确定的（另见 Appendix 1）。它由三大主要活动构成——参与式教育、参与式研究和与社会的参与——并由基于 AI 的基础设施提供支持。以下将对每项活动进行更详细的解释。
 
@@ -3103,11 +3187,9 @@ AI 驱动的虚拟助手支持研究人员，帮助他们完成文献检索、�
 
 
 
-
-
 最后，人工智能支持研究人员通过提供实时反馈并允许他们探索跨不同研究领域的在内容研究，从而专注于更复杂的任务（Chen et al., 2020）。随着数据的处理，研究反馈几乎立即提供。关于尝试不同的搜索选项以及系统性地开发新的、不确定的研究路径，新知识可能会出现。一个例子是 IBM Summit，这是一台功能强大的超级计算机，具有处理海量数据和执行复杂计算以解决具有挑战性的计算问题的能力。有了 IBM Summit，研究人员可以模拟和建模新药物化合物的行为。这些模拟使他们能够预测化合物将如何与身体相互作用并识别任何潜在的副作用，帮助他们做出更明智的信息和决策，关于在药物开发中进一步推进哪些化合物。研究人员还可以快速分析模拟产生的大量数据并将其与不同来源关联起来。因此，他们识别现有医学文献中的差距并获得见解，这些见解可以帮助指导他们研究和决策过程。
 
-#### 与社会互动
+## 与社会互动
 
 基于人工智能的技术有可能通过解决社会问题并增加创造共同价值的机会，更新大学或其他高等教育机构与周边社会之间的关系。可以观察到四项主要活动：信任建设支持、社区参与、先进沟通和创新能力。这些活动重新定义了大学本身的角色。
 
@@ -3129,10 +3211,6 @@ AI 驱动的虚拟助手支持研究人员，帮助他们完成文献检索、�
 
 通过服务学生和研究人员，大学也作为共同创造者来促进解决复杂问题的新解决方案，并与合作伙伴协作应对紧迫的社会挑战。此外，HCAI 参与式大学认识到参与不是“附加”活动，而是其核心使命的重要组成部分。因此，它将参与纳入其教学、研究和知识交流活动，利用人工智能工具和技术创造新的协作和创新机会。通过拥抱 HCAI 并将参与纳入其核心使命，HCAI 参与式大学可以有效地为其各自的社区做出贡献，培养促进社会和经济发展、创造新的学习、发现和创新机会的伙伴关系（Figure 15.2）。
 
-
-
-
-
 ![Figure 15.2 The HCAI-engaged university.](img/fig15_2_B.jpg)
 
 Figure 15.2 The HCAI-engaged university.
@@ -3144,28 +3222,34 @@ Figure 15.2 The HCAI-engaged university.
 ### Appendix 1 Examples of AI-based technologies used in engaged universities (authors’ elaboration)
 
 | **Engaged education** || **Information Support** || **Active Interaction** || **Personalized Experience** || **Inclusive Education** |
+
 | --- | --- | --- | --- | --- |
+
 | *Beacon—Staffordshire University*A chatbot that acts as a digital coach for students. Using AI technology, Beacon provides personalized and responsive information, thus performing quicker and more effective communication.*jill*—*Georgia Institute of Technology*An AI-enabled teaching assistant who can answer student questions about a particular class and curriculum. || *Metaversity—KU University of Kansas*Wearing that takes students to the virtual nursing campus, it is possible to educate people where they are and virtually explore inaccessible places such as the inside of a human heart.*Bina48*—*West Point Military Academy*A humanoid robot co-teach in a university-level class, enhancing comprehension and holding interest.*Robot—University of Nairobi*Students can have joint lectures with students from the University of Komblez-Landau using the robot. Students can also easily attend seminars, whether in Kenya or Germany. || *Yuki—Philipps University of Marburgg*The first robotic lecturer that aids professors in providing more individualized, accurate and prompt grading, as well as identifying new opportunities for improving teachings, thanks to the collection and the analysis of students’ feedback.*SmartUniversity*—*University of Trento*The main goal of this project is to fill the empirical gap concerning students’ time allocation and academic performance by providing a detailed description of how their time management affects their academic achievement. It is based on the analysis of smartphone and secondary data. || *Abii—University of Naples Federico II*A smart robot tutor who assists vulnerable actors through personalized learning adventures and monitors the degree of attention during lessons.*Microsoft Translator*—*Rochester Institute of Technology*An AI-powered communication technology that uses an advanced form of automatic speech recognition to convert raw spoken language into fluent text.*SignAll—Sinclair College*An innovative, patent-pending technology that combines computer vision, machine learning, and natural-language processing to capture the core elements of sign language, allowing conversations between teachers and vulnerable students. |
 
 | **Engaged research** || **Analysis Support** || **Activable Networking** || **Exploited Knowledge Dataset** || **Augmented Research** |
+
 | *Ithaca—University of Venezia Ca*’ *Foscari*An artificial intelligence model that helps scholars to reconstruct the missing parts of ancient texts, to date them and to identify their original place of writing.*Plagiarism check—Autonomous university of Barcelona*A self-service mode to verify the identification, evaluation and prevention of plagiarism through the comparison of different sources, such as, for example, public documents, publishers, and their own repositories. || *PaperHive—Oxford University Press*It is a science collaboration platform that uses artificial intelligence to improve collaboration between researchers. It allows researchers to comment and discuss scientific publications collaboratively, and uses machine learning algorithms to suggest links between comments and related publications.*SciLinkR—Brandeis University*It is a social networking platform that uses artificial intelligence to identify the most influential researchers in a given research area. It uses a machine learning algorithm to analyze the scientific citation network and identify top researchers based on their academic influence. || *ChatGPT—University of Gothenburg*An AI-based chatbot has made its formal debut in the scientific literature. It has been used to automatically outline the main points of the research, thus becoming a co-author.*Generative AI*—*Stanford University*An artificial intelligence that can generate novel content by utilizing existing text, audio, or images. It has now reached a tipping point where it can produce high-quality output that can support many different kinds of tasks.*Philosobot—Oxford University*A chatbot designed to convey their research to others in the most accessible way as it is possible to inform users about research, automatically create links within a topic and collect insights on users. || *IBM Summit*a powerful supercomputer developed by IBM that can leverage data in various scientific fields. With its capability to process vast amounts of data and perform complex calculations at high speeds, IBM Summit is particularly suited for tackling challenging computational problems. |
 
 | **Engaged with society** || **Trust Building Support** || **Communities Involvement** || **Advanced Communication** || **Innovative Abilities** |
+
+
+
 | *Blockcerts Wallet—Maryville University*Using blockchain technology, the app provides a verifiable, tamper-proof diploma that can be easily shared with potential employers and other schools. It is a transformation of the university curricula management that assures storage and verification. || *CiSAI-University of Amsterdam*The platform “Citizens, Society, and Artificial Intelligence” unites social and behavioral science researchers who analyze the effects of AI on societal dynamics and the lives of individual citizens. CiSAI is closely connected to university and faculty initiatives around data science and to teaching initiatives. || *Virtual tour—Georgia state university*Through virtual reality, anyone interested can take a live virtual guided campus tour with their student ambassadors. || *HPC4AI—University of Turin*A federated competence center on High-Performance Computing (HPC), Artificial Intelligence (AI), and Big Data Analytics (BDA), capable of collaborating with entrepreneurs to boost their ability to innovate. |
 
-
-
-
-
-### 基于人工智能的基础设施
+## 基于人工智能的基础设施
 
 `Augmented Reality`—将虚拟图像和信息叠加到现实世界中的技术。
+
 `Blockchain` 是一种分布式账本技术，可安全且不可篡改地记录交易和信息。
+
 `Chatbots`—一种能够模拟对话、理解并自动回答问题的技术。
+
 `Service and Social Robots`—一种表现为能够执行自主或半自主可编程任务的机械设备的技术。
+
 `Virtual Reality`—一种创建沉浸式环境的技术，用户可以在其中与虚拟物体和人物进行逼真的交互。
 
-### 参考文献
+## 参考文献
 
 * Al-Shoqran, M., & Shorman, S. (2021). A review on smart universities and artificial intelligence. In Hamdan, A. et al. (ed.), The fourth industrial revolution: Implementation of artificial intelligence for growing business success (ser. Studies in computational intelligence, 935), 281–294. Springer, Cham.
 
@@ -3229,29 +3313,46 @@ Figure 15.2 The HCAI-engaged university.
 
 * McKinsey (2022). How technology is shaping learning in higher education. Retrieved from https://www.mckinsey.com/industries/education/our-insights/how-technology-is-shaping-learning-in-higher-education
 
-
-
-
-
 * Mele, C., & Russo-Spena, T. (2023). 人工智能在服务中的应用. Elgar Encyclopedia of Services, 356–359.
+
 * Mele, C., Spena, T. R., & Kaartemo, V. (2022). 服务提供与体验中的智能技术. In The Palgrave handbook of service management, 887–906. Palgrave Macmillan, Cham.
+
+
+
 * Nyland, J., & Davies, D. (2022). 大学的社会与公民角色：是时候进行评估了. In Curriculum challenges for universities: Agenda for change, 21–38. Springer, Singapore.
+
 * Ouyang, F., Zheng, L., & Jiao, P. (2022). 在线高等教育中的人工智能：2011 年至 2020 年实证研究的系统综述. Education and Information Technologies, *27*(6), 7893–7925.
+
 * Perkmann, M., Salandra, R., Tartari, V., McKelvey, M., & Hughes, A. (2021). 学术参与：2011–2019 年文献综述. Research Policy, *50*(1), 104114.
+
 * Radianti, J., Majchrzak, T. A., Fromm, J., & Wohlgenannt, I. (2020). 沉浸式虚拟现实在高等教育中的应用系统综述：设计要素、经验教训和研究议程. Computers & Education, *147*, 103778.
+
 * Ravshanbek, Z. (2022). 教育过程中人工智能技术的使用. Web of Scientist: International Scientific Research Journal, *3*(10), 764–770.
+
 * Rodríguez-Abitia, G., & Bribiesca-Correa, G. (2021). 评估大学的数字化转型. Future Internet, *13*(2), 52.
+
 * Selwyn, N. (2019). 机器人应该取代教师吗？：人工智能与教育的未来. John Wiley & Sons.
+
 * Sim, M., Conduit, J., & Plewa, C. (2018). 服务系统中的参与：高等教育环境下的模糊集分析. Journal of Service Management, *29*(3), 422–442.
+
 * Singh, S., & Kaundal, B. (2022). 学术界与产业界的联系：理论与实证综述文章. World Journal of Advanced Research and Reviews, *15*(1), 104–115.
+
 * Syriopoulou-Delli, C., & Gkiolnta, E. (2021). 机器人技术与特殊教育中残疾学生的融合. Research, Society and Development, *10*(9), e36210918238.
+
 * Thatcher, J., Alao, H., Brown, C. J., & Choudhary, S. (2016). 丰富微型和小型企业研究项目的价值：学术界、企业和学生感知的共同创造服务提供. Studies in Higher Education, *41*(3), 560–581.
+
 * Tuunainen, J. (2005). 混合实践？对科学和大学变异辩论的贡献. Higher Education, *50*, 275–298.
+
 * Vargo, S. L., & Lusch, R. F. (2008). 服务主导逻辑：不断演进. Journal of the Academy of Marketing Science, *36*, 1–10.
+
 * Wang, Y., Hu, R., Li, W., & Pan, X. (2016). 教学是否受益于大学-产业合作？探究学术商业化与参与的作用. Scientometrics, *106*(2), 1037–1055.
+
 * Watson, D., Hollister, R., Stroud, S. E., & Babcock, E. (2011). 参与式大学：公民参与的国际视角. Taylor & Francis.
+
 * Wedel, M., & Kannan, P. K. (2016). 数据丰富环境中的营销分析. Journal of Marketing, *80*(6), 97–121.
+
 * Wyner, J. S. (2019). 优秀社区学院的做法：为所有学生准备成功. Harvard Education Press.
+
 * Zhang, K., & Aslan, A. (2021). 教育的人工智能技术：最新研究与未来方向. Computers & Education: Artificial Intelligence, *2*, 100025.
 
 ## 16 社交媒体平台所实施的人工智能系统有多以人为中心？
@@ -3272,13 +3373,9 @@ DOI: [10.1201/9781003320791-19](https://dx.doi.org/10.1201/9781003320791-19)
 
 ### 引言
 
-当今世界最普遍的人工智能系统之一部署在社交媒体平台上。**推荐系统**（参见例如，Zhang et al., 2021）是向每个平台用户每日信息流中推送个性化内容流的人工智能系统。它们通过观察用户在平台上的行为，并*学习*用户“参与”了什么来实现这一点。对于每个平台用户，推荐系统都会观察该用户的行为，并使用机器学习技术形成关于该特定用户通常参与的内容类型的假设。然后，它在该用户后续的信息流中优先考虑这些类型的内容。**内容分类器**是识别平台上特定类型内容的人工智能系统。它们可以操作不同类型的内容：文本分类器可能会将文本内容识别为“报纸文章”或“积极的产品评论”。图像分类器可能会将图像识别为狗、猫或桌子的图片。推荐系统会使用一些内容分类器。但内容分类器在将*有害内容*移出平台（或以各种方式标记有问题的内容）方面也发挥着核心作用。所有社交媒体平台对仇恨言论、暴力内容、裸露和性内容都有详细的政策。这些政策的执行部分涉及人工监督，由内容审核员团队执行。但执行也涉及内容分类器的大规模开发和部署。同样，大多数这些内容分类器通过机器学习方法获得其能力。它们被提供大量训练集，包含它们要识别的每种内容类型的众多*示例*。从这些示例中，它们构建了这些相同内容类别的自己的内部定义，这些定义足够通用，可以让它们对以前从未见过的新项目进行分类。
+当今世界最普遍的人工智能系统之一部署在社交媒体平台上。`推荐系统`（参见例如，Zhang et al., 2021）是向每个平台用户每日信息流中推送个性化内容流的人工智能系统。它们通过观察用户在平台上的行为，并*学习*用户“参与”了什么来实现这一点。对于每个平台用户，推荐系统都会观察该用户的行为，并使用机器学习技术形成关于该特定用户通常参与的内容类型的假设。然后，它在该用户后续的信息流中优先考虑这些类型的内容。`内容分类器`是识别平台上特定类型内容的人工智能系统。它们可以操作不同类型的内容：文本分类器可能会将文本内容识别为“报纸文章”或“积极的产品评论”。图像分类器可能会将图像识别为狗、猫或桌子的图片。推荐系统会使用一些内容分类器。但内容分类器在将*有害内容*移出平台（或以各种方式标记有问题的内容）方面也发挥着核心作用。所有社交媒体平台对仇恨言论、暴力内容、裸露和性内容都有详细的政策。这些政策的执行部分涉及人工监督，由内容审核员团队执行。但执行也涉及内容分类器的大规模开发和部署。同样，大多数这些内容分类器通过机器学习方法获得其能力。它们被提供大量训练集，包含它们要识别的每种内容类型的众多*示例*。从这些示例中，它们构建了这些相同内容类别的自己的内部定义，这些定义足够通用，可以让它们对以前从未见过的新项目进行分类。
 
 推荐系统和内容分类器在不同方式上都是极具以人为中心的。推荐系统在它们*定制*平台用户所见信息的方式上以人为中心。它们将每个用户视为个体，具有独特的一套喜好和厌恶。推荐系统为每个用户充当一种个性化编辑，对每个用户的个人品味都很敏感。当用于内容审核时，内容分类器在确保平台上维护某些*人类价值观*方面以人为中心。它们有助于确保各种形式的仇恨内容从平台上移除。这项工作部分是为了遵守要求移除有害内容法律而进行的（当然，这些法律的性质因司法管辖区而异）。但他们所做的工作往往超出了法律要求，以实施公司关于如何处理有害内容的自有定制政策，无论这涉及移除、标记还是其他操作。
-
-
-
-
 
 虽然社交媒体平台使用的 AI 系统在某些意义上是人本中心的，但其运行的几个方面值得仔细审视。在本章中，我们将聚焦于与*社会结构*相关的问题，这些结构影响，或受影响于社交媒体平台的运行。评估一项技术的以人为本程度不仅仅涉及研究人们如何作为个体用户与之互动：我们还必须考虑在*群体*内部发生的集体过程，既包括技术的使用，也包括其治理。社会中运行的集体过程可以更或少地以人为本：例如，民主比独裁更以人为本；经过偏见审计的住房审批方案比未经过审计的方案更以人为本。在这些集体过程中，以人为本还应尊重人权，例如言论自由权和免受歧视的保护。我们将在“推荐系统”部分讨论推荐系统：重点关注这些系统可能将用户引向两极化或极端主义意识形态，而远离以人为本价值观的担忧。我们将在“内容分类器”部分讨论内容分类器，重点关注这些系统的构建和训练在没有充分征求用户意见、且缺乏足够公众问责的情况下进行的问题。在“以人为本的推荐系统透明度”和“以人为本的内容分类器透明度”部分，我们提出了可以解决这些问题的监管机制，并帮助使社交媒体平台更以人为本。
 
@@ -3304,10 +3401,6 @@ DOI: [10.1201/9781003320791-19](https://dx.doi.org/10.1201/9781003320791-19)
 
 ### 内容分类器
 
-
-
-
-
 内容分类器在社交媒体平台上有许多用途，但在这里我们关注的是它们的主要用途之一，即内容审核：即识别有害内容。有害内容可以有多种形式，公司有自己的政策和定义，但在本章中我们将重点关注“仇恨言论”这一宽泛类别。在其他条件相同的情况下，实施以人为本价值观的平台应明确避免仇恨言论的泛滥。（正如引言中所述，以人为本的 AI 应尊重人权，例如免受歧视的保护权。）当然，“有害内容”的概念具有强烈的价值负载：我们将在本文后面讨论应征求谁的价值观。当然，用户发布的内容被移除也是有问题的：必须在确保用户自由表达意见的需要与确保用户免受对其有害的内容的需要之间取得平衡，无论这种伤害是内在的，还是通过在其他领域煽动伤害而产生的。
 
 在本节中，我们将概述内容分类器如何学习识别一类内容，以“仇恨言论”为例。（我们将重点关注书面文本的分类器，尽管相同的方法可用于训练图像或视频的分类器。）我们将指出社交媒体公司目前实施的学习过程中存在一个担忧，其性质与关于推荐系统的担忧非常不同。
@@ -3332,13 +3425,11 @@ DOI: [10.1201/9781003320791-19](https://dx.doi.org/10.1201/9781003320791-19)
 
 在所有实验中，无论是精细还是粗粒度，公司都可以比较经历不同干预的用户组。由于用户组可以很大，且作为整体，组间唯一的差异与他们经历的干预有关，因此组间任何差异都可以确信地被识别为干预的因果效应。用户组可以在许多指标上进行比较。通常，这些指标与参与度的差异有关：公司有财务利益最大化用户的参与度，因为这使他们在平台上停留更长时间，并产生更多广告收入。从以人为本的视角来看，我们想知道不同的推荐系统体验是否对用户接触有害内容或对其态度的不同影响。如果是这样，那么公司对这种接触或这些态度具有一定的*能动性*，因此可能对做正确的事情负有责任。
 
-
-
-
-
 目前，不幸的是，外部机构没有任何权限研究这些影响。研究完全由公司自行决定进行，很少涉及外部研究人员。仅有一项公司研究使用随机对照试验并公开报道过：Twitter 进行的一项研究，使用了上面提到的数据集，记录了接触推荐系统的实验用户组的行为以及接收逆时间顺序信息流的对照组的行为。已发表的研究（Huszār et al., 2022）比较了研究期间这两个群体看到的主流政治内容数量。差异非常明显：实验组用户看到的政治内容远多于对照组用户。（他们在除一个国家外的所有研究国家中看到的右翼内容也比对照组多。）
 
 Huszār 的 Twitter 研究在两个方面很有趣。首先，它明确表明社交媒体推荐系统会对平台用户产生巨大影响。由此，它凸显了需要进一步了解这些影响的信息：如果推荐系统强烈影响主流政治内容消费，那么它们对*其他*领域——例如仇恨言论、极端主义材料或其他类型有害材料的消费——会产生什么影响？如果我们想评估其推荐系统的以人为本程度，我们迫切需要知道这一点。其次，Huszār 等人的研究展示了一种具体方法，社交媒体公司可以通过这种方法报告其推荐系统的影响信息，而不会损害用户隐私或其专有技术。该研究在 Twitter 内部经过审查并获批准，清楚表明它在这两方面都不构成风险。因此，它为 Twitter 在其他研究中使用提供了模型，询问其推荐系统的其他影响——其他公司也可以使用。
+
+
 
 在此方面，Twitter 近期与新西兰和美国政府以及微软联合采取了一项富有成效的步骤。作为《基督城呼吁消除恐怖主义和暴力极端主义在线》（ChCh Call 2019）的一部分，这些方同意开展一个项目，允许外部研究人员通过确保其隐私的接口访问 Twitter 的内部数据（见 ChCh Call, 2022）。该项目的初始重点正是 Huszār 等人研究的数据集，该数据集研究了推荐系统对平台用户的影响：事实上，该项目的首要目标是创建一个允许复制 Huszār 等人研究的接口。该项目是在埃隆·马斯克收购 Twitter 之前组织的。在撰写本文时，其未来像 Twitter 的许多其他方面一样不确定。我们认为，除了基督城呼吁等自愿倡议外，还需要立法，允许监管机构要求公司开展类似 Huszār 等人的研究，并将结果向公众公开。欧盟的《数字服务法》在提供这种透明度方面走在前列；我们正在与实施该法的团体合作，推动我们在此倡导的研究类型。
 
@@ -3349,10 +3440,6 @@ Huszār 的 Twitter 研究在两个方面很有趣。首先，它明确表明社
 问题部分在于公众目前不知道训练集是如何创建的。例如，谁决定什么算作仇恨言论？但还有另一个潜在问题：公众目前对有害内容如何定义没有任何*发言权*。最近有人对仇恨言论提出了一个有趣的建议：也许什么算作仇恨言论应该由*仇恨针对的对象*来决定——也就是说，由那些亲身经历其造成伤害的人来决定。这一想法由 Kate Hannah 和同事提出（GPAI, 2021 附录 A）。这里的想法是，那些最常被仇恨在线内容针对的社区应被系统地*征询意见*，以就仇恨言论对其社区的最佳定义为社交媒体平台提供建议。这让被针对的社区在社交媒体环境中对有害内容的管理方式拥有发言权。它还为有害内容的*地方治理*创造了一个有趣的模式，因为在不同司法管辖区遭受仇恨言论的社区可能不同。
 
 然而，咨询是一个 notoriously 模糊的过程。而且尚不清楚咨询流程将如何影响公司的定义。一个有趣的技术可能性是，咨询可能涉及有害内容分类器*训练集的策展*。这一提案将产生若干有益效果。首先，它将为咨询过程创造一个非常具体的目标：即由被咨询群体标注的内容项训练集的构建。其次，它将提供关于咨询过程将如何与公司自身流程相连接的清晰度。如果咨询提供了有害内容分类器的训练集，那么该分类器的运作方式将直接由咨询过程决定。第三，它将为如何提供有关训练有害内容分类器过程的透明度的问题提供一个有吸引力的解决方案。训练集本身不能公开提供，正如前面所述：这将允许对抗行为者利用它。但咨询*过程*将对公众可见：例如，选择咨询组成员的过程，以及用于标注示例的协议，都可以成为公开记录。
-
-
-
-
 
 基于咨询的训练集策展的最终好处是，有可能在各公司之间对“危害”的定义进行*标准化*。目前，各公司自行定义有害内容，并使用自己的训练集构建自己的分类器。（有一些共享数据集，但这只是例外，而非规则。）标准化本身将带来若干重要好处。第一个好处是，创建训练集的成本可以*共享*给各公司。目前，不同公司在创建训练集方面的工作存在相当大的重叠，因为它们各自自行创建。如果公司转而利用现有资源为特定领域创建一个单一共享训练集，每家公司都可以在不额外成本的情况下获得更大的训练集，我们可以预期分类器的性能因此而提升。（特别是对于低资源语言而言，对更大、更好的训练集的需求巨大，共享资源将特别有益——参见例如 Ranasinghe and Zampieri, 2021 中的讨论。）共享训练集还将极大地帮助资源不足以自行构建充分训练集的小型社交媒体公司（参见例如 Saltman and Thorley, 2021）。在这一领域已有一些工作，例如 GIFCT 近期的“差距分析”项目 (GIFCT, 2021)——但还可以做更多。第二，共享训练集的好处是，公司在识别有害内容方面的表现可以更容易地被*评估*。设想一个场景：公司在特定领域共享一个训练集，但开发自己的内部分类器来学习该训练集。很容易通过在共享训练集的未见部分上测试每个分类器，看看哪个最准确，来判断哪家公司的分类器在学习任务中“表现最好”。这种竞争性的“共享任务”在机器学习领域完全是标准做法；它们是过去 20 年来取得巨大进展的动力。用于有害内容的共享数据集将使大公司能够在具有巨大社会价值的任务上相互竞争，而不是仅在“市场份额”的商业领域竞争。相对于本手册而言，这可能使公司能够在以人为中心方面展开竞争：哪家公司在识别有害内容的自动化方法上最以人为中心？
 
@@ -3373,23 +3460,12 @@ Huszār 的 Twitter 研究在两个方面很有趣。首先，它明确表明社
 ### References
 
 * Brady, W., & Van Bavel, J. (2021). Estimating the effect size of moral contagion in online networks: A pre-registered replication and meta-analysis. OSF Preprints.
-
 * Brady, W., Wills, J., Jost, J., Tucker, J., & Van Bavel, J. (2017). Emotion shapes the diffusion of moralized content in social networks. Proceedings of the National Academy of Sciences, 114(28), 7313–7318.
-
 * ChCh Call (2019). Christchurch Call to Eliminate Terrorist and Violent Extremist Content Online. [`www.christchurchcall.com/`](https://www.christchurchcall.com/)
-
 * ChCh Call (2022). Christchurch Call Initiative on Algorithmic Outcomes. [`www.christchurchcall.com/media-and-resources/news-and-updates/christchurch-call-initiative-on-algorithmic-outcomes/`](https://www.christchurchcall.com)
-
 * Cinelli, M., Pelicon, A., Mozetic, I., Quattrociocchi, W., Kralj Novak, P., & Zollo, F. (2021). Dynamics of online hate and misinformation. Nature Scientific Reports, 11, 22083.
-
 * Facebook/Meta (2020). Hateful Memes Challenge and dataset for research on harmful multimodal content. Meta AI Research. [`ai.facebook.com/blog/hateful-memes-challenge-and-data-set/`](https://ai.facebook.com)
-
 * GIFCT (2021). GIFCT Technical Approaches Working Group Gap Analysis and Recommendations for deploying technical solutions to tackle the terrorist use of the internet. GIFCT report. [`gifct.org/wp-content/uploads/2021/07/GIFCT-TAWG-2021.pdf`](https://gifct.org)
-
-
-
-
-
 * GPAI (2021). 社会媒体治理的负责任人工智能：研究社会媒体推荐系统对用户影响的协作方法提案。全球人工智能伙伴关系报告。
 * GPAI (2022). 社会媒体推荐算法的透明度机制：从提案到行动。全球人工智能伙伴关系报告。
 * Huszár, F., Ktena, S., O’Briena, C., Belli, L., Schlaikjer, A., & Hardt, M. (2022). Twitter 上政治的算法放大。PNAS, 119(1), e2025334119。
@@ -3409,79 +3485,73 @@ Sandra Rodriguez
 
 MIT 讲师，以及独立创意总监和制作人
 
-DOI: [10.1201/9781003320791-20](https://dx.doi.org/10.1201/9781003320791-20)
+DOI: [`10.1201/9781003320791-20`](https://dx.doi.org/10.1201/9781003320791-20)
 
 > *我从未意识到有其他选择*
->
+> 
 > *除了质疑一切*。
->
+> 
 > **—Noam Chomsky**
->
+> 
 > 人工智能（AI）不仅发展迅速；它无处不在地出现在公共话语中。该术语出现在关于工作未来的文章中，出现在承诺医疗保健中 AI 的广告牌上，出现在关于预测决策伦理的学术辩论中，也出现在 YouTuber 讨论“奇点”的直播中。
->
+> 
 > 2023 年 3 月，当世界在社交媒体上分享教皇方济各身穿 Balenciaga 外套的 AI 生成图像时，
->
+> 
 > ![Figure 17.1 CHOM5KY vs. CHOMSKY VR experience—VR screenshot of the experience Alternative text description: a picture of what is seen in the Virtual Reality headset, where a marble-like monolith is centered in a space filled with huge piles of semi-translucent blocks and cubes. The cubes create an architectural environment and are lit from within. Each cube contains letters, numbers, and percentages representing the data analyzed by the AI back-end system. (© Sandra Rodriguez, National Film Board of Canada.)](img/fig17_1_B.jpg)
->
+> 
 > Figure 17.1 CHOM5KY vs. CHOMSKY VR experience—VR screenshot of the experience Alternative text description: a picture of what is seen in the Virtual Reality headset, where a marble-like monolith is centered in a space filled with huge piles of semi-translucent blocks and cubes. The cubes create an architectural environment and are lit from within. Each cube contains letters, numbers, and percentages representing the data analyzed by the AI back-end system. **(© Sandra Rodriguez, National Film Board of Canada.)**
->
+> 
 > 换句话说，一个本已复杂的决策过程变得更加复杂。作为前进方向，有人指出公众参与和一般数据素养的重要性（Gentelet and Mizrahi, 2023）。然而，动员公民参与并放大他们的声音在历史上一直被证明是困难的。当 AI 的定义在学术界仍在争论时，如何邀请公众对困难的主题发表意见？当 AI 工具被宣传为高度专业化时，如何促进数据素养？我们所有人如何参与引导 AI 的未来？现在是时候打开对话了。
->
+> 
 > 本章建议艺术和艺术体验可以鼓励 AI 素养和公众参与。艺术诠释可以帮助确保广泛的受众掌握鼓励参与重要决策的一般概念。艺术可以帮助说明如何：（1）AI 系统在过去积累的数据上运行（突出显示哪种类型的数据，在何种背景下）；（2）人类决策过程影响算法结果；以及（3）如果我们想避免其当前的陷阱，我们也需要彻底重新想象 AI 的用途、应用和发展。总之，我们需要艺术作品帮助更广泛的受众解构 AI，以便我们都能更好地共同想象其未来。
->
+> 
 > 在过去几十年中，计算艺术实践，如控制论或机器生成艺术，经常使用 ML 应用、语音识别软件和其他常见技术（Audry, 2021），引发了对 AI 创造力的关键问题。更重要的是，这样的创意项目通常被证明有助于突出人类/AI 互动研究中被忽视的因素：意义的概念——我们如何赋予技术、其实践和应用以意义。我们将与人类构建的 AI 程序对话赋予什么价值？在坦诚或复杂的对话中，我们给予“人工实体”及其回应什么价值？这些如何渗透到我们的社会结构中并影响我们想象与 AI 的未来方式？
->
+> 
 > 为了铺垫，本章建议需要专注于解构我们集体用来解释 AI 的隐喻的创意体验，在此过程中突出塑造其当前发展的价值观和偏见。
->
+> 
 > 为此，我们从研究创作体验 *CHOM5KY vs. CHOMSKY* 中汲取教训
->
-> 当参观者走进展览空间时，他们被邀请以四人一组戴上 VR 头盔。当他们进入 VR 世界时，他们各自然后集体地，遇见、交谈并与一个独特的 AI 指南 CHOM5KY 互动。从这次体验中获得的教训提出了理论和实践问题，我们在此讨论。为此，我们首先将解构 AI 的需求置于围绕人类-机器比较而构建的虚构叙事的传统中。然后我们以 CHOM5KY vs CHOMSKY 为案例研究，讨论意义和文化漂移的概念。第三，我们重新审视用户反馈中的关键启示，强调具身互动和游戏的重要性。我们最后重新评估重新审视集体共享叙事的需求，特别是当我们邀请公民重新思考我们对 AI 的期望时。艺术体验不仅揭示意义；我们相信它们也创造意义。
-
-### 关于艺术与仿真：通过 AI 解构 AI
 
 
 
+当参观者走进展览空间时，他们被邀请以四人一组戴上 VR 头盔。当他们进入 VR 世界时，他们各自然后集体地，遇见、交谈并与一个独特的 AI 指南 `CHOM5KY` 互动。从这次体验中获得的教训提出了理论和实践问题，我们在此讨论。为此，我们首先将解构 AI 的需求置于围绕人类-机器比较而构建的虚构叙事的传统中。然后我们以 `CHOM5KY vs CHOMSKY` 为案例研究，讨论意义和文化漂移的概念。第三，我们重新审视用户反馈中的关键启示，强调具身互动和游戏的重要性。我们最后重新评估重新审视集体共享叙事的需求，特别是当我们邀请公民重新思考我们对 AI 的期望时。艺术体验不仅揭示意义；我们相信它们也创造意义。
 
+## 关于艺术与仿真：通过 AI 解构 AI
 
-我们今天谈论人工智能的方式延续了将计算程序与人类认知相比较的传统。我们借鉴机器的逻辑、结构和功能来描述我们说话、思考和创造的方式。这种隐喻的盛行对我们如何构想人工智能具有重要影响。无论是真实还是想象，对即将到来、不可避免的人工智能未来的持续却模糊的承诺都伴随着后果严重的困境：如果我们要为这样的未来做准备，我们应该讨论哪些机遇和危险？我们应该为像 Dall-E 或 Midjourney 这样的创意发展喝彩吗
+我们今天谈论人工智能的方式延续了将计算程序与人类认知相比较的传统。我们借鉴机器的逻辑、结构和功能来描述我们说话、思考和创造的方式。这种隐喻的盛行对我们如何构想人工智能具有重要影响。无论是真实还是想象，对即将到来、不可避免的人工智能未来的持续却模糊的承诺都伴随着后果严重的困境：如果我们要为这样的未来做准备，我们应该讨论哪些机遇和危险？我们应该为像 `Dall-E` 或 `Midjourney` 这样的创意发展喝彩吗
 
-学者有时抱怨公众对人工智能的理解不够，无法区分虚构与现实，但这种假设并不公平。人工智能的概念本身在理论上仍受挑战，人们在争论它应涵盖什么范围。人工智能仍然被呈现为一种“事物”，而不是不同技术的总称。关于人工智能的未来主义隐喻模糊了人们对算法在今天如何被使用的讨论，例如用来挑选有前途的求职者、决定器官移植的潜在接受者，或制作政客、著名演员、前女友等的 deepfake 视频。此外，将人工智能描述为处于“婴儿期”或“需要时间成长”会营造出一种自然萌生的感觉：回避了支撑其发展的政治和经济决策所带来的重要问题。人工智能被塑造成像天气一样——不受束缚、不可预测且不可避免。例如，很少有人谈论全球数百万名被低薪雇佣的“幽灵工人”，他们被雇来假装自己是网站上的机器人，为计算机视觉标注图像、修正自然语言处理的错误，或转录音频文件。
+学者有时抱怨公众对人工智能的理解不够，无法区分虚构与现实，但这种假设并不公平。人工智能的概念本身在理论上仍受挑战，人们在争论它应涵盖什么范围。人工智能仍然被呈现为一种“事物”，而不是不同技术的总称。关于人工智能的未来主义隐喻模糊了人们对算法在今天如何被使用的讨论，例如用来挑选有前途的求职者、决定器官移植的潜在接受者，或制作政客、著名演员、前女友等的 `deepfake` 视频。此外，将人工智能描述为处于“婴儿期”或“需要时间成长”会营造出一种自然萌生的感觉：回避了支撑其发展的政治和经济决策所带来的重要问题。人工智能被塑造成像天气一样——不受束缚、不可预测且不可避免。例如，很少有人谈论全球数百万名被低薪雇佣的“幽灵工人”，他们被雇来假装自己是网站上的机器人，为计算机视觉标注图像、修正自然语言处理的错误，或转录音频文件。
 
 在这种背景下，迫切需要的公众素养不断被旨在让人工智能显得未来主义或高度专业化的词汇所遮蔽。为了提高公民参与度，我们首先需要去神秘化人工智能。我们需要提供经验和空间，帮助公民质疑：我们希望用人工智能实现什么？谁被纳入了对话？谁没有？
 
-当然，这样的努力是复杂的。以人工智能为例，流行的观念建立在这样的承诺之上：有一天，我们能够与“栩栩如生”的实体互动，这些实体可以模仿（或取代）人类存在——在过去，这类实体在科幻作品中常被描绘为机器人，有时是虚拟实体：想想好莱坞的 *A.I*、*Ex-Machina*、*Her* 等。在现实生活中，其他当代项目也利用人工智能让观众产生与过去人物对话的感觉——例如 AI-Dali 指南邀请博物馆参观者会见一个人工的萨尔瓦多·达利，或类似的实体，如 AI 重现的奥黛丽·赫本、肯尼迪和尼克松。
+当然，这样的努力是复杂的。以人工智能为例，流行的观念建立在这样的承诺之上：有一天，我们能够与“栩栩如生”的实体互动，这些实体可以模仿（或取代）人类存在——在过去，这类实体在科幻作品中常被描绘为机器人，有时是虚拟实体：想想好莱坞的 *A.I*、*Ex-Machina*、*Her* 等。在现实生活中，其他当代项目也利用人工智能让观众产生与过去人物对话的感觉——例如 `AI-Dali` 指南邀请博物馆参观者会见一个人工的萨尔瓦多·达利，或类似的实体，如 AI 重现的奥黛丽·赫本、肯尼迪和尼克松。
 
-这些虚构叙事和人物在当代多模态人机交互（HRI）研究中找到了回响。机器人与人类之间交流的多方面特征不仅限于语言，而是建立在文化建构的叙事之上，以帮助用户感到安心，或营造一种“规则”感。正如研究所示，这种拟人化有助于强化关于“人工实体”（在这种情况下是机器人）应是什么样的隐喻、语言和集体共享的想象——以及我们应如何与之相处（Bonarini, 2020；Häring et al., 2014；Dautenhahn et al., 2009；Koay et al., 2020）。与机器人和人工智能并行，虚拟现实和增强现实（VR、AR）技术在头戴式显示器（HMD）、显卡性能以及 VR 在工作和休闲中的使用方面的改进下大幅加速。结合“元宇宙
+这些虚构叙事和人物在当代多模态人机交互（`HRI`）研究中找到了回响。机器人与人类之间交流的多方面特征不仅限于语言，而是建立在文化建构的叙事之上，以帮助用户感到安心，或营造一种“规则”感。正如研究所示，这种拟人化有助于强化关于“人工实体”（在这种情况下是机器人）应是什么样的隐喻、语言和集体共享的想象——以及我们应如何与之相处（Bonarini, 2020；Häring et al., 2014；Dautenhahn et al., 2009；Koay et al., 2020）。与机器人和人工智能并行，虚拟现实和增强现实（`VR`、`AR`）技术在头戴式显示器（`HMD`）、显卡性能以及 `VR` 在工作和休闲中的使用方面的改进下大幅加速。结合“元宇宙
 
 如果我们把事情放回上下文，这种永恒的承诺其实并不新鲜。20 世纪见证了将机器比作活体有机体并思考栩栩如生机器未来的隐喻的蓬勃发展。在战争之后，控制论与后现代哲学并行发展（Lafontaine, 2004）。当时的叙事科幻支持了一种文化、地理和历史立场，选择用生物学的视角去去神秘化技术发展。例如，为了促进机器的接受，其功能被用与自然和人体相关的隐喻来解释：马达不是通过机械部件来描述，而是“像心脏一样”工作。Lafontaine 强调了控制论带来的范式转变。突然间，用来解释人类生物学的就是机器和电气隐喻。例如：心脏会被描述为用瓣膜运作，“像机器一样”。随着控制论和后现代主义的持续进步，用来解释技术发展的拟人化隐喻越来越多地聚焦于后现代珍视的价值——自由意志和创造力。从帮助我们思考的机器，我们开始思考（并谈论）我们的心智如何像机器一样运作。
 
 这一传统帮助我们理解了今天痴迷于比较人类心智和人工智能系统的原因。但让我们明确一点。这些只是隐喻——它们并不能告诉我们太多关于我们心智的工作方式；坦率地说，它们也并不能告诉我们人工智能系统如何运作。此外，现在是时候重新审视过去建构的叙事了。毕竟，如果人工智能无处不在，我们重新思考与有机生命的关系的需求也无处不在。我们有独特的机会在这里重新定义我们赋予人工智能实体的价值，超越以人为中心的观念。为什么我们不使用新的隐喻，将我们的大脑比作树、菌丝真菌或肠道细菌中发现的有机连接呢？为什么总是将其与机器相比？我们认为，艺术作品可以帮助识别社会和文化建构的先入之见——因为最重要的是，突出这些先入之见可以帮助重新思考所需的新的先入之见。
 
-### 反思意义：CHOM5KY vs. CHOMSKY 作为案例研究
+## 反思意义：`CHOM5KY vs. CHOMSKY` 作为案例研究
 
-VR 和人工智能体验 *CHOM5KY vs. CHOMSKY*，在此作为案例研究呈现，利用人工智能来去神秘化人工智能。通过虚拟可供性和有趣的用户体验（UX），这件艺术作品质疑人工智能的局限和机遇，同时凸显我们人类创造力、探究和协作的能力。正如乔姆斯基所建议的，我们对自己的心智知之甚少。因此，艺术作品提出的问题是：我们到底在人工智能中试图复制什么？为了什么目的？我们又在留下什么？
+`VR` 和人工智能体验 `CHOM5KY vs. CHOMSKY`，在此作为案例研究呈现，利用人工智能来去神秘化人工智能。通过虚拟可供性和有趣的用户体验（`UX`），这件艺术作品质疑人工智能的局限和机遇，同时凸显我们人类创造力、探究和协作的能力。正如乔姆斯基所建议的，我们对自己的心智知之甚少。因此，艺术作品提出的问题是：我们到底在人工智能中试图复制什么？为了什么目的？我们又在留下什么？
 
-包括诺姆·乔姆斯基（NC）本人在内的作家和思想家警告我们人工智能中“伪科学”的倾向——我们认为这种倾向也有损于公众参与。特别是，乔姆斯基反对对“理解我们自己和世界的启示迫在眉睫”所做出的持续承诺（Chomsky, Roberts, Watumull, 2023；Marcus and Luccioni, 2023）。他的反对意见在 Bender and Koller (2020) 中找到了回声，他们认为大型语言模型成功的部分原因归因于用来描述它们为“智能”、“学习”和“理解”的词语。Bender 坚持认为，人工智能学者应该问的问题是，为什么它被设计成让我们相信它有思想和感受呢！
+包括诺姆·乔姆斯基（`NC`）本人在内的作家和思想家警告我们人工智能中“伪科学”的倾向——我们认为这种倾向也有损于公众参与。特别是，乔姆斯基反对对“理解我们自己和世界的启示迫在眉睫”所做出的持续承诺（Chomsky, Roberts, Watumull, 2023；Marcus and Luccioni, 2023）。他的反对意见在 Bender and Koller (2020) 中找到了回声，他们认为大型语言模型成功的部分原因归因于用来描述它们为“智能”、“学习”和“理解”的词语。Bender 坚持认为，人工智能学者应该问的问题是，为什么它被设计成让我们相信它有思想和感受呢！
 
 > “旨在可信地模仿人类的应用会带来极端伤害的风险 […] 合成人类行为是伦理人工智能发展的明线，其中下游影响需要被理解和建模，以便阻止对社会和不同社会群体的可预见伤害”。
 >
 > （Bender, 2021）
 
-
-
-
-
 混淆数学公式与意义建构过程之间的界限，在最坏的情况下是有害的，在最少的情况下也是错误的。为了帮助改变这一前提，源自社会变迁社会学并由 Herbert Blumer 在 1950 年代发展起来的文化漂移的理论框架是有帮助的。对 Blumer 来说，社会变迁太常通过有组织的结构（社会运动、政府决策、公共法规）来分析。他认为，社会变迁发生在更错综复杂的层面：通过文化和艺术的发展，通过新的消费形式出现，或通过新价值观在年轻一代中的普及化（Melucci, 1996；Rodriguez, 2013）。这种文化漂移很难观察到，但似乎在时间上更为普遍——它们影响着整整一代人的价值观、想象力和集体参照。
 
 对于研究而言，对社会变迁做出意义建构也意味着将其界定为一个分析对象：关注个体如何在特定时刻、或在特定空间或体验中创造和挑战某一特定价值观和“意义”集合（Dervin and Frenette, 2001, Rodriguez 2013）。这里使用的理论框架帮助我们思考 *意义* 并非既定不变，而是不断演进之物：艺术如何促成“文化漂移”——例如赋予 AI 的意义发生变化。
 
-从语言学角度来看，乔姆斯基关于生成语法的理论讽刺地因没有为分析意义留下足够空间而受到批评（Jackendoff, 2002）。另一些人则建议（Bhava, 2008）NC 关于语言的理论将隐喻直接与意义联系起来。乔姆斯基本人大量的会议和访谈记录表明他自己也大量使用隐喻，在不同领域之间架起桥梁（政治、组织、心理），并使用日常例子来解释复杂问题（例如，将 AI 比作有用的除雪车）。总之，乔姆斯基自身的人类创造力使他能够根据访谈者和情境回应并调整隐喻——每次都创造新的意义。项目 *CHOM5KY vs. CHOMSKY*^(*\[5\]* ) 正是在此概念上展开，邀请访客探索我们集体赋予 AI 的意义是什么，并帮助他们重新思考想要的未来。
+从语言学角度来看，乔姆斯基关于生成语法的理论讽刺地因没有为分析意义留下足够空间而受到批评（Jackendoff, 2002）。另一些人则建议（Bhava, 2008）`NC` 关于语言的理论将隐喻直接与意义联系起来。乔姆斯基本人大量的会议和访谈记录表明他自己也大量使用隐喻，在不同领域之间架起桥梁（政治、组织、心理），并使用日常例子来解释复杂问题（例如，将 AI 比作有用的除雪车）。总之，乔姆斯基自身的人类创造力使他能够根据访谈者和情境回应并调整隐喻——每次都创造新的意义。项目 `CHOM5KY vs. CHOMSKY`^(*\[5\]* ) 正是在此概念上展开，邀请访客探索我们集体赋予 AI 的意义是什么，并帮助他们重新思考想要的未来。
 
-研究创作于 2016–2023 年间进行，结合了语音转文本和文本转语音（`STT`）、NLP 对话系统（`GPT-2`、`GPT-3.5`）和 `VR`。用户戴上 VR 头显进入一个计算机生成的世界，很快会遇到一个名为 `CHOM5KY` 的 AI 指南。该 AI 角色由著名 MIT 语言学荣休教授 Noam Chomsky 在网上或 MIT 档案特藏中发现的大量数字痕迹构建而成。1928 年出生于费城的 `NC` 是世界上记录最多、数字化程度最高的公众知识分子之一。60 多年来，他几乎被记者、农民和学生等采访过所有主题，他的演讲已被转录、数字化并上传到网上，留下了可用于训练 AI 系统的天文数字般的数据池。也许鲜为人知的是，`NC` 关于自然语言的工作也部分启发了自然语言处理（`NLP`），它使我们能够与聊天机器人互动。因此，`NC` 的数字痕迹遗存悖论式地帮助我们构建一个可以讨论 AI 的 AI 系统，使用乔姆斯基自己的词语和句子，并且仍然忠实于乔姆斯基坚持认为 AI 在复制人类大脑方面存在谎言和局限。
+研究创作于 2016–2023 年间进行，结合了语音转文本和文本转语音（`STT`）、`NLP` 对话系统（`GPT-2`、`GPT-3.5`）和 `VR`。用户戴上 `VR` 头显进入一个计算机生成的世界，很快会遇到一个名为 `CHOM5KY` 的 AI 指南。该 AI 角色由著名 MIT 语言学荣休教授 Noam Chomsky 在网上或 MIT 档案特藏中发现的大量数字痕迹构建而成。1928 年出生于费城的 `NC` 是世界上记录最多、数字化程度最高的公众知识分子之一。60 多年来，他几乎被记者、农民和学生等采访过所有主题，他的演讲已被转录、数字化并上传到网上，留下了可用于训练 AI 系统的天文数字般的数据池。也许鲜为人知的是，`NC` 关于自然语言的工作也部分启发了自然语言处理（`NLP`），它使我们能够与聊天机器人互动。因此，`NC` 的数字痕迹遗存悖论式地帮助我们构建一个可以讨论 AI 的 AI 系统，使用乔姆斯基自己的词语和句子，并且仍然忠实于乔姆斯基坚持认为 AI 在复制人类大脑方面存在谎言和局限。
 
 `CHOM5KY` 这个 AI 因此成为一个角色——一个完美的案例研究和完美的向导，帮助去神秘化 AI。AI 角色从未假装自己就是乔姆斯基本人。![Figure 17.2 By playing and tinkering with CHOM5KY’s answers, the experience helps visitors grasp the basic logics of LLM chatbots. (© Sandra Rodriguez, National Film Board of Canada and SCHNELLE BUNTE BILDER.)](img/fig17_2_B.jpg)
 
-Figure 17.2 By playing and tinkering with CHOM5KY’s answers, the experience helps visitors grasp the basic logics of LLM chatbots. **(© Sandra Rodriguez, National Film Board of Canada and SCHNELLE BUNTE BILDER.)**
+Figure 17.2 By playing and tinkering with `CHOM5KY`’s answers, the experience helps visitors grasp the basic logics of `LLM` chatbots. **(© Sandra Rodriguez, National Film Board of Canada and SCHNELLE BUNTE BILDER.)**
 
 当然，作为一种艺术诠释，该体验采取了创造性的自由。作为一名活动家，`NC` 挑战限制人类创造力的庞大企业。作为一名语言学家，他坚持认为大型语言模型无助于理解心智。
 
@@ -3491,46 +3561,41 @@ Figure 17.2 By playing and tinkering with CHOM5KY’s answers, the experience he
 
 通过观察访客在对话、探究、协作和创造的不同阶段的互动，我们了解到创造帮助公众暂停并超越他们对 AI 系统期望的表面的体验的重要性。特别是，研究结果凸显了游戏的重要性，作为一种特别有效的方式来挑战公民的先入之见，并帮助他们重新思考自己在与 AI 相关的当前问题上的立场。随着 `CHOM5KY` 越来越多地帮助访客注意到周围其他用户的存在，它帮助他们质疑为什么我们首先被期望单独与 AI 互动。最后，使用具身 `UX` 鼓励用户以非智性方式重新考虑他们与数据的关系，邀请他们重新思考我们赋予数字痕迹当前使用的价值观和意义（Figure 17.3）。
 
-
-
-
-
 ![图 17.3 左图显示，诺姆·乔姆斯基的言语痕迹和数字化句子形成积木，塑造并创造了 VR 世界。右图显示，用户可以从自身痕迹产生的数据积木中构建自己的结构和自然景观（体验中提出的问题、主题、意图、检测到的情感等）（© Sandra Rodriguez，加拿大国家电影局和 SCHNELLE BUNTE BILDER。）](img/fig17_3_B.jpg)
 
-图 17.3 左图显示，诺姆·乔姆斯基的言语痕迹和数字化句子形成积木，塑造并创造了 VR 世界。右图显示，用户可以从自身痕迹产生的数据积木中构建自己的结构和自然景观（体验中提出的问题、主题、意图、检测到的情感等） **(© Sandra Rodriguez，加拿大国家电影局和 SCHNELLE BUNTE BILDER.)**
+图 17.3 左图显示，诺姆·乔姆斯基的言语痕迹和数字化句子形成积木，塑造并创造了 `VR` 世界。右图显示，用户可以从自身痕迹产生的数据积木中构建自己的结构和自然景观（体验中提出的问题、主题、意图、检测到的情感等） **(© Sandra Rodriguez，加拿大国家电影局和 SCHNELLE BUNTE BILDER.)**
 
-### 关于隐喻：我们正在抛弃什么？
+## 关于隐喻：我们正在抛弃什么？
 
-CHOM5KY vs. CHOMSKY 远非唯一一件质疑人工智能的当代艺术作品。在 *Conversations with Bina48* 中，艺术家 Dinkins
+`CHOM5KY vs. CHOMSKY` 远非唯一一件质疑人工智能的当代艺术作品。在 *Conversations with Bina48* 中，艺术家 Dinkins
 
-邀请观众批判性地思考人工智能的隐喻、词汇和文化假设已被证明有助于培育新的公众参与形式，以创造以人为中心的 AI。通过让体验对所有人开放，我们得以认识到具身性和游戏如何能够帮助民主化，让各种公民进入对话。虚拟世界使访客能够触摸、摆弄并看到其他用户在世界中与 AI 系统互动。VR 因此使我们能够创造一个根据用户存在和行为而变形的世界——例如，如果他们更深入地探究系统的工作原理，或更宁静地沉思周围环境。而且他们也会不断看到他人这样做，帮助他们感觉自己也能成为集体质疑的一部分。
+邀请观众批判性地思考人工智能的隐喻、词汇和文化假设已被证明有助于培育新的公众参与形式，以创造以人为中心的 AI。通过让体验对所有人开放，我们得以认识到具身性和游戏如何能够帮助民主化，让各种公民进入对话。虚拟世界使访客能够触摸、摆弄并看到其他用户在世界中与 AI 系统互动。`VR` 因此使我们能够创造一个根据用户存在和行为而变形的世界——例如，如果他们更深入地探究系统的工作原理，或更宁静地沉思周围环境。而且他们也会不断看到他人这样做，帮助他们感觉自己也能成为集体质疑的一部分。
 
 我真心相信，游戏和幽默可以帮助去神秘化我们每个人在塑造技术中所扮演的角色。在之前的艺术作品中，我经常亲自选择误用技术来揭穿关于它的神话。在 *Do Not Track*（2016 年皮博迪奖）
 
-不出所料，用户在虚拟世界中玩得越多，他们的问题就越多样化。在当前聊天机器人的开发中，这通常被视为有问题。这使得“控制”AI 可以做出何种回应变得危险：如果它开始使用歧视性词汇怎么办？如果它开始对用户咒骂怎么办？我们认为，与其通过创建回应预期的聊天机器人来回避此类问题（这是一个营销目标），我们更应该以透明的方式展示其缺陷、偏见以及其训练所用的材料（这是一个教育目标）。在 CHOM5KY vs Chomsky 独特的 UX 方法中，我们从未告诉用户该做什么：访客自身的能动性被置于最前沿。我们的系统局限很多，但我们让它们对观众变得显而易见——为访客提供平衡的视角，以便他们自行判断 AI 的局限性和机遇。
+不出所料，用户在虚拟世界中玩得越多，他们的问题就越多样化。在当前聊天机器人的开发中，这通常被视为有问题。这使得“控制”AI 可以做出何种回应变得危险：如果它开始使用歧视性词汇怎么办？如果它开始对用户咒骂怎么办？我们认为，与其通过创建回应预期的聊天机器人来回避此类问题（这是一个营销目标），我们更应该以透明的方式展示其缺陷、偏见以及其训练所用的材料（这是一个教育目标）。在 `CHOM5KY vs Chomsky` 独特的 `UX` 方法中，我们从未告诉用户该做什么：访客自身的能动性被置于最前沿。我们的系统局限很多，但我们让它们对观众变得显而易见——为访客提供平衡的视角，以便他们自行判断 AI 的局限性和机遇。
 
-### 结论
+## 结论
 
-今天与人工智能相关的技术进步与营销噱头、流行文化和虚构启发的集体想象混为一谈。在这种背景下，人工智能是否被理解为理论建构是次要的。更重要的是，需要重新评估与“智能”、“学习”和“理解”相关联的集体建构的想象和词汇。毕竟，正如社会变革社会学帮助我们强调的那样，人工智能的概念并非固定不变。它是通过公民对人工智能的意外恶作剧、通过日常使用以及通过持续的技术发展而被分享、讨论、辩论和改变的——参与塑造我们共同想象人工智能未来的文化漂移。通过邀请 *CHOM5KY vs. CHOMSKY* 的访客去去神秘化人工智能的工作方式，我们努力创造一个空间，使他们能够重新思考我们集体赋予人工智能系统的价值观和意义——换句话说，邀请他们对其提出挑战。
+今天与人工智能相关的技术进步与营销噱头、流行文化和虚构启发的集体想象混为一谈。在这种背景下，人工智能是否被理解为理论建构是次要的。更重要的是，需要重新评估与“智能”、“学习”和“理解”相关联的集体建构的想象和词汇。毕竟，正如社会变革社会学帮助我们强调的那样，人工智能的概念并非固定不变。它是通过公民对人工智能的意外恶作剧、通过日常使用以及通过持续的技术发展而被分享、讨论、辩论和改变的——参与塑造我们共同想象人工智能未来的文化漂移。通过邀请 `CHOM5KY vs. CHOMSKY` 的访客去去神秘化人工智能的工作方式，我们努力创造一个空间，使他们能够重新思考我们集体赋予人工智能系统的价值观和意义——换句话说，邀请他们对其提出挑战。
 
 分析人类与人工智能互动的社会学著作太常将使用理解为逻辑上由技术驱动。但人类是混乱的：我们破坏、重新思考、重新利用。正是通过测试和打破系统，我们重新想象应用——从而彻底改变技术。
 
-本章第二部分强调了艺术将更多公众参与带入人工智能未来所需对话的变革能力。为此，我们重新审视了研究创作项目 CHOM5KY vs Chomsky 所获得的经验教训，特别是我们从观察用户与 CHOM5KY AI 的互动中汲取了教训。正如预期，访客最初测试了机器人的（以及世界的）极限，与我们的 AI 向导进行某种图灵测试。但随着他们越来越多地测试、摆弄和玩耍以了解机器人如何运作，他们对机器人的拟人化程度越低，而越专注于其建构——它如何工作，它能做什么，谁训练了它，它是否有偏见，如何等。来自三个不同世界地点的各种用户对 CHOM5KY 提出的多种问题帮助训练了我们的第一个模型，并更好地衡量了用户对话的局限性。从 2020 年到 2022 年，该体验从与 CHOM5KY 的简单对话转变为 2023 年包含更多创造性和协作性游戏——帮助重新思考我们赋予与人工智能共享未来的价值观。
+本章第二部分强调了艺术将更多公众参与带入人工智能未来所需对话的变革能力。为此，我们重新审视了研究创作项目 `CHOM5KY vs Chomsky` 所获得的经验教训，特别是我们从观察用户与 `CHOM5KY` AI 的互动中汲取了教训。正如预期，访客最初测试了机器人的（以及世界的）极限，与我们的 AI 向导进行某种图灵测试。但随着他们越来越多地测试、摆弄和玩耍以了解机器人如何运作，他们对机器人的拟人化程度越低，而越专注于其建构——它如何工作，它能做什么，谁训练了它，它是否有偏见，如何等。来自三个不同世界地点的各种用户对 `CHOM5KY` 提出的多种问题帮助训练了我们的第一个模型，并更好地衡量了用户对话的局限性。从 2020 年到 2022 年，该体验从与 `CHOM5KY` 的简单对话转变为 2023 年包含更多创造性和协作性游戏——帮助重新思考我们赋予与人工智能共享未来的价值观。
+
+
 
 本章第三部分强调了最后一个重要且关键的发现——那就是艺术转变集体对话并创造公民可以自由重新思考、挑战和质疑先入为主观念的空间的变革能力。当然，让我们保持现实：研究创作和艺术项目很奇怪。很怪异。即使 VR 有助于降低建造机器人的成本，创造性的 VR 体验也可能很乏味且昂贵。整个研究创作过程耗时六年。但我们相信它有助于衡量人类/人工智能互动的重要机遇和局限。
 
-通过选择以讲故事和游戏的方式解决重要问题，我们打造了一个空间，让访客能够 *思考*——关于机器，关于人工智能在能力上与人类协作和创造力有何真正不同，特别是他们可以在其中重新思考对人工智能未来的希望。CHOM5KY vs. CHOMSKY 并非一种说教式体验。我们希望人们提出质疑，探究人工智能的工作方式，并了解机器和人类心智。VR 世界观本身就充满了隐喻，其中机器编程被比作蜜蜂的飞行模式，神经连接的未知被描述为我们肠道中的细菌。回顾该体验的目标时，我们认为公众参与的努力应从愉快的探索和体验中学习，因为它们创造了一个独特的机遇，让人们放下先入为主的观念，并为公民创造一个空间，让他们感受到并测试自己的能力、兴趣以及能动性的局限。我们相信，艺术有助于揭示社会变革所必需的意义建构过程。但我们从这次体验中最重要的教训是，艺术也可以创造意义。
+通过选择以讲故事和游戏的方式解决重要问题，我们打造了一个空间，让访客能够 *思考*——关于机器，关于人工智能在能力上与人类协作和创造力有何真正不同，特别是他们可以在其中重新思考对人工智能未来的希望。`CHOM5KY vs. CHOMSKY` 并非一种说教式体验。我们希望人们提出质疑，探究人工智能的工作方式，并了解机器和人类心智。VR 世界观本身就充满了隐喻，其中机器编程被比作蜜蜂的飞行模式，神经连接的未知被描述为我们肠道中的细菌。回顾该体验的目标时，我们认为公众参与的努力应从愉快的探索和体验中学习，因为它们创造了一个独特的机遇，让人们放下先入为主的观念，并为公民创造一个空间，让他们感受到并测试自己的能力、兴趣以及能动性的局限。我们相信，艺术有助于揭示社会变革所必需的意义建构过程。但我们从这次体验中最重要的教训是，艺术也可以创造意义。
 
-CHOM5KY vs. CHOMSKY 等新兴、意外的讲故事体验之所以吸引访客，是因为它们出人意料且怪异。研究人员、艺术家和政策制定者在希望促进公众参与、公民参与人工智能辩论，甚至公民人工智能素养时，并不常追求怪异。然而，从艺术可以带来的东西中可以学到很多。在 ChatGPT 不断登上头条并被不断呈现为创造性的时代，
+`CHOM5KY vs. CHOMSKY` 等新兴、意外的讲故事体验之所以吸引访客，是因为它们出人意料且怪异。研究人员、艺术家和政策制定者在希望促进公众参与、公民参与人工智能辩论，甚至公民人工智能素养时，并不常追求怪异。然而，从艺术可以带来的东西中可以学到很多。在 ChatGPT 不断登上头条并被不断呈现为创造性的时代，
 
-### 注释
+## 注释
 
 1. 参见 Adams (2003)。
+
 2. 该短语由美国未来学家 Ray Kurzweil (2005) 流行化。
-
-
-
-
 
 3. 2023 年 3 月，Yann Lecun 在 Twitter 上分享：“人们之所以对 AI 风险过度惊慌，*唯一* 的原因就是关于 […] 一旦你启动一个超智能系统，人类就注定灭亡的迷思。这荒谬地愚蠢，完全误解了事物运作的方式。”
 
@@ -3564,7 +3629,7 @@ CHOM5KY vs. CHOMSKY 等新兴、意外的讲故事体验之所以吸引访客，
 
 18. 在最近《纽约时报》一篇题为“关于 AI 的 8 个大问题”的文章采访中，Sebastian Thrun 被引用说要么 AI 正在变得有创造力，要么创造力被高估了。然而他对创造力的定义违背了认知科学的认知，也违背了艺术家对创作工作的任何定义。
 
-### 参考文献
+## 参考文献
 
 * Adams, Tim. 2003. “Question Time,” The Guardian (30 November). Online. [`www.theguardian.com/books/2003/nov/30/highereducation.internationaleducationnews`](https://www.theguardian.com)
 
@@ -3608,15 +3673,16 @@ CHOM5KY vs. CHOMSKY 等新兴、意外的讲故事体验之所以吸引访客，
 
 * Melucci. 1996. Challenging Codes: Collective Action in the Information Age. Cambridge University Press.
 
-
-
-
-
 > * Pietroski, Paul, 2021. “Chomsky on Meaning and Reference”, in A Companion to Chomsky, Nicholas Allott, Terje Lohndal, Georges Rey (Eds.), John Wiley & Sons, Inc.
+
 > * Rodriguez, Sandra, 2013. “Making Sense of Social Change: Observing Collective Action in Networked Cultures”, Sociology Compass, December. 02 2013, Available online: [`compass.onlinelibrary.wiley.com/doi/abs/10.1111/soc4.12088`](https://compass.onlinelibrary.wiley.com/doi/abs/10.1111/soc4.12088)
+
 > * Rodriguez, Sandra, 2022. “Chom5ky vs Chomsky: A Playful Conversation on AI”, Art work produced by the National Film Board of Canadan and Schnellebuntebilder: [`www.nfb.ca/interactive/chomsky/`](https://www.nfb.ca)
+
 > * Roose, Kevin. 2002. “We Need to Talk About how Good A.I. is Getting”, The New York Times, August 24, 2022.
+
 > * Solon, Olivia. 2018. “The rise of ‘pseudo-AI’: how tech firms quietly use humans to do bots’ work,” The Guardian (6 July). Online. [`www.theguardian.com/technology/2018/jul/06/artificial-intelligence-ai-humans-bots-tech-companies`](https://www.theguardian.com)
+
 > * “The best AI chatbots seem like real humans, and that’s scaring people,” South China Morning Post, 6 December 2022. Online. [`www.scmp.com/lifestyle/gadgets/article/3202134/best-ai-chatbots-seem-real-humans-and-thats-scaring-people?module=perpetual_scroll_0&pgtype=article&campaign=3202134`](https://www.scmp.com)
 
 ## 18 Christina Colclough’s Commentary
@@ -3625,15 +3691,17 @@ Christina Colclough
 
 The Why Not Lab
 
-DOI: [10.1201/9781003320791-21](https://dx.doi.org/10.1201/9781003320791-21)
+DOI: [`10.1201/9781003320791-21`](https://dx.doi.org/10.1201/9781003320791-21)
 
 **Please tell us more about your work**.
+
+
 
 My main occupation is capacity building, that is to say, I give workshops and courses for unions and governments around the world. It can be courses for trade union leaders, negotiators, or organizers, or it can be for wider audiences, but each course is tailor-made to the specific organization I am working with.
 
 These courses and workshops cover a significant amount of content. We explain what digital technologies are, what data is, what AI is, and so on and so forth. We also discuss how these new technologies affect the world of work. And we give actionable examples. For instance, we explain that in certain cases, it is possible to deduce what kind of instructions were given to the algorithm that runs behind an automated hiring tool. In addition to that, I sit on various boards around the world advising on issues related to the labor market. I am also part of a team that develops tech for good, that is, technologies that try to avoid the pitfalls of current digital technologies and, instead, empower workers. Lastly, I do a fair amount of public speaking.
 
-**How do you define human-centered AI, and why do you think it’s important, especially for workers, which is your main preoccupation?**
+## How do you define human-centered AI, and why do you think it’s important, especially for workers, which is your main preoccupation?
 
 I have mixed feelings about that expression. Ensuring that digital technologies benefit those they are intended to serve is very important to me. But the concept of “human centeredness” is quite broad. Not specifying what people we are recentering AI around or why we are recentering AI around those people could lead to undesirable effects. We must not forget that what is good for one group of humans could be absolutely horrible for another. Moreover, human-centered AI could be used as a concept to perpetuate the status quo. “Capitalist-human-centered AI,” so to speak, would be human-centric, but it would not be AI for the benefit of all.
 
@@ -3641,9 +3709,9 @@ Both of the papers I have read—and we will talk about them specifically in a m
 
 Nevertheless, I do believe that we should not introduce technology for the sake of technology and that we should always consider the consequences of a given technology on those it is going to affect. That way we can ensure that technology benefits those it is intended to serve. That is a large part of what I do with my work on the governance of digital technology.
 
-**Could you give me examples of how, in your opinion, human-centered AI was implemented in some contexts and not implemented in others?**
+## Could you give me examples of how, in your opinion, human-centered AI was implemented in some contexts and not implemented in others?
 
-We are still at the beginning of this journey. But one example that comes to mind when I think about human-centered AI is the Digital Bargaining Hub, a tool I have developed with Public Services International, the global union for public-service workers, and Professor Hannah Johnston at York University. The Hub is an online database of collective bargaining clauses related to the digitalization of work.
+We are still at the beginning of this journey. But one example that comes to mind when I think about human-centered AI is the `Digital Bargaining Hub`, a tool I have developed with Public Services International, the global union for public-service workers, and Professor Hannah Johnston at York University. The Hub is an online database of collective bargaining clauses related to the digitalization of work.
 
 One thing the database shows is that workers are starting to negotiate around data and the introduction of digital technologies in the workplace. I am glad to see this is happening. It is a way for the Union movement to ensure that the introduction of AI technologies does not come at the expense of providing decent working conditions to workers.
 
@@ -3651,13 +3719,9 @@ But there are also gaps, especially with respect to certain uses that are made o
 
 This is a good segue to a very important point that was mentioned in Lévesque et al.’s article, and which I want to emphasize: it takes two to tango. For meaningful negotiations to take place, both parties must “know what they need to know.” And what the unions have found—especially those that I have done a lot of in-depth training with—is that when they go to management and ask for guardrails around the use of algorithmic inferences or the right to opt out of the selling of data, they are met with a certain kind of bewilderment. We tend to assume—and this goes for all of the literature on impact assessment and audits—that management understands AI and other technologies rather well. But it is not necessarily the case. In fact, one of the biggest mistakes many people make is assuming that managers really understand the technologies they are adopting or using.
 
-**You read two articles from the book: “Crafting human-centered AI in workspaces for better work,” by Lévesque and his colleagues, and “Human-centered AI for industry 5.0,” by Passalacqua and his colleagues. Could you tell me a bit more about these papers and how they changed your point of view, the way you see things?**
+## You read two articles from the book: “Crafting human-centered AI in workspaces for better work,” by Lévesque and his colleagues, and “Human-centered AI for industry 5.0,” by Passalacqua and his colleagues. Could you tell me a bit more about these papers and how they changed your point of view, the way you see things?
 
 Reading these papers confirmed several things that I think all politicians need to be reminded of. First of all, the framework presented in “Crafting human-centered AI” is very interesting. I like that it proposes a way to measure the various dimensions of the quality of work—or “better work,” as the authors call it. I think that framework would be very helpful for politicians, as I mentioned, but also for unions. However, the authors could have taken their argument about inclusive governance a bit further. The framework works well to measure how AI systems can impact good work “here-and-now,” but I would have liked to read more about how they think it ties into inclusive governance.
-
-
-
-
 
 这又引出了我对这篇论文的另一个局限性。它对当下的影响描述得相当好，但并没有真正讨论人工智能的长期后果，尽管正如我前面提到的，在我看来，它们是工作数字化最危险、最具威胁性的方面之一。再举一个例子，自动化排班工具。它在短期内可能有利于工人，因为他们更改班次或申请更符合自身需求的排班会变得更容易。然而，这些系统正在收集大量数据，如果这些数据被用来推断员工的新信息，就可能产生长期的负面后果。例如，系统可能会得出结论：客户更喜欢说英式口音英语的员工。这种推断随后可能成为一种“可推广的事实”，最终会惩罚口音外来的工人——他们可能被解雇或被安排最差的班次。鉴于这些未来危害的严重程度，论文中讨论它们本会很有意思。
 
@@ -3665,7 +3729,7 @@ Reading these papers confirmed several things that I think all politicians need 
 
 话虽如此，我认为文章中缺少了一些重要内容。作者得出结论认为人工智能将改变所需的任务、岗位和技能，但他们没有提到谁应该负责对工人进行再培训和提升技能。例如，引入颠覆性技术的雇主是否应有义务持续培训受影响的工人，帮助他们在职业生涯中继续前行？目前的情况大多像是各行其是：任何人都可以颠覆工作，而没有人对总体影响承担任何责任。鉴于 Passalacqua 及其同事讨论了如何在与受影响人群合作的情况下引入颠覆性技术，提出政策建议或反思当工作和工人受到人工智能影响时谁对什么负责本会很有意思。
 
-* **说到这个，你会对政策制定者和用户提出哪些可能的建议？在谈论以人为本的人工智能及其在工作环境中的实施时，他们真的应该关注哪 2-3 件事？**
+### 说到这个，你会对政策制定者和用户提出哪些可能的建议？在谈论以人为本的人工智能及其在工作环境中的实施时，他们真的应该关注哪 2-3 件事？
 
 我的第一个建议与我们刚才讨论的内容直接相关。引入强大技术如人工智能的雇主应承担“颠覆义务”，即他们应被迫为受这些工具影响的工人提供终身学习和职业发展机会。
 
@@ -3678,6 +3742,8 @@ Reading these papers confirmed several things that I think all politicians need 
 所以我认为，当我们谈论组织的颠覆义务时，我们确实应该花时间反思在数字世界中应如何看待“好工作”。我们是否应该实行四天工作制？我们是否应该重新分配工作时间和任务？我们是否应享有断联权？就我个人而言，我会全部都说“是”。
 
 * **这让我想到，撰写文章的参考文献或转录对话是例行工作，确实有助于我为电池充电**。
+
+
 
 对我来说，是做我的会计或差旅报销。这些是我可以放点好音乐来做，并只是获得所需暂停的任务。法国作曲家德彪西以“音乐是音符之间所产生的东西”而闻名。我们绝不应忘记“我们的”音乐是在停顿中产生的。
 
@@ -3696,10 +3762,6 @@ DOI: [`10.1201/9781003320791-22`](https://dx.doi.org/10.1201/9781003320791-22)
 现在，技术影响就业市场并非前所未有。从自动化到工业化，每一次新革命，每一次新技术的引入，都会对工作产生影响。现在的不同之处在于发生的速度。变化发生得如此之快，以至于很难领先于转型。这就是挑战：“我们如何利用这场快速转型帮助年轻人获得就业？”
 
 * **本书的重点确实是以人为本的人工智能——这是一个并不总是定义得很好的概念。你如何定义它？**
-
-
-
-
 
 ### 以人为本的 AI
 
@@ -3739,10 +3801,6 @@ DOI: [`10.1201/9781003320791-22`](https://dx.doi.org/10.1201/9781003320791-22)
 
 政策制定者或审计员应要求开发者提供更多透明度，他们应披露数据的来源、数据集中的内容，以及哪些关键要素在影响 AI 系统所做出的某些建议/决策中。我认为知道数据来自哪里将使人们能够决定是否可以信任 AI 系统提出的建议。因此，更多透明度将是我建议的首要内容。
 
-
-
-
-
 无论你是否喜欢，人工智能都将影响我们生活的方方面面。因此，让我们确保人们理解人工智能是什么以及它是如何工作的。以 ChatGPT 为例，它可以生成虚假信息，但信息的呈现方式如此令人信服，以至于你甚至不会质疑自己所读的内容。它会引用名言，提及几个你已经听说过的专家，如果你不了解它的工作原理，你就会相信它。但如果你了解它从哪里获取数据，如果你知道该技术的弊端，那么你就不会那么容易上当。因此，除了透明度之外，你还需要教育，让人们能够理解这些系统：应该期待什么，应该注意什么等等。因此，是的，教育是我会推荐的另一件事。
 
 我的第三条建议更具全球性，并不一定专注于该大陆。它是关于伦理准则的。有很多人正在开发人工智能系统，而且会越来越多。他们受什么规则约束？现在，没有任何规则。每个人都在做自己想做的事。我们从人工智能发展的最前沿人士那里听到了关于其危险性的说法。因此，我认为有必要就这些系统的伦理准则达成一致。
@@ -3759,7 +3817,7 @@ Sarit K. Mizrahi
 
 University of Ottawa, Ottawa, Ontario, Canada
 
-DOI: [10.1201/9781003320791-24](https://dx.doi.org/10.1201/9781003320791-24)
+DOI: [`10.1201/9781003320791-24`](https://dx.doi.org/10.1201/9781003320791-24)
 
 ### Introduction
 
@@ -3777,10 +3835,6 @@ DOI: [10.1201/9781003320791-24](https://dx.doi.org/10.1201/9781003320791-24)
 
 在某些情况下，少数群体在人工智能数据集中*代表不足*，从而导致他们在社会中*不可见*。例如，最近有人指出，旨在诊断黑色素瘤的医疗应用无法在皮肤较黑的人群中检测到它（Lashbrook, 2018；Madhusoodanan, 2021）。虽然主要针对白人皮肤癌图像进行训练，但有色人种的代表不足并不是疏忽的结果。相反，这是因为缺乏皮肤较黑人群中黑色素瘤的类似图像，主要是由于他们获得医疗保健的机会不平等（Morosini, 2021；O’Donnell et al., 2016）。因此，皮肤癌检测应用传播的偏见反映了既有的社会结构，这些结构在满足少数群体的需求和健康方面投入较少，从而导致他们的*不可视化*。
 
-
-
-
-
 在其他情况下，少数群体在 AI 数据集中被 *过度代表* 的方式导致了他们在社会中的 *过度可见性*。例如，美国多家法院使用的风险评估算法（Equivant）就是这种情况。但 ProPublica 记者的调查导致发现该算法对黑人存在偏见，更有可能将黑人归类为高风险，而白人即使有更暴力、更严重的犯罪记录也不会如此（Angwin et al., 2016）。而这种误算直接源于黑人在其训练数据中的 *过度代表*，这与他们在刑事司法系统中的过度代表密不可分（Raso et al., 2018）。
 
 导致边缘群体在机器学习数据集中被错误表征的一个因素是，用于代表他们的數據取自大数据，在多个层面上收集，而完全不考虑其产生所处的社会背景（个人、地方、机构和国家层面）（Benjamin, 2019; Noble, 2018）。此外，在为机器学习流程准备时，这些数据会根据各种分类（例如性别、社会经济地位或种族）进行标记和分类，但很少从交叉视角出发，而交叉视角实际上有助于连接人们生活体验的各个潜在维度。
@@ -3797,11 +3851,9 @@ DOI: [10.1201/9781003320791-24](https://dx.doi.org/10.1201/9781003320791-24)
 
 这些框架通常有三种形式。第一种是伦理准则，它们在 AI 系统的创建中推进了一套应被尊重的价值观（Yeung et al., 2019; Council of Europe, n.d.; World Economic Forum, n.d.; Germany, 2019; Australian Government, 2019）。为了促进负责任的 AI，大多数伦理准则强调 AI 系统应具有透明性、可解释性和可质疑性（Germany, 2019; Australian government, 2019; OECD; Malta Digital Innovation Authority; the Netherlands; Switzerland, the Federal Council; European Commission）。公平、非歧视和正义也是普遍推崇的价值观（Germany, 2019; Australian Government, 2019; OECD, 2019; The Netherlands, n.d.; Switzerland, The Federal Council, n.d.; European Commission, 2019; China Daily, 2019）。在明确 AI 系统必须具有包容性和可及性的同时，大多数伦理准则承认算法偏见很难完全消除，只要求尽可能减少。
 
-尽管所有这些价值观都值得称赞，但伦理准则仍难以实施。原因有三。首先，伦理原则在光谱上各不相同。虽然有些会重复出现，但情境和文化在定义伦理标准方面发挥着重要作用，而当前的方法未能考虑此类要素（Yeung et al., 2019）。其次，这些准则寻求推进某些被认为可取的结果，但几乎不允许个人 *具体地* 享有其人权（Gentelet et Mizrahi, 2021）。第三，伦理框架是自愿的行为准则，缺乏确保对人权侵犯承担责任的必要执行机制（Yeung et al., 2019）。这种方法常被批评者称为伦理洗白，除了推迟在 AI 领域制定具体人权保护之外几乎没有其他作用（Waldman, 2021）。换句话说，伦理框架使人 *看起来* 它们所倡导的价值观处于 AI 开发的最前沿，但这不过是烟雾弹。
 
 
-
-
+尽管所有这些价值观都值得称赞，但伦理准则仍难以实施。原因有三。首先，伦理原则在光谱上各不相同。虽然有些会重复出现，但情境和文化在定义伦理标准方面发挥着重要作用，而当前的方法未能考虑此类要素（Yeung et al., 2019）。其次，这些准则寻求推进某些被认为可取的结果，但几乎不允许个人*具体地*享有其人权（Gentelet et Mizrahi, 2021）。第三，伦理框架是自愿的行为准则，缺乏确保对人权侵犯承担责任的必要执行机制（Yeung et al., 2019）。这种方法常被批评者称为伦理洗白，除了推迟在 AI 领域制定具体人权保护之外几乎没有其他作用（Waldman, 2021）。换句话说，伦理框架使人*看起来*它们所倡导的价值观处于 AI 开发的最前沿，但这不过是烟雾弹。
 
 ### AI 监管的规范性方法
 
@@ -3829,20 +3881,15 @@ DOI: [10.1201/9781003320791-24](https://dx.doi.org/10.1201/9781003320791-24)
 
 为此，这些过程必须满足包容性和积极参与的三个条件。首先，它们必须采取措施`deconstruct` AI 影响的普遍主义表征。鉴于其巨大潜力，AI 技术被错误地呈现为具有普遍益处（Kalluri, 2020）。要成功构想包容性和代表性的参与过程，至关重要的是解构这些普遍主义表征及其阻碍包容性的能力。换句话说，要考虑包容和参与，我们必须首先理解*排斥*。在这些排斥机制被承认其本质之前，提出避免重现类似结果的有效参与过程将是困难的。
 
-
-
-
-
-从排斥的视角审视参与过程，使得能够考量社会语境并克服将人工智能系统的冲击视为普遍且无差别的倾向。用计算机科学家阿贝巴·比尔哈内的原话来说，理解必须优先于预测（Birhane, 2017：6）。生活在[content]
 从排斥的视角审视参与过程，使得能够考量社会语境并克服将人工智能系统的冲击视为普遍且无差别的倾向。用计算机科学家阿贝巴·比尔哈内的原话来说，理解必须优先于预测（Birhane, 2017：6）。生活在使用人工智能系统的社会中的群体持续经历着重大的社会、政治、文化或宗教歧视。这种系统性歧视极大地影响了他们参与社会的方式，限制了他们在本应鼓励其参与的空间中的自由。换句话说，这些空间并不回应这些群体的需求，并且常常忽视整合能够实现这一目标的目标。
 
 但支持参与和促进包容并不仅依赖于理解排斥。它还需要在人们和群体所发展的各种语境中考虑这些语境所必需的工具的创造（Zimmermann et al., 2020）。在技术层面，界定语境可能是一项重大挑战，因为它需要理解这些语境的复杂性及其潜在维度（Suchman, 2007）。这项练习需要对社会及其历史有深入的了解，可以通过咨询受影响者而非采取外部和概念化的方法来简化。这种方法将使我们能够从相关者的观点理解这些语境，同时同时考虑其个人特征的交叉性。这种*ex ante*而非*ex post*的策略提供了确定人工智能对人权影响程度所必需的维度（Zimmermann et al., 2020），同时也使得创造一个以人为中心的过程成为可能，该过程整合了作为社会行动者的个人身份所依据的集体问题（Birhane, 2021）。
 
 其次，要具有包容性和主动性，参与过程必须强化公民的能力。在当前的流程中，几乎没有为公民的声音和经验留下空间。但鉴于*他们*是受影响者，考虑社会影响对于其实际是什么而非我们可能预期的那样仍然至关重要。理解这些影响的现实/基层视角的关键因素是向公民作为对其自身生活的主人所拥有的专业知识给予尊重。只有通过这些公民的能动性——通过他们识别人工智能对其生计的影响的能力——社会才有可能解决其最具社会破坏性的影响。
 
-并且，在这种意义上强化他们的能力也依赖于通过在人工智能语境中的权利教育来赋权公民，为他们提供表达其亲身经历的工具。权利教育有效地为群体或个人提供了定义不公正以符合基本权利体系的知识基础。为了知道哪些权利受到影响，他们必须意识到自己的权利是什么。在涉及控制力和人类能动性丧失的人工智能语境中（Delacroix, 2022），权利教育实现了赋权行动者的目标。它通过赋予公民控制和行动以满足其需求并将自己投射为影响其问题的行动者和利益相关者的*capability*来支持包容并鼓励参与。
+并且，在这种意义上强化他们的能力也依赖于通过在人工智能语境中的权利教育来赋权公民，为他们提供表达其亲身经历的工具。权利教育有效地为群体或个人提供了定义不公正以符合基本权利体系的知识基础。为了知道哪些权利受到影响，他们必须意识到自己的权利是什么。在涉及控制力和人类能动性丧失的人工智能语境中（Delacroix, 2022），权利教育实现了赋权行动者的目标。它通过赋予公民控制和行动以满足其需求并将自己投射为影响其问题的行动者和利益相关者的`capability`来支持包容并鼓励参与。
 
-因此，他们参与的条件取决于他们掌握和了解识别和解决对其权利的侵犯所必需的工具。而且这种教育必须同样延伸到*digital*权利，以为个人提供把握人工智能语境中发挥作用的基本自由所必需的基础。不幸的是，围绕数字权利和人工智能的当前话语非常技术化，使得普通公民难以理解其与社会和文化权利的关联。这种缺乏意识导致他们放弃某些对生活有重要影响的数字权利。
+因此，他们参与的条件取决于他们掌握和了解识别和解决对其权利的侵犯所必需的工具。而且这种教育必须同样延伸到`digital`权利，以为个人提供把握人工智能语境中发挥作用的基本自由所必需的基础。不幸的是，围绕数字权利和人工智能的当前话语非常技术化，使得普通公民难以理解其与社会和文化权利的关联。这种缺乏意识导致他们放弃某些对生活有重要影响的数字权利。
 
 从这个角度来看，强化他们的能力还涉及以他们能够理解的术语与潜在受影响群体交谈；以将*人权——*而非技术本身——作为核心参照点的术语交谈。人工智能语境中的人权风险目前是基于知识状态、技术以及其他可预见的特征（如人工智能系统的滥用或不遵守监管机制等）来预测的。但这种方法并没有为公民提供基于人工智能系统造成的他们所经历的不公正来定义风险的机会
 
@@ -3850,13 +3897,9 @@ DOI: [10.1201/9781003320791-24](https://dx.doi.org/10.1201/9781003320791-24)
 
 允许从正义/不公正的视角识别人权影响可以避免这一陷阱，同时也在另外两个重要方面促进包容。首先，它让群体和个人参与定义最能解决他们在人工智能语境中面临的不公正的解决方案，这些不公正可能是结构性的或认识论性的，并对个人的道路产生深远影响（Rafanelli, 2022）。例如，原住民组织已将数字主权（而非个人数据保护）确定为解决其在数据集中被错误表征所产生影响的更合适的解决方案（Gentelet et Bahary-Dionne, 2022）。其次，它可以帮助识别在这些不公正中发挥作用的社会结构；这些结构被错误地标记为中立或不可见，而事实上它们有助于少数群体被排除在社会进程之外。因此，它也使得能够识别非技术性的系统性因素，这些因素早于数字技术的使用，但被人工智能对数据的过度重视所放大。
 
-参与要有效、主动和深思熟虑所必需的第三个也是最后一个条件是，它必须回应动员的挑战。为了动员公民，至关重要的是提供能够实现其参与的有效工具。为了实现这一目标，这些工具必须能够逆转任何根植于不平等或歧视的过程，并支持 Chateauraynaud 所定义的*réversabilité*（Chateauraynaud, 2021：10）。这种可逆性使公民行动有效，从而使参与产生切实成果。
+参与要有效、主动和深思熟虑所必需的第三个也是最后一个条件是，它必须回应动员的挑战。为了动员公民，至关重要的是提供能够实现其参与的有效工具。为了实现这一目标，这些工具必须能够逆转任何根植于不平等或歧视的过程，并支持 Chateauraynaud 所定义的`réversabilité`（Chateauraynaud, 2021：10）。这种可逆性使公民行动有效，从而使参与产生切实成果。
 
 走向可逆性所必需的元素之一是承认公民社会在记录人权侵害并将其纳入人工智能治理中的重要作用。由于其与实地密切联系，公民社会组织
-
-
-
-
 
 如果公民社会缺乏行动所需的资源，那么边缘化社区的公民同样处于不利地位也就不足为奇了。因此，要让公民参与治理和监管流程，至关重要的一点是建立既可及又能在他们希望举报权利侵害时易于动员的结构。鉴于目前公民几乎没有直接的救济途径来挑战人工智能对人权的影响，确保公民能够获得问责机制——无论是民主的还是法律的——仍然至关重要。
 
@@ -3873,8 +3916,11 @@ DOI: [10.1201/9781003320791-24](https://dx.doi.org/10.1201/9781003320791-24)
 Table 20.1 Steps toward Citizen Participation
 
 | Deconstructing || Reinforcing || Mobilizing |
+
 | --- | --- | --- |
+
 | * Structural mechanisms of exclusion; * Social and political contexts; * Socioeconomic determinants; * The intersection between profiles and rights; * Technological universalism; * The primacy of the expert word; * The relationship between the individual and the collective. | * Human rights education; * The link between human rights and technological rights; * The capabilities of those impacted to describe the harms; * Cooperation across several levels by creating collaborative spaces. | * By working with civil society; * By concentrating on human rights rather than technology; * By facilitating the connection between rights and violations; * By speaking in terms of justice; * Lived experiences as part of the process; * Existing democratic mechanisms of governance and accountability; * Realistic approaches for access to courts and other accountability mechanisms. |
+
 | --- | --- | --- |
 
 ### Conclusion
@@ -3888,17 +3934,20 @@ Table 20.1 Steps toward Citizen Participation
 ### Notes
 
 1. *Artificial Intelligence Act*, EU COM/2021/206.
+
 2. *Artificial Intelligence Act*; *General Data Protection Regulation*.
+
 3. *Artificial Intelligence Act*.
+
 4. *General Data Protection Regulation*.
+
+
+
 5. Injustices that could be defined as unfair, inequitable, or discriminatory practices (Rafanelli, 2022).
+
 6. By civil society, we include NGOs, parapublic institutions but also community, grassroots, and field organizations.
 
 ### Bibliography
-
-
-
-
 
 #### 立法
 
@@ -3992,69 +4041,115 @@ Table 20.1 Steps toward Citizen Participation
 
 *   India. (2019, June 13). National Strategy for AI. Retrieved from [`indiaai.gov.in/research-reports/national-strategy-for-artificial-intelligence`](https://indiaai.gov.in)
 
+*   新加坡资讯通信媒体发展管理局与个人数据保护委员会。 (2020). 《人工智能治理框架模型 第二版》。
+
+*   意大利。人工智能国家战略。检索自 [`knowledge4policy.ec.europa.eu/ai-watch/italy-ai-strategy-report_en`](https://knowledge4policy.ec.europa.eu)
+
+*   Johnson, K. (2022 年 3 月 7 日). 基于人工智能的错误逮捕如何毁掉三名男子的生活。Wired。检索自 [`www.wired.com/story/wrongful-arrests-ai-derailed-3-mens-lives/`](https://www.wired.com)
+
+*   Kalluri, P. (2020). 不要问人工智能是否公平或公正，而要问它如何转移权力。Nature, *583*, 169。
+
+*   Kaminski, M. E., & Malgieri, G. (2020 年 10 月 12 日)。根据《通用数据保护条例》的算法影响评估：生成多层解释。检索自 [`papers.ssrn.com/sol3/papers.cfm?abstract_id=3456224`](https://papers.ssrn.com)
 
 
 
-* 新加坡资讯通信媒体发展管理局与个人数据保护委员会。 (2020). 《人工智能治理框架模型 第二版》。
-* 意大利。人工智能国家战略。检索自 [`knowledge4policy.ec.europa.eu/ai-watch/italy-ai-strategy-report_en`](https://knowledge4policy.ec.europa.eu)
-* Johnson, K. (2022 年 3 月 7 日). 基于人工智能的错误逮捕如何毁掉三名男子的生活。Wired。检索自 [`www.wired.com/story/wrongful-arrests-ai-derailed-3-mens-lives/`](https://www.wired.com)
-* Kalluri, P. (2020). 不要问人工智能是否公平或公正，而要问它如何转移权力。Nature, *583*, 169。
-* Kaminski, M. E., & Malgieri, G. (2020 年 10 月 12 日)。根据《通用数据保护条例》的算法影响评估：生成多层解释。检索自 [`papers.ssrn.com/sol3/papers.cfm?abstract_id=3456224`](https://papers.ssrn.com)
 * Karlin, M. (2018 年 3 月 18 日)。加拿大算法影响评估。检索自 [`medium.com/@supergovernance/a-canadian-algorithmic-impact-assessment-128a2b2e7f85`](https://medium.com)
+
 * Karlin, M., & Corriveau, N. (2018 年 8 月 7 日)。加拿大政府的算法影响评估：再来一次。检索自 [`medium.com/@supergovernance/the-government-of-canadas-algorithmic-impact-assessment-take-two-8a22a87acf6f`](https://medium.com)
+
 * Kennedy, D. (2022)。批判法学研究中的权利批判。在 W. Brown & J. Halley 编著的《左派法学/左派批判》中（第 178–228 页）。Durham: Duke University Press。
+
 * Kim, P. T. (2020)。操纵机会。Virginia Law Review, *106*(4), 867。
+
 * Kozlowska, I. (2021 年 4 月 4 日)。算法影响评估——它们有何影响？蒙特利尔人工智能伦理研究所。检索自 [`montrealethics.ai/algorithmic-impact-assessments-what-impact-do-they-have/`](https://montrealethics.ai)
+
 * Lashbrook, A. (2018 年 8 月 16 日)。人工智能驱动的皮肤病学可能让深色皮肤患者落后。The Atlantic。检索自 [`www.theatlantic.com/health/archive/2018/08/machine-learning-dermatology-skin-color/567619/`](https://www.theatlantic.com)
+
 * Leprince-Ringuet, D. (2021 年 4 月 6 日)。面部识别技术正在支持大规模监控。隐私活动人士称是时候禁止了。ZDNet。检索自 [`www.zdnet.com/article/facial-recognition-tech-is-supporting-mass-surveillance-its-time-for-a-ban-say-privacy-campaigners/`](https://www.zdnet.com)
+
 * Liu, H.-Y. (2019)。人类权利基础的数字化颠覆。在 S. Mart 编著的《人权、数字社会与法律》中（第 75 页）。London: Routledge。
+
 * Lupton, D. (2018)。数据如何变得重要？与个人数据的生活与共生。Big Data & Society, *5*(2), 205395171878631。
+
 * Madhusoodanan, J. (2021 年 8 月 28 日)。这些应用程序声称可以检测癌症。但它们是否只适用于白人？The Guardian。检索自 [`www.theguardian.com/us-news/2021/aug/28/ai-apps-skin-cancer-algorithms-darker/`](https://www.theguardian.com)
+
 * 马耳他数字创新局。 (2019)。AI ITA 指南。检索自 [`mdia.gov.mt/wp-content/uploads/2019/10/AI-ITA-Guidelines-03OCT19.pdf`](https://mdia.gov.mt)
+
 * Mantelero, A. (2018)。人工智能与大数据：人权、社会和伦理影响评估蓝图。Computer Law & Security Review, *34*(4), 754。
+
 * Metcalf, J., Moss, E., Watkins, E. A., Singh, R., & Elish, M. C. (2021)。算法影响评估与问责：影响的共同建构。ACM。检索自 [`dl.acm.org/doi/10.1145/3442188.3445935`](https://dl.acm.org)
+
 * Mizrahi, S. K. (2018)。安大略省新的隐私侵害侵权：物联网违规是否提供金钱赔偿？UWO J Leg Stud, *8*(1), 3。检索自 [`www.canlii.org/en/commentary/doc/2018CanLIIDocs65#!fragment//BQCwhgziBcwMYgK4DsDWszIQewE4BUBTADwBdoByCgSgBpltTCIBFRQ3AT0otokLC4EbDtyp8BQkAGU8pAELcASgFEAMioBqAQQByAYRW1SYAEbRS2ONWpA`](https://www.canlii.org)
+
 * Modoono, M. (2021 年 4 月 22 日)。在面部识别时代，我们如何保护我们的隐私？Northeastern。检索自 [`news.northeastern.edu/2021/04/22/how-can-we-protect-our-privacy-in-the-era-of-facial-recognition/`](https://news.northeastern.edu)
+
 * Morosini, D. (2021 年 6 月 11 日)。为什么医生仍然难以在黑人身上检测皮肤癌。检索自 [`www.thecut.com/2021/06/why-doctors-struggle-to-detect-skin-cancer-in-black-people.html`](https://www.thecut.com)
+
 * Nadar, S. (2014)。“故事是有灵魂的数据”——来自黑人女性认识论的经验。Agenda, *28*(1), 18。
+
 * Noble, S. U. (2018)。压迫的算法：搜索引擎如何强化种族主义。New York: New York University Press。
+
 * 挪威地方政府与现代化部。 (n.d.) 人工智能国家战略。检索自 [`www.regjeringen.no/contentassets/1febbbb2c4fd4b7d92c67ddd353b6ae8/en-gb/pdfs/ki-strategi_en.pdf`](https://www.regjeringen.no)
+
 * Nussbaum, M. (2002)。能力与社会正义。International Relations and the New Inequality, *4*(2), 123。
+
 * O’Donnell, P., Tierney, E., O’Carroll, A., Nurse, D., & MacFarlane, A. (2016)。探索边缘群体的初级保健获取障碍和促进因素并确定其对初级保健提供的优先事项：参与式学习与行动研究。International Journal for Equity in Health, *15*, 197。
+
 * O’Neil, C. (2016)。数学毁灭武器：大数据如何加剧不平等并威胁民主。New York: Crown。
+
 * OECD。 (2019)。关于人工智能的理事会建议。检索自 [`legalinstruments.oecd.org/en/instruments/OECD-LEGAL-0449`](https://legalinstruments.oecd.org)
+
 * Pabarcus, A. (2011)。社交网络网站上的“私人”空间是否真正私密？对侵入性骚扰的延伸。William Mitchell Law Review, *38*, 397。
+
 * Parikh, N. (2021 年 10 月 14 日)。了解人工智能招聘中的偏见。Forbes。检索自 [`www.forbes.com/sites/forbeshumanresourcescouncil/2021/10/14/understanding-bias-in-ai-enabled-hiring/?sh=621536c87b96`](https://www.forbes.com)
+
 * Penney, J., McKune, S., Gill, L., & Deibert, R. J. (2018)。在双用途技术行业推进以人权为设计的人权。Journal of International Affairs, *71*(2), 103。
+
 * Rafanelli, L. M. (2022)。正义、不正义与人工智能：来自政治理论和哲学的经验教训。Big Data & Society, *9*(1)。检索自 [`doi.org/10.1177/20539517221080676`](https://doi.org)
+
 * Raji, I. D., Smart, A., White, R. N., Mitchell, M., Gebru, T., Hutchinson, B., Smith-Loud, J., Theron, D., & Barnes, P. (2020)。弥合人工智能问责差距：定义内部算法审计的端到端框架。在 *Conference on Fairness, Accountability, and Transparency (FAT* ′20)*, Barcelona, ES。
 
-
-
-
-
 * Raso, F. A., Hilligoss, H., Krishnamurthy, V., Bavitz, C., & Kim, L. (2018 年 9 月 25 日). 人工智能与人权：机遇与风险。Berkman Klein Center for Internet & Society。检索自 [`cyber.harvard.edu/publication/2018/artificial-intelligence-human-rights`](https://cyber.harvard.edu)
+
 * Reisman, D., Schultz, J., Crawford, K., & Whittaker, M. (2018). 算法影响评估：公共机构问责的实用框架。AI Now。检索自 [`ainowinstitute.org/aiareport2018.pdf`](https://ainowinstitute.org)
+
 * Richardson, R., Schultz, J., & Crawford, K. (2019). 脏数据，错误预测：民权侵犯如何影响警察数据、预测性警务系统和司法。New York University Law Review, *94*。检索自 [`ssrn.com/abstract=3333423`](https://ssrn.com)
+
 * Schneier, B. (2015). 数据与歌利亚：收集你的数据并控制你的世界的隐藏斗争。New York: W. Norton & Company.
+
 * Sedler, R. A. (1984). 加拿大个人权利的宪法保护：新加拿大权利与自由宪章的影响。Notre Dame Law Review, *59*, 1191.
+
 * Selbst, A. D. (2018). 大数据警务中的差异影响。Georgia Law Review, *52*, 109.
+
 * Selingo, J. (2017 年 4 月 11 日). 学院如何利用大数据锁定他们想要的学生。The Atlantic。检索自 [`www.theatlantic.com/education/archive/2017/04/how-colleges-find-their-students/522516/`](https://www.theatlantic.com)
+
 * Sen, A. (1984). 权利与能力。载于 Sen, A. (编), Resources, Values and Development。Cambridge: Harvard University Press.
+
 * Shull, A. (2018 年 8 月 16 日). 数字时代的宪章与人权。CIGI。检索自 [`www.cigionline.org/articles/charter-and-human-rights-digital-age`](https://www.cigionline.org)
+
 * Simonite, T., & Barber, G. (2019 年 10 月 17 日). 在学校使用人脸识别的微妙伦理。Wired。检索自 [`www.wired.com/story/delicate-ethics-facial-recognition-schools/`](https://www.wired.com)
+
 * Solove, D. J. (2011). 无所隐藏：隐私与安全的错误权衡。New Haven: Yale University Press.
+
 * Suchman, L. (2007). 人机重构：计划与情境行动。Cambridge: Cambridge University Press.
+
 * Switzerland, The Federal Council. Digital Switzerland Strategy。检索自 https://www.digitalerdialog.ch/en/
+
 * The Government of the Republic of Serbia. (n.d.). 塞尔维亚共和国 2020-2025 年人工智能发展战略。检索自 [`www.srbija.gov.rs/tekst/en/149169/strategy-for-the-development-of-artificial-intelligence-in-the-republic-of-serbia-for-the-period-2020-2025.php`](https://www.srbija.gov.rs)
+
 * The Netherlands. (n.d.). 人工智能战略行动计划。检索自 [`www.government.nl/documents/reports/2019/10/09/strategic-action-plan-for-artificial-intelligence`](https://www.government.nl)
+
 * Waldman, A. E. (2021). 行业无束：隐私、数据和企业权力的内幕故事。Cambridge: Cambridge University Press.
+
 * Winner, L. (1986). 鲸鱼与反应堆：在高科技时代寻找极限。Chicago: University of Chicago Press.
+
 * World Economic Forum. AI Ethics Frameworks。检索自 [`www.weforum.org/projects/ai-ethics-framework`](https://www.weforum.org)
+
 * Yeung, K., Howes, A., & Pogrebna, G. (2019). 以人权为中心的 AI 治理：设计、审议和监督，结束伦理漂洗。载于 M. Dubber & F. Pasquale (编), The Oxford Handbook of AI Ethics。Oxford: Oxford University Press.
+
 * Zimmermann, A., Di Rosa, E., & Kim, H. (2020 年 1 月 9 日). 技术无法修复算法不公。Boston Review。检索自 [`www.bostonreview.net/articles/annette-zimmermann-algorithmic-political/`](https://www.bostonreview.net)
 
-## 21 Operationalizing AI Regulatory Sandboxes for Children’s Rights and Well-Being
+# 21 Operationalizing AI Regulatory Sandboxes for Children’s Rights and Well-Being
 
 Vicky Charisi³
 
@@ -4064,17 +4159,19 @@ Virginia Dignum
 
 Umeå University, Umeå, Sweden
 
-DOI: [10.1201/9781003320791-25](https://dx.doi.org/10.1201/9781003320791-25)
+DOI: [`10.1201/9781003320791-25`](https://dx.doi.org/10.1201/9781003320791-25)
 
-### Introduction
+## Introduction
 
-#### Motivation and General Scope of the Chapter
+### Motivation and General Scope of the Chapter
 
 儿童和青少年在日常生活中使用的许多产品中都围绕着 AI，从社交媒体到教育技术、电子游戏、智能玩具和语音助手。AI 可以影响儿童在线观看的视频、他们学习时的课程，以及他们玩耍和与他人互动的方式。为本章目的，我们采用 UNICEF 对 AI 的定义。AI 可用于促进儿童的发展并在活动中赋能他们，但儿童也容易受到 AI 带来的潜在风险的影响，包括偏见、网络安全、数据保护和隐私以及缺乏可及性。AI 必须设计为尊重儿童用户的权利并为所有儿童提供平等机会。包括 UNICEF 和世界经济论坛 (WEF) 在内的多个组织已制定了以儿童为中心的 AI 指南，但设计和实施负责任且值得信赖的以儿童为中心的 AI 的挑战仍然复杂难以应对。在本章中，我们描述了挑战并提出监管沙盒环境作为一种手段来应对儿童、企业、法规和整个社会。 在本章的其余部分，每当我们使用“沙盒”一词时，我们指的是“监管沙盒”。
 
 将沙盒用于适龄 AI 系统的操作化所提出的方法旨在使主管当局更接近开发 AI 的公司，并为实施以儿童为中心的 AI 系统制定最佳实践。 这种沙盒提供了一个受控环境，以连接创新者、监管者、儿童专家和用户进行合作，以便促进创新 AI 系统的开发、测试和验证，以确保与现有关于儿童 AI 的指南保持一致。
 
-#### Review of Relevant Work on Sandboxes in General and in AI Systems
+### Review of Relevant Work on Sandboxes in General and in AI Systems
+
+
 
 监管沙盒在过去十年中在 FinTech 领域出现 (Allen 2019)，旨在收集有关新技术的數據并促进基于证据的监管改革。利用沙盒，监管机构可以评估法律法规的有效性，特别是这些法规如何影响特定群体，例如儿童。 与此同时，监管沙盒也允许监管机构断言新的 AI 应用在现有法律框架内的契合程度如何 (Ranchordas, 2021)。
 
@@ -4082,17 +4179,13 @@ DOI: [10.1201/9781003320791-25](https://dx.doi.org/10.1201/9781003320791-25)
 
 监管沙盒的基本思想是为选定的项目提供探索性、基于对话的指导，以换取对所进行的评估的完全开放。它为在市场条件下测试创新和法规提供了一个安全环境，以提高法律确定性 (Kert et al. 2022)。 这样，沙盒就在一个技术和法律都复杂且相对较新的领域建立了一个实践案例的基础。
 
-
-
-
-
 沙盒具有推动产品和服务改进的潜力。例如，在医疗保健的背景下，监管沙盒旨在改善医疗保健体验和结果，同时也改善医疗保健提供者、委托方和监管者的体验，支持利益相关方在确定“什么是好的”方面进行协作，并设计和推动创新，而无需承担其中一些相关风险（Leckenby et al. 2021）。沙盒中常用的方法包括评估清单和存储库。存储库支持知识管理（例如，Gutierrez 的软法数据库
 
 目前有几个国家正在人工智能的背景下使用沙盒方法。例如，2018 年，日本引入了一个沙盒制度，对在日本内外愿意尝试新技术（包括区块链、人工智能和物联网（IoT））的组织和公司开放，领域包括金融服务、医疗保健和交通运输（IFLR, 2019）。在欧洲，挪威和英国（UK）都开发了人工智能沙盒。挪威在其国家人工智能战略的一部分中建立了监管沙盒，为私营公司和公共部门提供个人数据保护指导（Datatilsynet, 2022）。在英国，已设立沙盒来探索新技术，例如语音生物识别和面部识别技术，以及相关的数据保护问题。
 
 然而，监管沙盒也存在被滥用或误用的风险，需要适当的框架才能成功。例如，沙盒可能会为监管过程中的偏袒打开大门，可能在公司和监管机构之间创造一种互惠关系（Knight & Mitchell, 2020），或导致监管俘获。当试验的服务和产品针对儿童等脆弱人群时，这一点尤为重要。在下面的段落中，我们总结了儿童特有的特征，在为儿童设计人工智能产品和服务的沙盒或可能被儿童使用的产品和服务的沙盒时需要特别注意。
 
-#### 儿童的特殊之处是什么？
+### 儿童的特殊之处是什么？
 
 虽然在其他领域使用沙盒来试验针对成年人的政策和技术应用是一种已被使用的方法，但我们提出，在用户年龄在 18 岁以下的情况下，有一些特殊特征需要考虑。
 
@@ -4100,7 +4193,7 @@ DOI: [10.1201/9781003320791-25](https://dx.doi.org/10.1201/9781003320791-25)
 
 随着机器学习以及最近基础模型的最新技术进步，影响儿童日常生活环境的因素的格局发生了巨大变化。我们观察到，我们所认为的“儿童环境”包括虚拟或物理的基于人工智能的系统（Hupont et al., 2023），这些系统并非专门为他们设计。在这种情况下，我们确定了在为儿童保护设计政策方法、可能被儿童访问的基于人工智能的产品和服务，以及评估基于人工智能的系统与当前监管框架的一致性的技术时需要特别注意的特定要素，例如在沙盒的情况下。
 
-##### 对发育中大脑的情境可变性的重要性
+#### 对发育中大脑的情境可变性的重要性
 
 脑科学和发育心理学中的计算方法为我们对儿童认知及其快速发展过程中个体差异至关重要的理解带来了新的启示。儿童行为的动态性在很大程度上受到促进好奇心和批判性及创造性思维的探索活动机会的影响。Pelz and Kidd (2020)，例如，强调自由游戏的重要性，并指出儿童探索行为的发育方面，这些行为在人类童年时期显得更加复杂。多样化的环境促进儿童的问题解决、语言学习、归纳推理、视觉感知等（Raviv et al. 2022；Charisi et al., 2020）。个体差异，尤其是神经多样性儿童，例如自闭症儿童，尤为重要。各种情境因素在为适龄人工智能和儿童设计实验和评估时起催化作用，例如情境情境、个体、空间和社会情境。例如，一个孩子可以在自由或结构化游戏中（情境情境）使用人工智能系统，同时在家或学校（空间情境），独自或在父母监督下（社会情境）。情境的可变性在儿童发展中起着重要作用，应在为适龄人工智能设计沙盒时予以考虑，以提高政策或创新解决方案的有效性。这些信息可用于以有效的方式在不同情境下开发系统评估的指标和指标（另见 Figure 21.3）。
 
@@ -4116,11 +4209,7 @@ Figure 21.2 The four stages of development according to the proposed framework f
 
 Figure 21.3 A proof of concept with indicative examples of the Actions included in the proposed framework for the design of sandboxes to experiment with policies for age-appropriate AI and children.
 
-##### 同时保护儿童隐私和安全的挑战
-
-
-
-
+#### 同时保护儿童隐私和安全的挑战
 
 研究表明，儿童倾向于将隐私定义为独处、管理信息、不受打扰以及控制对场所的访问（Wolfe, 1978）。然而，尽管研究表明儿童认识到隐私涉及自主性，但自主性并不一定对他们而言定义了隐私，因为在他们生命的大部分时间里，年轻时缺乏自主性正是他们所经历的（ibid.）。这些见解是在与物理世界相关的背景下形成的，而儿童对人工智能背景下隐私和安全的理解仍有待了解。
 
@@ -4130,7 +4219,7 @@ Figure 21.3 A proof of concept with indicative examples of the Actions included 
 
 负责任的人工智能系统设计考虑了如何为儿童的隐私和安全理解提供支架，并支持其同意的能力。因此，儿童可以在与人工智能系统互动时，在隐私和安全方面发挥越来越积极的作用。一种负责任且符合发展水平的系统设计方法，即儿童支架化，使儿童能够以更安全的方式行使其隐私权。
 
-#### 童年中的能动能力
+### 童年中的能动能力
 
 能动性被定义为“行动的能力”（Manyukhina et al., 2019），并包含意图性这一要素。Albert Bandura 采取能动性视角（1989）并解释说，能动性是指人类通过自己的行动影响自身功能和事件进程的能力。这是社会情境化因果结构的一部分，并认为人们是有意地参与其生活境遇的贡献者。Synofzik et al. (2008) 在“能动感”和“能动判断”之间划出了重要区别。能动感是一种低层次的非概念性感觉，即作为行动者的感觉；它是我们在没有明确思考时对自愿行动所感受到的控制的背景嗡鸣。另一方面，能动判断是一种更高层次的概念，并在我们对自我或他人做出能动性明确归属的情况下出现。
 
@@ -4138,7 +4227,7 @@ Figure 21.3 A proof of concept with indicative examples of the Actions included 
 
 上述考虑表明，在为儿童设计政策和创新解决方案以及在人工智能背景下进行实验方法和评估指标时，需要考虑的复杂性，而对这些因素的过度简化可能会对儿童当前和未来的福祉产生影响。
 
-### 方法论
+## 方法论
 
 如前一节所述，在设计和实施可能被儿童使用的人工智能系统以及考虑此类系统评估的实验方法时，应考虑儿童的特殊特征和需求。
 
@@ -4146,7 +4235,7 @@ Figure 21.3 A proof of concept with indicative examples of the Actions included 
 
 在我们的工作中，我们首先考虑现有的专门为儿童制定的政策倡议，并强调在儿童权利的视角下可能需要重新考虑的要点。然后，我们阐述不同领域沙盒设计的现有技术，并提出人工智能与儿童沙盒设计的框架，然后将其与联合国儿童基金会为人工智能与儿童政策指导的运营化而提出的画布相结合。最后，我们以概念验证的形式展示所提框架，并提供说明性示例以供阐述。
 
-### 儿童政策倡议概述及共同特征识别
+## 儿童政策倡议概述及共同特征识别
 
 越来越多的国家和国际组织认识到，为人工智能系统的发展制定政策建议需要儿童特定的方法。
 
@@ -4176,10 +4265,6 @@ Figure 21.3 A proof of concept with indicative examples of the Actions included 
 1. 人工智能促进个性化和更好的学习成果；以及
 2. 教育管理信息系统中的数据分析以及向学习管理系统演进。
 
-
-
-
-
 2022 年，欧盟委员会联合研究中心（JRC）考虑到已有的关于人工智能与儿童权利的工作，组织了一系列与专家、儿童和政策制定者的研讨会，并提出了研究和政策的综合议程。
 
 1. 人工智能最小化、有价值的目的和可持续性；
@@ -4194,7 +4279,7 @@ Figure 21.3 A proof of concept with indicative examples of the Actions included 
 
 应注意的是，首批监管行动，尤其是针对适龄人工智能的监管行动，已开始出现，例如最近签署的加州适龄设计法案，
 
-### 适龄人工智能与儿童的沙盒
+## 适龄人工智能与儿童的沙盒
 
 联合国儿童基金会制定了一系列具体步骤，以支持以儿童为中心的人工智能开发和使用。这首先需要充分了解儿童与人工智能系统如何相互交集。然而，根据联合国儿童基金会，“仅在人工智能文件的伦理章节中提及人类或儿童权利是不够的（这是国家人工智能战略中的常见现象）”（UNICEF, 2021）。
 
@@ -4212,15 +4297,12 @@ Figure 21.3 A proof of concept with indicative examples of the Actions included 
    * 沙盒范围内的产品/服务类型是什么？
    * 研究结果将如何使用？
    * 如何确保监管者和从业者能够从监管沙盒中学习？
-
 2. 绘制人工智能监管生态系统，包括政策/法律框架和当前行业标准
    * 应考虑哪些相关法规和标准？
-
 3. 定义责任
    * 谁负责监督和评估？
    * 何时进行评估（持续进行、固定时间点、长期）？
    * 沙盒内评估结果可以如何使用？
-
 4. 定义评估指标和数据源
    * 哪些指标合适？（例如，关于特定人工智能系统的儿童福祉的客观和主观衡量指标。）
    * 可以收集/用于评估哪些数据？
@@ -4233,13 +4315,10 @@ Figure 21.3 A proof of concept with indicative examples of the Actions included 
 1. 分析阶段：了解人工智能对儿童的影响，同时考虑到国家/地区人工智能格局。
    * 沙盒环境根据国家/地方输入实施法规和政策建议，包括来自儿童的输入，并促进讨论以儿童为中心的人工智能政策和要求如何支持国家或国际发展计划。
    * 沙盒环境还可以促进/鼓励与所有相关利益相关者进行共同设计，包括儿童、教育工作者、非政府组织、研究人员以及其他在数字世界中从事儿童福祉工作的人员，以感知人工智能系统使用和影响的社会、技术和文化背景；
-
 2. 设计阶段：
    * 在沙盒内，测试将以儿童为中心的人工智能政策应用于具体产品和服务的策略，为尝试实施以儿童为中心的人工智能要求的替代方案创造空间。同时，沙盒提供了透明度的手段，项目和结果对公众审查和第三方评估开放。
-
 3. 实施阶段：
    * 支持开发和执行不同的实施策略，包括谨慎的步骤来测试、重新设计和根据具体使用和背景调整设计，同时确保实施选择和决策以相关立法和现有指南为基础
-
 4. 评估阶段：
    * 通过验证对以儿童为中心的人工智能要求的遵守情况，沙盒为监测不同策略的影响提供支持，应用影响指标，并导致基于数据驱动证据的设计计划以及政策和策略的更新。
 
@@ -4252,18 +4331,22 @@ Figure 21.3 A proof of concept with indicative examples of the Actions included 
 | 日期： || 版本： || 作者： |
 | 目的 / 动机：项目简短描述： |
 | --- |
+
+
+
 | 对儿童的影响人工智能系统如何直接或间接影响儿童？谁对人工智能系统对儿童的影响负责？ || 价值观/原则维护了哪些儿童权利、人类价值观和伦理原则，哪些受到威胁？ || 监管哪些法律/法规适用于人工智能系统？ |
+
 | 设计要求 |
+
 | 对儿童的积极影响 || 缓解对儿童的负面影响 || 儿童发展和福祉 |
+
 | 数据保护和隐私 || 公平/非歧视 || 透明度 |
+
 | 问责和救济 || 安全 || 包容 |
+
 | 可解释性 || 有意识的用户 || 为未来做准备 |
 
 ### 概念验证：一种四步、面向流程的方法
-
-
-
-
 
 我们将联合国儿童基金会（UNICEF）在图 21.1 中出现的模型作为政策指导操作化的依据，并将其与我们在“面向儿童的适龄人工智能沙盒”一节中提出的框架结构相结合（图 21.1 和 21.2），以阐述设计人工智能与儿童沙盒的以下框架。
 
@@ -4283,7 +4366,7 @@ Figure 21.3 A proof of concept with indicative examples of the Actions included 
 
 最后，行动 4 指出需要有效且科学可靠的指标来衡量政策和创新解决方案的有效性，以及它们在可推广性方面的可接受性和生态效度，将所有儿童视为享有同等保护和参与机会的主体。
 
-### Conclusions
+## Conclusions
 
 ### 结论
 
@@ -4295,7 +4378,7 @@ Figure 21.3 A proof of concept with indicative examples of the Actions included 
 
 最终，构建负责任的人工智能需要关注这三个相互关联的核心原则：问责制、责任和透明度[Dignum 2019, Charisi et al. 2022]。其中前两者必须通过社会法律手段和政策制定者的干预来解决，最后一点需要新颖的工程解决方案（Charisi et al. 2017）以及建立良好的设计实践，基于我们对儿童发展的知识，而立法可以强制采用此类实践。然而，为了确保我们的社会技术系统长期遵守此类良好实践，所有主要利益相关方必须停止将伦理和即将到来的与人工智能相关的标准视为事后考虑或“日后处理的障碍”。相反，政策考虑和满足这些考虑的治理机制应成为任何项目在人工智能系统生命周期内实施和评估的组成部分。
 
-### Notes
+## Notes
 
 ### 注释
 
@@ -4311,9 +4394,6 @@ Figure 21.3 A proof of concept with indicative examples of the Actions included 
 
 6. Website: [`www.ohchr.org/en/professionalinterest/pages/crc.aspx`](https://www.ohchr.org)
 
-
-
-
 7. 网站： [`www.ohchr.org/EN/HRBodies/CRC/Pages/GCChildrensRightsRelationDigitalEnvironment.aspx`](https://www.ohchr.org)
 
 8. 网站： [`www.unicef.org/globalinsight/media/2356/file/UNICEF-Global-Insight-policy-guidance-AI-children-2.0-2021.pdf`](https://www.unicef.org)
@@ -4324,11 +4404,11 @@ Figure 21.3 A proof of concept with indicative examples of the Actions included 
 
 11. 网站： [`publications.jrc.ec.europa.eu/repository/handle/JRC127564`](https://publications.jrc.ec.europa.eu)
 
-12. 网站： [`leginfo.legislature.ca.gov/faces/billCompareClient.xhtml?bill\_id=202120220AB2273&showamends=false`](https://leginfo.legislature.ca.gov)
+12. 网站： [`leginfo.legislature.ca.gov/faces/billCompareClient.xhtml?bill_id=202120220AB2273&showamends=false`](https://leginfo.legislature.ca.gov)
 
 13. 网站： [`www.unicef.org/globalinsight/media/1166/file/UNICEF-Global-Insight-tools-to-operationalize-AI-policy-guidance-2020.pdf`](https://www.unicef.org)
 
-### 参考文献
+## 参考文献
 
 * Allen, Hillary J. (2019). 监管沙盒。George Washington Law Review, vol. 87, 579–645。
 
@@ -4354,7 +4434,7 @@ Figure 21.3 A proof of concept with indicative examples of the Actions included 
 
 * European Commission (2022). 西班牙人工智能监管沙盒启动活动 [`digital-strategy.ec.europa.eu/en/events/launch-event-spanish-regulatory-sandbox-artificial-intelligence`](https://digital-strategy.ec.europa.eu)
 
-* German Federal Ministry for Economic Affairs and Energy, 2019). [`www.bmwk.de/Redaktion/EN/Publikationen/Digitale-Welt/handbook-regulatory-sandboxes.pdf?\_\_blob=publicationFile&v=2`](https://www.bmwk.de)
+* German Federal Ministry for Economic Affairs and Energy, 2019). [`www.bmwk.de/Redaktion/EN/Publikationen/Digitale-Welt/handbook-regulatory-sandboxes.pdf?__blob=publicationFile&v=2`](https://www.bmwk.de)
 
 * Greene, S., & Nixon, E. (2020). 儿童作为其世界中的行动者：心理-关系视角。Routledge。
 
@@ -4384,21 +4464,14 @@ Figure 21.3 A proof of concept with indicative examples of the Actions included 
 
 * Sorbring, E., & Kuczynski, L. (2018). 家庭、学校和社会中的儿童能动性：对健康和福祉的影响。International Journal of Qualitative Studies on Health and Well-Being, *13*(sup1), 1634414。
 
+
+
 * Stoilova, M., Nandagiri, R., & Livingstone, S. (2021). 儿童对在线个人数据和隐私的理解——系统性证据映射。Information, Communication & Society, *24*(4), 557–575。
-
 * Synofzik, M., Vosgerau, G., & Newen, A. (2008). 超越比较模型：能动性的多因素两步解释。Consciousness and Cognition, *17*(1), 219–239。
-
 * Tooley, U. A., Bassett, D. S., & Mackey, A. P. (2021). 环境对大脑发育速度的影响。Nature Reviews Neuroscience, *22*(6), 372–384。
-
-
-
-
 * UNICEF (2021a). 关于儿童人工智能的政策指导 [`www.unicef.org/globalinsight/reports/policy-guidance-ai-children`](https://www.unicef.org/globalinsight/reports/policy-guidance-ai-children)
-
 * UNICEF (2021b). 实施联合国儿童基金会关于儿童人工智能政策指导的工具 [`www.unicef.org/globalinsight/media/1166/file/UNICEF-Global-Insight-tools-to-operationalize-AI-policy-guidance-2020.pdf`](https://www.unicef.org/globalinsight/media/1166/file/UNICEF-Global-Insight-tools-to-operationalize-AI-policy-guidance-2020.pdf)
-
 * Wang, G., Zhao, J., Van Kleek, M., & Shadbolt, N. (2022). 告知适龄人工智能：审查儿童人工智能的原则与实践。载于 *Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems* (pp. 1–29)。
-
 * Wolfe, M. (1978). 童年与隐私。*Children and the Environment*, 175–222。
 
 ## 22 迈向算法的社会可接受性
@@ -4427,10 +4500,6 @@ DOI: [10.1201/9781003320791-26](https://dx.doi.org/10.1201/9781003320791-26)
 
 最后，算法规则高度技术化的性质使其更容易逃脱法治的控制。法律体系正在经历“算法转向”（Restrepo Amariles, 2020: 133），因此引发了基本问题：它与法治的民主模式相容吗？算法统治是民主和技术官僚的逻辑延续的一部分吗？它是否很自然地是“*下一步或下一次行动*”（Bersini, 2018）？我们是否应该担心从“政变”滑向“*数据政变*”（*coup data*）（Basdevant, 2020: 46）？
 
-
-
-
-
 本章旨在探讨人工智能（AI）与法律之间的互动：更具体地说，它聚焦于 AI 在法律和社会领域的影响。正如马歇尔·麦克卢汉所说，“我们塑造工具，然后工具塑造我们。” 新技术如何影响我们的法律和政治体系？民主是否处于危险之中？事实上，新技术的引入对一个社会而言并非中立，这可能会同时影响多个不同类别的人：消费者、用户，但也包括公民。然而，个人从未被征询过，他们的意见也没有被考虑来评估与新技术相关的社会平衡。随着新技术的影响日益加剧，有必要确保公民在更大范围内的共识。技术现在正成为一个政治问题。如果我们希望确立以人为中心的人工智能原则作为对社会具有切实效果的有效原则，就有必要反思个人接受 AI 系统的条件。事实上，个人不仅仅是 AI 系统的用户；他们还是数据的提供者。因此，他们在 AI 的各个层面都处于核心地位。主要挑战在于建立一个框架，确保个人的意愿，通过给予他们表达意见和同意使用算法系统的机会。在一句话里，AI 必须“与人一起”构想，而不仅仅是在数据科学家或大型科技公司的实验室内部。那就是为什么，为了全面理解以人为中心的人工智能的概念，有必要也关注其为社会所接受的条件。
 
 本章将此问题称为“算法的社会可接受性”。我们提案的目的是重新思考我们法律规则的颁布流程，以加强必须主导任何规范发展的民主辩论条件 (Teller, 2022a)。因此，雄心在于从算法统治转向算法民主（“从算法统治到算法民主”部分），这意味着重新思考保证算法真正社会可接受性的条件（“迈向算法的社会可接受性”部分）。
@@ -4457,16 +4526,14 @@ DOI: [10.1201/9781003320791-26](https://dx.doi.org/10.1201/9781003320791-26)
 
 #### 效率 *versus* 合法性
 
-
-
-
-
 ### 以数据和市场为重点的法律框架
+
 算法决策在法律中已有很好的框架 (CNIL, 2017; European Commission, 2021a, 2021b; European Commission, 2020)。在国家和国际层面，已对人工智能系统进行了大量监管工作。今天，与“黑箱效应”相关的风险已被很好地识别并受到谴责：偏见风险 (Bertail et al., 2019) 和歧视 (Crawford, 2013)，决策过程的不透明 (Burrell, 2016)，难以防范串谋风险 (Marty, 2017)，以及技术俘获和主权侵犯风险 (European Commission, 2022)。在欧洲法律中，立法者已围绕数据建立了强大的法律框架，包括通用数据保护条例 (European Parliament and Council, 2016)、非个人数据自由流动条例 (European Parliament and Council, 2018)、网络安全条例 (European Parliament and Council, 2019a)，以及开放数据指令 (European Parliament and Council, 2019b)。欧洲数字*单一市场*（DSM）的建设是通过一系列正在进行的文本或倡议进行的：*数字市场*法案 (European Parliament and Council, 2020)、*数字服务*法案 (European Commission, 2020)，以及*数据治理法*（法案 (European Parliament and Council, 2020)）。
 
 毫无疑问，立法者已认识到规范算法效应的必要性，更具体地说是它们对市场和个人数据的影响。然而，我们认为，在欧洲监管框架中仍相对较少涉及的一个维度是：基本权利以及基于算法人工智能系统的决策的程序合法性。
 
 ### 程序合法性之争
+
 规范算法系统的选择的合法性是一个非常重要的问题，它支撑着公众对技术的参与和信任。规则的合法性的一部分在于必须执行它的人的接受度。正如哈贝马斯所回顾的那样，“法律被要求作为政治调节和社会结构手段的程度越高，民主起源的法律必须承担的合法性负担就越大” (Habermas, 1997)。
 
 规则必须在不同的对话场所和讨论论坛之间流通。这将使我们能够假定规范内容的理性性和被同意的性质 (Chevallier, 2005)。因此，规范的合法性仍然取决于一个保证其社会可接受性的讨论过程。必须“公民能够随时将自己视为其所受法律的作者” (Habermas, 1997)。因此，挑战在于建立正式程序，以实现算法的真正社会可接受性。法律在这里找到了其应有的位置。
@@ -4474,6 +4541,7 @@ DOI: [10.1201/9781003320791-26](https://dx.doi.org/10.1201/9781003320791-26)
 ### 迈向算法的社会可接受性
 
 #### 法律的作用
+
 许多伦理宪章、宣言和其他“硬法”文本已出台以规范算法。我们的目标不是做一个回顾 (CAHAI Secretariat, 2020)，而是质疑在这些各种文本中为算法合法性问题保留的位置。如前所述，这一问题对于充分把握以人为中心的人工智能的概念至关重要。然而，这一考量往往被忽视：辩论更集中于信任、伦理或责任等问题。合法性很少被提及。然而，公众辩论也必须从合法性的角度审视人工智能系统是至关重要的，因为算法统治是一个非常现实的动荡源：欧洲当局认为技术可能凌驾于基本权利的风险，因为“*鉴于某些应用或* *人工智能的* *使用的侵入性*，可能出现当前关于人权、*民主和法治的* *框架不足以保护我们，或保护不及时*” (Council of Europe Study, 2020)。因此，如果我们希望将公民置于问题的核心，就有必要就算法监管展开公众辩论。
 
 算法的社会可接受性首先可以通过法律规则实现。可以提出几种方法：传统上，我们可以在算法系统创建之后保障权利（章节“从基于风险的方法到基于权利的方法”）。我们也可以提出更具创新性的程序，在算法设计阶段就让公民参与：一种基于公民参与的自下而上的方法似乎是一个非常鼓舞人心的提议（章节“公民参与程序”）。
@@ -4481,31 +4549,35 @@ DOI: [10.1201/9781003320791-26](https://dx.doi.org/10.1201/9781003320791-26)
 ##### 从基于风险的方法到基于权利的方法
 
 ###### “基于风险的方法”的局限性
+
 人工智能的监管正在我们眼前建立。欧洲议会和理事会关于人工智能协调规则的法规提案 (European Commission, 2021b) 旨在基于风险的方法来规范人工智能系统。该提案被视为一项法律和象征性的进步，使算法摆脱“无法无天”。尽管具有创新性，文本远非完美并引发担忧：事实上，提案的起点是人工智能系统，根据其风险进行分类，而不是人。个人维度，即权利和自由，并不是文本的锚点：无论是终端用户、单纯的数据主体，还是受人工智能系统影响的其他个人，提案中对受人工智能系统影响的人的任何提及的缺失都显得是一个盲点 (Teller, 2022b)。 欧洲数据保护委员会（2021） 对这种以技术为棱镜而牺牲个人的做法表示遗憾。
 
 ###### 另一种方式：“基于权利的方法”
+
 “基于权利”的监管 (Castets-Renard, 2020) 使法律能够重新回到算法统治问题的中心。目标是突出人工智能系统对基本权利构成的风险，远不止个人数据泄露 (Kaminski and G. Malgieri, 2019)。这一主题足够严肃，足以证明提出新权利和新的监管方法以保证算法系统的“可质疑性”的合理性。已提出若干建议，我们可以提及其中一些：设立国家审计平台，在独立公共机构的监督下测试代码；使用能够允许反事实评估的统计工具；最后，在任何算法流程投入流通之前推广影响研究机制。
 
 ###### 数字原则提案
+
 最近，欧洲委员会提出了一套数字原则框架 (European Commission, 2022)。这一方法很有趣，显示出方向的转变：立法者瞄准的已不再是市场或数据，而是个人。这将赋予公民新的权利，例如获得高质量连接、足够的数字技能，以及公平和非歧视的在线服务。这些原则将在广泛的社会辩论的背景下讨论，并可能由欧洲议会、理事会和委员会通过庄严的机构间宣言予以载入。
 
-
-
-
-
 ### 算法可解释性
+
 权利的执行需要对算法流程进行上游理解。正因如此，我们认为权利与原则的方法应辅以算法可解释性的一般原则，该原则整合了多个维度，包括可解释性和可审计性。这些概念源自工程学（Desmoulin-Canselier & Le Métayer, 2020），并且不应与透明度混淆，透明度只是通过提供算法源代码来理解算法结果的一种（非常不完善）方式。可审计性表征了对算法进行分析和实证评估的实际可行性，其目标更广泛，不仅是为了对其预测提供解释，还为了根据其他标准（性能、稳定性、数据处理）对其进行评估。
 
 专家仍在争论“可解释性”与“可解释性”之间的区别：“可解释性”概念通常与对算法如何工作进行技术性和客观的理解相关联（因此适用于审计参与的视角），而“可解释性”概念似乎更与技术性较弱的论述相关联（因此更适合面向消费者或个人）。算法可解释性的质量也取决于上下文。因此，要解释算法 `how` 工作以及 `why` 它做出此或彼决定，可以考虑多个解释层级，以兼顾接收者的性质（专业人士、客户、公众）。
 
 ### 公民参与程序
+
+
+
 我们能否更进一步，超越主观权利的逻辑（赋予权利），让公民参与算法治理？这一提议可能令人惊讶，但美国学者（Desai & Kroll, 2018）提醒我们，这种方法可能是有益的：在金融安全领域，立法者通过 2002 年的《萨班斯-奥克斯利法案》制定了规范举报人的程序。其目标是通过提供支持给检察机关，举报被认为非法的行为，从而鼓励私人行为者确保法律的正确适用（Desai & Kroll, 2018）。在人工智能领域，该提议将包括依靠算法用户，不是为了举报缺陷，而是建立讨论程序，让他们参与其中（Castelluccia & Le Métayer, 2019）。
 
 鉴于其对社会可能产生的重要影响，算法决策必须成为公共辩论的一部分。学者们开始反思确保高质量辩论的良好治理原则：这些讨论程序必须让所有利益相关者参与，包括各学科的专家、政策制定者、专业人士、非政府组织和公众。它们必须严格进行，并首先提出算法解决方案使用合法性的问题。
 
 在某些情况下，可以考虑原则上禁止，在明显侵犯基本权利的情况下（Hannah-Moffat, 2013）（如公正审判和无罪推定）。这些提议听起来很有趣，但在实践中能否经受住考验？从这一角度来看，实地观察至关重要，有两个正在进行的项目值得提及：`CITICODE` 项目和 `FARI` 研究所，两者都是布鲁塞尔计算机科学家 Hugues Bersini 发起的公民参与实验的实验室。
 
-#### CITICODE 和 FARI，公民参与的实验室
+### CITICODE 和 FARI，公民参与的实验室
+
 “`算法必须保持开放，完全处于公共领域，使得理想情况下，每个人都可以保留自己的发言权和自己的代码行，即使笨拙，也可以编写`” (Bersini, 2023)。将理论与实践相结合，Bersini 教授启动了 `CITICOD` 项目，该项目具体化了公民大规模参与软件设备开发。
 
 该实验之所以有趣，是因为它使得能够确定适用于公民参与算法编写的治理规则。考虑了三个连续过程：选举过程（`谁可以参与该软件的编写以及如何参与？`）；教育过程（`如何让公民既掌握良好并详细理解问题，又掌握算法方法？`）；审议过程（`当其更新和持续改进至关重要时，如何进行这些代码的开发和维护？`）。
@@ -4517,72 +4589,114 @@ DOI: [10.1201/9781003320791-26](https://dx.doi.org/10.1201/9781003320791-26)
 总之，我们认为，未来共同生活的状况将密切取决于引入新技术，特别是人工智能的条件的包围。共识和集体审议必须保持强大的价值观，不应在技术设计中消解。应认真考虑更好地适应人工智能用户的意愿和同意。这一方面对于定义以人为本的人工智能的概念至关重要，该概念旨在让个人参与算法决策过程，让他们有机会参与辩论、做出选择并表达自己。
 
 ### Notes
-1. “Indeed，对行为者相对于受影响人员施加的义务应更具体地源于对个人及其权利的保护。因此，EDPS 和 EDPS 敦促立法者在提案中明确说明受人工智能系统约束的人员可获得的权利和救济。"]
+
+1. “Indeed，对行为者相对于受影响人员施加的义务应更具体地源于对个人及其权利的保护。因此，EDPS 和 EDPS 敦促立法者在提案中明确说明受人工智能系统约束的人员可获得的权利和救济。"
+
 2. 有关这些提案的更详细分析，请参阅 Teller (2020b)。
+
 3. 提出四项提案如下：(1) 具有数字技能的公民和高度合格的数字专业人员，(2) 安全、高效和可持续的数字基础设施；(3) 企业的数字化转型；以及 (4) 公共服务的数字化
+
 4. 这种方法由 ACPR (2020) 提出。根据受众的不同，解释将是简单、功能性的或技术性的。
-5. 参见 `https://fari.brussels/` FARI 将很快通过公民小组征求公民参与，这是一个平台，公民不仅会被征求意见，还会被要求积极、定期参与不同的人工智能项目。
+
+5. 参见 `https://fari.brussels/` `FARI` 将很快通过公民小组征求公民参与，这是一个平台，公民不仅会被征求意见，还会被要求积极、定期参与不同的人工智能项目。
+
 6. “我们必须决定，思考并编写所有人都知道的代码行，这些代码将帮助我们更好地生活。这就是为什么我提议并捍卫一种新的治理形式，在这种形式中，公民必须从一开始并在整个过程中参与编写本应约束和界定其行为的代码。这无疑是保证这种日益侵入性软件在我们出行组织和安全、我们子女学校选择、税收再分配和犯罪预防中的合法性和接受度的唯一途径” (Bersini 2023)。
 
 ### References
 
-
-
-
-
 ### 参考文献
 
 * ACPR (2020). 金融部门人工智能算法的治理。
+
 * Aneesh, A. (n.d.) 技术编码的权威：官僚等级制度的后工业衰退。斯坦福大学。检索自 [`web.stanford.edu/class/sts175/NewFiles/Algocratic%20Governance.pdf`](https://web.stanford.edu)
+
 * Basdevant, A. (2020). 数字“数据冲击”。L’ENA hors les murs, 2020(3), 46。
+
 * Benabou, V.-L. (2020). 活的法律。人工智能时代具身且敏感的法律人的宣言。载于 Penser le droit de la pensée, Mélanges en l’honneur de Michel Vivant. Dalloz, 第 715 页。
+
 * Bersini, H. (2018). Big Brother is driving you. 论即将到来的社会的拙劣计算机科学家的简短反思。比利时皇家科学院，coll. L’académie en poche（第 2 版）。
+
 * Bersini, H. (2023). Algocratie. Deboeck.
+
 * Bersini, H. (n.d.). Big Brother is driving you. 论即将到来的社会的拙劣计算机科学家的简短反思。
+
 * Bertail, P., Boune, D., Clemençon, S., & Waelbroeck, P. (2019). 算法：偏见、歧视与公平。Télécom ParisTech。
+
 * Boddington, P. (2020). 规范模式：代码与标准。载于 M. D. Dubber, F. Pasquale, & S. Das（编），The Oxford Handbook of Ethics of AI（第 125 页）。
+
 * Burrell, J. (2016). 机器如何“思考”：理解机器学习算法中的不透明性。Big Data & Society。
+
 * CAHAI Secretariat. (2020). 人工智能系统的规制：基于欧洲委员会在人权、民主和法治领域标准的人工智能系统法律框架发展的国际视角（2020 年 12 月）。贡献汇编。
+
 * Castelluccia, C., & Le Métayer, D. (2019). 理解算法决策：机遇与挑战。欧洲议会报告，72。
+
 * Castets-Renard, C. (2020). 欧洲委员会关于人工智能的白皮书：迈向信任？Dalloz, 15, 837。
+
 * Chevallier, J. (2005). 治理与法律。载于 Mélanges Paul Amselek. Bruylant, 189。
+
 * Chrisley, R. (2020). 人工智能伦理的人本方法：来自认知科学的视角。载于 M. D. Dubber, F. Pasquale, & S. Das（编），The Oxford Handbook of Ethics of AI（第 463 页）。
+
 * CNIL. (2017). 如何让人类保持主导？算法与人工智能伦理问题报告。
+
 * Council of Europe Study DGI. (2020). 人工智能系统的规制。基于欧洲委员会在人权、民主和法治领域标准的发展法律框架的国际视角（DGI(2020)16）。
+
 * Crawford, K. (2013). 大数据中的隐藏偏见。*Harvard Business Review*。
+
 * Danaher, J. (2016). 算法统治的威胁：现实、抵抗与适应。Philos. Technol., 29, 245。
+
 * Desai, D. R., & Kroll, J. A. (2018). 信任但需核实：算法与法律指南。Harvard Journal of Law and Technology, 31, 1。
+
 * Desmoulin-Canselier, S., & Le Métayer, D. (2020). 算法决策——人类何处，法律何处？Dalloz, Les Sens du Droit。
+
 * European Commission. (2020). 人工智能白皮书：卓越与信任的欧洲方法。
+
 * European Commission. (2021a). 委员会通信。促进欧洲人工智能方法。COM(2021)205 final。
+
 * European Commission. (2021b). 关于制定人工智能协调规则的法规提案（人工智能法案）并修订某些欧盟立法行为，COM(2021) 206 final, 2021 年 4 月 21 日。
+
 * European Commission. (2022). 委员会通信 制定数字权利与原则欧洲宣言以实现数字十年。COM(2022)27 final。
+
 * European Data Protection Board, EDPB-EDPS. (2021). 关于欧洲议会和理事会关于制定人工智能协调规则的法规提案的联合意见 5/2021（人工智能法案）。
+
 * European Parliament and the Council. (2016). 欧洲议会和理事会条例（EU）2016/679 关于自然人在个人数据处理方面的保护以及此类数据自由流动。
+
 * European Parliament and the Council. (2018). 欧洲议会和理事会条例（EU）2018/1807 建立欧盟内部非个人数据自由流动框架。
+
 * European Parliament and the Council. (2019a). 欧洲议会和理事会条例（EU）2019/881 关于 ENISA（欧盟网络安全局）以及信息通信技术网络安全认证。
+
 * European Parliament and the Council. (2019b). 欧洲议会和理事会指令（EU）2019/1024 关于开放数据和公共部门信息再利用。
+
 * European Parliament and the Council. (2020). 关于数字部门可竞争和公平市场的法规提案。COM/2020/842 final。
+
 * Garapon, A., & Lassègue, J. (2018). 数字正义。图形革命与人类学断裂。P.U.F。
+
 * G’Sell, F. (2020). 算法决策。载于 Le Big Data et le Droit. Dalloz, coll. Thèmes et commentaires（第 86 页）。
+
 * Habermas, J. (1997). Droit et démocraties, entre faits et normes. Gallimard。
+
 * Hannah-Moffat, K. (2013). 精算量刑：一个“未定”命题。Justice Quarterly, 30(2), 270–296。
+
 * Kaminski, M. E., & Malgieri, G. (2019). 根据 GDPR 的算法影响评估：生成多层次解释。*U of Colorado Law Legal Studies Research Paper*, 19–28。可在 SSRN 获取：[`ssrn.com/abstract=3456224`](https://ssrn.com)
+
 * Kitchin, R. (2017). 批判性思考与研究算法。Information, Communication & Society, 20(1), 14–29。
+
 * Marty, F. (2017). 算法定价、人工智能与合谋均衡。Revue internationale de droit économique, 2, 83–116。
+
 * Restrepo Amariles, D. (2020). 算法法：关于规则与其实施之间区别的消解。载于 Le Big Data et le Droit. Dalloz, coll. Thèmes et commentaires（第 133 页）。
+
 * Rouvroy, A. (2018). Homo juridicus 能否溶解于数据？载于 Law, norms and freedom in cyberspace: Droit, normes et libertés dans le cybermonde, Liber amicorum Yves Poullet. Larcier, 第 417 页。
+
 * Rouvroy, A., Berns, T., & Carey-Libbrecht, L. (2013). 算法治理与解放前景。Réseaux, 177(1), 163–196。
+
 * Teller, M. (2020a). Deep Law 的到来（迈向法律的数字分析？）。载于 Mélanges en l’honneur d’Alain Couret, Un juriste pluriel. Coédition EFL-Dalloz。
+
 * Teller, M. (2020b). 人工智能。载于 Le droit économique au XXIème siècle（J.-B. Racine, 编）。LGDJ, 第 461 页。
 
+* Teller, M. (2022a). Vers l’acceptabilité sociale des algorithmes ou comment passer de l’«algocratie» à la démocratie algorithmique. Revue pratique de la prospective et de l’innovation, (1).
 
+* Teller, M. (2022b). Les droits fondamentaux à l’ère des neurosciences.
 
-
-
-*   Teller, M. (2022a). Vers l’acceptabilité sociale des algorithmes ou comment passer de l’«algocratie» à la démocratie algorithmique. Revue pratique de la prospective et de l’innovation, (1).
-*   Teller, M. (2022b). Les droits fondamentaux à l’ère des neurosciences.
-*   UNESCO-MILA. (2023). Missing links in AI governance.
+* UNESCO-MILA. (2023). Missing links in AI governance.
 
 ## 23 以人为中心的工业 5.0 人工智能（HUMAI5.0）*设计框架与案例研究*
 
@@ -4598,7 +4712,7 @@ Philippe Doyon-Poulin
 
 Polytechnique Montréal, Montréal, Québec, Canada
 
-DOI: [10.1201/9781003320791-27](https://dx.doi.org/10.1201/9781003320791-27)
+DOI: [`10.1201/9781003320791-27`](https://dx.doi.org/10.1201/9781003320791-27)
 
 ### 引言
 
@@ -4606,21 +4720,19 @@ DOI: [10.1201/9781003320791-27](https://dx.doi.org/10.1201/9781003320791-27)
 
 因此，学术界、政府和工业团体提出了更多有效和更安全的 人–AI 协作的关注点和原则（Kadir et al., 2019; Maddikunta et al., 2022; Neumann et al., 2021）。欧洲委员会启动了工业 5.0（I5.0）计划，以将以人为中心、可持续性和韧性原则付诸实践，使新技术开发与社会价值保持一致。针对采用技术中心设计方法仅考虑 AI 技术维度而可能造成的潜在危害，出现了新的子领域。首先，多项研究强调了 I5.0 能够带来的潜在益处，依赖于潜在的应用案例并为未来研究正式化途径（Jiao et al., 2020; Maddikunta et al., 2022; Seeber et al., 2020）；其次，提出了一系列框架或设计原则，以在协作工作环境中整合人类与技术（Dubey et al., 2020; Mueller et al., 2021）或在数字化转型中考虑人类和组织因素（Liao et al., 2020; Peeters et al., 2020）。然而，虽然这些努力提供了初步的粗粒度指导，但这些一般原则并不能始终转化为日常设计实践或最终的基于 AI 的产品。设计团队需要系统化的方法，为在复杂社会技术环境中设计促进长期人类福祉、参与度和系统性能的新解决方案提供细粒度指导（Roth et al., 2018）。
 
+
+
 本章介绍了 HUMan-centered AI for Industry 5.0（HUMAI5.0），这是一个创新的六步框架，支持设计团队采用以人为中心的方法来设计和实施工作场所中的 AI 融合系统。我们将该框架应用于 I5.0 背景下的两个用例。本章采用人因视角，其中以人为中心的人工智能关注工作场所中人类与 AI 系统之间的协作。余下章节组织如下：第 2 节深入探讨框架所依据的文献；第 3 节介绍该框架；第 4 节将其应用于两个用例。
 
-### 相关文献
+## 相关文献
 
-#### 现有设计方法与框架
+### 现有设计方法与框架
 
-##### 面向 AI 的技术中心设计及其局限
+#### 面向 AI 的技术中心设计及其局限
 
 AI 融合解决方案通常遵循技术中心路线图，其中优值指标估计硬件和软件组件的成熟度（Sony & Naik, 2020）。当解决方案达到令人满意的技术成熟度水平时，开发团队会寻找设备可应用的领域和问题。虽然这种自上而下的方法通过仅关注技术细节来缩小问题空间，但它忽视了支配工作系统的情境和人因（Spies et al., 2020）。此外，技术中心主义通常伴随着尽可能自动化尽可能多功能的愿望，以减少人类在工业流程中的干预，在这种哲学中，人类是不确定性和失败的来源（Millot et al., 2015）。然而，AI 目前无法完全获取和复制隐性知识、社会认知过程以及“*根植于数十年机构经验的先进 know-how*”（Miller & Feigh, 2019; p.2）。然而，在人类–技术协作场景中，该技术可以支持或自动化任务的特定部分（Xiong et al., 2022）。出现了对设计过程给予人类、组织和技术因素同等关注的互补设计方法，将在下一小节中讨论。
 
-##### 互补设计与分析方法以应对技术中心主义的不足
-
-
-
-
+#### 互补设计与分析方法以应对技术中心主义的不足
 
 在组织中实施人工智能解决方案除了技术挑战外，还会同时带来社会和组织方面的挑战（Kadir et al., 2019；Maddikunta et al., 2022；Neumann et al., 2021）。多位作者主张采用以人为中心的设计方法来克服这些挑战，并确保向数字化工作情境的成功转型（Neumann et al., 2021；Oppl & Stary, 2019）。以人为中心的设计方法将终端用户置于产品设计的中心（Rapp, 2021）。与技术中心主义方法相反，它们属于一种归纳哲学，考虑用户的特征及其工作环境以*“指导和引导产品开发过程”*（Rapp, 2021；p.1）。本小节将探讨在 I5.0 语境下最相关的方法。
 
@@ -4628,7 +4740,7 @@ AI 融合解决方案通常遵循技术中心路线图，其中优值指标估�
 
 **认知工作分析（CWA）**是一种五阶段框架，指导社会技术系统的设计和评估（Vicente, 1999）。CWA 使我们能够深入了解工作域、系统、任务和操作员的约束。CWA 的第一阶段、工作域分析（WDA）对本章尤为重要。WDA 提供与任务无关的设计信息，使其对新颖性或变化具有更好的灵活性和适应性。WDA 通过五个层级的层级结构（抽象层级）在工作环境中识别约束，从最抽象到最具体：功能目的（系统的最终目标）、抽象功能（物理原理）、概括功能（过程）、物理功能（设备）和物理形式（位置和外观）（Rasmussen, 1985）。WDA 有助于绘制将系统最终目标与其物理实现联系起来的手段-目的关系。
 
-**知识获取**是一类旨在推断终端用户心智模型和隐性知识的方法和框架（Shadbolt & Smart, 2015）。依赖先进的访谈和观察技术，访谈者依靠及时呈现的提示（例如，图片、文件、现场笔记、专家执行操作的录像）和系统性问题来引导主题专家回忆情境特定的要素。用户也可以在同时执行任务时被要求出声思考（“请告诉我你在做什么以及为什么”）。该类别中最著名的<|message|> 方法是知识审计（Gourova, 2009）、关键决策法（Klein et al., 1989）和认知任务分析（Crandall et al., 2006）。
+**知识获取**是一类旨在推断终端用户心智模型和隐性知识的方法和框架（Shadbolt & Smart, 2015）。依赖先进的访谈和观察技术，访谈者依靠及时呈现的提示（例如，图片、文件、现场笔记、专家执行操作的录像）和系统性问题来引导主题专家回忆情境特定的要素。用户也可以在同时执行任务时被要求出声思考（“请告诉我你在做什么以及为什么”）。该类别中最著名的 方法是知识审计（Gourova, 2009）、关键决策法（Klein et al., 1989）和认知任务分析（Crandall et al., 2006）。
 
 ### 面向工业 5.0 的整合设计框架
 
@@ -4637,6 +4749,7 @@ AI 融合解决方案通常遵循技术中心路线图，其中优值指标估�
 **人机交互的动机设计**。Szalma (2014) 运用自我决定理论对动机的概念化来设计人本界面或系统。动机设计的前提是支持员工的自主性、胜任感和归属感，以便建立有利于长期工作投入、绩效和福祉的社会技术交互（Szalma，2009，2014）。他提出，仅考虑享乐性和功利性目标对于员工绩效和福祉是不够的。相反，在设计或实施社会技术系统时必须考虑动机需求（Szalma, 2014）。自主性指的是对自己决策和行动的控制感，胜任感指的是对自己工作能力的有效感，而归属感则指的是在工作环境中对积极/有意义的联系和关系的感知。
 
 **相互依存分析**是由 Johnson 等人开发的框架（2014，2017，2018），用于理解和设计人类和自动化系统如何有效协作以共同完成一项联合活动。与传统自动化设计中关注机器架构设计不同，该方法支持系统地探索人类-AI 联合工作的设计空间。目标是识别*相互依存关系*——当一个实体（人类或人工）需要支持以完成给定任务的目标时——以设计联合工作。部署该方法需要三个不同的阶段：
+
 1. 建模联合活动：定义实现运营目标所需的任务、子任务和能力
 2. 评估团队成员执行每项任务和子任务的能力以及协助能力
 3. 识别所有可能的人机工作流程：建立完成任务集的所有潜在路径以及相关的团队合作要求
@@ -4648,10 +4761,6 @@ AI 融合解决方案通常遵循技术中心路线图，其中优值指标估�
 人机交互的动机设计框架（Szalma，2009，2014）旨在作为其他人因框架的补充，而不是独立的框架。与 Neumann et al.’s (2021) 框架相比，它提供了一种更深入理解系统社会心理动态的方法，这将导致旨在增强社会技术系统中人机交互的设计建议。此外，它分析了操作员的认知和情感特征。这种分析在其他人机交互框架中缺失，可以为操作员的认知提供更深层次抽象水平的宝贵见解，最终导致更具体的实施建议。尽管全面，其分析范围主要局限于系统内的社会心理交互。因此，与其他框架联合使用将是理想的。
 
 工作分析方法，如 CWA 或知识获取框架，提供了对当前知识状态和工作域的深入理解。然而，从对当前系统的深入分析过渡到设计未来的工作情境，并未得到当前独立方法学的适当支持。此外，工作域分析未考虑系统的社会心理特征。因此，它应与其他框架一起使用。
-
-
-
-
 
 最后，相互依赖分析是最全面的方法，可解决上述缺点。作为一种形成性工具，相互依赖分析框架并未包含对所提议设计的总结性评估步骤。其分析视角过于粗糙，难以把握复杂社会技术工作系统的具体性，这表明需要用其他框架来补充。
 
@@ -4703,10 +4812,6 @@ Figure 23.3 Framework application to case study #1.
 
 还应用了 Neumann et al. (2021) 的第 2 步。该系统的主要人类是装配线上的最后操作员。我们还确定了必须最初校准和维护 AIEDS 以确保正常运行的工程师。
 
-
-
-
-
 我们随后在 HMI 的动机设计中应用了步骤 1 的用户分析部分。我们使用一般因果取向量表评估了操作员的人格特征（`trait engagement`）（Deci & Ryan, 1985；Ryan & Deci, 2008）。该问卷使我们能够控制体验某一特定水平动机或投入的先天倾向，从而可能影响我们对 AIEDS 类型对各项指标影响的评估。
 
 最后，选择了可衡量的成功标准。系统性能通过以下方式衡量：（1）验证 30 双雪鞋所需的时间和（2）错误检测性能（正确分类的雪鞋百分比）。工作域分析得出的其他重要指标，如操作员心理需求（工作负荷）、动机和投入，则通过问卷进行测量，并在可能时使用生理测量。问卷和生理测量是基于文献检索选择的。
@@ -4747,8 +4852,6 @@ Figure 23.3 Framework application to case study #1.
 
 
 
-
-
 本真实案例研究探讨了在研究项目中整合人为因素，以设计一个用于自动化飞机部件检查的网络物理系统（CPS）。工业检查是一项劳动密集型且知识密集型的任务，由熟练操作员执行。他们的目标是确保飞机部件无有害缺陷。操作员仔细检查每个部件是否存在潜在异常，一旦检测到异常，便会对其进行评估并与多个决策标准进行比较。设想了一个基于机器视觉的系统，以支持检测和诊断服役部件（如燃气涡轮、盘、轴和风扇叶片）上的缺陷，帮助检查员完成这项繁琐的任务。从概念验证（技术成熟度等级 3）开始，技术开发计划的目标是达到技术成熟度等级 6，即在相关（运行）环境中展示技术功能。HUMAI5.0 被应用于将人为因素输入纳入遵循技术中心设计路径的项目中（见 Figure 23.4）。此外，由于之前因人类与自动化诊断不匹配而导致的实施失败，项目负责人也有动力去深入了解检查员如何执行检查。该框架使我们能够理解、建模和评估人工检查是如何进行的。基于这种理解，推导出需求以指导工程过程，同时考虑未来联合人机检查工作流程。
 
 ![Figure 23.4 Framework application to case study #2.](img/fig23_4_B.jpg)
@@ -4757,7 +4860,7 @@ Figure 23.4 Framework application to case study #2.
 
 由于篇幅限制，本案例研究的细节在本图书的在线补充材料中呈现。读者还可查阅有关该主题的先前出版物（Cabour, 2023; Cabour, Ledoux, et al., 2022a; Cabour, Morales-Forero, et al., 2022b）。
 
-### Concluding Remarks
+## Concluding Remarks
 
 AI 技术在复杂社会技术环境中的引入改变了操作员在工作场所中的角色和职责。在本章中，我们展示了采用以人为中心的、用于设计工业中人机协作的方法，能够发挥双方的最佳能力，打造一个尊重人类员工长期福祉且有利于组织的工作环境。为此，我们提出了 HUMAI5.0 框架，以系统地分析工作域、（重新）设计人机交互并评估其结果。事实上，该框架强调需要进行民族志研究，以把握 AI 赋能技术将被部署的运营现实。这种强调与本章中引用的其他框架和方法产生共鸣，这些框架和方法依赖于用户中心设计来进行技术开发项目，例如 CWA。HUMAI5.0 的优势在于将这些在各自领域使用的现有方法整合为一种整体设计方法，使利益相关者能够对 AI 在其工作场所的影响以及如何最好地应对其影响形成共同理解。例如，哪些任务被完全自动化或部分自动化？我们如何适当地重新设计工作以实现人机协作？由于 AI 的整合改变了工作实践，这些方法有助于在技术开发周期中（而非实施后）设想和设计未来的工作实践，从而避免陷入经典的自动化问题，例如任务-技术不匹配（Loup-Escande, 2022; Spies et al., 2020）。案例研究 2 通过系统地设计与工作需求相符的有效人机工作流程和用户界面来说明这一点。案例研究 1 深入探讨了工作绩效与动机之间的联系，探索人们对其工作赋予的更深层次意义。
 
@@ -4765,21 +4868,23 @@ AI 技术在复杂社会技术环境中的引入改变了操作员在工作场�
 
 本章展示了 HUMAI5.0 在两个认知要求较高的领域，即制造中的错误检测和飞机维护中的质量控制中的成功应用。这也证明了该方法的多样性，既可应用于实验环境，也可应用于自然情境。我们相信该框架可应用于工业环境之外，以支持 AI 项目从技术中心向更以人为中心的设计的转变（例如社会环境项目）。将该框架应用于其他领域将创造机会来研究它如何支持决策者在 AI 项目中考虑人类和组织因素。此外，将我们的框架应用于更大规模的科学实验，以研究工作场所中的人机交互，可以帮助进一步完善它。
 
-### References
+## References
 
 * Cabour, G. (2023). *Reconcevoir le travail dans des logiques de collaboration humain-technologie à l’ère du digital: Le cas de l’inspection industrielle* [Thèse de doctorat]. *Polytechnique Montréal*.
+
 * Cabour, G., Ledoux, É., & Bassetto, S. (2022a). Aligning work analysis and modeling with the engineering goals of a cyber-physical-social system for industrial inspection. Applied Ergonomics. In-Press.
+
 * Cabour, G., Morales-Forero, A., Ledoux, É., & Bassetto, S. (2022b). An explanation space to align user studies with the technical development of Explainable AI. AI & Society. https://doi.org/10.1007/s00146-022-01536-6
+
 * Carayannis, E. G., Dezi, L., Gregori, G., & Calo, E. (2022). Smart environments and techno-centric and human-centric innovations for industry and Society 5.0: A Quintuple Helix innovation system view towards smart, sustainable, and inclusive solutions. Journal of the Knowledge Economy, *13*(2), 926–955. https://doi.org/10.1007/s13132-021-00763-4
+
 * Crandall, B., Klein, G. A., & Hoffman, R. R. (2006). Working Minds: A Practitioner’s Guide to Cognitive Task Analysis. *MIT Press*.
+
 * Deci, E. L., Olafsen, A. H., & Ryan, R. M. (2017). Self-determination theory in work organizations: The state of a science. Annual Review of Organizational Psychology and Organizational Behavior, *4*, 19–43.
+
 * Deci, E. L., & Ryan, R. M. (1985). The general causality orientations scale: Self-determination in personality. Journal of Research in Personality, *19*(2), 109–134.
 
-
-
-
-
-### 参考文献
+## 参考文献
 
 * Dubey, A., Abhinav, K., Jain, S., Arora, V., & Puttaveerana, A. (2020). HACO: A Framework for Developing Human-AI Teaming. *Proceedings of the 13th Innovations in Software Engineering Conference on Formerly Known as India Software Engineering Conference*, 1–9. [`doi.org/10.1145/3385032.3385044`](https://doi.org/10.1145/3385032.3385044)
 
@@ -4819,6 +4924,8 @@ AI 技术在复杂社会技术环境中的引入改变了操作员在工作场�
 
 * Mueller, S. T., Veinott, E. S., Hoffman, R. R., Klein, G., Alam, L., Mamun, T., & Clancey, W. J. (2021). Principles of Explanation in Human-AI Systems. ArXiv:2102.04972 \[Cs\]. [`arxiv.org/abs/2102.04972`](http://arxiv.org)
 
+
+
 * Neumann, W. P., Winkelhaus, S., Grosse, E. H., & Glock, C. H. (2021). Industry 4.0 and the human factor – A systems framework and analysis methodology for successful development. International Journal of Production Economics, *233*, 107992. [`doi.org/10.1016/j.ijpe.2020.107992`](https://doi.org/10.1016/j.ijpe.2020.107992)
 
 * Oppl, S., & Stary, C. (2019). Designing Digital Work: Concepts and Methods for Human-centered Digitization. Springer Nature. [`doi.org/10.1007/978-3-030-12259-1`](https://doi.org/10.1007/978-3-030-12259-1)
@@ -4839,23 +4946,29 @@ AI 技术在复杂社会技术环境中的引入改变了操作员在工作场�
 
 * Seeber, I., Bittner, E., Briggs, R. O., de Vreede, T., de Vreede, G.-J., Elkins, A., Maier, R., Merz, A. B., Oeste-Reiß, S., Randrup, N., Schwabe, G., & Söllner, M. (2020). Machines as teammates: A research agenda on AI in team collaboration. Information & Management, *57*(2), 103174. [`doi.org/10.1016/j.im.2019.103174`](https://doi.org/10.1016/j.im.2019.103174)
 
-
-
-
-
 * Shadbolt, N., & Smart, P. R. (2015). 知识获取：方法、工具与技术。载于 J. R. Wilson & S. Sharples（编），《人类工作的评估》（第 163–200 页）。CRC Press。 [`eprints.soton.ac.uk/359638/`](https://eprints.soton.ac.uk)
+
 * Spies, R., Grobbelaar, S., & Botha, A. (2020). 任务-技术适配理论应用的范围综述。LNCS-12066（第一部分），397。 [`doi.org/10.1007/978-3-030-44999-5\_33`](https://doi.org/10.1007/978-3-030-44999-5_33)
+
 * Sony, Michael & Naik, Subhash. (2020). 工业 4.0 与社会技术系统理论的整合：系统综述与拟议理论模型。Technology in Society。 [`doi.org/10.1016/j.techsoc.2020.101248`](https://doi.org/10.1016/j.techsoc.2020.101248)
+
 * St-Vincent, M., Vézina, N., Bellemare, M., Denis, D., Ledoux, É., & Imbeau, D. (2011). L’intervention en ergonomie. Éditions Multimondes.
+
 * St-Vincent, M., Vézina, N., Bellemare, M., Denis, D., Ledoux, E., & Imbeau, D. (2014). 人机工学干预。Institut de recherche Robert-Sauvé en santé et en sécurité du travail.
+
 * Szalma, J. L. (2009). 人类-技术交互中的个体差异：将人类特征的变化纳入人因与人机工学研究和设计。Theoretical Issues in Ergonomics Science, *10*(5), 381–397.
+
 * Szalma, J. L. (2014). 关于将动机理论应用于人因/人机工学：人类-技术交互的动机设计原则。Human Factors, *56*(8), 1453–1471.
+
 * Van den Broeck, A., Howard, J. L., Van Vaerenbergh, Y., Leroy, H., & Gagné, M. (2021). 超越内在与外在动机：关于自我决定理论对工作动机多维概念化的元分析。Organizational Psychology Review, *11*(3), 240–273.
+
 * Vicente, K. J. (1999). 认知工作分析：实现安全、高效和健康的计算机化工作。CRC Press.
+
 * Xiong, W., Fan, H., Ma, L., & Wang, C. (2022). 风险决策中人机协作的挑战。Frontiers of Engineering Management, *9*(1), 89–103。 [`doi.org/10.1007/s42524-021-0182-0`](https://doi.org/10.1007/s42524-021-0182-0)
+
 * Zheng, T., Ardolino, M., Bacchetti, A., & Perona, M. (2021). 工业 4.0 技术在制造环境中的应用：系统文献综述。International Journal of Production Research, *59*(6), 1922–1954。 [`doi.org/10.1080/00207543.2020.1824085`](https://doi.org/10.1080/00207543.2020.1824085)
 
-## 24 作为 AI 治理的敏捷治理 日本治理改革的挑战
+# 24 作为 AI 治理的敏捷治理 日本治理改革的挑战
 
 Kodai Zukeyama
 
@@ -4895,10 +5008,6 @@ DOI: [10.1201/9781003320791-28](https://dx.doi.org/10.1201/9781003320791-28)
 
 社会 5.0 指的是“通过网络空间和物理空间高度融合的系统，实现经济发展与社会问题解决相兼容的人类中心社会” (CAO 2021: 11)。在这样的社会中，假设网络空间与物理空间之间会交换大量信息，因此 AI 作为先进的信息处理技术，在处理中发挥着至关重要的作用。事实上，日本政府关于实现社会 5.0 的文件经常提及 AI。
 
-
-
-
-
 尽管人工智能有潜力为社会带来更富裕和更美好的发展，如大量文献已指出的那样，人工智能也存在许多弊端，因此在研发和利用人工智能时必须谨慎。例如，人工智能，特别是使用深度学习等技术开发的人工智能，往往因延续现有的歧视和不平等而受到批评。此外，由于人工智能所谓的“黑箱”特性，可能会无意中发生许多负面结果，使得难以确定原因或追究责任。因此，现在普遍认为，在人工智能的研发和利用中实现以人为中心至关重要。实现以人为中心的人工智能也被称为 HCAI。
 
 ### HCAI 的两种方法
@@ -4929,15 +5038,13 @@ DOI: [10.1201/9781003320791-28](https://dx.doi.org/10.1201/9781003320791-28)
 
 鉴于信息处理技术正在快速发展，而利用这些技术的商业环境也在不断变化，这些缺点至关重要。为了避免这些缺点，大多数敏捷软件开发流程采用两种设计方法。首先，它们将整体软件划分为各个部分并对其进行优先级排序，然后逐步开发，而不是一次性完成整个软件。其次，它们不建立严格的开发目标，而是设定一个粗略的目标，并在开发过程中通过反复与客户或其他利益相关者沟通来逐步完善。因此，敏捷软件开发可以被描述为一种*迭代*和*适应性*的软件开发方法。
 
+
+
 从上述讨论中，我们可以得出以下教训。首先，敏捷软件开发背后的考虑可以适用于 HCAI 的治理模型，因为人工智能治理面临的问题，即技术的快速发展和商业环境的变化，与软件开发面临的问题相同。其次，传统治理模型与瀑布开发的相似性，即两者都是*预测性*和*顺序*的方法，意味着需要一种新的治理模型。第三，作为这两点的推论，一种新的治理模型更像是敏捷治理而不是瀑布开发。
 
 ### 什么是日本的敏捷治理？
 
 2019 年，经济产业省成立了社会 5.0 新治理模式研究组。该研究组在假设现有治理模式将在社会 5.0 中达到其极限的基础上，进行了多次讨论，旨在为新的治理模式创建一个框架。研究组成员包括经济和法律研究人员、公司法专业律师、会计师、从事人工智能开发和金融科技的公司人员等。
-
-
-
-
 
 本研究小组迄今已产出三份报告，提出在 AI 治理中，敏捷治理模式应取代传统模式，因为后者在社会 5.0 中将功能不足。我们可以将报告的观点总结为两点：（1）AI 治理的主要行为主体应是企业，而非政府，以及（2）所有行为主体都应参与对 AI 治理方案的持续且快速的维护，这被称为“敏捷循环”。
 
@@ -4948,8 +5055,11 @@ DOI: [10.1201/9781003320791-28](https://dx.doi.org/10.1201/9781003320791-28)
 #### 传统治理模式的局限
 
 传统治理模式描述如下。政府使用法律制定详细规则
+
 传统模式将在社会 5.0 中停止发挥作用。首先，基于规则的法律和法规将达到其极限。在该社会中，AI 技术以如此快速和复杂的速度发展，以至于政府几乎不可能预先衡量 AI 产生的风险。没有关于风险的信息，政府就无法为决定 AI 使用中什么是好什么是坏制定具体规则。与此相关，适用于特定行业（例如制造业或银行业）的法规，其定义基于其商业模式，将难以适用。在商业模式动态变化且 AI 技术跨商业模式使用的社会中，由每个商业模式制定的 AI 法规会立即过时。它们无法规范社会中的实际 AI 实践。
+
 其次，关于 AI 的大量信息由公司拥有。对该信息的分析和解释对于缺乏专业技术知识的人来说是困难的。正因如此，当国家政府制定规则并执行监测时，监测数据的获取以及实际监测过程将是困难的。即使政府能够承担此项工作，也会效率低下。
+
 第三，在执行阶段也会出现问题。当嵌入 AI 的复杂系统无论是自行还是与人类协作地作用于物理世界时，预测其决策的影响将是困难的。如果这些决策确实产生负面影响，就很难确定法律责任所在，也无法实施制裁或确定未来预防措施应强制要求的对象（以上基于 METI 2020：22–31）。
 
 #### 重新分配行为主体的角色
@@ -4975,10 +5085,6 @@ DOI: [10.1201/9781003320791-28](https://dx.doi.org/10.1201/9781003320791-28)
 ![Figure 24.1 The underlying idea of agile governance. (Source: (METI 2021c: 60).)](img/fig24_1_B.jpg)
 
 Figure 24.1 The underlying idea of agile governance. **(Source: (METI 2021c: 60).)**
-
-
-
-
 
 首先，政府制定基于法律目标的法律，这些法律将适用于所有人工智能和其他网络物理技术。法律基于当前情况以及对这些技术风险分析的结果（政府在轨道 1）。例如，法律将包含保护隐私和平等的原则等原则。报告称此项活动为“治理的治理”，因为法律创建了一个广泛的（但抽象的）人工智能治理框架，涵盖每个领域。政府组织监控和执行方案以确保公司遵守基于目标的法律（政府在轨道 2）。
 
@@ -5012,9 +5118,6 @@ Figure 24.1 The underlying idea of agile governance. **(Source: (METI 2021c: 60)
 
 #### 实现与人权相关的值
 
-
-
-
 Agile governance also has the potential to effectively provide society with constitutional value. In the legal world, constitutions constrain the authority of national governments at a primary level, and they are seldom directly applied to the legal relationships between private actors. However, when companies define concrete guidelines and standards, including constitutional values such as human rights, they can avoid this theoretical opposition, and directly reflect this constitutional value in their activities. For example, legal scholars and people whose human rights might be limited can take part in multistakeholder dialogues, which can produce concrete rules, thereby embedding constitutional value in AI development guidelines.
 
 On the other hand, as the role of the law becomes more relative, the role of the courts as bastions of the protection of constitutions will be less significant. The reports make little mention of control through public law that is implemented by the judiciary. Only in exceptional cases would courts declare corporate activities to be illegal, such as when companies set standards that clearly disregard the abstract goals defined by law. We still have enough reason to doubt that agile governance serves the protection of human rights even in Society 5.0.
@@ -5028,28 +5131,43 @@ However, we have to confront several problems in this model. Can companies creat
 ### Notes
 
 1. The report defines the governance as
+
 > design and implementation of technical, organizational, and social systems by stakeholders, with an aim to manage risks in a society based on systems which integrates cyberspace and physical space […] at an acceptable level, while maximizing the positive impact arising from the system.
+
 > (METI 2021c: 14)
 
 2. In this chapter, “rules” means codes which specifically indicate which actions are to be taken, while “goals” do not express those actions directly but lead our evaluation in certain direction.
 
-3. The third report explains this process more specifically ( METI 2022: 22–37).
 
-4. Yet, we can find some examples of agile governance within society. For instance, NEC Corporation, which is a comprehensive electronics manufacturer in Japan, established its “NEC Group AI and Human Rights Principles,” and has been conducting AI-related business based on these principles. These principles were formed in reference to those of the Japanese government (CAO 2019). NEC has also begun coordinating with university researchers to specify or reconsider the principles. These are practices involving the creation of specific rules regarding product development and utilization under multistakeholder dialogue, which the agile governance suggests. *See* NEC, “NEC Group AI and Human Rights Principles” (written in Japanese) [`jpn.nec.com/press/201904/images/0201-01-01.pdf`](https://jpn.nec.com/press/201904/images/0201-01-01.pdf); Keio Global Research Institute Project, “Review of Check Point List on Implementation of “Human Rights-By-Design” in Society: From a Legal and Technical Perspective,” [`www.kgri.keio.ac.jp/en/project/kgri/2019/S19-07.html`](https://www.kgri.keio.ac.jp/en/project/kgri/2019/S19-07.html)
+
+3. The third report explains this process more specifically (`METI` 2022: 22–37).
+
+4. Yet, we can find some examples of agile governance within society. For instance, `NEC` Corporation, which is a comprehensive electronics manufacturer in Japan, established its “`NEC` Group AI and Human Rights Principles,” and has been conducting AI-related business based on these principles. These principles were formed in reference to those of the Japanese government (`CAO` 2019). `NEC` has also begun coordinating with university researchers to specify or reconsider the principles. These are practices involving the creation of specific rules regarding product development and utilization under multistakeholder dialogue, which the agile governance suggests. *See* `NEC`, “`NEC` Group AI and Human Rights Principles” (written in Japanese) [`jpn.nec.com/press/201904/images/0201-01-01.pdf`](https://jpn.nec.com/press/201904/images/0201-01-01.pdf); Keio Global Research Institute Project, “Review of Check Point List on Implementation of “Human Rights-By-Design” in Society: From a Legal and Technical Perspective,” [`www.kgri.keio.ac.jp/en/project/kgri/2019/S19-07.html`](https://www.kgri.keio.ac.jp/en/project/kgri/2019/S19-07.html)
 
 ### References
 
 * Beck, K., et al. (2001). Manifesto for Agile Software Development. Retrieved from [`agilemanifesto.org/`](https://agilemanifesto.org)
-* CAO = Japan’s Cabinet Office. (2019). Social Principles of Human-Centric AI. Retrieved from [`www8.cao.go.jp/cstp/ai/humancentricai.pdf`](https://www8.cao.go.jp/cstp/ai/humancentricai.pdf)
-* CAO = Japan’s Cabinet Office. (2021). 6th Science, Technology, and Innovation Basic Plan. Retrieved from [`www8.cao.go.jp/cstp/english/sti_basic_plan.pdf`](https://www8.cao.go.jp/cstp/english/sti_basic_plan.pdf)
-* METI = Japan’s Ministry of Economy, Trade and Industry. (2020). Governance Innovation: Redesigning Law and Architecture for Society 5.0. Retrieved from [`www.meti.go.jp/press/2020/07/20200713001/20200713001-2.pdf`](https://www.meti.go.jp/press/2020/07/20200713001/20200713001-2.pdf)
-* METI = Japan’s Ministry of Economy, Trade and Industry. (2021a). AI Governance in Japan Ver. 1.1. (July 9, 2021). Retrieved from [`www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20210709_8.pdf`](https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20210709_8.pdf)
-* METI = Japan’s Ministry of Economy, Trade and Industry. (2021b). Governance Guidelines for Implementation of AI Principles. (July 9, 2021). Retrieved from [`www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20210709_9.pdf`](https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20210709_9.pdf)
-* METI = Japan’s Ministry of Economy, Trade and Industry. (2021c). Governance Innovation Ver 2.0: A Guide to Designing and Implementing Agile Governance. Retrieved from [`www.meti.go.jp/press/2021/07/20210730005/20210730005-2.pdf`](https://www.meti.go.jp/press/2021/07/20210730005/20210730005-2.pdf)
-* METI = Japan’s Ministry of Economy, Trade and Industry. (2022). Agile Governance Update: How Governments, Businesses and Civil Society Can Create a Better World By Reimagining Governance. Retrieved from [`www.meti.go.jp/press/2022/08/20220808001/20220808001-b.pdf`](https://www.meti.go.jp/press/2022/08/20220808001/20220808001-b.pdf)
-* MIC = Japan’s Ministry of Internal Affairs and Communications. (2019). AI Utilization Guidelines (August 9, 2019) (in Japanese). Retrieved from [`www.soumu.go.jp/main_content/000637097.pdf`](https://www.soumu.go.jp/main_content/000637097.pdf)
+
+* `CAO` = Japan’s Cabinet Office. (2019). Social Principles of Human-Centric AI. Retrieved from [`www8.cao.go.jp/cstp/ai/humancentricai.pdf`](https://www8.cao.go.jp/cstp/ai/humancentricai.pdf)
+
+* `CAO` = Japan’s Cabinet Office. (2021). 6th Science, Technology, and Innovation Basic Plan. Retrieved from [`www8.cao.go.jp/cstp/english/sti_basic_plan.pdf`](https://www8.cao.go.jp/cstp/english/sti_basic_plan.pdf)
+
+* `METI` = Japan’s Ministry of Economy, Trade and Industry. (2020). Governance Innovation: Redesigning Law and Architecture for Society 5.0. Retrieved from [`www.meti.go.jp/press/2020/07/20200713001/20200713001-2.pdf`](https://www.meti.go.jp/press/2020/07/20200713001/20200713001-2.pdf)
+
+* `METI` = Japan’s Ministry of Economy, Trade and Industry. (2021a). AI Governance in Japan Ver. 1.1. (July 9, 2021). Retrieved from [`www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20210709_8.pdf`](https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20210709_8.pdf)
+
+* `METI` = Japan’s Ministry of Economy, Trade and Industry. (2021b). Governance Guidelines for Implementation of AI Principles. (July 9, 2021). Retrieved from [`www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20210709_9.pdf`](https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20210709_9.pdf)
+
+* `METI` = Japan’s Ministry of Economy, Trade and Industry. (2021c). Governance Innovation Ver 2.0: A Guide to Designing and Implementing Agile Governance. Retrieved from [`www.meti.go.jp/press/2021/07/20210730005/20210730005-2.pdf`](https://www.meti.go.jp/press/2021/07/20210730005/20210730005-2.pdf)
+
+* `METI` = Japan’s Ministry of Economy, Trade and Industry. (2022). Agile Governance Update: How Governments, Businesses and Civil Society Can Create a Better World By Reimagining Governance. Retrieved from [`www.meti.go.jp/press/2022/08/20220808001/20220808001-b.pdf`](https://www.meti.go.jp/press/2022/08/20220808001/20220808001-b.pdf)
+
+* `MIC` = Japan’s Ministry of Internal Affairs and Communications. (2019). AI Utilization Guidelines (August 9, 2019) (in Japanese). Retrieved from [`www.soumu.go.jp/main_content/000637097.pdf`](https://www.soumu.go.jp/main_content/000637097.pdf)
+
 * Ministry of Science and Technology of the People’s Republic of China. (2019). Principles of next-generation artificial intelligence (AI) governance, 26 September 2019.
+
 * Royce, W. W. (1970). Managing the development of large software systems: concepts and techniques. In *Proceedings of the 9th international conference on Software Engineering*.
+
 * Wallach, W., & Allen, C. (2009). Moral Machines: Teaching robots right from wrong. Oxford University Press.
 
 ## 25 A Framework for Human-Centered AI-Based Public Policies
@@ -5062,19 +5180,17 @@ DOI: [10.1201/9781003320791-29](https://dx.doi.org/10.1201/9781003320791-29)
 
 ### Introduction
 
-
-
-
-
 随着人工智能（AI）的使用渗透到社会的几乎每个方面，公众机构面临着日益增长的压力，要求采用这种技术，而该技术常被框定为实现“响应迅速、高效和公平”政府的途径（Margetts & Dorobantu, 2019）。然而，与此同时，AI 已被认为会助长现有的不平等和有偏见的决策，从而使特定的社会群体处于不利地位（Saxena et al., 2021）。这些潜在的挑战在公共部门尤其相关，因为 AI 的应用经常发生在高风险领域（Veale et al., 2018）。
 
 虽然这种二分法引发了学术兴趣，多项研究探讨了公共部门使用 AI 的优势和挑战（例如，de Sousa et al., 2019；Wirtz et al., 2019；Zuiderwijk et al., 2021），但现有研究的重点仍然在于政府和其他公共机构的监管作用（Kuziemski & Misuraca, 2020）。因此，随着全球各地的行政机构已经在使用 AI，需要研究能够让从业者以结构化的方式分析 AI 在公共部门部署的潜在影响并审视其中固有权衡的框架（Harrison & Luna-Reyes, 2022；Zuiderwijk et al., 2021）。
 
 我们通过开发一套面向以人为本的 AI 驱动公共政策的实践指南框架并将其应用于测试案例来解决这些研究空白。我们的主要贡献如下：
 
-*   **Theory**：在第 1 节的剩余部分中，我们概念化了相关工作的研究成果，讨论了与公共部门使用 AI 相连的潜在优势和挑战。
-*   **Framework**：将以人为本的人工智能（HCAI）概念与政策评估相结合，我们在第 2 节中提出了一套用于设计以人为本的 AI 驱动公共政策并评估其影响的指南框架。
-*   **Application**：为了说明该框架，我们在第 3 节将其应用于一个测试案例：我们使用一个可泛化的仿真来模拟内城的交通，尤其是停车。在该仿真中，作为一个示例性政策，我们让一个 AI 代理为停车供给设定价格。我们利用我们的框架系统地分析该政策对模拟环境的影响，并得出结论判断其是否符合 HCAI 的概念。
+* **Theory**：在第 1 节的剩余部分中，我们概念化了相关工作的研究成果，讨论了与公共部门使用 AI 相连的潜在优势和挑战。
+
+* **Framework**：将以人为本的人工智能（HCAI）概念与政策评估相结合，我们在第 2 节中提出了一套用于设计以人为本的 AI 驱动公共政策并评估其影响的指南框架。
+
+* **Application**：为了说明该框架，我们在第 3 节将其应用于一个测试案例：我们使用一个可泛化的仿真来模拟内城的交通，尤其是停车。在该仿真中，作为一个示例性政策，我们让一个 AI 代理为停车供给设定价格。我们利用我们的框架系统地分析该政策对模拟环境的影响，并得出结论判断其是否符合 HCAI 的概念。
 
 #### AI in the Public Sector: Applications and Challenges
 
@@ -5098,10 +5214,6 @@ DOI: [10.1201/9781003320791-29](https://dx.doi.org/10.1201/9781003320791-29)
 
 ##### Interaction between Government and Citizens
 
-
-
-
-
 人们对人工智能推动公共部门运营的第三个希望领域是政府与公民之间的互动。最流行的实现方式是旨在改善公共组织与民众之间沟通的聊天机器人。一方面，这意味着通过让机器人承担通常由行政人员提供的部分信息服务，从而减轻对行政部门的压力。另一方面，聊天机器人被要求自动、可能更快地向特定用户提供所需信息，或立即将用户的输入路由到适当的联系人（Androutsopoulou et al., 2019）。
 
 由于人工智能系统通常需要大量数据进行训练，其引入在公共讨论中常因对隐私权保护的担忧而受到怀疑（Zhang & Dafoe, 2019）。这具有特别重要的意义，因为人工智能的附加价值往往取决于其整合不同数据源到一个数据集的能力，从而可能更容易识别特定个人（Johnson, 2017）。此外，正如中国政府建立的社会信用系统部署人工智能所证明的那样，人工智能为政府提供了更容易、更深入地接触其公民私人生活的途径。因此，除了确保人工智能公共服务在不同年龄和社会群体中的可及性（Toll et al., 2019）之外，保护隐私以及透明地传达使用哪些数据以及公民当前是否正在与人工智能交互，对于培养社会对人工智能系统的信任至关重要（Harrison & Luna-Reyes, 2022）。
@@ -5112,25 +5224,23 @@ DOI: [10.1201/9781003320791-29](https://dx.doi.org/10.1201/9781003320791-29)
 
 我们提出的框架旨在帮助指导对政府中人工智能的这种谨慎方法，其基于 HCAI 的概念。HCAI 作为一个总称出现，用以应对前一节中详细说明的一般人工智能应用中的许多挑战。它强调构建以相关人类利益相关者为重点的人工智能系统（Riedl, 2019）。该方法可以与构成 HCAI 的一系列原则联系起来：*可解释性*、*透明度*、*责任*、*伦理*、*可信度*、*公平性*和*可持续性*（Hartikainen et al., 2022）。这些原则指导了我们框架不同层级的设计。
 
-作为第二基础和方法，以确定给定的政策是否遵守这些原则，我们的框架依赖于政策评估。政治学中有一大分支研究致力于公共政策的评估，评估或预测不同政策项目的绩效，并将其研究成果反馈到政策制定过程中。![Figure 25.1 Framework for human-centered AI-based public policies.](img/fig25_1_B.jpg)
+作为第二基础和方法，以确定给定的政策是否遵守这些原则，我们的框架依赖于政策评估。政治学中有一大分支研究致力于公共政策的评估，评估或预测不同政策项目的绩效，并将其研究成果反馈到政策制定过程中。
 
 Figure 25.1 Framework for human-centered AI-based public policies.
 
 #### 先决条件层级
 
-为了避免“解决方案主义陷阱”，即不认识到技术可能不是解决特定问题的最佳补救措施（Selbst et al., 2019），在制定利用人工智能的任何政策干预之前，政策制定者应确保为预期目的部署该技术总体上是合理的，并且可以预期带来切实的好处（Desouza et al., 2020）。由此产生的政策应以合理的可能性在与已实施和潜在的替代方案相比时提供更好的*效率*和/或*有效性*。在许多情况下，基于人工智能的方法很可能仅提供增量的性能改进，或需要对技术设备和人员进行大量投资，要求决策者做出权衡。至关重要的是，这一评估应在确保给定政策旨在促进公共利益的基础上进行，因为公共机构不能仅基于效率和有效性来概念化价值（Mintrom & Williams, 2013）。
+
+
+为了避免“解决方案主义陷阱”，即不认识到技术可能不是解决特定问题的最佳补救措施（Selbst et al., 2019），在制定利用人工智能的任何政策干预之前，政策制定者应确保为预期目的部署该技术总体上是合理的，并且可以预期带来切实的好处（Desouza et al., 2020）。由此产生的政策应以合理的可能性在与已实施和潜在的替代方案相比时提供更好的`效率`和/或`有效性`。在许多情况下，基于人工智能的方法很可能仅提供增量的性能改进，或需要对技术设备和人员进行大量投资，要求决策者做出权衡。至关重要的是，这一评估应在确保给定政策旨在促进公共利益的基础上进行，因为公共机构不能仅基于效率和有效性来概念化价值（Mintrom & Williams, 2013）。
 
 此外，一些主题可能完全不适合部署人工智能。这可能是由于技术原因，例如高质量数据缺乏，或人工智能方法对给定问题的性能不具竞争力（van Noordt & Misuraca, 2022）。最重要的是，伦理或隐私考虑必须为从此先决条件阶段向前推进的决定提供信息。正如前一节所述，当部署在敏感政策领域时，例如国内安全，人工智能有可能极大地扩展政府控制其公民的能力，或通过可能存在偏见的决策对其生活产生负面影响，例如，当用于搜索通缉人员的面部识别套件保存无辜旁观者的数据甚至返回误报时（Susar & Aquaro, 2019）。欧洲委员会提出的人工智能监管框架可作为未来此类考虑的指导方针（European Commission, 2021）。它区分了与在不同场景中部署人工智能系统相关的不同风险等级，禁止具有“不可接受”风险的系统，例如社会评分，并对“高风险”应用领域，如教育、庇护管理或关键基础设施，施加更严格的规则。
 
-#### 流程层级
+### 流程层级
 
 在通过先决条件层级后，流程层级规定了人工智能如何嵌入产生所涉政策产出的决策过程。鉴于先前详细说明的在决策过程中使用人工智能所面临的挑战，确保在部署之前对潜在人工智能系统进行偏见审查以确保公平结果，对公共行为者至关重要。也就是说，他们必须调查哪些个人或社会群体可能因基于该系统的决策而处于不利地位，无论是因为训练数据或算法本身包含不同种类的偏见（Mehrabi et al., 2022）。在这样做时，由于存在跨多个属性的交叉歧视危险，例如有色人种女性，仅关注个体特征是不够的（Mann & Matzner, 2019）。至关重要的是，由于提出了许多算法公平的形式化，适用于给定政策的公平概念是情境依赖的，可能由被再分配的公共资源和受影响的社会群体决定（Gerdon et al., 2022）。
 
 此外，人工智能驱动政策内的决策过程应以透明度和问责制作为基础构建。虽然这些术语相关且常在类似背景下使用，但它们指的是不同的概念（Williams et al., 2022）。透明度要求政策制定者提供关于人工智能在给定政策干预中的作用及其内部运作的 readily available 信息（de Fine Licht & de Fine Licht, 2020）。
-
-
-
-
 
 在透明度的基础上，可问责性必须涉及对政策背后 AI 系统的设计和运行给出理由和解释。最重要的是，可问责的决策过程必须允许决策对象在相关决策或其理由被证明不充分时请求执行后果（Binns, 2018）。因此，用于政府的 AI 系统必须辅以申诉机制的引入，允许公民对系统的输出进行核查。此外，它们还应允许通过可解释 AI（XAI）实现某种形式的解释性，以便提供理由。XAI 方法寻求通过例如用更简单、可解释的模型近似学习到的函数，使深度 ML 模型的输出变得可解释（Samek & Müller, 2019）。然而，由于更简单的模型，例如浅层决策树或线性模型，在无需额外 XAI 的情况下即可提供可解释性（在许多情况下能耗也更低），如果其性能与更复杂的模型类别相比差距不大，则应优先选择它们。
 
@@ -5138,7 +5248,7 @@ Figure 25.1 Framework for human-centered AI-based public policies.
 
 最后，流程层的最后一层旨在将 Shneiderman (2022) 提出的 HCAI 概念中 `reliable`、`safe` 和 `trustworthy` 系统的最佳实践引入框架。
 
-#### Output Level
+### Output Level
 
 框架的输出层采用了 Vedung (2013) 提出的用于政策评估的 `side-effects model`。该层的核心要素是目标达成度衡量，它检查相关政策的输出是否符合其在构思阶段设定的目标。
 
@@ -5170,17 +5280,13 @@ Figure 25.5 Performance of the existing pricing scheme against the AI-based syst
 
 由于此处使用的简单模拟仅对其代理建模一个个人属性，即收入，因此它只能产生与收入相关的 `bias`。由于在模拟行程中找不到停车位的代理会离开模拟且不会被替换，因此在此情况下 AI 系统公平性的一个适当衡量标准可能是它在多大程度上允许低收入代理在市中心停车。由于许多市政当局的停车费被定价过低（Shoup, 2011），可以预期 AI 系统确定的价格平均而言会高于当前方案，从而可能不成比例地影响低收入人群。
 
+就`透明度`以及`问责制`而言，应用该框架已可得出结论：AI 系统在其当前形式下并不满足 XAI（或一般可解释性）的要求，因为它并未提供任何进一步的见解，说明代理为何为某个 CPZ 选择了特定的费用。除此之外，它在训练和推理步骤中也缺乏人类在环概念的实现。如 Figure 25.3 所示，在其当前形式下，系统的运行中没有任何人类输入。因此，旨在实施该政策的城市管理部门将不得不将 XAI 方法引入流程，并选择不同的 RL 算法，例如学习人类偏好（Christiano et al., 2017），以容纳人类反馈。此外，正如前一节所述，实施所提议系统的最终政策必须辅以关于系统部署及其运作的透明沟通，以及为公众提供请愿机制以促进问责。
 
-
-
-
-就*透明度*以及*问责制*而言，应用该框架已可得出结论：AI 系统在其当前形式下并不满足 XAI（或一般可解释性）的要求，因为它并未提供任何进一步的见解，说明代理为何为某个 CPZ 选择了特定的费用。除此之外，它在训练和推理步骤中也缺乏人类在环概念的实现。如 Figure 25.3 所示，在其当前形式下，系统的运行中没有任何人类输入。因此，旨在实施该政策的城市管理部门将不得不将 XAI 方法引入流程，并选择不同的 RL 算法，例如学习人类偏好（Christiano et al., 2017），以容纳人类反馈。此外，正如前一节所述，实施所提议系统的最终政策必须辅以关于系统部署及其运作的透明沟通，以及为公众提供请愿机制以促进问责。
-
-在政策周期的这一早期阶段，流程层面的最后一层主要充当一份待办清单，说明如何设计软件工程工作流程以及定义 AI 系统的审计和沟通流程。在我们的测试政策案例中，*可靠性*可能特别值得关注，因为从公民的角度来看，可靠性可能与系统定价策略的波动性相矛盾。
+在政策周期的这一早期阶段，流程层面的最后一层主要充当一份待办清单，说明如何设计软件工程工作流程以及定义 AI 系统的审计和沟通流程。在我们的测试政策案例中，`可靠性`可能特别值得关注，因为从公民的角度来看，可靠性可能与系统定价策略的波动性相矛盾。
 
 #### Output Level
 
-进入政策的输出层面，Figure 25.5 显示了定价系统对模型环境在四个维度上的即时影响，与现有的静态方案进行比较。一般而言，基于 AI 的政策在保持路边停车位利用率在期望范围内方面似乎显著优于现状，因为其定价成功地平衡了过度利用和利用不足。因此，*目标区域的期望结果*得以实现。关于*预期副作用*，模拟运行证实该政策不成比例地限制了所建模市中心的停车可达性，从而表现出对低收入人群的偏见。此外，该政策还在模拟环境中产生了*非预期副作用*。
+进入政策的输出层面，Figure 25.5 显示了定价系统对模型环境在四个维度上的即时影响，与现有的静态方案进行比较。一般而言，基于 AI 的政策在保持路边停车位利用率在期望范围内方面似乎显著优于现状，因为其定价成功地平衡了过度利用和利用不足。因此，`目标区域的期望结果`得以实现。关于`预期副作用`，模拟运行证实该政策不成比例地限制了所建模市中心的停车可达性，从而表现出对低收入人群的偏见。此外，该政策还在模拟环境中产生了`非预期副作用`。
 
 总体而言，基于此高层次分析，所提议的基于 AI 的政策不符合 HCAI 的概念，因为其内部流程既缺乏透明度也缺乏问责制，而其输出显示出明显的偏见。然而，所引入的框架指出了政策计划可进行修改的明确起点，从而使其在未来迭代中可能符合要求。尽管如此，值得指出的是，对这些结果的有效解读也可能得出结论，即所提议的政策总体上不适合预期目的。在本测试案例中，使用在所有收入群体中相同的动态价格来管理需求，最有可能始终不成比例地损害低收入者。因此，像完全禁止市中心汽车交通这样的替代政策，可能对政策制定者更具吸引力。
 
@@ -5214,10 +5320,6 @@ Figure 25.5 Performance of the existing pricing scheme against the AI-based syst
 
 8. 所述有用性直接取决于所用现实模型的品质和外部效度。对于本测试案例所涉及的模型城市，假设所使用的模拟提供了足够的外部效度，从而允许基于其得出结论。
 
-
-
-
-
 9. 参见 Kappenberger et al. (2022) 了解模拟的详细说明。
 
 10. 在实践中，这不仅需要与当前实施的政策进行比较，还需要与所有考虑过的替代方案进行比较。
@@ -5237,10 +5339,17 @@ Figure 25.5 Performance of the existing pricing scheme against the AI-based syst
 ### 参考文献
 
 * Androutsopoulou, A., Karacapilidis, N., Loukis, E., & Charalabidis, Y. (2019). 通过 AI 引导的聊天机器人转变公民与政府之间的沟通。Government Information Quarterly, *36*(2), 358–367. [`doi.org/10.1016/j.giq.2018.10.001`](https://doi.org/10.1016/j.giq.2018.10.001)
+
 * Ben Rjab, A., & Mellouli, S. (2019). 智能城市中的人工智能：系统文献网络分析。*Proceedings of the 12th International Conference on Theory and Practice of Electronic Governance*, 259–269. [`doi.org/10.1145/3326365.3326400`](https://doi.org/10.1145/3326365.3326400)
+
 * Binns, R. (2018). 算法问责与公共理性。Philosophy & Technology, *31*(4), 543–556. [`doi.org/10.1007/s13347-017-0263-5`](https://doi.org/10.1007/s13347-017-0263-5)
+
 * Christiano, P., Leike, J., Brown, T. B., Martic, M., Legg, S., & Amodei, D. (2017). Deep reinforcement learning from human preferences (arXiv:1706.03741). arXiv. [`arxiv.org/abs/1706.03741`](http://arxiv.org)
+
 * Curran, D., & Smart, A. (2021). 数据驱动治理、智能城市主义与风险阶层不平等：中国的安全与社会信用。Urban Studies, *58*(3), 487–506. [`doi.org/10.1177/0042098020927855`](https://doi.org/10.1177/0042098020927855)
+
+
+
 * de Fine Licht, K., & de Fine Licht, J. (2020). 人工智能、透明度与公共决策：为何在试图产生感知合法性时解释是关键。AI & Society, *35*(4), 917–926. [`doi.org/10.1007/s00146-020-00960-w`](https://doi.org/10.1007/s00146-020-00960-w)
 * Desouza, K. C. (2018). 在政府中交付人工智能：IBM Center for The Business of Government. [`www.businessofgovernment.org/report/delivering-artificial-intelligence-government-challenges-and-opportunities`](https://www.businessofgovernment.org)
 * Desouza, K. C., Dawson, G. S., & Chenok, D. (2020). 设计、开发和部署人工智能系统：来自公共部门的经验教训。Business Horizons, *63*(2), 205–213. [`doi.org/10.1016/j.bushor.2019.11.004`](https://doi.org/10.1016/j.bushor.2019.11.004)
@@ -5255,10 +5364,6 @@ Figure 25.5 Performance of the existing pricing scheme against the AI-based syst
 * Kern, C., Gerdon, F., Bach, R. L., Keusch, F., & Kreuter, F. (2022). 人与机器：谁被认为决策更公平？关于自动化决策态度的实验证据。Patterns, *3*(10), 100591. [`doi.org/10.1016/j.patter.2022.100591`](https://doi.org/10.1016/j.patter.2022.100591)
 * Kuziemski, M., & Misuraca, G. (2020). 公共部门的人工智能治理：民主环境下自动化决策制定的三个前沿案例。Telecommunications Policy, *44*(6), 101976. [`doi.org/10.1016/j.telpol.2020.101976`](https://doi.org/10.1016/j.telpol.2020.101976)
 * Langer, M., Oster, D., Speith, T., Hermanns, H., Kästner, L., Schmidt, E., Sesing, A., & Baum, K. (2021). 我们希望可解释人工智能（XAI）提供什么。Artificial Intelligence, *296*, 103473. [`doi.org/10.1016/j.artint.2021.103473`](https://doi.org/10.1016/j.artint.2021.103473)
-
-
-
-
 * Mann, M., & Matzner, T. (2019). 挑战算法画像：数据保护与反歧视在应对新兴歧视中的局限。Big Data & Society, *6*(2). https://doi.org/10.1177/2053951719895805
 * Margetts, H., & Dorobantu, C. (2019). 用人工智能重塑政府。Nature, *568*(7751), 163–165. https://doi.org/10.1038/d41586-019-01099-5
 * Medaglia, R., Gil-Garcia, J. R., & Pardo, T. A. (2021). 政府中的人工智能：盘点与前行。Social Science Computer Review. https://doi.org/10.1177/08944393211034087
@@ -5286,12 +5391,9 @@ Figure 25.5 Performance of the existing pricing scheme against the AI-based syst
 * Veale, M., Van Kleek, M., & Binns, R. (2018). 高风险公共部门决策中算法支持的公平性与问责制设计需求。*Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems*, 1–14. https://doi.org/10.1145/3173574.3174014
 * Vedung, E. (2013). 六种评估模型。In E. Araral (Ed.), Routledge Handbook of Public Policy (pp. 387–400). Routledge.
 * Vedung, E. (2020). 政策评估。In D. Berg-Schlosser, B. Badie, & L. Morlino, The SAGE Handbook of Political Science. SAGE Publications Ltd. https://doi.org/10.4135/9781529714333
-
-
-
-
-
 * Vinuesa, R., Azizpour, H., Leite, I., Balaam, M., Dignum, V., Domisch, S., Felländer, A., Langhans, S. D., Tegmark, M., & Fuso Nerini, F. (2020). 人工智能在实现可持续发展目标中的作用。Nature Communications, *11*(1), 233. [`doi.org/10.1038/s41467-019-14108-y`](https://doi.org/10.1038/s41467-019-14108-y)
+
+
 
 * Wang, Y., Zhang, N., & Zhao, X. (2022). 理解不同政府人工智能采用阶段的决定因素：中国地方政府聊天机器人的证据。Social Science Computer Review, *40*(2), 534–554. [`doi.org/10.1177/0894439320980132`](https://doi.org/10.1177/0894439320980132)
 
@@ -5341,10 +5443,6 @@ DOI: [10.1201/9781003320791-30](https://dx.doi.org/10.1201/9781003320791-30)
 
 为了在行业中包容性地推进人工智能技术的实施并促进人本中心人工智能 HCAI，至关重要的是要绘制并理解组织所面临的挑战。本章旨在全面概述这些挑战，并阐明实施中存在困难的具体要素。通过识别和解决这些障碍，企业可以为更具包容性和人本中心的人工智能方法铺平道路。
 
-
-
-
-
 我们使用作者于 2020 年底进行的 3 次焦点小组访谈数据，访谈对象为 11 位高层 C-suite、首席数据或技术官以及 AI 战略领域的行业专家。通过对这些访谈记录的主题分析，我们识别出企业面临的三个实施差距：参与差距；转化差距；以及对话差距。这些差距出现在企业难以在组织内实施 AI 与包容性地实施 AI 之间进行导航时。
 
 通过“实施差距”这一视角来框定企业面临的挑战，是识别普遍存在却尚未解决的商业挑战的一种新颖方式（Fisher, 2022），并且很好地反映了组织自身的经验。我们所识别的差距通常代表着缺乏支持、知识或协作，我们最终通过提出战略性解决方案来缩小这些实施差距，从而使 AI 实施更具包容性。总体而言，我们认为实施包容性 AI 首先需要组织进行战略性转变，将包容性融入业务文化和实践的核心。
@@ -5385,16 +5483,10 @@ DOI: [10.1201/9781003320791-30](https://dx.doi.org/10.1201/9781003320791-30)
 
 > 公司实际上认为他们不需要做很多，这在董事会层面、在最高层级是一种误解，而决策就在那里做出。所以，他们不一定认为自己在这方面有问题，所以在一些公司中这是一种缺乏意识的情况。
 
-> 
 > （参与者 8）
-
-
-
-
 
 > 虽然这可能是某些公司的有意识或策略性的无知，但在其他公司中，脱节往往并非有意为之。焦点小组的讨论表明，虽然一些公司有意参与偏见和歧视问题，并在其中实施包容性 AI，但他们不知道如何把握前方任务的复杂性并付诸行动。
 
-> 
 > （参与者 5）
 
 迈向这一实施差距的第一步是就偏见和歧视的根本问题进行艰难的对话；提高意识，然后确定问题可能出现的地点以及如何出现。除了就 AI 中的偏见和歧视问题进行教育和对话外，公司还需要追求关于 AI 系统如何开发和实施的更大透明度和沟通。这将允许进行旨在改进以及危害识别和缓解的审查和对话。我们从文献中得知，可持续和包容的创新不仅需要用户、员工以及至关重要的领导层的倡议，还需要受这些技术影响的社区等利益相关者的参与（Ghassim & Foss, 2020；Leslie, 2019；Plasschaert, 2019；Schiff et al., 2020；Stix, 2021）。
@@ -5405,25 +5497,13 @@ DOI: [10.1201/9781003320791-30](https://dx.doi.org/10.1201/9781003320791-30)
 
 不幸的是，有一些障碍阻碍了领导者参与偏见和歧视相关问题，从而阻碍了包容性 AI 的问题。首先，许多公司没有多元化的领导团队（Eagly & Fischer, 2009）。研究强调，女性和少数族裔/种族群体被认为符合成功领导角色表现刻板印象的可能性较低（Heilman, 2012；Hoyt & Murphy, 2016；Lyness & Heilman, 2006；Wille et al., 2018），尤其是在科技行业（Bello et al., 2021；UNESCO, 2019；Young et al., 2021）。这些因素可能导致多样性、偏见和歧视问题不太可能成为领导者关注的焦点（Leavy, 2018，第 14 页）。然而，在过去几年中已经变得清楚，组织意识到如果要在可持续性和盈利能力方面保持下去，必须在所有层面上优先考虑多样性。
 
-参与包容性 AI 的另一个障碍是持续存在的优先考虑效率和利润而非负责任、可持续和包容创新的叙事。总体而言，伦理可能被视为实现这些目标的制约因素，因为它被视为准确性（模型的[content]
+参与包容性 AI 的另一个障碍是持续存在的优先考虑效率和利润而非负责任、可持续和包容创新的叙事。总体而言，伦理可能被视为实现这些目标的制约因素，因为它被视为准确性（模型的
 
-> 虽然这可能是某些公司的有意识或策略性的无知，但在其他公司中，脱节往往并非有意为之。焦点小组的讨论表明，虽然一些公司有意参与偏见和歧视问题，并在其中实施包容性 AI，但他们不知道如何把握前方任务的复杂性并付诸行动。
 
-> 
-> （参与者 5）
-
-迈向这一实施差距的第一步是就偏见和歧视的根本问题进行艰难的对话；提高意识，然后确定问题可能出现的地点以及如何出现。除了就 AI 中的偏见和歧视问题进行教育和对话外，公司还需要追求关于 AI 系统如何开发和实施的更大透明度和沟通。这将允许进行旨在改进以及危害识别和缓解的审查和对话。我们从文献中得知，可持续和包容的创新不仅需要用户、员工以及至关重要的领导层的倡议，还需要受这些技术影响的社区等利益相关者的参与（Ghassim & Foss, 2020；Leslie, 2019；Plasschaert, 2019；Schiff et al., 2020；Stix, 2021）。
-
-有效参与包容性 AI 的实施需要在组织内部拥有全面且可操作的包容性授权，同时承诺在产品开发的各个阶段优先考虑多样性和包容性，包括在管理结构中分配责任以及让相关利益相关者（领导层、供应商、监管机构、工会）积极参与，以解决 AI 系统中的偏见和歧视。
-
-研究表明，良好的治理结构对于影响企业绩效（Clark et al., 2014）、组织文化以及员工在工作场所的行为（Gottman et al., 1998）至关重要。领导者整合和在团队内部建立联系的能力对于增强集体创新至关重要（Jiang & Chen, 2018）。
 
 不幸的是，有一些障碍阻碍了领导者参与偏见和歧视相关问题，从而阻碍了包容性 AI 的问题。首先，许多公司没有多元化的领导团队（Eagly & Fischer, 2009）。研究强调，女性和少数族裔/种族群体被认为符合成功领导角色表现刻板印象的可能性较低（Heilman, 2012；Hoyt & Murphy, 2016；Lyness & Heilman, 2006；Wille et al., 2018），尤其是在科技行业（Bello et al., 2021；UNESCO, 2019；Young et al., 2021）。这些因素可能导致多样性、偏见和歧视问题不太可能成为领导者关注的焦点（Leavy, 2018，第 14 页）。然而，在过去几年中已经变得清楚，组织意识到如果要在可持续性和盈利能力方面保持下去，必须在所有层面上优先考虑多样性。
 
 另一个参与包容性 AI 的障碍是持续存在的优先考虑效率和利润而非负责任、可持续和包容创新的叙事。伦理总体上可能被视为实现这些目标的制约因素，因为它被视为准确性（模型的
-
-
-
 
 正如参与者 6 所谈到的，这是一个“将这些原则转化为实践的制度性差距”，尤其是在我们谈论“信任”、“问责”和“可解释性”等概念时；这些词在实践中意味着什么？参与者 6 建议，这可能需要更多投资来激励公司制定道德准则，但也需要衡量机制来展示不同实践的影响。
 
@@ -5437,7 +5517,7 @@ DOI: [10.1201/9781003320791-30](https://dx.doi.org/10.1201/9781003320791-30)
 
 但驾驭转化差距不仅仅是将原则通过包容性法规或政策转化为行动；它不仅仅是这样。它关乎确保我们创造包容性的组织文化，培养道德行为并优先考虑包容性，以便我们不断分析和讨论法规和政策如何能更好地利用包容性，以及它们如何能通过其他激励道德行为的手段得到补充。参与者 5 指出，随着 AI 变得更加普遍，现有的监管和问责框架将不起作用，因此我们作为企业，需要继续与政策制定者进行对话。他们说，有一种风险，即某些偏见（无论是社会性的还是技术性的）也可能渗入这些政策中。它还必须真正代表全球标准，以便我们不进一步分裂全球北方和全球南方。
 
-#### 对话差距
+### 对话差距
 
 从这些焦点小组中出现的第三个，也是最突出的差距是，在实施包容性 AI 时的对话差距。对话差距指的是组织在设计 AI 的人员与实施或使用 AI 的人员之间，如何努力进行包容性沟通、反馈和想法共享方面所面临的困难。正如参与者 2 所指出的，这绝非易事：“你如何从个体用户那里创造人类反馈？我认为这些，你知道，都是未得到解答的问题，而且坦率地说也是非常大的问题”（参与者 2）。
 
@@ -5447,10 +5527,6 @@ DOI: [10.1201/9781003320791-30](https://dx.doi.org/10.1201/9781003320791-30)
 
 参与者 6 谈到了在设计阶段保持开放对话的重要性。他们说，这不仅意味着在性别、种族、民族、阶级、残疾等方面纳入多样化的声音，而且还意味着在桌子周围拥有来自不同学科的专家多样化，例如人类学、社会学、哲学等等。即使使用和目的很重要，如果我们不关注它是如何创建的，那么未来将会非常复杂（参与者 9），这就是为什么组织必须纳入来自不同团队、背景、经验和不同技能的人至关重要（参与者 11）。
 
-
-
-
-
 这只是设计和开发团队中学科和背景多样化至关重要的一个例子。如果你确保团队具有多样性，那么你可能会对正在发生的事情以及如何解决它有更清晰的认识。多样性在设计和开发人工智能的团队中经常被强烈地赞颂为至关重要的；如果我们希望确保这项技术尽可能具有包容性（Bello et al., 2021; Criado-Perez, 2019; Moore, 2019; Noble, 2018; UNESCO, 2019; Young et al., 2021）。这不仅仅与系统中使用的數據有关，以及能否考虑这些数据是否适合用于创建包容性系统，还与思考算法是如何设计的以及设计过程中考虑了什么有关（Buolamwini & Gebru, 2018; D’Ignazio & Klein, 2020; Zou & Schiebinger, 2018）。Dahlin (2021)指出，人工智能通常被视为一个技术对象，只有在实施之后才会产生社会后果；然而，我们需要在开发之初就确保纳入社会分析（Dahlin, 2021）。
 
 同样，这种对话在整个实施过程中也至关重要。组织和商业研究文献不断强调跨部门和跨层级协作对创新以及有效的人工智能实施的重要性（Bessant, 2009; Schiff et al., 2020）。
@@ -5459,110 +5535,161 @@ DOI: [10.1201/9781003320791-30](https://dx.doi.org/10.1201/9781003320791-30)
 
 我们可能将此称为“人工智能的社会塑造”——即我们考虑受人工智能影响的人如何也能参与塑造它的问题（Bondi et al., 2021）。这将有助于确保公司内部使用人工智能的用户，以及工作场所之外使用人工智能的人，能够质疑、共同创建并对系统决策和模式提供反馈（Karami et al., 2016; Makarius et al., 2020; Sjödin et al., 2021）。
 
-### 收窄实施差距
+## 收窄实施差距
 
 总体而言，虽然组织希望通过最具创新性的人工智能技术保持效率，但他们却不知道如何在实施包容性系统的同时做到这一点。虽然我们并不能声称在这里有所有答案，但我们认为，驾驭实施包容性人工智能的这些差距首先需要组织变革，以便组织本身具有包容性。
 
 焦点小组中出现了三种组织特征，可能有助于组织在设计和/或实施包容性人工智能时成功驾驭这些实施差距。
 
-#### 与相关利益相关者的包容性协作
+### 与相关利益相关者的包容性协作
 
 透明度经常被科技公司（Google, 2021; IBM, 2021; Microsoft, 2021）和学术学者（Felzmann et al., 2020; Larsson & Heintz, 2020）讨论为道德或负责任的人工智能系统设计和开发的关键使能因素或原则。但透明度对设计人工智能的公司以及实施人工智能的公司到底意味着什么呢？这对公司来说很复杂，因为不仅“黑箱”模型高度复杂，而且不同背景可能产生不同的可解释性需求（The Royal Society, 2019）。
 
 如果我们从实践角度思考透明度，不仅将其视为单向系统，而是将其视为与相关利益相关者，包括用户，进行包容性协作，这将有所帮助。参与者 11 暗示，用户不仅需要技术可解释，而且真正能够理解系统的原则、功能和目的。如果组织参与人工智能中偏见和歧视问题的解决，这将使他们更好地评估自己的选择。Kellogg et al. (2022)讨论了人工智能工具的终端用户应在开发早期阶段参与其中，并应帮助评估工具。这将防止预期的用户抵制，并在用户被后期纳入时使不满的可能性降低。
 
-#### 多元化和包容性团队
+### 多元化和包容性团队
 
 许多参与者提到的第一点是，组织必须关注他们如何组建团队以及如何使团队多样化，让来自不同学科、不同背景和认知多样性的人参与其中。这不能只是口头上的承诺，还必须辅以真正包容的组织文化。通过拥抱这种多样性，组织可以利用丰富的观点、知识和经验，培养创造力、创新力以及对复杂问题的整体理解。
 
 然而，实现包容性人工智能不仅仅是团队构成问题。它还需要建立一个包容性的组织文化，使人工智能用户能够通过报告渠道提供实践反馈。这种反馈机制使用户不仅能够影响人工智能系统的技术功能，还能影响其目的以及其在组织和社会中的定位。尽管如此，必须认识到，正如 Sloane et al. (2020)指出的那样，参与式设计需要被承认为工作，并给予适当的同意和补偿。此外，设计过程应具有情境特异性，确保数据通过咨询和反复的方法从合适的人那里收集。
 
-#### 教育和知识共享
+### 教育和知识共享
 
 参与者还谈到了组织之间的教育和知识共享。参与者 5 指出，仅教育领导者了解什么有效是不够的，他们还需要了解忽视人工智能包容性问题的风险。这在中层管理中尤其相关，因为在许多组织中，大多数变革和日常决策都是在那里做出的。
 
 除了领导者的教育和知识共享之外，参与者 6 还指出，我们需要为技术社区和机器学习专家提供更多关于伦理、性别偏见、人权和非歧视问题的教育。此外，参与者 6 说，我们还需要确保对其他利益相关者群体进行培训和教育，以了解人工智能的基础知识以及人工智能对我们日常生活的影响：“我认为这是绝对必要的，而且在数字素养和机构能力建设方面存在巨大差距”（参与者 6）。每个人都需要接受教育，认识到技术会产生影响，并且这种影响需要被识别并相应管理。
 
-### 结论
-
-
-
-
+## 结论
 
 本项小型焦点小组研究得出的发现为关于迈向包容性人工智能的学术研究做出了重要的理论贡献。它通过提出三个实施差距来实现这一点：参与差距、转化差距和对话差距。这些差距帮助学者们框定公司在组织内部实施包容性人工智能时面临的挑战。我们的研究可以帮助从业者框定他们自身的挑战，提示他们如何开始缩小这些差距。良好的包容性组织实践造就良好的包容性人工智能。我们建议公司建立并支持多元包容的团队，与广泛多元的利益相关者群体进行协作合作，并与其他公司分享最佳实践。
 
-### Note
+## Note
+
 1. 由微软牵头，Women4AI 大胆圈的成员包括 AXA、BNP Paribas、L’Oréal、Google、Publicis Groupe、Bayer 和 Lenovo，与联合国教科文组织作为机构合作伙伴以及 HEC 和牛津互联网研究所作为学术合作伙伴进行合作。
 
-### References
+## References
+
 * Bello, A., Blowers, T., Schneegans, S., & Straza, T. (2021). 为了智能，数字革命需要包容。在 UNESCO Science Report（Issue June）中。
+
 * Bessant, J. (2009). Innovation. Dorling Kindersley Ltd.
+
 * Black, J. S., & van Esch, P. (2020). AI-enabled recruiting: What is it and how should a manager use it? \[Article\]. Business Horizons, *63*, 215–226. [`doi.org/10.1016/j.bushor.2019.12.001`](https://doi.org/10.1016/j.bushor.2019.12.001)
+
 * Black, J. S., & van Esch, P. (2021). AI-enabled recruiting in the war for talent. Business Horizons, *64*(4), 513–524. [`doi.org/10.1016/j.bushor.2021.02.015`](https://doi.org/10.1016/j.bushor.2021.02.015)
+
 * Bondi, E., Xu, L., Acosta-Navas, D., & Killian, J. A. (2021). Envisioning Communities: A Participatory Approach towards AI for Social Good. *AIES 2021 – Proceedings of the 2021 AAAI/ACM Conference on AI, Ethics, and Society*, 425–436. [`doi.org/10.1145/3461702.3462612`](https://doi.org/10.1145/3461702.3462612)
+
 * Braun, V., & Clarke, V. (2006). Using thematic analysis in psychology. Qualitative Research in Psychology, *3*(2), 77–101. [`doi.org/10.1191/1478088706qp063oa`](https://doi.org/10.1191/1478088706qp063oa)
+
 * Browne, S. (2015). Dark matters: On the surveillance of blackness.
+
 * Bryer, A. (2020). Making Organizations More Inclusive: The Work of Belonging \[Article\]. Organization Studies, *41*(5), 641–660. [`doi.org/10.1177/0170840618814576`](https://doi.org/10.1177/0170840618814576)
+
 * Buolamwini, J., & Gebru, T. (2018). Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification \*. In Proceedings of Machine Learning Research (Vol. 81).
+
 * Canca, C. (2020). Operationalizing AI ethics principles. Communications of the ACM, *63*(12), 18–21. [`doi.org/10.1145/3430368`](https://doi.org/10.1145/3430368)
+
 * Chui, M., & Malhotra, S. (2018). Notes from the AI frontier: AI adoption advances, but foundational barriers remain. McKinsey Analytics, November, 11. [`www.mckinsey.com/featured-insights/artificial-intelligence/ai-adoption-advances-but-foundational-barriers-remain`](https://www.mckinsey.com)
+
 * Clark, J. R., Murphy, C., & Singer, S. J. (2014). When do leaders matter? Ownership, governance and the influence of CEOs on firm performance. Leadership Quarterly, *25*(2), 358–372. [`doi.org/10.1016/j.leaqua.2013.09.004`](https://doi.org/10.1016/j.leaqua.2013.09.004)
+
 * Clarke, R. (2019). Principles and business processes for responsible AI. Computer Law and Security Review, *35*(4), 410–422. [`doi.org/10.1016/j.clsr.2019.04.007`](https://doi.org/10.1016/j.clsr.2019.04.007)
+
 * Criado-Perez, C. (2019). Invisible women: Exposing data bias in a world designed for men. Chatto & Windus.
+
+
+
 * D’Ignazio, C., & Klein, L. F. (2020). Data feminism. MIT Press.
+
 * Dahlin, E. (2021). Mind the gap! On the future of AI research. Humanities and Social Sciences Communications, *8*(1), 21–24. [`doi.org/10.1057/s41599-021-00750-9`](https://doi.org/10.1057/s41599-021-00750-9)
+
 * Desouza, K. C., Dawson, G. S., & Chenok, D. (2020). Designing, developing, and deploying artificial intelligence systems: Lessons from and for the public sector. Business Horizons, *63*(2), 205–213. [`doi.org/10.1016/j.bushor.2019.11.004`](https://doi.org/10.1016/j.bushor.2019.11.004)
+
 * Dobusch, L. (2014). How exclusive are inclusive organisations? \[Article\]. Equality, Diversity and Inclusion: An International Journal, *33*(3), 220–234. [`doi.org/10.1108/EDI-08-2012-0066`](https://doi.org/10.1108/EDI-08-2012-0066)
+
 * Eagly, A. H., & Fischer, A. (2009). Gender inequalities in power in organizations. In D. Tjosvold & B. Wisse (Eds.), Power and Interdependence in Organizations (pp. 186–204). [`doi.org/10.1017/CBO9780511626562.013`](https://doi.org/10.1017/CBO9780511626562.013)
+
 * EY. (2021). Data foundations and AI adoption in the UK private and third sectors (Issue July).
+
 * Felzmann, H., Fosch-Villaronga, E., Lutz, C., & Tamò-Larrieux, A. (2020). Towards transparency by design for Artificial Intelligence. Science and Engineering Ethics, *26*(6), 3333–3361. [`doi.org/10.1007/s11948-020-00276-4`](https://doi.org/10.1007/s11948-020-00276-4)
+
 * Fisher, G. (2022). Types of business horizons articles. Business Horizons, *65*(3), 241–243. [`doi.org/10.1016/j.bushor.2022.01.002`](https://doi.org/10.1016/j.bushor.2022.01.002)
+
 * Floridi, L., Cowls, J., Beltrametti, M., Chatila, R., Chazerand, P., Dignum, V., Luetge, C., Madelin, R., Pagallo, U., Rossi, F., Schafer, B., Valcke, P., & Vayena, E. (2018). AI4People—An ethical framework for a good AI society: Opportunities, risks, principles, and recommendations. Minds and Machines, *28*(4), 689–707. [`doi.org/10.1007/s11023-018-9482-5`](https://doi.org/10.1007/s11023-018-9482-5)
+
 * Forman, A., Glasser, N., & Lech, C. (2020). INSIGHT: Covid-19 May Push More Companies to Use AI as Hiring Tool. Bloomberg Law. [`news.bloomberglaw.com/daily-labor-report/insight-covid-19-may-push-more-companies-to-use-ai-as-hiring-tool`](https://news.bloomberglaw.com)
+
 * Ghassim, B., & Foss, L. (2020). How do leaders embrace stakeholder engagement for sustainability-oriented innovation? In N. Pfeffermann (Ed.), New Leadership in Strategy and Communication. [`doi.org/10.1007/978-3-030-19681-3`](https://doi.org/10.1007/978-3-030-19681-3)
+
 * Google. (2021). Our Principles – Google AI. [`ai.google/principles/`](https://ai.google)
+
 * Gottman, J. M., Coan, J., Carrere, S., Swanson, C., Gottman, J. M., Coan, J., Carrere, S., & Swanson, C. (1998). Predicting Marital Happiness and Stability from Newlywed Interactions Published by: National Council on Family Relations Predicting Marital Happiness and Stability from Newlywed Interactions. Journal of Marriage and Family, *60*(1), 5–22. [`doi.org/10.1002/job`](https://doi.org/10.1002/job)
+
 * Green, B., Heider, D., Firth-Butterfield, K., & Lim, D. (2021a). Responsible Use of Technology: The IBM Case Study. September.
 
-
-
-
-
 * Green, B., Lim, D., & Ratte, E. (2021b). 科技的负责任使用 _ 微软案例研究. February. [`www.weforum.org/whitepapers/responsible-use-of-technology-the-microsoft-case-study`](https://www.weforum.org/whitepapers/responsible-use-of-technology-the-microsoft-case-study)
+
 * Heilman, M. E. (2012). 性别刻板印象与职场偏见 [Article]. 组织行为研究, *32*, 113–135. [`doi.org/10.1016/j.riob.2012.11.003`](https://doi.org/10.1016/j.riob.2012.11.003)
+
 * Hoyt, C. L., & Murphy, S. E. (2016). 管理以澄清空气：刻板印象威胁、女性与领导力 [Article]. 领导力季刊, *27*(3), 387–399. [`doi.org/10.1016/j.leaqua.2015.11.002`](https://doi.org/10.1016/j.leaqua.2015.11.002)
+
 * IBM. (2021). IBM 的信任与透明原则. [`www.ibm.com/policy/wp-content/uploads/2018/06/IBM_Principles_SHORT.V4.3.pdf`](https://www.ibm.com)
+
 * IBM. (2022). IBM 全球人工智能采用指数 2022. In IBM. [`www.ibm.com/watson/resources/ai-adoption`](https://www.ibm.com)
+
 * Jiang, Y., & Chen, C. C. (2018). 为团队创新整合知识活动：变革型领导的影响. 管理学杂志, *44*(5), 1819–1847. [`doi.org/10.1177/0149206316628641`](https://doi.org/10.1177/0149206316628641)
+
 * Karami, A. B., Fleury, A., Boonaert, J., & Lecoeuche, S. (2016). 用户在环：利用用户反馈的自适应智能家居——现状与未来方向. Information (Switzerland), *7*(2). [`doi.org/10.3390/info7020035`](https://doi.org/10.3390/info7020035)
+
 * Kay, M., Matuszek, C., & Munson, S. A. (2015). 职业图像搜索结果中的不平等代表性与性别刻板印象. *Conference on Human Factors in Computing Systems - Proceedings*, *2015*\-*April*, 3819–3828. [`doi.org/10.1145/2702123.2702520`](https://doi.org/10.1145/2702123.2702520)
+
 * Kellogg, K. C., Sendak, M., & Balu, S. (2022). 前线的人工智能. MIT 斯隆管理评论.
+
 * Keyes, O. (2018). 误性别机器：自动性别识别的跨/HCI 影响 [Article]. *Proceedings of the ACM on Human-Computer Interaction*, *2*(CSCW), 1–22. [`doi.org/10.1145/3274357`](https://doi.org/10.1145/3274357)
+
 * Lapadat, J. C. (2010). 主题分析 [Article]. In Albert J. Mills, Gabrielle Durepose, & Elden Wiebe (Eds.), 案例研究百科全书 (vol. 2, pp. 925–927). SAGE Publications.
+
 * Larsson, S., & Heintz, F. (2020). 人工智能中的透明度. Internet Policy Review, *9*(2), 1–16. [`doi.org/10.14763/2020.2.1469`](https://doi.org/10.14763/2020.2.1469)
+
 * Leavy, S. (2018). 人工智能中的性别偏见：机器学习中多样性与性别理论的必要性 [Proceeding]. *GE ’18: Proceedings of the 1st International Workshop on Gender Equality in Software Engineering*, 14–16. [`doi.org/10.1145/3195570.3195580`](https://doi.org/10.1145/3195570.3195580)
+
 * Leslie, D. (2019). 理解公共部门中人工智能伦理与安全系统. The Alan Turing Institute.
+
 * Lyness, K., & Heilman, M. (2006). 当契合至关重要时：高层女性与男性管理者的绩效评估与晋升. [Article]. 应用心理学杂志, *91*(4), 777. [`doi.org/10.1037/0021-9010.91.4.777`](https://doi.org/10.1037/0021-9010.91.4.777)
+
 * Makarius, E. E., Mukherjee, D., Fox, J. D., & Fox, A. K. (2020). 与机器共同崛起：人工智能进入组织的社会技术框架. 商业研究杂志, *120*(July), 262–273. [`doi.org/10.1016/j.jbusres.2020.07.045`](https://doi.org/10.1016/j.jbusres.2020.07.045)
+
 * Microsoft. (2021). 来自微软的负责任人工智能原则. [`www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1:primaryr6`](https://www.microsoft.com)
+
 * Microsoft. (2022). Microsoft 负责任人工智能标准, v2 (Issue June).
+
 * Mittelstadt, B. (2019). 原则 alone 无法保证伦理人工智能. Nature Machine Intelligence, *1*(11), 501–507. [`doi.org/10.1038/s42256-019-0114-4`](https://doi.org/10.1038/s42256-019-0114-4)
+
 * Mökander, J., & Axente, M. (2021). 基于伦理的自动化决策系统审计：干预点与政策影响. AI and Society, *2021*, 1–36. [`doi.org/10.1007/s00146-021-01286-x`](https://doi.org/10.1007/s00146-021-01286-x)
+
 * Moore, P. (2019). （人工智能）智能的镜子：谁的倒影？ SSRN Electronic Journal. [`doi.org/10.2139/ssrn.3423704`](https://doi.org/10.2139/ssrn.3423704)
+
 * Noble, S. U. (2018). 压迫的算法：搜索引擎如何强化种族主义. New York University Press.
+
 * O’Reilly. (2021). 企业中的人工智能采用. [`www.oreilly.com/radar/ai-adoption-in-the-enterprise-2021/`](https://www.oreilly.com)
+
 * Pan, Y., Froese, F., Liu, N., Hu, Y., & Ye, M. (2021). 人工智能在员工招聘中的采用：情境因素的影响. International Journal of Human Resource Management. [`doi.org/10.1080/09585192.2021.1879206`](https://doi.org/10.1080/09585192.2021.1879206)
+
 * Plasschaert, A. (PwC). (2019). 领导者需要对负责任的人工智能实践承担责任并采取行动. PwC. [`www.pwc.com/gx/en/news-room/press-releases/2019/responsible-ai-dalian-wef.html`](https://www.pwc.com)
+
 * Podsiadlowski, J. H.A. (2014). 构想“包容性组织” [Article]. Equality, Diversity and Inclusion an International Journal, *33*(3). [`doi.org/10.1108/EDI-01-2014-0008`](https://doi.org/10.1108/EDI-01-2014-0008)
+
 * Reynolds, K. (2021). COVID-19 增加了人工智能的使用。以下是它为何会留下来的原因 | 世界经济论坛. WEF. [`www.weforum.org/agenda/2021/02/covid-19-increased-use-of-ai-here-s-why-its-here-to-stay/`](https://www.weforum.org)
+
 * Sahgal, V., Haider, S. A., & Islan, W. (2020). 保持领先曲线 - 负责任人工智能的商业案例 - 经济情报部门 (Issue October). [`www.eiu.com/n/staying-ahead-of-the-curve-the-business-case-for-responsible-ai/`](https://www.eiu.com)
+
 * Schiff, D., Rakova, B., Ayesh, A., Fanti, A., & Lennon, M. (2020). 从原则到实践的负责任人工智能：弥合差距. [`arxiv.org/abs/2006.04707`](http://arxiv.org)
+
+
+
 * Seiler, D. (2021). COVID-19 数字化转型与技术|McKinsey. [`www.mckinsey.com/business-functions/strategy-and-corporate-finance/our-insights/how-covid-19-has-pushed-companies-over-the-technology-tipping-point-and-transformed-business-forever`](https://www.mckinsey.com)
+
 * Shneiderman, B. (2021). 以人为中心的人工智能：新综合 [Bookitem]. *Human-Computer Interaction - INTERACT 2021, Part of the Lecture Notes in Computer Science Book Series (LNISA, Volume 12932)*, 12932. [`doi.org/10.1007/978-3-030-85623-6_1`](https://doi.org/10.1007/978-3-030-85623-6_1)
-
-
-
-
 
 * Sjödin, D., Parida, V., Palmié, M., & Wincent, J. (2021). 人工智能能力如何推动商业模式创新：通过协同演化过程和反馈循环实现人工智能规模化。Journal of Business Research, *134*(April), 574–587. [`doi.org/10.1016/j.jbusres.2021.05.009`](https://doi.org/10.1016/j.jbusres.2021.05.009)
 
@@ -5606,7 +5733,7 @@ Tatiana Revilla
 
 Tecnológico de Monterrey, Monterrey, Mexico
 
-DOI: [10.1201/9781003320791-31](https://dx.doi.org/10.1201/9781003320791-31)
+DOI: [`10.1201/9781003320791-31`](https://dx.doi.org/10.1201/9781003320791-31)
 
 **请告诉我们更多关于您在人工智能领域所做的工作**。
 
@@ -5627,10 +5754,6 @@ DOI: [10.1201/9781003320791-31](https://dx.doi.org/10.1201/9781003320791-31)
 在像中国和美国这样的国家，法律从业者正在使用人工智能系统来评估证据、做出决策，甚至根据预测发布判决。但这需要谨慎处理，因为用于做出这些预测的数据是由可能存在偏见的人标注的。
 
 在墨西哥，虽然我们尚未在司法系统层面实施人工智能系统，但我们正在对未来可能用于训练这些系统的数据进行分类。几年后，我们将不得不分析和重建这一过程，因为我们目前使用的数据缺乏性别视角，也不是以人为中心。大多数这些数据有利于检察机关，并不是为了捕捉、处理、分析和传播以人为中心的信息而设计的。因此，我们应特别注意如何对数据进行分类以在司法部门创建人工智能系统。
-
-
-
-
 
 我不能代表整个拉丁美洲发言，但我相信大多数国家，尤其是那些已经围绕人工智能制定公共政策的国家，都在这一领域取得进展。这些国家包括墨西哥、哥伦比亚、秘鲁、巴西和智利，它们已经制定了人工智能战略，或正在制定过程中。
 
@@ -5680,10 +5803,6 @@ DOI: [10.1201/9781003320791-31](https://dx.doi.org/10.1201/9781003320791-31)
 
 撰写像这样的书籍很重要，重点关注从业者、政府官员、决策者等的需求。
 
-
-
-
-
 这将是一项挑战。例如，我觉得我在阅读的文章中仍然缺乏一定的实践重点。虽然它们深入探讨了人工智能的理论和认识论，但缺乏对能够帮助设计师的具体方法、流程和指标的讨论。
 
 我认为我们应该进一步远离抽象和认识论，更多地谈论我们如何将性别视角、以人为本和交叉性等概念整合到人工智能的具体设计和分析中。
@@ -5706,9 +5825,11 @@ Rebecca Finlay
 
 人工智能合作伙伴关系
 
-DOI: [10.1201/9781003320791-32](https://dx.doi.org/10.1201/9781003320791-32)
+DOI: [`10.1201/9781003320791-32`](https://dx.doi.org/10.1201/9781003320791-32)
 
 **你如何定义以人为本的人工智能，它的潜力和重要性是什么？**
+
+
 
 我认为以人为本的人工智能应该是我们*de facto*思考人工智能的方式，因为我们正在将人工智能部署到由人构成的系统和结构中。如果我们总是首先通过人类视角而不是更技术解决方案主义的方法来思考人工智能，那不是很好吗？“以人为本的人工智能”体现了人工智能部署在我们世界中的社会技术性质。它激励我们首先通过人类视角来思考人工智能。对我来说，这也包括环境。
 
@@ -5734,10 +5855,6 @@ DOI: [10.1201/9781003320791-32](https://dx.doi.org/10.1201/9781003320791-32)
 
 Charisi 和 Dignum 关于通过儿童人工智能视角审视监管沙盒的论文在为实践、技术开发和政策提供切实建议方面也非常出色。人们可以把它直接从书架上拿下来使用。它为我激发了许多新想法。
 
-
-
-
-
 正如论文所示，我经常发现存在来回于两个极端之间的情况——没有监管和非常严格的监管。仿佛只有两个对立的阵营。我认为在那两个极端之间存在着一系列政策干预措施，监管者和政策制定者应该考虑这些。监管沙盒就是一个很好的例子。这个主题并不新鲜，但这篇论文很有帮助，因为它展示了不同政府如何实施沙盒。它还展示了如何设计监管沙盒，使其不仅满足监管者的需求，也满足技术开发者和受影响社区的需求。
 
 我也很喜欢 Nishimura 等人关于敏捷治理的论文。我最近在日本，我看到了日本在 G7 会议之前做的一些准备工作。敏捷治理的概念是核心的。虽然这篇文章比其他文章更理论化一些，但它提供了关于敏捷治理的良好信息。
@@ -5757,229 +5874,411 @@ Charisi 和 Dignum 关于通过儿童人工智能视角审视监管沙盒的论�
 ### A
 
 * Abdel-Haq, M. K., 169
+
 * Abii (robot), 169, **173**
+
 * Abramson, D., 86–87
+
 * accessibility
+
     * technologies, 15
+
     * underrepresented populations, 320
+
 * accountability
+
     * enforcement, 281, 292–293, 297
+
     * systems, 109–110, 121, 124
+
 * Acemoglu, D., 137, 138
+
 * Ada Lovelace Institute, 84
+
 * affordances, 34, 36, 41, 49, 193, 198
+
 * Africa, 90, 209
+
 * agency, 110, 198, 222, 235
+
 * AGI, *see* Artificial General Intelligence (AGI)
+
 * agile governance, 276, 278, 279–285
+
 * agile software development, 278–279
+
 * agriculture applications, 117; *see also* Data-driven Insights for Sustainable Agriculture (DISA) project
+
 * Ahlstrand, R., 133
+
 * AI, *see* Artificial Intelligence (AI)
+
 * AI Act (European Union), 58, 63–65, 145, 219–220, 232, 320
+
 * Ai-Da, 197
+
 * AI HLEG (High-Level Expert Group on Artificial Intelligence), 2, 21, 148
+
 * AI systems
+
     * in AI Act, 59–60, 67n5
+
     * and children, 233–234
+
     * objective performance assessment, 109
+
     * principles, 247
+
     * and privacy trade-offs, 70–71, 72
+
 * AIED (AI in Education), *see* education
+
 * air traffic management, 96
+
 * aircraft maintenance inspection automation, 270–271
+
 * Airoldi, M., 35
+
 * Al-Shoqran, M., 167
+
 * algocracy, 251–252
+
 * Algolia, 84
+
 * algorithmic decision-making (aka ADM), 22, 27–29, 254
+
 * algorithmic impact assessments (AIAs), 219, 322
+
 * algorithms
+
     * acceptability of, 252, 254–255, 289, 322
+
     * discrimination in, 216
+
     * explainability and transparency, 47, 53–54, 70–71, 148–149, 255–256
+
     * governance by, 250–252, 253–254
+
     * guiding principles for, 120
+
     * responsibility for, 48, 321; *see also* content classifiers; recommender systems
+
 * Alhadad, S., 153
+
 * Ali, M., 167
+
 * Allal-Chérif, O., 159
+
 * Allen, C., 277
+
 * Allen, Hillary J., 232
+
 * Alliance for Food Sovereignty in Africa (AFSA), 122, 123
+
 * Aloisi, A., 135
+
 * Altman, Sam, 84, 325
+
 * Alunge, R., 23
+
 * Ambrose, A., 147
+
 * analysis support models, **174**
+
 * Andhra Pradesh Community Managed Natural Farming Programme (APCNF), 122, 123
+
 * Andrejevic, M., 34
+
 * Androutsopoulou, A., 289
+
 * Andrus, McKane, 217, 223
+
 * Aneesh, A., 251
+
 * Angwin, J., 145, 215, 217
+
 * anthropomorphosis, 192
+
 * appeals and petition mechanisms, 48, 292, 297
+
 * Apple, 73
+
 * Aquaro, V., 288, 289, 292
+
 * Armengol-Estapé, J., 88
+
 * Arnold, K. E., 153
+
 * art and artworks
+
     * and AI literacy, 190–191, 193, 199–200
+
     * projects, 197–198; *see also* CHOM5KY vs. CHOMSKY
-
-
-
-
 
 ### A
 
 *   人工通用智能 (AGI)，82，84，85，86，94–95
+
 *   人工智能 (AI)
+
     *   时期（繁荣），149n4
+
     *   关于其的隐喻和叙事，191–193
+
     *   窄域人工智能，46–47，89–90；*另见* 算法；数据；生成式人工智能；以人为中心的人工智能；机器学习
+
 *   人工智能和数据法案 (AIDA, Bill C-67)，65
+
 *   Asara, F.，40
+
 *   Aslan, A.，169
+
 *   Attaran, M.，170，172
+
 *   Attoh, K.，135
+
 *   可审计性，256
+
 *   Audry, Sofian，190
+
 *   增强现实 (AR)，166，**175**，192
+
 *   Austin, J.，143
+
 *   澳大利亚，215，218
+
 *   自动化，206–207，260，262
+
 *   巴塞罗那自治大学
+
     *   抄袭检查，**174**
+
 *   自主性
+
     *   与算法，48
+
     *   与意图，39
+
     *   关系性，25–26
+
     *   与工作，132，133，135–136
+
 *   Axente, Maria，1，9，304，307，310
 
 ## B
 
 *   Baaken, T.，165，171
+
 *   Bäckstrand, K.，121，124
+
 *   Bahary-Dionne, A.，223
+
 *   Baker, S. T.，235
+
 *   Bandura, A.，235
+
 *   Bar-Gil, Oshri，5–6，34，40，99，100
+
 *   Barber, G.，215
+
 *   Bard（人工智能工具），83
+
 *   Basdevant, A.，251
+
 *   巴塞尔 II 监管，97
+
 *   Bayly, L.，74
+
 *   Beacon（聊天机器人），**173**
+
 *   Beery, S.，120
+
 *   Bélanger, J.，130
+
 *   Bellandi, M.，133
+
 *   Bello, A.，308，312
+
 *   Ben Rjab, A.，294
+
 *   Bender, Emily M.，193–194
+
 *   受益人识别，16–17，27
+
 *   Benjamin, R.，216，217
+
 *   Bennett, Tom，24
+
 *   Benneworth, P.，165，171
+
 *   Berente, N.，170
+
 *   Berg, J.，131
+
 *   Bernier, J.，134
+
 *   Bersini, Hugues，251，252，256–257
+
 *   BERT（双向编码器表示从 Transformers），83
+
 *   Bertail, P.，253
+
 *   Bessant, J.，312
+
 *   Bhandari, S.，157
+
 *   Bhaskar, P.，166
+
 *   Bhattacharjee, K. K.，169，171
+
 *   Bhava Nair, Rukmini，194
+
 *   偏见
+
     *   在算法和数据中，22，27，47，76，107
+
     *   审查，3–4，292，296
+
     *   系统性，216–218，289，307–309
+
 *   BigScience 开放科学研讨会，90
+
 *   Bill C-67（人工智能和数据法案），65
+
 *   Bina48（机器人），**173**，197
+
 *   Binns, R.，27，292
+
 *   Birhane, Abeba，26，27，29，216，218，221
+
 *   生日通知，49–50
+
 *   黑箱系统，76，89，143，145–146，252，253
+
 *   Black, J. S.，304
+
 *   “空白页”谬误，60–61
+
 *   Blockcerts Wallet，170，**175**
+
 *   区块链，166，170，**175**
+
 *   Blumer, Herbert，194
+
 *   Boddington, P.，251
+
 *   Bohler-Müller, N.（亦作 Bohler-Muller），23，25
+
 *   Bohnsack, R.，117
+
 *   Bolton, J. L.，233
+
 *   Bonarini, A.，192
+
 *   Bondi, E.，312
+
 *   Bowkett, Cassandra，129，133
+
 *   Boyd, D.，216
+
 *   Bozdag, E.，48
+
 *   Bradford, Anu，66
+
 *   Brady, W.，181
+
 *   儿童大脑发育，234
+
 *   Brandeis, L.，71
+
 *   布兰迪斯大学
+
     *   SciLinkR，**174**
+
 *   Bratman, M.，39
+
 *   Braun, V.，307
+
 *   Breznitz, S. M.，165
+
 *   Bribiesca-Correa, G.，163，170
+
 *   Broackman, G.，84，85
+
 *   Broussard, M.，216
+
 *   Brown, T. B.，88
+
 *   Browne, K.，41
+
 *   Browne, S.，304
+
 *   Brusilovsky, P.，155
+
 *   “布鲁塞尔效应”，66
+
 *   Bryer, A.，304
+
 *   Brynjolfsson, E.，36，133
+
 *   Bullock, G.，35
+
 *   Buolamwini, J.，120，304，312
+
 *   Burrell, J.，253
+
 *   企业
+
     *   在敏捷治理中，281–283
+
     *   自我监管，5，283–284
+
     *   在社会 5.0 中，280
+
     *   与工人关系，204–205，205–206；*另见* 组织
+
 *   Butollo, F.，133，134
 
 ### C
 
 *   Cabour, Garrick，260，271
+
 *   加州适龄设计法案，237–238
+
 *   Calma, A.，164
+
 *   Camus, A.，146
+
 *   加拿大，65，215
+
 *   Canca, C.，309
+
 *   Carayannis, E. G.，261
+
 *   Carbonell, J.，152
+
 *   护理院机器人，18，51
+
 *   原住民数据治理 CARE 原则，119
+
 *   Carlsmith, J.，73
-*   卡内基梅隆大学，171
-*   Carroll, S. R.，119
-*   Casilli, Antonio，86
-*   赌场设计，50
-*   Castelluccia, C.，256
-*   Castets-Renard, C.，255
-*   Castoriadis, C.，39
-*   因果 vs. 理由，146–147
-*   Chakraborti, Tapabrata，7，179
-*   Chalmers, David，36–37
-*   Chaminade, C.，133
-*   Chan, N. K.，135
 
 
 
-
+* 卡内基梅隆大学，171
+* Carroll, S. R.，119
+* Casilli, Antonio，86
+* 赌场设计，50
+* Castelluccia, C.，256
+* Castets-Renard, C.，255
+* Castoriadis, C.，39
+* 因果 vs. 理由，146–147
+* Chakraborti, Tapabrata，7，179
+* Chalmers, David，36–37
+* Chaminade, C.，133
+* Chan, N. K.，135
 
 ### C
-
 * Chancellor, S., 108, 117
 * Chander, A., 72, 216
 * Chankseliani, M., 164
@@ -6093,7 +6392,6 @@ Charisi 和 Dignum 关于通过儿童人工智能视角审视监管沙盒的论�
 * cybernetics, 190–191, 193
 
 ## D
-
 * Da Silva, Michael, 6, 105, 107
 * Dafoe, A., 290
 * Dahlin, E., 312
@@ -6107,738 +6405,412 @@ Charisi 和 Dignum 关于通过儿童人工智能视角审视监管沙盒的论�
   * monitoring, 280, 282
   * and privacy, 47–48, 72–73, 77–78, 290
   * transparency and security, 170
-
-
-
-
-
-*   作为用户替身，34，35，38–39；*另见* 数据集；训练数据
-
-*   数据法案（欧洲联盟），65
-
-*   数据驱动可持续农业（DISA）项目，119，121–124
-
-*   数据治理
-    *   日本的做法，276
-    *   毛利社区，28–29
-
-*   数据集
-    *   众包工作者输入，86–87
-    *   被剥削的知识，**174**
-    *   有害内容检测，182–183，185–187
-    *   所反映的人口，217，311；*另见* 数据；训练数据
-
-*   Datatilsynet，233
-
-*   Dautenhahn, Kerstin，51，192
-
-*   Davenport, T.，105
-
-*   Davies, D.，163，171
-
-*   de Beer, J.，122
-
-*   de Fine Licht, J.，289，292，293
-
-*   de Fine Licht, K.，289，292，293
-
-*   de Sousa, W. G.，287
-
-*   De Stefano, V.，131
-
-*   de Streel, A.，66
-
-*   Deahl, D.，38
-
-*   Debussy, Claude
-    *   关于停顿，207
-
-*   欺骗
-    *   在 AI 生成的消息中，86
-
-*   Deci, E. L.，268，269
-
-*   决策
-    *   AI 对其的影响，38–39，41，76，321–322
-    *   AI 风险，3–4，145，251，253
-    *   社区为基础的，28–29
-    *   过程合法性，254
-    *   在公共部门，289
-    *   与理性，143–144；*另见* 算法决策；政策制定
-
-*   深度伪造，159，192
-
-*   深度学习，142–143
-
-*   Degryse, C.，130，136
-
-*   Delacroix, S.，217，222
-
-*   Delgado, J. A.，117
-
-*   民主与算法统治，251，254，257
-
-*   Denis, Jean-Louis，1，6，105，111
-
-*   Dervin, Brenda，194
-
-*   Desai, D. R.，256
-
-*   design
-    *   方法，3，108，262–264
-    *   对话差距，311–312
-    *   伦理的，51–53，54
-    *   以人为中心，17
-    *   设计中的包容性，325
-    *   影响，50
-
-*   Desmoulin-Canselier, S.，256
-
-*   Desouza, K. C.，288，289，291，294，304
-
-*   Devlin, J.，83
-
-*   Di Bernardo, Irene，163
-
-*   对话
-    *   包容性和多元参与，311–312
-    *   跨文化，30
-    *   多利益相关方，281，283，284，285
-
-*   Dickson-Deane, C.，164
-
-*   Dietterich, T. G.，120
-
-*   Digital Bargaining Hub，204
-
-*   数字原则提案，255
-
-*   数字权利，222
-
-*   数字服务法案（DSA），65，185，254
-
-*   数字主权，223
-
-*   数字监控，22
-
-*   D’Ignazio, C.，312
-
-*   尊严
-    *   在欧洲法律中，21
-    *   与技术部署，27，76–77
-    *   西方与 Ubuntu 概念，24–25
-
-*   Dignum, Virginia，8，231，247，326
-
-*   Dinkins, Stephanie
-    *   *与 Bina48 的对话*，197
-
-*   歧视
-    *   算法，22，215，216，277
-    *   系统性，221，307–309
-
-*   在线讨论，181–182
-
-*   中断义务，206
-
-*   多样性
-    *   在医疗保健 AI 中，111
-    *   在语言中，88，89–90
-    *   在团队中，22，26，311–312，313
-
-*   Dixon，133
-
-*   *《请勿追踪》*（纪录片），198
-
-*   Dobusch, L.，304，305
-
-*   Doellgast, V.，130，133
-
-*   Doncieux, S.，108
-
-*   Doneson, D.，40
-
-*   Dorobantu, C.，287
-
-*   Doyon-Poulin, Philippe，260
-
-*   Drazen, J. M.，106
-
-*   Dreyfus, H.，49
-
-*   Druce, J.，120
-
-*   Du, X.，153
-
-*   Dubal, V. B.，135
-
-*   Dubey, A.，261
-
-*   Dummett, M.，147
-
-*   Duong, Q.，35
+* 作为用户替身，34，35，38–39；*另见* 数据集；训练数据
+* 数据法案（欧洲联盟），65
+* 数据驱动可持续农业（DISA）项目，119，121–124
+* 数据治理
+  * 日本的做法，276
+  * 毛利社区，28–29
+* 数据集
+  * 众包工作者输入，86–87
+  * 被剥削的知识，**174**
+  * 有害内容检测，182–183，185–187
+  * 所反映的人口，217，311；*另见* 数据；训练数据
+* Datatilsynet，233
+* Dautenhahn, Kerstin，51，192
+* Davenport, T.，105
+* Davies, D.，163，171
+* de Beer, J.，122
+* de Fine Licht, J.，289，292，293
+* de Fine Licht, K.，289，292，293
+* de Sousa, W. G.，287
+* De Stefano, V.，131
+* de Streel, A.，66
+* Deahl, D.，38
+* Debussy, Claude
+  * 关于停顿，207
+* 欺骗
+  * 在 AI 生成的消息中，86
+* Deci, E. L.，268，269
+* 决策
+  * AI 对其的影响，38–39，41，76，321–322
+  * AI 风险，3–4，145，251，253
+  * 社区为基础的，28–29
+  * 过程合法性，254
+  * 在公共部门，289
+  * 与理性，143–144；*另见* 算法决策；政策制定
+* 深度伪造，159，192
+* 深度学习，142–143
+* Degryse, C.，130，136
+* Delacroix, S.，217，222
+* Delgado, J. A.，117
+* 民主与算法统治，251，254，257
+* Denis, Jean-Louis，1，6，105，111
+* Dervin, Brenda，194
+* Desai, D. R.，256
+* design
+  * 方法，3，108，262–264
+  * 对话差距，311–312
+  * 伦理的，51–53，54
+  * 以人为中心，17
+  * 设计中的包容性，325
+  * 影响，50
+* Desmoulin-Canselier, S.，256
+* Desouza, K. C.，288，289，291，294，304
+* Devlin, J.，83
+* Di Bernardo, Irene，163
+* 对话
+  * 包容性和多元参与，311–312
+  * 跨文化，30
+  * 多利益相关方，281，283，284，285
+* Dickson-Deane, C.，164
+* Dietterich, T. G.，120
+* Digital Bargaining Hub，204
+* 数字原则提案，255
+* 数字权利，222
+* 数字服务法案（DSA），65，185，254
+* 数字主权，223
+* 数字监控，22
+* D’Ignazio, C.，312
+* 尊严
+  * 在欧洲法律中，21
+  * 与技术部署，27，76–77
+  * 西方与 Ubuntu 概念，24–25
+* Dignum, Virginia，8，231，247，326
+* Dinkins, Stephanie
+  * *与 Bina48 的对话*，197
+* 歧视
+  * 算法，22，215，216，277
+  * 系统性，221，307–309
+* 在线讨论，181–182
+* 中断义务，206
+* 多样性
+  * 在医疗保健 AI 中，111
+  * 在语言中，88，89–90
+  * 在团队中，22，26，311–312，313
+* Dixon，133
+* *《请勿追踪》*（纪录片），198
+* Dobusch, L.，304，305
+* Doellgast, V.，130，133
+* Doncieux, S.，108
+* Doneson, D.，40
+* Dorobantu, C.，287
+* Doyon-Poulin, Philippe，260
+* Drazen, J. M.，106
+* Dreyfus, H.，49
+* Druce, J.，120
+* Du, X.，153
+* Dubal, V. B.，135
+* Dubey, A.，261
+* Dummett, M.，147
+* Duong, Q.，35
 
 ## E
-
-*   Eagly, A. H.，308
-
-*   教育应用
-    *   非洲倡议，209
-    *   AI 技术，153–158，166，167，169
-    *   概述，151–152
-    *   风险与机遇，158–160
-
-*   Edwards, P.，130
-
-*   *égale dignité*，21–22
-
-*   电子邮件，35，86
-
-*   Emilien, B.，133
-
-*   情绪识别，16，165–166
-
-*   雇主，204–205，205–206
-
-*   赋权，132，137，222
-
-*   执行，280，281，322
-
-*   工程
-    *   在协作团队中，90，311–312
-    *   文化，19–20
-
-*   Engstrom, D. F.，288
-
-*   Epic Games 诉讼，52–53
-
-*   平等与 AI，21–22，76，172
-
-*   *《平等机器》*（Orly），76
-
-*   Equivant，144，217
-
-*   Er, E.，159
-
-*   人机工程学，133
-
-*   错误和缺陷检测系统（AIEDS）案例研究，266–270
-
-*   Ess, Charles，30
-
-*   Estlund, C.，136
-
-*   伦理
-    *   AI 文献关于，46–47
-    *   在通用目的 LLM 中，85–88
-    *   跨文化对话，30
-    *   与法律框架，61
-    *   责任，48–50，211，322
-    *   标准化，218–219
-
-
-
-
-
-*   在合成人类行为中，194
-
-*   可信人工智能伦理准则（AI HLEG），2，21，148
-
-*   Eubanks, V.，216
-
-*   欧洲委员会
-
-    *   儿童权利，237
-
-    *   指南和原则，21–22，148，218，255
-
-    *   法律法规，47–48，206，292，295
-
-    *   沙盒试点，232–233
-
-*   欧洲联盟
-
-    *   人工智能应用，288
-
-    *   立法倡议，58，65–66，253–254，255
-
-*   Evans, S. K.，34
-
-*   专业知识
-
-    *   与代理，222
-
-    *   与数据生产，211
-
-    *   与决策，143
-
-    *   在设计团队中，18
-
-*   可解释性，53，148–149，252，255–256
-
-*   可解释人工智能（XAI），292–293
+* Eagly, A. H.，308
+* 教育应用
+  * 非洲倡议，209
+  * AI 技术，153–158，166，167，169
+  * 概述，151–152
+  * 风险与机遇，158–160
+* Edwards, P.，130
+* *égale dignité*，21–22
+* 电子邮件，35，86
+* Emilien, B.，133
+* 情绪识别，16，165–166
+* 雇主，204–205，205–206
+* 赋权，132，137，222
+* 执行，280，281，322
+* 工程
+  * 在协作团队中，90，311–312
+  * 文化，19–20
+* Engstrom, D. F.，288
+* Epic Games 诉讼，52–53
+* 平等与 AI，21–22，76，172
+* *《平等机器》*（Orly），76
+* Equivant，144，217
+* Er, E.，159
+* 人机工程学，133
+* 错误和缺陷检测系统（AIEDS）案例研究，266–270
+* Ess, Charles，30
+* Estlund, C.，136
+* 伦理
+  * AI 文献关于，46–47
+  * 在通用目的 LLM 中，85–88
+  * 跨文化对话，30
+  * 与法律框架，61
+  * 责任，48–50，211，322
+  * 标准化，218–219
+* 在合成人类行为中，194
+* 可信人工智能伦理准则（AI HLEG），2，21，148
+* Eubanks, V.，216
+* 欧洲委员会
+  * 儿童权利，237
+  * 指南和原则，21–22，148，218，255
+  * 法律法规，47–48，206，292，295
+  * 沙盒试点，232–233
+* 欧洲联盟
+  * 人工智能应用，288
+  * 立法倡议，58，65–66，253–254，255
+* Evans, S. K.，34
+* 专业知识
+  * 与代理，222
+  * 与数据生产，211
+  * 与决策，143
+  * 在设计团队中，18
+* 可解释性，53，148–149，252，255–256
+* 可解释人工智能（XAI），292–293
 
 ## F
+* Facebook，49–50，183，184
+* 人脸识别，215，219，289，291–292
+* FAIR 原则，119
+* 公平性研究，26–27
+* 伪造
+  * 数据，77–78
+  * 深度伪造，159，192
+* FARI 研究所，257
+* 联邦学习，77
+* 反馈，167，170，293
+* Feigh, K. M.，262
+* Feist, M.，120
+* Feldman, M. P.，165
+* Felzmann, H.，313
+* 虚构叙事与技术，192–193
+* Fidan, M.，169
+* 金融部门，97，253，256，310
+* 芬兰，236
+* Finlay, Rebecca，324
+* Fischer, A.，308
+* Fischer, B.，165，171
+* Fisher, E.，38–40
+* Fisher, G.，305
+* 航班价格预测，53–54
+* Flood, C. M.，107
+* Floridi, Luciano，70，76，132，309
+* 焦点小组访谈，306–312
+* Follows, T.，218
+* 粮食及农业组织（FAO），117
+* 美国食品药品监督管理局（FDA），107
 
-*   Facebook，49–50，183，184
 
-*   人脸识别，215，219，289，291–292
 
-*   FAIR 原则，119
-
-*   公平性研究，26–27
-
-*   伪造
-
-    *   数据，77–78
-
-    *   深度伪造，159，192
-
-*   FARI 研究所，257
-
-*   联邦学习，77
-
-*   反馈，167，170，293
-
-*   Feigh, K. M.，262
-
-*   Feist, M.，120
-
-*   Feldman, M. P.，165
-
-*   Felzmann, H.，313
-
-*   虚构叙事与技术，192–193
-
-*   Fidan, M.，169
-
-*   金融部门，97，253，256，310
-
-*   芬兰，236
-
-*   Finlay, Rebecca，324
-
-*   Fischer, A.，308
-
-*   Fischer, B.，165，171
-
-*   Fisher, E.，38–40
-
-*   Fisher, G.，305
-
-*   航班价格预测，53–54
-
-*   Flood, C. M.，107
-
-*   Floridi, Luciano，70，76，132，309
-
-*   焦点小组访谈，306–312
-
-*   Follows, T.，218
-
-*   粮食及农业组织（FAO），117
-
-*   美国食品药品监督管理局（FDA），107
-
-*   Forman, A.，304，306
-
-*   Foss, L.，308
-
-*   Frangi, L.，133
-
-*   Frenette, Micheline，194
-
-*   Frey, C. B.，260
-
-*   Friedman, Batya，27，28
-
-*   Friedman, V.，220
-
-*   Friesen, M.，294
-
-*   Frischhut, M.，21
-
-*   Frischmann, Brett，49
-
-*   Fuchs, C.，36
-
-*   未来地球，117，119，121，122，124，125
+* Forman, A.，304，306
+* Foss, L.，308
+* Frangi, L.，133
+* Frenette, Micheline，194
+* Frey, C. B.，260
+* Friedman, Batya，27，28
+* Friedman, V.，220
+* Friesen, M.，294
+* Frischhut, M.，21
+* Frischmann, Brett，49
+* Fuchs, C.，36
+* 未来地球，117，119，121，122，124，125
 
 ### G
-
-*   G20 背书，58–59，206
-
-*   GAFA 构成，68n38；*另见* 平台
-
-*   游戏定义，142–143
-
-*   Garapon, A.，253
-
-*   Garard, Jennifer，6，116，325
-
-*   Garneau, Julie (M. É.)，129，134
-
-*   Garzón, J.，166
-
-*   Gasevic, D.，154
-
-*   Gatzioufa, P.，157
-
-*   Gautié, J.，133，134
-
-*   GDPR，*见* 通用数据保护条例（GDPR）
-
-*   Gebru, Timnit，120，121，304，312，324–325
-
-*   Gencel, N.，169
-
-*   通用数据保护条例（GDPR），3，63，72，220，253
-
-*   通用目的模型，85，86
-
-*   生成式人工智能
-
-    *   应用，3，41–42，156–158，159，189
-
-    *   文档，325
-
-    *   流程，4
-
-*   Gentelet, Karine，8，190，215，219，223，322
-
-*   佐治亚理工学院
-
-    *   Jill 聊天机器人，167，**173**
-
-*   佐治亚州立大学
-
-    *   虚拟游览，**175**
-
-*   Gerdon, F.，292
-
-*   德国，215，218
-
-*   Gerst, D.，134
-
-*   Gesualdi-Fecteau, D.，130，131
-
-*   Ghassim, B.，308
-
-*   幽灵工人和众包工人，86–87，89，192
-
-*   零工工作，132，134–136
-
-*   Gioia, D. A.，111
-
-*   Gkiolnta, E.，166
-
-*   Gleeson, Erin，116
-
-*   全球互联网反恐论坛（GIFCT），186
-
-*   全球农业和营养开放数据伙伴关系（GODAN），119，122
-
-*   人工智能全球伙伴关系（GPAI），183
-
-*   基于目标的法律，282–284
-
-*   Goddard, J.，165
-
-*   Goertzel, B.，85，86
-
-*   Goetze, T. S.，86–87
-
-*   商品生产，52–53
-
-*   Google 平台，35，37–39，40，41，53–54，83，181
-
-*   Gottman, J. M.，308
-
-*   Gourova, E.，263
-
-*   治理
-
-    *   对人工智能的适应，136–137
-
-    *   算法治理，250–252
-
-    *   数据管理倡议，119–120
-
-    *   数字化赋能战略映射，*118*
-
-    *   包容性，136–137，205，206，216
-
-    *   多层级，110–111
-
-    *   建议，100–101
-
-    *   与负责任人工智能，15
-
-    *   工具，223–224
-
-*   政府
-
-    *   与公民控制，291–292，299
-
-    *   在人工智能治理中的作用，280–283
-
-    *   信任管理，283；*另见* 公共部门应用
-
-*   GPT-3（生成式预训练 Transformer 3），84–88
-
-*   Granić, A.，166
-
-*   Green, A.，133
-
-*   Green, B.，310
-
-*   Green, F.，131
-
-*   Greene, S.，235
-
-*   Grote, G.，260
-
-
-
-
-
-### G
-
-*   G’Sell, F., 251
-
-*   Guest, D., 131, 132
-
-*   guidelines, *see* principles and guidelines
-
-*   Guo, L. N., 107
-
-*   Gupta, A., 121
-
-*   Gyekye, Kwame, 25
+* G20 背书，58–59，206
+* GAFA 构成，68n38；*另见* 平台
+* 游戏定义，142–143
+* Garapon, A.，253
+* Garard, Jennifer，6，116，325
+* Garneau, Julie (M. É.)，129，134
+* Garzón, J.，166
+* Gasevic, D.，154
+* Gatzioufa, P.，157
+* Gautié, J.，133，134
+* GDPR，*见* 通用数据保护条例（GDPR）
+* Gebru, Timnit，120，121，304，312，324–325
+* Gencel, N.，169
+* 通用数据保护条例（GDPR），3，63，72，220，253
+* 通用目的模型，85，86
+* 生成式人工智能
+  * 应用，3，41–42，156–158，159，189
+  * 文档，325
+  * 流程，4
+* Gentelet, Karine，8，190，215，219，223，322
+* 佐治亚理工学院
+  * Jill 聊天机器人，167，**173**
+* 佐治亚州立大学
+  * 虚拟游览，**175**
+* Gerdon, F.，292
+* 德国，215，218
+* Gerst, D.，134
+* Gesualdi-Fecteau, D.，130，131
+* Ghassim, B.，308
+* 幽灵工人和众包工人，86–87，89，192
+* 零工工作，132，134–136
+* Gioia, D. A.，111
+* Gkiolnta, E.，166
+* Gleeson, Erin，116
+* 全球互联网反恐论坛（GIFCT），186
+* 全球农业和营养开放数据伙伴关系（GODAN），119，122
+* 人工智能全球伙伴关系（GPAI），183
+* 基于目标的法律，282–284
+* Goddard, J.，165
+* Goertzel, B.，85，86
+* Goetze, T. S.，86–87
+* 商品生产，52–53
+* Google 平台，35，37–39，40，41，53–54，83，181
+* Gottman, J. M.，308
+* Gourova, E.，263
+* 治理
+  * 对人工智能的适应，136–137
+  * 算法治理，250–252
+  * 数据管理倡议，119–120
+  * 数字化赋能战略映射，*118*
+  * 包容性，136–137，205，206，216
+  * 多层级，110–111
+  * 建议，100–101
+  * 与负责任人工智能，15
+  * 工具，223–224
+* 政府
+  * 与公民控制，291–292，299
+  * 在人工智能治理中的作用，280–283
+  * 信任管理，283；*另见* 公共部门应用
+* GPT-3（生成式预训练 Transformer 3），84–88
+* Granić, A.，166
+* Green, A.，133
+* Green, B.，310
+* Green, F.，131
+* Greene, S.，235
+* Grote, G.，260
+
+* G’Sell, F., 251
+* Guest, D., 131, 132
+* guidelines, *see* principles and guidelines
+* Guo, L. N., 107
+* Gupta, A., 121
+* Gyekye, Kwame, 25
 
 ## H
-
-*   Habanabakize, Ernest, 116
-
-*   Habermas, J., 87, 254
-
-*   Haenschen, K., 49
-
-*   Hagendorff, T., 53
-
-*   HAICU Lab, 1
-
-*   Haipeter, T., 133
-
-*   Hallett, T., 4
-
-*   Hannah, Kate, 185
-
-*   Hannah-Moffat, K., 256
-
-*   Hao, K., 88, 90
-
-*   Häring, Markus, 192
-
-*   Harrington, C. N., 216
-
-*   Harrison, T. M., 287, 290
-
-*   Hart, H. L. A., 143
-
-*   Hart, S. G., 269
-
-*   Hartikainen, M., 290
-
-*   Hassani, H., 157
-
-*   hate speech, 182–183
-
-*   Haug, C. J., 106
-
-*   Haugen, Francis, 88
-
-*   Hawthorne effect, 154
-
-*   Hay Newman, L., 86
-
-*   HCAI, *see* human-centered AI
-
-*   healthcare applications
-    *   AI approaches and trends, 105–107
-    *   context considerations, 110–113
-    *   human-centered design, 107–108
-    *   regulation, 62, 63, 109–110, 232
-
-*   Heersmink, R., 54
-
-*   Heider, D., 310
-
-*   Heilman, M. E., 308
-
-*   Heintz, F., 313
-
-*   Helbig, J., 132–133
-
-*   Hellinger, A., 132–133
-
-*   Helsel, P., 74
-
-*   Heng, K., 158
-
-*   Heryandi, A., 151
-
-*   Hidvegi, F., 220
-
-*   High-Level Expert Group on Artificial Intelligence (AI HLEG), 2, 21, 148
-
-*   higher education, *see* education
-
-*   Hill, K., 35
-
-*   Himonga, Chuma, 23
-
-*   Hinings, B., 6
-
-*   Holmes, W., 152
-
-*   Hoskins, Andrew, 41
-
-*   Hoyt, C. L., 308
-
-*   Huang, M. H., 163, 165
-
-*   HUMan-centered AI for Industry 5.0 (HUMAI5.0)
-    *   case studies, 266–271
-    *   framework, 261, 264–266, 272
-
-*   human-centered AI (HCAI)
-    *   definitions, 3, 13–15, 36, 209, 324
-    *   development approaches, 17–20, 277, 285
-    *   documentation of, 325
-    *   goals, 15–16, 42, 204
-    *   and inclusive AI, 305
-    *   principles, 2–3, 119–121, 275–276, 290
-    *   recommendations for, 93–94, 321–323, 326
-
-*   human-centeredness, 180, 186, 204
-
-*   human-human interactions, 159, 172
-
-*   human in the loop, 3, 108, 252, 293, 312
-
-*   human-machine interactions
-    *   in CHOM5KY vs. CHOMSKY experience, 195–197, 199
-    *   emotion-based, 165–166
-    *   and Ubuntu, 29
-
-*   human resources applications, 76, 204–205
-
-*   human rights, 72, 215, 220, 222, 223, 284–285
-
-*   humans
-    *   childhood brain development, 234
-    *   flourishing, 13, 17–18
-    *   imitating AI, 192
-    *   personhood, 22, 23
-    *   placement in AI, 3, 75, 78
-    *   and technology collaboration, 260–261
-
-*   Humble, N., 152
-
-*   Hunt, C. D. L., 70
-
-*   Hupont, Torres I., 233
-
-*   Huszār, F., 184, 185
-
-*   Hutter, M., 82
-
-*   Hwang, G.-J., 152
+* Habanabakize, Ernest, 116
+* Habermas, J., 87, 254
+* Haenschen, K., 49
+* Hagendorff, T., 53
+* HAICU Lab, 1
+* Haipeter, T., 133
+* Hallett, T., 4
+* Hannah, Kate, 185
+* Hannah-Moffat, K., 256
+* Hao, K., 88, 90
+* Häring, Markus, 192
+* Harrington, C. N., 216
+* Harrison, T. M., 287, 290
+* Hart, H. L. A., 143
+* Hart, S. G., 269
+* Hartikainen, M., 290
+* Hassani, H., 157
+* hate speech, 182–183
+* Haug, C. J., 106
+* Haugen, Francis, 88
+* Hawthorne effect, 154
+* Hay Newman, L., 86
+* HCAI, *see* human-centered AI
+* healthcare applications
+  * AI approaches and trends, 105–107
+  * context considerations, 110–113
+  * human-centered design, 107–108
+  * regulation, 62, 63, 109–110, 232
+* Heersmink, R., 54
+* Heider, D., 310
+* Heilman, M. E., 308
+* Heintz, F., 313
+* Helbig, J., 132–133
+* Hellinger, A., 132–133
+* Helsel, P., 74
+* Heng, K., 158
+* Heryandi, A., 151
+* Hidvegi, F., 220
+* High-Level Expert Group on Artificial Intelligence (AI HLEG), 2, 21, 148
+* higher education, *see* education
+* Hill, K., 35
+* Himonga, Chuma, 23
+* Hinings, B., 6
+* Holmes, W., 152
+* Hoskins, Andrew, 41
+* Hoyt, C. L., 308
+* Huang, M. H., 163, 165
+* HUMan-centered AI for Industry 5.0 (HUMAI5.0)
+  * case studies, 266–271
+  * framework, 261, 264–266, 272
+* human-centered AI (HCAI)
+  * definitions, 3, 13–15, 36, 209, 324
+  * development approaches, 17–20, 277, 285
+  * documentation of, 325
+  * goals, 15–16, 42, 204
+  * and inclusive AI, 305
+  * principles, 2–3, 119–121, 275–276, 290
+  * recommendations for, 93–94, 321–323, 326
+* human-centeredness, 180, 186, 204
+* human-human interactions, 159, 172
+* human in the loop, 3, 108, 252, 293, 312
+* human-machine interactions
+  * in CHOM5KY vs. CHOMSKY experience, 195–197, 199
+  * emotion-based, 165–166
+  * and Ubuntu, 29
+* human resources applications, 76, 204–205
+* human rights, 72, 215, 220, 222, 223, 284–285
+* humans
+  * childhood brain development, 234
+  * flourishing, 13, 17–18
+  * imitating AI, 192
+  * personhood, 22, 23
+  * placement in AI, 3, 75, 78
+  * and technology collaboration, 260–261
+* Humble, N., 152
+* Hunt, C. D. L., 70
+* Hupont, Torres I., 233
+* Huszār, F., 184, 185
+* Hutter, M., 82
+* Hwang, G.-J., 152
 
 ## I
-
-*   IBM, 310
-
-*   IBM Summit, 170, **174**
-
-*   IEEE Global Initiative on Ethics of Autonomous and Intelligent Systems, 28
-
-*   Ifenthaler, D., 151, 153
-
-*   Ihde, Don, 36, 39
-
-*   ImageNet dataset, 87
-
-*   implementation gaps, 305, 307–312
-
-*   inclusivity
-    *   in AI systems, 221–222, 223, 305, 313
-    *   education technologies for, **173**
-    *   in organizations, 304, 307–312
-
-*   Indigenous organizations, 28–29, 223
-
-*   individuality, 76–77
-
-*   individuals, *see* children, citizens, humans, public, users
-
-*   Industry 4.0 (I4.0), 132, 260–263
-
-*   Industry 5.0 (I5.0), 261
-
-*   *Inevitable, The* (Kelly), 34, 35
-
-*   information communications technologies (ICTs), 49
-
-*   information support technologies, **173**
-
-*   innovation
-    *   and governance, 100, 101, 283–284
-    *   in healthcare, 111–113
-    *   permissive vs. protective, 61–63
-    *   sustainable, 308
-    *   theory of, 59–60
-    *   university and business collaboration, 171
-
-*   institutions, 76–77, 137, 287; *see also* governments
-
-*   intelligence
-    *   in AGI, 85
-    *   augmented, 96, 157
-    *   collective, 29
-
-*   intention, 39
-
-*   Interdependent Analysis, 263, 264
-
-*   interdisciplinarity, 99–100, 311–312
-
-*   Intergovernmental Panel on Climate Change (IPCC), 117
-
-*   International Indigenous Data Sovereignty Interest Group, 119
-
-*   International Outreach for Human-Centric Artificial Intelligence, 30
-
-*   intersectionality, 217–218, 221, 292
-
-*   Isherwood, Christopher, 78
-
-*   Ithaca (virtual assistant), 169, **174**
+* IBM, 310
+* IBM Summit, 170, **174**
+* IEEE Global Initiative on Ethics of Autonomous and Intelligent Systems, 28
+* Ifenthaler, D., 151, 153
+* Ihde, Don, 36, 39
+* ImageNet dataset, 87
+* implementation gaps, 305, 307–312
+* inclusivity
+  * in AI systems, 221–222, 223, 305, 313
+  * education technologies for, **173**
+  * in organizations, 304, 307–312
+* Indigenous organizations, 28–29, 223
+* individuality, 76–77
+* individuals, *see* children, citizens, humans, public, users
+* Industry 4.0 (I4.0), 132, 260–263
+* Industry 5.0 (I5.0), 261
+* *Inevitable, The* (Kelly), 34, 35
+* information communications technologies (ICTs), 49
+* information support technologies, **173**
+* innovation
+  * and governance, 100, 101, 283–284
+  * in healthcare, 111–113
+  * permissive vs. protective, 61–63
+  * sustainable, 308
+  * theory of, 59–60
+  * university and business collaboration, 171
+* institutions, 76–77, 137, 287; *see also* governments
+* intelligence
+  * in AGI, 85
+  * augmented, 96, 157
+  * collective, 29
+* intention, 39
+* Interdependent Analysis, 263, 264
+* interdisciplinarity, 99–100, 311–312
+* Intergovernmental Panel on Climate Change (IPCC), 117
+* International Indigenous Data Sovereignty Interest Group, 119
+* International Outreach for Human-Centric Artificial Intelligence, 30
+* intersectionality, 217–218, 221, 292
+* Isherwood, Christopher, 78
+* Ithaca (virtual assistant), 169, **174**
 
 ### J
+* Jackendoff, Ray, 194
+* Jacobs, D. C., 134
+* Japan
 
-*   Jackendoff, Ray, 194
-
-*   Jacobs, D. C., 134
-
-*   Japan
-
-
-
-
-
-### J
 * 敏捷治理，276，278，279–285
 * AI 原则，275–276
 * 沙盒制度，232–233
@@ -6928,369 +6900,369 @@ Charisi 和 Dignum 关于通过儿童人工智能视角审视监管沙盒的论�
 * Kumar, P.，234
 * Kundert, Kaspar，116
 * Kunming-Montreal Global Biodiversity Framework，117，125
-* Kuziemski, M.，287，289，299
+
+
+
+* Kuziemski, M., 287, 289, 299
 
 ## L
-* Lafontaine, Céline，193
-* Langer, M.，292
-* Langlois, L.，109
+
+* Lafontaine, Céline, 193
+* Langer, M., 292
+* Langlois, L., 109
 * 语言
-  * 多样性，89–90
-  * 模型，83，84，87–88
-  * 自然，91n2
-  * 与权力，73
-* 对话应用的语言模型（LaMDA），83
-* Lankton, N.，120
-* Lapadat, J. C.，307
-* Lardinois, F.，38
-* 大型语言模型（LLMs），85–88，89，193–194；*另见* GPT-3
-* Larouche, Pierre，6，58，66，99，100，101
-* Larson, J.，145
-* Larsson, S.，313
-* Lashbrook, A.，215，217
-* Lassègue, J.，253
-* 拉丁美洲，320
-* Latour, B.，111
-* Laverdière, M.，110
+  * 多样性, 89–90
+  * 模型, 83, 84, 87–88
+  * 自然, 91n2
+  * 与权力, 73
+* 对话应用的语言模型（LaMDA）, 83
+* Lankton, N., 120
+* Lapadat, J. C., 307
+* Lardinois, F., 38
+* 大型语言模型（LLMs）, 85–88, 89, 193–194；*另见* GPT-3
+* Larouche, Pierre, 6, 58, 66, 99, 100, 101
+* Larson, J., 145
+* Larsson, S., 313
+* Lashbrook, A., 215, 217
+* Lassègue, J., 253
+* 拉丁美洲, 320
+* Latour, B., 111
+* Laverdière, M., 110
 * 法律
-  * AI 应用，144–145
-  * 数字化，250–252，254–256
-  * 执法聊天机器人，171
-  * 法律中的推理，143–144，147–148；*另见* 法律框架；立法倡议；监管
-* Le Métayer, D.，256
-* Leapr Labs，121
+  * AI 应用, 144–145
+  * 数字化, 250–252, 254–256
+  * 执法聊天机器人, 171
+  * 法律中的推理, 143–144, 147–148；*另见* 法律框架；立法倡议；监管
+* Le Métayer, D., 256
+* Leapr Labs, 121
 * 学习
-  * 自适应，154–156
-* 学习分析（LAK），153–154
-* 学习管理系统（LMS），153
-* Leavy, S.，308
-* Leckenby, E.，232
-* LeCun, Y.，120
-* Ledoux, É.，271
-* 法律框架，58，59–61，63–65，252–254；*另见* 法律；立法倡议；监管
-* Léger, Pierre-Majorique，260
-* Legg, Shane，82
-* 立法倡议，65–66，253–254
-* Leiter, C.，156
-* Lepage, Alexandre，151
-* Lepri, B.，121
-* Leprince-Ringuet, D.，220
-* Leslie, D.，308
-* 系统变革的杠杆，117，*118*，122
-* Lévesque, Christian，7，129，133，134，204，205，320–321
-* Lewis, J. E.，120
-* Liang, Y.，108
-* Liao, Q. V.，261
-* Liebenberg, S.，26
-* Liebman, W. B.，136
-* Lien, A.，120
-* Lim, D.，310
+  * 自适应, 154–156
+* 学习分析（LAK）, 153–154
+* 学习管理系统（LMS）, 153
+* Leavy, S., 308
+* Leckenby, E., 232
+* LeCun, Y., 120
+* Ledoux, É., 271
+* 法律框架, 58, 59–61, 63–65, 252–254；*另见* 法律；立法倡议；监管
+* Léger, Pierre-Majorique, 260
+* Legg, Shane, 82
+* 立法倡议, 65–66, 253–254
+* Leiter, C., 156
+* Lepage, Alexandre, 151
+* Lepri, B., 121
+* Leprince-Ringuet, D., 220
+* Leslie, D., 308
+* 系统变革的杠杆, 117, *118*, 122
+* Lévesque, Christian, 7, 129, 133, 134, 204, 205, 320–321
+* Lewis, J. E., 120
+* Liang, Y., 108
+* Liao, Q. V., 261
+* Liebenberg, S., 26
+* Liebman, W. B., 136
+* Lien, A., 120
+* Lim, D., 310
 
+### M
 
+* 人工智能素养, 5, 159, 190, 192, 313–314
+* Liu, H.-Y., 220
+* lived experiences, 216, 219, 250
+* Lobel, Orly, 74, 76
+* Lohrmann, C., 120
+* Loup-Escande, E., 261, 271
+* Luccioni, Sasha, 193
+* Luengo-Oroz, M., 30
+* Luers, A., 117, 121
+* Luna-Reyes, L. F., 287, 290
+* Lupton, D., 216
+* Lusch, R. F., 164
+* Lyness, K., 308
 
+### M
 
-
-#### M
-
-*   人工智能素养，5，159，190，192，313–314
-*   Liu, H.-Y.，220
-*   lived experiences，216，219，250
-*   Lobel, Orly，74，76
-*   Lohrmann, C.，120
-*   Loup-Escande, E.，261，271
-*   Luccioni, Sasha，193
-*   Luengo-Oroz, M.，30
-*   Luers, A.，117，121
-*   Luna-Reyes, L. F.，287，290
-*   Lupton, D.，216
-*   Lusch, R. F.，164
-*   Lyness, K.，308
-
-#### M
-
-*   机器学习（ML）
-    *   insights，289
-    *   limit-setting，86
-    *   models，3–4，83，293，294；*另请参阅* training data
-*   MacIntyre, Alasdair，51–52
-*   Maddikunta, P. K. R.，261，262
-*   Madhusoodanan, J.，215，217
-*   Madukwe, K.，183
-*   毛利社区，28–29
-*   Maffie, M. D.，135，136
-*   *Mahlangu and Another v Minister of Labour and Others*，24
-*   Makarius, E. E.，306，312
-*   Malgieri, G.，219，255
-*   Malhotra, S.，306
-*   Malone, Matt，6，70，73，74，94，95–96
-*   Malta Digital Innovation Authority，218
-*   Manheim, K. M.，74
-*   *MANIC VR*（纪录片），198
-*   Mann, M.，292
-*   Mantelero, A.，219
-*   制造应用，136，266–270
-*   Manyukhina, Y.，235
-*   地图和导航，37–38，49，321，321–322
-*   Marceau Caron, Gaétan，116
-*   Marceau, E.，160
-*   Marcus, Gary，193
-*   Marenco, M.，133
-*   Margetis, G.，120
-*   Margetts, H.，287
-*   Mariani, M.，166
-*   Marty, F.，253
-*   Maryville University，170
-*   Marzullo, Marialuisa，163
-*   Masakhane，90
-*   Mastercard Foundation，208
-*   Mattu, S.，145
-*   Matzner, T.，292
-*   May, C.，111
-*   Mbiti, J. S.，24
-*   McAfee, A.，36
-*   McCowan, T.，164
-*   McLennon, E.，117
-*   McLuhan, Marshall，75，251
-*   McMahan, H. B.，77
-*   Meadows, Donella，117，*118*
-*   意义与艺术，191，194，200
-*   Mechanical Turk（亚马逊），87
-*   Medaglia, R.，288
-*   医疗和医疗保健监管局（MHRA），107，109，110，111，113
-*   Mehrabi, N.，289，292
-*   Mele, Cristina，7，163，164，166，210
-*   Melles, M.，108
-*   Mellouli, S.，294
-*   Melucci, Alberto，194
-*   memory
-    *   aids，38
-    *   connective，40–41
-*   Menary, R.，36
-*   Menkiti, Ifeanyi，23
-*   心理隐私，75–76
-*   Merleau-Ponty, Maurice，36
-*   隐喻，193，194
-*   元宇宙，192
-*   Metaversity project，167，**173**
-*   Metcalf, J.，215，219
-*   METI（经济贸易工业省），*see* Japan
-*   Metz, T.，24，25
-*   Mexico，319，320
-*   Mhlambi, Sabelo，22，23
-*   Mhlanga, D.，293
-*   Microsoft，310，311
-*   Microsoft Translator，**173**
-*   Mila—Quebec Artificial Intelligence Institute，98，121
-*   Miller, M. J.，262
-*   Miller, T.，292
-*   Millot, P.，262
-*   Milner, G.，38
-*   Mingardo, G.，294
-*   少数群体和代表性不足群体，22，26–27，28，217，242
-*   Mintrom, M.，291
-*   Mirata, V.，156
-*   Misuraca, G.，287，288，289，291，299
-*   Mitchell, M.，121，324–325
-*   Mitchell, T. E.，233
-*   Mittelstadt, B. D.，46，47，48，309
-*   Mizrahi, Sarit K.，8，190，215，219，322
-*   ML，*see* machine learning
-*   動員，223
-*   Modoono, M.，220
-*   Mökander, J.，310
-*   Mokgoro, Yvonne，23，24
-*   monitoring
-    *   compliance，280–281，282–283
-    *   by public sector，288
-*   蒙特利尔负责任的人工智能发展宣言，2
-*   Moore, Geoff，52
-*   Moore, P.，312
-*   道德技能，50–51，54
-*   Morales-Forero, A.，271
-*   Morissette, L.，135
-*   Morosini, D.，217
-*   Morriet, O.，106
-*   人机交互的动机设计，263，268
-*   Mozelius, P.，152
-*   Mueller, S. T.，260，261
-*   Müller, K.-R.，293
-*   Müller, V. C.，73
-*   多利益相关方，281，283，284，285，326
-*   Murphy, S. E.，308
-*   Murray, E.，111
-*   Murungi, J.，23，27
-*   Musk, Elon，74
+* 机器学习（ML）
+  * insights, 289
+  * limit-setting, 86
+  * models, 3–4, 83, 293, 294；*另请参阅* training data
+* MacIntyre, Alasdair, 51–52
+* Maddikunta, P. K. R., 261, 262
+* Madhusoodanan, J., 215, 217
+* Madukwe, K., 183
+* 毛利社区, 28–29
+* Maffie, M. D., 135, 136
+* *Mahlangu and Another v Minister of Labour and Others*, 24
+* Makarius, E. E., 306, 312
+* Malgieri, G., 219, 255
+* Malhotra, S., 306
+* Malone, Matt, 6, 70, 73, 74, 94, 95–96
+* Malta Digital Innovation Authority, 218
+* Manheim, K. M., 74
+* *MANIC VR*（纪录片）, 198
+* Mann, M., 292
+* Mantelero, A., 219
+* 制造应用, 136, 266–270
+* Manyukhina, Y., 235
+* 地图和导航, 37–38, 49, 321, 321–322
+* Marceau Caron, Gaétan, 116
+* Marceau, E., 160
+* Marcus, Gary, 193
+* Marenco, M., 133
+* Margetis, G., 120
+* Margetts, H., 287
+* Mariani, M., 166
+* Marty, F., 253
+* Maryville University, 170
+* Marzullo, Marialuisa, 163
+* Masakhane, 90
+* Mastercard Foundation, 208
+* Mattu, S., 145
+* Matzner, T., 292
+* May, C., 111
+* Mbiti, J. S., 24
+* McAfee, A., 36
+* McCowan, T., 164
+* McLennon, E., 117
+* McLuhan, Marshall, 75, 251
+* McMahan, H. B., 77
+* Meadows, Donella, 117, *118*
+* 意义与艺术, 191, 194, 200
+* Mechanical Turk（亚马逊）, 87
+* Medaglia, R., 288
+* 医疗和医疗保健监管局（MHRA）, 107, 109, 110, 111, 113
+* Mehrabi, N., 289, 292
+* Mele, Cristina, 7, 163, 164, 166, 210
+* Melles, M., 108
+* Mellouli, S., 294
+* Melucci, Alberto, 194
+* memory
+  * aids, 38
+  * connective, 40–41
+* Menary, R., 36
+* Menkiti, Ifeanyi, 23
+* 心理隐私, 75–76
+* Merleau-Ponty, Maurice, 36
+* 隐喻, 193, 194
+* 元宇宙, 192
+* Metaversity project, 167, **173**
+* Metcalf, J., 215, 219
+* METI（经济贸易工业省）, *see* Japan
+* Metz, T., 24, 25
+* Mexico, 319, 320
+* Mhlambi, Sabelo, 22, 23
+* Mhlanga, D., 293
+* Microsoft, 310, 311
+* Microsoft Translator, **173**
+* Mila—Quebec Artificial Intelligence Institute, 98, 121
+* Miller, M. J., 262
+* Miller, T., 292
+* Millot, P., 262
+* Milner, G., 38
+* Mingardo, G., 294
+* 少数群体和代表性不足群体, 22, 26–27, 28, 217, 242
+* Mintrom, M., 291
+* Mirata, V., 156
+* Misuraca, G., 287, 288, 289, 291, 299
+* Mitchell, M., 121, 324–325
+* Mitchell, T. E., 233
+* Mittelstadt, B. D., 46, 47, 48, 309
+* Mizrahi, Sarit K., 8, 190, 215, 219, 322
+* ML, *see* machine learning
+* 動員, 223
+* Modoono, M., 220
+* Mökander, J., 310
+* Mokgoro, Yvonne, 23, 24
+* monitoring
+  * compliance, 280–281, 282–283
+  * by public sector, 288
+* 蒙特利尔负责任的人工智能发展宣言, 2
+* Moore, Geoff, 52
+* Moore, P., 312
+* 道德技能, 50–51, 54
+* Morales-Forero, A., 271
+* Morissette, L., 135
+* Morosini, D., 217
+* Morriet, O., 106
+* 人机交互的动机设计, 263, 268
+* Mozelius, P., 152
+* Mueller, S. T., 260, 261
+* Müller, K.-R., 293
+* Müller, V. C., 73
+* 多利益相关方, 281, 283, 284, 285, 326
+* Murphy, S. E., 308
+* Murray, E., 111
+* Murungi, J., 23, 27
+* Musk, Elon, 74
 
 ## N
 
-*   Naik, Subhash，261
-*   narrow AI，46–47
-*   国家人工智能研究所 for Adult Learning and Online Education，156
-*   自然语言处理（NLP），83，169，194–195
-*   navigation，37–38，49，321，321–322
-
-
-
-
+* Naik, Subhash, 261
+* narrow AI, 46–47
+* 国家人工智能研究所 for Adult Learning and Online Education, 156
+* 自然语言处理（NLP）, 83, 169, 194–195
+* navigation, 37–38, 49, 321, 321–322
 
 ### O
 
-*   Nayak, P., 35
-*   NC，*参见* Chomsky, Noam (NC)
-*   NEC 公司，285n4
-*   Neff, Gina，304，307
-*   Nespeca, V.，294
-*   荷兰，218
-*   网络和协作平台，169，170，**174**，**175**
-*   Neumann, W. P.，261，262，263，264，264–266
-*   新西兰
-    *   毛利人，28–29
-    *   Twitter 数据，185
-*   Newport, C.，75
-*   Newton, C.，38
-*   Nietzsche, F. W.，42
-*   Nilsson, Nils，86
-*   *1984* (Orwell)，73
-*   Nishimura, Tomoumi，275，326
-*   Nissenbaum, Helen，71，72
-*   Nixon, E.，235
-*   NLP，*参见* Natural Language Processing (NLP)
-*   Noble, S. U.，83，216，217，304，312
-*   规范化过程理论，111–112
-*   挪威，233
-*   Nsengimana, Joseph，208
-*   Nurski, L.，131
-*   Nussbaum, M.，220
-*   Nyland, J.，163，171
+* Nayak, P., 35
+* NC, *参见* Chomsky, Noam (NC)
+* NEC 公司, 285n4
+* Neff, Gina, 304, 307
+* Nespeca, V., 294
+* 荷兰, 218
+* 网络和协作平台, 169, 170, **174**, **175**
+* Neumann, W. P., 261, 262, 263, 264, 264–266
+* 新西兰
+  * 毛利人, 28–29
+  * Twitter 数据, 185
+* Newport, C., 75
+* Newton, C., 38
+* Nietzsche, F. W., 42
+* Nilsson, Nils, 86
+* *1984* (Orwell), 73
+* Nishimura, Tomoumi, 275, 326
+* Nissenbaum, Helen, 71, 72
+* Nixon, E., 235
+* NLP, *参见* Natural Language Processing (NLP)
+* Noble, S. U., 83, 216, 217, 304, 312
+* 规范化过程理论, 111–112
+* 挪威, 233
+* Nsengimana, Joseph, 208
+* Nurski, L., 131
+* Nussbaum, M., 220
+* Nyland, J., 163, 171
 
 ### O
 
-*   Obermeyer, Z.，107
-*   O’Donnell, P.，217
-*   OECD (经济合作与发展组织)，2，58–59，148，237
-*   Ohya, Takehiro，6，141
-*   *Olivia Road v City of Johannesburg*，26，28
-*   Open Academic Analytics Initiative，153
-*   OpenAI，84，85，87，88
-*   Oppl, S.，262
-*   组织
-    *   人工智能实施障碍，307–312
-    *   人工智能素养，313–314
-    *   公民社会，233
-    *   文化，54
-    *   包容性，304–305，312–313
-    *   土著，28–29，223；*另见* businesses；institutions
-*   Orwell, George
-    *   *1984*，73
-*   Osborne, M. A.，260
-*   Osburg, T.，120
-*   Oudeyer, P. Y.，233
-*   结果分析，266，269，297–298
-*   Ouyang, F.，169
-*   牛津大学
-    *   Philosobot，**174**
-*   牛津大学出版社
-    *   PaperHive，169，**174**
-*   Özbilgin, M.，304
+* Obermeyer, Z., 107
+* O’Donnell, P., 217
+* OECD (经济合作与发展组织), 2, 58–59, 148, 237
+* Ohya, Takehiro, 6, 141
+* *Olivia Road v City of Johannesburg*, 26, 28
+* Open Academic Analytics Initiative, 153
+* OpenAI, 84, 85, 87, 88
+* Oppl, S., 262
+* 组织
+  * 人工智能实施障碍, 307–312
+  * 人工智能素养, 313–314
+  * 公民社会, 233
+  * 文化, 54
+  * 包容性, 304–305, 312–313
+  * 土著, 28–29, 223；*另见* businesses；institutions
+* Orwell, George
+  * *1984*, 73
+* Osborne, M. A., 260
+* Osburg, T., 120
+* Oudeyer, P. Y., 233
+* 结果分析, 266, 269, 297–298
+* Ouyang, F., 169
+* 牛津大学
+  * Philosobot, **174**
+* 牛津大学出版社
+  * PaperHive, 169, **174**
+* Özbilgin, M., 304
 
 ## P
 
-*   Pan, Y.，306
-*   PaperHive，169，**174**
-*   Pardos, Z. A.，157
-*   Parker, S. K.，260
-*   停车位定价模拟，294–298
-*   人工智能伙伴关系 (PAI)，324–325
-*   Passalacqua, A.，8，113，260，261
-*   Pathak, M.，117
-*   Patton, M. Q.，112，113
-*   Pedreschi, Dino，7，179，181
-*   Peeters, M. M. M.，29，261
-*   Pellerin, Robert，260
-*   Pelz, M.，234
-*   Pennachin, C.，85
-*   Penney, J.，215
-*   Peraya, D.，153
-*   Pérez-Lauzon, Sara，129，133，134
-*   Perkmann, M.，165
-*   Perrigo, B.，87
-*   个性化，35，47，152，156，158，**173**，180
-*   Ubuntu 中的人格，22，23
-*   请愿和申诉机制，48，292，297
-*   Petruscu, P.，181
-*   Pettigrew, A. M.，111
-*   Peylo, C.，155
-*   Pham, A.，39
-*   马尔堡菲利普斯大学
-    *   Yuki (机器人)，167，**173**
-*   Philosobot，**174**
-*   哲学与工程合作，90
-*   钓鱼邮件，86
-*   Pichai, S.，83
-*   Pickering, A.，39
-*   Pineau, J.，120
-*   Piracha, Daoud，116
-*   Pistilli, Giada，6，82，94，95
-*   Pistilli, M. D.，153
-*   抄袭，158，159
-*   Plagiarism Check，**174**
-*   Planet Labs，121
-*   Plasschaert, A.，308
-*   平台
-    *   协作和联网，169，170，**174**，**175**
-    *   零工工作，132，134–136
-    *   Google，35，36–39，40，41
-    *   与立法，65–66
-    *   平台中的权力集中，100–101
-*   Plechero, M.，133
-*   Podsiadlowski, J. H.A.，304，305
-*   Poellhuber, Bruno，7，151，153，209–210，211
-*   政策评估
-    *   HCAI 框架，290–294
-    *   停车定价模拟，294–298
-*   政策制定
-    *   在人工智能发展中，96–97，101–102，211，319，326
-    *   能力建设，98–99
-    *   使用人工智能，4，252–253
-*   Polonski, S.，53
-*   流行文化和人工智能，189
-*   *Port Elizabeth Municipality v Various Occupiers*，25，28，29
-*   Posner, R. A.，72
-*   权力
-    *   权力持有者，22，73，100–101，102
-    *   与隐私权衡，77
-*   Prabu, R.，120
-*   实践特征，51–52
-*   预测应用，53–54，144，153
-*   定价应用，53–54，294–298
-*   原则和指南
-    *   欧洲委员会，21–22，148，255
-    *   以人为中心的人工智能，2–3，119–121，275–276，290
-    *   转化为实践，309–311
-    *   Ubuntu 与技术，27–28
-*   隐私
-
-
-
-
+* Pan, Y., 306
+* PaperHive, 169, **174**
+* Pardos, Z. A., 157
+* Parker, S. K., 260
+* 停车位定价模拟, 294–298
+* 人工智能伙伴关系 (PAI), 324–325
+* Passalacqua, A., 8, 113, 260, 261
+* Pathak, M., 117
+* Patton, M. Q., 112, 113
+* Pedreschi, Dino, 7, 179, 181
+* Peeters, M. M. M., 29, 261
+* Pellerin, Robert, 260
+* Pelz, M., 234
+* Pennachin, C., 85
+* Penney, J., 215
+* Peraya, D., 153
+* Pérez-Lauzon, Sara, 129, 133, 134
+* Perkmann, M., 165
+* Perrigo, B., 87
+* 个性化, 35, 47, 152, 156, 158, **173**, 180
+* Ubuntu 中的人格, 22, 23
+* 请愿和申诉机制, 48, 292, 297
+* Petruscu, P., 181
+* Pettigrew, A. M., 111
+* Peylo, C., 155
+* Pham, A., 39
+* 马尔堡菲利普斯大学
+  * Yuki (机器人), 167, **173**
+* Philosobot, **174**
+* 哲学与工程合作, 90
+* 钓鱼邮件, 86
+* Pichai, S., 83
+* Pickering, A., 39
+* Pineau, J., 120
+* Piracha, Daoud, 116
+* Pistilli, Giada, 6, 82, 94, 95
+* Pistilli, M. D., 153
+* 抄袭, 158, 159
+* Plagiarism Check, **174**
+* Planet Labs, 121
+* Plasschaert, A., 308
+* 平台
+  * 协作和联网, 169, 170, **174**, **175**
+  * 零工工作, 132, 134–136
+  * Google, 35, 36–39, 40, 41
+  * 与立法, 65–66
+  * 平台中的权力集中, 100–101
+* Plechero, M., 133
+* Podsiadlowski, J. H.A., 304, 305
+* Poellhuber, Bruno, 7, 151, 153, 209–210, 211
+* 政策评估
+  * HCAI 框架, 290–294
+  * 停车定价模拟, 294–298
+* 政策制定
+  * 在人工智能发展中, 96–97, 101–102, 211, 319, 326
+  * 能力建设, 98–99
+  * 使用人工智能, 4, 252–253
+* Polonski, S., 53
+* 流行文化和人工智能, 189
+* *Port Elizabeth Municipality v Various Occupiers*, 25, 28, 29
+* Posner, R. A., 72
+* 权力
+  * 权力持有者, 22, 73, 100–101, 102
+  * 与隐私权衡, 77
+* Prabu, R., 120
+* 实践特征, 51–52
+* 预测应用, 53–54, 144, 153
+* 定价应用, 53–54, 294–298
+* 原则和指南
+  * 欧洲委员会, 21–22, 148, 255
+  * 以人为中心的人工智能, 2–3, 119–121, 275–276, 290
+  * 转化为实践, 309–311
+  * Ubuntu 与技术, 27–28
+* 隐私
 
 ### AI 挑战
+
 * `AI challenges`, 47–48, 70–71, 76–78, 290
 
 ### 儿童视角
+
 * `children’s perspective`, 234–235
 
 ### 医疗保健关切
+
 * `healthcare concerns`, 107
 
 ### 历史与趋势
+
 * `history and trends`, 71–76, 96
 
 ### 流程 vs. 输出
+
 * `processes vs. outputs`, 3, 100
 
 ### 用户画像
+
 * `profiling`, 47–48
+
+
 
 ### Prud’homme, Benjamin
 * `Prud’homme, Benjamin`, 98
@@ -7303,7 +7275,6 @@ Charisi 和 Dignum 关于通过儿童人工智能视角审视监管沙盒的论�
 * `public sector applications`, 287, 288–290
 
 ## Q
-
 * `Qadir, J.`, 157
 * `quality of work`, 131–132
 * `Quebec Digital Competency Framework`, 159
@@ -7311,7 +7282,6 @@ Charisi 和 Dignum 关于通过儿童人工智能视角审视监管沙盒的论�
 * `Quintana, Christopher`, 6, 46
 
 ## R
-
 * `Radianti, J.`, 166
 * `Rafanelli, L. M.`, 223
 * `Raji, I. D.`, 219
@@ -7405,7 +7375,6 @@ Charisi 和 Dignum 关于通过儿童人工智能视角审视监管沙盒的论�
 * `Ryan, R. M.`, 268
 
 ## S
-
 * `Sadin, E.`, 87
 * `safety`
   * content-filtering，87–88
@@ -7437,584 +7406,382 @@ Charisi 和 Dignum 关于通过儿童人工智能视角审视监管沙盒的论�
 * `Schwab, K.`, 36
 * `science fiction`, 192–193
 * `SciLinkR`, **174**
-
-
-
-
-
-*   Scott, W.R., 4
-
-*   搜索引擎, 83, 84, 181
-
-*   Searle, John, 39, 82
-
-*   Seeber, I., 260, 261
-
-*   Seidl, T., 133
-
-*   Seiler, D., 304, 306
-
-*   Sejnowski, T., 158
-
-*   Selbst, A. D., 219, 291
-
-*   Selinger, Evan, 49
-
-*   Selwyn, N., 166
-
-*   Sen, A., 220
-
-*   Seneviratne, M. G., 106, 108
-
-*   Sentient AI Trap, 83
-
-*   Sepulveda, M., 76
-
-*   Shadbolt, N., 262
-
-*   Shah, A., 121, 124
-
-*   Shankar, S., 289
-
-*   Shearer, E., 77
-
-*   “shiny object” syndrome, 59–60
-
-*   Shneiderman, B., 21, 36, 53, 54, 107, 108, 109, 111, 117, 129, 131, 293, 305
-
-*   Shorman, S., 167
-
-*   Shoup, D., 294, 296
-
-*   Shull, A., 218
-
-*   side-effects model, 293–294, 297
-
-*   Sigfrids, A., 36
-
-*   SignAll, `173`
-
-*   Sim, M., 164
-
-*   Simon, Herbert, 39
-
-*   Simonite, T., 215
-
-*   Sinclair College
-    *   SignAll, `173`
-
-*   Singapore
-    *   Government Technology Agency, 86
-
-*   Singh, S., 170
-
-*   *Single Man, A* (Isherwood), 78
-
-*   Siyavula Education, 209
-
-*   Sjödin, D., 312
-
-*   skills, 50–51, 54, 172, 205–206
-
-*   Sloane, M., 313
-
-*   Smart, A., 288
-
-*   smart cities, 294
-
-*   Smart, P. R., 262
-
-*   SmartUniversity project, `173`
-
-*   Smith, L. B., 233
-
-*   Smith, M. N., 39
-
-*   Smolan, S., 75
-
-*   social credit systems, 288, 290
-
-*   social justice concerns, 86–87, 220–224
-
-*   social media
-    *   AI-generated images on, 189
-    *   AI systems in, 179–180
-    *   experiments, 183–184
-    *   influence on users, 49–50, 181–182
-
-*   socialization in university, 156
-
-*   society
-    *   and acceptability of algorithms, 252
-    *   analysis of change, 194, 198
-    *   exclusion from, 24–25
-    *   and universities, 166, 170–171
-    *   and workplace conditions, 137
-
-*   Society 5.0, 276–277, 279, 280
-
-*   software
-    *   agile development, 278–279
-    *   failures, 67n17; *see also* algorithms
-
-*   Sok, S., 158
-
-*   solidarity, 30
-
-*   Solove, Daniel, 70
-
-*   Sony, Michael, 261
-
-*   Sorbring, E., 235
-
-*   Sorgner, S. L., 42
-
-*   South African Constitutional Court, 23, 24, 25–26, 28, 29
-
-*   South Korea elder care homes, 18
-
-*   Southgate, E., 151
-
-*   Sparrow, B., 41
-
-*   speech-to-text (STT), 194
-
-*   Spencer, D., 131
-
-*   Spies, R., 262, 271
-
-*   Spigarelli, F., 170
-
-*   Sporle, A., 29
-
-*   St-Vincent, M., 264
-
-*   Staffordshire University
-    *   Beacon chatbot, `173`
-
-*   stakeholders, 4–5, 96–97, 310, 311–312; *see also* multistakeholders
-
-*   standardization, 136, 186
-
-*   standards, 65, 66, 110, 218–219
-
-*   Stanford University, `174`
-
-*   Stark, L., 135
-
-*   Starke, C., 289
-
-*   Stary, C., 262
-
-*   Staveland, L. E., 269
-
-*   Stephens-Davidowitz, S., 35
-
-*   Stiegler, Bernard, 36
-
-*   Stix, C., 308
-
-*   Stoilova, M., 234
-
-*   Stoljar, N., 22
-
-*   Stroud, D., 133
-
-*   Stuckenschmidt, Heiner, 8, 287
-
-*   students, 154, 167, 169
-
-*   Suchman, L., 221
-
-*   surveillance, 73
-
-*   Susar, D., 288, 289, 292
-
-*   Sustainability in the Digital Age, 117, 119, 121, 124, 125
-
-*   Switzerland, 218
-
-*   Syed, J., 304
-
-*   symptoms vs. criteria, 146
-
-*   Synofzik, M., 235
-
-*   Syriopoulou-Delli, C., 166
-
-*   Systems Framework and Analysis Methodology, 263
-
-*   Syverson, C., 133
-
-*   Szalma, J. L., 263, 264
-
-### T
-
-*   Tambe, P., 306, 311
-
-*   Tao, K., 145
-
-*   Tasioulas, J., 130, 137
-
-*   task automation, 206–207, 268, 271, 288
-
-*   taxi industry deregulation, 134–135
-
-*   Te Hiku Media, 29, 90
-
-*   teachers, 152, 167, 210
-
-*   team diversity, 18, 22, 26, 311–312, 313
-
-*   techno-centrism, 131, 136, 261–262
-
-*   technologies
-    *   benefits representation, 221
-    *   blockchain, 166, 170, `175`
-    *   demystification of, 198
-    *   and ethics, 48–53, 86
-    *   as extension of self, 49, 75–76
-    *   and human biology metaphors, 193
-    *   human-centeredness in, 15–17
-    *   legal frameworks for, 59–63
-    *   and power, 22
-    *   and values, 20; *see also* innovation
-
-*   technology deployments
-    *   accountability in, 109–110
-    *   air traffic management example, 96
-    *   and dignity, 27
-    *   healthcare applications, 111–113
-
-
-
-
-
-### T
-
-*   实现差距，305，307–312
-*   在公共部门，291
-*   大学申请，165–166
-*   技术开发
-    *   设计流程，19–20
-    *   对话差距，311–312
-    *   以人为中心，5，13–15，108，251–252
-    *   包容性，325
-    *   与 Ubuntu 原则，27–28
-*   Teller, Marina，8，250，251，252，255，322
-*   Teng, Mélisande，116
-*   文本生成，4，87–88，194
-*   Thatcher, J.，164
-*   Thelen, K.，135
-*   第三方原则，73
-*   Thompson, S.，305
-*   Thorley, T.，186
-*   Tiku, N.，83
-*   Timperley, V.，133
-*   Toll, D.，290
-*   Tooley, U. A.，233
-*   Topol, E.，105，106
-*   训练数据
-    *   咨询，123，185–187
-    *   持续改进，294
-    *   由众包工作者提供，86–87
-    *   与隐私，77
-    *   问题，3–4，88，120，217–218
-    *    secrecy，183
-*   转录和翻译，15
-*   Transformers（模型），83
-*   透明度
-    *   作为 AI 原则，148
-    *   在内容分类器中，185–187
-    *   文档记录，325
-    *   与人工智能合作伙伴关系，324–325
-    *   在政策制定中，211，292
-    *   在推荐系统中，183–185
-    *   与监管，63
-    *   在沙盒实验中，242
-    *   在技术开发中，252，281，282–283，297，313
-*   审判程序，141–142
-*   信任
-    *   管理，96，120，123–124，`175`，289，293
-    *   在技术中，77，170，292
-*   Tsamados, A.，47，48
-*   Turner, A. M.，73
-*   导师和辅导系统，152，155，169
-*   Tuunainen, J.，164
-*   Twitter，184–185
+* `Scott, W.R.`, 4
+* `搜索引擎`, 83, 84, 181
+* `Searle, John`, 39, 82
+* `Seeber, I.`, 260, 261
+* `Seidl, T.`, 133
+* `Seiler, D.`, 304, 306
+* `Sejnowski, T.`, 158
+* `Selbst, A. D.`, 219, 291
+* `Selinger, Evan`, 49
+* `Selwyn, N.`, 166
+* `Sen, A.`, 220
+* `Seneviratne, M. G.`, 106, 108
+* `Sentient AI Trap`, 83
+* `Sepulveda, M.`, 76
+* `Shadbolt, N.`, 262
+* `Shah, A.`, 121, 124
+* `Shankar, S.`, 289
+* `Shearer, E.`, 77
+* `“shiny object” syndrome`, 59–60
+* `Shneiderman, B.`, 21, 36, 53, 54, 107, 108, 109, 111, 117, 129, 131, 293, 305
+* `Shorman, S.`, 167
+* `Shoup, D.`, 294, 296
+* `Shull, A.`, 218
+* `side-effects model`, 293–294, 297
+* `Sigfrids, A.`, 36
+* `SignAll`, `173`
+* `Sim, M.`, 164
+* `Simon, Herbert`, 39
+* `Simonite, T.`, 215
+* `Sinclair College`
+  * `SignAll`, `173`
+* `Singapore`
+  * Government Technology Agency, 86
+* `Singh, S.`, 170
+* `*Single Man, A* (Isherwood)`, 78
+* `Siyavula Education`, 209
+* `Sjödin, D.`, 312
+* `skills`, 50–51, 54, 172, 205–206
+* `Sloane, M.`, 313
+* `Smart, A.`, 288
+* `smart cities`, 294
+* `Smart, P. R.`, 262
+* `SmartUniversity project`, `173`
+* `Smith, L. B.`, 233
+* `Smith, M. N.`, 39
+* `Smolan, S.`, 75
+* `social credit systems`, 288, 290
+* `social justice concerns`, 86–87, 220–224
+* `social media`
+  * AI-generated images on, 189
+  * AI systems in, 179–180
+  * experiments, 183–184
+  * influence on users, 49–50, 181–182
+* `socialization in university`, 156
+* `society`
+  * and acceptability of algorithms, 252
+  * analysis of change, 194, 198
+  * exclusion from, 24–25
+  * and universities, 166, 170–171
+  * and workplace conditions, 137
+* `Society 5.0`, 276–277, 279, 280
+* `software`
+  * agile development, 278–279
+  * failures, 67n17; *see also* algorithms
+* `Sok, S.`, 158
+* `solidarity`, 30
+* `Solove, Daniel`, 70
+* `Sony, Michael`, 261
+* `Sorbring, E.`, 235
+* `Sorgner, S. L.`, 42
+* `South African Constitutional Court`, 23, 24, 25–26, 28, 29
+* `South Korea elder care homes`, 18
+* `Southgate, E.`, 151
+* `Sparrow, B.`, 41
+* `speech-to-text (STT)`, 194
+* `Spencer, D.`, 131
+* `Spies, R.`, 262, 271
+* `Spigarelli, F.`, 170
+* `Sporle, A.`, 29
+* `St-Vincent, M.`, 264
+* `Staffordshire University`
+  * Beacon chatbot, `173`
+* `stakeholders`, 4–5, 96–97, 310, 311–312; *see also* multistakeholders
+* `standardization`, 136, 186
+* `standards`, 65, 66, 110, 218–219
+* `Stanford University`, `174`
+* `Stark, L.`, 135
+* `Starke, C.`, 289
+* `Stary, C.`, 262
+* `Staveland, L. E.`, 269
+* `Stephens-Davidowitz, S.`, 35
+* `Stiegler, Bernard`, 36
+* `Stix, C.`, 308
+* `Stoilova, M.`, 234
+* `Stoljar, N.`, 22
+* `Stroud, D.`, 133
+* `Stuckenschmidt, Heiner`, 8, 287
+* `students`, 154, 167, 169
+* `Suchman, L.`, 221
+* `surveillance`, 73
+* `Susar, D.`, 288, 289, 292
+* `Sustainability in the Digital Age`, 117, 119, 121, 124, 125
+* `Switzerland`, 218
+* `Syed, J.`, 304
+* `symptoms vs. criteria`, 146
+* `Synofzik, M.`, 235
+* `Syriopoulou-Delli, C.`, 166
+* `Systems Framework and Analysis Methodology`, 263
+* `Syverson, C.`, 133
+* `Szalma, J. L.`, 263, 264
+
+## T
+* `Tambe, P.`, 306, 311
+* `Tao, K.`, 145
+* `Tasioulas, J.`, 130, 137
+* `task automation`, 206–207, 268, 271, 288
+* `taxi industry deregulation`, 134–135
+* `Te Hiku Media`, 29, 90
+* `teachers`, 152, 167, 210
+* `team diversity`, 18, 22, 26, 311–312, 313
+* `techno-centrism`, 131, 136, 261–262
+* `technologies`
+  * benefits representation, 221
+  * blockchain, 166, 170, `175`
+  * demystification of, 198
+  * and ethics, 48–53, 86
+  * as extension of self, 49, 75–76
+  * and human biology metaphors, 193
+  * human-centeredness in, 15–17
+  * legal frameworks for, 59–63
+  * and power, 22
+  * and values, 20; *see also* innovation
+* `technology deployments`
+  * accountability in, 109–110
+  * air traffic management example, 96
+  * and dignity, 27
+  * healthcare applications, 111–113
+
+## T
+* `实现差距`, 305, 307–312
+* `在公共部门`, 291
+* `大学申请`, 165–166
+* `技术开发`
+  * 设计流程，19–20
+  * 对话差距，311–312
+  * 以人为中心，5，13–15，108，251–252
+  * 包容性，325
+
+
+
+## 与 Ubuntu 原则，27–28
+
+* Teller, Marina，8，250，251，252，255，322
+* Teng, Mélisande，116
+* 文本生成，4，87–88，194
+* Thatcher, J.，164
+* Thelen, K.，135
+* 第三方原则，73
+* Thompson, S.，305
+* Thorley, T.，186
+* Tiku, N.，83
+* Timperley, V.，133
+* Toll, D.，290
+* Tooley, U. A.，233
+* Topol, E.，105，106
+* 训练数据
+  * 咨询，123，185–187
+  * 持续改进，294
+  * 由众包工作者提供，86–87
+  * 与隐私，77
+  * 问题，3–4，88，120，217–218
+  * secrecy，183
+* 转录和翻译，15
+* Transformers（模型），83
+* 透明度
+  * 作为 AI 原则，148
+  * 在内容分类器中，185–187
+  * 文档记录，325
+  * 与人工智能合作伙伴关系，324–325
+  * 在政策制定中，211，292
+  * 在推荐系统中，183–185
+  * 与监管，63
+  * 在沙盒实验中，242
+  * 在技术开发中，252，281，282–283，297，313
+* 审判程序，141–142
+* 信任
+  * 管理，96，120，123–124，`175`，289，293
+  * 在技术中，77，170，292
+* Tsamados, A.，47，48
+* Turner, A. M.，73
+* 导师和辅导系统，152，155，169
+* Tuunainen, J.，164
+* Twitter，184–185
 
 ## U
 
-*   Ubalijoro, Éliane，116，117，119，120，122，125
-*   Uber，134–136
-*   Ubuntu
-    *   关于尊严和包容，24–25
-    *   关于智能，29
-    *   哲学，22，23–24，95
-    *   关于关系自主，25–26
-    *   与价值敏感设计，27–28
-*   Umapathy, V.，35
-*   UNESCO，237
-*   UNICEF，236–237，238，241，242
-*   工会，134，135，136，204–205
-*   英国，107，109，233
-*   联合国
-    *   《儿童权利公约》，236
-    *   粮食及农业组织，117
-*   美国
-    *   AI 应用，288
-    *   加州适龄设计法案，237–238
-    *   食品药品监督管理局，107
-    *   威斯康星州司法系统，144–145
-*   大学
-    *   AI 技术，165–171，`173`–`175`
-    *   参与和外联，163–164，165，`168`，171–172，210
-    *   作为服务提供者，164
-*   哥德堡大学，169，`174`
-*   堪萨斯大学护理学院
-    *   Metaversity 项目，167，`173`
-*   蒙特利尔大学学术健康中心，113
-*   内罗毕大学机器人，`173`
-*   那不勒斯 Federico II 大学
-    *   Abii（机器人），169，`173`
-*   特伦托大学
-    *   SmartUniversity，`173`
-*   都灵大学
-    *   HPC4AI，171，`175`
-*   威尼斯 Ca’ Foscari 大学
-    *   Ithaca（虚拟助手），`174`
-*   以用户为中心的设计，3，108
-*   用户界面，53–54
-*   用户
-    *   数据分身，34，35，38–39
-    *   学生和教师，152，154，167，169，210；另见 children
+* Ubalijoro, Éliane，116，117，119，120，122，125
+* Uber，134–136
+* Ubuntu
+  * 关于尊严和包容，24–25
+  * 关于智能，29
+  * 哲学，22，23–24，95
+  * 关于关系自主，25–26
+  * 与价值敏感设计，27–28
+* Umapathy, V.，35
+* UNESCO，237
+* UNICEF，236–237，238，241，242
+* 工会，134，135，136，204–205
+* 英国，107，109，233
+* 联合国
+  * 《儿童权利公约》，236
+  * 粮食及农业组织，117
+* 美国
+  * AI 应用，288
+  * 加州适龄设计法案，237–238
+  * 食品药品监督管理局，107
+  * 威斯康星州司法系统，144–145
+* 大学
+  * AI 技术，165–171，`173`–`175`
+  * 参与和外联，163–164，165，`168`，171–172，210
+  * 作为服务提供者，164
+* 哥德堡大学，169，`174`
+* 堪萨斯大学护理学院
+  * Metaversity 项目，167，`173`
+* 蒙特利尔大学学术健康中心，113
+* 内罗毕大学机器人，`173`
+* 那不勒斯 Federico II 大学
+  * Abii（机器人），169，`173`
+* 特伦托大学
+  * SmartUniversity，`173`
+* 都灵大学
+  * HPC4AI，171，`175`
+* 威尼斯 Ca’ Foscari 大学
+  * Ithaca（虚拟助手），`174`
+* 以用户为中心的设计，3，108
+* 用户界面，53–54
+* 用户
+  * 数据分身，34，35，38–39
+  * 学生和教师，152，154，167，169，210；另见 children
 
 ## V
 
-*   Vågen, T.-G.，123
-*   Valle-Cruz, D.，288
-*   Vallor, Shannon，5，13，50–51，53，54，99，100，101
-*   价值敏感设计，17，27–28
-*   价值观
-    *   宪法，284–285
-    *   与法律规则，250
-    *   与技术，20，28，87–88，180，191
-    *   西方 vs. 共同利益，95
-*   Van Bavel, J.，181
-*   Van den Broeck, A.，269
-*   Van Dijk, J.，38
-*   van Esch, P.，304
-*   van Marle, Karin，24–25
-*   van Noordt, C.，288，291，299
-*   van Norren, Dorine，29
-*   Vandaele, K.，136
-*   Vargo, S. L.，164
-*   Vasudevan, K.，135
-*   Vaswani, A.，83
-*   Veale, M.，287
-*   Vedung, E.，290，293
-*   Véliz, Carissea，73，74
-*   Ventresca, M. J.，4
-*   Vera, A.，29
-*   Verbeek, P.-P.，51
-*   Vicente, K. J.，262，264
-*   Vincent, J.，86
-*   Vinuesa, R.，289
-*   Virilio, P.，34
-*   虚拟助手，169
-*   虚拟现实，166，`175`；另见 CHOM5KY vs. CHOMSKY
-
-
-
-
-
-*   虚拟游览，**175**
-
-*   美德习惯，50–51
-
-*   von Schomberg, R., 63
+* Vågen, T.-G.，123
+* Valle-Cruz, D.，288
+* Vallor, Shannon，5，13，50–51，53，54，99，100，101
+* 价值敏感设计，17，27–28
+* 价值观
+  * 宪法，284–285
+  * 与法律规则，250
+  * 与技术，20，28，87–88，180，191
+  * 西方 vs. 共同利益，95
+* Van Bavel, J.，181
+* Van den Broeck, A.，269
+* Van Dijk, J.，38
+* van Esch, P.，304
+* van Marle, Karin，24–25
+* van Noordt, C.，288，291，299
+* van Norren, Dorine，29
+* Vandaele, K.，136
+* Vargo, S. L.，164
+* Vasudevan, K.，135
+* Vaswani, A.，83
+* Veale, M.，287
+* Vedung, E.，290，293
+* Véliz, Carissea，73，74
+* Ventresca, M. J.，4
+* Vera, A.，29
+* Verbeek, P.-P.，51
+* Vicente, K. J.，262，264
+* Vincent, J.，86
+* Vinuesa, R.，289
+* Virilio, P.，34
+* 虚拟助手，169
+* 虚拟现实，166，`175`；另见 CHOM5KY vs. CHOMSKY
+* 虚拟游览，`175`
+* 美德习惯，50–51
+* von Schomberg, R., 63
 
 ## W
 
-*   Wachter, S., 22
-
-*   Wagner, I., 130, 133
-
-*   Wahlster, W., 132–133
-
-*   Waldman, A. E., 219
-
-*   Wallach, W., 277
-
-*   Walsh, G., 312
-
-*   Wang, D., 35, 36
-
-*   Wang, G., 237
-
-*   Wang, Y., 159, 165, 288
-
-*   Ward, A. F., 41
-
-*   Warhurst, C., 131
-
-*   Warren, S., 71
-
-*   Watson, D., 165
-
-*   Watts, Alan, 75
-
-*   Watumull, Jeffrey, 193
-
-*   Waze, 321, 322
-
-*   Wedel, M., 166
-
-*   Wegner, D. M., 41
-
-*   Weinel, M., 133
-
-*   Wells, K. J., 135, 136
-
-*   Wenger, E., 152, 155
-
-*   西点军校
-
-    *   Bina48 机器人，**173**, 197
-
-*   Westin, A., 72
-
-*   Whittlestone, J., 310
-
-*   Why Not Lab, 203
-
-*   Wiklund, M., 108
-
-*   Wile, R., 74
-
-*   Wilensky, U., 294
-
-*   Wilkinson, M. D., 119
-
-*   Wille, B., 308
-
-*   Williams, C., 291
-
-*   Williams, R., 292, 293
-
-*   Wilton, L., 159
-
-*   Winner, Langdon, 19
-
-*   Wirtz, B. W., 287, 288, 289
-
-*   威斯康星州司法系统，144–145
-
-*   Wittgenstein, Ludwig, 83, 142–143, 146
-
-*   Wójcik, Malwina Anna, 5, 21, 94, 95, 321
-
-*   Wolfe, M., 234
-
-*   Wollmann, H., 290
-
-*   经济与社会妇女论坛，305, 307
-
-*   Wood, A. J., 132, 133
-
-*   Woods, H. S., 304
-
-*   Woods, S., 305
-
-*   工作
-
-    *   分析，262–265, 268–269
-
-    *   条件，206–207
-
-    *   委员会，134
-
-    *   质量，131–132
-
-*   工作场所，130–134, 137–138, 205
-
-*   世界银行，121, 122
-
-*   世界经济论坛，215, 218, 310
-
-*   世界卫生组织（WHO），109
-
-*   Wright, S., 133
-
-*   Wronsky, E., 312
-
-*   Wu, X., 293
-
-*   Wyner, J. S., 164
+* Wachter, S., 22
+* Wagner, I., 130, 133
+* Wahlster, W., 132–133
+* Waldman, A. E., 219
+* Wallach, W., 277
+* Walsh, G., 312
+* Wang, D., 35, 36
+* Wang, G., 237
+* Wang, Y., 159, 165, 288
+* Ward, A. F., 41
+* Warhurst, C., 131
+* Warren, S., 71
+* Watson, D., 165
+* Watts, Alan, 75
+* Watumull, Jeffrey, 193
+* Waze, 321, 322
+* Wedel, M., 166
+* Wegner, D. M., 41
+* Weinel, M., 133
+* Wells, K. J., 135, 136
+* Wenger, E., 152, 155
+* 西点军校
+  * Bina48 机器人，`173`, 197
+* Westin, A., 72
+* Whittlestone, J., 310
+* Why Not Lab, 203
+* Wiklund, M., 108
+* Wile, R., 74
+* Wilensky, U., 294
+* Wilkinson, M. D., 119
+* Wille, B., 308
+* Williams, C., 291
+* Williams, R., 292, 293
+* Wilton, L., 159
+* Winner, Langdon, 19
+* Wirtz, B. W., 287, 288, 289
+* 威斯康星州司法系统，144–145
+* Wittgenstein, Ludwig, 83, 142–143, 146
+* Wójcik, Malwina Anna, 5, 21, 94, 95, 321
+* Wolfe, M., 234
+* Wollmann, H., 290
+* 经济与社会妇女论坛，305, 307
+* Wood, A. J., 132, 133
+* Woods, H. S., 304
+* Woods, S., 305
+* 工作
+  * 分析，262–265, 268–269
+  * 条件，206–207
+  * 委员会，134
+  * 质量，131–132
+* 工作场所，130–134, 137–138, 205
+* 世界银行，121, 122
+* 世界经济论坛，215, 218, 310
+* 世界卫生组织（WHO），109
+* Wright, S., 133
+* Wronsky, E., 312
+* Wu, X., 293
+* Wyner, J. S., 164
 
 ## X
 
-*   X，*见* Twitter
-
-*   XAI（可解释人工智能），292–293
-
-*   Xiong, W., 260, 262
+* X，*见* Twitter
+* XAI（可解释人工智能），292–293
+* Xiong, W., 260, 262
 
 ## Y
 
-*   Yamamoto, Tatsuhiko, 275
-
-*   Yau, J. Y. K., 151, 153
-
-*   Yeung, K., 218, 219
-
-*   Young, E., 308, 312
-
-*   Young, M., 121
-
-*   YouTube，184
-
-*   Yudken, J. S., 134
-
-*   Yuki（机器人），167, **173**
+* Yamamoto, Tatsuhiko, 275
+* Yau, J. Y. K., 151, 153
+* Yeung, K., 218, 219
+* Young, E., 308, 312
+* Young, M., 121
+* YouTube，184
+* Yudken, J. S., 134
+* Yuki（机器人），167, `173`
 
 ## Z
 
-*   Zampieri, M., 186
-
-*   Zehlike, M., 27
-
-*   Zhang, B., 290
-
-*   Zhang, K., 169
-
-*   Zhang, Q., 179
-
-*   Zheng, T., 260
-
-*   Zimmermann, A., 216, 217, 218, 221
-
-*   Zou, J., 312
-
-*   Zuboff, S., 34, 38, 131, 132, 137
-
-*   Zuckerberg, Mark, 74
-
-*   Zuiderwijk, A., 287, 288
-
-*   Zukeyama, Kodai, 8, 275
-
-*   Zwart, Tom, 22
+* Zampieri, M., 186
+* Zehlike, M., 27
+* Zhang, B., 290
+* Zhang, K., 169
+* Zhang, Q., 179
+* Zheng, T., 260
+* Zimmermann, A., 216, 217, 218, 221
+* Zou, J., 312
+* Zuboff, S., 34, 38, 131, 132, 137
+* Zuckerberg, Mark, 74
+* Zuiderwijk, A., 287, 288
+* Zukeyama, Kodai, 8, 275
+* Zwart, Tom, 22
 
 * * *
 
-1.  \* 博洛尼亚大学和卢森堡大学法律、科学与技术博士候选人。↩
-
-2.  \* 本研究作为社会正义与人工智能讲席——Abeona-ENS-Obvia（2020–2022）的一部分进行↩
-
-3.  \* 欧洲委员会，联合研究中心。所表达的观点纯属作者个人观点，在任何情况下均不得视为欧洲委员会的官方立场。↩
-
-4.  \* 教授，蔚蓝海岸大学 – GREDEG，CNRS；3IA 蔚蓝海岸，经济法与人工智能讲席。本工作受益于国家研究署管理的国家投资计划 3IA 蔚蓝海岸项目提供的国家援助，参考编号为 ANR-19-P3IA-0002。↩
-
-5.  \* 我们衷心感谢庆应大学全球研究院“庆应 2040 研究项目”的支持。本章部分包含由 JSPS KAKENHI 资助编号 20K22059 支持的工作。↩
-
+1. * 博洛尼亚大学和卢森堡大学法律、科学与技术博士候选人。↩
+2. * 本研究作为社会正义与人工智能讲席——Abeona-ENS-Obvia（2020–2022）的一部分进行↩
+3. * 欧洲委员会，联合研究中心。所表达的观点纯属作者个人观点，在任何情况下均不得视为欧洲委员会的官方立场。↩
+4. * 教授，蔚蓝海岸大学 – GREDEG，CNRS；3IA 蔚蓝海岸，经济法与人工智能讲席。本工作受益于国家研究署管理的国家投资计划 3IA 蔚蓝海岸项目提供的国家援助，参考编号为 ANR-19-P3IA-0002。↩
+5. * 我们衷心感谢庆应大学全球研究院“庆应 2040 研究项目”的支持。本章部分包含由 JSPS KAKENHI 资助编号 20K22059 支持的工作。↩

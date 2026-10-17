@@ -1,12 +1,5 @@
+
 # 两阶段绿色合成银纳米颗粒：Box-Behnken 设计到机器学习
-
-
-
-
-
-
-
-
 
 向本期刊提交您的文章
 
@@ -15,15 +8,6 @@
 查看相关文章
 
 查看Crossmark数据
-
-
-
-
-
-
-
-
-
 
 ## Introduction
 
@@ -56,9 +40,7 @@ BBD 是一种经济的方法，因子水平较少，已被广泛用于 NPS 过�
 
 由于 BBD 可以为给定的输入范围拟合多项式方程，因此被视为生成用于 ML 阶段的数据样本的起点。然后在下一阶段形成神经网络（NN）进行训练和测试。该提出的方法适用于任何使用 RSM 方法的领域。为了显示其适用性，选择了 NPS 过程，并使用真实实验数据验证了系统的性能，结果显示出巨大的潜力。
 
-在当前研究中，研究了植物提取物对绿色合成银纳米粒子的还原潜力。首先，在 Erlenmeyer 规模上使用统计实验设计进行银纳米粒子的生物合成以进行优化。然后，应用数据生成和 ML 来学习输入/输出关系和
-
-泛化。据作者所知，这种采用 BBD 和 ML 的两步绿色 NPS 方法，即本研究的创新点，在文献中从未被报道过。纳米颗粒的尺寸对于各种生物技术研究中的有效表面相互作用至关重要。因此，根据工艺中使用的条件以低误差率估算尺寸非常重要。这使得能够采用更少实验的经济方法。就此而言，这项工作代表了一种创新方法，也是利用 ML 进行生物纳米颗粒商业化生产的一个指南。该两阶段方法的细节在以下章节中描述。
+在当前研究中，研究了植物提取物对绿色合成银纳米粒子的还原潜力。首先，在 Erlenmeyer 规模上使用统计实验设计进行银纳米粒子的生物合成以进行优化。然后，应用数据生成和 ML 来学习输入/输出关系和泛化。据作者所知，这种采用 BBD 和 ML 的两步绿色 NPS 方法，即本研究的创新点，在文献中从未被报道过。纳米颗粒的尺寸对于各种生物技术研究中的有效表面相互作用至关重要。因此，根据工艺中使用的条件以低误差率估算尺寸非常重要。这使得能够采用更少实验的经济方法。就此而言，这项工作代表了一种创新方法，也是利用 ML 进行生物纳米颗粒商业化生产的一个指南。该两阶段方法的细节在以下章节中描述。
 
 在本研究中，银纳米颗粒（AgNPs）的生物合成采用黄星芹植物提取物作为生物还原剂进行。含有植物提取物的储备液以 1 滴/秒的速度逐滴加入到含有 AgNO₃ 的培养基中，以启动纳米颗粒生产过程。
 
@@ -108,9 +90,9 @@ NPS 实验已在 Erlenmeyer 系统中以 25 mL 工作体积的小规模进行，
 | 金属浓度 (mM) | 1 | 10 | 10 | 1.00 |
 | 总运行次数 |  |  | 5,000 |  |
 
-使用 Design-Expert 软件获得的 BBD 二次多项式公式，对给定输入（pH、孵育时间和金属浓度）生成了假设输出（HMD）。输入的最小值和最大值如表 2 的第二和第三列所示，选择考虑了其最常见的范围，而不考虑之前实验中使用的范围。要生成的最小值和最大值之间的不同值的数量在表 2 的“数量”列中给出。10 个介于 4 和 10 之间的不同 pH 值；50 个介于 10 min 和 240 min 之间的不同孵育时间值；以及 10 个介于 1 mM 和 10 mM 之间的不同金属浓度值的组合产生了 5,000（10 × 50 × 10）个数据样本。间隔是输入的增量值，根据 Min、Max 和 Quantity 值按公式（1）计算：
+使用 Design-Expert 软件获得的 BBD 二次多项式公式，对给定输入（pH、孵育时间和金属浓度）生成了假设输出（HMD）。输入的最小值和最大值如表 2 的第二和第三列所示，选择考虑了其最常见的范围，而不考虑之前实验中使用的范围。要生成的最小值和最大值之间的不同值的数量在表 2 的“数量”列中给出。10 个介于 4 和 10 之间的不同 pH 值；50 个介于 10 min 和 240 min 之间的不同孵育时间值；以及 10 个介于 1 mM 和 10 mM 之间的不同金属浓度值的组合产生了 5,000（10 × 50 × 10）个数据样本。间隔是输入的增量值，根据 `Min`、`Max` 和 `Quantity` 值按公式（1）计算：
 
-Interval = (Max-Min)/(Quantity − 1)  (1)
+`Interval = (Max-Min)/(Quantity − 1)`  (1)
 
 这些数据用于 ML 阶段 NN 模型的训练和测试。如表 2 所示，5,000 个样本应为 ML 提供足够的数量，间隔值变得足够小且具有代表性。如有必要，对于其他类型的 NPS 和输入，可以增加数量并生成更多数据点。
 
@@ -118,25 +100,25 @@ Interval = (Max-Min)/(Quantity − 1)  (1)
 
 已构建如图 2 所示的深度 NN，使用前一阶段生成的数据进行训练和测试。
 
-在此架构中，有三个输入变量：x1 为 pH 值，x2 为孵育时间，x3 为金属浓度。期望输出 d 为前一阶段生成的 HMD 值，y 为 NN 模型对 d 的预测值。公式（2）和（3）给出了前向传播方程。根据图 2 中使用的术语，神经元输出 z_i^[l] 计算为：
+在此架构中，有三个输入变量：`x1` 为 pH 值，`x2` 为孵育时间，`x3` 为金属浓度。期望输出 `d` 为前一阶段生成的 HMD 值，`y` 为 NN 模型对 `d` 的预测值。公式（2）和（3）给出了前向传播方程。根据图 2 中使用的术语，神经元输出 `z_i^[l]` 计算为：
 
 z_i^[l] = Σ_{j=1}^{n_{l-1}} w_{ij}^{[l]} · u_j^{[l-1]} + b_i^{[l]}   ∀i = 1,2,...,n_l, ∀l = 1,2,...,L  (2)
 
-其中 l 表示层数，w_{ij} 表示 i^{th} 神经元与 j^{th} 输入 u_j 之间的权重，b_i 表示与 i^{th} 神经元相关的偏置，n_{l-1} 表示第 (l−1)^{th} 层的神经元数，n_l 表示第 l^{th} 层的神经元数，L 表示层数。
+其中 `l` 表示层数，`w_{ij}` 表示 `i^{th}` 神经元与 `j^{th}` 输入 `u_j` 之间的权重，`b_i` 表示与 `i^{th}` 神经元相关的偏置，`n_{l-1}` 表示第 `(l−1)^{th}` 层的神经元数，`n_l` 表示第 `l^{th}` 层的神经元数，`L` 表示层数。
 
 然后该输出经过非线性激活函数处理为：
 
 u_i^[l] = a^[l](z_i^[l])   ∀i = 1,2,...,n_l, ∀l = 1,2,...,L  (3)
 
-其中 a 可以是 sigmoid、ReLU、tanh 等。在这些公式中，输入变量 x_j 表示为 u_j^{[0]}，NN 输出 y 表示为 u^{[L]}。
+其中 `a` 可以是 `sigmoid`、`ReLU`、`tanh` 等。在这些公式中，输入变量 `x_j` 表示为 `u_j^{[0]}`，NN 输出 `y` 表示为 `u^{[L]}`。
 
 基于梯度下降算法的权重更新由以下反向传播方程计算，如下所示：
 
 w_{ij}^{[l]} = w_{ij}^{[l]} − α ∂J/∂w_{ij}^{[l]}   ∀i = 1,2,...,n_l, ∀j = 1,2,...,n_{l-1}, ∀l = 1,2,...,L  (4)
 
-b_i^[l] = b_i^[l]} − α ∂J/∂b_i^[l]}   ∀i = 1,2,...,n_l, ∀l = 1,2,...,L  (5)
+b_i^[l]} = b_i^[l]} − α ∂J/∂b_i^[l]}   ∀i = 1,2,...,n_l, ∀l = 1,2,...,L  (5)
 
-其中 α 为学习率，J 为要最小化的均方误差代价函数：
+其中 `α` 为学习率，`J` 为要最小化的均方误差代价函数：
 
 J = 1/2 (y − d)^2  (6)
 
@@ -152,7 +134,7 @@ Design-Expert 软件建议的 17 次运行中使用的输入参数值在表 1 �
 
 HMD (nm) = 65.07959 + 3.92071 × A + 1.45168 × B − 32.08531 × C − 0.08119 × A × B + 3.8 × A × C + 0.026531 × B × C − 0.64875 × A² − 0.00339637 × B² + 0.88612 × C²  (7)
 
-其中 A、B 和 C 分别用作 pH、孵育时间和金属浓度。
+其中 `A`、`B` 和 `C` 分别用作 pH、孵育时间和金属浓度。
 
 该方程表明，正值对 NPS 具有协同效应，而负值则相反。与其他相比，金属浓度产生
 
@@ -160,7 +142,7 @@ HMD (nm) = 65.07959 + 3.92071 × A + 1.45168 × B − 32.08531 × C − 0.08119 
 
 图 2. 深度神经网络架构。
 
-方程中系数对估计纳米颗粒尺寸的分析具有更大的负面影响。用于检查模型拟合度的决定系数（R²）计算为 97.71%，与 94.77% 的“Adj.R-Squared” 相符合理。
+方程中系数对估计纳米颗粒尺寸的分析具有更大的负面影响。用于检查模型拟合度的决定系数（R²）计算为 97.71%，与 94.77% 的 `Adj.R-Squared` 相符合理。
 
 表 1 的第六列表示由该方程计算得出的输出值。然后，实际测量值与这些预测值之间的百分比误差被求出并列于最后一列，其平均值计算为 2.64%。这些数据被保留以供 ML 阶段使用，作为控制集。
 
@@ -170,11 +152,15 @@ HMD (nm) = 65.07959 + 3.92071 × A + 1.45168 × B − 32.08531 × C − 0.08119 
 
 ### 训练结果
 
-采用 3 层深度神经网络作为模型拓扑结构，第一和第二隐藏层的节点数分别为 120 和 80。L2 正则化器以因子 0.01 应用。隐藏层添加了速率为 0.1 的 Dropout。所有层均选择 ReLU 激活函数。批大小设置为 16。模型使用 Adam 优化器进行优化。为此，使用 TensorFlow 库编写了 Python 脚本，并在 Google Colaboratory 环境中运行了 1,000 个 epoch。由于学习在云端进行且网络相对较小，因此在计算能力方面没有遇到限制。
+采用 3 层深度神经网络作为模型拓扑结构，第一和第二隐藏层的节点数分别为 120 和 80。L2 正则化器以因子 0.01 应用。隐藏层添加了速率为 0.1 的 Dropout。所有层均选择 `ReLU` 激活函数。批大小设置为 16。模型使用 `Adam` 优化器进行优化。为此，使用 TensorFlow 库编写了 Python 脚本，并在 Google Colaboratory 环境中运行了 1,000 个 epoch。由于学习在云端进行且网络相对较小，因此在计算能力方面没有遇到限制。
 
 表 3. 由 BBD 公式计算的生成输入和输出。
 
 | 运行 | pH | 孵育时间 (min) | 金属浓度 (mM) | BBD 输出 HMD (nm) |
+
+
+
+|  |  |  |  |  |
 |---|---|---|---|---|
 | 1 | 4 | 10 | 1 | 65.58 |
 | 2 | 4 | 10 | 2 | 51.62 |
@@ -191,16 +177,18 @@ HMD (nm) = 65.07959 + 3.92071 × A + 1.45168 × B − 32.08531 × C − 0.08119 
 生成的 5,000 个样本数据是该模型的输入。洗牌后，其中 4,500 个（90%）用于训练，500 个（10%）用于测试。使用 TensorFlow 库拟合模型时，10% 的训练数据被保留为验证拆分。
 
 生成的 5,000 个样本数据是该模型的输入。洗牌后，其中 4,500 个（90%）用于训练，500 个（10%）用于测试。作为输出，考虑了两种情况：
+
 - BBD 的二次多项式方程，保持原样，无修改，
+
 - 带误差校正的 BBD 二次多项式方程。
 
 上述第二组输出的理由是 BBD 对控制集（表 1）的平均误差为 2.64%。如果能够消除该误差，则学习会更成功。因此，对于初始的 5,000 个样本中的每一个，都在 BBD 对应输出值 2.64% 范围内生成一个单独的随机数，并将其加到或从自身中减去以生成新值。以这种方式，形成了一组具有误差校正期望输出的新数据集。两种情况下的结果如下所示。
 
-#### 无误差校正的训练结果
+### 无误差校正的训练结果
 
 在这种情况下，模型使用生成的无输出误差校正的数据进行训练。得到的训练误差为 2.96%，测试误差为 2.85%。此外，同一模型使用具有 17 次真实实验的控制集进行测试，其输入和输出值见表 1。该集合的平均预测误差为 3.70%。
 
-#### 带误差校正的训练结果
+### 带误差校正的训练结果
 
 同一模型使用误差校正后的输出进行了新的训练。在这种情况下，训练误差为 5.94%，测试误差为 5.16%。与前一种情况相比误差值更大是预期的，因为输出是从 BBD 生成的数据（方程 (7)）中改变并扰动的。然而，当该模型与表 2 中给出的控制集的实际输出进行比较时，平均预测误差略有降低，为 3.62%。
 
@@ -232,7 +220,13 @@ HMD (nm) = 65.07959 + 3.92071 × A + 1.45168 × B − 32.08531 × C − 0.08119 
 
 ### 结果总结
 
-上述模型（“仅 BBD”、“BBD & ML”和“BBD & ML & 误差校正”）对两个真实纳米颗粒合成实验集（控制集和验证集）的实际 HMD 值与预测 HMD 值之间的平均百分比预测误差汇总于表 5。与控制集相比，仅 BBD 模型给出了最佳结果，正如预期的那样，因为其公式是专门定制的
+上述模型（“仅 BBD”、“BBD & ML”和“BBD & ML & 误差校正”）对两个真实纳米颗粒合成实验集（控制集和验证集）的实际 HMD 值与预测 HMD 值之间的平均百分比预测误差汇总于表 5。与控制集相比，仅 BBD 模型给出了最佳结果，正如预期的那样，因为其公式是专门定制的，具体针对该数据集。然而，当该模型用于新的、未见过的数据输入时，如验证集，误差显著增加，表明存在泛化问题。“BBD & ML & Err. Cor.” 案例在验证集的输入值上产生了最佳输出，显示利用 BBD、ML 和误差校正方法可获得更好的泛化和近似。
+
+需要指出的一点是，误差校正算法涉及在预设限制内生成随机值。因此，有可能用另一组经误差校正的输出集来建模更好的 NN。因此，可以自动化此部分以并行生成多组输出集和多组 NN 训练，然后选择误差最低的那一个。
+
+ML 估计的 HMD 分布随不同 pH、孵育时间和金属浓度值变化在图 3 中以图形方式显示。此类图表为优化研究提供洞见，其目标是找到使输出最小化的输入。因此，输出范围从绿色（最小，期望）到红色（最大，不期望）着色。
+
+BBD 和 NN 都被认为是当输入与输出之间数学关系没有确切信息时系统的强大数据建模工具。这些可以捕捉和表示复杂的非线性关系。[21] 在回顾 ML 和纳米颗粒文献时，发现应用实验结果的文章很少。现有文章要么仅使用 RSM，要么仅提供与 ML 相关的尺寸和颜色关联的估计数据。[18,22,32,43] 本文提出的结果表明，结合 BBD 和 NN 可为 NPS 提供更准确的估计，采用的方法成本更低、劳动量更少、时间更短，且更绿色。该方法在文献中尚未报道。
 
 表 5. 预测误差汇总。
 
@@ -242,22 +236,11 @@ HMD (nm) = 65.07959 + 3.92071 × A + 1.45168 × B − 32.08531 × C − 0.08119 
 | BBD & ML | 3.70 | 10.79 |
 | BBD & ML & 误差校正 | 3.62 | 8.49 |
 
-
-
-
 ### 调和平均直径
 
 ![](img/ceee3949c03b1c37ef76fff8972659a7_7_0.png)
 
 **图 3.** 不同 pH、孵育时间和金属浓度值下的 HMD 分布。
-
-具体针对该数据集。然而，当该模型用于新的、未见过的数据输入时，如验证集，误差显著增加，表明存在泛化问题。“BBD & ML & Err. Cor.” 案例在验证集的输入值上产生了最佳输出，显示利用 BBD、ML 和误差校正方法可获得更好的泛化和近似。
-
-需要指出的一点是，误差校正算法涉及在预设限制内生成随机值。因此，有可能用另一组经误差校正的输出集来建模更好的 NN。因此，可以自动化此部分以并行生成多组输出集和多组 NN 训练，然后选择误差最低的那一个。
-
-ML 估计的 HMD 分布随不同 pH、孵育时间和金属浓度值变化在图 3 中以图形方式显示。此类图表为优化研究提供洞见，其目标是找到使输出最小化的输入。因此，输出范围从绿色（最小，期望）到红色（最大，不期望）着色。
-
-BBD 和 NN 都被认为是当输入与输出之间数学关系没有确切信息时系统的强大数据建模工具。这些可以捕捉和表示复杂的非线性关系。[21] 在回顾 ML 和纳米颗粒文献时，发现应用实验结果的文章很少。现有文章要么仅使用 RSM，要么仅提供与 ML 相关的尺寸和颜色关联的估计数据。[18,22,32,43] 本文提出的结果表明，结合 BBD 和 NN 可为 NPS 提供更准确的估计，采用的方法成本更低、劳动量更少、时间更短，且更绿色。该方法在文献中尚未报道。
 
 ## 结论
 
@@ -290,6 +273,7 @@ Gulizar Caliskan: 概念化、方法学、写作-审阅与编辑、资源、调�
 ### ORCID
 
 Gulizar Caliskan http://orcid.org/0000-0001-6221-9495
+
 Ayca Kumluca Topalli http://orcid.org/0000-0001-7712-5790
 
 ### 数据可用性声明
@@ -299,62 +283,91 @@ Ayca Kumluca Topalli http://orcid.org/0000-0001-7712-5790
 ### 参考文献
 
 - 1. Dahounane, S. A.; Mechouet, M.; Alvarez, F. J.; Agathos, S. N.; Jeffryes, C. 微藻：纳米技术中的卓越工具。Bionatura 2016, 1, 196–201. DOI: 10.21931/RB/2016.01.04.7.
+
 - 2. Nikaeen, G.; Yousefinejad, S.; Rahmdel, S.; Samari, F.; Mahdavinia, S. 用于优化利用车前草提取物生物合成银纳米颗粒的中心复合设计并研究其抗菌、抗真菌和抗氧化活性。Sci. Rep. 2020, 10, 9642. DOI: 10.1038/s41598-020-66357-3.
+
 - 3. Shah, M.; Fawcett, D.; Sharma, S.; Tripathy, S. K.; Poinern, G. E. J. 通过生物实体绿色合成金属纳米颗粒。Materials 2015, 8, 7278–7308. DOI: 10.3390/ma8115377.
+
 - 4. Singh, J.; Dutta, T.; Kim, K. H.; Rawat, M.; Samddar, P.; Kumar, P. “绿色”合成金属及其氧化物纳米颗粒：环境修复应用。J. Nanobiotechnol. 2018, 16, 84. DOI: 10.1186/s12951-018-0408-4.
+
 - 5. Purohit, J.; Chattopadhyay, A.; Singh, N. K. 微生物纳米颗粒的绿色合成：应用方法。载于 Nanotechnology in Life Science, 2019; pp 35–60. DOI: 10.1007/978-3-030-16534-5_3.
+
 - 6. McNamara, K.; Tofail, S. A. M. 生物医学应用中的纳米颗粒。Adv. Phys. X 2017, 2, 54–88. DOI: 10.1080/23746149.2016.1254570.
+
 - 7. Khan, H. A.; Sakharkar, M. K.; Nayak, A.; Kishore, U.; Khan, A. 生物医学应用的纳米颗粒：概述；Elsevier Ltd., 2018. DOI: 10.1016/B978-0-08-100716-6.00014-3.
+
 - 8. Pantidos, N. 细菌、真菌和植物的金属纳米颗粒生物合成。J. Nanomed. Nanotechnol. 2014, 5, 1–10. DOI: 10.4172/2157-7439.1000233.
+
 - 9. Narayanan, K. B.; Sakthivel, N. 微生物的金属纳米颗粒生物合成。Adv. Colloid Interface Sci. 2010, 156, 1–13. DOI: 10.1016/j.cis.2010.02.001.
+
 - 10. Mansoor, A.; Khurshid, A.; Z.; Mansoor, E.; Khan, M. T.; Ratnayake, J.; Jamal, A. 勘误：现有纳米颗粒合成路线对其与成纤维细胞系生物相容性的影响。Molecules (vol 27, 6972, 2022). Molecules 2022, 27, 6972. DOI: 10.3390/molecules28104173.
+
 - 11. Singh, P.; Kim, Y. J.; Zhang, D.; Yang, D. C. 来自植物和微生物的纳米颗粒生物合成。Trends Biotechnol. 2016, 34, 588–599. DOI: 10.1016/j.tibtech.2016.02.006.
+
 - 12. Nasrollahzadeh, M.; Atarod, M.; Sajjadi, M.; Sajadi, S. M.; Issaabadi, Z. 植物介导的纳米结构绿色合成：机制、表征和应用，第一版；Elsevier Ltd., 2019; Vol. 28. DOI: 10.1016/B978-0-12-813586-0.00006-7.
+
 - 13. Nayak, S.; Sajankila, S. P.; Goveas, L. C.; Rao, V. C.; Mutalik, S.; Shreya, B. A. 庞格米种子饼提取物中蛋白质和酚类化合物辅助合成金纳米颗粒产量提高两倍：响应面方法学方法。SN Appl. Sci. 2020, 2, 1–12. DOI: 10.1007/s42452-020-2348-5.
+
 - 14. Ba-Abbad, M. M.; Chai, P. V.; Benamour, A.; Ewis, D.; Mohammad, A. W.; Mahmoudi, E. 使用响应面方法优化和控制 Fe3O4 纳米颗粒的有效合成参数。Chem. Pap. 2022, 76, 6359–6370. DOI: 10.1007/s11696-022-02320-y.
+
 - 15. Caliskan, G.; Mutaf, T.; Agba, H. C.; Elibol, M. 使用微藻 Phaeodactylum Tricornutum 绿色合成和表征钛纳米颗粒。Geomicrobiol. J. 2022, 39, 83–96. DOI: 10.1080/01490451.2021.2008549.
+
 - 16. Salari, M. Box-Behnken 设计优化和磁铁矿纳米颗粒的合成用于从水相中去除抗生素。Adsorpt. Sci. Technol. 2022, 2022, 1–13. DOI: 10.1155/2022/1267460.
+
 - 17. Nayak, S.; Manjunatha, K. B.; Goveas, L. C.; Rao, C. V.; Sajankila, S. P. OVAT 优化后使用 Cyclea Peltata 叶提取物合成的 AgNPs 的非线性光学性质研究。BioNanoScience 2021, 11, 884–892. DOI: 10.1007/s12668-021-00875-w.
+
+
+
+# 参考文献
+
 - 18. Abhishek, S. R.; Sneha, N. J.; Karthik, P. B. H. 新兴处理技术：探索深度学习和计算机视觉方法揭示生物合成纳米颗粒尺寸用于优化研究。载于 Contaminants of Emerging Concerns and Reigning Removal Technologies, NMAM Institute of Technology, CRC Press; 2022, pp 403–428. DOI: 10.1201/978103247869-20.
+
 - 19. Keskin Gündoğdu, T.; Deniz, İ.; Çalışkan, G.; Şahin, E. S.; Azbar, N. 生物工程应用的实验设计方法。Crit. Rev. Biotechnol. 2016, 36, 368–388. DOI: 10.3109/07388551.2014.973014.
+
 - 20. Majumder, A.; Singh, A.; Goyal, A. 响应面方法在 Leuconostoc Dextranicum 葡聚糖生产中的应用及其结构表征。Carbohydr. Polym. 2009, 75, 150–156. DOI: 10.1016/j.carbpol.2008.07.014.
+
 - 21. Witek-Krowiak, A.; Chojnacka, K.; Podstawczyk, D.; Dawiec, A.; Bubala, K. 响应面方法与人工神经网络方法在生物吸附过程建模和优化中的应用。Bioresour. Technol. 2014, 160, 150–160. DOI: 10.1016/j.biortech.2014.01.021.
+
 - 22. Mekki-Berrada, F.; Ren, Z.; Huang, T.; Wong, W. K.; Zheng, F.; Xie, J.; Tian, I. P. S.; Jayavelu, S.; Mahfoud, Z.; Bash, D.; et al. 两步机器学习实现纳米颗粒合成优化。NPI Comput. Mater. 2021, 7, 1–10. DOI: 10.1038/s41524-021-00520-w.
+
 - 23. Jordan, M. I.; Mitchell, T. M. 机器学习：趋势、视角与前景。Science 2015, 349, 255–260. DOI: 10.1126/science.aaa8415.
+
 - 24. Butler, K. T.; Davies, D. W.; Cartwright, H.; Isayev, O.; Walsh, A. 分子与材料科学的机器学习。Nature 2018, 559, 547–555. DOI: 10.1038/s41586-018-0337-2.
+
 - 25. Ghosal, S.; Blystone, D.; Singh, A. K.; GanapathySubramanian, B.; Singh, A.; Sarkar, S. 植物胁迫表型分析的可解释深度机器视觉框架。Proc. Natl. Acad. Sci. USA 2018, 115, 4613–4618. DOI: 10.1073/pnas.1716999115.
+
 - 26. Schuhmacher, A.; Gatto, A.; Hinder, M.; Kuss, M.; Gassmann, O. 成为数字制药参与者的优势。Drug Discov. Today 2020, 25, 1569–1574. DOI: 10.1016/j.drudis.2020.06.002.
+
 - 27. He, Y.; Ye, Z.; Liu, X.; Wei, Z.; Qiu, F.; Li, H. F.; Zheng, Y.; Ouyang, D. 机器学习能否预测药物纳米晶？J. Control Release 2020, 322, 274–285. DOI: 10.1016/j.jconrel.2020.03.043.
-- 28. Zhao, Q.; Ye, Z.; Su, Y.; Ouyang, D. 通过
 
-集成机器学习与分子建模技术。Acta Pharm. Sin. B 2019, 9, 1241–1252. DOI: 10.1016/j.apsb.2019.04.004.
+- 28. Zhao, Q.; Ye, Z.; Su, Y.; Ouyang, D. 通过集成机器学习与分子建模技术。Acta Pharm. Sin. B 2019, 9, 1241–1252. DOI: 10.1016/j.apsb.2019.04.004.
 
-29. Gao, H.; Wang, W.; Dong, J.; Ye, Z.; Ouyang, D. 结合数据驱动机器学习、分子建模和PBPK建模的集成计算方法加速固体分散体制剂设计。Eur. J. Pharm. Biopharm. 2021, 158, 336–346. DOI: 10.1016/j.ejpb.2020.12.001.
+- 29. Gao, H.; Wang, W.; Dong, J.; Ye, Z.; Ouyang, D. 结合数据驱动机器学习、分子建模和PBPK建模的集成计算方法加速固体分散体制剂设计。Eur. J. Pharm. Biopharm. 2021, 158, 336–346. DOI: 10.1016/j.ejpb.2020.12.001.
 
-30. Gao, H.; Jia, H.; Dong, J.; Yang, X.; Li, H.; Ouyang, D. 自乳化药物递送系统的集成计算机辅助制剂设计。Acta Pharm. Sin. B 2021, 11, 3585–3594. DOI: 10.1016/j.apsb.2021.04.017.
+- 30. Gao, H.; Jia, H.; Dong, J.; Yang, X.; Li, H.; Ouyang, D. 自乳化药物递送系统的集成计算机辅助制剂设计。Acta Pharm. Sin. B 2021, 11, 3585–3594. DOI: 10.1016/j.apsb.2021.04.017.
 
-31. Tao, H.; Wu, T.; Aldeghi, M.; Wu, T. C.; Aspuru-Guzik, A.; Kumacheva, E. 机器学习辅助的纳米颗粒合成。Nat. Rev. Mater. 2021, 6, 701–716. DOI: 10.1038/s41578-021-0037-5.
+- 31. Tao, H.; Wu, T.; Aldeghi, M.; Wu, T. C.; Aspuru-Guzik, A.; Kumacheva, E. 机器学习辅助的纳米颗粒合成。Nat. Rev. Mater. 2021, 6, 701–716. DOI: 10.1038/s41578-021-0037-5.
 
-32. Ban, Z.; Yuan, P.; Yu, F.; Peng, T.; Zhou, Q.; Hu, X. 机器学习预测蛋白质冠的功能组成和纳米颗粒的细胞识别。Proc. Natl. Acad. Sci. USA 2020, 117, 10492–10499. DOI: 10.1073/pnas.1919755117.
+- 32. Ban, Z.; Yuan, P.; Yu, F.; Peng, T.; Zhou, Q.; Hu, X. 机器学习预测蛋白质冠的功能组成和纳米颗粒的细胞识别。Proc. Natl. Acad. Sci. USA 2020, 117, 10492–10499. DOI: 10.1073/pnas.1919755117.
 
-33. Shabanzadeh, P.; Senu, N.; Shameli, K.; Ismail, F.; Mohagheghtarbar, M. 人工神经网络（ANN）在绿色方法制备银纳米颗粒尺寸预测中的应用。Dig. J. Nanomater. Biostruct. 2013, 8, 541–549.
+- 33. Shabanzadeh, P.; Senu, N.; Shameli, K.; Ismail, F.; Mohagheghtarbar, M. 人工神经网络（ANN）在绿色方法制备银纳米颗粒尺寸预测中的应用。Dig. J. Nanomater. Biostruct. 2013, 8, 541–549.
 
-34. Shabanzadeh, P.; Senu, N.; Shameli, K.; Ismail, F.; Zamanian, A.; Mohagheghtarbar, M. 利用人工神经网络预测蒙脱石/壳聚糖生物纳米复合材料中银纳米颗粒的直径。Res. Chem. Intermed. 2015, 41, 3275–3287. DOI: 10.1007/s11164-013-1431-6.
+- 34. Shabanzadeh, P.; Senu, N.; Shameli, K.; Ismail, F.; Zamanian, A.; Mohagheghtarbar, M. 利用人工神经网络预测蒙脱石/壳聚糖生物纳米复合材料中银纳米颗粒的直径。Res. Chem. Intermed. 2015, 41, 3275–3287. DOI: 10.1007/s11164-013-1431-6.
 
-35. Mottaghi, S.; Nazari, M.; Fattahi, S. M.; Nazari, M.; Babamohammadi, S. 使用基于自适应网络的模糊推理系统预测微流控流动聚焦装置中的液滴尺寸。Biomed. Microdevices 2020, 22, 1–12. DOI: 10.1007/s10544-020-00513-4.
+- 35. Mottaghi, S.; Nazari, M.; Fattahi, S. M.; Nazari, M.; Babamohammadi, S. 使用基于自适应网络的模糊推理系统预测微流控流动聚焦装置中的液滴尺寸。Biomed. Microdevices 2020, 22, 1–12. DOI: 10.1007/s10544-020-00513-4.
 
-36. Damiati, S. A.; Rossi, D.; Joensson, H. N.; Damiati, S. 人工智能在微流控中快速制备尺寸可调PLGA微粒中的应用。Sci. Rep. 2020, 10, 19517. DOI: 10.1038/s41598-020-76477-5.
+- 36. Damiati, S. A.; Rossi, D.; Joensson, H. N.; Damiati, S. 人工智能在微流控中快速制备尺寸可调PLGA微粒中的应用。Sci. Rep. 2020, 10, 19517. DOI: 10.1038/s41598-020-76477-5.
 
-37. Lashkaripour, A.; Rodriguez, C.; Mehdipour, N.; Mardian, R.; McIntyre, D.; Ortiz, L.; Campbell, J.; Densmore, D. 机器学习实现微流控流动聚焦液滴生成的设计自动化。Nat. Commun. 2021, 12, 1–14. DOI: 10.1038/s41467-020-20284-z.
+- 37. Lashkaripour, A.; Rodriguez, C.; Mehdipour, N.; Mardian, R.; McIntyre, D.; Ortiz, L.; Campbell, J.; Densmore, D. 机器学习实现微流控流动聚焦液滴生成的设计自动化。Nat. Commun. 2021, 12, 1–14. DOI: 10.1038/s41467-020-20284-z.
 
-38. Rizkin, B. A.; Shkolnik, A. S.; Ferraro, N. J.; Hartman, R. L. 将自动化微流控实验与机器学习相结合实现高效聚合设计。Nat. Mach. Intell. 2020, 2, 200–209. DOI: 10.1038/s42256-020-0166-5.
+- 38. Rizkin, B. A.; Shkolnik, A. S.; Ferraro, N. J.; Hartman, R. L. 将自动化微流控实验与机器学习相结合实现高效聚合设计。Nat. Mach. Intell. 2020, 2, 200–209. DOI: 10.1038/s42256-020-0166-5.
 
-39. Ocampo, I.; López, R. R.; Camacho-León, S.; Nerguizian, V.; Stiharu, I. 人工神经网络与数据分析在周期性扰动微混合器中预测脂质体尺寸的比较评价。Micromachines (Basel) 2021, 12, 1164. DOI: 10.3390/mi12101164.
+- 39. Ocampo, I.; López, R. R.; Camacho-León, S.; Nerguizian, V.; Stiharu, I. 人工神经网络与数据分析在周期性扰动微混合器中预测脂质体尺寸的比较评价。Micromachines (Basel) 2021, 12, 1164. DOI: 10.3390/mi12101164.
 
-40. Zhang, Y.; Wu, Y. 将机器学习模型引入响应面方法论。In Response Surface Methodology in Engineering Science; Intech, 2020; Vol. 11, (tourism); p 13.
+- 40. Zhang, Y.; Wu, Y. 将机器学习模型引入响应面方法论。In Response Surface Methodology in Engineering Science; Intech, 2020; Vol. 11, (tourism); p 13.
 
-41. Wang, W.; Feng, S.; Ye, Z.; Gao, H.; Lin, J.; Ouyang, D. 机器学习算法预测mRNA疫苗的脂质纳米颗粒。Acta Pharm. Sin. B 2022, 12, 2950–2962. DOI: 10.1016/j.apsb.2021.11.021.
+- 41. Wang, W.; Feng, S.; Ye, Z.; Gao, H.; Lin, J.; Ouyang, D. 机器学习算法预测mRNA疫苗的脂质纳米颗粒。Acta Pharm. Sin. B 2022, 12, 2950–2962. DOI: 10.1016/j.apsb.2021.11.021.
 
-42. Ilhan-Ayisigi, E.; Ulucan, F.; Saygili, E.; Saglam-Metiner, P.; Gulce-Iz, S.; Yesil-Celiktas, O. 蜂胶纳米囊剂型及其在肺癌3D类球体模型中的细胞毒性效应。J. Sci. Food Agric. 2020, 100, 3525–3535. DOI: 10.1002/jsfa.10400.
+- 42. Ilhan-Ayisigi, E.; Ulucan, F.; Saygili, E.; Saglam-Metiner, P.; Gulce-Iz, S.; Yesil-Celiktas, O. 蜂胶纳米囊剂型及其在肺癌3D类球体模型中的细胞毒性效应。J. Sci. Food Agric. 2020, 100, 3525–3535. DOI: 10.1002/jsfa.10400.
 
-43. Chen, X.; Lv, H. 基于机器学习的微流控芯片上纳米颗粒合成的智能控制。NPG Asia Mater. 2022, 14, 1–20. DOI: 10.1038/s41427-022-00416-1.
+- 43. Chen, X.; Lv, H. 基于机器学习的微流控芯片上纳米颗粒合成的智能控制。NPG Asia Mater. 2022, 14, 1–20. DOI: 10.1038/s41427-022-00416-1.

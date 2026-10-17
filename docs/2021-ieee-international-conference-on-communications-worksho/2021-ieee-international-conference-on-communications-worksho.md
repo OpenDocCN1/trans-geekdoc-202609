@@ -1,9 +1,5 @@
+
 # 2021 IEEE 国际通信会议研讨会 (ICC Workshops)
-
-
-
-
-
 
 Dakshit Reetwahi¹, Rajesh Gupta¹, Student Member, IEEE, Aparna Kumari¹, Student Member, IEEE, Sandeep Tanwar³, Senior Member, IEEE, Department of Computer Science and Engineering, Institute of Technology. Nirma University, Ahmedabad, Gujarat, India *19nmce2@nirmau.ac.in, *18vphde31@nirmau.ac.in, *17fphde22@nirmau.ac.in, sandeep.tanwar@nirmau.ac.in
 
@@ -50,19 +46,15 @@ Dakshit Reetwahi¹, Rajesh Gupta¹, Student Member, IEEE, Aparna Kumari¹, Stude
 
 系统模型 (2) 涉及驾驶员、停车服务等角色，它们通过潜在通信连接到以太坊智能合约（ESC）用于数据库管理。驾驶员根据位置请求停车，使用用户 ID 进行验证并经过哈希处理存储在区块链（BC）上。停车服务作为 BN 中的一个区块，提供停车服务位置、方位，并为驾驶员提供价格以实现公平和更好的定价。停车服务根据实时需求进行去中心化分布。
 
-这里 $R = \{R_1, R_2, ..., R_p\}$ 表示 $p$ 组停车服务。这些角色与城市 $N$ 个停车区域相关，每个区域与一个停车服务相关，即 $\{P_1, P_2, ..., P_n\} \in R$。任何停车服务的停车区域都可以由 $\{D_1, D_2, ..., D_m\} \in \{V_1, V_2, ..., V_k\} \in S$ 驱动。条目的约束和映射如下：
+这里 `$R = \{R_1, R_2, ..., R_p\}$` 表示 `p` 组停车服务。这些角色与城市 `N` 个停车区域相关，每个区域与一个停车服务相关，即 `\{P_1, P_2, ..., P_n\} \in R`。任何停车服务的停车区域都可以由 `\{D_1, D_2, ..., D_m\} \in \{V_1, V_2, ..., V_k\} \in S` 驱动。条目的约束和映射如下：
 
 ```
 $f_1 : P \rightarrow D(n, m)$,n$f_2 : D \rightarrow V(k)$
 ```
 
-
-
-
-
 # $f_3 \rightarrow V(n:k)$
 
-因此，相应的矩阵 $[PD]_{n \times m}, [DV]_{1 \times k}[PV]_{n \times k}$ 可以根据如下约束条件写入：
+因此，相应的矩阵 `[PD]_{n \times m}, [DV]_{1 \times k}[PV]_{n \times k}` 可以根据如下约束条件写入：
 
 ```
 $[PD]_{n \times m} = \begin{cases} 1, & P_i \in D_j \vee R_p, \ 0, & \text{otherwise.} \end{cases} \quad (1)$
@@ -76,9 +68,9 @@ $[DV]_{1 \times k} = \begin{cases} 1, & D_i \in V_j \vee R_d, \ 0, & \text{other
 $[PV]_{n \times k} = \begin{cases} 1, & P_i \in V_j \vee R_p, \ 0, & \text{otherwise.} \end{cases} \quad (3)$
 ```
 
-$\{n, m, r, k, i, a\} > 0$
+`{n, m, r, k, i, a} > 0`
 
-停车价格根据需求分配为高峰和非高峰期（NPT）。NPT 是需求低低时归零的时间。当需求高时，NPT 为 0；当 NPT 设置为 y 且 $x > y$ 时，需求高，则价格设置为 z，其中 $x > z > y$。以下方程显示了根据需求和可用性对价格更改所需的约束条件：
+停车价格根据需求分配为高峰和非高峰期（NPT）。NPT 是需求低低时归零的时间。当需求高时，NPT 为 0；当 NPT 设置为 y 且 `x > y` 时，需求高，则价格设置为 z，其中 `x > z > y`。以下方程显示了根据需求和可用性对价格更改所需的约束条件：
 
 ```
 $A_p = \begin{cases} 1, & \text{if slot is empty} \ 0, & \text{otherwise.} \end{cases} \quad (4)$
@@ -96,15 +88,15 @@ $price = \begin{cases} high, & NPT = 0 \ low, & NPT = 1. \end{cases} \quad (6)$
 $price = \begin{cases} high, & NPT > 0 \text{\ \& } A_p > 0 \text{\ \&} demand < 70 \ low, & NPT = 1 \text{\ \&} A_p \ge 70 \text{\ \&} demand \ge 70. \end{cases} \quad (7)$
 ```
 
-其中 $\text{price} > 0, \text{high} < z < low$
+其中 `price > 0, high < z < low`
 
 ```
 $price = fc + sc + cvt \pm dc \quad (8)$
 ```
 
-其中 $fc$ 是固定成本，$sc$ 是基础服务费，$cvt$ 是基于车辆类型的费用，$dc$ 是距离费用。
+其中 `fc` 是固定成本，`sc` 是基础服务费，`cvt` 是基于车辆类型的费用，`dc` 是距离费用。
 
-支付使用钱包地址 $W_b, W_w, W_p$ 进行，其中 $W_w$ 是钱包地址，$W_p$ 是停车服务地址，$W_d$ 是区块链网络中的司机地址。$W_{vw}$ 是根据以下实体发布的钱包地址：
+支付使用钱包地址 `W_b, W_w, W_p` 进行，其中 `W_w` 是钱包地址，`W_p` 是停车服务地址，`W_d` 是区块链网络中的司机地址。`W_{vw}` 是根据以下实体发布的钱包地址：
 
 ```
 $W_b = \{Sendaddr, Nonce_{stamp}, GAS_{value}, M_{tree}\}\nW_p = \{PK^{kp}, P^{hash}, P^{hash}_{stamp}, GAS_{value}, M_{tree}\}\nW_d = \{PK^{pd}, P^{pd}, P^{hash}_{stamp}, GAS_{value}, M_{tree}\}$
@@ -140,7 +132,6 @@ AI 层用于根据高峰状态和车辆执行可用性检查并预测价格。�
 - 带有车位和价格的
 - 进行支付
 - 如果有效则更新
-
 - 检查可用性
 - 向司机接口响应
 - 请求支付和司机验证
@@ -159,10 +150,6 @@ AI 层用于根据高峰状态和车辆执行可用性检查并预测价格。�
 # IV. 性能评估
 
 在本节中，我们讨论了实验结果并评估了所提系统的性能。它使用 Python 语言在 Windows 操作系统上实现，配备 Intel(R) Core(iTM) CPU @ 2.60GHz、16GB RAM。车辆价格数据生成
-
-
-
-
 
 ## 表 I：基于 MSE 和 MAE 的性能评估
 
@@ -217,6 +204,8 @@ AI 层用于根据高峰状态和车辆执行可用性检查并预测价格。�
 
 [3] S. Tarwan, J. Vera, S. Syagi, N. Kumar, and M. S. Abbas, "A systematic review of pricing in ride sharing economy." Data and Privacy, vol. 1, p. 5, 2019.
 
+
+
 [4] K. A. Washington, U. Holzte, and J. Puzka, "The effectiveness of parking guidance information systems in main." Traffic engineering & control, vol. 35, pp. 304–309, 2016.
 
 [5] G. Wang, Y. Guo, J. Shi, and S. Chen, A secure and intelligent parking system. IoT intelligent transportation systems, volume. 3, pp. 30–38, 2021.
@@ -259,13 +248,13 @@ AI 层用于根据高峰状态和车辆执行可用性检查并预测价格。�
 
 存储 1 KB 数据的成本为：
 
-1 KB = 2 × 2000 Gas
+`1 KB = 2 × 2000 Gas`
 
-当前价格 (P_gas) 和以太坊价格 (P_eth)分别为 $49 和 $1339.16。因此，用英文表示成本为：
+当前价格 (`P_gas`) 和以太坊价格 (`P_eth`)分别为 $49 和 $1339.16。因此，用英文表示成本为：
 
 > 1 ETH = $100
 
-ETHs = δ G
+`ETHs = δ G`
 
 # V. 结论
 
@@ -274,4 +263,3 @@ ETHs = δ G
 ## 致谢
 
 这项工作得到了印度政府电子和信息技术部（MEITY）电子和信息技术部 Visvesvaraya 博士计划（MEITY-PHD-2828）的支持。
-

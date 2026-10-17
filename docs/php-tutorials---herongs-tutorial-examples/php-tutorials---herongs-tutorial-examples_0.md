@@ -1,219 +1,89 @@
-## PHP 教程 - Herong 的教程示例
 
+# PHP 教程 - Herong 的教程示例
 
+本书是作者在自学 PHP 过程中编写的笔记和示例代码的集合。主题包括 PHP 脚本语法；数据类型、变量、数组、表达式、语句和函数；Web 服务器集成；HTTP 请求和控制 HTTP 响应；会话、Cookie 以及文件上传/下载；MySQL 数据库服务器访问；文件、目录和 ZIP 压缩包；解析 HTML 文档；处理图像文件；SOAP 扩展；管理非 ASCII 字符；类和对象；在 Windows、macOS 和 Linux 上使用 PHP；在操作系统上执行外部程序。2022 年更新（版本 v5.16），包含微小变更。如需获取最新更新和免费试读章节，请访问 <https://www.herongyang.com/PHP>。
 
+## 在 PHP 脚本中控制 HTTP 响应头行
 
+### 什么是 HTTP 响应
 
+### HTTP 响应头行
 
+### `header()` - 插入原始头行
 
+### `HttpRequestGet.php` - 查看头行
 
-本书是作者在自学 PHP 过程中编写的笔记和示例代码的集合。主题包括 PHP 脚本语法；数据类型、变量、数组、表达式、语句和函数；Web 服务器集成；HTTP 请求和控制 HTTP 响应；会话、Cookie 以及文件上传/下载；MySQL 数据库服务器访问；文件、目录和 ZIP 压缩包；解析 HTML 文档；处理图像文件；SOAP 扩展；管理非 ASCII 字符；类和对象；在 Windows、macOS 和 Linux 上使用 PHP；在操作系统上执行外部程序。2022 年更新（版本 v5.16），包含微小变更。如需获取最新更新和免费试读章节，请访问 https://www.herongyang.com/PHP。
+### 静态文件的响应头行
 
+### `HttpHeaderLines.php` - 插入头行的示例
 
+### `Location:` - 强制浏览器重定向到另一个 URL
 
+### `Content-Type:` - 生成非 HTML 响应体
 
+### `Content-Disposition:` - 发送文件供下载
 
+## 管理文件上传
 
+### 文件上传 Web 表单
 
+### 文件上传 PHP 脚本
 
+## MySQL 服务器连接和访问函数
 
+### 为 MySQL 服务器访问配置 PHP
 
+### `mysqli_connect()` 和其他 MySQL 函数
 
+### `MySqlLoop.php` - MySQL 函数测试
 
+## 管理目录、文件和图像的函数
 
+### `opendir()` 和目录管理函数
 
+### `file_exists()` 和文件测试函数
 
+### `FileExistsTest.php` - 文件测试示例
 
+### `fopen()` 和文件输入/输出函数
 
+### `File_Input_Output_Test.php` - 文件输入/输出示例
 
+### `readfile()` 和特殊文件处理函数
 
+### `ShowPhoto.php` - 简单幻灯片展示脚本
 
+## SOAP 扩展函数和调用 Web 服务
 
+### PHP 的 SOAP 实现
 
+### 开启默认 SOAP 扩展
 
+### `Hello_There.php` - SOAP 第一个示例
 
+### `SoapClient` - SOAP 客户端类和函数
 
+### `Hello_There_Dump.php` - 调试 SOAP 消息
 
+### 什么是 WSDL
 
+### 在非 WSDL 模式下使用 SOAP 扩展
 
+### SOAP 服务器函数和示例
 
+### `SoapServer` - SOAP 服务器类和函数
 
+### `HelloServer.php` - 第一个 SOAP 服务器应用程序
 
+### `HelloServer12.php` - 第一个 SOAP 1.2 服务器应用程序
 
+### `HelloServerWsdl.php` - WSDL 模式下的 SOAP 1.2 服务器应用程序
 
+## Web 应用程序本地化概述
 
+### 什么是本地化 / 国际化
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### 在 PHP 脚本中控制 HTTP 响应头行
-
-#### 什么是 HTTP 响应
-
-#### HTTP 响应头行
-
-#### header() - 插入原始头行
-
-#### HttpRequestGet.php - 查看头行
-
-#### 静态文件的响应头行
-
-#### HttpHeaderLines.php - 插入头行的示例
-
-#### Location: - 强制浏览器重定向到另一个 URL
-
-#### Content-Type: - 生成非 HTML 响应体
-
-#### Content-Disposition: - 发送文件供下载
-
-### 管理文件上传
-
-#### 文件上传 Web 表单
-
-#### 文件上传 PHP 脚本
-
-### MySQL 服务器连接和访问函数
-
-#### 为 MySQL 服务器访问配置 PHP
-
-#### mysqli_connect() 和其他 MySQL 函数
-
-#### MySqlLoop.php - MySQL 函数测试
-
-### 管理目录、文件和图像的函数
-
-#### opendir() 和目录管理函数
-
-#### file_exists() 和文件测试函数
-
-#### FileExistsTest.php - 文件测试示例
-
-#### fopen() 和文件输入/输出函数
-
-#### File_Input_Output_Test.php - 文件输入/输出示例
-
-#### readfile() 和特殊文件处理函数
-
-#### ShowPhoto.php - 简单幻灯片展示脚本
-
-### SOAP 扩展函数和调用 Web 服务
-
-#### PHP 的 SOAP 实现
-
-#### 开启默认 SOAP 扩展
-
-#### Hello_There.php - SOAP 第一个示例
-
-#### SoapClient - SOAP 客户端类和函数
-
-#### Hello_There_Dump.php - 调试 SOAP 消息
-
-#### 什么是 WSDL
-
-#### 在非 WSDL 模式下使用 SOAP 扩展
-
-#### SOAP 服务器函数和示例
-
-#### SoapServer - SOAP 服务器类和函数
-
-#### HelloServer.php - 第一个 SOAP 服务器应用程序
-
-## HelloServer12.php - 第一个 SOAP 1.2 服务器应用程序
-
-## HelloServerWsdl.php - WSDL 模式下的 SOAP 1.2 服务器应用程序
-
-### Web 应用程序本地化概述
-
-## 什么是本地化 / 国际化
-
-## 基于 Web 的应用程序本地化
+### 基于 Web 的应用程序本地化
 
 #### 字符串传输路径
 
@@ -227,13 +97,13 @@
 
 #### HTML 文档中的法文字符 - ISO-8859-1 编码
 
-## HTML 文档中的中文字符 - UTF-8 编码
+### HTML 文档中的中文字符 - UTF-8 编码
 
-## HTML 文档中的中文字符 - GB2312 编码
+### HTML 文档中的中文字符 - GB2312 编码
 
 #### HTML 文档中的多语言字符
 
-## 将非 ASCII 字符作为 PHP 脚本字符串字面量使用
+### 将非 ASCII 字符作为 PHP 脚本字符串字面量使用
 
 #### 在 HTML 文档中使用非 ASCII 字符的基本规则
 
@@ -253,9 +123,9 @@
 
 #### 使用 GET 方法接收非 ASCII 字符
 
-## 使用 POST 方法接收非 ASCII 字符
+### 使用 POST 方法接收非 ASCII 字符
 
-## 以 UTF-8 编码接收非 ASCII 字符
+### 以 UTF-8 编码接收非 ASCII 字符
 
 #### 解码 HTML 实体
 
@@ -263,7 +133,7 @@
 
 #### "mbstring" - 多字节字符串扩展
 
-#### mb_convert_encoding() 和其他 mbstring 函数
+#### `mb_convert_encoding()` 和其他 mbstring 函数
 
 #### 使用 "mbstring" 函数的示例
 
@@ -275,104 +145,99 @@
 
 #### 与数据库传输非 ASCII 字符
 
-#### MySqlUnicode.php - MySQL Unicode UTF-8 编码示例
+#### `MySqlUnicode.php` - MySQL Unicode UTF-8 编码示例
 
-### 解析和管理 HTML 文档
+## 解析和管理 HTML 文档
 
-#### 用于 HTML 文档的 DOM 扩展
+### 用于 HTML 文档的 DOM 扩展
 
-#### 解析和遍历 HTML 文档
+### 解析和遍历 HTML 文档
 
-#### 构建新的 HTML 文档
+### 构建新的 HTML 文档
 
-#### 使用 LIBXML_NOBLANKS 加载 HTML 文档
+### 使用 `LIBXML_NOBLANKS` 加载 HTML 文档
 
-#### 移除 HTML 文档中的空白字符
+### 移除 HTML 文档中的空白字符
 
-#### HTML 文档中的 DOCTYPE 元素
+### HTML 文档中的 DOCTYPE 元素
 
-#### 移除 HTML 文档中的虚拟元素
+### 移除 HTML 文档中的虚拟元素
 
-#### 在 CentOS 上安装 DOM 扩展
+### 在 CentOS 上安装 DOM 扩展
 
-### 配置和发送电子邮件
+## 配置和发送电子邮件
 
-#### 使用本地 Windows 系统作为邮件服务器
+### 使用本地 Windows 系统作为邮件服务器
 
-#### 从 PHP 脚本发送电子邮件
+### 从 PHP 脚本发送电子邮件
 
-#### 在 Linux 系统上发送电子邮件
+### 在 Linux 系统上发送电子邮件
 
-#### 在 CentOS 系统上安装 PHPMailer
+### 在 CentOS 系统上安装 PHPMailer
 
-#### 使用 PHPMailer 发送本地邮件
+### 使用 PHPMailer 发送本地邮件
 
-#### 使用 PHPMailer 发送远程邮件
+### 使用 PHPMailer 发送远程邮件
 
-#### 使用 PHPMailer 配合 SMTPS 协议
+### 使用 PHPMailer 配合 SMTPS 协议
 
-#### PHP 5.6 和 PHPMailer 5.2
+### PHP 5.6 和 PHPMailer 5.2
 
-#### 从源代码安装 PHPMailer
+### 从源代码安装 PHPMailer
 
-### 图像和图片处理
+## 图像和图片处理
 
-#### GD 图像函数库
+### GD 图像函数库
 
-#### GD 库 - 绘制图形元素
+### GD 库 - 绘制图形元素
 
-#### GD 库 - 在 1 页上打印 2 张图片
+### GD 库 - 在 1 页上打印 2 张图片
 
-#### GD 库 - 创建透明图像
+### GD 库 - 创建透明图像
 
-#### 文字网页上的透明图像
+### 文字网页上的透明图像
 
-#### GD 库 - 填充透明图像
+### GD 库 - 填充透明图像
 
-### 管理 ZIP 归档文件
+## 管理 ZIP 归档文件
 
-#### ZipArchive 类
+### `ZipArchive` 类
 
-#### 创建新的 ZIP 归档
+### 创建新的 ZIP 归档
 
-#### 从 ZIP 归档中提取文件
+### 从 ZIP 归档中提取文件
 
-#### 带目录创建 ZIP 归档
+### 带目录创建 ZIP 归档
 
-#### 创建用于下载的 ZIP 归档
+### 创建用于下载的 ZIP 归档
 
-### 在 macOS 上管理 PHP 引擎和模块
+## 在 macOS 上管理 PHP 引擎和模块
 
-#### macOS 预装的 PHP 版本
+### macOS 预装的 PHP 版本
 
-#### 在 macOS 上升级 PHP 引擎
+### 在 macOS 上升级 PHP 引擎
 
-### 在 CentOS 上管理 PHP 引擎和模块
+## 在 CentOS 上管理 PHP 引擎和模块
 
-#### CentOS 预装的 PHP 版本
+### CentOS 预装的 PHP 版本
 
-#### 在 CentOS 上安装 PHP 扩展
+### 在 CentOS 上安装 PHP 扩展
 
-#### CentOS 6 预装的 PHP 版本
+### CentOS 6 预装的 PHP 版本
 
-#### 在 CentOS 计算机上使用 PHP Composer
+### 在 CentOS 计算机上使用 PHP Composer
 
-### 归档教程
+## 归档教程
 
-#### 归档：下载和安装用于 Windows 的 PHP 7.0
+### 归档：下载和安装用于 Windows 的 PHP 7.0
 
-#### 归档：下载和安装用于 Windows 的 PHP 5.6.6
+### 归档：下载和安装用于 Windows 的 PHP 5.6.6
 
-#### 归档：下载和安装用于 Windows 的 PHP 5.4.3
+### 归档：下载和安装用于 Windows 的 PHP 5.4.3
 
-#### 归档：下载和安装用于 Windows 的 PHP 5.2.2
+### 归档：下载和安装用于 Windows 的 PHP 5.2.2
 
-
-
-
-
-
-#### 关于本书
+## 关于本书
 
 本节提供关于本书《PHP 教程 - Herong 的教程示例》的一些详细信息。
 
@@ -423,7 +288,7 @@
 
 **PDF/EPUB 版本：** [`www.herongyang.com/PHP/PDF-Full-Version.html`](https://www.herongyang.com/PHP/PDF-Full-Version.html) - 提供关于如何获取本书 PDF、EPUB 或其他格式完整版本的信息。
 
-### PHP 7.3 简介与安装
+# PHP 7.3 简介与安装
 
 本章提供关于 PHP 安装的教程笔记和示例代码。主题包括 PHP 快速简介、下载和安装 PHP 引擎、PHP 命令行选项、编写第一个 PHP 脚本。
 
@@ -437,9 +302,9 @@
 >
 > “php -i” - PHP 引擎信息
 >
-> php.ini - PHP 运行时配置
+> `php.ini` - PHP 运行时配置
 >
-> Hello.php - 我的第一个 PHP 脚本
+> `Hello.php` - 我的第一个 PHP 脚本
 >
 > “php -a” - PHP 交互式 Shell
 >
@@ -450,7 +315,7 @@
 *   PHP 正成为当前最流行的 Web 服务器端脚本语言。
 *   下载并安装适用于 Windows 系统的标准 PHP 构建版本非常容易。
 
-#### 什么是 PHP
+## 什么是 PHP
 
 本节介绍什么是 PHP 语言以及 PHP 支持的主要特性。
 
@@ -495,17 +360,13 @@ PHP 主要版本发布时间表：
 1.0   1995 年 6 月 8 日
 ```
 
+## PHP 7.3 简介与安装
 
-
-
-
-### PHP 7.3 简介与安装
-
-#### 在 Windows 上下载并安装 PHP 7.3
+### 在 Windows 上下载并安装 PHP 7.3
 
 本节提供了一个教程示例，介绍如何在 Windows 系统上下载并安装 PHP 7.0 引擎。
 
-1. 访问 [windows.php.net/download/](http://windows.php.net/download/) 并下载适用于 Windows 的 "VC15 x64 Thread Safe (2018-Dec-06 04:31:24)" 二进制版本。你将获得一个名为 `php-7.3.0-Win32-VC15-x64`、大小为 21,846,474 字节的文件。
+1. 访问 <http://windows.php.net/download/> 并下载适用于 Windows 的 "VC15 x64 Thread Safe (2018-Dec-06 04:31:24)" 二进制版本。你将获得一个名为 `php-7.3.0-Win32-VC15-x64`、大小为 21,846,474 字节的文件。
 
 2. 将 `php-7.3.0-Win32-VC15-x64` 解压到 `\php` 文件夹。
 
@@ -517,13 +378,19 @@ herong> \php\php -v
 
 4. 如果看到错误消息提示："The program can't start because VCRUNTIME150.dll is missing from your computer. Try reinstalling the program to fix this problem."（无法启动此程序，因为计算机中丢失 VCRUNTIME150.dll。尝试重新安装该程序以解决此问题。），则需要安装 "Visual Studio 2015 x86"。
 
-* 访问 "Microsoft Visual C++ Redistributable for Visual Studio 2015" 页面：[microsoft.com/en-us/download/details.aspx?id=48145](https://www.microsoft.com/en-us/download/details.aspx?id=48145)。
+* 访问 "Microsoft Visual C++ Redistributable for Visual Studio 2015" 页面：<https://www.microsoft.com/en-us/download/details.aspx?id=48145>。
 * 点击 "Download"（下载）按钮。
 * 将下载的文件 `vc_redist.x86.exe` 保存到桌面。
 * 双击 `vc_redist.x86.exe` 运行它。
 * 按照说明完成安装。
 
 5. 再次打开一个命令窗口，并尝试运行以下命令：
+
+
+
+# PHP 教程 - Herong 的教程示例
+
+## PHP 7.3 简介与安装
 
 ```
 herong> \php\php -v
@@ -536,7 +403,7 @@ Zend Engine v3.3.0-dev, Copyright (c) 1998-2018 Zend Technologies
 
 太棒了，PHP 的命令行界面（CLI）和通用网关接口（CGI）均已正常工作！
 
-#### "php -help" - 命令行选项
+### "php -help" - 命令行选项
 
 本节提供了一个教程示例，介绍如何查看 PHP 引擎支持的所有命令行选项：`php -help`。
 
@@ -586,7 +453,7 @@ Usage: php [options] [-f] <file> [--] [args...]
   --ri <name>      显示关于扩展 <name> 的配置。
 ```
 
-#### "php -m" - 内置模块
+### "php -m" - 内置模块
 
 本节提供了一个教程示例，介绍如何获取预编译进 PHP 引擎的所有模块列表：`php -m`。
 
@@ -628,7 +495,7 @@ zlib
 [Zend Modules]
 ```
 
-#### "php -i" - PHP 引擎信息
+### "php -i" - PHP 引擎信息
 
 本节提供了一个教程示例，介绍如何获取关于 PHP 引擎及其执行环境的更多信息：`php -i`。
 
@@ -673,7 +540,7 @@ This program makes use of the Zend Scripting Language Engine:
 ...
 ```
 
-#### php.ini - PHP 运行时配置
+### php.ini - PHP 运行时配置
 
 本节描述 PHP 运行时配置文件 `php.ini`。
 
@@ -718,11 +585,7 @@ engine = On
 
 正如你所见，`php.ini` 文件非常易于使用。行首的 `;` 字符表示注释行。配置设置以 `name = value` 的格式提供。默认版本的 `php.ini` 包含大量注释，帮助你理解每项设置的含义。
 
-
-
-
-
-# 例如，如果我想在运行时环境中设置默认时区，我可以编辑 php.ini 并更改 "date.timezone" 设置：
+#### 例如，如果我想在运行时环境中设置默认时区，我可以编辑 php.ini 并更改 "date.timezone" 设置：
 
 ```
 >edit \php\php.ini
@@ -733,10 +596,7 @@ date.timezone = Europe/Paris
 
 现在 PHP 引擎将以 Europe/Paris 作为默认时区运行。
 
-
-### PHP 7.3 简介与安装
-
-#### Hello.php - 我的第一个 PHP 脚本
+### Hello.php - 我的第一个 PHP 脚本
 
 本节提供了一个教程示例，介绍如何编写第一个 PHP 脚本 Hello.php，并使用 PHP CLI 和 PHP CGI 运行它。
 
@@ -777,10 +637,7 @@ X-Powered-By: PHP/5.6.6
 Hello world!
 ```
 
-
-### PHP 7.3 简介与安装
-
-#### "php -a" - PHP 交互式 Shell
+### "php -a" - PHP 交互式 Shell
 
 本节提供了一个教程示例，介绍如何将 PHP 引擎作为交互式 Shell 运行，即 `php -a`，它允许你输入一条 PHP 语句并立即在屏幕上看到结果。
 
@@ -811,10 +668,7 @@ C:\herong>
 
 很酷。这确实是一个有助于学习 PHP 的好工具。只需输入一条 PHP 语句，即可立即在屏幕上看到显示的结果。
 
-
-### PHP 7.3 简介与安装
-
-#### 下载和安装 PHP 文档
+### 下载和安装 PHP 文档
 
 本节提供了一个教程示例，介绍如何下载和安装 HTML 格式的 PHP 文档。
 
@@ -830,15 +684,14 @@ C:\herong>
 
 PHP 文档 - HTML 版本
 
-
-### PHP 脚本文件语法
+## PHP 脚本文件语法
 
 本章提供关于 PHP 脚本文件语法的教程笔记和示例代码。主题包括在脚本文件中包含 PHP 代码段使用什么标签；脚本文件处理规则；如何将 1 条语句拆分为多行，如何在 PHP 脚本中输入注释。
 
 > PHP 脚本源代码文件格式
-
+>
 > PHP 脚本处理规则
-
+>
 > PHP 语句分隔符和注释
 
 要点：
@@ -853,12 +706,9 @@ PHP 文档 - HTML 版本
 
 *   注释可以用 Perl、Java 或 C 风格输入到 PHP 代码段中。
 
+### PHP 脚本源代码文件格式
 
-### PHP 脚本文件语法
-
-#### PHP 脚本源代码文件格式
-
-本节描述 PHP 脚本源代码文件格式——一个将 PHP 代码段混合到非 PHP 文本中的文本文件。混合 PHP 代码最常用的方法是使用 PHP 处理标签 `?php`。
+本节描述 PHP 脚本源代码文件格式——一个将 PHP 代码段混合到非 PHP 文本中的文本文件。混合 PHP 代码最常用的方法是使用 PHP 处理标签 `<?php`。
 
 与其他任何脚本语言一样，PHP 通过将 PHP 代码段混合在输入文本中，将文本信息从输入转换为输出。这种混合了 PHP 代码和非 PHP 文本的输入称为 PHP 脚本源代码，通常存储为文本文件。
 
@@ -870,7 +720,7 @@ text PHP_code text PHP_code text PHP_code ...
 
 当你请求 PHP 处理 PHP 脚本源代码时，它将使用以下 3 条默认规则将 PHP 代码段与非 PHP 文本分离：
 
-1. PHP 处理标签：`<?php PHP_code ?>` - `?php` 标签中包含的所有内容将作为 PHP 代码处理。例如：
+1. PHP 处理标签：`<?php PHP_code ?>` - `<?php` 标签中包含的所有内容将作为 PHP 代码处理。例如：
 
 ```
 Hello <?php
@@ -880,7 +730,7 @@ Hello <?php
 , Nice to meet you!
 ```
 
-2. PHP 处理标签简写：`<? PHP_code ?>` - `?` 标签中包含的所有内容将作为 PHP 代码处理。例如：
+2. PHP 处理标签简写：`<? PHP_code ?>` - `<?` 标签中包含的所有内容将作为 PHP 代码处理。例如：
 
 ```
 Hello <?
@@ -919,29 +769,25 @@ Hello <?php
 </html>
 ```
 
-## PHP 教程 - Herong 的教程示例
+### PHP 脚本处理规则
 
-### PHP 脚本文件语法
 
-#### PHP 脚本处理规则
 
-本节描述 PHP 脚本源代码处理规则——所有非 PHP 文本段被转换为 print 语句并与 PHP 代码段合并，形成单个代码块。
+本节描述 PHP 脚本源代码处理规则——所有非 PHP 文本段被转换为 `print` 语句并与 PHP 代码段合并，形成单个代码块。
 
 正如我在上一节中提到的，PHP 脚本源代码是非 PHP 文本段和 PHP 代码段的序列。PHP 引擎将按 3 个逻辑步骤处理源代码：
 
-*   将每个非 PHP 文本段转换为带有 print 语句的 PHP 代码段。
-
+*   将每个非 PHP 文本段转换为带有 `print` 语句的 PHP 代码段。
 *   将所有 PHP 代码段连接成单个最终 PHP 代码块。
-
 *   执行最终的 PHP 代码块。
 
-换句话说，PHP 脚本源代码可以被视为单个 PHP 代码块。所有非 PHP 文本段只是以一种特殊方式编写的 PHP print 语句。
+换句话说，PHP 脚本源代码可以被视为单个 PHP 代码块。所有非 PHP 文本段只是以一种特殊方式编写的 PHP `print` 语句。
 
 PHP 的处理规则与 Active Server Page (ASP) 的处理规则非常相似。
 
 现在让我们看一个示例 PHP 脚本源代码文件：
 
-```
+```php
 <?php
 /* HeadOrTail.php
 #- Copyright 2003 (c) HerongYang.com. All Rights Reserved.
@@ -965,10 +811,6 @@ I am tossing a coin now. Guess what the result will be?
 ```
 
 基于 PHP 引擎处理规则，从 PHP 引擎处理的角度来看，上述脚本与以下脚本完全相同：
-
-
-
-
 
 ### PHP 脚本文件语法
 
@@ -1093,7 +935,7 @@ print "\n Integer data type - Days in a year: ".$yearDays;
 $equatorLength = 3.14159*2*6371; // float 数据类型
 print "\n Float data type - Length of the equator: ".$equatorLength;
 
-$greetingMessage = "Hello Herong!"; // float 数据类型
+$greetingMessage = "Hello Herong!"; // string 数据类型
 print "\n String data type - Greeting message: ".$greetingMessage;
 
 $monthDays = array("Jan"=>31,"Feb"=>28,"Mar"=>31); // array 数据类型
@@ -1141,9 +983,6 @@ herong> \php\php DataTypeSamples.php
 2. **integer 数据字面量**：整数数据类型的数据字面量有 3 种形式：
 
 * **十进制形式**：一串十进制数字（0 到 9），首位数字大于 0。十进制形式的整数数据字面量可以带正负号，也可以不带。例如：`366`、`-42`、`6371`、...
-
-
-
 
 ### 整数、字符串及其他数据类型的数据字面量示例
 
@@ -1235,6 +1074,8 @@ print "\n    null: ".$void;
 
 如果运行此示例脚本，你应该会得到：
 
+
+
 ```
 herong> \php\php DataLiteralSamples.php
 
@@ -1285,11 +1126,11 @@ herong> \php\php DataLiteralSamples.php
     null:
 ```
 
-### 整数和浮点数值的溢出
+## 整数和浮点数值的溢出
 
 本节描述了什么是算术溢出条件，PHP 5 引擎如何处理整数和浮点数值溢出，以及如何编写 PHP 代码来检测溢出条件。
 
-#### 什么是溢出？
+### 什么是溢出？
 
 **溢出** 或算术溢出是一种条件，当计算产生的结果在量级上大于给定数据类型所能存储或表示的范围时发生。
 
@@ -1304,18 +1145,15 @@ herong> \php\php DataLiteralSamples.php
 *   当浮点数值溢出发生在指数值范围的上限时，结果浮点数值将自动转换为一个称为“无穷大”的特殊值。
 *   当浮点数值溢出发生在指数值范围的下限时，结果浮点数值将自动转换为 0。这也称为下溢。
 
-
-
-
-#### PHP 数值溢出处理
+### PHP 数值溢出处理
 
 注意在所有算术溢出情况下，PHP 不会放弃操作也不会引发任何运行时错误。因此如果你编写的 PHP 代码处理的数字接近整数或浮点数值范围限制，你需要非常小心并编写额外代码来自行检测溢出条件。
 
 为了帮助我们理解什么是整数和浮点数值范围以及如何检测算术溢出条件，我编写了这个教程示例 PHP 脚本：
 
-#### NumericOverflow.php 示例脚本
+### NumericOverflow.php 示例脚本
 
-```
+```php
 <?php
 /* NumericOverflow.php
 #- Copyright 2003 (c) HerongYang.com. All Rights Reserved.
@@ -1386,7 +1224,7 @@ herong> \php\php NumericOverflow.php
 
 ---
 
-### PHP 变量、引用和常量
+## PHP 变量、引用和常量
 
 PHP 教程 - Herong 的教程示例 ∟ 变量、引用和常量
 
@@ -1400,7 +1238,7 @@ PHP 教程 - Herong 的教程示例 ∟ 变量、引用和常量
 >
 > 常量和 define() 函数
 
-#### 要点总结
+### 要点总结
 
 *   PHP 变量是无类型的。不同数据类型的值可以赋给同一个变量。
 *   PHP 变量名以 `$` 符号开头。
@@ -1412,7 +1250,7 @@ PHP 教程 - Herong 的教程示例 ∟ 变量、引用和常量
 
 ---
 
-PHP 教程 - Herong 的教程示例 ∟ 变量、引用和常量 ∟ 变量和赋值操作
+### 变量和赋值操作
 
 本节描述什么是变量、以 `$` 为前缀的变量名、变量的 'set' 和 'unset' 状态、给变量赋值、使用 `var_dump($var)` 打印变量信息。
 
@@ -1435,7 +1273,7 @@ PHP 有一个很好的内置函数 `var_dump($var)`，它打印出关于指定�
 
 #### VariableTest.php 示例脚本
 
-```
+```php
 <?php
 #  VariableTest.php
 #- Copyright 2003 (c) HerongYang.com. All Rights Reserved.
@@ -1507,7 +1345,7 @@ Variable assignments:
 
 ---
 
-PHP 教程 - Herong 的教程示例 ∟ 变量、引用和常量 ∟ 引用和变量
+### 引用和变量
 
 本节描述什么是引用、使用 `&` 运算符创建引用、将引用赋给变量、使用 `unset($var)` 函数移除引用链接。
 
@@ -1516,10 +1354,6 @@ PHP 教程 - Herong 的教程示例 ∟ 变量、引用和常量 ∟ 引用和�
 引用是变量的别名。PHP 支持引用的方式与 Perl 语言非常相似。以下是在 PHP 中使用引用的一些基本规则：
 
 1.  要创建给定变量的引用，你需要使用引用运算符：`&`。例如，`&$title` 创建变量 `$title` 的引用。
-
-
-
-
 
 #### PHP 引用规则
 
@@ -1544,6 +1378,8 @@ PHP 教程 - Herong 的教程示例 ∟ 变量、引用和常量 ∟ 引用和�
 #### ReferenceTest.php 示例
 
 为了演示上述提到的一些引用规则，我编写了以下 PHP 脚本 `ReferenceTest.php`：
+
+
 
 ```php
 <?php
@@ -1681,13 +1517,13 @@ herong> \php-5.6\php ReferenceTest.php
     $name: string(22) "Herong's Tutorial Book"
 ```
 
-PHP 教程 - Herong 的教程示例
+### PHP 教程 - Herong 的教程示例
 
-∟ 变量、引用和常量
+#### 变量、引用和常量
 
-∟ 变量变量名 - 使用表达式命名变量
+#### 变量变量名 - 使用表达式命名变量
 
-#### 变量变量名
+##### 变量变量名
 
 本节介绍什么是变量变量名，将变量名存储在另一个变量中，使用表达式命名变量，以及使用任意表达式作为变量名。
 
@@ -1695,11 +1531,7 @@ PHP 教程 - Herong 的教程示例
 
 1. 如果原始变量的名称存储在另一个不同的变量中，你可以在 PHP 源代码中使用 `$$var` 符号来标识原始变量。例如，`$variableName = "title"; $$variableName` 代表变量 `$title`。
 
-
-
-
-
-#### PHP 变量变量
+##### PHP 变量变量
 
 2. 如果原始变量的名称可以通过表达式计算得出，可以在 PHP 源代码中使用 `${exp}` 表示法来标识原始变量。例如，`$variableName = "title"; ${$variableName."_1"}` 代表变量 `$title_1`。
 
@@ -1772,15 +1604,15 @@ herong> \php\php VariableVariableName.php
     ${1.0/3.3}: string(18) "Herong's Free Book"
 ```
 
-PHP 教程 - Herong 的教程示例
+### PHP 教程 - Herong 的教程示例
 
-∟ 变量、引用和常量
+#### 变量、引用和常量
 
-∟ 常量和 define() 函数
+#### 常量和 define() 函数
 
 本节介绍什么是常量，`define()` 函数将常量名定义为一个值，常量值可以直接通过名称或通过 `constant()` 函数检索，任何字符串都可以用作常量名。
 
-#### 什么是常量？
+##### 什么是常量？
 
 常量是数据值的标识符。一旦定义，由常量标识的数据值就不能更改。PHP 支持具有以下基本规则的常量：
 
@@ -1794,9 +1626,15 @@ PHP 教程 - Herong 的教程示例
 
 5. 如果想知道是否为给定的常量名定义了常量，可以使用 `defined(name)` 函数。例如，`define("LONG PI", 3.14159265359); defined("LONG PI");` 返回 `TRUE`。而 `defined("LONG RI")` 返回 `FALSE`。
 
+
+
+## 常量定义规则
+
 6. 常量只能用标量数据类型的值定义：布尔值、整数、浮点数和字符串。
 
 7. PHP 引擎提供许多预定义（内置）常量。例如，`__FILE__`、`__LINE__`、`PHP_OS`、`PHP_VERSION`、`PHP_INT_MAX`、`DIRECTORY_SEPARATOR` 等。
+
+## 教程示例：常量测试
 
 现在让我们看看下面的教程示例，以确认上述提到的一些规则：
 
@@ -1867,48 +1705,48 @@ C:\herong\ConstantTest.php on line 20
     DIRECTORY_SEPARATOR: string(1) "\"
 ```
 
-PHP 教程 - Herong 的教程示例
+---
 
-∟ 表达式、运算和类型转换
+# PHP 教程 - Herong 的教程示例
+
+## 表达式、运算和类型转换
 
 本章提供关于 PHP 表达式和运算的教程笔记和示例代码。主题包括使用数据字面量、变量和运算编写表达式；位运算、算术运算、比较运算、逻辑运算、字符串运算和赋值运算；运算优先级；数据类型自动转换。
 
-> 什么是表达式
->
-> 什么是运算
->
-> 运算优先级
->
-> 数据类型自动转换
+### 目录
 
-**要点：**
+- [什么是表达式](#什么是表达式)
+- [什么是运算](#什么是运算)
+- [运算优先级](#运算优先级)
+- [数据类型自动转换](#数据类型自动转换)
+
+### 要点
 
 *   PHP 支持 6 种基本类型的运算：位运算、算术运算、比较运算、逻辑运算、字符串运算和赋值运算。
 
+---
 
-
-
-## PHP 教程 - Herong 的教程示例
-
-### 表达式、运算和类型转换
-
-#### 什么是表达式
+### 什么是表达式
 
 本节介绍什么是表达式。数据字面量或变量是简单表达式。单个运算或一组多个运算是复杂表达式。
 
 **什么是表达式？** 给出表达式的一个精确单一定义并非易事。因此我将尝试以递归方式定义它：
 
 1. 简单表达式是数据值的表示，如字面量、变量、数组元素或函数调用。
+
 2. 复杂表达式是由运算符表示的运算返回的数据值的表示，该运算包含一个或两个表达式作为操作数。该运算将产生一个新的数据值。
 
 如果递归应用规则 #2，一个表达式可能包含一系列多个运算。当这种情况发生时，运算必须按照以下规则定义的顺序执行：
 
 A. 括在一对括号中的运算必须在括号外的运算之前执行。
+
 B. 优先级较高的运算必须在优先级较低的运算之前执行。
+
 C. 左侧的运算必须在右侧的运算之前执行。
+
 D. 规则 A 必须在规则 B 之前应用，规则 B 必须在规则 C 之前应用。
 
-表达式示例：
+**表达式示例：**
 
 ```
 "Hello world!"   # 简单表达式 - 字符串字面量
@@ -1921,18 +1759,26 @@ getdate()        # 简单表达式 - 函数调用
 (7+2)*9.99 > 50     # 复杂表达式 - 多个运算
 ```
 
-#### 什么是运算
+---
+
+### 什么是运算
 
 本节描述什么是运算——一个接受一个或两个操作数并根据由运算符表示的特定处理规则返回结果的过程。
 
 **什么是运算？** 运算是一个接受一个或两个操作数并根据由运算符表示的特定处理规则返回结果的过程。PHP 支持其他编程语言中使用的大多数运算类型：
 
 1. **位运算**：`and` (`$a & $b`)、`or` (`$a | $b`)、`xor` (`$a ^ $b`)、`not` (`~ $a`)、左移 (`$a << $s`)、右移 (`$a >> $s`)。
+
 2. **递增/递减运算**：前置递增 (`++$a`)、后置递增 (`$a++`)、前置递减 (`--$a`)、后置递减 (`$a--`)。
+
 3. **算术运算**：取负 (`-$a`)、加法 (`$a + $b`)、减法 (`$a - $b`)、乘法 (`$a * $b`)、除法 (`$a / $b`)、取模 (`$a % $b`)。
+
 4. **比较运算**：相等 (`$a == $b`)、全等 (`$a === $b`)、不等 (`$a != $b`、`$a <> $b`)、不全等 (`$a !== $b`)、小于 (`$a < $b`)、大于 (`$a > $b`)、小于或等于 (`$a <= $b`)、大于或等于 (`$a >= $b`)。
+
 5. **逻辑运算**：`and` (`$a and $b`、`$a && $b`)、`or` (`$a or $b`、`$a || $b`)、`xor` (`$a xor $b`)、`not` (`!$a`)。
+
 6. **字符串运算**：连接 (`$a . $b`)。
+
 7. **赋值运算**：赋值 (`$a = $b`)、加法赋值 (`$a += $b`)、减法赋值 (`$a -= $b`)、乘法赋值 (`$a *= $b`)、除法赋值 (`$a /= $b`)、取模赋值 (`$a %= $b`)、连接赋值 (`$a .= $b`)。
 
 为了帮助我们理解不同类型的运算，我编写了以下 PHP 脚本 `OperationTest.php`：
@@ -2012,7 +1858,9 @@ herong> \php\php OperationTest.php
     $name="Herong": Herong
 ```
 
-#### 运算的优先级
+---
+
+### 运算的优先级
 
 本节提供了 PHP 中常用运算的优先级顺序。复杂表达式中的运算必须根据运算优先级的顺序进行求值。
 
@@ -2044,9 +1892,6 @@ herong> \php\php OperationTest.php
 *   优先级值相同的运算必须从左到右求值。
 
 为了向您展示上述一些参考规则，我编写了以下 PHP 脚本 `PrecedenceTest.php`：
-
-
-
 
 ```php
 <?php
@@ -2091,22 +1936,25 @@ herong> \php\php PrecedenceTest.php
     : 1
 ```
 
-PHP 教程 - Herong 的教程示例
+---
 
-∟ 表达式、运算和类型转换
-
-∟ 数据类型自动转换
+### 数据类型自动转换
 
 本节提供关于操作数如何转换为运算所需数据类型的规则。PHP 总能找到一种方法将数据从任意类型转换为任意其他类型。
 
 当 PHP 计算一个运算时，如果操作数的数据类型与运算符要求的数据类型不匹配，它将自动转换操作数的数据类型。以下是一些基本的数据类型自动转换规则：
 
 *   对于逻辑运算，`NULL`、`0` 或 `""` 将被转换为 `FALSE`。任何可解析为 `0` 的字符串也将被转换为 `FALSE`。其他值将被转换为 `TRUE`。
+
 *   对于算术运算，字符串将被解析为数值。`TRUE` 将被转换为 `1`。`FALSE` 将被转换为 `0`。
+
 *   对于比较运算，如果一个操作数是数值，则另一个操作数将被转换为数值以进行数值比较。如果两个操作数都是字符串，则将进行字符串比较。
+
 *   对于字符串运算，`NULL` 将被转换为 `""`。`TRUE` 将被转换为 `"1"`。`FALSE` 将被转换为 `""`。数值将被转换为十进制表示形式。
 
 为了演示其中一些规则，我编写了以下示例 PHP 脚本 `TypeAutoConversion.php`：
+
+
 
 ```php
 <?php
@@ -2215,54 +2063,48 @@ herong> \php5.6\php TypeAutoConversion.php
     "Hello " . 1.0/3.0: string(20) "Hello 0.333333333333"
 ```
 
-PHP 教程 - Herong 的教程示例
+# PHP 教程 - Herong 的教程示例
 
-∟ 条件语句 - "if" 和 "switch"
+## 条件语句 - "if" 和 "switch"
 
 本章提供关于条件语句的教程示例和说明。主题包括 4 种形式的 'if' 语句、'switch' 语句，以及使用条件语句控制代码执行的示例。
 
-> "if" 语句
+### "if" 语句
 
-> 
+### "if" 语句示例
 
-> "if" 语句示例
+### "switch" 语句
 
-> 
-
-> "switch" 语句
-
-> 
-
-> "switch" 语句示例
+### "switch" 语句示例
 
 要点：
 
-*   "`if`" 后面必须跟一个条件。
-*   "`elseif`" 和 "`else if`" 是等价的。
-*   "`switch`" 后面必须跟一个测试表达式。
-*   如果没有 "`case`" 子句与测试表达式匹配，将执行 "`default`" 子句。
-*   一旦匹配到一个 "`case`"，所有剩余的语句块都将被执行。
-*   应在 "`case`" 子句中使用 "`break`" 语句以停止执行。
+*   `if` 后面必须跟一个条件。
+*   `elseif` 和 `else if` 是等价的。
+*   `switch` 后面必须跟一个测试表达式。
+*   如果没有 `case` 子句与测试表达式匹配，将执行 `default` 子句。
+*   一旦匹配到一个 `case`，所有剩余的语句块都将被执行。
+*   应在 `case` 子句中使用 `break` 语句以停止执行。
 
-PHP 教程 - Herong 的教程示例
+# PHP 教程 - Herong 的教程示例
 
-∟ 条件语句 - "if" 和 "switch"
+## 条件语句 - "if" 和 "switch"
 
-∟ "if" 语句
+### "if" 语句
 
 本节介绍 PHP 中支持的 4 种 'if' 语句形式。较复杂的形式是 'if ... elseif ... else'。
 
 PHP 中支持 4 种 "If" 语句形式：
 
-1.  单语句 "`if`"：
+1.  单语句 `if`：
 
     ```
     if (condition) statement
     ```
 
-    其中 "`condition`" 是一个布尔值，"`statement`" 指定另一条语句。仅当指定条件评估为 "`TRUE`" 时，才会执行指定的语句。
+    其中 `condition` 是一个布尔值，`statement` 指定另一条语句。仅当指定条件评估为 `TRUE` 时，才会执行指定的语句。
 
-2.  多语句 "`if`"：
+2.  多语句 `if`：
 
     ```
     if (condition) {
@@ -2272,9 +2114,9 @@ PHP 中支持 4 种 "If" 语句形式：
     }
     ```
 
-    仅当指定条件评估为 "`TRUE`" 时，才会执行指定的多语句块。
+    仅当指定条件评估为 `TRUE` 时，才会执行指定的多语句块。
 
-3.  "`if ... else`" 语句：
+3.  `if ... else` 语句：
 
     ```
     if (condition) {
@@ -2288,11 +2130,7 @@ PHP 中支持 4 种 "If" 语句形式：
     }
     ```
 
-
-
-
-
-指定了两个语句块。但根据指定条件的值，只会执行其中一个语句块。如果指定条件为 `TRUE`，则执行第一个块。如果指定条件为 `FALSE`，则执行第二个块。
+    指定了两个语句块。但根据指定条件的值，只会执行其中一个语句块。如果指定条件为 `TRUE`，则执行第一个块。如果指定条件为 `FALSE`，则执行第二个块。
 
 #### "if ... elseif" 语句
 
@@ -2319,17 +2157,17 @@ if (condition_1) {
 
 指定了多个语句块。但根据为该块指定的条件的值，只会执行其中一个语句块。
 
-PHP Tutorials - Herong's Tutorial Examples
+# PHP Tutorials - Herong's Tutorial Examples
 
-∟ Conditional Statements - "if" and "switch"
+## Conditional Statements - "if" and "switch"
 
-∟ "if" 语句示例
+### "if" 语句示例
 
 本节提供了一个教程示例，演示如何使用不同类型的 `if` 语句来控制代码执行。
 
 为了帮助我们理解 `if` 语句的工作原理，我编写了以下教程示例 PHP 脚本：
 
-```
+```php
 <?php
 #### IfStatements.php
 #- Copyright 2003 (c) HerongYang.com. All Rights Reserved.
@@ -2396,11 +2234,11 @@ herong> \php\php IfStatements.php
     The library is closed
 ```
 
-PHP Tutorials - Herong's Tutorial Examples
+# PHP Tutorials - Herong's Tutorial Examples
 
-∟ Conditional Statements - "if" and "switch"
+## Conditional Statements - "if" and "switch"
 
-∟ "switch" 语句
+### "switch" 语句
 
 本节描述 `switch` 语句的工作原理。执行将从其预期值与测试表达式匹配的 `case` 子句开始。执行将继续进行所有剩余的 `case` 子句。
 
@@ -2430,17 +2268,19 @@ switch (test_expression) {
 * 如果没有执行任何 `case` 子句，则执行 `default` 子句。
 * 要停止执行剩余语句，可以使用 `break` 语句。
 
-PHP Tutorials - Herong's Tutorial Examples
+# PHP Tutorials - Herong's Tutorial Examples
 
-∟ Conditional Statements - "if" and "switch"
+## Conditional Statements - "if" and "switch"
 
-∟ "switch" 语句示例
+### "switch" 语句示例
 
 本节提供了一个教程示例，演示如何使用 `switch` 语句根据预期值的相等条件选择一个语句块。
 
 为了帮助我们理解 `switch` 语句的工作原理，我编写了以下教程示例脚本：
 
-```
+
+
+```php
 <?php
 #### SwitchStatements.php
 #- Copyright 2003 (c) HerongYang.com. All Rights Reserved.
@@ -2484,51 +2324,50 @@ Library Hours with "switch" statements:
    The library is closed
 ```
 
-PHP Tutorials - Herong's Tutorial Examples
+# PHP Tutorials - Herong's Tutorial Examples
 
-∟ 循环语句 - "while"、"for" 和 "do ... while"
+## 循环语句 - "while"、"for" 和 "do ... while"
 
 本章提供了关于循环语句的教程示例和说明。主题包括 `while`、`for` 和 `do ... while` 语句；使用循环语句控制代码执行的示例。
 
-> "while" Statements
->
-> "while" Statement Examples
->
-> "for" Statements
->
-> "for" Statement Examples
->
-> "do ... while" Statements
->
-> "break" and "continue" Statements
+### 目录
 
-要点：
+*   "while" Statements
+*   "while" Statement Examples
+*   "for" Statements
+*   "for" Statement Examples
+*   "do ... while" Statements
+*   "break" and "continue" Statements
 
-* `while` 语句是 PHP 中最常用的循环语句。
-* `for` 语句是 PHP 中最复杂的循环语句。
-* `do ... while` 语句只是 `while` 语句的一种变体。
-* `break` 语句接受一个可选参数，用于跳出多层循环。
-* `continue` 语句接受一个可选参数，用于跳出并继续在指定层级的循环。
+### 要点
 
-PHP Tutorials - Herong's Tutorial Examples
+*   `while` 语句是 PHP 中最常用的循环语句。
+*   `for` 语句是 PHP 中最复杂的循环语句。
+*   `do ... while` 语句只是 `while` 语句的一种变体。
+*   `break` 语句接受一个可选参数，用于跳出多层循环。
+*   `continue` 语句接受一个可选参数，用于跳出并继续在指定层级的循环。
 
-∟ Loop Statements - "while", "for", and "do ... while"
+---
 
-∟ "while" 语句
+## PHP Tutorials - Herong's Tutorial Examples
+
+### Loop Statements - "while", "for", and "do ... while"
+
+#### "while" 语句
 
 本节描述 `while` 语句在 PHP 中的工作原理。只要指定条件为真，就会重复执行一条或多条语句。
 
 `while` 语句是 PHP 中最常用的循环语句。PHP 支持 3 种形式的 `while` 语句：
 
-#### 单语句 "while"
+##### 单语句 "while"
 
-```
+```php
 while (condition) statement;
 ```
 
-#### 多语句 "while"
+##### 多语句 "while"
 
-```
+```php
 while (condition) {
    statement;
    statement;
@@ -2536,9 +2375,9 @@ while (condition) {
 }
 ```
 
-#### 多语句 "while ... endwhile"
+##### 多语句 "while ... endwhile"
 
-```
+```php
 while (condition):
    statement;
    statement;
@@ -2548,29 +2387,23 @@ endwhile;
 
 所有形式的 `while` 语句执行过程如下：
 
-步骤 1：将 `condition` 计算为布尔值。
-
-步骤 2：如果 `condition` 返回 `TRUE`，继续执行步骤 4。
-
-步骤 3：如果 `condition` 返回 `FALSE`，终止循环。
-
-步骤 4：执行循环中包含的语句。
-
-步骤 5：继续执行步骤 1。
+1.  将 `condition` 计算为布尔值。
+2.  如果 `condition` 返回 `TRUE`，继续执行步骤 4。
+3.  如果 `condition` 返回 `FALSE`，终止循环。
+4.  执行循环中包含的语句。
+5.  继续执行步骤 1。
 
 当然，你可以在循环内部使用 `break` 语句来立即终止循环。
 
-PHP Tutorials - Herong's Tutorial Examples
+---
 
-∟ Loop Statements - "while", "for", and "do ... while"
+## PHP Tutorials - Herong's Tutorial Examples
 
-∟ "while" 语句示例
+### Loop Statements - "while", "for", and "do ... while"
 
+#### "while" 语句示例
 
-
-
-
-#### “while” 语句
+##### “while” 语句
 
 本节提供了一个教程示例，说明如何使用 `while` 语句在指定条件为真时重复执行一条或多条语句。
 
@@ -2645,11 +2478,11 @@ herong> \php\php WhileStatements.php
    19 is a prime number.
 ```
 
-PHP 教程 - Herong 的教程示例
+---
 
-∟循环语句 - “while”、“for” 和 “do ... while”
+## PHP 教程 - Herong 的教程示例
 
-∟“for” 语句
+### 循环语句 - “while”、“for” 和 “do ... while”
 
 #### “for” 语句
 
@@ -2657,22 +2490,22 @@ PHP 教程 - Herong 的教程示例
 
 `for` 语句是 PHP 中最复杂的循环语句。PHP 支持 4 种形式的 `for` 语句：
 
-#### 1. 空语句 “for”
+##### 1. 空语句 “for”
 
-```
+```php
 for (initial_expression; stop_condition; repeating_expression);
 ```
 
-#### 2. 单语句 “for”
+##### 2. 单语句 “for”
 
-```
+```php
 for (initial_expression; stop_condition; repeating_expression)
    statement;
 ```
 
-#### 3. 多语句 “for”
+##### 3. 多语句 “for”
 
-```
+```php
 for (initial_expression; stop_condition; repeating_expression) {
    statement;
    statement;
@@ -2680,9 +2513,9 @@ for (initial_expression; stop_condition; repeating_expression) {
 }
 ```
 
-#### 4. 多语句 “for ... endfor”
+##### 4. 多语句 “for ... endfor”
 
-```
+```php
 for (initial_expression; stop_condition; repeating_expression):
    statement;
    statement;
@@ -2708,13 +2541,15 @@ endfor;
 
 如果你想提前终止循环，可以在循环内部使用 `break` 语句，这将立即终止循环。
 
-PHP 教程 - Herong 的教程示例
+---
 
-∟循环语句 - “while”、“for” 和 “do ... while”
+## PHP 教程 - Herong 的教程示例
 
-∟“for” 语句示例
+### 循环语句 - “while”、“for” 和 “do ... while”
 
-# “for” 语句示例
+#### “for” 语句示例
+
+##### “for” 语句示例
 
 本节提供了一个教程示例，说明如何使用 `for` 语句重复执行零条、一条或多条语句。
 
@@ -2787,11 +2622,11 @@ herong> \php\php ForStatements.php
    19 is a prime number.
 ```
 
-PHP 教程 - Herong 的教程示例
+---
 
-∟循环语句 - “while”、“for” 和 “do ... while”
+## PHP 教程 - Herong 的教程示例
 
-∟“do ... while” 语句
+### 循环语句 - “while”、“for” 和 “do ... while”
 
 #### “do ... while” 语句
 
@@ -2799,15 +2634,15 @@ PHP 教程 - Herong 的教程示例
 
 PHP 还支持一种 `while` 语句的变体，称为 `do ... while` 语句，有 2 种形式：
 
-#### 1. 单语句 “do ... while”
+##### 1. 单语句 “do ... while”
 
-```
+```php
 do statement while (condition);
 ```
 
-#### 2. 多语句 “do ... while”
+##### 2. 多语句 “do ... while”
 
-```
+```php
 do {
    statement;
    statement;
@@ -2829,11 +2664,11 @@ do {
 
 我将把编写一些 `do ... while` 语句的示例脚本作为练习留给你。
 
-PHP 教程 - Herong 的教程示例
+---
 
-∟循环语句 - “while”、“for” 和 “do ... while”
+## PHP 教程 - Herong 的教程示例
 
-∟“break” 和 “continue” 语句
+### 循环语句 - “while”、“for” 和 “do ... while”
 
 #### “break” 和 “continue” 语句
 
@@ -2841,11 +2676,11 @@ PHP 教程 - Herong 的教程示例
 
 为了帮助我们更好地控制执行流程，PHP 为语句块提供了两个特殊语句：`break` 和 `continue`：
 
-#### 1. 无选项的 “break” 语句
+##### 1. 无选项的 “break” 语句
 
 它中断当前语句块和 `break` 语句所在的当前循环。当前语句块中的剩余语句将不会被执行。如果当前语句块作为循环运行，该循环也将被终止。
 
-```
+```php
 any_block {
    ...
    any_block {
@@ -2861,13 +2696,11 @@ any_block {
 }
 ```
 
-
-
-
-
-#### 2. 带整数选项 n 的 "break" 语句
+##### 2. 带整数选项 n 的 "break" 语句
 
 它会向后跳出 n 层语句块和循环。所有 n 层语句块中的剩余语句将不会被执行。如果其中任何语句块是循环，这些循环也将被终止。
+
+
 
 ```
 any_block {
@@ -2883,7 +2716,7 @@ any_block {
 }
 ```
 
-#### 3. 不带选项的 "continue" 语句
+### 3. 不带选项的 `continue` 语句
 
 它会中断当前语句块，并继续执行包含 `continue` 语句的当前循环的下一次迭代。当前语句块中的剩余语句将不会被执行。但如果当前语句块作为循环运行，循环将继续下一次迭代。
 
@@ -2903,7 +2736,7 @@ any_block {
 }
 ```
 
-#### 4. 带整数选项 n 的 "continue" 语句
+### 4. 带整数选项 n 的 `continue` 语句
 
 它会向后跳出 n 层语句块和循环。所有 n 层语句块中的剩余语句将不会被执行。但如果第 n 层语句块作为循环运行，第 n 层循环将继续下一次迭代。
 
@@ -2923,39 +2756,41 @@ any_block {
 }
 ```
 
-我将把编写 "break" 和 "continue" 语句的示例脚本作为练习留给你。
+我将把编写 `break` 和 `continue` 语句的示例脚本作为练习留给你。
 
-PHP Tutorials - Herong's Tutorial Examples
+---
 
-∟ Function Declaration, Arguments, and Return Values（函数声明、参数和返回值）
+# PHP Tutorials - Herong's Tutorial Examples
+
+## Function Declaration, Arguments, and Return Values（函数声明、参数和返回值）
 
 本章提供关于用户定义函数的教程示例和说明。主题包括定义带参数的函数、在表达式中调用函数、按值或按引用传递参数、可变长度参数列表、为参数提供默认值、按值或按引用返回数据。
 
-> What Is a Function（什么是函数）
+> **What Is a Function（什么是函数）**
+>
+> **"function" Statements - Defining Functions（"function" 语句 - 定义函数）**
+>
+> **Function Call Operations（函数调用操作）**
+>
+> **Passing Arguments to Functions（向函数传递参数）**
+>
+> **Example of Passing Arguments by Values（按值传递参数示例）**
+>
+> **Using Pass-by-Value Arguments for References（使用按值传递的参数作为引用）**
+>
+> **Example of Passing Arguments by References（按引用传递参数示例）**
+>
+> **Variable-Length Argument Lists（可变长度参数列表）**
+>
+> **Providing Default Values to Argument Variables（为参数变量提供默认值）**
+>
+> **Returning Values from Functions（从函数返回值）**
+>
+> **Returning References from Functions（从函数返回引用）**
+>
+> **Usage Examples of Functions（函数使用示例）**
 
-> "function" Statements - Defining Functions（"function" 语句 - 定义函数）
-
-> Function Call Operations（函数调用操作）
-
-> Passing Arguments to Functions（向函数传递参数）
-
-> Example of Passing Arguments by Values（按值传递参数示例）
-
-> Using Pass-by-Value Arguments for References（使用按值传递的参数作为引用）
-
-> Example of Passing Arguments by References（按引用传递参数示例）
-
-> Variable-Length Argument Lists（可变长度参数列表）
-
-> Providing Default Values to Argument Variables（为参数变量提供默认值）
-
-> Returning Values from Functions（从函数返回值）
-
-> Returning References from Functions（从函数返回引用）
-
-> Usage Examples of Functions（函数使用示例）
-
-#### 要点
+### 要点
 
 *   `function` 语句定义一个带或不带参数变量的函数。
 *   函数中的 `return` 语句停止函数执行并将值返回给调用代码。
@@ -2964,11 +2799,13 @@ PHP Tutorials - Herong's Tutorial Examples
 *   如果在参数变量前添加 `&`，参数可以按引用传递。
 *   如果在函数名前添加 `&`，函数可以返回变量的引用。
 
-PHP Tutorials - Herong's Tutorial Examples
+---
 
-∟ Function Declaration, Arguments, and Return Values
+# PHP Tutorials - Herong's Tutorial Examples
 
-∟ What Is a Function
+## Function Declaration, Arguments, and Return Values
+
+### What Is a Function
 
 本节描述什么是函数。提供了一个快速示例，展示如何定义和调用函数。
 
@@ -2986,7 +2823,7 @@ PHP Tutorials - Herong's Tutorial Examples
 
 以下是一个定义函数、调用函数、向函数传递数据并从函数返回结果的简单示例脚本：
 
-```
+```php
 function square($x) {
    $y = $x * $x;
    return $y;
@@ -3004,17 +2841,19 @@ echo($area);
 *   调用时向函数传递了一个输入值。
 *   使用 `return` 语句返回结果。
 
-PHP Tutorials - Herong's Tutorial Examples
+---
 
-∟ Function Declaration, Arguments, and Return Values
+# PHP Tutorials - Herong's Tutorial Examples
 
-∟ "function" Statements - Defining Functions
+## Function Declaration, Arguments, and Return Values
+
+### "function" Statements - Defining Functions
 
 本节描述 `function` 语句，可用于定义具有函数名、参数列表和函数体的自定义函数。
 
 `function` 语句用以下语法定义函数：
 
-```
+```php
 function function_name($argument_1, $argument_2, ...) {
    statement_1;
    statement_2;
@@ -3028,7 +2867,7 @@ function function_name($argument_1, $argument_2, ...) {
 
 参数列表是可选的。如果不需要，定义不带参数但保留参数括号的函数，如下所示：
 
-```
+```php
 function function_name() {
    statement_1;
    statement_2;
@@ -3044,9 +2883,6 @@ function function_name() {
 
 为了帮助我们理解如何使用 `function` 语句，我编写了以下教程示例 PHP 脚本：
 
-
-
-
 ### 函数声明、参数和返回值
 
 #### 函数调用操作
@@ -3061,13 +2897,13 @@ function function_name() {
 
 当执行到达此函数调用操作时，它将：
 
-* 将所有调用参数求值为值或变量引用。
-* 将参数值和引用赋给 `function` 语句中定义的参数变量。
-* 开始执行函数体的第一条语句。
-* 继续执行函数体，直到函数体结束或遇到 `return` 语句。
-* 如果到达带有指定值的 `return` 语句，该值将作为本次函数调用操作的结果返回。
-* 如果到达未指定值的 `return` 语句，`NULL` 将作为本次函数调用操作的结果返回。
-* 如果未到达 `return` 语句，`NULL` 将作为本次函数调用操作的结果返回。
+*   将所有调用参数求值为值或变量引用。
+*   将参数值和引用赋给 `function` 语句中定义的参数变量。
+*   开始执行函数体的第一条语句。
+*   继续执行函数体，直到函数体结束或遇到 `return` 语句。
+*   如果到达带有指定值的 `return` 语句，该值将作为本次函数调用操作的结果返回。
+*   如果到达未指定值的 `return` 语句，`NULL` 将作为本次函数调用操作的结果返回。
+*   如果未到达 `return` 语句，`NULL` 将作为本次函数调用操作的结果返回。
 
 下面是一个简单的示例脚本，展示了如何使用函数调用操作：
 
@@ -3123,27 +2959,23 @@ herong> \php\php FunctionCallOperations.php
 
 正如前几节示例所示，向函数传递参数似乎是一项简单的工作。但如果不遵循规则，可能会引起混淆。PHP 对向函数和子程序过程传递参数有以下规则：
 
-1. 默认情况下，函数参数是**按值传递**的。在这种情况下，参数变量包含调用代码提供的数据的副本。
-2. 但是，如果将参数变量定义为 `&$variable_name`，则函数参数可以**按引用传递**。在这种情况下，参数变量包含调用代码中原始变量的引用。换句话说，参数变量是原始变量的别名。
-3. **按值传递**的参数变量使用起来更安全，因为它在调用时会被赋予来自调用代码的数据副本。如果在函数中将参数变量重新赋值为新数据，将不会对调用代码产生任何影响。
-4. **按引用传递**的参数变量既有优势也有风险。优势在于它可以用作函数向调用代码发送数据回去的输出通道。风险在于如果因失误在函数中将参数变量重新赋值为新数据，将会对调用代码产生负面影响。
-5. 参数变量可以定义默认值。带有默认值的参数必须位于参数列表的末尾。
-6. 如果你想使用参数变量的默认值，可以在函数调用操作中跳过该参数。
-7. 函数调用中传递的参数可以在不使用参数变量的情况下检索。你可以使用 `func_num_args()`、`func_get_arg()` 和 `func_get_args()` 函数来访问参数。此功能可用于支持可变长度的参数列表。
-8. 如果数组是**按值传递**的，原始数组的副本将被传递给函数。如果数组是**按引用传递**的，函数和调用代码将共享同一个数组。
-9. 如果变量的引用是**按值传递**的，该引用的副本将被传递给函数。但该副本和该引用都指向同一个原始变量。因此，**按值传递引用**等同于**按引用传递变量**。
+1.  默认情况下，函数参数是**按值传递**的。在这种情况下，参数变量包含调用代码提供的数据的副本。
+2.  但是，如果将参数变量定义为 `&$variable_name`，则函数参数可以**按引用传递**。在这种情况下，参数变量包含调用代码中原始变量的引用。换句话说，参数变量是原始变量的别名。
+3.  **按值传递**的参数变量使用起来更安全，因为它在调用时会被赋予来自调用代码的数据副本。如果在函数中将参数变量重新赋值为新数据，将不会对调用代码产生任何影响。
+4.  **按引用传递**的参数变量既有优势也有风险。优势在于它可以用作函数向调用代码发送数据回去的输出通道。风险在于如果因失误在函数中将参数变量重新赋值为新数据，将会对调用代码产生负面影响。
+5.  参数变量可以定义默认值。带有默认值的参数必须位于参数列表的末尾。
+6.  如果你想使用参数变量的默认值，可以在函数调用操作中跳过该参数。
+7.  函数调用中传递的参数可以在不使用参数变量的情况下检索。你可以使用 `func_num_args()`、`func_get_arg()` 和 `func_get_args()` 函数来访问参数。此功能可用于支持可变长度的参数列表。
+8.  如果数组是**按值传递**的，原始数组的副本将被传递给函数。如果数组是**按引用传递**的，函数和调用代码将共享同一个数组。
+9.  如果变量的引用是**按值传递**的，该引用的副本将被传递给函数。但该副本和该引用都指向同一个原始变量。因此，**按值传递引用**等同于**按引用传递变量**。
 
 #### 按值传递参数的示例
-
-本节提供了一个教程示例，说明如何使用**按值传递**的参数，这允许函数重新赋值……等等，原文说“allows the function to re-assign new values to original variables in the calling code”，但按值传递实际上*不允许*修改调用代码中的原始变量。这可能是原文笔误，应为“不允许”或描述的是按引用传递。但作为翻译需忠实原文：
 
 本节提供了一个教程示例，说明如何使用**按值传递**的参数，这允许函数重新赋值给调用代码中的原始变量新值。
 
 正如我们从上一节了解到的，PHP 函数默认使用**按值传递**的参数。如果参数被定义为**按值传递**的参数，调用操作可以为此参数提供一个表达式。当函数被调用时，该表达式将被赋值给此参数变量。例如，如果我们定义了 `function f($var) {...}`，则 `f(exp)` 等同于 `{$var=exp; ...}`。
 
 为了演示按值传递参数是如何工作的，我编写了这个教程示例 `PassByValue.php`：
-
-
 
 # PHP 传值与传引用教程
 
@@ -3201,7 +3033,15 @@ function getString($left, $right) {
 
 如果运行此示例脚本，你应该会得到：
 
-```
+
+
+# PHP 传引用调用和可变长度参数列表
+
+## 传引用调用参数
+
+### 传值参数示例
+
+```bash
 herong> \php\php PassByValue.php
 
  1. 传递两个字面量:
@@ -3232,7 +3072,7 @@ herong> \php\php PassByValue.php
 
 ---
 
-#### 在传值参数中使用引用
+### 在传值参数中使用引用
 
 本节提供了一个教程示例，说明如何在传值参数上使用引用。将引用表达式作为传值参数传递，允许你在调用代码中修改原始变量。
 
@@ -3285,7 +3125,7 @@ function getString($left, $right) {
 
 如果在旧版本的 PHP 中运行此教程示例，你将得到：
 
-```
+```bash
 herong> \php\php PassByValueWithReference.php
 
  1. 传递两个变量:
@@ -3320,7 +3160,7 @@ herong> \php\php PassByValueWithReference.php
 
 如果在 PHP 5 中运行此教程示例，你将得到一个致命错误：
 
-```
+```bash
 herong> \php-5.6\php PassByValueWithReference.php
 
 PHP Fatal error:  Call-time pass-by-reference has been removed;
@@ -3332,7 +3172,7 @@ of swap() in C:\herong\PassByValueWithReference.php on line 20.
 
 如果在 PHP 7 中运行此教程示例，你将得到一个解析错误：
 
-```
+```bash
 herong> \php-7.3\php PassByValueWithReference.php
 PHP Parse error:  syntax error, unexpected '&'
 in C:\herong\PassByValueWithReference.php on line 20
@@ -3340,21 +3180,13 @@ in C:\herong\PassByValueWithReference.php on line 20
 
 ---
 
-#### 传引用参数示例
+### 传引用参数示例
 
 本节提供了一个教程示例，说明如何将参数作为引用传递给函数。如果你希望调用者从函数获取更新后的值，这非常有用。
 
 正如我们从上一节了解到的，如果参数变量在定义时带有 `&` 前缀，PHP 支持传引用参数。如果一个参数被定义为传引用参数，调用操作可以为此参数提供一个变量。当函数被调用时，该变量的引用将被获取并赋值给此参数变量。例如，如果我们定义了 `function f(&$var) {...}`，那么 `f($arg)` 等同于 `{$var=&$arg; ...}`。
 
 为了了解传引用参数是如何工作的，我编写了这个教程示例 `PassByReference.php`：
-
-
-
-
-
-# PHP 传引用调用和可变长度参数列表
-
-## 传引用调用参数
 
 ```php
 <?php
@@ -3408,7 +3240,7 @@ function getString($left, $right) {
 
 如果你运行这个示例脚本，应该会得到：
 
-```
+```bash
 herong> \php\php PassByReference.php
 
  2. Passing two variables:
@@ -3443,15 +3275,9 @@ herong> \php\php PassByReference.php
    swap(&$a, &$b);
 ```
 
-PHP 教程 - Herong 的教程示例
-
-∟ 函数声明、参数和返回值
-
-∟ 可变长度参数列表
-
 ---
 
-#### 可变长度参数列表
+## 可变长度参数列表
 
 本节提供了一个教程示例，说明如何在不使用参数变量的情况下访问函数中的参数，以及如何传递比函数语句中定义的更多参数。
 
@@ -3514,6 +3340,8 @@ PHP 教程 - Herong 的教程示例
 ?>
 ```
 
+
+
 如果你运行这个示例脚本，应该会得到：
 
 ```
@@ -3535,24 +3363,20 @@ herong> \php\php ArgumentList.php
     1
 ```
 
-PHP 教程 - Herong 的教程示例
+# PHP 教程 - Herong 的教程示例
 
-∟ 函数声明、参数和返回值
+## 函数声明、参数和返回值
 
-∟ 为参数变量提供默认值
-
----
-
-#### 为参数变量提供默认值
+### 为参数变量提供默认值
 
 本节提供了一个教程示例，说明如何为参数变量提供默认值。
 
 PHP 允许我们在函数定义语句上使用以下语法为参数变量提供默认值：
 
 ```php
-   function function_name($arg_1, $arg_2, ... $arg_n=exp) {
-   ...
-   }
+function function_name($arg_1, $arg_2, ... $arg_n=exp) {
+...
+}
 ```
 
 其中参数变量 `$arg_n` 已被赋予一个由指定表达式 `exp` 计算得出的默认值。
@@ -3594,10 +3418,6 @@ PHP 允许我们在函数定义语句上使用以下语法为参数变量提供�
 
 如果你运行这个示例脚本，应该会得到：
 
-
-
-
-
 #### 示例：函数参数默认值
 
 ```bash
@@ -3615,11 +3435,11 @@ herong> \php\php ArgumentDefaultValues.php
 
 如果你打开最后 3 行被注释掉的语句，将会得到一个执行错误："Parse error: syntax error, unexpected T_NEW in C:\herong\php\ArgumentDefaultValues.php on line 21"。
 
-PHP Tutorials - Herong's Tutorial Examples
+# PHP Tutorials - Herong's Tutorial Examples
 
-∟ Function Declaration, Arguments, and Return Values
+## Function Declaration, Arguments, and Return Values
 
-∟ Returning Values from Functions
+### Returning Values from Functions
 
 本节提供了一个教程示例，说明如何从函数返回值——使用 `return` 语句。
 
@@ -3693,23 +3513,23 @@ herong> \php\php FunctionReturnValues.php
     noReturn(): NULL
 ```
 
-PHP Tutorials - Herong's Tutorial Examples
+# PHP Tutorials - Herong's Tutorial Examples
 
-∟ Function Declaration, Arguments, and Return Values
+## Function Declaration, Arguments, and Return Values
 
-∟ Returning References from Functions
+### Returning References from Functions
 
 本节提供了一个教程示例，说明如何从函数返回引用——在定义和调用语句中函数名前加上 `&`。
 
 PHP 支持使用以下语法返回函数引用：
 
 ```php
-   function &function_name() {
-      ...
-      return $var_1;
-   }
+function &function_name() {
+   ...
+   return $var_1;
+}
 
-   $var_2 = &function_name();
+$var_2 = &function_name();
 ```
 
 当你使用函数返回引用时，需要遵循以下规则：
@@ -3796,21 +3616,19 @@ herong> \php\php FunctionReturnReferences.php
 
 测试 4 证明主代码正确地接收了来自 `prrr()` 的引用。`$y` 被赋予了 `$arg` 的引用。但 `$arg` 是 `$x` 的别名，因为 `$x` 是作为引用传递的。所以 `$y` 变成了 `$x` 的别名。
 
-PHP Tutorials - Herong's Tutorial Examples
+# PHP Tutorials - Herong's Tutorial Examples
 
-∟ Function Declaration, Arguments, and Return Values
+## Function Declaration, Arguments, and Return Values
 
-∟ Usage Examples of Functions
+### Usage Examples of Functions
 
 本节提供了函数的使用示例。
 
 这里是一个提供函数使用示例的 PHP 脚本：
 
-
-
-
-
 #### FunctionTips.php
+
+
 
 ```php
 <?php
@@ -4125,10 +3943,6 @@ PHP 教程 - Herong 的教程示例 ∟ 数组 - 有序映射 ∟ 创建数组 -
 
 这是一个教程示例 PHP 脚本，向您展示上一节中描述的一些数组规则：
 
-
-
-
-
 # PHP 数组教程示例
 
 #### ArrayTest.php 示例代码
@@ -4260,6 +4074,8 @@ foreach($myArray as $key=>$value) {}
 
 以下是一个包含 `foreach` 语句的简单脚本：
 
+
+
 ```php
 <?php
 #  ArrayLoop.php
@@ -4295,11 +4111,7 @@ Library hours:
 
 以下 PHP 脚本提供了一些常用数组函数的使用示例：
 
-
-
-
-
-# PHP 数组操作示例
+### PHP 数组操作示例
 
 ## 代码示例
 
@@ -4620,7 +4432,6 @@ print("\n");
 
 
 
-
 ```
 herong> \php\php ArrayTips.php
 
@@ -4895,15 +4706,15 @@ Array
 随机问候语：Hello!
 ```
 
-## PHP 教程 - Herong 的教程示例
+# PHP 教程 - Herong 的教程示例
 
-### 与操作系统交互
+## 与操作系统交互
 
 本章提供关于 PHP 与操作系统交互的教程笔记和示例代码。主题包括用于命令行参数的 `$argv[]`；用于外部程序执行的 `` `command` ``、`shell_exec()`、`exec()` 和 `system()`；用于将外部程序输入/输出映射为文件句柄的 `popen()` 和 `proc_open()`；重置最大执行时间和内存。
 
-#### `$argv[]` - 命令行参数
+### `$argv[]` - 命令行参数
 
-#### 执行外部程序的选项
+### 执行外部程序的选项
 
 ### `` `command` `` - 反引号运算符
 
@@ -4923,7 +4734,7 @@ Array
 
 #### 要点总结
 
-*   内置数组 `$argv[]` 可用于在使用 'php' 命令执行 PHP 脚本文件时检索命令行参数。
+*   内置数组 `$argv[]` 可用于在使用 `php` 命令执行 PHP 脚本文件时检索命令行参数。
 *   反引号运算符 `` `command` `` 运行命令并返回其输出。
 *   `shell_exec("command")` 的作用与 `` `command` `` 相同。
 *   `exec("command", $output, $rc)` 函数运行命令并将其输出返回在 `$output` 中。
@@ -4934,15 +4745,15 @@ Array
 *   `ini_set('memory_limit', '256M')` 将当前脚本剩余语句运行的最大内存限制重置为 256 MB。
 *   `set_time_limit(3600)` 函数将当前脚本剩余语句运行的最大执行时间重置为 1 小时 = 3600 秒。
 
-## PHP 教程 - Herong 的教程示例
+# PHP 教程 - Herong 的教程示例
 
-### 与操作系统交互
+## 与操作系统交互
 
-#### `$argv[]` - 命令行参数
+### `$argv[]` - 命令行参数
 
-本节提供一个教程示例，说明如何使用内置数组 `$argv[]` 在使用 'php' 命令执行 PHP 脚本文件时检索命令行参数。
+本节提供一个教程示例，说明如何使用内置数组 `$argv[]` 在使用 `php` 命令执行 PHP 脚本文件时检索命令行参数。
 
-如果 PHP 脚本文件是通过 "php" 命令执行的，则可以通过内置数组 `$argv` 向脚本传递额外的命令行参数。
+如果 PHP 脚本文件是通过 `php` 命令执行的，则可以通过内置数组 `$argv` 向脚本传递额外的命令行参数。
 
 例如，如果使用 `"php test.php arg1 arg2 ..."` 来执行名为 test.php 的脚本文件，内置数组 `$argv` 将填充以下值：
 
@@ -4977,11 +4788,11 @@ $argv[2] = arg3
 
 请注意引号是如何用于保护空格字符作为单个参数的一部分的。
 
-## PHP 教程 - Herong 的教程示例
+# PHP 教程 - Herong 的教程示例
 
-### 与操作系统交互
+## 与操作系统交互
 
-#### 执行外部程序的选项
+### 执行外部程序的选项
 
 本节介绍了从 PHP 脚本在操作系统上执行外部程序的不同选项：`exec()`、`system()`、`passthru()`、`shell_exec()` 和 `open_process()`。
 
@@ -5005,12 +4816,9 @@ rc:     程序的返回代码被丢弃。
 
 `shell_exec()` 函数允许你通过给定命令执行外部程序并返回其输出。它的工作方式与反引号运算符 `` `command` `` 相同。
 
-
-
-
 # PHP 执行外部程序函数对比
 
-#### shell_exec() 函数
+## `shell_exec()` 函数
 
 ```
 shell_exec(string $command)
@@ -5024,7 +4832,7 @@ shell_exec(string $command)
 | stderr | 标准错误与调用脚本共享 |
 | rc | 程序的返回码被丢弃 |
 
-#### exec() 函数
+## `exec()` 函数
 
 `exec()` 函数允许通过给定命令执行外部程序，并将其输出捕获到行数组中：
 
@@ -5040,7 +4848,7 @@ exec(string $command[, array &$output[, int &$return_var]])
 | stderr | 标准错误与调用脚本共享 |
 | rc | 程序的返回码传递给 `return_var` |
 
-#### system() 函数
+## `system()` 函数
 
 `system()` 函数允许通过给定命令执行外部程序，并将其输出逐行刷新到调用脚本的标准输出。
 
@@ -5056,7 +4864,7 @@ system(string $command[, int &$return_var])
 | stderr | 标准错误与调用脚本共享 |
 | rc | 程序的返回码传递给 `return_var` |
 
-#### passthru() 函数
+## `passthru()` 函数
 
 `passthru()` 函数允许通过给定命令执行外部程序，并将其输出直接传递给调用脚本的标准输出。
 
@@ -5072,7 +4880,7 @@ passthru(string $command[, int &$return_var])
 | stderr | 标准错误与调用脚本共享 |
 | rc | 程序的返回码传递给 `return_var` |
 
-#### popen() 函数
+## `popen()` 函数
 
 `popen()` 函数允许通过给定命令执行外部程序，并将其标准输入或输出作为文件句柄进行控制。
 
@@ -5091,7 +4899,7 @@ pclose($fh);
 | stderr | 标准错误与调用脚本共享 |
 | rc | 程序的返回码被丢弃 |
 
-#### proc_open() 函数
+## `proc_open()` 函数
 
 `proc_open()` 函数允许通过给定命令执行外部程序，并完全控制程序的所有输入输出流。
 
@@ -5111,11 +4919,11 @@ $rc = proc_close($ph)
 
 ---
 
-#### 反引号操作符 \`command\`
+## 反引号操作符 `` `command` ``
 
-> 来源：PHP Tutorials - Herong's Tutorial Examples > Interface with Operating System > \`command\` - Backtick Operator
+> 来源：PHP Tutorials - Herong's Tutorial Examples > Interface with Operating System > `` `command` `` - Backtick Operator
 
-从 PHP 脚本在操作系统上执行程序的最简单方法可能是使用反引号操作符 \`command\`，它支持以下特性：
+从 PHP 脚本在操作系统上执行程序的最简单方法可能是使用反引号操作符 `` `command` ``，它支持以下特性：
 
 - 可以直接在反引号引号中输入调用外部程序的命令行
 - 程序的标准输出 `stdout` 被捕获并由操作符返回
@@ -5124,7 +4932,7 @@ $rc = proc_close($ph)
 - 程序的返回码被丢弃
 - 其行为与 `shell_exec("command")` 函数相同
 
-#### 使用示例
+### 使用示例
 
 ```
 herong$ php -a
@@ -5160,19 +4968,21 @@ Orange
 
 ---
 
-#### exec() 函数详解
+## `exec()` 函数详解
+
+
 
 > 来源：PHP Tutorials - Herong's Tutorial Examples > Interface with Operating System > exec() - Execute External Programs
 
 `exec()` 函数用于调用外部程序。程序的标准输出 `stdout` 以数组参数形式返回，`stdout` 的最后一行作为返回值返回。
 
-**语法：**
+## 语法
 
 ```
 $line = exec(string $command[, array &$output[, int &$rc]])
 ```
 
-**参数说明：**
+## 参数说明
 
 - `$command`：指定调用外部程序的命令行
 - `$output`（可选）：指定用于存储程序标准输出 `stdout` 的数组
@@ -5181,7 +4991,7 @@ $line = exec(string $command[, array &$output[, int &$rc]])
 - 程序的标准输入 `stdin` 与调用脚本共享
 - 程序的标准错误 `stderr` 与调用脚本共享
 
-#### 使用示例
+## 使用示例
 
 ```
 herong$ php -a
@@ -5212,19 +5022,19 @@ php > echo $rc;
 
 ---
 
-#### system() 函数详解
+## system() 函数详解
 
 > 来源：PHP Tutorials - Herong's Tutorial Examples > Interface with Operating System > system() - Execute External Programs
 
 `system()` 函数用于调用外部程序。程序的标准输出 `stdout` 和输入 `stdin` 与调用脚本共享。`stdout` 的最后一行作为返回值返回。
 
-**语法：**
+### 语法
 
 ```
 $line = system(string $command[, int &$rc]]);
 ```
 
-**参数说明：**
+### 参数说明
 
 - `$command`：指定调用外部程序的命令行
 - `$rc`（可选）：指定用于存储程序返回码的字符串
@@ -5233,7 +5043,7 @@ $line = system(string $command[, int &$rc]]);
 - 程序的标准输出 `$output` 与调用脚本共享，但 `stdout` 流缓冲区按每个输出行刷新。这非常适合 Web 服务器尽快显示部分输出
 - 程序的标准错误 `stderr` 与调用脚本共享
 
-#### 使用示例
+### 使用示例
 
 ```
 herong$ php -a
@@ -5258,12 +5068,9 @@ php > echo $rc;
 
 ---
 
-#### passthru() 函数详解
+## passthru() 函数详解
 
 > 来源：PHP Tutorials - Herong's Tutorial Examples > Interface with Operating System > passthru() - Execute External Programs
-
-
-
 
 ## PHP 教程 - Herong 的教程示例
 
@@ -5308,7 +5115,7 @@ php > echo $rc; ;
 0
 ```
 
-#### popen() - 执行外部程序
+### popen() - 执行外部程序
 
 本节提供了一个教程示例，说明如何使用 `popen()` 函数来调用外部程序。该程序的标准输出 `stdout` 或标准输入 `stdin` 被映射到一个文件句柄，用于读取或写入。
 
@@ -5368,7 +5175,7 @@ Orange
 ?>
 ```
 
-#### proc_open() - 执行外部程序
+### proc_open() - 执行外部程序
 
 本节提供了一个教程示例，说明如何使用 `proc_open()` 函数来调用外部程序。该程序的 `stdin`、`stdout` 和 `stderr` 可以作为文件句柄映射到任何输入和输出资源。
 
@@ -5424,7 +5231,7 @@ Orange
 0
 ```
 
-#### memory_get_usage() - 内存使用信息
+### memory_get_usage() - 内存使用信息
 
 本节提供了一个教程示例，说明如何使用 `memory_get_usage()` 函数获取内存使用信息。`ini_set('memory_limit', '256M')` 可用于增加内存限制。`unset($o)` 可用于从内存中移除对象。
 
@@ -5492,9 +5299,7 @@ Increase memory upper limit:
 *   PHP 引擎的占用约为 227512 字节，非常小。
 *   一个 10240 字节的字符串对象使用了 10264 字节。因此对象开销为 24 字节。
 
-
-
-#### 内存溢出错误分析
+### 内存溢出错误分析
 
 如果您收到内存溢出错误消息，应查看报告的内存大小以及导致溢出的对象大小。例如，以下错误消息表明 PHP 引擎在尝试分配一个 12,288 字节的对象（小对象）时失败，位置在第 1,291 行。因此，该行之前的代码几乎消耗了全部 134,217,728 字节的内存。您需要检查代码以确保不存在内存泄漏。
 
@@ -5510,7 +5315,7 @@ Allowed memory size of 268435456 bytes exhausted (tried to allocate
 331776 bytes) in other-script.php on line 159.
 ```
 
-#### set_time_limit() - max_execution_time
+### set_time_limit() - max_execution_time
 
 本节提供了一个教程示例，用于演示最大执行时间限制，默认仅为 30 秒。您可以通过调用 `set_time_limit()`，或在 `php.ini` 中设置 `max_execution_time` 来更改默认值。
 
@@ -5525,49 +5330,51 @@ Allowed memory size of 268435456 bytes exhausted (tried to allocate
 
 以下 PHP 脚本 `Execution_Time.php` 旨在计算执行时间并触发“Maximum execution time of 10 seconds exceeded”（最大执行时间超过 10 秒）错误。
 
-```
+
+
+```php
 <?php
 #- Execution_Time.php
 #- Copyright 2003 (c) HerongYang.com. All Rights Reserved.
 
-  set_time_limit(10);
-  date_default_timezone_set('Europe/Paris');
+set_time_limit(10);
+date_default_timezone_set('Europe/Paris');
 
-  $limit = 1000000;
-  $step = 1000;
-  $time_0 = time();
-  $sleep = 0;
-  $work = 0;
-  for ($i=$step; $i<$limit; $i+=$step) {
+$limit = 1000000;
+$step = 1000;
+$time_0 = time();
+$sleep = 0;
+$work = 0;
+for ($i = $step; $i < $limit; $i += $step) {
 
-    $time_1 = time ();
+    $time_1 = time();
     $count = find_primes($i);
-    $time_2 = time ();
-    $work += $time_2-$time_1;
+    $time_2 = time();
+    $work += $time_2 - $time_1;
 
     sleep(1);
     $sleep++;
 
-    print("Total time: ".(time()-$time_0)
-      . ", working: ".$work.", sleeping: ".$sleep
-      . ". Primes: $count, within: $i\n");
-  }
+    print("Total time: " . (time() - $time_0)
+        . ", working: " . $work . ", sleeping: " . $sleep
+        . ". Primes: $count, within: $i\n");
+}
 
 function find_primes($limit) {
-  $count = 0;
-  $i = 3;
-  while ($i<$limit) {
-    $isPrime = true;
-    $j = 2;
-    while ($j<$i) {
-      $isPrime = $i%$j > 0;
-      if (!$isPrime) break;
-      $j++;
+    $count = 0;
+    $i = 3;
+    while ($i < $limit) {
+        $isPrime = true;
+        $j = 2;
+        while ($j < $i) {
+            $isPrime = $i % $j > 0;
+            if (!$isPrime) break;
+            $j++;
+        }
+        if ($isPrime) $count++;
+        $i++;
     }
-    if ($isPrime) $count++;
-    $i++;
-  }
-  return $count;
+    return $count;
 }
 ?>
 ```
@@ -5603,13 +5410,13 @@ PHP Fatal error:  Maximum execution time of 10 seconds exceeded
   in /Users/herong/Execution_Time.php on line 36
 ```
 
-从输出中可以看出，最大执行时间限制仅适用于累积的**执行时间**，而不适用于**流逝时间**。
+从输出中可以看出，最大执行时间限制仅适用于累积的`执行时间`，而不适用于`流逝时间`。
 
-### 类与对象简介
+# 类与对象简介
 
 本章提供了关于类和对象的教程笔记和示例代码。主题包括类和对象简介；静态变量和方法；超类和子类；抽象类和方法；接口和 Trait；重载属性和方法；对象克隆和序列化；对象变量的引用或别名。
 
-#### 主题
+## 主题
 
 *   什么是类
 *   什么是对象
@@ -5630,7 +5437,7 @@ PHP Fatal error:  Maximum execution time of 10 seconds exceeded
 *   更新共享对象的变量
 *   将对象作为函数参数传递
 
-#### 核心要点
+## 核心要点
 
 *   类是一种用户定义的数据类型，与一组预定义的属性和操作（也称为方法）相关联。
 *   对象是作为类的实例创建的数据实体。
@@ -5645,14 +5452,11 @@ PHP Fatal error:  Maximum execution time of 10 seconds exceeded
 *   对象克隆可以通过使用 `clone` 操作符轻松完成。
 *   对象序列化和反序列化可以通过调用 `serialize()` 和 `unserialize()` 函数轻松完成。
 
+# PHP 教程 - Herong 的教程示例
 
+# 类和对象简介
 
-
-## PHP 教程 - Herong 的教程示例
-
-## 类和对象简介
-
-#### 什么是类
+## 什么是类
 
 本节描述什么是类——一种用户定义的数据类型，它与一组预定义的属性和操作（也称为方法）相关联。
 
@@ -5693,7 +5497,7 @@ class HelloClass {
 ?>
 ```
 
-#### 什么是对象
+## 什么是对象
 
 本节描述什么是对象——一个作为类的实例而创建的数据实体。对象是用 `new` 运算符创建的。
 
@@ -5738,7 +5542,7 @@ herong> \php\php HelloClassDemo.php
 Hello world!
 ```
 
-#### 什么是构造函数
+## 什么是构造函数
 
 本节描述什么是构造函数——当从类创建新对象时自动调用的特殊方法。构造函数的主要目的是为对象属性提供初始值。
 
@@ -5786,7 +5590,7 @@ Hello there!
 Number of bytes in the message: 12
 ```
 
-#### 什么是静态方法
+## 什么是静态方法
 
 本节描述什么是静态方法——一种无需任何对象即可调用以执行通用操作的特殊方法。
 
@@ -5827,7 +5631,7 @@ herong> \php\php MyEncoder.php
 f06f52815c9bb21d8641b746
 ```
 
-#### 什么是静态变量
+## 什么是静态变量
 
 本节描述什么是静态变量——一种在类级别声明、由该类的所有对象共享的特殊变量。
 
@@ -5861,13 +5665,13 @@ class MyPassGenerator {
 $first = new MyPassGenerator();
 $second = new MyPassGenerator();
 
-echo "Total # of objects: ". MyPassGenerator::$count ."\n";
+echo "Total # of objects: " . MyPassGenerator::$count . "\n";
 echo "First object: \n";
-echo "   Sequence: " . $first->sequence ."\n";
-echo "   Password: " . $first->getPass() ."\n";
+echo "   Sequence: " . $first->sequence . "\n";
+echo "   Password: " . $first->getPass() . "\n";
 echo "Second object: \n";
-echo "   Sequence: " . $second->sequence ."\n";
-echo "   Password: " . $second->getPass() ."\n";
+echo "   Sequence: " . $second->sequence . "\n";
+echo "   Password: " . $second->getPass() . "\n";
 ?>
 ```
 
@@ -5887,19 +5691,23 @@ Second object:
    Password: KRzZOS
 ```
 
-#### 什么是超类和子类
+## 什么是超类和子类
 
 本节描述什么是超类和子类——第二个类从第一个类扩展而来的一对类。子类的对象继承超类的所有属性和操作。
 
-
-
-
-
-# 什么是超类和子类？
+### 什么是超类和子类？
 
 超类和子类是一对类，其中第二个类继承自第一个类。子类的对象从超类继承所有属性和操作。
 
 在 PHP 中，子类使用关键字 `extends` 后跟超类名称来声明。例如，下面的教程示例提供了一个从类 `MyRectangle` 扩展而来的类 `MySquare`。在这种情况下，`MyRectangle` 是超类，`MySquare` 是子类。
+
+
+
+# PHP 教程 - Herong 的教程示例
+
+## 类和对象简介
+
+### 类继承示例
 
 ```php
 <?php
@@ -5967,15 +5775,7 @@ MySquare object:
    Is subclass of MySquare:
 ```
 
-PHP Tutorials - Herong's Tutorial Examples
-
-∟ Introduction of Class and Object
-
-∟ 什么是抽象类
-
----
-
-#### 什么是抽象类？
+### 什么是抽象类？
 
 抽象类是指其定义被认为不完整，且必须被扩展为子类以完成定义的类。不允许直接从抽象类创建对象。
 
@@ -6037,15 +5837,7 @@ MyCircle object:
    Area: 0.786475
 ```
 
-PHP Tutorials - Herong's Tutorial Examples
-
-∟ Introduction of Class and Object
-
-∟ 什么是抽象方法
-
----
-
-#### 什么是抽象方法？
+### 什么是抽象方法？
 
 抽象方法是指仅声明了调用签名而没有实现代码的方法。抽象方法必须在子类中完全实现。这意味着任何包含抽象方法的类都必须声明为抽象类。
 
@@ -6108,15 +5900,7 @@ MyCircle object:
    Area: 0.786475
 ```
 
-PHP Tutorials - Herong's Tutorial Examples
-
-∟ Introduction of Class and Object
-
-∟ 什么是接口
-
----
-
-#### 什么是接口？
+### 什么是接口？
 
 接口就像一个“半”抽象类，它只声明一些“抽象”方法且没有属性。实现接口的类必须实现接口中声明的所有抽象方法。
 
@@ -6175,19 +5959,9 @@ MyTelevision object:
    Power status: On
 ```
 
+### 什么是 Trait
 
-
-
-
-## PHP 教程 - Herong 的教程示例
-
-## 类和对象简介
-
-#### 什么是 Trait
-
-本节介绍什么是 trait - Trait 是一个伪类，它定义了一组属性和操作。Trait 无法被实例化以创建新对象。它只能被一个或多个类“使用”，目的是为了代码共享。
-
-**什么是 Trait？** Trait 是一个伪类，它定义了一组属性和操作。Trait 无法被实例化以创建新对象。它只能被一个或多个类“使用”，目的是为了代码共享。
+Trait 是一个伪类，它定义了一组属性和操作。Trait 无法被实例化以创建新对象。它只能被一个或多个类“使用”，目的是为了代码共享。
 
 在 PHP 中，trait 通过 `trait` 语句块声明。类可以通过 `use` 语句共享 trait 中定义的代码。例如，下面的教程示例提供了两个 trait `MySize` 和 `MyType` 以及一个同时使用这两个 trait 的类 `MyImage`。
 
@@ -6252,11 +6026,9 @@ DElEQVQImWNgGB4AAADIAAH4XVuUAAAAAElFTkSuQmCC
 
 请注意，本教程需要来自 [cairographics.org](http://cairographics.org) 的 cairo 图形库。
 
-#### 什么是重载属性
+### 什么是重载属性
 
-本节介绍什么是重载属性 - 一种类属性，它根本没有直接声明，或者没有声明为公开可访问，但通过 `__set()`、`__get()`、`__isset()` 和 `__unset()` 方法的实现间接提供。
-
-**什么是重载属性？** 重载属性是一种类属性，它根本没有直接声明，或者没有声明为公开可访问，但通过 `__set()`、`__get()`、`__isset()` 和 `__unset()` 方法的实现间接提供。
+重载属性是一种类属性，它根本没有直接声明，或者没有声明为公开可访问，但通过 `__set()`、`__get()`、`__isset()` 和 `__unset()` 方法的实现间接提供。
 
 在 PHP 中，任何类都可以实现以下特殊方法来支持重载属性：
 
@@ -6266,6 +6038,8 @@ DElEQVQImWNgGB4AAADIAAH4XVuUAAAAAElFTkSuQmCC
 *   `__unset($name)` - 当从对象中移除不可访问的属性时调用，如 `unset($object->name)`。
 
 例如，下面的教程示例提供了类 `MyPropertyBag`，展示了如何使用 `__set()`、`__get()`、`__isset()` 和 `__unset()` 方法来支持重载属性。
+
+
 
 ```php
 <?php
@@ -6322,7 +6096,7 @@ MyPropertyBag object:
    isset(Author):
 ```
 
-#### 什么是重载方法
+### 什么是重载方法
 
 本节介绍什么是重载方法 - 一种静态方法或实例方法，它根本没有直接声明，或者没有声明为公开可访问，但通过 `__call()` 或 `__callStatic()` 方法的实现间接提供。
 
@@ -6386,16 +6160,13 @@ MyPizzaOrder object:
 ERROR: Method noCheese() not supported.
 ```
 
-#### 什么是对象属性迭代
+### 什么是对象属性迭代
 
 本节介绍什么是属性迭代 - 一种 PHP 内置特性，允许在 `foreach` 语句中以访问关联数组相同的方式访问对象的属性。
 
 **什么是对象属性迭代？** 对象属性迭代是一种 PHP 内置特性，允许在 `foreach` 语句中以访问关联数组相同的方式访问对象的属性。
 
-
-
-
-# 例如，下面的教程示例提供了类 "MyCar"，展示了如何使用 "foreach" 语句遍历对象的所有可访问属性。
+例如，下面的教程示例提供了类 `MyCar`，展示了如何使用 `foreach` 语句遍历对象的所有可访问属性。
 
 ```php
 <?php
@@ -6435,13 +6206,7 @@ MyCar object:
    horsepower: 357 HP
 ```
 
-PHP Tutorials - Herong's Tutorial Examples
-
-∟Introduction of Class and Object
-
-∟What Is Object Cloning
-
-#### 什么是对象克隆
+### 什么是对象克隆
 
 对象克隆是创建新对象并从旧对象复制所有属性的简便方法。PHP 还允许你实现 `__clone()` 方法来修改新创建对象的属性。
 
@@ -6518,13 +6283,7 @@ Second car specs:
    -- quote: $123,800.00
 ```
 
-PHP Tutorials - Herong's Tutorial Examples
-
-∟Introduction of Class and Object
-
-∟What Is Object Serialization
-
-#### 什么是对象序列化
+### 什么是对象序列化
 
 对象序列化是将对象转换为二进制字符串以保存到文件、存储在数据库或传递给另一个系统的过程。表示对象的字符串可以通过反序列化过程转换回一个新对象，该新对象具有与原始对象相同的属性值。
 
@@ -6603,13 +6362,23 @@ $car1 === $car2: No
 *   `$car1 == $car2: Yes` 确认了从序列化字符串重建的对象具有与原始对象相同的属性。
 *   `$car1 === $car2: No` 确认了从序列化字符串重建的对象与原始对象是不同的对象。
 
+### 什么是对象变量中的内容
+
 PHP Tutorials - Herong's Tutorial Examples
 
-∟Introduction of Class and Object
+∟ Introduction of Class and Object
 
-∟What Is in an Object Variable
+∟ What Is Object Cloning
 
-#### 对象变量中包含什么
+∟ What Is Object Serialization
+
+∟ What Is in an Object Variable
+
+
+
+# PHP 对象、标识符、变量与引用
+
+## 对象变量中包含什么
 
 对象变量实际上包含指向对象存储位置的对象标识符。
 
@@ -6617,11 +6386,7 @@ PHP Tutorials - Herong's Tutorial Examples
 
 *   对象变量 `$a` 的内容是一个对象的标识符
 
-
-
-
-
-# PHP 对象、标识符、变量与引用
+## PHP 对象、标识符、变量与引用
 
 当将变量 `$a` 赋值给新变量 `$b`（使用 `$b = $a`）时，`$a` 的内容会被复制到 `$b` 中作为 `$b` 的内容。如果 `$a` 的内容是一个对象的标识符，那么 `$b` 的内容就是指向同一对象的同一标识符的副本。
 
@@ -6662,6 +6427,7 @@ List           Contents               List
 从上图可以看出，对象可以通过两种方式被两个变量共享：
 
 *   **软共享** - 两个变量在各自的内容中存储相同的标识符来共享一个对象，就像 `$a` 和 `$b` 共享 Object #1。
+
 *   **硬共享** - 两个变量在其共享的内容中存储相同的标识符来共享一个对象，就像 `$x` 和 `$y` 共享 Object #2。
 
 下图更好地说明了上述代码及其在内存中的执行结果：
@@ -6676,16 +6442,16 @@ List           Contents               List
 >
 > ∟ Updating Variables Who Share an Object
 
----
-
-#### 更新共享对象的变量
+## 更新共享对象的变量
 
 本节描述对象变量包含的内容——对象变量实际上包含指向对象存储位置的对象标识符。
 
 从上一节我们了解到，对象可以通过两种方式被两个变量共享。现在让我们看看，如果更新一个与另一个对象共享对象的变量，会对另一个变量产生什么影响。以下是我的理解：
 
 *   **无共享** - 两个变量在各自的内容中存储不同的标识符。更新其中一个变量的对象**不会**影响另一个变量。更新其中一个变量的内容**不会**影响另一个变量。
+
 *   **软共享** - 两个变量在各自的内容中存储相同的标识符。更新其中一个变量的对象**会**影响另一个变量。更新其中一个变量的内容**不会**影响另一个变量。
+
 *   **硬共享** - 两个变量在其共享的内容中存储相同的标识符。更新其中一个变量的对象**会**影响另一个变量。更新其中一个变量的内容**会**影响另一个变量。
 
 下面的教程示例展示了这些对象共享类型以及更新一个变量如何影响另一个变量：
@@ -6764,9 +6530,7 @@ Test on Hard Sharing:
 >
 > ∟ Passing Objects as Function Arguments
 
----
-
-#### 作为函数参数传递对象
+## 作为函数参数传递对象
 
 本节描述如何将对象作为函数参数传递——将对象作为函数参数传递有两种方式：按值传递和按引用传递。它们遵循与赋值语句相同的规则。
 
@@ -6835,10 +6599,6 @@ function updateContent($aa,&$bb) {
 
 如果运行上述教程示例，将得到类似如下的输出：
 
-
-
-
-
 ```
 herong> \php\php PassingObjectAsArguments.php
 
@@ -6857,12 +6617,14 @@ Test on updating variable content:
 还要注意：
 
 *   `return` 语句仅支持按值传递模式。无法返回变量的引用。
+
 *   PHP 不再支持调用时按引用传递。`$x = f(&$a)` 不再有效。
+
 *   只有变量可以在调用语句中按引用传递。如果 `f()` 声明为 `f(&$aa)`，则不允许 `$x = f("Hello")`。
 
-## PHP 教程 - Herong 的教程示例
+# PHP 教程 - Herong 的教程示例
 
-### 将 PHP 与 Apache Web 服务器集成
+## 将 PHP 与 Apache Web 服务器集成
 
 本章提供了在 Windows 系统上安装 Apache Web 服务器的教程笔记。主题包括下载和安装 Apache 2.4.12 二进制分发版；配置 Apache 将 PHP 作为 CGI 脚本运行以及使用 Apache PHP 加载模块；在 Apache 服务器上测试 PHP 脚本。
 
@@ -6882,44 +6644,46 @@ Test on updating variable content:
 >
 > 配置 Apache PHP 加载模块
 
-#### 要点
+### 要点
 
 *   Apache HTTP Server 是互联网上最常用的开源 Web 服务器。它在 Windows 系统上非常易于安装和设置。
+
 *   在 Windows 上安装 Apache Web 服务器非常简单。你只需下载分发 ZIP 文件并解压即可。
+
 *   你应该选择 Apache VC15 和 64 位构建版本，以匹配之前安装的 PHP 引擎构建版本，从而避免任何兼容性问题。
+
 *   将 Apache Web 服务器与 PHP 引擎集成以使用 `php-cgi.exe` 运行 PHP 脚本，需要在 Apache 配置文件中进行多项更改。
+
 *   使用 Apache PHP 加载模块将 PHP 脚本作为网页运行，效率更高且更安全。
 
-## PHP 教程 - Herong 的教程示例
-
-### 将 PHP 与 Apache Web 服务器集成
-
-#### 下载适用于 Windows 的 Apache 2.4.37 二进制版
+## 下载适用于 Windows 的 Apache 2.4.37 二进制版
 
 本节介绍如何下载适用于 Windows 的 Apache 2.4.37 二进制分发版。你应该选择 VC15 和 64 位构建版本，以匹配 PHP 引擎的构建版本。
 
 为了将 PHP 脚本作为网页提供服务，你需要有一个正在运行并与 PHP 引擎集成的 Web 服务器。目前最流行的 Web 服务器是 Apache (HTTP Server)。以下是我下载适用于 Windows 的 Apache 2.4.37 二进制分发版的步骤：
 
 1.  访问 Apache Lounge 网站 [apachelounge.com/](https://www.apachelounge.com/)。
+
 2.  点击左侧菜单中的“Downloads”。你将看到下载页面。
+
 3.  点击左侧菜单中的“VC15”，因为我下载并安装了 PHP VC15 (Visual C++ v15) 构建版本。
+
 4.  在 Apache 2.4.37 Win64 标题下选择 `httpd-2.4.37-win64-VC15.zip` 开始下载，因为我下载并安装了 PHP 64 位构建版本。
+
 5.  将下载的文件 `httpd-2.4.37-win64-VC15.zip`（17,764,403 字节）保存在临时目录中。
 
 你应该选择 VC15 和 64 位构建版本，以匹配之前安装的 PHP 引擎构建版本。
 
-## PHP 教程 - Herong 的教程示例
-
-### 将 PHP 与 Apache Web 服务器集成
-
-#### 在 Windows 系统上安装 Apache 2.4.37
+## 在 Windows 系统上安装 Apache 2.4.37
 
 本节介绍如何在 Windows 系统上安装 Apache 2.4.37 二进制分发版。服务器根目录设置需要更改以匹配安装目录。
 
 下载 Apache HTTP Server 2.4.37 后，我继续在 Windows 系统上安装它：
 
 1.  解压 `httpd-2.4.37-win64-VC15.zip`。你将看到一个名为 `.\\Apache24` 的子目录。
+
 2.  复制并重命名 `.\\Apache24` 子目录为 `\\apache`。
+
 3.  在文本编辑器中打开 `\\apache\\conf\\httpd.conf`，通过注释掉原始设置并复制一行新设置，将服务器根目录更改为匹配我的安装目录：
 
 ```
@@ -6941,17 +6705,19 @@ It works!
 
 恭喜，Apache Web 服务器已安装并正常工作！
 
-## PHP 教程 - Herong 的教程示例
 
-### 将 PHP 与 Apache Web 服务器集成
 
-#### 将 HTML 文档发布为网页
+# PHP 教程 - Herong 的教程示例
+
+## 将 PHP 与 Apache Web 服务器集成
+
+### 将 HTML 文档发布为网页
 
 本节介绍如何在 Apache HTTP 服务器上发布 HTML 文档。
 
 Apache 服务器运行后，我准备好将 HTML 文档发布为静态网页。以下是一个使用文本编辑器创建的简单 HTML 文档 `hello.html`：
 
-```
+```html
 <html>
 <body>
 Hello world!
@@ -6961,7 +6727,7 @@ Hello world!
 
 要将此 HTML 文档发布为网页，我将其复制到 Apache 文档目录 `\\apache\\htdocs`：
 
-```
+```bash
 herong> copy hello.html \apache\htdocs
 ```
 
@@ -6971,48 +6737,44 @@ herong> copy hello.html \apache\htdocs
 Hello world!
 ```
 
-## PHP 教程 - Herong 的教程示例
-
-### 将 PHP 与 Apache Web 服务器集成
-
-#### 启动和停止 Apache 服务器
+### 启动和停止 Apache 服务器
 
 本节介绍如何使用启动和停止脚本来启动和停止 Apache 服务器。Windows 任务管理器也可用于停止 Apache 服务器。
 
-1.  启动和停止 Apache 服务器的常规方法是使用 ApacheMonitor 程序，运行以下命令：
+1. 启动和停止 Apache 服务器的常规方法是使用 `ApacheMonitor` 程序，运行以下命令：
 
-```
+```bash
 herong> \apache\bin\ApacheMonitor.exe
 ```
 
-2.  查看任务栏区域。你将看到一个 Apache 监视器图标出现。
-3.  点击 Apache 监视器图标。你将看到 3 个子菜单项：Start、Stop 和 Restart。你可以随时使用它们来启动和停止 Apache 服务器。
-4.  判断 Apache 服务器是否正在运行的另一种方法是使用 Windows 任务管理器。运行 Windows 任务管理器，然后点击“进程”选项卡。如果你看到 `httpd.exe` 列为正在运行的进程，则知道你的 Apache 服务器正在运行。
-5.  当然，Windows 任务管理器也可用于停止 Apache 服务器。在 Windows 任务管理器的“进程”选项卡上选择 `httpd.exe`，然后点击“结束进程”按钮。在警告消息上点击“是”以终止 `httpd.exe`。如果看到多个 `httpd.exe` 实例，请重复该过程。
+2. 查看任务栏区域。你将看到一个 Apache 监视器图标出现。
 
-## PHP 教程 - Herong 的教程示例
+3. 点击 Apache 监视器图标。你将看到 3 个子菜单项：`Start`、`Stop` 和 `Restart`。你可以随时使用它们来启动和停止 Apache 服务器。
 
-### 将 PHP 与 Apache Web 服务器集成
+4. 判断 Apache 服务器是否正在运行的另一种方法是使用 Windows 任务管理器。运行 Windows 任务管理器，然后点击“进程”选项卡。如果你看到 `httpd.exe` 列为正在运行的进程，则知道你的 Apache 服务器正在运行。
 
-#### 为 PHP CGI 脚本配置 Apache
+5. 当然，Windows 任务管理器也可用于停止 Apache 服务器。在 Windows 任务管理器的“进程”选项卡上选择 `httpd.exe`，然后点击“结束进程”按钮。在警告消息上点击“是”以终止 `httpd.exe`。如果看到多个 `httpd.exe` 实例，请重复该过程。
+
+### 为 PHP CGI 脚本配置 Apache
 
 本节介绍如何配置 Apache 服务器以支持 PHP CGI 脚本。
 
 在我的 Windows 系统上同时安装了 PHP 引擎和 Apache Web 服务器后，我继续配置 Apache 服务器以支持 PHP CGI 脚本：
 
-1.  在文本编辑器中打开 Apache 配置文件 `\\apache\\conf\\httpd.conf`
-2.  首先我必须定义一个 CGI 脚本目录别名，将 Apache 文档目录映射到 `php-cgi.exe` 所在的真实目录。转到 `alias_module` 部分并添加一行：
+1. 在文本编辑器中打开 Apache 配置文件 `\\apache\\conf\\httpd.conf`
 
-```
+2. 首先我必须定义一个 CGI 脚本目录别名，将 Apache 文档目录映射到 `php-cgi.exe` 所在的真实目录。转到 `alias_module` 部分并添加一行：
+
+```apache
 <IfModule alias_module>
 ...
    ScriptAlias /cgi-bin-php/ "/local/php/"
 </IfModule>
 ```
 
-3.  然后我需要为此目录添加一个访问控制部分：
+3. 然后我需要为此目录添加一个访问控制部分：
 
-```
+```apache
 <Directory "/local/php/">
      AllowOverride None
      Options None
@@ -7020,37 +6782,32 @@ herong> \apache\bin\ApacheMonitor.exe
 </Directory>
 ```
 
-4.  接下来，我必须定义一个新的 MIME 类型以支持 `.php` 文件扩展名。转到 `mime_module` 部分并添加一行：
+4. 接下来，我必须定义一个新的 MIME 类型以支持 `.php` 文件扩展名。转到 `mime_module` 部分并添加一行：
 
-```
+```apache
 <IfModule mime_module>
 ...
     AddType application/x-httpd-php .php
 </IfModule>
 ```
 
-5.  最后一个设置是告诉 Apache 使用位于目录别名 `/cgi-bin-php/` 中的 `php-cgi.exe` 来提供新的 MIME 类型：在 LoadModule 部分下方的根级别，定义一个“Action”条目：
+5. 最后一个设置是告诉 Apache 使用位于目录别名 `/cgi-bin-php/` 中的 `php-cgi.exe` 来提供新的 MIME 类型：在 `LoadModule` 部分下方的根级别，定义一个“Action”条目：
 
-
-
-
+```apache
 # LoadModule xml2enc_module modules/mod_xml2enc.so
 
 Action application/x-httpd-php "/cgi-bin-php/php-cgi.exe"
+```
 
 6. 配置更改已完成。现在通过关闭以下命令行窗口并重新打开它来重启 Apache 服务器：
 
-```
+```bash
 herong> \apache\bin\httpd
 ```
 
 将 Apache 与 PHP 集成的另一种方法是将 PHP 设置为加载模块。这比 CGI 脚本接口更高效。但就我个人的测试目的而言，CGI 脚本接口已经足够好。
 
-PHP 教程 - Herong 的教程示例
-
-∟将 PHP 与 Apache Web 服务器集成
-
-∟将 PHP 脚本作为网页发布
+### 将 PHP 脚本作为网页发布
 
 本节介绍如何在 Apache 服务器上将 PHP 脚本作为网页发布。
 
@@ -7058,7 +6815,7 @@ PHP 教程 - Herong 的教程示例
 
 1. 我用文本编辑器编写了这个简单的 PHP 脚本 `hello.php`：
 
-```
+```html
 <html>
 <body>
 <?php echo "Hello world!"; ?> - PHP script.
@@ -7068,7 +6825,7 @@ PHP 教程 - Herong 的教程示例
 
 2. 将此脚本文件复制到 Apache 文档目录 `\\apache\\htdocs`：
 
-```
+```bash
 herong> copy hello.php \apache\htdocs
 ```
 
@@ -7078,11 +6835,7 @@ herong> copy hello.php \apache\htdocs
 Hello world! - PHP script.
 ```
 
-PHP 教程 - Herong 的教程示例
-
-∟将 PHP 与 Apache Web 服务器集成
-
-∟php-cgi.exe 权限错误
+### php-cgi.exe 权限错误
 
 本节描述“You don't have permission to access /cgi-bin-php/php-cgi.exe/hello.php on this server.”错误。这是由 PHP 目录访问权限配置设置的语法变更引起的。
 
@@ -7090,7 +6843,7 @@ PHP 教程 - Herong 的教程示例
 
 如果您在 PHP 目录上仍在使用旧语法：
 
-```
+```apache
 <Directory "/local/php/">
     AllowOverride None
     Options None
@@ -7109,7 +6862,7 @@ You don't have permission to access
 
 您必须使用新语法来授予 PHP 目录的访问权限：
 
-```
+```apache
 <Directory "/local/php/">
    AllowOverride None
    Options None
@@ -7117,11 +6870,7 @@ You don't have permission to access
 </Directory>
 ```
 
-PHP 教程 - Herong 的教程示例
-
-∟将 PHP 与 Apache Web 服务器集成
-
-∟配置 Apache PHP 加载模块
+### 配置 Apache PHP 加载模块
 
 本节介绍如何配置 Apache 以使用 Apache PHP 加载模块将 PHP 脚本作为网页运行。Apache PHP 加载模块比 CGI 脚本更安全。
 
@@ -7131,16 +6880,16 @@ PHP 教程 - Herong 的教程示例
 
 1. 打开 `\\apache\\conf\\httpd.conf` 并移除我为支持 PHP CGI 脚本对 Apache 服务器所做的所有更改以确保安全。
 
-2. 转到 LoadModule 部分并添加：
+2. 转到 `LoadModule` 部分并添加：
 
-```
+```apache
 LoadModule php7_module "C:/local/php/php7apache2_4.dll"
 PHPIniDir "C:/local/php"
 ```
 
 3. 转到 `mime_module` 部分并添加一个 mime 类型：
 
-```
+```apache
 <IfModule mime_module>
 ...
     AddType application/x-httpd-php .php
@@ -7157,13 +6906,11 @@ Hello world! - PHP script.
 
 请注意，如果您仍在运行 PHP 5，则需要使用以下设置：
 
-```
+```apache
 LoadModule php5_module "C:/local/php/php5apache2_4.dll"
 ```
 
-PHP 教程 - Herong 的教程示例
-
-∟从 HTTP 请求中检索信息
+## 从 HTTP 请求中检索信息
 
 本章提供关于 HTTP 请求的教程示例和注释。主题包括从 `$_GET`、`$_POST`、`$_COOKIE`、`$_REQUEST`、`$_SERVER` 检索信息；将 `$_REQUEST` 的键和值提升并注册为全局变量。
 
@@ -7185,11 +6932,7 @@ PHP 教程 - Herong 的教程示例
 *   `$_REQUEST` 是 `$_GET`、`$_POST` 和 `$_COOKIE` 的总和。
 *   `$_SERVER` 包含来自 HTTP 请求、Web 服务器和操作系统的信息。
 
-PHP 教程 - Herong 的教程示例
-
-∟从 HTTP 请求中检索信息
-
-∟与 HTTP 请求相关的预定义变量
+### 与 HTTP 请求相关的预定义变量
 
 本节描述预定义变量 `$_GET`、`$_POST`、`$_COOKIE`、`$_REQUEST` 和 `$_SERVER`，它们包含 PHP 引擎从 Web 服务器接收到的 HTTP 请求中包含的信息。
 
@@ -7225,9 +6968,6 @@ PHP 教程 - Herong 的教程示例
    ......
 ```
 
-
-
-
 #### PHP 引擎和 `$_SERVER` 数组
 
 PHP 引擎还会从 Web 服务器收集额外信息，并将其作为键和值存储在 `$_SERVER` 数组中。例如，以下键和值代表从 Web 服务器接收到的信息：
@@ -7256,9 +6996,7 @@ WINDIR = C:\windows
 ...
 ```
 
----
-
-#### `$_SERVER` 中的操作系统信息
+### `$_SERVER` 中的操作系统信息
 
 本节提供了一个教程示例，演示如何转储存储在 `$_SERVER` 数组中的操作系统信息。
 
@@ -7300,35 +7038,97 @@ WINDIR = C:\windows
 
 如果你在不使用任何 Web 服务器的情况下独立运行此示例脚本，你应该会得到：
 
+
+
+## PHP 教程 - Herong 的教程示例
+
+### 在 PHP 脚本中创建和管理会话
+
+本章提供关于会话的教程示例和说明。主题包括理解会话概念；编写脚本以创建和使用会话；在当前会话中存储数据；将会话 ID 作为 Cookie 和 URL 透明参数进行管理。
+
+#### 要点：
+
+*   会话 ID 必须在 HTTP 请求和响应之间传递，以将它们链接成一个单一序列。
+*   将会话 ID 作为 Cookie 值传递更安全。
+*   将会话 ID 作为透明 URL 变量传递安全性较低，因为会话 ID 将显示在网页地址栏中。
+*   你必须在 PHP 脚本开头调用内置函数 `session_start()` 来启动一个新会话，或继续一个现有会话。
+*   内置数组 `$_SESSION` 可用于将信息从一个脚本传递到另一个与第一个脚本共享同一会话的脚本。
+*   会话数据在服务器端永久持久化到硬盘。
+
+---
+
+#### 什么是会话
+
+本节描述 Web 服务器端应用程序使用的会话概念。Web 会话表示浏览器和 Web 服务器之间交换的一系列 HTTP 请求和响应。通常，使用 Cookie 来携带 Web 会话的 ID。
+
+##### 什么是会话？
+
+会话是一个抽象概念，用于表示特定 Web 浏览器和特定 Web 服务器之间交换的一系列 HTTP 请求和响应。会话概念对于基于 Web 的应用程序非常有用，可用于将信息从一个网页（请求）传递并共享到另一个网页（请求）。
+
+由于 HTTP 协议的当前设计不支持会话概念，所有 Web 服务器端脚本技术（包括 PHP）都设计了自己的方式来支持会话概念。会话支持的关键设计要素在于如何用 ID（标识）来标识会话以及如何维护会话 ID。维护会话 ID 的一种常用方法是使用 Cookie 技术。下图展示了如何做到这一点：
+
 ```
-<pre>
-
-Contents of $_GET:
-
-Contents of $_POST:
-
-Contents of $_COOKIE:
-
-Contents of $_REQUEST:
-
-Contents of $_SERVER:
-   ALLUSERSPROFILE = C:\ProgramData
-   CommonProgramFiles = C:\Program Files\Common Files
-   CommonProgramFiles(x86) = C:\Program Files (x86)\Common Files
-   CommonProgramW6432 = C:\Program Files\Common Files
-   ComSpec = C:\windows\system32\cmd.exe
-   configsetroot = C:\windows\ConfigSetRoot
-   FP_NO_HOST_CHECK = NO
-   ProgramData = C:\ProgramData
-   ProgramFiles = C:\Program Files
-   ProgramFiles(x86) = C:\Program Files (x86)
-   ProgramW6432 = C:\Program Files
-   PROMPT = $P$G
-   ......
-</pre>
+           Server                Browser
+ID created  | <-- Request #1  --- |
+            | --- Response #1 --> | ID kept as cookie
+            | <-- Request #2  --- | ID send back to server
+            | --- Response #2 --> |
+            | <-- Request #3  --- | ID send back to server
+            | --- Response #3 --> |
+            |     ......          |
 ```
 
-请注意，`$_GET`、`$_POST`、`$_COOKIE` 和 `$_REQUEST` 都是空的，因为我们在没有任何 HTTP 请求的情况下执行了脚本。`$_SERVER` 仅包含从操作系统收集的信息。
+会话概念应由服务器管理。当来自客户机上浏览器的第一个请求到达时，服务器应创建一个新会话，并分配一个新的会话 ID。然后会话 ID 将作为 Cookie 发送回同一个浏览器。浏览器将记住此 ID，并在后续请求中将 ID 发送回服务器。当服务器收到包含相同会话 ID 的请求时，它知道该请求是现有会话的延续。
+
+当服务器收到来自新客户机上浏览器的请求（不带会话 ID 的请求）时，服务器不仅应创建一个新的会话 ID，还应创建一个与新会话 ID 关联的新会话对象。此会话对象应成为同一会话的不同请求存储和共享信息的存储位置，这些请求包含相同的会话 ID。
+
+如果很长一段时间内没有后续请求针对特定的会话 ID 返回，该会话应超时。会话超时后，如果浏览器再次带着相同的会话 ID 返回，服务器应给出无效会话错误。
+
+---
+
+#### PHP 如何支持会话
+
+本节描述 PHP 如何支持会话。会话 ID 作为 Cookie 或 GET/POST 变量传递。`session_start()` 是启动会话的内置函数。`$_SESSION` 是管理会话数据的内置数组。
+
+PHP 在配置文件 `php.ini` 中通过以下主要元素支持 Web 会话：
+
+1.  `session.use_cookies = 1/0` - 一个设置，用于确定会话 ID 是否应作为 Cookie 存储和管理。
+
+    *   `session.use_cookies = 1`（默认设置） - 作为 Cookie 管理会话 ID。会话 ID 存储在一个默认名为 "PHPSESSID" 的 Cookie 中。此 "PHPSESSID" Cookie 将由 PHP 引擎自动插入 HTTP 响应并从 HTTP 请求中检索。
+
+    *   `session.use_cookies = 0` - 停止将会话 ID 作为 Cookie 存储。
+
+2.  `session.use_trans_sid = 1/0` - 配置文件 `php.ini` 中的一个设置，用于控制会话 ID 是否应作为 URL 中的透明参数存储和管理。
+
+    *   `session.use_trans_sid = 1` - 作为 URL 中的额外透明参数管理会话 ID。额外的 URL 参数包含默认名为 "PHPSESSID" 的会话 ID 值。此 "PHPSESSID" 参数将由 PHP 引擎自动插入 HTTP 响应中的所有链接，并从 HTTP 请求中检索。
+
+    *   `session.use_trans_sid = 0`（默认设置） - 停止将会话 ID 作为 URL 透明参数存储。
+
+3.  `session.save_handler = files/mm/user` - 配置文件 `php.ini` 中的一个设置，用于控制会话数据应如何存储。
+
+    *   `session.save_handler = files`（默认设置） - 将会话数据作为文件存储在 `session.save_path = "/tmp"` 设置定义的目录中。
+
+    *   `session.save_handler = mm` - 将会话数据存储在共享内存中。
+
+    *   `session.save_handler = user` - 通过用户定义的函数存储会话数据。
+
+4.  `session_start()` - 一个用于创建新会话或恢复现有会话的内置函数。调用 `session_start()` 时，PHP 引擎将检查当前 HTTP 请求，以查看是否包含现有会话 ID。
+
+    *   如果未找到会话 ID，PHP 引擎将创建一个带有新会话 ID 的新会话。
+
+    *   如果找到会话 ID，PHP 引擎将恢复由此会话 ID 标识的会话。如果恢复的会话已超时，将发出错误。
+
+##### PHP 会话管理
+
+##### 内置会话变量和函数
+
+5.  `$_SESSION` - 一个附加到当前会话的内置数组，充当存储器。你可以在 PHP 脚本中在 `$_SESSION` 中存储任意数量的键值对，并在另一个脚本中稍后检索它们，前提是该脚本与第一个脚本共享同一个会话。
+
+6.  `session_name()` - 一个用于设置和获取当前会话名称的内置函数。
+
+7.  `session_id()` - 一个用于设置和获取当前会话 ID 的内置函数。
+
+8.  `session_destroy()` - 一个用于销毁当前会话的内置函数。当当前会话被销毁时，存储在 `$_SESSION` 中的信息将被移除。
 
 ---
 
@@ -7437,10 +7237,6 @@ register_globals = on
 
 2.  要仅为当前脚本执行将 `$_REQUEST` 键值对注册为局部变量，请使用以下函数：
 
-
-
-
-
 ```
 import_request_variables("GPC",$prefix);
 ```
@@ -7449,7 +7245,7 @@ import_request_variables("GPC",$prefix);
 
 为了测试这一点，我在 `php.ini` 中开启了 `register_globals` 设置，并编写了这个示例脚本 `RequestVariables.php`：
 
-```
+```php
 <?php
 #### RequestVariables.php
 #- Copyright 2003 (c) HerongYang.com. All Rights Reserved.
@@ -7488,105 +7284,7 @@ Globally imported variables from the request:
    $search =
 ```
 
-## PHP 教程 - Herong 的教程示例
 
-### 在 PHP 脚本中创建和管理会话
-
-本章提供关于会话的教程示例和说明。主题包括理解会话概念；编写脚本以创建和使用会话；在当前会话中存储数据；将会话 ID 作为 Cookie 和 URL 透明参数进行管理。
-
-> 什么是会话
->
-> PHP 如何支持会话
->
-> SessionPage*.php - 会话测试脚本页面
->
-> 运行会话测试脚本页面
->
-> 不使用 Cookie 管理会话 ID
->
-> 会话数据存储在哪里
-
-#### 要点：
-
-*   会话 ID 必须在 HTTP 请求和响应之间传递，以将它们链接成一个单一序列。
-*   将会话 ID 作为 Cookie 值传递更安全。
-*   将会话 ID 作为透明 URL 变量传递安全性较低，因为会话 ID 将显示在网页地址栏中。
-*   你必须在 PHP 脚本开头调用内置函数 `session_start()` 来启动一个新会话，或继续一个现有会话。
-*   内置数组 `$_SESSION` 可用于将信息从一个脚本传递到另一个与第一个脚本共享同一会话的脚本。
-*   会话数据在服务器端永久持久化到硬盘。
-
-## PHP 教程 - Herong 的教程示例
-
-### 在 PHP 脚本中创建和管理会话
-
-#### 什么是会话
-
-本节描述 Web 服务器端应用程序使用的会话概念。Web 会话表示浏览器和 Web 服务器之间交换的一系列 HTTP 请求和响应。通常，使用 Cookie 来携带 Web 会话的 ID。
-
-#### 什么是会话？
-
-会话是一个抽象概念，用于表示特定 Web 浏览器和特定 Web 服务器之间交换的一系列 HTTP 请求和响应。会话概念对于基于 Web 的应用程序非常有用，可用于将信息从一个网页（请求）传递并共享到另一个网页（请求）。
-
-由于 HTTP 协议的当前设计不支持会话概念，所有 Web 服务器端脚本技术（包括 PHP）都设计了自己的方式来支持会话概念。会话支持的关键设计要素在于如何用 ID（标识）来标识会话以及如何维护会话 ID。维护会话 ID 的一种常用方法是使用 Cookie 技术。下图展示了如何做到这一点：
-
-```
-           Server                Browser
-ID created  | <-- Request #1  --- |
-            | --- Response #1 --> | ID kept as cookie
-            | <-- Request #2  --- | ID send back to server
-            | --- Response #2 --> |
-            | <-- Request #3  --- | ID send back to server
-            | --- Response #3 --> |
-            |     ......          |
-```
-
-会话概念应由服务器管理。当来自客户机上浏览器的第一个请求到达时，服务器应创建一个新会话，并分配一个新的会话 ID。然后会话 ID 将作为 Cookie 发送回同一个浏览器。浏览器将记住此 ID，并在后续请求中将 ID 发送回服务器。当服务器收到包含相同会话 ID 的请求时，它知道该请求是现有会话的延续。
-
-当服务器收到来自新客户机上浏览器的请求（不带会话 ID 的请求）时，服务器不仅应创建一个新的会话 ID，还应创建一个与新会话 ID 关联的新会话对象。此会话对象应成为同一会话的不同请求存储和共享信息的存储位置，这些请求包含相同的会话 ID。
-
-如果很长一段时间内没有后续请求针对特定的会话 ID 返回，该会话应超时。会话超时后，如果浏览器再次带着相同的会话 ID 返回，服务器应给出无效会话错误。
-
-## PHP 教程 - Herong 的教程示例
-
-### 在 PHP 脚本中创建和管理会话
-
-#### PHP 如何支持会话
-
-本节描述 PHP 如何支持会话。会话 ID 作为 Cookie 或 GET/POST 变量传递。`session_start()` 是启动会话的内置函数。`$_SESSION` 是管理会话数据的内置数组。
-
-PHP 在配置文件 `php.ini` 中通过以下主要元素支持 Web 会话：
-
-1.  `session.use_cookies = 1/0` - 一个设置，用于确定会话 ID 是否应作为 Cookie 存储和管理。
-    *   `session.use_cookies = 1`（默认设置） - 作为 Cookie 管理会话 ID。会话 ID 存储在一个默认名为 "PHPSESSID" 的 Cookie 中。此 "PHPSESSID" Cookie 将由 PHP 引擎自动插入 HTTP 响应并从 HTTP 请求中检索。
-    *   `session.use_cookies = 0` - 停止将会话 ID 作为 Cookie 存储。
-
-2.  `session.use_trans_sid = 1/0` - 配置文件 `php.ini` 中的一个设置，用于控制会话 ID 是否应作为 URL 中的透明参数存储和管理。
-    *   `session.use_trans_sid = 1` - 作为 URL 中的额外透明参数管理会话 ID。额外的 URL 参数包含默认名为 "PHPSESSID" 的会话 ID 值。此 "PHPSESSID" 参数将由 PHP 引擎自动插入 HTTP 响应中的所有链接，并从 HTTP 请求中检索。
-    *   `session.use_trans_sid = 0`（默认设置） - 停止将会话 ID 作为 URL 透明参数存储。
-
-3.  `session.save_handler = files/mm/user` - 配置文件 `php.ini` 中的一个设置，用于控制会话数据应如何存储。
-    *   `session.save_handler = files`（默认设置） - 将会话数据作为文件存储在 `session.save_path = "/tmp"` 设置定义的目录中。
-    *   `session.save_handler = mm` - 将会话数据存储在共享内存中。
-    *   `session.save_handler = user` - 通过用户定义的函数存储会话数据。
-
-4.  `session_start()` - 一个用于创建新会话或恢复现有会话的内置函数。调用 `session_start()` 时，PHP 引擎将检查当前 HTTP 请求，以查看是否包含现有会话 ID。
-    *   如果未找到会话 ID，PHP 引擎将创建一个带有新会话 ID 的新会话。
-    *   如果找到会话 ID，PHP 引擎将恢复由此会话 ID 标识的会话。如果恢复的会话已超时，将发出错误。
-
-
-
-
-#### PHP 会话管理
-
-#### 内置会话变量和函数
-
-5. `$_SESSION` - 一个附加到当前会话的内置数组，充当存储器。你可以在 PHP 脚本中在 `$_SESSION` 中存储任意数量的键值对，并在另一个脚本中稍后检索它们，前提是该脚本与第一个脚本共享同一个会话。
-
-6. `session_name()` - 一个用于设置和获取当前会话名称的内置函数。
-
-7. `session_id()` - 一个用于设置和获取当前会话 ID 的内置函数。
-
-8. `session_destroy()` - 一个用于销毁当前会话的内置函数。当当前会话被销毁时，存储在 `$_SESSION` 中的信息将被移除。
 
 #### 会话测试脚本页面
 
@@ -7867,9 +7565,6 @@ Contents of $_POST:
 Contents of $_COOKIE:
 ```
 
-
-
-
 输出显示会话概念仍然正常工作。但这里发生了几件有趣的事情：
 
 *   如果你要求 PHP 使用透明会话 ID 管理，它将修改所有链接以将会话 ID 作为 URL 地址的一部分包含在内。查看浏览器中第一页的源代码，你应该会看到“Next”按钮的 URL 被修改为 `href=SessionPage2.php?PHPSESSID=mg04r204ctuloo2uegmih14ri5`。
@@ -7959,7 +7654,11 @@ Cookie 是一段由 Web 服务器发送给 Web 浏览器的信息，由浏览器
 
 Cookie 从服务器移动到浏览器，再回到服务器，如下图所示：
 
-```
+
+
+# Web Cookie 工作流程
+
+```text
 Web         Web         Local       Web           Web
 Server      Browser     System      Browser       Server
 
@@ -7973,43 +7672,43 @@ cookies --> cookies --> cookies --> cookies   --> cookies
 
 Cookie 主要用于将信息从一个 PHP 脚本传递到下一个脚本。
 
-PHP Tutorials - Herong's Tutorial Examples
+---
 
-∟Sending and Receiving Cookies in PHP Scripts
+# PHP Tutorials - Herong's Tutorial Examples
 
-∟Sending and Receiving Cookies
+## Sending and Receiving Cookies in PHP Scripts
+
+### Sending and Receiving Cookies
 
 本节描述 PHP 如何支持 Cookie。`setcookie()` 是在 HTTP 响应中设置 Cookie 的函数。`$_COOKIE` 是包含在下一个 HTTP 请求中接收到的 Cookie 的数组。
 
 PHP 通过以下元素支持 Cookie：
 
-1.  `setcookie()` - 一个内置函数，用于定义一个将作为头部行发送在 HTTP 响应中的 Cookie。与其他头部行一样，Cookie 必须在脚本的任何输出**之前**发送（这是协议限制）。这要求你将对此函数的调用放在任何输出之前，包括 `<html>` 和 `<head>` 标签以及任何空白字符。如果在调用此函数之前存在输出，`setcookie()` 将失败并返回 FALSE。
+1.  **`setcookie()`** - 一个内置函数，用于定义一个将作为头部行发送在 HTTP 响应中的 Cookie。与其他头部行一样，Cookie 必须在脚本的任何输出**之前**发送（这是协议限制）。这要求你将对此函数的调用放在任何输出之前，包括 `<html>` 和 `<head>` 标签以及任何空白字符。如果在调用此函数之前存在输出，`setcookie()` 将失败并返回 `FALSE`。
 
-调用 `setcookie()` 的语法是：
+    调用 `setcookie()` 的语法是：
 
-```
-bool setcookie(string name, string value, int expire)
-```
+    ```php
+    bool setcookie(string name, string value, int expire)
+    ```
 
-*   `name` 是此 Cookie 的名称。
-*   `value` 是此 Cookie 的值。`value` 是可选的。如果未提供 `value`，此 Cookie 将在 HTTP 响应中被设置但不带任何值。
-*   `expire` 是此 Cookie 应过期的时间。`expire` 是可选的。如果未提供 `expire`，此 Cookie 将仅保存在浏览器内存中。如果提供了 `expire`，它表示自纪元以来的秒数。如果提供的时间是未来时间，此 Cookie 将保存在浏览器系统的硬盘上。
+    *   `name` 是此 Cookie 的名称。
+    *   `value` 是此 Cookie 的值。`value` 是可选的。如果未提供 `value`，此 Cookie 将在 HTTP 响应中被设置但不带任何值。
+    *   `expire` 是此 Cookie 应过期的时间。`expire` 是可选的。如果未提供 `expire`，此 Cookie 将仅保存在浏览器内存中。如果提供了 `expire`，它表示自纪元以来的秒数。如果提供的时间是未来时间，此 Cookie 将保存在浏览器系统的硬盘上。
 
-例如，`setcookie("user", "Herong")` 将在 HTTP 响应中设置一个名为 "user" 的 Cookie。
+    例如，`setcookie("user", "Herong")` 将在 HTTP 响应中设置一个名为 "user" 的 Cookie。
 
-2.  `$_COOKIE` - 一个内置数组，存储在下一个 HTTP 请求中浏览器返回的 Cookie。Cookie 名称将用作数组键。例如，`$_COOKIE["user"]` 返回包含在 HTTP 请求中的 Cookie 值 "Herong"。
+2.  **`$_COOKIE`** - 一个内置数组，存储在下一个 HTTP 请求中浏览器返回的 Cookie。Cookie 名称将用作数组键。例如，`$_COOKIE["user"]` 返回包含在 HTTP 请求中的 Cookie 值 "Herong"。
 
-PHP Tutorials - Herong's Tutorial Examples
+---
 
-∟Sending and Receiving Cookies in PHP Scripts
-
-∟Sending and Receiving Cookies - Example
+## Sending and Receiving Cookies - Example
 
 本节提供了一个教程示例，说明如何使用 `setcookie()` 函数设置和发送 Cookie，以及如何使用 `$_COOKIE` 数组接收 Cookie。
 
 为了帮助我们理解如何发送和接收 Cookie，我编写了以下 PHP 教程示例脚本页面 `CookieTest.php`：
 
-```
+```php
 <?php
 #### CookieTest.php
 #- Copyright 2003 (c) HerongYang.com. All Rights Reserved.
@@ -8035,20 +7734,16 @@ PHP Tutorials - Herong's Tutorial Examples
 
 当我用浏览器运行此脚本时，我得到了：
 
-```
+```text
 Cookies added by the server:
    Cookie_1: My cookie value
 
 Cookies received by the server:
 ```
 
+### 当我点击浏览器的刷新按钮时，页面发生了如下变化：
 
-
-
-
-#### 当我点击浏览器的刷新按钮时，页面发生了如下变化：
-
-```
+```text
 服务器添加的 Cookie：
    Cookie_2: My cookie value
 
@@ -8062,7 +7757,9 @@ Cookies received by the server:
 
 如果我持续点击刷新按钮，请求和响应中会添加越来越多的 Cookie。但这是有限制的。浏览器只会接受来自同一 Web 服务器的最多 20 个 Cookie。
 
-#### ob_start() - 输出缓冲函数
+---
+
+### `ob_start()` - 输出缓冲函数
 
 本节介绍如何使用 `ob_start()` 函数开启输出缓冲，这允许在响应主体已添加后继续添加 HTTP 响应头行。
 
@@ -8071,12 +7768,12 @@ Cookies received by the server:
 但可以通过调用输出控制函数来改变这种默认行为：
 
 *   `setcookie()` 必须在向 HTTP 响应输出任何内容之前调用。主要原因是 PHP 不缓冲 HTTP 响应。但你可以通过使用 `ob_*()` 函数来改变此行为。
-*   `ob_start()` - 一个开启输出缓冲的内置函数。
-*   `flush()` - 一个将输出缓冲区的内容刷新到 HTTP 响应主体的内置函数。
+*   **`ob_start()`** - 一个开启输出缓冲的内置函数。
+*   **`flush()`** - 一个将输出缓冲区的内容刷新到 HTTP 响应主体的内置函数。
 
 当然，默认行为也可以通过配置文件 `php.ini` 来改变。打开 `php.ini` 并设置以下行：
 
-```
+```ini
 output_buffering = 4096
 ```
 
@@ -8084,7 +7781,7 @@ output_buffering = 4096
 
 为了测试 PHP 引擎的默认行为，我将 `CookieTest.php` 修改为 `CookieOutputBuffer.php`：
 
-```
+```php
 <?php
 #### CookieOutputBuffer.php
 #- Copyright 2003 (c) HerongYang.com. All Rights Reserved.
@@ -8111,13 +7808,13 @@ output_buffering = 4096
 
 然后我打开 `php.ini` 并设置以下行：
 
-```
+```ini
 output_buffering = 0
 ```
 
 在 IE 中运行 `CookieOutputBuffer.php` 得到如下结果：
 
-```
+```text
 Adding cookies by the server:
    Cookie_2: My cookie value
 
@@ -8130,19 +7827,20 @@ sent by (output started at ...\CookieOutputBuffer.php:4) ...
 
 现在我真正相信 PHP 引擎的默认行为是无输出缓冲。请务必在继续下一个测试前将 `output_buffering` 改回 4096。
 
-#### 保存在硬盘上的持久 Cookie
+---
+
+## 保存在硬盘上的持久 Cookie
 
 本节介绍什么是持久 Cookie —— 一个具有未来过期时间并保存在浏览器计算机硬盘 Cookie 文件中的 Cookie。
 
 Cookie 分为两种：持久 Cookie 和临时 Cookie。
 
-持久 Cookie 存储在你计算机硬盘上的一个文件中。关闭 Web 浏览器后它仍然保留在那里。当浏览器向该 Cookie 来源的 Web 服务器发起 HTTP 请求时，会拾取该持久 Cookie 并将其包含在请求中。
-
-临时 Cookie 或会话 Cookie 仅在当前浏览会话期间存储在内存中。关闭浏览器时临时 Cookie 会被删除。
+*   **持久 Cookie** 存储在你计算机硬盘上的一个文件中。关闭 Web 浏览器后它仍然保留在那里。当浏览器向该 Cookie 来源的 Web 服务器发起 HTTP 请求时，会拾取该持久 Cookie 并将其包含在请求中。
+*   **临时 Cookie** 或**会话 Cookie** 仅在当前浏览会话期间存储在内存中。关闭浏览器时临时 Cookie 会被删除。
 
 `setcookie(name,value)` 的默认行为是设置一个临时 Cookie。要设置持久 Cookie，我们需要使用以下语法向 `setcookie()` 函数调用添加另一个参数：
 
-```
+```php
 bool setcookie(string name, string value, int expire)
 ```
 
@@ -8152,7 +7850,7 @@ bool setcookie(string name, string value, int expire)
 
 为了向你展示如何设置持久 Cookie 以及 Cookie 如何存储在文件中，我编写了以下 PHP 脚本页面 `CookiePersisted.php`：
 
-```
+```php
 <?php
 #### CookiePersisted.php
 #- Copyright 2003 (c) HerongYang.com. All Rights Reserved.
@@ -8172,7 +7870,7 @@ bool setcookie(string name, string value, int expire)
 
 我用 IE (Internet Explorer) 打开此页面，得到：
 
-```
+```text
 Cookies added by the server:
    User: Herong Yang
    Expires at: 1134531525
@@ -8180,7 +7878,7 @@ Cookies added by the server:
 
 要找出此 Cookie 存储在我电脑的哪个文件中，我点击 IE 的“工具”菜单，选择“Internet 选项...”，并在“常规”选项卡的“临时 Internet 文件”部分点击“设置...”按钮。我看到了我的“临时 Internet 文件夹”位置。于是我进入该文件夹，看到了一个名为类似 "Cookie:user@localhost/" 的 Cookie 文件。我双击该文件，并在记事本中成功打开它：
 
-```
+```text
 User
 Herong+Yang
 localhost/
@@ -8194,37 +7892,36 @@ localhost/
 
 实际上，我还看到了许多由我过去访问过的其他网站创建的 Cookie 文件。我把它们全都删除了。
 
-#### 其他 Cookie 属性 - Domain 和 Path
+---
 
-本节介绍什么是数组 —— 键值有序对的集合。如果使用顺序整数键，数组是一个简单的索引列表。如果使用字符串键，数组是一个映射。
+## 其他 Cookie 属性 - Domain 和 Path
+
+本节介绍 Cookie 的其他属性。
 
 Cookie 还有两个其他属性：
 
-1. **domain** - 一个定义该 Cookie 应提供给哪些 Web 服务器域的属性。当 Web 服务器与其定义的域匹配时，Web 浏览器会将 Cookie 发回给该服务器。Web 浏览器绝不会将 Cookie 发回给其定义域以外的域。
+1.  **domain** - 一个定义该 Cookie 应提供给哪些 Web 服务器域的属性。当 Web 服务器与其定义的域匹配时，Web 浏览器会将 Cookie 发回给该服务器。Web 浏览器绝不会将 Cookie 发回给其定义域以外的域。
 
-   例如，如果一个 Cookie 的域是 `www.google.com`，浏览器仅在访问 `www.google.com` 时才会将此 Cookie 发回给服务器。浏览器绝不会将此 Cookie 发回给 `www.yahoo.com`。
+    例如，如果一个 Cookie 的域是 `www.google.com`，浏览器仅在访问 `www.google.com` 时才会将此 Cookie 发回给服务器。浏览器绝不会将此 Cookie 发回给 `www.yahoo.com`。
 
-   要使 Cookie 对顶级域的所有子域可用，请将 domain 属性设置为顶级域名。例如，如果 Cookie 的域设置为 `.google.com`，此 Cookie 将对所有 Google 子域可用，如 `groups.google.com` 和 `gmail.google.com`。
+    要使 Cookie 对顶级域的所有子域可用，请将 domain 属性设置为顶级域名。例如，如果 Cookie 的域设置为 `.google.com`，此 Cookie 将对所有 Google 子域可用，如 `groups.google.com` 和 `gmail.google.com`。
 
-2. **path** - 一个定义该 Cookie 应提供给哪个 Web 服务器路径的属性。当 Web 服务器与其定义的域匹配，且请求的页面与其定义的路径匹配时，Web 浏览器会将 Cookie 发回给该服务器。Web 浏览器绝不会将 Cookie 发回给其定义路径以外的请求路径。
+2.  **path** - 一个定义该 Cookie 应提供给哪个 Web 服务器路径的属性。当 Web 服务器与其定义的域匹配，且请求的页面与其定义的路径匹配时，Web 浏览器会将 Cookie 发回给该服务器。Web 浏览器绝不会将 Cookie 发回给其定义路径以外的请求路径。
 
-
-
-
-请注意，定义的路径也包含其所有子路径。例如，如果 Cookie 的域为 `www.amazon.com`，路径为 `/order/`，那么浏览器会针对 `http://www.amazon.com/order/checkout.html` 和 `http://www.amazon.com/order/report/invoice.html` 等请求发回此 Cookie。但对于 `http://www.amazon.com/catelog/book.html` 等请求，浏览器不应发回此 Cookie。
+    请注意，定义的路径也包含其所有子路径。例如，如果 Cookie 的域为 `www.amazon.com`，路径为 `/order/`，那么浏览器会针对 `http://www.amazon.com/order/checkout.html` 和 `http://www.amazon.com/order/report/invoice.html` 等请求发回此 Cookie。但对于 `http://www.amazon.com/catelog/book.html` 等请求，浏览器不应发回此 Cookie。
 
 `setcookie()` 函数提供了两个额外参数，允许您按以下语法设置 Cookie 的 "domain"（域）和 "path"（路径）属性：
 
-```
-bool setcookie(string name, string value, int expire, string path,
-   string domain)
+```php
+bool setcookie(string name, string value, int expire, string path, string domain)
 ```
 
 其中 "path" 指定 Cookie 的路径属性，"domain" 指定 Cookie 的域属性。如果未给出 "path"，Cookie 将默认使用 `/` 作为路径。如果未给出 "domain"，Cookie 将默认使用当前域作为域。
 
 好的，让我们通过以下脚本 `CookieProperties.php` 来实验这些属性：
 
-```
+
+
 <?php
 #### CookieProperties.php
 #- Copyright 2003 (c) HerongYang.com. All Rights Reserved.
@@ -8260,7 +7957,6 @@ bool setcookie(string name, string value, int expire, string path,
 
    print "</pre>\n";
 ?>
-```
 
 在 IE 中运行此脚本，我得到：
 
@@ -8299,63 +7995,39 @@ Cookies received by the server:
 
 显然，我的脚本未能正确设置属性。本应发回我的第二个 Cookie。所以 `path=/` 或 `domain=localhost` 与我的本地 IIS 环境不匹配。我无法弄清原因。
 
-PHP 教程 - Herong 的教程示例
+# PHP 教程 - Herong 的教程示例
 
-∟在 PHP 脚本中控制 HTTP 响应头行
+## 在 PHP 脚本中控制 HTTP 响应头行
 
 本章提供关于 HTTP 响应头行的教程示例和注释。主题包括理解 HTTP 响应结构和标准头行；使用 `header()` 函数控制头行；转储 HTTP 响应以查看头行；IIS 和 PHP 引擎为静态文件和 PHP 脚本添加的头行；`Location`、`Content-Type` 和 `Content-Disposition` 头行。
 
 > 什么是 HTTP 响应
-
-> 
-
+>
 > HTTP 响应头行
-
-> 
-
-> header() - 插入原始头行
-
-> 
-
-> HttpRequestGet.php - 查看头行
-
-> 
-
+>
+> `header()` - 插入原始头行
+>
+> `HttpRequestGet.php` - 查看头行
+>
 > 静态文件的响应头行
+>
+> `HttpHeaderLines.php` - 插入头行的示例
+>
+> `Location:` - 强制浏览器重定向到另一个 URL
+>
+> `Content-Type:` - 生成非 HTML 响应体
+>
+> `Content-Disposition:` - 发送文件供下载
 
-> 
-
-> HttpHeaderLines.php - 插入头行的示例
-
-> 
-
-> Location: - 强制浏览器重定向到另一个 URL
-
-> 
-
-> Content-Type: - 生成非 HTML 响应体
-
-> 
-
-> Content-Disposition: - 发送文件供下载
-
-要点：
+### 要点
 
 *   HTTP 响应头行必须在脚本的任何其他输出之前生成，除非您开启了 `output_buffering`。
-
 *   在 PHP 中设置头行很简单——一个内置函数 `header()` 就能搞定一切。
-
 *   `Location` 是一个有趣的头行。它告诉浏览器重定向到一个新的 URL。
-
 *   `Content-disposition` 告诉浏览器准备下载实体主体。
-
 *   我喜欢这个强大的函数 `readfile()`，它读取文件内容并直接发送到 HTTP 响应中。
 
-PHP 教程 - Herong 的教程示例
-
-∟在 PHP 脚本中控制 HTTP 响应头行
-
-∟什么是 HTTP 响应
+## 什么是 HTTP 响应？
 
 本节描述什么是 HTTP 响应——Web 服务器响应客户端机器的 HTTP 请求而返回给该客户端机器的消息。
 
@@ -8392,17 +8064,14 @@ Content-Length: 38
 <html><body>Hello world!</body></html>
 ```
 
-PHP 教程 - Herong 的教程示例
-
-∟在 PHP 脚本中控制 HTTP 响应头行
-
-∟HTTP 响应头行
+## HTTP 响应头行
 
 本节将 HTTP 响应头行分为 3 组进行描述。常用的头行有 `Date`、`Cache-Control`、`Last-Modified`、`Content-Length`、`Connection`、`Content-Type`、`Expires`、`Set-Cookie`、`Server` 等。
 
 HTTP/1.1 响应头行允许服务器传递无法放在状态行中的关于响应的附加信息。头行可分为三组：
 
-1.  通用头行 - 关于整个响应消息传输的信息：
+1.  **通用头行** - 关于整个响应消息传输的信息：
+
     ```
     Cache-Control
     Connection
@@ -8415,7 +8084,8 @@ HTTP/1.1 响应头行允许服务器传递无法放在状态行中的关于响�
     Warning
     ```
 
-2.  响应头行 - 关于响应的信息：
+2.  **响应头行** - 关于响应的信息：
+
     ```
     Accept-Ranges
     Age
@@ -8428,7 +8098,8 @@ HTTP/1.1 响应头行允许服务器传递无法放在状态行中的关于响�
     WWW-Authenticate
     ```
 
-3.  实体头行 - 关于客户端请求的数据的信息：
+3.  **实体头行** - 关于客户端请求的数据的信息：
+
     ```
     Allow
     Content-Encoding
@@ -8457,16 +8128,9 @@ Connection: close
 Content-Type: text/html; charset=utf-8
 ```
 
-PHP 教程 - Herong 的教程示例
+## `header()` - 插入原始头行
 
-∟在 PHP 脚本中控制 HTTP 响应头行
-
-∟header() - 插入原始头行
-
-
-
-
-# 使用 `header()` 函数控制 HTTP 响应头
+### 使用 `header()` 函数控制 HTTP 响应头
 
 本节介绍如何使用 `header()` 函数插入原始 HTTP 响应头行，以重置状态行、替换现有头行或添加新的头行。
 
@@ -8481,6 +8145,7 @@ void header(string $line, bool $replace, int $code)
 2. `$line` 指定一个完整的头行字符串，如 `"Content-Type: text/html"`。
 
 3. `$replace` 指定一个布尔值，控制是否替换同一标识符的先前定义的头行。
+
    - 如果 `$replace = TRUE`，指定的头行将替换任何具有相同标识符的现有头行。
    - 如果 `$replace = FALSE`，指定的头行将**不**替换任何具有相同标识符的现有头行。
    - 如果未提供 `$replace`，PHP 将假定 `$replace = TRUE`。
@@ -8507,7 +8172,7 @@ header("My-Header: UID=Herong", FALSE); // 允许重复
 
 ---
 
-#### HttpRequestGet.php - 查看头行
+### HttpRequestGet.php - 查看头行
 
 本节提供了一个教程示例脚本 `HttpRequestGet.php`，演示如何转储来自 Web 服务器的完整 HTTP 响应，包括所有头行。
 
@@ -8550,7 +8215,7 @@ header("My-Header: UID=Herong", FALSE); // 允许重复
 
 ---
 
-#### 静态文件的响应头行
+### 静态文件的响应头行
 
 本节提供了一个教程示例，介绍如何测试和查看 IIS 在 3 种类型的静态文件（HTML 文档、GIF 图像文件和 PDF 文档）上返回的 HTTP 响应头行。
 
@@ -8583,51 +8248,19 @@ Content-Type: text/html
 
 2. 命令：`"php HttpRequestGet.php /dot.gif"` 给出：
 
-```
-HTTP/1.1 200 OK
-Date: Sat, 26 Jan 2019 22:36:08 GMT
-Server: Apache/2.4.37 (Win64)
-Last-Modified: Sat, 26 Jan 2019 22:35:47 GMT
-ETag: "2b-5806410a1577b"
-Accept-Ranges: bytes
-Content-Length: 43
-Connection: close
-Content-Type: image/gif
 
-GIF89a......
-```
 
-正如你所见，Content-Type 根据 MIME 设置中的定义，针对文件扩展名 `"gif"` 正确设置为 `"image/gif"`。我无法在此处包含完整的实体主体，因为它包含二进制数据。
+正如你所见，`Content-Type` 根据 MIME 设置中的定义，针对文件扩展名 `"gif"` 正确设置为 `"image/gif"`。我无法在此处包含完整的实体主体，因为它包含二进制数据。
 
 3. 命令：`"php HttpRequestGet.php /hello.pdf"` 给出：
 
-```
-HTTP/1.1 200 OK
-Date: Sat, 26 Jan 2019 22:38:19 GMT
-Server: Apache/2.4.37 (Win64)
-Last-Modified: Sun, 27 Jul 2003 21:22:12 GMT
-ETag: "38d-3c37707f2a900"
-Accept-Ranges: bytes
-Content-Length: 909
-Connection: close
-Content-Type: application/pdf
-
-%PDF-1.3
-% ...
-4 0 obj
-......
-```
-
-同样，Content-Type 根据 MIME 设置中的定义，针对文件扩展名 `"pdf"` 正确设置为 `"application/pdf"`。我截断了实体主体以节省空间。
+同样，`Content-Type` 根据 MIME 设置中的定义，针对文件扩展名 `"pdf"` 正确设置为 `"application/pdf"`。我截断了实体主体以节省空间。
 
 ---
 
-#### HttpHeaderLines.php - 插入头行的示例
+### HttpHeaderLines.php - 插入头行的示例
 
 本节提供了一个教程示例，介绍如何使用 `header()` 函数插入 HTTP 响应头行。
-
-
-
 
 #### PHP HTTP 响应头控制教程
 
@@ -8635,22 +8268,7 @@ Content-Type: application/pdf
 
 首先创建一个简单的脚本 `hello.php`，并将其复制到 `c:\inetpub\wwwroot`：
 
-```
-Hello <?php echo "world!"; ?>
-```
-
 然后使用 `php HttpRequestGet.php /hello.php` 获取响应：
-
-```
-HTTP/1.1 200 OK
-Date: Sat, 26 Jan 2019 22:40:01 GMT
-Server: Apache/2.4.37 (Win64)
-X-Powered-By: PHP/7.3.0
-Connection: close
-Content-Type: text/html; charset=UTF-8
-
-Hello world!
-```
 
 与上一节描述的静态文件对比，输出显示：
 
@@ -8662,37 +8280,7 @@ Hello world!
 
 现在，我准备指导 PHP 如何定义头部行。这是我的测试脚本 `HttpHeaderLines.php`：
 
-```
-<?php
-#### HttpHeaderLines.php
-#- Copyright 2003 (c) HerongYang.com. All Rights Reserved.
-#
-   $text = "<html><body>Hello world!</body></html>";
-   print($text);
-   header("Content-Type: text/xml;charset=utf-8");
-   header("Content-Length: ".strlen($text));
-   header("Version: Unknown");
-   header("Version: 2019");
-   header("Key-Word: PHP");
-   header("Key-Word: HTTP", false);
-?>
-```
-
 使用 `php HttpRequestGet.php /HttpHeaderLines.php` 的输出：
-
-```
-HTTP/1.1 200 OK
-Date: Sat, 26 Jan 2019 22:44:26 GMT
-Server: Apache/2.4.37 (Win64)
-X-Powered-By: PHP/7.3.0
-Version: 2019
-Key-Word: PHP, HTTP
-Content-Length: 38
-Connection: close
-Content-Type: text/xml;charset=utf-8
-
-<html><body>Hello world!</body></html>
-```
 
 好的。我们可以从输出中得出什么结论？
 
@@ -8711,49 +8299,9 @@ PHP 教程 - Herong 的教程示例
 
 PHP 手册称我们可以使用 `header("Location: ...")` 告诉浏览器向给定的 URL 发起新的 HTTP 请求。这称为“重定向”。这是我的测试脚本 `HttpRedirect.php`：
 
-```
-<?php
-#### HttpRedirect.php
-#- Copyright 2003 (c) HerongYang.com. All Rights Reserved.
-#
-   $text = "<html><body>Moved!</body></html>";
-   print($text);
-   header("Content-Type: text/xml;charset=utf-8");
-   header("Content-Length: ".strlen($text));
-   header("Location: https://www.herongyang.com/");
-?>
-```
-
 Apache 2.4 和 PHP 7 的输出：
 
-```
-HTTP/1.1 302 Found
-Date: Sat, 26 Jan 2019 22:47:11 GMT
-Server: Apache/2.4.37 (Win64)
-X-Powered-By: PHP/7.3.0
-Content-Length: 32
-Location: https://www.herongyang.com/
-Connection: close
-Content-Type: text/xml;charset=utf-8
-
-<html><body>Moved!</body></html>
-```
-
 IIS 和 PHP 5 的输出：
-
-```
-HTTP/1.1 302 Object Moved
-Server: Microsoft-IIS/5.1
-Date: Sat, 19 Nov 2005 03:46:58 GMT
-Content-Type: text/html
-X-Powered-By: PHP/5.0.4
-Content-Length: 32
-Location: https://www.herongyang.com/
-
-<head><title>Document Moved</title></head>
-<body><h1>Object Moved</h1>This document may be
- found <a HREF="https://www.herongyang.com/">here</a></body>
-```
 
 我对输出有点惊讶：
 
@@ -8771,38 +8319,6 @@ PHP 教程 - Herong 的教程示例
 
 有时，您可能希望在响应实体主体中发回非 HTML 格式的信息，例如 PDF 文档或 MS Word 文档。在这种情况下，我们必须仔细设置 `Content-Type`、`Content-Length` 和其他头部行，为客户端程序提供关于实体主体的正确信息。这是一个示例 PHP 脚本，展示如何为实体主体中的不同数据类型设置头部行。
 
-```
-<?php
-#### GetFile.php
-#- Copyright 2003 (c) HerongYang.com. All Rights Reserved.
-#
-   $ok = array_key_exists('QUERY_STRING', $_SERVER);
-   if ($ok) {
-      $p = $_SERVER['QUERY_STRING'];
-      $ok = strlen($p)>0 && file_exists($p);
-   }
-   if ($ok) {
-      if (strpos($p,".html")!=false) {
-         header("Content-Type: text/html");
-      } else if (strpos($p,".gif")!=false) {
-         header("Content-Type: image/gif");
-      } else if (strpos($p,".pdf")!=false) {
-         header("Content-Type: application/pdf");
-      } else if (strpos($p,".doc")!=false) {
-         header("Content-Type: application/msword");
-      } else {
-         $ok = false;
-      }
-   }
-   if ($ok) {
-      header("Content-Length: ".filesize($p));
-      readfile($p);
-   } else {
-      print("<html><body>Bad request.</body></html>");
-   }
-?>
-```
-
 本脚本使用的思路：
 
 *   目标是在实体主体中发回请求文件的内容，并正确设置 `Content-Type` 和 `Content-Length` 头部行。
@@ -8819,52 +8335,13 @@ PHP 教程 - Herong 的教程示例
 3.  使用 IE 请求：`http://localhost/GetFile.php?hello.pdf`，您应该能看到 IE 调用 Adobe Reader 将 hello 消息作为 PDF 文档显示。
 4.  使用 IE 请求：`http://localhost/GetFile.php?hello.doc`，您应该能看到 IE 调用 MS Word 将 hello 消息作为 MS Word 文档显示。
 5.  使用 IE 请求：`http://localhost/GetFile.php?any.file`，您应该能看到 IE 显示错误消息。原因当然是请求的文件不存在。
+6.  使用 IE 请求：`http://localhost/GetFile.php`，你应该会看到 IE 显示一条错误消息。原因是 HTTP 请求中没有查询字符串。
 
-
-
-
-# 6. 使用 IE 请求：http://localhost/GetFile.php
-
-你应该会看到 IE 显示一条错误消息。原因是 HTTP 请求中没有查询字符串。
-
-#### Content-Disposition: - 发送文件供下载
+### Content-Disposition: - 发送文件供下载
 
 本节提供了一个教程示例，说明如何在 HTTP 响应中插入 `Content-Disposition:` 标头行，以告知浏览器提示用户下载并将响应实体主体保存为文件。
 
 在上一节中，请求的文件被传送给浏览器以立即打开。HTTP 还支持另一个称为 `Content-Disposition` 的标头行，它告诉浏览器不要立即打开文件，而是准备下载实体主体。以下脚本将向你展示如何操作：
-
-```php
-<?php
-#### Download.php
-#- Copyright 2003 (c) HerongYang.com. All Rights Reserved.
-#
-   $ok = array_key_exists('QUERY_STRING', $_SERVER);
-   if ($ok) {
-      $p = $_SERVER['QUERY_STRING'];
-      $ok = strlen($p)>0 && file_exists($p);
-   }
-   if ($ok) {
-      if (strpos($p,".html")!=false) {
-         header("Content-Type: text/html");
-      } else if (strpos($p,".gif")!=false) {
-         header("Content-Type: image/gif");
-      } else if (strpos($p,".pdf")!=false) {
-         header("Content-Type: application/pdf");
-      } else if (strpos($p,".doc")!=false) {
-         header("Content-Type: application/msword");
-      } else {
-         $ok = false;
-      }
-   }
-   if ($ok) {
-      header("Content-Length: ".filesize($p));
-      header("Content-disposition: attachment; filename=".$p);
-      readfile($p);
-   } else {
-      print("<html><body>Bad request.</body></html>");
-   }
-?>
-```
 
 在此页面中，向响应中添加了另一个标头行 `Content-Disposition`，其中我告知客户端程序实体数据是一个附件，并指定了文件名。
 
@@ -8872,20 +8349,25 @@ PHP 教程 - Herong 的教程示例
 
 尝试使用 IE 请求 `http://localhost/Download.php?other_existing_file`，你将看到 IE 显示“Bad request”消息。脚本工作正常。
 
-### 管理文件上传
+## 管理文件上传
 
 本章提供了关于使用 PHP 管理文件上传的教程示例和说明。主题包括创建供用户选择和提交上传文件的 Web 表单；创建用于在 Web 服务器上处理上传文件的 PHP 脚本。
 
-#### 文件上传 Web 表单
+### 文件上传 Web 表单
 
 本节提供了一个关于如何编写上传文件 Web 表单的教程示例。`input` 元素的 `type='file'` 属性会显示 `Choose File`（选择文件）按钮，供用户选择要上传的本地文件。
 
 要使用 PHP 脚本管理文件上传，你需要构建一个 Web 表单，供用户选择并提交其本地计算机上的文件。以下是构建文件上传表单的一些准则：
 
 1. 使用 `<form method="POST" ...>` 以确保上传的文件包含在 HTTP 请求主体中。
-2. 使用 `<form enctype="multipart/form-data" ...>` 以确保上传的文件作为多个附件被正确编码。
-3. 在任何 `<input type="file" .../>` 元素之前使用 `<input type="hidden" name="MAX_FILE_SIZE" value="nnnnn"/>` 将上传文件大小限制为给定的字节数。
-4. 使用 `<input type="file" ...>` 显示一个 `Choose File`（选择文件）按钮，允许用户搜索并选择要上传的本地文件。
+
+
+
+## 文件上传表单
+
+1. 使用 `<form enctype="multipart/form-data" ...>` 以确保上传的文件作为多个附件被正确编码。
+2. 在任何 `<input type="file" .../>` 元素之前使用 `<input type="hidden" name="MAX_FILE_SIZE" value="nnnnn"/>` 将上传文件大小限制为给定的字节数。
+3. 使用 `<input type="file" ...>` 显示一个 `Choose File`（选择文件）按钮，允许用户搜索并选择要上传的本地文件。
 
 下面是一个用于文件上传的 Web 表单示例 `file-upload-form.html`。
 
@@ -8916,7 +8398,7 @@ Web Form for File Upload
 
 请参阅下一教程，了解如何编写 `file-upload-handler.php` 以在 Web 服务器上接收上传的文件。
 
-#### 文件上传 PHP 脚本
+### 文件上传 PHP 脚本
 
 本节提供了一个关于如何编写 PHP 脚本以在 Web 服务器上处理上传文件的教程示例。PHP 引擎为你准备的内置哈希表 `$_FILES[]` 包含了所有上传文件的信息。
 
@@ -8936,9 +8418,6 @@ Web Form for File Upload
 6. **无访问 HTTP POST 请求主体原始数据的功能**，因为它被编码为 `multipart/form-data`，这是上传文件的要求。访问 POST 主体原始数据的两个选项：`php://input` 和 `$HTTP_RAW_POST_DATA` 在 `enctype="multipart/form-data"` 时均不可用。
 
 下面是一个处理上传文件的 PHP 脚本示例 `file-upload-handler.php`。
-
-
-
 
 #### PHP 文件上传处理脚本
 
@@ -9085,7 +8564,7 @@ Upload
 
 > 配置 PHP 以访问 MySQL 服务器
 >
-> mysqli_connect() 和其他 MySQL 函数
+> `mysqli_connect()` 和其他 MySQL 函数
 >
 > MySqlLoop.php - MySQL 函数测试
 
@@ -9099,7 +8578,7 @@ Upload
 
 ---
 
-# 配置 PHP 以访问 MySQL 服务器
+## 配置 PHP 以访问 MySQL 服务器
 
 本节提供关于如何配置 PHP 引擎以进行 MySQL 服务器连接访问的教程示例。需要在配置文件 `php.ini` 中开启设置 `extension=php_mysql.dll`。
 
@@ -9154,16 +8633,15 @@ MySQL status = Uptime: 1167  Threads: 1  Questions: 5  Slow queries...
 
 ---
 
-#### mysqli_connect() 和其他 MySQL 函数
+### `mysqli_connect()` 和其他 MySQL 函数
 
 本节描述 MySQL 扩展库 `php_mysql.dll` 支持的函数。`mysql_connect()` 创建到指定 MySQL 服务器的连接。
+
+
 
 PHP 的 MySQL 支持来自扩展库 `php_mysql.dll`，它提供了许多函数：
 
 *   `mysqli_connect()` - 连接到 MySQL 服务器，并返回连接资源。在大多数情况下，你需要使用 3 个参数调用它，如 `mysqli_connect($server, $username, $password)`。`$server` 指定运行 MySQL 服务器的机器的网络地址。`$username` 指定 MySQL 服务器上的用户登录名。`$password` 指定登录名的密码。
-
-
-
 
 ### MySQL 服务器连接和访问函数
 
@@ -9247,13 +8725,13 @@ Query some rows from the table...
 
 本章提供了关于管理目录、文件和图像的函数的教程示例和注释。主题包括目录管理函数（如 `mkdir()`）、文件测试函数（如 `is_file()`）、文件输入和输出函数（如 `fopen()`）。
 
-*   opendir() 和目录管理函数
-*   file_exists() 和文件测试函数
-*   FileExistsTest.php - 文件测试示例
-*   fopen() 和文件输入/输出函数
-*   File_Input_Output_Test.php - 文件输入/输出示例
-*   readfile() 和特殊文件处理函数
-*   ShowPhoto.php - 简单幻灯片播放脚本
+*   `opendir()` 和目录管理函数
+*   `file_exists()` 和文件测试函数
+*   `FileExistsTest.php` - 文件测试示例
+*   `fopen()` 和文件输入/输出函数
+*   `File_Input_Output_Test.php` - 文件输入/输出示例
+*   `readfile()` 和特殊文件处理函数
+*   `ShowPhoto.php` - 简单幻灯片播放脚本
 
 #### 要点
 
@@ -9335,9 +8813,6 @@ PHP 提供以下内置函数来管理文件系统的目录：
    icuin63.dll
 ```
 
-
-
-
 ## PHP 教程 - Herong 的教程示例
 
 ### 管理目录、文件和图像的函数
@@ -9377,6 +8852,8 @@ PHP 提供了大量优秀的内置函数来测试和管理文件：
 本节提供了一个教程示例脚本，演示如何使用 `file_exists()`、`is_dir()` 和 `stat()` 等文件测试函数。该示例脚本显示任意给定文件的详细信息。
 
 为了向你展示如何使用上一节描述的部分文件测试函数，我编写了这个简单的脚本：
+
+
 
 ```php
 <?php
@@ -9443,42 +8920,53 @@ herong> \php\php FileExistsTest.php \php\something
  Too bad. \php\something does not exists!.
 ```
 
-#### fopen() 和文件输入/输出函数
+### `fopen()` 和文件输入/输出函数
 
 本节介绍一些文件输入和输出的内置函数。`fopen()` 打开文件以进行读写。`fclose()` 关闭已打开的文件。`fread()` 从输入文件读取数据。`fwrite()` 向输出文件写入数据。
 
 PHP 提供了许多内置函数来读写文件：
 
-*   `fopen($path,$mode)` - 此“文件打开”函数打开指定路径的文件以读取或写入数据，并返回一个文件资源句柄。`$mode` 参数指定“r”、“w”或“a”作为打开模式，分别用于读取、写入或向文件追加数据。在 Windows 系统上，`$mode` 参数还接受另一个字母“t”或“b”，以控制文件是以文本模式还是二进制模式打开。在文本模式下，PHP 引擎将在 `\n` 和 `\r\n` 之间进行自动转换。在二进制模式下，PHP 引擎不进行任何转换。例如，`fopen($path,"rb")` 以二进制读取方式打开文件。
+*   `fopen($path, $mode)` - 此“文件打开”函数打开指定路径的文件以读取或写入数据，并返回一个文件资源句柄。`$mode` 参数指定“r”、“w”或“a”作为打开模式，分别用于读取、写入或向文件追加数据。在 Windows 系统上，`$mode` 参数还接受另一个字母“t”或“b”，以控制文件是以文本模式还是二进制模式打开。在文本模式下，PHP 引擎将在 `\n` 和 `\r\n` 之间进行自动转换。在二进制模式下，PHP 引擎不进行任何转换。例如，`fopen($path, "rb")` 以二进制读取方式打开文件。
+
 *   `fclose($file)` - 此“文件关闭”函数关闭指定的文件资源句柄。
-*   `fread($file,$length)` - 此“文件读取”函数从 `$file` 读取 `$length` 字节数的数据，并以字符串形式返回输入字节。
+
+*   `fread($file, $length)` - 此“文件读取”函数从 `$file` 读取 `$length` 字节数的数据，并以字符串形式返回输入字节。
+
 *   `fgets($file)` - 此“文件获取字符串”函数从 `$file` 读取一行并以字符串形式返回。
+
 *   `feof($file)` - 此“文件结束”函数在 `$file` 当前指向文件末尾时返回 true。
-*   `fwrite($file,$data,$length)` - 此“文件写入”函数将 `$data` 中的 `$length` 字节数数据写入 `$file`。
-*   `fscanf($file,$format,$var1,$var2,...)` - 此“文件格式化扫描”函数根据 `$format` 将输入数据解析到 `$var1`、`$var2`... 中。
-*   `fprintf($file,$format,$var1,$var2,...)` - 此“文件格式化打印”函数根据 `$format` 将 `$var1`、`$var2`... 中的数据写入。
+
+*   `fwrite($file, $data, $length)` - 此“文件写入”函数将 `$data` 中的 `$length` 字节数数据写入 `$file`。
+
+*   `fscanf($file, $format, $var1, $var2, ...)` - 此“文件格式化扫描”函数根据 `$format` 将输入数据解析到 `$var1`、`$var2`... 中。
+
+*   `fprintf($file, $format, $var1, $var2, ...)` - 此“文件格式化打印”函数根据 `$format` 将 `$var1`、`$var2`... 中的数据写入。
+
 *   `fflush($file)` - 此“文件刷新”函数强制将所有缓冲输出写入实际的 `$file`。
+
 *   `ftruncate($file)` - 此“文件截断”函数将 `$file` 截断为给定长度。
+
 *   `ftell($file)` - 此“文件指针位置”函数返回 `$file` 指针在实际文件中的当前位置，作为相对于文件开头的偏移量。
 
-
-
-
-#### PHP 文件操作函数参考
+### PHP 文件操作函数参考
 
 #### 文件指针操作函数
 
 *   `fseek($file, $offset)` - 此“文件查找”函数将 `$file` 移动到实际文件中的 `$offset` 位置。
+
 *   `rewind($file)` - 此“倒带”函数将 `$file` 位置重置为实际文件的开头。
+
 *   `flock($file, $locker)` - 此“文件锁定”函数在 `$file` 上应用锁。支持 4 种锁类型：`LOCK_SH`、`LOCK_EX`、`LOCK_UN` 和 `LOCK_NB`。
+
 *   `fstat($file)` - 此“文件统计”函数返回一个包含 `$file` 统计信息的数组。返回的数组包含的元素键有：`dev`、`ino`、`mode`、`nlink`、`uid`、`gid`、`rdev`、`size`、`atime`、`mtime`、`ctime`、`blksize` 和 `blocks`。
+
 *   `fgetc($file)` - 此“文件获取字符”函数读取 1 字节并将其作为字符串返回。
 
 详见下一节的 PHP 示例脚本。
 
 ---
 
-#### File_Input_Output_Test.php - 文件输入/输出示例
+### File_Input_Output_Test.php - 文件输入/输出示例
 
 本节提供了一个教程示例脚本，演示如何使用 `fopen()`、`fread()`、`fwrite()` 和 `fclose()` 等文件输入输出函数。该示例脚本以二进制模式复制任意文件。
 
@@ -9551,26 +9039,35 @@ herong> \php\php File_Input_Output_Test.php \php
 
 ---
 
-#### readfile() 和特殊文件处理函数
+### `readfile()` 和特殊文件处理函数
 
 本节介绍一些特殊的文件处理函数。`readfile()` 将文件复制到标准输出。`fgetss()` 读取一行并移除标签。`tmpfile()` 打开一个临时文件。`file()` 将文件读入数组。
 
 PHP 还提供了许多其他内置函数来执行特殊的文件输入和输出任务：
 
 *   `file_get_contents($path)` - 此“文件获取内容”函数将指定文件的全部内容作为字符串返回。
+
 *   `file_put_contents($path, $data)` - 此“文件写入内容”函数将指定数据写入指定文件。
+
 *   `file($path)` - 此“文件”函数将指定文件的全部内容作为数组返回。数组中的每个元素代表文件中的一行。
+
 *   `readfile($path)` - 此“读取文件”函数读取文件的全部内容并写入标准输出。
+
 *   `fpassthru($file)` - 此“文件直通”函数从 `$file` 读取剩余数据并写入标准输出。
+
 *   `fgetss($file)` - 此“文件获取字符串剥离”函数从 `$file` 读取一行，并返回去除 HTML 和 PHP 标签后的字符串。
+
 *   `fgetcsv($file)` - 此“文件获取 CSV”函数从 `$file` 读取一行，并通过按 CSV 格式解析将其作为数组元素返回。
+
 *   `fputcsv($file, $array)` - 此“文件写入 CSV”函数将 `$array` 中的元素以 CSV 格式写入 `$file`。
+
 *   `tmpfile()` - 此“临时文件”函数以读写（`w+`）模式打开一个临时文件并返回文件资源句柄。当其文件资源句柄关闭时，此临时文件将被删除。
+
 *   `tempnam($path, $prefix)` - 此“临时名称”函数在 `$path` 中创建一个带有 `$prefix` 前缀的临时文件名。
 
 ---
 
-#### ShowPhoto.php - 简单幻灯片展示脚本
+### ShowPhoto.php - 简单幻灯片展示脚本
 
 本节提供了一个教程示例，演示如何以幻灯片格式显示目录中的图像文件。使用 `getimagesize()` 函数从图像文件中检索图像尺寸。
 
@@ -9640,7 +9137,7 @@ PHP 还提供了许多其他内置函数来执行特殊的文件输入和输出�
 
 本章提供关于 SOAP 扩展函数的教程示例和说明。主题包括 PHP 的 SOAP 实现、SOAP 扩展库、SOAP 客户端函数、使用和不使用 WSDL 标准调用 Web Services、用于转储 SOAP 通信详细调试信息的示例脚本。
 
-#### 章节导航
+### 章节导航
 
 *   PHP Implementations of SOAP
 *   Turning on the Default SOAP Extension
@@ -9650,28 +9147,27 @@ PHP 还提供了许多其他内置函数来执行特殊的文件输入和输出�
 *   What Is WSDL
 *   Using SOAP Extension in non-WSDL Mode
 
-#### 核心要点
-
-*   似乎有 3 种流行的 PHP SOAP 实现：PEAR SOAP、NuSOAP 和 PHP Group SOAP Extension。
-*   PHP Group SOAP Extension 5.0.4 似乎支持 SOAP 1.2。但它默认使用 SOAP 1.1。
+### 核心要点
 
 
 
+似乎有 3 种流行的 PHP SOAP 实现：`PEAR SOAP`、`NuSOAP` 和 `PHP Group SOAP Extension`。
 
+`PHP Group SOAP Extension` 5.0.4 似乎支持 SOAP 1.2。但它默认使用 SOAP 1.1。
 
-#### WSDL 和 SOAP 概述
+## WSDL 和 SOAP 概述
 
 *   WSDL 是一种基于 XML 的标准，旨在描述 Web 服务的协议绑定和消息格式。
 *   WSDL 文档确实有助于简化 SOAP 调用的设置过程。但即使没有 WSDL 文档，进行 SOAP 调用也并不难。
-*   www.xmethods.net 为提供此演示 SOAP 服务做出了巨大贡献。
+*   `www.xmethods.net` 为提供此演示 SOAP 服务做出了巨大贡献。
 
 ---
 
-#### PHP 的 SOAP 实现
+## PHP 的 SOAP 实现
 
 本节介绍 SOAP 协议及 PHP 的 SOAP 实现。`PEAR::Package::SOAP`、`NuSOAP` 和 `php_soap.dll`（来自 PHP Group）似乎是 3 种不同的 SOAP 实现。
 
-#### 什么是 SOAP？
+### 什么是 SOAP？
 
 **SOAP**（简单对象访问协议）是一种基于 XML 的协议，旨在在分布式应用环境中交换结构化信息。
 
@@ -9679,7 +9175,7 @@ PHP 还提供了许多其他内置函数来执行特殊的文件输入和输出�
 
 *   `php.net/manual/en/book.soap.php` 上的 PHP SOAP 扩展。
 *   NuSOAP - PHP 的 SOAP 工具包，位于 `http://sourceforge.net/projects/nusoap/`。当前版本：2011-01-13 发布的 0.9.5 版。
-*   `http://pear.php.net/package/SOAP` 上的 PEAR::Package::SOAP。它已不再可用。
+*   `http://pear.php.net/package/SOAP` 上的 `PEAR::Package::SOAP`。它已不再可用。
 
 PHP SOAP 扩展包含在 PHP 发行包中：
 
@@ -9691,7 +9187,7 @@ herong> dir \php\ext\php_soap.dll
 
 ---
 
-#### 开启默认 SOAP 扩展
+## 开启默认 SOAP 扩展
 
 本节提供一个教程示例，说明如何开启默认发行包中包含的 SOAP 扩展 - 在 `php.ini` 文件中设置 `extension=php_soap.dll`。
 
@@ -9764,13 +9260,13 @@ Copyright (c) 1997-2018 The PHP Group
 
 ---
 
-#### Hello_There.php - SOAP 第一个示例
+## Hello_There.php - SOAP 第一个示例
 
-本节提供一个教程示例，说明如何使用 SOAP 扩展调用 herongyang.com 提供的 Web 服务以获取问候消息。
+本节提供一个教程示例，说明如何使用 SOAP 扩展调用 `herongyang.com` 提供的 Web 服务以获取问候消息。
 
 为了向你展示 PHP SOAP 扩展如何在 SOAP 客户端应用程序中使用，这是我的第一个 SOAP PHP 脚本 `Hello_There.php`：
 
-```
+```php
 <?php
 #### Hello_There.php
 #- Copyright 2009-2015 (c) HerongYang.com. All Rights Reserved.
@@ -9798,7 +9294,7 @@ Returning value of Hello() call:
 
 ---
 
-#### SoapClient - SOAP 客户端类和函数
+## SoapClient - SOAP 客户端类和函数
 
 本节介绍 SOAP 扩展库中提供的 `SoapClient` 类和函数，用于编写 SOAP 客户端应用程序。`__soapCall()` 允许你在目标 SOAP 节点上进行 RPC 函数调用。
 
@@ -9874,10 +9370,7 @@ string $s = $obj->__getLastRequest();
 string $s = $obj->__getLastResponseHeaders();
 ```
 
-
-
-
-#### SoapClient->__getLastResponse()
+### SoapClient->__getLastResponse()
 
 `SoapClient->__getLastResponse()` 允许你检索最后执行的 SOAP 请求的 SOAP 响应消息。仅当 `SoapClient` 对象是使用 `trace=1` 选项创建时，此函数才有效。
 
@@ -9887,7 +9380,7 @@ string $s = $obj->__getLastResponse();
 
 ---
 
-#### Hello_There_Dump.php - 调试 SOAP 消息
+## Hello_There_Dump.php - 调试 SOAP 消息
 
 本节提供了一个教程示例，说明如何使用 SOAP 客户端函数对目标 SOAP 节点进行 Web 服务调用并打印详细的调试信息。
 
@@ -9997,16 +9490,19 @@ Dumping response:
 
 *   默认 SOAP 版本为 SOAP 1.1。对于 SOAP 1.2，信封命名空间应为 `http://www.w3.org/2003/05/soap-envelope`，而非 `http://schemas.xmlsoap.org/soap/envelope/`。
 *   传输协议为 HTTP/1.1。请参阅请求标头行。
-*   此 WSDL 中仅支持一个 RPC 函数：`string Hello(string $helloInputPart)`。请参阅 `__getFunctions()` 转储。
-*   SOAP 扩展根据 WSDL 文档中的定义，将我的 `Hello()` RPC 调用完美地转换为 SOAP 请求消息。
+
+
+
+* 此 WSDL 中仅支持一个 RPC 函数：`string Hello(string $helloInputPart)`。请参阅 `__getFunctions()` 转储。
+* SOAP 扩展根据 WSDL 文档中的定义，将我的 `Hello()` RPC 调用完美地转换为 SOAP 请求消息。
 
 ---
 
-#### 什么是 WSDL
+## 什么是 WSDL
 
 本节介绍什么是 WSDL——一种基于 XML 的标准，旨在描述 Web 服务的协议绑定和消息格式。
 
-#### 什么是 WSDL？
+### 什么是 WSDL？
 
 **WSDL**（Web Services Definition Language，Web 服务描述语言）是一种基于 XML 的标准，旨在描述 Web 服务的协议绑定和消息格式。WSDL 通常发音为 "Whiz-Dull"。
 
@@ -10077,17 +9573,13 @@ location="https://www.herongyang.com/Service/Hello_SOAP_11.php"/>
 
 ---
 
-#### 在非 WSDL 模式下使用 SOAP 扩展
+## 在非 WSDL 模式下使用 SOAP 扩展
 
 本节提供了一个教程示例，说明如何在不使用 WSDL 标准的情况下，使用 SOAP 客户端函数对目标 SOAP 节点进行 Web 服务调用并打印详细的调试信息。
 
 我想我们已经在 WSDL 模式下玩得够多了。现在让我们尝试一下非 WSDL 模式。这是我的 `Get_Temperature.php` SOAP 客户端程序的第三个版本，`Hello_There_Non_WSDL.php`：
 
-
-
-
-
-#### PHP SOAP 非 WSDL 模式客户端示例
+### PHP SOAP 非 WSDL 模式客户端示例
 
 #### 代码示例：Hello_There_Non_WSDL.php
 
@@ -10185,48 +9677,48 @@ Dumping response:
 
 输出显示：
 
-*   `Hello_There_Non_WSDL.php` 的工作方式与 WSDL 模式版本相同。
-*   如果将此输出与 WSDL 输出进行比较，SOAP 扩展生成的请求头有一个区别：`SOAPAction` 不再为空。它的值为 `"https://www.herongyang.com/Service/#Hello"`。
+* `Hello_There_Non_WSDL.php` 的工作方式与 WSDL 模式版本相同。
+* 如果将此输出与 WSDL 输出进行比较，SOAP 扩展生成的请求头有一个区别：`SOAPAction` 不再为空。它的值为 `"https://www.herongyang.com/Service/#Hello"`。
 
 ---
 
-#### SOAP 服务器函数和示例
+## SOAP 服务器函数和示例
 
 本章提供关于 SOAP 服务器函数和示例的教程示例和说明。主题包括 SOAP 服务器类和函数简介、SOAP 服务器示例 `HelloServer.php`、SOAP 1.1 和 1.2 的服务器示例、WSDL 模式下的服务器示例。
 
-#### 相关章节
+### 相关章节
 
-*   SoapServer - SOAP 服务器类和函数
-*   HelloServer.php - 第一个 SOAP 服务器应用程序
-*   HelloServer12.php - 第一个 SOAP 1.2 服务器应用程序
-*   HelloServerWsdl.php - WSDL 模式下的 SOAP 1.2 服务器应用程序
+* `SoapServer` - SOAP 服务器类和函数
+* `HelloServer.php` - 第一个 SOAP 服务器应用程序
+* `HelloServer12.php` - 第一个 SOAP 1.2 服务器应用程序
+* `HelloServerWsdl.php` - WSDL 模式下的 SOAP 1.2 服务器应用程序
 
-#### 核心要点
+### 核心要点
 
-*   SOAP 扩展易于使用，可快速设置 SOAP 服务器以提供 Web 服务。
-*   SOAP 扩展支持 SOAP 1.1 和 1.2 规范。
-*   WSDL 文档实际上很容易理解。
+* SOAP 扩展易于使用，可快速设置 SOAP 服务器以提供 Web 服务。
+* SOAP 扩展支持 SOAP 1.1 和 1.2 规范。
+* WSDL 文档实际上很容易理解。
 
-#### 练习
+### 练习
 
 编写一个温度转换 SOAP 服务。
 
 ---
 
-#### SoapServer - SOAP 服务器类和函数
+## SoapServer - SOAP 服务器类和函数
 
 本节介绍 SOAP 扩展库中提供的 `SoapServer` 类和函数，用于编写 SOAP 服务器应用程序。
 
 如果阅读 SOAP 扩展参考页面，你将看到 SOAP 扩展通过一个名为 `SoapServer` 的类支持 SOAP 服务器应用程序，该类提供以下函数：
 
-*   `SoapServer->__construct()` - 构造一个新的 `SoapServer` 对象
-*   `SoapServer->addFunction()` - 添加一个或多个处理 SOAP 请求的函数
-*   `SoapServer->setClass()` - 设置处理 SOAP 请求的类
-*   `SoapServer->handle()` - 处理 SOAP 请求
-*   `SoapServer->getFunctions()` - 返回已定义函数的列表
-*   ...
+* `SoapServer->__construct()` - 构造一个新的 `SoapServer` 对象
+* `SoapServer->addFunction()` - 添加一个或多个处理 SOAP 请求的函数
+* `SoapServer->setClass()` - 设置处理 SOAP 请求的类
+* `SoapServer->handle()` - 处理 SOAP 请求
+* `SoapServer->getFunctions()` - 返回已定义函数的列表
+* ...
 
-#### `SoapServer->__construct()`
+### `SoapServer->__construct()`
 
 `SoapServer->__construct()` 允许你使用以下语法构造一个新的 `SoapServer` 对象：
 
@@ -10252,7 +9744,7 @@ __construct( "..."[, array $options] ); # WSDL 模式，许多选项由 WSDL 文
 __construct( null, array $options );    # 非 WSDL 模式，'uri' 是必需选项
 ```
 
-#### `SoapServer->addFunction()`
+### `SoapServer->addFunction()`
 
 `SoapServer->addFunction()` 允许你添加一个或多个函数来处理 SOAP 请求。要添加的函数是在当前 PHP 程序文件中定义的函数。
 
@@ -10262,7 +9754,7 @@ $obj->addFunction(array("func1",...));  # 添加多个函数
 $obj->addFunction(SOAP_FUNCTIONS_ALL);  # 添加所有函数
 ```
 
-#### `SoapServer->setClass()`
+### `SoapServer->setClass()`
 
 `SoapServer->setClass()` 允许你调用指定类中的方法来处理 SOAP 请求。
 
@@ -10270,7 +9762,7 @@ $obj->addFunction(SOAP_FUNCTIONS_ALL);  # 添加所有函数
 $obj->setClass("cls");
 ```
 
-#### `SoapServer->handle()`
+### `SoapServer->handle()`
 
 `SoapServer->handle()` 允许你将执行控制权返回给 SOAP 扩展以处理传入的 SOAP 请求。
 
@@ -10278,7 +9770,7 @@ $obj->setClass("cls");
 $obj->handle();
 ```
 
-#### `SoapServer->getFunctions()`
+### `SoapServer->getFunctions()`
 
 `SoapServer->getFunctions()` 允许你获取已分配处理 SOAP 请求的所有函数的列表。
 
@@ -10288,11 +9780,15 @@ array $a = $obj->getFunctions();
 
 ---
 
-#### HelloServer.php - 第一个 SOAP 服务器应用程序
+## HelloServer.php - 第一个 SOAP 服务器应用程序
 
 本节提供关于如何编写简单 SOAP 服务器应用程序的教程示例。`HelloServer.php` 示例定义了一个 `hello()` 函数，将其添加到 SOAP 服务器，并等待客户端程序调用。
 
 好了，现在让我们构建第一个 SOAP 服务器。我希望第一个服务器执行一个非常简单的功能：根据输入的名称返回问候字符串。以下是我的版本，名为 `HelloServer.php`：
+
+
+
+# HelloServer.php - 第一个 SOAP 1.1 服务端应用程序
 
 ```php
 <?php
@@ -10322,11 +9818,7 @@ herong> copy HelloServer.php \apache\htdocs
 
 为了测试我的服务器应用程序，我编写了这个客户端应用程序 `HelloClient.php`：
 
-
-
-
-
-#### HelloClient.php - SOAP 1.1 客户端应用程序
+## HelloClient.php - SOAP 1.1 客户端应用程序
 
 ```php
 <?php
@@ -10430,11 +9922,9 @@ Dumping response:
     SOAP message  |
 ```
 
-PHP Tutorials - Herong's Tutorial Examples
+---
 
-∟SOAP Server Functions and Examples
-
-∟HelloServer12.php - First SOAP 1.2 Server Application
+# HelloServer12.php - 第一个 SOAP 1.2 服务端应用程序
 
 本节提供了一个关于如何编写简单 SOAP 1.2 服务端应用程序的教程示例。`HelloServer.php` 示例定义了一个 `hello()` 函数，将其添加到 SOAP 服务端，等待客户端程序调用。
 
@@ -10545,20 +10035,17 @@ Dumping response:
 *   应用了 SOAP 1.2 消息规则。请参阅请求消息和响应消息中的信封命名空间值：`xmlns:env="http://www.w3.org/2003/05/soap-envelope`。
 *   应用了 SOAP 1.2 RPC 表示规则。请参阅响应消息中响应元素的 `"result"` 子元素。但 SOAP Extension 并没有将返回值直接放在这个子元素中。它在响应元素中插入了第二个子元素，并将返回值放在这个第二个元素中。必需的 `"result"` 元素中的值只是对第二个元素的引用。这似乎违反了 SOAP 1.2 RPC 表示规范。
 
-PHP Tutorials - Herong's Tutorial Examples
+---
 
-∟SOAP Server Functions and Examples
-
-∟HelloServerWsdl.php - SOAP 1.2 Server Application in WSDL Mode
+# HelloServerWsdl.php - WSDL 模式下的 SOAP 1.2 服务端应用程序
 
 本节提供了一个关于如何以 WSDL 模式编写简单 SOAP 1.2 服务端应用程序的教程示例。`HelloServer.php` 示例定义了一个 `hello()` 函数，将其添加到 SOAP 服务端，等待客户端程序调用。
 
-
-
-
-#### 创建 WSDL 模式的 SOAP 1.2 服务器应用
+## 创建 WSDL 模式的 SOAP 1.2 服务器应用
 
 现在让我们更进一步：在 WSDL 模式下创建一个 SOAP 1.2 服务器应用。以下是修改为 WSDL 模式的相同 hello 服务器，`HelloServerWdsl.php`：
+
+
 
 ```php
 <?php
@@ -10631,7 +10118,9 @@ function hello($someone) {
 WSDL 文档看起来很复杂。但只要记住以下几点，实际上很容易理解：
 
 *   **倒着读文档**。该文档的目标是定义一个“service”，包含两部分信息：“binding”定义和访问服务器的“url”。“binding”再通过“type”、“style”、“transportation”和“operation”来定义。以此类推。
+
 *   大多数元素中 `name` 属性的值只是该文档内部的标识符。你可以使用任意字符串。其中一些将用于 SOAP 消息中。
+
 *   `namespace` 属性的值也可以是任意字符串。它们只是用来区分命名空间。
 
 要将 `HelloServerWsdl.php` 安装到 Apache 服务器，请将这两个文件复制到 Apache 文档目录：
@@ -10733,24 +10222,18 @@ Dumping response:
 
 这里有什么有趣的地方吗？有的。WSDL 文档中定义的一些名称确实出现在了 SOAP 请求消息和响应消息中，例如：`urn:myInputNamespace`、`reqParam`、`urn:myOutputNamespace` 等。
 
-PHP 教程 - Herong 的教程示例
+### PHP 教程 - Herong 的教程示例
 
-∟ Web 应用本地化概述
+#### Web 应用本地化概述
 
 本章提供关于 Web 应用本地化的教程示例和说明。主题包括什么是本地化；Web 应用中的软件组件；输出和输入字符串的传播路径；从 PHP 脚本输出 ASCII 字符。
 
 > 什么是本地化 / 国际化
-
-> 
-
+>
 > 基于 Web 的应用程序本地化
-
-> 
-
+>
 > 字符串传播路径
-
-> 
-
+>
 > 从 PHP 脚本输出 ASCII 字符串
 
 要点：
@@ -10761,11 +10244,11 @@ PHP 教程 - Herong 的教程示例
 *   非 ASCII 字符必须编码为安全格式，才能在不同程序和系统间传播。
 *   接下来的 5 章将提供教程说明，分别处理不同领域的非 ASCII 字符：HTML 文档、PHP 字符串字面量、HTML 输入表单、PHP 字符串函数和 MySQL 数据库。
 
-PHP 教程 - Herong 的教程示例
+### PHP 教程 - Herong 的教程示例
 
-∟ Web 应用本地化概述
+#### Web 应用本地化概述
 
-∟ 什么是本地化 / 国际化
+#### 什么是本地化 / 国际化
 
 本节介绍什么是本地化和国际化。Locale 是一个定义用户界面上地理和文化特定偏好的概念。
 
@@ -10776,16 +10259,12 @@ PHP 教程 - Herong 的教程示例
 用户特定的地理和文化偏好可以抽象为 locale 概念。一个 locale 通常决定用户界面的以下方面：
 
 *   使用特定语言进行系统输出和用户输入。
-
-
-
-
-# 基于 Web 的应用程序本地化
-
-#### 概述
-
 *   使用特定的时区和日期/时间格式。
 *   使用特定的货币和编号系统。
+
+### 基于 Web 的应用程序本地化
+
+#### 概述
 
 我们知道本地化的主要任务是用本地语言与用户进行交流。这意味着软件必须以本地语言的字符呈现信息，并以本地语言的字符接收信息。
 
@@ -10797,7 +10276,7 @@ PHP 教程 - Herong 的教程示例
 
 在典型的基于 Web 的应用程序中，字符串将从应用程序的一个部分传输到另一个部分。以下是字符串可能经过的一些路径。
 
-#### 从 PHP 文件到 Web 浏览器
+##### 从 PHP 文件到 Web 浏览器
 
 下图说明了字符串从 PHP 文件传输到浏览器屏幕必须经过的步骤。它还显示了在不同步骤中使用的计算技术：
 
@@ -10825,7 +10304,7 @@ A5. HTTP 响应
 A6. 屏幕上的可视字符
 ```
 
-#### 从数据库到 Web 浏览器
+##### 从数据库到 Web 浏览器
 
 下图说明了字符串从数据库表传输到浏览器屏幕必须经过的步骤。它还显示了在不同步骤中使用的计算技术：
 
@@ -10853,7 +10332,7 @@ B5. HTTP 响应
 B6. 屏幕上的可视字符
 ```
 
-#### 从 Web 浏览器到数据库
+##### 从 Web 浏览器到数据库
 
 下图说明了字符串从 Web 浏览器传输到数据库表必须经过的步骤。它还显示了在不同步骤中使用的计算技术：
 
@@ -10926,29 +10405,17 @@ This is a very simple help page...
 
 #### 在 HTML 文档中使用非 ASCII 字符
 
-本章提供了关于 HTML 文档中非 ASCII 字符的教程示例和说明。主题包括在 HTML 文档中使用非 ASCII 字符的基本规则；使用 UTF-8 和 ISO-8859-1 编码的法文字符示例；使用 UTF-8 和 GB2312 编码的中文字符示例。
-
-> HTML 文档中使用非 ASCII 字符的基本规则
->
-> HTML 文档中的法文字符 - UTF-8 编码
->
-> HTML 文档中的法文字符 - ISO-8859-1 编码
->
-> HTML 文档中的中文字符 - UTF-8 编码
->
-> HTML 文档中的中文字符 - GB2312 编码
->
-> HTML 文档中的多语言字符
-
-#### 要点
-
-*   在一个 HTML 文档中只能使用一种编码方案。您应该使用 `<meta>` 标签来指定编码名称。
 
 
+# 本章提供了关于 HTML 文档中非 ASCII 字符的教程示例和说明
 
+主题包括在 HTML 文档中使用非 ASCII 字符的基本规则；使用 UTF-8 和 ISO-8859-1 编码的法文字符示例；使用 UTF-8 和 GB2312 编码的中文字符示例。
 
+## 要点
 
-#### 在 HTML 文档中使用非 ASCII 字符的基本规则
+* 在一个 HTML 文档中只能使用一种编码方案。您应该使用 `<meta>` 标签来指定编码名称。
+
+## 在 HTML 文档中使用非 ASCII 字符的基本规则
 
 本节介绍了在不同步骤中应如何管理非 ASCII 字符串的基本规则，以确保本地化文本字符串可在 HTML 文档中使用，并在浏览器窗口中正确显示。
 
@@ -10990,7 +10457,7 @@ H5. 屏幕上的可视字符
 
 如果在 `<meta>` 标签中未指定字符编码名称，某些浏览器将尝试根据 HTML 文档内容检测编码方案。如果不成功，浏览器将使用默认编码方案。例如，Internet Explorer (IE) 使用 `Western European`（西欧语言）作为默认编码方案。`Western European` 似乎是指 `ISO-8859-1` 标准。
 
-#### HTML 文档中的法文字符 - UTF-8 编码
+## HTML 文档中的法文字符 - UTF-8 编码
 
 本节提供了一个教程示例，说明如何使用 Unicode UTF-8 编码在 HTML 文档中输入和使用法文字符。HTML 文档应包含带有 `charset=utf-8` 的 meta 标签，并以 UTF-8 格式存储。
 
@@ -11056,7 +10523,7 @@ French: L'utilisation de système est très haute.<br/>
 
 UTF-8 标记的十六进制值为 `0xEFBBBF`。Web 服务器会将其发送给客户端。IE 浏览器不会在页面上显示它，但如果需要，它会用它来检测编码方案。不确定其他浏览器对此标记的行为会如何。
 
-#### HTML 文档中的法文字符 - ISO-8859-1 编码
+## HTML 文档中的法文字符 - ISO-8859-1 编码
 
 本节提供了一个教程示例，说明如何使用 Unicode ISO-8859-1 编码在 HTML 文档中输入和使用法文字符。HTML 文档应包含带有 `charset=ISO-8859-1` 的 meta 标签，并以 ANSI 格式存储。
 
@@ -11065,13 +10532,6 @@ UTF-8 标记的十六进制值为 `0xEFBBBF`。Web 服务器会将其发送给�
 1. 在 Windows 系统上，运行 `开始 > 所有程序 > 附件 > 记事本`。
 
 2. 在记事本中，输入以下 HTML 文档：
-
-
-
-
-#### 使用非 ASCII 字符的 HTML 文档
-
-#### 法文字符 - ISO-8859-1 编码
 
 ```html
 <html>
@@ -11105,13 +10565,7 @@ French: L'utilisation de système est très haute.
 
 很简单，对吧？我们可以让它更简单。你可以移除 `HelpIsoFrench.html` 中的 `<meta>` 标签设置。法文字符仍会在 IE 窗口中显示。这是因为 ISO-8859-1 是 IE 的默认编码方案。
 
-PHP Tutorials - Herong's Tutorial Examples
-
-∟Using Non-ASCII Characters in HTML Documents
-
-∟Chinese Characters in HTML Documents - UTF-8 Encoding
-
-#### 中文字符 - UTF-8 编码
+## 中文字符 - UTF-8 编码
 
 本节提供了一个教程示例，说明如何使用 Unicode UTF-8 编码在 HTML 文档中输入和使用中文字符。HTML 文档应包含一个带有 `charset=utf-8` 的 meta 标签，并以 UTF-8 格式存储。
 
@@ -11144,13 +10598,7 @@ PHP Tutorials - Herong's Tutorial Examples
 
 7. 在 IE 窗口中，选择菜单 `View > Encoding`。你应该看到选中了 UTF-8。
 
-PHP Tutorials - Herong's Tutorial Examples
-
-∟Using Non-ASCII Characters in HTML Documents
-
-∟Chinese Characters in HTML Documents - GB2312 Encoding
-
-#### 中文字符 - GB2312 编码
+## 中文字符 - GB2312 编码
 
 本节提供了一个教程示例，说明如何使用 GB2312 编码在 HTML 文档中输入和使用中文字符。HTML 文档应包含一个带有 `charset=GB2312` 的 meta 标签，并以 GB2312 格式存储。
 
@@ -11189,15 +10637,11 @@ PHP Tutorials - Herong's Tutorial Examples
 
 仍然不难做，对吧？关键点是使用兼容 GB2312 的编辑器。
 
-PHP Tutorials - Herong's Tutorial Examples
-
-∟Using Non-ASCII Characters in HTML Documents
-
-∟Characters of Multiple Languages in HTML Documents
-
-#### HTML 文档中的多语言字符
+## HTML 文档中的多语言字符
 
 本节提供了一个教程示例，说明如何使用 Unicode UTF-8 编码在单个 HTML 文档中输入和使用多种语言的字符。
+
+
 
 在完成上述示例后，你应该已经熟悉如何处理任何单一语言的非 ASCII 字符了。你可以选择使用 UTF-8 或特定语言的编码。
 
@@ -11229,16 +10673,13 @@ Chinese: 你好世界!<br/>
 
 5. 将 `HelloUtf8MultiLanguages.html` 复制到 `c:\apache\htdocs`。确保 Internet Information Service 正在运行本地默认网站。
 
+6. 现在运行 Internet Explorer (IE) 并打开 `http://localhost/HelloUtf8MultiLanguages.html`。你应该能看到所有字符都正确显示。
 
+7. 在 IE 窗口中，选择菜单“查看”>“编码”。你应该能看到已选中 UTF-8。
 
+# PHP 教程 - Herong 的教程示例
 
-## 6. 现在运行 Internet Explorer (IE) 并打开 http://localhost/HelloUtf8MultiLanguages.html。你应该能看到所有字符都正确显示。
-
-## 7. 在 IE 窗口中，选择菜单“查看”>“编码”。你应该能看到已选中 UTF-8。
-
-## PHP 教程 - Herong 的教程示例
-
-#### 在 PHP 脚本字符串字面量中使用非 ASCII 字符
+## 在 PHP 脚本字符串字面量中使用非 ASCII 字符
 
 本章提供关于 PHP 脚本中非 ASCII 字符的教程示例和说明。主题包括：在 PHP 脚本中将非 ASCII 字符作为字符串字面量使用的基本规则；使用 UTF-8 和 ISO-8859-1 编码处理法文字符的示例；使用 UTF-8 和 GB2312 编码处理中文字符的示例。
 
@@ -11254,7 +10695,7 @@ Chinese: 你好世界!<br/>
 >
 > 字符串字面量中的多语言字符
 
-#### 要点：
+### 要点：
 
 *   PHP 字符串数据类型被定义为字节序列。
 *   PHP 字符串字面量可以包含几乎任何编码方案下的几乎所有非 ASCII 字符。
@@ -11262,11 +10703,9 @@ Chinese: 你好世界!<br/>
 *   在 PHP 脚本中使用 UTF-8 编码需要一个良好的 UTF-8 兼容编辑器。
 *   PHP 脚本通过 `print()` 函数生成 HTML 文档，这是一个字节流输出函数，默认不提供编码转换。
 
-## PHP 教程 - Herong 的教程示例
+## 在 PHP 脚本字符串字面量中使用非 ASCII 字符
 
-#### 在 PHP 脚本字符串字面量中使用非 ASCII 字符
-
-#### HTML 文档中使用非 ASCII 字符的基本规则
+### HTML 文档中使用非 ASCII 字符的基本规则
 
 本节介绍关于非 ASCII 字符串在不同步骤中应如何管理的基本规则，以确保本地化文本字符串可用于 PHP 脚本字符串字面量，并在浏览器窗口中正确显示。
 
@@ -11300,11 +10739,9 @@ A3. HTML 文档
 
 6.  如果你确实想在 `print()` 函数调用期间将一种编码方案转换为另一种编码方案，可以使用 `mb_output_handler` 作为输出缓冲区上的回调函数：`ob_start("mb_output_handler")`。
 
-## PHP 教程 - Herong 的教程示例
+## 在 PHP 脚本字符串字面量中使用非 ASCII 字符
 
-#### 在 PHP 脚本字符串字面量中使用非 ASCII 字符
-
-#### 字符串字面量中的法文字符 - UTF-8 编码
+### 字符串字面量中的法文字符 - UTF-8 编码
 
 本节提供一个教程示例，说明如何使用 Unicode UTF-8 编码在 PHP 字符串字面量中输入和使用法文字符。PHP 脚本文件应以 UTF-8 格式存储。
 
@@ -11331,13 +10768,13 @@ A3. HTML 文档
 ?>
 ```
 
-3.  要输入法文字符“带重音符号的 e (è)”，可以运行“开始”>“所有程序”>“系统工具”>“字符映射表”。在字符映射表上选择“带重音符号的 e”。点击“选择”按钮，然后点击“复制”按钮。返回记事本并按 Ctrl-V 将“带重音符号的 e”粘贴到你的 PHP 脚本中。
+3.  要输入法文字符“带重音符号的 e (è)”，可以运行“开始”>“所有程序”>“系统工具”>“字符映射表”。在字符映射表上选择“带重音符号的 e”。点击“选择”按钮，然后点击“复制”按钮。返回记事本并按 `Ctrl-V` 将“带重音符号的 e”粘贴到你的 PHP 脚本中。
 
 4.  选择菜单“文件”>“另存为”。输入文件名 `HelpUtf8French.php`。在“编码”字段中选择“UTF-8”，然后点击“保存”按钮。
 
 5.  将 `HelpUtf8French.php` 复制到 `c:\apache\htdocs`。确保你的 Internet 信息服务正在运行本地默认网站。
 
-6.  现在运行 Internet Explorer (IE) 并打开 http://localhost/HelpUtf8French.php。你应该能看到法文字符正确显示，如下所示：
+6.  现在运行 Internet Explorer (IE) 并打开 `http://localhost/HelpUtf8French.php`。你应该能看到法文字符正确显示，如下所示：
 
 ```
 Help
@@ -11349,11 +10786,7 @@ French: L'utilisation de système est très haute.
 
 另一件你应该知道的有趣事情是记事本如何存储 UTF-8 文件。当你使用 UTF-8 编码在记事本中存储文件时，它会在文件开头插入一个 UTF-8 标记（3 字节）。在命令窗口中使用“type”命令，你将看到这一点：
 
-
-
-
-
-#### HTML 文档中的法文字符 - ISO-8859-1 编码
+### HTML 文档中的法文字符 - ISO-8859-1 编码
 
 本节提供了一个教程示例，说明如何使用 ISO-8859-1 编码在 PHP 字符串字面量中输入和使用法文字符。PHP 脚本文件应以 ANSI 格式存储。
 
@@ -11398,7 +10831,7 @@ French: L'utilisation de système est très haute.
 
 很简单，对吧？我们甚至可以让它更简单。您可以移除 `HelpIsoFrench.html` 中的 `<meta>` 标签设置。法文字符仍将在 IE 窗口中显示。这是因为 ISO-8859-1 是 IE 的默认编码方案。
 
-#### 字符串字面量中的中文字符 - UTF-8 编码
+### 字符串字面量中的中文字符 - UTF-8 编码
 
 本节提供了一个教程示例，说明如何使用 Unicode UTF-8 编码在 PHP 字符串字面量中输入和使用中文字符。PHP 脚本文件应以 UTF-8 格式存储。
 
@@ -11434,7 +10867,7 @@ French: L'utilisation de système est très haute.
 
 7. 在 IE 窗口中，选择菜单“查看”>“编码”。您应该会看到选中了 UTF-8。
 
-#### 字符串字面量中的中文字符 - GB2312 编码
+### 字符串字面量中的中文字符 - GB2312 编码
 
 本节提供了一个教程示例，说明如何使用 GB2312 编码在 PHP 字符串字面量中输入和使用中文字符。PHP 脚本文件应以 GB2312 格式存储。
 
@@ -11466,22 +10899,11 @@ French: L'utilisation de système est très haute.
 
 3. 以 GB2312 编码输入中文字符也需要一些中文输入工具。如果您没有任何中文输入工具，可以直接访问我的 GB2312 页面 `https://www.herongyang.com/gb2312_gb/`，打开页面的源代码，复制一些中文字符，然后粘贴到编辑器中。我的 GB2312 页面采用 GB2312 编码。警告，不要从 IE 浏览器窗口复制中文字符。浏览器窗口的复制功能假设为 UTF-8 编码，会损坏复制的字符。
 
-4. 选择菜单“文件”>“另存为”。输入文件名 `HelpGb2312Chinese.php` 并点击“保存”按钮。
 
-5. 将 `HelpGb2312Chinese.php` 复制到 `c:\apache\htdocs`。确保 Internet 信息服务正在运行本地默认网站。
 
-6. 现在使用 `http://localhost/HelpGb2312Chinese.php` 运行 Internet Explorer (IE)。您应该会看到中文字符正确显示。
-
-7. 在 IE 窗口中，选择菜单“查看”>“编码”。您应该会看到选中了 Gb2312。
-
-仍然不难做，对吧？关键点是使用与 GB2312 兼容的编辑器。
-
-#### 字符串字面量中的多语言字符
+### 字符串字面量中的多语言字符
 
 本节提供了一个教程示例，说明如何使用 Unicode UTF-8 编码在单个 PHP 脚本中输入和使用多种语言的字符。
-
-
-
 
 浏览完上述示例后，你现在应该很清楚如何处理任何单一语言的非 ASCII 字符了。你可以选择使用 UTF-8 或特定语言的编码。
 
@@ -11491,7 +10913,7 @@ French: L'utilisation de système est très haute.
 
 2. 在记事本中，输入以下 PHP 脚本：
 
-```
+```php
 <?php
 #### HelpUtf8MultiLanguages.php
 #- Copyright 2009 (c) HerongYang.com. All Rights Reserved.
@@ -11520,34 +10942,13 @@ French: L'utilisation de système est très haute.
 
 7. 在 IE 窗口中，选择“查看”>“编码”菜单。你应该会看到已选中 UTF-8。
 
-PHP 教程 - Herong 的教程示例
+---
 
-∟ 从输入表单接收非 ASCII 字符
+### 从输入表单接收非 ASCII 字符
 
 本章提供关于 Web 表单中非 ASCII 字符的教程示例和说明。主题包括从 Web 输入表单接收非 ASCII 字符的基本规则；使用 `$_REQUEST` 数组接收通过 GET 或 POST 方法提交的非 ASCII 字符的示例；处理以 UTF-8 和 ISO-8859-1 编码提交的非 ASCII 字符的示例。
 
-> 从输入表单接收非 ASCII 字符的基本规则
-
-> 使用 GET 方法接收非 ASCII 字符
-
-> 使用 POST 方法接收非 ASCII 字符
-
-> 以 UTF-8 编码接收非 ASCII 字符
-
-> 解码 HTML 实体
-
-要点：
-
-*   非 ASCII 字符在网页上的记录方式取决于页面的 "charset" 设置。
-*   当输入字符串传输到服务器时，会应用 URL 编码。
-*   PHP CGI 模块在将输入字符串解析到 `$_REQUEST` 时应用 URL 解码。
-*   我的建议是为你的输入页面使用 "charset=utf-8"。无需担心 HTML 实体转换。
-
-PHP 教程 - Herong 的教程示例
-
-∟ 从输入表单接收非 ASCII 字符
-
-∟ 从输入表单接收非 ASCII 字符的基本规则
+#### 从输入表单接收非 ASCII 字符的基本规则
 
 本节介绍在不同步骤中如何管理非 ASCII 字符串的基本规则，以确保本地化文本字符串可以在 HTML 表单中输入，并被处理这些表单的 PHP 脚本正确接收。
 
@@ -11605,18 +11006,11 @@ C6. PHP 内置变量和输入流
 
 在下面的章节中，我将展示一些示例 PHP 脚本来验证这些规则。
 
-PHP 教程 - Herong 的教程示例
-
-∟ 从输入表单接收非 ASCII 字符
-
-∟ 使用 GET 方法接收非 ASCII 字符
+#### 使用 GET 方法接收非 ASCII 字符
 
 本节提供一个教程示例，说明如何在 HTML 表单中输入非 ASCII 字符并使用 GET 方法正确接收它们。HTML 表单使用 iso-8859-1 编码。
 
 我们知道，可以使用两种方法在 HTML 表单中提交输入数据：GET 和 POST。让我们先使用 GET 方法。我编写了以下 PHP 脚本来演示非 ASCII 字符在上一节描述的步骤中是如何被管理的。
-
-
-
 
 ```php
 <?php
@@ -11681,9 +11075,13 @@ PHP 教程 - Herong 的教程示例
 关于此脚本的几点说明：
 
 *   `global` 语句在全局作用域中声明所有变量。我其实并不需要它们位于全局作用域。但此语句也会使这些变量被定义，从而避免运行时出现“未定义变量”错误消息。
+
 *   `import_request_variables()` 是一个很好的方法，可将 `$_GET`、`$_POST` 和 `$_COOKIE` 中的所有输入字符串作为变量引入。这省去了大量类似这样的编码工作：`if (array_key_exists('English',$_GET)) { $r_English = $_GET['English']; } else { $r_English = NULL;}`
+
 *   我在 `<input name=English value='$r_English' ...>` 中使用了单引号 `'` 以防止空白字符破坏标签语法。但我没有对 `'` 做足够的转义处理。我将这留给你来完成。
+
 *   我以二进制模式将所有输入字符串转储到文件中，以便查看我们从 PHP CGI 接口真正获取到了什么。`fopen()` 中使用 `b` 以确保文件以二进制模式打开。`fwrite()` 用于输出二进制数据。在 `fwrite()` 中给出字符串长度，是为了阻止 `magic_quotes_runtime` 去除字符串中的反斜杠。
+
 *   `iso-8859-1` 用作 HTML 文档编码。
 
 现在，将此脚本移至你的 Web 服务器。用 IE 打开 `http://localhost/InputIsoGet.php`。你应该会看到一个简单的 Web 表单。
@@ -11715,25 +11113,29 @@ submit = (Submit)
 
 正如你所见，返回 Web 页面的输入字符串似乎与我在表单上输入的值匹配。但它们实际上完全不匹配。如果你查看页面的源代码，将会看到 HTML 实体编码的字符串是在 HTML 文档中生成的：
 
-```
-<html><meta http-equiv="Content-Type" content="text/html;
- charset=iso-8859-1"/><body>
+
+
+# PHP 教程 - Herong 的教程示例
+
+## 从输入表单接收非 ASCII 字符
+
+### 使用 GET 方法接收非 ASCII 字符
+
+本节提供了一个教程示例，说明如何在 HTML 表单中输入非 ASCII 字符并使用 GET 方法正确接收它们。HTML 表单使用 `iso-8859-1` 编码。
+
+```html
+<html><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/><body>
 <form action=InputIsoGet.php method=get>English ASCII:
  <input name=English value='Hello world!' size=16><br>
 Spanish UTF-8: <input name=Spanish value='¡Hola mundo!' size=16><br>
-Korean UTF-8: <input name=Korean value='&#50668;&#48372;&#49464;
- &#50836; &#49464;&#44228; !&#50668;&#48372;&#49464;&#50836;
- &#49464;&#44228; !' size=16><br>
-Chinese UTF-8: <input name=ChineseUtf8 value='&#20320;&#22909;
- &#19990;&#30028;!' size=16><br>
-Chinese GB2312: <input name=ChineseGb2312 value='????¡'
- size=16><br>
+Korean UTF-8: <input name=Korean value='&#50668;&#48372;&#49464; &#50836; &#49464;&#44228; !&#50668;&#48372;&#49464;&#50836; &#49464;&#44228; !' size=16><br>
+Chinese UTF-8: <input name=ChineseUtf8 value='&#20320;&#22909; &#19990;&#30028;!' size=16><br>
+Chinese GB2312: <input name=ChineseGb2312 value='????¡' size=16><br>
 <input type=submit name=submit value=Submit>
 </form>
 <hr><pre>English = (Hello world!)
 Spanish = (¡Hola mundo!)
-Korean = (&#50668;&#48372;&#49464;&#50836; &#49464;&#44228; !&#50668;
- &#48372;&#49464;&#50836; &#49464;&#44228; !)
+Korean = (&#50668;&#48372;&#49464;&#50836; &#49464;&#44228; !&#50668; &#48372;&#49464;&#50836; &#49464;&#44228; !)
 ChineseUtf8 = (&#20320;&#22909;&#19990;&#30028;!)
 ChineseGb2312 = (????¡)
 submit = (Submit)
@@ -11766,26 +11168,19 @@ submit = (Submit)
 
 例如，作为 Unicode 输入的中文字符被浏览器记录为 `&#20320;`。提交到服务器时，它被 URL 编码为 `%26%2320320%3B`。PHP CGI 模块将其原样记录在 `$_SERVER['QUERY_STRING']` 中。但当 PHP CGI 模块将其复制到 `$_REQUEST` 时，它又被解码回了 `&#20320;`。
 
-PHP 教程 - Herong 的教程示例
-
-∟从输入表单接收非 ASCII 字符
-
-∟使用 POST 方法接收非 ASCII 字符
+### 使用 POST 方法接收非 ASCII 字符
 
 本节提供了一个教程示例，说明如何在 HTML 表单中输入非 ASCII 字符并使用 POST 方法正确接收它们。HTML 表单使用 `iso-8859-1` 编码。
 
 为了测试 POST 方法，我编写了以下脚本 `InputIsoPost.php`：
 
-
-
-
-#### 在 UTF-8 编码中接收非 ASCII 字符
+### 在 UTF-8 编码中接收非 ASCII 字符
 
 本节提供了一个教程示例，演示如何在 HTML 表单中输入非 ASCII 字符，并使用 GET 方法正确接收它们。该 HTML 表单使用 Unicode UTF-8 编码。
 
 在之前的脚本中，输入页面使用的是 `charset=iso-8859-1`。现在让我们尝试使用 `charset=utf-8`。以下是我的示例脚本：
 
-```
+```php
 <?php
 #### InputUtf8Get.php
 #- Copyright 2009 (c) HerongYang.com. All Rights Reserved.
@@ -11882,7 +11277,7 @@ submit = (Submit)
 
 令我惊讶的是，GB2312 字符也被记录为 UTF-8 字节序列。
 
-#### 解码 HTML 实体
+### 解码 HTML 实体
 
 本节提供了一个教程示例，演示如何解码从使用 iso-8859-1 编码的 HTML 表单接收的、包含非 ASCII 字符的 HTML 实体。
 
@@ -11900,29 +11295,25 @@ html_entity_decode(string[, quote_style[, charset]])
 
 为了演示如何使用 `html_entity_decode()`，我修改了 InputIsoGet.php，创建了 InputIsoGetDecoded.php：
 
-
-
-## PHP 教程 - Herong 的教程示例
-
 ## "mbstring" 扩展与非 ASCII 编码管理
 
 本章提供关于 mbstring 扩展库和编码管理的教程示例和说明。主题包括 mbstring 扩展库简介；使用 mbstring 函数的教程示例；使用 `mb_convert_encoding()` 函数；管理 HTTP 输入和输出编码的最佳方式。
 
 > "mbstring" - 多字节字符串扩展
-
+>
 > mb_convert_encoding() 和其他 mbstring 函数
-
+>
 > 使用 "mbstring" 函数的示例
-
+>
 > 管理 HTTP 输入和输出编码
 
-#### 要点
+### 要点
 
 *   "mbstring" 是一个非常有用的扩展，用于处理多字节字符字符串。
 *   "mbstring" 在将字符串转换为不同编码时也很有用。
 *   管理 Web 应用程序编码的最佳方式是将 UTF-8 同时用于页面内容编码和 PHP 脚本内部编码。
 
-#### "mbstring" - 多字节字符串扩展
+### "mbstring" - 多字节字符串扩展
 
 本节介绍 mbstring（多字节字符串）扩展库，旨在帮助您操作采用各种编码方案（如 Unicode UTF-8）编码的非 ASCII 字符字符串。
 
@@ -11952,7 +11343,7 @@ mbstring.detect_order = auto
 *   `mbstring.http_input = pass` 表示接收 HTTP 输入时不进行解码。我喜欢在 PHP 脚本内部自行管理解码。
 *   `mbstring.http_output = pass` 表示生成 HTTP 输出时不进行编码。我喜欢在 PHP 脚本内部自行管理编码。
 
-#### mb_convert_encoding() 和其他 mbstring 函数
+### mb_convert_encoding() 和其他 mbstring 函数
 
 本节介绍 mbstring 扩展库中提供的一些基本函数。`mb_strlen()` 返回字符数。`mb_convert_encoding()` 将字符串转换为新的编码方案。
 
@@ -11968,7 +11359,9 @@ mbstring.detect_order = auto
 *   `mb_output_handler(string contents, int status)` - 输出缓冲区的回调函数。当用作 `ob_start("mb_output_handler")` 时，发送到输出缓冲区的所有字符串将从内部编码转换为 HTTP 输出编码。
 *   `mb_parse_str(string encoded_string[, array &result])` - 解析 URL 编码的字符串，如使用 GET 方法接收到的查询字符串。生成的变量将存储在指定的数组中。如果未指定数组，生成的变量将被提升为全局变量。
 
-#### InputIsoGetDecoded.php 示例
+### InputIsoGetDecoded.php 示例
+
+
 
 ```php
 <?php
@@ -12072,10 +11465,7 @@ submit = (Submit)
 
 第一部分显示您接收到的 HTML 实体编码形式的输入字符串。第二部分显示从 HTML 实体编码解码为 UTF-8 编码后的输入字符串。
 
-
-
-
-#### 使用 "mbstring" 函数的示例
+### 使用 "mbstring" 函数的示例
 
 本节提供了一个使用 `mbstring` 函数的教程示例，包括 `mb_get_info()`、`mb_detect_encoding()`、`mb_strlen()`、`mb_convert_encoding()` 等。
 
@@ -12220,7 +11610,7 @@ String conversion - GB2312 <--> UTF-16:
 *   通过告诉 `mbstring` 正确的编码名称，`mb_strlen()` 工作完美。
 *   编码转换也工作良好。实际上我很惊讶地看到 UTF-8 和 GB2312 之间的转换能正确工作。
 
-#### 管理 HTTP 输入和输出编码
+### 管理 HTTP 输入和输出编码
 
 本节提供了一个教程示例，介绍如何以 3 种不同的方式管理 HTTP 输入和输出编码：使用相同的编码进行输入、输出和内部存储；使用不同的编码并手动管理转换；或使用不同的编码并自动管理转换。
 
@@ -12241,6 +11631,8 @@ mbstring.encoding_translation = Off
 ```
 
 编写脚本时，你必须始终记住你正在处理 UTF-8 编码的字符串。
+
+
 
 如果你希望网页采用 GB2312 编码，同时使用 UTF-8 作为脚本内部编码，并且希望脚本控制 HTTP 输入和输出转换过程，则方法 #2 很有用。以下是 `php.ini` 设置：
 
@@ -12264,12 +11656,9 @@ mbstring.encoding_translation = On
 
 由于方法 #2 比其他方法更具挑战性，我编写了以下脚本为你提供一些思路：
 
+### MbStringHttp.php 示例分析
 
-
-
-#### MbStringHttp.php 示例分析
-
-#### PHP 脚本代码
+### PHP 脚本代码
 
 ```php
 <?php
@@ -12346,7 +11735,7 @@ mbstring.encoding_translation = On
 ?>
 ```
 
-#### 测试输入
+### 测试输入
 
 我用 IE 测试了这个脚本，并输入了以下字符串：
 
@@ -12358,7 +11747,7 @@ Chinese UTF-8: 你好世界!
 Chinese GB2312: ????¡
 ```
 
-#### 返回页面源码分析
+### 返回页面源码分析
 
 返回页面正确显示了输入字符串。但源代码非常有趣：
 
@@ -12386,13 +11775,15 @@ Chinese GB2312: <input name=ChineseGb2312 value='&Ecirc;&Agrave;
 </pre></body></html>
 ```
 
-#### 观察结果
+### 观察结果
 
 *   当网页设置 `charset=gb2312` 时，某些 Unicode 字符会记录为 HTML 命名实体，如 `&iexcl;` 和 `&Ecirc;`。某些 Unicode 字符会记录为 HTML 数字实体，如 `&#50668;` 和 `&#48372;`。
+
 *   当 UTF-8 编码的中文字符被复制到表单中时，它们会被记录为 GB2312 编码。
+
 *   当 GB2312 编码的中文字符被复制到表单中时，它们会被记录为 HTML 命名实体。原因未知。
 
-#### 转储文件内容
+### 转储文件内容
 
 我查看了转储文件 `\\temp\\MbStringHttp.txt`：
 
@@ -12424,13 +11815,13 @@ ChineseGb2312 = (&Ecirc;&Agrave;&frac12;&ccedil;&Auml;&atilde;&ordm;
 submit = (Submit)
 ```
 
-#### 结论
+### 结论
 
 如果输入字符串被 Web 浏览器记录为 GB2312，我的脚本正确处理了 HTTP 输入和输出编码。对于记录为 HTML 实体的其他字符，你需要通过告诉用户正确输入数据来避免它们。
 
 ---
 
-#### 使用 MySQL 服务器管理非 ASCII 字符串
+### 使用 MySQL 服务器管理非 ASCII 字符串
 
 本章提供了关于使用 MySQL 服务器处理非 ASCII 字符的教程示例和说明。主题包括使用各种字符集编码在 MySQL 数据库中存储非 ASCII 字符；在向数据库插入数据和从数据库检索数据时管理编码转换；使用 UTF-8 编码的示例。
 
@@ -12445,22 +11836,22 @@ submit = (Submit)
 #### 核心要点
 
 *   MySQL 对非 ASCII 字符提供良好的支持。它提供多种编码（字符集）。
+
 *   MySQL 允许我们在数据库、表或列级别指定编码。
+
 *   MySQL 允许我们控制接收 SQL 语句和返回查询结果时的编码转换。
+
 *   我的建议是对所有文本信息使用 UTF-8，关闭 MySQL 在接收 SQL 语句和返回查询结果时的编码转换，让 PHP 脚本处理 UTF-8 字符串。
 
 ---
 
-# 存储非 ASCII 字符到数据库
+## 存储非 ASCII 字符到数据库
 
 本节介绍如何使用在列、表或数据库级别设置的不同字符集设置，在 MySQL 数据库中存储非 ASCII 字符。
 
 MySQL 可以用多种编码在数据库中存储非 ASCII 字符，MySQL 称它们为字符集：
 
-
-
-
-# 字符集与 MySQL 非 ASCII 字符传输
+### 字符集与 MySQL 非 ASCII 字符传输
 
 #### 字符集列表
 
@@ -12512,9 +11903,13 @@ CREATE TABLE tbl_name (col_name CHAR(80) CHARACTER SET utf8, ...)
 ```
 
 *   若在**数据库层级**指定字符集，则应用于该数据库中所有表的所有 `CHAR`、`VARCHAR` 和 `TEXT` 列。
+
 *   若在**表层级**指定字符集，则应用于该表中所有 `CHAR`、`VARCHAR` 和 `TEXT` 列。
+
 *   若在**列层级**指定字符集，则仅应用于该列。
+
 *   建表语句中指定的列长度按字符级别计算，而非编码字节级别。
+
 *   若在 `CHAR(n)` 列上使用 `utf8`，该列将需要 `3*n` 字节的存储空间。
 
 #### 传输非 ASCII 字符
@@ -12538,28 +11933,32 @@ MySQL 提供以下全局变量控制客户端（PHP 脚本）与服务端（MySQ
 可使用两个特殊的 `SET` 命令更改这些变量：
 
 1.  `SET NAMES 'x'` 等同于以下三条语句：
+
     ```
     SET character_set_client = x;
     SET character_set_results = x;
     SET character_set_connection = x;
     ```
 
-2.  `SET CHARACTER SET x` 等同于以下三条语句：
-    ```
-    SET character_set_client = x;
-    SET character_set_results = x;
-    SET collation_connection = @@collation_database;
-    ```
+
+
+## `SET CHARACTER SET x` 等同于以下三条语句
+
+```
+SET character_set_client = x;
+SET character_set_results = x;
+SET collation_connection = @@collation_database;
+```
 
 始终可使用 `SHOW VARIABLES LIKE 'variable_name'` 查看给定变量的当前值。
 
-#### MySqlUnicode.php - MySQL Unicode UTF-8 编码示例
+### MySqlUnicode.php - MySQL Unicode UTF-8 编码示例
 
 本节提供教程示例，演示如何以 Unicode UTF-8 编码向 MySQL 数据库服务器发送和接收非 ASCII 字符串。
 
 以下是演示如何将 UTF-8 字符串发送到 MySQL 服务器并以 UTF-8 编码存储的示例脚本 `MySqlUnicode.php`：
 
-```
+```php
 <?php
 #### MySqlUnicode.php
 #- Copyright 2009 (c) HerongYang.com. All Rights Reserved.
@@ -12642,8 +12041,6 @@ Query some rows from the table...
     3   S+ásÑ+!=(\xe4bda0e5a5bd21)
 ```
 
-
-
 # MySQL 按预期工作，SQL 语句无需转换，以 UTF-8 存储字符串，且查询结果无需转换。
 
 ## PHP 教程 - Herong 的教程示例
@@ -12671,7 +12068,7 @@ Query some rows from the table...
 #### 要点
 
 *   DOM 扩展可用于解析和管理 HTML 文档。
-*   `DOMDocument` 类将 HTML 文档表示为一个 "DOMNode" 对象树。
+*   `DOMDocument` 类将 HTML 文档表示为一个 `DOMNode` 对象树。
 *   `$doc->loadHTML($html)` 将 HTML 文档字符串解析为 `DOMDocument` 对象。
 *   `$doc->saveHTML()` 将 `DOMDocument` 对象转储为 HTML 文档字符串。
 *   `sudo dnf install php-xml` 在 CentOS 系统上安装 DOM 扩展。
@@ -12785,6 +12182,8 @@ function printNode($node, $prefix) {
 
 现在在 HTML 文档文件上运行该 PHP 脚本。您应该会看到以下输出。
 
+
+
 ```
 herong> php Traverses-HTML-DOM-Tree.php XHTML-Example.html
 
@@ -12848,10 +12247,7 @@ herong> php Traverses-HTML-DOM-Tree.php XHTML-Example.html
 
 该输出让我们清楚地了解了 HTML 文档是如何表示为 `DOMNode` 对象树的。
 
-#### 构建新的 HTML 文档
-
-
-
+## 构建新的 HTML 文档
 
 本节提供了一个教程示例，介绍如何使用 DOM 扩展提供的方法创建 HTML 文档。
 
@@ -12986,7 +12382,7 @@ function printNode($node, $prefix) {
 ?>
 ```
 
-#### 测试 1 - 不使用 LIBXML_NOBLANKS 运行脚本以查看所有空白节点：
+### 测试 1 - 不使用 LIBXML_NOBLANKS 运行脚本以查看所有空白节点：
 
 ```
 herong> php Load-HTML-with-NOBLANKS.php Hello-Formatted.html default
@@ -13040,7 +12436,7 @@ herong> php Load-HTML-with-NOBLANKS.php Hello-Formatted.html default
 
 从输出中可以看出，`loadHTML()` 的默认行为会将所有空白字符作为 `#text` 节点保留下来。
 
-#### 测试 2 - 使用 LIBXML_NOBLANKS 运行脚本以查看移除了哪些空白节点。
+### 测试 2 - 使用 LIBXML_NOBLANKS 运行脚本以查看移除了哪些空白节点。
 
 ```
 herong> php Load-HTML-with-NOBLANKS.php Hello-Formatted.html noblanks
@@ -13080,7 +12476,7 @@ herong> php Load-HTML-with-NOBLANKS.php Hello-Formatted.html noblanks
 输出显示了一些令我惊讶的结果：
 
 *   `LIBXML_NOBLANKS` 选项移除 `<head>` 内部标签之间的空白节点。例如 `<head>` 和 `<title>` 之间的空格和换行作为空白节点被移除。
-*   `LIBXML_NOBLANKS` 选项**不**移除 `<body>` 内部标签之间的任何空白节点。例如 `<head>` 和 `<title>` 之间的空格和换行作为空白节点被移除。
+*   `LIBXML_NOBLANKS` 选项**不**移除 `<body>` 内部标签之间的任何空白节点。例如 `<body>` 和 `<p>` 之间的空格和换行作为空白节点被保留。
 
 我认为 `LIBXML_NOBLANKS` 选项试图保留 `<body>` 内部的空白字符，因为它们在 HTML 文档中确实有含义。这与 XML 文档不同。
 
@@ -13095,7 +12491,6 @@ PHP 教程 - Herong 的教程示例
 如果你遵循 XML 语法规则编写 HTML 文档，则可以编写一个 PHP 脚本来移除 `<head>` 和 `<body>` 元素中的空白字符。
 
 这是我的版本，`Remove-Whitespaces-in-HTML.php`；
-
 
 
 
@@ -13188,11 +12583,11 @@ herong$> php Remove-Whitespaces-in-HTML.php Hello-Formatted.html
 
 因此，请勿在任何真实的 HTML 文档上使用此脚本。
 
-PHP Tutorials - Herong's Tutorial Examples
+# PHP Tutorials - Herong's Tutorial Examples
 
-∟ Parsing and Managing HTML Documents
+## Parsing and Managing HTML Documents
 
-∟ HTML 文档中的 DOCTYPE 元素
+### HTML 文档中的 DOCTYPE 元素
 
 本节简要介绍 HTML 文档中的 DOCTYPE 元素。
 
@@ -13252,11 +12647,11 @@ herong$> php Remove-Whitespaces-in-HTML.php Hello-Formatted.html
 <p>Hello World!</p></body></html>
 ```
 
-PHP Tutorials - Herong's Tutorial Examples
+# PHP Tutorials - Herong's Tutorial Examples
 
-∟ Parsing and Managing HTML Documents
+## Parsing and Managing HTML Documents
 
-∟ 移除 HTML 文档中的虚拟元素
+### 移除 HTML 文档中的虚拟元素
 
 本节提供了一个教程示例，说明如何移除 HTML 文档中的虚拟元素，包括空元素、仅包含空白字符的元素以及冗余空白字符。
 
@@ -13270,10 +12665,6 @@ PHP Tutorials - Herong's Tutorial Examples
 6.  用于垂直间距的其他特殊元素，如 `<div><br></div>`。
 
 这是我的 PHP 脚本 `Remove-Dummy-Elements-in-HTML.php`，用于移除 HTML 文档中的虚拟元素。它还会折叠非 `<pre>` 元素中的空白字符。
-
-
-
-
 
 #### PHP 脚本：移除 HTML 中的虚拟元素
 
@@ -13423,6 +12814,8 @@ function removeDummies($node) {
 
 #### 移除虚拟元素后的输出
 
+
+
 ```
 herong> php Remove-Dummy-Elements-in-HTML.php With-Dummies.html
 
@@ -13454,9 +12847,9 @@ Removing dummies and whitespaces: 3
 
 # PHP 教程 - Herong's Tutorial Examples
 
-### 解析和管理 HTML 文档
+## 解析和管理 HTML 文档
 
-#### 在 CentOS 上安装 DOM 扩展
+### 在 CentOS 上安装 DOM 扩展
 
 本节提供了一个教程示例，说明如何在 CentOS 系统上安装 PHP DOM 扩展。
 
@@ -13506,15 +12899,15 @@ Removing dummies and whitespaces: 3
 
 本章提供了关于发送邮件的教程示例和说明。主题包括设置 Windows IIS 作为 SMTP 邮件服务器、配置 PHP 使用 `mail()` 函数、`sendmail` 程序或 SMTP/SMTPS 协议，以及编写 PHP 脚本使用 PHPMailer 包发送邮件。
 
-> *   使用本地 Windows 系统作为邮件服务器
-> *   从 PHP 脚本发送邮件
-> *   在 Linux 系统上发送邮件
-> *   在 CentOS 系统上安装 PHPMailer
-> *   使用 PHPMailer 发送本地邮件
-> *   使用 PHPMailer 发送远程邮件
-> *   使用 PHPMailer 配合 SMTPS 协议
-> *   PHP 5.6 和 PHPMailer 5.2
-> *   从源代码安装 PHPMailer
+*   使用本地 Windows 系统作为邮件服务器
+*   从 PHP 脚本发送邮件
+*   在 Linux 系统上发送邮件
+*   在 CentOS 系统上安装 PHPMailer
+*   使用 PHPMailer 发送本地邮件
+*   使用 PHPMailer 发送远程邮件
+*   使用 PHPMailer 配合 SMTPS 协议
+*   PHP 5.6 和 PHPMailer 5.2
+*   从源代码安装 PHPMailer
 
 #### 要点总结
 
@@ -13529,16 +12922,13 @@ Removing dummies and whitespaces: 3
 
 ## 配置和发送邮件
 
-#### 使用本地 Windows 系统作为邮件服务器
+### 使用本地 Windows 系统作为邮件服务器
 
 本节提供了一个教程示例，说明如何设置本地 Windows 系统以使用 IIS (Internet Information Services) 作为 SMTP 邮件服务器。
 
 PHP 为我们提供了一个很好的内置函数 `mail()`，允许我们通过互联网发送邮件。但它需要一个 SMTP 邮件服务器供 `mail()` 函数通信。
 
-
-
-
-#### 从 PHP 脚本发送电子邮件
+### 从 PHP 脚本发送电子邮件
 
 如果你没有提供 SMTP 邮件服务的服务提供商，你可以将本地系统设置为 SMTP 邮件服务器来测试 `mail()`。
 
@@ -13546,23 +12936,23 @@ PHP 为我们提供了一个很好的内置函数 `mail()`，允许我们通过�
 
 如果你运行的是 Windows 系统，设置邮件服务器会稍微难一些。但如果你的系统上运行着 IIS（Internet Information Services，互联网信息服务），它也提供 SMTP 服务。以下是检查方法：
 
-1. 进入控制面板 / 服务，确保简单邮件传输协议 (SMTP) 正在运行。
-2. 打开命令窗口，并运行以下命令：
+1.  进入控制面板 / 服务，确保简单邮件传输协议 (SMTP) 正在运行。
+2.  打开命令窗口，并运行以下命令：
 
-```
->telnet localhost 25
+    ```
+    >telnet localhost 25
 
-220 localhost Microsoft ESMTP MAIL Service, Version: 6.0.2600.1106...
-help
-214-This server supports the following commands:
-214 HELO EHLO STARTTLS RCPT DATA RSET MAIL QUIT HELP AUTH BDAT VRFY
-quit
-221 2.0.0 localhost Service closing transmission channel
-```
+    220 localhost Microsoft ESMTP MAIL Service, Version: 6.0.2600.1106...
+    help
+    214-This server supports the following commands:
+    214 HELO EHLO STARTTLS RCPT DATA RSET MAIL QUIT HELP AUTH BDAT VRFY
+    quit
+    221 2.0.0 localhost Service closing transmission channel
+    ```
 
-如果你得到了类似上述的输出，说明你的 IIS 作为 SMTP 邮件服务器运行正常。
+    如果你得到了类似上述的输出，说明你的 IIS 作为 SMTP 邮件服务器运行正常。
 
-#### 配置 PHP 并发送测试邮件
+### 配置 PHP 并发送测试邮件
 
 一旦我们有了可用的 SMTP 邮件服务器，就可以尝试从 PHP 脚本发送电子邮件了。
 
@@ -13607,92 +12997,92 @@ This is a test.
 
 如果你能跟随我走到这里，说明你已成功使用 PHP 引擎从 PHP 示例脚本发送了一封电子邮件。
 
-#### 在 Linux 系统上发送电子邮件
+### 在 Linux 系统上发送电子邮件
 
 本节提供了一个教程示例，说明如何使用 `mail()` 函数将电子邮件发送到本地 SMTP 邮件服务器。
 
 如果你使用的是 Linux 系统，也可以按照本教程所示从 PHP 脚本发送电子邮件。
 
-1. 确保 `sendmail` 命令工作正常：
+1.  确保 `sendmail` 命令工作正常：
 
-```
-herong$ which sendmail
-/usr/sbin/sendmail
+    ```
+    herong$ which sendmail
+    /usr/sbin/sendmail
 
-herong$ sendmail -r "herong@localhost" joe@localhost
-Subject: Last Test
+    herong$ sendmail -r "herong@localhost" joe@localhost
+    Subject: Last Test
 
-Hi Joe, This is the last test. Bye!
-.
+    Hi Joe, This is the last test. Bye!
+    .
 
-jeo$ mailx ~/Maildir
-& $
-Message 334:
-From herong@localhost Sat Jun 11 14:13:01 2021
-Return-Path: <herong@localhost>
-X-Original-To: joe@localhost
-Delivered-To: jeo@localhost
-Subject: Last Test
-Date: Sat, 12 Jun 2021 14:13:00 +0800 (CST)
-From: Herong Yang <herong@localhost>
-Status: RO
+    jeo$ mailx ~/Maildir
+    & $
+    Message 334:
+    From herong@localhost Sat Jun 11 14:13:01 2021
+    Return-Path: <herong@localhost>
+    X-Original-To: joe@localhost
+    Delivered-To: jeo@localhost
+    Subject: Last Test
+    Date: Sat, 12 Jun 2021 14:13:00 +0800 (CST)
+    From: Herong Yang <herong@localhost>
+    Status: RO
 
-Hi Joe, This is the last test. Bye!
-```
+    Hi Joe, This is the last test. Bye!
+    ```
 
-2. 检查 `sendmail` 日志文件：
+2.  检查 `sendmail` 日志文件：
 
-```
-herong$ sudo grep joe /var/log/maillog
-Jun 12 14:04:43 mail postfix/local[697852]: ...: to=<joe@localhost>,
-relay=local, delay=23, delays=23/0.01/0/0.07, dsn=2.0.0,
-status=sent (delivered to maildir)
-```
+    ```
+    herong$ sudo grep joe /var/log/maillog
+    Jun 12 14:04:43 mail postfix/local[697852]: ...: to=<joe@localhost>,
+    relay=local, delay=23, delays=23/0.01/0/0.07, dsn=2.0.0,
+    status=sent (delivered to maildir)
+    ```
 
-3. 编写 PHP 脚本以使用内置的 `mail()` 函数。
+3.  编写 PHP 脚本以使用内置的 `mail()` 函数。
 
-```
-<?php
-#### Mail-Test-2.php
-#- Copyright 2009 (c) HerongYang.com. All Rights Reserved.
+    ```
+    <?php
+    #### Mail-Test-2.php
+    #- Copyright 2009 (c) HerongYang.com. All Rights Reserved.
 
-echo 'SMTP = ' . ini_get('SMTP') . "\n";
-echo 'smtp_port = ' . ini_get('smtp_port') . "\n";
-echo 'sendmail_from = ' . ini_get('sendmail_from') . "\n";
-echo 'post_max_size = ' . ini_get('post_max_size') . "\n";
-echo 'sendmail_path = ' . ini_get('sendmail_path') . "\n";
+    echo 'SMTP = ' . ini_get('SMTP') . "\n";
+    echo 'smtp_port = ' . ini_get('smtp_port') . "\n";
+    echo 'sendmail_from = ' . ini_get('sendmail_from') . "\n";
+    echo 'post_max_size = ' . ini_get('post_max_size') . "\n";
+    echo 'sendmail_path = ' . ini_get('sendmail_path') . "\n";
 
-$to = "doe@localhost";
-$subject = "Testing";
-$message = "This is a test.";
-$headers = "From: herong@localhost";
-mail($to, $subject, $message, $headers);
-?>
-```
+    $to = "doe@localhost";
+    $subject = "Testing";
+    $message = "This is a test.";
+    $headers = "From: herong@localhost";
+    mail($to, $subject, $message, $headers);
+    ?>
+    ```
 
-4. 运行上述 PHP 脚本，你应该会看到以下输出：
+4.  运行上述 PHP 脚本，你应该会看到以下输出：
 
-```
-herong$ php Mail-Test-2.php
+    ```
+    herong$ php Mail-Test-2.php
 
-SMTP = localhost
-smtp_port = 25
-sendmail_from =
-post_max_size = 10M
-sendmail_path = /usr/sbin/sendmail -t -i
-```
+    SMTP = localhost
+    smtp_port = 25
+    sendmail_from =
+    post_max_size = 10M
+    sendmail_path = /usr/sbin/sendmail -t -i
+    ```
 
-5. 检查 `sendmail` 日志文件：
+5.  检查 `sendmail` 日志文件：
 
-```
-herong$ sudo grep joe /var/log/maillog
+    ```
+    herong$ sudo grep joe /var/log/maillog
 
-Jun 11 17:26:16 mail postfix/local[703828]: ***: to=<doe@localhost>,
-relay=local, delay=0.12, delays=0.08/0/0/0.04, dsn=2.0.0,
-status=sent (delivered to maildir)
-```
+    Jun 11 17:26:16 mail postfix/local[703828]: ***: to=<doe@localhost>,
+    relay=local, delay=0.12, delays=0.08/0/0/0.04, dsn=2.0.0,
+    status=sent (delivered to maildir)
+    ```
 
-#### 在 CentOS 系统上安装 PHPMailer
+### 在 CentOS 系统上安装 PHPMailer
 
 本节提供了一个教程示例，说明如何在 CentOS 系统上安装 PHPMailer。
 
@@ -13702,83 +13092,85 @@ status=sent (delivered to maildir)
 
 PHPMailer 具有以下功能：
 
-* 集成 SMTP 支持 – 无需本地邮件服务器即可发送
-* 支持多个收件人、抄送、密送和回复地址
-* 添加附件，包括内联附件
-* 支持 UTF-8 内容以及 8bit、base64、binary 和 quoted-printable 编码
-* 通过 SMTPS 和 SMTP+STARTTLS 传输支持 LOGIN、PLAIN、CRAM-MD5 和 XOAUTH2 机制的 SMTP 认证
-* 自动验证电子邮件地址
-* 防止标题注入攻击
-* 提供 50 多种语言的错误消息！
-* 支持 DKIM 和 S/MIME 签名
+*   集成 SMTP 支持 – 无需本地邮件服务器即可发送
+*   支持多个收件人、抄送、密送和回复地址
+*   添加附件，包括内联附件
+*   支持 UTF-8 内容以及 8bit、base64、binary 和 quoted-printable 编码
+*   通过 SMTPS 和 SMTP+STARTTLS 传输支持 LOGIN、PLAIN、CRAM-MD5 和 XOAUTH2 机制的 SMTP 认证
+*   自动验证电子邮件地址
+*   防止标题注入攻击
+*   提供 50 多种语言的错误消息！
+*   支持 DKIM 和 S/MIME 签名
 
 以下是在我的 CentOS 8 计算机上安装 PHPMailer 的步骤。
 
-1. 确保已安装 PHP Composer：
+1.  确保已安装 PHP Composer：
 
+    ```
+    herong$ /usr/local/bin/composer --version
+      Composer version 2.1.3 2021-06-09 16:31:20
+    ```
+
+2.  使用 `composer require` 命令安装 PHPMailer：
+
+    ```
+    herong$ /usr/local/bin/composer require phpmailer/phpmailer
+    Using version ⁶.4 for phpmailer/phpmailer
+    ./composer.json has been created
+    Running composer update phpmailer/phpmailer
+    Loading composer repositories with package information
+    Updating dependencies
+    Lock file operations: 1 install, 0 updates, 0 removals
+      - Locking phpmailer/phpmailer (v6.4.1)
+    Writing lock file
+    Installing dependencies from lock file (including require-dev)
+    Package operations: 1 install, 0 updates, 0 removals
+      - Downloading phpmailer/phpmailer (v6.4.1)
+      - Installing phpmailer/phpmailer (v6.4.1): Extracting archive
+    ```
+
+3.  查找 PHPMailer 类目录：
+
+    ```
+    herong$ /usr/local/bin/composer show phpmailer/phpmailer
+      name     : phpmailer/phpmailer
+      descrip. : PHPMailer is a full-featured email creation and transfer
+                 class for PHP
+      keywords :
+      versions : * v6.4.1
+      path     : /home/herong/local/php/vendor/phpmailer/phpmailer
+      names    : phpmailer/phpmailer
+    ```
+
+4.  编写 PHP 脚本以测试 PHPMailer 类：
+
+    ```
+    herong$ vi PHPMail-Test.php
+
+    <?php
+    #### PHPMailer-Test.php
+    #- Copyright 2019 (c) HerongYang.com. All Rights Reserved.
+
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
+    use PHPMailer\PHPMailer\Exception;
+
+    $srcDir = "/home/herong/local/php/vendor/phpmailer/phpmailer/src/";
+    require "$srcDir/PHPMailer.php";
+    require "$srcDir/SMTP.php";
+    require "$srcDir/Exception.php";
+
+    $mail = new PHPMailer(true);
+
+    herong$ php PHPMail-Test.php
+    ?>
 ```
-herong$ /usr/local/bin/composer --version
-  Composer version 2.1.3 2021-06-09 16:31:20
-```
 
-2. 使用 `composer require` 命令安装 PHPMailer：
 
-```
-herong$ /usr/local/bin/composer require phpmailer/phpmailer
-Using version ⁶.4 for phpmailer/phpmailer
-./composer.json has been created
-Running composer update phpmailer/phpmailer
-Loading composer repositories with package information
-Updating dependencies
-Lock file operations: 1 install, 0 updates, 0 removals
-  - Locking phpmailer/phpmailer (v6.4.1)
-Writing lock file
-Installing dependencies from lock file (including require-dev)
-Package operations: 1 install, 0 updates, 0 removals
-  - Downloading phpmailer/phpmailer (v6.4.1)
-  - Installing phpmailer/phpmailer (v6.4.1): Extracting archive
-```
-
-3. 查找 PHPMailer 类目录：
-
-```
-herong$ /usr/local/bin/composer show phpmailer/phpmailer
-  name     : phpmailer/phpmailer
-  descrip. : PHPMailer is a full-featured email creation and transfer
-             class for PHP
-  keywords :
-  versions : * v6.4.1
-  path     : /home/herong/local/php/vendor/phpmailer/phpmailer
-  names    : phpmailer/phpmailer
-```
-
-4. 编写 PHP 脚本以测试 PHPMailer 类：
-
-```
-herong$ vi PHPMail-Test.php
-
-<?php
-#### PHPMailer-Test.php
-#- Copyright 2019 (c) HerongYang.com. All Rights Reserved.
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
-
-$srcDir = "/home/herong/local/php/vendor/phpmailer/phpmailer/src/";
-require "$srcDir/PHPMailer.php";
-require "$srcDir/SMTP.php";
-require "$srcDir/Exception.php";
-
-$mail = new PHPMailer(true);
-
-herong$ php PHPMail-Test.php
-?>
-```
 
 我从 `PHPMailer-Test.php` 的执行中未看到错误消息，因此 PHPMailer 已在我 CentOS 计算机上正确安装。
 
-#### 使用 PHPMailer 发送本地邮件
+## 使用 PHPMailer 发送本地邮件
 
 本节提供了一个教程示例，说明如何使用 `mail()` 函数和 `sendmail` 程序通过 PHPMailer 发送本地邮件。
 
@@ -13786,14 +13178,10 @@ PHPMailer 支持 3 种将邮件投递给收件人的选项：
 
 * `$mail->isMail()` - 调用此方法可使用 PHP 内置的 `mail()` 函数将邮件投递到本地主机。这是默认选项。
 
+### PHPMailer 本地发送邮件选项
 
-
-
-
-#### PHPMailer 本地发送邮件选项
-
-*   `$mail->isSendmail()` - 调用此方法可使用 `$mail->$sendmail` 变量指定路径中的 `sendmail` 程序发送邮件。
-*   `$mail->isSMTP()` - 调用此方法可使用 `STMP` 协议将邮件发送到 `$mail->$host` 变量指定的远程服务器（默认为本地主机）。
+* `$mail->isSendmail()` - 调用此方法可使用 `$mail->sendmail` 变量指定路径中的 `sendmail` 程序发送邮件。
+* `$mail->isSMTP()` - 调用此方法可使用 `SMTP` 协议将邮件发送到 `$mail->host` 变量指定的远程服务器（默认为本地主机）。
 
 以下是用于测试前两个选项的 PHP 脚本。
 
@@ -13818,7 +13206,7 @@ if ($argv[1]=="mail") {
   $mail->isMail();
 } else if ($argv[1]=="sendmail") {
   $mail->isSendmail();
-  $mail->$sendmail = "/usr/sbin/sendmail";
+  $mail->sendmail = "/usr/sbin/sendmail";
 } else {
   # default option
 }
@@ -13892,15 +13280,9 @@ herong$ php PHPMailer-Send-Email-Locally.php default
 
 请注意，PHPMailer 仅接受完整的电子邮件地址（如 `joe@herongyang.com`）。它会拒绝简短地址，如 `joe` 或 `joe@localhost`。
 
-PHP 教程 - Herong 的教程示例
+## 使用 PHPMailer 发送远程邮件
 
-∟配置和发送电子邮件
-
-∟使用 PHPMailer 发送远程邮件
-
-#### 使用 PHPMailer 发送远程邮件
-
-本节提供了一个教程示例，介绍如何使用 PHPMailer 通过 STMP 协议发送远程邮件。
+本节提供了一个教程示例，介绍如何使用 PHPMailer 通过 SMTP 协议发送远程邮件。
 
 如果您的本地主机上没有运行邮件服务器，可以使用 PHPMailer 的 `isSMTP()` 选项，通过 SMTP 协议将邮件发送到远程邮件服务器。
 
@@ -13991,17 +13373,11 @@ try {
 ...	Connection: closed
 ```
 
-PHP 教程 - Herong 的教程示例
+## 使用 PHPMailer 配合 SMTPS 协议
 
-∟配置和发送电子邮件
+本节提供了一个教程示例，介绍如何使用 PHPMailer 通过 SMTPS (SMTP Secure) 协议发送远程邮件。
 
-∟配合 PHPMailer 使用 SMTPS 协议
-
-#### 使用 PHPMailer 配合 SMTPS 协议
-
-本节提供了一个教程示例，介绍如何使用 PHPMailer 通过 STMPS (SMTP Secure) 协议发送远程邮件。
-
-如果您的远程邮件服务器使用 STMPS 协议，您需要在 PHPMailer 实例上添加更多设置。
+如果您的远程邮件服务器使用 SMTPS 协议，您需要在 PHPMailer 实例上添加更多设置。
 
 例如，您的远程邮件服务提供商提供了以下访问信息：
 
@@ -14016,20 +13392,20 @@ Password: TopScret
 
 然后您可以使用以下 PHP 脚本发送邮件。
 
-
-
-
-
-#### PHPMailer 发送邮件教程
-
-#### PHPMailer 使用 SMTPS 协议发送邮件
+### PHPMailer 使用 SMTPS 协议发送邮件
 
 以下是使用 PHPMailer 通过 SMTPS 协议发送邮件的 PHP 脚本示例：
 
+
+
+# PHPMailer 发送邮件教程
+
+## PHPMailer-Send-Email-SMTPS.php
+
 ```php
 <?php
-#### PHPMailer-Send-Email-SMTPS.php
-#- Copyright 2019 (c) HerongYang.com. All Rights Reserved.
+// PHPMailer-Send-Email-SMTPS.php
+// Copyright 2019 (c) HerongYang.com. All Rights Reserved.
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -14057,10 +13433,10 @@ try {
    $mail->Body = 'There is a test message from PHPMailer.';
    $mail->send();
 } catch (Exception $e) {
-   # PHPMailer exceptions
+   // PHPMailer exceptions
    echo $e->errorMessage();
 } catch (\Exception $e) {
-   # PHP exceptions
+   // PHP exceptions
    echo $e->getMessage();
 }
 ?>
@@ -14113,7 +13489,7 @@ heronng$ php PHPMailer-Send-Email-SMTPS.php
 ...	Connection: closed
 ```
 
-#### 常见错误：证书验证失败
+## 常见错误：证书验证失败
 
 有时可能会遇到以下错误信息。该错误提示远程主机的证书未能通过验证，可能是使用了自签名证书，需要手动导入到本地计算机。
 
@@ -14134,20 +13510,20 @@ heronng$ php PHPMailer-Send-Email-SMTPS.php
       certificate verify failed...
 ... SMTP Error: Could not connect to SMTP host.
 ... CLIENT -> SERVER: QUIT
-... SMTP INBOUND: "...??????\4O...
+... SMTP INBOUND: "...??????\4O..."
 ... SERVER -> CLIENT: ????B??dU??S9Ly...
 ... SMTP ERROR: QUIT command failed: ????B??dU??S9Ly...
 ... Connection: closed
 ... SMTP Error: Could not connect to SMTP host.
 ```
 
-## PHP 5.6 与 PHPMailer 5.2
+# PHP 5.6 与 PHPMailer 5.2
 
 本节提供教程示例，说明如何在 CentOS 8 上为 PHP 5.6 安装 PHPMailer 5.2，以便发送邮件到远程 SMTPS 服务器。
 
 如果你因某些原因仍在使用 PHP 5.6 引擎，可以使用 PHPMailer 5.2 发送邮件。以下是在 CentOS 8 计算机上的操作步骤：
 
-#### 1. 检查 PHP 版本
+### 1. 检查 PHP 版本
 
 ```
 herong$ php -version
@@ -14156,7 +13532,7 @@ PHP 5.6.40 (cli) (built: May 12 2020 15:27:05)
 Copyright (c) 1997-2016 The PHP Group
 ```
 
-#### 2. 安装 Remi 的 RPM 仓库
+### 2. 安装 Remi 的 RPM 仓库
 
 PHPMailer 包托管在 Remi 的 RPM 仓库中。
 
@@ -14166,7 +13542,7 @@ herong$ wget $url/remi-release-8.3-1.el8.remi.noarch.rpm
 herong$ sudo rpm -Uvh remi-release-8.3-1.el8.remi.noarch.rpm
 ```
 
-#### 3. 从 Remi 仓库安装 php-PHPMailer
+### 3. 从 Remi 仓库安装 php-PHPMailer
 
 ```
 herong$ sudo dnf --enablerepo=remi install php-PHPMailer
@@ -14178,7 +13554,7 @@ Installed:
   php-mbstring-7.2.24-1.module_el8.2.0+313+b04d0a66.x86_64
 ```
 
-#### 4. 查找 php-PHPMailer 安装路径
+### 4. 查找 php-PHPMailer 安装路径
 
 ```
 herong$ sudo find / -name PHPMailer
@@ -14193,20 +13569,20 @@ herong$ sudo ls -l /usr/share/php/PHPMailer
 -rw-r--r-- 1   1216 Mar 26 17:43 PHPMailerAutoload.php
 ```
 
-#### 5. 运行测试脚本
+### 5. 运行测试脚本
 
 以下 PHP 脚本用于测试，运行成功！
 
 ```php
 <?php
-#### PHPMailer-PHP-5.php
-#- Copyright 2019 (c) HerongYang.com. All Rights Reserved.
+// PHPMailer-PHP-5.php
+// Copyright 2019 (c) HerongYang.com. All Rights Reserved.
 
 $path = "/usr/share/php/PHPMailer";
 require "$path/class.phpmailer.php";
 
 $mail = new PHPMailer(true);
-$mail->CharSet = "utf-8"; # must be the first
+$mail->CharSet = "utf-8"; // must be the first
 $mail->SMTPDebug = 4;
 $mail->isSMTP();
 $mail->SMTPAuth = true;
@@ -14232,7 +13608,7 @@ try {
 ?>
 ```
 
-#### 避免直接使用 `rpm` 命令安装
+## 避免直接使用 `rpm` 命令安装
 
 应避免直接使用 `rpm` 命令安装 PHPMailer 包文件。它不够智能，无法自动管理依赖关系。以下是直接使用 `rpm` 安装失败的示例：
 
@@ -14252,17 +13628,13 @@ error: Failed dependencies:
   php-spl is needed by php-PHPMailer-5.2.28-6.el8.remi.noarch
 ```
 
-## 从源码安装 PHPMailer
+# 从源码安装 PHPMailer
 
 本节提供教程示例，说明如何在没有任何安装工具的系统上从源码安装 PHPMailer。
 
 如果你无法在任何系统上使用安装工具安装 PHPMailer，可以尝试按以下方式从源码安装：
 
-
-
-
-
-#### PHPMailer 安装步骤
+## PHPMailer 安装步骤
 
 1. 访问 PHPMailer GitHub 站点：[`github.com/PHPMailer/PHPMailer`](https://github.com/PHPMailer/PHPMailer)。
 2. 点击 "Code > Download ZIP" 获取源代码 `PHPMailer-master.zip`。
@@ -14285,11 +13657,11 @@ windows> xcopy PHPMailer-master/src C:\Users\public\PHPMailer
 
 ---
 
-### 图像和图片处理
+# 图像和图片处理
 
 本章提供了关于创建和处理图像以及管理图像文件格式的教程示例和说明。主题包括尝试用于 PNG 图像的 'Imager' 模块；使用 GD 库绘制图形元素、设置透明背景和复制图像。
 
-#### GD 图像函数库
+## GD 图像函数库
 
 本节简要介绍用于创建图像和管理 BMP、GIF、PNG、JPEG 格式图像文件的 GD 库。
 
@@ -14306,6 +13678,11 @@ GD 函数示例：
 
 *   `gd_info()` —— 此 "GD 信息" 函数以数组形式返回关于 GD 图像库的信息。
 *   `imagecreate($width, $height)` —— 此 "图像创建" 函数创建一个空白图像对象。
+
+
+
+## GD 库函数参考
+
 *   `imagecreatetruecolor($width, $height)` —— 此 "真彩色图像创建" 函数创建一个真彩色模式的空白图像对象，该模式使用 RGB 颜色格式，每个颜色分量具有 256 个值。
 *   `imagecreatefromgif($path)` —— 此 "从 GIF 创建图像" 函数从 GIF 图像文件创建一个图像对象。
 *   `imagecreatefromjpeg($path)` —— 此 "从 JPEG 创建图像" 函数从 JPEG (JPG) 图像文件创建一个图像对象。
@@ -14338,16 +13715,13 @@ GD 函数示例：
 
 ---
 
-#### GD 库 - 绘制图形元素
+## GD 库 - 绘制图形元素
 
 本节提供了一个关于如何使用 GD 库函数绘制图形元素的教程示例。
 
 你可以使用 GD 库函数创建一个新图像并绘制一些图形元素。
 
-1. 编写一个 PHP 脚本来创建一个添加了图形元素的图像并将其保存为 `GD-Graphics.png`：
-
-
-
+### 1. 编写一个 PHP 脚本来创建一个添加了图形元素的图像并将其保存为 `GD-Graphics.png`：
 
 #### GD 库 - 创建图像
 
@@ -14379,7 +13753,7 @@ print("   File: $file\n");
 ?>
 ```
 
-## 2. 运行上述脚本：
+### 2. 运行上述脚本：
 
 ```
 herong$ php GD-Create-Image.php
@@ -14390,7 +13764,7 @@ Image saved:
    File: GD-Graphics.png
 ```
 
-## 3. 查看 GD-Graphics.png。你将看到一张精美的图像。
+### 3. 查看 GD-Graphics.png。你将看到一张精美的图像。
 
 ---
 
@@ -14400,7 +13774,7 @@ Image saved:
 
 你可以遵循本教程，使用 GD 库函数编排一张打印页面，并在其上垂直放置 2 张图片。
 
-## 1. 这是 PHP 脚本 GD-2-To-1-Page.php：
+### 1. 这是 PHP 脚本 GD-2-To-1-Page.php：
 
 ```php
 <?php
@@ -14471,7 +13845,7 @@ Page saved:
 
 ---
 
-#### GD 库 - 创建透明图像
+## GD 库 - 创建透明图像
 
 本节提供了一个教程示例，说明如何使用 GD 库函数创建具有透明背景的图像。
 
@@ -14552,6 +13926,8 @@ for (i=0; i<=2000; i++) {document.write('Bla ');}
 </body></html>
 ```
 
+
+
 现在在 Web 浏览器中打开上述 HTML 文件。你应该会看到网页上显示了一些文本，透明图像悬浮在文本上方。
 
 ![Display Transparent Image over Text](img/image00232.jpeg)
@@ -14560,7 +13936,7 @@ for (i=0; i<=2000; i++) {document.write('Bla ');}
 
 ---
 
-#### GD 库 - 填充透明图像
+## GD 库 - 填充透明图像
 
 本节提供了一个教程示例，说明如何使用 GD 库函数通过填充透明背景来扩展图像。
 
@@ -14574,9 +13950,6 @@ for (i=0; i<=2000; i++) {document.write('Bla ');}
 6. 以支持透明背景的格式（如 GIF 或 PNG）保存新图像。
 
 下面是一个 PHP 脚本，它在透明背景图像的四边各填充 10% 进行扩展。
-
-
-
 
 ## PHP 教程 - Herong 的教程示例
 
@@ -14747,11 +14120,7 @@ $zip->extractTo('/tmp', 'dot.gif');
 
 让我们试一下：
 
-
-
-
-
-# 创建包含目录的 ZIP 归档
+### 创建包含目录的 ZIP 归档
 
 本节提供了一个教程示例，介绍如何使用 `ZipArchive` 类创建包含目录的 ZIP 归档，并向该目录添加文件。
 
@@ -14759,20 +14128,20 @@ $zip->extractTo('/tmp', 'dot.gif');
 
 1. 使用 `addEmptyDir()` 方法在 ZIP 归档内创建目录。例如，以下代码创建一个目录和一个子目录。
 
-```
+```php
 $zip->addEmptyDir('src');
 $zip->addEmptyDir('src/gif');
 ```
 
 2. 使用 `addFile()` 方法通过本地路径名将文件添加到归档。例如，以下代码将 `dot.gif` 添加到归档中的 `src/gif` 子目录。
 
-```
+```php
 $zip->addFile('dot.gif', 'src/gif/dot.gif');
 ```
 
 下面是一个示例脚本，它创建一个包含目录的新 ZIP 归档，并向归档中的该目录添加一些文件。
 
-```
+```php
 <?php
 #### zip-with-directory.php
 #- Copyright 2009 (c) HerongYang.com. All Rights Reserved.
@@ -14844,14 +14213,14 @@ Archive:  /tmp/test.zip
 
 1. 在系统临时目录中创建一个唯一的文件名作为 ZIP 文件名：
 
-```
+```php
 $tmpDir = sys_get_temp_dir();
 $zipFile = tempnam($tmpDir, "ZIP"); # ZIP 是临时名称的前缀
 ```
 
 2. 打开临时文件和 ZIP 归档：
 
-```
+```php
 $zip->open($zipFile, ZipArchive::CREATE);
 ```
 
@@ -14859,7 +14228,7 @@ $zip->open($zipFile, ZipArchive::CREATE);
 
 4. 为每一项创建一个唯一的名称，并将项数据作为字符串添加到 ZIP 归档中。
 
-```
+```php
 $itemData = ...; # 基于数据库中的数据
 $itemName = ...; # 基于数据库中的记录 ID
 $zip->addFromString("$itemName", $itemData);
@@ -14867,7 +14236,7 @@ $zip->addFromString("$itemName", $itemData);
 
 5. 关闭 ZIP 归档，从临时文件读回 ZIP 数据，并立即删除它。
 
-```
+```php
 $zip->close();
 $zipData = file_get_contents($zipFile);
 unlink($zipFile);
@@ -14877,7 +14246,9 @@ unlink($zipFile);
 
 下面是一个示例脚本，它在临时文件中创建一个包含动态数据项的新 ZIP 归档。然后将 ZIP 归档推送到客户端浏览器。
 
-```
+
+
+```php
 <?php
 #### zip-in-temp-file.php
 #- Copyright 2009 (c) HerongYang.com. All Rights Reserved.
@@ -14915,11 +14286,11 @@ unlink($zipFile);
 
 如果你将上述脚本放在 Web 服务器上并在 Web 浏览器中打开它。你将获得一个下载的 ZIP 文件 `Hello.zip`。
 
-### 在 macOS 上管理 PHP 引擎和模块
+## 在 macOS 上管理 PHP 引擎和模块
 
 本章提供了关于在 macOS 系统上管理 PHP 引擎和模块的教程示例和说明。主题包括验证 macOS 上的 PHP 安装。
 
-## macOS 上预装的 PHP 版本
+### macOS 上预装的 PHP 版本
 
 本节提供了验证 macOS 上支持的 PHP 版本并运行简单的 PHP 交互式脚本会话的说明。
 
@@ -14985,13 +14356,7 @@ Debug => No
 ...
 ```
 
-
-
-
-
-### 在 macOS 上管理 PHP 引擎和模块
-
-#### 在 macOS 上升级 PHP 引擎
+### 在 macOS 上升级 PHP 引擎
 
 本节提供关于在 macOS 计算机上升级 PHP 的说明。在 Homebrew 仓库中似乎没有适用于 macOS 10.12 的 PHP 二进制包。
 
@@ -15099,21 +14464,11 @@ Error: php: no bottle available!
 
 看来我需要将 macOS 10.12 升级到更新的版本。我稍后会做。
 
-### 在 CentOS 上管理 PHP 引擎和模块
+## 在 CentOS 上管理 PHP 引擎和模块
 
 本章提供在 CentOS 系统上管理 PHP 引擎和模块的教程示例和说明。主题包括在 CentOS 上验证 PHP 安装。
 
-- CentOS 预装的 PHP 版本
-- 在 CentOS 上安装 PHP 扩展
-- CentOS 6 预装的 PHP 版本
-- 在 CentOS 计算机上使用 PHP Composer
-
-要点：
-
-- CentOS 预装了 PHP 引擎。
-- 可使用 `sudo dnf install php-*` 命令安装 PHP 扩展。
-
-#### CentOS 预装的 PHP 版本
+### CentOS 预装的 PHP 版本
 
 本节提供验证 CentOS 支持的 PHP 版本并运行简单的 PHP 交互式脚本会话的说明。
 
@@ -15186,7 +14541,7 @@ Description  : PHP is an HTML-embedded scripting language. PHP attempts to make 
              : which adds support for the PHP language to Apache HTTP Server.
 ```
 
-#### 在 CentOS 上安装 PHP 扩展
+### 在 CentOS 上安装 PHP 扩展
 
 本节提供教程示例，说明如何通过使用 `dnf` 包管理器搜索和安装扩展，在 CentOS Linux 系统上添加 PHP 扩展。
 
@@ -15205,6 +14560,8 @@ Stack trace:
 ```
 
 为了解决该问题，我首先检查系统上已安装了哪些 PHP 扩展：
+
+
 
 ```
 herong$ dnf list installed | grep php
@@ -15243,9 +14600,6 @@ Complete!
 ```
 
 现在重新运行 Web 应用程序。`ZipArchive` 错误消失了！
-
-
-
 
 # CentOS 6 上预装的 PHP 版本
 
@@ -15317,15 +14671,13 @@ Description : PHP is an HTML-embedded scripting language. PHP attempts to
 
 所以有一个小版本更新可用。如果我想要，可以使用 `yum install php` 命令进行安装。
 
-PHP 教程 - Herong 的教程示例
+# PHP 教程 - Herong 的教程示例
 
-∟ 在 CentOS 上管理 PHP 引擎和模块
-
-#### 在 CentOS 计算机上使用 PHP Composer
+## 在 CentOS 计算机上使用 PHP Composer
 
 本节提供一个教程示例，说明如何安装 PHP Composer 以在 CentOS 系统上管理 PHP 包。
 
-#### 什么是 PHP Composer？
+### 什么是 PHP Composer？
 
 PHP Composer 是 PHP 环境的扩展包管理器。Composer 会拉取你的 PHP 脚本所依赖的所有必需扩展包并为你进行管理。
 
@@ -15424,9 +14776,9 @@ php-64bit              7.2.24     The PHP interpreter, 64bit
 php-ipv6               7.2.24     The PHP interpreter, with IPv6 support
 ```
 
-PHP 教程 - Herong 的教程示例
+# PHP 教程 - Herong 的教程示例
 
-### 归档教程
+## 归档教程
 
 本章包含本书早期版本中一些过时的教程说明和示例代码。
 
@@ -15460,11 +14812,11 @@ PHP 教程 - Herong 的教程示例
 >
 > 归档：使用 `php_mysql.dll` 库的 `MySqlUnicode.php`
 
-PHP 教程 - Herong 的教程示例
+# PHP 教程 - Herong 的教程示例
 
-∟ 归档教程
+## 归档教程
 
-# 归档：为 Windows 下载并安装 PHP 7.0
+### 归档：为 Windows 下载并安装 PHP 7.0
 
 本节提供一个教程示例，说明如何在 Windows 系统上下载并安装 PHP 7.0 引擎。
 
@@ -15480,21 +14832,22 @@ herong> \php\php -v
 
 4. 如果看到错误消息："The program can't start because VCRUNTIME140.dll is missing from your computer. Try reinstalling the program to fix this problem."，你需要安装 "Visual Studio 2015 x86"。
 
-
-
-
-
 ### 归档教程
 
-## 归档：下载并安装用于 Windows 的 PHP 7.0.2
+### 归档：下载并安装用于 Windows 的 PHP 7.0.2
 
 本节提供了一个教程示例，介绍如何在 Windows 系统上下载并安装 PHP 7.0.2 引擎。
 
 1. 访问“Microsoft Visual C++ Redistributable for Visual Studio 2015”页面 [microsoft.com/en-us/download/details.aspx?id=48145](https://www.microsoft.com/en-us/download/details.aspx?id=48145)。
+
 2. 点击“Download”按钮。
+
 3. 将下载的文件 `vc_redist.x86.exe` 保存到桌面。
+
 4. 双击 `vc_redist.x86.exe` 运行它。
+
 5. 按照说明完成安装。
+
 6. 打开一个命令窗口，再次尝试以下命令：
 
 ```
@@ -15507,13 +14860,19 @@ Zend Engine v3.0.0, Copyright (c) 1998-2015 Zend Technologies
 
 太棒了，PHP 的命令行界面 (CLI) 和通用网关接口 (CGI) 都在正常工作！
 
-## 归档：下载并安装用于 Windows 的 PHP 5.6.6
+### 归档：下载并安装用于 Windows 的 PHP 5.6.6
 
 本节提供了一个教程示例，介绍如何在 Windows 系统上下载并安装 PHP 5.6.6 引擎。
 
 1. 访问 [windows.php.net/download/](http://windows.php.net/download/) 并下载用于 Windows 的“VC11 x86 Thread Safe (2015-Feb-19 01:45:25)”二进制版本。你将得到一个名为 `php-5.6.6-Win32-VC11-x86.zip` 的文件，大小为 21,072,108 字节。
+
 2. 将 `php-5.6.6-Win32-VC11-x86.zip` 解压到 `\php` 文件夹。
+
 3. 打开一个命令窗口，尝试以下命令：
+
+
+
+## PHP 版本验证
 
 ```
 herong> \php\php -v
@@ -15534,7 +14893,9 @@ Zend Engine v2.6.0, Copyright (c) 1998-2015 Zend Technologies
 本节提供了一个教程示例，介绍如何在 Windows 系统上下载并安装 PHP 5.4.3 引擎。
 
 1. 访问 [windows.php.net/download/](http://windows.php.net/download/) 并下载用于 Windows 的“PHP 5.4 (5.4.3) - VC9 x86 Thread Safe (2012-May-08 18:26:37)”二进制版本。你将得到一个名为 `php-5.4.3-Win32-VC9-x86.zip` 的文件，大小为 14.44MB。
+
 2. 将 `php-5.4.3-Win32-VC9-x86.zip` 解压到 `\php` 目录。
+
 3. 打开一个命令窗口，尝试以下命令：
 
 ```
@@ -15556,7 +14917,9 @@ Zend Engine v2.4.0, Copyright (c) 1998-2012 Zend Technologies
 本节提供了一个教程示例，介绍如何在 Windows 系统上下载并安装 PHP 5.2.2 引擎。
 
 1. 访问 [php.net](http://www.php.net)，下载用于 Windows 的 PHP 5.2.2 二进制版本。你将得到一个名为 `php-5.2.2-Win32.zip` 的文件，大小为 9722 KB。
+
 2. 将 `php-5.2.2-Win32.zip` 解压到 `\php` 目录。
+
 3. 打开一个命令窗口，尝试以下命令：
 
 ```
@@ -15578,7 +14941,9 @@ Zend Engine v2.2.0, Copyright (c) 1998-2007 Zend Technologies
 本节提供了一个教程示例，介绍如何在 Windows 系统上下载并安装 PHP 5.0.4 引擎。
 
 1. 访问 [php.net](http://www.php.net)，下载用于 Windows 的 PHP 5.0.4 二进制版本。你将得到一个名为 `php-5.0.4-Win32.zip` 的文件，大小为 7488 KB。
+
 2. 将 `php-5.0.4-Win32.zip` 解压到 `\php` 目录。
+
 3. 打开一个命令窗口，尝试以下命令：
 
 ```
@@ -15595,13 +14960,14 @@ Zend Engine v2.0.4-dev, Copyright (c) 1998-2004 Zend Technologies
 
 太棒了，PHP 的命令行界面 (CLI) 和通用网关接口 (CGI) 都在正常工作！
 
-#### 归档：将 PHP 作为 CGI 添加到 IIS
+## 归档：将 PHP 作为 CGI 添加到 IIS
 
 本节提供了一个教程示例，介绍如何将 PHP 引擎添加到 IIS 服务器，以 CGI 方式为 PHP 脚本提供 Web 页面服务。
 
 如果你想将 PHP 脚本添加到 IIS 服务器以作为 Web 页面提供服务，你需要将 PHP 引擎作为 CGI 接口添加到 IIS 服务器。
 
 1. 将 `\php` 添加到 PATH 环境变量中。我假设你知道如何操作。
+
 2. 设置 PHP 配置文件。首先将 `\php\php.ini-recommended` 复制到 `\php\php.ini`。然后编辑 `\php\php.ini` 以设置以下值：
 
 ```
@@ -15611,9 +14977,13 @@ cgi.redirect_status_env = ENV_VAR_NAME
 ```
 
 3. 创建一个值为 `\php` 的新环境变量 `PHPRC`。这是访问 `php.ini` 所必需的。
+
 4. 现在我们需要更改 IIS 配置以将 PHP 脚本作为 CGI 脚本运行。点击控制面板、Internet 信息服务 (IIS)、默认网站，然后点击属性。在“目录”选项卡上，首先将执行权限设置为“仅脚本”。然后点击配置，添加一个新的应用程序映射，可执行文件为 `\php\php-cgi.exe`，扩展名为 `.php`，并勾选脚本引擎。
+
 5. 在 IIS 中停止并启动默认网站。
+
 6. 将 `Hello.php` 复制到 `\inetpub\wwwroot`。
+
 7. 使用 Internet Explorer (IE) 打开 `http://localhost/Hello.php`。你应该会看到：
 
 ```
@@ -15622,30 +14992,31 @@ Hello world!
 
 恭喜，你已成功将 PHP 作为 CGI 添加到 IIS！
 
-#### 归档：下载用于 Windows 的 Apache HTTP Server 2.4.12
+## 归档：下载用于 Windows 的 Apache HTTP Server 2.4.12
 
 本节介绍如何下载适用于 Windows 系统的 Apache (HTTP Server) 2.4.12 二进制分发版。
 
 为了以 Web 页面形式提供 PHP 脚本服务，你需要运行一个 Web 服务器并将其与 PHP 引擎集成。目前最流行的 Web 服务器是 Apache (HTTP Server)。以下是下载适用于 Windows 的 Apache 2.4.12 二进制分发版的步骤：
 
 1. 如果你的计算机上正在运行旧版本的 Apache (HTTP Server)，请先卸载它。
+
 2. 访问 [Apache HTTP Server 网站](http://httpd.apache.org/)。
+
 3. 转到“Apache 2.4.* Released”部分并点击“Download”链接。你将看到“Downloading the Apache HTTP Server”页面。
+
 4. 转到“Apache HTTP Server 2.4.* (httpd)”部分并点击“Files for Microsoft Windows”。不要点击“Binaries”链接。“Binaries”链接下的“win32”文件夹是空的。
+
 5. 转到“Apache Lounge”网站，在“Apache 2.4.12 Win32”部分点击 `httpd-2.4.12-win32-VC11.zip` 开始下载。
+
 6. 将下载的文件 `httpd-2.4.12-win32-VC11.zip`（12,335,452 字节）保存到一个临时文件夹中。
 
 请参阅下一教程了解如何安装 Apache Windows 版本。
 
-#### 归档：在 Windows 上安装 Apache HTTP Server 2.4.12
+## 归档：在 Windows 上安装 Apache HTTP Server 2.4.12
 
 本节介绍如何在 Windows 系统上安装 Apache 2.4.12 二进制分发版。
 
-
-
-
-
-#### Apache HTTP Server 2.4.12 安装与配置
+### Apache HTTP Server 2.4.12 安装与配置
 
 下载 Apache HTTP Server 2.4.12 后，我继续在 Windows 系统上安装它：
 
@@ -15693,7 +15064,7 @@ DocumentRoot "c:/apache/htdocs"
 
 ---
 
-#### 已归档：将 PHP 脚本发布为网页
+## 归档：将 PHP 脚本发布为网页
 
 本节介绍如何在 Apache 服务器上将 PHP 脚本发布为网页。
 
@@ -15749,7 +15120,7 @@ Hello world! - PHP script.
 
 ---
 
-#### 已归档：php_mysql.dll 库的配置
+## 归档：php_mysql.dll 库的配置
 
 本节提供了一个教程示例，说明如何配置 PHP 引擎以进行 MySQL 服务器连接访问。需要在配置文件 `php.ini` 中开启设置 `extension=php_mysql.dll`。
 
@@ -15799,7 +15170,7 @@ MySQL status = Uptime: 1167  Threads: 1  Questions: 5  Slow queries...
 
 ---
 
-#### 已归档：使用 php_mysql.dll 库的 mysql_connect()
+## 归档：使用 php_mysql.dll 库的 mysql_connect()
 
 本节介绍 MySQL 扩展库 `php_mysql.dll` 支持的函数。`mysql_connect()` 创建到指定 MySQL 服务器的连接。
 
@@ -15815,25 +15186,20 @@ PHP 的 MySQL 支持来自扩展库 `php_mysql.dll`，它提供了许多函数�
 
 *   `mysql_query()` - 向服务器发送查询，并返回结果集资源。例如，`mysql_query('SELECT * FROM MyTable WHERE ID = 10')`。
 
+
+
 *   `mysql_affected_rows()` - 如果执行的查询是 INSERT 或 UPDATE 语句，则返回给定结果集的受影响行数。
-
 *   `mysql_num_rows()` - 如果执行的查询是 SELECT 语句，则返回给定结果集的行数。
-
 *   `mysql_fetch_array()` - 从给定结果集中获取一行，并将该行作为数组返回，该数组同时包含数字索引和列名映射。如果结果集中没有剩余行，则返回布尔值 false。
-
 *   `mysql_free_result()` - 释放给定的结果集。
 
 ---
 
-#### 已归档：使用 php_mysql.dll 库的 MySqlLoop.php
+### 已归档：使用 `php_mysql.dll` 库的 MySqlLoop.php
 
 本节提供了一个教程示例，说明如何使用 MySQL 函数连接到 MySQL 服务器，并运行 SQL 语句在 MySQL 服务器上创建表、插入行和获取行。
 
 为了向你展示如何使用其中一些 MySQL 函数，我编写了这个简单的脚本 `MySqlLoop.php`：
-
-
-
-
 
 #### MySqlLoop.php
 
@@ -15893,7 +15259,7 @@ Query some rows from the table...
     9   5
 ```
 
-#### Get_Temperature.php - SOAP 的第一个示例
+### Get_Temperature.php - SOAP 的第一个示例
 
 本节提供了一个教程示例，介绍如何使用 SOAP 扩展调用 xmethods.org 提供的 Web 服务以获取当前温度。
 
@@ -15926,7 +15292,7 @@ Returning value of getTemp() call: 52
 *   PHP SOAP 扩展支持 WSDL。
 *   www.xmethods.net 为提供此演示 SOAP 服务做出了巨大贡献。
 
-#### Get_Temperature_Dump.php - 转储调试信息
+### Get_Temperature_Dump.php - 转储调试信息
 
 本节提供了一个教程示例，介绍如何使用 SOAP 客户端函数对目标 SOAP 节点进行 Web 服务调用并打印详细的调试信息。
 
@@ -16049,16 +15415,11 @@ SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
 *   SOAP 扩展根据 WSDL 文档中的定义，将我的 `getTemp()` RPC 调用很好地转换为 SOAP 请求消息。
 *   返回值也被正确转换为“float”类型的值，而不是“string”。SOAP 响应消息显示“52.0”，但 `$return` 的打印输出为“52”。
 
-#### MySqlUnicode.php 使用 php_mysql.dll 库
+### MySqlUnicode.php 使用 php_mysql.dll 库
 
 本节提供了一个教程示例，介绍如何以 Unicode UTF-8 编码向 MySQL 数据库服务器发送和接收非 ASCII 字符串。
 
 这是我的示例脚本，向您展示如何将 UTF-8 字符串发送到 MySQL 服务器并以 UTF-8 编码存储，`MySqlUnicode.php`：
-
-
-
-
-#### MySQL Unicode PHP 示例
 
 #### PHP 代码
 
@@ -16110,6 +15471,8 @@ SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
 
 #### 运行结果
 
+
+
 ```
 Default settings...
     character_set_client   latin1
@@ -16142,7 +15505,7 @@ Query some rows from the table...
 
 MySQL 按预期工作，SQL 语句无需转换，以 UTF-8 存储字符串，查询结果也无需转换。
 
-#### 参考资料
+### 参考资料
 
 本文档使用的参考资料列表。
 

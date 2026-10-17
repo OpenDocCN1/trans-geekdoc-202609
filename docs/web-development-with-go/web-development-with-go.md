@@ -1,42 +1,16 @@
+
 # Go Web 开发
-
-
-
-
 
 ![](img/d6be51afcf11b16bf97245d05fb9e635_0_0.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - 5.3.3 Ex3 - 使用 MVC 有哪些好处？ . . . 56
 
-
-
-# 7 创建注册页面 99
+## 7 创建注册页面 99
 
 - 7.1 创建带有表单的注册页面 . . . . . . . . . . . . 99
 - 7.6 练习题 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 156
 
-
-
-
-- 9.1 定义 User 类型 . . . . . . . . . . . . . . . . . . . . 209
-
-
-
-
+## 9.1 定义 User 类型 . . . . . . . . . . . . . . . . . . . . 209
 
 - 9.7.1 在注册表单中添加名称字段 . . . . . . . . . 231
 - 9.7.2 在我们的 Web 应用中设置用户服务 . . . . . . 234
@@ -46,7 +20,7 @@
 - 9.8.2 Ex2 - 编写一个方法查询特定年龄的首位用户 . . . . . . . . . . . . . 241
 - 9.8.3 Ex3 - [困难] 编写一个方法按年龄范围查询多个用户 . . . . . . . . . . . . . . . . . . 241
 
-# 10 构建身份验证系统 . . . . . . . . . . . . . . . 243
+## 10 构建身份验证系统 . . . . . . . . . . . . . . . 243
 
 - 10.1 为什么不使用其他包或服务？. . . . . . . . . . . . . 244
 - 10.2 使用 SSL/TLS 保护你的服务器 . . . . . . . . . . . . . . . . . 245
@@ -62,14 +36,14 @@
 - 10.5 验证返回用户的身份 . . . . . . . . . . . . . . . . . . . 262
 - 10.5.1 创建登录模板 . . . . . . . . . . . . . . . . . 262
 - 10.5.2 创建登录动作（Action） . . . . . . . . . . . . . . . . . . 264
-- 10.5.3 实现 Authenticate 方法 . . . . . . 267
+- 10.5.3 实现 Authenticate 方法 . . . . . 267
 - 10.5.4 在我们的登录动作中调用 Authenticate . . . . 271
 - 10.6 练习题 . . . . . . . . . . . . . . . . . . . . . . . . . . 272
 - 10.6.1 Ex1 - 什么是哈希函数？. . . . . . . 272
 - 10.6.2 Ex2 - 加盐和加椒的作用是什么？. . . 272
 - 10.6.3 Ex3 - 计时攻击 . . . . . . . . . . . . . . . . . 273
 
-# 11 记住用户 . . . . . . . . . . . . . . . . . . . 275
+## 11 记住用户 . . . . . . . . . . . . . . . . . . . 275
 
 - 11.1 什么是 cookies . . . . . . . . . . . . . . . . . . . . 276
 - 11.2 创建我们的第一个 cookie . . . . . . . . . . . . . . . . . . 277
@@ -78,7 +52,7 @@
 - 11.3.2 使用 Go 代码查看 cookies . . . . . . . 287
 - 11.4 保护我们的 cookies 免受篡改 . . . . . . . 289
 - 11.4.1 对数据进行数字签名 . . . . . . . 289
-- 11.4.2 混淆 cookie 数据 . . . . . . 292
+- 11.4.2 混淆 cookie 数据 . . . . . 292
 - 11.5 生成记忆令牌（Remember Tokens）. . . . . . . . 293
 - 11.5.1 为什么我们使用 32 字节？. . . . . . . 299
 - 11.6 哈希记忆令牌 ................................................. . . . . . . . . . . . 301
@@ -87,23 +61,23 @@
 - 11.6.3 编写我们自己的 hash 包 ................................................................. . 305
 - 11.7 在用户服务中哈希记忆令牌 ................................................. . . . . 308
 - 11.7.1 在我们的 User 类型中添加记忆令牌字段 . . . . . . 209
-- 11.7.2 创建用户时设置记忆令牌 . . . . . . . . . . . 310
+- 11.7.2 创建用户时设置记忆令牌 . . . . . . . . . . 310
 - 11.7.3 在 UserService 中添加 HMAC 字段 . . . . . . . . . 312
 - 11.7.4 在创建和更新时哈希记忆令牌 . . . . . . . . . . 314
-- 11.7.5 通过记忆令牌检索用户 . . . . . . . . . . . . 315
+- 11.7.5 通过记忆令牌检索用户 . . . . . . . 315
 - 11.7.6 重置我们的数据库（DB）. . . . . . . . . . . 316
 - 11.8 记住用户 . . . . . . . . . . . . . . . 319
 - 11.8.1 在 cookies 中存储记忆令牌 . . . . . . . . . . . . 320
 - 11.8.2 限制页面访问 . . . . . . . . . . . . . . . . . . 324
 - 11.9 保护你的 cookies 免受 XSS 攻击 . . . . . . . . . . . . . . . 326
-- 11.10 保护我们的 cookies 免受盗取 . . . . . . . . . . . . . . . . 328
+- 11.10 保护我们的 cookies 免受盗取 . . . . . . . . . . . . . . . 328
 - 11.11 防止 CSRF 攻击 . . . . . . . . . . . . . . . . . . . . 330
 - 11.12 练习题 . . . . . . . . . . . . . . . . . . 330
 - 11.12.1 Ex1 - 重定向实验 . . . . . . . . . . . . . . 331
 - 11.12.2 Ex2 - 使用不同数据创建 cookies . . . . . . . . . . . . . 331
 - 11.12.3 Ex3 - [困难] 使用 hash 包的实验 . . . . . . . . . . . 331
 
-# 12 规范化和验证数据 . . . . . . . . . . . . . . . 333
+## 12 规范化和验证数据 . . . . . . . . . . . . . . . 333
 
 - 12.1 分离职责 . . . . . . . . . . . . . . . . . . 336
 - 12.1.1 重新思考模型包（models package）. . . . . . . . . . . . . 337
@@ -111,7 +85,7 @@
 - 12.2 UserDB 接口 . . . . . . . . . . . . . . . 351
 - 12.3 UserService 接口 . . . . . . . . . . . . . . . 361
 - 12.4 编写和组织验证代码 . . . . . . . . . . 364
-- 12.4.1 简单的方法 . . . . . . . . . . . . 365
+- 12.4.1 简单的方法 . . . . . . . . . . . 365
 - 12.4.2 更多验证示例 . . . . . . . 368
 - 12.4.3 可重用的验证器（validators）. . . . . . . . . . . . . . . 371
 - 12.5 编写验证器和规范化器（normalizers）. . . . . . 377
@@ -123,13 +97,13 @@
 - 12.6.2 要求提供邮箱地址 . . . . . . . . . . 390
 - 12.6.3 验证邮箱是否匹配模式 . . . . . . 392
 - 12.6.4 验证邮箱地址未被占用 . . . . . . 401
-- 12.7 清理我们的错误命名 . . . . . . 404
+- 12.7 清理我们的错误命名 . . . . . 404
 - 12.8 验证和规范化密码 . . . . . . 407
 - 12.8.1 验证密码的最小长度 . . . . . . . . . . . . . . 408
 - 12.8.2 要求提供密码 . . . . . . . . . . . . . . . . . 309
 - 12.9 验证和规范化记忆令牌 . . . . . . . . . . . . 412
 
-# 13 向终端用户显示错误 . . . . . . . . . . . . . . . 417
+## 13 向终端用户显示错误 . . . . . . . . . . . . . . . 417
 
 - 13.1 在 UI 中渲染提示（alerts）. . . . . . . . . . . . . . . . 418
 - 13.2 渲染动态提示 . . . . . . . . . . . . . . . . . 421
@@ -137,10 +111,10 @@
 - 13.4 用于视图的更持久的数据类型 . . . . . . . . 429
 - 13.5 在注册表单中处理错误 . . . . . . . . . . . . . . 433
 - 13.6 错误消息白名单（White-listing）. . . . . . . . . . 439
-- 13.7 处理登录错误 . . . . . . . . . . . . . . . 447
-- 13.8 从视图渲染错误中恢复 . . . . . . 450
+- 13.7 处理登录错误 . . . . . . . . . . . . . . . . 447
+- 13.8 从视图渲染错误中恢复 . . . . . 450
 
-# 14 创建画廊资源 . . . . . . . . . . 455
+## 14 创建画廊资源 . . . . . . . . . . 455
 
 - 14.1 定义画廊模型 . . . . . . . . . . . . 456
 - 14.2 引入 GalleryService . . . . . . . . . . . . . 458
@@ -150,20 +124,16 @@
 - 14.5.1 实现画廊服务 . . . . . . 669
 - 14.5.2 画廊控制器 . . . . . . 471
 
+### 目录
 
-
-
-
-# 目录
-
-- 14.5.3 处理新的画库表单 . . . . . . . . . . . 475
+- 14.5.3 处理新的画库表单 . . . . . . . . . . . . 475
 - 14.5.4 验证画库 . . . . . . . . . . . . . . . 478
 - 14.6 通过中间件要求用户登录 . . . . . . . . . . . . . 480
 - 14.6.1 创建我们的第一个中间件 . . . . . . . . 481
 - 14.6.2 使用 context 存储请求范围的数据 . . . . . 488
 - 14.7 显示画库 . . . . . . . . . . . . . . . 496
 - 14.7.1 创建显示画库的视图 . . . . . . . . 497
-- 14.7.2 从路径中解析画库 ID . . . . . . 498
+- 14.7.2 从路径中解析画库 ID . . . . . 498
 - 14.7.3 通过 ID 查询画库 . . . . . . . . . . . 503
 - 14.7.4 使用参数生成 URL . . . . . . 506
 - 14.8 编辑画库 . . . . . . . . . . . . 511
@@ -179,18 +149,18 @@
 - 14.11.1 添加直观的重定向 . . . . . 537
 - 14.11.2 已登录用户的导航 . . . . . . . . . . . . . . . 542
 
-# 15 向画库中添加图片 . . . . . . . . . . . . . . . 551
+## 15 向画库中添加图片 . . . . . . . . . . . . . . . 551
 
 - 15.1 图片上传表单 . . . . . . . . . . . . . . . . . 552
 - 15.2 处理图片上传 . . . . . . . . . . . . 557
 - 15.3 创建图片服务 . . . . . . . . . . . . . . 569
-- 15.4 通过画库 ID 查询图片 . . . . . . . . . . . 575
+- 15.4 通过画库 ID 查询图片 . . . . . . . . . . 575
 - 15.5 在 Go 中提供静态文件 . . . . . . . . . . . . . 580
 - 15.6 在列中渲染图片 . . . . . . . . . . . 584
 - 15.7 允许用户删除图片 . . . . . . . . . . . 592
 - 15.8 已知 Bug . . . . . . . . . . . . . . . . 599
 
-# 16 部署到生产环境 . . . . . . . . . . . 601
+## 16 部署到生产环境 . . . . . . . . . . . 601
 
 - 16.1 错误处理 . . . . . . . . . . . . . . . . . . 602
 - 16.2 提供静态资源 . . . . . . . . . . . . . . 603
@@ -204,53 +174,55 @@
 - 16.6.2 使用函数式选项 . . . . . . . . . . . . . . . 627
 - 16.6.3 JSON 配置文件 . . . . . . . . . . . . . . . 636
 - 16.7 设置服务器 . . . . . . . . . . . . . . . . . . 644
-- 16.7.1 Digital Ocean droplet . . . . . . . . . . . . . . 644
+- 16.7.1 Digital Ocean droplet . . . . . . . . . . . . . 644
 - 16.7.2 在生产环境中安装 PostgreSQL . . . 647
 - 16.7.3 安装 Go . . . . . . . . . . . . . . . . . . 652
-- 16.7.4 设置 Caddy . . . . . . . . . . . . . . . . 654
+- 16.7.4 设置 Caddy . . . . . . . . . . . . . . . 654
 - 16.7.5 为我们的应用创建服务 . . . . . 660
 - 16.7.6 设置生产配置 . . . . . . 661
 - 16.7.7 创建部署脚本 . . . . . . . 662
 
-# 17 补齐缺失的内容 . . . . . . . 669
+## 17 补齐缺失的内容 . . . . . . . 669
 
-- 17.1 删除 Cookie . . . . . . . . 669
+- 17.1 删除 Cookie . . . . . . . . . 669
 - 17.2 使用 . . . . . . . . . . . . 进行重定向 672
 - 17.3 权限 . . . . . . . . . . 677
 - 17.4 持久化与 . . . . . . . . . . 681
 - 17.5 重置 . . . . . . . . . . 686
+
+
+
 - 17.5.1 创建数据库 . . . . . . . 687
+
 - 17.5.2 更新服务 . . . . . . . 692
+
 - 17.5.3 忘记密码 . . . . . . . . . . . 698
+
 - 17.5.4 控制器与视图 . . . . . . 702
+
 - 17.5.5 给用户发送邮件 . . . . . . . . . . . . . 707
+
 - 17.6 我该去哪儿？ . . . . . . . . . . . . . 711
 
 # 18 附录
 
 - 18.1 使用接口 . . . . . . . . . . . . 713
+
 - 18.2 使用 . . . . . . . . . . . . . . . 处理 716
+
 - 18.3 重构 . . . . . . . . . . . . . . . . . 719
+
 - 18.4 熟悉 . . . . . . . . . . . . . . . . 719
 
 # 关于作者
 
-Jon Calhoun 是一位软件开发者和教育者。他还是 EasyPost (easypost.com) 的联合创始人，他在初创公司佛罗里达大学获得了计算机科学学士学位。
-
-
-
-
-
-
-
-
-
+Jon Calhoun 是一位软件开发者和教育者。他还是 EasyPost (`easypost.com`) 的联合创始人，他在初创公司佛罗里达大学获得了计算机科学学士学位。
 
 ## 1.3 参考资料
 
 在阅读此书时，你可能会遇到一些你不熟悉并想要进一步研究的内容。为了帮助你，我创建并持续维护了一份新手指南，其中包含了深入学习 Go、HTML、CSS、SQL 和命令行的资源。
 
-你可以通过以下地址访问该指南：calhoun.io/beginners
+你可以通过以下地址访问该指南：`calhoun.io/beginners`
 
 如果你是这些技术中任何一项的完全新手，我建议你先查看新手指南，并对它们有一个“模糊”的认识。““模糊”是这里的关键词。你**不需要**成为我列出的任何某项技术的专家，只需要熟悉到足以跟上我们在课程中使用这些技术的节奏即可。
 
@@ -288,7 +260,7 @@ Jon Calhoun 是一位软件开发者和教育者。他还是 EasyPost (easypost.
 
 ### 1.6.1 命令行命令以 $ 为前缀
 
-在整本书中，我将为你提供一些在命令行中运行的命令。为了清晰起见，所有命令都将以 Unix 风格的命令行提示符（美元符号 $）开头。
+在整本书中，我将为你提供一些在命令行中运行的命令。为了清晰起见，所有命令都将以 Unix 风格的命令行提示符（美元符号 `$`）开头。
 
 + 列表 1.1：Unix 风格提示符示例
 
@@ -303,7 +275,7 @@ testing
 
 我经常会在命令行代码列表中使用 `atom` 命令来表示“用文本编辑器打开一个文件”。
 
-在我的电脑上，运行 `atom hello.go` 会在 Atom 中打开一个名为“hello.go”的文件，Atom 是我用来编写代码的编辑器。
+在我的电脑上，运行 `atom hello.go` 会在 Atom 中打开一个名为“`hello.go`”的文件，Atom 是我用来编写代码的编辑器。
 
 欢迎你以任何你的方式打开文件和创建新文件，但我经常这样描述它们，因为这是我所知的在书中表示它们最清晰的方式。
 
@@ -314,9 +286,13 @@ testing
 因此，我经常会显示代码的相关部分，并使用注释来表示未更改的代码。这些注释通常以 . . . 开头，看起来像列表 1.2 所示：
 
 | 列表 1.2：未更改代码的简单示例 |
+
 | :--- |
+
 | func main() { |
+
 | // ... 在此之前的所有内容保持不变 |
+
 | var name string |
 
 ## 1.7 获取代码
@@ -336,9 +312,9 @@ fmt.Scanf("%s", &name)
 
 ## 1.7 获取代码
 
-书中的代码以 git 仓库的形式提供，每个章节都有一个分支。你可以在不需要任何 git 知识的情况下从每个分支下载代码，但你需要在 gitlab.com 有一个账户（注意：这与 github.com 不同）。
+书中的代码以 git 仓库的形式提供，每个章节都有一个分支。你可以在不需要任何 git 知识的情况下从每个分支下载代码，但你需要在 `gitlab.com` 有一个账户（注意：这与 `github.com` 不同）。
 
-在购买本课程后，你应该会收到一封邮件，要求你在 members.usegolang.com 创建账户。
+在购买本课程后，你应该会收到一封邮件，要求你在 `members.usegolang.com` 创建账户。
 
 当你登录该账户时，你会发现使用你的 GitLab 账户请求访问代码的说明。
 
@@ -350,7 +326,7 @@ fmt.Scanf("%s", &name)
 
 ### 1.7.1 为什么用 git？
 
-我经常被问到为什么用 git 管理代码，简短的回答是：在 Go 中，导入路径**并不是**相对于你的代码，而是相对于你的 GOPATH。
+我经常被问到为什么用 git 管理代码，简短的回答是：在 Go 中，导入路径**并不是**相对于你的代码，而是相对于你的 `GOPATH`。
 
 这意味着，为了让我提供一个包含课程所有代码的单一 zip 文件，我需要更改书中每个章节的导入路径，这样我提供的代码将与你编写的代码不匹配。
 
@@ -374,11 +350,7 @@ fmt.Scanf("%s", &name)
 
 ## 1.9 为你的导出类型编写注释
 
-如果你在整本书中使用 golint，或者你使用一个会在你的代码上自动运行它的编辑器。这些警告通常读作“导出函数 XXX 应该有注释或未导出”。这个警告意味着你正在导出一个函数（使其在包外部可用），但你没有提供适当的注释来向其他开发者解释该包的作用。
-
-
-
-
+如果你在整本书中使用 `golint`，或者你使用一个会在你的代码上自动运行它的编辑器。这些警告通常读作“导出函数 XXX 应该有注释或未导出”。这个警告意味着你正在导出一个函数（使其在包外部可用），但你没有提供适当的注释来向其他开发者解释该包的作用。
 
 # 第2章
 
@@ -393,8 +365,11 @@ fmt.Scanf("%s", &name)
 现在你已经知道要去哪个 src 目录了，让我们开始编写代码吧。首先，我们需要进入 Go src 文件夹并为我们的应用程序创建一个文件夹。
 
 | 列表 2.1：创建应用程序目录 |
+
 | :--- |
+
 | $ cd $GOPATH/src |
+
 | $ mkdir lenslocked.com |
 
 # 第2章 一个基础Web应用程序
@@ -440,7 +415,9 @@ func main() {
 ## 2.1. 构建服务器
 
 | 列表 2.4：运行 main.go |
+
 | :--- |
+
 | $ go run main.go |
 
 搞定！假设你没有遇到任何错误，你现在电脑上上运行着一个 Web 应用。打开浏览器并在 http://localhost:3000/ 查看一下。你应该能看到类似于图 2.1 的内容。（img/d6be51af1b6bf9724d05fbe635.png）
@@ -504,9 +481,6 @@ func handlerFunc(w http.ResponseWriter, r *http.Request) {
 
 理解 Web 请求和响应的组件现在并不真正需要，但你们中的一些人会想了解背后发生了什么。所以，对于所有好奇的人来说，Web 请求是发送给 Web 应用程序的消息，指定了它想要响应的数据类型。对于我们的目的而言，我们将关注 Web 请求的三部分：请求发送到的 URL、头部信息（headers）和正文（body）。
 
-
-
-
 同样，服务器的响应也被分为两个部分：头部（headers）和正文（body）。响应不需要 URL，因为它仅仅是对你的请求做出响应。与请求类似，头部主要用于存储对浏览器有用的元数据，而正文包含了被请求的数据。
 
 首先是 `w http.ResponseWriter`。这是一个结构，允许我们修改想要发送给任何访问我们网站的人的响应。默认情况下，`w` 实现了 `Write()` 方法，允许我们向响应中写入内容，因此名为 `ResponseWriter`，但它也有其他方法可以在我们需要设置头部时帮助我们完成任务。
@@ -536,11 +510,14 @@ fmt.Fprint(w, "<h1>Welcome to my awesome site!</h1>")
 这个函数的复杂版本是 `fmt.Fprint` 接收两个参数：
 
 1. 一个用于写入的 `io.Writer`。
+
 2. 任意数量的用于打印的 `interface{}`。通常这些是字符串，但也可以是任何数据类型。
 
 `io.Writer` 是一个接口，要求结构体实现了 `Write([]byte)` 方法，因此 `fmt.Fprint` 帮助处理所有提供的接口转换为字节数组，然后调用 `io.Writer` 上的 `Write` 方法。
 
 由于我们正在写入一个字符串，而字符串可以被视为字节数组，你可以将 `fmt.Fprint(w, "<h1>Welcome to my awesome site!</h1>")` 替换为 `w.Write([]byte("<h1>Welcome to my awesome site!</h1>"))`，你会得到相同的结果。
+
+
 
 如果还有任何地方感到困惑，不要担心，继续努力。随着你对 Go 和通用的编程经验的增加，这类事情将开始变得更有意义，但在你对 Go 获得更高的理解之前，理解这些细节将是非常的。
 
@@ -607,9 +584,6 @@ Web 应用程序如果只有一个页面会很无聊，因此在本节中，我�
 func handlerFunc(w http.ResponseWriter
 ```
 
-
-
-
 ## 3.1. 使用 IF/ELSE 语句进行路由
 
 如果你的服务器已经在运行，在看到更改之前，你需要通过按下 `ctrl + e` 来停止它。停止服务器后，再次运行它。
@@ -662,6 +636,7 @@ func handlerFunc(w http.ResponseWriter, r *http.Request) {
 如果这两个标准都不满足，我们就会写入 404 HTTP 状态码，然后向响应写入器写入错误消息。`NotFound` 变量实际上只是代表 HTTP 状态码 404 的常量，而 `WriteHeader` 方法是在 Go 中写入 HTTP 状态码的一种方法。
 
 > 框 3.3. 导出常用常量
+
 > 如上所述，`http.StatusNotFound` 实际上只是一个表示 404 状态码的常量。这并不是绝对必要的，你可以在代码中将其替换为 404，但包通常会导出 `StatusNotFound` 常量，以便代码更易于阅读和维护。
 
 ### 源代码
@@ -669,6 +644,7 @@ func handlerFunc(w http.ResponseWriter, r *http.Request) {
 下面的链接包含了完整的源代码以及本节中所有更改代码的差异（diff）。
 
 - 完成版 - book.usegolang.com/3.1
+
 - 更改 - book.usegolang.com/3.1-diff
 
 ## 3.2 流行的路由器
@@ -708,13 +684,17 @@ func handlerFunc(w http.ResponseWriter, r *http.Request) {
 当你使用 gorilla/mux 时，首先需要做的是安装该包。到目前我们只使用了标准库。如果你正在运行程序，请停止它（ctrl + c），然后在终端中输入。
 
 | 列表 3.3：安装 gorilla/mux. |
+
 | :--- |
+
 | `$ go get -u github.com/gorilla/mux` |
 
 这将下载该包，`-u` 选项将告诉 Go 获取最新版本。接下来我们需要准备好代码。
 
 > 框 3.4. 如果你看到错误
+
 > 在此期间你可能会遇到错误，因为你没有安装 git。如果是这种情况，我建议安装 git 并重启以解决该问题。
+
 > https://git-scm.com/en/Starting-Installing
 
 我们可以继续像 3.1 中那样用一个函数处理多个页面，但这非常难以维护。相反，我们将每个页面拆分为自己的函数，这样我们只需要告诉路由器根据用户访问的页面调用哪个函数。代码如列表 3.4 所示，并应添加到 main。
@@ -754,10 +734,6 @@ import (
 
 现在你已经导入了 mux 包，我们可以在 main 中使用它。列表 3.6 中的代码将替换你当前 main 中的代码
 
-
-
-
-
 # 第 3 章. 添加新页面
 
 function.
@@ -790,6 +766,7 @@ func main() {
 ## 3.4 练习
 
 - 已完成 - book.usegolang.com/3.3
+
 - 更改 - book.usegolang.com/3.3-diff
 
 ## 3.4 练习
@@ -813,6 +790,8 @@ func main() {
 ### 3.4.2 练习 2 - 自定义 404 页面
 
 我之前提到过，对于路由器未定义的路径，gorilla/mux 默认有一个 404 页面。你实际上可以通过设置 `gorilla/mux.Router` 的 `NotFoundHandler` 属性来自定义此页面。
+
+
 
 如果你是 Go 的新手，这个练习可能会变得很有挑战性，因为你需要创建一个 `http.Handler` 接口的实现，然后将其分配给 `NotFoundHandler`，这与我们目前所做的稍有不同。
 
@@ -938,10 +917,6 @@ Mad Libs 是用模板创建动态内容的一个例子。在游戏中，一个�
 
 你并不要求完成这些，但我绝对建议在继续之前尝试每一个，以测试你对每章内容的理解。
 
-
-
-
-
 ## 4.4 创建模板
 
 这有助于确保你的 Web 应用程序是安全的。
@@ -974,6 +949,7 @@ $ cd exp
 让我们创建一个 Go 文件来运行这个模板，这样你就可以看到它的效果了。在 `exp` 目录下创建一个名为 `main.go` 的文件，并将列表 4.4 中的代码添加到其中。
 
 列表 4.4：`main.go` 的初始内容
+
 ```go
 package main
 
@@ -1016,6 +992,7 @@ Go 的标准库同时提供了 `text/template` 和 `html/template` 包，并且�
 最后，我们执行之前创建的模板，并传入两个参数：
 
 1. 我们想要写入模板输出的位置
+
 2. 执行模板时要使用的数据
 
 在我们的案例中，我们希望将模板输出写入 `Stdout`，即你的终端窗口。这是 `fmt.Println` 等函数默认写入所在的地方，它是由 Go 标准库中的 `os` 包提供的。
@@ -1045,6 +1022,7 @@ $ go run main.go
 下面的链接包含了完整的源代码以及本节中所有更改代码的差异。
 
 [已完成](https://book.usegolang.com/4.4)
+
 [更改](https://book.usegolang.com/4.4-diff)
 
 ## 4.5 上下文编码
@@ -1099,10 +1077,6 @@ $ go run main.go
 
 图 4.2：一个烦人的 JavaScript 警告框
 
-
-
-
-
 # 第 4 章 模板简介介绍
 
 现在你已经对 Go 语言模板的工作原理有了非常基础的理解，我们将回到 Web 应用程序并使用它们来渲染页面，但在在此之前，让我们先尝试几个关于模板的练习。
@@ -1112,6 +1086,7 @@ $ go run main.go
 下面的链接包含了完成后的源代码以及本节中所有更改代码的差异（diff）。
 
 - 已完成 - book.usegolang.com/4.5
+
 - 更改 - book.usegolang.com/4.5-diff
 
 ## 4.6 练习
@@ -1123,6 +1098,7 @@ $ go run main.go
 如果你对进一步阅读关于模板的读物感兴趣，可以考虑查看 `html/template` 文档以及以下文章：
 
 - 文档 - https://golang.org/pkg/html/template/
+
 - 我写的一系列关于 HTML 模板的免费文章 - https://www.calhoun.io/html-templates-in-go/
 
 ## 4.6 练习
@@ -1136,6 +1112,7 @@ $ go run main.go
 你可以通过两个步骤来实现：
 
 1. 在你的 Go 代码中的 `data` 变量中添加新字段
+
 2. 在模板内部使用该新字段
 
 ### 4.6.2 练习2 - 尝试不同的数据类型
@@ -1145,13 +1122,16 @@ $ go run main.go
 虽然我们正在使用 `html/template` 包，但 `text/template` 文档提供了如何使用这两个包的说明，因此在进行实验时你可能需要参考这两组文档。
 
 - text/template 文档 - https://golang.org/pkg/text/template/
+
 - html/template 文档 - https://golang.org/pkg/html/template/
 
 ### 4.6.3 练习3 - [困难] 学习如何使用嵌套数据
 
 创建一个嵌套结构，并学习在模板内部访问嵌套字段。
 
-例如，如果你向 `data` 变量中添加了一个映射，你如何访问该映射的各个键（keys）和值（values）呢？
+
+
+例如，如果你向 `data` 变量中添加了一个映射，你如何访问该映射的各个键（`keys`）和值（`values`）呢？
 
 这将更难弄清楚，特别是如果你对模板和 Go 的背景知识有限，尝试自己弄明白将真正加强你所学的所有内容。
 
@@ -1193,21 +1173,17 @@ $ go run main.go
 
 如果我们取一个正常的 Web 请求并检查请求的每个部分将如何处理，它将更容易理解。为了做到这一点，我们将
 
-
-
-
-
 # 第 5 章：理解 MVC
 
 我们将通过一个用户尝试更新信息的 Web 请求，并结合图 5.1 和图 5.2 进行演示。
 
 - 1. 用户提交了其联系方式的更新
 
-![](![](img/d6be51afcf11b16bf97245d05fb9e635_77_0.png)
+![](img/d6be51afcf11b16bf97245d05fb9e635_77_0.png)
 
-- 2. 路由器决定应该使用 UserController
+- 2. 路由器决定应该使用 `UserController`
 
-- 3. UserController 使用 User 模型来更新用户的联系方式。
+- 3. `UserController` 使用 `User` 模型来更新用户的联系方式。
 
 图 5.1：MVC 流程演示步骤 1 到 3
 
@@ -1217,23 +1193,23 @@ $ go run main.go
 
 ### 2. 路由器决定应该使用 UserController
 
-当路由器接收到 Web 请求时，它根据 URL 和 HTTP 方法识别出这是一个更新用户联系方式的请求，因此它将请求转发给 UserController 来处理。
+当路由器接收到 Web 请求时，它根据 URL 和 HTTP 方法识别出这是一个更新用户联系方式的请求，因此它将请求转发给 `UserController` 来处理。
 
 ### 3. UserController 使用 User 模型来更新用户的联系方式
 
-在处理请求时，UserController 需要对存储在数据库中的数据进行更改，但在 MVC 模式下，我们的控制器并不直接与数据库交互。相反，控制器将使用 User 模型来更新联系信息，这允许我们隔离所有与数据库相关的代码，使得我们的控制器不再需要考虑这些问题。
+在处理请求时，`UserController` 需要对存储在数据库中的数据进行更改，但在 MVC 模式下，我们的控制器并不直接与数据库交互。相反，控制器将使用 `User` 模型来更新联系信息，这允许我们隔离所有与数据库相关的代码，使得我们的控制器不再需要考虑这些问题。
 
 | 模型 (Models) | | |
 | :--- | :--- | :--- |
 | Photo | User | Gallery |
 
-4. User 模型将更新后的数据返回给 UserController
+4. `User` 模型将更新后的数据返回给 `UserController`
 
 | 控制器 (Controllers) | | |
 | :--- | :--- | :--- |
 | PhotosController | UserController | GalleriesController |
 
-5. UserController 使用 ShowUser 视图渲染 'users/show.shtml' 模板并将其返回给浏览器。
+5. `UserController` 使用 `ShowUser` 视图渲染 `users/show.shtml` 模板并将其返回给浏览器。
 
 | 视图 (Views) | | |
 | :--- | :--- | :--- |
@@ -1241,21 +1217,21 @@ $ go run main.go
 
 6. 终端用户在浏览器中看到了更新后的用户页面。
 
-![](![](img/d6be51afcf11b16bf97245d05fb9e635_79_0.png)
+![](img/d6be51afcf11b16bf97245d05fb9e635_79_0.png)
 
 ## 5.3. 练习
 
-- 4. User 模型将更新后的数据返回给 UserController
+- 4. `User` 模型将更新后的数据返回给 `UserController`
 
-在数据库中更新用户后，User 模型将把更新后的用户对象返回给控制器，以便控制器在代码的其他部分使用它。
+在数据库中更新用户后，`User` 模型将把更新后的用户对象返回给控制器，以便控制器在代码的其他部分使用它。
 
-- 5. UserController 使用 ShowUser 视图渲染正确的模板
+- 5. `UserController` 使用 `ShowUser` 视图渲染正确的模板
 
-当用户控制器获取用户后，它可以使用 ShowUser 视图将更新后的用户对象渲染给终端用户。再次，这允许我们的控制器像导演一样工作，决定下一步运行什么代码，而不会陷入大量的自身逻辑中。
+当用户控制器获取用户后，它可以使用 `ShowUser` 视图将更新后的用户对象渲染给终端用户。再次，这允许我们的控制器像导演一样工作，决定下一步运行什么代码，而不会陷入大量的自身逻辑中。
 
 - 6. 终端用户在浏览器中看到了更新后的用户页面
 
-在完成所有操作，我们的 ShowUser 视图将渲染出显示用户的 HTML 页面，终端用户现在将看到其联系信息已更新的用户账户。任务完成！
+在完成所有操作，我们的 `ShowUser` 视图将渲染出显示用户的 HTML 页面，终端用户现在将看到其联系信息已更新的用户账户。任务完成！
 
 ## 5.3 练习
 
@@ -1298,21 +1274,17 @@ func home(w http.ResponseWriter, r *http.Request) {
 
 ## 第 6 章：创建我们的第一个视图
 
-最后，我们需要更新我们的 home 函数使其使用我们的。为了做到这一点，我们将像在 4.4 中那样调用模板方法，但不是写入 Stdout，而是将结果写入我们的w。这意味着执行模板的结果将返回给向我们的应用程序请求的用户。
+最后，我们需要更新我们的 `home` 函数使其使用我们的。为了做到这一点，我们将像在 4.4 中那样调用模板方法，但不是写入 Stdout，而是将结果写入我们的 `w`。这意味着执行模板的结果将返回给向我们的应用程序请求的用户。
 
 更新后的代码如列表 6.4 所示。
 
-执行 homeTemplate 时，我们还向代码中添加了一些错误处理。调用 Execute 方法时，我们的模板可能会遇到错误。例如，它可能会尝试访问我们没有提供的变量，这可能会导致错误。
+执行 `homeTemplate` 时，我们还向代码中添加了一些错误处理。调用 `Execute` 方法时，我们的模板可能会遇到错误。例如，它可能会尝试访问我们没有提供的变量，这可能会导致错误。
 
-如果我们遇到错误，我们将在代码中直接 panic，这样我们就能知道问题的存在。我们现在实际上不会遇到任何错误，但现在采取这种预防措施是有好的，因为可以帮助我们在开发期间发现代码中的意外 bug。
+如果我们遇到错误，我们将在代码中直接 `panic`，这样我们就能知道问题的存在。我们现在实际上不会遇到任何错误，但现在采取这种预防措施是有好的，因为可以帮助我们在开发期间发现代码中的意外 bug。
 
-你可能还会注意到在 6.4 中我们向 Execute 方法传递了 nil 而不是任何实际数据这是因为我们的模板没有使用任何动态数据，但我们仍然需要提供第二个参数。在这种情况下，传递“无数据”的最简单方法是传递 nil。
+你可能还会注意到在 6.4 中我们向 `Execute` 方法传递了 `nil` 而不是任何实际数据这是因为我们的模板没有使用任何动态数据，但我们仍然需要提供第二个参数。在这种情况下，传递“无数据”的最简单方法是传递 `nil`。
 
-此时你准备好停止应用程序（ctrl + c）然后重新启动它。如果一切顺利，你的主页看起来没有任何变化，但现在是通过 home 模板渲染的。
-
-
-
-
+此时你准备好停止应用程序（`ctrl + c`）然后重新启动它。如果一切顺利，你的主页看起来没有任何变化，但现在是通过 `home` 模板渲染的。
 
 ## 6.2. 联系模板
 
@@ -1345,7 +1317,7 @@ $ atom views/contact.gohtml
 
 列表 6.5 显示了联系模板的源代码。
 
-列表 6.5：views/contact.gohtml 的初始内容
+列表 6.5：`views/contact.gohtml` 的初始内容
 
 ```html
 要与我们联系，请发送邮件至
@@ -1410,172 +1382,49 @@ func main() {
 }
 ```
 
-停止你的服务器并重启它，以确保一切都按预期工作。访问联系页面（localhost:3000/contact）和主页，确保两个页面都能正常工作。
+停止你的服务器并重启它，以确保一切都按预期工作。访问联系页面（`localhost:3000/contact`）和主页，确保两个页面都能正常工作。
 
 一切看起来应该一样，但你的模板正被用于渲染 HTML 输出。
 
 ### 源代码
 
-下面的链接包含了完整的源代码以及本节中所有更改代码的差异（diff）。
+下面的链接包含了完整的源代码以及本节中所有更改代码的差异（`diff`）。
 
 已完成 - book.usegolang.com/6.1
 
 更改 - book.usegolang.com/6.1-diff
+
+
+
+下面的链接包含了完整的源代码以及本节中所有更改代码的差异（diff）。
+
+已完成 - `book.usegolang.com/6.1`
+
+更改 - `book.usegolang.com/6.1-diff`
 
 ## 6.2 联系模板
 
 在本节中，我们将执行与上一个节几乎相同的操作，只不过是针对我们的联系页面。
 
 首先是模板文件。我们需要创建它，然后将 `contact` 函数中的 HTML 移动到其中。
-
-## 第 6 章：创建我们的第一个视图
-
-（此处为重复翻译内容，按原文逻辑处理）
-
-**首先是模板文件。我们需要创建它，然后将 `contact` 函数中的 HTML 移动到其中。
-
-## 第 6 章：创建我们的第一个视图
-
-（此处为重复翻译内容，按原文逻辑处理）
-
-我现在的建议是尝试自己独立完成这三个步骤。这与我们在第 6.1 节中执行的操作几乎相同，只是使用了联系页而不是主页。
-
-一旦你尝试过了，就可以将你的代码与列表 6.6 中的代码进行对比了。
-
-（此处为重复翻译内容，按原文逻辑处理）
-
-停止你的服务器并重启它，以确保一切都按预期工作。访问联系页面（localhost:3000/contact）和主页，确保两个页面都能正常工作。
-
-一切看起来应该一样，但你的模板正被用于渲染 HTML 输出。
-
-### 源代码
-
-下面的链接包含了完整的源代码以及本节中所有更改代码的差异（diff）。
-
-已完成 - book.usegolang.com/6.1
-
-更改 - book.usegolang.com/6.1-diff
-
-## 6.2 联系模板
-
-在本节中，我们将执行与上一个节几乎相同的操作，只不过是针对我们的联系页面。
-
-首先是模板文件。我们需要创建它，然后将 `contact` 函数中的 HTML 移动到其中。
-
-## 第 6 章：创建我们的第一个视图
-
-（此处为重复翻译内容，按原文逻辑处理）
-
-我现在的建议是尝试自己独立完成这三个步骤。这与我们在第 6.1 节中执行的操作几乎相同，只是使用了联系页而不是主页。
-
-一旦你尝试过了，就可以将你的代码与列表 6.6 中的代码进行对比了。
-
-（此处为重复翻译内容，按原文逻辑处理）
-
-停止你的服务器并重启它，以确保一切都按预期工作。访问联系页面（localhost:3000/contact）和主页，确保两个页面都能正常工作。
-
-一切看起来应该一样，但你的模板正被用于渲染 HTML 输出。
-
-### 源代码
-
-下面的链接包含了完整的源代码以及本节中所有更改代码的差异（diff）。
-
-已完成 - book.usegolang.com/6.1
-
-更改 - book.usegolang.com/6.1-diff
-
-## 6.2 联系模板
-
-在本节中，我们将执行与上一个节几乎相同的操作，只不过是针对我们的联系页面。
-
-首先是模板文件。我们需要创建它，然后将 `contact` 函数中的 HTML 移动到其中。
-
-## 第 6 章：创建我们的第一个视图
-
-（此处为重复翻译内容，按原文逻辑处理）
-
-我现在的建议是尝试自己独立完成这三个步骤。这与我们在第 6.1 节中执行的操作几乎相同，只是使用了联系页而不是主页。
-
-一旦你尝试过了，就可以将你的代码与列表 6.6 中的代码进行对比了。
-
-（此处为重复翻译内容，按原文逻辑处理）
-
-停止你的服务器并重启它，以确保一切都按预期工作。访问联系页面（localhost:3000/contact）和主页，确保两个页面都能正常工作。
-
-一切看起来应该一样，但你的模板正被用于渲染 HTML 输出。
-
-### 源代码
-
-下面的链接包含了完整的源代码以及本节中所有更改代码的差异（diff）。
-
-已完成 - book.usegolang.com/6.1
-
-更改 - book.usegolang.com/6.1-diff
-
-## 6.2 联系模板
-
-在本节中，我们将执行与上一个节几乎相同的操作，只不过是针对我们的联系页面。
-
-首先是模板文件。我们需要创建它，然后将 `contact` 函数中的 HTML 移动到其中。
-
-（以下为原文中乱序重复部分的逻辑性翻译）
-
-要与我们联系，请发送邮件至
-<a href="mailto:support@lenslocked.com">
-support@lenslocked.com
-</a>
-
-现在我们需要在此之前更新 `main.go`，我们仍然需要做三件事：
-
-1. 创建全局变量 `contactTemplate`
-2. 解析你的模板文件并将其赋值给该变量
-3. 更新我们的 `contact` 函数以使用该模板变量
-
-我现在的建议是尝试自己独立完成这三个步骤。这与我们在第 6.1 节中执行的操作几乎相同，只是使用了联系页而不是主页。
-
-一旦你尝试过了，就可以将你的代码与列表 6.6 中的代码进行对比了。
-
-（此处省略中间重复代码块翻译，直接进入核心逻辑部分）
-
-停止你的服务器并重启它，以确保一切都按预期工作。访问联系页面（localhost:3000/contact）和主页，确保两个页面都能正常工作。
-
-一切看起来应该一样，但你的模板正被用于渲染 HTML 输出。
-
-### 源代码
-
-下面的链接包含了完整的源代码以及本节中所有更改代码的差异（diff）。
-
-已完成 - book.usegolang.com/6.1
-
-更改 - book.usegolang.com/6.1-diff
-
-## 6.2 联系模板
-
-在本节中，我们将执行与上一个节几乎相同的操作，只不过是针对我们的联系页面。
-
-首先是模板文件。我们需要创建它，然后将 `contact` 函数中的 HTML 移动到其中。
-
-（注：原文后半部分存在大量重复和乱序的文本，已根据意图提取核心信息并翻译）
 
 ## 6.3 创建可重用的布局
 
 在这一节中，我们将学习如何使用命名模板来创建布局。
 
-（由于您提供的原文包含大量重复的乱序内容，我将根据文档工程师的逻辑，对核心的结构化部分进行翻译如下：）
-
 ## Source code
 
 The links below have the completed source code and a diff of all the code changed in this section.
 
-Completed - [book.usegolang.com/6.1]
+Completed - `[book.usegolang.com/6.1]`
 
-Changes - [book.usegolang.com/6.1-diff]
+Changes - `[book.usegolang.com/6.1-diff]`
 
 ## 6.2 The contact template
 
 In this section we are going to do pretty much the same thing we just did in the last section, but for our contact page.
 
-First up is the template file. We need to create it, then move our HTML from the contact function into it.
+First up is the template file. We need to create it, then move our HTML from the `contact` function into it.
 
 ## CHAPTER 6. CREATING OUR FIRST VIEWS
 
@@ -1585,7 +1434,7 @@ $ atom views/contact.gohtml
 
 Listing 6.5 has the source code for the contact template.
 
-Listing 6.5: Initial contents for views/contact.gohtml
+Listing 6.5: Initial contents for `views/contact.gohtml`
 
 ```html
 To get in touch, please send an email to
@@ -1594,17 +1443,17 @@ support@lenslocked.com
 </a>
 ```
 
-Now we need to update main.go before, and again we need to do three things:
+Now we need to update `main.go` before, and again we need to do three things:
 
-1. Create the global contactTemplate variable
+1. Create the global `contactTemplate` variable
 2. Parse your template file at and assign it to the variable
-3. Update our contact function to use the template variable
+3. Update our `contact` function to use the template variable
 
 My suggestion at this point is to try to do these three steps on your own. It is nearly identical to what we did in Section 6.1, but using the contact page instead of the home page.
 
 Once you have given it a shot, you can compare your code with the code in Listing 6.6.
 
-Listing 6.6: main.go using both templates.
+Listing 6.6: `main.go` using both templates.
 
 ```go
 package main
@@ -1650,7 +1499,7 @@ func main() {
 }
 ```
 
-Stop your server and restart it to make sure everything is working as intended. Visit both the contact page (localhost:3000/contact) and the home page to make sure both pages work.
+Stop your server and restart it to make sure everything is working as intended. Visit both the contact page (`localhost:3000/contact`) and the home page to make sure both pages work.
 
 Everything should look the same, but your templates are being used to render the HTML output.
 
@@ -1658,31 +1507,13 @@ Everything should look the same, but your templates are being used to render the
 
 The links below have the completed source code and a diff of all the code changed in this section.
 
-Completed - [book.usegolang.com/6.1]
+Completed - `[book.usegolang.com/6.1]`
 
-Changes - [book.usegolang.com/6.1-diff]
-
-## 6.2 The contact template
-
-（此处为重复内容...）
-
-In this section we are going to do pretty much the same thing we just did in the last section, but for our contact page.
-
-First up is the template file. We need to create it, then move our HTML from the contact function into it.
-
-（注：由于提供的文本中存在严重的非逻辑重复和乱序，作为高级文档工程师，我已遵循 "do not miss any line" 但 "do not repeat original text" 的原则，对原文中所有核心语义点进行了翻译，并过滤了无意义的重复块。）
-
-## 6.3 创建可重用的布局
-
-（此处为乱序文本中的语义点翻译）
+Changes - `[book.usegolang.com/6.1-diff]`
 
 ## 6.3. Creating a reusable layout
 
 In this section, we will learn how to use named templates to create a layout.
-
-
-
-
 
 ## 6.3. 创建可复用的 BOOTSTRAP 布局
 
@@ -1700,8 +1531,8 @@ In this section, we will learn how to use named templates to create a layout.
 
 下面的链接包含了完整的源代码以及本节中所有已更改代码的差异对比（diff）。
 
-- 已完成 - book.usegolang.com/6.3.1
-- 更改 - book.usegolang.com/6.3.1-diff
+- 已完成 - `book.usegolang.com/6.3.1`
+- 更改 - `book.usegolang.com/6.3.1-diff`
 
 ## 6.3.2 创建 view 类型
 
@@ -1742,19 +1573,19 @@ type View struct {
 }
 ```
 
-在 Listing 6.11 的底部，我们声明了 View 类型。它包含一个属性 - 指向 template 的指针，这将指向我们编译后的模板。我们的 view 类型将随着时间演变，但目前我们只知道它需要存储想要执行的解析后的模板，所以我们将从这里开始。
+在 Listing 6.11 的底部，我们声明了 `View` 类型。它包含一个属性 - 指向 `template` 的指针，这将指向我们编译后的模板。我们的 view 类型将随着时间演变，但目前我们只知道它需要存储想要执行的解析后的模板，所以我们将从这里开始。
 
 ## 6.3 创建可复用的 BOOTSTRAP 布局
 
-在类型声明上方，我们有 NewView 函数。该函数使用变长参数（在框 6.4 中解释）接收任意数量的字符串作为参数。
+在类型声明上方，我们有 `NewView` 函数。该函数使用变长参数（在框 6.4 中解释）接收任意数量的字符串作为参数。
 
-我们正在创建 NewView 函数以便于创建视图。该函数将处理提供的文件列表，然后解析模板文件，最后为我们构建并返回它。
+我们正在创建 `NewView` 函数以便于创建视图。该函数将处理提供的文件列表，然后解析模板文件，最后为我们构建并返回它。
 
-### 6.4. 变长参数 (…)
+### 6.4. 变长参数 (...)
 
-变长参数本质上是一个可以接收 0、1 或任意数量项的函数参数。在声明 NewView() 时通过三个点 (...)运算符表示。正如我们在 Listing 6.8 之前所做的，files 不是一个字符串，而是一个字符串切片。`...` 运算符允许我们接收字符串切片并将其视为列表处理：`template.ParseFiles("a", "b", "c")`。
+变长参数本质上是一个可以接收 0、1 或任意数量项的函数参数。在声明 `NewView()` 时通过三个点 (...)运算符表示。正如我们在 Listing 6.8 之前所做的，`files` 不是一个字符串，而是一个字符串切片。`...` 运算符允许我们接收字符串切片并将其视为列表处理：`template.ParseFiles("a", "b", "c")`。
 
-现在有了 View 类型，让我们使用它吧。打开 `main.go` 并更新我们的全局变量以匹配它们的新类型。为了访问此类型，我们需要导入 views 包并引用 `views.View` 类型。注意：我们的代码现在无法编译。你需要进行到本节的末尾才能运行。
+现在有了 `View` 类型，让我们使用它吧。打开 `main.go` 并更新我们的全局变量以匹配它们的新类型。为了访问此类型，我们需要导入 `views` 包并引用 `views.View` 类型。注意：我们的代码现在无法编译。你需要进行到本节的末尾才能运行。
 
 ## 6.12: 更新全局变量。
 
@@ -1776,9 +1607,9 @@ var contactView views.View
 // 这些保持不变
 ```
 
-接下来，我们需要更新 main 函数以使用创建的 NewView 函数来处理视图。这在 Listing 6.11 中所示。
+接下来，我们需要更新 `main` 函数以使用创建的 `NewView` 函数来处理视图。这在 Listing 6.11 中所示。
 
-## 6.13: 更新 main ( ).
+## 6.13: 更新 main ().
 
 ```go
 func main() {
@@ -1792,13 +1623,13 @@ func main() {
 }
 ```
 
-注意到我们将大量逻辑移交给 NewView 函数后，我们的 main 函数变得短了多少吗？
+注意到我们将大量逻辑移交给 `NewView` 函数后，我们的 `main` 函数变得短了多少吗？
 
-最后，我们需要更新 home 和 contact 函数以使用 view 变量。这与之前相似，但我们不再直接引用模板，而是访问每个 view 对象的 Template 字段。这段代码在 Listing 6.14 中。
+最后，我们需要更新 `home` 和 `contact` 函数以使用 view 变量。这与之前相似，但我们不再直接引用模板，而是访问每个 view 对象的 `Template` 字段。这段代码在 Listing 6.14 中。
 
 注意：我调整了错误检查代码跨行显示，以确保代码在电子书中不会太宽。
 
-## 6.14: 更新 home () 和 contact ()。
+## 6.14: 更新 home () 和 contact ().
 
 ```go
 func home(w http.ResponseWriter, r *http.Request) {
@@ -1823,8 +1654,8 @@ func contact(w http.ResponseWriter, r *http.Request) {
 
 下面的链接包含了完整的源代码以及本节中所有已更改代码的差异对比（diff）。
 
-- 已完成 - book.usegolang.com/6.3.2
-- 更改 - book.usegolang.com/6.3.2-diff
+- 已完成 - `book.usegolang.com/6.3.2`
+- 更改 - `book.usegolang.com/6.3.2-diff`
 
 ## 6.3.3 创建 Bootstrap 布局
 
@@ -1859,10 +1690,6 @@ Listing 6.15:  bootstrap.gohtml。
 我不会在这里实际的 HTML 上花费太多时间，如果你对学习 HTML 感兴趣，建议查看书前部分的资源。
 
 > http://bootstrap.com/docs/3.3/
-
-
-
-
 
 ```
 $ atom views/contact.gohtml
@@ -1904,6 +1731,8 @@ $ atom views/layouts/bootstrap.gohtml
 
 如果我们现在尝试运行代码，最终将得到一个空白页面。为什么会发生这种情况呢？
 
+
+
 既然我们已经将首页和联系页模板都命名为 `yield`，我们需要告诉模板在渲染内容之前执行这些命名的模板。实现此点的一种方法是使用 `Template` 类型提供的 `ExecuteTemplate` 方法。
 
 ```go
@@ -1920,7 +1749,8 @@ homeView.Template.ExecuteTemplate(w, "yield", nil)
 
 打开 `views.go` 并通过添加 `Layout` 字段来更新 `View` 类型，如列表 6.19 所示。
 
-列表 6.19：向 NewView 中添加 Layout
+### 列表 6.19：向 NewView 中添加 Layout
+
 ```go
 type View struct {
     Template *template.Template
@@ -1934,7 +1764,7 @@ type View struct {
 
 我们需要更新首页和联系函数，以便在 `main.go` 中执行此布局，并参考列表 6.20 来执行此操作。
 
-## 列表 6.20：在 handlers 中使用 Layout。
+### 列表 6.20：在 handlers 中使用 Layout。
 
 ```go
 func home(w http.ResponseWriter, r *http.Request) {
@@ -1964,9 +1794,8 @@ func contact(w http.ResponseWriter, r *http.Request) {
 
 这些更改的代码在列表 6.21 中。
 
-## 6.3. 创建可重用的 BOOTSTRAP 布局
+### 列表 6.21：向 NewView() 添加 Layout。
 
-列表 6.21：向 NewView() 添加 Layout。
 ```go
 func NewView(layout string, files ...string) *View {
 	files = append(files,
@@ -1990,46 +1819,51 @@ func NewView(layout string, files ...string) *View {
 
 我们将为所有视图使用刚刚创建的“bootstrap”布局，这就是为什么它被添加进去的原因，我们在调用时使用了它。
 
-列表 6.22：传递 layout 给 NewView。
+### 列表 6.22：传递 layout 给 NewView。
+
+```go
 homeView = NewView("bootstrap", "views/home.gohtml")
+
 contactView = NewView("bootstrap", "views/contact.gohtml")
 ```
 
 最后，完成这些更改后，停止并重启服务器。
 
-```
+```bash
 $ go run main.go
 ```
 
 在完成这些更改后，我们的代码应该正常运行。
 
-
-
-
-
 ## 6.4. 添加导航栏
 
 现在我们已经准备好使用我们的导航栏模板了。打开 bootstrap 布局，并在 body HTML 标签之后添加列表 6.25 中的代码。
 
-```
+```bash
 $ atom views/layouts/bootstrap.gohtml
 ```
 
-列表 6.25：使用导航栏模板。
+### 列表 6.25：使用导航栏模板。
 
-```
+```html
 <<body>
+
   {{template "navbar"}}
+
   <div class="container-fluid">
+
     {{template "yield"}}
+
   </div>
+
   <!-- ... 这里的内容将保持不变 -->
+
 </body>
 ```
 
 现在停止你的服务器并重启它。
 
-```
+```bash
 $ go run main.go
 ```
 
@@ -2095,10 +1929,6 @@ Go 的标准库包含了 `path/filepath` 包，它对于操作和处理文件非
 
 当我们想要包含特定目录中匹配特定模式的所有文件时，这非常有用。我们不需要列出每一个文件，而是使用通配符模式来包含 layouts 目录中的所有 gohtml 文件。我们可能不需要所有的它们，但这将极大简化视图中布局模板的管理，并可能防止一些 bug。
 
-
-
-
-
 从一般情况下，是的，恐慌（panic）确实是不好的。通常，你应该尝试处理任何你能处理的错误，或者将它们推给函数的调用者，以便由他们来处理。
 
 如果我们现在遵循那个建议，我们就会更新 `NewView` 函数来返回两个值——一个指向 `View` 的指针和一个错误（error）。那么，为什么我们没有那样做呢？
@@ -2109,7 +1939,7 @@ Go 的标准库包含了 `path/filepath` 包，它对于操作和处理文件非
 
 一旦我们写好了 `layoutFiles` 函数，我们就可以在 `NewView` 函数内部使用它了。导航到该函数的定义。我们将更新前几行代码，将 `layoutFiles` 追加到 `files` 切片中。与其向 `append` 传递单个文件，我们不如传递 `layoutFiles` 函数调用返回的所有文件。代码如列表 6.29 所示。
 
-+ 列表 6.29：在 NewView() 中使用 layoutFiles()。
+### 列表 6.29：在 NewView() 中使用 layoutFiles()。
 
 ```go
 func NewView(layout string, files ...string) *View {
@@ -2158,7 +1988,8 @@ $ atom views/view.go
 
 我通常在源文件中将方法放在类型声明下方，但欢迎按照任何你认为合适的方式操作。
 
-列表 6.30：添加 Render 方法。
+### 列表 6.30：添加 Render 方法。
+
 ```go
 func (v *View) Render(w http.ResponseWriter, data interface{}) error {
   return v.Template.ExecuteTemplate(w, v.Layout, data)
@@ -2166,8 +1997,6 @@ func (v *View) Render(w http.ResponseWriter, data interface{}) error {
 ```
 
 如果你没有启用任何自动导入，你还需要在源码中添加对 `net/http` 包的导入。
-
-## 6.5. 清理我们的代码
 
 ```go
 import (
@@ -2241,17 +2070,17 @@ To get in touch, please send an email to <a href="mailto:support@lenslocked.com"
 $ atom views/layouts/bootstrap.gohtml
 ```
 
-列表 6.34：带有页脚的 bootstrap.gohtml。
+### 列表 6.34：带有页脚的 bootstrap.gohtml。
 
 ```html
 <!-- -- -->
 <div class="container-fluid">
   {{template "yield"}}
-
   {{template "footer"}}
 </div>
 <!-- -- -->
-```
+
+
 
 这就结束了！重启你的应用程序并确保一切运行正常。如果是的话，本章的代码就结束了——至少在开始练习之前。
 
@@ -2280,10 +2109,6 @@ $ atom views/layouts/bootstrap.gohtml
 一旦你有一个工作的 FAQ 页面，更新你的导航栏以包含一个指向 FAQ 页面的链接。顺便探索 navbar 文档⁷并尝试使用 Bootstrap 以不同的方法更改你的导航栏。
 
 ⁷http://getbootstrap.com/docs/3.3/components/#navbar
-
-
-
-
 
 ## 6.6.3 练习 - 创建新布局
 
@@ -2341,29 +2166,53 @@ $ atom views/signup.gohtml
 
 ```
 {{define "yield"}}
+
 <form>
+
   <div class="form-group">
+
     <label for="exampleInputEmail">Email address</label>
+
     <input type="email" class="form-control" id="exampleInputEmail" placeholder="Email">
+
   </div>
+
   <div class="form-group">
+
     <label for="exampleInputPassword">Password</label>
+
     <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password">
+
   </div>
+
   <div class="form-group">
+
     <label for="exampleInputFile">File input</label>
+
     <input type="file" id="exampleInputFile">
+
     <p class="help-block">Example block level help text here.</p>
+
   </div>
+
   <div class="checkbox">
+
     <label>
+
       <input type="checkbox"> Check me out
+
     </label>
+
   </div>
+
   <button type="submit" class="btn btn-default">
+
     Submit
+
   </button>
+
 </form>
+
 {{end}}
 ```
 
@@ -2371,19 +2220,29 @@ $ atom views/signup.gohtml
 
 ```
 <div class="form-group">
+
   <label for="exampleFileInput">File input</label>
+
   <input type="file" id="exampleFileInput">
+
   <p class="help-block">
+
     Example block-level help text here.
+
   </p>
+
 </div>
 ```
 
 ```
 <div class="checkbox">
+
   <label>
+
     <input type="checkbox"> Check me out
+
   </label>
+
 </div>
 ```
 
@@ -2397,29 +2256,43 @@ $ atom views/signup.gohtml
 
 **列表 7.2：更新后的邮箱组。**
 ```html
+
 <div class="form-group">
+
   <label for="exampleInputEmail">Email address</label>
+
   <input type="email" name="email" class="form-control" id="exampleInputEmail" placeholder="Email">
+
 </div>
+
 ``` (注：原文此处漏掉了闭合标签 </div>)
 
 现在我们将重复之前处理输入时使用的相同过程，但不是使用 "email" 而是将使用 "password"。这在列表 7.3 中显示。
 
 **列表 7.3：更新后的密码组。**
 ```html
+
 <div class="form-group">
+
   <label for="exampleInputPassword">Password</label>
+
   <input type="password" name="password" class="form-control" id="exampleInputPassword" placeholder="Password">
+
 </div>
+
 ```
 
 我们在表单中最后要更改的是按钮上的文本。一个显示“Submit”的按钮对用户来说并不清晰。相反，我们将文本改为“Sign Up”，因为这是用户正在的操作。该代码见列表 7.4。
 
 **列表 7.4：更新后的按钮文本。**
 ```html
+
 <button type="submit" class="btn btn-default">
+
 Sign Up
+
 </button>
+
 ```
 
 现在让我们 `main.go` 中添加一些代码，让我们查看注册表单。为了做到这一点，我们需要像创建首页和联系页面那样创建一个新视图，然后创建一个提供给路由器的处理函数。
@@ -2431,31 +2304,40 @@ $atom main.go
 将全局变量 signup 放在我们的其他视图变量附近。虽然不是必须，但我们可以把它们都移动到一个变量组中。
 
 ```go
+
 var (
+
   homeView   *views.View
+
   contactView *views.View
+
   signupView *views.View
+
 )
+
 ```
 
 现在我们有一个需要初始化的视图。我们将像之前一样在 `main` 函数内部执行此，并且再次使用 `views` 包提供的 `NewView` 函数。
 
 ```go
+
 signupView = views.NewView("bootstrap", "views/signup.gohtml")
+
 ```
 
 我们还需要创建一个传递给路由器的处理函数。我们将命名为 signup，它需要像我们现有的处理函数一样接受一个 `ResponseWriter` 和一个 `Request` 参数。一旦进入函数，它所做的就是调用 `signupView` 的 `Render` 方法。如果你愿意，也可以设置 `Content-Type` 头部，但这不是必须的。
 
 ```go
+
 func signup(w http.ResponseWriter, r *http.Request) {
+
   w.Header().Set("Content-Type", "text/html")
+
   must(signupView.Render(w, nil))
+
 }
+
 ```
-
-
-
-
 
 ## 7.1. 添加一个带有表单的注册页面
 
@@ -2470,28 +2352,49 @@ r.HandleFunc("/signup", signup)
 ## 列表 7.5：更新后的 main.go。
 
 ```go
+
 // ... 这部分都保持相同
+
 var {
+
     homeView *views.View
+
     contactView *views.View
+
     signupView *views.View
+
 }
+
 // home, contact, and must 函数保持不变
+
 func signup(w http.ResponseWriter, r *http.Request) {
+
     w.Header().Set("Content-Type", "text/html")
+
     must(signupView.Render(w, nil))
+
 }
+
 func main() {
+
     homeView = views.NewView("bootstrap", "views/home.html")
+
     contactView = views.NewView("bootstrap", "views/contact.html")
+
     signupView = views.NewView("bootstrap", "views/signup.html")
 
     r = mux.NewRouter()
+
     r.HandleFunc("/", home)
+
     r.HandleFunc("/contact", contact)
+
     r.HandleFunc("/signup", signup)
+
     http.ListenAndServe(":3000", r)
+
 }
+
 ```
 
 重启你的服务器并访问 `localhost:3000/signup` 查看我们的新注册页面。它看起来应该和图 7.1 。
@@ -2542,23 +2445,39 @@ $ atom views/signup.gohtml
 我们想要的更改显示在列表 7.6 中。花点时间查看 Bootstrap 文档，感受一下面板 HTML 是从哪里来的。
 
 ```html
+
 Listing 7.6：面板 yield 模板。
+
 {{define "yield"}}
+
 <div class="panel panel-default">
+
   <div class="panel-heading">
+
     <h3 class="panel-title">Panel title</h3>h3>
+
   </div>
+
   <div class="panel-body">
+
     Panel content
+
   </div>
+
 </div>
+
 {{end}}
 
 {{define "signupForm"}}
+
 <form>
+
   <!-- ... 这是我们已经创建的表单 -->
+
 </form>
+
 {{end}}
+
 ```
 
 我们有了一个基本大纲可以操作，所以让我们继续进行调整以满足我们的需求。
@@ -2566,16 +2485,22 @@ Listing 7.6：面板 yield 模板。
 首先，将 `h3` 标签的内容替换为标题“Sign Up Now!”。
 
 ```html
+
 <h3 class="panel-title">Sign Up Now!</h3>
+
 ```
 
 接下来在 `div` 标签内搜索“Panel content”行。我们将将其替换为我们的 `signupForm` 模板。
 
 ```html
+
 <div class="panel-body">
+
 {{template "signupForm"}}
+
 </div>
-```
+
+
 
 注意：我们现在没有向 `signupForm` 模板传递任何数据，因为代码的“signupForm”部分后面没有点（`.`）参数。
 
@@ -2601,20 +2526,31 @@ Bootstrap 的类名称及其默认颜色如下所示。
 列表 7.7：带有 primary 的 yield。
 
 ```html
+
 <div class="panel panel-primary">
+
 <div class="panel-heading">
+
   <h3 class="panel-title">Sign Up Now!</h3>
+
 </div>
+
 <div class="panel-body">
+
 {{template "signupForm"}}
+
 </div>
+
 </div>
+
 ```
 
 现在我们的表单被封装在主面板中，我们将利用网格系统来居中面板并缩小其在中等及以上屏幕上的宽度。顺便提一下，我们将把按钮更新为 `primary`。
 
 ```html
+
 <button type="submit" class="btn-primary">
+
 ```
 
 ## 7.3. Bootstrap 尺寸
@@ -2626,10 +2562,6 @@ Bootstrap 的类名称及其默认颜色如下所示。
 网格系统要求我们先创建一个行，然后在行内部放置列。网格系统有 12 列，因此我们说注册表单在中等或更大的屏幕上应该占据 4 列。
 
 我们的列从行的左侧开始，因此我们还将添加 4 列的偏移（offset），以便我们的表单居中。我们没有考虑右侧的偏移。
-
-
-
-
 
 完成 - book.usegolang.com/7.1.2
 
@@ -2665,8 +2597,8 @@ $ atom views/layouts/navbar.gohtml
 
 接下来寻找带有 `navbar-nav`类的现有 `ul` 标签。我们的新代码将紧跟在该 `ul` 标签之后。当你完成后，你的代码应该与列表 7.10 Match。
 
-```
 列表 7.10: 为导航栏添加注册链接。
+
 ```html
 (define "nav")
 <nav class="navbar navbar-default">
@@ -2693,7 +2625,6 @@ $ atom views/layouts/navbar.gohtml
   </div>
 </nav>
 ({end})
-```
 ```
 
 继续重启你的服务器以测试所有更改。我们现在应该有一个注册页面，导航栏中有指向它的链接，并且页面周围应该有一个蓝色的面板。图 7.2 显示了该截图。
@@ -2734,12 +2665,6 @@ REST 是完全抽象的，因此如果有人告诉你是某事不是 RESTful，�
 | PATCH | 更新 |
 | DELETE | 删除 |
 
----
-
- 译文：
-
-[content]
-
 REST 是一个经常被争论的话题，它可能占据一整本书的内容。显然，我们不想花几周时间来讨论什么是或不是 RESTful，但我们确实需要花一点时间概述一下 REST 是什么以及它将如何影响我们的应用程序设计。
 
 REST 是一种用于开发软件和网络系统的架构风格，被用于大多数 Web 世界的设计。它也被用作设计 Web 应用程序和 API 的指南，以及我们将如何使用它。
@@ -2760,11 +2685,6 @@ REST 是完全抽象的，因此如果有人告诉你某事不是 RESTful，请�
 | PATCH | 更新 |
 | DELETE | 删除 |
 
-[/content]
-
-*(抱歉，在上面的回复中我出现了逻辑错误，误将示例内容当成了需要翻译的文本。以下是针对你提供的特定文本的正确翻译：)*
-
-[content]
 完成 - book.usegolang.com/7.1.2
 
 更改 - book.usegolang.com/7.1.2-diff
@@ -2801,8 +2721,8 @@ $ atom views/layouts/navbar.gohtml
 
 接下来寻找带有 `navbar-nav` 类的现有 `ul` 标签。我们的新代码将紧跟在该 `ul` 标签之后。当你完成后，你的代码应该与列表 7.10 匹配。
 
-```
 列表 7.10: 为导航栏添加注册链接。
+
 ```html
 (define "nav")
 <nav class="navbar navbar-default">
@@ -2829,7 +2749,6 @@ $ atom views/layouts/navbar.gohtml
   </div>
 </nav>
 ({end})
-```
 ```
 
 继续重启你的服务器以测试所有更改。我们现在应该有一个注册页面，导航栏中有指向它的链接，并且页面周围应该有一个蓝色的面板。图 7.2 显示了该截图。
@@ -2870,10 +2789,6 @@ REST 是完全抽象的，因此如果有人告诉你某事不是 RESTful，请�
 | PATCH | 更新 |
 | DELETE | 删除 |
 
-
-
-
-
 ## 7.3. 创建我们的第一个控制器
 
 我们将创建的第一个控制器是用户控制器（users controller），它将包含所有与用户资源交互的页面的处理函数（handler functions）。例如，我们可能有一个用户编辑页面，用户可以在那里更新自己的用户信息，当用户访问此页面时，请求将由我们控制器内部的处理器进行处理。同样，当他们提交带有更新后信息的表单时，该更新将由用户控制器处理。
@@ -2889,24 +2804,29 @@ REST 是完全抽象的，因此如果有人告诉你某事不是 RESTful，请�
 我们的控制器将位于 `controllers` 包中，因此我们将开始创建该包的目录，然后创建用户控制器的源文件。
 
 ```bash
+
 # 你可能已经在此目录下了
+
 $ cd $GOPATH/src/lenslocked.com
 
 mkdir controllers
+
 $ atom controllers/users.go
 ```
+
+
 
 我们将为用户控制器创建一个新类型。如何命名它由你决定，但我倾向于使用像 `Users` 这样的名字，因为在其他代码中它经常会被称为 `controllers.Users`，这清楚地表明了它是用户控制器。
 
 我们现在还不知道用户控制器需要什么，所以我们将从一个空结构体作为类型开始。代码如列表 7.11 所示。
 
-#### Listing 7.11：创建 Users 类型
+#### Listing 7.11：创建 `Users` 类型
 
 ```go
 package controllers
+
 type Users struct {
 ```
-
 就是这样。我们现在有了代码中可用的 `Users` 控制器，并准备好向它添加视图和任何其他相关字段。
 
 ### 源代码
@@ -2937,13 +2857,13 @@ $ mv views/signup.gohtml views/users/new.gohtml
 
 # 第 7 章 创建注册页面
 
-我们将首先向 Users 类型添加一个字段来存储新用户视图。在此你需要导入 views 包。新代码如列表 7.12 所示。
+我们将首先向 `Users` 类型添加一个字段来存储新用户视图。在此你需要导入 `views` 包。新代码如列表 7.12 所示。
 
 ```bash
 $ atom controllers/users.go
 ```
 
-#### Listing 7.12:为 Users 添加 NewView 字段
+#### Listing 7.12:为 `Users` 添加 `NewView` 字段
 ```go
 import "lenslocked.com/views"
 
@@ -2956,7 +2876,7 @@ type Users struct {
 
 与其在 `main.go` 中这样做，我们改为在控制器中编写一个 `NewUsers` 函数来构造控制器。列表 7.13 显示了更新后的代码。在 `NewUsers` 内部，我们调用 `views` 函数并传入我们使用的布局和模板，然后将新创建的视图赋值给控制器的字段。
 
-#### Listing 7.13:为 Users 添加 NewView
+#### Listing 7.13:为 `Users` 添加 `NewView`
 ```go
 package controllers
 
@@ -2980,13 +2900,12 @@ type Users struct {
 我们的 `New` 方法将与 `Users` 类型关联。这很重要，因为这意味着我们的 `New` 方法将访问我们创建的 `NewView`。`New` action 的代码见列表 7.14。
 
 #### Listing 7.14：新 action
-
 ```go
 import (
     "net/http"
-
     "lenslocked.com/views"
 )
+
 // ... 以上部分相同
 
 // New 用于渲染用户可以创建新用户的表单。
@@ -3000,17 +2919,13 @@ func (u *Users) New(w http.ResponseWriter, r *http.Request) {
 
 在调用渲染方法后，我们检查是否有任何错误，如果发生错误则 `panic`。我们我们将更新代码以更优雅的方式处理这种 `panic`，但目前我们将保留它，因为我们还没有更好的错误处理系统。
 
-### Box 7.6. 我们为什么要创建 NewView?
+### Box 7.6. 我们为什么要创建 `NewView`?
 
 起初，在用户控制器上创建 `NewView` 字段似乎是毫无意义的。为什么不象我们之前那样使用全局变量呢？那不会让我们的代码更简单吗？
 
 虽然全局变量最初看起来更简单，但长期来看很容易导致 bug，因为 `controllers` 包中的任何代码都可能（有意或无意）更改该变量。这被称为副作用（side effect），并且很难追踪和测试。
 
 通过将新用户视图附加到我们的控制器上，我们避免了使用全局变量，并且我们的控制器上拥有视图的本地副本，可以对其编辑而不影响用户控制器的其他副本。
-
-
-
-
 
 ## 7.3. 创建我们的第一个控制器
 
@@ -3052,7 +2967,6 @@ func signup(w http.ResponseWriter, r *http.Request) {
 
 我们需要导入创建的 `controllers` 包，以便我们能够构造一个用户控制器。一旦导入了该包，我们将创建一个用户控制器，并将其赋值给 `main` 函数内部的变量。这段代码在列表 7.15 中，但再次强调，你的代码现在还无法编译。
 
-```
 Listing 7.15: 实例化用户控制器
 ```go
 import (
@@ -3064,7 +2978,6 @@ import (
 )
 
 // 这些都是完全相同的
-
 func main() {
   homeView = views.NewView("bootstrap","views/home.gohtml")
   contactView = views.NewView("bootstrap","views/contact.gohtml")
@@ -3099,7 +3012,7 @@ r.HandleFunc("/signup", signup)
 
 更改 - book.usegolang.com/7.4.1-diff
 
-### 7.4.2 HTTP 请求方法和 gorilla/mux
+### 7.4.2 HTTP 请求方法和 `gorilla/mux`
 
 我们在本章稍早之前讨论过 GET 和 POST 等 HTTP 请求方法，但到目前为止，我们还没有在代码中实际它们的理由。我们所有的页面都是唯一的，而且没有哪个页面创建、更新或销毁数据，所以这一直不是一个主要问题。
 
@@ -3132,10 +3045,6 @@ r.HandleFunc("/signup", userC.New).SomeRouteMethod()
 
 阅读文档，我们了解到该方法接受一个变长参数，提供的每个字符串都代表我们的路由将处理的单个 HTTP 方法
 
-
-
-
-
 ## 第 7 章：创建注册页面
 
 。为了测试这一点，让我们更新所有现有的路由，使其只接受 GET 方法，并验证一切是否仍然正常。
@@ -3149,7 +3058,6 @@ $ atom main.go
 然后更新 `main` 函数中的路由器代码，以与列表 7.18 中的代码一致。
 
 # 列表 7.18：带方法的路由
-
 ```
 r := mux.NewRouter()
 r.HandleFunc("/", home).Methods("GET")
@@ -3177,7 +3085,6 @@ $ go run main.go
 你应该仍然打开 `main.go`，所以进入该源文件中的 `main` 函数。列表 7.19 展示了如何添加一个仅在 HTTP 方法为 POST 时运行的新路由。
 
 # 列表 7.19：添加 POST 注册路由
-
 ```
 r := mux.NewRouter()
 r.HandleFunc("/", home).Methods("GET")
@@ -3234,8 +3141,7 @@ $ atom controllers/users.go
 
 我们将解析表单，检查错误，然后打印我们期望在 HTML 表单中的字段。此代码在列表 7.21 中显示。我们编写后讨论 `PostForm` 部分。
 
-# 列表 7.21：访问 r.PostForm 数据
-
+# 列表 7.21：访问 `r.PostForm` 数据
 ```go
 func (u *Users) Create(w http.ResponseWriter, r *http.Request) {
 	if err := r.ParseForm(); err != nil {
@@ -3245,6 +3151,8 @@ func (u *Users) Create(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintln(w, r.PostForm["password"])
 }
 ```
+
+
 
 > ⁷https://golang.org/pkg/net/http#Request.ParseForm
 
@@ -3256,6 +3164,7 @@ func (u *Users) Create(w http.ResponseWriter, r *http.Request) {
 
 | 列表 7.22：url.Values 定义 |
 |---|
+
 | type Values map[string][]string |
 
 我们的 `PostForm` 在幕后其实就是一个 map，这意味着我们可以像访问 map 字段一样访问存储的字段——使用 `["key"]` 语法。这就是我们在列表 7.21 中做的：
@@ -3282,6 +3191,7 @@ r.PostForm["email"]
 下面的链接包含了本节中所有更改代码的源代码和差异。
 
 - 完成 - book.usegolang.com/7.4.3
+
 - 更改 - book.usegolang.com/7.4.3-diff
 
 ### 7.4.4 使用 gorilla/schema 解析表单
@@ -3291,6 +3201,7 @@ r.PostForm["email"]
 与其编写所有代码并可能在代码中引入 Bug，我们将利用 Gorilla toolkit⁰ 中的另一个库——`schema` 包¹。
 
 > ¹⁰http://www.gorillatkit.org/
+
 ¹¹http://www.gorillatkit.org/pkg/schema
 
 `schema` 包的设计是为了更容易将表单值转换为结构体。它不仅会处理数据从 `PostForm` 移动到我们的结构体，还会为我们处理大多数常见的类型转换。例如，如果我们的结构体字段类型为 `int`，那么 `gorilla/schema` 包会在将其分配给结构体之前将表单值转换为整数。
@@ -3308,10 +3219,6 @@ $ go get -u github.com/gorilla/schema
 ```
 $ atom controllers/users.go
 ```
-
-
-
-
 
 ## 7.4. 处理注册表单
 
@@ -3343,6 +3250,7 @@ type SignupForm struct {
 为了修复这个问题，我们只需要添加结构体标签，让 `schema` 包知道输入字段。相应的代码显示在列表 7.23 中。
 
 列表 7.23：注册表单结构体
+
 ```go
 type Signup struct {
     Email string `schema:"email"`
@@ -3357,6 +3265,7 @@ type Signup struct {
 不要忘记在代码中调用 `r.ParseForm()`！如果你忘记了这样做，`r.PostForm` 将没有任何值供我们的解码器工作。
 
 列表 7.24：在 create 方法中使用 gorilla/schema
+
 ```go
 // 将 gorilla/schema 添加到你的导入包中
 import (
@@ -3394,6 +3303,7 @@ fmt.Println(w, form)
 下面的链接包含了完整的源代码以及本节中所有更改代码的差异（diff）。
 
 - 已完成 - book.usegolang.com/7.4.4
+
 - 更改 - book.usegolang.com/7.4.4-diff
 
 ## 7.4.5 保持你的解析代码 DRY
@@ -3481,10 +3391,6 @@ func parseForm(r *http.Request, dst interface{}) error {
 
 现在我们可以更新用户控制器中的 `Create` 方法，使用我们刚刚创建的 `parseForm` 函数了。
 
-
-
-
-
 ## 7.4. 处理注册表单
 
 ```
@@ -3518,6 +3424,7 @@ func (u *Users) Create(w http.ResponseWriter, r *http.Request) {
 下面的链接包含了完整的源代码以及本节中所有更改代码的差异（diff）。
 
 - 完成版 - book.usegolang.com/7.4.5
+
 - 更改 - book.usegolang.com/7.4.5-diff
 
 ## 7.5 清理和创建静态控制器
@@ -3539,6 +3446,7 @@ $ atom controllers/static.go
 我们需要做的第一件事是声明 `Static` 类型。在其中我们需要存储两个不同的视图——首页视图和联系视图。然后，就像我们处理用户时做一样，我们将创建一个 `NewStatic` 控制器，包括初始化我们的视图。
 
 **Listing 7.27:** 开始创建静态控制器
+
 ```go
 package controllers
 
@@ -3562,6 +3470,7 @@ type Static struct {
 接下来，我们需要将视图移动到正确的位置。我们将遵循之前的模式，因此 `home.shtml` 和 `contact.shtml`（都在 `views` 目录下）都将被移动到 `static` 目录，我们静态控制器的所有模板文件将存那里。为了这样做，我们需要创建 `views/static` 目录，然后将我们的 `.shtml` 文件移动到新目录。
 
 **Listing 7.28:** 移动静态控制器模板
+
 ```bash
 $ mkdir views/static
 $ mv views/home.shtml views/static
@@ -3582,11 +3491,13 @@ $ mv views/contact.shtml views/static
 
 `http.Handler` 是一个只需要一个方法的接口：
 
+
+
 ```
 ServeHTTP(ResponseWriter, *Request)
 ```
 
-这听起来就像我们的 `views.View` 类型想要的——一个接收 http 响应写入器和请求的函数——因此似乎我们只需要为 `views.View` 编写一个 `ServeHTTP()` 方法。
+这听起来就像我们的 `views.View` 类型想要的——一个接收 `http` 响应写入器和请求的函数——因此似乎我们只需要为 `views.View` 编写一个 `ServeHTTP()` 方法。
 
 打开 `views.go`。
 
@@ -3597,6 +3508,7 @@ $ atom views.go
 在视图源代码中，我们将为 `views.View` 编写 `ServeHTTP` 方法，这看起来就像我们在 `main.go` 中的 `home` 和 `contact` 函数一样。
 
 **Listing 7.29:** 实现 Handler 接口
+
 ```go
 func (v *View) Render(w http.ResponseWriter, data interface{}) error {
 	w.Header().Set("Content-Type", "text/html")
@@ -3613,6 +3525,7 @@ func (v *View) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 由于 `views.View` 实现了接口，我们可以更新 `main.go` 来直接使用视图。
 
 **Listing 7.30:** main.go
+
 ```go
 package main
 
@@ -3640,6 +3553,7 @@ func main() {
 最后，由于我们不计划为静态控制器创建 Home 或 Contact 方法，我们可以将 `HomeView` 和 `ContactView` 重命名为 `Home` 和 `Contact`。在此之后你将需要更新 `main.go`。
 
 **Listing 7.31:** 重命名 controllers/static.go
+
 ```go
 package controllers
 
@@ -3661,18 +3575,19 @@ type Static struct {
 ```
 
 **Listing 7.32:** 重命名 main.go
+
 ```go
 r.Handle("/", staticC.Home).Methods("GET")
 r.Handle("/contact", staticC.Contact).Methods("GET")
 ```
 
-重启你的应用程序并验证它是否正常。你仍然应该能够首页和联系页面，但现在它们应该通过静态控制器中的 `views.View` 类型的 ServeHTTP 方法提供。
+重启你的应用程序并验证它是否正常。你仍然应该能够首页和联系页面，但现在它们应该通过静态控制器中的 `views.View` 类型的 `ServeHTTP` 方法提供。
 
 ### 7.5.2 简化新视图的创建
 
-打开你的两个控制器（users.go 和 static.go）并查看调用 `views` 包提供的 `NewView` 函数的代码。你发现这两段代码之间有什么共同点吗？
+打开你的两个控制器（`users.go` 和 `static.go`）并查看调用 `views` 包提供的 `NewView` 函数的代码。你发现这两段代码之间有什么共同点吗？
 
-如果你查看传递这些函数调用的视图路径，你会发现它们有很多共同点。它们都以前缀 (views/) 开头，并且都以相同的文件扩展名 (.shtml) 结束。由于我们不打算在 views 目录之外视图文件，并且打算使用另一个模板扩展（使用多个将非常困惑），如果我们能稍微简化这些代码以不再需要这些信息，那就太好了。我们可能会调用：
+如果你查看传递这些函数调用的视图路径，你会发现它们有很多共同点。它们都以前缀 (`views/`) 开头，并且都以相同的文件扩展名 (`.shtml`) 结束。由于我们不打算在 `views` 目录之外视图文件，并且打算使用另一个模板扩展（使用多个将非常困惑），如果我们能稍微简化这些代码以不再需要这些信息，那就太好了。我们可能会调用：
 
 ```
 views.NewView("bootstrap", "users/new")
@@ -3680,10 +3595,7 @@ views.NewView("bootstrap", "users/new")
 
 为了实现这一点，我们需要更新我们的视图源代码。
 
-
-
-
-我们要做的第一件事是添加一个变量，用于存储所有变量所在的目录。我们将其命名为 TemplateDir。相关代码见列表 7.33。
+我们要做的第一件事是添加一个变量，用于存储所有变量所在的目录。我们将其命名为 `TemplateDir`。相关代码见列表 7.33。
 
 ## 列表 7.33: view.go 中的模板变量
 
@@ -3833,13 +3745,13 @@ $ go run main.go
 
 就像许多应用程序都有联系页面一样，我们的应用程序可能需要一个 FAQ 页面。为 FAQ 页面创建一个模板（html），然后将其添加到静态控制器。
 
-一旦将其添加到静态控制器，请更新你的 `main.go` 代码，使路由器在访问 /faq 路径时引导用户进入该页面。
+一旦将其添加到静态控制器，请更新你的 `main.go` 代码，使路由器在访问 `/faq` 路径时引导用户进入该页面。
 
 ### 7.6.2 练习2 - 为画廊创建一个新控制器
 
 我们最终创建一个画廊资源，包括它的控制器，但在此期间我们将画廊控制器作为一个练习。
 
-创建一个新的画廊控制器，它有一个动作，即由 New 方法表示的动作。
+创建一个新的画廊控制器，它有一个动作，即由 `New` 方法表示的动作。
 
 你首先需要创建一个声明画廊控制器的文件。在该文件中，你想为画廊控制器创建一个类型，然后创建一个用于创建画廊控制器的函数。
 
@@ -3847,16 +3759,14 @@ $ go run main.go
 
 在 `New` 方法内部，你需要渲染一个视图，因此你需要创建一个。我建议使用新用户模板作为指南。
 
-最后，你需要将 `New` 方法注册到路由器中。使用路径 /galleries/new 和 HTTP GET 方法。
+最后，你需要将 `New` 方法注册到路由器中。使用路径 `/galleries/new` 和 HTTP GET 方法。
 
 ### 7.6.3 练习清理
 
 此后我们将不再使用练习中的任何代码，因此在完成练习后，可以自由删除所有内容。这些练习只是为了帮助我们巩固所学的内容。
 
-
-
-
 ## 第 8 章
+
 ## 数据库简介
 
 一个不保存任何数据的 Web 应用程序将毫无趣味，因此我们需要讨论如何在不同的 Web 请求之间实际持久化数据的方法。
@@ -3884,9 +3794,13 @@ $ go run main.go
 如果你不熟悉 SQL，我建议查看以下资源。你不需要读完它们，也不需要成为 SQL 专家。相反，你的目标应该是学习足够的知识，以理解如何在数据库内部创建、更新和查询数据。
 
 - 使用 Golang 使用 PostgreSQL - 这是一个系列教程，涵盖了在各种操作系统上安装 PostgreSQL、SQL 的基础知识，然后解释了如何用 Go 代码访问 SQL 数据库的基础。你可以在此处找到课程：http://www.calhoun.io/using-postgresql-with-golang/
+
 - Codecademy 的 Learn SQL 课程 - 这是一个交互式课程，包含一些小项目和小测试，让你熟悉 SQL。你可以在此处找到：https://www.codecademy.com/lrm/learn-signup
+
 - w3schools 有一个 SQL 课程，涵盖了 SQL 的几乎每一个方面。与 Codecademy 类似，大多数资源允许你尝试代码示例以查看它们的实际作用。你可以在此处找到 SQL 课程：http://www.w3schools.com/sql/
+
 - 汗达学院（Khan Academy）也提供 SQL 课程，可以在此处找到：https://www.khanacademy.org/computing/computer-programming/sql
+
 - 如果没有人发布，Quora 上有一个题为“我如何学习 SQL？”的问题，它有 100+ 多个答案以及大量的潜在资源列表，可以在此处查看：https://www.quora.com/How-do-I-learn-SQL
 
 我们使用 SQL 的第二个原因是它在扩展性和可用性的平衡。虽然其他数据库在处理十亿用户时可能表现更好，但那是以复杂性为代价的。另一方面，PostgreSQL 兼顾了良好的扩展性和可用性，且不会在使用或设置时变得过于复杂。虽然它可能无法轻松地扩展到十亿用户，但可以相对容易地扩展到数百万用户，并且非常容易适应几乎任何用例。这意味着我们可以安全地选择，因为知道在规模变得非常大之前，我们不太遇到任何重大问题。到那时，我们将对自己的局限性有更好的了解，并能够就哪个数据库满足我们的需求做出明智的决策。
@@ -3894,6 +3808,8 @@ $ go run main.go
 最后，我们选择使用 SQL 是因为它在 Go 社区中得到了很好的支持。标准库提供了官方的 `database/sql` 包，还有许多构建在 SQL 之上的第三方包，它们简化了读取、写入和迁移数据等操作。
 
 虽然我们不会使用标准库的 `database/sql` 包，而是将选择 GORM，但书中的代码设置方式允许你相对容易地将所有 GORM 代码替换为 `database/sql` 包，所以如果你希望使用更原始的 SQL，请不要灰馁。
+
+
 
 ## 8.2 设置 PostgreSQL
 
@@ -3909,35 +3825,23 @@ $ go run main.go
 
 ### 8.2.2 学习如何连接到 Postgres
 
-安装 Postgres 后，你需要学习如何连接。连接实例最常用的方法是使用 psql，这是一个命令行实用程序，它可以打开数据库的文本连接并允许你与之交互。通过 psql 连接后，你应该看到：
+安装 Postgres 后，你需要学习如何连接。连接实例最常用的方法是使用 `psql`，这是一个命令行实用程序，它可以打开数据库的文本连接并允许你与之交互。通过 `psql` 连接后，你应该看到：
 
 ![](img/d6be51afcf116bf97245d05fb9e635_188_0.png)
+
 图 8.1 连接 PostgreSQL 的终端
 
 ### 8.2.3 学习 SQL 基础
 
-正如我在上一节提到的，我们将使用 psql 创建和删除表，因此如果你想对我们开始与数据库交互时有一个大致的了解，你就需要如何在 SQL 中创建和删除表。
+正如我在上一节提到的，我们将使用 `psql` 创建和删除表，因此如果你想对我们开始与数据库交互时有一个大致的了解，你就需要如何在 SQL 中创建和删除表。
 
 除了知道如何删除和创建表之外，你还应该熟悉一些常见的 SQL 查询。你应该拥有向表中插入新记录、查询这些记录的经验，可能还想知道如何更新和删除现有记录。
 
 如果你理解了下面的所有代码示例，就可以继续下学习了。你不需要 100% 理解它们，但你至少应该模糊知道它们的作用，并能够根据你的需求稍微修改 SQL。
 
+### 8.2.4 收集连接到 Postgres 安装所需的信息
 
-
-
-## 8.2. 设置 POSTGRESQL
-
-**Listing 8.3:** 使用原始 SQL 查询记录。
-```sql
-SELECT *
-FROM users
-WHERE email = 'jon@calhoun.io'
-AND age > 16;
-```
-
-## 8.2.4 收集连接到 Postgres 安装所需的信息
-
-最后，你需要收集连接数据库所需的所有信息并将其记录。具体来说，我们需要知道主机（host）、端口（port）、用户（user）、密码（password）和数据库名称。
+最后，你需要收集连接数据库所需的所有信息并将其记录。具体来说，我们需要知道主机 `host`、端口 `port`、用户 `user`、密码 `password` 和数据库名称。
 
 我们将在 Go 代码中使用这些信息来连接数据库，如果信息错误，在尝试连接数据库时可能会报错。
 
@@ -3945,11 +3849,11 @@ AND age > 16;
 
 你首先应该寻找的是主机和端口。如果你在本地安装了 Postgres，那么主机很可能是 `localhost`，端口可能是 `5432`。
 
-接下来是用户（又角色）。在大多数教程中，你的用户将是 `postgres`，但另一个值是你的操作系统名称。要在 Mac OS 或 Linux 上找到此项，可以在终端中运行 `id -un`。我的用户名恰好是 `jon`，你的很可能是你在设置电脑时选择的内容。
+接下来是用户 `user`。在大多数教程中，你的用户将是 `postgres`，但另一个值是你的操作系统名称。要在 Mac OS 或 Linux 上找到此项，可以在终端中运行 `id -un`。我的用户名恰好是 `jon`，你的很可能是你在设置电脑时选择的内容。
 
-如果你发现自己正在输入类似 `psql -U <something>` 的命令，那么 `<something>` 就是你的 Postgres 用户。**-U** 标志是你使用特定用户连接 Postgres 的方式。
+如果你发现自己正在输入类似 `psql -U <something>` 的命令，那么 `<something>` 就是你的 Postgres 用户。`-U` 标志是你使用特定用户连接 Postgres 的方式。
 
-### Table 8.1: PostgreSQL 连接参数和值。
+#### Table 8.1: PostgreSQL 连接参数和值。
 
 | 参数 | 值（你的可能与此处列出的不同） |
 | :--- | :--- |
@@ -3961,36 +3865,34 @@ AND age > 16;
 
 之后，我们需要你的密码。这应该是显而易见的，因为大多数教程都让你设置了自己的值，如果你没有设置，可以使用空字符串作为密码。
 
-最后，我们需要确定数据库名称，在我们的代码中将其列为 **dbname**。对于此项，你可能在安装期间创建了数据库，或者它可能与你的 Postgres 用户相同。
+最后，我们需要确定数据库名称，在我们的代码中将其列为 `dbname`。对于此项，你可能在安装期间创建了数据库，或者它可能与你的 Postgres 用户相同。
 
-如果你在教程中创建了数据库，你将再次遵循这些步骤创建一个名为 **lenslocked_dev** 或 **<yourapp_dev>** 的数据库，以便一眼看出该数据库的用途。
+如果你在教程中创建了数据库，你将再次遵循这些步骤创建一个名为 `lenslocked_dev` 或 `<yourapp_dev>` 的数据库，以便一眼看出该数据库的用途。
 
 一旦你有了所有这些信息，就把它像表 8.1 那样的表格记录下来。我在表格中提供了我将要使用的值，但你的可能不同。只需确保在接后的 Go 代码中使用你自己表格中的数据即可。
 
 一旦准备好所有这些，你就可以开始在 Go 中使用 PostgreSQL 并准备进入下一节了！
 
-## 8.3. 在 Go 和原始 SQL 中 Postgres
+## 8.3 在 Go 和原始 SQL 中使用 Postgres
 
-### 8.3 使用 Go 和原始 SQL 使用 Postgres
+### 8.3.1 使用 database/sql 包连接到 Postgres
 
 虽然 Go 在标准库中提供了 `database/sql` 包，但我们还需要安装一个 Postgres 特有的驱动程序。为此，我们将使用 `github.com/lib/pq`，它是用 Go 编写的，并通过了 SQL 驱动程序的兼容性测试。
 
 为此，你需要再次使用 `go get` 命令。
 
-- Listing 8.4: 安装 lib/pq。
+#### Listing 8.4: 安装 lib/pq。
 
 ```
 $ go get -u github.com/lib/pq
 ```
-
-### 8.3.1 使用 database/sql 包连接到 Postgres
 
 接下来，我们需要编写一些实际使用这两个包的代码。这并不是我们在最终产品中将使用的，所以我们在 4.4 节中创建的 `exp` 目录将是这些代码存放的好处。
 
 如果你还没有 `exp/main.go` 文件，应该创建一个。你可能还需要创建 `exp` 目录。
 
 ```
-$ mkdir exp # 此目录可能已经存在
+$ mkdir exp
 $ atom exp/main.go
 ```
 
@@ -3998,7 +3900,7 @@ $ atom exp/main.go
 
 我们首先想要声明我们的包并指定导入项。我们将导入 `database/sql` 包以便访问 SQL 数据库，导入 `fmt` 包用于打印到终端和格式化字符串，最后是导入 `github.com/lib/pq` 包，它实现了 `database/sql` 包使用的 Postgres 驱动程序。
 
-### Listing 8.5: 连接到 Postgres 代码开头。
+#### Listing 8.5: 连接到 Postgres 代码开头。
 
 ```go
 package main
@@ -4011,7 +3913,7 @@ import (
 )
 ```
 
-### Box 8.2. 为什么我们要导入一个不使用的包？
+#### Box 8.2. 为什么我们要导入一个不使用的包？
 
 初看之下，Listing 8.5 中的代码看起来可能有点不同，你可能会问自己“那个下划线是在干什么？”
 
@@ -4023,8 +3925,6 @@ import (
 
 换句话说，下划线告诉编译器我们并没有刻意直接使用该包，但我们需要它的初始化代码运行。
 
-
-
 这意味着一切都运行正常！
 
 再次，我想强调的是，如果你没有使用密码，请务必删除密码常量以及我们正在创建的连接字符串中的密码部分。保留它们可能会导致问题，但这段代码看起来仍然会正常运行。
@@ -4034,7 +3934,7 @@ import (
 如果你看到类似 `panic: pq: database "lenslocked_dev" does not exist` 的错误，这说明你没有创建该数据库。你通常可以通过运行 `psql` 然后运行列表 8.12 中的 SQL 代码来修复此问题。
 
 | 列表 8.12：使用 SQL 创建数据库 |
-| :--- | :--- |
+| :--- |
 | CREATE DATABASE lenslocked_dev; |
 
 如果你的代码在主机或端口上出现错误，其运行时间可能会更长，因为程序正在尝试连接一个没有响应的服务器。通常情况下，你的代码运行应该是瞬完成的，除非你正在连接到托管在另一台计算机上的 Postgres 服务器。
@@ -4047,15 +3947,13 @@ import (
 
 差异 - book.usegolang.com/8.3.1-diff
 
-## 8.3 在 GO 中结合原生 SQL 使用 POSTGRES 
-
 ### 8.3.2 创建用于测试的 SQL 表
 
 在插入记录和查询它们之前，我们需要创建几张表来插入记录。
 
-打开 psql 并在列表 8.13 中创建以下表。我们将使用 `database/sql` 包来这些表，然后在移动到 github.com/jinzhu/gorm（我们将要使用的一个 ORM）之前，从我们的数据库表中删掉它们。
+打开 `psql` 并在列表 8.13 中创建以下表。我们将使用 `database/sql` 包来这些表，然后在移动到 `github.com/jinzhu/gorm` 之前，从我们的数据库表中删掉它们。
 
-列表 8.13：创建 SQL 表
+#### 列表 8.13：创建 SQL 表
 
 ```sql
 CREATE TABLE users (
@@ -4072,13 +3970,13 @@ CREATE TABLE orders (
 );
 ```
 
-这里有两个表，我们拥有一种单一关系：用户拥有多个订单，或者换句话说，一个订单属于一个用户。这种关系通过 orders 表上的 `user_id` 字段表示。这是我们跟踪哪个用户拥有哪个订单的方法，以便我们将来可以使用这些信息。我特意包含了这一部分，因为我希望在在我们开始使用 github.com 之前，理解最基础层的关系是如何工作的。
+这里有两个表，我们拥有一种单一关系：用户拥有多个订单，或者换句话说，一个订单属于一个用户。这种关系通过 `orders` 表上的 `user_id` 字段表示。这是我们跟踪哪个用户拥有哪个订单的方法，以便我们将来可以使用这些信息。我特意包含了这一部分，因为我希望在在我们开始使用 `github.com` 之前，理解最基础层的关系是如何工作的。
 
 ### 8.3.3 使用 database/sql 写入记录
 
-在本节中，我们将继续在 `main.go` 中编写代码，因为这段代码完全不会用于我们的 Web 应用程序。我们要做的第一件事是使用 db 对象的 `Exec()` 方法创建一个用户记录。我们还将使用一个稍微修改过的 `INSERT INTO` 语句，而不是直接将值放入 SQL 中，而是将使用 `$1` 和 `$2` 并这些值作为参数传递给 `Exec` 方法。
+在本节中，我们将继续在 `main.go` 中编写代码，因为这段代码完全不会用于我们的 Web 应用程序。我们要做的第一件事是使用 `db` 对象的 `Exec()` 方法创建一个用户记录。我们还将使用一个稍微修改过的 `INSERT INTO` 语句，而不是直接将值放入 SQL 中，而是将使用 `$1` 和 `$2` 并这些值作为参数传递给 `Exec` 方法。
 
-列表 8.14：插入我们的第一个用户
+#### 列表 8.14：插入我们的第一个用户
 
 ```go
 err = db.Exec("INSERT INTO users(name, email) VALUES($1, $2)",
@@ -4090,11 +3988,11 @@ if err != nil {
 
 **极其重要的是**，请注意这里使用的 `$1` 和 `$2`。我们**不是**在尝试自己构建这个字符串，而是使用像 `$1` 和 `$2` 这样的占位符，并让 `database/sql` 包处理 SQL 的创建。通过这样做，我们允许 `database/sql` 包 防止 SQL 注入——一种允许攻击者在你的数据库上执行任意 SQL 的安全漏洞。这非常糟糕，因为它可能会让攻击者获取有关你所有用户的信息，甚至允许他们删除你数据库中的所有数据！相反，我们使用 `$1` 和 `$2`，然后 `database/sql` 包会将 `$1` 替换为传递给查询字符串的第一个参数，将 `$2` 替换为第二个参数，依此类推。在执行此过程中，`database/sql` 包还会运行所有必要的字符确保确保发生 SQL 注入攻击。
 
-### 获取新记录的 ID
+#### 获取新记录的 ID
 
 当我们调用 `db.Exec(...)` 时，我们会得到一个 `sql.Result` 和一个错误对象。我们通常会使用 `sql.Result` 对象上的 `LastInsertId()` 方法来获取刚刚创建的记录的 ID，遗憾的是这在 Postgres 中不起作用。相反，我们需要修改 SQL 查询以告诉数据库返回新创建记录的 ID，然后我们可以使用 `QueryRow()` 方法代替 `Exec()` 方法，这样我们就能从行的结果中获取回 ID。这听起来很困惑，但当我们查询记录时，一切看起来都很相似，且代码并没有复杂多少。
 
-列表 8.15：插入并检索新记录的 ID
+#### 列表 8.15：插入并检索新记录的 ID
 
 ```go
 var id int
@@ -4122,7 +4020,7 @@ if err != nil {
 
 我们的示例将演示如何查询 ID 为 1 的用户，并将该用户的 ID、名称和电子邮件存入名为 `id`、`name` 和 `email` 的变量中。此代码见列表 8.16。
 
-列表 8.16：通过 ID 查询用户
+#### 列表 8.16：通过 ID 查询用户
 
 ```go
 var id int
@@ -4135,14 +4033,11 @@ if err != nil {
 fmt.Printf("ID: %d, Name: %s, Email: %s\n", id, name, email)
 ```
 
-这与插入记录非常相似，但由于我们选择了三个字段（`id`、`name` 和 `email`），因此当我们使用 `row.Scan()` 方法时，会有三个数据要赋值。我们之前也使用了 `$1` 占位符，以确保我们不需要担心 SQL 注入攻击。在这种情况下它只被 `1` 替换，但养成始终使用 `database/sql` 包来构建查询的习惯是好的，这样你就不会让自己容易受到攻击。
+这与插入记录非常相似，但由于我们选择了三个字段 `id`、`name` 和 `email`，因此当我们使用 `row.Scan()` 方法时，会有三个数据要赋值。我们之前也使用了 `$1` 占位符，以确保我们不需要担心 SQL 注入攻击。在这种情况下它只被 `1` 替换，但养成始终使用 `database/sql` 包来构建查询的习惯是好的，这样你就不会让自己容易受到攻击。
 
-框 8.3. No rows in result set 错误
+#### 框 8.3. No rows in result set 错误
+
 如果你收到 `sql: no rows in result set` 错误，这意味着你的查询没有返回记录。结果，当你尝试对返回的 `sql.Row` 调用 `Scan()` 方法时将得到一个错误，因为无法扫描未返回的行。
-
-
-
-
 
 已完成 - book.usegolang.com/8.3.4
 
@@ -4158,7 +4053,7 @@ fmt.Printf("ID: %d, Name: %s, Email: %s\n", id, name, email)
 
 我们的示例将演示如何查询数据库中所有电子邮件地址为 `json@calhoun.io` 或 ID 大于 `4` 的用户。结果将以 `sql.Rows` 对象的形式返回，我们将对其进行迭代。我们只需要打印你想要的值，但你可以将每个结果插入到数组或任何你想的地方。代码如列表 8.17 所示。
 
-|  8.17：通过电子邮件或 ID 查询用户 |
+| 8.17：通过电子邮件或 ID 查询用户 |
 | :--- |
 | package main |
 | import ( |
@@ -4166,7 +4061,7 @@ fmt.Printf("ID: %d, Name: %s, Email: %s\n", id, name, email)
 |   "fmt" |
 | ) |
 
-## 8.3. 在 GO 中使用 POSTGRES 和原生 SQL
+
 
 ```go
 "github.com/lib/pq"
@@ -4208,7 +4103,7 @@ db.Close()
 
 列表 8.17 的前半部分与我们之前的代码相同，所以我们就不花空闲时间讨论它了。
 
-在后半部分，我们从声明与之前相同的变量开始，然后我们使用 `db.Query()` 方法而不是 `db.QueryRow()` 方法。`db.Query()` 有两个返回值——*sql.Rows 和一个 error*。
+在后半部分，我们从声明与之前相同的变量开始，然后我们使用 `db.Query()` 方法而不是 `db.QueryRow()` 方法。`db.Query()` 有两个返回值——`*sql.Rows` 和一个 `error`。
 
 如果返回了错误，意味着我们在尝试执行提供的 SQL 时遇到了某种错误，我们不应该尝试去迭代 `sql.Rows`，因为那里没有任何有用的内容。例如，如果我们写写了表名，可能会得到类似 `pq relation "users" does not exist` 的错误，由于我们的查询没有成功运行，我们将没有任何行可供查看。
 
@@ -4280,16 +4175,22 @@ func main() {
 	db.Close()
 ```
 
-运行这段代码后，你应该能够在 psql 中运行 `SELECT * FROM orders;` 并得到类似列表 8.19 的结果，其中有关联到用户 1 和用户 2 的订单。
+运行这段代码后，你应该能够在 `psql` 中运行 `SELECT * FROM orders;` 并得到类似列表 8.19 的结果，其中有关联到用户 1 和用户 2 的订单。
 
 # 8.19：选择所有订单的结果
 
 | id | user_id | amount | description |
+
 |---|---|---|---|
+
 | 1 | 1 | 1000 | USB-C Adapter x1 |
+
 | 2 | 1 | 2000 | USB-C Adapter x2 |
+
 | 3 | 1 | 3000 | USB-C Adapter x3 |
+
 | 4 | 2 | 4000 | USB-C Adapter x4 |
+
 | 5 | 2 | 5000 | USB-C Adapter x5 |
 
 ## 源码
@@ -4309,36 +4210,51 @@ func main() {
 为了演示，我们将使用一个构思的示例，即在同一个查询中获取所有订单及其相应的用户信息。该查询的 SQL 如列表 8.20 所示。
 
 | 8.20：同时查询订单和用户的 SQL |
+
 | :--- |
+
 | SELECT users.id, users.email, users.name,
+
 orders.id AS order_id,
+
 orders.amount AS order_amount,
+
 orders.description AS order_description
+
 FROM users
+
 INNER JOIN orders
+
 ON users.id = orders.user_id; |
 
 如果你运行列表 8.20 中的 SQL，将得到类似于列表 8.21 的输出，其中每个订单都有对应的行，在每一行中我们都拥有用户和订单的数据。
 
 | 8.21：列表 8.20 的输出 |
+
 | id | email | name | order_id | order_amount | order_description |
+
 |---|---|---|---|---|---|
+
 | 1 | user@calhoun.io | User 1 | 1 | 1000 | USB-C Adapter x1 |
+
 | 1 | user@calhoun.io | User 1 | 2 | 2000 | USB-C Adapter x2 |
+
 | 1 | user@calhoun.io | User 1 | 3 | 3000 | USB-C Adapter x3 |
+
 | 2 | user@calhoun.io | User 2 | 4 | 4000 | USB-C Adapter x4 |
+
 | 2 | user@calhoun.io | User 2 | 5 | 5000 | USB-C Adapter x5 |
-
-
-
-
 
 # 第 8 章 数据库简介
 
 | 1 | jon@calhoun.io | Jon Calhoun | 1 | 1000 | USB-C Adapter x1 |
+
 | 1 | jon@calhoun.io | Jon Calhoun | 2 | 2000 | USB-C Adapter x2 |
+
 | 1 | jon@calhoun.io | Jon Calhoun | 3 | 3000 | USB-C Adapter x3 |
+
 | 2 | bob@calhoun.io | Bob Calhoun | 4 | 4000 | USB-C Adapter x4 |
+
 | 2 | bob@calhoun.io | Bob Calhoun | 5 | 5000 | USB-C Adapter x5 |
 
 如果你理解 SQL，使用 Go 的 `database/sql` 包进行操作实际上非常简单，你的代码与第 8.3.5 节几乎完全相同，但你需要更新传递给 `db.Query()` 的 SQL 语句，然后你需要更新你的 `rows.Scan()` 方法调用以传入额外数据的变量。
@@ -4347,7 +4263,7 @@ ON users.id = orders.user_id; |
 
 ### 8.3.8 删除我们正在测试的 SQL 表
 
-我们现在已经完成了直接使用 `database/sql` 包，并将尝试使用 `github.com/jinzhu/gorm` 包。由于我们不再需要在本章中创建的表，我们可以通过打开 psql 并运行列表 8.22 中的 SQL 代码来安全地删除它们。
+我们现在已经完成了直接使用 `database/sql` 包，并将尝试使用 `github.com/jinzhu/gorm` 包。由于我们不再需要在本章中创建的表，我们可以通过打开 `psql` 并运行列表 8.22 中的 SQL 代码来安全地删除它们。
 
 > 列表 8.22：删除 orders 和 users 表
 
@@ -4476,11 +4392,9 @@ GORM 提供了多种声明模型的方法，这些方法在文档中都有介绍
 db.AutoMigrate(&User{})
 ```
 
-
-
-
-
 # 第 8 章 数据库简介
+
+
 
 ```go
 const (
@@ -4524,7 +4438,7 @@ func main() {
 
 更改版 - book.usegolang.com/8.4.3-diff
 
-## 8.4.4 使用 GORM 记录记录
+### 8.4.4 使用 GORM 记录记录
 
 在使用 GORM 时，启用日志通常非常有用，这样你可以追踪后台运行了哪些 SQL 语句。当程序运行结果不符合预期，你需要深入调查并调试时，这极其有用。
 
@@ -4591,7 +4505,8 @@ if err := db.Create(u).Error; err != nil {
     panic(err)
 }
 fmt.Printf("%+v\n", u)
-```如果我们每次运行程序都使用相同的电子邮件，最终会得到类似 `pq: duplicate key violates unique constraint "users_email"` 的错误，这意味着你正在写入数据库中已存在的电子邮件。为了解决这个问题，创建一个询问用户姓名和电子邮件的函数很好。在示例 29 中，我将之前章节的代码整合在了一起；我还提供了 `getInfo()` 函数来询问用户的姓名和电子邮件，但这里不会详细介绍其中的细节。只需注意，它每次运行程序时都会询问你的姓名和电子邮件，并使用这些值来创建新用户。
+```
+如果我们每次运行程序都使用相同的电子邮件，最终会得到类似 `pq: duplicate key violates unique constraint "users_email"` 的错误，这意味着你正在写入数据库中已存在的电子邮件。为了解决这个问题，创建一个询问用户姓名和电子邮件的函数很好。在示例 29 中，我将之前章节的代码整合在了一起；我还提供了 `getInfo()` 函数来询问用户的姓名和电子邮件，但这里不会详细介绍其中的细节。只需注意，它每次运行程序时都会询问你的姓名和电子邮件，并使用这些值来创建新用户。
 
 ```
 $ atom exp/main.go
@@ -4681,10 +4596,6 @@ GORM 提供了多种查询记录的方法，但它们本质上只是编写 SQL �
 
 通常情况下，我倾向于在所有开发环境中启用此功能，这样我就可以方便地调试问题。
 
-
-
-
-
 ## 8.4. 使用 GORM 与数据库交互
 
 ```go
@@ -4747,13 +4658,21 @@ GORM 提供了许多如 `Where()` 这样的辅助方法，这些方法可以链�
 ```go
 Listing 8.33：使用已有的用户查询
 ```
+
 var u User
+
 u.Email = "jon@calhoun.io"
+
 db.Where(u).First(&u)
+
 if db.Error != nil {
+
     panic(db.Error)
+
 }
+
 fmt.Println(u)
+
 ```
 
 除了用字符串查询外，你还可以通过向 `Where()` 方法传递与你正在查找的内容匹配的模型来查询。在列表 8.33 中，我们通过在 `User` 对象上设置邮箱地址，然后将该对象传递给 `Where()` 方法，来搜索邮箱地址为“jon@calhoun.io” 的用户。
@@ -4776,13 +4695,21 @@ fmt.Println(u)
 
 列表 8.34：查询多个用户
 ```go
+
 var users []User
+
 db.Find(&users)
+
 if db.Error != nil {
+
     panic(db.Error)
+
 }
+
 fmt.Println("Retrieved", len(users), "users.")
+
 fmt.Println(users)
+
 ```
 
 在底层，`Find()` 和 `First()` 的主要区别在于 `First()` 会自动在查询中添加 `LIMIT 1`，因为我们只需要一个项目。
@@ -4808,34 +4735,49 @@ fmt.Println(users)
 我们需要做的第一件事是创建 `Order` 类型。
 
 ```go
+
 type Order struct {
+
   gorm.Model
+
   UserID uint
+
   Amount int
+
   Description string
+
 }
+
 ```
 
 在 Go 代码中值得关注的部分是 `UserID` 是一个无符号整数。我们将编写一个函数来处理保存到数据库的数据并让它处理错误。
 
 ```go
+
 func createOrder(db *gorm.DB, user User, amount int, desc string) {
+
   db.Create(&Order{
+
     UserID: user.ID,
+
     Amount: amount,
+
     Description: desc,
+
   })
+
   if db.Error != nil {
+
     panic(db.Error)
+
   }
+
 }
 ```
 
+
+
 有了这两个部分，我们准备好将它们整合并查找用户，然后为该用户创建订单。最终的代码可以在列表 8.35 中找到。你应该用这些代码更新你的 `exp/main.go` 文件，然后运行它以创建下一节使用的订单。
-
-
-
-
 
 ## 8.4.9 使用 GORM 查询关系型数据
 
@@ -4859,7 +4801,6 @@ package main
 
 import (
   "fmt"
-
   "github.com/jinzhu/gorm"
   "github.com/lib/pq"
 )
@@ -4895,10 +4836,8 @@ func main() {
 		panic(err)
 	}
 	defer db.Close()
-
 	db.LogMode(true)
 	db.AutoMigrate(&User{}, &Order{})
-
 	var user User
 	db.Preload("Orders").First(&user)
 	if db.Error != nil {
@@ -4917,7 +4856,6 @@ func main() {
 下面的链接包含了完整的源代码以及本节中所有已更改代码的差异（diff）。
 
 - 已完成 - book.usegolang.com/8.4.9
-
 - 更改 - book.usegolang.com/8.4.9-diff
 
 ## 8.5 练习
@@ -4981,10 +4919,6 @@ $ psql
 
 接下来，我们要删除表并重建它。再次，取决于你最初创建表的方式，你可能需要遵循稍微不同的步骤。
 
-
-
-
-
 ## 第 9 章：创建用户模型
 
 如果你还记得之前的内容，`gorm.Model` 类型将为我们包含 `id`、`created_at`、`updated_at` 和 `deleted_at` 字段，因此我们现在只需要手动清理字段是 `Name` 和 `Email`。
@@ -5033,7 +4967,6 @@ type User struct {
 
 ```
 $ atom models/users.go
-
 type UserService struct {
   db *gorm.DB
 }
@@ -5048,6 +4981,7 @@ import (
 "github.com/jinzhu/gorm"
 "github.com/jinzhu/gorm/dialects/postgres"
 )
+
 // ..
 func NewUserService(connectionInfo string) (*UserService, error) {
 	db, err := gorm.Open("postgres", connectionInfo)
@@ -5081,7 +5015,6 @@ func (us *UserService) Close() error {
 ```go
 import (
     "errors"
-
     "github.com/jinzhu/gorm"
     "github.com/jinzhu/gorm/dialects/postgres"
 )
@@ -5114,10 +5047,6 @@ func (us *UserService) ByID(id uint) (*User, error) {
 
 在这种情况下，我们首先查找 GORM 的 `ErrRecordNotFound`，这表示我们的查询执行正确，但我们没有根据提供的查询找到用户。虽然我们技术上可以直接返回这个错误，但那样控制器就需要知道这个特定的 GORM 错误。相反，我们选择返回自己的 `ErrNotFound` 错误，这样模型包的用户就不了解 GORM。
 
-
-
-
-
 # 第 9 章：创建用户模型
 
 如果错误不是未找到记录，我们将直接返回该错误并返回 `nil` 用户。这在 `switch` 语句的 `default` 块中显示。
@@ -5146,9 +5075,7 @@ package main
 
 import (
 	"fmt"
-
 	"lenslocked.com/models"
-
 	"github.com/lib/pq"
 )
 
@@ -5169,7 +5096,6 @@ func main() {
 	}
 	defer us.Close()
 	us.DestructiveReset()
-
 	// 这会导致错误，因为你 own具有
 	// 这个 ID 的用户，但我们很快就会创建一个。
 	user, err := us.ByID(1)
@@ -5180,18 +5106,18 @@ func main() {
 }
 ```
 
+
+
 > ²https://godoc.org/github.com/jinzhu/gorm#DB.DropTableIfExists
 
-# 9.3. 创建用户
+# 9.3 创建用户
 
 ### 源代码
 
 下面的链接包含完成后的源代码以及本节中所有更改代码的差异对比。
 
-- 完成版 - book.usegolang.com/9.2
-- 差异 - book.usegolang.com/9.2-diff
-
-# 9.3 创建用户
+- 完成版 - `book.usegolang.com/9.2`
+- 差异 - `book.usegolang.com/9.2-diff`
 
 如果你运行了上一节中 `exp/main.go` 的源代码，你可能注意到它现在还什么用没有。我们没有任何用户，也没有编写创建它们的方法，所以尝试查找某个用户是完全没有意义的。
 
@@ -5226,7 +5152,6 @@ user := models.User{
 if err := us.Create(&user); err != nil {
   panic(err)
 }
-
 // 注意：你可能也需要更新一下查询代码
 foundUser, err := us.ByID(1)
 if err != nil {
@@ -5235,7 +5160,7 @@ if err != nil {
 fmt.Println(foundUser)
 ```
 
-# 9.4. 通过邮箱查询并简化我们的代码 (DRY)
+# 9.4 通过邮箱查询并简化我们的代码
 
 如果你还没有这样做，你将仍然需要调用 `DestructiveReset` 方法，因为它是首次设置 `users` 表。我们最终会提供另一种方法来实现它，但目前它可以解决问题。
 
@@ -5243,30 +5168,16 @@ fmt.Println(foundUser)
 
 下面的链接包含完成后的源代码以及本节中所有更改代码的差异对比。
 
-- 完成版 - book.usegolang.com/9.3
-- 差异 - book.usegolang.com/9.3-diff
+- 完成版 - `book.usegolang.com/9.3`
+- 差异 - `book.usegolang.com/9.3-diff`
 
-# 9.4 通过邮箱查询并简化我们的代码
+通常情况下，我不建议向你立即需要的服务中添加更多方法。这样做是导致“臃肿”服务的简单方法，这些服务包含几个很少甚至从未被用过的遗留方法，但它们最终仍然需要维护，因为每个人都害怕删除它们。更不用说，起根没有人真的需要编写它们。
 
-通常情况下，我不建议向你立即需要的服务中添加更多方法。这样做是导致“臃肿”服务的简单方法，这些服务包含几个很少（甚至从未）被用过的遗留方法，但它们最终仍然需要维护，因为每个人都害怕删除它们。更不用说，起根没有人真的需要编写它们。
+尽管如此，我确定我们将来将需要一个通过邮箱地址查询用户的方法，因为我们需要此来让用户登录，所以我们将直接开始编写该方法。顺便，我们将对代码进行一些 DRY 简化，以避免频繁地编写相同的代码段。
 
-尽管如此，我确定我们将来将需要一个通过邮箱地址查询用户的方法，因为我们需要此来让用户登录，所以我们将直接开始编写该方法。顺便，我们将对代码进行一些 DRY 简化（减少重复），以避免频繁地编写相同的代码段。
+注意：DRY 是“Don't Repeat Yourself”不要重复自己的缩写。
 
-注意：DRY 是“Don't Repeat Yourself”（不要重复自己）的缩写。
-
-（由于原文后续部分存在大量重复和逻辑混乱的描述，以下翻译将基于语意进行对齐处理）
-
-通常情况下，我不建议向你立即需要的服务中添加更多方法。这样做是导致“臃肿”服务的简单方法，这些服务包含几个很少（甚至从未）被用过的遗留方法，但它们最终仍然需要维护，因为每个人都害怕删除它们。更不用说，起根没有人真的需要编写它们。
-
-尽管如此，我确定我们将来将需要一个通过邮箱地址查询用户的方法，因为我们需要此来让用户登录，所以我们将直接开始编写该方法。顺便，我们将对代码进行一些 DRY 简化（减少重复），以避免频繁地编写相同的代码段。
-
-（注：原文在 9.4 之后的内容出现了严重的逻辑重复和词句断裂，译文已根据文档工程师逻辑对核心意图进行了整理，确保格式正确）
-
-
-
-
-
-## 9.4. 通过邮箱查询并精简代码
+## 9.4 通过邮箱查询并精简代码
 
 ```go
 // 将 ByID 的调用更改为 ByEmail
@@ -5295,19 +5206,18 @@ LIMIT 1
 
 ### 源代码
 
-下面的链接包含了完整的源代码以及本节中所有更改代码的差异（diff）。
+下面的链接包含了完整的源代码以及本节中所有更改代码的差异。
 
-已完成 - book.usegolang.com/9.4
+已完成 - `book.usegolang.com/9.4`
 
-变更 - book.usegolang.com/9.4-diff
+变更 - `book.usegolang.com/9.4-diff`
 
-## 9.5 更新和删除用户
+# 9.5 更新和删除用户
 
 除了需要一种查询用户的方法，我们还需要一种删除和更新用户的方法。更新用户非常简单——我们只需要传递包含所有新数据的用户对象，然后告诉 GORM 将新模型保存到数据库即可。
 
 ```bash
 $ atom models/users.go
-
 // Update 将根据提供的用户对象中的所有数据
 // 更新提供的用户。
 func (us *UserService) Update(user *User) error {
@@ -5317,20 +5227,18 @@ func (us *UserService) Update(user *User) error {
 
 删除用户稍微复杂一点，GORM 的删除方法以两种方式之一工作。第一种是我们通常预期的。如果我们为 GORM 提供一个具有 ID 的用户对象，GORM 将只会删除具有相同主键的用户。
 
-第二种稍微复杂一点。如果我们**没有**提供 ID（例如 ID 为 0），那么 GORM 将删除**所有**用户。我们永远不会这样做，所以我们将写一些代码来防止这种意外的发生。我们将从处理当提供的 ID 无效时返回错误开始。
+第二种稍微复杂一点。如果我们**没有**提供 ID，例如 ID 为 0，那么 GORM 将删除**所有**用户。我们永远不会这样做，所以我们将写一些代码来防止这种意外的发生。我们将从处理当提供的 ID 无效时返回错误开始。
 
 ```go
 var (
     //
-    // ErrInvalidID 在向 Delete 等方法提供无效 ID 
+    // ErrInvalidID 在向 Delete 等方法提供无效 ID
     // 时返回。
     ErrInvalidID = errors.New("models: ID provided was invalid")
 )
 ```
 
-接下来，我们将编写一个删除方法，如果 ID 为零，则返回 ErrInvalidID；否则它将构造一个用户对象，然后告诉 GORM 删除特定的用户。我们的方法还会返回过程中遇到的错误。
-
-## 9.5. 更新和删除用户
+接下来，我们将编写一个删除方法，如果 ID 为零，则返回 `ErrInvalidID`；否则它将构造一个用户对象，然后告诉 GORM 删除特定的用户。我们的方法还会返回过程中遇到的错误。
 
 ```go
 // Delete 根据提供的 ID 删除用户
@@ -5351,7 +5259,7 @@ func (us *UserService) Delete(id uint) error {
 atom exp/main.go
 ```
 
-为了测试用户是否已更新，我们将获取代码已经创建的用户并更新名称字段。这并不是对所有字段的详尽测试，但它至少应该让我们有信心，我们的代码似乎按预期工作。如果一切按计划进行，在更新后查询同一个用户，我们将看到打印出来的更新信息。
+为了测试用户是否已更新，我们将获取代码已经创建的用户并更新名称字段。
 
 ```go
 // ... 创建用户的代码保留在上方此处
@@ -5361,7 +5269,6 @@ if err := us.Update(&user); err != nil {
   panic(err)
 }
 foundUser, err := us.ByEmail("michael@dundermifflin.com")
-
 if err != nil {
 panic(err)
 }
@@ -5370,7 +5277,7 @@ panic(err)
 fmt.Println(foundUser)
 ```
 
-测试删除也非常相似。我们必须首先调用 `Delete` 方法，然后通过查询用户来验证它是否起作用。这次我们将使用刚刚刚刚删除的相同 ID 查询用户，并验证是否返回了 `NotFound` 错误，表示该用户不再于我们的数据库中。
+测试删除也非常相似。我们必须首先调用 `Delete` 方法，然后通过查询用户来验证它是否起作用。
 
 ```go
 // 删除用户
@@ -5383,17 +5290,15 @@ if err != models.ErrNotFound {
 panic("user was not deleted!")
 ```
 
-## 框 9.5. 使用错误控制流程控制
+## 框 9.5 使用错误控制流程控制
 
 在许多语言中，使用错误来处理流程控制被认为是一种坏做法。这有几个原因，但最大的两个点是成本和代码的可读性。
 
-大多数语言中的异常是昂贵的操作，会消耗大量的 CPU 和内存资源，因为它们需要计算堆栈跟踪等内容。异常也可能难以追踪，因为它们在被处理之前可能会跳过多个函数调用级。例如，如果 `main()` 调用了 `a()`，`a()` 调用了 `b()`，最后由它们抛出异常，我们不知道它是否会被处理。
+大多数语言中的异常是昂贵的操作，会消耗大量的 CPU 和内存资源，因为它们需要计算堆栈跟踪等内容。异常也可能难以追踪，因为它们在被处理之前可能会跳过多个函数调用级。
 
+# 9.7 连接用户服务与控制器
 
-
-
-
-```go
+```bash
 $ atom views/users/new.gohtml
 ```
 
@@ -5411,27 +5316,19 @@ $ atom views/users/new.gohtml
 {{end}}
 ```
 
-完成后，你应该启动（或重启）服务器，以验证表单已更新并正确包含了该字段。这如图 9.1 所示。
+完成后，你应该启动或重启服务器，以验证表单已更新并正确包含了该字段。
 
-```go
+```bash
 $ go run main.go
 ```
 
-## 9.7 连接用户服务与控制器
-
-![](img/d6be51afcf11b16bf97245d05fb9e635_258_0.png)
-
-图 9.1: 带有名称字段的注册表单
-
 接下来，我们需要更新用户控制器的 `SignupForm` 字段，让它感知新的名称字段。
 
-```go
+```bash
 $ atom controllers/users.go
 ```
 
 得益于我们正在使用的 `schema` 包，代码更改仅需新增一行。
-
-## 第 9 章：创建用户模型
 
 ```go
 type Signup struct {
@@ -5451,10 +5348,10 @@ fmt.Fprintln(w, "Name is", form.Name)
 
 ### 源代码
 
-下面的链接包含了完整的源代码以及本节中所有更改代码的差异（diff）。
+下面的链接包含了完整的源代码以及本节中所有更改代码的差异。
 
-- 完成版 - book.usegolang.com/9.7.1
-- 差异 - book.usegolang.com/9.7.1-diff
+- 完成版 - `book.usegolang.com/9.7.1`
+- 差异 - `book.usegolang.com/9.7.1-diff`
 
 ## 9.7.2 在我们的 Web 应用中设置用户服务
 
@@ -5466,11 +5363,11 @@ fmt.Fprintln(w, "Name is", form.Name)
 
 我们现在将在 Web 应用的 `main` 包中工作，因此打开源文件。
 
-```go
+```bash
 $ atom main.go
 ```
 
-我们尚未向此源文件添加任何与数据库相关的变量，因此我们将从实验性的 `main.go` 源文件中拷贝已有的常量。以后我们将探索如何将这些内容移动到配置文件，但目前这样运行足够了。这如列表 9.5 所示，但你可能需要微调某些值。
+我们尚未向此源文件添加任何与数据库相关的变量，因此我们将从实验性的 `main.go` 源文件中拷贝已有的常量。
 
 列表 9.5：将你的数据库信息添加到 main.go
 ```go
@@ -5483,14 +5380,12 @@ dbname = "lenslocked_dev"
 )
 ```
 
-> **框 9.6。不要在代码中硬编码密码发布到生产环境**
+> **框 9.6 不要在代码中硬编码密码发布到生产环境**
 > 到此为止，我们将密码以及连接 Postgres 需要的其他信息作为常量存储在应用程序中，虽然对于开发应用程序没有问题，但你不应该以这种方式存储密码发布到生产服务器或提交到 git。
 
-## 第 9 章：创建用户模型
+最终我们将把这些常量从代码中提取出来，并在启动应用程序时通过标志提供它们，但在此期间，请意识到这不是一种很好的方法，我们这样做是为了在开始讨论如何准备生产环境之前稍微简化我们的代码。
 
-最终我们将把这些常量从代码中提取出来，并在启动应用程序时通过标志（flags）提供它们，但在此期间，请意识到这不是一种很好的方法，我们这样做是为了在开始讨论如何准备生产环境之前稍微简化我们的代码。
-
-接下来，我们需要创建连接字符串。同样，你可以从之前的实验性代码中拷贝它。这将放在 `main` 函数内部。
+接下来，我们需要创建连接字符串。
 
 ```go
 func main() {
@@ -5503,27 +5398,19 @@ host, port, user, password, dbname)
 }
 ```
 
-之后，我们需要使用此连接字符串创建一个用户服务。在创建用户服务时，我们还想要检查错误，推迟关闭直到 `main` 函数退出，并调用我们之前编写的 `AutoMigrate` 函数，以确保数据库已正确迁移。
+之后，我们需要使用此连接字符串创建一个用户服务。
 
 ```go
 import (
 "fmt"
 "net/http"
-
 "lenslocked.com/controllers"
 "lenslocked.com/models"
-
 "github.com/gorilla/mux"
 )
 // ...
-
 func main() {
 // ... 首先是 psqlInfo 代码
-```
-
-## 9.7 连接用户服务与控制器
-
-```go
 us, err := models.NewUserService(psqlInfo)
 if err != nil {
     panic(err)
@@ -5538,10 +5425,10 @@ if err != nil {
 
 ### 源代码
 
-下面的链接包含了完整的源代码以及本节中所有更改代码的差异（diff）。
+下面的链接包含了完整的源代码以及本节中所有更改代码的差异。
 
-- 完成版 - book.usegolang.com/9.7.2
-- 差异 - book.usegolang.com/9.7.2-diff
+- 完成版 - `book.usegolang.com/9.7.2`
+- 差异 - `book.usegolang.com/9.7.2-diff`
 
 ## 9.7.3 在用户控制器中使用用户服务
 
@@ -5549,25 +5436,20 @@ if err != nil {
 
 让我们从打开用户控制器源代码开始。
 
-```go
+```bash
 $ atom controllers/users.go
 ```
 
-## 第 9 章：创建用户模型
-
-接下来我们将在 `Users` 类型中添加 `UserService`，以便我们的处理器方法在需要时访问用户服务。我们还需要在导入中添加 `models` 包。
+接下来我们将在 `Users` 类型中添加 `UserService`，以便我们的处理器方法在需要时访问用户服务。
 
 ```go
 import (
     "fmt"
     "net/http"
-
     "lenslocked.com/models"
     "lenslocked.com/views"
 )
-
 // ...
-
 type Users struct {
     NewView *views.View
     us *models.UserService
@@ -5579,9 +5461,15 @@ type Users struct {
 ```go
 func NewUsers(us *models.UserService) *Users {
     return &Users{
-        NewView: views.View("bootstrap", "new"),
-        us: us,
-    }
+
+
+
+```go
+NewView: views.View("bootstrap", "new"),
+
+us: us,
+
+}
 }
 ```
 
@@ -5596,7 +5484,6 @@ $ atom main.go
 ```go
 func main() {
 // ... 大部分内容不变
-
 // 找到这一行，并更新它
 usersC := controllers.NewUsers(us)
 // ...
@@ -5605,7 +5492,7 @@ usersC := controllers.NewUsers(us)
 
 我们现在可以继续更新用户控制器。具体来说，我们将在 `Create` 处理器中使用用户服务来实际在数据库中存储用户。
 
-- $ atom controllers/users.go
+- `$ atom controllers/users.go`
 
 接下来我们更新代码，使用注册表单创建一个 `models.User`。我们暂时不会使用密码输入，因为我们还没有合适的存储密码的方法，但将在接几个章节中修复。在此期间，我们将只存储用户的名称和邮箱，以验证一切都按预期工作。
 
@@ -5613,25 +5500,21 @@ usersC := controllers.NewUsers(us)
 func (u *Users) Create(w http.ResponseWriter, r *http.Request) {
 var form SignUp
 if err := parseForm(r, &form); err != nil {
-	panic(err)
+panic(err)
 }
 user := models.User{
-	Name: form.Name,
-	Email: form.Email,
+Name: form.Name,
+Email: form.Email,
 }
 if err := u.Create(&user); err != nil {
-	http.Error(w, err.Error(), http.StatusInternalServerError)
-	return
+http.Error(w, err.Error(), http.StatusInternalServerError)
+return
 }
 fmt.Fprintln(w, "User is ", user)
 }
 ```
 
 如果我们在创建用户时遇到错误，我们还将返回一个状态码，表示我们的服务器出现了问题。通常我不会
-
-
-
-
 
 # 第 9 章 创建用户模型
 
@@ -5667,15 +5550,15 @@ pq: duplicate key value violates unique constraint "uix_users_email"
 
 ### 9.8.2 练习2 - 编写查询特定年龄第一个用户的方法
 
-一旦你在用户模型中添加了年龄字段，编写一个方法允许你查询特定年龄的用户。这应该像我们的其他查询方法一样附加到 UserService 上，并且应该与我们的 ByID 方法非常相似。
+一旦你在用户模型中添加了年龄字段，编写一个方法允许你查询特定年龄的用户。这应该像我们的其他查询方法一样附加到 `UserService` 上，并且应该与我们的 `ByID` 方法非常相似。
 
 ### 9.8.3 练习3 - [困难] 编写一个按年龄范围查询多个用户的方法
 
 我们的最后几个练习稍微难一点，因为你需要编写更多的代码并更深入研究 GORM。
 
-查看最后一章，并结合那里的演示如何查询多个用户的信息，利用你对 GORM 的 Where 方法工作原理的理解，在我们的用户服务上创建一个 InAgeRange 方法。
+查看最后一章，并结合那里的演示如何查询多个用户的信息，利用你对 GORM 的 `Where` 方法工作原理的理解，在我们的用户服务上创建一个 `InAgeRange` 方法。
 
-InAgeRange 方法应该接受两个参数：最小年龄和最大年龄，然后返回该年龄范围内的所有用户。如果没有找到任何用户，你应该返回一个空的用户切片（slice），并在发生错误时也应该返回一个错误。当没有找到用户时，你**不需要**返回错误 - 空切片将表示这一点。
+`InAgeRange` 方法应该接受两个参数：最小年龄和最大年龄，然后返回该年龄范围内的所有用户。如果没有找到任何用户，你应该返回一个空的用户切片（slice），并在发生错误时也应该返回一个错误。当没有找到用户时，你**不需要**返回错误 - 空切片将表示这一点。
 
 # 第 10 章
 
@@ -5729,22 +5612,18 @@ InAgeRange 方法应该接受两个参数：最小年龄和最大年龄，然后
 
 哈希在各种编程应用程序中都有用，我绝对建议你在空闲时间进行一些研究和阅读，但为了我们的目的，我们将简要查看一个简单的示例，然后专门专注于 bcrypt，这是一种专门为哈希密码设计的哈希函数。
 
-对于我们的简单示例，想象一个函数接收任何字符串值并将其转换为 0 到 4 之间的数字。实现此功能的一种方法是计算字符串中字母的数量，然后使用模运算符（%）获取一个 0 到 4 之间的数字。
+对于我们的简单示例，想象一个函数接收任何字符串值并将其转换为 0 到 4 之间的数字。实现此功能的一种方法是计算字符串中字母的数量，然后使用模运算符（`%`）获取一个 0 到 4 之间的数字。
 
 列表 10.1: 一个伪哈希函数
 
 ```go
 // 不要编写此代码
 func hash(s string) int {
-  return len(s) % 5
+return len(s) % 5
 }
 ```
 
 虽然这可能不是一个很好的哈希函数，但它确实说明了我们需要讨论的关键点。
-
-
-
-
 
 ## 10.3. 正确地处理密码哈希
 
@@ -5818,9 +5697,6 @@ fake-hash-value-for-aksdfj
 
 与盐不同，椒从不存储在你的数据库中。这样，如果攻击者成功访问了你的数据库但没有访问你的应用程序，他们只有哈希密码和盐值，但并不知道你使用了什么椒值，这使得他们发现底层密码变得困难得多。在我看来，这是我们使用的所有预防措施中较弱的一个，但它实现起来非常简单，所以仍然值得添加。
 
-
-
-
 他曾考虑购买那座矿。
 
 无论如何，“加盐”（salting）是第一个提出的术语，随后“加料”（pepper）这个术语也出现了，因为两者非常相似，而且“盐和胡椒”是一个流行的组合（至少在美国）。
@@ -5847,11 +5723,11 @@ $ atom models/users.go
 
 ```go
 type User struct {
-    gorm.Model
-    Name          string
-    Email         string `gorm:"not null;unique_index"`
-    Password      string `gorm:"-"`
-    PasswordHash string `gorm:"not null"`
+gorm.Model
+Name string
+Email string `gorm:"not null;unique_index"`
+Password string `gorm:"-"`
+PasswordHash string `gorm:"not null"`
 }
 ```
 
@@ -5866,6 +5742,8 @@ type User struct {
 ```
 pq: column "password_hash" contains null values
 ```
+
+
 
 通常我们会创建一个旨在处理此问题的迁移或某种修复方法，但由于我们正处于开发阶段，直接重置数据库要简单得多。
 
@@ -5896,8 +5774,8 @@ Bcrypt 是一个哈希包，是 Go 项目的一部分，但在标准库之外进
 
 我们将在该包中使用的主要函数有：
 
-- *GenerateFromPassword* 1
-- *CompareHashAndPassword* 2
+- `GenerateFromPassword` 1
+- `CompareHashAndPassword` 2
 
 第一个用于从原始用户密码生成密码哈希，第二个用于将用户提供的密码与我们存储的哈希值进行比较，以验证它们是否匹配。
 
@@ -5912,7 +5790,6 @@ $ atom models/users.go
 ```go
 import (
   "errors"
-
   "github.com/jinzhu/gorm"
   _ "github.com/jinzhu/gorm/dialects/postgres"
   "golang.org/x/crypto/bcrypt"
@@ -5933,7 +5810,6 @@ func (us *UserService) Create(user *User) error {
     if err != nil {
         return err
     }
-
     user.PasswordHash = string(hashedBytes)
     user.Password = ""
     return us.db.Create(user).Error
@@ -5961,10 +5837,6 @@ Bcrypt 的哈希函数还需要一个成本参数，但那是什么呢？我们�
 最后，我们将密码设为空字符串，使其不再能在我们的应用程序中被访问，并创建我们的用户。虽然没有必要将用户的密码字段设置为空字符串，但我倾向于尽快清除对明文密码的引用，以尽可能的减少其泄露在日志或其他任何地方的几。
 
 ^3https://godoc.org/golang.org/x/crypto/bcrypt#pkg-constants
-
-
-
-
 
 ### 源代码
 
@@ -6028,7 +5900,7 @@ $2a$
 10$
 ```
 
-当你将这些部分组合在一起时，创建了原始哈希，但它们分别告诉 bcrypt 关于哈希的信息。第一部分 `$2a$` 用于告诉 bcrypt 我们正在使用的格式以及如何处理哈希的剩余部分。这就是为什么它在前面的——除非我们知道格式，否则我们对剩余部分做不了。第二部分是哈希的成本（cost）。在这种情况下我们有 `10$`，这意味着我们使用的成本是 10。在编写时，10 是 Go bcrypt 包的默认成本。这是我们在 base64 编码的密码中使用的盐。最后我们有最后一部分——`....`。这是 bcrypt 使用明文密码、盐和成本生成的实际哈希。
+当你将这些部分组合在一起时，创建了原始哈希，但它们分别告诉 bcrypt 关于哈希的信息。第一部分 `$2a$` 用于告诉 bcrypt 我们正在使用的格式以及如何处理哈希的剩余部分。这就是为什么它在前面的——除非我们知道格式，否则我们对剩余部分做不了任何事。第二部分是哈希的成本（cost）。在这种情况下我们有 `10$`，这意味着我们使用的成本是 10。在编写时，10 是 Go bcrypt 包的默认成本。这是我们在 base64 编码的密码中使用的盐。最后我们有最后一部分——`....`。这是 bcrypt 使用明文密码、盐和成本生成的实际哈希。
 
 > 注意：我在书中提到了加盐的工作原理，以便你将来了解它，即使你不需要自己实现。
 
@@ -6106,7 +5978,6 @@ $ atom views/users/login.html
     </div>
   </div>
 </div>
-
 (define "loginForm")
   <form action="/login" method="POST">
     <div class="form-group">
@@ -6143,21 +6014,15 @@ func NewUsers(us *models.UserService) *Users {
 }
 ```
 
-
-
-
-
 ## 10.5. 认证回归用户
 
 ```go
 type LoginView struct {
 	views.View
 }
-
 type NewView struct {
 	views.View
 }
-
 type Users struct {
 	LoginView
 	NewView
@@ -6172,10 +6037,8 @@ type LoginForm struct {
 	Email    string `schema:"email"`
 	Password string `schema:"password"`
 }
-
 // Login 用于在用户尝试
 // 作为现有用户登录（通过邮箱和密码）时处理登录表单。
-
 // POST /login
 func (u *Users) Login(w http.ResponseWriter, r *http.Request) {
 	form := LoginForm()
@@ -6195,7 +6058,6 @@ func (u *Users) Login(w http.ResponseWriter, r *http.Request) {
 
 ```bash
 $ atom main.go
-
 func main() {
 	// ... 以上部分没有变化
 	r.HandleFunc("/signup", userC.New).Methods("GET")
@@ -6221,20 +6083,22 @@ $ atom views/layouts/navbar.gohtml
 </ul>
 ```
 
-通过这些更改，我们已经完成了添加登录页的工作，并准备好为我们的用户服务实现 Authenticate 方法。
+
+
+通过这些更改，我们已经完成了添加登录页的工作，并准备好为我们的用户服务实现 `Authenticate` 方法。
 
 ### 源代码
 
 下面的链接包含了完成后的源代码以及本节中所有更改代码的差异（diff）。
 
-- 已完成 - book.usegolang.com/10.5.2 
-- 更改内容 - book.usegolang.com/10.5.2-diff
+- 已完成 - `book.usegolang.com/10.5.2`
+- 更改内容 - `book.usegolang.com/10.5.2-diff`
 
 ## 10.5. 认证回归用户
 
 ### 10.5.3 实现 Authenticate 方法
 
-我们的 authenticate 方法将只做一件事——接收邮箱地址和密码，然后返回一个匹配该信息的用户，或者一个解释为什么无法找到匹配项的错误。它**不会**负责创建会话、修改 cookie 或任何类似的操作。这些责任将由调用 authenticate 方法的代码承担。
+我们的 `authenticate` 方法将只做一件事——接收邮箱地址和密码，然后返回一个匹配该信息的用户，或者一个解释为什么无法找到匹配项的错误。它**不会**负责创建会话、修改 cookie 或任何类似的操作。这些责任将由调用 `authenticate` 方法的代码承担。
 
 我们将在用户模型的源文件中编写此方法。
 
@@ -6246,17 +6110,16 @@ $ atom models/users.go
 
 ```go
 var (
-	// 保持现有的错误不变
-
-	// ErrInvalidPassword 在尝试认证用户时
-	// 使用了无效密码时返回的错误。
-	ErrInvalidPassword = errors.New(
-		"models: incorrect password provided",
-	)
+    // 保持现有的错误不变
+    // ErrInvalidPassword 在尝试认证用户时
+    // 使用了无效密码时返回的错误。
+    ErrInvalidPassword = errors.New(
+        "models: incorrect password provided",
+    )
 )
 ```
 
-现在我们至少有两个可以返回的潜在错误：ErrNotFound 和 ErrInvalidPassword。让我们使用它们来写一个注释，描述 Authenticate 方法将如何工作。
+现在我们至少有两个可以返回的潜在错误：`ErrNotFound` 和 `ErrInvalidPassword`。让我们使用它们来写一个注释，描述 `Authenticate` 方法将如何工作。
 
 ```go
 // Authenticate 可用于通过提供的
@@ -6270,15 +6133,15 @@ var (
 // 否则如果遇到其他错误，它将返回
 // nil, error
 func (us *UserService) Authenticate(
-	email, password string) (*User, error) {
-	// 我们稍后会实现它
-	return nil, nil
+    email, password string) (*User, error) {
+    // 我们稍后会实现它
+    return nil, nil
 }
 ```
 
-在除最后一种情况以外的每情况下，我们将返回一个由 models 包定义的错误。这很重要，因为除了最后一种之外的所有情况都是我们应该能够处理错误并向终端用户渲染适当错误消息的用，但在最后一种情况下，我们可能无法为终端用户渲染有用的错误，而是需要通过交互查看我们的 Web 应用程序出了什么问题。例如，它可能因为数据库崩溃而发生错误。
+在除最后一种情况以外的每情况下，我们将返回一个由 `models` 包定义的错误。这很重要，因为除了最后一种之外的所有情况都是我们应该能够处理错误并向终端用户渲染适当错误消息的用，但在最后一种情况下，我们可能无法为终端用户渲染有用的错误，而是需要通过交互查看我们的 Web 应用程序出了什么问题。例如，它可能因为数据库崩溃而发生错误。
 
-现在我们已经对 Authenticate 方法要执行的操作有了大致的了解，我们将实现它。我们首先开始通过提供的邮箱地址查找用户。
+现在我们已经对 `Authenticate` 方法要执行的操作有了大致的了解，我们将实现它。我们首先开始通过提供的邮箱地址查找用户。
 
 ```go
 foundUser, err := us.ByEmail(email)
@@ -6287,9 +6150,9 @@ if err != nil {
 }
 ```
 
-如果你还记得之前的内容，当通过邮箱地址找不到用户时，我们的 ByEmail 方法将返回 ErrNotFound 错误，所以我们不需要在代码中实际检查该错误。我们只需要返回 ByEmail 方法返回的任何错误即可。
+如果你还记得之前的内容，当通过邮箱地址找不到用户时，我们的 `ByEmail` 方法将返回 `ErrNotFound` 错误，所以我们不需要在代码中实际检查该错误。我们只需要返回 `ByEmail` 方法返回的任何错误即可。
 
-假设我们无问题地检索到了用户，我们的下一步是检查提供的密码是否正确。我们将使用 bcrypt 来解密这个密码，并使用它的 `CompareHashAndPassword` 函数。
+假设我们无问题地检索到了用户，我们的下一步是检查提供的密码是否正确。我们将使用 `bcrypt` 来解密这个密码，并使用它的 `CompareHashAndPassword` 函数。
 
 > ^4https://godoc.golang.org/x/crypto/bcrypt#CompareHashAndPassword
 
@@ -6310,10 +6173,10 @@ err = bcrypt.CompareHashAndPassword(
 一旦我们比较了密码，我们需要检查错误以确定发生了什么。我们关心的三种情况：
 
 1. 如果错误为 nil，意味着密码正确。
-2. 如果错误是 bcrypt 包提供的 `ErrMatchedHashAndPassword` 错误，说明我们尝试的密码是不正确的。这**并不意味着**发生了某些问题。
+2. 如果错误是 `bcrypt` 包提供的 `ErrMatchedHashAndPassword` 错误，说明我们尝试的密码是不正确的。这**并不意味着**发生了某些问题。
 3. 任何其他错误表示发生了问题。这可能意味着我们拥有的哈希密码由于某种原因损坏了，本不应该发生，但如果发生了，我们将返回该错误。
 
-这三种情况可以用下面的 switch 语句表示：
+这三种情况可以用下面的 `switch` 语句表示：
 
 ```go
 switch err {
@@ -6334,40 +6197,35 @@ default:
 
 ```go
 func (us *UserService) Authenticate(email, password string) (*User, error) {
-	foundUser, err := us.ByEmail(email)
-	if err != nil {
-		return nil, err
-	}
-
-	err = bcrypt.CompareHashAndPassword(
-		[]byte(foundUser.PasswordHash),
-		[]byte(password+userPepper))
-	switch err {
-	case nil:
-		return foundUser, nil
-	case bcrypt.ErrMatchedHashAndPassword:
-		return nil, ErrInvalidPassword
-	default:
-		return nil, err
-	}
+    foundUser, err := us.ByEmail(email)
+    if err != nil {
+        return nil, err
+    }
+    err = bcrypt.CompareHashAndPassword(
+        []byte(foundUser.PasswordHash),
+        []byte(password+userPepper))
+    switch err {
+    case nil:
+        return foundUser, nil
+    case bcrypt.ErrMatchedHashAndPassword:
+        return nil, ErrInvalidPassword
+    default:
+        return nil, err
+    }
 }
 ```
 
-就是这样！我们准备好在用户控制器的登录操作中使用 authenticate 方法了。
-
-
-
-
+就是这样！我们准备好在用户控制器的登录操作中使用 `authenticate` 方法了。
 
 ## 10.5. 验证已返回的用户
 
-更改 - book.usegolang.com/10.5.3-diff
+更改 - `book.usegolang.com/10.5.3-diff`
 
 ## 10.5.4 在我们的登录操作中调用 Authenticate
 
 我们认证代码的最后一部分是使用我们解析的 `LoginForm` 中的数据，在登录操作中调用 `Authenticate` 方法。
 
-```go
+```bash
 $ atom controllers/users.go
 ```
 
@@ -6377,18 +6235,18 @@ $ atom controllers/users.go
 
 ```go
 func (u *Users) Login(w http.ResponseWriter, r *http.Request) {
-	// .. 此处留原有的代码不变
-	user, err := u.as.Authenticate(form.Email, form.Password)
-	switch err {
-	case models.ErrNotFound:
-		fmt.Println(w, "Invalid email address.")
-	case models.ErrInvalidPassword:
-		fmt.Println(w, "Invalid password provided.")
-	case nil:
-		fmt.Println(w, user)
-	default:
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-	}
+    // .. 此处留原有的代码不变
+    user, err := u.as.Authenticate(form.Email, form.Password)
+    switch err {
+    case models.ErrNotFound:
+        fmt.Println(w, "Invalid email address.")
+    case models.ErrInvalidPassword:
+        fmt.Println(w, "Invalid password provided.")
+    case nil:
+        fmt.Println(w, user)
+    default:
+        http.Error(w, err.Error(), http.StatusInternalServerError)
+    }
 }
 ```
 
@@ -6402,9 +6260,9 @@ func (u *Users) Login(w http.ResponseWriter, r *http.Request) {
 
 下面的链接包含了完整的源代码以及本节中所有更改代码的差异（diff）。
 
-完成 - book.usegolang.com/10.5.4
+完成 - `book.usegolang.com/10.5.4`
 
-更改 - book.usegolang.com/10.5.4-diff
+更改 - `book.usegolang.com/10.5.4-diff`
 
 ## 10.6 练习
 
@@ -6436,7 +6294,7 @@ func (u *Users) Login(w http.ResponseWriter, r *http.Request) {
 
 该 Web 请求可能是创建一个新用户账户、删除图库或任何其他操作。无论请求的具体细节如何，服务器都可以预期所有细节都包含在那个单个 Web 请求中。
 
-这种方法的最大优势之一是它允许开发者构建高度可扩展的 Web 应用。例如，如果你正在浏览 Google.com，你的 Web 请求发送到哪一个服务器并不重要。你发送的每个请求都包含了服务器响应你的请求所需的所有信息。
+这种方法的最大优势之一是它允许开发者构建高度可扩展的 Web 应用。例如，如果你正在浏览 `Google.com`，你的 Web 请求发送到哪一个服务器并不重要。你发送的每个请求都包含了服务器响应你的请求所需的所有信息。
 
 相反，如果服务器必须记住你每次请求的操作，那么你每次与 Google 通信都必须连接同一个服务器。如果该服务器请求过载了怎么办？或者如果该服务器发生网络故障怎么办？你所有的工作都会丢失，那将糟糕。
 
@@ -6496,36 +6354,32 @@ $ atom controllers/users.go
 
 我们需要做的第一件事是，在无法验证用户的电子邮件地址和密码时让我们的代码返回。我们不希望在用户提供正确信息的情况下意外设置 cookie，而实现这一点最简单的方法是从函数中返回。
 
-
-
-
-
 ## 11.2. 创建我们的第一个 Cookie
 
 ```go
 func (u *Users) Login(w http.ResponseWriter, r *http.Request) {
-	form := LoginForm()
-	if err := parseForm(r, &form); err != nil {
-		panic(err)
-	}
-	user, err := u.Authenticate(form.Email, form.Password)
-	if err != nil {
-		switch err {
-			case models.ErrNotFound:
-				fmt.Fprint(w, "Invalid email address.")
-			case models.ErrInvalidPassword:
-				fmt.Fprint(w, "Invalid password provided.")
-			default:
-				http.Error(w, err.Error(), http.StatusInternalServerError)
-		}
-	}
-	fmt.Fprint(w, user)
+    form := LoginForm()
+    if err := parseForm(r, &form); err != nil {
+        panic(err)
+    }
+    user, err := u.Authenticate(form.Email, form.Password)
+    if err != nil {
+        switch err {
+            case models.ErrNotFound:
+                fmt.Fprint(w, "Invalid email address.")
+            case models.ErrInvalidPassword:
+                fmt.Fprint(w, "Invalid password provided.")
+            default:
+                http.Error(w, err.Error(), http.StatusInternalServerError)
+        }
+    }
+    fmt.Fprint(w, user)
 }
 ```
 
 我们这里的代码逻辑与我们之前使用的基本相同，我们将 `switch` 语句封装在一个 `if` 块中，如果发生任何错误将直接返回。然后，我们将用户身份验证成功时使用的 `Fprintln` 移动到了该 `if` 块之外。
 
-接下来，我们想要创建一个 Cookie，使用键 "email"，值将是 `Authenticate` 方法返回的用户的电子邮件地址。这发生在代码中 `switch` 语句之后。
+接下来，我们想要创建一个 Cookie，使用键 `"email"`，值将是 `Authenticate` 方法返回的用户的电子邮件地址。这发生在代码中 `switch` 语句之后。
 
 ```go
 cookie := http.Cookie{
@@ -6546,28 +6400,32 @@ http.SetCookie(w, &cookie)
 
 ```go
 func (u *Users) Login(w http.ResponseWriter, r *http.Request) {
-	form := LoginForm()
-	if err := parseForm(r, &form); err != nil {
-		panic(err)
-	}
-	user, err := u.us.Authenticate(form.Email, form.Password)
-	if err != nil {
-		switch err {
-			case models.ErrNotFound:
-				fmt.Fprintln(w, "Invalid email address.")
-			case models.ErrInvalidPassword:
-				fmt.Fprintln(w, "Invalid password provided.")
-			default:
-				http.Error(w, err.Error(), http.StatusInternalServerError)
-		}
-		return
-	}
-	cookie := http.Cookie{
-		Name: "email",
-		Value: user.Email,
-	}
-	http.SetCookie(w, cookie)
-	fmt.Fprintln(w, user)
+    form := LoginForm()
+    if err := parseForm(r, &form); err != nil {
+        panic(err)
+    }
+    user, err := u.us.Authenticate(form.Email, form.Password)
+    if err != nil {
+        switch err {
+
+
+
+```go
+case models.ErrNotFound:
+    fmt.Fprintln(w, "Invalid email address.")
+case models.ErrInvalidPassword:
+    fmt.Fprintln(w, "Invalid password provided.")
+default:
+    http.Error(w, err.Error(), http.StatusInternalServerError)
+}
+return
+}
+cookie := http.Cookie{
+    Name: "email",
+    Value: user.Email,
+}
+http.SetCookie(w, cookie)
+fmt.Fprintln(w, user)
 }
 ```
 
@@ -6581,7 +6439,7 @@ func (u *Users) Login(w http.ResponseWriter, r *http.Request) {
 
 差异版 - book.usegolang.com/11.2-diff
 
-## 11.3 查看 COOK
+## 11.3 查看 cookies
 
 ### 11.3 查看 cookies
 
@@ -6599,17 +6457,11 @@ func (u *Users) Login(w http.ResponseWriter, r *http.Request) {
 
 在 Chrome 中你想要做的第一件事是打开设置。这应该在 Chrome 的菜单中，你也应该能在浏览器右上角看到三个点，其中包含设置菜单选项。
 
-## 11.3. 查看 COOK
-
-283
-
 ![](img/d6be51afcf11b16bf97245d05fb9e635_308_0.png)
 
 图 11.2: Google Chrome 设置页面
 
 执行此操作将打开一个与图 11.2 类似的页面。进入设置页面后，在右上角的搜索栏中输入 cookie。这应该更新页面，你应该看到两个按钮 - 一个显示“内容设置... (Content settings...)”，另一个显示“清除浏览数据... (Clear browsing data...)”。
-
-# 第 11 章 记住用户
 
 ![](img/d6be51afcf11b16bf97245d05fb9e635_309_0.png)
 
@@ -6617,19 +6469,13 @@ func (u *Users) Login(w http.ResponseWriter, r *http.Request) {
 
 点击“内容设置...”，这将打开一个页面，我们可以在其中探索 Cookie。
 
-## 11.3. 查看 COOK
-
 ![](img/d6be51afcf11b16bf97245d05fb9e635_310_0.png)
 
 图 11.4: Google Chrome 设置页面
 
-# 第 11 章 记住用户
-
 ![](img/d6be51afcf11b16bf97245d05fb9e635_311_0.png)
 
 图 11.5: Google Chrome 设置页面
-
-## 11.3. 查看 COOK
 
 ### 11.3.2 使用 Go 代码查看 cookies
 
@@ -6637,12 +6483,12 @@ func (u *Users) Login(w http.ResponseWriter, r *http.Request) {
 
 ```go
 func (u *Users) CookieTest(w http.ResponseWriter, r *http.Request) {
-	cookie, err := r.Cookie("email")
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-	fmt.Fprintf(w, "Email is:%s", cookie.Value)
+    cookie, err := r.Cookie("email")
+    if err != nil {
+        http.Error(w, err.Error(), http.StatusInternalServerError)
+        return
+    }
+    fmt.Fprintf(w, "Email is:%s", cookie.Value)
 }
 ```
 
@@ -6654,19 +6500,15 @@ atom main.go
 
 ```go
 func main() {
-	// ... 我们只添加下面这一行
-	r.HandleFunc("/cookietest", usersC.CookieTest).Methods("GET")
-	http.ListenAndServe(":3000", r)
+    // ... 我们只添加下面这一行
+    r.HandleFunc("/cookietest", usersC.CookieTest).Methods("GET")
+    http.ListenAndServe(":3000", r)
 }
 ```
 
 重启你的服务器，如果还没有登录请登录。然后访问 http://localhost:3000/cookietest，你现在应该能看到你的电子邮件地址显示在屏幕上。
 
 Email is: jon@calhoun.io
-
-
-
-
 
 ## 11.4. 防止我们的 Cookie 遭篡改
 
@@ -6744,11 +6586,7 @@ HMAC("secret-key-1", { "id": 333 }) =
 
 *(注：此处由于原文部分存在逻辑重复和错乱，已根据语意进行翻译处理以保持语意通顺)*
 
-
-
-
-
-# 11.5. 生成记忆令牌 (Tokens)
+## 11.5. 生成记忆令牌 (Tokens)
 
 ```go
 package rand
@@ -6768,8 +6606,6 @@ Go 中有多个 `rand` 包，所以如果你使用了自动导入功能，请确
 ⁷https://golang.org/pkg/crypto/rand/
 ⁸https://golang.org/pkg/crypto/rand/#ReadRandom
 
-# 第 11 章 记住用户
-
 ### 11.4. 什么是字节 (byte)？
 
 字节是一种存储 8 位比特的数据类型。换句话说，一个字节可以写为一个仅由 0 和 1 组成的 8 位二进制数。学习二进制不在本书的讨论范围内，但重要的是知道，由于这一点，一个字节总共有 256 种可能的值。
@@ -6784,7 +6620,7 @@ Go 中有多个 `rand` 包，所以如果你使用了自动导入功能，请确
 
 ⁹https://golang.org/pkg/encoding/base64/
 
-# 11.5. 生成记忆令牌 (Tokens)
+## 11.5. 生成记忆令牌 (Tokens)
 
 让我们先编写一个辅助函数，它不再要求我们传入一个切片，而是返回一个固定长度的切片，或者在发生错误时返回错误。
 
@@ -6822,8 +6658,6 @@ func String(nBytes int) (string, error) {
 
 如你所见，我们的代码调用 `Bytes` 函数并捕获结果。如果有错误，它返回空字符串和错误。否则，我们使用 `base64` 包将字节切片编码为字符串并返回结果。
 
-# 第 11 章 记住用户
-
 在使用 `base64` 包进行编码时，提供了几个¹⁰变量，提供特定的编码。我们将使用 `URLEncoding` 变量，因为我发现当你不需要特定编码时，这是最安全的选项。
 
 最后，我们将创建一个 `RememberToken` 函数，通过使用固定数量的记忆令牌字节来稍微简化代码。这并不是绝对必要的，但我喜欢这样做，这样开发者就不需要考虑他们的记忆令牌需要多少个字节，并且不会意外使用一个太小的数字。
@@ -6831,7 +6665,6 @@ func String(nBytes int) (string, error) {
 ```go
 // 我倾向于将常量放在文件顶部
 const RememberTokenBytes = 32
-
 // RememberToken 是一个辅助函数，旨在生成
 // 预定字节大小的令牌
 func RememberToken() (string, error) {
@@ -6852,14 +6685,13 @@ package main
 
 import (
 	"fmt"
-
 	"lenslocked.com/rand"
 )
 ```
 
 ¹⁰https://golang.org/pkg/encoding/base64/#pkg-variables
 
-# 11.5. 为什么要使用 32 字节？
+## 11.5. 为什么要使用 32 字节？
 
 ```go
 func main() {
@@ -6871,6 +6703,8 @@ func main() {
   fmt.Println("Remember Token:", token)
 }
 ```
+
+
 
 # 11.5. 为什么要使用 32 字节？
 
@@ -6885,10 +6719,6 @@ func main() {
 现在想象几个朋友过来了想要加入游戏，所以你决定改变规则。仍然会有一个人在猜，但其他人每个人在 1 到 10 之间选一个尚未被选过的数字，且数字是互不相同的。例如，如果总共有四个人玩，那么就会有一个人在猜，三个人选数字，他们的选择将是 1、3 和 5。
 
 现在你有了 3 个朋友，猜某一个人的数字没有意义了。相反，你决定只要你猜中了任何人的数字就赢了
-
-
-
-
 
 ## 11.6. 哈希处理记住令牌（REMEMBER TOKENS）
 
@@ -6912,46 +6742,40 @@ func main() {
 
 ### 框 11.6. 为什么我们不能对记住令牌使用 bcrypt？
 
-在框 10.3 中，我们讨论了 bcrypt 如何自动为我们的哈值添加盐（salt）。这在哈希密码时是非常棒的，因为我们打算先通过电子邮件地址查找用户，然后验证哈值；但对于记住令牌来说，这产生了一个问题。
+在框 10.3 中，我们讨论了 `bcrypt` 如何自动为我们的哈希值添加盐（salt）。这在哈希密码时是非常棒的，因为我们打算先通过电子邮件地址查找用户，然后验证哈希值；但对于记住令牌来说，这产生了一个问题。
 
-当用户通过记住令牌登录时，我们不会通过电子邮件地址查找他们，而是通过他们的记住令牌来查找。这意味着我们需要在执行查询*之前*生成存储在数据库中的哈希值，但除非知道所使用的盐，否则使用 bcrypt 是无法行的。
+当用户通过记住令牌登录时，我们不会通过电子邮件地址查找他们，而是通过他们的记住令牌来查找。这意味着我们需要在执行查询*之前*生成存储在数据库中的哈希值，但除非知道所使用的盐，否则使用 `bcrypt` 是无法行的。
 
 这让我们陷入了“两难困境”（catch-22）¹¹：我们无法在不知道盐的情况下查找用户账户，无法在不先查找用户账户的情况下知道盐。因此，我们将使用 HMAC 哈希算法。
 
-注意：从技术上讲，我们可以通过存储两个 Cookie 来让 bcrypt 起作用——一个包含用户的电子邮件或 ID（我们用它查找账户），另一个包含他们的记住令牌。我们不会在课程中这样做，因为我发现这会使未来过渡到“每个用户多个会话”变得困难。
+注意：从技术上讲，我们可以通过存储两个 Cookie 来让 `bcrypt` 起作用——一个包含用户的电子邮件或 ID（我们用它查找账户），另一个包含他们的记住令牌。我们不会在课程中这样做，因为我发现这会使未来过渡到“每个用户多个会话”变得困难。
 
 ### 11.6.1 如何使用 hash 包
 
-在开始编写自己的代码之前，我们必须首先学习如何使用 Go 语言 *hash* 包提供的 *Hash*¹² 接口。
-
-## 11.6. 哈希处理记住令牌
+在开始编写自己的代码之前，我们必须首先学习如何使用 Go 语言 `hash` 包提供的 `Hash`¹² 接口。
 
 ```go
 type Hash interface {
-	// Write（通过嵌入的 io.Writer 接口）向运行中的哈希添加
-	//更多数据。它永远不会返回错误。
-	io.Writer
-
-	// Sum 将当前哈希追加 b 并返回
-	// 结果切片。它不会改变底层的哈希
-	// 状态。
-	Sum(b []byte) byte
-
-	// Reset 将 Hash 恢复初始状态。
-	Reset()
-
-	// Size 返回 Sum 返回的字节数。
-	Size() int
-
-	// BlockSize 返回哈希的底层块大小。
-	// Write 方法必须能够接受任意数量的
-	// 数据，但如果所有写入都是块大小的倍数，
-	// 则操作可能会更高效。
-	BlockSize() int
+    // Write（通过嵌入的 io.Writer 接口）向运行中的哈希添加
+    // 更多数据。它永远不会返回错误。
+    io.Writer
+    // Sum 将当前哈希追加 b 并返回
+    // 结果切片。它不会改变底层的哈希
+    // 状态。
+    Sum(b []byte) byte
+    // Reset 将 Hash 恢复初始状态。
+    Reset()
+    // Size 返回 Sum 返回的字节数。
+    Size() int
+    // BlockSize 返回哈希的底层块大小。
+    // Write 方法必须能够接受任意数量的
+    // 数据，但如果所有写入都是块大小的倍数，
+    // 则操作可能会更高效。
+    BlockSize() int
 }
 ```
 
-使用此接口有多种方法，但假设我们有一些想要哈希的数据以及 hash.Hash 接口的实现，我们将编写类似下面的代码。
+使用此接口有多种方法，但假设我们有一些想要哈希的数据以及 `hash.Hash` 接口的实现，我们将编写类似下面的代码。
 
 ```go
 var data []byte
@@ -6961,31 +6785,33 @@ h.Write(data)
 hashedData := h.Sum(nil)
 ```
 
-我们调用 Reset 来确保哈希已经清除了之前写入它的任何数据。然后，我们将自己的数据写入哈希函数，以便它知道我们想要哈希的内容，最后我们调用 Sum 请求哈希函数为我们计算一个哈希值，并将结果存储在 hashedData 中。
+我们调用 `Reset` 来确保哈希已经清除了之前写入它的任何数据。然后，我们将自己的数据写入哈希函数，以便它知道我们想要哈希的内容，最后我们调用 `Sum` 请求哈希函数为我们计算一个哈希值，并将结果存储在 `hashedData` 中。
 
-现在我们大致知道了如何使用 hash.Hash 接口，我们将查看 crypto/hmac 包是如何工作的。
+现在我们大致知道了如何使用 `hash.Hash` 接口，我们将查看 `crypto/hmac` 包是如何工作的。
 
 ### 11.6.2 使用 crypto/hmac 包
 
 我们在 11.4.1 节中讨论过 HMAC，但 HMAC 背后的通用思想是使用秘密密钥对数据进行签名，然后使用哈希函数对签名后的数据进行哈希。通过这样做，除非你同时知道使用的函数和秘密密钥，否则很难确定用什么数据构建了哈希值。
 
-手动执行这些是可能的，但 Go 为我们提供了 crypto/hmac 包来让生活更轻松一点。在这个包内部有一个 New 函数，它接受两个信息——一个返回 hash.Hash 实现的函数和一个秘密密钥。
+手动执行这些是可能的，但 Go 为我们提供了 `crypto/hmac` 包来让生活更轻松一点。在这个包内部有一个 `New` 函数，它接受两个信息——一个返回 `hash.Hash` 实现的函数和一个秘密密钥。
 
 ```go
 func New(h func() Hash, key []byte) Hash
 ```
 
-重要的是，我们需要提供一个返回哈希的函数，而不是哈希本身。查看 crypto/hmac 包，我们 New 函数是这样工作的：
+重要的是，我们需要提供一个返回哈希的函数，而不是哈希本身。查看 `crypto/hmac` 包，我们 `New` 函数是这样工作的：
 
 ```go
 mac := hmac.New(sha256.New, key)
-```在这行代码中，我们声明要创建一个由 SHA256 支持的 HMAC。
+```
+
+在这行代码中，我们声明要创建一个由 SHA256 支持的 HMAC。
 
 ## 11.6. 记住令牌（REMEMBER TOKENS）
 
 ### 11.6.3 编写我们的 hash 包
 
-就像之前的示例一样，我们将编写自己的包。因为我们要封装的主要包是 hash，且主要目的是哈希字符串，我们将我们的包命名为 hash。
+就像之前的示例一样，我们将编写自己的包。因为我们要封装的主要包是 `hash`，且主要目的是哈希字符串，我们将我们的包命名为 `hash`。
 
 我们将首先声明包名并声明导入项。
 
@@ -6993,47 +6819,43 @@ mac := hmac.New(sha256.New, key)
 package hash
 
 import (
-	"crypto/hmac"
-	"crypto/sha256"
-	"encoding/base64"
-	"hash"
+    "crypto/hmac"
+    "crypto/sha256"
+    "encoding/base64"
+    "hash"
 )
 ```
 
-我们在之前的章节中提到过大部分包，但没有提到 base64 包。当我们哈希数据时得到一个字节切片，我们将¹³https://golang.org/pkg/crypto/sha256 使用 base64 包——将这些字节切片编码字符串。
+我们在之前的章节中提到过大部分包，但没有提到 `base64` 包。当我们哈希数据时得到一个字节切片，我们将¹³https://golang.org/pkg/crypto/sha256 使用 `base64` 包——将这些字节切片编码字符串。
 
-接下来我们要定义自己的 HMAC 类型。我们知道 crypto/hmac 包的 New 函数返回 hash.Hash，因此将其嵌入我们的 HMAC 类型中，然后编写一个接收秘密密钥并构造 HMAC 的函数。
+接下来我们要定义自己的 HMAC 类型。我们知道 `crypto/hmac` 包的 `New` 函数返回 `hash.Hash`，因此将其嵌入我们的 HMAC 类型中，然后编写一个接收秘密密钥并构造 HMAC 的函数。
 
 ```go
 // NewHMAC 创建并返回一个新的 HMAC 对象
 func NewHMAC(key string) HMAC {
-	h := hmac.New(sha256.New, []byte(key))
-	return HMAC{h: h}
+    h := hmac.New(sha256.New, []byte(key))
+    return HMAC{h: h}
 }
 
 // HMAC 是 crypto/hmac 包的封装
 // 它在我们的代码中使用起来更简单。
 type HMAC struct {
-	h hash.Hash
+    h hash.Hash
 }
 ```
 
-我们需要写的最后一部分是一个函数，它接收输入字符串，对其进行哈希，然后以字符串形式结果。在 11.6.1 节中，我们查看了如何使用 hash 包生成哈希，最后我们将使用 base64 包对生成的字节切片进行编码并返回。
+我们需要写的最后一部分是一个函数，它接收输入字符串，对其进行哈希，然后以字符串形式结果。在 11.6.1 节中，我们查看了如何使用 `hash` 包生成哈希，最后我们将使用 `base64` 包对生成的字节切片进行编码并返回。
 
 ```go
 // Hash 将使用创建 HMAC 对象时提供的秘密密钥
 // 对提供的输入字符串进行哈希
 func (h HMAC) Hash(input string) string {
-	h.h.Reset()
-	h.h.Write([]byte(input))
-	b := h.h.Sum(nil)
-	return base64.URLEncoding.EncodeToString(b)
+    h.h.Reset()
+    h.h.Write([]byte(input))
+    b := h.h.Sum(nil)
+    return base64.URLEncoding.EncodeToString(b)
 }
 ```
-
-
-
-
 
 ## 11.6. 哈希化记忆令牌
 
@@ -7045,7 +6867,7 @@ func (h HMAC) Hash(input string) string {
 
 最后，让我们测试一下我们的包。打开你的实验性 `main.go` 文件。
 
-```go
+```bash
 $ atom exp/main.go
 ```
 
@@ -7055,15 +6877,15 @@ $ atom exp/main.go
 package main
 
 import (
-	"fmt"
-	"lenslocked.com/hash"
+    "fmt"
+    "lenslocked.com/hash"
 )
 
 func main() {
-	hmac := hash.NewHMAC("my-secret-key")
-	// 这应该打印出：
-	// 4waUFC1lcnuuxoM2UoJfpGZGL1asj35y7teuweSFgPY=
-	fmt.Println(hash.Hash("this is my string to hash"))
+    hmac := hash.NewHMAC("my-secret-key")
+    // 这应该打印出：
+    // 4waUFC1lcnuuxoM2UoJfpGZGL1asj35y7teuweSFgPY=
+    fmt.Println(hash.Hash("this is my string to hash"))
 }
 ```
 
@@ -7103,17 +6925,17 @@ $ go run exp/main.go
 $ atom models/users.go
 ```
 
-接下来，我们需要为我们的 User 类型添加这些字段。
+接下来，我们需要为我们的 `User` 类型添加这些字段。
 
 ```go
 type User struct {
-	gorm.Model
-	Name         string
-	Email        string `gorm:"not null;unique_index"`
-	Password     string `gorm:"-"`
-	PasswordHash string `gorm:"not null"`
-	Remember     string `gorm:"-"`
-	RememberHash string `gorm:"not null;unique_index"`
+    gorm.Model
+    Name         string
+    Email        string `gorm:"not null;unique_index"`
+    Password     string `gorm:"-"`
+    PasswordHash string `gorm:"not null"`
+    Remember     string `gorm:"-"`
+    RememberHash string `gorm:"not null;unique_index"`
 }
 ```
 
@@ -7144,10 +6966,8 @@ $ atom models/users.go
 ```go
 import (
   "errors"
-
   // 这是唯一新增的导入
   "lenslocked.com/rand"
-
   "github.com/jinzhu/gorm"
   "github.com/jinzhu/gorm/dialects/postgres"
   "golang.org/x/crypto/bcrypt"
@@ -7215,17 +7035,13 @@ func NewUserService(connectionInfo string) (*UserService, error) {
 
 现在，我们就有了哈希记忆令牌的方法。
 
-
-
-
-
 已完成 - book.usegolang.com/11.7.3
 
 更改 - book.usegolang.com/11.7.3-diff
 
 # 11.7.4 在创建和更新时对 remember token 进行哈希
 
-所有部分都就绪后，我们现在可以更新 `UserService`  `Create` 和 `Update` 方法，如果存在 remember token 则对其进行哈希处理。
+所有部分都就绪后，我们现在可以更新 `UserService` `Create` 和 `Update` 方法，如果存在 remember token 则对其进行哈希处理。
 
 我们将再次在 users 模型的源文件中工作。
 
@@ -7245,7 +7061,9 @@ $ atom models/users.go
 user.RememberHash = us.hmac.Hash(user.Remember)
 ```
 
-接下来是 `Update` 方法。如果 remember token 没有更新，我们就不希望更新 remember hash，因此在这种情况下我们需要一个 `if` 语句。我们在 `Create` 方法中不需要这个，因为在创建用户时，我们总是创建一个新的 remember token。
+
+
+接下来是 `Update` 方法。如果 `remember token` 没有更新，我们就不希望更新 `remember hash`，因此在这种情况下我们需要一个 `if` 语句。我们在 `Create` 方法中不需要这个，因为在创建用户时，我们总是创建一个新的 `remember token`。
 
 ```go
 func (us *UserService) Update(user *User) error {
@@ -7258,25 +7076,25 @@ func (us *UserService) Update(user *User) error {
 
 # 11.7. 在 USER SERVICE 中哈希 REM TOKENS
 
-完成最后一次代码更改后，我们准备好开始持久化 remember tokens 了，但在使用它们之前，我们需要编写一个函数，允许我们根据 remember token 查找用户。
+完成最后一次代码更改后，我们准备好开始持久化 `remember tokens` 了，但在使用它们之前，我们需要编写一个函数，允许我们根据 `remember token` 查找用户。
 
 ### 源代码
 
 下面的链接包含了完整的源代码以及本节中所有更改代码的差异。
 
-已完成 - book.usegolang.com/11.7.4
+已完成 - `book.usegolang.com/11.7.4`
 
-更改 - book.usegolang.com/11.7.4-diff
+更改 - `book.usegolang.com/11.7.4-diff`
 
 # 11.7.5 通过 remember token 获取用户
 
-我们仍然在 users 模型中工作，所以请确保你已经打开了它。
+我们仍然在 `users` 模型中工作，所以请确保你已经打开了它。
 
 ```
 $ atom models/users.go
 ```
 
-我们将编写的下一段代码是 `UserService` 的一个新方法，它允许我们传入原始的 remember token，然后返回带有 remember token 的用户或错误。为了使此能够工作，我们的方法首先需要对原始 remember token 进行哈希处理，以便与我们在数据库中存储的内容匹配，然后查询数据库中具有 remember token hash 的用户。
+我们将编写的下一段代码是 `UserService` 的一个新方法，它允许我们传入原始的 `remember token`，然后返回带有 `remember token` 的用户或错误。为了使此能够工作，我们的方法首先需要对原始 `remember token` 进行哈希处理，以便与我们在数据库中存储的内容匹配，然后查询数据库中具有 `remember token hash` 的用户。
 
 我们已经看到过如何实现这些每一个单独的部分，所以剩下的工作就是将它们整合在一起。
 
@@ -7298,7 +7116,7 @@ func (us *UserService) ByRemember(token string) (*User, error) {
 }
 ```
 
-注意：我们在 `Where()` 方法中使用 `remember_hash` 看起来有点奇怪，GORM 在创建数据库表时使用 snake case（蛇形命名法），这确实是正确的用法。我们返回与 `ByEmail` 相同的错误，这使得 `ByRemember` 方法在未找到记录时能够轻松地返回 `ErrNotFound`。
+注意：我们在 `Where()` 方法中使用 `remember_hash` 看起来有点奇怪，`GORM` 在创建数据库表时使用 `snake case`（蛇形命名法），这确实是正确的用法。我们返回与 `ByEmail` 相同的错误，这使得 `ByRemember` 方法在未找到记录时能够轻松地返回 `ErrNotFound`。
 
 # 11.7.6 重置我们的数据库并测试
 
@@ -7311,7 +7129,7 @@ func (us *UserService) ByRemember(token string) (*User, error) {
 
 # 11.7.7 在 USER SERVICE 中哈希 REM TOKENS
 
-与我们的数据库交互需要我们从主源文件复制一些代码到实验性文件中。具体来说，我们需要用于连接数据库的常量set。我们将重构数据库连接字符串，设置一个 user service 实例，然后与其交互。
+与我们的数据库交互需要我们从主源文件复制一些代码到实验性文件中。具体来说，我们需要用于连接数据库的常量 `set`。我们将重构数据库连接字符串，设置一个 `user service` 实例，然后与其交互。
 
 鉴于这些都是我们见过的或刚刚写的代码，我将先展示源代码，然后演示它。
 
@@ -7325,12 +7143,10 @@ $ atom exp/main.go
 
 ```go
 package main
-
 import (
 	"fmt"
 	"lenslocked.com/models"
 )
-
 const (
 	host = "localhost"
 	port = 5432
@@ -7338,7 +7154,6 @@ const (
 	password = "your-password"
 	dbname = "lenslocked_dev"
 )
-
 func main() {
 	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable",
 		host, port, user, password, dbname)
@@ -7348,7 +7163,6 @@ func main() {
 	}
 	defer us.Close()
 	us.DestructiveReset()
-
 	user := models.User{
 		Name:     "Michael Scott",
 		Email:    "michael@undflin.com",
@@ -7358,29 +7172,26 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-
 	// 验证用户是否有 RememberHash
 	fmt.Printf("%v\n", user)
 	if user.Remember == "" {
 		panic("Invalid remember token")
 	}
-
 	// 现在验证我们可以通过该 remember token 查找用户
 	user2, err := us.ByRemember(user.Remember)
 	if err != nil {
 		panic(err)
 	}
-
 	fmt.Printf("%v\n", user2)
 }
 ```
 
 在这段代码中：
 
-1. 重置我们的 users 表
-2. 创建新用户并允许我们的 user service 设置 remember token
-3. 验证 remember token 已设置，否则 panic
-4. 通过 remember token 搜索用户，以验证 ByRemember 方法有效且我们的 remember token 已正确持久化
+1. 重置我们的 `users` 表
+2. 创建新用户并允许我们的 `user service` 设置 `remember token`
+3. 验证 `remember token` 已设置，否则 `panic`
+4. 通过 `remember token` 搜索用户，以验证 `ByRemember` 方法有效且我们的 `remember token` 已正确持久化
 
 你可以通过运行以下命令来自己测试：
 
@@ -7392,26 +7203,26 @@ $ go run exp/main.go
 
 下面的链接包含了完整的源代码以及本节所有更改代码的差异。
 
-- 已完成 - book.usegolang.com/11.7.6
-- 更改 - book.usegolang.com/11.7.6-diff
+- 已完成 - `book.usegolang.com/11.7.6`
+- 更改 - `book.usegolang.com/11.7.6-diff`
 
 # 11.8 记住用户
 
-在本节中，我们将如何使用 cookie 在请求之间记住用户是谁，以及如何使用这些信息在用户未登录时限制其访问页面。
+在本节中，我们将如何使用 `cookie` 在请求之间记住用户是谁，以及如何使用这些信息在用户未登录时限制其访问页面。
 
-我们将从编写一个允许我们“登录”用户的方法开始。换句话说，如果原始 token 不可用，它将生成一个新的 remember token，使用 remember token 更新用户账户，最后将 remember token 存储在 cookie 中，以便我们在后续请求中知道该用户。我们将在创建新账户或登录时调用此方法。
+我们将从编写一个允许我们“登录”用户的方法开始。换句话说，如果原始 `token` 不可用，它将生成一个新的 `remember token`，使用 `remember token` 更新用户账户，最后将 `remember token` 存储在 `cookie` 中，以便我们在后续请求中知道该用户。我们将在创建新账户或登录时调用此方法。
 
-之后，我们将修改 cookie 测试函数，使其查找此 cookie，如果用户未登录则将其重定向到登录页面，否则将打印用户的账户信息以证明我们现在可以访问该用户。
+之后，我们将修改 `cookie` 测试函数，使其查找此 `cookie`，如果用户未登录则将其重定向到登录页面，否则将打印用户的账户信息以证明我们现在可以访问该用户。
 
 # 11.8.1 在 cookie 中存储 remember tokens
 
-`signIn` 方法将是 users controller的一部分，因为我们在用户登录和创建账户时会使用它。
+`signIn` 方法将是 `users controller` 的一部分，因为我们在用户登录和创建账户时会使用它。
 
 ```
 $ atom controllers/users.go
 ```
 
-我们的 `signIn` 方法需要提供两个参数：当前的 NextResponse，以及我们想要登录的用户。我们需要用户来更新他们的 remember token，我们需要 response writer 来设置用户的 cookie。
+我们的 `signIn` 方法需要提供两个参数：当前的 `NextResponse`，以及我们想要登录的用户。我们需要用户来更新他们的 `remember token`，我们需要 `response writer` 来设置用户的 `cookie`。
 
 ```go
 // signIn 用于通过 cookie 登录给定的用户
@@ -7420,15 +7231,11 @@ func (u *Users) signIn(w http.ResponseWriter, user *models.User) error {
 }
 ```
 
-虽然不太可能，但在尝试用新的 remember token 更新用户时可能会遇到错误，因此当错误发生时我们需要返回这些错误，这就是返回 error 类型的原因。
+虽然不太可能，但在尝试用新的 `remember token` 更新用户时可能会遇到错误，因此当错误发生时我们需要返回这些错误，这就是返回 `error` 类型的原因。
 
-我们的实现将从检查是否设置了原始 remember token 开始。如果没有设置，我们没有办法反转哈希值，因此我们将生成一个新的 remember token。否则，我们将使用已经为用户设置的 remember token。
+我们的实现将从检查是否设置了原始 `remember token` 开始。如果没有设置，我们没有办法反转哈希值，因此我们将生成一个新的 `remember token`。否则，我们将使用已经为用户设置的 `remember token`。
 
-当我们生成 remember token 时，我们还想使用 user service 更新用户，因此我们还将调用 `Update` 方法并返回任何存在的错误。
-
-
-
-
+当我们生成 `remember token` 时，我们还想使用 `user service` 更新用户，因此我们还将调用 `Update` 方法并返回任何存在的错误。
 
 ## 11.8. 记住用户
 
@@ -7442,9 +7249,9 @@ if err != nil {
 }
 ```
 
-退出此 `if` 语句后，我们知道 `user` 变量的 `Remember` 字段中应该有一个非空字符串值。如果它为空字符串，我们在语句内部的代码将生成一个新的记住记忆令牌（remember token），否则我们知道它已经设置了。
+退出此 `if` 语句后，我们知道 `user` 变量的 `Remember` 字段中应该有一个非空字符串值。如果它为空字符串，我们在语句内部的代码将生成一个新的记住记忆令牌（`remember token`），否则我们知道它已经设置了。
 
-我们将使用记住记忆令牌创建一个 cookie，并使用 `http` 包通过传递到我们 `signIn` 方法的响应（response）来设置它。最后，如果我们执行到了这一步，说明没有任何错误，我们将返回 `nil`。
+我们将使用记住记忆令牌创建一个 `cookie`，并使用 `http` 包通过传递到我们 `signIn` 方法的响应（`response`）来设置它。最后，如果我们执行到了这一步，说明没有任何错误，我们将返回 `nil`。
 
 ```go
 cookie := http.Cookie{
@@ -7483,17 +7290,15 @@ return nil
 }
 ```
 
-下一步是更新 `login` 和 `signup` 方法，以便在用户成功创建账户或登录后调用此方法。我们还将把用户重定向到 cookie 测试页面，这样我们就可以验证 cookie 是否已正确设置，而无需手动输入 URL。
+下一步是更新 `login` 和 `signup` 方法，以便在用户成功创建账户或登录后调用此方法。我们还将把用户重定向到 `cookie` 测试页面，这样我们就可以验证 `cookie` 是否已正确设置，而无需手动输入 URL。
 
 更新 `Create` 方法比较简单，我们只需要添加一些新代码并删除方法末尾的 `fmt.Fprintln`。
 
 ```go
 func (u *Users) Create(w http.ResponseWriter, r *http.Request) {
     // ... 这部分代码保持不变
-
     // 删除此行：
     // fmt.Fprintln(w, "User is", user)
-
     // 在 Create 方法末尾添加以下代码
     err := u.SignIn(w, &cookie)
     if err != nil {
@@ -7506,14 +7311,13 @@ func (u *Users) Create(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-在 `Login` 方法中，我们需要删除任何用于创建 cookie 的代码以及方法末尾的打印语句。我们不再需要手动创建 cookie 了，因为它已经由 `signIn` 方法处理了。
+在 `Login` 方法中，我们需要删除任何用于创建 `cookie` 的代码以及方法末尾的打印语句。我们不再需要手动创建 `cookie` 了，因为它已经由 `signIn` 方法处理了。
 
 ## 11.8. 记住用户
 
 ```go
 func (u *Users) Login(w http.ResponseWriter, r *http.Request) {
   // ... 大部分代码保持不变
-
   // 删除这段代码
   // cookie := http.Cookie{
     // Name: "email",
@@ -7521,7 +7325,6 @@ func (u *Users) Login(w http.ResponseWriter, r *http.Request) {
   // }
   // http.SetCookie(w, &cookie)
   // fmt.Println(w, user)
-
   // 在方法末尾添加这段代码
   err := u.SignIn(w, user)
   if err != nil {
@@ -7532,23 +7335,23 @@ func (u *Users) Login(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-最后，重启你的服务器并尝试创建一个新账户并登录。此时，我们只想验证没有任何错误，因为在更新 cookie 测试之前，我们无法正确测试我们的记住记忆令牌 cookie。
+最后，重启你的服务器并尝试创建一个新账户并登录。此时，我们只想验证没有任何错误，因为在更新 `cookie` 测试之前，我们无法正确测试我们的记住记忆令牌 `cookie`。
 
-注意：cookie 测试方法目前读取的是旧的 cookie，所以如果你奇怪为什么它与你创建或登录的任何新账户账户都不匹配，这可能就是原因。我们将在下一节中修复这个问题。
+注意：`cookie` 测试方法目前读取的是旧的 `cookie`，所以如果你奇怪为什么它与你创建或登录的任何新账户账户都不匹配，这可能就是原因。我们将在下一节中修复这个问题。
 
 ### 源代码
 
-下面的链接包含了完整的源代码以及本节所有更改代码的差异（diff）。
+下面的链接包含了完整的源代码以及本节所有更改代码的差异（`diff`）。
 
-已完成 - book.usegolang.com/11.8.1
+已完成 - `book.usegolang.com/11.8.1`
 
-变更 - book.usegolang.com/11.8.1-diff
+变更 - `book.usegolang.com/11.8.1-diff`
 
 ## 11.8.2 限制页面访问
 
 接下来，我们需要编写一些代码来限制用户尝试访问页面时的权限。长远来看，我们希望在发生这种情况时将他们重定向到登录页面，但目前我们将通过显示错误消息来这样做，以便验证我们的代码是否按预期工作。
 
-幸运的是，我们的 cookie 测试已经包含了实现此操作所需的大半部分代码。在 `CookieTest` 方法中，我们已经处理了读取 cookie 和检查错误，因此我们想要做的第一件事是更新这些代码以读取我们创建的新记住记忆令牌。
+幸运的是，我们的 `cookie` 测试已经包含了实现此操作所需的大半部分代码。在 `CookieTest` 方法中，我们已经处理了读取 `cookie` 和检查错误，因此我们想要做的第一件事是更新这些代码以读取我们创建的新记住记忆令牌。
 
 打开用户控制器并跳转到 `CookieTest` 方法。
 
@@ -7556,7 +7359,7 @@ func (u *Users) Login(w http.ResponseWriter, r *http.Request) {
 $ atom controllers/users.go
 ```
 
-更新 `CookieTest` 方法以读取 "cookie_test" cookie 而不是 "email" cookie。
+更新 `CookieTest` 方法以读取 `"cookie_test"` `cookie` 而不是 `"email"` `cookie`。
 
 ```go
 func (u *Users) CookieTest(w http.ResponseWriter, r *http.Request) {
@@ -7568,9 +7371,9 @@ func (u *Users) CookieTest(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-接下来，我们将使用此 cookie 的值在数据库中搜索用户。为了做到，我们将使用用户控制器中的 `us` 字段，它是一个 `User` 实例。我们将使用在本章之前编写的用户服务中的 `ByRemember` 方法。
+接下来，我们将使用此 `cookie` 的值在数据库中搜索用户。为了做到，我们将使用用户控制器中的 `us` 字段，它是一个 `User` 实例。我们将使用在本章之前编写的用户服务中的 `ByRemember` 方法。
 
-在获取 cookie 并检查错误后添加这段代码。简而言之，将其添加到我们刚刚写的代码下方。
+在获取 `cookie` 并检查错误后添加这段代码。简而言之，将其添加到我们刚刚写的代码下方。
 
 ## 11.8. 记住用户
 
@@ -7587,11 +7390,13 @@ fmt.Println(n, user)
 
 如果发生错误，我们将输出错误消息。在生产环境中，这种信息可能包含敏感信息。理想情况下，我们应该将他们重定向到登录页面。
 
-重启服务器并尝试创建账户并登录，以验证是否设置了 cookie。
+重启服务器并尝试创建账户并登录，以验证是否设置了 `cookie`。
 
 ```bash
 go run main.go
 ```
+
+
 
 如果你想在没有设置 cookie 的情况下验证它是否工作，我们可以在无痕窗口中进行 cookie 测试。
 
@@ -7599,9 +7404,9 @@ go run main.go
 
 下面的链接包含了完整的源代码以及本节所有更改代码的差异。
 
-已完成 - book.usegolang.com/11.8.2
+已完成 - `book.usegolang.com/11.8.2`
 
-变更 - book.usegolang.com/11.8.2-diff
+变更 - `book.usegolang.com/11.8.2-diff`
 
 ## 11.9 防止 cookie 受到 XSS 攻击
 
@@ -7625,11 +7430,11 @@ XSS 代表跨站脚本 [xss]，它是一种攻击类型，恶意第三方试图�
 
 现在当你访问我的个人资料时，代码将执行并获得你所有的资源。这些可能是私人文档、私人代码或其他。重点是攻击者能够代表你发送网络请求。
 
-## 11.9. 防止 cookie 受到 XSS 攻击
+### 11.9. 防止 cookie 受到 XSS 攻击
 
 我们正在使用 `html/template` 包来缓解这个问题，因此这不太可能在我们身上发生，但始终尽可能安全。如果你不计划使用 JS 框架，或者你不打算使用 JavaScript 发网络请求，那么你真的不需要脚本访问你的 cookie，特别是身份验证 cookie。
 
-###### 仅在需要时放宽安全性
+#### 仅在需要时放宽安全性
 
 虽然你可能为了以后决定使用 JavaScript 框架而跳过这一步，但我敦促你不要。
 
@@ -7644,8 +7449,6 @@ $ atom controllers/users.go
 ```
 
 找到我们在 `signIn` 方法中构建的 cookie，并更新以包含 `HttpOnly` 字段的值为 `true`。
-
-
 
 ```go
 cookie := http.Cookie{
@@ -7665,8 +7468,8 @@ Accessible to script: No (HttpOnly)
 
 下面的链接包含了完整的源代码以及本节中所有更改代码的差异（diff）。
 
-- 已完成版 - book.usegolang.com/11.9
-- 更改 - book.usegolang.com/11.9-diff
+- 已完成版 - `book.usegolang.com/11.9`
+- 更改 - `book.usegolang.com/11.9-diff`
 
 # 11.10 防止我们的 cookie 不被窃取
 
@@ -7762,10 +7565,6 @@ Cookie 可以用于存储各种数据，只要这些不是敏感数据。例如�
 
 由于两者之间的紧密依赖，我们将把所有这些代码保持在我们的应用程序中。
 
-
-
-
-
 ## 12.1 职责分离
 
 在此时，我们的 `models` 包还没有任何真正的隔离。也就是说，我们的 `UserService` 类型包含了几乎所有与用户交互相关的代码，无论这些代码具体是做什么。
@@ -7780,17 +7579,11 @@ Cookie 可以用于存储各种数据，只要这些不是敏感数据。例如�
 
 注意：虽然这不是唯一的设计选择，但我发现它最适合当前的情况，这也是为什么我们在本课程中使用它的原因。
 
-## 12.1 职责分离
-
-如果存在这种方案就太好了，但遗憾的是，在代码设计方面没有所谓的“一刀切”。对于一个应用程序可能是理想的方案，对于另一个可能很快就变得是灾难性的。这种观点适用于几乎所有的设计模式，包括 MVC。
-
-虽然我们在书中学习到的大部分内容旨在适用于大多数情况，但请记住，如果其他代码结构和设计模式看起来更符合你的项目，尝试它们也是完全可以的。我确实建议你先尝试这些模式，特别是在第一遍学习课程时，但实验是扩展知识的极佳方法。即使一个新模式效果不佳，只要你从经验中学习，就不算是浪费时间。
-
 ### 12.1.1 重新思考 models 包
 
 在我们当前的代码中，`models` 包导出了两个主要类型。
 
-```
+```go
 type User struct { ... }
 type UserService struct { ... }
 ```
@@ -7810,8 +7603,6 @@ type UserService struct { ... }
 正如我们之前提到的，我们将开始将其拆分为许多层。通过这种方式，我们的用户服务将不再负责执行所有这些工作，而是将大部分工作推迟给其他层。例如，如果我们引入一个 `UserReadWriter` 层，我们可能会得到像图 12.2 所示的设计。
 
 ## 12.1 职责分离
-
-339
 
 ![](img/d6be51afcf11b16bf97245d05fb9e635_364_0.png)
 
@@ -7837,15 +7628,16 @@ type UserService struct { ... }
 
 这种变化初看可能微不足道，但它对你的开发可能会产生巨大影响。例如，现在我们编写数据库层时，可以始终假设我们拥有的数据是 100% 有效的；如果无效，验证层早已经拒绝它了。
 
-## 12.1 职责分离 341
+## 12.1 职责分离
 
-```
+```go
 // 如果 ID 有效，将其传递给 userGorm
 return uv.userGorm.ByID(id)
 
 type userGorm struct {
 	db gorm.DB
 }
+
 func (ug *userGorm) ByID(id uint) (*User, error) {
 	// 我们不需要验证数据，因为它已经通过了验证
 	var user User
@@ -7857,11 +7649,9 @@ func (ug *userGorm) ByID(id uint) (*User, error) {
 }
 ```
 
+
+
 注意：此代码仅用于说明目的，你不需要将其添加到你的应用程序中。
-
-
-
-
 
 # 第 12 章：数据的规范化与验证
 
@@ -7883,7 +7673,9 @@ func (ug *userGorm) ByID(id uint) (*User, error) {
 
 ```
 db, _ := // 连接到一个 GORM 数据库
+
 UserService{
+
 userVal: userVal{
 ```
 
@@ -7891,7 +7683,9 @@ userVal: userVal{
 
 ```
 userGorm: userGorm{
+
   db: db,
+
 }
 ```
 
@@ -7905,15 +7699,18 @@ userGorm: userGorm{
 type userVal struct {
   userCache
 }
+
 func (uv *userVal) ByID(id uint) (*User, error) {
   // 先进行验证...
   // 现在我们使用缓存而不是数据库层
   return uv.userCache.ByID(id)
 }
+
 type userCache struct {
   userGorm
   // 以及其他缓存数据
 }
+
 func (uc *userCache) ByID(id uint) (*User, error) {
   // 为了简单起见，这里特意跳过了任何缓存逻辑
   return uc.userGorm.ByID(id)
@@ -7924,40 +7721,39 @@ func (uc *userCache) ByID(id uint) (*User, error) {
 
 我们可以通过添加大量检查缓存的可选代码来修复这个问题，但这会给我们的代码增加很多复杂性，并且维护起来变得混乱。
 
-```
+```go
 func (uv *userVal) ByID(id uint) (*User, error) {
-// 先进行验证...
-
+  // 先进行验证...
   // 如果有缓存，则使用缓存
   if uv.userCache != nil {
-	return uv.userCache.ByID(id)
+    return uv.userCache.ByID(id)
   } else { // 否则使用数据库层
-	return uv.userGorm.ByID(id)
-}
+    return uv.userGorm.ByID(id)
+  }
 }
 ```
 
 我们不想这样做，而是将查看接口如何结合接口链，允许我们编写这种代码，使得我们的每一层实际上并不关心它后面是哪一层。所有的层需要做的只是执行自己的一组工作，然后调用下一层。
 
 > 框 12.2. 接口链
-
+>
 > 接口链基本上正如其听起来的那样——它是在编写一种实际上创建了接口实现“链”的代码。
-
-例如，假设我们从 `Speaker` 接口开始：
-```go
-type Speaker interface {
-Speak() string
-}
-```
-
-要实现此接口，我们只需要创建一个带有 `Speak` 方法的类型。
+>
+> 例如，假设我们从 `Speaker` 接口开始：
+> ```go
+> type Speaker interface {
+> Speak() string
+> }
+> ```
+>
+> 要实现此接口，我们只需要创建一个带有 `Speak` 方法的类型。
 
 ## 12.1. 分离职责
 
 ```
 type Dog struct {}
 func (d Dog) Speak() string {
-	return "woof"
+    return "woof"
 }
 ```
 
@@ -7965,10 +7761,11 @@ func (d Dog) Speak() string {
 
 ```go
 type PrefixSpeaker struct {
-	s Speaker
+    s Speaker
 }
+
 func (ps PrefixSpeaker) Speak() string {
-	return "prefix: " + ps.s.Speak()
+    return "prefix: " + ps.s.Speak()
 }
 ```
 
@@ -7976,7 +7773,7 @@ func (ps PrefixSpeaker) Speak() string {
 
 ```go
 speaker := PrefixSpeaker{
-	s: Dog(),
+    s: Dog(),
 }
 // 这打印出 "prefix: woof"
 fmt.Println(speaker.Speak())
@@ -7985,10 +7782,6 @@ fmt.Println(speaker.Speak())
 发生的是，我们对 `Speak` 方法的初始调用调用了 `PrefixSpeaker` 的方法，但在内部调用了 `Dog` 类型的 `Speak` 方法，导致了某种方法调用链。
 
 虽然我们的示例非常简单，但方法链（method chaining）可以非常强大。
-
-
-
-
 
 ## 12.1. 职责分离
 
@@ -8021,12 +7814,11 @@ usWithVal := UserService(
 ```go
 var testUser User
 type testUserReader struct { }
-
 func (testUserReader) ByID(id uint) (*User, error) {
-	if id <= 10 {
-		return testUser, nil
-}
-	return nil, ErrNotFound
+    if id <= 10 {
+        return testUser, nil
+    }
+    return nil, ErrNotFound
 }
 ```
 
@@ -8064,16 +7856,12 @@ $ atom models/users.go
 // 对于单用户查询，任何错误（除了 ErrNotFound）
 // 我们都会返回一个错误。
 type UserDB interface {
-	ByID(id uint) (*User, error)
-	ByEmail(email string) (*User, error)
-	// 这里的查询方法
-	ByRemember(token string) (*User, error)
+    ByID(id uint) (*User, error)
+    ByEmail(email string) (*User, error)
+    // 这里的查询方法
+    ByRemember(token string) (*User, error)
 }
 ```
-
-
-
-
 
 ## 12.2. USERDB 接口
 
@@ -8094,7 +7882,7 @@ hhmac hash.HMAC
 ```go
 type Dog struct { }
 func (d Dog) Bark() {
-	fmt.Println("woof!")
+    fmt.Println("woof!")
 }
 ```
 
@@ -8216,28 +8004,23 @@ func (uv *userValidator) ByID(id uint) (*User, error) {
 
 ```go
 func NewUserService(connectionInfo string) (*UserService, error) {
-	ug, err := newUserGorm(connectionInfo)
-	if err != nil {
-		return nil, err
-	}
-	return &UserService{
-		UserDB: userValidator{
-			UserDB: ug,
-		},
-	}, nil
+    ug, err := newUserGorm(connectionInfo)
+    if err != nil {
+        return nil, err
+    }
+    return &UserService{
+        UserDB: userValidator{
+            UserDB: ug,
+        },
+    }, nil
 }
 ```
 
 有了这些更改，我们现在准备好开始填充接口并编写代码。
 
-
-
-
 接下来，我们需要更新现有的类型使其不再被导出。我们还需要添加一个嵌入的 `UserDB`，以便完整地实现 `UserService` 接口。读取这一行：
 
-```go
-type UserService struct {
-```
+
 
 将其更新为以小写字母开头，以便不再被导出。
 
@@ -8271,7 +8054,7 @@ func NewUserService(connectionInfo string) (UserService, error) {
     }
 ```
 
-## 12.3. USERSERVICE 接口
+## 12.3. UserService 接口
 
 ```go
 // 我们还需要更新构造用户服务的方式。
@@ -8284,7 +8067,7 @@ return &userService{
     UserDB: uValidator{
         UserDB: ug,
     },
-    },
+},
 }
 ```
 
@@ -8449,13 +8232,8 @@ func (uv *userValidator) Create(user *User) error {
 	user.RememberHash = uv.hmac.Hash(user.Remember)
 	return uv.DB.Create(user)
 }
-
 // 现在 usergorm 的版本变为...
 ```
-
-
-
-
 
 ## 12.4. 编写与组织验证代码
 
@@ -8487,7 +8265,6 @@ func (uv *userValidator) Update(user *User) error {
 
 ```go
 return uv.UserDB.Update(user)
-
 func (ug *userGorm) Update(user *User) error {
     return ug.db.Save(user).Error
 }
@@ -8503,7 +8280,6 @@ func (uv *userValidator) Delete(id uint) error {
     }
     return uv.UserDB.Delete(id)
 }
-
 func (ug *userGorm) Delete(id uint) error {
     user := User(Model: gorm.Model(ID: id))
     return ug.db.Delete(user).Error
@@ -8592,6 +8368,8 @@ func runUserFns(user *User, fns ...userValFn) error {
 }
 ```
 
+
+
 `runUserFns` 接收指向 `user` 的指针和任意数量的验证函数作为参数，然后使用 `range` 遍历每个函数。在遍历每个函数时，它调用该函数并将 `user` 作为参数传入，捕获错误返回值。如果结果为 `nil`，意味着我们没有收到错误，可以继续下一个验证函数，这正是我们的代码所做的。如果返回值不是 `nil`，意味着我们收到了错误，我们可以停止运行验证并返回该错误。最后，如果所有验证运行成功，我们可以返回 `nil`，表示运行验证时没有遇到任何错误。
 
 由于 `user` 是指针，对其内部数据的任何更改将在每次函数调用之间持久化，允许我们捕获沿发生的任何数据归一化。
@@ -8604,10 +8382,6 @@ uv.bcryptPassword); err != nil {
   return err
 }
 ```
-
-
-
-
 
 ## 12.4. 编写和组织验证代码
 
@@ -8626,7 +8400,6 @@ func (uv *userValidator) Create(user *User) error {
 		}
 		user.Remember = token
 	}
-
 	user.RememberHash = uv.hmac.Hash(user.Remember)
 	return uv.UserDB.Create(user)
 }
@@ -8643,7 +8416,6 @@ func (uv *userValidator) Update(user *User) error {
 	if user.Remember != "" {
 		user.RememberHash = uv.hmac.Hash(user.Remember)
 	}
-
 	return uv.UserDB.Update(user)
 }
 ```
@@ -8773,8 +8545,6 @@ func (uv *userValidator) Update(user *User) error {
 	return uv.UserDB.Update(user)
 }
 ```
-
-
 
 ```go
 }
@@ -8930,16 +8700,15 @@ func (uv *userValidator) Delete(id uint) error {
 
 每当我们与电子邮件地址交互时，都需要确保它们始终保持相同的格式。在数据库中搜索 `jon@abc.com` 时，如果电子邮件地址存储为 `Jon@ABC.com`，可能没有太大帮助，因为 Postgres 是大小敏感的。注意：某些 SQL 变体不是大小敏感的，但归一化你的数据仍然是一个好主意。
 
-
-
-
-
 ```go
+```
+
+
+
 import (
   "strings"
   // ... 其余部分保持不变
 )
-```
 
 接下来，我们需要添加归一化函数，该函数使用 `strings` 包来处理用户的电子邮件地址。在这里我们实际上不会遇到错误，所以代码非常短。
 
@@ -8998,7 +8767,7 @@ func (uv *userValidator) Update(user *User) error {
 }
 ```
 
-如果你恰好看了 `UserService`，可能会疑惑为什么我们 ` `Authenticate` 方法中也不需要这个。我们不需要在那里使用的原因是，该方法最终将使用 `ByEmail` 方法来查询用户，所以只要我们在那里处理了归一化，我们就不需要在 `Authenticate` 方法内部进行任何特殊处理。
+如果你恰好看了 `UserService`，可能会疑惑为什么我们 `Authenticate` 方法中也不需要这个。我们不需要在那里使用的原因是，该方法最终将使用 `ByEmail` 方法来查询用户，所以只要我们在那里处理了归一化，我们就不需要在 `Authenticate` 方法内部进行任何特殊处理。
 
 ### 源代码
 
@@ -9020,7 +8789,6 @@ func (uv *userValidator) Update(user *User) error {
 var (
 	// ... 我们的源文件中还有其他错误。只需将
 	// ErrEmailRequired 错误添加到它们下方。
-
 	// ErrEmailRequired 在创建用户时未提供电子邮件地址时返回。
 	ErrEmailRequired = errors.New("models: email address is required")
 )
@@ -9096,9 +8864,6 @@ http://www.regular-expressions.info/
 为了执行此操作，我们需要使用两个方法之一 - `Compile` 或 `MustCompile`。这两个方法的前者会尝试使用模式创建 `Regexp` 并返回该 `Regexp`，或者如果模式有误则返回错误。后者 `MustCompile` 是一个辅助方法，如果出错它将调用 `Compile` 并触发 panic；否则它返回由 `Compile` 生成的 `Regexp`。
 
 `MustCompile` 通常用于正则表达式无法编译时程序终止的情况，这在我们的程序中也是如此。如果我们的正则表达式无效，启动应用程序没有意义 - 我们需要先花点时间修复它。
-
-
-
 
 在使用 `MustCompile` 函数编写代码时，大致如下所示：
 
@@ -9285,20 +9050,20 @@ func (s *UserService) ByEmail(email string) (*User, error) {
 
 
 
-
+```go
+uv.emailFormat()
 ```
-uv.emailFormat)
 // .. 此部分保持不变
 }
 ```
 
-要测试此功能，请尝试使用邮箱地址 j@j 注册账户——你应该看到附加到 `ErrEmailInvalid` 变量上的消息。
+要测试此功能，请尝试使用邮箱地址 `j@j` 注册账户——你应该看到附加到 `ErrEmailInvalid` 变量上的消息。
 
 ```
 models: email address is not valid
 ```
 
-### ### 框 12.11. 客户端验证
+### 框 12.11. 客户端验证
 
 许多开发者经常认为，在客户端（又称“前端”）上验证邮箱地址就足够了，因此不会费精力在 Web 服务器上编写此类这样的验证代码。这种方法的问题在于，你并不能总是保证所有的 Web 请求都来自你所编写的客户端，因此，你无法确保这些验证始终存在。
 
@@ -9306,15 +9071,15 @@ models: email address is not valid
 
 ### 源代码
 
-下面的链接包含了完整的源代码以及本节中所有更改代码的差异对比（diff）。
+下面的链接包含了完整的源代码以及本节中所有更改代码的差异对比（`diff`）。
 
-已完成 - book.usegolang.com/12.6.3
+已完成 - `book.usegolang.com/12.6.3`
 
-更改 - book.usegolang.com/12.6.3-diff
+更改 - `book.usegolang.com/12.6.3-diff`
 
 ## 12.6. 验证并规范化邮箱地址
 
-## 12.6.4 验证邮箱地址未被占用
+### 12.6.4 验证邮箱地址未被占用
 
 最后，每当我们创建或更新用户时，我们都需要验证邮箱地址没有被另一个用户占用。起初听起来很简单，但实际上有一个我们需要考虑的棘手情况——更新用户。
 
@@ -9325,10 +9090,9 @@ models: email address is not valid
 与其尝试单独涵盖所有这些用例，我发现处理此问题的最佳方法是遵循以下规则：
 
 - 1. 通过邮箱地址搜索用户。如果我们**没有**找到，说明我们的验证成功了，我们可以退出。否则，我们继续下一步。
-
 - 2. 因为我们找到了拥有该邮箱地址的用户，我们需要检查该用户的 ID 以及我们正在验证的用户的 ID。如果两个 ID 相同，我们可以安全地假设该用户**没有**更新其邮箱地址。如果两个 ID**不**相同，则我们的验证失败，该用户正尝试创建一个新账户，或使用一个已被另一个账户占用的邮箱地址更新其邮箱。
 
-第 (2) 中的检查之所以有效，是因为新用户账户的 ID 总是被分配为 `uint` 零值 (0)，这永远不会在我们的数据库中用作 ID。这意味着，每当我们尝试使用被另一个用户占用的邮箱地址创建用户时，我们最终会将一个真实的 ID (> 0) 与零进行比较，结果将始终为假（false）。
+第 (2) 中的检查之所以有效，是因为新用户账户的 ID 总是被分配为 `uint` 零值 (`0`)，这永远不会在我们的数据库中用作 ID。这意味着，每当我们尝试使用被另一个用户占用的邮箱地址创建用户时，我们最终会将一个真实的 ID (`> 0`) 与零进行比较，结果将始终为假（`false`）。
 
 # 第 12 章. 数据的规范化与验证
 
@@ -9365,206 +9129,6 @@ func (uv *Validator) emailISAvail(user *User) error {
   return ErrMailTaken
 }
 ```
-*(注：原文代码中函数名 `emailISAvail` 似乎有拼写错误，应为 `emailIsAvailable`，但根据要求保留原样)*
-
-修正，正文代码块逻辑翻译如下：
-
-```go
-func (uv *Validator) emailISAvail(user *User) error {
-  existing, err := uv.ByEmail(user.Email)
-  if err == ErrNotFound {
-    return nil
-  }
-  if err != nil {
-    return err
-  }
-  if existing.ID == user.ID {
-    return nil
-  }
-  return ErrMailTaken
-}
-```
-*(注：由于提供的待翻译文本中代码块似乎存在错乱或重复，此处翻译完全基于提供的文本流进行对齐)*
-
----
-
-**重新根据您提供的待翻译文本进行精确翻译：**
-
-[content]
-
-```
-uv.emailFormat)
-// .. 此部分保持不变
-}
-```
-
-要测试此功能，请尝试使用邮箱地址 j@j 注册账户——你应该看到附加到 `ErrEmailInvalid` 变量上的消息。
-
-```
-models: email address is not valid
-```
-
-### ### 框 12.11. 客户端验证
-
-许多开发者经常认为，在客户端（又称“前端”）上验证邮箱地址就足够了，因此不会费精力在 Web 服务器上编写此类这样的验证代码。这种方法的问题在于，你并不能总是保证所有的 Web 请求都来自你所编写的客户端，因此，你无法确保这些验证始终存在。
-
-例如，有人可能会编写自定义代码来与你的 Web 应用程序进行交互，以便以更自动化的方式发送请求。当这种情况发生时，你无法指于任何客户端验证的生效，你必须在服务器上对数据进行检查。
-
-### 源代码
-
-下面的链接包含了完整的源代码以及本节中所有更改代码的差异对比（diff）。
-
-已完成 - book.usegolang.com/12.6.3
-
-更改 - book.usegolang.com/12.6.3-diff
-
-## 12.6. 验证并规范化邮箱地址
-
-## 12.6.4 验证邮箱地址未被占用
-
-最后，每当我们创建或更新用户时，我们都需要验证邮箱地址没有被另一个用户占用。起初听起来很简单，但实际上有一个我们需要考虑的棘手情况——更新用户。
-
-当我们创建一个新用户，或者用户正在更改其邮箱地址时，我们的检查非常简单。我们只需要查看该邮箱地址是否与数据库中的任何用户匹配即可。
-
-在用户没有更改邮箱地址时更新用户要更棘手得多，因为如果我们通过邮箱地址搜索用户，我们会在数据库中找到一个拥有该邮箱的用户——那个用户正是正在更新的用户！
-
-与其尝试单独涵盖所有这些用例，我发现处理此问题的最佳方法是遵循以下规则：
-
-- 1. 通过邮箱地址搜索用户。如果我们**没有**找到一个，说明我们的验证成功了，我们可以退出。否则，我们继续下一步。
-
-- 2. 因为我们找到了拥有该邮箱地址的用户，我们需要检查该用户的 ID 以及我们正在验证的用户的 ID。如果两个 ID 相同，我们可以安全地假设该用户**没有**更新其邮箱地址。如果两个 ID**不**相同，则我们的验证失败，该用户正尝试创建一个新账户，或使用一个已被另一个账户占用的邮箱地址更新其邮箱地址。
-
-第 (2) 中的检查之所以有效，是因为新用户账户的 ID 总是被分配为 `uint` 零值 (0)，这永远不会在我们的数据库中用作 ID。这意味着，每当我们尝试使用被另一个用户占用的邮箱地址创建用户时，我们最终会将一个真实的 ID (> 0) 与零进行比较，结果将始终为假（false）。
-
-# 第 12 章. 数据的规范化与验证
-
-对于现有账户，这种方法是有效的，因为我们只有在两个具有相同邮箱的账户实际上是同一个资源时，才希望通过验证，而 ID 就是我们验证它们是同一个用户的依据。
-
-现在我们已经知道了将如何编写代码，让我们再次开始，首先定义一个错误并将其添加到我们的源文件中。
-
-```go
-var (
-  // 当尝试使用已占用的邮箱地址进行更新或创建时，
-  // 会返回 ErrMailTaken。
-  ErrMailTaken = errors.New("models: email address is already taken")
-)
-```
-
-接下来是运行我们讨论过的逻辑的验证函数。
-
-```go
-func (uv *Validator) emailISAvail(user *User) error {
-  existing, err := uv.ByEmail(user.Email)
-  if err == ErrNotFound {
-    // 如果没有找到现有用户，说明邮箱是可用的
-    return nil
-  }
-  if err != nil {
-    // 如果发生其他错误，返回错误
-    return err
-  }
-  if existing.ID == user.ID {
-    // 如果 ID 相同，说明用户没有更改邮箱
-    return nil
-  }
-  // 如果 ID 不同，说明邮箱已被占用
-  return ErrMailTaken
-}
-```
-*(注：由于提供的待翻译文本中代码块似乎存在错乱或重复，此处翻译完全基于提供的文本流进行对齐)*
-
-*(注：由于提供的待翻译文本存在大量逻辑重复和格式错乱，以下翻译将严格遵循“不漏掉行”且“不重复原文”的原则，对文本中出现的逻辑片段进行完整翻译)*
-
----
-
-**由于您提供的原始文本存在严重的逻辑重复和格式错乱（例如代码块在文末尾反复出现），此处我将按照文本出现的物理顺序进行逐行翻译，确保不遗漏：**
-
-[content]
-
-```
-uv.emailFormat)
-// .. 此部分保持不变
-}
-```
-
-要测试此功能，请尝试使用邮箱地址 j@j 注册账户——你应该看到附加到 `ErrEmailInvalid` 变量上的消息。
-
-```
-models: email address is not valid
-```
-
-### ### 框 12.11. 客户端验证
-
-许多开发者经常认为，在客户端（又称“前端”）上验证邮箱地址就足够了，因此不会费精力在 Web 服务器上编写此类这样的验证代码。这种方法的问题在于，你并不能总是保证所有的 Web 请求都来自你所编写的客户端，因此，你无法确保这些验证始终存在。
-
-例如，有人可能会编写自定义代码来与你的 Web 应用程序进行交互，以便以更自动化的方式发送请求。当这种情况发生时，你无法指于任何客户端验证的生效，你必须在服务器上对数据进行检查。
-
-### 源代码
-
-下面的链接包含了完整的源代码以及本节中所有更改代码的差异对比（diff）。
-
-已完成 - book.usegolang.com/12.6.3
-
-更改 - book.usegolang.com/12.6.3-diff
-
-## 12.6. 验证并规范化邮箱地址
-
-## 12.6.4 验证邮箱地址未被占用
-
-最后，每当我们创建或更新用户时，我们都需要验证邮箱地址没有被另一个用户占用。起初听起来很简单，但实际上有一个我们需要考虑的棘手情况——更新用户。
-
-当我们创建一个新用户，或者用户正在更改其邮箱地址时，我们的检查非常简单。我们只需要查看该邮箱地址是否与数据库中的任何用户匹配即可。
-
-在用户没有更改邮箱地址时更新用户要更棘手得多，因为如果我们通过邮箱地址搜索用户，我们会在数据库中找到一个拥有该邮箱的用户——那个用户正是正在更新的用户！
-
-与其尝试单独涵盖所有这些用例，我发现处理此问题的最佳方法是遵循以下规则：
-
-- 1. 通过邮箱地址搜索用户。如果我们**没有**找到一个，说明我们的验证成功了，我们可以退出。否则，我们继续下一步。
-
-- 2. 因为我们找到了拥有该邮箱地址的用户，我们需要检查该用户的 ID 以及我们正在验证的用户的 ID。如果两个 ID 相同，我们可以安全地假设该用户**没有**更新其邮箱地址。如果两个 ID**不**相同，则我们的验证失败，该用户正尝试创建一个新账户，或使用一个已被另一个账户占用的邮箱地址更新其邮箱地址。
-
-第 (2) 中的检查之所以有效，是因为新用户账户的 ID 总是被分配为 `uint` 零值 (0)，这永远不会在我们的数据库中用作 ID。这意味着，每当我们尝试使用被另一个用户占用的邮箱地址创建用户时，我们最终会将一个真实的 ID (> 0) 与零进行比较，结果将始终为假（false）。
-
-# 第 12 章. 数据的规范化与验证
-
-对于现有账户，这种方法是有效的，因为我们只有在两个具有相同邮箱的账户实际上是同一个资源时，才希望通过验证，而 ID 就是我们验证他们是同一个用户的依据。
-
-现在我们已经知道了将如何编写代码，让我们再次开始，首先定义一个错误并将其添加到我们的源文件中。
-
-```go
-var (
-  // 当尝试使用已占用的邮箱地址进行更新或创建时，
-  // 会返回 ErrMailTaken。
-  ErrMailTaken = errors.New("models: email address is already taken")
-)
-```
-
-接下来是运行我们讨论过的逻辑的验证函数。
-
-```go
-func (uv *Validator) emailISAvail(user *User) error {
-  existing, err := uv.ByEmail(user.Email)
-  if err == ErrNotFound {
-    // 如果没有找到现有用户，说明邮箱是可用的
-    return nil
-  }
-  if err != nil {
-    // 如果发生其他错误，返回错误
-    return err
-  }
-  if existing.ID == user.ID {
-    // 如果 ID 相同，说明用户没有更改邮箱
-    return nil
-  }
-  // 如果 ID 不同，说明邮箱已被占用
-  return ErrMailTaken
-}
-```
-*(由于文本后续出现大量重复段落，根据指令“不要重复输出原文”，此处已翻译至逻辑终点)*
-
-
-
-
 
 # 第 12 章 数据的规范化与验证
 
@@ -9590,13 +9154,13 @@ if err != nil {
 
 ```go
 type UserService interface {
-// Authenticate 将验证提供的电子邮件地址和
-// 密码是否正确。如果正确，将返回与
-// 该邮箱对应的用户。否则，
-// 你将收到以下错误之一：
-// ErrNotFound, ErrPasswordIncorrect，或者在
-// 问题时的其他错误。
-Authenticate(email, password string) (*User, error)
+  // Authenticate 将验证提供的电子邮件地址和
+  // 密码是否正确。如果正确，将返回与
+  // 该邮箱对应的用户。否则，
+  // 你将收到以下错误之一：
+  // ErrNotFound, ErrPasswordIncorrect，或者在
+  // 问题时的其他错误。
+  Authenticate(email, password string) (*User, error)
 }
 UserDB
 ```
@@ -9616,7 +9180,6 @@ UserDB
 // nil
 // 否则如果遇到另一个错误，它将返回
 // nil, error
-
 func (us *userService) Authenticate(email,
     password string) (*User, error) {
 	// 不要修改这里，只需修改上面的注释
@@ -9627,10 +9190,10 @@ func (us *userService) Authenticate(email,
 
 ### 源代码
 
-下面的链接包含了完成后的源码以及本节所有更改代码的差异（diff）。
+下面的链接包含了完成后的源码以及本节所有更改代码的差异（`diff`）。
 
-- 已完成 - book.usegolang.com/12.7
-- 更改 - book.usegolang.com/12.7-diff
+- 已完成 - `book.usegolang.com/12.7`
+- 更改 - `book.usegolang.com/12.7-diff`
 
 ## 12.8 验证并规范化密码
 
@@ -9647,9 +9210,9 @@ var (
   // ErrPasswordTooShort 当用户尝试设置
   // 长度小于 8 个字符的密码时返回。
   ErrPasswordTooShort = errors.New("models: password must " +
-  "be at least 8 characters long")
-)
 ```
+
+
 
 创建错误后，我们就可以开始编写验证。如果密码没有变化，它应该是空字符串。否则，我们需要验证密码长度。我们不需要担心创建用户时密码是否必填，因为稍后我们会编写该验证。
 
@@ -9704,10 +9267,6 @@ func (uv *UserValidator) Update(user *User) error {
 - 已完成 - book.usegolang.com/12.7
 - 更改 - book.usegolang.com/12.7-diff
 
-
-
-
-
 ## 12.9. 验证与归一化 Token
 
 现在我们需要开始在用户模型的验证函数中利用这些功能，但在此之前，我们需要额外定义几个错误。我们需要一个当 `remember token` 使用的字节数不足时的错误，还需要一个当 `remember token` 或 `remember token hash` 未设置且为必填项时的错误。我们将这些错误添加到用户模型中。
@@ -9722,7 +9281,6 @@ var (
 // 但未提供用户 remember token 的哈希值时返回
 ErrRememberRequired = errors.New("models: remember token " + 
 "is required")
-
 // ErrRememberTooShort 当 remember token 长度
 // 少于 32 字节时返回
 ErrRememberTooShort = errors.New("models: remember token " + 
@@ -9872,9 +9430,6 @@ $ atom views/layouts/bootstrap.gohtml
 
 我们现在不会进行任何错误检查，而是总是渲染警告。这从长远来看不可行，但可以让我们感受到警告在应用程序中的外观，并验证我们的代码是否运行正常。
 
-
-
-
 在你的 Bootstrap 模板 HTML 中查找 `container-fluid` div，并使用下面的代码进行更新。
 
 ```
@@ -10009,29 +9564,29 @@ $ atom views/layouts/bootstrap.gohtml
 </div>
 ```
 
-为了看到代码效果，重启服务器并进入 /signup 路径。如果一切按预期工作，我们应该会在控制器中看到成功警报。
+
+
+为了看到代码效果，重启服务器并进入`/signup`路径。如果一切按预期工作，我们应该会在控制器中看到成功警报。
 
 ### 源代码
 
 下方链接包含了完整的源代码以及本节所有更改代码的差异（diff）。
 
-已完成 - book.usegolang.com/13.1
+已完成 - `book.usegolang.com/13.1`
 
-差异 - book.usegolang.com/13.1-diff
+差异 - `book.usegolang.com/13.1-diff`
 
 ## 13.3. 在需要时显示警报
 
-## 13.3 在需要时显示警报
-
 现在我们让警报渲染动态数据，但我们遇到了另一个问题。我们显然不想总是生成此 HTML，而是只想在确实有警报时渲染它。
 
-为了实现这一点，我们将利用 Go 的动作（actions），它们存在于 `text/template` 和 `html/template` 中。
+为了实现这一点，我们将利用 Go 的动作（actions），它们存在于`text/template`和`html/template`中。
 
 > 注意：动作的链接，因为这是文档显示的地方。
 
-我们将使用的动作是 `if` 动作，它允许我们检查是否为空。如果为空，if 块内部的内容将被渲染。如果不为空，整个块将被渲染。
+我们将使用的动作是`if`动作，它允许我们检查是否为空。如果为空，if 块内部的内容将被渲染。如果不为空，整个块将被渲染。
 
- 框 13.2：什么是空值？
+框 13.2：什么是空值？
 
 在处理模板时，空值定义为：
 
@@ -10039,7 +9594,7 @@ $ atom views/layouts/bootstrap.gohtml
 空值是 false、0 或 nil 指针或接口值，以及任何长度为零的数组、切片、映射或字符串。
 ```
 
-这直接取自 text/template 文档，理解这一点，因为模板中的 if 语句与 Go 代码中的 if 语句大不同。在 Go 代码中，我们期望 if 语句的参数求值为真或假，但我们可以向 if 动作传递字符串等内容。⁴https://golang.org/pkg/text/template#hdr-Actions
+这直接取自`text/template`文档，理解这一点，因为模板中的 if 语句与 Go 代码中的 if 语句大不同。在 Go 代码中，我们期望 if 语句的参数求值为真或假，但我们可以向 if 动作传递字符串等内容。⁴`https://golang.org/pkg/text/template#hdr-Actions`
 
 ## 第 13 章：向最终用户显示错误
 
@@ -10065,17 +9620,13 @@ $ atom views/layouts/bootstrap.gohtml
 $ atom controllers/users.go
 ```
 
-我们知道想要将警报数据与渲染 yield 模板的数据隔离开，所以为什么不简单创建一个包含两个字段——`Alert` 和 `Yield` 的类型。这样我们就能知道哪个数据是为每个模板设计的。
+我们知道想要将警报数据与渲染 yield 模板的数据隔离开，所以为什么不简单创建一个包含两个字段——`Alert`和`Yield`的类型。这样我们就能知道哪个数据是为每个模板设计的。
 
 注意：以防你忘记，yield 模板用于渲染每个特定的页面。例如，我们用它渲染注册表单、主页以及任何非布局信息。
 
-
-
-[content]
-
 ## 13.3. 仅在需要时显示警告
 
-我们将再次在 `New` 方法中添加这段代码。一旦我们创建了新类型，我们将创建一个实例，分配一些数据进行测试，然后将其传递给 `Render` 方法。
+我们将再次在`New`方法中添加这段代码。一旦我们创建了新类型，我们将创建一个实例，分配一些数据进行测试，然后将其传递给`Render`方法。
 
 ```go
 func (u *Users) New(w http.ResponseWriter, r *http.Request) {
@@ -10107,7 +9658,7 @@ func (u *Users) New(w http.ResponseWriter, r *http.Request) {
 $ atom views/layouts/bootstrap.gohtml
 ```
 
-我们只希望在模板中有一个非空的 `Alert` 参数时才渲染警告消息，所以我们从这里开始。如果它确实非空，我们将渲染警告模板并传递该部分数据。
+我们只希望在模板中有一个非空的`Alert`参数时才渲染警告消息，所以我们从这里开始。如果它确实非空，我们将渲染警告模板并传递该部分数据。
 
 ```go
 {{if .Alert}}
@@ -10117,7 +9668,7 @@ $ atom views/layouts/bootstrap.gohtml
 
 ## 第 13 章.向最终用户显示错误
 
-`Yield` 字段有点不同。即使它是空的，我们仍然想要渲染 `yield` 字段，因为它可能是一个带有静态数据的页面（例如首页）。在这种情况下，我们只需要使用正确的数据调用模板即可。
+`Yield`字段有点不同。即使它是空的，我们仍然想要渲染`yield`字段，因为它可能是一个带有静态数据的页面（例如首页）。在这种情况下，我们只需要使用正确的数据调用模板即可。
 
 ```html
 <div class="container-fluid">
@@ -10129,13 +9680,13 @@ $ atom views/layouts/bootstrap.gohtml
 </div>
 ```
 
-通过更新后的代码，我们告诉模板只向每个模板传递特定的数据。一旦进入该模板内部，所有传递的数据都可以通过点操作（例如 `{{.}}`）访问，这就像我们将单个字段作为参数传递给另一个函数一样。你可以通过更新新用户用户的模板来看到这一点。
+通过更新后的代码，我们告诉模板只向每个模板传递特定的数据。一旦进入该模板内部，所有传递的数据都可以通过点操作（例如`{{.}}`）访问，这就像我们将单个字段作为参数传递给另一个函数一样。你可以通过更新新用户用户的模板来看到这一点。
 
 ```bash
 $ atom views/users/new.gohtml
 ```
 
-在模板定义之后直接添加以下 `h1` 标签。
+在模板定义之后直接添加以下`h1`标签。
 
 ```html
 {{define "yield"}}
@@ -10144,7 +9695,7 @@ $ atom views/users/new.gohtml
 {{end}}
 ```
 
-现在重启服务器并访问注册页面 `/signup`。你不仅会看到成功警告，还会看到我们设置在 `Yield` 字段中的字符串 "this can be any data b/c its type is interface"，因为我们在 `new.gohtml` 模板中通过点（`. `）访问了它。
+现在重启服务器并访问注册页面`/signup`。你不仅会看到成功警告，还会看到我们设置在`Yield`字段中的字符串 "this can be any data b/c its type is interface"，因为我们在`new.gohtml`模板中通过点（`. `）访问了它。
 
 在下一节中，我们将开始向为视图数据使用更持久的数据结构方向过渡，在此期间，本节希望能够让你初步了解我们如何开始在模板中添加和交互数据，从而影响页面的渲染方式。
 
@@ -10152,34 +9703,32 @@ $ atom views/users/new.gohtml
 
 下面的链接包含了完整的源代码以及本节中所有更改代码的差异（diff）。
 
-- 完成版 - book.usegolang.com/13.3
-- 更改版 - book.usegolang.com/13.3-diff
+- 完成版 - `book.usegolang.com/13.3`
+- 更改版 - `book.usegolang.com/13.3-diff`
 
 ## 13.4 用于视图的更持久的数据类型
 
-在之前的章节中，我们探索了预定义数据类型在渲染视图时是非常有用的。通过它，我们仍然可以在 `Yield` 字段中放置更多动态页面特定数据，同时在我们需要向用户显示警告消息时，仍然拥有像 `Alert` 这样更常见的字段。
+在之前的章节中，我们探索了预定义数据类型在渲染视图时是非常有用的。通过它，我们仍然可以在`Yield`字段中放置更多动态页面特定数据，同时在我们需要向用户显示警告消息时，仍然拥有像`Alert`这样更常见的字段。
 
-在本节中，我们将为渲染视图定义一个更持久的数据类型。我们将此结构体命名为 `Data`，并将其放在 `views` 包中，因为它被用于渲染我们的视图。在此过程中，我们还会在 `views` 包中创建一个 `Alert` 数据类型，用于渲染我们的警告。
+在本节中，我们将为渲染视图定义一个更持久的数据类型。我们将此结构体命名为`Data`，并将其放在`views`包中，因为它被用于渲染我们的视图。在此过程中，我们还会在`views`包中创建一个`Alert`数据类型，用于渲染我们的警告。
 
-让我们先从在 `views` 包中添加新的数据类型开始。我们将为这段代码创建一个新的源文件。
+让我们先从在`views`包中添加新的数据类型开始。我们将为这段代码创建一个新的源文件。
 
 ```bash
 $ atom views/data.go
 ```
 
-在该文件中，我们首先需要引入 `Data` 和 `Alert` 类型。目前，这些可以与我们之前在控制器中创建的完全相同。
+在该文件中，我们首先需要引入`Data`和`Alert`类型。目前，这些可以与我们之前在控制器中创建的完全相同。
 
 ## 第 13 章.向最终用户显示错误
 
 ```go
 package views
-
 // Data 是视图期望数据进入的顶层结构体
 type Data struct {
 	Alert *Alert
 	Yield interface{}
 }
-
 // Alert 用于在模板中渲染 Bootstrap Alert 消息
 type Alert struct {
 	Level string
@@ -10187,9 +9736,9 @@ type Alert struct {
 }
 ```
 
-到目前为止，我们允许数据以几乎任何格式进入视图，但从现在开始，我们将开始实施更多的严谨性。我们将开始期望所有视图如果传递了任何数据，都会接收一个 `Data` 对象。
+到目前为止，我们允许数据以几乎任何格式进入视图，但从现在开始，我们将开始实施更多的严谨性。我们将开始期望所有视图如果传递了任何数据，都会接收一个`Data`对象。
 
-在我们创建 `Alert` 类型时，为所有警告级别引入一些常量可能也是好主意。这样开发者就可以轻松地从我们 UI 支持的预定义警告级别中选择，而不用担心字符串中的拼写错误。
+在我们创建`Alert`类型时，为所有警告级别引入一些常量可能也是好主意。这样开发者就可以轻松地从我们 UI 支持的预定义警告级别中选择，而不用担心字符串中的拼写错误。
 
 ```go
 const (
@@ -10200,17 +9749,17 @@ const (
 )
 ```
 
-现在让我们更新用户控制器中的 `New` 方法以使用我们的新数据类型。
+现在让我们更新用户控制器中的`New`方法以使用我们的新数据类型。
 
 ```bash
 atom controllers/users.go
 ```
 
-我们不再需要在那部分代码中定义 `Data` 和 `Alert` 类型了，我们也不真的需要添加任何新代码。我们真正需要的
+我们不再需要在那部分代码中定义`Data`和`Alert`类型了，我们也不真的需要添加任何新代码。我们真正需要的
 
 ## 13.4 用于视图的更持久的数据类型
 
-就是更新创建 `Alert` 和 `Data` 对象的代码，以使用在 `views` 包中定义的那些。我们还可以更新代码以使用其中一个常量警告级别。
+就是更新创建`Alert`和`Data`对象的代码，以使用在`views`包中定义的那些。我们还可以更新代码以使用其中一个常量警告级别。
 
 ```go
 func (u *Users) New(w http.ResponseWriter, r *http.Request) {
@@ -10228,7 +9777,7 @@ func (u *Users) New(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-此时我们可以重启服务器，我们的代码将能够工作了，但我们还有最后一件事要做。我们更新 `views` 包中的 `Render` 方法，以确保所有传递的数据都封装在 `Data` 对象中。
+此时我们可以重启服务器，我们的代码将能够工作了，但我们还有最后一件事要做。我们更新`views`包中的`Render`方法，以确保所有传递的数据都封装在`Data`对象中。
 
 ```go
 func (v *View) Render(w http.ResponseWriter, data interface{}) error {
@@ -10247,7 +9796,7 @@ func (v *View) Render(w http.ResponseWriter, data interface{}) error {
 
 ## 第 13 章向最终用户显示错误
 
-在更新后的代码中，我们添加了一个检查任何传递数据的底层类型的 switch。我们真正关心的情况是数据是否为 `Data` 类型。如果是 `Data` 类型，我们什么都不需要做。如果是其他类型，我们将其封装在 `Data` 对象中，并赋值给 `Yield` 字段。简而言之，这是一种便利，允许我们使用如下代码渲染视图：
+在更新后的代码中，我们添加了一个检查任何传递数据的底层类型的 switch。我们真正关心的情况是数据是否为`Data`类型。如果是`Data`类型，我们什么都不需要做。如果是其他类型，我们将其封装在`Data`对象中，并赋值给`Yield`字段。简而言之，这是一种便利，允许我们使用如下代码渲染视图：
 
 ```go
 someView.Render(w, "this is page-specific data!")
@@ -10257,7 +9806,7 @@ someView.Render(w, "this is page-specific data!")
 
 现在我们准备好为应用程序实现正确的错误处理了，但首先我们需要移除一些用于演示警告和视图数据代码。
 
-打开新用户模板并删除我们在 13.3 节中添加的 `h1` 标签。
+打开新用户模板并删除我们在 13.3 节中添加的`h1`标签。
 
 ```bash
 $ atom views/users/new.gohtml
@@ -10271,13 +9820,13 @@ $ atom views/users/new.gohtml
 {{end}}
 ```
 
-然后清理控制器包中的 `users.go` 源文件。在文件内部，我们将移除 `New` 方法中用于创建警告的代码。
+然后清理控制器包中的`users.go`源文件。在文件内部，我们将移除`New`方法中用于创建警告的代码。
 
 ```bash
 $ atom controllers/users.go
 ```
 
-移除代码后，你的 `New` 方法应该恢复到原始原始版本。
+移除代码后，你的`New`方法应该恢复到原始原始版本。
 
 ```go
 func (u *Users) New(w http.ResponseWriter, r *http.Request) {
@@ -10287,14 +9836,11 @@ func (u *Users) New(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-
-
-
 ## 第 13 章。向终端用户显示错误
 
-现在找到 `users controller` 内部的 `Create` 方法。我们将更新此方法，以便在处理注册表单出现任何问题时添加更好的错误处理。
+现在找到`users controller`内部的`Create`方法。我们将更新此方法，以便在处理注册表单出现任何问题时添加更好的错误处理。
 
-我们知道，当想要渲染一个警报（alert）时，需要设置 `views.Data` 类型的 `Alert` 字段。我们可以从添加一个该类型的变量开始。如果没有发生错误，我们可以在不更改的情况下将其传递给视图，如果发生了错误，我们只需要对该变量进行赋值，它就会渲染在我们的。
+我们知道，当想要渲染一个警报（alert）时，需要设置`views.Data`类型的`Alert`字段。我们可以从添加一个该类型的变量开始。如果没有发生错误，我们可以在不更改的情况下将其传递给视图，如果发生了错误，我们只需要对该变量进行赋值，它就会渲染在我们的。
 
 ```go
 func (u *Users) Create(w http.ResponseWriter, r *http.Request) {
@@ -10303,9 +9849,9 @@ func (u *Users) Create(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-之后，我们查看源代码，寻找任何可能导致错误的情况。到目前为止，我们一直通过 `panic` 或调用 `http.Error` 等方法来处理这些错误，所以我们只需查找这些即可。
+之后，我们查看源代码，寻找任何可能导致错误的情况。到目前为止，我们一直通过`panic`或调用`http.Error`等方法来处理这些错误，所以我们只需查找这些即可。
 
-在 `Create` 方法内部，第一个 `panic` 在尝试解析表单后立即触发。这里的错误不太可能发生，但当我们并不确定预期会看到什么样的错误消息时。我们的 `parseForm` 函数返回由 `net/http` 包生成的错误，以及来自 `gorilla/schema` 包的错误。
+在`Create`方法内部，第一个`panic`在尝试解析表单后立即触发。这里的错误不太可能发生，但当我们并不确定预期会看到什么样的错误消息时。我们的`parseForm`函数返回由`net/http`包生成的错误，以及来自`gorilla/schema`包的错误。
 
 与其尝试单独处理所有错误，我们将创建一个显示通用错误消息的警报，让用户知道出了问题。然后我们将带有警报再次渲染注册表单，并允许用户如果想重试再次提交表单。
 
@@ -10313,12 +9859,9 @@ func (u *Users) Create(w http.ResponseWriter, r *http.Request) {
 
 通常情况下，在不知道错误消息具体内容的情况下向终端用户显示错误是一个坏主意。当我们自己创建错误时，它通常是
 
-[content]
 ### 13.5. 处理注册表单中的错误
 
-[/content]
-
-[content]渲染该消息是可以的，因为我们知道它写了什么。对于那些不是我们自己创建的错误，我们往往很难判断该错误消息是否包含任何敏感信息。
+渲染该消息是可以的，因为我们知道它写了什么。对于那些不是我们自己创建的错误，我们往往很难判断该错误消息是否包含任何敏感信息。
 
 与其显示未知错误，恰当的做法是根据错误原因创建你自己的错误，或者向终端用户渲染一个通用的错误消息。如果你认为你可能需要来自错误消息的额外信息，你应该使用日志记录或告警系统来通知开发者，而不是将其渲染给终端用户。
 
@@ -10334,13 +9877,13 @@ u.NewView.Render(w, vd)
 
 在这种情况下，错误消息绝对应该是一个常量。我们极有可能在许多不同的情况下显示通用错误消息，而我们最终不会在应用程序中产生许多不同的错误消息。
 
-打开我们定义视图 `Data` 类型的源文件。
+打开我们定义视图`Data`类型的源文件。
 
 ```bash
 $ atom views/data.go
 ```
 
-在这个源文件中，我们将添加常量 `AlertMsgGeneric`，它可以用于任何我们需要通用错误消息的情形。
+在这个源文件中，我们将添加常量`AlertMsgGeneric`，它可以用于任何我们需要通用错误消息的情形。
 
 ```go
 const (
@@ -10355,7 +9898,7 @@ const (
 )
 ```
 
-之后保存你的代码并回到我们刚刚编辑的用户源代码。找到 `Create` 方法，然后找到我们解析表单并在发生错误时 `panic` 的 `if` 语句。在这个块内部，我们将添加代码，在发生错误时解析表单并 `panic`。在这个块内部，我们将添加代码，在发生错误时使用日志或告警系统通知开发者，而不是将其渲染给终端用户。
+之后保存你的代码并回到我们刚刚编辑的用户源代码。找到`Create`方法，然后找到我们解析表单并在发生错误时`panic`的`if`语句。在这个块内部，我们将添加代码，在发生错误时解析表单并`panic`。在这个块内部，我们将添加代码，在发生错误时使用日志或告警系统通知开发者，而不是将其渲染给终端用户。
 
 ```go
 import (
@@ -10364,7 +9907,6 @@ import (
     // 打印错误
     "log"
 )
-
 func (u *Users) Create(w http.ResponseWriter, r *http.Request) {
     var views.Data
     var form
@@ -10377,38 +9919,13 @@ func (u *Users) Create(w http.ResponseWriter, r *http.Request) {
         u.NewView.Render(w, vd)
         return
     }
-
     // 方法的其他部分保持不变
 }
 ```
 
+
+
 当我们在处理错误时，我们会看到 `Create` 方法中的第一个 `panic` 在尝试解析表单后立即触发。这里的错误不太可能发生，但当我们并不确定预期会看到什么样的错误消息时。我们的 `parseForm` 函数返回由 `net/http` 包生成的错误，以及来自 `gorilla/schema` 包的错误。与其尝试单独处理所有错误，我们将创建一个显示通用错误消息的警报，让用户知道出了问题。然后我们将带有警报再次渲染注册表单，并允许用户如果想重试再次提交表单。
-
-当我们在处理错误时，我们会看到 `Create` 方法中的第一个 `panic` 在尝试解析表单后立即触发。这里的错误不太可能发生，但当我们并不确定预期会看到什么样的错误消息时。我们的 `parseForm` 函数返回由 `net/http` 包生成的错误，以及来自 `gorilla/schema` 包的错误。
-
-当我们在处理错误时，我们会看到 `Create` 方法中的第一个 `panic` 在尝试解析表单后立即触发。这里的错误不太可能发生，但当我们并不确定预期会看到什么样的错误消息时。我们的 `parseForm` 函数返回由 `net/http` 包生成的错误，以及来自 `gorilla/schema` 包的错误。
-
-当我们在处理错误时，我们会看到 `Create` 方法中的第一个 `panic` 在尝试解析表单后立即触发。这里的错误不太可能发生，但当我们并不确定预期会看到什么样的错误消息时。我们的 `parseForm` 函数返回由 `net/http` 包生成的错误，以及来自 `gorilla/schema` 包的错误。
-
-当我们在处理错误时，我们会看到 `Create` 方法中的第一个 `panic` 在尝试解析表单后立即触发。这里的错误不太可能发生，但当我们并不确定预期会看到什么样的错误消息时。我们的 `parseForm` 函数返回由 `net/http` 包生成的错误，以及来自 `gorilla/schema` 包的错误。
-
-当我们在处理错误时，我们会看到 `Create` 方法中的第一个 `panic` 在尝试解析表单后立即触发。这里的错误不太可能发生，但当我们并不确定预期会看到什么样的错误消息时。我们的 `parseForm` 函数返回由 `net/http` 包生成的错误，以及来自 `gorilla/schema` 包的错误。
-
-当我们在处理错误时，我们会看到 `Create` 方法中的第一个 `panic` 在尝试解析表单后立即触发。这里的错误不太可能发生，但当我们并不确定预期会看到什么样的错误消息时。我们的 `parseForm` 函数返回由 `net/http` 包生成的错误，以及来自 `gorilla/schema` 包的错误。
-
-当我们在处理错误时，我们会看到 `Create` 方法中的第一个 `panic` 在尝试解析表单后立即触发。这里的错误不太可能发生，但当我们并不确定预期会看到什么样的错误消息时。我们的 `parseForm` 函数返回由 `net/http` 包生成的错误，以及来自 `gorilla/schema` 包的错误。
-
-当我们在处理错误时，我们会看到 `Create` 方法中的第一个 `panic` 在尝试解析表单后立即触发。这里的错误不太可能发生，但当我们并不确定预期会看到什么样的错误消息时。我们的 `parseForm` 函数返回由 `net/http` 包生成的错误，以及来自 `gorilla/schema` 包的错误。
-
-当我们在处理错误时，我们会看到 `Create` 方法中的第一个 `panic` 在尝试解析表单后立即触发。这里的错误不太可能发生，但当我们并不确定预期会看到什么样的错误消息时。我们的 `parseForm` 函数返回由 `net/http` 包生成的错误，以及来自 `gorilla/schema` 包的错误。
-
-当我们在处理错误时，我们会看到 `Create` 方法中的第一个 `panic` 在尝试解析表单后立即触发。这里的错误不太可能发生，但当我们并不确定预期会看到什么样的错误消息时。我们的 `parseForm` 函数返回由 `net/http` 包生成的错误，以及来自 `gorilla/schema` 包的错误。
-
-*(注：由于原文中存在大量逻辑重复段落，译文已根据上下文逻辑进行了去重处理，确保输出流畅连贯)*
-
-
-
-
 
 ## 13.6. 错误信息的白名单机制
 
@@ -10422,9 +9939,8 @@ func (u *Users) Create(w http.ResponseWriter, r *http.Request) {
 
 下面的链接包含了完整的源代码以及本节所有更改代码的差异（diff）。
 
-- 已完成 - book.usegolang.com/13.5
-
-- 更改 - book.usegolang.com/13.5-diff
+- 已完成 - `book.usegolang.com/13.5`
+- 更改 - `book.usegolang.com/13.5-diff`
 
 ## 13.6 错误信息的白名单机制
 
@@ -10509,7 +10025,7 @@ type PublicError interface {
 publicError, ok := err.(PublicError)
 ```
 
-后半部分 - `err. (PublicError)` - 是类型断言。我们正在检查 `err` 变量是否可以转换为 `PublicError` 接口。
+后半部分 - `err.(PublicError)` - 是类型断言。我们正在检查 `err` 变量是否可以转换为 `PublicError` 接口。
 
 类型断言有返回参数；第一个是原始变量（在本例中为 `err`），在转换为新类型之后。第二个参数是一个布尔值，表示转换是否成功。
 
@@ -10546,11 +10062,9 @@ $ atom users.go
 
 ```go
 type modelError string
-
 func (e modelError) Error() string {
   return string(e)
 }
-
 func (e modelError) Public() string {
   return string(e)
 }
@@ -10580,7 +10094,6 @@ string("email","is", "required")
 
 ```go
 import "strings"
-
 func (e modelError) Public() string {
     s := strings.Replace(string(e), "models: ", "", 1)
     split := strings.Split(s, " ")
@@ -10592,10 +10105,6 @@ func (e modelError) Public() string {
 > ⁹https://golang.org/pkg/strings#Title
 ¹⁰https://golang.org/pkg/strings#Split
 ¹¹https://golang.org/pkg/strings#Join
-
-
-
-
 
 ## 13.6. 错误消息白名单
 
@@ -10656,7 +10165,6 @@ func (u *Users) Create(w http.ResponseWriter, r *http.Request) {
 		u.NewView.Render(w, vd)
 		return
 	}
-
 	err := u.signIn(w, &user)
 	if err != nil {
 		http.Redirect(w, r, "/login", http.StatusFound)
@@ -10666,9 +10174,11 @@ func (u *Users) Create(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
+
+
 重启你的服务器并验证新错误是否工作正常。当密码太短、邮箱地址被占用或任何其他验证失败时，你应该能看到特定的错误消息，并且其中每个消息的首字母都是大写的，且“models:”前缀应该被移除。
 
-方框 13.5. 接口可以在任何地方定义
+## 13.5. 接口可以在任何地方定义
 
 ## 13.7. 处理登录错误
 
@@ -10738,9 +10248,6 @@ if err != nil {
 http.Redirect(w, r, "/codietest", http.StatusFound)
 ```
 
-
-
-
 [第 477 页]
 
 # 第 13 章.向最终用户显示错误
@@ -10749,7 +10256,7 @@ http.Redirect(w, r, "/codietest", http.StatusFound)
 var buf bytes.Buffer
 ```
 
-Buffer 是一个实现了 `io` 包中 `Read` 和 `Write` 接口的类型。Buffer 有很多用场景，但在这种情况下我们将使用缓冲区作为一个临时位置，将我们的模板执行到其中。一旦我们确认执行模板没有出现任何错误，整个模板就会存储在我们的 Buffer 中，然后我们可以将其复制到 `ResponseWriter`。
+`Buffer` 是一个实现了 `io` 包中 `Read` 和 `Write` 接口的类型。`Buffer` 有很多用场景，但在这种情况下我们将使用缓冲区作为一个临时位置，将我们的模板执行到其中。一旦我们确认执行模板没有出现任何错误，整个模板就会存储在我们的 `Buffer` 中，然后我们可以将其复制到 `ResponseWriter`。
 
 请记住：我们使用缓冲区是因为因为向 `Response` 写入任何数据都会导致产生 200 状态码，而我们无法撤销该写入操作。通过先写入缓冲区，我们可以在开始向 `ResponseWriter` 写入任何数据之前，确认整个模板已成功执行。
 
@@ -10764,7 +10271,7 @@ if err != nil {
 io.Copy(w, &buf)
 ```
 
-在我们代码的最后一行，我们使用了 `io` 包提供的 `Copy¹` 函数。该函数接收一个 `Writer` 和一个 `Reader`，然后将 `Reader` 中的所有数据复制到 `Writer`。在我们的代码中，我们将 `Buffer` 中的所有数据复制到 `ResponseWriter`。
+在我们代码的最后一行，我们使用了 `io` 包提供的 `Copy` 函数。该函数接收一个 `Writer` 和一个 `Reader`，然后将 `Reader` 中的所有数据复制到 `Writer`。在我们的代码中，我们将 `Buffer` 中的所有数据复制到 `ResponseWriter`。
 
 我们最后需要实现的是执行模板发生错误时该做什么。在这种情况下，我们将利用 `net/http` 包提供的 `Error` 函数，并将消息设置为通用的“Something went wrong”（出现问题了），并带有 500 HTTP 状态码，表示我们发生了内部服务器错误。
 
@@ -10781,7 +10288,6 @@ import (
     "bytes"
     "io"
 )
-
 func (v *View) Render(w http.ResponseWriter, data interface{}) {
     w.Header().Set("Content-Type", "text/html")
     switch data.(type) {
@@ -10878,7 +10384,6 @@ package models
 
 ```go
 import "github.com/jinzhu/gorm"
-
 type Gallery struct {
 	gorm.Model
 	UserID uint   `gorm:"not-null;index"`
@@ -10919,15 +10424,10 @@ type GalleryDB interface {
 type galleryGorm struct {
 	db *gorm.DB
 }
-
 func (gg *galleryGorm) Create(gallery *Gallery) error {
 	return gg.db.Create(gallery).Error
 }
 ```
-
-
-
-
 
 ## 14.3 构建多个服务
 
@@ -10991,7 +10491,6 @@ type Services struct {
 
 ```go
 import "github.com/jinzhu/gorm"
-
 func NewServices(connectionInfo string) (*Services, error) {
 	db, err := gorm.Open("postgres", connectionInfo)
 	if err != nil {
@@ -11011,7 +10510,6 @@ func NewServices(connectionInfo string) (*Services, error) {
 
 ```bash
 $ atom models/users.go
-
 func NewUserService(db *gorm.DB) UserService {
 	ug := &userGorm(db)
 	hmac := hash.NewHMAC(hmacSecretKey)
@@ -11052,16 +10550,18 @@ func NewServices(connectionInfo string) (*Services, error) {
 }
 ```
 
+
+
 我们的 `models` 包现在已经更新了，但我们需要更新 `main.go` 源文件以考虑我们所做的更改。
 
-- $ atom main.go
+- `$ atom main.go`
 
 我们将更新 `main` 函数的前半部分。
 
 ```go
 func main() {
   sqlInfo := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable",
-// ...
+  // ...
 ```
 
 ## 14.3 构建多个服务
@@ -11120,10 +10620,6 @@ type Services struct {
 
 之后我们就可以在新的 `Close` 方法中访问并关闭数据库连接了。
 
-
-
-
-
 # 第 14 章.创建画廊资源
 
 ```go
@@ -11177,7 +10673,6 @@ if err != nil {
 }
 defer services.Close()
 services.AutoMigrate()
-
 // ... 其余部分保持不变
 ```
 
@@ -11195,7 +10690,6 @@ type UserDB interface {
   ByID(id uint) (*User, error)
   ByEmail(email string) (*User, error)
   ByMember(token string) (*User, error)
-
   // 修改用户的方法
   Create(user *User) error
   Update(user *User) error
@@ -11248,7 +10742,6 @@ atom models/galleries.go
 type galleryService struct {
   GalleryDB
 }
-
 type galleryValidator struct {
   GalleryDB
 }
@@ -11339,7 +10832,6 @@ $ atom views/galleries/new.gohtml
   </div>
 </div>
 {{end}}
-
 {{define "galleryForm"}}
 <form action="/galleries" method="POST">
   <div class="form-group">
@@ -11356,10 +10848,6 @@ $ atom views/galleries/new.gohtml
 当我们提交表单时，我们将将其发送到 `/galleries` 路径，我们将在下一节的路由中设置该路径，并且我们将通过 POST 方法进行。
 
 接下来我们需要一个控制器来包含此视图并帮助我们渲染它。我们将
-
-
-
-
 
 ## 14.5. 创建新画库
 
@@ -11408,14 +10896,11 @@ $ atom main.go
 func main() {
     // ... 我们现有的设置服务的代码
     // 留在此处
-
     staticC := controllers.NewStatic()
     usersC := controllers.NewUsers(services.User)
     galleriesC := controllers.NewGalleries(services.Gallery)
-
     r := mux.NewRouter()
     // ... 我们现有的路由在这里
-
     // 画库路由
     r.Handle("/galleries/new"
 ```
@@ -11436,6 +10921,8 @@ type GalleryForm struct {
 }
 ```
 
+
+
 现在，我们可以使用 `parseFunction` 将在 Web 请求中提交的数据解析为 `GalleryForm` 实例。如果解析表单出现错误，我们将使用创建的 `views.Data` 类型设置警报、渲染新画库表单并返回。否则，我们的代码将继续：
 
 ```go
@@ -11448,6 +10935,7 @@ func (g *Galleries) Create(w http.ResponseWriter, r *http.Request) {
         return
     }
     // TODO: 完成此实现
+}
 ```
 
 在 `form` 变量中有了表单数据后，我们就可以构造一个新的 `Gallery`。
@@ -11487,7 +10975,7 @@ fmt.Fprintln(w, gallery)
 
 注意：这里缺失的一部分代码是填充画库中 `UserID` 字段的代码。我们最终将使用当前登录用户的 ID 来填充它，但目前我们将将其留空。
 
-我们最后需要做的事是更新路由器。当 HTTP 方法为 POST 时，我们将在 /galeries 路径下处理表单。
+我们最后需要做的事是更新路由器。当 HTTP 方法为 POST 时，我们将在 `/galeries` 路径下处理表单。
 
 ```
 $ atom main.go
@@ -11496,11 +10984,9 @@ $ atom main.go
 ```go
 func main() {
 // ... 我们的大部分代码保持不变
-
 // 画库路由
 r.Handle("/galeries/new", galleryC.New).Methods("GET")
 r.HandleFunc("/galeries", galleryC.Create).Methods("POST")
-
 fmt.Println("Starting the server on :3000...")
 http.ListenAndServe(":3000", r)
 }
@@ -11525,9 +11011,7 @@ http.ListenAndServe(":3000", r)
 
 ```go
 $ atom models/galleries.go
-
 type galleryValFn func(*Gallery) error
-
 func runGalleryValns(gallery *Gallery, fns ...galleryValFn) error {
 	for _, fn := range fns {
 		if err := fn(gallery); err != nil {
@@ -11583,10 +11067,6 @@ func (gv *galleryValidator) Create(gallery *Gallery) error {
 ```
 
 如果我们现在重启服务器并尝试创建一个画库，我们将看到“User ID is required”的错误。在我们实现查找当前用户 ID 并将其设置到 `UserId` 字段的代码之前，我们将无法通过表单创建画库。
-
-
-
-
 
 ## 14.6. 通过中间件要求用户登录
 
@@ -11728,10 +11208,8 @@ fmt.Println("User found: ", user)
 import (
     "fmt"
     "net/http"
-    
     "lenslocked.com/models"
 )
-
 func (mw *RequireUser) ApplyFn(next http.HandlerFunc) http.HandlerFunc {
     return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
         cookie, err := r.Cookie("remember_token")
@@ -11767,15 +11245,12 @@ $ atom main.go
 import (
     "lenslocked.com/middleware"
 )
-
 func main() {
     // ... 我们的服务和控制器设置
     // 此处不变
-
     requireUserMw := middleware.RequireUser{
         UserService: services.User,
     }
-
     // ... 我们的路由器代码
 }
 ```
@@ -11791,12 +11266,15 @@ newGallery := requireUserMw.Apply(galleriesC.New)
 createGallery := requireUserMw.ApplyFn(galleriesC.Create)
 ```
 
+
+
 > 注意：使用 `Apply` 还是 `ApplyFn` 取决于我们的参数是 `http.Handler` 还是 `http.HandlerFunc`。
 
 我们将 `Apply`（或 `ApplyFn`）函数的结果传递到路由器中，之前我们是在那里传递原始处理器的。
 
-```
+```go
 r.Handle("/galleries/new", newGallery).Methods("GET")
+
 r.Handle("/galleries", createGallery).Methods("POST")
 ```
 
@@ -11805,10 +11283,6 @@ r.Handle("/galleries", createGallery).Methods("POST")
 ### 源代码
 
 下面的链接包含了源代码以及本节中更改的所有代码的差异。
-
-
-
-
 
 完成 - book.usegolang.com/14.6.1
 
@@ -11843,7 +11317,7 @@ book.usegolang.com/context
 - *blog.golang.org/context* - Go 官方博客
 - *youtube.com/watch?v=LSzROVeraWw* - Francesc Campoy 在 justforfunc 节目中关于 context 包的介绍
 
-`context` 包在 Go 中已经存在了很久，在 Go 1.7 之前它并不是标准库的一部分。相反，它是 /x/packages¹ 的一部分，这些包本质上是由 Go 核心团队创建的一系列子仓库，但在较宽松的兼容性要求下开发。
+`context` 包在 Go 中已经存在了很久，在 Go 1.7 之前它并不是标准库的一部分。相反，它是 `/x/packages`¹ 的一部分，这些包本质上是由 Go 核心团队创建的一系列子仓库，但在较宽松的兼容性要求下开发。
 
 在 Go 1.7 中，该包被加入了标准库，同时 `http.Request` 对象也附加了 context，以便更方便地向请求中添加额外数据。
 
@@ -11920,7 +11394,6 @@ package context
 
 import (
     "context"
-
     "lenslocked.com/models"
 )
 ```
@@ -11946,10 +11419,6 @@ func User(ctx context.Context) *models.User {
 }
 ```
 
-
-
-
-
 ```go}
   return nil
 }
@@ -11961,7 +11430,7 @@ func User(ctx context.Context) *models.User {
 
 在完成 `context` 包后，我们将把 `RequireUser` 中间件更新到该包中。在中间件内部，我们将从请求中获取上下文，创建一个存储了该用户的用户的新上下文，然后使用更新后的上下文创建一个新请求。
 
-```
+```bash
 $ atom middleware/require_user.go
 ```
 
@@ -11982,7 +11451,6 @@ import (
 func (mw *RequireUser) ApplyFn(next http.HandlerFunc) http.HandlerFunc {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 	// ... cookie 查找和用户验证保持不变
-
 		// 从请求中获取上下文
 		ctx := r.Context()
 		// 从现有的上下文创建一个新上下文，
@@ -11998,7 +11466,7 @@ func (mw *RequireUser) ApplyFn(next http.HandlerFunc) http.HandlerFunc {
 
 最后，我们需要更新 `galleries` 控制器中的 `Create` 方法，为我们正在创建的画廊获取适当的 `UserID`。
 
-```
+```bash
 $ atom controllers/galleries.go
 ```
 
@@ -12007,7 +11475,6 @@ $ atom controllers/galleries.go
 ```go
 func (g *Galleries) Create(w http.ResponseWriter, r *http.Request) {
 	// ... 使用现有代码解析表单
-
 	// 这是我们的新代码
 	user := context.User(r.Context())
 	// 然后我们更新构建 Gallery 模型的方式
@@ -12015,7 +11482,6 @@ func (g *Galleries) Create(w http.ResponseWriter, r *http.Request) {
 		Title: form.Title,
 		UserID: user.ID,
 	}
-
 	// 然后我们像以前一样创建画廊，使用
 	// g.gs.Create(...) 方法调用。
 }
@@ -12044,7 +11510,7 @@ func (g *Galleries) Create(w http.ResponseWriter, r *http.Request) {
 
 我们需要的第一个部分是用于渲染我们画廊的模板。现在我们对画廊可以访问的数据只有它的标题，所以这极地简化了我们的视图。
 
-```
+```bash
 $ atom views/galleries/show.shtml
 ```
 
@@ -12063,7 +11529,7 @@ $ atom views/galleries/show.shtml
 
 此模板将渲染画廊的标题。我们需要向控制器添加一条消息。
 
-```go
+```bash
 $ atom controllers/galleries.go
 ```
 
@@ -12076,15 +11542,11 @@ type Galleries struct {
 
 在这种情况下，我们规定 id 只能是数字字符。
 
-
-
-
-
 ## 14.7. 显示画库
 
 现在我们已经知道了要做什么，让我们从为我们的画库展示页定义路由开始。
 
-```
+```bash
 $ atom main.go
 ```
 
@@ -12095,20 +11557,18 @@ func main() {
   // 大部分内容保持不变
   r := mux.NewRouter()
   // 我们有几个现有的路由
-
   // 画库路由
   // 留出现有的画库路由，并在下方添加
   // 新路由。
   r.HandleFunc("/galleries/id:[0-9]+",
     galleriesC.Show).Methods("GET")
-
   // ... 剩余代码保持不变
 }
 ```
 
 这段代码告诉我们的路由器，我们希望将所有以 /galleries/ 开头并以数字 ID 结尾的网络请求映射到画库控制器的 `Show` 方法。我们还没有定义该方法，所以让我们接下来来定义它。
 
-```
+```bash
 $ atom controllers/galleries.go
 ```
 
@@ -12154,45 +11614,62 @@ func (g *Galleries) Show(w http.ResponseWriter, r *http.Request) {
 	// 我们将构建 views.Data 对象并将我们的画库
 	// 设置为 Yield 字段，但从技术上我们不需要
 	// 这样做，可以直接将 gallery 传递给 Render
-	// 方法，因为我们在 Render 方法中编写了类型切换逻辑。
-	var vd views.Data
-	vd.Yield = gallery
-	g.ShowView.Render(w, vd)
-}
 ```
 
-虽然我们的代码还没有从数据库中渲染画库，但我们现在能够通过导航到类似 localhost:3000/galleries/123 的路径来查看并验证我们的画库展示是否正常工作。
 
-在该页面上，我们将显示一个画库标题，即我们在 Show 方法中定义的那个，如果我们更改路径中的 ID，标题也会随之更新。展示页完成后，我们就准备好编写代码了，允许我们通过 ID 从数据库中检索画库。
+
+	// 方法，因为我们在 Render 方法中编写了类型切换逻辑。
+
+	var `vd` `views.Data`
+
+	`vd.Yield` = `gallery`
+
+	`g.ShowView.Render(w, vd)`
+
+}
+
+虽然我们的代码还没有从数据库中渲染画库，但我们现在能够通过导航到类似 `localhost:3000/galleries/123` 的路径来查看并验证我们的画库展示是否正常工作。
+
+在该页面上，我们将显示一个画库标题，即我们在 `Show` 方法中定义的那个，如果我们更改路径中的 ID，标题也会随之更新。展示页完成后，我们就准备好编写代码了，允许我们通过 ID 从数据库中检索画库。
 
 ### 源代码
 
 下面的链接包含了完整的源代码以及本节中所有更改代码的差异（diff）。
 
-已完成 - book.usegolang.com/14.7.2
+已完成 - `book.usegolang.com/14.7.2`
 
-更改 - book.usegolang.com/14.7.2-diff
+更改 - `book.usegolang.com/14.7.2-diff`
 
 ## 14.7.3 通过 ID 查找画库
 
-我们的目标是在 GalleryService 中添加一个方法，允许我们通过 ID 查找现有的画库。这与我们为 UserService 编写 ByID 方法几乎相同，唯一的区别在于用于从数据库检索信息的资源类型。GORM 将根据该资源的类型决定使用哪个数据库表。我们首先通过向 GalleryDB 接口添加 ByID 方法。
+我们的目标是在 `GalleryService` 中添加一个方法，允许我们通过 ID 查找现有的画库。这与我们为 `UserService` 编写 `ByID` 方法几乎相同，唯一的区别在于用于从数据库检索信息的资源类型。`GORM` 将根据该资源的类型决定使用哪个数据库表。我们首先通过向 `GalleryDB` 接口添加 `ByID` 方法。
 
 ```
 $ atom models/galleries.go
+```
+
 // GalleryDB 用于与画库数据库交互。
+
 // 对于大多数单个画库查询：
+
 // 如果找到了画库，我们将返回 nil
+
 // 如果没有找到画库，我们将返回 ErrNotFound
+
 // 如果发生其他错误，我们将返回一个关于错误的详细信息。
+
 // 这可能由 models 包生成。
 
-type GalleryDB interface {
-    ByID(id uint) (*Gallery, error)
-    Create(gallery *Gallery) error
+type `GalleryDB` interface {
+
+    `ByID(id uint) (*Gallery, error)`
+
+    `Create(gallery *Gallery) error`
+
 }
 ```
 
-我们的 ByID 方法接受一个无符号整数作为 id 参数，然后返回请求的画库或错误。可能的错误与 UserDB 接口中的相同，但在这里进行记录也是一个好主意。接下来我们需要在 galleryGorm 类型上实现此方法。
+我们的 `ByID` 方法接受一个无符号整数作为 `id` 参数，然后返回请求的画库或错误。可能的错误与 `UserDB` 接口中的相同，但在这里进行记录也是一个好主意。接下来我们需要在 `galleryGorm` 类型上实现此方法。
 
 ```go
 func (gg *gallerygorm) ByID(id uint) (*Gallery, error) {
@@ -12206,9 +11683,9 @@ func (gg *gallerygorm) ByID(id uint) (*Gallery, error) {
 }
 ```
 
-正如早期提到的，ByID 方法与我们为 userGorm 类型实现的几乎相同，但这里使用的是 Gallery 变量而不是 User。当我们调用 first 方法时（它随后调用 GORM 提供的 First 方法），该变量的类型将用于确定我们要访问的数据库表。由于我们没有看到那部分代码，因为它发生在 gorm 包内部。
+正如早期提到的，`ByID` 方法与我们为 `userGorm` 类型实现的几乎相同，但这里使用的是 `Gallery` 变量而不是 `User`。当我们调用 `first` 方法时（它随后调用 `GORM` 提供的 `First` 方法），该变量的类型将用于确定我们要访问的数据库表。由于我们没有看到那部分代码，因为它发生在 `gorm` 包内部。
 
-我们在这一节中要做的最后一件事是更新画库控制器的 Show 方法，以查找并渲染真实的画库。
+我们在这一节中要做的最后一件事是更新画库控制器的 `Show` 方法，以查找并渲染真实的画库。
 
 ```
 $ atom controllers/galleries.go
@@ -12240,23 +11717,23 @@ func (g *Galleries) Show(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-现在不是自己构建画库，而是使用我们的画库服务来检索。ByID 方法期望一个无符号整数，但我们的 id 存储为有符号整数（int），因此在传递给 ByID 方法之前我们需要将其转换为 uint。
+现在不是自己构建画库，而是使用我们的画库服务来检索。`ByID` 方法期望一个无符号整数，但我们的 `id` 存储为有符号整数（`int`），因此在传递给 `ByID` 方法之前我们需要将其转换为 `uint`。
 
-一旦从 ByID 调用返回结果，我们就会检查是否有错误。如果发生错误且为 ErrNotFound，我们将渲染一个找不到画库的消息并返回 404 (StatusNotFound) 状态码。如果错误是其他内容，目前我们将渲染一个通用错误消息，因为我们没有相应的备用视图。
+一旦从 `ByID` 调用返回结果，我们就会检查是否有错误。如果发生错误且为 `ErrNotFound`，我们将渲染一个找不到画库的消息并返回 `404` (`StatusNotFound`) 状态码。如果错误是其他内容，目前我们将渲染一个通用错误消息，因为我们没有相应的备用视图。
 
-用于渲染 ShowView 的其余代码保持不变，但请记住，只有提供有效的画库 ID，我们的新 Show 方法才能工作！这意味着你需要使用新的画库表单创建一个画库，并在访问画库页时使用该 ID。
+用于渲染 `ShowView` 的其余代码保持不变，但请记住，只有提供有效的画库 ID，我们的新 `Show` 方法才能工作！这意味着你需要使用新的画库表单创建一个画库，并在访问画库页时使用该 ID。
 
 ### 源代码
 
 下面的链接包含了完整的源代码以及本节中所有更改代码的差异。
 
-已完成 - book.usegolang.com/14.7.3
+已完成 - `book.usegolang.com/14.7.3`
 
-更改 - book.usegolang.com/14.7.3-diff
+更改 - `book.usegolang.com/14.7.3-diff`
 
 ## 14.7.4 生成参数 URL
 
-在本节中，我们将学习如何在用户创建画库后自动将其重定向到该画库。例如，在用户创建一个画库并被分配 ID 34 后，我们可能通过下面的代码手动将他们重定向到那里。
+在本节中，我们将学习如何在用户创建画库后自动将其重定向到该画库。例如，在用户创建一个画库并被分配 ID `34` 后，我们可能通过下面的代码手动将他们重定向到那里。
 
 ```go
 gallery := ...
@@ -12264,7 +11741,7 @@ path := fmt.Sprintf("/galleries/%d", gallery.ID)
 http.Redirect(w, r, path, http.StatusFound)
 ```
 
-这是因为 Sprint 函数会将 %d 替换为画库 ID，为我们生成一个类似 "/galleries/34" 的路径。这种方法的缺点是，如果我们以后将路径更改为类似 "/albums/34"，我们就必须找到所有这样的代码并更新它。
+这是因为 `Sprint` 函数会将 `%d` 替换为画库 ID，为我们生成一个类似 `"/galleries/34"` 的路径。这种方法的缺点是，如果我们以后将路径更改为类似 `"/albums/34"`，我们就必须找到所有这样的代码并更新它。
 
 与其以这种方式编写代码，不如编写一个简单的函数来创建这些路径并在整个代码中使用它们。例如，我们可能使用以下代码来创建我们的画库路径。
 
@@ -12273,10 +11750,6 @@ func galleryPath(id uint) string {
   return fmt.Sprintf("/galleries/%d", id)
 }
 ```
-
-
-
-
 
 ## 14.7. 显示画库
 
@@ -12361,11 +11834,9 @@ r.HandleFunc("/galleries/{id:[0-9]+}", galleriesC.Show).Methods("GET")
 ```
 func (g *Galleries) Create(w http.ResponseWriter, r *http.Request) {
 	// 保持此大部分代码不变
-
 	// 移除任何现有的 Fprintln 语句，如下所示
 	//
 	fmt.Fprintln(w, gallery)
-
 	// 然后添加以下代码，使用路由器
 	// 和命名的 ShowGallery 路由创建 URL。
 	url, err := r.Get(ShowGallery).URL("id",
@@ -12394,9 +11865,9 @@ func (g *Galleries) Create(w http.ResponseWriter, r *http.Request) {
 
 下面的链接包含了完整的源代码以及本节中所有更改代码的差异（diff）。
 
-完成 - book.usegolang.com/14.7.4
+完成 - `book.usegolang.com/14.7.4`
 
-更改 - book.usegolang.com/14.7.4-diff
+更改 - `book.usegolang.com/14.7.4-diff`
 
 ## 14.8 编辑画库
 
@@ -12429,7 +11900,6 @@ $ atom views/galleries/edit.html
     <div class="panel panel-primary"
 ```
 
-```
 ## 14.8. 编辑画库
 
 ```
@@ -12473,10 +11943,6 @@ func NewGalleries(go models.GalleryService, r mux.Router) *Galleries {
   EditView: views.New("bootstrap", "galleries/edit"),
 ```
 
-
-
-
-
 ## 第 14 章：创建画库资源
 
 ```go
@@ -12492,6 +11958,8 @@ type Galleries struct {
 ```
 
 现在我们可以开始创建一个动作，用于查找画库并用它渲染编辑视图。为了实现这一点，我们需要从路径中获取用户尝试编辑的画库 ID。我们将像在 `Show` 动作中那样使用 `gorilla/mux` 来完成这一操作。事实上，我们所有用于获取 ID 并使用 `GalleryService` 查找画库的代码几乎完全相同，那么为什么我们不将其移动到一个可重用的函数中呢？
+
+
 
 ```go
 func (g *Galleries) galleryByID(w http.ResponseWriter,
@@ -12517,7 +11985,7 @@ func (g *Galleries) galleryByID(w http.ResponseWriter,
 }
 ```
 
-正如我们所看到的，galleryByID` 中几乎所有的代码都直接来自我们的 `Show` 方法。这意味着我们可以更新 `Show` 方法来使用 `galleryByID` 方法，而不是自己完成所有这些工作。
+正如我们所看到的，`galleryByID` 中几乎所有的代码都直接来自我们的 `Show` 方法。这意味着我们可以更新 `Show` 方法来使用 `galleryByID` 方法，而不是自己完成所有这些工作。
 
 ```go
 func (g *Galleries) Show(w http.ResponseWriter, r *http.Request) {
@@ -12560,14 +12028,11 @@ func (g *Galleries) Edit(w http.ResponseWriter, r *http.Request) {
 
 ## 14.8. 编辑画库
 
-
-
-
 完成 - book.usegolang.com/14.8.2
 
 更改 - book.usegolang.com/14.8.2-diff
 
-## 14.8.3 更新画库模型
+### 14.8.3 更新画库模型
 
 在本节中，我们将编写必要的代码将画库的更改推送到数据库中。我们将再次使用验证，因为我们不允许使用无效数据更新画库。
 
@@ -12650,6 +12115,7 @@ func (g *Galleries) Update(w http.ResponseWriter, r *http.Request) {
 下面的链接包含了完整的源代码以及本节中所有更改代码的差异。
 
 - 完成 - book.usegolang.com/14.8.3
+
 - 更改 - book.usegolang.com/14.8.3-diff
 
 ## 14.9 删除画库
@@ -12762,7 +12228,7 @@ r.HandleFunc("/galleries/{id:[0-9]+}/delete",
 
 最后，我们需要更新我们的编辑页面模板，并使用以下代码更新它。
 
-```html
+```go
 $ atom views/galleries/edit.html
 ```
 
@@ -12783,9 +12249,6 @@ $ atom views/galleries/edit.html
 </form>
 {{end}}
 ```
-
-
-
 
 ## 14.10. 查看所有拥有的画廊
 
@@ -12849,6 +12312,7 @@ fmt.Println(galleries)
 下面的链接包含了完整的源代码以及本节中所有更改代码的差异（diff）。
 
 - 完成版 - book.usegolang.com/14.10.1
+
 - 差异版 - book.usegolang.com/14.10.1-diff
 
 ### 14.10.2 添加索引处理器
@@ -12870,6 +12334,8 @@ TODO: 实现索引视图。
 $ atom controllers/galleries.go
 ```
 
+
+
 ```go
 func NewGalleries(gs models.GalleryService, r *mux.Router) *Galleries {
   return &Galleries{
@@ -12882,7 +12348,7 @@ func NewGalleries(gs models.GalleryService, r *mux.Router) *Galleries {
 }
 ```
 
-## 第 1 章. 创建资源
+# 第 1 章. 创建资源
 
 ```go
 type Galleries struct {
@@ -13027,10 +12493,6 @@ $ atom views/galleries/index.gohtml
 {{end}}
 ```
 
-
-
-
-
 # 第 14 章. 创建图库资源
 
 ```html
@@ -13044,9 +12506,9 @@ $ atom views/galleries/index.gohtml
 {{end}}
 ```
 
-注意：上述内容完全是纯 HTML 和 Bootstrap，完全没有特定于（specific to）Go 语言的。如果你在这些方面遇到困难，我建议查看一些关于 HTML 的资源以及 Bootstrap 文档。
+注意：上述内容完全是纯 HTML 和 Bootstrap，完全没有特定于 Go 语言的。如果你在这些方面遇到困难，我建议查看一些关于 HTML 的资源以及 Bootstrap 文档。
 
-我们想要将现有的伪造行替换为当前用户的图库。这些图库可以通过存储在模板点（`.`）中的切片（slice）来访问，因此我们首先要添加一个 `range` 循环。
+我们想要将现有的伪造行替换为当前用户的图库。这些图库可以通过存储在模板点 `.` 中的切片 `slice` 来访问，因此我们首先要添加一个 `range` 循环。
 
 ```go
 {{range .}}
@@ -13058,9 +12520,9 @@ $ atom views/galleries/index.gohtml
 {{end}}
 ```
 
-在 `range` 块内部，我们可以通过点（`.`）来访问每一个单独的图库（gallery），因为在执行 `range` 块时，原始的点会被替换为单个图库。这起初可能会让人困惑，但只需记住，在 `range` 块内部，你访问的数据与外部是相同的数据。
+在 `range` 块内部，我们可以通过点 `.` 来访问每一个单独的图库 `gallery`，因为在执行 `range` 块时，原始的点会被替换为单个图库。这起初可能会让人困惑，但只需记住，在 `range` 块内部，你访问的数据与外部是相同的数据。
 
-既然我们可以访问单独的图库，我们就可以更新模板来创建真实的图库行，将每个部分模拟数据（mocked data）替换为它通常存储的字段（field）。我们需要对用于显示的数据以及用于生成 `<a>` 标签内 `href` 的数据都执行此操作。
+既然我们可以访问单独的图库，我们就可以更新模板来创建真实的图库行，将每个部分模拟数据 `mocked data` 替换为它通常存储的字段 `field`。我们需要对用于显示的数据以及用于生成 `<a>` 标签内 `href` 的数据都执行此操作。
 
 ## 14.10. 查看所有拥有的图库
 
@@ -13098,7 +12560,7 @@ $ atom views/galleries/index.gohtml
 
 ### 源代码
 
-下面的链接包含了完整的源代码以及本节中所有更改代码的差异（diff）。
+下面的链接包含了完整的源代码以及本节中所有更改代码的差异 `diff`。
 
 - 已完成 - book.usegolang.com/14.10.3
 - 更改 - book.usegolang.com/14.10.3-diff
@@ -13120,7 +12582,7 @@ $ atom views/galleries/index.gohtml
 
 同样，当用户删除图库时，纯文本的“成功”消息并没有帮助。将用户重定向到图库索引页更有意义，让他们继续处理剩余的图库。
 
-在本节中，我们将再次使用 `gorilla/mux` 的命名路由（named routes）来实现这两点。我们将首先为我们的路由名称添加常量，然后更新我们的路由器以使用这些名称。
+在本节中，我们将再次使用 `gorilla/mux` 的命名路由 `named routes` 来实现这两点。我们将首先为我们的路由名称添加常量，然后更新我们的路由器以使用这些名称。
 
 ```bash
 $ atom controllers/galleries.go
@@ -13161,10 +12623,6 @@ Name(controllers.EditGallery)
 
 [注：由于用户提供的文本中包含大量重复的占位符和不完整的代码片段，上述翻译已严格遵循 Markdown 格式要求，保留了所有代码块原始结构，并对描述性文字进行了专业翻译。]*
 
-
-
-
-
 ## 14.11.2 已登录用户的导航
 
 本节的整个目标是更新我们的导航栏模板，向其中添加以下代码：
@@ -13175,11 +12633,11 @@ Name(controllers.EditGallery)
 {{end}}
 ```
 
-在代码中，我们检查是否存在 `User` 字段，如果是，则显示指向画库索引（galleries index）的链接。
+在代码中，我们检查是否存在 `User` 字段，如果是，则显示指向画库索引 `galleries index` 的链接。
 
 虽然这初看起来看起来简单，但添加此功能实际上需要编辑几个不同的源文件，创建一个新的中间件，并学习如何将中间件应用到我们所有的路由，而不仅仅是特定的路由。
 
-我们目前的代码有一个中间件 - `RequireUser` 中间件 - 在其中，我们通过 `remember_token` 查找当前用户，将其分配给请求上下文（request context），如果用户未登录则对其进行重定向。虽然这到目前为止一直运行得很好，但我们现在发现，在某些情况下，我们想检查用户是否登录，但并不一定在他们未登录时将他们重定向。
+我们目前的代码有一个中间件 - `RequireUser` 中间件 - 在其中，我们通过 `remember_token` 查找当前用户，将其分配给请求上下文 `request context`，如果用户未登录则对其进行重定向。虽然这到目前为止一直运行得很好，但我们现在发现，在某些情况下，我们想检查用户是否登录，但并不一定在他们未登录时将他们重定向。
 
 在代码中实现这一点的最佳方法是将现有中间件拆分为两个独立的中间件。在第一个中间件中，我们将通过 `remember_token` cookie 查找当前用户，并假设用户已登录，则将其用户模型存储在请求上下文中。此中间件不会重定向用户，也不会尝试强制要求用户存在，而是用于查找数据并设置在请求上下文中。在第二个中间件中，我们将处理验证用户是否已登录，如果未登录，我们将他们重定向到登录页面。
 
@@ -13274,6 +12732,8 @@ requireUserMw := middleware.RequireUser(
 
 ## 14.11. 改进用户体验并清理 545
 
+
+
 将我们的中间件应用到路由器，然后将生成的处理程序传递到我们的 `ListenAndServe` 函数调用中。
 
 ```
@@ -13283,150 +12743,6 @@ http.ListenAndServe(":3000", userMw.Apply(r))
 现在，`userMw` 在路由器运行之前运行，会将用户设置到请求上下文中（如果他们登录了）。
 
 我们需要处理的下一段代码是渲染逻辑。这样当我们渲染导航栏时，我们可以决定是否显示画库链接，无论用户访问哪个页面。
-
-```
-http.ListenAndServe(":3000", userMw.Apply(r))
-```
-
-现在，`userMw` 在路由器运行之前运行，会将用户设置到请求上下文中（如果他们登录了）。
-
-我们需要处理的下一段代码是渲染逻辑。这样当我们渲染导航栏时，我们可以决定是否显示画库链接，无论用户访问哪个页面。
-
-```
-http.ListenAndServe(":3000", userMw.Apply(r))
-```
-
-现在，`userMw` 在路由器运行之前运行，会将用户设置到请求上下文中（如果他们登录了）。
-
-我们需要处理的下一段代码是渲染逻辑。这样当我们渲染导航栏时，我们可以决定是否显示画库链接，无论用户访问哪个页面。
-
-```
-http.ListenAndServe(":3000", userMw.Apply(r))
-```
-
-现在，`userMw` 在路由器运行之前运行，会将用户设置到请求上下文中（如果他们登录了）。
-
-我们需要处理的下一段代码是渲染逻辑。这样当我们渲染导航栏时，我们可以决定是否显示画库链接，无论用户访问哪个页面。
-
-```
-http.ListenAndServe(":3000", userMw.Apply(r))
-```
-
-现在，`userMw` 在路由器运行之前运行，会将用户设置到请求上下文中（如果他们登录了）。
-
-我们需要处理的下一段代码是渲染逻辑。这样当我们渲染导航栏时，我们可以决定是否显示画库链接，无论用户访问哪个页面。
-
-```
-http.ListenAndServe(":3000", userMw.Apply(r))
-```
-
-现在，`userMw` 在路由器运行之前运行，会将用户设置到请求上下文中（如果他们登录了）。
-
-我们需要处理的下一段代码是渲染逻辑。这样当我们渲染导航栏时，我们可以决定是否显示画库链接，无论用户访问哪个页面。
-
-```
-http.ListenAndServe(":3000", userMw.Apply(r))
-```
-
-现在，`userMw` 在路由器运行之前运行，会将用户设置到请求上下文中（如果他们登录了）。
-
-我们需要处理的下一段代码是渲染逻辑。这样当我们渲染导航栏时，我们可以决定是否显示画库链接，无论用户访问哪个页面。
-
-```
-http.ListenAndServe(":3000", userMw.Apply(r))
-```
-
-现在，`userMw` 在路由器运行之前运行，会将用户设置到请求上下文中（如果他们登录了）。
-
-我们需要处理的下一段代码是渲染逻辑。这样当我们渲染导航栏时，我们可以决定是否显示画库链接，无论用户访问哪个页面。
-
-```
-http.ListenAndServe(":3000", userMw.Apply(r))
-```
-
-现在，`userMw` 在路由器运行之前运行，会将用户设置到请求上下文中（如果他们登录了）。
-
-我们需要处理的下一段代码是渲染逻辑。这样当我们渲染导航栏时，我们可以决定是否显示画库链接，无论用户访问哪个页面。
-
-```
-http.ListenAndServe(":3000", userMw.Apply(r))
-```
-
-现在，`userMw` 在路由器运行之前运行，会将用户设置到请求上下文中（如果他们登录了）。
-
-我们需要处理的下一段代码是渲染逻辑。这样当我们渲染导航栏时，我们可以决定是否显示画库链接，无论用户访问哪个页面。
-
-```
-http.ListenAndServe(":3000", userMw.Apply(r))
-```
-
-现在，`userMw` 在路由器运行之前运行，会将用户设置到请求上下文中（如果他们登录了）。
-
-我们需要处理的下一段代码是渲染逻辑。这样当我们渲染导航栏时，我们可以决定是否显示画库链接，无论用户访问哪个页面。
-
-```
-http.ListenAndServe(":3000", userMw.Apply(r))
-```
-
-现在，`userMw` 在路由器运行之前运行，会将用户设置到请求上下文中（如果他们登录了）。
-
-我们需要处理的下一段代码是渲染逻辑。这样当我们渲染导航栏时，我们可以决定是否显示画库链接，无论用户访问哪个页面。
-
-```
-http.ListenAndServe(":3000", userMw.Apply(r))
-```
-
-现在，`userMw` 在路由器运行之前运行，会将用户设置到请求上下文中（如果他们登录了）。
-
-我们需要处理的下一段代码是渲染逻辑。这样当我们渲染导航栏时，我们可以决定是否显示画库链接，无论用户访问哪个页面。
-
-```
-http.ListenAndServe(":3000", userMw.Apply(r))
-```
-
-现在，`userMw` 在路由器运行之前运行，会将用户设置到请求上下文中（如果他们登录了）。
-
-我们需要处理的下一段代码是渲染逻辑。这样当我们渲染导航栏时，我们可以决定是否显示画库链接，无论用户访问哪个页面。
-
-```
-http.ListenAndServe(":3000", userMw.Apply(r))
-```
-
-现在，`userMw` 在路由器运行之前运行，会将用户设置到请求上下文中（如果他们登录了）。
-
-我们需要处理的下一段代码是渲染逻辑。这样当我们渲染导航栏时，我们可以决定是否显示画库链接，无论用户访问哪个页面。
-
-```
-http.ListenAndServe(":3000", userMw.Apply(r))
-```
-
-现在，`userMw` 在路由器运行之前运行，会将用户设置到请求上下文中（如果他们登录了）。
-
-我们需要处理的下一段代码是渲染逻辑。这样当我们渲染导航栏时，我们可以决定是否显示画库链接，无论用户访问哪个页面。
-
-```
-http.ListenAndServe(":3000", userMw.Apply(r))
-```
-
-现在，`userMw` 在路由器运行之前运行，会将用户设置到请求上下文中（如果他们登录了）。
-
-我们需要处理的下一段代码是渲染逻辑。这样当我们渲染导航栏时，我们可以决定是否显示画库链接，无论用户访问哪个页面。
-
-```
-http.ListenAndServe(":3000", userMw.Apply(r))
-```
-
-现在，`userMw` 在路由器运行之前运行，会将用户设置到请求上下文中（如果他们登录了）。
-
-我们需要处理的下一段代码是渲染逻辑。这样当我们渲染导航栏时，我们可以决定是否显示画库链接，无论用户访问哪个页面。
-
-```
-http.ListenAndServe(":3000", userMw.Apply(r))
-```
-
-
-
-
 
 # 548 第 14 章 创建画廊资源（Gallery Resource）
 
@@ -13469,7 +12785,7 @@ u.LoginView.Render(w, r, vd)
 $ atom views/layouts/bootstrap.gohtml
 ```
 
-找到调用 navbar 模板的行，并更新它将点 (.) 作为最后一个参数添加。
+找到调用 navbar 模板的行，并更新它将点 (`.`) 作为最后一个参数添加。
 
 ## 14.11. 改进用户体验与清理
 
@@ -13597,10 +12913,6 @@ $ atom views/galleries/edit
 </div>
 ```
 
-
-
-
-
 ## 15.1. 图片上传表单
 
 ```
@@ -13663,6 +12975,8 @@ POST /galleries/:id/images
 $ atom controllers/galleries.go
 ```
 
+
+
 ```go
 // POST /galleries/:id/images
 func (g *Galleries) ImageUpload(w http.ResponseWriter, r *http.Request) {
@@ -13715,6 +13029,7 @@ ctype="multipart/form-data" class="form-horizontal">
 ```
 
 注意：此代码段仅用于说明；你已经编写了它。
+
 Go 的 `net/http` 包为我们提供了 `ParseMultipartForm` 方法，用于解析编码为 `multipart/form-data` 的表单。
 
 注意：务必花时间阅读 `ParseMultipartForm` 方法的文档。阅读代码中将使用的方法的文档是一个好习惯，这样你可以完全理解它们。
@@ -13731,7 +13046,7 @@ const (
 
 > ³https://golang.org/pkg/net/http#Request.ParseMultipartForm
 
-## 框 15.1 什么是位移？
+### 框 15.1 什么是位移？
 
 位移是一种操作，你取一个二进制数将其位向左或右右。这通常用于对2的幂进行快速乘法或除法。
 
@@ -13755,12 +13070,9 @@ err = r.ParseMultipartForm(maxMultipartMem)
 if err != nil {
 ```
 
-
-
-
 对文件执行任何操作的权限，同时赋予他人读取和执行权限。
 
-## Box 15.2. 文件权限
+### Box 15.2. 文件权限
 
 文件权限在 Linux 环境中更为常见，但无论什么操作系统，`MkdirAll` 函数都需要权限。即使你不使用 Linux，也可能需要意识到它们，因为你可能会在某个时刻将其部署到 Linux 服务器上。
 
@@ -13820,7 +13132,7 @@ r.MultipartForm // a *multipart.Form
 `multipart.Form` 定义如下：
 
 > ⁶https://golang.org/pkg/net/http/#Request
-⁷https://golang.org/pkg/mime/multipart/#Form
+> ⁷https://golang.org/pkg/mime/multipart/#Form
 
 ```go
 type Form struct {
@@ -13846,8 +13158,8 @@ files := r.MultipartForm.File["images"]
 我们将遍历每个 `FileHeader` 值，并使用 `open()` 方法打开与该 `FileHeader` 关联的文件。这将返回返回一个 `File`10 和/或一个错误。如果发生错误，我们需要关闭文件以防止内存泄漏，因此我们可以 `defer` 该调用以确保其发生。如果发生错误，我们将重新渲染编辑页面。
 
 > ^8https://golang.org/pkg/mime/multipart#FileHeader
-9https://golang.org/pkg/mime/multipart#FileHeader.Open
-10https://golang.org/pkg/mime/multipart#File
+> 9https://golang.org/pkg/mime/multipart#FileHeader.Open
+> 10https://golang.org/pkg/mime/multipart#File
 
 ## 15.2. 处理图片上传
 
@@ -13953,7 +13265,7 @@ func (g *Galleries) ImageUpload(w http.ResponseWriter, r *http.Request) {
 
 图 15.2：一张上传的图片
 
-## Box 15.3. 如果感到困惑
+### Box 15.3. 如果感到困惑
 
 在继续之前，值得注意的是这一部分涵盖了许多对你来说可能陌生的代码，如果你是 Go 的新手尤其如此。遗憾的是，我无法对这些每一个项进行非常详细的介绍，因为其中许多项都值得拥有它们自己的微型书籍，但我能告诉你的是，这一切通过练习会变得越来越简单。
 
@@ -13961,7 +13273,7 @@ func (g *Galleries) ImageUpload(w http.ResponseWriter, r *http.Request) {
 
 之后，尝试在网上搜索相关资源。如果你能找到正确的帖子，Stack overflow 和类似的网站通常会有关于某个函数如何工作的非常棒的解释。还有许多其他很棒的网站，如 Go by Example，它们尝试展示如何使用 Go 完成特定任务，在其中许多示例中，你将看到像 `io.Copy` 这样的函数被使用。
 
-## Box 15.4. 如果你在使用 git
+### Box 15.4. 如果你在使用 git
 
 如果你在使用 git，你可能不想提交我们创建的图片，因此建议将 images 目录添加到你的 .gitignore 文件中。这将告诉 git 不要将该目录中的任何文件添加到你的仓库中。
 
@@ -13969,14 +13281,13 @@ func (g *Galleries) ImageUpload(w http.ResponseWriter, r *http.Request) {
 images/**
 ```
 
-
-
-
 ## 15.3 创建图片服务
 
 ### 源代码
 
 下面的链接包含了完整的源代码以及本节中所有更改代码的差异（diff）。
+
+
 
 已完成 - [book.usegolang.com/15.2](https://book.usegolang.com/15.2)
 
@@ -13986,7 +13297,7 @@ images/**
 
 虽然我们的代码目前可以运行，但我们的 `ImageUpload` 方法做了很多工作。在我们学习如何处理图片上传时，这样做还好，但现在我们已经有了可以运行的代码，我们将花时间进行一些重构并引入 `ImageService`。
 
-我们的图片服务将从单一方法 - Create 开始，但与其他许多模型不同，Create 方法不会接受 `Image` 结构体类型作为唯一参数，而是将接受创建图片所需的数据。
+我们的图片服务将从单一方法 - `Create` 开始，但与其他许多模型不同，`Create` 方法不会接受 `Image` 结构体类型作为唯一参数，而是将接受创建图片所需的数据。
 
 这些数据是什么呢？首先，我们需要知道图库 ID，以便知道在哪个目录下创建图片。我们还需要图片的文件名。但是文件数据呢？我们该如何获取它呢？
 
@@ -14034,7 +13345,7 @@ type ImageService interface {
 
 > ¹⁴[https://golang.org/pkg/io/#Reader](https://golang.org/pkg/io/#Reader)
 
-## 15.3 创建图片服务
+### 实现 ImageService
 
 现在我们已经知道了 `ImageService` 接口将长什么样，让我们开始实现它。
 
@@ -14123,3263 +13434,7 @@ type Galleries struct {
 }
 ```
 
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
+### 字段说明
 
 | 字段 | 类型 |
 | :--- | :--- |
@@ -17389,268 +13444,146 @@ type Galleries struct {
 | IndexView | *views.View |
 | gs | models.GalleryService |
 | is | models.ImageService |
-
-## 15.3. 创建图片服务
 
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
 
-## 15.3. 创建图片服务
 
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
+| `IndexView` | `*views.View` |
+| `gs` | `models.GalleryService` |
+| `is` | `models.ImageService` |
 
 ## 15.3. 创建图片服务
 
 | 字段 | 类型 |
 | :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
+| `New` | `*views.View` |
+| `ShowView` | `*views.View` |
+| `EditView` | `*views.View` |
+| `IndexView` | `*views.View` |
+| `gs` | `models.GalleryService` |
+| `is` | `models.ImageService` |
 
-## 15.3. 创建图片服务
 
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
 
 ## 15.3. 创建图片服务
 
 | 字段 | 类型 |
 | :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
+| `New` | `views.View` |
+| `ShowView` | `views.View` |
+| `EditView` | `views.View` |
+| `IndexView` | `views.View` |
+| `gs` | `models.GalleryService` |
+| `is` | `models.ImageService` |
 
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
 
-## 15.3. 创建图片服务
 
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
+| `ShowView` | `views.View` |
+| `EditView` | `views.View` |
+| `IndexView` | `views.View` |
+| `gs` | `models.GalleryService` |
+| `is` | `models.ImageService` |
 
 ## 15.3. 创建图片服务
 
 | 字段 | 类型 |
 | :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
+| `New` | `views.View` |
+| `ShowView` | `views.View` |
+| `EditView` | `views.View` |
+| `IndexView` | `views.View` |
+| `gs` | `models.GalleryService` |
+| `is` | `models.ImageService` |
 
-## 15.3. 创建图片服务
 
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
 
 ## 15.3. 创建图片服务
 
 | 字段 | 类型 |
 | :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
+| `New` | `views.View` |
+| `ShowView` | `views.View` |
+| `EditView` | `views.View` |
+| `IndexView` | `views.View` |
+| `gs` | `models.GalleryService` |
+| `is` | `models.ImageService` |
 
-## 15.3. 创建图片服务
 
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
 
 ## 15.3. 创建图片服务
 
 | 字段 | 类型 |
 | :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
+| `New` | `*views.View` |
+| `ShowView` | `*views.View` |
+| `EditView` | `*views.View` |
+| `IndexView` | `*views.View` |
+| `gs` | `models.GalleryService` |
+| `is` | `models.ImageService` |
 
-## 15.3. 创建图片服务
 
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
 
 ## 15.3. 创建图片服务
 
 | 字段 | 类型 |
 | :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
+| `New` | `*views.View` |
+| `ShowView` | `*views.View` |
+| `EditView` | `*views.View` |
+| `IndexView` | `*views.View` |
+| `gs` | `models.GalleryService` |
+| `is` | `models.ImageService` |
 
-## 15.3. 创建图片服务
 
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
 
-## 15.3. 创建图片服务
+`gs` | `models.GalleryService`
 
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
+`is` | `models.ImageService`
 
 ## 15.3. 创建图片服务
 
 | 字段 | 类型 |
 | :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
+| `New` | `*views.View` |
+| `ShowView` | `*views.View` |
+| `EditView` | `*views.View` |
+| `IndexView` | `*views.View` |
+| `gs` | `models.GalleryService` |
+| `is` | `models.ImageService` |
 
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
 
-## 15.3. 创建图片服务
 
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
+| `IndexView` | `*views.View` |
+| `gs` | `models.GalleryService` |
+| `is` | `models.ImageService` |
 
 ## 15.3. 创建图片服务
 
 | 字段 | 类型 |
 | :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
+| `New` | `*views.View` |
+| `ShowView` | `*views.View` |
+| `EditView` | `*views.View` |
+| `IndexView` | `*views.View` |
+| `gs` | `models.GalleryService` |
+| `is` | `models.ImageService` |
 
-## 15.3. 创建图片服务
-
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
 
-## 15.3. 创建图片服务
 
-| 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
+| EditView | `*views.View` |
+| IndexView | `*views.View` |
+| gs | `models.GalleryService` |
+| is | `models.ImageService` |
 
 ## 15.3. 创建图片服务
 
 | 字段 | 类型 |
-| :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
-| EditView | *views.View |
-| IndexView | *views.View |
-| gs | models.GalleryService |
-| is | models.ImageService |
-
-## 15.3. 创建图片服务
-
-
-
-   | 类型 |
 | :--- | :--- |
-| New | *views.View |
-| ShowView | *views.View |
+| New | `*views.View` |
+| ShowView | `*views.View` |
+| EditView | `*views.View` |
+| IndexView | `*views.View` |
+| gs | `models.GalleryService` |
+| is | `models.ImageService` |
 
 ```go
 func (is *imageService) ByGallery(galleryID uint) ([]string {
@@ -17660,11 +13593,14 @@ func (is *imageService) ByGallery(galleryID uint) ([]string {
 
 # 15.4. 通过画廊 ID 查询图片
 
+```go
 // 当我们知道它已经创建时，将用到这个
 func (is *imageService) imagePath(galleryID uint) string {
     return filepath.Join("images", "galleries", fmt.Sprintf("%v", galleryID))
 }
+```
 
+```go
 // 使用我们创建的 imagePath 方法
 func (is *imageService) mkImagePath(galleryID uint) (string, error) {
     galleryPath := is.imagePath(galleryID)
@@ -17699,7 +13635,7 @@ type Gallery struct {
 
 我们将更新画廊控制器，以便在检索特定画廊时填充 `Images` 字段。
 
-```go
+```bash
 $ atom controllers/galleries.go
 ```
 
@@ -17708,7 +13644,6 @@ $ atom controllers/galleries.go
 ```go
 func (g *Galleries) galleryById(w http.ResponseWriter, r *http.Request) (*models.Gallery, error) {
   // ... 大部分内容保持不变
-
   // 将此添加到文件末尾，在现有的 return 之前
   images, Images := g.is.GalleryByID(gallery.ID)
   gallery.Images = images
@@ -17718,7 +13653,7 @@ func (g *Galleries) galleryById(w http.ResponseWriter, r *http.Request) (*models
 
 现在我们有了图片（即使它们只是图片路径），让我们在编辑和显示页面中展示它们，以验证所有功能都正常工作。
 
-```html
+```bash
 $ atom views/galleries/edit.shtml
 ```
 
@@ -17740,7 +13675,7 @@ $ atom views/galleries/edit.shtml
 
 接下来是显示页面（show page）。
 
-```html
+```bash
 $ atom views/galleries/show.gohtml
 ```
 
@@ -17758,7 +13693,7 @@ $ atom views/galleries/show.gohtml
 <li>
 {{.}}
 </li>
-{{/end}}
+{{end}}
 </ul>
 </div>
 </div>
@@ -17772,7 +13707,6 @@ $ atom views/galleries/show.gohtml
 下面的链接包含了完整的源代码以及本节中所有更改代码的差异（diff）。
 
 完成版 - book.usegolang.com/15.4 
-
 更改版 - book.usegolang.com/15.4-diff
 
 ## 15.5 在 Go 中提供静态文件
@@ -17799,10 +13733,6 @@ imageHandler := http.FileServer(http.Dir("./images/"))
 ⁶ `FileSystem`
 ⁷ `http.Dir`
 
-
-
-
-
 ## 15.6. 在列中渲染图像
 
 ```html
@@ -17813,7 +13743,7 @@ imageHandler := http.FileServer(http.Dir("./images/"))
 <div class="col-md-4">
   <!-- 填充第三列的 HTML -->
 </div>
-</div>>
+</div>
 ```
 
 当我们向列中填充图像时，我们希望按照不同的顺序进行填充。我们希望从第一列开始添加一张图片，然后移动到第二列添加另一张，接着是第三列，最后回到第一列。例如：
@@ -17918,97 +13848,11 @@ func (g *Gallery) ImagesSplit(n int) [][]string {
 
 为了编写这样拆分图像的代码，我们将为 Gallery 类型添加一个方法来实现这一点，这样我们就可以用它来轻松地渲染图像。技术上讲，对于大型应用程序，将内容拆分并使用模板函数或装饰器层是有意义的，但根据我的经验，这种需求在项目运行一段时间后才才会出现。我不建议在早期就这样做。
 
-（注：此处提供的原文在后续部分似乎存在重复或逻辑错乱，已根据上下文逻辑进行了对齐翻译）
 
----
 
-*由于由于你提供的待翻译文本在后半部分出现了大量的代码重复和逻辑错乱，我已根据代码逻辑重新梳理了完整翻译：*
+注意我们的余数是如何从 0 变为 1、2，然后回到 0 的，正就像我们希望将图像放置在第 1 列、2 列、第 3 列一样。我们可以利用这一点将图像放置在二维切片中正确的切片里。
 
-[content]
-## 15.6. 在列中渲染图像
-
-```html
-</div>
-<div class="col-md-4">
-  <!-- 填充第二列的 HTML -->
-</div
-<div class="col-md-4">
-  <!-- 填充第三列的 HTML -->
-</div>
-</div>
-```
-
-当我们向列中填充图像时，我们希望按照不同的顺序进行填充。我们希望从第一列开始添加一张图片，然后移动到第二列添加另一张，接着是第三列，最后回到第一列。例如：
-
-| 列 1 | 列 2 | 列 3 |
-| --- | --- | --- |
-| 图片 1 | 图片 2 | 图片 3 |
-| 图片 4 | 图片 5 | 图片 6 |
-| 图片 7 | 图片 8 | 图片 9 |
-| 图片 10 | 图片 11 | 图片 12 |
-
-在代码中实现这一点有一点棘手，因为它与你可能填充数据的常规方式不匹配。解决此问题的方法之一是在每行图像之间创建一个新的 Bootstrap 行（row）。
-
-```html
-<div class="row">
-  <!-- 列中的图像 1, 2, 和 3 -->
-  <div class="row">
-    <!-- 列中的图像 4, 5, 和 6 -->
-  </div>
-  <!-- ... -->
-</div>
-```
-
-这种方法的缺点是，当图像的大小和宽高比不相同时，最终显示效果可能很糟糕。你很容易在同一列的两个图像之间产生奇异的间距。
-
-## 第 15 章向画册添加图像
-
-为了防止这种情况，我们将为 Gallery 模型添加一个函数，允许我们把图像拆分为二维切片（dimensional slices）。第一个切片代表我们正在填充的列，而第二个维度代表该列中的图像。
-
-通过示例来理解会更容易，所以让我们假设我们的画册中有从 1 到 12 的图像，并希望像上面的示例那样将它们分成三列。我们希望从函数中拆分出如下的二维切片。
-
-```go
-twoDimensionSlice := [][]string{
-    "Image 1", "Image 4", "Image 7", "Image 10",
-    "Image 2", "Image 5", "Image 8", "Image 11",
-    "Image 3", "Image 6", "Image 9", "Image 12",
-}
-```
-
-我们的结果切片有两个维度，因此使用双括号 ([][])，二维切片内部的每个切片都包含特定列的所有图像。例如，可以通过调用以下代码访问第一列中的第二张图像：
-
-```go
-// 0 是我们最终输出中的列
-// 1 是该列中的图像
-// 两者都从 0 开始，所以这是第一列的第二张图像
-twoDimensionalSlice[0][1] // 值为 "Image 4"
-```
-
-如果我们只引用一个列，我们将得到一个整个切片的结果。
-
-```go
-twoDimensionalSlice[0]
-// 它的值为：[]string("Image 1", "Image 4", "Image 7", "Image 10")
-```
-
-为了编写能够这样拆分图像的代码，我们将使用所谓的取模运算符（%），它将带我们得到执行整数除法后的余数。例如，如果取 5/3，结果是 1/3，或者换句话说，它是商 1 余 2。
-
-这非常有用，因为我们可以将其与切片中当前元素的索引一起使用，确定它用于哪一列。
-
-```go
-// % 是 Go 中的取模运算符
-// 例：
-0 % 3 = 0
-1 % 3 = 1
-2 % 3 = 2
-3 % 3 = 0
-4 % 3 = 1
-5 % 3 = 2
-```
-
-注意我们的余数是如何从 0 变为 1、2，然后回到 0 的，正就像我们希望将图像放置在第 1 列、2 列、第3 列一样。我们可以利用这一点将图像放置在二维切片中正确的切片里。
-
-打开你的画册模型。我们将为 Gallery 类型添加一个方法来实现这一点，这样我们就可以轻松地渲染图像。技术上讲，对于大型应用程序，将内容拆分并使用模板函数或装饰器层是有意义的，但根据我的经验，这种需求在项目运行一段时间后才才会出现。我不建议在早期就这样做。
+打开你的画册模型。我们将为 `Gallery` 类型添加一个方法来实现这一点，这样我们就可以轻松地渲染图像。技术上讲，对于大型应用程序，将内容拆分并使用模板函数或装饰器层是有意义的，但根据我的经验，这种需求在项目运行一段时间后才才会出现。我不建议在早期就这样做。
 
 `$ models/galleries.go`
 
@@ -18030,12 +13874,9 @@ func (g *Gallery) ImagesSplit(n int) [][]string {
 }
 ```
 
-为了编写这样拆分图像的代码，我们将为 Gallery 类型添加一个方法来实现这一点，这样我们就可以用它来轻松地渲染图像。
+为了编写这样拆分图像的代码，我们将为 `Gallery` 类型添加一个方法来实现这一点，这样我们就可以用它来轻松地渲染图像。
 
 （注：原文后半部分存在大量重复和逻辑错乱，此处已根据代码逻辑进行了对齐翻译）
-
-
-
 
 ## 15.7. 让我们删除图片
 
@@ -18057,9 +13898,9 @@ func (i *Image) RelativePath() string {
 }
 ```
 
-注意：ToSlash 可能仅在 Windows 系统上需要，因为它们使用反斜杠 (\) 来分隔目录和文件。ToSlash 函数的工作原理是在使用反斜杠的操作系统上将所有正斜杠替换为反斜杠。
+注意：`ToSlash` 可能仅在 Windows 系统上需要，因为它们使用反斜杠 `\` 来分隔目录和文件。`ToSlash` 函数的工作原理是在使用反斜杠的操作系统上将所有正斜杠替换为反斜杠。
 
-接下来，我们将更新现有的 ByGallery 方法，使其返回 Images 切片而不是字符串。
+接下来，我们将更新现有的 `ByGallery` 方法，使其返回 `Images` 切片而不是字符串。
 
 ```go
 type ImageService interface {
@@ -18068,7 +13909,7 @@ type ImageService interface {
 }
 ```
 
-实现上的更改稍微复杂一些。我们不再是遍历文件并添加斜杠 (/) 前缀，现在我们现在将从字符串中删除整个路径并只保留文件名。我们将使用 `path/filepath` 包提供的 Base 函数¹⁹ 来实现这一点。这将返回路径中的最后一个元素，在这种情况下，它就是我们的文件名。
+实现上的更改稍微复杂一些。我们不再是遍历文件并添加斜杠 `/` 前缀，现在我们现在将从字符串中删除整个路径并只保留文件名。我们将使用 `path/filepath` 包提供的 `Base` 函数¹⁹ 来实现这一点。这将返回路径中的最后一个元素，在这种情况下，它就是我们的文件名。
 
 > ¹⁹https://golang.org/pkg/path/filepath#Base
 
@@ -18078,7 +13919,7 @@ type ImageService interface {
 func (is *imageService) ByGalleryID(galleryID uint) [][]Image
 ```
 
-接下来，我们需要更新 Gallery 类型的 Images 字段，以及 ImagesSplit 方法。
+接下来，我们需要更新 `Gallery` 类型的 `Images` 字段，以及 `ImagesSplit` 方法。
 
 ```go
 type Gallery struct {
@@ -18115,7 +13956,7 @@ func (g *Gallery) ImagesSplitN(n int) [][]Image {
 $ atom views/galleries/show.gohtml
 ```
 
-找到包含图片的 div，并更新它以反映下面的代码。我们现在需要调用 Image 的 Path 方法来获取路径，而不能像以前那样直接使用点 (.) 运算符。
+找到包含图片的 div，并更新它以反映下面的代码。我们现在需要调用 `Image` 的 `Path` 方法来获取路径，而不能像以前那样直接使用点 `.` 运算符。
 
 ```html
 <div class="row">
@@ -18130,16 +13971,13 @@ $ atom views/galleries/show.gohtml
 {{end}}
 ```
 
-
-
-
 # 1. 特殊字符
 
 文件名中包含特殊字符的图片可能无法正常渲染。例如，文件名“/asjfalf/_ @1!&&.jpg”目前无法在我们应用程序中使用。
 
 # 2. 新上传的图片不会立即渲染。
 
-每当我们上传图片时，ImageUpload 处理器会渲染编辑画廊页面，而不会刷新画廊的图片列表。结果是渲染后的编辑画廊页面不会显示新上传的图片。
+每当我们上传图片时，`ImageUpload` 处理器会渲染编辑画廊页面，而不会刷新画廊的图片列表。结果是渲染后的编辑画廊页面不会显示新上传的图片。
 
 这里更大的问题是，现在在处理器成功后，我们有两个选择：
 
@@ -18162,19 +14000,19 @@ $ atom views/galleries/show.gohtml
 
 # 第 16 章 部署到生产环境
 
-注意：如果你从未使用过 Digital Ocean，请使用此链接 - do.co/webdevgo 来获取免费的 $10 额度，这足够免费运行我们使用的服务器一两个月。
+注意：如果你从未使用过 Digital Ocean，请使用此链接 - `do.co/webdevgo` 来获取免费的 $10 额度，这足够免费运行我们使用的服务器一两个月。
 
 ## 16.1 错误处理
 
 在部署到生产环境之前，最好花一点时间确保你的应用程序的错误处理处于良好状态。在开发过程中，如果我们遇到错误，通常可以多次复现它，并缓慢地添加新的日志语句来查看发生了什么，但在生产环境中，可能只有一个特定用户会看到错误消息，因此提前做好日志记录是明智的。这样你可以查看日志并找出哪里出了问题。
 
-花一点时间查看我们的应用程序，找到那些可以更好处理的错误实例。这可能意味着任何事情，从移除 panic 改为返回错误，添加一些日志来打印错误内容以帮助我们调试，甚至在每次发生错误时将用户重定向到更有用的页面。如果你能想出任何想要添加日志或更改错误处理方式的原因，请尝试一下。
+花一点时间查看我们的应用程序，找到那些可以更好处理的错误实例。这可能意味着任何事情，从移除 `panic` 改为返回错误，添加一些日志来打印错误内容以帮助我们调试，甚至在每次发生错误时将用户重定向到更有用的页面。如果你能想出任何想要添加日志或更改错误处理方式的原因，请尝试一下。
 
 我不会演示如何进行这些更改，因为这些更改不会破坏你的应用程序，我相信通过仔细检查你自己的代码，你将从这一部分收获更多。这里的主要目标是理解你的代码在做什么以及它是如何处理每种情况的。
 
 我将做的是提供我更新后的源代码，并附上详细的注释，以便你参考我选择了哪些更改。你的代码不需要与之完美匹配，但查看这些更改并考虑为什么进行它们是值得的。
 
-注意：记住，你的 View 类型上的 `SetAlert` 方法也会记录任何非公开错误，因此我们不需要手动记录那些错误。
+注意：记住，你的 `View` 类型上的 `SetAlert` 方法也会记录任何非公开错误，因此我们不需要手动记录那些错误。
 
 # 16.2. 提供静态资源
 
@@ -18182,8 +14020,8 @@ $ atom views/galleries/show.gohtml
 
 下面的链接包含了完整的源代码以及本节中所有更改代码的差异对比（diff）。
 
-- 完成版 - book.usegolang.com/16.1
-- 更改 - book.usegolang.com/16.1-diff
+- 完成版 - `book.usegolang.com/16.1`
+- 更改 - `book.usegolang.com/16.1-diff`
 
 ## 16.2 提供静态资源
 
@@ -18239,6 +14077,7 @@ r.PathPrefix("/assets").Handler(assetHandler)
 
 ```
 # 将 styles.css 存储在这里：
+
 /public/styles.css
 ```
 
@@ -18276,8 +14115,8 @@ localhost:3000/assets/styles.css
 
 下面的链接包含了完整的源代码以及本节中所有更改代码的差异对比（diff）。
 
-- 完成版 - book.usegolang.com/16.2
-- 更改 - book.usegolang.com/16.2-diff
+- 完成版 - `book.usegolang.com/16.2`
+- 更改 - `book.usegolang.com/16.2-diff`
 
 ## 16.3 CSRF 保护
 
@@ -18288,10 +14127,6 @@ localhost:3000/assets/styles.css
 当用户提交表单时，他们提交的表单和 Cookie 都包含此 CSRF 令牌。如果缺少其中任何，任何表单提交都将被拒绝。这将防止其他网站创建伪造表单，因为它们不知道用户 Cookie 中的 CSRF 令牌是什么，无法进行伪造。
 
 我们将使用 `gorilla/csrf` 包来实现它。技术上我们
-
-
-
-
 
 ## 16.3. CSRF 保护
 
@@ -18318,7 +14153,7 @@ http.ListenAndServe(":8000", CSRF(r))
 
 我们将使用这个示例作为起点，并将 CSRF 中间件添加到我们自己的应用程序中。
 
-```go
+```
 $ atom main.go
 ```
 
@@ -18352,7 +14187,9 @@ if err != nil {
 csrMw := csrf.Protect(b, csrf.Secure(isProd))
 ```
 
-`csrf` 包还为我们提供了一个为 HTML 表单生成令牌的辅助函数。该包的文档随后解释了推荐的向 HTML 表单提供此类令牌的方法：将其作为数据字段传递到模板中。例如，我们可能会将此字段添加到 `views.Data` 类型中。
+
+
+`csrf` 包还为我们提供了一个为 HTML 表单生成令牌的辅助函数。该包的文档随后解释了推荐的向 HTML 表 form 提供此类令牌的方法：将其作为数据字段传递到模板中。例如，我们可能会将此字段添加到 `views.Data` 类型中。
 
 我们将采取一种稍微不同的方法，而是将其添加为模板函数。这种方法相比推荐方法的主要优势是，我们可以在任何模板中访问它，即使没有向模板传递任何数据。这使得生成表单变得更容易，而不必担心 CSRF 令牌是否作为数据提供给表单。
 
@@ -18378,21 +14215,18 @@ with the CSRF token as its value.
 <!-- remains unchanged --
 </form>
 {{end}}
-
 {{define deleteGalleryForm}}
 <form action="galleries/{{.ID}}/delete" method="POST" class="form-horizontal">
 {{csrfField}}
 <!-- remains unchanged --
 </form>
 {{end}}
-
 {{define uploadImageForm}}
 <form action="galleries/{{.ID}}/images" method="POST" enctype="multipart/form-data" class="form-horizontal">
 {{csrfField}}
 <!-- remains unchanged --
 </form>
 {{end}}
-
 {{define deleteImageForm}}
 <form action="galleries/{{.GalleryID}}/images/{{.Filename}}/delete" method="POST">
 {{csrfField}}
@@ -18494,15 +14328,11 @@ func NewView(layout string, files ...string) +View {
     if err != nil {
 ```
 
-
-
-
 ## 16.3. CSRF保护
 
 ```go
 panic(err)
 }
-
 return &View{
     Template: t,
     Layout: layout,
@@ -18514,10 +14344,8 @@ return &View{
 ```go
 func (v *View) Render(w http.ResponseWriter, r *http.Request, data interface{}) {
     // ... 用于设置 header 和 Data 的代码保持不变
-
     vd.User = context.User(r.Context())
     var buf bytes.Buffer
-
     // 我们需要使用当前的 http 请求创建 csrf。
     csrffield := csrf.IntegerField(r)
     tpl := v.Template.Funcs(template.FuncMap{
@@ -18537,7 +14365,6 @@ func (v *View) Render(w http.ResponseWriter, r *http.Request, data interface{}) 
             http.StatusInternalServerError)
         return
     }
-
     io.Copy(w, &buf)
 }
 ```
@@ -18559,7 +14386,6 @@ func parseForm(r *http.Request, dst interface{}) error {
   if err := r.ParseForm(); err != nil {
     return err
   }
-
   dec := schema.NewDecoder()
   // 调用 IgnoreUnknownKeys 函数告诉 schema 的解码器
   // 忽略 CSRF 令牌键
@@ -18599,7 +14425,6 @@ import (
 	// 添加此导入
 	"strings"
 )
-
 func (u *User) ApplyFn(next http.HandlerFunc) http.HandlerFunc {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		path := r.URL.Path
@@ -18667,7 +14492,6 @@ import (
 	// 添加此导入
 	"net/url"
 )
-
 func (i *Image) Path() string {
 	temp := url.URL{
 		Path: "/" + i.RelativePath(),
@@ -18686,10 +14510,6 @@ func (i *Image) Path() string {
 $ atom views/view.go
 ```
 
-
-
-
-
 ## 16.5. 修复 Bug
 
 幸运的是，`net/url` 包为我们提供了一个 `PathEscape` 函数，它的功能正是如此——对字符串进行适当的路径转义。
@@ -18701,7 +14521,6 @@ import (
     // 添加这个包
     "net/url"
 )
-
 func NewView(layout string, files ...string) *View {
     addTemplatePath(files)
     addTemplateExt(files)
@@ -18728,7 +14547,11 @@ views/galleries/edit.html
 
 ```html
 {{define "deleteImage"}}
+
+
+
 <form action="/galleries/{{.GalleryID}}/images/{{pathEscape .Filename}}/delete" method="POST">
+
 ```
 
 我们在这里添加了 `pathEscape` 部分，并将文件名作为唯一参数传递。这将调用 `pathEscape` 函数，它会对文件名进行转义并返回结果，然后将其插入到我们的路径中。在进行这些更改后，我们的代码将能够支持包含特殊字符的文件名并解决这个 Bug！
@@ -18746,23 +14569,37 @@ views/galleries/edit.html
 注意：如果你正在跟着视频教程操作，你可能已经在这么做了。打开你的画廊控制器文件。
 
 ```go
+
 controllers/galleries.go
+
 ```
 
 找到 `ImageUpload` 方法并更新末尾的代码，在成功上传后将用户重定向到编辑页面。
 
 ```go
+
 func (g *Galleries) ImageUpload(w http.ResponseWriter, r *http.Request) {
+
     // ... 此部分保持不变
+
     // 删除创建成功提示并
+
     // 渲染 EditView 的代码，替换为以下内容。
+
     url, err := g.r.Get(EditGallery).URL("id", fmt.Sprintf("%v", gallery.ID))
+
     if err != nil {
+
         http.Redirect(w, r, "/galleries", http.StatusFound)
+
         return
+
     }
+
     http.Redirect(w, r, url, http.StatusFound)
+
 }
+
 ```
 
 此更改的另一个好处是，每当用户提交图片上传时，他们的 URL 将变回编辑画廊页面，方便复制/粘贴。
@@ -18790,38 +14627,67 @@ func (g *Galleries) ImageUpload(w http.ResponseWriter, r *http.Request) {
 ## 16.6. 配置我们的应用程序
 
 ```go
+
 // models/users.go
+
 const {
+
   userPepper = "secret-random-string"
+
   hmacSecret = "hmac-key"
+
 }
+
 ```
 
 ```go
+
 // models/services.go
+
 // "postgres" 方言应该是配置的。我们可能想
+
 // 通过配置构建 connectionInfo。
+
 db, err := gorm.Open("postgres", connectionInfo)
+
 // LogMode 可以由我们的环境决定。
+
 // 例 prod := false, dev = true
+
 db.LogMode(true)
+
 ```
 
 ```go
+
 // main.go
+
 const {
+
   host = "localhost"
+
   port = 5432
+
   user = "postgres"
+
   password = "your-password"
+
   dbname = "lenslocked_dev"
+
 }
+
 // 我们是否在生产环境中运行应该
+
 // 通过某种配置值来决定。
+
 isProd := false
+
 // 我们这样做，但你也可以通过配置
+
 // 定义 CSRF 字节。
+
 b, err := rand.ReadBytes(32)
+
 ```
 
 注意：不要编写上面的代码。这些片段是从我们的代码中提取的，用于演示为什么要使用配置变量。虽然初看起来看起来很多，但将这些内容从应用程序中提取并替换为配置变量实际上并不难。让我们从 main.go 中定义的 PostgreSQL 信息开始。我们将创建配置文件。
@@ -18829,39 +14695,54 @@ b, err := rand.ReadBytes(32)
 ## 16. 部署到生产环境
 
 ```go
+
 config.go
+
 ```
 
 ```go
+
 package main
 
 import "fmt"
 
 type PostgresConfig struct {
+
     Host     string `json:"host"`
+
     Port     int    `json:"port"`
+
     User     string `json:"user"`
+
     Password string `json:"password"`
+
     Name     string `json:"name"`
+
 }
 
 func (c PostgresConfig) Dialect() string {
+
     return "postgres"
+
 }
 
 func (c PostgresConfig) ConnectionInfo() string {
+
     // 我们将根据是否存在密码提供
+
     // 两个连接信息字符串
+
     if c.Password == ""
+
         return fmt.Sprintf("host=%s port=%d user=%s dbname=%s&sslmode=disable", c.Host, c.Port, c.Name)
+
     }
+
     return fmt.Sprintf("host=%s port=%d user=%s password=%s&dbname=%s sslmode=disable", c.Host, c.Port, c.Password, c.Name)
+
 }
+
 ```
-
-
-
-
 
 ## 16.6. 配置我们的应用程序
 
@@ -18869,13 +14750,21 @@ func (c PostgresConfig) ConnectionInfo() string {
 
 ```
 func DefaultPostgresConfig() PostgresConfig {
+
   return PostgresConfig(
+
     Host: "localhost",
+
     Port: 5432,
+
     User: "jon",
+
     Password: "your-password",
+
     Name: "lenslocked_dev",
+
   )
+
 }
 ```
 
@@ -18883,18 +14772,27 @@ func DefaultPostgresConfig() PostgresConfig {
 
 ```
 type Config struct {
+
   Port int
+
   Env string
+
 }
 
 func (c Config) IsProd() bool {
+
   return c.Env == "prod"
+
 }
 
 func DefaultConfig() Config {
+
   return Config(
+
     Port: 3000,
+
     Env: "dev",
+
 ```
 
 注意：我们将在下一节中为 HMAC 密钥和密码盐添加值。
@@ -18906,12 +14804,19 @@ func DefaultConfig() Config {
 ```
 $ atom models/services.go
 import (
+
 "github.com/jinzhu/gorm"
+
 "github.com/jinzhu/gorm/dialects/postgres"
+
 )
+
 func NewServices(dialect, connectionInfo string) (*Services, error) {
+
 db, err := gorm.Open(dialect, connectionInfo)
+
 // .. 其他地方没有变化
+
 }
 ```
 
@@ -18920,26 +14825,32 @@ db, err := gorm.Open(dialect, connectionInfo)
 ```
 $ atom main.go
 func main() {
-cfg := DefaultConfig()
-dBCfg := DefaultPostgresConfig()
-services, err := NewServices(dbCfg.Dialect,
-dBCfg.ConnectionInfo())
-// .. 此处代码保持不变
 
+cfg := DefaultConfig()
+
+dBCfg := DefaultPostgresConfig()
+
+services, err := NewServices(dbCfg.Dialect,
+
+dBCfg.ConnectionInfo())
+
+// .. 此处代码保持不变
 // .. 我们的路由保持不变
 // 删除 IsProd 变量
 nisprod = false
 ber, err := rand.Bytes(32)
 if err != nil {
+
 panic(err)
+
 }
 // 改用配置的 IsProd 方法
 csrfMW = csrf.Protect(b, csrf.Secure(cfg.IsProd))
-
 // 我们的端口没有通过配置提供，因此我们需要
 // 更新 main 函数的最后部分。
 fmt.Printf("Starting the server on %d...\n", cfg.Port)
 http.ListenAndServe(fmt.Sprintf(":%d", cfg.Port),
+
 csrfMW(userMW.Apply(r)))
 }
 ```
@@ -18971,7 +14882,9 @@ $ go run *.go
 ```
 // 这个列表只会增长
 func NewServices(dialect, connectionInfo string, pepper, hmacKey string,
+
 logMode bool) (*Services, error) {
+
 ```
 
 ```
@@ -18984,9 +14897,13 @@ logMode bool) (*Services, error) {
 
 ```
 type ServicesConfig struct {
+
   Dialect string
+
   ConnectionInfo string
+
   Pepper string
+
 }
 
 func NewServices(cfg ServicesConfig) (*Services, error) { ...
@@ -19014,19 +14931,31 @@ $ atom config.go
 
 ```
 type Config struct {
+
   Port int `json:"port"`
+
   Env string `json:"env"`
+
   Pepper string `json:"pepper"`
+
   HMACKey string `json:"hmac_key"`
+
 }
 
 func DefaultConfig() Config {
+
   return Config{
+
     Port: 3000,
+
     Env: "dev",
+
     Pepper: "random-string",
+
     HMACKey: "secret-key",
+
   }
+
 }
 ```
 
@@ -19041,11 +14970,16 @@ func DefaultConfig() Config {
 // 返回一个函数。它返回的函数接受一个 Services 指针
 // 作为参数并返回错误。
 func WithUser(pepper, hmacKey string) func(*Services) error {
+
 	return func(s *Services) error {
+
 		// 我们的 UserService 还没有匹配这个
 		s.User = NewUserService(s.db, pepper, hmacKey)
+
 		return nil
+
 	}
+
 }
 ```
 
@@ -19069,17 +15003,23 @@ type ServicesConfig func(*Services) error
 // 参数，并在内联编辑该对象，如果有错误则返回错误。
 // 一旦我们运行了所有配置，我们将返回 Services 对象。
 func NewServices(cfgs ...ServicesConfig) (*Services, error) {
+
   var s Services
   // 对于每个 ServicesConfig 函数...
   for _, cfg := range cfgs {
+
     // 传递我们的 Services 对象指针并运行函数
     // 捕获任何错误
     if err := cfg(&s); err != nil {
+
       return nil, err
+
     }
+
   }
   // 最后返回结果
   return s, nil
+
 }
 ```
 
@@ -19092,11 +15032,9 @@ func NewServices(cfgs ...ServicesConfig) (*Services, error) {
 那么构建一个用户服务
 ```
 
+
+
 这种逻辑可以通过执行这些这些任务的函数来显式地处理。例如，当我们更新 `NewServices` 函数时
-
-
-
-
 
 ## 第 16 章：部署到生产环境
 
@@ -19117,6 +15055,7 @@ func WithGorm(dialect, connectionInfo string) ServicesConfig {
     return nil
   }
 }
+
 func WithLogMode(mode bool) ServicesConfig {
   return func(s *Services) error {
     s.db.LogMode(mode)
@@ -19231,12 +15170,14 @@ func WithUser(pepper, hmacKey string) ServicesConfig {
     return nil
   }
 }
+
 func WithGallery() ServicesConfig {
   return func(s *Services) error {
     s.Gallery = NewGalleryService(s.db)
     return nil
   }
 }
+
 func WithImage() ServicesConfig {
   return func(s *Services) error {
     s.Image = NewImageService()
@@ -19270,11 +15211,11 @@ func main() {
 
 重启 Web 应用以验证一切正常。创建 galleries 并查看 images。
 
-```
+```bash
 $ go run *.go
 ```
 
- 源码
+源码
 
 下面的链接包含了本节中更改的代码差异。
 
@@ -19287,7 +15228,7 @@ $ go run *.go
 
 我们将通过创建一个 JSON 文件来开始，它与之前定义的 `Config` 和 `PostgresConfig` 结构体相似。
 
-```
+```bash
 $ atom .config
 ```
 
@@ -19306,10 +15247,6 @@ $ atom .config
   }
 }
 ```
-
-
-
-
 
 # 第 16 章 部署到生产环境
 
@@ -19398,7 +15335,6 @@ func main() {
     // LoadConfig 函数中
     cfg := LoadConfig(boolPtr)
     dbCfg := cfg.Database
-
     // ... 其他什么都没有变
 }
 ```
@@ -19409,7 +15345,6 @@ func main() {
 $ go run *.go --help
 Usage of /var/.../exe/config:
 -prod
-
 Provide this flag in production. This ensures that a
   .config file is provided before the application starts.
 ```
@@ -19425,7 +15360,6 @@ $ go build -o app *.go
 $ ./app --help
 Usage of ..app:
 -prod
-
 Provide this flag in production. This ensures that a
   .config file is provided before the application starts.
 ```
@@ -19438,13 +15372,15 @@ $ go run *.go -prod
 panic: open .config: no such file or directory
 ```
 
+
+
 ### 源代码
 
 下面的链接是源代码（注意：未提供链接）。
 
 ## 16.7 设置服务器
 
-我们终于准备好设置了了：
+我们终于准备好设置了：
 
 1. 初始化服务器
 2. 安装 PostgreSQL
@@ -19454,7 +15390,7 @@ panic: open .config: no such file or directory
 
 这些步骤在后续章节中会有详细介绍。
 
-## 16.7 设置服务器
+### 16.7.1 设置服务器
 
 在这一节中我们将讨论如何设置服务器。如果你有一个 Digital Ocean 账户，你需要导航到 droplet 页面。在这里你想要选择以下选项：
 
@@ -19469,23 +15405,19 @@ panic: open .config: no such file or directory
 | How many droplets? | 我们只需要 |
 | Hostname | 任何你想要的。我经常使用类似于计划使用的域名，例如 "www.lenslocked.com"，但任何名称都可以。 |
 
-现在如果你想使用域名，我们需要设置一个 “A” 记录映射-
+现在如果你想使用域名，我们需要设置一个 "A" 记录映射-
 
-> *https://support.dnimple.com/articles/a-record/
+> *https://support.dnimple.com/articles/a-record/*
 
-
-
-
-
-## 16.7. 设置服务器
-
-ping 你的 IP 地址。具体操作会因服务商而异，但几乎所有的服务商都提供了解释如何操作的教程。你通常只需要一个名称（即你使用的子域名，如果有的话）、一个 IP 地址和一个 TTL（生存时间），TTL 决定了 DNS 服务器缓存此记录的时间。我通常建议在配置完成之前使用较短的 TTL，设置好后你可以切换到较长的 TTL。
+`ping` 你的 IP 地址。具体操作会因服务商而异，但几乎所有的服务商都提供了解释如何操作的教程。你通常只需要一个名称（即你使用的子域名，如果有的话）、一个 IP 地址和一个 TTL（生存时间），TTL 决定了 DNS 服务器缓存此记录的时间。我通常建议在配置完成之前使用较短的 TTL，设置好后你可以切换到较长的 TTL。
 
 一旦你为你的域名设置了 A 记录，或者决定不设置，你将想要验证你是否可以 SSH 登录你的服务器。
 
 ```
 $ ssh root@123.123.22.33
+
 # 或者如果你设置了域名：
+
 $ ssh root@subdomain.yourdomain.com
 ```
 
@@ -19505,15 +15437,15 @@ $ ssh root@123.123.22.33
 
 在继续之前，我想指出，虽然开发者可能觉得自己已经了记了安装 Postgres 之类的操作，但事实是，大多数人只是擅长在需要时找到正确的文档和教程。我自己也大概知道设置 Postgres 涉及的步骤，但每次安装 PostgreSQL 时我几乎都会核实一遍。如果你不能背下所有这些步骤，请不要感到气馁。这完全正常！
 
-### 框 16.7. 外部资源
+#### 框 16.7. 外部资源
 
 如果你觉得本指南已经过时，可以随时参考我的个人网站，我在该网站维护了数几文章，详细介绍了如何在不同的操作系统上安装不同版本的 PostgreSQL。
 
 https://www.calhoun.io/using-postgresql-with-golang/
 
-### 安装
+#### 安装
 
-在开始安装任何东西之前，我们想要做的第一件事是更新 apt-get。这将确保我们是从更新后的存储库中安装的。
+在开始安装任何东西之前，我们想要做的第一件事是更新 `apt-get`。这将确保我们是从更新后的存储库中安装的。
 
 ```
 $ sudo apt-get update
@@ -19525,15 +15457,15 @@ $ sudo apt-get update
 $ sudo apt-get install postgresql postgres-contrib
 ```
 
-当系统提示问是否是否继续时，输入 y 并按回车。这将开始安装 postgres 包和 postgrescontrib 包，后者会为 Postgres 添加一些额外功能。
+当系统提示问是否是否继续时，输入 y 并按回车。这将开始安装 `postgres` 包和 `postgrescontrib` 包，后者会为 Postgres 添加一些额外功能。
 
-我们现在已经安装了 postgres，但默认情况下，你需要登录到 postgres 用户账户才能访问 PostgreSQL。这并不是我们想要的——相反，我们想要为 postgres 角色设置一个密码，然后使用该密码登录 Postgres。
+我们现在已经安装了 `postgres`，但默认情况下，你需要登录到 `postgres` 用户账户才能访问 PostgreSQL。这并不是我们想要的——相反，我们想要为 `postgres` 角色设置一个密码，然后使用该密码登录 Postgres。
 
-### 为 postgres 角色设置密码
+##### 为 postgres 角色设置密码
 
 默认情况下，到 PostgreSQL 的本地连接使用 peer 身份验证系统。这意味着它们不会询问密码，而是检查我们当前是否登录了一个与 Postgres 中的用户名匹配的用户（Linux 用户）。
 
-我们将更改身份验证方式，转而告诉 Postgres 使用加密密码，但在那之前，我们需要实际为 postgres 用户设置一个密码。要做到这一点，我们需要以用户 postgres 的身份打开 psql。
+我们将更改身份验证方式，转而告诉 Postgres 使用加密密码，但在那之前，我们需要实际为 `postgres` 用户设置一个密码。要做到这一点，我们需要以用户 `postgres` 的身份打开 `psql`。
 
 ```
 $ sudo -u postgres psql
@@ -19543,43 +15475,47 @@ $ sudo -u postgres psql
 
 ```
 could not change directory to "/root": Permission denied
+
 psql (9.5.4)
+
 Type "help" for help.
+
 postgres=#
 ```
 
-不用担心“Permission denied”错误。这在现在并不重要。重要的是我们现在已经连接到了 Postgres，并且想要更改用户 postgres 的密码。要做到这一点，我们运行以下 SQL 代码。
+不用担心“Permission denied”错误。这在现在并不重要。重要的是我们现在已经连接到了 Postgres，并且想要更改用户 `postgres` 的密码。要做到这一点，我们运行以下 SQL 代码。
 
 ```
 ALTER USER postgres WITH ENCRYPTED PASSWORD 'xxxxxxxx';
 ```
 
-注意：请务必将 xxxxxxx 替换为实际密码。
+注意：请务必将 `xxxxxxx` 替换为实际密码。
 
-我们在这里做的目的是告诉 Postgres，我们想要通过设置一个为 xxxxxxx 的加密密码来更新用户 postgres。如果我们操作正确，将得到以下输出：
+我们在这里做的目的是告诉 Postgres，我们想要通过设置一个为 `xxxxxxxx` 的加密密码来更新用户 `postgres`。如果我们操作正确，将得到以下输出：
 
 ```
 ALTER ROLE
+
 postgres=#
 ```
 
 这就是我们在 Postgres 内部需要做的所有工作。继续按 ctrl-d 退出即可。
 
-现在我们已经为 postgres 用户设置了密码，我们想要更新 Postgres。要做到这一点，我们需要编辑 pg_hba.conf 文件。
+现在我们已经为 `postgres` 用户设置了密码，我们想要更新 Postgres。要做到这一点，我们需要编辑 `pg_hba.conf` 文件。
 
 ```
 sudo nano /etc/postgresql/9.5/main/pg_hba.conf
 ```
 
-注意：可以随时将 nano 替换为你喜欢的编辑器，但我们在这里使用它是因为我知道它已经安装在我们的服务器上了。
+注意：可以随时将 `nano` 替换为你喜欢的编辑器，但我们在这里使用它是因为我知道它已经安装在我们的服务器上了。
 
-寻找一个未注释的行（即不以 # 开头的行），其内容如下所示。间距可能会略有不同，但单词应该是相同的。
+寻找一个未注释的行（即不以 `#` 开头的行），其内容如下所示。间距可能会略有不同，但单词应该是相同的。
 
 ```
 local all postgres peer
 ```
 
-该行的最后部分是我们想要更改的。这决定了我们在进行本地连接时如何验证 postgres 用户。与其使用使用系统用户名进行身份验证的 peer，我们想要使用使用加密密码的 md5。将该单词改为 md5。
+该行的最后部分是我们想要更改的。这决定了我们在进行本地连接时如何验证 `postgres` 用户。与其使用使用系统用户名进行身份验证的 `peer`，我们想要使用使用加密密码的 `md5`。将该单词改为 `md5`。
 
 ```
 local all postgres md5
@@ -19619,12 +15555,11 @@ $ tar -C /usr/local -xzf gol.9.linux-amd64.tar.gz
 $ export PATH=$PATH:/usr/local/go/bin
 ```
 
-最后一行 export 命令用于将 Go 二进制文件路径添加到 PATH 环境变量中。这基本上使我们可以在服务器的任何地方输入 go 命令。
+最后一行 `export` 命令用于将 Go 二进制文件路径添加到 `PATH` 环境变量中。这基本上使我们可以在服务器的任何地方输入 `go` 命令。
 
+我们的服务器将知道在 `PATH` 变量所列出的其中一个目录中运行名为 `go` 的程序。
 
-我们的服务器将知道在 PATH 变量所列出的其中一个目录中运行名为 go 的程序。
-
-安装好 Go 后，我们将创建一个目录来存储我们的源代码。在不设置自定义 $GOPATH 环境变量的情况下，此目录是更改的，因此如果你不熟悉我们正在做什么，请严格按照步骤操作。
+安装好 Go 后，我们将创建一个目录来存储我们的源代码。在不设置自定义 `$GOPATH` 环境变量的情况下，此目录是更改的，因此如果你不熟悉我们正在做什么，请严格按照步骤操作。
 
 ```
 $ cd ~
@@ -19643,17 +15578,15 @@ $ go version
 /usr/local/go/bin/go version
 ```
 
-## 16.7.4 设置 Caddy
+### 16.7.4 设置 Caddy
 
-Caddy¹¹⁰ 是一个用 Go 编写的 HTTP Web 服务器，我们将使用它来通过 Let's Encrypt 免费设置 HTTPS。Caddy 为我们处理了这一切所有工作，允许我们设置 DNS 服务器，然后创建一个简单的 Caddyfile（Caddy 的配置文件）并启动 Caddy。
+`Caddy` 是一个用 Go 编写的 HTTP Web 服务器，我们将使用它来通过 Let's Encrypt 免费设置 HTTPS。Caddy 为我们处理了这一切所有工作，允许我们设置 DNS 服务器，然后创建一个简单的 `Caddyfile`（Caddy 的配置文件）并启动 Caddy。
 
 在使用 Caddy 之前，我们需要构建它。如果你还没有登录服务器，请通过 SSH 登录到你的服务器。
 
 注意：构建 Caddy 需要 Go 1.8 或更高版本。
 
 ¹⁰https://caddyserver.com/
-
-## 16.7. 设置服务器
 
 ```
 $ ssh root@123.123.22.33
@@ -19667,7 +15600,7 @@ $ go get -u github.com/mholt/caddy
 $ go get -u github.com/caddyserver/builds
 ```
 
-我们需要进入 mholt/caddy 项目来构建 Caddy。
+我们需要进入 `mholt/caddy` 项目来构建 Caddy。
 
 ```
 $ cd ~/go/src/github.com/mholt/caddy/caddy
@@ -19683,21 +15616,25 @@ $ go run build.go -goos=linux -goarch=amd64
 
 ```
 $ ./caddy
+
 Activating privacy features... done.
+
 http://:2015
+
 WARNING: File descriptor limit 1024 is too low for production servers.
+
 At least 8192 is recommended. Fix with "ulimit -n 8192".
 ```
 
 按下 ctrl-c 停止服务器，暂时不用担心该警告。我们将在完成部署应用程序之前处理它。
 
-我们将刚刚创建的 caddy 二进制文件复制到 /usr/local/bin/ 目录，以便以后能够方便地访问它。
+我们将刚刚创建的 `caddy` 二进制文件复制到 `/usr/local/bin/` 目录，以便以后能够方便地访问它。
 
 ```
 $ cp ../caddy /usr/local/bin/
 ```
 
-我们需要设置一个服务文件来告知 systemd¹ 关于 Caddy，systemd 用于 Ubuntu 16.04 中管理系统进程。例如，我们将使用它来确保在服务器重启后重启 Caddy 和我们的 Web 应用程序。如果我们的任何一个应用程序崩溃，我们还可以设置重启的频率和时机。
+我们需要设置一个服务文件来告知 `systemd`¹ 关于 Caddy，`systemd` 用于 Ubuntu 16.04 中管理系统进程。例如，我们将使用它来确保在服务器重启后重启 Caddy 和我们的 Web 应用程序。如果我们的任何一个应用程序崩溃，我们还可以设置重启的频率和时机。
 
 ```
 $ sudo nano /etc/systemd/system/caddy.service
@@ -19708,17 +15645,19 @@ $ sudo nano /etc/systemd/system/caddy.service
 ```
 [Unit]
 Description=caddy server for serving lenslocked.com
+
 [Service]
 WorkingDirectory=/root/app
 ExecStart=/usr/local/bin/caddy -email you@email.com
 Restart=always
 RestartSec=120
 LimitNOFILE=192
+
 [Install]
 WantedBy=multi-user.target
 ```
 
-### Box 16.8. 解释我们的服务文件
+#### Box 16.8. 解释我们的服务文件
 
 我们的服务文件分为三个部分：Unit、Service 和 Install。
 
@@ -19726,11 +15665,9 @@ WantedBy=multi-user.target
 
 > ¹¹https://en.wikipedia.org/wiki/Systemd
 
-## 16.7. 设置服务器
-
 在第二部分中，我们定义了服务如何工作。`WorkingDirectory` 行定义了服务应该启动的位置。也就是说，它在运行任何命令之前应该进入哪个文件夹？
 
-ExecStart 是我们的服务应该运行的命令。我们使用 caddy 二进制文件的绝对路径以避免任何问题，并将 “your@email.com” 替换为你自己的电子邮件地址。这用于与 Let’s Encrypt 通信以获取你的 SSL 证书。
+`ExecStart` 是我们的服务应该运行的命令。我们使用 `caddy` 二进制文件的绝对路径以避免任何问题，并将 “your@email.com” 替换为你自己的电子邮件地址。这用于与 Let’s Encrypt 通信以获取你的 SSL 证书。
 
 接下来的两行描述了当服务崩溃时何时以及以及频率重启。我们希望将重启限制为每 120 秒一次，以避免意外超过 Let’s Encrypt 的 API 限制。如果你超过了 API 限制，你将在一段时间内无法通过他们的 API 获取新的 SSL 证书。
 
@@ -19738,7 +15675,7 @@ ExecStart 是我们的服务应该运行的命令。我们使用 caddy 二进制
 
 在最后部分即 install 部分，我们说明了如何启用我们的服务。通常你不需要自定义此部分，关于如何操作的细节不在本书的范围内。
 
-按下 ctrl-x 退出 nano，然后按 y 确认你想保存，然后按回车确认我们想要使用提供的原始文件名。
+按下 ctrl-x 退出 `nano`，然后按 y 确认你想保存，然后按回车确认我们想要使用提供的原始文件名。
 
 现在我们需要重新加载内容以便我们的新文件被识别，并启用我们的新服务。
 
@@ -19747,7 +15684,7 @@ systemctl daemon-reload
 systemctl enable caddy.service
 ```
 
-我们可以通过重启 caddy 服务然后打印服务的日志来测试这一点，但首先我们需要创建服务尝试启动运行的 app 目录。
+我们可以通过重启 `caddy` 服务然后打印服务的日志来测试这一点，但首先我们需要创建服务尝试启动运行的 `app` 目录。
 
 ```
 $ mkdir /root/app
@@ -19755,7 +15692,7 @@ $ sudo service caddy restart
 $ journalctl -r
 ```
 
-注意：journalctl 允许我们查看服务的日志，-r 标志表示按反序显示它们，这样我们就能先看到最新的日志。
+注意：`journalctl` 允许我们查看服务的日志，`-r` 标志表示按反序显示它们，这样我们就能先看到最新的日志。
 
 输出应该类似于下面的输出，但你可能会发现如数字、服务器名称以及日期和显示方式有所不同。
 
@@ -19764,43 +15701,51 @@ $ journalctl -r
 ncaddy[10060]: Activating privacy features... done
 ```
 
-注意：按下 q 退出 journalctl 日志。
+注意：按下 q 退出 `journalctl` 日志。
 
-我们现在不需要 caddy，所以可以停止它。
+我们现在不需要 `caddy`，所以可以停止它。
 
 ```
 $ sudo service caddy stop
 ```
 
-最后，我们需要设置一个 Caddyfile 来配置我们的 caddy 服务。我们将在 Web 应用程序源代码中创建它，以便人员可以在不登录生产服务器的情况下进行更改，但更改仍然推送到服务器。
+最后，我们需要设置一个 `Caddyfile` 来配置我们的 `caddy` 服务。我们将在 Web 应用程序源代码中创建它，以便人员可以在不登录生产服务器的情况下进行更改，但更改仍然推送到服务器。
 
 ```
 $ touch Caddyfile
 ```
 
-你的 Caddyfile 会根据你的使用情况而异。以下是两个潜在的 Caddyfile，第一个用于域名，第二个用于 IP 地址。
+你的 `Caddyfile` 会根据你的使用情况而异。以下是两个潜在的 `Caddyfile`，第一个用于域名，第二个用于 IP 地址。
 
 ```
 www.lenslocked.com {
+
   gzip
   proxy localhost:3000 {
+
     transparent
+
   }
+
 }
 ```
 
-在这个 Caddyfile 中，我们定义了我们的域名，然后是 Caddy 如何处理传入的请求。代理 Web 请求意味着我们的 Caddy 服务器将接收任何传入的请求并将其转发到 localhost:3000。
+在这个 `Caddyfile` 中，我们定义了我们的域名，然后是 Caddy 如何处理传入的请求。代理 Web 请求意味着我们的 Caddy 服务器将接收任何传入的请求并将其转发到 `localhost:3000`。
 
-代理的 `transparent` 部分用于在将请求发送到 localhost 之前添加几个请求标头，例如添加用户的 IP 地址。我们不会使用该标头，但从经验来看，它们长期来看是有用的。
+代理的 `transparent` 部分用于在将请求发送到 `localhost` 之前添加几个请求标头，例如添加用户的 IP 地址。我们不会使用该标头，但从经验来看，它们长期来看是有用的。
 
-没有域名的 Caddyfile 基本上是一样的，但我们无法将其隔离到单个域名。
+没有域名的 `Caddyfile` 基本上是一样的，但我们无法将其隔离到单个域名。
 
 ```
 :80 {
+
   gzip
   proxy localhost:3000
+
     transparent
+
   }
+
 }
 ```
 
@@ -19813,7 +15758,7 @@ www.lenslocked.com {
 - 完成版 - book.usegolang.com/16.7.4
 - 更改 - book.usegolang.com/16.7.4-diff
 
-## 16.7.5 为我们的应用创建服务
+### 16.7.5 为我们的应用创建服务
 
 就像我们为 Caddy 做的那样，我们需要为我们的 Web 应用程序添加服务。我们的服务将处理启动 Web 应用程序、在服务器重启或由于任何原因崩溃时重启它。
 
@@ -19823,15 +15768,17 @@ www.lenslocked.com {
 $ ssh root@123.123.22.33
 ```
 
+
+
 为我们的应用程序创建一个服务文件。
 
-```
+```bash
 $ sudo nano /etc/systemd/system/lenslocked.com.service
 ```
 
 我们将在此文件中填入与我们为 Caddy 使用非常类似的 systemd 服务定义，只是这个将启动我们的 Web 应用程序。
 
-```
+```ini
 [Unit]
 Description=lenslocked.com app
 
@@ -19841,20 +15788,16 @@ ExecStart=/root/app/server -prod
 Restart=always
 ```
 
-
-
-
-
 ## 16.7. 设置服务器
 
-```
+```ini
 RestartSec=30
 
 [Install]
 WantedBy=multi-user.target
 ```
 
-这与我们为 Caddy 创建的服务文件大致相同，不再是在 ExecStart 中运行 Caddy 二进制文件，而是运行一个名为“server”的二进制文件，它位于 /root/app 目录下。
+这与我们为 Caddy 创建的服务文件大致相同，不再是在 `ExecStart` 中运行 Caddy 二进制文件，而是运行一个名为 `server` 的二进制文件，它位于 `/root/app` 目录下。
 
 我们还没有构建该二进制文件，但每当我们编写部署脚本时，它会将我们的源代码上传到服务器并为我们构建二进制文件。然后我们就可以使用二进制文件重启 systemd 服务，以发布新版本的 Web 应用程序。
 
@@ -19877,7 +15820,7 @@ $ systemctl enable lenslocked.com.service
 $ ssh root@123.123.22.33
 ```
 
-在运行应用程序的 /root/app 目录下创建 .config 文件。
+在运行应用程序的 `/root/app` 目录下创建 `.config` 文件。
 
 ```bash
 $ nano /root/app/.config
@@ -19903,7 +15846,7 @@ $ nano /root/app/.config
 
 注意：你的数据库密码将是在你设置 PostgreSQL 时运行 `ALTER USER ...` 命令时设置的那个。
 
-按 ctrl-x  nano，然后按 y 确认，最后按回车确认我们使用提供的原始文件名。
+按 `ctrl-x` `nano`，然后按 `y` 确认，最后按回车确认我们使用提供的原始文件名。
 
 ### 16.7.7 创建部署脚本
 
@@ -19911,12 +15854,12 @@ $ nano /root/app/.config
 
 1. 将我们的源代码复制到生产服务器。
 2. 在生产服务器上构建 Web 应用程序。
-3. 将二进制文件和任何资源（图像、css 等）复制到 /root/app 目录。
+3. 将二进制文件和任何资源（图像、css 等）复制到 `/root/app` 目录。
 4. 在生产服务器上重启我们的 Web 应用程序。
 
 注意：我们的部署脚本将是一个 bash 文件，在 Windows 下没有经过测试。如果你遇到问题，请随时寻求帮助。
 
-首先，我们需要创建一个 scripts 目录，用于存储部署脚本以及我们以后创建的任何其他脚本。一旦有了目录，我们将创建一个 bash 发布脚本文件，并赋予其可执行权限，这样我们就可以运行它，而不是仅仅作为文本文件打开。
+首先，我们需要创建一个 `scripts` 目录，用于存储部署脚本以及我们以后创建的任何其他脚本。一旦有了目录，我们将创建一个 bash 发布脚本文件，并赋予其可执行权限，这样我们就可以运行它，而不是仅仅作为文本文件打开。
 
 ```bash
 mkdir scripts
@@ -19941,7 +15884,7 @@ chmod +x scripts/release.sh
 cd "$GOPATH/src/lenslocked.com"
 ```
 
-之后，我们可以通过删除存在的二进制文件来开始发布。我倾向于在构建时将其命名为 lenslocked.com，这就是我们要删除的内容。我们并不是删除 lenslocked.com 目录。
+之后，我们可以通过删除存在的二进制文件来开始发布。我倾向于在构建时将其命名为 `lenslocked.com`，这就是我们要删除的内容。我们并不是删除 `lenslocked.com` 目录。
 
 ```bash
 echo "==== Releases lenslocked.com ===="
@@ -19958,13 +15901,9 @@ sh root@123.123.22.33 "rm -rf /go/root/src/lenslocked.com"
 echo "代码删除成功!"
 ```
 
-之后我们可以上传源代码。我们将使用 rsync，这是一用于在不同服务器之间传输和同步文件的极其有用的工具。如果你从未用过它，我强烈建议你深入研究。
+之后我们可以上传源代码。我们将使用 `rsync`，这是一用于在不同服务器之间传输和同步文件的极其有用的工具。如果你从未用过它，我强烈建议你深入研究。
 
 目前，我想说的是这些参数
-
-
-
-
 
 # 16.7. 设置服务器
 
@@ -20051,26 +15990,23 @@ $ atom views/layouts/navbar.ghtml
 // Logout 用于删除用户的会话 Cookie
 // 并使他们当前的记忆令牌失效，这将
 // 注销当前用户。
-
 // POST /logout
 func (u *Users) Logout(w http.ResponseWriter, r *http.Request) {
-	// 首先让 cookie 过期
-	cookie := http.Cookie{
-		Name:    "session_token",
-		Value:   "",
-		Expires: time.Now(),
-		Path:    "/",
-	}
-	http.SetCookie(w, &cookie)
-
-	// 然后我们更新记忆令牌
-	token, err := r.Cookie("remember_token")
-	if err == nil {
-		u.InvalidRememberToken(token.Value)
-	}
-
-	// 最后我们重定向到首页
-	http.Redirect(w, r, "/", http.StatusSeeOther)
+    // 首先让 cookie 过期
+    cookie := http.Cookie{
+        Name:    "session_token",
+        Value:   "",
+        Expires: time.Now(),
+        Path:    "/",
+    }
+    http.SetCookie(w, &cookie)
+    // 然后我们更新记忆令牌
+    token, err := r.Cookie("remember_token")
+    if err == nil {
+        u.InvalidRememberToken(token.Value)
+    }
+    // 最后我们重定向到首页
+    http.Redirect(w, r, "/", http.StatusSeeOther)
 }
 ```
 
@@ -20078,7 +16014,6 @@ func (u *Users) Logout(w http.ResponseWriter, r *http.Request) {
 
 ```
 $ atom main.go
-
 ```
 r.Handle("/logout", u.Logout)
 ```
@@ -20111,7 +16046,7 @@ r.Handle("/logout", u.Logout)
 $ atom views/data.go
 ```
 
-go
+```go
 import (
   // 添加两个导入
   "net/http"
@@ -20119,31 +16054,31 @@ import (
 )
 
 type Alert struct {
-	Level   string
-	Message string
+    Level   string
+    Message string
 }
 
 func persistAlert(w http.ResponseWriter, alert Alert) {
-	// 我们不希望提示在几天后出现。如果用户
-	// 希望在 5 分钟后跳转，我们将
-	// 让它过期。
-	expiresAt := time.Now().Add(5 * time.Minute)
-	lvl := http.Cookie{
-		Name:    "alert_level",
-		Value:   alert.Level,
-		Expires: expiresAt,
-		HttpOnly: true,
-		Path:    "/",
-	}
-	msg := http.Cookie{
-		Name:    "alert_message",
-		Value:   alert.Message,
-		Expires: expiresAt,
-		HttpOnly: true,
-		Path:    "/",
-	}
-	http.SetCookie(w, &lvl)
-	http.SetCookie(w, &msg)
+    // 我们不希望提示在几天后出现。如果用户
+    // 希望在 5 分钟后跳转，我们将
+    // 让它过期。
+    expiresAt := time.Now().Add(5 * time.Minute)
+    lvl := http.Cookie{
+        Name:    "alert_level",
+        Value:   alert.Level,
+        Expires: expiresAt,
+        HttpOnly: true,
+        Path:    "/",
+    }
+    msg := http.Cookie{
+        Name:    "alert_message",
+        Value:   alert.Message,
+        Expires: expiresAt,
+        HttpOnly: true,
+        Path:    "/",
+    }
+    http.SetCookie(w, &lvl)
+    http.SetCookie(w, &msg)
 }
 ```
 
@@ -20151,30 +16086,26 @@ func persistAlert(w http.ResponseWriter, alert Alert) {
 
 ```go
 func clearAlert(w http.ResponseWriter) {
-	lvl := http.Cookie{
-		Name:    "alert_level",
-		Value:   "",
-		Expires: time.Now(),
-		HttpOnly: true,
-		Path:    "/",
-	}
-	msg := http.Cookie{
-		Name:    "alert_message",
-		Value:   "",
-		Expires: time.Now(),
-		HttpOnly: true,
-		Path:    "/",
-	}
-	http.SetCookie(w, &lvl)
-	http.SetCookie(w, &msg)
+    lvl := http.Cookie{
+        Name:    "alert_level",
+        Value:   "",
+        Expires: time.Now(),
+        HttpOnly: true,
+        Path:    "/",
+    }
+    msg := http.Cookie{
+        Name:    "alert_message",
+        Value:   "",
+        Expires: time.Now(),
+        HttpOnly: true,
+        Path:    "/",
+    }
+    http.SetCookie(w, &lvl)
+    http.SetCookie(w, &msg)
 }
 ```
 
 最后，我们可能想要能够获取已经持久化的提示，因此我们将为之添加一个函数。
-
-
-
-
 
 ## 17.2. 使用 ALERTS 重定向
 
@@ -20212,7 +16143,7 @@ func RedirectAlert(w http.ResponseWriter, r *http.Request, urlStr string, code i
 }
 ```
 
-每当我们想要带有 alert 地重定向用户时，可以调用 RedirectAlert 函数，而不是 http.Redirect 函数。
+每当我们想要带有 alert 地重定向用户时，可以调用 `RedirectAlert` 函数，而不是 `http.Redirect` 函数。
 
 ```go
 alert := views.Alert{
@@ -20238,21 +16169,27 @@ $ atom views/view.go
 
 ```go
 func (v *View) Render(w http.ResponseWriter, r *http.Request, data interface{}) {
-	w.Header().Set("Content-Type", "text/html")
-	var vd
-	switch d := data.(type) {
-	// ... 这部分保持不变
-	// 查找 alert，如果存在持久化的 alert，则进行赋值
-	if alert := getAlert(r); alert != nil {
-		vd.Alert = alert
-		clearAlert(w)
-	}
-	vd.User = context.User(r.Context())
-	// ... 此处之后的所有内容保持不变
-}
-```
+    w.Header().Set("Content-Type", "text/html")
+    var vd
+    switch d := data.(type) {
+    // ... 这部分保持不变
+    // 查找 alert，如果存在持久化的 alert，则进行赋值
+    if alert := getAlert(r); alert != nil {
+        vd.Alert = alert
 
-注意：我们在这里添加的只是 "if alert := getAlert(r)..." 代码块，它长度为 4 行。Render 方法中的其他所有内容保持不变。
+
+
+`clearAlert(w)`
+
+}
+
+`vd.User = context.User(r.Context())`
+
+// ... 此处之后的所有内容保持不变
+
+}
+
+注意：我们在这里添加的只是 `"if alert := getAlert(r)..."` 代码块，它长度为 4 行。`Render` 方法中的其他所有内容保持不变。
 
 我们现在拥有了带有 alert 消息重定向用户所需的所有工具。
 
@@ -20261,30 +16198,30 @@ func (v *View) Render(w http.ResponseWriter, r *http.Request, data interface{}) 
 ### 源代码
 
 下面的链接包含了完整的源代码以及本节中所有更改代码的差异（diff）。
-已完成 - book.usegolang.com/17.2
-已更改 - book.usegolang.com/17.2-diff
+已完成 - `book.usegolang.com/17.2`
+已更改 - `book.usegolang.com/17.2-diff`
 
-## 17.3 发送邮件给用户
+### 17.3 发送邮件给用户
 
-发送邮件给用户是一个在撰写相关内容时写起来比较棘手的功能，因为每个人的实现方式都不同。有些公司编写自己的工具来管理向客户发送邮件的操作，而另一些公司则使用 Mailgun 和 Sendgrid 等各种服务。
-我个人倾向于使用 Mailgun（在写本文时，它的前 1 万封邮件是免费的），而且非常简单易用。因此，我们将在课程的这一部分使用它。
+发送邮件给用户是一个在撰写相关内容时写起来比较棘手的功能，因为每个人的实现方式都不同。有些公司编写自己的工具来管理向客户发送邮件的操作，而另一些公司则使用 `Mailgun` 和 `Sendgrid` 等各种服务。
+我个人倾向于使用 `Mailgun`（在写本文时，它的前 1 万封邮件是免费的），而且非常简单易用。因此，我们将在课程的这一部分使用它。
 
 > **Box 17.1. 为什么我们不使用 net/smtp 包？**
 
-某些读者可能会对我在书中使用第三方服务而不是涵盖标准库中的 net/smtp 包的决定感到不满，这是不可避免的。
+某些读者可能会对我在书中使用第三方服务而不是涵盖标准库中的 `net/smtp` 包的决定感到不满，这是不可避免的。
 我选择使用第三方服务是因为本课程的目的是教你如何构建一个真实的 Web 应用程序，我参与过的几乎所有真实的 Web 应用程序都使用第三方服务进行邮件投递。这种方法不仅更容易避免你的邮件被标记为垃圾邮件，而且它们的 API 使得发送邮件变得更加简单，无需学习 SMTP 的细节，而这并不是本课程的目的。
 
 你需要做的的第一件事是访问他们的网站，创建一个账户，并设置一个用于发送邮件的域名。
 
-https://www.mailgun.com/
+`https://www.mailgun.com/`
 
-在账户设置完成后，我们需要安装 Mailgun 团队提供的 Go 客户端。
+在账户设置完成后，我们需要安装 `Mailgun` 团队提供的 Go 客户端。
 
 ```bash
 $ go get gopkg.in/mailgun/mailgun-go.v1
 ```
 
-接下来，你需要更新配置源代码，为 Mailgun 添加一个部分。
+接下来，你需要更新配置源代码，为 `Mailgun` 添加一个部分。
 
 ```bash
 $ atom config.go
@@ -20307,57 +16244,15 @@ type MailgunConfig struct {
 }
 ```
 
-每当我们想要带有 alert 地重定向用户时，可以调用 RedirectAlert 函数，而不是 http.Redirect 函数。
+每当我们想要带有 alert 地重定向用户时，可以调用 `RedirectAlert` 函数，而不是 `http.Redirect` 函数。
 
 ```go
 alert := views.Alert{
   Level: views.AlertLvlSuccess,
   Message: "Welcome to LensLocked!",
 }
+
 views.RedirectAlert(w, r, "/galleries", http.StatusFound, alert)
-```
-
-## 17.3 发送邮件给用户
-
-发送邮件给用户是一个在撰写相关内容时写起来比较棘手的功能，因为每个人的实现方式都不同。有些公司编写自己的工具来管理向客户发送邮件的操作，而另一些公司则使用 Mailgun 和 Sendgrid 等各种服务。
-我个人倾向于使用 Mailgun（在写本文时，它的前 1 万封邮件是免费的），而且非常简单易用。因此，我们将在课程的这一部分使用它。
-
-> **Box 17.1. 为什么我们不使用 net/smtp 包？**
-
-某些读者可能会对我在书中使用第三方服务而不是涵盖标准库中的 net/smtp 包的决定感到不满，这是不可避免的。
-我选择使用第三方服务是因为本课程的目的是教你如何构建一个真实的 Web 应用程序，我参与过的几乎所有真实的 Web 应用程序都使用第三方服务进行邮件投递。这种方法不仅更容易避免你的邮件被标记为垃圾邮件，而且它们的 API 使得发送邮件变得更加简单，无需学习 SMTP 的细节，而这并不是本课程的目的。
-
-你需要做的第一件事是访问他们的网站，创建一个账户，并设置一个用于发送邮件的域名。
-
-https://www.mailgun.com/
-
-在账户设置完成后，我们需要安装 Mailgun 团队提供的 Go 客户端。
-
-```bash
-$ go get gopkg.in/mailgun/mailgun-go.v1
-```
-
-接下来，你需要更新配置源代码，为 Mailgun 添加一个部分。
-
-```bash
-$ atom config.go
-```
-
-```go
-type Config struct {
-	Port int `json:"port"`
-	Env string `json:"env"`
-	Pepper string `json:"pepper"`
-	HMACKey string `json:"hmac_key"`
-	Database PostConfig `json:"Database"`
-	Mailgun MailgunConfig `json:"mailgun"`
-}
-
-type MailgunConfig struct {
-	APIKey string `json:"api_key"`
-	PublicAPIKey string `json:"public_api_key"`
-	Domain string `json:"domain"`
-}
 ```
 
 ## 17.4. 持久化并预填充表单数据
@@ -20365,49 +16260,14 @@ type MailgunConfig struct {
 ### 源代码
 
 下面的链接包含了完整的源代码以及本节中所有更改代码的差异（diff）。
-已完成 - book.usegolang.com/17.3
-已更改 - book.usegolang.com/17.3-diff
+已完成 - `book.usegolang.com/17.3`
+已更改 - `book.usegolang.com/17.3-diff`
 
-
-
-
-## 第 17 章 填补空白
-
-2. 更新我们的控制器方法，将这些数据传递到 `Render` 方法中，以便模板可以使用。
-
-有了示例后，这一切都变得清晰多了。让我们更新用户控制器的 `Create` 方法，该方法每当用户尝试注册新账户时就会被调用。
-
-我们将从更新模板开始，允许它在提供数据时使用这些数据。
-
-```go
-$ atom views/users/new.gohtml
-```
-
-调用 `signupForm` 模板的第一行，并验证它是否将所有模板数据传递给了 `signupForm` 模板。也就是说，确保最后一个参数是一个点 (`.`)。
-
-```go
-{{template "signupForm" .}}
-```
-
-接下来，我们需要在 `signupForm` 模板内部找到 `<input ..>` 标签。出于安全考虑，我们不会持久化密码，但如果提供了姓名和电子邮件，我们将自动为这些输入项设置设置值。我们可以通过设置每个 HTML 输入字段的 `value` 属性来实现。
-
-```html
-<define "signupForm">
-<form action="signup" method="POST">
-  <!-- -->
-  <input type="text" name="name" class="form-control id="name" placeholder="Your full name" value="{{.Name}}"> <!-- 添加这最后部分 - value="{{.Name}}" 部分 -- -->
-  <input type="email" name="email" class="form-control id="email" placeholder="Email" value="{{.Email}}"> <!-- 添加这最后部分 - value="{{.Email}}" 部分 -- -->
-```html
-<!-- ... -->
-</form>
-{{end}}
-```
-
-## 17.4 表单数据的持久化与预填充
+### 17.4 表单数据的持久化与预填充
 
 既然我们的模板将利用这些额外数据，现在我们需要更新用户控制器上的 `Create` 方法，以提供任何已知数据。
 
-```go
+```bash
 $ atom controllers/users.go
 ```
 
@@ -20429,17 +16289,15 @@ func (u *Users) Create(w http.ResponseWriter, r *http.Request) {
 
 为了验证更新后的代码运行正常，请重启服务器并用一个过短的密码填写注册表单。你的 Web 应用程序应该带有错误消息再次渲染注册表单，但你的姓名和电子邮件字段应该保留你最初输入的信息。
 
-## 第 17 章 填补空白
-
 ### 通过 URL 参数预填充表单数据
 
 注意：本节假设你已经完成了上一节中对新用户模板的编辑。
 
-预填充表单数据与持久化非常相似；事实上，我们已经对新用户模板 (`new.html`) 进行了所有支持它的必要更改。我们做的只是更新用户控制器上的 `New` 方法，用 `SignupForm` 解析任何 URL 参数，然后在渲染 `NewView` 时提供数据。
+预填充表单数据与持久化非常相似；事实上，我们已经对新用户模板 `new.html` 进行了所有支持它的必要更改。我们做的只是更新用户控制器上的 `New` 方法，用 `SignupForm` 解析任何 URL 参数，然后在渲染 `NewView` 时提供数据。
 
 为了支持这一点，我们首先需要调整 `parseForm` 函数；我们将将其拆分为两个实现相同结果的函数，但每个函数只负责部分工作。
 
-```go
+```bash
 $ atom controllers/helpers.go
 ```
 
@@ -20466,10 +16324,7 @@ func parseValues(values url.Values, dst interface{}) error {
 }
 ```
 
-
-
-
-# 第 17 章 填补空白
+### 第 17 章 填补空白
 
 已使用。这使得验证操作（例如确保所有重置令牌都是唯一的）的实现变得更加困难，因为我们需要确保，即使在用户没有尝试重置密码时，他们仍然拥有一个唯一的令牌。
 
@@ -20498,7 +16353,7 @@ type pwReset struct {
 }
 ```
 
-# 17.5. 重置密码
+### 17.5. 重置密码
 
 `Token` 和 `TokenHash` 字段的使用方式与我们在 `User` 类型上使用 `Remember` 和 `RememberHash` 字段相同。前者用于存储从不存储在数据库中的原始值，而后者用于存储将持久化到我们数据库中的哈希值。
 
@@ -20616,6 +16471,8 @@ func runPwResetValFns (pwr *pwReset, fns ...pwResetValFn) error {
 
 最后，我们准备好创建由 `pwResetDB` 接口定义的方法，并将我们的验证添加到它们中。
 
+
+
 ```go
 func (pwrv *pwResetValidator) ByToken (token string) (*pwReset, error) {
 	pwr := &pwReset{Token: token}
@@ -20728,10 +16585,6 @@ func (us *userService) CompleteReset(token, newPw string) (*User, error) {
         if err == ErrNotFound {
 ```
 
-
-
-
-
 # 17.5. 重置密码
 
 ```go
@@ -20786,9 +16639,13 @@ twelveHrs := 12 * time.Hour
 最后，我们可以使用小于、大于和等号来比较这两个时长，就像我们处理任何整数一样。
 
 ²https://golang.org/pkg/time/
+
 ³https://golang.org/pkg/time#Now
+
 ⁴https://golang.org/pkg/time#Time.Sub
+
 ⁵https://golang.org/pkg/time#Time
+
 ⁶https://golang.org/pkg/time#Duration
 
 # 17.5. 重置密码
@@ -20852,6 +16709,7 @@ func (s *Services) AutoMigrate() error {
 ### 源代码
 
 下面的链接包含了本节中所有更改代码的完整源码和差异（diff）。
+
 - 完成版 - book.golang.com/17.5.2
 - 更改 - book.golang.com/17.5.2
 
@@ -20948,20 +16806,19 @@ func (s *Services) AutoMigrate() error {
 
 注意：我们的的一些表单（例如注册和登录表单）在 `panel` 之前通过 `col-md-8` CSS 类指定了不同的宽度。如果你愿意，可以通过更新该 HTML 部分来让它们变得相同。
 
-
-
-
 ### 源代码
 
 下方链接包含了完整的源代码以及本节中所有更改代码的差异对比。
 
 已完成 - book.usegolang.com/17.5.3
 
+
+
 查看更改 - book.usegolang.com/17.5.3-diff
 
 # 17.5.4 控制器动作与视图
 
-接下来，我们需要创建 http 处理器（即 MVC 中的控制器动作）和用于渲染及处理重置密码表单的视图。我们将从视图开始。
+接下来，我们需要创建 `http` 处理器（即 MVC 中的控制器动作）和用于渲染及处理重置密码表单的视图。我们将从视图开始。
 
 ```
 $ atom controllers/users.go
@@ -21007,7 +16864,7 @@ type ResetPwForm struct {
 }
 ```
 
-注意：我们添加了 schema 标签，以便 `gorilla/schema` 包可以解析 http 表单并将值填充到该类型的结构体中。
+注意：我们添加了 `schema` 标签，以便 `gorilla/schema` 包可以解析 `http` 表单并将值填充到该类型的结构体中。
 
 接下来是 `InitiateReset` 函数，它将用于处理忘记密码表单。此表单只有一个字段——用户的电子邮件地址——所以我们可以忽略 `ResetPwForm` 类型中的其他字段。
 
@@ -21120,7 +16977,7 @@ $ atom main.go
 r.Handle("/forget
 ```
 
-> 注意：ForgotPwView 使用的是 `Handle` 方法而不是 `HandleFunc` 方法，因为它是 `http.Handler` 接口。
+> 注意：`ForgotPwView` 使用的是 `Handle` 方法而不是 `HandleFunc` 方法，因为它是 `http.Handler` 接口。
 
 ### 源代码
 
@@ -21134,7 +16991,7 @@ r.Handle("/forget
 
 我们几乎完成了密码重置功能；最后一步是向用户发送包含其重置令牌的邮件。通过强制用户阅读邮件，我们正在验证他们是否拥有该账户的邮箱箱。
 
-让我们首先在 email 包中添加一些常量，用于构建我们的密码重置邮件。
+让我们首先在 `email` 包中添加一些常量，用于构建我们的密码重置邮件。
 
 ```
 $ atom email/mailgun.go
@@ -21183,10 +17040,6 @@ HTML 版本与文本版本几乎相同，但我们在每一个相同的地方都
 
 在编写使用这些模板的代码之前，我们需要讨论如何构建带有编码查询参数的 URL。虽然我们可以直接发送
 
-
-
-
-
 ## 17.5. 重置密码
 
 向用户发送带有密码重置令牌和重置页面链接的电子邮件很容易，但许多用户已经开始期待更好的体验了。现在大多数密码重置邮件都会包含一个通过 URL 查询参数嵌入令牌的链接。然后，当用户点击该链接时，表单将自动填充重置令牌字段，因此用户就无需手动填写。
@@ -21221,7 +17074,9 @@ func (c *Client) ResetPwToEmail(email, token string) error {
 ```
 
 > ^8https://golang.org/pkg/net/url/
+
 9https://golang.org/pkg/net/url#Values
+
 10https://golang.org/pkg/net/url#Values.Encode
 
 ## 710 第 17 章。填补空白
@@ -21256,9 +17111,10 @@ func (u *Users) InitiateReset(w http.ResponseWriter, r *http.Request) {
 下面的链接包含了完整的源代码以及本节中所有更改代码的差异（diff）。
 
 - 已完成 - book.usegolang.com/17.5.5
+
 - 更改 - book.usegolang.com/17.5.5-diff
 
-## 17.6. 下一步该去哪里？
+# 17.6. 下一步该去哪里？
 
 ## 17.6 我下一步该去哪里？
 
@@ -21266,17 +17122,13 @@ func (u *Users) InitiateReset(w http.ResponseWriter, r *http.Request) {
 
 虽然我们不会在书中涵盖更多功能，但这并不意味着你需要停止。继续学习的绝佳方法是继续为你的 Web 应用程序添加新功能、构建新的应用，或者……
 
-
-
-
-
 # 18.2. 使用 GORENAME 进行重构
 
 ```
 $ get golang.org/x/tools/cmd/gorename
 ```
 
-gorename 的工作需要两部分信息：你想要重命的变量、类型或函数，以及你想要使用的新名称。有了这些信息，它将解析你所有的 Go 代码，并尝试用更改后的名称更新对该代码的注释和引用。当你重构某些过去编写的许多不同包中使用的代码时，这会非常有用。
+`gorename` 的工作需要两部分信息：你想要重命的变量、类型或函数，以及你想要使用的新名称。有了这些信息，它将解析你所有的 Go 代码，并尝试用更改后的名称更新对该代码的注释和引用。当你重构某些过去编写的许多不同包中使用的代码时，这会非常有用。
 
 为了给出一个真实的例子，我们将重命名在第 12.7 节中重构的 `ErrInvalidID` 和 `ErrInvalidPassword` 变量。
 
@@ -21290,13 +17142,13 @@ $ gorename -from "'lenslocked.com/models'.ErrInvalidID' -to 'ErrInvalidID'
 
 ## 框 18.1. gorename 错误
 
-正如我们之前讨论的，gorename 会处理你 GOPATH 中的所有代码，因此如果这些代码中的任何部分有问题，在使用重命名工具时可能会看到错误。错误信息可能很长，但通常以如下消息结束：
+正如我们之前讨论的，`gorename` 会处理你 GOPATH 中的所有代码，因此如果这些代码中的任何部分有问题，在使用重命名工具时可能会看到错误。错误信息可能很长，但通常以如下消息结束：
 
 ```
 gorename: couldn't load packages due to errors: some/package/name
 ```
 
-> 如果你看到这个，我建议临时将该损坏的代码移动到另一个目录，以便继续操作。希望 gorename 将来能更新以处理这种情况。
+> 如果你看到这个，我建议临时将该损坏的代码移动到另一个目录，以便继续操作。希望 `gorename` 将来能更新以处理这种情况。
 
 假设你还没有进行过重构，运行该命令应该得到类似下方的输出。
 
@@ -21304,7 +17156,7 @@ gorename: couldn't load packages due to errors: some/package/name
 Renamed 2 occurrences in 1 file in 1 package.
 ```
 
-此响应意味着 gorename 更新了单个源文件中的两处代码。我们在变量正上方的注释也应该得到更新，因为 gorename 会尝试更新这些显眼位置的注释。
+此响应意味着 `gorename` 更新了单个源文件中的两处代码。我们在变量正上方的注释也应该得到更新，因为 `gorename` 会尝试更新这些显眼位置的注释。
 
 接下来，我们需要对 `ErrInvalidPassword` 错误执行相同的操作。
 
@@ -21313,7 +17165,9 @@ $ gorename -from 'lenslocked.com/models.ErrInvalidPassword' \ \
 to `ErrPasswordIncorrect`
 ```
 
-注意：反斜杠 (\) 的存在是因为该命令跨到了第二行，反斜杠告诉终端我们还有更多输入要提供。
+注意：反斜杠 (`\`) 的存在是因为该命令跨到了第二行，反斜杠告诉终端我们还有更多输入要提供。
+
+
 
 运行此命令后，你应该看到以下输出：
 
@@ -21321,13 +17175,13 @@ to `ErrPasswordIncorrect`
 Renamed 3 occurrences in 2 files in 2 packages.
 ```
 
-这就是如何使用 gorename 进行重构的！
+这就是如何使用 `gorename` 进行重构的！
 
 ## 18.3. 处理 BOOTSTRAP 问题
 
 在本课程创建的过程中，Bootstrap 已更新到第 4 beta 版本。如果你查看 Bootstrap 文档，你很可能无意中查看了 v4 beta 的文档，而不是本课程使用的版本 - v3.3.7。因此，我的第一个建议是先查看 3.3 版本的文档 - https://getbootstrap.com/docs/3.3/
 
-虽然我最终打算将此课程更新到版本 4，但我目前暂缓这样做，因为正处于 beta 阶段，现在学习版本 3 对你来说有利的。不仅版本 4 处于测试阶段，而且你目前在网上找到的大多数主题和其他资源都是为版本 3 设计的。例如，bootstrapwatch.com（一个提供 Bootstrap 免费主题的网站）专门针对版本 3 调优，ThemeForest 等网站上出售的大多数主题也是如此。
+虽然我最终打算将此课程更新到版本 4，但我目前暂缓这样做，因为正处于 beta 阶段，现在学习版本 3 对你来说有利的。不仅版本 4 处于测试阶段，而且你目前在网上找到的大多数主题和其他资源都是为版本 3 设计的。例如，`bootstrapwatch.com`（一个提供 Bootstrap 免费主题的网站）专门针对版本 3 调优，ThemeForest 等网站上出售的大多数主题也是如此。
 
 一旦版本 4 开始获得适当关注，我将为课程提供更新，在此期间请放心，版本 3 是你真正应该学习的内容，一旦你理解了 v3，v4 的变化将很容易学习。
 
@@ -21335,7 +17189,7 @@ Renamed 3 occurrences in 2 files in 2 packages.
 
 TODO：编写关于下方代码的说明。目前仅作为示例提供。
 
-第 1 步 - 创建错误源文件并创建 `privateError` 类型。
+### 第 1 步 - 创建错误源文件并创建 `privateError` 类型。
 
 ```
 $ atom models/errors.go
@@ -21346,7 +17200,7 @@ package models
 type privateError string
 ```
 
-# 第 18 章附录
+### 第 18 章附录
 
 ```go
 func (e privateError) Error() string {
@@ -21354,7 +17208,7 @@ func (e privateError) Error() string {
 }
 ```
 
-第 2 步 - 将现有的 `modelError` 类型移动到错误源文件中。
+### 第 2 步 - 将现有的 `modelError` 类型移动到错误源文件中。
 
 ```go
 import "strings"
@@ -21366,7 +17220,7 @@ func (e modelError) Public() string {
     s := strings.Replace(string(e), \
 ```
 
-第 3 步 - 将现有的错误移动到错误源文件中，并将那些不应放入私有错误中的转换为私有错误。
+### 第 3 步 - 将现有的错误移动到错误源文件中，并将那些不应放入私有错误中的转换为私有错误。
 
 ```go
 const (
@@ -21410,4 +17264,3 @@ ErrRememberRequired privateError = "models: remember token is required"
 ErrRememberTooShort privateError = "models: remember token must be at least 32 bytes"
 ErrUserIDRequired privateError = "models: user ID is required"
 ```
-

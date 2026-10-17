@@ -1,10 +1,6 @@
-# 
-黑客入门指南
 
 
-
-
-
+# 黑客入门指南
 
 Published simultaneously in Canada
 
@@ -21,11 +17,6 @@ Wiley publishes in a variety of print and electronic formats and by print-on-dem
 Library of Congress Control Number: 2018944084
 
 ISBN 978-1-119-48547-6 (pbk); ISBN 978-1-119-48554-4 (ebk); ISBN 978-1-119-48551-3 (ebk)
-
-
-
-
-
 
 ## Introduction
 
@@ -45,15 +36,13 @@ ISBN 978-1-119-48547-6 (pbk); ISBN 978-1-119-48554-4 (ebk); ISBN 978-1-119-48551
 
 本书包含以下特色：
 
-*   各种技术性和非技术性测试及其详细的方法论。
+* 各种技术性和非技术性测试及其详细的方法论。
 
-*   针对入侵和泄露的具体防护措施。
+* 针对入侵和泄露的具体防护措施。
 
 在您开始对系统进行测试之前，请先熟悉 Part 1 的内容，以便为接下来的任务做好准备。著名的格言“If you fail to plan, you plan to fail”在安全评估过程中同样适用。只有制定稳固的作战计划，才能取得成功。
 
 ## Foolish Assumptions
-
-
 
 [`***Disclaimer:***`] 这本书仅面向信息技术（IT）和安全专业人员，用于在授权范围内测试系统的安全性。如果您选择恶意使用本书中的信息对计算机系统进行黑客攻击或未经授权的入侵，您将自负后果。作者（本人）及与本书关联的任何人都不对您因使用本文中描述的方法和工具而做出的任何不道德或非法选择承担任何责任或义务。
 
@@ -61,11 +50,11 @@ ISBN 978-1-119-48547-6 (pbk); ISBN 978-1-119-48554-4 (ebk); ISBN 978-1-119-48551
 
 我也对您有一些假设：
 
-*   您熟悉基本的计算机、网络和信息安全概念与术语。
+* 您熟悉基本的计算机、网络和信息安全概念与术语。
 
-*   您拥有使用这些技术和工具的计算机和网络。
+* 您拥有使用这些技术和工具的计算机和网络。
 
-*   您已获得雇主或客户的许可，以执行本书中描述的黑客技术。
+* 您已获得雇主或客户的许可，以执行本书中描述的黑客技术。
 
 ## 本书中使用的图标
 
@@ -83,7 +72,7 @@ ISBN 978-1-119-48547-6 (pbk); ISBN 978-1-119-48554-4 (ebk); ISBN 978-1-119-48551
 
 首先，请务必查看本书附带的速查表。您可以通过访问 dummies.com 并搜索 Hacking For Dummies 来获取速查表。速查表是帮助您走上正确方向或在需要时重新回到安全测试计划正轨的好方法。
 
-此外，请务必查看我的网站 [www.principlelogic.com](http://www.principlelogic.com)，尤其是“Resources”（资源）页面。
+此外，请务必查看我的网站 [`www.principlelogic.com`](http://www.principlelogic.com)，尤其是“Resources”（资源）页面。
 
 ## 后续步骤
 
@@ -101,13 +90,13 @@ ISBN 978-1-119-48547-6 (pbk); ISBN 978-1-119-48554-4 (ebk); ISBN 978-1-119-48551
 
 IN THIS PART …
 
-*   了解漏洞和渗透测试的基础。
+* 了解漏洞和渗透测试的基础。
 
-*   了解黑客的思维，以便理解他们为何以及如何行事。
+* 了解黑客的思维，以便理解他们为何以及如何行事。
 
-*   制定安全测试计划。
+* 制定安全测试计划。
 
-*   理解寻找最（和最佳）漏洞的方法论。
+* 理解寻找最（和最佳）漏洞的方法论。
 
 ## 章节 1
 
@@ -131,28 +120,25 @@ IN THIS CHAPTER
 
 ![remember](img/remember.png)`在本书中，我使用以下术语：`
 
-*   **`Hackers`**（或 *`外部攻击者`*）试图未经授权地 compromise 计算机、敏感信息，甚至整个网络以谋取不法利益——通常是从外部入侵。黑客会针对他们认为可以入侵的几乎所有系统。有些人偏好声望卓著、防护严密的系统，但入侵任何系统都能提升黑客在圈中的地位。
+* **`Hackers`**（或 *`外部攻击者`*）试图未经授权地 compromise 计算机、敏感信息，甚至整个网络以谋取不法利益——通常是从外部入侵。黑客会针对他们认为可以入侵的几乎所有系统。有些人偏好声望卓著、防护严密的系统，但入侵任何系统都能提升黑客在圈中的地位。
 
-*   **`Malicious users`**（*`外部`* 或 *`内部`* 攻击者）试图从外部（如客户或业务合作伙伴）或内部（受信任且授权的用户）入侵计算机和敏感信息，动机可能是谋取不法利益或复仇，因为他们可能拥有系统访问权限或内部知识。
+* **`Malicious users`**（*`外部`* 或 *`内部`* 攻击者）试图从外部（如客户或业务合作伙伴）或内部（受信任且授权的用户）入侵计算机和敏感信息，动机可能是谋取不法利益或复仇，因为他们可能拥有系统访问权限或内部知识。
 
-    总体而言，恶意攻击者既包括黑客也包括恶意用户。为了简化，我统称为 *`黑客`*，并在需要区分时才使用 *`黑客`* 或 *`恶意用户`* 来描述其独特的工具、技术和思维方式。
+总体而言，恶意攻击者既包括黑客也包括恶意用户。为了简化，我统称为 *`黑客`*，并在需要区分时才使用 *`黑客`* 或 *`恶意用户`* 来描述其独特的工具、技术和思维方式。
 
-*   **`Ethical hackers`**（或 *`好人`*）会入侵系统以发现漏洞，从而防止未经授权的访问、滥用和误用。信息安全研究员、顾问以及内部员工属于此类。
+* **`Ethical hackers`**（或 *`好人`*）会入侵系统以发现漏洞，从而防止未经授权的访问、滥用和误用。信息安全研究员、顾问以及内部员工属于此类。
 
 ### Hacker
 
-*   *`Hacker`* 有两层含义：
+* *`Hacker`* 有两层含义：
 
-    *   传统意义上，黑客喜欢对软件或电子系统进行玩耍。他们热衷于探索并学习计算机系统的工作原理，喜欢发现新的机械或电子工作方式。
+  * 传统意义上，黑客喜欢对软件或电子系统进行玩耍。他们热衷于探索并学习计算机系统的工作原理，喜欢发现新的机械或电子工作方式。
 
-    *   近年来，*`hacker`* 的含义逐渐转向：指那些恶意入侵系统以获取个人利益的人——技术上称为 *`crackers`*（恶意黑客）。Crackers 以恶意目的破解系统，追求名声、知识产权、利润或报复。他们篡改、删除、窃取关键信息，甚至使整个网络瘫痪，常常将大型企业和政府机构推向崩溃。
+  * 近年来，*`hacker`* 的含义逐渐转向：指那些恶意入侵系统以获取个人利益的人——技术上称为 *`crackers`*（恶意黑客）。Crackers 以恶意目的破解系统，追求名声、知识产权、利润或报复。他们篡改、删除、窃取关键信息，甚至使整个网络瘫痪，常常将大型企业和政府机构推向崩溃。
 
-    ![warning](img/warning.png)`不要被流行文化和媒体对 *hack* 的误用所迷惑，从生活窍门到所谓的选举干预。营销人员、政治家和媒体策划者知道普通用户不理解 *hacking*，于是随意使用该词以实现自己的目的。请不要被误导。`
+  ![warning](img/warning.png)`不要被流行文化和媒体对 *hack* 的误用所迷惑，从生活窍门到所谓的选举干预。营销人员、政治家和媒体策划者知道普通用户不理解 *hacking*，于是随意使用该词以实现自己的目的。请不要被误导。`
 
-*   好人（白帽）黑客不喜欢被与坏人（黑帽）黑客归为一类。（如果您好奇，白帽和黑帽源自老式西部电视剧，白帽扮演好人，黑帽扮演坏人。）*`Gray-hat`* 黑客则兼具两者特点。无论如何，大多数人对 *`hacker`* 这个词都有负面联想。
-
-
-
+* 好人（白帽）黑客不喜欢被与坏人（黑帽）黑客归为一类。（如果您好奇，白帽和黑帽源自老式西部电视剧，白帽扮演好人，黑帽扮演坏人。）*`Gray-hat`* 黑客则兼具两者特点。无论如何，大多数人对 *`hacker`* 这个词都有负面联想。
 
 进入`/path/to/xxx`目录，找到`xxx.json`。
 
@@ -174,6 +160,8 @@ Be careful not to confuse criminal hackers with security researchers. Researcher
 
 *A malicious user* — meaning a rogue employee, contractor, intern, or other user who abuses his or her trusted privileges — is a common term in security circles and in headlines about information breaches. The issue isn’t necessarily users hacking internal systems, but users who abuse the computer access privileges they’ve been given. Users ferret through critical database systems to glean sensitive information, email confidential client information to the competition or elsewhere to the cloud, or delete sensitive files from servers that they probably didn’t need to have access to in the first place.
 
+
+
 Sometimes, an innocent (or ignorant) insider whose intent isn’t malicious still causes security problems by moving, deleting, or corrupting sensitive information. Even an innocent fat finger on the keyboard can have dire consequences in the business world. Think about all the ransomware infections affecting businesses around the world. All it takes is one click by a careless user for your entire network to be affected.
 
 Malicious users are often the worst enemies of IT and information security professionals because they know exactly where to go to get the goods and don’t need to be computer-savvy to compromise sensitive information. These users have the access they need, and management trusts them — often without question.
@@ -188,11 +176,11 @@ You need protection from hacker shenanigans; you have to become as savvy as the 
 
 ### Vulnerability and penetration testing versus auditing
 
-Many people confuse security testing via vulnerability and penetration testing with security auditing, but *big* differences exist in the objectives. Security auditing involves comparing a company’s security policies (or compliance requirements) with what’s actually taking place. The intent of security auditing is to validate that security controls exist, typically by using a risk-based approach. Auditing often involves reviewing business processes and in some cases isn’t very technical. Security audits, in fact, can be as basic as security checklists that simply serve to meet a specific compliance requirement.
+Many people confuse security testing via vulnerability and penetration testing with security auditing, but `big` differences exist in the objectives. Security auditing involves comparing a company’s security policies (or compliance requirements) with what’s actually taking place. The intent of security auditing is to validate that security controls exist, typically by using a risk-based approach. Auditing often involves reviewing business processes and in some cases isn’t very technical. Security audits, in fact, can be as basic as security checklists that simply serve to meet a specific compliance requirement.
 
 ![remember](img/remember.png)`Not all audits` are high-level, but many of the ones I’ve seen — especially those involving compliance with the Payment Card Industry Data Security Standard (PCI DSS) and the Health Insurance Portability and Accountability Act (HIPAA) — are quite simplistic. Often, these audits are performed by people who have no technical computer, network, or application experience — or, worse, work outside IT altogether!
 
-Conversely, security assessments based on ethical hacking focus on vulnerabilities that can be exploited. This testing approach validates that security controls *don’t* exist or are ineffectual. This formal vulnerability and penetration testing can be both highly technical and nontechnical, and although it involves the use of formal methodology, it tends to be a bit less structured than formal auditing. Where auditing is required (such as for SSAE 16 SOC 1/2/3 audits and the ISO 27001 certification) in your organization, you might consider integrating the vulnerability and penetration testing techniques I outline in this book into your IT/security audit program. Auditing and vulnerability and penetration testing complement one another really well.
+Conversely, security assessments based on ethical hacking focus on vulnerabilities that can be exploited. This testing approach validates that security controls `don’t` exist or are ineffectual. This formal vulnerability and penetration testing can be both highly technical and nontechnical, and although it involves the use of formal methodology, it tends to be a bit less structured than formal auditing. Where auditing is required (such as for SSAE 16 SOC 1/2/3 audits and the ISO 27001 certification) in your organization, you might consider integrating the vulnerability and penetration testing techniques I outline in this book into your IT/security audit program. Auditing and vulnerability and penetration testing complement one another really well.
 
 ### Policy considerations
 
@@ -200,7 +188,7 @@ If you choose to make vulnerability and penetration testing an important part of
 
 ### Compliance and regulatory concerns
 
-Your own internal policies may dictate how management views security testing, but you also need to consider the state, federal, and international laws and regulations that affect your business. In particular, the Digital Millennium Copyright Act (DMCA) sends chills down the spines of legitimate researchers. See[`www.eff.org/issues/dmca`](http://www.eff.org/issues/dmca) for everything that the DMCA has to offer.
+Your own internal policies may dictate how management views security testing, but you also need to consider the state, federal, and international laws and regulations that affect your business. In particular, the Digital Millennium Copyright Act (DMCA) sends chills down the spines of legitimate researchers. See [`www.eff.org/issues/dmca`](http://www.eff.org/issues/dmca) for everything that the DMCA has to offer.
 
 Many federal laws and regulations in the United States — such as HIPAA and the associated Health Information Technology for Economic and Clinical Health (HITECH) Act, Gramm-Leach-Bliley Act (GLBA), North American Electric Reliability Corporation (NERC) Critical Infrastructure Protection (CIP) requirements, and PCI DSS — require strong security controls and consistent security evaluations. Related international laws —such as the Canadian Personal Information Protection and Electronic Documents Act (PIPEDA), the European Union’s General Data Protection Regulation (GDPR), and Japan’s Personal Information Protection Act (JPIPA) — are no different. Incorporating your security tests into these compliance requirements is a great way to meet state and federal regulations and to beef up your overall information security and privacy program.
 
@@ -208,18 +196,15 @@ Many federal laws and regulations in the United States — such as HIPAA and the
 
 To catch a thief, you must think like a thief. That adage is the basis of vulnerability and penetration testing. Knowing your enemy is critical. The law of averages works against security. With the increased number of hackers and their expanding knowledge, and the growing number of system vulnerabilities and other unknowns, all computer systems and applications will eventually be hacked or compromised in some way. Protecting your systems from the bad guys — not just addressing general security best practices — is critical. When you know hacker tricks, you find out how vulnerable your systems really are.
 
-
-
-
 黑客利用弱密码实践和未披露的漏洞进行攻击。越来越多的研究，例如年度《Verizon 数据泄露调查报告》([`www.verizonenterprise.com/verizon-insights-lab/dbir`](http://www.verizonenterprise.com/verizon-insights-lab/dbir))，显示长期存在的、已知的漏洞也在被攻击。防火墙、加密和其他花哨（且昂贵）的安全技术常常会产生一种虚假的安全感。这些安全系统通常关注高级别漏洞，例如访问控制和保护传输中的信息，而不影响攻击者的作战方式。主动测试自己的系统以发现漏洞——特别是那些会让许多人陷入麻烦的低悬挂果实——有助于提升系统安全性。漏洞和渗透测试是经过验证的方法，可极大加固系统免受攻击。如果不发现弱点，那么被利用的漏洞只是时间问题。
 
 随着黑客知识的扩展，你也应该如此。你必须像他们一样思考，像他们一样行动，以保护系统免受他们的侵害。作为伦理黑客，你必须了解不法黑客所进行的活动，以及如何阻止他们的努力。知道要寻找什么以及如何利用这些信息，能够帮助你阻碍黑客的行动。
 
-![tip](img/tip.png)你不必保护系统免受*一切*威胁。你无法做到。唯一能防止一切的办法是拔掉计算机系统并将其锁在仓库中，让任何人都无法触碰——包括你自己。但这种做法并非最佳的安全措施，也绝对不利于业务！重要的是保护系统免受已知漏洞和常见攻击的侵害——即那 20% 的问题导致 80% 的风险，这些问题恰恰是大多数组织中被忽视的最薄弱环节。
+![tip](img/tip.png)你不必保护系统免受`一切`威胁。你无法做到。唯一能防止一切的办法是拔掉计算机系统并将其锁在仓库中，让任何人都无法触碰——包括你自己。但这种做法并非最佳的安全措施，也绝对不利于业务！重要的是保护系统免受已知漏洞和常见攻击的侵害——即那 20% 的问题导致 80% 的风险，这些问题恰恰是大多数组织中被忽视的最薄弱环节。
 
 预测系统和业务流程中所有可能的漏洞是不可能的。你当然无法规划所有类型的攻击——尤其是未知的攻击。但你尝试的组合越多，越频繁地测试整个系统而非单个组件，你发现影响整个信息系统的漏洞的机会就越大。
 
-不过，切勿将安全测试做得过于极端；对不太可能（甚至*更不可能*）的攻击进行加固意义不大。
+不过，切勿将安全测试做得过于极端；对不太可能（甚至`更不可能`）的攻击进行加固意义不大。
 
 ![remember](img/remember.png)你的安全测试总体目标是：
 
@@ -235,6 +220,8 @@ To catch a thief, you must think like a thief. That adage is the basis of vulner
 
 仅仅知道全球黑客和内部恶意用户对系统发起攻击是一回事，另一回事是理解针对系统的具体潜在攻击。本节讨论一些知名攻击，但并非 exhaustive（全面）的列表。
 
+
+
 许多安全漏洞本身并不致命，但同时利用多个漏洞会对系统或网络环境造成严重影响。默认的 Windows 操作系统配置、弱的 SQL Server 管理员密码，或在无线网络中运行的服务器，单独来看可能并不构成重大安全隐患。但如果有人同时利用这三项漏洞，可能会实现未经授权的远程访问并泄露敏感信息（以及其他问题）。
 
 ![remember](img/remember.png)复杂性是安全的天敌。
@@ -243,9 +230,9 @@ To catch a thief, you must think like a thief. That adage is the basis of vulner
 
 ### 非技术性攻击
 
-涉及操纵人类（终端用户甚至是你自己）的攻击是任何计算机或网络基础设施的最大漏洞。人类天生相信他人，这可能导致社会工程学攻击。*社会工程学*是利用人类的信任特性获取信息（常通过电子邮件钓鱼）以达成恶意目的。查看 第 6 章 可获取更多关于社会工程学及如何防护系统的信息。
+涉及操纵人类（终端用户甚至是你自己）的攻击是任何计算机或网络基础设施的最大漏洞。人类天生相信他人，这可能导致社会工程学攻击。`社会工程学`是利用人类的信任特性获取信息（常通过电子邮件钓鱼）以达成恶意目的。查看 第 6 章 可获取更多关于社会工程学及如何防护系统的信息。
 
-其他常见且有效的信息系统攻击是物理攻击。黑客闯入建筑物、计算机室或其他存放关键信息或财产的区域，盗取电脑、服务器及其他贵重设备。物理攻击还包括 *dumpster diving*—— rummaging（翻找）垃圾桶或垃圾箱，以获取知识产权、密码、网络图、以及其他信息。
+其他常见且有效的信息系统攻击是物理攻击。黑客闯入建筑物、计算机室或其他存放关键信息或财产的区域，盗取电脑、服务器及其他贵重设备。物理攻击还包括 `dumpster diving`—— rummaging（翻找）垃圾桶或垃圾箱，以获取知识产权、密码、网络图、以及其他信息。
 
 ### 网络基础设施攻击
 
@@ -279,16 +266,13 @@ To catch a thief, you must think like a thief. That adage is the basis of vulner
 
 应用程序是黑客攻击的主要目标。Web 应用和移动应用，这两者在业务环境中最为流行，常被攻击者击溃。例如，下面列出的应用攻击及相关利用经常出现在企业网络中：
 
-*   Web 应用无处不在。由于所谓的 *shadow IT*（不同业务部门自行开发和管理技术），Web 应用遍布内部网络的各个角落以及云端。遗憾的是，许多 IT 和安全专业人员并不了解 shadow IT 的存在及其带来的风险。
+*   Web 应用无处不在。由于所谓的 `shadow IT`（不同业务部门自行开发和管理技术），Web 应用遍布内部网络的各个角落以及云端。遗憾的是，许多 IT 和安全专业人员并不了解 shadow IT 的存在及其带来的风险。
 
 *   移动应用在业务环境中使用日益增多，同时在应用商店中发现的恶意应用也带来了环境管理的挑战。
 
 *   含有敏感信息的未保护文件散落在工作站和服务器共享中，也存储在 OneDrive、Google Drive 等云端存储位置。数据库系统同样包含众多可被恶意用户利用的漏洞。
 
 ## 遵循安全评估原则
-
-
-
 
 安全专业人员必须对计算机系统、物理控制和人员进行与恶意黑客相同的攻击（我在前文中介绍了这些攻击）。安全专业人员的意图是突出任何相关的弱点。Parts 2 通过 5 章节详细说明如何进行这些攻击，并提供针对业务攻击的具体防护措施。
 
@@ -298,13 +282,13 @@ To catch a thief, you must think like a thief. That adage is the basis of vulner
 
 ### 伦理工作
 
-在此语境下，*ethical*意味着以高尚的职业道德和价值观工作。无论你是对自己的系统进行安全测试，还是为他人进行测试，所有操作都必须公开透明，支持公司的目标，没有隐藏 agenda —  — 仅是职业操守。伦理还意味着无论结果是否会引发政治争议，都要如实报告所有发现。别笑；我曾多次目睹有人因为不想“搅乱船只”或面对难缠的高管或供应商而轻描淡写地忽视安全漏洞。
+在此语境下，`ethical`意味着以高尚的职业道德和价值观工作。无论你是对自己的系统进行安全测试，还是为他人进行测试，所有操作都必须公开透明，支持公司的目标，没有隐藏 agenda — — 仅是职业操守。伦理还意味着无论结果是否会引发政治争议，都要如实报告所有发现。别笑；我曾多次目睹有人因为不想“搅乱船只”或面对难缠的高管或供应商而轻描淡写地忽视安全漏洞。
 
-*Trustworthiness*（可信度）是最高的原则。它也是赢得并保持他人支持、推动安全计划的最佳方式。滥用信息和权力是绝对禁止的；这就是坏 guys（坏人）做的事，让他们因自己的糟糕选择付出代价或入狱。记住，你可以是伦理的但不可信任，反之亦然，正如爱德华·斯诺登（Edward Snowden）所展示的那样。这些复杂性是安全计划面临的整体挑战。我不因你面对的复杂性而感到羡慕。
+`Trustworthiness`（可信度）是最高的原则。它也是赢得并保持他人支持、推动安全计划的最佳方式。滥用信息和权力是绝对禁止的；这就是坏 guys（坏人）做的事，让他们因自己的糟糕选择付出代价或入狱。记住，你可以是伦理的但不可信任，反之亦然，正如爱德华·斯诺登（Edward Snowden）所展示的那样。这些复杂性是安全计划面临的整体挑战。我不因你面对的复杂性而感到羡慕。
 
 ### 尊重隐私
 
-请以尊重的态度对待你收集的信息。你在测试过程中获得的所有信息 —  — 从 Web 应用漏洞、明文电子邮件密码、个人可识别信息（PII）乃至更多 —  — 必须保密。没有任何好处可以来自窥探公司机密信息或员工私人生活。
+请以尊重的态度对待你收集的信息。你在测试过程中获得的所有信息 — — 从 Web 应用漏洞、明文电子邮件密码、个人可识别信息（PII）乃至更多 — — 必须保密。没有任何好处可以来自窥探公司机密信息或员工私人生活。
 
 ![tip](img/tip.png)请让他人参与你的流程。使用同行评审或类似的监督机制，可以帮助建立信任并为你的安全评估项目争取支持。
 
@@ -316,7 +300,7 @@ To catch a thief, you must think like a thief. That adage is the basis of vulner
 
 你甚至可能因为使用漏洞扫描器或在未意识到后果的情况下 socially engineering 他人更改密码，而不小心导致账户或系统被锁定。请务必谨慎行事，运用常识。无论是你还是他人，这些弱点依然存在，最好先发现它们。
 
-![tip](img/tip.png)许多漏洞扫描器可以控制同一时间对每个系统执行的测试数量。这些设置在需要在正常工作时间内对生产系统进行测试时尤为有用。别害怕降低扫描速度。虽然完成测试会耗时更长，但适度降速可能会在存在不稳定系统时为你省下很多麻烦。
+![tip](img/tip.png)许多漏洞扫描器可以控制同一时间对每个系统执行的测试数量。这些设置在需要在正常工作时间内对生产系统进行测试时尤其有用。别害怕降低扫描速度。虽然完成测试会耗时更长，但适度降速可能会在存在不稳定系统时为你省下很多麻烦。
 
 ## 使用漏洞和渗透测试流程
 
@@ -326,28 +310,25 @@ To catch a thief, you must think like a thief. That adage is the basis of vulner
 
 ### 制定计划
 
-获得安全测试的批准至关重要。确保你的工作被决策者所知晓并可见 —  — 至少要让关键相关方了解。项目赞助是第一步，它能明确测试目标。赞助方可能来自你的经理、高层管理、客户，甚至是你自己（如果你是老板）。你需要有人为你背书并签署计划。否则，测试可能会因有人（包括云服务提供商、托管提供商等第三方）声称你从未获得授权而被迫中止。更糟的是，你可能会被解雇，或面临刑事责任。
+获得安全测试的批准至关重要。确保你的工作被决策者所知晓并可见 — — 至少要让关键相关方了解。项目赞助是第一步，它能明确测试目标。赞助方可能来自你的经理、高层管理、客户，甚至是你自己（如果你是老板）。你需要有人为你背书并签署计划。否则，测试可能会因有人（包括云服务提供商、托管提供商等第三方）声称你从未获得授权而被迫中止。更糟的是，你可能会被解雇，或面临刑事责任。
 
-授权可以是一份内部备忘录，或在你在自己的系统上进行测试时，上级的电子邮件。如果你为客户进行测试，则需要一份签署的合同，明确客户的支持与授权。尽快获得书面批准，以确保你的时间和精力不会被浪费。这份文档就是你的“免于入狱”凭证 —  — 当 ISP、云服务提供商或相关供应商质疑你在做什么，或当当局上门时，它能让你立即证明自己拥有合法授权。别笑 —  — 这已经发生过不止一次。
+授权可以是一份内部备忘录，或在你在自己的系统上进行测试时，上级的电子邮件。如果你为客户进行测试，则需要一份签署的合同，明确客户的支持与授权。尽快获得书面批准，以确保你的时间和精力不会被浪费。这份文档就是你的“免于入狱”凭证 — — 当 ISP、云服务提供商或相关供应商质疑你在做什么，或当当局上门时，它能让你立即证明自己拥有合法授权。别笑 — — 这已经发生过不止一次。
 
 一个失误可能导致系统崩溃，这并非任何人想要的结果。你需要一份详细的计划，但不必编写庞大的、让计划过于复杂的测试程序。一个明确的范围应包含以下信息：
 
 *   **待测试的具体系统：** 在选择测试对象时，先从最关键的系统或进程，或是你怀疑最易受攻击的系统开始。你可以测试服务器操作系统密码、测试面向公众的 Web 应用，或在深入全系统之前，通过电子邮件钓鱼进行社会工程攻击。
 
-*   **涉及的风险：** 在安全测试过程中制定应急预案，以防出现问题。例如，若你在评估防火墙或 Web 应用，并将其下线，可能导致系统不可用，进而影响性能或员工生产力。更严重的是，可能造成数据完整性丧失、数据丢失，甚至产生不良公 ity（舆论），让相关人员不满，使你形象受损。这些都会带来业务风险。
+*   **涉及的风险：** 在安全测试过程中制定应急预案，以防出现问题。例如，若你在评估防火墙或 Web 应用，并将其下线，可能导致系统不可用，进而影响性能或员工生产力。更严重的是，可能造成数据完整性丧失、数据丢失，甚至产生不良 public ity（舆论），让相关人员不满，使你形象受损。这些都会带来业务风险。
 
     请谨慎处理社交工程和 DoS（拒绝服务）攻击。确定它们可能如何影响你所测试的系统和人员。
 
 *   **测试日期及整体时间表：** 确定测试何时进行是关键。决定是否在正常工作时间进行，还是在深夜或清晨进行，以避免影响生产系统。务必征求相关人员的意见，确保他们认可你的时间安排。
 
-
-
-
 你可能会遭到抵制并受到拒绝服务（DoS）相关的后果，但最佳做法是进行无限制攻击，在任何时间、针对任何类型的测试均可进行。恶意分子并未在受限范围内入侵你的系统，所以你也无需如此。除此以外，还有一些例外情况：进行全面的 DoS 攻击、社会工程学攻击以及实物安全测试。
 
 无论是否打算被检测到：你的目标之一可能是不被发现地进行测试。你可能会在远程系统或远程办公环境中进行测试，而不希望用户知晓你的活动。否则，用户或 IT 人员可能会察觉到你的行为，并改变自己的正常行为。
 
-是否保留安全控制：一个重要但常被忽视的问题在于是否保留安全控制，例如防火墙、入侵防御系统（IPSes）和 web 应用防火墙（WAFs），以便它们能够阻止扫描和利用尝试。保留这些控制提供了真实世界的视图，显示当前的安全状况。但我发现 *much* 更大的价值在于禁用这些控制（或将你的 IP 地址加入白名单），从而可以撕开帘子，发现更多的漏洞。
+是否保留安全控制：一个重要但常被忽视的问题在于是否保留安全控制，例如防火墙、入侵防御系统（IPSes）和 web 应用防火墙（WAFs），以便它们能够阻止扫描和利用尝试。保留这些控制提供了真实世界的视图，显示当前的安全状况。但我发现 `much` 更大的价值在于禁用这些控制（或将你的 IP 地址加入白名单），从而可以撕开帘子，发现更多的漏洞。
 
 许多人希望保留安全控制。毕竟，这种做法能让他们在安全检查中表现更好，因为很多检查很可能会被阻止。然而，在我看来，这种分层防御的做法虽然很好，但可能会产生严重的安全感假象，并且不能完整反映组织的整体安全态势。
 
@@ -370,22 +351,31 @@ To catch a thief, you must think like a thief. That adage is the basis of vulner
 确保你使用以下类型的工具：
 
 - 破解密码：需要像 `Ophcrack` 和 `Proactive Password Auditor` 这类破解工具。
+
 - 深入分析 Web 应用：应使用 Web 漏洞扫描器（如 `Netsparker` 或 `Acunetix Web Vulnerability Scanner`），而不是网络分析仪（如 `Wireshark` 或 `Omnipeek`）。
 
 许多安全/黑客工具的功能被误解，这种误解让本应受到好评的工具声名狼藉，甚至有些政府机构在讨论将它们列为非法。误解的原因之一是某些安全测试工具的复杂性。无论你使用哪些工具，务必在使用前熟悉它们。这样，你就能按照工具的预期用法来使用它们。下面是实现方式：
 
-- 阅读 readme 文件和/或在线帮助文档及常见问题（FAQ）。
+- 阅读 `readme` 文件和/或在线帮助文档及常见问题（FAQ）。
+
 - 研读用户指南。
+
 - 在实验室或测试环境中使用工具。
+
 - 观看 YouTube 教程视频（尽管大多数的制作质量并不高）。
+
 - 考虑向安全工具供应商或第三方培训机构报名正式课堂培训（如果有的话）。
 
 在选择安全测试工具时，应关注以下特征：
 
 - 文档完备、说明清晰。
+
 - 能够提供详细的漏洞报告，包括利用方式和修复方法。
+
 - 获得行业广泛认可。
+
 - 有定期更新，技术支持响应及时。
+
 - 能生成面向管理层或非技术人员的高层次报告（在当今审计和合规驱动的环境中尤为重要）。
 
 这些特点在执行测试并编写最终报告时能节省大量时间和精力。
@@ -414,9 +404,6 @@ To catch a thief, you must think like a thief. That adage is the basis of vulner
 
 ### 评估结果
 
-
-
-
 评估你的结果，看看你已经发现了什么，假设在此时为止漏洞并未被明显暴露。知识很重要。你评估结果和关联所发现的具体漏洞的技巧会随着实践而变得更好。你将比任何人都更深入地了解你的系统，这将使后续的评估过程变得更加简便。
 
 ![tip](img/tip.png)向管理层或客户提交正式报告，阐述你的结果和需要分享的任何建议。保持这些方的知情，以展示你的努力和他们的金钱花费得当。Chapter 17 描述了安全评估报告的流程。
@@ -425,7 +412,7 @@ To catch a thief, you must think like a thief. That adage is the basis of vulner
 
 当你完成安全测试后，你（或客户）仍需实施我的建议，以确保系统安全。否则，所有在测试上投入的时间、金钱和精力都将白费。遗憾的是，我常常看到这种情况。
 
-![remember](img/remember.png)新的安全漏洞不断出现。信息系统变得更加复杂。新的安全漏洞和利用被不断发现。漏洞扫描工具不断进步。安全测试提供系统安全状态的快照。任何时候，一切都可能改变，尤其是在你升级软件、添加计算机系统或应用补丁后。这种情况凸显了需要经常更新工具的必要性 —  — 如果可能的话，在每次使用前都更新。计划定期且持续地测试（比如每月、每季度或半年一次）。Chapter 19 介绍了在前进过程中管理安全变更的方法。
+![remember](img/remember.png)新的安全漏洞不断出现。信息系统变得更加复杂。新的安全漏洞和利用被不断发现。漏洞扫描工具不断进步。安全测试提供系统安全状态的快照。任何时候，一切都可能改变，尤其是在你升级软件、添加计算机系统或应用补丁后。这种情况凸显了需要经常更新工具的必要性 — — 如果可能的话，在每次使用前都更新。计划定期且持续地测试（比如每月、每季度或半年一次）。Chapter 19 介绍了在前进过程中管理安全变更的方法。
 
 Chapter 2
 
@@ -447,11 +434,15 @@ IN THIS CHAPTER
 
 ## What You’re Up Against
 
-由于媒体的炒作，公众对 *hacker* 的认知从无害的业余爱好者转变为恶意罪犯。然而，黑客经常表示公众误解了他们，这大多是事实。很容易在不了解的情况下形成偏见。不幸的是，许多黑客刻板印象是基于误解而非事实的，而这种误解不断助长一种持续的争论。
+由于媒体的炒作，公众对 `hacker` 的认知从无害的业余爱好者转变为恶意罪犯。然而，黑客经常表示公众误解了他们，这大多是事实。很容易在不了解的情况下形成偏见。不幸的是，许多黑客刻板印象是基于误解而非事实的，而这种误解不断助长一种持续的争论。
 
 黑客可以根据其能力和底层动机进行分类。有些人技术娴熟，动机良好；他们只是追求更多知识。但其他黑客则有恶意意图，追求某种个人、政治或经济利益。不幸的是，黑客的负面方面通常掩盖了正面方面，并强化了负面刻板印象。
 
-历史上，黑客为了追求知识和挑战的刺激而进行黑客活动。除了 *script kiddies*（技能有限的黑客爱好者）之外，传统黑客是冒险且富有创新思维的人，他们一直在尝试新的方法来利用计算机漏洞。（关于 script kiddies 的更多内容，请参见本章后的“Who Breaks into Computer Systems”部分。）黑客会注意到其他人常常忽略的事物。他们思维敏捷，具备良好的情境感知能力。他们会好奇地思考：如果一根电缆被拔掉、一个开关被切换，或程序中的代码行被修改，会发生什么。他们会进行这些尝试，然后观察结果。这些老派黑客就像 Tim “The Tool Man” Taylor —  — 汤姆·艾伦在经典情景喜剧《Home Improvement》中的角色 —  — 认为他们可以通过“重新布线”来改进电子和机械设备。
+历史上，黑客为了追求知识和挑战的刺激而进行黑客活动。除了 `script kiddies`（技能有限的黑客爱好者）之外，传统黑客是冒险且富有创新思维的人，他们一直在尝试新的方法来利用计算机漏洞。（关于 script kiddies 的更多内容，请参见本章后的“Who Breaks into Computer Systems”部分。）黑客会注意到其他人常常忽略的事物。他们思维敏捷，具备良好的情境感知能力。他们会好奇地思考：如果一根电缆被拔掉、一个开关被切换，或程序中的代码行被修改，会发生什么。他们会进行这些尝试，然后观察结果。这些老派黑客就像 Tim “The Tool Man” Taylor — — 汤姆·艾伦在经典情景喜剧《Home Improvement》中的角色 — — 认为他们可以通过“重新布线”来改进电子和机械设备。
+
+
+
+# 在成长过程中，黑客的对手是视频游戏屏幕上的怪物和反派
 
 在成长过程中，黑客的对手是视频游戏屏幕上的怪物和反派。如今，黑客把他们的电子对手仅仅视为“电子”对手。进行恶意行为的黑客并不真正考虑到，他们攻击的防火墙、无线网络和 Web 应用背后是有血有肉的真实人。他们忽视了自己的行为会对这些人产生负面影响，比如危及他们的工作安全，甚至危及个人安全。政府支持的黑客？那是另一回事，因为这些黑客是在做出经过计算的决定。
 
@@ -461,12 +452,9 @@ IN THIS CHAPTER
 
 不管你如何看待刻板的黑客或恶意用户，一件事是确定的：总有人会尝试通过拒绝服务（DoS）攻击或创建并发布恶意软件来破坏你的计算机系统并窃取信息。你必须采取适当的措施来保护系统免受这种入侵。
 
-
-
-
 在`a world of black and white`，描述`typical hacker`是`easy`。`The historical stereotype of a hacker`是`an antisocial, pimply teenage boy`。`But the world has many shades of gray, and many types of people do the hacking`。`Hackers are unique people, so a profile is hard to outline`。`The best broad description of hackers is that all hackers aren’t equal`。`Each hacker has unique motives, methods, and skills`。
 
-### Hacker skill levels
+## Hacker skill levels
 
 `Hacker skill levels`落入`three general categories`：
 
@@ -486,7 +474,7 @@ IN THIS CHAPTER
 
 `Regardless of age and complexion, hackers possess curiosity, bravado, and often very sharp minds`。
 
-### Hacker motivations
+## Hacker motivations
 
 `Perhaps more important than a hacker’s skill level is his or her motivation`。`The following groups of hackers have different motivations`：
 
@@ -504,9 +492,9 @@ IN THIS CHAPTER
 
 `Many hackers get a kick out of outsmarting corporate and government IT and security administrators`。`They thrive on making headlines and being notorious`。`Defeating an entity or possessing knowledge that few other people have makes them feel better about themselves, building their self-esteem`。`Many of these hackers feed off the instant gratification of exploiting a computer system`。`They become obsessed with this feeling`。`Some hackers can’t resist the adrenaline rush they get from breaking into someone else’s systems`。`Often, the more difficult the job is, the greater the thrill is for hackers`
 
+
+
 `It’s a bit ironic, given their collective tendencies, but hackers often promote individualism — or at least the decentralization of information — because many of them believe that all information should be free`。`They think that their attacks are different from attacks in the real world`。`Hackers may ignore or misunderstand their victims and the consequences of hacking`。`They don’t think about the long-term effects of the choices they’re making today`。`Many hackers say that they don’t intend to harm or profit through their bad deeds, and this belief helps them justify their work`。`Others don’t look for tangible payoffs; just proving a point is often a sufficient reward for them`。`The word sociopath comes to mind when describing many such people`
-
-
 
 恶意攻击者获得的知识以及成功入侵后获得的自尊心提升，可能会成瘾并演变成一种生活方式。一些攻击者希望让你的生活变得痛苦，而另一些则仅仅想要被看到或被听见。一些常见的动机包括报复、炫耀、好奇心、无聊、挑战、破坏、为获取金钱而盗窃、破坏、勒索、敲诈、企业间谍行为，以及对“the man”（体制）的公开反对。黑客经常引用这些动机来解释自己的行为，但他们往往在经济条件困难时更频繁地提及这些动机。
 
@@ -516,7 +504,7 @@ IN THIS CHAPTER
 
 黑客经常只是 `because they can`（因为能就能）进行入侵。有些黑客针对高知名度系统，但入侵任何系统都能让他们融入黑客圈子。黑客利用人们对安全的错误感知，针对几乎任何他们认为可以入侵的系统发起攻击。电子信息可以同时存在多个位置，因此如果黑客仅仅复制入侵系统中的信息，很难证明他们持有这些信息，也无法将其取回。
 
-同样，黑客知道，仅仅破坏一个网页（尽管容易实现）并不利于他人业务。通常需要大规模数据泄露或钓鱼邮件攻击，导致大额资金被非法转账，才能引起业务高管的注意。但被入侵的网站常常能说服管理层和其他持怀怀疑态度的人关注信息安全威胁和漏洞。
+同样，黑客知道，仅仅破坏一个网页（尽管容易实现）并不利于他人业务。通常需要大规模数据泄露或钓鱼邮件攻击，导致大额资金被非法转账，才能引起业务高管的注意。但被入侵的网站常常能说服管理层和其他持怀疑态度的人关注信息安全威胁和漏洞。
 
 许多最近的研究表明，大多数安全漏洞都是基础性的，这正好是我在安全评估中所看到的。我称这些基础漏洞为网络的 `low-hanging fruit`（低垂的果实），随时等待被利用。计算机入侵变得更容易执行却更难防范的原因包括：
 
@@ -538,9 +526,9 @@ IN THIS CHAPTER
 
 尽管许多攻击未被发现或报告，一旦被发现，罪犯往往不会受到追责。当他们被捕时，黑客往往会将自己的行为合理化为利他的、对社会有益：他们只是在别人之前揭示漏洞。尽管如此，如果黑客被捕并受到起诉，他们依赖的“名声和荣耀”奖励体系就会受到威胁。
 
-对恶意用户同样适用。通常他们的犯罪活动不被注意到，但如果被捕，安全 breach 可能会在保护股东价值或不惹恼客户和业务合作伙伴的名义下被隐瞒。然而，信息安全和隐私法律法规正在改变这种局面，因为在大多数情况下， breach 通知是强制性的。有时，恶意用户会被解雇或要求辞职。虽然通过 breach 披露法规，内部 breach 的公开案例正在增多（通常是通过 breach 通知法），但这些案例并不能全面反映平均组织内部实际发生的情况。
+对恶意用户同样适用。通常他们的犯罪活动不被注意到，但如果被捕，安全 `breach` 可能会在保护股东价值或不惹恼客户和业务合作伙伴的名义下被隐瞒。然而，信息安全和隐私法律法规正在改变这种局面，因为在大多数情况下，`breach` 通知是强制性的。有时，恶意用户会被解雇或要求辞职。虽然通过 `breach` 披露法规，内部 `breach` 的公开案例正在增多（通常是通过 `breach` 通知法），但这些案例并不能全面反映平均组织内部实际发生的情况。
 
-无论愿不愿意，大多数高管现在都必须处理各类州、联邦和国际法律法规，这些法规要求对 breach 或疑似 breach 的敏感信息进行通报。这些要求适用于外部入侵、内部 breach，甚至看似无害的丢失移动设备和备份磁带。附录列出了可能影响贵公司的信息安全和隐私法律法规。
+无论愿不愿意，大多数高管现在都必须处理各类州、联邦和国际法律法规，这些法规要求对 `breach` 或疑似 `breach` 的敏感信息进行通报。这些要求适用于外部入侵、内部 `breach`，甚至看似无害的丢失移动设备和备份磁带。附录列出了可能影响贵公司的信息安全和隐私法律法规。
 
 ## 规划和执行攻击
 
@@ -548,22 +536,19 @@ IN THIS CHAPTER
 
 * 有些黑客在攻击前准备甚久。他们收集小段信息，并有条不紊地执行攻击，正如我在 第 4 章 中所阐述。这类黑客是最难追踪的。
 
-* 另一些黑客——通常是缺乏经验的脚本小子——在行动前未充分思考后果。例如，他们可能直接 Telnet 进入组织的路由器而不隐藏身份；或在未确认 Microsoft Exchange 版本及已装防护补丁的情况下，对 Exchange 服务器发起拒绝服务（DoS）攻击。这类黑客通常会被抓获，或至少被阻止。
+* 另一些黑客——通常是缺乏经验的脚本小子——在行动前未充分思考后果。例如，他们可能直接 `Telnet` 进入组织的路由器而不隐藏身份；或在未确认 `Microsoft Exchange` 版本及已装防护补丁的情况下，对 `Exchange` 服务器发起拒绝服务（`DoS`）攻击。这类黑客通常会被抓获，或至少被阻止。
 
-* 恶意用户五花八门。有些人对网络及组织内部 IT 和安全运作非常了解；另一些人则盲目探测不该涉足的系统，往往做蠢事，导致安全或网络管理员将他们定位。
+* 恶意用户五花八门。有些人对网络及组织内部 `IT` 和安全运作非常了解；另一些人则盲目探测不该涉足的系统，往往做蠢事，导致安全或网络管理员将他们定位。
 
 尽管黑客地下社区是一个社区，但许多黑客——尤其是高级黑客——不与大众共享信息。大多数黑客倾向于独立完成工作，以保持匿名。
 
-![tip](img/tip.png)经常相互交流的黑客常使用私人论坛、匿名邮箱、黑客地下网站（即深网或暗网）以及 Internet Relay Chat（IRC）。你可以登录这些站点中的许多，查看黑客们在做什么。
+![tip](img/tip.png)经常相互交流的黑客常使用私人论坛、匿名邮箱、黑客地下网站（即深网或暗网）以及 `Internet Relay Chat`（`IRC`）。你可以登录这些站点中的许多，查看黑客们在做什么。
 
 无论采取何种方式，大多数恶意攻击者都利用无知。他们了解以下真实世界安全方面：
 
-* **大多数计算机系统管理不当。** 系统未及时补丁、未正确硬化、缺乏监控。攻击者常能在防火墙或入侵防御系统（IPS）的视线下飞行，尤其是那些尚未被监控且拥有完全访问权限的恶意用户。
+* **大多数计算机系统管理不当。** 系统未及时补丁、未正确硬化、缺乏监控。攻击者常能在防火墙或入侵防御系统（`IPS`）的视线下飞行，尤其是那些尚未被监控且拥有完全访问权限的恶意用户。
 
-* **大多数网络和安全管理员跟不上新漏洞和攻击手段的洪流。** 他们任务繁重，火灾四起，难以及时发现或应对安全事件，往往因时间和目标管理不善而错失良机。附录中提供了针对 IT 和安全专业人员的时间与目标管理资源。
-
-
-
+* **大多数网络和安全管理员跟不上新漏洞和攻击手段的洪流。** 他们任务繁重，火灾四起，难以及时发现或应对安全事件，往往因时间和目标管理不善而错失良机。附录中提供了针对 `IT` 和安全专业人员的时间与目标管理资源。
 
 信息系统每年都在变得更加复杂。这一事实正是过载的管理员难以了解所有系统的网络和硬盘上正在发生什么的原因。虚拟化、云服务以及笔记本电脑、平板电脑和手机等移动设备是这种复杂性的基础。物联网正在使问题变得指数级更糟。
 
@@ -575,13 +560,13 @@ IN THIS CHAPTER
 
 黑客通常通过以下资源保持匿名：
 
-* 使用朋友或前雇主的借用或被盗用的远程桌面和虚拟专用网络（VPN）账户。
+* 使用朋友或前雇主的借用或被盗用的远程桌面和虚拟专用网络（`VPN`）账户。
 
 * 图书馆、学校或酒店商务中心的公共电脑。
 
 * 开放的无线网络。
 
-* Internet 代理服务器或匿名化服务。
+* `Internet` 代理服务器或匿名化服务。
 
 * 匿名或一次性电子邮件账户。
 
@@ -593,7 +578,7 @@ IN THIS CHAPTER
 
 如果黑客使用足够多的跳板进行攻击，他们几乎无法被追踪。幸运的是，你最大的担忧——恶意用户——通常并不那么聪明，除非他是网络或安全管理员。在这种情况下，你面临严重的局面。没有强有力的监督，你无法阻止黑客在你的网络上造成破坏。
 
-Chapter 3
+## Chapter 3
 
 ## Developing Your Security Testing Plan
 
@@ -623,27 +608,27 @@ IN THIS CHAPTER
 
 在定义安全测试计划目标时，以下问题可以帮助你启动思路：
 
-* 你的测试是否支持业务及其 IT 和安全部门的使命？
+* 你的测试是否支持业务及其 `IT` 和安全部门的使命？
 
 * 执行此测试能满足哪些业务目标？这些目标可能包括：
 
-    * 通过 Statement on Standards for Attestation Engagements（SSAE）18 审计。
+    * 通过 `Statement on Standards for Attestation Engagements`（`SSAE`）18 审计。
 
-    * 满足联邦法规，如健康保险可携带性和责任法案（HIPAA）和支付卡行业数据安全标准（PCI DSS）。
+    * 满足联邦法规，如健康保险可携带性和责任法案（`HIPAA`）和支付卡行业数据安全标准（`PCI DSS`）。
 
     * 满足客户或业务合作伙伴的合同要求。
 
     * 维护公司形象。
 
-    * 为 internationally 认可的安全标准 ISO/IEC 27001:2013 做准备。
+    * 为 `internationally` 认可的安全标准 `ISO/IEC 27001:2013` 做准备。
 
-* 这项测试如何改善安全、IT 和整体业务？
+* 这项测试如何改善安全、`IT` 和整体业务？
 
 * 你保护了哪些信息（例如个人健康信息、知识产权、机密客户信息或员工的私人信息）？
 
 * 你和你的组织愿意为安全评估投入多少金钱、时间和精力？
 
-* 你将产生哪些具体交付物？*交付物*可以包括从高层执行摘要报告到详细技术报告，以及你测试的内容和结果的说明。你可以在测试过程中获取的具体信息，如密码和其他机密信息。
+* 你将产生哪些具体交付物？`交付物`可以包括从高层执行摘要报告到详细技术报告，以及你测试的内容和结果的说明。你可以在测试过程中获取的具体信息，如密码和其他机密信息。
 
 * 你想要实现哪些具体结果？期望的结果包括为聘请或外包安全人员提供理由、增加安全预算、满足合规要求或增强安全系统。
 
@@ -651,7 +636,7 @@ IN THIS CHAPTER
 
 * 你何时开始测试？
 
-* 你的测试方式是 `blind`（即隐蔽测试，你对被测试系统一无所知）还是 `knowledge-based`（即基于知识的测试，你获得了被测试系统的具体信息，如 IP 地址、主机名、用户名和密码）？
+* 你的测试方式是 `blind`（即隐蔽测试，你对被测试系统一无所知）还是 `knowledge-based`（即基于知识的测试，你获得了被测试系统的具体信息，如 `IP` 地址、主机名、用户名和密码）？
 
     ![tip](img/tip.png)我推荐后者。
 
@@ -673,101 +658,97 @@ IN THIS CHAPTER
 
 ## Determining Which Systems to Test
 
+在确定总体目标后，决定要测试哪些系统。你可能不需要 — — 也无需 — — 同时评估所有系统的安全性。评估所有系统的安全性可能是一项庞大的工作，并且可能导致问题。我并不是建议你永远不评估你拥有的每台计算机和应用程序。我只是建议，只要可能，你就应该将项目分解为更小的部分，使其更易于管理，尤其是如果你刚刚开始时。帕累托原则（关注最高回报的任务）应当占主导地位。你可能会根据高层风险分析来决定测试哪些系统，需要回答以下问题：
 
+* 你的最关键系统有哪些？
 
+* 哪些系统，如果未经授权访问，会造成最大麻烦或遭受最大损失？
 
-在确定总体目标后，决定要测试哪些系统。你可能不需要 —  — 也无需 —  — 同时评估所有系统的安全性。评估所有系统的安全性可能是一项庞大的工作，并且可能导致问题。我并不是建议你永远不评估你拥有的每台计算机和应用程序。我只是建议，只要可能，你就应该将项目分解为更小的部分，使其更易于管理，尤其是如果你刚刚开始时。帕累托原则（关注最高回报的任务）应当占主导地位。你可能会根据高层风险分析来决定测试哪些系统，需要回答以下问题：
+* 哪些系统看起来最容易受到攻击？
 
-*   你的最关键系统有哪些？
-
-*   哪些系统，如果未经授权访问，会造成最大麻烦或遭受最大损失？
-
-*   哪些系统看起来最容易受到攻击？
-
-*   哪些系统缺乏文档，管理不频繁，或者是你所知最少的？
+* 哪些系统缺乏文档，管理不频繁，或者是你所知最少的？
 
 下面的列表包括你可能进行漏洞和渗透测试的设备、系统和应用程序：
 
-*   路由器和交换机
+* 路由器和交换机
 
-*   防火墙
+* 防火墙
 
-*   无线接入点
+* 无线接入点
 
-*   Web 应用程序（内部、外部（本地托管或在云中）
+* `Web` 应用程序（内部、外部（本地托管或在云中）
 
-*   数据库、邮件和文件服务器
+* 数据库、邮件和文件服务器
 
-*   存储机密信息的移动设备（如智能手机和平板电脑）
+* 存储机密信息的移动设备（如智能手机和平板电脑）
 
-*   物理安全摄像头和建筑物访问控制系统
+* 物理安全摄像头和建筑物访问控制系统
 
-*   监控控制与数据采集（SCADA）和工业控制系统
+* 监控控制与数据采集（`SCADA`）和工业控制系统
 
-*   工作站和服务器
+* 工作站和服务器
 
-你测试的系统取决于多种因素。如果你拥有小型网络，你可以测试所有系统。对于大型组织，应考虑仅测试公共可访问的主机，例如电子邮件和 web 服务器及其关联应用程序。安全测试流程灵活。基于商业意义或合规法规或业务合作伙伴和客户的要求来做出决定。
+你测试的系统取决于多种因素。如果你拥有小型网络，你可以测试所有系统。对于大型组织，应考虑仅测试公共可访问的主机，例如电子邮件和 `web` 服务器及其关联应用程序。安全测试流程灵活。基于商业意义或合规法规或业务合作伙伴和客户的要求来做出决定。
 
 从最脆弱的系统开始，并考虑以下因素：
 
-*   计算机或应用程序是位于网络内部还是云端。
+* 计算机或应用程序是位于网络内部还是云端。
 
-*   该系统运行的操作系统（OS）和应用程序。
+* 该系统运行的操作系统（`OS`）和应用程序。
 
-*   系统上存储的关键信息的数量或类型。
+* 系统上存储的关键信息的数量或类型。
 
-之前的安全风险评估、漏洞测试或业务影响分析可能已经回答了上述问题。如果有相关文档，它可以帮助你识别进一步测试的系统。Bow Tie 和失效模式与影响分析（FMEA）是其他方法。
+之前的安全风险评估、漏洞测试或业务影响分析可能已经回答了上述问题。如果有相关文档，它可以帮助你识别进一步测试的系统。`Bow Tie` 和失效模式与影响分析（`FMEA`）是其他方法。
 
-![tip](img/tip.png)漏洞和渗透测试比基础漏洞扫描和高层信息风险评估更深入。通过适当的测试，你可以先收集所有系统的信息 —  — 包括整个组织 —  — 然后再重点评估最脆弱的系统。我在 第 4 章 中讨论了漏洞和渗透测试方法论。
+![tip](img/tip.png)漏洞和渗透测试比基础漏洞扫描和高层信息风险评估更深入。通过适当的测试，你可以先收集所有系统的信息 — — 包括整个组织 — — 然后再重点评估最脆弱的系统。我在 第 4 章 中讨论了漏洞和渗透测试方法论。
 
-另一个决定从哪里开始的因素是你对系统可见度的评估。初期可能更合理（至少在最初）关注存储关键客户信息的数据库或文件服务器，而不是集中在托管营销信息的防火墙或 web 服务器上。
+另一个决定从哪里开始的因素是你对系统可见度的评估。初期可能更合理（至少在最初）关注存储关键客户信息的数据库或文件服务器，而不是集中在托管营销信息的防火墙或 `web` 服务器上。
 
 ### 创建测试标准
 
 一次误解或失误可能导致系统在你的安全测试期间崩溃。没有人希望这样发生。为了防止事故，请制定并记录测试标准。这些标准应包括：
 
-*   测试的时间以及整体时间表。
+* 测试的时间以及整体时间表。
 
-*   执行哪些测试。
+* 执行哪些测试。
 
-*   你事先了解系统的程度。
+* 你事先了解系统的程度。
 
-*   测试的具体操作方式以及来源 IP 地址（如果通过 Internet 进行外部测试）。
+* 测试的具体操作方式以及来源 `IP` 地址（如果通过 `Internet` 进行外部测试）。
 
-*   发现重大漏洞后的应对措施。
+* 发现重大漏洞后的应对措施。
 
 此列表为通用最佳实践；根据具体情况，你可以应用更多标准。下面的章节将详细描述这些最佳实践。
 
 #### 何时进行测试
 
-人们常说“时机就是一切”，尤其是在进行安全测试时。确保你的测试尽量减少对业务流程、信息系统和人员的干扰。你想避免因误传测试时间而导致在高流量电子商务站点中间进行拒绝服务（DoS）攻击，或在深夜进行密码破解测试的情况。12 小时的时间差（如在重大生产时段的下午 2 点与在较慢时期的凌晨 2 点）在测试系统时可能产生巨大差异！即使团队成员分布在不同时区，也可能带来问题。项目中所有成员必须在开始之前同意详细的时间表。团队成员的认同能让大家站在同一页，设定正确的期望。
+人们常说“时机就是一切”，尤其是在进行安全测试时。确保你的测试尽量减少对业务流程、信息系统和人员的干扰。你想避免因误传测试时间而导致在高流量电子商务站点中间进行拒绝服务（`DoS`）攻击，或在深夜进行密码破解测试的情况。12 小时的时间差（如在重大生产时段的下午 2 点与在较慢时期的凌晨 2 点）在测试系统时可能产生巨大差异！即使团队成员分布在不同时区，也可能带来问题。项目中所有成员必须在开始之前同意详细的时间表。团队成员的认同能让大家站在同一页，设定正确的期望。
 
-![tip](img/tip.png)如果可能且实际可行，请通知你的互联网服务提供商、云服务提供商和托管机房提供商。许多公司要求在批准测试前提前通知。这些公司已部署防火墙或入侵防御系统（IPS）来检测恶意行为。如果提供商知道你正在进行测试，他们不太可能阻止你的流量，并且你将获得更好的结果。
+![tip](img/tip.png)如果可能且实际可行，请通知你的互联网服务提供商、云服务提供商和托管机房提供商。许多公司要求在批准测试前提前通知。这些公司已部署防火墙或入侵防御系统（`IPS`）来检测恶意行为。如果提供商知道你正在进行测试，他们不太可能阻止你的流量，并且你将获得更好的结果。
 
 你的测试时间表应包括具体的短期日期、每次测试的时间、开始和结束日期，以及任何特定的里程碑。你可以在简单的电子表格或面向项目的甘特图中输入时间表，或在更大的项目计划中进行。下面的时间表示例简洁明了，并在测试过程中提供参考：
 
-| ***Test Performed*** || ***Start Time*** || ***Projected End Time*** |
+| `Test Performed` || `Start Time` || `Projected End Time` |
 
 | --- | --- | --- |
 
-| Web application vulnerability scanning || June 1, 21:00 EST || June 2, 07:00 |
+| `Web application vulnerability scanning` || `June 1, 21:00 EST` || `June 2, 07:00` |
 
-| Network host vulnerability scanning || June 2, 10:00 EST || June 3, 02:00 |
+| `Network host vulnerability scanning` || `June 2, 10:00 EST` || `June 3, 02:00` |
 
-| Network host vulnerability analysis/exploitation || June 3, 08:00 EST || June 6, 17:00 |
+| `Network host vulnerability analysis/exploitation` || `June 3, 08:00 EST` || `June 6, 17:00` |
 
 #### 运行特定测试
 
+
+
 你可能被要求执行一些通用漏洞扫描，或者想进行特定测试，例如密码破解或尝试访问 Web 应用程序。你甚至可能在进行社交工程测试或评估网络中的 Windows。无论如何，你可能不希望透露测试的具体细节。即使你的经理或客户不要求详细的测试记录，也应至少记录你正在做的高层测试内容。记录你的测试可以消除潜在的误解，避免你陷入麻烦。此外，如果你发现不当行为，可能需要文档作为证据。
 
-![tip](img/tip.png)在你测试的系统上启用日志以及使用的工具日志，可以提供你测试了什么以及何时测试的证据。虽然这可能过度，但你可以使用诸如 TechSmith 的 Camtasia Studio（[`www.techsmith.com/camtasia.html`](http://www.techsmith.com/camtasia.html)）等工具记录屏幕操作。
+![tip](img/tip.png)在你测试的系统上启用日志以及使用的工具日志，可以提供你测试了什么以及何时测试的证据。虽然这可能过度，但你可以使用诸如 TechSmith 的 Camtasia Studio（`www.techsmith.com/camtasia.html`）等工具记录屏幕操作。
 
 有时，你清楚自己要执行的通用测试，但如果使用自动化工具，很难完全理解每个测试。这种情况尤其常见，当你使用的软件每次运行时都会从供应商处接收实时漏洞更新和补丁。频繁更新的潜在影响凸显了阅读工具随附的文档和 readme 文件的重要性。
 
-#### 进行盲测与有知识的评估
-
-
-
+### 进行盲测与有知识的评估
 
 Having some knowledge of the systems you’re testing is generally the best approach, but it’s not required. Having a basic understanding of the systems you hack can protect you and others. Obtaining this knowledge shouldn’t be difficult if you’re testing your own in-house systems. If you’re testing a client’s systems, you may have to dig a little deeper into how the systems work so that you’re familiar with them. Doing so has always been my practice, and I’ve had only a small number of clients ask for a full blind assessment, because most people are scared of them. I’m not saying that blind assessments aren’t valuable, but the type of assessment you carry out depends on your needs.
 
@@ -795,7 +776,7 @@ If you discover a major hole, I recommend contacting the right people as soon as
 
 ### Making silly assumptions
 
-You’ve heard what you make of yourself when you assume things. Even so, you make assumptions when you test your systems. Here are some examples of those assumptions: 
+You’ve heard what you make of yourself when you assume things. Even so, you make assumptions when you test your systems. Here are some examples of those assumptions:
 
 * All the computers, networks, applications, and people are available when you’re testing. (They won’t be.)
 
@@ -813,7 +794,7 @@ Document all assumptions. You won’t regret doing that.
 
 Which security assessment tools you need depend on the tests you’re going to run. You can perform some security tests with a pair of sneakers, a telephone, and a basic workstation on the network, but comprehensive testing is easier when you have good, dedicated tools.
 
-![remember](img/remember.png)The tools I discuss in this book aren’t malware. The tools and even their websites may be flagged as such by certain antimalware and web filtering software, but they’re not malware. I cover only legitimate tools, many of which I’ve used for years. If you experience trouble downloading, installing, or running the tools I cover in this book, consider configuring your system to allow them through or otherwise trust their execution. Keep in mind that I can’t make any promises. Use checksums where possible by comparing the original MD5 or SHA checksum with the one you get using a tool such as CheckSum Tool ([`http://sourceforge.net/projects/checksumtool`](http://sourceforge.net/projects/checksumtool)). A criminal could always inject malicious code into the actual tools, so there’s no guarantee of security. You knew that anyway, right?
+![remember](img/remember.png)The tools I discuss in this book aren’t malware. The tools and even their websites may be flagged as such by certain antimalware and web filtering software, but they’re not malware. I cover only legitimate tools, many of which I’ve used for years. If you experience trouble downloading, installing, or running the tools I cover in this book, consider configuring your system to allow them through or otherwise trust their execution. Keep in mind that I can’t make any promises. Use checksums where possible by comparing the original MD5 or SHA checksum with the one you get using a tool such as CheckSum Tool (`http://sourceforge.net/projects/checksumtool`). A criminal could always inject malicious code into the actual tools, so there’s no guarantee of security. You knew that anyway, right?
 
 ![tip](img/tip.png)If you’re not sure what tools to use, fear not. Throughout this book, I introduce a wide variety of tools —free and commercial — that you can use to accomplish your tasks. Chapter 1 provides a list of commercial, freeware, and open-source tools. The appendix contains a comprehensive list of tools.
 
@@ -829,6 +810,8 @@ Chapter 4
 
 IN THIS CHAPTER
 
+
+
 ![check](img/check.png)**Examining steps for successful vulnerability and penetration testing**
 
 ![check](img/check.png)**Gleaning information about your organization from the Internet**
@@ -836,9 +819,6 @@ IN THIS CHAPTER
 ![check](img/check.png)**Scanning your network**
 
 ![check](img/check.png)**Looking for vulnerabilities**
-
-
-
 
 在开始进行安全测试之前，制定一套工作方法至关重要。漏洞和渗透测试不仅仅是对系统或网络进行“捅捅补补”。经过验证的技术能够指引你在“黑客高速公路”上行进，确保你到达正确的目的地。使用能够支持你测试目标的方法论，能够将你与业余爱好者区分开来。方法论还能确保你充分利用时间和精力。
 
@@ -889,9 +869,6 @@ IN THIS CHAPTER
 *   利用 WHOIS 搜索提供的信息，测试其他相关的 IP 地址和主机名。在映射和收集网络信息时，你可以看到系统的布局，包括 IP 地址、主机名（通常为外部但有时为内部）、运行的协议、开放端口、可用共享、运行的服务和应用程序。
 
 *   在测试范围内扫描内部主机。（它们本应被检测。）这些主机可能对外部不可见（我们希望它们不可见），但你必须对它们进行测试，以了解内部员工、其他内部人员或甚至由外部方控制的恶意软件可能访问的内容。最严重的情况是攻击者已在内部立足。为保险起见，检查内部系统的弱点。
-
-
-
 
 ![tip](img/tip.png)如果您对系统扫描不够自信，可以考虑使用带有测试系统的实验室或运行虚拟机软件的系统，例如下面列出的：
 
@@ -989,9 +966,6 @@ FIGURE 4-1: Netcraft’s web server version utility.
 
 * NIST National Vulnerability Database ([`https://nvd.nist.gov`](https://nvd.nist.gov))
 
-
-
-
 ## 将安全测试付诸行动
 
 IN THIS PART …
@@ -1048,9 +1022,6 @@ IN THIS CHAPTER
 
 *   公司登记文件
 
-
-
-
 Securities and Exchange Commission (SEC) filings (for public companies)
 
 Press releases about physical moves, organizational changes, and new products
@@ -1061,7 +1032,9 @@ Patents and trademarks
 
 Presentations, articles, webcasts, or webinars (which often reveal sensitive information — often ironically labeled confidential)
 
-![tip](img/tip.png)Bing (`https://www.bing.com`) and Google (`https://www.google.com`) ferret out information — in everything from word processing documents to graphics files — on any publicly accessible computer. Also, they’re free. Google is my favorite. Entire books have been written about using Google, so expect any criminal hacker to be quite experienced in using this tool, including against you. (See Chapter 15 for more about Google hacking.)
+
+
+![tip](img/tip.png)`Bing (`https://www.bing.com`)` and `Google (`https://www.google.com`)` ferret out information — in everything from word processing documents to graphics files — on any publicly accessible computer. Also, they’re free. Google is my favorite. Entire books have been written about using Google, so expect any criminal hacker to be quite experienced in using this tool, including against you. (See Chapter 15 for more about Google hacking.)
 
 With Google, you can search the Internet in several ways:
 
@@ -1169,8 +1142,6 @@ The following list shows various lookup sites for other categories:
 
 If you’re not sure where to look for a specific country, [`https://www.nro.net/about-the-nro/list-of-country-codes-and-rirs-ordered-by-country-code`](https://www.nro.net/about-the-nro/list-of-country-codes-and-rirs-ordered-by-country-code) has a reference guide.
 
-
-
 ### 隐私政策
 
 检查您网站的隐私政策。一个良好的做法是让您的网站用户知道收集了哪些信息以及如何保护这些信息，但不要过度解释。我看到很多隐私政策披露了大量关于安全和相关系统的技术细节，这些内容本不应公开。
@@ -1199,21 +1170,20 @@ If you’re not sure where to look for a specific country, [`https://www.nro.net
 
 ## 介绍社会工程学
 
+
+
 在社会工程学情境中，恶意分子冒充他人以获取原本无法访问的信息，然后利用所获信息对网络资源进行破坏、窃取或删除文件，甚至实施企业间间谍行为或其他欺诈。社交工程与*物理安全*威胁（如肩窥、渗透垃圾箱）不同，但两者常相辅相成。
 
 以下是社会工程学的典型例子：
 
-*   “`技术支持人员`”声称需要为用户电脑安装补丁或新软件，诱导用户下载并获取系统远程控制权。
-
-*   “`供应商`”声称需更新组织的会计软件或电话系统，索要管理员密码并获取完整访问权限。
-
-*   “`员工`”向安全 desk 报告丢失数据中心访问凭证，获取钥匙并获得对物理及电子信息的未经授权访问。
-
-*   “`网络钓鱼邮件`”用于窃取用户 ID 和密码或在受害者电脑上植入恶意软件。此类攻击可分为普适型或针对型（即*钓鱼攻击*），攻击者利用获取的凭证或恶意软件进入网络、窃取知识产权、加密文件勒索等。
+* “`技术支持人员`”声称需要为用户电脑安装补丁或新软件，诱导用户下载并获取系统远程控制权。
+* “`供应商`”声称需更新组织的会计软件或电话系统，索要管理员密码并获取完整访问权限。
+* “`员工`”向安全 desk 报告丢失数据中心访问凭证，获取钥匙并获得对物理及电子信息的未经授权访问。
+* “`网络钓鱼邮件`”用于窃取用户 ID 和密码或在受害者电脑上植入恶意软件。此类攻击可分为普适型或针对型（即*钓鱼攻击*），攻击者利用获取的凭证或恶意软件进入网络、窃取知识产权、加密文件勒索等。
 
 有时，社会工程师会自居自信的经理或高管；有时则扮演缺乏常识或天真无知的员工；也可能伪装成外部人员，如 IT 顾问或维护人员。社会工程师擅长根据受众调整身份，这种“心理操控”往往需要类似心理病态人格的特质。
 
-![remember](img/remember.png)有效的信息安全 —  — 尤其是应对社会工程学的安全 —  — 往往从用户开始。本书其他章节提供技术层面的防护建议，但切勿忘记：基本的人际沟通与交互对组织安全水平具有深远影响。所谓 *candy-security* 类比是“外表硬脆，内里柔软”。硬脆外层是防火墙、入侵防御系统、内容过滤等技术手段；软软内层则是组织内部的人员与流程。若攻击者突破外层防线，便能轻易攻击内层。
+![remember](img/remember.png)有效的信息安全——尤其是应对社会工程学的安全——往往从用户开始。本书其他章节提供技术层面的防护建议，但切勿忘记：基本的人际沟通与交互对组织安全水平具有深远影响。所谓 *candy-security* 类比是“外表硬脆，内里柔软”。硬脆外层是防火墙、入侵防御系统、内容过滤等技术手段；软软内层则是组织内部的人员与流程。若攻击者突破外层防线，便能轻易攻击内层。
 
 ## 开展社会工程学测试
 
@@ -1225,22 +1195,19 @@ If you’re not sure where to look for a specific country, [`https://www.nro.net
 
 你可以以千姿百态的方式进行社会工程学攻击，从假装熟悉内部人员闯入大门，到发起全面的电子邮件钓鱼行动，无所不包。因此，单章难以涵盖所有行为准则，我不会提供具体的攻击操作指南。取而代之的是，我将分享在我及他人身上验证有效的社会工程学情境。你可以根据自身情况对这些技巧进行定制。
 
-外部人员最适合执行诸如实地渗透测试等社会工程学技术。若你在自身组织内部进行测试，扮演外部人员可能会因熟悉度而受阻 —  — 在大型组织中影响不大，但在小型紧密团队中，人们容易发现身份。
+外部人员最适合执行诸如实地渗透测试等社会工程学技术。若你在自身组织内部进行测试，扮演外部人员可能会因熟悉度而受阻——在大型组织中影响不大，但在小型紧密团队中，人们容易发现身份。
 
 ![remember](img/remember.png)你可以将社会工程学测试外包给外部公司，或委托可信的同事进行。我在第 19 章中涉及安全与测试的外包话题。
 
 ## 了解攻击者使用社会工程学的原因
 
-人们使用社会工程学破解系统并获取信息，因为这是最简便的方式 —  — 他们更倾向于让他人敞开大门，而非亲自冒险破门。防火墙、访问控制等技术手段无法阻止坚定的社会工程师。
-
-
-
+人们使用社会工程学破解系统并获取信息，因为这是最简便的方式——他们更倾向于让他人敞开大门，而非亲自冒险破门。防火墙、访问控制等技术手段无法阻止坚定的社会工程师。
 
 许多社会工程师会**慢慢**进行攻击以避免引起怀疑。社会工程师会随着时间的推移收集信息，并利用这些信息来构建对目标组织的更广泛图景。这里的一个最大优势就是**时间**。他们只有时间，并且会花费恰当的时间以确保攻击成功。或者，某些社会工程攻击可以通过一次简短的电话或电子邮件完成。所使用的方法取决于攻击者的风格和能力。无论如何，你都处于劣势。
 
 社会工程师知道许多组织缺乏正式的数据分类计划、访问控制系统、应急响应计划或安全意识培训，他们会利用这些弱点。
 
-社会工程师通常对各种事物（无论是内部还是目标组织之外）略有涉猎，因为这种知识有助于他们完成任务。得益于像 `LinkedIn` 和 `Facebook` 等社交媒体平台以及我在 第 5 章 中讨论的其他在线资源，社会工程师所需的每一条信息往往都触手可得。社会工程师越了解组织，就越容易冒充员工或其他可信的内部人员。他们的知识和决心使他们在管理层和员工中拥有上风，而这些人往往不认识到社交工程师所追求的信息价值。
+社会工程师通常对各种事物（无论是内部还是目标组织之外）略有涉猎，因为这种知识有助于他们完成任务。得益于像 `LinkedIn` 和 `Facebook` 等社交媒体平台以及我在第 5 章中讨论的其他在线资源，社会工程师所需的每一条信息往往都触手可得。社会工程师越了解组织，就越容易冒充员工或其他可信的内部人员。他们的知识和决心使他们在管理层和员工中拥有上风，而这些人往往不认识到社交工程师所追求的信息价值。
 
 ## 理解影响
 
@@ -1250,19 +1217,13 @@ If you’re not sure where to look for a specific country, [`https://www.nro.net
 
 社会工程具有严重后果。由于其目标是胁迫某人提供信息以获取非法利益，任何情况都可能发生。优秀的社会工程师可以获取以下信息：
 
-*   `用户密码`。
-
-*   `安全徽章` 或 `钥匙`，可用于进入建筑物乃至计算机室。
-
-*   `知识产权`，如 `设计规格`、`源代码` 以及其他 `研发文档`。
-
-*   `机密财务报告`。
-
-*   `私人且保密的员工信息`。
-
-*   `个人可识别信息 (PII)`，如 `健康记录` 和 `信用卡信息`。
-
-*   `客户名单` 和 `潜在销售线索`。
+* `用户密码`。
+* `安全徽章` 或 `钥匙`，可用于进入建筑物乃至计算机室。
+* `知识产权`，如 `设计规格`、`源代码` 以及其他 `研发文档`。
+* `机密财务报告`。
+* `私人且保密的员工信息`。
+* `个人可识别信息 (PII)`，如 `健康记录` 和 `信用卡信息`。
+* `客户名单` 和 `潜在销售线索`。
 
 如果上述任何信息泄露，可能导致财务损失、员工士气下降、客户忠诚度降低，甚至引发法律和合规问题。可能性无限。
 
@@ -1274,9 +1235,8 @@ If you’re not sure where to look for a specific country, [`https://www.nro.net
 
 信任——**难以获得，却易于失去**。信任是社会工程的核心。大多数人会信任他人，直到情境迫使他们改变看法。人们倾向于互相帮助，尤其是当信任能够建立且请求看起来合理时。大多数人希望在工作中成为团队玩家，却往往不意识到如果向不值得信赖的来源泄露过多信息会带来什么后果。这种信任使社会工程师能够实现目标。建立深度信任往往需要时间，但精明的社交工程师可以在数分钟或数小时内获得它。他们是如何做到的？
 
-*   `亲和力`：谁能抗拒一个友好的人？人人都喜欢礼貌。社交工程师越友好（但不夸张），越有可能得到自己想要的东西。他们常通过找出共同兴趣来开始建立关系，并利用研究阶段收集的信息判断受害者的喜好，假装自己也喜欢这些事物。他们可以给受害者打电话或当面会面，并根据所掌握的信息聊聊本地体育队伍或独单生活的美好。几句低调且表达得体的评论，就可能开启一段新关系。
-
-*   `可信度`：可信度部分取决于社交工程师的知识以及其亲和力。他们还会使用冒充——比如冒充新员工或同事（受害者尚未认识），甚至冒充与组织有业务往来的供应商。他们常以谦逊的姿态声称拥有权威，以此影响他人。最常见的社交工程技巧是做一件好事，让受害者感到有义务回报或成为组织的团队玩家。
+* `亲和力`：谁能抗拒一个友好的人？人人都喜欢礼貌。社交工程师越友好（但不夸张），越有可能得到自己想要的东西。他们常通过找出共同兴趣来开始建立关系，并利用研究阶段收集的信息判断受害者的喜好，假装自己也喜欢这些事物。他们可以给受害者打电话或当面会面，并根据所掌握的信息聊聊本地体育队伍或独单生活的美好。几句低调且表达得体的评论，就可能开启一段新关系。
+* `可信度`：可信度部分取决于社交工程师的知识以及其亲和力。他们还会使用冒充——比如冒充新员工或同事（受害者尚未认识），甚至冒充与组织有业务往来的供应商。他们常以谦逊的姿态声称拥有权威，以此影响他人。最常见的社交工程技巧是做一件好事，让受害者感到有义务回报或成为组织的团队玩家。
 
 ### 利用关系
 
@@ -1286,28 +1246,26 @@ If you’re not sure where to look for a specific country, [`https://www.nro.net
 
 狡猾的社交工程师可以通过多种方式从受害者那里获取内部信息。他们通常表达清晰，并专注于保持对话流畅，而不给受害者太多思考的时间。如果他们在社交工程攻击中表现出懈怠或过度紧张，以下信号可能会暴露他们：
 
-*   过于亲切或急切。
-*   提及组织内部显要人物的姓名。
-*   炫耀其在组织内的权威。
-*   如果请求不被满足，就威胁要进行纪律处分。
-*   被质疑时表现紧张（紧闭嘴唇、摆动四肢——尤其是手脚，因为控制远离面部的身体部位需要更多有意识的努力）。
-*   过度强调细节。
-*   出现生理变化，如瞳孔放大或声音音调变化。
-*   显得匆忙。
-*   拒绝提供信息。
-*   主动提供信息并回答未被询问的问题。
-*   知道外人不应拥有的信息。
-*   使用内部行话或俚语，尽管自己是外部人员。
-*   提出奇怪的问题。
-*   在书面通信中拼写错误。
+* 过于亲切或急切。
+* 提及组织内部显要人物的姓名。
+* 炫耀其在组织内的权威。
+* 如果请求不被满足，就威胁要进行纪律处分。
+* 被质疑时表现紧张（紧闭嘴唇、摆动四肢——尤其是手脚，因为控制远离面部的身体部位需要更多有意识的努力）。
+* 过度强调细节。
+* 出现生理变化，如瞳孔放大或声音音调变化。
+* 显得匆忙。
+* 拒绝提供信息。
+* 主动提供信息并回答未被询问的问题。
+* 知道外人不应拥有的信息。
+* 使用内部行话或俚语，尽管自己是外部人员。
+* 提出奇怪的问题。
+* 在书面通信中拼写错误。
 
 良好的社交工程师不会以上述行为显露端倪，但这些迹象可能暗示恶意行为正在酝酿。如果此人是 sociopath（反社会人格）或 psychopath（精神病人），则你的经验可能会有所不同。(*Psychology For Dummies,* 2nd Edition, by Adam Cash \[John Wiley & Sons, Inc.\] 是了解人类心理复杂性的良好资源。)
 
-
-
 社交工程师经常为别人做好事，然后反过来询问那人是否愿意帮助他们。这种常见的社交工程手段效果很好。社交工程师还使用所谓的“逆向社交工程”。他们在出现特定问题时提供帮助。随着时间的推移，问题出现（通常是社交工程师造成的），然后社交工程师帮助解决问题。他们可能会装作英雄，从而进一步推进自己的目标。社交工程师可能会向不警惕的员工请求帮助。是的——他们直接请求帮助。许多人会落入这个陷阱。
 
-冒充员工很容易。社交工程师可以穿着相似的制服，制作假的员工证，或者简单地打扮成真实员工。人们会想：“哇，他看起来和行为都像我，所以他是我们中的一员。”社交工程师也会假装是从外部电话线打来的员工。这种技巧是利用帮助台和呼叫中心人员的一种特别流行的方法。社交工程师知道，这些员工很容易陷入惯性，因为他们的任务重复，比如不断说“请提供您的客户号码”。 
+冒充员工很容易。社交工程师可以穿着相似的制服，制作假的员工证，或者简单地打扮成真实员工。人们会想：“哇，他看起来和行为都像我，所以他是我们中的一员。”社交工程师也会假装是从外部电话线打来的员工。这种技巧是利用帮助台和呼叫中心人员的一种特别流行的方法。社交工程师知道，这些员工很容易陷入惯性，因为他们的任务重复，比如不断说“请提供您的客户号码”。
 
 #### 通过技术进行欺骗
 
@@ -1321,16 +1279,13 @@ If you’re not sure where to look for a specific country, [`https://www.nro.net
 
 许多电脑化的社交工程战术可以通过 Internet 代理服务器、转发器、基本的 SMTP 服务器（具有开放中继功能）等匿名方式进行。当人们对请求保密个人或企业信息的请求落入陷阱时，这些社交工程攻击的来源往往难以追踪。
 
-#### 执行社交工程攻击
+### 执行社交工程攻击
 
 社交工程的过程相当基础。通常，社交工程师会了解目标人物、组织流程以及信息系统的情况，以便进行攻击。有了这些信息，他们知道要追求什么。社交工程攻击通常分为四个简单步骤：
 
 1. 进行研究。
-
 2. 建立信任。
-
 3. 通过言语、行为或技术利用关系获取信息。
-
 4. 利用所获信息进行恶意目的。
 
 这些步骤可能包含众多子步骤和技术，具体取决于所执行的攻击类型。
@@ -1343,39 +1298,37 @@ If you’re not sure where to look for a specific country, [`https://www.nro.net
 
 当社交工程师心中有目标时，他们通常会先通过收集目标（受害者）的公开信息来启动攻击。许多社交工程师会随着时间的推移慢慢收集信息，以免引起怀疑。显而易见的信息收集会被视为警示信号，但本章后面会提醒你注意其他警示标志。
 
-无论最初的研究方法是什么，黑客可能只需要一个员工名单、几个关键内部电话号码、社交媒体最新新闻或公司日历，就能突破组织。第 5 章 为你提供了更详细的信息收集技巧，但下面列出的技术值得特别关注。
+无论最初的研究方法是什么，黑客可能只需要一个员工名单、几个关键内部电话号码、社交媒体最新新闻或公司日历，就能突破组织。第 5 章为你提供了更详细的信息收集技巧，但下面列出的技术值得特别关注。
 
-#### 利用互联网
+##### 利用互联网
 
 当今的基础研究媒介是互联网。在 Google 或其他搜索引擎上用简单关键词（如公司名称或特定员工姓名）进行几分钟搜索，往往能获取大量信息。你甚至可以在证券交易委员会（SEC）的 filing 中找到更多信息，网址为 [`https://www.sec.gov`](https://www.sec.gov)，以及像 [`www.hoovers.com`](http://www.hoovers.com) 和 [`https://finance.yahoo.com`](https://finance.yahoo.com) 这样的网站。许多组织——尤其是其管理层——会对发现的大量在线信息感到震惊！鉴于如此丰富的信息，启动社交工程攻击已经足够。
 
 ![remember](img/remember.png)`罪犯可以花几美元购买关于个人（包括高管）的完整在线背景调查，这些搜索在几分钟内即可揭示出几乎所有公开（有时甚至是私人）信息。`
 
-#### 通过 Dumpster diving（通过垃圾箱搜索）
+##### 通过 Dumpster diving（通过垃圾箱搜索）
 
 Dumpster diving 风险更大、更 messier，但它是获取信息的高效方法。该方法涉及翻找垃圾桶以获取公司信息。
 
 Dumpster diving 可以翻出甚至最机密的信息，因为有些人认为他们的信息在扔进垃圾桶后是安全的。大多数人没有考虑扔掉的纸张的潜在价值，我并不是指回收价值！文件通常包含大量信息，可以为社交工程师提供渗透组织所需的线索。敏锐的社交工程师会寻找以下实体文档：
 
-*   内部电话目录  
-*   组织结构图  
-*   员工手册（通常包含安全政策）  
-*   网络图  
-*   密码列表  
-*   会议记录  
-*   表格和报告  
-*   客户记录  
-*   包含机密信息的电子邮件打印件  
-
-
+* 内部电话目录
+* 组织结构图
+* 员工手册（通常包含安全政策）
+* 网络图
+* 密码列表
+* 会议记录
+* 表格和报告
+* 客户记录
+* 包含机密信息的电子邮件打印件
 
 粉碎文件只有在纸张被粉碎成细小的彩纸碎片时才有效。廉价的碎纸机只能将文件粉碎成长条形，对于有决心的社会工程师来说是无效的。只要花点时间和胶带，聪明的黑客就能把文件拼凑回来，如果他下定决心这么做的话。
 
 ![tip](img/tip.png)`黑客`常常通过在餐厅、咖啡馆和机场听取他人对话来获取机密的个人和商业信息。在手机上大声交谈的人也是社会工程师获取敏感信息的绝佳来源。（这算什么巧合呢？）飞机是窥视肩头和获取敏感信息的好地方。当我在公共场所和飞机上走动时，我听到和看到的私人信息简直难以置信！我几乎无法避免它！
 
-坏家们也会在垃圾中翻找 USB 驱动器、光盘和其他媒体。请参见 第 7 章 了解更多关于垃圾桶和其他物理安全问题的内容，包括针对“捡垃圾者”的防范措施。
+坏家们也会在垃圾中翻找 USB 驱动器、光盘和其他媒体。请参见第 7 章了解更多关于垃圾桶和其他物理安全问题的内容，包括针对“捡垃圾者”的防范措施。
 
-#### 电话系统
+##### 电话系统
 
 攻击者可以利用大多数语音邮件系统内置的“按名称拨号”功能获取信息。要使用此功能，通常在拨公司的主号码或输入某人语音邮箱后按 0 或 # 键。此技巧在工作时间之外效果最佳，以确保没有人接听。
 
@@ -1383,15 +1336,15 @@ Dumpster diving 可以翻出甚至最机密的信息，因为有些人认为他�
 
 攻击者可以通过隐藏通话来源来保护自己的身份。以下是他们隐藏位置的几种方式：
 
-*   **住宅电话**有时可以通过在拨号前输入 `*67` 来隐藏号码不显示在来电显示中。
+* **住宅电话**有时可以通过在拨号前输入 `*67` 来隐藏号码不显示在来电显示中。
 
     ![tip](img/tip.png)`此功能在拨打免费电话（800、888、877、866）或 911 时并不有效，但在一次性手机和 VoIP（互联网语音）服务上效果很好。`
 
-*   **办公电话**在使用电话交换机的办公室里更难以伪造，但攻击者通常只需要用户手册和电话交换机软件的管理员密码。在许多交换机中，攻击者可以输入来源号码——包括伪造的号码，例如受害者的家庭电话号码。
+* **办公电话**在使用电话交换机的办公室里更难以伪造，但攻击者通常只需要用户手册和电话交换机软件的管理员密码。在许多交换机中，攻击者可以输入来源号码——包括伪造的号码，例如受害者的家庭电话号码。
 
-*   **VoIP 服务器**如开源 Asterisk (`https://www.asterisk.org`) 可以配置为发送任意号码。
+* **VoIP 服务器**如开源 Asterisk (`https://www.asterisk.org`) 可以配置为发送任意号码。
 
-#### 钓鱼邮件
+##### 钓鱼邮件
 
 最新、也是最成功的黑客手段是通过电子邮件“钓鱼”，即犯罪分子向潜在受害者发送伪造邮件，诱使他们泄露敏感信息或点击恶意链接从而感染恶意软件。钓鱼多年来存在，但随着针对看似无懈可击的企业和政府机构的高调攻击而获得更大的关注。钓鱼的成功率惊人，后果往往很丑陋。在我的钓鱼测试中，我看到的成功率（或失败率，取决于如何看待）高达 70%。一封写得好的邮件就足以窃取密码、获取敏感信息或在目标电脑上植入模拟恶意软件。
 
@@ -1399,27 +1352,26 @@ Dumpster diving 可以翻出甚至最机密的信息，因为有些人认为他�
 
 无论是当今快节奏的商业环境、普通用户的易受性，还是 outright 无知，平均每个人对钓鱼邮件的易感性都惊人。一封很有可能被打开并回复的钓鱼邮件会制造紧迫感，并提供只有内部人员才知道的信息。许多钓鱼邮件因为以下特征很容易被识别：
 
-*   包含拼写错误。
+* 包含拼写错误。
+* 使用通用称呼和邮件签名。
+* 要求用户点击链接。
+* 索要敏感信息。
 
-*   使用通用称呼和邮件签名。
 
-*   要求用户点击链接。
 
-*   索要敏感信息。
+更正式的钓鱼测试可以使用专门的工具。网络上可商用的选项包括 LUCY（`https://www.lucysecurity.com`）和 Cofense（前身为 Phishme，`https://cofense.com`）。这些电子邮件钓鱼平台提供预装的邮件模板，能够 `抓取`（复制）真实网站的内容以便自定义你的攻击，并提供多种报告功能，让你跟踪哪些用户中了圈。它们还将认知和培训整合到系统中，以便在用户点击或泄露信息后对其进行教育。
 
-更正式的钓鱼测试可以使用专门的工具。网络上可商用的选项包括 LUCY (`https://www.lucysecurity.com`) 和 Cofense（前身为 Phishme，`https://cofense.com`）。这些电子邮件钓鱼平台提供预装的邮件模板，能够 `抓取`（复制）真实网站的内容以便自定义你的攻击，并提供多种报告功能，让你跟踪哪些用户中了圈。它们还将认知和培训整合到系统中，以便在用户点击或泄露信息后对其进行教育。
+我使用 LUCY（如 图 6-1 所示）进行电子邮件钓鱼测试。我发现该平台强大且支持顶级。
 
-我使用 LUCY（如在 图 6-1 所示）进行电子邮件钓鱼测试。我发现该平台强大且支持顶级。
+![FIGURE 6-1: 使用 LUCY 开始电子邮件钓鱼攻击。](img/9781119485476-fg0601.png)
 
-![ FIGURE 6-1:  使用 LUCY 开始电子邮件钓鱼攻击。](img/9781119485476-fg0601.png)
-
-FIGURE 6-1:  使用 LUCY 开始电子邮件钓鱼攻击。
+FIGURE 6-1: 使用 LUCY 开始电子邮件钓鱼攻击。
 
 Figure 6-2 展示了 LUCY 可发起的各种钓鱼攻击样本，包括恶意软件模拟和短信钓鱼（smishing），后者是一项特别有趣的练习。
 
-![ FIGURE 6-2:  LUCY 中的各种电子邮件钓鱼模板示例。](img/9781119485476-fg0602.png)
+![FIGURE 6-2: LUCY 中的各种电子邮件钓鱼模板示例。](img/9781119485476-fg0602.png)
 
-FIGURE 6-2:  LUCY 中的各种电子邮件钓鱼模板示例。
+FIGURE 6-2: LUCY 中的各种电子邮件钓鱼模板示例。
 
 ## 社交工程防范措施
 
@@ -1429,21 +1381,14 @@ FIGURE 6-2:  LUCY 中的各种电子邮件钓鱼模板示例。
 
 具体的政策有助于在长期内防御社交工程，具体包括：
 
-*   对信息进行分类，使得用户只能访问其所需的信息级别
-
-*   在招聘员工或承包商时建立用户 ID
-
-*   制定员工同意的可接受计算机使用政策
-
-*   对不再为组织工作的员工、承包商和顾问撤销用户 ID
-
-*   设置并重置强密码
-
-*   快速响应安全事件，如异常行为和已知恶意软件感染
-
-*   正确处理专有和机密信息
-
-*   在建筑物内接待访客
+- 对信息进行分类，使得用户只能访问其所需的信息级别
+- 在招聘员工或承包商时建立用户 ID
+- 制定员工同意的可接受计算机使用政策
+- 对不再为组织工作的员工、承包商和顾问撤销用户 ID
+- 设置并重置强密码
+- 快速响应安全事件，如异常行为和已知恶意软件感染
+- 正确处理专有和机密信息
+- 在建筑物内接待访客
 
 这些政策必须对组织内的所有人可执行 *并且* 被执行。保持它们的更新，告知用户，并且（最重要的是）进行测试。
 
@@ -1451,49 +1396,44 @@ FIGURE 6-2:  LUCY 中的各种电子邮件钓鱼模板示例。
 
 对抗社交工程的最佳防线是培训员工识别和应对社交工程攻击。用户意识从人人接受的初始培训开始，随后通过安全意识活动保持防御新鲜。将培训与特定安全政策同步。你可能还需要制定专门的安全培训与意识政策。
 
-
-
-
 ![tip](img/tip.png)考虑外包给经验丰富的安全培训师进行安全培训。员工往往更认真对待来自外部的培训，就像家人或配偶可能忽视你说的话，但如果由其他人说出同样的话，他们就会更加在意。仅此一点，外包安全培训的投资就值得。
 
 在组织内持续进行用户培训和意识提升时，以下建议有助于长期对抗社会工程攻击：
 
-* 将安全意识和培训视为一项业务投资。
-* 持续对用户进行培训，以保持安全意识常在其心中。
-* 在每个人的职位描述中，加入信息隐私和安全任务及职责。
-* 可能时，根据受众定制内容。
-* 为业务职能和用户角色创建社会工程意识培训计划。
-* 尽可能保持信息简洁，避免技术性术语。
-* 为防止和报告事件，开发激励措施。
-* 榜样示范。
+- 将安全意识和培训视为一项业务投资。
+- 持续对用户进行培训，以保持安全意识常在其心中。
+- 在每个人的职位描述中，加入信息隐私和安全任务及职责。
+- 可能时，根据受众定制内容。
+- 为业务职能和用户角色创建社会工程意识培训计划。
+- 尽可能保持信息简洁，避免技术性术语。
+- 为防止和报告事件，开发激励措施。
+- 榜样示范。
 
 向用户分享以下建议，帮助防范社会工程攻击：
 
-* **除非能确认请求信息的人需要该信息且是他们声称的人，否则切勿泄露任何信息。** 如果请求是通过电话提出的，请验证来电者的身份，并回拨。
-* **切勿点击声称会加载需要更新信息的页面的电子邮件链接。** 这一警告尤其适用于未经请求的邮件，因为在移动设备上，用户往往看不到链接会去向何处。
-* **鼓励用户验证 bit.ly、ow.ly 等缩短链接的安全性或合法性。** 如需确认，可使用 `www.checkshorturl.com` 和 `http://wheredoesthislinkgo.com` 等网站提供的服务。
-* **在 Facebook 或 LinkedIn 等社交网络上谨慎分享个人信息。** 同时，要警惕声称认识你或想成为你朋友的人，他们的意图可能是恶意的。
-* **在建筑内请所有访客陪同。** 虽然这可能不符合公司文化或难以实现，但它能有效降低社会工程风险。
-* **切勿打开陌生人的电子邮件附件或其他文件，即使是你认识的人也要格外小心。** 这一措施本身就能防止无数安全事件和泄露。
+- **除非能确认请求信息的人需要该信息且是他们声称的人，否则切勿泄露任何信息。** 如果请求是通过电话提出的，请验证来电者的身份，并回拨。
+- **切勿点击声称会加载需要更新信息的页面的电子邮件链接。** 这一警告尤其适用于未经请求的邮件，因为在移动设备上，用户往往看不到链接会去向何处。
+- **鼓励用户验证 bit.ly、ow.ly 等缩短链接的安全性或合法性。** 如需确认，可使用 `www.checkshorturl.com` 和 `http://wheredoesthislinkgo.com` 等网站提供的服务。
+- **在 Facebook 或 LinkedIn 等社交网络上谨慎分享个人信息。** 同时，要警惕声称认识你或想成为你朋友的人，他们的意图可能是恶意的。
+- **在建筑内请所有访客陪同。** 虽然这可能不符合公司文化或难以实现，但它能有效降低社会工程风险。
+- **切勿打开陌生人的电子邮件附件或其他文件，即使是你认识的人也要格外小心。** 这一措施本身就能防止无数安全事件和泄露。
 
 其他一般性建议也能帮助防御社会工程攻击：
 
-* **切勿让陌生人连接到你的网络端口或内部无线网络，哪怕只有几秒钟。** 恶意人员可能在短时间内安装窃听设备、部署恶意软件，或设置远程可访问的后门。
-* **分类你的信息资产，包括纸质和电子版。** 培训所有员工如何处理每种资产类型。
-* **制定并执行媒体销毁政策。** 这些政策（针对计算机媒体和文档）确保数据得到妥善处理，并留在应有的位置。有关政策的信息来源可参考 `www.pdaconsulting.com/datadp.htm`。
-* **使用交叉切割碎纸机。** 更佳的是，聘请专注于机密文件销毁的文件销毁公司。
+- **切勿让陌生人连接到你的网络端口或内部无线网络，哪怕只有几秒钟。** 恶意人员可能在短时间内安装窃听设备、部署恶意软件，或设置远程可访问的后门。
+- **分类你的信息资产，包括纸质和电子版。** 培训所有员工如何处理每种资产类型。
+- **制定并执行媒体销毁政策。** 这些政策（针对计算机媒体和文档）确保数据得到妥善处理，并留在应有的位置。有关政策的信息来源可参考 `www.pdaconsulting.com/datadp.htm`。
+- **使用交叉切割碎纸机。** 更佳的是，聘请专注于机密文件销毁的文件销毁公司。
 
 用于加强正式培训内容的技巧包括：
 
-* 新员工入职培训、培训午餐、邮件和通讯。
-* 包含技巧和常见问题解答的社会工程生存手册。
-* 如屏幕保护贴、鼠标垫、便签、笔、办公海报等小物件，上面印有强化安全原则的信息。
+- 新员工入职培训、培训午餐、邮件和通讯。
+- 包含技巧和常见问题解答的社会工程生存手册。
+- 如屏幕保护贴、鼠标垫、便签、笔、办公海报等小物件，上面印有强化安全原则的信息。
 
 下面的附录列出了我最喜欢的培训小物件和工具供应商，帮助提升组织的安全意识和教育水平。
 
-第 7 章
-
-#### 物理安全
+# 第 7 章 物理安全
 
 ## 本章内容
 
@@ -1515,31 +1455,28 @@ FIGURE 6-2:  LUCY 中的各种电子邮件钓鱼模板示例。
 
 在小型公司，某些物理安全问题可能不构成大问题。许多物理安全漏洞受以下因素影响：
 
-* 建筑规模。
-* 建筑数量或办公地点数量。
-* 员工人数。
-* 是否有前台接待人员或保安。
-* 建筑入口和出口的位置及数量。
-* 服务器机房、布线间和数据中心的位置和数量。
+- 建筑规模。
+- 建筑数量或办公地点数量。
+- 员工人数。
+- 是否有前台接待人员或保安。
+- 建筑入口和出口的位置及数量。
+- 服务器机房、布线间和数据中心的位置和数量。
 
 数千种可能的物理安全弱点存在。攻击者始终在寻找这些弱点，因此你应优先关注以下问题。以下是我在为客户进行安全评估时发现的一些典型物理安全漏洞：
 
-* 缺少前台接待人员或保安，无法监控进出人员。
-* 缺少访客登记或对进入建筑的访客要求陪同（或执行）的制度。
-* 员工对穿着厂商制服或声称要维修复印机或电脑的访客过于信任。
-* 门锁没有访问控制，或使用传统钥匙，钥匙可随意复制且缺乏追责。
-* 门被长时间 propped open（撑开）。
-* 通过网络对 IP 视频、访问控制和数据中心管理系统开放，且使用默认用户名和密码。
-* 公开可进入的计算机室。
-* 备份媒体（磁带、硬盘、光盘/DVD）未加密或未妥善存放。
-* 敏感信息以纸质形式散落在工作区，未放入上锁的文件柜中。
-* 电脑硬件（尤其是路由器、交换机和未加密笔记本电脑）未受保护。
-* 敏感信息被随意丢弃在垃圾桶中，而非进行碎纸或放入专用容器。
+- 缺少前台接待人员或保安，无法监控进出人员。
+- 缺少访客登记或对进入建筑的访客要求陪同（或执行）的制度。
+- 员工对穿着厂商制服或声称要维修复印机或电脑的访客过于信任。
+- 门锁没有访问控制，或使用传统钥匙，钥匙可随意复制且缺乏追责。
+- 门被长时间 propped open（撑开）。
+- 通过网络对 IP 视频、访问控制和数据中心管理系统开放，且使用默认用户名和密码。
+- 公开可进入的计算机室。
+- 备份媒体（磁带、硬盘、光盘/DVD）未加密或未妥善存放。
+- 敏感信息以纸质形式散落在工作区，未放入上锁的文件柜中。
+- 电脑硬件（尤其是路由器、交换机和未加密笔记本电脑）未受保护。
+- 敏感信息被随意丢弃在垃圾桶中，而非进行碎纸或放入专用容器。
 
 当这些物理安全漏洞被发现时，危害可能会发生。只需一个有恶意意图的未经授权人员，就能利用这些弱点。
-
-
-
 
 ## 定位办公室中的物理弱点
 
@@ -1555,45 +1492,29 @@ FIGURE 6-2:  LUCY 中的各种电子邮件钓鱼模板示例。
 
 攻击者可以利用建筑设施的弱点。请自问以下关于常被忽视的攻击点：
 
-*   门是否被顶开，如果是，原因是什么？
-
-*   关键门的底部是否有缝隙？（缝隙可能让人使用气球等装置触发房间内的传感器，从而绕过看似安全的门。）
-
-*   是否很容易用力撬开门？（普通门一般只需在把手附近轻轻一脚即可打开。）
-
-*   建筑或数据中心的材料是什么（钢、木材、混凝土），墙体和入口有多坚固？需要评估其抗震、抗龙卷风、抗强风、抗大雨以及车辆冲撞的能力，并判断这些灾害是否会导致建筑暴露，使恶意人员能够进入计算机室或其他关键区域。
-
-*   是否有玻璃门或窗，玻璃是否透明、防碎或防弹？
-
-*   门外的铰链是否让入侵者容易拆卸？
-
-*   门、窗等入口是否与报警系统联动？
-
-*   建筑是否设有可直接抬起的下沉天花板瓷砖？
-
-*   建筑是否为从地面到天花的整体墙体？（如果不是，攻击者可以轻易攀爬墙体，绕过门窗的访问控制。）
+- 门是否被顶开，如果是，原因是什么？
+- 关键门的底部是否有缝隙？（缝隙可能让人使用气球等装置触发房间内的传感器，从而绕过看似安全的门。）
+- 是否很容易用力撬开门？（普通门一般只需在把手附近轻轻一脚即可打开。）
+- 建筑或数据中心的材料是什么（钢、木材、混凝土），墙体和入口有多坚固？需要评估其抗震、抗龙卷风、抗强风、抗大雨以及车辆冲撞的能力，并判断这些灾害是否会导致建筑暴露，使恶意人员能够进入计算机室或其他关键区域。
+- 是否有玻璃门或窗，玻璃是否透明、防碎或防弹？
+- 门外的铰链是否让入侵者容易拆卸？
+- 门、窗等入口是否与报警系统联动？
+- 建筑是否设有可直接抬起的下沉天花板瓷砖？
+- 建筑是否为从地面到天花的整体墙体？（如果不是，攻击者可以轻易攀爬墙体，绕过门窗的访问控制。）
 
 #### 防护措施
 
 针对建筑设施的物理安全防护通常需要其他维护、建设或运营专家的参与。如果建筑设施不是你的强项，可在设计、评估和 retrofitting（后装）阶段聘请外部专家，确保拥有足够的控制措施。以下是一些最佳做法：
 
-*   加强门和锁具。
-
-*   安装运动感应器。
-
-*   部署摄像头，既可威慑犯罪，又能实时捕捉嫌疑人，或为事后取证。
-
-*   为数据中心设置无窗墙体。
-
-*   使用标识明确标示位置及谁有进入权限。
-
-*   实施持续监控的报警系统，配合网络摄像头覆盖所有出入口。
-
-*   保持良好照明，尤其是入口和出口附近。
-
-*   设计只允许一人通过门的入口。
-
-*   安装围栏（必要时加装带刺或刺绳的铁丝网）。
+- 加强门和锁具。
+- 安装运动感应器。
+- 部署摄像头，既可威慑犯罪，又能实时捕捉嫌疑人，或为事后取证。
+- 为数据中心设置无窗墙体。
+- 使用标识明确标示位置及谁有进入权限。
+- 实施持续监控的报警系统，配合网络摄像头覆盖所有出入口。
+- 保持良好照明，尤其是入口和出口附近。
+- 设计只允许一人通过门的入口。
+- 安装围栏（必要时加装带刺或刺绳的铁丝网）。
 
 ### 公用设施
 
@@ -1603,27 +1524,20 @@ FIGURE 6-2:  LUCY 中的各种电子邮件钓鱼模板示例。
 
 攻击者常利用公用设施相关的漏洞。请自问以下关于常被忽视的攻击点：
 
-*   是否配备了电涌保护装置、不间断电源（UPS）以及备用发电机？这些设备的开关是否易于被入侵者触及——比如可以直接闯入翻转开关，或攀爬围栏切断锁具从而接触关键设备。
-
-*   当电力中断时，物理安全机制是“打开”（让任何人通过）还是“关闭”（在电力恢复前锁定进出）？我见过两种情况，需要明确其具体表现。
-
-*   火灾探测与灭火设备（感烟探测器、灭火器、喷淋系统）的位置在哪里？入侵者可能如何滥用这些设备？是否通过无线或本地网络（默认登录凭据）或互联网访问？是否放置在可能在误报时对电子设备造成损害的位置？
-
-*   水阀和燃气阀的位置在哪里？是否可以自行接近，还是需要联系维护人员才能操作？
-
-*   建筑外部的本地电信线路（铜缆和光纤）在哪里？如果是地面敷设，可用电信工具进行窃听；如果是埋地，挖掘可能导致线路被切断；如果位于电话杆上，则易受交通事故或恶劣天气影响。
+- 是否配备了电涌保护装置、不间断电源（UPS）以及备用发电机？这些设备的开关是否易于被入侵者触及——比如可以直接闯入翻转开关，或攀爬围栏切断锁具从而接触关键设备。
+- 当电力中断时，物理安全机制是“打开”（让任何人通过）还是“关闭”（在电力恢复前锁定进出）？我见过两种情况，需要明确其具体表现。
+- 火灾探测与灭火设备（感烟探测器、灭火器、喷淋系统）的位置在哪里？入侵者可能如何滥用这些设备？是否通过无线或本地网络（默认登录凭据）或互联网访问？是否放置在可能在误报时对电子设备造成损害的位置？
+- 水阀和燃气阀的位置在哪里？是否可以自行接近，还是需要联系维护人员才能操作？
+- 建筑外部的本地电信线路（铜缆和光纤）在哪里？如果是地面敷设，可用电信工具进行窃听；如果是埋地，挖掘可能导致线路被切断；如果位于电话杆上，则易受交通事故或恶劣天气影响。
 
 #### 防护措施
 
 可能需要在设计、评估或 retrofitting 阶段引入外部专家。关键在于**位置**。请确保以下要点：
 
-*   将主要公用控制设施置于可上锁的门后或围栏内，且不在行人视线范围内。
-
-*   配置足够数量的摄像头，确保覆盖面广。
-
-*   对任何可通过网络或互联网访问的设备，使用漏洞扫描等手段进行测试。若设备不必联网，可关闭网络功能或通过防火墙规则、网络访问控制列表（NACL）限制访问权限。
-
-*   确保行人或附近的人员无法接触到并操作这些控制开关。
+- 将主要公用控制设施置于可上锁的门后或围栏内，且不在行人视线范围内。
+- 配置足够数量的摄像头，确保覆盖面广。
+- 对任何可通过网络或互联网访问的设备，使用漏洞扫描等手段进行测试。若设备不必联网，可关闭网络功能或通过防火墙规则、网络访问控制列表（NACL）限制访问权限。
+- 确保行人或附近的人员无法接触到并操作这些控制开关。
 
 ![tip](img/tip.png)对开关、恒温器开关以及服务器电源按钮、USB 接口、PCI 扩展插槽的防护盖可以有效阻挡未经授权的操作。但切勿完全依赖它们，因为往往可以被轻易撬开。
 
@@ -1637,134 +1551,114 @@ FIGURE 6-2:  LUCY 中的各种电子邮件钓鱼模板示例。
 
 攻击者可以利用办公环境中的各种弱点。请自问以下关于常见攻击点的问题：
 
-*   前台或保安是否监控建筑主门的出入流量？
+- 前台或保安是否监控建筑主门的出入流量？
+- 员工的工作台上是否放有机密信息？需要检查是否有邮件、包裹等物品位于门外，或更糟的是在建筑外等待取件。
+- 垃圾桶、回收箱、碎纸机的位置在哪里，并且是否容易取用？公开的回收箱和其他随意丢弃的垃圾会招致所谓的“dumpster diving”。恶意人员经常在垃圾中搜寻机密公司信息和客户记录，并且往往能够成功。易于取用的垃圾会导致众多安全漏洞。
+- 邮件室和复印室的安全程度如何？如果入侵者能够进入这些房间，他们可以窃取邮件或公司信纸来针对你进行攻击。他们也可以利用并滥用你的传真机（假设你仍在使用！）。
+- 是否使用并实时监控闭路电视或基于 IP 的网络摄像头？如果你的部署方式不够主动，而是按需使用，你必须确保在需要时能够快速访问视频和相关日志。
+- 你的网络摄像头和数字视频录像机是否已硬化以抵御攻击，或者至少已将默认登录凭据更改？这一安全漏洞几乎可以肯定出现在几乎所有类型的网络、公用事业公司、医院、制造企业以及其他所有类型的企业中。
+- 门上的访问控制有哪些：传统钥匙、卡片钥匙、组合锁还是生物识别？确定谁可以获取钥匙以及它们存放在哪里。钥匙和可编程键盘组合通常会被共享，导致问责难以确定。找出有多少人共享这些组合和钥匙。
+- 我曾有一位客户，其前台大堂未受监控，并且提供了任何人都可以使用的 Voice over Internet Protocol（VoIP）电话。客户没有考虑到任何人都可以进入大堂，拔掉 VoIP 电话（或使用电话的数据端口），将笔记本电脑插入连接，从而在极小的被发现或质疑的概率下获得对网络的完整访问。此类情况易于防范：如果分别使用数据和语音端口，或在交换机或物理网络层面将语音和数据流分离，则在未受监控区域禁用网络连接。
 
-*   员工的工作台上是否放有机密信息？需要检查是否有邮件、包裹等物品位于门外，或更糟的是在建筑外等待取件。
+#### 防护措施
 
+物理安全面临的挑战是安全控制往往是被动的。有些控制是预防性的（即它们能够阻止或无限期延迟），但它们并非万无一失。制定如下简单措施可以降低建筑和办公室相关的漏洞暴露：
 
+- 一位接待员或保安人员监控来往人员是最简便的防护措施。此人可以确保每位访客签到，并且所有新来的或不受信任的访客始终受到接待。制定政策和程序，要求所有员工对陌生人提出质疑并报告建筑内的异常行为。
+- *Employees Only* 或 *Authorized Personnel Only* 标识指示坏 guys 应该去的地方，而不是阻止他们进入。不引起对关键区域的注意可能是更好的做法。
+- 在数据中心设置单一入口和出口。
+- 将垃圾桶放置在安全区域内。
+- 使用摄像头监控关键区域，包括垃圾桶。（摄像头如何影响潜在犯罪者的行为真是令人惊讶。）
+- 使用交叉切碎机或安全回收箱销毁纸质文件。
+- 限制钥匙分发数量和共享密码组合的数量，并确保访问日志已记录并受监控。
+- 尽可能为每个人分配唯一的钥匙和密码，或（更好）根本不使用钥匙和密码。取而代之，使用可以更好控制和监控的电子徽章。
+- 使用生物识别系统。它们可以有效，但也可能昂贵且难以管理。
 
+**网络组件和计算机**：入侵者在获得建筑进入后，可能会寻找服务器机房以及其他易于接近的计算机和网络设备。
 
--   [垃圾桶、回收箱、碎纸机的位置在哪里，并且是否容易取用？公开的回收箱和其他随意丢弃的垃圾会招致所谓的“dumpster diving”。恶意人员经常在垃圾中搜寻机密公司信息和客户记录，并且往往能够成功。易于取用的垃圾会导致众多安全漏洞。  
+**攻击点**：
 
--   邮件室和复印室的安全程度如何？如果入侵者能够进入这些房间，他们可以窃取邮件或公司信纸来针对你进行攻击。他们也可以利用并滥用你的传真机（假设你仍在使用！）。  
-
--   是否使用并实时监控闭路电视或基于 IP 的网络摄像头？如果你的部署方式不够主动，而是按需使用，你必须确保在需要时能够快速访问视频和相关日志。  
-
--   你的网络摄像头和数字视频录像机是否已硬化以抵御攻击，或者至少已将默认登录凭据更改？这一安全漏洞几乎可以肯定出现在几乎所有类型的网络、公用事业公司、医院、制造企业以及其他所有类型的企业中。  
-
--   门上的访问控制有哪些：传统钥匙、卡片钥匙、组合锁还是生物识别？确定谁可以获取钥匙以及它们存放在哪里。钥匙和可编程键盘组合通常会被共享，导致问责难以确定。找出有多少人共享这些组合和钥匙。  
-
--   我曾有一位客户，其前台大堂未受监控，并且提供了任何人都可以使用的 Voice over Internet Protocol（VoIP）电话。客户没有考虑到任何人都可以进入大堂，拔掉 VoIP 电话（或使用电话的数据端口），将笔记本电脑插入连接，从而在极小的被发现或质疑的概率下获得对网络的完整访问。此类情况易于防范：如果分别使用数据和语音端口，或在交换机或物理网络层面将语音和数据流分离，则在未受监控区域禁用网络连接。  
-
-#### Countermeasures
-
--   物理安全面临的挑战是安全控制往往是被动的。有些控制是预防性的（即它们能够阻止或无限期延迟），但它们并非万无一失。制定如下简单措施可以降低建筑和办公室相关的漏洞暴露：  
-
-    -   一位接待员或保安人员监控来往人员是最简便的防护措施。此人可以确保每位访客签到，并且所有新来的或不受信任的访客始终受到接待。制定政策和程序，要求所有员工对陌生人提出质疑并报告建筑内的异常行为。  
-
-    -   *Employees Only* 或 *Authorized Personnel Only* 标识指示坏 guys 应该去的地方，而不是阻止他们进入。不引起对关键区域的注意可能是更好的做法。  
-
-    -   在数据中心设置单一入口和出口。  
-
-    -   将垃圾桶放置在安全区域内。  
-
-    -   使用摄像头监控关键区域，包括垃圾桶。（摄像头如何影响潜在犯罪者的行为真是令人惊讶。）  
-
-    -   使用交叉切碎机或安全回收箱销毁纸质文件。  
-
-    -   限制钥匙分发数量和共享密码组合的数量，并确保访问日志已记录并受监控。  
-
-    -   尽可能为每个人分配唯一的钥匙和密码，或（更好）根本不使用钥匙和密码。取而代之，使用可以更好控制和监控的电子徽章。  
-
-    -   使用生物识别系统。它们可以有效，但也可能昂贵且难以管理。  
-
--   网络组件和计算机  
-
-    -   入侵者在获得建筑进入后，可能会寻找服务器机房以及其他易于接近的计算机和网络设备。  
-
--   攻击点  
-
-    -   通往王国的钥匙往往就在某人的工作站上，距离不远，甚至不超过未受保护的计算机室或布线间。  
-
-    -   入侵者可以做到以下行为：  
-
-        -   获得网络访问权限并以已登录用户身份发送恶意邮件。  
-
-        -   通过 ophcrack LiveCD（[`ophcrack.sourceforge.net`](http://ophcrack.sourceforge.net)）启动计算机，直接破解并获取密码。我在第 8 章（Chapter 8）中介绍了该工具及更多密码破解技巧。  
-
-        -   在标准电源插座中放置像 Pwnie Express（[`www.pwnieexpress.com`](https://www.pwnieexpress.com)）制造的渗透盒，这些设备可以通过蜂窝连接访问系统并执行恶意操作。这种隐蔽的入侵方式可以作为你自己的安全测试的一部分使用。  
-
-        -   通过复制文件到可移动存储设备（如手机或 USB 驱动）或通过电子邮件将其发送到外部地址来窃取文件。  
-
-        -   进入未上锁的计算机室，对服务器、防火墙和路由器进行操作。  
-
-        -   带走网络图、联系人列表和灾难恢复计划。  
-
-        -   从模拟线路获取电话号码，从 T1、Metro Ethernet 及其他电信设备获取电路 ID，以便在后续攻击中使用。  
-
-    -   几乎所有未加密的网络传输信息都可以通过以下方法记录以供将来分析：  
-
-        -   将一台运行网络分析软件的计算机（包括像 Cain and Abel 这样的工具，我在第 9 章（Chapter 9）中介绍）连接到网络交换机上  
-
-        -   在已有计算机上安装网络分析软件  
-
-    -   ![warning](img/warning.png) 网络分析仪难以被发现。我在第 9 章（Chapter 9）中对分析仪在交换以太网网络上捕获数据包的细节进行了更深入的说明。  
-
-    -   那么，如何在未来利用这些信息？最简便的攻击方式是在这台计算机上安装远程管理软件，例如 VNC（[`www.realvnc.com`](https://www.realvnc.com/en/)）。此外，有足够时间和技巧的聪明黑客可以在防火墙之外为该计算机绑定公共 IP 地址。拥有足够的网络知识和时间，黑客或恶意内部人员可以配置新的防火墙规则，如果他们拥有防火墙的访问权限。别小看这点；我经常看到使用默认密码的防火墙，这几乎是安全最差的状态。  
-
-    -   还要向自己提问以下关于常见物理漏洞的问题：  
-
-        -   在正常工作时间、午餐时间以及下班后，计算机可以有多容易被访问？  
-
-        -   计算机（尤其是笔记本电脑）是否通过锁定固定在桌面上、配有加密硬盘以及在短时间不使用后锁定屏幕来得到保护？  
-
-        -   员工是否经常在旅行、在家工作、酒店或当地咖啡店时，将手机和平板电脑随意留在未受保护的状态下？  
-
-        -   密码是否写在电脑屏幕、键盘或桌面的便签上？（这在 IT 圈子里一直是个玩笑，但仍然时有发生。）  
-
-        -   备份介质是否散落在办公室或数据中心，容易受到盗窃？  
-
-        -   用于保护备份介质的保险箱是否被使用，以及谁可以访问它们？  
-
-    -   保险箱往往面临很大风险，因为它们体积大且价值高，且通常不受组织常规安全控制的保护。考虑制定专门的政策和技术，以保护它们。  
-
-    -   ![tip](img/tip.png) 保险箱应专门为介质设计，以防止在火灾中熔化；例如 FireKing 保险箱（[`www.fireking.com/products/safes/data-safes`](https://www.fireking.com/products/safes/data-safes)）。  
+- 通往王国的钥匙往往就在某人的工作站上，距离不远，甚至不超过未受保护的计算机室或布线间。
+- 入侵者可以做到以下行为：
+  - 获得网络访问权限并以已登录用户身份发送恶意邮件。
+  - 通过 ophcrack LiveCD（[`ophcrack.sourceforge.net`](http://ophcrack.sourceforge.net)）启动计算机，直接破解并获取密码。我在第 8 章（Chapter 8）中介绍了该工具及更多密码破解技巧。
+  - 在标准电源插座中放置像 Pwnie Express（[`www.pwnieexpress.com`](https://www.pwnieexpress.com)）制造的渗透盒，这些设备可以通过蜂窝连接访问系统并执行恶意操作。这种隐蔽的入侵方式可以作为你自己的安全测试的一部分使用。
+  - 通过复制文件到可移动存储设备（如手机或 USB 驱动）或通过电子邮件将其发送到外部地址来窃取文件。
+  - 进入未上锁的计算机室，对服务器、防火墙和路由器进行操作。
+  - 带走网络图、联系人列表和灾难恢复计划。
+  - 从模拟线路获取电话号码，从 T1、Metro Ethernet 及其他电信设备获取电路 ID，以便在后续攻击中使用。
+- 几乎所有未加密的网络传输信息都可以通过以下方法记录以供将来分析：
+  - 将一台运行网络分析软件的计算机（包括像 Cain and Abel 这样的工具，我在第 9 章（Chapter 9）中介绍）连接到网络交换机上
 
 
 
--   [是否需要锁定笔记本电脑包？关于开机密码呢？加密可以解决很多与物理安全相关的弱点。](https://wiki.example.org/feynmans_learning_method)
+- 在已有计算机上安装网络分析软件
 
--   有人可以多么轻松地连接到无线接入点信号或接入点本身以加入网络？还需要考虑恶意接入点。我在第 10 章中详细介绍了无线网络。
+![warning](img/warning.png) 网络分析仪难以被发现。我在第 9 章（Chapter 9）中对分析仪在交换以太网网络上捕获数据包的细节进行了更深入的说明。
 
--   网络防火墙、路由器、交换机和集线器（基本上，任何有以太网或控制台连接的设备）是否容易被访问，从而让攻击者轻松插入网络？
+那么，如何在未来利用这些信息？最简便的攻击方式是在这台计算机上安装远程管理软件，例如 VNC（`www.realvnc.com`）。此外，有足够时间和技巧的聪明黑客可以在防火墙之外为该计算机绑定公共 IP 地址。拥有足够的网络知识和时间，黑客或恶意内部人员可以配置新的防火墙规则，如果他们拥有防火墙的访问权限。别小看这点；我经常看到使用默认密码的防火墙，这几乎是安全最差的状态。
 
--   所有的电缆是否都通过在布线橱柜的配线板上连接，使得所有的网络插口都处于活动状态（如前面提到的未受监控的大堂区域）？
+还要向自己提问以下关于常见物理漏洞的问题：
+
+- 在正常工作时间、午餐时间以及下班后，计算机可以有多容易被访问？
+
+- 计算机（尤其是笔记本电脑）是否通过锁定固定在桌面上、配有加密硬盘以及在短时间不使用后锁定屏幕来得到保护？
+
+- 员工是否经常在旅行、在家工作、酒店或当地咖啡店时，将手机和平板电脑随意留在未受保护的状态下？
+
+- 密码是否写在电脑屏幕、键盘或桌面的便签上？（这在 IT 圈子里一直是个玩笑，但仍然时有发生。）
+
+- 备份介质是否散落在办公室或数据中心，容易受到盗窃？
+
+- 用于保护备份介质的保险箱是否被使用，以及谁可以访问它们？
+
+保险箱往往面临很大风险，因为它们体积大且价值高，且通常不受组织常规安全控制的保护。考虑制定专门的政策和技术，以保护它们。
+
+![tip](img/tip.png) 保险箱应专门为介质设计，以防止在火灾中熔化；例如 FireKing 保险箱（`www.fireking.com/products/safes/data-safes`）。
+
+- [是否需要锁定笔记本电脑包？关于开机密码呢？加密可以解决很多与物理安全相关的弱点。](https://wiki.example.org/feynmans_learning_method)
+
+- 有人可以多么轻松地连接到无线接入点信号或接入点本身以加入网络？还需要考虑恶意接入点。我在第 10 章中详细介绍了无线网络。
+
+- 网络防火墙、路由器、交换机和集线器（基本上，任何有以太网或控制台连接的设备）是否容易被访问，从而让攻击者轻松插入网络？
+
+- 所有的电缆是否都通过在布线橱柜的配线板上连接，使得所有的网络插口都处于活动状态（如前面提到的未受监控的大堂区域）？
 
 ![warning](img/warning.png)这套配置虽然常见，但却是个坏主意，因为它允许任何人随时插入网络并获得访问权限，同时也能传播恶意软件。
 
-#### Countermeasures
+### Countermeasures
 
 网络和计算机安全防护措施虽然实施简单，但难以执行，因为它们涉及日常行为。下面是这些防护措施的清单：
 
 - 让用户了解需要注意的事项，从而拥有额外的“眼睛和耳朵”帮助你发现问题。
+
 - 要求用户在离开电脑时锁定屏幕——只需几次点击或键盘操作即可完成。更进一步，可在 Active Directory 或本地计算机策略中设置组策略对象（GPO）强制设置超时。
+
 - 确保使用强密码。（我在第 8 章中介绍了该主题。）
+
 - 要求笔记本电脑用户使用锁定电缆将系统固定在书桌上——这对远程工作者、旅行者以及大型公司的员工以及经常在人流密集的场所工作的人来说尤为重要。
-- 要求所有笔记本电脑使用全盘加密技术。例如 Windows 的 BitLocker（最好配合 Microsoft BitLocker Administration and Monitoring 管理软件，网址为[`https://docs.microsoft.com/en-us/microsoft-desktop-optimization-pack/mbam-v25/`](https://docs.microsoft.com/en-us/microsoft-desktop-optimization-pack/mbam-v25/)），另一个选项是 WinMagic SecureDoc Full Disk Encryption（网址为[`https://www.winmagic.com/products/full-disk-encryption-for-windows`](https://www.winmagic.com/products/full-disk-encryption-for-windows)）。macOS 内置的 FileVault 也是适用于日益增长的此类计算机的方案。同时，还应考虑对可移动介质进行加密，因为敏感信息必然会在那里。
+
+- 要求所有笔记本电脑使用全盘加密技术。例如 Windows 的 BitLocker（最好配合 Microsoft BitLocker Administration and Monitoring 管理软件，网址为`https://docs.microsoft.com/en-us/microsoft-desktop-optimization-pack/mbam-v25/`），另一个选项是 WinMagic SecureDoc Full Disk Encryption（网址为`https://www.winmagic.com/products/full-disk-encryption-for-windows`）。macOS 内置的 FileVault 也是适用于日益增长的此类计算机的方案。同时，还应考虑对可移动介质进行加密，因为敏感信息必然会在那里。
 
 - 保持服务器机房和布线橱柜上锁，并监控这些区域的任何不当行为。
+
 - 保持组织内硬件和软件的当前清单，以便轻松发现额外设备的出现或丢失——尤其是在计算机室中非常重要。
+
 - 用更现代的访问控制系统取代传统的门锁和钥匙。
+
 - 在存储和运输过程中妥善保护计算媒体。
+
 - 扫描并关闭恶意无线接入点。
+
 - 使用线缆陷阱和锁具，防止入侵者从配线板或计算机上拔掉网络线并利用该连接接入其他设备。
+
 - 对磁介质使用大容量擦除工具，并在销毁前将其粉碎。
 
-Chapter 8
+## Chapter 8
 
-## Passwords
+### Passwords
 
-IN THIS CHAPTER
+#### IN THIS CHAPTER
 
 ![check](img/check.png)`Identifying password vulnerabilities`
 
@@ -1784,7 +1678,7 @@ External attackers and malicious insiders have many ways to obtain passwords. Th
 
 This chapter demonstrates how easily the bad guys can gather password information from your network and computer systems. I outline common password vulnerabilities and describe countermeasures that help prevent these vulnerabilities from being exploited on your systems. If you perform the tests and implement the countermeasures outlined in this chapter, you’ll be well on your way to securing your systems’ passwords.
 
-## Understanding Password Vulnerabilities
+### Understanding Password Vulnerabilities
 
 When you balance the cost of security and the value of the protected information, the combination of a user id and a secret password is usually adequate. Passwords create a false sense of security, however, as the bad guys know, and they attempt to crack passwords as a step toward breaking into computer systems.
 
@@ -1795,47 +1689,46 @@ One big problem with relying solely on passwords for security is that more than 
 Here are the two general types of password vulnerabilities:
 
 - **Organizational or user vulnerabilities:** Include lack of password policies that are enforced within the organization and lack of security awareness on the part of users
+
 - **Technical vulnerabilities:** Include weak encryption methods and unsecure storage of passwords on computer systems
 
 I explore these classifications in more detail in the following sections.
 
 Before computer networks and the Internet, the user’s physical environment was an additional layer of password security that worked pretty well. Now that most computers have network connectivity, that protection is gone. Chapter 7 provides details on managing physical security in this age of networked computers and mobile devices.
 
-### Organizational password vulnerabilities
+#### Organizational password vulnerabilities
 
-
-
-它是人类的本性，尤其是在记住工作和日常生活中五、十或数十个密码时，追求便利。这种对便利的渴望使得密码成为攻击者最容易突破的障碍。通过使用 26 个字母和数字 0‑9，几乎可以产生 3 万亿（yes，trillion，带有一个 *t* 且 12 个零）种八位字符的密码组合。强密码易记且难以破解。然而，大多数人只关注记忆容易的部分。用户喜欢使用诸如 `password`、登录名、`abc123` 或甚至**不设密码**的密码！不要笑；我已经看到这些明显的弱点，并保证它们正在当前的任何网络上存在。
+它是人类的本性，尤其是在记住工作和日常生活中五、十或数十个密码时，追求便利。这种对便利的渴望使得密码成为攻击者最容易突破的障碍。通过使用 26 个字母和数字 0‑9，几乎可以产生 3 万亿（yes，trillion，带有一个 `t` 且 12 个零）种八位字符的密码组合。强密码易记且难以破解。然而，大多数人只关注记忆容易的部分。用户喜欢使用诸如 `password`、登录名、`abc123` 或甚至不设密码的密码！不要笑；我已经看到这些明显的弱点，并保证它们正在当前的任何网络上存在。
 
 除非用户接受教育并被提醒使用强密码，否则他们的密码通常是：
 
-*   **易于猜测：** 诸如“password”或“letmein”这类密码比人们想象的更常见。
+- **易于猜测：** 诸如“password”或“letmein”这类密码比人们想象的更常见。
 
-*   **很少更改：** 许多人没有被要求定期、持续地更改密码。
+- **很少更改：** 许多人没有被要求定期、持续地更改密码。
 
-*   **多处复用：** 当攻击者破解一个密码后，往往可以利用该密码和用户名访问其他系统或网站。
+- **多处复用：** 当攻击者破解一个密码后，往往可以利用该密码和用户名访问其他系统或网站。
 
     ![remember](img/remember.png)在多个系统和网站上使用同一密码不过是一个等待发生的漏洞。每个人都犯过这种事，但这并不意味着它是对的。做你能做的来保护自己的凭证，并向你的用户宣传这种做法如何让你陷入真正的困境。
 
-*   **写在纸上：** 通常，密码越复杂，越难破解。但当用户创建复杂密码时，他们更倾向于将其写下来。外部攻击者和恶意内部人员可以找到这些密码并用它们针对你和你的业务。
+- **写在纸上：** 通常，密码越复杂，越难破解。但当用户创建复杂密码时，他们更倾向于将其写下来。外部攻击者和恶意内部人员可以找到这些密码并用它们针对你和你的业务。
 
-### 技术性密码漏洞
+#### 技术性密码漏洞
 
 你经常在利用组织的密码漏洞后，会发现这些严重的技术漏洞：
 
-*   **密码加密方案较弱。** 黑客可以通过本章所述的 cracking 方法破解弱密码存储机制。许多供应商和开发者认为，只要不公开加密算法的源码，密码就安全。 *错误！* 持续且耐心的攻击者通常可以很快破解这种隐藏在明面的安全措施（security through obscurity），随后代码会在 Internet 上传播，成为公开知识。
+- **密码加密方案较弱。** 黑客可以通过本章所述的 cracking 方法破解弱密码存储机制。许多供应商和开发者认为，只要不公开加密算法的源码，密码就安全。 *错误！* 持续且耐心的攻击者通常可以很快破解这种隐藏在明面的安全措施（security through obscurity），随后代码会在 Internet 上传播，成为公开知识。
 
     密码 cracking 工具利用弱密码加密。这些工具完成艰巨工作，只要有足够的时间和计算能力，就能破解任何密码。
 
-*   **程序将密码存储在未受保护的内存、文件和易于访问的数据库中。**
+- **程序将密码存储在未受保护的内存、文件和易于访问的数据库中。**
 
-*   **未加密的数据库直接让拥有数据库访问权限的人（无论其业务需求如何）都能直接访问敏感信息。**
+- **未加密的数据库直接让拥有数据库访问权限的人（无论其业务需求如何）都能直接访问敏感信息。**
 
-*   **用户应用在输入密码时会将其显示在屏幕上。**
+- **用户应用在输入密码时会将其显示在屏幕上。**
 
 国家脆弱性数据库（由美国国家标准与技术研究院管理）目前已识别出 **4,000 多条** 与密码相关的漏洞！你可以在 [`https://nvd.nist.gov/vuln/search`](https://nvd.nist.gov/vuln/search) 进行搜索，了解你的系统在密码方面可能面临的风险。
 
-## 破解密码
+### 破解密码
 
 密码破解是坏 guys 最享受的黑客行为之一，因为它满足了他们的探索欲和解决问题的愿望。你可能没有强烈的愿望去探索所有人的密码，但以这种心态来对待密码破解是有帮助的。
 
@@ -1845,62 +1738,67 @@ Before computer networks and the Internet, the user’s physical environment was
 
 你可以使用低技术和高技术的方式来利用漏洞获取密码。你可以通过电话欺骗用户让其泄露密码；观察用户在纸上写下的密码；或直接在电脑、网络或 Internet 上捕获密码，具体方法在下面的章节中介绍。
 
-### 传统方式破解密码
+#### 传统方式破解密码
 
 黑客可以使用低技术手段破解密码，包括通过社交工程技术（如 phishing、肩窥、根据对用户的了解进行猜测）等手段。
 
 #### 社交工程
 
-最流行的低技术密码获取方法是 `social engineering`，我在第 6 章（Chapter 6）中详细说明。社交工程利用人类的信任特性获取信息，随后可用于恶意目的。常见的社交工程手段是诱骗人们透露密码。一封精心撰写的 phishing 邮件，配合 LUCY 这类 phishing 平台，就足以让人们提供登录凭据。听起来荒谬，但我每天都能看到这种情况。
 
-#### 手段
+
+最流行的低技术密码获取方法是`social engineering`，我在第 6 章（Chapter 6）中详细说明。社交工程利用人类的信任特性获取信息，随后可用于恶意目的。常见的社交工程手段是诱骗人们透露密码。一封精心撰写的 phishing 邮件，配合 LUCY 这类 phishing 平台，就足以让人们提供登录凭据。听起来荒谬，但我每天都能看到这种情况。
+
+## 社交工程
+
+### 手段
 
 要通过社交工程获取密码，直接询问即可。你可以给用户打电话，告诉他邮件队列中有几封重要的邮件卡住了，需要他的密码来登录并解除阻塞。许多黑客和不法内部人员使用这种技巧获取信息。
 
 另一种让用户泄露密码的方式是发送 phishing 邮件，要求其确认对内部安全政策的理解和遵守，并提交登录凭据到一个 phishing 网站。我发现，只要让用户在 phishing 网站上提交凭据，就足以获取他们的密码。我在第 6 章（Chapter 6）中详细介绍了邮件 phishing。
 
-![remember](img/remember.png)如果在你的测试中用户向你提供了密码，请确保这些密码被更改。最简便的做法是通过 Windows 域强制所有用户更改密码。不要在密码泄露后对后果负责。
+![remember](img/remember.png)
+
+如果在你的测试中用户向你提供了密码，请确保这些密码被更改。最简便的做法是通过 Windows 域强制所有用户更改密码。不要在密码泄露后对后果负责。
 
 社交工程的常见弱点是公司网站上公开的员工姓名、电话号码和电子邮件地址。社交媒体平台如 LinkedIn、Facebook 和 Twitter 也可以被用来针对公司，因为这些平台能够揭示员工的姓名和联系方式。
 
-#### 对策
+### 对策
 
 用户意识和持续的安全培训是防御社交工程的强大防线。安全工具如果在宿主层、网络边界或云端监控邮件和浏览行为，也能作为备用防线。培训用户识别攻击（如可疑电话或欺骗性 phishing 邮件）并有效应对。最佳响应是**拒绝提供任何信息**，并向组织的信息安全经理报告。同时，将公司网站上的员工目录移除，或至少撤掉 IT 部门人员的信息。
 
-#### 肩窥
+## 肩窥
 
 *Shoulder surfing*（从他人的肩膀观察其输入内容）是一种有效的低技术密码破解手段。
 
-#### 手段
-
-
-
+### 手段
 
 要发动此攻击，恶意分子必须靠近他们的目标（或使用双筒望远镜等观察工具），并且不显眼。他们只需通过观察用户在登录时的键盘或屏幕来收集密码。有敏锐视力的攻击者甚至可能观察用户是否在桌面周围张望以寻找密码提示或密码本身。监控摄像头或网络摄像头也可以用于此类攻击。咖啡店和飞机提供了理想的“肩窥”环境。
 
 你可以尝试自己进行肩窥。在办公室周围走动，进行随机检查。走到用户的工作站，要求他们登录电脑、网络或甚至电子邮件应用。切记，在进行此测试时要小心，并尊重他人的隐私。
 
-#### COUNTERMEASURES
+### 对策
 
 鼓励用户保持警觉，并告诫他们在怀疑有人在肩后窥视时不要输入密码。指导用户，如果怀疑有人在登录时在肩后窥视，应礼貌地要求对方移开视线，或在必要时用合适的脏话示意对方自己严肃。将身体靠向肩窥者的视线可能是最简单的做法，以防止他看到任何输入内容或屏幕本身。3M 隐私过滤器
-```https://www.3m.com/3M/en_US/privacy-screen-protectors-us```
+
+
+
+`https://www.3m.com/3M/en_US/privacy-screen-protectors-us`
+
 虽然它们效果很好，但令人惊讶的是，我很少看到它们被使用。
 
-#### Inference
+### Inference
 
-*Inference*是根据你对用户的了解（如出生日期、喜欢的电视节目或电话号码）猜测密码。听起来很荒谬，但罪犯常常通过猜测来确定受害者的密码。
+`Inference` 是根据你对用户的了解（如出生日期、喜欢的电视节目或电话号码）猜测密码。听起来很荒谬，但罪犯常常通过猜测来确定受害者的密码。
 
 对推测攻击的最佳防御是教育用户创建不包含可关联信息的安全密码。在缺乏特定密码复杂度过滤的情况下，很难仅靠技术控制来强制执行这一做法，因此需要制定严谨的安全政策，并通过持续的安全意识培训和提醒，让用户牢记创建安全密码的重要性。
 
-#### Weak authentication
+### Weak authentication
 
-外部攻击者和恶意内部人员可以通过利用弱 authentication 来获取密码或避免使用密码。 (原文此处出现多次 "weak authentication"，但根据注意事项，不需要重复输出原文，故此处省略重复内容)
-
-
+外部攻击者和恶意内部人员可以通过利用弱 `authentication` 来获取密码或避免使用密码。
 
 ![tip](img/tip.png)Some of these tools require physical access to the systems you’re testing. You may be wondering what value physical access adds to password cracking. If a hacker can obtain physical access to your systems and password files, you have more than just basic information security problems to worry about, right? True, but this kind of access is entirely possible! What about a summer intern, a disgruntled employee, or an outside contractor with malicious intent? The mere risk of an unencrypted laptop’s being lost or stolen and falling into the hands of someone with ill intent should be reason enough.
 
-To understand how the preceding password-cracking programs generally work, you need to understand how passwords are encrypted. Passwords typically are encrypted when they’re stored on a computer, using an encryption or one-way hash algorithm such as SHA2 or MD5. Then hashed passwords are represented as fixed-length encrypted strings that always represent the same passwords with exactly the same strings. These hashes are irreversible for all practical purposes, so in theory, passwords can never be decrypted. Furthermore, certain passwords, such as those in Linux, have a random value called a `*salt*` added to them to create a degree of randomness. This value prevents the same password used by two people from having the same hash value.
+To understand how the preceding password-cracking programs generally work, you need to understand how passwords are encrypted. Passwords typically are encrypted when they’re stored on a computer, using an encryption or one-way hash algorithm such as SHA2 or MD5. Then hashed passwords are represented as fixed-length encrypted strings that always represent the same passwords with exactly the same strings. These hashes are irreversible for all practical purposes, so in theory, passwords can never be decrypted. Furthermore, certain passwords, such as those in Linux, have a random value called a `salt` added to them to create a degree of randomness. This value prevents the same password used by two people from having the same hash value.
 
 ![remember](img/remember.png)In Windows, after the password hashes are obtained, attackers can leverage an attack called `pass the hash` to send the hash rather than the actual password to the system for authentication. You can find a good article on using Metasploit and the `psexec` module for this purpose at [`https://www.offensive-security.com/metasploit-unleashed/psexec-pass-hash/`](https://www.offensive-security.com/metasploit-unleashed/psexec-pass-hash/).
 
@@ -1912,9 +1810,9 @@ Passwords that are subjected to cracking tools eventually lose. You have access 
 
 ![warning](img/warning.png)When trying to crack passwords, the associated user accounts may be locked out, which could interrupt your users. Be careful if intruder lockout is enabled in your operating systems, databases, or applications. If lockout is enabled, you might lock out some or all computer/network accounts, resulting in a denial of service situation for your users.
 
-#### Dictionary attacks
+### Dictionary attacks
 
-Dictionary attacks quickly compare a set of known dictionary-type words — including many common passwords — against a password database. This database is a text file with hundreds, if not thousands, of dictionary words, typically listed in alphabetical order. Suppose that you have a dictionary file that you downloaded from one of the sites in the following list. The English-dictionary file at the Purdue University site contains one word per line starting with `*10th, 1st*` all the way to `*zygote*.`
+Dictionary attacks quickly compare a set of known dictionary-type words — including many common passwords — against a password database. This database is a text file with hundreds, if not thousands, of dictionary words, typically listed in alphabetical order. Suppose that you have a dictionary file that you downloaded from one of the sites in the following list. The English-dictionary file at the Purdue University site contains one word per line starting with `10th, 1st` all the way to `zygote`.
 
 Many password-cracking utilities use a separate dictionary that you create or download from the Internet. Here are some popular sites that house dictionary files and other miscellaneous word lists:
 
@@ -1924,9 +1822,9 @@ Many password-cracking utilities use a separate dictionary that you create or do
 
 Don’t forget to use other language files as well, such as Spanish and Klingon.
 
-![remember](img/remember.png)Dictionary attacks are only as good as the dictionary files you supply to your password-cracking program. You can easily spend days or even weeks trying to crack passwords with a dictionary attack. If you don’t set a time limit or a similar expectation going in, you’ll likely find that dictionary cracking is a mere exercise in futility. Most dictionary attacks are good for weak (easily guessed) passwords. Some special dictionaries, however, have common misspellings or alternative spellings of words, such as `pa$$w0rd` (password) and `5ecur1ty` (security). Additionally, special dictionaries can contain non-English words and thematic words from religions, politics, or `*Star Trek*`.
+![remember](img/remember.png)Dictionary attacks are only as good as the dictionary files you supply to your password-cracking program. You can easily spend days or even weeks trying to crack passwords with a dictionary attack. If you don’t set a time limit or a similar expectation going in, you’ll likely find that dictionary cracking is a mere exercise in futility. Most dictionary attacks are good for weak (easily guessed) passwords. Some special dictionaries, however, have common misspellings or alternative spellings of words, such as `pa$$w0rd` (password) and `5ecur1ty` (security). Additionally, special dictionaries can contain non-English words and thematic words from religions, politics, or `Star Trek`.
 
-#### Brute-force attacks
+### Brute-force attacks
 
 Brute-force attacks can crack practically any password, given sufficient time. Brute-force attacks try every combination of numbers, letters, and special characters until the password is discovered. Many password-cracking utilities let you specify such testing criteria as the character sets, password length to try, and known characters (for a mask attack). Sample Figure 8-1 shows some example brute-force password-cracking options.
 
@@ -1940,11 +1838,9 @@ FIGURE 8-1  Brute-force password-cracking options in Proactive Password Auditor.
 
 Can an expiring password deter a hacker’s attack and render password cracking software useless? Yes. After the password is changed, the cracking must start again if the hacker wants to test all the possible combinations. This scenario is one reason why it’s a good idea to change passwords periodically. Still, I’m not a big fan of forcing users to change their passwords often. Shortening the change interval can reduce the risk of passwords being cracked but can also be politically unfavorable in your business and end up creating the opposite of the effect you’re going for. You have to strike a balance among security, convenience, and usability. In many situations, I don’t think it’s unreasonable to require password changes every 6 to 12 months or (especially) after a suspected compromise. Keep in mind that there is a direct relationship between password change interval and password length. The longer the interval is the longer the password needs to be.
 
-
-
 ![tip](img/tip.png)详尽的密码破解尝试通常是不必要的。大多数密码相当弱。即使是最小的密码要求，例如密码长度，也能在你的测试中发挥作用。你可能通过使用其他工具或通过网页浏览器发现安全策略信息。（参见 第 4 节 以获取用于测试操作系统安全性的工具和技术，以及 第 15 章 以获取测试网站和应用程序的信息。）如果你发现了这些密码策略信息，你可以将破解程序的参数配置得更明确，这通常会产生更快的结果。
 
-#### 彩虹攻击
+### 彩虹攻击
 
 `rainbow` 密码攻击使用彩虹破解法对 LM、NTLM、Cisco PIX 和 MD5 等多种密码哈希进行更快速的破解，成功率极高（接近 100%）。彩虹攻击之所以能提高破解速度，是因为哈希在破解前已预先计算，无需像字典破解和暴力破解那样逐个生成。
 
@@ -1952,13 +1848,13 @@ Can an expiring password deter a hacker’s attack and render password cracking 
 
 如果你拥有良好的彩虹表集合，例如通过 ophcrack 站点和 Project RainbowCrack（[`http://project-rainbowcrack.com`](http://project-rainbowcrack.com)）提供的，你可以在秒、分钟或小时内破解密码，而字典和暴力破解方法则需要数天、数周甚至数年。
 
-#### 使用 pwdump3 和 John the Ripper 破解 Windows 密码
+### 使用 pwdump3 和 John the Ripper 破解 Windows 密码
 
 下面的步骤使用我两个最喜欢的工具来测试当前 Windows 系统上密码的安全性：
 
-*   pwdump3（用于从 Windows SAM 数据库提取密码哈希）
+*   `pwdump3`（用于从 Windows SAM 数据库提取密码哈希）
 
-*   John the Ripper（用于破解 Windows 以及 Linux/Unix 密码的哈希）
+*   `John the Ripper`（用于破解 Windows 以及 Linux/Unix 密码的哈希）
 
 下面的测试需要你拥有 Windows 独立工作站或服务器的管理员访问权限：
 
@@ -1966,61 +1862,73 @@ Can an expiring password deter a hacker’s attack and render password cracking 
 
 2.  **如果你尚未拥有解压工具，请下载并安装一个：**
 
-    ![tip](img/tip.png)7-Zip（[`https://www.7-zip.org`](https://www.7-zip.org)）是免费的解压工具。Windows 自带 zip 文件处理功能，但略显笨拙。
+    ![tip](img/tip.png)`7-Zip`（[`https://www.7-zip.org`](https://www.7-zip.org)）是免费的解压工具。Windows 自带 zip 文件处理功能，但略显笨拙。
 
 3.  **如果你尚未在系统中安装以下软件到 `passwords` 目录，请下载、解压并安装：**
 
-    *   *pwdump3*：从 [`www.openwall.com/passwords/microsoft-windows-nt-2000-xp-2003-vista-7`](http://www.openwall.com/passwords/microsoft-windows-nt-2000-xp-2003-vista-7) 下载文件。
+    *   `pwdump3`：从 [`www.openwall.com/passwords/microsoft-windows-nt-2000-xp-2003-vista-7`](http://www.openwall.com/passwords/microsoft-windows-nt-2000-xp-2003-vista-7) 下载文件。
 
-    *   *John the Ripper*：从 [`www.openwall.com/john`](http://www.openwall.com/john) 下载文件。
+    *   `John the Ripper`：从 [`www.openwall.com/john`](http://www.openwall.com/john) 下载文件。
 
-4.  **运行 pwdump3 并将其输出重定向到名为 `cracked.txt` 的文件：**
+4.  **运行 `pwdump3` 并将其输出重定向到名为 `cracked.txt` 的文件：**
 
-    `c:\passwords\pwdump3 >; cracked.txt`
+    ```
+    c:\passwords\pwdump3 >; cracked.txt
+    ```
 
-    该文件捕获 John the Ripper 破解的 Windows SAM 密码哈希。Figure 8-2 展示了 `cracked.txt` 文件的内容，其中包含本地 Windows SAM 数据库的密码哈希。
+    该文件捕获 `John the Ripper` 破解的 Windows SAM 密码哈希。Figure 8-2 展示了 `cracked.txt` 文件的内容，其中包含本地 Windows SAM 数据库的密码哈希。
 
-5.  **运行 John the Ripper 对 Windows SAM 密码哈希执行以下命令，以显示破解后的密码：**
+5.  **运行 `John the Ripper` 对 Windows SAM 密码哈希执行以下命令，以显示破解后的密码：**
 
-    `c:\passwords\john cracked.txt`
+    ```
+    c:\passwords\john cracked.txt
+    ```
 
     这一过程（如 Figure 8-3 所示）的耗时可能从几秒到数天，具体取决于用户数量和密码复杂度。我的 Windows 示例仅用五秒即可破解五个弱密码。
 
-![ FIGURE 8-2:  pwdump3 的输出。](img/9781119485476-fg0802.png)
+![ FIGURE 8-2:  `pwdump3` 的输出。](img/9781119485476-fg0802.png)
 
- FIGURE 8-2:  pwdump3 输出。
+ FIGURE 8-2:  `pwdump3` 输出。
 
-![ FIGURE 8-3:  使用 John the Ripper 破解密码文件哈希。](img/9781119485476-fg0803.png)
+![ FIGURE 8-3:  使用 `John the Ripper` 破解密码文件哈希。](img/9781119485476-fg0803.png)
 
- FIGURE 8-3:  使用 John the Ripper 破解密码文件哈希。
+ FIGURE 8-3:  使用 `John the Ripper` 破解密码文件哈希。
 
-#### 使用 John the Ripper 破解 Unix/Linux 密码
+### 使用 John the Ripper 破解 Unix/Linux 密码
 
-John the Ripper 也能破解 Unix/Linux 密码。你需要 root 访问权限以及密码文件（`/etc/passwd`）和影子密码文件（`/etc/shadow`）。以下步骤用于破解 Unix/Linux 密码：
+`John the Ripper` 也能破解 Unix/Linux 密码。你需要 root 访问权限以及密码文件（`/etc/passwd`）和影子密码文件（`/etc/shadow`）。以下步骤用于破解 Unix/Linux 密码：
 
 1.  **从** [`www.openwall.com/john`](http://www.openwall.com/john) **下载 Unix 源码文件。**
 
 2.  **使用当前文件名执行以下命令解压程序：**
 
-    `[root@localhost kbeaver]#tar -zxf john-1.8.0.tar.xz`
+    ```
+    [root@localhost kbeaver]#tar -zxf john-1.8.0.tar.xz
+    ```
 
-    ![tip](img/tip.png)你也可以在 Windows 系统上使用 John the Ripper 的 Windows/DOS 版本来破解 Unix 或 Linux 密码。
+    ![tip](img/tip.png)你也可以在 Windows 系统上使用 `John the Ripper` 的 Windows/DOS 版本来破解 Unix 或 Linux 密码。
 
 3.  **切换到在解压时创建的 `/src` 目录，并输入以下命令：**
 
-    `make generic`
+    ```
+    make generic
+    ```
 
 4.  **切换到 `/run` 目录，并输入以下命令，使用 `unshadow` 程序将 `passwd` 和 `shadow` 文件合并并复制到 `cracked.txt` 文件：**
 
-    `./unshadow /etc/passwd /etc/shadow > cracked.txt`
+    ```
+    ./unshadow /etc/passwd /etc/shadow > cracked.txt
+    ```
 
     ![warning](img/warning.png) `unshadow` 过程对所有 Unix 变体均不适用。
 
 5.  **输入以下命令启动破解过程：**
 
-    `./john cracked.txt`
+    ```
+    ./john cracked.txt
+    ```
 
-    当 John the Ripper 完成（可能需要一些时间）后，输出类似于前面 Windows 过程的结果（参考 Figure 8-3）。
+    当 `John the Ripper` 完成（可能需要一些时间）后，输出类似于前面 Windows 过程的结果（参考 Figure 8-3）。
 
 完成上述 Windows 或 Unix/Linux 步骤后，你可以强制用户更改不符合特定密码策略要求的密码，创建新的密码策略，或利用该信息更新安全意识计划。总之，采取行动。
 
@@ -2041,9 +1949,6 @@ John the Ripper 也能破解 Unix/Linux 密码。你需要 root 访问权限以�
 3.  为了更安全，她使用 WinZip 压缩文件并再次设置密码，使其“更安全”。
 
 4.  CFO 将电子表格作为电子邮件附件发送，假设邮件能安全送达。
-
-
-
 
 金融顾问的网络具有内容过滤功能，会监控 incoming emails 的关键词和文件附件。不幸的是，金融公司的网络管理员正在查看内容过滤系统，看看有什么来了。
 
@@ -2115,9 +2020,6 @@ FIGURE 8-4: 使用 Cain & Abel 捕获网络中传输的密码。
 
 ![remember](img/remember.png)如果流量没有通过某种加密链路（如虚拟私网、Secure Shell 或 Secure Sockets Layer）进行隧道化，则容易受到攻击。
 
-
-
-
 Cain & Abel 是一个密码破解工具，同时也具备网络分析功能。你也可以使用普通的网络分析仪，例如商业产品 Omnipeek ([`https://www.savvius.com`](https://www.savvius.com)) 和 CommView ([`https://www.tamos.com/products/commview`](https://www.tamos.com/products/commview))，以及免费开源程序 Wireshark ([`https://www.wireshark.org`](https://www.wireshark.org))。使用网络分析仪，你可以以多种方式搜索密码流量。例如，要捕获 POP3 密码流量，可以设置过滤器和触发器来搜索 PASS 命令。当网络分析仪在数据包中看到 PASS 命令时，它会捕获该特定数据。
 
 网络分析仪要求你在网络集线器的某个段上捕获数据，或通过交换机的监视/镜像/span 端口进行捕获。否则，你只能看到自己的数据，看不到网络上其他人的数据。请查看交换机的用户指南，查看是否有监视或镜像端口以及如何配置它。你可以将网络分析仪连接到防火墙公共侧的集线器上。你只能捕获进入或离开网络的数据包 —  — 而不是内部流量。我在第 9 章（Chapter 9）中详细介绍了这种网络基础设施攻击。
@@ -2126,7 +2028,7 @@ Cain & Abel 是一个密码破解工具，同时也具备网络分析功能。�
 
 以下是针对网络分析仪攻击的一些有效防护措施：
 
-*   **在你的网络中使用交换机而非集线器。** 以太网集线器已属于历史，但偶尔仍会看到它们在使用。如果必须在网络段上使用集线器，像 sniffdet（适用于基于 Unix/Linux 的系统）和 PromiscDetect（适用于 Windows）这样的程序可以检测到网卡是否处于 *promiscuous mode*（接受所有数据包，无论其目标是否为本机）。网卡处于 promiscuous mode 表示可能在网络上运行着网络分析仪。
+*   **在你的网络中使用交换机而非集线器。** 以太网集线器已属于历史，但偶尔仍会看到它们在使用。如果必须在网络段上使用集线器，像 `sniffdet`（适用于基于 Unix/Linux 的系统）和 `PromiscDetect`（适用于 Windows）这样的程序可以检测到网卡是否处于 *promiscuous mode*（接受所有数据包，无论其目标是否为本机）。网卡处于 promiscuous mode 表示可能在网络上运行着网络分析仪。
 
 *   **确保非受监督区域（如空置的大堂或培训室）没有活动的网络连接。** 只需一条以太网端口，就能让人访问你的内部网络。
 
@@ -2183,9 +2085,6 @@ Cain & Abel 是一个密码破解工具，同时也具备网络分析功能。�
 ### Storing passwords
 
 如果必须在用户能够记忆的弱密码和用户必须记录的强密码之间做出选择，我建议让用户记录密码并妥善保存。训练用户将书面密码存放在安全的地方 —  — 而不是放在键盘上或在难以破解的受密码保护文件（如电子表格）中。用户应将书面密码存放在以下任一位置：
-
-
-
 
 `A locked file cabinet or office safe` -> `一个锁着的文件柜或办公室保险箱`
 
@@ -2667,7 +2566,9 @@ FIGURE 9-6:  Information gathered about an email server via Telnet.
 
     如果你在测试端口 23，输入以下命令：
 
-    `nc –l –p 23 cmd.exe`
+    ```
+    nc –l –p 23 cmd.exe
+    ```
 
 4.  **在测试（外部）机器上输入 Netcat 命令以发起入站会话。**
 
@@ -2679,7 +2580,9 @@ FIGURE 9-6:  Information gathered about an email server via Telnet.
 
     如果内部（客户）机器的 IP 地址是 10.11.12.2，端口是 23，输入以下命令：
 
-    `nc –v 10.11.12.2 23`
+    ```
+    nc –v 10.11.12.2 23
+    ```
 
 如果 Netcat 在外部机器上显示新的命令提示符（Step 3 中的 `cmd.exe` 用途），则说明已建立连接，你可以在内部机器上执行命令！这可以用于多种目的，包括测试防火墙规则、网络地址转换（NAT）、端口转发，以及——呃，执行远程系统上的命令！
 
@@ -2867,7 +2770,7 @@ NetResident 还能通过其 PromiSwitch 工具（在工具菜单中可用）进�
 
 大量的 ARP 请求可能是 *ARP spoofing*（也称为 *ARP poisoning*）攻击的迹象。
 
-运行诸如 dsniff（[`https://www.monkey.org/~dugsong/dsniff`](https://www.monkey.org/~dugsong/dsniff)）或 Cain & Abel 的客户端可以修改 ARP 表——这些表存储 IP 地址到媒体访问控制（MAC）地址的映射。修改 ARP 表会导致受害计算机在网络通信时，错误地将流量发送到攻击者的机器，而不是真正的目的主机。ARP spoofing 常用于中间人攻击。
+运行诸如 dsniff（[`https://www.monkey.org/~dugsong/dsniff`](https://www.monkey.org/~dugsong/dsniff）或 Cain & Abel 的客户端可以修改 ARP 表——这些表存储 IP 地址到媒体访问控制（MAC）地址的映射。修改 ARP 表会导致受害计算机在网络通信时，错误地将流量发送到攻击者的机器，而不是真正的目的主机。ARP spoofing 常用于中间人攻击。
 
 伪造的 ARP 回复可以发送到交换机，使其回退到广播模式，基本上把交换机变成集线器。发生这种攻击时，攻击者能够截获交换机上所有经过的数据包，捕获网络上的任何内容。
 
@@ -2933,480 +2836,7 @@ The preceding steps show how easy it is to exploit a vulnerability and prove tha
 
 #### MAC address spoofing
 
-MAC address spoofing tricks the switch into thinking that your computer is something else. You simply change your computer’s MAC address and masquerade as another user.
-
-![tip](img/tip.png)You can use this trick to test access control systems, such as your IPS/firewall and even your operating-system login controls that check for specific MAC addresses.
-
-#### LINUX-BASED SYSTEMS
-
-In Linux (and Unix), you can spoof MAC addresses with the ifconfig utility. Follow these steps:
-
-1. **While you’re logged in as root, use ifconfig to enter a command that disables the network interface.**
-
-    Insert the network interface number that you want to disable (usually, eth0) into the command, like this:
-
-    `[root@localhost root]# ifconfig eth0 down`
-
-2. **Enter a command for the MAC address you want to use.**
-
-    Insert the fake MAC address and the network interface number (eth0) into the command again, like this:
-
-    `[root@localhost root]# ifconfig eth0 hw ether new_mac_address`
-
-![tip](img/tip.png)You can use a more feature‑rich utility called GNU MAC Changer ([`https://github.com/alobbs/macchanger`](https://github.com/alobbs/macchanger)) for Linux systems.
-
-#### WINDOWS
-
-You can use regedit to edit the Windows Registry, but I like using a neat Windows utility called SMAC ([`www.klcconsulting.net/smac`](http://www.klcconsulting.net/smac)), which makes MAC spoofing a simple process. Follow these steps to use SMAC:
-
-1. **Load the program.**
-
-2. **Select the adapter for which you want to change the MAC address.**
-
-3. **Enter the new MAC address in the New Spoofed MAC Address fields, and click the Update MAC button.**
-
-4. **Stop and restart the network card with these steps:**
-
-    1. *Right-click the network card in Network and Dialup Connections, and choose Disable from the contextual menu.*
-
-    2. *Right-click again and then choose Enable from the contextual menu to make the change take effect.*
-
-    ![tip](img/tip.png)You may have to reboot for this process to work properly.
-
-5. **Click the Refresh button in the SMAC interface.**
-
-To reverse Registry changes with SMAC, follow these steps:
-
-1. **Select the adapter for which you want to change the MAC address.**
-
-2. **Click the Remove MAC button.**
-
-3. **Stop and restart the network card with these steps:**
-
-    1. *Right-click the network card in Network and Dialup Connections, and choose Disable from the contextual menu.*
-
-    2. *Right-click again and then choose Enable from the contextual menu to make the change take effect.*
-
-    ![tip](img/tip.png)You may have to reboot for this process to work properly.
-
-4. **Click the Refresh button in the SMAC interface.**
-
-    You should see your original MAC address again.
-
-#### Countermeasures against ARP poisoning and MAC address Spoofing attacks
-
-A few countermeasures on your network can minimize the effects of an attack against ARP and MAC addresses:
-
-*   **Prevention:** You can prevent MAC address spoofing if your switches can enable port security to prevent automatic changes in the MAC address tables.
-
-    ![warning](img/warning.png)No realistic countermeasures for ARP poisoning exist. The only way to prevent ARP poisoning is to create and maintain static ARP entries in your switches for every host on the network — something that hardly any network administrator has time to do in today’s rat race.
-
-*   **Detection:** You can detect these two types of hacks through an IPS or a stand‑alone MAC address‑monitoring utility.
-
-### Testing denial of service attacks
-
-Denial of service (DoS) attacks are among the most common hacker attacks. A hacker initiates so many invalid requests to a network host that the host uses all its resources to respond to the invalid requests and ignores the legitimate requests.
-
-#### DoS attacks
-
-DoS attacks against your network and hosts can cause systems to crash, data to be lost, and every user to jump on your case wondering when Internet access will be restored.
-
-Here are some common DoS attacks that target an individual computer or network device:
-
-*   **SYN floods:** The attacker floods a host with TCP SYN packets.
-
-*   **Ping of Death:** The attacker sends IP packets that exceed the maximum length of 65,535 bytes, which can crash the TCP/IP stack on many operating systems.
-
-*   **WinNuke:** This attack can disable networking on older Windows 95 and Windows NT computers.
-
-Distributed denial of service (DDoS) attacks have an exponentially greater effect on their victims. One of the most famous attacks of this type was the DDoS attack against eBay, Yahoo!, CNN, and dozens of other websites by a hacker known as MafiaBoy. There have also been highly publicized DDoS attacks against Twitter, Facebook, and other social media sites. The attack apparently was aimed at one user from Georgia (the former Soviet country, not the state where I live), but it affected everyone who used these sites. I couldn’t tweet, and many of my friends and family members couldn’t see what everyone was blabbing about on Facebook (oh, the humanity!). Numerous other highly publicized DDoS attacks have occurred since then. Think about this: When hundreds of millions of people can be taken offline by one targeted DDoS attack, you can see why understanding the dangers of DoS attacks against your business’s systems and applications is important.
-
-#### Testing
-
-DoS testing is one of the most difficult security checks you can run. There just aren’t enough of you and your computers to go around. Don’t fret. You can run a few tests to see where you’re weak. Your first test should be a search for DoS vulnerabilities from a vulnerability‑scanning perspective. By using vulnerability scanners, such as Nexpose ([`https://www.rapid7.com/products/nexpose`](https://www.rapid7.com/products/nexpose)) and AppSpider ([`https://www.rapid7.com/products/appspider`](https://www.rapid7.com/products/appspider)), you can find missing patches and configuration weaknesses that can lead to DoS. A Cisco router‑related tool called Synful Knock Scanner ([`http://talosintel.com/scanner`](http://talosintel.com/scanner)) can test systems for the nasty SYNful Knock malware that was discovered in 2015.
-
-Whichever one you use, good scanners and exploitation tools will save you a ton of time and effort that you can spend on other, more!! e!!! !<ref>
-
-
-
-Use an IPS to monitor regularly for DoS attacks. You can run a network analyzer in continuous capture mode if you can’t justify the cost of an all-out IPS solution and use it to monitor for DoS attacks.
-
-Configure firewalls and routers to block malformed traffic. You can enact this countermeasure only if your systems support it, so refer to your administrator’s guide for details.
-
-Minimize IP spoofing by filtering out external packets that appear to come from an internal address, the local host (127.0.0.1), or any other private and nonroutable address, such as 10.x.x.x, 172.16.x.x–172.31.x.x, or 192.168.x.x. The following paper from Cisco Systems provides more information: [`https://www.cisco.com/web/about/ac123/ac147/archived_issues/ipj_10-4/104_ip-spoofing.html`](https://www.cisco.com/web/about/ac123/ac147/archived_issues/ipj_10-4/104_ip-spoofing.html).
-
-Block all ICMP traffic inbound to your network unless you specifically need it. Even then, you should allow it to come in only to specific hosts.
-
-Disable all unneeded TCP/UDP small services, such as echo and chargen.
-
-Establish a baseline of your network protocols and traffic patterns before a DoS attack occurs. That way, you know what to look for. Also, periodically scan for such potential DoS vulnerabilities as rogue DoS software installed on network hosts.
-
-If you get yourself in a real bind and end up under direct DoS assault, you can reach out to managed service vendors such as Imperva Incapsula ([`https://www.incapsula.com/`](https://www.incapsula.com/)), Cloudflare ([`https://www.cloudflare.com/`](https://www.cloudflare.com/)), and DOSarrest ([`https://www.dosarrest.com/`](https://www.dosarrest.com/)).
-
-![remember](img/remember.png)Work with a `minimum necessary` mentality (not to be confused with having too many craft beers) when configuring your network devices, such as firewalls and routers. Identify traffic that’s necessary for approved network use. Allow the traffic that’s needed. Deny all other traffic.
-
-If worst comes to worst, ask your Internet service provider whether it can block DoS attacks from its end.
-
-## Detecting Common Router, Switch, and Firewall Weaknesses
-
-In addition to the technical exploits that I cover in this chapter, some high-level security vulnerabilities commonly found on network devices can create many problems.
-
-### Finding unsecured interfaces
-
-You want to ensure that HTTP and Telnet interfaces to your routers, switches, and firewall aren’t configured with a blank, default, or otherwise easy-to-guess password. This advice sounds like a no-brainer, but it’s one of the most common weaknesses. When a malicious insider or other attacker gains access to your network devices, he owns the network. Then he can lock out administrative access, set up backdoor user accounts, reconfigure ports, and even bring down the entire network without your ever knowing.
-
-![warning](img/warning.png)I once found a simple password that a systems integrator configured on a Cisco ASA firewall and was able to log in to the firewall with full administrative rights. Just imagine what could happen in this situation if someone with malicious intent came across this password. Lesson learned: The little things can get you. Know what your vendors are doing, and keep an eye on them!
-
-Another weakness is related to HTTP, FTP, and Telnet being enabled and used on many network devices. Care to guess why this situation is a problem? Well, anyone with some free tools and a few minutes of time can sniff the network and capture login credentials for these systems when they’re being sent in clear text. When that happens, anything goes.
-
-### Uncovering issues with SSL and TLS
-
-Secure Sockets Layer (SSL) and Transport Layer Security (TLS) were long touted as *the* solutions for securing network communications. Recently, however, SSL and TLS have come under fire from demonstrable exploits such as Heartbleed, Padding Oracle On Downgraded Legacy Encryption (POODLE), and Factoring Attack on RSA-EXPORT Keys (FREAK).
-
-General security vulnerabilities related to SSL and TLS are often uncovered by vulnerability scanners such as Nexpose and Netsparker. In addition to the preceding SSL/TLS vulnerabilities, be on the lookout for the following flaws:
-
-*   SSL versions 2 or 3 and TLS versions 1.0 or 1.1 in use
-
-*   Weak encryption ciphers such as RC4 and SHA-1
-
-If you’re unsure about existing SSL and TLS vulnerabilities on your systems, you don’t have to use a vulnerability scanner. Qualys has a nice website called SSL Labs ([`https://www.ssllabs.com/`](https://www.ssllabs.com/)) that will scan for these vulnerabilities for you.
-
-I didn’t used to be too concerned about SSL- and TLS-related vulnerabilities, but as security researchers and criminal hackers have been demonstrating, the threat is real and needs to be addressed.
-
-## Putting Up General Network Defenses
-
-Regardless of specific attacks against your system, a few good practices can prevent many network problems: 
-
-*   **Use stateful inspection rules that monitor traffic sessions for firewalls.** This practice can help ensure that all traffic traversing the firewall is legitimate and can prevent DoS attacks and other spoofing attacks.
-
-*   **Implement rules to perform packet filtering** based on traffic type, TCP/UDP ports, IP addresses, and even specific interfaces on your routers before the traffic is allowed to enter your network.
-
-*   **Use proxy filtering and Network Address Translation (NAT) or Port Address Translation (PAT).**
-
-*   **Find and eliminate fragmented packets entering your network** (from Fraggle or another type of attack) via an IPS.
-
-*   **Include your network devices in your vulnerability scans.**
-
-*   **Ensure that your network devices have the latest vendor firmware and patches applied.**
-
-*   **Set strong passwords (or, better, passphrases) on all network systems.** I cover passwords in detail in Chapter 8.
-
-*   **Don’t use Internet Key Exchange (IKE) aggressive mode preshared keys for your virtual private network.** If you must, ensure that the passphrase is strong and changed periodically (such as every 6 to 12 months).
-
-*   **Always use TLS (via HTTPS and so on) or SSH when connecting to network devices.**
-
-*   **Disable SSL and weak ciphers, and use TLS version 1.2 and strong ciphers such as SHA-2 where possible.**
-
-*   **Segment the network, and use a firewall on the following:** 
-
-    *   The DMZ
-
-    *   The internal network
-
-    *   Critical subnetworks broken down by business function or department, such as accounting, finance, human resources, and research
-
-Chapter 10
-
-## Wireless Networks
-
-IN THIS CHAPTER
-
-![check](img/check.png)**Understanding the risks of wireless networks**
-
-![check](img/check.png)**Selecting wireless network hacking tools**
-
-![check](img/check.png)**Cracking wireless encryption**
-
-![check](img/check.png)**Minimizing wireless network risks**
-
-Wireless local area networks (or Wi-Fi) — specifically, the ones based on the IEEE 802.11 standard — are deployed in many business and home network. Wi-Fi was the poster child for weak security and network attacks since the inception of 802.11. The stigma of unsecure Wi-Fi is starting to wane, but now isn’t the time to lower your defenses.
-
-Wi-Fi offers a ton of business value, from convenience to reduced network deployment time. Whether or not your organization allows wireless network access, you probably have it, so testing for Wi-Fi security vulnerabilities is critical.
-
-In this chapter, I cover some common wireless network security vulnerabilities that you should test for, and I discuss some cheap, easy countermeasures that you can implement to ensure that Wi-Fi isn’t more of a risk to your organization than it’s worth.
-
-## Understanding the Implications of Wireless Network Vulnerabilities
-
-
-
-
-Wi‑Fi 易受攻击 —  — 有时甚至比有线网络（如 第 9 章 讨论的）更易受攻击，如果未正确配置和部署。无线网络可能存在长期漏洞，使攻击者能够将你的网络击垮，或让敏感信息在“空中”被提取。如果你的无线网络被入侵，你可能会遇到以下问题：
-
-* 失去网络访问权，包括电子邮件、网页和其他服务，可能导致业务停机。
-
-* 失去敏感信息，包括密码、客户数据和知识产权。
-
-* 因未经授权的用户访问业务系统而产生的监管后果和法律责任。
-
-大多数无线漏洞来源于 802.11 标准的实现。无线接入点（路由器）和无线终端系统也可能存在漏洞。
-
-近年来出现了许多针对这些漏洞的修复措施，但许多修复未能正确应用或默认未启用。此外，员工可能在未经你知晓的情况下在网络上安装野生无线设备。还有“免费” Wi‑Fi 无处不在 —  — 你的移动员工去的咖啡店、酒店、会议中心甚至飞机上的无线网络，这些公共 Wi‑Fi 可能对整体信息安全构成严重威胁，而且很难应对。即使 Wi‑Fi 已加固且所有最新补丁已应用，你仍可能面临服务拒绝（DoS）、中间人攻击以及加密密钥弱点（如有线网络的情况；参见 第 9 章），这些问题可能会长期存在。
-
-## 选择你的工具
-
-为 Windows 和 Linux 平台提供了多种优秀的无线安全工具。早期的 Linux 无线工具配置和使用较为困难，可能是因为我本身不够聪明。近年来，随着 Kismet（[`https://www.kismetwireless.net`](https://www.kismetwireless.net)）、Wellenreiter（[`https://sourceforge.net/projects/wellenreiter`](https://sourceforge.net/projects/wellenreiter)）以及 Kali Linux（[`https://www.kali.org`](https://www.kali.org/)）等程序的出现，这一局面已有所改变。
-
-![tip](img/tip.png)如果你想使用运行在 Linux 上的安全工具的强大功能，但不想花费时间安装和配置 Linux 或下载设置众多流行的安全工具，我强烈推荐使用 Kali Linux。该可启动的 Debian‑基础安全测试套件预装了相对易用的大量工具。其他可启动（或 Live）测试套件还包括基于 Fedora Linux 的 Network Security Toolkit（[`www.networksecuritytoolkit.org`](http://www.networksecuritytoolkit.org)）。完整的 Live 启动 Linux 工具列表可查阅 [`www.livecdlist.com`](http://www.livecdlist.com)。
-
-本章概述的大多数测试只需 Windows‑基础实用工具，但使用你最熟悉的平台会获得更好结果。我最喜欢的用于评估无线网络的 Windows 工具包括：
-
-* Aircrack-ng（[`http://aircrack-ng.org`](http://aircrack-ng.org)）
-
-* CommView for WiFi（[`https://www.tamos.com/products/commwifi`](https://www.tamos.com/products/commwifi)）
-
-* ElcomSoft Wireless Security Auditor（[`https://www.elcomsoft.com/ewsa.html`](https://www.elcomsoft.com/ewsa.html)）
-
-* Omnipeek（[`www.savvius.com`](http://www.savvius.com)）
-
-![tip](img/tip.png)你也可以使用便携式无线安全测试设备，例如 Canary Wireless 的 Digital Hotspotter（[`www.canarywireless.com`](http://www.canarywireless.com)），甚至可以使用 Android 手机或平板上的 WiEye 或 Wifi Analyzer 等应用，或 iOS 设备上的 Network Analyzer Pro 和 Network Multimeter。此外，还应考虑外置天线作为你的装备之一。我曾经在没有天线的情况下运行测试并取得良好结果，但实际效果取决于你距离信号的远近。如果你在现场进行无线信号踏勘，使用额外天线可以提高发现合法及（更重要的）未经授权无线系统的机会，但通常并不必需。你可以在三种类型的无线天线中选择：
-
-* **全向性（Omnidirectional）**：在 360 度范围内传输和接收无线信号，适用于会议室或接待区等较短距离场景。此类天线（也称为 *dipole*）通常已在出厂的接入点（AP）上预装。
-
-* **半向性（Semidirectional）**：在中等距离内方向聚焦传输和接收无线信号，适用于走廊或办公楼/建筑的一侧。
-
-* **定向性（Directional）**：在长距离内高度聚焦传输和接收无线信号，适用于建筑物之间的链接。此类天线（也称为高增益天线）是无线黑客在城市巡逻寻找弱点接入点（即 *wardriving*）时首选。
-
-![tip](img/tip.png)作为前述天线的替代方案，你可以使用一种名为 *cantenna* 的巧妙设计 —  — 用土豆片、咖啡罐或猪肉罐制成的创意天线。如果你想尝试这种天线，可参考 [`www.turnpoint.net/wireless/has.html`](http://www.turnpoint.net/wireless/has.html) 的文章获取详细信息。简单的 Internet 搜索会提供大量相关信息，供有兴趣的读者参考。
-
-## 发现无线网络
-
-当你拥有无线卡和无线测试软件时，即可开始操作。首要任务是收集关于你无线网络的信息，具体方法如下章节所述。务必在生产无线网络、访客无线网络以及你可能使用的测试无线系统上进行这些检查 —  — 你永远不知道漏洞就在哪里！
-
-### 检查全球认可度
-
-第一项测试只需你的接入点（AP）的媒体访问控制（MAC）地址以及 Internet 访问权限。（有关 MAC 地址的更多信息请参见本章后的 “MAC 伪造”。）该测试旨在判断是否有人在公开场合发现了你的 Wi‑Fi 信号并将其发布供全世界查看。具体步骤如下：
-
-1. **获取 AP 的 MAC 地址。**
-
-   如果不确定 AP 的 MAC 地址，可以在 Windows 命令提示符中使用 `arp -a` 命令查看。你可能需要先向接入点的 IP 地址发送 ping，使其 MAC 地址加载到地址解析协议（ARP）缓存中。图 10-1（`#c10-fig-0001`）展示了这一过程的示例。
-
-2. **在 WiGLE 数据库（`https://wigle.net`）中浏览。**
-
-3. **注册站点以便进行数据库查询。**
-
-   进行此查询很有价值。
-
-4. **点击网站右上角的“Login”链接，选择“View”，然后选择“Search”。**
-
-   你会看到类似于图 10-2（`#c10-fig-0002`）的界面。
-
-5. **在图 10-2 中的 BSSID/MAC 文本框里输入你的 MAC 地址格式。**
-
-   你也可以输入地理坐标和 SSID（服务集标识符）等 AP 信息。
-
-
-
-
-If your AP is listed, someone has discovered it — most likely via wardriving — and has posted the information for others to see. You need to start implementing the security countermeasures listed in this chapter as soon as possible to keep others from using this information against you!
-
-![ FIGURE 10-1:  Finding the MAC address of an AP by using arp.](img/9781119485476-fg1001.png)
-
-FIGURE 10-1:  Finding the MAC address of an AP by using arp.
-
-![ FIGURE 10-2:  Searching for your wireless APs by using the WiGLE database.](img/9781119485476-fg1002.png)
-
-FIGURE 10-2:  Searching for your wireless APs by using the WiGLE database.
-
-### Scanning your local airwaves
-
-Monitor the airwaves around your building to see what authorized and unauthorized APs you can find. You’re looking for the SSID, which is your wireless network name. If you have multiple and separate wireless networks, each one may have a unique SSID associated with it.
-
-You can get started with a tool such as NetStumbler ([`www.netstumbler.com/downloads`](http://www.netstumbler.com/downloads)). NetStumbler can discover SSIDs and other detailed information about wireless APs, including the following:
-
-*   `MAC address`
-
-*   `Name`
-
-*   `Radio channel` in use
-
-*   `Vendor name`
-
-*   Whether `encryption` is on or off
-
-*   `RF signal strength` (signal-to-noise ratio)
-
-NetStumbler is quite old and no longer maintained, but it still works. Another tool option is inSSIDer ([`https://www.metageek.com/products/inssider`](https://www.metageek.com/products/inssider)).
-
-Figure 10-3 shows an example of what you might see when running NetStumbler in your environment. The information you see here is what others can see as long as they’re in range of your AP’s radio signals. NetStumbler and most other tools work by sending a probe-request signal from the client. Any APs within signal range must respond to the request with their SSIDs — that is, if they’re configured to broadcast their SSIDs upon request.
-
-![ FIGURE 10-3:  NetStumbler displays detailed data on APs.](img/9781119485476-fg1003.png)
-
-FIGURE 10-3:  NetStumbler displays detailed data on APs.
-
-![tip](img/tip.png)When you’re using wireless network analyzers, including Omnipeek and CommView for WiFi, your adapter may enter passive monitoring mode, and you can no longer communicate with other wireless hosts or APs while the program is loaded, which is a good thing.
-
-## Discovering Wireless Network Attacks and Taking Countermeasures
-
-Various malicious hacks — including DoS attacks — can be carried out against your wireless network, including forcing APs to reveal their SSIDs during the process of being disassociated from the network and rejoining. In addition, hackers can jam the signal of an AP — especially in 802.11b and 802.11g systems — and force the wireless clients to reassociate with a rogue AP masquerading as the victim AP.
-
-Hackers can create man-in-the-middle attacks by using a tool such as the WiFi Pineapple ([`https://www.wifipineapple.com`](https://www.wifipineapple.com)). They can also flood your network with thousands of packets per second by using the raw-packet-generation tools Nping ([`https://nmap.org/nping`](https://nmap.org/nping)) and NetScanTools Pro ([`www.netscantools.com`](http://www.netscantools.com)) — enough to bring the network to its knees. Even more so than with wired networks, this type of DoS attack is very difficult to prevent on Wi‑Fi.
-
-You can carry out several attacks against your wireless network. The associated countermeasures help protect your network from these vulnerabilities as well as from the malicious attacks I’ve mentioned. When testing your wireless network’s security, look out for the following weaknesses:
-
-*   Unencrypted wireless traffic
-
-*   Weak WEP, WPA, and WPA2 preshared keys
-
-*   Crackable Wi‑Fi Protected Setup (WPS) PINs
-
-*   Unauthorized APs
-
-*   Easily circumvented MAC address controls
-
-*   Wireless equipment that’s physically accessible
-
-*   Default configuration settings
-
-A good starting point for testing is attempting to attach to your network as an outsider and running a general vulnerability scanner tool, such as LanGuard or Nexpose. This test enables you to see what others can see on your network, including information on the operating-system version, open ports on your AP, and even network shares on wireless clients. Figure 10-4 shows the type of information that can be revealed about an AP on your network, including a missing administrator password, an outdated operating system, and open ports and shares that can be exploited.
-
-![ FIGURE 10-4:  A LanGuard scan of a live AP.](img/9781119485476-fg1004.png)
-
-FIGURE 10-4:  A LanGuard scan of a live AP.
-
-### Encrypted traffic
-
-Wireless traffic can be captured directly out of the airwaves, making this communications medium susceptible to eavesdropping. Unless the traffic is encrypted, it’s sent and received in clear text, just as on a standard wired network. Alsp, the 802.11 encryption protocols, Wired Equivalent Privacy (WEP) — yep, it’s still around — and Wi‑Fi Protected Access (WPA and WPA2) have their own weaknesses that allow attackers to crack the encryption keys and decrypt the captured traffic. This vulnerability has helped put Wi‑Fi on the map, so to speak.
-
-WEP, in a certain sense, actually liveds up to its name: It provides privacy equivalent to that of a wired network and then some. It wasn’t intended to be cracked so easily, however. WEP uses a fairly strong symmetric (shared-key) encryption algorithm called RC4. Hackers can observe encrypted wireless traffic and recover the WEP key because of a flaw in the way that the RC4 initialization vector (IV) is implemented in the protocol. This weakness occurs because the IV is only 24 bits long, which causes it to repeat every 16.7 million packets — even sooner in many cases, based on the number of wireless clients entering and leaving the network.
-
-![technicalstuff](img/technicalstuff.png)Most WEP implementations initialize wireless hardware with an IV of 0 and increment it by 1 for each packet sent, which can lead to the IVs reinitializing (starting over at 0) approximately every five hours. Given this behavior, Wi‑Fi networks that have a lower amount of use can be more secure than large Wi‑Fi environments that transmit a lot of wireless data because there’s simply not enough wireless traffic being generated.
-
-Using WEPCrack ([`https://sourceforge.net/projects/wepcrack`](https://sourceforge.net/projects/wepcrack)) or Aircrack-ng ([`https://aircrack-ng.org`](https://aircrack-ng.org)), attackers need to collect only a few minutes’ or a few days’ worth of packets (depending on how much wireless traffic is on the network) to break the WEP key. Figure 10-5 shows airodump-ng (which is part of the Aircrack-ng suite) capturing WEP initialization vectors, and Figure 10-6 shows aircrack’s airodump at work cracking the WEP key of my test network.
-
-![ FIGURE 10-5:  Using airodump to capture WEP initialization vectors.](img/9781119485476-fg1005.png)
-
-FIGURE 10-5:  Using airodump to capture WEP initialization vectors.
-
-![ FIGURE 10-6:  Using aircrack to crack WEP.](img/9781119485476-fg1006.png)
-
-FIGURE 10-6:  Using aircrack to crack WEP.
-
-airodump and aircrack are simple to run in Windows. Download and extract the aircrack programs, the cygwin Linux simulation environment, and the supporting peek files from [`https://aircrack-ng.org`](https://aircrack-ng.org), and you’re ready to capture packets and crack away!
-
-
-
-![warning](img/warning.png)更长的密钥长度，例如 128 位或 192 位，并不会使 WEP 按指数级更难破解，因为 WEP 的静态密钥调度算法只需捕获大约 20,000 个额外数据包即可破解每增加一位的密钥长度。
-
-无线行业推出了解决 WEP 问题的方案，称为 Wi‑Fi Protected Access（WPA）。WPA 使用 Temporal Key Integrity Protocol（TKIP）加密系统，它修复了所有已知的 WEP 问题。WPA2 迅速取代了原始 WPA，采用更强大的加密方式——Counter Mode Cipher Block Chaining Message Authentication Code Protocol（快速说三遍），即 CCMP，基于高级加密标准（AES）。WPA3 正在进入 2018 年第三季度后制造的设备中，敬请留意。
-
-另一件值得注意的事：WPA 和 WPA2 在“企业模式”下运行时需要 802.1*x* 认证服务器（如 RADIUS 服务器）来管理网络用户账户。采用此类配置的无线网络难以破解，因此您的测试工作最好集中在网络的其他部分。
-
-![remember](img/remember.png)对于非企业无线接入点（这也是我大多数看到的商业场景），没有理由不使用 WPA2 并配合预共享密钥（PSK）。
-
-您也可以使用 aircrack 破解 WPA 和 WPA2‑PSK。要破解 WPA‑PSK 加密，需要等待无线客户端与接入点进行认证。快速且笨拙的方法是向广播地址发送一个 deauthenticate 包，以强制认证过程重新进行。Peter T. Davis 和我在第《Hacking Wireless Networks For Dummies》（John Wiley & Sons, Inc.）一书中详细阐述了此话题。
-
-您可以使用 airodump 捕获数据包，然后启动 aircrack（或同时运行两者）以使用以下命令行选项开始破解 PSK：
-
-`#aircrack-ng -a2 -w path_to_wordlist &lt;capture file(s)>`
-
-![warning](img/warning.png)WPA 密钥恢复依赖于良好的字典。可在 [`www.outpost9.com/files/WordLists.html`](http://www.outpost9.com/files/WordLists.html) 下载的字典文件是一个不错的起点。即使使用包含大量潜在密码的强大字典，我仍常发现字典攻击对 WPA 无效。了解自己的限制，以免浪费时间尝试破解不可破解的 WPA PSK。
-
-另一个商业替代方案是 ElcomSoft Wireless Security Auditor（EWSA）。使用 EWSA 只需捕获 tcpdump 格式的无线数据包（所有无线分析仪都支持该格式），将捕获文件加载到程序中，随后即可获得 PSK。EWSA 的不同之处在于它可以在极短的时间内破解 WPA 和 WPA2 PSK，但有一个前提：您必须拥有支持的 NVIDIA 或 AMD 显卡。是的，EWSA 不仅利用 CPU 处理能力，还利用显卡 GPU 的强大加速能力。这真是创新！
-
-EWSA 的主界面如下图所示 Figure 10-7。
-
-![ FIGURE 10-7:  使用 ElcomSoft Wireless Security Auditor 破解 WPA PSK。](img/9781119485476-fg1007.png)
-
- FIGURE 10-7:  使用 ElcomSoft Wireless Security Auditor 破解 WPA PSK。
-
-![tip](img/tip.png)使用 EWSA，您可以以每秒最高 173,000 个 WPA/WPA2 PSK 的速度尝试破解。与仅用 CPU 仅能破解几百个密钥/秒相比，这款工具的价值显而易见。我总说，你得到的是你所付出的！
-
-![remember](img/remember.png)如果您需要在安全评估中使用网络分析仪查看流量，且 WEP 或 WPA/WPA2 已启用，除非您了解每个网络对应的密钥，否则将看不到任何流量。您可以手动输入每个密钥，但如果黑客能够利用前述工具破解您的 WEP 或 WPA PSK，他们同样可以看到流量。
-
-Figure 10-8 展示了如何在 Omnipeek 中输入 WPA 密钥（在 Capture Options 窗口中）以在开始捕获数据包前查看 WLAN 协议。这使得您能够查看加密的无线流量。
-
-![ FIGURE 10-8:  使用 Omnipeek 查看加密的无线流量。](img/9781119485476-fg1008.png)
-
- FIGURE 10-8:  使用 Omnipeek 查看加密的无线流量。
-
-### 对加密流量攻击的防范措施
-
-针对 WEP 问题的最简方案是将所有无线通信迁移至 WPA2。您也可以在 Windows 环境中启用点对点隧道协议（PPTP）来免费使用虚拟专用网络（VPN），或利用 Windows 内置的 IPSec 支持、安全壳（SSH）以及安全套接层/传输层安全（SSL/TLS）等其他专有解决方案来保护流量。请注意，针对 PPTP、IPSec 等 VPN 协议的破解工具也已存在，但相较于完全没有 VPN，整体安全性仍然较高。
-
-此外，802.11i 标准（IEEE）整合了 WPA 的修复及更多改进。该标准在 WPA2 中采用高级加密标准（AES）进行加密，但由于实现方式的差异，它不兼容较旧的 802.11b 硬件。
-
-如果您使用 WPA2 并配合 PSK（这已足够满足小型 Wi‑Fi 的需求），请确保密钥至少包含 20 个随机字符，以免受到 Aircrack‑ng 和 ElcomSoft Wireless Security Auditor 等工具的离线字典攻击。ElcomSoft Wireless Security Auditor 的攻击设置如图 Figure 10-9 所示。
-
-![ FIGURE 10-9:  ElcomSoft Wireless Security Auditor 的众多密码破解选项。](img/9781119485476-fg1009.png)
-
- FIGURE 10-9:  ElcomSoft Wireless Security Auditor 的众多密码破解选项。
-
-如图所示，从单纯的字典攻击到组合攻击，再到使用特定单词规则的混合攻击，均可供选择。请使用长度充足且随机的 PSK，以免成为拥有大量时间的人的攻击目标！
-
-请记住，尽管 WEP 和弱 WPA PSK 可以被破解，但它们仍然优于没有任何加密。正如家庭安防系统的标识对潜在入侵者产生的威慑效果，运行 WEP 或弱 WPA PSK 的无线网络对黑客来说并不那么具吸引力；很多入侵者会转向更容易的目标，除非他们真的想攻击您的网络。
-
-### Wi‑Fi Protected Setup
-
-
-
-
-Wi‑Fi Protected Setup（WPS）是一种无线标准，可实现对安全无线接入点（AP）的简单连接。WPS 的缺点在于其注册 PIN 的实现会让人轻松连接到无线网络，从而便于对使用 WPA/WPA2 PSK 锁定整个系统的攻击。正如我们多年来在安全方面所看到的，一切都是一种权衡。
-
-![remember](img/remember.png)WPS 设计用于家庭无线网络的消费者使用。如果你的无线环境像我所看到的大多数情况，它很可能包含消费级无线接入点（路由器），这些设备易受此攻击。
-
-WPS 攻击相对简单，使用较老的开源工具 Reaver（[`https://code.google.com/p/reaver-wps`](https://code.google.com/p/reaver-wps)）即可。Reaver 通过对 WPS PIN 进行暴力破解来工作。我使用的是商业版 Reaver Pro（[`www.reaversystems.com`](http://www.reaversystems.com)），在公司停止销售前我已经获得了它。你可以通过以太网或 USB 将测试系统连接到 Reaver Pro。如图 10-10 所示，Reaver Pro 的界面非常直观。
-
-![ FIGURE 10-10:  The Reaver Pro startup window.](img/9781119485476-fg1010.png)
-
-FIGURE 10-10:  Reaver Pro 启动窗口。
-
-假设你能在 Amazon 或 eBay 找到它，使用 Reaver Pro 很简单。你只需按照以下步骤操作：
-
-1. **通过将测试系统插入 PoE LAN 网络连接，将其与 Reaver Pro 设备相连。**
-
-   你会通过 DHCP 从 Reaver Pro 设备获取 IP 地址。
-
-2. **打开浏览器，访问 http://10.9.8.1，并使用 reaver/foo 作为用户名和密码登录。**
-
-3. **在主界面，点击菜单按钮。**
-
-   将出现无线网络列表。
-
-4. **在列表中选择你的无线网络，然后点击“分析”。**
-
-5. **让 Reaver Pro 运行并完成其任务。**
-
-   如图 10-11 所示，这是整个过程。
-
-![ FIGURE 10-11:  Using Reaver Pro to determine that Wi-Fi Protected Setup is enabled.](img/9781119485476-fg1011.png)
-
-FIGURE 10-11:  使用 Reaver Pro 确认 Wi‑Fi Protected Setup 已启用。
-
-如果你想让 Reaver Pro 自动破解 WPS PIN，请点击“配置”并将 WPS PIN 设置打开。WPS PIN 破解可能需要几分钟到几小时，但如果成功，Reaver Pro 将返回 WPA PSK，或提示无线网络距离太远或启用了入侵锁定。
-
-我对 Reaver Pro 的使用结果参差不齐，取决于运行它的电脑以及被测试的无线 AP。不过，如果你想找出并修复无线安全漏洞，它仍然是值得尝试的攻击手段。
-
-### 针对 WPS PIN 漏洞的防范措施
-
-这一安全修复极为直接：禁用 WPS。如果必须保留 WPS，至少在 AP 上配置 MAC 地址控制。虽然此防护并非万无一失，但已好于无防护！更新的消费级无线路由器也为 WPS PIN 提供了入侵锁定功能。当系统检测到 WPS PIN 破解尝试时，会在一定时间内锁定这些尝试，这是一种很好的保护措施。在企业环境中防止 WPS 攻击的最佳做法是根本不要使用低端无线路由器。
-
-### rogue（隐蔽）无线设备
-
-请警惕未经授权的 AP 以及已连接到你网络的未经授权的无线客户端，这些都是让攻击者社交工程诱导用户连接到恶意网络/系统的常见手段。
-
-![warning](img/warning.png)此外，请确保教育用户在办公室外安全使用 Wi‑Fi。向他们传达连接未知 Wi‑Fi 的危害，并定期、持续地提醒他们。否则，他们的系统可能被入侵或感染恶意软件，当他们再次连接到你的网络时，问题就归他们。
-
-通过 NetStumbler 或客户端管理软件，你可以检测出不属于你网络的 AP 和自组网（peer‑to‑peer）设备。你也可以使用无线网络分析工具（如 Omnipeek、CommView for WiFi）的网络监控功能。
-
-请寻找以下 rogue AP 的特征：
-
-*   **异常 SSID**，包括流行的默认 SSID，如 `linksys`、`free public wifi`。
-
-*   **不在你网络中的 MAC 地址**。查看 MAC 地址的前三字节（前六位数字），它们指示设备厂商。你可以在 [`http://standards.ieee.org/develop/regauth/oui/public.html`](http://standards.ieee.org/develop/regauth/oui/public.html) 进行 MAC 地址厂商查找，以获取不确定的 AP 信息。
-
-*   **弱无线信号**，这可能表明 AP 被隐藏或位于建筑内部或外部。
-
-*   **与你网络通信的无线信道不同**，即使用了与网络主要信道不同的信道。
-
-*   **Wi‑Fi 客户端的吞吐量下降**，这可能是隐蔽 AP 的迹象。
-
-在图 10-12 中，NetStumbler 发现了两个潜在的未经授权 AP。最显眼的是 SSID 为 `BI` 和 `LarsWorld` 的两个，它们分别运行在不同信道、不同速率上，并且由不同的硬件厂商制造。如果你知道你的无线网络应运行什么（你当然知道），未经授权的系统就会显而易见。
-
-![ FIGURE 10-12:  NetStumbler showing potentially unauthorized APs.](img/9781119485476-fg1012.png)
-
-FIGURE 10-12:  NetStumbler 显示潜在的未经授权 AP。
-
-NetStumbler 有一项局限性：它无法检测到将 SSID 广播（probe response）关闭的 AP。像 CommView for WiFi 这类商业无线分析工具以及开源工具 Kismet 不仅会检测到 AP 的探测响应（如 NetStumbler 所做），还会捕获其他 802.11 管理帧，如关联响应和 beacon。这些管理帧使得 Kismet 能够发现隐藏的 Wi‑Fi。
+MAC address spoofing tricks the switch into）关闭的 AP。像 CommView for WiFi 这类商业无线分析工具以及开源工具 Kismet 不仅会检测到 AP 的探测响应（如 NetStumbler 所做），还会捕获其他 802.11 管理帧，如关联响应和 beacon。这些管理帧使得 Kismet 能够发现隐藏的 Wi‑Fi。
 
 如果 Linux 环境不是你喜欢的，且你仍想快速简便地查找隐藏 AP，可以创建客户端到 AP 的重新连接场景，使用去认证（deauthentication）包迫使 SSID 广播。详细步骤请参考我与同事 Peter T. Davis 合著的《Hacking Wireless Networks For Dummies》（Wiley）一书。
 
@@ -3485,13 +2915,17 @@ FIGURE 10-15:  CommView for WiFi 显示多个未经授权的 ad‑hoc 客户端�
 
       插入你想要禁用的网络接口编号（通常为 `wlan0` 或 `ath0`），例如：
 
-      `[root@localhost root]# ifconfig wlan0 down`
+      ```
+      [root@localhost root]# ifconfig wlan0 down
+      ```
 
    2. *输入新的伪造 MAC 地址和接口编号。*
 
       例如：
 
-      `[root@localhost root]# ifconfig wlan0 hw ether 01:23:45:67:89:ab`
+      ```
+      [root@localhost root]# ifconfig wlan0 hw ether 01:23:45:67:89:ab
+      ```
 
       以下命令在 Linux 中同样有效：
 
@@ -3502,7 +2936,9 @@ FIGURE 10-15:  CommView for WiFi 显示多个未经授权的 ad‑hoc 客户端�
 
 3. *使用以下命令将接口重新启用：*
 
-`[root@localhost root]# ifconfig wlan0 up`
+```
+[root@localhost root]# ifconfig wlan0 up
+```
 
 ![tip](img/tip.png)如果你经常更改 Linux 的 MAC 地址，可以使用功能更丰富的实用程序 GNU MAC Changer ([`https://github.com/alobbs/macchanger`](https://github.com/alobbs/macchanger))。
 
@@ -4091,7 +3527,8 @@ Winfo 与 DumpSec（[`www.systemtools.com/somarsoft/index.html`](https://www.sys
 
 ![tip](img/tip.png)由于 Winfo 是命令行工具，你可以编写批处理（脚本）文件来自动化枚举过程。下面是 Winfo 对 Windows NT 服务器的简要输出示例，其他 Windows 系统可产生相同信息：
 
-`Winfo 2.0 - copyright (c) 1999-2003, Arne Vidstrom- http://www.ntsecurity.nu/toolbox/winfo/`  
+```
+Winfo 2.0 - copyright (c) 1999-2003, Arne Vidstrom- http://www.ntsecurity.nu/toolbox/winfo/  
 
 SYSTEM INFORMATION:  
 
@@ -4152,6 +3589,7 @@ SHARES:
 \* HR  
 
 \- Type: Disk drive
+```
 
 ![tip](img/tip.png)这些信息无法从 Windows Server 2003 或 Windows XP 的默认安装中获取，只能从受支持的系统中获取。希望你不是运行上述旧版 Windows，尽管我仍然看到它们在野外。
 
@@ -4399,7 +3837,7 @@ Linux 并未像 Windows 那样在企业桌面上占据大量市场，但其衍�
 
 你可以使用众多基于 Linux 的安全工具来测试 Linux 和 macOS 系统。有些工具远优于其他工具。我发现，我的 Windows 商业工具的表现与任何工具一样出色。我的最爱包括：
 
-*   Kali Linux (`https://www.kali.org`) 的可启动 DVD 或 `.iso` 映像文件工具集。
+*   Kali Linux (`https://www.kali.org`) 的可启动 DVD 或 `.iso` 映射文件工具集。
 
 *   NetScanTools Pro (`https://www.netscantools.com`) 用于端口扫描、操作系统枚举等功能。
 
@@ -4977,7 +4415,7 @@ FIGURE 14-1:  限制处理入站消息的资源数量。
 
 *   **边界防护**：虽然不是专门针对邮件，但许多防火墙和入侵防御系统能够实时检测各种邮件攻击并立即阻断攻击者，这在攻击期间非常有用。
 
-*   **CAPTCHA**：在基于 Web 的邮件表单上使用 CAPTCHA 可以帮助降低自动化攻击的影响，减少邮件洪水和 DoS 的风险，即使在执行看似无害的 Web 漏洞扫描时也适用。这些好处在测试你的网站和应用时尤为有用，我在 第 15 章 中进行了讨论。
+*   **CAPTCHA**：在基于 Web 的邮件表单上使用 CAPTCHA 可以帮助降低自动化攻击的影响，减少邮件洪水和 DoS 的风险，即使在执行看似无害的 Web 漏洞扫描时也适用。这些好处在测试你的网站和应用时尤其有用，我在 第 15 章 中进行了讨论。
 
 ### Banners
 
@@ -5103,16 +4541,18 @@ FIGURE 14-9:  使用 NetScanTools Pro SMTP Server Tests 检查开放的邮件中
    * 在 Windows 或 Linux 命令行中输入：
 
      ```
-     telnet mailserver_address 25
-     ```
 
-   连接成功后应看到 SMTP 欢迎信息。
 
-2. **输入命令告诉服务器“你好，我来自这个域”。**
+
+telnet`mailserver_address` 25
+
+连接成功后应看到 SMTP 欢迎信息。
+
+2. 输入命令告诉服务器“你好，我来自这个域”。
 
    ![technicalstuff](img/technicalstuff.png)每条命令执行后会收到不同编号的回复，例如 `999 OK`，这些信息可以忽略。
 
-3. **输入命令告诉服务器你的电子邮件地址。**
+3. 输入命令告诉服务器你的电子邮件地址。
 
    示例：
 
@@ -5122,7 +4562,7 @@ FIGURE 14-9:  使用 NetScanTools Pro SMTP Server Tests 检查开放的邮件中
 
    你可以使用任何电子邮件地址替换 `yourname@yourdomain.com`。
 
-4. **输入命令告诉服务器收件人地址。**
+4. 输入命令告诉服务器收件人地址。
 
    示例：
 
@@ -5132,7 +4572,7 @@ FIGURE 14-9:  使用 NetScanTools Pro SMTP Server Tests 检查开放的邮件中
 
    同样，任何地址均可。
 
-5. **输入命令告知服务器消息正在继续。**
+5. 输入命令告知服务器消息正在继续。
 
    示例：
 
@@ -5140,67 +4580,68 @@ FIGURE 14-9:  使用 NetScanTools Pro SMTP Server Tests 检查开放的邮件中
    data
    ```
 
-6. **输入以下内容作为消息正文：**
+6. 输入以下内容作为消息正文：
 
    ```
    A relay test!
    ```
 
-7. **以单独一行的点结束命令。**
 
-   ![tip](img/tip.png)在第一个 Telnet 提示符处输入 **?** 或 **help** 可查看所有受支持的命令，并根据服务器不同获得命令使用帮助。
 
-   最后的点标记消息结束。输入完该点后，若允许中继，消息将被发送。
 
-8. **检查服务器是否允许中继：**
+## 7. 以单独一行的点结束命令。
 
-   * 观察是否收到类似 `Relay not allowed` 的回复。
+![tip](img/tip.png)在第一个 Telnet 提示符处输入 `?` 或 `help` 可查看所有受支持的命令，并根据服务器不同获得命令使用帮助。
 
-     如果收到此类信息，则 SMTP 中继在服务器上未启用或因安全过滤被阻止（许多服务器会阻止看似从外部发来但实际来源于内部的消息）。
+最后的点标记消息结束。输入完该点后，若允许中继，消息将被发送。
 
-   * 若未收到任何回复，请检查收件箱是否收到已中继的邮件。
+## 8. 检查服务器是否允许中继：
 
-     若收到测试邮件，则说明服务器已启用 SMTP 中继，可能需要将其禁用，以免让垃圾邮件发送者或攻击者借此发送大量垃圾邮件或被列入黑名单，进而影响业务。
+* 观察是否收到类似 `Relay not allowed` 的回复。
 
-#### COUNTERMEASURES AGAINST SMTP RELAY ATTACKS
+  如果收到此类信息，则 SMTP 中继在服务器上未启用或因安全过滤被阻止（许多服务器会阻止看似从外部发来但实际来源于内部的消息）。
+
+* 若未收到任何回复，请检查收件箱是否收到已中继的邮件。
+
+  若收到测试邮件，则说明服务器已启用 SMTP 中继，可能需要将其禁用，以免让垃圾邮件发送者或攻击者借此发送大量垃圾邮件或被列入黑名单，进而影响业务。
+
+## COUNTERMEASURES AGAINST SMTP RELAY ATTACKS
 
 你可以在邮件服务器上实施以下防范措施，以禁用或至少控制 SMTP 中继：
 
-*   **禁用邮件服务器上的 SMTP 中继。** 中继默认应已被禁用，但最好自行核查。如果不确定是否需要中继，通常不需要。你可以在服务器或防火墙配置中为特定主机启用中继。
+* **禁用邮件服务器上的 SMTP 中继。** 中继默认应已被禁用，但最好自行核查。如果不确定是否需要中继，通常不需要。你可以在服务器或防火墙配置中为特定主机启用中继。
 
-*   **如果服务器支持，强制要求身份验证。** 你可以要求与邮件服务器域匹配的电子邮件地址进行密码验证。请参阅邮件服务器和客户端文档，了解如何配置此类验证。
+* **如果服务器支持，强制要求身份验证。** 你可以要求与邮件服务器域匹配的电子邮件地址进行密码验证。请参阅邮件服务器和客户端文档，了解如何配置此类验证。
 
-#### Email header disclosures
-
-
+## Email header disclosures
 
 如果您的电子邮件客户端和服务器使用常见的默认配置，恶意攻击者可能会获取以下关键信息：
 
-*   电子邮件客户端机器的内部 IP 地址（可能导致内部网络的枚举，进而通过钓鱼和/或后续恶意软件感染进行利用）。
+* 电子邮件客户端机器的内部 IP 地址（可能导致内部网络的枚举，进而通过钓鱼和/或后续恶意软件感染进行利用）。
 
-*   客户端和邮件服务器的软件版本，以及它们的漏洞。
+* 客户端和邮件服务器的软件版本，以及它们的漏洞。
 
-*   主机名，这些主机名可能泄露您的网络命名约定。
+* 主机名，这些主机名可能泄露您的网络命名约定。
 
-#### TESTING
+## TESTING
 
 Figure 14-10 显示了我向免费网络账户发送的测试邮件中泄露的邮件头信息。如您所见，它泄露了关于我的邮件系统相当多的信息：
 
-*   第三行 Received 信息披露了我的系统的主机名、IP 地址、服务器名称以及电子邮件客户端软件版本。
+* 第三行 Received 信息披露了我的系统的主机名、IP 地址、服务器名称以及电子邮件客户端软件版本。
 
-*   X-Mailer 行显示了我用来发送此消息的 Microsoft Outlook 版本。
+* X-Mailer 行显示了我用来发送此消息的 Microsoft Outlook 版本。
 
-![ FIGURE 14-10:  Critical information revealed in email headers.](img/9781119485476-fg1410.png)
+![ FIGURE 14-10: Critical information revealed in email headers.](img/9781119485476-fg1410.png)
 
-FIGURE 14-10:  邮件头中泄露的关键信息。
+FIGURE 14-10: 邮件头中泄露的关键信息。
 
-#### COUNTERMEASURES AGAINST HEADER DISCLOSURES
+## COUNTERMEASURES AGAINST HEADER DISCLOSURES
 
 防止邮件头信息泄露的最佳措施是配置您的邮件服务器或邮件防火墙，通过修改显示的信息或将其删除来重写邮件头。请查看邮件服务器或防火墙的文档，确认是否可以使用此方法。
 
 如果重写邮件头不可用（或被您的互联网服务提供商禁止），您仍然可以阻止发送某些关键信息，例如服务器软件版本号和内部 IP 地址。
 
-#### Capturing traffic
+## Capturing traffic
 
 邮件流量（包括用户名和密码）可以通过网络分析仪或邮件数据包捕获器和重构器来捕获。
 
@@ -5208,7 +4649,7 @@ FIGURE 14-10:  邮件头中泄露的关键信息。
 
 如果流量被捕获，黑客或恶意内部人员可以入侵一台主机，并可能获得对相邻主机（如您的邮件服务器）的完整访问权限。
 
-#### Malware
+## Malware
 
 电子邮件系统经常受到病毒和蠕虫等恶意软件的攻击。最重要的测试之一是验证您的防病毒软件是否正常工作。
 
@@ -5224,48 +4665,45 @@ EICAR 是一家欧洲基地的恶意软件思维库，它与防病毒供应商�
 
 运行此测试时，您可能会看到防病毒软件的结果类似于 Figure 14-11。
 
-![ FIGURE 14-11:  Using the EICAR test string to test antimalware software.](img/9781119485476-fg1411.png)
+![ FIGURE 14-11: Using the EICAR test string to test antimalware software.](img/9781119485476-fg1411.png)
 
-FIGURE 14-11:  使用 EICAR 测试字符串测试防病毒软件。
+FIGURE 14-11: 使用 EICAR 测试字符串测试防病毒软件。
 
 ![remember](img/remember.png)除了测试防病毒软件外，您还可以使用本书中介绍的其他工具来攻击电子邮件系统。Metasploit（[`https://www.metasploit.com`](https://www.metasploit.com)）可帮助您发现 Exchange 等服务器的缺失补丁，这些补丁可能被黑客利用。Brutus（[`www.hoobie.net/brutus`](http://www.hoobie.net/brutus)）可用于测试 POP3/IMAP 密码的破解，以及网页邮件系统的网页密码。
 
-### 一般最佳实践：最小化电子邮件安全风险
+## 一般最佳实践：最小化电子邮件安全风险
 
 以下措施有助于尽可能保持消息的安全。
 
-#### 软件解决方案
+### 软件解决方案
 
 正确的软件可以中和许多威胁：
 
-*   在邮件服务器上（更好是邮件网关）使用防病毒软件，以防止恶意软件到达电子邮件客户端。Google 和 Microsoft 等云端邮件服务通常已内置此类防护。在客户端上使用防病毒软件是必然的。
+* 在邮件服务器上（更好是邮件网关）使用防病毒软件，以防止恶意软件到达电子邮件客户端。Google 和 Microsoft 等云端邮件服务通常已内置此类防护。在客户端上使用防病毒软件是必然的。
 
-*   持续且在安全警报发布后及时应用最新的操作系统（OS）和邮件服务器安全补丁。
+* 持续且在安全警报发布后及时应用最新的操作系统（OS）和邮件服务器安全补丁。
 
-*   加密（在合理的前提下）。您可以使用传统的 S/MIME 或 PGP 加密敏感消息，或在桌面、服务器或邮件网关层面使用邮件加密。更佳（更易）的做法是使用 TLS 通过 POP3S、IMAPS 和 SMTPS 协议加密。最佳选择可能是使用支持通过 Web 浏览器通过 HTTPS 发送和接收加密邮件的邮件安全硬件或云服务，例如 G Suite 和 Office 365。
+* 加密（在合理的前提下）。您可以使用传统的 S/MIME 或 PGP 加密敏感消息，或在桌面、服务器或邮件网关层面使用邮件加密。更佳（更易）的做法是使用 TLS 通过 POP3S、IMAPS 和 SMTPS 协议加密。最佳选择可能是使用支持通过 Web 浏览器通过 HTTPS 发送和接收加密邮件的邮件安全硬件或云服务，例如 G Suite 和 Office 365。
 
-    ![warning](img/warning.png)不要依赖用户自行加密消息。与任何其他安全策略或控制一样，依赖用户做出安全决策往往效果不佳。应使用企业解决方案自动加密消息。
+  ![warning](img/warning.png)不要依赖用户自行加密消息。与任何其他安全策略或控制一样，依赖用户做出安全决策往往效果不佳。应使用企业解决方案自动加密消息。
 
-    ![remember](img/remember.png)确保加密文件和邮件能够防范恶意软件。加密不能阻止恶意软件进入文件或邮件，它只是使恶意软件在文件或邮件中保持加密状态。加密会阻止服务器或网关防病毒软件在恶意软件到达桌面之前检测到该恶意软件。
+  ![remember](img/remember.png)确保加密文件和邮件能够防范恶意软件。加密不能阻止恶意软件进入文件或邮件，它只是使恶意软件在文件或邮件中保持加密状态。加密会阻止服务器或网关防病毒软件在恶意软件到达桌面之前检测到该恶意软件。
 
-*   制定政策，要求用户不要打开来自陌生发送者或不可信来源的电子邮件附件，并开展持续的意识宣传和提醒。
+* 制定政策，要求用户不要打开来自陌生发送者或不可信来源的电子邮件附件，并开展持续的意识宣传和提醒。
 
-*   为那些忽视或忘记遵守“不打开 unsolicited emails and attachments”政策的用户做好准备。这会发生！某些软件（如 Microsoft Outlook 和 Windows SmartScreen）可以帮助用户识别恶意内容。
+* 为那些忽视或忘记遵守“不打开 unsolicited emails and attachments”政策的用户做好准备。这会发生！某些软件（如 Microsoft Outlook 和 Windows SmartScreen）可以帮助用户识别恶意内容。
 
-#### 操作指南
+### 操作指南
 
 一些简单的操作规则可以让防火墙保持高，攻击者难以进入您的电子邮件系统：
 
-*   将邮件服务器放在与 Internet 和内部 LAN 处于不同网络段的防火墙后面，最好放在非军事区（DMZ）中，或使用邮件网关。
+* 将邮件服务器放在与 Internet 和内部 LAN 处于不同网络段的防火墙后面，最好放在非军事区（DMZ）中，或使用邮件网关。
 
-*   通过禁用邮件服务器上未使用的协议和服务来加硬化系统。
+* 通过禁用邮件服务器上未使用的协议和服务来加硬化系统。
 
-*   如果可能，在专用服务器上运行邮件服务器并进行恶意软件扫描（甚至可以将入站和出站消息分开）。这样可以在邮件服务器被入侵时，防止恶意攻击扩散到其他服务器和信息。
+* 如果可能，在专用服务器上运行邮件服务器并进行恶意软件扫描（甚至可以将入站和出站消息分开）。这样可以在邮件服务器被入侵时，防止恶意攻击扩散到其他服务器和信息。
 
-*   记录所有与服务器的交易，以便在需要时进行调查。务必监控这些日志！如果无法证明监控的必要性，可考虑将此功能外包给托管安全服务提供商。
-
-
-
+* 记录所有与服务器的交易，以便在需要时进行调查。务必监控这些日志！如果无法证明监控的必要性，可考虑将此功能外包给托管安全服务提供商。
 
 如果你的服务器不需要运行特定的电子邮件服务（SMTP、POP3 和 IMAP），请立即禁用它们。
 
@@ -5291,17 +4729,17 @@ VoIP 相关系统的安全性与其他常见计算机系统并无明显差异。
 
 一方面，VoIP 系统的漏洞与本书其他系统相似，包括默认设置、缺失补丁和弱密码。因此，使用本文中介绍的标准漏洞扫描工具至关重要。图 14-12 展示了 VoIP 适配器 Web 界面认证机制的多种漏洞。
 
-![ FIGURE 14-12:  A WebInspect scan of a VoIP network adapter showing several weaknesses.](img/9781119485476-fg1412.png)
+![ FIGURE 14-12: A WebInspect scan of a VoIP network adapter showing several weaknesses.](img/9781119485476-fg1412.png)
 
-FIGURE 14-12:  A WebInspect scan of a VoIP network adapter showing several weaknesses.
+FIGURE 14-12: A WebInspect scan of a VoIP network adapter showing several weaknesses.
 
 观察这些结果，你可能会认为该设备是基础的 Web 服务器。这正是我的要点：VoIP 系统不过是网络化的计算机系统，拥有可被利用的漏洞。
 
 另一方面，两大与 VoIP 相关的安全弱点：
 
-*   **电话服务中断**：是的，VoIP 易受 DoS 攻击，和任何其他系统或应用一样。由于人们对音质的容忍度极低（手机除外），VoIP 与时敏感型应用一样脆弱。
+* **电话服务中断**：是的，VoIP 易受 DoS 攻击，和任何其他系统或应用一样。由于人们对音质的容忍度极低（手机除外），VoIP 与时敏感型应用一样脆弱。
 
-*   **缺乏加密**：VoIP 的另一大弱点是通话通常不加密，导致可被拦截和录制。想象一下，坏人可以录下对话并进行勒索。这种攻击在未保护的无线网络上极易实施，但如我在即将到来的章节“捕获和录制声音流量”中所示，有线网络同样容易受到影响。
+* **缺乏加密**：VoIP 的另一大弱点是通话通常不加密，导致可被拦截和录制。想象一下，坏人可以录下对话并进行勒索。这种攻击在未保护的无线网络上极易实施，但如我在即将到来的章节“捕获和录制声音流量”中所示，有线网络同样容易受到影响。
 
 ![warning](img/warning.png)如果 VoIP 网络未通过网络分段（如 VLAN）进行保护，声音网络将特别容易窃听、DoS 及其他攻击。但 VLAN 防线在许多环境中可被称为 VoIP Hopper（[`voiphopper.sourceforge.net`](http://voiphopper.sourceforge.net)）所突破。当你以为声音系统已安全时，这类工具会出现，它们虽旧，但仍可用于此类测试。
 
@@ -5309,13 +4747,13 @@ FIGURE 14-12:  A WebInspect scan of a VoIP network adapter showing several weakn
 
 ![tip](img/tip.png)需要注意的是，尽管 SIP 是最常用的 VoIP 协议，H.323 也存在，因此如果使用的是 H.323，请不要浪费时间测试 SIP 漏洞。请参阅 [www.packetizer.comi/ipmc/h323_vs_sip](http://www.packetizer.comi/ipmc/h323_vs_sip) 获取 H.323 与 SIP 的详细对比。
 
-#### 漏洞扫描
+### 漏洞扫描
 
 除基本的网络、操作系统和 Web 应用漏洞外，使用合适的工具可以发现 VoIP 问题。好消息是，你很可能已经拥有这些工具——网络漏洞扫描仪如 Nexpose（[`www.rapid7.com/products/nexpose`](https://www.rapid7.com/products/nexpose)），以及 Web 漏洞扫描仪如 Netsparker（[`www.netsparker.com`](https://www.netsparker.com)）。VoIP 呼叫管理器和电话中常见的弱密码、跨站脚本以及未打补丁的漏洞，可利用 Metasploit 等工具进行利用。
 
 ![tip](img/tip.png)Kali Linux 内置了多种 VoIP 工具，位于 Applications/Vulnerability Analysis/VoIP Tools。其他免费的 SIP 流量分析工具包括 PROTOS（[www.ee.oulu.fi/research/ouspg/protos/testing/c07/sip/index.html](http://www.ee.oulu.fi/research/ouspg/protos/testing/c07/sip/index.html)）和 sipsak（[`www.voip-info.org/wiki/view/Sipsak`](https://www.voip-info.org/wiki/view/Sipsak)）。一个汇总了大量 VoIP 相关工具的网站是 [www.voipsa.org/Resources/tools.php](http://www.voipsa.org/Resources/tools.php)。
 
-#### 捕获和录制声音流量
+### 捕获和录制声音流量
 
 如果你能访问有线或无线网络，轻松捕获 VoIP 对话，这能有效证明网络及 VoIP 部署的漏洞。
 
@@ -5329,27 +4767,25 @@ FIGURE 14-12:  A WebInspect scan of a VoIP network adapter showing several weakn
 
 3. **点击蓝色加号（+）图标，添加用于 ARP 中毒的主机。**
 
-
-
 4. 在出现的 `MAC Address Scanner` 窗口中，确保选择 `All Hosts in My Subnet`，然后点击 OK。
 
 5. 点击 `APR` 标签页（带有黄黑圆形图标的那个）以加载 APR 页面。
 
 6. 点击最上方 `Status` 列标题下方的空白区域（在 `Sniffer` 标签页下方）。
 
-    这一步会重新启用蓝色的 `+` 图标。
+   这一步会重新启用蓝色的 `+` 图标。
 
 7. 点击蓝色的 `+` 图标。
 
-    `New ARP Poison Routing` 窗口会显示步骤 3 中发现的主机。
+   `New ARP Poison Routing` 窗口会显示步骤 3 中发现的主机。
 
 8. 选择默认路由或其他你想要捕获数据包的主机（发往和发自该主机的流量）。
 
-    我选择默认路由，但你也可以考虑选择你的 SIP 管理系统或其他中央 VoIP 系统。右侧列会填充所有剩余的主机。
+   我选择默认路由，但你也可以考虑选择你的 SIP 管理系统或其他中央 VoIP 系统。右侧列会填充所有剩余的主机。
 
 9. 在右侧列中，使用 `Ctrl+click` 选择你想要“中毒”的系统，以捕获其语音流量。
 
-    我选择我的 VoIP 网卡，但你也可以考虑选择所有 VoIP 电话。
+   我选择我的 VoIP 网卡，但你也可以考虑选择所有 VoIP 电话。
 
 10. 点击 OK 以启动 ARP 中毒过程。
 
@@ -5361,7 +4797,7 @@ FIGURE 14-12:  A WebInspect scan of a VoIP network adapter showing several weakn
 
      这里的有趣之处是：对话会以 `.wav` 音频文件格式保存，因此你只需右键单击想要测试的已录制对话，在上下文菜单中选择 **Play**（播放），如图 14-13 所示。正在记录的对话在状态列中会显示 **Recording**。
 
-![ FIGURE 14-13:  Using Cain & Abel to capture, record, and play back VoIP conversations.](img/9781119485476-fg1413.png)
+![ FIGURE 14-13: Using Cain & Abel to capture, record, and play back VoIP conversations.](img/9781119485476-fg1413.png)
 
 FIGURE 14-13: 使用 Cain & Abel 捕获、记录并回放 VoIP 对话。
 
@@ -5373,7 +4809,7 @@ Cain 等工具的语音质量取决于 VoIP 设备所使用的编码器。使用
 
 这些 VoIP 漏洞仅是冰山的一角。新系统、软件和相关协议不断出现，保持警惕以确保你的对话免受恶意人员的攻击。如前所述，只要有 IP 地址或 URL，就可能成为攻击目标。
 
-### 针对 VoIP 漏洞的防范措施
+## 针对 VoIP 漏洞的防范措施
 
 加固 VoIP 可能很棘手。不过，你可以从以下步骤开始：将语音网络划分为独立的 VLAN，或如果预算允许，甚至划分为独立的物理网络。进一步隔离任何连接 Internet 的系统，确保不是随意任何人都能连接（这一点在我看到的情形中很常见）。你还应确保所有 VoIP 相关系统均按照厂商的建议和公认的最佳实践（如 NIST 的 SP800-58 文档 https://csrc.nist.gov/publications/detail/sp/800-58/final）进行硬化，并且软件和固件需定期且持续地进行补丁。最后，定期使用网络漏洞扫描工具（如 Nexpose 或 Nessus）对语音相关系统进行扫描。如果所有的电话都是同一型号和版本，你可能只需要测试其中的一小部分。但请注意，我在观察到，当对这些电话及相关语音设备运行漏洞扫描时，它们有时会出现异常行为。
 
@@ -5411,16 +4847,13 @@ Cain 等工具的语音质量取决于 VoIP 设备所使用的编码器。使用
 
 以下是我喜欢的 Web 安全测试工具：
 
-*   **Acunetix Web Vulnerability Scanner**（https://www.acunetix.com） —  — 一款全能的 Web 安全测试工具，集成了端口扫描和 HTTP 抓包功能。
+* **Acunetix Web Vulnerability Scanner**（https://www.acunetix.com）— — 一款全能的 Web 安全测试工具，集成了端口扫描和 HTTP 抓包功能。
 
-*   **BURP proxy**（https://portswigger.net/burp/communitydownload） —  — 用于 HTTP 代理捕获和分析的工具。
+* **BURP proxy**（https://portswigger.net/burp/communitydownload）— — 用于 HTTP 代理捕获和分析的工具。
 
+* [Netsparker](https://www.netsparker.com) 用于一站式安全测试，通常能发现其他工具可能漏掉的漏洞。
 
-
-
--   [Netsparker](https://www.netsparker.com) 用于一站式安全测试，通常能发现其他工具可能漏掉的漏洞。
-
--   [Web Developer](http://chrispederick.com/work/web-developer) 用于手动分析和操作网页。
+* [Web Developer](http://chrispederick.com/work/web-developer) 用于手动分析和操作网页。
 
 还有许多其他专注于浏览器的工具，适合 Firefox 和 Chrome，可在 [`http://resources.infosecinstitute.com/use-firefox-browser-as-a-penetration-testing-tool-with-these-add-ons`](http://resources.infosecinstitute.com/use-firefox-browser-as-a-penetration-testing-tool-with-these-add-ons) 和 [`http://resources.infosecinstitute.com/19-extensions-to-turn-google-chrome-into-penetration-testing-tool`](http://resources.infosecinstitute.com/19-extensions-to-turn-google-chrome-into-penetration-testing-tool) 查看。
 
@@ -5444,7 +4877,7 @@ Cain 等工具的语音质量取决于 VoIP 设备所使用的编码器。使用
 
 像免费 HTTrack Website Copier（[`https://www.httrack.com`](https://www.httrack.com)）这样的爬虫程序可以抓取你的站点，查找所有公开可访问的文件。使用 HTTrack 时，加载它，为项目命名，并指定要镜像的网站。几分钟后（或根据站点大小和复杂度可能需要数小时），你的本地磁盘（如 `c:\My Web Sites`）将存储该站点上所有公开可访问的内容。图 15-1（Figure 15-1）展示了一个基本网站的抓取输出。
 
-![ FIGURE 15-1:  Using HTTrack to crawl a website.](img/9781119485476-fg1501.png)
+![ FIGURE 15-1: Using HTTrack to crawl a website.](img/9781119485476-fg1501.png)
 
 FIGURE 15-1: 使用 HTTrack 对网站进行抓取。
 
@@ -5460,23 +4893,22 @@ FIGURE 15-1: 使用 HTTrack 对网站进行抓取。
 
 下面是几条高级查询示例，可直接在 Google 搜索框中输入：
 
-*   **`site:hostname keywords`** ：搜索包含你列出的任意关键词（如 *SSN*、*confidential*、*credit card*）的页面。例如：  
+* **`site:hostname keywords`** ：搜索包含你列出的任意关键词（如 *SSN*、*confidential*、*credit card*）的页面。例如：  
 
-    `site:www.principlelogic.com` speaker
+  `site:www.principlelogic.com` speaker
 
-*   **`filetype:file-extension site:hostname`** ：搜索特定文件类型的特定网站，如 `doc`、`pdf`、`db`、`dbf`、`zip`。这些文件可能包含敏感信息。例如：  
+* **`filetype:file-extension site:hostname`** ：搜索特定文件类型的特定网站，如 `doc`、`pdf`、`db`、`dbf`、`zip`。这些文件可能包含敏感信息。例如：  
 
-    `filetype:pdf site:www.principlelogic.com`
+  `filetype:pdf site:www.principlelogic.com`
 
 其他高级 Google 操作符包括：
 
-*   `allintitle`：搜索关键词出现在网页标题中的结果。
-*   `inurl`：搜索关键词出现在 URL 中的结果。
-*   `related`：找出与当前页面相似的页面。
-*   `link`：显示链接到当前页面的其他站点。
+* `allintitle`：搜索关键词出现在网页标题中的结果。
+* `inurl`：搜索关键词出现在 URL 中的结果。
+* `related`：找出与当前页面相似的页面。
+* `link`：显示链接到当前页面的其他站点。
 
 更多定义和用法请参考 [`www.googleguide.com/advanced_operators.html`](http://www.googleguide.com/advanced_operators.html)。许多漏洞扫描器也会检查 Google Hacking Database（GHDB）站点（[`https://www.exploit-db.com/google-hacking-database`](https://www.exploit-db.com/google-hacking-database)）。
-
 
 ![tip](img/tip.png)在使用 Google 搜索浏览您的网站时，请务必查找服务器、网络和组织的敏感信息，这些信息可在 Google Groups（[`http://groups.google.com`](http://groups.google.com)），即 Usenet 存档，以及 Reddit 和 Quora 等新兴站点中找到。我发现一些在线帖子泄露了过多的内部网络和业务系统信息，可能性无限。如果您发现不应该公开的内容，可以与 Google 联系，请求编辑或删除。更多信息请参阅 Google 的联系我们页面（[`https://www.google.com/intl/en/contact`](https://www.google.com/intl/en/contact)）。
 
@@ -5486,17 +4918,17 @@ FIGURE 15-1: 使用 HTTrack 对网站进行抓取。
 
 您可以采用三种主要措施来防止通过恶意目录遍历导致文件被篡改：
 
-*   **不要在 Web 服务器上存储旧的、敏感或非公开的文件。** 只能在 `/htdocs` 或 `DocumentRoot` 文件夹中放置站点正常运行所需的文件。这些文件不应包含您不希望世界看到的机密信息。
+* **不要在 Web 服务器上存储旧的、敏感或非公开的文件。** 只能在 `/htdocs` 或 `DocumentRoot` 文件夹中放置站点正常运行所需的文件。这些文件不应包含您不希望世界看到的机密信息。
 
-*   **配置 `robots.txt` 文件。**
+* **配置 `robots.txt` 文件。**
 
-    这将帮助阻止像 Google 这样的搜索引擎抓取站点的更敏感区域。
+  这将帮助阻止像 Google 这样的搜索引擎抓取站点的更敏感区域。
 
-*   **确保 Web 服务器仅允许公开访问对站点正常运行所必需的目录。** 最小权限原则是关键，因此仅提供 Web 应用程序正常工作所需的文件和目录的访问权限。
+* **确保 Web 服务器仅允许公开访问对站点正常运行所必需的目录。** 最小权限原则是关键，因此仅提供 Web 应用程序正常工作所需的文件和目录的访问权限。
 
-    ![technicalstuff](img/technicalstuff.png)请查阅 Web 服务器文档，了解如何控制公开访问。根据您所使用的 Web 服务器版本，这些访问控制通常在 `httpd.conf` 文件和 Apache 的 `.htaccess` 文件中设置（参阅 [`http://httpd.apache.org/docs/current/configuring.html`](http://httpd.apache.org/docs/current/configuring.html)），以及 IIS 的 Internet Information Services Manager。最新版本的这些 Web 服务器默认具有良好的目录安全性，请确保您使用的是最新版本。
+  ![technicalstuff](img/technicalstuff.png)请查阅 Web 服务器文档，了解如何控制公开访问。根据您所使用的 Web 服务器版本，这些访问控制通常在 `httpd.conf` 文件和 Apache 的 `.htaccess` 文件中设置（参阅 [`http://httpd.apache.org/docs/current/configuring.html`](http://httpd.apache.org/docs/current/configuring.html)），以及 IIS 的 Internet Information Services Manager。最新版本的这些 Web 服务器默认具有良好的目录安全性，请确保您使用的是最新版本。
 
-*   **考虑使用搜索引擎蜜罐。** 蜜罐会吸引恶意用户，让您了解攻击者是如何针对您的站点进行攻击。随后您可以利用所获知识来阻止他们。例如，Google Hack Honeypot（[`http://ghh.sourceforge.net`](http://ghh.sourceforge.net)）。
+* **考虑使用搜索引擎蜜罐。** 蜜罐会吸引恶意用户，让您了解攻击者是如何针对您的站点进行攻击。随后您可以利用所获知识来阻止他们。例如，Google Hack Honeypot（[`http://ghh.sourceforge.net`](http://ghh.sourceforge.net)）。
 
 ### 输入过滤攻击
 
@@ -5512,11 +4944,11 @@ FIGURE 15-1: 使用 HTTrack 对网站进行抓取。
 
 典型登录会话中，有效的登录名长度不超过 12 个字符，但 `maxsize` 变量可以被修改为更大的值，例如 100 或甚至 1,000。攻击者可以在登录字段中输入伪造数据。接下来会发生什么，谁也无法预测——应用程序可能挂起、覆盖内存中的其他数据，或导致服务器崩溃。
 
-简单的方法是通过 Web 代理（如商业漏洞扫描工具中提到的，或免费 Burp 代理）逐步操作页面提交。要使用此代理，您需要在浏览器中配置本地代理 127.0.0.1:8080。在 Mozilla Firefox 中，选择 Tools ⇒ Options，滚动至 Options 对话框底部的 Network Proxy 部分，点击 Settings，然后选择 Manual Proxy Configuration 单选按钮。在 Internet Explorer 中，点击齿轮图标并选择 Internet Options，在弹出的对话框中点击 Connections 部分的 LAN Settings，勾选 Use a proxy server for your LAN，并输入相应的主机名/IP 地址和端口号。
+简单的方法是通过 Web 代理（如商业漏洞扫描工具中提到的，或免费 Burp 代理）逐步操作页面提交。要使用此代理，您需要在浏览器中配置本地代理 127.0.0.1:8080。在 Mozilla Firefox 中，选择 Tools ⇒ Options，滚动至 Options 对话框底部的 Network Proxy 部分，点击 Settings，然后选择 Manual Proxy Configuration 单选按钮。在 Internet Explorer 中，点击齿轮图标并选择 Internet Options，在弹出的对话框中点击 Connections 部分的 LAN Settings，勾选 Use a proxy server for your LAN，并输入相应的主机名/IP 地址和端口号。
 
 只需在提交前修改变量的字段长度，即可让页面以您指定的长度提交。您也可以使用 Firefox Web Developer 插件来移除 Web 表单中定义的最大字段长度，如图 15-2 所示。
 
-![ FIGURE 15-2:  Using Firefox Web Developer to reset form-field lengths.](img/9781119485476-fg1502.png)
+![ FIGURE 15-2: Using Firefox Web Developer to reset form-field lengths.](img/9781119485476-fg1502.png)
 
 FIGURE 15-2: 使用 Firefox Web Developer 重置表单字段长度。
 
@@ -5524,7 +4956,7 @@ FIGURE 15-2: 使用 Firefox Web Developer 重置表单字段长度。
 
 自动化输入攻击通过操纵 URL 将其发送回服务器，指示 Web 应用执行各种操作，如重定向到第三方站点或加载服务器上的敏感文件。本地文件包含（Local File Inclusion）就是一种此类漏洞。当应用程序接受基于 URL 的输入并将指定文件的内容返回给用户时，就会出现此漏洞，例如下面的尝试读取 Linux 服务器 `passwd` 文件的请求：
 
-`https://www.your_web_app.com/onlineserv/Checkout.cgi?state=detail&amp;language=english&amp;imageSet=/../..//../..//../..//../..///etc/passwd`
+`https://www.your_web_app.com/onlineserv/Checkout.cgi?state=detail&amp;language=english&amp;imageSet=/../..//../..//../..//../..//../..///etc/passwd`
 
 值得注意的是，大多数现代应用平台（如 ASP.NET 和 Java）对 URL 变量的操纵防护相当出色，但我仍时常看到此漏洞。
 
@@ -5542,8 +4974,6 @@ FIGURE 15-2: 使用 Firefox Web Developer 重置表单字段长度。
 
 1. **查看 HTML 源代码。**
 
-
-
 ![tip](img/tip.png)要在 Internet Explorer 和 Firefox 中查看源代码，右键单击页面并从上下文菜单中选择 "View Source" 或 "View Page Source"。
 
 2. **更改这些字段中存储的信息。**
@@ -5560,9 +4990,9 @@ FIGURE 15-2: 使用 Firefox Web Developer 重置表单字段长度。
 
 一些工具，如商业网络漏洞扫描器自带的代理以及 Burp Proxy，可以轻松地操纵隐藏字段。图 15-3 显示了 WebInspect SPI Proxy 接口以及网页的隐藏字段。
 
-![ FIGURE 15-3:  使用 WebInspect 查找并操纵隐藏字段。](img/9781119485476-fg1503.png)
+![ FIGURE 15-3: 使用 WebInspect 查找并操纵隐藏字段。](img/9781119485476-fg1503.png)
 
-FIGURE 15-3:  使用 WebInspect 查找并操纵隐藏字段。
+FIGURE 15-3: 使用 WebInspect 查找并操纵隐藏字段。
 
 如果你发现隐藏字段，可以尝试对它们进行操纵，看看能做什么。方法很简单。
 
@@ -5590,9 +5020,9 @@ SQL 注入主要有两类：标准（也称为基于错误）和盲注。基于�
 
 在查找和发现 SQL 注入缺陷时，你得到的是物有所值的回报。正如 URL 重写一样，使用漏洞扫描器进行 SQL 注入检查更为明智，它允许攻击者通过漏洞页面向后端数据库注入数据库查询和命令。图 15-4 展示了 Netsparker 漏洞扫描器发现的众多 SQL 注入漏洞。
 
-![ FIGURE 15-4:  Netsparker 发现的 SQL 注入漏洞。](img/9781119485476-fg1504.png)
+![ FIGURE 15-4: Netsparker 发现的 SQL 注入漏洞。](img/9781119485476-fg1504.png)
 
-FIGURE 15-4:  Netsparker 发现的 SQL 注入漏洞。
+FIGURE 15-4: Netsparker 发现的 SQL 注入漏洞。
 
 Netsparker 的好处在于，它在发现 SQL 注入后，提供了内置的 "Execute SQL Commands" 工具，进一步展示弱点。一张展示 SQL 注入在起作用的截图，几乎是漏洞和渗透测试能达到的最佳效果！
 
@@ -5614,143 +5044,139 @@ Netsparker 的好处在于，它在发现 SQL 注入后，提供了内置的 "Ex
 
 如果弹出一个显示 `XSS` 的窗口（如图 15-5 所示），则说明该应用易受 XSS 漏洞影响。XSS‑Me Firefox 添加程序（[`addons.mozilla.org/en-US/firefox/addon/xss-me`](https://addons.mozilla.org/en-US/firefox/addon/xss-me)）也是一种测试手段。
 
-![ FIGURE 15-5:  将脚本代码反射到浏览器。](img/9781119485476-fg1505.png)
+![ FIGURE 15-5: 将脚本代码反射到浏览器。](img/9781119485476-fg1505.png)
 
+脚本反射到浏览器的灵感源于需要通过 JavaScript `onmouseover` 函数进行用户交互的 XSS 利用方式。
 
+与 SQL 注入一样，你真的需要使用自动化扫描工具来检测 XSS。Netsparker 和 Acunetix Web Vulnerability Scanner 都能很好地发现 XSS，但它们往往发现的 XSS 问题不同——这凸显了在可能的情况下使用多个扫描工具的重要性。
 
+![Figure 15-6:](img/#c15.xhtml#c15-fig-0006) 显示了 Acunetix Web Vulnerability Scanner 中的一些 XSS 发现示例。
 
--   脚本反射到浏览器的灵感源于需要通过 JavaScript `onmouseover` 函数进行用户交互的 XSS 利用方式。
+![FIGURE 15-6: Using Acunetix Web Vulnerability Scanner to find cross-site scripting in a web application.](img/9781119485476-fg1506.png)
 
--   与 SQL 注入一样，你真的需要使用自动化扫描工具来检测 XSS。Netsparker 和 Acunetix Web Vulnerability Scanner 都能很好地发现 XSS，但它们往往发现的 XSS 问题不同——这凸显了在可能的情况下使用多个扫描工具的重要性。
+![tip](img/tip.png)
 
--   ![Figure 15-6:](img/#c15.xhtml#c15-fig-0006) 显示了 Acunetix Web Vulnerability Scanner 中的一些 XSS 发现示例。
+另一个擅长发现许多其他扫描器无法发现的 XSS 的网页漏洞扫描器是 Rapid7 的 AppSpider（前称 NTOSpider）([`https://www.rapid7.com/products/appspider`](https://www.rapid7.com/products/appspider))。
 
--   ![FIGURE 15-6:  Using Acunetix Web Vulnerability Scanner to find cross-site scripting in a web application.](img/9781119485476-fg1506.png)
+在我的经验中，AppSpider 在对使用多因素认证系统的应用进行身份验证扫描时表现更好。
 
--   ![tip](img/tip.png)
+AppSpider 应该被放在你的视野中。
 
--   另一个擅长发现许多其他扫描器无法发现的 XSS 的网页漏洞扫描器是 Rapid7 的 AppSpider（前称 NTOSpider）([`https://www.rapid7.com/products/appspider`](https://www.rapid7.com/products/appspider))。
-
--   在我的经验中，AppSpider 在对使用多因素认证系统的应用进行身份验证扫描时表现更好。
-
--   AppSpider 应该被放在你的视野中。
-
--   切记：在 Web 漏洞方面，扫描器越多越好！如果不这样做，别人可能会使用你未使用的扫描器。
+切记：在 Web 漏洞方面，扫描器越多越好！如果不这样做，别人可能会使用你未使用的扫描器。
 
 ### 对输入攻击的防范措施
 
--   网站和应用必须对输入数据进行过滤。
+* 网站和应用必须对输入数据进行过滤。
 
--   网站和应用必须确保输入的数据符合应用程序预期的参数范围。
+* 网站和应用必须确保输入的数据符合应用程序预期的参数范围。
 
--   如果数据不匹配，应生成错误信息或返回到上一页。
+* 如果数据不匹配，应生成错误信息或返回到上一页。
 
--   在任何情况下，应用都不应接受垃圾数据、处理它并将其反射回给用户。
+* 在任何情况下，应用都不应接受垃圾数据、处理它并将其反射回给用户。
 
--   如果将这些最佳实践作为开发过程的关键部分，安全的编码实践可以消除上述所有问题。开发人员应知晓并实施这些最佳实践：
+* 如果将这些最佳实践作为开发过程的关键部分，安全的编码实践可以消除上述所有问题。开发人员应知晓并实施这些最佳实践：
 
-*   永远不要向浏览器和用户展示不需要的静态值。  
+  * 永远不要向浏览器和用户展示不需要的静态值。
+
     相反，这些数据应在服务器端实现，仅在需要时从数据库中获取。
 
-*   从输入字段中过滤掉 `<script>` 标签。
+  * 从输入字段中过滤掉 `<script>` 标签。
 
-*   如果可能，禁用详细的 Web 服务器和数据库相关错误信息。
+  * 如果可能，禁用详细的 Web 服务器和数据库相关错误信息。
 
 ### 默认脚本攻击
 
--   编写不佳的 Web 程序，如 PHP（超文本预处理）和 ASP（Active Server Pages）脚本，可能允许黑客查看和操作 Web 服务器上的文件，以及执行其他未授权的操作。
+* 编写不佳的 Web 程序，如 PHP（超文本预处理）和 ASP（Active Server Pages）脚本，可能允许黑客查看和操作 Web 服务器上的文件，以及执行其他未授权的操作。
 
--   这些缺陷在开发人员、IT 人员和营销人员使用的内容管理系统中也十分常见，用于维护网站内容。
+* 这些缺陷在开发人员、IT 人员和营销人员使用的内容管理系统中也十分常见，用于维护网站内容。
 
--   默认脚本攻击之所以常见，是因为大量 poorly written 代码自由可得。
+* 默认脚本攻击之所以常见，是因为大量 poorly written 代码自由可得。
 
--   黑客还可以利用各种示例脚本，尤其是较旧版本的 Microsoft IIS 服务器上安装的脚本。
+* 黑客还可以利用各种示例脚本，尤其是较旧版本的 Microsoft IIS 服务器上安装的脚本。
 
--   ![warning](img/warning.png)
+* ![warning](img/warning.png)
 
--   许多 Web 开发人员和站长使用这些脚本而不理解其工作原理或未进行测试，这可能导致严重的安全漏洞。
+  许多 Web 开发人员和站长使用这些脚本而不理解其工作原理或未进行测试，这可能导致严重的安全漏洞。
 
--   要测试脚本漏洞，你可以手动浏览脚本，或使用文本搜索工具（如 Windows 开始菜单内置的搜索功能或 Linux 的 Find 程序）查找任何硬编码的用户名、密码及其他敏感信息。
+* 要测试脚本漏洞，你可以手动浏览脚本，或使用文本搜索工具（如 Windows 开始菜单内置的搜索功能或 Linux 的 Find 程序）查找任何硬编码的用户名、密码及其他敏感信息。
 
--  搜索 *admin*、*root*、*user*、*ID*、*login*、*signon*、*password*、*pass*、*pwd* 等关键词。
+* 搜索 *admin*、*root*、*user*、*ID*、*login*、*signon*、*password*、*pass*、*pwd* 等关键词。
 
--   脚本中嵌入的敏感信息通常并非必要，往往是由于把便利性置于安全之上导致的低质量编码结果。
+* 脚本中嵌入的敏感信息通常并非必要，往往是由于把便利性置于安全之上导致的低质量编码结果。
 
 ### 对默认脚本攻击的防范措施
 
--   以下措施可帮助防止默认 Web 脚本的攻击：
+* 以下措施可帮助防止默认 Web 脚本的攻击：
 
-*   在将脚本部署到 Web 环境前，先了解其工作原理。
+  * 在将脚本部署到 Web 环境前，先了解其工作原理。
 
-*   在使用前，确保从 Web 服务器上彻底删除所有默认或示例脚本。
+  * 在使用前，确保从 Web 服务器上彻底删除所有默认或示例脚本。
 
-*   保持内容管理系统软件的更新，尤其是 WordPress，因为它是攻击者的主要目标。
+  * 保持内容管理系统软件的更新，尤其是 WordPress，因为它是攻击者的主要目标。
 
     ![remember](img/remember.png)
 
--   切勿使用包含硬编码机密信息的公开可访问脚本，它们是安全事件的导火索。
+  * 切勿使用包含硬编码机密信息的公开可访问脚本，它们是安全事件的导火索。
 
-*   为站点或应用的敏感区域设置文件权限，防止公众访问。
+  * 为站点或应用的敏感区域设置文件权限，防止公众访问。
 
 ### 不安全的登录机制
 
--   许多网站要求用户登录后才能使用应用。
+* 许多网站要求用户登录后才能使用应用。
 
--   这些登录机制可能在处理错误的用户 ID 或密码时不够优雅，从而泄露攻击者可以用于猜测有效用户 ID 和密码的信息。
+* 这些登录机制可能在处理错误的用户 ID 或密码时不够优雅，从而泄露攻击者可以用于猜测有效用户 ID 和密码的信息。
 
--   要测试不安全的登录机制，请访问你的应用，并尝试以下登录方法：
+* 要测试不安全的登录机制，请访问你的应用，并尝试以下登录方法：
 
-*   使用无效的用户 ID 但有效的密码。
+  * 使用无效的用户 ID 但有效的密码。
 
-*   使用有效的用户 ID 但无效的密码。
+  * 使用有效的用户 ID 但无效的密码。
 
-*   使用无效的用户 ID 与无效的密码。
+  * 使用无效的用户 ID 与无效的密码。
 
--  输入上述信息后，Web 应用通常会返回类似 `Your user ID is invalid` 或 `Your password is invalid` 的消息。
+* 输入上述信息后，Web 应用通常会返回类似 `Your user ID is invalid` 或 `Your password is invalid` 的消息。
 
--  或者，应用可能返回通用错误信息，如 `Your user ID and password combination is invalid`，并在 URL 中返回不同的错误码，分别对应无效的用户 ID 和无效的密码，如图 15-7 和 15-8 所示。
+* 或者，应用可能返回通用错误信息，如 `Your user ID and password combination is invalid`，并在 URL 中返回不同的错误码，分别对应无效的用户 ID 和无效的密码，如图 15-7 和 15-8 所示。
 
--  ![ FIGURE 15-7:  The URL returns an error when an invalid user ID is entered.](img/9781119485476-fg1507.png)
+* ![ FIGURE 15-7: The URL returns an error when an invalid user ID is entered.](img/9781119485476-fg1507.png)
 
--  ![FIGURE 15-7:](img/#c15.xhtml#rc15-fig-0007)  当输入无效的用户 ID 时，URL 会返回错误。
+* ![FIGURE 15-7:](img/#c15.xhtml#rc15-fig-0007) 当输入无效的用户 ID 时，URL 会返回错误。
 
--  ![ FIGURE 15-8:  The URL returns a different error when an invalid password is entered.](img/9781119485476-fg1508.png)
+* ![ FIGURE 15-8: The URL returns a different error when an invalid password is entered.](img/9781119485476-fg1508.png)
 
--  ![FIGURE 15-8:](img/#c15.xhtml#rc15-fig-0008)  当输入无效的密码时，URL 会返回不同的错误。
+* ![FIGURE 15-8:](img/#c15.xhtml#rc15-fig-0008) 当输入无效的密码时，URL 会返回不同的错误。
 
--  这两种情况都很糟糕，因为应用不仅告诉你哪个参数无效，还告诉你哪个参数是有效的。攻击者现在知道一个有效的用户名或密码，工作量被削减一半！如果他们知道用户名（通常更容易猜到），就可以编写脚本自动化密码破解过程，反之亦然。
+* 这两种情况都很糟糕，因为应用不仅告诉你哪个参数无效，还告诉你哪个参数是有效的。攻击者现在知道一个有效的用户名或密码，工作量被削减一半！如果他们知道用户名（通常更容易猜到），就可以编写脚本自动化密码破解过程，反之亦然。
 
--  你也应该通过使用诸如 Brutus（[`www.hoobie.net/brutus/index.html`](http://www.hoobie.net/brutus/index.html)）等 Web 登录破解工具将登录测试提升到更高水平，如图 15-9 所示。Brutus 是一个简单的工具，可通过字典和暴力攻击来破解 HTTP 和基于表单的身份验证机制。
+* 你也应该通过使用诸如 Brutus（[`www.hoobie.net/brutus/index.html`](http://www.hoobie.net/brutus/index.html)）等 Web 登录破解工具将登录测试提升到更高水平，如图 15-9 所示。Brutus 是一个简单的工具，可通过字典和暴力攻击来破解 HTTP 和基于表单的身份验证机制。
 
--  ![ FIGURE 15-9:  The Brutus tool tests for weak web logins.](img/9781119485476-fg1509.png)
+* ![ FIGURE 15-9: The Brutus tool tests for weak web logins.](img/9781119485476-fg1509.png)
 
--  ![FIGURE 15-9:](img/#c15.xhtml#rc15-fig-0009)  Brutus 工具用于测试弱 web 登录。
+* ![FIGURE 15-9:](img/#c15.xhtml#rc15-fig-0009) Brutus 工具用于测试弱 web 登录。
 
--  ![warning](img/warning.png)
+* ![warning](img/warning.png)
 
--  与任何密码测试一样，这项任务可能很长且繁琐，并且有风险锁定用户账户。请谨慎进行。
+  与任何密码测试一样，这项任务可能很长且繁琐，并且有风险锁定用户账户。请谨慎进行。
 
--  另一个用于破解 Web 密码的工具是 THC-Hydra（[`https://tools.kali.org/password-attacks/hydra`](https://tools.kali.org/password-attacks/hydra)）。
+* 另一个用于破解 Web 密码的工具是 THC-Hydra（[`https://tools.kali.org/password-attacks/hydra`](https://tools.kali.org/password-attacks/hydra)）。
 
--  商业 Web 漏洞扫描器通常具备不错的字典式 Web 密码破解功能，但没有（据我所知）能像 Brutus 那样进行真正的暴力测试。
+* 商业 Web 漏洞扫描器通常具备不错的字典式 Web 密码破解功能，但没有（据我所知）能像 Brutus 那样进行真正的暴力测试。
 
--  如我在第 8 章（Chapter 8）中讨论的那样，你的密码破解成功高度依赖于字典列表。
+* 如我在第 8 章（Chapter 8）中讨论的那样，你的密码破解成功高度依赖于字典列表。
 
--  以下是一些常见的字典文件和其他词表来源：
+* 以下是一些常见的字典文件和其他词表来源：
 
-*    `ftp://ftp.cerias.purdue.edu/pub/dict` 
+  * `ftp://ftp.cerias.purdue.edu/pub/dict`
 
-*   [ `https://packetstormsecurity.org/Crackers/wordlists` ](https://packetstormsecurity.org/Crackers/wordlists)
+  * [ `https://packetstormsecurity.org/Crackers/wordlists` ](https://packetstormsecurity.org/Crackers/wordlists)
 
-*   [ www.outpost9.com/files/WordLists.html ](http://www.outpost9.com/files/WordLists.html)
-
-
+  * [ www.outpost9.com/files/WordLists.html ](http://www.outpost9.com/files/WordLists.html)
 
 ![tip](img/tip.png)Acunetix Web Vulnerability Scanner 在扫描时能很好地测试弱密码。我曾使用该扫描器发现了原本我不会找到的弱网页密码，这些发现往往会导致对系统的进一步渗透。
 
 你可能根本不需要密码破解工具，因为许多前端 Web 系统（如存储管理系统、IP 视频系统和物理访问控制系统）都自带密码，这些默认密码通常是 `password`、`admin` 或空。有些密码甚至直接写在登录页面的源码中，例如图 15-10（第 207、208 行）所示的网络摄像头源码。
 
-![ FIGURE 15-10:  A network camera’s login credentials embedded directly in its HTML source code.](img/9781119485476-fg1510.png)
+![ FIGURE 15-10: A network camera’s login credentials embedded directly in its HTML source code.](img/9781119485476-fg1510.png)
 
 FIGURE 15-10: A network camera’s login credentials embedded directly in its HTML source code.
 
@@ -5758,21 +5184,21 @@ FIGURE 15-10: A network camera’s login credentials embedded directly in its HT
 
 你可以采取以下措施，防止攻击者利用弱登录系统攻击你的 Web 应用：
 
-*   向用户返回的登录错误应尽可能通用，例如 `Your user ID and password combination is invalid`。
+* 向用户返回的登录错误应尽可能通用，例如 `Your user ID and password combination is invalid`。
 
-*   应用程序永不在 URL 中返回错误码以区分无效用户名和无效密码。
+* 应用程序永不在 URL 中返回错误码以区分无效用户名和无效密码。
 
-    ![tip](img/tip.png)如果必须在 URL 中返回信息，应保持其尽可能通用。示例：
+  ![tip](img/tip.png)如果必须在 URL 中返回信息，应保持其尽可能通用。示例：
 
-    `www.your_web_app.com/login.cgi?success=false`
+  `www.your_web_app.com/login.cgi?success=false`
 
-    虽然这个 URL 信息对用户不够便利，但它能隐藏实现机制和背后的操作，防止攻击者探测。
+  虽然这个 URL 信息对用户不够便利，但它能隐藏实现机制和背后的操作，防止攻击者探测。
 
-*   使用 CAPTCHA（如 reCAPTCHA）或 Web 登录表单，帮助防止密码破解尝试。
+* 使用 CAPTCHA（如 reCAPTCHA）或 Web 登录表单，帮助防止密码破解尝试。
 
-*   在 Web 服务器或 Web 应用中启用 Intruder 锁定机制，在大约 10 次失败登录后锁定用户账户。该操作可通过会话跟踪或第三方 Web 应用防火墙插件实现，详见“Putting up firewalls”。
+* 在 Web 服务器或 Web 应用中启用 Intruder 锁定机制，在大约 10 次失败登录后锁定用户账户。该操作可通过会话跟踪或第三方 Web 应用防火墙插件实现，详见“Putting up firewalls”。
 
-*   检查并更改任何厂商默认密码为难记且难破解的密码。
+* 检查并更改任何厂商默认密码为难记且难破解的密码。
 
 ### 对 Web 应用漏洞进行通用安全扫描
 
@@ -5784,9 +5210,9 @@ FIGURE 15-10: A network camera’s login credentials embedded directly in its HT
 
 ![tip](img/tip.png)你可以通过以下资源获得实际测试和黑客 Web 应用的经验：
 
-*   OWASP WebGoat 项目（[`https://www.owasp.org/index.php/Category:OWASP_WebGoat_Project`](https://www.owasp.org/index.php/Category:OWASP_WebGoat_Project)）。
+* OWASP WebGoat 项目（[`https://www.owasp.org/index.php/Category:OWASP_WebGoat_Project`](https://www.owasp.org/index.php/Category:OWASP_WebGoat_Project)）。
 
-*   Foundstone 的 Hacme Tools（[`https://www.mcafee.com/hk/downloads/free-tools/hacme-bank.aspx`](https://www.mcafee.com/hk/downloads/free-tools/hacme-bank.aspx) 与 [`https://www.mcafee.com/uk/downloads/free-tools/hacmebooks.aspx`](https://www.mcafee.com/uk/downloads/free-tools/hacmebooks.aspx)）。
+* Foundstone 的 Hacme Tools（[`https://www.mcafee.com/hk/downloads/free-tools/hacme-bank.aspx`](https://www.mcafee.com/hk/downloads/free-tools/hacme-bank.aspx) 与 [`https://www.mcafee.com/uk/downloads/free-tools/hacmebooks.aspx`](https://www.mcafee.com/uk/downloads/free-tools/hacmebooks.aspx)）。
 
 强烈建议你尝试这些工具，亲自动手！
 
@@ -5794,17 +5220,17 @@ FIGURE 15-10: A network camera’s login credentials embedded directly in its HT
 
 以下 *隐蔽安全*（使用平凡手段隐藏真实情况）的方式可以防止蠕虫或脚本等自动化攻击，这些攻击针对特定脚本类型或默认 HTTP 端口：
 
-*   为保护 Web 应用及关联数据库，使用不同机器运行每个 Web 服务器、应用服务器和数据库服务器。
+* 为保护 Web 应用及关联数据库，使用不同机器运行每个 Web 服务器、应用服务器和数据库服务器。
 
-    ![tip](img/tip.png)这些机器的操作系统应经过安全漏洞检测并依据最佳实践和章节 12 与 13 中的防范措施进行硬化。
+  ![tip](img/tip.png)这些机器的操作系统应经过安全漏洞检测并依据最佳实践和章节 12 与 13 中的防范措施进行硬化。
 
-*   利用 Web 服务器内置的安全特性处理访问控制和进程隔离，例如 IIS 的“应用程序隔离”功能。这样如果一个 Web 应用被攻击，其他运行在同一服务器上的应用未必受到影响。
+* 利用 Web 服务器内置的安全特性处理访问控制和进程隔离，例如 IIS 的“应用程序隔离”功能。这样如果一个 Web 应用被攻击，其他运行在同一服务器上的应用未必受到影响。
 
-*   使用工具隐藏 Web 服务器的身份，即匿名化服务器。例如 Port 80 Software 的 ServerMask（[`https://www.port80software.com/products/servermask`](https://www.port80software.com/products/servermask)）。
+* 使用工具隐藏 Web 服务器的身份，即匿名化服务器。例如 Port 80 Software 的 ServerMask（[`https://www.port80software.com/products/servermask`](https://www.port80software.com/products/servermask)）。
 
-*   如果你在 Linux 服务器上运行 Web 服务，可使用 IP Personality（[`http://ippersonality.sourceforge.net`](http://ippersonality.sourceforge.net)）修改操作系统指纹，使服务器看起来像是运行其他系统。
+* 如果你在 Linux 服务器上运行 Web 服务，可使用 IP Personality（[`http://ippersonality.sourceforge.net`](http://ippersonality.sourceforge.net)）修改操作系统指纹，使服务器看起来像是运行其他系统。
 
-*   将 Web 应用改为非标准端口运行。将默认 HTTP 端口 80 或 HTTPS 端口 443 改为高位端口（如 8877），并在可能的情况下让服务以非特权用户（非 system、admin、root 等）运行。
+* 将 Web 应用改为非标准端口运行。将默认 HTTP 端口 80 或 HTTPS 端口 443 改为高位端口（如 8877），并在可能的情况下让服务以非特权用户（非 system、admin、root 等）运行。
 
 ![warning](img/warning.png)绝不要单靠隐蔽来保障安全；它并不完美。专注的攻击者可能会发现系统并非其宣称的那样。即便如此，它仍然优于无 protection。
 
@@ -5812,20 +5238,17 @@ FIGURE 15-10: A network camera’s login credentials embedded directly in its HT
 
 考虑采用以下控制措施保护 Web 系统：
 
-*   网络层防火墙或入侵防御系统（IPS），能够检测并阻止针对 Web 应用的攻击。这类工具包括 WatchGuard（[`https://www.watchguard.com`](https://www.watchguard.com)）和 Palo Alto Networks（[`https://www.paloaltonetworks.com`](https://www.paloaltonetworks.com)）的商业防火墙。
+* 网络层防火墙或入侵防御系统（IPS），能够检测并阻止针对 Web 应用的攻击。这类工具包括 WatchGuard（[`https://www.watchguard.com`](https://www.watchguard.com)）和 Palo Alto Networks（[`https://www.paloaltonetworks.com`](https://www.paloaltonetworks.com)）的商业防火墙。
 
-*   主机层 Web‑应用 IPS，如 ServerDefender VP（[`https://www.port80software.com/products/serverdefender`](https://www.port80software.com/products/serverdefender)）。
+* 主机层 Web‑应用 IPS，如 ServerDefender VP（[`https://www.port80software.com/products/serverdefender`](https://www.port80software.com/products/serverdefender)）。
 
-*   供应商防火墙，如 Barracuda Networks（[`https://www.barracuda.com/products/webapplicationfirewall`](https://www.barracuda.com/products/webapplicationfirewall)）、Cloudflare（[`https://www.cloudflare.com/waf`](https://www.cloudflare.com/waf)）和 FortiNet（[`https://www.fortinet.com/products/web-application-firewall/fortiweb.html`](https://www.fortinet.com/products/web-application-firewall/fortiweb.html)）。
+* 供应商防火墙，如 Barracuda Networks（[`https://www.barracuda.com/products/webapplicationfirewall`](https://www.barracuda.com/products/webapplicationfirewall)）、Cloudflare（[`https://www.cloudflare.com/waf`](https://www.cloudflare.com/waf)）和 FortiNet（[`https://www.fortinet.com/products/web-application-firewall/fortiweb.html`](https://www.fortinet.com/products/web-application-firewall/fortiweb.html)）。
 
 这些程序能够实时检测 Web 应用及部分数据库攻击，并在攻击发生前将其切断，防止造成损害。
 
 ### 分析源代码
 
 大多数软件安全漏洞始于（并应在）源代码阶段结束，但往往并未如此。如果你对现有的安全测试工作感到自信，可以进一步检查源代码，寻找传统扫描和测试手段可能忽略的安全缺陷。别担心！过程比听起来更简单，你不必逐行阅读代码，也不必具备开发经验（虽然这会有帮助）。
-
-
-
 
 你可以使用静态源代码分析工具，例如 `Visual Code Grepper` ([`https://sourceforge.net/projects/visualcodegrepp`](https://sourceforge.net/projects/visualcodegrepp))、`SonarQube` ([`https://www.sonarqube.org`](https://www.sonarqube.org/)) 或 `PVS-Studio Analyzer` ([`https://www.viva64.com/en/pvs-studio`](https://www.viva64.com/en/pvs-studio))。
 
@@ -5837,15 +5260,15 @@ FIGURE 15-10: A network camera’s login credentials embedded directly in its HT
 
 除了运行源代码分析器外，检查移动端的应用漏洞也很重要。你需要寻找以下几类问题：
 
-*   硬编码在应用中的加密数据库密钥。
+* 硬编码在应用中的加密数据库密钥。
 
-*   对敏感信息的处理不当，例如将个人可识别信息本地存储，导致用户或其他应用可以访问。
+* 对敏感信息的处理不当，例如将个人可识别信息本地存储，导致用户或其他应用可以访问。
 
-*   登录弱点，如绕过登录提示的能力。
+* 登录弱点，如绕过登录提示的能力。
 
-*   网络通信弱点，如明文通信或使用过时的协议（如 SSL）。
+* 网络通信弱点，如明文通信或使用过时的协议（如 SSL）。
 
-*   允许使用弱密码或空密码。
+* 允许使用弱密码或空密码。
 
 这些检查大多通过手动分析发现，可能需要使用无线网络分析仪、取证工具以及代理工具（我在第 9 章和第 11 章分别介绍了这些工具）。此外，结合本章其他章节提到的工具和技术，请务必检查你的移动应用所交互的 Web 服务端点的 SQL 注入弱点。正如物联网（IoT）一样，检查移动应用的安全性很重要。先由你自己发现缺陷，而不是让别人先发现。
 
@@ -5867,19 +5290,19 @@ FIGURE 15-10: A network camera’s login credentials embedded directly in its HT
 
 ## 深入数据库
 
-数据库系统 —  — 如 `Microsoft SQL Server`、`MySQL` 和 `Oracle` —  — 长期隐藏在背后，但它们的价值和漏洞终于受到关注。是的，即使是曾被宣称“难以破解”的 `Oracle`，也和竞争对手一样容易受到攻击。随着数据库安全监管要求的增多，几乎没有任何企业能够回避这些风险，因为几乎所有企业（大小不等）都使用某种数据库，无论是本地部署还是云端托管。
+数据库系统 — — 如 `Microsoft SQL Server`、`MySQL` 和 `Oracle` — — 长期隐藏在背后，但它们的价值和漏洞终于受到关注。是的，即使是曾被宣称“难以破解”的 `Oracle`，也和竞争对手一样容易受到攻击。随着数据库安全监管要求的增多，几乎没有任何企业能够回避这些风险，因为几乎所有企业（大小不等）都使用某种数据库，无论是本地部署还是云端托管。
 
 ### 选择工具
 
 与无线网络、操作系统等一样，如果要找到真正重要的数据库安全问题，你需要良好的工具。以下是我最喜欢的数据库安全测试工具：
 
-*   `Advanced SQL Password Recovery` ([`https://www.elcomsoft.com/asqlpr.html`](https://www.elcomsoft.com/asqlpr.html)) 用于破解 `Microsoft SQL Server` 密码。
+* `Advanced SQL Password Recovery` ([`https://www.elcomsoft.com/asqlpr.html`](https://www.elcomsoft.com/asqlpr.html)) 用于破解 `Microsoft SQL Server` 密码。
 
-*   `Cain & Abel` ([`www.oxid.it/cain.html`](http://www.oxid.it/cain.html)) 用于破解数据库密码哈希。
+* `Cain & Abel` ([`www.oxid.it/cain.html`](http://www.oxid.it/cain.html)) 用于破解数据库密码哈希。
 
-*   `Nexpose` ([`https://www.rapid7.com/products/nexpose`](https://www.rapid7.com/products/nexpose)) 用于进行深度漏洞扫描。
+* `Nexpose` ([`https://www.rapid7.com/products/nexpose`](https://www.rapid7.com/products/nexpose)) 用于进行深度漏洞扫描。
 
-*   `SQLPing3` ([www.sqlsecurity.com/downloads](http://www.sqlsecurity.com/downloads)) 用于在网络中定位 `Microsoft SQL Servers`，检查 `sa` 账户（默认的系统管理员账户）是否为空密码，并执行字典式密码破解攻击。
+* `SQLPing3` ([www.sqlsecurity.com/downloads](http://www.sqlsecurity.com/downloads)) 用于在网络中定位 `Microsoft SQL Servers`，检查 `sa` 账户（默认的系统管理员账户）是否为空密码，并执行字典式密码破解攻击。
 
 你也可以结合网络漏洞扫描工具（如 `Nexpose`）与 exploit 工具（如 `Metasploit`）进行数据库测试。
 
@@ -5891,7 +5314,7 @@ FIGURE 15-10: A network camera’s login credentials embedded directly in its HT
 
 我找到的最佳工具是 `SQLPing3`（参见图 16-1）。
 
-![ FIGURE 16-1:  SQLPing3 可发现 SQL Server 系统并检查缺失的 sa 账户密码。](img/9781119485476-fg1601.png)
+![ FIGURE 16-1: SQLPing3 可发现 SQL Server 系统并检查缺失的 sa 账户密码。](img/9781119485476-fg1601.png)
 
 FIGURE 16-1: SQLPing3 可发现 SQL Server 系统并检查缺失的 sa 账户密码。
 
@@ -5903,14 +5326,11 @@ FIGURE 16-1: SQLPing3 可发现 SQL Server 系统并检查缺失的 sa 账户密
 
 `SQLPing3` 同时也作为一个基于字典的 `SQL Server` 密码破解程序。如图 16-1 所示，它默认检查 `sa` 账户的空密码。另一个免费工具 `Cain & Abel` 可用于破解 `SQL Server`、`MySQL` 和 `Oracle` 的密码哈希，如图 16-2 所示。
 
-![ FIGURE 16-2:  使用 Cain & Abel 破解 Oracle 密码哈希。](img/9781119485476-fg1602.png)
+![ FIGURE 16-2: 使用 Cain & Abel 破解 Oracle 密码哈希。](img/9781119485476-fg1602.png)
 
 FIGURE 16-2: 使用 Cain & Abel 破解 Oracle 密码哈希。
 
 你只需加载 `Cain & Abel`，点击顶部的 `Cracker` 标签，选择左下角的 `Oracle Hashes`，然后点击顶部的蓝色加号图标加载用户名和密码哈希开始破解。你也可以选择左下角的 `Oracle TNS Hashes` 来尝试在捕获数据包时截获 `Transport Network Substrate` 哈希，同样适用于 `MySQL` 密码哈希。
-
-
-
 
 商业产品 ElcomSoft Distributed Password Recovery ([`https://www.elcomsoft.com/edpr.html`](https://www.elcomsoft.com/edpr.html)) 也可以破解 Oracle 密码哈希。如果你有访问 SQL Server `master.mdf` 文件的权限（这些文件由于弱网络共享和文件权限，通常在网络中随时可用，如本章后面所述），你可以使用 ElcomSoft 的高级 SQL 密码恢复工具立即恢复数据库密码。
 
@@ -5926,13 +5346,13 @@ FIGURE 16-2: 使用 Cain & Abel 破解 Oracle 密码哈希。
 
 与操作系统和 Web 应用程序一样，某些数据库特定的漏洞只能通过正确的工具来发现。我使用 Nexpose 查找以下问题：
 
-*   缓冲区溢出。
+* 缓冲区溢出。
 
-*   特权提升。
+* 特权提升。
 
-*   通过默认/未受保护账户可访问的密码哈希。
+* 通过默认/未受保护账户可访问的密码哈希。
 
-*   弱加密方法已启用。
+* 弱加密方法已启用。
 
 ![tip](img/tip.png)一个优秀的全能商业数据库漏洞扫描器，可进行深入数据库检查（包括 SQL Server、Oracle 等用户权限审计）是 AppDetectivePRO ([`https://www.trustwave.com/Products/Database-Security/AppDetectivePRO`](https://www.trustwave.com/Products/Database-Security/AppDetectivePRO/))。如果你能证明其投资价值，AppDetectivePRO 是一个很好的安全测试工具集成。
 
@@ -5942,27 +5362,27 @@ FIGURE 16-2: 使用 Cain & Abel 破解 Oracle 密码哈希。
 
 如果你做以下事情，数据库安全会相对简单：
 
-*   在专用服务器（或必要时的工作站）上运行数据库。
+* 在专用服务器（或必要时的工作站）上运行数据库。
 
-*   检查底层操作系统的安全漏洞。（我在第 12 和 13 章节中分别介绍了 Windows 和 Linux 的操作系统漏洞。）
+* 检查底层操作系统的安全漏洞。（我在第 12 和 13 章节中分别介绍了 Windows 和 Linux 的操作系统漏洞。）
 
-*   确保数据库在漏洞扫描、补丁和系统硬化的范围内。
+* 确保数据库在漏洞扫描、补丁和系统硬化的范围内。
 
-*   寻找并替换（或将其隔离）已过生命周期的数据库系统。它们太危险，不能留着。
+* 寻找并替换（或将其隔离）已过生命周期的数据库系统。它们太危险，不能留着。
 
-*   要求每个数据库系统都有强密码。大多数企业级数据库，如 Oracle 和 SQL Server，支持使用域身份验证（如 Active Directory 或 LDAP），这样你可以与现有域策略和用户账户关联，而无需管理单独的一套账户。
+* 要求每个数据库系统都有强密码。大多数企业级数据库，如 Oracle 和 SQL Server，支持使用域身份验证（如 Active Directory 或 LDAP），这样你可以与现有域策略和用户账户关联，而无需管理单独的一套账户。
 
-*   使用适当的文件和共享权限，阻止窥视。
+* 使用适当的文件和共享权限，阻止窥视。
 
-*   在开发或质量保证等非生产环境中，在使用前对敏感生产数据进行去标识化处理。
+* 在开发或质量保证等非生产环境中，在使用前对敏感生产数据进行去标识化处理。
 
-*   检查你的 Web 应用是否存在 SQL 注入和相关输入验证漏洞。（我在第 15 章节中介绍 Web 应用安全。）
+* 检查你的 Web 应用是否存在 SQL 注入和相关输入验证漏洞。（我在第 15 章节中介绍 Web 应用安全。）
 
-*   使用网络防火墙，如 Fortinet ([`https://www.fortinet.com`](https://www.fortinet.com/)) 或 Cisco ([`https://www.cisco.com`](https://www.cisco.com/)) 提供的类型，以及 Imperva ([`https://www.imperva.com`](https://www.imperva.com/)) 和 IDERA ([`https://www.idera.com`](https://www.idera.com/)) 提供的数据库特定控制。
+* 使用网络防火墙，如 Fortinet ([`https://www.fortinet.com`](https://www.fortinet.com/)) 或 Cisco ([`https://www.cisco.com`](https://www.cisco.com/)) 提供的类型，以及 Imperva ([`https://www.imperva.com`](https://www.imperva.com/)) 和 IDERA ([`https://www.idera.com`](https://www.idera.com/)) 提供的数据库特定控制。
 
-*   使用诸如 Microsoft Security Compliance Manager ([`https://technet.microsoft.com/en-us/library/cc677002.aspx`](https://technet.microsoft.com/en-us/library/cc677002.aspx)) 等工具进行相关数据库硬化和管理。
+* 使用诸如 Microsoft Security Compliance Manager ([`https://technet.microsoft.com/en-us/library/cc677002.aspx`](https://technet.microsoft.com/en-us/library/cc677002.aspx)) 等工具进行相关数据库硬化和管理。
 
-*   使用最新版本的数据库服务器软件。Oracle、SQL Server 2016 和 SQL Server 2017 的新安全功能为本地数据库以及云端数据库提供了更好的安全性。
+* 使用最新版本的数据库服务器软件。Oracle、SQL Server 2016 和 SQL Server 2017 的新安全功能为本地数据库以及云端数据库提供了更好的安全性。
 
 ## 打开存储系统的讨论
 
@@ -5976,28 +5396,25 @@ FIGURE 16-2: 使用 Cain & Abel 破解 Oracle 密码哈希。
 
 以下是我最喜欢的存储安全测试工具：
 
-*   **nmap** ([`http://nmap.org`](http://nmap.org)) 用于端口扫描，以查找存活的存储主机。
+* **nmap** ([`http://nmap.org`](http://nmap.org)) 用于端口扫描，以查找存活的存储主机。
 
-*   **SoftPerfect Network Scanner** ([`https://www.softperfect.com/products/networkscanner`](https://www.softperfect.com/products/networkscanner)) 用于查找开放且未受保护的共享。
+* **SoftPerfect Network Scanner** ([`https://www.softperfect.com/products/networkscanner`](https://www.softperfect.com/products/networkscanner)) 用于查找开放且未受保护的共享。
 
-*   **FileLocator Pro** ([`https://www.mythicsoft.com`](https://www.mythicsoft.com)) 用于查找特定文件和信息。
+* **FileLocator Pro** ([`https://www.mythicsoft.com`](https://www.mythicsoft.com)) 用于查找特定文件和信息。
 
-*   **Nexpose** 用于进行深入的漏洞扫描。
+* **Nexpose** 用于进行深入的漏洞扫描。
 
 ### 在网络中查找存储系统
 
 要发现存储相关的漏洞，首先必须确定存储的位置。最佳启动方式是使用端口扫描器，最好结合使用像 Nexpose 或 LanGuard 这样的全能漏洞扫描器。此外，由于许多存储服务器内置 Web 服务器，你可以使用 Acunetix Web Vulnerability Scanner 和 Netsparker 等工具发现基于 Web 的缺陷。这些漏洞扫描器可帮助你了解需要进一步检查的区域，如弱加密、未打补丁的操作系统和跨站脚本。
 
-
-
-
 ![tip](img/tip.png)A commonly overlooked storage vulnerability is that many storage systems can be accessed from both the demilitarized zone (DMZ) segment and the internal network segment(s). This vulnerability poses risks to both sides of the network. Be sure to check manually to see whether you can reach the DMZ from the internal network, and vice versa.
 
 You can also perform basic file permission and share scans (as outlined in Chapter 12) in conjunction with a text search tool to uncover sensitive information that no one on the network should have access to. Digging down further, a quick means for finding open network shares is to use SoftPerfect Network Scanner’s share scanning capabilities, as shown in Figure 16-3.
 
-![ FIGURE 16-3:  Using SoftPerfect Network Scanner to search for network shares.](img/9781119485476-fg1603.png)
+![ FIGURE 16-3: Using SoftPerfect Network Scanner to search for network shares.](img/9781119485476-fg1603.png)
 
- FIGURE 16-3:  Using SoftPerfect Network Scanner to search for network shares.
+FIGURE 16-3: Using SoftPerfect Network Scanner to search for network shares.
 
 As you can see in Figure 16-3, Network Scanner enables you to perform a security and security permission scan for all devices or simply folders. I recommend selecting Specific Account in the Authentication section and then clicking Manage so that you can enter a domain account for the network that has general user permissions. This technique provides a good level of access to determine which shares are accessible.
 
@@ -6009,47 +5426,47 @@ When you find open network shares, scan for sensitive information stored in file
 
 You'll be *amazed* by what you come across stored insecurely on users’ desktops, server shares, and more, such as the following:
 
-*   Employee health records
+* Employee health records
 
-*   Customer credit card numbers
+* Customer credit card numbers
 
-*   Corporate financial reports
+* Corporate financial reports
 
-*   Source code
+* Source code
 
-*   Master database files
+* Master database files
 
 The sky’s the limit. Such sensitive information should be protected by good business practices, and it’s also governed by state, federal, and international regulations, so make sure that you find it and secure it.
 
 ![tip](img/tip.png)Do your searches for sensitive text while you’re logged in to the local system or domain as a regular user — not as an administrator. This practice gives you a better view of regular users who have unauthorized access to sensitive files and shares that you thought were secure. When using a basic text search tool such as FileLocator Pro, look for the following text strings:
 
-*   DOB (for dates of birth)
+* DOB (for dates of birth)
 
-*   SSN (for Social Security numbers)
+* SSN (for Social Security numbers)
 
-*   License (for driver’s-license information)
+* License (for driver’s-license information)
 
-*   Credit or CCV (for credit-card numbers)
+* Credit or CCV (for credit-card numbers)
 
 ![remember](img/remember.png)Don’t forget about your mobile devices when seeking sensitive, unprotected information. Everything from laptops to USB drives to external hard drives is fair game to the bad guys. A misplaced or stolen system can create a costly data breach. The same can be said for cloud-based file sharing services such as OneDrive and Sharefile.
 
 The possibilities for information exposure are endless. Start with the basics, and peek only into common files that you know may have some juicy info in them. Limiting your search to these files will save you a ton of time:
 
-*    `.txt` 
+* `.txt`
 
-*    `.doc`  and `.docx`
+* `.doc` and `.docx`
 
-*    `.rtf` 
+* `.rtf`
 
-*    `.xls`  and `.xlsx`
+* `.xls` and `.xlsx`
 
-*    `.pdf` 
+* `.pdf`
 
 Figure 16-4 shows a basic text search with FileLocator Pro. Notice the files located on different parts of the server.
 
-![ FIGURE 16-4:  Using FileLocator Pro to search for sensitive text on unprotected shares.](img/9781119485476-fg1604.png)
+![ FIGURE 16-4: Using FileLocator Pro to search for sensitive text on unprotected shares.](img/9781119485476-fg1604.png)
 
- FIGURE 16-4:  Using FileLocator Pro to search for sensitive text on unprotected shares.
+FIGURE 16-4: Using FileLocator Pro to search for sensitive text on unprotected shares.
 
 FileLocator Pro can also search for content inside `.pdf` files to uncover sensitive data.
 
@@ -6063,19 +5480,19 @@ For a second round of testing, you could perform your searches while logged in a
 
 Like database security, storage security isn’t brain surgery. Keeping your storage systems secure is simple, too, if you do the following things:
 
-*   Check the underlying operating systems for security vulnerabilities. I cover operating system exploits for Windows and Linux in chapters 12 and 13.
+* Check the underlying operating systems for security vulnerabilities. I cover operating system exploits for Windows and Linux in chapters 12 and 13.
 
-*   Ensure that your network storage (SAN and NAS systems) falls within the scope of patching and system hardening.
+* Ensure that your network storage (SAN and NAS systems) falls within the scope of patching and system hardening.
 
-*   Require strong passwords on every storage management interface.
+* Require strong passwords on every storage management interface.
 
-*   Use appropriate file and share permissions to keep prying eyes away.
+* Use appropriate file and share permissions to keep prying eyes away.
 
-*   Educate your users on where to store sensitive information and the risks of mishandling it.
+* Educate your users on where to store sensitive information and the risks of mishandling it.
 
-*   Deidentify any sensitive production data before it’s used in development or quality assurance, using tools made for this purpose.
+* Deidentify any sensitive production data before it’s used in development or quality assurance, using tools made for this purpose.
 
-*   Use a network access control lists or a firewall, such as those available from Fortinet ([`https://www.fortinet.com`](https://www.fortinet.com)) or WatchGuard Technologies ([`https://www.watchguard.com`](https://www.watchguard.com)) to ensure that only the people and systems with a business need to access your storage environment can do so — and do nothing more.
+* Use a network access control lists or a firewall, such as those available from Fortinet ([`https://www.fortinet.com`](https://www.fortinet.com)) or WatchGuard Technologies ([`https://www.watchguard.com`](https://www.watchguard.com)) to ensure that only the people and systems with a business need to access your storage environment can do so — and do nothing more.
 
 Part 6
 
@@ -6101,9 +5518,6 @@ IN THIS CHAPTER
 
 ![check](img/check.png)**Documenting and presenting the results**
 
-
-
-
 如果您希望在测试后休息，现在不是放松的时机。您的安全评估报告阶段是最关键的环节之一。最后一件事是进行测试、发现安全问题后就结束工作。请将时间和精力用于深入分析和记录您发现的问题，以确保安全漏洞被消除，从而提升信息安全性。报告是信息安全和风险管理所需的持续性审慎工作的重要组成部分。
 
 报告包括对所有发现进行筛选，以确定哪些漏洞需要处理、哪些不重要。报告还包括向管理层或客户汇报发现的各类安全问题，并提供具体的改进建议。您共享已收集的信息，并指导其他相关方后续行动。报告也证明了在安全测试中投入的时间、精力和金钱被有效利用。
@@ -6112,39 +5526,39 @@ IN THIS CHAPTER
 
 当您拥有大量测试数据时——从您记录的屏幕截图和手动观察，到各类漏洞扫描器生成的详细报告——您该如何处理这些信息？您需要仔细审阅文档，挑出所有突出的区域。基于以下因素做出决策：
 
-*   由评估工具给出的漏洞排名，通常基于 **Common Vulnerability Scoring System**。
+* 由评估工具给出的漏洞排名，通常基于 **Common Vulnerability Scoring System**。
 
-*   您作为 IT/安全专业人员的知识（通常比工具提供的更有价值）。
+* 您作为 IT/安全专业人员的知识（通常比工具提供的更有价值）。
 
-*   漏洞的上下文及其对业务的影响。
+* 漏洞的上下文及其对业务的影响。
 
 ![tip](img/tip.png)为了提供更多关于漏洞的信息，许多功能丰富的安全工具会为每个漏洞分配风险等级（基于整体风险），解释漏洞，给出可能的解决方案，并包含相关供应商网站链接、Common Vulnerabilities and Exposures 网站 (`https://cve.mitre.org`)、National Vulnerabilities Database (`https://nvd.nist.gov`)。为进一步研究，可参考供应商网站、其他支持站点和在线论坛，查看该漏洞是否影响您的系统和环境。总体业务风险是重点关注的对象。
 
 在最终报告文档中，您可能希望按以下列表组织漏洞：
 
-*   非技术性发现 
+* 非技术性发现
 
-    *   社会工程学
+  * 社会工程学
 
-    *   物理安全
+  * 物理安全
 
-    *   IT 与安全运营
+  * IT 与安全运营
 
-*   技术性发现 
+* 技术性发现
 
-    *   网络基础设施
+  * 网络基础设施
 
-    *   防火墙规则集
+  * 防火墙规则集
 
-    *   服务器和工作站
+  * 服务器和工作站
 
-    *   数据库
+  * 数据库
 
-    *   Web 应用
+  * Web 应用
 
-    *   移动应用
+  * 移动应用
 
-    *   移动设备
+  * 移动设备
 
 为更清晰地呈现，您可以在报告中为内部和外部安全漏洞、以及关键、高、中等优先级分别建立独立章节。最后提醒：最好在测试的规划阶段就确定具体的报告格式，这样从开始到交付结果的全过程，相关方都能保持一致。
 
@@ -6158,9 +5572,9 @@ IN THIS CHAPTER
 
 我发现，在安全——正如大多数生活领域一样——必须专注于高回报任务，否则会被琐事分散注意力，自我折磨，且难以实现自身目标。以下是一个快速的优先级排序方法，您可以根据自身需求进行微调。在发现每个漏洞时，请考虑以下两个主要因素：
 
-*   **利用的可能性**：该漏洞被黑客、恶意用户、恶意软件或其他威胁利用的可能性有多大？
+* **利用的可能性**：该漏洞被黑客、恶意用户、恶意软件或其他威胁利用的可能性有多大？
 
-*   **利用的影响**：如果该漏洞被利用，会有多大的破坏性？
+* **利用的影响**：如果该漏洞被利用，会有多大的破坏性？
 
 很多人往往跳过这些考量，假设每个发现的漏洞都必须修复。这是大错特错。仅凭发现漏洞就认为必须处理，而不考虑实际环境，会导致大量时间的、精力和金钱的浪费，甚至可能使长期安全评估计划走向失败。
 
@@ -6176,10 +5590,7 @@ TABLE 17-1 Prioritizing Vulnerabilities
 | **Medium impact** | Unencrypted emails containing sensitive information being sent | Missing Windows patch on an internal server that can be exploited with Metasploit | No passwords required on several Windows administrator accounts |
 | **Low impact** | Outdated virus signatures on a securely segmented PC dedicated to Internet browsing | Employees or visitors gaining unauthorized network access | Weak encryption ciphers being used on a marketing website |
 
-
-
-
--   表 17-1 中显示的漏洞优先级是基于评估安全风险的定性方法。换句话说，该表是主观的，基于对系统和漏洞的了解。你也可以考虑来自你安全工具的任何风险评级，但不要仅仅依赖它们，因为供应商无法提供漏洞的终极排名。
+表 17-1 中显示的漏洞优先级是基于评估安全风险的定性方法。换句话说，该表是主观的，基于对系统和漏洞的了解。你也可以考虑来自你安全工具的任何风险评级，但不要仅仅依赖它们，因为供应商无法提供漏洞的终极排名。
 
 ## 创建报告
 
@@ -6247,9 +5658,6 @@ IN THIS CHAPTER
 
 优先处理回报最高的任务——那些既高影响又高可能性的任务。这些任务很可能只是你漏洞列表中的少数项。在你修复最关键的安全漏洞后，当时间和金钱允许时，你可以再处理那些不那么重要、不那么紧迫的任务。在你修复诸如 Web 应用中的 SQL 注入以及重要服务器缺失的补丁等关键漏洞后，你可能会想重新配置备份，使用密码（若未使用强加密）来防止窥探者在备份落入错误之手时查看。
 
-
-
-
 ![remember](img/remember.png)Whatever you do, whatever tool you choose, and whatever procedures work best in your environment, keep your systems patched! This rule goes for operating systems; web servers; databases; mobile applications; and even firmware on your network firewalls, routers, and switches. Especially important are third-party software patches from vendors such as Oracle (Java) and Adobe (Reader, Flash, and so on). These patches are overlooked more than most, yet they create considerable risks that go unaddressed.
 
 Patching is avoidable but inevitable. The only way to eliminate the need for patches is to develop secure software in the first place, but that’s not going to happen any time soon, if ever. Software is too complex to be perfect. A large portion of security incidents can be prevented by some good patching practices, so you simply have no reason not to have a solid patch-management process in place.
@@ -6258,17 +5666,17 @@ Patching is avoidable but inevitable. The only way to eliminate the need for pat
 
 If you can’t keep up with the deluge of security patches for all your systems, don’t despair; you can still get a handle on the problem. Here are my basic tenets for applying patches to keep your systems secure:
 
-*   Make sure that all the people and departments involved in applying patches on your organization’s systems are on the same page and follow the same procedures.
+* Make sure that all the people and departments involved in applying patches on your organization’s systems are on the same page and follow the same procedures.
 
-*   Have formal documented procedures in place for these critical processes: 
+* Have formal documented procedures in place for these critical processes:
 
-    *   Obtaining patch alerts from your vendors, including third-party patches
+  * Obtaining patch alerts from your vendors, including third-party patches
 
-    *   Assessing which patches affect your systems
+  * Assessing which patches affect your systems
 
-    *   Determining when to apply patches
+  * Determining when to apply patches
 
-*   Make a policy and have procedures in place for testing patches *before* you apply them to your production servers. Testing patches after you apply them isn’t as big a deal on workstations, but servers are a different story. Many patches have undocumented features and subsequent unintended side effects, which I’ve experienced. An untested patch is an invitation to system termination.
+* Make a policy and have procedures in place for testing patches *before* you apply them to your production servers. Testing patches after you apply them isn’t as big a deal on workstations, but servers are a different story. Many patches have undocumented features and subsequent unintended side effects, which I’ve experienced. An untested patch is an invitation to system termination.
 
 ### Patch automation
 
@@ -6278,33 +5686,33 @@ The following sections describe the various patch deployment tools you can use t
 
 I recommend a robust patch-automation application, especially if these factors are involved:
 
-*   A large network.
+* A large network.
 
-*   A network with multiple operating systems (Windows, Linux, Mac OS, and so on).
+* A network with multiple operating systems (Windows, Linux, Mac OS, and so on).
 
-*   A lot of third-party software applications, such as Adobe and Java.
+* A lot of third-party software applications, such as Adobe and Java.
 
-*   More than a few dozen computers.
+* More than a few dozen computers.
 
 ![tip](img/tip.png)Check out these patch-automation solutions:
 
-*   Ecora Patch Manager ([`www.ecora.com/ecora/products/patchmanager.asp`](http://www.ecora.com/ecora/products/patchmanager.asp))
+* Ecora Patch Manager ([`www.ecora.com/ecora/products/patchmanager.asp`](http://www.ecora.com/ecora/products/patchmanager.asp))
 
-*   GFI LanGuard ([`www.gfi.com/products-and-solutions/network-security-solutions/gfi-languard`](http://www.gfi.com/products-and-solutions/network-security-solutions/gfi-languard))
+* GFI LanGuard ([`www.gfi.com/products-and-solutions/network-security-solutions/gfi-languard`](http://www.gfi.com/products-and-solutions/network-security-solutions/gfi-languard))
 
-*   PDQ Deploy ([`https://www.pdq.com/pdq-deploy`](https://www.pdq.com/pdq-deploy))
+* PDQ Deploy ([`https://www.pdq.com/pdq-deploy`](https://www.pdq.com/pdq-deploy))
 
 #### Free tools
 
 Use one of these free tools to help with automated patching:
 
-*   Windows Server Update Services ([`https://technet.microsoft.com/en-us/library/cc539281.aspx`](https://technet.microsoft.com/en-us/library/cc539281.aspx) or System Center Configuration Manager ([`https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager`](https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager))).
+* Windows Server Update Services ([`https://technet.microsoft.com/en-us/library/cc539281.aspx`](https://technet.microsoft.com/en-us/library/cc539281.aspx) or System Center Configuration Manager ([`https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager`](https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager))).
 
-*   Windows Update, which is built into Microsoft Windows operating systems.
+* Windows Update, which is built into Microsoft Windows operating systems.
 
-*   Microsoft Baseline Security Analyzer ([`https://www.microsoft.com/en-us/download/details.aspx?id=7558`](https://www.microsoft.com/en-us/download/details.aspx?id=7558)).
+* Microsoft Baseline Security Analyzer ([`https://www.microsoft.com/en-us/download/details.aspx?id=7558`](https://www.microsoft.com/en-us/download/details.aspx?id=7558)).
 
-*   The built-in patching tools for Linux-based systems (such as Yellowdog Updater, Modified \[yum\], and YaST Online Update).
+* The built-in patching tools for Linux-based systems (such as Yellowdog Updater, Modified \[yum\], and YaST Online Update).
 
 ## Hardening Your Systems
 
@@ -6320,17 +5728,15 @@ Implementing at least basic security practices is critical. Whether you’re ins
 
 Reviewing your overall security infrastructure in the following ways can add oomph to your systems:
 
-*   **Look at how your overall network is designed.** Consider organizational issues, such as whether policies are in place, maintained, or even taken seriously. Physical issues count as well. Determine whether members of management have buy-in on information security and compliance, or whether they simply shrug the measure off as an unnecessary expense or barrier to conducting business.
+* **Look at how your overall network is designed.** Consider organizational issues, such as whether policies are in place, maintained, or even taken seriously. Physical issues count as well. Determine whether members of management have buy-in on information security and compliance, or whether they simply shrug the measure off as an unnecessary expense or barrier to conducting business.
 
-*   **Map your network by using the information you gather from the security tests in this book.** Updating existing documentation is a major necessity. Outline IP addresses, running services, and whatever else you discover. Draw your network diagram. Network design and security issues are a whole lot easier to assess when you can work with them visually. Although I prefer to use a technical drawing program such as Microsoft Visio or Cheops-ng ([`http://cheops-ng.sourceforge.net`](http://cheops-ng.sourceforge.net)) to create network diagrams, such a tool isn’t necessary. You can draw your map on a whiteboard, as many people do, which is just fine.
+* **Map your network by using the information you gather from the security tests in this book.** Updating existing documentation is a major necessity. Outline IP addresses, running services, and whatever else you discover. Draw your network diagram. Network design and security issues are a whole lot easier to assess when you can work with them visually. Although I prefer to use a technical drawing program such as Microsoft Visio or Cheops-ng ([`http://cheops-ng.sourceforge.net`](http://cheops-ng.sourceforge.net)) to create network diagrams, such a tool isn’t necessary. You can draw your map on a whiteboard, as many people do, which is just fine.
 
-    ![remember](img/remember.png)Be sure to update your diagrams when your network changes or once every year or so.
+  ![remember](img/remember.png)Be sure to update your diagrams when your network changes or once every year or so.
 
-*   **Think about your approach to correcting vulnerabilities and increasing your organization’s overall security.** Are you focusing all your efforts on the perimeter and not on a layered security approach? Think about how most convenience stores and banks are protected. Security cameras focus on the cash registers, teller computers, and surrounding areas — not just on the parking lot or entrances. Look at security from a defense in-depth perspective. Make sure that several layers of security are in place in case one measure fails so that the attacker must go through other barriers to carry out a successful attack.
+* **Think about your approach to correcting vulnerabilities and increasing your organization’s overall security.** Are you focusing all your efforts on the perimeter and not on a layered security approach? Think about how most convenience stores and banks are protected. Security cameras focus on the cash registers, teller computers, and surrounding areas — not just on the parking lot or entrances. Look at security from a defense in-depth perspective. Make sure that several layers of security are in place in case one measure fails so that the attacker must go through other barriers to carry out a successful attack.
 
-
-
--   考虑在更高层面上审视安全策略和业务流程。记录已建立的安全策略和流程，并评估其有效性。确定在安全监督和执行方面存在的风险。没有任何组织能免于在此方面出现漏洞。审视组织内部的整体安全文化，从外部视角观察其状态；再从内部视角审视。了解客户或业务合作伙伴对贵组织处理其敏感信息的看法。我可以百分之百有把握，存在一些（可能多个）问题需要在安全的软件层面加以改进。
+考虑在更高层面上审视安全策略和业务流程。记录已建立的安全策略和流程，并评估其有效性。确定在安全监督和执行方面存在的风险。没有任何组织能免于在此方面出现漏洞。审视组织内部的整体安全文化，从外部视角观察其状态；再从内部视角审视。了解客户或业务合作伙伴对贵组织处理其敏感信息的看法。我可以百分之百有把握，存在一些（可能多个）问题需要在安全的软件层面加以改进。
 
 ![tip 加强安全并不完全依赖于补丁和其他技术性安全控制。有时，您的 IT 与安全管理程序需要进行微调。有时，您需要启动全新的措施。有时，您仅需停止做某些事项。我多年来一直在撰写关于 IT 与安全程序（误）管理的文章，您可以在我的网站（[`www.principlelogic.com/management.html`](https://www.principlelogic.com/management.html)）上找到大量相关内容。
 
@@ -6356,19 +5762,19 @@ IN THIS CHAPTER
 
 您可以在本书中对以下安全测试进行大部分自动化：
 
-*   Ping 探测和端口扫描，用于展示可用系统及其运行的服务（这是一个常见的疏忽，往往是更大安全问题的开端）。
+* Ping 探测和端口扫描，用于展示可用系统及其运行的服务（这是一个常见的疏忽，往往是更大安全问题的开端）。
 
-*   密码 cracking 测试，用于尝试访问外部 Web 应用、远程访问服务器等。
+* 密码 cracking 测试，用于尝试访问外部 Web 应用、远程访问服务器等。
 
-*   漏洞扫描，用于检查缺失的补丁、配置错误以及可被利用的漏洞。
+* 漏洞扫描，用于检查缺失的补丁、配置错误以及可被利用的漏洞。
 
-*   对漏洞的利用（至少在一定程度上）。
+* 对漏洞的利用（至少在一定程度上）。
 
 ![remember](img/remember.png)您必须拥有合适的工具来自动化这些测试，例如：
 
-*   部分商业工具可以定期执行扫描/检查并生成报告，几乎不需要人工干预——只需在前期进行少量设置和调度时间。这正是我喜欢许多商业（主要自动化）安全测试工具的原因，如 Nexpose 与 Acunetix Web Vulnerability Scanner。这些工具提供的自动化能够为其价格争取正当性，尤其是您无需在凌晨 2 点或全天候待命。
+* 部分商业工具可以定期执行扫描/检查并生成报告，几乎不需要人工干预——只需在前期进行少量设置和调度时间。这正是我喜欢许多商业（主要自动化）安全测试工具的原因，如 Nexpose 与 Acunetix Web Vulnerability Scanner。这些工具提供的自动化能够为其价格争取正当性，尤其是您无需在凌晨 2 点或全天候待命。
 
-*   独立安全工具（如 Nmap、John the Ripper、Aircrack-ng）虽好，但单靠它们仍不足。您可以编写脚本、使用 Windows 任务计划程序和 AT 命令（Windows）或 cron 作业（Linux）进行自动化，但仍需人工步骤和人类智慧。
+* 独立安全工具（如 Nmap、John the Ripper、Aircrack-ng）虽好，但单靠它们仍不足。您可以编写脚本、使用 Windows 任务计划程序和 AT 命令（Windows）或 cron 作业（Linux）进行自动化，但仍需人工步骤和人类智慧。
 
 这些工具及其他许多工具的链接位于附录。
 
@@ -6384,24 +5790,21 @@ IN THIS CHAPTER
 
 手动筛查日志文件可能不是最佳监控方式。以下缺点值得注意：
 
-*   在系统日志中找到关键安全事件十分困难，甚至不可能。这对普通人而言过于繁琐。
+* 在系统日志中找到关键安全事件十分困难，甚至不可能。这对普通人而言过于繁琐。
 
-*   根据使用的日志类型和安全设备，可能无法捕获某些安全事件，例如 IPS 规避技术以及通过网络允许的端口进行的 exploit。
+* 根据使用的日志类型和安全设备，可能无法捕获某些安全事件，例如 IPS 规避技术以及通过网络允许的端口进行的 exploit。
 
 ![tip](img/tip.png)与其在所有日志文件中翻找难以发现的入侵痕迹，我建议：
 
-*   在合理且可行的范围内启用系统日志记录。您不必捕获所有计算机和网络事件，但应重点关注显性的事件，如登录失败、策略变更和未经授权的文件访问。
+* 在合理且可行的范围内启用系统日志记录。您不必捕获所有计算机和网络事件，但应重点关注显性的事件，如登录失败、策略变更和未经授权的文件访问。
 
-*   使用 syslog 将安全事件记录到网络内部或云端的中央服务器上。尽量避免在本地主机上保存日志，以防止恶意分子篡改日志掩盖踪迹。
+* 使用 syslog 将安全事件记录到网络内部或云端的中央服务器上。尽量避免在本地主机上保存日志，以防止恶意分子篡改日志掩盖踪迹。
 
 ![tip](img/tip.png)下面是几种解决安全监控难题的良好方案：
 
-*   **购买事件记录系统。** 低价且有效的方案包括 GFI EventsManager（[www.gfi.com/products-and-solutions/network-security-solutions/gfi-eventsmanager](http://www.gfi.com/products-and-solutions/network-security-solutions/gfi-eventsmanager)）。通常，低价系统仅支持单一操作系统平台，Microsoft Windows 是最常见的。高端解决方案如 ArcSight Data Platform（[`software.microfocus.com/en-us/products/siem-data-collection-log-management-platform/overview`](https://software.microfocus.com/en-us/products/siem-data-collection-log-management-platform/overview)）则提供跨平台日志管理以及事件关联功能，帮助您追踪安全问题的根源以及事件期间受影响的各个系统。
+* **购买事件记录系统。** 低价且有效的方案包括 GFI EventsManager（[www.gfi.com/products-and-solutions/network-security-solutions/gfi-eventsmanager](http://www.gfi.com/products-and-solutions/network-security-solutions/gfi-eventsmanager)）。通常，低价系统仅支持单一操作系统平台，Microsoft Windows 是最常见的。高端解决方案如 ArcSight Data Platform（[`software.microfocus.com/en-us/products/siem-data-collection-log-management-platform/overview`](https://software.microfocus.com/en-us/products/siem-data-collection-log-management-platform/overview)）则提供跨平台日志管理以及事件关联功能，帮助您追踪安全问题的根源以及事件期间受影响的各个系统。
 
-*   **将安全监控外包给云端的第三方托管安全服务提供商（MSSP）。** 互联网兴起时出现了大量 MSSP，但如今只有少数大型公司存续。外包安全监控的价值在于这些公司通常拥有您难以负担或维护的设施和工具。MSSP 还拥有全天候的分析人员，能够将其他客户的安全经验和知识分享给您。
-
-
-
+* **将安全监控外包给云端的第三方托管安全服务提供商（MSSP）。** 互联网兴起时出现了大量 MSSP，但如今只有少数大型公司存续。外包安全监控的价值在于这些公司通常拥有您难以负担或维护的设施和工具。MSSP 还拥有全天候的分析人员，能够将其他客户的安全经验和知识分享给您。
 
 当这些云服务提供商发现安全漏洞或入侵时，通常会立即解决问题，往往无需您的介入。我建议您检查第三方公司及其服务是否可以腾出部分时间和资源，以便您能够专注于其他事项。切勿仅依赖他们的监控工作。云服务提供商可能难以发现内部滥用、社会工程攻击以及通过安全会话（如 HTTPS）传输的 Web 应用程序漏洞利用。您仍需参与。
 
@@ -6413,23 +5816,23 @@ IN THIS CHAPTER
 
 ![warning](img/warning.png)大量机密信息面临风险，因此您必须信任外部顾问和供应商。在寻找独立专家或供应商合作时，请考虑以下问题：
 
-*   **您的安全提供商是站在您这边，还是主要为自身利益着想？**
+* **您的安全提供商是站在您这边，还是主要为自身利益着想？**
 
-*   **供应商是为了寻找您的安全漏洞以便推销产品，还是保持中立，专注于安全评估工作？** 许多供应商会通过推荐其自家产品或与合作伙伴关联的产品和服务来获取额外收益，这些产品和服务可能并非您的真实需求。想象一下，家庭检查员告诉您他能解决他发现的所有问题。请确保任何潜在的利益冲突不会对您的预算和业务造成不利影响。
+* **供应商是为了寻找您的安全漏洞以便推销产品，还是保持中立，专注于安全评估工作？** 许多供应商会通过推荐其自家产品或与合作伙伴关联的产品和服务来获取额外收益，这些产品和服务可能并非您的真实需求。想象一下，家庭检查员告诉您他能解决他发现的所有问题。请确保任何潜在的利益冲突不会对您的预算和业务造成不利影响。
 
-*   **供应商是否提供其他 IT 或安全服务，还是专注于安全？** 让信息安全专家进行此类测试可能优于与 IT 通用型组织合作。毕竟，您不会聘请一般企业律师处理专利，或请家庭医生进行手术，亦不会请手 yman 重新布线您的房屋。
+* **供应商是否提供其他 IT 或安全服务，还是专注于安全？** 让信息安全专家进行此类测试可能优于与 IT 通用型组织合作。毕竟，您不会聘请一般企业律师处理专利，或请家庭医生进行手术，亦不会请手 yman 重新布线您的房屋。
 
-*   **供应商的招聘与解聘政策是什么？** 请寻找供应商为降低风险所采取的安全和法律措施。例如，是否有员工可能滥用与您的关系？他们是否可能携带敏感信息外泄，或将您的漏洞分享给不需要知晓的人？
+* **供应商的招聘与解聘政策是什么？** 请寻找供应商为降低风险所采取的安全和法律措施。例如，是否有员工可能滥用与您的关系？他们是否可能携带敏感信息外泄，或将您的漏洞分享给不需要知晓的人？
 
-*   **供应商是否理解您的业务需求？** 请让供应商在工作说明书中记录您的需求列表，确保双方达成一致。
+* **供应商是否理解您的业务需求？** 请让供应商在工作说明书中记录您的需求列表，确保双方达成一致。
 
-*   **供应商的沟通能力如何？** 您必须信任供应商及时保持告知并跟进。
+* **供应商的沟通能力如何？** 您必须信任供应商及时保持告知并跟进。
 
-*   **您确定谁将执行测试吗？** 了解是否由单一人员完成测试，或由专业领域专家分别负责不同领域。还需确认该人员是否刚毕业，或是否在海外，并判断您是否对其工作充满信心。
+* **您确定谁将执行测试吗？** 了解是否由单一人员完成测试，或由专业领域专家分别负责不同领域。还需确认该人员是否刚毕业，或是否在海外，并判断您是否对其工作充满信心。
 
-*   **供应商是否有经验，能够推荐切实可行且有效的应对措施？** 供应商不应仅交付报告并说“祝您好运”！您需要切实可行的解决方案。
+* **供应商是否有经验，能够推荐切实可行且有效的应对措施？** 供应商不应仅交付报告并说“祝您好运”！您需要切实可行的解决方案。
 
-*   **供应商的动机是什么？** 您不希望供应商只为快速获利而提供服务，付出最小努力与价值。您希望供应商致力于建立忠诚关系，实现长期合作。
+* **供应商的动机是什么？** 您不希望供应商只为快速获利而提供服务，付出最小努力与价值。您希望供应商致力于建立忠诚关系，实现长期合作。
 
 ![tip](img/tip.png)长期合作的良好组织将使您的持续工作更加简便。向潜在提供商索要多个参考案例。如果组织难以提供参考，请寻找其他提供商。
 
@@ -6441,15 +5844,15 @@ IN THIS CHAPTER
 
 以下元素可帮助在组织中建立安全意识文化：
 
-*   **将安全意识和持续培训作为所有网络用户（包括管理层和承包商）的活动过程。** 仅在新员工入职时进行一次性培训已不足。意识和培训必须定期且持续，以确保安全信息始终在人们心中。
+* **将安全意识和持续培训作为所有网络用户（包括管理层和承包商）的活动过程。** 仅在新员工入职时进行一次性培训已不足。意识和培训必须定期且持续，以确保安全信息始终在人们心中。
 
-*   ![tip](img/tip.png) **将意识和培训视为长期业务投资。** 安全意识与培训无需昂贵。您可以购买海报、鼠标垫、屏幕保护贴、笔、便签等物品，让安全始终在每个人的视野中。部分创意供应商包括 Greenidea, Inc. ([`www.greenidea.com`](http://www.greenidea.com))、Security Awareness, Inc. ([`www.securityawareness.com`](http://www.securityawareness.com))，以及（我最喜欢的，因创始人 Winn Schwartau 幽默且不 afraid 直言不讳）The Security Awareness Company ([`www.thesecurityawarenesscompany.com`](http://www.thesecurityawarenesscompany.com))。
+* ![tip](img/tip.png) **将意识和培训视为长期业务投资。** 安全意识与培训无需昂贵。您可以购买海报、鼠标垫、屏幕保护贴、笔、便签等物品，让安全始终在每个人的视野中。部分创意供应商包括 Greenidea, Inc. ([`www.greenidea.com`](http://www.greenidea.com))、Security Awareness, Inc. ([`www.securityawareness.com`](http://www.securityawareness.com))，以及（我最喜欢的，因创始人 Winn Schwartau 幽默且不 afraid 直言不讳）The Security Awareness Company ([`www.thesecurityawarenesscompany.com`](http://www.thesecurityawarenesscompany.com))。
 
-*   **让管理层了解安全情况并保持知情。** 如果您让管理层对您的工作视而不见，他们很可能永远不会支持您。我在 第 20 章 中介绍了如何获得管理层的支持。
+* **让管理层了解安全情况并保持知情。** 如果您让管理层对您的工作视而不见，他们很可能永远不会支持您。我在 第 20 章 中介绍了如何获得管理层的支持。
 
-*   **使安全信息与受众匹配，并尽可能保持非技术化。** 向不懂技术的人灌输专业术语只会适得其反。您应以每个受众为切入点，说明安全对他们的影响以及他们如何帮助。
+* **使安全信息与受众匹配，并尽可能保持非技术化。** 向不懂技术的人灌输专业术语只会适得其反。您应以每个受众为切入点，说明安全对他们的影响以及他们如何帮助。
 
-*   **以身作则。** 表明您对安全高度重视，并提供证据说明其他人也应如此。
+* **以身作则。** 表明您对安全高度重视，并提供证据说明其他人也应如此。
 
 如果您能获得管理层和用户的支持，并持续投入努力，使安全成为日常业务常规，您就能塑造组织文化。虽过程费力，却能带来超出您想象的安全价值。我亲眼见证了其影响！
 
@@ -6457,18 +5860,15 @@ IN THIS CHAPTER
 
 周期性且持续的安全评估并非信息安全的全部。测试不能保证安全，但它是关键要素之一。此类测试必须融入包含以下内容的持续安全程序中：
 
-*   更高层次的信息风险评估。
+* 更高层次的信息风险评估。
 
-*   制定并执行的强力安全政策与标准。
+* 制定并执行的强力安全政策与标准。
 
-*   经过测试的可靠事件响应与业务连续性计划。
+* 经过测试的可靠事件响应与业务连续性计划。
 
-*   有效的安全意识与培训项目。
+* 有效的安全意识与培训项目。
 
 理想情况下，您的安全程序应通过增加价值或至少保持平衡来产生收益。这些努力可能需要增加人员或外包更多安全帮助。
-
-
-
 
 ![remember](img/remember.png)不要忘记为自己和任何帮助你的同事进行正式培训。你必须持续自我教育，以在安全领域保持领先。认证伦理黑客（CEH）和认证信息系统安全专业人员（CISSP）都是值得追求的认证。我在附录中列出了一些优秀的会议、研讨会和在线资源。
 
@@ -6508,25 +5908,25 @@ IN THIS CHAPTER
 
 向管理层展示组织*确实*拥有黑客想要的东西。同时也向他们展示内部人员可以利用其访问权限做什么。一个常见的误解是，那些对信息安全威胁和漏洞不了解的人认为组织或网络并不真的有风险。务必指出因黑客攻击可能造成的损失成本，包括：
 
-*   错失机会
+* 错失机会
 
-*   知识产权泄露
+* 知识产权泄露
 
-*   赔偿责任问题
+* 赔偿责任问题
 
-*   事件响应和取证成本
+* 事件响应和取证成本
 
-*   法律成本和判决
+* 法律成本和判决
 
-*   合规相关罚款
+* 合规相关罚款
 
-*   刑事处罚
+* 刑事处罚
 
-*   生产力损失
+* 生产力损失
 
-*   更换丢失或损坏的信息或系统的费用
+* 更换丢失或损坏的信息或系统的费用
 
-*   修复声誉的成本（建立声誉可能需要一生，而毁掉声誉只需几分钟）
+* 修复声誉的成本（建立声誉可能需要一生，而毁掉声誉只需几分钟）
 
 ### 阐述安全测试的一般好处
 
@@ -6536,45 +5936,45 @@ IN THIS CHAPTER
 
 记录支持整体业务目标的好处，例如：
 
-*   证明安全不需要 ultra-expensive（昂贵），长期来看可以为组织节省金钱。提出以下观点：
+* 证明安全不需要 ultra-expensive（昂贵），长期来看可以为组织节省金钱。提出以下观点：
 
-    *   先建立安全比事后补加更容易、更便宜。
+  * 先建立安全比事后补加更容易、更便宜。
 
-    *   如果做得当，安全不需要阻碍生产力。
+  * 如果做得当，安全不需要阻碍生产力。
 
-*   讨论如果信息系统安全到位，新产品或服务可以为组织提供竞争优势，前提是满足以下条件：
+* 讨论如果信息系统安全到位，新产品或服务可以为组织提供竞争优势，前提是满足以下条件：
 
-    *   遵守州、联邦和国际隐私与安全法规。
+  * 遵守州、联邦和国际隐私与安全法规。
 
-    *   满足业务合作伙伴和客户的要求。
+  * 满足业务合作伙伴和客户的要求。
 
-    *   管理层和公司在客户和业务合作伙伴眼中呈现出可信度。
+  * 管理层和公司在客户和业务合作伙伴眼中呈现出可信度。
 
-    *   稳健的安全测试程序和相应的修复流程表明组织正在保护敏感的客户和业务信息。
+  * 稳健的安全测试程序和相应的修复流程表明组织正在保护敏感的客户和业务信息。
 
-*   阐述深入安全测试的合规与审计好处。
+* 阐述深入安全测试的合规与审计好处。
 
 ### 了解业务
 
 了解业务——它是如何运作的，关键人物是谁，以及涉及哪些政治因素。这包括：
 
-*   参加会议以“看与被看”，这能证明你关心业务。
+* 参加会议以“看与被看”，这能证明你关心业务。
 
-*   作为一名有价值且愿意为业务做出贡献的人。
+* 作为一名有价值且愿意为业务做出贡献的人。
 
-*   了解你的对手。再次使用“知己知彼”的心态。如果你了解你所面对的内部人员及其可能的异议，获得认同会容易得多。这种方法不仅适用于管理层，也适用于你的同事以及几乎网络上的每个用户。甚至你的董事会成员可能也有疑问和顾虑。
+* 了解你的对手。再次使用“知己知彼”的心态。如果你了解你所面对的内部人员及其可能的异议，获得认同会容易得多。这种方法不仅适用于管理层，也适用于你的同事以及几乎网络上的每个用户。甚至你的董事会成员可能也有疑问和顾虑。
 
 ### 建立你的可信度
 
 我认为 IT 和安全专业人士面临的最大障碍之一是人们不“get”我们。你的可信度就是你唯一拥有的资产。专注于以下四个特质来建立并保持它：
 
-*   对组织保持积极态度，证明你真的在认真做事。你的态度至关重要。
+* 对组织保持积极态度，证明你真的在认真做事。你的态度至关重要。
 
-*   同情管理层，向他们展示你理解业务方面以及他们所面对的挑战。
+* 同情管理层，向他们展示你理解业务方面以及他们所面对的挑战。
 
-*   找到帮助他人获得他们需要的东西的方法，而不仅仅是索取。
+* 找到帮助他人获得他们需要的东西的方法，而不仅仅是索取。
 
-*   要创造任何积极的业务关系，你必须值得信赖。如果你随着时间的推移建立信任，推销安全就会变得容易得多。
+* 要创造任何积极的业务关系，你必须值得信赖。如果你随着时间的推移建立信任，推销安全就会变得容易得多。
 
 ### 在管理层的层面上发言
 
@@ -6584,16 +5984,13 @@ IN THIS CHAPTER
 
 ### 展示你努力的价值
 
-
-
-
 这一项目正是“实践层面”的关键所在。如果你能持续证明你所做的工作为业务带来价值，你就能保持稳健的进度，而无需不断向管理层施压以维持安全测试项目的持续运行。请牢记以下要点：
 
-*   **记录你在 IT 和安全领域的参与情况，并为管理层提供组织安全状况的持续报告。** 向管理层提供组织系统如何（或将如何）免受攻击的具体案例。
+* **记录你在 IT 和安全领域的参与情况，并为管理层提供组织安全状况的持续报告。** 向管理层提供组织系统如何（或将如何）免受攻击的具体案例。
 
-*   **以具体结果作为概念验证。** 展示你创建的示例安全评估报告，或你打算使用的安全工具的扫描结果。
+* **以具体结果作为概念验证。** 展示你创建的示例安全评估报告，或你打算使用的安全工具的扫描结果。
 
-*   **将管理层和用户的疑虑、顾虑和异议视为获取更多信息的请求。** 找到答案，并将这些问题视为进一步推广你努力的机会。
+* **将管理层和用户的疑虑、顾虑和异议视为获取更多信息的请求。** 找到答案，并将这些问题视为进一步推广你努力的机会。
 
 ### 保持灵活和适应性
 
@@ -6663,12 +6060,9 @@ IN THIS CHAPTER
 
 ### 未获得批准
 
+在获得事先的书面批准后，例如电子邮件、内部备忘录或正式合同，用于你的安全测试工作（无论是来自管理层还是客户）是必须的。除了可能影响你测试的法律条文之外，它是你的“脱罪”凭证。
 
-
-
--   在获得事先的书面批准后，例如电子邮件、内部备忘录或正式合同，用于你的安全测试工作（无论是来自管理层还是客户）是必须的。除了可能影响你测试的法律条文之外，它是你的“脱罪”凭证。
-
-![warning 不要做任何例外 —  — 尤其是当你为客户进行工作时。确保将此文档的签署副本存档以确保你受到保护。## 假设你能找到所有漏洞所以多种安全漏洞 —  — 已知和未知 —  — 你无法在测试中找到它们全部。不要保证你能找到系统中的*所有*安全漏洞。你正在做一件你无法完成的事。坚持以下原则：*   保持现实。*   使用良好的工具。*   了解你的系统，并练习磨练你的技巧。*   随时间改进。我在 第 5 章 到 第 16 章 以各种方式介绍这些规则。## 假设你能消除所有漏洞在网络、计算机和应用程序方面，绝对安全是不可实现的。你不可能防止*所有*安全漏洞，但如果你发现低挂果实 —  — 即造成大多数风险的那些漏洞 —  — 并完成以下任务，你会做得很好：*   遵循稳健的实践。几十年来一直存在的安全基础。*   修补并加固你的系统。*   根据你的预算和业务需求，在可行的地方应用合理的安全对策。许多章节，如 第 4 部分 中的操作系统章节，都涵盖这些领域。还要记住，你会有未计划的费用。你可能会发现很多安全问题，需要预算来填补这些漏洞。也许你现在面临“应有尽有”的问题，必须修复发现的问题。因此，你需要从风险的角度来处理信息安全，并确保所有相关人员都在位置上。## 只进行一次测试安全评估只是你整体安全状态的瞬间快照。新的威胁和漏洞不断出现，因此你必须定期、持续地进行这些测试，以确保你跟上最新的安全防护措施。为未来几个月和几年制定短期和长期的安全测试计划。## 假设你一无所知尽管有些 IT 领域的人不同意，但没有人在 IT 或信息安全领域完全懂得一门之隔。跟上所有软件版本、硬件型号和新兴技术，更不用说相关的安全威胁和漏洞，是不可能的。真正的 IT 和信息安全专业人员知道自己的局限 —  — 即他们*不知道*什么。他们*知道*在哪里可以通过各种在线资源找到答案，例如我在附录中列出的那些。## 在不从黑客视角审视时运行测试思考恶意外部人员或背叛内部人员如何攻击你的网络和计算机。获取全新视角；尝试超出传统思维，思考系统如何被取 offline，信息如何被窃取，等等。![tip](img/tip.png)研究罪犯和黑客的行为以及常见的攻击手法，以便知道在哪里进行测试。我一直在 [`www.principlelogic.com`](https://www.principlelogic.com) 博客记录此主题。查看附录，获取其他值得信赖的资源，帮助你在这方面。
+![warning 不要做任何例外 — — 尤其是当你为客户进行工作时。确保将此文档的签署副本存档以确保你受到保护。## 假设你能找到所有漏洞所以多种安全漏洞 — — 已知和未知 — — 你无法在测试中找到它们全部。不要保证你能找到系统中的*所有*安全漏洞。你正在做一件你无法完成的事。坚持以下原则：* 保持现实。* 使用良好的工具。* 了解你的系统，并练习磨练你的技巧。* 随时间改进。我在 第 5 章 到 第 16 章 以各种方式介绍这些规则。## 假设你能消除所有漏洞在网络、计算机和应用程序方面，绝对安全是不可实现的。你不可能防止*所有*安全漏洞，但如果你发现低挂果实 — — 即造成大多数风险的那些漏洞 — — 并完成以下任务，你会做得好：* 遵循稳健的实践。几十年来一直存在的安全基础。* 修补并加固你的系统。* 根据你的预算和业务需求，在可行的地方应用合理的安全对策。许多章节，如 第 4 部分 中的操作系统章节，都涵盖这些领域。还要记住，你会有未计划的费用。你可能会发现很多安全问题，需要预算来填补这些漏洞。也许你现在面临“应有尽有”的问题，必须修复发现的问题。因此，你需要从风险的角度来处理信息安全，并确保所有相关人员都在位置上。## 只进行一次测试安全评估只是你整体安全状态的瞬间快照。新的威胁和漏洞不断出现，因此你必须定期、持续地进行这些测试，以确保你跟上最新的安全防护措施。为未来几个月和几年制定短期和长期的安全测试计划。## 假设你一无所知尽管有些 IT 领域的人不同意，但没有人在 IT 或信息安全领域完全懂得一门之隔。跟上所有软件版本、硬件型号和新兴技术，更不用说相关的安全威胁和漏洞，是不可能的。真正的 IT 和信息安全专业人员知道自己的局限 — — 即他们*不知道*什么。他们*知道*在哪里可以通过各种在线资源找到答案，例如我在附录中列出的那些。## 在不从黑客视角审视时运行测试思考恶意外部人员或背叛内部人员如何攻击你的网络和计算机。获取全新视角；尝试超出传统思维，思考系统如何被取 offline，信息如何被窃取，等等。![tip](img/tip.png)研究罪犯和黑客的行为以及常见的攻击手法，以便知道在哪里进行测试。我一直在 [`www.principlelogic.com`](https://www.principlelogic.com) 博客记录此主题。查看附录，获取其他值得信赖的资源，帮助你在这方面。
 
 ### 没有测试正确的系统
 
@@ -6682,7 +6076,7 @@ IN THIS CHAPTER
 
 ### 在错误的时间攻击生产系统
 
-一种最佳方式是让你的经理或客户失去信任 —  — 在所有人使用系统时对生产系统进行安全测试。对于运行老旧、脆弱操作系统或遗留应用程序的公司来说，此问题尤为严重。如果你在错误的时间测试系统，你可能会在最糟糕的时刻对关键系统产生负面影响。
+一种最佳方式是让你的经理或客户失去信任 — — 在所有人使用系统时对生产系统进行安全测试。对于运行老旧、脆弱操作系统或遗留应用程序的公司来说，此问题尤为严重。如果你在错误的时间测试系统，你可能会在最糟糕的时刻对关键系统产生负面影响。
 
 确保你知道最佳测试时间，这可能是深夜。 (我并没有说信息安全测试是轻松的！) 奇怪的测试时间可能正当使用安全工具和其他辅助 utilities 自动化某些任务，例如允许你在特定时间运行漏洞扫描仪。
 
@@ -6723,9 +6117,6 @@ Smurf — [`www.gatefold.co.uk/smurf`](http://www.gatefold.co.uk/smurf/)
 ### 认证
 
 Certified Information Security Manager — [`www.isaca.org/Certification/CISM-Certified-Information-Security-Manager/Pages/default.aspx`](http://www.isaca.org/Certification/CISM-Certified-Information-Security-Manager/Pages/default.aspx/)
-
-
-
 
 Certified Information Systems Security Professional — [`https://www.isc2.org/Certifications/CISSP`](https://www.isc2.org/Certifications/CISSP)
 
@@ -6899,8 +6290,6 @@ mailsnarf — [`https://www.monkey.org/~dugsong/dsniff`](https://www.monkey.org/
 
 smtpscan — [`https://www.freshports.org/security/smtpscan`](https://www.freshports.org/security/smtpscan)
 
-
-
 7-Zip — [`https://www.7-zip.org`](https://www.7-zip.org)
 
 SmartDraw — [`https://www.smartdraw.com`](https://www.smartdraw.com)
@@ -7019,11 +6408,11 @@ Default vendor passwords — [`https://www.cirt.net/passwords`](https://www.cirt
 
 Dictionary files and word lists
 
-*   `ftp://ftp.cerias.purdue.edu/pub/dict` 
+* `ftp://ftp.cerias.purdue.edu/pub/dict`
 
-*   [`https://packetstormsecurity.org/Crackers/wordlists` ](https://packetstormsecurity.org/Crackers/wordlists/)
+* [`https://packetstormsecurity.org/Crackers/wordlists` ](https://packetstormsecurity.org/Crackers/wordlists/)
 
-*   [`www.outpost9.com/files/WordLists.html` ](http://www.outpost9.com/files/WordLists.html)
+* [`www.outpost9.com/files/WordLists.html` ](http://www.outpost9.com/files/WordLists.html)
 
 ElcomSoft Distributed Password Recovery — [`https://www.elcomsoft.com/edpr.html`](https://www.elcomsoft.com/edpr.html)
 
@@ -7055,15 +6444,11 @@ Proactive Password Auditor — [`https://www.elcomsoft.com/ppa.htm`](https://www
 
 Proactive System Password Recovery — [`https://www.elcomsoft.com/pspr.html`](https://www.elcomsoft.com/pspr.html)
 
-
-
-## 进入`/path/to/xxx`目录，找到`xxx.json`。
+进入`/path/to/xxx`目录，找到`xxx.json`。
 
 在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
 
 在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含这些元素的列表。
-
-
 
 Brutus — [`www.hoobie.net/brutus/index.html`](http://www.hoobie.net/brutus/index.html)
 
@@ -7171,8 +6556,6 @@ WinAirsnort — [`http://winairsnort.free.fr`](http://winairsnort.free.fr)
 
 `Kevin` has authored or co-authored 12 information security books, including *Hacking Wireless Networks For Dummies*, *Implementation Strategies for Fulfilling and Maintaining IT Compliance* (Realtimepublishers.com), and *The Practical Guide to HIPAA Privacy and Security Compliance* (Auerbach). `Kevin` has written more than three dozen whitepapers and over 1,000 articles and guest blog posts for sites such as TechTarget’s SearchSecurity.com, SearchEnterpriseDesktop.com, and SearchSoftwareQuality.com, Ziff Davis’ Toolbox.com, as well as IBM’s SecurityIntelligence.com. `Kevin` is the creator and producer of the Security On Wheels audiobooks, which provide security learning for IT professionals on the go ([`securityonwheels.com`](http://www.securityonwheels.com)), and the Security On Wheels blog ([`securityonwheels.com/blog`](http://www.securityonwheels.com/blog)). He also covers information security and related matters on Twitter ([`@kevinbeaver`](https://twitter.com/kevinbeaver)) and YouTube (`PrincipleLogic`). `Kevin` earned his bachelor’s degree in Computer Engineering Technology from Southern College of Technology and his master’s degree in Management of Technology from Georgia Tech. He has obtained his CISSP certification in 2001 and also holds MCSE, Master CNE, and IT Project+ certifications.
 
-
-
 Kevin 可以通过他的网站[`https://www.principlelogic.com`](http://www.principlelogic.com)联系，也可以通过 LinkedIn 在[`https://www.linkedin.com/in/kevinbeaver`](http://www.linkedin.com/in/kevinbeaver)与他连接。
 
 ## Dedication
@@ -7207,401 +6590,397 @@ Kevin 可以通过他的网站[`https://www.principlelogic.com`](http://www.prin
 
 ### A
 
-1.  access, blocking, 241
+1. access, blocking, 241
 
-2.  access control list (ACL), 238
+2. access control list (ACL), 238
 
-3.  AccessEnum (website), 189
+3. AccessEnum (website), 189
 
-4.  account enumeration, 260–263
+4. account enumeration, 260–263
 
-5.  account lockout, 120
+5. account lockout, 120
 
-6.  ACL (access control list), 238
+6. ACL (access control list), 238
 
-7.  Active Directory, 104
+7. Active Directory, 104
 
-8.  Active Server Pages (ASP), 291
+8. Active Server Pages (ASP), 291
 
-9.  Acunetix Web Vulnerability Scanner, 21, 22, 278, 296, 297, 371
+9. Acunetix Web Vulnerability Scanner, 21, 22, 278, 296, 297, 371
 
-10.  adaptability, 346
+10. adaptability, 346
 
-11.  Advanced Archive Password Recovery (Elcomsoft), 111, 365
+11. Advanced Archive Password Recovery (Elcomsoft), 111, 365
 
-12.  Advanced Office Password Recovery (website), 306
+12. Advanced Office Password Recovery (website), 306
 
-13.  advanced persistent threat (APT), 152
+13. advanced persistent threat (APT), 152
 
-14.  Advanced SQL Password Recovery (website), 304, 358
+14. Advanced SQL Password Recovery (website), 304, 358
 
-15.  AFRINIC (Regional Internet Registry for Africa), 66, 359
+15. AFRINIC (Regional Internet Registry for Africa), 66, 359
 
-16.  Aircrack-ng (website), 161, 167, 373
+16. Aircrack-ng (website), 161, 167, 373
 
-17.  airodump, 169
+17. airodump, 169
 
-18.  AirWatch (website), 194
+18. AirWatch (website), 194
 
-19.  allies, 341
+19. allies, 341
 
-20.  all-in-one assessment tools, 204
+20. all-in-one assessment tools, 204
 
-21.  allintitle operator, 282
+21. allintitle operator, 282
 
-22.  Amenza Technologies Limited Secur/Tree, 42
+22. Amenza Technologies Limited Secur/Tree, 42
 
-23.  American National Standards Institute (ANSI), 11
+23. American National Standards Institute (ANSI), 11
 
-24.  American Standard Code for Information Interchange (ASCII), 119
+24. American Standard Code for Information Interchange (ASCII), 119
 
-25.  analyzers, 128
+25. analyzers, 128
 
-26.  analyzing 
+26. analyzing
 
-     1.  network data, 140–146
+  1. network data, 140–146
 
-     2.  source code, 300–301, 369
+  2. source code, 300–301, 369
 
-27.  anonymity, maintaining, 35–36
+27. anonymity, maintaining, 35–36
 
-28.  ANSI (American National Standards Institute), 11
+28. ANSI (American National Standards Institute), 11
 
-29.  antenna, external, 161
+29. antenna, external, 161
 
-30.  Apache web server (httpd), 230
+30. Apache web server (httpd), 230
 
-31.  APNIC (website), 66, 359
+31. APNIC (website), 66, 359
 
-32.  AppDetectivePro (website), 307, 358
+32. AppDetectivePro (website), 307, 358
 
-33.  applications. *See* `websites and applications`
+33. applications. *See* `websites and applications`
 
-34.  approval, prior, 351
+34. approval, prior, 351
 
-35.  AppSpider, 153, 290, 371
+35. AppSpider, 153, 290, 371
 
-36.  APs (access points), 160
+36. APs (access points), 160
 
-37.  APT (advanced persistent threat), 152
+37. APT (advanced persistent threat), 152
 
-38.  ARIN (Regional Internet Registry for North America, a Portion of the Caribbean, and subequatorial Africa), 66, 359
+38. ARIN (Regional Internet Registry for North America, a Portion of the Caribbean, and subequatorial Africa), 66, 359
 
-39.  ARP spoofing/poisoning, 147–149
+39. ARP spoofing/poisoning, 147–149
 
-40.  Arpwatch (website), 363
+40. Arpwatch (website), 363
 
-41.  ASCII (American Standard Code for Information Interchange), 119
+41. ASCII (American Standard Code for Information Interchange), 119
 
-42.  asleap (website), 171, 373
+42. asleap (website), 171, 373
 
-43.  ASP (Active Server Pages), 291
+43. ASP (Active Server Pages), 291
 
-44.  assumptions, making, 46–47
+44. assumptions, making, 46–47
 
-45.  Asterisk (website), 77
+45. Asterisk (website), 77
 
-46.  attachments (e-mail), 255–256
+46. attachments (e-mail), 255–256
 
-47.  attack tree analysis, 42
+47. attack tree analysis, 42
 
-48.  attacks, 33–35. *See also specific topics*
+48. attacks, 33–35. *See also specific topics*
 
-49.  auditing, compared with ethical hacking, 10–11, 348
+49. auditing, compared with ethical hacking, 10–11, 348
 
-50.  authentication, 101, 121, 225–226
+50. authentication, 101, 121, 225–226
 
-51.  authorization, 18
+51. authorization, 18
 
-52.  automated assessments, 56–57
+52. automated assessments, 56–57
 
-53.  automated password reset, 121
+53. automated password reset, 121
 
-54.  automating patching, 325–326, 331–332
+54. automating patching, 325–326, 331–332
 
-55.  Awareity MOAT (website), 370
+55. Awareity MOAT (website), 370
 
-56.  awareness, as countermeasure against social engineering, 80–82
+56. awareness, as countermeasure against social engineering, 80–82
 
 ### B
 
-1.  background checks, 64
+1. background checks, 64
 
-2.  bad guys, thinking like, 27
+2. bad guys, thinking like, 27
 
-3.  bad-guy (black hat) hackers, 9, 29
+3. bad-guy (black hat) hackers, 9, 29
 
-4.  bandwidth blocking, 255
+4. bandwidth blocking, 255
 
-5.  banner attacks, 258–260
+5. banner attacks, 258–260
 
-6.  banners, grabbing, 137–138
+6. banners, grabbing, 137–138
 
-7.  Barracuda Networks (website), 300
+7. Barracuda Networks (website), 300
 
-8.  Bastille Linux Hardening Program (website), 369
+8. Bastille Linux Hardening Program (website), 369
 
-9.  Bastille UNIX (website), 247
+9. Bastille UNIX (website), 247
 
-10.  Beaver, Kevin (author) 
+10. Beaver, Kevin (author)
 
-     1.  *Hacking Wireless Networks For Dummies*, 169
+  1. *Hacking Wireless Networks For Dummies*, 169
 
-11.  Beaver, Kevin (security analyst), 368
+11. Beaver, Kevin (security analyst), 368
 
-12.  believability, 72
+12. believability, 72
 
-13.  benefits, of ethical hacking, 343–344
+13. benefits, of ethical hacking, 343–344
 
-14.  best practices, for minimizing e-mail security risks, 269–270
+14. best practices, for minimizing e-mail security risks, 269–270
 
-15.  Bing (website), 62, 359
+15. Bing (website), 62, 359
 
-16.  BIOS passwords, 116, 365
+16. BIOS passwords, 116, 365
 
-17.  Bitscanner, 167
+17. Bitscanner, 167
 
-18.  black hat (bad-guy) hackers, 9, 29
+18. black hat (bad-guy) hackers, 9, 29
 
-19.  Blast (website), 154, 363
+19. Blast (website), 154, 363
 
-20.  blind assessments, 45, 51
+20. blind assessments, 45, 51
 
-21.  blind ethical hacking, 39
+21. blind ethical hacking, 39
 
-22.  Blooover (website), 166, 357
+22. Blooover (website), 166, 357
 
-23.  BlueLog (website), 166
+23. BlueLog (website), 166
 
+24. `BlueScanner` (`website`), `[166](`#c10.xhtml#Page_166`)`, `[357](`#a01.xhtml#Page_357`)`
 
+25. `Bluesnarfer` (`website`), `[166](`#c10.xhtml#Page_166`)`, `[357](`#a01.xhtml#Page_357`)`
 
-24. `BlueScanner` (`website`), `[166`](`#c10.xhtml#Page_166`), `[357`](`#a01.xhtml#Page_357`)
+26. `BlueSniper rifle` (`website`), `[166](`#c10.xhtml#Page_166`)`, `[357](`#a01.xhtml#Page_357`)`
 
-25. `Bluesnarfer` (`website`), `[166`](`#c10.xhtml#Page_166`), `[357`](`#a01.xhtml#Page_357`)
+27. `Bluetooth`, `[166](`#c10.xhtml#Page_166`)`, `[357](`#a01.xhtml#Page_357`)`
 
-26. `BlueSniper rifle` (`website`), `[166`](`#c10.xhtml#Page_166`), `[357`](`#a01.xhtml#Page_357`)
+28. `bootable (live) CDs`, `[160](`#c10.xhtml#Page_160`)–161`
 
-27. `Bluetooth`, `[166`](`#c10.xhtml#Page_166`), `[357`](`#a01.xhtml#Page_357`)
+29. `Bow Tie`, `[41](`#c03.xhtml#Page_41`)`
 
-28. `bootable (live) CDs`, `[160`](`#c10.xhtml#Page_160`)–`161`
+30. `bring your own device (BYOD)`, `[193](`#c11.xhtml#Page_193`)`
 
-29. `Bow Tie`, `[41`](`#c03.xhtml#Page_41`)
+31. `brute-force attacks`, `for cracking passwords`, `[105](`#c08.xhtml#Page_105`)–107`
 
-30. `bring your own device (BYOD)`, `[193`](`#c11.xhtml#Page_193`)
+32. `Brutus`, `[102](`#c08.xhtml#Page_102`)`, `[104](`#c08.xhtml#Page_104`)`, `[268](`#c14.xhtml#Page_268`)`, `[294](`#c15.xhtml#Page_294`)`, `[362](`#a01.xhtml#Page_362`)`, `[371](`#a01.xhtml#Page_371`)`
 
-31. `brute-force attacks`, `for cracking passwords`, `[105`](`#c08.xhtml#Page_105`)–`107`
+33. `BTScanner for XP` (`website`), `[357](`#a01.xhtml#Page_357`)`
 
-32. `Brutus`, `[102`](`#c08.xhtml#Page_102`), `[104`](`#c08.xhtml#Page_104`), `[268`](`#c14.xhtml#Page_268`), `[294`](`#c15.xhtml#Page_294`), `[362`](`#a01.xhtml#Page_362`), `[371`](`#a01.xhtml#Page_371`)
+34. `buffer-overflow attacks`, `[244](`#c13.xhtml#Page_244`)–245`, `[284](`#c15.xhtml#Page_284`)`
 
-33. `BTScanner for XP` (`website`), `[357`](`#a01.xhtml#Page_357`)
+35. `built-in Windows programs`, `[203](`#c12.xhtml#Page_203`)`
 
-34. `buffer-overflow attacks`, `[244`](`#c13.xhtml#Page_244`)–`245`, `[284`](`#c15.xhtml#Page_284`)
+36. `Burp Proxy`, `[284](`#c15.xhtml#Page_284`)`, `[286](`#c15.xhtml#Page_286`)`, `[371](`#a01.xhtml#Page_371`)`
 
-35. `built-in Windows programs`, `[203`](`#c12.xhtml#Page_203`)
+37. `business phones`, `[77](`#c06.xhtml#Page_77`)`
 
-36. `Burp Proxy`, `[284`](`#c15.xhtml#Page_284`), `[286`](`#c15.xhtml#Page_286`), `[371`](`#a01.xhtml#Page_371`)
-
-37. `business phones`, `[77`](`#c06.xhtml#Page_77`)
-
-38. `BYOD (bring your own device)`, `[193`](`#c11.xhtml#Page_193`)
+38. `BYOD (bring your own device)`, `[193](`#c11.xhtml#Page_193`)`
 
 ### C
 
-1. `Cain & Abel` 
+1. `Cain & Abel`
 
-    1. `about`, `[22`](`#c01.xhtml#Page_22`)
+  1. `about`, `[22](`#c01.xhtml#Page_22`)`
 
-    2. `for capturing and recording voice traffic`, `[273`](`#c14.xhtml#Page_273`)–`275`
+  2. `for capturing and recording voice traffic`, `[273](`#c14.xhtml#Page_273`)–275`
 
-    3. `using for ARP poisoning`, `[148`](`#c09.xhtml#Page_148`)–`149`
+  3. `using for ARP poisoning`, `[148](`#c09.xhtml#Page_148`)–149`
 
-    4. `website`, `[101`](`#c08.xhtml#Page_101`), `[102`](`#c08.xhtml#Page_102`), `[114`](`#c08.xhtml#Page_114`), `[128`](`#c09.xhtml#Page_128`), `[141`](`#c09.xhtml#Page_141`), `[267`](`#c14.xhtml#Page_267`), `[304`](`#c16.xhtml#Page_304`), `[362`](`#a01.xhtml#Page_362`), `[364`](`#a01.xhtml#Page_364`), `[365`](`#a01.xhtml#Page_365`), `[370`](`#a01.xhtml#Page_370`)
+  4. `website`, `[101](`#c08.xhtml#Page_101`)`, `[102](`#c08.xhtml#Page_102`)`, `[114](`#c08.xhtml#Page_114`)`, `[128](`#c09.xhtml#Page_128`)`, `[141](`#c09.xhtml#Page_141`)`, `[267](`#c14.xhtml#Page_267`)`, `[304](`#c16.xhtml#Page_304`)`, `[362](`#a01.xhtml#Page_362`)`, `[364](`#a01.xhtml#Page_364`)`, `[365](`#a01.xhtml#Page_365`)`, `[370](`#a01.xhtml#Page_370`)`
 
-2. `Camtasia Studio` (`TechSmith`), `[45`](`#c03.xhtml#Page_45`)
+2. `Camtasia Studio` (`TechSmith`), `[45](`#c03.xhtml#Page_45`)`
 
-3. `Canadian Personal Information Protection and Electronic Documents Act (PIPEDA)`, `[12`](`#c01.xhtml#Page_12`)
+3. `Canadian Personal Information Protection and Electronic Documents Act (PIPEDA)`, `[12](`#c01.xhtml#Page_12`)`
 
-4. `Canary Wireless Digital Hotspotter` (`website`), `[161`](`#c10.xhtml#Page_161`)
+4. `Canary Wireless Digital Hotspotter` (`website`), `[161](`#c10.xhtml#Page_161`)`
 
-5. `candy-security adage`, `[68`](`#c06.xhtml#Page_68`)
+5. `candy-security adage`, `[68](`#c06.xhtml#Page_68`)`
 
-6. `cantenna`, `[162`](`#c10.xhtml#Page_162`)
+6. `cantenna`, `[162](`#c10.xhtml#Page_162`)`
 
-7. `CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart)`, `[257`](`#c14.xhtml#Page_257`)–`258`, `[297`](`#c15.xhtml#Page_297`)
+7. `CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart)`, `[257](`#c14.xhtml#Page_257`)–258`, `[297](`#c15.xhtml#Page_297`)`
 
-8. `capturing traffic`, `[267`](`#c14.xhtml#Page_267`), `[273`](`#c14.xhtml#Page_273`)–`275`
+8. `capturing traffic`, `[267](`#c14.xhtml#Page_267`)`, `[273](`#c14.xhtml#Page_273`)–275`
 
-9. `Car Whisperer` (`website`), `[167`](`#c10.xhtml#Page_167`), `[357`](`#a01.xhtml#Page_357`)
+9. `Car Whisperer` (`website`), `[167](`#c10.xhtml#Page_167`)`, `[357](`#a01.xhtml#Page_357`)`
 
-10. `Carbon Black` (`website`), `[357`](`#a01.xhtml#Page_357`)
+10. `Carbon Black` (`website`), `[357](`#a01.xhtml#Page_357`)`
 
-11. `Cash, Adam (author)` 
+11. `Cash, Adam (author)`
 
-     1. `*Psychology For Dummies*`, `[73`](`#c06.xhtml#Page_73`)
+  1. `*Psychology For Dummies*`, `[73](`#c06.xhtml#Page_73`)`
 
-12. `Cb Protection` (`website`), `[113`](`#c08.xhtml#Page_113`), `[152`](`#c09.xhtml#Page_152`)
+12. `Cb Protection` (`website`), `[113](`#c08.xhtml#Page_113`)`, `[152](`#c09.xhtml#Page_152`)`
 
-13. `C|EH (Certified Ethical Hacker)`, `[11`](`#c01.xhtml#Page_11`)
+13. `C|EH (Certified Ethical Hacker)`, `[11](`#c01.xhtml#Page_11`)`
 
-14. `Center for Internet Security Benchmarks (website)`, `[121`](`#c08.xhtml#Page_121`)–`1229`, `[369`](`#a01.xhtml#Page_369`)
+14. `Center for Internet Security Benchmarks (website)`, `[121](`#c08.xhtml#Page_121`)–1229`, `[369](`#a01.xhtml#Page_369`)`
 
-15. `certifications`, `[11`](`#c01.xhtml#Page_11`), `[358`](`#a01.xhtml#Page_358`)
+15. `certifications`, `[11](`#c01.xhtml#Page_11`)`, `[358](`#a01.xhtml#Page_358`)`
 
-16. `Certified Ethical Hacker (C|EH)`, `[11`](`#c01.xhtml#Page_11`)
+16. `Certified Ethical Hacker (C|EH)`, `[11](`#c01.xhtml#Page_11`)`
 
-17. `Certified Information Security Manager (website)`, `[358`](`#a01.xhtml#Page_358`)
+17. `Certified Information Security Manager (website)`, `[358](`#a01.xhtml#Page_358`)`
 
-18. `Certified Information Systems Security Professional (website)`, `[358`](`#a01.xhtml#Page_358`)
+18. `Certified Information Systems Security Professional (website)`, `[358](`#a01.xhtml#Page_358`)`
 
-19. `Certified Systems Security Professional (CISSP)`, `[11`](`#c01.xhtml#Page_11`)
+19. `Certified Systems Security Professional (CISSP)`, `[11](`#c01.xhtml#Page_11`)`
 
-20. `Certified Wireless Security Professional (website)`, `[358`](`#a01.xhtml#Page_358`)
+20. `Certified Wireless Security Professional (website)`, `[358](`#a01.xhtml#Page_358`)`
 
-21. `Cheat Sheet (website)`, `[3`](`#c00.xhtml#Page_3`)
+21. `Cheat Sheet (website)`, `[3](`#c00.xhtml#Page_3`)`
 
-22. `CheckShortURL (website)`, `[368`](`#a01.xhtml#Page_368`)
+22. `CheckShortURL (website)`, `[368](`#a01.xhtml#Page_368`)`
 
-23. `CheckSum Tool (website)`, `[47`](`#c03.xhtml#Page_47`)
+23. `CheckSum Tool (website)`, `[47](`#c03.xhtml#Page_47`)`
 
-24. `Cheops-ng (website)`, `[328`](`#c18.xhtml#Page_328`)
+24. `Cheops-ng (website)`, `[328](`#c18.xhtml#Page_328`)`
 
-25. `chkconfig`, `[238`](`#c13.xhtml#Page_238`)
+25. `chkconfig`, `[238](`#c13.xhtml#Page_238`)`
 
-26. `*A Chronology of Data Breaches* (Privacy Rights Clearinghouse)`, `[342`](`#c20.xhtml#Page_342`)
+26. `*A Chronology of Data Breaches* (Privacy Rights Clearinghouse)`, `[342](`#c20.xhtml#Page_342`)`
 
-27. `CIP (Critical Infrastructure Protection)`, `[12`](`#c01.xhtml#Page_12`)
+27. `CIP (Critical Infrastructure Protection)`, `[12](`#c01.xhtml#Page_12`)`
 
-28. `Cisco (website)`, `[308`](`#c16.xhtml#Page_308`)
+28. `Cisco (website)`, `[308](`#c16.xhtml#Page_308`)`
 
-29. `Cisco LEAP protocol`, `[171`](`#c10.xhtml#Page_171`)
+29. `Cisco LEAP protocol`, `[171](`#c10.xhtml#Page_171`)`
 
-30. `CISSP (Certified Systems Security Professional)`, `[11`](`#c01.xhtml#Page_11`)
+30. `CISSP (Certified Systems Security Professional)`, `[11](`#c01.xhtml#Page_11`)`
 
-31. `civil liberties`, `[33`](`#c02.xhtml#Page_33`)
+31. `civil liberties`, `[33](`#c02.xhtml#Page_33`)`
 
-32. `clients`, `[348`](`#c21.xhtml#Page_348`)–`349`
+32. `clients`, `[348](`#c21.xhtml#Page_348`)–349`
 
-33. `cloud service providers`, `[333`](`#c19.xhtml#Page_333`)–`334`
+33. `cloud service providers`, `[333](`#c19.xhtml#Page_333`)–334`
 
-34. `CloudFlare (website)`, `[155`](`#c09.xhtml#Page_155`), `[300`](`#c15.xhtml#Page_300`), `[359`](`#a01.xhtml#Page_359`)
+34. `CloudFlare (website)`, `[155](`#c09.xhtml#Page_155`)`, `[300](`#c15.xhtml#Page_300`)`, `[359](`#a01.xhtml#Page_359`)`
 
-35. `Cobb, Chey (author)` 
+35. `Cobb, Chey (author)`
 
-     1. `*Network Security For Dummies*`, `[122`](`#c08.xhtml#Page_122`)
+  1. `*Network Security For Dummies*`, `[122](`#c08.xhtml#Page_122`)`
 
-36. `code injection`, `[287`](`#c15.xhtml#Page_287`)–`289`
+36. `code injection`, `[287](`#c15.xhtml#Page_287`)–289`
 
-37. `Cofense (website)`, `[78`](`#c06.xhtml#Page_78`)
+37. `Cofense (website)`, `[78](`#c06.xhtml#Page_78`)`
 
-38. `commands, disabling`, `[240`](`#c13.xhtml#Page_240`)
+38. `commands, disabling`, `[240](`#c13.xhtml#Page_240`)`
 
-39. `Common Vulnerabilities and Exposures (website)`, `[56`](`#c04.xhtml#Page_56`), `[318`](`#c17.xhtml#Page_318`), `[371`](`#a01.xhtml#Page_371`)
+39. `Common Vulnerabilities and Exposures (website)`, `[56](`#c04.xhtml#Page_56`)`, `[318](`#c17.xhtml#Page_318`)`, `[371](`#a01.xhtml#Page_371`)`
 
-40. `communication and messaging systems` 
+40. `communication and messaging systems`
 
-     1. `about`, `[253`](`#c14.xhtml#Page_253`)
+  1. `about`, `[253](`#c14.xhtml#Page_253`)`
 
-     2. `e-mail attacks`, `[254`](`#c14.xhtml#Page_254`)–`270`
+  2. `e-mail attacks`, `[254](`#c14.xhtml#Page_254`)–270`
 
-     3. `messaging system vulnerabilities`, `[253`](`#c14.xhtml#Page_253`)–`254`
+  3. `messaging system vulnerabilities`, `[253](`#c14.xhtml#Page_253`)–254`
 
-     4. `tools and resources`, `[362`](`#a01.xhtml#Page_362`)
+  4. `tools and resources`, `[362](`#a01.xhtml#Page_362`)`
 
-     5. `Voice over IP (VoIP)`, `[270`](`#c14.xhtml#Page_270`)–`275`, `[370`](`#a01.xhtml#Page_370`)–`371`
+  5. `Voice over IP (VoIP)`, `[270](`#c14.xhtml#Page_270`)–275`, `[370](`#a01.xhtml#Page_370`)–371`
 
-41. `CommView (TamoSoft)`, `[115`](`#c08.xhtml#Page_115`), `[141`](`#c09.xhtml#Page_141`), `[364`](`#a01.xhtml#Page_364`), `[370`](`#a01.xhtml#Page_370`), `[373`](`#a01.xhtml#Page_373`)
+41. `CommView (TamoSoft)`, `[115](`#c08.xhtml#Page_115`)`, `[141](`#c09.xhtml#Page_141`)`, `[364](`#a01.xhtml#Page_364`)`, `[370](`#a01.xhtml#Page_370`)`, `[373](`#a01.xhtml#Page_373`)`
 
-42. `CommView for WiFi (TamoSoft)`, `[22`](`#c01.xhtml#Page_22`)
+42. `CommView for WiFi (TamoSoft)`, `[22](`#c01.xhtml#Page_22`)`
 
-43. `Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA)`, `[257`](`#c14.xhtml#Page_257`)–`258`, `[297`](`#c15.xhtml#Page_297`)
+43. `Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA)`, `[257](`#c14.xhtml#Page_257`)–258`, `[297](`#c15.xhtml#Page_297`)`
 
-44. `compliance`, `[12`](`#c01.xhtml#Page_12`), `[348`](`#c21.xhtml#Page_348`)
+44. `compliance`, `[12](`#c01.xhtml#Page_12`)`, `[348](`#c21.xhtml#Page_348`)`
 
-45. `CompTIA Security (website)`, `[358`](`#a01.xhtml#Page_358`)
+45. `CompTIA Security (website)`, `[358](`#a01.xhtml#Page_358`)`
 
-46. `Computer Fraud and Abuse Act (website)`, `[361`](`#a01.xhtml#Page_361`)
+46. `Computer Fraud and Abuse Act (website)`, `[361](`#a01.xhtml#Page_361`)`
 
-47. `computers, physical security vulnerabilities`, `[90`](`#c07.xhtml#Page_90`)–`93`
+47. `computers, physical security vulnerabilities`, `[90](`#c07.xhtml#Page_90`)–93`
 
-48. `configuration, of null sessions`, `[213`](`#c12.xhtml#Page_213`)–`214`
+48. `configuration, of null sessions`, `[213](`#c12.xhtml#Page_213`)–214`
 
-49. `Connect scan`, `[133`](`#c09.xhtml#Page_133`)
+49. `Connect scan`, `[133](`#c09.xhtml#Page_133`)`
 
-50. `connection attacks`, `[256`](`#c14.xhtml#Page_256`)–`258`
+50. `connection attacks`, `[256](`#c14.xhtml#Page_256`)–258`
 
-51. `COPS (website)`, `[244`](`#c13.xhtml#Page_244`)
+51. `COPS (website)`, `[244](`#c13.xhtml#Page_244`)`
 
-52. `copyrighted materials`, `[33`](`#c02.xhtml#Page_33`)
+52. `copyrighted materials`, `[33](`#c02.xhtml#Page_33`)`
 
-53. `Core Network Insight (website)`, `[357`](`#a01.xhtml#Page_357`)
+53. `Core Network Insight (website)`, `[357](`#a01.xhtml#Page_357`)`
 
-54. `cost, of being hacked`, `[342`](`#c20.xhtml#Page_342`)–`343`
+54. `cost, of being hacked`, `[342](`#c20.xhtml#Page_342`)–343`
 
-55. `countermeasures` 
+55. `countermeasures`
 
-     1. `account enumeration`, `[262`](`#c14.xhtml#Page_262`)–`263`
+  1. `account enumeration`, `[262](`#c14.xhtml#Page_262`)–263`
 
-     2. `ARP poisoning`, `[151`](`#c09.xhtml#Page_151`)
+  2. `ARP poisoning`, `[151](`#c09.xhtml#Page_151`)`
 
-     3. `attacks on unneeded services`, `[236`](`#c13.xhtml#Page_236`)–`238`
+  3. `attacks on unneeded services`, `[236](`#c13.xhtml#Page_236`)–238`
 
-     4. `banner attacks`, `[260`](`#c14.xhtml#Page_260`)
+  4. `banner attacks`, `[260](`#c14.xhtml#Page_260`)`
 
-     5. `banner-grabbing attacks`, `[137`](`#c09.xhtml#Page_137`)–`138`
+  5. `banner-grabbing attacks`, `[137](`#c09.xhtml#Page_137`)–138`
 
-     6. `buffer-overflow attacks`, `[245`](`#c13.xhtml#Page_245`)
+  6. `buffer-overflow attacks`, `[245](`#c13.xhtml#Page_245`)`
 
-     7. `connection attacks`, `[256`](`#c14.xhtml#Page_256`)–`258`
+  7. `connection attacks`, `[256](`#c14.xhtml#Page_256`)–258`
 
-     8. `default configuration settings vulnerabilities`, `[186`](`#c10.xhtml#Page_186`)
+  8. `default configuration settings vulnerabilities`, `[186](`#c10.xhtml#Page_186`)`
 
-     9. `default script attacks`, `[293`](`#c15.xhtml#Page_293`)
+  9. `default script attacks`, `[293](`#c15.xhtml#Page_293`)`
 
-     10. `directory traversals`, `[283`](`#c15.xhtml#Page_283`)
+  10. `directory traversals`, `[283](`#c15.xhtml#Page_283`)`
 
-     11. `DoS attacks`, `[154`](`#c09.xhtml#Page_154`)–`155`
+  11. `DoS attacks`, `[154](`#c09.xhtml#Page_154`)–155`
 
-     12. `e-mail attachment attacks`, `[255`](`#c14.xhtml#Page_255`)–`256`
+  12. `e-mail attachment attacks`, `[255](`#c14.xhtml#Page_255`)–256`
 
-     13. `encrypted traffic attacks`, `[170`](`#c10.xhtml#Page_170`)–`172`
+  13. `encrypted traffic attacks`, `[170](`#c10.xhtml#Page_170`)–172`
 
-     14. `file permission hacks`, `[243`](`#c13.xhtml#Page_243`)–`244`
+  14. `file permission hacks`, `[243](`#c13.xhtml#Page_243`)–244`
 
-     15. `firewall rulebase vulnerabilities`, `[140`](`#c09.xhtml#Page_140`)
+  15. `firewall rulebase vulnerabilities`, `[140](`#c09.xhtml#Page_140`)`
 
-     16. `general password-cracking`, `[117`](`#c08.xhtml#Page_117`)–`121`
+  16. `general password-cracking`, `[117](`#c08.xhtml#Page_117`)–121`
 
-     17. `header disclosures`, `[267`](`#c14.xhtml#Page_267`)
+  17. `header disclosures`, `[267](`#c14.xhtml#Page_267`)`
 
-     18. `input attacks`, `[290`](`#c15.xhtml#Page_290`)–`291`
+  18. `input attacks`, `[290](`#c15.xhtml#Page_290`)–291`
 
-     19. `MAC address spoofing attacks`, `[151`](`#c09.xhtml#Page_151`)
+  19. `MAC address spoofing attacks`, `[151](`#c09.xhtml#Page_151`)`
 
-     20. `MAC spoofing`, `[183`](`#c10.xhtml#Page_183`)
+  20. `MAC spoofing`, `[183](`#c10.xhtml#Page_183`)`
 
-     21. `missing patch vulnerability exploits`, `[224`](`#c12.xhtml#Page_224`)–`225`
+  21. `missing patch vulnerability exploits`, `[224](`#c12.xhtml#Page_224`)–225`
 
-     22. `NetBIOS attacks`, `[210`](`#c12.xhtml#Page_210`)
+  22. `NetBIOS attacks`, `[210](`#c12.xhtml#Page_210`)`
 
-     23. `network protocol vulnerabilities`, `[146`](`#c09.xhtml#Page_146`)
+  23. `network protocol vulnerabilities`, `[146](`#c09.xhtml#Page_146`)`
 
-     24. `NFS attacks`, `[242`](`#c13.xhtml#Page_242`)
+  24. `NFS attacks`, `[242](`#c13.xhtml#Page_242`)`
 
-     25. `null session hacks`, `[214`](`#c12.xhtml#Page_214`)–`215`
+  25. `null session hacks`, `[214](`#c12.xhtml#Page_214`)–215`
 
-     26. `password reset programs`, `[193`](`#c11.xhtml#Page_193`)
+  26. `password reset programs`, `[193](`#c11.xhtml#Page_193`)`
 
-     27. `physical security attacks`, `[245`](`#c13.xhtml#Page_245`)–`246`
+  27. `physical security attacks`, `[245](`#c13.xhtml#Page_245`)–246`
 
-     28. `ping sweeping`, `[135`](`#c09.xhtml#Page_135`)
+  28. `ping sweeping`, `[135](`#c09.xhtml#Page_135`)`
 
-     29. `port scanning`, `[135`](`#c09.xhtml#Page_135`)
+  29. `port scanning`, `[135](`#c09.xhtml#Page_135`)`
 
-     30. `.rhosts and hosts.equiv file attacks`, `[240`](`#c13.xhtml#Page_240`)–`241`
+  30. `.rhosts and hosts.equiv file attacks`, `[240](`#c13.xhtml#Page_240`)–241`
 
-     31. `rogue wireless devices`, `[179`](`#c10.xhtml#Page_179`)
-
-
+  31. `rogue wireless devices`, `[179](`#c10.xhtml#Page_179`)`
 
 32. `SMTP 中继攻击`, 266
 
@@ -7629,31 +7008,31 @@ Kevin 可以通过他的网站[`https://www.principlelogic.com`](http://www.prin
 
 59. `破解密码`
 
-     1. `关于`, 98–99
+  1. `关于`, 98–99
 
-     2. `在数据库上`, 305–306
+  2. `在数据库上`, 305–306
 
-     3. `使用高科技工具`, 102–110
+  3. `使用高科技工具`, 102–110
 
-     4. `键盘记录`, 112–113
+  4. `键盘记录`, 112–113
 
-     5. `在笔记本电脑上`, 188–193
+  5. `在笔记本电脑上`, 188–193
 
-     6. `网络分析仪`, 114–115
+  6. `网络分析仪`, 114–115
 
-     7. `传统方式`, 99–101
+  7. `传统方式`, 99–101
 
-     8. `受密码保护的文件`, 110–112
+  8. `受密码保护的文件`, 110–112
 
-     9. `手机和平板电脑`, 193–198
+  9. `手机和平板电脑`, 193–198
 
-     10. `统计`, 110
+  10. `统计`, 110
 
-     11. `弱 BIOS 密码`, 116
+  11. `弱 BIOS 密码`, 116
 
-     12. `弱密码存储`, 113–114
+  12. `弱密码存储`, 113–114
 
-     13. `弱密码停滞`, 116–117
+  13. `弱密码停滞`, 116–117
 
 60. `系统崩溃`, 17–18
 
@@ -7677,25 +7056,25 @@ Kevin 可以通过他的网站[`https://www.principlelogic.com`](http://www.prin
 
 3. `数据库`
 
-    1. `关于`, 303
+  1. `关于`, 303
 
-    2. `选择安全测试工具`, 304
+  2. `选择安全测试工具`, 304
 
-    3. `破解密码`, 305–306
+  3. `破解密码`, 305–306
 
-    4. `在网络中查找`, 304–305
+  4. `在网络中查找`, 304–305
 
-    5. `降低安全风险`, 307–308
+  5. `降低安全风险`, 307–308
 
-    6. `工具和资源`, 358
+  6. `工具和资源`, 358
 
-    7. `漏洞`, 306–307
+  7. `漏洞`, 306–307
 
 4. `Davis, Peter T. (作者)`
 
-    1. *`Hacking Wireless Networks For Dummies`*, 169
+  1. *`Hacking Wireless Networks For Dummies`*, 169
 
-    2. *`Wireless Networks For Dummies`*, 184
+  2. *`Wireless Networks For Dummies`*, 184
 
 5. `DDoS (分布式 DoS) 攻击`, 152–153
 
@@ -7705,9 +7084,9 @@ Kevin 可以通过他的网站[`https://www.principlelogic.com`](http://www.prin
 
 8. `欺骗`
 
-    1. `通过技术`, 73–74
+  1. `通过技术`, 73–74
 
-    2. `通过语言和行为`, 72–73
+  2. `通过语言和行为`, 72–73
 
 9. `Deep Freeze Enterprise (网站)`, 113, 369
 
@@ -7743,13 +7122,13 @@ Kevin 可以通过他的网站[`https://www.principlelogic.com`](http://www.prin
 
 25. `禁用`
 
-     1. `命令`, 240
+  1. `命令`, 240
 
-     2. `文件和打印共享 for Microsoft Networks`, 214
+  2. `文件和打印共享 for Microsoft Networks`, 214
 
-     3. `NetBIOS`, 210, 214
+  3. `NetBIOS`, 210, 214
 
-     4. `不需要的服务`, 236–238
+  4. `不需要的服务`, 236–238
 
 26. `分布式 DoS (DDoS) 攻击`, 152–153
 
@@ -7803,35 +7182,35 @@ E
 
 7. `Elcomsoft`
 
-    1. `高级压缩包密码恢复`, 111
+  1. `高级压缩包密码恢复`, 111
 
-    2. `分布式密码恢复`, 102, 306, 358, 366
+  2. `分布式密码恢复`, 102, 306, 358, 366
 
-    3. `取证磁盘解密`, 192, 366
+  3. `取证磁盘解密`, 192, 366
 
-    4. `iOS 取证工具包`, 194–197
+  4. `iOS 取证工具包`, 194–197
 
-    5. `手机破解`, 197, 363
+  5. `手机破解`, 197, 363
 
-    6. `主动密码审计`, 103
+  6. `主动密码审计`, 103
 
-    7. `主动系统密码恢复`, 101, 103
+  7. `主动系统密码恢复`, 101, 103
 
-    8. `系统恢复`, 22, 102, 188, 363, 366
+  8. `系统恢复`, 22, 102, 188, 363, 366
 
-    9. `网站`, 188
+  9. `网站`, 188
 
-    10. `无线安全审计 (EWSA)`, 161, 169, 373
+  10. `无线安全审计 (EWSA)`, 161, 169, 373
 
 8. `电子邮件攻击`
 
-    1. `关于`, 254
+  1. `关于`, 254
 
-    2. `横幅`, 258–260
+  2. `横幅`, 258–260
 
-    3. `降低安全风险的最佳实践`, 269–270
+  3. `降低安全风险的最佳实践`, 269–270
 
-    4. `电子邮件炸弹`, 255–258
+  4. `电子邮件炸弹`, 255–258
 
 9. `电子邮件炸弹`, 255–258
 
@@ -7839,1817 +7218,1797 @@ E
 
 11. `电子邮件头披露`, 266–267
 
+12. `电子邮件、网络钓鱼`, 68, 77–79
 
+13. `员工`, 68, 73
 
-12. 电子邮件、网络钓鱼、68、77–79
+14. `启用系统日志记录`, 333
 
-13. 员工、68、73
+15. `加密`, 167–170, 269
 
-14. 启用系统日志记录、333
+16. `列举工具`, 55
 
-15. 加密、167–170、269
+17. `错误和遗漏保险`, 40
 
-16. 列举工具、55
+18. `必要 NetTools (TamoSoft)`, 128, 135, 364
 
-17. 错误和遗漏保险、40
+19. `以太网连接，拔除`, 27
 
-18. 必要 NetTools (TamoSoft)、128、135、364
+20. `伦理黑客`, `定义`, 8
 
-19. 以太网连接、拔除、27
+21. `伦理黑客。*另见特定主题*`
 
-20. 伦理黑客、定义、8
+  1. `关于`, 1
 
-21. 伦理黑客。*另见特定主题* 
+  2. `自动化补丁`, 331–332
 
-     1.  关于、1
+  3. `与恶意黑客相比`, 10–12
 
-     2.  自动化补丁、331–332
+  4. `外包`, 334–335
 
-     3.  与恶意黑客相比、10–12
+  5. `过程`, 18–24
 
-     4.  外包、334–335
+  6. `原因`, 12–13
 
-     5.  过程、18–24
+  7. `规则`, 16–18
 
-     6.  原因、12–13
+  8. `安全风险`, 14–16
 
-     7.  规则、16–18
+  9. `术语`, 7–9
 
-     8.  安全风险、14–16
+22. `ettercap (网站)`, 141
 
-     9.  术语、7–9
+23. `评估伦理黑客的结果`, 23
 
-22. ettercap (网站)、141
+24. `“恶意双胞胎”`, 27
 
-23. 评估伦理黑客的结果、23
+25. `执行伦理黑客计划`, 22–23
 
-24. “恶意双胞胎”、27
+26. `利用`
 
-25. 执行伦理黑客计划、22–23
+  1. `可能性和影响`, 319–320
 
-26. 利用 
+  2. `缺失补丁`, 217–225
 
-     1.  可能性和影响、319–320
+  3. `社交工程攻击中的关系`, 72–74
 
-     2.  缺失补丁、217–225
+  4. `工具和资源`, 359
 
-     3.  社交工程攻击中的关系、72–74
+27. `EXPN` 命令, 261–263
 
-     4.  工具和资源、359
-
-27. `EXPN` 命令、261–263
-
-28. 外部黑客、8
+28. `外部黑客`, 8
 
 ### F
 
-1.  Facebook (网站)、62
+1. `Facebook (网站)`, 62
 
-2.  失败登录计数器、120–121
+2. `失败登录计数器`, 120–121
 
-3.  Failure Modes and Effects Analysis (FMEA)、41
+3. `Failure Modes and Effects Analysis (FMEA)`, 41
 
-4.  伪造员工、68
+4. `伪造员工`, 68
 
-5.  伪造支持人员、68
+5. `伪造支持人员`, 68
 
-6.  伪造供应商、68
+6. `伪造供应商`, 68
 
-7.  恐惧、不确定性和疑虑 (FUD)、342
+7. `恐惧、不确定性和疑虑 (FUD)`, 342
 
-8.  光纤通道、308
+8. `光纤通道`, 308
 
-9.  文件和打印共享 (Microsoft Networks)、214
+9. `文件和打印共享 (Microsoft Networks)`, 214
 
-10. 文件权限、在 Linux 中检查、242–244
+10. `文件权限，在 Linux 中检查`, 242–244
 
-11.  FileLocator Pro、310、311、369
+11. `FileLocator Pro`, 310, 311, 369
 
-12.  FileLocator Pro (网站)、113
+12. `FileLocator Pro (网站)`, 113
 
-13.  The File Extension Source (网站)、359
+13. `The File Extension Source (网站)`, 359
 
-14.  FileVault、93
+14. `FileVault`, 93
 
-15.  FIN Stealth scan、133
+15. `FIN Stealth scan`, 133
 
-16.  Finnigan, Pete (安全专家)、305
+16. `Finnigan, Pete (安全专家)`, 305
 
-17.  Firefox Add-ons、289
+17. `Firefox Add-ons`, 289
 
-18.  Firefox Web Developer (网站)、284、371
+18. `Firefox Web Developer (网站)`, 284, 371
 
-19.  Fireking safes (网站)、92
+19. `Fireking safes (网站)`, 92
 
-20.  Firemon Risk Analyzer (网站)、139
+20. `Firemon Risk Analyzer (网站)`, 139
 
-21.  防火墙 
+21. `防火墙`
 
-     1.  电子邮件、258
+  1. `电子邮件`, 258
 
-     2.  iptables、233
+  2. `iptables`, 233
 
-     3.  防止 NetBIOS 攻击、210
+  3. `防止 NetBIOS 攻击`, 210
 
-     4.  部署、300
+  4. `部署`, 300
 
-     5.  测试规则、138–140
+  5. `测试规则`, 138–140
 
-     6.  使用、156–157
+  6. `使用`, 156–157
 
-22. 固件补丁、186
+22. `固件补丁`, 186
 
-23.  先进先出缓冲区、143
+23. `先进先出缓冲区`, 143
 
-24.  灵活性、346
+24. `灵活性`, 346
 
-25.  FMEA (Failure Modes and Effects Analysis)、41
+25. `FMEA (Failure Modes and Effects Analysis)`, 41
 
-26.  侦察 
+26. `侦察`
 
-     1.  关于、51
+  1. `关于`, 51
 
-     2.  收集公开信息、51–52、61–64
+  2. `收集公开信息`, 51–52, 61–64
 
-     3.  映射网络、64–66
+  3. `映射网络`, 64–66
 
-27.  Forensic Disk Decryptor (Elcomsoft)、192
+27. `Forensic Disk Decryptor (Elcomsoft)`, 192
 
-28.  制定伦理黑客计划、18–20
+28. `制定伦理黑客计划`, 18–20
 
-29.  Fortinet (网站)、300、308、313、364
+29. `Fortinet (网站)`, 300, 308, 313, 364
 
-30.  Fortres 101 (网站)、113、369
+30. `Fortres 101 (网站)`, 113, 369
 
-31.  Foundstone's SASS Hacme Tools (网站)、299、372
+31. `Foundstone's SASS Hacme Tools (网站)`, 299, 372
 
-32.  fping (网站)、53
+32. `fping (网站)`, 53
 
-33.  FTP (ftpd)、230、235
+33. `FTP (ftpd)`, 230, 235
 
-34.  FUD (fear, uncertainty, and doubt)、342
+34. `FUD (fear, uncertainty, and doubt)`, 342
 
-35.  全盘加密、192
+35. `全盘加密`, 192
 
 ### G
 
-1.  收集公开信息、51–52、61–64
+1. `收集公开信息`, 51–52, 61–64
 
-2.  GDPR (Global Data Protection Regulation) (网站)、361
+2. `GDPR (Global Data Protection Regulation) (网站)`, 361
 
-3.  通用研究工具、359–360
+3. `通用研究工具`, 359–360
 
-4.  通用安全扫描、297
+4. `通用安全扫描`, 297
 
-5.  `GET` 请求、292
+5. `GET` 请求, 292
 
-6.  Getif、128、135–136、364
+6. `Getif`, 128, 135–136, 364
 
-7.  GFI EventsManager (网站)、333、362
+7. `GFI EventsManager (网站)`, 333, 362
 
-8.  GFI LanGuard、57、204、206、225–226、249、326、361、364、367、373
+8. `GFI LanGuard`, 57, 204, 206, 225–226, 249, 326, 361, 364, 367, 373
 
-9.  GHDB (Google Hacking Database)、282、372
+9. `GHDB (Google Hacking Database)`, 282, 372
 
-10.  GIAC (SANS Global Information Assurance Certification)、11
+10. `GIAC (SANS Global Information Assurance Certification)`, 11
 
-11.  Glassdoor (网站)、62
+11. `Glassdoor (网站)`, 62
 
-12.  GLBA (Gramm-Leach-Bliley Act)、12、361
+12. `GLBA (Gramm-Leach-Bliley Act)`, 12, 361
 
-13.  Global Data Protection Regulation (GDPR) (网站)、361
+13. `Global Data Protection Regulation (GDPR) (网站)`, 361
 
-14.  GNU MAC Changer (网站)、150、182
+14. `GNU MAC Changer (网站)`, 150, 182
 
-15.  目标、建立、37–40
+15. `目标，建立`, 37–40
 
-16.  好人 (白帽) 黑客、9、29
+16. `好人 (白帽) 黑客`, 9, 29
 
-17.  Google、62、281–282、359
+17. `Google`, 62, 281–282, 359
 
-18.  Google Groups、282
+18. `Google Groups`, 282
 
-19.  Google Hack Honeypot (网站)、283、372
+19. `Google Hack Honeypot (网站)`, 283, 372
 
-20.  Google Hacking Database (GHDB)、282、372
+20. `Google Hacking Database (GHDB)`, 282, 372
 
-21.  *Google Hacking for Penetration Testers* (Long)、282
+21. `*Google Hacking for Penetration Testers* (Long)`, 282
 
-22.  管理、348
+22. `管理`, 348
 
-23.  政府资源、64、359
+23. `政府资源`, 64, 359
 
-24.  抓取横幅、137–138
+24. `抓取横幅`, 137–138
 
-25.  Gramm-Leach-Bliley Act (GLBA)、12、361
+25. `Gramm-Leach-Bliley Act (GLBA)`, 12, 361
 
-26.  gray hat 黑客、9、29
+26. `gray hat 黑客`, 9, 29
 
-27.  Greenidea, Inc. (网站)、337
+27. `Greenidea, Inc. (网站)`, 337
 
-28.  Greenidea Visible Statement (网站)、370
+28. `Greenidea Visible Statement (网站)`, 370
 
-29.  保证、352
+29. `保证`, 352
 
 ### H
 
-1.  黑客。*另见特定主题* 
+1. `黑客。*另见特定主题*`
 
-    1.  关于、8–9
+  1. `关于`, 8–9
 
-    2.  攻击方式、33–35
+  2. `攻击方式`, 33–35
 
-    3.  定义、8
+  3. `定义`, 8
 
-    4.  为雇佣、30
+  4. `为雇佣`, 30
 
-    5.  维护匿名性、35–36
+  5. `维护匿名性`, 35–36
 
-    6.  公众对黑客的看法、25–28
+  6. `公众对黑客的看法`, 25–28
 
-    7.  原因、30–33
+  7. `原因`, 30–33
 
-    8.  思维像坏人、27
+  8. `思维像坏人`, 27
 
-    9.  谁是?、28–30
+  9. `谁是?`, 28–30
 
-2.  Hackin9 (网站)、35、360
+2. `Hackin9 (网站)`, 35, 360
 
-3.  黑客。*见* 伦理黑客
+3. `黑客。*见* 伦理黑客`
 
-4.  *Hacking Wireless Networks For Dummies* (Beaver and Davis)、169
+4. `*Hacking Wireless Networks For Dummies* (Beaver and Davis)`, 169
 
-5.  默认。*另见特定主题* 
+5. `默认。*另见特定主题*`
 
-    1.  文件权限、243
+  1. `文件权限`, 243
 
-    2.  NFS (Network File System)、241–242
+  2. `NFS (Network File System)`, 241–242
 
-    3.  物理安全、245
+  3. `物理安全`, 245
 
-    4.  使用 hosts.equiv 文件、239
+  4. `使用 hosts.equiv 文件`, 239
 
-    5.  使用 .rhosts 文件、239–240
+  5. `使用 .rhosts 文件`, 239–240
 
+6. `hacktivists`, 30
 
+7. `“hard, crunchy outside; soft, chewy inside,”`, 68
 
-6. hacktivists, `[30`](#c02.xhtml#Page_30)
+8. `hardening systems`, 326–327
 
-7. “hard, crunchy outside; soft, chewy inside,” `[68`](#c06.xhtml#Page_68)
+9. `hashes`, 103–104, 306
 
-8. hardening systems, `[326`](#c18.xhtml#Page_326)–327
+10. `Health Information Technology for Economic and Clinical Health (HITECH) Act`, 12
 
-9. hashes, `[103`](#c08.xhtml#Page_103)–104, `[306`](#c16.xhtml#Page_306)
+11. `Health Insurance Portability and Accountability Act (HIPAA)`, 10, 12, 361
 
-10. Health Information Technology for Economic and Clinical Health (HITECH) Act, `[12`](#c01.xhtml#Page_12)
+12. `Herold, Rebecca (author)`
 
-11. Health Insurance Portability and Accountability Act (HIPAA), `[10`](#c01.xhtml#Page_10), `[12`](#c01.xhtml#Page_12), `[361`](#a01.xhtml#Page_361)
+  1. `*Managing an Information Security and Privacy Awareness and Training Program*`, 370
 
-12. Herold, Rebecca (author) 
+13. `hidden field manipulation`, 286–287
 
-     1. *Managing an Information Security and Privacy Awareness and Training Program*, `[370`](#a01.xhtml#Page_370)
+14. `hidden shares`, 210
 
-13. hidden field manipulation, `[286`](#c15.xhtml#Page_286)–287
+15. `high-tech tools, cracking password with`, 102–110
 
-14. hidden shares, `[210`](#c12.xhtml#Page_210)
+16. `HIPAA (Health Insurance Portability and Accountability Act)`, 10, 12
 
-15. high-tech tools, cracking password with, `[102`](#c08.xhtml#Page_102)–110
+14. `工具和资源`, 361
 
-16. HIPAA (Health Insurance Portability and Accountability Act), `[10`](#c01.xhtml#Page_10), `[12`](#c01.xhtml#Page_12)
+15. `漏洞`, 228
 
+16. `Linux Administrator's Security Guide (网站)`, 370
 
+17. `Linux Security Auditing Tool (LSAT)`, 361
 
-14. 工具和资源，361
+18. `live (可启动) CDs`, 160–161
 
-15. 漏洞，228
+19. `live toolkits`, 362
 
-16. Linux Administrator's Security Guide (网站)，370
+20. `llCommView (TamoSoft)`, 161
 
-17. Linux Security Auditing Tool (LSAT)，361
+21. `位置，选择`, 46
 
-18. live (可启动) CDs，160–161
+22. `日志分析`, 362
 
-19. live toolkits，362
+23. `记录安全事件`, 333
 
-20. llCommView (TamoSoft)，161
+24. `Long, Johnny (作者)`
 
-21. 位置，选择，46
+  1. `*Google Hacking for Penetration Testers*`, 282
 
-22. 日志分析，362
+25. `Long, Johnny (安全专家)`, 282
 
-23. 记录安全事件，333
+26. `low-hanging fruit`, 32
 
-24. Long, Johnny (作者)
+27. `LSAT (Linux Security Auditing Tool)`, 361
 
-     1. *Google Hacking for Penetration Testers*，282
+28. `lsof` 命令, 236
 
-25. Long, Johnny (安全专家)，282
-
-26. low-hanging fruit，32
-
-27. LSAT (Linux Security Auditing Tool)，361
-
-28. `lsof` 命令，236
-
-29. LUCY (网站)，78–79，368
+29. `LUCY (网站)`, 78–79, 368
 
 ### M
 
-1.  MaaS360 (网站)，194
+1. `MaaS360 (网站)`, 194
 
-2.  MAC 地址供应商查找 (网站)，364
+2. `MAC 地址供应商查找 (网站)`, 364
 
-3.  MAC 伪造，150–151，179–183
+3. `MAC 伪造`, 150–151, 179–183
 
-4.  mailsnarf (网站)，362
+4. `mailsnarf (网站)`, 362
 
-5.  假设，46–47
+5. `假设`, 46–47
 
-6.  恶意用户
+6. `恶意用户`
 
-     1.  关于，9
+  1. `关于`, 9
 
-     2.  与伦理黑客相比，10–12
+  2. `与伦理黑客相比`, 10–12
 
-     3.  定义，8
+  3. `定义`, 8
 
-     4.  监控，332–334
+  4. `监控`, 332–334
 
-7.  malware，268，357
+7. `malware`, 268, 357
 
-8.  ManageEngine (网站)，249，367
+8. `ManageEngine (网站)`, 249, 367
 
-9.  *Managing an Information Security and Privacy Awareness and Training Program* (Herold)，370
+9. `*Managing an Information Security and Privacy Awareness and Training Program* (Herold)`, 370
 
-10.  手动分析，280
+10. `手动分析`, 280
 
-11.  手动评估，56–57
+11. `手动评估`, 56–57
 
-12.  映射
+12. `映射`
 
-     1.  网络，64–66
+  1. `网络`, 64–66
 
-     2.  null sessions，211–212
+  2. `null sessions`, 211–212
 
-13.  `maxsize` 变量，284
+13. `maxsize` 变量, 284
 
-14.  MBSA (Microsoft Baseline Security Analyzer)，203，226，326，373
+14. `MBSA (Microsoft Baseline Security Analyzer)`, 203, 226, 326, 373
 
-15.  McAfee Host Intrusion Prevention for Server (网站)，233，372
+15. `McAfee Host Intrusion Prevention for Server (网站)`, 233, 372
 
-16.  MDM (移动设备管理)，193
+16. `MDM (移动设备管理)`, 193
 
-17.  消息传递。 *See* 通信和消息传递系统
+17. `消息传递。*See* 通信和消息传递系统`
 
-18.  Metasploit
+18. `Metasploit`
 
-     1.  关于，22，279
+  1. `关于`, 22, 279
 
-     2.  利用未打补丁的漏洞，220–225
+  2. `利用未打补丁的漏洞`, 220–225
 
-     3.  网站，58，204，220，244，268，359
+  3. `网站`, 58, 204, 220, 244, 268, 359
 
-19.  方法论
+19. `方法论`
 
-     1.  评估漏洞，56–57
+  1. `评估漏洞`, 56–57
 
-     2.  足迹，51–52
+  2. `足迹`, 51–52
 
-     3.  开放端口，53
+  3. `开放端口`, 53
 
-     4.  入侵系统，58
+  4. `入侵系统`, 58
 
-     5.  扫描系统，52–53
+  5. `扫描系统`, 52–53
 
-     6.  测试，49–51
+  6. `测试`, 49–51
 
-20.  Microsoft (网站)，93
+20. `Microsoft (网站)`, 93
 
-21.  Microsoft Baseline Security Analyzer (MBSA)，203，226，326，373
+21. `Microsoft Baseline Security Analyzer (MBSA)`, 203, 226, 326, 373
 
-22.  Microsoft BitLocker Administration and Monitoring (网站)，363
+22. `Microsoft BitLocker Administration and Monitoring (网站)`, 363
 
-23.  Microsoft Security Compliance Manager (网站)，308，370
+23. `Microsoft Security Compliance Manager (网站)`, 308, 370
 
-24.  Microsoft Security Tech Center (网站)，367
+24. `Microsoft Security Tech Center (网站)`, 367
 
-25.  Microsoft SQL Server Management Studio (网站)，306
+25. `Microsoft SQL Server Management Studio (网站)`, 306
 
-26.  Microsoft SQL Server Management Studio Express (网站)，358
+26. `Microsoft SQL Server Management Studio Express (网站)`, 358
 
-27.  Microsoft tools，203–205
+27. `Microsoft tools`, 203–205
 
-28.  Microsoft Visio，42
+28. `Microsoft Visio`, 42
 
-29.  最小化
+29. `最小化`
 
-     1.  数据库安全风险，307–308
+  1. `数据库安全风险`, 307–308
 
-     2.  存储系统安全风险，312–313
+  2. `存储系统安全风险`, 312–313
 
-     3.  Web 安全风险，298–301
+  3. `Web 安全风险`, 298–301
 
-30.  缺失补丁，利用，217–225
+30. `缺失补丁，利用`, 217–225
 
-31.  错误，351–355
+31. `错误`, 351–355
 
-32.  Mitnick, Kevin (黑客)，28
+32. `Mitnick, Kevin (黑客)`, 28
 
-33.  移动设备管理 (MDM)，193
+33. `移动设备管理 (MDM)`, 193
 
-34.  移动设备
+34. `移动设备`
 
-     1.  关于，187
+  1. `关于`, 187
 
-     2.  应用，194
+  2. `应用`, 194
 
-     3.  破解笔记本电脑密码，188–193
+  3. `破解笔记本电脑密码`, 188–193
 
-     4.  破解手机和平板，193–198
+  4. `破解手机和平板`, 193–198
 
-     5.  工具和资源，363
+  5. `工具和资源`, 363
 
-     6.  漏洞，187–188
+  6. `漏洞`, 187–188
 
-35.  monitor mode，143
+35. `monitor mode`, 143
 
-36.  监控恶意使用，332–334
+36. `监控恶意使用`, 332–334
 
-37.  多平台更新管理工具，249
+37. `多平台更新管理工具`, 249
 
 ### N
 
-1.  NAS (NFS 基于的网络附加存储) 系统，308
+1. `NAS (NFS 基于的网络附加存储) 系统`, 308
 
-2.  NAT (网络地址转换)，139
+2. `NAT (网络地址转换)`, 139
 
-3.  National Institute of Standards and Technology (NIST)，56，121，275，366，371
+3. `National Institute of Standards and Technology (NIST)`, 56, 121, 275, 366, 371
 
-4.  National Vulnerability Database (网站)，98，234，318，371
+4. `National Vulnerability Database (网站)`, 98, 234, 318, 371
 
-5.  nbtstat (NetBIOS over TCP/IP 统计)，203
+5. `nbtstat (NetBIOS over TCP/IP 统计)`, 203
 
-6.  NERC (North American Electric Reliability Corporation) CIP 要求，12
+6. `NERC (North American Electric Reliability Corporation) CIP 要求`, 12
 
-7.  Nessus (网站)，22，229，364
+7. `Nessus (网站)`, 22, 229, 364
 
-8.  `net use` 命令，212
+8. `net use` 命令, 212
 
-9.  `net view` 命令，212–213
+9. `net view` 命令, 212–213
 
-10.  NetBIOS (网络基本输入/输出系统)，203，208–210
+10. `NetBIOS (网络基本输入/输出系统)`, 203, 208–210
 
-11.  NetBIOS 审计工具 (网站)，366
+11. `NetBIOS 审计工具 (网站)`, 366
 
-12.  NetBIOS over TCP/IP 统计 (nbstat)，203
+12. `NetBIOS over TCP/IP 统计 (nbstat)`, 203
 
-13.  Netcat (网站)，138–139，364
+13. `Netcat (网站)`, 138–139, 364
 
-14.  Netcraft 搜索实用程序 (网站)，55
+14. `Netcraft 搜索实用程序 (网站)`, 55
 
-15.  Netcraft's *What's that site running?* (网站)，360
+15. `Netcraft's *What's that site running?* (网站)`, 360
 
-16.  netfilter/iptables (网站)，364
+16. `netfilter/iptables (网站)`, 364
 
-17.  NetResident (TamoSoft)，144，267，364
+17. `NetResident (TamoSoft)`, 144, 267, 364
 
-18.  NetScanTools Pro，22，53，65，128，133–134，135，165，204，229，263，364
+18. `NetScanTools Pro`, 22, 53, 65, 128, 133–134, 135, 165, 204, 229, 263, 364
 
-19.  Netsparker，21，22，273，278，372
+19. `Netsparker`, 21, 22, 273, 278, 372
 
-20.  `netstat` 命令，236
+20. `netstat` 命令, 236
 
-21.  NetStumbler，164，374
+21. `NetStumbler`, 164, 374
 
-22.  Network Address Translation (NAT)，139
+22. `Network Address Translation (NAT)`, 139
 
-23.  network analyzer
+23. `network analyzer`
 
-     1.  关于，140–145
+  1. `关于`, 140–145
 
-     2.  针对漏洞的对策，146
+  2. `针对漏洞的对策`, 146
 
-     3.  利用该工具破解密码，114–115
+  3. `利用该工具破解密码`, 114–115
 
-     4.  程序，141–146
+  4. `程序`, 141–146
 
-24.  Network Basic Input/Output System (NetBIOS)，203，208–210
+24. `Network Basic Input/Output System (NetBIOS)`, 203, 208–210
 
-25.  network components, physical security vulnerabilities，90–93
+25. `network components, physical security vulnerabilities`, 90–93
 
-26.  network infrastructure
+26. `network infrastructure`
 
-     1.  关于，125–126
+  1. `关于`, 125–126
 
-     2.  攻击，15
+  2. `攻击`, 15
 
-     3.  选择工具，127–128
+  3. `选择工具`, 127–128
 
-     4.  安装通用网络防护，156–157
+  4. `安装通用网络防护`, 156–157
 
-     5.  在网络上进行伦理黑客攻击，129–156
+  5. `在网络上进行伦理黑客攻击`, 129–156
 
+6. `易受攻击的脆弱性`, 126–127
 
+27. `*网络安全入门* (Cobb)`, 122
 
-6. 易受攻击的脆弱性，126–127
+28. `网络安全工具包 (网站)`, 362
 
-27. *网络安全入门* (Cobb)，122
+29. `网络用户 (网站)`, 373
 
-28. 网络安全工具包 (网站)，362
+30. `网络`
 
-29. 网络用户 (网站)，373
+  1. `分析数据`, 140–146
 
-30. 网络
+  2. `查找数据库`, 304–305
 
-     1. 分析数据，140–146
+  3. `映射`, 64–66
 
-     2. 查找数据库，304–305
+  4. `工具和资源`, 363–365
 
-     3. 映射，64–66
+31. `Nexpose`, 22, 57, 128, 153, 204, 225–226, 229, 273, 304, 309, 358, 361, 364, 373
 
-     4. 工具和资源，363–365
+32. `基于 NFS 的网络附加存储 (NAS) 系统`, 308
 
-31. Nexpose，22，57，128，153，204，225–226，229，273，304，309，358，361，364，373
+33. `NIST (国家标准与技术研究院)`, 56, 121, 275, 366, 371
 
-32. 基于 NFS 的网络附加存储 (NAS) 系统，308
+34. `Nmap`, 53, 128, 131–132, 132–133, 206, 229, 230, 235, 364
 
-33. NIST (国家标准与技术研究院)，56，121，275，366，371
+35. `NMapWin (网站)`, 55, 128, 364
 
-34. Nmap，53，128，131–132，132–133，206，229，230，235，364
+36. `非技术性攻击`, 14
 
-35. NMapWin (网站)，55，128，364
+37. `北美电力可靠性公司 (NERC) CIP 要求`, 12
 
-36. 非技术性攻击，14
+38. `Nping (网站)`, 165, 364
 
-37. 北美电力可靠性公司 (NERC) CIP 要求，12
+39. `NTAccess (网站)`, 188, 366
 
-38. Nping (网站)，165，364
+40. `零扫描`, 133
 
-39. NTAccess (网站)，188，366
-
-40. 零扫描，133
-
-41. 零会话，检测，211–212
+41. `零会话，检测`, 211–212
 
 ### O
 
-1. 缺乏安全性，安全通过，299
+1. `缺乏安全性，安全通过`, 299
 
-2. Offensive Security Certified Professional (OSCP)，11
+2. `Offensive Security Certified Professional (OSCP)`, 11
 
-3. Offensive Security 的漏洞数据库 (网站)，224，359
+3. `Offensive Security 的漏洞数据库 (网站)`, 224, 359
 
-4. 办公室，物理安全，85–93
+4. `办公室，物理安全`, 85–93
 
-5. 官方互联网协议标准 (网站)，126
+5. `官方互联网协议标准 (网站)`, 126
 
-6. 双向无线天线，161
+6. `双向无线天线`, 161
 
-7. OmniPeek (Savvius)，22，115，128，141，161，275，364，371，374
+7. `OmniPeek (Savvius)`, 22, 115, 128, 141, 161, 275, 364, 371, 374
 
-8. Omnipeek (网站)，53
+8. `Omnipeek (网站)`, 53
 
-9. 开放集团的 FAIR 风险税 onomy (网站)，368
+9. `开放集团的 FAIR 风险税 onomy (网站)`, 368
 
-10. 开放端口，53–56
+10. `开放端口`, 53–56
 
-11. 开源安全测试方法手册 (网站)，58，368
+11. `开源安全测试方法手册 (网站)`, 58, 368
 
-12. 开源 Tripwire (网站)，241
+12. `开源 Tripwire (网站)`, 241
 
-13. 开放 Web 应用安全项目 (网站)，57，278
+13. `开放 Web 应用安全项目 (网站)`, 57, 278
 
-14. 操作指南，用于最小化电子邮件安全威胁，270
+14. `操作指南，用于最小化电子邮件安全威胁`, 270
 
-15. 操作系统，15，121–122
+15. `操作系统`, 15, 121–122
 
-16. ophcrack，21，102，107，191，363，366
+16. `ophcrack`, 21, 102, 107, 191, 363, 366
 
-17. ophcrack LiveCD (网站)，90
+17. `ophcrack LiveCD (网站)`, 90
 
-18. Oracle，305
+18. `Oracle`, 305
 
-19. 组织密码脆弱性，97
+19. `组织密码脆弱性`, 97
 
-20. OSCP (Offensive Security Certified Professional)，11
+20. `OSCP (Offensive Security Certified Professional)`, 11
 
-21. Outlook Web Access (OWA)，270
+21. `Outlook Web Access (OWA)`, 270
 
-22. 外包
+22. `外包`
 
-     1. 伦理黑客，334–335
+  1. `伦理黑客`, 334–335
 
-     2. 安全监控，333–334
+  2. `安全监控`, 333–334
 
-     3. 测试，355
+  3. `测试`, 355
 
-23. OWA (Outlook Web Access)，270
+23. `OWA (Outlook Web Access)`, 270
 
-24. OWASP (网站)，368
+24. `OWASP (网站)`, 368
 
-25. OWASP WebGoat 项目 (网站)，298
+25. `OWASP WebGoat 项目 (网站)`, 298
 
-26. OWASP Zed Attack Proxy 项目 (网站)，372
+26. `OWASP Zed Attack Proxy 项目 (网站)`, 372
 
-27. Oxygen Forensic Suite (网站)，363
+27. `Oxygen Forensic Suite (网站)`, 363
 
 ### P
 
-1. Palo Alto Networks (网站)，152，300
+1. `Palo Alto Networks (网站)`, 152, 300
 
-2. Pandora (网站)，366
+2. `Pandora (网站)`, 366
 
-3. Paros Proxy (网站)，372
+3. `Paros Proxy (网站)`, 372
 
-4. 合作伙伴，348–349
+4. `合作伙伴`, 348–349
 
-5. 口令短语，118
+5. `口令短语`, 118
 
-6. Passware (网站)，189
+6. `Passware (网站)`, 189
 
-7. Passware Kit Forensic (网站)，363，366
+7. `Passware Kit Forensic (网站)`, 363, 366
 
-8. Password Safe (网站)，118，366
+8. `Password Safe (网站)`, 118, 366
 
-9. 密码破解软件，102–105
+9. `密码破解软件`, 102–105
 
-10. 受保护的文件，破解，110–112
+10. `受保护的文件，破解`, 110–112
 
-11. 密码。*另见* cracking passwords 
+11. `密码。*另见* cracking passwords`
 
-     1. 关于，95–96
+  1. `关于`, 95–96
 
-     2. 破解的对策，117–121
+  2. `破解的对策`, 117–121
 
-     3. 保护操作系统，121–122
+  3. `保护操作系统`, 121–122
 
-     4. 脆弱性，96–98
+  4. `脆弱性`, 96–98
 
-12. 补丁
+12. `补丁`
 
-     1. 关于，324–325
+  1. `关于`, 324–325
 
-     2. 自动化，325–326，331–332
+  2. `自动化`, 325–326, 331–332
 
-     3. Linux，248–249
+  3. `Linux`, 248–249
 
-     4. 管理，325，367
+  4. `管理`, 325, 367
 
-13. 专利和商标局 (网站)，64
+13. `专利和商标局 (网站)`, 64
 
-14. 支付卡行业数据安全标准 (PCI DSS)，10，12，361
+14. `支付卡行业数据安全标准 (PCI DSS)`, 10, 12, 361
 
-15. PCI DSS 渗透测试指南 (网站)，58
+15. `PCI DSS 渗透测试指南 (网站)`, 58
 
-16. PDQ Deploy (网站)，326
+16. `PDQ Deploy (网站)`, 326
 
-17. 渗透测试，1，58
+17. `渗透测试`, 1, 58
 
-18. 渗透测试执行标准 (网站)，58
+18. `渗透测试执行标准 (网站)`, 58
 
-19. 端到端保护，258
+19. `端到端保护`, 258
 
-20. 权限，共享，215–217
+20. `权限，共享`, 215–217
 
-21. Peter Davis & Associates 培训服务 (网站)，370
+21. `Peter Davis & Associates 培训服务 (网站)`, 370
 
-22. 钓鱼邮件，68，77–79
+22. `钓鱼邮件`, 68, 77–79
 
-23. Phone Breaker (Elcomsoft)，197，363
+23. `Phone Breaker (Elcomsoft)`, 197, 363
 
-24. 手机
+24. `手机`
 
-     1. 破解，193–198
+  1. `破解`, 193–198
 
-     2. 用于社交工程攻击，77
+  2. `用于社交工程攻击`, 77
 
-25. PHP (Hypertext Preprocessor)，291
+25. `PHP (Hypertext Preprocessor)`, 291
 
-26. Phrack (网站)，35
+26. `Phrack (网站)`, 35
 
-27. 物理安全
+27. `物理安全`
 
-     1. 关于，83
+  1. `关于`, 83
 
-     2. 基本脆弱性，84–85
+  2. `基本脆弱性`, 84–85
 
-     3. 使用 Linux 检查，245–246
+  3. `使用 Linux 检查`, 245–246
 
-     4. 网络分析仪，146
+  4. `网络分析仪`, 146
 
-     5. 你的办公室中的脆弱性，85–93，183–184
+  5. `你的办公室中的脆弱性`, 85–93, 183–184
 
-28. Ping of Death，153
+28. `Ping of Death`, 153
 
-29. Ping (ICMP echo) 回复，54
+29. `Ping (ICMP echo) 回复`, 54
 
-30. ping 扫描，131–132，135
+30. `ping 扫描`, 131–132, 135
 
-31. PIPEDA (加拿大个人信息保护和电子文档法)，12
+31. `PIPEDA (加拿大个人信息保护和电子文档法)`, 12
 
-32. pkgtool (Slackware 包工具)，248
+32. `pkgtool (Slackware 包工具)`, 248
 
-33. 计划开发
+33. `计划开发`
 
-     1. 关于，40
+  1. `关于`, 40
 
-     2. 攻击树分析，42
+  2. `攻击树分析`, 42
 
-     3. 选择要黑客的系统，40–41
+  3. `选择要黑客的系统`, 40–41
 
-     4. 创建测试标准，43–47
+  4. `创建测试标准`, 43–47
 
-     5. 设定目标，37–40
+  5. `设定目标`, 37–40
 
-     6. 保险，40
+  6. `保险`, 40
 
-     7. 选择安全评估工具，47–48
+  7. `选择安全评估工具`, 47–48
 
-34. 关闭安全漏洞
+34. `关闭安全漏洞`
 
-     1. 关于，323
+  1. `关于`, 323
 
+2. `评估安全基础设施`, 328–329
 
+3. `加固系统`, 326–327
 
-2. 评估安全基础设施，328–329
+4. `补丁`, 324–326
 
-3. 加固系统，326–327
+5. `将报告转化为行动`, 323–324
 
-4. 补丁，324–326
+35. `点对点隧道协议 (PPTP)`, 170–171
 
-5. 将报告转化为行动，323–324
+36. `政策，安全`, 11
 
-35. 点对点隧道协议 (PPTP)，170–171
+37. `POP3 命令`, 137
 
-36. 政策，安全，11
+38. `Port 80 软件的 ServerMask (网站)`, 299, 372
 
-37. POP3 命令，137
+40. `PortSentry (网站)`, 233, 364
 
-38. Port 80 软件的 ServerMask (网站)，299, 372
+41. `POST` 请求, 292
 
-40. PortSentry (网站)，233, 364
+42. `Postfix (网站)`, 270
 
-41. `POST` 请求，292
+43. `电源线，拔掉`, 27
 
-42. Postfix (网站)，270
+44. `PPTP (点对点隧道协议)`, 170–171
 
-43. 电源线，拔掉，27
+45. `预共享密钥 (PSKs)`, 169
 
-44. PPTP (点对点隧道协议)，170–171
+46. `事先批准`, 351
 
-45. 预共享密钥 (PSKs)，169
+47. `将漏洞优先级排序`, 319–320
 
-46. 事先批准，351
+48. `隐私，尊重`, 17
 
-47. 将漏洞优先级排序，319–320
+49. `隐私政策`, 66
 
-48. 隐私，尊重，17
+50. `Privacy Rights Clearinghouse 网站的数据泄露时间线 (website)`, 342, 369
 
-49. 隐私政策，66
+51. `Proactive Password Auditor (Elcomsoft)`, 21, 103, 366
 
-50. Privacy Rights Clearinghouse 网站的数据泄露时间线 (website)，342, 369
+52. `Proactive System Password Recovery (Elcomsoft)`, 101, 103
 
-51. Proactive Password Auditor (Elcomsoft)，21, 103, 366
+53. `伦理黑客的过程`
 
-52. Proactive System Password Recovery (Elcomsoft)，101, 103
+  1. `关于`, 18
 
-53. 伦理黑客的过程
+  2. `评估结果`, 23
 
-     1. 关于，18
+  3. `执行计划`, 22–23
 
-     2. 评估结果，23
+  4. `制定你的计划`, 18–20
 
-     3. 执行计划，22–23
+  5. `实施建议`, 23, 24
 
-     4. 制定你的计划，18–20
+  6. `选择工具`, 20–21
 
-     5. 实施建议，23, 24
+54. `专业责任保险`, 40
 
-     6. 选择工具，20–21
+55. `Project RainbowCrack (网站)`, 107
 
-54. 专业责任保险，40
+56. `PromiscDetect (网站)`, 115, 146, 365
 
-55. Project RainbowCrack (网站)，107
+57. `静默模式 (promiscuous mode)`, 115, 140
 
-56. PromiscDetect (网站)，115, 146, 365
+58. `协议`, 54
 
-57. 静默模式 (promiscuous mode)，115, 140
+59. `PROTOS (网站)`, 273, 371
 
-58. 协议，54
+60. `PSKs (预共享密钥)`, 169
 
-59. PROTOS (网站)，273, 371
+61. `*Psychology For Dummies* (Cash)`, 73
 
-60. PSKs (预共享密钥)，169
+62. `公共信息，收集`, 51–52, 61–64
 
-61. `Psychology For Dummies` (Cash)，73
+63. `公众对黑客的看法`, 25–28
 
-62. 公共信息，收集，51–52, 61–64
+64. `PVS-Studio 分析器 (网站)`, 300, 369
 
-63. 公众对黑客的看法，25–28
+65. `pwdump3`
 
-64. PVS-Studio 分析器 (网站)，300, 369
+  1. `使用 pwdump3 破解 Windows 密码`, 107–109
 
-65. pwdump3
+  2. `网站`, 103, 367
 
-     1. 使用 pwdump3 破解 Windows 密码，107–109
+66. `Pwnie Express (网站)`, 90, 359
 
-     2. 网站，103, 367
+1. `qmail (网站)`, 270
 
-66. Pwnie Express (网站)，90, 359
+2. `Qualys (网站)`, 229
 
-1. qmail (网站)，270
+3. `Qualys SSL Labs (网站)`, 372
 
-2. Qualys (网站)，229
+4. `QualysGuard`
 
-3. Qualys SSL Labs (网站)，372
+  1. `漏洞扫描器`, 365
 
-4. QualysGuard
-
-    1. 漏洞扫描器，365
-
-    2. 网站，57, 358, 361, 373
+  2. `网站`, 57, 358, 361, 373
 
 ### Q
 
-1. qmail (网站)，270
+1. `qmail (网站)`, 270
 
-2. Qualys (网站)，229
+2. `Qualys (网站)`, 229
 
-3. Qualys SSL Labs (网站)，372
+3. `Qualys SSL Labs (网站)`, 372
 
-4. QualysGuard
+4. `QualysGuard`
 
-    1. 漏洞扫描器，365
+  1. `漏洞扫描器`, 365
 
-    2. 网站，57, 358, 361, 373
+  2. `网站`, 57, 358, 361, 373
 
 ### R
 
-1. RADIUS 服务器，169
+1. `RADIUS 服务器`, 169
 
-2. 彩虹攻击，用于破解密码，107
+2. `彩虹攻击，用于破解密码`, 107
 
-3. 彩虹表，103, 367
+3. `彩虹表`, 103, 367
 
-4. RainbowCrack (网站)，103, 367
+4. `RainbowCrack (网站)`, 103, 367
 
-5. 将漏洞排名，319–320
+5. `将漏洞排名`, 319–320
 
-6. Rapid7 (网站)，57, 290
+6. `Rapid7 (网站)`, 57, 290
 
-7. RARPs (反向 ARP)，179
+7. `RARPs (反向 ARP)`, 179
 
-8. 实时传输协议 (RTP)，272
+8. `实时传输协议 (RTP)`, 272
 
-9. 伦理黑客的原因，347–350
+9. `伦理黑客的原因`, 347–350
 
-10. 黑客的原因，30–33
+10. `黑客的原因`, 30–33
 
-11. Reaver，173–174, 374
+11. `Reaver`, 173–174, 374
 
-12. Reaver Pro (网站)，173
+12. `Reaver Pro (网站)`, 173
 
-13. 录音业协会 (RIAA)，33
+13. `录音业协会 (RIAA)`, 33
 
-14. 录制音频流，273–275
+14. `录制音频流`, 273–275
 
-15. Red Hat 企业 Linux，240
+15. `Red Hat 企业 Linux`, 240
 
-16. Red Hat 包管理器 (RPM)，248
+16. `Red Hat 包管理器 (RPM)`, 248
 
-17. 红队，39
+17. `红队`, 39
 
-18. 重新组织的黑客，18, 336
+18. `重新组织的黑客`, 18, 336
 
-19. 非洲区域互联网注册管理机构 (AFRINIC)，66, 359
+19. `非洲区域互联网注册管理机构 (AFRINIC)`, 66, 359
 
-20. 北美、加勒比部分和下撒哈拉非洲区域的非洲互联网注册管理机构 (ARIN)，66, 359
+20. `北美、加勒比部分和下撒哈拉非洲区域的非洲互联网注册管理机构 (ARIN)`, 66, 359
 
-21. 注册表，104
+21. `注册表`, 104
 
-22. 监管问题，12
+22. `监管问题`, 12
 
-23. 相关运营商，282
+23. `相关运营商`, 282
 
-24. 关系，在社交工程攻击中被利用，72–74
+24. `关系，在社交工程攻击中被利用`, 72–74
 
-25. 中继，SMTP，263–266
+25. `中继，SMTP`, 263–266
 
-26. 记忆图标，3
+26. `记忆图标`, 3
 
-27. 报告结果
+27. `报告结果`
 
-     1. 关于，317
+  1. `关于`, 317
 
-     2. 编译，317–319
+  2. `编译`, 317–319
 
-     3. 创建报告，321–322
+  3. `创建报告`, 321–322
 
-     4. 将漏洞优先级排序，319–320
+  4. `将漏洞优先级排序`, 319–320
 
-28. 请求评论 (RFCs) 列表，126
+28. `请求评论 (RFCs) 列表`, 126
 
-29. 住宅电话，77
+29. `住宅电话`, 77
 
-30. 尊重隐私，17
+30. `尊重隐私`, 17
 
-31. 回应漏洞，46
+31. `回应漏洞`, 46
 
-32. 限制对系统的匿名连接，215
+32. `限制对系统的匿名连接`, 215
 
-33. 反向 ARP (RARP)，179
+33. `反向 ARP (RARP)`, 179
 
-34. 反向社会工程，73
+34. `反向社会工程`, 73
 
-35. RFCs (请求评论) 列表，126
+35. `RFCs (请求评论) 列表`, 126
 
-36. .rhosts 文件，238–341
+36. `.rhosts 文件`, 238–341
 
-37. RIAA (录音业协会)，33
+37. `RIAA (录音业协会)`, 33
 
-38. RIPE 网络协调中心 (网站)，66, 360
+38. `RIPE 网络协调中心 (网站)`, 66, 360
 
-39. 风险分类 (Open Group)，368
+39. `风险分类 (Open Group)`, 368
 
-40. 风险。*另见* 漏洞
+40. `风险。*另见* 漏洞`
 
-     1. 数据库安全，307–308
+  1. `数据库安全`, 307–308
 
-     2. 最小化存储系统安全，312–313
+  2. `最小化存储系统安全`, 312–313
 
-     3. 最小化 Web 安全，298–301
+  3. `最小化 Web 安全`, 298–301
 
-     4. 安全，14–16
+  4. `安全`, 14–16
 
-41. 野生无线设备，175–179
+41. `野生无线设备`, 175–179
 
-42. RPM (Red Hat 包管理器)，248
+42. `RPM (Red Hat 包管理器)`, 248
 
-43. RTP (实时传输协议)，272
+43. `RTP (实时传输协议)`, 272
 
-44. 伦理黑客的规则，16–18
+44. `伦理黑客的规则`, 16–18
 
 ### S
 
-1. SAM (安全帐户管理) 数据库，104
+1. `SAM (安全帐户管理) 数据库`, 104
 
-2. SANs (iSCSI 存储区域网络)，308
+2. `SANs (iSCSI 存储区域网络)`, 308
 
-3. SANS 关键安全控制，57
+3. `SANS 关键安全控制`, 57
 
-4. SANS 全球信息保障认证 (GIAC)，11, 358
+4. `SANS 全球信息保障认证 (GIAC)`, 11, 358
 
-5. SANS 学院，121, 371
+5. `SANS 学院`, 121, 371
 
-6. Savvius' OmniPeek (网站)，115, 128, 141, 161, 275, 364, 371, 374
+6. `Savvius' OmniPeek (网站)`, 115, 128, 141, 161, 275, 364, 371, 374
 
-7. 扫描仪，128
+7. `扫描仪`, 128
 
-8. 扫描
+8. `扫描`
 
-     1. 端口，129–135
+  1. `端口`, 129–135
 
-     2. SNMP (简单网络管理协议)，135–137
+  2. `SNMP (简单网络管理协议)`, 135–137
 
-     3. 系统，52–53
+  3. `系统`, 52–53
 
-9. Schwartau, Winn (安全分析师)，337
+9. `Schwartau, Winn (安全分析师)`, 337
 
-10. 抓取，78
+10. `抓取`, 78
 
+12. `script kiddies`, 26, 28, 34
 
+13. `SEC (Securities and Exchange Commission)`, 64, 75, 360
 
+14. `*(IN)SECURE Magazine*`, 35, 360
 
-12. script kiddies, 26, 28, 34
+15. `Secure Shell (SSH)`, 171
 
-13. SEC (Securities and Exchange Commission), 64, 75, 360
+16. `Secure Sockets Layer/Transport Layer Security (SSL/TLS)`, 171
 
-14. *(IN)SECURE Magazine*, 35, 360
+17. `securing`
 
-15. Secure Shell (SSH), 171
+  1. `operating systems`, 121–122
 
-16. Secure Sockets Layer/Transport Layer Security (SSL/TLS), 171
+  2. `.rhosts and hosts.equiv files`, 238–341
 
-17. securing 
+18. `Securities and Exchange Commission (SEC)`, 64, 75, 360
 
-     1.  operating systems, 121–122
+19. `security.*See also* physical security`
 
-     2.  .rhosts and hosts.equiv files, 238–341
+  1. `education and learning resources`, 368
 
-18. Securities and Exchange Commission (SEC), 64, 75, 360
+  2. `evaluations`, 348
 
-19. security. *See also* physical security 
+  3. `methods and models`, 368
 
-     1.  education and learning resources, 368
+  4. `monitoring outsourcing`, 333–334
 
-     2.  evaluations, 348
+  5. `by obscurity`, 299
 
-     3.  methods and models, 368
+  6. `Windows 10`, 219
 
-     4.  monitoring outsourcing, 333–334
+20. `Security Accounts Manager (SAM) database`, 104
 
-     5.  by obscurity, 299
+21. `security assessment tools`, 47–48
 
-     6.  Windows 10, 219
+22. `Security Awareness, Inc. (website)`, 337, 370
 
-20. Security Accounts Manager (SAM) database, 104
+23. `security events, logging`, 333
 
-21. security assessment tools, 47–48
+24. `security infrastructure, assessing`, 328–329
 
-22. Security Awareness, Inc. (website), 337, 370
+25. `*Security On Wheels* (blog)`, 368
 
-23. security events, logging, 333
+26. `security policy`, 11
 
-24. security infrastructure, assessing, 328–329
+27. `security processes, managing`
 
-25. *Security On Wheels* (blog), 368
+  1. `automating ethical-hacking`, 331–332
 
-26. security policy, 11
+  2. `maintaining security efforts`, 337
 
-27. security processes, managing 
+  3. `monitoring malicious use`, 332–334
 
-     1.  automating ethical-hacking, 331–332
+  4. `outsourcing ethical hacking`, 334–335
 
-     2.  maintaining security efforts, 337
+  5. `security-aware mindset`, 336–337
 
-     3.  monitoring malicious use, 332–334
+28. `security researchers`, 29
 
-     4.  outsourcing ethical hacking, 334–335
+29. `Security Tools Distribution (website)`, 362
 
-     5.  security-aware mindset, 336–337
+30. `security-aware mindset`, 336–337
 
-28. security researchers, 29
+31. `The Security Awareness Company (website)`, 337
 
-29. Security Tools Distribution (website), 362
+32. `Secur/Tree (Amenza Technologies Limited)`, 42, 368
 
-30. security-aware mindset, 336–337
+33. `selecting locations`, 46
 
-31. The Security Awareness Company (website), 337
+34. `semidirectional wireless antenna`, 161
 
-32. Secur/Tree (Amenza Technologies Limited), 42, 368
+35. `Sensitive Data Manager`, 311
 
-33. selecting locations, 46
+36. `Server Message Block (SMB)`, 208
 
-34. semidirectional wireless antenna, 161
+37. `ServerDefender (website)`, 300, 370
 
-35. Sensitive Data Manager, 311
+38. `service set identifier (SSID)`, 163
 
-36. Server Message Block (SMB), 208
+39. `Session Initiation Protocol (SIP)`, 272
 
-37. ServerDefender (website), 300, 370
+40. `SetGID`, 243
 
-38. service set identifier (SSID), 163
+41. `SetUID`, 243
 
-39. Session Initiation Protocol (SIP), 272
+42. `7-Zip (website)`, 10, 363
 
-40. SetGID, 243
+43. `SFTP`, 256
 
-41. SetUID, 243
+44. `Share Finder tool`, 209–210
 
-42. 7-Zip (website), 10, 363
+45. `share permissions, checking`, 215–217
 
-43. SFTP, 256
+46. `shares`, 209–210
 
-44. Share Finder tool, 209–210
+47. `Shavlik Patch (website)`, 367
 
-45. share permissions, checking, 215–217
+48. `shoulder surfing`, 95, 100
 
-46. shares, 209–210
+49. `showing value`, 346
 
-47. Shavlik Patch (website), 367
+50. `SIEM Data Collection Log Management (website)`, 362
 
-48. shoulder surfing, 95, 100
+51. `Simple Mail Transfer Protocol (SMTP)`
 
-49. showing value, 346
+  1. `account enumeration`, 260–263
 
-50. SIEM Data Collection Log Management (website), 362
+  2. `capturing traffic`, 267
 
-51. Simple Mail Transfer Protocol (SMTP) 
+  3. `e-mail header disclosures`, 266–267
 
-     1.  account enumeration, 260–263
+  4. `malware`, 268
 
-     2.  capturing traffic, 267
+  5. `relay`, 263–266
 
-     3.  e-mail header disclosures, 266–267
+52. `Simple Network Management Protocol (SNMP)`, 135–137
 
-     4.  malware, 268
+53. `SIP (Session Initiation Protocol)`, 272
 
-     5.  relay, 263–266
+54. `sipsak (website)`, 273
 
-52. Simple Network Management Protocol (SNMP), 135–137
+55. `SiteDigger (website)`, 372
 
-53. SIP (Session Initiation Protocol), 272
+56. `Slackware Linux Security Advisories (website)`, 367
 
-54. sipsak (website), 273
+57. `Slackware Package Tool (pkgtool)`, 248
 
-55. SiteDigger (website), 372
+58. `SMAC (KLC Consulting)`, 150–151, 182
 
-56. Slackware Linux Security Advisories (website), 367
+59. `SMAC MAC address changer (website)`, 365
 
-57. Slackware Package Tool (pkgtool), 248
+60. `SmartDraw (website)`, 42, 363
 
-58. SMAC (KLC Consulting), 150–151, 182
+61. `Smartwhois (website)`, 65
 
-59. SMAC MAC address changer (website), 365
+62. `SMB (Server Message Block)`, 208
 
-60. SmartDraw (website), 42, 363
+63. `SMTP (Simple Mail Transfer Protocol)`
 
-61. Smartwhois (website), 65
+  1. `account enumeration`, 260–263
 
-62. SMB (Server Message Block), 208
+  2. `capturing traffic`, 267
 
-63. SMTP (Simple Mail Transfer Protocol) 
+  3. `e-mail header disclosures`, 266–267
 
-     1.  account enumeration, 260–263
+  4. `malware`, 268
 
-     2.  capturing traffic, 267
+  5. `relay`, 263–266
 
-     3.  e-mail header disclosures, 266–267
+64. `SMTP command`, 137
 
-     4.  malware, 268
+65. `smtpscan (website)`, 259, 362
 
-     5.  relay, 263–266
+66. `Smurf (website)`, 357
 
-64. SMTP command, 137
+67. `Snare (website)`, 233
 
-65. smtpscan (website), 259, 362
+68. `SNARE (website)`, 365
 
-66. Smurf (website), 357
+69. `sniffdet (website)`, 115, 146, 365
 
-67. Snare (website), 233
+70. `Sniffer tool`, 140
 
-68. SNARE (website), 365
+71. `sniffing, defined`, 140
 
-69. sniffdet (website), 115, 146, 365
+72. `SNMP (Simple Network Management Protocol)`, 135–137
 
-70. Sniffer tool, 140
+73. `SNMPUTIL (website)`, 135
 
-71. sniffing, defined, 140
+74. `Social Engineer Toolkit (website)`, 368
 
-72. SNMP (Simple Network Management Protocol), 135–137
+75. `social engineering`
 
-73. SNMPUTIL (website), 135
+  1. `about`, 14, 67–68
 
-74. Social Engineer Toolkit (website), 368
+  2. `countermeasures`, 80–82
 
-75. social engineering 
+  3. `cracking passwords with`, 99–100
 
-     1.  about, 14, 67–68
+  4. `implementing attacks`, 75–79
 
-     2.  countermeasures, 80–82
+  5. `implications of`, 70–74
 
-     3.  cracking passwords with, 99–100
+  6. `tests`, 68–69
 
-     4.  implementing attacks, 75–79
+  7. `tools and resources`, 368
 
-     5.  implications of, 70–74
+  8. `why attackers use`, 69–70
 
-     6.  tests, 68–69
+76. `social engineering attacks, performing`
 
-     7.  tools and resources, 368
+  1. `about`, 74–75
 
-     8.  why attackers use, 69–70
+  2. `building trust`, 71–72
 
-76.  social engineering attacks, performing 
+  3. `exploiting relationship`, 72–74
 
-     1.  about, 74–75
+  4. `seeking information`, 75–79
 
-     2.  building trust, 71–72
+77. `social media`, 62
 
-     3.  exploiting relationship, 72–74
+78. `SoftPerfect Network Scanner (website)`, 22, 55, 204, 365, 373
 
-     4.  seeking information, 75–79
+79. `software`
 
-77.  social media, 62
+  1. `for minimizing e-mail security threats`, 269
 
-78.  SoftPerfect Network Scanner (website), 22, 55, 204, 365, 373
+  2. `password-cracking`, 102–105
 
-79.  software 
+  3. `unauthorized`, 27
 
-     1.  for minimizing e-mail security threats, 269
+80. `SolarWinds Network Configuration Manager (website)`, 139
 
-     2.  password-cracking, 102–105
+81. `SonarQube (website)`, 300, 369
 
-     3.  unauthorized, 27
+82. `SonicWALL (website)`, 365
 
-80.  SolarWinds Network Configuration Manager (website), 139
+83. `source code, analyzing`, 300–301, 369
 
-81.  SonarQube (website), 300, 369
+84. `SourceForge (website)`, 229, 361
 
-82.  SonicWALL (website), 365
+85. `Spector 360 (SpectorSoft)`, 112
 
-83.  source code, analyzing, 300–301, 369
+86. `Spirion (website)`, 369
 
-84.  SourceForge (website), 229, 361
+87. `sponsorship`, 18, 341
 
-85.  Spector 360 (SpectorSoft), 112
+88. `SQL Inject Me (website)`, 289, 372
 
-86.  Spirion (website), 369
+89. `SQL injection`, 27, 287–289
 
-87.  sponsorship, 18, 341
+90. `SQL Power Injector (website)`, 289, 372
 
-88.  SQL Inject Me (website), 289, 372
+91. `SQLPing3`, 104, 304, 305, 358, 367
 
-89.  SQL injection, 27, 287–289
+92. `SSH (Secure Shell)`, 171
 
-90.  SQL Power Injector (website), 289, 372
+93. `SSID (service set identifier)`, 163
 
-91.  SQLPing3, 104, 304, 305, 358, 367
+94. `SSL (HTTPS)`, 156
 
-92.  SSH (Secure Shell), 171
+95. `SSL Labs (website)`, 156
 
-93.  SSID (service set identifier), 163
+96. `SSL/TLS (Secure Sockets Layer/Transport Layer Security)`, 171
 
-94.  SSL (HTTPS), 156
+97. `统计，关于工具和资源`, 369
 
-95.  SSL Labs (website), 156
+98. `密码存储`, 104, 113–114, 118
 
+99. `邮件存储过载`, 255
 
+100. `存储系统`
 
-96. SSL/TLS (Secure Sockets Layer/Transport Layer Security) 171
+  1. `关于`, 308
 
-97. 统计，关于工具和资源 369
+  2. `选择用于安全测试的工具`, 309
 
-98. 密码存储 104, 113–114, 118
+  3. `在网络文件中查找敏感文本`, 310–312
 
-99. 邮件存储过载 255
+  4. `最小化安全风险`, 312–313
 
-100. 存储系统 
+  5. `工具和资源`, 369
 
-      1. 关于 308
+101. `支持人员，错误`, 68
 
-      2. 选择用于安全测试的工具 309
+102. `SUSE`, 248
 
-      3. 在网络文件中查找敏感文本 310–312
+103. `.swf 文件`, 63
 
-      4. 最小化安全风险 312–313
+104. `交换机`, 63, 115
 
-      5. 工具和资源 369
+105. `Symantec（网站）`, 246
 
-101. 支持人员，错误 68
+106. `Symantec PGP（网站）`, 370
 
-102. SUSE 248
+107. `SYN 洪水`, 153
 
-103. .swf 文件 63
+108. `SYN Stealth 扫描`, 133
 
-104. 交换机 63, 115
+109. `Synful Knock Scanner（网站）`, 153, 365
 
-105. Symantec（网站） 246
+110. `Sysinternals（网站）`, 204, 373
 
-106. Symantec PGP（网站） 370
+111. `系统崩溃`, 17–18
 
-107. SYN 洪水 153
+112. `系统加固`, 326–327, 369–370
 
-108. SYN Stealth 扫描 133
+113. `系统日志，启用`, 333
 
-109. Synful Knock Scanner（网站） 153, 365
+114. `系统恢复（Elcomsoft）`, 102, 188, 363, 366
 
-110. Sysinternals（网站） 204, 373
+115. `系统扫描`, 205–207, 229–234
 
-111. 系统崩溃 17–18
+116. `系统`
 
-112. 系统加固 326–327, 369–370
+  1. `选择要黑客攻击的目标`, 40–41
 
-113. 系统日志，启用 333
+  2. `加固`, 326–327, 369–370
 
-114. 系统恢复（Elcomsoft） 102, 188, 363, 366
+  3. `渗透`, 58
 
-115. 系统扫描 205–207, 229–234
-
-116. 系统 
-
-      1. 选择要黑客攻击的目标 40–41
-
-      2. 加固 326–327, 369–370
-
-      3. 渗透 58
-
-      4. 扫描 52–53
+  4. `扫描`, 52–53
 
 ### T
 
-1. 表格，破解 193–198
+1. `表格，破解`, 193–198
 
-2. TamoSoft 
+2. `TamoSoft`
 
-      1. CommView 115, 128, 141, 161, 275, 370, 373
+  1. `CommView`, 115, 128, 141, 161, 275, 370, 373
 
-      2. Essential NetTools 135, 364, 365
+  2. `Essential NetTools`, 135, 364, 365
 
-      3. NetResident 144, 267, 364
+  3. `NetResident`, 144, 267, 364
 
-3. tarpitting 258
+3. `tarpitting`, 258
 
-4. 任务特定工具 204–205
+4. `任务特定工具`, 204–205
 
-5. TCP（传输控制协议） 54, 129
+5. `TCP（传输控制协议）`, 54, 129
 
-6. TCP Wrapper 238
+6. `TCP Wrapper`, 238
 
-7. *TCP/IP For Dummies*，第 6 版（Leiden and Wilensky） 126
+7. `*TCP/IP For Dummies*，第 6 版（Leiden and Wilensky）`, 126
 
-8. TCP/UDP 端口 54
+8. `TCP/UDP 端口`, 54
 
-9. TCPView（网站） 204
+9. `TCPView（网站）`, 204
 
-10. 技术密码漏洞 97–98
+10. `技术密码漏洞`, 97–98
 
-11. 技术图标 3
+11. `技术图标`, 3
 
-12. TechSmith's Camtasia Studio（网站） 45
+12. `TechSmith's Camtasia Studio（网站）`, 45
 
-13. telnet（telnetd） 137, 230
+13. `telnet（telnetd）`, 137, 230
 
-14. 术语 7–9
+14. `术语`, 7–9
 
-15. 恐怖分子 30
+15. `恐怖分子`, 30
 
-16. 测试 
+16. `测试`
 
-      1. 关于 49
+  1. `关于`, 49
 
-      2. 服务拒绝（DoS）攻击 152–155
+  2. `服务拒绝（DoS）攻击`, 152–155
 
-      3. 电子邮件头泄露 266–267
+  3. `电子邮件头泄露`, 266–267
 
-      4. 文件权限黑客 243–244
+  4. `文件权限黑客`, 243–244
 
-      5. 防火墙规则 138–140
+  5. `防火墙规则`, 138–140
 
-      6. 外包 355
+  6. `外包`, 355
 
-      7. 用于 SMTP 中继的服务器 263–266
+  7. `用于 SMTP 中继的服务器`, 263–266
 
-      8. 社会工程 68–69
+  8. `社会工程`, 68–69
 
-      9. 标准 43–47
+  9. `标准`, 43–47
 
-     10. 存储系统安全 309
+  10. `存储系统安全`, 309
 
-17. THC-Amap（网站） 361
+17. `THC-Amap（网站）`, 361
 
-18. THC-Hydra（网站） 103, 295, 367, 372
+18. `THC-Hydra（网站）`, 103, 295, 367, 372
 
-19. theHarvester（网站） 360, 362
+19. `theHarvester（网站）`, 360, 362
 
-20. 3M Privacy Filters（网站） 100, 363
+20. `3M Privacy Filters（网站）`, 100, 363
 
-21. Tiger（网站） 361
+21. `Tiger（网站）`, 361
 
-22. Tiger 安全审计工具 247
+22. `Tiger 安全审计工具`, 247
 
-23. tiger team 39
+23. `tiger team`, 39
 
-24. 计时，在伦理黑客测试中 43–44
+24. `计时，在伦理黑客测试中`, 43–44
 
-25. Tip 图标 3
+25. `Tip 图标`, 3
 
-26. TLS（传输层安全） 156
+26. `TLS（传输层安全）`, 156
 
-27. 工具和资源 
+27. `工具和资源`
 
-      1. 高级恶意软件 357
+  1. `高级恶意软件`, 357
 
-      2. 一站式评估 204
+  2. `一站式评估`, 204
 
-      3. Bluetooth 357
+  3. `Bluetooth`, 357
 
-      4. 认证 358
+  4. `认证`, 358
 
-      5. 用于破解笔记本电脑密码 188–193
+  5. `用于破解笔记本电脑密码`, 188–193
 
-      6. 数据库 358
+  6. `数据库`, 358
 
-      7. 用于网络基础设施的伦理黑客攻击 127–128
+  7. `用于网络基础设施的伦理黑客攻击`, 127–128
 
-      8. 一般性研究 359–360
+  8. `一般性研究`, 359–360
 
-      9. 黑客材料 360
+  9. `黑客材料`, 360
 
-     10. 键盘记录器 360
+  10. `键盘记录器`, 360
 
-     11. 法律和法规 361
+  11. `法律和法规`, 361
 
-     12. Linux 361
+  12. `Linux`, 361
 
-     13. 即时工具包 362
+  13. `即时工具包`, 362
 
-     14. 日志分析 362
+  14. `日志分析`, 362
 
-     15. 消息传递 362
+  15. `消息传递`, 362
 
-     16. Microsoft 203–205
+  16. `Microsoft`, 203–205
 
-     17. 杂项 363
+  17. `杂项`, 363
 
-     18. 移动 363
+  18. `移动`, 363
 
-     19. 网络 363–365
+  19. `网络`, 363–365
 
-     20. 密码破解 365–367
+  20. `密码破解`, 365–367
 
-     21. 补丁管理 367
+  21. `补丁管理`, 367
 
-     22. 端口扫描 129–135
+  22. `端口扫描`, 129–135
 
-     23. 安全教育和学习资源 368
+  23. `安全教育和学习资源`, 368
 
-     24. 安全方法和模型 368
+  24. `安全方法和模型`, 368
 
-     25. 选择 20–21
+  25. `选择`, 20–21
 
-     26. 社会工程 368
+  26. `社会工程`, 368
 
-     27. 源代码分析 369
+  27. `源代码分析`, 369
 
-     28. 统计 369
+  28. `统计`, 369
 
-     29. 存储 369
+  29. `存储`, 369
 
-     30. 系统加固 369–370
+  30. `系统加固`, 369–370
 
-     31. 任务特定 204–205
+  31. `任务特定`, 204–205
 
-     32. 用于测试存储系统安全 309
+  32. `用于测试存储系统安全`, 309
 
-     33. 用户意识和培训 370
+  33. `用户意识和培训`, 370
 
-     34. 使用正确的 354
+  34. `使用正确的`, 354
 
-     35. VoIP（互联网协议语音） 370–371
+  35. `VoIP（互联网协议语音）`, 370–371
 
-     36. 漏洞数据库 371
+  36. `漏洞数据库`, 371
 
-     37. 用于 Web 应用 278–279
+  37. `用于 Web 应用`, 278–279
 
-     38. 网站和应用 371–372
+  38. `网站和应用`, 371–372
 
-     39. Windows 373
+  39. `Windows`, 373
 
-     40. 无线网络 373–374
+  40. `无线网络`, 373–374
 
-28. top talkers 144
+28. `top talkers`, 144
 
-29. 流量，捕获 267, 273–275
+29. `流量，捕获`, 267, 273–275
 
-30. Traffic IQ Professional（idappcom） 365
+30. `Traffic IQ Professional（idappcom）`, 365
 
-31. 培训，作为对社会工程的对策 80–82
+31. `培训，作为对社会工程的对策`, 80–82
 
-32. Transmission Control Protocol（TCP） 54, 129
+32. `Transmission Control Protocol（TCP）`, 54, 129
 
-33. Transport Layer Security（TLS） 156
+33. `Transport Layer Security（TLS）`, 156
 
-34. Tripwire 244
+34. `Tripwire`, 244
 
-35. TrueCrypt 192
+35. `TrueCrypt`, 192
 
-36. 信任，在社会工程攻击中构建 71–72
+36. `信任，在社交工程攻击中构建`, 71–72
 
-37. 可信度 17
+37. `可信度`, 17
 
-38. Twitter（网站） 62
+38. `Twitter（网站）`, 62
 
-39. *2600-The Hacker Quarterly*（杂志） 35, 360
+39. `*2600-The Hacker Quarterly*（杂志）`, 35, 360
 
 ### U
 
-1. UDP（用户数据报协议） 129
+1. `UDP（用户数据报协议）`, 129
 
-2. UDP 扫描 133
+2. `UDP 扫描`, 133
 
-3. UDPFlood（网站） 154, 365
+3. `UDPFlood（网站）`, 154, 365
 
-4. UEFI（统一可扩展固件接口） 116
+4. `UEFI（统一可扩展固件接口）`, 116
 
+5. `未经认证的枚举`, 208–210
 
+6. `未经授权的软件`, 27
 
-5.  未经认证的枚举，208–210
+7. `统一可扩展固件接口 (UEFI)`, 116
 
-6.  未经授权的软件，27
+8. `美国专利和商标局 (网站)`, 360
 
-7.  统一可扩展固件接口 (UEFI)，116
+9. `美国州级数据泄露通知法律 (网站)`, 361
 
-8.  美国专利和商标局 (网站)，360
+10. `UNIX 变体`
 
-9.  美国州级数据泄露通知法律 (网站)，361
+  1. `使用 John the Ripper 破解密码`, 109–110
 
-10.  UNIX 变体 
+  2. `加固`, 122
 
-     1.  使用 John the Ripper 破解密码，109–110
+  3. `密码存储位置`, 104
 
-     2.  加固，122
+11. `UNIX 系统，MAC 地址伪造在`, 150
 
-     3.  密码存储位置，104
+12. `不安全的接口`, 155–156
 
-11.  UNIX 系统，MAC 地址伪造在，150
+13. `不安全的登录机制`, 293–297
 
-12.  不安全的接口，155–156
+14. `up2date`, 248
 
-13.  不安全的登录机制，293–297
+15. `高层管理支持`, 341–346
 
-14.  up2date，248
+16. `URL 操作`, 284–286
 
-15.  高层管理支持，341–346
+17. `美国政府 (网站)`, 66
 
-16.  URL 操作，284–286
+18. `US Search.com (网站)`, 360
 
-17.  美国政府 (网站)，66
+19. `美国证券交易委员会 (网站)`, 64, 75, 360
 
-18.  US Search.com (网站)，360
+20. `US-CERT 漏洞备注数据库 (网站)`, 56, 371
 
-19.  美国证券交易委员会 (网站)，64，75，360
+21. `用户意识与培训`, 370
 
-20.  US-CERT 漏洞备注数据库 (网站)，56，371
+22. `用户数据报文协议 (UDP)`, 129
 
-21.  用户意识与培训，370
+23. `用户密码漏洞`, 96–98
 
-22.  用户数据报文协议 (UDP)，129
-
-23.  用户密码漏洞，96–98
-
-24.  公用程序，物理安全漏洞，87–88
+24. `公用程序，物理安全漏洞`, 87–88
 
 ### V
 
-1.  值，显示，346
+1. `值，显示`, 346
 
-2.  供应商，错误，68
+2. `供应商，错误`, 68
 
-3.  Veracode (网站)，363
+3. `Veracode (网站)`, 363
 
-4.  Verizon 数据泄露调查报告 (网站)，12，95，342，369
+4. `Verizon 数据泄露调查报告 (网站)`, 12, 95, 342, 369
 
-5.  虚拟专用网络 (VPN) 服务，54
+5. `虚拟专用网络 (VPN) 服务`, 54
 
-6.  VirtualBox (网站)，52
+6. `VirtualBox (网站)`, 52
 
-7.  Visio，328
+7. `Visio`, 328
 
-8.  Visual Code Grepper (网站)，300，369
+8. `Visual Code Grepper (网站)`, 300, 369
 
-9.  VMware Workstation Pro (网站)，52
+9. `VMware Workstation Pro (网站)`, 52
 
-10.  VNC (网站)，91
+10. `VNC (网站)`, 91
 
-11.  互联网协议语音 (VoIP) 
+11. `互联网协议语音 (VoIP)`
 
-     1.  关于，270–271
+  1. `关于`, 270–271
 
-     2.  针对漏洞的对策，275
+  2. `针对漏洞的对策`, 275
 
-     3.  工具和资源，370–371
+  3. `工具和资源`, 370–371
 
-     4.  漏洞，272–273
+  4. `漏洞`, 272–273
 
-12.  语音流量，273–275
+12. `语音流量`, 273–275
 
-13.  VoIP (互联网协议语音) 
+13. `VoIP (互联网协议语音)`
 
-     1.  关于，270–271
+  1. `关于`, 270–271
 
-     2.  针对漏洞的对策，275
+  2. `针对漏洞的对策`, 275
 
-     3.  工具和资源，370–371
+  3. `工具和资源`, 370–371
 
-     4.  漏洞，272–273
+  4. `漏洞`, 272–273
 
-14.  *VoIP For Dummies* (Kelly)，271
+14. `*VoIP For Dummies* (Kelly)`, 271
 
-15.  VoIP Hopper (网站)，272，371
+15. `VoIP Hopper (网站)`, 272, 371
 
-16.  VoIP 服务器，77
+16. `VoIP 服务器`, 77
 
-17.  vomit (网站)，275，371
+17. `vomit (网站)`, 275, 371
 
-18.  VPN (虚拟专用网络) 服务，54
+18. `VPN (虚拟专用网络) 服务`, 54
 
-19.  `VRFY` 命令，261–263
+19. `VRFY` 命令, 261–263
 
-20.  漏洞。*另见* 风险 
+20. `漏洞。*另见* 风险`
 
-     1.  评估，56–57
+  1. `评估`, 56–57
 
-     2.  数据库，306–307
+  2. `数据库`, 306–307
 
-     3.  消除，352–353
+  3. `消除`, 352–353
 
-     4.  Linux，228
+  4. `Linux`, 228
 
-     5.  消息系统，253–254
+  5. `消息系统`, 253–254
 
-     6.  移动设备，187–188
+  6. `移动设备`, 187–188
 
-     7.  网络基础设施，126–127
+  7. `网络基础设施`, 126–127
 
-     8.  密码，96–98
+  8. `密码`, 96–98
 
-     9.  优先级，319
+  9. `优先级`, 319
 
-    10.  响应，46
+  10. `响应`, 46
 
-    11.  SNMP，135–136
+  11. `SNMP`, 135–136
 
-    12.  Web，279–298
+  12. `Web`, 279–298
 
-    13.  Windows (Microsoft)，202–203
+  13. `Windows (Microsoft)`, 202–203
 
-    14.  无线网络，159–160
+  14. `无线网络`, 159–160
 
-21.  漏洞测试，1
+21. `漏洞测试`, 1
 
 ### W
 
-1.  警告! 图标，3
+1. `警告! 图标`, 3
 
-2.  WatchGuard (网站)，300，313
+2. `WatchGuard (网站)`, 300, 313
 
-3.  弱 BIOS 密码，116
+3. `弱 BIOS 密码`, 116
 
-4.  弱密码存储，113–114
+4. `弱密码存储`, 113–114
 
-5.  Web 访问控制，绕过，27
+5. `Web 访问控制，绕过`, 27
 
-6.  Web 爬虫，63–64
+6. `Web 爬虫`, 63–64
 
-7.  Web 开发者 (网站)，278，298
+7. `Web 开发者 (网站)`, 278, 298
 
-8.  Web 搜索，62–63
+8. `Web 搜索`, 62–63
 
-9.  WebGoat (网站)，372
+9. `WebGoat (网站)`, 372
 
-10.  WebInspect，371
+10. `WebInspect`, 371
 
-11.  网站和应用程序 
+11. `网站和应用程序`
 
-     1.  关于，277–278
+  1. `关于`, 277–278
 
-     2.  cantennas，162
+  2. `cantennas`, 162
 
-     3.  选择 Web 应用工具，278–279
+  3. `选择 Web 应用工具`, 278–279
 
-     4.  用于获取公开信息，64
+  4. `用于获取公开信息`, 64
 
-     5.  黑客视角，353
+  5. `黑客视角`, 353
 
-     6.  可启动的 Linux 工具包，160
+  6. `可启动的 Linux 工具包`, 160
 
-     7.  最小化安全风险，298–301
+  7. `最小化安全风险`, 298–301
 
-     8.  工具和资源，371–372
+  8. `工具和资源`, 371–372
 
-     9.  受 SNMP 漏洞影响的供应商和产品，135–136
+  9. `受 SNMP 漏洞影响的供应商和产品`, 135–136
 
-    10.  漏洞，279–298
+  10. `漏洞`, 279–298
 
-12.  Wellenreiter (网站)，160，374
+12. `Wellenreiter (网站)`, 160, 374
 
-13.  WEP (Wired Equivalent Privacy)，167–170
+13. `WEP (Wired Equivalent Privacy)`, 167–170
 
-14.  WEPCrack (网站)，167，374
+14. `WEPCrack (网站)`, 167, 374
 
-15.  WhatIsMyIP (网站)，53，360，365
+15. `WhatIsMyIP (网站)`, 53, 360, 365
 
-16.  Where Does This Link Go? (网站)，368
+16. `Where Does This Link Go? (网站)`, 368
 
-17.  白帽 (好人) 黑客，9，29
+17. `白帽 (好人) 黑客`, 9, 29
 
-18.  Whois，52，65–66，360
+18. `Whois`, 52, 65–66, 360
 
-19.  WiFi。*另见* 无线局域网 (WiFi)
+19. `WiFi。*另见* 无线局域网 (WiFi)`
 
-20.  WiFi Pineapple (网站)，165，374
+20. `WiFi Pineapple (网站)`, 165, 374
 
-21.  Wi‑Fi Protected Access (WPA)，167–170
+21. `Wi‑Fi Protected Access (WPA)`, 167–170
 
-22.  Wi‑Fi Protected Setup (WPS)，172–174
+22. `Wi‑Fi Protected Setup (WPS)`, 172–174
 
-23.  WiFinder (网站)，374
+23. `WiFinder (网站)`, 374
 
-24.  WiGLE 数据库 (网站)，162，374
+24. `WiGLE 数据库 (网站)`, 162, 374
 
-25.  Wilensky, Marshall (作者) 
+25. `Wilensky, Marshall (作者)`
 
-     1.  *TCP/IP For Dummies*，第 6 版，126
+  1. `*TCP/IP For Dummies*，第 6 版`, 126
 
-26.  WinAirsnort (网站)，374
+26. `WinAirsnort (网站)`, 374
 
-27.  Windows (Microsoft) 
+27. `Windows (Microsoft)`
 
-     1.  关于，201–202
+  1. `关于`, 201–202
 
-     2.  检查共享权限，215–217
+  2. `检查共享权限`, 215–217
 
-     3.  选择工具，203–205
+  3. `选择工具`, 203–205
 
-     4.  使用 pwdump3 和 John the Ripper 破解密码，107–109
+  4. `使用 pwdump3 和 John the Ripper 破解密码`, 107–109
 
-     5.  检测空闲会话，210–215
+  5. `检测空闲会话`, 210–215
 
-     6.  利用未打补丁的漏洞，217–225
+  6. `利用未打补丁的漏洞`, 217–225
 
-     7.  MAC 地址伪造在，150–151
+  7. `MAC 地址伪造在`, 150–151
 
-     8.  执行经过身份验证的扫描，225–226
+  8. `执行经过身份验证的扫描`, 225–226
 
-     9.  加固，121–122
+  9. `加固`, 121–122
 
-    10.  安全，219
+  10. `安全`, 219
 
-    11.  密码存储位置，104
+  11. `密码存储位置`, 104
 
-    12.  工具和资源，373
+  12. `工具和资源`, 373
 
-    13.  漏洞，202–203
+  13. `漏洞`, 202–203
 
-28.  Windows 7，211，215
+28. `Windows 7`, 211, 215
 
-29.  Windows 8，211
+29. `Windows 8`, 211
 
-30.  Windows 10，211，219
+30. `Windows 10`, 211, 219
 
-31.  Windows 2000/NT，216
+31. `Windows 2000/NT`, 216
 
-32.  Windows 注册表，150–151
+32. `Windows 注册表`, 150–151
 
-33.  Windows Server 2008，211
+33. `Windows Server 2008`, 211
 
-34.  Windows Server 2008/R2，215
+34. `Windows Server 2008/R2`, 215
 
-35.  Windows Server 2016，214
+35. `Windows Server 2016`, 214
 
+36. `Windows Server Update Services (WSUS)`, `/path/to/xxx`, `326`, `367`
 
+37. `Windows Update`, `326`
 
+38. `Windows XP`, `216`
 
-36. Windows Server Update Services (WSUS), `/path/to/xxx`, `326`, `367`
+39. `Winfo (website)`, `205`, `213`, `373`
 
-37. Windows Update, `326`
+40. `WinHex (website)`, `120`, `189`, `292`, `367`, `369`
 
-38. Windows XP, `216`
+41. `WinMagic (website)`, `93`, `246`, `370`
 
-39. Winfo (website), `205`, `213`, `373`
+42. `WinMagic SecureDoc (website)`, `193`
 
-40. WinHex (website), `120`, `189`, `292`, `367`, `369`
+43. `WinNuke`, `153`
 
-41. WinMagic (website), `93`, `246`, `370`
+44. `WinZip (website)`, `363`
 
-42. WinMagic SecureDoc (website), `193`
+45. `Wired Equivalent Privacy (WEP)`, `167`–170
 
-43. WinNuke, `153`
+46. `wireless LANs (WiFi)`
 
-44. WinZip (website), `363`
+  1. `about`, `159`
 
-45. Wired Equivalent Privacy (WEP), `167`–170
+  2. `attacks and countermeasures`, `165`–186
 
-46. wireless LANs (WiFi) 
+  3. `choosing tools`, `160`–162
 
-     1. about, `159`
+  4. `discovering`, `162`–164
 
-     2. attacks and countermeasures, `165`–186
+  5. `implications of vulnerabilities`, `159`–160
 
-     3. choosing tools, `160`–162
+47. `wireless networks, tools and resources`, `373`–374
 
-     4. discovering, `162`–164
+48. `*Wireless Networks For Dummies* (Davis and Lewis)`, `184`
 
-     5. implications of vulnerabilities, `159`–160
+49. `Wireless Security Auditor (Elcomsoft)`, `161`, `172`, `373`
 
-47. wireless networks, tools and resources, `373`–374
+50. `wireless workstations`, `185`
 
-48. `Wireless Networks For Dummies` (Davis and Lewis), `184`
+51. `Wireshark (website)`, `53`, `115`, `128`, `141`, `365`
 
-49. Wireless Security Auditor (Elcomsoft), `161`, `172`, `373`
+52. `WPA (Wi-Fi Protected Access)`, `167`–170
 
-50. wireless workstations, `185`
+53. `WPS (Wi-Fi Protected Setup)`, `172`–174
 
-51. Wireshark (website), `53`, `115`, `128`, `141`, `365`
+54. `WSDigger (website)`, `298`, `372`
 
-52. WPA (Wi-Fi Protected Access), `167`–170
+55. `WSFuzzer (website)`, `372`
 
-53. WPS (Wi-Fi Protected Setup), `172`–174
+56. `WSUS (Windows Server Update Services)`, `225`, `326`, `367`
 
-54. WSDigger (website), `298`, `372`
+1. `xinetd program`, `236`–237
 
-55. WSFuzzer (website), `372`
+2. `Xmas Tree scan`, `133`
 
-56. WSUS (Windows Server Update Services), `225`, `326`, `367`
+3. `XSS (cross-site scripting)`, `289`–290
 
-1. xinetd program, `236`–237
+4. `XSS-Me Firefox Add-on (website)`, `290`
 
-2. Xmas Tree scan, `133`
+1. `Yahoo! Finance (website)`, `75`, `360`
 
-3. XSS (cross-site scripting), `289`–290
-
-4. XSS-Me Firefox Add-on (website), `290`
-
-1. Yahoo! Finance (website), `75`, `360`
-
-2. YouTube (website), `62`
+2. `YouTube (website)`, `62`
 
 ### Z
 
-1. ZabaSearch (website), `64`, `360`
+1. `ZabaSearch (website)`, `64`, `360`
 
-2. zombies, `74`
+2. `zombies`, `74`
 
 ![](img/ad1.png) ![](img/ad2.png) ![](img/ad3.png) ![](img/ad4.png) ![](img/ad5.png) ![](img/ad6.png)
 

@@ -1,6 +1,5 @@
+
 # 深度学习原理解析：从零编写深度学习库
-
-
 
 ## 简介
 
@@ -30,28 +29,27 @@
 
 本书英文版是在中文版基础上使用谷歌翻译翻译的。我们将持续改进翻译质量，希望读者能帮助我纠正错误。
 
+## 我的邮箱
 
+`hwdong.cn@gmail.com`
 
+## 电子书链接（英文版）
 
-
-# 我的邮箱
-hwdong.cn@gmail.com
-
-# 电子书链接（英文版）
 [`leanpub.com/dle/`](https://leanpub.com/dle/)
 
-# 电子书链接（中文版）
+## 电子书链接（中文版）
+
 [`leanpub.com/dl_0`](https://leanpub.com/dl_0)
 
-### 1.1 Python 快速入门
+## 1.1 Python 快速入门
 
 Python 是一门易学的解释型脚本语言，最初设计用于编写自动化脚本，后来用于 Web 开发和科学计算。近年来，随着数据科学和人工智能的发展，Python 已成为增长最快、最流行的编程语言，确立了其在以数据处理和机器学习为代表的人工智能领域的统治地位。
 
-#### 1.1.1 Python 安装
+### 1.1.1 Python 安装
 
 作为一种解释型语言，Python 程序的每条语句都由 `python` 解释器解释并执行；即 Python 解释器逐句解释并执行 Python 程序的语句。
 
-##### Python 解释器安装
+#### Python 解释器安装
 
 在 Ubuntu 系统上，可以在终端窗口中输入以下命令：
 
@@ -85,7 +83,7 @@ pip install numpy
 python -m pip install -U matplotlib
 ```
 
-##### jupyter notebook 编程环境
+#### jupyter notebook 编程环境
 
 现在许多人使用 `jupyter notebook` Python 开发环境。`jupyter notebook` 可以使用浏览器作为 Python 程序的编程环境。一个 `jupyter notebook` 文档由一些单元格（单元）组成，它们有不同的类型，主要是代码单元格和 Markdown 单元格。前者用于编写 Python 代码，后者用于编写 Markdown 格式（类似 Word）的文档，其中可以编写文本、公式等。`Jupyter Notebook` 将代码和笔记有机地结合在一个文档中。它已成为 Python 程序员编写代码和记录想法的最常用工具。
 
@@ -98,7 +96,7 @@ pip install jupyter
 
 然后在命令行输入 `jupyter notebook` 打开一个用于 Python 编程的浏览器窗口。
 
-##### Anaconda 安装工具
+#### Anaconda 安装工具
 
 像 `Anaconda` 这样的集成安装工具可以自动安装 `python` 解释器和常用开发包，如 `numpy`、`matplotlib` 和 `jupyter notebook`。在官方网站 [`https://www.anaconda.com`](https://www.anaconda.com) 下载并安装 `Anaconda`。
 
@@ -106,9 +104,9 @@ pip install jupyter
 
 `Anaconda` 安装程序还附带 `spyder`，一个具有图形用户界面的 Python 集成开发环境。当然，读者也可以使用其他 Python 开发环境，如 `Pycharm` 等。
 
-#### 1.1.2 对象、`print()` 函数、类型转换、注释、变量、`input()` 函数
+### 1.1.2 对象、`print()` 函数、类型转换、注释、变量、`input()` 函数
 
-##### 1. 对象
+#### 1. 对象
 
 Python 中的所有值（如整数 `2`）都以对象的形式存在，一个对象包含值（即对象的内容）、数据类型和 `id`（相当于地址）等信息。Python 是一种动态类型的高级语言。所谓“动态类型”是指 Python 可以根据对象的值自动推断其类型。值的类型可以用 Python 内置函数 `type()` 查询。例如：
 
@@ -162,7 +160,7 @@ id(3.14)
 
 > **注意**：布尔类型 `bool` 只有 2 个值 `True` 和 `False`，用于表示逻辑命题的真假。
 
-##### 2. 打印函数 `print()`
+#### 2. 打印函数 `print()`
 
 您可以输出一系列用逗号 `,` 分隔的对象，例如：
 
@@ -187,7 +185,7 @@ print(4, 5, 6)
 1 2 3 4 5 6
 ```
 
-##### 3. 类型转换
+#### 3. 类型转换
 
 对于基本类型，可以使用类型名称将另一种类型的对象转换为该类型的对象。例如：
 
@@ -207,11 +205,11 @@ print(type(float("3.14")))       # 将 "3.14" 从字符串类型转换为浮点�
 <class 'float'>
 ```
 
-##### 4. 注释
+#### 4. 注释
 
 以 `#` 开头的文本行称为**注释**，注释不是程序语句，而是对程序代码的说明。
 
-##### 5. 变量
+#### 5. 变量
 
 您可以使用运算符 `=` 给对象一个名称，这称为对象的**变量名**。或者说变量引用了一个对象。
 
@@ -220,9 +218,6 @@ pi = 3.14
 print(pi)
 print(2 * pi)
 ```
-
-
-
 
 变量名可以随时引用其他对象。变量名不是“一刀切”的，这与 C 等其他语言不同。
 
@@ -236,7 +231,7 @@ print(b)
 
 ```
 hwdong-net.github.io
-    3.14
+3.14
 ```
 
 在这段代码中，变量名 `a` 首先引用对象 `3.14`，然后引用字符串 `"hwdong-net.github.io"`。如图 1-1 所示。
@@ -245,7 +240,7 @@ hwdong-net.github.io
 
 图 1-1 左图是执行 `b=a` 后的结果，右图是执行 `a= "hwdong-net.github.io"` 后的结果
 
-###### 6. `input()` 函数
+#### 6. `input()` 函数
 
 用于接受键盘输入，输入为字符串。`input()` 可以接受一个“提示字符串”。例如：
 
@@ -259,11 +254,10 @@ type(score)
 
 ```
 Wang An
-    name: Wang An
-    Please enter your score: 56.8
-    Name: Wang An Score: 56.8
-
-    str
+name: Wang An
+Please enter your score: 56.8
+Name: Wang An Score: 56.8
+str
 ```
 
 `input()` 始终输入 `str` 类型对象，但可以使用类型转换将输入字符串转换为其他基本类型。
@@ -277,12 +271,10 @@ type(score)
 
 ```
 Please enter your score: 70.5
-    <class 'str'>
-    Please enter your score: 80.5
-
-    float
+<class 'str'>
+Please enter your score: 80.5
+float
 ```
-
 
 运算符可用于直接操作（对象）值。不同类型的值支持不同的操作。例如，算术运算 `+`、`-`、`*`、`/`、`%`、`//`、`**` 可用于数值类型（`int`、`float`）。其中，`%`、`//`、`**` 分别代表取余、整除和幂运算。例如：
 
@@ -300,12 +292,12 @@ print('x ** y =',x**y)            # 幂运算
 
 ```
 x + y = 17
-    x - y = 13
-    x * y = 30
-    x/y = 7.5
-    x % y = 1
-    x // y = 7
-    x ** y = 225
+x - y = 13
+x * y = 30
+x/y = 7.5
+x % y = 1
+x // y = 7
+x ** y = 225
 ```
 
 比较运算符 `==`、`!=`、`>`、`<`、`>=`、`<=` 用于比较两个值，分别代表等于、不等于、大于、小于、大于等于、小于等于，比较运算的结果是 `bool` 类型值（`True` 或 `False`）。例如：
@@ -323,11 +315,11 @@ print('x <= y is',x<=y)
 
 ```
 x > y is True
-    x < y is False
-    x == y is False
-    x != y is True
-    x >= y is True
-    x <= y is False
+x < y is False
+x == y is False
+x != y is True
+x >= y is True
+x <= y is False
 ```
 
 逻辑运算符 `and`、`or` 和 `not` 分别代表**逻辑与**、**逻辑或**和**逻辑非**。在逻辑运算中，`True` 或非零或非空对象为真（`True`），而 `False` 或 `0` 或空对象为假（`False`）。运算符的运算规则如下：
@@ -348,26 +340,34 @@ print(not "hwdong")
 True True True False False
 ```
 
-*   对于 2 个对象 `x`、`y`，当 `x` 为真时，`x or y` 的结果为 `x`；当 `x` 为假时，`x or y` 的结果为 `y`。
+
+
+## Python 逻辑运算符
+
+### `or` 运算符
+
+对于 2 个对象 `x`、`y`，当 `x` 为真时，`x or y` 的结果为 `x`；当 `x` 为假时，`x or y` 的结果为 `y`。
 
 ```
-print(3 or 2,end = ' ')            # 因为 3 为真，3 or 2 的结果为 3
-print(0 or 2,end = ' ')            # 因为 0 为假，0 or 2 的结果为 2
-print(False or True, end = ' ')
-print("" or 2)                     # 因为空字符串 "" 为假，"" or 2 的结果为 2
+print(3 or 2, end=' ')            # 因为 3 为真，3 or 2 的结果为 3
+print(0 or 2, end=' ')            # 因为 0 为假，0 or 2 的结果为 2
+print(False or True, end=' ')
+print("" or 2)                    # 因为空字符串 "" 为假，"" or 2 的结果为 2
 ```
 
 ```
 3 2 True 2
 ```
 
-*   对于 2 个对象 `x`、`y`，当 `x` 为真时，`x and y` 的结果为 `y`；当 `x` 为假时，`x and y` 的结果为 `x`。
+### `and` 运算符
+
+对于 2 个对象 `x`、`y`，当 `x` 为真时，`x and y` 的结果为 `y`；当 `x` 为假时，`x and y` 的结果为 `x`。
 
 ```
-print(3 and 2, end = ' ')       # 因为 3 为真，3 and 2 的结果为 2
-print(0 and 2, end = ' ')       # 因为 0 为假，0 and 2 的结果为 0
-print("" and 2, end = ' ')      # 因为空字符串 "" 为假，
-                                #   "" and 2 的结果为 ""，所以无输出
+print(3 and 2, end=' ')       # 因为 3 为真，3 and 2 的结果为 2
+print(0 and 2, end=' ')       # 因为 0 为假，0 and 2 的结果为 0
+print("" and 2, end=' ')      # 因为空字符串 "" 为假，
+                              #   "" and 2 的结果为 ""，所以无输出
 print(False and True)
 ```
 
@@ -377,6 +377,8 @@ print(False and True)
 
 Python 还有移位运算符（如按位与 `&`、按位或 `|`、异或 `^`、取反 `~`、左移 `<<`、右移 `>>`）和其他运算符。感兴趣的读者可自行查阅相关资料。
 
+## 复合赋值运算符
+
 运算符 `=` 也可以与其他算术运算符和位运算符结合使用。例如：
 
 `+=` `-=` `*=` `/=` `%=` `**=` `&=` `|=` `^=` `~=` `<<=` `>>=`
@@ -384,39 +386,43 @@ Python 还有移位运算符（如按位与 `&`、按位或 `|`、异或 `^`、�
 ```
 x = 3
 print(id(x))
-x+=2 # x = x+2
+x += 2  # x = x + 2
 print(id(x))
 ```
 
-`x+=2` 等价于 `x = x+2`，意味着将原 `x` 对象加上 `2` 得到一个对象，然后变量名 `x` 引用该加法运算的结果对象。因此，前后的变量名 `x` 代表 2 个不同的对象。
+`x += 2` 等价于 `x = x + 2`，意味着将原 `x` 对象加上 `2` 得到一个对象，然后变量名 `x` 引用该加法运算的结果对象。因此，前后的变量名 `x` 代表 2 个不同的对象。
+
+## 成员运算符
 
 运算符 `in` 和 `not in` 用于判断一个值（对象）是否在容器对象中。例如：
 
 ```
-print("h"in"hwdong")
-print("h"not in"hwdong")
+print("h" in "hwdong")
+print("h" not in "hwdong")
 ```
 
 ```
 True
-    False
+False
 ```
 
-###### 下标运算符 `[]`
+## 下标运算符 `[]`
 
 可以通过给**下标运算符 `[]`** 传递下标来访问容器对象的元素，例如：
 
 ```
 s = "hwdong"
 print(s[0], s[1], s[2], s[3], s[4], s[5])
-print(s[-6],s[-5],s[-4],s[-3],s[-2],s[-1])
+print(s[-6], s[-5], s[-4], s[-3], s[-2], s[-1])
 ```
 
 下标从 0 开始，字符串对象 `s` 由一系列字符组成，第一个字符的下标为 0，第二个字符的下标为 1，……，长度为 `n` 的字符串下标为 `0, 1, 2, ..., n-1`。
 
 下标也可以是负整数，其中 `-1` 指最后一个字符，`-n` 指第一个字符。
 
-###### 字符串格式化
+## 字符串格式化
+
+### `%` 格式化
 
 使用格式字符 `%` 将某些数据格式化为字符串，创建新字符串。例如：
 
@@ -427,85 +433,79 @@ print(s2)
 
 格式字符串 `'%s %s %f'` 中的 `%s` 和 `%f` 分别表示后面三个输出项（`"The score"`、`"of LiPing is: "`、`78.5`）前两个为字符串，最后一个为实数。
 
+### `format()` 方法
+
 使用字符串 `str` 的 `format()` 方法格式化字符串，即依次用 `format()` 方法中的数据替换字符串中的占位符 `{}`。例如：
 
 ```
-print ("{} {} {}".format("The score", "of LiPing is: ", 78.5)) 
+print("{} {} {}".format("The score", "of LiPing is: ", 78.5))
 ```
 
-### 1.1.4 控制语句
+# 1.1.4 控制语句
 
 程序通常“自上而下”顺序执行每条语句。有时需要根据某个条件是否满足，决定是否执行某些语句，或重复执行某些语句。Python 的条件语句和循环语句是根据条件决定如何执行某些语句的控制语句。
 
-##### 1. `if` 语句
+## 1. `if` 语句
+
+### 基本语法
 
 ```
 if expression:
-      program block
+    program block
 ```
 
 表示如果 `if` 关键字后表达式的结果为 `True` 或非零，则执行其中的程序块，例如：
 
 ```
 score = float(input())
-if score>=60:
-   print("Congratulations!")
-   print("Passed the exam.")
+if score >= 60:
+    print("Congratulations!")
+    print("Passed the exam.")
 ```
 
 ```
 60.5
-    congratulations!
-    passed the exam.
+Congratulations!
+Passed the exam.
 ```
 
 **注意**：
 
 *   `if` 表达式后必须跟冒号：
-*   在 Python 中，**对齐方式** 表示一组语句属于同一个程序块，例如 `if` 程序块中的 2 条语句
+*   在 Python 中，**对齐方式**（缩进）表示一组语句属于同一个程序块，例如 `if` 程序块中的 2 条语句。
 
 Python 中属于同一程序块的代码必须正确缩进，否则 Python 解释器会报错。例如：
 
 ```
 score = float(input())
-if score>=60:
-   print("Congratulations!")
- print("Passed the exam.")
+if score >= 60:
+    print("Congratulations!")
+print("Passed the exam.")
 ```
 
-File "", line 4  
+```
+File "", line 4
+    print("Passed the exam.")
+    ^
+IndentationError: unindent does not match any outer indentation level
+```
 
-print("Passed the exam.")  
-
-^
-
-
-
-
-# Python 控制流与容器类型
-
-##### IndentationError
-
-`IndentationError: unindent does not match any outer indentation level`
-
-##### if 语句
-
-###### if-else 结构
+### `if-else` 结构
 
 `if` 和 `else` 可以组合使用，表示“如果……否则……”。即当 `if` 中的条件表达式为 `True` 时，执行 `if` 子句中的程序块，否则执行 `else` 子句中的程序块。`else` 后面没有条件表达式。格式如下：
 
 ```
 if expression:
-  code block 1
+    code block 1
 else:
-  code block 2
+    code block 2
 ```
 
 示例：
 
 ```
 score = float(input("Please enter the score:"))
-if score >= 60:                          # If score>=60, execute the program block in if
+if score >= 60:                          # If score >= 60, execute the program block in if
     print("Congratulations!")
     print("Passed the exam.")
 else:                                  # Otherwise, execute the else block
@@ -515,25 +515,23 @@ else:                                  # Otherwise, execute the else block
 
 ```
 Please enter grade: 67.5
-
-congratulations!
-
-passed the exam.
+Congratulations!
+Passed the exam.
 ```
 
-###### if-elif-else 结构
+### `if-elif-else` 结构
 
 对于多重条件，可以使用 `if` 的另一种形式 `if...elif...else`，表示“如果……否则如果……否则”。
 
 ```
 if expression 1:
-   code block 1
+    code block 1
 elif expression 2:
-   code block 2
+    code block 2
 elif expression 3:
-   code block 3
+    code block 3
 else:
-   code block
+    code block
 ```
 
 含义：如果 `expression 1` 的结果为 `True`，则执行 `expression 1` 中的“程序块 1”，不再执行其他程序块；否则如果 `expression 2` 的结果为 `True`，则执行 `expression 2` 中的“程序块 2”；否则如果 `expression 3` 的结果为 `True`，则执行 `expression 3` 中的“程序块 3”；如果前面的表达式全为 `False`，则执行 `else` 子句中的程序块。
@@ -542,43 +540,42 @@ else:
 
 ```
 score = float(input("Please enter the student's score: "))
-if score < 60:                   # If score<60, execute this if block
+if score < 60:                   # If score < 60, execute this if block
     print("Failure")
-elif score < 70:                 # Otherwise, if score<70, execute this elif block
+elif score < 70:                 # Otherwise, if score < 70, execute this elif block
     print("Pass")
-elif score < 80:                 # Otherwise, if score<80, execute this elif block
+elif score < 80:                 # Otherwise, if score < 80, execute this elif block
     print("Medium")
-elif score < 90:                 # Otherwise, if score<90, execute this elif block
+elif score < 90:                 # Otherwise, if score < 90, execute this elif block
     print("Good")
 else:                          # Otherwise (other cases), execute this else block
-    print("excellent")
+    print("Excellent")
 ```
 
 ```
 Please enter student grade: 90.5
-
-excellent
+Excellent
 ```
 
-##### 2. while 语句
+## 2. `while` 语句
 
 `while` 语句的格式如下：
 
 ```
 while expression:
-      code block
+    code block
 ```
 
 即当关键字 `while` 中的 `expression` 为 `True` 时，重复执行其中的程序块。
 
-示例 1：
+### 示例 1：计算 1 到 100 的和
 
 ```
 i = 1
 s = 0
 while i <= 100:
-   s = s + i     # equivalent to s += i            
-   i += 1
+    s = s + i     # equivalent to s += i            
+    i += 1
 print(s)
 ```
 
@@ -586,7 +583,7 @@ print(s)
 5050
 ```
 
-示例 2：统计键盘输入的一组学生成绩的平均分：
+### 示例 2：统计学生成绩平均分
 
 ```
 total_score = 0
@@ -613,13 +610,13 @@ Average grade: 67.65
 
 在循环的程序块中嵌套了一个 `if` 条件语句，如果条件语句表达式 `score < 0` 为 `True`，则执行其中的 `break` 语句。`break` 是 Python 的关键字，用于跳出循环语句，即不再执行循环语句。
 
-##### 3. for 语句
+## 3. `for` 语句
 
 `for` 关键字也表示循环语句，意为迭代访问容器对象或可迭代对象中的每个元素。格式为：
 
 ```
 for e in container:
-   code block
+    code block
 ```
 
 表示迭代遍历容器对象 `container` 中的每个元素 `e`，并执行其中的程序块语句。
@@ -637,11 +634,11 @@ h,w,d,o,n,g,
 
 依次迭代访问字符串中的每个元素，即每个字符，然后用 `print()` 函数输出字符 `ch`。
 
-#### 1.1.5 Python 常用容器类型
+# 1.1.5 Python 常用容器类型
 
 正如字符串是一些字符的容器一样，Python 提供了列表、元组、集合、字典等容器类型。
 
-##### 1. list (列表)
+## 1. list (列表)
 
 列表 `list` 是一组数据元素（对象）的有序序列。定义列表对象用一对左右方括号 `[ ]` 括起来，数据元素之间用逗号分隔。
 
@@ -655,7 +652,6 @@ type(a)
 
 ```
 [2, 5, 8]
-
 list
 ```
 
@@ -669,7 +665,6 @@ print(type(my_list))       # Print the type of my_list, that is, the list type
 
 ```
 [2, 3.14, True, [3, 6, 9], 'python']
-
 <class 'list'>
 ```
 
@@ -684,7 +679,7 @@ print(a)
 [[1, 2, 3], [4, 5, 6]]
 ```
 
-###### 索引
+### 索引
 
 与字符串一样，可以通过下标访问元素：
 
@@ -719,7 +714,7 @@ print(my_list)
 
 图 1-2 给列表元素赋值不同对象使列表元素指向不同对象
 
-###### 切片
+### 切片
 
 可以使用 `[start:end:step]` 来访问列表对象按起始下标、结束下标、步长筛选出的子列表。这种访问列表对象的方式称为**切片**。
 
@@ -777,7 +772,7 @@ print(my_list)
 
 图 1-3 通过切片替换列表的部分内容
 
-###### for 遍历所有元素
+### `for` 遍历所有元素
 
 与字符串一样，当然可以用 `for` 循环等访问列表对象中的元素。
 
@@ -813,14 +808,13 @@ print(alist)
 [0, 4, 16]
 ```
 
-
-
-
 # Python 内置数据结构与函数
 
-##### 内置函数 `range(n)`
+## 内置函数 `range(n)`
 
 Python 的内置函数 `range(n)` 是一个**迭代器对象**，它生成 0 到 n 之间的整数（不包括 n）。迭代器对象不是容器，但你也可以使用 `for` 来遍历该对象的元素。
+
+
 
 ```python
 for e in range(6):  
@@ -843,7 +837,7 @@ print(alist)
 [0, 1, 4, 9, 16, 25]
 ```
 
-##### 2. tuple (元组)
+### 2. tuple (元组)
 
 与列表类似，元组也是一组数据元素（对象）的有序序列，即每个元素也有唯一的下标。使用圆括号而非方括号来定义元组。例如：
 
@@ -899,7 +893,7 @@ for e in nums:
 
 这是因为元组对象不可修改，不可能通过每次生成一个值就逐渐添加到元组中来创建元组对象。
 
-##### 3. set (集合)
+### 3. set (集合)
 
 集合是一个无序且不包含重复元素的集合。集合是由一对花括号 `{}` 包围的、逗号分隔的元素组成。元素的类型可以不同。例如：
 
@@ -961,7 +955,7 @@ print(nums)
 {0, 1, 4, 9, 16, 25}
 ```
 
-##### 4. dict (字典)
+### 4. dict (字典)
 
 字典是“键值对”键值对的无序集合。每个元素以“键: 值”的形式存储。例如：
 
@@ -1051,7 +1045,7 @@ print(points)
 {0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
 ```
 
-#### 1.1.6 函数
+## 1.1.6 函数
 
 Python 通过关键字 `def` 定义函数，给一段程序块起一个名字，然后可以通过函数名调用并执行该函数块中的代码。例如：
 
@@ -1129,11 +1123,7 @@ print(pow(3.5))     # 3.5 传给 x，n 的默认值为 2
 print(pow(3.5, 3))
 ```
 
-
-
-
-
-##### 函数内部的语句与递归
+### 函数内部的语句与递归
 
 函数内部可以包含调用其他函数的语句。函数也可以在内部调用自身，这种函数称为**递归函数**。下面是一个计算正整数 `n` 阶乘的函数：当 `n=1` 时直接返回 1，否则将 `n!` 转换为 `n*(n-1)!`。
 
@@ -1168,7 +1158,7 @@ fact(4)                        # 输出: 24
 24
 ```
 
-##### math 包
+### math 包
 
 许多数学函数库定义在 `math` 包中。要使用该包的函数，需要先导入它（`import`）。
 
@@ -1229,7 +1219,7 @@ print(area, p)
 19.634954084936208 15.707963267948966
 ```
 
-##### 全局变量与局部变量
+### 全局变量与局部变量
 
 定义在函数外部的变量称为**全局变量**，定义在函数内部的变量称为**局部变量**。全局变量属于全局命名空间，函数的局部变量属于函数的局部命名空间。不同命名空间中可以存在同名变量而互不冲突。函数不能直接访问外部全局变量，例如：
 
@@ -1305,7 +1295,7 @@ print(a)
 
 **图 1-4** 函数参数传递时，基本类型参数传递副本对象而非引用
 
-##### 匿名函数 / Lambda 函数
+### 匿名函数 / Lambda 函数
 
 对于简短的函数，可以使用关键字 `lambda` 定义一个无函数名的函数，例如：
 
@@ -1335,9 +1325,11 @@ double(3.5)
 12.25
 ```
 
-##### 嵌套函数与闭包
+### 嵌套函数与闭包
 
 定义在另一个函数内部的函数称为**嵌套函数**。
+
+
 
 ```python
 def print_msg(msg):      # 外部函数
@@ -1380,7 +1372,7 @@ print(pow5(pow3(2)))
 32768
 ```
 
-##### yield 与生成器
+### yield 与生成器
 
 可以通过关键字 `yield` 定义生成器函数，生成器是一个返回迭代器（对象）的函数。
 
@@ -1418,17 +1410,13 @@ for i in infinite_sequence():
 0 1 2 3 4 5 6
 ```
 
-#### 1.1.7 类与对象
+### 1.1.7 类与对象
 
 **类**（class）是对抽象概念的描述，它描述了属于同一概念的所有对象的共同属性，这些属性包括：数据属性和方法属性。数据属性描述这类对象的状态，方法属性描述这类对象具有什么功能。类是一种数据类型，它刻画了该类型所有可能值的共同特性，例如 `int` 类型刻画了所有整数的特征。
 
 前面提到的 `str`、`list` 等都是类。通常可以通过类名创建类对象，类对象是一个具体的对象。例如：
 
-
-
-
-
-```
+```python
 s = str("http://hwdong.net")
 print(type(s)) # str
 location = s.find("hwdong")       # 通过 str 的 find() 方法查询是否有子串，
@@ -1454,7 +1442,7 @@ print(blist)
 
 在 Python 中使用关键字 `class` 定义类。为了描述所有学生的共同属性，可以定义一个 `Student` 类。
 
-```
+```python
 class Student:
     def __init__(self, name, score):
         self.name = name
@@ -1468,7 +1456,7 @@ class Student:
 
 以下代码定义了 `Student` 类的两个对象 `s1` 和 `s2`：并通过它们调用 `Student` 类的 `print()` 方法。`Student` 的 `print()` 方法调用内置函数 `print()` 输出 `self` 指向的对象的姓名和分数。
 
-```
+```python
 s1 = Student("LiPing", 67)
 s2 = Student("WangQiang", 83)
 s1.print()
@@ -1488,7 +1476,7 @@ Wang Qiang , 83
 
 例如，修改后的 `Student` 类添加了一个类属性 `count`，表示从此类创建了多少个具体的类对象。其初始值为 0。每当创建一个类对象，其计数就会增加。
 
-```
+```python
 class Student:
     count = 0
     def __init__(self, name, score):
@@ -1502,7 +1490,7 @@ class Student:
 
 通常，通过“类名.类属性”来查询或修改类属性，例如 `Student.count`，实例属性也可以通过“实例名.类属性”（包括 `self.类属性`）来查询。如下面的 `s1.count`。
 
-```
+```python
 print(Student.count)
 s1 = Student("LiPing", 67)
 print(s1.count)
@@ -1516,11 +1504,11 @@ print(Student.count)
 2
 ```
 
-#### 1.1.8 Matplotlib 入门
+### 1.1.8 Matplotlib 入门
 
 Matplotlib 是一个用于 2D 绘图的 Python 包，可用于绘制图形或显示图像。`matplotlib.pyplot` 为 matplotlib 面向对象的绘图库提供了一个方便的类 Matlab 接口函数。可以使用以下代码导入 `matplotlib.pyplot` 模块并将其命名为 `plt`，这样可以避免在代码中编写冗长的 `matplotlib.pyplot`。
 
-```
+```python
 import matplotlib.pyplot as plt
 %matplotlib inline        
 ```
@@ -1529,7 +1517,7 @@ import matplotlib.pyplot as plt
 
 `pyplot` 模块的 `plot()` 函数可以直接绘制 2D 数据，例如：
 
-```
+```python
 y = [i*0.5 for i in range(10)]
 print(y)
 plt.plot(y)            # 将 y 作为由纵轴坐标点组成的图形绘制
@@ -1544,7 +1532,7 @@ plt.show()             # 调用 plt.show() 显示图形
 
 虽然只给出了纵轴坐标数组 `y`，但 `plot()` 函数会默认自动生成从 0 开始的横轴坐标。当然，也可以传入 2 个数组来分别表示 x 和 y 坐标，例如：
 
-```
+```python
 x = [i*0.1 for i in range(10)]
 y = [xi**2 for xi in x]
 print(["{0:0.2f}".format(i) for i in x])
@@ -1562,7 +1550,7 @@ plt.show()                    # 调用 plt.show() 显示图形
 
 可以同时绘制多条曲线。
 
-```
+```python
 x = [i*0.2 for i in range(10)]
 y = [xi**2 for xi in x]
 y2 = [3*xi-1 for xi in x]
@@ -1577,13 +1565,13 @@ plt.legend(['y=x²', 'y=3x-1'])        # 指定图例标签的标签
 plt.show()                             # 调用 plt.show() 显示图形
 ```
 
-![](img/file3.png "fig:")  
+![](img/file3.png)
 
 `pyplot` 模块的 `title()` 函数用于给图形添加标题，而 `legend()` 为每条绘制的曲线命名，`xlim()` 和 `ylim()` 用于限制 x 和 y 坐标的范围，`xlabel()` 和 `ylabel()` 用于给 x 轴和 y 轴添加标签。可以看到不同的图形会自动以不同颜色显示。
 
 `plot()` 函数还可以接受一些参数来自定义绘制图形的样式，例如：
 
-```
+```python
 import math
 x = [i*0.2 for i in range(50)]
 y = [math.sin(xi) for xi in x]
@@ -1602,7 +1590,7 @@ plt.show()
 
 除了可以在 `pyplot` 模块中绘图的 `plot()` 函数外，还有用于绘制其他类型图形的函数，例如用于绘制散点图的 `scatter()`。例如：
 
-```
+```python
 import math
 x = [i*0.2 for i in range(50)]
 y = [math.sin(xi) for xi in x]
@@ -1617,22 +1605,19 @@ plt.show()
 
 ![](img/file5.png)
 
-
-
-
 参数 `c` 表示颜色，其值 `'r'`、`'g'` 和 `'b'` 分别代表红、绿、蓝；参数 `s` 表示点的大小，`alpha` 表示图形的透明度。
 
-##### subplot()
+#### subplot()
 
 除了显示多个图形外，用于显示图形的窗口的 figure 对象还可以使用多个子区域来显示不同的图形。可以使用 `subplot()` 函数指定在哪个子图窗口中绘制子图。
 
-```
+```python
 subplot(numRows, numCols, plotNum)
 ```
 
 其参数 `numRows`、`numCols` 和 `plotNum` 分别指定行数、列数和子图编号。在子图中绘制图形之前，调用 `subplot()` 以指定该位置的子图进行绘图，并可使用 `title()` 函数设置子图的标题。例如：
 
-```
+```python
 import math
 x = [i*0.2 for i in range(50)]
 y = [math.sin(xi) for xi in x]
@@ -1659,11 +1644,11 @@ plt.show()
 
 上述代码首先通过 `fig = plt.gcf()` 获取当前绘图窗口的 figure 对象并将其赋值给变量 `fig`，然后通过调用 figure 的 `set_size_inches()` 函数修改 figure 对象的默认宽度和高度，`forward=True` 表示立即更新当前窗口的 figure 对象大小。
 
-##### Axes 对象
+#### Axes 对象
 
 `subplot()` 函数返回一个 axes 对象。我们可以利用它来指定任意时刻哪个子图处于激活状态：
 
-```
+```python
 # http://www.math.buffalo.edu/~badzioch/MTH337/PT/PT-matplotlib_subplots/PT-matplotlib_subplots.html
 from math import pi
 plt.figure(figsize=(8,4))
@@ -1693,11 +1678,13 @@ plt.show()
 
 ![](img/file7.png)
 
-##### mplot3d
+#### mplot3d
 
 与其他 axes（坐标轴）一样，使用 `projection='3d'` 关键字来创建 `Axes3D` 对象。创建一个 `matplotlib.figure.Figure` 并添加一个类型为 `Axes3D` 的 axes（坐标轴）：
 
-```
+
+
+```python
 from mpl_toolkits.mplot3d import Axes3D
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
@@ -1705,7 +1692,7 @@ ax = fig.add_subplot(111, projection='3d')
 
 同样，可以使用 `Axes3D` 的 `plot()`、`scatter()`、`plot_wireframe()` 和 `plot_surface()` 方法来绘制线条、点、线框和曲面。
 
-```
+```python
 import matplotlib as mpl
 from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
@@ -1729,7 +1716,7 @@ plt.show()
 
 ![](img/file8.png)
 
-```
+```python
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
 import numpy as np
@@ -1762,11 +1749,11 @@ ax.set_zlabel('Z Label')
 plt.show()
 ```
 
-![](img/file9.png "fig:")  
+![](img/file9.png "fig:")
 
 `Axes3D.plot_wireframe(X, Y, Z, *args, **kwargs)`
 
-```
+```python
 from mpl_toolkits.mplot3d import axes3d
 import matplotlib.pyplot as plt
 
@@ -1798,7 +1785,7 @@ plt.show()
 
 ![](img/file10.png)
 
-```
+```python
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
 from matplotlib import cm
@@ -1831,15 +1818,15 @@ fig.colorbar(surf, shrink=0.5, aspect=5)
 plt.show()
 ```
 
-![](img/file11.png "fig:")  
+![](img/file11.png "fig:")
 
 <https://matplotlib.org/mpl_toolkits/mplot3d/tutorial.html>
 
-##### 显示图像
+### 显示图像
 
 可以使用 `imshow()` 显示图像，在此之前，可以使用 `skimage` 库的 `io` 模块的 `imread()` 函数读取图像。读取的图像被放置在多维数组库 `numpy` 的多维数组 `ndarray` 对象中。`numpy` 模块可以有许多方便的函数来处理多维数组。例如，`uint8()` 函数可以将其他数据元素类型的 `numpy` 数组转换为 `uint8` 类型，这是一种无符号整数类型（取值范围为 `[0, 255]`）。
 
-```
+```python
 import numpy as np
 #import skimage
 import matplotlib.pyplot as plt
@@ -1860,17 +1847,15 @@ plt.show()
 
 作者的博客网站上有更详细的 Python 教程（<https://hwdong-net.github.io>）。
 
-### 1.2 张量库 numpy
+## 1.2 张量库 numpy
 
 张量也称为**多维数组**，是多个值的规则排列。张量运算是深度学习中最重要的运算。本章介绍 Python 张量库 numpy。
 
-#### 1.2.1 什么是张量？
+### 1.2.1 什么是张量？
 
 最简单的张量是单个数字，也称为**标量**。例如 2、3.6 等都是标量。
 
-##### 1 向量
-
-
+#### 向量
 
 ##### Vectors and Matrices
 
@@ -1889,7 +1874,9 @@ print(a[0], a[1], a[2])
 Mathematically, vectors can be written in row or column form, called **row vectors** and **column vectors** respectively. For example, the column vector form corresponding to the row vector `(2, 3, 5)` is:
 
 $$
+
 \begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix}
+
 $$
 
 A vector in this form is called a **column vector**.
@@ -1897,13 +1884,17 @@ A vector in this form is called a **column vector**.
 The row and column forms of the same vector are called **transpose** relations; that is, the transpose of the row vector `(x[1], x[2], ..., x[n])` is its column vector.
 
 $$
+
 (x_{1}, x_{2}, \cdots, x_{n})^{T} = \begin{pmatrix} x_{1} \\ x_{2} \\ \vdots \\ x_{n} \end{pmatrix}
+
 $$
 
 Here, the superscript `T` denotes the transpose operation, converting a row vector into its column vector form. Conversely, a column vector can also be transposed into a row vector form:
 
 $$
+
 \begin{pmatrix} x_{1} \\ x_{2} \\ \vdots \\ x_{n} \end{pmatrix}^{T} = (x_{1}, x_{2}, \cdots, x_{n})
+
 $$
 
 A vector with only 2 values `(x, y)` can be visualized by a point (more precisely, a directed line segment) in a 2D Cartesian coordinate system. For example, the 2 elements of the vector `(1, 3)` represent a point on the 2D plane as x and y coordinates, shown as point A in Figure 1-5; the vector `(1, 3)` is represented by the directed line segment OA from the coordinate origin O to point A. The vector `(3, 1)` can be represented by coordinate point B, or by the directed line segment OB.
@@ -1921,8 +1912,12 @@ Similarly, a vector with 3 values `(x, y, z)` can be visualized by a point or li
 For a vector `v = (x, y)` with 2 elements, its length can be represented by the Euclidean distance `sqrt(x² + y²)` from the coordinate point `(x, y)` to the origin `(0, 0)` on the Cartesian coordinate system. This distance `sqrt(x² + y²)` represents the distance from the coordinate point to the origin. This Euclidean distance is usually denoted by the symbol `||v||_2`, i.e.:
 
 $$
+
 \parallel v \parallel_{2} = \sqrt{x^{2} + y^{2}}
+
 $$
+
+
 
 For example, `||OA||_2 = sqrt(3² + 1²) = sqrt(10)`, `||OB||_2 = sqrt(1² + 3²) = sqrt(10)`; thus `||OA||_2 = ||OB||_2`, meaning the vectors `(3, 1)` and `(1, 3)` have the same length.
 
@@ -1932,45 +1927,45 @@ When no confusion arises, the number of elements in a vector may be called its l
 
 The general generalization of the **2-norm** is the **p-norm**; that is, for a positive integer p, its **p-norm** is defined as:
 
-$$
+```
 \parallel x \parallel_{p} = \left(\sum\limits_{i = 1}^{n}|x_{i}|^{p}\right)^{1/p}
-$$
+```
 
 That is, the sum of the p-th powers of the absolute values of the vector elements is calculated, and then the 1/p-th power of the sum is taken. The **p-norm** also characterizes a certain kind of magnitude of the vector in different senses. For example, the **1-norm** for `p = 1` is the sum of the absolute values of all vector elements,
 
-$$
+```
 \parallel x \parallel_{1} = \sum\limits_{i = 1}^{N}|x_{i}|
-$$
+```
 
 The **∞-norm** for `p = ∞` is the maximum of the absolute values of the vector elements:
 
-$$
+```
 \parallel x \parallel_{\infty} = \max\limits_{i}|x_{i}|
-$$
+```
 
 It is conventionally agreed that the **0-norm** of a vector is the number of its non-zero elements.
 
-###### Matrices
+## Matrices
 
 A matrix in algebra is an ordered sequence of vectors. For example, the following scalars arranged in 3 rows and 4 columns form a matrix:
 
-$$
+```
 \begin{bmatrix} a_{11} & a_{12} & a_{13} & a_{14} \\ a_{21} & a_{22} & a_{23} & a_{24} \\ a_{31} & a_{32} & a_{33} & a_{34} \end{bmatrix}
-$$
+```
 
 Each row of a matrix is a vector (1D tensor); of course, each column of a matrix is also a vector. Each element of a matrix can be accessed using two indices (row index and column index), for example, using indices `i, j` to access element `a[i][j]`. Since a matrix accesses elements via 2 indices, it is called a **two-dimensional array** or **two-dimensional tensor**.
 
 A matrix can be viewed as a column vector whose data elements are row vectors. For example:
 
-$$
+```
 A_{mn} = \begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & & & \\ a_{m1} & a_{m2} & \cdots & a_{mn} \end{bmatrix} = \begin{bmatrix} a_{1,:} \\ a_{2,:} \\ \vdots \\ a_{m,:} \end{bmatrix}
-$$
+```
 
 Here `a[i, :]` represents a row vector of the matrix. A matrix can also be viewed as a row vector whose data elements are column vectors. For example:
 
-$$
+```
 A_{mn} = \begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & & & \\ a_{m1} & a_{m2} & \cdots & a_{mn} \end{bmatrix} = \begin{bmatrix} a_{:,1} & a_{:,2} & \cdots a_{:,m} \end{bmatrix}
-$$
+```
 
 Here `a[:, j]` represents a column vector of the matrix.
 
@@ -1982,43 +1977,40 @@ In computers, a grayscale digital image is represented as a matrix of pixel valu
 
 Similarly, a 2D tensor (matrix) can be represented by a list of nested lists, for example:
 
+### 3D Tensors
 
-
-
-##### 3 维张量
-
-彩色图像由红、绿、蓝三个通道图像组成，即三个矩阵。
+A color image consists of three channel images: red, green, and blue, i.e., three matrices.
 
 ![](img/file209.png)
 
-图 1-6 彩色图像由红、绿、蓝三个颜色矩阵合成
+**Figure 1-6** Color image composed of red, green, and blue color matrices.
 
-这三个矩阵共同构成一个三维张量，如图 1-7 所示，每个元素可通过三个下标访问，例如使用下标 `i`、`j`、`k` 访问元素 `a[i][j][k]`。
+These three matrices together form a 3D tensor, as shown in Figure 1-7, where each element can be accessed via three indices, for example, using indices `i`, `j`, `k` to access element `a[i][j][k]`.
 
 ![](img/file210.png)
 
-图 1-7 彩色图像可表示为三维张量（三维数组）
+**Figure 1-7** Color image represented as a 3D tensor (3D array).
 
-当然，三维张量也可用嵌套列表表示，读者可自行尝试。
+Of course, a 3D tensor can also be represented by nested lists; readers can try this themselves.
 
-除上述常见的 0 维（标量）、1 维（向量）、2 维张量（矩阵）外，张量的维度还可以是 4 维、5 维……
+In addition to the common 0D (scalar), 1D (vector), and 2D tensor (matrix) mentioned above, the dimension of a tensor can also be 4D, 5D, etc.
 
-> **注意**：在线性代数中，张量的维度与向量的维度是不同概念。线性代数中，一维向量的数据元素个数称为维度。本书沿用张量的维度而非向量的维度，即一维向量的维度为 1，而非其元素个数。
+> **Note**: In linear algebra, the dimension of a tensor and the dimension of a vector are different concepts. In linear algebra, the number of data elements in a 1D vector is called its dimension. This book follows the dimension of the tensor rather than the dimension of the vector, i.e., the dimension of a 1D vector is 1, not its number of elements.
 
-虽然 Python 内置序列类型（如 `list`）可表示**多维张量**（又称**多轴张量**），但 `numpy` 包提供了更高效的张量（多维数组）库函数。`numpy` 的张量（多维数组）类型 `ndarray` 可描述任意维度（轴）的张量。一个 `ndarray` 对象即一个张量（多维数组），且 `ndarray` 张量的每个元素只能是相同数据类型。
+Although Python built-in sequence types (such as `list`) can represent **multi-dimensional tensors** (also known as **multi-axis tensors**), the `numpy` package provides more efficient tensor (multi-dimensional array) library functions. The `numpy` tensor (multi-dimensional array) type `ndarray` can describe tensors of arbitrary dimensions (axes). An `ndarray` object is a tensor (multi-dimensional array), and each element of an `ndarray` tensor can only be of the same data type.
 
-#### 1.2.2 创建 ndarray 对象
+## 1.2.2 Creating `ndarray` Objects
 
-##### 1. `array()`
+### 1. `array()`
 
-`numpy` 的 **`array()`** 函数是创建 `ndarray` 对象最常用的函数。该函数可从序列对象或可迭代对象创建多维数组 `ndarray` 对象。例如，以下代码分别创建 1D 张量（向量）和 2D 张量（矩阵）：
+The `numpy` **`array()`** function is the most commonly used function for creating `ndarray` objects. This function can create multi-dimensional array `ndarray` objects from sequence objects or iterable objects. For example, the following code creates a 1D tensor (vector) and a 2D tensor (matrix) respectively:
 
-```
+```python
 import numpy as np
-a = np.array([1, 3, 2])             # 创建一维向量（张量）a
+a = np.array([1, 3, 2])             # Create a 1D vector (tensor) a
 print(a)
 print(a.shape)
-b = np.array([[1, 3, 2], [4, 5, 6]])   # 创建二维矩阵（张量）b
+b = np.array([[1, 3, 2], [4, 5, 6]])   # Create a 2D matrix (tensor) b
 print(b)
 print(b.shape)      # axis=0
 ```
@@ -2031,17 +2023,17 @@ print(b.shape)      # axis=0
 (2, 3)
 ```
 
-`numpy.array()` 函数规范如下：
+The specification of `numpy.array()` function is as follows:
 
 ```
 numpy.array(object, dtype=None, copy=True, order='K', subok=False, ndmin=0)
 ```
 
-其中，第一个参数 `object` 为必选，表示从此对象创建 `ndarray` 对象，如 `np.array([1, 3, 2])` 从列表对象 `[1, 3, 2]` 创建 `ndarray` 对象（即一维数组）。`dtype` 指定数组元素数据类型，默认为 `None`，即与 `object` 元素同类型；`copy` 默认为 `True`，表示创建副本，不与原对象共享数据存储空间。`order` 表示创建数组时元素的排列顺序，默认为 `'K'`，即按行排列。
+Among them, the first parameter `object` is required, representing the object from which to create the `ndarray` object, such as `np.array([1, 3, 2])` creating an `ndarray` object (i.e., a 1D array) from the list object `[1, 3, 2]`. `dtype` specifies the data type of array elements, defaulting to `None`, i.e., the same type as the `object` elements; `copy` defaults to `True`, indicating a copy is created, not sharing data storage space with the original object. `order` represents the arrangement order of elements when creating the array, defaulting to `'K'`, i.e., row-major order.
 
-`array()` 会根据传入可迭代对象的元素类型创建相应元素类型的数组，或通过指定参数 `dtype` 创建相应数据元素类型的数组。
+`array()` creates an array with the corresponding element type based on the element type of the passed iterable object, or creates an array with the corresponding data element type by specifying the parameter `dtype`.
 
-```
+```python
 a = np.array([1, 2, 3, 4])
 print(a.dtype)
 print(a)
@@ -2057,31 +2049,31 @@ float64
 [1. 2. 3. 4.]
 ```
 
-##### 2. 多维数组类型 `ndarray`
+### 2. Multi-dimensional Array Type `ndarray`
 
-`numpy` 的 `ndarray` 类用于表示多维数组。以下是 `ndarray` 类对象的常见属性：
+The `numpy` `ndarray` class is used to represent multi-dimensional arrays. The following are common attributes of `ndarray` class objects:
 
 *   **`ndarray.ndim`**  
-    数组的轴（维度）数，即数组的秩。
+    The number of axes (dimensions) of the array, i.e., the rank of the array.
 
 *   **`ndarray.shape`**  
-    数组的形状，为整数元组，元组中每个整数代表数组对应维度（轴）的长度（数据元素个数）。
+    The shape of the array, as a tuple of integers, where each integer in the tuple represents the length (number of data elements) of the corresponding dimension (axis) of the array.
 
 *   **`ndarray.size`**  
-    数组元素总数，等于 `shape` 属性中元组元素的乘积。
+    The total number of array elements, equal to the product of the tuple elements in the `shape` attribute.
 
 *   **`ndarray.dtype`**  
-    数组中元素的数据类型。
+    The data type of the elements in the array.
 
 *   **`ndarray.itemsize`**  
-    数组中每个元素的字节大小。例如，元素类型为 `float64` 的数组，其 `itemsize` 属性值为 8（=64/8）。
+    The byte size of each element in the array. For example, an array with element type `float64` has an `itemsize` attribute value of 8 (=64/8).
 
 *   **`ndarray.data`**  
-    存储数组实际元素的内存地址，通常无需直接使用此属性，因为始终可通过下标访问数组元素。
+    The memory address storing the actual elements of the array, usually not needed directly because array elements can always be accessed via indices.
 
-以下代码输出两个 `ndarray` 对象 `a`、`b` 的这些属性：
+The following code outputs these attributes of two `ndarray` objects `a`, `b`:
 
-```
+```python
 a = np.array([1., 2., 3.]) 
 print(a.ndim, a.shape, a.size, a.dtype, a.itemsize, a.data)
 
@@ -2094,21 +2086,21 @@ print(b.ndim, b.shape, b.size, b.dtype, b.itemsize, b.data)
 2 (2, 3) 6 int32 4 <memory at 0x000001F747A11A00>
 ```
 
-`ndarray` 对象的 `shape` 属性表示张量的形状：`(3,)` 表示 `a` 为含 3 个元素的一维张量；`(2, 3)` 表示 `b` 为二维张量，第 1 维（行）有 2 个元素，第 2 维（列）有 3 个元素，即 `b` 为 2 行 3 列的矩阵。
+The `shape` attribute of an `ndarray` object represents the shape of the tensor: `(3,)` indicates `a` is a 1D tensor containing 3 elements; `(2, 3)` indicates `b` is a 2D tensor, the 1st dimension (row) has 2 elements, the 2nd dimension (column) has 3 elements, i.e., `b` is a 2-row, 3-column matrix.
 
-$$
+```
 b = \begin{bmatrix} 1 & 3 & 2 \\ 4 & 5 & 6 \end{bmatrix}
-$$
+```
 
-`ndim` 为张量（数组）的维度（轴数），轴从 0 开始计数。上述 `b` 拥有 `axis=0` 和 `axis=1`，如图 1-8 所示：
+`ndim` is the dimension (number of axes) of the tensor (array), with axes counted starting from 0. The above `b` has `axis=0` and `axis=1`, as shown in Figure 1-8:
 
 ![](img/file211.png)
 
-图 1-8 张量轴：`axis=0` 表示第 1 维（轴），`axis=1` 表示第 2 维（轴）
+**Figure 1-8** Tensor axes: `axis=0` represents the 1st dimension (axis), `axis=1` represents the 2nd dimension (axis).
 
-多维数组元素可通过下标访问，称为**索引**，下标从 0 开始。例如，访问 `b` 第 2 行第 3 列的元素，可用下标 `[1, 2]`：
+Multi-dimensional array elements can be accessed via indices, called **indexing**, with indices starting from 0. For example, to access the element in the 2nd row and 3rd column of `b`, use index `[1, 2]`:
 
-```
+```python
 print(a[2])
 print(b[1, 2])
 ```
@@ -2118,31 +2110,31 @@ print(b[1, 2])
 6
 ```
 
-##### 3. `asarray()`
+### 3. `asarray()`
 
-`array()` 默认执行复制（`copy`），即新创建的 `ndarray` 对象不与原传入对象共享数据存储。若无需复制，直接将传入的 `object` 对象转换为 `ndarray` 对象，可使用 `array()` 的简化封装函数 `asarray()`。`asarray()` 不复制原数据，参数也更少。
+`array()` performs a copy by default (`copy`), i.e., the newly created `ndarray` object does not share data storage with the original passed object. If no copy is needed, and the passed `object` object is directly converted to an `ndarray` object, the simplified wrapper function `asarray()` of `array()` can be used. `asarray()` does not copy the original data and has fewer parameters.
 
 ```
 numpy.asarray(a, dtype=None, order=None)
 ```
 
-该函数实现代码为：
+The implementation code of this function is:
 
-```
+```python
 def asarray(a, dtype=None, order=None): return array(a, dtype, copy=False, order=order) 
 ```
 
-`asarray()` 仅调用 `array()` 函数创建新 `ndarray` 对象，新对象与传入的 `a` 共享相同数据存储。当然，若传入的 `a` 是可迭代对象，则不共享存储空间，新对象数据指向存储所有元素的新内存块。
+`asarray()` only calls the `array()` function to create a new `ndarray` object, which shares the same data storage with the passed `a`. Of course, if the passed `a` is an iterable object, they do not share storage space, and the new object's data points to a new memory block storing all elements.
 
-```
+```python
 d = np.asarray(range(5))
 print(d)
-e = np.asarray([1, 2, 3, 4, 5])               # 通过 asarray 也可从序列或可迭代对象创建 ndarray 数组对象
+e = np.asarray([1, 2, 3, 4, 5])               # ndarray array objects can also be created from sequences or iterable objects via asarray
 print(e)
 print(type(e))
 
-f = np.asarray(e)    # f 与 e 共享同一数据存储，修改一方会影响另一方
-e[2] = 20           # e 的第 3 个元素可通过下标 2 访问
+f = np.asarray(e)    # f shares the same data storage with e, modifying one affects the other
+e[2] = 20           # The 3rd element of e can be accessed via index 2
 print(e)
 print(f)
 ```
@@ -2155,17 +2147,9 @@ print(f)
 [ 1  2 20  4  5]
 ```
 
-##### 4. `ndarray` 的 `tolist()` 方法
+### 4. `tolist()` Method of `ndarray`
 
-`numpy` 的 `array()` 和 `asarray()` 可从 Python 可迭代对象创建 `numpy` `ndarray` 对象。`ndarray` 的 `tolist()` 方法可将 `ndarray` 对象转换为 Python `list` 对象，例如：
-
-
-
-
-
-##### 5. astype() 和 reshape()
-
-`ndarray` 的 `astype()` 方法将 `ndarray` 对象的元素数据类型转换为另一种数据类型，例如将上述数组的元素类型从 numpy 的 `int32` 转换为 numpy 的 `float64` 类型：
+The `numpy` `array()` and `asarray()` can create `numpy` `ndarray` objects from Python iterable objects. The `tolist()` method of `ndarray` can convert an `ndarray` object to a Python `list` object, for example:
 
 ```python
 a = np.array([[1,2,3],[4,5,6]]) 
@@ -2178,6 +2162,10 @@ print(b)
 <class 'list'>
 [[1, 2, 3], [4, 5, 6]]
 ```
+
+### 5. `astype()` and `reshape()`
+
+The `astype()` method of `ndarray` converts the element data type of an `ndarray` object to another data type, for example, converting the element type of the above array from numpy's `int32` to numpy's `float64` type:
 
 ```python
 c = a.astype(np.float64)   
@@ -2195,11 +2183,11 @@ int32 float64
  [4. 5. 6.]]
 ```
 
-numpy 的 `reshape()` 函数或 `ndarray` 的 `reshape()` 方法可以通过改变 `ndarray` 对象的形状来创建一个新的 `ndarray` 对象，例如：
+The `reshape()` function of numpy or the `reshape()` method of `ndarray` can create a new `ndarray` object by changing the shape of an `ndarray` object, for example:
 
 ```python
-a = np.array(range(6))       # 从可迭代对象创建张量
-b = np.reshape(a, (2, 3))    # 创建一个形状为 (2, 3) 的新张量
+a = np.array(range(6))       # Create tensor from iterable object
+b = np.reshape(a, (2, 3))    # Create a new tensor with shape (2, 3)
 c = a.reshape(2, 3).astype(np.float64)
 print(a)
 print(b)
@@ -2214,11 +2202,15 @@ print(c)
  [3. 4. 5.]]
 ```
 
-##### 6. arange() 和 linspace()
+### 6. `arange()` and `linspace()`
 
-`arange()` 函数通过指定起始值、结束值和步长来创建一个表示等差数列的一维数组。其函数规范如下：
+The `arange()` function creates a 1D array representing an arithmetic progression by specifying a start value, end value, and step size. Its function specification is as follows:
 
-`numpy.arange([start], stop, [step], dtype=None)`
+
+
+# NumPy 数组创建与操作
+
+## `numpy.arange([start], stop, [step], dtype=None)`
 
 等差数列元素的初始值为 `start`，公差为 `step`（也称为步长），直到 `stop`（但不包含 `stop`）。数据元素类型可指定为 `dtype`。`start` 的默认值为 0，`step` 的默认值为 1，`dtype` 的默认值为 `None`，这些都可以省略。注意结果数组不包含最终值。
 
@@ -2234,9 +2226,9 @@ print(np.arange(2, 7, 2))
 [2 4 6]
 ```
 
-与 `arange()` 类似，`linspace()` 也用于在初始值和最终值之间创建等差数列，不同之处在于它的第三个参数不是步长，而是创建的元素个数。
+## `numpy.linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None)`
 
-`numpy.linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None)`
+与 `arange()` 类似，`linspace()` 也用于在初始值和最终值之间创建等差数列，不同之处在于它的第三个参数不是步长，而是创建的元素个数。
 
 `linspace()` 在 `start` 和 `stop` 之间创建一个包含 `num` 个数的等差数列。`endpoint` 表示是否包含 `stop`。
 
@@ -2255,6 +2247,8 @@ np.linspace(2.0, 3.0, num=5)
 ```
 array([2. , 2.25, 2.5 , 2.75, 3. ])
 ```
+
+## `numpy.logspace(start, stop, num=50, endpoint=True, base=10.0, dtype=None)`
 
 与 `linspace` 类似，`logspace()` 创建等比数列。
 
@@ -2284,11 +2278,13 @@ np.logspace(2.0, 3.0, base=3, num=5)
 array([ 9. , 11.84466612, 15.58845727, 20.51556351, 27. ])
 ```
 
-##### 7. full(), empty(), zeros(), ones(), eye()
+## 7. `full()`, `empty()`, `zeros()`, `ones()`, `eye()`
 
 `full()` 填充函数创建一个指定值为 `fill_value`、形状为 `shape` 的数组。
 
-`numpy.full(shape, fill_value, dtype=None, order='C')`
+```python
+numpy.full(shape, fill_value, dtype=None, order='C')
+```
 
 例如：
 
@@ -2344,7 +2340,7 @@ print(np.eye(2), '\n')         # 创建一个形状为 (2, 2) 的单位矩阵，
  [0. 1.]]
 ```
 
-##### 8. 创建随机值张量的常用函数
+## 8. 创建随机值张量的常用函数
 
 `numpy.random` 模块提供了多个用于创建值为随机数的张量的函数。例如：
 
@@ -2353,7 +2349,7 @@ print(np.eye(2), '\n')         # 创建一个形状为 (2, 2) 的单位矩阵，
 *   `numpy.random.randn(d0, d1, ..., dn)` 创建一个指定形状 `(d0, d1, ..., dn)` 的随机数数组，其值为高斯采样（标准正态分布）。
 *   `numpy.random.normal(loc=0.0, scale=1.0, size=None)` 生成值按正态分布 `N(loc, scale)` 采样的随机数或数组。
     `size` 默认为 `None`，表示生成单个值。如果是整数，表示创建一维数组。如果是元组，表示创建由元组指定形状的多维数组。
-*   `numpy.random.randint(low, high, size, dtype)` 创建一个类型为 `size`、值在 `low` 和 `high` 之间、类型为 `dtype` 的随机整数数组。`dtype` 可以是 `int64` 或 `int`。
+*   `numpy.random.randint(low, high, size, dtype)` 创建一个类型为 `dtype`、值在 `low` 和 `high` 之间的随机整数数组。`dtype` 可以是 `int64` 或 `int`。
 
 例如，以下代码创建一个形状为 `(2, 3)` 的二维数组：
 
@@ -2380,10 +2376,6 @@ print(e)
 ```
 
 以下代码创建一个遵循（标准）高斯分布的一维或二维数组。
-
-
-
-
 
 ## NumPy 随机数生成与数组操作
 
@@ -2465,11 +2457,11 @@ print(g)
 5 * np.random.random_sample((2, 3)) + 2
 ```
 
-##### 9. 添加、重复与铺设、合并与分割、边缘填充、添加轴与交换轴
+## 9. 添加、重复与铺设、合并与分割、边缘填充、添加轴与交换轴
 
 之前看到通过 `ndarray` 的 `astype()` 和 `reshape()`，通过改变数据元素类型或改变张量形状来创建新张量（数组）。NumPy 还有许多函数或方法，通过对现有数组进行添加、重复、铺设、合并、分割、添加轴、交换轴等操作来创建新的 `ndarray` 对象。
 
-###### 追加 append()
+### 追加 `append()`
 
 NumPy 的 `append()` 可以向现有数组添加内容以创建新数组，其函数规范为：
 
@@ -2507,7 +2499,7 @@ array([[1, 2, 3],
        [7, 8, 9]])
 ```
 
-###### 重复 repeat()
+### 重复 `repeat()`
 
 `repeat()` 函数通过沿某个轴重复数组中的元素来创建新的 `ndarray` 数组。
 
@@ -2565,7 +2557,7 @@ array([[1, 1, 2, 2],
        [3, 3, 4, 4]])
 ```
 
-###### 铺设 tile()
+### 铺设 `tile()`
 
 与 `repeat` 在每个轴方向重复元素不同，铺设函数 `tile(A, reps)` 可以像瓷砖一样垂直或水平地复制整个数组。
 
@@ -2575,8 +2567,10 @@ numpy.tile(A, reps)
 
 `A` 是要铺设的数组，`reps` 表示每个轴的重复次数。如果 `reps` 的长度小于 `A.ndim`，例如形状为 `(2, 3, 4, 5)`，而 `rep=(2,2)`，则 `rep` 数组会在前面补齐 1 变为 `(1,1,2,2)`。如果 `A.ndim` 小于 `reps` 的长度，`A` 会被提升为与 `reps` 形状相同的数组。如果一维张量 `A` 的形状为 `(3,)`，且 `reps=(2,2)`，则 `A` 将被视为形状为 `(1,3)` 的二维张量。
 
+
+
 ```python
-a = np.array([1, 2,3])
+a = np.array([1, 2, 3])
 b = np.tile(a, 2)    # a 重复 2 次以创建一个新数组
 print(a)
 print(b)
@@ -2635,12 +2629,9 @@ array([[1, 2],
        [3, 4]])
 ```
 
-
-
-
 **注意**：`repeat()` 是复制数组的每个轴（未指定的轴则复制每个元素），而 `tile()` 是复制整个数组。
 
-###### 合并 concatenate()
+### 合并 `concatenate()`
 
 拼接函数 `concatenate()` 和堆叠函数 `stack()` 通过合并多个数组来创建新数组。
 
@@ -2652,7 +2643,7 @@ numpy.concatenate((a1, a2, …), axis=0, out=None)
 
 `axis` 指定合并方向的轴。默认值为 0。如果为 `None`，则表示合并为扁平数组，即一维数组。`out` 默认为 `None`；如果不为 `None`，则将合并结果放入 `out` 中。
 
-```
+```python
 a = np.array([[1, 2], [3, 4]])
 b = np.array([[5, 6]])
 print(b.T)
@@ -2666,143 +2657,140 @@ print(e)
 
 ```
 [[5]
-     [6]]
-    [[1 2]
-     [3 4]
-     [5 6]]
-    [[1 2 5]
-     [3 4 6]]
-    [1 2 3 4 5 6]
+ [6]]
+[[1 2]
+ [3 4]
+ [5 6]]
+[[1 2 5]
+ [3 4 6]]
+[1 2 3 4 5 6]
 ```
 
-###### 堆叠 stack()
+### 堆叠 `stack()`
 
-堆叠函数 `stack`(arrays, axis=0, out=None) 沿 `axis` 方向将一系列数组堆叠成一个新数组，`axis` 的默认值为 0，表示第一个轴。如果 `axis=-1` 则表示最后一个轴。
+堆叠函数 `stack(arrays, axis=0, out=None)` 沿 `axis` 方向将一系列数组堆叠成一个新数组，`axis` 的默认值为 0，表示第一个轴。如果 `axis=-1` 则表示最后一个轴。
 
-```
+```python
 a = np.array([1, 2])
 b = np.array([3, 4])
 c = np.array([5, 6])
-np.stack((a, b,c))
+np.stack((a, b, c))
 ```
 
 ```
 array([[1, 2],
-           [3, 4],
-           [5, 6]])
+       [3, 4],
+       [5, 6]])
 ```
 
-```
-np.stack((a,b,c),axis=1)
+```python
+np.stack((a, b, c), axis=1)
 ```
 
 ```
 array([[1, 3, 5],
-           [2, 4, 6]])
+       [2, 4, 6]])
 ```
 
 `stack()` 和 `concatenate()` 的区别在于：`stack()` 将合并的数组作为一个整体进行堆叠（合并），因此创建的新数组会多出一个轴（维度），例如多个一维数组通过 `stack()` 堆叠形成二维数组。`concatenate()` 是拼接数组的元素，或将后一个数组的元素拼接到前一个数组中。因此，创建的新数组的轴数通常与原数组相同，不会产生新的轴（维度）。
 
-###### column_stack(), hstack(), vstack()
+### `column_stack()`, `hstack()`, `vstack()`
 
 作为 `stack()` 的特殊情况，`numpy.column_stack(tup)` 将 `tup` 中的一系列一维数组作为二维数组的列来创建一个二维数组。例如，以下代码使用两个一维数组作为新数组的列：
 
-```
-a = np.array((1,2,3))
-b = np.array((4,5,6))
-np.column_stack((a,b))
+```python
+a = np.array((1, 2, 3))
+b = np.array((4, 5, 6))
+np.column_stack((a, b))
 ```
 
 ```
 array([[1, 4],
-           [2, 5],
-           [3, 6]])
+       [2, 5],
+       [3, 6]])
 ```
 
 作为 `concatenate()` 的特殊情况，`numpy.hstack(tup)` 沿第二个轴（`axis=1`）拼接，或沿水平方向（列）拼接。例如：
 
-```
-a = np.array([[1],[2],[3]])     # 3 行 1 列
-b = np.array([[4],[5],[6]])     # 3 行 1 列
+```python
+a = np.array([[1], [2], [3]])     # 3 行 1 列
+b = np.array([[4], [5], [6]])     # 3 行 1 列
 print(a.shape, b.shape)
-np.hstack((a,b))                # 合并为 3 行 2 列
+np.hstack((a, b))                # 合并为 3 行 2 列
 ```
 
 ```
 (3, 1) (3, 1)
-
-    array([[1, 4],
-           [2, 5],
-           [3, 6]])
+array([[1, 4],
+       [2, 5],
+       [3, 6]])
 ```
 
 如图 1-9 所示：
 
 ![](img/file212.png)
 
-图 1-9 hstack() 沿水平方向拼接
+图 1-9 `hstack()` 沿水平方向拼接
 
 一维数组的 `hstack()` 合并仍然是一维数组：
 
-```
-a = np.array((1,2,3))      
-b = np.array((4,5,6))
-print(a.shape,b.shape)
-np.hstack((a,b))
+```python
+a = np.array((1, 2, 3))      
+b = np.array((4, 5, 6))
+print(a.shape, b.shape)
+np.hstack((a, b))
 ```
 
 ```
 (3,) (3,)
-
-    array([1, 2, 3, 4, 5, 6])
+array([1, 2, 3, 4, 5, 6])
 ```
 
 作为 `concatenate()` 的特殊情况，`numpy.vstack(tup)` 沿第一个轴（`axis=0`）拼接，或沿垂直方向（行）拼接。例如：
 
-```
+```python
 a = np.array([[1, 2, 3]])     # 1 行 3 列
 b = np.array([[4, 5, 6]])     # 1 行 3 列
 print(a.shape)
-np.vstack((a,b))              # 合并为 2 行 3 列
+np.vstack((a, b))              # 合并为 2 行 3 列
 ```
 
 ```
 (1, 3)
-
-    array([[1, 2, 3],
-           [4, 5, 6]])
+array([[1, 2, 3],
+       [4, 5, 6]])
 ```
 
-```
+```python
 c = np.array([[1], [2], [3]])   # 有 3 行
 d = np.array([[4], [5], [6]])   # 有 3 行
-np.vstack((c,d))                # 合并为 6 行
+np.vstack((c, d))                # 合并为 6 行
 ```
 
 ```
 array([[1],
-           [2],
-           [3],
-           [4],
-           [5],
-           [6]])
+       [2],
+       [3],
+       [4],
+       [5],
+       [6]])
 ```
 
-`vstack()` 将一维数组 `(N,)` 作为形状 `(1,N)` 进行拼接。例如：
+`vstack()` 将一维数组 `(N,)` 作为形状 `(1, N)` 进行拼接。例如：
 
-```
+```python
 a = np.array([1, 2, 3])
 b = np.array([4, 5, 6])
-np.vstack((a,b))  # 一维数组 a 的形状是 (3,) 将被视为 (1,3) 的二维数组，
-                  # b 同理。
+np.vstack((a, b))  # 一维数组 a 的形状是 (3,) 将被视为 (1, 3) 的二维数组，
+                   # b 同理。
 ```
 
 ```
 array([[1, 2, 3],
-           [4, 5, 6]])
+       [4, 5, 6]])
 ```
 
-###### 分割 split()
+### 分割 `split()`
 
 **分割** 是合并的逆操作。函数 `split()` 沿 `axis` 分割数组（`axis` 的默认值为 0）
 
@@ -2810,13 +2798,13 @@ array([[1, 2, 3],
 numpy.split(ary, indices_or_sections, axis=0)
 ```
 
-如果 `indices_or_sections` 是整数 `N`，则表示分割成 `N` 个相等的子数组，如果不能均分则失败。如果 `indices_or_sections` 是一个已排序的整数数组，则表示在 `axis` 方向上于何处分割。例如 `indices_or_sections = [2,3]`，`axis=0`，分割结果为：
+如果 `indices_or_sections` 是整数 `N`，则表示分割成 `N` 个相等的子数组，如果不能均分则失败。如果 `indices_or_sections` 是一个已排序的整数数组，则表示在 `axis` 方向上于何处分割。例如 `indices_or_sections = [2, 3]`，`axis=0`，分割结果为：
 
 *   `ary[:2]`
 *   `ary[2:3]`
 *   `ary[3:]`
 
-```
+```python
 x = np.arange(9.0)
 print(x)
 np.split(x, 3)   # 分割成 3 个长度相等的子数组
@@ -2824,11 +2812,10 @@ np.split(x, 3)   # 分割成 3 个长度相等的子数组
 
 ```
 [0. 1. 2. 3. 4. 5. 6. 7. 8.]
-
-    [array([0., 1., 2.]), array([3., 4., 5.]), array([6., 7., 8.])]
+[array([0., 1., 2.]), array([3., 4., 5.]), array([6., 7., 8.])]
 ```
 
-```
+```python
 x = np.arange(8.0)
 print(x)
 np.split(x, [3, 5, 6, 10]) 
@@ -2836,61 +2823,59 @@ np.split(x, [3, 5, 6, 10])
 
 ```
 [0. 1. 2. 3. 4. 5. 6. 7.]
-
-    [array([0., 1., 2.]),
-     array([3., 4.]),
-     array([5.]),
-     array([6., 7.]),
-     array([], dtype=float64)]
+[array([0., 1., 2.]),
+ array([3., 4.]),
+ array([5.]),
+ array([6., 7.]),
+ array([], dtype=float64)]
 ```
 
 `hsplit()` 和 `vsplit()` 分别是合并操作 `hstack()` 和 `vstack()` 对应的分割函数，分别沿水平（`axis=1`）和垂直方向（`axis=0`）分割数组。这两个分割函数都是分割函数 `split()` 的特殊情况。
 
-```
+```python
 x = np.arange(16.0).reshape(4, 4)
 print(x)
 np.hsplit(x, 2)          # 沿水平方向（列方向）分割成 2 个相等的子数组
 ```
 
 ```
-[[ 0. 1. 2. 3.]
-     [ 4. 5. 6. 7.]
-     [ 8. 9. 10. 11.]
-     [12. 13. 14. 15.]]
-
-    [array([[ 0., 1.],
-            [ 4., 5.],
-            [ 8., 9.],
-            [12., 13.]]),
-     array([[ 2., 3.],
-            [ 6., 7.],
-            [10., 11.],
-            [14., 15.]])]
+[[ 0.  1.  2.  3.]
+ [ 4.  5.  6.  7.]
+ [ 8.  9. 10. 11.]
+ [12. 13. 14. 15.]]
+[array([[ 0.,  1.],
+        [ 4.,  5.],
+        [ 8.,  9.],
+        [12., 13.]]),
+ array([[ 2.,  3.],
+        [ 6.,  7.],
+        [10., 11.],
+        [14., 15.]])]
 ```
 
-```
+```python
 np.vsplit(x, 2)         # 沿垂直方向（行方向）分割成 2 个相等的子数组
 ```
 
 ```
 [array([[0., 1., 2., 3.],
-            [4., 5., 6., 7.]]),
-     array([[ 8., 9., 10., 11.],
-            [12., 13., 14., 15.]])]
+        [4., 5., 6., 7.]]),
+ array([[ 8.,  9., 10., 11.],
+        [12., 13., 14., 15.]])]
 ```
 
-```
-np.split(x, [1,2]) 
+```python
+np.split(x, [1, 2]) 
 ```
 
 ```
 [array([[0., 1., 2., 3.]]),
-     array([[4., 5., 6., 7.]]),
-     array([[ 8., 9., 10., 11.],
-            [12., 13., 14., 15.]])]
+ array([[4., 5., 6., 7.]]),
+ array([[ 8.,  9., 10., 11.],
+        [12., 13., 14., 15.]])]
 ```
 
-###### 边缘填充
+### 边缘填充
 
 `np.pad()` 函数可以对数组的每个轴（维度）进行边缘填充，即在每个轴（维度）的前后边缘位置填充一些值。
 
@@ -2898,23 +2883,23 @@ np.split(x, [1,2])
 numpy.pad(array, pad_width, mode='constant', **kwargs)
 ```
 
-`arrar` 是输入数组，`pad_width` 表示填充宽度（元素个数），`mode` 表示填充方式，`'constant'` 表示填充常数，`constant_values` 表示常数的值。例如：
+`array` 是输入数组，`pad_width` 表示填充宽度（元素个数），`mode` 表示填充方式，`'constant'` 表示填充常数，`constant_values` 表示常数的值。例如：
 
-```
-a = [7,8 ,9 ]
-b =np.pad(a, (2, 3), mode='constant', constant_values=(4, 6))
+```python
+a = [7, 8, 9]
+b = np.pad(a, (2, 3), mode='constant', constant_values=(4, 6))
 print(a)
 print(b)
 ```
 
 ```
 [7, 8, 9]
-    [4 4 7 8 9 6 6 6]
+[4 4 7 8 9 6 6 6]
 ```
 
-`(2, 3)` 表示在数组 `a` 前面填充 2 个元素，后面填充 3 个元素，`mode='constant'` 表示填充常数，`'constant_values=(4, 6)'` 表示前后填充的常数值分别为 4 和 6。下面将模式设为 `'edge'`，表示用边缘元素的值填充。
+`(2, 3)` 表示在数组 `a` 前面填充 2 个元素，后面填充 3 个元素，`mode='constant'` 表示填充常数，`constant_values=(4, 6)` 表示前后填充的常数值分别为 4 和 6。下面将模式设为 `'edge'`，表示用边缘元素的值填充。
 
-```
+```python
 np.pad(a, (2, 3), 'edge')
 ```
 
@@ -2924,34 +2909,30 @@ array([7, 7, 7, 8, 9, 9, 9, 9])
 
 `mode='minimum'` 表示用数组中的最小值填充。对于多维数组，必须指定每个维度前后的填充宽度。
 
-```
+```python
 a = [[2, 5], [7, 9]]
 print(a)
 np.pad(a, ((1, 2), (2, 3)), 'minimum')
 ```
 
-
-
-
 ## NumPy 数组操作示例
 
 ```text
 [[2, 5], [7, 9]]
-
-    array([[2, 2, 2, 5, 2, 2, 2],
-           [2, 2, 2, 5, 2, 2, 2],
-           [7, 7, 7, 9, 7, 7, 7],
-           [2, 2, 2, 5, 2, 2, 2],
-           [2, 2, 2, 5, 2, 2, 2]])
+array([[2, 2, 2, 5, 2, 2, 2],
+       [2, 2, 2, 5, 2, 2, 2],
+       [7, 7, 7, 9, 7, 7, 7],
+       [2, 2, 2, 5, 2, 2, 2],
+       [2, 2, 2, 5, 2, 2, 2]])
 ```
 
 表示在数组 `a` 的第一个轴（行）方向上，最小值 2 的前后各填充 1 行和 2 行，即在二维数组的顶部和底部添加值为 2 的 1 行和 2 行。同理，在 `a` 的列方向上，即数组的左右两侧分别填充值为 2 的 2 列和 3 列。
 
-###### 增加轴
+### 增加轴
 
 **`numpy.expand_dims(a, axis)`** 通过在 `axis` 位置插入一个新轴来扩展数组的形状。示例如下：
 
-```
+```python
 x = np.array([3, 5])     # x 是一个只有一个轴的一维数组
 print(x.shape)
 print(x)
@@ -2963,14 +2944,14 @@ print(y)
 
 ```
 (2,)
-    [3 5]
-    (1, 2)
-    [[3 5]]
+[3 5]
+(1, 2)
+[[3 5]]
 ```
 
 `x` 是一个只有一个轴的一维数组。执行 `y = np.expand_dims(x, axis=0)` 后，`y` 变成了一个有两个轴的二维数组。新增的轴是 `axis=0`，即新增的轴变成了第一个轴（行）。也可以使用 `np.newaxis` 给 `x` 增加轴，例如：
 
-```
+```python
 y = x[np.newaxis, :]
 print(y.shape)
 print(y)
@@ -2978,10 +2959,10 @@ print(y)
 
 ```
 (1, 2)
-    [[3 5]]
+[[3 5]]
 ```
 
-```
+```python
 y = x[:, np.newaxis]
 print(y.shape)
 print(y)
@@ -2989,17 +2970,17 @@ print(y)
 
 ```
 (2, 1)
-    [[3]
-     [5]]
+[[3]
+ [5]]
 ```
 
-###### 交换轴
+### 交换轴
 
 有时需要交换数组的轴，例如读取彩色图像时，其颜色通道可能是第三个轴（`axis=2`），但在某些程序中，颜色通道需要位于第一个轴。有几个不同的函数可用于交换数组的轴。
 
 **`numpy.swapaxes(a, axis1, axis2)`** 交换轴 `axis1` 和 `axis2`。示例：
 
-```
+```python
 A = np.random.random((2, 3, 4, 5))
 print(A.shape)
 B = np.swapaxes(A, 0, 2)  # 交换 axis=0 和 axis=2 的轴
@@ -3008,12 +2989,12 @@ print(B.shape)
 
 ```
 (2, 3, 4, 5)
-    (4, 3, 2, 5)
+(4, 3, 2, 5)
 ```
 
 **`numpy.rollaxis(a, axis, start=0)`** 将轴 `axis` 向后滚动，直到它位于轴 `start` 之前。示例：
 
-```
+```python
 C = np.rollaxis(A, 2, 0)    # 将 A 的 axis=2 轴移到 axis=0 轴之前，
                            # 即 C 的形状为：(4, 2, 3, 5)
 print(C.shape)
@@ -3024,24 +3005,26 @@ print(D.shape)
 
 ```
 (4, 2, 3, 5)
-    (4, 3, 2, 5)
+(4, 3, 2, 5)
 ```
 
 **`numpy.moveaxis(a, source, destination)`** 将轴 `source` 移动到轴 `destination` 的位置。示例：
 
-```
+```python
 C = np.moveaxis(A, 2, 0)     # A (2, 3, 4, 5) C 的形状为 (4, 2, 3, 5)
 print(C.shape)
 D = np.rollaxis(C, 2, 1)     # D 的形状为 (4, 3, 2, 5)
 print(D.shape)
 ```
 
+
+
 ```
 (4, 2, 3, 5)
     (4, 3, 2, 5)
 ```
 
-**`numpy.transpose(a, axes=None)`** 根据 `axes` 中轴的顺序重新排列数组的轴。`axes` 的默认值为 `None`，表示按逆序排列轴。这是一个更通用、更灵活的函数。示例：
+`numpy.transpose(a, axes=None)` 根据 `axes` 中轴的顺序重新排列数组的轴。`axes` 的默认值为 `None`，表示按逆序排列轴。这是一个更通用、更灵活的函数。示例：
 
 ```
 A = np.random.random((2, 4))
@@ -3199,20 +3182,17 @@ print(a)
       [24 25 26]]]
 ```
 
-
-
-
 ```
 print(a[1, 2])
 ```
 
 [15 16 17]
 
-给定 2 个下标，第 1 个轴（axis=0）和第 1 个轴（axis=0）的下标分别为 1 和 2，第三个下标默认为 `:`，即第三个轴取其所有下标值。索引过程如图 1-13 所示：
+给定 2 个下标，第 1 个轴（`axis=0`）和第 1 个轴（`axis=0`）的下标分别为 1 和 2，第三个下标默认为 `:`，即第三个轴取其所有下标值。索引过程如图 1-13 所示：
 
 ![](img/file216.png)
 
-图 1-13 a[1, 2]、a[0,:,1]、a[:,1,2] 的切片
+图 1-13 `a[1, 2]`、`a[0,:,1]`、`a[:,1,2]` 的切片
 
 同理，`a[0,:,1]` 是第 1 个轴的第 1 个元素（第 1 个平面）和第 3 个轴的第 2 个元素（列）。
 
@@ -3236,7 +3216,7 @@ print(a[:,1,2])
 
 ##### 整数数组索引
 
-当使用切片对 numpy 数组进行索引时，生成的数组视图始终是原始数组的子数组。也就是说，子数组中的元素由原始数组中连续的元素组成。这是因为每个维度的索引值是连续的，例如，1:3 的实际索引值为 1 和 2。通过切片获得的子数组是原始数组的一个窗口，并与原始数组的窗口区域共享数据存储。
+当使用切片对 numpy 数组进行索引时，生成的数组视图始终是原始数组的子数组。也就是说，子数组中的元素由原始数组中连续的元素组成。这是因为每个维度的索引值是连续的，例如，`1:3` 的实际索引值为 1 和 2。通过切片获得的子数组是原始数组的一个窗口，并与原始数组的窗口区域共享数据存储。
 
 索引时，也可以为每个维度索引传递离散的整数值。即向每个维度传递一个整数数组。整数数组索引使得构建新数组成为可能。例如：
 
@@ -3431,16 +3411,15 @@ print(np.std(a,axis=0),a.std(axis=0))
 
 ###### 矩阵乘积
 
+### 矩阵乘法与广播机制
 
-
-
-# 矩阵乘法与广播机制
-
-## 矩阵乘法
+#### 矩阵乘法
 
 如果矩阵 *A*[*m*×*n*] 的列数与矩阵 *B*[*n*×*l*] 的行数相同，则这两个矩阵可以相乘。它们的乘积 *A*[*m*×*n*]*B*[*n*×*l*] 将得到一个 *m*×*l* 大小的矩阵 *C*，其下标为 *i*, *j* 的元素 *c*[*i*, *j*] 是矩阵 *A* 的第 *i* 行向量与矩阵 *B* 的第 *j* 列向量的点积。即：
 
 $$c_{ij} = \sum_{k=1}^{n}(a_{ik}b_{kj})$$
+
+
 
 如图 1-16 所示：
 
@@ -3448,24 +3427,24 @@ $$c_{ij} = \sum_{k=1}^{n}(a_{ik}b_{kj})$$
 
 **图 1-16** 乘积矩阵中第 2 行第 1 列的元素是第一个矩阵第 2 行向量与第二个矩阵第 1 列向量的点积
 
-两个向量的点积可以用矩阵乘法表示。设 *x* 和 *y* 为两个列向量，则：
+两个向量的点积可以用矩阵乘法表示。设 `x` 和 `y` 为两个列向量，则：
 
-*x* ⋅ *y* = *x*^(*T*)*y* = *y*^(*T*)*x*
+`x ⋅ y = x^(T)y = y^(T)x`
 
-若用 *A*[*i*, :] 表示矩阵 *A* 第 *i* 行的行向量，用 *B*[:, *j*] 表示矩阵 *B* 第 *j* 列的列向量，则 *c*[*i*, *j*] = *A*[*i*, :]*B*[:, *j*]。
+若用 `A[i, :]` 表示矩阵 `A` 第 `i` 行的行向量，用 `B[:, j]` 表示矩阵 `B` 第 `j` 列的列向量，则 `c[i, j] = A[i, :]B[:, j]`。
 
-向量是特殊的矩阵，因此矩阵与向量的乘积也属于矩阵乘法。例如，若 *A*[*m*×*n*] 乘以列向量 *x*[*n*×1]：
+向量是特殊的矩阵，因此矩阵与向量的乘积也属于矩阵乘法。例如，若 `A[m×n]` 乘以列向量 `x[n×1]`：
 
 $$
 A x = \begin{bmatrix} a_{1,:} \\ a_{2,:} \\ \vdots \\ a_{m,:} \end{bmatrix}x = \begin{bmatrix} a_{1,:}x \\ a_{2,:}x \\ \vdots \\ a_{m,:}x \end{bmatrix} = \begin{bmatrix} a_{11}x_{1} + a_{12}x_{2} + \cdots + a_{1n}x_{n} \\ a_{21}x_{1} + a_{22}x_{2} + \cdots + a_{2n}x_{n} \\ \vdots \\ a_{m1}x_{1} + a_{m2}x_{2} + \cdots + a_{mn}x_{n} \end{bmatrix}
 $$
 
-*A**x* 是一个列向量，其每个元素都是 *A* 的一行与 *x* 相乘（点积）的结果。
+`Ax` 是一个列向量，其每个元素都是 `A` 的一行与 `x` 相乘（点积）的结果。
 
 可以证明：
 
-- 矩阵乘法满足结合律：(*A**B*)*C* = *A*(*B**C*)
-- 矩阵乘法与加法满足分配律：*A*(*B* + *C*) = *A**B* + *A**C*
+- 矩阵乘法满足结合律：`(AB)C = A(BC)`
+- 矩阵乘法与加法满足分配律：`A(B + C) = AB + AC`
 
 可以使用 NumPy 的 `dot()` 函数或 `ndarray` 的 `dot()` 方法来计算向量的点积和矩阵的乘积。NumPy 的 `dot()` 函数接受两个多维数组并执行多维数组的点积（乘法）运算。
 
@@ -3513,7 +3492,7 @@ dot(b,a): [22 29 36]
 dot(a,c): [21 51]
 ```
 
-`a` 是一个 (2, 3) 矩阵，`b` 是一个一维张量 (2,)。因为一维张量的乘积可以视为行向量或列向量，所以 `np.dot(b,a)` 等价于 (1,2) 矩阵与 (2,3) 矩阵的乘法。而 `np.dot(a,b)` 无法执行，因为无法进行 (2,3) 矩阵与 (1,2) 或 (2,1) 矩阵的乘法。但 `np.dot(a,c)` 可以执行，因为 `c` 的形状是 (3,)，`np.dot(a,c)` 等价于 (2,3) 矩阵与 (3,1) 矩阵的乘法。
+`a` 是一个 `(2, 3)` 矩阵，`b` 是一个一维张量 `(2,)`。因为一维张量的乘积可以视为行向量或列向量，所以 `np.dot(b,a)` 等价于 `(1,2)` 矩阵与 `(2,3)` 矩阵的乘法。而 `np.dot(a,b)` 无法执行，因为无法进行 `(2,3)` 矩阵与 `(1,2)` 或 `(2,1)` 矩阵的乘法。但 `np.dot(a,c)` 可以执行，因为 `c` 的形状是 `(3,)`，`np.dot(a,c)` 等价于 `(2,3)` 矩阵与 `(3,1)` 矩阵的乘法。
 
 对于一维向量和二维矩阵，`matmul()` 函数和运算符 `@` 也执行矩阵乘法，效果与 `np.dot()` 相同。
 
@@ -3547,7 +3526,7 @@ a@b: [[16 26]
  [37 65]]
 ```
 
-##### 4 广播机制
+### 4 广播机制
 
 广播是一种强大的机制，它使 NumPy 能够对形状不同的数组执行算术运算。例如，我们可以用一个数字和一个数组进行运算。这相当于将这个数字变成一个与该数组大小相同的数组，然后进行逐元素运算。例如，下面的 `a+3` 等价于 `a + np.array([[3,3],[3,3]])`。如图 1-17 所示：
 
@@ -3632,30 +3611,23 @@ print(a+b)
 
 两个数组进行运算时，广播的规则为：
 
+#### 广播规则
 
+- 如果数组的秩不同，使用 1 来扩展秩较小的数组，直到两个数组具有相同的秩。例如，秩为 0 的数字与秩不为 0 的数组进行运算时，会将该数字扩展为与数组相同的形状。
+- 如果两个数组在某个维度（轴）上的长度相同，或者其中一个数组在该维度上的长度为 1，则称这两个数组在该维度上是兼容的。
+- 如果两个数组在所有维度上都兼容，则可以使用广播。广播时，将长度为 1 的每个轴扩展为长度不为 1 的数组对应轴的长度。
 
-
-###### 广播规则
-
-*   如果数组的秩不同，使用 1 来扩展秩较小的数组，直到两个数组具有相同的秩。例如，秩为 0 的数字与秩不为 0 的数组进行运算时，会将该数字扩展为与数组相同的形状。
-
-*   如果两个数组在某个维度（轴）上的长度相同，或者其中一个数组在该维度上的长度为 1，则称这两个数组在该维度上是兼容的。
-
-*   如果两个数组在所有维度上都兼容，则可以使用广播。广播时，将长度为 1 的每个轴扩展为长度不为 1 的数组对应轴的长度。
-
-### 1.3 微积分
+## 1.3 微积分
 
 本节介绍函数、极限、函数导数等微积分基本概念。
 
-#### 1.3.1 函数
+### 1.3.1 函数
 
 关于函数，有不同的定义和描述，例如：
 
-*   函数描述了一个变量对另一个变量的依赖关系。自变量称为**自变量**，因变量称为**因变量**。
-
-*   函数是从一个变量到另一个变量的映射。即函数将一个变量映射到另一个变量。
-
-*   函数是一种输入到输出的变换。即函数接受一个输入变量并产生一个输出变量。
+- 函数描述了一个变量对另一个变量的依赖关系。自变量称为**自变量**，因变量称为**因变量**。
+- 函数是从一个变量到另一个变量的映射。即函数将一个变量映射到另一个变量。
+- 函数是一种输入到输出的变换。即函数接受一个输入变量并产生一个输出变量。
 
 这些定义从不同侧面描述了两个变量之间的函数关系。例如，正方形的面积 `s` 取决于其边长 `e`。自变量（如边长 `e`）称为**自变量**，因变量（如面积 `s`）称为**因变量**。面积 `s` 对边长 `e` 的依赖关系可表示为 `s = e²`。这种依赖关系也可视为映射关系：`e → s`，即边长 `e` 映射到面积 `s`。也可视为输入-输出变换 `s(e)`，即输入边长 `e`，输出一个面积值 `s(e)`。
 
@@ -3741,11 +3713,11 @@ plt.show()
 
 线性函数 `y = 2x` 和指数函数 `e^x` 的函数值（因变量）都随着 `x` 的增加而增加，但指数函数增长非常快。人们常说某量呈指数级增长，意指该量增长极快。
 
-#### 1.3.2 四则运算与复合运算
+### 1.3.2 四则运算与复合运算
 
 复杂函数可以通过简单函数的四则运算和复合运算来构建。
 
-##### 四则运算
+#### 四则运算
 
 四则运算是指对两个函数进行加、减、乘、除运算以构建新函数的过程。如果有两个函数 `f(x)`、`g(x)`，这两个函数分别将 `x` 变换为 `f(x)`、`g(x)`：
 
@@ -3791,17 +3763,13 @@ plt.show()
 
 同样，可以通过 `-`、`*`、`/` 构造差函数 `f(x) - g(x)`、积函数 `f(x) * g(x)` 和两个函数的商函数 `f(x)/g(x)`。
 
-##### 复合运算
+#### 复合运算
 
 由于函数是一种变换或输入输出装置，将一个量 `x` 输入函数 `g` 会产生输出 `g(x)`，再将这个 `g(x)` 作为另一个函数 `f` 的输入，产生 `f(g(x))`。
 
 `x → g → g(x) → f → f(g(x))`
 
 将一个函数的输出作为另一个函数的输入，构成了一个新的变换或新函数。这个新函数是由原始的两个函数 `g` 和 `f` 通过变换串联形成的复合函数，可记为 `f ∘ g : x → f(g(x))`，即 `f ∘ g(x) = f(g(x))`。
-
-
-
-
 
 例如，`g(x) = -x`，`f(x) = e^x`，则 `f ∘ g(x) = f(g(x)) = e^(-x)`。另一个例子是 `g(x) = e^x`，`f(x) = x²`，则 `f ∘ g(x) = f(g(x)) = (e^x)²`。复合函数的计算代码如下：
 
@@ -3813,17 +3781,19 @@ y = np.exp(x)**2
 
 ![](img/file223.png)
 
-图 1-23 函数 `e^(-x)` 和 `e^(x²)` 的曲线
+
+
+# 图 1-23 函数 `e^(-x)` 和 `e^(x²)` 的曲线
 
 Sigmoid 函数 $\sigma(x) = \frac{1}{1 + e^{-x}}$ 是机器学习（深度学习）中常用的函数之一。它可以看作是两个常数函数 1 和函数 `1 + e^(-x)` 的商。函数 `1 + e^(-x)` 可以看作是常数函数 1 和函数 `e^(-x)` 的和。函数 `e^(-x)` 可以看作是函数 `e^z` 和 `z = -x` 的复合函数。`-x` 可以看作是常数函数 -1 和 x 的积。通过四则运算和复合运算，从简单的初等函数构建这个复杂函数的过程如图 1-24 所示：
 
 ![](img/file224.png)
 
-图 1-24 Sigmoid 函数 $\sigma(x) = \frac{1}{1 + e^{-x}}$ 的复合过程
+## 图 1-24 Sigmoid 函数 $\sigma(x) = \frac{1}{1 + e^{-x}}$ 的复合过程
 
 以下代码绘制 `σ(x)` 函数曲线：
 
-```
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 %matplotlib inline
@@ -3840,15 +3810,15 @@ plt.show()
 
 ![](img/file16.png "fig:")
 
-图 1-25 函数 `σ(x)` 的曲线
+## 图 1-25 函数 `σ(x)` 的曲线
 
 可以看出，函数值在 `[0,1]` 区间内，且函数值 `f(x)` 随 `x` 的增加而增加，即该函数**单调递增**。如果在自变量的某个区间 I 内，任意两个数 `x[1] < x[2]` 必有 `f(x[1]) < f(x[2])`，则称该函数为严格单调递增。同理，函数单调递减也可以类似定义。
 
 `σ(x)` 函数在 `x = 0` 处的值为 $\frac{1}{1 + e^{-x}} = 1/2 = 0.5$。当 `x` 趋向于正无穷，即 `x → ∞` 时，`e^(-x)` 接近 0，即 `e^(-x) → 0`，因此 $\frac{1}{1 + e^{-x}}$ 接近 `1/(1 + 0) = 1`。反之，当 `x → -∞` 时，`e^(-x) → ∞`，因此 $\frac{1}{1 + e^{-x}}$ 接近 `1/(1 + ∞) = 0`。为了描述变量趋向某个量（如 `x` 趋向 0 或无穷）的行为，人们提出了极限的概念。
 
-#### 1.3.3 极限、导数
+### 1.3.3 极限、导数
 
-##### 1. 数列的极限
+#### 1. 数列的极限
 
 数列是一列有序的数，例如 `(1, 2, 3, 4)`，`(1, 1/2, 1/3, ⋯, 1/n, ⋯)`。数列中的元素形式称为**项数**。项数有限称为有限数列，项数无限称为无限数列。数列也是一个函数，它是从自然数的一个子集到值集合的映射，即其自变量是自然数，因变量是值。通常数列指无限数列，可以写作：
 
@@ -3866,7 +3836,7 @@ $\lim\limits_{n \rightarrow \infty}{1/n} = 0$
 
 数列可能没有极限；如果有极限，则极限必定是唯一的。
 
-##### 2. 函数的极限与连续性
+#### 2. 函数的极限与连续性
 
 同样，可以定义函数 `f(x)` 在某点 `x[0]` 处的极限 $\lim\limits_{x \rightarrow x_{0}}f(x)$，意指当 `x` 足够接近 `x[0]` 时，`f(x)` 将足够接近这个极限。例如：
 
@@ -3882,83 +3852,102 @@ $f(x) = \text{sign}(x) = \left\{ \begin{matrix} {1,} & {x > 0} \\ {0,} & {x==0} 
 
 ![](img/file225.png)
 
-图 1-26 函数 `x²`、`|x|`、`sign(x)` 的曲线
+## 图 1-26 函数 `x²`、`|x|`、`sign(x)` 的曲线
 
 令 `Δx[0] = x - x[0]`，`Δf(x[0]) = f(x) - f(x[0])`，则 $\lim\limits_{x \rightarrow x_{0}}f(x) = f(x_{0})$ 可表示为：$\lim\limits_{\Delta x_{0} \rightarrow 0}\Delta f(x_{0}) = 0$。函数在自变量 `x[0]` 处连续的含义是：当 `Δx[0]` 趋向于 0 时，`Δf(x[0])` 也趋向于 0。即 `Δf(x[0])` 随 `Δx[0]` 趋向于 0 而趋向于 0。
 
-##### 3. 函数的导数
+#### 3. 函数的导数
 
 函数 `y = f(x)` 在某点 `x` 处的连续性，是指因变量 `y = f(x)` 是否随自变量在该点附近的连续变化而连续变化。有时还需要进一步考察因变量随自变量变化的快慢。例如，用 `t` 表示时间，用 `s` 表示运动物体经过的路程。显然，`s` 随 `t` 连续变化，不会在某个时刻突然从一点跳跃到另一点。对于运动物体，有时我们更关心物体运动的快慢，即运动的速度。这段时间的平均运动速度可以用同一时间点内经过的路程来表示，例如从时刻 `t[0]` 到时刻 `t[0] + Δt`，这段时间 `t[0] + Δt - t[0]` 内经过的路程是 `s(t[0] + Δt) - s(t[0])`，它们的比值表示这段时间的平均运动速度：
 
 $\frac{s(t_{0} + \Delta t) - s(t_{0})}{t_{0} + \Delta t - t_{0}} = \frac{s(t_{0} + \Delta t) - s(t_{0})}{\Delta t}$
 
-
-
-
-
-###### 理解导数：从平均速度到瞬时变化率
+##### 理解导数：从平均速度到瞬时变化率
 
 要理解某一时刻 $t_0$ 的精确速度，而非一段时间内的平均速度，可以计算当 $\Delta x$ 趋近于 0 时的上述平均速度，即 $\Delta x \to 0$ 的极限值，将此极限值作为时间 $t_0$ 处的精确速度。
 
 $$
+
 \lim_{\Delta t \to 0} \frac{s(t_0 + \Delta t) - s(t_0)}{\Delta t}
+
 $$
 
 在微积分中，上述极限值称为函数 $s(t)$ 在 $t_0$ 处的**导数**，记作 $s'(t_0)$ 或 $\frac{ds}{dt}\big|_{t_0}$，即：
 
 $$
+
 s'(t_0) = \frac{ds}{dt}\bigg|_{t_0} = \lim_{\Delta t \to 0} \frac{s(t_0 + \Delta t) - s(t_0)}{\Delta t}
+
 $$
 
 一般地，函数 $f(x)$ 在点 $x_0$ 处的导数 $f'(x_0)$ 定义为：
 
 $$
+
 f'(x_0) = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x}
+
 $$
 
 其中 $\Delta x$ 是趋向于 0 的微小增量。$\Delta y = f(x_0 + \Delta x) - f(x_0)$ 是因变量对应的增量。该导数表征了因变量 $y$ 相对于自变量 $x$ 在点 $x_0$ 处的变化快慢。$|f'(x_0)|$ 的绝对值越大，表示 $y$ 的变化越快。
 
-####### 导数计算示例
+###### 导数计算示例
 
 以 $f(x) = x²$ 为例：
 
 **在 $x = 3$ 处的导数：**
 
 $$
+
 \begin{aligned}
+
 f'(3) &= \lim_{\Delta x \to 0} \frac{f(3 + \Delta x) - f(3)}{\Delta x} = \lim_{\Delta x \to 0} \frac{(3 + \Delta x)² - 3²}{\Delta x} \\
+
 &= \lim_{\Delta x \to 0} (6 + \Delta x) = 6
+
 \end{aligned}
+
 $$
 
 **在 $x = 1$ 处的导数：**
 
 $$
+
 \begin{aligned}
+
 f'(1) &= \lim_{\Delta x \to 0} \frac{f(1 + \Delta x) - f(1)}{\Delta x} = \lim_{\Delta x \to 0} \frac{(1 + \Delta x)² - 1²}{\Delta x} \\
+
 &= \lim_{\Delta x \to 0} (2 + \Delta x) = 2
+
 \end{aligned}
+
 $$
 
 **在 $x = 0$ 处的导数：**
 
 $$
+
 \begin{aligned}
+
 f'(0) &= \lim_{\Delta x \to 0} \frac{f(0 + \Delta x) - f(0)}{\Delta x} = \lim_{\Delta x \to 0} \frac{(0 + \Delta x)² - 0²}{\Delta x} \\
+
 &= \lim_{\Delta x \to 0} \Delta x = 0
+
 \end{aligned}
+
 $$
 
 这表明：
+
 - 在 $x=0$ 时，$x$ 有微小增量 $\Delta x$，$y$ 的增量约为 0 倍，即 $y$ 几乎不变。
 - 在 $x=1$ 时，$x$ 增加微小增量 $\Delta x$，$y$ 的增量约为其 2 倍，即 $2\Delta x$。
 - 在 $x=3$ 时，$x$ 有微小增量 $\Delta x$，$y$ 的增量约为其 6 倍，即 $6\Delta x$。
 
 因此，导数表征了因变量 $y$ 相对于自变量 $x$ 变化的快慢。导数绝对值越大，意味着微小的 $x$ 增量能引起 $y$ 的剧烈变化；绝对值越小（接近 0），意味着微小的 $x$ 增量引起的 $y$ 变化越小，即 $y$ 相对于 $x$ 变化缓慢，就像运动物体在时间变化时几乎静止一样。
 
-####### 几何意义：割线斜率到切线斜率
+###### 几何意义：割线斜率到切线斜率
 
 如图 1-27 所示：
+
 - a) 是函数 $y = x³$ 在 $x=1$ 处 $\Delta x = 0.8$ 时的 $\frac{\Delta y}{\Delta x}$，即两点 $(1, 1³)$ 和 $(1.8, 1.8³)$ 连线的斜率（割线斜率），代表该区间内因变量变化对自变量变化的平均速率。
 - b) 给出了 $x=1$ 处 $\Delta x = 0.8, 0.6, 0.4$ 时的 $\frac{\Delta y}{\Delta x}$。
 - c) 当 $\Delta x \to 0$ 时，该比值（斜率）收敛于曲线在 $x=1$ 处切线的斜率。
@@ -3967,17 +3956,22 @@ $$
 
 **图 1-27** a) $x=1$ 处 $\Delta x=0.8$ 的 $\frac{\Delta y}{\Delta x}$；b) $x=1$ 处 $\Delta x=0.8, 0.6, 0.4$ 的 $\frac{\Delta y}{\Delta x}$；c) 当 $\Delta x \to 0$ 时，该比值（斜率）收敛于曲线在 $x=1$ 处切线的斜率。
 
-####### 导函数
+###### 导函数
 
 若函数 $f(x)$ 在每一点 $x$ 处均存在导数 $f'(x)$，即每个 $x$ 对应一个导数值 $f'(x)$，则这种映射关系 $x \to f'(x)$ 也是一种函数关系，称为原函数的**导函数**，记作 $f'(x)$。
 
 对上述 $f(x) = x²$，根据极限公式可得各点导数值：
 
 $$
+
 \begin{aligned}
+
 f'(x) &= \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x} = \lim_{\Delta x \to 0} \frac{(x + \Delta x)² - x²}{\Delta x} \\
+
 &= \lim_{\Delta x \to 0} (2x + \Delta x) = 2x
+
 \end{aligned}
+
 $$
 
 即 $f(x) = x²$ 的导函数为 $f'(x) = 2x$。
@@ -3985,15 +3979,22 @@ $$
 根据定义，易求得以下基本初等函数的导函数：
 
 $$
+
 \begin{aligned}
+
 &\text{(1)}\quad C' = 0; \qquad \text{(2)}\quad (x^n)' = n x^{n-1} \quad (n \in \mathbb{Q}) \\
+
 &\text{(3)}\quad (\sin x)' = \cos x; \qquad \text{(4)}\quad (\cos x)' = -\sin x \\
+
 &\text{(5)}\quad (a^x)' = a^x \ln a; \qquad \text{(6)}\quad (e^x)' = e^x \\
+
 &\text{(7)}\quad (\log_a x)' = \frac{1}{x} \log_a e; \qquad \text{(8)}\quad (\ln x)' = \frac{1}{x}
+
 \end{aligned}
+
 $$
 
-#### 1.3.4 导数的四则运算与链式法则
+### 1.3.4 导数的四则运算与链式法则
 
 对每个可能遇到的函数都根据导数定义用极限计算导函数是不现实的。因为各种函数可以通过四则运算或函数复合构造而成。幸运的是，很容易证明由四则运算或函数复合构造的函数的导数，可以由构造它们的函数的导数来计算。
 
@@ -4002,18 +4003,27 @@ $$
 **四则运算法则：**
 
 $$
+
 \begin{aligned}
+
 (f(x) + g(x))' &= f'(x) + g'(x) \\
+
 (f(x) - g(x))' &= f'(x) - g'(x) \\
+
 (f(x)g(x))' &= f'(x)g(x) + f(x)g'(x) \\
+
 \left(\frac{f(x)}{g(x)}\right)' &= \frac{f'(x)g(x) - f(x)g'(x)}{g(x)²}
+
 \end{aligned}
+
 $$
 
 因为常数函数 $(f(x) = C)$ 的导数为 0，所以常数 $C$ 与函数 $f(x)$ 的乘积 $C f(x)$ 的导数为：
 
 $$
+
 (C f(x))' = C' f(x) + C f'(x) = C f'(x)
+
 $$
 
 同理 $\left(\frac{f(x)}{C}\right)' = \left(\frac{1}{C}f(x)\right)' = \frac{1}{C}f'(x)$。常数 $C$ 与函数 $f(x)$ 的和 $(C + f(x))' = C' + f'(x) = f'(x)$。
@@ -4025,18 +4035,16 @@ $$
 由两个函数 $f(x)$ 和 $g(x)$ 复合而成的复合函数 $f(g(x))$，其导数与原函数导数有如下关系：
 
 $$
+
 (f(g(x)))' = f'(g(x)) \cdot g'(x)
+
 $$
 
 此复合函数的求导公式称为**链式法则**。求 $f(g(x))$ 的导数，是先求 $f$ 对 $g$ 的导数 $f'(g)$，再求 $g$ 对 $x$ 的导数 $g'(x)$，然后将两者相乘 $f'(g) \cdot g'(x)$。如图 1-28 所示。
 
-
-
-
-
 ![](img/file227.png)
 
-**图 1-28** 复合函数链式求导法则示意图
+## 图 1-28 复合函数链式求导法则示意图
 
 对于复合函数，输入一个变量 `x`，总是沿着函数的复合过程“从内到外”计算其函数值，即先计算 `g(x)`，再计算 `f(g(x))`，而计算最终函数值 `f(g(x))` 对输入 `x` 的导数的过程则是相反的，先计算 `f'(g)`，再计算 `g'(x)`，然后将两者相乘。也就是说，求导过程是依次求出各个函数的导数“从外到内”。
 
@@ -4047,10 +4055,18 @@ $$
 同理，可以得到 `σ(x)` 函数的导数：
 
 $$
+
 \begin{matrix}
-\sigma'(x) & = (\frac{1}{1 + e^{-x}})' = \frac{1' * (1 + e^{-x}) - 1 * (1 + e^{-x})'}{(1 + e^{-x})²} \\
-& = \frac{- (1 + e^{-x})'}{(1 + e^{-x})²} = \frac{- 0 - (e^{-x})'}{(1 + e^{-x})²} = \frac{- (e^{-x})(-x)'}{(1 + e^{-x})²} \\
-& = \frac{e^{-x}}{(1 + e^{-x})²} = \frac{1 + e^{-x} - 1}{(1 + e^{-x})²} = \frac{1}{1 + e^{-x}} - \frac{1}{(1 + e^{-x})²} \\
+
+
+
+## 导数推导
+
+$$
+\begin{matrix}
+\sigma'(x) & = (\frac{1}{1 + e^{-x}})' = \frac{1' * (1 + e^{-x}) - 1 * (1 + e^{-x})'}{(1 + e^{-x})^2} \\
+& = \frac{- (1 + e^{-x})'}{(1 + e^{-x})^2} = \frac{- 0 - (e^{-x})'}{(1 + e^{-x})^2} = \frac{- (e^{-x})(-x)'}{(1 + e^{-x})^2} \\
+& = \frac{e^{-x}}{(1 + e^{-x})^2} = \frac{1 + e^{-x} - 1}{(1 + e^{-x})^2} = \frac{1}{1 + e^{-x}} - \frac{1}{(1 + e^{-x})^2} \\
 & = \frac{1}{1 + e^{-x}}(1 - \frac{1}{1 + e^{-x}}) = \sigma(x)(1 - \sigma(x))
 \end{matrix}
 $$
@@ -4086,7 +4102,7 @@ plt.show()
 
 根据导数的定义，上述四则运算法则和复合函数链式求导法则很容易证明。感兴趣的读者可以自行证明或参考微积分教材。
 
-#### 1.3.5 计算图、前向计算、反向传播求导
+### 1.3.5 计算图、前向计算、反向传播求导
 
 通过四则运算和复合运算从简单函数构造出一个函数的过程，可以用上述图 1-29 表示，图中的节点表示四则运算或复合运算。该图也展示了输入自变量 `x` 给该函数计算函数值（函数输出）的过程。这个图称为**计算图**，根据形成该图的过程计算输入变量的输出函数值的过程称为**前向计算**。从图中可以看出，求导过程正好是前向计算过程的逆过程，因此称为**后向计算**或**反向传播计算**。
 
@@ -4108,7 +4124,7 @@ plt.show()
 
 反向传播求导是神经网络（深度学习）的核心且最关键的基础。如果理解了反向求导，就能轻松理解深度学习的算法原理。
 
-#### 1.3.6 多元函数的偏导数与梯度
+### 1.3.6 多元函数的偏导数与梯度
 
 有时自变量 `x` 是由多个分量组成的向量，而不是单个值，即 `x = (x[1], x[2], ..., x[n])` 包含多个分量 `x[j]`。将这种自变量 `x` 映射为单个数值因变量的函数 `f(x)` 称为**多元函数**，可表示为 `f : ℝⁿ → ℝ`。
 
@@ -4150,9 +4166,6 @@ x = \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}
 \end{matrix}
 $$
 
-
-
-
 然后梯度向量与增量向量的点积可以写成矩阵乘积的形式：
 
 `f(xx + Δ) − f(xx) ≃ ∇f(xx)Δx = Δxx^(T)∇ff(xx)^(T)`
@@ -4190,7 +4203,7 @@ f'(x x) = dy/dx x = [ ∂y/∂x_11  ∂y/∂x_21  ⋯  ∂y/∂x_n1
 
 将梯度、自变量、因变量写成行向量、列向量还是矩阵，完全取决于哪种形式更有利于你推导相关公式。如果 `xx` 写成矩阵形式且梯度写成矩阵形式，看起来会更一致。
 
-##### 示例 1
+#### 示例 1
 
 对于多元函数 `F(x, y, z) = x + 2y² + 3z³`，有：
 
@@ -4200,7 +4213,7 @@ f'(x x) = dy/dx x = [ ∂y/∂x_11  ∂y/∂x_21  ⋯  ∂y/∂x_n1
 
 `F(2 + Δx, 3 + Δy, 4 + Δz) − F(2, 3, 4) ≃ 1 * Δx + 12 * Δy + 144 * Δz`
 
-##### 示例 2
+#### 示例 2
 
 假设 `y = w[1] * x[1] + w[2] * x[2] + ⋯ + w[n] * x[n] + b`，若 `y` 视为 `w = (w[1], w[2], …, w[n])` 的函数，则 `dy/dw = (x_1, x_2, ..., x_n)`；若 `y` 视为 `x = (x[1], x[2], …, x[n])` 的函数，则 `dy/dx = (w[1], w[2], …, w[n])`；若 `y` 视为 `b` 的函数，则 `dy/db = 1`。
 
@@ -4210,15 +4223,15 @@ f'(x x) = dy/dx x = [ ∂y/∂x_11  ∂y/∂x_21  ⋯  ∂y/∂x_n1
 
 可以证明，导数的四则运算和链式法则对梯度也成立。设 f, g 为两个从 ℝ^(n) 到 ℝ 的实值函数，则：
 
-###### 线性法则
+##### 线性法则
 
 `(αf + βg)'(x) = ∇(αf + βg)(x) = αf'(x) + βg'(x) = α∇f + β∇g(x)`
 
-###### 乘积法则
+##### 乘积法则
 
 `(fg)'(x) = ∇(fg)(x) = f'(x)g(x) + f(x)g'(x) = g(x)∇f(x) + f∇g(x)`
 
-###### 链式法则
+##### 链式法则
 
 设 g 为从 ℝ^(n) 到 ℝ 的实值函数，f 为从 ℝ 到 ℝ 的实值函数，对某 `xx ∈ ℝ^(n)`，`g(xx)` 的值为 `z`，若 `xx` 为列向量且梯度为行向量形式，则有：
 
@@ -4230,7 +4243,7 @@ f'(x x) = dy/dx x = [ ∂y/∂x_11  ∂y/∂x_21  ⋯  ∂y/∂x_n1
 
 即两种不同形式的链式法则顺序恰好相反。
 
-##### 示例 3
+#### 示例 3
 
 若 `g((x_1, x_2)^T) = 3x_1 + 2x_2³`，`f(z) = z²`，则 `(f ∘ g)((x_1, x_2)^T) = (3x_1 + 2x_2³)²`。所以：
 
@@ -4245,7 +4258,7 @@ f'(x x) = dy/dx x = [ ∂y/∂x_11  ∂y/∂x_21  ⋯  ∂y/∂x_n1
                                                                                      36x_1x_2² + 24x_2⁵ ]
 ```
 
-##### 示例 4
+#### 示例 4
 
 假设 `y`、`ŷ` 是 ℝ^(n) 中的两个向量，可以用它们欧氏距离的平方来定义这两个向量之间的误差（距离），例如用以下公式表示两个向量之间的误差 `E(y, ŷ)`：
 
@@ -4255,7 +4268,7 @@ E(y y, ŷ ŷ) = 1/2 ||y y - ŷ ŷ||_2² = 1/2((y_1 - ŷ_1)² + (y_2 - ŷ_2)² + 
 
 `E(y y, ŷ ŷ)` 关于 `yy` 的梯度为 `(y y - ŷ ŷ)^T`。
 
-#### 1.3.7 向量值函数的导数与雅可比矩阵
+### 1.3.7 向量值函数的导数与雅可比矩阵
 
 如果有多个函数：
 
@@ -4290,8 +4303,6 @@ f f(x) = [ f_1(x)
 输入一个 `x` 值，如 3，产生 3 个值：`[ 9, e³, 3a ]^T`
 
 由 m 个一元函数组成的向量值函数是实数集 ℝ 到 ℝ^(m) 的映射（变换）`ff(x) : ℝ → ℝ^(m)`。如果在某点 `x`，每个函数 `fi` 关于 `x` 的导数存在，将这些导数汇集成一个向量，称为向量值函数关于自变量 `x` 的导数，可写作 `Dff(x)`：
-
-
 
 ##### 向量值函数的导数
 
@@ -4331,123 +4342,121 @@ $x = (x_1, x_2, \cdots, x_n)$
 $$
 \begin{matrix} 
 Df f(x) = f f^{\prime}(x) = \frac{df f}{dx} = \begin{bmatrix} 
+
+
+
+## 数学推导与矩阵微积分
+
+### 雅可比矩阵定义
+
+$$
+\begin{bmatrix}
 \frac{\partial f_{1}}{\partial x_{1}} & \frac{\partial f_{2}}{\partial x_{1}} & \cdots & \frac{\partial f_{m}}{\partial x_{1}} \\
 \frac{\partial f_{1}}{\partial x_{2}} & \frac{\partial f_{2}}{\partial x_{2}} & \cdots & \frac{\partial f_{m}}{\partial x_{2}} \\
-\vdots & \vdots & \ddots & \\
-\frac{\partial f_{1}}{\partial x_{n}} & \frac{\partial f_{2}}{\partial x_{n}} & \cdots & \frac{\partial f_{m}}{\partial x_{n}} \\
+\vdots & \vdots & \ddots & \vdots \\
+\frac{\partial f_{1}}{\partial x_{n}} & \frac{\partial f_{2}}{\partial x_{n}} & \cdots & \frac{\partial f_{m}}{\partial x_{n}}
 \end{bmatrix} \in \mathbb{R}^{n \times m}
-\end{matrix}
 $$
 
 雅可比矩阵由不同多元实值函数的梯度向量累积而成，因此梯度的四则运算和链式法则也适用。
 
-设 f, g 为从 $\mathbb{R}^{(n)}$ 到 $\mathbb{R}^{(m)}$ 的两个向量值函数，则：
+### 向量值函数的导数运算
 
-$D(\alpha f + \beta g)(x) = \alpha Df(x) + \beta Dg(x)$
+设 $f, g$ 为从 $\mathbb{R}^{n}$ 到 $\mathbb{R}^{m}$ 的两个向量值函数，则：
 
-设 g 为从 $\mathbb{R}^{(m)}$ 到 $\mathbb{R}^{(k)}$ 的向量值函数，f 为从 $\mathbb{R}^{(k)}$ 到 $\mathbb{R}^{(n)}$ 的向量值函数。对于 $\mathbb{R}^{(m)}$ 中的点 *x*，设 $g(x)$ 的值为 *z*。如果向量值函数和自变量等均为列向量形式，则：
+$$D(\alpha f + \beta g)(x) = \alpha Df(x) + \beta Dg(x)$$
 
-$(f \circ g)'(x) = D(f \circ g)(x) = f'(z)g'(x) = Df(z)Dg(x)$
+设 $g$ 为从 $\mathbb{R}^{m}$ 到 $\mathbb{R}^{k}$ 的向量值函数，$f$ 为从 $\mathbb{R}^{k}$ 到 $\mathbb{R}^{n}$ 的向量值函数。对于 $\mathbb{R}^{m}$ 中的点 $x$，设 $g(x)$ 的值为 $z$。如果向量值函数和自变量等均为列向量形式，则：
+
+$$(f \circ g)'(x) = D(f \circ g)(x) = f'(z)g'(x) = Df(z)Dg(x)$$
 
 如果向量值函数和自变量等均为行向量形式，则：
 
-$(f \circ g)'(x) = D(f \circ g)(x) = g'(x)f'(z) = Dg(x)Df(z)$
+$$(f \circ g)'(x) = D(f \circ g)(x) = g'(x)f'(z) = Dg(x)Df(z)$$
 
 向量 $x = (x_1, x_2, \cdots, x_n)$ 可以看作其自身的多元向量值函数，其导数为单位矩阵 $I$：
 
 $$
-\begin{matrix} 
-\frac{dx}{dx} = \begin{bmatrix} 
+\frac{dx}{dx} = \begin{bmatrix}
 1 & 0 & \cdots & 0 \\
 0 & 1 & \cdots & 0 \\
-\vdots & \vdots & \ddots & \\
-0 & 0 & \cdots & 1 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & 1
 \end{bmatrix} = I
-\end{matrix}
 $$
 
-根据导数的四则运算规则，对于向量 *x* 和 *b*，$\nabla_x(\alpha x + \beta b) = \alpha I$。
+根据导数的四则运算规则，对于向量 $x$ 和 $b$，$\nabla_x(\alpha x + \beta b) = \alpha I$。
 
-在上述示例 4 中，如果将 $E(y, \hat{y})$ 视为 y 的函数，该函数可视为两个函数 $z = y - \hat{y}$ 和 $E(z) = \frac{1}{2}z²$ 的复合函数。$E(y, \hat{y})$ 关于 y 的梯度为：
+### 示例 4：复合函数求导验证
 
-$E'(z) = z^T$
+在上述示例 4 中，如果将 $E(y, \hat{y})$ 视为 $y$ 的函数，该函数可视为两个函数 $z = y - \hat{y}$ 和 $E(z) = \frac{1}{2}z^2$ 的复合函数。$E(y, \hat{y})$ 关于 $y$ 的梯度为：
 
-$z'(y) = (y - \hat{y})' = I$
+$$E'(z) = z^T$$
+$$z'(y) = (y - \hat{y})' = I$$
+$$\nabla_y E(y, \hat{y}) = E'(z)z'(y) = z^T z'(y) = z^T I = z^T = (y - \hat{y})^T$$
 
-$\nabla_y E(y, \hat{y}) = E'(z)z'(y) = z^T z'(y) = z^T I = z^T = (y - \hat{y})^T$
-
-###### 示例 5
+### 示例 5：线性变换复合
 
 设
 
 $$
-\begin{matrix} 
-z(x) = \begin{bmatrix} z_1(x) \\ z_2(x) \\ \end{bmatrix} = \begin{bmatrix} 2x_1 + 4x_2 + 7x_3 \\ 3x_1 + 5x_2 + 4x_3 \\ \end{bmatrix}
-\end{matrix}
+z(x) = \begin{bmatrix} z_1(x) \\ z_2(x) \end{bmatrix} = \begin{bmatrix} 2x_1 + 4x_2 + 7x_3 \\ 3x_1 + 5x_2 + 4x_3 \end{bmatrix}
 $$
 
-是 *x* 的函数，且
+是 $x$ 的函数，且
 
-$y = \begin{bmatrix} 4z_1 + 3z_2 \\ \end{bmatrix}$
+$$y = \begin{bmatrix} 4z_1 + 3z_2 \end{bmatrix}$$
 
-是 *z* 的函数，则 $f(x) = y(z(x))$ 是 $y(z)$ 和 $z(x)$ 的复合函数，根据复合函数求导规则，有：
+是 $z$ 的函数，则 $f(x) = y(z(x))$ 是 $y(z)$ 和 $z(x)$ 的复合函数，根据复合函数求导规则，有：
 
 $$
-\begin{matrix} 
-f'(x) = y'(z)z'(x) = (4,3)\begin{bmatrix} 2 & 4 & 7 \\ 3 & 5 & 4 \\ \end{bmatrix} = (17,31,40)
-\end{matrix}
+f'(x) = y'(z)z'(x) = (4,3)\begin{bmatrix} 2 & 4 & 7 \\ 3 & 5 & 4 \end{bmatrix} = (17,31,40)
 $$
 
 展开 $f(x)$ 的完整表达式：
 
-$f(x) = 4(2x_1 + 4x_2 + 7x_3) + 3(3x_1 + 5x_2 + 4x_3) = 17x_1 + 31x_2 + 40x_3$
+$$f(x) = 4(2x_1 + 4x_2 + 7x_3) + 3(3x_1 + 5x_2 + 4x_3) = 17x_1 + 31x_2 + 40x_3$$
 
 可以验证上述结果是正确的。
 
 如果约定梯度写成列向量形式，链式法则将按相反顺序书写：
 
 $$
-\begin{matrix} 
-y'(z) = \begin{bmatrix} 4 \\ 3 \\ \end{bmatrix} \quad 
-z'(x) = \begin{bmatrix} 2 & 3 \\ 4 & 5 \\ 7 & 4 \\ \end{bmatrix} \quad 
-f'(x) = z'(x)y'(z) = \begin{bmatrix} 2 & 3 \\ 4 & 5 \\ 7 & 4 \\ \end{bmatrix}\begin{bmatrix} 4 \\ 3 \\ \end{bmatrix} = \begin{bmatrix} 17 \\ 31 \\ 40 \\ \end{bmatrix}
-\end{matrix}
+y'(z) = \begin{bmatrix} 4 \\ 3 \end{bmatrix} \quad
+z'(x) = \begin{bmatrix} 2 & 3 \\ 4 & 5 \\ 7 & 4 \end{bmatrix} \quad
+f'(x) = z'(x)y'(z) = \begin{bmatrix} 2 & 3 \\ 4 & 5 \\ 7 & 4 \end{bmatrix}\begin{bmatrix} 4 \\ 3 \end{bmatrix} = \begin{bmatrix} 17 \\ 31 \\ 40 \end{bmatrix}
 $$
 
 在今后推导这些公式时，必须注意梯度等向量是列向量还是行向量。
 
-###### 示例 6
+### 示例 6：矩阵乘法导数
 
 $$
-\begin{matrix} 
-z = \begin{bmatrix} z_1 & z_2 & \cdots & z_n \\ \end{bmatrix} = \begin{bmatrix} x_1 & x_2 & \cdots & x_m \\ \end{bmatrix} \cdot \begin{bmatrix} 
+z = \begin{bmatrix} z_1 & z_2 & \cdots & z_n \end{bmatrix} = \begin{bmatrix} x_1 & x_2 & \cdots & x_m \end{bmatrix} \cdot \begin{bmatrix}
 w_{11} & w_{12} & \ldots & w_{1n} \\
 w_{21} & w_{22} & \ldots & w_{2n} \\
 \vdots & \vdots & \ddots & \vdots \\
-w_{m1} & w_{m2} & \ddots & w_{mn} \\
-\end{bmatrix} \\
-= \begin{bmatrix} 
-w_{11} * x_1 + w_{21} * x_2 + \cdots + w_{m1} * x_m, &
-w_{12} * x_1 + w_{22} * x_2 + \cdots + w_{m2} * x_m, &
-\cdots, &
-w_{1n} * x_1 + w_{2n} * x_2 + \cdots + w_{mn} * x_m
+w_{m1} & w_{m2} & \ddots & w_{mn}
 \end{bmatrix}
-\end{matrix}
 $$
 
-因为 $\frac{\partial z_i}{\partial x_j} = w_{ji}$，所以 $\frac{\partial z_i}{\partial x} = w_{.i}$ 是矩阵 $W$ 的第 i 列，故 $\frac{\partial z}{\partial x} = W$。
+$$
+= \begin{bmatrix}
+w_{11} x_1 + w_{21} x_2 + \cdots + w_{m1} x_m, &
+w_{12} x_1 + w_{22} x_2 + \cdots + w_{m2} x_m, &
+\cdots, &
+w_{1n} x_1 + w_{2n} x_2 + \cdots + w_{mn} x_m
+\end{bmatrix}
+$$
 
-如果还有另一个变量 *y*，*z* 关于 *y* 的梯度为 $\frac{dy}{dz} = (\frac{\partial y}{\partial z_1}, \frac{\partial y}{\partial z_2}, \cdots, \frac{\partial y}{\partial z_n})^T$，则
+因为 $\frac{\partial z_i}{\partial x_j} = w_{ji}$，所以 $\frac{\partial z_i}{\partial x} = w_{.i}$ 是矩阵 $W$ 的第 $i$ 列，故 $\frac{\partial z}{\partial x} = W$。
 
+如果还有另一个变量 $y$，$z$ 关于 $y$ 的梯度为 $\frac{dy}{dz} = (\frac{\partial y}{\partial z_1}, \frac{\partial y}{\partial z_2}, \cdots, \frac{\partial y}{\partial z_n})^T$，则
 
-
-
-##### 数学推导与矩阵微积分
-
-###### 链式法则与偏导数
+### 链式法则与偏导数
 
 $$
-\frac{dy}{dx} = \frac{\partial y}{\partial z_{1}} \ast \frac{\partial z_{1}}{\partial x} + \frac{\partial y}{\partial z_{2}} \ast \frac{\partial z_{2}}{\partial x} + \cdots + \frac{\partial z_{1}}{\partial z_{n}} \ast \frac{\partial z_{n}}{\partial x} = \frac{dz z}{dx}\frac{dy}{dz z} = \left(\frac{\partial z_{1}}{\partial x},\frac{\partial z_{2}}{\partial x},\cdots,\frac{\partial z_{n}}{\partial x}\right)\left(\frac{\partial z_{1}}{\partial z_{1}},\frac{\partial z_{1}}{\partial z_{2}},\cdots,\frac{\partial z_{1}}{\partial z_{n}}\right)^{T} = W W\frac{dy}{dz z}
+\frac{dy}{dx} = \frac{\partial y}{\partial z_{1}} \frac{\partial z_{1}}{\partial x} + \frac{\partial y}{\partial z_{2}} \frac{\partial z_{2}}{\partial x} + \cdots + \frac{\partial y}{\partial z_{n}} \frac{\partial z_{n}}{\partial x} = \frac{dz}{dx}\frac{dy}{dz} = \left(\frac{\partial z_{1}}{\partial x},\frac{\partial z_{2}}{\partial x},\cdots,\frac{\partial z_{n}}{\partial x}\right)\left(\frac{\partial y}{\partial z_{1}},\frac{\partial y}{\partial z_{2}},\cdots,\frac{\partial y}{\partial z_{n}}\right)^{T} = W \frac{dy}{dz}
 $$
 
 因为 $\frac{\partial z_{j}}{\partial w_{ij}} = x_{i}$，$\frac{\partial z_{k}}{\partial w_{ij}} = 0, k \neq j$，
@@ -4455,141 +4464,135 @@ $$
 示例：
 
 $$
-\begin{matrix} 
-\frac{dz_{1}}{dW} = \begin{bmatrix} 
-x_{1} & 0 & \ldots & 0 \\ 
-x_{2} & 0 & \ldots & 0 \\ 
-\vdots & \vdots & \ddots & \vdots \\ 
-x_{n} & 0 & \ldots & 0 \\ 
-\end{bmatrix} 
-\end{matrix}
+\frac{dz_{1}}{dW} = \begin{bmatrix}
+x_{1} & 0 & \ldots & 0 \\
+x_{2} & 0 & \ldots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+x_{m} & 0 & \ldots & 0
+\end{bmatrix}
 $$
 
-如果存在另一个变量 `y`，`z z` 的梯度为 $\frac{dy}{dz z} = \left(\frac{\partial y}{\partial z_{1}},\frac{\partial y}{\partial z_{2}},\cdots,\frac{\partial y}{\partial z_{n}}\right)^{T}$，则
+如果存在另一个变量 $y$，$z$ 的梯度为 $\frac{dy}{dz} = (\frac{\partial y}{\partial z_{1}},\frac{\partial y}{\partial z_{2}},\cdots,\frac{\partial y}{\partial z_{n}})^{T}$，则
 
 $$
-\frac{dy}{dw_{ij}} = \frac{\partial y}{\partial z_{1}} \ast \frac{\partial z_{1}}{\partial w_{ij}} + \frac{\partial y}{\partial z_{2}} \ast \frac{\partial z_{2}}{\partial w_{ij}} + \cdots + \frac{\partial y}{\partial z_{n}} \ast \frac{\partial z_{n}}{\partial w_{ij}} = \frac{\partial y}{\partial z_{j}}{\partial w_{ij}} = \frac{\partial y}{\partial z_{j}}x_{i} = x_{i}\frac{\partial y}{\partial z_{j}}
+\frac{dy}{dw_{ij}} = \frac{\partial y}{\partial z_{1}} \frac{\partial z_{1}}{\partial w_{ij}} + \frac{\partial y}{\partial z_{2}} \frac{\partial z_{2}}{\partial w_{ij}} + \cdots + \frac{\partial y}{\partial z_{n}} \frac{\partial z_{n}}{\partial w_{ij}} = \frac{\partial y}{\partial z_{j}}\frac{\partial z_{j}}{\partial w_{ij}} = \frac{\partial y}{\partial z_{j}}x_{i} = x_{i}\frac{\partial y}{\partial z_{j}}
 $$
 
 因此：
 
 $$
-\begin{matrix} 
-\frac{dy}{dW W} = \begin{bmatrix} 
-x_{1}\frac{\partial y}{\partial z_{1}} & x_{1}\frac{\partial y}{\partial z_{2}} & \ldots & x_{1}\frac{\partial y}{\partial z_{n}} \\ 
-x_{2}\frac{\partial y}{\partial z_{1}} & x_{2}\frac{\partial y}{\partial z_{2}} & \ldots & x_{2}\frac{\partial y}{\partial z_{n}} \\ 
-\vdots & \vdots & \ddots & \vdots \\ 
-x_{m}\frac{\partial y}{\partial z_{1}} & x_{m}\frac{\partial y}{\partial z_{2}} & \ldots & x_{m}\frac{\partial y}{\partial z_{n}} \\ 
-\end{bmatrix} = x x^{T}\frac{dy}{dz z}^{T} 
-\end{matrix}
+\frac{dy}{dW} = \begin{bmatrix}
+x_{1}\frac{\partial y}{\partial z_{1}} & x_{1}\frac{\partial y}{\partial z_{2}} & \ldots & x_{1}\frac{\partial y}{\partial z_{n}} \\
+x_{2}\frac{\partial y}{\partial z_{1}} & x_{2}\frac{\partial y}{\partial z_{2}} & \ldots & x_{2}\frac{\partial y}{\partial z_{n}} \\
+\vdots & \vdots & \ddots & \vdots \\
+x_{m}\frac{\partial y}{\partial z_{1}} & x_{m}\frac{\partial y}{\partial z_{2}} & \ldots & x_{m}\frac{\partial y}{\partial z_{n}}
+\end{bmatrix} = x \frac{dy}{dz}^{T}
 $$
 
-###### 变量定义
+### 变量定义
 
 设定
 
 $$
-\begin{matrix} 
-W W = \begin{bmatrix} 
-w_{11} & w_{12} & \ldots & w_{1n} \\ 
-w_{21} & w_{22} & \ldots & w_{2n} \\ 
-\vdots & \vdots & \ddots & \vdots \\ 
-w_{m1} & w_{m2} & \ldots & w_{mn} \\ 
+W = \begin{bmatrix}
+w_{11} & w_{12} & \ldots & w_{1n} \\
+w_{21} & w_{22} & \ldots & w_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+w_{m1} & w_{m2} & \ldots & w_{mn}
 \end{bmatrix}
-\quad 
-x x = \begin{bmatrix} 
-x_{1} \\ 
-x_{2} \\ 
-\vdots \\ 
-x_{n} \\ 
+\quad
+x = \begin{bmatrix}
+x_{1} \\
+x_{2} \\
+\vdots \\
+x_{n}
 \end{bmatrix}
-\quad 
-b b = \begin{bmatrix} 
-b_{1} \\ 
-b_{2} \\ 
-\vdots \\ 
-b_{m} \\ 
+\quad
+b = \begin{bmatrix}
+b_{1} \\
+b_{2} \\
+\vdots \\
+b_{m}
 \end{bmatrix}
-\quad 
-\hat{z}\hat{z} = \begin{bmatrix} 
-\hat{z}_{1} \\ 
-\hat{z}_{2} \\ 
-\vdots \\ 
-\hat{z}_{m} \\ 
+\quad
+\hat{z} = \begin{bmatrix}
+\hat{z}_{1} \\
+\hat{z}_{2} \\
+\vdots \\
+\hat{z}_{m}
 \end{bmatrix}
-\end{matrix}
 $$
 
-`z z = W W x x + b b`，即：
+$z = W x + b$，即：
+
+$$
+z = \begin{bmatrix}
+z_{1} \\
+z_{2} \\
+\vdots \\
+z_{m}
+\end{bmatrix} = \begin{bmatrix}
+w_{11} & w_{12} & \ldots & w_{1n} \\
+w_{21} & w_{22} & \ldots & w_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+w_{m1} & w_{m2} & \ldots & w_{mn}
+\end{bmatrix} \cdot \begin{bmatrix}
+x_{1} \\
+x_{2} \\
+\vdots \\
+x_{n}
+\end{bmatrix} + \begin{bmatrix}
+b_{1} \\
+b_{2} \\
+\vdots \\
+b_{m}
+\end{bmatrix} = \begin{bmatrix}
+w_{11} x_{1} + w_{12} x_{2} + \cdots + w_{1n} x_{n} + b_{1} \\
+w_{21} x_{1} + w_{22} x_{2} + \cdots + w_{2n} x_{n} + b_{2} \\
+\vdots \\
+w_{m1} x_{1} + w_{m2} x_{2} + \cdots + w_{mn} x_{n} + b_{m}
+\end{bmatrix}
+$$
+
+### 雅可比矩阵计算
+
+若 $z$ 视为 $x = (x_1, x_2, \cdots, x_n)$ 的多元向量值函数，则 $\frac{dz}{dx}$ 的雅可比矩阵为：
+
+$$
+f'(x) = \frac{dz}{dx} = \begin{bmatrix}
+w_{11} & w_{12} & \cdots & w_{1n} \\
+w_{21} & w_{22} & \cdots & w_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+w_{m1} & w_{m2} & \cdots & w_{mn}
+\end{bmatrix} \in \mathbb{R}^{m \times n}
+$$
+
+若 $z$ 视为 $b = (b_1, b_2, \cdots, b_m)$ 的多元向量值函数，则 $\frac{dz}{db}$ 的雅可比矩阵为：
+
+$$
+f'(b) = \frac{dz}{db} = \begin{bmatrix}
+1 & 0 & \cdots & 0 \\
+0 & 1 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & 1
+\end{bmatrix} \in \mathbb{R}^{m \times m}
+$$
+
+若 $z$ 视为 $W = (w_{11}, w_{12}, \cdots, w_{1n}, \cdots, w_{m1}, w_{m2}, \cdots, w_{mn})$ 的多元向量值函数，则 $\frac{dz}{dW}$ 的雅可比矩阵为：
+
+$$
+f'(W) = \frac{dz}{dW} = \begin{bmatrix}
+x_{1} & \cdots & x_{n} & 0 & \cdots & 0 & \cdots & 0 & \cdots & 0 \\
+0 & \cdots & 0 & x_{1} & \cdots & x_{n} & \cdots & 0 & \cdots & 0 \\
+\vdots & & & & & & \ddots & & & \vdots \\
+0 & \cdots & 0 & 0 & \cdots & 0 & \cdots & x_{1} & \cdots & x_{n}
+\end{bmatrix}
+$$
+
+
 
 $$
 \begin{matrix} 
-z z = \begin{bmatrix} 
-z_{1} \\ 
-z_{2} \\ 
-\vdots \\ 
-z_{m} \\ 
-\end{bmatrix} = \begin{bmatrix} 
-w_{11} & w_{12} & \ldots & w_{1n} \\ 
-w_{21} & w_{22} & \ldots & w_{2n} \\ 
-\vdots & \vdots & \ddots & \vdots \\ 
-w_{m1} & w_{m2} & \ldots & w_{mn} \\ 
-\end{bmatrix} \cdot \begin{bmatrix} 
-x_{1} \\ 
-x_{2} \\ 
-\vdots \\ 
-x_{n} \\ 
-\end{bmatrix} + \begin{bmatrix} 
-b_{1} \\ 
-b_{2} \\ 
-\vdots \\ 
-b_{m} \\ 
-\end{bmatrix} = \begin{bmatrix} 
-w_{11} \ast x_{1} + w_{12} \ast x_{2} \ast + \cdots + w_{1n} \ast x_{n} + b_{1} \\ 
-w_{21} \ast x_{1} + w_{22} \ast x_{2} \ast + \cdots + w_{2n} \ast x_{n} + b_{2} \\ 
-\vdots \\ 
-w_{m1} \ast x_{1} + w_{m2} \ast x_{2} \ast + \cdots + w_{mn} \ast x_{n} + b_{m} \\ 
-\end{bmatrix} 
-\end{matrix}
-$$
-
-###### 雅可比矩阵
-
-若 `z` 视为 `x x = (x[1], x[2], \cdots, x[n])` 的多元向量值函数，则 $\frac{dz z}{dx x}$ 的雅可比矩阵为：
-
-$$
-\begin{matrix} 
-f^{\prime}(x x) = \frac{dz z}{dx x} = \begin{bmatrix} 
-w_{11} & w_{11} & \cdots & w_{1n} \\ 
-w_{21} & w_{21} & \cdots & w_{2n} \\ 
-& & & \\ 
-\vdots & \vdots & \ddots & \\ 
-w_{m1} & w_{m1} & \cdots & w_{mn} \\ 
-\end{bmatrix} \in \mathbb{R}^{m \times n} 
-\end{matrix}
-$$
-
-若 `z` 视为 `b b = (b[1], b[2], \cdots, b[m])` 的多元向量值函数，则 $\frac{dz}{db}$ 的雅可比矩阵为：
-
-$$
-\begin{matrix} 
-f^{\prime}(b) = \frac{d\mathbf{z}}{db b} = \begin{bmatrix} 
-1 & 0 & \cdots & 0 \\ 
-0 & 1 & \cdots & 0 \\ 
-& & & \\ 
-\vdots & \vdots & \ddots & \\ 
-0 & 0 & \cdots & 1 \\ 
-\end{bmatrix} \in \mathbb{R}^{m \times m} 
-\end{matrix}
-$$
-
-若 `z` 视为 `W W = (w[11], w[12], \cdots, w[1n], \cdots, w[m1], w[m2], \cdots, w[m*n])` 的多元向量值函数，则 $\frac{dz z}{dW W}$ 的雅可比矩阵为：
-
-$$
-\begin{matrix} 
-f^{\prime}(w w) = \frac{dz z}{dW W} = \begin{bmatrix} 
-x_{1} & \cdots & x_{n} & 0 & \cdots & 0 & {\cdots\cdots} & 0 & \cdots & 0 \\ 
-0 & \cdots & 0 & x_{1} & \cdots & x_{n} & {\cdots\cdots} & 0 & \cdots & 0 \\ 
 \vdots & \vdots & \ddots & \vdots & \vdots & \ddots & \vdots & \vdots & \ddots & \\ 
 0 & \cdots & 0 & 0 & \cdots & 0 & {\cdots\cdots} & x_{1} & \cdots & x_{n} \\ 
 \end{bmatrix} \in \mathbb{R}^{m \times (m \times n)} 
@@ -4609,11 +4612,11 @@ x_{1} & x_{2} & \cdots & x_{n} \\
 \end{matrix}
 $$
 
-###### 示例 7
+### 示例 7
 
 设 `W W`、`x x`、`b b` 与上同，$L L = \frac{1}{2}{\parallel W Wx x - b b \parallel}^{2}$。
 
-####### 情况一：`L L` 视为 `x x` 的函数
+#### 情况一：`L L` 视为 `x x` 的函数
 
 可视为 $f(z z) = \frac{1}{2}{\parallel z z \parallel}^{2}$ 与复合函数 $z z(x) = W W x x - b b$ 的复合。
 
@@ -4629,7 +4632,7 @@ $$
 ((W W x x - b b)^{(T)} W W)^{(T)} = W W^{(T)} (W W x x - b b) = W W^{(T)} W W x x - W W^{(T)} b b
 $$
 
-####### 情况二：`L L` 视为 `W W` 的函数
+#### 情况二：`L L` 视为 `W W` 的函数
 
 也可视为 $f(z z) = \frac{1}{2}{\parallel z z \parallel}^{2}$ 与复合函数 $z z(W W) = W W x x - b b$ 的复合。
 
@@ -4649,9 +4652,6 @@ x_{1} & \cdots & x_{n} & 0 & \cdots & 0 & {\cdots\cdots} & 0 & \cdots & 0 \\
 $$
 
 将 $\nabla[W W] L L$ 写成与 `W W` 同形的矩阵形式：
-
-
-
 
 $$
 \begin{matrix}
@@ -4679,7 +4679,7 @@ $$
 
 一般来说，如果 `f`^′(`z``z`) 是 `f`(`z``z`) 关于 z 的梯度，且 `z``z` = `W``W``x``x` + `b``b`，那么 `f`(`W``W``x``x` + `b``b`) 关于 `x``x` 的梯度是 `f`^′(`z``z`)`z``z`^′(`x``x`) = `f`^′(`z``z`)`W``W`，`W``W` 的梯度可以写成与 `W``W` 相同的矩阵形式 `f`^′(`z``z`)^(`T`)`x``x`^(`T`)。这个规则在未来的神经网络梯度计算中将很有用。
 
-#### 1.3.8 积分
+### 1.3.8 积分
 
 对于图 1-31 中的函数 `f(x)`，如何求其下方阴影部分的面积？
 
@@ -4733,9 +4733,6 @@ $F^{\prime}(x) = \lim\limits_{\Delta x \rightarrow 0}\frac{(F(x + \Delta) - F(x)
 
 在所有随机事件中，有 2 个特殊事件，即对应空集的事件，标记为 ⌀；对应全集（包含所有样本点）的事件，仍用符号 `Ω` 表示。
 
-
-
-
 随机事件 A 的可能性用 0 到 1 之间的一个实数来表示，通常用符号 `P(A)` 表示，即 `0 <= P(A) <= 1`。显然 `P(∅) = 0`，`P(Ω) = 1`，概率为 0 和 1 的事件分别称为**不可能事件**和**必然事件**，所以 `∅` 和 `Ω` 分别是不可能事件和必然事件。
 
 对于任意事件 A，显然：`∅ ⊆ A ⊆ Ω`。
@@ -4780,6 +4777,8 @@ for n in range(10,50000,2000):
 3.  **可列可加性**：设 `A[1], A[2], ⋯` 为两两不相容事件，即对 `i ≠ j`，有 `A[i] ∩ A[j] = ∅`，`(i, j = 1, 2, ⋯)`，则 `P(A[1] ∪ A[2] ∪ ⋯) = P(A[1]) + P(A[2]) + ⋯`
 
 #### 1.4.2 条件概率、联合概率、全概率公式、贝叶斯公式
+
+
 
 对于一个事件 A，`P(A)` 表示 A 发生的概率，称为**先验概率**。有时也要考虑条件概率，即在已知一个事件已经发生的条件下，另一个事件发生的概率。用 `P(B|A)` 表示在 A 已经发生的条件下 B 发生的概率。
 
@@ -4837,9 +4836,6 @@ $$\frac{P(A,B)}{P(A)} = \frac{2/6}{3/6} = 2/3 = P(B|A)$$
 
 于是对于任意事件 B，下式成立：
 
-
-
-
 $P(B) = P(B \cap A_{1}) + P(B \cap A_{2}) + \cdots = \sum\limits_{i = 1}^{n}P(B|A_{i})P(A_{i})$
 
 称为**全概率公式**。
@@ -4854,7 +4850,7 @@ $P(A_{i}|B) = \frac{P(A_{i},B)}{P(B)} = \frac{P(B|A_{i})P(A_{i})}{\sum\limits_{i
 
 $P(A|B) = \frac{P(B|A)P(A)}{P(B|A)P(A) + P(B|A^{C})P(A^{C})} = \frac{0.99 \times 0.001}{0.99 \times 0.001 + 0.01 \times 0.999} \approx 0.09$
 
-#### 1.4.3 随机变量
+### 1.4.3 随机变量
 
 如果随机事件总是以“出现正面”这样的文字形式书写，则将相应的概率写为 $P(\text{"出现正面"})$ 很不方便，特别是当随机事件数量很大时，为了用数学方法更好地研究概率，可以将样本空间中的样本点（基本事件）映射为一个实数值，这种映射关系称为**随机变量**。
 
@@ -4864,7 +4860,7 @@ $P(A|B) = \frac{P(B|A)P(A)}{P(B|A)P(A) + P(B|A^{C})P(A^{C})} = \frac{0.99 \times
 
 图 1-33 随机变量是从样本空间到实数集的映射
 
-例如，随机实验“投掷一枚硬币并观察其正反面”的样本空间只有 2 个样本：正面和反面。随机变量 $X(\omega)$ 可以定义如下：
+例如，随机实验“投掷一枚硬币并观察其正反面”的样本空间只有 2 个样本：正面和反面。随机变量 `X(ω)` 可以定义如下：
 
 $X(\text{正面}) = 3,\quad X(\text{反面}) = 4$
 
@@ -4884,33 +4880,33 @@ $P(\text{正面}) = 0.3,\quad P(\text{反面}) = 0.7$
 
 $P(X(\omega) = 3) = 0.3,\quad P(X(\omega) = 4) = 0.7$
 
-即 $X(\omega)$ 取值 3 和 4 的概率分别为 0.3 和 0.7。
+即 `X(ω)` 取值 3 和 4 的概率分别为 0.3 和 0.7。
 
 对于一个实验，可以定义不同的随机变量。例如，随机投掷两个骰子，整个事件空间可由 36 个元素组成：
 
 $\omega = \{(i, j)|i = 1, \dots, 6,; j = 1, \dots, 6\}$
 
-可以定义随机变量（映射）随机变量 $X$（获得的两个骰子点数之和），随机变量 $X$ 可取 11 个整数值：
+可以定义随机变量（映射）随机变量 `X`（获得的两个骰子点数之和），随机变量 `X` 可取 11 个整数值：
 
 $X(\omega) = X(i, j) := i + j,\quad x = 2, 3, \dots, 12$
 
-也可以定义随机变量（映射）随机变量 $Y$（获得的两个骰子点数之差），随机变量 $X$ 可取 6 个整数值
+也可以定义随机变量（映射）随机变量 `Y`（获得的两个骰子点数之差），随机变量 `X` 可取 6 个整数值
 
 $Y(\omega) = Y(i, j) := |i - j|,\quad y = 0, 1, 2, 3, 4, 5$
 
-再如，某人在等公交车，公交车每 5 分钟一班。如果该人到站事件是随机的，那么他等车的时间可以用随机变量 $X(\omega)$ 表示。若样本空间 $S= \{\text{等待时间}\}$，样本点本身就是实数，则随机变量 $X(\omega)$ 为：
+再如，某人在等公交车，公交车每 5 分钟一班。如果该人到站事件是随机的，那么他等车的时间可以用随机变量 `X(ω)` 表示。若样本空间 `S= {等待时间}`，样本点本身就是实数，则随机变量 `X(ω)` 为：
 
 $X(\omega) = \omega,\quad \omega \in \Omega$
 
 实际上是一个恒等函数。
 
-如果随机变量 $X(\omega)$ 的取值范围是可数的，则称 $X(\omega)$ 为**离散随机变量**，否则称为**非离散随机变量**。在非离散随机变量中，如果取值范围由某些区间组成，则称为**连续随机变量**。随机变量 $X(\omega)$ 常简写为 $X$，即省略样本点 $\omega$。
+如果随机变量 `X(ω)` 的取值范围是可数的，则称 `X(ω)` 为**离散随机变量**，否则称为**非离散随机变量**。在非离散随机变量中，如果取值范围由某些区间组成，则称为**连续随机变量**。随机变量 `X(ω)` 常简写为 `X`，即省略样本点 `ω`。
 
-#### 1.4.4 离散随机变量的概率分布列
+### 1.4.4 离散随机变量的概率分布列
 
-**定义**：设 X 为离散随机变量，即它只有有限个可能的取值：$x[1], x[2], \cdots, x[n]$。若 X 的每个取值都有一个概率 $P(X[i])$，则这些概率的排列：
+**定义**：设 X 为离散随机变量，即它只有有限个可能的取值：`x[1], x[2], ⋯, x[n]`。若 X 的每个取值都有一个概率 `P(X[i])`，则这些概率的排列：
 
-$P(x[1]), P(x[2]), \cdots, P(x[n])$ 称为随机变量的**概率分布列**。随机变量 X 从其可能取值 $x[i]$ 到对应概率 $P(x[i])$ 的函数关系即函数 $P(X): x[i] \to P(x[i])$ 称为**概率质量函数**。
+`P(x[1]), P(x[2]), ⋯, P(x[n])` 称为随机变量的**概率分布列**。随机变量 X 从其可能取值 `x[i]` 到对应概率 `P(x[i])` 的函数关系即函数 `P(X): x[i] → P(x[i])` 称为**概率质量函数**。
 
 例如，某商家的评价有优、良、中、差，可用随机变量 X 将这组样本点映射为 0、1、2、3。若已知从大量既往评价中得出该商家优、良、中、差的概率分别为 0.5、0.3、0.1、0.1。则随机变量 X 的概率分布律为：
 
@@ -4946,27 +4942,25 @@ $P(X = 1) = \phi,\quad P(X = 0) = 1 - \phi$
 
 **二项分布**
 
-如果问一个问题：“随机抛掷一枚硬币 n 次，出现 k 次正面的概率是多少？”这可以用二项分布来描述。实验“随机抛掷硬币 n 次”中的每一次抛掷都是上述的“两点分布”，且任意两次抛掷相互独立。用 A 表示事件“前 k 次出现正面，其后全为反面”，这是 n 个独立事件的联合事件，即“第 1 次出现正面”（用 $A[1]$ 表示）、“第 2 次出现正面”、$\cdots$、“第 k 次出现正面”、“第 k+1 次出现反面”（用 $B[k+1]$ 表示）、$\cdots$、“第 n 次出现反面”的联合事件。因此：
+如果问一个问题：“随机抛掷一枚硬币 n 次，出现 k 次正面的概率是多少？”这可以用二项分布来描述。实验“随机抛掷硬币 n 次”中的每一次抛掷都是上述的“两点分布”，且任意两次抛掷相互独立。用 A 表示事件“前 k 次出现正面，其后全为反面”，这是 n 个独立事件的联合事件，即“第 1 次出现正面”（用 `A[1]` 表示）、“第 2 次出现正面”、$\cdots$、“第 k 次出现正面”、“第 k+1 次出现反面”（用 `B[k+1]` 表示）、$\cdots$、“第 n 次出现反面”的联合事件。因此：
 
 $A = (A[1], A[2], \cdots, A[k], B[k+1], \cdots, B[n])$
 
-若抛硬币出现正面的概率为 $p$，则：
+若抛硬币出现正面的概率为 `p`，则：
 
 $P(A) = P(A[1])P(A[2])\cdots P(A[k])P(B[k+1])\cdots P(B[n]) = p^{(k)}(1 - p)^{(n - 1)}$
 
+根据组合原理，在“n 次抛硬币，正面出现 k 次”这一事件中，这 k 次正面出现的总次数为 `C_n^k = n! / (k!(n - k)!)`。因此，根据概率的可加性，“n 次抛硬币且 k 次正面”这一事件的概率为 `C_n^k p^k (1-p)^{n-1}`。
 
-
-根据组合原理，在“n 次抛硬币，正面出现 k 次”这一事件中，这 k 次正面出现的总次数为 $C\_{n}^{k} = \frac{n!}{k!(n - k)!}$。因此，根据概率的可加性，“n 次抛硬币且 k 次正面”这一事件的概率为 $C\_{n}^{k}p^{k}(1-p)^{n-1}$。
-
-$P(k; n, p) = C\_{n}^{k}p^{k}(1-p)^{n-1}$
+`P(k; n, p) = C_n^k p^k (1-p)^{n-1}`
 
 如果用随机变量 X 将“n 次抛硬币，k 次正面”映射为整数 k，则该离散随机变量 X 的概率分布称为**二项分布**。此时
 
-$P(X = k) = C\_{n}^{k}p^{k}(1-p)^{n-1}$
+`P(X = k) = C_n^k p^k (1-p)^{n-1}`
 
 描述了给定 n 和 p 时离散随机变量 X = k 的概率。
 
-#### 1.4.5 连续随机变量的概率密度
+### 1.4.5 连续随机变量的概率密度
 
 离散随机变量可以直接列举随机变量取每个离散值的概率。而有些随机变量，如人的身高，其可能的取值是不可数的（不可数），例如取值在实数区间上的随机变量、取值在二维平面区域（如圆）内的坐标点。水位、温度、股价等。这些随机变量的可能取值在实数轴上是连续的，称为**连续随机变量**。
 
@@ -4978,13 +4972,13 @@ $P(X = k) = C\_{n}^{k}p^{k}(1-p)^{n-1}$
 
 $\rho(p) = \lim\limits_{\Delta p \rightarrow 0}\frac{\Delta m}{\Delta p}$
 
-$\Delta p$、$\Delta m$ 代表包含 p 的微小区域的体积和质量。它们的比值反映了该微小区域的质量。当该微小区域趋于 0 时该比值的极限值精确地刻画了这一点 p 处的质量（严格说是质量密度）。
+`Δp`、`Δm` 代表包含 p 的微小区域的体积和质量。它们的比值反映了该微小区域的质量。当该微小区域趋于 0 时该比值的极限值精确地刻画了这一点 p 处的质量（严格说是质量密度）。
 
 类似地，连续随机变量在某一点 x 处的概率（严格说是概率密度）也可以类似地表示为：
 
 $p(x) = \lim\limits_{\Delta x \rightarrow 0}\frac{\Delta P}{\Delta x} = \lim\limits_{\Delta x \rightarrow 0}\frac{P(x + \Delta) - P(x)}{\Delta x}$
 
-$\Delta x$ 是包含 x 的微小区间，$\Delta P$ 是随机变量落在该微小区间内的概率，它们的比值代表随机变量落在该微小区间内的平均概率。当 $\Delta x$ 趋于 0 时该比值的极限精确地描述了随机变量取这一点 x 处值的概率（似然性）。因此，对于某个 x，随机变量 X 在 `[x-dx, x+dx]` 上取值的概率 $P([x-dx, x+dx])$ 可以用 `2dx*p(x)` 来近似。
+`Δx` 是包含 x 的微小区间，`ΔP` 是随机变量落在该微小区间内的概率，它们的比值代表随机变量落在该微小区间内的平均概率。当 `Δx` 趋于 0 时该比值的极限精确地描述了随机变量取这一点 x 处值的概率（似然性）。因此，对于某个 x，随机变量 X 在 `[x-dx, x+dx]` 上取值的概率 `P([x-dx, x+dx])` 可以用 `2dx*p(x)` 来近似。
 
 示例：假设随机变量 X 在区间 `[a,b]` 上均匀取值，则 `P[a,b]=1`，其在每一点 x 处的概率密度为 $p(x) = \frac{1}{b - a}$，即每一点的概率密度都是同一个值，即随机变量在取值 `[a,b]` 上每一点的概率相同。即随机变量在区间 `[a,b]` 上服从均匀分布。
 
@@ -4996,7 +4990,7 @@ $p(x) = N N(\mu,\sigma^{2}) = \frac{1}{\sigma\sqrt{2\pi}}e^{{- {(x - \mu)}^{2}}/
 
 则称该随机变量服从高斯分布（Gaussian distribution）（也称为正态分布）。该随机变量的取值范围是整个实数轴。
 
-下面的代码绘制了不同 $\mu$、$\sigma$ 值下的高斯概率密度：
+下面的代码绘制了不同 `μ`、`σ` 值下的高斯概率密度：
 
 ```
 import numpy as np
@@ -5022,21 +5016,23 @@ plt.show()
 
 图 1-35 不同均值和均方差的高斯曲线
 
-这是一条倒置的“钟形曲线”。可以看出，在 $\mu$ 处概率密度最大，离 $\mu$ 越远，概率密度越小。即随机变量取 $\mu$ 附近值的概率最大，偏离它的值被取到的可能性越小。$\sigma$ 越小，曲线越窄，说明随机变量的值越集中在 $\mu$ 附近。$\mu=0, \sigma=1$ 的高斯分布称为**标准正态分布**。
+这是一条倒置的“钟形曲线”。可以看出，在 `μ` 处概率密度最大，离 `μ` 越远，概率密度越小。即随机变量取 `μ` 附近值的概率最大，偏离它的值被取到的可能性越小。`σ` 越小，曲线越窄，说明随机变量的值越集中在 `μ` 附近。`μ=0, σ=1` 的高斯分布称为**标准正态分布**。
 
-#### 1.4.6 随机变量的分布函数
+### 1.4.6 随机变量的分布函数
 
 **定义**：函数 $F(x) = P(X \le x) = P(\omega|X(\omega) \le x), -\infty \le x \le \infty$，称为随机变量 X 的分布函数。
 
 分布函数描述了随机变量落在区间 $(-\infty, x)$ 上的概率。
 
-例如，上述抛硬币随机变量 X 对应的分布函数可计算为阶跃函数 $F(x)$：
 
-$F(x) = \left\{ \begin{matrix} {0,} & {x < 3} \\ {0.3,} & {3 \le x < 4} \\ {1,} & {x \ge 4} \\ \end{matrix} \right.$
 
-因为随机变量只有 3 和 4 两个可能取值，概率分别为 0.3 和 0.7，所以随机变量不可能小于 3，即落在区间 $(-\infty, x), x < 3$ 内的概率为 0，而落在 $(-\infty, x), x < 4$ 内的概率是取值为 3 的概率 0.3，因为随机变量的值 3 和 4 总会落在 $(-\infty, x), x \ge 4$ 内，所以 F(x) 在 $(-\infty, x), x \ge 4$ 上的概率为 1。
+例如，上述抛硬币随机变量 `X` 对应的分布函数可计算为阶跃函数 `F(x)`：
 
-```
+$$F(x) = \left\{ \begin{matrix} {0,} & {x < 3} \\ {0.3,} & {3 \le x < 4} \\ {1,} & {x \ge 4} \\ \end{matrix} \right.$$
+
+因为随机变量只有 3 和 4 两个可能取值，概率分别为 0.3 和 0.7，所以随机变量不可能小于 3，即落在区间 $(-\infty, x), x < 3$ 内的概率为 0，而落在 $(-\infty, x), x < 4$ 内的概率是取值为 3 的概率 0.3，因为随机变量的值 3 和 4 总会落在 $(-\infty, x), x \ge 4$ 内，所以 `F(x)` 在 $(-\infty, x), x \ge 4$ 上的概率为 1。
+
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 %matplotlib inline
@@ -5046,20 +5042,17 @@ plt.scatter(3,0, s=50, facecolors='none', edgecolors='r')
 plt.scatter(4,0.3, s=50, facecolors='none', edgecolors='g')
 ```
 
-![](img/file20.png "fig:")  
+![](img/file20.png "fig:")
 
-图 1-36 抛硬币随机变量 X 对应的分布函数是阶跃函数
+图 1-36 抛硬币随机变量 `X` 对应的分布函数是阶跃函数
 
-对于连续随机变量，若其概率密度为 $p(x)$，则分布函数是概率密度函数 $p(x)$ 在区间 $(-\infty, x)$ 上的定积分。
+对于连续随机变量，若其概率密度为 `p(x)`，则分布函数是概率密度函数 `p(x)` 在区间 $(-\infty, x)$ 上的定积分。
 
-$F(x) = \int_{-\infty}^{x} p(x) dx$
+$$F(x) = \int_{-\infty}^{x} p(x) dx$$
 
-反过来，概率密度是分布函数的导数，即 $p(x) = F'(x)$。
+反过来，概率密度是分布函数的导数，即 `p(x) = F'(x)`。
 
 下面的代码绘制了上图高斯概率密度对应的分布函数：
-
-
-
 
 ```python
 from scipy.integrate import quad
@@ -5091,9 +5084,9 @@ plt.show()
 
 图 1-37 不同均值和均方差的高斯概率密度函数
 
-#### 1.4.7 期望、方差、协方差、协方差矩阵
+### 1.4.7 期望、方差、协方差、协方差矩阵
 
-##### 1. 均值与期望
+#### 1. 均值与期望
 
 假设有一些学生，他们的年龄分别是：18、19、20、21、22、19。那么他们的平均年龄是：
 
@@ -5111,7 +5104,7 @@ plt.show()
 
 $$\frac{x_{1} + x_{2} + \cdots + x_{n}}{n} = \frac{1}{n}\sum\limits_{i = 1}^{n}x_{i}$$
 
-如果 ($x_1, x_2, \cdots, x_n$) 是随机变量 $X$ 的所有可能取值，假设随机变量取这些值的概率相同，即为 $\frac{1}{n}$。这个均值可以写成：
+如果 ($x_1, x_2, \cdots, x_n$) 是随机变量 `X` 的所有可能取值，假设随机变量取这些值的概率相同，即为 $\frac{1}{n}$。这个均值可以写成：
 
 $$\frac{1}{n}{(x_{1} + x_{2} + \cdots + x_{n})} = \frac{1}{n}x_{1} + \frac{1}{n}x_{2} + \cdots + \frac{1}{n}x_{n}$$
 
@@ -5121,25 +5114,25 @@ $$\frac{1}{n}{(x_{1} + x_{2} + \cdots + x_{n})} = \frac{1}{n}x_{1} + \frac{1}{n}
 
 $p_1 x_1 + p_2 x_2 + \cdots + p_n x_n$
 
-通常用字母 `E` 表示随机变量的期望，即随机变量 $X$ 的期望可标记为 `E[X]`。此时：
+通常用字母 `E` 表示随机变量的期望，即随机变量 `X` 的期望可标记为 `E[X]`。此时：
 
 $$E\lbrack X\rbrack = p_{1}x_{1} + p_{2}x_{2} + \cdots + p_{n}x_{n} = \sum\limits_{i = 1}^{n}p_{i}x_{i}$$
 
-假设大一新生年龄只有 18、19、20、21 岁，可以用一个可能取值为 0、1、2、3 的随机变量 $X$ 来表示。随机变量的概率 $p_i = P(x = i), i = 0, 1, 2, 3$ 表示随机变量的取值概率或学生属于不同年龄的概率（概率/百分比）。该随机变量 $X$ 的期望为：
+假设大一新生年龄只有 18、19、20、21 岁，可以用一个可能取值为 0、1、2、3 的随机变量 `X` 来表示。随机变量的概率 $p_i = P(x = i), i = 0, 1, 2, 3$ 表示随机变量的取值概率或学生属于不同年龄的概率（概率/百分比）。该随机变量 `X` 的期望为：
 
 `E[X]` = $p_0 \times 0 + p_1 \times 1 + p_2 \times 2 + p_3 \times 3$
 
-如果 $p_0, p_1, p_2, p_3$ 分别为 0.2, 0.4, 0.3, 0.1，则 `E(x)` = 0.2 $\times$ 0 + 0.4 $\times$ 1 + 0.3 $\times$ 2 + 0.1 $\times$ 3 = 1.03。
+如果 $p_0, p_1, p_2, p_3$ 分别为 0.2, 0.4, 0.3, 0.1，则 `E[X]` = 0.2 $\times$ 0 + 0.4 $\times$ 1 + 0.3 $\times$ 2 + 0.1 $\times$ 3 = 1.03。
 
-如果函数 `f(X)` 将表示学生年龄的随机变量 $X$ 映射为学生的实际年龄，即 $x = 0, 1, 2, 3$ 映射为年龄 18, 19, 20, 21，因为随机变量 $X$ 取值 0, 1, 2, 3 的概率分别为 $p_0, p_1, p_2, p_3$，因此，随变量 `f(X)` 取值 `f(0)`, `f(1)`, `f(2)`, `f(3)` 的概率也分别是 $p_0, p_1, p_2, p_3$，于是可以计算随机变量 `f(X)` 的期望 `E[f(X)]`：
+如果函数 `f(X)` 将表示学生年龄的随机变量 `X` 映射为学生的实际年龄，即 $x = 0, 1, 2, 3$ 映射为年龄 18, 19, 20, 21，因为随机变量 `X` 取值 0, 1, 2, 3 的概率分别为 $p_0, p_1, p_2, p_3$，因此，随变量 `f(X)` 取值 `f(0)`, `f(1)`, `f(2)`, `f(3)` 的概率也分别是 $p_0, p_1, p_2, p_3$，于是可以计算随机变量 `f(X)` 的期望 `E[f(X)]`：
 
 `E[f(X)]` = $p_0 \times f(0) + p_1 \times f(1) + p_2 \times f(2) + p_3 \times f(3)$ = 0.2 $\times$ 18 + 0.4 $\times$ 19 + 0.3 $\times$ 20 + 0.1 $\times$ 21 = 19.3
 
-因此，如果随机变量 $X$ 所有取值的概率分别为 $p_1, \cdots, p_i, \cdots, p_n$，随机变量 $X$ 的函数值 `f(X)` 也是一个随机变量，随机变量 `f(X)` 的期望为：
+因此，如果随机变量 `X` 所有取值的概率分别为 $p_1, \cdots, p_i, \cdots, p_n$，随机变量 `X` 的函数值 `f(X)` 也是一个随机变量，随机变量 `f(X)` 的期望为：
 
 $$E\lbrack f(X)\rbrack = p_{1}f(x_{1}) + p_{2}f(x_{2}) + \cdots + p_{n}f(x_{n}) = \sum\limits_{i = 1}^{n}p_{i}f(x_{i})$$
 
-如果 $X$ 是连续随机变量，随机变量 $X$ 取值 $x$ 的概率为 $p(x)$，`f(X)` 是依赖于 $X$ 的随机变量，则随机变量 `Theexpectationof` 和 `f(X)` 可通过积分计算：
+如果 `X` 是连续随机变量，随机变量 `X` 取值 `x` 的概率为 `p(x)`，`f(X)` 是依赖于 `X` 的随机变量，则随机变量 `E[X ~ p][X]` 和 `f(X)` 可通过积分计算：
 
 `E[X ~ p][X]` = $\int p(x) x \, dx$
 
@@ -5151,7 +5144,7 @@ $$E\lbrack f(X)\rbrack = p_{1}f(x_{1}) + p_{2}f(x_{2}) + \cdots + p_{n}f(x_{n}) 
 
 `E[X]`[$\alpha f(X) + \beta g(X)$] = $\alpha E[X][f(X)] + \beta E[X][g(X)]$
 
-##### 2. 方差、标准差
+#### 2. 方差、标准差
 
 期望表示随机变量的期望均值。例如 18, 19, 20, 21, 22 的均值是 20，而 1, 6, 18, 10, 65 的均值也是 20。前一组数值非常接近，但后一组数值之间的偏差相对较大或较分散。如何表达随机变量取值的聚合程度或发散程度？
 
@@ -5163,15 +5156,15 @@ $$\frac{(1 - 20)^{2} + (6 - 20)^{2} + (18 - 20)^{2} + (10 - 20)^{2} + (65 - 20)^
 
 这个误差平方的平均值称为**均方误差**，简称**方差**。它描述了随机变量偏离其期望值的程度。方差越大，越发散；方差越小，越集中。即方差越小，随机变量取值越集中在期望值附近。
 
-对于等概率的随机变量 $x$，其取值为 ($x_1, x_2, \cdots, x_n$)，若其期望（均值）记为 $\mu = E(X)$，则方差 `Var(X)` 为：
+对于等概率的随机变量 `x`，其取值为 ($x_1, x_2, \cdots, x_n$)，若其期望（均值）记为 $\mu = E(X)$，则方差 `Var(X)` 为：
 
 $$Var(X) = \frac{1}{n}({(x_{1} - \mu)}^{2} + {(x_{2} - \mu)}^{2} + \cdots + {(x_{n} - \mu)}^{2}) = \frac{{(x_{1} - \mu)}^{2} + {(x_{2} - \mu)}^{2} + \cdots + {(x_{n} - \mu)}^{2})}{n} = \frac{\sum\limits_{i = 1}^{n}{(x_{i} - \mu)}^{2}}{n}$$
 
-如果随机变量 $X$ 的概率分别为 $p_1, \cdots, p_i, \cdots, p_n$，则方差为：
+如果随机变量 `X` 的概率分别为 $p_1, \cdots, p_i, \cdots, p_n$，则方差为：
 
 `Var(X)` = ($p_1(x_1 - \mu)² + p_2(x_2 - \mu)² + \cdots + p_n(x_n - \mu)²$)
 
-如果 $X$ 是连续随机变量，随机变量 $X$ 取值 $x$ 的概率为 $p(x)$，则 $X$ 的方差 `Var(X)` 为：
+如果 `X` 是连续随机变量，随机变量 `X` 取值 `x` 的概率为 `p(x)`，则 `X` 的方差 `Var(X)` 为：
 
 `Var(X)` = `E[X ~ p]`[$X - E(X)$]² = $\int p(x) (X - E[x])² \, dx$
 
@@ -5181,16 +5174,13 @@ $$Var(X) = \frac{1}{n}({(x_{1} - \mu)}^{2} + {(x_{2} - \mu)}^{2} + \cdots + {(x_
 
 方差是误差的平方，方差的平方根称为**标准差**，可用 `std(X)` 表示。即：$std(X) = \sqrt{Var(X)}$
 
-
-
-
 人们通常使用符号 `μ`、`σ` 来表示期望和标准差，而方差则用符号 `σ²` 表示。
 
 > **注意：** 方差有时被定义为样本方差：
 >
 > $$Var(X) = \frac{1}{n - 1}\left({(x_{1} - \mu)}^{2} + {(x_{2} - \mu)}^{2} + \cdots + {(x_{n} - \mu)}^{2}\right) = \frac{{(x_{1} - \mu)}^{2} + {(x_{2} - \mu)}^{2} + \cdots + {(x_{n} - \mu)}^{2}}{n - 1}$$
 
-##### 3. 协方差、协方差矩阵
+#### 3. 协方差、协方差矩阵
 
 对于二维平面上的两个向量 `a = (x[a], y[a])`、`b = (x[b], y[b])`，它们的点积 `a ⋅ b = x[a]x[b] + y[a]y[b]` 刻画了它们的相关性。例如，`a = (1, 1)`，`b = (−1, 1)`，它们的点积 `a ⋅ b = 1 * 1 + (−1) * 1 = 0` 表明它们相互垂直，即不相关。再如，`a = (1, 1)`，`b = (1, 1)`，它们的点积 `a ⋅ b = 1 * 1 + 1 * 1 = 2`；这两个向量是重合的同一个向量，它们是相关的。再如，`a = (1, 1)`，`b = (1, 0)`，它们的点积 `a ⋅ b = 1 * 1 + 1 * 0 = 1`；这两个向量的夹角为 45 度，它们的相关程度介于刚才那两种相关程度之间。
 
@@ -5207,22 +5197,35 @@ $$Var(X) = \frac{(x_{1} - \mu_{X})(x_{1} - \mu_{X}) + (x_{2} - \mu_{X})(x_{2} - 
 但两者的含义不同。`Var(X)` 描述随机变量偏离期望值的程度，而 `Cov(X, Y)` 描述两个随机变量之间的相关性。
 
 $$
+
 \begin{matrix}
+
 {\text{Cov}(X,Y)} & {= E[(X - E[X])(Y - E[Y])]} \\
+
 \end{matrix}
+
 $$
 
 根据期望的线性法则，可以进行如下推导：
 
 $$
+
 \begin{matrix}
+
 {{Cov}(X,Y)} & {= E[(X - \mu_{X})(Y - \mu_{Y})]} \\
+
 & {= E[XY - \mu_{X}Y - \mu_{Y}X + \mu_{x}\mu_{Y}]} \\
+
 & {= E[XY] - \mu_{X}E[Y] - \mu_{Y}E[X] + \mu_{x}\mu_{Y}} \\
+
 & {= E[XY] - \mu_{x}\mu_{Y} - \mu_{x}\mu_{Y} + \mu_{x}\mu_{Y}} \\
+
 & {= E[XY] - \mu_{x}\mu_{Y}} \\
+
 & {= E[XY] - E[X] E[Y]} \\
+
 \end{matrix}
+
 $$
 
 在机器学习中，一个样本可能包含多个特征。例如，一栋房子可能包含面积、房间数量、位置、楼层数等特征。每个特征都可以看作一个随机变量，某些特征之间可能存在关联。特征对机器学习算法的影响会相互制约，消除特征间的相关性或选择低相关性的特征将有助于提高机器学习算法的性能。可以对这些特征进行相关性分析，以帮助选择好的特征或转换原始数据以消除特征间的相关性。
@@ -5230,13 +5233,21 @@ $$
 如果一个样本有 3 个特征，它们对应的随机变量分别用 `X1`、`X2` 和 `X3` 表示，可以通过计算它们两两之间的协方差来分析它们之间的相关性。它们之间的协方差值可以用矩阵的形式表示，称为**协方差矩阵**，通常用符号 `∑` 表示。
 
 $$
+
 \begin{matrix}
+
 {\sum = \begin{pmatrix}
+
 {Cov(X_{1},X_{1})} & {Cov(X_{1},X_{2})} & {Cov(X_{1},X_{3})} \\
+
 {Cov(X_{2},X_{1})} & {Cov(X_{2},X_{2})} & {Cov(X_{2},X_{3})} \\
+
 {Cov(X_{3},X_{1})} & {Cov(X_{3},X_{2})} & {Cov(X_{3},X_{3})} \\
+
 \end{pmatrix}} \\
+
 \end{matrix}
+
 $$
 
 这是一个对称矩阵。如果将每个随机变量的所有可能取值排列起来，所有随机变量的这些可能取值可以表示为一个矩阵：
@@ -5260,6 +5271,12 @@ np.dot(X.transpose(), X)
 
 ## 2.1 函数极值的必要条件
 
+
+
+# 函数极值与梯度下降法
+
+## 函数极值的定义
+
 函数 `y = f(x)` 在某点 `x[0]` 处取得**最小值**：意味着存在某个正数 `ϵ`，使得对于区间 `(x[0] − ϵ, x[0] + ϵ)` 内的每个 x 都满足 `f(x[0]) ≤ f(x)`。`x[0]` 称为函数的**最小值点**，`f(x[0])` 称为函数的**最小值**。
 
 函数 `y = f(x)` 在某点 `x[0]` 处取得**最大值**：意味着存在某个正数 `ϵ`，使得对于区间 `(x[0] − ϵ, x[0] + ϵ)` 内的每个 x 都满足 `f(x) ≤ f(x[0])`。`x[0]` 称为函数的**最大值点**，`f(x[0])` 称为函数的**最大值**。
@@ -5272,12 +5289,11 @@ np.dot(X.transpose(), X)
 
 也就是说，全局最小值是全局范围内的一个最小值，全局最大值是全局范围内的一个最大值。全局最小值和最大值统称为**全局最优**，全局最小值点和最大值点统称为**全局最优点**。
 
+## 函数极值的必要条件
+
 **函数极值的必要条件**：如果 `x[0]` 是函数 `f(x)` 的极值点，且函数在 `x[0]` 处可导，则 `f'(x[0]) = 0` 必须成立。极值点处的导数值必须为 0。
 
 例如，前面的函数 `f(x) = x²` 在 `x = 0` 处取得最小值（当然也是全局最小值）且可导，所以在 `x = 0` 处其导数值 `f'(0) = 2 × 0 = 0` 必须为 0。
-
-
-
 
 这个命题很容易证明。如果 `x[0]` 是函数 `f(x)` 的极值点，则存在一个区间 `(x[0] - ϵ, x[0] + ϵ)` 满足 `f(x[0]) ≤ f(x)`，所以 `f(x) - f(x[0]) ≥ 0`，而：
 
@@ -5303,7 +5319,7 @@ f'(x) = 0  ⇒  (x³ - 3x² - 9x + 2)' = 0  ⇒  3x² - 6x - 9 = 0  ⇒  x² - 2
 
 下面的代码绘制了该函数及其导函数的曲线，可以更直观地看到单调变化和极值点情况。
 
-```
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 %matplotlib inline
@@ -5328,7 +5344,7 @@ plt.show()
 
 注意，上述命题只说明了函数极值点的必要条件，而非充分条件，也就是说，函数 `x[0]` 处的导数 `f'(x[0]) = 0` 并不意味着 `x[0]` 一定是极值点。例如，`f(x) = x³` 在 `x = 0` 处的导数 `f'(0)` 也是 0，但这一点不是函数的极值点。实际上，这是一条单调递增的曲线，如图 2-3 所示。
 
-```
+```python
 x = np.arange(-3, 3, 0.01)
 f_x = np.power(x,3)
 
@@ -5378,15 +5394,11 @@ plt.show()
 
 **图 2-5** `x` 沿 `-f'(x)` 移动，函数值不断减小
 
-
-
-
-
 当然，这种移动的步长（即 `-αf'(x)`）不能太大，因为根据导数的定义，上述近似公式仅适用于 `x` 附近。如果移动步长太大，可能会跳过 `x` 的最优值，导致 `x` 的值不断来回震荡。如图 2-6 所示。
 
 ![](img/file26.png "fig:")
 
-图 2-6 `x` 的变化量 `-αf'(x)` 过大，函数值将会震荡
+**图 2-6** `x` 的变化量 `-αf'(x)` 过大，函数值将会震荡
 
 梯度下降法是寻找近似最优解。为了避免无限迭代，可以使用以下方法来检查是否足够接近最优解：
 
@@ -5395,7 +5407,7 @@ plt.show()
 
 以下是梯度下降法的代码，其中参数 `df` 用于计算函数 `f(x)` 的导数 `f'(x)`，`x` 是变量的初始值，`alpha` 是学习率，`iterations` 表示迭代次数，`epsilon` 用于检查 `df=f'(x)` 的值是否接近 0。
 
-```
+```python
 def gradient_descent(df, x, alpha=0.01, iterations=100, epsilon=1e-8):
     history = [x]
     for i in range(iterations):
@@ -5411,7 +5423,7 @@ def gradient_descent(df, x, alpha=0.01, iterations=100, epsilon=1e-8):
 
 对于上述函数 `f(x) = x³ – 3x² – 9x + 2`，其导数 `f'(x) = 3x² – 6x – 9`。如果想求 `x = 1` 附近函数 `f(x)` 的最小值，可以调用此函数 `gradient_descent()`：
 
-```
+```python
 df = lambda x: 3*x**2 - 6*x - 9
 path = gradient_descent(df, 1., 0.01, 200)
 print(path[-1])
@@ -5424,7 +5436,7 @@ The gradient is small enough!
 
 得到 `f(x)` 的极值点 `x = 2.999999999256501`。可以绘制迭代过程中 `x` 对应的曲线上的点：
 
-```
+```python
 f = lambda x: np.power(x, 3) - 3*x**2 - 9*x + 2
 x = np.arange(-3, 4, 0.01)
 y = f(x)
@@ -5439,7 +5451,7 @@ plt.show()
 
 ![](img/file27.png)
 
-图 2-7 `x` 逐渐收敛到最小值点
+**图 2-7** `x` 逐渐收敛到最小值点
 
 其中，matplotlib 的 `quiver` 函数可以用箭头绘制速度向量，其函数格式为：
 
@@ -5459,13 +5471,13 @@ quiver([X, Y], U, V, [C], **kw)
 
 该函数的全局最小值为 `(3, 0.5)`。可以使用以下 Python 代码计算函数值：
 
-```
+```python
 f = lambda x, y: (1.5 - x + x*y)**2 + (2.25 - x + x*y**2)**2 + (2.625 - x + x*y**3)**2
 ```
 
 要绘制该曲面，首先在 `x` 和 `y` 轴上取一些均匀分布的坐标值：
 
-```
+```python
 xmin, xmax, xstep = -4.5, 4.5, .2
 ymin, ymax, ystep = -4.5, 4.5, .2
 x_list = np.arange(xmin, xmax + xstep, xstep)
@@ -5474,21 +5486,21 @@ y_list = np.arange(ymin, ymax + ystep, ystep)
 
 然后根据上述 `x_list` 和 `y_list` 使用 `np.meshgrid()` 函数获取其交点处的网格点 `(x, y)`，并计算这些网格坐标点对应的函数值：
 
-```
+```python
 x, y = np.meshgrid(x_list, y_list)
 z = f(x, y)
 ```
 
 最后，可以调用 `plot_surface()` 函数绘制该曲面：
 
-```
+```python
 ax.plot_surface(x, y, z, norm=LogNorm(), rstride=1, cstride=1,
                 edgecolor='none', alpha=.8, cmap=plt.cm.jet)
 ```
 
 完整代码如下：
 
-```
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
@@ -5528,17 +5540,23 @@ plt.show()
 
 ![](img/file28.png)
 
-图 2-8 绘制的 `f(x,y)` 曲面
+**图 2-8** 绘制的 `f(x,y)` 曲面
 
 `f(x, y)` 对 `x`、`y` 的偏导数为：
 
 $\frac{\partial f(x,y)}{\partial x} = 2(1.5 - x + xy)(y - 1) + 2(2.25 - x + xy^{2})(y^{2} - 1) + 2(2.625 - x + xy^{3})(y^{3} - 1)$
 
-$\frac{\partial f(x,y)}{\partial y} = 2(1.5 - x + xy)x + 2(2.25 - x + xy^{2})(2yx) + 2(2.625 - x + xy^{3})(3y^{2}x)$
 
-可以使用 matplotlib 的 `quiver` 函数在二维坐标平面上绘制这些网格点处的梯度方向。
 
-```
+## 梯度下降法与参数优化策略
+
+$$
+\frac{\partial f(x,y)}{\partial y} = 2(1.5 - x + xy)x + 2(2.25 - x + xy^{2})(2yx) + 2(2.625 - x + xy^{3})(3y^{2}x)
+$$
+
+可以使用 `matplotlib` 的 `quiver` 函数在二维坐标平面上绘制这些网格点处的梯度方向。
+
+```python
 df_x = lambda x, y: 2*(1.5 - x + x*y)*(y-1) + 2*(2.25 - x + x*y**2)*(y**2-1) + 2*(2.625 - x + x*y**3)*(y**3-1)
 df_y = lambda x, y: 2*(1.5 - x + x*y)*x + 2*(2.25 - x + x*y**2)*(2*x*y) + 2*(2.625 - x + x*y**3)*(3*x*y**2)
 dz_dx = df_x(x, y)
@@ -5561,23 +5579,23 @@ plt.show()
 
 ![](img/file29.png)
 
-图 2-9 函数 `f(x,y)` 等值面的定域坐标等高线及网格点处的梯度方向
+**图 2-9** 函数 `f(x,y)` 等值面的定域坐标等高线及网格点处的梯度方向
 
-为了直接使用之前的梯度下降法代码，可以用 numpy 向量表示之前梯度下降法代码中的 `x`，并将
+为了直接使用之前的梯度下降法代码，可以用 `numpy` 向量表示之前梯度下降法代码中的 `x`，并将
 
-```
+```python
 if abs(df(x)) < epsilon:
 ```
 
 改为：
 
-```
+```python
 if np.max(np.abs(df(x))) < epsilon:
 ```
 
 首先将分离的 `x` 和 `y` 坐标数组合并为一个数组：
 
-```
+```python
 print(x.shape)
 print(y.shape)
 
@@ -5593,7 +5611,7 @@ print(x_.shape)
 
 可以为这个向量化的坐标点 `x` 定义一个梯度函数 `df`。以下代码还给出了修改后的向量化版梯度下降算法的实现：
 
-```
+```python
 df = lambda x: np.array([
     2*(1.5 - x[0] + x[0]*x[1])*(x[1]-1) + 2*(2.25 - x[0] + x[0]*x[1]**2)*(x[1]**2-1)
     + 2*(2.625 - x[0] + x[0]*x[1]**3)*(x[1]**3-1),
@@ -5613,10 +5631,6 @@ def gradient_descent(df, x, alpha=0.01, iterations=100, epsilon=1e-8):
 ```
 
 以下代码从 `x0 = (3., 4.)` 开始求解该曲面的极值点：
-
-
-
-
 
 ```python
 x0 = np.array([3., 4.])
@@ -5651,7 +5665,7 @@ plot_path(path, x, y, z, minima_, xmin, xmax, ymin, ymax)
 
 ![](img/file30.png "fig:")
 
-图 2-10 迭代过程中，梯度值越来越小，收敛越来越慢
+**图 2-10** 迭代过程中，梯度值越来越小，收敛越来越慢
 
 在迭代过程中，梯度值越来越小，相同的学习率导致 `x` 的更新非常缓慢。即使经过 100,000 次迭代，仍无法逼近最优解。一种自然的方法是使用自适应学习率，即当梯度变小时增大学习率。作为练习，读者可以尝试修改梯度下降算法，以更好、更快地到达最优解。
 
@@ -5659,13 +5673,13 @@ plot_path(path, x, y, z, minima_, xmin, xmax, ymin, ymax)
 
 基础梯度下降算法中的学习率是一个固定值，而在迭代过程中梯度大小不断变化。如果学习率过大，待求变量会来回震荡；如果学习率过小，收敛会非常缓慢甚至停滞。初始学习率适中，但随着收敛逼近最优解，其梯度也接近 0，这也会导致停滞。因此，学习率应在迭代逐渐收敛的过程中进行调整，即使用变化的学习率在迭代过程中更新待求变量 `x`。
 
-为了能更好、更快地逼近最优解，针对梯度下降法提出了许多改进。这些改进采用变化的学习率或策略来更新解变量（也称为参数）。变量（参数）的更新策略或方法包括：Momentum（动量法）、Nesterov 加速梯度、Adagrad、Adadelta、RMSprop、Adam、AdaMax、Nadam、AMSGrad 等。
+为了能更好、更快地逼近最优解，针对梯度下降法提出了许多改进。这些改进采用变化的学习率或策略来更新解变量（也称为参数）。变量（参数）的更新策略或方法包括：`Momentum`（动量法）、`Nesterov` 加速梯度、`Adagrad`、`Adadelta`、`RMSprop`、`Adam`、`AdaMax`、`Nadam`、`AMSGrad` 等。
 
 需要注意的是，函数可能是多元函数；因此，其变量 `x` 可以是由多个值组成的向量 `xx`。下面仅介绍一些常用的优化策略。
 
 ### 2.3.1 Momentum 动量法
 
-梯度下降法使用学习率 `α` 和梯度的负方向，即 `−α∇f(x)` 来每次更新 `x`。更新向量 `−α∇f(x)ofx` 完全取决于当前计算出的梯度。Momentum 动量法更新 `x` 的向量不仅考虑当前梯度，还考虑上一次的更新向量；即认为更新向量具有惯性。假设 `v[t−1]` 是上一次用于更新的向量，则当前更新向量为：
+梯度下降法使用学习率 `α` 和梯度的负方向，即 `−α∇f(x)` 来每次更新 `x`。更新向量 `−α∇f(x)ofx` 完全取决于当前计算出的梯度。`Momentum` 动量法更新 `x` 的向量不仅考虑当前梯度，还考虑上一次的更新向量；即认为更新向量具有惯性。假设 `v[t−1]` 是上一次用于更新的向量，则当前更新向量为：
 
 `v[t] = γv[t−1] + α∇f(x)`
 
@@ -5723,7 +5737,7 @@ plot_path(path, x, y, z, minima_, xmin, xmax, ymin, ymax)
 
 ![](img/file31.png "fig:")
 
-图 2-11 动量法快速收敛到近似最优解
+**图 2-11** 动量法快速收敛到近似最优解
 
 ### 2.3.2 Adagrad 方法
 
@@ -5735,124 +5749,131 @@ $x_{1} = x_{1} - \alpha\frac{\partial f}{\partial x_{1}}$
 
 $x_{2} = x_{2} - \alpha\frac{\partial f}{\partial x_{2}}$
 
-Adagrad 方法从名词可译为“自适应梯度”，它将每个梯度分量除以该梯度分量的历史累积值，从而消除不同分量梯度大小不平衡的问题。对于 2 个分量 `(x[1], x[2])`，若分别计算各自分量的历史累积值 `(G[1], G[2])`，则 2 个分量的更新公式为：
+`Adagrad` 方法从名词可译为“自适应梯度”，它将每个梯度分量除以该梯度分量的历史累积值，从而消除不同分量梯度大小不平衡的问题。对于 2 个分量 `(x[1], x[2])`，若分别计算各自分量的历史累积值 `(G[1], G[2])`，则 2 个分量的更新公式为：
 
 $x_{1} = x_{1} - \alpha\frac{1}{G_{1}}\frac{\partial f}{\partial x_{1}}$
 
+$x_{2} = x_{2} - \alpha\frac{1}{G_{2}}\frac{\partial f}{\partial x_{2}}$
 
+使用符号 $g[t, i] = \nabla[\theta]f(x[t, i])$ 来表示第 $t$ 次迭代中分量 $x[i]$ 的偏导数 $\frac{\partial f}{\partial x_{i}}$，从 $t'=1$ 到 $t'=t$ 所有轮次的分量梯度可以按如下方式计算：
 
+$G_{t,i} = \sqrt{\sum\limits_{t^{\prime} = 1}^{t}g_{t^{\prime},i}^{2}}$
 
-$x\_{2} = x\_{2} - \\alpha\\frac{1}{G\_{2}}\\frac{\\partial f}{\\partial x\_{2}}$
+将 $g[t, i]$ 除以 $G[t, i]$ 以更新分量：
 
-使用符号 *g*[*t*, *i*] = ∇[*θ*]*f*(*x*[*t*, *i*]) 来表示第 *t* 次迭代中分量 *x*[*i*] 的偏导数 $\\frac{\\partial f}{\\partial x\_{i}}$，从 `t'=1` 到 `t'=t` 所有轮次的分量梯度可以按如下方式计算：
+$x_{t + 1,i} = x_{t,i} - \alpha\frac{1}{\sqrt{\sum\limits_{t^{\prime} = 1}^{t}g_{t^{\prime},i}^{2}}}g_{t,i}$
 
-$G\_{t,i} = \\sqrt{\\sum\\limits\_{t^{\\prime} = 1}^{t}g\_{t^{\\prime},i}^{2}}$
+为了防止除数为 0，可以在该分母中加入一个很小的正数 $\epsilon$，从而得到 AdaGrad 的参数更新公式：
 
-将 *g*[*t*, *i*] 除以 *G*[*t*, *i*] 以更新分量：
-
-$x\_{t + 1,i} = x\_{t,i} - \\alpha\\frac{1}{\\sqrt{\\sum\\limits\_{t^{\\prime} = 1}^{t}g\_{t^{\\prime},i}^{2}}}g\_{t,i}$
-
-为了防止除数为 0，可以在该分母中加入一个很小的正数 *ϵ*，从而得到 AdaGrad 的参数更新公式：
-
-$x\_{t + 1,i} = x\_{t,i} - \\alpha\\frac{1}{\\sqrt{\\sum\\limits\_{t^{\\prime} = 1}^{t}g\_{t^{\\prime},i}^{2}} + \\epsilon}g\_{t,i}$
+$x_{t + 1,i} = x_{t,i} - \alpha\frac{1}{\sqrt{\sum\limits_{t^{\prime} = 1}^{t}g_{t^{\prime},i}^{2}} + \epsilon}g_{t,i}$
 
 对比基本参数更新公式：
 
-*x*[*t* + 1, *i*] = *x*[*t*, *i*] − *α**g*[*t*, *i*]
+$x[t + 1, i] = x[t, i] - \alpha g[t, i]$
 
-可以看出，AdaGrad 方法消除了分量梯度大小不平衡的问题。AdaGrad 的参数更新公式可以写成向量形式：
+可以看出，`AdaGrad` 方法消除了分量梯度大小不平衡的问题。`AdaGrad` 的参数更新公式可以写成向量形式：
 
-$x x\_{t + 1} = x x\_{t} - \\alpha\\frac{1}{\\sqrt{\\sum\\limits\_{t^{\\prime} = 1}^{t}{g g\_{t^{\\prime}}^{2}}} + \\epsilon} \\odot g g\_{t}$
+$x x_{t + 1} = x x_{t} - \alpha\frac{1}{\sqrt{\sum\limits_{t^{\prime} = 1}^{t}{g g_{t^{\prime}}^{2}}} + \epsilon} \odot g g_{t}$
 
-累积的 *G*[*t*]² 可以用初始值为 0 的变量 `gl` 来记录。在每一轮迭代中，AdaGrad 参数更新的 Python 代码如下：
+累积的 $G[t]^2$ 可以用初始值为 0 的变量 `gl` 来记录。在每一轮迭代中，`AdaGrad` 参数更新的 Python 代码如下：
 
-```
+```python
 gl += df(x)**2
-x = x-alpha* df(x)/(sqrt(gl)+epsilon)
+x = x - alpha * df(x) / (np.sqrt(gl) + epsilon)
 ```
 
-AdaGrad 方法的主要优点是消除了不同梯度值的影响，使得学习率可以设置为固定值，而无需在迭代过程中不断调整学习率。一般学习率设置为 0.01。AdaGrad 方法的主要缺点是随着迭代过程的进行，累积和 $\\sum\\limits\_{t^{\\prime} = 1}^{t}{g g\_{t^{\\prime}}^{2}}$ 会变得越来越大，因为它们每一个都是正数。这可能导致学习变慢，甚至停滞。此外，让每个分量梯度都保持一致的步伐可能不切实际，并会使前进方向偏离最优解的方向。
+`AdaGrad` 方法的主要优点是消除了不同梯度值的影响，使得学习率可以设置为固定值，而无需在迭代过程中不断调整学习率。一般学习率设置为 0.01。`AdaGrad` 方法的主要缺点是随着迭代过程的进行，累积和 $\sum\limits_{t^{\prime} = 1}^{t}{g g_{t^{\prime}}^{2}}$ 会变得越来越大，因为它们每一个都是正数。这可能导致学习变慢，甚至停滞。此外，让每个分量梯度都保持一致的步伐可能不切实际，并会使前进方向偏离最优解的方向。
 
-基于 Adagrad 参数更新方法的梯度下降法代码如下：
+基于 `Adagrad` 参数更新方法的梯度下降法代码如下：
 
-```
-def gradient_descent_Adagrad(df,x,alpha=0.01,iterations = 100,epsilon = 1e-8):
-    history=[x]
-    #v= np.zeros_like(x) 
+```python
+def gradient_descent_Adagrad(df, x, alpha=0.01, iterations=100, epsilon=1e-8):
+    history = [x]
+    # v = np.zeros_like(x) 
     gl = np.ones_like(x)
     for i in range(iterations):
-        if np.max(np.abs(df(x)))<epsilon:
+        if np.max(np.abs(df(x))) < epsilon:
             print("The gradient is small enough!")
             break
         grad = df(x)
         gl += grad**2
-        x = x-alpha* grad/(np.sqrt(gl)+epsilon)      
+        x = x - alpha * grad / (np.sqrt(gl) + epsilon)      
         history.append(x)
     return history
 ```
 
 对上述问题执行梯度下降算法：
 
-```
-path = gradient_descent_Adagrad(df,x0,0.1,300000,1e-8)
+```python
+path = gradient_descent_Adagrad(df, x0, 0.1, 300000, 1e-8)
 print(path[-1])
 path = np.asarray(path) 
 ```
 
-\[-0.69240717 1.76233766\]
+`[-0.69240717 1.76233766]`
 
 可以看出，由于分量梯度的均衡化，变量更新的前进方向偏离了最优解方向，并收敛到了另一个局部最优解。
 
-```
-plot_path(path,x,y,z,minima_,xmin, xmax,ymin, ymax)
+```python
+plot_path(path, x, y, z, minima_, xmin, xmax, ymin, ymax)
 ```
 
 ![](img/file32.png "fig:")  
 
-图 2-12 Adagrad 方法收敛到另一个局部最小值
+**图 2-12** Adagrad 方法收敛到另一个局部最小值
 
 ### 2.3.3 Adadelta 方法
 
-回顾基本参数更新方法，用 *Δ**x**x*[*t*] 表示参数的更新向量：
+回顾基本参数更新方法，用 $\Delta x x[t]$ 表示参数的更新向量：
 
-$\\begin{matrix} \\begin{matrix} {\\Delta x x\_{t}} & {= - \\eta \\cdot g g\_{t}} \\\\ {x x\_{t + 1}} & {= x x\_{t} + \\Delta x x\_{t}} \\\\ \\end{matrix} \\\\ \\end{matrix}$
+$$
+\begin{matrix} 
+\begin{matrix} 
+{\Delta x x_{t}} & {= - \eta \cdot g g_{t}} \\ 
+{x x_{t + 1}} & {= x x_{t} + \Delta x x_{t}} \\ 
+\end{matrix} 
+\\ 
+\end{matrix}
+$$
 
-AdaGrad 方法的更新向量为：
+`AdaGrad` 方法的更新向量为：
+
+
 
 $\\Delta x x\_{t} = - \\frac{\\eta}{\\sqrt{G\_{t} + \\epsilon}} \\odot g g\_{t}$
 
-此处 *G*[*t*] = ∑*g**g*[*t*]² 是 *g*[*t*] 历史上平方和。随着迭代过程的进行，该值 *G*[*t*] 越来越大，导致 *Δ**x**x*[*t*] 越来越小，从而收敛越来越慢。解决方法是用均方和 $E\\lbrack g^{2}\\rbrack\_{t} = \\frac{G\_{t}}{t}$ 代替平方和 *G*[*t*]。这个 *E*\[*g*²\][*t*] 可以用移动平均法来计算，即对上一次的平均值和当前值取平均：
+此处 $G\_{t} = \\sum g\_{t}^{2}$ 是 $g\_{t}$ 历史上平方和。随着迭代过程的进行，该值 $G\_{t}$ 越来越大，导致 $\\Delta x x\_{t}$ 越来越小，从而收敛越来越慢。解决方法是用均方和 $E\\lbrack g^{2}\\rbrack\_{t} = \\frac{G\_{t}}{t}$ 代替平方和 $G\_{t}$。这个 $E\\lbrack g^{2}\\rbrack\_{t}$ 可以用移动平均法来计算，即对上一次的平均值和当前值取平均：
 
-*E*\[*g*²\][*t*] = *γ**E*\[*g*²\][*t* − 1] + (1 − *γ*)*g*[*t*]²
+$E\\lbrack g^{2}\\rbrack\_{t} = \\gamma E\\lbrack g^{2}\\rbrack\_{t-1} + (1-\\gamma)g\_{t}^{2}$
 
 Adadelta 方法更进一步，对更新向量也使用这种移动平均法，使更新向量的变化更加平滑。
 
-*E*\[*Δ**x**x*²\][*t*] = *γ**E*\[*Δ**x**x*²\][*t* − 1] + (1 − *γ*)*Δ**x**x*[*t*]²
+$E\\lbrack \\Delta x x^{2}\\rbrack\_{t} = \\gamma E\\lbrack \\Delta x x^{2}\\rbrack\_{t-1} + (1-\\gamma)\\Delta x x\_{t}^{2}$
 
 最终的更新向量为：
 
 $\\Delta x x\_{t} = - \\sqrt{\\frac{E\\lbrack\\Delta x x^{2}\\rbrack\_{t - 1} + \\epsilon}{E\\lbrack g^{2}\\rbrack\_{t} + \\epsilon}}g\_{t}$
 
-用 *R**M**S*\[*Δ**x**x*\][*t* − 1], *R**M**S*\[*g*\][*t*] 分别表示 *E*\[*Δ**x**x*²\][*t* − 1] + *ϵ* 和 *E*\[*g*²\][*t*] + *ϵ*，更新向量可以表示为：
+用 $RMS\\lbrack\\Delta x x\\rbrack\_{t-1}$，$RMS\\lbrack g\\rbrack\_{t}$ 分别表示 $E\\lbrack\\Delta x x^{2}\\rbrack\_{t-1} + \\epsilon$ 和 $E\\lbrack g^{2}\\rbrack\_{t} + \\epsilon$，更新向量可以表示为：
 
 $\\Delta x x\_{t} = - \\sqrt{\\frac{RMS\\lbrack\\Delta x x\\rbrack\_{t - 1}}{RMS\\lbrack g\\rbrack\_{t}}}g\_{t}$
 
 因此参数更新公式为：
 
-*x**x*[*t* + 1] = *x**x*[*t*] + *α**Δ**x**x*[*t*]
+$x\_{t+1} = x\_{t} + \\alpha\\Delta x x\_{t}$
 
 Adadelta 方法的 Python 代码如下：
 
-```
+```python
 Eg = rho*Eg+(1-rho)*(grad**2)                # 更新梯度平方的累积和
 delta = np.sqrt((Edelta+epsilon)/(Eg+epsilon))*grad  # 计算更新向量
 x = x - alpha* delta
 Edelta = rho*Edelta+(1-rho)*(delta**2)       # 更新向量的累积更新
 ```
 
-Adadelta 方法的衰减率参数 *ρ* 通常设置为 0.9，*Δ**x**x*[*t*], *E*\[*Δ**x**x*²\][*t*], *E*\[*g*²\][*t*] 的初始值也为 0。基于 Adadelta 参数更新方法的梯度下降法代码如下：
+Adadelta 方法的衰减率参数 $\\rho$ 通常设置为 0.9，$\\Delta x x\_{t}$，$E\\lbrack\\Delta x x^{2}\\rbrack\_{t}$，$E\\lbrack g^{2}\\rbrack\_{t}$ 的初始值也为 0。基于 Adadelta 参数更新方法的梯度下降法代码如下：
 
-```
+```python
 def gradient_descent_Adadelta(df,x,alpha = 0.1,rho=0.9,iterations = 100,epsilon = 1e-8):
     history=[x]    
     Eg = np.ones_like(x)
@@ -5870,7 +5891,7 @@ def gradient_descent_Adadelta(df,x,alpha = 0.1,rho=0.9,iterations = 100,epsilon 
     return history
 ```
 
-```
+```python
 path = gradient_descent_Adadelta(df,x0,1.0,0.9,300000,1e-8)
 print(path[-1])
 path = np.asarray(path) 
@@ -5882,7 +5903,7 @@ path = np.asarray(path)
 
 可以看出，Adadelta 方法也能收敛到接近最优解的位置。
 
-```
+```python
 plot_path(path,x,y,z,minima_,xmin, xmax,ymin, ymax)
 ```
 
@@ -5890,19 +5911,19 @@ plot_path(path,x,y,z,minima_,xmin, xmax,ymin, ymax)
 
 图 2-13 Adadelta 方法也能收敛到接近最优解的位置
 
-### 2.3.4 RMSprop 方法
+## 2.3.4 RMSprop 方法
 
 与动量法类似，RMSprop 使用以下公式更新动量和参数：
 
-*v*[*t*] = *β**v*[*t* − 1] + (1 − *β*)∇*f*(*x*)²  
+$v\_{t} = \\beta v\_{t-1} + (1-\\beta)\\nabla f(x)^{2}$  
 
 $x = x - \\alpha\\frac{1}{\\sqrt{v\_{t}} + \\epsilon}\\nabla f(x)$
 
-其思路是将梯度的每个值除以其长度（即值的绝对值），也就是将其转换为单位长度，从而使参数 *x* 始终以固定步长 *α* 进行更新。为了计算梯度每个分量的长度，RMSprop 类似于动量法，计算梯度值的移动平均长度的平方值，即 *f*(*x*)²。
+其思路是将梯度的每个值除以其长度（即值的绝对值），也就是将其转换为单位长度，从而使参数 $x$ 始终以固定步长 $\\alpha$ 进行更新。为了计算梯度每个分量的长度，RMSprop 类似于动量法，计算梯度值的移动平均长度的平方值，即 $f(x)^{2}$。
 
 使用 RMSprop 方法更新模型参数的 Python 代码如下：
 
-```
+```python
 v= np.ones_like(x)
 #...
 grad = df(x)
@@ -5912,10 +5933,7 @@ x = x-alpha*(1/(np.sqrt(v)+epsilon))*grad
 
 基于 RMSprop 参数更新方法的梯度下降法代码如下：
 
-
-
-
-#### RMSprop 方法示例
+### RMSprop 方法示例
 
 ```python
 def gradient_descent_RMSprop(df, x, alpha=0.01, beta=0.9, iterations=100, epsilon=1e-8):
@@ -5966,30 +5984,42 @@ plot_path(path, x, y, z, minima_, xmin, xmax, ymin, ymax)
 
 **图 2-14 RMSprop 方法也能基本收敛**
 
-### 2.3.5 Adam 方法
+## 2.3.5 Adam 方法
 
-除了像 RMSprop 方法那样存储过去梯度平方的指数衰减累积均值外，它还像动量法那样存储梯度的累积均值。动量法可以看作是一个球沿着斜坡滚下，但 Adam 方法表现得像一个带有摩擦力的球，因此更适合平坦的极小值。使用 `m[t]`、`v[t]` 表示过去梯度和梯度平方的移动平均：
+除了像 RMSprop 方法那样存储过去梯度平方的指数衰减累积均值外，它还像动量法那样存储梯度的累积均值。动量法可以看作是一个球沿着斜坡滚下，但 Adam 方法表现得像一个带有摩擦力的球，因此更适合平坦的极小值。使用 $m\_{t}$，$v\_{t}$ 表示过去梯度和梯度平方的移动平均：
 
 $$
+
 \begin{matrix} 
-m_{t} & {= \beta_{1}m_{t - 1} + (1 - \beta_{1})g_{t}} \\ 
-v_{t} & {= \beta_{2}v_{t - 1} + (1 - \beta_{2})g_{t}^{2}} \\ 
+
+m\_{t} & {= \\beta\_{1}m\_{t - 1} + (1 - \\beta\_{1})g\_{t}} \\ 
+
+v\_{t} & {= \\beta\_{2}v\_{t - 1} + (1 - \\beta\_{2})g\_{t}^{2}} \\ 
+
 \end{matrix}
-$$
-
-它们相当于梯度的一阶和二阶动量，因为它们的初始值为 0，Adam 的作者观察到：当衰减率较小时，例如 `β[1]`、`β[2]` 接近 1 时，它们偏向于零，尤其是在迭代的早期阶段。为了修正这个问题，作者使用了以下修正公式：
 
 $$
+
+它们相当于梯度的一阶和二阶动量，因为它们的初始值为 0，Adam 的作者观察到：当衰减率较小时，例如 $\\beta\_{1}$，$\\beta\_{2}$ 接近 1 时，它们偏向于零，尤其是在迭代的早期阶段。为了修正这个问题，作者使用了以下修正公式：
+
+$$
+
 \begin{matrix} 
-{\hat{m}}_{t} & {= \frac{m_{t}}{1 - \beta_{1}^{t}}} \\ 
-{\hat{v}}_{t} & {= \frac{v_{t}}{1 - \beta_{2}^{t}}} \\ 
+
+{\\hat{m}}\_{t} & {= \\frac{m\_{t}}{1 - \\beta\_{1}^{t}}} \\ 
+
+{\\hat{v}}\_{t} & {= \\frac{v\_{t}}{1 - \\beta\_{2}^{t}}} \\ 
+
 \end{matrix}
-$$
-
-基于此更新 `x`：
 
 $$
-\theta_{t + 1} = \theta_{t} - \frac{\eta}{\sqrt{{\hat{v}}_{t}} + \epsilon}{\hat{m}}_{t}
+
+基于此更新 $x$：
+
+$$
+
+\\theta\_{t + 1} = \\theta\_{t} - \\frac{\\eta}{\\sqrt{{\\hat{v}}\_{t}} + \\epsilon}{\\hat{m}}\_{t}
+
 $$
 
 ```python
@@ -6051,14 +6081,16 @@ plot_path(path, x, y, z, minima_, xmin, xmax, ymin, ymax)
 编写梯度下降算法代码时，最容易出错的是梯度计算不正确，导致算法无法收敛。因此，除了调整学习率外，还应检查梯度计算是否正确。为此，根据导数的定义，即导数是函数的变化率，可以用以下公式估计函数在点 `x` 处的导数（梯度）：
 
 $$
-\frac{\partial{f(x)}}{\partial x} = \lim_{\epsilon \to 0}\frac{f(x + \epsilon) - f(x - \epsilon)}{2\epsilon}
+
+\\frac{\\partial{f(x)}}{\\partial x} = \\lim_{\\epsilon \\to 0}\\frac{f(x + \\epsilon) - f(x - \\epsilon)}{2\\epsilon}
+
 $$
 
-即用公式右边的除法来近似 `f(x)` 在 `x` 处的导数（梯度）。如果 `ϵ` 足够小，该值的导数（梯度）应与左边的解析导数（梯度）足够接近。
+即用公式右边的除法来近似 `f(x)` 在 `x` 处的导数（梯度）。如果 $\\epsilon$ 足够小，该值的导数（梯度）应与左边的解析导数（梯度）足够接近。
 
 因此，在使用梯度下降法训练模型之前，可以比较数值计算的梯度和解析梯度，以验证解析梯度计算是否正确。
 
-例如，对于前面的二元函数 $f(x,y) = \frac{1}{16}x^{2} + 9y^{2}$，在梯度下降法中，通过以下代码计算函数在点 `x = (x[0], x[1])` 处的函数值和解析梯度。
+例如，对于前面的二元函数 $f(x,y) = \\frac{1}{16}x^{2} + 9y^{2}$，在梯度下降法中，通过以下代码计算函数在点 `x = (x[0], x[1])` 处的函数值和解析梯度。
 
 ```python
 f = lambda x: (1/16)*x[0]**2 + 9*x[1]**2
@@ -6097,8 +6129,6 @@ print(abs(grad - grad_approx))
 ### 2.4.2 通用数值梯度
 
 机器学习包含深度学习中的假设函数，含有大量参数，可以编写一个通用的数值梯度计算函数：
-
-
 
 
 
@@ -6310,9 +6340,6 @@ for i in range(5):
     print(x[i], y[i])
 ```
 
-
-
-
 ### 3.1.2 机器学习与人工智能
 
 #### 1. 机器学习
@@ -6349,10 +6376,6 @@ for i in range(5):
 
 因此，监督学习是基于许多已知自变量（也称为特征）及其对应的因变量（也称为标签或目标）的样本，学习自变量（特征）与因变量（目标）之间的函数关系。一旦知道了这个函数，就可以为新的样本特征预测其目标值。
 
-
-
-
-
 ### 3.1.3 什么是线性回归？
 
 如图 3-2 所示，可以训练（学习）一个用于手写数字识别的函数模型 `f`。该函数接受一个输入数字图像，并输出 0 到 9 中的某个数字。也可以训练语音识别模型，从语音输入生成相应的文本。或者训练一个围棋人工智能程序，根据输入的棋局输出落子位置。
@@ -6370,6 +6393,8 @@ for i in range(5):
 3.  选择一个合理的损失函数来描述预测值与真实值之间的误差；
 4.  训练模型；
 5.  使用模型进行预测。
+
+
 
 根据目标值是否为连续实数，监督学习分为**回归**和**分类**。例如，房价是连续实数，因此房价预测问题是回归问题。在图像分类问题中，需要识别图像属于哪个类别（如猫、狗、飞机等），图像的类别是离散值，因此图像分类问题是分类问题。
 
@@ -6400,9 +6425,6 @@ y = f(x) = wx + b
 **线性回归**是利用**线性函数**表示自变量（特征）和因变量（真实值）之间的关系，并基于一组样本数据求解一个最优线性函数的过程。
 
 那么什么是“最优”？
-
-
-
 
 对于每个样本 `x^((i))`, `y^((i))`，使用符号 `f^((i))` 来表示预测值 `f(x^((i)))`。对于餐车利润问题，方差 `(f^((i)) - y^((i)))²` 可用于表示单个样本的预测误差，以下均方误差可用于表示所有样本的预测误差：
 
@@ -6611,11 +6633,9 @@ plt.show()
 
 图 3-3 假设函数曲线
 
-
-
 为了观察迭代的收敛情况，对于具有 2 个以上数据特征（自变量）的线性回归问题，通用的做法是绘制**损失曲线**（**代价曲线**），即迭代过程中损失（代价）的变化。为此，可以使用以下损失函数来计算参数 `w`、`b` 对应的损失。
 
-```
+```python
 def loss(x,y,w,b):
     m = len(y)
     return np.mean((x*w+b-y)**2)/2
@@ -6635,7 +6655,7 @@ print(loss(X,y,1,-3))
 
 使用 `loss()` 函数计算迭代过程中所有参数 `w` 对应的损失，并绘制该损失曲线（图 2-4）：
 
-```
+```python
 costs = [loss(X,y,w,b) for w,b in history]
 plt.axis([0, len(costs), 4, 6])
 plt.plot(costs)
@@ -6649,66 +6669,68 @@ plt.plot(costs)
 
 当然，对于这种只有一个自变量的线性回归，损失函数是两个参数的函数，因此可以绘制损失函数对应的曲面（图 3-5），并绘制迭代过程中未知参数的变化：
 
-```
-from mpl_toolkits.mplot3d import Axes3D
-   
-def plot_history(x,y,history,figsize=(20, 10)):
-    w= [ e[0] for e in history]
-    b= [ e[1] for e in history]
 
-    xmin,xmax, xstep = min(w)-0.2,max(w)+0.2, .2
-    ymin, ymax, ystep = min(b)-0.2,max(b)+0.2, .2
-    ws,bs = np.meshgrid(np.arange(xmin, xmax + xstep, xstep), np.arange(ymin, ymax + ystep, ystep))
 
-    zs = np.array([loss(x, y, w,b)    for w,b in zip(np.ravel(ws), np.ravel(bs))])
+from `mpl_toolkits.mplot3d` import `Axes3D`
+
+```python
+def plot_history(x, y, history, figsize=(20, 10)):
+    w = [e[0] for e in history]
+    b = [e[1] for e in history]
+
+    xmin, xmax, xstep = min(w) - 0.2, max(w) + 0.2, .2
+    ymin, ymax, ystep = min(b) - 0.2, max(b) + 0.2, .2
+    ws, bs = np.meshgrid(np.arange(xmin, xmax + xstep, xstep), np.arange(ymin, ymax + ystep, ystep))
+
+    zs = np.array([loss(x, y, w, b) for w, b in zip(np.ravel(ws), np.ravel(bs))])
     z = zs.reshape(ws.shape)
 
     fig = plt.figure(figsize=figsize)
     ax = fig.add_subplot(111, projection='3d')
-    
+
     ax.set_xlabel('w[0]', labelpad=30, fontsize=24, fontweight='bold')
     ax.set_ylabel('w[1]', labelpad=30, fontsize=24, fontweight='bold')
     ax.set_zlabel('L(w,b)', labelpad=30, fontsize=24, fontweight='bold')
 
     ax.plot_surface(ws, bs, z, rstride=1, cstride=1, color='b', alpha=0.2)
-    
-    w_sart,b_start,w_end,b_end = history[0][0], history[0][1],history[-1][0], history[-1][1]
-    ax.plot([w_sart],[b_start], [loss(x,y,w_sart,b_start)] , markerfacecolor='b', markeredgecolor='b', marker='o', markersize=7)
-    ax.plot([w_end],[b_end], [loss(x,y,w_end,b_end)] , markerfacecolor='r', markeredgecolor='r', marker='o', markersize=7)
 
-    z2 =  [loss(x,y,w,b) for w,b in history]
-    ax.plot(w, b, z2  , markerfacecolor='r', markeredgecolor='r', marker='.', markersize=2)
-    ax.plot(w, b,  0 , markerfacecolor='r', markeredgecolor='r', marker='.', markersize=2)
-    
+    w_start, b_start, w_end, b_end = history[0][0], history[0][1], history[-1][0], history[-1][1]
+    ax.plot([w_start], [b_start], [loss(x, y, w_start, b_start)], markerfacecolor='b', markeredgecolor='b', marker='o', markersize=7)
+    ax.plot([w_end], [b_end], [loss(x, y, w_end, b_end)], markerfacecolor='r', markeredgecolor='r', marker='o', markersize=7)
+
+    z2 = [loss(x, y, w, b) for w, b in history]
+    ax.plot(w, b, z2, markerfacecolor='r', markeredgecolor='r', marker='.', markersize=2)
+    ax.plot(w, b, 0, markerfacecolor='r', markeredgecolor='r', marker='.', markersize=2)
+
     fig.suptitle("L(w,b)", fontsize=24, fontweight='bold')
-    return ws,bs,z
-    
-ws,bs,z = plot_history(X,y,history)
+    return ws, bs, z
+
+ws, bs, z = plot_history(X, y, history)
 ```
 
-![](img/file40.png "fig:")  
+![](img/file40.png "fig:")
 
-图 3-5 损失函数曲面  
+图 3-5 损失函数曲面
 
 对于这种 2 参数的损失函数，通常还会在参数平面上绘制损失函数的等值线（即损失函数值相同对应的参数平面曲线），在参数平面上更清晰地观察迭代参数的变化（图 3-6）：
 
-```
+```python
 from matplotlib.colors import LogNorm
-plt.contour(bs,ws,z,levels=np.logspace(-5, 5, 100), norm=LogNorm(), cmap=plt.cm.jet)
+plt.contour(bs, ws, z, levels=np.logspace(-5, 5, 100), norm=LogNorm(), cmap=plt.cm.jet)
 
-w= [ e[0] for e in history]
-b= [ e[1] for e in history]
-plt.plot(b,w)
+w = [e[0] for e in history]
+b = [e[1] for e in history]
+plt.plot(b, w)
 plt.xlabel("b")
 plt.ylabel("w")
 title = str.format("iteration={0}, alpha={1}, b={2:.3f}, w={3:.3f}", iterations, alpha, b[-1], w[-1])
 plt.title(title)
 
-#plt.axis([result_w-1,result_w+1,result_b-1,result_b+1])
+# plt.axis([result_w-1, result_w+1, result_b-1, result_b+1])
 plt.show()
 ```
 
-![](img/file41.png "fig:")  
+![](img/file41.png "fig:")
 
 图 3-6 损失函数的参数平面
 
@@ -6716,14 +6738,14 @@ plt.show()
 
 可以尝试不同的学习率，如 `0.01`、`0.015`、`0.02`，并为每个学习率绘制相应的**代价历史曲线**（简称**代价曲线**）（图 3-7）。
 
-```
+```python
 plt.figure()
 num_iters = 1200
 learning_rates = [0.01, 0.015, 0.02]
 for lr in learning_rates:
-    w,b=0,0 
-    history = gradient_descent(X, y,w, b,lr, num_iters)
-    cost_history = [loss(X,y,w,b) for w,b in history]
+    w, b = 0, 0
+    history = gradient_descent(X, y, w, b, lr, num_iters)
+    cost_history = [loss(X, y, w, b) for w, b in history]
     plt.plot(cost_history, linewidth=2)
 plt.title("Gradient descent with different learning rates", fontsize=16)
 plt.xlabel("number of iterations", fontsize=14)
@@ -6736,18 +6758,18 @@ plt.show()
 
 ![](img/file42.png)
 
-图 3-7 不同学习率的代价曲线  
+图 3-7 不同学习率的代价曲线
 
 对于这些学习率，梯度下降法都能正确工作，发现较低的学习率需要更多的迭代次数。
 
 那么能否使用更大的学习率？
 
-```
+```python
 learning_rate = 0.025
 num_iters = 50
-w,b=0.,0.
-history = gradient_descent(X, y,w, b,learning_rate, num_iters)
-cost_history = [loss(X,y,w,b) for w,b in history]
+w, b = 0., 0.
+history = gradient_descent(X, y, w, b, learning_rate, num_iters)
+cost_history = [loss(X, y, w, b) for w, b in history]
 plt.plot(cost_history, linewidth=2)
 plt.title("Gradient descent with learning rate = " + str(learning_rate), fontsize=16)
 plt.xlabel("number of iterations", fontsize=14)
@@ -6765,8 +6787,8 @@ plt.show()
 
 目前 `0.02` 的学习率更合适，它能用更少的迭代次数收敛（最小化目标函数值）。
 
-```
-ws,bs,z = plot_history(X,y,history)
+```python
+ws, bs, z = plot_history(X, y, history)
 ```
 
 ![](img/file44.png)
@@ -6777,56 +6799,53 @@ ws,bs,z = plot_history(X,y,history)
 
 如前所述，在实际实现梯度下降法之前，应进行梯度验证，以确保梯度和函数值的计算是正确的。对于线性回归问题，需要使用以下数值梯度来检查解析梯度计算是否正确。
 
-$\\frac{\\partial{L(w,b)}}{\\partial w} = \\lim_{\\epsilon \\to 0}\\frac{L(w + \\epsilon,b) - L(w - \\epsilon,b)}{2\\epsilon}$  
+$$ \frac{\partial{L(w,b)}}{\partial w} = \lim_{\epsilon \to 0}\frac{L(w + \epsilon,b) - L(w - \epsilon,b)}{2\epsilon} $$
 
-$\\frac{\\partial{L(w,b)}}{\\partial b} = \\lim_{\\epsilon \\to 0}\\frac{L(w,b + \\epsilon) - L(w,b - \\epsilon)}{2\\epsilon}$
+$$ \frac{\partial{L(w,b)}}{\partial b} = \lim_{\epsilon \to 0}\frac{L(w,b + \epsilon) - L(w,b - \epsilon)}{2\epsilon} $$
 
 对于前面的梯度下降法，可以使用以下代码验证解析梯度和数值梯度是否一致。使用前面的 `loss()` 函数计算函数值 $L(w,b)$，以下 2 行代码用于计算解析梯度。
 
-```
-dw = np.mean((w*x+b-y)*x)
-db = np.mean((w*x+b-y))  
+```python
+dw = np.mean((w * x + b - y) * x)
+db = np.mean((w * x + b - y))
 ```
 
 可以定义一个函数来计算数值梯度：
 
-```
-df_approx = lambda x,y,w,b,eps: ( (loss(x,y,w+eps,b)-loss(x,y,w-eps,b) )/(2*eps),  (loss(x,y,w,b+eps)-loss(x,y,w,b-eps) )/(2*eps) )
+```python
+df_approx = lambda x, y, w, b, eps: ((loss(x, y, w + eps, b) - loss(x, y, w - eps, b)) / (2 * eps), (loss(x, y, w, b + eps) - loss(x, y, w, b - eps)) / (2 * eps))
 ```
 
 然后在任意点（如 $(w,b) = (1.0, -2.0)$）比较解析梯度和数值梯度。
 
-```
-w =1.0
+```python
+w = 1.0
 b = -2.
 eps = 1e-8
-dw = np.mean((w*X+b-y)*X)
-db = np.mean((w*X+b-y))                                   
-grad = np.array([dw,db])
-grad_approx = df_approx(X,y,w,b,eps)
+dw = np.mean((w * X + b - y) * X)
+db = np.mean((w * X + b - y))
+grad = np.array([dw, db])
+grad_approx = df_approx(X, y, w, b, eps)
 print(grad)
 print(grad_approx)
-print(abs(grad-grad_approx))
+print(abs(grad - grad_approx))
 ```
 
 ```
-    [-0.24450692 0.32066495]
-    (-0.24450690361277339, 0.3206649612508272)
-    [1.98820717e-08 1.27972190e-08]
+[-0.24450692  0.32066495]
+(-0.24450690361277339, 0.3206649612508272)
+[1.98820717e-08 1.27972190e-08]
 ```
 
-可以看到两种计算结果一致。这使得我们可以放心地在梯度下降法中使用解析梯度。  
-
-
-
+可以看到两种计算结果一致。这使得我们可以放心地在梯度下降法中使用解析梯度。
 
 当然，损失函数的数值梯度也可以使用第 2.4 节中的通用数值梯度函数来计算。
 
 ### 3.1.8 预测
 
-一旦特定假设函数 `f(x; w, b) = x*w + b` 的参数 `w`、`b` 确定，就可以将新数据（如城市人口）代入假设函数以获得预测值（如餐车利润）。
+一旦特定假设函数 `f(x; w, b) = x * w + b` 的参数 `w`、`b` 确定，就可以将新数据（如城市人口）代入假设函数以获得预测值（如餐车利润）。
 
-例如，训练集 `X` 中的所有 `X[i]` 都可以代入此假设函数以获得预测值 `f(X[i]; w, b) = X[i]*w + b`。以下代码计算 `x` 中所有样本的预测值，并使用这些预测值绘制对应预测值的数据点（图 3-10）。
+例如，训练集 `X` 中的所有 `X[i]` 都可以代入此假设函数以获得预测值 `f(X[i]; w, b) = X[i] * w + b`。以下代码计算 `x` 中所有样本的预测值，并使用这些预测值绘制对应预测值的数据点（图 3-10）。
 
 ```python
 # Use the obtained w to calculate the predicted value of the sample in X
@@ -6860,75 +6879,25 @@ plt.scatter(X, predictions, marker="o", c="blue")
 
 一般来说，如果一个样本包含 K 个特征，线性回归的假设函数为：
 
-$$f(xx) = w_{1} * x_{1} + w_{2} * x_{2} + ... + w_{K} * x_{K} + b = \sum\limits_{i = 1}^{K}{w_{i}x_{i}} + b$$
+$$ f(xx) = w_{1} * x_{1} + w_{2} * x_{2} + ... + w_{K} * x_{K} + b = \sum\limits_{i = 1}^{K}{w_{i}x_{i}} + b $$
 
 可以用行向量表示一个样本的所有特征，即 `xx = (x[1], x[2], ..., x[K])`，用列向量表示假设函数中这些特征前的系数，即 `ww = (w[1], w[2], ..., w[K])^T`，假设函数可以用更简单的向量形式表示：
 
-$$
-f(xx) = (x_{1},x_{2},\cdots,x_{K})
-\begin{bmatrix}
-w_{1} \\
-w_{2} \\
-\vdots \\
-w_{K} \\
-\end{bmatrix}
-+ b = xxww + b \tag{3-13}
-$$
+$$ f(xx) = (x_{1},x_{2},\cdots,x_{K}) \begin{bmatrix} w_{1} \\ w_{2} \\ \vdots \\ w_{K} \\ \end{bmatrix} + b = xxww + b \tag{3-13} $$
 
 对应系数 `w[i]` 的值越大，`x[i]` 对 `f(xx)` 输出值的影响越大。因此，`w[i]` 通常称为**权重**，它与 `x[i]` 无关，`b` 也作为一个整体影响输出值，称为**偏置**。
 
 有时 `b` 写作 `w[0]`，所有未知参数表示为 `ww = (w[0], w[1], w[2], ..., w[K])^T`，`xx` 表示为 `xx = (x[0]=1, x[1], x[2], ..., x[K])`。假设函数表示为：
 
-$$
-f_{ww}(xx) = w_{1} * x_{1} + w_{2} * x_{2} + ... + w_{K} * x_{K} + w_{0} = (x_{0},x_{1},x_{2},\cdots,x_{K})
-\begin{bmatrix}
-w_{0} \\
-w_{1} \\
-w_{2} \\
-\vdots \\
-w_{K} \\
-\end{bmatrix}
-= xxww
-$$
+$$ f_{ww}(xx) = w_{1} * x_{1} + w_{2} * x_{2} + ... + w_{K} * x_{K} + w_{0} = (x_{0},x_{1},x_{2},\cdots,x_{K}) \begin{bmatrix} w_{0} \\ w_{1} \\ w_{2} \\ \vdots \\ w_{K} \\ \end{bmatrix} = xxww $$
 
 如果有 m 个样本 `xx^{(i)}`，将这些样本按行放入二维矩阵中：
 
-$$
-XX =
-\begin{bmatrix}
-xx^{(1)} \\
-xx^{(2)} \\
-\vdots \\
-xx^{(m)} \\
-\end{bmatrix}
-=
-\begin{bmatrix}
-xx_{0}^{(1)} & xx_{1}^{(1)} & \cdots & xx_{K}^{(1)} \\
-xx_{0}^{(2)} & xx_{1}^{(2)} & \cdots & xx_{K}^{(2)} \\
-\vdots & & & \\
-xx_{0}^{(m)} & xx_{1}^{(m)} & \cdots & xx_{K}^{(m)} \\
-\end{bmatrix}
-$$
+$$ XX = \begin{bmatrix} xx^{(1)} \\ xx^{(2)} \\ \vdots \\ xx^{(m)} \\ \end{bmatrix} = \begin{bmatrix} xx_{0}^{(1)} & xx_{1}^{(1)} & \cdots & xx_{K}^{(1)} \\ xx_{0}^{(2)} & xx_{1}^{(2)} & \cdots & xx_{K}^{(2)} \\ \vdots & & & \\ xx_{0}^{(m)} & xx_{1}^{(m)} & \cdots & xx_{K}^{(m)} \\ \end{bmatrix} $$
 
 因为每个样本都会产生一个输出，所以函数对所有样本的输出可以用向量（矩阵）形式写成：
 
-$$
-f_{ww}(XX) =
-\begin{bmatrix}
-xx^{(1)} \\
-xx^{(2)} \\
-\vdots \\
-xx^{(m)} \\
-\end{bmatrix}
-ww =
-\begin{bmatrix}
-xx_{0}^{(1)} & xx_{1}^{(1)} & \cdots & xx_{K}^{(1)} \\
-xx_{0}^{(2)} & xx_{1}^{(2)} & \cdots & xx_{K}^{(2)} \\
-\vdots & & & \\
-xx_{0}^{(m)} & xx_{1}^{(m)} & \cdots & xx_{K}^{(m)} \\
-\end{bmatrix}
-ww = XXww \tag{3-14}
-$$
+$$ f_{ww}(XX) = \begin{bmatrix} xx^{(1)} \\ xx^{(2)} \\ \vdots \\ xx^{(m)} \\ \end{bmatrix} ww = \begin{bmatrix} xx_{0}^{(1)} & xx_{1}^{(1)} & \cdots & xx_{K}^{(1)} \\ xx_{0}^{(2)} & xx_{1}^{(2)} & \cdots & xx_{K}^{(2)} \\ \vdots & & & \\ xx_{0}^{(m)} & xx_{1}^{(m)} & \cdots & xx_{K}^{(m)} \\ \end{bmatrix} ww = XXww \tag{3-14} $$
 
 这个矩阵乘积可以用 numpy 轻松计算，即使用 `np.dot(X, W)` 或 `X.dot(W)` 或 `X @ W`。例如，下面的 `XX` 是 2 个样本，每个样本有 3 个特征，`ww` 是对应 3 个特征的权重，然后可以直接计算 `fww = XXww`。
 
@@ -6947,17 +6916,19 @@ array([22. , 20.6])
 
 `XX` (2×3) × `ww` (3×1) = `ff` (2×1)
 
-**模型训练**是使用一组具有已知目标值的样本 `{xx^{(i)}, y^{(i)}}` 来找到最佳假设函数 `fww`，即确定假设函数的未知参数 `ww`。
+
+
+**模型训练**是使用一组具有已知目标值的样本`{xx^{(i)}, y^{(i)}}`来找到最佳假设函数`fww`，即确定假设函数的未知参数`ww`。
 
 与单变量假设函数一样，对于多变量假设函数，也可以使用基于均方误差的损失函数来衡量模型预测值与真实值之间的误差：
 
 $$L(ww) = \frac{1}{2m}\sum\limits_{i = 1}^{m}(f_{ww}(xx^{(i)}) - y^{(i)})^{2}$$
 
-`L(ww)` 是未知参数 `ww` 的函数，`ww` 包含多个变量，所以这是 `ww` 的多元函数。线性回归的模型训练是找到使损失函数值最小化的参数 `ww = (w[0], w[1], ...)`：
+`L(ww)`是未知参数`ww`的函数，`ww`包含多个变量，所以这是`ww`的多元函数。线性回归的模型训练是找到使损失函数值最小化的参数`ww = (w[0], w[1], ...)`：
 
 arg min `[w[0], w[1], ...] L(w[0], w[1], ...)`
 
-如果 `L(ww)` 在 `ww^*` 处取得最小值，则该点的梯度（偏导数）应为 0：
+如果`L(ww)`在`ww^*`处取得最小值，则该点的梯度（偏导数）应为0：
 
 $$\frac{\partial L(w_{0},w_{1},...)}{\partial w_{j}}|_{ww^{*}} = 0$$
 
@@ -6969,62 +6940,79 @@ $$\frac{\partial L(w_{0},w_{1},...)}{\partial w_{j}}|_{ww^{*}} = 0$$
 
 $$L(ww) = \frac{1}{2m}\sum\limits_{i = 1}^{m}{\delta^{(i)}}^{2}$$
 
-`L(ww)` 可以看作是 m 个 `δ^{(i)}²` 的平均值再除以 2，`δ^{(i)}` 是 `f` 的函数，`f^{(i)}` 是 `ww = (w[1], w[2], ..., w[k])^T` 的函数，根据求导四则规则（如和函数的导数是各函数导数之和）和复合函数的链式法则：
+`L(ww)`可以看作是m个`δ^{(i)}²`的平均值再除以2，`δ^{(i)}`是`f`的函数，`f^{(i)}`是`ww = (w[1], w[2], ..., w[k])^T`的函数，根据求导四则规则（如和函数的导数是各函数导数之和）和复合函数的链式法则：
 
 $$\frac{\partial{L(ww)}}{\partial\delta^{(i)}} = \frac{1}{2m}{2\delta^{(i)}} = \frac{\delta^{(i)}}{m}$$
 
+### 线性回归的梯度推导与法方程求解
 
-
-
-##### 线性回归的梯度推导与法方程求解
-
-###### 梯度推导
+#### 梯度推导
 
 $$
+
 \frac{\partial\delta^{(i)}}{\partial f^{(i)}} = 1
+
 $$
 
 $$
+
 \frac{\partial f^{(i)}}{\partial w_{j}} = x_{j}^{(i)}
+
 $$
 
 $$
+
 \begin{matrix}
+
 \frac{\partial{LL(\pmb{w})}}{\partial w_{j}} & {= \sum\limits_{i = 1}^{m}{\frac{\partial{LL(\pmb{w})}}{\partial\delta^{(i)}} \times \frac{\partial\delta^{(i)}}{\partial f^{(i)}} \times \frac{\partial f^{(i)}}{\partial w_{j}}} = \frac{1}{m}\sum\limits_{i = 1}^{m}\delta^{(i)} \times 1 \times x_{j}^{(i)}} \\
+
 & {= \frac{1}{m}\sum\limits_{i = 1}^{m}{(f^{(i)} - y^{(i)})x_{j}^{(i)}} = \frac{1}{m}\sum\limits_{i = 1}^{m}(f_{\pmb{w}}(x^{(i)}) - y^{(i)})x_{j}^{(i)}}
+
 \end{matrix}
+
 $$
 
 右侧公式中除系数外的值可视为两个向量的点积：
 
 $$
+
 \begin{matrix}
+
 {\sum\limits_{i = 1}^{m}(f_{\pmb{w}}(x^{(i)}) - y^{(i)})x_{j}^{(i)}} & {= \begin{pmatrix} {f_{\pmb{w}}(x^{(1)}) - y^{(1)}} & {f_{\pmb{w}}(x^{(2)}) - y^{(2)}} & \cdots & {f_{\pmb{w}}(x^{(m)}) - y^{(m)}} \end{pmatrix}\begin{pmatrix} x_{j}^{(1)} \\ x_{j}^{(2)} \\ \vdots \\ x_{j}^{(m)} \end{pmatrix}} \\
+
 & {= \begin{pmatrix} x_{j}^{(1)} & x_{j}^{(2)} & \cdots & x_{j}^{(m)} \end{pmatrix}\begin{pmatrix} {f_{\pmb{w}}(x^{(1)}) - y^{(1)}} \\ {f_{\pmb{w}}(x^{(2)}) - y^{(2)}} \\ \vdots \\ {f_{\pmb{w}}(x^{(m)}) - y^{(m)}} \end{pmatrix}} \\
+
 & {= \begin{pmatrix} x_{j}^{(1)} & x_{j}^{(2)} & \cdots & x_{j}^{(m)} \end{pmatrix}\begin{pmatrix} {x^{(1)}\pmb{w} - y^{(1)}} \\ {x^{(2)}\pmb{w} - y^{(2)}} \\ \vdots \\ {x^{(m)}\pmb{w} - y^{(m)}} \end{pmatrix}} \\
+
 & {= X_{:,j}^{T}(X\pmb{w} - y)}
+
 \end{matrix}
-$$
-
-其中，`X_{:,j}^T` 是 `X` 矩阵第 `j` 列的转置（即所有样本的第 `j` 个特征）。因此，偏导数 $\frac{\partial{LL(\pmb{w})}}{\partial w_{j}}$ 可写成向量形式：
 
 $$
+
+其中，`X_{:,j}^T`是`X`矩阵第`j`列的转置（即所有样本的第`j`个特征）。因此，偏导数$\frac{\partial{LL(\pmb{w})}}{\partial w_{j}}$可写成向量形式：
+
+$$
+
 \frac{\partial{L(\pmb{w})}}{\partial w_{j}} = \frac{1}{m}X_{:,j}^{T}(X\pmb{w} - y)
-$$
-
-因为关于 `w` 的梯度 `L(w)` 的列向量形式为：
 
 $$
+
+因为关于`w`的梯度`L(w)`的列向量形式为：
+
+$$
+
 \nabla L(\pmb{w}) = (\frac{\partial{L(\pmb{w})}}{\partial w_{1}},\cdots,\frac{\partial{L(\pmb{w})}}{\partial w_{j}},\cdots)^{T} = \frac{1}{m}X^{T}(X\pmb{w} - y)
+
 $$
 
 可以检验矩阵乘法各维度边界是否一致：
 
-∇`L(w)` = `X^T` (`X` `w` − `y`)
+∇`L(w)`=`X^T`(`X``w`−`y`)
 
-`n` × 1   `n` × `m`  (`m` × `n`  `n` × 1  `m` × 1)
+`n`×1   `n`×`m`  (`m`×`n`  `n`×1  `m`×1)
 
-对于上述示例，可直接使用此公式计算损失函数关于 `w` 的梯度：
+对于上述示例，可直接使用此公式计算损失函数关于`w`的梯度：
 
 ```python
 y = np.array([2.3, 1.7])
@@ -7035,17 +7023,17 @@ y = np.array([2.3, 1.7])
 array([ 19.3 , 144.95, 76.8 ])
 ```
 
-令梯度 ∇`L(w)` = 0，得到法方程：
+令梯度∇`L(w)`=0，得到法方程：
 
-`X^T`(`X``w` − `y`) = 0
+`X^T`(`X``w`−`y`)=0
 
-根据法方程，可得 `w`：
+根据法方程，可得`w`：
 
-`w` = (`X^T``X`)^(-1)`X^T``y`
+`w`=(`X^T``X`)^(-1)`X^T``y`
 
-###### 2. 拟合平面
+#### 2. 拟合平面
 
-以下代码生成一组从平面 `z` = 2`x` + 3`y` + `c` 采样的数据点样本，每个数据样本由 (`x`, `y`) 表征，其目标值是该点在平面上对应的 `z` 值加上噪声：
+以下代码生成一组从平面`z`=2`x`+3`y`+`c`采样的数据点样本，每个数据样本由(`x`, `y`)表征，其目标值是该点在平面上对应的`z`值加上噪声：
 
 ```python
 import matplotlib.pyplot as plt
@@ -7089,7 +7077,7 @@ plt.show()
 
 **Figure 3-11** 三维空间采样的二维平面数据集
 
-使用上述样本点求解法方程拟合一个平面，并用拟合函数计算原始数据点 (`xs`, `ys`) 的预测值 `zs2`，然后显示原始数据点和拟合数据点，以及原始平面和拟合平面，可以看到拟合效果很好。
+使用上述样本点求解法方程拟合一个平面，并用拟合函数计算原始数据点(`xs`, `ys`)的预测值`zs2`，然后显示原始数据点和拟合数据点，以及原始平面和拟合平面，可以看到拟合效果很好。
 
 ```python
 # fit a plane
@@ -7144,7 +7132,7 @@ plt.show()
 
 当样本数量大或样本特征多时，法方程需要求逆矩阵，耗时较长。因此一般采用迭代法求解方程组，最典型的迭代法是**梯度下降法**。
 
-以下是用 NumPy 向量运算实现的梯度下降算法：
+以下是用NumPy向量运算实现的梯度下降算法：
 
 ```python
 learning_rate = 0.02
@@ -7191,12 +7179,9 @@ def gradient_descent_vec(X, y, alpha, num_iters, gamma=0.8, epsilon=1e-8):
     return history                  # return the history of optimized parameters
 ```
 
+在上述代码中，特征1被添加到输入数据`X`的每个数据特征`X[i]`中。因此，调用此函数时，只需传递输入数据本身的特征即可。以下代码测试梯度下降法的向量版本，以拟合上述平面数据：
 
-
-
-在上述代码中，特征 1 被添加到输入数据 `X` 的每个数据特征 `X[i]` 中。因此，调用此函数时，只需传递输入数据本身的特征即可。以下代码测试梯度下降法的向量版本，以拟合上述平面数据：
-
-```
+```python
 learning_rate = 0.02
 num_iters = 100
 X = np.hstack((xs[:, None], ys[:, None]))
@@ -7208,9 +7193,9 @@ print("w:", history[-1])
 w: [5.2574307 3.00002524 1.99999406]
 ```
 
-根据 `history` 中记录的迭代过程中的模型参数，计算每次迭代过程中模型参数对应的假设函数在训练数据集上的平均损失：
+根据`history`中记录的迭代过程中的模型参数，计算每次迭代过程中模型参数对应的假设函数在训练数据集上的平均损失：
 
-```
+```python
 def compute_loss_history(X, y, w_history):
     loss_history = []
     for w in w_history:
@@ -7219,7 +7204,9 @@ def compute_loss_history(X, y, w_history):
     return loss_history
 ```
 
-```
+
+
+```python
 loss_history = compute_loss_history(X, y, history)
 print(loss_history[:-1:10])
 plt.plot(loss_history, linewidth=2)
@@ -7240,13 +7227,13 @@ plt.show()
 
 可以看到，获得了相同的良好拟合结果。
 
-#### 3. 温度与压力问题
+### 3. 温度与压力问题
 
 让我们看一个简单的温度与压力问题。大气中的压力和温度（在气体中）是相关的。如果给定一组（温度、压力）数据，能否用模型从温度预测压力（反之亦然）？
 
 如果温度和压力数据放在 CSV 格式文件 `data.csv` 中，可以使用 pandas 包的 `read_csv()` 从文件读取数据：
 
-```
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -7257,7 +7244,7 @@ data
 
 ![](img/file50.png)
 
-```
+```python
 X = data.values[:, 1:2]
 y = data.values[:, 2]
 print(X)
@@ -7276,7 +7263,7 @@ print(y)
 
 调用 `gradient_descent_vec()` 进行线性回归：
 
-```
+```python
 history = gradient_descent_vec(X, y, 0.00005, 50)
 w = history[-1]
 print("w:", w)
@@ -7288,7 +7275,7 @@ w: [-0.00016333 0.00165672]
 
 绘制代价曲线和测试的预测值：
 
-```
+```python
 def plot_history_predict(X, y, w, loss_history, fig_size=(12, 4)):
     fig = plt.gcf()
     fig.set_size_inches(fig_size[0], fig_size[1], forward=True)
@@ -7316,7 +7303,7 @@ def plot_history_predict(X, y, w, loss_history, fig_size=(12, 4)):
 
 绘制损失函数曲线和训练样本的预测值：
 
-```
+```python
 loss_history = compute_loss_history(X, y, history)
 plot_history_predict(X, y, w, loss_history)
 ```
@@ -7327,17 +7314,17 @@ plot_history_predict(X, y, w, loss_history)
 
 虽然获得了拟合温度与压力关系的最佳线性模型，但从图中可以看出，压力和温度并非线性关系，线性假设函数不是最佳选择。它们之间应存在非线性关系。很自然地，会想到使用多项式函数（如 3 次多项式）来表示压力 `y` 与温度 `x` 之间的这种非线性关系。
 
-$$f(x) = w[3]x³ + w[2]x² + w[1]x + w[0] = (1, x, x², x³)(w[0], w[1], w[2], w[3])^T$$
+$$f(x) = w[3]x^3 + w[2]x^2 + w[1]x + w[0] = (1, x, x^2, x^3)(w[0], w[1], w[2], w[3])^T$$
 
-从原始特征 `x` 出发，人为构造新特征 `x²`、`x³`，并将 1 也作为一个特征，因此 `x` 可视为由 4 个特征组成的数据特征向量 `x = (1, x, x², x³)`。
+从原始特征 `x` 出发，人为构造新特征 `x^2`、`x^3`，并将 1 也作为一个特征，因此 `x` 可视为由 4 个特征组成的数据特征向量 `x = (1, x, x^2, x^3)`。
 
-$$f(x; w) = (1, x, x², x³)(w[0], w[1], w[2], w[3])^T = x w$$
+$$f(x; w) = (1, x, x^2, x^3)(w[0], w[1], w[2], w[3])^T = x w$$
 
 其中，`w` 是模型参数。
 
 首先生成包含 4 个特征（包括 1）的数据：
 
-```
+```python
 X2 = np.hstack((X, X**2, X**3))
 print(X2)
 ```
@@ -7353,7 +7340,7 @@ print(X2)
 
 随后实施梯度下降法，但发现损失函数持续快速增加直至无穷大，并未收敛。
 
-```
+```python
 history = gradient_descent_vec(X2, y, 0.00005, 50)
 print("w:", history[-1])
 ```
@@ -7376,20 +7363,28 @@ $$x \leftarrow \frac{x - \text{mean}(x)}{\text{stddev}(x)}$$
 
 其中 `x` 是一组数字，`mean(x)` 是 `x` 中数字的平均值，`stddev(x)` 是 `x` 中数字的标准差（均方差）。例如，有一组特征值：{-5, 6, 9, 2, 4}，其平均值为：
 
-```
+```python
 mean = (-5 + 6 + 9 + 2 + 4) / 5 = 3.2
 ```
 
 从所有特征值中减去该平均值得到偏差，并计算这些偏差的平方：
 
 $$
+
 \begin{matrix}
-(-5 - 3.2)² = 67.24 \\
-(6 - 3.2)² = 7.84 \\
-(9 - 3.2)² = 33.64 \\
-(2 - 3.2)² = 1.44 \\
-(4 - 3.2)² = 0.64
+
+(-5 - 3.2)^2 = 67.24 \\
+
+(6 - 3.2)^2 = 7.84 \\
+
+(9 - 3.2)^2 = 33.64 \\
+
+(2 - 3.2)^2 = 1.44 \\
+
+(4 - 3.2)^2 = 0.64
+
 \end{matrix}
+
 $$
 
 然后，计算标准差 `stddev`：
@@ -7398,7 +7393,7 @@ $$\text{stddev} = \sqrt{(67.24 + 7.84 + 33.64 + 1.44 + 0.64)/5} = 4.71$$
 
 对于之前的 `X2`，可以使用以下代码计算每个特征的均值（`mean`）和均方差（`stddev`）：
 
-```
+```python
 mean = np.mean(X2, axis=0)
 stddev = np.std(X2, axis=0)
 print(mean)
@@ -7418,17 +7413,15 @@ print(X2)
  [ 1.46385011  1.77982532  1.95027186]]
 ```
 
-
-
 当然，上述用于归一化数据的代码可以简化为一行代码：
 
-```
+```python
 X = nd.array((X - X.mean(axis=0)) / X.std(axis=0))
 ```
 
 对于归一化后的数据，可以使用相对较大的学习率：
 
-```
+```python
 alpha = 0.5
 iterations = 50
 history = gradient_descent_vec(X2,y,alpha,iterations)
@@ -7446,13 +7439,13 @@ print(loss_history[0],loss_history[-1])
 
 可以看出，损失函数的损失从 0.0019130770858765333 降到了 7.023862601858041e-05，并绘制了损失函数曲线和拟合多项式曲线。当然，读者可以调整学习率和迭代次数以进一步减小损失误差。
 
-```
+```python
 plot_history_predict(X2,y,history[-1],loss_history)
 ```
 
 ![](img/file52.png "fig:")  
 
-图 3-15 损失曲线和拟合多项式曲线
+**图 3-15 损失曲线和拟合多项式曲线**
 
 从训练样本的最终预测结果可以看出，模型函数能更好地拟合训练数据。
 
@@ -7468,7 +7461,7 @@ plot_history_predict(X2,y,history[-1],loss_history)
 
 以下代码在正弦曲线周围随机采样一些坐标点 (x,y)：
 
-```
+```python
 #https://github.com/ctgk/PRML/blob/master/notebooks/ch01_Introduction.ipynb
 import numpy as np
 import matplotlib.pyplot as plt
@@ -7496,11 +7489,11 @@ plt.show()
 
 ![](img/file53.png "fig:")  
 
-图 3-16 采样正弦曲线
+**图 3-16 采样正弦曲线**
 
 用不同次数 K 的多项式拟合这些样本点 (x,y)，并用正规方程法求解模型函数：
 
-```
+```python
 for i, K in enumerate([0, 1, 3, 9]):
     plt.subplot(2, 2, i + 1)
     X = np.array([np.power(x,k) for k in range(K+1)])
@@ -7540,38 +7533,40 @@ plt.show()
 
 ![](img/file54.png "fig:")  
 
-图 3-17 以 0 次、1 次、3 次和 9 次多项式函数作为假设函数时正规方程法的拟合情况
+**图 3-17 以 0 次、1 次、3 次和 9 次多项式函数作为假设函数时正规方程法的拟合情况**
 
 以下代码使用梯度下降法求解上述假设函数：
 
-```
+
+
+```python
 lr = 0.4
 iterations = 10000000
 for i, K in enumerate([0, 1, 3, 9]):
     plt.subplot(2, 2, i + 1)
-    if i==0: continue
-    X = np.array([np.power(x,k+1) for k in range(K)])
+    if i == 0:
+        continue
+    X = np.array([np.power(x, k + 1) for k in range(K)])
     X = X.transpose()
-     
-    #Normalization is very important, otherwise it is difficult to converge
+
+    # Normalization is very important, otherwise it is difficult to converge
     mean = np.mean(X, axis=0)
     stddev = np.std(X, axis=0)
-    X = (X-mean)/stddev
-   
-    w_history = gradient_descent_vec(X,y,lr,iterations,0.9)  
+    X = (X - mean) / stddev
+
+    w_history = gradient_descent_vec(X, y, lr, iterations, 0.9)
     w = w_history[-1]
-    print("w=:",w)
-    
-    X_test = np.array([np.power(x_test,k+1) for k in range(K)])  
+    print("w=:", w)
+
+    X_test = np.array([np.power(x_test, k + 1) for k in range(K)])
     X_test = X_test.transpose()
-    X_test = (X_test-mean)/stddev    
-    y_predict = X_test@w[1:]+w[0]
-        
+    X_test = (X_test - mean) / stddev
+    y_predict = X_test @ w[1:] + w[0]
+
     plt.plot(x_test, y_test, c="g", label="$\sin(2\pi x)$")
-    plt.scatter(x, y,facecolor="none", edgecolor="b", s=50, label="training data")
-    
-    
-    y_test = np.sin(2*np.pi*x_test)
+    plt.scatter(x, y, facecolor="none", edgecolor="b", s=50, label="training data")
+
+    y_test = np.sin(2 * np.pi * x_test)
     plt.plot(x_test, y_test, c="g", label="$\sin(2\pi x)$")
     plt.plot(x_test, y_predict, c="r", label="fitting")
     plt.ylim(-1.5, 1.5)
@@ -7597,9 +7592,6 @@ gradient is small enough!
 在本例中，3 次多项式函数的拟合效果最好，9 次多项式函数虽然训练集上的拟合误差很小，但远离实际数据潜在的真实关系。对于训练集上的样本拟合误差小但对测试样本误差大的情况，称为**过拟合**（overfitting）。过拟合是由模型函数相对于训练样本集过于复杂引起的。解决过拟合的一种方法是使用低复杂度的 3 次多项式函数作为假设函数，另一种方法是增加训练数据集的样本数量。
 
 例如，在以下代码中增加训练样本数量后，9 次多项式假设函数也能获得更好的拟合效果。
-
-
-
 
 ```python
 n_samples = 100
@@ -7680,10 +7672,6 @@ w=: [ 1.22951941e-01 -3.80763635e-01 1.47730348e+02 -1.56658147e+03
 
 针对前面正弦采样点的拟合问题，以下代码总共采样了三个样本集：训练集、验证集和测试集。
 
-
-
-
-
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -7753,6 +7741,8 @@ plt.show()
 
 下面的 `loss()` 函数计算模型参数对应的假设函数在样本集（`X`、`y`）上的损失，`learning_curves_trainSize()` 计算不同大小（`trainSize`）训练集的训练损失和验证损失，并绘制训练损失曲线和验证损失曲线。
 
+
+
 ```python
 def loss(w, X, y):
     X = np.hstack((np.ones((X.shape[0], 1), dtype=X.dtype), X))  # 添加一列特征 1
@@ -7820,13 +7810,7 @@ iterated num is : 117
 
 对于某个特定的假设函数，也可以通过迭代学习曲线观察多少次迭代是合适的。
 
-
-
-
-
-#### 学习曲线与大坝水流量预测
-
-##### 学习曲线迭代函数
+### 学习曲线迭代函数
 
 ```python
 def learning_curves_iterations(X_train, y_train, X_valid, y_valid, alpha=0.3, iterations=10000):    
@@ -7866,7 +7850,9 @@ plt.show()
 
 ![Figure 3-23 二次多项式假设函数的训练损失和验证损失曲线](img/file59.png)
 
-### 3.2.4 预测大坝水流量
+## 3.2.4 预测大坝水流量
+
+### 学习曲线分析与模型复杂度
 
 吴恩达的机器学习课程中给出了一个“根据水库水位变化预测大坝水流量”的问题。其中的样本数据记录了水库水位的变化和相应的大坝水流量。这些数据保存在文件 `water.mat` 中，可以使用 SciPy 的 `loadmat()` 读取这种 MATLAB 格式的数据文件。
 
@@ -8003,12 +7989,6 @@ iterated num is : 161
 
 ![Figure 3-26 训练和验证损失曲线](img/file62.png)
 
-
-
-
-
-#### 学习曲线分析与模型复杂度
-
 随着训练样本数量的增加，获得的模型损失值逐渐增大，因为样本数量大，模型拟合所有样本的难度增加。当样本数量增加到一定程度时，模型损失增加非常缓慢，表明增加样本数据对提升模型效果意义不大。
 
 观察验证集的模型损失：当训练样本数量较小时，验证误差较大，说明拟合模型不够准确，模型泛化能力很弱，导致验证集损失较大。随着训练集样本数量增加，验证误差逐渐减小，表明模型泛化能力越来越好。当模型数量达到 10 时，继续增加训练样本数量不会继续改善验证误差。从该学习曲线可见，训练样本数量约为 10 时，继续增加样本不会进一步提升模型质量。因此可停止增加样本数量，即**早停法**（early stopping）。
@@ -8024,6 +8004,8 @@ print(x_train_2[:3])
 ```
 
 输出：
+
+
 
 ```
 [[-3.62140776e-01 -7.55086688e-01 1.82225876e-01]
@@ -8164,36 +8146,35 @@ print(loss_val,loss_test)
 
 ### 3.2.5 偏差与方差
 
-
-
-
-
 #### 偏差-方差权衡
 
-如果对于某个问题，自变量（特征）$x$ 和因变量（目标值）$y$ 之间存在函数关系 $f(x)$，但该函数未知，仅有一组实际数据样本 $\{x_i, y_i\}$。由于采样过程中的噪声，每个实际样本的 $x, y$ 并不严格满足该函数关系 $f(x)$，即实际目标值 $y$ 与 $f(x)$ 之间存在随机误差 $\epsilon$。通常认为该随机误差 $\epsilon$ 服从高斯分布 $\mathcal{N}(\mu, \sigma²)$，即 $\epsilon = y - f(x) \sim \mathcal{N}(0, \sigma²)$。因此，$y$ 与 $f(x)$ 的关系可表示为：
+如果对于某个问题，自变量（特征）`x` 和因变量（目标值）`y` 之间存在函数关系 `f(x)`，但该函数未知，仅有一组实际数据样本 `{x_i, y_i}`。由于采样过程中的噪声，每个实际样本的 `x, y` 并不严格满足该函数关系 `f(x)`，即实际目标值 `y` 与 `f(x)` 之间存在随机误差 `ε`。通常认为该随机误差 `ε` 服从高斯分布 `N(μ, σ²)`，即 `ε = y - f(x) ~ N(0, σ²)`。因此，`y` 与 `f(x)` 的关系可表示为：
 
 $$y = f(x) + \epsilon$$
 
-即采样目标值 $y$ 与真实目标值 $f(x)$ 之间存在误差 $\epsilon$。
+即采样目标值 `y` 与真实目标值 `f(x)` 之间存在误差 `ε`。
 
-机器学习希望利用假设函数（如 $\hat{f}(x)$）来逼近真实的 $f(x)$。该假设通常通过最小化实际目标值 $y_i$ 与假设函数 $\hat{f}(x)$ 的预测目标值 $\hat{f}(x_i)$ 之间的误差 $(y_i - \hat{f}(x_i))²$ 来求解。
+机器学习希望利用假设函数（如 `f_hat(x)`）来逼近真实的 `f(x)`。该假设通常通过最小化实际目标值 `y_i` 与假设函数 `f_hat(x)` 的预测目标值 `f_hat(x_i)` 之间的误差 `(y_i - f_hat(x_i))²` 来求解。
 
-对于假设函数模型 $\hat{f}(x_i)$，不同训练集和不同机器学习算法得到的具体函数 $\hat{f}(x_i)$ 皆不相同。
+对于假设函数模型 `f_hat(x_i)`，不同训练集和不同机器学习算法得到的具体函数 `f_hat(x_i)` 皆不相同。
 
-对于某一确定的 $x$，不同 $\hat{f}(x_i)$ 产生的误差 $(y_i - \hat{f}(x_i))²$ 也不同。所有可能的 $\hat{f}(x_i)$ 该误差的平均值（期望）称为**期望误差**或**误差期望**，即 $E[(y - \hat{f}(x))²]$。该期望误差可分解为以下三项：
+对于某一确定的 `x`，不同 `f_hat(x_i)` 产生的误差 `(y_i - f_hat(x_i))²` 也不同。所有可能的 `f_hat(x_i)` 该误差的平均值（期望）称为**期望误差**或**误差期望**，即 `E[(y - f_hat(x))²]`。该期望误差可分解为以下三项：
 
 $$E[(y - \hat{f}(x))²] = (\text{Bias}[\hat{f}(x)])² + \text{Var}[\hat{f}(x)] + \sigma²$$
 
 其中：
-*   $\text{Bias}[\hat{f}(x)] = E[\hat{f}(x)] - E[f(x)]$ 称为**偏差**，表示假设函数模型 $\hat{f}(x)$ 的预测值期望与真实值之间的偏离程度。
-*   $\text{Var}[\hat{f}(x)] = E[\hat{f}(x)²] - E[\hat{f}(x)]² = E(\hat{f}(x) - E[\hat{f}(x)])²$ 称为**方差**，表示假设函数模型 $\hat{f}(x)$ 得到的不同预测值与其期望预测值的均方误差。
+
+*   `Bias[f_hat(x)] = E[f_hat(x)] - E[f(x)]` 称为**偏差**，表示假设函数模型 `f_hat(x)` 的预测值期望与真实值之间的偏离程度。
+
+*   `Var[f_hat(x)] = E[f_hat(x)²] - E[f_hat(x)]² = E(f_hat(x) - E[f_hat(x)])²` 称为**方差**，表示假设函数模型 `f_hat(x)` 得到的不同预测值与其期望预测值的均方误差。
 
 公式推导请参考 Wikipedia：
+
 <https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff>
 
 ##### 示例：常数模型与线性模型的对比
 
-假设待学习函数为 $f(x) = x + 2 \times \text{np.sin}(1.5 \times x)$，以下代码绘制函数曲线及从该函数采样的一组 $\{x_i, y_i\}$：
+假设待学习函数为 `f(x) = x + 2 * np.sin(1.5 * x)`，以下代码绘制函数曲线及从该函数采样的一组 `{x_i, y_i}`：
 
 ```python
 import numpy as np
@@ -8223,17 +8204,17 @@ plt.scatter(x, y, s=30)  # , facecolors='none', edgecolors='r')
 
 ![](img/file66.png)
 
-**图 3-30** 函数 $f(x) = x + 2 \times \text{np.sin}(1.5 \times x)$ 及其上的随机噪声采样坐标点
+**图 3-30** 函数 `f(x) = x + 2 * np.sin(1.5 * x)` 及其上的随机噪声采样坐标点
 
-### 常数假设函数 $\hat{f}(x) = b$
+### 常数假设函数 `f_hat(x) = b`
 
-若使用常数函数 $\hat{f}(x) = b$ 作为假设函数模型逼近 $f(x)$，对训练集中每个 $\{x_i, y_i\}, i=1,2,\dots,m$，$\hat{f}(x)=b$ 的预测值均为 $b$。最小化 $\sum_{i=1}^{m}{(b - y_i)}²$，可得：
+若使用常数函数 `f_hat(x) = b` 作为假设函数模型逼近 `f(x)`，对训练集中每个 `{x_i, y_i}, i=1,2,...,m`，`f_hat(x)=b` 的预测值均为 `b`。最小化 `∑(b - y_i)²`，可得：
 
 $$b = \frac{\sum_{i=1}^{m}y_i}{m} = \text{np.mean}(y_i)$$
 
-不同训练集的样本不同，因此利用不同训练集得到的 $b$（即假设函数 $\hat{f}(x)=b$）也不同。所有不同训练集在某一点 $x$ 处得到的假设函数预测期望值与真实值之差为偏差，所有不同假设函数在该点预测值与预测期望值的均方误差为方差。
+不同训练集的样本不同，因此利用不同训练集得到的 `b`（即假设函数 `f_hat(x)=b`）也不同。所有不同训练集在某一点 `x` 处得到的假设函数预测期望值与真实值之差为偏差，所有不同假设函数在该点预测值与预测期望值的均方误差为方差。
 
-以下代码使用 50 个训练集训练得到 50 个假设函数，并计算这些假设函数在 $x=5$ 处的预测偏差与预测方差（注：代码中 `x = 18` 似为笔误，文中所述为 $x=5$，但输出结果对应 $x=18$ 处的计算）：
+以下代码使用 50 个训练集训练得到 50 个假设函数，并计算这些假设函数在 `x=5` 处的预测偏差与预测方差（注：代码中 `x = 18` 似为笔误，文中所述为 `x=5`，但输出结果对应 `x=18` 处的计算）：
 
 ```python
 train_set_num = 100
@@ -8272,11 +8253,11 @@ Predicted deviation: -14.564125266958722
 Predicted variance: 0.7240080347500965
 ```
 
-**图 3-31** 不同训练集得到的不同假设函数 $\hat{f}(x) = b$
+**图 3-31** 不同训练集得到的不同假设函数 `f_hat(x) = b`
 
-### 线性假设函数 $\hat{f}(x) = wx + b$
+### 线性假设函数 `f_hat(x) = wx + b`
 
-若使用线性函数 $\hat{f}(x) = wx + b$ 作为假设函数，遵循相同流程，可得到相应的偏差与方差估计：
+若使用线性函数 `f_hat(x) = wx + b` 作为假设函数，遵循相同流程，可得到相应的偏差与方差估计：
 
 ```python
 ws = []
@@ -8314,17 +8295,15 @@ Predicted deviation: -11.944324952176219
 Predicted variance: 10.868072850656494
 ```
 
-**图 3-32** 不同训练集得到的不同假设函数 $\hat{f}(x) = wx + b$
+**图 3-32** 不同训练集得到的不同假设函数 `f_hat(x) = wx + b`
 
 ##### 结论
+
+
 
 假设函数模型 $\hat{f}(x) = b$ 的偏差与方差分别为：`-14.564125266958722` 和 `0.7240080347500965`；假设函数模型 $\hat{f}(x) = wx + b$ 的偏差与方差分别为：`-11.944324952176219` 和 `10.868072850656494`。
 
 简单模型往往不够复杂，无法完全逼近真实函数 $f(x)$，容易欠拟合，其偏差大于复杂模型。虽然复杂模型偏差较小，但因函数变化复杂，其预测值的变化也往往剧烈或发散，即方差较大。
-
-
-
-
 
 # 偏差与方差
 
@@ -8389,10 +8368,6 @@ def gradient_descent_reg(X, y, reg, alpha, num_iters, gamma=0.8, epsilon=1e-8):
         w_history.append(w)
     return w_history # 返回优化后的参数和代价历史
 ```
-
-
-
-
 
 ```python
 def loss_reg(w, X, y, reg=0.):
@@ -8515,10 +8490,6 @@ $$\mathcal{L}(w) = \frac{1}{m} \sum_{i=1}^{m} \mathcal{L}^{(i)}$$
 
 为了更好地求 $L(w)$ 关于 $w = (w[0], w[1], \dots, w[K])^T$ 的偏导数，引入一些辅助符号 $z^{(i)}, f^{(i)}$：
 
-
-
-
-
 #### 逻辑回归梯度推导
 
 ##### 数学公式推导
@@ -8537,17 +8508,27 @@ $$\mathcal{L}(w) = \frac{1}{m}\sum_{i=1}^{m}\mathcal{L}^{(i)}$$
 
 ###### 链式法则求导
 
+
+
 $\mathcal{L}(w)$ 可视为 $m$ 个 $\mathcal{L}^{(i)}$ 之和，$\mathcal{L}^{(i)}$ 是 $f^{(i)}$ 的函数，$f^{(i)}$ 是 $z^{(i)}$ 的函数，$z^{(i)}$ 是 $w = (w_1, w_2, \dots, w_k)^T$ 的函数。根据求导四则运算和复合函数链式法则：
 
-$$\frac{\partial \mathcal{L}(w)}{\partial \mathcal{L}^{(i)}} = \frac{1}{m}$$
+$$
+\frac{\partial \mathcal{L}(w)}{\partial \mathcal{L}^{(i)}} = \frac{1}{m}
+$$
 
-$$\frac{\partial \mathcal{L}^{(i)}}{\partial f^{(i)}} = -\left(\frac{y^{i}}{f^{(i)}} - \frac{1 - y^{i}}{1 - f^{(i)}}\right) = \frac{f^{(i)} - y^{i}}{f^{(i)}(1 - f^{(i)})}$$
+$$
+\frac{\partial \mathcal{L}^{(i)}}{\partial f^{(i)}} = -\left(\frac{y^{i}}{f^{(i)}} - \frac{1 - y^{i}}{1 - f^{(i)}}\right) = \frac{f^{(i)} - y^{i}}{f^{(i)}(1 - f^{(i)})}
+$$
 
-$$\frac{\partial f^{(i)}}{\partial z^{(i)}} = \sigma(z^{(i)})(1 - \sigma(z^{(i)})) = f^{(i)}(1 - f^{(i)})$$
+$$
+\frac{\partial f^{(i)}}{\partial z^{(i)}} = \sigma(z^{(i)})(1 - \sigma(z^{(i)})) = f^{(i)}(1 - f^{(i)})
+$$
 
-$$\frac{\partial z^{(i)}}{\partial w_j} = x_j^{(i)}$$
+$$
+\frac{\partial z^{(i)}}{\partial w_j} = x_j^{(i)}
+$$
 
-###### 梯度公式推导
+### 梯度公式推导
 
 $$
 \begin{aligned}
@@ -8561,9 +8542,9 @@ $$
 
 因为 $f_w(x^{(i)}) - y^{(i)}$ 是一个标量，可以与向量乘法交换位置，即 $(f_w(x^{(i)}) - y^{(i)})x_j^{(i)} = x_j^{(i)}(f_w(x^{(i)}) - y^{(i)})$。
 
-可以观察到，对于一个样本 $(x, y)$，损失 $L(w)$ 对累积和 $z = x^T w$ 的梯度 $\frac{\partial \mathcal{L}}{\partial z}$ 为：$f - y$。这与线性回归中方差 $\frac{1}{2}(f - y)²$ 对 $f$ 的梯度形式相同。逻辑回归和线性回归的梯度计算公式形式一致。
+可以观察到，对于一个样本 $(x, y)$，损失 $L(w)$ 对累积和 $z = x^T w$ 的梯度 $\frac{\partial \mathcal{L}}{\partial z}$ 为：$f - y$。这与线性回归中方差 $\frac{1}{2}(f - y)^2$ 对 $f$ 的梯度形式相同。逻辑回归和线性回归的梯度计算公式形式一致。
 
-##### 矩阵形式表示（行向量样本）
+#### 矩阵形式表示（行向量样本）
 
 若将 $x^{(i)}$ 写为行向量，所有 $x^{(i)}$ 按行组成矩阵 $X$，目标值和预测值 $y^{(i)}, f^{(i)}$ 写为列向量：
 
@@ -8630,11 +8611,15 @@ $$
 
 即梯度 $\nabla_w L(w)$ 可表示为：
 
-$$\nabla_w L(w) = \frac{1}{m}(f - y)^T X = \frac{1}{m}(\sigma(Xw) - y)^T X$$
+$$
+\nabla_w L(w) = \frac{1}{m}(f - y)^T X = \frac{1}{m}(\sigma(Xw) - y)^T X
+$$
 
 假设样本特征数为 $n$，可验证上述矩阵运算维度一致：
 
-$$1 \times n = 1 \times m \quad m \times n$$
+$$
+1 \times n = 1 \times m \quad m \times n
+$$
 
 因此，一旦得到逻辑回归的输出 $f$，即可用以下 Python 代码计算交叉熵损失 $\mathcal{L}$ 对模型参数 $w$ 的梯度：
 
@@ -8644,38 +8629,40 @@ errors = f - y              # 预测值与真实值的误差
 gradient = errors.transpose() @ X / len(y)       # 计算梯度
 ```
 
-##### 矩阵形式表示（列向量样本）
+#### 矩阵形式表示（列向量样本）
 
 若将 $x^{(i)}$ 写为列向量，所有 $x^{(i)}$ 按列组成矩阵 $X$，所有样本的目标值和预测值 $y^{(i)}, f^{(i)}$ 写为行向量：
 
-$$X = \begin{bmatrix}
+$$
+X = \begin{bmatrix}
 x^{1} & x^{2} & \dots & x^{i} & \dots & x^{m}
-\end{bmatrix}$$
+\end{bmatrix}
+$$
 
-$$y = \begin{bmatrix}
+$$
+y = \begin{bmatrix}
 y^{1} & y^{2} & \dots & y^{i} & \dots & y^{m}
-\end{bmatrix}$$
+\end{bmatrix}
+$$
 
-$$f = \begin{bmatrix}
+$$
+f = \begin{bmatrix}
 f_w(x^{1}) & f_w(x^{2}) & \dots & f_w(x^{i}) & \dots & f_w(x^{m})
 \end{bmatrix} = \begin{bmatrix}
 \sigma(x^{1}w) & \sigma(x^{2}w) & \dots & \sigma(x^{i}w) & \dots & \sigma(x^{m}w)
-\end{bmatrix}$$
+\end{bmatrix}
+$$
 
 将所有偏导数 $\frac{\partial L(w)}{\partial w_j} = \frac{1}{m}\sum_{i=1}^{m}x_j^{i}(f_w(x^{i}) - y^{i})$ 写为列向量，且 $x^{(i)}$ 也以列向量形式表示。
 
-
-
-
-
-###### 数学推导
+##### 数学推导
 
 $$
 \begin{matrix} 
-{\nabla_{w w}{L(w w)}} & {= \begin{bmatrix} \frac{\partial L(w w)}{\partial w_{0}} \\ \frac{\partial L(w w)}{\partial w_{1}} \\ \frac{\partial L(w w)}{\partial w_{2}} \\ {...} \\ \frac{\partial L(w w)}{\partial w_{K}} \\ \end{bmatrix} = \begin{bmatrix} {\frac{1}{m}\sum\limits_{1 = 1}^{m}x_{0}^{(i)}(f_{w w}(x x^{(i)}) - y^{(i)})} \\ {\frac{1}{m}\sum\limits_{1 = 1}^{m}x_{1}^{(i)}(f_{w w}(x x^{(i)}) - y^{(i)})} \\ {\frac{1}{m}\sum\limits_{1 = 1}^{m}x_{2}^{(i)}(f_{w w}(x x^{(i)}) - y^{(i)})} \\ {...} \\ {\frac{1}{m}\sum\limits_{1 = 1}^{m}x_{K}^{(i)}(f_{w w}(x x^{(i)}) - y^{(i)})} \\ \end{bmatrix}} \\ 
-& {= \frac{1}{m}\sum\limits_{1 = 1}^{m}\begin{bmatrix} {x_{0}^{(i)}(f_{w w}(x x^{(i)}) - y^{(i)})} \\ {x_{1}^{(i)}(f_{w w}(x x^{(i)}) - y^{(i)})} \\ {x_{2}^{(i)}(f_{w w}(x x^{(i)}) - y^{(i)})} \\ {...} \\ {x_{K}^{(i)}(f_{w w}(x x^{(i)}) - y^{(i)})} \\ \end{bmatrix} = \frac{1}{m}\sum\limits_{1 = 1}^{m}\begin{bmatrix} x_{0}^{(i)} \\ x_{1}^{(i)} \\ x_{2}^{(i)} \\ {...} \\ x_{K}^{(i)} \\ \end{bmatrix}(f_{w w}(x x^{(i)}) - y^{(i)})} \\ 
-& {= \frac{1}{m}\sum\limits_{i = 1}^{m}{x x}^{i}(f_{w w}({x x}^{i}) - y^{i}) = \frac{1}{m}\sum\limits_{i = 1}^{m}(f_{w w}({x x}^{i}) - y^{i}){x x}^{i}} \\ 
-& {= \frac{1}{m}{X X(f f_{w w}({x x}) - y y)}^{T} = \frac{1}{m}X X{(f f - y y)}^{T}} \\ 
+{\nabla_{w} L(w)} & {= \begin{bmatrix} \frac{\partial L(w)}{\partial w_{0}} \\ \frac{\partial L(w)}{\partial w_{1}} \\ \frac{\partial L(w)}{\partial w_{2}} \\ {...} \\ \frac{\partial L(w)}{\partial w_{K}} \\ \end{bmatrix} = \begin{bmatrix} {\frac{1}{m}\sum\limits_{i = 1}^{m}x_{0}^{(i)}(f_{w}(x^{(i)}) - y^{(i)})} \\ {\frac{1}{m}\sum\limits_{i = 1}^{m}x_{1}^{(i)}(f_{w}(x^{(i)}) - y^{(i)})} \\ {\frac{1}{m}\sum\limits_{i = 1}^{m}x_{2}^{(i)}(f_{w}(x^{(i)}) - y^{(i)})} \\ {...} \\ {\frac{1}{m}\sum\limits_{i = 1}^{m}x_{K}^{(i)}(f_{w}(x^{(i)}) - y^{(i)})} \\ \end{bmatrix}} \\ 
+& {= \frac{1}{m}\sum\limits_{i = 1}^{m}\begin{bmatrix} {x_{0}^{(i)}(f_{w}(x^{(i)}) - y^{(i)})} \\ {x_{1}^{(i)}(f_{w}(x^{(i)}) - y^{(i)})} \\ {x_{2}^{(i)}(f_{w}(x^{(i)}) - y^{(i)})} \\ {...} \\ {x_{K}^{(i)}(f_{w}(x^{(i)}) - y^{(i)})} \\ \end{bmatrix} = \frac{1}{m}\sum\limits_{i = 1}^{m}\begin{bmatrix} x_{0}^{(i)} \\ x_{1}^{(i)} \\ x_{2}^{(i)} \\ {...} \\ x_{K}^{(i)} \\ \end{bmatrix}(f_{w}(x^{(i)}) - y^{(i)})} \\ 
+& {= \frac{1}{m}\sum\limits_{i = 1}^{m}{x}^{i}(f_{w}({x}^{i}) - y^{i}) = \frac{1}{m}\sum\limits_{i = 1}^{m}(f_{w}({x}^{i}) - y^{i}){x}^{i}} \\ 
+& {= \frac{1}{m}{X (f_{w}({x}) - y)}^{T} = \frac{1}{m}X {(f - y)}^{T}} \\ 
 \end{matrix}
 $$
 
@@ -8683,25 +8670,31 @@ $$
 
 $$
 \begin{matrix} 
-{\nabla_{w w}{L(w w)}} & {= \begin{bmatrix} \frac{\partial L(w w)}{\partial w_{0}} & \frac{\partial L(w w)}{\partial w_{1}} & \frac{\partial L(w w)}{\partial w_{2}} & \cdots & \frac{\partial L(w w)}{\partial w_{K}} & \\ \end{bmatrix} = \frac{1}{m}{(f f - y y)}{X X}^{T}} \\ 
+{\nabla_{w} L(w)} & {= \begin{bmatrix} \frac{\partial L(w)}{\partial w_{0}} & \frac{\partial L(w)}{\partial w_{1}} & \frac{\partial L(w)}{\partial w_{2}} & \cdots & \frac{\partial L(w)}{\partial w_{K}} & \\ \end{bmatrix} = \frac{1}{m}{(f - y)}{X}^{T}} \\ 
 \end{matrix}
 $$
 
-类似地，正则化项也可以添加到逻辑回归的损失函数中，即 `L(ww)` 为：
+类似地，正则化项也可以添加到逻辑回归的损失函数中，即 `L(w)` 为：
 
-$$L(w w) = - \frac{1}{m}\sum\limits_{i = 1}^{m}(y^{i}\log(f_{w w}({x x}^{i})) + (1 - y^{i})\log(1 - f_{w w}({x x}^{i}))) + \lambda \parallel {w w} \parallel^{2}$$
+$$
+L(w) = - \frac{1}{m}\sum\limits_{i = 1}^{m}(y^{i}\log(f_{w}({x}^{i})) + (1 - y^{i})\log(1 - f_{w}({x}^{i}))) + \lambda \parallel {w} \parallel^{2}
+$$
 
-相应地，`L(ww)` 关于 `ww` 的梯度为：
+相应地，`L(w)` 关于 `w` 的梯度为：
 
-$$\nabla_{w w}{L(w w)} = \frac{1}{m}\sum\limits_{i = 1}^{m}(f_{w w}({x x}^{i}) - y^{i}){x x}^{i} + 2\lambda w w$$
+$$
+\nabla_{w} L(w) = \frac{1}{m}\sum\limits_{i = 1}^{m}(f_{w}({x}^{i}) - y^{i}){x}^{i} + 2\lambda w
+$$
 
-如果每个样本 `xx` 为行向量形式，多个样本的 `ff`、`yy` 和模型参数 `ww` 为列向量形式，则可以写成如下向量形式：
+如果每个样本 `x` 为行向量形式，多个样本的 `f`、`y` 和模型参数 `w` 为列向量形式，则可以写成如下向量形式：
 
-$$\nabla_{w w}{L(w w)} = \frac{1}{m}{(f f - y y)}^{T}X + 2\lambda w w = \frac{1}{m}{(\sigma(X X w w) - y y)}^{T}X + 2\lambda w w$$
+$$
+\nabla_{w} L(w) = \frac{1}{m}{(f - y)}^{T}X + 2\lambda w = \frac{1}{m}{(\sigma(X w) - y)}^{T}X + 2\lambda w
+$$
 
 ## 3.5.2 逻辑回归的 numpy 实现
 
-#### 1. 生成数据
+### 1. 生成数据
 
 以下代码使用 `np.random.normal()` 生成两组服从不同正态分布的二维坐标点数据集 `Xa` 和 `Xb`，每个样本代表二维平面上的一个坐标点。`Xa` 中的样本是以中心点 (10,12) 为中心的正态分布采样点，`Xb` 中的样本是以中心点 (5,6) 为中心的正态分布采样点。代码对这些样本进行着色，以区分它们属于哪个类别。
 
@@ -8756,108 +8749,106 @@ ax.legend(loc=4);
 
 图 3-35 二分类的平面点集
 
-#### 2. 梯度下降法的代码实现
+### 2. 梯度下降法的代码实现
 
 针对这个具体问题，`x` 和 `w` 都是长度为 3 的向量，类似于线性回归，可以编写基于梯度下降法的以下求解算法：
+
+
 
 ```python
 def sigmoid(z):
     """对输入数组 z 的每个元素应用 sigmoid 函数。"""
     return 1 / (1 + np.exp(-z))
 
-def gradient_descent_logistic_reg(X, y, lambda_, alpha, num_iters, gamma = 0.8, epsilon=1e-8):  
+def gradient_descent_logistic_reg(X, y, lambda_, alpha, num_iters, gamma=0.8, epsilon=1e-8):
     w_history = []     # 记录迭代过程中的参数
-    X = np.hstack((np.ones((X.shape[0], 1), dtype=X.dtype),X)) # 添加一列特征 1
+    X = np.hstack((np.ones((X.shape[0], 1), dtype=X.dtype), X)) # 添加一列特征 1
     num_features = X.shape[1]
     v = np.zeros_like(num_features)
     w = np.zeros(num_features)
     for n in range(num_iters):
         predictions = sigmoid(X @ w)     # 求假设函数的预测值，即 f(x)
         errors = predictions - y         # 预测值与真实值的误差
-        #gradient = X.transpose() @ errors /len(y)    # 计算梯度
-        gradient = errors.transpose() @ X /len(y)     # 计算梯度
-        loss_grad = errors /len(y)
-       
-       
-        gradient += 2*lambda_*w
-        if np.max(np.abs(gradient))<epsilon:
+        # gradient = X.transpose() @ errors /len(y)    # 计算梯度
+        gradient = errors.transpose() @ X / len(y)     # 计算梯度
+        loss_grad = errors / len(y)
+
+        gradient += 2 * lambda_ * w
+        if np.max(np.abs(gradient)) < epsilon:
             print("梯度足够小！")
-            print("迭代次数为 :",n)
+            print("迭代次数为 :", n)
             break
-        #w -= alpha * gradient # 更新模型参数
-        v = gamma*v+alpha* gradient
-        w= w-v             
-        
-        #cost = - np.mean((np.log(predictions).T * y+np.log(1-predictions).T *(1-y) ))
-        #cost_history.append(cost) 
-        w_history.append(w)     
-            
+        # w -= alpha * gradient # 更新模型参数
+        v = gamma * v + alpha * gradient
+        w = w - v
+
+        # cost = - np.mean((np.log(predictions).T * y+np.log(1-predictions).T *(1-y) ))
+        # cost_history.append(cost)
+        w_history.append(w)
+
     return w_history                  # 返回优化后的参数和代价历史
 ```
 
-#### 3. 计算损失函数值
+### 3. 计算损失函数值
 
 对于一个 `w` 和一组样本 (`X`, `y`)，可以使用以下函数计算损失函数值：
 
 ```python
-def loss_logistic(w,X,y,reg=0.):   
-    f = sigmoid(X @ w[1:]+w[0])
-    loss = -np.mean((np.log(f).T * y+np.log(1-f).T *(1-y) ))
-    loss += reg*( np.sum(np.square(w)))
+def loss_logistic(w, X, y, reg=0.):
+    f = sigmoid(X @ w[1:] + w[0])
+    loss = -np.mean((np.log(f).T * y + np.log(1 - f).T * (1 - y)))
+    loss += reg * (np.sum(np.square(w)))
     return loss
 
-def loss_history_logistic(w_history,X,y,reg=0.):
-    #X = np.hstack((np.ones((X.shape[0], 1), dtype=X.dtype),X)) 
+def loss_history_logistic(w_history, X, y, reg=0.):
+    # X = np.hstack((np.ones((X.shape[0], 1), dtype=X.dtype), X))
     loss_history = []
     for w in w_history:
-        loss_history.append(loss_logistic(w,X,y,reg))
+        loss_history.append(loss_logistic(w, X, y, reg))
     return loss_history
 ```
 
 ```python
 reg = 0.0
-alpha=0.01
-iterations=10000
-w_history = gradient_descent_logistic_reg(X,y,reg,alpha,iterations)
+alpha = 0.01
+iterations = 10000
+w_history = gradient_descent_logistic_reg(X, y, reg, alpha, iterations)
 w = w_history[-1]
-print("w:",w)
+print("w:", w)
 
-loss_history = loss_history_logistic(w_history,X,y,reg)
+loss_history = loss_history_logistic(w_history, X, y, reg)
 print(loss_history[:-1:len(loss_history)//10])
 ```
 
 ```
 [11.3920102 -0.55377808 -0.83931251]
-    [0.6577262444936193, 0.22674637036423945, 0.15646446608041156, 0.12698570286225014, 0.11034864425987873, 0.099493559603644 8, 0.09177469381378582, 0.08596435646154407, 0.08141010065377204, 0.07773089221384288]
+[0.6577262444936193, 0.22674637036423945, 0.15646446608041156, 0.12698570286225014, 0.11034864425987873, 0.0994935596036448, 0.09177469381378582, 0.08596435646154407, 0.08141010065377204, 0.07773089221384288]
 ```
 
-#### 4. 决策曲线
+### 4. 决策曲线
 
 用概率值 `fww` = 0.5 区分 2 个类别，因为 `fww` = `σ(xxww)`，所以对于一个样本 `xx`，`fww` = 0.5 等价于 `xxww` = 0，即 `ww` 和 `pmbx` 的点积为 0，也就是 `w[0]` + `w[1]` * `x[1]` + `w[2]` * `x[2]` = 0。
 
-
-
-
 以下代码根据 `w` 计算一组 `x[1]` 对应的 `x[2] = -w[0]/w[2] - w[1] * x[1]/w[2]`，然后在 (`x[1]`, `x[2]`) 坐标平面上绘制这些点对应的决策线，可以看出学习到的模型能够很好地区分这两类样本。绘制的代价曲线也反映了算法的逐渐收敛。
 
-```
-fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(8,4))
+```python
+fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(8, 4))
 
-x1 = np.array([X[:,0].min()-1, X[:,0].max()+1])
+x1 = np.array([X[:, 0].min() - 1, X[:, 0].max() + 1])
 x2 = - w.item(0) / w.item(2) + x1 * (- w.item(1) / w.item(2))
 
 # Plot decision boundary???
 ax[0].plot(x1, x2, color='k', ls='--', lw=2)
 
-ax[0].scatter(X[:int(n_pts),0], X[:int(n_pts),1], color='lightcoral', label='$y = 0$')
-ax[0].scatter(X[int(n_pts):,0], X[int(n_pts):,1], color='blue', label='$y = 1$')
+ax[0].scatter(X[:int(n_pts), 0], X[:int(n_pts), 1], color='lightcoral', label='$y = 0$')
+ax[0].scatter(X[int(n_pts):, 0], X[int(n_pts):, 1], color='blue', label='$y = 1$')
 ax[0].set_title('$x_1$ vs. $x_2$')
 ax[0].set_xlabel('$x_1$')
 ax[0].set_ylabel('$x_2$')
 ax[0].legend(loc=4)
 
 ax[1].plot(loss_history, color='r')
-ax[1].set_ylim(0,ax[1].get_ylim()[1])
+ax[1].set_ylim(0, ax[1].get_ylim()[1])
 ax[1].set_title(r'$J(w)$ vs. Iteration')
 ax[1].set_xlabel('Iteration')
 ax[1].set_ylabel(r'$J(w)$')
@@ -8869,52 +8860,52 @@ fig.tight_layout()
 
 图 3-36 二分类平面点集的分类与损失曲线
 
-#### 5. 预测准确率
+### 5. 预测准确率
 
-```
+```python
 # Print accuracy
-X_1 = np.hstack((np.ones((X.shape[0], 1), dtype=X.dtype),X))   # Add a column of features 1
-y_predictions = sigmoid(X_1 @ w)>=0.5
+X_1 = np.hstack((np.ones((X.shape[0], 1), dtype=X.dtype), X))   # Add a column of features 1
+y_predictions = sigmoid(X_1 @ w) >= 0.5
 
-print ('The accuracy of the prediction is: %d ' % float((np.dot(y, y_predictions)
-                               + np.dot(1 - y,1 - y_predictions)) / float(y.size) * 100) +'%')
+print('The accuracy of the prediction is: %d ' % float((np.dot(y, y_predictions)
+                               + np.dot(1 - y, 1 - y_predictions)) / float(y.size) * 100) + '%')
 ```
 
 ```
 The accuracy of the prediction is: 98 %
 ```
 
-#### 6. 使用 Scikit-Learn 库进行逻辑回归
+### 6. 使用 Scikit-Learn 库进行逻辑回归
 
 Scikit-Learn 包的 `linear_model` 模块提供了逻辑回归函数 `LogisticRegression()`，可用于求解上述逻辑回归问题，并能获得相同的结果。
 
-```
+```python
 import sklearn
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 
 scikit_log_reg = sklearn.linear_model.LogisticRegression()
-scikit_log_reg.fit(X,y)
+scikit_log_reg.fit(X, y)
 
-#Score is Mean Accuracy
-scikit_score = scikit_log_reg.score(X,y)
+# Score is Mean Accuracy
+scikit_score = scikit_log_reg.score(X, y)
 print('Scikit score: ', scikit_score)
 
 # Print accuracy
 y_predictions = scikit_log_reg.predict(X)
-print ('The accuracy of the prediction is: %d ' % float((np.dot(y, y_predictions)
-        + np.dot(1 - y,1 - y_predictions)) / float(y.size) * 100) + '%' )
+print('The accuracy of the prediction is: %d ' % float((np.dot(y, y_predictions)
+        + np.dot(1 - y, 1 - y_predictions)) / float(y.size) * 100) + '%')
 
-#plot_decision_boundary(lambda x: clf.predict(x), X, Y)
+# plot_decision_boundary(lambda x: clf.predict(x), X, Y)
 # Plot decision boundary
-x1 = np.array([X[:,0].min()-1, X[:,0].max()+1])
+x1 = np.array([X[:, 0].min() - 1, X[:, 0].max() + 1])
 x2 = - w.item(0) / w.item(2) + x1 * (- w.item(1) / w.item(2))
 
-fig, ax = plt.subplots(figsize=(4,4))
-ax.scatter(X[:n_pts,0], X[:n_pts,1], color='lightcoral',
-          label='$Y = 0$')
-ax.scatter(X[n_pts:,0], X[n_pts:,1], color='blue',
-          label='$Y = 1$')
+fig, ax = plt.subplots(figsize=(4, 4))
+ax.scatter(X[:n_pts, 0], X[:n_pts, 1], color='lightcoral',
+           label='$Y = 0$')
+ax.scatter(X[n_pts:, 0], X[n_pts:, 1], color='blue',
+           label='$Y = 1$')
 ax.set_title('Sample Dataset')
 ax.set_xlabel('$x_1$')
 ax.set_ylabel('$x_2$')
@@ -8924,34 +8915,34 @@ ax.plot(x1, x2, color='k', ls='--', lw=2)
 
 ```
 Scikit score: 0.97
-    The accuracy of the prediction is: 97 %
+The accuracy of the prediction is: 97 %
 ```
 
 ![](img/file73.png)
 
 图 3-37 使用 Scikit-Learn 逻辑回归对二分类平面点集进行分类
 
-### 3.5.3 实战：鸢尾花分类的 NumPy 实现
+## 3.5.3 实战：鸢尾花分类的 NumPy 实现
 
-官方数据集 `iris.csv`，数据集的特征如下
+官方数据集 `iris.csv`，数据集的特征如下：
 
 ```
 sepal_length - 以厘米为单位测量的连续变量。
 sepal_width - 以厘米为单位测量的连续变量。
 petal_length - 以厘米为单位测量的连续变量。
 petal_width - 以厘米为单位测量的连续变量。
-species - 分类变量。2 种鸢尾花，Iris-virginica 或 
+species - 分类变量。2 种鸢尾花，Iris-virginica 或
 Iris-versicolor。
 ```
 
-```
+```python
 import pandas
 import matplotlib.pyplot as plt
 import numpy as np
 iris = pandas.read_csv("iris.csv")
 # shuffle rows
 shuffled_rows = np.random.permutation(iris.index)
-iris = iris.loc[shuffled_rows,:]
+iris = iris.loc[shuffled_rows, :]
 print(iris.head())
 
 print(iris.species.unique())
@@ -8961,57 +8952,57 @@ plt.show()
 
 ```
 sepal_length sepal_width petal_length petal_width species
-    55 5.7 2.8 4.5 1.3 versicolor
-    20 5.4 3.4 1.7 0.2 setosa
-    144 6.7 3.3 5.7 2.5 virginica
-    58 6.6 2.9 4.6 1.3 versicolor
-    31 5.4 3.4 1.5 0.4 setosa
-    ['versicolor' 'setosa' 'virginica']
+55 5.7 2.8 4.5 1.3 versicolor
+20 5.4 3.4 1.7 0.2 setosa
+144 6.7 3.3 5.7 2.5 virginica
+58 6.6 2.9 4.6 1.3 versicolor
+31 5.4 3.4 1.5 0.4 setosa
+['versicolor' 'setosa' 'virginica']
 ```
 
-![](img/file74.png "fig:")  
+![](img/file74.png "fig:")
 
 图 3-38 鸢尾花数据集不同特征的直方图
 
-```
+```python
 X = iris[['sepal_length', 'sepal_width', 'petal_length', 'petal_width']].values
 # Set Iris-versicolor class label to 1 and Iris-virginica to 0
-y = (iris.species == 'Iris-versicolor').values.astype(int) 
+y = (iris.species == 'Iris-versicolor').values.astype(int)
 print(X[:3])
 print(y[:3])
 ```
 
 ```
 [[5.7 2.8 4.5 1.3]
-     [5.4 3.4 1.7 0.2]
-     [6.7 3.3 5.7 2.5]]
-    [0 0 0]
+ [5.4 3.4 1.7 0.2]
+ [6.7 3.3 5.7 2.5]]
+[0 0 0]
 ```
 
-```
+```python
 reg = 0.0
-alpha=0.0001
-iterations=10000
-w_history = gradient_descent_logistic_reg(X,y,reg,alpha,iterations)
+alpha = 0.0001
+iterations = 10000
+w_history = gradient_descent_logistic_reg(X, y, reg, alpha, iterations)
 w = w_history[-1]
-print("w:",w)
+print("w:", w)
 
-loss_history = loss_history_logistic(w_history,X,y,reg)
+loss_history = loss_history_logistic(w_history, X, y, reg)
 print(loss_history[:-1:len(loss_history)//10])
 ```
 
 ```
 w: [-0.10784884 -0.59039117 -0.33446609 -0.31856867 -0.09292942]
-    [0.691647452939996, 0.04139644267230338, 0.021270173400400796, 0.014388875912695448, 0.010902234144325786, 0.0087906172126 22023, 0.007372547259035234, 0.006353506410124969, 0.005585274554324254, 0.004985062855525219]
+[0.691647452939996, 0.04139644267230338, 0.021270173400400796, 0.014388875912695448, 0.010902234144325786, 0.008790617212622023, 0.007372547259035234, 0.006353506410124969, 0.005585274554324254, 0.004985062855525219]
 ```
 
-```
+```python
 # Print accuracy
-X_1 = np.hstack((np.ones((X.shape[0], 1), dtype=X.dtype),X)) #Add a column of features 1
-y_predictions = sigmoid(X_1 @ w)>=0.5
+X_1 = np.hstack((np.ones((X.shape[0], 1), dtype=X.dtype), X)) # Add a column of features 1
+y_predictions = sigmoid(X_1 @ w) >= 0.5
 
-print ('The accuracy of the prediction is: %d ' % float((np.dot(y, y_predictions)
-                               + np.dot(1 - y,1 - y_predictions)) / float(y.size) * 100) +'%')
+print('The accuracy of the prediction is: %d ' % float((np.dot(y, y_predictions)
+                               + np.dot(1 - y, 1 - y_predictions)) / float(y.size) * 100) + '%')
 plt.plot(history, color='r')
 ```
 
@@ -9029,7 +9020,7 @@ The accuracy of the prediction is: 100 %
 
 逻辑回归可以解决二分类问题，但许多分类问题是包含 2 个以上类别的多分类问题。例如，在手写数字识别中，需要从图中所示的手写数字图像中识别出图像中的数字是 0 到 9 中的哪一个，即目标值是 10 个类别中的某一个类别。
 
-![](img/file76.png "fig:")  
+![](img/file76.png "fig:")
 
 图 3-40 手写数字图像
 
@@ -9040,7 +9031,6 @@ The accuracy of the prediction is: 100 %
 ### 3.6.1 螺旋数据集
 
 以下代码在二维平面上生成一个 3 类别的数据集：
-
 
 
 
@@ -9084,10 +9074,15 @@ plt.show()
 `softmax` 函数是一个多元向量值函数，它接受多个（例如 3 个）输入值并产生相同数量（例如 3 个）的输出值。对于 3 个自变量（`z[1]`、`z[2]`、`z[3]`）的 `softmax(z[1], z[2], z[3])`，函数值是一个具有相同数量自变量的向量：
 
 $$
+
 \begin{matrix} 
+
 {softmax(z_{1},z_{2},z_{3})} & {= (\frac{e^{z_{1}}}{(e^{z_{1}} + e^{z_{2}} + e^{z_{3}})}, \frac{e^{z_{2}}}{(e^{z_{1}} + e^{z_{2}} + e^{z_{3}})}, \frac{e^{z_{3}}}{(e^{z_{1}} + e^{z_{2}} + e^{z_{3}})})} \\ 
+
 & {= (\frac{e^{z_{1}}}{\sum\limits_{1}^{3}e^{z_{i}}}, \frac{e^{z_{2}}}{\sum\limits_{1}^{3}e^{z_{i}}}, \frac{e^{z_{3}}}{\sum\limits_{1}^{3}e^{z_{i}}})} 
+
 \end{matrix}
+
 $$
 
 显然，`softmax()` 函数输出向量的每个分量值都位于 `[0, 1]` 区间内，且所有分量值之和为 1，因此每个分量都可以被视为一个概率值。
@@ -9134,7 +9129,9 @@ array([0., nan])
 由于分数的分子分母同时除以一个数，分数值保持不变，即：
 
 $$
+
 \frac{e^{z_{j}}}{\sum\limits_{i}e^{z_{i}}} = \frac{e^{z_{j}}/e^{a}}{\sum\limits_{i}{e^{z_{i}}/e^{a}}} = \frac{e^{z_{j} - a}}{\sum\limits_{i}e^{z_{i} - a}}
+
 $$
 
 因此，可以先找出所有 `z[i]` 的最大值 `a`，然后用 `z[i] - a` 来计算 `softmax()` 函数的值。
@@ -9230,37 +9227,50 @@ $$\frac{\partial b}{\partial z_{i}} = \frac{\partial(\sum\limits_{k = 1}^{C}e^{z
 
 $$\frac{\partial f_{i}}{\partial z_{i}} = \frac{\frac{\partial a_{i}}{\partial z_{i}} \cdot b - a_{i}\frac{\partial b}{\partial z_{i}}}{b^{2}} = \frac{a_{i}b - a_{i}a_{i}}{b^{2}} = \frac{a_{i}}{b}(1 - \frac{a_{i}}{b}) = f_{i}(1 - f_{i}) = f_{i} - f_{i}f_{i}$$
 
-
-
-
-
 #### Softmax 回归与梯度计算
 
 ##### Softmax 函数梯度推导
 
 $$
+
 \frac{\partial f_{i}}{\partial z_{j}} = \frac{\frac{\partial a_{i}}{\partial z_{j}} \cdot b - a_{i}\frac{\partial b}{\partial z_{j}}}{b^{2}} = \frac{0 - a_{i}a_{j}}{b^{2}} = - f_{i}f_{j}
+
 $$
 
 $$
+
 \frac{\partial \mathbf{f}\mathbf{f}}{\partial \mathbf{z}\mathbf{z}} = 
+
 \begin{bmatrix} 
+
 f_{1}(1 - f_{1}) & - f_{1}f_{2} & \cdots & - f_{1}f_{C} \\
+
 - f_{2}f_{1} & f_{2}(1 - f_{2}) & \cdots & - f_{2}f_{C} \\
+
 \vdots & \vdots & \cdots & \vdots \\
+
 - f_{C}f_{1} & - f_{C}f_{2} & \cdots & f_{C}(1 - f_{C}) 
+
 \end{bmatrix}
+
 $$
 
 向量 $\mathbf{f}\mathbf{f} = (f[1], f[2], \cdots, f[k], \cdots, f[C])$ 的外积 `np.outer(ff, ff)` 可用于计算由 $f_i f_j$ 组成的矩阵：
 
 $$
+
 \begin{bmatrix} 
+
 f_{1}f_{1} & f_{1}f_{2} & \cdots & f_{1}f_{C} \\
+
 f_{2}f_{1} & f_{2}f_{2} & \cdots & f_{2}f_{C} \\
+
 \vdots & \vdots & \cdots & \vdots \\
+
 f_{C}f_{1} & f_{C}f_{2} & \cdots & f_{C}f_{C} 
+
 \end{bmatrix}
+
 $$
 
 因此，$\mathbf{f}\mathbf{f}$ 关于 $\mathbf{z}\mathbf{z}$ 的梯度可按如下方式计算：
@@ -9278,7 +9288,9 @@ def softmax_gradient(z, isF=False):
 若已知另一变量（如损失函数 $L$）关于 $\mathbf{f}\mathbf{f}$ 的梯度 $\nabla_{\mathbf{f}\mathbf{f}}L = \frac{\partial L}{\partial \mathbf{f}\mathbf{f}} = (\frac{\partial L}{\partial f_{1}},\frac{\partial L}{\partial f_{2}},\cdots,\frac{\partial L}{\partial f_{C}})$，则：
 
 $$
+
 \nabla_{\mathbf{z}\mathbf{z}}L = \frac{\partial L}{\partial \mathbf{z}\mathbf{z}} = \frac{\partial L}{\partial \mathbf{f}\mathbf{f}}\frac{\partial \mathbf{f}\mathbf{f}}{\partial \mathbf{z}\mathbf{z}}
+
 $$
 
 用 `df` 表示某变量 $L$ 关于 $\mathbf{f}$ 的梯度，则 $L$ 关于 $\mathbf{z}$ 的梯度 Python 计算代码如下：
@@ -9342,6 +9354,8 @@ print(softmax_gradient(x))
 
 利用 `np.einsum()` 实现多样本外积的向量化运算：
 
+
+
 ```python
 def softmax_gradient(Z, isF=False):  
     if isF:
@@ -9368,7 +9382,7 @@ print(softmax_gradient(x))
   [-0.04517666  0.04517666]]]
 ```
 
-##### 反向传播梯度计算
+### 反向传播梯度计算
 
 若已知函数（如损失函数）关于 softmax 输出值 $\mathbf{F}$ 的梯度 `dF`，可用以下函数求函数关于 softmax 输入 $\mathbf{Z}$ 的梯度：
 
@@ -9402,12 +9416,19 @@ Softmax 回归的模型函数将多元线性回归函数的输出值作为 softm
 该 Softmax 回归函数的计算公式为：
 
 $$
+
 \begin{aligned}
+
 \mathbf{f}(\mathbf{x}\mathbf{x}) &= (f_1, f_2, f_3) \\
+
 &= \text{softmax}(x_1W_{11} + x_2W_{21} + x_3W_{31} + b_1,\\
+
 &\quad\quad x_1W_{12} + x_2W_{22} + x_3W_{32} + b_2,\\
+
 &\quad\quad x_1W_{13} + x_2W_{23} + x_3W_{33} + b_3)
+
 \end{aligned}
+
 $$
 
 对于手写数字识别的 10 分类问题，可用 10 个线性回归函数 $\mathbf{x}\mathbf{x}\mathbf{W}[:, i]$ 从输入特征 $\mathbf{x}\mathbf{x}$ 生成 10 个输出值 $z_i$，再经 softmax 函数转为 10 个概率值 $f_i$，即 $\sum_{1}^{10}f_i = 1 \land f_i \in [0,1]$。
@@ -9415,24 +9436,39 @@ $$
 同线性回归，偏置 $b_i$ 视为 $w_{0i}$，即 $\mathbf{W}[:, i] = (w_{0i}, w_{1i}, w_{2i}, w_{3i})$；输入 $\mathbf{x}\mathbf{x}$ 增广为 $(1, x_1, x_2, x_3)$。上式可简写为：
 
 $$
+
 \mathbf{f}(\mathbf{x}\mathbf{x}) = \text{softmax}(\mathbf{x}\mathbf{x}\mathbf{W}[:, 1], \mathbf{x}\mathbf{x}\mathbf{W}[:, 2], \mathbf{x}\mathbf{x}\mathbf{W}[:, 3]) = \text{softmax}(\mathbf{x}\mathbf{x}\mathbf{W}\mathbf{W})
+
 $$
 
 其中 $\mathbf{W}[:, i]$ 为 $\mathbf{W}$ 第 $i$ 列，$\mathbf{x}\mathbf{x}\mathbf{W}[:, i]$ 视为中间变量 $z_i$，则 $\text{softmax}(\mathbf{x}\mathbf{x}\mathbf{W}\mathbf{W})$ 可表达为：
 
 $$
+
 \text{softmax}(z_1,z_2,z_3) = 
+
 \left(
+
 \frac{e^{z_1}}{e^{z_1}+e^{z_2}+e^{z_3}},
+
 \frac{e^{z_2}}{e^{z_1}+e^{z_2}+e^{z_3}},
+
 \frac{e^{z_2}}{e^{z_1}+e^{z_2}+e^{z_3}}
+
 \right)
+
 =
+
 \left(
+
 \frac{e^{z_1}}{\sum_{1}^{3}e^{z_i}},
+
 \frac{e^{z_2}}{\sum_{1}^{3}e^{z_i}},
+
 \frac{e^{z_2}}{\sum_{1}^{3}e^{z_i}}
+
 \right)
+
 $$
 
 对样本 $\mathbf{x}\mathbf{x}$，$\mathbf{f}(\mathbf{x}\mathbf{x}) = \text{softmax}(\mathbf{x}\mathbf{x}\mathbf{W}\mathbf{W})$ 为向量，每分量代表 $\mathbf{x}\mathbf{x}$ 属对应类别的概率。例如 $f_j$ 代表 $\mathbf{x}\mathbf{x}$ 属第 $j$ 类的概率。若样本 $(\mathbf{x}\mathbf{x}^{(i)}, y^{(i)})$ 真实标签 $y^{(i)}=2$，则该样本属第 2 类的概率为 $f_2$，即 $f_{y^{(i)}}$。
@@ -9442,75 +9478,123 @@ $$
 $m$ 个样本的特征加权和 $\mathbf{X}\mathbf{X}\mathbf{W}\mathbf{W}$ 为二维矩阵，每行对应一个样本的加权和，记为 $\mathbf{Z}\mathbf{Z}$：
 
 $$
+
 \mathbf{Z}\mathbf{Z} = 
+
 \begin{bmatrix} 
+
 \mathbf{z}^{(1)} \\
+
 \mathbf{z}^{(2)} \\
+
 \vdots \\
+
 \mathbf{z}^{(m)} 
+
 \end{bmatrix}
+
 =
+
 \begin{bmatrix} 
+
 \mathbf{x}\mathbf{x}^{(1)}\mathbf{W}\mathbf{W} \\
+
 \mathbf{x}\mathbf{x}^{(2)}\mathbf{W}\mathbf{W} \\
+
 \vdots \\
+
 \mathbf{x}\mathbf{x}^{(m)}\mathbf{W}\mathbf{W} 
+
 \end{bmatrix}
+
 $$
 
 每个样本 $\mathbf{x}\mathbf{x}^{(i)}$ 对应的加权和 $\mathbf{z}\mathbf{z}^{(i)}$ 本身是向量，softmax 函数作用于该向量生成向量 $\text{softmax}(\mathbf{z}\mathbf{z}^{(i)})$，表示该样本属各类别的概率。用 $\mathbf{f}\mathbf{f}^{(i)}$ 表示 $\text{softmax}(\mathbf{z}\mathbf{z}^{(i)})$，所有 $\mathbf{f}\mathbf{f}^{(i)}$ 可表示为列向量 $\mathbf{F}\mathbf{F}$ 形式：
 
-
-
-
-
 #### 多类别 Softmax 回归的数学表示
 
 $$
+
 \begin{matrix} 
+
 F = \begin{bmatrix} 
+
 f^{(1)} \\ 
+
 f^{(2)} \\ 
+
 \vdots \\ 
+
 f^{(m)} \\ 
+
 \end{bmatrix} = \begin{bmatrix} 
+
 \frac{e^{z_{1}^{(1)}}}{\sum\limits_{1}^{C}e^{z_{i}^{(1)}}} & \frac{e^{z_{2}^{(1)}}}{\sum\limits_{1}^{C}e^{z_{i}^{(1)}}} & \cdots & \frac{e^{z_{C}^{(1)}}}{\sum\limits_{1}^{C}e^{z_{i}^{(1)}}} \\ 
+
 \frac{e^{z_{1}^{(2)}}}{\sum\limits_{1}^{C}e^{z_{i}^{(2)}}} & \frac{e^{z_{2}^{(2)}}}{\sum\limits_{1}^{C}e^{z_{i}^{(2)}}} & \cdots & \frac{e^{z_{C}^{(2)}}}{\sum\limits_{1}^{C}e^{z_{i}^{(2)}}} \\ 
+
 \vdots & & & \\ 
+
 \frac{e^{z_{1}^{(m)}}}{\sum\limits_{1}^{C}e^{z_{i}^{(m)}}} & \frac{e^{z_{2}^{(m)}}}{\sum\limits_{1}^{C}e^{z_{i}^{(m)}}} & \cdots & \frac{e^{z_{C}^{(m)}}}{\sum\limits_{1}^{C}e^{z_{i}^{(m)}}} \\ 
+
 \end{bmatrix}
+
 \end{matrix}
+
 $$
 
 样本的目标值（标签）可以用一维向量 `y` 表示，其中每个元素代表样本对应的真实目标类别的整数。目前：
 
 $$
+
 \begin{matrix} 
+
 y = \begin{bmatrix} 
+
 y^{(1)} \\ 
+
 y^{(2)} \\ 
+
 \vdots \\ 
+
 y^{(m)} \\ 
+
 \end{bmatrix}
+
 \end{matrix}
+
 $$
 
 用向量 `F_y` 表示所有样本 $i$ 对应的真实类别 $y^{(i)}$ 的概率，这些概率也构成一个向量：
 
 $$
+
 \begin{matrix} 
+
 F_y = \begin{bmatrix} 
+
 f_{y^{(1)}}^{(1)} \\ 
+
 f_{y^{(2)}}^{(2)} \\ 
+
 \vdots \\ 
+
 f_{y^{(m)}}^{(m)} \\ 
+
 \end{bmatrix} = \begin{bmatrix} 
+
 \frac{e^{z_{y_{(1)}}^{(1)}}}{\sum\limits_{1}^{C}e^{z_{i}^{(1)}}} \\ 
+
 \frac{e^{z_{y_{(2)}}^{(2)}}}{\sum\limits_{1}^{C}e^{z_{i}^{(2)}}} \\ 
+
 \vdots \\ 
+
 \frac{e^{z_{y_{(m)}}^{(m)}}}{\sum\limits_{1}^{C}e^{z_{i}^{(m)}}} \\ 
+
 \end{bmatrix}
+
 \end{matrix}
+
 $$
 
 ### 3.6.4 多分类交叉熵损失
@@ -9522,13 +9606,17 @@ $f_1^{(i)}, f_2^{(i)}, \cdots, f_C^{(i)}$
 而该样本属于目标类别 $y^{(i)}$ 的概率为 $f_{y^{(i)}}^{(i)}$，该概率 $f_{y^{(i)}}^{(i)}$ 表示该样本出现在目标类别中的概率。同理，$m$ 个样本 $(x^{(i)}, y^{(i)})$ 同时与其对应的目标类别一起出现的概率为：
 
 $$
+
 \prod\limits_{i = 1}^{m} f_{y^{(i)}}^{(i)}
+
 $$
 
 使该概率值最大的 `W` 可以使这 $m$ 个样本以最大概率出现。因此，Softmax 回归要求使该概率最大化的回归模型参数 `W`。因为乘法会使值急剧变为无穷大或接近 0，为了使求解算法在数值上稳定，通常用该概率值的负对数平均值作为代价函数，即：
 
 $$
+
 L(W) = - \frac{1}{m} \sum\limits_{i = 1}^{m} \log(f_{y^{(i)}}^{(i)})
+
 $$
 
 其中 $-\log(f_{y^{(i)}}^{(i)})$ 称为样本 $i$ 的交叉熵损失。最大化 $\prod\limits_{i = 1}^{m} f_{y^{(i)}}^{(i)}$ 的问题就转化为最小化该交叉熵损失的问题。
@@ -9536,17 +9624,29 @@ $$
 对于 3 分类问题，$y^{(i)}$ 的值用 0、1、2 表示样本属于 3 个不同类别的概率。如果某样本的真实类别为第 3 类，即 $y^{(i)} = 2$，该样本的预测值 $f^{(i)}$ 为一个向量，表示该样本属于各类别的概率。若向量值为：
 
 $$
+
 \begin{matrix} 
+
 f^{(i)} = \begin{bmatrix} 
+
 f_{0}^{(i)} \\ 
+
 f_{1}^{(i)} \\ 
+
 f_{2}^{(i)} \\ 
+
 \end{bmatrix} = \begin{bmatrix} 
+
 0.3 \\ 
+
 0.5 \\ 
+
 0.2 \\ 
+
 \end{bmatrix}
+
 \end{matrix}
+
 $$
 
 则该样本的交叉熵损失为 $-\log(f_2^{(i)}) = -\log(0.2)$。
@@ -9554,44 +9654,69 @@ $$
 对于多个样本，若有 2 个样本 ($m=2$)，对应的概率矩阵 `F` 和目标值向量 `y` 如下：
 
 $$
+
 \begin{matrix} 
+
 F = \begin{bmatrix} 
+
 0.2 & 0.5 & 0.3 \\ 
+
 0.2 & 0.6 & 0.2 \\ 
+
 \end{bmatrix}
+
 \end{matrix}
+
 $$
 
 $$
+
 \begin{matrix} 
+
 y = \begin{bmatrix} 
+
 2 \\ 
+
 1 \\ 
+
 \end{bmatrix}
+
 \end{matrix}
+
 $$
 
 则 `F_y` 为：
 
 $$
+
 \begin{matrix} 
+
 F_y = \begin{bmatrix} 
+
 0.3 \\ 
+
 0.6 \\ 
+
 \end{bmatrix}
+
 \end{matrix}
+
 $$
 
 表示每个样本属于其对应目标类别的概率。所有样本的交叉熵损失可向量化表示为：
 
 $$
+
 L(W) = - \frac{1}{m} \sum\limits_{i = 1}^{m} \log(f_{y^{(i)}}^{(i)}) = - \frac{1}{m} \sum(\log F_y)
+
 $$
 
 对于上述 2 样本示例，该平均交叉熵损失为：
 
 $$
+
 L(W) = - \frac{1}{2} (\log(0.3) + \log(0.6))
+
 $$
 
 计算交叉熵的 Python 代码如下：
@@ -9625,7 +9750,9 @@ print(cross_entropy(F, Y))
 对于某样本，若对应的 $y^{(i)}$ 第 $j$ 个分量 $y_j^{(i)} = 1$，即该样本属于第 $j$ 类，则该样本的交叉熵损失可写为：
 
 $$
+
 - \log(f_j^{(i)}) = - y_j^{(i)} \log(f_j^{(i)}) = - \sum\limits_{j = 1}^{C} y_j^{(i)} \log(f_j^{(i)}) = - y^{(i)} \cdot \log(f^{(i)})
+
 $$
 
 即该样本对应的交叉熵损失为向量 $y^{(i)}$ 与 $\log(f^{(i)})$ 点积的相反数。
@@ -9633,87 +9760,74 @@ $$
 因此，对于独热形式表示的目标值，所有样本的交叉熵损失可写为：
 
 $$
+
 \begin{matrix} 
+
 L(W) = - \frac{1}{m} \sum\limits_{i = 1}^{m} y^{(i)} \cdot \log(f^{(i)}) = - \frac{1}{m} \text{np.sum}(Y \odot \log(F))
+
 \end{matrix}
+
 $$
 
 对于上述 `f` 和独热化向量 `y`：
 
 $$
+
 \begin{matrix} 
+
 f = \begin{bmatrix} 
+
 0.2 & 0.5 & 0.3 \\ 
+
 0.2 & 0.6 & 0.2 \\ 
+
 \end{bmatrix}
+
 \end{matrix}
+
 $$
 
 $$
+
 \begin{matrix} 
+
 y = \begin{bmatrix} 
+
 0 & 0 & 1 \\ 
+
 0 & 1 & 0 \\ 
+
 \end{bmatrix}
+
 \end{matrix}
-$$
 
 $$
-\begin{matrix} 
-L(W) = - \frac{1}{2} (\text{np.sum}(y \cdot \log(f))) \\
-= - \frac{1}{2} \times \text{np.sum} \begin{bmatrix} 
-0 \times \log(0.2) + 0 \times \log(0.5) + 1 \times \log(0.3) \\ 
-0 \times \log(0.2) + 1 \times \log(0.6) + 0 \times \log(0.2) 
-\end{bmatrix} = - \frac{1}{2} (\log(0.3) + \log(0.6))
-\end{matrix}
-$$
-
-也可以使用 Hadamard 积（即逐元素乘积）将这两个同形状矩阵相乘，得到：
-
-$$
-\begin{matrix} 
-Y \odot \log(F) = \begin{bmatrix} 
-0 \times \log(0.2) & 0 \times \log(0.5) & 1 \times \log(0.3) \\ 
-0 \times \log(0.2) & 1 \times \log(0.6) & 0 \times \log(0.2) 
-\end{bmatrix}
-\end{matrix}
-$$
-
-然后将结果矩阵所有元素相加并除以样本数，得到总交叉熵：
-
-$$
-\frac{1}{2} (\log(0.3) + \log(0.6))
-$$
-
-对应的 Python 计算代码如下：
 
 
 
-
-
-### 3.6.5 通过加权求和计算交叉熵损失
+## 3.6.5 通过加权求和计算交叉熵损失
 
 样本的加权求和与 `z` 的 softmax 函数输出即为概率 `f`。已知加权求和 `z` 即可计算 `f`，进而计算交叉熵损失。以下代码计算多个样本的加权求和 `Z` 及其目标类别标签 `y` 的交叉熵损失：
 
 ```python
-#https://deepnotes.io/softmax-crossentropy
+# https://deepnotes.io/softmax-crossentropy
 def softmax(Z):
-    A = np.exp(Z-np.max(Z,axis=1,keepdims=True))
-    return A/np.sum(A,axis=1,keepdims=True)
+    A = np.exp(Z - np.max(Z, axis=1, keepdims=True))
+    return A / np.sum(A, axis=1, keepdims=True)
 
-def softmax_cross_entropy(Z,y):
+def softmax_cross_entropy(Z, y):
     m = len(Z)
     F = softmax(Z)
-    log_Fy = -np.log(F[range(m),y])
-    return  np.sum(log_Fy) / m
+    log_Fy = -np.log(F[range(m), y])
+    return np.sum(log_Fy) / m
 ```
 
 使用一组 `Z` 测试该函数：
 
 ```python
-Z = np.array([[2,25,13],[54,3,11]])  #每行对应一个样本
-y = np.array([2,1])
-softmax_cross_entropy(Z,y)
+Z = np.array([[2, 25, 13], [54, 3, 11]])  # 每行对应一个样本
+y = np.array([2, 1])
+softmax_cross_entropy(Z, y)
 ```
 
 输出：
@@ -9725,27 +9839,27 @@ softmax_cross_entropy(Z,y)
 如果目标标签采用 one-hot 向量形式，以下代码从加权求和计算交叉熵损失：
 
 ```python
-def softmax_cross_entropy_one_hot(Z, y):    
+def softmax_cross_entropy_one_hot(Z, y):
     F = softmax(Z)
-    loss =  -np.sum(y*np.log(F),axis=1)
-    return np.mean(loss)  
+    loss = -np.sum(y * np.log(F), axis=1)
+    return np.mean(loss)
 ```
 
 ```python
-Z = np.array([[2,25,13],[54,3,11]])  #每行对应一个样本
-y = np.array([[0, 0, 1],[0, 1, 0]])
-softmax_cross_entropy_one_hot(Z,y)
+Z = np.array([[2, 25, 13], [54, 3, 11]])  # 每行对应一个样本
+y = np.array([[0, 0, 1], [0, 1, 0]])
+softmax_cross_entropy_one_hot(Z, y)
 ```
 
 ```
 31.500003072148047
 ```
 
-### 3.6.6 Softmax 回归的梯度计算
+## 3.6.6 Softmax 回归的梯度计算
 
 Softmax 回归的目标是找到使交叉熵损失 ℒ(`W`) 最小化的 `W`，求解算法仍为梯度下降法。为此，需要计算 ℒ(`W`) 对 `W` 的梯度，即对每个 `W[jk]` 的偏导数。
 
-#### 1. 交叉熵损失对加权求和的梯度
+### 1. 交叉熵损失对加权求和的梯度
 
 设一个样本为 (`x`, `y`)，`f`(`x`) = `softmax`(`x``W`) 可视为 `z` = (`z`[1], `z`[2], `z`[3]) = (`x``W`[, 1], `x``W`[, 2], `x``W`[, 3]) 和 `f`(`z`) = `softmax`(`z`) = `softmax`(`z`[1], `z`[2], `z`[3]) 的复合函数。
 
@@ -9797,39 +9911,39 @@ $\nabla_{z}\mathcal{L} = (\frac{\partial\mathcal{L}}{\partial z_{1}},\frac{\part
 根据公式 (12)，计算交叉熵对 `Z` 的梯度的代码如下：
 
 ```python
-def grad_softmax_crossentropy(Z,y):
+def grad_softmax_crossentropy(Z, y):
     F = softmax(Z)
     I_i = np.zeros_like(Z)
-    I_i[np.arange(len(Z)),y] = 1   
+    I_i[np.arange(len(Z)), y] = 1
     return (F - I_i) / Z.shape[0]
 ```
 
 ```python
-def grad_softmax_cross_entropy(Z,y):
+def grad_softmax_cross_entropy(Z, y):
     m = len(Z)
-    F = softmax(Z) 
-    F[range(m),y] -= 1
-    return F/m  
+    F = softmax(Z)
+    F[range(m), y] -= 1
+    return F / m
 ```
 
 使用 2 个样本的 `Z` 及其目标值 `y` 测试该函数：
 
 ```python
-Z = np.array([[2,25,13],[54,3,11]])  #每行对应一个样本
-y = np.array([2,1])
-grad_softmax_cross_entropy(Z,y)
-#grad_softmax_crossentropy(Z,y)
+Z = np.array([[2, 25, 13], [54, 3, 11]])  # 每行对应一个样本
+y = np.array([2, 1])
+grad_softmax_cross_entropy(Z, y)
+# grad_softmax_crossentropy(Z, y)
 ```
 
 为确保解析梯度计算无误，可使用第 1.4 节的通用数值梯度函数计算交叉熵对 `Z` 的数值梯度，并与上述解析梯度比较：
 
 ```python
 def loss_f():
-    return softmax_cross_entropy(Z,y)
+    return softmax_cross_entropy(Z, y)
 
 import util
-Z = Z.astype(float)        #注意：整数数组必须转换为浮点类型
-print("num_grad",util.numerical_gradient(loss_f,[Z]))
+Z = Z.astype(float)  # 注意：整数数组必须转换为浮点类型
+print("num_grad", util.numerical_gradient(loss_f, [Z]))
 ```
 
 ```
@@ -9840,13 +9954,15 @@ num_grad[array([[ 0. , 0.49999693, -0.49999693],
 若样本目标用 one-hot 向量表示，计算交叉熵对 `Z` 的梯度的代码如下：
 
 ```python
-def grad_softmax_crossentropy_one_hot(Z, y):   #y 由 one-hot 向量表示
-    F = softmax(Z) 
-    return (F - y)/Z.shape[0]
+def grad_softmax_crossentropy_one_hot(Z, y):  # y 由 one-hot 向量表示
+    F = softmax(Z)
+    return (F - y) / Z.shape[0]
+```
 
-Z = np.array([[2,25,13],[54,3,11]])   #每行对应一个样本
-y = np.array([[0, 0, 1],[0, 1, 0]])
-grad_softmax_crossentropy_one_hot(Z,y)
+```python
+Z = np.array([[2, 25, 13], [54, 3, 11]])  # 每行对应一个样本
+y = np.array([[0, 0, 1], [0, 1, 0]])
+grad_softmax_crossentropy_one_hot(Z, y)
 ```
 
 ```
@@ -9854,20 +9970,17 @@ array([[ 5.13090829e-11, 4.99996928e-01, -4.99996928e-01],
        [ 5.00000000e-01, -5.00000000e-01, 1.05756552e-19]])
 ```
 
-#### 2. 交叉熵损失对权重参数的梯度
+### 2. 交叉熵损失对权重参数的梯度
 
 已得到损失函数对加权求和 `z` 的梯度，进而可得损失函数对模型参数 `W` 的梯度。因为 `z`[`i`] = `x``W`[, `i`] 对 `W`[, `i`] 的梯度为 `x`，而对其他 `W`[, `j`] 其梯度为 0，故：
 
 $\frac{\partial z_{i}}{\partial W_{,j}} = 1(i==j)x$
 
-
-
-
 因此，有：
 
 $$
-\begin{matrix} 
-\frac{\partial\mathcal{L}}{\partial{W W_{,j}}} & {= \sum\limits_{i = 1}^{3}\frac{\partial\mathcal{L}}{\partial z_{i}}\frac{\partial z_{i}}{\partial{W W_{,j}}} = \frac{\partial\mathcal{L}}{\partial z_{j}}\frac{\partial z_{j}}{\partial{W W_{,j}}}} & {= (f_{j} - 1{(y==j)})x x} \\ 
+\begin{matrix}
+\frac{\partial\mathcal{L}}{\partial{W W_{,j}}} & {= \sum\limits_{i = 1}^{3}\frac{\partial\mathcal{L}}{\partial z_{i}}\frac{\partial z_{i}}{\partial{W W_{,j}}} = \frac{\partial\mathcal{L}}{\partial z_{j}}\frac{\partial z_{j}}{\partial{W W_{,j}}}} & {= (f_{j} - 1{(y==j)})x x}
 \end{matrix}
 $$
 
@@ -9888,9 +10001,9 @@ $$
 注意：因为 `W W_{,1}` 是列向量，如果 `x x` 是行向量，则上述 $\frac{\partial\mathcal{L}}{\partial{W W_{,j}}}$ 也是行向量。如果想将 $\frac{\partial\mathcal{L}}{\partial{W W}}$ 写成与 `W W` 形状相同的矩阵形式，则：
 
 $$
-\begin{matrix} 
-\frac{\partial\mathcal{L}}{\partial{W W}} & {= (\frac{\partial\mathcal{L}}{\partial{W W_{,1}}}^{T},\frac{\partial\mathcal{L}}{\partial{W W_{,j}}}^{T},\cdots,\frac{\partial\mathcal{L}}{\partial{W W_{,C}}}^{T})} \\ 
-& {= {x x}^{T}(f_{1} - 1{(y==1)},f_{2} - 1{(y==2)},\cdots,f_{C} - 1{(y==C)})} \\ 
+\begin{matrix}
+\frac{\partial\mathcal{L}}{\partial{W W}} & {= (\frac{\partial\mathcal{L}}{\partial{W W_{,1}}}^{T},\frac{\partial\mathcal{L}}{\partial{W W_{,j}}}^{T},\cdots,\frac{\partial\mathcal{L}}{\partial{W W_{,C}}}^{T})} \\
+& {= {x x}^{T}(f_{1} - 1{(y==1)},f_{2} - 1{(y==2)},\cdots,f_{C} - 1{(y==C)})}
 \end{matrix}
 $$
 
@@ -9905,42 +10018,43 @@ $$
 对于矩阵
 
 $$
-\begin{matrix} 
-{X = \begin{bmatrix} 
-{x x^{(1)}} \\ 
-{x x^{(2)}} \\ 
-\vdots \\ 
-{x x^{(i)}} \\ 
-\vdots \\ 
-{x x^{(m)}} \\ 
-\end{bmatrix}} 
+\begin{matrix}
+{X = \begin{bmatrix}
+{x x^{(1)}} \\
+{x x^{(2)}} \\
+\vdots \\
+{x x^{(i)}} \\
+\vdots \\
+{x x^{(m)}} \\
+\end{bmatrix}}
 \end{matrix}
 $$
 
 `F F`、`Y Y` 是对应这些样本的预测值矩阵和目标值矩阵：
 
 $$
-\begin{matrix} 
-{F = \begin{bmatrix} 
-{f f^{(1)}} \\ 
-{f f^{(2)}} \\ 
-\vdots \\ 
-{f f^{(i)}} \\ 
-\vdots \\ 
-{\mathbf{f}^{(m)}} \\ 
-\end{bmatrix}} 
+\begin{matrix}
+{F = \begin{bmatrix}
+{f f^{(1)}} \\
+{f f^{(2)}} \\
+\vdots \\
+{f f^{(i)}} \\
+\vdots \\
+{\mathbf{f}^{(m)}} \\
+\end{bmatrix}}
 \end{matrix}
 $$，
+
 $$
-\begin{matrix} 
-{Y = \begin{bmatrix} 
-{y y^{(1)}} \\ 
-{y y^{(2)}} \\ 
-\vdots \\ 
-{\mathbf{y}^{(i)}} \\ 
-\vdots \\ 
-{y y^{(m)}} \\ 
-\end{bmatrix}} 
+\begin{matrix}
+{Y = \begin{bmatrix}
+{y y^{(1)}} \\
+{y y^{(2)}} \\
+\vdots \\
+{\mathbf{y}^{(i)}} \\
+\vdots \\
+{y y^{(m)}} \\
+\end{bmatrix}}
 \end{matrix}
 $$。
 
@@ -9968,7 +10082,9 @@ $$
 \frac{\partial\mathcal{L}}{\partial{W W}} = {X X}^{T}{(F F - Y Y)} + 2\lambda W W
 $$
 
-根据梯度计算公式，很容易编写损失函数关于 `W W` 的梯度计算代码。在下面的代码中，假设 `X` 代表多样本的数据特征矩阵，`y` 代表目标值向量，`reg` 是正则化参数 `λ`，`loss_softmax()` 和 `gradient_softmax()` 分别计算损失函数的损失和关于 `W W` 的梯度：
+
+
+根据梯度计算公式，很容易编写损失函数关于 `W` 的梯度计算代码。在下面的代码中，假设 `X` 代表多样本的数据特征矩阵，`y` 代表目标值向量，`reg` 是正则化参数 `λ`，`loss_softmax()` 和 `gradient_softmax()` 分别计算损失函数的损失和关于 `W` 的梯度：
 
 ```python
 # def loss_gradient(W,X,y,lambda_):
@@ -10012,7 +10128,7 @@ print(loss_softmax(W,X,y,reg))
 2.086304963628266
 ```
 
-如果每个样本的目标值用独热向量表示，且 `y` 代表由多样本目标值组成的矩阵，则下面的 `loss_softmax_onehot()` 和 `gradient_softmax_onehot()` 计算损失函数的损失和关于 `W W` 的梯度：
+如果每个样本的目标值用独热向量表示，且 `y` 代表由多样本目标值组成的矩阵，则下面的 `loss_softmax_onehot()` 和 `gradient_softmax_onehot()` 计算损失函数的损失和关于 `W` 的梯度：
 
 ```python
 def gradient_softmax_onehot(W,X,y,reg):
@@ -10083,10 +10199,7 @@ def gradient_descent_softmax(w,X, y, reg=0., alpha=0.01, iterations=100, gamma=0
 
 对于一组样本 (`X`,`y`)，以下辅助函数计算历史纪录 `w_history` 中每个模型参数对应的模型损失：
 
-
-
-
-### 2.6.8 螺旋数据集的 Softmax 回归
+### 3.6.8 螺旋数据集的 Softmax 回归
 
 在之前的三类螺旋数据集上训练 Softmax 回归模型：
 
@@ -10269,6 +10382,8 @@ print(train_X[9][200:250])
 
 训练集中的样本数量达到 50,000 个。使用整个训练集的样本进行训练，每次计算需要大量的资源和时间。为了提高训练效率，可以取出部分数据，例如使用 `batch=500` 个样本进行训练：
 
+
+
 ```python
 batch = 500
 
@@ -10332,14 +10447,12 @@ plt.show()
 
 批量梯度下降法的一般做法是：
 
-
-
-
-
 #### 随机梯度下降算法流程
 
 1.  重新排列原始训练集中样本的顺序，即打乱原始训练集中样本的顺序。
+
 2.  对于重新排列后的训练集，从头开始，依次取一小批样本，用这批样本计算模型函数损失的梯度，并更新模型参数。
+
 3.  重复步骤 1) 和 2) 多次。
 
 上述 1) 和 2) 完成了对训练集中几乎所有样本的一次遍历，并在此遍历中用不同的小批量样本更新模型参数。因此，1)、2) 的过程称为一个 **epoch**（轮次）。3) 表示执行多个 epoch。
@@ -10579,6 +10692,8 @@ print(loss_history[:-1:len(loss_history)//10])
 
 输出：
 
+
+
 ```
 w: [[ 7.31575784e-02 -6.19716807e-02 -7.67268263e-02 ... -6.90256353e-02
       -2.28128013e-01 -3.95874153e-01]
@@ -10604,12 +10719,9 @@ plt.plot(loss_history)
 
 ![](img/file85.png)
 
-
-
-
 图 3-49 训练损失曲线
 
-```
+```python
 loss_history_valid = compute_loss_history(w_history, test_X[0:1000,:], test_y[0:1000], reg)
 
 plt.plot(loss_history, color='r')
@@ -10627,7 +10739,7 @@ plt.show()
 
 图 3-50 验证损失曲线
 
-```
+```python
 print("Accuracy of training set:", getAccuracy(w, train_X, train_y))
 print("Accuracy of test set:", getAccuracy(w, test_X, test_y))
 ```
@@ -10639,9 +10751,9 @@ Accuracy on training set: 0.8293
 
 ### 3.7.4 随机梯度下降
 
-批量梯度下降每次迭代仅使用一小批样本，而随机梯度下降则更为极端，每次迭代仅使用一个样本。因此，要执行随机梯度下降，只需在调用上述代码中的批量梯度下降方法之前，将批量大小 `batchsize` 修改为 1，即每次仅使用一个样本来更新模型参数。为了节省训练时间，将 epochs 改为 2 次：
+批量梯度下降每次迭代仅使用一小批样本，而随机梯度下降则更为极端，每次迭代仅使用一个样本。因此，要执行随机梯度下降，只需在调用上述代码中的批量梯度下降方法之前，将批量大小 `batchsize` 修改为 1，即每次仅使用一个样本来更新模型参数。为了节省训练时间，将 `epochs` 改为 2 次：
 
-```
+```python
 batchsize = 1
 epochs = 2
 w = np.zeros([train_X.shape[1] + 1, len(np.unique(train_y))])   
@@ -10652,7 +10764,7 @@ print("w: ", w)
 
 计算模型在训练集和测试集上的准确率：
 
-```
+```python
 print("Accuracy of training set:", getAccuracy(w, train_X, train_y))
 print("The accuracy of the test set:", getAccuracy(w, test_X, y_test))
 ```
@@ -10672,19 +10784,19 @@ Accuracy on training set: 0.81425
 
 ## 4.1 神经网络
 
-前面学习的线性回归使用数据特征的线性函数来表示特征与目标值之间的函数关系。线性函数过于简单，对于许多机器学习问题，特征与目标值之间的函数关系往往是非线性的。逻辑回归在线性函数的基础上进一步使用非线性函数 sigmoid 函数 `σ(z)` 将线性函数的结果转换为 [0, 1] 之间的概率值，从而使特征与目标值之间存在非线性关系，但仅将线性加权求和转换为概率，也难以表示复杂函数。
+前面学习的线性回归使用数据特征的线性函数来表示特征与目标值之间的函数关系。线性函数过于简单，对于许多机器学习问题，特征与目标值之间的函数关系往往是非线性的。逻辑回归在线性函数的基础上进一步使用非线性函数 `σ(z)` 将线性函数的结果转换为 [0, 1] 之间的概率值，从而使特征与目标值之间存在非线性关系，但仅将线性加权求和转换为概率，也难以表示复杂函数。
 
 如何表示复杂函数？
 
 复杂函数通常可以分解为简单函数，或通过简单的四则运算或函数组合由简单函数构成。例如，逻辑回归的假设函数 `σ(xw + b)` 就是由函数 `z = xw + b` 和 `σ(z)` 组合而成，而函数 `xw + b` 则是由 `x`、`w`、`b` 通过乘法和加法组成的。
 
-非常复杂的函数可以通过简单运算和函数组合来表示。**神经网络** 就是以这种方式将许多简单的 **神经元** 函数组合成一个复杂函数。神经元就是一个逻辑回归函数，即神经元函数对输入进行线性加权，然后使用非线性函数对加权求和进行非线性变换。当然，神经元函数中对加权求和执行非线性变换的函数也可能是其他类似于 sigmoid 函数的简单函数。神经网络由多个神经元（函数）组成，一个神经元的输出作为另一个神经元的输入，一个神经元接受其他神经元的输入，并将简单的加权求和和简单的（非线性）函数变换输出传递给其他神经元。神经元通过相互的输入输出连接形成网络，因此这个复杂函数被称为神经网络。
+非常复杂的函数可以通过简单运算和函数组合来表示。**神经网络** 就是以这种方式将许多简单的 **神经元** 函数组合成一个复杂函数。神经元就是一个逻辑回归函数，即神经元函数对输入进行线性加权，然后使用非线性函数对加权求和进行非线性变换。当然，神经元函数中对加权求和执行非线性变换的函数也可能是其他类似于 `sigmoid` 函数的简单函数。神经网络由多个神经元（函数）组成，一个神经元的输出作为另一个神经元的输入，一个神经元接受其他神经元的输入，并将简单的加权求和和简单的（非线性）函数变换输出传递给其他神经元。神经元通过相互的输入输出连接形成网络，因此这个复杂函数被称为神经网络。
 
 ### 4.1.1 感知机与神经元
 
 #### 1. 感知机
 
-**感知机** 是一个具有二分类功能的简单函数。逻辑回归函数使用 sigmoid 函数将输入的线性加权求和转换为概率 `σ(xxww)`，而感知机则使用阈值函数将输入的线性加权求和转换为 0 和 1：`signb`。其中 `signb` 是一个阶跃函数，根据 z 值是否大于阈值 `b` 输出 1 和 0：
+**感知机** 是一个具有二分类功能的简单函数。逻辑回归函数使用 `sigmoid` 函数将输入的线性加权求和转换为概率 `σ(xw)`，而感知机则使用阈值函数将输入的线性加权求和转换为 0 和 1：`sign_b`。其中 `sign_b` 是一个阶跃函数，根据 `z` 值是否大于阈值 `b` 输出 1 和 0：
 
 $$
 \begin{matrix} 
@@ -10695,9 +10807,9 @@ $$
 \end{matrix}
 $$
 
-感知机通过权重向量 `ww` 计算输入 `xx` 的加权求和 `xxww`，然后根据加权求和是否超过某个阈值 `b` 输出 1 或 0 的值。例如，一个具有 3 个输入值的感知机计算如下：
+感知机通过权重向量 `w` 计算输入 `x` 的加权求和 `xw`，然后根据加权求和是否超过某个阈值 `b` 输出 1 或 0 的值。例如，一个具有 3 个输入值的感知机计算如下：
 
-$$f\_{ww,b}(xx) = sign\_b(\sum\limits\_{j = 1}^{3} w\_j x\_j)$$
+$$f_{w,b}(x) = sign\_b(\sum\limits_{j = 1}^{3} w_j x_j)$$
 
 感知机可以用一个简单的圆圈来可视化。图 4-1 中的感知机接受 3 个输入值并产生一个输出值 `f`：
 
@@ -10711,12 +10823,12 @@ $$f\_{ww,b}(xx) = sign\_b(\sum\limits\_{j = 1}^{3} w\_j x\_j)$$
 
 每个神经元接受多个输入信号，每个输入信号对神经元的权重也不同。如果所有输入信号的加权求和超过神经元内部的“阈值”，则会产生一个输出信号。
 
-用 `fww` 表示感知机函数，即 `fww = signb`，其中 `xx` 是输入，`ww` 是权重向量，即：
+用 `f_w` 表示感知机函数，即 `f_w = sign_b`，其中 `x` 是输入，`w` 是权重向量，即：
 
 $$
 \begin{matrix} 
-{f\_{ww}(xx) = \left\{ \begin{matrix} 
-1 & {\text{if } \sum\limits\_{j} w\_j x\_j >= b} \\ 
+{f\_w(x) = \left\{ \begin{matrix} 
+1 & {\text{if } \sum\limits_{j} w_j x_j >= b} \\ 
 0 & {else} \\ 
 \end{matrix} \right.} 
 \end{matrix}
@@ -10726,8 +10838,8 @@ $$
 
 $$
 \begin{matrix} 
-{f\_{ww}(xx) = \left\{ \begin{matrix} 
-1 & {\text{if } \sum\limits\_{j} w\_j x\_j - b >= 0} \\ 
+{f\_w(x) = \left\{ \begin{matrix} 
+1 & {\text{if } \sum\limits_{j} w_j x_j - b >= 0} \\ 
 0 & {otherwise} \\ 
 \end{matrix} \right.} 
 \end{matrix}
@@ -10737,16 +10849,14 @@ $$
 
 $$
 \begin{matrix} 
-{f\_{ww}(xx) = \left\{ \begin{matrix} 
-1 & {\text{if } \sum\limits\_{j} w\_j x\_j + b >= 0} \\ 
+{f\_w(x) = \left\{ \begin{matrix} 
+1 & {\text{if } \sum\limits_{j} w_j x_j + b >= 0} \\ 
 0 & {else} \\ 
 \end{matrix} \right.} 
 \end{matrix}
 $$
 
-
-
-因此，感知机函数通常可以写为 `fw*w = sign(x*x*w*w + b)`。
+因此，感知机函数通常可以写为 `f_w = sign(xw + b)`。
 
 感知机可以直接表达最基本的逻辑计算函数：“与”、“或”、“与非”。图 4-3 展示了逻辑电路中“与门”、“与非门”、“或门”和“异或门”的功能。
 
@@ -10818,17 +10928,17 @@ $a = g(\sum\limits_{j}W_{j}x_{j} + b)$
 
 如果用 `W[0]` 表示 `b`，用 `x[0]` 表示 1，则可表示为 $f_{w}(x) = g(\sum\limits_{j = 0}^{3}W_{j}x_{j})$
 
-不同的激活函数决定了神经元的不同功能。线性回归、逻辑回归和感知机都使用具有不同激活函数的神经元。线性回归的激活函数是恒等函数 `g(z) = z`，直接输出加权和；而逻辑回归使用非线性激活函数（sigmoid 函数 `σ(z)`）对加权和进行变换。感知机使用阶跃函数 `sign(z)` 对加权和进行变换。因此，神经元是线性回归、逻辑回归和感知机的泛化。Softmax 回归可视为输出多个值的神经元，即其激活函数是 `softmax()` 函数。神经元的激活函数也可以是其他各种非线性函数，如 tanh、ReLu 函数等。
+不同的激活函数决定了神经元的不同功能。线性回归、逻辑回归和感知机都使用具有不同激活函数的神经元。线性回归的激活函数是恒等函数 `g(z) = z`，直接输出加权和；而逻辑回归使用非线性激活函数（`sigmoid` 函数 `σ(z)`）对加权和进行变换。感知机使用阶跃函数 `sign(z)` 对加权和进行变换。因此，神经元是线性回归、逻辑回归和感知机的泛化。Softmax 回归可视为输出多个值的神经元，即其激活函数是 `softmax()` 函数。神经元的激活函数也可以是其他各种非线性函数，如 `tanh`、`ReLu` 函数等。
 
 ### 4.1.2 激活函数
 
-神经元中的激活函数通常是一些简单的非线性函数。常用的激活函数有：tanh、sigmoid、修正线性单元（简称 ReLu）。sigmoid 函数前面已介绍过。
+神经元中的激活函数通常是一些简单的非线性函数。常用的激活函数有：`tanh`、`sigmoid`、修正线性单元（简称 `ReLu`）。`sigmoid` 函数前面已介绍过。
 
 #### 1. 阶跃函数 sign(x)
 
 阶跃函数 `sign(x)` 及其导数的 Python 实现代码：
 
-```
+```python
 def sign(x):
     return np.array(x > 0, dtype=np.int)
 
@@ -10838,7 +10948,7 @@ def grad_sign(x):
 
 可以用以下代码绘制阶跃函数 `sign(x)` 的图像：
 
-```
+```python
 import numpy as np
 import matplotlib.pylab as plt
 %matplotlib inline
@@ -10863,16 +10973,20 @@ tanh 函数：
 
 其导函数为：
 
-$\begin{matrix} {tanh^{\prime}(x)} & {= \lbrack(e^{x} + e^{- x})(e^{x} + e^{- x}) - (e^{x} - e^{- x})(e^{x} - e^{- x})\rbrack/(e^{x} + e^{- x})^{2}} \\ & {= 1 - ((e^{x} - e^{- x})^{2})/(e^{x} + e^{- x})^{2} = 1 - tanh^{2}(x)} \\ \end{matrix}$
+
+
+## 4.1.2 激活函数
+
+### tanh 函数
+
+$$
+\begin{matrix} 
+\tanh^{\prime}(x) &= \frac{[(e^{x} + e^{-x})(e^{x} + e^{-x}) - (e^{x} - e^{-x})(e^{x} - e^{-x})]}{(e^{x} + e^{-x})^{2}} \\ 
+&= 1 - \frac{(e^{x} - e^{-x})^{2}}{(e^{x} + e^{-x})^{2}} = 1 - \tanh^{2}(x) 
+\end{matrix}
+$$
 
 Numpy 提供了用于计算 tanh 的计算函数 `tanh()`。以下代码计算 `tanh'(x)` 并绘制 `tanh(x)` 和 `tanh'(x)` 的函数曲线：
-
-
-
-
-### 4.1.2 激活函数
-
-##### tanh 函数
 
 ```python
 def grad_tanh(x):
@@ -10892,21 +11006,21 @@ plt.show()
 
 **图 4-13** `tanh(x)` 函数及其导函数 `tanh'(x)` 的图像
 
-##### ReLU 函数
+### ReLU 函数
 
 当 `x` 大于 0 时，ReLU 函数 `f(x)` 直接输出 `x`，否则输出 0：
 
 $$
-Relu(x) = \begin{cases} x & (x > 0) \\ 0 & (x \leq 0) \end{cases}
+\text{ReLU}(x) = \begin{cases} x & (x > 0) \\ 0 & (x \leq 0) \end{cases}
 $$
 
 其导数：
 
 $$
-Relu'(x) = \begin{cases} 1 & (x > 0) \\ 0 & (x \leq 0) \end{cases}
+\text{ReLU}'(x) = \begin{cases} 1 & (x > 0) \\ 0 & (x \leq 0) \end{cases}
 $$
 
-以下代码计算 `Relu(x)`、`Relu'(x)`，并绘制 `Relu(x)`、`Relu'(x)` 的函数曲线：
+以下代码计算 `ReLU(x)`、`ReLU'(x)`，并绘制 `ReLU(x)`、`ReLU'(x)` 的函数曲线：
 
 ```python
 def relu(x):
@@ -10929,16 +11043,16 @@ plt.show()
 ReLU 函数还有一些变体，例如 LeakyReLU 函数：
 
 $$
-LeakRelu(x) = \begin{cases} x & (x > 0) \\ kx & (x \leq 0) \end{cases}
+\text{LeakyReLU}(x) = \begin{cases} x & (x > 0) \\ kx & (x \leq 0) \end{cases}
 $$
 
 其导数：
 
 $$
-LeakRelu'(x) = \begin{cases} 1 & (x > 0) \\ k & (x \leq 0) \end{cases}
+\text{LeakyReLU}'(x) = \begin{cases} 1 & (x > 0) \\ k & (x \leq 0) \end{cases}
 $$
 
-以下代码计算 `LeakRelu(x)`、`LeakRelu'(x)`，并绘制 `LeakRelu(x)`、`LeakRelu'(x)` 的函数曲线：
+以下代码计算 `LeakyReLU(x)`、`LeakyReLU'(x)`，并绘制 `LeakyReLU(x)`、`LeakyReLU'(x)` 的函数曲线：
 
 ```python
 import numpy as np
@@ -10965,7 +11079,7 @@ plt.show()
 
 **图 4-15** `leakrelu(x)` 函数及其导函数 `leakrelu'(x)` 的图像
 
-### 4.1.3 神经网络与深度学习
+## 4.1.3 神经网络与深度学习
 
 1943 年，心理学家 McCulloch 和数学家 Pitts 参考生物神经元的结构，发表了抽象神经元模型 MP。1949 年，心理学家 Hebb 提出了 Hebb 学习率，认为人脑神经细胞的突触（即连接）强度是可以改变的。1957 年，计算科学家 Frank Rosenblatt 将人工神经元称为“感知机”，并提出了由两层感知机组成的多层感知机（MLP, Multilayer Perceptron）。在现代机器学习中，感知机更常被称为**神经元**，多层感知机也称为人工神经网络（ANN, Artificial Neural Network），简称**神经网络**。
 
@@ -11001,10 +11115,7 @@ $$
 
 **图 4-18** 将 softmax 函数视为一个产生多个输出的单个神经元
 
-
-
-
-#### 神经网络结构与前向传播
+### 神经网络结构与前向传播
 
 上述神经网络的神经元有些特殊。其中，softmax 输出层的神经元不计算上一层输入的加权和，隐藏层直接输出加权和，而不经过非线性激活函数的变换，即隐含的 A 层神经元是一个线性回归函数。
 
@@ -11029,10 +11140,10 @@ $$
 假设第 1 层所有神经元的激活函数是同一个函数 `g^[1]`，每个神经元接受一个输入 `x = (x[1], x[2])` 并产生一个输出值，这些输出值（激活值）也构成一个向量 `a^[1] = (a[1]^[1], a[2]^[1], a[3]^[1], a[4]^[1])`：
 
 ```
-a[1]^[1] = g^1
-a[2]^[1] = g^1
-a[3]^[1] = g^1
-a[4]^[1] = g^1
+a[1]^[1] = g^[1](z[1]^[1])
+a[2]^[1] = g^[1](z[2]^[1])
+a[3]^[1] = g^[1](z[3]^[1])
+a[4]^[1] = g^[1](z[4]^[1])
 ```
 
 用矩阵 `W^[1]`、`b^[1]` 表示这些权重和偏置向量：
@@ -11047,16 +11158,16 @@ b^[1] = (b_1^[1], b_2^[1], b_3^[1], b_4^[1])
 即每一列代表一个神经元的权重或偏置，第 1 层神经元的计算过程可以表示为：
 
 ```
-a^[1] = g^1
+a^[1] = g^[1](a^[0] * W^[1] + b^[1])
       1×4   1×2   2×4   1×4
 ```
 
 假设第 2 层（输出层）所有神经元的激活函数也是同一个 `g^[2]`，它们接受来自隐藏层的这些输出值 `a^[1] = (a[1]^[1], a[2]^[1], a[3]^[1], a[4]^[1])`，最终的输出值是向量 `a^[2] = (a[1]^[2], a[2]^[2], a[3]^[2])`：
 
 ```
-a_1^[2] = g^2
-a_2^[2] = g^2
-a_3^[2] = g^2
+a_1^[2] = g^[2](z_1^[2])
+a_2^[2] = g^[2](z_2^[2])
+a_3^[2] = g^[2](z_3^[2])
 ```
 
 用矩阵 `W^[2]`、`b^[2]` 表示这些权重和偏置向量：
@@ -11073,14 +11184,14 @@ b^[2] = (b_1^[2], b_2^[2], b_3^[2])
 第 2 层神经元的计算过程可以表示为：
 
 ```
-a^[2] = g^2
+a^[2] = g^[2](a^[1] * W^[2] + b^[2])
       1×3   1×4   4×3   1×3
 ```
 
 整个神经网络函数 `f(x)` 用向量形式写出：
 
 ```
-f(x) = g^2) * W^[2] + b^[2])
+f(x) = g^[2](g^[1](x * W^[1] + b^[1]) * W^[2] + b^[2])
 ```
 
 用 `a^((0))` 表示输入数据 `x`，即：
@@ -11091,21 +11202,33 @@ a^((0)) = (a_1^((0)), a_2^((0))) = x = (x_1, x_2)
 
 然后输入一个 `x` 即 `a^((0))`，该神经网络的计算过程如下：
 
+$$
+\begin{matrix} 
+z^{[1]} &= a^{[0]}W^{[1]} + b^{[1]} \\ 
+a^{[1]} &= g^{[1]}(z^{[1]}) \\ 
+z^{[2]} &= a^{[1]}W^{[2]} + b^{[2]} \\ 
+f(x) &= a^{[2]} = g^{[2]}(z^{[2]}) 
+\end{matrix}
+$$
 
+根据 `x` → `z`^(\[1\]) → `a`^(\[1\]) → `z`^(\[2\]) → `a`^(\[2\])，计算神经网络最终输出的过程称为**前向传播** (forward propagation) 或**前向计算**。
 
-$\\begin{matrix} {z z^{\\lbrack 1\\rbrack}} & {= a a^{(0)}W W^{\\lbrack 1\\rbrack} + b b^{\\lbrack 1\\rbrack}} \\\\ {a a^{\\lbrack 1\\rbrack}} & {= g^{\\lbrack 1\\rbrack}(z z^{\\lbrack 1\\rbrack})} \\\\ {z z^{\\lbrack 2\\rbrack}} & {= a a^{\\lbrack 1\\rbrack}W W^{\\lbrack 2\\rbrack} + b b^{\\lbrack 2\\rbrack}} \\\\ {f f(x x)} & {= a a^{\\lbrack 2\\rbrack} = g^{\\lbrack 2\\rbrack}(z z^{\\lbrack 2\\rbrack})} \\\\ \\end{matrix}$
+可以看出，第一层和第二层的加权和与激活值的计算过程完全相似。对于一般的神经网络，第 `l` 层的加权和与激活值的计算公式如下：
 
-根据 `x x` → `z z`^(\[1\]) → `a a`^(\[1\]) → `z z`^(\[2\]) → `a a`^(\[2\])，计算神经网络最终输出的过程称为**前向传播** (forward propagation) 或**前向计算**。
+$$
+\begin{matrix} 
+z^{[l]} &= a^{[l-1]}W^{[l]} + b^{[l]} \\ 
+a^{[l]} &= g^{[l]}(z^{[l]}) 
+\end{matrix}
+$$
 
-可以看出，第一层和第二层的加权和与激活值的计算过程完全相似。对于一般的神经网络，第一层的加权和与激活值的计算公式如下：
-
-$\\begin{matrix} & {z z^{\\lbrack l\\rbrack} = a a^{\\lbrack l - 1\\rbrack}W W^{\\lbrack l\\rbrack} + b b^{\\lbrack l\\rbrack}} \\\\ & {a a^{\\lbrack l\\rbrack} = g^{\\lbrack l\\rbrack}(z z^{\\lbrack l\\rbrack})} \\\\ \\end{matrix}$
-
-第 `l` 层接收来自第 `l-1` 层的输入 `a a`^(\[*l* − 1\])，并计算加权和 `z z`^(\[*l*\]) = `a a`^(\[*l* − 1\])\*`W W`^(\[*l*\]) + `b b`^(\[*l*\])，通过激活函数 `g`^(\[*l*\])，输出 `a a`^(\[*l*\]) = `g`^(\[*l*\])(`z z`^(\[*l*\])) 。
+第 `l` 层接收来自第 `l-1` 层的输入 `a`^(\[*l* − 1\])，并计算加权和 `z`^(\[*l*\]) = `a`^(\[*l* − 1\])\*`W`^(\[*l*\]) + `b`^(\[*l*\]), 通过激活函数 `g`^(\[*l*\]), 输出 `a`^(\[*l*\]) = `g`^(\[*l*\])(`z`^(\[*l*\])) 。
 
 上述神经网络的前向计算（前向传播）可以用以下 Python 代码实现（不失一般性，假设所有神经元的激活函数均为 sigmoid 函数）。
 
-```
+
+
+```python
 import numpy as np
 
 def sigmoid(x):
@@ -11158,41 +11281,50 @@ a2 [0.94869845 0.99158527 0.93176103]
 
 ### 4.1.4 多样本的前向计算
 
-多个样本的数据特征，如 `m` 个样本 `x x`^((*i*)) 可以组成一个矩阵 `X X`：
+多个样本的数据特征，如 `m` 个样本 `x^{(i)}` 可以组成一个矩阵 `X`：
 
-$\\begin{matrix} {X X = \\begin{bmatrix} {x x^{(1)}} \\\\ {x x^{(2)}} \\\\ \\vdots \\\\ {x x^{(m)}} \\\\ \\end{bmatrix}} \\\\ \\end{matrix}$
+$$
+X = \begin{bmatrix} x^{(1)} \\ x^{(2)} \\ \vdots \\ x^{(m)} \end{bmatrix}
+$$
 
-每个样本对应的各层输出向量 `z z`^(\[*l*\]), `a a`^(\[*l*\]) 为 `Z Z`^(\[*l*\]), `A A`^(\[*l*\])：
+每个样本对应的各层输出向量 `z^{[l]}`, `a^{[l]}` 为 `Z^{[l]}`, `A^{[l]}`：
 
-$\\begin{matrix} {Z Z^{\\lbrack l\\rbrack} = \\begin{bmatrix} {z z^{\\lbrack 1\\rbrack(l)}} \\\\ {z z^{\\lbrack 2\\rbrack(l)}} \\\\ \\vdots \\\\ {\\ pmbz^{\\lbrack m\\rbrack(l)}} \\\\ \\end{bmatrix}\\quad A A^{\\lbrack l\\rbrack} = \\begin{bmatrix} {a a^{\\lbrack 1\\rbrack(l)}} \\\\ {a a^{\\lbrack 2\\rbrack(l)}} \\\\ \\vdots \\\\ {a a^{\\lbrack m\\rbrack(l)}} \\\\ \\end{bmatrix}} \\\\ \\end{matrix}$
+$$
+Z^{[l]} = \begin{bmatrix} z^{[1](l)} \\ z^{[2](l)} \\ \vdots \\ z^{[m](l)} \end{bmatrix},\quad
+A^{[l]} = \begin{bmatrix} a^{[1](l)} \\ a^{[2](l)} \\ \vdots \\ a^{[m](l)} \end{bmatrix}
+$$
 
-其中 `z`^(\1\), `a`^(\2\) 分别是第 `i` 个样本第 `l` 层的加权和与激活值，它们作为矩阵 `Z Z`^(*T**h**e**i* − *t**h**l**i**n**e**o**f*\[*l*\]), `A A`^(\[*l*\]).
+其中 `z^{[1]}`、`a^{[2]}` 分别是第 `i` 个样本第 `l` 层的加权和与激活值，它们作为矩阵 `Z^{[l]}`、`A^{[l]}` 的行。
 
 多样本的前向计算可以写成向量（矩阵）形式如下：
 
-$\\begin{matrix} {Z Z^{\\lbrack l\\rbrack} = \\begin{bmatrix} {z z^{\\lbrack 1\\rbrack(l)}} \\\\ {z z^{\\lbrack 2\\rbrack(l)}} \\\\ \\vdots \\\\ {\\ pmbz^{\\lbrack m\\rbrack(l)}} \\\\ \\end{bmatrix} = \\begin{bmatrix} {a a^{\\lbrack 1\\rbrack(l - 1)}W W^{\\lbrack l\\rbrack} + b b^{\\lbrack l\\rbrack}} \\\\ {a a^{\\lbrack 2\\rbrack(l - 1)}W W^{\\lbrack l\\rbrack} + b b^{\\lbrack l\\rbrack}} \\\\ \\vdots \\\\ {a a^{\\lbrack m\\rbrack(l - 1)}W W^{\\lbrack l\\rbrack} + b b^{\\lbrack l\\rbrack}} \\\\ \\end{bmatrix}} \\\\ \\end{matrix}$
+$$
+Z^{[l]} = \begin{bmatrix} z^{[1](l)} \\ z^{[2](l)} \\ \vdots \\ z^{[m](l)} \end{bmatrix} = \begin{bmatrix} a^{[1](l-1)}W^{[l]} + b^{[l]} \\ a^{[2](l-1)}W^{[l]} + b^{[l]} \\ \vdots \\ a^{[m](l-1)}W^{[l]} + b^{[l]} \end{bmatrix}
+$$
 
-由于 numpy 数组具有广播功能，上述公式可简化为：
+由于 `numpy` 数组具有广播功能，上述公式可简化为：
 
-`Z`^(\[*l*\]) = `A`^(\[*l* − 1\])\*`W`^(\[*l*\]) + `b`^(\[*l*\])
+`Z^{[l]} = A^{[l-1]} @ W^{[l]} + b^{[l]}`
 
-同理，`A`^(\[*l*\]) 是 `Z`^(\[*l*\]) 的激活值：
+同理，`A^{[l]}` 是 `Z^{[l]}` 的激活值：
 
-$\\begin{matrix} {A^{\\lbrack l\\rbrack} = \\begin{bmatrix} {a a^{\\lbrack 1\\rbrack(l)}} \\\\ {a a^{\\lbrack 2\\rbrack(l)}} \\\\ \\vdots \\\\ {a a^{\\lbrack m\\rbrack(l)}} \\\\ \\end{bmatrix} = \\begin{bmatrix} {g^{\\lbrack l\\rbrack}(z z^{\\lbrack 1\\rbrack(l)})} \\\\ {g^{\\lbrack l\\rbrack}(z z^{\\lbrack 2\\rbrack(l)})} \\\\ \\vdots \\\\ {g^{\\lbrack l\\rbrack}(z z^{\\lbrack m\\rbrack(l)})} \\\\ \\end{bmatrix}} \\\\ \\end{matrix}$
+$$
+A^{[l]} = \begin{bmatrix} a^{[1](l)} \\ a^{[2](l)} \\ \vdots \\ a^{[m](l)} \end{bmatrix} = \begin{bmatrix} g^{[l]}(z^{[1](l)}) \\ g^{[l]}(z^{[2](l)}) \\ \vdots \\ g^{[l]}(z^{[m](l)}) \end{bmatrix}
+$$
 
-由于 numpy 数组具有广播功能，上述公式可简化为：
+由于 `numpy` 数组具有广播功能，上述公式可简化为：
 
-`A A`^(\[*l*\]) = `g`^(\[*l*\])(`Z Z`^(\[*l*\])) 
+`A^{[l]} = g^{[l]}(Z^{[l]})`
 
 因此，对于一般的第 `l` 层，前向计算的向量化公式如下：
 
-`Z Z`^(\[*l*\]) = `A`^(\[*l* − 1\])\*`W W`^(\[*l*\]) + `b b`^(\[*l*\])
+`Z^{[l]} = A^{[l-1]} @ W^{[l]} + b^{[l]}`
 
-`A A`^(\[*l*\]) = `g`^(\[*l*\])(`Z Z`^(\[*l*\])) 
+`A^{[l]} = g^{[l]}(Z^{[l]})`
 
 同理，可以写出多样本前向计算的向量（矩阵）形式 Python 代码：
 
-```
+```python
 X = np.array([[1.0, 2.], [3.0, 4.0]])
 W1 = np.array([[0.1, 0.3, 0.5, 0.2],
                [0.4, 0.6, 0.7, 0.1]]) # W1 : 2x4 matrix
@@ -11238,33 +11370,28 @@ A2: [[0.97023513 0.9944915 0.94629347]
      [0.98100697 0.99670431 0.96245657]]
 ```
 
-在某些书籍中，`x x`^((*i*)), `z z`^(\[*l*\]), `a a`^(\[*l*\]), `b b`^(\[*l*\]), 等以列向量形式书写，则
+在某些书籍中，`x^{(i)}`, `z^{[l]}`, `a^{[l]}`, `b^{[l]}` 等以列向量形式书写，则
 
-`z z`^(\[*l*\]) = `W W`^(\[*l*\])\*`a a`^(\[*l* − 1\]) + `b b`^(\[*l*\])
-
-
-
+`z^{[l]} = W^{[l]} @ a^{[l-1]} + b^{[l]}`
 
 $$
-\begin{matrix} 
-{zz^{[1]} = \begin{bmatrix} z_{1}^{[1]} \\ z_{2}^{[1]} \\ z_{3}^{[1]} \\ z_{4}^{[1]} \\ \end{bmatrix} = \begin{bmatrix} W_{11}^{[1]} & W_{12}^{[1]} \\ W_{21}^{[1]} & W_{22}^{[1]} \\ W_{31}^{[1]} & W_{32}^{[1]} \\ W_{41}^{[1]} & W_{42}^{[1]} \\ \end{bmatrix}\begin{bmatrix} x_{1} \\ x_{2} \\ \end{bmatrix} + \begin{bmatrix} b_{1}^{[1]} \\ b_{2}^{[1]} \\ b_{3}^{[1]} \\ b_{4}^{[1]} \\ \end{bmatrix}} \\ 
-\end{matrix}
+z^{[1]} = \begin{bmatrix} z_{1}^{[1]} \\ z_{2}^{[1]} \\ z_{3}^{[1]} \\ z_{4}^{[1]} \end{bmatrix} = \begin{bmatrix} W_{11}^{[1]} & W_{12}^{[1]} \\ W_{21}^{[1]} & W_{22}^{[1]} \\ W_{31}^{[1]} & W_{32}^{[1]} \\ W_{41}^{[1]} & W_{42}^{[1]} \end{bmatrix}\begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix} + \begin{bmatrix} b_{1}^{[1]} \\ b_{2}^{[1]} \\ b_{3}^{[1]} \\ b_{4}^{[1]} \end{bmatrix}
 $$
 
-因为 `x^{(i)}` 是列向量，m 个样本 `x^{(i)}` 构成一个矩阵 `X`：
+因为 `x^{(i)}` 是列向量，`m` 个样本 `x^{(i)}` 构成一个矩阵 `X`：
 
 $$
-\pmb X = \begin {bmatrix}\pmb x^{(1)}&x^{(2)}& \cdots& x^{(m)} \end {bmatrix}\tag{4-24}
+X = \begin{bmatrix} x^{(1)} & x^{(2)} & \cdots & x^{(m)} \end{bmatrix} \tag{4-24}
 $$
 
 即将每个样本的数据特征 `x^{(i)}` 作为矩阵 `X` 的一列，因此加权和 `Z^{[1]}` 的计算公式为：
 
-`Z^{[1]} = W^{[1]}X + b^{[1]}`
+`Z^{[1]} = W^{[1]} @ X + b^{[1]}`
 
 一般情况下，有：
 
 $$
-\pmb Z^{[l]} = \pmb W^{[l]} \pmb A^{[l-1]} + \pmb b^{[l]}\tag{4-25}
+Z^{[l]} = W^{[l]} A^{[l-1]} + b^{[l]} \tag{4-25}
 $$
 
 `A^{[l]} = g^{[l]}(Z^{[l]})`
@@ -11277,23 +11404,23 @@ $$
 
 图 4-21 人脸关键点
 
-解决二分类问题时，类似于逻辑回归，输出是样本属于某一类别的概率。该概率通过使用 `σ` 函数将属于实数区间的实数压缩到 `[0,1]` 区间来表示概率。解决多分类问题时，输出是样本属于各个类别的概率，这些概率通过 softmax 函数将同样数量的实数（在实数轴上）压缩到 `[0,1]` 区间来表示概率。
+解决二分类问题时，类似于逻辑回归，输出是样本属于某一类别的概率。该概率通过使用 `σ` 函数将属于实数区间的实数压缩到 `[0,1]` 区间来表示概率。解决多分类问题时，输出是样本属于各个类别的概率，这些概率通过 `softmax` 函数将同样数量的实数（在实数轴上）压缩到 `[0,1]` 区间来表示概率。
 
 对于分类问题，即使不将实数轴上的实数压缩到表示概率的 `[0,1]` 区间，也可以根据实数值的大小来判断样本类别。例如，对于一个 3 分类问题，如果输出是 3 个实数：219、18、564，那么可以知道该样本属于最大实数对应的第 3 类，而不是第 1 类或第 2 类。将任意实数转换为表示概率的实数，是为了从概率意义上定义二分类或多分类的交叉熵损失。
 
-因此，对于分类问题，神经网络的输出可以是属于实数轴的实数，表示样本属于哪一类或多个不同类别的 `score`（得分）。也可以是通过 `σ` 和 softmax 函数将得分转换为的概率。
+因此，对于分类问题，神经网络的输出可以是属于实数轴的实数，表示样本属于哪一类或多个不同类别的 `score`（得分）。也可以是通过 `σ` 和 `softmax` 函数将得分转换为的概率。
 
-在设计神经网络结构时，如果将包含 `σ` 函数或 softmax 函数的神经元作为最后的输出层，输出的概率可以直接与目标值计算交叉熵损失。如果将输出得分的网络层作为输出层，无论是分类还是回归问题，输出都是实数轴上的任意实数，但对于分类问题，这种得分输出也会通过 `σ` 函数或 softmax 函数变换，以概率形式计算目标值的交叉熵损失。
+在设计神经网络结构时，如果将包含 `σ` 函数或 `softmax` 函数的神经元作为最后的输出层，输出的概率可以直接与目标值计算交叉熵损失。如果将输出得分的网络层作为输出层，无论是分类还是回归问题，输出都是实数轴上的任意实数，但对于分类问题，这种得分输出也会通过 `σ` 函数或 `softmax` 函数变换，以概率形式计算目标值的交叉熵损失。
 
-无论是使用 `σ` 函数还是 softmax 函数作为输出层，神经网络其他层中的神经元都是类似于逻辑回归函数的神经元，即每个神经元接收上一层的输入 `a^{[l−1]}`，利用该神经元的权重向量计算这些输入的加权和 `z^{[l]} = a^{[l−1]}W^{[l]}`，然后通过激活函数 `g^{[l]}` 生成输出 `a^{[l]} = g^{[l]}(z^{[l]})`。如果输出得分作为输出层，该层的激活函数 `g^{[L]}` 通常是恒等函数，否则输出层是 `σ` 函数或 softmax 函数等特殊神经元。为了避免区分这种特殊神经元和一般的逻辑回归神经元，本书采用输出得分的网络层作为输出层。
+无论是使用 `σ` 函数还是 `softmax` 函数作为输出层，神经网络其他层中的神经元都是类似于逻辑回归函数的神经元，即每个神经元接收上一层的输入 `a^{[l-1]}`，利用该神经元的权重向量计算这些输入的加权和 `z^{[l]} = a^{[l-1]} @ W^{[l]}`，然后通过激活函数 `g^{[l]}` 生成输出 `a^{[l]} = g^{[l]}(z^{[l]})`。如果输出得分作为输出层，该层的激活函数 `g^{[L]}` 通常是恒等函数，否则输出层是 `σ` 函数或 `softmax` 函数等特殊神经元。为了避免区分这种特殊神经元和一般的逻辑回归神经元，本书采用输出得分的网络层作为输出层。
 
 ### 4.1.6 损失函数
 
 无论是训练神经网络还是使用训练好的神经网络进行预测，都需要对样本神经网络的输出值（预测值）与真实值进行**误差评估**。这种误差也称为**损失**或**代价**。
 
-如果某样本的预测值和真实值分别为 `f^{(i)}`、`y^{(i)}`，则该样本的误差为 `L(f^{(i)}, y^{(i)})`。训练神经网络或验证神经网络模型时，通常计算一组样本的总体平均误差。m 个样本的误差可以取其误差的平均值，即：
+如果某样本的预测值和真实值分别为 `f^{(i)}`、`y^{(i)}`，则该样本的误差为 `L(f^{(i)}, y^{(i)})`。训练神经网络或验证神经网络模型时，通常计算一组样本的总体平均误差。`m` 个样本的误差可以取其误差的平均值，即：
 
-$L(f,y) = \frac{1}{m}\sum\limits_{i = 1}^{m}L(f^{(i)},y^{(i)})$
+$$L(f,y) = \frac{1}{m}\sum\limits_{i = 1}^{m}L(f^{(i)},y^{(i)})$$
 
 对于某个样本，其误差（损失）`L(f^{(i)}, y^{(i)})` 随模型参数而不同，因为模型参数不同，预测值 `f^{(i)}` 也不同，多个样本的平均误差 `L(f, y)` 也是如此，即误差可视为预测值 `f^{(i)}` 和模型参数的函数，称为**损失函数**。通过最小化训练损失，可以获得损失函数取最小值时对应的模型参数。
 
@@ -11303,34 +11430,33 @@ $L(f,y) = \frac{1}{m}\sum\limits_{i = 1}^{m}L(f^{(i)},y^{(i)})$
 
 **均方误差**是以所有样本预测值与真实值之间欧氏距离的平方的平均值作为误差。
 
-对于多个样本，设 `F = (f^{(1)}, f^{(2)}, ⋯, f^{(m)})^T`，`Y = (y^{(1)}, y^{(2)}, ⋯, y^{(m)})^T`，则 `F` 和 `Y` 之间的均方误差损失 `ℒ(F, Y)` 为：
+对于多个样本，设 `F = (f^{(1)}, f^{(2)}, \cdots, f^{(m)})^T`，`Y = (y^{(1)}, y^{(2)}, \cdots, y^{(m)})^T`，则 `F` 和 `Y` 之间的均方误差损失 `L(F, Y)` 为：
 
-$\mathcal{L}(F,Y) = \frac{1}{m}{\parallel (f^{(i)} - y^{(i)} \parallel_2}^{2} = \frac{1}{m}\sum\limits_{i = 1}^{m}{\parallel (f^{(i)} - y^{(i)} \parallel_2}^{2}$
+$$\mathcal{L}(F,Y) = \frac{1}{m}\parallel f^{(i)} - y^{(i)} \parallel_2^2 = \frac{1}{m}\sum\limits_{i = 1}^{m}\parallel f^{(i)} - y^{(i)} \parallel_2^2$$
 
 乘以一个常数不会改变该损失函数的极值点。有时为了使求导后的梯度形式更美观，均方误差损失会除以 2，即：
 
-$\mathcal{L}(F,Y) = \frac{1}{2m}{\parallel (f^{(i)} - y^{(i)} \parallel_2}^{2} = \frac{1}{2m}\sum\limits_{i = 1}^{2}{\parallel (f^{(i)} - y^{(i)} \parallel_2}^{2}$
+$$\mathcal{L}(F,Y) = \frac{1}{2m}\parallel f^{(i)} - y^{(i)} \parallel_2^2 = \frac{1}{2m}\sum\limits_{i = 1}^{m}\parallel f^{(i)} - y^{(i)} \parallel_2^2$$
 
-对于样本 `(f^{(i)}, y^{(i)})`，`\frac{1}{2}{\parallel (f^{(i)} - y^{(i)} \parallel_2}^{2}` 的计算代码如下：
+对于样本 `(f^{(i)}, y^{(i)})`，`\frac{1}{2}\parallel f^{(i)} - y^{(i)} \parallel_2^2` 的计算代码如下：
 
-```
+
+
+```python
 import numpy as np
-f = np.array([0.1, 0.2,0.5])
-y = np.array([0.3, 0.4,0.2])
-loss =  np.sum((f - y) ** 2)/2 
+f = np.array([0.1, 0.2, 0.5])
+y = np.array([0.3, 0.4, 0.2])
+loss = np.sum((f - y) ** 2) / 2 
 print(loss)
 ```
 
 ```
-0.084999999999999999
+0.08499999999999999
 ```
-
-
-
 
 对于多个样本，$\mathcal{L}(F, Y) = \frac{1}{2m}{\parallel (f^{(i)} - y^{(i)}) \parallel_2}^{2}$ 可以通过以下代码计算：
 
-```
+```python
 F = np.array([[0.1, 0.2, 0.5], [0.1, 0.2, 0.5]])
 Y = np.array([[0.3, 0.4, 0.2], [0.3, 0.4, 0.2]])
 
@@ -11346,7 +11472,7 @@ print(loss)
 
 均方误差可以写成一个函数：
 
-```
+```python
 def mse_loss(F, Y, divid_2=False):
     m = F.shape[0]
     loss = np.sum((F - Y) ** 2) / m
@@ -11363,28 +11489,33 @@ mse_loss(F, Y, True)
 
 均方误差用于回归问题，对于分类问题，通常使用交叉熵损失。
 
-#### 2. 二分类交叉熵损失
+### 2. 二分类交叉熵损失
 
 对于二分类问题，输出层只有一个逻辑回归神经元，输出样本属于某一类别（如类别 1）的概率，所有样本的概率输出形成向量 `f`，训练样本的目标值用 1 或 0 表示样本属于哪一类。所有样本目标值组成的向量用 `y` 表示。则交叉熵损失为：
 
 $$
+
 \begin{matrix} 
+
 L(f, y) = \frac{1}{m}\sum\limits_{i = 1}^{m}L_{i}(y^{(i)}, f^{(i)}) = - \frac{1}{m}\sum\limits_{i = 1}^{m}\left\lbrack y^{(i)}\log(f^{(i)}) + (1 - y^{(i)})\log(1 - f^{(i)}) \right\rbrack \\ 
+
 = - \frac{1}{m}\text{np.sum}(y \log f + (1 - y)\log(1 - f)) 
+
 \end{matrix}
+
 $$
 
 其中 $y^{(i)}$ 取值为 1 或 0，表示样本所属类别，$f^{(i)}$ 表示样本属于取值为 1 的类别的概率。
 
 二分类交叉熵损失可以通过以下代码计算：
 
-```
+```python
 - (1./m) * np.sum(np.multiply(y, np.log(f)) + np.multiply((1 - y), np.log(1 - f)))
 ```
 
 例如：
 
-```
+```python
 # https://towardsdatascience.com/neural-net-from-scratch-using-numpy-71a31f6e3675
 f = np.array([0.1, 0.2, 0.5])  # 三个样本对应类别 1 的概率
 y = np.array([0, 1, 0])        # 对应 3 个样本的分类
@@ -11400,7 +11531,7 @@ print(loss)
 
 为了防止 `f` 或 `1-f` 取值为 0 导致 `log()` 函数异常，可以在对数计算中加入一个极小量 $\epsilon$，因此可以写出如下的二分类交叉熵损失函数：
 
-```
+```python
 def binary_crossentropy(f, y, epsilon=1e-8):
     # np.sum(y*np.log(f+epsilon)+ (1-y)*np.log(1-f+epsilon), axis=1)   
     m = len(y)
@@ -11413,7 +11544,7 @@ binary_crossentropy(f, y)
 0.8026485091802541
 ```
 
-#### 3. 多分类交叉熵损失
+### 3. 多分类交叉熵损失
 
 上述是二分类问题的交叉熵损失，可以推广到 2 类以上的多分类问题。$f_c^{(i)}$ 表示第 $i$ 个样本属于第 $c$ 个类别的概率，$y_c^{(i)}$ 用 1 或 0 判断第 $i$ 个样本是否属于类别 $c$，即独热向量 $y^{(i)}$ 表示样本目标值。根据第 3 章的 Softmax 回归可知，多个样本的交叉熵损失如下：
 
@@ -11422,10 +11553,15 @@ $$L(f, y) = \frac{1}{m}\sum\limits_{i = 1}^{m}L_{i}(\mathbf{y}^{(i)}, \mathbf{f}
 例如，若为 3 分类问题（$C=3$），某样本的 $f^{(i)}$ 和 $y^{(i)}$ 值为：
 
 $$
+
 \begin{matrix} 
+
 f^{(i)} = \begin{bmatrix} f_{1}^{(i)} & f_{2}^{(i)} & f_{3}^{(i)} \end{bmatrix} = \begin{bmatrix} 0.3 & 0.5 & 0.2 \end{bmatrix} \\ 
+
 y^{(i)} = \begin{bmatrix} y_{1}^{(i)} & y_{2}^{(i)} & y_{3}^{(i)} \end{bmatrix} = \begin{bmatrix} 0 & 0 & 1 \end{bmatrix} 
+
 \end{matrix}
+
 $$
 
 该样本的真实类别为第 3 类，预测值表示样本属于三个类别的概率。对该样本，其交叉熵损失为：
@@ -11440,22 +11576,27 @@ $$\mathcal{L}(f, y) = - \frac{1}{m}\text{sum}(\mathbf{y} \odot \log(\mathbf{f}))
 
 在 NumPy 代码中可写为：
 
-```
+```python
 -(1./m) * np.sum(np.multiply(y, np.log(f)))
 ```
 
 例如，对于 $m=2$ 个样本，Softmax 输出 $F$ 与样本目标值（独热向量）矩阵 $Y$ 如下：
 
 $$
+
 \begin{matrix} 
+
 F = \begin{bmatrix} 0.2 & 0.5 & 0.3 \\ 0.4 & 0.3 & 0.3 \end{bmatrix} \quad 
+
 Y = \begin{bmatrix} 0 & 0 & 1 \\ 1 & 0 & 0 \end{bmatrix} 
+
 \end{matrix}
+
 $$
 
 以下代码计算这 2 个样本的交叉熵损失：
 
-```
+```python
 def cross_entropy_loss_onehot(F, Y):
     m = len(F)  # F.shape[0]
     return -(1./m) * np.sum(np.multiply(Y, np.log(F)))
@@ -11479,7 +11620,7 @@ $$\mathcal{L}(f, y) = \frac{1}{m}\sum\limits_{i = 1}^{m}L_{i}(y^{(i)}, f^{(i)}) 
 
 因此，可以定义如下的多分类交叉熵计算函数：
 
-```
+```python
 def cross_entropy_loss(F, Y, onehot=False):
     m = len(F)              # F.shape[0] 样本数量
     if onehot:
@@ -11490,7 +11631,7 @@ def cross_entropy_loss(F, Y, onehot=False):
 
 在以下代码中，`F` 是 2 个样本的输出，每个样本的输出向量有 3 个分量，表示样本属于 3 个类别的概率，目标 `Y` 的第 $i$ 个分量表示第 $i$ 个样本对应的类别下标值（如 0, 1, 2）。
 
-```
+```python
 F = np.array([[0.2, 0.5, 0.3], [0.4, 0.3, 0.3]])  # 每行对应一个样本
 Y = np.array([2, 0])                               # 第 1 个样本属于第 2 类，第 2 个样本属于第 0 类
 
@@ -11503,23 +11644,20 @@ cross_entropy_loss(F, Y)
 
 以下代码将整数下标数组转换为独热数组。
 
-```
+```python
 # numpy.eye(number of classes)[vector containing the labels]
 n_C = np.max(Y) + 1        # 类别数量
 one_hot_y = np.eye(n_C)[Y]
 print(one_hot_y)
 ```
 
-
-
-
 ```
 [[0. 0. 1.]
-     [1. 0. 0.]]
+ [1. 0. 0.]]
 ```
 
-```
-cross_entropy_loss_onehot(F,one_hot_y)
+```python
+cross_entropy_loss_onehot(F, one_hot_y)
 ```
 
 ```
@@ -11528,7 +11666,7 @@ cross_entropy_loss_onehot(F,one_hot_y)
 
 当然，为了防止过拟合，可以在上述损失的基础上添加正则化项，对绝对值较大的模型参数施加更大的惩罚，以防止模型参数的绝对值过大。
 
-$$ \mathcal{L}(f f,y y) = \frac{1}{m}\sum\limits_{i = 1}^{m}L_{i}(y y^{(i)},f f^{(i)}) + \lambda\sum\limits_{l = 1}^{L} \parallel W W^{\lbrack l\rbrack} \parallel_{2}^{2} $$
+$$ \mathcal{L}(f, y) = \frac{1}{m}\sum\limits_{i = 1}^{m}L_{i}(y^{(i)}, f^{(i)}) + \lambda\sum\limits_{l = 1}^{L} \parallel W^{[l]} \parallel_{2}^{2} $$
 
 ### 4.1.7 基于数值梯度的神经网络训练
 
@@ -11547,7 +11685,7 @@ $$ \mathcal{L}(f f,y y) = \frac{1}{m}\sum\limits_{i = 1}^{m}L_{i}(y y^{(i)},f f^
 通常，神经网络的偏置初始化为 0，权重参数从高斯分布等分布中随机采样。如果某层神经元的数量为 $n^{(l)}$，上一层的输出值数量为 $n^{(l-1)}$，则该层的神经元权重矩阵 $W^{(l)}$ 是一个 $n^{(l-1)} \times n^{(l)}$ 矩阵，可以用以下 Python 代码初始化：
 
 ```python
-Wl = np.random.randn(n_l_1,n_l)* 0.01
+Wl = np.random.randn(n_l_1, n_l) * 0.01
 ```
 
 即将标准正态分布的所有随机值乘以 0.01。
@@ -11561,45 +11699,42 @@ def initialize_parameters(n_x, n_h, n_o):
     np.random.seed(2)            # 固定种子，使得每次运行此代码时
                                  # 随机数的值始终相同
   
-    W1 = np.random.randn(n_x,n_h)* 0.01
-    b1 = np.zeros((1,n_h))
-    W2 = np.random.randn(n_h,n_o) * 0.01
-    b2 = np.zeros((1,n_o))
+    W1 = np.random.randn(n_x, n_h) * 0.01
+    b1 = np.zeros((1, n_h))
+    W2 = np.random.randn(n_h, n_o) * 0.01
+    b2 = np.zeros((1, n_o))
     
     assert (W1.shape == (n_x, n_h))
     assert (b1.shape == (1, n_h))
     assert (W2.shape == (n_h, n_o))
     assert (b2.shape == (1, n_o))
     
-    parameters = [W1,b1,W2,b2]
+    parameters = [W1, b1, W2, b2]
     return parameters
 ```
 
 测试此函数：
 
 ```python
-n_x, n_h, n_o = 2,4,3
+n_x, n_h, n_o = 2, 4, 3
 
 parameters = initialize_parameters(n_x, n_h, n_o)
 
 print("W1 = " + str(parameters[0]))
-
 print("b1 = " + str(parameters[1]))
-
 print("W2 = " + str(parameters[2]))
-
 print("b2 = " + str(parameters[3]))
 ```
 
 ```
-W1 = [[-0.00416758 -0.00056267 -0.02136196 0.01640271]
-     [-0.01793436 -0.00841747 0.00502881 -0.01245288]]
-    b1 = [[0.0.0.0.]]
-    W2 = [[-1.05795222e-02 -9.09007615e-03 5.51454045e-03]
-     [ 2.29220801e-02 4.15393930e-04 -1.11792545e-02]
-     [5.39058321e-03-5.96159700e-03-1.91304965e-04]
-     [ 1.17500122e-02 -7.47870949e-03 9.02525097e-05]]
-    b2 = [[0.0.0.]]
+W1 = [[-0.00416758 -0.00056267 -0.02136196  0.01640271]
+ [-0.01793436 -0.00841747  0.00502881 -0.01245288]]
+b1 = [[0. 0. 0. 0.]]
+W2 = [[-1.05795222e-02 -9.09007615e-03  5.51454045e-03]
+ [ 2.29220801e-02  4.15393930e-04 -1.11792545e-02]
+ [ 5.39058321e-03 -5.96159700e-03 -1.91304965e-04]
+ [ 1.17500122e-02 -7.47870949e-03  9.02525097e-05]]
+b2 = [[0. 0. 0.]]
 ```
 
 编写前向计算函数 `forward_propagation(X, parameters)`：
@@ -11609,18 +11744,20 @@ def sigmoid(x):
     return 1 / (1 + np.exp(-x))
 
 def forward_propagation(X, parameters):     
-    W1,b1,W2,b2 = parameters       
+    W1, b1, W2, b2 = parameters       
    
-    Z1 = np.dot(X,W1) + b1    # Z1 shape： (3,2)(2,4)+(1,4)=>(3,4)  
+    Z1 = np.dot(X, W1) + b1    # Z1 shape： (3,2)(2,4)+(1,4)=>(3,4)  
     A1 = np.tanh(Z1)
-    Z2 = np.dot(A1,W2) + b2   # Z2 shape： (3,4)(4,3)+(1,3)=>(3,3) 
-    #A2 = sigmoid(Z2)  
+    Z2 = np.dot(A1, W2) + b2   # Z2 shape： (3,4)(4,3)+(1,3)=>(3,3) 
+    # A2 = sigmoid(Z2)  
    
-    assert(Z2.shape == (X.shape[0],3))
+    assert(Z2.shape == (X.shape[0], 3))
     return Z2
 ```
 
 可以测试此函数：
+
+
 
 ```python
 X = np.array([[1.,2.],[3.,4.],[5.,6.]])  # 每行对应一个样本
@@ -11679,8 +11816,6 @@ def compute_loss_reg(f,loss,X, Y, parameters,reg=1e-3):
 ```
 
 测试此函数：
-
-
 
 ```
 reg = 1e-3
@@ -11858,8 +11993,6 @@ plt.ylim(yy.min(), yy.max())
 
 神经网络模型的训练需要损失函数关于模型参数的梯度（偏导数）。数值求导法得到的梯度（导数）只是解析梯度（导数）的近似，精度不够。更重要的问题是数值求导需要对每个模型参数施加微小扰动，然后计算整个神经网络的损失。当神经网络规模较大（层数或每层神经元数较多）时，这种前向计算损失函数的开销也相对较大。例如，使用两层神经网络识别手写数字，一个样本是 28 × 28 = 784 个特征，使用批量梯度下降法，每个批次的样本数为 500，如果神经网络中间层有 100 个神经元，输出层有 10 个神经元。神经网络的模型参数数量为 784 × 100 + 100 + 100 × 10 + 10 = 79510，每次参数更新需要 2 次前向计算，总共 2 × 79510 次前向计算，每次计算都需要执行矩阵乘法和加法运算，例如第一层神经元的计算 `X * W^((1))` 是 500 × 784 矩阵与 784 × 100 矩阵的乘法运算。因此，计算量与样本数、每个样本的特征数和神经网络中的神经元数成正比。为每个模型参数计算数值偏导数的过程相互独立，必须独立执行两次前向计算（包括损失函数值的计算）。因此，数值求导的代价非常大，对于深度和大规模神经网络不可行。事实上，在深度学习中，使用 GPU 等并行计算硬件来加速神经网络的前向计算和梯度计算速度。
 
-
-
 因此，实际神经网络的训练是通过链式求导法则，计算损失函数关于模型参数的解析梯度（导数）。模型的损失可以沿正向计算，然后从损失关于最终输出值的梯度开始，沿正向计算的反方向，计算每一层模型参数的梯度。
 
 ### 4.2.1 正向计算与反向求导
@@ -11886,6 +12019,8 @@ plt.ylim(yy.min(), yy.max())
 
 如果知道损失函数关于每一层输出的梯度，如 `f'(h)`，就可以得到该层模型参数的梯度。例如，假设神经网络某一层的输入为 `x`，其输出 `a = σ(x*w + b) = σ(z)`。如果已知损失函数 `L` 关于 `a` 的导数为 `L'(a)`，则该层模型参数 `w` 的梯度为：
 
+
+
 `L'(w) = L'(a) * a'(z) * z'(w) = L'(a) * σ'(z) * x`
 
 对于神经网络模型，损失函数关于每一层输出、中间变量和输入的梯度计算过程，与正向传播的计算过程恰好相反。它是先计算损失函数关于输出层输出的梯度，然后逐层向前，计算损失函数关于每一层中间变量、模型参数和该层输入的梯度。这个计算过程称为**反向传播**。
@@ -11909,9 +12044,6 @@ plt.ylim(yy.min(), yy.max())
 函数正向计算函数值和反向计算导数的过程可以用图形表示。对于函数 `f(x, y) = (2*x + 3*y)² + (x - 4*y)²`，其正向计算函数值按照函数匹配过程如图 4-24 所示进行。反向求导过程恰好相反，如图 4-25 所示：
 
 **图 4-25** 函数 `f(x, y) = (2*x + 3*y)² + (x - 4*y)²` 的反向求导计算图
-
-
-
 
 #### 反向传播计算过程分析
 
@@ -11944,7 +12076,9 @@ plt.ylim(yy.min(), yy.max())
 对于上述 2 层神经网络，反向推导过程如下：
 
 $$
+
 \frac{\partial\mathcal{L}}{\partial a^{[2]}} \rightarrow \frac{\partial\mathcal{L}}{\partial z^{[2]}} \rightarrow \left(\frac{\partial\mathcal{L}}{\partial W^{[2]}}, \frac{\partial\mathcal{L}}{\partial b^{[2]}}, \frac{\partial\mathcal{L}}{\partial a^{[1]}}\right) \rightarrow \frac{\partial\mathcal{L}}{\partial z^{[1]}} \rightarrow \left(\frac{\partial\mathcal{L}}{\partial W^{[1]}}, \frac{\partial\mathcal{L}}{\partial b^{[1]}}\right)
+
 $$
 
 模型各层中间变量和参数的损失函数梯度依赖于正向计算过程中的结果（如 *a*^\[*l*\]）。为避免重复计算这些值，可在正向计算过程中将这些结果存储在神经网络对应层中，反向推导时直接使用这些存储结果，从而避免连续重复计算，提高效率。从计算图角度看，这些中间结果可保存在计算图对应节点上。当前深度学习平台通过计算图表达神经网络的前向传播和反向推导过程，并在计算图对应节点上保存相关中间计算结果。
@@ -11964,13 +12098,17 @@ $$
 根据 3.5 节，二分类的交叉熵损失 *L*(*f*, *y*) = −(*y* log(*f*) + (1 − *y*) log(1 − *f*)) 对 *f* 的导数为：
 
 $$
+
 \frac{\partial L}{\partial f} = - \left(\frac{y}{f} - \frac{1 - y}{1 - f}\right) = \frac{f - y}{f(1 - f)}
+
 $$
 
 而 *f* = *σ*(*z*) 对 *z* 的导数为：
 
 $$
+
 \frac{\partial f}{\partial z} = \sigma(z)(1 - \sigma(z)) = f(1 - f)
+
 $$
 
 因此，*L*(*f*, *y*) 对 *z* 的导数为：*f* − *y*。
@@ -11978,34 +12116,45 @@ $$
 对于二分类问题，多个样本的交叉熵为单个样本交叉熵的均值：
 
 $$
+
 L(F, Y) = \frac{1}{m}\sum_{i=1}^{m} L_i(y^{(i)}, f^{(i)}) = - \frac{1}{m}\sum_{i=1}^{m} \left[ y^{(i)}\log(f^{(i)}) + (1 - y^{(i)})\log(1 - f^{(i)}) \right]
+
 $$
-
-
-
 
 因此，交叉熵损失 *L*(*FF*, *YY*) 关于 *zz* 的梯度为：
 
 $$
+
 \frac{\partial L}{\partial FF} = \frac{1}{m}\frac{FF - YY}{FF(1 - FF)}
+
 $$
 
 $$
+
 \frac{\partial FF}{\partial ZZ} = \sigma(ZZ)(1 - \sigma(ZZ)) = FF(1 - FF)
+
 $$
 
 $$
+
 \frac{\partial \mathcal{L}}{\partial ZZ} = \frac{\partial L}{\partial ff}\frac{\partial \pmbf}{\partial zz} = \frac{1}{m}(FF - YY)
+
 $$
 
 目前：
 
 $$
+
 \begin{matrix}
+
 FF = \begin{bmatrix} f^{(1)} \\ \vdots \\ f^{(i)} \\ \vdots \\ f^{(m)} \end{bmatrix} \quad\quad
+
 YY = \begin{bmatrix} y^{(1)} \\ \vdots \\ y^{(i)} \\ \vdots \\ y^{(m)} \end{bmatrix} \quad\quad
+
 \frac{\partial \mathcal{L}}{\partial ZZ} = \frac{1}{m}\begin{bmatrix} f^{(1)} - y^{(1)} \\ \vdots \\ f^{(i)} - y^{(i)} \\ \vdots \\ f^{(m)} - y^{(m)} \end{bmatrix}
+
 \end{matrix}
+
 $$
 
 需要注意的是：因为每个样本对应不同的 *z*^((*i*))，交叉熵损失 *L* 应分别对每个 *z*^((*i*)) 求导，而不是将这些导数相加。此外，上述公式中的向量乘法和除法均为逐元素操作。
@@ -12066,7 +12215,9 @@ print(loss, grad)
 若输出值维度为 K，则：
 
 $$
+
 \frac{1}{2}{\parallel (ff^{(i)} - yy^{(i)}) \parallel_2}^{2} = \frac{1}{2}\sum_{k=1}^{K}{(f_k^{(i)} - y_k^{(i)})}^{2}
+
 $$
 
 误差关于 *f*^((*i*)) 的梯度为 (*f*[1]^((*i*)) − *y*[1]^((*i*)), *f*[1]^((*i*)) − *y*[2]^((*i*)), ⋯, *f*[*K*]^((*i*)) − *y*[*K*]^((*i*))) = *f*^((*i*)) − *y*^((*i*))。
@@ -12074,7 +12225,9 @@ $$
 对于由多个样本组成的矩阵 *FF*, *YY*，均方误差 $L(FF, YY) = \frac{1}{2m}\sum_{i=1}^{m}{\parallel (ff^{(i)} - yy^{(i)}) \parallel_2}^{2}$。*FF* 的梯度为 $\frac{1}{m}(FF - YY)$。因为 *FF* = *ZZ*，即：
 
 $$
+
 \frac{\partial \mathcal{L}}{\partial ZZ} = \frac{\partial \mathcal{L}}{\partial FF} = \frac{1}{m}(FF - YY)
+
 $$
 
 ```python
@@ -12085,15 +12238,17 @@ def mse_loss_grad(f, y):
     return loss, grad
 ```
 
+
+
 #### 3. 多分类交叉熵损失函数在输出端的梯度
 
-对于多分类问题，神经网络通过最后的 softmax 函数将上一层的输出转化为具有直观含义的概率，表示样本属于各个类别的概率。由于 softmax 神经元不包含任何模型参数，有时 softmax 不作为神经网络的最后一层，而是将上一层作为神经网络的最后输出层。无论采用哪种方案，通常都在最后计算 softmax 回归中的多分类交叉熵损失。通常采用后一种方案，即假设输出层输出分数而非概率。该输出层的神经元为线性回归神经元，直接输出其输入的加权和作为激活值，即 *f*[*i*] = *a*[*i*]^((*L*)) = *z*[*i*]^((*L*))（假设这是一个 L 层神经网络，该输出层的序号为 L）。
+对于多分类问题，神经网络通过最后的 softmax 函数将上一层的输出转化为具有直观含义的概率，表示样本属于各个类别的概率。由于 softmax 神经元不包含任何模型参数，有时 softmax 不作为神经网络的最后一层，而是将上一层作为神经网络的最后输出层。无论采用哪种方案，通常都在最后计算 softmax 回归中的多分类交叉熵损失。通常采用后一种方案，即假设输出层输出分数而非概率。该输出层的神经元为线性回归神经元，直接输出其输入的加权和作为激活值，即 `f[i] = a[i]^(L) = z[i]^(L)`（假设这是一个 L 层神经网络，该输出层的序号为 L）。
 
-设输出层的输出 *zz* 经 softmax 函数产生输出 *ff*，再与目标值 *yy* 计算交叉熵损失 *L*(*ff*, *yy*)。
+设输出层的输出 `zz` 经 softmax 函数产生输出 `ff`，再与目标值 `yy` 计算交叉熵损失 `L(ff, yy)`。
 
-对于多个样本，输出层的输出可写为矩阵 *ZZ* = (*zz*[1], ⋯, *zz*[*i*], ⋯, *zz*[*m*])^(*T*)，经 softmax 函数产生的输出也为表示概率的矩阵 *FF* = (*ff*, ⋯, *ff*[*i*], ⋯, *ff*[*m*])^(*T*)。根据第 3.6 节)，若每个目标值 *yy*[*i*] 使用独热向量表示，则 *YY* 也是一个矩阵。此时，多分类交叉熵损失 *L*(*F*, *Y*) 关于 *ZZ* 的梯度为：$\frac{1}{m}(FF - YY)$。
+对于多个样本，输出层的输出可写为矩阵 `ZZ = (zz[1], ⋯, zz[i], ⋯, zz[m])^T`，经 softmax 函数产生的输出也为表示概率的矩阵 `FF = (ff, ⋯, ff[i], ⋯, ff[m])^T`。根据第 3.6 节，若每个目标值 `yy[i]` 使用独热向量表示，则 `YY` 也是一个矩阵。此时，多分类交叉熵损失 `L(F, Y)` 关于 `ZZ` 的梯度为：$\frac{1}{m}(FF - YY)$。
 
-若每个目标值 *yy*[*i*] 为整数，表示样本所属类别的下标，则多分类交叉熵损失 *L*(*F*, *Y*) 关于 *ZZ* 的梯度为：$\frac{1}{m}(FF - I_i I_i)$。其中 *I*[*i*]*I*[*i*] 的每一行为独热向量，即将样本对应的整数转换为独热向量，因此 *I*[*i*]*I*[*i*] 由 *I*[*i*]*I*[*i*] 组成，与上述独热向量 $\pmb{Y}$ 相同。
+若每个目标值 `yy[i]` 为整数，表示样本所属类别的下标，则多分类交叉熵损失 `L(F, Y)` 关于 `ZZ` 的梯度为：$\frac{1}{m}(FF - I_i I_i)$。其中 `I[i]I[i]` 的每一行为独热向量，即将样本对应的整数转换为独热向量，因此 `I[i]I[i]` 由 `I[i]I[i]` 组成，与上述独热向量 $\pmb{Y}$ 相同。
 
 以下 Python 代码将整数值的目标向量转换为独热向量矩阵：
 
@@ -12102,12 +12257,9 @@ I_i = np.zeros_like(Z)
 I_i[np.arange(len(Z)), Y] = 1
 ```
 
-可以看出，回归的欧氏损失、二分类的交叉熵损失函数、多分类的交叉熵损失，关于输出层 *ZZ* 的梯度惊人地一致。均为 $\frac{1}{m}(FF - YY)$。
+可以看出，回归的欧氏损失、二分类的交叉熵损失函数、多分类的交叉熵损失，关于输出层 `ZZ` 的梯度惊人地一致。均为 $\frac{1}{m}(FF - YY)$。
 
 给定多样本输出层加权和 Z 和目标值 Y，以下代码计算多分类交叉熵关于 Z 的梯度（见第 3.6 节）：
-
-
-
 
 ```python
 def softmax(x):   
@@ -12144,99 +12296,116 @@ def cross_entropy_grad(Z, Y, onehot=False, softmax_out=False):
 $\mathcal{L}$ 是 $z^{[2]}z^{[2]}$ = ($z_1^{[2]}$, $z_2^{[2]}$, $z_3^{[2]}$) 的函数，且 $z^{[2]}z^{[2]}$ = $a^{[1]}a^{[1]}$$W^{[2]}$$W^{[2]}$ + $b$$b^{[2]}$，即 $z^{[2]}z^{[2]}$ 是 $a^{[1]}a^{[1]}$、$W^{[2]}$$W^{[2]}$、$b^{[2]}$ 的函数。
 
 $$
+
 \begin{matrix} 
+
 z^{[2]} & {= (z_1^{[2]},z_2^{[2]},z_3^{[2]}) = (a_1^{[1]},a_2^{[1]},a_3^{[1]},a_4^{[1]})\begin{bmatrix} W_{11}^{(2)} & W_{12}^{(2)} & W_{13}^{(2)} \\ W_{21}^{(2)} & W_{22}^{(2)} & W_{23}^{(2)} \\ W_{31}^{(2)} & W_{32}^{(2)} & W_{34}^{(2)} \\ W_{41}^{(2)} & W_{42}^{(2)} & W_{44}^{(2)} \\ \end{bmatrix} + (b_1^{[2]},b_2^{[2]},b_3^{[2]})} \\ 
+
 & {= (a_1^{[1]}W_{11}^{(2)} + a_2^{[1]}W_{21}^{(2)} + a_3^{[1]}W_{31}^{(2)} + a_4^{[1]}W_{41}^{(2)} + b_1^{[2]},} \\ 
+
 & {\quad a_1^{[1]}W_{12}^{(2)} + a_2^{[1]}W_{22}^{(2)} + a_3^{[1]}W_{32}^{(2)} + a_4^{[1]}W_{42}^{(2)} + b_1^{[2]}} \\ 
+
 & {\quad a_1^{[1]}W_{13}^{(2)} + a_2^{[1]}W_{23}^{(2)} + a_3^{[1]}W_{33}^{(2)} + a_4^{[1]}W_{43}^{(2)} + b_1^{[2]})} \\ 
+
 \end{matrix}
+
 $$
 
 根据链式求导法则，有：
 
 $$
+
 \frac{\partial\mathcal{L}}{\partial a_1^{[1]}} = \frac{\partial\mathcal{L}}{\partial z_1^{[2]}}\frac{\partial z_1^{[2]}}{\partial a_1^{[1]}} + \frac{\partial\mathcal{L}}{\partial z_2^{[2]}}\frac{\partial z_2^{[2]}}{\partial a_1^{[1]}} + \frac{\partial\mathcal{L}}{\partial z_3^{[2]}}\frac{\partial z_3^{[2]}}{\partial a_1^{[1]}} = \frac{\partial\mathcal{L}}{\partial z_1^{[2]}}W_{11}^{[2]} + \frac{\partial\mathcal{L}}{\partial z_2^{[2]}}W_{12}^{[2]} + \frac{\partial\mathcal{L}}{\partial z_2^{[2]}}W_{13}^{[2]}
+
 $$
 
 $$
+
 \frac{\partial\mathcal{L}}{\partial a_2^{[1]}} = \frac{\partial\mathcal{L}}{\partial z_1^{[2]}}\frac{\partial z_1^{[2]}}{\partial a_2^{[1]}} + \frac{\partial\mathcal{L}}{\partial z_2^{[2]}}\frac{\partial z_2^{[2]}}{\partial a_2^{[1]}} + \frac{\partial\mathcal{L}}{\partial z_3^{[2]}}\frac{\partial z_3^{[2]}}{\partial a_2^{[1]}} = \frac{\partial\mathcal{L}}{\partial z_1^{[2]}}W_{21}^{[2]} + \frac{\partial\mathcal{L}}{\partial z_2^{[2]}}W_{22}^{[2]} + \frac{\partial\mathcal{L}}{\partial z_2^{[2]}}W_{23}^{[2]}
+
 $$
 
 $$
+
 \frac{\partial\mathcal{L}}{\partial a_3^{[1]}} = \frac{\partial\mathcal{L}}{\partial z_1^{[2]}}\frac{\partial z_1^{[2]}}{\partial a_3^{[1]}} + \frac{\partial\mathcal{L}}{\partial z_2^{[2]}}\frac{\partial z_2^{[2]}}{\partial a_3^{[1]}} + \frac{\partial\mathcal{L}}{\partial z_3^{[2]}}\frac{\partial z_3^{[2]}}{\partial a_3^{[1]}} = \frac{\partial\mathcal{L}}{\partial z_1^{[2]}}W_{31}^{[2]} + \frac{\partial\mathcal{L}}{\partial z_2^{[2]}}W_{32}^{[2]} + \frac{\partial\mathcal{L}}{\partial z_2^{[2]}}W_{33}^{[2]}
+
 $$
 
 $$
+
 \frac{\partial\mathcal{L}}{\partial a_4^{[1]}} = \frac{\partial\mathcal{L}}{\partial z_1^{[2]}}\frac{\partial z_1^{[2]}}{\partial a_4^{[1]}} + \frac{\partial\mathcal{L}}{\partial z_2^{[2]}}\frac{\partial z_2^{[2]}}{\partial a_4^{[1]}} + \frac{\partial\mathcal{L}}{\partial z_3^{[2]}}\frac{\partial z_3^{[2]}}{\partial a_4^{[1]}} = \frac{\partial\mathcal{L}}{\partial z_1^{[2]}}W_{41}^{[2]} + \frac{\partial\mathcal{L}}{\partial z_2^{[2]}}W_{42}^{[2]} + \frac{\partial\mathcal{L}}{\partial z_2^{[2]}}W_{43}^{[2]}
+
 $$
 
 因此：
 
 $$
+
 \begin{matrix} 
+
 {\frac{\partial\mathcal{L}}{\partial a^{[1]}} = (\frac{\partial\mathcal{L}}{\partial a_1^{[1]}},\frac{\partial\mathcal{L}}{\partial a_2^{[1]}},\frac{\partial\mathcal{L}}{\partial a_3^{[1]}},\frac{\partial\mathcal{L}}{\partial a_3^{[1]}}) = (\frac{\partial\mathcal{L}}{\partial z_1^{[2]}},\frac{\partial\mathcal{L}}{\partial z_2^{[2]}},\frac{\partial\mathcal{L}}{\partial z_3^{[2]}})\begin{bmatrix} W_{11}^{(2)} & W_{21}^{(2)} & W_{31}^{(2)} & W_{41}^{(2)} \\ W_{12}^{(2)} & W_{22}^{(2)} & W_{32}^{(2)} & W_{42}^{(2)} \\ W_{13}^{(2)} & W_{23}^{(2)} & W_{33}^{(2)} & W_{43}^{(2)} \\ \end{bmatrix} = \frac{\partial\mathcal{L}}{\partial z^{[2]}}W^{[2]^T}} \\ 
+
 \end{matrix}
+
 $$
 
 同理：
-
-
-
-
 
 ##### 反向传播梯度推导
 
 ###### 输出层（第 2 层）权重梯度
 
 $$
+
 \frac{\partial\mathcal{L}}{\partial W_{11}^{[2]}} = \frac{\partial\mathcal{L}}{\partial z_{1}^{[2]}}\frac{\partial z_{1}^{[2]}}{\partial W_{11}^{[2]}} + \frac{\partial\mathcal{L}}{\partial z_{2}^{[2]}}\frac{\partial z_{2}^{[2]}}{\partial W_{11}^{[2]}} + \frac{\partial\mathcal{L}}{\partial z_{3}^{[2]}}\frac{\partial z_{3}^{[2]}}{\partial W_{11}^{[2]}} = \frac{\partial\mathcal{L}}{\partial z_{1}^{[2]}}\frac{\partial z_{1}^{[2]}}{\partial W_{11}^{[2]}} + 0 + 0 = \frac{\partial\mathcal{L}}{\partial z_{1}^{[2]}}\frac{\partial z_{1}^{[2]}}{\partial W_{11}^{[2]}} = \frac{\partial\mathcal{L}}{\partial z_{1}^{[2]}}a_{1}^{[1]}
+
 $$
 
 这是因为 `W[11]^[2]` 仅与 `z[1]^[2]` 相关，`z[2]^[2]` 和 `z[3]^[2]` 不依赖于 `W[11]^[2]`，所以后两个偏导数均为 0。因为 `W^[2]` 的第 i 列仅贡献给 `z[i]^[2]`（即只有 `z[i]^[2]` 依赖于 `W^[2]` 的第 i 列），所以：
 
 $$
+
 \frac{\partial\mathcal{L}}{\partial W_{i1}^{[2]}} = \frac{\partial\mathcal{L}}{\partial z_{1}^{[2]}}a_{i}^{[1]}
+
 $$
 
 $$
+
 \frac{\partial\mathcal{L}}{\partial W_{i2}^{[2]}} = \frac{\partial\mathcal{L}}{\partial z_{2}^{[2]}}a_{i}^{[1]}
+
 $$
 
 $$
+
 \frac{\partial\mathcal{L}}{\partial W_{i3}^{[2]}} = \frac{\partial\mathcal{L}}{\partial z_{3}^{[2]}}a_{i}^{[1]}
+
 $$
 
 ###### 矩阵形式
 
 $$
-\frac{\partial\mathcal{L}}{\partial W^{[2]}} =
-\begin{bmatrix}
-\frac{\partial\mathcal{L}}{\partial W_{11}^{[2]}} & \frac{\partial\mathcal{L}}{\partial W_{12}^{[2]}} & \frac{\partial\mathcal{L}}{\partial W_{13}^{[2]}} \\
-\frac{\partial\mathcal{L}}{\partial W_{21}^{[2]}} & \frac{\partial\mathcal{L}}{\partial W_{22}^{[2]}} & \frac{\partial\mathcal{L}}{\partial W_{23}^{[2]}} \\
-\frac{\partial\mathcal{L}}{\partial W_{31}^{[2]}} & \frac{\partial\mathcal{L}}{\partial W_{32}^{[2]}} & \frac{\partial\mathcal{L}}{\partial W_{33}^{[2]}} \\
-\frac{\partial\mathcal{L}}{\partial W_{41}^{[2]}} & \frac{\partial\mathcal{L}}{\partial W_{42}^{[2]}} & \frac{\partial\mathcal{L}}{\partial W_{43}^{[2]}}
-\end{bmatrix}
-=
-\begin{bmatrix}
-\frac{\partial\mathcal{L}}{\partial z_{1}^{[2]}}a_{1}^{[1]} & \frac{\partial\mathcal{L}}{\partial z_{2}^{[2]}}a_{1}^{[1]} & \frac{\partial\mathcal{L}}{\partial z_{3}^{[2]}}a_{1}^{[1]} \\
-\frac{\partial\mathcal{L}}{\partial z_{1}^{[2]}}a_{2}^{[1]} & \frac{\partial\mathcal{L}}{\partial z_{2}^{[2]}}a_{2}^{[1]} & \frac{\partial\mathcal{L}}{\partial z_{3}^{[2]}}a_{2}^{[1]} \\
-\frac{\partial\mathcal{L}}{\partial z_{1}^{[2]}}a_{3}^{[1]} & \frac{\partial\mathcal{L}}{\partial z_{2}^{[2]}}a_{3}^{[1]} & \frac{\partial\mathcal{L}}{\partial z_{3}^{[2]}}a_{3}^{[1]} \\
-\frac{\partial\mathcal{L}}{\partial z_{1}^{[2]}}a_{4}^{[1]} & \frac{\partial\mathcal{L}}{\partial z_{2}^{[2]}}a_{4}^{[1]} & \frac{\partial\mathcal{L}}{\partial z_{3}^{[2]}}a_{4}^{[1]}
-\end{bmatrix}
-=
-\begin{bmatrix}
-a_{1}^{[1]} \\
-a_{2}^{[1]} \\
-a_{3}^{[1]} \\
-a_{4}^{[1]}
-\end{bmatrix}
-\begin{bmatrix}
-\frac{\partial\mathcal{L}}{\partial z_{1}^{[2]}} & \frac{\partial\mathcal{L}}{\partial z_{2}^{[2]}} & \frac{\partial\mathcal{L}}{\partial z_{3}^{[2]}}
-\end{bmatrix}
-= {a^{[1]}}^T \frac{\partial\mathcal{L}}{\partial z^{[2]}}
-$$
 
-###### 输出层偏置梯度
+\frac{\partial\mathcal{L}}{\partial W^{[2]}} =
+
+\begin{bmatrix}
+
+\frac{\partial\mathcal{L}}{\partial W_{11}^{[2]}} & \frac{\partial\mathcal{L}}{\partial W_{12}^{[2]}} & \frac{\partial\mathcal{L}}{\partial W_{13}^{[2]}} \\
+
+\frac{\partial\mathcal{L}}{\partial W_{21}^{[2]}} & \frac{\partial\mathcal{L}}{\partial W_{22}^{[2]}} & \frac{\partial\mathcal{L}}{\partial W_{23}^{[2]}} \\
+
+\frac{\partial\mathcal{L}}{\partial W_{31}^{[2]}} & \frac{\partial\mathcal{L}}{\partial W_{32}^{[2]}} & \frac{\partial\mathcal{L}}{\partial W_{33}^{[2]}} \\
+
+\frac{\partial\mathcal{L}}{\partial W_{41}^{[2]}} & \frac{\partial\mathcal{L}}{\partial W_{42}^{[2]}} & \frac{\partial\mathcal{L}}{\partial W_{43}^{[2]}}
+
+\end{bmatrix}
+
+=
+
+\begin{bmatrix}
+
+
+
+## 输出层偏置梯度
 
 显然：
 
@@ -12246,7 +12415,7 @@ $$
 
 至此，已获得第 l=2 层所有变量 `W^[2]`、`b^[2]`、`a^[1]` 的损失函数梯度。
 
-###### 隐藏层（第 1 层）梯度推导
+## 隐藏层（第 1 层）梯度推导
 
 因为 `a^[1] = g(z^[1])`，即
 
@@ -12274,11 +12443,7 @@ $$
 
 因此，从损失函数关于输出层加权和的梯度 $\frac{\partial\mathcal{L}}{\partial z^{[2]}}$ 出发，根据反向推导过程，获得损失函数关于各层相关变量的梯度。
 
-
-
-
-
-####### 多样本向量化表示的反向推导
+## 多样本向量化表示的反向推导
 
 正如通用机器学习一样，训练神经网络时，通常通过最小化多个样本的预测值与真实值之间的误差（损失）来求解模型参数。损失是模型参数以及中间变量（如 `a^[l]`、`z^[l]`）的函数。
 
@@ -12356,20 +12521,17 @@ $$
 \frac{\partial\mathcal{L}}{\partial b^{[2]}} = \text{np.sum}\left(\frac{\partial\mathcal{L}}{\partial Z^{[2]}}, \text{axis}=0, \text{keepdims}=\text{True}\right)
 $$
 
-
-
-
-
-####### 3. 列向量形式下的梯度计算公式
+## 3. 列向量形式下的梯度计算公式
 
 如果样本、中间变量及其梯度均为列向量形式，例如 `x`、`a`^(\[1\])、`z`^(\[1\])、`b`^(\[1\])、`a`^(\[2\])、`z`^(\[2\])、`b`^(\[2\]) 均为列向量，且 `W`^(\[1\])、`W`^(\[2\]) 的一行对应一个神经元的权重，即：
 
 `z`^(\[1\]) = `W`^(\[1\])`x` + `b`^(\[1\]) = `W`^(\[1\])`a`^(\[0\]) + `b`^(\[1\])  
+
 `z`^(\[2\]) = `W`^(\[2\])`a`^(\[1\]) + `b`^(\[2\])
 
 则可类似推导出对应公式：
 
-**单样本形式：**
+### 单样本形式
 
 $$
 \frac{\partial\mathcal{L}}{\partial W^{\lbrack 2\rbrack}} = \frac{\partial\mathcal{L}}{\partial z^{\lbrack 2\rbrack}}{z^{\lbrack 1\rbrack}}^{T} \quad\quad \frac{\partial\mathcal{L}}{\partial b^{\lbrack 2\rbrack}} = \frac{\partial\mathcal{L}}{\partial z^{\lbrack 2\rbrack}} \quad\quad \frac{\partial\mathcal{L}}{\partial a^{\lbrack 1\rbrack}} = {W^{\lbrack 2\rbrack}}^{T}\frac{\partial\mathcal{L}}{\partial z^{\lbrack 2\rbrack}}
@@ -12379,17 +12541,19 @@ $$
 \frac{\partial\mathcal{L}}{\partial z^{\lbrack 1\rbrack}} = \frac{\partial L}{\partial z^{\lbrack 1\rbrack}} \odot g^{\prime}(z^{\lbrack 1\rbrack}) \quad\quad \frac{\partial\mathcal{L}}{\partial W^{\lbrack 1\rbrack}} = \frac{\partial\mathcal{L}}{\partial z^{\lbrack 1\rbrack}}{z^{\lbrack 0\rbrack}}^{T} \quad\quad \frac{\partial\mathcal{L}}{\partial b^{\lbrack 1\rbrack}} = \frac{\partial\mathcal{L}}{\partial z^{\lbrack 1\rbrack}}
 $$
 
-**多样本形式：**
+### 多样本形式
 
 $$
 \frac{\partial\mathcal{L}}{\partial W^{\lbrack 2\rbrack}} = \frac{\partial\mathcal{L}}{\partial Z^{\lbrack 2\rbrack}}{A^{\lbrack 1\rbrack}}^{T} \quad\quad \frac{\partial\mathcal{L}}{\partial b^{\lbrack 2\rbrack}} = np.sum(\frac{\partial\mathcal{L}}{\partial Z^{\lbrack 2\rbrack}}, axis = 1, keepdims = True) \quad\quad \frac{\partial\mathcal{L}}{\partial A^{\lbrack 1\rbrack}} = {W^{\lbrack 2\rbrack}}^{T}\frac{\partial\mathcal{L}}{\partial Z^{\lbrack 2\rbrack}}
 $$
 
+
+
 $$
-\frac{\partial\mathcal{L}}{\partial Z^{\lbrack 1\rbrack}} = \frac{\partial L}{\partial A^{\lbrack 1\rbrack}} \odot g^{\prime}(Z^{\lbrack 1\rbrack}) \quad\quad \frac{\partial\mathcal{L}}{\partial W^{\lbrack 1\rbrack}} = \frac{\partial\mathcal{L}}{\partial Z^{\lbrack 1\rbrack}}{A^{\lbrack 0\rbrack}}^{T} \quad\quad \frac{\partial\mathcal{L}}{\partial b^{\lbrack 1\rbrack}} = np.sum(\frac{\partial\mathcal{L}}{\partial Z^{\lbrack 1\rbrack}}, axis = 1, keepdims = True)
+\frac{\partial\mathcal{L}}{\partial Z^{[1]}} = \frac{\partial L}{\partial A^{[1]}} \odot g'(Z^{[1]}) \quad\quad \frac{\partial\mathcal{L}}{\partial W^{[1]}} = \frac{\partial\mathcal{L}}{\partial Z^{[1]}}{A^{[0]}}^{T} \quad\quad \frac{\partial\mathcal{L}}{\partial b^{[1]}} = np.sum(\frac{\partial\mathcal{L}}{\partial Z^{[1]}}, axis = 1, keepdims = True)
 $$
 
-对于包含正则项的损失函数，在计算梯度时，也会计算正则项对各模型参数的偏导数。若正则项为 $\lambda \parallel W W^{2} \parallel = \lambda\sum\limits_{l}\sum\limits_{ij}{W W_{ij}^{\lbrack l\rbrack}}^{2}$，则 `W``W`[`i``j`]^(\[`l`\]) 的偏导数为 2`λ``W``W`[`i``j`]^(\[`l`\])，写成向量形式即为 2`λ``W``W`。
+对于包含正则项的损失函数，在计算梯度时，也会计算正则项对各模型参数的偏导数。若正则项为 $\lambda \parallel W W^{2} \parallel = \lambda\sum\limits_{l}\sum\limits_{ij}{W W_{ij}^{[l]}}^{2}$，则 `WW[i][j]^[l]` 的偏导数为 `2 * λ * WW[i][j]^[l]`，写成向量形式即为 `2 * λ * WW`。
 
 对于上述 2 层神经网络，在前向计算的基础上（即前向计算中的 `A0` 和 `A1` 已知），以下代码给出了反向推导过程（若第一层的激活函数为 Relu）：
 
@@ -12491,9 +12655,6 @@ class TwoLayerNN:
         Z2 = np.dot(A1, W2) + b2
         return Z2
 ```
-
-
-
 
 `TwoLayerNN` 的构造函数 `__init__()` 接受输入层、隐藏层和输出层的神经元数量作为参数，并初始化 2 层神经网络的模型参数。`train()` 用于训练神经网络模型，即根据训练样本，使用梯度下降算法计算最佳模型参数，使这些训练样本的交叉熵损失最小。`train()` 的参数包括一组训练样本 (`X`, `y`)、正则化参数 `reg` 以及梯度下降法的相关超参数（如 `iterations`、学习率 `learning_rate` 和收敛误差）。在梯度下降法的每一步迭代中，`train()` 函数首先前向计算样本的输出值及其中间变量 (`Z1`, `A1`, `Z2`)，使用 softmax 将得分转换为概率值并计算多分类交叉熵损失 (`data_loss`)，然后计算交叉熵损失 (`data_loss`) 关于输出层输出的梯度 `dZ2`，并反向传播以求得关于中间变量和模型参数的梯度（模型参数的梯度包含正则项关于模型参数的梯度 `2 * reg * W2`、`2 * reg * W1`）。
 
@@ -12612,7 +12773,6 @@ $$
 {z^{[l]} = \begin{bmatrix} z_{1}^{[l]} \\ z_{2}^{[l]} \\ \vdots \\ z_{m}^{[l]} \\ \end{bmatrix} = \begin{bmatrix} {\sum\limits_{k = 1}^{n}W_{1k}^{[l]}a_{k}^{[l - 1]} + b_{1}^{[l]}} \\ {\sum\limits_{k = 1}^{n}W_{2k}^{[l]}a_{k}^{[l - 1]} + b_{2}^{[l]}} \\ \vdots \\ {\sum\limits_{k = 1}^{n}W_{mk}^{[l]}a_{k}^{[l - 1]} + b_{m}^{[l]}} \\ \end{bmatrix}} \\
 \end{matrix}
 $$
-
 
 
 
@@ -12748,9 +12908,6 @@ $$
 \delta^{[l-1]} = ({W^{[l]}}^{T} \delta^{[l]}) \odot g'(z^{[l-1]})
 $$
 
-
-
-
 在反向推导过程中，不需要计算中间层关于 `a[l]` 的梯度，只需计算损失函数关于 `z[l]` 的梯度 `δ[l]`。
 
 最后需要注意的是，如果输出层不直接输出加权和 `z[L]`，而是经过激活函数 `a[L] = f(z[L])` 输出，对于方差损失 $\frac{1}{2} \parallel a[L] - y \parallel^{2}$，损失函数关于 `a[L]` 的梯度 $\frac{\partial\mathcal{L}}{\partial a[L]} = a[L] - y$，然后根据 $\frac{\partial\mathcal{L}}{\partial z[L]} = \frac{\partial\mathcal{L}}{\partial a[L]}f'(z[L])$ 计算梯度 $\frac{\partial\mathcal{L}}{\partial z[L]}$。
@@ -12818,31 +12975,40 @@ $$
 
 1.  **前向传播计算模型输出和损失函数值**：
     *   1.1 从第一层开始，依次计算各后续层的中间变量和激活输出值，直到输出层。
+
         $$Z[l] = X W[l] + b[l] = A[l-1] W[l] + b[l]$$
+
         $$A[l] = gl$$
+
     *   1.2 根据不同的损失评价标准计算损失函数值
+
         $$\mathcal{L} = \mathcal{L}(A[L], y)$$
 
 2.  **反向推导**：
-    *   计算损失函数关于输出层输出的梯度，即 $\delta^{[L]} = \frac{\partial\mathcal{L}}{\partial Z^{[L]}}$
-    *   从输出层 L 一直到第 1 层，计算损失函数关于 W、b、x 的梯度 $\frac{\partial\mathcal{L}}{\partial W^{[l]}}, \frac{\partial\mathcal{L}}{\partial b^{[l]}}, \frac{\partial\mathcal{L}}{\partial A^{[l-1]}}, \frac{\partial\mathcal{L}}{\partial Z^{[l-1]}}$。
-
-    $$
-    \frac{\partial\mathcal{L}}{\partial W^{[l]}} = {A^{[l-1]}}^{T}\frac{\partial\mathcal{L}}{\partial Z^{[l]}}
-    $$
-    $$
-    \frac{\partial\mathcal{L}}{\partial b^{[1]}} = np.sum(\frac{\partial\mathcal{L}}{\partial Z^{[1]}}, axis=0, keepdims=True)
-    $$
-    $$
-    \frac{\partial\mathcal{L}}{\partial A^{[l-1]}} = \frac{\partial\mathcal{L}}{\partial Z^{[l]}}{W^{[l]}}^{T}
-    $$
-    $$
-    \frac{\partial\mathcal{L}}{\partial Z^{[l]}} = \frac{\partial\mathcal{L}}{\partial A^{[l]}} \cdot g'(Z^{[l]})
-    $$
-
-3.  **更新模型参数**
 
 
+
+* 计算损失函数关于输出层输出的梯度，即 $\delta^{[L]} = \frac{\partial\mathcal{L}}{\partial Z^{[L]}}$
+
+* 从输出层 L 一直到第 1 层，计算损失函数关于 W、b、x 的梯度 $\frac{\partial\mathcal{L}}{\partial W^{[l]}}, \frac{\partial\mathcal{L}}{\partial b^{[l]}}, \frac{\partial\mathcal{L}}{\partial A^{[l-1]}}, \frac{\partial\mathcal{L}}{\partial Z^{[l-1]}}$。
+
+$$
+\frac{\partial\mathcal{L}}{\partial W^{[l]}} = {A^{[l-1]}}^{T}\frac{\partial\mathcal{L}}{\partial Z^{[l]}}
+$$
+
+$$
+\frac{\partial\mathcal{L}}{\partial b^{[1]}} = np.sum(\frac{\partial\mathcal{L}}{\partial Z^{[1]}}, axis=0, keepdims=True)
+$$
+
+$$
+\frac{\partial\mathcal{L}}{\partial A^{[l-1]}} = \frac{\partial\mathcal{L}}{\partial Z^{[l]}}{W^{[l]}}^{T}
+$$
+
+$$
+\frac{\partial\mathcal{L}}{\partial Z^{[l]}} = \frac{\partial\mathcal{L}}{\partial A^{[l]}} \cdot g'(Z^{[l]})
+$$
+
+### 3. 更新模型参数
 
 $$
 \begin{matrix} 
@@ -12989,9 +13155,6 @@ $$\frac{\partial f_i}{\partial p_j} \simeq \frac{f_i(p_j + \epsilon) - f_i(p_j -
 
 即：
 
-
-
-
 #### 数值梯度验证
 
 $$
@@ -13000,7 +13163,7 @@ $$
 
 其中，`f` 是网络层 `dense` 的 `forward()` 输出。如果使用 `f = dense.forward(x)` 来表示该函数的计算，该函数的计算依赖于某个参数 `p`，则损失函数对参数 `p` 的导数可以通过以下函数实现：
 
-```
+```python
 def numerical_gradient_from_df(f, p, df, h=1e-5):
   grad = np.zeros_like(p)
   it = np.nditer(p, flags=['multi_index'], op_flags=['readwrite'])
@@ -13022,7 +13185,7 @@ def numerical_gradient_from_df(f, p, df, h=1e-5):
 
 以下代码首先模拟 `dense` 输出的损失函数梯度 `df`，然后调用 `dense.backward(df)` 反向传播 `dense` 模型参数的梯度。输出 `dx` 是 `dense` 输入 `x` 的梯度 `dx`，然后使用上述数值梯度函数 `numerical_gradient_from_df` 计算关于 `x` 的数值梯度 `dx_num`，最后比较 `dx` 和 `dx_num` 的误差：
 
-```
+```python
 df = np.random.randn(3, 10)
 dx = dense.backward(df)
 dx_num = numerical_gradient_from_df(lambda: dense.forward(x), x, df)
@@ -13037,7 +13200,7 @@ print(diff_error(dx, dx_num))
 
 数值梯度与解析梯度之间的误差非常小，表明 `backward()` 计算的解析梯度和数值梯度几乎相同。我们也可以比较 `dense` 模型参数的梯度是否一致。以下代码检查 `dense` 模型参数 `W` 的梯度是否一致：
 
-```
+```python
 dW_num = numerical_gradient_from_df(lambda: dense.forward(x), dense.W, df)
 print(diff_error(dense.dW, dW_num))
 ```
@@ -13050,58 +13213,59 @@ print(diff_error(dense.dW, dW_num))
 
 ### 4.3.4 神经网络类
 
+
+
 在层的基础上，可以定义一个表示整个神经网络的 `NeuralNetwork` 类：
 
-```
-class NeuralNetwork:   
+```python
+class NeuralNetwork:
     def __init__(self):
         self._layers = []
- 
-    def add_layer(self, layer):       
+
+    def add_layer(self, layer):
         self._layers.append(layer)
-    
-    def forward(self, X):    
+
+    def forward(self, X):
         self.X = X
-        for layer in self._layers:           
-            X = layer.forward(X)      
-        return X     
-    
-    def predict(self, X):        
+        for layer in self._layers:
+            X = layer.forward(X)
+        return X
+
+    def predict(self, X):
         p = self.forward(X)
-     
-        if p.ndim == 1:     # single sample
+
+        if p.ndim == 1:  # single sample
             return np.argmax(p)
-        
+
         # multiple samples
         return np.argmax(p, axis=1)
-  
 
     def backward(self, loss_grad, reg=0.):
         for i in reversed(range(len(self._layers))):
-            layer = self._layers[i] 
+            layer = self._layers[i]
             loss_grad = layer.backward(loss_grad)
-            
+
         for i in range(len(self._layers)):
             self._layers[i].dW += 2 * reg * self._layers[i].W
-    
+
     def reg_loss(self, reg):
         loss = 0
         for i in range(len(self._layers)):
             loss += reg * np.sum(self._layers[i].W * self._layers[i].W)
         return loss
-    
+
     def update_parameters(self, learning_rate):
-        for i in range(len(self._layers)):  
+        for i in range(len(self._layers)):
             self._layers[i].W += -learning_rate * self._layers[i].dW
-            self._layers[i].b += -learning_rate * self._layers[i].db 
-            
+            self._layers[i].b += -learning_rate * self._layers[i].db
+
     def parameters(self):
         params = []
         for i in range(len(self._layers)):
             params.append(self._layers[i].W)
             params.append(self._layers[i].b)
         return params
-    
+
     def grads(self):
         grads = []
         for i in range(len(self._layers)):
@@ -13112,7 +13276,7 @@ class NeuralNetwork:
 
 有了网络层 `Layer` 和神经网络类 `NeuralNetwork`，就可以为实际问题（如二维平面点集分类问题）定义一个两层神经网络模型：
 
-```
+```python
 nn = NeuralNetwork()
 nn.add_layer(Dense(2, 100, 'relu'))
 nn.add_layer(Dense(100, 3, 'softmax'))
@@ -13120,7 +13284,7 @@ nn.add_layer(Dense(100, 3, 'softmax'))
 
 对于多分类问题，可以使用之前的 `softmax_cross_entropy()` 和 `cross_entropy_grad` 来计算多分类交叉熵损失的梯度和加权和：
 
-```
+```python
 X_temp = np.random.randn(2, 2)
 y_temp = np.random.randint(3, size=2)
 F = nn.forward(X_temp)
@@ -13137,7 +13301,7 @@ print(loss, np.mean(loss_grad))
 
 为确保神经网络的前向计算、损失函数计算和反向导数计算正确，可以将数值梯度与解析梯度进行比较。
 
-```
+```python
 import util
 
 # 根据损失函数在输出上的梯度 loss_grad 计算模型参数的梯度
@@ -13153,10 +13317,9 @@ numerical_grads = util.numerical_gradient(loss_fun, params, 1e-6)
 
 for i in range(len(params)):
     print(numerical_grads[i].shape, grads[i].shape)
-  
 
 def diff_error(x, y):
-  return np.max(np.abs(x - y)) 
+    return np.max(np.abs(x - y))
 
 def diff_errors(xs, ys):
     errors = []
@@ -13177,36 +13340,32 @@ diff_errors(numerical_grads, grads)
 
 数值梯度与解析梯度之间的误差非常小，表明解析梯度基本正确。以下是梯度下降算法的代码：
 
-```
+```python
 def cross_entropy_grad_loss(F, y, softmax_out=False, onehot=False):
     if softmax_out:
         loss = cross_entropy_loss(F, y, onehot)
-    else:    
+    else:
         loss = softmax_cross_entropy(F, y, onehot)
     loss_grad = cross_entropy_grad(F, y, onehot, softmax_out)
     return loss, loss_grad
-    
+
 def train(nn, X, y, loss_function, epochs=10000, learning_rate=1e-0, reg=1e-3, print_n=10):
     for epoch in range(epochs):
-        f = nn.forward(X)        
-        loss, loss_grad = loss_function(f, y)        
+        f = nn.forward(X)
+        loss, loss_grad = loss_function(f, y)
         loss += nn.reg_loss(reg)
-        
+
         nn.backward(loss_grad, reg)
-      
-        nn.update_parameters(learning_rate);        
-       
+
+        nn.update_parameters(learning_rate)
+
         if epoch % print_n == 0:
-            print("iteration %d: loss %f" % (epoch, loss)) 
+            print("iteration %d: loss %f" % (epoch, loss))
 ```
 
 对于训练样本 `(X, y)`，梯度下降法的每次迭代首先计算前向输出 `f = nn.forward(X)`，然后计算损失函数关于输出的梯度 `loss, loss_grad = loss_function(f, y)`，接着基于该梯度通过反向传播计算模型参数的梯度 `nn.backward(loss_grad, reg)`，最后更新模型参数 `nn.update_parameters(learning_rate)`。
 
 使用上述数据训练集训练模型并输出模型预测的准确率：
-
-
-
-
 
 ## 代码示例：螺旋数据集训练
 
@@ -13249,7 +13408,6 @@ def data_iter(X, y, batch_size, shuffle=False):
     for i in range(0, m - batch_size + 1, batch_size):
         batch_indices = np.array(indices[i: min(i + batch_size, m)])
         yield X.take(batch_indices, axis=0), y.take(batch_indices, axis=0)
-
 
 def train_batch(nn, XX, YY, loss_function, epochs=10000, batch_size=50, learning_rate=1e-0, reg=1e-3, print_n=10):
     iter = 0
@@ -13371,22 +13529,9 @@ print(np.mean(nn.predict(valid_X) == valid_y))
 print(nn.predict(valid_X[9]), valid_y[9])
 ```
 
-```
-iteration 0: loss 2.320527
-iteration 3906: loss 0.436557
-iteration 7812: loss 0.363573
-iteration 11718: loss 0.289885
-iteration 15624: loss 0.177679
-iteration 19530: loss 0.286339
-iteration 23436: loss 0.189970
-iteration 27342: loss 0.143797
-iteration 31248: loss 0.158769
-0.98474
-0.9766
-[4] 4
-```
 
-### 4.3.7 改进的通用神经网络框架：分离加权求和与激活函数
+
+# 改进的通用神经网络框架：分离加权求和与激活函数
 
 上述神经网络框架的 `Dense` 层包含加权求和和激活函数，`Dense` 类包含加权求和和激活函数的前向和反向计算。为增加灵活性，可将加权求和和激活函数分解为 2 个类分别表示，分别进行计算，以便将来添加新的激活函数。
 
@@ -13398,13 +13543,9 @@ iteration 31248: loss 0.158769
 x1 = x.reshape(x.shape[0], np.prod(x.shape[1:]))  # Flatten multi-channel x
 ```
 
+## 稠密层实现
 
-
-
-
-#### 稠密层实现
-
-##### 基础层类
+### 基础层类
 
 ```python
 class Layer:
@@ -13426,7 +13567,7 @@ class Layer:
         return 0.  
 ```
 
-##### 稠密层
+### 稠密层
 
 ```python
 class Dense(Layer): 
@@ -13487,7 +13628,7 @@ class Dense(Layer):
         return reg * np.sum(self.W**2)
 ```
 
-##### 前向计算示例
+### 前向计算示例
 
 如果 `x` 是 6 个样本，每个样本有 3 个通道，每个通道是一个 `4*4` 的图像，以下代码是这 3 个样本作为输入的前向计算：
 
@@ -13502,6 +13643,7 @@ print(o)
 ```
 
 **输出：**
+
 ```
 (3, 10)
 [[-0.03953509 -0.00214997  0.00743433 -0.16926214 -0.05162853  0.06734225
@@ -13512,7 +13654,7 @@ print(o)
    0.00170353 -0.00449278 -0.0057236  -0.01403174]]
 ```
 
-##### 梯度验证
+### 梯度验证
 
 和之前一样，为了验证稠密层反向推导是否正确，可以模拟一个关于稠密层输出向量梯度 `do` 的损失函数，然后使用 `dense.backward()` 进行反向推导计算，并用数值梯度函数 `numerical_gradient_from_df` 计算数值进行误差比较。因为稠密层输出向量的大小是 10，下面的代码模拟 3 个样本的输入 `x` 通过该稠密层生成 `3*10` 的输出 `o`。因此，模拟生成的梯度 `do` 也是相同形状的多维数组。
 
@@ -13533,6 +13675,7 @@ print(dW_num[:3])
 ```
 
 **输出：**
+
 ```
 3.638244314951079e-09
 1.3450414982951384e-11
@@ -13575,6 +13718,7 @@ print(dW_num[:2])
 ```
 
 **输出：**
+
 ```
 2.0148860313259954e-07
 [[ 0.47568681 -0.06324119 -0.29294422 -0.76304343 -0.09660146  0.62794569
@@ -13587,17 +13731,13 @@ print(dW_num[:2])
          0.4409597 , -2.42444873, -0.28804741, -1.33377026,  0.66775208])]
 ```
 
-#### 激活函数层
+## 激活函数层
 
 `Dense` 层仅计算加权求和，无需计算激活函数的值或根据激活函数计算其导数，因此变得非常简单。不同的激活函数可以单独实现为一个激活函数层类。
 
 以下代码定义了神经网络中最常用激活函数对应的激活函数层类：
 
-
-
-
-
-##### 激活层实现
+### 激活层实现
 
 激活层没有模型参数，只是将输入 `x` 变换产生输出。输入和输出张量的形状相同。同样，可以使用数值梯度来检查激活层解析梯度的正确性。以下代码使用模拟损失函数关于激活层输出梯度 `do`，检查上述各激活层解析梯度与数值梯度的误差：
 
@@ -13632,6 +13772,8 @@ dx_num = numerical_gradient_from_df(lambda :sigmoid.forward(x),x,do)
 print(diff_error(dx,dx_num))
 ```
 
+**输出：**
+
 ```
 3.2756345281587516e-12
 7.43892997215858e-12
@@ -13641,9 +13783,11 @@ print(diff_error(dx,dx_num))
 
 从这些激活层近乎相等的子梯度和数值梯度误差来看，基本可以确信解析梯度代码是正确的。
 
-#### 神经网络类定义
+## 神经网络类定义
 
 基于全连接层和各激活层，可以定义一个表示神经网络的 `NeuralNetwork` 类：
+
+
 
 ```python
 class NeuralNetwork:  
@@ -13762,10 +13906,6 @@ for i in range(len(numerical_grads)):
 ### 4.3.8 独立参数优化器
 
 为了便于使用不同的梯度下降优化策略更新模型参数，可以将它们编写为单独的类，例如：
-
-
-
-
 
 #### SGD 优化器实现
 
@@ -13907,7 +14047,8 @@ plt.plot(losses)
 plt.show()
 ```
 
-```
+
+
 0 iter: 1.0985916677722303
 480 iter: 0.7056240023920841
 960 iter: 0.6422407772314334
@@ -13919,7 +14060,6 @@ plt.show()
 3840 iter: 0.31961537369884196
 4320 iter: 0.3124394704919282
 4800 iter: 0.30620107113884415
-```
 
 ![](img/file98.png)
 
@@ -14017,10 +14157,6 @@ losses = train_nn(nn, train_X, y_train, optimizer, cross_entropy_grad_loss, epoc
 plt.plot(losses)
 ```
 
-
-
-
-
 #### 训练损失曲线
 
 ```
@@ -14038,7 +14174,7 @@ plt.plot(losses)
 
 **图 4-33 训练损失曲线**
 
-```
+```python
 print(np.mean(nn.predict(train_X)==y_train))
 test_X = X_test.reshape(-1,28,28).astype('float32')/255.0
 print(np.mean(nn.predict(test_X)==y_test))
@@ -14053,7 +14189,7 @@ print(np.mean(nn.predict(test_X)==y_test))
 
 有时模型训练时间很长，可以暂停训练过程，将训练好的模型参数保存到文件中，下次再从文件中读取模型参数，以便在上次训练的基础上继续训练。为此，可以在神经网络类 `NeuralNetwork` 中添加读取（`save_parameters()`）和写入（`load_parameters()`）模型参数的功能：
 
-```
+```python
 class NeuralNetwork:  
     def __init__(self):
         self._layers = []
@@ -14125,7 +14261,7 @@ class NeuralNetwork:
 
 使用以下代码测试上述模型的读写功能。
 
-```
+```python
 from NeuralNetwork import *
 nn = NeuralNetwork()
 nn.add_layer(Dense(3, 2,('xavier',0.01)))
@@ -14183,7 +14319,7 @@ p [[0. 0. 0. 0.]]
 
 以下代码可使用 `skimage` 的 `io` 模块读取图像：
 
-```
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 from skimage import io, transform
@@ -14206,7 +14342,7 @@ plt.show()
 
 可以通过 `numpy` 数组操作对图像进行各种变换，例如 `image[:,::-1, :]` 可对图像进行水平镜像翻转：
 
-```
+```python
 img = image[:,::-1, :]
 plt.imshow(img)
 plt.show() 
@@ -14218,7 +14354,7 @@ plt.show()
 
 另一个例子是窗口裁剪图像：
 
-```
+```python
 img = image[50:300,90:400, :]
 plt.imshow(img)
 plt.show() 
@@ -14230,11 +14366,9 @@ plt.show()
 
 或者直接处理图像的每个像素：
 
-
-
-
-
 #### 图像处理示例
+
+
 
 ```python
 def convert(image):
@@ -14263,7 +14397,7 @@ plt.show()
 
 **图 5-4 处理图像的每个像素**
 
-使用 numpy 函数（如 `invert()`）来转换图像颜色：
+使用 `numpy` 函数（如 `invert()`）来转换图像颜色：
 
 ```python
 img = np.invert(image)
@@ -14275,7 +14409,7 @@ plt.show()
 
 **图 5-5 反转图像颜色**
 
-skimage 的不同模块（如 `util`、`transform` 等）提供了用于图像不同变换的函数，例如使用 `util` 的 `random_noise()` 函数向图像添加噪声：
+`skimage` 的不同模块（如 `util`、`transform` 等）提供了用于图像不同变换的函数，例如使用 `util` 的 `random_noise()` 函数向图像添加噪声：
 
 ```python
 from skimage import util
@@ -14371,7 +14505,7 @@ plt.show()
 
 通过数据增强，数据总量可以增加数倍，这有助于减少过拟合。虽然增强后的数据与原始数据相关，但它避免了获取全新数据的成本。
 
-### 5.1.2 归一化
+## 5.1.2 归一化
 
 与简单回归一样，绝对值过大的数据会导致神经网络的数值计算溢出，梯度下降算法会变得非常缓慢，并且不同尺度的特征对算法有不同的影响，这会导致“特征偏差”，从而使训练算法难以约束。因此，在训练神经网络之前，应对未归一化的数据进行归一化。通常对每个特征单独归一化，即对于每个特征 `x[i]`，计算该特征在训练集中的均值 `x[i]_mean` 和标准差 `x[i]_std`，然后使用均值和标准差将所有样本的该特征归一化到接近 0 的较小范围内，例如 `[0, 1]` 或 `[-0.5, 0.5]` 或 `[-1, 1]`，通常使用以下公式进行归一化：
 
@@ -14388,13 +14522,13 @@ X /= np.std(X, axis=0)
 
 需要注意的是，验证集和测试集中的样本不能单独归一化，否则这些集合中的样本与训练集中的样本不使用相同的归一化标准，因此用训练好的模型预测它们就没有意义。也就是说，在对验证集或测试集中的样本进行预测时，使用与训练集相同的归一化参数（均值和标准差）对验证或测试样本进行归一化。
 
-### 5.1.3 特征工程
+## 5.1.3 特征工程
 
 对于原始数据样本，某些特征可能与机器学习无关，且特征通常不是独立的，而是相关的。这些相互关联的原始数据特征在机器学习过程中会相互制约，使得学习算法难以收敛。
 
 特征工程是从原始数据中发现和提取有助于机器学习的良好特征。特征工程是传统机器学习中最基础的关键问题之一。不同领域通常会使用一些特定于该领域的人工特征方法。特征工程通常包括许多具体技术，如数据预处理（如数据归一化）、数据降维、特征选择、人工特征设计和特征学习。
 
-#### 1. 数据降维与主成分分析
+### 1. 数据降维与主成分分析
 
 数据降维是将高维数据转换为低维表示。一个样本可能有大量原始特征。如果用较少的特征来表示样本，可以提高机器学习算法的效率。就像数据压缩一样，压缩后的数据保留了原始数据的固有信息，但对压缩数据的处理（如数据传输）比对原始数据的处理更高效。
 
@@ -14402,11 +14536,7 @@ X /= np.std(X, axis=0)
 
 对于以下二维平面的数据点，每个数据点由 2 个坐标表示：
 
-
-
-
-
-##### PCA 与白化
+#### PCA 与白化
 
 ```python
 import numpy as np
@@ -14429,7 +14559,7 @@ plt.show()
 
 ![](img/file113.png "fig:")  
 
-图 5-13 在直线 y=2x+1 附近随机采样的二维平面数据点
+**图 5-13 在直线 y=2x+1 附近随机采样的二维平面数据点**
 
 将每个点的坐标视为一个矩阵，所有点坐标可以放入矩阵 `X` 中并显示前 3 个坐标点：
 
@@ -14442,7 +14572,9 @@ print(X[:3])
 (25, 2)  
 
 [[ 1.62434536 3.48759979]  
+
  [-0.61175641 1.36366554]  
+
  [-0.52817175 1.28467436]]
 
 PCA 可用于降维，使每个点仅有一个数值，而不是用 2 个数值表示。PCA 方法的第一步是将每个维度（轴）的分量中心化，即每个维度的分量减去该维度所有分量的均值：
@@ -14456,23 +14588,29 @@ plt.show()
 ```
 
 [[ 1.63707525 1.50798964]  
+
  [-0.59902653 -0.61594461]  
+
  [-0.51544186 -0.69493579]]
 
 ![](img/file114.png "fig:")  
 
-图 5-14 数据中心化，即数据每个维度（特征）的分量减去该维度所有分量的均值，使每个特征以 0 为中心点
+**图 5-14 数据中心化，即数据每个维度（特征）的分量减去该维度所有分量的均值，使每个特征以 0 为中心点**
 
 如果有一个由一组三维坐标点组成的矩阵 `A`，每一行代表一个坐标点的三个坐标：
 
 $$
+
 A = \begin{pmatrix} 1 & 3 & 2 \\ -4 & 2 & 6 \\ 2 & 6 & 4 \\ -3 & 0 & 1 \end{pmatrix}
+
 $$
 
 即 `A` 有 4 个样本，每个样本有 3 个特征（x, y, z 坐标）。这些样本的特征之间是否相关？`A` 的相关矩阵（协方差矩阵），`A^T A`，表示数据集不同特征之间的相关程度。
 
 $$
+
 A^T A = \begin{pmatrix} 1 & -4 & 2 & -3 \\ 3 & 2 & 6 & 0 \\ 2 & 6 & 4 & 1 \end{pmatrix} \begin{pmatrix} 1 & 3 & 2 \\ -4 & 2 & 6 \\ 2 & 6 & 4 \\ -3 & 0 & 1 \end{pmatrix} = \begin{pmatrix} 30 & 7 & -17 \\ 7 & 49 & 42 \\ -17 & 42 & 57 \end{pmatrix}
+
 $$
 
 计算代码如下：
@@ -14484,14 +14622,19 @@ print("A^TA:\n",np.dot(A.transpose(),A))
 ```
 
 [[ 1 3 2]  
+
  [-4 2 6]  
+
  [ 2 6 4 ]  
+
  [-3 0 1]]  
 
 A^TA:  
 
 [[ 30 7 -17]  
+
  [ 7 49 42]  
+
  [-17 42 57]]
 
 从协方差矩阵的元素值可以看出，x 和 y 之间的相关值为 7，y 和 z 之间的相关值为 42，表明 y 和 z 之间的相关性较大，而 x 和 y 之间的相关性较小。通常，协方差矩阵可以除以样本数量，以减少样本数量对矩阵值的影响。对于上述样本矩阵 `X`，其协方差矩阵计算如下：
@@ -14510,6 +14653,7 @@ print(S[0]/(S[0]+S[1]))
 ```
 
 [[-0.68302064 -0.73039907]  
+
  [-0.73039907 0.68302064]]  
 
 [2.46815362 0.01168714]  
@@ -14528,7 +14672,7 @@ plt.show()
 
 ![](img/file115.png "fig:")  
 
-图 5.15 协方差矩阵的 SVD 分解，可获得主成分（特征值）和主成分方向（特征向量）
+**图 5-15 协方差矩阵的 SVD 分解，可获得主成分（特征值）和主成分方向（特征向量）**
 
 `S[0]` 和 `S[1]` 表示数据在主轴方向上的占比，可以看出数据在第一主轴方向上的变化占比较大。通过将数据投影到由主轴 `U` 定义的轴上，数据可以表示为主轴的分量。
 
@@ -14538,9 +14682,13 @@ print(Xrot[:5])
 ```
 
 [[-2.21959042 -0.16573019]  
+
  [ 0.85903285 0.01682553]  
+
  [0.85963789 -0.09817723]  
+
  [ 1.53210054 0.01886974]  
+
  [-1.32424593 0.03607588]]
 
 显示这些主轴分量在主轴上形成的坐标点：
@@ -14553,7 +14701,7 @@ plt.show()
 
 ![](img/file116.png)
 
-图 5.16 旋转数据使主轴与坐标轴对齐
+**图 5-16 旋转数据使主轴与坐标轴对齐**
 
 将数据转换为主成分的分量表示可以消除新特征之间的相关性，从其协方差矩阵可以看出，代表不同特征的非对角线值变为 0。
 
@@ -14562,6 +14710,7 @@ print(np.dot(Xrot.transpose(),Xrot))
 ```
 
 [[6.17038405e+01 9.38138456e-15]  
+
  [9.38138456e-15 2.92178571e-01]]
 
 用第一主轴的坐标来表示这些样本，数据损失近乎 `(1-0.995287139793862)*100% = 0.472%`，几乎可以忽略不计。这种将数据样本表示为少数主轴的线性组合的方式称为**数据降维**。对于本例，样本数据的维度可以从特征数 2 降低到特征数 1，达到减少样本特征数量的目的。
@@ -14575,12 +14724,14 @@ plt.show()
 ```
 
 [[-2.21959042]  
+
  [ 0.85903285]  
+
  [0.85963789]]
 
 ![](img/file117.png "fig:")  
 
-图 5-17 数据降维：将数据样本表示为少数主轴的线性组合
+**图 5-17 数据降维：将数据样本表示为少数主轴的线性组合**
 
 投影并降维后的数据可以反投影到原始数据的主轴上。
 
@@ -14594,16 +14745,15 @@ plt.show()
 
 ![](img/file118.png "fig:")  
 
-图 5-18 投影并降维后的数据反投影到原始数据的主轴上，保留了原始数据的主要特征
+**图 5-18 投影并降维后的数据反投影到原始数据的主轴上，保留了原始数据的主要特征**
 
 可以看出，降维后的数据仍保留了原始数据的主要信息。
 
-##### 2 白化
+#### 2. 白化
 
 数据样本可能有多个特征，这些特征的方差可能差异很大，即不同特征的发散程度不同，导致不同特征对机器学习算法的影响不同。特征之间往往存在相关性，具有相关性的不同特征会对机器学习产生相互制约的影响。这就像一个人被拉向不同方向而不知所措。
 
 白化操作是指降低样本特征的相关性，并使这些特征具有相同的方差。将特征除以其标准差可以达到使特征具有相同方差的目的，而 PCA 投影可以消除特征间的相关性。因此，白化通常是这两种技术的结合，即先进行 PCA 特征投影以消除特征相关性，再将每个特征除以其特征方差。结合 PCA 的白化操作称为 PCA 白化。
-
 
 
 
@@ -14703,15 +14853,18 @@ Var(z) = Var(∑ᵢⁿ wᵢ xᵢ)
 
 `Var(XY) = [E(X)]² Var(Y) + [E(Y)]² Var(X) + Var(X) Var(Y)`
 
-
-
 假设输入和权重的均值为 0，即 `E[x[i]] = E[w[i]] = 0`，则：
 
 $$
+
 \begin{matrix} 
+
 Var(z) & = \sum\limits_{i}^{n} Var(x_{i}) Var(w_{i}) \\ 
+
 & = (n Var(w)) Var(x) \\ 
+
 \end{matrix}
+
 $$
 
 输出值的方差 `Var(z)` 不仅与输入值的方差 `Var(x)` 和权重的方差 `Var(w)` 成正比，还与输入值 `x[i]` 的数量 `n` 成正比。
@@ -14851,33 +15004,11 @@ print("kaiming_normal:", w)
 
 输出：
 
-```
-[[17.2 17.2 17.2]
- [17.2 17.2 24.2]]
-xavier_uniform: [[ 0.026289 -1.09114298 -0.48792212]
- [-0.3313437 -0.47333989 -0.90713322]]
-xavier_normal: [[ 0.93298795 0.07044394 -0.00270454]
- [ 0.44167298 -1.01942638 0.45699115]]
-kaiming_uniform: [[-1.21534711 -1.27523387 0.80492134]
- [0.81222595 -1.11076413 -0.29943563]]
-kaiming_normal: [[-0.98492851 0.24745387 0.53676485]
- [ 1.27654978 1.52143405 0.87124828]]
-```
-
-此外，还可以向 `NeuralNetwork` 类添加辅助函数 `apply(self, init_params_fn)` 以初始化其所有层参数，这可以方便地对神经网络的多层进行初始化，例如使用 `kaiming_normal()` 方法初始化所有层的参数。
-
-```
-def apply(self, init_params_fn):
-    for layer in self._layers:            
-        init_params_fn(layer)
-```
-
-### 5.2.2 优化参数
 
 
+## 5.2.2 优化参数
 
-
-#### Key Parameters and Optimization Strategies for Gradient Descent
+### Key Parameters and Optimization Strategies for Gradient Descent
 
 The most important parameter in gradient descent is the **learning rate** (usually denoted by `α` or `η`). For a specific neural network architecture, an excessively large or small learning rate is the most critical factor affecting whether the algorithm can converge. One can try parameters of different orders of magnitude (e.g., `0.1`, `0.01`, `0.0001`, etc.) and select a suitable learning rate in conjunction with visualizing the loss curve or learning curve.
 
@@ -14948,6 +15079,8 @@ return out.reshape(self.X_shape)
 
 Since neural network training usually adopts **Mini-batch Gradient Descent** (often referred to as Batch Gradient Descent in context), each gradient descent step uses a small batch of samples to update model parameters. Therefore, batch normalization does not calculate the mean and mean squared error of the entire training set samples, but calculates the mean and mean squared error using a small batch of samples during the training process, hence the name **Batch Normalization**.
 
+
+
 During prediction, the forward computation of data also needs to be processed by the BN layer, but it does not need and should not perform the BN operation again. This requires using the determined BN layer mean, variance, and parameters (such as `β`, `γ`) from the training process for transformation. However, the mean and mean squared error calculated at each iteration step during the iteration process are different; the mean and variance used for prediction should not rely solely on the result of a certain iteration step. For this, one can average the means and mean squared errors of all iteration steps, usually using the **Moving Average** method to calculate the moving mean and variance.
 
 If `running_mu` and `running_var` represent the moving averages of the mean and variance during the training process, the calculation code is as follows:
@@ -14957,14 +15090,11 @@ running_mu = momentum * running_mu + (1 - momentum) * mu
 running_var = momentum * running_var + (1 - momentum) * var
 ```
 
-
-
-
 即对当前均值和方差的移动平均与当前样本的均值和方差进行简单的加权平均。动量参数 `momentum` 表示移动平均的比例。
 
 预测时的前向计算可以通过移动平均和公式进行变换：
 
-```
+```python
 X_flat = X.ravel().reshape(X.shape[0],-1)
 #### normalization
 X_hat = (X_flat - running_mean) / np.sqrt(running_var + eps)
@@ -15020,7 +15150,7 @@ $\frac{\partial f}{\partial\mu} = (\sum\limits_{i = 1}^{m}\frac{\partial f}{\par
 
 以下代码用一个类封装了 BN 层的前向计算和反向推导：
 
-```
+```python
 from NeuralNetwork import *
 
 class BatchNorm_1d(Layer):
@@ -15095,7 +15225,7 @@ class BatchNorm_1d(Layer):
 
 对于这个 `BatchNorm` 类，以下代码使用数值梯度检查解析梯度是否正确：
 
-```
+```python
 # diff_error = lambda x, y: np.max(np.abs(x - y)) 
 from util import *
 import numpy as np 
@@ -15129,10 +15259,9 @@ if False:
 
 在下面的卷积神经网络中，输入样本（如彩色图像）通常是一个三维张量 $C \times H \times W$，其中 $C$、$H$ 和 $W$ 分别是通道数（彩色图像的）、高度、宽度；一批样本是一个四维张量 $N \times C \times H \times W$，其中 $N$ 是样本数量。上述代码可以重写以处理这种 4D 张量输入，以下代码是针对每个通道进行批归一化，而不是针对每个（像素）特征：
 
-
-
-
 #### 批量归一化实现
+
+
 
 ```python
 class BatchNorm(Layer):
@@ -15326,10 +15455,6 @@ print(np.mean(nn.predict(test_X) == y_test))
 
 也可以将 `L1` 正则化项和 `L2` 正则化项结合起来，形成所谓的弹性网络正则化：`R_W = λ₁|w| + λ₂w²`。其范围介于 `L1` 和 `L2` 之间，或者说是 `L1` 和 `L2` 弹性组合的作用。
 
-
-
-
-
 # 图 5-23：常见权重正则化函数
 
 图 5-23 是这三种常见权重正则化函数的示意图：
@@ -15383,6 +15508,8 @@ def grad_clipping(grads, c):
 **Dropout**（英文意为“丢失”、“脱落”）是由 Srivastava 等人提出的一种正则化技术。在训练过程中，以一定的概率激活某些神经元（即输出激活值），而其他神经元处于非激活状态（即不输出激活值）。对于某一层神经元，Dropout 使用 0 到 1 之间的概率 `drop_p` 使某个神经元失活，即不产生输出，反之，该神经元以 `1 - drop_p` 的概率处于激活状态。如果该层有 100 个神经元，`drop_p = 0.2`，则从概率上讲，`100 * 0.2` 个将处于非激活状态，`100 * 0.8` 个将处于激活状态。`drop_p` 称为**丢弃率**，表示有多大概率神经元处于非激活状态。反之，`(1 - drop_p)` 称为**存活率**或**保留率**，表示有多大概率神经元处于激活状态。
 
 **图 5-24 Dropout：每次前向和反向过程中随机使部分神经元失活**
+
+
 
 如图 5-24 所示，左侧神经网络的所有神经元均被激活，右侧神经元使用 Dropout 进行激活。Dropout 通过使某些神经元失活来定义不同的神经网络函数。因为梯度下降训练过程的每次迭代都会随机使部分神经元失活，所以不同的迭代针对的是不同的函数。因此，神经网络不会过度依赖少数几个神经元，这相当于群体的决策不依赖少数人，而是每个人都有机会参与，从而防止因过度依赖少数人而产生的偏见。Dropout 类似于数据归一化的思想。如果数据未归一化，数值较大的某些特征将对学习算法产生过大影响，而其他特征影响甚微。Dropout 也类似于权重正则化的思想。权重正则化通过惩罚项使所有权重变小，防止少数权重过大。
 
@@ -15443,10 +15570,6 @@ class Dropout(Layer):
 ```
 
 其中 `x` 是 Dropout 层上一层的输出。对于输入 `X`，以下代码使用 `dropout.forward(X)` 计算 Dropout 的输入，反向推导时，使用 `dropout.backward(dx_output)` 从关于 `X` 的反向输入梯度获取 Dropout 后的反向梯度。
-
-
-
-
 
 #### Dropout 示例与原理
 
@@ -15573,10 +15696,6 @@ print(np.mean(nn.predict(test_X) == y_test))
 
 **卷积神经网络**（`Convolutional Neural Networks`，简称 `CNN` 或卷积网络）利用图像特征的平移不变性，以极少权重参数处理图像，同时保持图像的内存空间结构。所谓图像平移不变性，指图像中的特征不因其在图像上的位置平移而改变。例如，猫从图像左上角移至右下角，仍是猫。
 
-
-
-
-
 # Convolutional Neural Networks
 
 Convolutional Neural Networks (CNNs) are neural networks specifically designed for images. CNNs are easy to parallelize and can leverage Graphics Processing Units (GPUs) to accelerate functions. In 2012, Hinton's student Alex Krizhevsky et al. used a CUDA GPU-based CNN called AlexNet to win the ImageNet competition, which reignited enthusiasm for neural network research and ushered in deep learning based on deep neural networks.
@@ -15586,25 +15705,32 @@ CNNs are the most exciting neural networks in deep learning and have become the 
 Here are some typical CNN applications:
 
 *   Detecting, recognizing, locating, and labeling objects in images, e.g., identifying what objects are in an image and their locations. Famous applications include face recognition, object detection, and autonomous driving.
+
 *   Speech recognition, sound synthesis, e.g., automatically converting speech to text, text to speech, music, etc.
+
 *   Describing images and videos with natural language.
+
 *   Road and obstacle recognition in autonomous vehicles.
+
 *   Analyzing video game screens to guide agents to play games automatically.
+
 *   Generating realistic-looking images. For example, generating realistic human faces, video face swapping (such as the famous DeepFake).
 
-CNNs add a network layer called the "**Convolutional Layer**" to Fully Connected Neural Networks. The input and output of convolutional layers are multi-dimensional tensors (like images) directly, without needing to flatten them into one-dimensional tensors. This chapter transitions from the simplest 1D tensor convolution to 2D or multi-dimensional tensor convolution, pooling, and other operations, then introduces convolutional layers and their code implementations, and finally presents some classic modern CNN architectures.
+
+
+CNNs add a network layer called the `Convolutional Layer` to Fully Connected Neural Networks. The input and output of convolutional layers are multi-dimensional tensors (like images) directly, without needing to flatten them into one-dimensional tensors. This chapter transitions from the simplest 1D tensor convolution to 2D or multi-dimensional tensor convolution, pooling, and other operations, then introduces convolutional layers and their code implementations, and finally presents some classic modern CNN architectures.
 
 ## 6.1 Convolution
 
-#### 6.1.1 What is Convolution?
+### 6.1.1 What is Convolution?
 
 Convolution is a generalization of weighted summation. For a set of numbers, such as `x[1]`, `x[2]`, `x[3]`, ⋯, `x[n]`, the arithmetic mean $\frac{(x_{1} + x_{2} + x_{3} + \cdots + x_{n})}{n}$ actually multiplies each number by the same weight $\frac{1}{n}$ and sums them up to find the average of this set of numbers. One can also multiply each number `x[i]` by a different weight `w[i]` and then sum them up:
 
 `w[1] * x[1] + w[2] * x[2] + w[3] * x[4] + ⋯ + w[n] * x[n]`
 
-Multiplying each number by a different weight and summing is called **Weighted Summation**. For example, the `x`、`x`、`w`、`w` in the previous regression are the weighted summation of features `x`、`x` by weights `w`、`w`.
+Multiplying each number by a different weight and summing is called `Weighted Summation`. For example, the `x`、`x`、`w`、`w` in the previous regression are the weighted summation of features `x`、`x` by weights `w`、`w`.
 
-If the sum of weights is 1, i.e., `w[i]` satisfies $\sum\limits_{i = 1}^{n}w_{i} = 1$, this special weighted summation is called **Weighted Average**. Weight values can also be negative, for example, a company's debt-to-asset ratio, profitability ratios, etc., can be negative or positive.
+If the sum of weights is 1, i.e., `w[i]` satisfies $\sum\limits_{i = 1}^{n}w_{i} = 1$, this special weighted summation is called `Weighted Average`. Weight values can also be negative, for example, a company's debt-to-asset ratio, profitability ratios, etc., can be negative or positive.
 
 For example, to calculate a student's grade for a course, different proportions can be assigned to the regular grade, lab grade, and final exam grade, such as 0.2, 0.3, and 0.5 respectively, and then use `(0.2*Regular Grade + 0.3*Lab Grade + 0.5*Final Grade)` to calculate the student's total grade. The weighted summation of a set of numbers extracts a certain feature from these numbers, such as the weighted summation of grades yielding the "Total Grade" feature.
 
@@ -15630,9 +15756,9 @@ And so on, finally obtaining 8 weighted summations:
 
 **Figure 6-3** Aligning weight vector (1.2, 0.3, 0.5) with the last 3 numbers (9, 5, 8)
 
-This process of using fewer weights than the data quantity, obtaining weighted summations by aligning via a sliding window, thereby obtaining a set of new data, is called **Convolution**.
+This process of using fewer weights than the data quantity, obtaining weighted summations by aligning via a sliding window, thereby obtaining a set of new data, is called `Convolution`.
 
-For a 1D array `x = (x[0], x[1], x[2], ⋯, x[n-1])` of length n and a weight vector (also called **Convolution Kernel**) `w = (w[0], w[1], w[2], ⋯, w[K-1])` of length K, aligning the first element of the kernel `w[0]` with an arbitrary `x[i]` yields the weighted summation (convolution value):
+For a 1D array `x = (x[0], x[1], x[2], ⋯, x[n-1])` of length n and a weight vector (also called `Convolution Kernel`) `w = (w[0], w[1], w[2], ⋯, w[K-1])` of length K, aligning the first element of the kernel `w[0]` with an arbitrary `x[i]` yields the weighted summation (convolution value):
 
 $z_{i} = \sum\limits_{k = 0}^{K - 1}w_{k}x_{i + k}$
 
@@ -15644,7 +15770,7 @@ When the convolution kernel slides along vector `x` from `x[0]` to `x[n-K]` for 
 
 **Figure 6-5** Valid Convolution: Data length is 5, kernel width is 3, result convolution vector length is 5-3+1 = 3
 
-This convolution method is called "**Valid Convolution**". The above summation can be expressed in Python code as:
+This convolution method is called `Valid Convolution`. The above summation can be expressed in Python code as:
 
 ```python
 K = w.size
@@ -15675,29 +15801,23 @@ print(z)
 [17.3 26.3 32.8 23.8 37.7 27.9 17.2 16.3]
 ```
 
+### Padding Strategies and Convolution Types
 
+To generate result data with the same length as the original data, zeros can be padded before and after the original data, then the convolution operation is performed. As shown in Figure 6-6, for a convolution kernel of length 3, padding one zero on each side generates two new values: `1.2*0+0.3*4+0.5*15 = 8.7` on the left and `1.2*5+0.3*8+0.5*0 = 8.4` on the right.
 
+**Figure 6-6 Same Convolution**: Convolution width is K, padding (K-1)/2 zeros on both left and right sides of original data of length n, resulting convolution vector length is n.
 
+The number of zeros padded front and back are both (K-1)/2, making the data length become n+2(K-1)/2 = n+K-1, therefore the convolution result vector length is n+K-1-K+1 = n, i.e., producing a convolution result with the same length as the original data. This convolution method is called `Same Convolution`. Of course, if K is not odd, the result length is n-1.
 
-##### 卷积操作详解
+Additionally, there is a method called `Full Convolution`, which pads (K-1) zeros on both front and back of the data. As shown in Figure 6-7, padding one zero on each side generates two new values: `1.2*0+0.3*0+0.5*4 = 2.0` on the left and `1.2*8+0.3*0+0.5*0 = 9.6` on the right.
 
-###### 填充策略与卷积类型
+**Figure 6-7 Full Convolution**: Convolution width is K, padding K-1 zeros on both left and right sides of original data of length n, resulting convolution vector length is n+K-1.
 
-为了生成与原始数据长度相同的结果数据，可以在原始数据前后填充 0，然后执行卷积操作。如图 6-6 所示，对于长度为 3 的卷积核，在左右两侧各填充一个 0 后，左右两侧分别生成 `1.2*0+0.3*4+0.5*15 = 8.7` 和 `1.2*5+0.3*8+0.5*0 = 8.4` 两个新值。
+Result data length is n+2*(K-1)-K+1 = n+K-1 = 10+3-1 = 12.
 
-**图 6-6 同卷积**：卷积宽度为 K，在长度为 n 的原始数据左右两侧各填充 (K-1)/2 个 0，卷积结果向量长度为 n。
+Generally, assuming original data length is n, kernel length is K, sum of left and right padding lengths is P, then convolution result data length is n+P-K+1. For example, P=0 means no padding, original data length is 3, kernel length is also 3, then convolution result data length is 3-3+1 = 1, i.e., result data length is 1.
 
-前后填充的 0 的数量均为 (K-1)/2，使得数据长度变为 n+2(K-1)/2 = n+K-1，因此卷积结果向量长度为 n+K-1-K+1 = n，即产生了与原始数据长度相同的卷积结果。这种卷积方法称为"**同卷积**"。当然，如果 K 不是奇数，结果长度为 n-1。
-
-此外，还有一种称为"**全卷积**"的方法，即在数据前后各填充 (K-1) 个零。如图 6-7 所示，左右两侧各填充一个 0，左右两侧分别新增 `1.2*0+0.3*0+0.5*4 = 2.0` 和 `1.2*8+0.3*0+0.5*0 = 9.6` 两个新值。
-
-**图 6-7 全卷积**：卷积宽度为 K，在长度为 n 的原始数据左右两侧各填充 K-1 个零，卷积结果向量长度为 n+K-1。
-
-结果数据长度为 n+2*(K-1)-K+1 = n+K-1 = 10+3-1 = 12。
-
-一般情况下，假设原始数据长度为 n，卷积核长度为 K，左右填充长度之和为 P，则卷积结果数据长度为 n+P-K+1。例如，P=0 表示无填充，原始数据长度为 3，卷积核长度也为 3，则卷积结果数据长度为 3-3+1 = 1，即结果数据长度为 1。
-
-以下代码函数 `conv1d()` 实现了一维数据的卷积操作，采用对称填充方法，在原始数组左右两侧填充相同数量 (`pad`) 的 0 值。
+The following code function `conv1d()` implements 1D data convolution operation, using symmetric padding method, padding the same amount (`pad`) of zero values on both left and right sides of the original array.
 
 ```python
 def conv1d(x, w, pad):
@@ -15716,19 +15836,19 @@ def conv1d(x, w, pad):
     return y
 ```
 
-使用该 `conv1d()` 卷积函数对一维数据 `x`（卷积核为 `w`）执行"同卷积"或"全卷积"操作。
+Using this `conv1d()` convolution function to perform `Same Convolution` or `Full Convolution` operations on 1D data `x` (kernel is `w`).
 
 ```python
-y1 = conv1d(x, w, 1)    # 同卷积
+y1 = conv1d(x, w, 1)    # Same Convolution
 print(x.size, w.size, y1.size)
 print("same: ", y1)
 
-y2 = conv1d(x, w, 2)    # 全卷积
+y2 = conv1d(x, w, 2)    # Full Convolution
 print(x.size, w.size, y2.size)
 print("full: ", y2)
 ```
 
-输出结果：
+Output results:
 
 ```
 10 3 10
@@ -15737,73 +15857,75 @@ same: [ 8.7 17.3 26.3 32.8 23.8 37.7 27.9 17.2 16.3 8.4]
 full: [ 2. 8.7 17.3 26.3 32.8 23.8 37.7 27.9 17.2 16.3 8.4 9.6]
 ```
 
-> **注意**：深度学习中定义的卷积操作与一般学科定义的卷积略有不同。一般卷积实际上是先将数据或卷积核左右翻转，然后再进行此处定义的卷积操作。如图 6-8 所示，一般卷积定义如下（若翻转卷积核，翻转数据结果相同）：
+> **Note**: The convolution operation defined in deep learning differs slightly from the convolution defined in general disciplines. General convolution actually flips the data or kernel left-right first, then performs the convolution operation defined here. As shown in Figure 6-8, the general convolution definition is as follows (flipping the kernel yields the same result as flipping the data):
 >
 > $y_{i} = \sum\limits_{k = 0}^{K - 1} w_{K - k} x_{i + k}$
 >
-> **图 6-8**：其他学科的卷积与深度学习的卷积略有不同：卷积核或数据被翻转。
+> **Figure 6-8**: Convolution in other disciplines differs slightly from deep learning convolution: the kernel or data is flipped.
 >
-> 深度学习中的这种卷积操作在其他学科中常被称为"**互相关**"。NumPy 的 `correlate` 对一维向量执行这种互相关操作。
+> This convolution operation in deep learning is often called `Cross-Correlation` in other disciplines. NumPy's `correlate` performs this cross-correlation operation on 1D vectors.
+>
+> ```python
+> numpy.correlate(a, v, mode='valid')
+> ```
+>
+> While NumPy's `convolve` performs the general discipline-defined convolution operation on 1D vectors.
+>
+> ```python
+> numpy.convolve(a, v, mode='full')
+> ```
+>
+> The first parameter of these two functions is the data to be convolved, the second parameter is the weights, and the third parameter represents three different convolution modes: "full", "same", and "valid".
+>
+> The cross-correlation operation performed by `numpy.correlate` is the convolution operation in deep learning. `numpy.convolve` is the general convolution operation. To produce the same results as `numpy.correlate` using `numpy.convolve`, the weight vector or data must be flipped first, for example, changing `(1.2, 0.3, 0.5)` to `(0.5, 0.3, 1.2)` and then performing `convolve` operation with the data, which is equivalent to directly performing `correlate` operation with the original weight vector and data.
+>
+> ```python
+> import numpy as np
+>
+> np.random.seed(5)
+> x = np.random.randint(low=1, high=30, size=10, dtype='l')
+> print(x)
+>
+> w0 = np.array([1.2, 0.3, 0.5])
+> x_valid = np.correlate(x, w0, 'valid')  # Cross-correlation function np.correlate is convolution in deep learning
+> x_same = np.correlate(x, w0, 'same')
+> x_full = np.correlate(x, w0, 'full')
+> print(x_valid)
+> print(x_same)
+> print(x_full)
+>
+> w = np.array([0.5, 0.3, 1.2])
+> x_valid = np.convolve(x, w, 'valid')    # Convolution function np.convolve flips first then performs deep learning convolution
+> x_same = np.convolve(x, w, 'same')
+> x_full = np.convolve(x, w, 'full')
+> print(x_valid)
+> print(x_same)
+> print(x_full)
+> ```
+>
+> Output results:
+>
+> ```
+> [ 4 15 16 7 23 17 10 9 5 8]
+> [17.3 26.3 32.8 23.8 37.7 27.9 17.2 16.3]
+> [8.7 17.3 26.3 32.8 23.8 37.7 27.9 17.2 16.3 8.4]
+> [ 2. 8.7 17.3 26.3 32.8 23.8 37.7 27.9 17.2 16.3 8.4 9.6]
+> [17.3 26.3 32.8 23.8 37.7 27.9 17.2 16.3]
+> [8.7 17.3 26.3 32.8 23.8 37.7 27.9 17.2 16.3 8.4]
+> [ 2. 8.7 17.3 26.3 32.8 23.8 37.7 27.9 17.2 16.3 8.4 9.6]
+> ```
 
-```python
-numpy.correlate(a, v, mode='valid')
-```
 
-而 NumPy 的 `convolve` 对一维向量执行一般学科定义的卷积操作。
-
-```python
-numpy.convolve(a, v, mode='full')
-```
-
-这两个函数的第一个参数是被卷积数据，第二个参数是权重，第三个参数表示三种不同的卷积方式："full"、"same" 和 "valid"。
-
-使用 `numpy.correlate` 执行的互相关操作即为深度学习中的卷积操作。`numpy.convolve` 是通用卷积操作。若想用 `numpy.convolve` 产生与 `numpy.correlate` 相同的结果，必须先翻转权重向量或数据，例如将 `(1.2, 0.3, 0.5)` 改为 `(0.5, 0.3, 1.2)` 再与数据进行 `convolve` 操作，这等价于直接用原始权重向量和数据执行 `correlate` 操作。
-
-```python
-import numpy as np
-
-np.random.seed(5)
-x = np.random.randint(low=1, high=30, size=10, dtype='l')
-print(x)
-
-w0 = np.array([1.2, 0.3, 0.5])
-x_valid = np.correlate(x, w0, 'valid')  # 互相关函数 np.correlate 即深度学习中的卷积
-x_same = np.correlate(x, w0, 'same')
-x_full = np.correlate(x, w0, 'full')
-print(x_valid)
-print(x_same)
-print(x_full)
-
-w = np.array([0.5, 0.3, 1.2])
-x_valid = np.convolve(x, w, 'valid')    # 卷积函数 np.convolve 先翻转再执行深度学习中的卷积
-x_same = np.convolve(x, w, 'same')
-x_full = np.convolve(x, w, 'full')
-print(x_valid)
-print(x_same)
-print(x_full)
-```
-
-输出结果：
-
-```
-[ 4 15 16 7 23 17 10 9 5 8]
-[17.3 26.3 32.8 23.8 37.7 27.9 17.2 16.3]
-[8.7 17.3 26.3 32.8 23.8 37.7 27.9 17.2 16.3 8.4]
-[ 2. 8.7 17.3 26.3 32.8 23.8 37.7 27.9 17.2 16.3 8.4 9.6]
-[17.3 26.3 32.8 23.8 37.7 27.9 17.2 16.3]
-[8.7 17.3 26.3 32.8 23.8 37.7 27.9 17.2 16.3 8.4]
-[ 2. 8.7 17.3 26.3 32.8 23.8 37.7 27.9 17.2 16.3 8.4 9.6]
-```
 
 ###### 步幅
 
-通常，卷积操作沿被卷积数据逐元素滑动卷积核。因此，长度为 n 的数据与长度为 K 的卷积核进行有效卷积的长度为 n-K+1。这种每次仅滑动一个元素的卷积操作使得结果数据长度与原始数据几乎相同。卷积核沿原始数据滑动的元素数量称为**步幅** 或**跨度**。有时为了生成更小的卷积结果数据，常使用大于 1 的步幅滑动卷积核。如图 6-9 所示。
+通常，卷积操作沿被卷积数据逐元素滑动卷积核。因此，长度为 `n` 的数据与长度为 `K` 的卷积核进行有效卷积的长度为 `n-K+1`。这种每次仅滑动一个元素的卷积操作使得结果数据长度与原始数据几乎相同。卷积核沿原始数据滑动的元素数量称为**步幅** 或**跨度**。有时为了生成更小的卷积结果数据，常使用大于 1 的步幅滑动卷积核。如图 6-9 所示。
 
 **图 6-9 步幅为 1 和步幅为 2 的卷积**
 
-注意，卷积核的"步幅"为 S，长度为 K 的卷积核可在长度为 n 的数据上滑动 (n-K)/S 次。除初始卷积外，每次滑动可再执行一次卷积操作，因此总共可执行 (n-K)/S+1 次卷积操作。例如：n=10, K=3, S=2，可执行的卷积操作次数为 (10-3)/2+1 = 4。
+注意，卷积核的"步幅"为 `S`，长度为 `K` 的卷积核可在长度为 `n` 的数据上滑动 `(n-K)/S` 次。除初始卷积外，每次滑动可再执行一次卷积操作，因此总共可执行 `(n-K)/S+1` 次卷积操作。例如：`n=10, K=3, S=2`，可执行的卷积操作次数为 `(10-3)/2+1 = 4`。
 
-若原始数据长度为 n，左右填充长度之和为 P，则填充后数据长度为 n+P。因此可执行的卷积操作次数为 (n+P-K)/S+1，即最终结果数据长度为 (n+P-K)/S+1。
+若原始数据长度为 `n`，左右填充长度之和为 `P`，则填充后数据长度为 `n+P`。因此可执行的卷积操作次数为 `(n+P-K)/S+1`，即最终结果数据长度为 `(n+P-K)/S+1`。
 
 上述卷积函数可轻松改写以处理带步幅的卷积操作。
 
@@ -15822,10 +15944,6 @@ def conv1d(x, w, pad=0, s=1):
     for i in range(n_o):     # 遍历图像的每个像素
         # ... 后续代码省略
 ```
-
-
-
-
 
 ### 6.1.1 一维卷积
 
@@ -15866,6 +15984,7 @@ plt.show()
 ```
 
 ![](img/file123.png "fig:")
+
 图 6-10 正弦波的随机噪声采样
 
 以下代码根据正态分布生成一组权重向量（卷积核）`w`：
@@ -15886,6 +16005,7 @@ plt.bar(x_for_w, w)
 ```
 
 ![](img/file124.png "fig:")
+
 图 6-11 根据正态分布采样的一组权重参数
 
 该权重向量 `w` 的中间值较大，两侧值较小，所有权重值之和为 1。该权重向量 `w` 用于卷积 `y`：
@@ -15897,6 +16017,7 @@ plt.plot(x, yhat, color='red')
 ```
 
 ![](img/file125.png "fig:")
+
 图 6-12 使用高斯分布的权重向量对原始正弦采样数据进行加权，起到平滑作用
 
 该权重向量计算 `y` 中值的加权平均。当权重向量沿 `y` 滑动时，计算出的值 `yhat` 是滑动窗口中心点 `y` 及其周围 `y` 的平均权重。中心点 `y` 对应最大的权重值，离中心点越远的 `y` 对应的权重值越小。生成的向量相当于对原始数据进行平均或平滑处理。从图 6-12 可以看出，卷积后的数据点 `(x, yhat)` 对应的曲线变得更平滑，即原始数据 `y` 中的噪声在一定程度上被降低了。
@@ -15985,6 +16106,7 @@ First 5 columns and rows of the gray image matrix:
 ```
 
 ![](img/file126.png)
+
 图 6-15 将彩色图像转换为黑白（灰度）图像
 
 可以看出，彩色图像被读入一个三维 numpy 数组，numpy 数组的第三维代表彩色图像的三个颜色通道，即 RGB 通道。每个通道都是一个二维数组（矩阵）。因此，彩色图像可以看作是 3 个矩阵。`rgb2gray()` 函数将 3 通道彩色图像转换为单通道灰度图像，即一个二维数组（矩阵）。每个灰度像素的值由红色（R）、绿色（G）、蓝色（B）三色像素值的加权和计算得出。
@@ -16000,9 +16122,6 @@ gray_img2 = gray_img * 255
 gray_imgs = gray_img2.astype(np.uint8)
 print('The values of the first 5 rows and 5 columns of the grayscale matrix: \n', gray_imgs[150:155, 110:115])
 ```
-
-
-
 
 灰度矩阵前 5 行 5 列的值：
 
@@ -16040,15 +16159,25 @@ $a_{i,j} = \sum\limits_{m = 0}^{F_{h}}\sum\limits_{n = 0}^{F_{w}}w_{m,n}x_{i + m
 即将卷积核窗口与数据矩阵的 (i, j) 位置对齐，然后与数据窗口中对应的数据进行加权求和。例如，上面示例中的 `a[1, 1]` 计算如下：
 
 $$
+
 \begin{matrix}
+
 a_{1,1} & {= \sum\limits_{m = 0}^{F_{h}}\sum\limits_{n = 0}^{F_{w}}w_{m,n}x_{1 + m,1 + n}} \\
+
 & {= w_{0,0}x_{1,1} + w_{0,1}x_{1,1 + 1} + w_{0,2}x_{1,1 + 2}} \\
+
 & {\quad w_{1,0}x_{1 + 1,1} + w_{1,1}x_{1 + 1,1 + 1} + w_{1,2}x_{1 + 1,1 + 2}} \\
+
 & {\quad w_{2,0}x_{1 + 2,1} + w_{2,1}x_{1 + 2,1 + 1} + w_{2,2}x_{1 + 2,1 + 2}} \\
+
 & {= w_{0,0}x_{1,1} + w_{0,1}x_{1,2} + w_{0,2}x_{1,3}} \\
+
 & {\quad w_{1,0}x_{2,1} + w_{1,1}x_{2,2} + w_{1,2}x_{2,3}} \\
+
 & {\quad w_{2,0}x_{3,1} + w_{2,1}x_{3,2} + w_{2,2}x_{3,3}} \\
+
 \end{matrix}
+
 $$
 
 假设数据矩阵 X 的行数和列数分别为 h 和 w，卷积核 K 的行数和列数分别为 `F[h]` 和 `F[w]`，则“有效卷积”操作生成的结果矩阵的行数和列数分别为 `h - F[h] + 1` 和 `w - F[w] + 1`。以下是二维矩阵（图像）进行“有效卷积”操作的代码实现：
@@ -16076,100 +16205,9 @@ print("K: ", K)
 convolve2d(X, K)
 ```
 
-```
-X: [[2 3 0 7 9 5]
-     [6 0 4 7 2 3]
-     [8 1 0 3 2 6]
-     [7 6 1 5 2 8]
-     [9 5 1 8 3 7]
-     [2 4 1 8 6 5]]
-K: [[-1 0 1]
-     [-2 0 2]
-     [-1 0 1]]
-array([[-14., 20., 7., -7.],
-       [-24., 10., 3., 5.],
-       [-28., 3., 6., 8.],
-       [-23., 9., 10., -2.]])
-```
-
-使用该卷积核对图像进行卷积：
-
-```python
-image = gray_img
-kernel = np.array([[-1,0,1],[-2,0,2],[-1,0,1]])
-image_sharpen = convolve2d(image, kernel)
-plt.imshow(image_sharpen, cmap=plt.cm.gray)
-print("Original image size:", image.shape)
-print("Result image size:", image_sharpen.shape)
-```
-
-```
-Original image size: (233, 328)
-Resulting image size: (231, 326)
-```
-
-![](img/file127.png "fig:")
-图 6-17 使用具有“垂直边缘提取”功能的卷积核对图像进行卷积得到的结果图像
-
-可以看出，结果图像的垂直特征被夸大了。这表明这是一个具有“垂直边缘提取”功能的卷积核。
-
-为了生成与原始图像大小相同的图像，也可以使用“同卷积”，即在图像周围填充一些 0 值。如果权重矩阵的大小为 `F[w] * F[h]`，则原始图像左右填充的 0 的数量 `P[w]` 为 `(F[w] - 1)/2`，上下填充的 0 的数量 `P[h]` 为 `(F[h] - 1)/2`。通常权重矩阵是长宽相同的方阵。如图 6-18 所示。使用 3x3 卷积核对 6x6 矩阵进行同卷积，在原始矩阵周围填充 (3-1)/2 个 0 值，得到一个 6x6 矩阵。
-
-图 6-18 使用 3x3 卷积核对 6x6 矩阵进行同卷积得到 6x6 矩阵
-
-以下代码为图像的上、下、左、右填充 `P_h` 和 `P_w` 个 0 值：
-
-```python
-H, W = X.shape
-P_h, P_w = 1, 2
-X_padded = np.zeros((H + 2*P_h, W + 2*P_w))
-X_padded[P_h:-P_h, P_w:-P_w] = X
-```
-
-填充后的 `X_padded` 为：
-
-```python
-print(X_padded)
-```
-
-```
-[[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
-     [0. 0. 2. 3. 0. 7. 9. 5. 0. 0.]
-     [0. 0. 6. 0. 4. 7. 2. 3. 0. 0.]
-     [0. 0. 8. 1. 0. 3. 2. 6. 0. 0.]
-     [0. 0. 7. 6. 1. 5. 2. 8. 0. 0.]
-     [0. 0. 9. 5. 1. 8. 3. 7. 0. 0.]
-     [0. 0. 2. 4. 1. 8. 6. 5. 0. 0.]
-     [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
-```
-
-上述代码根据填充大小创建了填充图像 `X_padded`。实际上，numpy 也提供了现成的 `pad()` 函数，用于填充多维数组每个轴的前后：
-
-```python
-np.pad(x, [(1, 0), (1, 2)], mode='constant', constant_values=0)
-```
-
-第二个参数 `[(1, 0), (1, 2)]` 表示 numpy 数组 x 每个轴前后需要填充的像素数。第一个元组 (1,0) 表示第一个轴（对应 axis=0 的轴）前后分别填充 1 和 0 个像素，第二个元组 (1, 2) 表示第二个轴（对应 axis=1 的轴）前后分别填充 1 和 2 个像素。mode='constant' 表示填充常数值，constant_values=0 表示填充的常数值为 0，这两个参数可以省略。
-
-以下代码在数组 a 的第一行前填充一行 0，在第一列前和最后一列后分别填充 1 列和 2 列 0。
-
-```python
-import numpy as np
-a = np.array([[ 1.,  1.,  1.],
-              [ 1.,  1.,  1.]])
-b = np.pad(a, [(1, 0), (1, 2)], mode='constant')
-print(a)
-print(b)
-```
-
-```
-[[1. 1. 1.]
-```
 
 
-
-
-##### 二维卷积操作示例
+# 二维卷积操作示例
 
 以下代码首先根据卷积核的高度 `K_h` 和宽度 `K_w`，在图像的上、下、左、右分别填充 `(K_h-1)//2` 和 `(K_w-1)//2` 个像素，然后对填充后的图像进行卷积乘积运算。对应的 Python 代码如下：
 
@@ -16272,17 +16310,22 @@ Figure 6-22 平滑卷积核使图像平滑，结果图像变得模糊
 
 因此，与一维卷积运算类似，二维卷积可以对图像进行平滑、锐化和提取某些特征。
 
-###### 步长
+## 步长
 
 上述卷积操作的**步长**为 1，即卷积核始终 "从上到下、从左到右" 逐像素移动，结果图像的大小接近原始图像。要生成较小尺寸的卷积图像（如原始图像一半大小的卷积图像），可以在水平和垂直方向滑动时每次滑动 2 个像素。即以步长为 2 的方式滑动卷积核进行卷积运算。**步长**有时也称为 "**Stride**"。
 
 与一维信号卷积类似，对于高度和宽度分别为 `H` 和 `W` 的二维信号（如图像），设卷积核的高度和宽度为 `F_h` 和 `F_w`，上下、左右填充的元素数量为 `P_h`、`P_w`，上下、左右步长分别为 `S_h`、`S_w`，输出二维信号（图像）的高度和宽度为：
 
 $$
+
 \begin{matrix} 
+
 {(H - F_h + P_h)/S_h + 1} \\ 
+
 {(W - F_w + P_w)/S_w + 1} 
+
 \end{matrix}
+
 $$
 
 如图 6-23 所示，对于 7x7 的输入图像，卷积核大小为 3x3，步长为 2，上下左右各填充 1。结果输出图像大小为 `((6+2-3)/2+1)x ((6+2-3)/2+1) = 3x3`。
@@ -16337,16 +16380,15 @@ print("Original image size:", image.shape)
 print("Result image size:", image_filtered.shape)
 ```
 
-
-
-
 原始图像尺寸：(233, 328)  
+
 结果图像尺寸：(116, 164)
 
 ![](img/file132.png "fig:")  
+
 图 6-24 步长为 2 的图像卷积
 
-### 6.1.4 多输入通道与多输出通道
+# 6.1.4 多输入通道与多输出通道
 
 彩色图像通常至少包含 3 个通道（RGB 通道），每个通道都是一个二维矩阵。因此，3 通道彩色图像可视为三个二维矩阵的叠加，或一个三维数组（张量体）（或 3D 信号）。因此，要对彩色图像执行卷积运算，需为每个通道给定相应的卷积核。每个通道图像是一个 2D 信号，对应一个 2D 卷积核，所有通道的卷积核共同构成一个 3D 卷积核。
 
@@ -16360,7 +16402,9 @@ $a\_{i,j} = \sum\limits\_{d = 0}^{F\_{d} - 1}\sum\limits\_{m = 0}^{F\_{h} - 1}\s
 
 以下是 3D 卷积运算的代码实现：
 
-```
+
+
+```python
 def convolve3d(X, K, P=(0,0), S=(1,1)): 
     C, H, W = X.shape
     C, F_h, F_w = K.shape
@@ -16382,7 +16426,7 @@ def convolve3d(X, K, P=(0,0), S=(1,1)):
     return Y
 ```
 
-```
+```python
 X = np.array([[[1, 2, 3], [4, 5, 6], [7, 8, 9]],
               [[11, 12, 13], [14, 15, 16], [17, 18, 19]]])
 K = np.array([[[1, 3], [2, 4]], [[4, -3], [2, 1]]])
@@ -16396,7 +16440,7 @@ array([[ 86., 100.],
 
 以下代码读取一张彩色图像：
 
-```
+```python
 from skimage import io, transform
 import numpy as np
 import matplotlib.pyplot as plt
@@ -16409,11 +16453,12 @@ print('image matrix size: ', lenna_img.shape)      # print the size of image
 image matrix size: (330, 330, 3)
 
 ![](img/file133.png "fig:")  
+
 图 6-26 一张彩色图像
 
 对 3 通道彩色图像执行 3D 卷积运算，生成单通道黑白图像：
 
-```
+```python
 X = np.moveaxis(lenna_img, -1, 0)  # np.rollaxis(lenna_img, 2, 0)
 kernel = np.array([[[-1, -1, -1], [-1, 8, -1], [-1, -1, -1]],
                    [[-1, -1, -1], [-1, 8, -1], [-1, -1, -1]],
@@ -16430,6 +16475,7 @@ plt.imshow(edges, cmap=plt.cm.gray)
 ```
 
 ![](img/file134.png "fig:")  
+
 图 6-27 用 3D 卷积核卷积彩色图像
 
 可使用多个不同的 3D 卷积核生成多个不同的 2D 图像。如图 6-28 所示，使用两个 3 通道 3D 卷积核对 3 通道彩色图像执行卷积运算。每个 3 通道 3D 卷积核生成一张单通道图像，总共可生成 2 张单通道图像，或产生一个 2 通道输出图像。
@@ -16438,13 +16484,13 @@ plt.imshow(edges, cmap=plt.cm.gray)
 
 使用多个 3D 卷积核执行 3D 卷积运算可生成多通道输出图像，其计算公式如下：
 
-$a\_{i^{\prime},j^{\prime},k^{\prime}} = \sum\limits\_{k = 0}^{F\_{k} - 1}\sum\limits\_{i = 0}^{F\_{h} - 1}\sum\limits\_{j = 0}^{F\_{w} - 1}w\_{i,j,k,k^{\prime}}x\_{i + i^{\prime},j + j^{\prime},k}\qquad$
+$$a_{i',j',k'} = \sum_{k = 0}^{F_k - 1}\sum_{i = 0}^{F_h - 1}\sum_{j = 0}^{F_w - 1}w_{i,j,k,k'}x_{i + i',j + j',k}$$
 
 其中，`k'` 代表不同的卷积核。
 
 卷积运算实际上提取原始数据中的某种特征信息。因此，每个卷积核生成的输出通道或卷积图像也称为**特征图**（Feature map）。多个卷积核产生多个输出特征图。
 
-### 6.1.5 池化
+## 6.1.5 池化
 
 与卷积类似，**池化**也使用固定形状的窗口（称为**池化窗口**）对齐数据并计算数据窗口的输出值。不同于卷积对输入数据与卷积核的加权求和，池化直接计算数据池化窗口中元素的最大值或平均值。如图 6-29 所示，使用 3×3 窗口从输入二维（图像）矩阵的左上角开始“从上到下，从左向右”滑动，每滑动到一个位置，输出当前池化窗口对应数据窗口中元素的最大值，以生成最终的结果矩阵。此过程称为**最大池化**。
 
@@ -16466,7 +16512,7 @@ $a\_{i^{\prime},j^{\prime},k^{\prime}} = \sum\limits\_{k = 0}^{F\_{k} - 1}\sum\l
 
 与卷积运算一样，池化运算不仅有步长，还会在池化前填充原始图像。类似于卷积运算，可编写以下代码对单通道输入数据 `X` 执行池化运算：
 
-```
+```python
 def pool2d(X, pool, stride=(1,1), padding=(0,0), mode='max'):
     pool_h, pool_w = pool
     S_h, S_w = stride
@@ -16477,8 +16523,6 @@ def pool2d(X, pool, stride=(1,1), padding=(0,0), mode='max'):
     else:
         X_padded = X
 ```
-
-
 
 ##### 执行池化操作
 
@@ -16587,9 +16631,6 @@ print("Original image size:", img.shape)
 print("Result image size:", pooled_img.shape)
 ```
 
-
-
-
 ## 6.2 卷积神经网络
 
 前面神经网络的神经元都是所谓的**全连接**神经元。每个神经元将直接计算所有输入特征的加权和。对于全连接神经网络，输入样本数据必须表示为一维向量，这不适合处理图像等多维数据。虽然多维数据可以展平为一维向量，但存在效率低、无法捕捉多维数据内部结构等缺点。以卷积运算为神经元的卷积神经网络是此类数据的最佳选择。2012 年，AlexNet 使用卷积神经网络赢得了 ImageNet 竞赛，这使处于低谷的神经网络重焕生机，也标志着神经网络从传统的低层神经网络向基于深层神经网络的深度学习过渡。近年来，作为深度学习核心的卷积神经网络研究取得了大量新进展，涌现出各种改进的卷积神经网络结构，如 GoogleNet、ResNet（残差网络）等。
@@ -16618,36 +16659,38 @@ $$a_{i',j',k'} = g_{k'}\left(\sum_{k = 0}^{F_k - 1}\sum_{i = 0}^{F_h - 1}\sum_{j
 
 对于多通道输入，每个通道数相同的卷积神经元产生一个输出特征图。如果一个卷积层有 `k'` 个神经元，将生成 `k'` 个特征图或 `k'` 个输出通道。即卷积层中的多个卷积神经元将生成相同数量的特征图，如图 6-34 所示。对于 3 通道输入数据，2 个卷积神经元输出 2 通道的特征图（其中每个圆圈代表一个卷积神经元）。正如全连接层的输出可作为下一全连接层的输入，一个卷积层输出的多通道特征图可作为下一个卷积层的多通道输入。
 
-**图 6-34** 每个卷积神经元是一个 3 × 3 × 3 大小的卷积核。对于输入 3 通道的 3 × 3 × 3 局部数据窗口，2 个卷积神经元将产生 2 个输出值。对于 3 通道输入，每个卷积神经元产生一个单通道特征图，2 个卷积神经元总共产生 2 通道特征图。
+
+
+# 卷积神经网络
+
+## 卷积层与池化层
+
+**图 6-34** 每个卷积神经元是一个 `3 × 3 × 3` 大小的卷积核。对于输入 3 通道的 `3 × 3 × 3` 局部数据窗口，2 个卷积神经元将产生 2 个输出值。对于 3 通道输入，每个卷积神经元产生一个单通道特征图，2 个卷积神经元总共产生 2 通道特征图。
 
 卷积层通常后接池化层。池化层执行简单的池化运算，如最大池化或平均池化。池化层对每个输入特征图执行池化运算以生成单独的新特征图。池化运算不会改变特征图的数量。输入 3 个特征图将生成 3 个输出特征图，即输出通道数与输入通道数相同。
 
-池化层的作用是减小特征图尺寸，降低卷积层输出特征图的维度，提高训练效率。池化层不包含模型参数。如图 6-35 所示，输入为仅有 1 个通道的 10 × 10 特征图（矩阵或图像），包含 6 个 3 × 3 大小卷积神经元、步长为 1 的卷积层产生 6 个 8 × 8 特征图，随后经过大小为 2 × 2、步长为 2 的池化窗口和池化层，得到 6 个 4 × 4 大小的特征图。
+池化层的作用是减小特征图尺寸，降低卷积层输出特征图的维度，提高训练效率。池化层不包含模型参数。如图 6-35 所示，输入为仅有 1 个通道的 `10 × 10` 特征图（矩阵或图像），包含 6 个 `3 × 3` 大小卷积神经元、步长为 1 的卷积层产生 6 个 `8 × 8` 特征图，随后经过大小为 `2 × 2`、步长为 2 的池化窗口和池化层，得到 6 个 `4 × 4` 大小的特征图。
 
-**图 6-35** 单通道输入特征图 1 × 10 × 10 经 6 个 3 × 3 大小卷积神经元以步长 1 进行卷积运算产生 6 个 8 × 8 大小的特征图 6 × 8 × 8，再经大小为 2 × 2 的池化窗口和步长为 2 的池化层，生成 6 个 4 × 4 大小的特征图。
+**图 6-35** 单通道输入特征图 `1 × 10 × 10` 经 6 个 `3 × 3` 大小卷积神经元以步长 1 进行卷积运算产生 6 个 `8 × 8` 大小的特征图 `6 × 8 × 8`，再经大小为 `2 × 2` 的池化窗口和步长为 2 的池化层，生成 6 个 `4 × 4` 大小的特征图。
 
 包含卷积层的神经网络称为**卷积神经网络**。卷积神经网络的网络层既有卷积层也有全连接层。通常初始网络层是若干卷积层，靠近输出位置的最后几层是若干全连接层。
 
-图 6-36 是一个典型的卷积神经网络结构图。输入为单通道 28 × 28 图像（特征图）。经 8 个 5 × 5 卷积神经元和步长为 1 的卷积层，生成 8 个 24 × 24 大小的特征图（输出通道为 8）。随后经大小为 2 × 2 的池化窗口和步长为 2 的池化层，输出 8 通道、大小为 12 × 12 的特征图。经 16 个 5 × 5 卷积神经元和步长为 1 的卷积层生成 16 个 8 × 8 大小的特征图，再经后续大小为 2 × 2 的池化窗口和步长为 2 的池化层，输出 16 通道、大小为 4 × 4 的特征图。然后，64 个全连接神经元的全连接层产生 64 个输出值，这些输出值经最后的 10 个全连接神经元，全连接层输出 10 个值。
+图 6-36 是一个典型的卷积神经网络结构图。输入为单通道 `28 × 28` 图像（特征图）。经 8 个 `5 × 5` 卷积神经元和步长为 1 的卷积层，生成 8 个 `24 × 24` 大小的特征图（输出通道为 8）。随后经大小为 `2 × 2` 的池化窗口和步长为 2 的池化层，输出 8 通道、大小为 `12 × 12` 的特征图。经 16 个 `5 × 5` 卷积神经元和步长为 1 的卷积层生成 16 个 `8 × 8` 大小的特征图，再经后续大小为 `2 × 2` 的池化窗口和步长为 2 的池化层，输出 16 通道、大小为 `4 × 4` 的特征图。然后，64 个全连接神经元的全连接层产生 64 个输出值，这些输出值经最后的 10 个全连接神经元，全连接层输出 10 个值。
 
-**图 6-36** 单通道 1 × 28 × 28 输入，经 8 个 5 × 5 卷积神经元和步长为 1 的卷积层输出 8 个 24 × 24 特征图。经池化窗口大小为 2 × 2、步长为 2 的池化层输出 8 个 12 × 12 特征图。随后经 16 个 5 × 5 卷积神经元和步长为 1 的卷积层输出生成 16 个 8 × 8 特征图。经池化窗口大小为 2 × 2、步长为 2 的池化层输出 16 个 4 × 4 特征图。然后执行展平操作将其转换为长度为 256 的向量，再经全连接层输出长度为 64 的向量，最后经全连接层输出长度为 10 的向量。
+**图 6-36** 单通道 `1 × 28 × 28` 输入，经 8 个 `5 × 5` 卷积神经元和步长为 1 的卷积层输出 8 个 `24 × 24` 特征图。经池化窗口大小为 `2 × 2`、步长为 2 的池化层输出 8 个 `12 × 12` 特征图。随后经 16 个 `5 × 5` 卷积神经元和步长为 1 的卷积层输出生成 16 个 `8 × 8` 特征图。经池化窗口大小为 `2 × 2`、步长为 2 的池化层输出 16 个 `4 × 4` 特征图。然后执行展平操作将其转换为长度为 256 的向量，再经全连接层输出长度为 64 的向量，最后经全连接层输出长度为 10 的向量。
 
 当最后一个卷积层（或池化层）的特征图输出到全连接层时，特征图将被展平，即转换为一维向量，然后由全连接层的神经元处理并输出。**注意**：图 6-36 中未绘制卷积层，但给出了卷积层的输入和输出特征图。
 
 卷积神经网络最初主要用于计算机视觉或图像处理问题，例如输入图像以识别其分类。对于图像数据，卷积神经网络通常包含多层“卷积+池化”，以不断从低级到高级提取图像特征，并利用池化减小图像尺寸。在神经网络的最后一层，小尺寸的多通道特征图将被展开为一维向量，即执行所谓的特征图**展平**操作，然后由全连接神经元组成的全连接层对一维特征向量进行进一步变换。
 
-因此，卷积神经网络最常用的三种网络层是：卷积层、池化层（通常为最大池化 Max pool）和全连接层。卷积层、全连接层和池化层通常简写为 `conv`、`fc`、`pool`。例如，神经网络结构可用以下简写描述：
+因此，卷积神经网络最常用的三种网络层是：卷积层、池化层（通常为最大池化 `Max pool`）和全连接层。卷积层、全连接层和池化层通常简写为 `conv`、`fc`、`pool`。例如，神经网络结构可用以下简写描述：
 
 ```
 ```
 
+### CNN 架构与卷积层反向传播
 
-
-
-
-#### CNN 架构与卷积层反向传播
-
-##### 网络架构表示
+#### 网络架构表示
 
 ```text
 INPUT -> [[CONV -> Relu]*N -> POOL?]*M -> [FC -> Relu]*K -> FC
@@ -16657,7 +16700,7 @@ INPUT -> [[CONV -> Relu]*N -> POOL?]*M -> [FC -> Relu]*K -> FC
 * `M` 表示卷积层和池化层的组合 `[[CONV -> RELU]*N -> POOL?]` 重复 M 次
 * `K` 表示全连接层 `[FC -> RELU]` 重复了 K 次，即有 K 个全连接层
 
-其中 Relu 表示激活函数为 Relu。卷积层的激活函数一般使用 Relu 激活函数。这是因为 $\sigma(x)$ 等函数当 $x$ 的绝对值变大时，导数会变得非常小，使得在反向推导过程中梯度无法有效传递，即会出现“梯度消失”问题，特别是网络深度增加时，这个“梯度消失”问题更严重，而 Relu 函数没有这个问题。
+其中 `Relu` 表示激活函数为 `Relu`。卷积层的激活函数一般使用 `Relu` 激活函数。这是因为 $\sigma(x)$ 等函数当 $x$ 的绝对值变大时，导数会变得非常小，使得在反向推导过程中梯度无法有效传递，即会出现“梯度消失”问题，特别是网络深度增加时，这个“梯度消失”问题更严重，而 `Relu` 函数没有这个问题。
 
 不同权重的卷积核可以提取不同的特征。如图 6-37 所示，一个卷积层使用多个卷积核提取不同的特征图。
 
@@ -16669,11 +16712,11 @@ INPUT -> [[CONV -> Relu]*N -> POOL?]*M -> [FC -> Relu]*K -> FC
 
 可以看出，靠近输入层的卷积层发现图像的边缘或颜色特征，后续层在此基础上构建复杂结构，如寻找边缘的交叉或颜色的阴影，再后续层将这些结合起来识别图像中有意义的结构或物体，后续的卷积层开始逐渐提取更高级的特征。这种从最低级边缘特征到高级形状特征的提取过程，类似于人类观察世界的过程。
 
-### 6.2.3 卷积层和池化层的反向推导与代码实现
+## 卷积层和池化层的反向推导与代码实现
 
 卷积神经网络与全连接神经网络的区别在于增加了卷积层（包括池化层）。只要在之前实现的全连接神经网络基础上增加卷积层和池化层，就可以实现卷积神经网络。第 6.1 节已实现卷积层和池化层的前向计算，关键在于如何实现卷积层（包括池化层）的反向推导。
 
-#### 卷积层的反向推导
+### 卷积层的反向推导
 
 首先用一维卷积说明如何进行反向推导。
 
@@ -16744,10 +16787,7 @@ for i in range(z.size):
 db = dz.sum()
 ```
 
-
-
-
-# 如何求输出 *x* 关于损失函数 *L* 的梯度 $dx = \frac{\partial L}{\partial x}$？
+### 如何求输出 $x$ 关于损失函数 $L$ 的梯度 $dx = \frac{\partial L}{\partial x}$？
 
 因为 $z[i]$ 仅与 $x[i], x[i+1], \dots, x[i+K-1]$ 相关，当 $j \neq i, \dots, i+K-1$ 时，$z[i]$ 关于 $x[j]$ 的偏导数 $\frac{\partial z_i}{\partial x_j} = 0$，即：
 
@@ -16797,87 +16837,20 @@ for i in range(z.size):
 $$
 \begin{matrix}
 \frac{\partial L}{\partial w} = \sum_{i=0}^{(n-K)//S} \frac{\partial L}{\partial z_i} x[i*S : i*S+K] \\
-\frac{\partial L}{\partial x}[i*S : i*S+K] += \frac{\partial L}{\partial z_i} w
 \end{matrix}
 $$
 
-当然，对于带有上、下、左、右填充的卷积，$x$ 在卷积前需要填充，反向传播同理。因此，带步长和填充的卷积的反向导数可以用以下 Python 代码处理：
-
-```python
-x_pad = np.pad(x, [(pad, pad)], 'constant')
-dx_pad = np.zeros_like(x_pad)
-
-# ....
-
-start = i * S
-dw += x_pad[start:start+K] * dz[i]
-dx_pad[start:start+K] += w * dz[i]
-```
-
-对于一维数据，完整的反向传播代码如下：
-
-```python
-def conv_backward(dz, x, w, p=0, s=1):
-    n, K = len(x), len(w)
-    o_n = 1 + (n + 2 * p - K) // s
-    assert(o_n == len(dz))
-
-    dx = np.zeros_like(x)
-    dw = np.zeros_like(w)
-    db = dz[:].sum()
-
-    x_pad = np.pad(x, [(p, p)], 'constant')
-    dx_pad = np.zeros_like(x_pad)
-
-    for i in range(o_n):
-        start = i * s
-        dw += x_pad[start:start+K] * dz[i]
-        dx_pad[start:start+K] += w * dz[i]
-
-    dx = dx_pad[p:-p]
-
-    return dx, dw, db
-```
-
-以下代码测试上述函数：
-
-```python
-import numpy as np
-
-np.random.seed(231)
-x = np.random.randn(5)
-w = np.random.randn(3)
-stride = 2
-pad = 1
-dz = np.random.randn(5)
-
-print(dz)
-dx, dw, db = conv_backward(dz, x, w, 1)
-print(dx)
-print(dw)
-print(db)
-```
-
-输出结果：
-
-```
-[-1.4255293  -0.3763567  -0.34227539  0.29490764 -0.83732373]
-[ 0.50522405 -2.33230266 -0.87796042 -0.03246064  0.67446745]
-[-0.56864738 -0.65679696 -1.09889311]
--2.6865774833459617
-```
 
 
+## 卷积层的反向传播推导与实现
 
-
-##### 卷积层的反向传播推导与实现
-
-###### 一维卷积扩展到二维多通道
+### 一维卷积扩展到二维多通道
 
 同理，一维数据的卷积可以扩展到多输入输出通道的二维数据卷积的反向推导。如图 6-39 所示，为单输入通道和单输出通道的梯度求解示意图。
 
-**图 6-39**  
-$z_{00} = x_{00}w_{00}+x_{01}w_{01}+x_{10}w_{10}+x_{11}w_{11}$，其关于 $w_{00}, w_{01}, w_{10}, w_{11}$ 的梯度分别为 $x_{00}, x_{01}, x_{10}, x_{11}$，其关于 $x_{00}, x_{01}, x_{10}, x_{11}$ 的梯度分别为 $w_{00}, w_{01}, w_{10}, w_{11}$。
+**图 6-39**
+
+$$z_{00} = x_{00}w_{00}+x_{01}w_{01}+x_{10}w_{10}+x_{11}w_{11}$$，其关于 $w_{00}, w_{01}, w_{10}, w_{11}$ 的梯度分别为 $x_{00}, x_{01}, x_{10}, x_{11}$，其关于 $x_{00}, x_{01}, x_{10}, x_{11}$ 的梯度分别为 $w_{00}, w_{01}, w_{10}, w_{11}$。
 
 $$
 \frac{\partial L}{\partial ww} = \sum_{ij}\frac{\partial L}{\partial z_{ij}}\frac{\partial z_{ij}}{\partial ww}
@@ -16943,7 +16916,7 @@ $$
 \frac{\partial L}{\partial xx}[i:i+K_h, j:j+K_w] += \frac{\partial L}{\partial z_{ij}}ww
 $$
 
-###### 带填充和步长的卷积
+### 带填充和步长的卷积
 
 对于带填充和步长的卷积，在进行反向推导前，也需要先填充 $xx$，然后根据步长找到 $z_{ij}$ 对应的数据窗口，即按以下公式计算 $L$ 关于 $ww$、$xx$ 的梯度（偏导数）：
 
@@ -16985,7 +16958,7 @@ $$
 
 如果有多个样本，只需将上述每个样本的梯度 $\frac{\partial L}{\partial ww^{f}}, \frac{\partial L}{\partial b^{f}}$ 累加，而各样本的 $xx$ 相互独立，所以 $\frac{\partial L}{\partial xx}$ 不能累加。
 
-###### `Conv` 类实现
+### `Conv` 类实现
 
 在之前 `Layer` 类的基础上，以下代码定义了一个表示卷积层的类 `Conv`，用于多样本、多输入通道、多输出通道的卷积前向计算（`forward`）和反向推导（`backward`）。`Conv` 的构造函数接受输入输出通道数和代表卷积操作的卷积核等参数。`forward()` 方法接受多通道输入 `X` 生成卷积多通道输出 `Z`。`backward()` 方法接受来自损失函数的关于卷积层输出 `Z` 的梯度 `dZ`，计算损失函数关于卷积参数（`W`、`b`）和输入 `X` 的梯度。
 
@@ -17044,10 +17017,9 @@ class Conv(Layer):
         self.X = X
 ```
 
+#### 卷积层的反向传播实现
 
 
-
-####### 卷积层的反向传播实现
 
 ```python
 N, C, X_h, X_w = self.X.shape
@@ -17228,10 +17200,6 @@ class Pool(Layer):
     def forward(self, x):
 ```
 
-
-
-
-
 ```python
         self.x = x
 
@@ -17303,6 +17271,8 @@ print(diff_error(dx, dx_num))
 ### 6.2.4 卷积神经网络的实现
 
 基于已实现的卷积层、池化层和全连接层，可以实现一个表示一类卷积神经网络的 `ConvNetwork`。
+
+
 
 ```python
 class NeuralNetwork:
@@ -17431,11 +17401,8 @@ import matplotlib.pyplot as plt
 plt.plot(losses)
 ```
 
-
-
-
-
 ![](img/file136.png "fig:")
+
 图 6-41 损失曲线
 
 ## 6.3 卷积矩阵乘法
@@ -17455,29 +17422,49 @@ plt.plot(losses)
 若有一维张量 `x = (1, 2, 3, 4, 5)` 和卷积核 `k = (−1, 2, 1)`，步长 `s=1`，填充 `p=0`。卷积操作过程为在数据向量上滑动卷积核，计算每个对齐数据窗口与卷积核的累加和，得到一个值：
 
 `(1, 2, 3) · (−1, 2, 1) = 6`
+
 `(2, 3, 4) · (−1, 2, 1) = 8`
+
 `(3, 4, 5) · (−1, 2, 1) = 10`
 
 若将每次累加和的数据窗口中的数据作为矩阵的一行，得到一个矩阵，记为 `x_row`，将卷积核转为列向量，记为 `K_col`。则卷积结果张量可表示为这两个矩阵的乘积，即：
 
 $$
+
 z_{row} = x_{row} K_{col} =
+
 \begin{bmatrix}
+
 1 & 2 & 3 \\
+
 2 & 3 & 4 \\
+
 3 & 4 & 5 \\
+
 \end{bmatrix}
+
 \begin{bmatrix}
+
 -1 \\
+
 2 \\
+
 1 \\
+
 \end{bmatrix}
+
 =
+
 \begin{bmatrix}
+
 6 \\
+
 8 \\
+
 10 \\
+
 \end{bmatrix}
+
 $$
 
 输入张量长度为 `n`，步长为 `s`、前后填充为 `p` 的卷积操作生成的结果张量长度为 $o = \frac{n - k + 2 \ast p}{s} + 1$。上例中结果张量长度为 $o = \frac{5 - 3 + 0}{1} + 1 = 3$。
@@ -17485,49 +17472,85 @@ $$
 若有 2 个样本，依次对每个样本进行上述展平操作。若 `x` 为以下 2 个样本：
 
 $$
+
 x =
+
 \begin{bmatrix}
+
 1 & 2 & 3 & 4 & 5 \\
+
 6 & 7 & 8 & 9 & 10 \\
+
 \end{bmatrix}
+
 $$
 
 则 `x_row` 为 6 行的矩阵，卷积可表示为：
 
 $$
+
 z_{row} = x_{row} K_{col} =
+
 \begin{bmatrix}
+
 1 & 2 & 3 \\
+
 2 & 3 & 4 \\
+
 3 & 4 & 5 \\
+
 6 & 7 & 8 \\
+
 7 & 8 & 9 \\
+
 8 & 9 & 10 \\
+
 \end{bmatrix}
+
 \begin{bmatrix}
+
 -1 \\
+
 2 \\
+
 1 \\
+
 \end{bmatrix}
+
 =
+
 \begin{bmatrix}
+
 6 \\
+
 8 \\
+
 10 \\
+
 16 \\
+
 18 \\
+
 20 \\
+
 \end{bmatrix}
+
 $$
 
 将 `z_row` 还原为 2 个样本的形式，得到 `z` 如下：
 
 $$
+
 z =
+
 \begin{bmatrix}
+
 6 & 8 & 10 \\
+
 16 & 18 & 20 \\
+
 \end{bmatrix}
+
 $$
 
 ### 6.3.2 二维样本卷积的矩阵乘法
@@ -17535,150 +17558,273 @@ $$
 若输入数据仅有一个样本且该样本仅有一个通道，即输入数据形状为 `(1, 1, H, W)` 的张量，其中 `H`、`W` 为该二维样本的分辨率。如下面的 `(1, 1, 3, 3)` 样本 `X`：
 
 $$
+
 X =
+
 \begin{bmatrix}
+
 1 & 2 & 3 \\
+
 4 & 5 & 6 \\
+
 7 & 8 & 9 \\
+
 \end{bmatrix}_{3 \times 3}
+
 $$
 
 卷积核为形状 `(1, 1, 2, 2)` 的张量：
 
 $$
+
 K =
+
 \begin{bmatrix}
+
 1 & 2 \\
+
 3 & 4 \\
+
 \end{bmatrix}_{2 \times 2}
+
 $$
 
 若进行步长 `S=1`、周围填充 `P=1` 的卷积操作，需先填充原始数据，填充后数据 `X_pad` 为：
 
 $$
+
 X_{pad} =
+
 \begin{bmatrix}
+
 0 & 0 & 0 & 0 & 0 \\
+
 0 & 1 & 2 & 3 & 0 \\
+
 0 & 4 & 5 & 6 & 0 \\
+
 0 & 7 & 8 & 9 & 0 \\
+
 0 & 0 & 0 & 0 & 0 \\
+
 \end{bmatrix}_{5 \times 5}
+
 $$
 
 用 `(1, 1, 2, 2)` 卷积核沿 `X_pad` 滑动，计算每个对齐数据窗口与卷积核对应元素的加权和。当卷积核“从上到下、从左到右”滑动时，将生成 `4 × 4` 的特征图。这些与卷积核加权求和的数据窗口如下所示：
 
 $$
+
 X_{0} =
+
 \begin{bmatrix}
+
 0 & 0 \\
+
 0 & 0 \\
+
 \end{bmatrix}_{2 \times 2}
+
 X_{1} =
+
 \begin{bmatrix}
+
 0 & 0 \\
+
 0 & 1 \\
+
 \end{bmatrix}_{2 \times 2}
+
 X_{2} =
+
 \begin{bmatrix}
+
 0 & 0 \\
+
 1 & 2 \\
+
 \end{bmatrix}_{2 \times 2}
+
 X_{3} =
+
 \begin{bmatrix}
+
 0 & 0 \\
+
 3 & 0 \\
+
 \end{bmatrix}_{2 \times 2}
+
 $$
 
 $$
+
 X_{4} =
+
 \begin{bmatrix}
+
 0 & 1 \\
+
 0 & 4 \\
+
 \end{bmatrix}_{2 \times 2}
+
 X_{5} =
+
 \begin{bmatrix}
+
 1 & 2 \\
+
 4 & 5 \\
+
 \end{bmatrix}_{2 \times 2}
+
 X_{6} =
+
 \begin{bmatrix}
+
 2 & 3 \\
+
 5 & 6 \\
+
 \end{bmatrix}_{2 \times 2}
+
 X_{7} =
+
 \begin{bmatrix}
+
 3 & 0 \\
+
 6 & 0 \\
+
 \end{bmatrix}_{2 \times 2}
+
 $$
 
 $$
+
 X_{8} =
+
 \begin{bmatrix}
+
 0 & 4 \\
+
 0 & 7 \\
+
 \end{bmatrix}_{2 \times 2}
+
 X_{9} =
+
 \begin{bmatrix}
+
 4 & 5 \\
+
 7 & 8 \\
+
 \end{bmatrix}_{2 \times 2}
+
 X_{10} =
+
 \begin{bmatrix}
+
 5 & 6 \\
+
 8 & 9 \\
+
 \end{bmatrix}_{2 \times 2}
+
 X_{11} =
+
 \begin{bmatrix}
+
 6 & 0 \\
+
 9 & 0 \\
+
 \end{bmatrix}_{2 \times 2}
+
 $$
 
 $$
+
 X_{12} =
+
 \begin{bmatrix}
+
 0 & 7 \\
+
 0 & 0 \\
+
 \end{bmatrix}_{2 \times 2}
+
 X_{13} =
+
 \begin{bmatrix}
+
 7 & 8 \\
+
 0 & 0 \\
+
 \end{bmatrix}_{2 \times 2}
+
 X_{14} =
+
 \begin{bmatrix}
+
 8 & 9 \\
+
 0 & 0 \\
+
 \end{bmatrix}_{2 \times 2}
+
 X_{15} =
+
 \begin{bmatrix}
+
 9 & 0 \\
+
 0 & 0 \\
+
 \end{bmatrix}_{2 \times 2}
+
 $$
 
 将每个窗口数据块转为矩阵的一行。所有这些数据块的行组成一个矩阵，记为 `X_row`，将卷积核转为列向量，记为 `K_col`：
 
 $$
+
 X_{row} =
+
 \begin{bmatrix}
+
 0 & 0 & 0 & 0 \\
+
 0 & 0 & 0 & 1 \\
+
 0 & 0 & 1 & 2 \\
+
 0 & 0 & 3 & 0 \\
+
 0 & 0 & 0 & 4 \\
+
 \vdots & \vdots & \vdots & \vdots \\
+
 \end{bmatrix}_{16 \times 4}
+
 K_{col} =
+
 \begin{bmatrix}
+
 1 \\
+
 2 \\
+
 3 \\
+
 4 \\
+
 \end{bmatrix}_{4 \times 1}
+
 $$
 
 卷积操作可表示为这两个矩阵的乘积 `X_row K_col`，将生成 `16 × 1` 的卷积结果矩阵，记为 `Z_row`，可转为形状为 `4 × 4` 的特征图，即每样本单通道特征图，也就是 `(1, 1, 4, 4)` 的张量。
@@ -17686,51 +17832,90 @@ $$
 若输入为单样本多通道张量，如 `(1, 2, 3, 3)` 的张量 `X`，其两个通道 `X[0]` 和 `X[1]` 分别为：
 
 $$
+
 X_{0} =
+
 \begin{bmatrix}
+
 1 & 2 & 3 \\
+
 4 & 5 & 6 \\
+
 7 & 8 & 9 \\
+
 \end{bmatrix}_{3 \times 3}
+
 $$
 
 $$
+
 X_{1} =
+
 \begin{bmatrix}
+
 11 & 12 & 13 \\
+
 14 & 15 & 16 \\
+
 17 & 18 & 19 \\
+
 \end{bmatrix}_{3 \times 3}
+
 $$
 
 卷积核也应为通道数相同的张量，如 `(1, 2, 2, 2)` 的张量 `K`，其两个通道分别记为 `K[0]`、`K[1]`。
 
 $$
+
 K_{0} =
+
 \begin{bmatrix}
+
 1 & 2 \\
+
 3 & 4 \\
+
 \end{bmatrix}_{2 \times 2}
+
 $$
 
 $$
+
 K_{1} =
+
 \begin{bmatrix}
+
 5 & 6 \\
+
 7 & 8 \\
+
 \end{bmatrix}_{2 \times 2}
+
 $$
 
 若进行步长为 1、填充为 0 的卷积，卷积核每次滑动时与 2 个通道的数据块进行加权和，即 `2 × 2 × 2`，将与卷积核对应的 2 个通道的 `2 × 2 × 2` 数据块展平为一行，所有滑动窗口对应数据块的行组成矩阵 `X_row`，将卷积核展平为大小为 8 的列向量，如下：
 
 $$
+
 X_{row} =
+
 \begin{bmatrix}
+
 1 & 2 & 4 & 5 & 11 & 12 & 14 & 15 \\
+
 2 & 3 & 5 & 6 & 12 & 13 & 15 & 16 \\
+
 4 & 5 & 7 & 8 & 14 & 15 & 17 & 18 \\
+
 5 & 6 & 8 & 9 & 15 & 16 & 18 & 19 \\
+
+
+
+$$
 \end{bmatrix}_{4 \times 8}
+$$
+
+$$
 K_{col} =
 \begin{bmatrix}
 1 \\
@@ -17787,20 +17972,13 @@ $$
 
 利用 numpy 的 reshape 很容易将由卷积层多个卷积核组成的形状为 `(F, C, kH, kW)` 的四维张量展平为二维张量的矩阵 `K_col`：
 
-```
-```
-
-
-
-
-
-#### 卷积层的矩阵乘法实现
-
-##### 核心矩阵变换
-
 ```python
 K.reshape(K.shape[0], -1).transpose()
 ```
+
+### 卷积层的矩阵乘法实现
+
+#### 核心矩阵变换
 
 其中，每一列对应一个卷积核。
 
@@ -17826,7 +18004,7 @@ X_row[h*oW+w::oSize, :] = np.reshape(patch, (N, -1))
 
 该代码先将 $N$ 个样本的数据块重塑为 `(N, -1)` 形状，再按步长 $o\_Size = o_H \times o_W$ 放入对应行。
 
-##### 完整实现：4D 张量转 2D 矩阵
+#### 完整实现：4D 张量转 2D 矩阵
 
 ```python
 def im2row(x, kH, kW, S=1):
@@ -17846,7 +18024,7 @@ def im2row(x, kH, kW, S=1):
     return row
 ```
 
-###### 单样本多通道测试
+##### 单样本多通道测试
 
 ```python
 x = np.arange(18).reshape(1, 2, 3, 3)
@@ -17856,6 +18034,7 @@ print(x_row)
 ```
 
 **输出：**
+
 ```
 [[[[ 0  1  2]
    [ 3  4  5]
@@ -17881,6 +18060,7 @@ print(x_row)
 ```
 
 **输出：**
+
 ```
 [[[[ 0  1  2]
    [ 3  4  5]
@@ -17950,6 +18130,7 @@ print(z)
 ```
 
 **输出：**
+
 ```
 [[[[1 2 3]
    [4 5 6]
@@ -17974,6 +18155,7 @@ print(z)
 ```
 
 **输出：**
+
 ```
 (2, 2, 2, 2)
 [[[[ 268.  296.]
@@ -17989,17 +18171,13 @@ print(z)
    [2616. 2708.]]]]
 ```
 
-
-
-
-
 ### 6.3.3 用于一维卷积反向推导的矩阵乘法
 
 设 `x` = (`x`[0], `x`[1], `x`[2], `x`[3], `x`[4])，`K` = (`w`[0], `w`[1], `w`[2])，`x`[`row`] 和 `K`[`col`] 分别是 `x` 和 `K` 的矩阵形式。为了将矩阵展平，卷积可以标记为它们的乘积。设卷积结果矩阵为 `z`[`row`]，即：
 
 $$
-\begin{matrix} 
-{z\_{row} = \begin{bmatrix} z\_{0} \\ z\_{1} \\ z\_{2} \\ \end{bmatrix} = x\_{row}K\_{col} = \begin{bmatrix} x\_{0} & x\_{1} & x\_{2} \\ x\_{1} & x\_{2} & x\_{3} \\ x\_{2} & x\_{3} & x\_{4} \\ \end{bmatrix}\begin{bmatrix} w\_{0} \\ w\_{1} \\ w\_{2} \\ \end{bmatrix}} 
+\begin{matrix}
+{z_{row} = \begin{bmatrix} z_{0} \\ z_{1} \\ z_{2} \\ \end{bmatrix} = x_{row}K_{col} = \begin{bmatrix} x_{0} & x_{1} & x_{2} \\ x_{1} & x_{2} & x_{3} \\ x_{2} & x_{3} & x_{4} \\ \end{bmatrix}\begin{bmatrix} w_{0} \\ w_{1} \\ w_{2} \\ \end{bmatrix}}
 \end{matrix}
 $$
 
@@ -18016,8 +18194,8 @@ $$
 例如，对于 `dx`[`row`]：
 
 $$
-\begin{matrix} 
-{dx\_{row} = dz\_{row}K\_{col}^{T} = \begin{bmatrix} {dz\_{0}} \\ {dz\_{1}} \\ {dz\_{2}} \\ \end{bmatrix}\begin{bmatrix} w\_{0} & w\_{1} & w\_{2} \\ \end{bmatrix} = \begin{bmatrix} {dz\_{0}w\_{0}} & {dz\_{0}w\_{1}} & {dz\_{0}w\_{2}} \\ {dz\_{1}w\_{0}} & {dz\_{1}w\_{1}} & {dz\_{1}w\_{2}} \\ {dz\_{2}w\_{0}} & {dz\_{2}w\_{1}} & {dz\_{2}w\_{2}} \\ \end{bmatrix}} 
+\begin{matrix}
+{dx_{row} = dz_{row}K_{col}^{T} = \begin{bmatrix} {dz_{0}} \\ {dz_{1}} \\ {dz_{2}} \\ \end{bmatrix}\begin{bmatrix} w_{0} & w_{1} & w_{2} \\ \end{bmatrix} = \begin{bmatrix} {dz_{0}w_{0}} & {dz_{0}w_{1}} & {dz_{0}w_{2}} \\ {dz_{1}w_{0}} & {dz_{1}w_{1}} & {dz_{1}w_{2}} \\ {dz_{2}w_{0}} & {dz_{2}w_{1}} & {dz_{2}w_{2}} \\ \end{bmatrix}}
 \end{matrix}
 $$
 
@@ -18055,19 +18233,21 @@ $$
 
 `Z` = `conv`(`XX`, `KK`) + `b`
 
-其中 `conv`(`XX`, `KK`) 表示输入 `XX` 与卷积核权重 `KK` 的卷积运算。卷积运算 `conv`(`XX`, `KK`) 可表示为矩阵乘积，即：
 
-`ZZ`[`row`] = `XX`[`row`] `KK`[`col`]
 
-其中 `XX`[`row`]、 `KK`[`col`]、 `ZZ`[`row`] 分别是展平为矩阵形式的输入、权重和输出。
+其中 `conv(XX, KK)` 表示输入 `XX` 与卷积核权重 `KK` 的卷积运算。卷积运算 `conv(XX, KK)` 可表示为矩阵乘积，即：
 
-如果已知损失函数关于输出向量 `Z` 的梯度 `dZ`，根据公式 (6-33)，损失函数关于 `b` 的梯度 `db` 与之前全连接层的推导相同，即 `db` = `np.sum`(`dZ`, `axis`=(0, 2, 3))。即每个通道对应的偏置 `b`[`k`] 的梯度是所有样本所有像素值的梯度 `dz`[`i`, `k`, `h`, `w`] 的累加。
+`ZZ[row] = XX[row] KK[col]`
 
-根据公式 (6-34)，同全连接层的反向推导一样，可以从关于展平后的 `XX`[`row`]、 `KK`[`Gradientofcol`] 的梯度 `dZZ`[`row`] 得到损失函数的梯度：
+其中 `XX[row]`、`KK[col]`、`ZZ[row]` 分别是展平为矩阵形式的输入、权重和输出。
 
-`dXX`[`row`] = `dZZ`[`row`] `K`[`col`]^(`T`)
+如果已知损失函数关于输出向量 `Z` 的梯度 `dZ`，根据公式 (6-33)，损失函数关于 `b` 的梯度 `db` 与之前全连接层的推导相同，即 `db = np.sum(dZ, axis=(0, 2, 3))`。即每个通道对应的偏置 `b[k]` 的梯度是所有样本所有像素值的梯度 `dz[i, k, h, w]` 的累加。
 
-`dK`[`col`] = `X`[`row`]^(`T`) `dZZ`[`row`]
+根据公式 (6-34)，同全连接层的反向推导一样，可以从关于展平后的 `XX[row]`、`KK[Gradientofcol]` 的梯度 `dZZ[row]` 得到损失函数的梯度：
+
+`dXX[row] = dZZ[row] K[col]^(T)`
+
+`dK[col] = X[row]^(T) dZZ[row]`
 
 该计算可用以下 Python 代码表示：
 
@@ -18076,7 +18256,7 @@ dK_col = np.dot(X_row.T, dZ_row) # X_row.T @ dZ_row
 dX_row = np.dot(dZ_row, K_col.T)
 ```
 
-因为 `KK`[`col`] 是按照每个通道将 `KK` 展平为每个列向量，所以只要将 `dK`[`col`] 的每一列重塑为与 `KK` 相同的形状，即：
+因为 `KK[col]` 是按照每个通道将 `KK` 展平为每个列向量，所以只要将 `dK[col]` 的每一列重塑为与 `KK` 相同的形状，即：
 
 ```python
 dK_col = dK_col.transpose(1, 0)  # 将通道轴 F 转置到第一轴
@@ -18085,21 +18265,17 @@ dK = dK_col.reshape(K.shape)     # 转换为 K 的形状：(F, C, kH, kW)
 
 即可根据 `KK` 的展平方法轻松重塑为与 `KK` 相同的形状。
 
-`dXX`[`row`] 是一个与 `XX` 的展平矩阵 `XX`[`row`] 形状相同的矩阵，其每一行代表一个与卷积核形状相同 (`C`, `oH`, `kW`) 的数据块。`XX`[`row`] 不同行代表的数据块在 `XX` 中可能重叠。因此 `dXX`[`row`] 的不同行代表可能重叠的数据块的梯度。所以在根据展平过程的逆过程将 `dXX`[`row`] 还原为 `dXX` 时，这些重叠的梯度需要累加。这个过程与之前的一维情况完全相同。
+`dXX[row]` 是一个与 `XX` 的展平矩阵 `XX[row]` 形状相同的矩阵，其每一行代表一个与卷积核形状相同 (`C`, `oH`, `kW`) 的数据块。`XX[row]` 不同行代表的数据块在 `XX` 中可能重叠。因此 `dXX[row]` 的不同行代表可能重叠的数据块的梯度。所以在根据展平过程的逆过程将 `dXX[row]` 还原为 `dXX` 时，这些重叠的梯度需要累加。这个过程与之前的一维情况完全相同。
 
-根据展平的逆过程从 `dXX`[`row`] 得到 `dXX` 可以用以下函数 `row2im()` 实现。
+根据展平的逆过程从 `dXX[row]` 得到 `dXX` 可以用以下函数 `row2im()` 实现。
 
 ```python
 def row2im(dx_row, oH, oW, kH, kW, S):
 ```
 
+### 反向传播代码实现
 
-
-
-
-#### 反向传播代码实现
-
-##### 核心变量定义
+#### 核心变量定义
 
 ```python
 nRow, K2C = dx_row.shape[0], dx_row.shape[1]
@@ -18111,7 +18287,7 @@ W = (oW - 1) * S + kW
 dx = np.zeros([N, C, H, W])
 ```
 
-##### row2im 函数实现（版本一）
+#### row2im 函数实现（版本一）
 
 ```python
 for i in range(oSize):
@@ -18123,11 +18299,11 @@ for i in range(oSize):
 return dx
 ```
 
-##### 原理说明
+#### 原理说明
 
 其中，`oSize = oH × oW` 表示 `ZZ` 的一个特征图的大小，也表示一个输入样本被分成的数据块数量。`oH` 和 `oW` 是数据块矩阵的高度和宽度。`i` 表示卷积核“从上到下，从左到右”滑动时对应的数据块编号。根据 `i`，下标为 `(i // oW), (i % oW)`，根据数据块下标和跨度 `S`，可以计算出该数据块在原始数据矩阵中的高度和宽度下标 `h_start, w_start`。这样，`dx_row` 的第 `i` 行就可以累加到这个位置。因为有 `N` 个样本，展平矩阵中相同样本相同位置的行位置相差 `oSize`，所以可以用 `dx_row[i::oSize, :]` 来获取所有 `N` 个样本在该位置的数据块梯度。原始数据梯度张量 `dx` 对应的位置是 `dx[:, :, h_start:h_start+kH, w_start:w_start+kW]`。
 
-##### row2im 函数实现（版本二）
+#### row2im 函数实现（版本二）
 
 ```python
 def row2im(dx_row, oH, oW, kH, kW, S):
@@ -18149,7 +18325,7 @@ def row2im(dx_row, oH, oW, kH, kW, S):
     return dx
 ```
 
-##### 测试代码
+#### 测试代码
 
 ```python
 kH, kW = 2, 2
@@ -18196,7 +18372,7 @@ dx[0,0,:,:]: [[ 0.  9. 25. 17.]
  [50. 109. 125. 67.]]
 ```
 
-##### 卷积层反向传播函数
+#### 卷积层反向传播函数
 
 基于上述讨论，卷积层的反向传播代码如下：
 
@@ -18219,7 +18395,7 @@ def conv_backward(dZ, K, oH, oW, kH, kW, S=1, P=0):
     return dX_pad[:, :, P:-P, P:-P], dK, db
 ```
 
-##### 卷积反向传播测试代码
+#### 卷积反向传播测试代码
 
 ```python
 H, W = 4, 4
@@ -18258,21 +18434,17 @@ dW[0,0,:,:]: [[258. 294.]
 db: [[ 36 117 198 279]]
 ```
 
+## 6.4 基于坐标索引的快速卷积
 
+用矩阵运算替代嵌套循环可以加速卷积计算，但在展平和重塑过程中仍需要多重循环来复制数据。本节介绍基于索引的快速卷积：通过快速构建索引数组，再构建展平或重塑后的张量，可进一步提高卷积效率。
 
+卷积操作以跨度为步长，按“从上到下，从左到右”的顺序移动卷积核。在每个位置，卷积核与对应的数据张量窗口（多通道数据块）的对应元素进行加权求和，得到输出特征图的每个元素。
 
+之前，原始数据张量是按卷积加权求和的“从上到下，从左到右”的顺序，将原始张量的多通道数据块依次展平为行向量，从而展平为矩阵。
 
-## 6.4 Fast Convolution Based on Coordinate Indexing
+如果跨度与卷积核尺寸（高度和宽度）不一致，按顺序与卷积核进行加权求和的数据块将会重叠。将这些按计算顺序排列的数据块整理，可得到一个数据块不重叠的新张量。
 
-Replacing nested loops with matrix operations can accelerate convolution computation, but multiple loops are still required to copy data during flattening and reshaping. This section introduces fast convolution based on indexing: by rapidly constructing index arrays and then building flattened or reshaped tensors, convolution efficiency can be further improved.
-
-The convolution operation moves the kernel with the stride as the step size, in a "top-to-bottom, left-to-right" order. At each position, the weighted sum of corresponding elements is computed between the kernel and the corresponding data tensor window (multi-channel data block) to obtain each element of the output feature map.
-
-Previously, the original data tensor was flattened into a matrix by sequentially flattening the multi-channel data blocks of the original tensor into row vectors, following the "top-to-bottom, left-to-right" order of the convolution weighted sum.
-
-If the stride is inconsistent with the kernel size (height and width), the data blocks computed sequentially with the kernel for the weighted sum will overlap. Arranging these data blocks sorted by computation order yields a new tensor with non-overlapping data blocks.
-
-For example, for the following 4×4 tensor with 1 sample and 1 channel:
+例如，对于下面这个 1 个样本、1 个通道的 4×4 张量：
 
 $$
 \begin{bmatrix}
@@ -18283,7 +18455,7 @@ x_{30} & x_{31} & x_{32} & x_{33}
 \end{bmatrix}
 $$
 
-If the kernel is 2×2, the convolution operation essentially performs a weighted sum between the kernel and the data blocks arranged as follows:
+如果卷积核是 2×2，卷积操作本质上是在卷积核与按如下方式排列的数据块之间进行加权求和：
 
 $$
 \begin{bmatrix}
@@ -18301,7 +18473,7 @@ $$
 \end{bmatrix}
 $$
 
-Flattening each data block (identical in size to the kernel) into a row vector yields the following row vector matrix:
+将每个数据块（与卷积核尺寸相同）展平为行向量，得到下面的行向量矩阵：
 
 $$
 \begin{bmatrix}
@@ -18313,32 +18485,55 @@ x_{10} & x_{11} & x_{20} & x_{21} \\
 x_{11} & x_{12} & x_{21} & x_{22} \\
 x_{12} & x_{13} & x_{23} & x_{23} \\
 & & & \\
-x_{20} & x_{21} & x_{30} & x_{31} \\
-x_{21} & x_{22} & x_{31} & x_{32} \\
-x_{22} & x_{23} & x_{33} & x_{33}
 \end{bmatrix}
+$$
+
+
+
+x_{20} & x_{21} & x_{30} & x_{31} \\
+
+x_{21} & x_{22} & x_{31} & x_{32} \\
+
+x_{22} & x_{23} & x_{33} & x_{33}
+
+\end{bmatrix}
+
 $$
 
 If there are multiple channels, each data block is a 3D tensor (cuboid), and the process is similar. For example, a 2-channel tensor:
 
 $$
+
 \begin{bmatrix}
+
 x_{000} & x_{001} & x_{002} & x_{003} \\
+
 x_{010} & x_{011} & x_{012} & x_{013} \\
+
 x_{020} & x_{021} & x_{022} & x_{023} \\
+
 x_{030} & x_{031} & x_{032} & x_{033}
+
 \end{bmatrix}
+
 $$
 
 and
 
 $$
+
 \begin{bmatrix}
+
 x_{100} & x_{101} & x_{102} & x_{103} \\
+
 x_{110} & x_{111} & x_{112} & x_{113} \\
+
 x_{120} & x_{121} & x_{122} & x_{123} \\
+
 x_{130} & x_{131} & x_{132} & x_{133}
+
 \end{bmatrix}
+
 $$
 
 According to the convolution computation process, these data blocks are arranged in order as:
@@ -18348,55 +18543,97 @@ According to the convolution computation process, these data blocks are arranged
 That is, the matrix blocks at corresponding positions of the following two matrices constitute a data block:
 
 $$
+
 \begin{bmatrix}
+
 \begin{bmatrix} x_{000} & x_{001} \\ x_{010} & x_{011} \end{bmatrix} &
+
 \begin{bmatrix} x_{001} & x_{002} \\ x_{011} & x_{012} \end{bmatrix} &
+
 \begin{bmatrix} x_{002} & x_{003} \\ x_{013} & x_{013} \end{bmatrix} \\
+
 & & \\
+
 \begin{bmatrix} x_{010} & x_{011} \\ x_{020} & x_{021} \end{bmatrix} &
+
 \begin{bmatrix} x_{011} & x_{012} \\ x_{021} & x_{022} \end{bmatrix} &
+
 \begin{bmatrix} x_{012} & x_{013} \\ x_{023} & x_{023} \end{bmatrix} \\
+
 & & \\
+
 \begin{bmatrix} x_{020} & x_{021} \\ x_{030} & x_{031} \end{bmatrix} &
+
 \begin{bmatrix} x_{021} & x_{022} \\ x_{031} & x_{032} \end{bmatrix} &
+
 \begin{bmatrix} x_{022} & x_{023} \\ x_{033} & x_{033} \end{bmatrix}
+
 \end{bmatrix}
+
 $$
 
 and
 
 $$
+
 \begin{bmatrix}
+
 \begin{bmatrix} x_{100} & x_{101} \\ x_{110} & x_{111} \end{bmatrix} &
+
 \begin{bmatrix} x_{101} & x_{102} \\ x_{111} & x_{112} \end{bmatrix} &
+
 \begin{bmatrix} x_{102} & x_{103} \\ x_{113} & x_{113} \end{bmatrix} \\
+
 & & \\
+
 \begin{bmatrix} x_{110} & x_{111} \\ x_{120} & x_{121} \end{bmatrix} &
+
 \begin{bmatrix} x_{111} & x_{112} \\ x_{121} & x_{122} \end{bmatrix} &
+
 \begin{bmatrix} x_{112} & x_{113} \\ x_{123} & x_{123} \end{bmatrix} \\
+
 & & \\
+
 \begin{bmatrix} x_{120} & x_{121} \\ x_{130} & x_{131} \end{bmatrix} &
+
 \begin{bmatrix} x_{121} & x_{122} \\ x_{131} & x_{132} \end{bmatrix} &
+
 \begin{bmatrix} x_{122} & x_{123} \\ x_{133} & x_{133} \end{bmatrix}
+
 \end{bmatrix}
+
 $$
 
 Flattening each data block into a row vector yields:
 
 $$
+
 \begin{bmatrix}
+
 x_{000} & x_{001} & x_{010} & x_{011} & x_{100} & x_{101} & x_{110} & x_{111} \\
+
 x_{001} & x_{002} & x_{011} & x_{012} & x_{101} & x_{102} & x_{111} & x_{112} \\
+
 x_{002} & x_{003} & x_{013} & x_{013} & x_{102} & x_{103} & x_{113} & x_{113} \\
+
 & & & & & & & \\
+
 x_{010} & x_{011} & x_{020} & x_{021} & x_{110} & x_{111} & x_{120} & x_{121} \\
+
 x_{011} & x_{012} & x_{021} & x_{022} & x_{111} & x_{112} & x_{121} & x_{122} \\
+
 x_{012} & x_{013} & x_{023} & x_{023} & x_{112} & x_{113} & x_{123} & x_{123} \\
+
 & & & & & & & \\
+
 x_{020} & x_{021} & x_{030} & x_{031} & x_{120} & x_{121} & x_{130} & x_{131} \\
+
 x_{021} & x_{022} & x_{031} & x_{032} & x_{121} & x_{122} & x_{131} & x_{132} \\
+
 x_{022} & x_{023} & x_{033} & x_{033} & x_{122} & x_{123} & x_{133} & x_{133}
+
 \end{bmatrix}
+
 $$
 
 All these data blocks, identical in size to the kernel, are arranged in the "top-to-bottom, left-to-right" computation order to form an expanded tensor, whose data originates from the original data tensor. From the data subscripts of the expanded tensor shown in Figure 6-47, one can see which subscripts in the original tensor they originate from. In other words, as long as the subscript of each data element in the expanded data tensor within the original data tensor is known, these data can be generated from the original data tensor.
@@ -18404,19 +18641,33 @@ All these data blocks, identical in size to the kernel, are arranged in the "top
 First, look at the single-channel case; removing the letter 'x' clearly reveals the subscripts of the expanded tensor elements in the original tensor:
 
 $$
+
 \begin{bmatrix}
+
 \begin{bmatrix} 00 & 01 \\ 10 & 11 \end{bmatrix} &
+
 \begin{bmatrix} 01 & 02 \\ 11 & 12 \end{bmatrix} &
+
 \begin{bmatrix} 02 & 03 \\ 13 & 13 \end{bmatrix} \\
+
 & & \\
+
 \begin{bmatrix} 10 & 11 \\ 20 & 21 \end{bmatrix} &
+
 \begin{bmatrix} 11 & 12 \\ 21 & 22 \end{bmatrix} &
+
 \begin{bmatrix} 12 & 13 \\ 23 & 23 \end{bmatrix} \\
+
 & & \\
+
 \begin{bmatrix} 20 & 21 \\ 30 & 31 \end{bmatrix} &
+
 \begin{bmatrix} 21 & 22 \\ 31 & 32 \end{bmatrix} &
+
 \begin{bmatrix} 22 & 23 \\ 33 & 33 \end{bmatrix}
+
 \end{bmatrix}
+
 $$
 
 Simply indexing the original data tensor with these subscripts yields the tensor composed of these data blocks.
@@ -18424,17 +18675,25 @@ Simply indexing the original data tensor with these subscripts yields the tensor
 Observing these subscripts reveals that all subscripts can be obtained by starting from the initial top-left subscript and moving with the stride as the step size in a "top-to-bottom, left-to-right" manner. The top-left subscripts are:
 
 $$
+
 \begin{bmatrix} 00 & 01 \\ 10 & 11 \end{bmatrix}
+
 $$
 
 Moving "left-to-right" by one stride each time (i.e., column subscript +1) yields the three data block subscripts in the first row:
 
 $$
+
 \begin{bmatrix}
+
 \begin{bmatrix} 00 & 01 \\ 10 & 11 \end{bmatrix} &
+
 \begin{bmatrix} 01 & 02 \\ 11 & 12 \end{bmatrix} &
+
 \begin{bmatrix} 02 & 03 \\ 13 & 13 \end{bmatrix}
+
 \end{bmatrix}
+
 $$
 
 Moving the first row "top-to-bottom" by stride (i.e., increasing row subscripts) sequentially yields the subscripts of all data blocks in the subsequent 2 rows.
@@ -18442,7 +18701,9 @@ Moving the first row "top-to-bottom" by stride (i.e., increasing row subscripts)
 For the row and column subscripts of the top-left data block:
 
 $$
+
 \begin{bmatrix} 00 & 01 \\ 10 & 11 \end{bmatrix}
+
 $$
 
 The row and column subscripts are `i=0,1` and `j=0,1` respectively. As shown in Figure 6-48:
@@ -18455,12 +18716,9 @@ Therefore, the row and column subscript combinations `[(0,0),(0,1),(1,0),(1,1)]`
 # 此处原文缺失代码示例
 ```
 
+## NumPy 索引矩阵生成与卷积索引计算
 
-
-
-### NumPy 索引矩阵生成与卷积索引计算
-
-#### 基础索引生成
+### 基础索引生成
 
 ```python
 import numpy as np
@@ -18483,7 +18741,7 @@ print(j0)
 
 利用 `i0` 和 `j0` 的组合索引，可以获得左上角数据块的元素。
 
-#### 索引矩阵构造函数
+### 索引矩阵构造函数
 
 ```python
 def idx_matrix(H, W):
@@ -18512,7 +18770,7 @@ print(x[i0, j0])
 ['00' '01' '10' '11']]
 ```
 
-#### 多通道数据块索引
+### 多通道数据块索引
 
 对于多通道数据块，每个通道对应元素的行、列下标相同。以 2 通道左上角数据块为例（如图 6-49 所示）。
 
@@ -18544,7 +18802,7 @@ print(j0)
 [0 1 0 1 0 1 0 1]  # 2 通道下标
 ```
 
-#### 跨度坐标与完整索引计算
+### 跨度坐标与完整索引计算
 
 要生成原始数据张量中所有数据块元素的坐标，不仅需要知道每个数据块相对于其左上角 (0,0) 的行列下标，还需根据跨度 `S` 增加偏移量以获得最终正确的行列坐标。
 
@@ -18577,6 +18835,8 @@ j = j0.reshape(-1, 1) + j1.reshape(1, -1)
 ```
 
 输出这 9 个数据块的行下标 `i`：
+
+
 
 ```python
 print("i0:", i0)
@@ -18749,12 +19009,8 @@ N, C, S, P, F = 2, 2, 1, 0, 4
 k, i, j = get_im2row_indices((N, C, H, W), kH, kW, S, P)
 print(k.shape)
 print(i.shape)
+print(j.shape)
 ```
-
-
-
-
-print(`j.shape`)
 
 ```
 (1, 8)
@@ -18764,7 +19020,7 @@ print(`j.shape`)
 
 借助这个辅助函数，可以轻松地从原始数据张量生成按行展平的数据块张量：
 
-```
+```python
 def im2row_indices(x, kH, kW, S=1, P=0):
     x_padded = np.pad(x, ((0, 0), (0, 0), (P, P), (P, P)), mode='constant')
     k, i, j = get_im2row_indices(x.shape, kH, kW, S, P)
@@ -18776,7 +19032,7 @@ def im2row_indices(x, kH, kW, S=1, P=0):
 
 测试该函数：
 
-```
+```python
 X = np.arange(N*C*H*W).reshape(N, C, H, W)
 X_row = im2row_indices(X, kH, kW, S, P)
 print(X)
@@ -18826,7 +19082,7 @@ print(X_row)
 
 或者相反，将按行展平的数据块张量转换回原始数据张量的形状。
 
-```
+```python
 def row2im_indices(rows, x_shape, kH, kW, S=1, P=0):
     N, C, H, W = x_shape
     H_pad, W_pad = H + 2 * P, W + 2 * P
@@ -18841,7 +19097,7 @@ def row2im_indices(rows, x_shape, kH, kW, S=1, P=0):
 
 测试该函数是否与前一个函数一致：
 
-```
+```python
 import numpy as np
 
 H, W = 4, 4
@@ -18901,7 +19157,9 @@ dX[0,0,:,:] [[ 0  2  4  3]
 
 借助上述可直接将多维张量展平为矩阵的辅助函数（位于文件 `im2row.py` 中），你可以编写一个基于快速读取卷积操作的卷积层：
 
-```
+
+
+```python
 from Layers import *
 from im2row import *
 
@@ -18990,11 +19248,11 @@ class Conv_fast:
         return reg * np.sum(self.K**2)
 ```
 
-##### 梯度测试
+### 梯度测试
 
 同样，可以使用梯度测试来检查该卷积层的代码是否正确：
 
-```
+```python
 import util
 
 np.random.seed(1)
@@ -19020,17 +19278,13 @@ print(diff_error(conv.grads[0], dW_num))
 # print("dW_num", dW_num[:2])
 ```
 
-
-
-
-
-#### 与非加速卷积的时间对比
-
-为了比较快速卷积与之前非加速卷积的时间效率，使用与之前相同的卷积神经网络对 MNIST 手写数字识别问题进行训练：
-
 ```
 4.198542114313848e-07
 ```
+
+### 与非加速卷积的时间对比
+
+为了比较快速卷积与之前非加速卷积的时间效率，使用与之前相同的卷积神经网络对 MNIST 手写数字识别问题进行训练：
 
 ```python
 from Layers import *
@@ -19152,10 +19406,6 @@ import matplotlib.pyplot as plt
 plt.plot(losses)
 ```
 
-
-
-
-
 ## 6.5 典型卷积神经网络结构
 
 1989 年，卷积神经网络结构（CNN）的发明者 Yann LeCun 利用反向传播（BP）算法训练多层神经网络以识别手写邮政编码。所用的神经网络于 1994 年被称为 LeNet。虽然该论文并未提及卷积或卷积神经网络，仅指出使用 5×5 的相邻区域作为感受野。1998 年，LeCun 提出了著名的 LeNet-5 神经网络，标志着卷积神经网络的真正诞生。由于当时硬件条件的限制，卷积神经网络的训练极其消耗机器资源和时间。因此，CNN 网络模型并未普及。
@@ -19167,6 +19417,7 @@ plt.plot(losses)
 图 6-55 展示了 LeNet-5 的网络结构。一张 32×32×1 的图像经过六个步长为 1、填充为 0 的 5×5 卷积核，生成 6 个尺寸为 28×28 的输出特征图；随后通过跨度为 2、大小为 2 的平均池化操作，生成六个 14×14 的特征图，即图像的长宽减半。接着通过 16 个步长为 1、填充为 0 的 5×5 卷积核，生成 16 个尺寸为 10×10 的输出特征图。再通过跨度为 2、大小为 2 的平均池化操作，生成 16 个 5×5 的特征图。
 
 ![](img/file138.png "fig:")  
+
 图 6-55 LeNet 网络结构
 
 随后是全连接层，拥有 120 个神经元，每个神经元接收来自上一层 16 个 5×5 特征图（图像）共 400 个特征值，每个神经元产生一个输出值，120 个神经元生成一个由 120 个输出组成的一维向量，输出给下一个拥有 84 个神经元的全连接层。拥有 84 个神经元的全连接层将其 84 个输出送入最终的输出层，若进行 10 分类，输出层将包含 10 个神经元，每个神经元输出样本属于对应类别的得分。这 10 个分类可通过 softmax 函数计算多类交叉熵损失并结合真实目标值来训练神经网络模型。
@@ -19178,24 +19429,30 @@ LeNet-5 是卷积神经网络的经典结构。它采用“先卷积后池化”
 AlexNet 是 Alex Krizhevsky 等人提出的一种 CNN 网络结构。它在 2012 年 ImageNet 图像分类竞赛中获得第一名，瞬间将 top-5 错误率降低了 10 个百分点以上。作者利用 CUDA GPU 实现了并行神经网络训练算法，使得在合理时间内训练深度神经网络成为可能。其网络结构如图 6-56 所示。
 
 ![](img/file139.png "fig:")  
+
 图 6-56 AlexNet 网络结构
 
-若输入为 3 通道彩色图像 227×227×3，经过步长为 4 的 96 个 11×11 卷积核，生成 96 个 55×55 的特征图（55×55×96），因步长为 4，图像缩小了 4 倍。随后经过跨度为 2 的 3×3 最大池化层，输出 96 个 27×27 的特征图（27×27×96），再执行步长为 1、填充为 2 的 256 个 5×5 卷积核进行“同卷积”，生成 256 个 27×27 的特征图（27×27×256），再经过跨度为 2 的 3×3 最大池化层，输出 256 个 13×13 的特征图（13×13×256），接着用步长为 1、填充为 1 的 384 个 3×3 卷积核执行“同卷积”，生成 384 个 13×13 的特征图（13×13×384），再进行一次相同的卷积操作。然后，用步长为 1、填充为 1 的 256 个 3×3 卷积核执行“同卷积”，生成 256 个 13×13 的特征图（13×13×256）。再进行一次跨度为 2 的 3×3 最大池化，得到 256 个 6×6 的特征图（6×6×256）。将 6×6×256 展平为 9216 维向量，然后输出给 4096 个神经元的全连接层，随后是另一个 4096 个神经元的全连接层，最后是 1000 个神经元的全连接层，并经 softmax 函数输出样本属于 1000 个不同类别的概率。
 
-AlexNet 与 LeNet 非常相似，但其深度和规模远大于 LeNet。LeNet 约有 60,000 个参数，而 AlexNet 约有 6000 万个参数。AlexNet 相较于 LeNet 网络最重要的改进是使用了 Relu 激活函数，避免了深度神经网络的“梯度消失”问题。另一个提升性能的改进是 Dropout 技术，即在某一隐藏层以一定概率让部分神经元的输出为 0，不参与网络传播。每次迭代相当于定义一个不同的函数。这种正则化技术实际上利用更简单的网络函数组合来表示训练好的模型函数。此外，还提出了“局部响应归一化”，即对某一层特征图中某一位置所有通道的值进行归一化。但后来发现 LRN 作用不大。
+
+# AlexNet 网络架构详解
+
+若输入为 3 通道彩色图像 227×227×3，经过步长为 4 的 96 个 11×11 卷积核，生成 96 个 55×55 的特征图（55×55×96），因步长为 4，图像缩小了 4 倍。随后经过跨度为 2 的 3×3 最大池化层，输出 96 个 27×27 的特征图（27×27×96），再执行步长为 1、填充为 2 的 256 个 5×5 卷积核进行“同卷积”，生成 256 个 27×27 的特征图（27×27×256），再经过跨度为 2 的 3×3 最大池化层，输出 256 个 13×13 的特征图（13×13×256），接着用步长为 1、填充为 1 的 384 个 3×3 卷积核执行“同卷积”，生成 384 个 13×13 的特征图（13×13×384），再进行一次相同的卷积操作。然后，用步长为 1、填充为 1 的 256 个 3×3 卷积核执行“同卷积”，生成 256 个 13×13 的特征图（13×13×256）。再进行一次跨度为 2 的 3×3 最大池化，得到 256 个 6×6 的特征图（6×6×256）。将 6×6×256 展平为 9216 维向量，然后输出给 4096 个神经元的全连接层，随后是另一个 4096 个神经元的全连接层，最后是 1000 个神经元的全连接层，并经 `softmax` 函数输出样本属于 1000 个不同类别的概率。
+
+AlexNet 与 LeNet 非常相似，但其深度和规模远大于 LeNet。LeNet 约有 60,000 个参数，而 AlexNet 约有 6000 万个参数。AlexNet 相较于 LeNet 网络最重要的改进是使用了 `Relu` 激活函数，避免了深度神经网络的“梯度消失”问题。另一个提升性能的改进是 `Dropout` 技术，即在某一隐藏层以一定概率让部分神经元的输出为 0，不参与网络传播。每次迭代相当于定义一个不同的函数。这种正则化技术实际上利用更简单的网络函数组合来表示训练好的模型函数。此外，还提出了“局部响应归一化”，即对某一层特征图中某一位置所有通道的值进行归一化。但后来发现 LRN 作用不大。
 
 AlexNet 网络的成功使计算机视觉和人工智能界重新关注沉寂多年的神经网络，尤其是 CNN 深度卷积网络。深度可以变得更深，原理简单的深度神经网络能超越数学上复杂的人工智能技术。深度学习开始成为机器学习最重要的分支。现代人工智能主要指深度学习。
 
-### 6.5.3 VGG
+## 6.5.3 VGG
 
 VGG-16 网络是牛津大学视觉几何组（简称 VGG）提出的一种简化卷积网络结构。其主要贡献在于证明了增加网络深度能在一定程度上提升网络的最终性能。一般卷积网络不同卷积层的卷积核大小不一，而 VGG 网络中所有卷积核大小相同，例如使用步长为 1 的 3×3 卷积核，池化层同理，使用步长为 2 的 2×2 最大池化核。因此，它简化了卷积神经网络的结构。只要 VGG-16 网络深度足够深，就能达到与复杂神经网络结构相当甚至更好的性能。VGG-16 中的 16 表示神经网络中卷积层和全连接层共有 16 层。图 6-57 展示了 VGG-16 的卷积网络结构。
 
 ![](img/file140.png "fig:")  
+
 图 6-57 VGG 网络结构
 
 卷积核均为步长 1 的 3×3，池化核均为步长 2 的 2×2。但初始卷积层的输出通道数为 64，后续卷积层的输出通道数按 128、256、512 的顺序翻倍。达到 512 后，后续卷积层的输出通道数不再增加，因为 512 个通道被认为已足够大。VGG 网络结构非常规则，但所需数据量较大。后来提出了 VGG-19，但 VGG-19 与 VGG-16 在性能上无差异。
 
-### 6.5.4 深度神经网络的梯度爆炸与消失问题
+## 6.5.4 深度神经网络的梯度爆炸与消失问题
 
 极深的神经网络因梯度爆炸与消失问题而难以训练，因为梯度只能从后向前逐层传递，若一个数持续乘以绝对值小于 1 的数，该数将越来越接近 0。设一数为`y`，连续乘以`c[i]`，最终变为`c[i] * ... * c[L] * y`，该值将趋近于 0。同理，当一个数持续乘以绝对值大于 1 的数时，该数将越来越接近无穷大∞。
 
@@ -19217,13 +19474,6 @@ x → z[1] = x * w[1] → z[2] = z[1] * w[2] = x * w[1] * w[2] → ⋯ → z[L] 
 
 若`grads`包含多个权重参数的梯度，以下代码可将其梯度限制在`[-c, c]`：
 
-```
-```
-
-
-
-
-
 ```python
 import math
 
@@ -19235,12 +19485,9 @@ def grad_clipping(grads, c):
             grads[i] *= ratio
 ```
 
-
-
-
 梯度裁剪在一定程度上可以解决梯度爆炸问题，但无法解决梯度消失问题。
 
-### 6.5.5 残差网络
+## 6.5.5 残差网络
 
 梯度爆炸和消失是由网络层始终串联连接引起的。残差网络通过“跳跃”技术打破了这种逐层的网络结构。其思想是在原本相距较远的两个网络层之间建立短路连接。就像药品，如果经过多个管理部门和经销商层层加价后才到达患者手中，患者购买的最终价格可能非常昂贵。如果厂家直销，厂家直接将药品卖给患者，成本就是出厂价。
 
@@ -19254,7 +19501,7 @@ def grad_clipping(grads, c):
 
 由于存在短路连接，反向推导的梯度可以通过这个跳跃连接直接从弧尾层反馈到弧头层，使得梯度不会因为经过多个中间层而衰减或爆炸。残差网络由中国学者何恺明等人发明。作者发现只要在不同层之间建立这些跳跃连接，就可以训练更深的神经网络。借助残差网络结构，人们甚至可以轻松训练 1000 多层的神经网络。
 
-这种残差网络具有周期性规律，可以看作由相同结构的**残差块**组成，如图 6-60 所示为一个残差块的结构：
+这种残差网络具有周期性规律，可以看作由相同结构的`ResBlock`组成，如图 6-60 所示为一个残差块的结构：
 
 图 6-60 残差块是残差网络的结构单元
 
@@ -19268,9 +19515,9 @@ def grad_clipping(grads, c):
 
 *F*1 = `convBlock`[1] → *F*2 = `convBlock`[2] → ⋯ → *F**n* = `convBlock`[*n*]
 
-当然，一个残差块可能由多个卷积块组成，每个卷积块可能包含批归一化层、池化层、Dropout 层等，即可能包含几个甚至十几个各种网络层。
+当然，一个残差块可能由多个卷积块组成，每个卷积块可能包含批归一化层、池化层、`Dropout` 层等，即可能包含几个甚至十几个各种网络层。
 
-### 6.5.6 Google Inception 网络
+## 6.5.6 Google Inception 网络
 
 由于特征图中特征位置的巨大差异和变化，为卷积操作选择正确的卷积核尺寸变得非常困难。对于不同问题，网络层卷积核的尺寸是 3×3 还是 5×5？较大的卷积核利于捕获更全局分布的信息，而较小的卷积核适合捕获更局部分布的信息。同样，对于池化层，选择池化窗口大小也是类似的问题。
 
@@ -19298,7 +19545,7 @@ Inception 模块的每个卷积核接受相同的输入，并使用 "same" 卷�
 
 图 6-64 googleNet 网络结构
 
-### 6.5.7 Network in Network (NiN)
+## 6.5.7 Network in Network (NiN)
 
 普通卷积层是输入的线性卷积操作，即对输入进行线性加权后通过非线性激活函数输出。其结构如图 a) 所示。Network in Network (NiN) “网络中的网络”用一个小网络替换这个单层线性卷积层，如图 6-65 b) 所示。
 
@@ -19307,6 +19554,8 @@ Inception 模块的每个卷积核接受相同的输入，并使用 "same" 卷�
 除卷积层外，作者在这个小网络中增加了 2 层全连接层。作者认为可以增加网络卷积层的非线性能力。论文还使用**全局平均池化**替代传统全连接层，对每个特征图进行全局平均池化，使每个特征图只产生一个输出值。这能极大减少传统全连接层展平特征图导致的参数过多问题，并可避免模型过拟合。由于每个特征图值产生一个输出值，全局池化层的输入特征图数量必须与类别数一致。对于 10 个类别，特征图数量必须为 10。
 
 图 6-66 Network in Network (NiN) 网络结构
+
+# 第 7 章 循环神经网络与序列建模
 
 在之前的神经网络中，假设样本之间相互独立，不同数据的输入输出相互独立。对于样本 (*x*^(*i*), *y*^(*i*))，*y*^(*i*) 的值仅取决于其输入 *x*^(*i*)，与其他样本如 (*x*^(*j*), *y*^(*j*)), *j* ≠ *i* 的输入输出无关。这种神经网络可称为“一对一”神经网络。
 
@@ -19324,15 +19573,7 @@ Inception 模块的每个卷积核接受相同的输入，并使用 "same" 卷�
 
 ### 7.1.1 股票价格预测问题
 
-基于股票历史信息数据预测股价是典型的序列数据预测问题。以下代码使用 pandas 包读取 csv 格式文件 'sp500.csv' 的股票数据：
-
-```
-```
-
-
-
-
-# 7.1.1 股票价格数据与序列预测
+基于股票历史信息数据预测股价是典型的序列数据预测问题。以下代码使用 `pandas` 包读取 csv 格式文件 'sp500.csv' 的股票数据：
 
 ```python
 import pandas as pd
@@ -19354,6 +19595,8 @@ Date Open High Low Close Volume
 ```
 
 其中，各列分别代表：日期、开盘价、最高价、最低价、收盘价、交易量。为了便于机器学习算法的训练，数据需要进行归一化。以下代码对除日期以外的数据进行归一化：
+
+
 
 ```python
 data = data.iloc[:,1:6]
@@ -19415,9 +19658,9 @@ plt.plot(x)
 
 **图 7-1 股票收盘价走势图**
 
-### 7.1.2 概率序列模型、语言模型
+## 7.1.2 概率序列模型、语言模型
 
-#### 1. 概率序列模型
+### 1. 概率序列模型
 
 序列数据的预测问题有时不需要直接对序列数据与其目标值之间的函数关系进行建模，而是根据序列数据预测目标值的概率，即确定以下条件概率：
 
@@ -19427,7 +19670,7 @@ plt.plot(x)
 
 `x[t] ~ p(x[t] | x[1], … x[t−1])`
 
-#### 2. 语言模型
+### 2. 语言模型
 
 自然语言处理的基础是建立语言模型。所谓语言模型，就是对句子出现的概率进行建模，即确定一个句子出现的概率。例如，“我是中国人”的概率显然大于“我是中国人”。句子是一系列单词，是单词的有序序列，例如“我是中国人”是由“我”、“是”、“中”、“国”、“人”五个词组成的有序序列（注：原文示例为四词，此处按中文分词逻辑调整为五词，保留原意）。假设句子 `S` 由单词 `w[1], w[2], w[3], ⋯, w[n]` 组成，句子 `S` 的概率用 `P(w[1], w[2], w[3], ⋯, w[n])` 表示。根据概率论，该概率可以表示为：
 
@@ -19437,7 +19680,7 @@ plt.plot(x)
 
 根据该公式 (7-3)，如果能知道这些条件概率，即在已知单词 `w[1], w[2], ⋯, w[i−1]` 的情况下，下一个单词 `w[i]` 出现的概率 `P(w[i]|w[1], w[2], ⋯, w[i−1])`，就可以知道由一系列单词组成的句子的概率。因此，语言模型就是根据现有的单词序列，预测下一个单词或词表中每个单词的概率。
 
-### 7.1.3 自回归模型
+## 7.1.3 自回归模型
 
 对于当前时刻的预测目标是下一时刻数据的自回归问题，建立的预测模型称为**自回归模型**（**Auto regressive model**，简称 **AR** 模型）。该模型可以是概率序列模型，也可以是函数模型。如果 `x[t]` 依赖于 `x[1], ⋯, x[t−1]`，则自回归模型可以是函数模型 `f : (x[1], ⋯, x[t−1]) → y[t]` 或概率序列模型 `P(x[t] | x[1], ⋯, x[t−1])`。
 
@@ -19449,7 +19692,7 @@ plt.plot(x)
 
 其中 `ϵ` 是采样的随机噪声（也称为白噪声）。
 
-### 7.1.4 生成自回归数据
+## 7.1.4 生成自回归数据
 
 在研究序列模型时，我们可以使用股票价格、自然语言文本等实际序列数据，也可以通过模拟手段生成一些模拟序列数据用于序列模型研究。例如，以下代码通过结合正弦函数和余弦函数形成一个函数，然后对该函数曲线的 y 坐标值进行采样，形成序列数据：
 
@@ -19469,10 +19712,6 @@ plt.plot(x[:500])
 plt.show()
 ```
 
-
-
-
-
 ![](img/file142.png)
 
 图 7-2 由函数值生成的自回归数据
@@ -19487,7 +19726,7 @@ plt.show()
 
 以下函数 `init_coefficients()` 生成稳定自回归模型的系数：
 
-```
+```python
 np.random.seed(5)
 
 def init_coefficients(n):
@@ -19505,13 +19744,15 @@ def init_coefficients(n):
 init_coefficients(3)
 ```
 
+**输出：**
+
 ```
 array([-0.27800683,  0.37073231, -0.29328084])
 ```
 
 以下函数 `generate_data()` 根据上述 3 个步骤生成自回归数据，因为最初生成的数据分布差异很大，也会影响后续数据。经过一段时间后，数据才会真正开始稳定，因此，有必要丢弃一些最初生成的数据，例如初始的 3n 个数据。
 
-```
+```python
 def generate_data(n,data_n,noise_value = 1,k=3):   
 
     a = init_coefficients(n+1)   
@@ -19547,18 +19788,19 @@ plt.show()
 
 图 7-3 由自回归模型生成的自回归数据
 
-### 7.1.5 时间窗口法
+## 7.1.5 时间窗口法
 
 “一对一”神经网络中的每个样本长度必须相同，即每个样本的特征数量相同。这样的网络能处理序列数据吗？实际上也是可以的。总可以从序列数据中截取等长的子序列作为一个整体，构成一个样本的数据特征。对于序列数据 `x^((i))`，如果总是使用 `x^((i))` 之前的 T 个（包含 `x^((i))`）序列元素，即 `(x^((i−T+1))`, ⋯, `x^((i−1))`, `x^((i)))` 作为一个样本的数据特征来预测某个 `y^((i))`。这在一定程度上考虑了 `x^((i))` 之间的序列相关性。
 
 例如，在乒乓球比赛中，无法仅凭某一时刻球的位置判断球的运动，即无法根据某一时刻球的位置 `x^((t))` 预测其运动速度 `v^((t))`。  
+
 但如果将当前时刻与其之前几个时刻的位置结合起来，例如将之前两个时刻的位置组合成一个输入数据特征 `x̂^((t)) = (x^((t−2))`, `x^((t−1))`, `x^((t)))`，然后基于该数据特征 `x̂^((t))` 预测球的速度 `v^((t))`。
 
 这种以当前位置为中心、固定长度的子序列作为当前位置样本数据特征的方法，称为**时间窗口**法。时间窗口法允许用“一对一”神经网络直接处理序列数据。时间窗口是处理时间序列的传统方法，例如在股价预测问题中，根据某一天之前连续 60 天的股票信息预测当天的股价，在语言模型中根据已知的 k 个单词预测下一个单词的概率。
 
 时间窗口法将序列模型的预测问题转化为非序列数据的监督学习问题，从而使序列数据的预测问题能够用现有的非序列数据监督学习方法建模。下面以自回归序列数据的预测问题为例，说明时间窗口法的应用。
 
-### 7.1.6 时间窗口采样
+## 7.1.6 时间窗口采样
 
 对于自回归序列数据 `{x[t]}`，可以使用固定长度 T 的时间窗口数据 `x[t−T+1]`、⋯`x[t]` 来预测下一个数据 `x[t+1]`。将固定长度的序列 `(x[t−T+1]`、⋯`x[t])` 作为一个整体作为监督学习的输入数据，将 `x[t+1]` 作为其目标值，从而转化为非序列数据的监督学习问题，该问题可用之前的监督机器学习方法（如前馈神经网络）进行建模和训练。为此，需要准备用于训练模型的训练数据。
 
@@ -19566,7 +19808,7 @@ plt.show()
 
 由这些样本组成的集合 `data_set` 可按一定比例划分为训练集 `(x_train, y_train)` 和测试集 `(x_test, y_test)`。以下代码根据时间窗口宽度 T 从序列数据中采样训练样本：
 
-```
+```python
 def gen_data_set(x,T,percentage = 0.9):
 
     L = T + 1
@@ -19605,15 +19847,17 @@ y_train = y_train.reshape(-1,1)
 print(x_train.shape,y_train.shape)
 ```
 
+**输出：**
+
 ```
     (4454, 50) (4454, 1)
 ```
 
-### 7.1.7 时间窗口法建模与训练
+## 7.1.7 时间窗口法建模与训练
 
 通过按固定时间窗口对自回归序列数据进行采样获得训练样本后，即可用监督学习模型进行建模和训练。以下代码使用一个 2 层全连接神经网络，对上述从函数值采样得到的自回归数据进行建模和训练：
 
-```
+```python
 from NeuralNetwork import *
 
 import util
@@ -19654,6 +19898,8 @@ losses = train_nn(nn,x_train,y_train,optimizer,
 plt.plot(losses)
 ```
 
+**输出：**
+
 ```
     n 50
 
@@ -19668,21 +19914,19 @@ plt.plot(losses)
     400 iter: 0.10108511745662195
 ```
 
-
-
-
-
 ![](img/file144.png)
 
 图 7-5 两层全连接神经网络的训练损失曲线
 
-### 7.1.8 长期预测与短期预测
+## 7.1.8 长期预测与短期预测
+
+
 
 对于自回归序列数据，可以从由初始真实数据序列 `x[0]`、`x[1]`、⋯、`x[T−1]` 组成的样本特征中预测下一时刻 T 的输出 `x[T]`，然后从 `x[1]`、`x[2]`、⋯、`x[T]` 预测 `x[T+1]`，从 `x[2]`、`x[3]`、⋯、`x[T+1]` 预测 `x[T+2]`，以此类推持续预测。也就是说，初始序列 `x[0]`、`x[1]`、⋯、`x[T−1]` 可用于预测后续的多个时刻。这种预测类型称为**长期预测**（或**长期预测**）。由于预测不一定准确，将预测值作为真实值来预测下一个值会更加不准确，即随着时间的推移，预测值与真实值之间的误差会越来越大。另一种是**短期预测**，极端情况是每个时刻都始终使用该时刻对应时间窗口的真实数据（如当前时刻及前 T-1 个时刻）来预测下一时刻的数据。短期预测之所以效果好，是因为输入数据样本全为真实数据，且仅预测下一时刻的数据，但其要求每个预测时刻使用的数据必须是真实数据，而非上一时刻的预测数据。
 
 以下代码采用长期预测的方法，从初始时刻的真实数据样本出发预测后续一系列时刻的数据。并将这些预测值与测试集对应的目标值进行可视化对比，以观察该模型的预测性能。
 
-```
+```python
 x = x_test[0].copy()
 x = x.reshape(1,-1)
 ys =[]
@@ -19700,6 +19944,7 @@ plt.legend(['y','y_real'])
 ```
 
 ![](img/file145.png "fig:")  
+
 图 7-6 使用时间窗口长度 T=50 的训练模型进行长期预测
 
 可以看出，预测结果非常接近真实目标值，因为这是一条周期性曲线，而 T=50 基本接近该曲线的周期（`50*0.1 = 5` 接近 `2*π`∼6.28）。如果时间窗口较短，例如 T=10 时的预测结果如图 7-7 所示，预测效果会很差。
@@ -19712,7 +19957,7 @@ plt.legend(['y','y_real'])
 
 以下代码是使用训练好的神经网络进行短期预测，即每次都使用真实数据来预测下一时刻的数据值：
 
-```
+```python
 ys =[]
 for i in range(400):
     x = x_test[i].copy()
@@ -19737,7 +19982,7 @@ plt.legend(['y','y_real'])
 
 利用股票的前一收盘价作为序列数据，也可以使用时间窗口方法对训练样本或测试样本进行采样。以下代码使用长度为 100 的时间窗口生成训练数据集和测试数据集，即利用前 100 天的价格预测第 101 天的价格。
 
-```
+```python
 x = np.array(data.iloc[:,-1])
 print(x.shape)
 x = x.reshape(-1,1)
@@ -19755,7 +20000,7 @@ print(x_train.shape,y_train.shape)
 
 同样，使用训练集训练一个神经网络模型：
 
-```
+```python
 hidden_dim = 500
 n = x_train.shape[1]
 print("n",n)
@@ -19794,7 +20039,7 @@ n 100
 
 使用测试集的第一个样本作为起点进行长期预测，即持续使用预测值构建新的数据特征来预测第二天的股票价格：
 
-```
+```python
 x = x_test[0].copy()
 x = x.reshape(1,-1)
 ys =[]
@@ -19818,7 +20063,7 @@ plt.legend(['y','y_real'])
 
 结果表明，对于股票这种规律性较少的序列数据，即使时间窗口很大（100），预测结果也不理想。以下代码使用短期预测，即始终使用前 100 天的真实数据来预测第 101 天的股票价格：
 
-```
+```python
 ys =[]
 num = 400
 for i in range(num):
@@ -19835,10 +20080,6 @@ plt.xlabel("time")
 plt.ylabel("value")
 plt.legend(['y','y_real'])
 ```
-
-
-
-
 
 ![](img/file150.png)
 
@@ -19857,6 +20098,7 @@ $P(w_i|w_1,w_2,\cdots,w_{i-1}) = \frac{P(w_1,w_2,w_3,\cdots,w_{i-1},w_i)}{\sum\l
 但如果 $i$ 较大，这种计算显然不现实，主要存在两个问题：
 
 *   由于 $w_j$ 很多，$w_1, w_2, w_3, \cdots, w_{i-1}, w_i$ 的组合数量会呈指数级增长，统计计算 $P(w_1, w_2, w_3, \cdots, w_{i-1}, w_i)$ 非常困难。
+
 *   序列 $w_1, w_2, w_3, \cdots, w_{i-1}, w_i$ 很有可能在语料库中根本不出现，导致概率 $P(w_1, w_2, w_3, \cdots, w_{i-1}, w_i)$ 为 0。
 
 为了解决上述计算条件概率依赖参数过多的问题，通常引入**马尔可夫假设**，即假设一个词的概率仅与它前面出现的有限个词有关。在极端情况下，假设一个词的出现与其周围的词相互独立，即其出现概率不依赖于其他词。这种语言模型称为**一元语言模型**。此时，句子 $S = w_1, w_2, w_3, \cdots, w_n$ 的概率计算变得非常简单：
@@ -19878,6 +20120,7 @@ $P(w_1, w_2, w_3, \cdots, w_n) = P(w_1) \times P(w_2|w_1) \times P(w_3|w_2) \tim
 k-gram 语言模型在用固定长度“时间窗口”数据进行预测时存在一些明显的局限性。主要有两个问题：
 
 *   时间窗口长度难以确定。如果时间窗口太短，会导致目光短浅。例如，在机器翻译中，往往需要根据长上下文准确理解当前词的含义；在文本生成中，根据前面的长文本才能正确预测下一个词，如“上学路上，张某儿子看见一位摔倒的老太太。这段话最后一个词用“他”还是“她”，需要根据前面的“儿子”来确定。算法的计算量与样本数据长度成正比。如果时间窗口太长，会耗费更多时间。对语言模型而言，时间窗口过长会使概率估计变得非常困难。此外，对于短序列样本（如短句），需要填充许多空白元素，造成空间浪费。对于许多序列数据问题，不同时刻依赖的数据序列长度往往不同且变化，难以确定一个合适的时间窗口长度。
+
 *   使用普通神经网络对序列数据预测问题建模，随着时间窗口变大，模型参数规模会变大。与单独处理每个原始数据样本相比，如果使用长度为 3 的时间窗口，输入数据样本的长度会增加 3 倍。为了更好地捕捉数据特征，每层神经元数量会相应增加，导致模型参数量呈指数级增长，这不仅消耗更多计算资源，还增加了模型函数的复杂度，容易导致训练过拟合。
 
 时间窗口只是一种短期记忆行为，人在理解事物时，不仅会用到短期记忆，还会用到所有的过往记忆。为了处理这种变长序列数据，研究者模拟人类的长期记忆行为，发明了**循环神经网络**（**Recurrent Neural Networks**，**RNN**）。RNN 在传统神经网络的神经元中增加了**存储/记忆单元**，使得历史计算信息得以保存。换句话说，神经元具有了记忆功能，每一当前时刻的计算不仅依赖于当前的输入，还依赖于存储的历史信息，从而使数据和计算结果能在时间维度上传递，使得循环神经网络理论上可以记忆任意长度的序列信息。正如卷积神经网络能提取空间维度的特征，循环神经网络能在时间维度上传递信息，它是非循环神经网络在时间维度上的延伸。
@@ -19889,12 +20132,6 @@ k-gram 语言模型在用固定长度“时间窗口”数据进行预测时存�
 上文学习的神经网络都是不具备记忆功能的神经网络，它们表示一个不具备记忆功能的函数，不同样本之间的输入输出相互独立，没有任何关联。假设该神经网络记为 $y = f(x)$，对于两个不同的输入 $x_i, x_j$，它们的输出 $f(x_i), f(x_j)$ 互不相关。
 
 非循环神经网络表示的函数类似于编程语言中不具备记忆功能的函数，例如 C 语言中没有静态变量的函数和 Python 语言中的函数。如：
-
-```
-```
-
-
-
 
 ```python
 def f(x):
@@ -19933,6 +20170,8 @@ class FNN(x):
         return y
 ```
 
+
+
 对于一组数据 `x^((1))`、`x^((3))`、`x^((3))`，FNN 计算这些数据的输出过程如下：
 
 ```python
@@ -19970,12 +20209,9 @@ print(f(3), '\t', f(2))
 25 24
 ```
 
-
-
-
 # 循环神经网络的状态与计算过程
 
-#### 状态变量的概念
+## 状态变量的概念
 
 对于输入值 `x`，`rf` 类的 `forward()` 方法在计算输出时，不仅依赖于 `x`，还依赖于上一次计算过程中保存的信息 `h`。因此，`f(2)` 和 `f(3)` 的输出及其执行顺序是相关的。`rf` 类中记录计算前中间结果的变量 `h` 称为**状态**。
 
@@ -19985,13 +20221,13 @@ print(f(3), '\t', f(2))
 
 随时间变化的状态变量 `h^(⟨t⟩)` 存储/记忆了历史信息。基于该状态变量表示的历史信息和当前时刻的数据，可以做出更好的预测。
 
-#### 循环神经网络的结构表示
+## 循环神经网络的结构表示
 
 循环神经网络通常用图 7-13 a) 所示的图表示。它与普通神经网络的区别在于：当前时刻计算出的隐藏状态将作为下一时刻的输入，因此画成一指向自身的弧。隐藏状态变量既作为当前时刻计算的输出，又作为下一时刻计算的输入。图 7-13 b) 是图 7-13 a) 在时间维度上计算过程的展开表示。可以看到，上一时刻的状态变量作为当前时刻的输入，计算当前时刻的输出和状态变量，该状态变量又作为下一时刻计算的输入。
 
 > **图 7-13** a) 循环神经网络的表示，其中存在一个隐藏状态变量，它既是计算的输出，又是下一次计算的输入。b) 图 a) 在时间维度上计算过程的展开表示。上一时刻的状态变量作为当前时刻的输入，计算当前时刻的输出和状态变量，当前时刻的状态变量作为下一时刻计算的输入。
 
-#### 初始时刻与时间步计算示例
+## 初始时刻与时间步计算示例
 
 在初始时刻 `t=0`，状态变量 `h^(⟨−1⟩)` 是一个初始值为 0 的向量。对于上述 3 词语言模型，输入数据是单词 "good" 对应的特征向量 `x^(⟨0⟩) = (1,0,0)`，神经网络将计算当前输出 `y^(⟨0⟩)` 和状态变量 `h^(⟨0⟩)`：
 
@@ -20005,15 +20241,20 @@ print(f(3), '\t', f(2))
 
 `y^(⟨2⟩), h^(⟨2⟩) = f(x^(⟨2⟩), h^(⟨1⟩))`
 
-#### 简单循环神经网络的数学公式
+## 简单循环神经网络的数学公式
 
 考虑最简单的只有一个神经元或一层神经元的循环神经网络，用 `x^(⟨t⟩), h^(⟨t⟩), f^(⟨t⟩)` 分别表示输入数据、状态变量和输出，循环神经网络的计算过程与只有一个神经元或一层神经元的普通神经网络几乎相同。
 
 $$
+
 \begin{matrix}
+
 h^{\langle t \rangle} = g_{h}(h^{\langle t - 1 \rangle}W_{h} + x^{\langle t \rangle}W_{x} + b_{h}) \\
+
 f^{\langle t \rangle} = g_{f}(h^{\langle t \rangle}W_{f} + b_{y})
+
 \end{matrix}
+
 $$
 
 其中，`g_h`、`g_f` 分别是计算当前状态和输出的激活函数。
@@ -20032,7 +20273,7 @@ class RNN:
         return y
 ```
 
-#### 时间序列数据的 RNN 计算过程
+## 时间序列数据的 RNN 计算过程
 
 对于时间序列数据 `x^(⟨1⟩), x^(⟨2⟩), x^(⟨3⟩)`，RNN 计算这些数据的输出过程如下：
 
@@ -20042,9 +20283,6 @@ y1 = rnn.step(x1) # calculated the implicit h1 at the same time
 y2 = rnn.step(x2) # Calculate the implicit h2 at the same time
 y3 = rnn.step(x3) # calculated the implicit h3 at the same time
 ```
-
-
-
 
 可以看出，循环神经网络的结构仍然类似于普通神经网络的结构，唯一的区别是计算过程会使用保存的隐藏状态来计算当前时刻的隐藏状态和输出。将图 7-13 a) 在时间维度上展开为图 7-13 b) 的结构，有助于理解其在时间维度上的迭代循环计算过程。但它并不是在时间维度上复制多个神经网络，而是在神经网络（神经元）中增加了一个状态变量 `h^(⟨t⟩)` 来保存上一时刻的计算结果。因此，循环神经网络的模型参数不会随着时间的展开而增加，可以通过不断调用 `rnn.step()` 在时间维度上任意展开长序列。时间窗口方法的神经网络只能处理固定长度的序列，且模型参数会随着时间窗口长度的增加而增加。循环神经网络完美地解决了时间窗口方法中的这两个问题。
 
@@ -20125,30 +20363,41 @@ $\\frac{\\partial\\mathcal{L}}{\\partial W\_{f}} = \\sum\\limits\_{t = 1}^{n}\\f
 
 时刻 t 输出的隐藏状态 `h^(⟨t⟩)` 一方面输出给 `f^(⟨t⟩)`，另一方面作为输入，即不仅通过 `f^(⟨t⟩)` 影响当前时刻 t 的损失 `ℒ^(⟨t⟩)`，还作为下一时刻的隐藏状态输入影响所有后续时刻的损失 `ℒ^((t'))`、`t' > t`。因此，损失函数关于 `h^(⟨t⟩)` 的梯度可以分两部分求取：
 
-$\\frac{\\partial\\mathcal{L}}{\\partial h^{\\langle t\\rangle}} = \\frac{\\partial\\mathcal{L}^{\\langle t - \\rangle}}{\\partial h^{\\langle t\\rangle}} = \\frac{\\partial\\mathcal{L}^{\\langle t\\rangle}}{\\partial h^{\\langle t\\rangle}} + \\frac{\\partial\\mathcal{L}^{\\langle t + 1 - \\rangle}}{\\partial h^{\\langle t\\rangle}} = \\frac{\\partial\\mathcal{L}^{\\langle t\\rangle}}{\\partial z^{\\langle t\\rangle}} \\cdot \\frac{\\partial z^{\\langle t\\rangle}}{\\partial h^{\\langle t\\rangle}} + \\frac{\\partial\\mathcal{L}^{\\langle t + 1 - \\rangle}}{\\partial h^{\\langle t\\rangle}} = \\frac{\\partial\\mathcal{L}^{\\langle t\\rangle}}{\\partial z^{\\langle t\\rangle}} \\cdot W\_{f}^{T} + \\frac{\\partial\\mathcal{L}^{\\langle t + 1 - \\rangle}}{\\partial h^{\\langle t\\rangle}}$
 
-其中 `ℒ^(⟨t - ⟩)` 表示 t 及其后所有时刻损失之和，即 `$\\mathcal{L}^{\\langle t - \\rangle} = \\sum\\limits\_{t^{\\prime} = t}^{n}L^{\\langle t\\rangle}$`。`ℒ^(⟨t + 1 - ⟩)` 表示 t 之后所有后续时刻损失之和，即 `$\\mathcal{L}^{\\langle t + 1 - \\rangle} = \\sum\\limits\_{t^{\\prime} = t + 1}^{n}L^{\\langle t\\rangle}$`。因为 `h^(⟨t⟩)` 对时刻 t 之前的损失没有影响，所以 `$\\frac{\\partial\\mathcal{L}}{\\partial h^{\\langle t\\rangle}} = \\frac{\\partial\\mathcal{L}^{\\langle t - \\rangle}}{\\partial h^{\\langle t\\rangle}}$`，而 `$\\frac{\\partial\\mathcal{L}^{\\langle t + 1 - \\rangle}}{\\partial h^{\\langle t\\rangle}}$` 是 t+1 时刻之后的损失关于时刻 t 输出的隐藏状态 `h^(⟨t⟩)` 的梯度，它在反向推导过程中来自时刻 t+1。
 
-当然，`$\\frac{\\partial\\mathcal{L}^{\\langle T - \\rangle}}{\\partial h^{\\langle T\\rangle}} = \\frac{\\partial\\mathcal{L}^{\\langle T\\rangle}}{\\partial h^{\\langle T\\rangle}}$`，即最后一时刻的损失关于此时刻隐藏状态 `h^(⟨T⟩)` 的梯度。此时：
+$$
+\frac{\partial\mathcal{L}}{\partial h^{\langle t\rangle}} = \frac{\partial\mathcal{L}^{\langle t - \rangle}}{\partial h^{\langle t\rangle}} = \frac{\partial\mathcal{L}^{\langle t\rangle}}{\partial h^{\langle t\rangle}} + \frac{\partial\mathcal{L}^{\langle t + 1 - \rangle}}{\partial h^{\langle t\rangle}} = \frac{\partial\mathcal{L}^{\langle t\rangle}}{\partial z^{\langle t\rangle}} \cdot \frac{\partial z^{\langle t\rangle}}{\partial h^{\langle t\rangle}} + \frac{\partial\mathcal{L}^{\langle t + 1 - \rangle}}{\partial h^{\langle t\rangle}} = \frac{\partial\mathcal{L}^{\langle t\rangle}}{\partial z^{\langle t\rangle}} \cdot W_{f}^{T} + \frac{\partial\mathcal{L}^{\langle t + 1 - \rangle}}{\partial h^{\langle t\rangle}}
+$$
 
-$\\frac{\\partial\\mathcal{L}^{\\langle T\\rangle}}{\\partial h^{\\langle T\\rangle}} = \\frac{\\partial\\mathcal{L}^{\\langle T\\rangle}}{\\partial z\_{f}^{\\langle T\\rangle}} \\cdot W\_{f}^{T}$
+其中 `ℒ^(⟨t - ⟩)` 表示 t 及其后所有时刻损失之和，即 $\mathcal{L}^{\langle t - \rangle} = \sum\limits_{t^{\prime} = t}^{n}L^{\langle t\rangle}$。`ℒ^(⟨t + 1 - ⟩)` 表示 t 之后所有后续时刻损失之和，即 $\mathcal{L}^{\langle t + 1 - \rangle} = \sum\limits_{t^{\prime} = t + 1}^{n}L^{\langle t\rangle}$。因为 `h^(⟨t⟩)` 对时刻 t 之前的损失没有影响，所以 $\frac{\partial\mathcal{L}}{\partial h^{\langle t\rangle}} = \frac{\partial\mathcal{L}^{\langle t - \rangle}}{\partial h^{\langle t\rangle}}$，而 $\frac{\partial\mathcal{L}^{\langle t + 1 - \rangle}}{\partial h^{\langle t\rangle}}$ 是 t+1 时刻之后的损失关于时刻 t 输出的隐藏状态 `h^(⟨t⟩)` 的梯度，它在反向推导过程中来自时刻 t+1。
 
-因为 `h^(⟨t⟩) = gh)`，已知 `$\\frac{\\partial\\mathcal{L}}{\\partial h^{\\langle t\\rangle}}$`，可以得到损失函数关于 `z[h]^(⟨t⟩)` 的梯度：
+当然，$\frac{\partial\mathcal{L}^{\langle T - \rangle}}{\partial h^{\langle T\rangle}} = \frac{\partial\mathcal{L}^{\langle T\rangle}}{\partial h^{\langle T\rangle}}$，即最后一时刻的损失关于此时刻隐藏状态 `h^(⟨T⟩)` 的梯度。此时：
 
-$\\frac{\\partial\\mathcal{L}^{\\langle t - \\rangle}}{\\partial z\_{h}^{\\langle t\\rangle}} = \\frac{\\partial\\mathcal{L}}{\\partial z\_{h}^{\\langle t\\rangle}} = \\frac{\\partial\\mathcal{L}}{\\partial h^{\\langle t\\rangle}} \\cdot g\_{h}^{\\prime}(z\_{h}^{\\langle t\\rangle})$
+$$
+\frac{\partial\mathcal{L}^{\langle T\rangle}}{\partial h^{\langle T\rangle}} = \frac{\partial\mathcal{L}^{\langle T\rangle}}{\partial z_{f}^{\langle T\rangle}} \cdot W_{f}^{T}
+$$
+
+因为 `h^(⟨t⟩) = gh)`，已知 $\frac{\partial\mathcal{L}}{\partial h^{\langle t\rangle}}$，可以得到损失函数关于 `z[h]^(⟨t⟩)` 的梯度：
+
+$$
+\frac{\partial\mathcal{L}^{\langle t - \rangle}}{\partial z_{h}^{\langle t\rangle}} = \frac{\partial\mathcal{L}}{\partial z_{h}^{\langle t\rangle}} = \frac{\partial\mathcal{L}}{\partial h^{\langle t\rangle}} \cdot g_{h}^{\prime}(z_{h}^{\langle t\rangle})
+$$
 
 进而可以得到损失函数关于模型参数 `W[h]`、`W[x]` 以及上一时刻输出的隐藏状态 `h^(⟨t-1⟩)` 的梯度。
 
-$\\frac{\\partial\\mathcal{L}^{\\langle t - \\rangle}}{\\partial h^{\\langle t - 1\\rangle}} = \\frac{\\partial\\mathcal{L}}{\\partial z\_{h}^{\\langle t\\rangle}} \\cdot \\frac{\\partial z\_{h}^{\\langle t\\rangle}}{\\partial h^{\\langle t - 1\\rangle}} = \\frac{\\partial\\mathcal{L}^{\\langle t\\rangle}}{\\partial z\_{h}^{\\langle t\\rangle}} \\cdot W\_{h}^{T}$
+$$
+\frac{\partial\mathcal{L}^{\langle t - \rangle}}{\partial h^{\langle t - 1\rangle}} = \frac{\partial\mathcal{L}}{\partial z_{h}^{\langle t\rangle}} \cdot \frac{\partial z_{h}^{\langle t\rangle}}{\partial h^{\langle t - 1\rangle}} = \frac{\partial\mathcal{L}^{\langle t\rangle}}{\partial z_{h}^{\langle t\rangle}} \cdot W_{h}^{T}
+$$
 
-$\\frac{\\partial\\mathcal{L}}{\\partial W\_{h}} = \\sum\\limits\_{t = 1}^{n}\\frac{\\partial\\mathcal{L}^{\\langle t - \\rangle}}{\\partial z\_{h}^{\\langle t\\rangle}} \\cdot \\frac{\\partial z\_{h}^{\\langle t\\rangle}}{\\partial W\_{h}} = \\sum\\limits\_{t = 1}^{n}{h^{\\langle t - 1\\rangle}}^{T}\\frac{\\partial\\mathcal{L}^{\\langle t - \\rangle}}{\\partial z\_{h}^{\\langle t\\rangle}}$
+$$
+\frac{\partial\mathcal{L}}{\partial W_{h}} = \sum\limits_{t = 1}^{n}\frac{\partial\mathcal{L}^{\langle t - \rangle}}{\partial z_{h}^{\langle t\rangle}} \cdot \frac{\partial z_{h}^{\langle t\rangle}}{\partial W_{h}} = \sum\limits_{t = 1}^{n}{h^{\langle t - 1\rangle}}^{T}\frac{\partial\mathcal{L}^{\langle t - \rangle}}{\partial z_{h}^{\langle t\rangle}}
+$$
 
-$\\frac{\\partial\\mathcal{L}}{\\partial W\_{x}} = \\sum\\limits\_{t = 1}^{n}\\frac{\\partial\\mathcal{L}^{\\langle t - \\rangle}}{\\partial z\_{h}^{\\langle t\\rangle}} \\cdot \\frac{\\partial z\_{h}^{\\langle t\\rangle}}{\\partial W\_{x}} = \\sum\\limits\_{t = 1}^{n}{x^{\\langle t\\rangle}}^{T}\\frac{\\partial\\mathcal{L}^{\\langle t - \\rangle}}{\\partial z\_{h}^{\\langle t\\rangle}}$
+$$
+\frac{\partial\mathcal{L}}{\partial W_{x}} = \sum\limits_{t = 1}^{n}\frac{\partial\mathcal{L}^{\langle t - \rangle}}{\partial z_{h}^{\langle t\rangle}} \cdot \frac{\partial z_{h}^{\langle t\rangle}}{\partial W_{x}} = \sum\limits_{t = 1}^{n}{x^{\langle t\rangle}}^{T}\frac{\partial\mathcal{L}^{\langle t - \rangle}}{\partial z_{h}^{\langle t\rangle}}
+$$
 
 假设 RNN 只有一个隐藏层，`f^(⟨t⟩)` 是时刻 t 的输出，`y^(⟨t⟩)` 是时刻 t 的真实值。对于多分类问题，`y^(⟨t⟩)` 可以是真实分类对应的类别整数，则时刻 t 的多分类交叉熵损失 `L^(⟨t⟩)` 关于其输出值 `z^(⟨t⟩)` 的梯度 dz 为：
-
-
-
 
 ## 7.4 单层循环神经网络的实现
 
@@ -20255,14 +20504,13 @@ def rnn_loss_grad(Fs, Ys, loss_fn=util.loss_gradient_softmax_crossentropy, flatt
     return loss, dFs
 ```
 
-
-
-
 默认的 `loss_fn` 是一个多分类交叉熵函数。在多分类问题中，`Y` 通常是一个由整数表示的分类。如果 `Y` 是二维张量，则需要将其展平为一维张量，以正确计算交叉熵损失。参数 `flatten` 默认为 `True`，表示将 `Y` 展平为一维张量。
 
 ### 7.4.4 反向推导
 
 利用每一时刻损失函数关于该时刻输出 `Z` 的梯度 `dZ`，通过反向推导过程，可以得到该时刻损失函数关于隐藏状态 `H[t]` 和模型参数的梯度。下面的 `backward()` 函数用于计算这些梯度，它接受模型参数 `params`、输入数据序列 `Xs`、隐藏状态 `Hs` 以及损失函数关于输出的梯度 `dZs`。
+
+
 
 ```python
 import math
@@ -20451,9 +20699,6 @@ numerical_grads [[-2.39049225e-04 8.14224244e-05 1.57776459e-04 5.67408343e-05
  [-1.59774860e-04 8.33693115e-05 7.68434205e-05 4.16924273e-05
 ```
 
-
-
-
 ### 7.4.6 梯度下降训练
 
 在前向计算、损失函数和反向推导的基础上，可以使用训练样本对 RNN 模型进行训练。首先，定义最基础的更新参数的梯度优化器 `SGD`：
@@ -20524,6 +20769,8 @@ class AdaGrad():
 
 下面的训练函数 `rnn_train_epoch()` 使用数据迭代器 `data_iter` 遍历采样训练数据集以完成一个训练过程。该函数每次从数据迭代器 `data_iter` 获取一批序列训练样本。每个样本序列 (`Xs`, `Ys`) 由多个时刻的样本组成。`start` 指示该样本序列是否与前一个样本序列首尾相连。对于每个样本序列 (`Xs`, `Ys`)，首先使用 `rnn_forward(params, Xs, H)` 计算每个时刻的输出 `Zs` 和状态 `Hs`，然后使用损失函数 `loss_function(Zs, Ys)` 计算模型的损失以及损失对输出的梯度 `dzs`，再通过反向推导 `rnn_backward(params, Xs, Hs, dzs)` 计算损失对模型参数的梯度，最后更新模型参数。`iterations` 是最大迭代次数，用于防止无限循环，`print_n` 表示打印信息的间隔数。
 
+
+
 ```python
 def rnn_train_epoch(params, data_iter, optimizer, iterations, loss_function, print_n=100):
 
@@ -20579,7 +20826,7 @@ def rnn_train_epoch(params, data_iter, optimizer, iterations, loss_function, pri
 
 ### 7.4.7 序列数据的采样
 
-循环神经网络可以使用任意长度的序列数据进行训练。例如，如果要训练一个由循环神经网络表示的语言模型，可以使用不同长度的句子或词序列来训练 RNN 网络，这些用于训练循环神经网络的序列数据可以称为**序列样本**。这些通常用于训练 RNN 网络的序列样本，需要从更长的原始序列数据中选取（采样）得到。例如，在训练语言模型时，原始数据可能是一个或多个包含许多句子的文本（称为**语料库**）。这需要从原始的长序列数据中采样出短序列样本用于训练，例如从文本中取出一个句子作为序列样本。再如，将某只股票的所有历史价格组成的序列数据作为原始数据，需要截取一小段价格序列作为序列样本。
+循环神经网络可以使用任意长度的序列数据进行训练。例如，如果要训练一个由循环神经网络表示的语言模型，可以使用不同长度的句子或词序列来训练 RNN 网络，这些用于训练循环神经网络的序列数据可以称为`序列样本`。这些通常用于训练 RNN 网络的序列样本，需要从更长的原始序列数据中选取（采样）得到。例如，在训练语言模型时，原始数据可能是一个或多个包含许多句子的文本（称为`语料库`）。这需要从原始的长序列数据中采样出短序列样本用于训练，例如从文本中取出一个句子作为序列样本。再如，将某只股票的所有历史价格组成的序列数据作为原始数据，需要截取一小段价格序列作为序列样本。
 
 对于自回归序列数据 `{x[t]}`，时刻 `t` 的目标值 `y[t]` 是序列的下一个元素 `x[t + 1]`，例如股票价格数据、用于预测下一个词的文本数据等。对于 `y[t]` 为 `x[t + 1]` 这种特殊的序列数据，如果想要采样一个序列长度为 `seq_len = T` 的序列样本，可以从某个 `τ` 开始，长度为 `T` 的子序列 `x[τ], x[τ + 1], ⋯, x[τ + T − 1]` 作为序列样本的输入，`x[τ + 1], x[τ + 2], ⋯, x[τ + T]` 作为序列样本的目标值。
 
@@ -20587,7 +20834,7 @@ def rnn_train_epoch(params, data_iter, optimizer, iterations, loss_function, pri
 
 **图 7-23** `τ` 时刻输入 `x[τ]`，对应的输出是 `x[τ + 1]`，`τ + 1` 时刻输入 `x[τ + 1]` 对应的输出是 `x[τ + 2]`，⋯，`τ + T − 1` 时刻输入 `x[τ + T − 1]` 对应的输出是 `x[τ + T]`。
 
-为了训练 RNN 模型，可以从原始序列中采样出许多序列样本作为模型的训练集。如果这些序列样本中相邻的两个序列样本是首尾相连的，这种采样方法称为**顺序采样**，否则称为**随机采样**。例如，对于下面的序列：
+为了训练 RNN 模型，可以从原始序列中采样出许多序列样本作为模型的训练集。如果这些序列样本中相邻的两个序列样本是首尾相连的，这种采样方法称为`顺序采样`，否则称为`随机采样`。例如，对于下面的序列：
 
 ```
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
@@ -20604,9 +20851,6 @@ def rnn_train_epoch(params, data_iter, optimizer, iterations, loss_function, pri
 ```
 ([0,1,2],[1,2,3])、([2,3,4],[3,4,5])、([12,13,14],[13,14,15])、([7,8,9],[8,9,10])、...
 ```
-
-
-
 
 #### 顺序采样与随机采样
 
@@ -20751,6 +20995,7 @@ Y: [[17, 18, 19], [10, 11, 12]]
 如图 7-24 所示，若每批有 2 个数据，则第二批的第一个数据应与第一批的第一个数据首尾相连；同理，第二批的第二个数据应与第一批的第二个数据首尾相连。所有批次中的第一个数据构成第一个序列样本，所有批次中的第二个数据构成第二个序列样本。
 
 ![](img/file151.png "fig:")
+
 **图 7-24** 批量样本中第一个序列样本（红）的数据首尾相连，第二个序列样本（蓝）的数据首尾相连
 
 如何保证所有批次首尾相连？一种简单方案是将原始数据分成 `batch_size` 个子部分，在每个子部分中用顺序采样采样一个序列样本，这自然保证了 `batch_size` 个序列样本首尾相连，且每批中的不同样本来自不同部分。对上述数据设 `batch_size=2`，原始序列数据分成 2 部分：
@@ -20773,13 +21018,11 @@ print(data)
  [10 11 12 13 14 15 16 17 18 19]]
 ```
 
-
-
 序列样本 `x1=[0,1,2]` 可以从第一部分获取，序列样本 `x2 = [10,11,12]` 可以从第二部分获取，从而形成一个批次序列样本。从第 1 部分获取序列样本 `x1 = [3,4,5]`，从第 2 部分获取序列样本 `x2 = [13,14,15]`，形成另一个批次序列样本。从第一部分获取序列样本 `x1=[6,7,8]`，从第二部分获取序列样本 `x2 = [16,17,18]`，形成另一个批次序列样本。
 
 然而，除了输入之外，每个序列样本还应包含目标序列，且目标序列恰好比输入序列滞后一个位置。因此，可以使用以下代码生成 `2*batch_size` 个子块：
 
-```
+```python
 data = np.array(range(20))
 
 print(data)
@@ -20845,247 +21088,7 @@ x2 = [16,17,18],x2 = [17,18,19]
 
 根据上述方法，可以编写以下批次序列采样函数 `rnn_data_iter_consecutive()`：
 
-```
-def rnn_data_iter_consecutive(data, batch_size, seq_len,start_range=10).
 
-    # 每次从 data[start:] 采样，使得每个 epoch 的训练样本不同
-
-    start = np.random.randint(0, start_range)    
-
-    block_len = (len(data)-start-1) // batch_size # 每个块的长度 block_len
-
-    Xs = data[start:start+block_len*batch_size]   
-
-    Xs = Xs.reshape(batch_size,-1)
-
-    Ys = data[start+1:start+block_len*batch_size+1]      
-
-    Ys = Ys.reshape(batch_size,-1)
-
-    # 在每个块中采样长度为 seq_len 的序列
-
-    num_batches = Xs.shape[1] // seq_len # 可以采样多少批样本
-
-    end_pos = num_batches * seq_len
-
-    for i in range(0, end_pos, seq_len): # 采样一批样本
-
-        X = Xs[:,i:(i+seq_len)]
-
-        Y = Ys[:,i:(i+seq_len)]
-
-        yield X, Y   
-```
-
-测试上述函数：
-
-```
-data = list(range(20))
-
-print(data[:20])
-
-data_it = rnn_data_iter_consecutive(np.array(data[:20]),2,3,1)
-
-for X,Y in data_it:
-
-    print("X:",X)
-
-    print("Y:",Y)        
-```
-
-```
-    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
-
-    X: [[ 0 1 2]
-
-     [ 9 10 11]]
-
-    Y: [[ 1 2 3]
-
-     [10 11 12]]
-
-    X: [[ 3 4 5]
-
-     [12 13 14]]
-
-    Y: [[ 4 5 6]
-
-     [13 14 15]]
-
-    X: [[ 6 7 8]
-
-     [15 16 17]]
-
-    Y: [[ 7 8 9]
-
-     [16 17 18]]
-```
-
-上述采样得到的每个批次序列样本的 `X` 都是一个二维张量，第一轴是批次大小，第二轴是序列长度。之前的循环神经网络假设序列样本的第一轴是序列长度而不是批次大小，因此可以交换对应序列长度和批次大小的轴：
-
-```
-X = np.swapaxes(X,0,1)
-```
-
-上述 `X` 假设每个数据元素是一个长度为 1 的标量，但在实际问题中，每个数据可能是一个包含多个特征的向量，甚至是一个多维张量（如图像）。如果每个数据元素是一个多特征向量，那么 `X` 就是一个三维张量。因此，上述二维张量的序列样本 `X` 可以转换为三维张量：
-
-```
-X = X.reshape(X.shape[0],X.shape[1],-1)
-```
-
-即增加第 3 个轴。将两行代码合并：
-
-```
-x1 = np.swapaxes(X,0,1)
-
-x1 = x1.reshape(x1.shape[0],x1.shape[1],-1)
-
-print(x1)
-```
-
-```
-    [[[ 6]
-
-      [15]]
-
-     [[ 7]
-
-      [16]]
-
-     [[ 8]
-
-      [17]]]
-```
-
-因此，你可以重写上述函数，并添加一个 `to_3D` 参数来决定是否转换为 3D 张量：
-
-```
-import numpy as np
-
-def rnn_data_iter_consecutive(data, batch_size, seq_len,start_range=10,to_3D = True).
-
-    # 每次在 data[offset:] 中采样，使得每个 epoch 的训练样本不同
-
-    start = np.random.randint(0, start_range)     
-
-    block_len = (len(data)-start-1) // batch_size
-
-    Xs = data[start:start+block_len*batch_size]
-
-    Ys = data[start+1:start+block_len*batch_size+1]   
-
-    Xs = Xs.reshape(batch_size,-1)
-
-    Ys = Ys.reshape(batch_size,-1)
-
-    # 每个块中可以采样多少个长度为 seq_len 的样本
-
-    reset = True
-
-    num_batches = Xs.shape[1] // seq_len
-
-    for i in range(0, num_batches * seq_len, seq_len).
-
-        X = Xs[:,i:(i+seq_len)]
-
-        Y = Ys[:,i:(i+seq_len)]
-
-        if to_3D.
-
-            X = np.swapaxes(X,0,1)
-
-            X = X.reshape(X.shape[0],X.shape[1],-1)
-
-            #X = np.expand_dims(X, axis=2)
-
-            Y = np.swapaxes(Y,0,1)
-
-            Y = Y.reshape(Y.shape[0],Y.shape[1],-1)
-
-        else.
-
-            X = np.swapaxes(X,0,1)
-
-            Y = np.swapaxes(Y,0,1)            
-
-        if reset. 
-
-            reset = False
-
-            yield X, Y,True 
-
-        else: yield X, Y,False 
-```
-
-其中，数据迭代器生成样本 (`Xs`, `Ys`) 并返回一个标志，指示是否重置 RNN 隐藏状态。如果标志为 True，则重置 RNN 隐藏状态 `H`。
-
-```
-data = np.array(list(range(20))).reshape(-1,1)
-
-data_it = rnn_data_iter_consecutive(data,2,3,2)
-
-i = 0
-
-for X,Y,_ in data_it:
-
-    print("X:",X)
-
-    print("Y:",Y) 
-
-    i+=1
-
-    if i==2 :break
-```
-
-```
-    X: [[[ 0]
-
-      [ 9]]
-
-     [[ 1]
-
-      [10]]
-
-     [[ 2]
-
-      [11]]]
-
-    Y: [[[ 1]
-
-      [10]]
-
-     [[ 2]
-
-      [11]]
-
-     [[ 3]
-
-      [12]]]
-
-    X: [[[ 3]
-
-      [12]]
-
-     [[ 4]
-
-      [13]]
-
-     [[ 5]
-
-      [14]]]
-
-    Y: [[[ 4]
-
-      [13]]
-
-     [[ 5]
-
-      [14]]
-
-     [[ 6]
-
-      [15]]]
-```
 
 ### 7.4.8 RNN 对序列数据的训练与预测
 
@@ -21093,78 +21096,196 @@ for X,Y,_ in data_it:
 
 以下使用从曲线 y 值采样的前面的实数来训练 RNN 模型：
 
+```python
+def rnn_data_iter_consecutive(data, batch_size, seq_len, start_range=10):
+    # 每次从 data[start:] 采样，使得每个 epoch 的训练样本不同
+    start = np.random.randint(0, start_range)
+    block_len = (len(data) - start - 1) // batch_size  # 每个块的长度 block_len
+    Xs = data[start:start + block_len * batch_size]
+    Xs = Xs.reshape(batch_size, -1)
+    Ys = data[start + 1:start + block_len * batch_size + 1]
+    Ys = Ys.reshape(batch_size, -1)
+    # 在每个块中采样长度为 seq_len 的序列
+    num_batches = Xs.shape[1] // seq_len  # 可以采样多少批样本
+    end_pos = num_batches * seq_len
+    for i in range(0, end_pos, seq_len):  # 采样一批样本
+        X = Xs[:, i:(i + seq_len)]
+        Y = Ys[:, i:(i + seq_len)]
+        yield X, Y
 ```
+
+测试上述函数：
+
+```python
+data = list(range(20))
+print(data[:20])
+data_it = rnn_data_iter_consecutive(np.array(data[:20]), 2, 3, 1)
+for X, Y in data_it:
+    print("X:", X)
+    print("Y:", Y)
+```
+
+```
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+X: [[ 0  1  2]
+     [ 9 10 11]]
+Y: [[ 1  2  3]
+     [10 11 12]]
+X: [[ 3  4  5]
+     [12 13 14]]
+Y: [[ 4  5  6]
+     [13 14 15]]
+X: [[ 6  7  8]
+     [15 16 17]]
+Y: [[ 7  8  9]
+     [16 17 18]]
+```
+
+上述采样得到的每个批次序列样本的 `X` 都是一个二维张量，第一轴是批次大小，第二轴是序列长度。之前的循环神经网络假设序列样本的第一轴是序列长度而不是批次大小，因此可以交换对应序列长度和批次大小的轴：
+
+```python
+X = np.swapaxes(X, 0, 1)
+```
+
+上述 `X` 假设每个数据元素是一个长度为 1 的标量，但在实际问题中，每个数据可能是一个包含多个特征的向量，甚至是一个多维张量（如图像）。如果每个数据元素是一个多特征向量，那么 `X` 就是一个三维张量。因此，上述二维张量的序列样本 `X` 可以转换为三维张量：
+
+```python
+X = X.reshape(X.shape[0], X.shape[1], -1)
+```
+
+即增加第 3 个轴。将两行代码合并：
+
+```python
+x1 = np.swapaxes(X, 0, 1)
+x1 = x1.reshape(x1.shape[0], x1.shape[1], -1)
+print(x1)
+```
+
+```
+[[[ 6]
+  [15]]
+ [[ 7]
+  [16]]
+ [[ 8]
+  [17]]]
+```
+
+因此，你可以重写上述函数，并添加一个 `to_3D` 参数来决定是否转换为 3D 张量：
+
+```python
+import numpy as np
+
+def rnn_data_iter_consecutive(data, batch_size, seq_len, start_range=10, to_3D=True):
+    # 每次在 data[offset:] 中采样，使得每个 epoch 的训练样本不同
+    start = np.random.randint(0, start_range)
+    block_len = (len(data) - start - 1) // batch_size
+    Xs = data[start:start + block_len * batch_size]
+    Ys = data[start + 1:start + block_len * batch_size + 1]
+    Xs = Xs.reshape(batch_size, -1)
+    Ys = Ys.reshape(batch_size, -1)
+    # 每个块中可以采样多少个长度为 seq_len 的样本
+    reset = True
+    num_batches = Xs.shape[1] // seq_len
+    for i in range(0, num_batches * seq_len, seq_len):
+        X = Xs[:, i:(i + seq_len)]
+        Y = Ys[:, i:(i + seq_len)]
+        if to_3D:
+            X = np.swapaxes(X, 0, 1)
+            X = X.reshape(X.shape[0], X.shape[1], -1)
+            # X = np.expand_dims(X, axis=2)
+            Y = np.swapaxes(Y, 0, 1)
+            Y = Y.reshape(Y.shape[0], Y.shape[1], -1)
+        else:
+            X = np.swapaxes(X, 0, 1)
+            Y = np.swapaxes(Y, 0, 1)
+        if reset:
+            reset = False
+            yield X, Y, True
+        else:
+            yield X, Y, False
+```
+
+其中，数据迭代器生成样本 (`Xs`, `Ys`) 并返回一个标志，指示是否重置 RNN 隐藏状态。如果标志为 True，则重置 RNN 隐藏状态 `H`。
+
+```python
+data = np.array(list(range(20))).reshape(-1, 1)
+data_it = rnn_data_iter_consecutive(data, 2, 3, 2)
+i = 0
+for X, Y, _ in data_it:
+    print("X:", X)
+    print("Y:", Y)
+    i += 1
+    if i == 2:
+        break
+```
+
+```
+X: [[[ 0]
+      [ 9]]
+     [[ 1]
+      [10]]
+     [[ 2]
+      [11]]]
+Y: [[[ 1]
+      [10]]
+     [[ 2]
+      [11]]
+     [[ 3]
+      [12]]]
+X: [[[ 3]
+      [12]]
+     [[ 4]
+      [13]]
+     [[ 5]
+      [14]]]
+Y: [[[ 4]
+      [13]]
+     [[ 5]
+      [14]]
+     [[ 6]
+      [15]]]
+```
+
+以下使用从曲线 y 值采样的前面的实数来训练 RNN 模型：
+
+```python
 T = 5000  # 总共生成 1000 个点
-
 time = np.arange(0, T)
-
-data = np.sin(time*0.1)+np.cos(time*0.2)
-
+data = np.sin(time * 0.1) + np.cos(time * 0.2)
 print(data.shape)
-
 batch_size = 3
-
 input_dim = 1
-
-output_dim= 1
-
-hidden_size=100
-
+output_dim = 1
+hidden_size = 100
 seq_length = 50
-
-params = rnn_params_init(input_dim, hidden_size,output_dim)
-
-H = rnn_hidden_state_init(batch_size,hidden_size)
-
-data_it = rnn_data_iter_consecutive(data,batch_size,seq_length,2)
-
-x,y,_ = next(data_it)
-
-print("X:",x.shape,"Y:",y.shape,"H:",H.shape)
-
-loss_function = lambda F,Y:rnn_loss_grad(F,Y,util.mse_loss_grad,False)
-
-Zs,Hs = rnn_forward(params,x,H)
-
-print("Z:",Zs[0].shape,"H:",Hs[0].shape)
-
-loss,dzs = loss_function(Zs,y)   
-
+params = rnn_params_init(input_dim, hidden_size, output_dim)
+H = rnn_hidden_state_init(batch_size, hidden_size)
+data_it = rnn_data_iter_consecutive(data, batch_size, seq_length, 2)
+x, y, _ = next(data_it)
+print("X:", x.shape, "Y:", y.shape, "H:", H.shape)
+loss_function = lambda F, Y: rnn_loss_grad(F, Y, util.mse_loss_grad, False)
+Zs, Hs = rnn_forward(params, x, H)
+print("Z:", Zs[0].shape, "H:", Hs[0].shape)
+loss, dzs = loss_function(Zs, y)
 print(dzs[0].shape)
-
 epoches = 10
-
 learning_rate = 5e-4
-
-iterations  =200
-
+iterations = 200
 losses = []
-
-#optimizer = AdaGrad(params,learning_rate)
-
+# optimizer = AdaGrad(params, learning_rate)
 momentum = 0.9
-
-optimizer = SGD(params,learning_rate,momentum)
-
+optimizer = SGD(params, learning_rate, momentum)
 for epoch in range(epoches):
-
-    data_it = rnn_data_iter_consecutive(data,batch_size,seq_length,100)
-
-   # epoch_losses,param,H = rnn_train(params,data_it,learning_rate,iterations,loss_function,print_n=100)
+    data_it = rnn_data_iter_consecutive(data, batch_size, seq_length, 100)
+    # epoch_losses, param, H = rnn_train(params, data_it, learning_rate, iterations, loss_function, print_n=100)
 ```
-
-
-
 
 #### 训练与损失记录
 
 ```python
 epoch_losses, H = rnn_train_epoch(params, data_it, optimizer, iterations, loss_function, print_n=50)
-
 # losses.extend(epoch_losses)
-
 epoch_losses = np.array(epoch_losses).mean()
-
 losses.append(epoch_losses)
 ```
 
@@ -21172,31 +21293,18 @@ losses.append(epoch_losses)
 
 ```
 (5000,)
-
 X: (50, 3, 1) Y: (50, 3, 1) H: (3, 100)
-
 Z: (3, 1) H: (3, 100)
-
 (3, 1)
-
 iter 0, loss: 52.575362
-
 iter 0, loss: 41.488531
-
 iter 0, loss: 2.666009
-
 iter 0, loss: 1.424797
-
 iter 0, loss: 0.849381
-
 iter 0, loss: 0.723504
-
 iter 0, loss: 0.581355
-
 iter 0, loss: 0.938593
-
 iter 0, loss: 1.019344
-
 iter 0, loss: 0.297335
 ```
 
@@ -21204,7 +21312,6 @@ iter 0, loss: 0.297335
 
 ```python
 import matplotlib.pyplot as plt
-
 plt.plot(losses)
 plt.show()
 ```
@@ -21219,28 +21326,21 @@ plt.show()
 
 ```python
 H = rnn_hidden_state_init(1, hidden_size)
-
 start = 3
-
-x = data[start:start+1].copy()
+x = data[start:start + 1].copy()
 x = x.reshape(x.shape[0], 1, -1)
 print(x.shape)
-
 x = x.reshape(1, -1)
-
 ys = []
 print(x.flatten())
-
 for i in range(500):
     F, H = rnn_forward_step(params, x, H)
     x = F
     ys.append(F[0, 0])
-
 print(len(ys))
 ys = ys[:]
-
 plt.plot(ys[:500])
-plt.plot(data[start+1:start+1+500])
+plt.plot(data[start + 1:start + 1 + 500])
 plt.xlabel("time")
 plt.ylabel("value")
 plt.legend(['y', 'y_real'])
@@ -21249,9 +21349,7 @@ plt.show()
 
 ```
 (1, 1, 1)
-
 [1.12085582]
-
 500
 ```
 
@@ -21263,20 +21361,16 @@ plt.show()
 
 ```python
 H = rnn_hidden_state_init(1, hidden_size)
-
 start = 3
 ys = []
-
 for i in range(500):
-    x = data[start+i:start+i+1].copy()
+    x = data[start + i:start + i + 1].copy()
     x = x.reshape(1, -1)
     F, H = rnn_forward_step(params, x, H)
     ys.append(F[0, 0])
-
 ys = ys[:]
-
 plt.plot(ys[:500])
-plt.plot(data[start+1:start+501])
+plt.plot(data[start + 1:start + 501])
 plt.xlabel("time")
 plt.ylabel("value")
 plt.legend(['y', 'y_real'])
@@ -21315,6 +21409,8 @@ data = np.array(data.iloc[:, -2]).reshape(-1, 1)
 **图 7-30** 股票收盘价自回归模型短期预测
 
 以上仅利用股票收盘价历史数据预测未来收盘价。下面的代码使用股票的所有指标（开盘价、最高价、最低价、收盘价、成交量）来预测收盘价。首先训练 RNN 模型：
+
+
 
 ```python
 import pandas as pd
@@ -21433,12 +21529,9 @@ plt.ylabel("value")
 plt.legend(['y', 'y_real'])
 ```
 
-
-
-
-
 ![](img/file159.png "fig:")
-图 7-32 股票数据训练模型的短期预测效果
+
+**图 7-32** 股票数据训练模型的短期预测效果
 
 ## 7.5 RNN 语言模型与文本生成
 
@@ -21458,7 +21551,7 @@ plt.legend(['y', 'y_real'])
 
 如果语料库仅包含一个文本文件 `input.txt`（莎士比亚的剧本），以下代码将文本内容读入 `data`，并使用 `set(data)` 构建所有不同字符的集合。然后将这些不同字符放入列表对象 `chars` 中（`chars = list(set(data))`），该列表对象即为所有字符的字符表。
 
-```
+```python
 filename = 'input.txt'
 
 data = open(filename, 'r').read()
@@ -21468,7 +21561,7 @@ chars = list(set(data))
 
 输出文本中所有字符的数量、字符列表的长度、字符列表的前 10 个字符以及文本的前 148 个字符：
 
-```
+```python
 data_size, vocab_size = len(data), len(chars)
 
 print ('Total number of characters %d, length of character table %d unique.' % (data_size, vocab_size))
@@ -21479,30 +21572,30 @@ print('First 148 characters: \n', data[:148])
 ```
 
 ```
-    字符总数为 1115394，字符列表长度为 65 个唯一字符。
+字符总数为 1115394，字符列表长度为 65 个唯一字符。
 
-    字符表的前 10 个字符：
+字符表的前 10 个字符：
 
-     ['t', 'z', 'A', 'Y', 'm', ' ', 'B', 'g', 'r', '.']
+ ['t', 'z', 'A', 'Y', 'm', ' ', 'B', 'g', 'r', '.']
 
-    前 148 个字符：
+前 148 个字符：
 
-     First Citizen:
+ First Citizen:
 
-    Before we proceed any further, hear me speak.
+Before we proceed any further, hear me speak.
 
-    All:
+All:
 
-    Speak, speak.
+Speak, speak.
 
-    First Citizen:
+First Citizen:
 
-    You are all resolved rather to die than to famish?
+You are all resolved rather to die than to famish?
 ```
 
 字符表中的每个字符对应一个下标，可以使用两个字典来表示字符到下标和下标到字符的映射关系：
 
-```
+```python
 char_to_idx = { ch:i for i,ch in enumerate(chars) }
 
 idx_to_char = { i:ch for i,ch in enumerate(chars) }
@@ -21510,13 +21603,13 @@ idx_to_char = { i:ch for i,ch in enumerate(chars) }
 
 有了字符表，就可以量化每个字符。最简单的方法是根据字符在字符表中的下标，用独热向量来表示字符。独热向量的长度等于字符表的长度。除该字符对应下标的值为 1 外，该向量其余位置均为 0。如果字符表只有四个字符，如图 7-33 所示：
 
-图 7-33 字符表中只有 4 个字符：'h','e','l','o'
+**图 7-33** 字符表中只有 4 个字符：'h','e','l','o'
 
 字符 'e' 的下标为 1，因此其独热向量为 (0,1,0,0)。
 
-函数 `one_hot_idx` 根据字符（词）表大小 `vocab_size` 和字符在字符（词）表中的下标 `idx`，将字符转换为独热向量：
+函数 `one_hot_idx()` 根据字符（词）表大小 `vocab_size` 和字符在字符（词）表中的下标 `idx`，将字符转换为独热向量：
 
-```
+```python
 def one_hot_idx(idx, vocab_size):  
     x = np.zeros((1, vocab_size)) 
     x[0, idx] = 1  
@@ -21527,7 +21620,7 @@ def one_hot_idx(idx, vocab_size):
 
 为了训练字符语言模型，需要一些训练样本。与前面的序列数据采样过程类似，可以从原始文本中采样字符序列样本。以下代码以顺序采样的方式采样字符序列样本：
 
-```
+```python
 import numpy as np
 
 def character_seq_data_iter_consecutive(data, batch_size, seq_len, start_range=10):
@@ -21555,7 +21648,7 @@ def character_seq_data_iter_consecutive(data, batch_size, seq_len, start_range=1
 
 测试该函数：
 
-```
+```python
 x = 'Li,where are you from'
 batch_size = 2
 seq_length  = 3
@@ -21569,31 +21662,27 @@ for x, y, _ in data_it:
 ```
 
 ```
-    x: [['L' 'r']
-     ['i' 'e']
-     [',' ' ']]
-    y [['i' 'e']
-     [',' ' ']
-     ['w' 'y']]
-    x: [['w' 'y']
-     ['h' 'o']
-     ['e' 'u']]
-    y [['h' 'o']
-     ['e' 'u']
-     ['r' ' ']]
+x: [['L' 'r']
+ ['i' 'e']
+ [',' ' ']]
+y [['i' 'e']
+ [',' ' ']
+ ['w' 'y']]
+x: [['w' 'y']
+ ['h' 'o']
+ ['e' 'u']]
+y [['h' 'o']
+ ['e' 'u']
+ ['r' ' ']]
 ```
 
 函数返回的字符还需要进一步向量化，例如将每个字符转换为独热向量形式。为此，修改上述函数：
-
-
-
-
 
 ### 7.5.3 RNN 模型训练与预测
 
 如果字符表的长度为 `vocab_size`，则每个字符的独热向量长度为 `vocab_size`，即每一时刻输入数据的长度 `input_dim` 为 `vocab_size`，而每一时刻的预测是所有词作为下一个词的概率，因此输出向量的大小 `output_dim` 也是 `vocab_size`。加上 RNN 隐藏状态向量的长度 `hidden_size` 和每个训练样本的大小 `batch_size`，即可初始化一个 RNN 模型：
 
-```
+```python
 batch_size = 1
 input_dim = vocab_size
 output_dim = vocab_size
@@ -21605,9 +21694,12 @@ H = rnn_hidden_state_init(batch_size, hidden_size)
 #### predict
 
 对于上述字符语言 RNN 模型，只需输入一个初始字符（或字符序列），即可利用 RNN 模型连续预测下一个字符，从而生成由许多字符组成的文本。
-下面的函数 `predict_rnn()` 接受 RNN 模型的模型参数 `params` 和一个初始字符串 `prefix`（该初始字符串可能只有一个字符），然后在前缀后生成一系列字符。该函数首先依次将 `prefix` 的每个字符作为每一时刻的输入，并生成一个输出 `z`。如果 `prefix` 结束，则根据上一时刻的输出 `z` 计算每个字符的概率 `p`，并根据概率 `p` 采样一个作为下一时刻的输入。辅助函数 `one_hot_idx` 根据字符下标获取字符的独热向量。每一时刻的期望目标字符记录在输出列表中，开头部分是 `prefix` 中的字符，随后是根据预测概率采样的字符。
 
-```
+下面的函数 `predict_rnn()` 接受 RNN 模型的模型参数 `params` 和一个初始字符串 `prefix`（该初始字符串可能只有一个字符），然后在前缀后生成一系列字符。该函数首先依次将 `prefix` 的每个字符作为每一时刻的输入，并生成一个输出 `z`。如果 `prefix` 结束，则根据上一时刻的输出 `z` 计算每个字符的概率 `p`，并根据概率 `p` 采样一个作为下一时刻的输入。辅助函数 `one_hot_idx()` 根据字符下标获取字符的独热向量。每一时刻的期望目标字符记录在输出列表中，开头部分是 `prefix` 中的字符，随后是根据预测概率采样的字符。
+
+
+
+```python
 def predict_rnn(params, prefix, n):
     Wx, Wh, bh, Wf, bf = params
     # Wxh, Whh, Why, bh, by = params["Wxh"], params["Whh"], params["Why"], params["bh"], params["by"]
@@ -21630,7 +21722,7 @@ def predict_rnn(params, prefix, n):
 
 测试预测函数：
 
-```
+```python
 str = predict_rnn(params, "he", 200)
 print(str)
 ```
@@ -21644,7 +21736,7 @@ gEiG?f,kEqipDQJ3yQIKwXkcptNhJ&CTmke
 
 由于初始 RNN 模型参数是随机的，预测也是随机的，因此生成的文本非常混乱。可以使用从文本语料库中采样的序列样本来训练 RNN 模型，例如以下代码：
 
-```
+```python
 import matplotlib.pyplot as plt
 
 batch_size = 3
@@ -21690,13 +21782,10 @@ iter 10000, loss: 46.659329
 
 使用训练好的 RNN 再次预测：
 
-```
+```python
 str = predict_rnn(params, "he", 200)
 print(str)
 ```
-
-
-
 
 她的生物，我喜欢脊柱弯曲着离去，你的恐惧他洞穴。
 
@@ -21707,8 +21796,6 @@ print(str)
 你的工作淡去了忠诚，
 
 在洞里我
-
-
 
 可以看出输出文本已经类似于正常文本。字符语言模型不仅可以用于生成文本，还可以用于其他问题，例如生成乐谱。
 
@@ -21733,12 +21820,19 @@ $$\frac{\partial h_{t-1}}{\partial h_{t-2}} = w \sigma'(w h_{t-2}) \tag{7-21}$$
 如果从 $t$ 到 $t'$ 经过一系列时刻 $t+1, t+2, \dots, t'$，在反向推导中，时刻 $t'$ 的 $h[t']$ 对时刻 $t$ 的 $h_t$ 的偏导数为：
 
 $$
+
 \begin{matrix}
+
 \frac{\partial h_{t'}}{\partial h_t} &= \frac{\partial h_{t'}}{\partial h_{t'-1}} \frac{\partial h_{t'-1}}{\partial h_{t'-2}} \cdots \frac{\partial h_{t+1}}{\partial h_t} \\
+
 &= (w \sigma'(w h_{t'-1})) (w \sigma'(w h_{t'-2})) \cdots (w \sigma'(w h_t)) \\
+
 &= \prod_{k=1}^{t'-t} w \sigma'(w h_{t'-k}) \\
+
 &= \underbrace{w^{t'-t}}_{\text{!!!}} \prod_{k=1}^{t'-t} \sigma'(w h_{t'-k})
+
 \end{matrix}
+
 $$
 
 如果权重 $w$ 不等于 0，当 $0 < |w| < 1$ 时，上述公式以 $t'-t$ 的速度指数衰减到 0；当 $|w| > 1$ 时指数增长到无穷大。即梯度 $\frac{\partial h_{t'}}{\partial h_t}$ 衰减到 0 或爆炸到无穷大。参数更新公式为：
@@ -21819,6 +21913,8 @@ $$\mathbf{O}_t = \sigma(\mathbf{X}_t \mathbf{W}_{xo} + \mathbf{H}_{t-1} \mathbf{
 
 $$\mathbf{H}_t = \mathbf{O}_t \odot \tanh(C_t)$$
 
+
+
 > **图 7-42** 输出门决定当前时刻的新历史信息 $C_t$ 有多少（$\mathbf{H}_t = \mathbf{O}_t \odot \tanh(C_t)$）参与下一时刻的细胞计算
 
 如图 7-43 所示，Cell 由当前记忆单元、遗忘门、输入门和输出门组成。当前计算单元计算当前时刻的激活值 $\tilde{C}_t$，该值由输入数据和上一时刻的隐藏状态决定。遗忘门决定保留多少 $C[t]$，输入门决定当前激活值 $\tilde{C}_t$ 有多少记录在总历史信息 $C[t]$ 中，输出门决定当前时刻的历史记忆 $C[t]$ 有多少参与下一时刻的计算。
@@ -21874,11 +21970,6 @@ $$\frac{\partial \mathcal{L}}{\partial \mathbf{ZO}_t} = \sigma'(ZO_t) \frac{\par
 LSTM Cell 共有 4 个单元，每个单元类似于非循环神经网络中的神经元，即先计算加权和，再通过激活函数产生非线性输出。最后更新总历史信息 $C_t$ 和状态 $\mathbf{H}_t$。最后，Cell 从 $\mathbf{H}_t$ 计算当前输出值 $y_t$。模型参数包括 4 个单元中需要学习的模型参数，即 $(\mathbf{W}_i, \mathbf{b}_i)$、$(\mathbf{W}_f, \mathbf{b}_f)$、$(\mathbf{W}_o, \mathbf{b}_o)$、$(\mathbf{W}_c, \mathbf{b}_c)$ 以及计算最终输出 $y_t$ 的模型参数 $(\mathbf{W}_y, \mathbf{b}_y)$。
 
 以下函数初始化这些模型参数：
-
-```
-```
-
-
 
 #### NumPy 实现 LSTM
 
@@ -21983,6 +22074,8 @@ def lstm_forward_step(params, X, H, C):
 
 ##### 反向传播
 
+
+
 ```python
 import math
 
@@ -22082,7 +22175,7 @@ def lstm_backward(params, Xs, Hs, Cs, dZs, cache, clip_value=5.):
     return grads
 ```
 
-##### 梯度测试
+### 梯度测试
 
 ```python
 T = 3
@@ -22131,7 +22224,7 @@ print("grads", grads[0])
 print("numerical_grads", numerical_grads[0])
 ```
 
-##### 示例输出
+#### 示例输出
 
 ```
 Xs [[[ 1.07411384 0.6391398 -0.2931798 2.17849217]]
@@ -22172,10 +22265,7 @@ numerical_grads [[-1.70858883e-05 2.89936963e-05 -6.60071997e-05]
      [-6.21724894e-08 3.46389584e-08 9.14823772e-08]
 ```
 
-
-
-
-###### 梯度下降迭代过程
+#### 梯度下降迭代过程
 
 类似地，可以定义梯度下降法的迭代过程：
 
@@ -22212,7 +22302,7 @@ def lstm_train_epoch(params, data_iter, optimizer, iterations, loss_function, pr
     return losses, H
 ```
 
-###### 文本生成
+#### 文本生成
 
 使用 LSTM 代替普通 RNN 训练字符语言模型。
 
@@ -22250,9 +22340,11 @@ for epoch in range(epoches):
     # losses.append(epoch_losses)
 ```
 
-###### 预测
+#### 预测
 
 与 RNN 类似，可以定义以下预测函数：
+
+
 
 ```python
 def predict_lstm(params, prefix, n):
@@ -22301,15 +22393,12 @@ But long and you have
 T
 ```
 
-
-
-
-
 ### 7.7.4 LSTM 的变体
 
 以上是最经典的 LSTM，实际使用的 LSTM 模型往往略有不同。Gers & Schmidhuber (2000) 引入了“peephole connection”（窥孔连接），如图 7-42 所示，使得各个门可以观察细胞的状态。
 
 ![](img/file161.png "fig:")
+
 图 7-42 引入“peephole connection”的 LSTM
 
 在该图中，所有门都添加了“peepholes”（窥孔），即 `f[t]`、`i[t]`、`o[t]` 可以看到相应的细胞状态 `C[t-1]`、`C[t]`。不过，也有一些论文只添加一部分。
@@ -22327,11 +22416,13 @@ T
 与 LSTM 使用 `C[t]` 和 `H[t]` 分别表示总历史信息和参与下一时刻计算的历史信息不同，GRU 像简单的 RNN 一样，仅使用一个隐藏状态 `H[t]` 来表示所有历史信息。与 LSTM 一样，GRU 也有遗忘门，也称为重置门，用于表示记忆信息对当前时刻计算的影响，以及用于当前激活值 `H_tilde_t` 和历史信息 `H[t-1]` 更新当前时刻历史信息 `H[t]` 的更新门。如图 7-43 所示，GRU 单元中有两个门：重置门 R 和更新门 U。
 
 ![](img/file162.png "fig:")
+
 图 7-43 GRU 的重置门和更新门
 
 与 LSTM 的门一样，这两个门输出 `[0,1]` 之间的值，计算公式如下：
 
 **R[t]** = `σ(X[t]W[xr] + H[t-1]W[hr] + W[hr] + mathbfb[r])`
+
 **U[t]** = `σ(X[t]W[xu] + H[t-1]W[hu] + W[hu] + mathbfb[u])`
 
 普通 RNN 神经元使用历史信息 `H[t-1]` 和当前输入数据 `X[t]` 计算当前时刻的信息，即隐藏状态 `H[t]`。
@@ -22345,6 +22436,7 @@ T
 这个 `H_tilde_t` 表示当前时刻的激活值，也称为**当前候选记忆**。如图 7-44 所示：
 
 ![](img/file163.png "fig:")
+
 图 7-44 GRU 当前工作单元输出当前时刻的激活值
 
 通过更新门对当前候选记忆 `H_tilde_t` 和历史记忆 `H[t-1]` 进行加权平均，作为当前时刻的隐藏状态：
@@ -22354,6 +22446,7 @@ T
 如图 7-45 所示，更新门的输出值 **U[t]** 用于对历史记忆和当前候选记忆进行加权平均，
 
 ![](img/file164.png "fig:")
+
 图 7-45 GRU 神经网络单元的完整结构，更新门输出当前隐藏状态 `H[t]`
 
 GRU 的反向推导与 LSTM 类似。在已知损失函数对 GRU 输出的梯度 dZ 后，反向推导计算损失函数对模型参数和中间变换的梯度。读者可以模仿 LSTM 的反向推导来推导 GRU 的反向推导公式。
@@ -22451,9 +22544,6 @@ def gru_backward(params, Xs, Hs, dZs, cache):  # Ys, loss_function):
         dH_pre = dH * U
         dU = H_pre * dH - H_tilda * dH
 ```
-
-
-
 
 # H_tilda = tanh(X Wxh+(R*H_)Whh+bh)
 
@@ -22587,268 +22677,145 @@ print("numerical_grads",numerical_grads[0])
 
 类 `LSTM` 可用于表示前面的 LSTM 相关函数：
 
-```
-import numpy as np
 
-def grad_clipping(grads,alpha):
-
-    norm = math.sqrt(sum((grad ** 2).sum() for grad in grads))
-
-    if norm > alpha:
-
-        ratio = alpha / norm
-
-        for i in range(len(grads)):
-
-            grads[i]*=ratio 
-
-class LSTM(object):
-
-    def __init__(self,input_dim,hidden_dim,output_dim,scale=0.01):
-
-        #super(LSTM_cell, self).__init__()
-
-        self.input_dim,self.hidden_dim,self.output_dim = input_dim,hidden_dim,output_dim
-
-        normal = lambda m,n : np.random.randn(m, n)*scale
-
-        two = lambda : (normal(input_dim+hidden_dim, hidden_dim),np.zeros((1,hidden_dim)))
-
-        Wi, bi = two()  # 输入门参数
-
-        Wf, bf = two()  # 遗忘门参数
-
-        Wo, bo = two()  # 输出门参数
-
-        Wc, bc = two()  # 候选细胞状态参数
-
-        Wy = normal(hidden_dim, output_dim)
-
-        by = np.zeros((1,output_dim))  
-
-        self.params = [Wi, bi,Wf, bf, Wo,bo, Wc,bc,Wy,by]
-
-        self.grads = [np.zeros_like(param) for param in self.params]
-
-        self.H,self.C = None,None
-
-    def reset_state(self,batch_size):
-
-        self.H,self.C = (np.zeros((batch_size, self.hidden_dim)),
-
-            np.zeros((batch_size, self.hidden_dim)))
-
-    def forward(self,Xs):
-
-        [Wi, bi,Wf, bf, Wo,bo,Wc,bc,Wy,by] = self.params 
-
-        if self.H is None or self.C is None:
-
-            self.reset_state(Xs[0].shape[0])  
-
-        H, C =  self.H,self.C
-
-        Hs = {}
-
-        Cs = {}
-
-        Zs = []
-
-        Hs[-1] = np.copy(H)
-
-        Cs[-1] = np.copy(C)
-
-        Is = []
-
-        Fs = []
-
-        Os = []
-
-        C_tildas = []
-
-        for t in range(len(Xs)): 
-
-            X = Xs[t]
-
-            XH = np.column_stack((X, H))
-
-            I = sigmoid(np.dot(XH, Wi)+bi)
-
-            F = sigmoid(np.dot(XH, Wf)+bf)
-
-            O = sigmoid(np.dot(XH, Wo)+bo)
-
-            C_tilda = np.tanh(np.dot(XH, Wc)+bc)
-
-            C = F * C + I * C_tilda
-
-            H = O*np.tanh(C) #O * C.tanh() #输出状态
-
-            Y = np.dot(H, Wy) + by # 输出
-
-            Zs.append(Y)
-
-            Hs[t] = H
-
-            Cs[t] = C
-
-            Is.append(I)
-
-            Fs.append(F)
-
-            Os.append(O)
-
-            C_tildas.append(C_tilda)
-
-        self.Zs,self.Hs,self.Cs,self.Is,self.Fs,self.Os,self.C_tildas =  Zs,Hs,Cs,Is,Fs,Os,C_tildas
-
-        self.Xs  =Xs
-
-        return Zs,Hs
-
-    def backward(self,dZs): # Ys,loss_function):
-
-        [Wi, bi,Wf, bf, Wo,bo,Wc, bc,Wy,by] = self.params
-
-        Hs,Cs,Is,Fs,Os,C_tildas = self.Hs,self.Cs,self.Is,self.Fs,self.Os,self.C_tildas
-
-        Xs = self.Xs
-
-        dWi,dWf,dWo,dWc,dWy  = np.zeros_like(Wi), np.zeros_like(Wf), np.zeros_like(Wo), np.zeros_like(Wc), np.zeros_like(Wy)
-
-        dbi,dbf,dbo,dbc,dby = np.zeros_like(bi), np.zeros_like(bf),  np.zeros_like(bo), np.zeros_like(bc), np.zeros_like(by)
-
-        dH_next = np.zeros_like(Hs[0])
-
-        dC_next = np.zeros_like(Cs[0])
-
-        input_dim = Xs[0].shape[1]
-
-        h = Hs
-
-        x = Xs
-
-        T = len(Xs)  
-
-        for t in reversed(range(T)):     
-
-            I = Is[t]
-
-            F = Fs[t]
-
-            O = Os[t]
-
-            C_tilda = C_tildas[t]
-
-            H = Hs[t]
-
-            X = Xs[t]
-
-            C = Cs[t]
-
-            H_pre =  Hs[t-1]
-
-            C_prev = Cs[t-1]
-
-            XH_pre = np.column_stack((X, H_pre))
-
-            XH_ = XH_pre
-
-            dZ = dZs[t]  
-
-            # 输出模型参数 f 的 idu
-
-            dWy += np.dot(H.T,dZ)
-
-            dby += np.sum(dZ, axis=0, keepdims=True)
-
-            # 隐藏状态 h 的梯度
-
-            dH = np.dot(dZ, Wy.T) + dH_next       
-
-          #  dC = dH_next*O*dtanh(C) +dC_next    #* H = O*np.tanh(C) 
-
-          #  dC = dH_next*O*(1-np.square(np.tanh(C))) +dC_next
-
-            dC = dH*O*dtanh(C) +dC_next 
-
-            dO = np.tanh(C) *dH 
-
-            dOZ = O * (1-O)*dO                      
-
-            dWo += np.dot(XH_.T,dOZ)
-
-            dbo += np.sum(dOZ, axis=0, keepdims=True)              
-
-             #di                         
-
-            di =  C_tilda*dC
-
-            diZ = I*(1-I) * di
-
-            dWi += np.dot(XH_.T,diZ)
-
-            dbi += np.sum(diZ, axis=0, keepdims=True)  
-
-            #df
-
-            df = C_prev*dC
-
-            dfZ = F*(1-F) * df
-
-            dWf += np.dot(XH_.T,dfZ)
-
-            dbf += np.sum(dfZ, axis=0, keepdims=True)          
-
-            # dC_bar       
-
-            dC_tilda = I*dC                         #C = F * C + I * C_tilda        
-
-            dC_tilda_Z =(1-np.square(C_tilda))*dC_tilda  # C_tilda = sigmoid(np.dot(XH, Wc)+bc)         
-
-            dWc += np.dot(XH_.T,dC_tilda_Z)       
-
-            dbc += np.sum(dC_tilda_Z, axis=0, keepdims=True)
-
-            dXH_ = (np.dot(dfZ, Wf.T)
-
-                 + np.dot(diZ, Wi.T)
-
-                 + np.dot(dC_tilda_Z, Wc.T)
-
-                 + np.dot(dOZ, Wo.T))
-
-            dX_prev = dXH_[:, :input_dim]
-
-            dH_prev = dXH_[:, input_dim:]
-
-            dC_prev = F * dC
-
-            dC_next = dC_prev
-```
-
-
-
-
-#### LSTM 类测试代码
 
 ```python
-dH_next = dH_prev
+import numpy as np
 
-grads = [dWi, dbi, dWf, dbf, dWo, dbo, dWc, dbc, dWy, dby]
+def grad_clipping(grads, alpha):
+    norm = math.sqrt(sum((grad ** 2).sum() for grad in grads))
+    if norm > alpha:
+        ratio = alpha / norm
+        for i in range(len(grads)):
+            grads[i] *= ratio
 
-grad_clipping(grads, 5.)
+class LSTM(object):
+    def __init__(self, input_dim, hidden_dim, output_dim, scale=0.01):
+        # super(LSTM_cell, self).__init__()
+        self.input_dim, self.hidden_dim, self.output_dim = input_dim, hidden_dim, output_dim
+        normal = lambda m, n: np.random.randn(m, n) * scale
+        two = lambda: (normal(input_dim + hidden_dim, hidden_dim), np.zeros((1, hidden_dim)))
+        Wi, bi = two()  # 输入门参数
+        Wf, bf = two()  # 遗忘门参数
+        Wo, bo = two()  # 输出门参数
+        Wc, bc = two()  # 候选细胞状态参数
+        Wy = normal(hidden_dim, output_dim)
+        by = np.zeros((1, output_dim))
+        self.params = [Wi, bi, Wf, bf, Wo, bo, Wc, bc, Wy, by]
+        self.grads = [np.zeros_like(param) for param in self.params]
+        self.H, self.C = None, None
 
-for i, _ in enumerate(self.grads):
-    self.grads[i] += grads[i]
+    def reset_state(self, batch_size):
+        self.H, self.C = (np.zeros((batch_size, self.hidden_dim)),
+                          np.zeros((batch_size, self.hidden_dim)))
 
-return [dWi, dbi, dWf, dbf, dWo, dbo, dWc, dbc, dWy, dby]
+    def forward(self, Xs):
+        [Wi, bi, Wf, bf, Wo, bo, Wc, bc, Wy, by] = self.params
+        if self.H is None or self.C is None:
+            self.reset_state(Xs[0].shape[0])
+        H, C = self.H, self.C
+        Hs = {}
+        Cs = {}
+        Zs = []
+        Hs[-1] = np.copy(H)
+        Cs[-1] = np.copy(C)
+        Is = []
+        Fs = []
+        Os = []
+        C_tildas = []
+        for t in range(len(Xs)):
+            X = Xs[t]
+            XH = np.column_stack((X, H))
+            I = sigmoid(np.dot(XH, Wi) + bi)
+            F = sigmoid(np.dot(XH, Wf) + bf)
+            O = sigmoid(np.dot(XH, Wo) + bo)
+            C_tilda = np.tanh(np.dot(XH, Wc) + bc)
+            C = F * C + I * C_tilda
+            H = O * np.tanh(C)  # O * C.tanh() #输出状态
+            Y = np.dot(H, Wy) + by  # 输出
+            Zs.append(Y)
+            Hs[t] = H
+            Cs[t] = C
+            Is.append(I)
+            Fs.append(F)
+            Os.append(O)
+            C_tildas.append(C_tilda)
+        self.Zs, self.Hs, self.Cs, self.Is, self.Fs, self.Os, self.C_tildas = Zs, Hs, Cs, Is, Fs, Os, C_tildas
+        self.Xs = Xs
+        return Zs, Hs
 
-def parameters(self):
-    return self.params
+    def backward(self, dZs):  # Ys,loss_function):
+        [Wi, bi, Wf, bf, Wo, bo, Wc, bc, Wy, by] = self.params
+        Hs, Cs, Is, Fs, Os, C_tildas = self.Hs, self.Cs, self.Is, self.Fs, self.Os, self.C_tildas
+        Xs = self.Xs
+        dWi, dWf, dWo, dWc, dWy = np.zeros_like(Wi), np.zeros_like(Wf), np.zeros_like(Wo), np.zeros_like(Wc), np.zeros_like(Wy)
+        dbi, dbf, dbo, dbc, dby = np.zeros_like(bi), np.zeros_like(bf), np.zeros_like(bo), np.zeros_like(bc), np.zeros_like(by)
+        dH_next = np.zeros_like(Hs[0])
+        dC_next = np.zeros_like(Cs[0])
+        input_dim = Xs[0].shape[1]
+        h = Hs
+        x = Xs
+        T = len(Xs)
+        for t in reversed(range(T)):
+            I = Is[t]
+            F = Fs[t]
+            O = Os[t]
+            C_tilda = C_tildas[t]
+            H = Hs[t]
+            X = Xs[t]
+            C = Cs[t]
+            H_pre = Hs[t-1]
+            C_prev = Cs[t-1]
+            XH_pre = np.column_stack((X, H_pre))
+            XH_ = XH_pre
+            dZ = dZs[t]
+            # 输出模型参数 f 的 idu
+            dWy += np.dot(H.T, dZ)
+            dby += np.sum(dZ, axis=0, keepdims=True)
+            # 隐藏状态 h 的梯度
+            dH = np.dot(dZ, Wy.T) + dH_next
+            # dC = dH_next*O*dtanh(C) +dC_next    #* H = O*np.tanh(C)
+            # dC = dH_next*O*(1-np.square(np.tanh(C))) +dC_next
+            dC = dH * O * dtanh(C) + dC_next
+            dO = np.tanh(C) * dH
+            dOZ = O * (1 - O) * dO
+            dWo += np.dot(XH_.T, dOZ)
+            dbo += np.sum(dOZ, axis=0, keepdims=True)
+            # di
+            di = C_tilda * dC
+            diZ = I * (1 - I) * di
+            dWi += np.dot(XH_.T, diZ)
+            dbi += np.sum(diZ, axis=0, keepdims=True)
+            # df
+            df = C_prev * dC
+            dfZ = F * (1 - F) * df
+            dWf += np.dot(XH_.T, dfZ)
+            dbf += np.sum(dfZ, axis=0, keepdims=True)
+            # dC_bar
+            dC_tilda = I * dC  # C = F * C + I * C_tilda
+            dC_tilda_Z = (1 - np.square(C_tilda)) * dC_tilda  # C_tilda = sigmoid(np.dot(XH, Wc)+bc)
+            dWc += np.dot(XH_.T, dC_tilda_Z)
+            dbc += np.sum(dC_tilda_Z, axis=0, keepdims=True)
+            dXH_ = (np.dot(dfZ, Wf.T)
+                    + np.dot(diZ, Wi.T)
+                    + np.dot(dC_tilda_Z, Wc.T)
+                    + np.dot(dOZ, Wo.T))
+            dX_prev = dXH_[:, :input_dim]
+            dH_prev = dXH_[:, input_dim:]
+            dC_prev = F * dC
+            dC_next = dC_prev
+        dH_next = dH_prev
+        grads = [dWi, dbi, dWf, dbf, dWo, dbo, dWc, dbc, dWy, dby]
+        grad_clipping(grads, 5.)
+        for i, _ in enumerate(self.grads):
+            self.grads[i] += grads[i]
+        return [dWi, dbi, dWf, dbf, dWo, dbo, dWc, dbc, dWy, dby]
+
+    def parameters(self):
+        return self.params
 ```
 
-以下代码测试 `LSTM` 类：
+### LSTM 类测试代码
 
 ```python
 T = 3
@@ -22886,7 +22853,7 @@ print("grads", grads[0])
 print("numerical_grads", numerical_grads[0])
 ```
 
-##### 测试输出结果
+#### 测试输出结果
 
 ```
 loss 4.15897570534243
@@ -22920,6 +22887,8 @@ numerical_grads [[-1.40953915e-06  1.39630529e-05  3.77866627e-05]
 ## GRU 类实现
 
 以下 `GRU` 实现了一个具有 GRU 结构的循环神经网络：
+
+
 
 ```python
 class GRU(object):
@@ -23071,41 +23040,55 @@ class GRU(object):
         return self.params
 ```
 
-
-
-
-
 ### 7.9.2 循环神经网络单元的类实现
 
-循环神经网络最基本的计算是神经网络单元在某一时刻的前向和反向计算。在某一时刻，神经网络单元接收数据输入 `x` 和上一时间步的状态输入 `h`。对于简单的 RNN 和 GRU，输出是当前时间步的状态 `h'`，而 LSTM 输出当前的记忆存储 `c'` 和传递给下一时间步的 `h'`。例如，对于简单的 RNN，其前向计算公式为：
+循环神经网络最基本的计算是神经网络单元在某一时刻的前向和反向计算。在某一时刻，神经网络单元接收数据输入`x`和上一时间步的状态输入`h`。对于简单的 RNN 和 GRU，输出是当前时间步的状态`h'`，而 LSTM 输出当前的记忆存储`c'`和传递给下一时间步的`h'`。例如，对于简单的 RNN，其前向计算公式为：
 
 `h' = tanh(W[ih]x + b[ih] + W[hh]h + b[hh])`
 
-此处，原始偏置 `b[h]` 被拆分为 2 项：`b[ih]`、`b[hh]`。分别表示数据输入加权和的偏置和隐藏状态加权和的偏置。同理，对于 LSTM，每个原始加权和的一个偏置也可以拆分为两个偏置，即 LSTM 的计算公式：
+此处，原始偏置`b[h]`被拆分为 2 项：`b[ih]`、`b[hh]`。分别表示数据输入加权和的偏置和隐藏状态加权和的偏置。同理，对于 LSTM，每个原始加权和的一个偏置也可以拆分为两个偏置，即 LSTM 的计算公式：
 
 $$
+
 \begin{matrix}
+
 i = \sigma(W_{ii}x + b_{ii} + W_{hi}h + b_{hi}) \\
+
 f = \sigma(W_{if}x + b_{if} + W_{hf}h + b_{hf}) \\
+
 g = \tanh(W_{ig}x + b_{ig} + W_{hg}h + b_{hg}) \\
+
 o = \sigma(W_{io}x + b_{io} + W_{ho}h + b_{ho}) \\
+
 c' = f * c + i * g \\
+
 h' = o * \tanh(c')
+
 \end{matrix}
+
 $$
 
 同理，GRU 神经网络单元的计算公式为：
 
 $$
+
 \begin{matrix}
+
 r = \sigma(W_{ir}x + b_{ir} + W_{hr}h + b_{hr}) \\
+
 z = \sigma(W_{iz}x + b_{iz} + W_{hz}h + b_{hz}) \\
+
 n = \tanh(W_{in}x + b_{in} + r * (W_{hn}h + b_{hn})) \\
+
 h' = (1 - z) * n + z * h
+
 \end{matrix}
+
 $$
 
 可以使用一个通用的基类来表示这 3 种不同神经网络单元的共同属性：
+
+
 
 ```python
 import numpy as np
@@ -23286,15 +23269,11 @@ for i in range(6):
     hs.append(h)
 ```
 
-
-
-
-
 print("h:", `hs[0]`)
 
 `dh = np.random.randn(*h.shape)`
 
-```
+```python
 for i in reversed(range(6)):
     if i == 0:
         dx, dh, _ = rnn.backward(dh, hs[i], x[i], h_0)
@@ -23308,7 +23287,15 @@ print("dh:", `dh`)
 
 同样地，LSTM 和 GRU 类型的 `LSTMCell` 和 `GRUCell` 也可以定义。`LSTMCell` 的代码如下：
 
-```
+
+
+## 不同的循环神经网络模型
+
+不同的循环神经网络模型可以通过神经网络单元来实现。
+
+### LSTM 单元实现
+
+```python
 def sigmoid(x):
     return (1 / (1 + np.exp(-x)))
 
@@ -23401,9 +23388,9 @@ class LSTMCell(RNNCellBase):
         return dx, dh_pre, grads           
 ```
 
-`GRUCell` 的代码如下：
+### GRU 单元实现
 
-```
+```python
 def gru_cell(x, h, w_ih, w_hh, b_ih, b_hh):
     Z_ih, Z_hh = np.dot(x, w_ih) + b_ih, np.dot(h, w_hh) + b_hh
     hidden_size = w_ih.shape[1] // 3
@@ -23485,14 +23472,6 @@ class GRUCell(RNNCellBase):
         return dx, dh_pre, grads
 ```
 
-
-
-
-
-#### 不同的循环神经网络模型
-
-不同的循环神经网络模型可以通过神经网络单元来实现。
-
 ## 7.10 多层、双向循环神经网络
 
 ### 7.10.1 多层循环神经网络
@@ -23522,6 +23501,8 @@ class GRUCell(RNNCellBase):
 在多层循环神经网络中，初始输入数据 `X` 的大小与隐藏状态 `H` 的大小通常不相等，且每个循环网络层中 `H` 的大小相同，因此第一层的数据输入与其他循环网络层的数据输入通常不同，所以除第一层外，循环网络层的权重参数形状相同。当然，也可以让不同的循环网络层具有不同大小的隐藏状态，但在实践中通常不这样做。
 
 前面的循环神经网络单元可用于构建多层循环神经网络。以下代码基于神经网络单元构建了一个表示多层循环神经网络的基类 `RNNBase`：
+
+
 
 ```python
 from Layers import * 
@@ -23636,10 +23617,6 @@ class RNNBase(Layer):
             dhs = np.array(dhs_)
 ```
 
-
-
-
-
 #### 多层循环神经网络的实现与测试
 
 ##### 代码实现
@@ -23729,6 +23706,8 @@ class GRU(RNNBase):
 
 这些多层循环神经网络可以通过以下代码进行测试：
 
+
+
 ```python
 import numpy as np
 from rnn import *
@@ -23779,7 +23758,7 @@ print("dhidden:", dhidden)
 
 ### 7.10.2 多层循环神经网络的训练与预测
 
-上述多层 LSTM 循环神经网络的每个隐藏层的隐藏状态大小相同。为了使该多层神经网络适应不同输出值的问题，可以在多层 LSTM 循环神经单元的基础上再添加一个全连接输出层，以针对不同输出向量大小输出特定问题。以下 `LSTM_RNN` 即为这种多层循环神经网络，其中 `input_size`、`hidden_size` 和 `output_size` 分别为输入数据大小、隐藏状态大小和输出值大小，`num_layers` 为循环神经网络的层数。
+上述多层 `LSTM` 循环神经网络的每个隐藏层的隐藏状态大小相同。为了使该多层神经网络适应不同输出值的问题，可以在多层 `LSTM` 循环神经单元的基础上再添加一个全连接输出层，以针对不同输出向量大小输出特定问题。以下 `LSTM_RNN` 即为这种多层循环神经网络，其中 `input_size`、`hidden_size` 和 `output_size` 分别为输入数据大小、隐藏状态大小和输出值大小，`num_layers` 为循环神经网络的层数。
 
 ```python
 from Layers import *
@@ -23854,10 +23833,6 @@ y_train = data.y_train
 
 hidden_size = 32
 ```
-
-
-
-
 
 #### 代码示例：LSTM 训练流程
 
@@ -23953,16 +23928,23 @@ Epoch 400 MSE: 0.012934439762440214
 其计算过程可以表示为：
 
 $$
+
 \begin{matrix}
+
 \overrightarrow{\mathbf{H}}_{t} = \phi(\mathbf{X}_{t}\mathbf{W}_{xh}^{(f)} + \overrightarrow{\mathbf{H}}_{t-1}\mathbf{W}_{hh}^{(f)} + \mathbf{b}_{h}^{(f)}), \\
+
 \overleftarrow{\mathbf{H}}_{t} = \phi(\mathbf{X}_{t}\mathbf{W}_{xh}^{(b)} + \overleftarrow{\mathbf{H}}_{t+1}\mathbf{W}_{hh}^{(b)} + \mathbf{b}_{h}^{(b)})
+
 \end{matrix}
+
 $$
 
 其中，$\overrightarrow{\mathbf{H}}_{t}, \overleftarrow{\mathbf{H}}_{t}$ 分别表示前向和后向状态变量。`\mathbf{W}_{xh}^{(f)} \in \mathbb{R}^{d \times h}`、`\mathbf{W}_{hh}^{(f)} \in \mathbb{R}^{h \times h}`、`\mathbf{W}_{xh}^{(b)} \in \mathbb{R}^{d \times h}`、`\mathbf{W}_{hh}^{(b)} \in \mathbb{R}^{h \times h}` 是模型的权重参数。`\mathbf{b}_{h}^{(f)} \in \mathbb{R}^{1 \times h}`、`\mathbf{b}_{h}^{(b)} \in \mathbb{R}^{1 \times h}` 是偏置参数。`(f)`、`(b)` 用于标记模型参数是前向还是后向。多层双向循环网络最后一层的状态变量可以直接作为模型的输出 `\mathbf{F}_{t} = \mathbf{H}_{t}^{(L)}`，也可以通过激活函数或连接其他一些非循环网络层后输出。
 
 $$
+
 \mathbf{F}_{t} = \mathbf{H}_{t}^{(L)}\mathbf{W}_{hf} + \mathbf{b}_{f}
+
 $$
 
 其中 `\mathbf{H}_{t}^{(L)}` 是由 `\overrightarrow{\mathbf{H}}_{t}^{(L)}`, `\overleftarrow{\mathbf{H}}_{t}^{(L)}` 拼接形成的向量。
@@ -23970,6 +23952,8 @@ $$
 你可以像上一节那样直接使用神经网络单元构建双向循环神经网络，也可以用一个类单独封装双向循环网络层，然后利用这些单层双向循环网络层来构建（多层）双向循环神经网络。
 
 下面的 `RNNLayer` 代表一个双向循环神经网络层。其构造函数的参数 `mode` 表示不同类型的循环神经网络单元，参数 `reverse` 表示该神经网络层是前向还是反向。
+
+
 
 ```python
 from Layers import *
@@ -24054,10 +24038,6 @@ class RNNLayer(Layer):
                 h_pre = self.h if t == t0 else hs[t - 1]
 ```
 
-
-
-
-
 #### RNNLayer 类测试
 
 ```python
@@ -24107,6 +24087,8 @@ print("dinput:", dinput)
 #### RNNBase_ 类实现
 
 在上述循环神经网络层的基础上，可以轻松实现多层双向循环神经网络。`RNNBase_` 实现了一个双向多层循环神经网络：
+
+
 
 ```python
 from Layers import *
@@ -24264,9 +24246,6 @@ dinput = rnn.backward(do, input)
 print("dinput:", dinput)
 ```
 
-
-
-
 测试结果略有不同。
 
 ## 7.11 序列到序列（seq2seq）模型
@@ -24295,7 +24274,9 @@ Seq2Seq 模型由编码器和解码器两个循环神经网络组成。编码器
 
 以下编码器 `EncoderRNN` 是一个 GRU 神经网络。它与之前的 GRU 类唯一的区别在于增加了一个辅助函数 `word2vec()`，用于将词索引序列 `word_indices_input` 转换为独热向量。`EncoderRNN` 是一个 GRU，因此其构造函数参数与 GRU 的参数相同。`input_size` 和 `hidden_size` 分别代表输入数据的长度和隐藏状态向量的长度。
 
-```
+
+
+```python
 from rnn import *
 
 def one_hot(size, indices, expend=False):
@@ -24337,7 +24318,7 @@ class EncoderRNN(object):
 
 解码器 `DecoderRNN` 类的代码如下：
 
-```
+```python
 class DecoderRNN(object):
     def __init__(self, input_size, hidden_size, output_size, num_layers=1, teacher_forcing_ratio=0.5):
         # super(DecoderRNN, self).__init__()
@@ -24355,125 +24336,115 @@ class DecoderRNN(object):
         self.h_0 = np.zeros((self.num_layers, batch_size, self.hidden_size))
 
     def word2vec(self, input_t):
-```
+        return one_hot(self.input_size, input_t, True)
 
+    def forward_step(self, input_t, hidden):
+        gru_input = self.word2vec(input_t)
+        self.input.append(gru_input)
+        output_hs, hidden = self.gru(gru_input, hidden)
+        output = self.out(output_hs[0])
+        return output, hidden, output_hs[0]
 
+    def forward(self, input_tensor, hidden):
+        teacher_forcing_ratio = self.teacher_forcing_ratio
+        use_teacher_forcing = True if random.random() < teacher_forcing_ratio else False
+        # use_teacher_forcing = True
+        self.input = []
+        output_hs = []
+        output = []
+        hidden_t = hidden
+        h_0 = hidden.copy()
+        input_t = np.array([SOS_token])
+        # input_seq = []
+        hs = []
+        zs = []
+        target_length = input_tensor.shape[0]
+        for t in range(target_length):
+            output_t, hidden_t, output_hs_t = self.forward_step(
+                input_t, hidden_t)
+            # 保存每个时刻的计算结果
+            hs.append(self.gru.hs)  # 隐藏状态
+            zs.append(self.gru.zs)  # 中间变量
+            output_hs.append(output_hs_t)
+            output.append(output_t)
+            if use_teacher_forcing:
+                input_t = input_tensor[t]  # 教师强制
+            else:
+                input_t = np.argmax(output_t)  # 最大概率
+                if input_t == EOS_token:
+                    break
+                input_t = np.array([input_t])
+        output = np.array(output)
+        self.output_hs = np.array(output_hs)
+        self.h_0 = h_0
+        self.hs = np.concatenate(hs, axis=1)
+        self.zs = np.concatenate(zs, axis=1)
+        # self.input_seq = input_seq
+        # return output, input_seq
+        return output
 
+    def __call__(self, input, hidden):
+        return self.forward(input, hidden)
 
-```python
-return one_hot(self.input_size, input_t, True)
-
-def forward_step(self, input_t, hidden):
-    gru_input = self.word2vec(input_t)
-    self.input.append(gru_input)
-    output_hs, hidden = self.gru(gru_input, hidden)
-    output = self.out(output_hs[0])
-    return output, hidden, output_hs[0]
-
-def forward(self, input_tensor, hidden):
-    teacher_forcing_ratio = self.teacher_forcing_ratio
-    use_teacher_forcing = True if random.random() < teacher_forcing_ratio else False
-    # use_teacher_forcing = True
-    self.input = []
-    output_hs = []
-    output = []
-    hidden_t = hidden
-    h_0 = hidden.copy()
-    input_t = np.array([SOS_token])
-    # input_seq = []
-    hs = []
-    zs = []
-    target_length = input_tensor.shape[0]
-    for t in range(target_length):
-        output_t, hidden_t, output_hs_t = self.forward_step(
-            input_t, hidden_t)
-        # 保存每个时刻的计算结果
-        hs.append(self.gru.hs)  # 隐藏状态
-        zs.append(self.gru.zs)  # 中间变量
-        output_hs.append(output_hs_t)
-        output.append(output_t)
-        if use_teacher_forcing:
-            input_t = input_tensor[t]  # 教师强制
-        else:
-            input_t = np.argmax(output_t)  # 最大概率
-            if input_t == EOS_token:
+    def evaluate(self, hidden, max_length):
+        # input: (1, batch_size=1, input_size)
+        input = np.array([SOS_token])
+        decoded_word_indices = []
+        for t in range(max_length):
+            output, hidden, _ = self.forward_step(input, hidden)
+            output = np.argmax(output)
+            if output == EOS_token:
                 break
-            input_t = np.array([input_t])
-    output = np.array(output)
-    self.output_hs = np.array(output_hs)
-    self.h_0 = h_0
-    self.hs = np.concatenate(hs, axis=1)
-    self.zs = np.concatenate(zs, axis=1)
-    # self.input_seq = input_seq
-    # return output, input_seq
-    return output
+            else:
+                decoded_word_indices.append(output)
+                input = np.array([output])
+        return decoded_word_indices
+        # return indexToSentence(output_lang, decoded_words)
+        # return indexToSentence(output_verb, decoded_words)
 
-def __call__(self, input, hidden):
-    return self.forward(input, hidden)
+    def backward(self, dZs):
+        dhs = []
+        output_hs = self.output_hs
+        input = np.concatenate(self.input, axis=0)
+        for i in range(len(input)):
+            self.out.x = output_hs[i]
+            dh = self.out.backward(dZs[i])
+            dhs.append(dh)
+        dhs = np.array(dhs)
+        self.gru.hs = self.hs
+        self.gru.zs = self.zs
+        self.gru.h = self.h_0
+        dinput, dhidden = self.gru.backward(dhs, input)
+        return dinput, dhidden
 
-def evaluate(self, hidden, max_length):
-    # input: (1, batch_size=1, input_size)
-    input = np.array([SOS_token])
-    decoded_word_indices = []
-    for t in range(max_length):
-        output, hidden, _ = self.forward_step(input, hidden)
-        output = np.argmax(output)
-        if output == EOS_token:
-            break
-        else:
-            decoded_word_indices.append(output)
-            input = np.array([output])
-    return decoded_word_indices
-    # return indexToSentence(output_lang, decoded_words)
-    # return indexToSentence(output_verb, decoded_words)
+    # def backward_dh(self, dZ):
+    #     dh = self.out.backward(dZ)
+    #     return dh
 
-def backward(self, dZs):
-    dhs = []
-    output_hs = self.output_hs
-    input = np.concatenate(self.input, axis=0)
-    for i in range(len(input)):
-        self.out.x = output_hs[i]
-        dh = self.out.backward(dZs[i])
-        dhs.append(dh)
-    dhs = np.array(dhs)
-    self.gru.hs = self.hs
-    self.gru.zs = self.zs
-    self.gru.h = self.h_0
-    dinput, dhidden = self.gru.backward(dhs, input)
-    return dinput, dhidden
-
-# def backward_dh(self, dZ):
-#     dh = self.out.backward(dZ)
-#     return dh
-
-def parameters(self):
-    if self._params is None:
-        self._params = []
-        for layer in self.layers:
-            for i, _ in enumerate(layer.params):
-                self._params.append([layer.params[i], layer.grads[i]])
-    return self._params
+    def parameters(self):
+        if self._params is None:
+            self._params = []
+            for layer in self.layers:
+                for i, _ in enumerate(layer.params):
+                    self._params.append([layer.params[i], layer.grads[i]])
+        return self._params
 ```
 
-
-
-
-
-#### DecoderRNN 结构
+### DecoderRNN 结构
 
 `DecoderRNN` 包含一个 GRU 循环神经网络 `self.gru`。`self.gru` 的输出通过输出层 `self.out` 的线性加权求和，输出词表中每个词作为下一个词的得分值。
 
 由于某一时刻的词通过独热向量化输入到循环神经网络 `self.gru`，且 `self.out` 的输出也是一个与词表长度相同的向量来表示每个词的得分，因此 `self.gru` 的输入向量长度和输出向量长度均为词表长度。
 
-#### 核心方法
+### 核心方法
 
-##### `forward_step()`
+#### `forward_step()`
 
 `forward_step()` 是某一时刻的处理过程。它接受该时刻输入词的词表索引 `input_t` 和上一时刻的隐藏状态 `hidden`，首先通过 `word2vec()` 将其转换为独热向量 `gru_input`，然后输入 GRU，生成的隐藏状态 `output_hs[0]` 通过输出层 `out` 生成最终输出 `output`。
 
 因为反向传播求导需要每一时刻的这些中间变量（如 `gru_input`、`output_hs[0]` 等）参与计算，所以在 `forward()` 中保存了这些中间向量（如 `gru_input` 保存到 `self.input`，`output_hs[0]` 保存到 `self.output_hs`）。
 
-##### `forward()`
+#### `forward()`
 
 `forward()` 方法接受输入词序列 `input_tensor`，从特殊开始词索引 `SOS_token` 开始，依次处理每个输入词 `input_t`，并保存 GRU 计算的中间状态（如 `self.gru.hs`、`self.gru.zs`），因为每一时刻的反向求导需要依赖该时刻的这些中间变量。
 
@@ -24483,32 +24454,39 @@ def parameters(self):
 
 使用 Teacher Forcing 会导致收敛更快，但训练网络可能过度学习训练样本中的信息，导致泛化能力差，即实际预测效果不稳定。因此，可以随机启用 Teacher Forcing 训练，例如以 50% 的概率使用。
 
-##### `evaluate()`
+#### `evaluate()`
 
 `evaluate()` 使用训练好的解码器进行预测，接受编码器输出的上下文向量 `hidden` 和最大输出词数 `max_length`。其过程类似 `forward()` 函数，但因为是预测，只在初始时刻输入 `'SOS'`，所以采用非 Teacher Forcing 方式，即每次始终使用预测得分最大的词（若想生成多样性，也可根据得分对应的概率采样词）作为下一时刻的输入词。
 
 从初始编码器输出的上下文向量和初始时刻的开始词 `'SOS'` 出发，不断根据预测得分采样词作为下一时刻的输入词，直到遇到结束字符 `'EOS'` 或词（字符）数达到最大数 `max_length`。最终输出由词表索引构成的所有词的向量。
 
-##### `backward()`
+#### `backward()`
 
 `backward()` 方法接受损失函数对输出层输出的梯度 `dZs`，首先计算每一时刻输出层关于该时刻隐藏状态的梯度，然后利用所有隐藏状态梯度 `dhs` 和 GRU 的输入 `input` 对 GRU 循环神经网络进行反向求导。
 
-##### `parameters()`
+#### `parameters()`
 
 编码器和解码器的 `parameters()` 函数用于返回其所有模型参数，以构建优化器对象。
 
-#### 训练流程
+### 训练流程
 
-##### `train_step()`
+#### `train_step()`
 
 函数 `train_step()` 接受一对输入输出序列 `input_tensor` 和 `target_tensor`，以及编码器、解码器及其优化器 `encoder`、`decoder`、`encoder_optimizer`、`decoder_optimizer`，还有计算模型损失的函数 `loss_fn` 和正则化系数 `reg`。
 
 `train_step()` 对模型参数进行一次训练更新：
+
 1. 根据 `input_tensor` 计算编码器的输出 `encoder_output` 和 `encoder_hidden`。
+
 2. 根据 `last_hidden` 标志，使用最后一时刻的隐藏状态 `encoder_hidden` 或 `encoder_output` 作为解码器的输入，配合 `target_tensor` 计算解码器的最终预测输出。
+
 3. 根据预测输出 `output` 和目标 `target` 计算交叉熵损失及损失对 `output` 的梯度 `grad`。
+
 4. 使用 `decoder.backward(grad)` 反向求导解码器，输出为编码器输出 `encoder_hidden` 的梯度 `dhidden`，据此继续反向求导编码器。
+
 5. 更新模型参数。更新前可使用 `clip_grad_norm_nn` 裁剪梯度以防止梯度爆炸。
+
+
 
 ```python
 def train_step(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, decoder_optimizer, \
@@ -24563,11 +24541,11 @@ def train_step(input_tensor, target_tensor, encoder, decoder, encoder_optimizer,
     # return loss.item() / target_length
 ```
 
-##### `trainIters()`
+### `trainIters()`
 
 函数 `trainIters()` 迭代调用 `train_step()` 函数以更新模型参数。在迭代过程中，可输出一些中间训练结果模型，如输出训练误差和验证误差。
 
-##### 辅助函数
+### 辅助函数
 
 ```python
 import numpy as np
@@ -24584,11 +24562,7 @@ def timeSince(start):
     return '%dm %ds' % (m, s)
 ```
 
-
-
-
-
-#### 函数 `trainIters_`
+### 函数 `trainIters_`
 
 ```python
 def trainIters_(encoder, decoder, encoder_optimizer, decoder_optimizer, train_pairs, valid_pairs, encoder_output_all=False, print_every=1000, plot_every=100, reg=None):
@@ -24625,7 +24599,7 @@ def trainIters_(encoder, decoder, encoder_optimizer, decoder_optimizer, train_pa
             plt.show()
 ```
 
-#### 函数 `validation_loss`
+### 函数 `validation_loss`
 
 ```python
 def validation_loss(encoder, decoder, valid_pairs, last_hidden=True, validation_size=None, reg=None):
@@ -24663,7 +24637,7 @@ def validation_loss(encoder, decoder, valid_pairs, last_hidden=True, validation_
 
 其中，`validation_loss()` 使用训练好的模型计算验证误差。它从验证样本集中随机抽取少量样本，通过编码器和解码器生成输出，然后计算解码器的预测输出，并以与训练过程相同的方式计算损失。
 
-### 7.11.2 字符级 Seq2Seq 机器翻译
+## 7.11.2 字符级 Seq2Seq 机器翻译
 
 机器翻译首先需要语料库来训练 Seq2Seq 模型。以下网站提供各种语言之间的训练语料库，每个语料库都是一个文本文件。例如，`fra.txt` 是法语和英语的训练样本，每行包含两种不同语言的语句。
 
@@ -24675,7 +24649,7 @@ def validation_loss(encoder, decoder, valid_pairs, last_hidden=True, validation_
 
 为此，需要为每种语言创建一个字符词汇表。
 
-#### 1. 字符词表
+### 1. 字符词表
 
 类 `ChVerb` 用于表示一种语言的字符词汇表，即记录有哪些字符，以及每个字符与其在字符词汇表中索引的对应关系。其中，`\t` 和 `\n` 分别代表特殊的开始字符和结束字符，它们对应的词表索引分别为 0 和 1。
 
@@ -24701,7 +24675,7 @@ class ChVerb:
             self.n_chars += 1
 ```
 
-#### 2. 读取训练样本并构建字符词汇表
+### 2. 读取训练样本并构建字符词汇表
 
 首先读取语料库中对应的翻译句子：
 
@@ -24777,6 +24751,12 @@ print(pairs[3])
 
 输出示例：
 
+
+
+#### 3. 训练字符级 Seq2Seq 模型
+
+根据数据处理后获得的训练样本集对以及前面的 Seq2Seq 模型训练代码，可以训练字符级机器翻译的 Seq2Seq 模型。以下代码定义了编码器和解码器对象 `encoder`、`decoder`，以及相应的优化器 `encoder_optimizer`、`decoder_optimizer`。并将样本集 `pairs` 划分为两个集合 `train_pairs` 和 `valid_pairs` 用于训练和验证，然后调用 Seq2Seq 模型的训练函数 `trainIters()` 来训练模型：
+
 ```
 Reading lines...
 Read 170651 sentence pairs
@@ -24791,15 +24771,7 @@ eng 32
 ['je suis detendu .', 'i m relaxed .']
 ```
 
-
-
-
-
-#### 3. 训练字符级 Seq2Seq 模型
-
-根据数据处理后获得的训练样本集对以及前面的 Seq2Seq 模型训练代码，可以训练字符级机器翻译的 Seq2Seq 模型。以下代码定义了编码器和解码器对象 `encoder`、`decoder`，以及相应的优化器 `encoder_optimizer`、`decoder_optimizer`。并将样本集 `pairs` 划分为两个集合 `train_pairs` 和 `valid_pairs` 用于训练和验证，然后调用 Seq2Seq 模型的训练函数 `trainIters()` 来训练模型：
-
-```
+```python
 from train import *
 from Layers import *
 from rnn import *
@@ -24847,7 +24819,7 @@ trainIters(encoder, decoder,encoder_optimizer,decoder_optimizer,idx_train_pairs,
 
 训练好的模型可用于语言翻译。将待翻译语言的词序列（句子）输入 `encoder` 以生成输出上下文信息，该信息再输入 `decoder`。生成翻译后的词序列（句子）。
 
-```
+```python
 def evaluate(encoder,decoder,in_vocab,out_vocab,sentence,\
              max_length=MAX_LENGTH,last_Hidden = True): 
     encode_input = tensorFromSentence(in_vocab,sentence)
@@ -24864,7 +24836,7 @@ def evaluate(encoder,decoder,in_vocab,out_vocab,sentence,\
 
 随机选择几个输入句子并使用 `evaluate` 预测翻译句子：
 
-```
+```python
 indices = np.random.randint(len(pairs), size=3)
 for i in indices:
     pair = pairs[i]
@@ -24884,9 +24856,6 @@ come a         .
 ['lis ton livre !', 'read your book .']
 be care it .
 ```
-
-
-
 
 从结果来看，预测效果并不理想。编码器最后一时刻的输出被用作上下文向量（`context vector`）在编码器和解码器之间传递信息，这样单个向量就承担了编码整个句子的重任，可能无法包含完整信息。如果使用所有输出时刻的输出作为上下文变量，信息相对完整，但无法直接将所有输出时刻的变长编码器输出信息作为解码器每一时刻的输入。
 
@@ -24911,11 +24880,9 @@ be care it .
 
 因为 `x` 是一个只有第 k 个分量为 1、其余为 0 的行向量，`x W[V × N]` 的结果就是矩阵的第 `k` 行，所以实际上不需要进行乘法运算，只需取出矩阵的第 k 行即可。Python 代码如下：
 
-```
+```python
 h = self.W[k,:]
 ```
-
-
 
 ##### Word2Vec 模型训练
 
@@ -25036,6 +25003,8 @@ corpus = [["i", "am", "from", "china"]]
 generate_training_data(vocab, corpus)
 ```
 
+
+
 ```
 array([[2, list([1, 3])],
        [1, list([2, 3, 0])],
@@ -25063,12 +25032,9 @@ class Word2Vec():
         print("Training a Word2Vec model....")
 ```
 
+### Word2Vec 模型训练与应用
 
-
-
-###### Word2Vec 模型训练与应用
-
-####### 核心训练代码
+#### 核心训练代码
 
 ```python
 train_data = generate_training_data(self.vocab, corpus, self.window)
@@ -25136,7 +25102,7 @@ def __call__(self, word):
     return self.word_vec(word)
 ```
 
-####### 测试示例
+#### 测试示例
 
 ```python
 # --- Test example -----------------------------
@@ -25170,7 +25136,7 @@ Complete the training of the Word2Vec model!
 
 ---
 
-##### 语料库读取与预处理
+### 语料库读取与预处理
 
 ```python
 MAX_LENGTH = 10
@@ -25215,7 +25181,7 @@ Trimmed to 12761 sentence pairs
 
 ---
 
-##### 句子预测库构建
+### 句子预测库构建
 
 ```python
 if True:
@@ -25241,7 +25207,7 @@ print(out_corpus[:2])
 
 ---
 
-##### 双语 Word2Vec 模型训练
+### 双语 Word2Vec 模型训练
 
 ```python
 hidden_n = 150
@@ -25276,7 +25242,7 @@ pip install --upgrade gensim
 
 ---
 
-##### Gensim Word2Vec 使用示例
+### Gensim Word2Vec 使用示例
 
 ```python
 import gensim
@@ -25301,7 +25267,7 @@ am: [-0.00522377  0.03762834 -0.05772045  0.02232596  0.00224983 -0.05164414
 
 ---
 
-##### 使用 Gensim 训练输入/输出语言模型
+### 使用 Gensim 训练输入/输出语言模型
 
 ```python
 import gensim
@@ -25315,7 +25281,7 @@ out_vocab = gensim.models.Word2Vec(out_corpus, size=hidden_n, window=window_size
 
 ---
 
-##### 特殊字符扩展与辅助函数
+### 特殊字符扩展与辅助函数
 
 由于上述训练的 Word2Vec 模型不包含特殊字符 `SOS`、`EOS` 和 `UNK`，这三个特殊词也可以添加到词表中以获得扩展词表（词表长度变为 `hidden_n + 3`）。对于这 3 个特殊词，其量化表示可直接用随机向量表示：
 
@@ -25340,28 +25306,32 @@ def indexesFromSentence(vocab, sentence):
 def vocab_word2vec(vocab, word_indices_input, SEU, expend=False):
     x = []
     SEU_vec = np.zeros(SEU_count)
-```
 
+    word_indices_input = word_indices_input.reshape(-1)
 
+    for idx in word_indices_input:
 
+        if idx <= 2:
 
-word_indices_input = word_indices_input.reshape(-1)
+            x.append(SEU[idx])
 
-for idx in word_indices_input:
-    if idx <= 2:
-        x.append(SEU[idx])
-    else:
-        word = vocab.wv.index2word[idx - SEU_count]
-        vec = vocab.wv[word]
-        vec = np.append(vec, SEU_vec)
-        x.append(vec)
+        else:
 
-x = np.array(x)
+            word = vocab.wv.index2word[idx - SEU_count]
 
-if expend:
-    x = np.expand_dims(x, axis=1)
+            vec = vocab.wv[word]
 
-return x
+            vec = np.append(vec, SEU_vec)
+
+            x.append(vec)
+
+    x = np.array(x)
+
+    if expend:
+
+        x = np.expand_dims(x, axis=1)
+
+    return x
 
 SOS_token = 0
 EOS_token = 1
@@ -25380,14 +25350,15 @@ def tensorsFromPair(pair):
 def indexToSentence(vocab, indexes):
     sentense = [vocab.wv.index2word[idx - SEU_count] for idx in indexes]
     return ' '.join(sentense)
+```
 
-```
-tensorFromSentence() and tensorsFromPair respectively convert a sentence or a pair of sentences from a string to an index sequence. As before, tensorsFromPair() adds an end character after each sentence. indexToSentence() converts a sentence from a sequence of word indices to a sequence of strings.
-```
+
+
+`tensorFromSentence()` 和 `tensorsFromPair` 分别将句子或句子对从字符串转换为索引序列。与之前一样，`tensorsFromPair()` 在每个句子后添加结束字符。`indexToSentence()` 将句子从词索引序列转换为字符串序列。
 
 为了用 Word2Vec 替换独热向量，需要修改编码器和解码器的代码，可以定义一个派生类：
 
-```
+```python
 class EncoderRNN_w2v(EncoderRNN):
     def __init__(self, input_size, hidden_size, vocab, num_layers=1):
         super(EncoderRNN_w2v, self).__init__(input_size, hidden_size, num_layers)
@@ -25407,7 +25378,7 @@ class DecoderRNN_w2v(DecoderRNN):
 
 以下代码开始训练：
 
-```
+```python
 from train import *
 from Layers import *
 from rnn import *
@@ -25455,7 +25426,7 @@ output:
 
 使用训练好的模型进行翻译预测：
 
-```
+```python
 indices = np.random.randint(len(pairs), size=3)
 for i in indices:
     pair = pairs[i]
@@ -25486,7 +25457,7 @@ Word2Vec 词向量化通过一个单独的训练过程，学习将词表中的�
 
 该嵌入层是一个没有激活函数和偏置的全连接线性层。它是一个简化的线性层。代码如下：
 
-```
+```python
 def one_hot(size, indices, expend=False):
     x = np.eye(size)[indices.reshape(-1)]
     if expend:
@@ -25532,11 +25503,11 @@ class Embedding():
 
 编码器和解码器使用词嵌入层将单词转换为向量。编码器的计算过程如图 7-53 所示：
 
-**图 7-53** 输入单词（对应索引的独热向量）通过嵌入层 embedding 转换为低维数值向量 embedded，然后与隐藏状态一起作为循环神经网络单元的输入，计算输出和隐藏向量。
+**图 7-53** 输入单词（对应索引的独热向量）通过嵌入层 `embedding` 转换为低维数值向量 `embedded`，然后与隐藏状态一起作为循环神经网络单元的输入，计算输出和隐藏向量。
 
-输入单词（对应索引的独热向量）通过嵌入层 embedding 转换为低维数值向量 embedded，然后与隐藏状态一起作为循环神经网络单元的输入，计算输出和隐藏向量。对于简单的编码器，输出 output 和隐藏状态 hidden 可以是同一个向量。
+输入单词（对应索引的独热向量）通过嵌入层 `embedding` 转换为低维数值向量 `embedded`，然后与隐藏状态一起作为循环神经网络单元的输入，计算输出和隐藏向量。对于简单的编码器，输出 `output` 和隐藏状态 `hidden` 可以是同一个向量。
 
-```
+```python
 from rnn import *
 from Layers import *
 from train import *
@@ -25552,9 +25523,6 @@ class EncoderRNN_Embed(object):
         self.embedded_x = []
         self.embedded_out = []
 ```
-
-
-
 
 ##### 代码实现
 
@@ -25599,6 +25567,8 @@ def backward(self, dhs):
 同样需要对嵌入层进行正向计算和反向推导，代码如下：
 
 ###### DecoderRNN_Embed 类
+
+
 
 ```python
 class DecoderRNN_Embed(object):
@@ -25715,7 +25685,7 @@ class DecoderRNN_Embed(object):
         return self._params    
 ```
 
-###### Vocab 类
+### Vocab 类
 
 重新定义词表类 `Vocab`，使其能够包含特殊的开始和结束词 "SOS"、"EOS"，并将出现次数少于 `min_count` 的词视为未知词：
 
@@ -25749,9 +25719,6 @@ class Vocab:
 
     def addWord(self, word):
 ```
-
-
-
 
 ```python
 if word not in self.word2count:
@@ -25820,7 +25787,9 @@ def indexToSentence(vocab, indexes):
 # print(target_tensor)
 ```
 
-##### 基于词嵌入的 Seq2Seq 模型的训练过程与之前的类似：
+### 基于词嵌入的 Seq2Seq 模型的训练过程与之前的类似：
+
+
 
 ```python
 from train import *
@@ -25862,9 +25831,10 @@ trainIters(encoder, decoder, encoder_optimizer, decoder_optimizer, idx_train_pai
 ```
 
 ![](img/file170.png "fig:")
+
 图 8-55 词嵌入层 Seq2Seq 模型的训练和验证损失曲线
 
-##### 进行预测：
+### 进行预测
 
 ```python
 indices = np.random.randint(len(train_pairs), size=3)
@@ -25888,10 +25858,6 @@ we re better than they are .
 you are curious right ?
 ```
 
-
-
-
-
 ### 7.11.5 注意力机制
 
 上一节 Seq2Seq 模型编码器输出的内容向量通常是编码器最后时刻的隐藏状态或输出，它包含了整个输入序列信息的编码。这个内容向量沿着时间维度传递给解码器，作为解码器的初始隐藏状态。解码器每个时刻的处理，也就是说，解码器在每个时刻都接受编码器输入序列相同的内容编码。
@@ -25899,6 +25865,7 @@ you are curious right ?
 使用最后时刻的隐藏状态或输出作为内容向量可能不足以包含完整的输入序列信息，特别是对于长输入序列。从上一节 Seq2Seq 模型的效果可以看出，序列越长，预测效果越差。如果将所有时刻的所有隐藏状态拼接成一个内容向量，它可以包含足够完整的输入序列信息，但由于输入序列的长度是变化的，这个内容向量显然不能直接作为编码器的隐藏状态使用，因此需要一个转换过程将其转变为定长向量。另一方面，输入序列的不同部分对解码器每个时刻的影响不同，解码器的每个时刻应该对输入序列的不同部分有不同程度的关注。如图 7-56 所示，输入序列是句子（词序列）"knowledge is power"，输出目标序列是句子 "knowledge is power"。当解码器处理 "knowledge" 时，输入序列中的单词 "knowledge" 比其他两个单词 "is" 和 "power" 影响更大，而处理 "is" 时，输入序列中的 "is" 更重要。因此，当解码器进行预测时，输入序列的不同单词对输出序列的不同单词有不同的影响。
 
 ![](img/file171.png "fig:")
+
 图 7-56 输入序列的不同部分在不同时刻对输出序列有不同的预测效果
 
 **注意力机制** 是指解码器在每个时刻动态地选择与当前预测最相关的输入序列部分。可以通过将解码器当前时刻的输入信息（上一时刻的隐藏状态和当前时刻的数据输入）与编码器所有时刻的输出（或隐藏状态）进行比较来计算一个权重向量，然后用该权重向量加权编码器所有时刻的输出内容，以获得当前时刻特定的内容上下文向量，即解码器在不同时刻拥有不同的编码器上下文向量，并且该上下文向量与该时刻的隐藏状态和数据输入一起用于解码器当前时刻的计算。
@@ -25936,9 +25903,10 @@ $e_{ij} = a(h_{i - 1},\overline{h}_j)$
 $a(\mathbf{h}_{i - 1};\overline{\mathbf{h}}_j) = \tanh([\mathbf{h}_{i - 1};\overline{\mathbf{h}}_j]\mathbf{W}_a)$
 
 ![](img/file172.png "fig:")
+
 图 7-57 分数计算函数是一个只有一个神经元且激活函数为 tanh 的神经网络层
 
-其中，参数 **W[a]** 也是一个需要学习的参数。下表列出了一些常见的评分方法：
+其中，参数 `W[a]` 也是一个需要学习的参数。下表列出了一些常见的评分方法：
 
 | 名称 | 对齐分数函数 | 引用 |
 | --- | --- | --- |
@@ -25954,6 +25922,7 @@ $a(\mathbf{h}_{i - 1};\overline{\mathbf{h}}_j) = \tanh([\mathbf{h}_{i - 1};\over
 如图 7-58 所示，解码器在每个时刻使用这个动态计算的上下文与输入数据和上一时刻的隐藏状态一起进行计算。
 
 ![](img/file173.png "fig:")
+
 图 7-58 解码器在每个时刻计算动态权重，并用这些权重计算编码器所有时刻输出（或隐藏向量）的加权平均以获得上下文向量，用于解码器当前时刻的计算
 
 [Luong et al](https://arxiv.org/abs/1508.04025) 还提出了**局部注意力**，它与常规的**全局**注意力不同之处在于：模型首先预测当前目标词在输入序列中的对齐位置，然后以该位置为中心、在一个窗口范围内计算上下文向量，如图 7-59 右图所示。
@@ -25969,10 +25938,6 @@ $a(\mathbf{h}_{i - 1};\overline{\mathbf{h}}_j) = \tanh([\mathbf{h}_{i - 1};\over
 图 7-60 注意力机制的计算过程：利用输入和隐藏状态计算一个注意力权重，然后与编码器的输出加权求和。这个加权和作为新的输入数据输入到循环神经网络层产生最终输出。
 
 隐藏状态 `prev_hidden` 和编码器输出内容加权向量 `encoder_outputs` 的前向计算和反向推导代码如下：
-
-
-
-
 
 #### 注意力机制的前向计算与反向传播
 
@@ -26018,6 +25983,8 @@ def bmm(alphas, encoder_outputs):
 
 ##### `bmm_backward` 反向函数
 
+
+
 ```python
 def bmm_backward(d_context, alphas, encoder_outputs):
     encoder_outputs = np.transpose(encoder_outputs, (1, 0, 2))  # [T,B,D] -> [B,T,D]
@@ -26027,7 +25994,7 @@ def bmm_backward(d_context, alphas, encoder_outputs):
     return d_alphas, d_encoder_outputs
 ```
 
-#### `np.einsum` 机制详解
+### `np.einsum` 机制详解
 
 首先，实现图中多序列样本的加权求和 `bmm` 操作。设 `T`、`B`、`D` 分别为序列长度、样本数量、每个时刻的数据长度。
 
@@ -26044,7 +26011,7 @@ for b in range(...):
             C[b, k] += A[b, j] * B[b, j, k]
 ```
 
-#### 注意力层 `Atten` 封装
+### 注意力层 `Atten` 封装
 
 编码器输出内容的权重向量计算与加权求和过程可综合为一个注意力层 `Atten`：
 
@@ -26079,7 +26046,7 @@ class Atten(Layer):
         return d_hidden, d_encoder_outputs
 ```
 
-#### 基于注意力机制的解码器 `DecoderRNN_Atten`
+### 基于注意力机制的解码器 `DecoderRNN_Atten`
 
 以下代码实现了上述简单注意力机制的解码器：
 
@@ -26173,8 +26140,6 @@ class DecoderRNN_Atten(object):
         # encoder_outputs = np.pad(self.encoder_outputs, ((0, self.max_length - self.encoder_outputs.shape[0]), (0, 0), (0, 0)), 'constant')
         for t in range(target_length):
 ```
-
-
 
 
 
@@ -26294,20 +26259,19 @@ we re going . .
 we re ready for it .
 ```
 
-
-
-
 结果似乎没有太大改善。感兴趣的读者可以尝试增加迭代次数、调整学习参数，特别是使用不同的注意力机制来获得更好的结果。
 
 ![](img/file322.png)![](img/file323.png)![](img/file324.png)![](img/file325.png)![](img/file326.png)![](img/file327.png)![](img/file328.png)![](img/file329.png)![](img/file330.png)![](img/file331.png)![](img/file332.png)![](img/file333.png)![](img/file334.png)![](img/file335.png)![](img/file336.png)![](img/file337.png)![](img/file338.png)![](img/file339.png)![](img/file340.png)![](img/file341.png)![](img/file342.png)![](img/file343.png)![](img/file344.png)![](img/file345.png)![](img/file346.png)![](img/file347.png)![](img/file348.png)![](img/file349.png)![](img/file350.png)![](img/file351.png)![](img/file352.png)![](img/file353.png)![](img/file354.png)![](img/file355.png)
 
-数据是机器学习和现代人工智能的基础。数据越多，机器学习算法的性能越好。正是因为海量数据的存在，大公司才能开发出搜索引擎、推荐系统、智能游戏等高性能人工智能产品。常言道：“谁拥有数据，谁就拥有未来。”大数据也是神经网络重现辉煌和深度学习发展的关键因素之一。
+# 数据是机器学习和现代人工智能的基础
+
+数据越多，机器学习算法的性能越好。正是因为海量数据的存在，大公司才能开发出搜索引擎、推荐系统、智能游戏等高性能人工智能产品。常言道：“谁拥有数据，谁就拥有未来。”大数据也是神经网络重现辉煌和深度学习发展的关键因素之一。
 
 对于许多问题，人工获取数据（如医学影像数据）通常非常困难且昂贵。例如，要提升人脸识别等人脸相关算法的性能，需要大量人脸图像数据，而这些人脸图像的采集不仅需要用户授权，还需要支付一定代价。如果能自动生成难以与真实人脸区分的人脸图像，就能节省成本和费用，推动人脸相关研究与应用。另一个例子是，视频游戏影视作品中包含大量二维和三维场景。设计制作这些场景需要投入大量人力、物力和财力，导致拍摄电影和制作游戏的成本极高。如果能自动生成这些影视作品中的高质量场景，就能节省大量财力和人力，使产品开发者能更专注于创意工作。
 
 机器学习中的**生成模型**专门研究如何利用计算机自动生成与真实数据相似的数据，即生成模型能自动生成难以与真实数据区分的假数据。第 7 章自然语言理解中的语言模型就是一种生成模型。优秀的语言模型能为机器翻译、聊天对话、文章生成等应用生成流畅的句子。通常，一旦训练完成，循环神经网络就可用于源源不断地生成序列数据。
 
-因此，自动生成的数据可以解决许多研究问题的数据匮乏问题，不仅能提升相关问题上机器学习算法的性能，还能促进各类应用产品的发展。例如，自动人脸生成技术用于视频换脸（如 DeepFake）等各类人脸应用问题；自动图像生成可生成各种风格的图像；自动语音合成技术可自动合成各种类似真人的声音；以及自动作曲等。
+因此，自动生成的数据可以解决许多研究问题的数据匮乏问题，不仅能提升相关问题上机器学习算法的性能，还能促进各类应用产品的发展。例如，自动人脸生成技术用于视频换脸（如 `DeepFake`）等各类人脸应用问题；自动图像生成可生成各种风格的图像；自动语音合成技术可自动合成各种类似真人的声音；以及自动作曲等。
 
 本章主要讨论基于深度神经网络（深度学习）的两种最流行的生成模型技术：**变分自编码器**（Variational Auto-Encoders，**VAE**）、**生成对抗网络**（Generative Adversarial Network，**GAN**）。
 
@@ -26328,12 +26292,6 @@ we re ready for it .
 如果有一组实数，即真实数据是实数，这些实数位于实数轴上，但它们在实数轴上的分布未知，如何生成难以与这些真实实数区分、或者说伪造数据服从这些真实实数分布的假实数？例如，这些实数是海南省人们的身高。如果生成的身高数据不服从这些身高数据的分布，就很容易被识别出来。
 
 对于一组实数等低维数据，可以通过简单的统计计算用频率近似数据的概率分布。例如，下面是来自文件`real_values.npy`的一组实数，该集合`{x^(i)}`构成真实数据。
-
-```
-```
-
-
-
 
 ### 实数分布分析
 
@@ -26381,6 +26339,7 @@ plt.show()
 ```
 
 ![Figure 8-1 Statistical histogram of a set of real numbers](img/file176.png "fig:")
+
 **Figure 8-1** 一组实数的统计直方图
 
 通过直方图可以观察到，这组实数的分布接近高斯分布，高斯分布的中心点（均值）约为 `4.0`。也很容易计算出这组实数的标准差约为 `0.5`。
@@ -26398,10 +26357,13 @@ sns.kdeplot(x.flatten(), shade=True, label='Probability Density')
 
 结果的概率分布图如下：
 
+
+
 ![Figure 8-2 Probability density plot for a set of real numbers](img/file177.png "fig:")
+
 **Figure 8-2** 一组实数的概率密度图
 
-#### 数据生成验证
+### 数据生成验证
 
 实际上，这些实数确实是从均值为 `4`、方差为 `0.5` 的正态分布中采样得到的，生成代码如下：
 
@@ -26437,11 +26399,8 @@ y = [0] * len(x)
 plt.show()
 ```
 
-
-
-
-
 ![](img/file178.png "fig:")
+
 图 8-3 均值为 4、标准差为 0.5 的高斯分布（正态分布）$\mathcal{N}(4, 0.5)$
 
 可以看出，靠近均值 4 的实数被采样的概率较高，离 4 较远的实数被采样的概率较低。因此，这一组实数是一维实数空间 $\mathbb{R}$ 中的数据，它们服从均值为 4、标准差为 0.5 的高斯分布。如果找到了分布规律，就可以直接利用这个概率分布规律来生成符合该分布规律的实数。
@@ -26463,6 +26422,7 @@ plt.show()
 例如，下面是由 `GAN` 生成的人脸图像（ThisPersonDoesNotExist.com），可以看出生成的人脸图像难以与真实人脸图像区分。
 
 ![](img/file179.png "fig:")
+
 图 8-5 生成网络 `GAN` 生成的伪造人脸图像
 
 ## 8.2 自编码器
@@ -26514,6 +26474,7 @@ $\mathcal{L}(x, \hat{x}) + \mathcal{L}_{\text{regularizer}}$
 自编码器可用于数据去噪，只需在训练自编码器时，将数据的带噪版本和去噪版本分别作为训练样本的数据特征和目标值，即样本 $(x_{\text{noise}}, x_{\text{denoise}})$。$x_{\text{noise}}, x_{\text{denoise}}$ 分别为带噪和无噪数据。如图 8-9 所示
 
 ![](img/file180.png "fig:")
+
 图 8-9 去噪自编码器，输入为带噪图像，解码器的输出目标为去噪图像
 
 用于去除噪声的自编码器称为**去噪自编码器**。
@@ -26538,16 +26499,9 @@ $\sum_{j=1}^{l^{(h)}} \rho \log \frac{\rho}{\hat{\rho}_j} + (1 - \rho) \log \fra
 
 以下使用 Mnist 数据集来说明如何实现自编码器。首先，读取 Mnist 数据集：
 
-```
-```
-
-
-
-
-
+```python
 # 读取数据
 
-```python
 import matplotlib.pyplot as plt
 %matplotlib inline
 import pickle, gzip, urllib.request, json
@@ -26593,6 +26547,8 @@ float32
 ![](img/file181.png)
 
 然后定义一个自编码器神经网络，并使用训练集 `train_X` 中的样本作为数据输入和目标值来训练该神经网络：
+
+
 
 ```python
 import util
@@ -26643,6 +26599,7 @@ plt.plot(losses)
 ```
 
 ![](img/file182.png "fig:")  
+
 图 8-10 训练损失曲线
 
 以下代码展示了部分数字图像的重构结果：
@@ -26663,10 +26620,6 @@ def draw_predict_mnists(plt, X, indices):
 draw_predict_mnists(plt, train_X, range(10))
 plt.show()
 ```
-
-
-
-
 
 图 8-11 学习率为 0.001，由 `epochs=100` 训练的自编码器的目标图像和重构图像，上方为目标图像，下方为重构图像。
 
@@ -26770,12 +26723,7 @@ dE = - 1/2 (1 - e^E)
 
 以下仍以 Mnist 手写数字识别为例，说明如何实现变分自编码器。首先读取数据：
 
-```
-```
-
-
-
-
+```python
 from util import *
 
 from read_data import *
@@ -26795,6 +26743,7 @@ print(train_X.dtype)
 print(train_X.shape)
 
 print(np.mean(train_X[0]))
+```
 
 ```
 float32
@@ -26804,7 +26753,7 @@ float32
 
 为了避免训练时间过长，仅选择部分手写数字图像（如数字 1、2、7）进行训练。辅助函数 `choose_numbers()` 用于从训练集 (X, Y) 的 X 中提取标签 Y 值为 `numbers` 中指定数字的那些数字图像，例如 `choose_numbers(train_X, train_y,[1,2,7])` 表示从 train_X 中提取 Y 标签为数字 1、2 和 7 的数字图像。
 
-```
+```python
 def choose_numbers(X,Y,numbers):
     X_ = []
     for i in range(len(X)):
@@ -26817,7 +26766,7 @@ X = train_X
 
 VAE 的编码器和解码器是两个神经网络：
 
-```
+```python
 from NeuralNetwork import *
 from util import *
 np.random.seed(100)
@@ -26843,103 +26792,119 @@ decoder.add_layer(Sigmoid())
 
 VAE 模型由编码器和解码器组成。下面的 `VAE` 类包含一个编码器和一个解码器。其方法 `forward()` 表示输入 `x` 通过编码器生成输出 `μ`（即 mu）和 log `σ`²（即 logvar）。然后通过参数重参数化采样得到采样的 `z`(sample_z)，再通过解码器得到输出 out。方法 `backward()` 使用参数指定的损失函数首先计算输入 `x` 和输出 `out` 之间的重构损失（即 `loss_fn(out, x)`）。根据该损失关于 out 的梯度 loss_grad，调用解码器的 `backward()` 计算重构损失关于解码器模型参数的梯度以及关于重采样 `z` 的梯度 dz。根据 dz，可以计算关于编码器输出的梯度 du 和 dE，即得到重构损失关于编码器输出的梯度向量 duE，加上 KL 损失关于 u 和 E 的梯度，调用编码器的 `backward()` 可以计算重构损失和 KL 损失关于编码器参数的梯度。`train_VAE_epoch()` 方法遍历数据集 dataset 进行一轮训练。
 
-```
-class  VAE:
-    def __init__(self, encoder,decoder,e_optimizer,d_optimizer):
-        self.encoder,self.decoder = encoder,decoder
-        self.e_optimizer,self.d_optimizer = e_optimizer,d_optimizer
-    def encode(self,x):
-        e_out = self.encoder(x)  
-        #print("x,e_out", x,e_out)
-        mu,logvar = np.split(e_out,2,axis=1) 
-        return mu,logvar    
-    def decode(self,z):
+
+
+## VAE 实现与训练
+
+以下是 `VAE` 类的完整实现代码：
+
+```python
+class VAE:
+    def __init__(self, encoder, decoder, e_optimizer, d_optimizer):
+        self.encoder, self.decoder = encoder, decoder
+        self.e_optimizer, self.d_optimizer = e_optimizer, d_optimizer
+
+    def encode(self, x):
+        e_out = self.encoder(x)
+        # print("x,e_out", x, e_out)
+        mu, logvar = np.split(e_out, 2, axis=1)
+        return mu, logvar
+
+    def decode(self, z):
         return self.decoder(z)
-    def forward(self,x):        
-        mu, logvar = self.encode(x)  
-        #use reparameterization trick to sample from gaussian        
+
+    def forward(self, x):
+        mu, logvar = self.encode(x)
+        # use reparameterization trick to sample from gaussian
         self.rand_sample = np.random.standard_normal(size=(mu.shape[0], mu.shape[1]))
-   #     self.sample_z = mu + np.exp(logvar * .5) * np.random.standard_normal(size=(mu.shape[0], mu.shape[1]))
+        # self.sample_z = mu + np.exp(logvar * .5) * np.random.standard_normal(size=(mu.shape[0], mu.shape[1]))
         self.sample_z = mu + np.exp(logvar * .5) * self.rand_sample
-        d_out = self.decode(self.sample_z)       
-        return d_out,mu, logvar
-    def __call__(self,X):
+        d_out = self.decode(self.sample_z)
+        return d_out, mu, logvar
+
+    def __call__(self, X):
         return self.forward(X)
-        #backpropagation
-    def backward(self,x,loss_fn = BCE_loss_grad):
-        out,mu, logvar = self.forward(x)
-        ##print(" out,mu, logvar", out,mu, logvar)
+
+    # backpropagation
+    def backward(self, x, loss_fn=BCE_loss_grad):
+        out, mu, logvar = self.forward(x)
+        ## print(" out,mu, logvar", out, mu, logvar)
         # reconstruction loss
-        loss,loss_grad = loss_fn(out, x)
+        loss, loss_grad = loss_fn(out, x)
         dz = decoder.backward(loss_grad)
         du = dz
         dE = dz * np.exp(logvar * .5) * .5 * self.rand_sample
-        duE = np.hstack([du,dE])
-        #encoder.backward(duE)  
+        duE = np.hstack([du, dE])
+        # encoder.backward(duE)
         # KL_loss
-        kl_loss = -0.5*np.sum(1+logvar-mu**2-np.exp(logvar)) #  np.power(mu, 2)
-        loss += kl_loss/(len(out))
-        #loss += kl_loss
-        #loss /= (len(out))
+        kl_loss = -0.5 * np.sum(1 + logvar - mu**2 - np.exp(logvar))  # np.power(mu, 2)
+        loss += kl_loss / (len(out))
+        # loss += kl_loss
+        # loss /= (len(out))
         kl_du = mu
-        kl_dE = -0.5*(1-np.exp(logvar))
-        kl_duE = np.hstack([kl_du,kl_dE])
-        kl_duE /=len(out)
-        #encoder.backward(kl_duE) 
-        encoder.backward(duE+kl_duE)   
+        kl_dE = -0.5 * (1 - np.exp(logvar))
+        kl_duE = np.hstack([kl_du, kl_dE])
+        kl_duE /= len(out)
+        # encoder.backward(kl_duE)
+        encoder.backward(duE + kl_duE)
         return loss
-    def train_VAE_epoch(self,dataset,loss_fn = BCE_loss_grad,print_fn = None):
+
+    def train_VAE_epoch(self, dataset, loss_fn=BCE_loss_grad, print_fn=None):
         iter = 0
-        losses = [] 
-        for x in dataset:               
+        losses = []
+        for x in dataset:
             self.e_optimizer.zero_grad()
-            self.d_optimizer.zero_grad()  
-            loss = self.backward(x,loss_fn)   
-            #loss += nn.reg_loss_grad(reg)
+            self.d_optimizer.zero_grad()
+            loss = self.backward(x, loss_fn)
+            # loss += nn.reg_loss_grad(reg)
             self.e_optimizer.step()
             self.d_optimizer.step()
             losses.append(loss)
-            if print_fn: 
+            if print_fn:
                 print_fn(losses)
             iter += 1
         return losses
-    def save_parameters(self,en_filename,de_filename):
+
+    def save_parameters(self, en_filename, de_filename):
         self.encoder.save_parameters(en_filename)
         self.decoder.save_parameters(de_filename)
-    def load_parameters(self,en_filename,de_filename):
+
+    def load_parameters(self, en_filename, de_filename):
         self.encoder.load_parameters(en_filename)
-        self.decoder.load_parameters(de_filename)        
+        self.decoder.load_parameters(de_filename)
 ```
 
 以下代码创建一个 `VAE` 对象 `vae`，并多次调用其训练方法 `train_VAE_epoch()` 使用迭代器 `data_it` 的数据集进行训练：
 
-```
+```python
 lr = 0.001
-beta_1,beta_2 = 0.9,0.999
-e_optimizer = Adam(encoder.parameters(),lr,beta_1,beta_2)
-d_optimizer = Adam(decoder.parameters(),lr,beta_1,beta_2)
-#reg  = 1e-3
-loss_fn = mse_loss_grad #BCE_loss_grad
-iterations  = 10000
+beta_1, beta_2 = 0.9, 0.999
+e_optimizer = Adam(encoder.parameters(), lr, beta_1, beta_2)
+d_optimizer = Adam(decoder.parameters(), lr, beta_1, beta_2)
+# reg  = 1e-3
+loss_fn = mse_loss_grad  # BCE_loss_grad
+iterations = 10000
 batch_size = 64
-vae = VAE(encoder,decoder,e_optimizer,d_optimizer)
+vae = VAE(encoder, decoder, e_optimizer, d_optimizer)
 start = time.time()
 epochs = 30
-print_n = 1 #epochs // 10
+print_n = 1  # epochs // 10
 epoch_losses = []
-for epoch in range(epochs):   
-    data_it = data_iterator_X(X,batch_size)
-    epoch_loss = vae.train_VAE_epoch(data_it,loss_fn)
-   # epoch_loss = vae.train_VAE_epoch(data_it,loss_fn,lambda loss:print_loss(loss,100))
-    epoch_loss  =np.array(epoch_loss).mean()
-    #epoch_loss = vae.train_VAE_epoch(data_it,loss_fn).mean()
+for epoch in range(epochs):
+    data_it = data_iterator_X(X, batch_size)
+    epoch_loss = vae.train_VAE_epoch(data_it, loss_fn)
+    # epoch_loss = vae.train_VAE_epoch(data_it, loss_fn, lambda loss: print_loss(loss, 100))
+    epoch_loss = np.array(epoch_loss).mean()
+    # epoch_loss = vae.train_VAE_epoch(data_it, loss_fn).mean()
     if epoch % print_n == 0:
-        print('Epoch{}, Training loss {:.2f}:'.format(epoch, epoch_loss))#, epoch_val_loss))
+        print('Epoch{}, Training loss {:.2f}:'.format(epoch, epoch_loss))  # , epoch_val_loss))
     epoch_losses.append(epoch_loss)
 end = time.time()
 print('Time elapsed: {:.2f}s'.format(end - start))
-#vae.save_parameters("vae_en.npy","vae_de.npy")
+# vae.save_parameters("vae_en.npy", "vae_de.npy")
 ```
+
+训练输出示例：
 
 ```
 Epoch0, Training loss 46.80:
@@ -26956,55 +26921,42 @@ Time elapsed: 995.09s
 
 绘制误差曲线：
 
-```
+```python
 import matplotlib.pylab as plt
 %matplotlib inline
 plt.plot(epoch_losses)
 ```
 
-![](img/file183.png "fig:")  
-图 8-13. 识别 Mnist 手写数字的变分自编码器的训练损失曲线
+![](img/file183.png "fig:")
+
+**图 8-13** 识别 Mnist 手写数字的变分自编码器的训练损失曲线
 
 以下代码使用训练好的 VAE 对 MNIST 进行编码和解码，输入一张手写数字图像，期望重构出该数字图像：
 
-```
-def draw_predict_mnists(plt,vae,X,n_samples = 10):
-    np.random.seed(1)
-    idx = np.random.choice(len(X), n_samples)    
-    _, axarr = plt.subplots(2, n_samples, figsize=(16,4))
-    for i,j in enumerate(idx):
-```
-
-
-
-
 ```python
-axarr[0, i].imshow(X[j].reshape((28, 28)), cmap='Greys')
-
-if i == 0:
-    axarr[0, i].set_title('original')
-
-out, _, _ = vae(X[j].reshape(1, -1))
-
-axarr[1, i].imshow(out.reshape((28, 28)), cmap='Greys')
-
-if i == 0:
-    axarr[1, i].set_title('reconstruction')
+def draw_predict_mnists(plt, vae, X, n_samples=10):
+    np.random.seed(1)
+    idx = np.random.choice(len(X), n_samples)
+    _, axarr = plt.subplots(2, n_samples, figsize=(16, 4))
+    for i, j in enumerate(idx):
+        axarr[0, i].imshow(X[j].reshape((28, 28)), cmap='Greys')
+        if i == 0:
+            axarr[0, i].set_title('original')
+        out, _, _ = vae(X[j].reshape(1, -1))
+        axarr[1, i].imshow(out.reshape((28, 28)), cmap='Greys')
+        if i == 0:
+            axarr[1, i].set_title('reconstruction')
 
 draw_predict_mnists(plt, vae, test_X, 10)
-
 plt.show()
 ```
-
-
-
-
 
 ## 8.4 生成对抗网络
 
 **生成对抗网络**（Generative Adversarial Net，**GAN**）是 Ian Goodfellow 于 2014 年提出的一种生成模型，包含两个称为**判别器**和**生成器**的神经网络函数。判别器用于识别数据是真实数据还是伪造数据，生成器用于生成伪造数据。利用极大极小对抗博弈的方法，判别器和生成器通过持续对抗的过程提升各自的性能，就像博弈双方的相互对抗过程，一方总希望获得最大得分，而另一方总希望将对手的得分最小化。GAN 是深度学习兴起以来最令人兴奋、最具创造性的技术。深度学习三巨头之一、图灵奖得主 Yann LeCun 对 GAN 给予了高度评价：
 
 > “生成对抗网络是过去十年机器学习领域最有趣的想法。”
+>
 > "Generative Adversarial Networks are the most interesting idea in machine learning of the past decade"
 
 作为一种数据生成技术，GAN 可以生成伪造的图像、文本、语音等数据。如图 8-15 所示，两张人脸图像（来自网站 [`www.whichfaceisreal.com/`](http://www.whichfaceisreal.com/)），一张是真实人脸图像，另一张是由 GAN 生成的图像。难以分辨吗？
@@ -27014,6 +26966,7 @@ plt.show()
 生成图像是 GAN 早期的主要目标。图 8-16 是使用 BigGAN 可以生成的图像。
 
 ![](img/file185.png "fig:")
+
 **图 8-16** 使用 BigGAN 生成的图像，源自论文《Large Scale GAN Training for High Fidelity Natural Image Synthesis》
 
 GAN 不仅可用于生成图像，还可用于图像增强、图像超分辨率、图像修复、图像转换、风格迁移等应用。如图 8-17 所示，基于 GAN 的图像修补技术（[Image Inpainting for Irregular Holes Using Partial Convolutions](https://eccv2018.org/openaccess/content_ECCV_2018/papers/Guilin_Liu_Image_Inpainting_for_ECCV_2018_paper.pdf)）可以从受损或打码的图像中恢复原始图像内容。
@@ -27027,6 +26980,7 @@ GAN 不仅可用于生成图像，还可用于图像增强、图像超分辨率�
 除了合成图像，GAN 还可用于合成音乐（如 [GANSynth](https://magenta.tensorflow.org/gansynth)）、语音和文本。图 8-19 是由不同 GAN 技术生成的文本。
 
 ![](img/file186.png "fig:")
+
 **图 8-19** IWGAN 和 TextKD-GAN 生成的英文文本，源自论文《TextKD-GAN: Text Generation using Knowledge Distillation and Generative Adversarial Networks》
 
 基于 GAN 的数据合成与重构技术衍生出各种创新应用，例如著名的基于 GAN 的换脸应用 DeepFake，可以将视频中的人脸替换为另一张人脸（如图 8-20 所示）。
@@ -27036,6 +26990,7 @@ GAN 不仅可用于生成图像，还可用于图像增强、图像超分辨率�
 虚拟试穿可以为人物更换衣物。如图 8-21 所示，给定一张人物照片，可以更换不同的衣服，姿势也可以改变（源自论文：Down to the Last Detail: Virtual Try-on with Detail Carving）。
 
 ![](img/file187.png "fig:")
+
 **图 8-21** 虚拟换装：给定一张人物照片，可以更换不同的衣服，姿势也可以改变
 
 更多 GAN 技术和应用，可在 Google 搜索。例如，GAN zoo 收集了许多 GAN 技术论文。
@@ -27059,6 +27014,12 @@ GAN 通过真实数据训练生成模型。GAN 包含 2 个函数（或神经网
 
 **图 8-22** 生成人脸的 GAN 模型，其中由神经网络表示的生成器从带有噪声的随机向量生成人脸图像，判别器 `Discriminator` 是一个简单的二分类神经网络，输入人脸图像，输出该图像为真实人脸的概率。
 
+
+
+# GAN（生成对抗网络）
+
+## 8.4.1 GAN 基本原理
+
 在 GAN 中，判别器和生成器都是由神经网络表示的函数，分别可用符号 `D(x|θ[D])` 和 `G(z|θ[G])` 表示，其中 `θ[D]`、`θ[G]` 分别是两个神经网络的模型参数。生成器 `G(z|θ[G])` 函数将噪声潜在变量 `z` 映射为数据 `G(z|θ[G])`，“判别器” `D(x|θ[D])` 用于判断 `x` 为真实数据的概率。
 
 GAN 需要训练判别器和生成器两个神经网络函数，使判别器 `D` 尽可能正确识别真假数据，即真实数据的概率 `D(x)` 尽可能大，使生成数据被判断为真实数据的概率 `D(G(z))` 尽可能小。另一方面，也需要训练生成器 `G`，使生成器生成的数据尽可能欺骗判别器，甚至使判别器 `D` 以尽可能大的概率 `D(G(z))` 判断生成器生成的数据为真实。在 GAN 训练过程中，生成器和判别器通过这种相互对抗提升各自的功能，使最终判别器无法区分真实数据和生成器生成的假数据。
@@ -27066,6 +27027,7 @@ GAN 需要训练判别器和生成器两个神经网络函数，使判别器 `D`
 最初，生成器 `G` 生成的数据 `G(z|θ[G])` 的分布将与真实数据的潜在分布不一致，判别器 `D(x|θ[D])` 也未学到足够的识别真假数据的能力。GAN 使用对抗过程训练它们，交替训练判别器和生成器，即反复执行以下对抗训练：
 
 *   **判别器训练**：判别器 `D` 接收一组真实数据 `x_real` 和来自生成器的假数据 `x_fake = G(z)` 作为样本。判别器函数应使真实数据的输出值 `D(x_real|θ[D])` 尽可能大（概率尽可能接近 1），使假数据的输出值 `D(x_fake|θ[D]) = D(G(z)|θ[D])` 尽可能小（概率接近 0）。因此，真实数据和假数据的样本标签分别为 1 和 0。训练过程与普通神经网络训练过程完全相同。
+
 *   **生成器训练**：生成器 `G` 接收一组随机噪声 `z`，将其生成的数据即输出值 `G(z)` 输入判别器 `D`，希望尽可能欺骗判别器。即判别器的输出值 `D(G(z))` 尽可能大（概率接近 1）。
 
 上述过程重复进行，直到判别器无法区分真实数据和假数据。用数学术语表述，即生成器生成的数据分布非常接近真实数据的分布。
@@ -27073,11 +27035,12 @@ GAN 需要训练判别器和生成器两个神经网络函数，使判别器 `D`
 如果真实数据是一些实数，这些实数服从某种分布，如正态分布。如图 8-23 所示，黑点代表这些实数对应的概率密度（分布）。假设只知道这些实数，而不知道其他真实分布，生成器可以通过将噪声潜在变量 `z` 映射到实数空间中的实数来生成一些实数 `x`。绿色实线表示这些生成实数的分布。生成实数的分布最初与真实实数的分布不一致。随着训练过程的不断迭代，生成数据 `G(z)` 的分布逐渐接近真实数据 `x` 的分布，判别器识别生成数据为真实数据的概率不断增加。最终，生成数据的分布与真实数据的分布几乎相同。此时，判别器无法再区分真实数据和生成数据，即无论真实还是生成数据，被判断为真实数据的概率都接近 0.5。
 
 ![](img/file188.jpg "fig:")
+
 **(a) (b) (c) (d)**
 
 **图 8-23** 在图 8-23 中，黑点代表真实数据（实数）对应的概率密度（分布），绿点代表生成实数所服从的分布。最初，两个分布不相似。随着对抗过程的进行，两者越来越接近。
 
-#### 2. 损失函数
+### 2. 损失函数
 
 判别器和生成器的目标不同。对于判别器，希望 `D(x)` 尽可能大，`D(G(z))` 尽可能小。对于生成器，希望 `D(G(z))` 尽可能大。类似于逻辑回归和多分类问题，为了提高计算的稳定性，通常用 `log(D(z))` 和 `log(D(G(z)))` 代替 `D(z)` 和 `D(G(z))`，并使用一批（多个）样本的平均损失（期望损失）来计算损失函数值。
 
@@ -27110,7 +27073,7 @@ min_G max_D L(D,G) = 𝔼[x∼p_r(x)][log D(x)] + 𝔼[z∼p_z(z)][log(1 - D(G(z
 
 即判别器 `D` 想要最大化该损失，而生成器 `G` 想要最小化该损失（对 `G` 而言，该损失函数的第一项与 `G` 无关）。即生成器和判别器都在玩一个“极大极小”对抗博弈。虽然写出了这个统一公式，但实际编程仍是优化 `max_D 𝔼[x∼p_r(x)][log D(x)] + 𝔼[z∼p_z(z)][log(1 - D(G(z)))]` 和 `min_G 𝔼[z∼p_z(z)][log(1 - D(G(z)))]`。根据实践经验，通常将 `min log(1 − D(G(z)))` 转换为 `max log(D(G(z)))`，或将 `max log(1 − D(G(z)))` 转换为 `min log(D(G(z)))`，更有利于训练的稳定性。
 
-#### 3. 训练过程
+### 3. 训练过程
 
 GAN 的训练无非是 2 个普通神经网络的训练。GAN 交替训练判别器和生成器，即先训练判别器，再训练生成器，再训练判别器，再训练生成器，…… 其训练过程可用以下伪代码描述：
 
@@ -27131,7 +27094,7 @@ for Each iteration:
 
 判别器和生成器需要对抗，但如果一方过强，另一方就会变弱。如何平衡两者的训练（即调整这些超参数）是 GAN 训练的难点。
 
-### 8.4.2 GAN 训练过程的代码实现
+## 8.4.2 GAN 训练过程的代码实现
 
 GAN 的生成器和判别器是两个普通的神经网络函数。但其训练过程是一个对抗过程。在代码实现中，为了增加代码的可读性，上一节的 GAN 训练过程可以分解为 3 个独立的函数：
 
@@ -27141,18 +27104,10 @@ GAN 的生成器和判别器是两个普通的神经网络函数。但其训练�
 
 判别器是一个二分类神经网络函数，由真实数据和生成器生成的假数据进行训练。在判别器的训练中，真实数据的标签值为 1，假数据的标签值为 0。`D_train()` 函数基于这些真实数据和假数据样本计算二元交叉熵损失，并通过反向推导计算梯度，然后更新模型参数：
 
-```
-```
-
-
-
-
-
+```python
 from util import *
 
 # 判别器的一个训练过程
-
-```python
 def D_train(D, D_optimizer, x_real, x_fake, loss_fn=BCE_loss_grad, reg=1e-3):
     # 1. 梯度重置为 0
     D_optimizer.zero_grad()
@@ -27183,9 +27138,8 @@ def D_train(D, D_optimizer, x_real, x_fake, loss_fn=BCE_loss_grad, reg=1e-3):
 
 `G_train()` 是生成器每次传递的梯度更新函数。它接受一组随机噪声向量 `z`，并通过生成器输出 `x_fake`。为了欺骗判别器，`x_fake` 的数据标签被设置为 1。这些生成器数据样本作为真实数据样本输入判别器，然后根据判别器二分类损失函数的反向推导更新生成器的模型参数。
 
-# 生成器的一个训练过程
-
 ```python
+# 生成器的一个训练过程
 def G_train(D, G, G_optimizer, z, loss_fn, reg=1e-3, hack=False):
     # 1. 梯度重置为 0
     G_optimizer.zero_grad()
@@ -27277,6 +27231,8 @@ x = x.reshape(-1, 1)
 
 为了训练这个生成实数的 GAN，首先为该问题定义生成器 `G` 和判别器 `D`：
 
+
+
 ```python
 from NeuralNetwork import *
 # from util import *
@@ -27307,7 +27263,7 @@ D_optimizer = Adam(D.parameters(), D_lr, beta_1, beta_2)
 G_optimizer = Adam(G.parameters(), G_lr, beta_1, beta_2)
 ```
 
-#### 3. 真实数据迭代器，噪声数据迭代器
+### 3. 真实数据迭代器，噪声数据迭代器
 
 为了训练 `G` 和 `D`，需要为它们提供训练样本。以下代码定义了一个从真实数据中选择一批样本的迭代器：
 
@@ -27362,11 +27318,7 @@ print(z[:10].transpose())
   -0.68236473 1.61341108 0.41862218 -0.89009973]]
 ```
 
-
-
-
-
-#### 4. 中间结果绘制函数
+### 4. 中间结果绘制函数
 
 此外，为了在训练期间观察生成器的效果，你可以编写一个辅助函数，从生成器生成一批数据，然后绘制其直方图：
 
@@ -27402,7 +27354,7 @@ def show_result_gauss(D_losses=None, G_losses=None, m=600):
     plt.show()
 ```
 
-`show_result()` 函数的左图绘制 D 和 G 的损失曲线，右图绘制真实数据的分布（蓝色曲线）和生成数据的分布（绿色阴影曲线）以及决策曲线（即模型预测区间上的实数为真实数据的概率）。执行该函数：
+`show_result()` 函数的左图绘制 `D` 和 `G` 的损失曲线，右图绘制真实数据的分布（蓝色曲线）和生成数据的分布（绿色阴影曲线）以及决策曲线（即模型预测区间上的实数为真实数据的概率）。执行该函数：
 
 ```python
 show_result_gauss()
@@ -27411,13 +27363,14 @@ show_result_gauss()
 输出以下图形：
 
 ![](img/file189.png "fig:")
+
 图 8-24 蓝色曲线是真实数据的真实分布，阴影区域中的绿线是生成器生成的数据分布，中间的线是决策曲线
 
 因为没有训练，左图是空白的。从右图可以看出，生成器函数生成的实数分布与真实数据的分布差别很大。
 
-#### 5. 训练 GAN
+### 5. 训练 GAN
 
-调用 GAN 的训练函数 `GAN_train()`，传入判别器和生成器的参数（`D`、`G`、`D_optimizer`、`G_optimizer`）、数据迭代器 `data_it`、噪声迭代器 `noise_it`、二元交叉熵函数 `BCE_loss_grad` 以及训练超参数（`iterations`、`reg`），开始训练 D 和 G：
+调用 GAN 的训练函数 `GAN_train()`，传入判别器和生成器的参数（`D`、`G`、`D_optimizer`、`G_optimizer`）、数据迭代器 `data_it`、噪声迭代器 `noise_it`、二元交叉熵函数 `BCE_loss_grad` 以及训练超参数（`iterations`、`reg`），开始训练 `D` 和 `G`：
 
 ```python
 from util import *
@@ -27456,23 +27409,29 @@ D_losses, G_losses = GAN_train(D, G, D_optimizer, G_optimizer, data_it, noise_it
 ```
 
 ![](img/file190.png)
+
 图 8-25 一组真实 GAN 模型训练过程中的部分中间结果
 
 从这些中间迭代结果可以看出，判别器和生成器是一个对抗过程。如何调整训练参数使它们在对抗中达到平衡更为困难。不正确的参数会导致训练过程持续震荡、训练不收敛，而生成器强于判别器会导致**模式崩塌**，即判别器无法生成多样化的数据，生成的数据几乎是相同的数据。读者可以降低正则化参数 `reg`，或修改学习率，或修改每个迭代过程中判别器的学习次数 `d_steps` 来观察这些不收敛和模式崩塌的情况。
 
-### 8.5.2 二维坐标点的 GAN 建模
+## 8.5.2 二维坐标点的 GAN 建模
 
 一组实数中的每个样本都是一个实数，即只有一个特征。在本节中，使用二维平面上一组二维坐标点的样本作为真实数据，让生成器学习这些二维坐标点的概率分布。建模和训练过程与一维实数的 GAN 建模和训练相同。
 
-#### 1. 真实数据：椭圆曲线上采样的坐标点
+### 1. 真实数据：椭圆曲线上采样的坐标点
 
 椭圆曲线上数据点的 x、y 坐标可以用参数方程表示为：
 
 $$
+
 \begin{matrix} 
+
 x = cx + a\sin(\alpha) \\ 
+
 y = cy + b\cos(\alpha) 
+
 \end{matrix}
+
 $$
 
 其中（`cx`、`cy`）是椭圆的中心点，（`a`、`b`）是椭圆的长轴和短轴长度，`α` 是由椭圆中心点和点（`x`、`y`）组成的有向线段与 `x` 轴的夹角。以下函数 `sample_ellipse()` 可以在椭圆曲线上均匀采样一组坐标点：
@@ -27501,9 +27460,10 @@ plt.show()
 ```
 
 ![](img/file191.png "fig:")
+
 图 8-26 椭圆中心为（4,4）、长短轴长度分别为 5 和 3 的椭圆曲线上的一组采样坐标点
 
-#### 2. 真实数据迭代器、噪声迭代器
+### 2. 真实数据迭代器、噪声迭代器
 
 可以使用 `sample_ellipse()` 函数定义一个数据迭代器，从椭圆中采样一组坐标点：
 
@@ -27544,11 +27504,7 @@ print(z[:3])
  [-0.45110849 -1.30580063]]
 ```
 
-
-
-
-
-#### 3. 定义 GAN 模型的生成器和判别器
+### 3. 定义 GAN 模型的生成器和判别器
 
 如果给定许多二维坐标点，但不知道真实分布，可以训练一个 GAN 模型，使其生成器生成的坐标点分布非常接近这些真实坐标点的分布。
 
@@ -27575,9 +27531,11 @@ D.add_layer(Leaky_relu(0.2)) # Relu()
 D.add_layer(Dense(D_hidden, 1))
 ```
 
-#### 4. 训练 GAN 模型
+### 4. 训练 GAN 模型
 
 首先定义一个显示中间结果的函数 `show_result()`：
+
+
 
 ```python
 def draw_loss(ax, D_losses=None, G_losses=None):
@@ -27790,9 +27748,6 @@ print("Training time: %d Second" % (elapsed))
 121500 iter: D_loss 1.2937134810406197 G_loss 1.4630274260796108
 ```
 
-
-
-
 ![](img/file194.png)![](img/file195.png)
 
 图 8-27 Mnist 的 GAN 模型训练 121,500 次迭代后的结果。可以看出，判别器和生成器的损失开始趋近，生成的数字图像也接近真实的数字图像。
@@ -27804,12 +27759,19 @@ print("Training time: %d Second" % (elapsed))
 GAN 模型的训练非常困难。基于实践经验，人们总结了一些 GAN 训练的注意事项和技巧。
 
 1.  归一化输入数据。如果图像数据的值被归一化到 -1 和 1 之间，生成器的最终输出激活函数使用 `tanh` 激活函数。
+
 2.  修改损失函数，例如原始 GAN 论文中训练生成器使用的最小损失 `1-D(G(z))`，即 `min log(1-D(G(z)))`，建议将其改为最大化损失 `log(D(G(z)))`，即 `max log(D(G(z)))`。
+
 3.  生成器的输入噪声从高斯分布采样，而不是均匀分布。
+
 4.  对真实数据和生成的数据分别使用批量归一化（`BatchNorm`），不能对混合了真实和生成数据的数据进行批量归一化。
+
 5.  避免稀疏梯度，例如避免产生稀疏梯度的激活函数或网络层，如 `relu` 和 `maxpool`。但建议使用 `Leakrelu`。
+
 6.  使用软标签或噪声。训练判别器时，真实数据标签可以使用 0.7 到 1.2 之间的随机数代替 1，生成数据标签可以使用 0.0 到 0.3 之间的随机数代替 0，并偶尔翻转生成数据的标签，例如从 0 变为 1。
+
 7.  使用 `Adam` 优化器，建议判别器使用 `SGD` 优化器，生成器使用 `Adam` 优化器。
+
 8.  当 `D` 的损失趋向于 0 时，意味着 `D` 太强，且 `D` 的损失方差相对较大，这意味着无法收敛。当 `G` 的损失持续下降时，意味着 `G` 太强且容易崩溃噪声。在训练过程中，可以检查模型参数的梯度。如果绝对值超过 100，则意味着无法收敛。
 
 更多技巧，请参阅以下 github URL：
@@ -27856,11 +27818,16 @@ $$L(G, D^*) = \int_x (p_r(x)\log(D^*(x)) + p_g(x)\log(1 - D^*(x)))dx = \log\frac
 
 $$D_{KL}(p \parallel q) = \int_x p(x)\log\frac{p(x)}{q(x)}dx$$
 
+
+
+# KL 散度与 JS 散度
+
 KL 散度描述了概率分布 `p` 偏离 `q` 的程度。对于某个 `x`，如果 `p(x) = q(x)`，则 $\log\frac{p(x)}{q(x)} = \log 1 = 0$；如果 `p(x) \neq q(x)`，则 $\log\frac{p(x)}{q(x)} \neq 0$。当 `p` 和 `q` 处处相等时，`D_KL(p \parallel q) = 0`，否则可以证明 `D_KL(p \parallel q) > 0`。因此，当两个分布完全相同或几乎相同（几乎处处满足 `p(x) = q(x)`）时，KL 散度取得最小值 0。
 
 例如，对于图 8-28 所示的 2 个离散概率分布：
 
 ![](img/file196.png "fig:")
+
 图 8-28 左右两图的离散概率分布分别为 (0.36, 0.48, 0.16) 和 (0.333, 0.333, 0.333)。
 
 即 `p` 和 `q` 的概率分布分别为：(0.36, 0.48, 0.16) 和 (0.333, 0.333, 0.333)。它们的 KL 散度为：
@@ -27874,19 +27841,14 @@ KL 散度是不对称的，在度量两个同等重要分布的相似性时可�
 再如，对于 `p(x) = N(0, 2)`、`q(x) = N(2, 2)` 两个高斯分布，其 `D_KL(p \parallel q)` 散度为图 8-29 右侧子图。KL 散度为被积函数阴影部分正负面积之和：
 
 ![](img/file197.png "fig:")
+
 图 8-29 `D_KL(p \parallel q)` 散度为被积函数阴影部分正负面积之和。
 
 对于 2 个高斯分布的概率分布，它们的 KL 散度为：
 
-$$KL(p,q) = - \int p(x)\log q(x)dx + \int p(x)\log p(x)dx = \frac{1}{2}\log(2\pi\sigma_2²) + \frac{\sigma_1² + (\mu_1 - \mu_2)²}{2\sigma_2²} - \frac{1}{2}(1 + \log 2\pi\sigma_1²) = \log\frac{\sigma_2}{\sigma_1} + \frac{\sigma_1² + (\mu_1 - \mu_2)²}{2\sigma_2²} - \frac{1}{2}$$
+$$KL(p,q) = - \int p(x)\log q(x)dx + \int p(x)\log p(x)dx = \frac{1}{2}\log(2\pi\sigma_2^2) + \frac{\sigma_1^2 + (\mu_1 - \mu_2)^2}{2\sigma_2^2} - \frac{1}{2}(1 + \log 2\pi\sigma_1^2) = \log\frac{\sigma_2}{\sigma_1} + \frac{\sigma_1^2 + (\mu_1 - \mu_2)^2}{2\sigma_2^2} - \frac{1}{2}$$
 
 如果固定一个概率分布，如固定 `q(x) = (0, 2)`，令 `p(x) = (\mu, 2)` 随 `\mu` 的值自由变化，可以使用以下代码绘制不同 `\mu` 值对应的 KL 散度值曲线：
-
-```
-```
-
-
-
 
 ```python
 import math
@@ -27909,16 +27871,15 @@ plt.legend(['KL Value'], loc='upper center')
 plt.show()
 ```
 
-
-
-
 结果如图 8-30 所示：
 
 ![](img/file198.png)
 
-图 8-30 固定 `q(x) = (0, 2)`，`p(x) = (μ, 2)` 随 `μ` 自由变化所得的 KL 值曲线
+图 8-30 固定 `q(x) = (0, 2)`，`p(x) = (\mu, 2)` 随 `\mu` 自由变化所得的 KL 值曲线
 
-可以看出，当 `μ = 0` 时，即 `p(x)`、`q(x)` 为同一分布时，KL 散度达到最小值。
+可以看出，当 `\mu = 0` 时，即 `p(x)`、`q(x)` 为同一分布时，KL 散度达到最小值。
+
+## JS 散度
 
 JS 散度也是衡量两个分布相似度的一种度量：
 
@@ -27926,32 +27887,39 @@ $$D_{JS}(p \parallel q) = \frac{1}{2}D_{KL}(p \parallel \frac{p + q}{2}) + \frac
 
 与 KL 散度不同，JS 散度关于 `p` 和 `q` 是对称的，即 `p` 和 `q` 同等重要，并且比 KL 散度更平滑。
 
-图 8-31 `p`、`q` 分别为高斯分布 `N(0, 1)`、`N(1, 1)`，两个分布的平均 `m = (p + q)/2`。KL 散度 `D[KL]` 是非对称的，但 JS 散度 `D[JS]` 是对称的。左上角是两个概率分布 `p(x)`、`q(x)`，右上角分别是 `KL(p ∥ q)`、`KL(q ∥ p)` 的积分函数，左下角是 `KL(p ∥ m)`、`KL(q ∥ m)` 的积分函数，右下角是 `JS(p ∥ q)` 的积分函数。
+图 8-31 `p`、`q` 分别为高斯分布 `N(0, 1)`、`N(1, 1)`，两个分布的平均 `m = (p + q)/2`。KL 散度 `D[KL]` 是非对称的，但 JS 散度 `D[JS]` 是对称的。左上角是两个概率分布 `p(x)`、`q(x)`，右上角分别是 `KL(p \parallel q)`、`KL(q \parallel p)` 的积分函数，左下角是 `KL(p \parallel m)`、`KL(q \parallel m)` 的积分函数，右下角是 `JS(p \parallel q)` 的积分函数。
 
 对 JS 散度进行如下变换：
 
 $$
+
 \begin{matrix}
+
 D_{JS}(p_{r} \parallel p_{g}) = & \frac{1}{2}D_{KL}(p_{r}||\frac{p_{r} + p_{g}}{2}) + \frac{1}{2}D_{KL}(p_{g}||\frac{p_{r} + p_{g}}{2}) \\
+
 = & \frac{1}{2}(\log 2 + \int_{x}p_{r}(x)\log\frac{p_{r}(x)}{p_{r}(x) + p_{g}(x)}dx) + \\
+
 & \frac{1}{2}(\log 2 + \int_{x}p_{g}(x)\log\frac{p_{g}(x)}{p_{r}(x) + p_{g}(x)}dx) \\
+
 = & \frac{1}{2}(\log 4 + L(G,D^{\ast})) \\
+
 \end{matrix}
+
 $$
 
 可以看出，当判别器最优时，JS 散度 `DJS` 与 `L(G, D^(*))` 仅相差一个常数 `\frac{1}{2}\log 4`。因此，GAN 的损失函数通过 JS 散度量化了生成数据分布 `p[g]` 与真实样本分布 `p[r]` 之间的相似性，
 
-`L(G, D^(*)) = 2DJS − 2log 2`
+`L(G, D^(*)) = 2DJS - 2log 2`
 
 当生成器最优时，即生成数据分布与真实数据分布完全一致时，第一项为 0，此时生成器和判别器均最优时的损失函数值：
 
-`L(G^(*)) = 0 − 2log 2 = −2log 2`
+`L(G^(*)) = 0 - 2log 2 = -2log 2`
 
-### 8.6.3 GAN 的最大似然解释
+## 8.6.3 GAN 的最大似然解释
 
 上述真实数据分布与生成数据分布应尽可能一致，解释了 GAN 损失函数与 JS 散度的关系，而 JS 散度是两个 KL 散度之和。从最大似然估计的角度也可以发现 GAN 损失函数与 KL 散度的关系。
 
-对于一组真实数据 `x[1], x[2], ⋯, x[n]`，其服从的分布为 `p[r]`，生成器 `G(θ)` 生成这些真实数据的概率为 `pθ, pθ, ⋯, pθ`。若 `G(θ)` 达到最优，则生成器 `G(θ)` 应以最大概率（可能性）生成这些真实数据，即生成器生成这些真实数据的概率应最大化，即寻找满足以下最大值的生成器参数 `θ`：
+对于一组真实数据 `x[1], x[2], \cdots, x[n]`，其服从的分布为 `p[r]`，生成器 `G(\theta)` 生成这些真实数据的概率为 `p\theta, p\theta, \cdots, p\theta`。若 `G(\theta)` 达到最优，则生成器 `G(\theta)` 应以最大概率（可能性）生成这些真实数据，即生成器生成这些真实数据的概率应最大化，即寻找满足以下最大值的生成器参数 `\theta`：
 
 $$\arg\max_{\theta}p(\theta;x_{1},\ldots,x_{n}) = \arg\max_{\theta}\prod_{i = 1}^{n}p_{\theta}(x_{i})$$
 
@@ -27963,24 +27931,31 @@ $$\arg\max_{\theta}\log p(\theta;x_{1},\ldots,x_{n}) = \arg\max_{\theta}\log\pro
 
 $$\arg\max_{\theta}\sum_{i = 1}^{n}\log p_{\theta}(x_{i}) = \arg\max_{\theta}\int_{x}p_{r}(x)\log p_{\theta}(x)dx$$
 
-在右边的积分中加入一个常数值 `−∫[x]prlog prdx` 不会改变其极值点。因此有：
+在右边的积分中加入一个常数值 `-\int_{x}p_{r}\log p_{r}dx` 不会改变其极值点。因此有：
 
 $$
+
 \begin{matrix}
-\arg\max_{\theta}\int_{x}p_{r}(x)\log p_{\theta}(x)dx & = \arg\max_{\theta}( - \int_{x}p_{r}(x)\log p_{r}(x)dx + \int_{x}pr\log p_{\theta}(x)dx) \\
+
+\arg\max_{\theta}\int_{x}p_{r}(x)\log p_{\theta}(x)dx & = \arg\max_{\theta}( - \int_{x}p_{r}(x)\log p_{r}(x)dx + \int_{x}p_{r}\log p_{\theta}(x)dx) \\
+
 & = \arg\min_{\theta}(\int_{x}p_{r}(x)\log p_{r}(x)dx - \int_{x}p_{r}(x)\log p_{\theta}(x)dx) \\
+
 & = \arg\min_{\theta}(\int_{x}p_{r}(x)\log\frac{p_{r}(x)}{p_{\theta}(x)}dx) \\
+
 & = \arg\min_{\theta}KL(p_{r} \parallel p_{\theta}) \\
+
 \end{matrix}
+
 $$
 
-因此，令生成器 `G(θ)` 最大化真实数据的似然概率，等价于最小化上述真实数据分布 `p[r]` 与生成数据分布 `p[θ]` 的 KL 散度。
+因此，令生成器 `G(\theta)` 最大化真实数据的似然概率，等价于最小化上述真实数据分布 `p[r]` 与生成数据分布 `p[\theta]` 的 KL 散度。
 
-## 8.7 改进的损失函数：Wasserstein GAN (WGAN)
+# 8.7 改进的损失函数：Wasserstein GAN (WGAN)
 
 GAN 模型的训练非常不稳定。解决该问题主要有两条途径：一是寻找稳定的学习架构，二是修改损失函数，即用新的损失函数替换原始损失函数。Wasserstein GAN（简称 WGAN）属于后者。
 
-### 8.7.1 Wasserstein GAN 的原理
+## 8.7.1 Wasserstein GAN 的原理
 
 WGAN 利用两个分布之间的 Wasserstein 距离定义新的损失函数，以替换原始论文 GAN 中的 JS 散度。
 
@@ -27990,57 +27965,67 @@ GAN 生成的分布与真实数据分布不重叠是大概率事件。这是原�
 
 将分布 `p(x)`、`q(y)` 视为两堆土，推土机距离衡量如何通过某种移动方案将形状为 `p(x)` 的一堆土转变为 `q(y)` 形状的那堆土。
 
-如图 8-32 a) 所示，上图中彩色随机变量在 `x=1` 和 `8` 处的概率分别为 `3/4` 和 `1/4`。该概率可视为在 `x=1` 和 `3` 处的一堆土或砖块。白色随机变量在 `x=1` 和 `8` 处的概率分别为 `2/4` 和 `2/4`。该概率可视为在 `y=5, 6` 处的一堆土或砖块。图 8-32 a) 下表所示为 `x`、`y` 组合对应的移动距离 `∥x − y∥`。
+如图 8-32 a) 所示，上图中彩色随机变量在 `x=1` 和 `8` 处的概率分别为 `3/4` 和 `1/4`。该概率可视为在 `x=1` 和 `3` 处的一堆土或砖块。白色随机变量在 `x=1` 和 `8` 处的概率分别为 `2/4` 和 `2/4`。该概率可视为在 `y=5, 6` 处的一堆土或砖块。图 8-32 a) 下表所示为 `x`、`y` 组合对应的移动距离 `\parallel x - y \parallel`。
 
 ![](img/file199.png "fig:")
+
 a) b) c)
 
-图 8-32 a) 上图中彩色随机变量在 `x=1` 和 `8` 处的概率分别为 `3/4` 和 `1/4`，白色随机变量在 `x=5` 和 `6` 处的概率分别为 `2/4` 和 `2/4`。下图为从 `x` 移动到 `y` 的距离 `∥x − y∥`。b) 移动方案 `γ1` c) 移动方案 `γ1`
+图 8-32 a) 上图中彩色随机变量在 `x=1` 和 `8` 处的概率分别为 `3/4` 和 `1/4`，白色随机变量在 `x=5` 和 `6` 处的概率分别为 `2/4` 和 `2/4`。下图为从 `x` 移动到 `y` 的距离 `\parallel x - y \parallel`。b) 移动方案 `\gamma1` c) 移动方案 `\gamma1`
 
 要将 `p(x)` 转变为 `q(y)`，需要移动这堆土或砖块。例如，可按图 8-32 b) 的移动方案移动 `p(x)` 的土或砖块，将其转变为目标 `q(y)`，此时的移动代价为：
-`2/4 * (5 − 1) + 1/4 * (6 − 1) + 1/4 * (8 − 6) = (8 + 5 + 2)/4 = 15/4`
+
+`2/4 * (5 - 1) + 1/4 * (6 - 1) + 1/4 * (8 - 6) = (8 + 5 + 2)/4 = 15/4`
 
 也可按图 8-32 c) 的移动方案将 `p(x)` 的土或砖块转变为目标 `q(y)`，此时的移动代价为：
-`2/4 * (6 − 1) + 1/4 * (5 − 1) + 1/4 * (8 − 5) = (10 + 4 + 3)/4 = 17/4`
 
-可见不同的移动方案移动代价不同。用 `γ` 表示一种移动方案，`γ(x, y)` 表示从 `x` 运往 `y` 的土量，`∥x − y∥` 为移动距离，`γ(x, y) ⋅ ∥x − y∥` 为从 `x` 运往 `y` 的 `γ(x, y)` 的代价。该移动方案的代价为所有这些 `γ(x, y) ⋅ ∥x − y∥` 之和：
+`2/4 * (6 - 1) + 1/4 * (5 - 1) + 1/4 * (8 - 5) = (10 + 4 + 3)/4 = 17/4`
 
-`∑γ(x, y) ∥x − y∥`
+可见不同的移动方案移动代价不同。用 `\gamma` 表示一种移动方案，`\gamma(x, y)` 表示从 `x` 运往 `y` 的土量，`\parallel x - y \parallel` 为移动距离，`\gamma(x, y) \cdot \parallel x - y \parallel` 为从 `x` 运往 `y` 的 `\gamma(x, y)` 的代价。该移动方案的代价为所有这些 `\gamma(x, y) \cdot \parallel x - y \parallel` 之和：
 
-此 `γ(x, y)` 可表示为运输土量占总量的百分比，该百分比等价于一种概率，因为所有可能的 `γ(x, y)` 不仅大于或等于 0，而且 `γ(x, y)` 的和 `∑γ(x, y)` 为 1，满足概率条件。即 `γ(x, y)` 是随机变量 `(x, y)` 的联合概率分布，运输距离 `∥x − y∥` 是随机变量 `(x, y)` 的函数，则对于一种移动方案 `γ`，其移动代价是随机变量 `∥x − y∥` 在该概率 `γ(x, y)` 上的数学期望：
+`\sum\gamma(x, y) \parallel x - y \parallel`
 
-`∑γ(x, y) ∥x − y∥ = 𝔼[(x, y) ∼ γ][∥x − y∥]`
+此 `\gamma(x, y)` 可表示为运输土量占总量的百分比，该百分比等价于一种概率，因为所有可能的 `\gamma(x, y)` 不仅大于或等于 0，而且 `\gamma(x, y)` 的和 `\sum\gamma(x, y)` 为 1，满足概率条件。即 `\gamma(x, y)` 是随机变量 `(x, y)` 的联合概率分布，运输距离 `\parallel x - y \parallel` 是随机变量 `(x, y)` 的函数，则对于一种移动方案 `\gamma`，其移动代价是随机变量 `\parallel x - y \parallel` 在该概率 `\gamma(x, y)` 上的数学期望：
+
+`\sum\gamma(x, y) \parallel x - y \parallel = \mathbb{E}_{(x, y) \sim \gamma}[\parallel x - y \parallel]`
 
 将 `p(x)` 转变为 `q(y)` 的推土机距离定义为所有可能移动方案的移动代价的最小值。更准确的数学术语是所有可能移动方案移动代价的*下确界*，其数学符号为 `inf`。因此推土机距离定义为：
 
 $$W(p,q) = \inf_{\gamma \sim \Pi(p,q)}\mathbb{E}_{(x,y) \sim \gamma}[\parallel x - y \parallel]$$
 
-`Π(p, q)` 为所有可能的移动方案，`γ ∈ Π(p, q)` 表示一种将 `p(x)` 移动为 `q(y)` 的方案。
+`\Pi(p, q)` 为所有可能的移动方案，`\gamma \in \Pi(p, q)` 表示一种将 `p(x)` 移动为 `q(y)` 的方案。
 
-设 `p[r]`、`p[g]` 分别为真实数据与生成数据的概率密度，`γ` 表示将概率分布 `p[r]` 转变为 `p[g]` 的一种移动方案，则这两个分布的推土机距离为：
+设 `p[r]`、`p[g]` 分别为真实数据与生成数据的概率密度，`\gamma` 表示将概率分布 `p[r]` 转变为 `p[g]` 的一种移动方案，则这两个分布的推土机距离为：
 
 $$W(p_{r},p_{g}) = \inf_{\gamma \sim \Pi(p_{r},p_{g})}\mathbb{E}_{(x,y) \sim \gamma}[\parallel x - y \parallel]$$
 
 表示将分布 `p[r]` 转变为分布 `p[g]` 所需的最小代价。推土机距离是对称的，因此也表示将分布 `p[g]` 转变为分布 `p[r]` 所需的最小代价。
 
-计算该距离不可行，因为无法枚举无限多个这些移动方案 `γ`。通过一种称为 Kantorovich-Rubenstein 对偶性的复杂数学推导，这转化为以下距离计算：
+计算该距离不可行，因为无法枚举无限多个这些移动方案 `\gamma`。通过一种称为 Kantorovich-Rubenstein 对偶性的复杂数学推导，这转化为以下距离计算：
 
-$$W(P_{r},P_{\theta}) = \sup_{\parallel f\parallel_{L} \leq 1}\mathbb{E}_{x_{\sim P_{r}}}f(x) - \mathbb{E}_{x_{\sim P_{\theta}}}f(x)$$
+$$W(P_{r},P_{\theta}) = \sup_{\parallel f\parallel_{L} \leq 1}\mathbb{E}_{x \sim P_{r}}f(x) - \mathbb{E}_{x \sim P_{\theta}}f(x)$$
 
 其中，`sup` 是**上确界**，指大于所有值的最小值，`f` 为 `1-Lipschitz` 函数，即满足以下条件的函数：
 
-`|f(x[1]) − f(x[2])| ≤ |x[1] − x[2]|`
+`|f(x[1]) - f(x[2])| \le |x[1] - x[2]|`
 
-对于这样的函数 `f`，`𝔼[x ∼ P[r]]f(x)` 是服从真实数据分布 `p[r]` 的 `x`，即真实数据的函数值 `f(x)` 的期望（均值），`𝔼[x ∼ P[θ]]f(x)` 是服从生成数据分布 `p[g]` 的 `x`，即生成数据的函数值 `f(x)` 的期望（均值）。因此，只需用一些真实数据 `x` 的 `f(x)` 平均值即可估计 `𝔼[x ∼ P[r]]f(x)`，也可用一些生成数据 `x` 的 `f(x)` 平均值估计 `𝔼[x ∼ P[θ]]f(x)`。如：
+对于这样的函数 `f`，`\mathbb{E}_{x \sim P_{r}}f(x)` 是服从真实数据分布 `p[r]` 的 `x`，即真实数据的函数值 `f(x)` 的期望（均值），`\mathbb{E}_{x \sim P_{\theta}}f(x)` 是服从生成数据分布 `p[g]` 的 `x`，即生成数据的函数值 `f(x)` 的期望（均值）。因此，只需用一些真实数据 `x` 的 `f(x)` 平均值即可估计 `\mathbb{E}_{x \sim P_{r}}f(x)`，也可用一些生成数据 `x` 的 `f(x)` 平均值估计 `\mathbb{E}_{x \sim P_{\theta}}f(x)`。如：
 
 $$
+
 \begin{matrix}
-\mathbb{E}_{x_{\sim P_{r}}}f(x) = \sum_{1}^{m}f(real\_x_{i}) \\
-\mathbb{E}_{x_{\sim P_{\theta}}}f(x) = \sum_{1}^{n}f(fake\_x_{i}) \\
+
+\mathbb{E}_{x \sim P_{r}}f(x) = \sum_{1}^{m}f(real\_x_{i}) \\
+
+\mathbb{E}_{x \sim P_{\theta}}f(x) = \sum_{1}^{n}f(fake\_x_{i}) \\
+
 \end{matrix}
+
 $$
 
 其中 `real_x[i]`、`fake_x[i]` 分别为一些真实数据和生成数据。因此，推土机距离的估计变得非常简单。
+
+
 
 在 GAN 训练中，`f(x)` 是判别器的神经网络函数，但必须保证其满足上述 `1-Lipschitz` 函数的条件。在 WGAN 原始论文中，这是通过**权重裁剪**这一实用技巧限制权重参数大小来保证的，即将权重参数限制在某个范围 `[−c, c]` 内，通常 `c=0.01`。也可设为 `c=0.1` 或 `c=0.001`，即 `c` 也是一个需要调试的参数。
 
@@ -28063,12 +28048,6 @@ $$L(p_{r},p_{g}) = \mathbb{E}_{\overset{\sim}{x} \sim p_{g}}[f(\overset{\sim}{x}
 ### 8.7.2 WGAN 代码实现
 
 根据 WGAN 的损失函数，对之前的 `D_train()` 和 `G_train()` 函数稍作修改，即可得到使用 WGAN 损失的判别器和生成器训练函数 `WGAN_D_train()` 和 `WGAN_G_train()`：
-
-```
-```
-
-
-
 
 #### WGAN 训练代码实现
 
@@ -28221,11 +28200,8 @@ D_losses, G_losses = WGAN_train(D, G, D_optimizer, G_optimizer, data_it, noise_i
 199500 iter: D_loss 4.4971589611975116e-09 G_loss -0.01000896809522164
 ```
 
-
-
-
-
 ![](img/file200.png "fig:")
+
 图 8-33 针对一组实数问题的 WGAN 训练结果
 
 `D_loss` 是生成数据分布与真实数据分布之间的 Wasserstein 距离，它随着迭代收敛到 0，表明逐渐收敛。
@@ -28291,12 +28267,16 @@ D_losses, G_losses = WGAN_train(D, G, D_optimizer, G_optimizer, data_it, noise_i
 其中 `xx`[`row`] 为转置卷积的输入，`zz`[`row`] 为转置卷积的输出，`KK`[`col`] 为卷积核的列向量表示。对上述具体示例，计算过程为：
 
 $$
+
 \begin{matrix} {z_{row} = x_{row}k_{col} = \begin{bmatrix} x_{0} \\ x_{1} \\ x_{2} \\ \end{bmatrix}\begin{bmatrix} k_{0} & k_{1} & k_{2} \\ \end{bmatrix} = \begin{bmatrix} 5 \\ 15 \\ 12 \\ \end{bmatrix}\begin{bmatrix} 1 & 2 & {- 1} \\ \end{bmatrix} = \begin{bmatrix} 5 & 15 & 12 \\ 15 & 30 & {- 15} \\ 12 & 24 & {- 12} \\ \end{bmatrix}} \\ \end{matrix}
+
 $$
 
 类似于卷积的逆向推导，该扁平化 `zz`[`row`] 的每一行代表一次分配计算，每一行都需要累加到最终输出 `zz` 的对应位置（如图 8-40 所示）。
 
 将 `zz`[`row`] 转换为 `zz` 的过程可使用卷积逆向推导将 `ddx`[`row`] 转换为 `dxx` 的函数 `row2im()` 完成。
+
+
 
 因此，转置卷积的前向计算一般按卷积的逆向推导过程进行。同理，转置卷积的逆向导数可按卷积的前向计算过程进行。作为练习，读者可尝试编写一维转置卷积前向计算和逆向推导的代码。
 
@@ -28318,51 +28298,47 @@ $$
 
 二维转置卷积的矩阵乘法实现与一维转置卷积的矩阵乘法实现过程相同，即分别利用对应二维卷积的逆向推导和前向计算过程来实现二维转置卷积的前向计算和逆向推导过程。
 
-因此，只需修改之前已实现的卷积操作的 `Conv_fast` 类，将 `Conv_fast` 类的 `backward()` 和 `forward()` 方法转换为转置卷积实现类 `Conv_transpose` 的 `forward()` 和 `backward()` 方法。例如，对于输入 `x`，可将其视为损失函数关于卷积输出的梯度，首先将其展平为矩阵，即形状类似于 (`N` * `oH` * `oW`, `F`) 的矩阵，第二轴代表输出通道数，第一轴代表每个元素，从而转换为 `x`[`row`] 的矩阵形式，代码为：
+因此，只需修改之前已实现的卷积操作的 `Conv_fast` 类，将 `Conv_fast` 类的 `backward()` 和 `forward()` 方法转换为转置卷积实现类 `Conv_transpose` 的 `forward()` 和 `backward()` 方法。例如，对于输入 `x`，可将其视为损失函数关于卷积输出的梯度，首先将其展平为矩阵，即形状类似于 (`N` * `oH` * `oW`, `F`) 的矩阵，第二轴代表输出通道数，第一轴代表每个元素，从而转换为 `X_row` 的矩阵形式，代码为：
 
+```python
+X_row = X.transpose(0,2,3,1).reshape(-1,F)
 ```
-```
-
-
-
-
-`X_row = X.transpose(0,2,3,1).reshape(-1,F)`
 
 然后根据反向推导公式，可以计算出该转置卷积输出的扁平化矩阵 `Z_row`，即：
 
-```
+```python
 Z_row = np.dot(X_row,K_col.T)
 ```
 
 最后，根据卷积的反向推导过程，必须将该 `Z_row` 每一行的分布累加到最终输出 `Z` 中。此过程可直接使用 `row2im()` 函数或 `row2im_indices()` 函数完成：
 
-```
+```python
 Z = row2im_indices(Z_row,Z_shape,self.kH,self.kW,S =self.S,P = self.P)
 ```
 
 同理，转置卷积的反向推导类似于卷积的正向计算过程。首先，必须将损失函数关于 `Z` 的梯度 `dz` 通过 `im2row()` 或 `im2row_indices()` 函数展平为矩阵 `dZ_row`，其每一行代表一个数据块，然后计算转置卷积输入 `X` 的梯度：
 
-```
+```python
 dX_row = dZ_row @ K_col
 ```
 
 可得到关于 `X` 的梯度的扁平化矩阵 `dX_row`，最后将该扁平化矩阵重塑为与 `X` 形状相同的四维张量，即：
 
-```
+```python
 dX = dX_row.reshape(N,self.H,self.W,self.C)
 dX = dX.transpose(0,3,1,2)
 ```
 
 同理，模型 `K` 的梯度 `dK_col` 的计算过程也类似，将扁平化矩阵 `dK_col` 的形状重塑为与 `K` 相同的形状更为直接：
 
-```
+```python
 dK_col = self.X_row.T@dZ_row
 dK = dK_col.reshape(self.K.shape)
 ```
 
 根据上述分析，可编写如下转置卷积类 `Conv_transpose`：
 
-```
+```python
 class Conv_transpose():
     def __init__(self, in_channels, out_channels, kernel_size, stride=1,padding=0):
         super().__init__()
@@ -28468,7 +28444,7 @@ class Conv_transpose():
 
 首先，仍将 Mnist 手写数字集读取为训练样本：
 
-```
+```python
 import data_set as ds
 import matplotlib.pyplot as plt
 %matplotlib inline
@@ -28494,11 +28470,12 @@ int64
 ```
 
 ![](img/file201.png "fig:")
+
 (50000, 1, 28, 28)
 
 然后使用转置卷积类、卷积类及其他网络层类，分别定义代表生成器和判别器的神经网络 `G` 和 `D`：
 
-```
+```python
 from util import *
 from NeuralNetwork import *
 from GAN import *
@@ -28514,9 +28491,6 @@ G.add_layer(Conv_transpose(z_dim, ngf*4,4,1,0))   # ->(ngf*4) x 4 x 4
 G.add_layer(BatchNorm(ngf*4))
 G.add_layer(Relu()) #Leaky_relu(0.2))
 ```
-
-
-
 
 #### 生成器网络构建
 
@@ -28552,6 +28526,8 @@ D.add_layer(Conv_fast(4*ndf, 1, 4, 1, 0))   # (4-4+0)//1+1=1 -> 1 x 1 x 1
 ```
 
 #### 权重初始化
+
+
 
 ```python
 def weights_init(layer):
@@ -28646,9 +28622,6 @@ done = time.time()
 elapsed = done - start
 print("训练时间: %d 秒" % (elapsed))
 ```
-
-
-
 
 请从作者的博客下载完整代码（`https://hwdong-net.github.io`）。
 

@@ -1,605 +1,7 @@
+
 # Microsoft Azure 入门指南
 
-
-
 ## 要查看本书的速查表，只需访问 [www.dummies.com](http://www.dummies.com)，并在搜索框中搜索 "Microsoft Azure For Dummies Cheat Sheet"。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-271. 275
-
-272. 276
-
-273. 277
-
-274. 278
-
-275. 279
-
-276. 280
-
-277. 281
-
-278. 282
-
-279. 283
-
-280. 284
-
-281. 285
-
-282. 286
-
-283. 287
-
-284. 288
-
-285. 289
-
-286. 290
-
-287. 291
-
-288. 292
-
-289. 293
-
-290. 294
-
-291. 295
-
-292. 296
-
-293. 297
-
-294. 298
-
-295. 299
-
-296. 301
-
-297. 302
-
-298. 303
-
-299. 304
-
-300. 305
-
-301. 306
-
-302. 307
-
-303. 308
-
-304. 309
-
-305. 310
-
-306. 311
-
-307. 312
-
-308. 313
-
-309. 314
-
-310. 315
-
-311. 316
-
-312. 317
-
-313. 318
-
-314. 319
-
-315. 320
-
-316. 321
-
-317. 322
-
-318. 323
-
-319. 324
-
-320. 325
-
-321. 326
-
-322. 327
-
-323. 328
-
-324. 329
-
-325. 331
-
-326. 332
-
-327. 333
-
-328. 334
-
-329. 335
-
-330. 336
-
-331. 337
-
-332. 339
-
-333. 340
-
-334. 341
-
-335. 342
-
-336. 343
-
-337. 344
-
-338. 345
-
-339. 346
-
-340. 347
-
-341. 348
-
-342. 349
-
-343. 350
-
-344. 351
-
-345. 352
-
-346. 353
-
-347. 354
-
-348. 355
-
-349. 356
-
-350. 357
 
 # 简介
 
@@ -616,18 +18,19 @@ Microsoft Azure 是一项公有云服务，您可以在其中从 Microsoft 租�
 因此，我编写本书旨在帮助您实现以下目标：
 
 * **熟悉 Microsoft Azure：** 我通过坚持 Microsoft 所谓的“80% 场景”（即 80% 的客户群使用的 Azure 部署）来让您获得这种舒适感。
+
 * **掌握编程式部署技能：** 在此过程中，我将向您展示如何使用 `Azure PowerShell`、`Azure 命令行接口 (CLI)` 和 `Azure 资源管理器 (ARM)` 模板来完成您的 Azure 工作。这些 Azure 访问方式的变化频率比 Azure 门户图形用户界面 (GUI) 低。
+
 * **熟悉工具并保持技术更新：** 您可以预期 Azure 门户会发生变化，以至于您屏幕上看到的内容可能与本书中的不符。这在意料之中！在本书的最后一部分“十件事”中，我将为您提供自行保持技术更新的技能，以免在 Azure 今天的样子与昨天不同的时候感到措手不及。
-
-
-
 
 我在这本书中包含了许多网址，也称为 URL。如果微软更改了页面地址，而我提供的链接不再有效，请不要担心！只需在 Google 上搜索文章标题，你几乎可以立即找到更新后的页面地址。
 
 全书中，你将看到数十个分步操作过程。在学习这些内容时，请记住以下几点：
 
 *   你需要一个 Azure 订阅才能执行这些步骤。如果你还没有，可以创建一个免费 Azure 帐户（`https://azure.microsoft.com/free`），它提供 30 天时间，让你在任何 Azure 服务上花费 200 美元。只要你在使用完部署后将其删除，这个配额应该足以支撑你完成本书的内容。
+
 *   我经常提供在我环境中有效的示例值，但这些值在你的环境中可能不适用。你应该根据自己的需求自定义这些过程。
+
 *   如果完成练习需要额外的软件，我会在练习前告知你。软件要求仅限于免费的微软软件，以最大程度减少学习本书对你的经济影响。
 
 我假设你有互联网连接；否则，你将无法访问 Azure（除非你使用的是 Azure Stack，但那是另一本书的主题）。
@@ -639,10 +42,15 @@ Microsoft Azure 是一项公有云服务，您可以在其中从 Microsoft 租�
 编写本书时，我考虑了几类读者。看看你是否大致或完全符合以下任何一种描述：
 
 *   你是一位经验丰富的 IT 专业人员，因工作未来的计划而需要了解 Azure。
+
 *   你是 IT 新手，想了解 Azure 以保障职业生涯的前瞻性。
+
 *   你精通其他公有云平台，如 Amazon Web Services 或 Google Cloud Platform，想看看 Azure 与它们相比如何。
+
 *   你被迫在工作中使用 Azure。
+
 *   你的任务是说服老板和其他决策者 Azure 对业务有多大价值，并希望确保自己理解基础知识。
+
 *   你已经在使用 Azure，但想填补知识或技能上的空白。
 
 无论你目前对 Azure 持何种态度和立场，我希望通过学习本书并应用其中的方法，你能更多地了解 Azure，从而在职业生涯中脱颖而出。
@@ -710,18 +118,21 @@ Microsoft Azure 是一项公有云服务，您可以在其中从 Microsoft 租�
 你租用的资源由以下硬件和软件组件组成：
 
 *   **计算：** *计算* 是原始计算能力 —— 构成应用程序和数据平台的中央处理器 (CPU) 和随机存取存储器 (RAM)。
+
 *   **存储：** *持久存储* 意味着你在微软的服务器上有一个存放文件和其他数据的位置。当你将文件保存到云托管的存储帐户时，该文件应永久保留，或者至少直到你移动或删除它。
+
 *   **网络：** Azure 提供了一个软件定义的网络基础设施，你可以在其中托管虚拟机和其他 Azure 服务。因为云几乎总是涉及互联网连接，所以 *online*（在线）和 *cloud*（云）基本上是同义词。我说“几乎总是”，因为企业可以创建私有云，它共享公有云的大多数属性，但位于其私有网络环境中。微软还出售一个名为 Azure Stack 的私有、便携版 Azure。
+
 *   **分析：** 你永远无法接触云提供商的计算、存储或网络资源。你能做的最近的事，就是在 Web 浏览器或管理应用中查看其遥测数据。因此，Azure 和其他公有云提供商提供工具，让你精确查看每分钟消耗了多少服务。云分析还为你的云基础架构提供了宝贵的故障排除和性能调优建议。
 
 企业对使用云感兴趣，因为它允许他们卸载许多关于维护本地数据中心令人恐惧、烦人和/或昂贵的方面，例如以下各项：
 
-
-
 ## 云计算优势
 
 *   **电力成本**：为托管应用程序和服务所需的所有设备供电可能非常昂贵。如果本地数据中心发生公用事业中断会怎样？将数据迁移到云端后，提供商将承担这些风险。
+
 *   **资本支出**：运行本地数据中心时，您需要租赁或直接购买物理服务器。因此，您需负责所有硬件升级和维修，这些硬件费用也很高昂。
+
 *   **安全与配置开销**：如果无法聘请本地系统管理员，或现有资源已捉襟见肘，很容易在本地服务器上留下漏洞，导致被恶意行为者利用。相比之下，使用 Azure 等公有云服务时，您依赖 Microsoft 基于人工和机器学习的威胁情报，帮助保护应用程序、服务和数据安全。
 
 您看到这里的趋势了吗？云计算之所以流行，是因为它对最终用户方便，对企业业务更便宜。但在进一步深入之前，我想明确定义一下何为*云计算*。
@@ -731,12 +142,17 @@ Microsoft Azure 是一项公有云服务，您可以在其中从 Microsoft 租�
 美国国家标准与技术研究院（NIST，读作 *nihst*）制定了云计算的标准定义。根据 NIST，云计算的五个基本特征是：
 
 *   **按需自助服务**：云客户可随时预配服务，仅为所消耗的资源付费。
+
 *   **广泛的网络访问**：云服务通常在全球范围内提供，鼓励客户将服务部署在尽可能靠近消费者的地理位置。
+
 *   **资源池化**：云服务是*多租户*的，意味着不同客户的环境相互隔离。您绝不会看到其他 Azure 客户的数据，反之亦然。
+
 *   **快速弹性**：云服务客户可通过配置服务自动缩放，以适应多变的流量模式。例如，可配置 Azure 自动复制 Web 服务器以应对流量高峰，并在不再需要时自动移除服务器。
+
 *   **计量服务**：云按需提供服务并进行计量；客户再次仅为预配的资源付费。
 
 ![Technical stuff](img/technicalstuff.png)
+
 若想阅读源材料，请查阅 NIST 特别出版物 800-145《NIST 云计算定义》，可从 [`https://csrc.nist.gov/publications/detail/sp/800-145/final`](https://csrc.nist.gov/publications/detail/sp/800-145/final) 下载。
 
 ### 云计算收益
@@ -774,6 +190,7 @@ Microsoft Azure 是公有云，因为其全球数据中心结构面向公众开�
 其他主要云服务提供商——包括 AWS、GCP、Oracle 和 IBM（参见附近的侧边栏“其他云提供商”）——也被视为公有云平台。
 
 ![Technical stuff](img/technicalstuff.png)
+
 Microsoft 还有三个独立的 Azure 云专供政府专用。因此，Microsoft 文档中会提到 Azure Cloud（指其公有云）和 Azure Government Cloud（指其主权、特殊访问的云）。普通公众若无关联政府机构背书，无法访问 Azure Government Cloud。
 
 #### 私有云
@@ -788,11 +205,6 @@ Microsoft 销售 Azure 云的便携版本：Azure Stack，它由一个服务器�
 
 #### 混合云
 
-
-
-
-#### 混合云
-
 当您结合本地环境和云环境的优势时，您就拥有了混合云。
 
 根据我的专业经验，混合云部署模型对大多数企业来说最合理。为什么？混合云允许企业挽救（即：继续使用）其已付费的本地基础设施，同时利用 Azure 公有云的超大规模能力。
@@ -800,7 +212,9 @@ Microsoft 销售 Azure 云的便携版本：Azure Stack，它由一个服务器�
 请看 图 1-2。在此拓扑中，本地网络扩展到了在 Azure 中运行的虚拟网络。您可以在此处进行各种巧妙的服务管理，包括：
 
 *   将 Azure 虚拟机 (VM) 加入本地 Active Directory 域。
+
 *   使用 Azure 管理工具管理本地服务器。
+
 *   通过将 Azure 作为灾难恢复 (DR) 站点，提供近乎即时的故障转移灾难恢复。故障转移是指在别处备有生产服务器的复制备份，以便在几分钟内从故障的主环境切换到备份环境。对于无法承担从备份存档恢复备份所涉及停机时间的企业来说，故障转移至关重要。
 
 ![图 1-2：一种混合云，其中本地企业网络扩展至 Azure。](img/9781119612148-fg0102.png)
@@ -810,7 +224,10 @@ Microsoft 销售 Azure 云的便携版本：Azure Stack，它由一个服务器�
 读完本书时，您将了解如何部署 图 1-2 中所示的环境，但以下是正在发生情况的概述：
 
 *   左侧是一个本地企业网络，通过虚拟专用网络 (VPN) 网关连接到 Internet。
-*   右侧 (Azure) 是虚拟网络中的三 VM 部署。站点到站点 VPN 将本地环境连接到虚拟网络。最后，Azure 负载均衡器将传入流量平均分配给 Web 层子网中三个配置相同的 Web 服务器。因此，公司内部员工可以通过安全的 VPN 隧道访问基于 Azure 的 Web 应用程序，并获得低延迟、可靠、始终在线的连接。
+
+
+
+右侧 (Azure) 是虚拟网络中的三 VM 部署。站点到站点 VPN 将本地环境连接到虚拟网络。最后，Azure 负载均衡器将传入流量平均分配给 Web 层子网中三个配置相同的 Web 服务器。因此，公司内部员工可以通过安全的 VPN 隧道访问基于 Azure 的 Web 应用程序，并获得低延迟、可靠、始终在线的连接。
 
 ![请记住](img/remember.png) 在本书中，我将本地物理网络环境称为 *本地环境*。在实际情况中，您会看到对 “on premise” 的错误引用——遗憾的是，即使在 Microsoft 的 Azure 文档中也是如此。请勿犯此错误。*Premise* 是一个前提/假设；*premises* 才指场所/局址。
 
@@ -822,7 +239,7 @@ Microsoft 销售 Azure 云的便携版本：Azure Stack，它由一个服务器�
 
 ### 软件即服务 (SaaS)
 
-SaaS 应用程序是一个成品的、面向客户的应用程序，运行在云中。Microsoft Office 365 是一个完美的例子。如 图 1-3 所示，您只需一个 Web 浏览器、一个 Internet 连接和一个 Office 365 订阅（您按月按订阅制付费），即可使用 Word Online 创建、编辑和共享文档。
+SaaS 应用程序是一个成品的、面向客户的应用程序，运行在云中。Microsoft Office 365 是一个完美的例子。如图 1-3 所示，您只需一个 Web 浏览器、一个 Internet 连接和一个 Office 365 订阅（您按月按订阅制付费），即可使用 Word Online 创建、编辑和共享文档。
 
 使用 SaaS 应用程序时，您对应用程序的后端机制完全没有可见性。以 Word Online 为例，您既不知道也不关心后端服务器的备份频率、Office 365 数据中心的地理位置等。您关心的只是能否访问您托管在云中的文档，以及 Word Online 的表现是否符合预期。
 
@@ -865,11 +282,7 @@ SaaS 应用程序是一个成品的、面向客户的应用程序，运行在云
 
 因此，SaaS 是一种在云中完全抽象化的服务，客户只需使用应用程序；而 IaaS 在 Microsoft 的责任（提供托管平台）和客户的责任（管理 VM 的整个生命周期）之间提供了一种分工。
 
-
-
-
-
-![Warning](img/warning.png)云计算总体而言，尤其是 Microsoft Azure，采用的是所谓的*共享责任模型*。在该模型中，Microsoft 的责任是提供使你的云部署成功所需的工具——Microsoft 的数据中心、服务器、存储和网络硬件等。你的责任是使用这些工具来保护、优化和防护你的部署。Microsoft 不会自动为你配置、备份和保护虚拟机；这些任务由你负责。
+![Warning](img/warning.png) 云计算总体而言，尤其是 Microsoft Azure，采用的是所谓的*共享责任模型*。在该模型中，Microsoft 的责任是提供使你的云部署成功所需的工具——Microsoft 的数据中心、服务器、存储和网络硬件等。你的责任是使用这些工具来保护、优化和防护你的部署。Microsoft 不会自动为你配置、备份和保护虚拟机；这些任务由你负责。
 
 ## 介绍 Microsoft Azure 服务
 
@@ -889,7 +302,7 @@ Satya Nadella 于 2014 年 2 月成为 Microsoft 的首席运营官。Satya 有�
 
 图 1-4： 2012 年左右的 Windows Azure 门户。
 
-![Tip](img/tip.png)我无法过分强调这一简单更名的重要性。如今，Microsoft Azure 为基于 Linux 的虚拟机和非 Microsoft Web 应用程序及服务提供了一流支持，这意义重大。
+![Tip](img/tip.png) 我无法过分强调这一简单更名的重要性。如今，Microsoft Azure 为基于 Linux 的虚拟机和非 Microsoft Web 应用程序及服务提供了一流支持，这意义重大。
 
 最后，Microsoft 在 2014 年 Microsoft Build 大会上推出了 RM 部署模型。Windows Azure 背后的 API 称为 Azure 服务管理 (ASM)，它存在多个设计和架构痛点。例如，ASM 使得组织部署资源变得极其困难，且无法以细粒度划分管理访问权限。
 
@@ -945,16 +358,13 @@ Azure 产品组合中充满了强大且节省成本的 PaaS 产品。以下是�
 *   250 GB Azure SQL 数据库（S0 实例大小）
 *   15 GB Azure 传出数据传输
 
-![Technical stuff](img/technicalstuff.png)你可以通过在 Azure 门户中查看“免费服务”边栏选项卡，或访问 Azure 免费帐户常见问题解答页面 [`https://azure.microsoft.com/en-us/free/free-account-faq`](https://azure.microsoft.com/en-us/free/free-account-faq/) 来查看 Azure 免费层服务的完整列表。
+![Technical stuff](img/technicalstuff.png) 你可以通过在 Azure 门户中查看“免费服务”边栏选项卡，或访问 Azure 免费帐户常见问题解答页面 [`https://azure.microsoft.com/en-us/free/free-account-faq`](https://azure.microsoft.com/en-us/free/free-account-faq/) 来查看 Azure 免费层服务的完整列表。
 
-![Remember](img/remember.png)“边栏选项卡”是 Microsoft 用来描述 Azure 门户中任何特定网页的术语。我在本书中大量使用该词，你也会在 Azure 文档中随处看到它。
+![Remember](img/remember.png) “边栏选项卡”是 Microsoft 用来描述 Azure 门户中任何特定网页的术语。我在本书中大量使用该词，你也会在 Azure 文档中随处看到它。
 
 此外，多项 Azure 服务在始终免费层运行；具体细节请查看 [`https://azure.microsoft.com/en-us`](https://azure.microsoft.com/en-us/)。但请记住，免费层服务并非供你运行生产工作负载。该层级的存在是为了让你有机会测试 Azure，以确定它是否符合你的职业或个人需求。
 
 即用即付 (PAYG) 是最常见的标准订阅方案。每月，你将收到一份发票，列出你在 Azure 免费层服务之外所消耗的 Azure 资源费用。
-
-
-
 
 企业协议 (EA) 是一种特殊用途的合同，旨在供愿意承诺三年 Azure 订阅的大型企业使用。Microsoft 为 EA 客户提供 Azure 服务的特别折扣，并提供一个特殊的管理门户，用于分析支出、创建预算、跟踪使用情况等。
 
@@ -999,15 +409,17 @@ Azure 产品组合中充满了强大且节省成本的 PaaS 产品。以下是�
 
     完成了，您已准备就绪。很简单，不是吗？
 
-您现在应该能看到 Azure 门户，以及“欢迎使用 Microsoft Azure”消息，如 图 1-6 所示。
+您现在应该能看到 Azure 门户，以及“欢迎使用 Microsoft Azure”消息，如图 1-6 所示。
 
 ![图 1-6：首次登录 Azure 门户。](img/9781119612148-fg0106.png)
 
 图 1-6： 首次登录 Azure 门户。
 
-我将在 第 2 章 中正式介绍 Azure 门户。目前，请将此地址 ([`https://portal.azure.com`](https://portal.azure.com)) 加入书签，因为您从现在起将频繁使用它。
+我将在 第 2 章 中正式介绍 Azure 门户。目前，请将此地址 [`https://portal.azure.com`](https://portal.azure.com) 加入书签，因为您从现在起将频繁使用它。
 
-单击“开始演练”以浏览 Azure 门户。在 图 1-6 的背景中，您可以看到“快速入门中心”；您可以随时通过在顶部导航栏的搜索框中键入 **quickstart center** 返回此边栏选项卡。快速入门中心包含指向文档和 Microsoft Learn（Microsoft 的免费 Azure 教育门户）的链接。
+
+
+单击“开始演练”以浏览 Azure 门户。在图 1-6 的背景中，您可以看到“快速入门中心”；您可以随时通过在顶部导航栏的搜索框中键入 `quickstart center` 返回此边栏选项卡。快速入门中心包含指向文档和 Microsoft Learn（Microsoft 的免费 Azure 教育门户）的链接。
 
 ![Remember](img/remember.png) Azure 门户中的窗口称为 *边栏选项卡*。
 
@@ -1015,37 +427,34 @@ Azure 产品组合中充满了强大且节省成本的 PaaS 产品。以下是�
 
 请按照以下步骤查看您的 Azure 免费帐户订阅详细信息：
 
-1.  **在 Azure 门户的搜索框中键入** `subscriptions`**。
+1. **在 Azure 门户的搜索框中键入** `subscriptions`。
 
     “订阅”选项应几乎立即出现。（我是 Azure 门户中全局搜索功能的忠实粉丝，希望您也能成为其中一员。）
 
-2.  **在“订阅”边栏选项卡中，选择您的“免费试用”订阅。**
+2. **在“订阅”边栏选项卡中，选择您的“免费试用”订阅。**
 
     在单击“免费试用”之前，请注意“订阅”边栏选项卡为您提供的信息：您的帐户角色为“帐户管理员”，帐户状态为“活动”。到目前为止，一切顺利。
 
-3.  **检查各种订阅管理工具。**
+3. **检查各种订阅管理工具。**
 
     图 1-7 显示了以下工具：
 
-    *   **A：** “概述”设置显示“要点”面板（显示在图的右侧），您可以在其中查看订阅状态和元数据的详细信息。
-    *   **B：** “成本管理”设置使您能够报告已消耗和/或正在消耗的 Azure 服务。
-    *   **C：** “付款方式”设置使您能够更改与订阅关联的付款方式。
-    *   **D：** “升级订阅”使您能够将免费试用转换为即用即付订阅。如果您在花费完 200 美元或达到 30 天之前进行转换，则在费用计费器开始计费前，您将保留您的额度。
-    *   **E：** “管理”按钮将带您进入 Azure 帐户中心，您可以在其中打印过去的服务发票、设置账单警报，并更改拥有该订阅的帐户。 ![图 1-7：在 Azure 门户中查看您的免费试用订阅。](img/9781119612148-fg0107.png)
+    * **A：** “概述”设置显示“要点”面板（显示在图的右侧），您可以在其中查看订阅状态和元数据的详细信息。
+    * **B：** “成本管理”设置使您能够报告已消耗和/或正在消耗的 Azure 服务。
+    * **C：** “付款方式”设置使您能够更改与订阅关联的付款方式。
+    * **D：** “升级订阅”使您能够将免费试用转换为即用即付订阅。如果您在花费完 200 美元或达到 30 天之前进行转换，则在费用计费器开始计费前，您将保留您的额度。
+    * **E：** “管理”按钮将带您进入 Azure 帐户中心，您可以在其中打印过去的服务发票、设置账单警报，并更改拥有该订阅的帐户。 ![图 1-7：在 Azure 门户中查看您的免费试用订阅。](img/9781119612148-fg0107.png)
 
         图 1-7： 在 Azure 门户中查看您的免费试用订阅。
-
-    *   **F：** “取消订阅”按钮使您能够……嗯，取消您的订阅。还能有什么？
-    *   **G：** “重命名”按钮使您能够将订阅的逻辑名称从“免费层”更改为对您和您的组织更有意义的名称。
+    * **F：** “取消订阅”按钮使您能够……嗯，取消您的订阅。还能有什么？
+    * **G：** “重命名”按钮使您能够将订阅的逻辑名称从“免费层”更改为对您和您的组织更有意义的名称。
 
 如果您决定升级订阅，Microsoft 会询问您是否要购买月度支持计划。与即用即付订阅一样，您可以随时取消支持计划，无需支付任何罚款。这三个支持层级各自具有固定的月度费用，分别是：
 
-*   **开发人员计划：** 面向试用和非生产环境的支持。您可以在您所在时区的上午 9 点至下午 5 点与 Azure 支持人员互动，初始响应时间少于 8 个工作小时。截至 2019 年 11 月撰写本文时，月费为 29 美元。
-*   **标准计划：** 面向生产环境的支持。您将获得 7x24 小时技术支持，并在 2 小时内得到响应。截至撰写本文时，标准计划每月花费 100 美元。
-*   **专业直接计划：** 面向高度依赖 Azure 的企业。您将获得 7x24 小时技术支持，严重问题在 1 小时内得到响应。截至撰写本文时，Microsoft 对此支持计划收取每月 1,000 美元。
-*   **高级计划：** 此支持层级面向不仅需要闪电般快速的技术支持，还需要来自 Microsoft Azure 解决方案专家的架构指导的企业。您需要联系 Microsoft 以获取高级计划的价格报价。
-
-
+* **开发人员计划：** 面向试用和非生产环境的支持。您可以在您所在时区的上午 9 点至下午 5 点与 Azure 支持人员互动，初始响应时间少于 8 个工作小时。截至 2019 年 11 月撰写本文时，月费为 29 美元。
+* **标准计划：** 面向生产环境的支持。您将获得 7x24 小时技术支持，并在 2 小时内得到响应。截至撰写本文时，标准计划每月花费 100 美元。
+* **专业直接计划：** 面向高度依赖 Azure 的企业。您将获得 7x24 小时技术支持，严重问题在 1 小时内得到响应。截至撰写本文时，Microsoft 对此支持计划收取每月 1,000 美元。
+* **高级计划：** 此支持层级面向不仅需要闪电般快速的技术支持，还需要来自 Microsoft Azure 解决方案专家的架构指导的企业。您需要联系 Microsoft 以获取高级计划的价格报价。
 
 ![Remember](img/remember.png)除非你与微软签有企业协议（EA），否则你可以随时取消 Azure 订阅。但请注意，在微软允许你取消订阅之前，你需要删除所有资源。
 
@@ -1110,7 +519,7 @@ HTTP 有五种主要方法（也称为*操作*或*动词*），REST API 调用�
 - `storageAccounts`：托管我存储帐户的资源组。
 - `tlwstor270`：对实际存储帐户的引用。
 
-![Tip](img/tip.png)如果你曾使用过 REST API，你可能想使用第三方产品（如 Postman ([`https://www.getpostman.com`](https://www.getpostman.com/))）来与 ARM REST API 交互。如果没有，请将浏览器指向 [`https://resources.azure.com`](https://resources.azure.com/)，使用你的订阅所有者帐户登录，并以图形方式浏览 ARM REST API 和你的 Azure 订阅资源。图 2-1 显示了该界面。
+![Tip](img/tip.png)如果你曾使用过 REST API，你可能想使用第三方产品（如 Postman (`https://www.getpostman.com/`)）来与 ARM REST API 交互。如果没有，请将浏览器指向 `https://resources.azure.com`，使用你的订阅所有者帐户登录，并以图形方式浏览 ARM REST API 和你的 Azure 订阅资源。图 2-1 显示了该界面。
 
 正如我之前提到的，我有一个名为 tlwstor270 的存储帐户，位于名为 `twtech` 的资源组中。以下是如何使用 Azure 资源浏览器“遍历树”：
 
@@ -1153,8 +562,6 @@ JSON 元素由逗号分隔的键/值对列表组成。请查看我之前讨论�
 ```
 
 Azure 中的所有部署都以 JSON 格式记录。这些所谓的 ARM 模板使创建可靠、可重复的 Azure 环境变得更加容易。
-
-
 
 # 例如，在 图 2-2 所示的 Azure 门户中，你可以看到我在测试环境中创建的可靠 tlwstor270 存储帐户。然后我选择“导出模板”设置，并单击“下载”以获取存储帐户的 ARM 模板定义。你可以在 图 2-2 中看到此过程的实际操作。
 
@@ -1216,55 +623,45 @@ Azure Government 区域对非政府雇员不可见（不可见）。在撰写本
 
 Microsoft 在配对区域之间构建了额外的高速网络连接，这向客户保证其多区域部署不会遭受过度延迟。
 
-搜索 [`https://docs.microsoft.com/azure`](https://docs.microsoft.com/azure) 中的文章“业务连续性和灾难恢复 (BCDR)：Azure 配对区域”，其中包含配对区域的主列表。
+搜索 `https://docs.microsoft.com/azure` 中的文章“业务连续性和灾难恢复 (BCDR)：Azure 配对区域”，其中包含配对区域的主列表。
 
-![提示](img/tip.png)在我的 Azure 咨询工作中，我建议客户通过访问 Azure Speed Test 2.0 [`https://azurespeedtest.azurewebsites.net/`](https://azurespeedtest.azurewebsites.net/) 来测试其位置与 Azure 之间的延迟。你可能会发现，延迟最低的 Azure 区域并非你想象的那个。
+![提示](img/tip.png)在我的 Azure 咨询工作中，我建议客户通过访问 Azure Speed Test 2.0 `https://azurespeedtest.azurewebsites.net/` 来测试其位置与 Azure 之间的延迟。你可能会发现，延迟最低的 Azure 区域并非你想象的那个。
 
 ### 功能可用性
 
 Azure 产品团队逐步在区域地图中推出新功能，因此某些产品目前可能在你的主区域中不可用。
 
-因此，密切关注“按区域提供的产品”页面 [`https://azure.microsoft.com/en-us/global-infrastructure/services/`](https://azure.microsoft.com/en-us/global-infrastructure/services/) 非常重要。同样的指导原则也适用于 Azure Government 区域。大多数时候，我发现新功能始于 Azure 公有云，很久之后才进入主权云。
+因此，密切关注“按区域提供的产品”页面 `https://azure.microsoft.com/en-us/global-infrastructure/services/` 非常重要。同样的指导原则也适用于 Azure Government 区域。大多数时候，我发现新功能始于 Azure 公有云，很久之后才进入主权云。
 
 ## 介绍 Azure 管理工具
 
+
+
 是时候熟悉最常用的 Azure 管理工具了。本书中描述的所有分步过程都假设你在 Windows 10 工作站上工作，但你可以在 macOS 或 Linux 系统上完成本书中的几乎每一项任务。
 
-### Azure 门户
+## Azure 门户
 
 Azure 门户 ([`https://portal.azure.com`](https://portal.azure.com)) 是一个响应式 Web 应用程序，构成了 Azure 中基本的图形管理平台。图 2-5 显示了 Azure 门户。
 
-*   **页面标题栏 (A)：** 顶部导航栏有时称为 `全局导航`，因为这些控件在 Azure 门户的任何位置均可用。打开“收藏夹”菜单。
-
-*   **全局搜索 (B)：** 搜索任何 Azure 资源。搜索结果包含文档链接。
-
-*   **Cloud Shell (C)：** 打开 Azure Cloud Shell 以执行命令行 Azure 工作。
-
-
-
-
-
 ### Azure 门户界面元素
 
-*   **全局订阅筛选器 (D)**：显示 Azure 订阅的子集，使 Azure 门户视图列表更易于浏览。![图 2-5：Azure 门户是你的管理运营基地。](img/9781119612148-fg0205.png)
-
-    图 2-5： Azure 门户是你的管理运营基地。
-
+*   **页面标题栏 (A)：** 顶部导航栏有时称为 `全局导航`，因为这些控件在 Azure 门户的任何位置均可用。打开“收藏夹”菜单。
+*   **全局搜索 (B)：** 搜索任何 Azure 资源。搜索结果包含文档链接。
+*   **Cloud Shell (C)：** 打开 Azure Cloud Shell 以执行命令行 Azure 工作。
+*   **全局订阅筛选器 (D)**：显示 Azure 订阅的子集，使 Azure 门户视图列表更易于浏览。
 *   **通知 (E)**：查看当前和过去部署的进度。
-
 *   **你的帐户 (F)**：注销、切换目录和编辑帐户配置文件。
-
 *   **收藏夹 (G)**：加载你最常用的 Azure 服务。
-
 *   **资源窗格 (H)**：使用搜索框查找需要配置的设置。
-
 *   **配置边栏选项卡 (I)**：*边栏选项卡* 是指你在其中进行 Azure 工作的详细屏幕。水平滚动条可帮助你左右移动。
+
+![图 2-5：Azure 门户是你的管理运营基地。](img/9781119612148-fg0205.png)
 
 ![记住](img/remember.png)你的 Azure 门户自定义仅影响你的用户帐户。你的同事将拥有她自己的收藏夹列表、订阅筛选器、自定义仪表板等。
 
 ![提示](img/tip.png)响应式 Web 应用程序会动态重新排列自身以适应不同的 Web 浏览器和屏幕尺寸。然而，在智能手机上访问完整门户通常并不有趣。Microsoft 为 iOS 和 Android 移动设备提供了 Azure 门户的移动版本。你可以在该移动应用中执行大多数管理任务，包括访问 Cloud Shell。
 
-### Azure PowerShell
+## Azure PowerShell
 
 Azure 门户很好用，但如果你被要求部署 10 个、100 个或 1,000 个 VM 怎么办？你肯定不想在 Azure 门户中通过点击来执行重复性操作。
 
@@ -1310,7 +707,7 @@ Azure 门户很好用，但如果你被要求部署 10 个、100 个或 1,000 �
 
 ![提示](img/tip.png)每当你想使用 PowerShell 管理 Azure 时，都需要使用上述步骤。但是，你可以通过使用一种称为服务主体的特殊 Azure Active Directory 帐户来实现 Azure PowerShell 登录自动化。有关详细信息，请参阅 Azure 文档文章“使用 Azure PowerShell 创建 Azure 服务主体”，网址为 [`https://docs.microsoft.com/en-us/powershell/azure/create-azure-service-principal-azureps?view=azps-3.2.0`](https://docs.microsoft.com/en-us/powershell/azure/create-azure-service-principal-azureps?view=azps-3.2.0)。
 
-### Azure CLI / Azure Cloud Shell
+## Azure CLI / Azure Cloud Shell
 
 Azure 命令行接口 (CLI) 是……嗯，一个用于 Azure 的跨平台命令行接口。我发现一些 Azure 管理员和开发人员更喜欢 Azure CLI 而不是 Azure PowerShell，因为 CLI 的学习曲线更平缓，并且速度极快，尤其是在交互模式下。
 
@@ -1362,12 +759,9 @@ Azure 命令行接口 (CLI) 是……嗯，一个用于 Azure 的跨平台命令
 
 ![技术细节](img/technicalstuff.png)Cloud Shell 之所以如此快速，是因为 Microsoft 在其全球内容分发网络中预置了 Docker 容器。Azure 使用你的客户端 IP 地址和地理位置将你连接到最近的 Cloud Shell 容器，从而提供最快的连接。
 
+![提示](img/tip.png)虽然我在本书中使用 Cloud Shell 内的 Azure CLI，但你也可以在 Windows、macOS 或 Linux 工作站上安装 Azure CLI。请访问 Azure 下载页面 [`https://azure.microsoft.com/en-us/downloads`](https://azure.microsoft.com/en-us/downloads) 以下载安装程序。
 
-
-
-![Tip](img/tip.png)虽然我在本书中使用 Cloud Shell 内的 Azure CLI，但你也可以在 Windows、macOS 或 Linux 工作站上安装 Azure CLI。请访问 Azure 下载页面 [`https://azure.microsoft.com/en-us/downloads`](https://azure.microsoft.com/en-us/downloads) 以下载安装程序。
-
-### Azure SDK
+## Azure SDK
 
 正如本章前面所述，REST API 是一种基于 HTTP 的接口，允许两个软件系统进行通信，而 Azure 门户、PowerShell 和 Azure CLI 是*抽象*（隐藏底层细节）底层 ARM REST API 的方式。
 
@@ -1388,15 +782,13 @@ Azure 命令行接口 (CLI) 是……嗯，一个用于 Azure 的跨平台命令
 
 Azure SDK 提供了与 Azure 服务交互所需的项目模板和代码库。在本书中，我使用 Visual Studio 2019 来使用 Azure SDK。如图 2-6 所示，你只需启用 Azure 开发工作负载；Visual Studio 会处理其余的设置工作。
 
-![Tip](img/tip.png)如果你是 Visual Studio 新手，可能需要获取有关修改已安装工作负载的更详细说明。请参阅 Microsoft 文档文章“修改 Visual Studio”，网址为 [`https://docs.microsoft.com/en-us/visualstudio/install/modify-visual-studio?view=vs-2019`](https://docs.microsoft.com/en-us/visualstudio/install/modify-visual-studio?view=vs-2019)。
+![提示](img/tip.png)如果你是 Visual Studio 新手，可能需要获取有关修改已安装工作负载的更详细说明。请参阅 Microsoft 文档文章“修改 Visual Studio”，网址为 [`https://docs.microsoft.com/en-us/visualstudio/install/modify-visual-studio?view=vs-2019`](https://docs.microsoft.com/en-us/visualstudio/install/modify-visual-studio?view=vs-2019)。
 
 顺便说一句，如果你在想：“嘿，我不是开发人员；我不想为 Visual Studio 付费！”请稍等一下。Microsoft 免费提供 Visual Studio 2019 Community Edition，供测试和开发使用。Windows 和 macOS 版本均可用。
 
 ![图 2-6：在 Visual Studio 2019 中启用 Azure 开发工作负载。](img/9781119612148-fg0206.png)
 
-图 2-6： 在 Visual Studio 2019 中启用 Azure 开发工作负载。
-
-### ARM REST API
+## ARM REST API
 
 如果你愿意，可以深入到 ARM REST API 的“最底层”。图 2-7 显示了 Azure 资源浏览器 ([`https://resources.azure.com`](https://resources.azure.com/))，这是一个基于浏览器的 ARM REST API 界面。
 
@@ -1411,9 +803,7 @@ Azure SDK 提供了与 Azure 服务交互所需的项目模板和代码库。在
 
 ![图 2-7：Azure 资源浏览器让你访问 ARM API。](img/9781119612148-fg0207.png)
 
-图 2-7： Azure 资源浏览器让你访问 ARM API。
-
-![Warning](img/warning.png)正如包括开源社区人士在内的许多人常说的那样，“能力越大，责任越大。”
+![警告](img/warning.png)正如包括开源社区人士在内的许多人常说的那样，“能力越大，责任越大。”
 
 你可能想知道何时以及为何需要在基本 REST API 层面与 Azure 交互。然而，这种交互比你想象的更常见。也许你正在排查资源行为故障，却无法在 Azure 门户或其他抽象层中找到所需的控件。又或许你正在编写自己的 API，需要知道如何为自己的用途构建 ARM REST API 调用。
 
@@ -1447,7 +837,7 @@ Azure 存储帐户代表一个多用途容器资源，为三种主要数据类�
 
 *非结构化数据*是没有模式强制约束的数据。你可以将*二进制大对象* (blob) 视为文件、虚拟硬盘、文档文件和媒体文件。所有这些对象都是文件存储对象，可以具有任何特定格式和内容。
 
-![Technical stuff](img/technicalstuff.png)虽然 *blob* 一词包含 *large* 之意，但 blob 对象可以是任意大小的文件，无论是 1 KB 的文本文件还是 120 GB 的虚拟硬盘文件。
+![技术细节](img/technicalstuff.png)虽然 *blob* 一词包含 *large* 之意，但 blob 对象可以是任意大小的文件，无论是 1 KB 的文本文件还是 120 GB 的虚拟硬盘文件。
 
 ### 半结构化数据
 
@@ -1478,12 +868,13 @@ Azure 生态系统中的结构化数据库示例包括 Azure SQL 数据库和 Az
 
 在创建第一个存储帐户之前，你应该了解一些关键事实。首先，你需要确定需要哪种类型的存储帐户。你的选择如下：
 
-
-
-## 存储账户类型
+### 存储账户类型
 
 *   **General-purpose v2（通用 v2）：** 除非您有令人信服的理由选择其他类型，否则应在大多数情况下选择此类型，因为它是功能最全面的选项。它包含所有四种存储账户服务：Blob、表、队列和文件。
 *   **General-purpose v1（通用 v1）：** 此选项主要用于支持经典 Azure 部署，其功能比 v2 少。
+
+
+
 *   **Blob storage（Blob 存储）：** 此存储账户仅支持 Blob 服务。曾经您需要此类型来指定访问层，但现在新部署无需选择此存储账户类型。
 
 ## 性能层级
@@ -1497,8 +888,11 @@ Azure 生态系统中的结构化数据库示例包括 Azure SQL 数据库和 Az
 最后，您必须确定需要哪种存储账户复制选项。Azure 存储具有高可用性，因为 Microsoft 至少会将您的存储账户*复制*（创建精确副本）三次。以下是您的选项，按成本从低到高排列：
 
 *   **Locally redundant storage (LRS，本地冗余存储)：** Microsoft 在您的主区域内的单个数据中心内制作存储账户的三个副本。
+
 *   **Zone-redundant storage (ZRS，区域冗余存储)：** 三个存储账户副本分布在您主区域内的不同数据中心中。
+
 *   **Geo-redundant storage (GRS，异地冗余存储)：** 三个存储账户副本分布在您主区域内的数据中心中，另外三个副本放置在 Microsoft 选择的次要区域中。（有关配对区域的更多信息，请参阅 Chapter 2）。
+
 *   **Read-access geo-redundant storage (RA-GRS，读取访问异地冗余存储)：** 此选项即 GRS，但您可以获得对次要存储账户内容的只读访问权限。
 
 您选择的复制选项取决于您的可用性需求、合规性要求等。
@@ -1520,7 +914,9 @@ Table 3-1 总结了每种存储账户复制选项提供的保护。
 当您知道需要哪种类型的存储账户时，可以在 Azure 门户中创建新的存储账户。转到 [`https://portal.azure.com`](https://portal.azure.com)，使用订阅所有者帐户登录，然后执行以下步骤：
 
 1.  **在 Azure 门户中，导航到“存储账户”边栏选项卡。**
+
     您可以通过多种方式执行此操作，但我建议在全局搜索框中输入 **storage accounts** 并选择相应的链接。
+
     ![Tip](img/tip.png) **提示：** 请勿选择“存储账户(经典)”，因为它涉及 Azure 服务管理。本书涉及 Azure Resource Manager (ARM)。
 
 2.  **在“存储账户”边栏选项卡上，单击“添加”。**
@@ -1528,28 +924,43 @@ Table 3-1 总结了每种存储账户复制选项提供的保护。
 3.  **在“基本信息”页面上，指定订阅和新的或现有的资源组。**
 
 4.  **填写“实例详细信息”下方的表单（请参阅 Figure 3-1）并单击“下一步”继续。** ![FIGURE 3-1: Creating a general purpose storage account.](img/9781119612148-fg0301.png)
+
     FIGURE 3-1: Creating a general purpose storage account.
+
     *   **Storage Account Name（存储账户名称）：** 此名称必须全局唯一，且只能包含小写字母和数字。最大长度为 24 个字符。
+
     *   **Location（位置）：** 将存储账户放置在最接近需要其资源的用户的位置。
+
     *   **Performance（性能）：** 标准为低速存储，而高级为高速（且更昂贵）存储。除非您对更可预测的输入/输出性能有需求，否则请选择标准。
+
     *   **Account Kind（账户类型）：** 您始终应选择“General-purpose v2”（通用 v2）。
+
     *   **Replication（复制）：** 除非您有更高可用性的业务需求，否则本地冗余存储 (LRS) 是一个很好的起始选择。您稍后随时可以通过访问存储账户的“配置”边栏选项卡来更改决定。
+
     *   **Access Tier（访问层）**（默认）：访问层选项可能会根据您是频繁访问（热层）还是不频繁访问（冷层）存储账户数据而为您提供价格优惠。本章稍后将详细讨论层级。
 
 5.  **在“网络”页面上，单击“下一步”继续。**
+
     “网络连接”边栏选项卡允许您为存储账户配置服务终结点，这会将存储账户集成到 Azure 虚拟网络中。我在 Chapter 4 中讨论服务终结点。
 
 6.  **填写“高级”页面上的表单（如 Figure 3-2 所示）：** ![FIGURE 3-2: Configuring advanced storage account options.](img/9781119612148-fg0302.png)
+
     FIGURE 3-2: Configuring advanced storage account options.
+
     *   **Secure Transfer Required（需要安全传输）：** 将此选项保留为“Enabled（已启用）”，以确保您使用加密的 HTTPS（而非未加密的 HTTP）来访问存储账户数据。
+
     *   **Allow Access From（允许从以下位置访问）：** 将此选项保留为“All Networks（所有网络）”。您也可以选择使用服务终结点将存储账户集成到虚拟网络中。
+
     *   **Blob Soft Delete（Blob 软删除）：** 启用此选项可为已删除的 Blob 对象创建一种回收站。
+
     *   **Hierarchical Namespace（分层命名空间）：** 将此选项保留为“Disabled（已禁用）”。（我在 Chapter 4 中讨论 Azure Data Lake Storage。）
 
 7.  **在“标记”屏幕上，单击“下一步: 查看 + 创建”。**
+
     使用分类标记是对相关 Azure 资源进行分类的好方法，但您现在不必担心标记。
 
 8.  **如果验证通过，单击“创建”以将部署提交给 ARM。**
+
     如果收到验证错误，请检查配置边栏选项卡选项卡；包含错误的选项卡旁边应有一个圆点。
 
 ![Remember](img/remember.png) **请记住：** 如果我提供的过程与您在 Azure 门户中看到的不匹配，请不要惊慌。原因很简单：Microsoft 不断调整门户，更新用户界面并添加或修改服务和设置。重要的是要了解您正在配置的内容。
@@ -1557,15 +968,14 @@ Table 3-1 总结了每种存储账户复制选项提供的保护。
 Figure 3-3 显示了 ARM 部署的详细信息。
 
 ![FIGURE 3-3: Watching a Microsoft Azure deployment.](img/9781119612148-fg0303.png)
+
 FIGURE 3-3: Watching a Microsoft Azure deployment.
 
 以下是一些需要注意的关键功能：
 
 *   打开“通知”菜单 (A) 以检查当前和最近部署的状态。
+
 *   获取部署的基础 ARM 模板 (B) 访问权限，这对于未来的自动化部署非常有用。
-
-
-
 
 *   **重新部署** 按钮 (C) 在部署失败时非常有用；你可以修复 ARM 模板中的错误，并从中断处继续部署。ARM 这一重要特性称为*幂等性*。
 
@@ -1687,9 +1097,6 @@ Azure 存储资源管理器是一款免费、闭源、跨平台的桌面应用�
 
     我在 图 3-6 中展示了该界面。Azure 门户应显示一条消息，告知你将 Blob 标记为 **归档** 会使其无法访问，直到你显式地将其恢复到 **热** 或 **冷** 层。
 
-
-
-
 存档的 Blob 无法访问，除非你将它们移出存档层。Microsoft 将此过程称为“重新激活”。要重新激活存档的 Blob，请重复这些步骤，但选择“冷”或“热”作为 Blob 的新访问层。
 
 ![图 3-6：在 Azure 存储帐户中更改 Blob 的访问层。](img/9781119612148-fg0306.png)
@@ -1724,7 +1131,9 @@ Azure 存储资源管理器是一款免费、闭源、跨平台的桌面应用�
 
 7.  **在 Cloud Shell 工具栏上，单击“上传/下载文件”按钮，然后从下拉列表中选择“管理文件共享”。**
 
-    单击“上传”按钮（请参阅图 3-7）以上传脚本文件、网页和其他项目构件，然后通过 Cloud Shell 从世界任何地方访问它们。
+
+
+单击“上传”按钮（请参阅图 3-7）以上传脚本文件、网页和其他项目构件，然后通过 Cloud Shell 从世界任何地方访问它们。
 
 ![图 3-7：Azure Cloud Shell 和你的个人云共享。](img/9781119612148-fg0307.png)
 
@@ -1812,9 +1221,6 @@ Azure 存储帐户表存储服务是一种 NoSQL 键值存储，用于表示半�
 本章内容
 
 ![要点](img/check.png) **区分 Azure 的虚拟网络构建基块**
-
-
-
 
 ## 部署和配置虚拟网络
 
@@ -1934,8 +1340,6 @@ Azure 部署新 VNet 后，你需要重新访问其配置设置以定义第二�
 
 图 4-3： Azure 为你生成很酷的网络关系图。
 
-
-
 具体而言，将 VNet 拓扑图像导入 Visio，右键单击它，然后从 Visio 的快捷菜单中选择“组合”⇒“取消组合”。现在你可以访问所有形状。你还应该在 [`https://www.microsoft.com/en-us/download/details.aspx?id=41937`](https://www.microsoft.com/en-us/download/details.aspx?id=41937) 下载 Azure Visio 形状库。
 
 #### 使用 PowerShell 部署
@@ -1994,29 +1398,31 @@ Azure 部署新 VNet 后，你需要重新访问其配置设置以定义第二�
 
 默认在 VNet 中启用的 Azure 提供的名称解析，可确保你的 VM 既可以通过短主机名，也可以通过 IP 地址进行通信。然而，一些企业面临的问题是，他们希望其云 VM 使用自定义 DNS 域名（例如 company.com）。
 
+
+
 如果你需要不同 VNet 中的 VM 解析彼此的主机名，或者想要为云 VM 使用自定义的完全限定域名，则需要配置自定义名称解析。例如，你可以执行以下任一操作：
 
 * 部署专用 Azure 域名系统 (DNS) 区域，并将该区域链接到这两个子网。
 * 在每个 VNet 中部署 DNS 服务器 VM，并将它们配置为将名称解析查询相互转发。
 
-在你的 VNet 中，浏览到 DNS 服务器设置。你应该会看到默认（Azure 提供的）设置。如果你需要重写 DNS，请选择“自定义”，然后提供一个或多个自定义 DNS 服务器 IPv4 地址。这些地址可能指向
+在你的 VNet 中，浏览到 DNS 服务器设置。你应该会看到默认（Azure 提供的）设置。如果你需要重写 DNS，请选择“自定义”，然后提供一个或多个自定义 DNS 服务器 IPv4 地址。这些地址可能指向：
 
 * 本地 DNS 服务器（如果你在混合云中运行）
 * 在本地 VNet 中运行的 DNS 服务器 VM
-* Azure 提供的虚拟 IP 地址 (168.63.129.16)
+* Azure 提供的虚拟 IP 地址 (`168.63.129.16`)
 
-![提示](img/tip.png) 168.63.129.16 是一个值得了解的 IP 地址，因为如果使用规定的自定义 DNS 服务器列表进行递归名称查找失败，你可能希望 VM 回退到 Azure 提供的 DNS。
+![提示](img/tip.png) `168.63.129.16` 是一个值得了解的 IP 地址，因为如果使用规定的自定义 DNS 服务器列表进行递归名称查找失败，你可能希望 VM 回退到 Azure 提供的 DNS。
 
 ![警告](img/warning.png) 切勿尝试从 Azure 中 VM 内部配置 TCP/IP 属性。如果这样做，你将立即失去与 VM 的网络连接。请记住，你处理的是基于云的软件定义网络，而不是本地物理或虚拟服务器。你需要在 Azure 资源管理器 (ARM) 中执行所有 VM 网络配置，无论你使用 Azure 门户、PowerShell 还是 Azure 命令行接口 (CLI)。
 
-#### 配置网络安全组
+### 配置网络安全组
 
 NSG 是可与 VM 虚拟网络接口卡和/或 VNet 子网关联的流量筛选器。我建议将 NSG 与子网关联，以减少未来的故障排除工作量，并同时将相同的入站和出站流量规则应用到多个 VM。
 
 NSG 由一条或多条访问规则组成，这些规则具有以下属性：
 
 * **优先级：** 较低的优先级值会最先被评估。当你添加规则时，请务必在它们之间留出空间，以便为未来的增长留出余地。
-* **名称：** 我建议你尽可能用描述性的方式命名 NSG 规则（例如 HTTP-in-Allow）。
+* **名称：** 我建议你尽可能用描述性的方式命名 NSG 规则（例如 `HTTP-in-Allow`）。
 * **端口：** 此属性是传输控制协议 (TCP) 或用户数据报协议 (UDP) 端口分配。
 * **协议：** 此属性是 TCP、UDP 或两者皆有。
 * **源：** 此属性是流量流的来源。
@@ -2025,7 +1431,7 @@ NSG 由一条或多条访问规则组成，这些规则具有以下属性：
 
 NSG 根据流量方向，将每个流量流通过其入站或出站规则列表。适用的第一条规则将成为生效规则。除非你有一条捕获所有未分类流量并予以拒绝的“全捕获”规则，否则你会留下不想要的连接类型的可能性，这可能会危及 VM 的安全性。
 
-表 4-1 和 表 4-2 总结了 NSG 的默认入站和出站规则。
+表 4-1 和表 4-2 总结了 NSG 的默认入站和出站规则。
 
 **表 4-1** 默认入站安全规则
 
@@ -2051,68 +1457,63 @@ NSG 根据流量方向，将每个流量流通过其入站或出站规则列表�
 
 要创建 NSG 并允许入站 HTTP 流量（TCP 端口 80），请执行以下步骤：
 
-
-
-
-### 配置网络安全组 (NSG)
-
 #### 创建 NSG
 
-1.  使用 Azure 门户的全局搜索查找 **Network Security Groups** 边栏选项卡；然后单击工具栏上的 **Add**。
+1. 使用 Azure 门户的全局搜索查找 **Network Security Groups** 边栏选项卡；然后单击工具栏上的 **Add**。
 
     ![Remember](img/remember.png) 不要选择 **Network Security Groups (Classic)** 选项。本书的重点是 ARM。
 
-2.  填写 **Create Network Security Group** 边栏选项卡上的表单，然后单击 **Create**。
+2. 填写 **Create Network Security Group** 边栏选项卡上的表单，然后单击 **Create**。
 
     使用以下属性：
 
-    *   **Name:** `NSG1`
-    *   **Subscription:** `[your subscription]`
-    *   **Resource Group:** `Wiley`
-    *   **Location:** `East US 2`（使用你的主区域；这些示例使用的是我的）
+    * **Name:** `NSG1`
+    * **Subscription:** `[your subscription]`
+    * **Resource Group:** `Wiley`
+    * **Location:** `East US 2`（使用你的主区域；这些示例使用的是我的）
 
 #### 配置入站安全规则
 
-3.  部署完成后，选择你的 NSG，并在 Settings 列表中浏览到 **Inbound Security Rules** 设置。
+3. 部署完成后，选择你的 NSG，并在 Settings 列表中浏览到 **Inbound Security Rules** 设置。
 
     请注意，入站和出站安全规则有单独的设置。**Default Rules** 按钮切换它们的状态。对于此练习，请保持两个设置都处于启用状态。
 
-4.  单击 **Add**。
+4. 单击 **Add**。
 
-5.  填写 **Add Inbound Security Rule** 边栏选项卡上的表单，然后单击 **Create**。
+5. 填写 **Add Inbound Security Rule** 边栏选项卡上的表单，然后单击 **Create**。
 
     默认情况下，Azure 会将你置于 **Advanced** 视图中，这正是你想要的位置。（如果你愿意，单击 **Basic** 查看简化视图。）
 
     对 `NSG1` 使用以下配置属性：
 
-    *   **Source:** `Service Tag`, `Internet`。
+    * **Source:** `Service Tag`, `Internet`。
         源可以是 IP 地址或地址范围的逗号分隔列表、服务标记或应用程序安全组。目前，请理解此规则适用于源自公共 Internet 的入站流量。
-    *   **Source Port Ranges:** `Any`（用星号表示）
-    *   **Destination:** `VirtualNetwork`（服务标记来救场）
-    *   **Destination Port Ranges:** `80`
-    *   **Protocol:** `TCP`
-    *   **Action:** `Allow`
-    *   **Priority:** `100`
-    *   **Name:** `HTTP-In-Allow`
-    *   **Description:** （如果想要可添加）
+    * **Source Port Ranges:** `Any`（用星号表示）
+    * **Destination:** `VirtualNetwork`（服务标记来救场）
+    * **Destination Port Ranges:** `80`
+    * **Protocol:** `TCP`
+    * **Action:** `Allow`
+    * **Priority:** `100`
+    * **Name:** `HTTP-In-Allow`
+    * **Description:** （如果想要可添加）
 
 #### 配置出站安全规则
 
-6.  为 `NSG1` 创建一个新的**出站**（我重复：出站）安全规则。
+6. 为 `NSG1` 创建一个新的**出站**（我重复：出站）安全规则。
 
     此规则允许从 `web1` 子网流向你将放置在 `app1` 子网上的存储帐户的流量。
 
     使用以下属性：
 
-    *   **Source:** `Virtual Network`
-    *   **Source Port Ranges:** `Any`
-    *   **Destination:** `Service tag`, `Storage`
-    *   **Destination Port Ranges:** `Any`
-    *   **Protocol:** `Any`
-    *   **Action:** `Allow`
-    *   **Priority:** `100`
-    *   **Name:** `Storage-Out-Allow`
-    *   **Description:** （如果想要可填写）
+    * **Source:** `Virtual Network`
+    * **Source Port Ranges:** `Any`
+    * **Destination:** `Service tag`, `Storage`
+    * **Destination Port Ranges:** `Any`
+    * **Protocol:** `Any`
+    * **Action:** `Allow`
+    * **Priority:** `100`
+    * **Name:** `Storage-Out-Allow`
+    * **Description:** （如果想要可填写）
 
 Figure 4-4 显示了我在 MSG1 Overview 页面上完成的 `NSG1` 配置。
 
@@ -2124,11 +1525,11 @@ FIGURE 4-4: NSG1 configuration.
 
 **Service tags**（服务标记）是聚合 IP 地址前缀池的标签，使编写准确的 NSG 规则变得更加容易。一些常见的服务标记包括：
 
-*   **VirtualNetwork:** 所有虚拟网络地址空间，包括本地和对等互连的 VNet
-*   **Internet:** 所有公共 IP 地址，包括 Azure 拥有的和公共的
-*   **AzureLoadBalancer:** 你部署的 Azure 负载均衡器的虚拟 IP 地址
-*   **AzureCloud:** Azure 公共 IP 地址空间
-*   **Storage:** Azure 存储服务的 IP 地址范围
+* **VirtualNetwork:** 所有虚拟网络地址空间，包括本地和对等互连的 VNet
+* **Internet:** 所有公共 IP 地址，包括 Azure 拥有的和公共的
+* **AzureLoadBalancer:** 你部署的 Azure 负载均衡器的虚拟 IP 地址
+* **AzureCloud:** Azure 公共 IP 地址空间
+* **Storage:** Azure 存储服务的 IP 地址范围
 
 **Application security groups (ASGs)**（应用程序安全组）实际上是用户创建的服务标记。通过它们，你可以按管理员定义的方式对资源进行分组，以简化 NSG 规则分配。例如，你可能会创建一个名为 `web-servers` 的 ASG，应用于部署中的 Web 服务器 VM。
 
@@ -2140,10 +1541,9 @@ FIGURE 4-4: NSG1 configuration.
 
 按照以下步骤将新的 NSG 与 `VNet1` 上的 `web1` 子网和 `VNet2` 上的 `web2` 子网链接：
 
-1.  在 **NSG1 Configuration** 边栏选项卡上，选择 **Subnets**。
-2.  在 **Subnets** 边栏选项卡上，单击 **Associate**。
-3.  在 **Associate subnets** 边栏选项卡上，选择适当的虚拟网络和子网。
-
+1. 在 **NSG1 Configuration** 边栏选项卡上，选择 **Subnets**。
+2. 在 **Subnets** 边栏选项卡上，单击 **Associate**。
+3. 在 **Associate subnets** 边栏选项卡上，选择适当的虚拟网络和子网。
     你需要完成此过程两次：一次用于 `VNet1`/`web1`，一次用于 `VNet2`/`web2`。
 
 ### 理解服务终结点
@@ -2154,44 +1554,31 @@ FIGURE 4-4: NSG1 configuration.
 
 本节将引导你完成配置。要在 `Vnet1` 的 `app1` 子网上创建 `Microsoft.Storage` 服务终结点，请执行以下步骤：
 
-1.  在 Azure 门户中，浏览到 `VNet1`，然后选择 **Service Endpoints** 设置。
-2.  在工具栏上，单击 **Add**。
-3.  在 **Add Service Endpoints** 边栏选项卡上，选择 `Microsoft.Storage` 作为服务，选择 `app1` 作为子网；然后单击 **Add** 完成配置。
-
+1. 在 Azure 门户中，浏览到 `VNet1`，然后选择 **Service Endpoints** 设置。
+2. 在工具栏上，单击 **Add**。
+3. 在 **Add Service Endpoints** 边栏选项卡上，选择 `Microsoft.Storage` 作为服务，选择 `app1` 作为子网；然后单击 **Add** 完成配置。
     你的工作还没有完成：你需要将存储帐户与 `app1` 子网关联。你看，在 VNet 上定义服务终结点为将存储帐户集成到网络中打开了可能性。接下来你需要转到存储帐户以完成配置。
-
     在这种情况下，你可以忽略服务终结点策略，因为截至撰写本文时，它是一个公共预览功能，没有关联的服务级别协议 (SLA)。服务终结点策略允许你更精细地筛选发往 Azure 服务的 VNet 流量。
-
-4.  打开 **Storage Explorer**，确保你可以连接到存储帐户。
-
+4. 打开 **Storage Explorer**，确保你可以连接到存储帐户。
     如果你在 Chapter 3 中创建了存储帐户，可以使用该存储帐户。你应该能够访问文件的 blob 容器以及其中的 blob。
-
-5.  回到 Azure 门户，浏览到 `VNet1` 资源，然后选择 **Service Endpoints** 设置。
-6.  从 `Microsoft.Storage` 的上下文菜单（即行尾的省略号；我在 **Figure 4-5** 中向你展示了这一点），选择 **Configure Virtual Networks in a storage account**。
+5. 回到 Azure 门户，浏览到 `VNet1` 资源，然后选择 **Service Endpoints** 设置。
+6. 从 `Microsoft.Storage` 的上下文菜单（即行尾的省略号；我在 **Figure 4-5** 中向你展示了这一点），选择 **Configure Virtual Networks in a storage account**。
 
     ![FIGURE 4-5: In the Azure portal, most resources have a context menu from which you can select configuration options.](img/9781119612148-fg0405.png)
 
     FIGURE 4-5: In the Azure portal, most resources have a context menu from which you can select configuration options.
 
-7.  在 **Storage Accounts** 边栏选项卡上，选择你的存储帐户和 **Firewalls and Virtual Networks** 设置。
-8.  在 **Allow Access From** 部分，选择 **Selected Networks**。
-9.  在 **Virtual Networks** 部分，选择 **Add Existing Virtual Network**。
+7. 在 **Storage Accounts** 边栏选项卡上，选择你的存储帐户和 **Firewalls and Virtual Networks** 设置。
+8. 在 **Allow Access From** 部分，选择 **Selected Networks**。
+9. 在 **Virtual Networks** 部分，选择 **Add Existing Virtual Network**。
 10. 浏览到 `VNet1` 虚拟网络和 `app1` 子网，然后单击 **Add**。
 11. 单击 **Save** 完成配置。
-
      启用服务终结点后，存储帐户的 **Firewalls and Virtual Networks** 边栏选项卡包含一些其他选项：
-
-     *   **Add Your Client IP Address:** 如果不选择此选项，你将无法从当前工作站访问存储帐户。
-     *   **Allow Trusted Microsoft Services to Access This Storage Account:** 启用此选项以确保其他 Azure 服务（如 Key Vault、Azure AD 等）可以访问存储帐户，反之亦然。
-
+     * **Add Your Client IP Address:** 如果不选择此选项，你将无法从当前工作站访问存储帐户。
+     * **Allow Trusted Microsoft Services to Access This Storage Account:** 启用此选项以确保其他 Azure 服务（如 Key Vault、Azure AD 等）可以访问存储帐户，反之亦然。
 12. 关闭并重新打开 **Storage Explorer**。
 13. 测试与存储帐户的连接。
-
      你应该会看到 Figure 4-6 中显示的错误消息。
-
-
-
-
 
 ![图 4-6：服务终结点将 Azure 资源保护到特定虚拟网络。](img/9781119612148-fg0406.png)
 
@@ -2201,8 +1588,8 @@ FIGURE 4-4: NSG1 configuration.
 
 以下是将两个 VNet 进行逻辑链接以支持需要此功能的拓扑的两种方式：
 
-*   支持 VNet 间通信的生产/开发 VNet
-*   中心辐射型 VNet 架构，其中心 VNet 具有到本地环境的链接
+* 支持 VNet 间通信的生产/开发 VNet
+* 中心辐射型 VNet 架构，其中心 VNet 具有到本地环境的链接
 
 Azure 为我们提供了两种链接 VNet 的选项，我将在下文中进行描述。
 
@@ -2214,26 +1601,23 @@ VNet 对等互连是无缝连接两个 Azure 虚拟网络的一种方式。直�
 
 请遵循以下步骤在您的 VNet1 和 VNet2 虚拟网络之间配置 VNet 对等互连：
 
-1.  **在 Azure 门户中，浏览到 VNet1，选择“对等互连”设置，然后单击“添加”。**
-2.  **填写“添加对等互连”边栏选项卡上的表单，然后单击“确定”。**
-
+1. **在 Azure 门户中，浏览到 VNet1，选择“对等互连”设置，然后单击“添加”。**
+2. **填写“添加对等互连”边栏选项卡上的表单，然后单击“确定”。**
     使用以下配置属性：
-
-    *   *从 VNet1 到远程虚拟网络的对等互连名称：* `vnet1-to-vnet2-peering`
-    *   *虚拟网络部署模型：* 资源管理器
-    *   *订阅：* `[your subscription]`
-    *   *虚拟网络：* `VNet2`
-    *   *从远程虚拟网络到 VNet1 的对等互连名称：* `vnet2-to-vnet1-peering`
-
+    * *从 VNet1 到远程虚拟网络的对等互连名称：* `vnet1-to-vnet2-peering`
+    * *虚拟网络部署模型：* 资源管理器
+    * *订阅：* `[your subscription]`
+    * *虚拟网络：* `VNet2`
+    * *从远程虚拟网络到 VNet1 的对等互连名称：* `vnet2-to-vnet1-peering`
         (不久前，您还必须在两个 VNet 中分别配置对等互连；现在能在一个配置边栏选项卡中定义双方，真是方便。)
+    * *允许虚拟网络访问（双向）：* 已启用
+    * *配置转发流量设置（双向）：* 已禁用
+    * *允许网关传输：* 未选中
+3. **单击“确定”将配置提交给 ARM。**
 
-    *   *允许虚拟网络访问（双向）：* 已启用
-    *   *配置转发流量设置（双向）：* 已禁用
-    *   *允许网关传输：* 未选中
 
-3.  **单击“确定”将配置提交给 ARM。**
 
-    最终，VNet1 和 VNet2 的“对等互连”边栏选项卡应显示对等互连状态为“已连接”。您现在拥有了一条仅涉及 Azure 的两个 VNet 之间的路由路径——不涉及公共 Internet（或 VPN 连接）。
+最终，VNet1 和 VNet2 的“对等互连”边栏选项卡应显示对等互连状态为“已连接”。您现在拥有了一条仅涉及 Azure 的两个 VNet 之间的路由路径——不涉及公共 Internet（或 VPN 连接）。
 
 #### 理解服务链
 
@@ -2243,7 +1627,7 @@ VNet 对等互连是无缝连接两个 Azure 虚拟网络的一种方式。直�
 
 ![图 4-7：中心辐射型虚拟网络拓扑。](img/9781119612148-fg0407.png)
 
-图 4-7： 中心辐射型虚拟网络拓扑。
+图 4-7：中心辐射型虚拟网络拓扑。
 
 在图中，中心虚拟网络充当 Azure 与企业本地网络环境之间的中转点。（我将在第 13 章中讨论 VPN 和混合云。）
 
@@ -2313,9 +1697,6 @@ VNet 对等互连是无缝连接两个 Azure 虚拟网络的一种方式。直�
 *   将其现有工作负载迁移到 Azure 时
 *   将新工作负载直接部署到云中时
 
-
-
-
 作为云顾问，我的一大乐趣是向客户展示他们不必使用 Azure VM。Azure 包含许多出色的平台即服务 (PaaS) 选项，例如 Azure 应用服务和 Azure SQL 数据库，这些选项可以提供地理缩放和快速敏捷性。
 
 如果你需要对环境进行全栈控制，Azure 完全支持 VM。在本章中，我将解释各种 Azure VM 选项，以及如何在 Azure 中部署和配置 Windows Server 和 Linux VM。
@@ -2373,7 +1754,7 @@ Azure 还支持以下认可的 64 位 Linux 发行版：
 
 ![图 5-1：Azure 市场是多种 VM 类型的一站式商店。](img/9781119612148-fg0501.png)
 
-图 5-1： Azure 市场是多种 VM 类型的一站式商店。
+图 5-1：Azure 市场是多种 VM 类型的一站式商店。
 
 ![Warning](img/warning.png)我在此提供的说明仅供参考，并不全面。请查阅 Azure 文档，以获取关于准备本地 Linux 和 Windows Server VM 以上传到 Azure 的完整分步指导。
 
@@ -2450,9 +1831,6 @@ Azure 还支持以下认可的 64 位 Linux 发行版：
 
 随着时间的推移，你将通过检查其 ID 标签来识别特定 VM 大小来自哪个系列。例如，D 系列 VM 属于通用型，因此是 Azure 客户最常使用的。请注意，这些大小是有版本的；例如，你可以期望 v3 映像拥有 v2 映像没有的功能。
 
-
-
-
 ![Tip](img/tip.png)如果您部署的 VM 规模从成本或性能角度来看不足以满足您的需求，请不必担心。您可以动态调整 VM 大小，以更好地适应您的情况。
 
 ### 存储
@@ -2495,11 +1873,13 @@ Azure 使用一项称为 `Managed Disks` 的功能来存储您的操作系统和
 
 ![图 5-2：左侧为可用性集；右侧为可用性区域。](img/9781119612148-fg0502.png)
 
-图 5-2： 左侧为可用性集；右侧为可用性区域。
+图 5-2：左侧为可用性集；右侧为可用性区域。
 
 *可用性集* 是一个容器对象，您可以在其中填充同一区域内的 VM 实例。可用性集可保护您的 VM 层免受主区域内单个数据中心故障的影响。您的 VM 会被放置在不同机架上的独立硬件主机上；因此，如果 Microsoft 某个机架发生电源或交换机故障，或者需要让您的硬件主机脱机，您的服务仍可保持可用，因为您至少在别处托管了一个成员。
 
-相比之下，*可用性区域* 可防止主区域内整个数据中心发生故障。您将 VM 放置在该区域内的不同数据中心中。您无需担心延迟，因为 Microsoft 在区域数据中心群集之间拥有冗余电源、冷却和网络链路。
+
+
+相比之下，**可用性区域**可防止主区域内整个数据中心发生故障。您将 VM 放置在该区域内的不同数据中心中。您无需担心延迟，因为 Microsoft 在区域数据中心群集之间拥有冗余电源、冷却和网络链路。
 
 ![Warning](img/warning.png)如果您在部署期间忘记将 VM 放置在可用性区域或可用性集中，则需要重新部署才能进行此更改。是的，这很麻烦，所以请确保第一次就把这项任务做对。
 
@@ -2509,7 +1889,7 @@ Azure 使用一项称为 `Managed Disks` 的功能来存储您的操作系统和
 
 ### 可伸缩性
 
-*可伸缩性* 是指您调整 VM 大小的能力。它也意味着您可以通过部署额外实例来扩展 VM。像 `Azure 应用服务` 这样的 PaaS 服务可以为您处理自动缩放；此功能是 PaaS 和 IaaS 之间强有力的区别因素。
+**可伸缩性**是指您调整 VM 大小的能力。它也意味着您可以通过部署额外实例来扩展 VM。像 `Azure 应用服务` 这样的 PaaS 服务可以为您处理自动缩放；此功能是 PaaS 和 IaaS 之间强有力的区别因素。
 
 目前，Azure VM 最接近水平自动缩放的功能是 `虚拟机规模集` (`VMSS`)。借助 `VMSS`，您可以创建一个 VM 群集，并指示 Azure 根据您针对 CPU 负载、时间计划等制定的规格进行自动缩放。
 
@@ -2548,8 +1928,6 @@ Azure 使用一项称为 `Managed Disks` 的功能来存储您的操作系统和
     ![图 5-3：创建虚拟机边栏选项卡。](img/9781119612148-fg0503.png)
 
     图 5-3： 创建虚拟机边栏选项卡。
-
-
 
 从现在开始，当我在这些部署边栏选项卡中给你建议的选择时，我将省略你已经了解的字段，例如订阅、资源组和区域。请使用以下信息完成其他字段：
 
@@ -2664,56 +2042,76 @@ Visual Studio 2019 Community Edition ([`https://visualstudio.microsoft.com/vs/co
 
 #### 部署 VM
 
-
-
 #### 从 Azure 快速入门模板部署 Windows Server VM
 
 假设你已打开 Visual Studio 并登录到 Azure 订阅，那么你就可以开始了。在本节中，你将从 Azure 快速入门模板库部署一台 Windows Server VM，该库位于 `https://azure.microsoft.com/en-us/resources/templates/`。我使用的是一个包含托管磁盘的模板定义。请遵循以下步骤：
 
 1.  **在 Visual Studio 中，选择“文件”⇒“新建”⇒“项目”。**
+
     “创建新项目”对话框随即打开。
 
 2.  **在 Visual Studio 模板库中搜索“Azure 资源组”，将其选中，然后单击“下一步”。**
 
 3.  **为项目命名并保存。**
+
     选择一个有意义的项目名称，例如“Simple Windows VM”，选择你喜欢的目录位置，然后单击“创建”。
 
 4.  **在 Azure 快速入门模板库中选择 `101-vm-with-standardssd-disk` 模板，然后单击“确定”。**
+
     图 5-6 显示了该界面。
+
     ![图 5-6：在 Visual Studio 2019 中创建资源组部署项目。](img/9781119612148-fg0506.png)
+
     图 5-6： 在 Visual Studio 2019 中创建资源组部署项目。
 
 5.  **双击 `azuredeploy.json` 模板文件。**
+
     此操作将 JavaScript Object Notation (JSON) 文件加载到代码编辑器中。请特别注意 JSON 大纲窗格，如图 5-7 所示。
+
     ![图 5-7：代码编辑器中的 ARM 模板。](img/9781119612148-fg0507.png)
+
     图 5-7： 代码编辑器中的 ARM 模板。
 
 6.  **浏览 ARM 模板的内容。**
+
     JSON 大纲视图中显示的三个元素为：
+
     *   **parameters（参数）：** 你在部署时向模板提供这些值。请注意第 26-30 行的 `allowedValues` 元素；模板作者预先填充了 VM 磁盘类型，以简化验证和部署。
     *   **variables（变量）：** 这些值表示在模板内部引用的固定或动态数据。
     *   **resources（资源）：** 在此部署中，你将创建四种资源类型：虚拟机、虚拟 NIC、虚拟网络和公共 IP 地址。
 
 7.  **在解决方案资源管理器中，右键单击项目，然后从快捷菜单中选择“验证”。**
+
     “验证到资源组”对话框随即打开。
 
 8.  **填写对话框的字段，然后单击“编辑参数”以提供参数值。**
+
     你可以在图 5-8 中看到我的环境。
+
     ![图 5-8：验证我们的 ARM 模板。](img/9781119612148-fg0508.png)
+
     图 5-8： 验证我们的 ARM 模板。
+
     ![请记住](img/remember.png) Visual Studio 允许你在将模板部署到 Azure 之前对其进行验证。资源组是 Azure 中的基本部署单位。因此，你的部署必须指定一个新的或现有的资源组。
 
 9.  **单击“验证”，并观察“输出”窗口中的状态消息。**
+
     请务必查看 Visual Studio 应用程序后面；Azure 会生成一个 PowerShell 控制台会话，提示你确认管理员密码。
+
     你在“输出”窗口中寻找的反馈信息是：
+
     `Template is valid.`
+
     如果模板验证失败，Visual Studio 会相当清楚地告诉你发现问题的模板代码行。你可以调试并根据需要重试验证多次，直到模板通过验证。
 
 10. **通过在解决方案资源管理器中右键单击项目并从快捷菜单中选择“部署”来部署 VM。**
+
     ![提示](img/tip.png) 快捷菜单包含对验证配置的引用。
 
 11. **监视进度，并在 Azure 门户中验证 VM 是否存在。**
+
     当你在“输出”窗口中看到以下状态行时，即表示部署已成功完成：
+
     `Successfully deployed template 'azuredeploy.json' to resource group 'your-resource-group'.`
 
 ### 连接到 VM
@@ -2721,12 +2119,15 @@ Visual Studio 2019 Community Edition ([`https://visualstudio.microsoft.com/vs/co
 通常，你会使用远程桌面协议在本地远程管理 Windows Server，Azure 也不例外。浏览到新 VM 的“概述”边栏选项卡，然后单击“连接”。随即打开“远程桌面连接”对话框（请参阅图 5-9）。你可以从此处下载 `.rdp` 连接文件并将其打开。
 
 如图 5-9 所示，建立 RDP 连接的步骤如下：
+
 1.  从“概述”边栏选项卡工具栏单击“连接”。
 2.  将 RDP 连接文件下载到本地计算机。
 3.  使用你首选的 RDP 客户端软件打开连接。
 
 ![图 5-9：远程桌面连接在 Azure VM 上的工作方式与在本地 VM 上完全相同。](img/9781119612148-fg0509.png)
+
 图 5-9： 远程桌面连接在 Azure VM 上的工作方式与在本地 VM 上完全相同。
+
 ![提示](img/tip.png) Microsoft 为 macOS 提供了原生的远程桌面协议客户端；可在 Mac App Store 中获取。
 
 ## 配置 VM
@@ -2740,37 +2141,47 @@ Azure 云中的配置管理实质上与本地环境相同。你希望尽早在 V
 包含计算机 IP 配置的不是 VM 资源，而是其 vNIC。请遵循以下步骤为 Windows Server VM 配置 TCP/IP：
 
 1.  **打开 Windows Server VM 的“设置”边栏选项卡，然后选择“网络”。**
+
     “网络”边栏选项卡提供一目了然的 TCP/IP 配置，并提供指向关联网络资源的直接超链接：
+
     *   vNIC
     *   虚拟网络
     *   公共 IP 地址
     *   网络安全组
+
     我在图 5-10 中展示了此界面。如果你是从上一练习中使用的 Simple Windows VM 模板部署的 Windows Server VM，你会惊讶地发现 VM 没有受到 NSG 的保护。你可以解决这个问题。
 
 2.  **在 Azure 搜索框中，浏览到“网络安全组”边栏选项卡，然后单击“添加”。**
-    ![警告](img/warning.png) 请务必将任何额外的 NSG 放置在与你的 NSG 相同的 Azure 区域中。否则，你的 VM 和 VNet 都无法使用它们。
-    如果你一直在按顺序阅读本书（我衷心希望如此），你已经知道如何创建 NSG。
-
-3.  **添加一条入站规则以允许入站远程桌面协议流量。**
-    你将在第 4 章中学习如何创建网络安全组。
-
-4.  **浏览到 VM 的“网络”边栏选项卡，然后选择其 vNIC。**
-    你需要将新的 NSG 与 VM 的 vNIC 关联，以防止基于 Internet 的访问。
-
-5.  **从“网络接口”设置菜单中选择“网络安全组”，单击“编辑”，选择新的 NSG，然后单击“确定”。**
-    现在我们说到点子上了！通过这一简单步骤，你已大幅减少了这台新 VM 的攻击面。
-
-6.  **在“网络接口”设置中，选择“IP 配置”设置，然后单击 `ipconfig1`。**
-    vNIC 始终有一个名为（毫无想象力地）`ipconfig1` 的单一 IP 配置。你需在 IP 配置中指定专用和公用 IP 地址。
-    图 5-10 将引导你完成在 Azure 中查找 IP 地址存储位置的点击路径：
-    1.  在网络接口的设置列表中，单击“IP 配置”。
-    2.  单击 `ipconfig1`（默认 IP 配置）。
-    3.  根据需要调整公用和专用 IP 地址。
-    ![图 5-10：Azure 门户中的 Azure VM TCP/IP 设置。](img/9781119612148-fg0510.png)
 
 
 
+![警告](img/warning.png) 请务必将任何额外的 NSG 放置在与你的 NSG 相同的 Azure 区域中。否则，你的 VM 和 VNet 都无法使用它们。
 
+如果你一直在按顺序阅读本书（我衷心希望如此），你已经知道如何创建 NSG。
+
+### 添加一条入站规则以允许入站远程桌面协议流量
+
+你将在第 4 章中学习如何创建网络安全组。
+
+### 浏览到 VM 的“网络”边栏选项卡，然后选择其 vNIC
+
+你需要将新的 NSG 与 VM 的 vNIC 关联，以防止基于 Internet 的访问。
+
+### 从“网络接口”设置菜单中选择“网络安全组”，单击“编辑”，选择新的 NSG，然后单击“确定”
+
+现在我们说到点子上了！通过这一简单步骤，你已大幅减少了这台新 VM 的攻击面。
+
+### 在“网络接口”设置中，选择“IP 配置”设置，然后单击 `ipconfig1`
+
+vNIC 始终有一个名为（毫无想象力地）`ipconfig1` 的单一 IP 配置。你需在 IP 配置中指定专用和公用 IP 地址。
+
+图 5-10 将引导你完成在 Azure 中查找 IP 地址存储位置的点击路径：
+
+1. 在网络接口的设置列表中，单击“IP 配置”。
+2. 单击 `ipconfig1`（默认 IP 配置）。
+3. 根据需要调整公用和专用 IP 地址。
+
+![图 5-10：Azure 门户中的 Azure VM TCP/IP 设置。](img/9781119612148-fg0510.png)
 
 图 5-10： Azure 门户中的 Azure VM TCP/IP 设置。
 
@@ -2779,11 +2190,11 @@ Azure 云中的配置管理实质上与本地环境相同。你希望尽早在 V
 *   请记住，为 VM 分配公共 IP 地址可能不是必需的，甚至可能不是个好主意。存在许多其他用于基于 Internet 访问 VM 的选项，例如 Azure 防火墙、手动配置的跳板机、负载均衡器或虚拟专用网络。
 *   您的私有 IP 地址来自其所在虚拟网络上的子网。您可以在此处分配静态私有 IP 地址，而不依赖 Azure 动态地址分配。
 
-7.  **重新访问 VM 的“网络”边栏选项卡并验证您的更改。**
+### 重新访问 VM 的“网络”边栏选项卡并验证您的更改
 
-    您至少应该能看到 NSG 入站端口规则。不错！
+您至少应该能看到 NSG 入站端口规则。不错！
 
-### 启动、停止和调整 VM 大小
+## 启动、停止和调整 VM 大小
 
 ![记住](img/remember.png)在教您如何启动和停止 VM 之前，我想提醒您，Microsoft 会为 VM 运行的每一分钟或处于已分配状态下已停止的每一分钟向您收费。我之前提到的一条规则在此也适用：尽可能从 VM 外部执行与 Azure 相关的 VM 管理。
 
@@ -2791,7 +2202,7 @@ Azure 云中的配置管理实质上与本地环境相同。你希望尽早在 V
 
 只需知道，释放 VM 会释放已分配给它的任何动态资源，例如公共/私有 IP 地址和临时存储。
 
-#### 启动和停止 VM
+### 启动和停止 VM
 
 您可能已经注意到 Azure 门户中 VM“概述”边栏选项卡上的“启动”、“重启”和“停止”按钮。您可以使用这些按钮来控制 VM 的分配状态（从而控制计费），但我将教您如何使用 PowerShell 来停止和启动 VM。图 5-11 显示了该界面。
 
@@ -2803,37 +2214,45 @@ Azure 云中的配置管理实质上与本地环境相同。你希望尽早在 V
 
 请遵循以下步骤，在 Windows 10 工作站上使用 PowerShell 来停止并启动给定的 VM：
 
-1.  **打开管理员 PowerShell 控制台，并登录到 Azure。**
+#### 打开管理员 PowerShell 控制台，并登录到 Azure
 
-    为此，请运行 `Connect-AzAccount`，并向 Azure 进行身份验证。
+为此，请运行 `Connect-AzAccount`，并向 Azure 进行身份验证。
 
-    ![提示](img/tip.png)如果您有多个订阅，且 Azure 将您的会话与错误的订阅关联，请使用以下命令进行切换：
+![提示](img/tip.png)如果您有多个订阅，且 Azure 将您的会话与错误的订阅关联，请使用以下命令进行切换：
 
-    `Set-AzContext -SubscriptionName 'MySubscription'`
+```
+Set-AzContext -SubscriptionName 'MySubscription'
+```
 
-2.  **列出资源组中的 VM。**
+#### 列出资源组中的 VM
 
-    您可能不记得 VM 的名称，但如果您记得资源组名称，请尝试以下命令：
+您可能不记得 VM 的名称，但如果您记得资源组名称，请尝试以下命令：
 
-    `Get-AzVM -ResourceGroupName 'Wiley'`
+```
+Get-AzVM -ResourceGroupName 'Wiley'
+```
 
-    ![提示](img/tip.png)在 PowerShell 中，您可以使用单引号或双引号将字符串（字符）数据括起来。PowerShell 的设计初衷是不针对此类事情过于挑剔。
+![提示](img/tip.png)在 PowerShell 中，您可以使用单引号或双引号将字符串（字符）数据括起来。PowerShell 的设计初衷是不针对此类事情过于挑剔。
 
-3.  **使用此命令停止目标 VM：**
+#### 使用此命令停止目标 VM
 
-    `Stop-AzVM -Name 'vm-win-test' -ResourceGroupName 'Wiley' -Force`
+```
+Stop-AzVM -Name 'vm-win-test' -ResourceGroupName 'Wiley' -Force
+```
 
-    请务必包含 `-Force` 开关参数，以确保您既停止又释放 VM。
+请务必包含 `-Force` 开关参数，以确保您既停止又释放 VM。
 
-4.  **启动 VM。**
+#### 启动 VM
 
-    哇——变化真快！但这一步是一个很好的学习机会。请看这个技巧：
+哇——变化真快！但这一步是一个很好的学习机会。请看这个技巧：
 
-    `Get-AzVM -Name 'vm-win-test' -ResourceGroupName 'Wiley' | Start-AzVM`
+```
+Get-AzVM -Name 'vm-win-test' -ResourceGroupName 'Wiley' | Start-AzVM
+```
 
-    管道符 (`|`) 将第一部分（获取对目标 VM 的引用）的结果传递给第二部分。此技术称为*管线*。
+管道符 (`|`) 将第一部分（获取对目标 VM 的引用）的结果传递给第二部分。此技术称为*管线*。
 
-#### 调整 VM 大小
+### 调整 VM 大小
 
 正如我之前提到的，动态调整 VM 大小的能力与维护本地硬件相比，是一个巨大的范式转变。
 
@@ -2841,26 +2260,26 @@ Azure 云中的配置管理实质上与本地环境相同。你希望尽早在 V
 
 要调整 VM 大小，请遵循以下步骤：
 
-1.  **在 VM 设置中，选择“大小”。**
+#### 在 VM 设置中，选择“大小”
 
-    “大小”边栏选项卡包含一个表，列出了您所在区域中所有可用的 VM 大小。并非所有 VM 大小在每个区域都可用。
+“大小”边栏选项卡包含一个表，列出了您所在区域中所有可用的 VM 大小。并非所有 VM 大小在每个区域都可用。
 
-2.  **编辑筛选器以筛选可用的 VM 大小。**
+#### 编辑筛选器以筛选可用的 VM 大小
 
-    您可以使用以下属性的任意组合来筛选 VM 大小：
+您可以使用以下属性的任意组合来筛选 VM 大小：
 
-    *   *大小：* 选项为小型、中型和大型。
-    *   *代系：* 选项为当前、上一代和旧版。
-    *   *系列：* 选项为通用、GPU、高性能计算、计算优化、内存优化和存储优化。
-    *   *高级磁盘：* 选项为支持和不支持。
-    *   *vCPU：* 选项范围为 1 到 64 个 vCPU 核心。
-    *   *RAM：* 选项范围为 2 到 432 GB。
+*   **大小：** 选项为小型、中型和大型。
+*   **代系：** 选项为当前、上一代和旧版。
+*   **系列：** 选项为通用、GPU、高性能计算、计算优化、内存优化和存储优化。
+*   **高级磁盘：** 选项为支持和不支持。
+*   **vCPU：** 选项范围为 1 到 64 个 vCPU 核心。
+*   **RAM：** 选项范围为 2 到 432 GB。
 
-3.  **选择所需的 VM 大小，然后单击“调整大小”。**
+#### 选择所需的 VM 大小，然后单击“调整大小”
 
-    您的 VM 将使用新的虚拟硬件资源重启。这难道不比在本地数据中心申请、订购和安装硬件容易得多吗？
+您的 VM 将使用新的虚拟硬件资源重启。这难道不比在本地数据中心申请、订购和安装硬件容易得多吗？
 
-### 扩展 VM 功能
+## 扩展 VM 功能
 
 在本章接近尾声之际，我想向您展示如何为 Azure 中的 Windows Server 和 Linux VM 配置基本的诊断日志记录。
 
@@ -2893,34 +2312,30 @@ Microsoft 为 Linux 和 Windows Server VM 提供了三种粒度日益细化的�
 
 请遵循以下步骤在 Azure Monitor 中创建监视图表：
 
-1.  **在 Azure 门户中打开“监视器”，并导航到“指标”边栏选项卡。**
+#### 在 Azure 门户中打开“监视器”，并导航到“指标”边栏选项卡
 
-    我在图 5-12 中向您展示了 Azure Monitor。
+我在图 5-12 中向您展示了 Azure Monitor。
 
-2.  **在“图表标题”字段中，为新图表指定一个描述性名称。**
+#### 在“图表标题”字段中，为新图表指定一个描述性名称
 
-    在此练习中，我将其命名为“Windows Server 与 Linux CPU 对比”。
+在此练习中，我将其命名为“Windows Server 与 Linux CPU 对比”。
 
-3.  **配置初始指标行以绘制某个 VM 的 CPU 数据。**
+#### 配置初始指标行以绘制某个 VM 的 CPU 数据
 
-    以下是我为 Windows Server VM 指定的属性：
+以下是我为 Windows Server VM 指定的属性：
 
-    *   *资源：* vm-win-test
-    *   *指标命名空间：* 虚拟机主机
-    *   *指标：* CPU 百分比
-    *   *聚合：* 平均值
+*   **资源：** vm-win-test
+*   **指标命名空间：** 虚拟机主机
+*   **指标：** CPU 百分比
+*   **聚合：** 平均值
 
-    ![图 5-12：Azure Monitor 是基础设施和应用程序监视的中心点。](img/9781119612148-fg0512.png)
+![图 5-12：Azure Monitor 是基础设施和应用程序监视的中心点。](img/9781119612148-fg0512.png)
 
-    图 5-12： Azure Monitor 是基础设施和应用程序监视的中心点。
+图 5-12： Azure Monitor 是基础设施和应用程序监视的中心点。
 
-4.  **单击“添加指标”，并配置指标行以绘制另一个 VM 的 CPU 数据。**
+#### 单击“添加指标”，并配置指标行以绘制另一个 VM 的 CPU 数据
 
-    能够绘制来自多个 Azure 资源的指标对您的监视工作大有裨益。
-
-
-
-
+能够绘制来自多个 Azure 资源的指标对您的监视工作大有裨益。
 
 #### 试用 Azure Monitor 中的其他指标控件
 
@@ -2992,28 +2407,30 @@ Docker 运行时环境相对轻量且便携。在本节中，我将向您展示�
 请遵循以下步骤在 Windows 10 系统上设置 Docker：
 
 1.  **在 Docker Hub 注册免费用户帐户。**
+
     Docker Hub ([`https://hub.docker.com`](https://hub.docker.com)) 是 Docker 容器的主要公共存储库。
 
 2.  **从** [`https://www.docker.com/products/docker-desktop`](https://www.docker.com/products/docker-desktop) **下载并安装 Docker Desktop。**
+
     该网站鼓励您完成一个交互式教程；请随意尝试。
 
 3.  **安装过程中接受默认设置。**
+
     此规则的例外情况发生在安装程序询问您是否要使用 Windows 容器而不是 Linux 容器时。请选择 Windows 容器。在 macOS 或 Linux 计算机上，您不会看到此选项。
 
 4.  **重启计算机。**
+
     安装程序要求您注销并重启，以安装 Hyper-V 和容器 Windows 10 功能。
 
 5.  **验证 Docker 服务正在运行。**
+
     Docker Desktop 会作为一个图标出现在 Windows 通知区域（请参阅图 6-2）。
+
     右键单击 Docker 图标，您将在快捷菜单上看到各种选项（包括如果您在安装期间忘记启用该功能，则可以切换到 Windows 容器）。图 6-2 显示的是“切换到 Linux 容器”，如果您当前配置为 Windows 容器，Docker 会显示此选项。
 
 > **请记住：** Docker 服务需要以提升的权限运行。如果您发现 Docker Desktop 没有将其图标放在通知区域中，请以管理员身份从桌面或“开始”菜单快捷方式运行该应用程序。
 
 #### 运行 hello-world 容器
-
-
-
-
 
 ### Docker 的 hello-world 参考镜像
 
@@ -3023,77 +2440,79 @@ Docker 的 hello-world 参考镜像能让你从客户端的角度体会如何使
 
 **图 6-2：** Docker Desktop 可从 Windows 通知区域轻松访问。
 
-1.  **打开提升权限的 PowerShell 或命令提示符控制台。**
 
-    为此，在“开始”菜单或任务栏上找到 PowerShell 或命令提示符图标，右键单击它，然后从快捷菜单中选择“以管理员身份运行”。
 
-2.  **通过运行 `docker — version` 检查你的 Docker 版本。**
+# 在工作站上设置 Docker
 
-    此步骤是一个合理性检查，旨在确保 Docker 命令行界面和服务器组件功能正常。
+1. **打开提升权限的 PowerShell 或命令提示符控制台。**
 
-3.  **通过运行 `docker images` 检查是否有本地可用的容器镜像。**
+   为此，在“开始”菜单或任务栏上找到 PowerShell 或命令提示符图标，右键单击它，然后从快捷菜单中选择“以管理员身份运行”。
 
-    你应该只会看到 Repository（仓库）、Tag（标签）、Image ID（镜像 ID）、Created（创建时间）和 Size（大小）属性，而没有任何镜像。（你将在第 4 步中解决这一情况。）你也可以使用 `docker info` 查看更精简的元数据。
+2. **通过运行 `docker --version` 检查你的 Docker 版本。**
 
-4.  **从 Docker Hub 拉取并运行 hello-world 镜像。**
+   此步骤是一个合理性检查，旨在确保 Docker 命令行界面和服务器组件功能正常。
 
-    发出命令 `docker run hello-world` 并观察 Docker 的操作：
+3. **通过运行 `docker images` 检查是否有本地可用的容器镜像。**
 
-    1.  Docker 检查该镜像是否存在于你的本地系统上。不存在。
+   你应该只会看到 Repository（仓库）、Tag（标签）、Image ID（镜像 ID）、Created（创建时间）和 Size（大小）属性，而没有任何镜像。（你将在第 4 步中解决这一情况。）你也可以使用 `docker info` 查看更精简的元数据。
 
-    2.  Docker 发出拉取命令，从 Docker Hub 检索 hello-world 镜像的最新版本。
+4. **从 Docker Hub 拉取并运行 hello-world 镜像。**
 
-    3.  Docker 运行容器。hello-world 显示 `Hello from Docker!`，确认镜像运行正确。
+   发出命令 `docker run hello-world` 并观察 Docker 的操作：
 
-5.  **运行 `docker ps -a` 查看容器的运行状态。**
+   1. Docker 检查该镜像是否存在于你的本地系统上。不存在。
+   2. Docker 发出拉取命令，从 Docker Hub 检索 hello-world 镜像的最新版本。
+   3. Docker 运行容器。hello-world 显示 `Hello from Docker!`，确认镜像运行正确。
 
-    Docker 告诉你它将 hello-world 镜像作为容器运行了，并且镜像一运行完就退出了。在现实世界中，你可能希望 Docker 容器运行更长时间。你也可以附加到容器并从容器分离。
+5. **运行 `docker ps -a` 查看容器的运行状态。**
 
-6.  **运行 `docker container prune` 移除所有已停止的容器。**
+   Docker 告诉你它将 hello-world 镜像作为容器运行了，并且镜像一运行完就退出了。在现实世界中，你可能希望 Docker 容器运行更长时间。你也可以附加到容器并从容器分离。
 
-    在本例中，你只有一个容器。重新运行 `docker ps -a` 以验证该容器已消失。
+6. **运行 `docker container prune` 移除所有已停止的容器。**
 
-7.  **验证 hello-world 容器镜像在本地可用。**
+   在本例中，你只有一个容器。重新运行 `docker ps -a` 以验证该容器已消失。
 
-    使用 `docker images` 命令；你应该会看到列出的 hello-world 镜像。
+7. **验证 hello-world 容器镜像在本地可用。**
+
+   使用 `docker images` 命令；你应该会看到列出的 hello-world 镜像。
 
 太酷了！通过这场 Docker 的旋风之旅，你已经了解到普通用户使用容器的工作流是：
 
-1.  根据需要从中央仓库拉取容器镜像。
-2.  基于这些镜像运行新容器。
-3.  在容器不再需要时将其处置。
+1. 根据需要从中央仓库拉取容器镜像。
+2. 基于这些镜像运行新容器。
+3. 在容器不再需要时将其处置。
 
 ![技术细节](img/technicalstuff.png)
 
 当你在 Windows 10 系统上安装 Docker Desktop 时，你安装的是 Docker 守护进程和 Docker CLI（客户端）两者。如果你右键单击通知区域中的 Docker 图标，可以从快捷菜单中打开 Kitematic（一个图形化的 Docker 前端）。对于尚不习惯从命令行运行 Docker 命令的 Docker 初学者，Kitematic 会很有帮助。
 
-## 在 Azure 中运行容器
+# 在 Azure 中运行容器
 
 “你可能会说：‘Tim，所有这些 Docker Desktop 的东西固然很好，但我什么时候才能接触到 Azure？’” 你现在就在那里。
 
 在 Azure 生态系统中，以下资源原生支持 Docker 容器：
 
-*   基于 VM 的容器主机
-*   Azure 容器实例
-*   Azure 容器注册表
-*   Azure Kubernetes 服务
-*   适用于容器的 Azure 应用服务 Web 应用
+* 基于 VM 的容器主机
+* Azure 容器实例
+* Azure 容器注册表
+* Azure Kubernetes 服务
+* 适用于容器的 Azure 应用服务 Web 应用
 
 在你动手实践这些技术之前，我将简要讨论每个选项。
 
-### 基于 VM 的容器主机
+## 基于 VM 的容器主机
 
 这里所说的是在 Azure 虚拟网络中启动一个 Linux 或 Windows Server VM，安装 Docker 守护进程，并从那里启动 Docker 容器。虽然此策略行之有效，但在大多数情况下，考虑到已可供你使用的平台即服务 (PaaS) 资源，我认为这没有多大意义。
 
-### Azure 容器实例
+## Azure 容器实例
 
 Azure 容器实例 (ACI) 适用于那些需要快速运行 Docker 容器，而无需担心安装和维护 Docker 守护进程及客户端开销的 Azure 专业人员。ACI 非常适合一次性容器工作，在这类工作中，集中管理和编排是不必要的。
 
-### Azure 容器注册表
+## Azure 容器注册表
 
 到目前为止，你已经了解了 Docker Hub，即由 Docker 托管的公共镜像存储库。Microsoft 将其大部分公开可访问的容器镜像发布到 Docker Hub。另一方面，Azure 容器注册表 (ACR) 专为那些团队需要一个私有的、中央镜像注册表以便使用其自己的内部 Docker 镜像的企业而设计。
 
-### Azure Kubernetes 服务 (AKS)
+## Azure Kubernetes 服务 (AKS)
 
 Azure Kubernetes（发音为 *koo-burr-NET-eez*）服务，即 AKS，是一个由 Google 开发的用于 Docker 容器的容器编排平台。它允许你创建一个计算群集，为你的容器工作负载提供强大的集中管理。
 
@@ -3101,53 +2520,49 @@ AKS 之所以流行，是因为许多企业使用 Docker 托管由多个容器�
 
 简而言之，AKS 是 Azure 的托管 Kubernetes 群集服务。你仍然可以使用原生 Kubernetes 客户端工具，如 Web UI 和 `kubectl` 命令行客户端，但你可以利用与其他 Azure 服务和功能的无缝集成。
 
-### 适用于容器的 Azure 应用服务 Web 应用
+## 适用于容器的 Azure 应用服务 Web 应用
 
 Azure 应用服务是 Azure 中的一种托管 Web 应用程序服务，可与基于 Docker 容器的应用集成。应用服务（我在第 7 章中讨论）允许你轻松地：
 
-*   在生成/发布管道中集成你的应用程序
-*   自动缩放你的应用程序以应对使用高峰
-*   让 Microsoft 负责修补、备份和维护底层主机环境
+* 在生成/发布管道中集成你的应用程序
+* 自动缩放你的应用程序以应对使用高峰
+* 让 Microsoft 负责修补、备份和维护底层主机环境
 
 因此，适用于容器的 Web 应用将容器的敏捷性与强大的应用服务 PaaS 平台相结合。
 
-## 实施 Azure 容器实例
+# 实施 Azure 容器实例
 
 是时候登录 Azure 门户并深入了解这些与 Docker 相关的 Azure 资源了。本节涵盖以下任务：
 
-*   使用 Microsoft 从 Docker Hub 公开提供的 Internet Information Services (IIS) Web 服务器容器定义新的容器实例
-*   将公共 IP 地址资源与容器关联，以便你可以从工作站访问它
-*   使用浏览器测试连接
-*   移除容器
+* 使用 Microsoft 从 Docker Hub 公开提供的 Internet Information Services (IIS) Web 服务器容器定义新的容器实例
+* 将公共 IP 地址资源与容器关联，以便你可以从工作站访问它
+* 使用浏览器测试连接
+* 移除容器
 
 要完成其中任何工作，你都需要使用管理员帐户登录 Azure 门户。
 
-### 部署 Azure 容器实例
+## 部署 Azure 容器实例
 
 请遵循以下步骤，部署一个具有公共 IP 地址的基于 IIS 的 Windows Server 容器：
 
-1.  **导航到“容器实例”边栏选项卡，然后单击“添加”。**
+1. **导航到“容器实例”边栏选项卡，然后单击“添加”。**
 
-    要转到“容器实例”边栏选项卡，请在全局搜索框中键入 `azure container`。
+   要转到“容器实例”边栏选项卡，请在全局搜索框中键入 `azure container`。
 
-2.  **填写默认显示的“基本信息”选项卡（如图 6-3 所示）。单击“下一步”继续。**
+2. **填写默认显示的“基本信息”选项卡（如图 6-3 所示）。单击“下一步”继续。**
 
-    ![图 6-3：使用 Azure 容器实例服务部署 Docker 容器。](img/9781119612148-fg0603.png)
+   ![图 6-3：使用 Azure 容器实例服务部署 Docker 容器。](img/9781119612148-fg0603.png)
 
-    **图 6-3：** 使用 Azure 容器实例服务部署 Docker 容器。
+   **图 6-3：** 使用 Azure 容器实例服务部署 Docker 容器。
 
-    你需要完成以下项目：
+   你需要完成以下项目：
 
-    *   **订阅和资源组：** 选择符合你要求的选项。
-    *   **容器名称和区域：** 该名称在你的资源组内必须唯一。选择离你最近的 Azure 区域。
-    *   **映像类型：** 当你从 Docker Hub 拉取 IIS 镜像时（如此示例所示），Public（公共）是合适的选项。你要选择 Private（专用）以向专用镜像存储库进行身份验证。
-    *   **映像名称：** 键入镜像的名称——在本例中为 `microsoft/iis`，这是一个极受欢迎的容器镜像。
-    *   **操作系统类型：** 选择你正在使用的操作系统。
-
-
-
-
-* **大小：** 接受默认设置。您的容器将在底层的主机 VM 上运行，尽管您永远不会直接与主机交互。
+   * **订阅和资源组：** 选择符合你要求的选项。
+   * **容器名称和区域：** 该名称在你的资源组内必须唯一。选择离你最近的 Azure 区域。
+   * **映像类型：** 当你从 Docker Hub 拉取 IIS 镜像时（如此示例所示），Public（公共）是合适的选项。你要选择 Private（专用）以向专用镜像存储库进行身份验证。
+   * **映像名称：** 键入镜像的名称——在本例中为 `microsoft/iis`，这是一个极受欢迎的容器镜像。
+   * **操作系统类型：** 选择你正在使用的操作系统。
+   * **大小：** 接受默认设置。您的容器将在底层的主机 VM 上运行，尽管您永远不会直接与主机交互。
 
 3. **填写“网络”选项卡。**
 
@@ -3163,7 +2578,7 @@ Azure 应用服务是 Azure 中的一种托管 Web 应用程序服务，可与�
 
 5. **监视部署进度。**
 
-### 验证并处置容器实例
+## 验证并处置容器实例
 
 请遵循以下步骤，熟悉 ACI Azure 门户体验并验证与新 IIS 容器的连接：
 
@@ -3193,19 +2608,19 @@ Azure 应用服务是 Azure 中的一种托管 Web 应用程序服务，可与�
 
    ![图 6-4：将 IIS Web 服务器作为容器与 ACI 服务一起运行。](img/9781119612148-fg0604.png)
 
-   图 6-4： 将 IIS Web 服务器作为容器与 ACI 服务一起运行。
+   **图 6-4：** 将 IIS Web 服务器作为容器与 ACI 服务一起运行。
 
 7. **浏览到容器实例的“概述”页面，单击“删除”，并确认您的选择。**
 
    “概述”工具栏上有“停止”、“重启”和“删除”控件。尽管 Docker 容器通常被认为是临时且可丢弃的，但您将来可能想要停止并重启同一个容器。在本例中，您不再需要该容器，因此可以从订阅中将其删除。
 
-## 在 Azure 容器注册表中存储映像
+# 在 Azure 容器注册表中存储映像
 
 我想节省您的网络带宽，因此在本节中，您将把（相对）较小的 hello-world 容器（您在前面的“在工作站上设置 Docker”一节中从 Docker Hub 拉取的）推送到新的容器注册表。
 
 Azure 容器注册表 (ACR) 是一个云托管的 Docker 映像存储库。ACR 为您团队的映像提供了一个集中的存储/管理位置；这些映像仅可供您授予适当权限的 Azure 用户访问。
 
-### 部署容器注册表
+## 部署容器注册表
 
 在将容器推送到 ACR 之前，您需要部署注册表。请遵循以下步骤：
 
@@ -3228,7 +2643,7 @@ Azure 容器注册表 (ACR) 是一个云托管的 Docker 映像存储库。ACR �
 
    您将在下一节中用到此 DNS 名称，届时您将把容器映像推送到注册表。注册表采用名称 `<your-registry-name>.azurecr.io`。
 
-### 将映像推送到新容器注册表
+## 将映像推送到新容器注册表
 
 为了向您展示如何将映像推送到容器注册表，我将使用您在本章前面的“在工作站上设置 Docker”一节中使用的 hello-world 映像。要将映像推送到容器注册表，请遵循以下步骤：
 
@@ -3256,7 +2671,7 @@ Azure 容器注册表 (ACR) 是一个云托管的 Docker 映像存储库。ACR �
 
    ![图 6-5：从 Azure 容器注册表检索管理员凭据。](img/9781119612148-fg0605.png)
 
-   图 6-5： 从 Azure 容器注册表检索管理员凭据。
+   **图 6-5：** 从 Azure 容器注册表检索管理员凭据。
 
 4. **将 hello-world 映像推送到您的注册表。**
 
@@ -3272,7 +2687,7 @@ Azure 容器注册表 (ACR) 是一个云托管的 Docker 映像存储库。ACR �
 
    为此，请导航到注册表的“存储库”边栏选项卡。您会发现 Azure 门户并未为您提供太多操作此容器映像的选项。这暗示您将通过使用 Docker CLI、自动化工具或工具链来与映像交互。
 
-### 通过 ACI 拉取存储库映像
+## 通过 ACI 拉取存储库映像
 
 将 Docker 映像放入注册表后，您可以使用 `docker pull` 命令下载该映像，并根据该映像在本地系统上生成容器。
 
@@ -3287,29 +2702,26 @@ Azure 容器注册表 (ACR) 是一个云托管的 Docker 映像存储库。ACR �
    * **映像类型：** 当您从专用的基于 Azure 的容器注册表拉取映像时，选择“专用”；否则，选择“公用”。
    * **映像名称：** 对于我的注册表，我使用 `twwiley.azurecr.io/hello-world`。请替换为您自己的注册表名称。
 
-
-
-
 ### 部署容器实例
 
-*   **Image Registry:** 添加登录服务器、用户名和密码。
-*   **OS Type:** 选择正在使用的操作系统。
+* **Image Registry:** 添加登录服务器、用户名和密码。
+* **OS Type:** 选择正在使用的操作系统。
 
 3. **单击“Review + Create”，然后单击“Create”提交部署。**
 
-    无需担心网络、标记等问题。
+   无需担心网络、标记等问题。
 
 4. **如果部署失败，请阅读操作详细信息。**
 
-    ARM 可能通过验证但仍导致部署失败。如果发生这种情况，与任何失败的部署一样，请阅读 Azure 提供的所有操作详细信息。
+   ARM 可能通过验证但仍导致部署失败。如果发生这种情况，与任何失败的部署一样，请阅读 Azure 提供的所有操作详细信息。
 
 图 6-6 显示了失败的 ACI 部署。横幅用通俗易懂的英语解释了问题。在本例中，容器类型指定为 Linux 而非 Windows。也可以单击“Operation Details”以获取来自 ARM 的更详细反馈。
 
-失败的部署并非大问题。可以根据需要多次重新运行部署模板，直到成功为止。只需单击 图 6-6 中所示的“Redeploy”按钮。默认情况下，部署不会删除现有资源。相反，模板会从中断处继续，直到部署与底层模板定义匹配。
+失败的部署并非大问题。可以根据需要多次重新运行部署模板，直到成功为止。只需单击图 6-6 中所示的“Redeploy”按钮。默认情况下，部署不会删除现有资源。相反，模板会从中断处继续，直到部署与底层模板定义匹配。
 
 ![图 6-6：Azure 部署失败时不要恐慌。阅读错误消息，从中吸取教训。](img/9781119612148-fg0606.png)
 
-图 6-6： Azure 部署失败时不要恐慌。阅读错误消息，从中吸取教训。
+**图 6-6：** Azure 部署失败时不要恐慌。阅读错误消息，从中吸取教训。
 
 ![Technical stuff](img/technicalstuff.png)研究部署详细信息（成功或失败）的另一个位置是 Azure 门户中的“Resource Groups”边栏选项卡。打开一个资源组，导航到“Deployments”边栏选项卡。Azure 中的每个部署都会被记录下来，供参考和/或故障排除。
 
@@ -3317,7 +2729,9 @@ Azure 容器注册表 (ACR) 是一个云托管的 Docker 映像存储库。ACR �
 
 为了满足这些要求及更多需求，需要一个容器编排平台，例如 AKS。
 
-## Azure Kubernetes Service 简介
+# Azure Kubernetes Service 简介
+
+
 
 AKS 最初是 Azure Container Service (ACS)，支持包括 Kubernetes、Swarm 和 DC/OS 在内的多个容器编排平台。ACS 的缺点是其复杂性，以及大多数客户仅想要对 Kubernetes 的第一方支持。因此，尽管可能在 Azure 门户或其他地方偶尔看到对 ACS 的引用，但请忽略它们，专注于 AKS。
 
@@ -3325,11 +2739,12 @@ AKS 最初是 Azure Container Service (ACS)，支持包括 Kubernetes、Swarm �
 
 ![Remember](img/remember.png)开发人员启动容器并非因为它们好玩，而是因为它们实用。容器托管应用程序组件（如 Web 服务器或数据库服务器），进而形成应用程序解决方案。因此，从现在开始，请将“container”（容器）和“application”（应用程序）这两个词联系起来。
 
-### AKS 架构
+## AKS 架构
 
 图 6-7 显示了 AKS 的基本元素：
 
 *   **Master node（主节点）：** Microsoft 抽象了控制平面（在 Kubernetes 命名法中称为 *master node*），以便专注于工作节点和 Pod。这种托管的平台即服务 (PaaS) 平台是许多企业喜爱 AKS 的原因之一。主节点负责调度 Kubernetes 与底层群集之间的所有通信。
+
 *   **Worker node（工作节点）：** 在 AKS 中，工作节点是构成群集的 VM。群集提供大量并行计算、在节点间轻松移动 Pod、在不关闭整个群集的情况下对节点执行滚动更新等能力。一种选择是使用 ACI 作为工作节点。
 
     图 6-7 还显示了 ACR，AKS 可以从中拉取存储的映像。这种 Azure 集成难道不引人注目吗？
@@ -3342,13 +2757,13 @@ AKS 最初是 Azure Container Service (ACS)，支持包括 Kubernetes、Swarm �
 
 图 6-7： AKS 高级架构。
 
-### AKS 管理说明
+## AKS 管理说明
 
 在继续之前，我将回顾开发人员和管理员如何与 AKS 交互。从控制平面角度来看，有 AZR，可用于通过基于角色的访问控制保护 AKS 群集、升级 Kubernetes 版本、横向扩展群集、添加或删除工作节点等。
 
 从应用程序平面角度来看，Microsoft 希望确保客户无需学习新工具集即可在 AKS 中使用容器。
 
-#### `kubectl` 命令行工具
+### `kubectl` 命令行工具
 
 大多数 Kubernetes 专业人员使用 `kubectl`（通常发音为 *KOOB-see-tee-el*、*KOOB-control* 或 *KOOB-cuttle*）以编程方式与其 Kubernetes 群集及其 Pod 交互。如果工作站上安装了 Azure CLI，可以通过发出以下命令轻松安装 `kubectl`：
 
@@ -3365,7 +2780,7 @@ azure-database-3406967446-nmpcf 1/1 Running 0 25m
 azure-web-3309479140-3dfh0 1/1 Running 0 13m
 ```
 
-#### Kubernetes Web UI
+### Kubernetes Web UI
 
 Kubernetes Web UI 是一个图形化仪表板，为管理员和开发人员提供强大的控制界面。图 6-8 显示了该界面。
 
@@ -3401,8 +2816,6 @@ Azure Web App for Containers 允许将现有的基于容器的应用插入 Azure
 1. **在 Azure 门户中启动 Cloud Shell，并选择 Bash 环境。**
 
     选择哪种 Shell 无关紧要，因为 Azure CLI 在两者中均可用。
-
-
 
 ![Tip](img/tip.png)虽然你是使用 Azure CLI 创建此应用服务 Web 应用，但你也可以使用 Azure 门户、PowerShell、软件开发工具包 (SDK) 或 Azure REST API。由于 Microsoft 对 Azure 门户进行了大量更新，你最好主要专注于 Azure CLI 或 PowerShell，以获得更稳定、更熟悉的部署环境。
 
@@ -3516,28 +2929,32 @@ Azure 应用服务让你能够专注于业务线应用程序，而无需管理 V
 
 *   **存储帐户：** 应用服务计划具有持久性存储，但许多开发人员喜欢使用灵活的存储帐户以获取额外空间。
 
-
-
-
 #### 虚拟网络
+
 您可以将应用服务应用链接到虚拟网络 — 例如，将 Web 应用连接到在 VM 上运行的数据库。
 
 #### 数据库
+
 如今，大多数 Web 应用使用关系型、非关系型和/或内存数据库来存储临时或持久数据。
 
 #### 内容分发网络
+
 您可以将静态网站资产放在存储帐户中，并让 Azure 在全球范围内分发这些资产。这样，您的用户将获得更快的体验，因为他们的浏览器从低延迟、地理位置接近的源拉取您的网站内容。
 
 ## 应用服务计划
+
 应用服务计划按功能和价格递增的顺序分为三个层级：
 
 ### 开发/测试
+
 具有最少计算资源且无额外功能的 F 系列和 B 系列 VM。此计算级别费用最低，但提供的功能很少，不应用于生产应用。
 
 ### 生产
+
 在计算能力和功能之间取得良好平衡的 S 系列和 P 系列 VM。此层级应作为您应用服务的起点。
 
 ### 隔离
+
 称为应用服务环境，价格非常昂贵；Microsoft 分配硬件，使您的 Web 应用与公共 Internet 隔离。
 
 您可以根据需要在层级内或层级间移动。此功能是公共云服务最大的优势之一。图 7-2 显示了一个应用服务计划。
@@ -3551,11 +2968,13 @@ Azure 应用服务让你能够专注于业务线应用程序，而无需管理 V
 ![警告](img/warning.png) 仅仅因为您可以将多个 Web 应用关联到单个应用服务计划，并不意味着您应该这样做。当然，您可以省钱（应用服务计划根据实例大小产生运行时成本），但您在单个计划中打包的应用越多，对底层 VM 的负担就越大。
 
 ## 部署您的第一个 Web 应用
+
 在本节中，您将通过部署两个简单的 Web 应用程序开始实操：第一个通过 Azure 门户经由 Azure 市场部署，第二个通过 Visual Studio 经由内置项目模板部署。您需要同时安装 Visual Studio 2019 和 Azure 工作负载。
 
 ![提示](img/tip.png) 您可以免费下载并使用 Visual Studio 2019 Community Edition；请访问 [`https://visualstudio.microsoft.com/vs`](https://visualstudio.microsoft.com/vs) 获取软件。
 
 ### 从 Azure 门户部署
+
 请按照以下步骤从 Azure 门户部署您的第一个 Web 应用：
 
 1.  **在 Azure 门户菜单中，选择“创建资源”；然后搜索 `ASP.NET Empty Web App`。接下来，单击“创建”。**
@@ -3568,7 +2987,9 @@ Azure 应用服务让你能够专注于业务线应用程序，而无需管理 V
 
     *   **应用服务计划/位置：** 在您的主区域中创建一个新的应用服务计划。选择 `S1 Standard`，这是解锁生产级功能的最小 VM 实例大小。
 
-    *   **Application Insights：** 选择“禁用”选项。（我将在本章后面的“监视 Web 应用”部分讨论 Web 应用监视。）
+
+
+*   **Application Insights：** 选择“禁用”选项。（我将在本章后面的“监视 Web 应用”部分讨论 Web 应用监视。）
 
 3.  **单击“创建”以提交部署。**
 
@@ -3581,6 +3002,7 @@ Azure 应用服务让你能够专注于业务线应用程序，而无需管理 V
 图 7-3： 创建 Azure 应用服务 Web 应用。
 
 ### 配置 Git
+
 ![技术提示](img/technicalstuff.png) Git 是一种免费、开源、跨平台的版本控制系统，由 Linux 创始人 Linus Torvalds 发明。它是一种分布式系统，其中每个开发人员都拥有存储库的完整副本；或者，开发人员可以将其更改推送到上游源存储库。
 
 源代码控制的概念很简单：多个开发人员将更改提交到单个共享代码库。如何保留代码历史、了解哪位开发人员做了哪项更改，并防止开发人员互相干扰？Git 解决了这些问题。
@@ -3616,23 +3038,24 @@ Git 与 Azure 应用服务完美契合；事实上，应用服务应用可以托
 图 7-5： 确保 Visual Studio 将使用 Git 进行源代码版本控制。
 
 ### 从 Visual Studio 连接到 Web 应用
+
 您可以使用 Visual Studio 连接并处理您的新 Azure Web 应用。
 
 这是工作流：
 
 1.  在 Azure 中为应用创建本地 Git 存储库。
+
 2.  将基于 Azure 的存储库克隆到您的本地工作站。
+
 3.  在本地处理应用，并定期将更改推送到 Azure。
 
 深入探讨 Git 超出了本书的范围，但我会尽力确保您不会迷失方向。
 
 #### 为 Web 应用创建 Git 存储库
+
 请按照以下步骤为 Web 应用的示例源代码创建本地 Git 存储库：
 
 1.  **在 Azure 门户中的 Web 应用设置里，选择“部署中心”。**
-
-
-
 
 如果您按照本章前面“从 Azure 门户部署”中的步骤操作，您选择的 Azure Marketplace 模板已经创建了一个 Git 存储库。很方便！但请单击 `Disconnect`，以便您可以创建一个本地 Git 存储库。
 
@@ -3774,8 +3197,6 @@ Git 与 Azure 应用服务完美契合；事实上，应用服务应用可以托
 
 #### 发布到应用服务
 
-
-
 Git 发布工作流是将 Web 应用发布到应用服务的众多方法之一。你也可以直接从 Visual Studio 发布到 Azure。为此，请遵循以下步骤：
 
 1.  **在解决方案资源管理器中，右键单击你的项目，然后从快捷菜单中选择“发布”。**
@@ -3783,9 +3204,13 @@ Git 发布工作流是将 Web 应用发布到应用服务的众多方法之一�
     此时将打开一个向导，允许你从以下发布目标中进行选择：
 
     *   应用服务 (Windows VM)
+
     *   应用服务 (Linux VM)
+
     *   Azure IaaS VM
+
     *   IIS、FTP
+
     *   文件夹
 
 2.  **选择“应用服务”作为发布目标，选择“新建”，然后单击“发布”（请参阅图 7-10）。**
@@ -3801,6 +3226,7 @@ Git 发布工作流是将 Web 应用发布到应用服务的众多方法之一�
     我想引起你对两个部署属性的注意：
 
     *   **托管计划：** 这指的是应用服务计划。
+
     *   **Application Insights：** 选择“无”。
 
         ![提示](img/tip.png) Application Insights 是一个强大的 Web 应用监视平台，我将在本章后面的“监视 Web 应用”部分进行介绍。
@@ -3858,9 +3284,14 @@ Git 发布工作流是将 Web 应用发布到应用服务的众多方法之一�
 如果你访问应用服务应用的“配置”边栏选项卡，你将看到四个应用程序设置选项卡：
 
 *   **应用程序设置：** 与应用程序相关的键/值对；数据源连接字符串
+
 *   **常规设置：** 应用程序运行时环境；是否允许 FTP；HTTP 版本
+
 *   **默认文档：** 当 Azure 确定默认 Web 应用显示文档时应查找的文件类型
+
 *   **路径映射：** 不同文件类型的映射处理程序（脚本处理器）
+
+
 
 PaaS 的主要主题是：你放弃对底层 VM 的完全控制，以换取大规模和敏捷性。这些配置设置，以及你的开发人员添加的任何与配置相关的源代码，都是你在底层接触服务器配置的最近距离。
 
@@ -3871,9 +3302,9 @@ PaaS 的主要主题是：你放弃对底层 VM 的完全控制，以换取大�
 
 ### 添加自定义域
 
-Microsoft 在其自己的 azurewebsites.net 域名系统 (DNS) 域中定义了你所有的应用服务应用。这很方便，因为你可以利用 Microsoft 的 `*.azurewebsites.net` 通配符 TLS/SSL 数字证书建立 HTTP 连接。但你很可能想要添加自己的 DNS 域。
+Microsoft 在其自己的 `azurewebsites.net` 域名系统 (DNS) 域中定义了你所有的应用服务应用。这很方便，因为你可以利用 Microsoft 的 `*.azurewebsites.net` 通配符 TLS/SSL 数字证书建立 HTTP 连接。但你很可能想要添加自己的 DNS 域。
 
-![提示](img/tip.png) 甚至不要尝试将 Web 应用从 azurewebsites.net 域中解绑。因为此域是 Azure 识别你的 Web 应用的方式，除非并直到你删除该 Web 应用，否则你将一直拥有该 DNS 名称。抱歉！
+![提示](img/tip.png) 甚至不要尝试将 Web 应用从 `azurewebsites.net` 域中解绑。因为此域是 Azure 识别你的 Web 应用的方式，除非并直到你删除该 Web 应用，否则你将一直拥有该 DNS 名称。抱歉！
 
 请遵循以下步骤将你自己的 DNS 域添加到 Web 应用：
 
@@ -3885,11 +3316,9 @@ Microsoft 在其自己的 azurewebsites.net 域名系统 (DNS) 域中定义了�
 
 2.  **单击“添加自定义域”，添加你的域名，然后单击“验证”。“添加自定义域”边栏选项卡随即出现。**
 
+    我想这属于显而易见的常识，但该域名必须是您拥有的 DNS 域名，或者至少是您有权访问其区域文件的域名。
 
-
-我想这属于显而易见的常识，但该域名必须是您拥有的 DNS 域名，或者至少是您有权访问其区域文件的域名。
-
-### 3. 编辑您的 DNS 区域文件以添加验证/映射资源记录。
+### 编辑您的 DNS 区域文件以添加验证/映射资源记录
 
 您正在做的事情是向 Microsoft 证明您拥有相关域名的所有权。此过程要求您登录到您的域名注册商网站，并向您的区域添加一条资源记录。
 
@@ -3902,7 +3331,7 @@ Microsoft 在其自己的 azurewebsites.net 域名系统 (DNS) 域中定义了�
 
 当然，您需要购买自己的域名才能自行执行这些操作。
 
-### 4. 验证完成后，单击“添加自定义域名”以完成该过程。
+### 验证完成后，单击“添加自定义域名”以完成该过程
 
 图 7-14 显示了已完成的域名配置。请注意以下重要元素：
 
@@ -3911,7 +3340,7 @@ Microsoft 在其自己的 azurewebsites.net 域名系统 (DNS) 域中定义了�
 
 ![图 7-14：为应用服务应用添加自定义域名固然不错，但您还需要配套的 SSL 证书。](img/9781119612148-fg0714.png)
 
-图 7-14： 为应用服务应用添加自定义域名固然不错，但您还需要配套的 SSL 证书。
+图 7-14：为应用服务应用添加自定义域名固然不错，但您还需要配套的 SSL 证书。
 
 ### 绑定 TLS/SSL 证书
 
@@ -3945,7 +3374,7 @@ Microsoft 在其自己的 azurewebsites.net 域名系统 (DNS) 域中定义了�
 
 ![图 7-15：此 Web 应用已准备就绪，自定义 DNS 和 TLS/SSL 均已投入运行。](img/9781119612148-fg0715.png)
 
-图 7-15： 此 Web 应用已准备就绪，自定义 DNS 和 TLS/SSL 均已投入运行。
+图 7-15：此 Web 应用已准备就绪，自定义 DNS 和 TLS/SSL 均已投入运行。
 
 ### 配置自动缩放
 
@@ -3995,9 +3424,6 @@ Microsoft 在其自己的 azurewebsites.net 域名系统 (DNS) 域中定义了�
 
 在本节中，我将简要解释如何使用 Application Insights 监视您的应用服务应用。Application Insights 是一个 Azure 托管的应用程序性能管理平台，可为几乎任何应用程序提供丰富、深入的见解，无论该应用存在于 Azure、本地还是其他云中。
 
-
-
-
 *检测* 是指将 Application Insights 软件开发工具包 (SDK) 添加到应用程序的源代码中。然后，将客户端 SDK 链接到 Azure 订阅中的 Application Insights 资源。
 
 Application Insights 可以为开发人员提供的部分智能见解包括：
@@ -4014,15 +3440,22 @@ Application Insights 可以为开发人员提供的部分智能见解包括：
 请遵循以下步骤在 Azure 订阅中创建新的 Application Insights 资源：
 
 1.  **在 Azure 门户中，浏览到 Application Insights 边栏选项卡，然后单击“添加”。**
+
     此时将出现 Application Insights 配置边栏选项卡。
+
 2.  **配置资源详细信息。**
+
     这些详细信息非常不言自明：
+
     *   订阅
     *   资源组
     *   实例名称
     *   区域
+
     我要强调的主要一点是，为了确保最低延迟，请将 Application Insights 资源放置在与其关联的 Web 应用相同的 Azure 区域中。
+
     遗憾的是，在撰写本文时，Application Insights 并非在所有公共区域都可用。您可能不得不选择离应用区域最近的区域。
+
 3.  **单击“查看 + 创建”，然后单击“创建”以提交部署。**
 
 ### 在 Web 应用中启用检测
@@ -4032,14 +3465,23 @@ Application Insights 可以为开发人员提供的部分智能见解包括：
 请遵循以下步骤将 Application Insights 实例连接到 Azure Web 应用：
 
 1.  **切换到 Visual Studio，并加载您在本章中最后使用的 ASP.NET Web 应用程序。**
+
 2.  **在“解决方案资源管理器”中，右键单击项目，然后从快捷菜单中选择“添加” ⇒ “Application Insights 遥测”。**
+
     此时将打开“Application Insights 配置”窗口。
+
     ![Tip](img/tip.png) 如果您没有看到 Application Insights 选项，可能是因为您未安装 Application Insights SDK。请选择“工具” ⇒ “获取工具和功能”以打开 Visual Studio 安装程序，您可以在其中安装 Application Insights。
+
 3.  **在“Application Insights 配置”窗口中，单击“开始”。**
+
     此时将打开“向 Application Insights 注册您的应用”窗口。
+
 4.  **填写表单。**
+
     您需要提供 Azure 帐户、订阅、资源名称和定价层。
+
     请务必指定您之前创建的 Application Insights 资源。
+
 5.  **单击“注册”。**
 
 ### 查看 Application Insights 遥测数据
@@ -4054,11 +3496,11 @@ Application Insights 可以为开发人员提供的部分智能见解包括：
 
 ![图 7-17：Azure 门户中的 Application Insights 遥测数据。](img/9781119612148-fg0717.png)
 
-图 7-17： Azure 门户中的 Application Insights 遥测数据。
+图 7-17：Azure 门户中的 Application Insights 遥测数据。
 
 ![图 7-16：Visual Studio 中的 Application Insights 遥测数据。](img/9781119612148-fg0716.png)
 
-图 7-16： Visual Studio 中的 Application Insights 遥测数据。
+图 7-16：Visual Studio 中的 Application Insights 遥测数据。
 
 # 第 8 章：在 Azure 中运行无服务器应用
 
@@ -4095,9 +3537,9 @@ Application Insights 可以为开发人员提供的部分智能见解包括：
 *   **消耗计划：** 每当您的函数运行时，Azure 会动态分配计算资源。您按每月函数执行次数付费；Microsoft 提供了慷慨的免费层。缺点是消耗成本模型可能比应用服务计划模型慢得多。
 *   **应用服务计划：** 此定价模型与应用服务 Web 应用相同。优势在于性能更可预测，因为您可以控制底层计算能力。
 
+
+
 ![Tip](img/tip.png) 本书不提供太多关于 Azure 定价的细节，因为 Microsoft 经常更改价格和定价模型。要获取最新详细信息，请访问 [`https://azure.microsoft.com/en-us/pricing/`](https://azure.microsoft.com/en-us/pricing/)。
-
-
 
 默认情况下，Functions 以无状态方式运行——也就是说，Function 被触发，源代码运行，Function App 平台不关心维护持久性。
 
@@ -4139,13 +3581,15 @@ Functions 需要具备特定编程语言的开发技能；相比之下，Logic A
 
 有趣的是，您可以集成 Functions 和 Logic Apps，将任一应用用作触发器和/或操作。
 
-*   在 Azure 无服务器计算平台领域，**触发器** 定义了如何调用 Function 或 Logic App。每个无服务器应用只有一个触发器。
-*   “但什么构成了触发器？”您可能会问。那是**事件**：一种轻量级的状态更改通知。
-*   最后，**操作** 是您配置的在应用触发器激活时自动发生的响应。
+*   在 Azure 无服务器计算平台领域，`触发器` 定义了如何调用 Function 或 Logic App。每个无服务器应用只有一个触发器。
+
+*   “但什么构成了触发器？”您可能会问。那是`事件`：一种轻量级的状态更改通知。
+
+*   最后，`操作` 是您配置的在应用触发器激活时自动发生的响应。
 
 ## 使用 Azure Functions
 
-设计 Function 的第一步是决定希望它做什么。假设您在 App Service 中创建了一个 Web 应用程序，允许用户上传图像文件。您这个虚构应用的源代码将用户上传的图像文件放置在名为（非常贴切地）images 的容器中，该容器位于 Azure 存储帐户的 Blob（二进制大型对象）服务容器内。
+设计 Function 的第一步是决定希望它做什么。假设您在 App Service 中创建了一个 Web 应用程序，允许用户上传图像文件。您这个虚构应用的源代码将用户上传的图像文件放置在名为（非常贴切地）`images` 的容器中，该容器位于 Azure 存储帐户的 Blob（二进制大型对象）服务容器内。
 
 如果您想对这些上传采取自动操作怎么办？以下是一些示例：
 
@@ -4157,13 +3601,13 @@ Functions 需要具备特定编程语言的开发技能；相比之下，Logic A
 
 在撰写本文时，Azure Functions 包括以下触发器（以及其他）：
 
-*   **HTTP：** 基于 Webhook (HTTP 请求) 触发
-*   **Timer：** 基于预定义计划触发
-*   **Azure Queue Storage：** 基于队列存储消息触发
-*   **Azure Service Bus Queue：** 基于服务总线消息触发
-*   **Azure Service Bus Topic：** 基于指定主题中出现的消息触发
-*   **Azure Blob Storage：** 每当 Blob 被添加到指定容器时触发（示例所需的触发器）
-*   **Durable Functions HTTP Starter：** 当另一个 Durable Function 调用当前 Function 时触发
+*   `HTTP`：基于 Webhook (HTTP 请求) 触发
+*   `Timer`：基于预定义计划触发
+*   `Azure Queue Storage`：基于队列存储消息触发
+*   `Azure Service Bus Queue`：基于服务总线消息触发
+*   `Azure Service Bus Topic`：基于指定主题中出现的消息触发
+*   `Azure Blob Storage`：每当 Blob 被添加到指定容器时触发（示例所需的触发器）
+*   `Durable Functions HTTP Starter`：当另一个 Durable Function 调用当前 Function 时触发
 
 ## 创建 Azure Function
 
@@ -4183,16 +3627,16 @@ Functions 需要具备特定编程语言的开发技能；相比之下，Logic A
 
     Function App 边栏选项卡的“基本信息”选项卡随即出现。
 
-2.  **填写 Function App 部署表单（请参阅** **图 8-3****）。**
+2.  **填写 Function App 部署表单（请参阅 图 8-3）。**
 
     以下是一些建议值：
 
-    *   *应用名称：* 此名称必须唯一，因为 Function Apps 属于 App Services 系列，并在 Microsoft 的公共 azurewebsites.net 区域中拥有 DNS 名称。
-    *   *操作系统：* 选择您拥有的操作系统类型。
-    *   *托管计划：* 消耗计划是一个很好的起点。如果您想要或需要，稍后可以更改此设置。
-    *   *运行时堆栈：* 您的选择包括 .NET Core、Node.js、Python、Java 和 PowerShell Core。
-    *   *存储：* 存储代码项目需要一个通用存储帐户。
-    *   *Application Insights：* 启用 Application Insights 是个好主意，以便从 Function App 获取尽可能多的后端遥测数据。
+    *   `应用名称`：此名称必须唯一，因为 Function Apps 属于 App Services 系列，并在 Microsoft 的公共 azurewebsites.net 区域中拥有 DNS 名称。
+    *   `操作系统`：选择您拥有的操作系统类型。
+    *   `托管计划`：消耗计划是一个很好的起点。如果您想要或需要，稍后可以更改此设置。
+    *   `运行时堆栈`：您的选择包括 .NET Core、Node.js、Python、Java 和 PowerShell Core。
+    *   `存储`：存储代码项目需要一个通用存储帐户。
+    *   `Application Insights`：启用 Application Insights 是个好主意，以便从 Function App 获取尽可能多的后端遥测数据。
 
 3.  **单击“创建”以提交部署。**
 
@@ -4206,33 +3650,31 @@ Functions 需要具备特定编程语言的开发技能；相比之下，Logic A
 
 Azure Function 创建工作流的下一步是定义 Function 本身。根据我的经验，没有太多人觉得 Function App 的非标准用户界面直观。一点也不。图 8-4 解释了正在发生的情况。
 
-
-
-
-
 ## Azure Function App 组件
 
-*   单个 **Function App（A）** 包含一个或多个 Functions。
+*   单个 `Function App（A）` 包含一个或多个 Functions。
 *   在 Function App 的运行空间中运行的每个 Function 都存储在此处 **(B)**。
-*   **Function Proxy（C）** 允许你为单个 Function App 中的所有 Functions 提供单个 API 端点，供其他 Azure 或非 Azure API 服务使用。
-*   **Function Apps** 支持 **部署槽位 (D)**；它们的用途与 App Service Web 应用的部署槽位相同，并支持槽位交换。
-*   **Function App Settings（E）** 是指定 Function App、Function 或 Proxy 设置的位置，具体取决于上下文。
+*   `Function Proxy（C）` 允许你为单个 Function App 中的所有 Functions 提供单个 API 端点，供其他 Azure 或非 Azure API 服务使用。
+*   `Function Apps` 支持 `部署槽位 (D)`；它们的用途与 App Service Web 应用的部署槽位相同，并支持槽位交换。
+*   `Function App Settings（E）` 是指定 Function App、Function 或 Proxy 设置的位置，具体取决于上下文。
 
 ## 先决条件：创建 Images Blob 容器
 
-在创建 Function 之前，你应该创建此网站上传示例所需的 `images` Blob 容器。如果你已安装 **Azure Storage Explorer**，请继续！如果没有，请参阅 第 3 章 了解安装详情。
+在创建 Function 之前，你应该创建此网站上传示例所需的 `images` Blob 容器。如果你已安装 `Azure Storage Explorer`，请继续！如果没有，请参阅 第 3 章 了解安装详情。
 
 ![图 8-4：设计 Function App 用户界面的人没有注意到 Azure 门户其余部分的行为方式。](img/9781119612148-fg0804.png)
 
 **图 8-4：** 设计 Function App 用户界面的人没有注意到 Azure 门户其余部分的行为方式。
 
-![记住](img/remember.png) **Azure Storage Explorer** 是一款免费的跨平台桌面应用程序，让处理 Azure 存储帐户变得轻而易举。请访问 [`https://azure.microsoft.com/en-us/features/storage-explorer/`](https://azure.microsoft.com/en-us/features/storage-explorer/) 获取该工具。
+![记住](img/remember.png) `Azure Storage Explorer` 是一款免费的跨平台桌面应用程序，让处理 Azure 存储帐户变得轻而易举。请访问 [`https://azure.microsoft.com/en-us/features/storage-explorer/`](https://azure.microsoft.com/en-us/features/storage-explorer/) 获取该工具。
 
 请遵循以下步骤为新 Function 创建 Blob 容器：
 
 1.  **打开 Azure Storage Explorer，并向你的 Azure 订阅进行身份验证。**
 2.  **展开你为 Function App 创建的存储帐户，右键单击 Blob 容器，然后从快捷菜单中选择“创建 Blob 容器”。**
+
     Azure 将创建该容器，并将光标置于其旁边，准备好供你命名新对象。
+
 3.  **将容器命名为 `images`，然后按 Enter 键确认。**
 
 ## 创建 Function
@@ -4241,24 +3683,37 @@ Azure Function 创建工作流的下一步是定义 Function 本身。根据我�
 
 1.  **在 Azure 门户中打开你的 Function App。**
 2.  **在“Functions”行中，单击加号。**
+
     右侧的详细信息窗格将引导你完成 Function 向导，第一步是选择开发环境。
+
 3.  **选择“In-Portal”作为你的开发环境，然后单击“继续”。**
+
     Visual Studio 和 Visual Studio Code 都原生支持编写 Functions。
+
 4.  **在“创建 Function”窗格中，单击“更多模板”，然后单击“完成并查看模板”。**
+
     我在 图 8-5 中展示了这一点。
 
     ![图 8-5：在 Azure 门户中创建 Function。](img/9781119612148-fg0805.png)
 
     **图 8-5：** 在 Azure 门户中创建 Function。
+
 5.  **单击“查看模板”以查看 Azure Function 触发器库。**
 6.  **在库中，选择“Azure Blob 存储触发器”。**
+
     系统可能会提示你安装 Azure Storage 扩展；单击“安装”，并等待过程完成。
+
 7.  **完成“新建 Function”边栏选项卡。**
+
     完成以下字段：
-    *   **名称：** 我将我的命名为 `BlobUploadFx`。这是包含在 Function App 内部的 Function 的名称。名称应简短且具有描述性。
-    *   **Azure Blob 存储触发器路径：** 此设置很重要。你需要保留 `{name}` 部分，因为它是一个代表任何上传 Blob 的变量。路径应如下所示：
+
+    *   `名称`：我将我的命名为 `BlobUploadFx`。这是包含在 Function App 内部的 Function 的名称。名称应简短且具有描述性。
+    *   `Azure Blob 存储触发器路径`：此设置很重要。你需要保留 `{name}` 部分，因为它是一个代表任何上传 Blob 的变量。路径应如下所示：
+
         `images/{name}`
-    *   **存储帐户连接：** 单击“新建”，然后选择你的 Function 的存储帐户。
+
+    *   `存储帐户连接`：单击“新建”，然后选择你的 Function 的存储帐户。
+
 8.  **完成后单击“创建”。**
 
 当你在 Function App 的左侧菜单中选择你的 Function 时，可以看到你的初学者 C# 源代码。对于此示例，代码应如下所示：
@@ -4274,18 +3729,22 @@ public static void Run(Stream myBlob, string name, ILogger log)
 
 新 Function 包含以下三个设置边栏选项卡：
 
-*   **集成：** 此边栏选项卡用于编辑触发器、输入和输出。
-*   **管理：** 此边栏选项卡用于禁用、启用或删除 Function，以及定义授权 API 访问 Function 的主机密钥。
-*   **监视：** 在此处，你可以查看成功和失败的 Function 执行，并可选择从 Function 访问 Application Insights 遥测数据。
+*   `集成`：此边栏选项卡用于编辑触发器、输入和输出。
+*   `管理`：此边栏选项卡用于禁用、启用或删除 Function，以及定义授权 API 访问 Function 的主机密钥。
+*   `监视`：在此处，你可以查看成功和失败的 Function 执行，并可选择从 Function 访问 Application Insights 遥测数据。
 
 ## 测试
 
 测试你的 Function 只需执行以下步骤：
 
 1.  **在 Azure Storage Explorer 中，将图像文件上传到 `images` 容器。**
+
     为此，请选择该容器，然后单击 Storage Explorer 工具栏上的“上传”。你可以上传单个文件或整个文件夹。
+
     从技术上讲，你可以上传任何文件，无论是否为图像，因为所有文件都被视为 Blob。
+
 2.  **在 Azure 门户中，选择你的 Function App，切换到“日志”视图，并观察输出。**
+
     图 8-6 显示了测试的输出。
 
 ![图 8-6：我们的 Azure Function 运行中。](img/9781119612148-fg0806.png)
@@ -4300,11 +3759,11 @@ public static void Run(Stream myBlob, string name, ILogger log)
 
 ![记住](img/remember.png) 你需要处于 Function App 作用域（导航 UI 中 Functions 的上方）。你可以在 图 8-7 中看到此约定。
 
-*   **概述：** 使用此边栏选项卡停止、启动和重启 Function App。你还可以下载所有站点内容，以便在本地集成开发环境中使用。
-*   **平台功能：** 大多数 Function App 设置类别都位于此边栏选项卡中。
-*   **Function App Settings：** 从此边栏选项卡，你可以查看使用配额并管理主机密钥。
-*   **配置，应用程序设置：** 此边栏选项卡用于管理应用程序键/值对设置和数据库连接字符串。
-*   **配置，常规设置：** 此边栏选项卡用于配置体系结构；FTP 状态、HTTP 版本；远程调试。
+*   `概述`：使用此边栏选项卡停止、启动和重启 Function App。你还可以下载所有站点内容，以便在本地集成开发环境中使用。
+*   `平台功能`：大多数 Function App 设置类别都位于此边栏选项卡中。
+*   `Function App Settings`：从此边栏选项卡，你可以查看使用配额并管理主机密钥。
+*   `配置，应用程序设置`：此边栏选项卡用于管理应用程序键/值对设置和数据库连接字符串。
+*   `配置，常规设置`：此边栏选项卡用于配置体系结构；FTP 状态、HTTP 版本；远程调试。
 
 ![图 8-7：理解 Function App 与其所包含的 Functions 之间的关系。](img/9781119612148-fg0807.png)
 
@@ -4316,13 +3775,11 @@ public static void Run(Stream myBlob, string name, ILogger log)
 
 相反，你的开发人员可以配置一个 Logic App，使其在特定的 Twitter 推文上触发，并向 Outlook 邮箱发送电子邮件，而无需了解 Twitter 或 Office 365 API。图 8-8 显示了此 Logic App 的工作流。
 
-
-
-
-
 ![图 8-8：Azure 逻辑应用的工作流。](img/9781119612148-fg0808.png)
 
 图 8-8： Azure 逻辑应用的工作流。
+
+
 
 ### 创建 Azure 逻辑应用
 
@@ -4337,11 +3794,17 @@ public static void Run(Stream myBlob, string name, ILogger log)
 请遵循以下过程创建逻辑应用资源：
 
 1.  **在 Azure 门户中，浏览到“逻辑应用”边栏选项卡，然后单击“添加”。**
+
     “创建”边栏选项卡随即打开。
+
 2.  **完成“逻辑应用创建”边栏选项卡。**
+
     创建资源无需太多设置。提供名称、订阅、资源组和位置，并指定是否要使用 Log Analytics 进行监视。
+
 3.  **单击“创建”以提交部署。**
+
     部署完成后，在 Azure 通知菜单中单击“转到资源”以打开逻辑应用。默认情况下，你将进入逻辑应用设计器。
+
 4.  **单击界面右上角的 X 按钮以关闭边栏选项卡。**
 
 ### 定义工作流
@@ -4351,32 +3814,53 @@ public static void Run(Stream myBlob, string name, ILogger log)
 ![提示](img/tip.png) 如果你想跟随本练习操作，则需要 Twitter 和 Office 365 帐户。Twitter 帐户是免费的，但 Office 365 通常是付费的 SaaS 产品。如果你愿意，可以使用其他电子邮件帐户（如 Gmail）。逻辑应用连接器库非常庞大，因此你很有可能会找到适合你的服务。
 
 1.  **转到新逻辑应用的“概述”边栏选项卡。**
+
 2.  **从“设置”菜单中选择“逻辑应用设计器”。**
+
     此命令将带你进入首次打开逻辑应用时看到的视图。
+
 3.  **向下滚动到“模板”部分，然后选择“空白逻辑应用”。**
+
     从空白逻辑应用开始，可让你更熟悉工作流设计过程，但 Azure 提供了许多模板和触发器，可用于其他目的。
-4.  **在“搜索连接器和触发器”字段中，键入** `Twitter`**。**
+
+4.  **在“搜索连接器和触发器”字段中，键入 `Twitter`。**
+
 5.  **在搜索结果中，选择 Twitter 触发器类别，然后单击“发布新推文时”触发器。**
+
 6.  **单击“登录”，并登录到你的 Twitter 帐户。**
+
 7.  **完成“发布新推文时”表单。**
+
     对于前面概述的示例，你希望逻辑应用在有人在推文中提及关键字 `Azure` 时触发，因此按如下方式完成选项：
+
     *   *搜索文本：* “Azure”
     *   *间隔：* 1
     *   *频率：* 分钟
 
     ![警告](img/warning.png) 将逻辑应用配置为在关键字 `Azure` 上触发会生成*大量*触发事件，并可能在结果中产生较差的信噪比。如果你为此目的创建逻辑应用，请尝试编写更精细的触发器关键字，以生成你想要的结果。
+
 8.  **单击“新建步骤”。**
+
 9.  **浏览连接器库列表并查找 Outlook。**
+
 10. **找到 Outlook 连接器后，单击“Office 365 Outlook”连接器。**
+
 11. **在操作列表中搜索“发送”，然后选择“发送电子邮件”操作。**
+
 12. **在“Office 365 Outlook 连接器”对话框中，单击“登录”，并向 Office 365 进行身份验证。**
+
 13. **完成“发送电子邮件”对话框，最好使用动态字段。**
+
     此步骤可能会变得有点复杂。
+
     1.  *在“收件人:”字段中输入目标 Office 365 电子邮件地址。*
     2.  *将光标放在“主题”字段中。*
     3.  *单击“添加动态内容”以显示动态内容弹出窗口。*
+
     动态字段允许你将实时数据插入工作流。例如，图 8-9 显示了一个自定义的电子邮件通知消息。
+
 14. **单击“保存”。**
+
     ![警告](img/warning.png) 切勿忽略此步骤！根据我的经验，很容易错过这一步。
 
 ![图 8-9：逻辑应用中的动态内容。](img/9781119612148-fg0809.png)
@@ -4388,9 +3872,13 @@ public static void Run(Stream myBlob, string name, ILogger log)
 要触发该操作，请遵循以下步骤：
 
 1.  **在逻辑应用工作流工具栏上，单击“运行”。**
+
     ![请记住](img/remember.png) 你*必须*——我重复一遍，*必须*——将逻辑应用切换到运行状态，以便它捕获触发器。
+
 2.  **在 Twitter 上，发布一条包含 Azure 引用的推文。**
+
 3.  **等待通知。**
+
     该推文应会触发一封发送到你指定地址的电子邮件。图 8-10 显示了此类通知。
 
 ![图 8-10：指示逻辑应用正常工作的电子邮件。](img/9781119612148-fg0810.png)
@@ -4404,8 +3892,11 @@ public static void Run(Stream myBlob, string name, ILogger log)
 ## 本章内容
 
 ![要点](img/check.png) **评估 Azure IaaS 和 PaaS 以用于应用程序的数据层**
+
 ![要点](img/check.png) **探究 Azure 中的关系型和非关系型数据库系统**
+
 ![要点](img/check.png) **使用 Azure SQL 数据库**
+
 ![要点](img/check.png) **使用 Cosmos DB**
 
 大多数业务线应用程序都需要数据层来支持数据持久化、查询和报告，因此现在是时候了解如何在 Microsoft Azure 公有云中实现数据库了。
@@ -4440,9 +3931,6 @@ Azure 云解决方案架构师在与客户打交道时，常见的一个争论�
 
 ### 使用来自 Azure Marketplace 的预装 VM
 
-
-
-
 Azure Marketplace 提供了预装了市面上几乎所有关系型或非关系型数据库的 VM 镜像。
 
 其商业优势在于，你无需花费额外时间安装、授权和配置数据库服务器软件，因为它已预装在镜像上。此外，SQL Server 授权已包含在按分钟计费的 VM 运行时成本中。
@@ -4463,7 +3951,7 @@ Azure Marketplace 提供了预装了市面上几乎所有关系型或非关系�
 
 表 9-1 列出了关系型和非关系型数据库系统之间的最大差异。
 
-表 9-1 关系型与非关系型数据库
+**表 9-1 关系型与非关系型数据库**
 
 | | **关系型** | **非关系型** |
 | --- | --- | --- |
@@ -4481,7 +3969,7 @@ Azure Marketplace 提供了预装了市面上几乎所有关系型或非关系�
 
 表 9-2 描述了 SQL 数据库系列的成员。
 
-表 9-2 SQL 数据库产品
+**表 9-2 SQL 数据库产品**
 
 | **产品** | **用途** |
 | --- | --- |
@@ -4555,10 +4043,8 @@ DTU 和 vCore 服务层级适用于单一数据库。如果你的企业有多个
 
     *   **服务器名称：** 该名称必须唯一，因为 Microsoft 会将虚拟服务器放置在其 `database.windows.net` DNS 域中。
 
-
-
-
 ### 服务器管理员登录
+
 请使用通用的账户名称。不允许使用常见的登录名，例如 `sa`、`root` 和 `admin`。
 
 ![图 9-2：部署新的 Azure SQL 数据库虚拟服务器。](img/9781119612148-fg0902.png)
@@ -4566,9 +4052,11 @@ DTU 和 vCore 服务层级适用于单一数据库。如果你的企业有多个
 图 9-2： 部署新的 Azure SQL 数据库虚拟服务器。
 
 ### 密码
+
 您的密码长度需在 8 到 128 个字符之间。密码不能包含登录名的任何部分，且必须具备复杂性特征，例如大小写字母、数字和非字母数字字符的混合。
 
 ### 网络配置
+
 在 **网络** 选项卡上，选择 **允许 Azure 服务和资源访问此服务器**。
 
 此设置颇具争议但至关重要。启用后，所有 Azure IP 地址都将共享一条通往您虚拟 SQL 服务器的连接路径。该设置绝不会授予访问权限，而只是提供了这种可能性。
@@ -4578,6 +4066,7 @@ DTU 和 vCore 服务层级适用于单一数据库。如果你的企业有多个
 您可以将 **其他设置** 和 **标记** 选项卡的设置保留为默认值。
 
 ### 部署
+
 单击 **查看 + 创建**，然后单击 **创建** 以将部署提交给 Azure 资源管理器 (`ARM`)。
 
 ![技术细节](img/technicalstuff.png) Azure 不会向您收取虚拟服务器的费用。SQL 数据库的费用来自于您放置在虚拟服务器上的数据库，而非虚拟服务器本身。
@@ -4598,15 +4087,18 @@ DTU 和 vCore 服务层级适用于单一数据库。如果你的企业有多个
 
     *   **数据库名称：** 此名称无需全局唯一。
     *   **服务器：** 列表中应包含您在上一节（“部署 SQL 数据库虚拟服务器”）中创建的虚拟服务器。
-    
-    ![图 9-3：创建 Azure SQL 数据库数据库。](img/9781119612148-fg0903.png)
-    
-    图 9-3： 创建 Azure SQL 数据库数据库。
 
-    *   **是否要使用 SQL 弹性池？：** 对于此示例，回答“否”。
-    *   **计算 + 存储：** 选择 **配置数据库**，在 **配置** 边栏选项卡上（请参阅 图 9-4），选择 **正在寻找基本、标准、高级？**。然后选择 **标准** 层。
 
-        ![提示](img/tip.png) 因为您只是在测试，所以无需为数据库计算层“超配”。选择标准层是个好主意，因为它解锁了您所需的大多数管理和安全功能。
+
+![图 9-3：创建 Azure SQL 数据库数据库。](img/9781119612148-fg0903.png)
+
+图 9-3： 创建 Azure SQL 数据库数据库。
+
+*   **是否要使用 SQL 弹性池？：** 对于此示例，回答“否”。
+
+*   **计算 + 存储：** 选择 **配置数据库**，在 **配置** 边栏选项卡上（请参阅 图 9-4），选择 **正在寻找基本、标准、高级？**。然后选择 **标准** 层。
+
+    ![提示](img/tip.png) 因为您只是在测试，所以无需为数据库计算层“超配”。选择标准层是个好主意，因为它解锁了您所需的大多数管理和安全功能。
 
 3.  **单击“应用”以确认您的选择。**
 
@@ -4637,7 +4129,9 @@ SQL 数据库防火墙是一个软件定义的网络组件，可保护您的数�
 SQL 数据库防火墙由三个组件组成：
 
 *   **允许访问 Azure 服务：** 此选项启用来自所有 Azure 源公共和专用 IP 地址的连接流量。此设置不构成授权，您需要单独配置授权。
+
 *   **客户端 IP 地址和 IP 规则：** 这些设置允许从您本地工作站的公共 IP 地址进行数据库连接。您还可以定义一个允许连接到数据库的公共 IP 地址范围列表。
+
 *   **虚拟网络：** 如果您在虚拟网络中定义了 SQL 数据库服务终结点，则可以在此处完成配置，以将对虚拟服务器的访问限制为来自该网络的访问。
 
 ### 连接字符串
@@ -4645,8 +4139,11 @@ SQL 数据库防火墙由三个组件组成：
 数据库连接字符串代表您的应用程序与数据库本身之间的接口。SQL 数据库提供四种驱动程序选择：
 
 *   **ADO.NET：** 通常用于 .NET 应用程序
+
 *   **JDBC：** 通常用于 Java 应用程序
+
 *   **ODBC：** 通用驱动程序
+
 *   **PHP：** 通常用于 PHP 应用程序
 
 选择最适合您的应用程序及您的开发团队技能组合的连接字符串。
@@ -4677,22 +4174,21 @@ SQL 数据库防火墙由三个组件组成：
 
     您需要在次要区域中创建一个虚拟服务器。创建辅助数据库会产生定价影响，但为了省钱，您可以在比主数据库更低的定价层上运行辅助数据库。
 
+### 故障转移组配置
 
+1.  **在地图上方，点击横幅文本 `You can now automatically manage replication, connectivity, and failover of this database by adding it to a failover group` 横幅。**
 
+    ![Tip](img/tip.png) Azure 门户一直在变化，所以如果你看不到此横幅，请导航到你的虚拟服务器，选择“故障转移组”设置，然后单击“添加组”。
 
+2.  **按如下方式完成“故障转移组”配置边栏选项卡：**
 
-### 4. 在地图上方，点击横幅文本 `You can now automatically manage replication, connectivity, and failover of this database by adding it to a failover group` 横幅。
+    *   **读/写故障转移策略：** 选择“自动”。
 
-![Tip](img/tip.png) Azure 门户一直在变化，所以如果你看不到此横幅，请导航到你的虚拟服务器，选择“故障转移组”设置，然后单击“添加组”。
+    *   **读/写宽限期(小时)：** 此设置是 Azure 在数据丢失可能发生时，自动故障转移到辅助数据库之前等待的时间量。此处的决定在于设置一个足够短的宽限期以维护你的服务级别协议，但又不能长到导致不必要的服务拒绝。
 
-### 5. 按如下方式完成“故障转移组”配置边栏选项卡：
+3.  **单击“创建”将部署提交给 Azure 资源管理器。**
 
-*   **读/写故障转移策略：** 选择“自动”。
-*   **读/写宽限期(小时)：** 此设置是 Azure 在数据丢失可能发生时，自动故障转移到辅助数据库之前等待的时间量。此处的决定在于设置一个足够短的宽限期以维护你的服务级别协议，但又不能长到导致不必要的服务拒绝。
-
-### 6. 单击“创建”将部署提交给 Azure 资源管理器。
-
-![Technical stuff](img/technicalstuff.png) 虽然这些步骤将 Azure 配置为自动故障转移数据库，但你负责更改应用程序源代码中的连接字符串以指向辅助实例。Azure 可能很聪明，但没聪明到那种程度。要获取数据库的连接字符串，请在 Azure 门户中打开数据库的设置并浏览到“连接字符串”边栏选项卡。
+    ![Technical stuff](img/technicalstuff.png) 虽然这些步骤将 Azure 配置为自动故障转移数据库，但你负责更改应用程序源代码中的连接字符串以指向辅助实例。Azure 可能很聪明，但没聪明到那种程度。要获取数据库的连接字符串，请在 Azure 门户中打开数据库的设置并浏览到“连接字符串”边栏选项卡。
 
 图 9-6 显示了一个已完成的异地复制配置。
 
@@ -4709,13 +4205,17 @@ SQL 数据库防火墙由三个组件组成：
 此过程可帮助你了解新 SQL 数据库与其父虚拟服务器之间的关系。请遵循以下步骤：
 
 1.  **导航到 SQL 数据库的“概述”页面。**
+
 2.  **在“要点”窗格上，单击“服务器名称”超链接。**
 
     ![Tip](img/tip.png) 虚拟服务器名称位于 `database.windows.net` 公共 DNS 区域中。
 
 3.  **在“设置”列表中进行以下选择：**
+
     *   **SQL 数据库：** 你应该能看到你的数据库，以及其状态和当前定价层。
+
     *   **管理备份：** Azure 默认会备份你的数据库。你可以选择你的数据库并单击“配置保留”以调整 Azure 备份数据库的频率，以及它保留每日（时间点还原）、每周、每月和每年备份的时长。
+
     *   **DTU 配额：** 此设置显示你的数据库在当前（每月）Azure 计费周期中消耗了多少资源。
 
 ### 连接到数据库
@@ -4723,11 +4223,13 @@ SQL 数据库防火墙由三个组件组成：
 要连接到 SQL 数据库，你需要下载并安装 SQL Server Management Studio ([`https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017`](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017))，这是免费的 SQL Server/Azure SQL 数据库管理界面。安装该产品后，请遵循以下步骤：
 
 1.  **在数据库的“概述”边栏选项卡上，复制虚拟服务器的域名服务 (DNS) 名称。**
+
 2.  **启动 SQL Server Management Studio 并使用管理用户帐户进行身份验证。**
 
     你需要填写以下信息：
 
     *   **服务器名称：** 格式为 `<server-name>.database.windows.net` 的虚拟服务器名称
+
     *   **身份验证：** SQL Server 身份验证
 
         ![Tip](img/tip.png) 如果你已配置 Azure Active Directory 身份验证，则可以使用它。你将在 第 11 章 中了解 Azure AD。
@@ -4735,6 +4237,7 @@ SQL 数据库防火墙由三个组件组成：
     *   **登录名/密码：** 你为虚拟服务器定义的管理凭据
 
 3.  **展开“数据库”容器，并选择 Adventure-Works 数据库。**
+
 4.  **选择“文件”⇒“来自当前连接的新查询”。**
 
     将出现一个新的空白 SQL 查询窗口。
@@ -4776,9 +4279,13 @@ Cosmos DB（最初称为 Document DB）是 Azure 的多模型、异地复制、�
 最初 Document DB 是一个 JavaScript Object Notation (JSON) 文档模型 NoSQL 数据库。然而，Microsoft 希望拥抱更广泛的客户群，因此推出了 Cosmos DB，它支持五种数据模型/应用程序编程接口 (API)：
 
 *   **核心 (SQL)：** 此 API 是原始 Document DB 的继任者。数据存储由 JSON 文档组成，核心 API 提供了一个类 SQL 查询语言，关系数据库管理员和开发人员应该会立即感到得心应手。
+
 *   **用于 MongoDB API 的 Azure Cosmos DB：** 此 API 支持 MongoDB 线路协议。MongoDB 也是一个 JSON 文档存储，它允许你像查询 MongoDB 实例一样查询 Cosmos DB。
+
 *   **Cassandra：** 此 API 与 Cassandra 宽列存储数据库兼容，并支持 Cassandra 查询语言。
+
 *   **Azure 表：** 此 API 指向 Azure 存储帐户的表服务。它是一个键/值数据存储，你可以使用 ARM 的表述性状态传输 (REST) API 进行访问。
+
 *   **Gremlin (图)：** 此 API 支持基于图的数据视图和 Apache Gremlin 查询语言。
 
 你是否看到了一个主题？其理念是，几乎任何需要 NoSQL 数据存储的开发人员都应该能够使用 Cosmos DB，而无需牺牲原始源代码或客户端工具。
@@ -4791,15 +4298,14 @@ Cosmos DB（最初称为 Document DB）是 Azure 的多模型、异地复制、�
 
 #### 多种一致性级别
 
-
-
-
-### 关系型数据库总是以速度和规模为代价提供强一致性
+关系型数据库总是以速度和规模为代价提供强一致性。
 
 Cosmos DB 在这方面提供了灵活性，允许你（动态）选择五个数据一致性级别中的任意一个：
 
 *   **强：** 保证读取操作返回某个项目最近提交的版本。此级别性能最慢，但最准确。
+
 *   **限定过期一致性、会话和一致前缀：** 这些一致性级别在性能和一致的查询结果之间提供了平衡。
+
 *   **最终：** 读取操作没有顺序保证。此选择速度最快，但准确性最低。
 
 ![Technical stuff](img/technicalstuff.png)
@@ -4819,8 +4325,11 @@ Cosmos DB 在这方面提供了灵活性，允许你（动态）选择五个数�
 2.  **在“创建 Azure Cosmos DB 帐户”边栏选项卡上，使用以下设置完成“基本信息”页面：**
 
     *   *帐户名称：* 此名称在其资源组中必须唯一。
+
     *   *API：* 选择 `Core (SQL)`。
+
     *   *异地冗余：* 不要启用此选项。如果启用，Azure 会将你的帐户复制到你所在区域指定的配对区域。
+
     *   *多区域写入：* 不要启用此选项。如果需要在全球范围内拥有该帐户的多个读/写副本，稍后随时可以启用它。
 
 3.  **查看“网络”页面。**
@@ -4840,7 +4349,9 @@ Cosmos DB 在这方面提供了灵活性，允许你（动态）选择五个数�
 如果你遵循 Cosmos DB 快速入门教程，可以完成以下目标：
 
 *   创建新的 Cosmos DB 数据库和容器。
+
 *   下载一个连接到 Cosmos DB 数据库的 `.NET Core` Web 应用程序。
+
 *   使用 Visual Studio 在工作站上与容器和数据存储进行交互。
 
 要运行示例应用程序，请遵循以下步骤：
@@ -4865,6 +4376,8 @@ Cosmos DB 在这方面提供了灵活性，允许你（动态）选择五个数�
 
 ![提示](img/tip.png)
 
+
+
 为了获得额外练习，请使用 Visual Studio 发布向导（在“解决方案资源管理器”中右键单击项目，然后从快捷菜单中选择“发布”即可找到）将此应用发布到 Azure 应用服务。此练习是对你迄今为止所开发技能的绝佳测试。
 
 ### 与 Cosmos DB 交互
@@ -4878,8 +4391,11 @@ Cosmos DB 在这方面提供了灵活性，允许你（动态）选择五个数�
     图 9-9： Cosmos DB 数据资源管理器直接在 Azure 门户中可用。
 
 *   **全球复制数据：** 单击地图将 Cosmos DB 帐户复制到多个区域。（需额外付费。）
+
 *   **默认一致性：** 在五个数据一致性级别之间切换。
+
 *   **防火墙和虚拟网络：** 将 Cosmos DB 帐户绑定到特定虚拟网络。
+
 *   **密钥：** 查看 Cosmos DB 帐户终结点统一资源标识符、访问密钥和连接字符串。
 
 现在请遵循以下步骤，直接从 Azure 门户与新的 Cosmos DB 数据库进行交互：
@@ -4933,8 +4449,6 @@ Cosmos DB 在这方面提供了灵活性，允许你（动态）选择五个数�
 
 7.  **单击工具栏上的“更新”按钮以保存更改。**
 
-
-
 ![Tip](img/tip.png)请将 URL [`https://cosmos.azure.com`](https://cosmos.azure.com) 加入书签，以便您能轻松在全窗口体验中访问 Cosmos DB 数据资源管理器。此外，微软在 [`https://docs.microsoft.com/en-us/azure/cosmos-db/query-cheat-sheet`](https://docs.microsoft.com/en-us/azure/cosmos-db/query-cheat-sheet) 提供了优秀的 Cosmos DB SQL 查询备忘单。
 
 # 第 4 部分：为 Azure 资源提供高可用性、可伸缩性和安全性
@@ -4942,8 +4456,11 @@ Cosmos DB 在这方面提供了灵活性，允许你（动态）选择五个数�
 ## 本部分内容
 
 - 备份和还原 Azure 存储帐户、VM、应用服务应用和数据库
+
 - 熟悉 Azure Active Directory
+
 - 为 Azure 订阅和资源实施最小权限安全性
+
 - 对 Azure 环境应用治理策略
 
 # 第 10 章：备份和还原 Azure 数据
@@ -4951,7 +4468,9 @@ Cosmos DB 在这方面提供了灵活性，允许你（动态）选择五个数�
 ## 本章内容
 
 - **保护 Azure 存储帐户**
+
 - **备份和还原虚拟机及应用服务**
+
 - **保护数据库**
 
 灾难恢复是指企业从 IT 相关故障中恢复的能力。在深入探讨灾难恢复的具体细节之前，您必须了解云计算中的共享责任模型。
@@ -4983,9 +4502,13 @@ Azure 存储帐户中的软删除功能实际上是已删除 Blob 的“回收�
 在我的环境中，我创建了一个具有以下属性的存储帐户：
 
 - **存储帐户名称：** `wileyprimstorage`
+
 - **类型：** 常规用途 v2
+
 - **Blob 软删除：** 已启用
+
 - **容器名称：** `scripts`
+
 - **容器内容：** 存储在我工作站上的若干 Azure PowerShell 脚本文件
 
 #### 创建和查看快照备份
@@ -4995,21 +4518,25 @@ Azure 存储帐户中的软删除功能实际上是已删除 Blob 的“回收�
 在 Azure 门户中，请遵循以下步骤创建快照备份：
 
 1. **浏览到目标容器，并选择一个或多个 Blob。**
-   
+
    Azure 门户支持通过复选框控件进行多选。
 
 2. **在工具栏上，单击“创建快照”。**
-   
+
    您不会在存储帐户中看到任何确认信息，但应会在 Azure 门户的“通知”菜单中看到 `Successfully created blob snapshot(s)` 消息。
 
 3. **仅选择您在第 1 步中选定的 Blob 中的一个，然后单击工具栏上的“查看快照”。**
-   
+
    图 10-1 显示了我为名为 `arm-deployment.ps1` 的脚本文件创建的快照列表。我标注了以下内容：
 
    - “下载快照”按钮 (A) 在您需要 Blob 先前版本的副本时非常有用。此命令将 Blob 下载到您的本地计算机。
+
    - “提升快照”按钮 (B) 会用选定的快照备份替换当前的 Blob 副本。请谨慎使用此选项，因为它会覆盖 Blob 的当前版本。
+
    - “删除快照”按钮 (C) 允许您有选择地移除不想再次使用的快照。
+
    - “编辑 Blob”选项卡 (D) 允许您修改快照内容。
+
    - “生成 SAS”选项卡 (E) 可轻松为 Blob 创建共享访问签名统一资源标识符 (URI)。共享访问签名允许您提供对 Blob 的限时公共访问；Azure 开发人员经常使用 SAS 令牌配合存储帐户处理 Blob 的上传和下载。
 
 ![图 10-1：在 Azure 门户中管理 Blob 快照。](img/9781119612148-fg1001.png)
@@ -5021,21 +4548,21 @@ Azure 存储帐户中的软删除功能实际上是已删除 Blob 的“回收�
 您可以通过删除（以及在已启用软删除的情况下还原）任意 Blob 来清理存储帐户 Blob 列表。请遵循以下步骤删除父 Blob 并将其恢复：
 
 1. **选择一个您已创建快照的 Blob，打开其上下文菜单，然后选择“删除”。**
-   
+
    确认消息会告知您删除父 Blob 也会删除其快照。选中复选框以继续。
 
 2. **在消息中单击“确定”以确认。**
 
 3. **单击“刷新”，验证该 Blob 是否已从列表中消失。**
-   
+
    您删除的 Blob 应不再出现在列表中。这是预期行为，不足为奇。
 
 4. **在工具栏上，选中“显示已删除的 Blob”复选框。**
-   
+
    此操作会显示软删除 Blob 的“回收站”。
 
 5. **打开该项目的上下文菜单 (…)，然后选择“取消删除”。**
-   
+
    您期望的成功确认会出现在“通知”菜单中。
 
 您可以在存储帐户设置中配置软删除。如图 10-2 所示，您首先导航到“数据保护”设置边栏选项卡，将“Blob 软删除”控件切换为“已启用”，然后选择保留期。软删除支持 1 到 365 天的保留范围。
@@ -5045,8 +4572,6 @@ Azure 存储帐户中的软删除功能实际上是已删除 Blob 的“回收�
 ![图 10-2：为 Azure 存储帐户 Blob 配置软删除。](img/9781119612148-fg1002.png)
 
 图 10-2： 为 Azure 存储帐户 Blob 配置软删除。
-
-
 
 ![Tip](img/tip.png)当我在 Azure 门户中提到资源的*上下文菜单*时，通常是指项目行右侧出现的省略号 (…) 图标。
 
@@ -5079,6 +4604,7 @@ AzCopy /Source:https://wileyprimstorage.blob.core.windows.net/scripts /Dest:http
 Azure 恢复服务保管库有两大用途：
 
 *   **备份和恢复：** 备份和还原单个 VM 或批量 VM
+
 *   **灾难恢复：** 配置 Azure VM 的热备实例，并在主要实例脱机时快速切换到它们
 
 ![Technical stuff](img/technicalstuff.png)托管磁盘服务和恢复服务保管库都是构建在 Azure 存储帐户之上的抽象层。Azure 资源管理器的很大一部分工作都是将较高层级的管理开销抽象为更易于管理的层级。
@@ -5088,9 +4614,13 @@ Azure 恢复服务保管库有两大用途：
 请按照以下步骤在 Azure 门户中部署恢复服务保管库：
 
 1.  **浏览到“恢复服务保管库”边栏选项卡，然后单击“添加”。**
+
 2.  **填写“创建恢复服务保管库”表单。**
+
     保管库名称需在 Azure 订阅级别保持唯一。请记住，待备份的 VM 需要与恢复服务保管库位于同一区域。
+
 3.  **单击“查看 + 创建”，然后单击“创建”以提交部署。**
+
     部署速度很快，因为恢复服务保管库本质上是一个容器。
 
 Azure 恢复服务保管库可以自动备份 Azure VM 中运行的 SQL Server 以及存储帐户文件共享，但你需要深入了解 VM 备份。
@@ -5104,16 +4634,27 @@ Azure 恢复服务保管库可以自动备份 Azure VM 中运行的 SQL Server �
 请按照以下步骤创建一个用于 VM 备份的简单备份策略：
 
 1.  **在恢复服务保管库设置中，单击“备份策略”。**
+
 2.  **在“备份策略”页面上，单击“添加”。**
+
     “添加”边栏选项卡随即出现。
+
 3.  **在“添加”边栏选项卡的“策略类型”下，选择“Azure 虚拟机”。**
+
     请注意，你也可以为 Azure VM 中的 SQL Server 和 Azure 文件共享备份创建策略。
+
 4.  **填写“创建策略”边栏选项卡。**
+
     以下是主要的策略选项：
+
     *   **策略名称：** 使用描述性名称。（例如，我选择了 `wiley-windows-policy`。）
+
     *   **备份计划：** 选择“每日”或“每周”。
+
     *   **即时还原：** 指定 1 到 5 天之间的值，以将最新的备份快照保留在恢复服务保管库的暂存区中。此功能使还原速度更快，因为保管库不必将快照从存档中解包并放入暂存区。
+
     *   **保留范围：** 指定 Azure 存档每周、每月和每年备份点的时长。
+
 5.  **单击“创建”以提交更改。**
 
 ### 备份 VM
@@ -5129,13 +4670,21 @@ Azure 恢复服务保管库可以自动备份 Azure VM 中运行的 SQL Server �
 请按照以下步骤在 Azure 门户中备份正在运行的 VM：
 
 1.  **在 VM 的“设置”列表中，选择“备份”。**
+
 2.  **完成“欢迎使用 Azure 备份”边栏选项卡。**
+
     你只需从提供的下拉菜单中选择新创建的恢复服务保管库和新备份策略即可。
+
 3.  **单击“启用备份”。**
+
 4.  **部署完成后，返回到 VM 的“备份”边栏选项卡。**
+
 5.  **在工具栏上，单击“立即备份”。**
+
     此步骤将启动手动备份，而无需等待策略中指定的下一个备份时段。
+
 6.  **确认备份保留日期。**
+
 7.  **单击“确定”以开始备份。**
 
 #### 备份多个 VM
@@ -5143,19 +4692,34 @@ Azure 恢复服务保管库可以自动备份 Azure VM 中运行的 SQL Server �
 请按照以下步骤从恢复服务保管库备份一个或多个 VM：
 
 1.  **在恢复服务保管库的设置列表中，选择“备份”。**
+
 2.  **完成以下字段，如下所示：**
+
     *   **工作负载在何处运行？：** Azure
+
     *   **要备份什么？：** 虚拟机
+
 3.  **单击“备份”以继续。**
+
 4.  **在“备份策略”边栏选项卡上，选择你的 VM 策略，然后单击“确定”以继续。**
+
     “选择虚拟机”边栏选项卡随即出现。
+
 5.  **在“选择虚拟机”边栏选项卡上，选择要包含在批量备份作业配置中的 VM。**
+
     图 10-3 显示了我的环境。
-    ![FIGURE 10-3: You can back up multiple VMs simultaneously from your Recovery Services vault.](img/9781119612148-fg1003.png)
-    图 10-3： 你可以从恢复服务保管库同时备份多个 VM。
-6.  **单击“确定”。**
-    “备份”边栏选项卡随即出现。
-7.  **在“备份”边栏选项卡中，单击“启用备份”以完成配置。**
+
+
+
+![FIGURE 10-3: You can back up multiple VMs simultaneously from your Recovery Services vault.](img/9781119612148-fg1003.png)
+
+图 10-3： 你可以从恢复服务保管库同时备份多个 VM。
+
+6. **单击“确定”。**
+
+“备份”边栏选项卡随即出现。
+
+7. **在“备份”边栏选项卡中，单击“启用备份”以完成配置。**
 
 ![Tip](img/tip.png)你可以通过单击保管库中的“备份作业”设置来查看备份作业状态。
 
@@ -5167,12 +4731,9 @@ Azure 恢复服务保管库可以自动备份 Azure VM 中运行的 SQL Server �
 
 根据备份快照的一致性级别，Azure 为 VM 还原提供三种保证：
 
-*   **应用程序一致：** 这是最推荐的快照一致性级别。它保证 VM 将成功启动，且你不会遭受数据损坏或丢失。
-*   **文件系统一致：** SLA 规定 VM 将成功启动，且你不会遭受数据损坏。但是，你可能需要实施手动或自动修复，以确保数据是最新的。
+* **应用程序一致：** 这是最推荐的快照一致性级别。它保证 VM 将成功启动，且你不会遭受数据损坏或丢失。
 
-
-
-
+* **文件系统一致：** SLA 规定 VM 将成功启动，且你不会遭受数据损坏。但是，你可能需要实施手动或自动修复，以确保数据是最新的。
 
 ##### 崩溃一致性
 
@@ -5184,10 +4745,13 @@ Azure 在还原 VM 方面提供了灵活性。例如，你可能需要对整个 
 
 以下是你的还原配置选项摘要：
 
-*   **创建新虚拟机：** 覆盖现有 VM 或还原到备用虚拟网络。
-*   **还原磁盘：** 将已备份的操作系统和数据磁盘复制到存储帐户 Blob 服务。
-*   **替换磁盘：** 用快照副本替换有问题的 VM 的操作系统和数据磁盘。
-*   **文件恢复：** 通过一些巧妙的 PowerShell 脚本魔法，将快照操作系统和数据磁盘装载到本地工作站。然后，你可以快速轻松地从备份中恢复单个文件。
+* **创建新虚拟机：** 覆盖现有 VM 或还原到备用虚拟网络。
+
+* **还原磁盘：** 将已备份的操作系统和数据磁盘复制到存储帐户 Blob 服务。
+
+* **替换磁盘：** 用快照副本替换有问题的 VM 的操作系统和数据磁盘。
+
+* **文件恢复：** 通过一些巧妙的 PowerShell 脚本魔法，将快照操作系统和数据磁盘装载到本地工作站。然后，你可以快速轻松地从备份中恢复单个文件。
 
 ![Technical stuff](img/technicalstuff.png) 文件恢复功能非常酷且实用。要了解更多信息，请查看 Azure 文档：[`https://docs.microsoft.com/en-us/azure/backup/backup-azure-restore-files-from-vm`](https://docs.microsoft.com/en-us/azure/backup/backup-azure-restore-files-from-vm)。
 
@@ -5201,23 +4765,25 @@ Azure 在还原 VM 方面提供了灵活性。例如，你可能需要对整个 
 
 废话不多说，让我向你展示如何使用 Azure VM 还原体验。请遵循以下步骤：
 
-1.  **在 VM 的“设置”列表中，选择“备份”。**
-2.  **在“备份”边栏选项卡上，单击“还原 VM”。**
-3.  **在“选择还原点”边栏选项卡上，选择一个还原点。**
+1. **在 VM 的“设置”列表中，选择“备份”。**
 
-    此处的一般指导原则是选择最近的应用程序一致性备份。
+2. **在“备份”边栏选项卡上，单击“还原 VM”。**
 
-4.  **在“还原配置”边栏选项卡上，选择一个还原选项。**
+3. **在“选择还原点”边栏选项卡上，选择一个还原点。**
 
-    你可以选择将整个 VM 还原到其原始位置，或仅将其磁盘还原到原始位置，或者还原到备用存储帐户和虚拟网络。
+此处的一般指导原则是选择最近的应用程序一致性备份。
+
+4. **在“还原配置”边栏选项卡上，选择一个还原选项。**
+
+你可以选择将整个 VM 还原到其原始位置，或仅将其磁盘还原到原始位置，或者还原到备用存储帐户和虚拟网络。
 
 ## 保护应用服务
 
 Azure 应用服务内置备份的便利之处之一在于，除了备份应用的源代码外，Azure 还会备份其关联的配置设置和支持文件：
 
-*   应用文件系统项目
-*   应用配置数据
-*   连接到应用的数据库
+* 应用文件系统项目
+* 应用配置数据
+* 连接到应用的数据库
 
 ### 备份应用服务应用
 
@@ -5225,20 +4791,25 @@ Azure 应用服务内置备份的便利之处之一在于，除了备份应用�
 
 要备份应用服务应用，请遵循以下步骤：
 
-1.  **在应用的“设置”边栏选项卡上，单击“备份”。**
-2.  **在工具栏上，单击“配置”。**
-3.  **完成“备份配置”边栏选项卡。**
+1. **在应用的“设置”边栏选项卡上，单击“备份”。**
 
-    填写以下信息：
+2. **在工具栏上，单击“配置”。**
 
-    *   **备份存储：** 选择同一区域中的存储帐户，并创建或指定一个现有容器来存放应用备份。
-    *   **备份计划：** 计划每隔 *n* 天或小时自动备份一次，并选择以天为单位的保留期。
-    *   **备份数据库**（可选）：在备份定义中包含数据库连接。
+3. **完成“备份配置”边栏选项卡。**
 
-4.  **单击“保存”以提交配置。**
-5.  **单击“保存”以提交部署。**
+填写以下信息：
 
-    你将返回到 Web 应用的“备份”边栏选项卡。
+* **备份存储：** 选择同一区域中的存储帐户，并创建或指定一个现有容器来存放应用备份。
+
+* **备份计划：** 计划每隔 *n* 天或小时自动备份一次，并选择以天为单位的保留期。
+
+* **备份数据库**（可选）：在备份定义中包含数据库连接。
+
+4. **单击“保存”以提交配置。**
+
+5. **单击“保存”以提交部署。**
+
+你将返回到 Web 应用的“备份”边栏选项卡。
 
 ![Remember](img/remember.png) 你的应用服务功能取决于应用服务计划的定价层。要利用计划备份，你的应用服务计划必须至少运行在 S1 服务层级。我在第 7 章介绍 Azure 应用服务。
 
@@ -5248,20 +4819,25 @@ Azure 应用服务内置备份的便利之处之一在于，除了备份应用�
 
 要还原应用服务，请遵循以下步骤：
 
-1.  **导航到应用服务应用中的“备份”边栏选项卡。**
-2.  **在“备份”部分，选择“还原”。**
+1. **导航到应用服务应用中的“备份”边栏选项卡。**
 
-    “还原备份”边栏选项卡随即出现。
+2. **在“备份”部分，选择“还原”。**
 
-3.  **完成“还原备份”边栏选项卡。**
+“还原备份”边栏选项卡随即出现。
 
-    *   **还原源：** 选项包括应用备份（选择此项）、存储或快照。
-    *   **选择要还原的备份：** 这将列出之前创建的备份。
-    *   **还原目标：** 选项包括覆盖、新建或现有应用。
-    *   **还原时忽略冲突的主机名：** 选项为否或是。保留此设置为“否”，以防止 Azure 将具有与你环境中冲突名称的应用服务应用还原到环境中。
-    *   **忽略数据库：** 选项为否或是。如果你的 Web 应用有数据库连接字符串，你将需要将此选项设置为“否”。
+3. **完成“还原备份”边栏选项卡。**
 
-4.  **单击“确定”完成应用服务还原过程。**
+* **还原源：** 选项包括应用备份（选择此项）、存储或快照。
+
+* **选择要还原的备份：** 这将列出之前创建的备份。
+
+* **还原目标：** 选项包括覆盖、新建或现有应用。
+
+* **还原时忽略冲突的主机名：** 选项为否或是。保留此设置为“否”，以防止 Azure 将具有与你环境中冲突名称的应用服务应用还原到环境中。
+
+* **忽略数据库：** 选项为否或是。如果你的 Web 应用有数据库连接字符串，你将需要将此选项设置为“否”。
+
+4. **单击“确定”完成应用服务还原过程。**
 
 图 10-5 显示了 Azure 门户中的“还原备份”边栏选项卡。
 
@@ -5285,28 +4861,33 @@ SQL 数据库每周创建数据库的完整备份，每 12 小时创建差异备
 
 你可以在虚拟服务器级别配置 SQL 数据库备份。请遵循以下步骤来管理备份：
 
-1.  **浏览到你的 SQL 数据库虚拟服务器，然后选择“管理备份”设置。**
+1. **浏览到你的 SQL 数据库虚拟服务器，然后选择“管理备份”设置。**
 
-    “配置策略/可用备份”边栏选项卡随即出现。
+“配置策略/可用备份”边栏选项卡随即出现。
 
-2.  **在“配置策略”选项卡上，在数据库列表中选择所需的数据库，然后单击工具栏上的“配置保留”按钮。**
+2. **在“配置策略”选项卡上，在数据库列表中选择所需的数据库，然后单击工具栏上的“配置保留”按钮。**
 
-    图 10-6 显示了该界面。
+图 10-6 显示了该界面。
 
-    “配置策略”边栏选项卡随即出现。此边栏选项卡有四个可配置属性：
+“配置策略”边栏选项卡随即出现。此边栏选项卡有四个可配置属性：
 
-    *   **时间点还原配置：** 范围为 7 到 35 天。
-    *   **每周长期保留 (LTR) 备份：** 范围为 1 到 520 周。
-    *   **每月 LTR 备份：** 范围为 4 到 520 个月。
-    *   **每年 LTR 备份：** 范围为 1 到 10 年。
+* **时间点还原配置：** 范围为 7 到 35 天。
 
-    ![图 10-6：自定义 Azure SQL 数据库自动备份。](img/9781119612148-fg1006.png)
+* **每周长期保留 (LTR) 备份：** 范围为 1 到 520 周。
 
-    图 10-6： 自定义 Azure SQL 数据库自动备份。
+* **每月 LTR 备份：** 范围为 4 到 520 个月。
 
-3.  **单击“应用”以提交保留策略更改。**
-4.  **在“管理备份”边栏选项卡上，单击“可用备份”选项卡。**
-5.  **浏览附加到虚拟服务器的所有数据库的备份。**
+* **每年 LTR 备份：** 范围为 1 到 10 年。
+
+![图 10-6：自定义 Azure SQL 数据库自动备份。](img/9781119612148-fg1006.png)
+
+图 10-6： 自定义 Azure SQL 数据库自动备份。
+
+3. **单击“应用”以提交保留策略更改。**
+
+4. **在“管理备份”边栏选项卡上，单击“可用备份”选项卡。**
+
+5. **浏览附加到虚拟服务器的所有数据库的备份。**
 
 #### 还原 SQL 数据库
 
@@ -5320,9 +4901,6 @@ SQL 数据库每周创建数据库的完整备份，每 12 小时创建差异备
 
 ### 备份和还原 Cosmos DB
 
-
-
-
 与 SQL 数据库一样，Cosmos DB 会自动备份您的数据，无需客户干预。Cosmos DB 每 4 小时进行一次数据库备份，并保留最新的两个备份。Cosmos DB 还会保留快照 30 天。
 
 Azure 文档建议您使用 Azure 数据工厂，通过将数据复制到另一个 Cosmos DB 账户来手动备份 Cosmos DB 数据。
@@ -5331,19 +4909,27 @@ Azure 文档建议您使用 Azure 数据工厂，通过将数据复制到另一�
 
 共有四种 Azure 支持计划。所有即用即付订阅者均从基础支持计划开始，该计划免费；其他三个计划具有固定的月度费用。以下是这四个计划及其相关 SLA 的快速概览：
 
-*   **基础：** 无响应时间 SLA
-*   **开发人员：** 针对影响最小的支持问题，响应时间 SLA 少于 8 小时
-*   **标准：** 针对关键业务影响的支持问题，响应时间 SLA 少于 1 小时
-*   **专业直接：** 最短的响应时间，外加 Azure 架构和运营支持
+* **基础：** 无响应时间 SLA
+
+* **开发人员：** 针对影响最小的支持问题，响应时间 SLA 少于 8 小时
+
+* **标准：** 针对关键业务影响的支持问题，响应时间 SLA 少于 1 小时
+
+* **专业直接：** 最短的响应时间，外加 Azure 架构和运营支持
 
 假设您意外删除了 Cosmos DB 账户，并需要尽快恢复它。您必须提交支持工单。以下是步骤：
 
-1.  **在 Azure 门户中，选择“帮助” ⇒ “帮助 + 支持”。**
-    “帮助 + 支持”工具随即出现，如图 10-7 所示。
-2.  **选择“新建支持请求”，然后按提示操作。**
-    在这种情况下，您需选择您的 Cosmos DB 实例，并选择“备份和恢复”问题类型。
-3.  **定期查看“所有支持请求”边栏选项卡以获取更新。**
-    Azure 支持可能会通过电子邮件和/或电话与您联系，具体取决于您提交支持请求时指定的偏好。
+1. **在 Azure 门户中，选择“帮助” ⇒ “帮助 + 支持”。**
+
+“帮助 + 支持”工具随即出现，如图 10-7 所示。
+
+2. **选择“新建支持请求”，然后按提示操作。**
+
+在这种情况下，您需选择您的 Cosmos DB 实例，并选择“备份和恢复”问题类型。
+
+3. **定期查看“所有支持请求”边栏选项卡以获取更新。**
+
+Azure 支持可能会通过电子邮件和/或电话与您联系，具体取决于您提交支持请求时指定的偏好。
 
 ![图 10-7：在“帮助 + 支持”边栏选项卡上创建和跟踪 Azure 支持请求。](img/9781119612148-fg1007.png)
 
@@ -5353,11 +4939,15 @@ Azure 文档建议您使用 Azure 数据工厂，通过将数据复制到另一�
 
 ## 本章内容
 
-*   **区分 AD 产品**
-*   **描述订阅与 AD 之间的关系**
-*   **创建和管理 AD 用户和组**
-*   **实施基于角色的访问控制**
-*   **采纳 Azure 顾问建议**
+* **区分 AD 产品**
+
+* **描述订阅与 AD 之间的关系**
+
+* **创建和管理 AD 用户和组**
+
+* **实施基于角色的访问控制**
+
+* **采纳 Azure 顾问建议**
 
 每当您在 Azure 中执行工作时，您都在与 Azure Active Directory (Azure AD) 交互，后者是一种托管标识服务，与 Azure 架构师、管理员、开发人员、业务分析师、信息工作者甚至您的客户息息相关。
 
@@ -5369,10 +4959,10 @@ Azure AD 之所以在 Azure 中处于核心地位，是因为它构成了订阅�
 
 Azure AD 是一种多租户托管标识存储，供 Azure 以及其他 Microsoft 云服务使用，包括：
 
-*   Office 365
-*   Dynamics 365
-*   Intune
-*   Enterprise Mobility + Security
+* Office 365
+* Dynamics 365
+* Intune
+* Enterprise Mobility + Security
 
 如今的任何计算机（无论运行 Windows、macOS 还是 Linux）都有一个本地标识存储，用于定义获授权使用该计算机的用户。自 1999 年以来，Microsoft 在其 Windows Server 产品中提供了 Active Directory 域服务 (AD DS)；AD DS 是本地网络的集中式标识存储。
 
@@ -5380,9 +4970,9 @@ Azure AD 是一种多租户托管标识存储，供 Azure 以及其他 Microsoft
 
 Azure AD 之所以被称为多租户标识存储，是因为：
 
-*   您可以拥有多个 Azure AD 租户。
-*   每个租户可以托管来自多个来源的用户帐户，包括其他 Azure AD 租户。
-*   一个或多个订阅可以信任 Azure AD（共享单个标识存储）。
+* 您可以拥有多个 Azure AD 租户。
+* 每个租户可以托管来自多个来源的用户帐户，包括其他 Azure AD 租户。
+* 一个或多个订阅可以信任 Azure AD（共享单个标识存储）。
 
 另一个经常模糊不清的术语是 *云应用*。就 Azure AD 而言，云应用是指任何依赖 Azure AD 作为其用户标识存储的应用程序（Web、桌面或移动）。
 
@@ -5421,14 +5011,15 @@ Azure AD 租户可以独立于订阅存在，但在 Azure AD 租户链接到至�
 
 虽然 Azure AD 可以作为多个订阅的标识存储，但单个 Azure 订阅一次只能信任单个 Azure AD 租户。要理解这些概念，请执行以下步骤：
 
-1.  **以管理用户身份登录 Azure 门户。**
-2.  **选择“创建资源”。**
-3.  **在 Azure 市场边栏选项卡上，搜索并选择 Azure Active Directory，并考虑拥有多个 Azure AD 租户的含义。**
-    您可以部署任意数量的 Azure AD 租户（取决于您的用例），但在将 Azure 订阅绑定到它们之前，您无法对它们进行任何实质性操作。Azure AD 租户是资源，与 Azure 资源管理器 (ARM) 中的任何其他资源非常相似。
-4.  **使用全局搜索框浏览到“订阅”边栏选项卡，并在订阅列表中选择您的订阅。**
+1. **以管理用户身份登录 Azure 门户。**
 
+2. **选择“创建资源”。**
 
+3. **在 Azure 市场边栏选项卡上，搜索并选择 Azure Active Directory，并考虑拥有多个 Azure AD 租户的含义。**
 
+您可以部署任意数量的 Azure AD 租户（取决于您的用例），但在将 Azure 订阅绑定到它们之前，您无法对它们进行任何实质性操作。Azure AD 租户是资源，与 Azure 资源管理器 (ARM) 中的任何其他资源非常相似。
+
+4. **使用全局搜索框浏览到“订阅”边栏选项卡，并在订阅列表中选择您的订阅。**
 
 如果你只有一个订阅，这一步很简单。
 
@@ -5448,6 +5039,10 @@ Azure AD 租户可以独立于订阅存在，但在 Azure AD 租户链接到至�
 
 在深入探讨创建 Azure AD 标识的主题之前，我将区分 Azure Active Directory 产品家族的其他成员：
 
+
+
+## Azure AD 协作技术
+
 *   **Azure AD 企业间 (B2B)：** 此协作技术通过允许外部用户使用其现有的电子邮件 ID，简化了邀请他们进入你的 Azure AD 租户的过程。当你想要向承包商或临时员工授予对 Azure 环境的有限访问权限时，请使用此服务。
 
 *   **Azure AD 企业对消费者 (B2C)：** 此可移植标识存储面向你的业务线客户。此租户包含与社交媒体账户注册和登录的现成集成。当你想要简化面向公众的基于 Azure 的应用程序的客户账户管理时，请使用此服务。
@@ -5466,7 +5061,7 @@ Azure AD 租户可以独立于订阅存在，但在 Azure AD 租户链接到至�
 
 浏览到 Azure AD 租户中的“自定义域名”设置。你将看到 Microsoft `onmicrosoft.com` 域名上的原始目录名称。`*.onmicrosoft.com` 域是 Azure AD 用户的默认登录后缀，但它无法提供良好的用户登录体验。
 
-![警告](img/warning.png)你无法删除 `<tenant>.onmicrosoft.com` 域名。这是 Microsoft 通过域名系统 (DNS) 从根本上识别你的租户的方式。
+![警告](img/warning.png) 你无法删除 `<tenant>.onmicrosoft.com` 域名。这是 Microsoft 通过域名系统 (DNS) 从根本上识别你的租户的方式。
 
 我强烈建议你将业务 DNS 域与 Azure AD 租户关联。这样你就可以选择希望 Azure AD 用户使用的登录后缀。
 
@@ -5480,7 +5075,7 @@ Azure AD 租户可以独立于订阅存在，但在 Azure AD 租户链接到至�
 
 3.  **向域的区域文件添加 TXT 或 MX 资源记录。**
 
-    ![请记住](img/remember.png)你需要拥有对 DNS 区域的管理访问权限才能完成此步骤。你选择哪种记录类型进行验证无关紧要。
+    ![请记住](img/remember.png) 你需要拥有对 DNS 区域的管理访问权限才能完成此步骤。你选择哪种记录类型进行验证无关紧要。
 
     Azure 会为你提供资源记录详细信息。
 
@@ -5520,7 +5115,7 @@ AD 用户列表中的“源”列表示用户的创建位置及其身份验证�
 
 *   **Microsoft 账户：** 这些用户是 Azure AD B2B 受邀者；最初创建租户/订阅的账户也是 Microsoft 账户。
 
-    ![请记住](img/remember.png)Microsoft 账户是一个免费账户，可用于访问多项 Microsoft 服务，包括 Xbox、Office 365，当然还有 Azure。Microsoft 账户目录早于 Azure；你可能还记得以前称为“Windows Live 账户”的东西，它们是同一回事。
+    ![请记住](img/remember.png) Microsoft 账户是一个免费账户，可用于访问多项 Microsoft 服务，包括 Xbox、Office 365，当然还有 Azure。Microsoft 账户目录早于 Azure；你可能还记得以前称为“Windows Live 账户”的东西，它们是同一回事。
 
 *   **Windows Server AD：** 这些用户是从本地 AD DS 域同步或联合的。
 
@@ -5536,12 +5131,14 @@ AD 用户列表中的“源”列表示用户的创建位置及其身份验证�
 
     以下是我填写此表单的建议：
 
-
-
 *   **组类型：** 选择“安全”。Office 365 用于 Microsoft Exchange Online 中的通讯组列表。（Office 365 也使用 Azure AD。）
+
 *   **组名称：** 为该组指定一个有意义且易于输入的名称。
+
 *   **成员资格类型：** 选择“已分配”。其他选项包括“动态用户”和“动态设备”。动态组会指示 Azure 根据用户帐户属性（例如城市）或其设备类型（例如桌面或移动设备）自动填充这些组。
+
 *   **所有者：** 这些是将拥有编辑组成员资格特权的 Azure AD 用户。
+
 *   **成员：** 如果你选择“已分配”作为组类型，则需要手动将 Azure AD 用户添加到该组。
 
 3. **单击“创建”以创建新组。**
@@ -5551,6 +5148,7 @@ AD 用户列表中的“源”列表示用户的创建位置及其身份验证�
 现在你可以创建一个新的 Azure AD 用户帐户。请遵循以下步骤：
 
 1. **在 Azure AD 设置列表中，选择“所有用户”边栏选项卡，然后单击“新建用户”。**
+
 2. **在“新建用户”对话框中，单击“创建用户”，并填写“标识”属性。**
 
 如果可能，请将用户名和域部分定义为与你的企业电子邮件 ID 格式相匹配。如果你尚未添加自定义域，则别无选择，只能使用 `<tenant>.onmicrosoft.com` 后缀。
@@ -5600,6 +5198,7 @@ AD 用户列表中的“源”列表示用户的创建位置及其身份验证�
 要购买 Azure AD 许可证，请遵循以下步骤：
 
 1. **使用你的 Azure AD 管理员帐户登录到 Microsoft 365 管理中心 ([`https://portal.office.com`](https://portal.office.com))。**
+
 2. **选择“账单”⇒“产品和服务”。**
 
 随即打开“购买服务”库。
@@ -5625,11 +5224,13 @@ AD 用户列表中的“源”列表示用户的创建位置及其身份验证�
 随即出现“许可证管理入门”边栏选项卡。
 
 2. **在“许可证设置”列表中，选择“所有产品”。**
+
 3. **从许可证列表中选择你购买的许可证类型。**
 
 例如，如果你购买了 Azure AD 高级版许可证，它们会显示在此列表中。你可以查看已分配的许可证数量和可用的许可证数量。
 
 4. **在“已获许可用户”边栏选项卡上，单击工具栏中的“分配”。**
+
 5. **在“分配许可证”边栏选项卡上，选择目标用户，然后单击“分配”。**
 
 #### 以 Azure AD 用户身份登录
@@ -5650,6 +5251,7 @@ AD 用户列表中的“源”列表示用户的创建位置及其身份验证�
 我确信密码重置是你的支持服务台最常见的用户帐户维护操作。要在 Azure AD 中更改密码，请遵循以下步骤：
 
 1. **在你的 AD 租户中找到并选择相关用户。**
+
 2. **在用户的“配置文件”边栏选项卡上，单击“重置密码”。**
 
 随即出现“重置密码”边栏选项卡。
@@ -5666,16 +5268,18 @@ Microsoft 使用基于角色的访问控制 (RBAC，通常发音为 *are-back*) 
 
 Azure RBAC 利用继承性。换句话说，较高范围的 RBAC 角色分配会通过继承级联到较低范围。图 11-6 显示了五个 Azure 管理范围：
 
-
-
 ### Azure 管理范围和 RBAC 角色
 
 #### Azure 管理范围
 
 *   **租户根：** ARM 中的最高范围级别。
+
 *   **管理组：** 一个可以容纳一个或多个订阅的容器。此选项非常适合需要同时对多个订阅应用相同 RBAC 角色分配的企业。
+
 *   **订阅：** Azure 中的基本计费单位。
+
 *   **资源组：** Azure 中的基本部署单位。
+
 *   **资源：** 单个 Azure 资产（虚拟机、数据库等）。
 
 ![图 11-6：Azure 管理范围使用继承来简化管理。](img/9781119612148-fg1106.png)
@@ -5710,15 +5314,25 @@ Azure RBAC 利用继承性。换句话说，较高范围的 RBAC 角色分配会
 假设新用户 Ginger Grant 应被授予 **“用户管理员”** 角色，以便她可以创建和管理 Azure AD 用户帐户。为此，请执行以下步骤：
 
 1.  **以该用户身份登录 `portal.azure.com`。**
+
     回想一下，该用户是一个没有 Azure AD 角色分配的普通用户。
+
 2.  **浏览到“订阅”边栏选项卡。**
+
     你不应看到列出的任何订阅，因为新用户没有足够的权限。
+
 3.  **在你的 Azure AD 租户中，打开新用户的设置，然后单击“目录角色”边栏选项卡。**
+
     选择 **“所有用户”** 设置，选择该用户，然后从用户自己的设置中选择 **“目录角色”** 边栏选项卡。
+
 4.  **在“目录角色”边栏选项卡上，单击“添加分配”。**
+
 5.  **在“用户管理员”的目录角色列表中，选择该角色。**
+
 6.  **单击“添加”。**
+
     该用户应被授予用户管理员角色的成员资格。
+
 7.  **要测试访问权限，让该用户退出门户并再次登录以刷新帐户的访问令牌。**
 
 图 11-7 显示，相关的用户管理控件（例如添加新用户）在应用用户的新角色分配之前是不可用的。
@@ -5727,9 +5341,11 @@ Azure RBAC 利用继承性。换句话说，较高范围的 RBAC 角色分配会
 
 图 11-7： RBAC 角色分配前（上）和后（下）。
 
+
+
 ![技术资料](img/technicalstuff.png) 隐藏或禁用用户无权访问的控件的用户界面技术称为 `security trimming`（安全修剪）。
 
-#### 资源角色
+## 资源角色
 
 Azure AD 角色是可在 Azure AD 租户内使用的命名权限集合。相比之下，资源角色是可与 Azure 订阅和资源关联的权限集合。请注意，这与你迄今为止在 Azure AD 中看到的角色是完全不同的一组角色。
 
@@ -5743,24 +5359,36 @@ Azure AD 角色是可在 Azure AD 租户内使用的命名权限集合。相比�
 *   **虚拟机参与者：** 允许你管理虚拟机 (VM)，但不能管理其关联的网络和存储资源。
 *   **虚拟机管理员登录：** 允许你查看订阅中的 VM 并以管理员身份登录到它们。
 
-### 将帐户添加到 Azure AD 角色
+## 将帐户添加到 Azure AD 角色
 
 请遵循以下步骤，在订阅级别将帐户添加到 **“读取者”** 角色：
 
 1.  **要测试“之前”的状态，以新用户身份登录 Azure 门户，并导航到“资源组”边栏选项卡。**
+
     在 Azure 全局搜索框中键入 `resource groups` 以快速找到此边栏选项卡。
+
     你不应看到列出的任何资源组，因为该用户尚未获得任何特权。
+
 2.  **浏览到“订阅”边栏选项卡，选择你的订阅，然后单击“访问控制 (IAM)”设置。**
+
 3.  **在“检查访问权限”选项卡上，键入用户的登录名以查看其当前访问级别。**
+
     Azure 门户应显示该用户有零个角色分配。
+
 4.  **在“角色分配”选项卡上，选择“添加”⇒“添加角色分配”。**
+
 5.  **在“添加角色分配”边栏选项卡上，为用户分配读取者角色。**
+
     使用以下设置：
+
     *   **角色：** 选择读取者角色。
     *   **将访问权限分配给：** 使用 Azure AD 用户、组或服务。
     *   **选择：** 键入用户的登录名以解析帐户，然后单击以选择它。
+
 6.  **单击“保存”以提交更改。**
+
 7.  **作为你的用户，退出 Azure 门户，然后再次登录以测试访问权限。**
+
     “资源组”边栏选项卡应显示对用户订阅范围内所有资源的有限访问权限。Azure 会阻止你执行大多数操作，你可以通过尝试关闭 VM 或将 Blob 上传到存储帐户来测试这一点。
 
 在任何范围内，你都可以访问 **“访问控制 (IAM)”** 边栏选项卡及其 **“角色分配”** 选项卡，以查看哪些帐户具有哪种程度的访问权限（请参阅 图 11-8）。
@@ -5776,8 +5404,6 @@ Azure AD 角色是可在 Azure AD 租户内使用的命名权限集合。相比�
 实际上，没有人能对其 Azure 基础设施的成本、性能、安全性和高可用性拥有 100% 的全景视野。**Azure Advisor** 使用机器学习算法，就如何更好地优化 Azure 环境以实现成本、安全性、可用性和性能提出建议。
 
 **Azure Advisor** 是一个推荐引擎，它扫描你的订阅并就高可用性、安全性、性能和成本提供指导。该服务是免费的，因此这是一种经济高效的方式，可获得关于你可能从对订阅进行更改中受益的地方的反馈。你可以创建警报，以便在 Advisor 提出特定建议时触发，并可以调整推荐引擎以更好地适应你的环境。
-
-
 
 要使用 Advisor，请遵循以下步骤：
 
@@ -5865,7 +5491,7 @@ Azure 中的分类标记有点挑剔。请记住以下关于分类标记的事�
 
 表 12-1 总结了几种对分类标记进行分类的方法以及应使用的标记名称。
 
-表 12-1 常见 Azure 分类标记模式
+**表 12-1 常见 Azure 分类标记模式**
 
 | **标记类型** | **示例标记 (name:value)** |
 | --- | --- |
@@ -5903,12 +5529,8 @@ Azure 中的分类标记有点挑剔。请记住以下关于分类标记的事�
 
     Azure 标记是可修改的，这既方便又危险，因为拼写错误可能导致报告不正确。
 
-
-
-
-### 7. 单击“保存”以提交更改。
-
-### 8. 将任一标记或两个新标记与不同资源组中的其他一些资源关联。
+7.  **单击“保存”以提交更改。**
+8.  **将任一标记或两个新标记与不同资源组中的其他一些资源关联。**
 
 ![Remember](img/remember.png) 你可以（也应该）在部署期间为新资源添加适当的标记。
 
@@ -6005,9 +5627,7 @@ Azure 分类标记最重要的用例之一是成本报告。碰巧的是，Azure
 你可以在 Azure 门户的“订阅”边栏选项卡上查看基本的资源使用/成本信息。但是，若要真正深入分析支出并预测未来支出，请使用“成本管理 + 计费”边栏选项卡。请执行以下步骤，根据标记名称/值筛选视图：
 
 1.  **在 Azure 门户中，使用全局搜索浏览到“成本管理 + 计费”边栏选项卡，然后选择“成本管理”设置。**
-
 2.  **在“成本管理”边栏选项卡设置列表中，单击“成本分析”。**
-
 3.  **在“成本分析”工具栏上，单击“添加筛选器”按钮。**
 
     Azure 将创建一行以容纳你的筛选器表达式。
@@ -6023,6 +5643,8 @@ Azure 分类标记最重要的用例之一是成本报告。碰巧的是，Azure
 #### 通过 API 访问标记和计费
 
 开发人员通常倾向于使用 API 访问以尽快找到答案。为此，他们可以使用包含标记的多个与计费相关的 API：
+
+
 
 *   **资源使用情况 API：** 此 API 显示 Azure 服务消耗数据。
 *   **费率卡 API：** 此 API 根据区域显示 Azure 服务的当前价格。
@@ -6060,9 +5682,6 @@ Azure Policy 是一个简单的 JavaScript Object Notation (JSON) 文档，可�
 }
 ```
 
-
-
-
 ![Tip](img/tip.png)您可以通过阅读 Azure 文档文章“Azure Policy 定义结构”来了解有关 Azure Policy JSON 语法的更多信息，网址为 [`https://docs.microsoft.com/en-us/azure/governance/policy/concepts/definition-structure`](https://docs.microsoft.com/en-us/azure/governance/policy/concepts/definition-structure)。
 
 在策略部署时，您需要为 `listOfAllowedLocations` 参数指定一个值。`strongType` 元素是一项 ARM 魔法，它会创建一个包含所有 Azure 区域的下拉列表。这是一个在 ARM 模板和策略定义中使用的实用技巧。
@@ -6083,7 +5702,7 @@ Azure Policy 是一个简单的 JavaScript Object Notation (JSON) 文档，可�
 
 策略包含多种不同的策略效果。在 Azure Policy 中，效果决定了如果给定策略评估为 true，Azure 将执行什么操作。
 
-使用审核效果，您可以允许部署，但为了审核目的对其进行密切跟踪。DeployIfNotExists 效果非常强大，因为策略可以执行 ARM 模板部署来强制实施策略。例如，您可以设置一个策略，如果同事在资源上意外或故意关闭了资源诊断，则自动重新启用它。
+使用审核效果，您可以允许部署，但为了审核目的对其进行密切跟踪。`DeployIfNotExists` 效果非常强大，因为策略可以执行 ARM 模板部署来强制实施策略。例如，您可以设置一个策略，如果同事在资源上意外或故意关闭了资源诊断，则自动重新启用它。
 
 ![Tip](img/tip.png)如果您想深入了解 Policy，请参阅“了解 Azure Policy 效果”，网址为 [`https://docs.microsoft.com/en-us/azure/governance/policy/concepts/effects`](https://docs.microsoft.com/en-us/azure/governance/policy/concepts/effects)。
 
@@ -6188,9 +5807,6 @@ Azure Policy 是一个简单的 JavaScript Object Notation (JSON) 文档，可�
 
 理解 Azure VPN 与 ExpressRoute 之间的区别
 
-
-
-
 # 将本地环境扩展到 Azure
 
 ## 本章内容
@@ -6242,6 +5858,7 @@ azcopy copy "D:\backup-archive" https://wileystorage704.blob.core.windows.net/ba
 3. 使用 Data Box 的本地 Web 门户来构建你希望 Azure 端数据的外观（存储账户、容器等）。
 4. 将数据从本地环境复制到 Data Box。
 5. 将 Data Box 寄送到你的主要 Azure 区域。
+
    Microsoft 将你的数据解包并导入你的 Azure 订阅。
 
 以下是 Data Box 产品系列成员的概览：
@@ -6273,19 +5890,29 @@ Data Box 的优势在于，它是将大量数据导入 Azure 的便捷方式。�
 
 1. **在 Azure 门户中，浏览到 Azure Migrate 边栏选项卡。**
 2. **在“迁移目标”部分，单击“数据库”。**
+
    将出现“入门”边栏选项卡。
+
 3. **在“详细信息”窗格的“入门”部分，单击“添加工具”。**
 4. **在“添加工具”选项卡上，完成“迁移项目”边栏选项卡。**
+
    指定订阅、资源组、迁移项目名称和地理位置。
+
 5. **单击“下一步”继续。**
 6. **在“选择评估工具”边栏选项卡上，选择“Azure Migrate: 数据库评估”。**
+
    我在图 13-2 中展示了此界面。
 
-   ![图 13-2：向 Azure Migrate 项目添加工具。](img/9781119612148-fg1302.png)
 
-7. **在“选择迁移工具”边栏选项卡上，选择“Azure Migrate: 数据库迁移”。**
-8. **取消选择“跳过添加迁移工具”。**
-9. **返回“Azure Migrate - 数据库”边栏选项卡，单击链接以下载数据迁移助手 (DMA)。**
+
+![图 13-2：向 Azure Migrate 项目添加工具。](img/9781119612148-fg1302.png)
+
+7. 在“选择迁移工具”边栏选项卡上，选择“Azure Migrate: 数据库迁移”。
+
+8. 取消选择“跳过添加迁移工具”。
+
+9. 返回“Azure Migrate - 数据库”边栏选项卡，单击链接以下载数据迁移助手 (DMA)。
+
    DMA 是一款免费的桌面应用，你将在管理工作站上下载并运行它。
 
 图 13-3 显示了 DMA 界面。
@@ -6298,9 +5925,6 @@ Data Box 的优势在于，它是将大量数据导入 Azure 的便捷方式。�
 - Azure SQL 数据库托管实例
 - Azure 虚拟机上的 SQL Server
 - SQL Server
-
-
-
 
 DMA 会根据你定义的 Azure 数据库选项检查数据库兼容性，并检查功能对等性，以确保你没有在本地使用 Azure 中不可用的功能。它还允许你将评估结果上传到 Azure Migrate 项目，这将进入下一阶段：迁移。
 
@@ -6319,15 +5943,18 @@ DMA 会根据你定义的 Azure 数据库选项检查数据库兼容性，并检
 
 请按照以下步骤在 Azure 门户中开始使用 DMS：
 
-1.  **在你的 Azure Migrate - 数据库项目中，在“Get Started with DMS”标题下方，单击链接以创建 DMS 服务实例。**
+1.  在你的 Azure Migrate - 数据库项目中，在“Get Started with DMS”标题下方，单击链接以创建 DMS 服务实例。
+
     将出现“创建迁移服务”边栏选项卡。
 
-2.  **完成“创建迁移服务部署”边栏选项卡。**
+2.  完成“创建迁移服务部署”边栏选项卡。
+
     你需要将数据库迁移项目放置在你主区域的虚拟网络上。你还需要选择一个定价层。除了速度和容量之外，标准和高级定价层之间最大的区别在于只有高级层支持联机迁移。在我的咨询工作中，我发现大多数客户选择高级层，因为联机迁移是他们的业务需求。
 
-3.  **打开你的 Azure 数据库迁移服务实例，然后单击“新建迁移项目”。**
+3.  打开你的 Azure 数据库迁移服务实例，然后单击“新建迁移项目”。
 
-4.  **为项目指定一个有意义的名称，并完成“新建迁移项目”表单，如下所示：**
+4.  为项目指定一个有意义的名称，并完成“新建迁移项目”表单，如下所示：
+
     *   **源服务器类型：** 选择源服务器类型，例如 SQL Server。
     *   **目标服务器类型：** 选择你要迁移到的服务器类型，例如 SQL 数据库。
     *   **活动类型：** 如果你选择了高级定价层，你的选项包括脱机数据迁移、仅架构迁移、联机数据迁移和仅创建项目外壳。
@@ -6367,7 +5994,8 @@ DMA 会根据你定义的 Azure 数据库选项检查数据库兼容性，并检
 
 当你将通用 VHD 放入存储帐户后，可以使用 Azure PowerShell 创建托管磁盘。请按以下步骤操作：
 
-1.  **创建一些变量，如下所示：**
+1.  创建一些变量，如下所示：
+
     ```
     $vmName = "vm-template"
     $rgName = "myResourceGroup"
@@ -6375,19 +6003,21 @@ DMA 会根据你定义的 Azure 数据库选项检查数据库兼容性，并检
     $imageName = "myImage"
     ```
 
-2.  **创建对 Azure 中通用 VHD 的引用，如下所示：**
+2.  创建对 Azure 中通用 VHD 的引用，如下所示：
+
     ```
     $osVhdUri = https://mystorageaccount.blob.core.windows.net/vhdcontainer/vhdfilename.vhd
     ```
 
-3.  **运行一系列 AzImage cmdlet 以创建映像：**
+3.  运行一系列 AzImage cmdlet 以创建映像：
+
     ```
     $imageConfig = New-AzImageConfig -Location $location
     $imageConfig = Set-AzImageOsDisk -Image $imageConfig -OsType Windows -OsState Generalized -BlobUri $osVhdUri
     $image = New-AzImage -ImageName $imageName -ResourceGroupName $rgName -Image $imageConfig
     ```
 
-当你的托管映像就位后，你可以基于该映像部署新 VM。在“创建虚拟机”边栏选项卡的“基本信息”选项卡上，单击“浏览所有公共和专用映像”，然后切换到“我的项目”选项卡，如 图 13-5 的合成图像所示。第 5 章 涵盖了创建 Azure VM 的内容。
+当你的托管映像就位后，你可以基于该映像部署新 VM。在“创建虚拟机”边栏选项卡的“基本信息”选项卡上，单击“浏览所有公共和专用映像”，然后切换到“我的项目”选项卡，如图 13-5 的合成图像所示。第 5 章 涵盖了创建 Azure VM 的内容。
 
 ![图 13-5：基于你自己的自定义 VHD 映像部署 Azure VM。](img/9781119612148-fg1305.png)
 
@@ -6397,15 +6027,17 @@ DMA 会根据你定义的 Azure 数据库选项检查数据库兼容性，并检
 
 另一种选择是将 Azure Migrate 用作本地服务器迁移的运营基地。请按照以下步骤开始操作：
 
-1.  **在 Azure 门户中，浏览到“Azure Migrate”边栏选项卡，选择“服务器”，然后单击“添加工具”。**
+1.  在 Azure 门户中，浏览到“Azure Migrate”边栏选项卡，选择“服务器”，然后单击“添加工具”。
 
-2.  **完成“迁移项目”选项卡。**
+2.  完成“迁移项目”选项卡。
+
     你需要填写元数据：订阅、资源组、迁移项目名称和地理位置。
 
-3.  **在“选择评估工具”选项卡上，选择“Azure Migrate: 服务器评估”。**
+3.  在“选择评估工具”选项卡上，选择“Azure Migrate: 服务器评估”。
+
     Microsoft 允许某些独立软件供应商合作伙伴将其工具包含在此列表中。图 13-6 显示了此界面。
 
-4.  **在“选择迁移工具”选项卡上，单击“Azure Migrate: 服务器迁移”。**
+4.  在“选择迁移工具”选项卡上，单击“Azure Migrate: 服务器迁移”。
 
 ![图 13-6：向 Azure Migrate 服务器迁移项目添加工具。](img/9781119612148-fg1306.png)
 
@@ -6420,8 +6052,6 @@ DMA 会根据你定义的 Azure 数据库选项检查数据库兼容性，并检
 收集器设备还将其发现和评估数据发送到你的迁移项目，以便进行集中跟踪。交付成果是一系列 Microsoft Excel 电子表格和发送到你项目的迁移数据。
 
 图 13-7 显示了一个示例服务器评估报告。除了提供 VM 大小建议外，服务器评估引擎还提供成本估算。在我担任 Azure 解决方案架构师的工作中，我从未遇到过不将最小化成本作为主要关注点的客户。
-
-
 
 ![FIGURE 13-7: Azure server assessment reports include graphs and table data.](img/9781119612148-fg1307.png)
 
@@ -6444,7 +6074,7 @@ DMA 会根据你定义的 Azure 数据库选项检查数据库兼容性，并检
 
 您不需要 VPN 或 ExpressRoute 连接即可执行此 Azure Migrate/ASR 复制。最终，VMware 环境的复制过程将无需代理（Hyper-V 已经是无代理的），但在撰写本文时，无代理 VMware 复制处于预览状态。
 
-![Technical stuff](img/technicalstuff.png) 在 Migrate 术语中，*服务器迁移* 意味着“复制、故障转移，且不故障回复到本地环境。”
+![Technical stuff](img/technicalstuff.png) 在 Migrate 术语中，`服务器迁移` 意味着“复制、故障转移，且不故障回复到本地环境。”
 
 Migrate 服务器迁移的优点是复制意味着近乎零停机时间。缺点是初始复制的冲击可能很大，如果您有按流量计费的 Internet 连接，成本可能很高。
 
@@ -6521,9 +6151,6 @@ Microsoft 建议对网关子网使用尽可能小的 IP 地址空间，以便节
 
 ![FIGURE 13-9: Your Azure VPN gateway needs to be on its own subnet in your virtual network.](img/9781119612148-fg1309.png)
 
-
-
-
 图 13-9： 你的 Azure VPN 网关需要位于虚拟网络中的专用子网上。
 
 #### 本地网络网关
@@ -6534,11 +6161,13 @@ Microsoft 建议对网关子网使用尽可能小的 IP 地址空间，以便节
 *   本地网络的 IP 地址范围
 *   （可选）BGP 设置，如自治系统编号和对等互连 IP 地址
 
+
+
 仔细思考一下，这很合理，因为 Azure 不仅需要识别隧道另一端的 VPN 聚合器，还需要识别那些促进混合云流量路由的远程网络段。
 
 ![警告](img/warning.png)请小心你在 Azure 中使用的私有 IP 地址范围。你最不想做的就是排查/解决本地网络与 Azure VNet 之间的 IP 地址冲突。请始终使用不重叠的 IP 地址范围。
 
-#### 连接
+### 连接
 
 最后是连接。Azure 连接资源是将本地网络网关和 VPN 网关绑定在一起的粘合剂，并定义了混合云握手。
 
@@ -6595,7 +6224,7 @@ Azure VPN 和 ExpressRoute 选项将你的本地网络扩展到 Azure，以便�
 
 图 13-11： Arc 拓扑概览。
 
-在 图 13-11 中，请注意流程是如何工作的。无需任何 VPN 或 ExpressRoute 要求，你就可以将标记、策略和日志分析等核心 Azure 功能不仅扩展到本地网络，还可以扩展到其他云，如 Amazon Web Services 和 Google Cloud Platform。
+在图 13-11 中，请注意流程是如何工作的。无需任何 VPN 或 ExpressRoute 要求，你就可以将标记、策略和日志分析等核心 Azure 功能不仅扩展到本地网络，还可以扩展到其他云，如 Amazon Web Services 和 Google Cloud Platform。
 
 Arc 带来的第二个价值主张是在本地环境中直接部署 Azure 资源的概念。例如，你可以使用 ARM 模板将 VM、数据库和 Kubernetes 群集部署到自己的数据中心，然后使用 Azure 工具将这些资源与云原生资源一起进行管理。
 
@@ -6622,15 +6251,9 @@ Arc 带来的第二个价值主张是在本地环境中直接部署 Azure 资源
 2.  **在“资源组”边栏选项卡上，单击“添加”。**
     “创建资源组”边栏选项卡随即出现。
 3.  **在“创建资源组”边栏选项卡上，填写“基本信息”表单，然后单击“查看 + 创建”。**
-
-
-
-
-您在此处只需提供相应的 Azure 订阅、资源组名称和区域。截至撰写本文时，Azure Arc 仅在选定区域可用。对此不必感到惊讶；Microsoft 会逐步推出预览功能，目标是到正式发布日期时产品在所有区域均可用。
-
-4. **单击“创建”以提交部署。**
-
-此操作应只需几秒钟即可完成。
+    您在此处只需提供相应的 Azure 订阅、资源组名称和区域。截至撰写本文时，Azure Arc 仅在选定区域可用。对此不必感到惊讶；Microsoft 会逐步推出预览功能，目标是到正式发布日期时产品在所有区域均可用。
+4.  **单击“创建”以提交部署。**
+    此操作应只需几秒钟即可完成。
 
 ### 将 Windows Server 系统添加到 Arc
 
@@ -6640,159 +6263,100 @@ Arc 带来的第二个价值主张是在本地环境中直接部署 Azure 资源
 
 请遵循以下步骤将 Windows Server 系统接入 Arc。当然，只有当您有可用的本地服务器时，才能执行这些步骤：
 
-1. **在 Azure 门户中，搜索 `azure arc`。**
-
-搜索结果包括 Azure Arc 和 Machines - Azure Arc（计算机 - Azure Arc）条目。
-
-2. **单击第一个图标以查看完整产品。**
-
-3. **在 Arc 欢迎页上，单击“管理服务器”。**
-
-随即出现“Machines - Azure Arc”边栏选项卡。
-
-![Remember](img/remember.png)截至撰写本文时，Kubernetes 和数据平台产品尚不可用。
-
-4. **在“Machines - Azure Arc”边栏选项卡上，单击“添加”。**
-
-随即出现“选择方法”边栏选项卡。
-
-5. **在“选择方法”边栏选项卡上，单击“使用交互式脚本添加计算机”部分中的“生成脚本”按钮（请参阅图 13-12）。**
-
-界面可能已*更改*，您看到的内容可能与图 13-12 不同；这是 Azure 不断发展的生态系统的本性。
-
-单击此按钮后，将出现“生成脚本”边栏选项卡。
-
-![Tip](img/tip.png)请阅读附近的边栏“大规模添加服务器”，了解有关其他 Arc 服务器接入方法的更多信息。
-
-6. **在“生成脚本”边栏选项卡上，完成“基本信息”选项卡。**
-
-选择您的订阅、资源组和区域；然后选择本地计算机的操作系统（Windows 或 Linux）。
-
-![FIGURE 13-12: Choosing a server onboarding method for Arc.](img/9781119612148-fg1312.png)
-
-图 13-12： 为 Arc 选择服务器接入方法。
-
-7. **单击“查看 + 生成”。**
-
-随即出现“查看 + 生成”选项卡。
-
-对于 Windows 计算机，您将看到以下脚本（如果 Microsoft 在本书出版后更新了代码，您可能会看到类似的脚本）：
-
-```
-#### Download the package
-Invoke-WebRequest -Uri https://aka.ms/AzureConnectedMachineAgent -OutFile AzureConnectedMachineAgent.msi
-#### Install the package
-msiexec /i AzureConnectedMachineAgent.msi /l*v installationlog.txt /qn | Out-String
-#### Run connect command
-& "$env:ProgramFiles\AzureConnectedMachineAgent\azcmagent.exe" connect --resource-group "AzureArc" --tenant-id "133f6972-44a7-4037-8eea-1d9afd1ebfc8" --location "westus2" --subscription-id "2fbf906e-1101-4bc0-b64f-adc44e462fff"
-```
-
-Azure 门户会根据您在部署过程中之前指定的环境详细信息，动态填充此 PowerShell 代码。
-
-PowerShell 将完成以下三项任务：以 Microsoft Installer (`.msi`) 格式下载 Azure Connected Machine Agent，使用内置于 Windows 的 `msiexec` 命令行实用程序在您的系统上安装代理，并将本地系统链接到您的 Azure 订阅（总体上）和 Arc（特别是）。
-
-8. **单击“下载”。**
-
-9. **将接入脚本复制到目标系统。**
-
-您直接在系统上运行该脚本。
-
+1.  **在 Azure 门户中，搜索 `azure arc`。**
+    搜索结果包括 Azure Arc 和 Machines - Azure Arc（计算机 - Azure Arc）条目。
+2.  **单击第一个图标以查看完整产品。**
+3.  **在 Arc 欢迎页上，单击“管理服务器”。**
+    随即出现“Machines - Azure Arc”边栏选项卡。
+    ![Remember](img/remember.png)截至撰写本文时，Kubernetes 和数据平台产品尚不可用。
+4.  **在“Machines - Azure Arc”边栏选项卡上，单击“添加”。**
+    随即出现“选择方法”边栏选项卡。
+5.  **在“选择方法”边栏选项卡上，单击“使用交互式脚本添加计算机”部分中的“生成脚本”按钮（请参阅图 13-12）。**
+    界面可能已*更改*，您看到的内容可能与图 13-12 不同；这是 Azure 不断发展的生态系统的本性。
+    单击此按钮后，将出现“生成脚本”边栏选项卡。
+    ![Tip](img/tip.png)请阅读附近的边栏“大规模添加服务器”，了解有关其他 Arc 服务器接入方法的更多信息。
+6.  **在“生成脚本”边栏选项卡上，完成“基本信息”选项卡。**
+    选择您的订阅、资源组和区域；然后选择本地计算机的操作系统（Windows 或 Linux）。
+    ![FIGURE 13-12: Choosing a server onboarding method for Arc.](img/9781119612148-fg1312.png)
+    图 13-12： 为 Arc 选择服务器接入方法。
+7.  **单击“查看 + 生成”。**
+    随即出现“查看 + 生成”选项卡。
+    对于 Windows 计算机，您将看到以下脚本（如果 Microsoft 在本书出版后更新了代码，您可能会看到类似的脚本）：
+    ```
+    #### Download the package
+    Invoke-WebRequest -Uri https://aka.ms/AzureConnectedMachineAgent -OutFile AzureConnectedMachineAgent.msi
+    #### Install the package
+    msiexec /i AzureConnectedMachineAgent.msi /l*v installationlog.txt /qn | Out-String
+    #### Run connect command
+    & "$env:ProgramFiles\AzureConnectedMachineAgent\azcmagent.exe" connect --resource-group "AzureArc" --tenant-id "133f6972-44a7-4037-8eea-1d9afd1ebfc8" --location "westus2" --subscription-id "2fbf906e-1101-4bc0-b64f-adc44e462fff"
+    ```
+    Azure 门户会根据您在部署过程中之前指定的环境详细信息，动态填充此 PowerShell 代码。
+    PowerShell 将完成以下三项任务：以 Microsoft Installer (`.msi`) 格式下载 Azure Connected Machine Agent，使用内置于 Windows 的 `msiexec` 命令行实用程序在您的系统上安装代理，并将本地系统链接到您的 Azure 订阅（总体上）和 Arc（特别是）。
+8.  **单击“下载”。**
+9.  **将接入脚本复制到目标系统。**
+    您直接在系统上运行该脚本。
 10. **在目标系统上，通过打开“开始”、键入 `powershell`、右键单击 PowerShell 图标，并从快捷菜单中选择“以管理员身份运行”，启动一个提升权限的 PowerShell 控制台。**
-
-随即出现一个管理员 PowerShell 控制台。
-
+    随即出现一个管理员 PowerShell 控制台。
 11. **暂时将脚本执行策略设置为 Bypass。**
-
-出于安全原因，Windows 默认不运行所有 PowerShell 脚本。为确保您可以运行 Arc 接入脚本，请键入并运行以下命令：
-
-```
-Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
-```
-
-此代码会在当前 PowerShell 会话期间放宽系统的脚本执行策略。
-
+    出于安全原因，Windows 默认不运行所有 PowerShell 脚本。为确保您可以运行 Arc 接入脚本，请键入并运行以下命令：
+    ```
+    Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
+    ```
+    此代码会在当前 PowerShell 会话期间放宽系统的脚本执行策略。
 12. **运行脚本。**
-
-您只需键入脚本文件的完整或限定路径。例如，如果您使用 `cd` 命令将命令提示符位置设置为与脚本文件相同的目录，则可以键入以下内容来运行脚本：
-
-```
-.\OnboardingScript.ps1
-```
-
-![Technical stuff](img/technicalstuff.png)在 Windows 和 Linux 系统上，指定*点斜杠*语法会指示计算机从当前工作目录运行脚本。
-
-Arc for Servers 接入脚本会暂停并要求您向 Azure 进行身份验证。图 13-13 显示了设备登录过程。
-
-![FIGURE 13-13: Onboarding a Windows Server system to Arc.](img/9781119612148-fg1313.png)
-
-图 13-13： 将 Windows Server 系统接入 Arc。
+    您只需键入脚本文件的完整或限定路径。例如，如果您使用 `cd` 命令将命令提示符位置设置为与脚本文件相同的目录，则可以键入以下内容来运行脚本：
+    ```
+    .\OnboardingScript.ps1
+    ```
+    ![Technical stuff](img/technicalstuff.png)在 Windows 和 Linux 系统上，指定*点斜杠*语法会指示计算机从当前工作目录运行脚本。
+    Arc for Servers 接入脚本会暂停并要求您向 Azure 进行身份验证。图 13-13 显示了设备登录过程。
+    ![FIGURE 13-13: Onboarding a Windows Server system to Arc.](img/9781119612148-fg1313.png)
+    图 13-13： 将 Windows Server 系统接入 Arc。
 
 ### 将 Linux 系统添加到 Arc
 
 截至撰写本文时，Arc for Servers 仅支持 Ubuntu 16.04 和 18.04。请遵循以下步骤将 Linux 系统接入 Arc：
 
-1. **在 Azure 门户中，搜索 `azure arc`。**
-
-2. **在搜索结果中，选择“Machines - Azure Arc”图标。**
-
-3. **在“Machines - Azure Arc”边栏选项卡上，单击“添加”。**
-
-随即出现“选择方法”边栏选项卡。
-
-4. **在“选择方法”边栏选项卡上，单击“生成脚本”。**
-
-随即出现“生成脚本”边栏选项卡的“基本信息”选项卡。
-
-5. **填写“基本信息”选项卡。**
-
-请务必选择 Linux 作为目标操作系统。
-
-6. **单击“查看 + 生成”，然后单击“下载”。**
-
-以下代码是 `OnboardingScript.sh` Linux 接入脚本，它使用 Bash shell 语法而非 PowerShell 语法：
-
-```
-#### Download the installation package
-wget https://aka.ms/azcmagent -O ~/install_linux_azcmagent.sh
-#### Install the hybrid agent
-bash ~/install_linux_azcmagent.sh
-#### Run connect command
-azcmagent connect --resource-group "AzureArc" --tenant-id "133f6972-44a7-4037-8eea-1d9afd1ebfc8" --location "westus2" --subscription-id "2fbf906e-1101-4bc0-b64f-adc44e462fff"
-```
-
-Linux 代码执行以下三项操作：下载 Connected Machine Agent、安装它，然后将本地系统链接到您的 Arc 环境。
-
-7. **将 `OnboardingScript.sh` 脚本传输到目标系统，并运行它以完成接入过程。**
-
-在 Linux 系统上打开终端，浏览到复制 `OnboardingScript.sh` 脚本的目录，然后执行它。例如，如果您的终端命令提示符位于与脚本相同的目录中，请键入并运行以下 Bash 命令：
-
-```
-sudo sh ./OnboardingScript.sh
-```
-
-您需要在单独的浏览器窗口中输入一次性代码，以向 Azure 进行身份验证。
-
-8. **代理安装完成后，返回 Azure 门户，并刷新“Machines - Azure Arc”边栏选项卡。**
-
-正如您在图 13-14 中所见，您的 Arc 环境现在有两个托管的本地 VM。
-
-![FIGURE 13-14: Viewing onboarded local VMs in the Azure portal.](img/9781119612148-fg1314.png)
-
-图 13-14： 在 Azure 门户中查看已接入的本地 VM。
+1.  **在 Azure 门户中，搜索 `azure arc`。**
+2.  **在搜索结果中，选择“Machines - Azure Arc”图标。**
+3.  **在“Machines - Azure Arc”边栏选项卡上，单击“添加”。**
+    随即出现“选择方法”边栏选项卡。
+4.  **在“选择方法”边栏选项卡上，单击“生成脚本”。**
+    随即出现“生成脚本”边栏选项卡的“基本信息”选项卡。
+5.  **填写“基本信息”选项卡。**
+    请务必选择 Linux 作为目标操作系统。
+6.  **单击“查看 + 生成”，然后单击“下载”。**
+    以下代码是 `OnboardingScript.sh` Linux 接入脚本，它使用 Bash shell 语法而非 PowerShell 语法：
+    ```
+    #### Download the installation package
+    wget https://aka.ms/azcmagent -O ~/install_linux_azcmagent.sh
+    #### Install the hybrid agent
+    bash ~/install_linux_azcmagent.sh
+    #### Run connect command
+    azcmagent connect --resource-group "AzureArc" --tenant-id "133f6972-44a7-4037-8eea-1d9afd1ebfc8" --location "westus2" --subscription-id "2fbf906e-1101-4bc0-b64f-adc44e462fff"
+    ```
+    Linux 代码执行以下三项操作：下载 Connected Machine Agent、安装它，然后将本地系统链接到您的 Arc 环境。
+7.  **将 `OnboardingScript.sh` 脚本传输到目标系统，并运行它以完成接入过程。**
+    在 Linux 系统上打开终端，浏览到复制 `OnboardingScript.sh` 脚本的目录，然后执行它。例如，如果您的终端命令提示符位于与脚本相同的目录中，请键入并运行以下 Bash 命令：
+    ```
+    sudo sh ./OnboardingScript.sh
+    ```
+    您需要在单独的浏览器窗口中输入一次性代码，以向 Azure 进行身份验证。
+8.  **代理安装完成后，返回 Azure 门户，并刷新“Machines - Azure Arc”边栏选项卡。**
+    正如您在图 13-14 中所见，您的 Arc 环境现在有两个托管的本地 VM。
+    ![FIGURE 13-14: Viewing onboarded local VMs in the Azure portal.](img/9781119612148-fg1314.png)
+    图 13-14： 在 Azure 门户中查看已接入的本地 VM。
 
 ### 使用 Arc 管理本地系统
 
 现在是时候回答“使用 Arc for Servers 接入计算机后我能做什么？”这个问题了。截至撰写本文时，Arc for Servers 支持对已接入系统执行以下管理操作：
 
-* 基于角色的访问控制 (RBAC)
-* Azure Monitor
-* 分类标记
-* Azure Policy
+*   基于角色的访问控制 (RBAC)
+*   Azure Monitor
+*   分类标记
+*   Azure Policy
 
 #### 实施 Azure Policy
-
-
-
 
 ### Policy 是用于 Azure 资源治理的强大平台
 
@@ -6801,48 +6365,44 @@ sudo sh ./OnboardingScript.sh
 请遵循以下步骤为基于 Windows Server 的 Arc 计算机配置策略分配：
 
 1.  **在“计算机 - Azure Arc”边栏选项卡上，选择您的 Windows 服务器。**
-
     将显示服务器的“概述”边栏选项卡。
-
 2.  **选择“策略”设置，然后单击工具栏上的“分配策略”。**
-
     将出现“分配策略”边栏选项卡。
-
     图 13-15 显示了 VM 的设置界面。如果您认为管理本地系统与管理 Azure 原生 VM 的方式完全相同，那么您就理解了用于服务器的 Arc 用例。
-
     ![图 13-15：查看 Arc 托管系统的策略设置。](img/9781119612148-fg1315.png)
-
     图 13-15： 查看 Arc 托管系统的策略设置。
 
-3.  **在“分配策略”边栏选项卡的“基本信息”选项卡上，填写表单，然后单击“下一步”继续。**
 
-    填写以下信息：
 
-    *   **范围：** 确保此设置设置为您的 Azure 订阅和 Azure Arc 资源组。
-    *   **排除：** 使用此控件将 Ubuntu 系统从此策略中排除。您即将分配的时区策略仅适用于 Windows 系统。
-    *   **策略定义：** 在内置策略定义中搜索名为“在 Windows 计算机上配置时区”的定义。
-    *   **分配名称**（可选）：如果您愿意，可以为该策略指定一个自定义名称。默认情况下，名称设置为策略定义名称。
-    *   **策略强制执行：** 选项为“已启用”和“已禁用”。您想要使用此策略，因此请确保其设置为“已启用”。
+### 3. 在“分配策略”边栏选项卡的“基本信息”选项卡上，填写表单，然后单击“下一步”继续。
 
-4.  **在“分配策略”边栏选项卡的“参数”选项卡上，从“时区”下拉列表中选择所需的时区，然后单击“下一步”继续。**
+填写以下信息：
 
-    在此场景中，您将所有系统分配为太平洋时间：美国和加拿大的 UTC - 8 小时。
+*   **范围：** 确保此设置设置为您的 Azure 订阅和 Azure Arc 资源组。
+*   **排除：** 使用此控件将 Ubuntu 系统从此策略中排除。您即将分配的时区策略仅适用于 Windows 系统。
+*   **策略定义：** 在内置策略定义中搜索名为“在 Windows 计算机上配置时区”的定义。
+*   **分配名称**（可选）：如果您愿意，可以为该策略指定一个自定义名称。默认情况下，名称设置为策略定义名称。
+*   **策略强制执行：** 选项为“已启用”和“已禁用”。您想要使用此策略，因此请确保其设置为“已启用”。
 
-5.  **在“分配策略”边栏选项卡的“修正”选项卡上，创建修正任务，然后单击“查看 + 创建”继续。**
+### 4. 在“分配策略”边栏选项卡的“参数”选项卡上，从“时区”下拉列表中选择所需的时区，然后单击“下一步”继续。
 
-    Policy 的功能远不止审核合规性。在此，选中“创建修正任务”复选框，指示 Azure 将 Windows 服务器的时区设置为与您的策略定义相匹配。
+在此场景中，您将所有系统分配为太平洋时间：美国和加拿大的 UTC - 8 小时。
 
-    ![请记住](img/remember.png)确保“要修正的策略”下拉列表设置为您的策略。Azure 会创建一个托管标识，为修正任务提供安全上下文。默认情况下，Azure 会暂时授予托管标识权限。
+### 5. 在“分配策略”边栏选项卡的“修正”选项卡上，创建修正任务，然后单击“查看 + 创建”继续。
 
-    ![技术细节](img/technicalstuff.png)`managed identity`（托管标识）是一种特殊用途的 Azure AD 标识，其作用非常类似于本地网络环境中的服务帐户。有关 Azure 中托管标识的详细信息，请阅读“What is managed identities for Azure resources?”（什么是 Azure 资源的托管标识？），网址为 [`https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview`](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview)。
+Policy 的功能远不止审核合规性。在此，选中“创建修正任务”复选框，指示 Azure 将 Windows 服务器的时区设置为与您的策略定义相匹配。
 
-6.  **单击“创建”以提交部署。**
+![请记住](img/remember.png) 确保“要修正的策略”下拉列表设置为您的策略。Azure 会创建一个托管标识，为修正任务提供安全上下文。默认情况下，Azure 会暂时授予托管标识权限。
+
+![技术细节](img/technicalstuff.png) `managed identity`（托管标识）是一种特殊用途的 Azure AD 标识，其作用非常类似于本地网络环境中的服务帐户。有关 Azure 中托管标识的详细信息，请阅读“What is managed identities for Azure resources?”（什么是 Azure 资源的托管标识？），网址为 [`https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview`](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview)。
+
+### 6. 单击“创建”以提交部署。
 
 您可以通过导航到 Windows 服务器的“策略”边栏选项卡、选择您的策略并切换到“修正任务”选项卡来跟进策略修正状态（请参阅图 13-16）。
 
 ![图 13-16：验证策略合规性和修正状态。](img/9781119612148-fg1316.png)
 
-图 13-16： 验证策略合规性和修正状态。
+**图 13-16： 验证策略合规性和修正状态。**
 
 我检查了 Windows Server VM 上的时区，果然，它已从中央时区（我原来的时区）更改为太平洋时区。
 
@@ -6852,27 +6412,27 @@ sudo sh ./OnboardingScript.sh
 
 请遵循以下步骤将分类标记分配给 Arc（或原生 Azure）资源：
 
-1.  **在“计算机 - Azure Arc”边栏选项卡上，选择您的 Linux VM。**
+### 1. 在“计算机 - Azure Arc”边栏选项卡上，选择您的 Linux VM。
 
-    将显示 VM 的“概述设置”边栏选项卡。
+将显示 VM 的“概述设置”边栏选项卡。
 
-2.  **在“设置”列表中选择“标记”设置。**
+### 2. 在“设置”列表中选择“标记”设置。
 
-3.  **定义 `env:arc` 标记，然后单击“保存”以保存更改。**
+### 3. 定义 `env:arc` 标记，然后单击“保存”以保存更改。
 
-    请注意，分类标记是名称:值对。您只需键入标记名称和标记值；或者，您可以重用之前定义的标记名称和/或值。
+请注意，分类标记是名称:值对。您只需键入标记名称和标记值；或者，您可以重用之前定义的标记名称和/或值。
 
-    图 13-17 显示了完成的配置。
+图 13-17 显示了完成的配置。
 
 ![图 13-17：将分类标记应用到 Arc 资源。](img/9781119612148-fg1317.png)
 
-图 13-17： 将分类标记应用到 Arc 资源。
+**图 13-17： 将分类标记应用到 Arc 资源。**
 
 有关分类标记的详细信息，请参阅附近的边栏“What can you do with tags in Azure?”（您可以在 Azure 中对标记做什么？）。
 
 # 第 14 章：监视您的 Azure 环境
 
-本章内容
+## 本章内容
 
 ![要点](img/check.png) **使用 Azure Monitor 绘制指标图表和引发警报**
 
@@ -6898,9 +6458,9 @@ Azure Monitor 从您的资源收集两种基本数据类型：
 *   **指标：** 描述 Azure 资源某方面的数值时间序列数据
 *   **日志：** 描述各种系统事件和指标数据的文本文件或表格
 
-*telemetry*（遥测）一词在 Azure 方面备受关注；该术语仅指资源将其指标和日志数据传输到收集器资源的能力。
+`telemetry`（遥测）一词在 Azure 方面备受关注；该术语仅指资源将其指标和日志数据传输到收集器资源的能力。
 
-![技术细节](img/technicalstuff.png)*telemetry*（遥测）一词源自两个希腊单词：*tele*（意为“远距离”）和 *métron*（意为“度量”）。在现代英语中，您可以认为遥测意味着远程测量。
+![技术细节](img/technicalstuff.png) `telemetry`（遥测）一词源自两个希腊单词：`tele`（意为“远距离”）和 `métron`（意为“度量”）。在现代英语中，您可以认为遥测意味着远程测量。
 
 ### 启用诊断日志记录
 
@@ -6912,21 +6472,19 @@ Azure Monitor 活动日志跟踪 Microsoft 所谓的“控制平面事件”，�
 
 我喜欢将活动日志描述为本质上的操作/审核日志。借助它，您可以确定谁在您的订阅中执行了哪项操作、在什么时间执行的，以及该操作是成功还是失败。
 
-![警告](img/warning.png)活动日志仅收集订阅级别的事件。如果您想要聚合来自多个订阅的活动日志数据，则需要查看 Azure 活动日志分析，本章稍后将介绍。
+![警告](img/warning.png) 活动日志仅收集订阅级别的事件。如果您想要聚合来自多个订阅的活动日志数据，则需要查看 Azure 活动日志分析，本章稍后将介绍。
 
 请遵循以下步骤浏览您的活动日志环境：
 
-1.  **在 Azure 门户中，浏览到“监视器”边栏选项卡，然后单击“活动日志”。**
-2.  **单击每个筛选器按钮，深入了解如何调整活动日志视图。**
+### 1. 在 Azure 门户中，浏览到“监视器”边栏选项卡，然后单击“活动日志”。
 
-
-
+### 2. 单击每个筛选器按钮，深入了解如何调整活动日志视图。
 
 我在图 14-1 中向你展示此界面。
 
 ![图 14-1：Azure 活动日志记录由你或 Azure 本身发起的管理事件。](img/9781119612148-fg1401.png)
 
-图 14-1： Azure 活动日志记录由你或 Azure 本身发起的管理事件。
+**图 14-1： Azure 活动日志记录由你或 Azure 本身发起的管理事件。**
 
 例如，你可以在搜索框中键入 Azure AD 用户名，以仅查看由你的用户帐户发起的控制平面事件。
 
@@ -6959,44 +6517,45 @@ Azure Monitor 活动日志跟踪 Microsoft 所谓的“控制平面事件”，�
 
 ![图 14-2：查看 Azure 活动日志事件的 JSON 源。](img/9781119612148-fg1402.png)
 
-图 14-2： 查看 Azure 活动日志事件的 JSON 源。
+**图 14-2： 查看 Azure 活动日志事件的 JSON 源。**
 
 #### Azure Monitor 诊断设置
 
 Azure Monitor 诊断设置是用于启用非 VM 资源诊断的中央控制站。请按照以下步骤在 Azure Monitor 中启用资源诊断：
 
-1.  **在 Azure Monitor 中，选择“诊断设置”边栏选项卡。**
-2.  **使用筛选器控件缩小视图范围，并从列表中选择一个资源。**
+### 1. 在 Azure Monitor 中，选择“诊断设置”边栏选项卡。
 
-    在图 14-3 中，你可以看到来自两个订阅的四个资源。此示例选择了 vm1-nsg 网络安全组。
+### 2. 使用筛选器控件缩小视图范围，并从列表中选择一个资源。
 
-3.  **在“诊断设置”边栏选项卡上，单击“添加诊断设置”。**
+在图 14-3 中，你可以看到来自两个订阅的四个资源。此示例选择了 `vm1-nsg` 网络安全组。
 
-    ![请记住](img/remember.png) Azure Monitor 诊断数据的两种类型是日志和指标。某些 Azure 资源两者皆有；其他资源则只有一种。
+### 3. 在“诊断设置”边栏选项卡上，单击“添加诊断设置”。
 
-4.  **完成“诊断设置”边栏选项卡。**
+![请记住](img/remember.png) Azure Monitor 诊断数据的两种类型是日志和指标。某些 Azure 资源两者皆有；其他资源则只有一种。
 
-    将你看到的内容与图 14-4 进行比较。为诊断流命名；我总是将 `-diag` 追加到资源名称后。
+### 4. 完成“诊断设置”边栏选项卡。
 
-    ![图 14-3：Azure Monitor 诊断设置允许你为多个资源集中启用诊断。](img/9781119612148-fg1403.png)
+将你看到的内容与图 14-4 进行比较。为诊断流命名；我总是将 `-diag` 追加到资源名称后。
 
-    图 14-3： Azure Monitor 诊断设置允许你为多个资源集中启用诊断。
+![图 14-3：Azure Monitor 诊断设置允许你为多个资源集中启用诊断。](img/9781119612148-fg1403.png)
 
-    ![图 14-4：配置 Azure 资源诊断。](img/9781119612148-fg1404.png)
+**图 14-3： Azure Monitor 诊断设置允许你为多个资源集中启用诊断。**
 
-    图 14-4： 配置 Azure 资源诊断。
+![图 14-4：配置 Azure 资源诊断。](img/9781119612148-fg1404.png)
 
-    你可以将诊断数据发送到以下一个或多个目标：
+**图 14-4： 配置 Azure 资源诊断。**
 
-    *   **存储帐户：** 优势是长期归档存储。
-    *   **事件中心：** 优势是实时订阅诊断流。
-    *   **Log Analytics：** 优势是 Log Analytics 固有的强大查询/报告功能。
+你可以将诊断数据发送到以下一个或多个目标：
 
-    如果稍后需要更改这些设置，可以重新访问它们。
+*   **存储帐户：** 优势是长期归档存储。
+*   **事件中心：** 优势是实时订阅诊断流。
+*   **Log Analytics：** 优势是 Log Analytics 固有的强大查询/报告功能。
 
-    除了诊断设置目标外，你还需要指定要收集哪些日志和指标类别。不同资源收集不同类型的指标和日志。例如，网络安全组诊断会在每次触发 NSG 规则时记录日志。
+如果稍后需要更改这些设置，可以重新访问它们。
 
-5.  **单击“保存”以提交更改。**
+除了诊断设置目标外，你还需要指定要收集哪些日志和指标类别。不同资源收集不同类型的指标和日志。例如，网络安全组诊断会在每次触发 NSG 规则时记录日志。
+
+### 5. 单击“保存”以提交更改。
 
 ![警告](img/warning.png) 你将为使用任何其他 Azure 资源付费，即使它是作为单独配置的一部分。例如，在配置诊断以将资源诊断数据存储在存储帐户中时，你即接受了与该存储帐户相关的额外费用。
 
@@ -7006,43 +6565,42 @@ VM 资源诊断的处理方式与其他 Azure 资源分开。启用 VM 诊断涉
 
 要启用 VM 诊断，请执行以下步骤：
 
-1.  **导航到要为其启用诊断的 VM，然后选择“诊断设置”菜单项。**
-2.  **在“诊断设置概述”页面上，单击“启用来宾级监视”。**
+### 1. 导航到要为其启用诊断的 VM，然后选择“诊断设置”菜单项。
 
-    重要的是要注意，Azure 无需代理即可收集非常基本的 VM 数据。通过启用来宾诊断，你指示 Azure 为虚拟机收集更详细、更细粒度的诊断数据。
+### 2. 在“诊断设置概述”页面上，单击“启用来宾级监视”。
 
-3.  **在 VM 的设置列表中，单击“扩展”，并验证 Azure 诊断扩展是否已安装。**
+重要的是要注意，Azure 无需代理即可收集非常基本的 VM 数据。通过启用来宾诊断，你指示 Azure 为虚拟机收集更详细、更细粒度的诊断数据。
 
-    在图 14-5 中，你可以看到我的 VM1 虚拟机已安装 VM 诊断和其他扩展。
+### 3. 在 VM 的设置列表中，单击“扩展”，并验证 Azure 诊断扩展是否已安装。
 
-    在我撰写本文时，该扩展的正式名称为 `Microsoft.Insights.VMDiagnosticsSettings` (Windows)。
+在图 14-5 中，你可以看到我的 VM1 虚拟机已安装 VM 诊断和其他扩展。
 
-    ![图 14-5：验证 Azure VM 的 VM 诊断扩展是否存在。](img/9781119612148-fg1405.png)
+在我撰写本文时，该扩展的正式名称为 `Microsoft.Insights.VMDiagnosticsSettings` (Windows)。
 
-    图 14-5： 验证 Azure VM 的 VM 诊断扩展是否存在。
+![图 14-5：验证 Azure VM 的 VM 诊断扩展是否存在。](img/9781119612148-fg1405.png)
 
-4.  **返回 VM 的“诊断设置”边栏选项卡，并查看配置选项。**
+**图 14-5： 验证 Azure VM 的 VM 诊断扩展是否存在。**
 
-    你可以在 Windows VM 上收集以下数据：
+### 4. 返回 VM 的“诊断设置”边栏选项卡，并查看配置选项。
 
-    *   性能计数器
-    *   事件日志
-    *   内存崩溃转储
+你可以在 Windows VM 上收集以下数据：
 
-    你可以在 Linux VM 上收集以下数据：
+*   性能计数器
+*   事件日志
+*   内存崩溃转储
 
-    *   系统硬件指标（处理器、内存、网络、文件系统和磁盘）
-    *   在 VM 上运行的任何已启用守护进程的 Syslog 事件
+你可以在 Linux VM 上收集以下数据：
 
-
+*   系统硬件指标（处理器、内存、网络、文件系统和磁盘）
+*   在 VM 上运行的任何已启用守护进程的 Syslog 事件
 
 我在图 14-6 中向你展示此界面。
 
 ![图 14-6：在 Azure 中运行的 Windows Server VM 中自定义诊断日志记录。](img/9781119612148-fg1406.png)
 
-图 14-6： 在 Azure 中运行的 Windows Server VM 中自定义诊断日志记录。
+**图 14-6： 在 Azure 中运行的 Windows Server VM 中自定义诊断日志记录。**
 
-![技术细节](img/technicalstuff.png)你必须在 Linux VM 所在区域拥有一个现有的存储帐户，才能在该 VM 上启用来宾诊断。
+![技术细节](img/technicalstuff.png) 你必须在 Linux VM 所在区域拥有一个现有的存储帐户，才能在该 VM 上启用来宾诊断。
 
 #### VM 启动诊断
 
@@ -7059,28 +6617,35 @@ VM 资源诊断的处理方式与其他 Azure 资源分开。启用 VM 诊断涉
 
 *指标* 是从你的资源定期采样的时间序列值。请遵循以下步骤，使用 Azure Monitor 的指标资源管理器绘制多个 VM 的 CPU 消耗情况：
 
-1.  **浏览到 Azure Monitor 设置列表，然后选择“指标”。**
-    指标资源管理器显示在“详细信息”边栏选项卡中。
+### 1. 浏览到 Azure Monitor 设置列表，然后选择“指标”。
 
-2.  **单击“图表标题”旁边的铅笔图标，并为图表指定一个有意义的名称。**
-    我将其命名为“多 VM CPU 利用率”。
+指标资源管理器显示在“详细信息”边栏选项卡中。
 
-3.  **完成第一个资源行，如下所示：**
-    *   *资源：* 你可以选择多个订阅和/或资源组，以获得广泛的资源供选择。请确保选择“虚拟机”资源类型。遗憾的是，你在此处只能选择一台 VM；你需要创建其他资源行，以便在同一图表上绘制其他 VM 的指标。
-    *   *指标命名空间：* 选择“虚拟机主机”。此值取决于你加载到“资源”属性中的资源。
-    *   *指标：* 选择“CPU 百分比”。指标特定于资源，并且列表可能较长或较短，具体取决于你是否已启用资源诊断。
-    *   *聚合：* 选择“平均值”。
+### 2. 单击“图表标题”旁边的铅笔图标，并为图表指定一个有意义的名称。
 
-4.  **至少再添加一个资源行，以绘制其他 VM 的指标。**
-    为此，单击工具栏上的“添加指标”，然后选择定义第一个资源行时所选的相同属性。图 14-7 显示了生成的图表。
+我将其命名为“多 VM CPU 利用率”。
+
+### 3. 完成第一个资源行，如下所示：
+
+*   **资源：** 你可以选择多个订阅和/或资源组，以获得广泛的资源供选择。请确保选择“虚拟机”资源类型。遗憾的是，你在此处只能选择一台 VM；你需要创建其他资源行，以便在同一图表上绘制其他 VM 的指标。
+*   **指标命名空间：** 选择“虚拟机主机”。此值取决于你加载到“资源”属性中的资源。
+*   **指标：** 选择“CPU 百分比”。指标特定于资源，并且列表可能较长或较短，具体取决于你是否已启用资源诊断。
+*   **聚合：** 选择“平均值”。
+
+### 4. 至少再添加一个资源行，以绘制其他 VM 的指标。
+
+为此，单击工具栏上的“添加指标”，然后选择定义第一个资源行时所选的相同属性。图 14-7 显示了生成的图表。
 
 ![图 14-7：Azure Monitor 中的指标资源管理器让你一目了然地查看诊断和性能数据。](img/9781119612148-fg1407.png)
 
-图 14-7： Azure Monitor 中的指标资源管理器让你一目了然地查看诊断和性能数据。
+**图 14-7： Azure Monitor 中的指标资源管理器让你一目了然地查看诊断和性能数据。**
 
 以下是关于图 14-7 中界面的更多详细信息：
 
 *   使用“新建图表”(A) 可在指标资源管理器中创建多个图表。
+
+
+
 *   单击“共享”(B) 以下载图表定义作为 Microsoft Excel 工作簿。请注意，如果你不将图表固定到仪表板或保存其定义，则离开指标资源管理器时它将丢失！如果将来需要，请务必保存链接、下载定义或将指标图表保存到仪表板。
 *   单击“时间范围/时间粒度”下拉列表(C) 以设置时间范围。
 *   使用“折线图”下拉列表(D) 以五种图表格式之一显示数据：折线、面积、柱状、散点和网格。
@@ -7110,12 +6675,18 @@ Azure 中的警报功能超强，因为你可以配置 Azure 在触发警报时�
 
 1.  **在 Azure Monitor 中，选择“警报”边栏选项卡，然后单击“管理操作”。**
 2.  **在“管理操作”边栏选项卡上，单击“添加操作组”。**
+
     你可以将操作组视为一个容器，其中包含一个或多个单独的操作规则。
+
 3.  **填写“添加操作组”表单。**
+
     在你提供操作组名称、短名称、订阅和资源组后，真正的工作开始了：定义你的操作。以下是我设置电子邮件警报操作组操作规则的方式：
+
     *   *操作名称：* Send-email（发送电子邮件）。
     *   *操作类型：* 电子邮件/短信/推送/语音。系统会提示你指定目标电子邮件地址。
+
     正如你所料，每种操作类型都有其自己的子配置。
+
 4.  **单击“确定”以确认配置。**
 
 现在该创建规则了，你将把它绑定到操作组。
@@ -7134,22 +6705,23 @@ Azure 警报支持两种信号类型：
 请遵循以下步骤创建一个在给定 VM 重启时触发的警报规则：
 
 1.  **在 Azure Monitor“警报”边栏选项卡上，单击“新建警报规则”。**
+
     “创建规则”边栏选项卡随即出现。
+
 2.  **在“创建规则”边栏选项卡的“资源”部分，单击“选择”。**
 3.  **选择要监视的 VM。**
+
     使用筛选器控件浏览你的订阅、位置和资源类型。
+
 4.  **在“条件”部分，单击“添加”，选择“重启虚拟机”活动日志信号，然后单击“完成”。**
+
     具体的配置选项取决于你选择的指标或活动日志信号。我在图 14-8 中向你展示此界面。
 
 ![图 14-8：为 Azure Monitor 警报规则配置信号逻辑。](img/9781119612148-fg1408.png)
 
-
-
-
 图 14-8： 为 Azure Monitor 警报规则配置信号逻辑。
 
 5. **在“操作”部分，单击“选择操作组”，然后选择你的操作组。**
-
 6. **在“警报详细信息”部分，填写警报元数据。**
 
     此元数据包含警报规则名称、可选说明、目标资源组，以及是否要启用该规则。图 14-9 显示了我完成的规则定义。
@@ -7201,7 +6773,6 @@ Azure 警报支持两种信号类型：
     * 定价层
 
 3. **单击“确定”以创建工作区。**
-
 4. **单击“确定”以提交部署。**
 
 定价超出了本书的范围，但 Log Analytics 有一个免费层以及多个付费层。最大的免费层限制是
@@ -7276,10 +6847,6 @@ Azure 警报支持两种信号类型：
 5. **单击“导出”，并将查询结果（仅显示的列）保存到 CSV 文件中。**
 
     请注意指向 Power BI（Microsoft 基于云的商业智能/仪表板生成工具）的链接。
-
-
-
-
 
 #### 编写基本 KQL 查询
 
@@ -7369,15 +6936,17 @@ Azure Updates 页面提供详细的产品跟踪和路线图信息。三个选项
 
 [`https://azure.microsoft.com/blog/topics/last-week-in-azure`](https://azure.microsoft.com/blog/topics/last-week-in-azure)
 
-从技术上讲，Azure.Source（也称为 Last Week in Azure）是官方 Azure 博客的一部分，但这份每周通讯重要到足以在本章中单独列出。
 
-Azure.Source 本质上是产品公告和路线图更新的汇总。你可能更喜欢阅读这份每周摘要，而不是在更新发生时通过 RSS 获取。
+
+从技术上讲，`Azure.Source`（也称为 Last Week in Azure）是官方 Azure 博客的一部分，但这份每周通讯重要到足以在本章中单独列出。
+
+`Azure.Source` 本质上是产品公告和路线图更新的汇总。你可能更喜欢阅读这份每周摘要，而不是在更新发生时通过 RSS 获取。
 
 ## Build5Nines Weekly
 
 [`https://build5nines.com/category/weekly`](https://build5nines.com/category/weekly)
 
-Microsoft MVP（也是我的朋友）Chris Pietschmann 运营着一个博客 Build5Nines.com（前身为 BuildAzure.com），这是世界上最好的 Azure 教育资源之一。该博客不仅汇总了上周最重要的 Azure 产品公告，还收录了 Pietschmann 阅读过的最佳 Azure 相关社区博客文章。你每周阅读这份电子通讯都能获取大量信息。
+Microsoft MVP（也是我的朋友）Chris Pietschmann 运营着一个博客 `Build5Nines.com`（前身为 `BuildAzure.com`），这是世界上最好的 Azure 教育资源之一。该博客不仅汇总了上周最重要的 Azure 产品公告，还收录了 Pietschmann 阅读过的最佳 Azure 相关社区博客文章。你每周阅读这份电子通讯都能获取大量信息。
 
 ## Azure Weekly (Endjin)
 
@@ -7385,7 +6954,7 @@ Microsoft MVP（也是我的朋友）Chris Pietschmann 运营着一个博客 Bui
 
 Endjin 是一家位于伦敦的云咨询公司，在社区推广方面投入了大量精力。其每周电子邮件摘要内容超全面；我怀疑工作人员会将他们上周发现的每一个 Azure 产品更新都塞进通讯里。
 
-Azure Weekly 特别酷的地方在于，自 2014 年以来的全部过往期刊均可在网站上免费访问和搜索。
+`Azure Weekly` 特别酷的地方在于，自 2014 年以来的全部过往期刊均可在网站上免费访问和搜索。
 
 ## Azure 官方 YouTube 频道
 
@@ -7395,25 +6964,21 @@ Azure Weekly 特别酷的地方在于，自 2014 年以来的全部过往期刊�
 
 在这里，你将找到大量内容，包括产品功能概述、Azure 相关的 Microsoft 会议演示以及教程。
 
-Azure Friday 节目（见下一节）也可在此频道观看。
+`Azure Friday` 节目（见下一节）也可在此频道观看。
 
 ## Channel 9：Azure Friday
 
 [`https://channel9.msdn.com/Shows/Azure-Friday`](https://channel9.msdn.com/Shows/Azure-Friday)
 
-Azure Friday 是一个每周视频系列，由 Scott Hanselman（一位 Microsoft 产品布道师，以善于为复杂的技术主题提供简单解释而闻名）或其同事主持。Hanselman 之所以受欢迎，是因为他既是一位知识渊博的开发人员，又是一位优秀的教师。该系列采访 Azure 产品团队成员，并经常提供演示。
+`Azure Friday` 是一个每周视频系列，由 `Scott Hanselman`（一位 Microsoft 产品布道师，以善于为复杂的技术主题提供简单解释而闻名）或其同事主持。Hanselman 之所以受欢迎，是因为他既是一位知识渊博的开发人员，又是一位优秀的教师。该系列采访 Azure 产品团队成员，并经常提供演示。
 
 ## Azure Feedback
 
 [`https://feedback.azure.com`](https://feedback.azure.com/)
 
-你可以访问 Azure Feedback 门户提交新产品和/或产品改进建议，对现有问题进行投票，并直接与 Microsoft 产品团队成员互动。正如你在图 15-1 中所见，一些客户反馈促成了功能增强，甚至新产品的开发。
+你可以访问 `Azure Feedback` 门户提交新产品和/或产品改进建议，对现有问题进行投票，并直接与 Microsoft 产品团队成员互动。正如你在图 15-1 中所见，一些客户反馈促成了功能增强，甚至新产品的开发。
 
 ![图 15-1：有时，你的 Azure 反馈会促成新产品的开发。](img/9781119612148-fg1501.png)
-
-
-
-
 
 # 十大 Azure 教育资源
 
@@ -7427,11 +6992,11 @@ Azure Friday 是一个每周视频系列，由 Scott Hanselman（一位 Microsof
 
 [`https://docs.microsoft.com/azure`](https://docs.microsoft.com/azure)
 
-Azure 文档库是了解 Azure 产品工作原理的终极权威来源。Microsoft 已将文档开源至 GitHub，因此社区成员（像你一样！）可以对其进行编辑并提交审阅。
+`Azure 文档`库是了解 Azure 产品工作原理的终极权威来源。Microsoft 已将文档开源至 `GitHub`，因此社区成员（像你一样！）可以对其进行编辑并提交审阅。
 
 文档库的“动态”特性意味着文档会随 Azure 产品的发展而演进。你还会找到大量多媒体资源，以适应更偏向动手实践或视觉化的教育风格。
 
-![Tip](img/tip.png) 如果你尚未掌握 Git 源代码控制和 GitHub 协作工作流，不妨看看 Sarah Guthals 和 Phil Haack 合著的精彩著作 *《GitHub For Dummies》*（John Wiley & Sons, Inc. 出版）。
+![Tip](img/tip.png) 如果你尚未掌握 `Git` 源代码控制和 `GitHub` 协作工作流，不妨看看 Sarah Guthals 和 Phil Haack 合著的精彩著作 *《GitHub For Dummies》*（John Wiley & Sons, Inc. 出版）。
 
 ## Azure 架构中心
 
@@ -7442,32 +7007,32 @@ Microsoft 早已“吃自己的狗粮”，所谓两件事：
 * 它使用自己开发的产品、技术和框架。
 * 它与客户分享其最佳实践。
 
-Azure 架构中心包含两份超值的在线指南：
+`Azure 架构中心`包含两份超值的在线指南：
 
 * *Azure 应用程序架构指南*：Microsoft 如何在 Azure 中设计可缩放、有弹性、高性能且安全的应用程序架构
 * *Microsoft Azure 云采用框架*：Microsoft 如何帮助客户从完全本地部署过渡到混合云，再到云原生架构
 
-该中心还包括参考架构库以及丰富多样的拓扑图和解释。许多图表可免费作为 Microsoft Visio 绘图文件获取。在我的 Azure 解决方案架构师工作中，我经常以发布的参考架构为起点，构建我向客户推荐的拓扑结构。
+该中心还包括参考架构库以及丰富多样的拓扑图和解释。许多图表可免费作为 `Microsoft Visio` 绘图文件获取。在我的 Azure 解决方案架构师工作中，我经常以发布的参考架构为起点，构建我向客户推荐的拓扑结构。
 
-![Technical stuff](img/technicalstuff.png) 如果你尚未投资 Visio 或同等优秀的技术绘图工具，不妨考虑一下。我接触的几乎每一位 Azure 架构师都使用 Visio 或 Microsoft PowerPoint 来创建 Azure 架构图。
+![Technical stuff](img/technicalstuff.png) 如果你尚未投资 `Visio` 或同等优秀的技术绘图工具，不妨考虑一下。我接触的几乎每一位 Azure 架构师都使用 `Visio` 或 `Microsoft PowerPoint` 来创建 Azure 架构图。
 
 ## Azure REST API 浏览器
 
 [`https://docs.microsoft.com/rest/api/?view=Azure`](https://docs.microsoft.com/rest/api/?view=Azure)
 
-你在 Azure 订阅中执行的每项操作，都会转化为对 Azure 公有云的表述性状态传输 (REST) API 调用。Azure REST API 浏览器让你能够深入研究资源提供程序、查看可用操作，甚至对其进行测试（请参阅图 16-1）。
+你在 Azure 订阅中执行的每项操作，都会转化为对 Azure 公有云的表述性状态传输 (`REST`) API 调用。`Azure REST API 浏览器`让你能够深入研究资源提供程序、查看可用操作，甚至对其进行测试（请参阅图 16-1）。
 
-在 API 浏览器展示 Azure 资源管理器 API 请求/响应生命周期的工作原理后，你就可以高效地构建直接与 ARM REST API 交互的自定义应用程序。
+在 `API 浏览器`展示 Azure 资源管理器 API 请求/响应生命周期的工作原理后，你就可以高效地构建直接与 `ARM REST API` 交互的自定义应用程序。
 
 ![FIGURE 16-1: Work from the bare metal by using the Azure REST API Browser.](img/9781119612148-fg1601.png)
 
-图 16-1： 使用 Azure REST API 浏览器从底层进行操作。
+图 16-1： 使用 `Azure REST API 浏览器`从底层进行操作。
 
 ## Microsoft @ edX
 
 [`https://www.edx.org/learn/azure`](https://www.edx.org/learn/azure)
 
-edX 是一家非营利公司，托管大规模开放在线课程（MOOCs，发音为 *mooks*）。Microsoft 深度投入 edX 生态系统。你将找到大量涵盖大多数学科的 Azure 相关课程，包括
+`edX` 是一家非营利公司，托管大规模开放在线课程（`MOOCs`，发音为 *mooks*）。Microsoft 深度投入 `edX` 生态系统。你将找到大量涵盖大多数学科的 Azure 相关课程，包括
 
 * 架构
 * 管理
@@ -7478,13 +7043,13 @@ edX 是一家非营利公司，托管大规模开放在线课程（MOOCs，发�
 * 数据科学
 * 机器学习
 
-这些课程免费学习，只需使用 Microsoft 账户登录以跟踪进度即可。该公司的多媒体教学方式是触达具有不同（或多种）学习风格人群的绝佳途径。
+这些课程免费学习，只需使用 `Microsoft 账户`登录以跟踪进度即可。该公司的多媒体教学方式是触达具有不同（或多种）学习风格人群的绝佳途径。
 
 ## Microsoft Learn
 
 [`https://docs.microsoft.com/learn`](https://docs.microsoft.com/learn)
 
-Microsoft Learn 在某些方面类似于 edX，不同之处在于 Learn 完全由 Microsoft 内部孵化。你将找到数百个免费的精选实验室，涵盖大多数 Azure 职位角色；这些实验室编写精良且内容完整。
+`Microsoft Learn` 在某些方面类似于 `edX`，不同之处在于 `Learn` 完全由 Microsoft 内部孵化。你将找到数百个免费的精选实验室，涵盖大多数 Azure 职位角色；这些实验室编写精良且内容完整。
 
 Microsoft 在许多动手实验室中提供了沙盒环境，让你访问 Microsoft 的 Azure 订阅。这意味着你通过直接使用 Azure 来学习 Azure，而不是使用模拟或仿真环境。
 
@@ -7494,21 +7059,21 @@ Microsoft 在许多动手实验室中提供了沙盒环境，让你访问 Micros
 
 我发现，如果你问五位 IT 专业人士对专业认证的看法，会得到五种不同的回答。有些人需要 Azure 认证来维持其 Microsoft 合作伙伴资格；另一些人想通过认证在竞争激烈的就业市场中脱颖而出。
 
-无论如何，这个网站是你深入了解 Azure 基于角色的认证的首选之地。2018 年，Microsoft 从单一的 Azure 认证头衔转向基于角色的徽章。这样，你就可以以一种与你当前或期望的工作角色（无论是管理员、开发人员、架构师、DevOps 专家等）紧密对齐的方式来展示你的 Azure 专业技能。
+无论如何，这个网站是你深入了解 Azure 基于角色的认证的首选之地。2018 年，Microsoft 从单一的 Azure 认证头衔转向基于角色的徽章。这样，你就可以以一种与你当前或期望的工作角色（无论是管理员、开发人员、架构师、`DevOps` 专家等）紧密对齐的方式来展示你的 Azure 专业技能。
 
-![Tip](img/tip.png) 我强烈建议你将 Microsoft 全球学习认证和考试优惠页面（[`https://www.microsoft.com/en-us/learning/offers.aspx`](https://www.microsoft.com/en-us/learning/offers.aspx)）加入书签。大多数情况下，你可以找到考试重考优惠，以及 MeasureUp 模拟测试的折扣（见下一节）。考试重考优惠在你首次考试未通过时，提供第二次考试的优惠券。
+![Tip](img/tip.png) 我强烈建议你将 Microsoft 全球学习认证和考试优惠页面（[`https://www.microsoft.com/en-us/learning/offers.aspx`](https://www.microsoft.com/en-us/learning/offers.aspx)）加入书签。大多数情况下，你可以找到考试重考优惠，以及 `MeasureUp` 模拟测试的折扣（见下一节）。考试重考优惠在你首次考试未通过时，提供第二次考试的优惠券。
 
 ## MeasureUp
 
 [`https://www.measureup.com/azure-products`](https://www.measureup.com/azure-products)
 
-MeasureUp 是 Microsoft 唯一授权的模拟考试提供商。我无法过分强调模拟考试对 Azure 认证考试成功的关键作用。我见过经验丰富的专家信心满满地走进考场，却哭着出来，因为他们没通过考试，因为他们没预料到 Microsoft 全球学习以多种方式考察考生技能。
+`MeasureUp` 是 Microsoft 唯一授权的模拟考试提供商。我无法过分强调模拟考试对 Azure 认证考试成功的关键作用。我见过经验丰富的专家信心满满地走进考场，却哭着出来，因为他们没通过考试，因为他们没预料到 Microsoft 全球学习以多种方式考察考生技能。
 
-顺便说一下：前文提到的 Microsoft Learn，指的是 Microsoft 全球学习的在线技术教育中心。是的，它们是两码事。
+顺便说一下：前文提到的 `Microsoft Learn`，指的是 Microsoft 全球学习的在线技术教育中心。是的，它们是两码事。
 
-MeasureUp 提供精准的考试体验。正如理解理论很重要一样，理解并熟悉 Microsoft 如何评估你的知识同样重要。
+`MeasureUp` 提供精准的考试体验。正如理解理论很重要一样，理解并熟悉 Microsoft 如何评估你的知识同样重要。
 
-在 Azure 考试中，你将遇到基于性能的实验室，你会获得真实 Azure 门户的 Active Directory (AD) 登录权限，并被要求完成一系列部署和/或配置任务。
+在 Azure 考试中，你将遇到基于性能的实验室，你会获得真实 Azure 门户的 `Active Directory (AD)` 登录权限，并被要求完成一系列部署和/或配置任务。
 
 考试还包含案例研究，呈现一家虚构公司的当前状况、Azure 相关目标和技术限制；然后要求你通过分析每个案例来回答若干问题。这些考试绝非儿戏，值得投入专门的备考时间。
 
@@ -7516,12 +7081,9 @@ MeasureUp 提供精准的考试体验。正如理解理论很重要一样，理�
 
 [`https://www.meetup.com/topics/azure`](https://www.meetup.com/topics/azure)
 
-
-
-
 我必须坦诚地告诉你，在我 20 多年的职业生涯中，几乎每一个职业机会都是通过专业社交网络获得的。当你建立专业联系时，当机会出现时，你的名字自然会被提及。
 
-因此，我建议你访问 Meetup.com，搜索你所在地区的 Azure 用户组。在撰写本书时，全球共有 716 个用户组，成员超过 300,000 名（参见图 16-2）。
+因此，我建议你访问 `Meetup.com`，搜索你所在地区的 Azure 用户组。在撰写本书时，全球共有 716 个用户组，成员超过 300,000 名（参见图 16-2）。
 
 ![图 16-2：查找你附近的 Azure 用户组。](img/9781119612148-fg1602.png)
 
@@ -7529,21 +7091,21 @@ MeasureUp 提供精准的考试体验。正如理解理论很重要一样，理�
 
 Azure 聚会是了解新知识的绝佳机会，你会遇到从事你正在做或将来想做的工作的同行。IT 招聘人员习惯赞助用户组，因此你也可以在聚会上接入求职网络。
 
-在这个话题上，我还想推荐 Microsoft Reactor ([`https://developer.microsoft.com/en-us/reactor/`](https://developer.microsoft.com/en-us/reactor/))，这是一个由微软运营的社区中心，列出了面向学习者和社区组织者的免费聚会。主题涵盖 Azure 和大多数其他微软技术及职位角色。
+在这个话题上，我还想推荐 `Microsoft Reactor` ([`https://developer.microsoft.com/en-us/reactor/`](https://developer.microsoft.com/en-us/reactor/))，这是一个由微软运营的社区中心，列出了面向学习者和社区组织者的免费聚会。主题涵盖 Azure 和大多数其他微软技术及职位角色。
 
 ## CloudSkills
 
 [`https://cloudskills.io`](https://cloudskills.io/)
 
-CloudSkills 是一家精品云咨询公司，以 Microsoft Azure 教育为主要目标。我的朋友 Mike Pfeiffer 是一位 Microsoft 最有价值专家 (MVP)，曾在 Amazon Web Services 和 Microsoft 担任云架构师。他创建了 CloudSkills 作为一家培训公司，提供免费和付费培训、专业咨询以及通用的云和职业指导。你可以在 CloudSkills.io 找到培训课程，在 CloudSkills.fm 收听免费播客访谈，在 CloudSkills.tv 观看免费教程。
+`CloudSkills` 是一家精品云咨询公司，以 Microsoft Azure 教育为主要目标。我的朋友 `Mike Pfeiffer` 是一位 Microsoft 最有价值专家 (`MVP`)，曾在 `Amazon Web Services` 和 `Microsoft` 担任云架构师。他创建了 `CloudSkills` 作为一家培训公司，提供免费和付费培训、专业咨询以及通用的云和职业指导。你可以在 `CloudSkills.io` 找到培训课程，在 `CloudSkills.fm` 收听免费播客访谈，在 `CloudSkills.tv` 观看免费教程。
 
 ## Pluralsight
 
 [`https://www.pluralsight.com/partners/microsoft/azure`](https://www.pluralsight.com/partners/microsoft/azure)
 
-完全公开：我是 Pluralsight 的全职培训师。不过，世界上的 Azure 专家似乎大多也是。Pluralsight 与 Azure 团队合作，创建了一个行业领先的在线学习库。
+完全公开：我是 `Pluralsight` 的全职培训师。不过，世界上的 Azure 专家似乎大多也是。`Pluralsight` 与 Azure 团队合作，创建了一个行业领先的在线学习库。
 
-许多涵盖所有主要 Azure 职位角色的视频培训课程可免费获得。Pluralsight 还提供技能前后评估以及指导服务。
+许多涵盖所有主要 Azure 职位角色的视频培训课程可免费获得。`Pluralsight` 还提供技能前后评估以及指导服务。
 
 # 索引
 
@@ -7555,55 +7117,62 @@ CloudSkills 是一家精品云咨询公司，以 Microsoft Azure 教育为主要
 ## A
 
 *   “About VPN devices and IPsec/IKE parameters for Site-to-Site VPN Gateway connections” 文章，283
-*   abstract，41
-*   access rules，74
-*   Accounting tags，253
-*   accounts
-    *   adding to Azure AD roles，245–247
-    *   Cosmos DB，202–203
+*   `abstract`，41
+*   `access rules`，74
+*   `Accounting tags`，253
+*   `accounts`
+    *   adding to `Azure AD` roles，245–247
+    *   `Cosmos DB`，202–203
     *   for storage，49–61
-*   ACI (`Azure Container Instances`)，121
-*   ACR (`Azure Container Registry`)，121
-*   action groups，312–313
-*   Action Pack，22
-*   Action property，74
-*   actions
+*   `ACI` (`Azure Container Instances`)，121
+*   `ACR` (`Azure Container Registry`)，121
+*   `action groups`，312–313
+*   `Action Pack`，22
+*   `Action property`，74
+*   `actions`
     *   about，170
     *   testing，183
-*   Active Directory (AD)
+*   `Active Directory (AD)`
     *   about，229–230
-    *   AD *vs.* AD DS，231
-    *   Azure Advisor，247–249
-    *   Azure roles，243–245
-    *   compared with Active Directory Domain Services (AD DS)，231
-    *   configuring Role-Based Access Control (RBAC)，242–247
+    *   `AD` *vs.* `AD DS`，231
+    *   `Azure Advisor`，247–249
+    *   `Azure roles`，243–245
+    *   compared with `Active Directory Domain Services (AD DS)`，231
+    *   configuring `Role-Based Access Control (RBAC)`，242–247
     *   creating users and groups，234–241
     *   pricing，239
-    *   subscriptions *vs.* AD tenants，231–234
-*   Active Directory Domain Services (AD DS)，231，236
-*   AD (Active Directory)
+    *   subscriptions *vs.* `AD tenants`，231–234
+*   `Active Directory Domain Services (AD DS)`，231，236
+*   `AD` (`Active Directory`)
     *   about，229–230
-    *   AD *vs.* AD DS，231
-    *   Azure Advisor，247–249
-    *   Azure roles，243–245
-    *   compared with Active Directory Domain Services (AD DS)，231
-    *   configuring Role-Based Access Control (RBAC)，242–247
+    *   `AD` *vs.* `AD DS`，231
+    *   `Azure Advisor`，247–249
+    *   `Azure roles`，243–245
+    *   compared with `Active Directory Domain Services (AD DS)`，231
+    *   configuring `Role-Based Access Control (RBAC)`，242–247
     *   creating users and groups，234–241
     *   pricing，239
-    *   subscriptions *vs.* AD tenants，231–234
-*   adding
-    *   accounts to Azure AD roles，245–247
-    *   Application Insights resource，164
-    *   application security groups (ASGs)，77–78
-    *   custom domains，158–160
-    *   domains to Active Directory，234–235
-    *   Linux systems to Arc，294–295
+    *   subscriptions *vs.* `AD tenants`，231–234
+*   `adding`
+    *   accounts to `Azure AD` roles，245–247
+    *   `Application Insights` resource，164
+    *   `application security groups (ASGs)`，77–78
+    *   `custom domains`，158–160
+    *   domains to `Active Directory`，234–235
+    *   `Linux` systems to `Arc`，294–295
     *   servers at scale，293
-    *   service tags，77–78
-    *   tags in Azure portal，253–254
+    *   `service tags`，77–78
+    *   tags in `Azure portal`，253–254
     *   tags programmatically，254–255
-    *   Windows Server systems to Arc，290–293
-*   address space，66
+    *   `Windows Server` systems to `Arc`，290–293
+*   `address space`，66
+
+
+
+# 索引
+
+## A
+
 *   administration notes (AKS)，132–133
 *   ADO.NET，195
 *   AdventureWorks sample database，192
@@ -7647,10 +7216,7 @@ CloudSkills 是一家精品云咨询公司，以 Microsoft Azure 教育为主要
 *   Assignment phase，of policies，261
 *   associating NSGs with subnets，78
 
-
-
-
-# 索引
+## 索引 (中文)
 
 *   创作阶段，策略的，261
 *   自动缩放，配置，161–163
@@ -7792,11 +7358,7 @@ CloudSkills 是一家精品云咨询公司，以 Microsoft Azure 教育为主要
     *   REST API，28，42–43
 *   Azure REST API Browser (Azure REST API 浏览器)，333
 
-
-
-
-
-## A
+## A (续)
 
 *   Azure SDK，41–42
 *   Azure 服务总线队列，171
@@ -7930,34 +7492,12 @@ CloudSkills 是一家精品云咨询公司，以 Microsoft Azure 教育为主要
     *   Blob 容器，174
     *   Cosmos DB 帐户，202–203
     *   Function App，172–173
-    *   Web 应用的 Git 存储库，148–150
-    *   组，234–241
-    *   Log Analytics 工作区，316–317
-    *   逻辑应用，179
-    *   策略，262–263
-    *   快照备份，213–214
-    *   存储帐户，49–54
-    *   用户，234–241
-    *   虚拟网络，68–72
-    *   Visual Studio 中的 Web 应用项目，153
-    *   使用逻辑应用创建工作流，179–183
-*   Crockford, Douglas (JSON 发明者)，31
-*   自定义连接器，170
-*   自定义域，添加，158–160
-*   “Azure 资源的自定义角色”文章，246
-*   自定义应用设置，158
-
-## D
-
-*   数据
-
-
 
 
 
 # 索引
 
-### 数字/符号
+## 数字/符号
 
 *   `DELETE` 方法，28
 *   `GET` 方法，28
@@ -8149,144 +7689,147 @@ CloudSkills 是一家精品云咨询公司，以 Microsoft Azure 教育为主要
 *   Fowler, Adam (作者)
     *   *NoSQL For Dummies*，188
 
-
-
-
-
 ## G
 
-*   **GRS** (异地冗余存储), 50
-*   **Guest Inviter**（来宾邀请者）角色, 243
-*   **Guest user**（来宾用户）(AD), 236
-*   **guest-level metrics**（来宾级指标）, 111–112
-*   **Guthals, Sarah** (作者)
-    *   *GitHub For Dummies*, 145
+*   `GRS` (异地冗余存储)，50
+*   `Guest Inviter`（来宾邀请者）角色，243
+*   `Guest user`（来宾用户）(AD)，236
+*   `guest-level metrics`（来宾级指标），111–112
+*   `Guthals, Sarah` (作者)
+    *   *GitHub For Dummies*，145
 
 ## H
 
-*   **Haack, Phil** (作者)
-    *   *GitHub For Dummies*, 145
-*   **hello-world container**（hello-world 容器）, 118–120
-*   **host-level metrics**（主机级指标）, 111
-*   **hot tier**（热访问层）, 58
-*   **HTTP** (Hypertext Transfer Protocol), 28, 171
-*   **hybrid cloud**（混合云）, 13–14, 281–287
-*   **Hypertext Transfer Protocol** (HTTP), 28, 171
+*   `Haack, Phil` (作者)
+    *   *GitHub For Dummies*，145
+*   `hello-world container`（hello-world 容器），118–120
+*   `host-level metrics`（主机级指标），111
+*   `hot tier`（热访问层），58
+*   `HTTP` (Hypertext Transfer Protocol)，28，171
+*   `hybrid cloud`（混合云），13–14，281–287
+*   `Hypertext Transfer Protocol` (HTTP)，28，171
 
 ## I
 
-*   **IaaS** (Infrastructure as a Service), 16–17
-*   **IBM Cloud**, 11, 12
-*   **icons**（图标）, 说明, 3
-*   **IDaaS** (Identity as a Service), 16
-*   **idempotent**（幂等）, 105
-*   **identity**（标识）, 作为 PaaS 产品, 20
-*   **Identity as a Service** (IDaaS), 16
-*   **images**（映像）, 存储在 Azure Container Registry 中, 126–130
-*   **implementing**（实施）
-    *   Azure Container instances, 122–126
-    *   Azure Cosmos DB, 200–208
-    *   Azure policy, 259–265
-    *   Azure Policy, 296–298
-    *   built-in RBAC roles, 243–245
-    *   SQL database, 190–200
-    *   taxonomic tags, 251–259, 298–299
-*   **incremental mode**（增量模式）, 105
-*   **Infrastructure as a Service** (IaaS), 16–17, 185–187
-*   **inspecting virtual servers**（检查虚拟服务器）, 198
-*   **installing**（安装）
-    *   Azure Storage Explorer, 54–56
-    *   Docker Desktop, 118
-*   **instrumentation**（检测）, 在 Web 应用中启用, 165
-*   **interacting**（交互）, 与 Cosmos DB, 204–207
-*   **Internet of Things** (IoT), 作为 PaaS 产品, 19
-*   **Internet resources**（Internet 资源）
-    *   “About VPN devices and IPsec/IKE parameters for Site-to-Site VPN Gateway connections” article（“关于站点到站点 VPN 网关连接的 VPN 设备和 IPsec/IKE 参数”文章）, 283
-    *   Active Directory (AD) pricing, 239
-    *   Activity Log Analytics, 304
-    *   AdventureWorks sample database, 192
-    *   Application Insights resource, 316
-    *   AzCopy, 217
-    *   Azure AD Connect, 231
-    *   Azure Architecture Center, 332
-    *   Azure Blog, 326
-    *   Azure Blueprints, 265
-    *   Azure certification, 334
-    *   “Azure consumption API overview” article（“Azure 使用量 API 概述”文章）, 259
-    *   Azure Cosmos DB table API, 61
-    *   Azure Data Box, 271
-    *   Azure documentation, 331–332
-    *   Azure Downloads page (website), 41
-    *   Azure Feedback, 328
-    *   Azure Free Account FAQ, 21
-    *   Azure Marketplace, 85
-    *   Azure Official YouTube Channel, 328
-    *   “Azure Policy definition structure” article（“Azure Policy 定义结构”文章）, 260
-    *   Azure Policy Samples GitHub repository, 263
-    *   Azure portal, 24, 36, 50
-    *   Azure pricing, 168
-    *   Azure Resource Explorer, 42
-    *   Azure REST API Browser, 333
-    *   Azure Speed Test 2.0, 36
-    *   Azure Status, 325
-    *   Azure Storage Explorer, 174
-    *   “Azure subscription and service limits, quotas, and constraints” article（“Azure 订阅和服务限制、配额与约束”文章）, 67
-    *   Azure Updates, 326
-    *   Azure Visio stencils, 71
-    *   Azure Weekly (Endjin), 327
-    *   Azure.Source, 327
-    *   Build5Nines Weekly, 327
-    *   Channel 9: Azure Friday, 328
-    *   Cheat Sheet, 4
-    *   CloudSkills, 337
-    *   “Create an Azure Service Principal with Azure PowerShell” article（“使用 Azure PowerShell 创建 Azure 服务主体”文章）, 39
-    *   “Custom roles for Azure resources” article（“Azure 资源的自定义角色”文章）, 246
-    *   Docker container documentation, 116
-    *   File Recovery feature, 222
-    *   “Getting Started with Log Queries in Azure Monitor” tutorial（“Azure Monitor 中日志查询入门”教程）, 322
-    *   keyboard shortcuts, 57
-    *   MeasureUp, 335
-    *   Meetup, 336
-    *   Microsoft @ edx, 333
-    *   Microsoft Learn, 334
-    *   Microsoft Reactor, 336
-    *   Microsoft Worldwide Learning Certification and Exam Offers page, 335
-    *   “Modify Visual Studio” article（“修改 Visual Studio”文章）, 41
-    *   NIST Special Publication 800-145, *The NIST Definition of Cloud Computing*, 9
-    *   “Overview of BGP and Azure VPN Gateways” article（“BGP 和 Azure VPN 网关概述”文章）, 284
-    *   Pluralsight, 337
-    *   Postman, 29
-    *   price information, 50
-    *   Products Available by Region page, 36
-    *   “Quickstart: Connect machines to Azure using Azure Arc for servers - PowerShell” article（“快速入门：使用 Azure Arc 将计算机连接到 Azure - PowerShell”文章）, 293
-    *   “Resource naming and tagging decision guide” article（“资源命名和标记决策指南”文章）, 299
-    *   RFC 1918 source document, 66
-    *   “Security Groups” article（“安全组”文章）, 78
-    *   services directory, 17
-    *   SQL Server Management Studio, 199
-    *   Tim's Twitter Feed, 329
-    *   “Understand Azure Policy Effects” article（“了解 Azure Policy 效果”文章）, 261
-    *   Visual Studio 2019 Community Edition, 100, 144
-    *   “What are Azure Reservations?” article（“什么是 Azure 预留？”文章）, 194
-    *   “What is managed identities for Azure resources” article（“什么是 Azure 资源的托管标识？”文章）, 297
+*   `IaaS` (Infrastructure as a Service)，16–17
+*   `IBM Cloud`，11，12
+*   `icons`（图标），说明，3
+*   `IDaaS` (Identity as a Service)，16
+*   `idempotent`（幂等），105
+*   `identity`（标识），作为 PaaS 产品，20
+*   `Identity as a Service` (IDaaS)，16
+*   `images`（映像），存储在 Azure Container Registry 中，126–130
+*   `implementing`（实施）
+    *   Azure Container instances，122–126
+    *   Azure Cosmos DB，200–208
+    *   Azure policy，259–265
+    *   Azure Policy，296–298
+    *   built-in RBAC roles，243–245
+    *   SQL database，190–200
+    *   taxonomic tags，251–259，298–299
+*   `incremental mode`（增量模式），105
+*   `Infrastructure as a Service` (IaaS)，16–17，185–187
+*   `inspecting virtual servers`（检查虚拟服务器），198
+*   `installing`（安装）
+    *   Azure Storage Explorer，54–56
+    *   Docker Desktop，118
+*   `instrumentation`（检测），在 Web 应用中启用，165
+*   `interacting`（交互），与 Cosmos DB，204–207
+*   `Internet of Things` (IoT)，作为 PaaS 产品，19
+*   `Internet resources`（Internet 资源）
+    *   “About VPN devices and IPsec/IKE parameters for Site-to-Site VPN Gateway connections” article（“关于站点到站点 VPN 网关连接的 VPN 设备和 IPsec/IKE 参数”文章），283
+    *   Active Directory (AD) pricing，239
+    *   Activity Log Analytics，304
+    *   AdventureWorks sample database，192
+    *   Application Insights resource，316
+    *   AzCopy，217
+    *   Azure AD Connect，231
+    *   Azure Architecture Center，332
+    *   Azure Blog，326
+    *   Azure Blueprints，265
+    *   Azure certification，334
+    *   “Azure consumption API overview” article（“Azure 使用量 API 概述”文章），259
+    *   Azure Cosmos DB table API，61
+    *   Azure Data Box，271
+    *   Azure documentation，331–332
+    *   Azure Downloads page (website)，41
+    *   Azure Feedback，328
+    *   Azure Free Account FAQ，21
+    *   Azure Marketplace，85
+    *   Azure Official YouTube Channel，328
+    *   “Azure Policy definition structure” article（“Azure Policy 定义结构”文章），260
+    *   Azure Policy Samples GitHub repository，263
+    *   Azure portal，24，36，50
+    *   Azure pricing，168
+    *   Azure Resource Explorer，42
+    *   Azure REST API Browser，333
+    *   Azure Speed Test 2.0，36
+    *   Azure Status，325
+    *   Azure Storage Explorer，174
+    *   “Azure subscription and service limits, quotas, and constraints” article（“Azure 订阅和服务限制、配额与约束”文章），67
+    *   Azure Updates，326
+    *   Azure Visio stencils，71
+    *   Azure Weekly (Endjin)，327
+    *   Azure.Source，327
+    *   Build5Nines Weekly，327
+    *   Channel 9: Azure Friday，328
+    *   Cheat Sheet，4
+    *   CloudSkills，337
+    *   “Create an Azure Service Principal with Azure PowerShell” article（“使用 Azure PowerShell 创建 Azure 服务主体”文章），39
+    *   “Custom roles for Azure resources” article（“Azure 资源的自定义角色”文章），246
+    *   Docker container documentation，116
+    *   File Recovery feature，222
+
+
+
+## 索引
+
+### 符号与数字
+
+*   “Getting Started with Log Queries in Azure Monitor” tutorial（“Azure Monitor 中日志查询入门”教程）, 322
+*   keyboard shortcuts, 57
+*   MeasureUp, 335
+*   Meetup, 336
+*   Microsoft @ edx, 333
+*   Microsoft Learn, 334
+*   Microsoft Reactor, 336
+*   Microsoft Worldwide Learning Certification and Exam Offers page, 335
+*   “Modify Visual Studio” article（“修改 Visual Studio”文章）, 41
+*   NIST Special Publication 800-145, *The NIST Definition of Cloud Computing*, 9
+*   “Overview of BGP and Azure VPN Gateways” article（“BGP 和 Azure VPN 网关概述”文章）, 284
+*   Pluralsight, 337
+*   Postman, 29
+*   price information, 50
+*   Products Available by Region page, 36
+*   “Quickstart: Connect machines to Azure using Azure Arc for servers - PowerShell” article（“快速入门：使用 Azure Arc 将计算机连接到 Azure - PowerShell”文章）, 293
+*   “Resource naming and tagging decision guide” article（“资源命名和标记决策指南”文章）, 299
+*   RFC 1918 source document, 66
+*   “Security Groups” article（“安全组”文章）, 78
+*   services directory, 17
+*   SQL Server Management Studio, 199
+*   Tim's Twitter Feed, 329
+*   “Understand Azure Policy Effects” article（“了解 Azure Policy 效果”文章）, 261
+*   Visual Studio 2019 Community Edition, 100, 144
+*   “What are Azure Reservations?” article（“什么是 Azure 预留？”文章）, 194
+*   “What is managed identities for Azure resources” article（“什么是 Azure 资源的托管标识？”文章）, 297
 *   **Internet service tag**（Internet 服务标记）, 77
 *   **IPv6**, 67
 *   **IPVPN** (Any-to-any) connection, 287
 *   **Isolated tier**（隔离层）, 143
 
-## J
+### J
 
 *   **JDBC**, 195
 *   **JSON**, 30–31, 170, 259
 
-## K
+### K
 
 *   **keyboard shortcuts**（键盘快捷键）, 57
 *   **KQL queries**, 编写, 319–322
 *   **kubectl** command-line tool, 132
 *   **Kubernetes Web UI**, 133
 
-## L
+### L
 
 *   **licenses**（许可证）
     *   assigning to users, 238–240
@@ -8298,13 +7841,6 @@ CloudSkills 是一家精品云咨询公司，以 Microsoft Azure 教育为主要
 *   **local network gateway**（本地网络网关）, 285
 *   **local systems**（本地系统）, managing with Arc, 295–299
 *   **locally redundant storage** (LRS), 49
-
-
-
-
-
-## L
-
 *   日志搜索界面，319–320
 *   登录，作为 Azure AD 用户，240–241
 *   逻辑应用
@@ -8319,7 +7855,7 @@ CloudSkills 是一家精品云咨询公司，以 Microsoft Azure 教育为主要
 *   低承诺，20
 *   LRS（本地冗余存储），49
 
-## M
+### M
 
 *   机器学习，作为 PaaS 产品，20
 *   托管磁盘，61–63
@@ -8385,7 +7921,7 @@ CloudSkills 是一家精品云咨询公司，以 Microsoft Azure 教育为主要
 *   多租户，230
 *   多租户 Azure AD，232–233
 
-## N
+### N
 
 *   Nadella, Satya（首席运营官），17
 *   Name 属性，74
@@ -8410,7 +7946,7 @@ CloudSkills 是一家精品云咨询公司，以 Microsoft Azure 教育为主要
 *   NSG（网络安全组），74–78
 *   NVA（网络虚拟设备），85
 
-## O
+### O
 
 *   ODBC，195
 *   本地环境
@@ -8428,7 +7964,7 @@ CloudSkills 是一家精品云咨询公司，以 Microsoft Azure 教育为主要
 *   “BGP 和 Azure VPN 网关概述”文章，284
 *   所有者角色，245
 
-## P
+### P
 
 *   PaaS。*请参阅* 平台即服务
 *   页眉 (A)，36
@@ -8457,13 +7993,6 @@ CloudSkills 是一家精品云咨询公司，以 Microsoft Azure 教育为主要
 *   电源，8
 *   预装虚拟机，186–187
 *   顶级支持计划，26
-
-
-
-
-
-## P
-
 *   准备环境，289–290
 *   Priority 属性，74
 *   私有云，12–13
@@ -8484,13 +8013,13 @@ CloudSkills 是一家精品云咨询公司，以 Microsoft Azure 教育为主要
 *   将代码更改推送到 Azure，151–152
 *   `PUT` 方法，28
 
-## Q
+### Q
 
 *   队列服务，61
 *   快速启动边栏选项卡，194
 *   “快速入门：使用适用于服务器的 Azure Arc 将计算机连接到 Azure - PowerShell”文章，293
 
-## R
+### R
 
 *   RA-GRS（读取访问异地冗余存储），50
 *   RateCard API，259
@@ -8548,7 +8077,7 @@ CloudSkills 是一家精品云咨询公司，以 Microsoft Azure 教育为主要
     *   数据库版本，186
 *   Russinovich, Mark (CTO)，35
 
-## S
+### S
 
 *   SaaS（软件即服务），14–15
 *   Salesforce，11
@@ -8603,23 +8132,10 @@ CloudSkills 是一家精品云咨询公司，以 Microsoft Azure 教育为主要
     *   部署虚拟服务器，191–192
     *   防火墙，195
     *   异地复制，196–197
-    *   实现，190–200
-*   适用于 MySQL 服务器的 SQL 数据库，189
-*   *SQL For Dummies*，第 8 版 (Taylor)，188
-*   SQL Server Management Studio（网站），199
-*   STaaS（存储即服务），16
-*   标准计划，25
-*   启动
-    *   Azure 订阅，20–26
-    *   虚拟机 (VM)，108–110
-*   停止虚拟机 (VM)，108–110
-*   存储
-    *   简介，8，93
-    *   用于存储的帐户，49–61
 
 
 
-
+# 索引
 
 ## S
 
@@ -8627,7 +8143,6 @@ CloudSkills 是一家精品云咨询公司，以 Microsoft Azure 教育为主要
 *   数据类型，47–48
 *   Azure 容器注册表中的映像，126–130
 *   保护 Blob 数据，212–217
-
 *   存储即服务 (STaaS)，16
 *   存储 Blob，批量备份，216–217
 *   存储服务标记，77
@@ -8781,10 +8296,6 @@ CloudSkills 是一家精品云咨询公司，以 Microsoft Azure 教育为主要
     *   自定义设置，158
     *   部署，144–157
 
-
-
-
-
 # 索引
 
 ## W
@@ -8858,7 +8369,6 @@ CloudSkills 是一家精品云咨询公司，以 Microsoft Azure 教育为主要
     *   Visual Studio 2019 Community Edition，100，144
     *   “What are Azure Reservations?” 文章，194
     *   “What is managed identities for Azure resources” 文章，297
-
 *   “What are Azure Reservations?” 文章，194
 *   “What is managed identities for Azure resources” 文章，297
 *   Windows Server AD，237
@@ -8933,9 +8443,6 @@ Tim 自 1997 年起一直是一名 IT 专业人员。他撰写了近 20 本技�
 ![YouTube](http://www.youtube.com/user/fordummies)
 
 在 [YouTube](http://www.youtube.com/user/fordummies) 上观看我们
-
-
-
 
 # WILEY 最终用户许可协议
 

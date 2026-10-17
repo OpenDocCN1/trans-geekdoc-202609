@@ -1,21 +1,5 @@
+
 # 构建安全 PHP 应用构建指南：你的 PHP 应用真的安全吗？让我们确保万无一失
-
-
-
-
-
-
-
-
-
-
-* * * *
-
-
-* * * * *
-
-
-
 
 ## 构造函数
 
@@ -55,7 +39,7 @@ $ ls -al
 
 除非另有说明，所有的示例都是 PHP。尽可能使用原生 PHP 代码，即使会产生更多的模板代码。如果某些内容用原生 PHP 很难简洁解释，我会使用 `Laravel` 框架，因为它的语法优雅且易于理解。
 
-某些代码示例为了解释而被拆分。要查看完整的代码示例，可以参考 Github 仓库（https://github.com/benedmunds/Building-Secure-PHP-Apps-Examples）。
+某些代码示例为了解释而被拆分。要查看完整的代码示例，可以参考 Github 仓库（`https://github.com/benedmunds/Building-Secure-PHP-Apps-Examples`）。
 
 让我们开始吧。
 
@@ -64,10 +48,6 @@ $ ls -al
 Ben Edmunds 领导开发团队创建尖端的 Web 和移动应用程序。他是各种开发社区中活跃的领导者、开发者和演讲者。他从事软件开发已超过 10 年，在此期间，他处理过从机器人到政府项目的各种任务。
 
 PHP Town Hall 播客共同主持人。波特兰 PHP 用户小组联合组织者。开源倡导者。
-
-
-
-
 
 让我们从一个故事开始。迈克是俄克荷马州一所私立学校的系统管理员。他的主要职责是维护网络和计算机运行。最近，他开始通过构建一个内部使用的 Web 应用程序来使学校各项任务自动化。他没有接受过任何正式培训，在大约年前才开始编程，但他对自己的工作非常满意。他了解 `PHP` 的基础知识，并为学校构建了一个相当稳定的客户关系管理系统。虽然还有很多功能需要添加，但基础部分已经涵盖了。迈克甚至因为简化运营和为学校节省费用而收到了校长的表扬。
 
@@ -91,15 +71,15 @@ PHP Town Hall 播客共同主持人。波特兰 PHP 用户小组联合组织者�
 
 如果你的代码看起来像这样：^(4)
 
-```
-1 mysql_query('UPDATE users
-2   SET first_name="' . $_POST['first_name'] . '"
-3   WHERE id=1001');
+```php
+mysql_query('UPDATE users
+  SET first_name="' . $_POST['first_name'] . '"
+  WHERE id=1001');
 ```
 
 你预期生成的 SQL 应该是：
 
-```
+```sql
 UPDATE users set first_name="Liz" WHERE id=1001;
 ```
 
@@ -111,7 +91,7 @@ Liz", last_name="Lemon"; --
 
 那么生成的 SQL 就会变成：
 
-```
+```sql
 UPDATE users
 SET first_name="Liz", last_name="Lemon"; --"
 WHERE id=1001;
@@ -123,16 +103,16 @@ WHERE id=1001;
 
 防止 SQL 注入的唯一要求是`对输入进行过滤`（sanitize input，也称为转义，escaping）。你可以对每个输入进行单独转义，或者使用一种被称为`参数绑定`（parameter binding）的更好方法。参数绑定绝对是我推荐的方法，因为它提供了更高的安全性。使用 `PHP` 的 `PDO` 类^(5)，你的代码现在变成了：
 
-```
-1 $db = new PDO(...);
-2 $query = $db->prepare('UPDATE users
-3   SET first_name = :first_name
-4   WHERE id = :id');
-5 
-6 $query->execute([
-7   ':id'         => 1001,
-8   ':first_name' => $_POST['first_name']
-9 ]);
+```php
+$db = new PDO(...);
+$query = $db->prepare('UPDATE users
+  SET first_name = :first_name
+  WHERE id = :id');
+
+$query->execute([
+  ':id'         => 1001,
+  ':first_name' => $_POST['first_name']
+]);
 ```
 
 使用绑定参数意味着每个值都会被转义、正确引用，并且只预期一个值。记住，绑定参数可以保护你的查询，但它们不能保护输入数据进入系统后的状态。请记住，绑定参数保护你的查询，但*任何* 数据都可能是恶意的。你需要在保存数据到数据库之前过滤掉它们，或者在输出它们时处理，我们将在后面的清理输出章节中详细介绍。你的代码现在变得长了一些，但它是安全的。你不需要担心这些。
@@ -141,16 +121,16 @@ WHERE id=1001;
 
 防止 SQL 注入的唯一要求是`对输入进行过滤`（sanitize input，也称为转义，escaping）。你可以对每个输入进行单独转义，或者使用一种被称为`参数绑定`（parameter binding）的更好方法。参数绑定绝对是我推荐的方法，因为它提供了更高的安全性。使用 `PHP` 的 `PDO` 类^(5)，你的代码现在变成了：
 
-```
-1 $db = new PDO(...);
-2 $query = $db->prepare('UPDATE users
-3   SET first_name = :first_name
-4   WHERE id = :id');
-5 
-6 $query->execute([
-7   ':id'         => 1001,
-8   ':first_name' => $_POST['first_name']
-9 ]);
+```php
+$db = new PDO(...);
+$query = $db->prepare('UPDATE users
+  SET first_name = :first_name
+  WHERE id = :id');
+
+$query->execute([
+  ':id'         => 1001,
+  ':first_name' => $_POST['first_name']
+]);
 ```
 
 使用绑定参数意味着每个值都会被转义、正确引用，并且只预期一个值。记住，绑定参数可以保护你的查询，但它们不能保护输入数据进入系统后的状态。请记住，任何* 数据都可能是恶意的。你需要在保存数据到数据库之前过滤掉它们，或者在输出它们时处理，我们将在后面的清理输出章节中详细介绍。你的代码现在变得长了一些，但它是安全的。你不需要担心这些。
@@ -169,17 +149,14 @@ WHERE id=1001;
 
 在 Laravel 中，你为模型添加 `$fillable` 属性来设置可以批量赋值的字段白名单：
 
-```
-1 class User extends Eloquent {
-2 
-3   protected $table = 'users';
-4 
-5   protected $fillable = ['first_name', 'last_name'\
-6 , 'email'];
+```php
+class User extends Eloquent {
+  protected $table = 'users';
+  protected $fillable = ['first_name', 'last_name', 'email'];
+}
 ```
 
-
-
+或者使用 `$guarded` 设置黑名单：
 
 ```php
 class User extends Eloquent {
@@ -256,7 +233,7 @@ $var = (string) $var;
 
 在输出到命令行时你也应该考虑安全，这些函数是 `escapeshellcmd()` 和 `escapeshellarg()`。
 
- 第二章 - HTTPS/SSL/BCA/SHA/Some of Them Actually Matter
+## 第二章 - HTTPS/SSL/BCA/SHA/Some of Them Actually Matter
 
 再次提到，这发生在 2010 年，让我们通过一个小故事来说明这一点。
 
@@ -271,10 +248,6 @@ $var = (string) $var;
 普通的网页流量通过 HTTP 传输，当你在浏览器中输入 `http://www.google.com` 时，你使用的是 HTTP，注意开头的 `http://`。普通的 HTTP 流量使用端口 `80`，HTTPS 反之使用端口 `443`。HTTP 一点也不安全，你所做的一切都是明文发送的，任何监听者都能看到你的。HTTPS 是“安全的 HTTP”或“在 SSL 上的 HTTP”，缩写语义可以争论，但它们的意思相同。
 
 我将仅在非常高水平上涵盖 HTTPS 如何工作，因为细节对大多数人来说并不重要。如果你感兴趣了解更多，请这样做，google.com 是一个很好的开始 ;)
-
-
-
-
 
 解释 SSL 如何工作的一个真实生活例子是外交邮袋^(11)。其内容是安全的，只有在传输两端拥有适当凭据的人才能打开它。该邮袋受到国际法和物理手段的保护，正如 SSL 加密消息体受到强算法和密钥的保护一样。
 
@@ -312,13 +285,15 @@ https://yourHost.com/yourApp/login
 
 Cheddar。一叠钱。死总统。现金。不，实际上我们谈论的是缓存。这是你超快速加载时间背后的秘诀。你必须用英国口音说出来。现代浏览器缓存 `HTTPS` 内容的方式与 `HTTP` 内容相同，所以这方面没有区别。要让旧浏览器支持缓存，请设置 `Cache-Control` 头部，例如
 
-```
+```php
 header('Cache-Control: max-age=31536000');
 ```
 
+
+
 这将告诉浏览器缓存一年。
 
-真正的问题在于代理缓存。代理缓存可能来自 `ISP` 或旨在加速连接的服务。这主要用于世界上互联网连接速度较慢的农村地区。使用 `HTTPS`，使用 `HTTPS`，例如，坐下来规划你网站的哪些部分应该被加密。
+真正的问题在于代理缓存。代理缓存可能来自 `ISP` 或旨在加速连接的服务。这主要用于世界上互联网连接速度较慢的农村地区。使用 `HTTPS`，例如，坐下来规划你网站的哪些部分应该被加密。
 
 ### 证书类型
 
@@ -359,9 +334,6 @@ yourApp.com
 
 为了让证书颁发机构签名并生成你的证书，你需要在服务器上生成密钥，并将这些密钥上传到证书颁发机构。
 
-
-
-
 这需要 `OpenSSL`，如果你的服务器上没有它，你就需要安装它。在各种服务器操作系统和发行版上安装应用程序不在本书的涵盖范围内，希望当你达到需要设置 HTTPS 的阶段时，你已经对自己的服务器了如指掌。如果你不熟悉自己的服务器操作系统或发行版，请人帮助你设置 SSL 证书可能是个好主意。
 
 首先创建一个目录来存储你的密钥，对于存储这些密钥的最佳位置意见很大，但对于我们的示例，我们将使用
@@ -379,8 +351,7 @@ $ openssl genrsa -out yourApp.key 1024
 然后使用 RSA 密钥生成 CSR
 
 ```
-$ openssl req -new -key yourApp.key -out yourApp.c\
-sr
+$ openssl req -new -key yourApp.key -out yourApp.csr
 ```
 
 现在你会被问到几个带有默认值的问题，主要需要注意的是“Common Name”（通用名称），它应该与你的域名匹配，例如“yourApp.com”。
@@ -392,7 +363,7 @@ sr
 /usr/bin/ssl/yourApp.csr
 ```
 
-在你做任何事情之前，请在某处为 .key 文件制作备份副本。认真的，做两个备份。如果你丢失了私钥，你就需要购买新证书，而服务器是会崩溃的。
+在你做任何事情之前，请在某处为 `.key` 文件制作备份副本。认真的，做两个备份。如果你丢失了私钥，你就需要购买新证书，而服务器是会崩溃的。
 
 ### 获取 SSL 证书
 
@@ -406,7 +377,7 @@ sr
 
 然后你需要按照你所选证书颁发机构的任何流程进行操作，通常你只需要上传服务器证书（`yourApp.csr`），他们就会通过电子邮件向你发送签名证书。
 
-你的证书颁发机构将为你提供签名证书，我们将其命名为 yourAppSigned.crt。将其复制到你的服务器，对于此示例，我将使用以下路径
+你的证书颁发机构将为你提供签名证书，我们将其命名为 `yourAppSigned.crt`。将其复制到你的服务器，对于此示例，我将使用以下路径
 
 ```
 /usr/bin/ssl/yourAppSigned.crt
@@ -467,8 +438,6 @@ $ nginx -s restart
 ```
 $ service nginx restart
 ```
-
-
 
 这个故事的教训是：不要存储密码。存储用户密码的单向哈希值。现在，让我们来看看如何正确地这样做。
 
@@ -549,8 +518,6 @@ hash(prefix1 + string1) === hash(prefix2 + string2)
 
 ### SHA-1
 
-
-
 啊，老旧的 `SHA-1`，多年来一直既可靠又安全。这在现实世界中也是很多年了，在互联网领域那可是几十年。在 2005 年（2005 年是安全领域糟糕的一年），来自山东大学的研究人员发表了一篇论文，证明少于`2⁶⁹` 次哈希操作即可可靠地生成 `SHA-1` 碰撞。大约`2⁸⁰` 次哈希操作的碰撞被认为在加密上是安全的。供参考，`2⁸⁰` 大约是 `1.20892x10²⁴`，所以“加密安全”意味着非常安全。从那时起摩尔定律确保了 `SHA-1` 变得更加不安全，在任何需要真正安全的应用程序中应避免使用。
 
 正如我上面解释 `MD5` 时所说，当配合随机盐使用时，`SHA1` 在算法上仍然是安全的。
@@ -595,9 +562,6 @@ hash(prefix1 + string1) === hash(prefix2 + string2)
 
 在验证时，我们需要对用户插入密码进行哈希，并与存储的哈希进行对比。在安全的哈希安全的时，我们通常使用 `PBKDF2` 或用 PHP 的 `crypt()` 函数实现的算法。
 
-
-
-
 ```php
 // generate the binary random salt
 $saltLength = 22;
@@ -619,6 +583,8 @@ $salt = substr(
 ```
 
 我们通过带有 `MCRYPT_DEV_URANDOM` 标志调用 `mcrypt_create_iv()`，以告诉它从 `/dev/urandom` 读取缓冲区。将其封装在 `bin2hex()` 中可以获取一个十六进制字符串，而不是原始的二进制数据。
+
+
 
 如果你的系统中没有 `MCrypt`，你可以始终回退到直接从 `/dev/urandom` 读取。除非你是在 Windows 上，如果是的话，趁为太晚之前安装 Linux 吧。去吧，我会等你的。你可以以后再感谢我；我接受支票、现金或信用卡作为谢礼。
 
@@ -724,7 +690,7 @@ if ($valid === TRUE) {
 
 PHP 5.5 引入了新的密码哈希函数，极大地简化了处理密码的过程。此目的是隐藏许多复杂性，并让用户可以使用 PHP 内置的默认函数来确保安全，而不需要依赖所有开发者都清楚自己在做什么。换句话说，他们正试图偷我的内容，混蛋们。
 
-不过说认真的，尽可能使用 PHP 函数。它们提供了内置的、最新的哈希处理，并带有额外的安全检查，这些是我们在这里甚至没有提到的，例如针对计时攻击（Timing Attacks）的防护。
+不过说认真的，尽可能使用 PHP 函数。它们提供了内置的、最新的哈希处理，并带有额外的安全检查，这些是我们在这里甚至没有提到的，例如针对计时攻击的防护。
 
 我们将在这里使用 PHP 5.5 语法通过完全相同的步骤。我们将使用 `password_hash` 函数来生成哈希后的密码，该函数会自动创建一个随机盐，因此我们可以完全跳过那一步。让我们直接进入：
 
@@ -776,20 +742,18 @@ if ($valid === TRUE) {
 
 防止这种攻击非常简单，遗憾的是我看到很多网站都容易受到这种攻击。那么，该如何保护自己呢？只需要让通过这种方式找到密码的时间长到不可行即可。
 
-
-
-
 接下来，你可以对此进行扩展。基于 IP 的封禁：针对所有用户，限制特定 IP 仅允许 X 次登录尝试，而不是仅仅针对每个单独的用户。请务必包含友好的错误信息和合理的访问恢复时间；企业用户通常共享同一个公网 IP 地址，因此如果可能的话，你不希望因为一个坏用户而惩罚成千上万有效的用户。
 
 另外注意，同样的逻辑也适用于 API 身份验证。不要给攻击者留下通过不同路径获取相同结果的机会。如果你在应用程序的前端保护了某些内容，然后通过 API 暴露了相同的功能，请确保在后端也同样进行了安全保护。
 
 ## 升级遗留系统
 
-现在来谈谈那个回避的问题（elephpant in the room）。听懂了吗？ElePHPant。是的，这是一个漫长的夜晚，抱歉。那么，该如何升级你现有的带有无盐值 `MD5` 密码的系统呢？
+现在来谈谈那个回避的问题。听懂了吗？ElePHPant。是的，这是一个漫长的夜晚，抱歉。那么，该如何升级你现有的带有无盐值 `MD5` 密码的系统呢？
 
 我将为你提供两个选项：
 
 - 路径 1 - 当每个用户登录时，我们将静默地将他们的哈希升级为使用 `BCrypt`。他们甚至察觉不到区别。很快，你就会拥有一个安全性良好的密码数据库。
+
 - 路径 2 - 使用 `BCrypt` 对数据库中现 `MD5` 哈希进行哈希。新密码将先用 `MD5` 哈希，然后再用 `BCrypt`。
 
 ### 升级路径 1
@@ -803,7 +767,7 @@ if ($valid === TRUE) {
 4 se
 5 $user = $db->user()-where([
  6   'email' => $_POST['email']
-7 ])->row();
+ 7 ])->row();
  8 
  9 if ($user->pass_hash_algo === 'bcrypt') {
 10//他们之前登录过并且
@@ -884,9 +848,6 @@ if ($valid === TRUE) {
 15 //其他检查、错误处理等...
 ```
 
-
-
-
 ```php
 class UserModel
 {
@@ -917,15 +878,15 @@ class UserModel
 }
 ```
 
-我们已经保存了用户的成功登录状态。这里的一个关键点是记录他们的用户 ID（ID）。仅仅因为他们登录了，并不意味着他们有权在你的应用程序中执行任何想做的操作。
+我们已经保存了用户的成功登录状态。这里的一个关键点是记录他们的用户 ID。仅仅因为他们登录了，并不意味着他们有权在你的应用程序中执行任何想做的操作。
 
 ### 访问控制
 
 除了确定用户是否已登录外，我们还需要确定他们是否有权访问其请求的页面/区块/功能。
 
-让我们从一个基础用例开始。假设你有两种类型的用户：“普通用户（Muggle）”和“管理员（Admin）”。普通用户是权限受限的普通用户。管理员是拥有所有操作权限的网站管理员。管理员可以编辑或删除用户、管理帖子等。确保普通用户（即普通用户）——无法执行这些操作是至关重要的。
+让我们从一个基础用例开始。假设你有两种类型的用户：“普通用户” 和“管理员”。普通用户是权限受限的普通用户。管理员是拥有所有操作权限的网站管理员。管理员可以编辑或删除用户、管理帖子等。确保普通用户（即普通用户）——无法执行这些操作是至关重要的。
 
-不同的框架对于何时以及何处检查适当访问权限有不同的约定。在 Laravel 中，首选使用过滤器（filters）。Symfony 使用了投票器（voters）。在大多数系统中，你可能只需要使用控制器的构造函数。以下是一个假设的示例；你的具体实现将会有所不同，并取决于你的决定。
+不同的框架对于何时以及何处检查适当访问权限有不同的约定。在 Laravel 中，首选使用过滤器。Symfony 使用了投票器。在大多数系统中，你可能只需要使用控制器的构造函数。以下是一个假设的示例；你的具体实现将会有所不同，并取决于你的决定。
 
 首先，我们要在 `UserModel` 中添加一个方法来查询当前用户。
 
@@ -984,6 +945,8 @@ class AdminController
 
 如果你重定向到的页面包含敏感数据，某些可以通过直接向该页面发送请求来绕过你预期的流程。处理此问题的几种方法：第一种是根本不进行重定向。大多数时候，当你认为需要重定向时，你可以直接调用下一个方法。例如：
 
+
+
 ```php
 if ($valid === TRUE && $dataSaved === TRUE) {
   URL::redirect('/blog/edit');
@@ -998,7 +961,7 @@ if ($valid === TRUE && $dataSaved === TRUE) {
 }
 ```
 
-在这个示例中，`_edit()` 方法将是一个保护或私方法，在不通过上一步的情况下无法从 URL 访问。如果你确实需要一个独立的端点（如果该目的地有多个入口点，则可能是这样），你需要验证正确的步骤已经执行。在会话变量中沿每个请求传递任何适当的数据（通常称为 flash 数据）通常是最安全的方法。
+在这个示例中，`_edit()` 方法将是一个保护或私有方法，在不通过上一步的情况下无法从 URL 访问。如果你确实需要一个独立的端点（如果该目的地有多个入口点，则可能是这样），你需要验证正确的步骤已经执行。在会话变量中沿每个请求传递任何适当的数据（通常称为 flash 数据）通常是最安全的方法。
 
 ```php
 if ($valid === TRUE && $dataSaved === TRUE) {
@@ -1017,9 +980,11 @@ public function edit($id)
     die('Not Authorized');
   }
 }
-```### 混淆
+```
 
-你听过“通过模糊性实现安全（security through obscurity）”这个术语吗？它很少真实，但在某些情况下是有帮助的。大多数应用程序使用每个表中的 `ID` 字段作为主键。该 ID 然后在整个系统中用于访问数据。
+### 混淆
+
+你听过“通过模糊性实现安全” 这个术语吗？它很少真实，但在某些情况下是有帮助的。大多数应用程序使用每个表中的 `ID` 字段作为主键。该 ID 然后在整个系统中用于访问数据。
 
 但是，有时你不想向用户暴露真实的 ID。可能你正在发布一个新产品，但不希望用户知道他们是第 13 个用户。可能你拥有公开数据，但不希望你的网站被爬虫轻易抓取。
 
@@ -1054,13 +1019,9 @@ $hash = HashId::encrypt(432134);
 echo $hash; // 输出 BaPjae
 ```
 
-自己编写这些哈希方法其实相当简单，但我建议使用经过测试的的 [HashIDs](http://www.hashids.org/php/) 库。这些库不仅易于使用，而且在许多编程语言中都有良好的维护，以确保整个基础设施的互操作性。
+自己编写这些哈希方法其实相当简单，但我建议使用经过测试的 [HashIDs](http://www.hashids.org/php/) 库。这些库不仅易于使用，而且在许多编程语言中都有良好的维护，以确保整个基础设施的互操作性。
 
 在某些情况下，可以认为混淆是必要的，甚至在你的特定用例中可能是强制要求的。例如，我见过人们将模糊性作为 HIPAA 数据的额外保护。一个用例是要求将 HIPAA 敏感数据存储在单独的数据库中；在这种情况下这是一个三层服务器架构。Web 应用程序使用的主键存储在一个数据库中（带有非敏感数据），敏感数据存储在另一个中，而中间数据库存储关系。这种设计是为了确保即使任何一个数据库被破解，获得的数据也是匿名或非敏感的。
-
-
-
-
 
 我要再次强调这一点，因为它极其重要：在大多数情况下，模糊性并不能保护你免受任何合法的攻击。你不应该依赖它来确保安全。它仅仅让事情变得稍微难找一点手段。
 
@@ -1068,7 +1029,7 @@ echo $hash; // 输出 BaPjae
 
 回到我们最初的故事：如果你有提供给用户查看或下载的文档，你不能简单地对 `*.pdf` 文件设置访问控制。为什么呢？我知道你们会问这个问题。我是这里的叙述者，这倒很有帮助。
 
-你需要做是将文件存储在服务器上，使其无法从你的 Web 服务器访问。这里有一个推荐的目录结构示例：
+你需要做的是将文件存储在服务器上，使其无法从你的 Web 服务器访问。这里有一个推荐的目录结构示例：
 
 ```
 application/
@@ -1201,7 +1162,6 @@ workers/
 9
 10 echo "we shouldn't be here, and we aren't";
 ```
-```
 
 显式检查的另一个不为人知的优势是性能。大多数情况下，显式检查会更快，因为它不需要类型转换。如果你对 PHP 的性能差异感兴趣，我建议查看 [http://www.phpbench.com/]。
 
@@ -1225,10 +1185,6 @@ workers/
 
 我刚刚提到了两个 XSS 攻击入口点的示例，但这些并不是唯一的。基本上，任何从用户那里获取输入并将其显示在 Web 页面上的地方都是攻击者利用你网站的机会。
 
-
-
-
-
 务必考虑数据进入系统的 `all` 地方，而不仅仅是输入字段。例如，你可能允许用户上传图片，然后重新显示图像 XIFF 数据。也许你可能会解析从外部程序导出的各种数据的 CSV 文件。在任何你重新显示信息的地方，都需要进行保护。
 
 ## 如何保护自己
@@ -1240,17 +1196,25 @@ workers/
 让我们看看实现后的样子。你的视图文件以前看起来是这样：
 
 ```
+
 1 <h1>Title</h1>
+
 2 
+
 3 Hello <?=$name?>,
+
 ```
 
 现在应用保护后，它看起来是这样：
 
 ```
+
 1 <h1>Title</h1>
+
 2 
+
 3 Hello <?=htmlentities($name)?>
+
 ```
 
 如果你想保持 DRY^(22)，你可能会将此抽象为视图辅助函数库。大多数框架已经将其包含在它们的视图或模板库中。
@@ -1272,22 +1236,39 @@ workers/
 首先，我们将创建一个生成令牌的函数。这通常会被放置在可以全局调用的地方，也许作为路由过滤器、投票者或辅助函数库。
 
 ```
+
  1 //假设表单类的其他部分在这里
+
  2 
+
  3 static function generateCsrf()
+
  4 {
+
  5   $token = mcrypt_create_iv(
+
  6     16,
+
  7     MCRYPT_DEV_URANDOM
+
  8   );
+
  9 
+
 10   Session::flash(
+
  11     'csrfToken',
+
  12     $token
+
  13   );
+
  14 
+
 15   return $token;
+
 16 }
+
 ```
 
 注意，我们在这里使用了 session flash 数据。Flash 数据将存储在会话中，但在被销毁之前只能在一次请求中。大多数会话包装类都支持这个概念。这使得我们的令牌不会在多个请求中有效。
@@ -1295,72 +1276,96 @@ workers/
 接下来，我们将在路由闭包中调用它，并将令牌传递给生成表单的视图：
 
 ```
+
 1 Route::get('/signup', function()
+
 2 {
+
 3   $data['token'] = Form::generateCsrf();
+
 4 
+
 5   return View::render('signup.form', $data);
+
 6 });
+
 ```
 
 现在是我们的视图，`signup/form.php`
 
 ```
+
  1 <form method="POST" action="/signup">
+
  2 
+
  3   <label>
+
  4 	First Name:
+
  5 	<input type="text" name="first_name" />
+
  6   </label>
+
  7 
+
  8   <label>
+
  9 	Last Name:
+
 10 	<input type="text" name="last_name" />
+
 11   </label>
+
  12 
-13   <label>
+
+ 13   <label>
+
  14 	Email:
- 15 	<input type="text" name="email" />
- 16   </label>
- 17 
-18   <input type="hidden" name="token" value="<?=$tok\
-19 en?>" />
-20 
-21   <input type="submit" name="submit" value="Signup" />
-23 </form>
 ```
 
-当表单被 POST 时，我们可以对比会话中的令牌来验证请求
 
+
+## CSRF 令牌验证
+
+```html
+<input type="text" name="email" />
+</label>
+
+<input type="hidden" name="token" value="<?=$token?>" />
+
+<input type="submit" name="submit" value="Signup" />
+</form>
 ```
-1 Route::post('/signup', function()
-2 {
-3 // 假设我们可以处理了
-4   if ($_POST['token'] === Session::get('csrfToken')) {
-5     // 处理逻辑
-6   } else {
-7     die('Invalid Form Data');
-8   }
-9 });
+
+当表单被 POST 时，我们可以对比会话中的令牌来验证请求：
+
+```php
+Route::post('/signup', function() {
+  // 假设我们可以处理了
+  if ($_POST['token'] === Session::get('csrfToken')) {
+    // 处理逻辑
+  } else {
+    die('Invalid Form Data');
+  }
+});
 ```
 
 现在由于有了这种令牌检查，如果攻击者欺骗用户提交虚假表单，请求将失败，因为会话中没有匹配的 CSRF 令牌。
 
 在应用程序中，另一个常见问题是表单重复提交。用户提交表单以执行某些操作——例如从一个钱包转账 200 比特。用户点击提交，但他们没有立即注意到变化，于是再次点击。现在用户在无意中转账了 400 比特。幸运的是，我们讨论的 CSRF 令牌逻辑可以解决这个问题，无需额外工作。要在大多数情况下防止这种情况，我们只需要传递一个唯一的令牌，验证它，并在处理后将其清除。
 
-
-
-
+## 外部程序安全
 
 需要注意的另一点是你在服务器上使用的外部程序。例如，`PhpMyAdmin` 在其生命周期内出现过多个安全漏洞，导致服务器容易受到攻击。过时的 `Wordpress` 安装版本在开发领域也为人所知，是黑客的后门。任何在你的服务器上暴露关键函数的程序都是可能的攻击入口点。
 
 尽量将你的外部依赖减少到最低，并始终将它们更新到最新的安全发布版本。
 
-## 析构函数 (Destructor)
+## 析构函数
 
 在编写这本书的过程中，我玩得很开心。我也喝了很多朗姆酒。真心希望你学到了东西并享受了阅读过程，我们需要达到那种“知识与朗姆酒的比例”。
 
-如果你想了解更多这里涵盖的任何主题，或者只是想就生命的意义进行争论，请与我联系^(23)。
+如果你想了解更多这里涵盖的任何主题，或者只是想就生命的意义进行争论，请与我联系[^23]。
 
 感谢阅读。
 
@@ -1376,29 +1381,30 @@ PHP Town Hall 播客共同主持人。Portland PHP 用户组共同组织者。�
 
 需要帮助应用书中讨论的内容吗？或者你希望有人为你进行审查以验证你的 Web 应用是否安全？
 
-我每年提供有限次数的安全审计和咨询服务。如果你感兴趣，请与我联系，可以通过电子邮件 consulting@benedmunds.com 联系我。
+我每年提供有限次数的安全审计和咨询服务。如果你感兴趣，请与我联系，可以通过电子邮件 `consulting@benedmunds.com` 联系我。
 
-1. feedback@buildsecurephpapps.com↩
-2. http://xkcd.com/327/↩
-3. 对于这些精确的细节，大部分尚未公开，因此我们无法确定这些是否是由 SQL 注入攻击造成的。但很大可能是这样。↩
-4. `mysql_*` 扩展及其方法已正式弃用。请不要使用它们。↩
-5. http://us1.php.net/manual/en/intro.pdo.php↩
-6. http://stackoverflow.com/questions/7394711/what-is-dynamic-typing↩
-7. http://us1.php.net/htmlentities↩
-8. http://us1.php.net/htmlspecialchars↩
-9. http://us1.php.net/escapeshellcmd↩
-10. http://us1.php.net/escapeshellarg↩
-11. http://en.wikipedia.org/wiki/Diplomatic_bag↩
-12. 这是基于事实的虚构故事。请不要起诉我，漫威。↩
-13. http://eprint.iacr.org/2005/165.pdf↩
-14. http://cryptography.hyperlink.cz/md5/MD5_collisions.pdf↩
-15. http://link.springer.com/chapter/10.1007/11535218_2#page-1↩
-16. http://en.wikipedia.org/wiki/Moore’s_law↩
-17. http://xkcd.com/936/↩
-18. http://www.php.net/manual/en/book.password.php↩
-19. http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.65.9811↩
-20. https://www.schneier.com/book-applied.html↩
-21. http://blog.ircmaxell.com/↩
-22. http://en.wikipedia.org/wiki/Don’t_repeat_yourself↩
-23. feedback@buildsecurephpapps.com↩
+## 参考文献
 
+[^1]: feedback@buildsecurephpapps.com
+[^2]: http://xkcd.com/327/
+[^3]: 对于这些精确的细节，大部分尚未公开，因此我们无法确定这些是否是由 SQL 注入攻击造成的。但很大可能是这样。
+[^4]: `mysql_*` 扩展及其方法已正式弃用。请不要使用它们。
+[^5]: http://us1.php.net/manual/en/intro.pdo.php
+[^6]: http://stackoverflow.com/questions/7394711/what-is-dynamic-typing
+[^7]: http://us1.php.net/htmlentities
+[^8]: http://us1.php.net/htmlspecialchars
+[^9]: http://us1.php.net/escapeshellcmd
+[^10]: http://us1.php.net/escapeshellarg
+[^11]: http://en.wikipedia.org/wiki/Diplomatic_bag
+[^12]: 这是基于事实的虚构故事。请不要起诉我，漫威。
+[^13]: http://eprint.iacr.org/2005/165.pdf
+[^14]: http://cryptography.hyperlink.cz/md5/MD5_collisions.pdf
+[^15]: http://link.springer.com/chapter/10.1007/11535218_2#page-1
+[^16]: http://en.wikipedia.org/wiki/Moore’s_law
+[^17]: http://xkcd.com/936/
+[^18]: http://www.php.net/manual/en/book.password.php
+[^19]: http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.65.9811
+[^20]: https://www.schneier.com/book-applied.html
+[^21]: http://blog.ircmaxell.com/
+[^22]: http://en.wikipedia.org/wiki/Don’t_repeat_yourself
+[^23]: feedback@buildsecurephpapps.com

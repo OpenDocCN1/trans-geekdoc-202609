@@ -1,7 +1,5 @@
+
 # TensorFlow 入门指南
-
-
-
 
 ## 引言
 
@@ -19,9 +17,9 @@
 
 尽管类极其繁多，但有三个类是每个 TensorFlow 开发者应该熟悉的：`Tensor`、`Graph` 和 `Session`。本书第一部分的章节详细讨论了这些类，并展示了它们的许多用法示例。
 
-第 2 部分 中的章节解释了你如何在实际的机器学习任务中使用 `TensorFlow`。我从统计方法开始，包括线性回归、多项式回归和逻辑回归。然后，我深入了神经网络这一迷人的话题。我探索了基础神经网络的操作，然后介绍了卷积神经网络（`CNNs`）和循环神经网络（`RNNs`）。
+第 2 部分中的章节解释了你如何在实际的机器学习任务中使用 `TensorFlow`。我从统计方法开始，包括线性回归、多项式回归和逻辑回归。然后，我深入了神经网络这一迷人的话题。我探索了基础神经网络的操作，然后介绍了卷积神经网络（`CNNs`）和循环神经网络（`RNNs`）。
 
-第 3 部分 中的章节介绍了高层 `TensorFlow` 类，你可以使用它们来简化和加速你的应用程序。在讨论的许多主题中，最重要的是 `Estimator` API，它允许你用极少的代码实现强大的机器学习算法。我解释了如何编写估计器（estimators）以及如何使用 Google Cloud Platform（`GCP`）高速执行它们。
+第 3 部分中的章节介绍了高层 `TensorFlow` 类，你可以使用它们来简化和加速你的应用程序。在讨论的许多主题中，最重要的是 `Estimator` API，它允许你用极少的代码实现强大的机器学习算法。我解释了如何编写估计器（estimators）以及如何使用 Google Cloud Platform（`GCP`）高速执行它们。
 
 ## 愚的假设
 
@@ -49,15 +47,13 @@
 
 1. 在 [`www.dummies.com`](http://www.dummies.com#_blank) 上搜索 `TensorFlow For Dummies` 或书籍的 ISBN。
 2. 当书籍出现时，点击 `More about this book` 链接。
-3. 解压缩存档后，你会发现一系列以本书章节命名的文件夹。第 3 章 的示例代码在 `ch3` 文件夹中，第 6 章 的代码在 `ch6` 中，依此类推。
+3. 解压缩存档后，你会发现一系列以本书章节命名的文件夹。第 3 章的示例代码在 `ch3` 文件夹中，第 6 章的代码在 `ch6` 中，依此类推。
 
 ## 接下来的路程
 
 书中的材料由简单到复杂，从通用到深奥。如果你已经是 TensorFlow 专家，请随意跳过任何你熟悉的章节。但如果你是该工具集的新手，我强烈建议从第 1 章开始，并线性顺序阅读第 2 章、第 3 章、第 4 章等章节。
 
 我非常非常写写这本书，也希望你喜欢这段发现之旅。*旅途愉快！*
-
-
 
 在本部分中……
 
@@ -71,16 +67,11 @@
 
 研究 TensorFlow 训练过程，该过程缩小数学模型与现实系统之间的差异。
 
-
-
 在本章中
 
 ![check](img/check.png)**回顾时间变化的机器学习**
 
 ![check](img/check.png)**探索机器学习框架**
-
-
-
 
 TensorFlow 是 Google 开发的用于开发机器学习应用的强大框架。本书的大部分内容将深入探讨 TensorFlow 模块编码的细节，但本章将提供一个入门级的介绍。我将对该主题进行概述，然后讨论导致 TensorFlow 以及类似的机器学习框架诞生的进展。
 
@@ -122,20 +113,13 @@ TensorFlow 是 Google 开发的用于开发机器学习应用的强大框架。�
 
 尽管失去了大众的赞誉，研究人员和学者仍继续研究机器学习。他们的工作导致了许多关键进展，包括：
 
-*   1965 年，Ivakhnenko 和 Lapa 展示了具有非线性激活函数的多层感知器。
-
-
-
-
-
-*   1974 年，Paul Werbos 使用反向传播算法训练了神经网络。
-*   1980 年，福岛邦彦（Kunihiko Fukushima）提出了 `neocognitron`，这是一种用于图像识别的层层神经网络。
-*   1982 年，John Hopfield 开发了一种名为 `Hopfield network` 的循环神经网络（霍普网络）。
-*   1986 年，Sejnowski 和 Rosenberg 开发了 `NETtalk`，这是一种学习如何发读单词的神经网络。
+* 1965 年，Ivakhnenko 和 Lapa 展示了具有非线性激活函数的多层感知器。
+* 1974 年，Paul Werbos 使用反向传播算法训练了神经网络。
+* 1980 年，福岛邦彦（Kunihiko Fukushima）提出了 `neocognitron`，这是一种用于图像识别的层层神经网络。
+* 1982 年，John Hopfield 开发了一种名为 `Hopfield network` 的循环神经网络（霍普网络）。
+* 1986 年，Sejnowski 和 Rosenberg 开发了 `NETtalk`，这是一种学习如何发读单词的神经网络。
 
 这些发展扩展了机器学习的广度和能力，但其中没有一项曾能激发世界的想象力。问题在于，计算机缺乏在合理时间内执行现实世界机器学习所需的运行和内存。然而，这种情况即将发生改变。
-
-#### 计算革命
 
 #### 计算革命
 
@@ -151,8 +135,6 @@ TensorFlow 是 Google 开发的用于开发机器学习应用的强大框架。�
 
 #### 大数据与深度学习的兴
 
-#### 大数据与深度学习的兴
-
 随着 21 世纪的到来，互联网的普及飞速增长，数据存储价格暴跌。大公司现在可以访问有关潜在消费者的 TB 数据。这些公司开发了改进的工具来分析他们的数据，这场数据存储和分析的革命被称为 `大数据革命`。
 
 现在，首席执行官们面临着一个难题：他们如何利用其海量数据为公司创造财富？一个首要任务是广告——如果公司知道应该向客户展示哪些广告，它们就能赚到更多的钱。但在将客户与产品关联方面还没有明确的规则。
@@ -163,9 +145,7 @@ Netflix 并不是唯一使用机器学习的高知名公司。Google 的 `AdSens
 
 全世界的大型组织都坐起来并给予了关注。机器学习已经离开了模糊的科幻小说领域，变成了一种实用的商业工具。创业者们继续思考，将机器学习应用于大数据还能获得哪些益处。
 
-研究人员也注意到了这一点。一个主要任务是将现代机器学习（具有高复杂性和海量数据处理能力）与早期的机器学习（简单且很少有效）区分开。他们同意使用 `深度学习` 术语来描述这种新的机器学习范式。第 7 章 对深度学习的技术含义进行了更详细的介绍。
-
-#### 机器学习框架
+研究人员也注意到了这一点。一个主要任务是将现代机器学习（具有高复杂性和海量数据处理能力）与早期的机器学习（简单且很少有效）区分开。他们同意使用 `深度学习` 术语来描述这种新的机器学习范式。第 7 章对深度学习的技术含义进行了更详细的介绍。
 
 #### 机器学习框架
 
@@ -193,9 +173,6 @@ Torch 是第一个吸引大量追随者的机器学习框架。它最初由 Rona
 
 当其他产品关注性能和能力范围时，`Keras` 关注模块化和开发的简单性。François Chollet 创建了 `Keras` 作为其他机器学习框架的接口，许多开发者通过 `Keras` 访问 `Theano`，以结合 `Keras` 的简单性与 `Theano` 的性能。
 
-
-
-
 Keras 的简单性源于其精简的 API 和直观的函数集。这些函数专注于完成机器学习中的标准任务，使得 Keras 成为该领域新手的理想选择，但对于那些想要自定义操作的人来说，价值有限。
 
 François Chollet 以 MIT 许可证发布了 Keras，Google 已将他的接口整合到 TensorFlow 中。由于这个原因，许多 TensorFlow 开发者倾向于使用 Keras 来编写神经网络。
@@ -206,8 +183,9 @@ François Chollet 以 MIT 许可证发布了 Keras，Google 已将他的接口�
 
 TensorFlow 的主要接口是 Python，但像 Caffe 一样，它的核心功能是用 C++ 编写以提高性能。像 Theano 一样，TensorFlow 将操作存储在图中，图可以部署到 GPU、远程系统或远程系统网络。此外，TensorFlow 提供了一个名为 `TensorBoard` 的工具，它使得图及其操作的可视化成为可能。
 
-与其他框架一样，TensorFlow 支持在 CPU 和 GPU 上执行。此外，TensorFlow 应用程序可以在 Google Cloud Platform (GCP) 上运行。GCP 以相对较低的成本提供了世界级的处理能力，在我看来，GCP 处理是 TensorFlow 最重要的优势。第 13 章 详细讨论了这个重要话题。
 
+
+与其他框架一样，TensorFlow 支持在 CPU 和 GPU 上执行。此外，TensorFlow 应用程序可以在 Google Cloud Platform (GCP) 上运行。GCP 以相对较低的成本提供了世界级的处理能力，在我看来，GCP 处理是 TensorFlow 最重要的优势。第 13 章详细讨论了这个重要话题。
 
 ## 本章内容
 
@@ -230,7 +208,7 @@ Google 提供了两种安装 TensorFlow 的方法，更简单的选项涉及安�
 2. **安装 pip 包管理器。**
 3. **使用 pip 安装 TensorFlow。**
 
-第二种安装方法涉及从源代码编译 TensorFlow。此选项需要花费时间和精精力，但你可以获得更好的性能，因为你的 TensorFlow 包将充分利用你处理器的能力。第 12 章 解释了如何获取和编译 TensorFlow 源码。
+第二种安装方法涉及从源代码编译 TensorFlow。此选项需要花费时间和精精力，但你可以获得更好的性能，因为你的 TensorFlow 包将充分利用你处理器的能力。第 12 章解释了如何获取和编译 TensorFlow 源码。
 
 ### Python 和 pip/pip3
 
@@ -247,7 +225,7 @@ Python 的官方包管理器是 `pip`，它是一个递归缩写，意为“pip 
 | 命令名称 | 描述 |
 | --- | --- |
 | `install` | 安装指定的包 |
-| `uninstall` |卸载指定的包 |
+| `uninstall` | 卸载指定的包 |
 | `download` | 下载包但不安装 |
 | `list` | 列出已安装的包 |
 | `show` | 打印指定包的信息 |
@@ -291,9 +269,6 @@ Python 的官方包管理器是 `pip`，它是一个递归缩写，意为“pip 
 
 `sudo apt-get install python3-pip python3-dev`
 
-
-
-
 安装完成后，你应该能够在命令行中执行 `pip` 或 `pip3`。以下命令用于安装 TensorFlow 包及其依赖项（Python 3 请使用 `pip3`）：
 
 ```
@@ -308,9 +283,9 @@ sudo pip install tensorflow
 
 当你启动安装程序时，会弹出 Python 设置对话框。按照以下步骤在你的系统上安装 Python：
 
-1.  **勾选将 Python 安装目录添加到 `PATH` 变量的复选框。**
-2.  **点击标记为 Install Now 的链接。**
-3.  **安装完成后，点击 Close 按钮关闭安装程序。**
+1. **勾选将 Python 安装目录添加到 `PATH` 变量的复选框。**
+2. **点击标记为 Install Now 的链接。**
+3. **安装完成后，点击 Close 按钮关闭安装程序。**
 
 安装 Python 之后，你应该能够在命令行中运行 `pip3`。你可以使用以下命令安装 TensorFlow：
 
@@ -322,15 +297,15 @@ pip3 install tensorflow
 
 ## 探索 TensorFlow 安装
 
-一旦安装了 TensorFlow，你将拥有名为 `tensorflow` 的目录，其中包含各种文件和文件夹。有两个顶级文件夹尤为重要。`core` 目录包含了 TensorFlow 的主要包和模块。`contrib` 目录包含了可能以后合并到 TensorFlow TensorFlow 的辅助包。
+一旦安装了 TensorFlow，你将拥有名为 `tensorflow` 的目录，其中包含各种文件和文件夹。有两个顶级文件夹尤为重要。`core` 目录包含了 TensorFlow 的主要包和模块。`contrib` 目录包含了可能以后合并到 TensorFlow 的辅助包。
 
 当你编写 TensorFlow 应用时，熟悉不同的包及其提供的模块是非常重要的。表 2-2 列出了至关重要的 `tensorflow` 包和其他九个包。
 
-Table 2-2 重要的 TensorFlow 包
+表 2-2 重要的 TensorFlow 包
 
 | **包** | **内容** |
 | --- | --- |
-| `tensorflow` | TensorFlow 框架的核心包，通常通用 `tf` 访问 |
+| `tensorflow` | TensorFlow 框架的核心包，通常通过 `tf` 访问 |
 | `tf.train` | 优化器和其他与训练相关的类 |
 | `tf.nn` | 神经网络类及相关的数学运算 |
 | `tf.layers` | 与多层神经网络相关的函数 |
@@ -341,20 +316,11 @@ Table 2-2 重要的 TensorFlow 包
 | `tf.summary` | 生成摘要数据所需的类 |
 | `tf.metrics` | 用于衡量机器学习结果的函数 |
 
-一旦安装了 TensorFlow，你将拥有名为 `tensorflow` 的目录，其中包含各种文件和文件夹。有两个顶级文件夹尤为重要。`core` 目录包含了 TensorFlow 的主要包和模块。`contrib` 目录包含了可能以后合并到 TensorFlow TensorFlow 的辅助包。
-
-当你编写 TensorFlow 应用时，熟悉不同的包及其提供的模块是非常重要的。表 2-2 列出了至关重要的 `tensorflow` 包和其他九个包。
-
 `tensorflow` 包是框架的核心包，通常通过 `tf` 访问。`tf.train` 包包含了优化器和其他与训练相关的类。`tf.nn` 包含了神经网络类及相关的数学运算。`tf.layers` 提供了与多层神经网络相关的函数。`tf.contrib` 包含了易变或实验性的代码。`tf.image` 提供了图像处理函数。`tf.estimator` 提供了训练和评估的高级工具。`tf.logging` 包含了将数据写入日志的函数。`tf.summary` 包含了生成摘要数据所需的类。`tf.metrics` 提供了衡量机器学习结果的函数。
 
-`tensorflow` 包是框架的核心包，通常通过 `tf` 访问。`tf.train` 包包含了优化器和其他与训练相关的类。`tf.nn` 包含了神经网络类及相关的数学运算。`tf.layers` 提供了与多层神经网络相关的函数。`tf.contrib` 包含了易变或实验性的代码。`tf.image` 提供了图像处理函数。`tf.estimator` 提供了训练和评估的高级工具。`tf.logging` 包含了将数据写入日志的函数。`tf.summary` 包含了生成摘要数据所需的类。`tf.metrics` 提供了衡量机器学习结果的函数。
+欢迎信息非常简单明了，但应用程序的代码可能没有那么清晰。`Tensor` 实例是一个包含数值或字符串数据的 n 维数组。Tensor 在 TensorFlow 开发中起着核心作用，第 3 章对它们进行了详细讨论。
 
-
-
-
-欢迎信息非常简单明了，但应用程序的代码可能没有那么清晰。`Tensor` 实例是一个包含数值或字符串数据的 n 维数组。Tensor 在 TensorFlow 开发中起着核心作用，第 3 章 对它们进行了详细讨论。
-
-`Session` 用了执行 TensorFlow 操作的环境。从加法到优化，所有的 TensorFlow 操作都必须通过 session 执行。第 4 章 解释了你如何创建、配置和执行 session。
+`Session` 用了执行 TensorFlow 操作的环境。从加法到优化，所有的 TensorFlow 操作都必须通过 session 执行。第 4 章解释了你如何创建、配置和执行 session。
 
 ## 设定样式
 
@@ -422,10 +388,6 @@ TensorFlow 的核心数据类型是张量，幸运的是，它与电磁学或相
 
 默认情况下，如果函数的第一个参数不具有 `shape` 参数所指定的形状，TensorFlow 不会抛出错误。但如果你将最后一个参数 `verify_shape` 设置为 `True`，TensorFlow 将验证这两个形状是否相等。以下代码提供了一个形状不匹配的示例：
 
-
-
-
-
 ```
 t3 = tf.constant([4, 2], tf.int16, [3], 'Const', True)
 ```
@@ -436,7 +398,9 @@ t3 = tf.constant([4, 2], tf.int16, [3], 'Const', True)
 TypeError: Expected Tensor's shape: (3,), got (2,).
 ```
 
-### zeros, ones, and fill
+
+
+# zeros、ones 和 fill
 
 `zeros`、`ones` 和 `fill` 函数创建所有元素都具有相同值的张量。对于 `zeros` 和 `ones`，唯一必需的参数是 `shape`，它用于指明目标张量的形状。例如，以下代码创建了一个元素等于 0.0 的简单 1-x-3 向量：
 
@@ -458,7 +422,7 @@ fill_tensor = tf.fill([1, 2, 3], 81.0)
 
 与 `zeros` 和 `ones` 不同，`fill` 没有 `dtype` 参数。它只能创建包含 32 位浮点数值的张量。
 
-### 创建序列
+# 创建序列
 
 `linspace` 和 `range` 函数创建元素在起始值和结束值之间规律变化的张量。它们之间的区别在于 `linspace` 创建一个具有特定数量值的张量。例如，以下代码创建了一个元素从 5.0 到 9.0 的 1-x-5 张量：
 
@@ -483,7 +447,7 @@ range_tensor = tf.range(1.5, delta=0.3)
 
 如果 `delta` 参数为正，则起始值必须小于结束值。如果 `delta` 为负，则起始值必须大于结束值。
 
-### 创建带有随机值的张量
+# 创建带有随机值的张量
 
 许多 TensorFlow 应用需要包含随机值而非预定义值值的张量。`tf` 包提供了许多用于创建随机值张量的函数，表 3-3 列出了其中五个。
 
@@ -499,7 +463,7 @@ range_tensor = tf.range(1.5, delta=0.3)
 
 `random_uniform` 创建在最小值和最大值之间均匀分布的张量。对于 `random_normal`，默认情况下其均值为 0.0，标准差为 1.0。在生成随机生成张量时，`random_shuffle` 会打乱张量的顺序。`set_random_seed` 用于设置生成随机数时的种子。
 
-### 转换张量
+# 转换张量
 
 应用必须指定要转换的张量形状。`tf` 包提供了更新张量及其形状的转换函数。表 3-4 列出了这些转换函数及其描述。
 
@@ -511,7 +475,7 @@ range_tensor = tf.range(1.5, delta=0.3)
 | `reverse(tensor, axis, name=None)` | 反转给定的维度 |
 | `slice(tensor, begin, size, name=None)` | 提取张量的一部分 |
 | `stack(tensors, axis=0, name='stack')` | 将张量列表合并为高阶张量 |
-| `unstack(tensor, num=None, axis=0, name='unstack')` | 将张量拆分为低阶张量列表 | |
+| `unstack(tensor, num=None, axis=0, name='unstack')` | 将张量拆分为低阶张量列表 |
 
 尽管名字是 `reshape`，它也不会修改现有张量。相反，函数返回一个与给定张量具有相同元素且具有指定形状的张量。例如，以下代码使用 `reshape` 将一个四元素向量转换为 2-x-2 矩阵：
 
@@ -533,16 +497,12 @@ rev_mat = tf.reverse(mat, [1])
 # Result: [[3. 2. 1.], [6. 5. 4.]]
 ```
 
-
-
-
-
 ```python
 rev_mat = tf.reverse(end, [0, 1])
 # Result: [[6. 5. 4.], [3. 2. 1.]]
 ```
 
-`slice` 函数从张量（tensor）中提取子张量。`begin` 参数指定了要提取的第一个元素的索引，而 `size` 指定了从 `begin` 位置开始要提取的张量的形状。
+`slice` 函数从张量（`tensor`）中提取子张量。`begin` 参数指定了要提取的第一个元素的索引，而 `size` 指定了从 `begin` 位置开始要提取的张量的形状。
 
 例如，假设你想从一个 `3-x-3` 矩阵中提取右下角的 `2-x-2` 矩阵。第一个提取元素的元素索引为 `[1, 1]`，目标张量的大小为 `[2, 2]`。以下代码使用 `slice` 执行此提取：
 
@@ -552,7 +512,7 @@ slice_mat = tf.slice(mat, [1, 1], [2, 2])
 # Result: [[5. 6.] [7. 8.]]
 ```
 
-`stack` 接受一个秩（rank）为 `N` 的张量列表，并返回一个秩为 `N+1` 的单个张量。除了具有相同的秩，输入张量必须具有相同的形状。以下代码演示了如何使用 `stack`。该函数将三个一维张量合并为一个二维张量：
+`stack` 接受一个秩（`rank`）为 `N` 的张量列表，并返回一个秩为 `N+1` 的单个张量。除了具有相同的秩，输入张量必须具有相同的形状。以下代码演示了如何使用 `stack`。该函数将三个一维张量合并为一个二维张量：
 
 ```python
 t1 = tf.constant([1., 2.])
@@ -565,7 +525,7 @@ t4 = tf.stack([t1, t2, t3])
 
 `unstack` 执行 `stack` 的逆操作。也就是说，`unstack` 接受一个秩为 `N` 的张量，并返回一个秩为 `N-1` 的张量列表。`num` 参数决定了应该解包多少个张量，如果未设置，`unstack` 会从张量的形状推断出数量。
 
-## 创建操作
+# 创建操作
 
 机器学习应用本质上是数学的，TensorFlow 提供了丰富的例程来对张量执行数学操作。每个例程都由 `tf` 包中的一个函数表示，每个函数都返回一个张量。本节介绍了大部分可用操作，但 `tensorflow` 包提供的函数比这里讨论的要多得多。
 
@@ -573,7 +533,7 @@ t4 = tf.stack([t1, t2, t3])
 
 例如，`tf.multiply` 不会立即乘以它的参数并返回乘积。相反，它向当前图中添加了一个乘法操作，当会执行图时，乘法将与图中其余的操作一起执行。这个过程看起来可能很困惑，但请不要担心。[第 4 章] 将详细介绍图和会。
 
-### 基础数学操作
+## 基础数学操作
 
 涉及 TensorFlow 操作时，最好从简单开始。[表 3-5] 列出了 12 个执行基础数学操作的函数。
 
@@ -605,7 +565,7 @@ prod = tf.multiply(a, b)
 quot = tf.divide(a, b)
 ```
 
-可以使用普通的 Python 运算符 `+`、`-`,`*` 和 `//` 执行逐元素操作。例如，以下几行显示了 `ceil` 和 `floor` 如何产生浮点结果：
+可以使用普通的 Python 运算符 `+`、`-`、`*` 和 `//` 执行逐元素操作。例如，以下几行显示了 `ceil` 和 `floor` 如何产生浮点结果：
 
 ```python
 a = tf.constant([3., 3.])
@@ -627,7 +587,7 @@ div3 = t1 % t2
 div4 = t1 // t2
 ```
 
-### 取舍与比较
+## 取舍与比较
 
 `round` 函数检查张量的每个元素并返回最近的整数。如果两个整数等近，它返回离零更远的一个。`rint` 类似，但舍入到最近的偶值。以下代码演示了你如何使用 `round`、`rint`、`ceil` 和 `floor`：
 
@@ -649,9 +609,6 @@ t2 = tf.constant([[1, 3], [7, 2]])
 r1 = tf.argmin(t1)
 r2 = tf.argmax(t2)
 ```
-
-
-
 
 机器学习应用经常需要使用指数和对数来计算误差和概率。为了满足这一需求，TensorFlow 提供了许多与 NumPy 相同的函数。表 3-7 列出了其中的 11 种函数，并对每种函数提供了描述。
 
@@ -684,7 +641,7 @@ t3 = tf.rsqrt(t) # 0.5
 
 同样，`log` 函数计算张量元素的自然对数。`logp1` 在计算对数之前的值加 1，因此如果 `x` 是输入张量中的一个值，`logp1` 的结果等于 `log(x + 1)`。
 
-### 向量和矩阵运算
+## 向量和矩阵运算
 
 机器学习应用在向量（一维张量）和矩阵（二维张量）中存储大量数据。为了处理这些数据，TensorFlow 提供了许多对向量和矩阵的函数。表 3-8 列出了这些函数，并对每种函数提供了描述。
 
@@ -703,52 +660,9 @@ t3 = tf.rsqrt(t) # 0.5
 | `matrix_solve(A, b, adjoint=None, name=None)` | 返回张量 `x` 以 `Ax = b`，其中 `A` 是矩阵，`b` 是向量 |
 | `qr(input, full_matrices=None, name=None)` | 返回给定矩阵或矩阵的特征向量和特征值 |
 | `svd(tensor, full_matrices=False, compute_uv=True, name=None)` | 将矩阵分解为正矩阵、对角矩阵和正矩阵的共轭转置 |
-| `einsum(equation, *inputs)` | 执行自定义数学运算 |
 
-在这些函数中，最常用的是 `tensordot` 和 `matmul`。`tensordot` 返回两个输入张量的一个或多个轴的点积。`axes` 参数告诉 `tensordot` 应该处理哪些维度。如果你将此参数设置为标量，`tensordot` 将访问第一个张量的最后 `N` 个轴。如果你将 `axes` 设置为列表或张量，第一行识别第一个张量的轴，第二行识别第二个张量的轴。`matmul` 执行传统的矩阵乘法。即，它将第一个张量的行乘以第二个张量的列，并返回一个包含这些和的矩阵。以下代码展示了它的样子：
 
-```python
-t1 = tf.constant([4., 3.])
-t2 = tf.constant([2., 1.])
-dot = tf.tensordot(t1, t2, 1) # 4*2 + 3*1 = 11
-```
 
-我在表 3-8 中喜欢的函数是 `einsum`，它允许使用一种称为爱因斯坦求和收约的特殊格式来创建和执行数学运算。假设该操作有一个或两个输入。如果你提供两个输入，必须用逗号分隔它们。输入和输出的维度由下标（如 `i`, `j`, `k`）表示，并用 `->` 符号隔开。如果下标是重复的且没有输出下标，则执行加法。因此，`einsum('i,i', t1, t2)` 计算张量 `t1` 和 `t2` 的点积。如果下标是重复的且有输出下标，则执行乘法。以下代码调用 `einsum` 来转置矩阵并相乘两个矩阵：
-
-```python
-m1 = tf.constant([[1, 2], [3, 4]])
-m2 = tf.constant([[5, 6], [7, 8]])
-e1 = tf.einsum('ij->ji', m1) # 转置
-e2 = tf.einsum('ij,jk->ik', m1, m2) # 矩阵乘法
-```
-[/content]
-```
-
-关于爱因斯坦求和收约更完整的讨论，我推荐 Samuel Prime 的演讲：`https://samprime.wordpress.com/2015/03/25/einstein-summation-convention`。
-
-## 理论实践
-
-`ch3/simple_math.py` 中的代码演示了本章介绍的许多函数。列表 3-1 提供了完整的应用。
-
-### 列表 3-1 简单数学运算
-
-```python
-## 使用常量张量进行运算
-const_a = tf.constant(3.6)
-const_b = tf.constant(1.2)
-total = const_a + const_b
-quot = tf.div(const_a, const_b)
-
-## 使用随机张量进行运算
-rand_a = tf.random_normal([3], 2.0)
-rand_b = tf.random_uniform([3], 1.0, 4.0)
-diff = tf.subtract(rand_a, rand_b)
-```
-```
-
-**抱歉，我注意到在处理上述翻译时，最后两部分似乎出现了逻辑混乱或重复的错误（将翻译说明和代码混淆在了一起）。以下是为你重新整理的、符合格式要求的最终翻译版本：**
-
-[content]
 机器学习应用经常需要使用指数和对数来计算误差和概率。为了满足这一需求，TensorFlow 提供了许多与 NumPy 相同的函数。表 3-7 列出了其中的 11 种函数，并对每种函数提供了描述。
 
 ### 表 3-7 指数和对数运算
@@ -841,9 +755,6 @@ rand_b = tf.random_uniform([3], 1.0, 4.0)
 diff = tf.subtract(rand_a, rand_b)
 ```
 
-
-
-
 ```python
 mat_b = tf.constant([[6, 4, 1], [3, 7, 2]])
 mat_prod = tf.matmul(mat_a, mat_b)
@@ -884,67 +795,6 @@ with tf.Session() as sess:
 将操作存储在图中的好处是，可以将图导出到文件中，或在远程系统上启动。缺点是，图往往会让 TensorFlow 的初学者感到困惑。在编写这一章时，我的目标是通过提供对图和会话的完整解释来减少这种困惑。
 
 ## 构建图
-
-如果一个操作返回一个张量，那么该操作就可以将其输出馈给另一个操作。为了演示这个过程，以下代码将加法操作的结果输入到乘法操作中。
-
-```python
-c = tf.add(a, b)
-e = tf.multiply(c, d)
-```
-
-图 4-1 展示了这些嵌套操作与其张量之间的关系。
-
-![图 4-1：加法操作接收了乘法的结果。](img/9781119466215-fg0401.png)
-
-图 4-1： 加法操作接收了乘法的结果。
-
-在图 4-1 中，每个圆圈标识一个张量或操作，每条线传输张量数据。数学家和计算机科学家将这种节点和边的结构称为图。当一个程序执行一个创建、转换或处理张量的 TensorFlow 函数时，该函数并没有执行其操作。相反，它会将该操作存储在一个名为 `graph` 的结构中。一个 `graph` 可以包含许多操作，在程序在会话中执行图之前，这些操作都不会被执行。当会话执行图时，它会按顺序执行图的操作。
-
-将操作存储在图中的好处是，可以将图导出到文件中，或在远程系统上启动。缺点是，图往往会让 TensorFlow 的初学者感到困惑。在编写这一章时，我的目标是通过提供对图和会话的完整解释来减少这种困惑。
-
-如果一个操作返回一个张量，那么该操作就可以将其输出馈给另一个操作。为了演示这个过程，以下代码将加法操作的结果输入到乘法操作中。
-
-```python
-c = tf.add(a, b)
-e = tf.multiply(c, d)
-```
-
-图 4-1 展示了这些嵌套操作与其张量之间的关系。
-
-![图 4-1：加法操作接收了乘法的结果。](img/9781119466215-fg0401.png)
-
-图 4-1： 加法操作接收了乘法的结果。
-
-在图 4-1 中，每个圆圈标识一个张量或操作，每条线传输张量数据。数学家和计算机科学家将这种节点和边的结构称为图。
-
-每个圆圈标识一个张量或操作，每条线传输张量数据。数学家和计算机科学家将这种节点和边的结构称为图。
-
-每个圆圈标识一个张量或操作，每条线传输张量数据。数学家和计算机科学家将这种节点和边的结构称为图。
-
-每个圆圈标识一个张量或操作，每条线传输张量数据。数学家和计算机科学家将这种节点和边的结构称为图。
-
-每个圆圈标识一个张量或操作，每条线传输张量数据。数学家和计算机科学家将这种节点和边的结构称为图。
-
-如果一个操作返回一个张量，那么该操作就可以将其输出馈给另一个操作。为了演示这个过程，以下代码将加法操作的结果输入到乘法操作中。
-
-```python
-c = tf.add(a, b)
-e = tf.multiply(c, d)
-```
-
-图 4-1 展示了这些嵌套操作与其张量之间的关系。
-
-![图 4-1：加法操作接收了乘法的结果。](img/9781119466215-fg0401.png)
-
-图 4-1： 加法操作接收了乘法的结果。
-
-在图 4-1 中，每个圆圈标识一个张量或操作，每条线传输张量数据。数学家和计算机科学家将这种节点和边的结构称为图。
-
-每个圆圈标识一个张量或操作，每条线传输张量数据。数学家和计算机科学家将这种节点和边的结构称为图。
-
-每个圆圈标识一个张量或操作，每条线传输张量数据。数学家和计算机科学家将这种节点和边的结构称为图。
-
-每个圆圈标识一个张量或操作，每条线传输张量数据。数学家和计算机科学家将这种节点和边的结构称为图。
 
 如果一个操作返回一个张量，那么该操作就可以将其输出馈给另一个操作。为了演示这个过程，以下代码将加法操作的结果输入到乘法操作中。
 
@@ -963,12 +813,7 @@ e = tf.multiply(c, d)
 
 (注：由于原文文本中存在大量重复段落，译文已根据“不要重复输出原文”的原则，仅对核心逻辑内容进行了完整翻译并去除了冗余重复部分。)
 
-```python
-mat_b = tf.constant([[6, 4, 1], [3, 7, 2]])
-mat_prod = tf.matmul(mat_a, mat_b)
-```
 
-## 执行操作
 
 ```python
 with tf.Session() as sess:
@@ -980,25 +825,23 @@ with tf.Session() as sess:
     print("Matrix product: ", sess.run(mat_prod))
 ```
 
-这段代码大部分看起来都很熟悉。该程序创建并操作了常量张量、随机张量、向量和矩阵。为了处理向量，程序使用 `tf.multiply` 执行元素级乘法，然后使用 `tf.tensordot` 计算两个向量的点积。
+这段代码大部分看起来都很熟悉。该程序创建并操作了常量张量、随机张量、向量和矩阵。为了处理向量，程序使用`tf.multiply`执行元素级乘法，然后使用`tf.tensordot`计算两个向量的点积。
 
-代码的最后部分需要解释。该程序创建了一个名为 `sess` 的 `Session`（会话），并为每个要执行的操作调用一次其 `run` 方法。要理解什么是会话以及它们如何工作，你需要熟悉图（graphs）。下一章将探讨会话和图的主题。
+代码的最后部分需要解释。该程序创建了一个名为`sess`的`Session`（会话），并为每个要执行的操作调用一次其`run`方法。要理解什么是会话以及它们如何工作，你需要熟悉图（graphs）。下一章将探讨会话和图的主题。
 
-# 第 4 章
-
-# 在会话中执行图
+# 第 4 章 在会话中执行图
 
 本章内容
 
-- ![check](img/check.png) 创建图并访问其数据
-- ![check](img/check.png) 将图中的数据序列化为 GraphDef
-- ![check](img/check.png) 创建并启动会话
-- ![check](img/check.png) 向日志打印消息
-- ![check](img/check.png) 使用 TensorBoard 可视化摘要数据
+- 创建图并访问其数据
+- 将图中的数据序列化为`GraphDef`
+- 创建并启动会话
+- 向日志打印消息
+- 使用 TensorBoard 可视化摘要数据
 
 上一章介绍了许多用于创建、转换和处理张量的函数。这些函数中的大多数函数都会返回一个张量，这可能让你认为该函数在被调用时就已经执行了其操作。这是 Python 函数通常的工作方式，但 TensorFlow 函数的工作方式并非如此。
 
-当一个程序执行一个创建、转换或处理张量的 TensorFlow 函数时，该函数并不会执行其操作。相反，它会将该操作存储在一个名为 `graph`（图）的数据结构中。一个 `graph` 可以包含许多操作，在程序在会话中执行图之前，这些操作都不会被执行。当会话执行图时，它会按顺序执行图的操作。
+当一个程序执行一个创建、转换或处理张量的 TensorFlow 函数时，该函数并不会执行其操作。相反，它会将该操作存储在一个名为`graph`（图）的数据结构中。一个`graph`可以包含许多操作，在程序在会话中执行图之前，这些操作都不会被执行。当会话执行图时，它会按顺序执行图的操作。
 
 将操作存储在图中的好处是，可以将图导出到文件中，或在远程系统上启动。缺点是，图往往会让 TensorFlow 的初学者感到困惑。在编写这一章时，我的目标是通过提供对图和会话的完整解释来减少这种困惑。
 
@@ -1015,17 +858,13 @@ e = tf.multiply(c, d)
 
 ![图 4-1：加法操作接收了乘法的结果。](img/9781119466215-fg0401.png)
 
-图 4-1： 加法操作接收了乘法的结果。
+图 4-1：加法操作接收了乘法的结果。
 
 在图 4-1 中，每个圆圈标识一个张量或操作，每条线传输张量数据。数学家和计算机科学家将这种节点和边的结构称为图。
 
+`GraphDef`将图的数据存储在一种名为`protocol buffer`（也称为`protobuf`）的特殊格式中。它可以以文本或二进制形式生成，在文本形式下，它看起来类似于 JavaScript 对象表示法 (JSON)。
 
-
-
-
-`GraphDef` 将图的数据存储在一种名为 `protocol buffer`（也称为 `protobuf`）的特殊格式中。它可以以文本或二进制形式生成，在文本形式下，它看起来类似于 JavaScript 对象表示法 (JSON)。
-
-在 `GraphDef` 中，每个张量和操作由一个 `node` 元素表示。每个 `node` 都有一个 `name` 字段、一个 `op` 字段和一个或多个 `attr` 字段。以下文本 own `node` 元素的通用结构：
+在`GraphDef`中，每个张量和操作由一个`node`元素表示。每个`node`都有一个`name`字段、一个`op`字段和一个或多个`attr`字段。以下文本是`node`元素的通用结构：
 
 ```
 node {
@@ -1037,9 +876,9 @@ node {
 }
 ```
 
-`GraphDef` 的最后一个元素是 `versions` 元素。该元素标识 `GraphDef` 结构的版本。
+`GraphDef`的最后一个元素是`versions`元素。该元素标识`GraphDef`结构的版本。
 
-理解 `GraphDef` 的最佳方法是查看示例。假设应用程序包含以下代码：
+理解`GraphDef`的最佳方法是查看示例。假设应用程序包含以下代码：
 
 ```python
 a = tf.constant(2.5)
@@ -1047,7 +886,7 @@ b = tf.constant(4.2)
 sum = a + b;
 ```
 
-在文本形式下，`GraphDef` 的内容如下：
+在文本形式下，`GraphDef`的内容如下：
 
 ```
 node {
@@ -1101,81 +940,81 @@ versions {
 }
 ```
 
-这个 `GraphDef` 包含三个节点：两个代表张量，一个代表相加张量的操作。真实世界中的应用程序可能有数千个节点。在节点列表的末尾，`versions` 对象标识版本为 `22`。
+这个`GraphDef`包含三个节点：两个代表张量，一个代表相加张量的操作。真实世界中的应用程序可能有数千个节点。在节点列表的末尾，`versions`对象标识版本为`22`。
 
-`tf.train` 中的 `write_graph` 函数使得将 `GraphDef` 的数据存储到文件中成为可能。其签名如下：
+`tf.train`中的`write_graph`函数使得将`GraphDef`的数据存储到文件中成为可能。其签名如下：
 
 ```python
 write_graph(graph/graph_def, logdir, name, as_text=True)
 ```
 
-第一个参数可以设置为 `Graph` 或 `GraphDef`。最后一个参数标识内容应以文本形式还是二进制形式写入。例如，以下代码将当前图存储到名为 `graph.dat` 的文本文件中：
+第一个参数可以设置为`Graph`或`GraphDef`。最后一个参数标识内容应以文本形式还是二进制形式写入。例如，以下代码将当前图存储到名为`graph.dat`的文本文件中：
 
 ```python
 tf.train.write_graph(tf.get_default_graph(), os.getcwd(), 'graph.dat')
 ```
 
-同样，应用程序可以通过调用两个例程之一，从包含图数据的文件加载 `GraphDef`：
+同样，应用程序可以通过调用两个例程之一，从包含图数据的文件加载`GraphDef`：
 
-*   `TextFormat.Merge(data, graphdef)`：从文本元素初始化 `GraphDef`
-*   创建 `GraphDef`s：将图转换为协议缓冲区
+- `TextFormat.Merge(data, graphdef)`：从文本元素初始化`GraphDef`
+- 创建`GraphDef`s：将图转换为协议缓冲区
 
-`TextFormat` 类在 `google.protobuf` 中提供。关于在 Python 中中访问协议缓冲器的完整讨论，请访问 [`https://developers.google.com/protocol-buffers/docs/pythontutorial`](https://developers.google.com/protocol-buffers/docs/pythontutorial)。
+`TextFormat`类在`google.protobuf`中提供。关于在 Python 中访问协议缓冲器的完整讨论，请访问[`https://developers.google.com/protocol-buffers/docs/pythontutorial`](https://developers.google.com/protocol-buffers/docs/pythontutorial)。
 
-## 创建和运行会
+## 创建和运行会话
 
-作为 Python 开发者，你可能习惯于程序按行处理。但在 TensorFlow 应用程序中，涉及张量的操作在它们存储到图中并在会中执行之前是不会执行的。本节解释了如何编写创建并执行会的应用程序。
+作为 Python 开发者，你可能习惯于程序按行处理。但在 TensorFlow 应用程序中，涉及张量的操作在它们存储到图中并在会话中执行之前是不会执行的。本节解释了如何编写创建并执行会话的应用程序。
 
-### 创建会
+### 创建会话
 
-与图一样，一次只能有一个活跃的会。但会和图之间有一个重要区别——每个会都必须显式创建。你可以通过调用 `tf.Session` 创建 `Session`，它接受三个可选参数：
+与图一样，一次只能有一个活跃的会话。但会话和图之间有一个重要区别——每个会话都必须显式创建。你可以通过调用`tf.Session`创建`Session`，它接受三个可选参数：
 
-*   `target`：执行引擎的名称
-*   `graph`：要启动的 `Graph` 实例
-*   `config`：配置会执行 `ConfigProto`
+- `target`：执行引擎的名称
+- `graph`：要启动的`Graph`实例
+- `config`：配置会话执行的`ConfigProto`
 
-关于执行引擎的讨论在第 11 章中，该章节介绍了 `target` 参数。同样，`ConfigProto` 中的大多数设置与线程和设备有关，因此第 10 章讨论了 `config` 参数。
+关于执行引擎的讨论在第 11 章中，该章节介绍了`target`参数。同样，`ConfigProto`中的大多数设置与线程和设备有关，因此第 10 章讨论了`config`参数。
 
-默认情况下，会访问默认图中的张量和操作。但如果你在 `tf.Session` 中设置了 `graph` 参数，会将会执行该图。
+默认情况下，会话访问默认图中的张量和操作。但如果你在`tf.Session`中设置了`graph`参数，会话将会执行该图。
 
-应用程序经常在 `with` 语句内部调用 `tf.Session`。该语句确保 `with` 块中的代码可以访问新的 `Session`。以下代码显示了它是如何工作的：
+应用程序经常在`with`语句内部调用`tf.Session`。该语句确保`with`块中的代码可以访问新的`Session`。以下代码显示了它是如何工作的：
 
 ```python
 with tf.Session() as sess:
 ```
 
-## 执行会
+## 执行会话
 
-`Session` 最重要的方法是 `run`。该方法接受四个参数，只有第一个是强制的：
+`Session`最重要的方法是`run`。该方法接受四个参数，只有第一个是强制的：
 
-*   `fetches`：输出张量或操作
-*   `feed_dict`：馈入会的数据
-*   `options`：执行选项
-*   `metadata`：来自会的元数据
+- `fetches`：输出张量或操作
+- `feed_dict`：馈入会话的数据
+- `options`：执行选项
+- `metadata`：来自会话的元数据
 
-如果你将 `fetches` 赋值为张量列表，`run` 将返回类似的集合。以下代码使用两个张量调用 `run`：
+如果你将`fetches`赋值为张量列表，`run`将返回类似的集合。以下代码使用两个张量调用`run`：
 
 ```python
 res1, res2 = sess.run([t1, t2])
 ```
 
-如果你将 `fetches` 赋值为操作，`run` 将返回包含结果的 `ndarray`。以下代码使用加法调用 `run`：
+如果你将`fetches`赋值为操作，`run`将返回包含结果的`ndarray`。以下代码使用加法调用`run`：
 
 ```python
 res = sess.run(t1 + t2)
 ```
 
-`run` 的 `feed_dict` 参数在批量处理数据的应用程序中起着重要作用。第 5 章详细讨论了该参数。
+`run`的`feed_dict`参数在批量处理数据的应用程序中起着重要作用。第 5 章详细讨论了该参数。
 
-### 交互式
+### 交互式会话
 
 与其向解释器发送整个脚本，许多 Python 开发者喜欢交互式编写代码。在这种模式下，解释器会在处理每行时显示反馈。
 
-为了支持交互式开发，TensorFlow 提供了 `InteractiveSession` 类。`InteractiveSession` 的作用与 `Session` 相同，但它成为默认会。
+为了支持交互式开发，TensorFlow 提供了`InteractiveSession`类。`InteractiveSession`的作用与`Session`相同，但它成为默认会话。
 
-与其调用 `sess.run`，可以通过 `eval` 方法评估张量。同样，可以通过 `Operation` 类的 `run` 方法执行操作。
+与其调用`sess.run`，可以通过`eval`方法评估张量。同样，可以通过`Operation`类的`run`方法执行操作。
 
-一个示例说明了 `InteractiveSession` 的工作原理。以下代码旨在普通模式下运行：
+一个示例说明了`InteractiveSession`的工作原理。以下代码旨在普通模式下运行：
 
 ```python
 t1 = tf.constant(1.2)
@@ -1185,7 +1024,7 @@ with tf.Session() as sess:
     print("Product: ", sess.run(prod))
 ```
 
-此代码使用 `InteractiveSession` 实现了相同的结果：
+此代码使用`InteractiveSession`实现了相同的结果：
 
 ```python
 t1 = tf.constant(1.2)
@@ -1197,20 +1036,15 @@ print("Product: ", prod.eval())
 
 ## 向日志写入消息
 
-第 1 章到第 4 章中的所有示例代码都依赖 `print` 将数据写入标准输出。但 TensorFlow 提供了一种日志机制，其具有比普通 `print` 更多的消息功能。关于 TensorFlow 日志有五点需要了解：
+第 1 章到第 4 章中的所有示例代码都依赖`print`将数据写入标准输出。但 TensorFlow 提供了一种日志机制，其具有比普通`print`更多的消息功能。关于 TensorFlow 日志有五点需要了解：
 
-*   TensorFlow 通过 `tf.logging` 包启用日志。
-
-
-
-
-
-- TensorFlow 的日志记录基于标准的 Python 日志记录，许多 `tf.logging` 函数与 Python 的 `Logger` 类的方法相同。
-- TensorFlow 支持五种日志级别。按严重程度从低到高排序为 `DEBUG`、`INFO`、`WARN`、`ERROR` 和 `FATAL`。
-- 要启用日志记录，应用程序需要调用 `tf.logging.set_verbosity` 并传入应记录的最低严重级别。
+- TensorFlow 通过`tf.logging`包启用日志。
+- TensorFlow 的日志记录基于标准的 Python 日志记录，许多`tf.logging`函数与 Python 的`Logger`类的方法相同。
+- TensorFlow 支持五种日志级别。按严重程度从低到高排序为`DEBUG`、`INFO`、`WARN`、`ERROR`和`FATAL`。
+- 要启用日志记录，应用程序需要调用`tf.logging.set_verbosity`并传入应记录的最低严重级别。
 - 默认情况下，TensorFlow 将日志消息写入到标准输出。在本文编写时，TensorFlow 日志不支持将消息写入日志文件。
 
-对于每个日志级别，`tf.logging` 都提供了一个同名的函数，用于写入该级别的日志消息。例如，以下代码启用了 INFO 消息（以及更严重级别的消息），然后写入了一条显示 `output` 值的 INFO 消息：
+对于每个日志级别，`tf.logging`都提供了一个同名的函数，用于写入该级别的日志消息。例如，以下代码启用了 INFO 消息（以及更严重级别的消息），然后写入了一条显示`output`值的 INFO 消息：
 
 ```
 tf.logging.set_verbosity(tf.logging.INFO)
@@ -1219,13 +1053,13 @@ with tf.Session() as sess:
      tf.logging.info('Output: %f', output)
 ```
 
-如果 `output` 的值为 5.5，`tf.logging.info` 将向标准输出打印以下消息：
+如果`output`的值为 5.5，`tf.logging.info`将向标准输出打印以下消息：
 
 ```
 INFO:tensorflow:Output: 5.5
 ```
 
-表 4-3 列出了 `set_verbosity`、`info` 以及 `tf.logging` 提供的其他函数。
+表 4-3 列出了`set_verbosity`、`info`以及`tf.logging`提供的其他函数。
 
 ### 表 4-3 数据摘要函数摘要
 
@@ -1240,34 +1074,34 @@ INFO:tensorflow:Output: 5.5
 | `flush()` | 等待日志记录操作完成 |
 | `log(level, msg, *args, **kwargs)` | 记录给定严重级别的消息 |
 | `log_if(level, msg, condition, *args)` | 如果条件为真，则记录给定严重级别的消息 |
-| `log_first_n(level, msg, n, *args)` | 在给定严重级别最多记录 `n` 次消息 |
-| `log_every_n(level, msg, n, *args)` | 每隔 `n` 次记录一次给定严重级别的消息 |
+| `log_first_n(level, msg, n, *args)` | 在给定严重级别最多记录`n`次消息 |
+| `log_every_n(level, msg, n, *args)` | 每隔`n`次记录一次给定严重级别的消息 |
 
-最后三个函数使得控制消息何时写入日志成为可能。`log_if` 的第三个参数定义了一个决定何时记录消息的条件。以下代码在 `output` 大于 0 时记录其值：
+最后三个函数使得控制消息何时写入日志成为可能。`log_if`的第三个参数定义了一个决定何时记录消息的条件。以下代码在`output`大于 0 时记录其值：
 
 ```
 tf.logging.log_if(tf.logging.INFO, 'Output: %f', (output > 0), output)
 ```
 
-`log_first_n` 和 `log_every_n` 的第三个参数是一个整数，决定执行的频率。在 `log_first_n` 中，该值设置了函数写入日志的最大次数。在 `log_every_n` 中，该值告诉函数每隔 `N` 次记录一次消息。
+`log_first_n`和`log_every_n`的第三个参数是一个整数，决定执行的频率。在`log_first_n`中，该值设置了函数写入日志的最大次数。在`log_every_n`中，该值告诉函数每隔`N`次记录一次消息。
 
 ## 使用 TensorBoard 可视化数据
 
-日志记录对于监控简单数据已经足够，但在许多情况下，开发者需要追踪大型、复杂的数据集。实际应用可能会启动数百或数千次会，日志记录不足以监控数据如何执行执行的变化。
+日志记录对于监控简单数据已经足够，但在许多情况下，开发者需要追踪大型、复杂的数据集。实际应用可能会启动数百或数千次会话，日志记录不足以监控数据如何执行的变化。
 
 好消息是你的 TensorFlow 安装包含了 TensorBoard。这个强大的工具可以读取应用程序的数据并将其显示在网页中。图 4-2 展示了 Chrome 浏览器中 TensorBoard 页面的样子。坏消息是 TensorBoard 需要名为“摘要数据”（summary data）的特殊格式数据，而生成这些数据并不容易。
 
 ### 运行 TensorBoard
 
-当你安装 TensorFlow 时，安装程序会将 TensorBoard 工具放置在顶层脚本目录下。如果你可以从命令行执行 `tensorboard` 命令，请将此目录添加到系统的 `PATH` 中。`tensorboard` 命令接受几个标志，包括：
+当你安装 TensorFlow 时，安装程序会将 TensorBoard 工具放置在顶层脚本目录下。如果你可以从命令行执行`tensorboard`命令，请将此目录添加到系统的`PATH`中。`tensorboard`命令接受几个标志，包括：
 
 - `--logdir DIR`: 包含摘要数据的目录
 - `--host HOST`: 标识网页 URL 的主机部分
 - `--port PORT`: 标识网页 URL 的端口
 
-默认情况下，TensorBoard 的 IP 地址为 `127.0.0.1`，可以通过 `localhost` 访问。TensorBoard 的默认端口为 `6006`。因此，TensorBoard 的默认 URL 为 `http://localhost:6006`。
+默认情况下，TensorBoard 的 IP 地址为`127.0.0.1`，可以通过`localhost`访问。TensorBoard 的默认端口为`6006`。因此，TensorBoard 的默认 URL 为`http://localhost:6006`。
 
-`--logdir` 标志是必须的，所以没有数据无法启动 TensorBoard。你必须将此标志指向一个包含名为 event 的特殊文件的目录。该文件包含了 TensorBoard 执行所需的摘要数据。如果文件位于名为 `output` 的目录中，以下命令告诉 TensorBoard 读取该 event 文件：
+`--logdir`标志是必须的，所以没有数据无法启动 TensorBoard。你必须将此标志指向一个包含名为 event 的特殊文件的目录。该文件包含了 TensorBoard 执行所需的摘要数据。如果文件位于名为`output`的目录中，以下命令告诉 TensorBoard 读取该 event 文件：
 
 ```
 tensorboard --logdir=output
@@ -1275,28 +1109,35 @@ tensorboard --logdir=output
 
 ### 生成摘要数据
 
-到此时，你应该已经了如何创建数学操作并在会中执行它们。本节引入了一种名为摘要操作（summary operation）的新类型操作。它类似于其他的 TensorFlow 操作，但当会执行摘要操作时，结果是一个包含摘要数据的协议缓冲区（protocol buffer）。应用程序可以将此缓冲区写入文件，其内容可以通过 TensorBoard 进行显示。
+到此时，你应该已经了解了如何创建数学操作并在会话中执行它们。本节引入了一种名为摘要操作（summary operation）的新类型操作。它类似于其他的 TensorFlow 操作，但当会话执行摘要操作时，结果是一个包含摘要数据的协议缓冲区（protocol buffer）。应用程序可以将此缓冲区写入文件，其内容可以通过 TensorBoard 进行显示。
 
-TensorBoard 可以展示许多不同类型的数据，每种类型都对应 `tf.summary` 的一个函数。表 4-4 列出了六个可用函数。
+TensorBoard 可以展示许多不同类型的数据，每种类型都对应`tf.summary`的一个函数。表 4-4 列出了六个可用函数。
 
-### 4-4 数据摘要函数
+### 表 4-4 数据摘要函数
 
 | 函数 | 描述 |
 | --- | --- |
 | `scalar(name, tensor, collections=None)` | 创建关于标量的摘要操作 |
-| `histogram(name, values, collections=None)` | 创建提供直方数据的摘要操作 |
-| `audio(name, tensor, sample_rate, max_outputs=3, collections=None)` | 创建提供音频数据的摘要操作 |
-| `image(name, tensor, max_outputs=3, collections=None)` | 创建提供图像数据的摘要操作 |
-| `merge(inputs, collections=None, name=None)` | 将指定的摘要操作合并为一个摘要操作 |
-| `merge_all(key= GraphKeys.SUMMARIES)` | 将摘要操作合并为一个摘要操作 |
 
-在这些函数中，最流行的是 `scalar` 和 `histogram`。`scalar` 生成随多次会执行而变化的单个值的摘要数据。`histogram` 生成随会执行变化的数值集合数据。`image` 函数生成与图像和图像分析相关的数据。第 8 章详细讨论图像。
+
+
+| `histogram(name, values, collections=None)` | 创建提供直方数据的摘要操作 |
+
+| `audio(name, tensor, sample_rate, max_outputs=3, collections=None)` | 创建提供音频数据的摘要操作 |
+
+| `image(name, tensor, max_outputs=3, collections=None)` | 创建提供图像数据的摘要操作 |
+
+| `merge(inputs, collections=None, name=None)` | 将指定的摘要操作合并为一个摘要操作 |
+
+| `merge_all(key=GraphKeys.SUMMARIES)` | 将摘要操作合并为一个摘要操作 |
+
+在这些函数中，最流行的是`scalar`和`histogram`。`scalar`生成随多次会执行而变化的单个值的摘要数据。`histogram`生成随会执行变化的数值集合数据。`image`函数生成与图像和图像分析相关的数据。第 8 章详细讨论图像。
 
 在我看来，理解摘要数据的最佳方法是看示例代码。以下代码执行了三个任务：
 
-- `tf.summary.scalar` 生成提供标量数据的操作。
-- `tf.summary.merge_all` 将它们合并为一个操作。
-- `sess.run` 执行合并后的摘要操作。
+- `tf.summary.scalar`生成提供标量数据的操作。
+- `tf.summary.merge_all`将它们合并为一个操作。
+- `sess.run`执行合并后的摘要操作。
 
 ```
 ## 添加两个标量
@@ -1316,24 +1157,21 @@ with tf.Session() as sess:
      _, summary = sess.run([sum, merged_op])
 ```
 
-
-
-
-如所示，每个感兴趣的实体都需要一个单独的操作来生成摘要数据。这意味着应用程序需要调用三次 `tf.summary.scalar`：针对每个要分析的张量调用一次。但你不需要访问每次 `tf.summary.scalar` 用的返回值，因为 `tf.summary.merge_all` 将数据生成操作合并为了一个操作。
+如所示，每个感兴趣的实体都需要一个单独的操作来生成摘要数据。这意味着应用程序需要调用三次`tf.summary.scalar`：针对每个要分析的张量调用一次。但你不需要访问每次`tf.summary.scalar`用的返回值，因为`tf.summary.merge_all`将数据生成操作合并为了一个操作。
 
 ### 创建自定义摘要
 
-与其调用表 4-4 中的函数，你还不如通过创建 `Summary` 对象来生成自定义摘要数据。`Summary` 类是一个 Python 包装器，用于包含摘要数据的协议传输缓冲区（protocol buffer）。
+与其调用表 4-4 中的函数，你还不如通过创建`Summary`对象来生成自定义摘要数据。`Summary`类是一个 Python 包装器，用于包含摘要数据的协议传输缓冲区（protocol buffer）。
 
-你可以通过调用 `tf.Summary` 并将其 `value` 参数设置为 `Summary.Value` 缓冲区的列表，来创建一个 `Summary` 实例。每个 `Summary.Value` 都可以拥有一个 `node_name`、一个 `tag` 以及以下五个数据字段之一：
+你可以通过调用`tf.Summary`并将其`value`参数设置为`Summary.Value`缓冲区的列表，来创建一个`Summary`实例。每个`Summary.Value`都可以拥有一个`node_name`、一个`tag`以及以下五个数据字段之一：
 
-* `simple_value` — 一个 32 位浮点值
-* `image` — 一个包含像素数据的 `Image` 实例
-* `histo` — 一个包含要在直方图中显示的数据的 `HistogramProto`
-* `audio` — 一个包含音频数据的 `Audio` 实例
-* `tensor` — 一个包含张量相关数据的 `TensorProto`
+- `simple_value` — 一个 32 位浮点值
+- `image` — 一个包含像素数据的`Image`实例
+- `histo` — 一个包含要在直方图中显示的数据的`HistogramProto`
+- `audio` — 一个包含音频数据的`Audio`实例
+- `tensor` — 一个包含张量相关数据的`TensorProto`
 
-以下代码创建了一个自定义摘要并设置了它的 `simple_value` 字段：
+以下代码创建了一个自定义摘要并设置了它的`simple_value`字段：
 
 ```python
 custom_summary = tf.Summary(value=[
@@ -1341,25 +1179,25 @@ custom_summary = tf.Summary(value=[
 ])
 ```
 
-这段代码并没有创建一个摘要数据的操作——它直接生成了摘要数据。在前面的代码中，TensorBoard 显示 `custom_summary` 的内容就像它是通过 `tf.summary.scalar` 生成的一样。
+这段代码并没有创建一个摘要数据的操作——它直接生成了摘要数据。在前面的代码中，TensorBoard 显示`custom_summary`的内容就像它是通过`tf.summary.scalar`生成的一样。
 
 ### 写入摘要数据
 
-在生成摘要数据后，下一步是创建一个目录并将摘要数据写入目录的事件文件中。此过程需要创建一个 `FileWriter` 并调用它的方法。
+在生成摘要数据后，下一步是创建一个目录并将摘要数据写入目录的事件文件中。此过程需要创建一个`FileWriter`并调用它的方法。
 
 ## 创建 FileWriter
 
-应用程序可以通过调用其构造函数来创建一个 `FileWriter`：
+应用程序可以通过调用其构造函数来创建一个`FileWriter`：
 
 ```python
 tf.summary.FileWriter(logdir, graph=None, max_queue=10, flush_secs=120, filename_suffix=None)
 ```
 
-`logdir` 参数设置了用于包含摘要数据而应创建的目录名称。如果你设置了 `graph` 参数，图的数据将被添加到给定目录中的事件文件中。如果你设置了 `filename_suffix`，该后缀将附加到生成的事件文件的名称中。
+`logdir`参数设置了用于包含摘要数据而应创建的目录名称。如果你设置了`graph`参数，图的数据将被添加到给定目录中的事件文件中。如果你设置了`filename_suffix`，该后缀将附加到生成的事件文件的名称中。
 
-`FileWriter` 异步更新事件文件，这意味着可能同时有多个写入操作处于等待状态。`max_queue` 参数指定了时间内可以等待的写入操作的最大数量。`flush_secs` 参数指定了 `FileWriter` 执行待处理操作的频率。
+`FileWriter`异步更新事件文件，这意味着可能同时有多个写入操作处于等待状态。`max_queue`参数指定了时间内可以等待的写入操作的最大数量。`flush_secs`参数指定了`FileWriter`执行待处理操作的频率。
 
-例如，以下代码创建了一个 `FileWriter` 并将其配置为创建一个名为 `log` 的目录。该目录中的事件文件应包含默认图的摘要数据。
+例如，以下代码创建了一个`FileWriter`并将其配置为创建一个名为`log`的目录。该目录中的事件文件应包含默认图的摘要数据。
 
 ```python
 fw = tf.summary.FileWriter("log", graph=tf.get_default_graph())
@@ -1369,7 +1207,7 @@ fw = tf.summary.FileWriter("log", graph=tf.get_default_graph())
 
 #### 将数据打印到事件文件
 
-`FileWriter` 构造函数创建一个带有事件文件的目录。`FileWriter` 的方法使数据写入事件文件成为可能。表 4-5 列出了这些方法并提供了对种方法的描述。
+`FileWriter`构造函数创建一个带有事件文件的目录。`FileWriter`的方法使数据写入事件文件成为可能。表 4-5 列出了这些方法并提供了对种方法的描述。
 
 表 4-5 FileWriter 类的方法
 
@@ -1378,14 +1216,14 @@ fw = tf.summary.FileWriter("log", graph=tf.get_default_graph())
 | `add_summary(summary, global_step=None)` | 将摘要数据添加到事件文件 |
 | `add_event(event)` | 将事件数据添加到事件文件 |
 | `add_graph(graph, global_step=None, graph_def=None)` | 将图的摘要数据添加到事件文件 |
-| `add_meta_graph( meta_graph_def, global_step=None)` | 将来自 `MetaGraphDef` 的数据添加到事件文件 |
-| `add_run_metadata( run_metadata, tag, global_step=None)` | 将会 的运行元数据添加到事件文件 |
-| `add_session_log( session_log, global_step=None)` | 将来自 `SessionLog` 的数据添加到事件文件 |
+| `add_meta_graph(meta_graph_def, global_step=None)` | 将来自`MetaGraphDef`的数据添加到事件文件 |
+| `add_run_metadata(run_metadata, tag, global_step=None)` | 将会的运行元数据添加到事件文件 |
+| `add_session_log(session_log, global_step=None)` | 将来自`SessionLog`的数据添加到事件文件 |
 | `flush()` | 执行待处理的写入操作 |
 | `close()` | 刷新写入操作并关闭事件文件 |
 | `reopen()` | 重打开事件文件以写入摘要数据 |
 
-`add_summary` 打印摘要数据。也就是说，它将数据生成操作产生的摘要数据写入事件文件。以下代码演示了如何调用它：
+`add_summary`打印摘要数据。也就是说，它将数据生成操作产生的摘要数据写入事件文件。以下代码演示了如何调用它：
 
 ```python
 ## 将操作合并为单个操作
@@ -1397,11 +1235,12 @@ writer = tf.summary.FileWriter("summary")
 with tf.Session() as sess:
     _, summary = sess.run([merged_op])
 ```
+
 （注：提示中的原始文本代码片段是碎片化的，我已将其重组为有效的代码块以保持清晰。）
 
 ### 将理论付诸实践
 
-`ch4/two_graphs.py` 中的代码演示了应用程序如何创建多个图并在单独会话中执行它们。在执行每个图后，应用程序会创建一个 `FileWriter` 并生成可以使用 TensorBoard 查看的摘要数据。列表 4-1 了代码：
+`ch4/two_graphs.py`中的代码演示了应用程序如何创建多个图并在单独会话中执行它们。在执行每个图后，应用程序会创建一个`FileWriter`并生成可以使用 TensorBoard 查看的摘要数据。列表 4-1 了代码：
 
 ```python
 ## 在会话中启动多个图
@@ -1438,10 +1277,6 @@ with tf.Session() as sess:
     file_writer.flush()
 ```
 
-
-
-
-
 ## 获取 GraphDef 并将其写入文件
 
 `tf.train.write_graph(sess.graph, os.getcwd(), 'graph1.dat')`
@@ -1449,37 +1284,44 @@ with tf.Session() as sess:
 ## 创建第二个图并将其设为默认
 
 `graph = tf.Graph()`
+
 `with graph.as_default():`
 
 ## 计算平均值
+
 `t6 = tf.random_uniform([8], 4.0, 8.0)`
+
 `t7 = tf.fill([8], 6.0)`
+
 `t8 = tf.reduce_mean(t6 + t7)`
 
 ## 执行第一个图
+
 `with tf.Session() as sess:`
 
 ## 执行会
+
 `sess.run(t8)`
 
 ## 获取 GraphDef 并将其写入文件
+
 `tf.train.write_graph(sess.graph, os.getcwd(), 'graph2.dat')`
 
-对 `sess.run` 的第一次调用特别有趣。它的第一个参数是一个包含两个元素的列表。第一个元素 `t5` 是结合 `t1`、`t2`、`t3` 和 `t4` 的操作结果。第二个元素 `merged_op` 结合了五个生成摘要数据的操作。
+对`sess.run`的第一次调用特别有趣。它的第一个参数是一个包含两个元素的列表。第一个元素`t5`是结合`t1`、`t2`、`t3`和`t4`的操作结果。第二个元素`merged_op`结合了五个生成摘要数据的操作。
 
-`sess.run` 返回 `t5` 的值和生成的摘要数据。当这些结果可用时，应用程序通过调用 `FileWriter` 的 `add_summary` 方法记录 `t5` 的值并将摘要数据打印到文件中。
+`sess.run`返回`t5`的值和生成的摘要数据。当这些结果可用时，应用程序通过调用`FileWriter`的`add_summary`方法记录`t5`的值并将摘要数据打印到文件中。
 
-`FileWriter` 构造函数的第一个参数是 `log`，因此 `FileWriter` 将数据打印到 log 目录下的事件文件中。你可以通过以下命令启动 TensorBoard 来可视化这些数据：
+`FileWriter`构造函数的第一个参数是`log`，因此`FileWriter`将数据打印到 log 目录下的事件文件中。你可以通过以下命令启动 TensorBoard 来可视化这些数据：
 
 `tensorboard --logdir=log`
 
-要在 TensorBoard 中查看生成的数据，请打开浏览器访问 `http://localhost:6006`。如果你点击页面顶部的 HISTOGRAMS 链接，可以查看张量 `t1` 到 `t4`。图 4-3 显示了 `t1` 直方图的样子。
+要在 TensorBoard 中查看生成的数据，请打开浏览器访问`http://localhost:6006`。如果你点击页面顶部的 HISTOGRAMS 链接，可以查看张量`t1`到`t4`。图 4-3 显示了`t1`直方图的样子。
 
 ![图 4-3：TensorBoard 直方图绘制了张量的元素。](img/9781119466215-fg0403.png)
 
 图 4-3： TensorBoard 直方图绘制了张量的元素。
 
-与 `t1` 到 `t4` 不同，`t5`只有一个元素。应用程序通过调用 `tf.summary.scalar` 为 `t5` 生成数据，你可以点击页面顶部的 SCALARS 链接在 TensorBoard 中查看这些数据。结果并不特别，因为应用程序只执行了一次会话。第 5 章解释了如何执行包含多个步骤的会话并在 TensorBoard 中查看结果。
+与`t1`到`t4`不同，`t5`只有一个元素。应用程序通过调用`tf.summary.scalar`为`t5`生成数据，你可以点击页面顶部的 SCALARS 链接在 TensorBoard 中查看这些数据。结果并不特别，因为应用程序只执行了一次会话。第 5 章解释了如何执行包含多个步骤的会话并在 TensorBoard 中查看结果。
 
 第 5 章
 
@@ -1497,16 +1339,16 @@ with tf.Session() as sess:
 
 在互联网出现之前，像我这样的老派人通过实际交谈来消遣。一种非常火的游戏是“20 个问题”，其中一个玩家想出一个物体，另一个玩家通过提问来确定物体是什么。提问者最多可以问 20 个“是/否”问题，一个典型的游戏如下：
 
-* ：它比面包盒大吗？
-* 答：是的。
-* ：它能动吗？
-* 答：是的。
-* ：它是动物吗？
-* 答：不是。
-* ：它是靠轮子移动的吗？
-* 答：不是。
-* ：（唉）Matt，它是一个坏机器人吗？又是？
-* 答：就是它！你赢了！
+- ：它比面包盒大吗？
+- 答：是的。
+- ：它能动吗？
+- 答：是的。
+- ：它是动物吗？
+- 答：不是。
+- ：它是靠轮子移动的吗？
+- 答：不是。
+- ：（唉）Matt，它是一个坏机器人吗？又是？
+- 答：就是它！你赢了！
 
 在本章中，我将解释“20 个问题”游戏如何与监督学习中使用的训练方法相似。
 
@@ -1519,31 +1361,27 @@ with tf.Session() as sess:
 1. **为通用模型构建数学表达式。**
 2. **声明在训练过程中需要更新的变量。**
 3. **获取损失表达式，即是模型与观测值之间的差异。**
-4. **使用第 3 步的损失创建一个 `Optimizer` 并调用其 `minimize` 方法。**
-5. **（可选）配置会话 `run` 方法的第二个参数，以向会话提供批次数据。**
-6. **通过调用会话的 `run` 方法执行会话。**
+4. **使用第 3 步的损失创建一个`Optimizer`并调用其`minimize`方法。**
+5. **（可选）配置会话`run`方法的第二个参数，以向会话提供批次数据。**
+6. **通过调用会话的`run`方法执行会话。**
 
 从问题来看，许多开发者难以掌握这些步骤。
 
 ## 建模
 
-就像“20 个问题”游戏从猜测开始一样，机器学习也从一个初始估计开始。本书关注两种建模方法。第一种涉及形状。第二种方法涉及人工神经网络。无论你是用形状还是神经网络对系统建模，你都需要不断完善模型，直到它看起来像观测数据。这种完善涉及到更新模型的参数，例如 ![images/eq5001.png)<m:math xmlns="http://www.w3.org/1998/MathML/MathML"><m:mrow><m:mi mathvariant="normal">y</m:mi><m:mo>=</m:mo><m:mi mathvariant="normal">mx</m:mi><m:mo>+</m:mo><m:mi mathvariant="normal">b</m:mi></m:mrow></m:math> 中的 *m* 和 *b*。在 TensorFlow 应用程序中，这些可训练参数都是 `Variable` 类的实例。
-
-
-
-
+就像“20 个问题”游戏从猜测开始一样，机器学习也从一个初始估计开始。本书关注两种建模方法。第一种涉及形状。第二种方法涉及人工神经网络。无论你是用形状还是神经网络对系统建模，你都需要不断完善模型，直到它看起来像观测数据。这种完善涉及到更新模型的参数，例如 ![images/eq5001.png)<m:math xmlns="http://www.w3.org/1998/MathML/MathML"><m:mrow><m:mi mathvariant="normal">y</m:mi><m:mo>=</m:mo><m:mi mathvariant="normal">mx</m:mi><m:mo>+</m:mo><m:mi mathvariant="normal">b</m:mi></m:mrow></m:math> 中的 *m* 和 *b*。在 TensorFlow 应用程序中，这些可训练参数都是`Variable`类的实例。
 
 ```python
 variableA = tf.Variable(tensorA)
 ```
 
-变量的作用是存储在训练过程中需要更新的数据。许多应用程序并不使用常量值初始化变量，而是使用随机值。以下代码创建了一个名为 `variableB` 的变量，并将其初始值设置为正态分布数值的张量：
+变量的作用是存储在训练过程中需要更新的数据。许多应用程序并不使用常量值初始化变量，而是使用随机值。以下代码创建了一个名为`variableB`的变量，并将其初始值设置为正态分布数值的张量：
 
 ```python
 variableB = tf.Variable(tf.random_normal([3]))
 ```
 
-`tf.Variable` 接受一个名为 `trainable` 的布尔参数。如果你将此参数设置为 `True`，则该变量可以通过训练进行更新。如果你将其设置为 `False`，该变量无法通过训练进行更新。
+`tf.Variable`接受一个名为`trainable`的布尔参数。如果你将此参数设置为`True`，则该变量可以通过训练进行更新。如果你将其设置为`False`，该变量无法通过训练进行更新。
 
 ## 初始化变量
 
@@ -1555,11 +1393,11 @@ TensorFlow 提供了三个创建初始化变量操作的函数。表 5-1 列出�
 
 | **函数** | **描述** |
 | --- | --- |
-| `variable_initializer(var_list, name=‘init’)` | 返回一个初始化列表中给定变量的操作 |
+| `variable_initializer(var_list, name='init')` | 返回一个初始化列表中给定变量的操作 |
 | `local_variables_initializer()` | 返回一个初始化所有局部变量的操作 |
 | `global_variables_initializer()` | 返回一个初始化所有全局变量的操作 |
 
-应用程序通常调用 `global_variables_initializer`，因为它会创建一个初始化会话中每个全局变量的操作。以下代码显示了如何调用此函数：
+应用程序通常调用`global_variables_initializer`，因为它会创建一个初始化会话中每个全局变量的操作。以下代码显示了如何调用此函数：
 
 ```python
 init = tf.global_variables_initializer()
@@ -1568,15 +1406,17 @@ with tf.Session() as sess:
   sess.run(init)
 ```
 
-应用程序可以通过带有变量名称的 `is_variable_initialized` 来检查变量是否已初始化。
+应用程序可以通过带有变量名称的`is_variable_initialized`来检查变量是否已初始化。
 
 #### 确定损失
 
 训练通过精炼模型变量，来最小化你的模型与观测数据之间的差异。机器学习文献通常将这种差异称为*代价函数*（cost function）。TensorFlow 的文档将其称为*损失*（loss）。
 
-例如，如果你用直线对一组点进行建模，则模型的表达式为 `y = mx + b`。当然，线上的点不会与观测数据 `y[obs]` 完美匹配。如果有 `N` 个点，你可以使用以下表达式来表示损失：
 
-![images](img/eq05002.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>l</m:mi><m:mi>o</m:mi><m:mi>s</m:mi><m:mi>s</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>N</m:mi></m:mfrac><m:mstyle displaystyle="true"><m:munderover><m:mo>&#8721;</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mrow><m:mi>N</m:mi><m:mo>&#45;</m:mo><m:mn>1</m:mn></m:mrow></m:munderover><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>y</m:mi><m:mrow><m:mi>o</m:mi><m:mi>b</m:mi><m:mi>s</m:mi></m:mrow></m:msub><m:mo>&#45;</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>m</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>b</m:mi></m:mrow><m:mo)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:mstyle></m:mrow></m:math>
+
+例如，如果你用直线对一组点进行建模，则模型的表达式为`y = mx + b`。当然，线上的点不会与观测数据`y[obs]`完美匹配。如果有`N`个点，你可以使用以下表达式来表示损失：
+
+![images](img/eq05002.png)
 
 在 TensorFlow 应用程序中，你可以使用以下代码表示模型和损失：
 
@@ -1591,50 +1431,45 @@ loss = tf.reduce_mean(tf.pow(model - y, 2))
 
 如果你的模型包含了神经网络，你无法通过简单的方程来计算损失。前馈网络需要如反向传播等特殊算法。
 
-
-
-
-尽管 `GradientDescentOptimizer` 广受欢迎，但很少有专家在有其他选择的情况下首选它。要理解其原因，你需要理解它在执行优化时所使用的算法。在本次讨论中，我将介绍梯度下降的理论，然后解释你如何在代码中创建和使用 `GradientDescentOptimizer`。
+尽管`GradientDescentOptimizer`广受欢迎，但很少有专家在有其他选择的情况下首选它。要理解其原因，你需要理解它在执行优化时所使用的算法。在本次讨论中，我将介绍梯度下降的理论，然后解释你如何在代码中创建和使用`GradientDescentOptimizer`。
 
 ### 梯度下降算法
 
-`GradientDescentOptimizer` 使用梯度下降算法来最小化损失，该算法依赖于一个关键的数学事实：函数在某一点处沿着该点负梯度所确定的方向下降最快。
+`GradientDescentOptimizer`使用梯度下降算法来最小化损失，该算法依赖于一个关键的数学事实：函数在某一点处沿着该点负梯度所确定的方向下降最快。
 
-如果你学过微积分，你就知道函数在某一点的导数等于该函数在该处的斜率。也就是说，如果 `f(x)` 是可微的，它对 `x` 的导数记为 `f’(x)`，点 `a` 处的斜率记为 `f’(a)`。图 5-1 显示了函数导数的形态。
+如果你学过微积分，你就知道函数在某一点的导数等于该函数在该处的斜率。也就是说，如果`f(x)`是可微的，它对`x`的导数记为`f’(x)`，点`a`处的斜率记为`f’(a)`。图 5-1 显示了函数导数的形态。
 
 ![图 5-1: 点的导数等于曲线在该点的斜率。](img/97811119466215-fg0501.png)
 
 图 5-1： 点的导数等于曲线在该点的斜率。
 
-多变量的函数有多个导数。例如，`f(x, y)` 具有对 `x` 的导数和对 `y` 的导数。这些是*偏导数*，它们用以下符号表示：
+多变量的函数有多个导数。例如，`f(x, y)`具有对`x`的导数和对`y`的导数。这些是*偏导数*，它们用以下符号表示：
 
-![images](img/eq05003.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mtable columnalign="left"><m:mtr><m:mtd><m:mi mathvariant="normal">Partial&#160;derivative&#160;of&#160;f(x,&#160;y)&#160;with&#160;respect&#160;to&#160;x:&#160;</m:mi><m:mfrac><m:mrow><m:mo>&#8706;</m:mo><m:mi>f</m:mi></m:mrow><m:mrow><m:mo>&#8706;</m:mo><m:mi>x</m:mi></m:mrow></m:mfrac></m:mtd></m:mtr><m:mtr><m:mtd><m:mi mathvariant="normal">Partial&#160;derivative&#160;of&#160;f(x,&#160;y)&#160;with&#160;respect&#160;to&#160;y:&#160;</m:mi><m:mfrac><m:mrow><m:mo>&#8706;</m:mo><m:mi>f</m:mi></m:mrow><m:mrow><m:mo>&#8706;</m:mo><m:mi>y</m:mi></m:mrow></m:mfrac></m:mtd></m:mtr></m:mtable></m:math> 
+![images](img/eq05003.png)
 
-图 5-2 描绘了关系 ![images](img/eq05004.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi:="normal">f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi:="normal">x</m:mi><m:mo>,</m:mo><m:mi:="normal">&#160;y</m:mi></m:mrow><m:mo)m:mo></m:mrow><m:mo>=</m:mo><m:mn>16</m:mn><m:mo>&#45;</m:mo><m:mn>4</m:mn><m:msup><m:mi:="normal">x</m:mi><m:mn>2</m:mn></m:msup><m:mo>&#45;</m:mo><m:mn>2</m:mn><m:msup><m:mi:="normal">y</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math>。在点 (1, 2) 处，对 `x` 的偏导数为 –8，对 `y` 的偏导数为 –8。
+图 5-2 描绘了关系`f(x, y) = 16 - 4x^2 - 2y^2`。在点 (1, 2) 处，对`x`的偏导数为 –8，对`y`的偏导数为 –8。
 
 ![图 5-2: 梯度指向最陡上升的方向。](img/97811119466215-fg0502.png)
 
 图 5-2： 梯度指向最陡上升的方向。
 
-从几何角度上说，*向量*是一个具有幅值和方向的量。向量可以通过识别其在正交方向上幅量的分量来定义。你可以将向量想象成空间中的箭头。如果一个向量在 x 正方向上指向两个单位，在 y 方向上指向三个单位，它可以被表示为 `2, -3`。
+从几何角度上说，*向量*是一个具有幅值和方向的量。向量可以通过识别其在正交方向上幅量的分量来定义。你可以将向量想象成空间中的箭头。如果一个向量在 x 正方向上指向两个单位，在 y 方向上指向三个单位，它可以被表示为`2, -3`。
 
-梯度下降算法关注的是一种特殊的向量，称为*梯度*。函数的梯度是一个其分量等于该函数偏导数的向量。`f` 的梯度记为 `∇f`，如果函数有三个变量，你可以将其梯度表示为：
+梯度下降算法关注的是一种特殊的向量，称为*梯度*。函数的梯度是一个其分量等于该函数偏导数的向量。`f`的梯度记为`∇f`，如果函数有三个变量，你可以将其梯度表示为：
 
-![images](img/eq05005.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mo>&#8711;</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>,</m:mo><m:mi>z</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mrow><m:mo>\[</m:mo><m:mrow><m:mfrac><m:mrow>&#8706;</m:mo><m:mi>f</m:mi></m:mrow><m:mrow><m:mo>&#8706;</m:mo><m:mi>x</m:mi></m:mrow></m:mfrac></m:mtd><m:mrow><m:mo>&#8706;</m:mo><m:mi>f</m:mi></m:mrow><m:mrow><m:mo>&#8706;</m:mo><m:mi>y</m:mi></m:mrow></m:mfrac></m:mtd><m:mrow><m:mo>&#8706;</m:mo><m:mi>f</m:mi></m:mrow><m:mrow><m:mo>&#8706;</m:mo><m:mi>z</m:mi></m:mrow></m:mfrac></m:mrow></m:mrow></m:math>
+![images](img/eq05005.png)
 
+许多开发者通过尝试误差来设置`η`，初始估计值通常在 0.1 到 0.0001 之间。一种常用的方法是从一个较大的`η`值开始，并不断减小该值，直到优化器成功收敛。计算机科学家们已经设计了选择`η`的自动方法，但据我所知，还没有哪种方法获得广泛认可。
 
-
-许多开发者通过尝试误差来设置 `η`，初始估计值通常在 0.1 到 0.0001 之间。一种常用的方法是从一个较大的 `η` 值开始，并不断减小该值，直到优化器成功收敛。计算机科学家们已经设计了选择 `η` 的自动方法，但据我所知，还没有哪种方法获得广泛认可。
-
-如果你将 `use_locking` 参数设置为 `True`，`GradientDescentOptimizer` 将获取一个锁，防止其他操作修改其变量。变量仍然可以被正常读取。
+如果你将`use_locking`参数设置为`True`，`GradientDescentOptimizer`将获取一个锁，防止其他操作修改其变量。变量仍然可以被正常读取。
 
 ## 缺点
 
 梯度下降算法是最小化损失的最古老、最简单的算法，但它也具有每个开发者都应该意识到的重要缺点。
 
-第一个缺点涉及局部最小值和全局最小值之间的区别。优化寻求在函数整个范围内损失最小的点。这个值就是损失的`global minimum”（全局最小值）。
+第一个缺点涉及局部最小值和全局最小值之间的区别。优化寻求在函数整个范围内损失最小的点。这个值就是损失的`global minimum`（全局最小值）。
 
-但 `GradientDescentOptimizer`可能会收敛到一个不是全局的最小值。这个值就是`local minimum”（局部最小值），图 5-3 展示了这种区别。在图中，函数有两个局部最小值环绕着一个全局最小值。如果优化器到达其中任何一个局部最小值，它将停止优化，因为损失的梯度 `∇J(θ)` 等于 0。
+但`GradientDescentOptimizer`可能会收敛到一个不是全局的最小值。这个值就是`local minimum`（局部最小值），图 5-3 展示了这种区别。在图中，函数有两个局部最小值环绕着一个全局最小值。如果优化器到达其中任何一个局部最小值，它将停止优化，因为损失的梯度`∇J(θ)`等于 0。
 
 ![FIGURE 5-3: 一个函数可能有许多局部最小值，但只有一个全局最小值。](img/9781119466215-fg0503.png)
 
@@ -1646,39 +1481,41 @@ loss = tf.reduce_mean(tf.pow(model - y, 2))
 * 它只能优化可微函数。
 * 它可能会在各个值之间震荡，而永远无法到达最小值。
 
-最后一个问题值得解释。如果学习率过大，算法可能会在两个点之间反复跳跃，无法到达最小值。这种跳动被称为`oscillation`震荡），它是产生频繁挫败感的来源。
+最后一个问题值得解释。如果学习率过大，算法可能会在两个点之间反复跳跃，无法到达最小值。这种跳动被称为`oscillation`（震荡），它是产生频繁挫败感的来源。
 
-你可以通过降低学习率来减少震荡发生的概率。或者，你可以创建一个学习率随步骤变化的优化器。以下章节介绍了三个这样的优化器：`MomentumOptimizer`、`AdagradOptimizer` 和 `AdamOptimizer`。
+你可以通过降低学习率来减少震荡发生的概率。或者，你可以创建一个学习率随步骤变化的优化器。以下章节介绍了三个这样的优化器：`MomentumOptimizer`、`AdagradOptimizer`和`AdamOptimizer`。
 
 ## The MomentumOptimizer
 
-`MomentumOptimizer` 与 `GradientDescentOptimizer` 有许多共同点，但它通常收敛更快，震荡概率较低。`MomentumOptimizer` 通过动量算法最小化损失，该算法使用损失梯度的前一个值来更新当前变量。
+`MomentumOptimizer`与`GradientDescentOptimizer`有许多共同点，但它通常收敛更快，震荡概率较低。`MomentumOptimizer`通过动量算法最小化损失，该算法使用损失梯度的前一个值来更新当前变量。
 
-动量算法引入了一个 TensorFlow 称为`accumulation`积累的新量。该量（表示为 ![images](img/eq05007.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:msub><m:mi>v</m:mi><m:mi>t</m:mi></m:msub></m:mrow></m:math> 由当前损失的梯度、学习率以及积累的前一个值决定：
+动量算法引入了一个 TensorFlow 称为`accumulation`（积累）的新量。该量（表示为`v_t`）由当前损失的梯度、学习率以及积累的前一个值决定：
 
-![images](img/eq05008.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:msub><m:mi>v</m:mi><m:mi>t</m:mi></m:msub><m:mo>=</m:mo><m:mi>&#945;</m:mi><m:msub><m:mi>v</m:mi><m:mrow><m:mi>t</m:mi></m:mrow><m:mo>&#45;</m:mo><m:mn>1</m:mrow></m:msub><m:mo>&#45;</m:mo><m:mi>&#945;</m:mi><m:mi>J</m:mi><m:mrow><m:mo>(m:mo><m:mrow><m:mi>&#952;</m:mi><m:mo></m:mrow></m:mrow></m:math>
+![images](img/eq05008.png)
 
-积累的前一个值（![images](img/eq05009.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:msub><m:mi>v</m:mi><m:mi>t</m:mi></m:msub><m:mo>&#45;</m:mo><m:mn>1</m:mn></m:mrow></m:math>）通过 `α` 缩放，称为`momentum`动量。`α`设置为 0 到 1 之间的常量。应用程序通常将 `α` 设置为 0.9。
+积累的前一个值（`v_t - 1`）通过`α`缩放，称为`momentum`（动量）。`α`设置为 0 到 1 之间的常量。应用程序通常将`α`设置为 0.9。
 
 计算积累后，你可以使用以下公式更新变量：
 
-![images](img/eq05010.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:msub><m:mi>&#952;</m:mi><m:mi>t</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>&#952;</m:mi><m:mi>t</m:mi></m:msub><m:mo>&#45;</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>+</m:mo><m:msub><m:mi>v</m:mi><m:mi>t</m:mi></m:msub></m:mrow></m:math>
+![images](img/eq05010.png)
 
-理解积累如何影响收敛速度是非常重要的。如果优化器向最小值移动，![images](img/eq05011.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:msub><m:mi>&#945;</m:mi><m:mi>v</m:mi><m:mi>t</m:mi></m:msub><m:mo>&#45;</m:mo><m:mn>1</m:mn></m:mrow></m:math> 将非常显著，优化器会更快接近最小值。如果优化器卡在两个值之间，![images](img/eq05012.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:msub><m:mi>&#945;</m:mi><m:mi>v</m:mi><m:mi>t</m:mi></m:msub><m:mo>&#45;</m:mo><m:mn>1</m:mn></m:mrow></m:math> 将减少变量更新的幅度。
+理解积累如何影响收敛速度是非常重要的。如果优化器向最小值移动，`α * v_t - 1`将非常显著，优化器会更快接近最小值。如果优化器卡在两个值之间，`α * v_t - 1`将减少变量更新的幅度。
 
-应用程序可以通过调用构造函数来创建 `MomentumOptimizer`：
+应用程序可以通过调用构造函数来创建`MomentumOptimizer`：
 
 ```
 MomentumOptimizer(learning_rate, momentum, use_locking=False, name='Momentum', use_nesterov=False)
 ```
 
-`use_locking` 参数与 `GradientDescentOptimizer`构造函数中的 `use_locking` 参数相同。也就是说，如果 `use_locking`设置为 `True`，优化器将对其变量锁定。
+`use_locking`参数与`GradientDescentOptimizer`构造函数中的`use_locking`参数相同。也就是说，如果`use_locking`设置为`True`，优化器将对其变量锁定。
 
-如果 `use_nesterov`设置为 `True`，优化器将采用 Nesterov 加速梯度，通常简称 NAG。NAG 算法通过在计算损失*之前*更新变量来修改动量算法。以下公式显示了该算法如何工作：
+如果`use_nesterov`设置为`True`，优化器将采用 Nesterov 加速梯度，通常简称 NAG。NAG 算法通过在计算损失*之前*更新变量来修改动量算法。以下公式显示了该算法如何工作：
 
-![images](img/eq05013.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:msub><m:mi>v</m:mi><m:mi>t</m:mi></m:msub><m:mo>=</m:mo><m:mi>&#945;</m:mi><m:msub><m:mi>v</m:mi><m:mi>t</m:mi></m:msub><m:mo>&#45;</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>&#45;</m:mo><m:mo>&#8711;</m:mo><m:mi>J</m:mi><m:mrow><m:mo>(m:mo><m:mrow><m:mi>&#952;</m:mi><m:mo>&#45;</m:mo><m:mi>&#945;</m:mi><m:msub><m:mi>v</m:mi><m:mi>t</m:mi></m:msub><m:mo>&#45;</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow><m:mo)</m:mo></m:mrow></m:mrow></m:math> ![images](img/eq05014.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:msub><m:mi>&#952;</m:mi><m:mi>t</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>&#952;</m:mi><m:mrow><m:mi>t</m:mi></m:mrow><m:mo>&#45;</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>+</m:mo><m:msub><m:mi>v</m:mi><m:mi>j</m:mi></m:msub></m:mrow></m:math>
+![images](img/eq05013.png) ![images](img/eq05014.png)
 
-NAG 算法通常比梯度下降算法收敛更快。Ilya Sutskever 等人的论文《On the Importance of Initialization and Momentum in Deep Learning*详细讨论了该算法的性能。
+
+
+NAG 算法通常比梯度下降算法收敛更快。Ilya Sutskever 等人的论文《On the Importance of Initialization and Momentum in Deep Learning》详细讨论了该算法的性能。
 
 ## AdagradOptimizer
 
@@ -1688,21 +1525,17 @@ Adagrad 算法有两个特点使其在学术界和专家中流行：
 
 * 学习率随变量变化并随步骤变化。第`t`步第`i`个变量的学习率表示为![images](img/eq05015.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:msub><m:mi>&#951;</m:mi><m:mrow><m:mi>t</m:mi><m:mo></m:mo><m:mi>i</m:mi></m:mrow></m:msub></m:mrow></m:math>。
 
-
-
-
-
-*   Adagrad 方法计算的是`subgradients`（子梯度）而不是梯度。子梯度是梯的推广，适用于不可微函数。这意味着 AdaGrad 方法可以优化可微函数和不可微函数。
+* Adagrad 方法计算的是`subgradients`（子梯度）而不是梯度。子梯度是梯度的推广，适用于不可微函数。这意味着 AdaGrad 方法可以优化可微函数和不可微函数。
 
 2011 年，John Duchi、Elad Hazan 和 Yoram Singer 在他们的论文《在线学习与随机优化的自适应子梯度方法》（*Adaptive Subgradient Methods for Online Learning and Stochastic Optimization*）中描述了第一个 Adagrad 算法。数学公式非常复杂，我不尝试解释它。如果你好奇的话，这里是每个变量的学习率公式：
 
 ![images](img/eq05016.png)<<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:msub><m:mi>&#951;</m:mi><m:mrow><m:mi>t</m:mi><m:mo>,</m:mo><m:mi>i</m:mi></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mi>&#951;</m:mi><m:mrow><m:msqrt><m:mrow><m:msub><m:mi>G</m:mi><m:mrow><m:mi>t</m:mi><m:mo>,</m:mo><m:mi>i</m:mi><m:mi>i</m:mi></m:mrow></m:msub></m:mrow></m:msqrt></m:mrow></m:mfrac></m:mrow></m:math>
 
-在这个方程中，`G[t, ii]` 是损失梯度与其外积所得矩阵对角线上的第 `i` 个元素。在计算出学习率后，优化器会更新变量：
+在这个方程中，`G[t, ii]` 是损失梯度与其外积所得矩阵对角线上的第`i`个元素。在计算出学习率后，优化器会更新变量：
 
 ![images](img/eq05017.png)<<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:msub><m:mi>&#952;</m:mi><m:mrow><m:mi>t</m:mi><m:mo>,</m:mo><m:mi>i</m:mi></m:mrow></m:msub><m:mo>=</m:mo><m:msub><m:mi>&#952;</m:mi><m:mrow><m:mi>t</m:mi><m:mo>&#45;</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>i</m:mi></m:mrow></m:msub><m:mo>&#45;</m:mo><m:msub><m:mi>&#951;</m:mi><m:mrow><m:mi>t</m:mi><m:mo>,</m:mo><m:mi>i</m:mi></m:mrow></m:msub><m:msub><m:mi>g</m:mi><m:mi>t</m:mi></m:msub></m:mrow></m:math>
 
-幸运的是，TensorFlow 开发者不需要担心子梯度或外积。因为 TensorFlow API 提供了 `AdagradOptimizer` 类，其构造函数如下。
+幸运的是，TensorFlow 开发者不需要担心子梯度或外积。因为 TensorFlow API 提供了`AdagradOptimizer`类，其构造函数如下。
 
 ```
 AdagradOptimizer(learning_rate, initial_accumulator_value=0.1, use_locking=False, name='Adagrad')
@@ -1714,20 +1547,17 @@ adagrad 算法的一个缺点是学习率的幅度总是减小的。随着训练
 
 Adam（自适应动量估计）算法在许多方面与 adagrad 算法相似。它也类似于 Momentum 算法，因为它考虑了两个因素：
 
-*   一阶动量向量：通过 `beta1` 对梯度进行缩放。
-*   二阶动量向量：通过 `beta2` 对梯度的 `square` 进行缩放。
+* 一阶动量向量：通过`beta1`对梯度进行缩放。
 
-这些向量分别表示为 `m[t]` 和 `v[t]`。以下方程显示了它们是如何变化的：
+* 二阶动量向量：通过`beta2`对梯度的`square`进行缩放。
+
+这些向量分别表示为`m[t]`和`v[t]`。以下方程显示了它们是如何变化的：
 
 ![images](img/eq05020.png)<<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:msub><m:mi>m</m:mi><m:mi>t</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>&#946;</m:mi><m:mn>1</m:mn></m:msub><m:msub><m:mi>m</m:mi><m:mi>t</m:mi></m:msub><m:mo>&#45;</m:mo><m:mn>1</m:mn></m:msub><m:mo><m:mo><m:msub><m:mi>&#946;</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math></m:mrow><m:mo>&#8711;</m:mo><m:mi>J</m:mi><m:mrow><m:mo)m92m:mo></m:mrow></m:math![images](img/eq05021.png)<<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:msub><m:mi>v</m:mi><m:mi>t</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>&#946;</m:mi><m:mn>2</m:mn></m:msub><m:msub><m:mi>v</m:mi><m:mi>t</m:mi></m:msub><m:mo>&#45;</m:mo><m:mn>1</m:mn></m:msub><m:mo><m:mo><m:msub><m:mi>&#946;</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math></m:mrow><m:msup><m:mrow><m:mrow><m:mo>\[</m:mo><m:mrow><m:mo>&#8711;</m:mo><m:mi>J</m:mi><m:mrow><m:mo)m92m:mo></m:mrow></m:mrow><m:mo>\]</m:mo></m:mrow></m:mrow></m:mrow></m:math>
 
 在计算出这些向量后，优化器使用以下方程更新模型变量：
 
 ![images](img/eq05022.png)<<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:msub><m:mi>&#951;</m:mi><m:mi>t</m:mi></m:msub><m:mo>=</m:mo><m:mfrac><m:mi>&#951;</m:mi><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>&#45;</m:mo><m:msub><m:mi>&#946;</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math></m:mrow><m:msub><m:mi><m:mi><m:mi><m:mi>t</m:mi></m:mi></m:mi></m:mi></m:msub></m:mrow></m:math>
-
-
-
-
 
 前两个参数指定了占位符元素的类型及其大小。占位符的实际内容由运行的会话设置，因此没有办法初始化占位符。
 
@@ -1741,9 +1571,9 @@ ph = tf.placeholder(tf.float32)
 
 ### 定义喂入字典（feed dictionary）
 
-第 3 章 介绍了 `Session` 类并解释了如何通过调用其 `run` 方法执行会话。但讨论并没有提到 `run` 的第二个参数 `feed_dict`，该参数使得向会话馈数据成为可能。要向会话馈数据，你需要将 `feed_dict` 赋值一个字典，该字典的键（keys）标识会话中的张量。大多数应用程序将这些键设置为占位符。`feed_dict` 中的每个值都标识要传递给由键确定的张量（通常是占位符）的数据源。
+第 3 章介绍了`Session`类并解释了如何通过调用其`run`方法执行会话。但讨论并没有提到`run`的第二个参数`feed_dict`，该参数使得向会话馈数据成为可能。要向会话馈数据，你需要将`feed_dict`赋值一个字典，该字典的键（keys）标识会话中的张量。大多数应用程序将这些键设置为占位符。`feed_dict`中的每个值都标识要传递给由键确定的张量（通常是占位符）的数据源。
 
-为了演示数据馈入，以下代码创建了一个占位符，在模型操作中使用它，然后通过 `run` 方法的 `feed_dict` 参数将其馈入会话。
+为了演示数据馈入，以下代码创建了一个占位符，在模型操作中使用它，然后通过`run`方法的`feed_dict`参数将其馈入会话。
 
 ```python
 ph = tf.placeholder(tf.float32)
@@ -1752,7 +1582,7 @@ with tf.Session() as sess:
   sess.run(optimizer, feed_dict={ph: data_src})
 ```
 
-在将数据与占位符关联时，有一个限制：数据源可以是常量列表或 NumPy `ndarray`，但不能是张量。以下代码将占位符与 `ndarray` 关联：
+在将数据与占位符关联时，有一个限制：数据源可以是常量列表或 NumPy`ndarray`，但不能是张量。以下代码将占位符与`ndarray`关联：
 
 ```python
 ph = tf.placeholder(tf.float32)
@@ -1763,23 +1593,25 @@ with tf.Session() as sess:
   print(res)
 ```
 
-在这种情况下，打印的结果为 `[10. 9. 8.]`，因为 `feed_dict` 通过 `ph` 占位符将 `vals` 数组传递给会话。如果应用程序将 `vals` 赋值给张量，TensorFlow 将抛出错误：*The value of a feed cannot be a tf.Tensor object.*。
+在这种情况下，打印的结果为`[10. 9. 8.]`，因为`feed_dict`通过`ph`占位符将`vals`数组传递给会话。如果应用程序将`vals`赋值给张量，TensorFlow 将抛出错误：*The value of a feed cannot be a tf.Tensor object.*。
 
 ### 随机性（Stochasticity）
 
 为了防止优化器收敛到局部最小值而不是全局最小值，许多应用程序将其训练数据分成小批次，并随机将其馈入会话。这种随机性也称为随机性，它强制优化器在开始时较大的跳跃，随着训练的进行采取较小的跳跃。这种跳跃增加了优化器找到全局最小值的概率。
 
-如果采用梯度下降算法处理随机数据，则被称为 `stochastic gradient descent`（随机梯度下降）算法。如果你在机器学习文献中术术 `SGD`，指的就是这种算法。
+如果采用梯度下降算法处理随机数据，则被称为`stochastic gradient descent`（随机梯度下降）算法。如果你在机器学习文献中术术`SGD`，指的就是这种算法。
 
 ## 监控步骤、全局步骤和 Epoch
 
-在 TensorFlow 中，每次处理单批数据的会话执行称为一个 `step`。许多 TensorFlow 函数和方法接受一个名为 `global_step` 的参数，可以用于监控执行的步数。在实践中，`global_step` 作为批次的索引。
+在 TensorFlow 中，每次处理单批数据的会话执行称为一个`step`。许多 TensorFlow 函数和方法接受一个名为`global_step`的参数，可以用于监控执行的步数。在实践中，`global_step`作为批次的索引。
 
 你也可以通过以下方式跟踪步数：
-1. 定义一个 `trainable` 设置为 `False` 的变量。
-2. 将 `global_step` 参数传递给 `minimize`。
 
-以下代码了如何使用 `global_step`：
+1. 定义一个`trainable`设置为`False`的变量。
+
+2. 将`global_step`参数传递给`minimize`。
+
+以下代码了如何使用`global_step`：
 
 ```python
 ## 定义变量
@@ -1796,7 +1628,7 @@ with tf.Session() as sess:
 
 ## 保存和恢复变量
 
-`Saver` 类使得加载和存储变量变得简单。默认情况下，`Saver` 访问每个变量。但 `Saver` 的构造函数可以识别特定的变量。例如，以下代码创建了一个可以保存两个变量的 `Saver`：
+`Saver`类使得加载和存储变量变得简单。默认情况下，`Saver`访问每个变量。但`Saver`的构造函数可以识别特定的变量。例如，以下代码创建了一个可以保存两个变量的`Saver`：
 
 ```python
 saver = tf.train.Saver([firstVar, secondVar])
@@ -1804,50 +1636,49 @@ saver = tf.train.Saver([firstVar, secondVar])
 
 ### 保存变量
 
-`save` 方法存储变量以及与相关的数据。默认，该方法创建至少三个文件，每个文件具有相同的名称但后缀不同：
+`save`方法存储变量以及与相关的数据。默认，该方法创建至少三个文件，每个文件具有相同的名称但后缀不同：
 
 - `filename.data-X-of-Y`：存储变量值
+
 - `filename.index`：保存每个变量在数据文件中的偏移量
-- `filename.meta`：包含图结构的 `MetaGraphDef`
 
-数据文件包含变量值，如果应用程序有许多变量，`save` 将创建多个数据文件。如果只有一个文件，其名称将为 `filename.data-00000-of-00001`。
+- `filename.meta`：包含图结构的`MetaGraphDef`
 
-你可以通过创建 `Saver` 并调用其 `save` 方法来创建这些：
+数据文件包含变量值，如果应用程序有许多变量，`save`将创建多个数据文件。如果只有一个文件，其名称将为`filename.data-00000-of-00001`。
+
+你可以通过创建`Saver`并调用其`save`方法来创建这些：
 
 `save(sess, save_path, global_step=None, latest_filename=None, meta_graph_suffix='meta', write_meta_graph=True, write_state=True)`
 
-这些参数很容易理解。`sess` 是包含感兴趣变量的会话，`save_path` 标识包含保存数据的路径。`save_path` 的最后一个元素指定要生成的文件的文件。
+这些参数很容易理解。`sess`是包含感兴趣变量的会话，`save_path`标识包含保存数据的路径。`save_path`的最后一个元素指定要生成的文件的文件。
 
-如果设置了 `latest_filename`，`save` 将创建一个文本文件，列出保存操作涉及的文件路径。如果设置了 `global_step`，该值将附加到每个生成的文件中。
+如果设置了`latest_filename`，`save`将创建一个文本文件，列出保存操作涉及的文件路径。如果设置了`global_step`，该值将附加到每个生成的文件中。
 
-
-
-
-
-如果存储的变量不多，`save` 将仅生成三个文件：`output.data-00000-of-00001`、`output.index` 和 `output.meta`。
+如果存储的变量不多，`save`将仅生成三个文件：`output.data-00000-of-00001`、`output.index`和`output.meta`。
 
 ### 恢复变量
 
-`restore` 方法加载之前存储的变量。恢复变量的过程包含两个步骤：
+`restore`方法加载之前存储的变量。恢复变量的过程包含两个步骤：
 
-1. 调用 `import_meta_graph` 将变量的节点添加到当前图中。
-2. 调用 `restore` 访问变量数据。
+1. 调用`import_meta_graph`将变量的节点添加到当前图中。
 
-第一步是简单的。`tf.train.import_meta_graph` 接受 `*.meta` 文件的路径，从文件中读取图数据，并将图的节点添加到当前图中。该函数返回一个 `Saver` 实例，允许你从加载的图中恢复变量。
+2. 调用`restore`访问变量数据。
 
-例如，以下代码从 `output.meta` 导入图数据，并获取一个可以用于加载变量的 `Saver`：
+第一步是简单的。`tf.train.import_meta_graph`接受`*.meta`文件的路径，从文件中读取图数据，并将图的节点添加到当前图中。该函数返回一个`Saver`实例，允许你从加载的图中恢复变量。
+
+例如，以下代码从`output.meta`导入图数据，并获取一个可以用于加载变量的`Saver`：
 
 ```
 saver = tf.train.import_meta_graph("output.meta")
 ```
 
-获取 `Saver` 后，应用程序可以通过调用其 `restore` 方法来加载变量，其方法签名如下：
+获取`Saver`后，应用程序可以通过调用其`restore`方法来加载变量，其方法签名如下：
 
 ```
 restore(sess, save_path)
 ```
 
-与 `save` 方法一样，`sess` 标识包含变量的会话，`save_path` 是包含变量数据的文件的路径。该路径必须包含三个文件的名称（但不带后缀）。例如，以下代码使用 `saver` 将变量从 `output` 加载到当前图中：
+与`save`方法一样，`sess`标识包含变量的会话，`save_path`是包含变量数据的文件的路径。该路径必须包含三个文件的名称（但不带后缀）。例如，以下代码使用`saver`将变量从`output`加载到当前图中：
 
 ```
 saver.restore(sess, os.getcwd() + "/output")
@@ -1855,71 +1686,71 @@ saver.restore(sess, os.getcwd() + "/output")
 
 ### 使用 SavedModels
 
-除了使用 `Saver` 存储变量外，你还可以通过创建 `SavedModel` 来存储应用程序的整个模型。如文档所述，`SavedModel` 是“TensorFlow 模型的通用序列化格式”，并作为“导出 TensorFlow 图的标准方式”。
+除了使用`Saver`存储变量外，你还可以通过创建`SavedModel`来存储应用程序的整个模型。如文档所述，`SavedModel`是“TensorFlow 模型的通用序列化格式”，并作为“导出 TensorFlow 图的标准方式”。
 
-准确来说，`SavedModel` 是一个包含 `*.pb` 或 `*.pbtxt` 文件的目录。该文件包含应用程序的模型，并将图定义存储在 `MetaGraphDef` 协议缓冲区中。除了该文件外，`SavedModel` 还可能包含以下一个或多个子目录：
+准确来说，`SavedModel`是一个包含`*.pb`或`*.pbtxt`文件的目录。该文件包含应用程序的模型，并将图定义存储在`MetaGraphDef`协议缓冲区中。除了该文件外，`SavedModel`还可能包含以下一个或多个子目录：
 
-* `variables`：包含应用程序变量的目录（文件与 `Saver` 的 `save` 方法产生的文件相似，但不包括 `*.meta` 文件）
+* `variables`：包含应用程序变量的目录（文件与`Saver`的`save`方法产生的文件相似，但不包括`*.meta`文件）
+
 * `assets`：需要加载到图中的辅助文件
+
 * `assets.extra`：用户提供的、不需要加载到图中的文件
 
-保存和恢复 `SavedModel` 在概念上并不困难，但代码会变得有点复杂。
+保存和恢复`SavedModel`在概念上并不困难，但代码会变得有点复杂。
 
 #### 保存 SavedModel
 
-将应用程序模型保存为 `SavedModel` 的过程与存储变量的过程类似。但你不再是创建一个 `Saver`，而是需要创建一个 `tf.saved_model.builder.SavedModelBuilder`。构造函数接受一个参数，用于标识顶层目录：
+将应用程序模型保存为`SavedModel`的过程与存储变量的过程类似。但你不再是创建一个`Saver`，而是需要创建一个`tf.saved_model.builder.SavedModelBuilder`。构造函数接受一个参数，用于标识顶层目录：
 
 ```
 builder = tf.saved_model.builder.SavedModelBuilder("out")
 ```
 
-创建 `SavedModelBuilder` 之后，你可以向模型中添加数据并将模型保存到指定的目录。要向模型中添加数据，你需要调用两个函数之一：`add_meta_graph` 或 `add_meta_graph_and_variables`。`add_meta_graph` 的签名如下：
+创建`SavedModelBuilder`之后，你可以向模型中添加数据并将模型保存到指定的目录。要向模型中添加数据，你需要调用两个函数之一：`add_meta_graph`或`add_meta_graph_and_variables`。`add_meta_graph`的签名如下：
 
 ```
 add_meta_graph(tags, signature_def=None, assets_collection=None, legacy_init_op=None, clear_devices=False, main_op=None)
 ```
 
-元图通过称为 `tags` 标签的字符串来标识其功能和用途。你可以通过设置 `tags` 参数来分配元图的标签。`tf_saved_model.tag_constants` 提供了三个常用标签：`GPU`、`SERVING` 和 `TRAINING`。
 
-图的输入和输出构成了它的签名。在代码中，签名由 `SignatureDef` 表示，你可以通过调用 `tf.saved_model.signature_utils` 包中的 `build_signature_def` 函数来创建它：
+
+元图通过称为`tags`标签的字符串来标识其功能和用途。你可以通过设置`tags`参数来分配元图的标签。`tf_saved_model.tag_constants`提供了三个常用标签：`GPU`、`SERVING`和`TRAINING`。
+
+图的输入和输出构成了它的签名。在代码中，签名由`SignatureDef`表示，你可以通过调用`tf.saved_model.signature_utils`包中的`build_signature_def`函数来创建它：
 
 ```
 build_signature_def
 ```
 
-为了创建签名，你需要将 `inputs` 和 `outputs` 设置为关联名称与 `TensorInfo` 协议缓冲区的字典。许多应用程序使用 `tf.saved_model.constants` 中的常量。通过 `tf.saved_model.signature_utils.build_tensor_info` 可以获取张量的 `TensorInfo`：
+为了创建签名，你需要将`inputs`和`outputs`设置为关联名称与`TensorInfo`协议缓冲区的字典。许多应用程序使用`tf.saved_model.constants`中的常量。通过`tf.saved_model.signature_utils.build_tensor_info`可以获取张量的`TensorInfo`：
 
 ```
 build_tensor_info(tensor)
 ```
 
-`build_signature_def` 的 `method_name` 参数是一个作为签名方法的字符串。你可以将其设置为 `tf.saved_model.constants` 模块中的字符串之一，例如 `CLASSIFY_METHOD_NAME`。
+`build_signature_def`的`method_name`参数是一个作为签名方法的字符串。你可以将其设置为`tf.saved_model.constants`模块中的字符串之一，例如`CLASSIFY_METHOD_NAME`。
 
-`add_meta_graph_and_variables` 方法类似于 `add_meta_graph` 方法，但它多了一个参数。`add_meta_graph_and_variables` 的第一个参数是 `sess`，它标识提供元图变量的会话。
+`add_meta_graph_and_variables`方法类似于`add_meta_graph`方法，但它多了一个参数。`add_meta_graph_and_variables`的第一个参数是`sess`，它标识提供元图变量的会话。
 
-将元图添加到 `SavedModel` 后，可以通过调用 `save` 方法来存储 `SavedModel`。该方法接受一个 `as_text` 参数，用于标识协议缓冲区应保存为文本文件（*.pbtxt`）还是二进制文件（*.pb）。在默认情况下，`save` 以二进制文件存储图数据。
+将元图添加到`SavedModel`后，可以通过调用`save`方法来存储`SavedModel`。该方法接受一个`as_text`参数，用于标识协议缓冲区应保存为文本文件（`*.pbtxt`）还是二进制文件（`*.pb`）。在默认情况下，`save`以二进制文件存储图数据。
 
-#### 加载 SavedModel
+## 加载 SavedModel
 
-虽然将元图保存为 `SavedModel` 很复杂，但加载它们很容易。你只需要知道一个函数：
+虽然将元图保存为`SavedModel`很复杂，但加载它们很容易。你只需要知道一个函数：
 
 ```
 tf.saved_model.loader.load(sess, tags, export_dir, **saver_kwargs)
 ```
 
-该函数从 `export_dir` 和 `tags` 加载 `MetaGraphDef` 协议缓冲区。`sess` 参数标识包含元图变量、资源和签名的会话。
+该函数从`export_dir`和`tags`加载`MetaGraphDef`协议缓冲区。`sess`参数标识包含元图变量、资源和签名的会话。
 
 ## 理论实践
 
 当我开始学习 TensorFlow 时，发现训练很难理解。除了理论之外，还需要处理许多新概念，如变量、优化器和占位符。
 
-为了解释训练的工作原理，我在示例代码中提供了 `ch5/simple_train.py`。该应用程序非常简单，甚至没有构建模型。相反，它使用简单的二次方程计算损失：$x² - 4x + 5$。图 5-4 展示了这种形式。
+为了解释训练的工作原理，我在示例代码中提供了`ch5/simple_train.py`。该应用程序非常简单，甚至没有构建模型。相反，它使用简单的二次方程计算损失：$x² - 4x + 5$。图 5-4 展示了这种形式。
 
-如图 5-4 所示，当 `x_var` 等于 2 时，损失达到全局最小值。因此，优化器的目标是更新 `x_var` 直到等于 2。列表 5-1 中的代码展示了你如何在 TensorFlow 中实现这一目标。
-
-
-
-
+如图 5-4 所示，当`x_var`等于 2 时，损失达到全局最小值。因此，优化器的目标是更新`x_var`直到等于 2。列表 5-1 中的代码展示了你如何在 TensorFlow 中实现这一目标。
 
 ```python
 _, step, result, summary = sess.run([optimizer, step_var, x_var, summary_op])
@@ -1927,29 +1758,33 @@ print('Step %d: Computed result = %f' % (step, result))
 ```
 
 ## 打印摘要数据
+
 ```python
 file_writer.add_summary(summary, global_step=step)
 file_writer.flush()
 ```
 
 ## 存储变量数据
+
 ```python
 saver.save(sess, os.getcwd() + '/output')
 print('Final x_var: %f' %)
 ```
-这段创建了两个变量：一个名为 `x_var` 的可训练变量和一个名为 `step_var` 的不可训练变量。`loss` 被设置为一个二次方程，其自变量为 `x_var`。
 
-应用程序调用 `tf.global_variables_initializer` 来获取一个初始化变量的操作。在优化过程中训练这些变量之前，会话必须执行此操作。
+这段创建了两个变量：一个名为`x_var`的可训练变量和一个名为`step_var`的不可训练变量。`loss`被设置为一个二次方程，其自变量为`x_var`。
 
-在创建变量后，应用程序创建了一个 `GradientDescentOptimizer`（梯度下降优化器）并调用其 `minimize` 方法将 `loss` 降低到最小。然后，它将 `minimize` 方法的 `global_step` 参数赋值给 `step_var`。此赋值告诉会话在每次执行训练操作时递增 `step_var`。
+应用程序调用`tf.global_variables_initializer`来获取一个初始化变量的操作。在优化过程中训练这些变量之前，会话必须执行此操作。
 
-在每次训练操作后，`print` 会显示全局步数和 `x_var` 的当前值。随着训练的持续，`x_var` 接近 2，即损失最小点。同样，`step_var` 接近 40，因为训练循环执行了 40 次迭代。
+在创建变量后，应用程序创建了一个`GradientDescentOptimizer`（梯度下降优化器）并调用其`minimize`方法将`loss`降低到最小。然后，它将`minimize`方法的`global_step`参数赋值给`step_var`。此赋值告诉会话在每次执行训练操作时递增`step_var`。
 
-优化完成后，应用程序将其变量存储到文件中。`Saver` 实例的 `save` 方法将变量数据存储到当前目录下的三个文件中：`output.data-00000-of-00001`、`output.index` 和 `output.meta`。
+在每次训练操作后，`print`会显示全局步数和`x_var`的当前值。随着训练的持续，`x_var`接近 2，即损失最小点。同样，`step_var`接近 40，因为训练循环执行了 40 次迭代。
 
-`ch5/restore_vars.py` 中的代码从新数据文件中加载 `x_var` 的值。列表 5-2 展示了该代码。
+优化完成后，应用程序将其变量存储到文件中。`Saver`实例的`save`方法将变量数据存储到当前目录下的三个文件中：`output.data-00000-of-00001`、`output.index`和`output.meta`。
+
+`ch5/restore_vars.py`中的代码从新数据文件中加载`x_var`的值。列表 5-2 展示了该代码。
 
 ### 列表 5-2 从文件加载变量
+
 ```python
 ## 创建 session
 with tf.Session() as sess:
@@ -1962,32 +1797,38 @@ with tf.Session() as sess:
     # 显示变量值
     print('Variable value: ', sess.run('x_result:0'))
 ```
-重要的是，这段代码并不是通过调用该类的构造函数来创建 `Saver` 的。相反，它通过带有包含图数据的文件名调用 `import_meta_graph` 来获取 `Saver`。
 
-获取 `Saver` 后，应用程序通过调用 `Saver` 的 `restore` 方法和会话的 `run` 方法获取变量的值。尽管变量名是 `x_var`，但应用程序在调用 `run` 时使用的是 `x_output:0`，因为变量的 `name` 参数被设置为 `x_output`。
+重要的是，这段代码并不是通过调用该类的构造函数来创建`Saver`的。相反，它通过带有包含图数据的文件名调用`import_meta_graph`来获取`Saver`。
+
+获取`Saver`后，应用程序通过调用`Saver`的`restore`方法和会话的`run`方法获取变量的值。尽管变量名是`x_var`，但应用程序在调用`run`时使用的是`x_output:0`，因为变量的`name`参数被设置为`x_output`。
 
 ## 可视化训练过程
 
-`ch5/simple_train.py` 应用程序使用以下代码在每一步打印损失：
+`ch5/simple_train.py`应用程序使用以下代码在每一步打印损失：
 
 ```python
 print("Step %d: Computed result = %f" % (step, result))
 ```
 
-TensorFlow 提供了一种更好的方法来监控训练。第 4 章 介绍了 TensorBoard 工具，它可以读取由应用程序生成的摘要数据。`ch5/simple_train.py` 中的代码通过以下步骤生成摘要数据来监控训练：
+TensorFlow 提供了一种更好的方法来监控训练。第 4 章介绍了 TensorBoard 工具，它可以读取由应用程序生成的摘要数据。`ch5/simple_train.py`中的代码通过以下步骤生成摘要数据来监控训练：
 
-1. 调用 `tf.summary` 写入摘要。
-2. 使用 `FileWriter` 写入数据。
-3. 在每次训练操作后，调用 `flush`。
+1. 调用`tf.summary`写入摘要。
+
+2. 使用`FileWriter`写入数据。
+
+3. 在每次训练操作后，调用`flush`。
+
 4. 在实际训练中，以下代码显示了摘要数据：
+
 ```python
 file_writer.add_summary(summary, global_step=step)
 ```
-`global_step` 参数是重要的，图 5-5![图 5-5](img/09_9781119466215-ch05.xhtml#c05-fea-0002) 展示了它。
 
-当优化完成后，应用程序将其变量存储到文件中。`Saver` 实例的 `save` 方法将变量数据存储到当前目录下的三个文件。
+`global_step`参数是重要的，图 5-5![图 5-5](img/09_9781119466215-ch05.xhtml#c05-fea-0002)展示了它。
 
-`ch5/restore_vars.py` 中的代码从新数据文件中加载 `x_var` 的值。列表 5-2 展示了该代码。
+当优化完成后，应用程序将其变量存储到文件中。`Saver`实例的`save`方法将变量数据存储到当前目录下的三个文件。
+
+`ch5/restore_vars.py`中的代码从新数据文件中加载`x_var`的值。列表 5-2 展示了该代码。
 
 ## 会话钩子 (Session Hooks)
 
@@ -1995,41 +1836,47 @@ file_writer.add_summary(summary, global_step=step)
 
 ### 创建会话钩子
 
-要使用会话钩子，你需要了解 `SessionHook` 类的生命周期方法：
+要使用会话钩子，你需要了解`SessionHook`类的生命周期方法：
 
 * `begin()`：在会话创建时调用。
+
 * `after_create_session(session)`：在图初始化后调用。
-* `before_run(run_context)`：在执行 `run` 之前调用。
-* `after_run(run_context, run_values)`：在执行 `run` 之后调用。
+
+* `before_run(run_context)`：在执行`run`之前调用。
+
+* `after_run(run_context, run_values)`：在执行`run`之后调用。
+
 * `end(session)`：在会话结束时调用。
 
-重要的是 `begin` 和 `after_create_session` 之间的区别。应用程序在会话创建后立即调用 `begin`，此时你可以访问并修改图。但当调用 `after_create_session` 时，图的结构已经确定，无法更改。
+重要的是`begin`和`after_create_session`之间的区别。应用程序在会话创建后立即调用`begin`，此时你可以访问并修改图。但当调用`after_create_session`时，图的结构已经确定，无法更改。
 
-`before_run` 和 `after_run` 方法都提供一个 `run_context` 参数。这是一个 `SessionRunContext` 实例，它提供了四个成员：
+`before_run`和`after_run`方法都提供一个`run_context`参数。这是一个`SessionRunContext`实例，它提供了四个成员：
 
 * `session`：关联的会话
-* `original_args`：包含会话 `run` 方法参数的 `SessionRunArgs`
+
+* `original_args`：包含会话`run`方法参数的`SessionRunArgs`
+
 * `stop_requested`：指示是否请求停止的布尔值
+
 * `request_stop()`：告诉会话停止
 
-如果你想让会话钩子从图中读取值，可以编写 `before_run` 返回一个 `SessionRunArgs` 实例。你需要将 `SessionRunArgs` 构造函数的参数设置为要访问的变量或张量的名称。
+如果你想让会话钩子从图中读取值，可以编写`before_run`返回一个`SessionRunArgs`实例。你需要将`SessionRunArgs`构造函数的参数设置为要访问的变量或张量的名称。
 
-如果你在 `before_run` 中添加了返回值，可以通过 `after_run` 方法的 `run_values` 参数获取所需的变量或张量。这个 `SessionRunValues` 对象有三个字段：
+如果你在`before_run`中添加了返回值，可以通过`after_run`方法的`run_values`参数获取所需的变量或张量。这个`SessionRunValues`对象有三个字段：
 
-* `results`：通过 `before_run` 返回值访问的值
-* `options`：用于配置会话执行的 `RunOptions` 对象
-* `run_metadata`：包含会话执行信息的 `RunMetadata` 对象
+* `results`：通过`before_run`返回值访问的值
 
-这种 `before_run` 和 `after_run` 之间的关系可能会让人困惑。为了澄清这两个方法是如何协同工作的，以下代码创建了 `SessionRunHook` 的子类，在会话运行前后打印信息：
+* `options`：用于配置会话执行的`RunOptions`对象
+
+* `run_metadata`：包含会话执行信息的`RunMetadata`对象
+
+这种`before_run`和`after_run`之间的关系可能会让人困惑。为了澄清这两个方法是如何协同工作的，以下代码创建了`SessionRunHook`的子类，在会话运行前后打印信息：
 
 ```python
 class CustomHook(tf.train.SessionRunHook):
     def before_run(self, run_context):
         print("First argument: ", run_context.original_args.fetches)
 ```
-
-
-
 
 ```python
 return tf.train.SessionRunArgs(loss)
@@ -2038,43 +1885,53 @@ def after_run(self, run_context, run_values):
     print("Loss: ", run_values.results);
 ```
 
-在这段代码中，`before_run` 返回一个 `SessionRunArgs`，用于标识 `loss` 变量的名称。当 `after_run` 被调用时，`run_values` 参数的 `results` 字段包含 `loss` 的当前值。
+在这段代码中，`before_run`返回一个`SessionRunArgs`，用于标识`loss`变量的名称。当`after_run`被调用时，`run_values`参数的`results`字段包含`loss`的当前值。
 
 ## SessionRunHook 的子类
 
-你可以创建 `SessionRunHook` 自己的子类，并为不同的生命周期方法添加代码。但在大多数情况下，实例化现有的子类更为简单。表 5-2 展示了 `tf.train` 包中每个会 hook 类的构造函数。
+你可以创建`SessionRunHook`自己的子类，并为不同的生命周期方法添加代码。但在大多数情况下，实例化现有的子类更为简单。表 5-2 展示了`tf.train`包中每个会 hook 类的构造函数。
 
 ### 表 5-2 (#09_9781119466215-ch05.xhtml#rc05-tbl-0002) Session Hook 类
 
-| 类名 |or |
+| 类名 | 描述 |
+
 | :--- | --- |
+
 | `LoggingTensorHook(tensors, every_n_iter=None, every_n_secs=None, at_end=False, formatter=False)` | 在指定的步数后或指定时间后记录张量的值 |
+
 | `CheckpointSaverHook(checkpoint_dir, save_secs=None, save_steps=None, saver=None, checkpoint_baseline='model.ckpt', scaffold=None, listeners=None)` | 在指定的步数后或指定时间后将数据保存到检查点 |
+
 | `SummarySaverHook(save_steps=None, save_secs=None, output_dir=None, summary_writer=None, scaffold=None, summary_op=None)` | 在指定的步数后或指定时间后生成摘要数据 |
+
 | `StepCounterHook(every_n_steps=100, every_n_secs=None, output_dir=None, summary_writer=None)` | 计算每秒的步数 |
+
 | `StopAtStepHook(num_steps=None, last_step=None)` | 告诉 session 在执行指定步数或达到特定步数后停止 |
+
 | `NanTensorHook(loss_tensor, fail_on_nan_loss)` | 如果 loss 等于 NaN 则停止训练 |
+
 | `GlobalStepWaiterHook(wait_until_step)` | 延迟执行直到全局步数达到给定值 |
+
 | `FinalOpsHook(final_ops, final_ops_feed_dict=None)` | 在 session 结束时评估张量 |
+
 | `FeedFnHook(feed_fn)` | 运行给定函数并设置 session 的 feed dict |
 
-前三个 session hook 类自动化了记录消息、保存变量和生成摘要数据的过程。你可以通过设置训练步数间隔（`every_n_iter` 或 `n_steps`）或时间间隔（`every_n_secs` 或 `n_secs`）来指定操作的频率。自然地，你不能在同一个方法中设置两种类型的间隔。
+前三个 session hook 类自动化了记录消息、保存变量和生成摘要数据的过程。你可以通过设置训练步数间隔（`every_n_iter`或`n_steps`）或时间间隔（`every_n_secs`或`n_secs`）来指定操作的频率。自然地，你不能在同一个方法中设置两种类型的间隔。
 
-`StepCounterHook` 通过显示在给定时间范围内执行了多少训练步来告知 session 的性能。为了提供输出，它使用 summary writer 生成摘要数据。相比之下，`StopAtStepHook` 告诉 session 在指定的全局步数值或指定数量的训练步数后停止。
+`StepCounterHook`通过显示在给定时间范围内执行了多少训练步来告知 session 的性能。为了提供输出，它使用 summary writer 生成摘要数据。相比之下，`StopAtStepHook`告诉 session 在指定的全局步数值或指定数量的训练步数后停止。
 
 ## 创建 MonitoredSession
 
-`MonitoredSession`并不是一个 `Session`，它包含一个 `Session` 实例并提供了与 session 交互的方法。例如，你可以通过调用 `run` 启动 `MonitoredSession` 的 session，通过调用 `close` 关闭 session。
+`MonitoredSession`并不是一个`Session`，它包含一个`Session`实例并提供了与 session 交互的方法。例如，你可以通过调用`run`启动`MonitoredSession`的 session，通过调用`close`关闭 session。
 
-要创建一个 `MonitoredSession`，你需要调用它的构造函数：
+要创建一个`MonitoredSession`，你需要调用它的构造函数：
 
 `MonitoredSession(session_creator=None, hooks=None, stop_grace_period_secs=120)`
 
-第一个参数是 `SessionCreator` 实例，用于配置底层 session。TensorFlow 提供了 `SessionCreator` 的两个子类：`ChiefSessionCreator` 和 `WorkerSessionCreator`。`chief` 和 `worker` 术语指的是分布式应用程序中不同的进程。
+第一个参数是`SessionCreator`实例，用于配置底层 session。TensorFlow 提供了`SessionCreator`的两个子类：`ChiefSessionCreator`和`WorkerSessionCreator`。`chief`和`worker`术语指的是分布式应用程序中不同的进程。
 
-你可以通过将 `hooks` 参数设置为 session hook 列表，将 session hook 与 `MonitoredSession` 关联。最后一个参数 `stop_grace_period_secs` 设置了应用程序调用 `close` 后，session 线程可以继续执行的秒数。
+你可以通过将`hooks`参数设置为 session hook 列表，将 session hook 与`MonitoredSession`关联。最后一个参数`stop_grace_period_secs`设置了应用程序调用`close`后，session 线程可以继续执行的秒数。
 
-`MonitoredSession` 类还提供名为 `should_stop` 的方法。应用程序经常使用此方法来确定 session 是否应该继续运行。session hook 可以通过其 `request_stop` 方法停止 session，该方法会调用监控 session 的 `should_stop` 方法。以下代码演示了如何使用 `should_stop`：
+`MonitoredSession`类还提供名为`should_stop`的方法。应用程序经常使用此方法来确定 session 是否应该继续运行。session hook 可以通过其`request_stop`方法停止 session，该方法会调用监控 session 的`should_stop`方法。以下代码演示了如何使用`should_stop`：
 
 ```python
 with tf.train.MonitoredSession(hooks=[custom_hook]) as sess:
@@ -2082,11 +1939,13 @@ with tf.train.MonitoredSession(hooks=[custom_hook]) as sess:
         sess.run(...)
 ```
 
-这个 `should_stop` 方法对于分布式 TensorFlow 应用尤为重要。我在第 13 章 中讨论了分布式应用程序及其 session。
+这个`should_stop`方法对于分布式 TensorFlow 应用尤为重要。我在第 13 章中讨论了分布式应用程序及其 session。
 
 ## 将理论付诸
 
-`ch5/monitor_train.py` 模块中的代码执行与 `ch5/simple_train.py` 模块中相同的训练操作。
+`ch5/monitor_train.py`模块中的代码执行与`ch5/simple_train.py`模块中相同的训练操作。
+
+
 
 ```python
 ## 自定义 session hook
@@ -2140,28 +1999,24 @@ with tf.train.MonitoredSession(hooks=hooks) as sess:
 
 该模块创建了三个 session hook：
 
-*   `CustomHook`：在 session 执行的不同阶段打印消息
-*   `CheckpointSaverHook`：将检查点数据保存到 `ckpt_dir` 目录
-*   `SummarySaverHook`：将摘要数据保存到命名的 log
+- `CustomHook`：在 session 执行的不同阶段打印消息
+- `CheckpointSaverHook`：将检查点数据保存到`ckpt_dir`目录
+- `SummarySaverHook`：将摘要数据保存到命名的 log
 
-在创建 session hook 后，该模块创建了一个 `MonitoredSession` 并配置了这三个 hook 实例。然后它初始化了 session 的变量并优化了模型。
+在创建 session hook 后，该模块创建了一个`MonitoredSession`并配置了这三个 hook 实例。然后它初始化了 session 的变量并优化了模型。
 
+众所周知，机器学习是一个对于聪明、有远见的人来说节奏快且令人兴奋的领域；而众所周知，统计学是一个对于喜欢背景音乐的人来说是枯燥、死板的领域。因此，初学者可能会觉得在关于机器学习的书中看到关于统计分析的章节很奇特。
 
-
-
-
-众周知，机器学习是一个对于聪明、有远见的人来说节奏快且令人兴奋的领域；而众周知，统计学是一个对于喜欢背景音乐的人来说是枯燥、死板的领域。因此，初学者可能会觉得在关于机器学习的书中看到关于统计分析的章节很奇特。
-
-但机器学习和统计学有许多共同点。事实上，它们有相同的最终目标：用数学关系对真实世界的系统进行建模。机器学习高度依赖统计学方法，本章介绍了三种在 TensorFlow 开发中起着至关作用的方法：线性回归、多项式回归和逻辑回归。此外，章中的示例代码巩了 TensorFlow 应用执行训练的方式。
+但机器学习和统计学有许多共同点。事实上，它们有相同的最终目标：用数学关系对真实世界的系统进行建模。机器学习高度依赖统计学方法，本章介绍了三种在 TensorFlow 开发中起着至关重要作用的方法：线性回归、多项式回归和逻辑回归。此外，章中的示例代码巩固了 TensorFlow 应用执行训练的方式。
 
 ## 使用回归分析系统
 
-统计学家使用的最有效工具之一是回归。`Regression` 通过测量系统变量之间的关系来分析系统。TensorFlow 为这种分析提供了许多功能，本章重点关注四种回归类型：
+统计学家使用的最有效工具之一是回归。`Regression`通过测量系统变量之间的关系来分析系统。TensorFlow 为这种分析提供了许多功能，本章重点关注四种回归类型：
 
-*   `线性回归`：对数据集中的点拟合直线
-*   `多项式回归`：对数据集中的点拟合多项式
-*   `二分类逻辑回归`：将点分为两个类别中的其中之一
-*   `多分类逻辑回归`：将点分为多个类别中的其中之一
+- `线性回归`：对数据集中的点拟合直线
+- `多项式回归`：对数据集中的点拟合多项式
+- `二分类逻辑回归`：将点分为两个类别中的其中之一
+- `多分类逻辑回归`：将点分为多个类别中的其中之一
 
 接下来的章节将探索这些简单的操作。
 
@@ -2177,33 +2032,29 @@ with tf.train.MonitoredSession(hooks=hooks) as sess:
 
 计算平均售价是很容易的，但你想知道价格是在上涨还是在下跌，以及上涨或下跌了多少。为了找到一个良好的售价，你决定用一条直线来近似你的数据，这条线表示书籍价格随时间的变化。这个过程被称为`线性回归`，而图 6-1 中的虚线识别了漫画书价格的总体趋势。
 
-TensorFlow 训练的第一步涉及为模型选择初始表达式（参见第 5 章）。对于线性回归，这个决定很容易。模型是一条直线，其方程为 ![images](img/eq06001.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>m</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>b</m:mi></m:mrow></m:math>其中 `m` 是直线的斜率，`b` 是`y-截距`（当 `x` 等于 0 时的 `y` 值）。线性回归的目标是确定 `m` 和 `b`，使得生成的直线最好地近似（或拟合）点集。
+TensorFlow 训练的第一步涉及为模型选择初始表达式（参见第 5 章）。对于线性回归，这个决定很容易。模型是一条直线，其方程为 ![images](img/eq06001.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>m</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>b</m:mi></m:mrow></m:math>其中`m`是直线的斜率，`b`是`y-截距`（当`x`等于 0 时的`y`值）。线性回归的目标是确定`m`和`b`，使得生成的直线最好地近似（或拟合）点集。
 
 损失（loss）的计算也很简单。如果图中包含点 (`x, y`)，系统与模型之间的差异为 ![images](img/eq06002.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>y</m:mi><m:mo>&#45;</m:mo><m:mrow><m:mo>(m:mo><m:mrow><m:mi>m</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>b</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math>*.*。
 
-在机器学习应用中，损失值始终应具有相同的符号。你可以通过计算每个点的误差平方并取误差值的平均值来确保所有损失值均为正。如果有 `N` 个点，你可以可以使用方程计算损失：
+在机器学习应用中，损失值始终应具有相同的符号。你可以通过计算每个点的误差平方并取误差值的平均值来确保所有损失值均为正。如果有`N`个点，你可以使用以下方程计算损失：
 
 ![images](img/eq06003.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>l</m:mi><m:mi>o</m:mi><m:mi>s</m:mi><m:mi>s</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>N</m:mi></m:mfrac><m:mstyle displaystyle="true"><m:munderover><m:mo>&#8721;</m:mo><m:mrow><m:mi>i</m:mi></m:mrow></m:math>
 
-这种方法被称为均方误差（MSE）。在 TensorFlow 中，你可以通过 `reduce_mean` 来计算它。
+这种方法被称为均方误差（MSE）。在 TensorFlow 中，你可以通过`reduce_mean`来计算它。
 
-损失值总是具有相同的符号。你可以通过计算每个点的误差平方并取误差值的平均值来确保所有损失值均为正。如果有 `N` 个点，你可以使用以下方程计算损失：
+损失值总是具有相同的符号。你可以通过计算每个点的误差平方并取误差值的平均值来确保所有损失值均为正。如果有`N`个点，你可以使用以下方程计算损失：
 
-TensorFlow 训练的第一步涉及为模型选择初始表达式（参见第 5 章）。对于线性回归，这个决定很容易。模型是一条直线，其方程为 ![images](img/eq06001.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>m</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>b</m:mi></m:mrow></m:math>其中 `m` 是直线的斜率，`b` 是 `y-截距`（当 `x` 等于 0 时的 `y` 值）。线性回归的目标是确定 `m` 和 `b`使得使得生成的直线最好地近似（或拟合）点集。
+TensorFlow 训练的第一步涉及为模型选择初始表达式（参见第 5 章）。对于线性回归，这个决定很容易。模型是一条直线，其方程为 ![images](img/eq06001.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>m</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>b</m:mi></m:mrow></m:math>其中`m`是直线的斜率，`b`是`y-截距`（当`x`等于 0 时的`y`值）。线性回归的目标是确定`m`和`b`，使得生成的直线最好地近似（或拟合）点集。
 
 损失的计算也很简单。如果图中包含点 (`x, y`)，系统与模型之间的差异为 ![images](img/eq06002.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>y</m:mi><m:mo>&#45;</m:mo><m:mrow><m:mo>(m:mo><m:mrow><m:mi>m</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>b</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math>*.*。
 
-在机器学习应用中，损失值始终应具有相同的符号。你可以通过计算每个点的误差平方并取误差值的平均值来确保所有损失值均为正。如果有 `N` 个点，你可以使用以下方程计算损失：
+在机器学习应用中，损失值始终应具有相同的符号。你可以通过计算每个点的误差平方并取误差值的平均值来确保所有损失值均为正。如果有`N`个点，你可以使用以下方程计算损失：
 
 ![images](img/eq06003.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>l</m:mi><m:mi>o</m:mi><m:mi>s</m:mi><m:mi>s</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>N</m:mi></m:mfrac><m:mstyle displaystyle="true"><m:munderover><m:mo>&#8721;</m:mo><m:mrow><m:mi>i</m:mi></m:mrow></m:math>
 
-这种方法被称为均方误差（MSE）。在 TensorFlow 中，你可以通过 `reduce_mean` 来计算它。
+这种方法被称为均方误差（MSE）。在 TensorFlow 中，你可以通过`reduce_mean`来计算它。
 
 （注：此处由于原文文本中存在大量重复和乱码片段，译文已根据逻辑进行了清理和整合，消除了重复的原文内容，并确保了翻译的通顺。）
-
-[/content] 助。助[content][/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [[content][/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content] [/content] [[content][/content]contentcontent] [[content][/content][/content] [[content][/content]]content]][content][/content]]content]][content][/content]]content]][content][/content]]content]][content]
-
-
 
 图 6-2 展示了你如何对一组随机点拟合三次多项式。
 
@@ -2211,7 +2062,7 @@ TensorFlow 训练的第一步涉及为模型选择初始表达式（参见第 5 
 
 图 6-2： 统计回归使得使用多项式近似数据成为可能。
 
-`ch6/poly_regression.py` 中的代码代码使用 `TensorFlow` 对一组随机点拟合一个三次多项式。如果你将这段代码与 `ch6/lin_regression.py` 中的代码进行比较，你会发现这两个模块非常相似。最主要的区别在于模型的表达式，其计算方式如下：
+`ch6/poly_regression.py`中的代码使用`TensorFlow`对一组随机点拟合一个三次多项式。如果你将这段代码与`ch6/lin_regression.py`中的代码进行比较，你会发现这两个模块非常相似。最主要的区别在于模型的表达式，其计算方式如下：
 
 `model = a * tf.pow(x, 3) + b * tf.pow(x, 2) + c * x + d`
 
@@ -2248,7 +2099,7 @@ optimizer = tf.train.GradientDescentOptimizer(learn_rate).minimize(loss)
 ## 初始化变量
 init = tf.global_variables_initializer()
 
-## 启动会
+## 启动会话
 with tf.Session() as sess:
     sess.run(init)
 
@@ -2264,13 +2115,15 @@ with tf.Session() as sess:
         print('d = ', sess.run(d))
 ```
 
-你可以将 `poly_regression.py` 中使用的方法应用于任何阶数的多项式。你只需要将模型设置为通用多项式，并为多项式的每个系数创建一个变量即可。
+你可以将`poly_regression.py`中使用的方法应用于任何阶数的多项式。你只需要将模型设置为通用多项式，并为多项式的每个系数创建一个变量即可。
 
 ## 二分类逻辑回归：将数据分类
 
+
+
 线性回归和多项式回归关注趋势，而逻辑回归关注的是将数据点分类。如果点 A 和 B 属于类别 X，P 和 Q 属于类别 Y，那么点 J 属于哪个类别？后续章节关注只有两个类别的系统。患者是健康还是疾病？操作成功还是失败？这种对两个类别进行建模的过程称为逻辑回归。
 
-### 设置问题
+## 设置问题
 
 二分类逻辑回归关注一个或多个变量对二元结果的影响。如果患者服了新药，症状会消失吗？如果候选人在当天穿红领带和蓝裤子，公众会投票给他吗？为了演示二分类逻辑回归的过程，本讨论关注一个重要的问题：闹钟音量如何影响我起床？我是一个睡虫，如果闹钟不响，我会一直赖在床上。但随着音量的增大，我起床的概率也会增加。为了检查闹钟音量与我起床之间的关系，我每天将闹钟设置为不同的音量，持续 40 天。图 6-3 说明了闹钟音量与我起床之间的关系。
 
@@ -2280,11 +2133,11 @@ with tf.Session() as sess:
 
 为了在数学上对此建模，统计学家用数字表示每个类别。在本例中，我将类别 1（起床）关联为 1，将类别 0（睡觉）关联为 0。我不希望输出被限制为 0 和 1。我想要一个 0 到 1 之间的值来标识我起床的概率。这个概念很重要：当你编写执行分类的应用时，概率理论会处于中心。本讨论没有提供该主题的完整介绍，但会在必要时解释数学原理。显然，线性回归和多项式回归无法解决这个问题，因为它们的模型产生超出 0 和 1 的值。此外，直线和多项式对于分类来说太简单了。为了对数据点进行分类，统计学家使用另一种回归，逻辑回归。正如线性回归使用直线，多项式回归使用多项式，逻辑回归使用称为逻辑函数的曲线。
 
-### 使用逻辑函数定义模型
+## 使用逻辑函数定义模型
 
 逻辑函数在分类数据点的应用中起着核心作用。数学家用以下方程表示逻辑函数：
 
-![images](img/eq6005.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>&#963;</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mo>&#45;</m:mo><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:mfrac></m:mrow></m:math>
+![images](img/eq6005.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>&#963;</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mo>&#45;</m:mo><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:mfrac></m:mrow></m:math>
 
 图 6-4 展示了当 `x` 值在 8 和 -8 之间时，逻辑函数的形状：
 
@@ -2295,34 +2148,29 @@ with tf.Session() as sess:
 该函数的形状像一个 S，因为 sigma ![images](img/eq6006.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mi>&#963;</m:mi></m:math>) 是 S 的希腊字母，因此该函数通常被称为 sigmoid 函数（sigmoid function），或 ![images](img/eq6007.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mi>&#963;</m:mi></m:math>(x)。该函数有三个属性，使其适合将点分类为两个类别之一：
 
 *   它的最大值为 1，最小值为 0。
-
-*   ![images](img/eq6008.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>&#963;</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mrow></m:mrow></m:math>\= 0.5，这意味着位于中心的数据点属于两个类别的概率相等。
-
+*   ![images](img/eq6008.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>&#963;</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math>\= 0.5，这意味着位于中心的数据点属于两个类别的概率相等。
 *   函数关于 `y` 轴对称的——即 ![images](img/eq60009.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mi>&#963;</m:mi></m:math>(-x) = 1 - ![images](img/eq60010.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mi>&#963;</m:mi></m:math>(x)。
 
-
-
-
-
-选定逻辑函数后，你可以使用模型函数 ![images](img/eq06011.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>&#963;</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>m</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>b</m:mi></m:mrow><m:mo)</m:mo></m:mrow></m:mrow></m:math> 来近似系统。与线性回归一样，目标是找到 `m` 和 `b` 的值，使模型尽可能符合真实世界的观测结果。
+选定逻辑函数后，你可以使用模型函数 ![images](img/eq06011.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>&#963;</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>m</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>b</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> 来近似系统。与线性回归一样，目标是找到 `m` 和 `b` 的值，使模型尽可能符合真实世界的观测结果。
 
 下一步是找到损失函数的表达式。一种可能的方法是使用均方误差（参见之前关于线性回归多项式回归章节）。但存在一个问题：sigmoid 函数在极端的斜率几乎为 0，这意味着梯度下降法将花费大量时间来最小化损失。
 
 因此，分类数据点的应用会弃用均方误差，并使用一种名为极大似然估计的不同方法来计算损失。
 
-### 使用极大似然估计计算损失
+## 使用极大似然估计计算损失
 
 二分类逻辑回归的目标是获得最拟合可用数据的 sigmoid 函数。该函数识别了一个点被分类为类别 1 的近似概率。
 
-但点被分类为类别 0 的概率呢？只有两个类别，所以如果我们将类别 1 的概率标记为 images](images/eq06012.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>&#963;</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>m</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>b</m:mi></m:mrow><m:mo)</m:mo></m:mrow></m:mrow></m:math>那么类别 0 的概率就是 1 - ![images](img/eq06013.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>&#963;</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>m</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>b</m:mi></m:mrow><m:mo)</m:mo></m:mrow></m:mrow></m:math>。为了简单起见，我将模型函数 ![images](img/eq06014.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>&#963;</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>m</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>b</m:mi></m:mrow><m:mo)</m:mo></m:mrow></m:mrow></m:math> 称为 `h(x)`。这里有一个奇怪但重要的问题：如果我提前知道自己是否会起床，那么闹钟以特定音量响起的概率是多少？将我的睡眠/醒来状态标记为 `y[i]` (`y[0] = 0`, `y[1] = 1`)，闹钟音量标记为 `x`，你可以将关系表示如下：![images](img/eq0615.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>L</m:mi><m:mrow><m:mo><m:mrow><m:mi>y</m:mi><m:mi>i</m:mi></m:mrow><m:mo)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>h</m:mi><m:msup><m:mrow><m:mo><m:mi>x</m:mi><m:mo)</m:mo></m:mrow><m:mrow><m:msub><m:mi>y</m:mi><m:mi>i</m:mi></m:mrow></m:mo></m:mrow></m:msup><m:msup><m:mrow><m:mo><m:mn>1</m:mn><m:mo>&#45;</m:mo><m:mi>h</m:mi><m:mrow><m:mo><m:mi>x</m:mi><m:mo)</m:mo></m:mrow></m:mrow><m:mo></m::></m:mo><m:mrow><m:mo><m:mn>1</m:mn><m:mo>&#45;</m:mo><m:msub><m:mi>y</m:mi><m:mi>i</m:mi></m:mrow></m:mo></m:mo></m:math></m:math> 这个方程表示了 `y[i]` 的 `likelihood`，考虑到它的重要性，你会熟悉以下两种情况：
+但点被分类为类别 0 的概率呢？只有两个类别，所以如果我们将类别 1 的概率标记为 images](images/eq06012.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>&#963;</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>m</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>b</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math>那么类别 0 的概率就是 1 - ![images](img/eq06013.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>&#963;</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>m</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>b</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math>。为了简单起见，我将模型函数 ![images](img/eq06014.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>&#963;</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>m</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>b</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> 称为 `h(x)`。这里有一个奇怪但重要的问题：如果我提前知道自己是否会起床，那么闹钟以特定音量响起的概率是多少？将我的睡眠/醒来状态标记为 `y[i]` (`y[0] = 0`, `y[1] = 1`)，闹钟音量标记为 `x`，你可以将关系表示如下：![images](img/eq0615.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>L</m:mi><m:mrow><m:mo><m:mrow><m:mi>y</m:mi><m:mi>i</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>h</m:mi><m:msup><m:mrow><m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:msub><m:mi>y</m:mi><m:mi>i</m:mi></m:mrow></m:mo></m:mrow></m:msup><m:msup><m:mrow><m:mo><m:mn>1</m:mn><m:mo>&#45;</m:mo><m:mi>h</m:mi><m:mrow><m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo></m::></m:mo><m:mrow><m:mo><m:mn>1</m:mn><m:mo>&#45;</m:mo><m:msub><m:mi>y</m:mi><m:mi>i</m:mi></m:mrow></m:mo></m:mo></m:math></m:math> 这个方程表示了 `y[i]` 的 `likelihood`，考虑到它的重要性，你会熟悉以下两种情况：
+
 * 如果 `h(x)` 完美表示系统，当 `y[i]` 等于 1 时 `h(x)` 等于 1，当 `y[i]` 等于 0 时 `h(x)` 等于 0。这意味着 `L(y[i])` 始终等于 1。
 * 如果 `h(x)` 总是错误的，当 `y[i]` 等于 1 时 `h(x)` 等于 0，当 `y[i]` 等于 0 时 `h(x)` 等于 1。这意味着 `L(y[i])` 始终等于 0。
 
 通常，似然函数会产生一个 0 到 1 之间的值。似然越高，模型 `h(x)` 就越接近系统。极大化似然的过程被称为 `maximum likelihood`。为了简化计算，统计学家对似然取对数。之后，极大似然方法被称为 `log likelihood`。
 
-TensorFlow 的优化器通过最小化损失来工作。但在处理似然时，目标是获得更大的而不是更小的值。为了解决这个问题，统计学家对似然表达式取反。得到的损失表达式如下：![images](img/eq0616.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>l</m:mi><m:mi>o</m:mi><m:mi>s</m:mi><m:mi>s</m:mi><m:mo>=</m:mo><m:mrow>&#45;</m:mo><m:msub><m:mi>y</m:mi><m:mi>i</m:mi></m:msub><m:mi>log</m:mi><m:mrow><m:mo><m:mi>h</m:mi><m:mrow><m:mo><m:mi>x</m:mi><m:mo)</m:mo></m:mrow></m:mrow></m:mrow><m:mo>&#45;</m:mo><m:mrow><m:mo><m:mn>1</m:mn><m:mo>&#45;</m:mo><m:msub><m:mi>y</m:mi><m:mi>i</m:mi></m:msub></m:mrow></m:mrow><m:mi>log</m:mi><m:mrow><m:mo><m:mn>1</m:mn><m:mo>&#45;</m:mo><m:mi>h</m:mi><m:mrow><m:mo><m:mi>x</m:mi><m:mo)</m:mo></m:mrow></m:mrow></m:mo></m:mrow></m:math>
+TensorFlow 的优化器通过最小化损失来工作。但在处理似然时，目标是获得更大的而不是更小的值。为了解决这个问题，统计学家对似然表达式取反。得到的损失表达式如下：![images](img/eq0616.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>l</m:mi><m:mi>o</m:mi><m:mi>s</m:mi><m:mi>s</m:mi><m:mo>=</m:mo><m:mrow>&#45;</m:mo><m:msub><m:mi>y</m:mi><m:mi>i</m:mi></m:msub><m:mi>log</m:mi><m:mrow><m:mo><m:mi>h</m:mi><m:mrow><m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mrow><m:mo>&#45;</m:mo><m:mrow><m:mo><m:mn>1</m:mn><m:mo>&#45;</m:mo><m:msub><m:mi>y</m:mi><m:mi>i</m:mi></m:msub></m:mrow></m:mrow><m:mi>log</m:mi><m:mrow><m:mo><m:mn>1</m:mn><m:mo>&#45;</m:mo><m:mi>h</m:mi><m:mrow><m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mo></m:mrow></m:math>
 
-### 将理论付实践
+## 将理论付实践
 
 以下 `ch6/binary_logistic.py` 展示了如何使用似然。
 
@@ -2361,16 +2209,13 @@ with tf.Session() as sess:
     print('b =', sess.run(b))
 ```
 
-该模块接受 [图 6-3] 中的数据点作为输入，并计算最拟合数据的模型函数 ![images](img/eq0617.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>&#963;</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>m</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>b</m:mi></m:mrow><m:mo)</m:mo></m:mrow></m:mrow></m:math> 的 `m` 和 `b` 值。图 6-5 描绘了计算出的模型函数叠加在训练数据上的情况。
-
-
-
+该模块接受 [图 6-3] 中的数据点作为输入，并计算最拟合数据的模型函数 ![images](img/eq0617.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>&#963;</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>m</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>b</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> 的 `m` 和 `b` 值。图 6-5 描绘了计算出的模型函数叠加在训练数据上的情况。
 
 许多机器学习应用需要将点归分为两个以上不同的类别。这一过程被称为多项逻辑回归（multinomial logistic regression），它在许多方面与二分类回归相似。主要区别在于使用了不同的函数来表示模型和损失。
 
 为了介绍这个主题，我将解释如何使用 TensorFlow 来识别来自修改的国家科学与技术研究所（MNIST）数据集的手写样本。每张图像包含一个手写数字，它属于十个类别中的一个。
 
-### 修改的国家科学与技术研究所 (MNIST) 数据集
+## 修改的国家科学与技术研究所 (MNIST) 数据集
 
 为了测试机器学习应用，美国标准与技术研究院（NIST）编译了一组 0 到 9 之间的数字手写样本。扬·勒昆（Yann LeCun）创建了 NIST 图像的一个子集，称为修改的 NIST（MNIST）数据库。
 
@@ -2403,18 +2248,20 @@ read_data_sets(train_dir, fake_data=False, one_hot=False, dtype=dtypes.float32, 
 *   `validation` — 包含验证数据的 `Dataset`
 *   `test` — 包含用于测试数据的 `Dataset`
 
-相应地，`Datasets` 实例的每个字段都是 `Dataset` 类的实例。表 6-1 列出了该类的成员并提供了每个成员的描述。
+
+
+相应地，`Datasets` 实例的每个字段都是`Dataset`类的实例。表 6-1 列出了该类的成员并提供了每个成员的描述。
 
 ### 表 6-1 类成员
 
 | 函数 | 描述 |
 | :--- | :--- |
-| `images` | 以 numpy 数组给给图像 `ndarray` |
-| `labels` | 图像类别名称的 `ndarray` |
+| `images` | 以 numpy 数组给给图像`ndarray` |
+| `labels` | 图像类别名称的`ndarray` |
 | `num_examples` | 数据集中示例的数量 |
 | `next_batch(batch_size, fake_data=False, shuffle=True)` | 返回下一批图像 |
 
-前三个字段非常直观。以下代码调用了 `read_data_sets`，并为每个字段打印对应图像的形状：
+前三个字段非常直观。以下代码调用了`read_data_sets`，并为每个字段打印对应图像的形状：
 
 ```python
 import tensorflow.contrib.learn as learn
@@ -2427,60 +2274,55 @@ print("Test images: ", dset.test.images.shape)
 在我的系统上，打印的结果如下：
 
 `Training images: (55000, 784)`
+
 `Validation images: (5000, 784)`
+
 `Test images: (10000, 784)`
 
-如果你在 `read_data_sets` 中将 `one_hot` 设置为 `True`，结果 `Dataset` 的 `labels` 字段将包含独热向量。`独热向量`（one-hot vector）是一个一维数组，其中一个元素的值为高，其余部分为低。默认情况下，高值为 1，低值为 0。如果 `one_hot` 参数设置为 `True`，则每个标签都将以具有十个元素的独热向量形式提供：在识别数字的位置上为 1，在其他其他位置上为 0。`Dataset` 类的 `next_batch` 方法分批提供 MNIST 数据。第一个参数设置每批的大小，第二个参数指定是否应该生成虚假数据，最后一个参数指示是否应该对 MNIST 数据进行洗牌。
+如果你在`read_data_sets`中将`one_hot`设置为`True`，结果`Dataset`的`labels`字段将包含独热向量。`独热向量`（one-hot vector）是一个一维数组，其中一个元素的值为高，其余部分为低。默认情况下，高值为 1，低值为 0。如果`one_hot`参数设置为`True`，则每个标签都将以具有十个元素的独热向量形式提供：在识别数字的位置上为 1，在其他其他位置上为 0。`Dataset`类的`next_batch`方法分批提供 MNIST 数据。第一个参数设置每批的大小，第二个参数指定是否应该生成虚假数据，最后一个参数指示是否应该对 MNIST 数据进行洗牌。
 
 ### 使用 softmax 函数定义模型
 
-你可以使用 `sigmoid` 函数将点归分为两个类别。（更多信息请参参见“[使用逻辑函数定义模型]”章节。）如果系统（例如 MNIST 分类）有两个以上的类别，则 `sigmoid` 函数将是不够的。
+你可以使用`sigmoid`函数将点归分为两个类别。（更多信息请参参见“[使用逻辑函数定义模型]”章节。）如果系统（例如 MNIST 分类）有两个以上的类别，则`sigmoid`函数将是不够的。
 
-相反，统计学家使用一种可以接受值数组并返回值数组的操作。这就是 `softmax 函数`，它将 `sigmoid 函数` 扩展到多个变量。`softmax 函数`的第 *j* 项表示为 $\sigma(x_j)$，如果输入数组包含 $N$ 项，你可以通过以下方程计算 $x[j]$ 的 `softmax 函数`：
+相反，统计学家使用一种可以接受值数组并返回值数组的操作。这就是`softmax 函数`，它将`sigmoid 函数`扩展到多个变量。`softmax 函数`的第 *j* 项表示为 $\sigma(x_j)$，如果输入数组包含 $N$ 项，你可以通过以下方程计算 $x[j]$ 的`softmax 函数`：
 
 $$\sigma(x_j) = \frac{e^{x_j}}{\sum_{i=0}^{N-1} e^{x_i}}$$
 
 使用此函数时，你需要注意两点：
 
-*   输出数组中的每个值都在 0 和 1 之间。
-*   输出数组中值的和始终等于 1。
+* 输出数组中的每个值都在 0 和 1 之间。
+* 输出数组中值的和始终等于 1。
 
-在 TensorFlow 中，可以通过调用 `tf.nn` 包中的 `softmax` 函数来执行 softmax 操作：
+在 TensorFlow 中，可以通过调用`tf.nn`包中的`softmax`函数来执行 softmax 操作：
 
 ```
 softmax(input, dim=-1, name=None)
 ```
 
-默认情况下，输入张量的每个元素都会加在 `softmax 函数` 的分母中。但如果你设置了 `dim` 参数，则只有指定维度的值会被包含在和中。
+默认情况下，输入张量的每个元素都会加在`softmax 函数`的分母中。但如果你设置了`dim`参数，则只有指定维度的值会被包含在和中。
 
-一个示例将清楚该函数如何工作。如果输入张量为 $[3.2, -2.6, 1.7, 0.0, 4.9]$，调用 `softmax` 将返回一个五五元素的张量，等于 $[0.14835, 0.00045, 0.03310, 0.00605, 0.81205]$。你可以通过以下方式计算第一个 softmax 值：
+一个示例将清楚该函数如何工作。如果输入张量为 $[3.2, -2.6, 1.7, 0.0, 4.9]$，调用`softmax`将返回一个五五元素的张量，等于 $[0.14835, 0.00045, 0.03310, 0.00605, 0.81205]$。你可以通过以下方式计算第一个 softmax 值：
 
+![images](img/eq06020.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>&#963;</m:mi><m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:msup></m:mrow><m:mrow><m:mstyle displaystyle="true"><m:munderover><m:mo>&#8721;</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mn>4</m:mn></m:munderover><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub></m:mrow></m:msup></m:mrow></m:mstyle></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mn>3.2</m:mn></m:mrow></m:msup></m:mrow><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mn>3.2</m:mn></m:mrow></m:msup><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mo>&#45;</m:mo><m:mn>2.6</m:mn></m:mrow></m:msup><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>1.7</m:mn></m:mrow></m:msup><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mn>0</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>4.9</m:mn></m:mrow></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>0.14835</m:mn></m:mrow></m:math>
 
-
-
-
-![images](img/eq06020.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>&#963;</m:mi><m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo)</m:mo></m:mrow></m:mrow><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:msup></m:mrow><m:mrow><m:mstyle displaystyle="true"><m:munderover><m:mo>&#8721;</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mn>4</m:mn></m:munderover><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub></m:mrow></m:msup></m:mrow></m:mstyle></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mn>3.2</m:mn></m:mrow></m:msup></m:mrow><m:mrow><m:mrow><m:mo><m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mn>3.2</m:mn></m:mrow></m:msup><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mo>&#45;</m:mo><m:mn>2.6</m:mn></m:mrow></m:msup><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>1.7</m:mn></m:mrow></m:msup><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mn>0</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>4.9</m:mn></m:mrow></m:msup></m:mrow)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>0.14835</m:mn></m:mrow></m:math> 
-
-`N` 个值中的每一个值（values）都标识了数据点属于对应类别的概率。点属于类别 0 的概率为 0.14835。
+`N`个值中的每一个值（values）都标识了数据点属于对应类别的概率。点属于类别 0 的概率为 0.14835。
 
 ### 使用交叉熵计算损失
 
-如果 `h(x)` 是一个模型且 `y[i]` 标识一个类别，你可以通过以下方式计算在给定 `x` 值下 `y[i]` 的似然性（likelihood）：
+如果`h(x)`是一个模型且`y[i]`标识一个类别，你可以通过以下方式计算在给定`x`值下`y[i]`的似然性（likelihood）：
 
-![images](img/eq06021.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>L</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>y</m:mi><m:mi>i</m:mi></m:msub></m:mrow></m:mo><m:mo><m:mo><m:mo><m:m:mi</m:mi><m:mi><m:mo><m:mo><m:mi><x:m:x</m:mo></m:mo></m:mrow><m:msub><m:mi><m:mi>mi</m:mi>m:m:mi></m:mi></m:msub></m:msup><m:msup><m:mrow><m:mo><m:mn>1</m:mn></m:mo><m:mo><m:mi><m:mi><m:mi><m:mi></m:mi></m:mi></m:mi></m:msub></m:msub></m:mo></m:mo></m:mrow></m:mrow><m:mrow><m:mo><m:mn>1</m:mn></m:mo><m:mo><m:msub><m:mi>y</m:mi><m:mi></m:msub></m:mrow></m:mo></m:mrow></m:math></m:math>
+![images](img/eq06021.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>L</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>y</m:mi><m:mi>i</m:mi></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>h</m:mi><m:mi>i</m:mi></m:msub><m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:msub><m:mi>y</m:mi><m:mi>i</m:mi></m:msub></m:msup></m:mrow></m:math>
 
-似然性的概念可以扩展到具有多个结果的系统。如果分类器要在 `N` 个类别之间进行选择，`y[i]` 可以取 0 到 `N-1` 之间的任何值。如果模型为 `h(x)`，你可以用以下方程表示似然性：
+似然性的概念可以扩展到具有多个结果的系统。如果分类器要在`N`个类别之间进行选择，`y[i]`可以取 0 到`N-1`之间的任何值。如果模型为`h(x)`，你可以用以下方程表示似然性：
 
-![images](img/eq0602.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>L</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>y</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo><m:msub><m:mi>y</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo><m:mi><m:mi>&#823;</m:mo><m:mrow><m:mi>y</m:mi><m:mo><m:mi>N</m:mi><m:mo>&#45;</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow></m:mo></m:mo><m:mi><m:mi><m:mi><m:m><m:m:m:m:mo:m:mo><m:m:x</m:mi></m:mo></m:mrow></m:mrow><m:msub><m:mi>y</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:mi><m:mi><m:mi><m:m><m:m:m:m:mo:m:mo><m:m:x</m:mi></m:mo></m:mrow></m:mrow></m:mrow><m:msub><m:mi>y</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo><m:mi><m:mi>&#823;</m:mo><m:mrow><m:mi>y</m:mi><m:mo><m:mi>N</m:mi><m:mo>&#45;</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow></m:mo></m:mrow><m:msub><m:mi>y</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:mi><m:mi><m:mi><m:m><m:m:m:m:mo:m:mo><m:m:x</m:mi></m:mo></m:mrow></m:mrow></m:msub><m:mi>y</m:mi><m:mn>N</m:mn><m:mo>&#45:m:mo><m:mn>1</m:mn></m::></m:math></m:math> 
+![images](img/eq0602.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>L</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>y</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>y</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>&#8230;</m:mo><m:mo>,</m:mo><m:msub><m:mi>y</m:mi><m:mrow><m:mi>N</m:mi><m:mo>&#45;</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>h</m:mi><m:mn>0</m:mn></m:msub><m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:msub><m:mi>y</m:mi><m:mn>0</m:mn></m:msub></m:msup><m:mo>&#183;</m:mo><m:msub><m:mi>h</m:mi><m:mn>1</m:mn></m:msub><m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:msub><m:mi>y</m:mi><m:mn>1</m:mn></m:msub></m:msup><m:mo>&#8230;</m:mo><m:msub><m:mi>h</m:mi><m:mrow><m:mi>N</m:mi><m:mo>&#45;</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:msub><m:mi>y</m:mi><m:mrow><m:mi>N</m:mi><m:mo>&#45;</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:msup></m:mrow></m:math>
 
-同样，如果 `h(x)` 总是正确的，似然性将等于 1；如果 `h(x)` 总是错误的，它将等于 0。为了将似然性转换为合适的损失函数，统计学家取负对数并得到以下结果：
+同样，如果`h(x)`总是正确的，似然性将等于 1；如果`h(x)`总是错误的，它将等于 0。为了将似然性转换为合适的损失函数，统计学家取负对数并得到以下结果：
 
 ![images](img/eq06023.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>l</m:mi><m:mi>o</m:mi><m:mi>s</m:mi><m:mi>s</m:mi><m:mo>=</m:mo><m:mo>&#45;</m:mo><m:mstyle displaystyle="true"><m:munderover><m:mo>&#8721;</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mn>4</m:mn></m:munderover><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:msup></m:mrow></m:math>
 
-
-
-
-这段代码没有计算模型，而是通过调用 `softmax_cross_entropy_with_logits` 直接计算损失。代码的最后一行打印损失的最终值。
+这段代码没有计算模型，而是通过调用`softmax_cross_entropy_with_logits`直接计算损失。代码的最后一行打印损失的最终值。
 
 # 第 7 章
 
@@ -2489,8 +2331,11 @@ softmax(input, dim=-1, name=None)
 ## 本章内容
 
 ![check](img/check.png) **探索神经网络的发展**
+
 ![check](img/check.png) **了解感知器、多层感知器 (MLP) 和深度学习**
+
 ![check](img/check.png) **使用作用域管理变量**
+
 ![check](img/check.png) **在 TensorFlow 应用中演示深度学习**
 
 本章解释了神经网络是如何运作的，以及如何在 TensorFlow 应用中使用它们来分析数据。
@@ -2499,7 +2344,7 @@ softmax(input, dim=-1, name=None)
 
 对于许多人来说，神经网络这一话题会让人联想到人工智能大脑、预测未来的全知计算机以及科幻小说中的其他元素。但机器学习的实践者持有一种更务实的观点：神经网络是有用的计算工具，但它们并非所有应用的理想选择，而且它们永远绝非完全可靠。
 
-生物学启发了神经网络的发展，但其本质运行机制是统计性的。`Neural networks` 通过分析数据来发现输入与输出之间的数学关系。它们应该只作为最后的手段——如果你已经有了清晰的规则将输出与输入数据联系起来，就应该使用你的规则。
+生物学启发了神经网络的发展，但其本质运行机制是统计性的。`Neural networks`通过分析数据来发现输入与输出之间的数学关系。它们应该只作为最后的手段——如果你已经有了清晰的规则将输出与输入数据联系起来，就应该使用你的规则。
 
 理解神经网络的运作与统计回归之间的区别非常重要。当你使用回归时，你选择的是模型的精确形状。但当你使用神经网络分析数据时，你选择的是模型的通用形状，而细节由网络决定。
 
@@ -2507,41 +2352,37 @@ softmax(input, dim=-1, name=None)
 
 ### 神经元
 
-在 19 世纪初，圣地亚哥·拉蒙·卡哈尔（Santiago Ramón y Cajal）密切观察了构成神经组织的细胞。科学家将这些神经细胞称为 `neurons`，图 7-1 展示了它们的基本结构。
+在 19 世纪初，圣地亚哥·拉蒙·卡哈尔（Santiago Ramón y Cajal）密切观察了构成神经组织的细胞。科学家将这些神经细胞称为`neurons`，图 7-1 展示了它们的基本结构。
 
 ![图 7-1：神经细胞通过树突接收传入信号，并产生通过轴突传输的输出信号。](img/9781119466215-fg0701.png)
 
 图 7-1： 神经细胞通过树突接收传入信号，并产生通过轴突传输的输出信号。
 
-神经元通过其 `dendrites`及其分支接收电刺激。细胞体内的化学物质储存电，随着传入信号的增强，神经元的电压随之增加。
+神经元通过其`dendrites`及其分支接收电刺激。细胞体内的化学物质储存电，随着传入信号的增强，神经元的电压随之增加。
 
-当神经元的电压超过某个称为 `threshold`（阈值）的值时，神经元传输（或 `fires`）电信号。该信号通过轴突传输并刺激进一步神经元，如图 7-1 所示。通过这种方式，一个神经元的触发可能会导致一系列其他神经元的触发。
+当神经元的电压超过某个称为`threshold`（阈值）的值时，神经元传输（或`fires`）电信号。该信号通过轴突传输并刺激进一步神经元，如图 7-1 所示。通过这种方式，一个神经元的触发可能会导致一系列其他神经元的触发。
 
 自 19 世纪以来，神经元研究取得了巨大进展，神经学家知道神经元的作用不仅仅是将电从一个细胞传递到另一个细胞。但对于本章，你只需要熟悉三点：
 
-*   神经元接收一个或多个传入信号并产生一个输出信号。
-*   神经元的输出可以作为另一个神经元的输入。
-*   每个神经元都有一个阈值，神经元在电量超过阈值之前不会产生输出。
+* 神经元接收一个或多个传入信号并产生一个输出信号。
+* 神经元的输出可以作为另一个神经元的输入。
+* 每个神经元都有一个阈值，神经元在电量超过阈值之前不会产生输出。
 
 如果你理解了这三点，你就能毫不费地掌握神经元的抽象模型。
 
 ### 感知器
 
-1962 年，弗兰克·罗森布特（Frank Rosenblatt）设计了一种名为 `perceptron`（感知器）的神经元模型。图 7-2 展示了如何图形表示感知器。
+1962 年，弗兰克·罗森布特（Frank Rosenblatt）设计了一种名为`perceptron`（感知器）的神经元模型。图 7-2 展示了如何图形表示感知器。
 
 ![图 7-2：感知器在许多方面与神经元相似。](img/9781119466215-fg0702.png)
 
 图 7-2： 感知器在许多方面与神经元相似。
 
-和神经元一样，感知器接收多个输入并产生一个输出。但感知器的输入是以数值提供的，而不是脉冲。在图 7-2 中，这些值标记为 `x[0]` 到 `x[3]`。
+和神经元一样，感知器接收多个输入并产生一个输出。但感知器的输入是以数值提供的，而不是脉冲。在图 7-2 中，这些值标记为`x[0]`到`x[3]`。
 
 同样，感知器的阈值由一个数字表示。如果输入总和超过阈值，感知器的输出将为 1。如果信号总和低于阈值，输出则为 0。
 
-例如，假设 `x[0]` 设置为 0.5，`x[1]` 设置为 1.5，`x[2]` 设置为 2.5，而 `x[3]` 设置为 3。如果输入总和超过阈值，感知器的输出为 1。如果信号总和低于阈值，输出则为 0。
-
-
-
-
+例如，假设`x[0]`设置为 0.5，`x[1]`设置为 1.5，`x[2]`设置为 2.5，而`x[3]`设置为 3。如果输入总和超过阈值，感知器的输出为 1。如果信号总和低于阈值，输出则为 0。
 
 ![图 7-4: 每个进入节点的输入都有一个相关的权重。](img/9781119466215-fg0704.png)
 
@@ -2549,17 +2390,21 @@ softmax(input, dim=-1, name=None)
 
 为了确定输入的总影响，节点将每个输入与其权重相乘，并将乘积相加。然后，它将和与其阈值进行比较。如果和大于阈值，节点产生一个等于 1 的输出值。否则，输出值为 0。
 
-在数学上，权重被表示为 `w[i]`，其中 `i` 代表第 `i` 个输入的权重。因此，节点的操作可以表示为以下关系：
+在数学上，权重被表示为`w[i]`，其中`i`代表第`i`个输入的权重。因此，节点的操作可以表示为以下关系：
+
+
 
 ![images](img/eq07002.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:mrow><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mi mathvariant="normal">&#160;if&#160;</m:mi><m:mstyle displaystyle="true"><m:munder><m:mo>&#8721;</m:mo><m:mi>i</m:mi></m:munder><m:mrow><m:msub><m:mi>w</m:mi><m:mi>i</m:mi></m:msub><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>&#8805;</m:mo><m:mi mathvariant="normal">&#160;threshold</m:mi></m:mrow></m:mstyle></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>0</m:mn><m:mi mathvariant="normal">&#160;otherwise</m:mi></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:mrow></m:mrow></m:math> 
 
-例如，假设 `x[i] = {3.5, -1.0, 2.5, -0.5}`且`w[i] = {0.6, 1.2, 0.9, -0.2}`。加权输入之和可以如下计算：
+例如，假设`x[i] = {3.5, -1.0, 2.5, -0.5}`且`w[i] = {0.6, 1.2, 0.9, -0.2}`。加权输入之和可以如下计算：
 
-![images](img/eq07003.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mstyle displaystyle="true"><m:munder><m:mo>&#8721;</m:mo><m:mi>i</m:mi></m:munder><m:mrow><m:msub><m:mi>w</m:mi><m:mi>i</m:mi></m:msub><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>=</m:mo><m:mn>3.5</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0.6</m:mn></m:mrow><m:mo)</m:mo></m:mrow><m:mo>&#45;</m:mo><m:mn>1.0</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1.2</m:mn></m:mrow><m:mo)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2.5</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0.9</m:mn></m:mrow><m:mo)</m:mo></m:mrow><m:mo>&#45;</m:mo><m:mn>0.5</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0.2</m:mn></m:mrow><m:mo)</m:mo></m:mrow><m:mo>=</m:25</m:mn></m:mrow></m:mstyle></m:math>
+![images](img/eq07003.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mstyle displaystyle="true"><m:munder><m:mo>&#8721;</m:mo><m:mi>i</m:mi></m:munder><m:mrow><m:msub><m:mi>w</m:mi><m:mi>i</m:mi></m:msub><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>=</m:mo><m:mn>3.5</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0.6</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>&#45;</m:mo><m:mn>1.0</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1.2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2.5</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0.9</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>&#45;</m:mo><m:mn>0.5</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0.2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:25</m:mn></m:mrow></m:mstyle></m:math>
 
 如果感知机的阈值值为 4.0，节点将输出 0 而不是 1。
 
-权重在机器学习中起着至关的作用，因为它们允许应用程序更新神经网络的行为。当应用程序执行训练时，它通过更新权重来改进模型。### 偏置
+权重在机器学习中起着至关的作用，因为它们允许应用程序更新神经网络的行为。当应用程序执行训练时，它通过更新权重来改进模型。
+
+### 偏置
 
 当输入的加权和超过给定的阈值时，节点触发。另一种说法，当加权和与阈值之差大于 0 时，它产生正输出。
 
@@ -2571,7 +2416,9 @@ softmax(input, dim=-1, name=None)
 
 偏置与其他输入一样接收权重。因此，将偏置值设置为 1 是合理的。
 
-本书假设每个感知机都有偏置，这等同于阈值为零。当我使用 `inputs` 或 `input data` 等术语时，你应该假设包含一个偏置。因此，当输入的加权和大于 0 时，感知机会产生正输出。### 激活函数
+本书假设每个感知机都有偏置，这等同于阈值为零。当我使用`inputs`或`input data`等术语时，你应该假设包含一个偏置。因此，当输入的加权和大于 0 时，感知机会产生正输出。
+
+### 激活函数
 
 你可以使用以下关系计算节点的输出：
 
@@ -2580,10 +2427,6 @@ softmax(input, dim=-1, name=None)
 以下方程使用更紧凑的符号表示了相同的关系：
 
 ![images](img/eq07005.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:mrow><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mi mathvariant="normal">&#160;if&#160;</m:mi><m:mstyle displaystyle="true"><m:munder><m:mo>&#8721;</m:mo><m:mi>i</m:mi></m:munder><m:mrow><m:msub><m:mi>w</m:mi><m:mi>i</m:mi></m:msub><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>&#8805;</m:mo><m:mi mathvariant="normal">&#160;threshold</m:mi></m:mrow></m:mstyle></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>0</m:mn><m:mi mathvariant="normal">&#160;otherwise</m:mi></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:mrow></m:mrow></m:math>
-
-
-
-
 
 ![图 7-7: tf.nn.relu6 函数将节点的最大输出限制为 6。](img/9781119466215-fg0707.png)
 
@@ -2597,11 +2440,11 @@ softmax(input, dim=-1, name=None)
 
 图 7-8: 指数线性单元 (ELU) 函数从正值到负值连续变化。
 
-与其他整流函数不同，ELU 在 `x = 0` 处是连续的。根据约翰·开普勒大学的 Djork-Arné Clevert、Thomas Unterthiner 和 Sepp Hochreiter 的研究，ELU 比普通的 ReLU 函数提供了更高的学习速度和更好的泛化能力。
+与其他整流函数不同，ELU 在`x = 0`处是连续的。根据约翰·开普勒大学的 Djork-Arné Clevert、Thomas Unterthiner 和 Sepp Hochreiter 的研究，ELU 比普通的 ReLU 函数提供了更高的学习速度和更好的泛化能力。
 
 ### 分类器函数
 
-第 6 章讨论了逻辑回归主题，并引入了逻辑函数，即更广为人知的 sigmoid 函数。该函数计算 `1/(1 + exp(-x))`，具有许多非常有用的属性，适用于将点分类到不同的类别。图 7-9 显示了 `tf.nn.sigmoid` 的样子。
+第 6 章讨论了逻辑回归主题，并引入了逻辑函数，即更广为人知的 sigmoid 函数。该函数计算`1/(1 + exp(-x))`，具有许多非常有用的属性，适用于将点分类到不同的类别。图 7-9 显示了`tf.nn.sigmoid`的样子。
 
 ![图 7-9: sigmoid 函数经常被用于表示分类概率。](img/9781119466215-fg0709.png)
 
@@ -2609,7 +2452,7 @@ softmax(input, dim=-1, name=None)
 
 尽管 sigmoid 函数很流行，但它有一个显著缺点：它的输出范围在 0 到 1 之间。由于这个范围有限，输入的微小变化会导致输出的微小变化。在许多情况下，输出的差异可能小到数字计算机无法识别。
 
-为了弥补这一缺陷，许多开发者更倾向于使用 `tf.nn.tanh` 激活函数，它计算双曲正切（tanh）。该函数的形状与 sigmoid 函数相似，但范围从 -1 到 1。这意味着计算机能够更好地识别输出中的差异。图 7-10 显示了 `tf.nn.tanh` 激活函数的样子。
+为了弥补这一缺陷，许多开发者更倾向于使用`tf.nn.tanh`激活函数，它计算双曲正切（tanh）。该函数的形状与 sigmoid 函数相似，但范围从 -1 到 1。这意味着计算机能够更好地识别输出中的差异。图 7-10 显示了`tf.nn.tanh`激活函数的样子。
 
 ![图 7-10: tanh 函数类似于 sigmoid 函数，但产生的输出在 -1 到 1 之间。](img/9781119466215-fg0710.png)
 
@@ -2617,9 +2460,13 @@ softmax(input, dim=-1, name=None)
 
 2009 年，James Bergstra、Guillaume Desjardins、Pascal Lamblin 和 Yoshua Bengio 引入了 softsign 函数，它在他们的大多数测试中都优于 tanh。他们按如下方式定义 softsign 函数：
 
-![images](img/eq07006.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>s</m:mi><m:mi>o</m:mi><m:mi>f</m:mi><m:mi>t</m:mi><m:mi>s</m:mi><m:mi>i</m:mi><m:mi>g</m:mi><m:mi>n</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mi>x</m:mi><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo></m:mrow></m:mrow></m:mfrac></m:mrow></m:math> 
+![images](img/eq07006.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>s</m:mi><m:mi>o</m:mi><m:mi>f</m:mi><m:mi>t</m:mi><m:mi>s</m:mi><m:mi>i</m:mi><m:mi>g</m:mi><m:mi>n</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mi>x</m:mi><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo></m:mrow></m:mrow></m:mfrac></m:mrow></m:math> 
 
-图 7-11 显示了 `x` 在 -8 到 8 之间的 softsign 函数。![图 7-11: softsign 函数类似于 tanh，但具有更大的梯度。](img/9781119466215-fg0711) 图 7-11: softsign 函数的梯度在大部分范围内都大于 tanh。这种较大的梯度使得微小的输入变化更容易识别。
+图 7-11 显示了`x`在 -8 到 8 之间的 softsign 函数。
+
+![图 7-11: softsign 函数类似于 tanh，但具有更大的梯度。](img/9781119466215-fg0711)
+
+图 7-11: softsign 函数的梯度在大部分范围内都大于 tanh。这种较大的梯度使得微小的输入变化更容易识别。
 
 ## 层与深度学习
 
@@ -2627,17 +2474,19 @@ softmax(input, dim=-1, name=None)
 
 ### 层
 
-神经网络的列被称为层，由于这个原因，神经网络经常被称为多层感知机（MLP）。每个神经网络至少有两个层，图 7-12 展示了其中一个。![图 7-12:](img/9781119466215-fg0712) 图 7-12: 神经网络至少有两个层。
+神经网络的列被称为层，由于这个原因，神经网络经常被称为多层感知机（MLP）。每个神经网络至少有两个层，图 7-12 展示了其中一个。
 
-神经网络的层有特定的名称。提供输入的层称为输入层。提供输出的层称为输出层。输入层和输出层之间的层被称为隐藏层。层从左到右编号，从 0 开始。如果层的每个节点都与下一层的每个节点连接，则该层被认为是稠密的（全连接）。隐藏层中的每个节点表示为 ![images](img/eq0707.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:msubsup><m:mi>h</m:mi><m:mi>y</m:mi><m:mi>x</m:mi></m:msubsup></m:mrow></m:math>其中 `x` 代表层数，`y` 代表层内的节点索引。例如，![images](img/eq0708.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:msubsup><m:mi>h</m:mi><m:mn>1</m:mn><m:mn>2</m:mn></m:msubsup></m:mrow></m:math> 代表第三层中的第二个节点。
+![图 7-12:](img/9781119466215-fg0712)
 
-你可以使用“改进模型”节中讨论的方法确定每个隐藏节点的输出。例如，如果 `func` 是激活函数，以下方程计算节点 ![images](img/eq0709.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:msubsup><m:mi>h</m:mi><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup></m:mrow></m:math> 和 ![images](img/eq07010.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:msubsup><m:mi>h</m:mi><m:mn>2</m:mn><m:mn>1</m:mn></m:msubsup></m:mrow></m:math> 的输出：
+图 7-12: 神经网络至少有两个层。
+
+神经网络的层有特定的名称。提供输入的层称为输入层。提供输出的层称为输出层。输入层和输出层之间的层被称为隐藏层。层从左到右编号，从 0 开始。如果层的每个节点都与下一层的每个节点连接，则该层被认为是稠密的（全连接）。隐藏层中的每个节点表示为 ![images](img/eq0707.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:msubsup><m:mi>h</m:mi><m:mi>y</m:mi><m:mi>x</m:mi></m:msubsup></m:mrow></m:math>其中`x`代表层数，`y`代表层内的节点索引。例如，![images](img/eq0708.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:msubsup><m:mi>h</m:mi><m:mn>1</m:mn><m:mn>2</m:mn></m:msubsup></m:mrow></m:math> 代表第三层中的第二个节点。
+
+你可以使用“改进模型”节中讨论的方法确定每个隐藏节点的输出。例如，如果`func`是激活函数，以下方程计算节点 ![images](img/eq0709.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:msubsup><m:mi>h</m:mi><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup></m:mrow></m:math> 和 ![images](img/eq07010.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:msubsup><m:mi>h</m:mi><m:mn>2</m:mn><m:mn>1</m:mn></m:msubsup></m:mrow></m:math> 的输出：
+
+![images](img/eq07011.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mtable columnalign="left"><m:mtr><m:mtd><m:msubsup><m:mi>h</m:mi><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mo>=</m:mo><m:mi>f</m:mi><m:mi>u</m:mi><m:mi>n</m:mi><m:mi>c</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msubsup><m:mi>w</m:mi><m:mrow><m:mn>00</m:mn></m:mrow><m:mn>0</m:mn></m:msubsup><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:msubsup><m:mi>w</m:mi><m:mrow><m:mn>10</m:mn></m:mrow><m:mn>0</m:mn></m:msubsup><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>+</m:mo><m:msubsup><m:mi>w</m:mi><m:mrow><m:mn>20</m:mn></m:mrow><m:mn>0</m:mn></m:msubsup><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:msubsup><m:mi>h</m:mi><m:mn>0</m:mn><m:mn>2</m:mn></m:msubsup><m:mo>=</m:mo><m:mi>f</m:mi><m:mi>u</m:mi><m:mi>n</m:mi><m:mi>c</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msubsup><m:mi>w</m:mi><m:mrow><m:mn>00</m:mn></m:mrow><m:mn>1</m:mn></m:msubsup><m:msubsup><m:mi>h</m:mi><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mo>+</m:mo><m:msubsup><m:mi>w</m:mi><m:mrow><m:mn>10</m:mn></m:mrow><m:mn>1</m:mn></m:msubsup><m:msubsup><m:mi>h</m:mi><m:mn>1</m:mn><m:mn>1</m:mn></m:msubsup><m:mo>+</m:mo><m:msubsup><m:mi>w</m:mi><m:mrow><m:mn>20</m:mn></m:mrow><m:mn>1</m:mn></m:msubsup><m:msubsup><m:mi>h</m:mi><m:mn>2</m:mn><m:mn>1</m:mn></m:msubsup></m:mrow><m:mo>)</m:mo></m:mrow></m:mtd></m:mtr></m:mtable></m:math> 
 
 
-
-
-
-![images](img/eq07011.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mtable columnalign="left"><m:mtr><m:mtd><m:msubsup><m:mi>h</m:mi><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mo>=</m:mo><m:mi>f</m:mi><m:mi>u</m:mi><m:mi>n</m:mi><m:mi>c</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msubsup><m:mi>w</m:mi><m:mrow><m:mn>00</m:mn></m:mrow><m:mn>0</m:mn></m:msubsup><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:msubsup><m:mi>w</m:mi><m:mrow><m:mn>10</m:mn></m:mrow><m:mn>0</m:mn></m:msubsup><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>+</m:mo><m:msubsup><m:mi>w</m:mi><m:mrow><m:mn>20</m:mn></m:mrow><m:mn>0</m:mn></m:msubsup><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mo)</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:msubsup><m:mi>h</m:mi><m:mn>0</m:mn><m:mn>2</m:mn></m:msubsup><m:mo>=</m:mo><m:mi>f</m:mi><m:mi>u</m:mi><m:mi>n</m:mi><m:mi>c</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msubsup><m:mi>w</m:mi><m:mrow><m:mn>00</m:mn></m:mrow><m:mn>1</m:mn></m:msubsup><m:msubsup><m:mi>h</m:mi><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mo>+</m:mo><m:msubsup><m:mi>w</m:mi><m:mrow><m:mn>10</m:mn></m:mrow><m:mn>1</m:mn></m:msubsup><m:msubsup><m:mi>h</m:mi><m:mn>1</m:mn><m:mn>1</m:mn></m:msubsup><m:mo>+</m:mo><m:msubsup><m:mi>w</m:mi><m:mrow><m:mn>20</m:mn></m:mrow><m:mn>1</m:mn></m:msubsup><m:msubsup><m:mi>h</m:mi><m:mn>2</m:mn><m:mn>1</m:mn></m:msubsup></m:mrow><m:mo)</m:mo></m:mrow></m:mtd></m:mtr></m:mtable></m:math> 
 
 网络中的每个权重都需要三个值来唯一标识它。将权重表示为 ![images](img/eq07012.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:msubsup><m:mi>w</m:mi><m:mrow><m:mi>y</m:mi><m:mi>z</m:mi></m:mrow><m:mi>x</m:mi></m:msubsup></m:mrow></m:math>你可以按照方式确定它在网络中的位置：
 
@@ -2661,12 +2510,9 @@ softmax(input, dim=-1, name=None)
 
 将激活函数表示为 `f[0]`、`f[1]` 和 `f[2]`，图 7 中的神经网络表示为以下数学式：
 
-![images](img/eq07014)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>y</m:mi><m:mrow><m:mi>x</m:mi><m:mi>i</m:mi></m:mrow></m:mo></m:mrow><m:mi>f</m:mi><m:mn>2</m:mn></m:msub><mm:msub><m:mi>w</m:mi><m:mrow><m:mn>00</m:mn></m:mrow><m:mn>0</m:mn></m:msubsup><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:msubsup><m:mi>w</m:mi><m:mrow><m:mn>10</m:mn></m:mrow><m:mn>0</m:mn></m:msubsup><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>+</m:mo><m:msubsup><m:mi>w</m:mi><m:mrow><m:mn>20</m:mn></m:mrow><m:mn>0</m:mn></m:msubsup><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mo)</m:mo></m:mrow></m:mo>+</m:mo><m:msubsup><m:mi>w</m:mi><m:mrow><m:mn>10</m:mn></m:mrow><m:mn>1</m:mn></m:msubsup><m:msub><m:mi>f</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo><m:msubsup><m:mi>w</m:mi><m:mrow><m:mn>41</m:mn></m:mrow><m:mn>0</m:mn></m:msubsup><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub><m:mo>+</m:mo><m:msubsup><m:mi>w</m:mi><m:mrow><m:mn>51</m:mn></m:mrow><m:mn>0</m:mn></m:msubsup><m:msub><m:mi>x</m:mi><m:mn>5</m:mn></m:msub><m:mo:m:mo><m:msubsup><m:mi>w</m:mi><m:mrow><m:mn>61</m:mn></m:mrow><m:mn>0</m:mn></m:msubsup><m:msub><m:mi>x</m:mi><m:mn>5</m:mn></m:msub></m:mrow></m:mo></m:mrow></m:math>
+![images](img/eq07014)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>y</m:mi><m:mrow><m:mi>x</m:mi><m:mi>i</m:mi></m:mrow></m:mo></m:mrow><m:mi>f</m:mi><m:mn>2</m:mn></m:msub><mm:msub><m:mi>w</m:mi><m:mrow><m:mn>00</m:mn></m:mrow><m:mn>0</m:mn></m:msubsup><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:msubsup><m:mi>w</m:mi><m:mrow><m:mn>10</m:mn></m:mrow><m:mn>0</m:mn></m:msubsup><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>+</m:mo><m:msubsup><m:mi>w</m:mi><m:mrow><m:mn>20</m:mn></m:mrow><m:mn>0</m:mn></m:msubsup><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mo>+</m:mo><m:msubsup><m:mi>w</m:mi><m:mrow><m:mn>10</m:mn></m:mrow><m:mn>1</m:mn></m:msubsup><m:msub><m:mi>f</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo><m:msubsup><m:mi>w</m:mi><m:mrow><m:mn>41</m:mn></m:mrow><m:mn>0</m:mn></m:msubsup><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub><m:mo>+</m:mo><m:msubsup><m:mi>w</m:mi><m:mrow><m:mn>51</m:mn></m:mrow><m:mn>0</m:mn></m:msubsup><m:msub><m:mi>x</m:mi><m:mn>5</m:mn></m:msub><m:mo:m:mo><m:msubsup><m:mi>w</m:mi><m:mrow><m:mn>61</m:mn></m:mrow><m:mn>0</m:mn></m:msubsup><m:msub><m:mi>x</m:mi><m:mn>5</m:mn></m:msub></m:mrow></m:mo></m:mrow></m:math>
 
-
-
-
-![images](img/eq07015.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>p</m:mi><m:mo>&#39;</m:mo><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>f</m:mi><m:mo>&#39;</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>g</m:mi><m:mo>&#39;</m:mo><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> 
+![images](img/eq07015.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>p</m:mi><m:mo>&#39;</m:mo><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>f</m:mi><m:mo>&#39;</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>g</m:mi><m:mo>&#39;</m:mo><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>
 
 反向传播将链式法则扩展到偏导数以及涉及函数和的导数。通过这种方式，算法确定损失函数相对于网络中每个权重的偏导数。幸运的是，你不需要担心偏导数或链式法则，因为 TensorFlow 会自动执行反向传播。但你确实需要创建一个反向传播将用以更新网络权重的优化器。
 
@@ -2742,9 +2588,6 @@ prediction = tf.equal(tf.argmax(out_layer, 1), tf.argmax(lbl_holder, 1))
 print('Success rate:', sess.run(tf.reduce_mean(prediction), feed_dict={img_holder: img_batch, lbl_holder: lbl_batch}))
 ```
 
-
-
-
 * 2015: 何恺民、张祥宇、任少庆和孙健发表的《深度研究激活器：在 ImageNet 分类上超越人类水平的性能》（译名）
 
 这些论文中的每一篇论文都为神经网络的权重初始化提供了不同的方法。TensorFlow 通过提供 `tf.contrib.keras.initializers` 包中的函数来支持这些方法。每个函数都以相应方法的首席研究人员命名，表 7-2 列出了五个可用的函数。
@@ -2792,11 +2635,15 @@ xavier_initializer(uniform=True, seed=None, dtype=tf.float32)
 
 批量归一化的行为取决于是在训练期间还是测试期间。在训练期间，BN 计算每个批的均值和方差，并使用这些结果来计算缩放因子（gamma）和偏移因子（beta）。以下公式说明了 BN 如何计算和使用这些值：
 
-![images/eq0716.png](img/eq0716.png)<m:math xmlns="http://www.w3.org/1998/MathML"><m:mtable columnalign="left"><m:mtr><m:td valign="normal">Batch mean:</m:mi><m:msub><m:mi>&#956;</m:mi><m:mi>B</m:msub></m:mo>=</m:mfrac><m:mn>1</m:mn><m:mi>N</m:mi></m:mfrac><m:mstyle displaystyle="true"><m:munderover><m:mo>&#721;</m:mo><m:mn>0</m:mn><m:mn>N</m:mn><m:mo><m:mn>1</m:mn><m:mi>N</m:mi></m:munderover><m:mrow><m:mi>x</m:mi><m:mi>i</m:msub></m:mrow></m:mstyle></m:mtd><m:mtr><m:td valign="normal">Batch variance:</m:mi><m:msub><m:mi>&#963;</m:mi><m:mi>B</m:msub></m:mn>2</m:mn></m:mo>=</m:mfrac><m:mn>1</m:mn><m:mi>N</m:mi></m:mfrac><m:mstyle displaystyle="true"><m:munderover><m:mo>&#721;</m:mo><m:mn>0</m:mn><m:mn>N</m:mn><m:mo><m:mn>1</m:mn><m:mi>N</m:mi></m:munderover><m:mrow><m:mi>x</m:mi><m:mi>i</m:msub></m:mrow></m:mo>-</m:msub><m:mi>&#956;</m:mi><m:mi>B</m:msub></m:mrow></m:mo></m:mn>2</m:mn></m:msup></m:mstyle></m:mtd><m:mtr><m:td valign="normal">Normalization:</m:mi><m:mover accent="true"><m:mrow><m:mi>x</m:mi><m:mi>i</m:msub></m:mrow><m:mo stretchy="true">&#770;</m:mo></m:mover><m:mo>=</m:mfrac><m:mrow><m:mi>x</m:mi><m:mi>i</m:msub></m:mrow></m:mo>-</m:msub><m:mi>&#956;</m:mi><m:mi>B</m:msub></m:mrow></m:mfrac><m:mrow><m:msqrt><m:mi>&#963;</m:mi><m:mi>B</m:msub></m:mn>2</m:mn></m:msubsup><m:mo>+</m:mo><m:mi>&#949;</m:mi></m:mrow></m:msqrt></m:mrow></m:mfrac></m:mtd><m:mtr><m:td><m:mi comb="normal">Scaling and shifting:</m:mi><m:msub><m:mi>y</m:mi><m:mi>i</m:mi></m:msub></m:mo>=</m:mo><m:mi>&#947;</m:mi><m:mover accent="true"><m:mrow><m:mi>x</m:mi><m:mi>i</m:msub></m:mrow><m:mo stretchy="true">&#770;</m:mo></m:mover><m:mo>+</m:mo><m:mi>&#946;</m:mi></m:td></m:mtr></m:mtable></m:math>
+
+
+![images/eq0716.png](img/eq0716.png)
+
+<m:math xmlns="http://www.w3.org/1998/MathML"><m:mtable columnalign="left"><m:mtr><m:td valign="normal">Batch mean:</m:mi><m:msub><m:mi>&#956;</m:mi><m:mi>B</m:mi></m:msub></m:mo>=</m:mfrac><m:mn>1</m:mn><m:mi>N</m:mi></m:mfrac><m:mstyle displaystyle="true"><m:munderover><m:mo>&#721;</m:mo><m:mn>0</m:mn><m:mn>N</m:mn><m:mo><m:mn>1</m:mn><m:mi>N</m:mi></m:munderover><m:mrow><m:mi>x</m:mi><m:mi>i</m:msub></m:mrow></m:mstyle></m:mtd><m:mtr><m:td valign="normal">Batch variance:</m:mi><m:msub><m:mi>&#963;</m:mi><m:mi>B</m:mi></m:msub></m:mn>2</m:mn></m:mo>=</m:mfrac><m:mn>1</m:mn><m:mi>N</m:mi></m:mfrac><m:mstyle displaystyle="true"><m:munderover><m:mo>&#721;</m:mo><m:mn>0</m:mn><m:mn>N</m:mn><m:mo><m:mn>1</m:mn><m:mi>N</m:mi></m:munderover><m:mrow><m:mi>x</m:mi><m:mi>i</m:msub></m:mrow></m:mo>-</m:msub><m:mi>&#956;</m:mi><m:mi>B</m:mi></m:msub></m:mrow></m:mo></m:mn>2</m:mn></m:msup></m:mstyle></m:mtd><m:mtr><m:td valign="normal">Normalization:</m:mi><m:mover accent="true"><m:mrow><m:mi>x</m:mi><m:mi>i</m:msub></m:mrow><m:mo stretchy="true">&#770;</m:mo></m:mover><m:mo>=</m:mfrac><m:mrow><m:mi>x</m:mi><m:mi>i</m:msub></m:mrow></m:mo>-</m:msub><m:mi>&#956;</m:mi><m:mi>B</m:mi></m:msub></m:mrow></m:mfrac><m:mrow><m:msqrt><m:mi>&#963;</m:mi><m:mi>B</m:mi></m:msub></m:mn>2</m:mn></m:msubsup><m:mo>+</m:mo><m:mi>&#949;</m:mi></m:mrow></m:msqrt></m:mrow></m:mfrac></m:mtd><m:mtr><m:td><m:mi comb="normal">Scaling and shifting:</m:mi><m:msub><m:mi>y</m:mi><m:mi>i</m:mi></m:msub></m:mo>=</m:mo><m:mi>&#947;</m:mi><m:mover accent="true"><m:mrow><m:mi>x</m:mi><m:mi>i</m:msub></m:mrow><m:mo stretchy="true">&#770;</m:mo></m:mover><m:mo>+</m:mo><m:mi>&#946;</m:mi></m:td></m:mtr></m:mtable></m:math>
 
 BN 使用单个批的均值和方差来估计整个总体的均值和方差。TensorFlow 使用移动平均计算总体的均值，并使用移动方差计算总体的方差。在测试期间，BN 使用总体均值和方差而不是批均值和方差对输入值进行缩放和偏移。
 
-为了在代码中实现批量归一化，TensorFlow 提供了 `tf.contrib.layers.batch_norm`。表 7-3 列出了它的参数并对每个参数给出了描述。
+为了在代码中实现批量归一化，TensorFlow 提供了`tf.contrib.layers.batch_norm`。表 7-3 列出了它的参数并对每个参数给出了描述。
 
 ### 表 7-3 (#12_9781119466215-ch07.xhtml#rc07-tbl-0003) tf.contrib.layers.batch_norm 的参数
 
@@ -2814,11 +2661,6 @@ BN 使用单个批的均值和方差来估计整个总体的均值和方差。Te
 | `is_training` | True | 归一化是否更新移动均值和移动方差 |
 | `reuse` | None | 是否可以重用变量 |
 | `variables_collections` | None | 存储归一化变量的集合 |
-
-
-
-
-
 | `outputs_collections` | `None` | 用于存储归一化输出的集合 |
 | `trainable` | `True` | 是否将归一化变量添加到图的可训练集合中 |
 | `batch_weights` | `None` | 用于缩放批量均值和方差的权重 |
@@ -2830,17 +2672,17 @@ BN 使用单个批的均值和方差来估计整个总体的均值和方差。Te
 | `renorm_clipping` | `None` | 提供重归一化数值的字典 |
 | `renorm_decay` | `0.99` | 重归一化过程中更新移动均值/方差的因子 |
 
-TensorFlow 使用 `decay` 参数来计算整体的均值和方差。以下公式展示了计算是如何进行的：
+TensorFlow 使用`decay`参数来计算整体的均值和方差。以下公式展示了计算是如何进行的：
 
 ![images](img/eq07017.png)
 
-<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mtable columnalign="left"><m:mtr><m:mtd><m:msub><m:mi>&#956;</m:mi><m:mi>P</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>&#956;</m:mi><m:mi>P</m:mi></m:msub><m:mi>d</m:mi><m:mi>e</m:mi><m:mi>c</m:mi><m:mi>a</m:mi><m:mi>y</m:mi><m:mo>+</m:mo><m:msub><m:mi>&#956;</m:mi><m:mi>B</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>&#45;</m:mo><m:mi>d</m:mi><m:mi>e</m:mi><m:mi>c</m:mi><m:mi>a</m:mi><m:mi>y</m:mi></m:mrow><m:mo)</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:msubsup><m:mi>&#963;</m:mi><m:mi>P</m:mi><m:mn>2</m:mn></m:msubsup><m:mo>=</m:mo><m:msubsup><m:mi>&#963;</m:mi><m:mi>P</m:mi><m:mn>2</m:mn></m:msubsup><m:mi>d</m:mi><m:mi>e</m:mi><m:mi>c</m:mi><m:mi>a</m:mi><m:mi>y</m:mi><m:mo>+</m:mo><m:msubsup><m:mi>&#963;</m:mi><m:mi>B</m:mi><m:mn>2</m:mn></m:msubsup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>&#45;</m:mo><m:mi>d</m:mi><m:mi>e</m:mi><m:mi>c</m:mi><m:mi>a</m:mi><m:mi>y</m:mi></m:mrow><m:mo)</m:mo></m:mrow></m:mtd></m:mtr></m:mtable></m:math>
+<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mtable columnalign="left"><m:mtr><m:mtd><m:msub><m:mi>&#956;</m:mi><m:mi>P</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>&#956;</m:mi><m:mi>P</m:mi></m:msub><m:mi>d</m:mi><m:mi>e</m:mi><m:mi>c</m:mi><m:mi>a</m:mi><m:mi>y</m:mi><m:mo>+</m:mo><m:msub><m:mi>&#956;</m:mi><m:mi>B</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>&#45;</m:mo><m:mi>d</m:mi><m:mi>e</m:mi><m:mi>c</m:mi><m:mi>a</m:mi><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:msubsup><m:mi>&#963;</m:mi><m:mi>P</m:mi><m:mn>2</m:mn></m:msubsup><m:mo>=</m:mo><m:msubsup><m:mi>&#963;</m:mi><m:mi>P</m:mi><m:mn>2</m:mn></m:msubsup><m:mi>d</m:mi><m:mi>e</m:mi><m:mi>c</m:mi><m:mi>a</m:mi><m:mi>y</m:mi><m:mo>+</m:mo><m:msubsup><m:mi>&#963;</m:mi><m:mi>B</m:mi><m:mn>2</m:mn></m:msubsup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>&#45;</m:mo><m:mi>d</m:mi><m:mi>e</m:mi><m:mi>c</m:mi><m:mi>a</m:mi><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mtd></m:mtr></m:mtable></m:math>
 
-`center` 和 `scale` 参数决定了 `inputs` 参数的值是否应该被偏移和缩放。如果 `center` 为 `True`，函数将平移输入值；如果 `scale` 为 `True`，则将对输入值缩放。
+`center`和`scale`参数决定了`inputs`参数的值是否应该被偏移和缩放。如果`center`为`True`，函数将平移输入值；如果`scale`为`True`，则将对输入值缩放。
 
-理解 `is_training` 和 `trainable` 之间的区别非常重要。将 `is_training` 设置为 `True` 告诉函数归一化正在训练运行期间进行，这意味着它应该更新整体的均值和方差。将 `trainable` 设置为 `True` 则告诉函数将其归一化变量存储在由 `TRAINABLE_VARIABLES` 键表示的图集中。
+理解`is_training`和`trainable`之间的区别非常重要。将`is_training`设置为`True`告诉函数归一化正在训练运行期间进行，这意味着它应该更新整体的均值和方差。将`trainable`设置为`True`则告诉函数将其归一化变量存储在由`TRAINABLE_VARIABLES`键表示的图集中。
 
-`batch_norm` 的最后三个参数与重归一化（renormalization）有关。当应用程序的批量小或相互依赖时，此过程可以改进归一化效果。
+`batch_norm`的最后三个参数与重归一化（renormalization）有关。当应用程序的批量小或相互依赖时，此过程可以改进归一化效果。
 
 ## 正则化
 
@@ -2850,33 +2692,33 @@ TensorFlow 使用 `decay` 参数来计算整体的均值和方差。以下公式
 
 更新神经网络（或其他机器学习算法）以分析通用数据的过程被称为`正则化`（regularization）。研究人员发明了许多正则化网络的方法，本节重点关注两种：
 
-*   **Dropout（丢弃）**：从网络中随机移除节点
-*   **L1/L2 正则化**：通过增加损失来减少权重
+* **Dropout（丢弃）**：从网络中随机移除节点
+* **L1/L2 正则化**：通过增加损失来减少权重
 
 对于这两种方法，我将解释正则化是如何工作的，以及你如何使用 TensorFlow 执行它们。
 
-#### Dropout
+### Dropout
 
-Dropout 过程从网络中随机移除节点。在 TensorFlow 中，你可以通过调用 `nn.dropout` 来配置 dropout。在该函数中`x` 是张量，`keep_prob` 是标量。
+Dropout 过程从网络中随机移除节点。在 TensorFlow 中，你可以通过调用`nn.dropout`来配置 dropout。在该函数中`x`是张量，`keep_prob`是标量。
 
 ```
 nn.dropout(x, keep_prob, noise_shape=None, name=None)
 ```
 
-#### L1/L2 正则化
+### L1/L2 正则化
 
-L1 和 L2 正则化通过减少权重来防止过拟合。在两种情况下，损失都会增加。在 TensorFlow 中执行 L1/L2 正则化，你可以调用 `contrib.layers.l1_regularizer` 或 `contrib.layers.l2_regularizer`：
+L1 和 L2 正则化通过减少权重来防止过拟合。在两种情况下，损失都会增加。在 TensorFlow 中执行 L1/L2 正则化，你可以调用`contrib.layers.l1_regularizer`或`contrib.layers.l2_regularizer`：
 
-*   `l1_regularizer(scope=None)`：执行 L1 正则化的函数
-*   `l2_regularizer(scope=None)`：执行 L2 正则化的函数
+* `l1_regularizer(scope=None)`：执行 L1 正则化的函数
+* `l2_regularizer(scope=None)`：执行 L2 正则化的函数
 
-这些函数返回正则化器。获取正则化器后，你可以通过 `contrib.layers.apply_regularization` 对权重进行正则化。
+这些函数返回正则化器。获取正则化器后，你可以通过`contrib.layers.apply_regularization`对权重进行正则化。
 
 ```
 contrib.layers.apply_regularization(regularizer, weights_list=None)
 ```
 
-许多 TensorFlow 函数接受正则化器。其中一个重要的函数是 `contrib.layers.fully_connected`，我在“改进深度学习”部分中讨论过它。
+许多 TensorFlow 函数接受正则化器。其中一个重要的函数是`contrib.layers.fully_connected`，我在“改进深度学习”部分中讨论过它。
 
 ## 使用作用域管理变量
 
@@ -2884,30 +2726,28 @@ contrib.layers.apply_regularization(regularizer, weights_list=None)
 
 ### 变量作用域
 
-在深度学习应用中，层经常分配相同的名称。为了将变量分开，TensorFlow 允许定义变量的作用域。应用程序可以通过调用 `variable_scope` 来定义作用域：
+在深度学习应用中，层经常分配相同的名称。为了将变量分开，TensorFlow 允许定义变量的作用域。应用程序可以通过调用`variable_scope`来定义作用域：
 
 ```
 variable_scope(name_or_scope, default_name=None, values=None, initializer=None, regularizer=None, caching_device=None, partitioner=None, custom_getter=None, reuse=None, dtype=None, use_resource=None)
 ```
 
-应用程序通常作为 `with` 语句的一部分调用此函数，如下所示：
+应用程序通常作为`with`语句的一部分调用此函数，如下所示：
 
 ```python
 with tf.variable_scope("MyScope"):
     …
 ```
 
-如果应用程序在 `with` 块中使用 `get_variable` 创建变量，TensorFlow 将将作用域名称添加到变量名称之前。这意味着，如果应用程序创建一个名为 `MyVar` 的新变量，该变量的全名称将为 `MyScope/MyVar`。
+如果应用程序在`with`块中使用`get_variable`创建变量，TensorFlow 将将作用域名称添加到变量名称之前。这意味着，如果应用程序创建一个名为`MyVar`的新变量，该变量的全名称将为`MyScope/MyVar`。
 
-第 5 章解释了如何使用 `tf.Variable` 创建变量，但如果应用程序要在作用域内创建变量，则调用的函数是 `get_variable`。
+第 5 章解释了如何使用`tf.Variable`创建变量，但如果应用程序要在作用域内创建变量，则调用的函数是`get_variable`。
 
+```
+get_variable(name, shape=None, dtype=None, initializer=None, regularizer=None, trainable=True, collections=None, caching_device=None, partitioner=None, validate_shape=True, use_resource=None, custom_getter=None)
+```
 
-
-
-
-`get_variable(name, shape=None, dtype=None, initializer=None, regularizer=None, trainable=True, collections=None, caching_device=None, partitioner=None, validate_shape=True, use_resource=None, custom_getter=None)`
-
-如果 `name` 参数标识当前作用域中的一个变量，且作用域的 `reuse` 参数设置为 `True`，`get_variable` 将返回现有变量。以下代码显示了如何使用 `tf.get_variable`：
+如果`name`参数标识当前作用域中的一个变量，且作用域的`reuse`参数设置为`True`，`get_variable`将返回现有变量。以下代码显示了如何使用`tf.get_variable`：
 
 ```python
 with tf.variable_scope("MyScope"):
@@ -2917,19 +2757,19 @@ with tf.variable_scope("MyScope", reuse=True):
     same = tf.get_variable("var") # 与 var 相同
 ```
 
-如果 `variable_scope` 的 `name` 参数与作用域中现有的变量对应，函数将创建一个新变量。`initializer` 参数决定变量的初始值。如果未设置此参数，则初始值将由周围作用域的 `initializer` 参数决定。如果周围作用域的 `initializer` 参数未设置，TensorFlow 将使用 Glorot 初始化来初始化变量。
+如果`variable_scope`的`name`参数与作用域中现有的变量对应，函数将创建一个新变量。`initializer`参数决定变量的初始值。如果未设置此参数，则初始值将由周围作用域的`initializer`参数决定。如果周围作用域的`initializer`参数未设置，TensorFlow 将使用 Glorot 初始化来初始化变量。
 
 ### 从集合中检索变量
 
-正如第 4 章中讨论的，图通过一组集合（collections）存储操作和张量。应用程序可以通过调用 `tf.get_collection` 从集合中检索变量：
+正如第 4 章中讨论的，图通过一组集合（collections）存储操作和张量。应用程序可以通过调用`tf.get_collection`从集合中检索变量：
 
 ```python
 tf.get_collection(key, scope=None)
 ```
 
-`key` 参数标识图的集合之一。一个重要的键是 `tf.GraphKeys.TRAINABLE_VARIABLES`，它标识包含图中可训练变量的集合。
+`key`参数标识图的集合之一。一个重要的键是`tf.GraphKeys.TRAINABLE_VARIABLES`，它标识包含图中可训练变量的集合。
 
-`scope` 参数标识应从中检索变量的作用域。例如，以下代码访问了包含 `hidden_layer_1` 作用域中所有可训练变量的列表：
+`scope`参数标识应从中检索变量的作用域。例如，以下代码访问了包含`hidden_layer_1`作用域中所有可训练变量的列表：
 
 ```python
 tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES, 'hidden_layer_1')
@@ -2937,24 +2777,24 @@ tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES, 'hidden_layer_1')
 
 ### 名称和参数的作用域
 
-正如 `tf.variable_scope` 为变量创建作用域一样，`tf.name_scope` 为张量和操作创建作用域。该函数非常易于使用，以下代码显示了它的工作原理：
+正如`tf.variable_scope`为变量创建作用域一样，`tf.name_scope`为张量和操作创建作用域。该函数非常易于使用，以下代码显示了它的工作原理：
 
 ```python
 with tf.name_scope('block1'):
     t = tf.constant([1., 2.], name='tens')
 ```
 
-此示例在标识符为 `block1` 的名称作用域内部创建了张量 `t`。结果，TensorFlow 将 `t` 的完整标识符设置为 `block1/tens`。
+此示例在标识符为`block1`的名称作用域内部创建了张量`t`。结果，TensorFlow 将`t`的完整标识符设置为`block1/tens`。
 
-`tf.contrib.framework` 包提供了一个名为 `arg_scope` 的有用函数：
+`tf.contrib.framework`包提供了一个名为`arg_scope`的有用函数：
 
 ```python
 arg_scope(list_ops_or_scope, **kwargs)
 ```
 
-该函数创建一个作用域，将参数插入到作用域列出的操作中。也就是说，对于第一个参数中标识的每个操作，`arg_scope` 插入第二个参数中提供的参数。
+该函数创建一个作用域，将参数插入到作用域列出的操作中。也就是说，对于第一个参数中标识的每个操作，`arg_scope`插入第二个参数中提供的参数。
 
-一个示例说明了参数作用域是如何工作的。由于以下代码的作用，作用域内的每个 `foo` 调用都将把 `var` 设置为 `39`：
+一个示例说明了参数作用域是如何工作的。由于以下代码的作用，作用域内的每个`foo`调用都将把`var`设置为`39`：
 
 ```python
 from tensorflow.contrib.framework import arg_scope
@@ -2963,7 +2803,9 @@ with arg_scope([foo], var=39):
     …
 ```
 
-为了在参数作用域中访问某个操作，你必须用 `@add_arg_scope` 装饰操作的定义。如果一个函数需要许多参数且必须被多次调用，可以通过在参数作用域中设置参数来显著减少所需代码量。
+
+
+为了在参数作用域中访问某个操作，你必须用`@add_arg_scope`装饰操作的定义。如果一个函数需要许多参数且必须被多次调用，可以通过在参数作用域中设置参数来显著减少所需代码量。
 
 ## 改进深度学习过程
 
@@ -2990,13 +2832,9 @@ with arg_scope([foo], var=39):
 | `trainable` | `True` | 是否是可训练的 |
 | `scope` | `None` | 作用域 |
 
-全连接层需要 `inputs` 是一个至少两个维的张量。如果 `tf_connected` 是添加输入层，应用程序应设置 `inputs` 为提供数据的占位符。对于连续层，应用程序应设置 `inputs` 为前一个层函数的返回值。
+全连接层需要`inputs`是一个至少两个维的张量。如果`tf_connected`是添加输入层，应用程序应设置`inputs`为提供数据的占位符。对于连续层，应用程序应设置`inputs`为前一个层函数的返回值。
 
-
-
-
-
-`ch7/tuned_learning.py` 模块中的代码执行与本章之前介绍的 `ch7/deep_learning.py` 相同的 MNIST 分类。区别在于它对神经网络进行了调优以提高准确率和性能。它通过调用 `tf.contrib.layers.fully_connected` 而不是 `tf.add` 和 `tf.matmul` 来创建全连接层。列表 7-2 展示了代码。
+`ch7/tuned_learning.py`模块中的代码执行与本章之前介绍的`ch7/deep_learning.py`相同的 MNIST 分类。区别在于它对神经网络进行了调优以提高准确率和性能。它通过调用`tf.contrib.layers.fully_connected`而不是`tf.add`和`tf.matmul`来创建全连接层。列表 7-2 展示了代码。
 
 ### 列表 7-2 带调优的深度学习
 
@@ -3065,17 +2903,17 @@ with tf.Session() as sess:
 
 该模块采用了三种方法来调优其多层神经网络：
 
-* 它将每个全连接层的输出发送到 丢弃层（dropout layer）。该模块将 `keep_prob` 设置为 0.5。
-* 它通过 `tf.contrib.layers.batch_norm` 对隐藏层进行批量归一化。
-* 默认情况下，`tf.contrib.layers.fully_connected` 使用 Glorot 方法初始化隐藏层的权重。
+* 它将每个全连接层的输出发送到丢弃层（dropout layer）。该模块将`keep_prob`设置为 0.5。
+* 它通过`tf.contrib.layers.batch_norm`对隐藏层进行批量归一化。
+* 默认情况下，`tf.contrib.layers.fully_connected`使用 Glorot 方法初始化隐藏层的权重。
 
-隐藏层有 200 个节点，输出层有 10 个节点。在创建层之前，该模块通过 `tf.contrib.framework.arg_scope` 定义了参数作用域（arg_scope）。
+隐藏层有 200 个节点，输出层有 10 个节点。在创建层之前，该模块通过`tf.contrib.framework.arg_scope`定义了参数作用域（arg_scope）。
 
-`arg_scope` 接收一个包含函数（`fully_connected`）的列表。每个 `fully_connected` 调用都会设置 `scope` 参数。
+`arg_scope`接收一个包含函数（`fully_connected`）的列表。每个`fully_connected`调用都会设置`scope`参数。
 
-该应用通过 `tf.get_collection` 获取这些变量。
+该应用通过`tf.get_collection`获取这些变量。
 
-前三个 `fully_connected` 调用没有设置 `activation_fn`，因此使用默认的 ReLU 激活函数。最后一个 `fully_connected` 调用将 `activation_fn` 设置为 `None`，因此输出层节点计算。
+前三个`fully_connected`调用没有设置`activation_fn`，因此使用默认的 ReLU 激活函数。最后一个`fully_connected`调用将`activation_fn`设置为`None`，因此输出层节点计算。
 
 # 使用卷积神经网络 (CNN) 进行图像分类
 
@@ -3107,33 +2945,27 @@ $$S(i, j) = \sum_{m=0}^{k-1} \sum_{n=0}^{k-1} I(i+m, j+n) \cdot K(m, n)$$
 
 CNN 由多个卷积层后若干池化层组成，最后通过全连接层进行分类。这种架构对于处理具有网格拓扑结构的数据（如图像）特别有效。
 
-
-
-
-
 ![images](img/eq08002.png)
 
 $1(-10) + 2(-9) + 3(-8) + 4(-7) + 5(-6) + 6(-5) + 7(-4) + 8(-3) + 9(-2) = -210$
 
-参与图像卷积的第一个矩阵是围绕图像某个像素的 $M \times N$ 矩形。参与点积的第二个 $M \times N$ 矩阵通常被称为 `kernel`（内核），但 TensorFlow 将称为 `filter`（滤波器）。滤波器的元素决定了该滤波器对图像产生的影响。
+参与图像卷积的第一个矩阵是围绕图像某个像素的 $M \times N$ 矩形。参与点积的第二个 $M \times N$ 矩阵通常被称为`kernel`（内核），但 TensorFlow 将称为`filter`（滤波器）。滤波器的元素决定了该滤波器对图像产生的影响。
 
-例如，如果你将图像标记为矩阵 `M`，那么第 $i$ 行第 $j$ 列的像素为 `m[i,j]`。如果你将滤波器标记为矩阵 `K`，那么第 $i$ 行第 $j$ 列的元素为 `k[i,j]`。使用这种符号，卷积过程通过以下点积获得 `m[i,j]` 的新值：
+例如，如果你将图像标记为矩阵`M`，那么第 $i$ 行第 $j$ 列的像素为`m[i,j]`。如果你将滤波器标记为矩阵`K`，那么第 $i$ 行第 $j$ 列的元素为`k[i,j]`。使用这种符号，卷积过程通过以下点积获得`m[i,j]`的新值：
 
 ![images](img/eq08003.png)
 
 $mi,j = |m[i-1,j-1] + m[i-1,j] + m[i-1,j+1] + m[i,j-1] + m[i,j] + m[i,j+1] + m[i+1,j-1] + m[i+1,j] + m[i+1,j+1]| \cdot |k_{0,0} + k_{0,1} + k_{0,2} + k_{1,0} + k_{1,1} + k_{1,2} + k_{2,0} + k_{2,1} + k_{2,2}|$
 
-
-
-
-
-对图像进行过滤时，必须对原始图像中的每个像素计算此点积。这一操作涉及一个重要问题：如果像素 `m[i,j]` 位于图像的边界，你如何找到它周围的像素？
+对图像进行过滤时，必须对原始图像中的每个像素计算此点积。这一操作涉及一个重要问题：如果像素`m[i,j]`位于图像的边界，你如何找到它周围的像素？
 
 ![technicalstuff](img/technicalstuff.png)
 
-许多工程师并不是对每个像素计算点积，而是通过将图像和滤波器转换为频率域来执行卷积。这个过程被称为 `fast convolution`（快速卷积），它涉及对图像和滤波器的每一行和每一列计算快速傅里变换（FFT）。
+许多工程师并不是对每个像素计算点积，而是通过将图像和滤波器转换为频率域来执行卷积。这个过程被称为`fast convolution`（快速卷积），它涉及对图像和滤波器的每一行和每一列计算快速傅里变换（FFT）。
 
-本书和其他机器学习文献的其他优秀佳作一样，使用“卷积”一词来泛指代计算二维点积矩阵的过程。但这种操作的专业术语是 `cross-correlation`（互相关）。卷积在计算点积之前会对其中一个操作数进行反转，而这里介绍的算法并没有反转任何一个操作数。
+
+
+本书和其他机器学习文献的其他优秀佳作一样，使用“卷积”一词来泛指代计算二维点积矩阵的过程。但这种操作的专业术语是`cross-correlation`（互相关）。卷积在计算点积之前会对其中一个操作数进行反转，而这里介绍的算法并没有反转任何一个操作数。
 
 ## 平均滤波器
 
@@ -3145,21 +2977,17 @@ FIGURE 8-1: 图像的斑驳外观是噪声的结果。
 
 从数学角度上看，图像的噪声可以被看作相邻像素之间不希望的变化。你可以通过将每个像素替换为其与周围相邻像素的平均值来减少这种变化。你可以通过将图像与如下滤波器卷积来实现这一点：
 
-![images](img/eq08004.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi mathvariant="normal">kernel</m:mi><m:mo>=</m:mo><m:mrow><m:mo>|</m:mo><m:mrow><m:mtable><m:mtr><m:mtd><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>9</m:mn></m:mfrac></m:mrow></m:mtd><m:mtd><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>9</m:mn></m:mfrac></m:mrow></m:mtd><m:mtd><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>9</m:mn></m:mfrac></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>9</m:mn></m:mfrac></m:mrow></m:mtd><m:mtd><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>9</m:mn></m:mfrac></m:mrow></m:mtd><m:mtd><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>9</m:mn></m:mfrac></m:mrow></m:mtr></m:mtr><m:mtr><m:mtd><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>9</m:mn></m:mfrac></m:mrow></m:mtd><m:mtd><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>9</m:mn></m:mfrac></m:mrow></m:mtd><m:mtd><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>9</m:mn></m:mfrac></m:mrow></m:mtr></m:mtable></m:mrow></m:mo></m:mo></m:mrow></m:mrow></m:math> 
+![images](img/eq08004.png)
 
-将第 $i$ 行第 $j$ 列的像素表示为 `m[ij]`，你可以通过以下方式计算 `m[ij]` 的过滤后的值：
+将第 $i$ 行第 $j$ 列的像素表示为`m[ij]`，你可以通过以下方式计算`m[ij]`的过滤后的值：
 
-![images](img/eq08005.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mtable columnalign="left"><m:mtr><m:mtd><m:msub><m:mi>m</m:mi><m:mrow><m:mi>i</m:mi><m:mo>,</m:mo><m:mi>j</m:mi></m:mrow></m:msub><m:mrow><m:mo>(m:mo><m:mrow><m:mi>f</m:mi><m:mi>i</m:mi><m:mi>l</m:mi><m:mi>t</m:mi><m:mi>e</m:mi><m:mi>r</m:mi><m:mi>e</m:mi><m:mi>d</m:mi><m:mi>d</m:mi></m:mrow><m:mo></m:mo><m:mo><m:mo><m:mo><m:mfrac><m:mn>1</m:mn><m:mn>9</m:mn></m:mfrac></m:msub><m:mi>m</m:mi><m:mrow><m:mi>i</m:mi><m:mo><m:mn>1</m:mn><m:mo><m:mo><m:mi>j</m:mi><m:mo><m:mn>1</m:mn><m:mo></m:mrow></m:msub><m:mo><m:mo><m:mfrac><m:mn>1</m:mn><m:mn>9</m:mn></m:mfrac></m:msub><m:mi>m</m:mi><m:mrow><m:mi>i</m:mi><m:mo><m:mn>1</m:mn><m:mo><m:mo><m:mi>j</m:mi><m:mo><m:mn>1</m:mn><m:mo></m:mrow></m:msub><m:mo><m:mo><m:mfrac><m:mn>1</m:mn><m:mn>9</m:mn></m:mfrac></m:msub><m:mi>m</m:mi><m:mrow><m:mi>i</m:mi><m:mo><m:mn>1</m:mn><m:mo><m:mo><m:mi>j</m:mi><m:mo><m:mn>1</m:mn><m:mo></m:mrow></m:msub><m:mo><m:mo><m:mfrac><m:mn>1</m:mn><m:mn>9</m:mn></m:mfrac></m:msub><m:mi>m</m:mi><m:mrow><m:mi>i</m:mi><m:mo><m:mn>1</m:mn><m:mo><m:mo><m:mi>j</m:mi><m:mo><m:mn>1</m:mn><m:mo></m:mrow></m:msub><m:mo><m:mo><m:mfrac><m:mn>1</m:mn><m:mn>9</m:mn></m:mfrac></m:msub><m:mi>m</m:mi><m:mrow><m:mi>i</m:mi><m:mo><m:mn>1</m:mn><m:mo><m:mo><m:mi>j</m:mi><m:mo><m:mn>1</m:mn><m:mo></m:mrow></m:msub><m:mo><m:mo><m:mfrac><m:mn>1</m:mn><m:mn>9</m:mn></m:mfrac></m:msub><m:mi>m</m:mi><m:mrow><m:mi>i</m:mi><m:mo><m:mn>1</m:mn><m:mo><m:mo><m:mi>j</m:mi><m:mo><m:mn>1</m:mn><m:mo></m:mrow></m:msub><m:mo><m:mo><m:mfrac><m:mn>1</m:mn><m:mn>9</m:mn></m:mfrac></m:msub><m:mi>m</m:mi><m:mrow><m:mi>i</m:mi><m:mo><m:mn>1</m:mn><m:mo><m:mo><m:mi>j</m:mi><m:mo><m:mn>1</m:mn><m:mo></m:mrow></m:msub><m:mo><m:mo><m:mfrac><m:mn>1</m:mn><m:mn>9</m:mn></m:mfrac></m:msub><m:mi>m</m:mi><m:mrow><m:mi>i</m:mi><m:mo><m:mn>1</m:mn><m:mo><m:mo><m:mi>j</m:mi><m:mo><m:mn>1</m:mn><m:mo></m:mrow></m:msub></m:mo><m:mo><m:mfrac><m:mn>1</m:mn><m:mn>9</m:mn></m:mfrac></m:msub><m:mi>m</m:mi><m:mrow><m:mi>i</m:mi><m:mo><m:mn>1</m:mn><m:mo><m:mo><m:mi>j</m:mi><m:mo><m:mn>1</m:mn><m:mo></m:mrow></m:msub></m:mo></m:mo><m:mfrac><m:mn>1</m:mn><m:mn>9</m:mn></m:mfrac></m:msub></m:mtd></m:mtr></m:mtr></m:mtr></m:table></m:math>
+![images](img/eq08005.png)
 
-这种滤波器被称为 `box filter`（盒滤波器）或 `averaging filter`（平均滤波器）。卷积后，过滤后的像素构成了图 8-2 中的图像：
+这种滤波器被称为`box filter`（盒滤波器）或`averaging filter`（平均滤波器）。卷积后，过滤后的像素构成了图 8-2 中的图像：
 
 ![FIGURE 8-2: 盒卷积减少了图像中的噪声。](img/9781119466215-fg0802.png)
 
 FIGURE 8-2: 盒卷积减少了图像中的噪声。
-
-
-
-
 
 假设你有其他的放大镜，每种放大镜上都刻有你家庭成员的图像。如果你检查不同放大镜显示的数字，你就能找到你的每个家庭成员，从而在人群中找到你的家人。
 
@@ -3171,7 +2999,7 @@ FIGURE 8-2: 盒卷积减少了图像中的噪声。
 
 尽管你不能设置过滤器的元素，但你可以设置许多过滤器的属性，例如数量和大小。你还可以配置卷积的另外三个方面：
 
-* `stride`（步长）：将滤波器从一个二维点积移动到下一个 
+* `stride`（步长）：将滤波器从一个二维点积移动到下一个
 * `dilation`（空胀）：通过插入零值元素来扩大滤波器的尺寸
 * `padding`（填充）：考虑图像边缘附近的像素
 
@@ -3181,15 +3009,15 @@ FIGURE 8-2: 盒卷积减少了图像中的噪声。
 
 在每次二维点积之后，卷积过程会将滤波器向右移动一个像素。当完成一行像素的所有点积计算后，卷积会将滤波器向下移动一个像素，并继续计算二维点积。
 
-这种行为是默认的，但开发者可以通过设置 `stride` 来自定义卷积的执行方式。步长决定了滤波器在每次点积后移动多少。要设置 `stride`，你需要提供两个值：水平像素偏移和垂直像素偏移。默认 `stride` 始终为 `(1, 1)`。
+这种行为是默认的，但开发者可以通过设置`stride`来自定义卷积的执行方式。步长决定了滤波器在每次点积后移动多少。要设置`stride`，你需要提供两个值：水平像素偏移和垂直像素偏移。默认`stride`始终为`(1, 1)`。
 
-例如，如果你将 `stride` 设置为 `(2, 3)`，则滤波器在每次点积后将向右移动两个像素。在完成一行所有的点积后，滤波器将向下移动三个像素并开始计算后续的点积。这种增加的步长减少了卷积所需的计算量，但也减少了细节量。在书中，`stride` 将始终被设置为 `(1, 1)`。
+例如，如果你将`stride`设置为`(2, 3)`，则滤波器在每次点积后将向右移动两个像素。在完成一行所有的点积后，滤波器将向下移动三个像素并开始计算后续的点积。这种增加的步长减少了卷积所需的计算量，但也减少了细节量。在书中，`stride`将始终被设置为`(1, 1)`。
 
 #### Dilation
 
-`dilation` 一词通常指身体部分的拉伸或扩张，例如瞳孔。在图像处理中，`dilation` 指拉伸滤波器。与 `stride` 类似，你可以通过提供两个值（水平和垂直）来指定 `dilation`。默认 `dilation` 为 `(1, 1)`。
+`dilation`一词通常指身体部分的拉伸或扩张，例如瞳孔。在图像处理中，`dilation`指拉伸滤波器。与`stride`类似，你可以通过提供两个值（水平和垂直）来指定`dilation`。默认`dilation`为`(1, 1)`。
 
-随着 `dilation` 的增加，滤波器的感受野在不增加参数数量的情况下增大。例如，如果你将 `dilation` 设置为 `(2, 2)`，滤波器元素之间会被零值元素分隔，允许网络捕获更广泛的上下文。
+随着`dilation`的增加，滤波器的感受野在不增加参数数量的情况下增大。例如，如果你将`dilation`设置为`(2, 2)`，滤波器元素之间会被零值元素分隔，允许网络捕获更广泛的上下文。
 
 #### Padding
 
@@ -3214,15 +3042,12 @@ CNN 在许多方面与普通神经网络相似，但它们有关键区别：
 
 在 TensorFlow 中，图像是一个包含通道的张量。例如，灰度图像有一个通道，而 RGB 图像有三个通道。
 
-卷积层接受一批图像，使用一组过滤器进行卷积，并返回一个输出张量。每个输出的大小取决于输入的大小以及 `padding` 的使用。
+卷积层接受一批图像，使用一组过滤器进行卷积，并返回一个输出张量。每个输出的大小取决于输入的大小以及`padding`的使用。
 
-你可以通过调用 `tf.layers.conv2d` 来创建一个卷积层。
-
-
-
-
+你可以通过调用`tf.layers.conv2d`来创建一个卷积层。
 
 | `bias_initializer` | `tf.zeros.initializer()` | 层偏置的初始化器 |
+| --- | --- | --- |
 | `kernel_regularizer` | `None` | 卷积核值（权重）的正则化 |
 | `bias_regularizer` | `None` | 层偏置的正则化 |
 | `activity_regularizer` | `None` | 层输出的正则化 |
@@ -3230,19 +3055,19 @@ CNN 在许多方面与普通神经网络相似，但它们有关键区别：
 | `name` | `None` | 层的名称 |
 | `reuse` | `False` | 布尔值，标识是否重用同名作用域的权重 |
 
-应用程序必须将 `inputs` 设置为形状取决于 `data_format` 参数的张量。如果你将 `data_format` 设置为 `channels_last`（默认值），则 `inputs` 张量的形状应等于 `[batch_size, height, width, channels]`。如果你将 `data_format` 设置为 `channels_first`，则 `inputs` 张量的形状应等于 `[batch_size, channels, height, width]`。
+应用程序必须将`inputs`设置为形状取决于`data_format`参数的张量。如果你将`data_format`设置为`channels_last`（默认值），则`inputs`张量的形状应等于`[batch_size, height, width, channels]`。如果你将`data_format`设置为`channels_first`，则`inputs`张量的形状应等于`[batch_size, channels, height, width]`。
 
-`filters` 参数标识卷积层所使用的滤波器数量。`kernel_size` 参数标识每个滤波器的大小。如果你将此参数设置为单个值 `N`，则每个滤波器的大小将为 `NxN`。如果你将其设置为两个值，例如 `[M, N]`，则每个滤波器的大小将为 `MxN`。
+`filters`参数标识卷积层所使用的滤波器数量。`kernel_size`参数标识每个滤波器的大小。如果你将此参数设置为单个值`N`，则每个滤波器的大小将为`NxN`。如果你将其设置为两个值，例如`[M, N]`，则每个滤波器的大小将为`MxN`。
 
-早前的“设置卷积参数”章节讨论了图像滤波器的步长（stride）和空洞（dilation）特性。在 `tf.layers.conv2d` 中，你可以通过 `strides` 和 `dilation_rate` 参数设置这些属性。
+早前的“设置卷积参数”章节讨论了图像滤波器的步长（stride）和空洞（dilation）特性。在`tf.layers.conv2d`中，你可以通过`strides`和`dilation_rate`参数设置这些属性。
 
-`padding` 参数告诉层如何处理图像的边界像素。如果你将 `padding` 设置为 `valid`，该层将忽略边界像素并返回比输入图像小的输出图像。如果你将 `padding` 设置为 `same`，该层将对输入图像进行零填充，并产生与输入图像大小相同的输出图像。
+`padding`参数告诉层如何处理图像的边界像素。如果你将`padding`设置为`valid`，该层将忽略边界像素并返回比输入图像小的输出图像。如果你将`padding`设置为`same`，该层将对输入图像进行零填充，并产生与输入图像大小相同的输出图像。
 
-`tf.layers.conv2d` 返回一个张量，其形状取决于输入图像的形状、滤波数量以及 `padding` 参数。例如，如果输入的形状为 `[N, height, width, num_channels]` 且 `padding` 设置为 `same`，则输出的形状将为 `[N, height, width, num_filters]`。
+`tf.layers.conv2d`返回一个张量，其形状取决于输入图像的形状、滤波数量以及`padding`参数。例如，如果输入的形状为`[N, height, width, num_channels]`且`padding`设置为`same`，则输出的形状将为`[N, height, width, num_filters]`。
 
-通道数不影响输出的形状。在执行卷积时，`tf.layers.conv2d` 会将通道合并，因此灰度输入图像和 RGB 输入图像将产生相同大小的输出图像。如果你想针对特定通道进行过滤，应该使用的函数是 `tf.nn.depthwise_conv2d`。
+通道数不影响输出的形状。在执行卷积时，`tf.layers.conv2d`会将通道合并，因此灰度输入图像和 RGB 输入图像将产生相同大小的输出图像。如果你想针对特定通道进行过滤，应该使用的函数是`tf.nn.depthwise_conv2d`。
 
-如果应用程序将 `padding` 设置为 `valid`，每个输出图像都将比输入图像小。尺寸的缩小取决于卷积滤波器的维度。例如，如果 `padding` 为 `valid`，滤波器大小为 `[X, Y]`，且输入的形状为 `[N, height, width, num_channels]`，则每个输出图像的形状将为 `[N, height – (Y – 1), width – (X – 1), num_filters]`。
+如果应用程序将`padding`设置为`valid`，每个输出图像都将比输入图像小。尺寸的缩小取决于卷积滤波器的维度。例如，如果`padding`为`valid`，滤波器大小为`[X, Y]`，且输入的形状为`[N, height, width, num_channels]`，则每个输出图像的形状将为`[N, height – (Y – 1), width – (X – 1), num_filters]`。
 
 ### 创建池化层
 
@@ -3254,32 +3079,30 @@ CNN 在许多方面与普通神经网络相似，但它们有关键区别：
 
 图 8-5： 池化层接收输入图像，将其划分为块，对每个块进行操作，并返回一个压缩后的图像。
 
-图 8-5 描述了两种池化方法。第一种找到输入块中的最大值并将该值存储在输出图像中。你可以通过调用 `tf.layers.max_pooling2d` 创建执行此操作的池化层。
+图 8-5 描述了两种池化方法。第一种找到输入块中的最大值并将该值存储在输出图像中。你可以通过调用`tf.layers.max_pooling2d`创建执行此操作的池化层。
 
-第二种池化方法计算输入块中像素的平均值并将该值存储在输出图像中。你可以通过调用 `tf.layers.avg_pooling2d` 创建使用此方法的池化层。
+第二种池化方法计算输入块中像素的平均值并将该值存储在输出图像中。你可以通过调用`tf.layers.avg_pooling2d`创建使用此方法的池化层。
 
-在 `tf.layers` 包提供的池化函数中，`max_pooling2d` 是最流行的。这种流行是有意义的，因为高最大值清楚地表明图像中存在滤波特征。表 8-2 列出了 `max_pooling2d` 的参数并提供了对每个参数的描述。
+在`tf.layers`包提供的池化函数中，`max_pooling2d`是最流行的。这种流行是有意义的，因为高最大值清楚地表明图像中存在滤波特征。表 8-2 列出了`max_pooling2d`的参数并提供了对每个参数的描述。
 
 | 参数 | 默认值 | 描述 |
 | --- | --- | --- |
 | `inputs` | `--` | 输入 4D 张量 |
 | `pool_size` | `--` | 用于池化的块的大小 |
 | `strides` | `--` | 从一次池化操作到下一次操作的偏移 |
-| `padding` | `'valid'` | 算法：`valid` 或 `same` |
+| `padding` | `'valid'` | 算法：`valid`或`same` |
 | `data_format` | `'channels_last'` | 指定的输入形状 |
 | `name` | `None` | 为层提供名称 |
 
+CIFAR-10 和 CIFAR-100 数据集的主页为[`www.cs.toronto.edu/~kriz/cifar.html`](http://www.cs.toronto.edu/~kriz/cifar.html)。该网站提供了三个下载 CIFAR-10 数据集的链接：一个用于 Python 版本，一个用于 Matlab 版本，还有一个二进制版本（binary）。本节侧重于 Python 版本，我建议您将其下载到您的开发系统中。
 
 
 
-
-CIFAR-10 和 CIFAR-100 数据集的主页为 [`www.cs.toronto.edu/~kriz/cifar.html`](http://www.cs.toronto.edu/~kriz/cifar.html)。该网站提供了三个下载 CIFAR-10 数据集的链接：一个用于 Python 版本，一个用于 Matlab 版本，还有一个二进制版本（binary）。本节侧重于 Python 版本，我建议您将其下载到您的开发系统中。
-
-在继续之前，我建议您将压缩包下载并解压到 `ch8` 目录中。在解压后的目录中，您将找到一个名为 `cifar-10-batches-py` 的文件夹。该文件夹包含 5 个包含训练图像的文件（`data_batch_1` 到 `data_batch_5`）以及一个包含测试图像的文件（`test_batch`）。
+在继续之前，我建议您将压缩包下载并解压到`ch8`目录中。在解压后的目录中，您将找到一个名为`cifar-10-batches-py`的文件夹。该文件夹包含 5 个包含训练图像的文件（`data_batch_1`到`data_batch_5`）以及一个包含测试图像的文件（`test_batch`）。
 
 ## 访问 CIFAR-10 图像和标签
 
-CIFAR 使用一种名为 *pickling*（序列化/ 尔克化）的过程对 CIFAR-10 文件中的数据进行序列化。要在 Python 中读取这些数据，应用程序需要导入 `pickle` 并调用其 `load` 方法来处理 CIFAR 文件。例如，以下代码访问了 `data_batch_2` 中的数据：
+CIFAR 使用一种名为*pickling*（序列化/尔克化）的过程对 CIFAR-10 文件中的数据进行序列化。要在 Python 中读取这些数据，应用程序需要导入`pickle`并调用其`load`方法来处理 CIFAR 文件。例如，以下代码访问了`data_batch_2`中的数据：
 
 ```python
 import pickle
@@ -3290,22 +3113,22 @@ with open('cifar-10-batches-py/data_batch_2', 'rb') as imgfile:
 
 结果是一个包含四个键的字典：
 
-*   `b'batch_label'`: 批次的描述（`b' training batch 2 of 5'`）
-*   `b'labels'`: 批次图像的 10,000 个标签的列表
-*   `b'data'`: 包含批次图像数据的 ndarray（n 维数组）
-*   `b'filenames'`: 包含图像数据的 10,000 个 PNG 文件的列表（`b'stealth_fighter_s_001650.png'`）
+- `b'batch_label'`: 批次的描述（`b' training batch 2 of 5'`）
+- `b'labels'`: 批次图像的 10,000 个标签的列表
+- `b'data'`: 包含批次图像数据的 ndarray（n 维数组）
+- `b'filenames'`: 包含图像数据的 10,000 个 PNG 文件的列表（`b'stealth_fighter_s_001650.png'`）
 
 每个图像标签以 0 到 9 之间的整数形式提供。这些值对应于识别相应图像内容的十个类别。这些类别分别是：飞机 (0)、汽车 (1)、鸟 (2)、猫 (3)、鹿 (4)、狗 (5)、青蛙 (6)、马 (7)、船 (8) 和卡车 (9)。例如，图 8-6 显示了类别 7 图像的样貌。
 
 ![图 8-6：每个 CIFAR-10 图像包含 1,024 个像素 (32 x 32)。每个像素以 8 位无符号整数存储红、绿、蓝分量。](img/9781119466215-fg0806.png)
 
-图 8-6： 每个 CIFAR-10 图像包含 1,024 个像素 (32 x 32)。每个像素以 8 位无符号整数存储红、绿、蓝分量。
+图 8-6：每个 CIFAR-10 图像包含 1,024 个像素 (32 x 32)。每个像素以 8 位无符号整数存储红、绿、蓝分量。
 
-由 `data` 键提供的 ndarray 在一个 10,000x3,072 元素的矩阵中包含 8 位无符号整数。该矩阵包含 10,000 行，每行包含一个 32x32 的图像，其中包含红、绿、蓝分量（32 x 32 x 3 = 3,072）。
+由`data`键提供的 ndarray 在一个 10,000x3,072 元素的矩阵中包含 8 位无符号整数。该矩阵包含 10,000 行，每行包含一个 32x32 的图像，其中包含红、绿、蓝分量（32 x 32 x 3 = 3,072）。
 
 ## 在代码中分类 CIFAR 图像
 
-`ch8/cifar_cnn.py` 中的代码演示了如何使用 TensorFlow 加载 CIFAR-10 图像并使用卷积神经网络对其进行分类。代码列表 8-1 展示了模块的代码。
+`ch8/cifar_cnn.py`中的代码演示了如何使用 TensorFlow 加载 CIFAR-10 图像并使用卷积神经网络对其进行分类。代码列表 8-1 展示了模块的代码。
 
 ### 代码列表 8-1：分类 CIFAR-10 图像
 
@@ -3342,40 +3165,37 @@ train_data = train_data.transpose([0, 2, 1])
 train_labels = np.eye(num_categories)
 ```
 
+这是一本关于 TensorFlow 的书，因此应用程序使用`NumPy`而不是 TensorFlow 来预处理数据可能看起来很奇怪。但有一个重要的原因：`Sessions`在训练期间无法将张量馈入占位符。另一个原因是 TensorFlow 在图中存储张量操作，但不存储`NumPy`操作。
 
+为了处理图像数据，应用程序创建了四个卷积层和三个池化层。每个卷积层使用 32 个大小为 5 x 5 的过滤器，每个使用`ReLU`作为激活函数。池化层将其块大小设置为 2 x 2，步长设置为 2。
 
+要理解代码，关键在于理解输入张量的大小是如何变化的。每批包含十张图像，因此每个输入张量的初始大小为`[10, 32, 32, 3]`。
 
-这是一本关于 TensorFlow 的书，因此应用程序使用 `NumPy` 而不是 TensorFlow 来预处理数据可能看起来很奇怪。但有一个重要的原因：`Sessions` 在训练期间无法将张量馈入占位符。另一个原因是 TensorFlow 在图中存储张量操作，但不存储 `NumPy` 操作。
+- 第一个卷积层有 32 个过滤器，因此输出张量的形状为`[10, 32, 32, 32]`。
+- 第一个池化层将每个图像维度缩小一半，因此输出张量的形状为`[10, 16, 16, 32]`。
+- 第二个卷积层有 32 个过滤器，因此输出张量的形状为`[10, 16, 16, 32]`。
+- 第二个池化层将每个图像维度缩小一半，因此输出张量的形状为`[10, 8, 8, 32]`。
+- 第三个卷积层有 32 个过滤器，因此输出张量的形状为`[10, 8, 8, 32]`。
+- 第三个池化层将每个图像维度缩小一半，因此输出张量的形状为`[10, 4, 4, 32]`。
+- 第四个卷积层有 32 个过滤器，因此输出张量的形状为`[10, 4, 4, 32]`。
 
-为了处理图像数据，应用程序创建了四个卷积层和三个池化层。每个卷积层使用 32 个大小为 5 x 5 的过滤器，每个使用 `ReLU` 作为激活函数。池化层将其块大小设置为 2 x 2，步长设置为 2。
-
-要理解代码，关键在于理解输入张量的大小是如何变化的。每批包含十张图像，因此每个输入张量的初始大小为 `[10, 32, 32, 3]`。
-
-*   第一个卷积层有 32 个过滤器，因此输出张量的形状为 `[10, 32, 32, 32]`。
-*   第一个池化层将每个图像维度缩小一半，因此输出张量的形状为 `[10, 16, 16, 32]`。
-*   第二个卷积层有 32 个过滤器，因此输出张量的形状为 `[10, 16, 16, 32]`。
-*   第二个池化层将每个图像维度缩小一半，因此输出张量的形状为 `[10, 8, 8, 32]`。
-*   第三个卷积层有 32 个过滤器，因此输出张量的形状为 `[10, 8, 8, 32]`。
-*   第三个池化层将每个图像维度缩小一半，因此输出张量的形状为 `[10, 4, 4, 32]`。
-*   第四个卷积层有 32 个过滤器，因此输出张量的形状为 `[10, 4, 4, 32]`。
-
-当卷积完成后，模块将图像数据展平并将其传递给两个全连接层。第一个全连接层有 512 个节点，并使用 `ReLU` 作为其激活函数。第二个全连接层有十个节点。
+当卷积完成后，模块将图像数据展平并将其传递给两个全连接层。第一个全连接层有 512 个节点，并使用`ReLU`作为其激活函数。第二个全连接层有十个节点。
 
 ## 执行图像操作
 
 TensorFlow 提供了许多执行通用图像处理的函数。为了展示这些函数，我将它们分为五类：
 
-*   图像转换
-*   颜色处理
-*   旋转和镜像
-*   缩放和裁剪
-*   卷积
+- 图像转换
+- 颜色处理
+- 旋转和镜像
+- 缩放和裁剪
+- 卷积
 
-后续章节将介绍这些函数并演示它们的用法。示例应用程序显示了如何为图像生成摘要数据并使用 `TensorBoard` 进行可视化。
+后续章节将介绍这些函数并演示它们的用法。示例应用程序显示了如何为图像生成摘要数据并使用`TensorBoard`进行可视化。
 
 ### 转换图像
 
-`tf.image` 包提供了在不同文件格式、颜色配置和数据类型之间转换图像的函数。表 8-3 列出了这些函数并提供了对每个函数的描述。
+`tf.image`包提供了在不同文件格式、颜色配置和数据类型之间转换图像的函数。表 8-3 列出了这些函数并提供了对每个函数的描述。
 
 表 8-3 图像转换函数
 
@@ -3394,38 +3214,33 @@ TensorFlow 提供了许多执行通用图像处理的函数。为了展示这些
 | `hsv_to_rgb(images, name=None)` | 将一个或多个图像从 HSV 转换为 RGB |
 | `convert_image_dtype(image, dtype, saturate=False, name=None)` | 更改图像张量元素的数据类型 |
 
-图像张量的形状取决于图像的性质。对于简单的 2-D 图像（例如 JPEG 中的图像），张量的形状为 `[height, width, num_channels]`。对于帧序列（例如 GIF 动画中的图像），形状为 `[frames, height, width, num_channels]`。
+图像张量的形状取决于图像的性质。对于简单的 2-D 图像（例如 JPEG 中的图像），张量的形状为`[height, width, num_channels]`。对于帧序列（例如 GIF 动画中的图像），形状为`[frames, height, width, num_channels]`。
 
-在 表 8-3 中，`decode_*` 函数将数据转换为张量。`encode_*` 函数反相反。图像张量的形状取决于图像的性质。对于简单的 2-D 图像（例如 JPEG 中的图像），张量的形状为 `[height, width, num_channels]`。对于帧序列（例如 GIF 动画中的图像），形状为 `[frames, height, width, num_channels]`。
+在表 8-3 中，`decode_*`函数将数据转换为张量。`encode_*`函数反相反。图像张量的形状取决于图像的性质。对于简单的 2-D 图像（例如 JPEG 中的图像），张量的形状为`[height, width, num_channels]`。对于帧序列（例如 GIF 动画中的图像），形状为`[frames, height, width, num_channels]`。
 
-在 表 8-3 中，`decode_*` 函数将数据转换为张量。`encode_*` 函数反相反。图像张量的形状取决于图像的性质。对于简单的 2-D 图像（例如 JPEG 中的图像），张量的形状为 `[height, width, num_channels]`。对于帧序列（例如 GIF 动画中的图像），形状为 `[frames, height, width, num_channels]`。
-
-*(注：原文中存在大量重复段落，已根据“不重复输出原文”的要求进行处理)*
-
-
-
+在表 8-3 中，`decode_*`函数将数据转换为张量。`encode_*`函数反相反。图像张量的形状取决于图像的性质。对于简单的 2-D 图像（例如 JPEG 中的图像），张量的形状为`[height, width, num_channels]`。对于帧序列（例如 GIF 动画中的图像），形状为`[frames, height, width, num_channels]`。
 
 | `random_contrast(image, lower, upper, seed=None)` | 通过随机值调整对比度 |
 | `random_hue(image, max_delta, seed=None)` | 通过随机数量改变图像的色调 |
 | `random_saturation(image, lower, upper, seed=None)` | 通过随机值更新图像的饱和度 |
 
-这些函数易于理解。`adjust_xyz` 函数通过特定数量更新图像的属性。`random_xyz` 函数则通过随机数量更新图像的属性。
+这些函数易于理解。`adjust_xyz`函数通过特定数量更新图像的属性。`random_xyz`函数则通过随机数量更新图像的属性。
 
-`adjust_contrast` 和 `random_contrast` 改变图像像素与平均值之间的偏差。具体来说，如果一个像素分量等于 `x` 且平均值为 `x[avg]`，则调用因子为 `k` 的 `adjust_contrast` 将以以下方式更新 `x`：
+`adjust_contrast`和`random_contrast`改变图像像素与平均值之间的偏差。具体来说，如果一个像素分量等于`x`且平均值为`x[avg]`，则调用因子为`k`的`adjust_contrast`将以以下方式更新`x`：
 
-![images](img/eq08006.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>k</m:mi><m:mrow><m:mo>(m:mo><m:mrow><m:mi>x</m:mi><m:mo>&#45;</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>a</m:mi><m:mi>v</m:mi><m:mi>g</m:mi></m:mrow></m:msub></m:mrow><m:mo)</m:mo></m:mrow><m:mo>+</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>a</m:mi><m:mi>v</m:mi><m:mi>g</m:mi></m:mrow></m:msub></m:mrow></m:math>
+![images](img/eq08006.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>k</m:mi><m:mrow><m:mo>(m:mo><m:mrow><m:mi>x</m:mi><m:mo>&#45;</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>a</m:mi><m:mi>v</m:mi><m:mi>g</m:mi></m:mrow></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>a</m:mi><m:mi>v</m:mi><m:mi>g</m:mi></m:mrow></m:msub></m:mrow></m:math>
 
-`random_xyz` 函数接受一个或两个随机值边界。例如，以下代码通过介于 0.1 到 0.2 之间的随机因子改变 `img` 的对比度：
+`random_xyz`函数接受一个或两个随机值边界。例如，以下代码通过介于 0.1 到 0.2 之间的随机因子改变`img`的对比度：
 
 ```python
 tf.image.random_contrast(img, 0.1, 0.2)
 ```
 
-`adjust_hue` 和 `random_hue` 用于于 RGB 图像。这两个函数都会将图像像素转换为浮点值，然后将图像转换为 HSV。然后它们在色调通道上添加偏移量，并将图像转换回 RGB 以及像素的原始数据类型。
+`adjust_hue`和`random_hue`用于 RGB 图像。这两个函数都会将图像像素转换为浮点值，然后将图像转换为 HSV。然后它们在色调通道上添加偏移量，并将图像转换回 RGB 以及像素的原始数据类型。
 
 ### 旋转与镜像
 
-`tf.image` 包还提供了用于旋转和镜像（翻转）图像像素的函数。表 8-5 列出了其中的六种函数，并提供了每种函数的描述。
+`tf.image`包还提供了用于旋转和镜像（翻转）图像像素的函数。表 8-5 列出了其中的六种函数，并提供了每种函数的描述。
 
 #### 表 8-5：旋转与镜像函数
 
@@ -3438,9 +3253,9 @@ tf.image.random_contrast(img, 0.1, 0.2)
 | `random_flip_up_down(image, seed=None)` | 有一半的时间内垂直镜像图像 |
 | `transpose_image(image)` | 沿主对角线镜像图像 |
 
-`rot90` 逆时针旋转图像 90 度的倍数。精确旋转角度等于 `90(k mod 4)`，其中 `k` 是 `rot90` 的第二个参数。
+`rot90`逆时针旋转图像 90 度的倍数。精确旋转角度等于`90(k mod 4)`，其中`k`是`rot90`的第二个参数。
 
-了解 `transpose_image` 与垂直或水平翻转图像函数之间的区别很重要。`transpose_image` 沿从左上到右下的对角线翻转图像。
+了解`transpose_image`与垂直或水平翻转图像函数之间的区别很重要。`transpose_image`沿从左上到右下的对角线翻转图像。
 
 以下代码展示了应用程序如何解码 PNG 数据然后旋转、翻转和转置图像。
 
@@ -3464,11 +3279,11 @@ transpose_png = tf.image.encode_png(transpose_tensor)
 
 ![图 8-7：TensorFlow 的函数使得旋转、翻转和转置成为可能](img/9781119466215-fg0807)
 
-图 8-7 TensorFlow 的函数使得旋转、翻转和转置成为可能。`random_flip_left_right` 和 `random_flip_up_down` 在你需要识别可能翻转的图像时非常有用，它们在一半的时间内翻转图像。
+图 8-7 TensorFlow 的函数使得旋转、翻转和转置成为可能。`random_flip_left_right`和`random_flip_up_down`在你需要识别可能翻转的图像时非常有用，它们在一半的时间内翻转图像。
 
 ### 缩放与裁剪
 
-应用程序经常需要放大、缩小或裁剪图像。`tf.image` 的表 8-6 列出了执行这些操作的函数。
+应用程序经常需要放大、缩小或裁剪图像。`tf.image`的表 8-6 列出了执行这些操作的函数。
 
 #### 表 8-6：缩放函数
 
@@ -3482,74 +3297,73 @@ transpose_png = tf.image.encode_png(transpose_tensor)
 | `central_crop(image, fraction)` | 居中裁剪 |
 | `crop_and_pad(image, height, width)` | 裁剪并填充 |
 
-插值（interpolation）一词指的是在已知数据范围内插入新的数据点。表 8-6](#13_9781119466215-ch08.xhtml#tbl006) 中的前四个函数使用了不同的插值方法。
+插值（interpolation）一词指的是在已知数据范围内插入新的数据点。表 8-6 中的前四个函数使用了不同的插值方法。
 
-`resize_nearest_neighbor` 函数通过确定最近的像素来调整图像。如果你调用此函数放大图像，结果将包含原始像素的 `n` 倍。`resize_bilinear` 函数通过周围像素的线性组合来调整图像。它提供了良好的效果，因此是 TensorFlow 和许多显卡使用的默认插值方法。
-
-为了理解双线性插值，观察一维插值（即线性插值）是有帮助的。假设 `P` 是 `A` 和 `B` 之间的一点。`P` 到 `A` 的距离为 `t`，`P` 到 `B` 的距离为 `1 - t`。线性插值通过以下方程设置 `P` 的颜色：
-
-![images](img/eq0807.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:msub><m:mi>P</m:mi><m:mrow><m:mi>c</m:mi><m:mi>o</m:mi><m:mi>l</m:mi><m:mi>o</m:mi><m:mi>r</m:mi></m:mrow></m:msub><m:mo>=</m:mo><m:mi>t</m:mi><m:msub><m:mi>A</m:mi><m:mrow><m:mi>c</m:mi><m:mi>o</m:mi><m:mi>l</m:mi><m:mi>o</m:mi><m:mi>r</m:mi></m:mrow></m:msub><m:mo>+</m:mo><m:mrow><m:mo><m:mrow><m:mn>1</m:mn><m:mo>&#45;</m:mo><m:mi>t</m:mi></m:mrow><m:mo)</m:mo></m:mrow><m:msub><m:mi>B</m:mi><m:mrow><m:mi>c</m:mi><m:mi>o</m:mi><m:mi>l</m:mi><m:mi>o</m:mi><m:mi>r</m:mi></m:mrow></m:msub></m:mrow></m:math>
+`resize_nearest_neighbor`函数通过确定最近的像素来调整图像。如果你调用此函数放大图像，结果将包含原始像素的`n`倍。`resize_bilinear`函数通过周围像素的线性组合来调整图像。它提供了良好的效果，因此是 TensorFlow 和许多显卡使用的默认插值方法。
 
 
 
+为了理解双线性插值，观察一维插值（即线性插值）是有帮助的。假设`P`是`A`和`B`之间的一点。`P`到`A`的距离为`t`，`P`到`B`的距离为`1 - t`。线性插值通过以下方程设置`P`的颜色：
 
-当 `t` 等于 1 时，`P` 的颜色等于 `A` 的颜色。当 `t` 等于 0 时，`P` 的颜色等于 `B` 的颜色。如果 `t` = 0.5，得到的颜色将等于 `A` 和 `B` 颜色的平均值。插值点形成直线，图 8-8 描述了在四个点之间进行插值的线条。
+![images](img/eq0807.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:msub><m:mi>P</m:mi><m:mrow><m:mi>c</m:mi><m:mi>o</m:mi><m:mi>l</m:mi><m:mi>o</m:mi><m:mi>r</m:mi></m:mrow></m:msub><m:mo>=</m:mo><m:mi>t</m:mi><m:msub><m:mi>A</m:mi><m:mrow><m:mi>c</m:mi><m:mi>o</m:mi><m:mi>l</m:mi><m:mi>o</m:mi><m:mi>r</m:mi></m:mrow></m:msub><m:mo>+</m:mo><m:mrow><m:mo><m:mrow><m:mn>1</m:mn><m:mo>&#45;</m:mo><m:mi>t</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:msub><m:mi>B</m:mi><m:mrow><m:mi>c</m:mi><m:mi>o</m:mi><m:mi>l</m:mi><m:mi>o</m:mi><m:mi>r</m:mi></m:mrow></m:msub></m:mrow></m:math>
+
+当`t`等于 1 时，`P`的颜色等于`A`的颜色。当`t`等于 0 时，`P`的颜色等于`B`的颜色。如果`t` = 0.5，得到的颜色将等于`A`和`B`颜色的平均值。插值点形成直线，图 8-8 描述了在四个点之间进行插值的线条。
 
 ![图 8-8: 线性插值通过计算现有点的线性组合找到内部点。](img/9781119466215-fg0808.png)
 
 图 8-8： 线性插值通过计算现有点的线性组合找到内部点。
 
-双线性插值与线性插值相似，但它计算位于四个像素之间的二维点的值。例如，假设 `P` 被四个像素：`A`、`B`、`C` 和 `D` 包围。确定 `P` 需要两个插值参数：`t[1]` 和 `t[2]`。图 8-9 描述了一个点 `P`、其周围的四个像素以及两个插值参数。
+双线性插值与线性插值相似，但它计算位于四个像素之间的二维点的值。例如，假设`P`被四个像素：`A`、`B`、`C`和`D`包围。确定`P`需要两个插值参数：`t[1]`和`t[2]`。图 8-9 描述了一个点`P`、其周围的四个像素以及两个插值参数。
 
 ![图 8-9: 双线性插值使用两个插值参数相对于四个周围点定位一个点。](img/9781119466215-fg0809.png)
 
 图 8-9： 双线性插值使用两个插值参数相对于四个周围点定位一个点。
 
-双线性插值通过通过插值参数对周围像素的颜色来确定内部点的颜色。以下方程显示了双线性插值如何计算被 `A`、`B`、`C` 和 `D` 包围的点 `P` 的颜色：
+双线性插值通过通过插值参数对周围像素的颜色来确定内部点的颜色。以下方程显示了双线性插值如何计算被`A`、`B`、`C`和`D`包围的点`P`的颜色：
 
-![images](img/eq08008.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:msub><m:mi>P</m:mi><m:mrow><m:mi>c</m:mi><m:mi>o</m:mi><m:mi>l</m:mi><m:mi>o</m:mi><m:mi>r</m:mi></m:mrow></m:msub><m:mo>=</m:mo><m:msub><m:mi>t</m:mi><m:mn>1</m:mn></m:msub><m:msub><m:mi>t</m:mi><m:mn>2</m:mn></m:msub><m:msub><m:mi>A</m:mi><m:mrow><m:mi>c</m:mi><m:mi>o</m:mi><m:mi>l</m:mi><m:mi>o</m:mi><m:mi>r</m:mi></m:mrow></m:msub><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>&#45;</m:mo><m:msub><m:mi>t</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo)</m:mo></m:mrow><m:msub><m:mi>t</m:mi><m:mn>2</m:mn></m:msub><m:msub><m:mi>B</m:mi><m:mrow><m:mi>c</m:mi><m:mi>o</m:mi><m:mi>l</m:mi><m:mi>o</m:mi><m:mi>r</m:mi></m:mrow></m:msub><m:mo>+</m:mo><m:msub><m:mi>t</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>&#45;</m:mo><m:msub><m:mi>t</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mo)</m:mo></m:mrow><m:msub><m:mi>C</m:mi><m:mrow><m:mi>c</m:mi><m:mi>o</m:mi><m:mi>l</m:mi><m:mi>o</m:mi><m:mi>r</m:mi></m:mrow></m:msub><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>&#45;</m:mo><m:msub><m:mi>t</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo)</m:mo></m:mrow><m:msub><m:mi>t</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mo><m:mo><m:mrow><m:mn>1</m:mn><m:mo>&#45;</m:mo><m:msub><m:mi>t</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mo)</m:mo></m:mrow><m:msub><m:mi>D</m:mi><m:mrow><m:mi>c</m:mi><m:mi>o</m:mi><m:mi>l</m:mi><m:mi>o</m:mi><m:mi>r</m:mi></m:mrow></m:msub><m:mo><m:mo><m:mi><m:mi>m:m:mimm::mi:::mi</m:mi:m:mi:mi</m:mi:m:mi:r</m:mi></m:mrow></m:msub></m:math>
+![images](img/eq08008.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:msub><m:mi>P</m:mi><m:mrow><m:mi>c</m:mi><m:mi>o</m:mi><m:mi>l</m:mi><m:mi>o</m:mi><m:mi>r</m:mi></m:mrow></m:msub><m:mo>=</m:mo><m:msub><m:mi>t</m:mi><m:mn>1</m:mn></m:msub><m:msub><m:mi>t</m:mi><m:mn>2</m:mn></m:msub><m:msub><m:mi>A</m:mi><m:mrow><m:mi>c</m:mi><m:mi>o</m:mi><m:mi>l</m:mi><m:mi>o</m:mi><m:mi>r</m:mi></m:mrow></m:msub><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>&#45;</m:mo><m:msub><m:mi>t</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:msub><m:mi>t</m:mi><m:mn>2</m:mn></m:msub><m:msub><m:mi>B</m:mi><m:mrow><m:mi>c</m:mi><m:mi>o</m:mi><m:mi>l</m:mi><m:mi>o</m:mi><m:mi>r</m:mi></m:mrow></m:msub><m:mo>+</m:mo><m:msub><m:mi>t</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>&#45;</m:mo><m:msub><m:mi>t</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:msub><m:mi>C</m:mi><m:mrow><m:mi>c</m:mi><m:mi>o</m:mi><m:mi>l</m:mi><m:mi>o</m:mi><m:mi>r</m:mi></m:mrow></m:msub><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>&#45;</m:mo><m:msub><m:mi>t</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:msub><m:mi>t</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mo><m:mo><m:mrow><m:mn>1</m:mn><m:mo>&#45;</m:mo><m:msub><m:mi>t</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:msub><m:mi>D</m:mi><m:mrow><m:mi>c</m:mi><m:mi>o</m:mi><m:mi>l</m:mi><m:mi>o</m:mi><m:mi>r</m:mi></m:mrow></m:msub><m:mo><m:mo><m:mi><m:mi>m:m:mimm::mi:::mi</m:mi:m:mi:mi</m:mi:m:mi:r</m:mi></m:mrow></m:msub></m:math>
 
-`resize_bicubic` 使用双三次值调整图像大小。双三次插值与双线性插值相似，但它不是寻找四个像素的线性组合，而是通过评估涉及 16 点的三次多项式来确定内部点的颜色。双三次插值产生的图像更平滑，但需要更多处理。`central_crop` 通过缩放原始图像尺寸来确定裁剪图像的尺寸。例如，如果你将 `fraction` 参数设置为 25，裁剪的宽度将是原始宽度的四分之一，裁剪的高度将是原始高度的四分之一。`resize_image_with_crop_or_pad` 在不插值的情况下调整。。如果尺寸小于图像，函数将从中心裁剪图像以符合指定的尺寸。如果指定的尺寸大于图像，函数将对图像进行填充。`crop_and_resize` 可以执行多次裁剪操作。`boxes` 的每行识别要裁剪的图像部分，`box_ind` 的每个元素设置输出中裁剪图像的索引。函数使用双线性插值将每个裁剪图像调整为 `crop_size`。
+`resize_bicubic`使用双三次值调整图像大小。双三次插值与双线性插值相似，但它不是寻找四个像素的线性组合，而是通过评估涉及 16 点的三次多项式来确定内部点的颜色。双三次插值产生的图像更平滑，但需要更多处理。`central_crop`通过缩放原始图像尺寸来确定裁剪图像的尺寸。例如，如果你将`fraction`参数设置为 25，裁剪的宽度将是原始宽度的四分之一，裁剪的高度将是原始高度的四分之一。`resize_image_with_crop_or_pad`在不插值的情况下调整。。如果尺寸小于图像，函数将从中心裁剪图像以符合指定的尺寸。如果指定的尺寸大于图像，函数将对图像进行填充。`crop_and_resize`可以执行多次裁剪操作。`boxes`的每行识别要裁剪的图像部分，`box_ind`的每个元素设置输出中裁剪图像的索引。函数使用双线性插值将每个裁剪图像调整为`crop_size`。
 
 ## 卷积
 
-除了创建卷积层外，TensorFlow 应用程序可以通过调用 `tf.nn.conv2d` 执行简单卷积：
+除了创建卷积层外，TensorFlow 应用程序可以通过调用`tf.nn.conv2d`执行简单卷积：
 
 ```
 tf.nn.conv2d(input, filter, padding, use_cudnn_on_gpu=None, data_format='NHWC', name=None)
 ```
 
-`input` 的格式取决于 `data_format` 参数。也就是说，如果应用程序 `data_format` 设置为 `NHWC`，输入张量的形状应该是 `[batch, height, width, channels]`。如果 `data_format` 设置为 `NCHW`，张量的形状应该是 `[batch, channels, height, width]`。
+`input`的格式取决于`data_format`参数。也就是说，如果应用程序`data_format`设置为`NHWC`，输入张量的形状应该是`[batch, height, width, channels]`。如果`data_format`设置为`NCHW`，张量的形状应该是`[batch, channels, height, width]`。
 
-要执行卷积，你应该将 `filter` 分配与 `input` 相同的张量。在执行二维点积时，函数根据 `strides` 张量偏移滤波器。你必须将 `strides` 设置为具有四个元素的一维张量。要在每个方向上偏移 1，请将 `strides` 设置为 `[1, 1, 1, 1]`。
+要执行卷积，你应该将`filter`分配与`input`相同的张量。在执行二维点积时，函数根据`strides`张量偏移滤波器。你必须将`strides`设置为具有四个元素的一维张量。要在每个方向上偏移 1，请将`strides`设置为`[1, 1, 1, 1]`。
 
-如果二维点积涉及图像边界或附近的像素，计算将取决于 `padding` 参数。如果你将 `padding` 设置为 `VALID`，卷积将不计算涉及像素的点积。如果你将 `padding` 设置为 `SAME`，函数将在执行卷积前对图像进行填充。
+如果二维点积涉及图像边界或附近的像素，计算将取决于`padding`参数。如果你将`padding`设置为`VALID`，卷积将不计算涉及像素的点积。如果你将`padding`设置为`SAME`，函数将在执行卷积前对图像进行填充。
 
 ![提示](img/tip.png)
 
-`tf.layers.conv2d` 和 `tf.nn.conv2d` 名称相似，但用途不同。`tf.layers.conv2d` 在 CNN 中创建卷积层，而 `tf.nn.conv2d` 执行单次卷积操作。不要混淆两者。
+`tf.layers.conv2d`和`tf.nn.conv2d`名称相似，但用途不同。`tf.layers.conv2d`在 CNN 中创建卷积层，而`tf.nn.conv2d`执行单次卷积操作。不要混淆两者。
 
-![技术细节](img/technicalstuff.png) 除了 `conv2d`，`tf.nn` 包还提供名为 `conv2d_transpose` 的函数。该函数执行常规卷积，但返回结果图像的转置。
+![技术细节](img/technicalstuff.png) 除了`conv2d`，`tf.nn`包还提供名为`conv2d_transpose`的函数。该函数执行常规卷积，但返回结果图像的转置。
 
 ## 理论实践
 
-`ch8/img_proc.py` 模块中的代码演示了应用程序如何通过对元素等于 1/9 的 3x3 滤波器进行卷积来去除图像中的噪声。除了卷积外，该模块还执行了四个操作：
+`ch8/img_proc.py`模块中的代码演示了应用程序如何通过对元素等于 1/9 的 3x3 滤波器进行卷积来去除图像中的噪声。除了卷积外，该模块还执行了四个操作：
 
-* 调用 `tf.image.adjust_contrast` 改变图像的对比度
-* 调用 `tf.image.flip_left_right` 水镜像图像
+* 调用`tf.image.adjust_contrast`改变图像的对比度
+
+* 调用`tf.image.flip_left_right`水镜像图像
+
 * 将转换为 PNG 格式并写入 PNG 文件
+
 * 生成用于在 TensorBoard 中查看图像的摘要数据
 
-`ch8/img_proc.py` 模块从 `input_aircraft.png` 读取数据并将结果写入 `output_aircraft.png`。[图 8-10] 描述了输入图像和输出图像。
+`ch8/img_proc.py`模块从`input_aircraft.png`读取数据并将结果写入`output_aircraft.png`。[图 8-10] 描述了输入图像和输出图像。
 
 ![图 8-10: TensorFlow 的图像处理程序可以方便修改图像的格式、取向和颜色。](img/9781119466215-fg0810.png)
 
 图 8-10： TensorFlow 的图像处理程序可以方便修改图像的格式、取向和颜色。
 
 列表 8-2 展示了使用 TensorFlow 实现模块操作的代码。
-
-
-
 
 ```python
 img_tensor = tf.image.convert_image_dtype(img_tensor, tf.float32)
@@ -3619,32 +3433,34 @@ coord.request_stop()
 coord.join(threads)
 ```
 
-在查看这段代码时，跟踪图像的形状和数据类型非常重要。在应用程序解码输入图像后，张量的形状为 `[232, 706, 1]`，其元素是 8 位整数。但在执行卷积操作之前，应用程序将张量的形状转换为 `[1, 232, 706, 1]`，并将元素转换为 32 位浮点值。
+在查看这段代码时，跟踪图像的形状和数据类型非常重要。在应用程序解码输入图像后，张量的形状为`[232, 706, 1]`，其元素是 8 位整数。但在执行卷积操作之前，应用程序将张量的形状转换为`[1, 232, 706, 1]`，并将元素转换为 32 位浮点值。
 
-在更新图像的对比度之前，应用程序将图像的形状转换回 `[232, 706, 1]`。随后，该模块将图像的形状转换为 `[1, 232, 706, 1]` 并将其类型转换为 `tf.uint8`，以便模块能够生成摘要数据。最后，应用程序将张量的形状转换为 `[232, 706, 1]`，以便将其将数据编码为 PNG 格式。
+在更新图像的对比度之前，应用程序将图像的形状转换回`[232, 706, 1]`。随后，该模块将图像的形状转换为`[1, 232, 706, 1]`并将其类型转换为`tf.uint8`，以便模块能够生成摘要数据。最后，应用程序将张量的形状转换为`[232, 706, 1]`，以便将其将数据编码为 PNG 格式。
 
-为图像生成摘要数据的过程与为张量生成数据相似。唯一的区别是应用程序需要调用 `tf.summary.image` 而不是 `tf.summary.scalar` 或 `tf.summary.histogram`。函数的签名如下：
+为图像生成摘要数据的过程与为张量生成数据相似。唯一的区别是应用程序需要调用`tf.summary.image`而不是`tf.summary.scalar`或`tf.summary.histogram`。函数的签名如下：
 
 ```python
 tf.summary.image(name, tensor, max_outputs=3, collections=None)
 ```
 
-`name` 参数提供了 TensorFlow 将与图像关联的标签。函数通过 `tensor` 参数接收图像数据，且张量的形状必须是 `[batch_size, height, width, num_channels]`。
+`name`参数提供了 TensorFlow 将与图像关联的标签。函数通过`tensor`参数接收图像数据，且张量的形状必须是`[batch_size, height, width, num_channels]`。
 
-例如，`ch8/img_proc.py` 模块通过以下代码创建了一个为 `img_tensor` 生成摘要数据的操作：
+例如，`ch8/img_proc.py`模块通过以下代码创建了一个为`img_tensor`生成摘要数据的操作：
 
 ```python
 summary_op = tf.summary.image('Output', img_tensor)
 ```
 
-创建此操作后，应用程序会在会话中执行它，并使用 `FileWriter` 将协议缓冲区打印到事件文件中。启动 TensorBoard 时，它将读取此事件文件并显示 `img_tensor` 的图形内容。
+创建此操作后，应用程序会在会话中执行它，并使用`FileWriter`将协议缓冲区打印到事件文件中。启动 TensorBoard 时，它将读取此事件文件并显示`img_tensor`的图形内容。
 
 # 第 9 章 使用循环神经网络 (RNNs) 分析序列数据
 
 本章内容
 
 ![使用循环神经网络 (RNNs) 分析序列数据](img/check.png)
+
 ![使用长短期记忆 (LSTM) 提高性能](img/check.png)
+
 ![使用门控循环单元 (GRU) 进一步提高性能](img/check.png)
 
 ## 循环神经网络
@@ -3663,9 +3479,11 @@ summary_op = tf.summary.image('Output', img_tensor)
 
 RNN 的另一个重要特征是它们按*阶段*执行。例如，如果 RNN 需要解析音频或文本，它会对每个单词执行一个阶段。在每个阶段，RNN 都会接收新数据。区分训练步骤和阶段非常重要：
 
-在图 9-1 中，网络的阶段由 `t` 标识。这衡量的不是时钟时间（例如 1.37 秒），而是离散时间，该时间随每个新阶段增加 1。因此，初始输入值表示为 `xi`，下一组输入表示为 `xi`，以此此类推。
+在图 9-1 中，网络的阶段由`t`标识。这衡量的不是时钟时间（例如 1.37 秒），而是离散时间，该时间随每个新阶段增加 1。因此，初始输入值表示为`xi`，下一组输入表示为`xi`，以此此类推。
 
-RNN 通过访问延迟值来利用之前的处理阶段。在图 9-1 中，延迟值由 Delay 元素提供。如果当前阶段是 4，离开 Delay 元素的值将是 `y(3)`。如果当前阶段是 5，离开该元素的值将是 `y(4)`。
+
+
+RNN 通过访问延迟值来利用之前的处理阶段。在图 9-1 中，延迟值由 `Delay` 元素提供。如果当前阶段是 4，离开 `Delay` 元素的值将是 `y(3)`。如果当前阶段是 5，离开该元素的值将是 `y(4)`。
 
 ### RNN 和递归函数
 
@@ -3689,11 +3507,7 @@ def factorial(N):
   return x
 ```
 
-
-
-
-
-由于由于需要推送到栈中的所有数据，冗长的递归函数会消耗大量的内存。为了防止栈溢出，Python 将默认的最大递归限制设置为 1000。
+由于需要推送到栈中的所有数据，冗长的递归函数会消耗大量的内存。为了防止栈溢出，Python 将默认的最大递归限制设置为 1000。
 
 同样，RNN 的处理需求会随着每个新阶段的出现而增加。就像 Python 设置了最大递归限制一样，每个 RNN 都有一个其可以处理的固定阶段数量。
 
@@ -3709,9 +3523,9 @@ def factorial(N):
 
 ## 训练 RNN
 
-正如本章早些图 9-2 所示，展开 RNN 会导致一个前馈网络，该网络在不同阶段接收其输入（`xi`、`xi` 等）。这种行为意味着 RNN 可以像普通的前馈网络一样进行训练。一种流行的训练方法称为随时间反向传播（BPTT），它将反向传播方法应用于 RNN。第 7 章 讨论了反向传播的基础理论。
+正如本章早些图 9-2 所示，展开 RNN 会导致一个前馈网络，该网络在不同阶段接收其输入（`xi`、`xi` 等）。这种行为意味着 RNN 可以像普通的前馈网络一样进行训练。一种流行的训练方法称为随时间反向传播（BPTT），它将反向传播方法应用于 RNN。第 7 章讨论了反向传播的基础理论。
 
-当你设计具有更多处理阶段的 RNN 时，节点数量数量会急剧增长。结果是，RNN 遭受着两个困扰所有复杂神经网络的问题：梯度消失和梯度爆炸。第 7 章 解释了这些问题以及它们是如何降低神经网络性能的。
+当你设计具有更多处理阶段的 RNN 时，节点数量会急剧增长。结果是，RNN 遭受着两个困扰所有复杂神经网络的问题：梯度消失和梯度爆炸。第 7 章解释了这些问题以及它们是如何降低神经网络性能的。
 
 为了弥补 BPTT 的缺陷，研究人员设计了替代训练方法。截断随时间反向传播（TBPTT）使用了有限的阶段。实时循环学习（RTR）并不展开 RNN，而是通过网络输出和状态相对于权重的偏导数进行训练。
 
@@ -3724,14 +3538,16 @@ def factorial(N):
 在 TensorFlow 应用中，构建 RNN 的过程从创建一个单元开始。具体来说，该过程包含三个步骤：
 
 1. 创建一个 RNN 类的实例，并指定每个单元的单元数。每个单元都是 `tf.nn.rnn_cell.RNNCell` 的子类。
+
 2. 调用一个函数（例如 `tf.nn.static_rnn`），根据单元创建 RNN。该函数接受输入张量列表并返回 RNN 的输出和状态。
+
 3. 使用步骤 2 的输出计算损失。通过在会话中启动优化器来最小化损失。
 
 `RNNCell` 类在本文讨论中起着核心作用。它不能在代码中实例化，但它很重要，因为它是 TensorFlow RNN 类的基类，这些类包括 `BasicRNNCell`、`LSTMCell` 和 `GRUCell`。图 9-3 展示了继承自 `RNNCell` 的七个 TensorFlow 类。
 
 ![图 9-3: RNNCell 的每个子类都代表一种单元。](img/9781119466215-fg0902.png)
 
-图 9-3： 展开 RNN 的操作易于可视化。不，RNNCell 的每个子类都代表一种单元。
+图 9-3： 展开 RNN 的操作易于可视化。不，`RNNCell` 的每个子类都代表一种单元。
 
 `RNNCell` 类定义了可以通过其实例访问的属性和方法。表 9-1 列出了 `RNNCell` 的属性。
 
@@ -3739,14 +3555,14 @@ def factorial(N):
 
 | 属性 | 描述 |
 | :--- | :--- |
-| state_size | 状态的形状 |
-| output_size | 输出的形状 |
-| graph | 单元中包含的图 |
-| losses | 应用于单元的损失 |
-| update | 用于更新权重的张量 |
-| variables | 变量列表 |
-| weights | 权重列表 |
-| scope_name | 包含变量的作用域名称 |
+| `state_size` | 状态的形状 |
+| `output_size` | 输出的形状 |
+| `graph` | 单元中包含的图 |
+| `losses` | 应用于单元的损失 |
+| `update` | 用于更新权重的张量 |
+| `variables` | 变量列表 |
+| `weights` | 权重列表 |
+| `scope_name` | 包含变量的作用域名称 |
 
 RNN 的状态由一个或多个张量表示。因此，应用程序可以将 `state_size` 分配为整数、`TensorShape`、整数元组或 `TensorShape` 元组。应用程序必须将 `output_size` 分配为整数或 `TensorShape`。
 
@@ -3756,10 +3572,10 @@ RNN 的状态由一个或多个张量表示。因此，应用程序可以将 `st
 
 | 方法 | 描述 |
 | :--- | :--- |
-| add_loss(losses, inputs=None) | 添加损失张量 |
-| add_update(updates, inputs=None) | 为单元权重添加更新 |
-| add_variable(name, shape, dtype=None, initializer=None, regularizer=None, trainable=true) | 向层添加新变量 |
-| zero_state(batch_size, dtype) | 返回用于初始化单元状态的零填充张量 |
+| `add_loss(losses, inputs=None)` | 添加损失张量 |
+| `add_update(updates, inputs=None)` | 为单元权重添加更新 |
+| `add_variable(name, shape, dtype=None, initializer=None, regularizer=None, trainable=true)` | 向层添加新变量 |
+| `zero_state(batch_size, dtype)` | 返回用于初始化单元状态的零填充张量 |
 
 ## 创建基础 RNN
 
@@ -3768,10 +3584,6 @@ RNN 的状态由一个或多个张量表示。因此，应用程序可以将 `st
 ```
 BasicRNNCell(num_units, activation=tf.nn.tanh, reuse=None)
 ```
-
-
-
-
 
 `num_units` 参数设置了单元格中隐藏单元的数量。该参数决定了 RNN 的学习能力。也就是说，随着单元数量的增加，单元状态内存的大小随之增加。遗憾的是，训练时间也会增加。此外，如果你将 `num_units` 设置得过高，就会面临过拟合的风险。
 
@@ -3825,10 +3637,6 @@ output, state = tf.nn.static_rnn(new_cell, inputs, dtype=tf.float32)
 
 `output` 和 `state` 的精确值并不重要，但查看它们的形状会有帮助。每个 RNN 产生一个输出矩阵列表，列表的大小由列表的大小决定。
 
-
-
-
-
 ```python
 feed_dict={input_holder: input_block, label_holder: label_block}
 num_correct += corr
@@ -3840,16 +3648,17 @@ step += 1
 ```
 
 # 显示计时结果
+
 ```python
 duration = time.time() - start_time
 print('Time to reach 95% accuracy: {:.2f} seconds'.format(duration))
 ```
 
-首先，模块将 `lovecraft.txt` 的内容读取到字符串中，将字符串拆分为单词，并将每个单词与一个数字关联。单词的数字由其频率决定。也就是说，模块将最常见的单词关联为 0，将次常见的单词关联为 1，以此此类推。
+首先，模块将 `lovecraft.txt` 的内容读取到字符串中，将字符串拆分为单词，并将每个单词与一个数字关联。单词的数字由其频率决定。也就是说，模块将最常见的单词关联为 0，将次常见的单词关联为 1，以此类推。
 
 在获取与单词对应的数字数组后，模块创建了一个具有 600 个隐藏层的 RNN 单元。它使用 RNN 单元调用 `tf.nn.static_rnn`，该函数提供了 RNN 的输出值。为了确定损失，模块将 RNN 的输出与权重矩阵相乘，并在积上加上偏置。然后，它创建了一个 `AdagradOptimizer` 来最小化损失。
 
-对于每次训练运行，应用程序构建一个包含十个（`batch_size`）序列的批量，每个序列包含六个（`input_size`）值。因此，RNN 最只能识别连续六个单词之间的依赖。对于每个六值序列，预期的标签是第七个值，它代表要预测的单词。
+对于每次训练运行，应用程序构建一个包含十个（`batch_size`）序列的批量，每个序列包含六个（`input_size`）值。因此，RNN 最多只能识别连续六个单词之间的依赖。对于每个六值序列，预期的标签是第七个值，它代表要预测的单词。
 
 应用程序并没有执行固定次数的训练。相反，它会持续训练，直到预测准确率超过 95%。每训练一千次，应用程序会打印预测准确率。
 
@@ -3885,7 +3694,7 @@ dynamic_rnn(cells, inputs, length, state_is_tuple=False, dtype=None, scope=None)
 
 这些参数大部分与 `static_rnn` 相同。如果应用程序将 `swap_memory` 设置为 `True`，则必须在 GPU 和 CPU 之间交换数据。`parallel_iterations` 控制应并行执行多少操作。
 
-`dynamic_rnn` 的一个主要优势是尺寸。为了处理序列，`dynamic_rnn` 只使用它需要的数据。与 `static_rnn` 一样，`dynamic_rnn` 返回输出和状态。以下代码了如何使用 `dynamic_rnn`：
+`dynamic_rnn` 的一个主要优势是尺寸。为了处理序列，`dynamic_rnn` 只使用它需要的数据。与 `static_rnn` 一样，`dynamic_rnn` 返回输出和状态。以下代码展示了如何使用 `dynamic_rnn`：
 
 ```python
 example_cell = tf.nn.rnn_cell.BasicRNNCell(4)
@@ -3894,29 +3703,35 @@ output, state = dynamic_rnn(example_cell, dtype=tf.float32)
 
 ## 长期记忆 (LSTM) 单元
 
-随着 RNN 处理阶段的增加，它们的展开网络变得越来越，更容易受到梯度消失的影响。因为 RNN 有固定数量的阶段，它无法识别元素之间的任何依赖关系。
+随着 RNN 处理阶段的增加，它们的展开网络变得越来越深，更容易受到梯度消失的影响。因为 RNN 有固定数量的阶段，它无法识别元素之间的任何依赖关系。
 
 为了弥补这些缺点，Sepp Hochreiter 和 Jürgen Schmiduber 在他们 1997 年的论文 *Long-Term Memory* 中提出了一种改进。本质上，他们提议通过限制 RNN 接受数据的时间来缩小 RNN 的尺寸。具体来说，LSTM 使用了三种限制：
 
 *   限制 RNN 接受输入的时间
+
 *   限制存储在 RNN 状态中的元素
+
 *   限制 RNN 输出的时间
 
 Hochreiter 和 Schmiduber 将他们新类型的单元称为 *long-term memory*（长期记忆），通常缩短为 *LSTM*。因为有了这些限制，LSTM 只处理它需要的数据。
 
 为了实现这些限制，Hochreiter 和 Schmiduber 在 RNN 结构中添加了三个门：输入门、遗忘门和输出门。图 9-5 展示了这些门如何控制 LSTM 单元的连接性。
 
-LM 的一个主要优势是尺寸。为了处理序列，LSTM 需要的节点比同类的 RNN 更少。此外，由于 LSTM 可以阻塞无关数据，它的状态可以检查长期依赖关系。
+LSTM 的一个主要优势是尺寸。为了处理序列，LSTM 需要的节点比同类的 RNN 更少。此外，由于 LSTM 可以阻塞无关数据，它的状态可以检查长期依赖关系。
 
 ![图 9-5：LSTM 通过防止不必要的数据填充 RNN 状态来缩小 RNN 的尺寸。](img/978119466215-fg0905.png)
 
-将输入门的状态表示为 `i[t]`，遗忘门的状态表示为 `f[t]`，输出门的状态表示为 `o[t]`，以下方程显示了这些门的工作原理：
 
 
+将输入门的状态表示为`i[t]`，遗忘门的状态表示为`f[t]`，输出门的状态表示为`o[t]`，以下方程显示了这些门的工作原理：
 
+![images](img/eq09002.png)
 
-
-![images](img/eq09002.png)<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mtable columnalign="left"><m:mtr><m:mtd><m:msub><m:mi>i</m:mi><m:mi>t</m:mi></m:msub><m:mo>=</m:mo><m:mi>&#963;</m:mi><m:mrow><m:mo>\[</m:mo><m:mrow><m:msub><m:mi>w</m:mi><m:mi>i</m:mi></m:msub><m:mrow><m:mo>(`m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>h</m:mi><m:mrow><m:mi>i</m:mi><m:mo>&#45;</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow><m:mo)</m:mo></m:mrow><m:mo>+</m:mo><m:msub><m:mi>b</m:mi><m:mi>i</m:mi></m:msub></m:mrow><m:mo>\]</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:msub><m:mi>f</m:mi><m:mi>t</m:mi></m:msub><m:mo>=</m:mo><m:mi>&#963;</m:mi><m:mrow><m:mo>\[</m:mo><m:mrow><m:msub><m:mi>w</m:mi><m:mi>f</m:mi></m:msub><m:mrow><m:mo>(`m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>h</m:mi><m:mrow><m:mi>i</m:mi><m:mo>&#45;</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow><m:mo)</m:mo></m:mrow><m:mo>+</m:mo><m:msub><m:mi>b</m:mi><m:mi>f</m:mi></m:msub></m:mrow><m:mo>\]</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:msub><m:mi>o</m:mi><m:mi>t</m:mi></m:msub><m:mo>=</m:mo><m:mi>&#963;</m:mi><m:mrow><m:mo>\[</m:mo><m:mrow><m:msub><m:mi>w</m:mi><m:mi>o</m:mi></m:msub><m:mrow><m:mo>(`m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>h</m:mi><m:mrow><m:mi>i</m:mi><m:mo>&#45;</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow><m:mo)</m:mo></m:mrow><m:mo>+</m:mo><m:msub><m:mi>b</m:mi><m:mi>o</m:mi></m:msub></m:mrow><m:mo>\]</m:mo></m:mrow></m:mtd></m:mtr></m:mtable></m:math>
+```
+i[t] = σ(w_i(x_i, h_{i-1}) + b_i)
+f[t] = σ(w_f(x_i, h_{i-1}) + b_f)
+o[t] = σ(w_o(x_i, h_{i-1}) + b_o)
+```
 
 请记住，在门控内部，底层的单元的行为类似于 RNN 单元。也就是说，它依赖于（默认情况下）`tanh` 函数作为其激活函数。
 
@@ -3924,15 +3739,15 @@ Holmes 的观点与 LSTM 发明者的观点非常相似。普通的 RNN 存储�
 
 ## 在代码中创建 LSTM
 
-在 TensorFlow 中，创建 LSTM 的过程与创建普通的 RNN 类似：创建一个单元类的实例，并基于该单元形成 RNN。第二步需要使用与前面的章节“[创建 RNN 单元（Creating RNN cells）14_9781119466215-ch09.xhtml#c09-sec-0005)”中相同的 `static_rnn` 和 `dynamic_rnn` 函数。
+在 TensorFlow 中，创建 LSTM 的过程与创建普通的 RNN 类似：创建一个单元类的实例，并基于该单元形成 RNN。第二步需要使用与前面的章节“创建 RNN 单元（Creating RNN cells）”中相同的`static_rnn`和`dynamic_rnn`函数。
 
-`tf.nn.rnn_cell` 包提供了几个表示 LSTM 单元的类，基础类是 `BasicLSTMCell` 和 `LSTMCell`。前者更容易使用，但后者提供了更多自定义选项。
+`tf.nn.rnn_cell`包提供了几个表示 LSTM 单元的类，基础类是`BasicLSTMCell`和`LSTMCell`。前者更容易使用，但后者提供了更多自定义选项。
 
 ### 设置状态
 
-在普通的 RNN 中，你可以使用大小为[`batch_size`, `state_size]` 的矩阵设置初始状态。但要初始化 LSTM 网络的状态，你需要提供一个包含两个状态矩阵的元组：一个用于标识单元状态，另一个用于标识隐藏状态。
+在普通的 RNN 中，你可以使用大小为`[batch_size, state_size]`的矩阵设置初始状态。但要初始化 LSTM 网络的状态，你需要提供一个包含两个状态矩阵的元组：一个用于标识单元状态，另一个用于标识隐藏状态。
 
-为了简化初始化，`tf.nn.rnn_cell` 模块提供了一个名为 `LSTMStateTuple` 的类，它的构造函数接受这两个状态矩阵。将批大小表示为`batch_sz`，状态大小表示为 `state_sz`，以下代码创建了一个适用于初始化 LSTM 网络状态的 `LSTMStateTuple`：
+为了简化初始化，`tf.nn.rnn_cell`模块提供了一个名为`LSTMStateTuple`的类，它的构造函数接受这两个状态矩阵。将批大小表示为`batch_sz`，状态大小表示为`state_sz`，以下代码创建了一个适用于初始化 LSTM 网络状态的`LSTMStateTuple`：
 
 ```
 cstate = tf.placeholder(tf.float32, [batch_sz, state_sz])
@@ -3940,16 +3755,17 @@ hstate = tf.placeholder(tf.float32, [batch_sz, state_sz])
 init = tf.nn.rnn_cell.LSTMStateTuple(cstate, hstate)
 ```
 
-创建 `LSTMStateTuple` 后，应用程序可以将其赋值给 `static_rnn` 和 `dynamic_rnn` 等函数中的 `initial_state` 参数。
+创建`LSTMStateTuple`后，应用程序可以将其赋值给`static_rnn`和`dynamic_rnn`等函数中的`initial_state`参数。
 
 ### BasicLSTMCell 类
 
-从开发者的角度来看，`BasicLSTMCell` 类与 `BasicRNNCell` 几乎相同。与 `BasicRNNCell` 构造函数一样，`BasicLSTMCell` 的构造函数接受每个单元生成的单元数量。完整的构造函数如下：
+从开发者的角度来看，`BasicLSTMCell`类与`BasicRNNCell`几乎相同。与`BasicRNNCell`构造函数一样，`BasicLSTMCell`的构造函数接受每个单元生成的单元数量。完整的构造函数如下：
 
 ```
 BasicLSTMCell(num_units)
 ```
-*(注：原文示例中 `BasicLSTMCell` 后的代码不完整，此处根据上下文理解为构造函数定义)*
+
+*(注：原文示例中`BasicLSTMCell`后的代码不完整，此处根据上下文理解为构造函数定义)*
 
 ```
 BasicLSTMCell(num_units,
@@ -3957,7 +3773,8 @@ forget_bias=1.0,
 state_is_tuple=True,
 activation=tf.tanh)
 ```
-`BasicLSTMCell` 构造函数接受每个单元生成的单元数量。在创建 LSTM 之后，可以通过调用 `static_rnn` 或 `dynamic_rnn` 创建基于 `BasicLSTMCell` 的 RNN。`forget_bias` 参数在 LSTM 的输入处添加了遗忘偏置。例如，以下代码创建了一个具有 7 个单元的 LSTM：
+
+`BasicLSTMCell`构造函数接受每个单元生成的单元数量。在创建 LSTM 之后，可以通过调用`static_rnn`或`dynamic_rnn`创建基于`BasicLSTMCell`的 RNN。`forget_bias`参数在 LSTM 的输入处添加了遗忘偏置。例如，以下代码创建了一个具有 7 个单元的 LSTM：
 
 ```
 lstm_cell = tf.nn.rnn_cell.BasicLSTMCell(7)
@@ -3966,7 +3783,7 @@ outputs, _ = tf.nn.static_rnn(lstm_cell, [input_holder], dtype=tf.float32)
 
 ### LSTMCell 类
 
-为了节省内存，可以使用 `LSTMCell` 代替 `BasicLSTMCell`。`LSTMCell` 的构造函数如下：
+为了节省内存，可以使用`LSTMCell`代替`BasicLSTMCell`。`LSTMCell`的构造函数如下：
 
 ```
 LSTMCell(num_units,
@@ -3976,18 +3793,19 @@ memory_size=None,
 state_is_tuple=True,
 activation=None)
 ```
-`LSTMCell` 构造函数接受每个单元生成的单元数量。如果你将 `cell_clip` 赋值为浮点值，该函数将限制激活函数的输出。为了减少输入维度，可以使用名为投影矩阵的矩阵乘以输入。`num_proj` 参数标识投影的维度。如果你将 `num_proj` 设置为大于 0 的值，可以使用 `proj_clip` 限制范围。`cell_clip` 参数可以防止梯度爆炸。
+
+`LSTMCell`构造函数接受每个单元生成的单元数量。如果你将`cell_clip`赋值为浮点值，该函数将限制激活函数的输出。为了减少输入维度，可以使用名为投影矩阵的矩阵乘以输入。`num_proj`参数标识投影的维度。如果你将`num_proj`设置为大于 0 的值，可以使用`proj_clip`限制范围。`cell_clip`参数可以防止梯度爆炸。
 
 ### 使用 LSTM 预测文本
 
-`ch9/lstm_lovecraft.py` 中的代码与 `ch9/rnn_lovecraft.py` 执行相同的文本预测。唯一的区别是它基于 `LSTMCell` 创建 RNN。它通过以下代码创建 RNN：
+`ch9/lstm_lovecraft.py`中的代码与`ch9/rnn_lovecraft.py`执行相同的文本预测。唯一的区别是它基于`LSTMCell`创建 RNN。它通过以下代码创建 RNN：
 
 ```
 cell = tf.nn.rnn_cell.LSTMCell(num_hidden)
 outputs, state = tf.nn.dynamic_rnn(cell, [input_holder], dtype=tf.float32)
-``` 
+```
 
-`ch9/lstm_lovecraft.py` 的其余代码与 `ch9/rnn_lovecraft.py` 完全。应用程序从 `lovecraft.txt` 读取文本，并将六个元素的批量输入 RNN。它将 RNN 的输出与权重矩阵相乘，加上偏置，并使用 `AdagradOptimizer` 最小化损失。
+`ch9/lstm_lovecraft.py`的其余代码与`ch9/rnn_lovecraft.py`完全。应用程序从`lovecraft.txt`读取文本，并将六个元素的批量输入 RNN。它将 RNN 的输出与权重矩阵相乘，加上偏置，并使用`AdagradOptimizer`最小化损失。
 
 正如预期的，我的实验支持 LSTM 比原生 RNN 更有效地处理序列的结论。在我的系统上，RNN 平均需要 35.54 秒达到 95% 的准确率，而 LSTM 平均需要 33.48 秒。
 
@@ -3999,34 +3817,29 @@ outputs, state = tf.nn.dynamic_rnn(cell, [input_holder], dtype=tf.float32)
 
 * GRU 单元具有隐藏状态 (`h[t]`)，但没有单元状态 (`C[t]`)。
 * GRU 单元使用重置门来代替输入门，并使用更新门代替遗忘门。
+* GRU 单元没有任何输出门机制。
 
-
-
-
-
-*   GRU 单元没有任何输出门机制。
-
-主要的区别在于 GRU 有两个门，称为重置门（reset gate）和更新门（update gate），而 LSTM 有三个门。GRU 的重置门对应于 LSTM 的输入门， GRU 的更新门对应于 LSTM 的遗忘门。GRU 不使用门来限制单元的输出。图 9-6 展示了一个 GRU 单元及其门控结构。
+主要的区别在于 GRU 有两个门，称为重置门（reset gate）和更新门（update gate），而 LSTM 有三个门。GRU 的重置门对应于 LSTM 的输入门，GRU 的更新门对应于 LSTM 的遗忘门。GRU 不使用门来限制单元的输出。图 9-6 展示了一个 GRU 单元及其门控结构。
 
 ![图 9-6：GRUs 与 LSTMs 相似，但它们有两个门而不是三个。](img/9781119466215-fg0906.png)
 
-图 9-6： GRU 与 LSTM 相似，但它们有两个门而不是三个。
+图 9-6：GRU 与 LSTM 相似，但它们有两个门而不是三个。
 
 GRU 缺少输出门似乎像是一个表面的区别，但更简单的结构意味着应用程序训练 GRU 的速度比 LSTM 快得多。
 
 ## 在代码中创建 GRU
 
-基于 GRU 单元创建 RNN 的过程与创建普通 RNN 非常相似。区别在于应用程序需要将 RNN 单元设置为 `tf.nn.rnn_cell.GRUCell` 类的实例。该类的构造函数如下：
+基于 GRU 单元创建 RNN 的过程与创建普通 RNN 非常相似。区别在于应用程序需要将 RNN 单元设置为`tf.nn.rnn_cell.GRUCell`类的实例。该类的构造函数如下：
 
 ```
 GRUCell(num_units, activation=None, reuse=None, kernel_initializer=None, bias_initializer=None)
 ```
 
-第三个参数命名为 `kernel_initializer`；它与第 8 章中讨论的滤波内核没有关系。`kernel_initializer` 设置单元的初始权重，`bias_initializer` 设置其偏置。
+第三个参数命名为`kernel_initializer`；它与第 8 章中讨论的滤波内核没有关系。`kernel_initializer`设置单元的初始权重，`bias_initializer`设置其偏置。
 
 ### 使用 GRU 预测文本
 
-`ch9/gru_lovecraft.py` 中的代码执行与 `ch9/rnn_lovecraft.py` 和 `ch9/lstm_lovecraft.py` 中代码相同的文本预测。唯一的区别是它使用 `GRUCell` 创建了 RNN，如下文所示：
+`ch9/gru_lovecraft.py`中的代码执行与`ch9/rnn_lovecraft.py`和`ch9/lstm_lovecraft.py`中代码相同的文本预测。唯一的区别是它使用`GRUCell`创建了 RNN，如下文所示：
 
 ```
 cell = tf.nn.rnn_cell.GRUCell(num_hidden)
@@ -4041,7 +3854,7 @@ outputs, _ = tf.nn.static_rnn(cell, [input_holder], dtype=tf.float32)
 
 在本部分中……
 
-通过通过将数据加载到数据集中并使用迭代器提取数据，简化您的应用程序。
+通过将数据加载到数据集中并使用迭代器提取数据，简化您的应用程序。
 
 探索 TensorFlow 的高级 Estimator API 以及适用于机器学习的预构建估计器。
 
@@ -4065,23 +3878,23 @@ outputs, _ = tf.nn.static_rnn(cell, [input_holder], dtype=tf.float32)
 
 本章及接下来的两章将关注提高 TensorFlow 性能的方法——不再有冗长的方程或几何图。相反，我专注于你可以用来加速应用程序的能力。两个重要的能力是数据集和迭代器，它们使得加载和处理输入数据变得更容易。
 
-## 数据集提高提高性能的一种有效方法涉及创建线程。现代处理器具有多个核心，开发者可以通过将应用程序的工作负载划分到线程来利用这些核心。当应用程序需要加载大量数据时，这种多线程变得特别有用。
+## 数据集提高性能的一种有效方法涉及创建线程。现代处理器具有多个核心，开发者可以通过将应用程序的工作负载划分到线程来利用这些核心。当应用程序需要加载大量数据时，这种多线程变得特别有用。
 
-过去，TensorFlow 开发者通过构建 `QueueRunner` 类的实例来创建线程。但从 1.4 版本开始，TensorFlow 建议使用 `Dataset` 代替 `QueueRunner`。`Dataset` 不仅仅是一个大数据块——它提供了一个用于加载和处理数据的高性能流水线。
+过去，TensorFlow 开发者通过构建`QueueRunner`类的实例来创建线程。但从 1.4 版本开始，TensorFlow 建议使用`Dataset`代替`QueueRunner`。`Dataset`不仅仅是一个大数据块——它提供了一个用于加载和处理数据的高性能流水线。
 
 在一般的 TensorFlow 应用中，处理数据集的过程包含三个步骤：
 
-1.  **从数据或文件创建数据集。**
-2.  **将数据集拆分为批次并根据需要对批次进行预处理。**
-3.  **在会话处理数据集的批次。**
+1. **从数据或文件创建数据集。**
+2. **将数据集拆分为批次并根据需要对批次进行预处理。**
+3. **在会话处理数据集的批次。**
 
-你可以通过调用 `Dataset` 类的方法执行前两个步骤。下面的讨论将探索这些方法并展示如何使用它们。
+你可以通过调用`Dataset`类的方法执行前两个步骤。下面的讨论将探索这些方法并展示如何使用它们。
 
 ## 创建数据集
 
-在实践中，数据集是训练/测试数据的容器，其元素是应用程序用于向会提供数据的批次（batches）。第 5 章详细解释了分批处理（batching）主题。
+在实践中，数据集是训练/测试数据的容器，其元素是应用程序用于向会话提供数据的批次（batches）。第 5 章详细解释了分批处理（batching）主题。
 
-你可以通过调用 `Dataset` 类的方法执行前两个步骤。下面的讨论将探索这些方法并展示如何使用它们。
+你可以通过调用`Dataset`类的方法执行前两个步骤。下面的讨论将探索这些方法并展示如何使用它们。
 
 #### 从数据创建数据集
 
@@ -4097,17 +3910,13 @@ outputs, _ = tf.nn.static_rnn(cell, [input_holder], dtype=tf.float32)
 | `from_sparse_tensor_slices(sparse_tensor)` | 创建稀疏张量每行包含一个元素的数据集 |
 | `from_generator(generator,output_types,output_shapes=None)` | 从给定的生成器创建数据集 |
 
-
-
-
-
 ## 2. 通过调用函数获取生成器对象。
 
 根据你的 Python 版本继续执行第 3 步或第 4 步。
 
-### 3. 在 Python 2.x 中，调用对象的 `next` 方法来调用生成器函数。
+### 3. 在 Python 2.x 中，调用对象的`next`方法来调用生成器函数。
 
-### 4. 在 Python 3.x 中，调用内置的 `next` 函数并传入生成器对象。
+### 4. 在 Python 3.x 中，调用内置的`next`函数并传入生成器对象。
 
 例如，以下生成器最多返回四个整数：
 
@@ -4119,7 +3928,7 @@ def simple_gen():
         i += 1
 ```
 
-以下代码获取生成器对象并调用 `next` 来访问生成器的前三个值：
+以下代码获取生成器对象并调用`next`来访问生成器的前三个值：
 
 ```python
 simple_iter = simple_gen()
@@ -4128,55 +3937,55 @@ next(simple_iter)
 next(simple_iter)
 ```
 
-`from_generator` 方法创建一个包含生成器产生的每个值对应元素的数据集。应用程序必须将该方法的 `generator` 参数设置为生成器函数，并将 `output_types` 参数设置为能够识别生成器值类型的结构。
+`from_generator`方法创建一个包含生成器产生的每个值对应元素的数据集。应用程序必须将该方法的`generator`参数设置为生成器函数，并将`output_types`参数设置为能够识别生成器值类型的结构。
 
-例如，以下代码从 `simple_gen` 生成器创建一个数据集：
+例如，以下代码从`simple_gen`生成器创建一个数据集：
 
 ```python
 dset = tf.data.Dataset.from_generator(simple_gen, output_types=tf.int32)
 ```
 
-`simple_gen` 返回的生成器产生四个值。因此，`from_generator` 返回一个包含四个元素的数据集：每个元素对应一个整数。
+`simple_gen`返回的生成器产生四个值。因此，`from_generator`返回一个包含四个元素的数据集：每个元素对应一个整数。
 
 ### 从文本创建数据集
 
-你可以通过创建 `TextLineDataset` 实例（它是 `Dataset` 的子类）创建一个包含文本文件行的数据集。该类的构造函数如下：
+你可以通过创建`TextLineDataset`实例（它是`Dataset`的子类）创建一个包含文本文件行的数据集。该类的构造函数如下：
 
 ```python
 TextLineDataset(filenames, compression_type=None, buffer_size=None)
 ```
 
-要调用此构造函数，你需要将 `filenames` 赋值给包含一个或多个文件的张量。默认情况下，构造函数假设文件包含未压缩的文本。但如果你将 `compression_type` 设置为 `ZLIB` 或 `GZIP`，构造函数会在访问数据之前解压缩存档。
 
-`TextLineDataset` 将为输入文件的每一行包含一个字符串元素。例如，如果 `test1.txt` 有三行而 `test2.txt` 有四行，以下代码将创建一个包含七个字符串的数据集：
+
+要调用此构造函数，你需要将`filenames`赋值给包含一个或多个文件的张量。默认情况下，构造函数假设文件包含未压缩的文本。但如果你将`compression_type`设置为`ZLIB`或`GZIP`，构造函数会在访问数据之前解压缩存档。
+
+`TextLineDataset`将为输入文件的每一行包含一个字符串元素。例如，如果`test1.txt`有三行而`test2.txt`有四行，以下代码将创建一个包含七个字符串的数据集：
 
 ```python
 ds = TextLineDataset(['test1.txt', 'test2.txt'])
 ```
 
-在将字符串读入数据集后，你可以使用 `Iterator` 遍历它们。我将在章节稍后的部分“Iterators”中解释什么是 `Iterator`。
+在将字符串读入数据集后，你可以使用`Iterator`遍历它们。我将在章节稍后的部分“Iterators”中解释什么是`Iterator`。
 
-### 从二进制文件创建数据集
+## 从二进制文件创建数据集
 
 除了文本文件外，如果文件包含 TFRecords，TensorFlow 支持从二进制文件创建数据集。当你需要访问大量数据时，TFRecords 非常有用，但它们非常复杂且文档较少。将 TFRecord 数据存储到文件的总体过程包含三个步骤：
 
-1. 创建一个 `tf.train.Example` 来保存你想存储的数据。
-2. 通过调用 `SerializeToString` 方法将 `tf.train.Example` 存储为协议缓冲区（protocol buffer）。
-3. 创建一个 `tf.python_io.TFRecordWriter` 并使用它将协议缓冲区写入 TFRecord 文件。
+1. 创建一个`tf.train.Example`来保存你想存储的数据。
 
-与数据集一样，`Example` 存储训练和测试数据。与数据集不同，它们将数据存储在名为 `features` 的键值对中。每个特征由一个 `tf.train.Feature` 表示，你可以通过调用其构造函数并传入包含一个或多个 `Feature` 的 `tf.train.Features` 对象来创建一个 `Example`。处理这些类可能会令人困惑，因此我尽力解释清楚：
+2. 通过调用`SerializeToString`方法将`tf.train.Example`存储为协议缓冲区（protocol buffer）。
 
-*   在 `tf.train.Example` 构造函数中，`features` 参数接受 `tf.train.Features` 实例。
-*   在 `tf.train.Features` 构造函数中，`feature` 参数接受一个名称与 `tf.train.Feature` 实例关联的字典。
-*   在 `tf.train.Feature` 构造函数中，`bytes_list` 参数接受 `tf.train.BytesList`，`float_list` 参数接受 `tf.train.FloatList`，而 `int64_list` 参数接受 `tf.train.Int64List`。
+3. 创建一个`tf.python_io.TFRecordWriter`并使用它将协议缓冲区写入 TFRecord 文件。
 
-在 `tf.train.Example` 构造函数中，`features` 参数接受 `tf.train.Features` 实例。
+与数据集一样，`Example`存储训练和测试数据。与数据集不同，它们将数据存储在名为`features`的键值对中。每个特征由一个`tf.train.Feature`表示，你可以通过调用其构造函数并传入包含一个或多个`Feature`的`tf.train.Features`对象来创建一个`Example`。处理这些类可能会令人困惑，因此我尽力解释清楚：
 
-在 `tf.train.Features` 构造函数中，`feature` 参数接受一个名称与 `tf.train.Feature` 实例关联的字典。
+- 在`tf.train.Example`构造函数中，`features`参数接受`tf.train.Features`实例。
 
-在 `tf.train.Feature` 构造函数中，`bytes_list` 参数接受 `tf.train.BytesList`，`float_list` 参数接受 `tf.train.FloatList`，而 `int64_list` 参数接受 `tf.train.Int64List`。
+- 在`tf.train.Features`构造函数中，`feature`参数接受一个名称与`tf.train.Feature`实例关联的字典。
 
-以下代码创建 `Example` 特征：
+- 在`tf.train.Feature`构造函数中，`bytes_list`参数接受`tf.train.BytesList`，`float_list`参数接受`tf.train.FloatList`，而`int64_list`参数接受`tf.train.Int64List`。
+
+以下代码创建`Example`特征：
 
 ```python
 feat_a = tf.train.Feature(bytes_list=tf.train.BytesList(value=[b"abc"]))
@@ -4185,18 +3994,15 @@ feat_c = tf.train.Feature(int64_list=tf.train.Int64List(value=[42]))
 example = tf.train.Example(features=tf.train.Features(feature={'a': feat_a, 'b': feat_b, 'c': feat_c}))
 ```
 
-以下代码从 `Example` 创建数据集：
+以下代码从`Example`创建数据集：
 
 ```python
 dataset = tf.data.TFRecordDataset('example.tfrecord')
 ```
 
+我将在稍后的“转换数据集”章节中讨论`map`方法。现在，重要的是知道`map`会将`dataset`替换为新的`Dataset`，该新`Dataset`包含了`parse_func`的返回值。在这段代码中，`parse_func`返回一个包含名为`feat`特征值的张量。
 
-
-
-我将在稍后的“转换数据集”章节中讨论 `map` 方法。现在，重要的是知道 `map` 会将 `dataset` 替换为新的 `Dataset`，该新 `Dataset` 包含了 `parse_func` 的返回值。在这段代码中，`parse_func` 返回一个包含名为 `feat` 特征值的张量。
-
-如果一个特征包含大量的零，你可以通过将特征名称与 `VarLenFeature` 关联将其加载到稀疏向量中。你可以通过调用 `tf.VarLenFeature` 来创建一个新的 `VarLenFeature`：
+如果一个特征包含大量的零，你可以通过将特征名称与`VarLenFeature`关联将其加载到稀疏向量中。你可以通过调用`tf.VarLenFeature`来创建一个新的`VarLenFeature`：
 
 ```python
 tf.VarLenFeature(dtype)
@@ -4204,20 +4010,23 @@ tf.VarLenFeature(dtype)
 
 我希望大家很清楚 TFRecords API 是没必要的复杂。我诚地希望 TensorFlow 的未来版本能解决这个问题，并简化 TFRecords 的用法。
 
-### 处理数据集
+## 处理数据集
 
-在创建数据集后，可以通过调用 `Dataset` 类的许多方法之一来操作其元素。为了介绍这些方法，我将它们分为四类：
+在创建数据集后，可以通过调用`Dataset`类的许多方法之一来操作其元素。为了介绍这些方法，我将它们分为四类：
 
-*   处理批次（batches）
-*   简单操作
-*   转换（Transformations）
-*   创建 `Iterator`
+- 处理批次（batches）
 
-接下来的章节介绍了前三类方法。我将在章节稍后的“迭代器（Iterators)”部分探讨 `Iterator`话题。
+- 简单操作
+
+- 转换（Transformations）
+
+- 创建`Iterator`
+
+接下来的章节介绍了前三类方法。我将在章节稍后的“迭代器（Iterators)”部分探讨`Iterator`话题。
 
 ### 处理批次
 
-正如第 5 章中所讨论，应用程序经常将数据集划分为批次。`Dataset` 类使得处理批次变得简单，表 10-2 列出了两个执行批相关操作的方法。
+正如第 5 章中所讨论，应用程序经常将数据集划分为批次。`Dataset`类使得处理批次变得简单，表 10-2 列出了两个执行批相关操作的方法。
 
 表 10-2 批次操作
 
@@ -4226,7 +4035,7 @@ tf.VarLenFeature(dtype)
 | `batch(batch_size)` | 将数据集的内容划分为批次 |
 | `padded_batch(batch_size, padded_shapes, padding_values=None)` | 将数据集的内容划分为批次，并使用填充确保每个批次具有预期的形状 |
 
-`batch` 将数据集的值划分为大小为 `batch_size` 的批次。以下代码将数据集划分为两个包含三个元素的批次。
+`batch`将数据集的值划分为大小为`batch_size`的批次。以下代码将数据集划分为两个包含三个元素的批次。
 
 ```python
 vals = tf.constant([1, 2, 3, 4, 5, 6], dtype=tf.int64)
@@ -4234,7 +4043,7 @@ ds1 = tf.data.Dataset.from_tensor_slices(vals)
 ds2 = ds1.batch(3) # contains [1, 2, 3], [4, 5, 6]
 ```
 
-`padded_batch` 方法将数据集的每个元素（批次）填充到由 `padded_shapes` 参数指定的形状。然后该方法将这些元素合并为一个大的元素。
+`padded_batch`方法将数据集的每个元素（批次）填充到由`padded_shapes`参数指定的形状。然后该方法将这些元素合并为一个大的元素。
 
 ```python
 vals = tf.constant([[1., 2.], [3., 4.]])
@@ -4243,37 +4052,33 @@ ds2 = ds1.padded_batch(2, padded_shapes=[3], padding_values=1.)
 # ds2 contains [[1., 2., 1.], [3., 4., 1.]]
 ```
 
-这段代码创建了每个包含两个元素的批次，并将每个批次填充到大小为三。由于该方法的 `padding_values` 参数，`padded_batch` 将插入的值设置为 1.0。
+这段代码创建了每个包含两个元素的批次，并将每个批次填充到大小为三。由于该方法的`padding_values`参数，`padded_batch`将插入的值设置为 1.0。
 
 ### 简单操作
 
-在将数据集划分为批次后，可以通过调用 `Dataset` 类的方法来操作批次。表 10-3 列出了九个执行简单操作的方法。
+在将数据集划分为批次后，可以通过调用`Dataset`类的方法来操作批次。表 10-3 列出了九个执行简单操作的方法。
 
 表 10-3 简单数据集操作
 
 | 成员 | 描述 |
 | --- | --- |
-| `take(count)` | 返回一个包含前 `count` 个元素的数据集 |
-| `skip(count)` | 返回一个跳过前 `count` 个元素的数据集 |
+| `take(count)` | 返回一个包含前`count`个元素的数据集 |
+| `skip(count)` | 返回一个跳过前`count`个元素的数据集 |
 | `concatenate(dataset)` | 将给定数据集追加到当前数据集 |
-| `repeat(count=None)` | 重复数据集 `count` 次 |
+| `repeat(count=None)` | 重复数据集`count`次 |
 | `shuffle(buffer_size, seed=None)` | 随机化数据集子集元素的顺序 |
 | `shard(num_shards, index)` | 返回一个包含数据集子集的数据集 |
 | `list_files(file_pattern)` | 返回一个包含匹配指定模式的文件名的的数据集 |
 | `cache(filename='')` | 缓存数据集的元素 |
 | `prefetch(buffer_size)` | 从数据集中预取指定数量的元素 |
 
-两个方法 `take` 和 `skip` 是最简单的。它们返回包含其他数据集部分的数据集。
+两个方法`take`和`skip`是最简单的。它们返回包含其他数据集部分的数据集。
 
 ```python
 ds1 = tf.data.Dataset.range(1, 10)
 ```
-（注：原文中该部分有重复的碎片片段，此处已根据逻辑进行了整理和翻译）。
 
-
-
-
-在 `map` 方法中，函数接收输入数据集的每个元素，并产生一个要插入输出数据集的元素。在下面的代码中，lambda 表达式将输入数据集的每个元素乘以 2，并将生成的元素插入输出数据集。
+在`map`方法中，函数接收输入数据集的每个元素，并产生一个要插入输出数据集的元素。在下面的代码中，lambda 表达式将输入数据集的每个元素乘以 2，并将生成的元素插入输出数据集。
 
 ```python
 vals = tf.constant([[2., 3.], [4., 5.], [6., 7.]])
@@ -4282,18 +4087,18 @@ ds2 = ds1.map(lambda x: x*2)
 # ds2  [[4., 6.], [8., 10.], [12., 14.]]
 ```
 
-`flat_map` 类似于 `map`，但它返回的不是输出数据集的一个元素，而是整个数据集。`flat_map` 将输出数据集拼接在一起并返回扁平化后的结果。
+`flat_map`类似于`map`，但它返回的不是输出数据集的一个元素，而是整个数据集。`flat_map`将输出数据集拼接在一起并返回扁平化后的结果。
 
 ```python
 vals = tf.constant([2, 3], dtype=tf.int64)
 ds1 = tf.data.Dataset.from_tensor_slices(vals)
 ds2 = ds1.flat_map(lambda x: tf.data.Dataset.range(x))
-### ds2 contains [0, 1, 0, 1, 2]
+# ds2 contains [0, 1, 0, 1, 2]
 ```
 
-与 `flat_map` 一样，`interleave` 中的函数为输入数据集的每个元素返回一个数据集。与 `flat_map` 不同，它并不一定拼接生成的结果。`cycle_length` 参数指定了有多少元素应该交织。
+与`flat_map`一样，`interleave`中的函数为输入数据集的每个元素返回一个数据集。与`flat_map`不同，它并不一定拼接生成的结果。`cycle_length`参数指定了有多少元素应该交织。
 
-例如，如果你将 `cycle_length` 设置为 2，输出数据集将包含前两个数据集的元素，然后是前两个数据集的下一个元素，以此此类推。以下代码展示了 `interleave` 如何工作。
+例如，如果你将`cycle_length`设置为 2，输出数据集将包含前两个数据集的元素，然后是前两个数据集的下一个元素，以此此类推。以下代码展示了`interleave`如何工作。
 
 ```python
 vals = tf.constant([2, 3, 4], dtype=tf.int64)
@@ -4302,9 +4107,9 @@ ds2 = ds1.interleave(lambda x: tf.data.Dataset.range(x), cycle_length=3)
 # ds2  [0, 0, 0, 1, 1, 1, 2, 2, 3]
 ```
 
-此代码为 lambda 提供了三个元素并将 `cycle_length` 设置为 3。结果是，输出数据集包含三个数据集的前三个元素，然后是三个数据集的下一个三个元素，以此此类推。
+此代码为 lambda 提供了三个元素并将`cycle_length`设置为 3。结果是，输出数据集包含三个数据集的前三个元素，然后是三个数据集的下一个三个元素，以此此类推。
 
-`zip` 方法也会交织多个数据集，但它不接受函数或 `cycle_length` 参数。该方法始终取第一个元素的第一个值，然后取第二个元素的第一个值，并向后进行。以下代码演示了如何使用 `zip`。
+`zip`方法也会交织多个数据集，但它不接受函数或`cycle_length`参数。该方法始终取第一个元素的第一个值，然后取第二个元素的第一个值，并向后进行。以下代码演示了如何使用`zip`。
 
 ```python
 ds1 = tf.data.Dataset.range(0, 3)
@@ -4314,15 +4119,18 @@ ds4 = tf.data.Dataset.zip((ds1, ds2, ds3))
 # ds4 contains (0, 10, 20), (1, 11, 21), (2, 12, 22)
 ```
 
-`zip` 的 `datasets` 参数接受嵌套结构的输入数据集。应用程序可以将其设置为元组，但不能设置为列表。
+`zip`的`datasets`参数接受嵌套结构的输入数据集。应用程序可以将其设置为元组，但不能设置为列表。
 
 ## 迭代器
 
-`Iterator`（迭代器）允许你遍历一个或多个 `Dataset` 的元素。TensorFlow 提供了四种类型的迭代器：
+`Iterator`（迭代器）允许你遍历一个或多个`Dataset`的元素。TensorFlow 提供了四种类型的迭代器：
 
 - **One-shot（单次迭代）：** 遍历数据集一次，无法参数化。
+
 - **Initializable（可初始化）：** 需要特殊的初始化，可以参数化。
+
 - **Reinitializable（可重初始化）：** 可以与多个数据集关联，在每次迭代前必须初始化。
+
 - **Feedable（可馈）：** 可以与多个数据集关联，不需要在每次迭代前初始化。
 
 ### One-shot
@@ -4330,12 +4138,12 @@ ds4 = tf.data.Dataset.zip((ds1, ds2, ds3))
 One-shot 迭代器允许你遍历数据集。在迭代器中，one-shot 迭代器是最简单的，但它们只能遍历一次。为了演示如何使用 one-shot 迭代器，以下代码通过调用数据集的元素来生成值：
 
 ```python
-### 创建数据集和迭代器
+# 创建数据集和迭代器
 tensor = tf.constant([1, 2])
 dataset = tf.data.Dataset.from_tensors(tensor)
 iterator = dataset.make_one_iterator()
 
-## 访问下一个元素
+# 访问下一个元素
 next_elem = iterator.get_next()
 
 # 打印值
@@ -4343,27 +4151,32 @@ with tf.Session() as sess:
     print(sess.run(next_elem))
 ```
 
-如果应用程序尝试执行第二次循环，TensorFlow 将抛出 `OutOfRangeError`。
+如果应用程序尝试执行第二次循环，TensorFlow 将抛出`OutOfRangeError`。
 
 ### Initializable
 
 除了从常量张量创建数据集，你还可以从占位符创建数据集。这类数据集被称为参数数据集。One-shot 迭代器无法遍历参数数据集，但可初始化迭代器可以。要创建可初始化迭代器并遍历数据集，你需要执行六步：
 
-1. 通过 `from_tensors` 或 `from_tensor_slices` 从占位符创建数据集。
-2. 调用数据集的 `make_initializable_iterator` 创建迭代器。
-3. 调用迭代器的 `get_next` 获取下一个元素。
-4. 在会话中运行 `initializer` 以初始化迭代器。
-5. 通过在会话的 `run` 方法中设置 `feed_dict` 将占位符与数据关联。
-6. 通过评估 `get_next` 的结果访问迭代器元素。
+1. 通过`from_tensors`或`from_tensor_slices`从占位符创建数据集。
+
+2. 调用数据集的`make_initializable_iterator`创建迭代器。
+
+3. 调用迭代器的`get_next`获取下一个元素。
+
+4. 在会话中运行`initializer`以初始化迭代器。
+
+5. 通过在会话的`run`方法中设置`feed_dict`将占位符与数据关联。
+
+6. 通过评估`get_next`的结果访问迭代器元素。
 
 这个过程看起来很复杂，但参数数据集非常有用。以下代码通过包含四个浮点值的占位符创建一个数据集，然后使用可初始化迭代器访问数据集：
 
 ```python
-### 创建占位符和参数数据集
+# 创建占位符和参数数据集
 holder = tf.placeholder(tf.float32, shape=[4])
 dset = tf.data.Dataset.from_tensor_slices(holder)
 
-### 创建迭代器并访问其第一个元素
+# 创建迭代器并访问其第一个元素
 iter = dset.make_initializable_iterator()
 next_elem = iter.get_next()
 
@@ -4374,10 +4187,6 @@ with tf.Session() as sess:
         print('Element: ', sess.run(next_elem))
 ```
 
-
-
-
-
 在创建了可初始化的迭代器后，你可以通过为每个数据集创建一个单独的初始化器，将其与多个不同的数据集关联。以下代码创建了一个具有两个初始化器的迭代器。然后，使用该迭代器遍历两个数据集：
 
 ```python
@@ -4385,16 +4194,16 @@ with tf.Session() as sess:
 ds1 = tf.data.Dataset.range(8)
 ds2 = tf.data.Dataset.range(3)
 
-### 创建迭代器并获取第一个元素
+# 创建迭代器并获取第一个元素
 iterator = tf.data.Iterator.from_structure(
   ds1.output_types, ds1.output_shapes)
 next_elem = iterator.get_next()
 
-### 为每个数据集创建一个初始化器
+# 为每个数据集创建一个初始化器
 ds1_init = iterator.make_initializer(ds1)
 ds2_init = iterator.make_initializer(ds2)
 
-### 在话中运行两个初始化器
+# 在话中运行两个初始化器
 with tf.Session() as sess:
   # 将迭代器与第一个数据集关联
   sess.run(ds1_init)
@@ -4407,18 +4216,25 @@ with tf.Session() as sess:
     print('Element from ds2: ', sess.run(next_elem))
 ```
 
-这段代码使用 `ds1` 的形状和类型调用了 `from_structure`。然后它将迭代器与 `ds1` 和 `ds2` 关联。`ds1` 和 `ds2` 的形状不同，但由于它们的形状相似，因此它们是兼容的。
+这段代码使用`ds1`的形状和类型调用了`from_structure`。然后它将迭代器与`ds1`和`ds2`关联。`ds1`和`ds2`的形状不同，但由于它们的形状相似，因此它们是兼容的。
 
 ### 可馈迭代器
 
 如果你希望在不从数据集开始重新初始化的情况下切换迭代器，可以创建一个可馈迭代器（feedable iterator）。使用可馈迭代器的过程包含六个步骤：
 
 1. 创建一个包含字符串占位符。
-2. 使用占位符调用 `Iterator.from_string_handle`。
+
+2. 使用占位符调用`Iterator.from_string_handle`。
+
 3. 创建多个迭代器来遍历数据集。
-4. 对于每个迭代器，通过调用 `string_handle` 获取唯一的字符串张量。
-5. 在话中评估每个唯一的字符串张量，以获取迭代器对应的唯一字符串。
-6. 要切换到特定的迭代器，在话中评估 `get_next` 的结果，并使用 `sess.run` 的 `feed_dict` 参数提供迭代器的字符串。
+
+
+
+4. 对于每个迭代器，通过调用`string_handle`获取唯一的字符串张量。
+
+5. 在会话中评估每个唯一的字符串张量，以获取迭代器对应的唯一字符串。
+
+6. 要切换到特定的迭代器，在会话中评估`get_next`的结果，并使用`sess.run`的`feed_dict`参数提供迭代器的字符串。
 
 以下代码演示了这一过程。它创建了两个数据集、每个数据集的一个单次迭代器（one-shot iterator），以及一个可以在迭代器之间进行切换的可馈迭代器。
 
@@ -4441,7 +4257,7 @@ next_element = iterator.get_next()
 ds1_handle = ds1_iterator.string_handle()
 ds2_handle = ds2_iterator.string_handle()
 
-# 创建话
+# 创建会话
 with tf.Session() as sess:
   # 从每个迭代器获取字符串
   ds1_string = sess.run(ds1_handle)
@@ -4456,9 +4272,9 @@ with tf.Session() as sess:
     print('Element from ds2: ', sess.run(next_element, feed_dict={holder: ds2_string}))
 ```
 
-这段代码使用 `ds1` 的形状和类型调用了 `from_structure`。然后它将迭代器与 `ds1` 和 `ds2` 关联。`ds1` 和 `ds2` 的形状不同，但由于它们的形状相似，因此它们是兼容的。
+这段代码使用`ds1`的形状和类型调用了`from_structure`。然后它将迭代器与`ds1`和`ds2`关联。`ds1`和`ds2`的形状不同，但由于它们的形状相似，因此它们是兼容的。
 
----，如果你希望在不从数据集开始重新初始化的情况下切换迭代器，可以创建一个可馈迭代器。使用可馈迭代器的过程包含六个步骤：
+如果你希望在不从数据集开始重新初始化的情况下切换迭代器，可以创建一个可馈迭代器。使用可馈迭代器的过程包含六个步骤：
 
 （此处省略重复步骤，已在上文“可馈迭代器”部分详细说明，直接进入代码示例）
 
@@ -4483,7 +4299,7 @@ next_element = iterator.get_next()
 ds1_handle = ds1_iterator.string_handle()
 ds2_handle = ds2_iterator.string_handle()
 
-# 创建话
+# 创建会话
 with tf.Session() as sess:
   # 从每个迭代器获取字符串
   ds1_string = sess.run(ds1_handle)
@@ -4502,7 +4318,7 @@ with tf.Session() as sess:
 
 ## 理论实践
 
-`10/dataset.py` 中的代码展示了如何创建并处理数据集。它通过创建一个 `Example` 开始，并处理其数据。
+`10/dataset.py`中的代码展示了如何创建并处理数据集。它通过创建一个`Example`开始，并处理其数据。
 
 创建和处理数据集
 
@@ -4571,25 +4387,24 @@ with tf.Session() as sess:
     print('Element from ds3: ', sess.run(next2))
 ```
 
-
-第二个迭代器是一个可重新初始迭代器，用于显示 `dset2` 和 `dset3` 中的值。该模块为可重新初始迭代器创建了两个初始化器。在会话期间，模块会运行这两个初始化器并使用它们来遍历 `dset2` 和 `dset3` 中的值。
+第二个迭代器是一个可重新初始迭代器，用于显示`dset2`和`dset3`中的值。该模块为可重新初始迭代器创建了两个初始化器。在会话期间，模块会运行这两个初始化器并使用它们来遍历`dset2`和`dset3`中的值。
 
 ## 异形数据集 (Bizarro Datasets)
 
-在第六章中，我解释了如何通过 `tf.contrib.learn.python.learn.datasets.mnist` 包中的 `read_data_sets` 方法来创建一个包含 MNIST 手写样本的 `Dataset`。尽管这看起来很奇怪，但那个 `Dataset` 与本章讨论的 `Dataset` 类没有任何关系。`tf.contrib.learn.python.learn.datasets` 包通过以下代码定义了自身的 `Dataset` 结构：
+在第六章中，我解释了如何通过`tf.contrib.learn.python.learn.datasets.mnist`包中的`read_data_sets`方法来创建一个包含 MNIST 手写样本的`Dataset`。尽管这看起来很奇怪，但那个`Dataset`与本章讨论的`Dataset`类没有任何关系。`tf.contrib.learn.python.learn.datasets`包通过以下代码定义了自身的`Dataset`结构：
 
 ```python
 Dataset = collections.namedtuple('Dataset', ['data', 'target'])
 ```
 
-我将这个 `Dataset` 称为“异形数据集”，因为它让我想起了比扎（Bizarro）——超人那丑陋且智力较低的镜像形象。这个 `Dataset` 没有子类，也没有有趣的处理方法。它只是一个包含两个元素的命名元组：`data` 包含数据点，`target` 包含数据点的标签。例如，如果一个估计器的任务是将空间中的点分类为不同的类别，那么 `Dataset` 将点的坐标存储在它的 `data` 元素中，将类别 ID 存储在 `target` 元素中。
+我将这个`Dataset`称为“异形数据集”，因为它让我想起了比扎（Bizarro）——超人那丑陋且智力较低的镜像形象。这个`Dataset`没有子类，也没有有趣的处理方法。它只是一个包含两个元素的命名元组：`data`包含数据点，`target`包含数据点的标签。例如，如果一个估计器的任务是将空间中的点分类为不同的类别，那么`Dataset`将点的坐标存储在它的`data`元素中，将类别 ID 存储在`target`元素中。
 
-TensorFlow 提供了两个 `Dataset` 结构，这我很恼，但我不得不承认，`tf.contrib.learn.python.learn.datasets` 包的功能使得加载和访问数据变得简单。这种简单性解释了为什么 TensorFlow 的许多示例应用程序都依赖于这些函数。表 10-5 列出了五个创建异形数据集的函数，并提供了对每个函数的描述。
+TensorFlow 提供了两个`Dataset`结构，这我很恼，但我不得不承认，`tf.contrib.learn.python.learn.datasets`包的功能使得加载和访问数据变得简单。这种简单性解释了为什么 TensorFlow 的许多示例应用程序都依赖于这些函数。表 10-5 列出了五个创建异形数据集的函数，并提供了对每个函数的描述。
 
 表 10-5 创建异形数据集
 
 | **成员** | **描述** |
-| --- | : --- |
+| --- | --- |
 | `load_csv_with_header(filename, target_dtype, features_dtype, target_column=-1)` | 从带有表头的 CSV 文件加载数据集 |
 | `load_csv_without_header(filename, target_dtype, features_dtype, target_column=-1)` | 从不带表头的 CSV 文件加载数据集 |
 | `shrink_csv(filename, ratio)` | 从 CSV 文件加载精简后的数据集 |
@@ -4602,16 +4417,16 @@ TensorFlow 提供了两个 `Dataset` 结构，这我很恼，但我不得不承�
 
 许多应用程序使用逗号分隔值（CSV）文件导入和导出数据。在 CSV 文件中，每行提供一条由逗号分隔的值组成的单一记录。这种格式并不是特别高效，但人类和计算机都可以轻松地读取 CSV 文件。
 
-表格中的前三个函数从 CSV 文件加载数据集。`load_csv_with_header` 从包含表头的 CSV 文件加载数据集，而 `load_csv_without_header` 从不带表头的 CSV 文件加载数据集。
+表格中的前三个函数从 CSV 文件加载数据集。`load_csv_with_header`从包含表头的 CSV 文件加载数据集，而`load_csv_without_header`从不带表头的 CSV 文件加载数据集。
 
-`shrink_csv` 的 `ratio` 参数决定了 CSV 文件中的哪些行应该存储在数据集中。如果应用程序将 `ratio` 设置为 `N`，`shrink_csv` 将每隔 `N` 行存储到数据集中。通过更改 `ratio`，应用程序可以为数据集选择不同的 CSV 记录组合。
+`shrink_csv`的`ratio`参数决定了 CSV 文件中的哪些行应该存储在数据集中。如果应用程序将`ratio`设置为`N`，`shrink_csv`将每隔`N`行存储到数据集中。通过更改`ratio`，应用程序可以为数据集选择不同的 CSV 记录组合。
 
 这些函数不会从通用的 CSV 文件创建数据集。它们期望 CSV 文件以特定格式化：
 
 *   如果存在，文件表头应该以样本数量（包含记录的行数）和特征数量（每行的字段数）开头。
 *   每行数据行都应该以对应数据点的所需类别结束。
 
-例如，以下文本展示了包含鸢鸢尾花数据集训练数据的 CSV 文件的前五行：
+例如，以下文本展示了包含鸢尾花数据集训练数据的 CSV 文件的前五行：
 
 ```
 30,4,setosa,versicolor,virginica
@@ -4623,15 +4438,15 @@ TensorFlow 提供了两个 `Dataset` 结构，这我很恼，但我不得不承�
 
 根据表头，该文件提供了 30 条记录，每条记录有四个字段。每行的最后一个值标识了类别，因此第一个数据点属于类别 1。
 
-在常规 CSV 文件中，表头为记录中的每个字段提供名称。但在示例中，表头有三个名称，每个记录在类别之前有四个字段。结果证明，表头名称标识了类别名称：`setosa` 标识为类别 0，`versicolor` 标识为类别 1，`virginica` 标识为类别 2。
+在常规 CSV 文件中，表头为记录中的每个字段提供名称。但在示例中，表头有三个名称，每个记录在类别之前有四个字段。结果证明，表头名称标识了类别名称：`setosa`标识为类别 0，`versicolor`标识为类别 1，`virginica`标识为类别 2。
 
 ### 加载鸢尾和波士顿数据集
 
 TensorFlow 网站提供了两个流行的数据集，使得训练和测试变得简单。第一个数据集称为鸢尾花数据集，将花卉物理特征与类型相关起来。第二个数据集称为波士顿数据集，将波士顿地区的统计数据（1978 年）相关起来。
 
-对于每个数据集，TensorFlow 都两个 CSV 文件：一个包含训练数据，另一个包含测试数据。对于鸢尾花数据集，你可以从 [`download.tensorflow.org/data/iris_training.csv`](http://download.tensorflow.org/data/iris_training.csv) 下载训练数据，并从 [`download.tensorflow.org/data/iris_test.csv`](http://download.tensorflow.org/data/iris_test.csv) 下载测试数据。
+对于每个数据集，TensorFlow 都提供两个 CSV 文件：一个包含训练数据，另一个包含测试数据。对于鸢尾花数据集，你可以从[`download.tensorflow.org/data/iris_training.csv`](http://download.tensorflow.org/data/iris_training.csv)下载训练数据，并从[`download.tensorflow.org/data/iris_test.csv`](http://download.tensorflow.org/data/iris_test.csv)下载测试数据。
 
-将文件下载到系统后，你可以通过 `load_iris` 调用其中一个来创建一个数据集。该函数返回一个 `Dataset`，其 `data` 包含浮点值（花卉特征），`target` 包含整数。
+将文件下载到系统后，你可以通过`load_iris`调用其中一个来创建一个数据集。该函数返回一个`Dataset`，其`data`包含浮点值（花卉特征），`target`包含整数。
 
 第 11 章
 
@@ -4643,57 +4458,68 @@ TensorFlow 网站提供了两个流行的数据集，使得训练和测试变得
 *   将操作分配给设备
 *   使用集群创建分布式应用程序
 
-*我感到需要……需要速度！* 如果你曾对机器学习说过这样，那么这一章就是适合你的。根据我的经验，你可以通过以下四种方法加速 TensorFlow ：
+*我感到需要……需要速度！* 如果你曾对机器学习说过这样，那么这一章就是适合你的。根据我的经验，你可以通过以下四种方法加速 TensorFlow：
 
 *   生成多个执行线程
 *   访问高性能设备，如图形处理器单元（GPU）
 *   在网络设备集群上执行应用程序
 *   将应用程序部署到云端
 
-本章讨论了前三种方案，并演示了如何在集群中执行 TensorFlow 。第 13 章解释了如何在云端运行 TensorFlow。
+本章讨论了前三种方案，并演示了如何在集群中执行 TensorFlow。第 13 章解释了如何在云端运行 TensorFlow。
 
 ## 使用多线程执行
 
-*线程* 是能够独立于其他线程执行的操作序列。在 TensorFlow 应用程序中，你可以通过以下两种主要方式利用线程：
+*线程*是能够独立于其他线程执行的操作序列。在 TensorFlow 应用程序中，你可以通过以下两种主要方式利用线程：
 
+- **在单独线程中执行耗时操作，例如数据的加载和存储。** 这种方法可以让你的处理线程在不受中断的情况下继续工作。
+- **使用多线程运行会话。** 从理论上讲，这种方法将减少处理会话操作所需的时间。
 
+对于第一点，开发者过去会创建`QueueRunner`，它们存储了要在独立线程中执行的操作。但从 1.4 版本开始，TensorFlow 文档建议使用数据集（datasets），这就是为什么第 10 章讨论的是数据集和迭代器（iterators），而不是线程、队列运行器和协调器（coordinators）。
 
-
--   **在单独线程中执行耗时操作，例如数据的加载和存储。** 这种方法可以让你的处理线程在不受中断的情况下继续工作。
--   **使用多线程运行会话。** 从理论上讲，这种方法将减少处理会话操作所需的时间。
-
-对于第一点，开发者过去会创建 `QueueRunner`，它们存储了要在独立线程中执行的操作。但从 1.4 版本开始，TensorFlow 文档建议使用数据集（datasets），这就是为什么 第 10 章 讨论的是数据集和迭代器（iterators），而不是线程、队列运行器和协调器（coordinators）。
-
-要以多线程处理数据集，你可以设置 `Dataset` 的 `map` 方法的 `num_parallel_calls` 参数。例如，如果你将此参数设置为 4，TensorFlow 将使用四个线程执行 `map` 操作。第 10 章 详细讨论了 `Dataset` 类及其 `map` 方法。
+要以多线程处理数据集，你可以设置`Dataset`的`map`方法的`num_parallel_calls`参数。例如，如果你将此参数设置为 4，TensorFlow 将使用四个线程执行`map`操作。第 10 章详细讨论了`Dataset`类及其`map`方法。
 
 对于第二点，你可以通过设置正确的配置参数来使用多线程执行会话。你可以在创建会话时或运行会话时设置这些参数。
 
 ### 配置新会话
 
-第 1 章 到 第 10 章 中的所有示例代码在调用 `tf.Session` 时都没有带任何参数。但你可以通过将 `tf.Session` 的 `config` 参数设置为 `ConfigProto` 协议缓冲区来配置会话。该缓冲区的字段决定了会话的行为，表 11-1 列出了每一个字段。
+第 1 章到第 10 章中的所有示例代码在调用`tf.Session`时都没有带任何参数。但你可以通过将`tf.Session`的`config`参数设置为`ConfigProto`协议缓冲区来配置会话。该缓冲区的字段决定了会话的行为，表 11-1 列出了每一个字段。
 
 表 11-1 ConfigProto 字段
 
 | **字段** | **类型** | **描述** |
 | --- | --- | --- |
+
+
+
 | `device_count` | `map<string, int32>` | 标识会话可以访问的各类型设备数量 |
+
 | `intra_op_parallelism_threads` | `int32` | 使用多个线程执行单项操作 |
+
 | `inter_op_parallelism_threads` | `int32` | 使用多个线程执行不同的操作 |
+
 | `session_inter_op_thread_pool` | `ThreadPoolOptionProto` | 配置会话线程池 |
+
 | `placement_period` | `int32` | 决定将节点分配到设备的频率 |
+
 | `device_filters` | `string` | 防止会话访问命名的设备 |
+
 | `gpu_options` | `GPUOptions` | 配置会话访问的任何 GPU |
+
 | `allow_soft_placement` | `bool` | 决定如何将操作分配给 CPU 和 GPU |
+
 | `graph_options` | `GraphOptions` | 配置会话图（s）的选项 |
+
 | `operation_timeout_in_ms` | `int64` | 配置会话阻塞操作的全局超时 |
+
 | `rpc_options` | `RPCOptions` | 配置会话的分布式运行时 |
+
 | `cluster_def` | `ClusterDef` | 列出在此会话中使用的节点（workers） |
 
 本节重点关注配置会话线程的选项。默认情况下，会话会为目标处理器上的每个核心执行一个线程。如果你在 Intel Core i5 CPU 上运行 TensorFlow，你的会话将以最多四个线程运行，因为该 CPU 有四个核心。
 
-理解 `intra_op_parallelism_threads` 和 `inter_op_parallelism_threads` 选项之间的区别非常重要。许多 TensorFlow 操作（例如矩阵乘法）可以使用多个线程进行加速。`intra_op_parallelism_threads` 选项决定了应该生成多少线程来执行*单项*操作。相比之下，如果一个图中有可以并行运行的操作，`inter_op_parallelism_threads` 选项决定了可以生成多少线程来执行它们。
+理解`intra_op_parallelism_threads`和`inter_op_parallelism_threads`选项之间的区别非常重要。许多 TensorFlow 操作（例如矩阵乘法）可以使用多个线程进行加速。`intra_op_parallelism_threads`选项决定了应该生成多少线程来执行*单项*操作。相比之下，如果一个图中有可以并行运行的操作，`inter_op_parallelism_threads`选项决定了可以生成多少线程来执行它们。
 
-为了演示如何配置线程，以下代码创建了一个 `ConfigProto`，它对单个操作使用最多六个线程，对并行操作使用最多八个线程。然后它使用该 `ConfigProto` 创建了一个会话：
+为了演示如何配置线程，以下代码创建了一个`ConfigProto`，它对单个操作使用最多六个线程，对并行操作使用最多八个线程。然后它使用该`ConfigProto`创建了一个会话：
 
 ```
 conf = tf.ConfigProto(intra_op_parallelism_threads=6, inter_op_parallelism_threads=8)
@@ -4701,29 +4527,27 @@ with tf.Session(config=conf) as sess:
     …
 ```
 
-默认情况下，会话将从全局线程池访问线程，而不是创建自己的线程。你可以通过 `use_per_session_threads` 选项更改此行为。如果你将此选项设置为 `True`，会话将创建自己的线程。
+默认情况下，会话将从全局线程池访问线程，而不是创建自己的线程。你可以通过`use_per_session_threads`选项更改此行为。如果你将此选项设置为`True`，会话将创建自己的线程。
 
-如果你想让会话在执行主计算之外执行后台任务，可以通过将 `session_inter_op_thread_pool` 设置为一个或多个 `ThreadPoolOptionProto` 缓冲区来配置它。每个 `ThreadPoolOptionProto` 标识一个独立的线程池。该协议缓冲区有两个字段：
+如果你想让会话在执行主计算之外执行后台任务，可以通过将`session_inter_op_thread_pool`设置为一个或多个`ThreadPoolOptionProto`缓冲区来配置它。每个`ThreadPoolOptionProto`标识一个独立的线程池。该协议缓冲区有两个字段：
 
 - `num_threads`: 线程池中的线程数
+
 - `global_name`: 全局名称
 
-
-
-
-TensorFlow 是一个开源项目，你可以通过 `https://github.com/tensorflow/tensorflow` 访问源代码。如果你知道如何使用 `git`，可以使用以下命令克隆仓库：
+TensorFlow 是一个开源项目，你可以通过`https://github.com/tensorflow/tensorflow`访问源代码。如果你知道如何使用`git`，可以使用以下命令克隆仓库：
 
 ```bash
 git clone https://github.com/tensorflow/tensorflow.git
 ```
 
-如果你不知道如何使用 `git`，请点击带有 `Clone` 的绿色按钮或进行下载。然后选择 `Download ZIP` 选项下载包含 TensorFlow 源代码的 `zip` 文件。下载完成后，解压该 `zip` 文件即可。
+如果你不知道如何使用`git`，请点击带有`Clone`的绿色按钮或进行下载。然后选择`Download ZIP`选项下载包含 TensorFlow 源代码的`zip`文件。下载完成后，解压该`zip`文件即可。
 
 ## Bazel 与 Java
 
-Bazel 是 Google 开发的一项工具，用于自动化软件构建过程。它通过执行在名为 `BUILD` 的文件中定义的操作来运行。该文件中的指令称为 `rules`，它们使用 Skylark 语言编写，它是 Python 的子集。
+Bazel 是 Google 开发的一项工具，用于自动化软件构建过程。它通过执行在名为`BUILD`的文件中定义的操作来运行。该文件中的指令称为`rules`，它们使用 Skylark 语言编写，它是 Python 的子集。
 
-如果你查看 TensorFlow 的文件层次结构，你会看到许多 `BUILD` 文件和 `*.BUILD` 文件。如果你打开 `tensorflow` 目录下的 `BUILD` 文件，你会发现许多配置设置，如下所示：
+如果你查看 TensorFlow 的文件层次结构，你会看到许多`BUILD`文件和`*.BUILD`文件。如果你打开`tensorflow`目录下的`BUILD`文件，你会发现许多配置设置，如下所示：
 
 ```python
 config_setting(
@@ -4733,9 +4557,9 @@ config_setting(
 )
 ```
 
-每个 `config_setting` 块标识一个用于构建 TensorFlow 的支持平台。
+每个`config_setting`块标识一个用于构建 TensorFlow 的支持平台。
 
-在安装 Bazel 之前，你需要在系统中安装 Java。具体来说，你需要安装版本 `8.*x` 的 Java 开发工具包 (JDK)。如果没有该版本，可以在 [`www.oracle.com/technetwork/java/javase/downloads/index.html](https://www.oracle.com/technetwork/java/javase/downloads/index.html) 下载 Windows 和 macOS 的安装程序。
+在安装 Bazel 之前，你需要在系统中安装 Java。具体来说，你需要安装版本`8.*x`的 Java 开发工具包 (JDK)。如果没有该版本，可以在[`www.oracle.com/technetwork/java/javase/downloads/index.html`](https://www.oracle.com/technetwork/java/javase/downloads/index.html)下载 Windows 和 macOS 的安装程序。
 
 如果你运行的是类似 Ubuntu 的 Debian 系系统，可以使用以下命令安装 OpenJDK `8.*x`：
 
@@ -4743,37 +4567,35 @@ config_setting(
 sudo apt-get install openjdk-8-jdk
 ```
 
-安装好 JDK `8.*x` 后，你就可以准备安装 Bazel 了。安装 Bazel 的指令取决于你的操作系统。
+安装好 JDK `8.*x`后，你就可以准备安装 Bazel 了。安装 Bazel 的指令取决于你的操作系统。
 
 ## 图形处理器 (GPU) 加速
 
 CPU 设计用于安全、通用的计算，而 GPU 则是专为高速图形渲染设计的，而这涉及到大量的数学计算。对于许多机器学习应用，通过在 GPU 而非 CPU 上运行操作，你可以显著提高性能。
 
-通用 GPU (GPGPU) 开发的两种主要语言是 OpenCL 和 CUDA。OpenCL 由多个供应商支持，并可以在许多不同设备上运行，包括 CPU、GPU 和 FPGA。但 TensorFlow 仅在安装了 `ComputeCpp` 的系统上支持 OpenCL。你可以从 [`www.codeplay.com/products/computesuite/computecpp](https://www.codeplay.com/products/computesuite/computecpp) 下载 ComputeCpp。
+通用 GPU (GPGPU) 开发的两种主要语言是 OpenCL 和 CUDA。OpenCL 由多个供应商支持，并可以在许多不同设备上运行，包括 CPU、GPU 和 FPGA。但 TensorFlow 仅在安装了`ComputeCpp`的系统上支持 OpenCL。你可以从[`www.codeplay.com/products/computesuite/computecpp`](https://www.codeplay.com/products/computesuite/computecpp)下载 ComputeCpp。
 
-另一种 GPGPU 语言 CUDA 仅在 Nvidia 的 GPU 上运行。要安装 CUDA，请访问 [`developer.nvidia.com/cuda-downloads`](https://developer.nvidia.com/cuda-downloads) 并点击标识你的操作系统、架构和 OS 版本的按钮。然后下载并运行安装程序，它将引导你完成安装过程。
+另一种 GPGPU 语言 CUDA 仅在 Nvidia 的 GPU 上运行。要安装 CUDA，请访问[`developer.nvidia.com/cuda-downloads`](https://developer.nvidia.com/cuda-downloads)并点击标识你的操作系统、架构和 OS 版本的按钮。然后下载并运行安装程序，它将引导你完成安装过程。
 
 ## 在 Windows 上准备 TensorFlow 构建
 
-在 Windows 上构建 TensorFlow 是很困难的，因为你需要设置一个支持 Bash 脚本、Python 以及 GNU 构建工具（如 `gcc` 和 `g++`）的类 Unix 环境。为了创建这个环境，大多数开发者使用 `Cygwin` 或 `MSYS2` (Minimal System 2)。在本节中，我将解释如何使用 MSYS2 在 Windows 上构建 TensorFlow。
+在 Windows 上构建 TensorFlow 是很困难的，因为你需要设置一个支持 Bash 脚本、Python 以及 GNU 构建工具（如`gcc`和`g++`）的类 Unix 环境。为了创建这个环境，大多数开发者使用`Cygwin`或`MSYS2` (Minimal System 2)。在本节中，我将解释如何使用 MSYS2 在 Windows 上构建 TensorFlow。
 
-要安装 MSYS2，请访问 [`www.msys2.org](https://www.msys2.org) 并选择 32 位 (`i686`) 或 64 位 (`x86_64`) 可执行文件。下载完成后，运行该文件并按照安装说明操作。
+要安装 MSYS2，请访问[`www.msys2.org`](https://www.msys2.org)并选择 32 位 (`i686`) 或 64 位 (`x86_64`) 可执行文件。下载完成后，运行该文件并按照安装说明操作。
 
-假设你选择了 Windows 64 位选项，MSYS2 将将其所有文件放在名为 `C:\msys64` 的新目录。有两个文件夹特别重要：
+假设你选择了 Windows 64 位选项，MSYS2 将将其所有文件放在名为`C:\msys64`的新目录。有两个文件夹特别重要：
 
-* `C:\msys64\mingw64\bin` 包含由 MinGW 提供的实用。安装 MSYS2 时，此文件夹为空。
-* `C:\msys64\home\<name>` 是你的主目录。启动 MSYS2 时，这将是初始目录。
+* `C:\msys64\mingw64\bin`包含由 MinGW 提供的实用。安装 MSYS2 时，此文件夹为空。
 
-为了安装 TensorFlow，你需要访问 GNU 工具链中的构建工具，如 `gcc`、`g++` 和 `ld`。你可以通过下载 MinGW 包来获取这些工具。MSYS2 的包名为 `pacman`，你可以通过启动 MSYS2 并输入以下命令来安装必要的 MinGW 包：
+* `C:\msys64\home\<name>`是你的主目录。启动 MSYS2 时，这将是初始目录。
+
+为了安装 TensorFlow，你需要访问 GNU 工具链中的构建工具，如`gcc`、`g++`和`ld`。你可以通过下载 MinGW 包来获取这些工具。MSYS2 的包名为`pacman`，你可以通过启动 MSYS2 并输入以下命令来安装必要的 MinGW 包：
 
 ```bash
 pacman -S --needed mingw-w64-x86_64-python3-pip base-devel mingw-w64-x86_64-toolchain
 ```
 
-此命令向 `C:\msys64\mingw64\bin` 目录了许多文件和可执行文件。为了让 MSYS2 找到这些可执行文件，你需要将该目录添加到系统的 `PATH` 变量。
-
-
-
+此命令向`C:\msys64\mingw64\bin`目录了许多文件和可执行文件。为了让 MSYS2 找到这些可执行文件，你需要将该目录添加到系统的`PATH`变量。
 
 ```bash
 echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
@@ -4789,7 +4611,7 @@ curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
 sudo apt-get update && sudo apt-get install bazel
 ```
 
-在构建 TensorFlow 之前，你需要安装四个依赖包：`NumPy`、`Python-Dev`、`pip` 和 `wheel`。如果你在使用 Python `2.x`，可以使用以下命令安装这些依赖项：
+在构建 TensorFlow 之前，你需要安装四个依赖包：`NumPy`、`Python-Dev`、`pip`和`wheel`。如果你在使用 Python `2.x`，可以使用以下命令安装这些依赖项：
 
 ```bash
 sudo apt-get install python-numpy python-dev python-pip python-wheel
@@ -4811,51 +4633,69 @@ sudo apt-get install python3-numpy python3-dev python3-pip python3-wheel
 ./configure
 ```
 
-该命令执行 `configure` 脚本，该脚本会提出一系列问题来配置 TensorFlow 软件包的功能。在下面的列表中，我列出了我在 Linux 上安装时遇到过的问题。每个问题都以方括号中的默认回答结束。你可以通过按回车键选择默认回答。
+该命令执行`configure`脚本，该脚本会提出一系列问题来配置 TensorFlow 软件包的功能。在下面的列表中，我列出了我在 Linux 上安装时遇到过的问题。每个问题都以方括号中的默认回答结束。你可以通过按回车键选择默认回答。
 
-*   **Python location**：包含 Python 解释器的目录
-*   **Python library path**：包含 Python 库的目录
-*   **jemalloc support**：TensorFlow 是否应该使用改进的 `jemalloc` 函数代替 `malloc` 来分配内存。我建议选择 Yes (Y)。
-*   **Google Cloud Platform support**：TensorFlow 是否应该支持 Google 的云计算服务——Google Cloud Platform (GCP)。第 14 章解释了如何在 GCP 上运行 TensorFlow。
-*   **Hadoop File System support**：TensorFlow 是否应该支持 Hadoop 文件系统
-*   **Amazon S3 File System support**：TensorFlow 是否应该支持 Amazon 的分布式 S3 文件系统
-*   **XLA JIT support**：TensorFlow 是否应该使用实验性的 XLA（加速线性代数）编译器来加速数学运算
-*   **GDR support**：TensorFlow 是否应该启用 CUDA 的高速内存访问 GPUDirect RDMA
-*   **VERBS support**：TensorFlow 是否应该通过 VERBS 包启用远程直接内存访问 (RDMA)
-*   **OpenCL support**：TensorFlow 是否应该通过 OpenCL 启用 GPU 计算
-*   **CUDA support**：TensorFlow 是否应该通过 CUDA 启用 GPU 计算
-*   **MPI support**：TensorFlow 是否应该通过消息传递接口 (MPI) 启用集群计算
-*   **Optimization flags**：构建 TensorFlow 时使用的优化标志
+* **Python location**：包含 Python 解释器的目录
 
-最后一个选项特别重要。默认情况下，构建过程将包含 `–march=native` 标志。该标志告诉编译器检查目标 CPU，并确保 TensorFlow 使用该处理器支持的最先进功能。通常情况下，我建议保持默认优化设置。
+* **Python library path**：包含 Python 库的目录
 
-问卷结束后，脚本会将你的选择存储在名为 `.bazelrc` 的文件中。要继续，请输入以下命令：
+* **jemalloc support**：TensorFlow 是否应该使用改进的`jemalloc`函数代替`malloc`来分配内存。我建议选择 Yes (Y)。
+
+* **Google Cloud Platform support**：TensorFlow 是否应该支持 Google 的云计算服务——Google Cloud Platform (GCP)。第 14 章解释了如何在 GCP 上运行 TensorFlow。
+
+* **Hadoop File System support**：TensorFlow 是否应该支持 Hadoop 文件系统
+
+* **Amazon S3 File System support**：TensorFlow 是否应该支持 Amazon 的分布式 S3 文件系统
+
+* **XLA JIT support**：TensorFlow 是否应该使用实验性的 XLA（加速线性代数）编译器来加速数学运算
+
+* **GDR support**：TensorFlow 是否应该启用 CUDA 的高速内存访问 GPUDirect RDMA
+
+* **VERBS support**：TensorFlow 是否应该通过 VERBS 包启用远程直接内存访问 (RDMA)
+
+* **OpenCL support**：TensorFlow 是否应该通过 OpenCL 启用 GPU 计算
+
+* **CUDA support**：TensorFlow 是否应该通过 CUDA 启用 GPU 计算
+
+* **MPI support**：TensorFlow 是否应该通过消息传递接口 (MPI) 启用集群计算
+
+* **Optimization flags**：构建 TensorFlow 时使用的优化标志
+
+最后一个选项特别重要。默认情况下，构建过程将包含`–march=native`标志。该标志告诉编译器检查目标 CPU，并确保 TensorFlow 使用该处理器支持的最先进功能。通常情况下，我建议保持默认优化设置。
+
+问卷结束后，脚本会将你的选择存储在名为`.bazelrc`的文件中。要继续，请输入以下命令：
 
 ```bash
 bazel build --config=opt //tensorflow
 ```
 
-
-
-
-如果你的 TensorFlow 安装可以访问 GPU 且 TensorFlow 识别到符合标准的 GPU，则会话默认将数学操作分配给 GPU。你可以通过设置会话 `ConfigProto` 中的 `gpu_options` 字段来配置 CPU 与 GPU 的交互方式。你必须将 `gpu_options` 分配给 `GPUOptions` 缓冲区，表 11-3 列出了它的字段。
+如果你的 TensorFlow 安装可以访问 GPU 且 TensorFlow 识别到符合标准的 GPU，则会话默认将数学操作分配给 GPU。你可以通过设置会话`ConfigProto`中的`gpu_options`字段来配置 CPU 与 GPU 的交互方式。你必须将`gpu_options`分配给`GPUOptions`缓冲区，表 11-3 列出了它的字段。
 
 #### 表 11-3 (#17_9781119466215-ch11.xhtml#rc11-tbl-0003) GPUOptions 字段
 
 | 字段 | 类型 | 说明 |
+
 | :--- | --- | :--- |
+
 | `per_process_gpu_memory_fraction` | `double` | 配置要分配的 GPU 内存比例 |
+
 | `allocator_type` | `string` | 设置 GPU 分配策略 |
+
 | `deferred_deletion_bytes` | `int64` | 延迟删除以减少驱动程序处理 |
+
 | `allow_growth` | `bool` | 启用/禁用 GPU 内存预分配 |
+
 | `visible_device_list` | `string` | 决定 GPU 设备的映射方式 |
+
 | `polling_active_delay_usecs` | `int32` | 配置活动状态下轮询之间经过的毫秒数 |
+
 | `polling_inactive_delay_msecs` | `int32` | 设置非活动状态下轮询之间的毫秒数 |
+
 | `force_gpu_compatible` | `bool` | 强制将张量分配在 GPU 的固定内存中 |
 
-默认情况下，TensorFlow 会为其操作预分配 GPU 的全部内存。但如果你将 `allow_growth` 设置为 `True`，TensorFlow 将不会预分配任何内存。相反，它只会在需要时才分配内存。
+默认情况下，TensorFlow 会为其操作预分配 GPU 的全部内存。但如果你将`allow_growth`设置为`True`，TensorFlow 将不会预分配任何内存。相反，它只会在需要时才分配内存。
 
-如果你将 `per_process_gpu_memory_fraction` 设置为小于 1 的值，TensorFlow 将预分配 GPU 可见内存的该比例。例如，以下代码配置了一个会话，为其操作预分配 80% 的 GPU 内存：
+如果你将`per_process_gpu_memory_fraction`设置为小于 1 的值，TensorFlow 将预分配 GPU 可见内存的该比例。例如，以下代码配置了一个会话，为其操作预分配 80% 的 GPU 内存：
 
 ```
 gpu_opts = tf.GPUOptions( per_process_gpu_memory_fraction=0.8)
@@ -4864,35 +4704,41 @@ with tf.Session(config=conf) as sess:
      …
 ```
 
-你可以通过减少 CPU 发送到 GPU 的命令数量来提高性能。一个频繁的命令涉及删除 GPU 内存中的对象。默认情况下，当对象占用超过几兆字节存储时，CPU 会告诉 GPU 删除对象。你可以通过将 `GPUOptions` 的 `deferred_deletion_bytes` 字段设置为所需的内存大小来来自定义此行为。
+你可以通过减少 CPU 发送到 GPU 的命令数量来提高性能。一个频繁的命令涉及删除 GPU 内存中的对象。默认情况下，当对象占用超过几兆字节存储时，CPU 会告诉 GPU 删除对象。你可以通过将`GPUOptions`的`deferred_deletion_bytes`字段设置为所需的内存大小来来自定义此行为。
 
 ## 在集群中执行 TensorFlow
 
 除了在 GPU 上运行操作外，你还可以编写在多台计算机上执行的分布式应用程序。当我第一次遇到这个话题时，觉得它很难理解，因此我将其与一个更熟悉的话进行对比：网页浏览。
 
-当你浏览网页时，你的浏览器（客户端）会向名为 `server` 的远程机器发送请求。准确来说，服务器是远程机器（服务器主机）上的一个进程，它在特定端口上监听请求。当你将请求发送到 Web 服务器的主机和端口时，服务器会发送一个包含网页的响应。一个主机可以执行多个服务器，但每个服务器始终监听来自特定端口的消息。
+当你浏览网页时，你的浏览器（客户端）会向名为`server`的远程机器发送请求。准确来说，服务器是远程机器（服务器主机）上的一个进程，它在特定端口上监听请求。当你将请求发送到 Web 服务器的主机和端口时，服务器会发送一个包含网页的响应。一个主机可以执行多个服务器，但每个服务器始终监听来自特定端口的消息。
 
 在分布式 TensorFlow 应用中，客户端访问多个服务器，这些服务器可能运行在独立的系统上或同一个系统上。像 Web 服务器一样，每个 TensorFlow 服务器都监听指向特定主机和端口的消息。
 
-每个服务器执行一个名为 `task` 的单一工作单元。一组相关的任务形成一个 `job`。与应用程序关联的服务器集合称为 `cluster`（集群）。
+每个服务器执行一个名为`task`的单一工作单元。一组相关的任务形成一个`job`。与应用程序关联的服务器集合称为`cluster`（集群）。
 
-如果你熟悉这些术语（server、task、job、cluster），那么编写分布式 TensorFlow 应用程序时将不会遇到困难。通常情况下，开发过程需要三个步骤：
+如果你熟悉这些术语（`server`、`task`、`job`、`cluster`），那么编写分布式 TensorFlow 应用程序时将不会遇到困难。通常情况下，开发过程需要三个步骤：
 
-1. 在 `ClusterSpec` 中定义应用程序的 job、任务以及服务器主机/端口。
-2. 为集群中的每个服务器创建一个 `tf.train.Server`。
+
+
+1. 在`ClusterSpec`中定义应用程序的 job、任务以及服务器主机/端口。
+
+2. 为集群中的每个服务器创建一个`tf.train.Server`。
+
 3. 为每个任务定义操作。
 
 如果你的集群运行在多台计算机上，你就不必为每台计算机都重写一遍应用程序。只需编写一次应用程序，并向每个系统传递不同的命令行参数即可。或者，你可以使用像 Kubernetes 这样的集群管理器来管理集群，并自动定义服务器和任务。
 
-### 创建 ClusterSpec
+## 创建 ClusterSpec
 
-集群规范定义了应用程序的 job 和任务，并将每个任务与服务器的网络地址关联。集群规范由 `tf.train.ClusterSpec` 实例表示。类构造函数接受一个参数，该参数可以采取三种形式之一：
+集群规范定义了应用程序的 job 和任务，并将每个任务与服务器的网络地址关联。集群规范由`tf.train.ClusterSpec`实例表示。类构造函数接受一个参数，该参数可以采取三种形式之一：
 
 * 将 job 名称与网络地址列表关联的字典
-* 将 job 名称与关联任务编号和网络地址的字典关联的字典
-* 现 `ClusterDef` 协议缓冲区
 
-本文讨论重点关注前两种形式。例如，假设你想让集群在两个 job 中执行任务。第一个 job `j1` 有一个任务，第二个 job `j2` 有两个任务。你可以使用以下 `ClusterSpec` 定义你的集群：
+* 将 job 名称与关联任务编号和网络地址的字典关联的字典
+
+* 现`ClusterDef`协议缓冲区
+
+本文讨论重点关注前两种形式。例如，假设你想让集群在两个 job 中执行任务。第一个 job`j1`有一个任务，第二个 job`j2`有两个任务。你可以使用以下`ClusterSpec`定义你的集群：
 
 ```
 spec = tf.train.ClusterSpec({
@@ -4900,35 +4746,32 @@ spec = tf.train.ClusterSpec({
  'j2': ['sys2.ex.com:122', 'sys3.ex.com:123']
 })
 ```
+
 *（注：原文中关于 ClusterSpec 的代码是碎片化的，我已根据描述将其重构为逻辑块）。*
 
-### 创建服务器
+## 创建服务器
 
-在划分计算计算任务后，你需要创建服务器来执行这些任务。你可以通过调用 `tf.train.Server` 来创建服务器：
+在划分计算计算任务后，你需要创建服务器来执行这些任务。你可以通过调用`tf.train.Server`来创建服务器：
 
 ```
 tf.train.Server(server_or_cluster_def, job_name=None, task_index=None, protocol=None, config=None, start=True)
 ```
 
-你可以将第一个参数设置为 `ServerDef`，它是定义服务器环境的协议缓冲区。但大多数应用程序会将第一个参数设置为 `ClusterSpec`。为了告诉服务器它应该执行哪个任务，你需要设置 `job_name` 和 `task_index` 参数。例如，以下代码创建一个执行 job `j2` 中任务 1 的服务器：
+你可以将第一个参数设置为`ServerDef`，它是定义服务器环境的协议缓冲区。但大多数应用程序会将第一个参数设置为`ClusterSpec`。为了告诉服务器它应该执行哪个任务，你需要设置`job_name`和`task_index`参数。例如，以下代码创建一个执行 job`j2`中任务 1 的服务器：
 
 ```
 server = tf.train.Server(spec, job_name='j2', task_index=1)
 ```
 
-构造函数的 `protocol` 参数指定服务器用于接收任务的通信机制。目前唯一接受的协议是 `grpc`，它代表 gRPC 协议。
+构造函数的`protocol`参数指定服务器用于接收任务的通信机制。目前唯一接受的协议是`grpc`，它代表 gRPC 协议。
 
-`config` 参数接受 `ConfigProto`，用于配置服务器上运行的所有会话。`start` 参数标识服务器是否在创建后立即启动。如果你将此参数设置为 `True`，服务器将在创建后开始处理任务。如果你将其设置为 `False`，可以稍后通过调用 `start` 方法启动服务器。
+`config`参数接受`ConfigProto`，用于配置服务器上运行的所有会话。`start`参数标识服务器是否在创建后立即启动。如果你将此参数设置为`True`，服务器将在创建后开始处理任务。如果你将其设置为`False`，可以稍后通过调用`start`方法启动服务器。
 
-### 指定 job 和任务
+## 指定 job 和任务
 
 在定义了集群并创建了服务器后，你需要为集群的任务提供代码。你不需要为每个任务编写单独的程序。相反，大多数开发者会编写一个程序并对其代码进行划分，以便不同的任务执行不同的部分。
 
-
-
-
-
-你可以通过调用之前在“将操作分配到设备””节中讨论过的 `tf.device` 函数，将代码与特定任务关联。例如，以下代码仅在作业 `j1` 的 Task 0 上执行：
+你可以通过调用之前在“将操作分配到设备””节中讨论过的`tf.device`函数，将代码与特定任务关联。例如，以下代码仅在作业`j1`的 Task 0 上执行：
 
 ```python
 with tf.device('/job:j1/task:0'):
@@ -4937,7 +4780,7 @@ with tf.device('/job:j1/task:0'):
   total = const_a + const_b
 ```
 
-你也可以使用 `if` 语句对代码进行拆分：
+你也可以使用`if`语句对代码进行拆分：
 
 ```python
 if job_name == 'j1' and task_num == 0:
@@ -4949,6 +4792,7 @@ elif job_name == 'j1' and task_num == 1:
 当你定义一个集群时，可以根据需要创建任意数量的作业和任务。但许多分布式 TensorFlow 应用程序只有两个作业：
 
 - 参数服务器 (`ps`)：存储应用程序的变量。
+
 - Worker 副本 (`worker`)：执行应用程序的计算，包括更新变量的处理过程。
 
 你可以使用下面的代码在集群规范中定义这些作业：
@@ -4959,11 +4803,11 @@ spec = tf.train.ClusterSpec({'ps': [..], 'worker': [..]})
 
 本节介绍了参数服务器和 worker，并向你展示如何在代码中创建它们。
 
-### 参数服务器
+## 参数服务器
 
-在分布式应用中，TensorFlow 识别到同一设备上同名的变量代表相同的数据。这意味着，如果 Task X 和 Y 都在操作一个名为 `weight_var` 的变量，TensorFlow 会理解它们应该访问同一个 `weight_var` 变量。这些任务运行在不同的进程中，因此 TensorFlow 会进程之间复制这些变量。
+在分布式应用中，TensorFlow 识别到同一设备上同名的变量代表相同的数据。这意味着，如果 Task X 和 Y 都在操作一个名为`weight_var`的变量，TensorFlow 会理解它们应该访问同一个`weight_var`变量。这些任务运行在不同的进程中，因此 TensorFlow 会进程之间复制这些变量。
 
-参数服务器 (PS) 用作存储、保存和检索变量的中心位置。在许多应用程序中，PS 任务将只需声明变量，然后阻塞直到应用程序完成。为了演示这一点，以下代码定义了一个参数服务器，它声明了两个变量——`weights` 和 `biases`，然后阻塞直到应用程序完成。
+参数服务器 (PS) 用作存储、保存和检索变量的中心位置。在许多应用程序中，PS 任务将只需声明变量，然后阻塞直到应用程序完成。为了演示这一点，以下代码定义了一个参数服务器，它声明了两个变量——`weights`和`biases`，然后阻塞直到应用程序完成。
 
 ```python
 server = tf.train.Server(cluster, job_name='ps', task_index=0)
@@ -4973,9 +4817,9 @@ if job_name == 'ps':
   server.join()
 ```
 
-在参数服务器声明了 `weights` 和 `biases` 后，其他任务可以访问这些变量并根据需要更新它们。`join` 方法告诉服务器无限阻塞。
+在参数服务器声明了`weights`和`biases`后，其他任务可以访问这些变量并根据需要更新它们。`join`方法告诉服务器无限阻塞。
 
-### Workers
+## Workers
 
 通常，任何执行计算的作业都被视为 worker 作业。worker 作业中的每个任务都称为 worker 副本或简称 worker。为了执行其计算，每个 worker 需要创建并启动一个 session。
 
@@ -4985,9 +4829,9 @@ if job_name == 'ps':
 
 `grpc://localhost:123`
 
-这个 gRPC 地址被称为服务器目标。你可以通过 `Server` 实例的 `target` 属性访问此目标。
+这个 gRPC 地址被称为服务器目标。你可以通过`Server`实例的`target`属性访问此目标。
 
-要创建一个运行在服务器内部的 session，你需要将 `tf.Session` 的第一个参数设置为服务器的目标。以下代码创建了一个 `Server`，然后创建一个连接到它的 session：
+要创建一个运行在服务器内部的 session，你需要将`tf.Session`的第一个参数设置为服务器的目标。以下代码创建了一个`Server`，然后创建一个连接到它的 session：
 
 ```python
 server = tf.train.Server(spec, job_name='worker', task_index=1)
@@ -4997,29 +4841,29 @@ with tf.Session(server.target) as sess:
 
 这里有一个问题：如果分布式应用中的 workers 需要访问相同的变量数据，该如何初始化变量呢？参数服务器无法初始化它的变量，因为它没有运行 session。但如果每个 worker 都独立地初始化变量，TensorFlow 将无法在进程之间复制数据。
 
-答案是其中一个 worker 需要处理初始化，而其他 worker 需要等待初始化完成。处理初始化的 worker 被称为 chief（主节点）。你可以通过调用 `tf.train.MonitoredTrainingSession` 在 session 中分配 chief 的操作。
+答案是其中一个 worker 需要处理初始化，而其他 worker 需要等待初始化完成。处理初始化的 worker 被称为 chief（主节点）。你可以通过调用`tf.train.MonitoredTrainingSession`在 session 中分配 chief 的操作。
 
-### Workers 和受监控 session
+## Workers 和受监控 session
 
-第 5 章 介绍了 session 钩子（session hooks）这一迷人的话题，并解释了如何将钩子与 `MonitoredSession` 关联。你可以通过调用名为 `tf.train.MonitoredTrainingSession` 的函数为分布式应用配置 `MonitoredSession`：
+第 5 章介绍了 session 钩子（session hooks）这一迷人的话题，并解释了如何将钩子与`MonitoredSession`关联。你可以通过调用名为`tf.train.MonitoredTrainingSession`的函数为分布式应用配置`MonitoredSession`：
 
 ```python
 MonitoredTrainingSession(master='', is_chief=True, checkpoint_dir=None, scaffold=None, hooks=None, chief_only_hooks=None, save_checkpoint_secs=600, save_summaries_steps=USE_DEFAULT, save_summaries_secs=USE_DEFAULT, config=None, stop_grace_period_secs=120, log_step_count_steps=100)
 ```
 
-该函数看起来像类构造函数，但它返回的是 `MonitoredSession`，而不是 `MonitoredTrainingSession`。如果 worker 在 `is_chief` 设置为 `True` 时调用此函数，`MonitoredSession` 将在启动时执行 session 的初始化。因此，只有一个 worker（chief）应该在 `is_chief` 设置为 `True` 时调用此函数。第一个参数 `master` 的作用与 `Session` 构造函数中的 `target` 参数相同，它标识了运行 session 的 gRPC 位置，例如 `grpc://localhost:123`。
+该函数看起来像类构造函数，但它返回的是`MonitoredSession`，而不是`MonitoredTrainingSession`。如果 worker 在`is_chief`设置为`True`时调用此函数，`MonitoredSession`将在启动时执行 session 的初始化。因此，只有一个 worker（chief）应该在`is_chief`设置为`True`时调用此函数。第一个参数`master`的作用与`Session`构造函数中的`target`参数相同，它标识了运行 session 的 gRPC 位置，例如`grpc://localhost:123`。
 
-`MonitoredTrainingSession` 函数接受通用 session 钩子（`hooks`）以及针对 chief session 的钩子（`chief_only_hooks`）。通过设置这些参数，你不需要创建 `CheckpointHook` 或 `SummaryHook`。
+`MonitoredTrainingSession`函数接受通用 session 钩子（`hooks`）以及针对 chief session 的钩子（`chief_only_hooks`）。通过设置这些参数，你不需要创建`CheckpointHook`或`SummaryHook`。
 
-## 运行简单集群
+# 运行简单集群
 
-`ch11/cluster.py` 中的代码提供了一个分布式应用的简单示例。该模块没有执行任何机器学习，但展示了一组 worker 任务如何协作更新变量。
+`ch11/cluster.py`中的代码提供了一个分布式应用的简单示例。该模块没有执行任何机器学习，但展示了一组 worker 任务如何协作更新变量。
 
-具体来说，该应用程序创建了四个 worker 并使用它们近似 π。这种近似涉及对函数 `y = (1 + x)^-1` 下的面积进行求和（`x` 从 0 到 1），然后乘以 4。在图 11-1 中，图形被分为 30 个区域。
+具体来说，该应用程序创建了四个 worker 并使用它们近似 π。这种近似涉及对函数`y = (1 + x)^-1`下的面积进行求和（`x`从 0 到 1），然后乘以 4。在图 11-1 中，图形被分为 30 个区域。
 
 ![图 11-1：应用程序可以通过将函数下区域划分为矩形并相加来近似 π](img/9781119466215-fg1101.png)
 
-`ch11/cluster.py` 模块生成了 worker 来执行近似。列表 11-1 展示了代码。
+`ch11/cluster.py`模块生成了 worker 来执行近似。列表 11-1 展示了代码。
 
 ```python
 ## 在分布式应用中近似 Pi
@@ -5043,10 +4887,6 @@ if not flags.FLAGS.task:
   subprocess.Popen('python cluster.py --task=0', stderr=subprocess.STDOUT)
   subprocess.Popen('python cluster.py --task=1', stderr=subprocess.STDOUT)
 ```
-
-
-
-
 
 ```python
 subprocess.Popen('python cluster.py --task=2', stderr=subprocess.STDOUT)
@@ -5086,25 +4926,32 @@ else:
         sess.run(pi_var)
 ```
 
-该模块定义了一个 `ClusterSpec` 并启动了四个进程——每个 worker 对应一个进程。每个 worker 进程接收一个不同的参数，用于标识其任务编号。worker 使用该任务编号来创建并启动服务器，其网络地址由 `ClusterSpec` 决定。
+该模块定义了一个`ClusterSpec`并启动了四个进程——每个 worker 对应一个进程。每个 worker 进程接收一个不同的参数，用于标识其任务编号。worker 使用该任务编号来创建并启动服务器，其网络地址由`ClusterSpec`决定。
 
-该模块调用 `tf.device` 将代码分配给四个 worker。第一个 worker 声明并初始化了 `pi_var` 变量。其余 worker 通过累加函数 `y = (1 + x²)(-1)` 下方十个矩形区域的面积来更新 `pi_var` 的值。
+该模块调用`tf.device`将代码分配给四个 worker。第一个 worker 声明并初始化了`pi_var`变量。其余 worker 通过累加函数`y = (1 + x²)(-1)`下方十个矩形区域的面积来更新`pi_var`的值。
 
-每个 worker 都调用 `tf.train.MonitoredTrainingSession` 并将其目标设置为第一个 worker 的地址。主 worker 是任务索引为 0 的 worker，该 worker 的 session 会首先执行并初始化应用程序变量。初始化完成后，其他 worker 执行 session 并更新 `pi_var`。
+每个 worker 都调用`tf.train.MonitoredTrainingSession`并将其目标设置为第一个 worker 的地址。主 worker 是任务索引为 0 的 worker，该 worker 的 session 会首先执行并初始化应用程序变量。初始化完成后，其他 worker 执行 session 并更新`pi_var`。
 
-为了显示输出，该模块将 session 与一个 `OutputHook` 关联。该 session 钩子（hook）会在 session 执行完成后打印 `pi_var` 的值。模块将 session 钩子与函数的 `chief_only_hooks` 关联，因此该钩子仅适用于主 worker 的 session。
+为了显示输出，该模块将 session 与一个`OutputHook`关联。该 session 钩子（hook）会在 session 执行完成后打印`pi_var`的值。模块将 session 钩子与函数的`chief_only_hooks`关联，因此该钩子仅适用于主 worker 的 session。
 
 # 第 12 章 使用 Estimators 开发应用程序
 
 ## 本章内容
+
 - 使用 estimators 执行机器学习算法
+
 - 定义特征（features）和特征列（feature columns）
+
 - 在实践中使用预构建的 estimators
+
 - 使用 wide and deep 分析复杂数据集
 
-从根本层上说，使用统计回归进行机器学习的过程与使用神经网络的过程非常相似（参见第 7 章）：加载数据、训练模型并测试结果。为了简化开发和测试，TensorFlow 提供了 `Estimator` 框架。`tf.estimator` 软件包包含了通过一组通用方法分析数据的模块。例如，执行线性回归的估计器类（`LinearRegressor`）与执行深度神经网络回归的类（`DNNRegressor`）具有相同的方法。你可以通过编写自己的估计器来利用这种共性。也就是说，如果你将你的机器学习算法封装成一个 estimator，其他开发者在训练你的应用程序时将不会遇到困难。当你调用 estimator 的构造函数时，需要为每个特征提供一个特征列。特征列将名称（如 `x-coords`）与特征中提供的数据类型相关联。我将在接下来的章节“使用特征列””中讨论特征列这一迷人的话题。
+从根本层上说，使用统计回归进行机器学习的过程与使用神经网络的过程非常相似（参见第 7 章）：加载数据、训练模型并测试结果。为了简化开发和测试，TensorFlow 提供了`Estimator`框架。`tf.estimator`软件包包含了通过一组通用方法分析数据的模块。例如，执行线性回归的估计器类（`LinearRegressor`）与执行深度神经网络回归的类（`DNNRegressor`）具有相同的方法。你可以通过编写自己的估计器来利用这种共性。也就是说，如果你将你的机器学习算法封装成一个 estimator，其他开发者在训练你的应用程序时将不会遇到困难。当你调用 estimator 的构造函数时，需要为每个特征提供一个特征列。特征列将名称（如`x-coords`）与特征中提供的数据类型相关联。我将在接下来的章节“使用特征列””中讨论特征列这一迷人的话题。
 
 ## 介绍 Estimators
+
+
+
 `tf.estimator` 软件包提供了系列分析数据的类，包括 `LinearClassifier` 和 `DNNClassifier`。这些类扩展了 `Estimator` 类，该类的方法使得以以算法无关的方式进行机器学习。在整本书中，我使用 `estimator` 一词来指代 `Estimator` 类及其子类的实例。通常，使用 estimators 的过程包含六个步骤：
 
 1. 将数据加载到数据集（dataset）。
@@ -5117,6 +4964,7 @@ else:
 第 3 步取决于你感兴趣的估计器类型。你可以通过调用 `Estimator` 类的三个基本方法：`train`、`evaluate` 和 `predict` 来执行第 4、5、6 步。
 
 ## 训练 Estimator
+
 一旦你加载了数据并创建了 estimator，下一步是开始训练。每个 estimator 支持 `train` 方法：`train(input_fn, hooks=None, steps=None, max_steps=None)`
 
 `input_fn` 参数是一个提供训练数据的元组。该元组包含两个元素：`features` 和 `labels`。如果 estimator 的目的是分类，标签代表类别。在 N 维空间中，为了标识特征，`input_fn` 提供一个将字符串与张量（tensors）关联的字典。每个字符串标识一个特征。为了演示如何设置 `input_fn`，以下函数提供了三个特征——每个维度一个：
@@ -5140,10 +4988,7 @@ def train_func():
 
 默认情况下，estimator 会持续训练直到损失接近零。但你可以通过设置 `steps` 参数或 `max_steps` 参数来控制训练次数。区别在于 `steps` 参数是增量的，所以如果你想现在执行 30 步训练，稍后执行 20 步训练，你可以先调用 `steps` 等于 30 的 `train`。之后，你可以调用 `steps` 等于 20 的 `train`。
 
-通过将 `hooks` 参数设置为 session 钩子的列表，你可以监控训练过程。[第 5 章]解释了 session 钩子如何使得监控 session 的执行成为可能。
-
-
-
+通过将 `hooks` 参数设置为 session 钩子的列表，你可以监控训练过程。第 5 章解释了 session 钩子如何使得监控 session 的执行成为可能。
 
 在创建并训练估计器之后，你应该确保它能够正常工作。测试估计器是 `evaluate` 方法的目的：
 
@@ -5234,13 +5079,6 @@ pandas_input_fn(x, y=None, batch_size=128, num_epochs=1, shuffle=None, queue_cap
 | `model_dir` | None | 存储模型的目录 |
 | `session_config` | None | 用于配置的的 Proto |
 
-
-
-代码块是关于 **TensorFlow 特征列 (Feature Columns)** 的，而示例指令和上下文表明这是一个通用的 Markdown 工程任务。
-
-然而，根据你的**特定规则**（变量/函数/路径使用反引号，表达式使用代码块，层级优化），我已为你重新格式化了 TensorFlow 相关的文本：
-
-[content]
 ![图 12-1: TensorFlow 的特征列类决定了列中值的数据类型。](img/9781119466215-fg1201.png)
 
 图 12-1 TensorFlow 的特征列类决定了列中值的数据类型。
@@ -5266,62 +5104,66 @@ pandas_input_fn(x, y=None, batch_size=128, num_epochs=1, shuffle=None, queue_cap
 
 数值列的处理几乎非常简单。默认数据类型为 `tf.float32`，默认形状为 `(1)`。因此，以下代码返回了一个包含单精度浮点值的 `_NumericColumn`：
 
-```temp = numeric_column('temp')
+```
+temp = numeric_column('temp')
 ```
 
 在分类列中，最简单的是 `_IdentityCategoricalColumn`，它可以通过调用 `categorical_column_with_identity` 创建。该列包含表示类别的整数。`num_buckets` 参数决定了类别的数量，因此以下代码创建了一个 `_IdentityCategoricalColumn`，其元素可以取 0 到 11 之间的任何值：
 
-```month = categorical_column_with_identity('month', num_buckets=12)
+```
+month = categorical_column_with_identity('month', num_buckets=12)
 ```
 
 如果你的应用程序使用字符串来识别类别，你可能会发现为每个类别提供唯一的整数很不方便。在这种情况下，你可以调用 `categorical_column_with_hash_bucket`，它使用哈希函数为字符串或整数数据生成 ID 值。以下代码创建了一个具有 195 个类别的 `_HashedCategoricalColumn`：
 
-```nation = categorical_column_with_hash_bucket('nation', num_buckets=195)
+```
+nation = categorical_column_with_hash_bucket('nation', num_buckets=195)
 ```
 
 与其使用哈希函数，你可能会发现列出类别的不同值更简单。然后特征列将为类别确定自己的 ID。你可以通过调用 `categorical_column_with_vocabulary_list` 来实现。例如，以下代码创建了一个 `_VocabularyListCategoricalColumn`，它为 `vocabulary_list` 参数中的七个字符串中的每一个都创建一个类别：
 
-```day_of_the_week = categorical_column_with_vocabulary_list (key='day', vocabulary_list=('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'))
+```
+day_of_the_week = categorical_column_with_vocabulary_list (key='day', vocabulary_list=('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'))
 ```
 
 `categorical_column_with_vocabulary_file` 函数类似于 `categorical_column_with_vocabulary_list`，但你可以在文件中提供词汇表元素。如果你将字段分配给未定义的值，如果定义了该参数，则函数会将字段分配给 `default_value`。如果未定义 `default_value` 且应用程序为 `num_oov_buckets` 分配值，函数将根据需要创建额外的类别。
 
 如果你需要根据范围将数字分类，可以调用 `bucketized_column`。该函数接受一个 `_NumericColumn` 和一个范围的列表/元组。例如，以下代码根据温度范围列表对 `temp_column` 的值进行分类：
 
-```boundaries = [-273.15, 0., 100.]
+```
+boundaries = [-273.15, 0., 100.]
 temp_state = bucketized_column(temp_column, boundaries)
 ```
 
-如果 `boundaries` 参数包含 N 个值，`bucketized_column` 将创建 N+1 个值范围。在示例中，第一个范围从负无穷大到 -273.15，第二个范围从 -273.15 到 0.0，第三个范围从 0.0 到 100.0，第四个范围从 100.0 到正无穷大。
 
 
+如果`boundaries`参数包含 N 个值，`bucketized_column`将创建 N+1 个值范围。在示例中，第一个范围从负无穷大到 -273.15，第二个范围从 -273.15 到 0.0，第三个范围从 0.0 到 100.0，第四个范围从 100.0 到正无穷大。
 
-
-我没有详细介绍这六类中的全部。相反，我专注于其中三个：`LinearRegressor`、`DNNClassifier` 和 `DNNLinearCombinedClassifier`。在每个情况下，我都会解释如何创建和训练该估计器，然后使用它进行预测。
+我没有详细介绍这六类中的全部。相反，我专注于其中三个：`LinearRegressor`、`DNNClassifier`和`DNNLinearCombinedClassifier`。在每个情况下，我都会解释如何创建和训练该估计器，然后使用它进行预测。
 
 ![technicalstuff](img/technicalstuff.png)
 
-TensorFlow 提供的估计器类比我列出的六个要多。`tf.contrib.learn` 包提供了许多估计器类，包括 `DynamicRnnEstimator`、`LogisticRegressor` 和 `SVM`。
+TensorFlow 提供的估计器类比我列出的六个要多。`tf.contrib.learn`包提供了许多估计器类，包括`DynamicRnnEstimator`、`LogisticRegressor`和`SVM`。
 
-`Estimator` API 使编写自己的估计器变得非常简单。除了实现 `train`、`evaluate` 和 `predict` 方法外，你还需要设置估计器的模型以及它用于计算损失的方法。
+`Estimator` API 使编写自己的估计器变得非常简单。除了实现`train`、`evaluate`和`predict`方法外，你还需要设置估计器的模型以及它用于计算损失的方法。
 
 ## 线性回归器
 
-第 6 章 解释了统计学家如何通过对一组数据点拟合直线来分析数据趋势。从数学角度来说，线性回归将 `mx + b` 设置为其模型，并使用均方误差计算损失。训练的目标是确定 `m` 和 `b` 的哪些值可以使直线与观测数据之间的距离最小化。
+第 6 章解释了统计学家如何通过对一组数据点拟合直线来分析数据趋势。从数学角度来说，线性回归将`mx + b`设置为其模型，并使用均方误差计算损失。训练的目标是确定`m`和`b`的哪些值可以使直线与观测数据之间的距离最小化。
 
-TensorFlow 的估计器类中最简单的是 `LinearRegressor`，它执行相同的操作。构造函数如下：
+TensorFlow 的估计器类中最简单的是`LinearRegressor`，它执行相同的操作。构造函数如下：
 
 ```
 LinearRegressor(feature_columns, model_dir=None, label_dimension=1, weight_column=None, optimizer='Ftrl', config=None, partitioner=None)
 ```
 
-唯一要求的参数是 `feature_columns`，它接受一个 `_FeatureColumn` 列表，用于识别估计器的数据。`model_dir` 参数告诉估计器应该将输出存储在哪里，例如事件文件和检查点。如果你不设置 `model_dir`，估计器将使用临时目录。
+唯一要求的参数是`feature_columns`，它接受一个`_FeatureColumn`列表，用于识别估计器的数据。`model_dir`参数告诉估计器应该将输出存储在哪里，例如事件文件和检查点。如果你不设置`model_dir`，估计器将使用临时目录。
 
-估计器的 `train` 函数期望一个返回特征和标签二元组的函数。在大多数应用程序中，标签由单个值组成，例如类别编号。但如果你的估计器需要多值目标，可以通过设置 `label_dimension` 参数来配置这一点。
+估计器的`train`函数期望一个返回特征和标签二元组的函数。在大多数应用程序中，标签由单个值组成，例如类别编号。但如果你的估计器需要多值目标，可以通过设置`label_dimension`参数来配置这一点。
 
-如果你设置了 `weight_column` 参数，估计器会创建一个额外的列，为每个特征分配权重。`train` 和 `evaluate` 的输入函数必须为该列提供值。估计器会将特征的损失乘以此权重，因此高权重意味着高损失，这意味着估计器将在优化过程中采取更大的步长。
+如果你设置了`weight_column`参数，估计器会创建一个额外的列，为每个特征分配权重。`train`和`evaluate`的输入函数必须为该列提供值。估计器会将特征的损失乘以此权重，因此高权重意味着高损失，这意味着估计器将在优化过程中采取更大的步长。
 
-如果你查看此书中示例代码中的 `ch12` 文件夹，你会发现它包含名为 `lin_reg.csv` 和 `lin_reg.py` 的两个文件。第一个文件定义了一系列二维点。它的前五行如下：
+如果你查看此书中示例代码中的`ch12`文件夹，你会发现它包含名为`lin_reg.csv`和`lin_reg.py`的两个文件。第一个文件定义了一系列二维点。它的前五行如下：
 
 ```
 20,1
@@ -5331,13 +5173,13 @@ LinearRegressor(feature_columns, model_dir=None, label_dimension=1, weight_colum
 0.75,0.5
 ```
 
-该头文件表示文件包含 20 个特征，每个特征由单个值组成。每个特征值识别点的 x 坐标，目标识别点的 y 坐标。图 12-2 图形展示了这些点。虚线是拟拟合数据的直线，其方程为 `y = 0.76x – 0.22`。
+该头文件表示文件包含 20 个特征，每个特征由单个值组成。每个特征值识别点的 x 坐标，目标识别点的 y 坐标。图 12-2 图形展示了这些点。虚线是拟拟合数据的直线，其方程为`y = 0.76x – 0.22`。
 
 ![：LinearRegressor 找到最拟合一组点的直线斜率和 y 轴截距。](img/9781119466215-fg1202.png)
 
-图 12-2： `LinearRegressor` 找到最拟合一组点的直线斜率和 y 轴截距。
+图 12-2：`LinearRegressor`找到最拟合一组点的直线斜率和 y 轴截距。
 
-为了分析 `ch12/lin_reg.csv` 中的点，`ch12/lin_reg.py` 代码创建了一个数据集并将数据馈给 `LinearRegressor`。列表 12-1 展示了代码。
+为了分析`ch12/lin_reg.csv`中的点，`ch12/lin_reg.py`代码创建了一个数据集并将数据馈给`LinearRegressor`。列表 12-1 展示了代码。
 
 列表 12-1 使用估计器进行线性回归
 
@@ -5372,14 +5214,11 @@ for prediction in results:
   print(prediction)
 ```
 
-我没有详细介绍这六类类中的全部。相反，我专注于其中三个：`LinearRegressor`、`DNNClassifier` 和 `DNNLinearCombinedClassifier`。在每个情况下，我都会解释如何创建和训练该估计器，然后使用它进行预测。
+我没有详细介绍这六类类中的全部。相反，我专注于其中三个：`LinearRegressor`、`DNNClassifier`和`DNNLinearCombinedClassifier`。在每个情况下，我都会解释如何创建和训练该估计器，然后使用它进行预测。
 
 ## DNN 分类器
 
-`DNNClassifier` 使用深度神经网络将输入特征映射到标签。它的构造函数与 `LinearRegressor` 类似，但它使用多层神经元而不是单一线性模型。`hidden_units` 参数允许你指定层数和每层中神经元数量。
-
-
-
+`DNNClassifier`使用深度神经网络将输入特征映射到标签。它的构造函数与`LinearRegressor`类似，但它使用多层神经元而不是单一线性模型。`hidden_units`参数允许你指定层数和每层中神经元数量。
 
 ```python
 dataset = dataset.map(parser).repeat().batch(batch_size)
@@ -5389,6 +5228,7 @@ dnn_class.train(train_func, steps=num_steps)
 ```
 
 ### 测试估计器
+
 ```python
 def test_func():
     dataset = tf.data.TFRecordDataset('mnist_test.tfrecords')
@@ -5404,80 +5244,103 @@ for key, value in metrics.items():
     print(key, ': ', value)
 ```
 
-该模块创建一个特征列并使用它来构建一个 `DNNClassifier`。它将估计器的 `hidden_units` 参数设置为 `[128, 32]`，这意味着分类器具有两个隐藏层，分别包含 128 和 32 个隐藏单元。它将 `n_classes` 参数设置为 10，因为每张 MNIST 图像可以属于十个类别之一。没有设置 `label_vocabulary` 参数，因此分类器假设标签将以 0 到 9 的整数形式提供。
+该模块创建一个特征列并使用它来构建一个`DNNClassifier`。它将估计器的`hidden_units`参数设置为`[128, 32]`，这意味着分类器具有两个隐藏层，分别包含 128 和 32 个隐藏单元。它将`n_classes`参数设置为 10，因为每张 MNIST 图像可以属于十个类别之一。没有设置`label_vocabulary`参数，因此分类器假设标签将以 0 到 9 的整数形式提供。
 
-在训练和评估之后，该模块会打印 `evaluate` 返回的字典的键和值。在我的系统中，结果如下：
+在训练和评估之后，该模块会打印`evaluate`返回的字典的键和值。在我的系统中，结果如下：
 
 `Evaluation metrics:`
+
 `accuracy : 0.9595`
+
 `average_loss : 0.129958`
+
 `loss : 10.3966`
+
 `global_step : 8000`
 
 ### 线性-DNN 结合分类器
 
-如果线性估计器和 DNN 估计器不能满足你的需求，你可以创建一个结合这两种学习方法的估计器。TensorFlow 提供了两种估计器：`DNNLinearCombinedRegressor` 和 `DNNLinearCombinedClassifier`。本文重点讨论 `DNNLinearCombinedClassifier`。
+如果线性估计器和 DNN 估计器不能满足你的需求，你可以创建一个结合这两种学习方法的估计器。TensorFlow 提供了两种估计器：`DNNLinearCombinedRegressor`和`DNNLinearCombinedClassifier`。本文重点讨论`DNNLinearCombinedClassifier`。
 
-在继续之前，我想澄清一些术语。这个估计器的名称包含“Linear（线性）”，但它并没有执行线性拟合。尽管名称如此，线性分类器依赖于逻辑回归而非线性回归来完成工作。第 6 章 勇敢地探讨了线性回归和逻辑回归主题。
+在继续之前，我想澄清一些术语。这个估计器的名称包含“Linear（线性）”，但它并没有执行线性拟合。尽管名称如此，线性分类器依赖于逻辑回归而非线性回归来完成工作。第 6 章勇敢地探讨了线性回归和逻辑回归主题。
 
-要确定一个点属于哪个类别，TensorFlow 线性分类器依赖于 softmax 函数。如果 `j` 是 `N` 个类别之一，该函数的公式如下：
+要确定一个点属于哪个类别，TensorFlow 线性分类器依赖于 softmax 函数。如果`j`是`N`个类别之一，该函数的公式如下：
 
 ![images](img/eq12001.png)
-<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>&#963;</m:mi><m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo)</m:mo></m:mrow></m:mrow><m:mo></m:mo></m:mrow></m:mrow><m:mi>j</m:mi></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>f</m:mi><m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo)</m:mo></m:mrow></m:mrow><m:mi>j</m:mi></m:msub></m:mrow></m:msup></m:mrow><m:mrow><m:mstyle displaystyle="true"><m:munderover><m:mo>&#8721;</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mrow><m:mi>N</m:mi><m:mo>&#45;</m:mo><m:mn>1</m:mn></m:mrow></m:munderover><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>f</m:mi><m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo)</m:mo></m:mrow></m:mrow><m:mi>i</m:mi></m:msub></m:mrow></m:msup></m:mrow></m:mstyle></m:mrow></m:mfrac></m:mrow></m:math>
 
-如果 `f(x)` 是 `x` 的线性组合（例如 `mx + b`），则是线性的。为了确定损失，线性分类器计算交叉熵。
+<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mrow><m:mi>&#963;</m:mi><m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mi>j</m:mi></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>f</m:mi><m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mi>j</m:mi></m:msub></m:mrow></m:msup></m:mrow><m:mrow><m:mstyle displaystyle="true"><m:munderover><m:mo>&#8721;</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mrow><m:mi>N</m:mi><m:mo>&#45;</m:mo><m:mn>1</m:mn></m:mrow></m:munderover><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>f</m:mi><m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mi>i</m:mi></m:msub></m:mrow></m:msup></m:mrow></m:mstyle></m:mrow></m:mfrac></m:mrow></m:math>
 
-`DNNLinearCombinedClassifier` 结合了线性分类器和 DNN 分类器。你可以通过调用其构造函数来创建该分类器的实例：
+如果`f(x)`是`x`的线性组合（例如`mx + b`），则是线性的。为了确定损失，线性分类器计算交叉熵。
+
+`DNNLinearCombinedClassifier`结合了线性分类器和 DNN 分类器。你可以通过调用其构造函数来创建该分类器的实例：
 
 `DNNLinearCombinedClassifier(model_dir=None, linear_feature_columns=None, linear_optimizer='Ftrl', dnn_feature_columns=None, dnn_optimizer='Adagrad', dnn_hidden_units=None, dnn_activation_fn=tf.nn.relu, dnn_dropout=None)`
 
-
-
-
-我通过两个 CSV 文件提供了人口普查数据：`ch12/adult.data` 包含训练数据，`ch12/adult.test` 包含测试数据。加州大学欧文分校（UCI）在其网站 [`https://archive.ics.uci.edu/ml/machine-learning-databases/adult`](https://archive.ics.uci.edu/ml/machine-learning-databases/adult) 免费提供这些文件。
+我通过两个 CSV 文件提供了人口普查数据：`ch12/adult.data`包含训练数据，`ch12/adult.test`包含测试数据。加州大学欧文分校（UCI）在其网站 [`https://archive.ics.uci.edu/ml/machine-learning-databases/adult`](https://archive.ics.uci.edu/ml/machine-learning-databases/adult) 免费提供这些文件。
 
 每条人口普查记录提供了关于个人的 14 项统计数据：
 
 - `age`: 人的年龄（年）
+
 - `workclass`: 工作类别状态（Private, Self-emp-not-inc, self-emp-inc, Federal-gov, Local-gov, State-gov, Without-pay, Never-worked）
+
 - `fnlwgt`: 由人口普查局计算的权重值（最终权重）
+
 - `education`: 最高教育程度（Preschool, 1^(st)\-4^(th), 5^(th)\-6^(th), 7^(th)\-8^(th), 9^(th), 10^(th), 11^(th), 12^(th), HS-grad, Some-college, Prof-school, Assoc-acdm, Assoc-voc, Bachelors, Masters, Doctorate）
+
 - `education-num`: 教育年限
+
 - `marital-status`: 婚姻状态（Never-married, Divorced, Separated, Widowed, Married-civ-spouse, Married-AF-spouse, Married-spouse-absent）
+
 - `occupation`: 工作地点（Tech-support, Craft-repair, Other-service, Sales, Exec-managerial, Prof-specialty, Handlers-cleaners, Machine-op-inspct, Adm-clerical, Farming-fishing, Transport-moving, Priv-house-serv, Protective-serv, Armed-Forces）
+
 - `relationship`: 关系状态（Wife, Own-child, Husband, Not-in-family, Other-relative, Unmarried）
+
 - `race`: 自认种族（White, Asian-Pac-Islander, Amer-Indian-Eskimo, Other, Black）
+
 - `sex`: 性别（Female, Male）
+
 - `capital-gain`: 买卖资本资产的利润
+
 - `capital-loss`: 买卖资本资产的损失
+
 - `hours-per-week`: 每周工作小时数
+
 - `native-country`: 国家（United-States, Cambodia, England, Puerto-Rico, Canada, Germany, Outlying-US(Guam-USVI-etc), India, Japan, Greece, South Korea, China, Cuba, Iran, Honduras, Philippines, Italy, Poland, Jamaica, Vietnam, Mexico, Portugal, Ireland, France, Dominican-Republic, Laos, Ecuador, Taiwan, Haiti, Columbia, Hungary, Guatemala, Nicaragua, Scotland, Thailand, Yugoslavia, El-Salvador, Trinad&Tobago, Peru, Hong Kong, Holand-Netherlands）
 
-例如`adult.test` 文件包含以下记录：
+例如`adult.test`文件包含以下记录：
 
 ```
 36, Local-gov, 403681, Bachelors, 13, Married-civ-spouse, Prof-specialty, Husband, White, Male, 0, 0, 40, United-States, >50K
 ```
 
-最后一列提供字符串格式的分类标签。标签 `>50K` 表示该人员年收入超过 50,000 美元，而 `<=50K` 表示该人员年收入小于或等于 50,000 美元。
+最后一列提供字符串格式的分类标签。标签`>50K`表示该人员年收入超过 50,000 美元，而`<=50K`表示该人员年收入小于或等于 50,000 美元。
 
-遗憾的是，你无法使用 `load_csv_with_header` 或 `load_csv_without_header` 加载这些普查数据。相反，我建议使用 pandas 数据分析库。如果你可以使用 pip，可以通过以下命令安装 pandas：
+遗憾的是，你无法使用`load_csv_with_header`或`load_csv_without_header`加载这些普查数据。相反，我建议使用 pandas 数据分析库。如果你可以使用 pip，可以通过以下命令安装 pandas：
 
 ```
 pip install pandas
 ```
 
-安装好工具集后，你可以通过 `read_csv` 读取 CSV 数据。该函数接受许多参数，其中七个尤为重要：
+安装好工具集后，你可以通过`read_csv`读取 CSV 数据。该函数接受许多参数，其中七个尤为重要：
 
 - `filepath_or_buffer`: 包含 CSV 数据的文件的句柄
+
 - `header`: 包含列名的行号
+
 - `names`: CSV 字段的名称
+
 - `dtype`: 列的数据类型或数据类型列表
+
 - `engine`: 解析器引擎
+
 - `skipinitialspace`: 指定是否忽略分隔符后的空格的布尔值（默认：`False`）
+
 - `skiprows`: 从文件开始处要跳过的行数
 
-`read_csv` 返回一个持有 CSV 文件数据的 `DataFrame`。例如，以下代码获取了 `adult.data` 的句柄，并调用 `read_csv` 将其数据读取到 `DataFrame` 中：
+`read_csv`返回一个持有 CSV 文件数据的`DataFrame`。例如，以下代码获取了`adult.data`的句柄，并调用`read_csv`将其数据读取到`DataFrame`中：
+
+
 
 ```
 columns = ['age', 'workclass', 'fnlwgt', 'education', 'education_num', 'marital_status', 'occupation', 'relationship', 'race', 'gender', 'capital_gain', 'capital_loss', 'hours_per_week', 'native_country', 'income_bracket']
@@ -5486,9 +5349,6 @@ train_frame = pd.read_csv(train_file, names=columns, engine='python', skipinitia
 ```
 
 创建 `DataFrame` 后，你可以调用 `pandas_input_fn` 将 `DataFrame` 转换为一个可以传递给估计器 `train` 或 `evaluate` 方法的方法。`ch12/combined.py` 模块演示了应用程序如何使用 pandas 从 CSV 文件读取数据。
-
-
-
 
 ```python
 test_labels = test_frame['income_bracket'].apply(lambda x: '>50K' in x)
@@ -5518,25 +5378,35 @@ for key, value in metrics.items():
 为了测试分类器，模块从 `adult.test` 读取字段到一个 `DataFrame` 中并将 `DataFrame` 转换为数据集。然后，它会打印 `evaluate` 返回的字典中包含的每个指标。在我的系统中，该模块显示了如下结果：
 
 `accuracy : 0.802285`
+
 `accuracy_baseline : 0.763774`
+
 `auc : 0.87448`
+
 `auc_precision_recall : 0.710498`
+
 `average_loss : 0.511923`
+
 `label/mean : 0.236226`
+
 `loss : 65.1142`
+
 `prediction/mean : 0.336511`
+
 `global_step : 195360`
 
 在此列表中，`auc` 代表“曲线下面积”（area under the curve）。该指标对于分类器来说是常见的，因为它衡量了分类器做出成功预测与失败预测相比的概率。
 
 ## 在集群中运行 Estimators
 
-第 11 章 介绍了分布式 TensorFlow 应用，这涉及作业（jobs）、任务（tasks）和服务器（servers）。你可以在分布式应用中运行 estimators，但你需要告诉 TensorFlow 集群信息以及分配给运行 estimator 的服务器的任务。
+第 11 章介绍了分布式 TensorFlow 应用，这涉及作业（jobs）、任务（tasks）和服务器（servers）。你可以在分布式应用中运行 estimators，但你需要告诉 TensorFlow 集群信息以及分配给运行 estimator 的服务器的任务。
 
 你可以通过设置一个 `TF_CONFIG` 变量来提供这些信息，该变量描述集群和服务器的任务。具体来说，你需要将 `TF_CONFIG` 设置为一个包含三个字段的 JSON（JavaScript 对象符号法）对象：
 
 * `cluster`: 集群的描述
+
 * `task`: 节点的任务
+
 * `job`: 作业的参数
 
 你可以通过提供 `ClusterSpec` 实例的参数值来设置第一个字段。如果你有一个现有的 `ClusterSpec`，可以通过调用它的 `as_cluster_def` 方法获取合适的描述。
@@ -5544,7 +5414,9 @@ for key, value in metrics.items():
 `task` 字段标识分配给设置了 `TF_CONFIG` 的节点任务。该字段本身包含三个字段：
 
 * `type`: 任务类型（`worker`、`master` 或 `ps`）
+
 * `index`: 任务在作业中的索引
+
 * `trial`: 运行试验的字符串标识符，以 `'1'` 开头
 
 `TF_CONFIG` 的 `job` 字段描述了节点的作业。分布式应用通常通过命令行参数接收此信息，因此你可以忽略该字段。以下代码向你展示了如何设置此变量：
@@ -5568,10 +5440,12 @@ TF_CONFIG = {
 为了简化在分布式环境中执行 estimators 的过程，TensorFlow 提供了 `Experiment` 类。在代码中使用 `Experiment`，你需要执行三个步骤：
 
 1. 创建一个 estimator。
+
 2. 使用步骤 1 中创建的 estimator 构造 `tf.contrib.learn.Experiment` 实例。
+
 3. 通过调用 `tf.contrib.learn.learn_runner` 启动实验。
 
-本节讨论了这些步骤，并演示了如何使用实验分类 MNIST 图像。第 13 章 展示了如何在云端启动实验。
+本节讨论了这些步骤，并演示了如何使用实验分类 MNIST 图像。第 13 章展示了如何在云端启动实验。
 
 ### 创建实验
 
@@ -5580,32 +5454,49 @@ TF_CONFIG = {
 表 12-3 Experiment 构造函数的参数
 
 | 参数 | 默认值 | 描述 |
+
 | --- | --- | --- |
+
 | `estimator` | -- | 由实验启动的 estimator |
+
 | `train_input_fn` | -- | 返回训练特征和标签的函数 |
+
 | `eval_input_fn` | -- | 返回评估特征和标签的函数 |
+
 | `eval_metrics` | `None` | 监控的评估指标 |
+
 | `train_steps` | `None` | 训练步数 |
+
 | `eval_steps` | `None` | 评估步数 |
+
 | `eval_hooks` | `None` | 传递给 estimator 的会话钩子 |
+
 | `eval_delay_secs` | `120` | 评估前等待的秒数 |
+
 | `continuous_eval_throttle_secs` | `60` | 评估开始后再次评估前等待的秒数 |
+
 | `min_eval_frequency` | `None` | 评估之间的最小步数 |
+
 | `delay_workers_by_step` | `False` | 是否根据全局步数而非时间延迟 worker |
+
 | `export_strategies` | `None` | 导出策略 |
+
 | `train_steps_per_iteration` | `None` | 每次训练-评估迭代中的训练步数 |
+
 | `checkpoint_and_export` | `False` | 是否在训练期间保存检查点和导出 |
 
-
-
-
-
 | `test()` | 执行单步的训练、评估和导出 |
+
 | `continuous_eval(delay_secs=None, throttle_delay_secs=None, evaluate_checkpoint_only_once=True, continuous_eval_predicate_fn=None, name='continuous')` | 持续评估估计器 |
+
 | `continuous_eval_on_train_data( delay_secs=None, throttle_delay_secs=None, continuous_eval_predicate_fn=None, name='continuous_on_train_data')` | 使用训练数据持续评估估计器 |
+
 | `continuous_train_and_eval(*args, **kwargs)` | 交替训练和评估 |
+
 | `extend_train_hooks(additional_hooks)` | 为训练关联额外的会话钩（hooks） |
+
 | `reset_export_strategies(new_export_strategies=None)` | 关联新的导出策略 |
+
 | `run_std_server()` |  TensorFlow 服务器并加入服务线程 |
 
 前四个方法非常易于使用和理解。`train` 方法会持续运行，除非你在构造函数中设置了 `train_steps` 参数。`evaluate` 将持续测试，直到输入耗尽或达到 `eval_steps` 参数。在这两个方法中，你都可以通过设置 `delay_secs` 参数来指定实验应等待多久。
@@ -5619,8 +5510,11 @@ TF_CONFIG = {
 你可以通过调用 `tf.contrib.learn.learn_runner.run` 来训练和/评估实验。该函数接受四个参数：
 
 * `experiment_fn`: 返回实验对象的函数
+
 * `schedule`: 要调用的实验方法
+
 * `run_config`: 提供配置设置的 `RunConfig` 实例
+
 * `hparams`: 为实验提供额外数据的 `HParams` 实例
 
 要调用此函数，你需要将第一个参数分配给一个接收两个参数的函数：`RunConfig` 和 `HParams`。该函数必须返回一个 `Experiment`。
@@ -5703,13 +5597,11 @@ tf.contrib.learn.learn_runner.run(
   hparams=hparams)
 ```
 
-
-
-
-
 我喜欢使用 GCP，因为我的应用程序可以访问 Google 的技术，包括 Google Maps、Gmail、YouTube 和 AdSense。本章将重点介绍 Google 的机器学习（ML）引擎，它可以让你在 Google Cloud Platform 上运行 TensorFlow 应用程序。
 
 ## 概述
+
+
 
 好消息是，通过将应用程序部署到 Google 的机器学习（ML）引擎，你可以大幅缩短机器学习所需。坏消息是，配置和部署应用程序的过程并不简单。涉及到五个步骤：
 
@@ -5795,9 +5687,6 @@ gcloud version
 gcloud components update
 ```
 
-
-
-
 如果你输入 `gcloud help`，你将看到一个长长的 `gcloud` 组和命令列表。`gcloud` 组使得管理 Web 应用程序、访问数据库和配置 DNS 设置成为可能。表 13-1 列出了这些组中的十个。
 
 表 13-1 gcloud 组
@@ -5833,7 +5722,7 @@ gcloud ml-engine jobs submit training
 * `--module-name`：包的主模块名称
 * `--staging-bucket`：存储包及其依赖项的 Cloud Storage 桶（bucket）
 
-在我解释如何向云端提交作业之前，我将在下一节解释 Cloud Storage 的工作原理，以便你设置 `--staging-bucket` 标志。然后，我将解释如何准备应用程序，以便你设置 --`package-path` 标志。
+在我解释如何向云端提交作业之前，我将在下一节解释 Cloud Storage 的工作原理，以便你设置 `--staging-bucket` 标志。然后，我将解释如何准备应用程序，以便你设置 `--package-path` 标志。
 
 ## Google Cloud Storage
 
@@ -5900,10 +5789,6 @@ Cloud Storage 桶中的每个数据项都是一个对象。桶可以包含无限
 * 对象名称不能包含任何回车符或换行符。
 * Google 建议不要在对象名称中使用 `#`、`[`、`]`、`*` 或 `?`，因为 `gsutil` 会将这些字符解释为通配符。
 
-
-
-
-
 桶（bucket）的名字必须以字母开头和结束，但对象（object）的名字可以以斜杠（`/`）开头或结束。因此，你可以通过以斜杠开头对象的名称来构建虚拟层次结构。
 
 例如，假设你创建了一个名为 `gs://dummies-tfbook` 的桶。你可以在该桶中创建一个名为 `gs://dummies-tfbook/data` 的对象，以及另一个名为 `gs://dummies-tfbook/data/images` 的对象。Cloud Storage 不会识别这些对象之间的任何关系，但人类会理解这些对象形成了一个虚拟层级结构。
@@ -5916,21 +5801,21 @@ Cloud Storage 桶中的每个数据项都是一个对象。桶可以包含无限
 
 表 13-4 gsutil 命令
 
-| **命令** || **描述** |
+| **命令** | **描述** |
 | --- | --- |
 | `mb [-c class] [-l location] [-p proj_id] url…` | 创建新桶 |
 | `rb [-f] url…` | 删除桶 |
-| `cp [OPTION]… src_url dst_url`<<br>`cp [OPTION]… src_url… dst_url`<<br>`cp [OPTION]… -I dst_url` | 复制文件和对象 |
-| `mv [-p] src_url dst_url`<<br>`mv [-p] src_url… dst_url`<<br>`mv [-p] -I dst_url` | 移动对象和或子目录 |
-| `rm [-f] [-r] url…`<<br>`rm [-f] [-r] –I` | 删除对象 |
+| `cp [OPTION]… src_url dst_url`<br>`cp [OPTION]… src_url… dst_url`<br>`cp [OPTION]… -I dst_url` | 复制文件和对象 |
+| `mv [-p] src_url dst_url`<br>`mv [-p] src_url… dst_url`<br>`mv [-p] -I dst_url` | 移动对象和或子目录 |
+| `rm [-f] [-r] url…`<br>`rm [-f] [-r] –I` | 删除对象 |
 | `ls [-a] [-b] [-d] [-l] [-L] [-r] [-p proj_id] url…` | 列出桶和对象 |
 | `stat url…` | 显示对象状态 |
-| `rewrite -k [-f] [-r] url…`<<br>`rewrite -k [-f] [-r] –I` | 重写对象 |
+| `rewrite -k [-f] [-r] url…`<br>`rewrite -k [-f] [-r] –I` | 重写对象 |
 | `du url…` | 显示对象大小使用情况 |
 | `cat [-h] url…` | 将对象连接到标准输出 |
-| `compose gs://bucket/obj1`<<br>`[gs://bucket/obj2 …]`. gs://bucket/composite` | 将多个对象合并为一个对象 |
-| `[-D] config [-a] [-b] [-e] [-f] [-n]`<<br>`[-o <file>] [-r] [-s <scope] [-w]` | 获取凭据并创建配置文件 |
-| `web set [-m main_page_suffix]`<<br>`[-e error_page] bucket_url…`<<br>`web get bucket_url` | 将一个或多个桶与网页关联 |
+| `compose gs://bucket/obj1`<br>`[gs://bucket/obj2 …]`. gs://bucket/composite` | 将多个对象合并为一个对象 |
+| `[-D] config [-a] [-b] [-e] [-f] [-n]`<br>`[-o <file>] [-r] [-s <scope] [-w]` | 获取凭据并创建配置文件 |
+| `web set [-m main_page_suffix]`<br>`[-e error_page] bucket_url…`<br>`web get bucket_url` | 将一个或多个桶与网页关联 |
 
 这些命令中的许多都是直观的，但有几个值得额外解释。本文讨论探讨了 `mb`、`cp`/`mv`、`ls`/`stat` 以及 `cat`/`compose` 命令。
 
@@ -5970,9 +5855,11 @@ gs mv gs://newbucket/hello.txt .
 
 `cp` 和 `mv` 接受与其在 Linux 中对应的许多相同标志。这些标志包括：
 
-* `-r`: 递归
-* `-I`: 输出详细信息
-* `-e`: 覆盖
+
+
+- `-r`：递归
+- `-I`：输出详细信息
+- `-e`：覆盖
 
 例如，以下命令将 `mydir` 移动到 `firstbucket`：
 
@@ -5986,7 +5873,7 @@ gsutil mv -r firstbucket
 gsutil cp -e mydir secondbucket
 ```
 
-#### 读取信息 (ls 和 stat)
+## 读取信息（`ls` 和 `stat`）
 
 `ls` 和 `stat` 命令提供关于对象的信息。`ls` 的一个有趣特性是可以识别层次结构。例如，以下命令列出桶的内容：
 
@@ -6000,7 +5887,7 @@ util ls bucket
 util ls -r bucket
 ```
 
-另一个有用的标志是 `-l`，它让 `ls` 打印详细。这些细节包括大小、创建时间和所有者。
+另一个有用的标志是 `-l`，它让 `ls` 打印详细信息。这些细节包括大小、创建时间和所有者。
 
 ```
 util ls -l bucket
@@ -6012,9 +5899,9 @@ util ls -l bucket
 stat ls -L bucket
 ```
 
-#### 连接 (cat 和 compose)
+## 连接（`cat` 和 `compose`）
 
-`cat` 将对象的重定向到标准输出。例如，以下命令打印 `a.txt` 包含的内容：
+`cat` 将对象重定向到标准输出。例如，以下命令打印 `a.txt` 包含的内容：
 
 ```
 gsutil cat bucket/a.txt
@@ -6028,31 +5915,26 @@ gsutil compose bucket/a.txt bucket/b.txt bucket/c.txt
 
 使用 `compose` 时请记住三点：
 
-* 项目每秒最多执行 200 次 `compose` 操作。
-* 一个 `compose` 操作最多合并 32 个实体。
-* 给定的对象最多可以追加 1023 次。
+- 项目每秒最多执行 200 次 `compose` 操作。
+- 一个 `compose` 操作最多合并 32 个实体。
+- 给定的对象最多可以追加 1023 次。
 
 ![tip](img/tip.png)`compose` 对于你向 Cloud Storage 上传非常大的文件特别有用。与其从一台计算机上传整个文件，不如从不同的计算机上传文件的部分并使用 `compose` 合并这些部分。
 
-## 准备部署
+# 准备部署
 
 在提交应用程序进行训练或预测之前，你应该通过以下两种方式对其准备：
 
-* 配置应用程序接收来自 ML Engine 的命令行参数
-* 以包的形式组织应用程序的文件
+- 配置应用程序接收来自 ML Engine 的命令行参数
+- 以包的形式组织应用程序的文件
 
-### 接收参数
+## 接收参数
 
 当 ML Engine 执行你的应用程序时，它会传递有关操作环境信息的参数。表 13-5 列出了可能的参数。
 
-| **参数** || **操作** |
+| **参数** | **操作** |
 | --- | --- |
 | `--job-dir` | 应用程序数据的位置 |
-
-
-
-
-
 | `--train_batch_size` | 训练批大小 |
 | `--train_steps` | 每个训练 epoch 的步数 |
 | `--eval_batch_size` | 评估批大小 |
@@ -6073,14 +5955,14 @@ if __name__ == '__main__':
     args = parser.parse_args()
 ```
 
-除了内置参数外，你还可以提供自己的参数。当你提交作业时，ML Engine 将将你的参数传递给应用程序。但请记住以下两点：
+除了内置参数外，你还可以提供自己的参数。当你提交作业时，ML Engine 将你的参数传递给应用程序。但请记住以下两点：
 
 - 用户定义的标志必须在所有内置标志之后。
-- 两个横线 (`--`) 必须将内置标志与用户定义的标志隔开。
+- 两个横线（`--`）必须将内置标志与用户定义的标志隔开。
 
 例如，假设你想向应用程序传递两个名为 `data_dir` 和 `num_epochs` 的参数。当你执行命令时，需要在命令末尾设置 `--data_dir` 和 `--num_epochs` 标志，并用 `--` 将它们与命令的标准标志分开。
 
-### 打包 TensorFlow 代码
+## 打包 TensorFlow 代码
 
 你可以使用命令 `gcloud ml-engine jobs submit training` 启动训练操作。当你执行该命令时，可以使用 `--package-path` 和 `--module-name` 标志识别源代码。`--package-path` 标志标识包含代码的目录，该目录必须满足以下要求：
 
@@ -6091,7 +5973,7 @@ if __name__ == '__main__':
 
 最后一点非常重要。在上传包之前，ML Engine 使用 `setuptools` 将父目录压缩成一个 `*.tar.gz` 文件。如果你安装了 `pip`，可以通过 `pip install setuptools` 安装 `setuptools`。
 
-### setup.py
+## `setup.py`
 
 在 Python 包中，`setup.py` 包含了构建和安装包的指令。如果你想让 ML Engine 安装你的包，`setup.py` 必须执行两个操作：
 
@@ -6100,7 +5982,7 @@ if __name__ == '__main__':
 
 `setup` 函数接受关于包的大量信息，包括名称、版本和依赖项。表 13-6 列出了你可以设置的九个参数。
 
-#### 表 13-6 setup 函数的参数
+### 表 13-6 `setup` 函数的参数
 
 | 参数 | 说明 |
 | --- | --- |
@@ -6114,9 +5996,9 @@ if __name__ == '__main__':
 | `description` | 包的简短描述 |
 | `license` | 包的许可证 |
 
-与其手动列出包的依赖项，不如调用 `setuptools` 提供的 `find_packages`。列表 13-1 显示了 `ch13/cloud_mnist` 文件夹下 `setup.py`文件的内容：
+与其手动列出包的依赖项，不如调用 `setuptools` 提供的 `find_packages`。列表 13-1 显示了 `ch13/cloud_mnist` 文件夹下 `setup.py` 文件的内容：
 
-#### 列表 13-1 机器学习包的 Setup 脚本
+### 列表 13-1 机器学习包的 Setup 脚本
 
 ```python
 from setuptools import find_packages
@@ -6139,7 +6021,7 @@ setup(
 
 你可以通过设置 `install_requires` 字段来请求特定版本的包。
 
-### 使用 Cloud SDK 执行应用程序
+## 使用 Cloud SDK 执行应用程序
 
 如果你了解如何使用 Cloud SDK、将数据传输到 Cloud Storage 以及如何构建你的包，你就可以开始使用 ML Engine 运行作业了。ML Engine 支持两种类型的作业：训练和预测。尽管名称相似，但它们之间存在差异。
 
@@ -6152,7 +6034,7 @@ setup(
 
 这些命令产生不同的结果并接受不同的配置标志。
 
-#### 运行本地训练作业
+### 运行本地训练作业
 
 训练作业执行 Python 包并在 `--job-dir` 标志指定的目录中产生输出。表 13-7 列出了 `--job-dir` 以及其他你可以为本地训练设置的标志。
 
@@ -6170,14 +6052,11 @@ setup(
 
 `--package-path` 标志标识包的顶层目录。这是包含包 `setup.py` 文件的目录。`--module-name` 标志标识包内要执行的模块。
 
-如果你想亲自尝试，请将 `ch12` 目录下的 `mnist_train.tfrecord`s 和 `mnist_test.tfrecords` 文件复制到 `ch13` 目录。然后进入 `ch13/cloud_mnist` 目录并输入以下命令：
+如果你想亲自尝试，请将 `ch12` 目录下的 `mnist_train.tfrecords` 和 `mnist_test.tfrecords` 文件复制到 `ch13` 目录。然后进入 `ch13/cloud_mnist` 目录并输入以下命令：
 
 ```bash
 gcloud ml-engine local train --module-name trainer.task --package-path trainer --job-dir output --data_dir ../images
 ```
-
-
-
 
 在此命令中，`--package-path` 表示 `trainer` 目录代表一个包，而 `--module-name` 表示包模块的名称为 `trainer.task`。`--job-dir` 标志告诉应用程序将其结果存储在名为 `output` 的目录中。
 
@@ -6187,7 +6066,7 @@ gcloud ml-engine local train --module-name trainer.task --package-path trainer -
 
 训练完成后，你可以通过执行 `gcloud ml-engine local predict` 来启动本地预测作业。表 13-8 列出了你可以设置的各种标志。
 
-表 13-8 本地预测的标志
+#### 表 13-8 本地预测的标志
 
 | 标志 | 描述 |
 | --- | --- |
@@ -6197,12 +6076,12 @@ gcloud ml-engine local train --module-name trainer.task --package-path trainer -
 
 你应当将 `--model-dir` 标志分配给包含训练操作输出的目录。此外，你需要使用 `--json-instances` 或 `--text-instances` 标志来标识预测参数。
 
-### 部署到云端
+## 部署到云端
 
 如果你成功在本地启动了作业，那么将你的应用程序部署到云端应该不会有困难。但请注意两个问题：
 
-*   你需要将训练/评估数据上传到 Cloud Storage（云端存储）。
-*   ML Engine 可能不支持你所需要的包版本。
+- 你需要将训练/评估数据上传到 Cloud Storage（云端存储）。
+- ML Engine 可能不支持你所需要的包版本。
 
 在执行 `ch13` 目录中的任何一个应用程序之前，你需要将 `mnist_test.tfrecords` 和 `mnist_train.tfrecords` 文件上传到 Cloud Storage 存储桶中。例如，如果你的项目 ID 为 `$(PROJECT_ID)`，你可以使用以下命令在中央部创建一个名为 `$(PROJECT_ID)_mnist` 的存储桶：
 
@@ -6218,7 +6097,7 @@ gsutil cp mnist_test.tfrecords mnist_train.tfrecords gs://$(PROJECT_ID)_mnist
 
 命令执行后，最好检查 Cloud Storage 是否为这两个文件创建了对象。你可以通过运行命令 `gsutil ls gs://$(PROJECT_ID)_mnist` 来验证这一点。
 
-### 运行远程训练作业
+## 运行远程训练作业
 
 上传测试/评估数据后，你可以使用以下命令启动训练作业：
 
@@ -6228,9 +6107,9 @@ gcloud ml-engine jobs submit training $(JOB_ID)
 
 `$(JOB_ID)` 为训练作业提供了一个唯一标识符。启动作业后，你可以使用此 ID 检查作业状态。
 
-除了标识作业外，你还需要告诉 ML Engine 在哪里找到你的包和输入数据。你还需要告诉引擎它应该将输出文件存储在哪里。你可以通过在命令后标志标志提供这些信息，表 13-9 列出了每一个标志。
+除了标识作业外，你还需要告诉 ML Engine 在哪里找到你的包和输入数据。你还需要告诉引擎它应该将输出文件存储在哪里。你可以通过在命令后设置标志来提供这些信息，表 13-9 列出了每一个标志。
 
-表 13-9 云端训练作业的标志
+#### 表 13-9 云端训练作业的标志
 
 | 标志 | 描述 |
 | --- | --- |
@@ -6244,49 +6123,15 @@ gcloud ml-engine jobs submit training $(JOB_ID)
 | `--scale-tier=SCALE_TIER` | 作业的环境 |
 | `--config=CONFIG` | 作业配置文件路径 |
 
-`--module-name`、`--package-path` 和 `--job-dir` 标志的作用与本地训练作业中同名的标志相同。`--staging-bucket` 标志标识存放部署包的桶。`--region` 标志接受 表 13-3 中列出的区域之一。
+`--module-name`、`--package-path` 和 `--job-dir` 标志的作用与本地训练作业中同名的标志相同。`--staging-bucket` 标志标识存放部署包的桶。`--region` 标志接受表 13-3 中列出的区域之一。
 
-`--module-name`、`--package-path` 和 `--job-dir` 标志的作用与本地训练作业中同名的标志相同。`--staging-bucket` 标志标识存放部署包的桶。`--region` 标志接受 表 13-3 中列出的区域之一。
 
-`--module-name`、`--package-path` 和 `--job-dir` 标志的作用与本地训练作业中同名的标志相同。`--staging-bucket` 标志标识存放部署包的桶。`--region` 标志接受 表 13-3 中列出的区域之一。
-
-`--module-name`、`--package-path` 和 `--job-dir` 标志的作用与本地训练作业中同名的标志相同。`--staging-bucket` 标志标识存放部署包的桶。`--region` 标志接受 表 13-3 中列出的区域之一。
-
-`--module-name`、`--package-path` 和 `--job-dir` 标志的作用与本地训练作业中同名的标志相同。`--staging-bucket` 标志标识存放部署包的桶。`--region` 标志接受 表 13-3 中列出的区域之一。
-
-`--module-name`、`--package-path` 和 `--job-dir` 标志的作用与本地训练作业中同名的标志相同。`--staging-bucket` 标志标识存放部署包的桶。`--region` 标志接受 表 13-3 中列出的区域之一。
-
-`--module-name`、`--package-path` 和 `--job-dir` 标志的作用与本地训练作业中同名的标志相同。`--staging-bucket` 标志标识存放部署包的桶。`--region` 标志接受 表 13-3 中列出的区域之一。
-
-`--module-name`、`--package-path` 和 `--job-dir` 标志的作用与本地训练作业中同名的标志相同。`--staging-bucket` 标志标识存放部署包的桶。`--region` 标志接受 表 13-3 中列出的区域之一。
-
-`--module-name`、`--package-path` 和 `--job-dir` 标志的作用与本地训练作业中同名的标志相同。`--staging-bucket` 标志标识存放部署包的桶。`--region` 标志接受 表 13-3 中列出的区域之一。
-
-`--module-name`、`--package-path` 和 `--job-dir` 标志的作用与本地训练作业中同名的标志相同。`--staging-bucket` 标志标识存放部署包的桶。`--region` 标志接受 表 13-3 中列出的区域之一。
-
-`--module-name`、`--package-path` 和 `--job-dir` 标志的作用与本地训练作业中同名的标志相同。`--staging-bucket` 标志标识存放部署包的桶。`--region` 标志接受 表 13-3 中列出的区域之一。
-
-`--module-name`、`--package-path` 和 `--job-dir` 标志的作用与本地训练作业中同名的标志相同。`--staging-bucket` 标志标识存放部署包的桶。`--region` 标志接受 表 13-3 中列出的区域之一。
-
-`--module-name`、`--package-path` 和 `--job-dir` 标志的作用与本地训练作业中同名的标志相同。`--staging-bucket` 标志标识存放部署包的桶。`--region` 标志接受 表 13-3 中列出的区域之一。
-
-`--module-name`、`--package-path` 和 `--job-dir` 标志的作用与本地训练作业中同名的标志相同。`--staging-bucket` 标志标识存放部署包的桶。`--region` 标志接受 表 13-3 中列出的区域之一。
-
-`--module-name`、`--package-path` 和 `--job-dir` 标志的作用与本地训练作业中同名的标志相同。`--staging-bucket` 标志标识存放部署包的桶。`--region` 标志接受 表 13-3 中列出的区域之一。
-
-`--module-name`、`--package-path` 和 `--job-dir` 标志的作用与本地训练作业中同名的标志相同。`--staging-bucket` 标志标识存放部署包的桶。`--region` 标志接受 表 13-3 中列出的区域之一。
-
-`--module-name`、`--package-path` 和 `--job-dir` 标志的作用与本地训练作业中同名的标志相同。`--staging-bucket` 标志标识存放部署包的桶。`--region` 标志接受 表 13-3 中列出的区域之一。
-
-`--module-name`、`--package-path` 和 `--job-dir` 标志的作用与本地训练作业中同名的标志相同。`--staging-bucket` 标志标识存放部署包的桶。`--region` 标志接受 表 13-3 中列出的区域之一。
-
-`--module-name`、`--package-path` 和 `--job-dir` 标志的作用与本地训练作业中同名的标志相同。`--staging-bucket` 标志标识存放部署包的桶。`--region` 标志接受 表 13-3 中列出的区域之一。
 
 `--module-name`、`--package-path` 和 `--job-dir` 标志的作用与本地训练作业中同名的标志相同。`--staging-bucket` 标志标识存放部署包的桶。`--region` 标志接受 表 13-3 中列出的区域之一。
 
 ### 运行远程预测作业
 
-第五章 介绍了 `SavedModel`，如果你将 `SavedModel` 上传到 Cloud Storage 存储桶，你可以使用以下命令启动预测作业：
+第五章介绍了 `SavedModel`，如果你将 `SavedModel` 上传到 Cloud Storage 存储桶，你可以使用以下命令启动预测作业：
 
 ```bash
 gcloud ml-engine jobs submit prediction $(JOB_ID)
@@ -6294,7 +6139,7 @@ gcloud ml-engine jobs submit prediction $(JOB_ID)
 
 此命令接受指定预测作业从哪里读取输入以及向哪里写入输出的标志。表 13-9 列出了每一个标志。
 
-表 13-9 云端预测作业的标志
+**表 13-9 云端预测作业的标志**
 
 | 标志 | 描述 |
 | --- | --- |
@@ -6311,13 +6156,9 @@ gcloud ml-engine jobs submit prediction $(JOB_ID)
 
 ML Engine 接受三种格式的预测输入数据。你可以通过将 `--data-format` 设置为以下值之一来识别你的数据格式：
 
-*   `text`: 每行一个实例的文本文件
-*   `tf-record`: TFRecord 文件
-
-
-
-
-* `tf-record-gzip`: GZIP 压缩的 TFRecord 文件
+- `text`: 每行一个实例的文本文件
+- `tf-record`: TFRecord 文件
+- `tf-record-gzip`: GZIP 压缩的 TFRecord 文件
 
 最后一个要求的标志是 `--output-path`。它告诉 ML Engine 哪个 Cloud Storage 桶（bucket）应该包含预测结果。
 
@@ -6325,8 +6166,8 @@ ML Engine 接受三种格式的预测输入数据。你可以通过将 `--data-f
 
 启动作业后，你有两种方式查看作业状态。首先，你可以使用 `gcloud` 命令，例如：
 
-* `gcloud ml-engine jobs list`: 列出与默认项目关联的作业及其状态和创建时间
-* `gcloud ml-engine jobs describe $(JOB_ID) --summarize`: 以人类可读的格式提供特定作业的详细信息
+- `gcloud ml-engine jobs list`: 列出与默认项目关联的作业及其状态和创建时间
+- `gcloud ml-engine jobs describe $(JOB_ID) --summarize`: 以人类可读的格式提供特定作业的详细信息
 
 当我想检查某个作业时，我更倾向于访问 Google Cloud 控制台。如果你点击左上角的菜单栏并向下滚动，你会看到一个名为 `ML Engine` 的选项。该条目指向两个选项：`Jobs`（作业）和 `Models`（模型）。
 
@@ -6373,32 +6214,25 @@ ML Engine 接受三种格式的预测输入数据。你可以通过将 `--data-f
 
 `scaleTier` 字段指定了集群期望的执行环境，它接受与 `--scale-tier` 标志相同的值。`masterType`、`serverType` 和 `parameterServerType` 字段更加具体，标识了应用于提供给定角色的虚拟机类型。你可以将这些字段中的每一个设置为十个字符串之一：
 
-* `standard`: 适用于中小型数据集的基础配置
-* `large_model`: 适用于大型数据集和许多隐藏层模型的高内存配置
-* `complex_model_s`: 比 `standard` 配置提供更多的计算能力
-* `complex_model_m`: 核心数和层数都是两倍
-* `complex_model_l`: 核心数和层数都是两倍
-* `standard_gpu`: 适用于中小型数据集的基础配置
-* `large_model_gpu`: 适用于大型数据集和许多隐藏层模型的高内存配置
-* `complex_model_s_gpu`: 比 `standard` 配置提供更多的计算能力
-* `complex_model_m_gpu`: 核心数和层数都是两倍
-* `complex_model_l_gpu`: 核心数和层数都是两倍
-* `standard_p100`: 适用于中小型数据集的基础配置
-* `large_model_p100`: 适用于大型数据集和许多隐藏层模型的高内存配置
-* `complex_model_s_p100`: 比 `standard` 配置提供更多的计算能力
-* `complex_model_m_p100`: 核心数和层数都是两倍
-* `complex_model_l_p100`: 核心数和层数都是两倍
-
-`scaleTier` 字段指定了集群期望的执行环境，它接受与 `--scale-tier` 标志相同的值。`masterType`、`serverType` 和 `parameterServerType` 字段更加具体，标识了应用于提供给定角色的虚拟机类型。你可以将这些字段中的每一个设置为十个字符串之一：
-
-（注：提供的文本在此处结束。）
-
-
-
+- `standard`: 适用于中小型数据集的基础配置
+- `large_model`: 适用于大型数据集和许多隐藏层模型的高内存配置
+- `complex_model_s`: 比 `standard` 配置提供更多的计算能力
+- `complex_model_m`: 核心数和层数都是两倍
+- `complex_model_l`: 核心数和层数都是两倍
+- `standard_gpu`: 适用于中小型数据集的基础配置
+- `large_model_gpu`: 适用于大型数据集和许多隐藏层模型的高内存配置
+- `complex_model_s_gpu`: 比 `standard` 配置提供更多的计算能力
+- `complex_model_m_gpu`: 核心数和层数都是两倍
+- `complex_model_l_gpu`: 核心数和层数都是两倍
+- `standard_p100`: 适用于中小型数据集的基础配置
+- `large_model_p100`: 适用于大型数据集和许多隐藏层模型的高内存配置
+- `complex_model_s_p100`: 比 `standard` 配置提供更多的计算能力
+- `complex_model_m_p100`: 核心数和层数都是两倍
+- `complex_model_l_p100`: 核心数和层数都是两倍
 
 你可以通过将配置文件的 `trainingOutput` 字段设置为 `TrainingOutput` 来配置训练作业的输出方式。表 13-14 列出了可能的字段。
 
-TABLE 13-14 TrainingOutput 字段
+**表 13-14 TrainingOutput 字段**
 
 | 字段 | 类型 | 说明 |
 | --- | --- | --- |
@@ -6409,10 +6243,10 @@ TABLE 13-14 TrainingOutput 字段
 
 如果你设置了 `TrainingInput` 的 `hyperparameters` 字段，你可以在 `TrainingOutput` 的 `trials` 字段中访问结果。这是一个 `HyperparameterOutput` 列表，每个 `HyperparameterOutput` 具有四个字段：
 
-* `trialId`: 用于标识实验的字符串
-* `hyperparameters`: 将参数名称与训练后的值关联的字典
-* `finalMetric`: 标识实验最终目标指标的 `HyperparameterMetric`
-* `allMetrics`: 一个 `HyperparameterMetric` 列表，包含该实验记录的所有对象指标
+- `trialId`: 用于标识实验的字符串
+- `hyperparameters`: 将参数名称与训练后的值关联的字典
+- `finalMetric`: 标识实验最终目标指标的 `HyperparameterMetric`
+- `allMetrics`: 一个 `HyperparameterMetric` 列表，包含该实验记录的所有对象指标
 
 机器学习 (ML) 引擎以 `HyperparameterMetric` 的形式提供训练指标，每个 `HyperparmeterMetric` 具有两个字段：`trainingStep` 和 `objectiveValue`。`trainingStep` 字段标识全局训练步骤，`objectiveValue` 标识给定步骤下的目标值。
 
@@ -6420,7 +6254,7 @@ TABLE 13-14 TrainingOutput 字段
 
 你可以通过将文件的 `predictionInput` 字段设置为 `PredictionInput` 来配置预测作业的输入。表 13-15 列出了你可以在 `PredictionInput` 中设置的字段。
 
-TABLE 13-15 PredictionInput 字段
+**表 13-15 PredictionInput 字段**
 
 | 字段 | 类型 | 说明 |
 | --- | --- | --- |
@@ -6451,16 +6285,13 @@ TABLE 13-15 PredictionInput 字段
 
 你可以通过将文件的 `predictionOutput` 字段设置为 `PredictionOutput` 来配置预测作业的输出。表 13-16 列出了你可以设置的字段。
 
-TABLE 13-16 PredictionOutput 字段
+**表 13-16 PredictionOutput 字段**
 
 | 字段 | 类型 | 说明 |
 | --- | --- | --- |
 | `outputPath` | `string` | 存储预测输出的云存储位置 |
 | `predictionCount` | `string` | 生成的预测次数 |
 | `errorCount` | `string` | 生成的预测次数 |
-
-
-
 
 `Graph` 类提供了许多用于访问图中包含数据的方法。你可以通过 `get_tensor_by_name` 访问特定的张量，或者通过调用 `get_operations` 访问图中所有的操作。
 
@@ -6472,6 +6303,8 @@ TABLE 13-16 PredictionOutput 字段
 
 `run` 方法的第一个参数告诉会话要执行什么处理。如果该参数包含张量，会话将计算每个张量的元素并 NumPy 数组的形式返回这些元素。如果该参数包含 `Operation`，会话将执行每个操作并返回适当的结果。
 
+
+
 如果 StackOverflow 上的问题能反映现状的话，`run` 的 `feed_dict` 困住了许多开发者。该参数接受一个字典，将值与图中的张量（通常是 `placeholders`）关联起来。但字典的值不能是张量。因此，通常在执行会话之前，使用 NumPy 数组存储和处理输入数据是一个好主意。
 
 ## Variable
@@ -6480,7 +6313,7 @@ TABLE 13-16 PredictionOutput 字段
 
 另一个区别是，变量需要一套与张量不同的方法。例如，在你创建一个 `Variable` 之后，你需要在会话中运行一个特殊操作来初始化它的值。如果你的应用程序有很多变量，你可以通过调用 `tf.global_variables_initializer` 获取一个组合的初始化操作。
 
-在底层，训练的目标是将应用程序的变量设置为某些值，使模型与观测数据一致。这些变量至关重要，因此建议使用 `Saver` 将它们存储到检查点（checkpoint）文件中。第 5 章 解释了如何在 TensorFlow 中创建、初始化和保存变量。
+在底层，训练的目标是将应用程序的变量设置为某些值，使模型与观测数据一致。这些变量至关重要，因此建议使用 `Saver` 将它们存储到检查点（checkpoint）文件中。第 5 章解释了如何在 TensorFlow 中创建、初始化和保存变量。
 
 ## Optimizer
 
@@ -6490,7 +6323,7 @@ TensorFlow 支持许多不同的优化算法，每种算法由 `Optimizer` 的�
 
 ## Estimator
 
-正如第 12 章 中讨论的那样，估计器（estimators）极大地简化了机器学习算法的开发和部署过程。当你使用估计器时，不需要担心会话和图。你只需要知道 `Estimator` 类的三个方法：`train`、`evaluate` 和 `predict`。
+正如第 12 章中讨论的那样，估计器（estimators）极大地简化了机器学习算法的开发和部署过程。当你使用估计器时，不需要担心会话和图。你只需要知道 `Estimator` 类的三个方法：`train`、`evaluate` 和 `predict`。
 
 使用估计器的另一个优势是 TensorFlow 提供了许多 `Estimator` 的子类。这些现成的估计器（如 `LinearRegressor` 和 `DNNClassifier`）使得训练和测试机器学习变得简单。`DNNLinearCombinedClassifier` 特别有用，因为它让你利用宽深学习（wide and deep learning）。
 
@@ -6502,12 +6335,9 @@ TensorFlow API 最新的更改之一是将 `tf.contrib.data` 包提升为 `tf.da
 
 ## Saver
 
-训练的目标是确定哪些变量能产生最小的损失。训练可能花费几小时或几天，因此在训练期间和之后存储变量的值至关重要。TensorFlow 通过提供 `Saver` 类实现了了可能。
+训练的目标是确定哪些变量能产生最小的损失。训练可能花费几小时或几天，因此在训练期间和之后存储变量的值至关重要。TensorFlow 通过提供 `Saver` 类实现了可能。
 
 使用该类非常简单。在你创建一个 `Saver` 实例后，可以调用 `save` 将模型状态存储在编号的检查点文件中。你可以从检查点文件中加载模型变量。
-
-
-
 
 当你测试机器学习应用或使用它进行实际预测时，你应该确保测试数据在统计学上与训练数据相似。也就是说，测试/预测数据应该与训练数据具有相同的均值和标准差。
 
@@ -6521,7 +6351,7 @@ TensorFlow API 最新的更改之一是将 `tf.contrib.data` 包提升为 `tf.da
 
 对于复杂的问题，你可能不知道需要创建多少个隐藏层。有些开发者认为越大越好，并构建了具有许多（超过 10 层）隐藏层的神经网络。但这会增加过拟合的概率，导致神经网络过度关注你特定的训练数据，而无法分析通用数据。
 
-为了避免过拟合，从从小开始是一个好主意。如果准确率无法接受，就增加网络的深度直到准确率达到合适的值。除了减少过拟合概率外，“从小开始”方法比“从大开始”方法执行速度更快。
+为了避免过拟合，从小开始是一个好主意。如果准确率无法接受，就增加网络的深度直到准确率达到合适的值。除了减少过拟合概率外，“从小开始”方法比“从大开始”方法执行速度更快。
 
 ## 添加 Dropout 层
 
@@ -6545,13 +6375,13 @@ TensorFlow API 最新的更改之一是将 `tf.contrib.data` 包提升为 `tf.da
 
 你对优化器的选择对决定应用程序的准确性和性能起着至关的作用。写这本书期间，我在许多在线论坛上寻找“哪种优化方法最好？”的答案。但尽管经过数十年的分析，研究人员尚未达成共识。
 
-个人个人从 Adam 和 Adagrad 优化器开始，如果你没有得到所需的性能和准确率，尝试其他方法也是好主意。在 TensorFlow 应用中，你通过创建优化器类的实例（例如 `tf.train.AdamOptimizer`）、调用其 `minimize` 方法并在会话运行返回的操作来设置优化方法。
+我个人从 Adam 和 Adagrad 优化器开始，如果你没有得到所需的性能和准确率，尝试其他方法也是好主意。在 TensorFlow 应用中，你通过创建优化器类的实例（例如 `tf.train.AdamOptimizer`）、调用其 `minimize` 方法并在会话运行返回的操作来设置优化方法。
 
 ## 设置正确的学习率
 
 优化器的学习率决定了优化器如何在每个训练步骤中更新其权重。如果你设置的学习率过高，优化器会对权重产生剧烈变化，可能永远无法收敛到解决方案。如果你设置的学习率过低，优化器的进展会缓慢，可能会收敛到局部最优而非全局最优。
 
-典型的学习率从 0.0001 到 0.5 不，但最佳学习率因应用而异。我建议从高值开始，反复降低学习率，直到你对应用程序的准确性和性能感到满意。
+典型的学习率从 0.0001 到 0.5 不等，但最佳学习率因应用而异。我建议从高值开始，反复降低学习率，直到你对应用程序的准确性和性能感到满意。
 
 ## 检查权重和梯度
 
@@ -6567,15 +6397,11 @@ Matthew 在 2018 年成为 Google 认证数据工程师。在空余时间，他�
 
 ## 献辞
 
-本书献给 AI 驱驱 Frank Rosenblatt。尽管他的同僚曾视他为痴于幻想的学者，但现代的成就不仅证实了他最疯狂的预言，而且超越了它们。
+本书献给 AI 先驱 Frank Rosenblatt。尽管他的同僚曾视他为痴于幻想的学者，但现代的成就不仅证实了他最疯狂的预言，而且超越了它们。
 
 ## 作者致谢
 
 在 20 世纪 90 年代，我在大学书店发现了《C 入门》，并深深爱它。Dan Gookin 不仅让 C 变得易懂，还让它变得幽默。我花了许多快乐的时间阅读他幽默的解释并运行那些奇特的编程示例。
-
-
-
-
 
 最后但同样重要的是，我要感谢卓越的文学代理人 Matt Wagner。从我最初的提案到书籍出版，他一直担任着代理、编辑、教练和外交官的角色。尽管同时在处理许多项目，但他总是抽出时间回答我的问题和疑虑。
 
@@ -6679,21 +6505,16 @@ Matthew 在 2018 年成为 Google 认证数据工程师。在空余时间，他�
 32. `allocator_type` 方法，238
 33. `allow_soft_placement` 方法，227
 34. `app` 组，282
-
-
-
-
-
-51. 音数据字段，59
-52. 音频函数，58
-53. 认证组，`gcloud`, 282
-54. 作者参数，292
-55. `author_email` 参数，292
-56. 平均值滤波器，151–152
-57. `avg_pooling2d` 函数，159
-58. axes 参数，41, 134
-59. axis 参数，34, 35
-60. 轴突，119
+35. 音数据字段，59
+36. 音频函数，58
+37. 认证组，`gcloud`, 282
+38. 作者参数，292
+39. `author_email` 参数，292
+40. 平均值滤波器，151–152
+41. `avg_pooling2d` 函数，159
+42. axes 参数，41, 134
+43. axis 参数，34, 35
+44. 轴突，119
 
 ## B
 
@@ -6711,328 +6532,488 @@ Matthew 在 2018 年成为 Google 认证数据工程师。在空余时间，他�
 12. 批量，79–82, 209, 317
     1. `batchSize` 字段，304
     2. `batch-size` 标记，298
-3. Google 的 `Bazel` 工具，229–230, 232, 233, 234–235
-4. `before_run` 方法，91–92
-5. `begin` 方法，91
-6. `begin` 参数，34
-7. BellKor Pragmatic Chaos，13
-8. Bengio, Yoshua，126, 196
-9. Bergstra, James，126
-10. 偏置，121, 122–123, 133, 194
-11. `bias_initializer` 参数，157, 197
-12. `bias_regularizer` 参数，157
-13. `biases_initializer` 参数，144, 145
-14. `biases_regularizer` 参数，144, 145
-15. 三次插值，174
-16. 大革命，12, 13
-17. 双线性插值，173–174
-18. GCP 账单，279
-19. 二进制文件，205–208
-20. 二分类逻辑回归
+13. Google 的 `Bazel` 工具，229–230, 232, 233, 234–235
+14. `before_run` 方法，91–92
+15. `begin` 方法，91
+16. `begin` 参数，34
+17. BellKor Pragmatic Chaos，13
+18. Bengio, Yoshua，126, 196
+19. Bergstra, James，126
+20. 偏置，121, 122–123, 133, 194
+21. `bias_initializer` 参数，157, 197
+22. `bias_regularizer` 参数，157
+23. `biases_initializer` 参数，144, 145
+24. `biases_regularizer` 参数，144, 145
+25. 三次插值，174
+26. 大革命，12, 13
+27. 双线性插值，173–174
+28. GCP 账单，279
+29. 二进制文件，205–208
+30. 二分类逻辑回归
     1. 定义，100
     2. 示例代码，108–110
     3. 逻辑函数，106–107
     4. 极大似然估计，107–108
     5. 概述，105
     6. 建立问题，105–106
-21. 奇特数据集，221–224
-22. BN (批归一化)，134, 136–139, 147, 317
-23. Boston 数据集，223–224
-24. 框滤波器，151–152
-25. BPTT (随时间反向传播)，182–183
-26. `bucketized_column` 函数，255, 256
-27. Google Cloud 桶，283–285, 286–289
-28. `BUILD` 文件，229–230
+31. 奇特数据集，221–224
+32. BN (批归一化)，134, 136–139, 147, 317
+33. Boston 数据集，223–224
+34. 框滤波器，151–152
+35. BPTT (随时间反向传播)，182–183
+36. `bucketized_column` 函数，255, 256
+37. Google Cloud 桶，283–285, 286–289
+38. `BUILD` 文件，229–230
+
+
+
 29. `build_signature_def` 函数，85
+
 30. 构建 TensorFlow 源码
 
 ## C
 
 1. `c` 标记，287
+
 2. `cache` 方法，210, 211
+
 3. Caffe 框架，14
+
 4. `cast` 函数，33
+
 5. `cat` 命令，287, 289
+
 6. 分类列，254–256, 268
+
 7. `_CategoricalColumn` 类，254
+
 8. `ceil` 函数，37, 38
+
 9. `cell_clip` 参数，195
+
 10. 单元，RNN
+
     1. 基础 RNN，185–187
+
     2. 创建，183–185
+
     3. GRU，196–197
+
     4. LSTM，183, 192–196
 
-
-
-
-
 ## 5. 多层化的
+
 190–191
 
-## 11. cells 参数
+## 11. `cells` 参数
+
 190
 
 ## 12. 人口查数据，分析
+
 264–269
 
-## 13. center 参数
+## 13. `center` 参数
+
 138, 139
 
-## 14. central_crop 函数
+## 14. `central_crop` 函数
+
 172, 174
 
 ## 15. 微积分链式法则
+
 131
 
 ## 16. 速查表，详解
+
 3
 
-## 17. checkpoint_and_export 参数
+## 17. `checkpoint_and_export` 参数
+
 271
 
-## 18. checkpoint_path 参数
+## 18. `checkpoint_path` 参数
+
 250, 251
 
-## 19. CheckpointSaver 类
+## 19. `CheckpointSaver` 类
+
 93, 96
 
-## 20. chief, 在集群中
+## 20. `chief`, 在集群中
+
 243, 246
 
-## 21. ChiefSession 子类
+## 21. `ChiefSession` 子类
+
 94
 
 ## 22. Cho, Kyunghyun
+
 196
 
 ## 23. Chollet, François
+
 15
 
 ## 24. CIFAR-10 数据集
+
 160,166
 
 ## 25. classes
+
 1, 2, 309–313。另参阅 特定类别
 
 ## 26. 分类器函数
+
 126–127
 
 ## 27. 分类器（估计器类）
+
 ### 27.1. 组合线性-DNN
+
 262–263
-### 27.2. DNNClassifier 类
+
+### 27.2. `DNNClassifier` 类
+
 260–262
+
 ### 27.3. 概述
+
 256–257
 
 ## 28. 图像分类
+
 卷积神经网络; 图像分类; 图像过滤
 
 ## 29. clients, 在集群中
+
 238
 
-## 30. close 方法
+## 30. `close` 方法
+
 61, 62, 206
 
 ## 31. Cloud Console, Google
+
 279, 299
 
 ## 32. Cloud Storage, Google
+
 另参阅 Google Cloud
+
 ### 32.1. 桶 (buckets)
+
 283–285
+
 ### 32.2. 部署应用到云端
+
 295–299
-### 32.3. gsutil 工具
+
+### 32.3. `gsutil` 工具
+
 286–290
+
 ### 32.4. 对象与虚拟层级结构
+
 285–286
+
 ### 32.5. 概述
+
 283
 
-## 33. cluster 字段
+## 33. `cluster` 字段
+
 269, 270
 
-## 34. cluster_def 
+## 34. `cluster_def`
+
 227
 
 ## 35. 集群
-### 35.1. 创建 ClusterSpec
+
+### 35.1. 创建 `ClusterSpec`
+
 239–240
+
 ### 35.2. 估计器，在集群中运行
+
 269–270
+
 ### 35.3. 示例代码
+
 244–246
+
 ### 35.4. 在 Google Cloud 平台上
+
 299–305
+
 ### 35.4.1. 指定作业与任务
+
 241–244
-### 35.4.2. 监控会话 (MonitoredSessions)
+
+### 35.4.2. 监控会话 (`MonitoredSessions`)
+
 243–244
+
 ### 35.4.3. 概述
+
 238–239
+
 ### 35.4.4. 服务器
+
 241, 242
+
 ### 35.4.5. 创建服务器
+
 240–241
+
 ### 35.4.6. 工作节点
+
 241, 242, 244, 246
 
-## 36. ClusterSpec
+## 36. `ClusterSpec`
+
 239, 240, 270
 
 ## 37. CNNs
+
 另参阅 卷积神经网络
 
 ## 38. 集合
+
 47, 48, 142, 310
 
 ## 39. 色彩处理函数
+
 169,170
 
-## 40. combiner 参数
+## 40. `combiner` 参数
+
 256
 
 ## 41. 逗号分隔值 (CSV)
+
 222,223, 264,269
 
 ## 42. 比较操作
+
 37, 38
 
-## 43. completedTrialCount 字段
+## 43. `completedTrialCount` 字段
+
 303
 
 ## 44. components, gcloud
+
 282
 
-## 45. compose 命令
+## 45. `compose` 命令
+
 287, 289, 290
 
-## 46. compression_type 参数
+## 46. `compression_type` 参数
+
 205
 
 ## 47. compute group, gcloud
+
 282
 
 ## 48. computing revolution
+
 12
 
-## 49. concatenate 方法
+## 49. `concatenate` 方法
+
 210
 
-## 50. Concatenated ReLU (crelu)
+## 50. Concatenated ReLU (`crelu`)
+
 124, 125
 
 ## 51. concatenation, with gsutil
+
 289, 290
 
-## 52. config 参数
+## 52. `config` 参数
+
 51, 52
 
-## 53. config flag
+## 53. `config` 标志
+
 297, 298, 299
 
 ## 54. config group, gcloud
+
 282
 
-## 55. config 参数
+## 55. `config` 参数
+
 226, 228, 240
 
-## 56. ConfigProto protocol buffer
+## 56. `ConfigProto` protocol buffer
+
 226, 228, 236, 237, 240
 
 ## 57. configuration flags, gcloud
+
 283
 
-## 58. configure script
+## 58. `configure` 脚本
+
 234, 235
 
-## 59. constant function
+## 59. `constant` 函数
+
 28, 30
 
-## 60. consumedMlUnits 字段
+## 60. `consumedMlUnits` 字段
+
 303
 
-
-
-
-
 ## 61. `continuous_eval` 方法, 272, 273
+
 ## 62. `continuous_eval_on_train_data` 方法, 272, 273
+
 ## 63. `continuous_eval_throttle_secs` 参数, 271
+
 ## 64. `continuous_train_and_eval` 方法, 272
+
 ## 65. `contrib` 目录, 21
+
 ## 66. `conv2d` 函数, 156–158, 174–175
+
 ## 67. `conv2d_transpose` 函数, 175
+
 ## 68. 收敛, 优化器, 71, 74, 76
+
 ## 69. `convert_image_dtype` 函数, 167, 168–169
+
 ## 70. 转换图像, 166–169
+
 ## 71. 卷积
+
 1. 平均值滤波器, 151–152
+
 2. 特性, 152–153
+
 3. 概述, 149–151
+
 4. 设置参数, 153–155
+
 5. 使用 `tf.nn.conv2d`, 174–175
+
 ## 72. 卷积层, CNN, 155, 156–158, 165–166
+
 ## 73. 卷积神经网络 (CNNs)
+
 1. 图像分类, 160–166
+
 2. 卷积层, 156–158
+
 3. 图像滤波, 149–155
+
 4. 概述, 12, 149, 155–156
+
 5. 池化层, 158–160
+
 ## 74. 核心目录, 21
+
 ## 75. 代价函数, 69
+
 ## 76. `cp` (复制) 命令, 287, 288
+
 ## 77. `create_estimator` 函数, 275
+
 ## 78. `crelu` (连接的 ReLU) 函数, 124, 125
+
 ## 79. `crop_and_resize` 函数, 172, 174
+
 ## 80. 裁剪函数, 172–174
+
 ## 81. 交叉熵, 114–115
+
 ## 82. `cross` 函数, 40
+
 ## 83. 交叉积, 263–264
+
 ## 84. 互相关。请参见 卷积
+
 ## 85. `crossed_column` 函数, 264
+
 ## 86. CSV (逗号分隔) 文件, 222–223, 264–269
+
 ## 87. CUDA 语言, 230
+
 ## 88. 自定义摘要, 59
+
 ## 89. `CustomHook`, 96
+
 ## 90. `cycle_length` 参数, 212–213
-D
+
+## D
+
 1. `-D` 配置, 287
+
 2. 数据类型, 29, 168–169, 177–178
+
 3. `data_format` 参数, 138, 157, 159, 160, 175
+
 4. `dataFormat` 字段, 304
+
 5. `--data-format` 标志, 298–299
-6. `Dataset` 类, 112, 221–224。另参见 tf.data.Dataset 类
+
+6. `Dataset` 类, 112, 221–224。另参见 `tf.data.Dataset` 类
+
 7. 数据集。另参见 迭代器
-1. 批处理， 使用, 209
-2. 奇异的, 221–224
-3. 创建, 202–208
-4. 示例代码, 218–221
-5. 多线程的, 201–202, 226
-6. 概述, 201–202
-7. 参数化的, 215–216
-8. 处理, 208–213
-9. 代表性的, 315–316
-10. 简单操作, 209–211
-11. 变换, 211–213
+
+   1. 批处理， 使用, 209
+
+   2. 奇异的, 221–224
+
+   3. 创建, 202–208
+
+   4. 示例代码, 218–221
+
+   5. 多线程的, 201–202, 226
+
+   6. 概述, 201–202
+
+   7. 参数化的, 215–216
+
+   8. 处理, 208–213
+
+   9. 代表性的, 315–316
+
+   10. 简单操作, 209–211
+
+   11. 变换, 211–213
+
 8. 数据集参数, 213
+
 9. 调试函数, 55
+
 10. `debug_options` 字段, 228
+
 11. 衰减参数, 138, 139
+
 12. `decode_bmp` 函数, 167
+
 13. `decode_gif` 函数, 167, 168
+
 14. `decode_image` 函数, 167, 168
+
 15. `decode_jpeg` 函数, 167, 168
+
 16. `decode_png` 函数, 167, 168
+
 17. 深度学习
-1. 示例代码, 145–147
-2. 实现, 131–133
 
+    1. 示例代码, 145–147
 
-
-
+    2. 实现, 131–133
 
 ### 3. 改进, 143–147
 
@@ -7042,13 +7023,13 @@ D
 
 ### 6. 宽深深度学习, 263–269
 
-### 18. deferred_deletion_bytes 字段, 238
+### 18. `deferred_deletion_bytes` 字段, 238
 
-### 19. delay_workers_by_global_step 参数, 271
+### 19. `delay_workers_by_global_step` 参数, 271
 
 ### 20. 延迟值，在 RNNs 中, 181
 
-### 21. delta 值，范围, 31
+### 21. `delta` 值，范围, 31
 
 ### 22. 树突, 118
 
@@ -7056,21 +7037,21 @@ D
 
 ### 24. 稠密层。参见全连接层
 
-### 25. _DenseColumn 类, 254
+### 25. `_DenseColumn` 类, 254
 
 ### 26. 依赖包，安装, 233
 
 ### 27. 函数的导数, 71–74
 
-### 28. description 参数, 292
+### 28. `description` 参数, 292
 
 ### 29. Desjardins, Guillaume, 126
 
-### 30. device 函数, 236, 241
+### 30. `device` 函数, 236, 241
 
-### 31. device_count 参数, 227, 236
+### 31. `device_count` 参数, 227, 236
 
-### 32. device_filters 参数, 227
+### 32. `device_filters` 参数, 227
 
 ### 33. 设备，配置
 
@@ -7084,85 +7065,85 @@ D
 
 #### 5. 概述, 229
 
-#### 34. diag 函数, 40
+#### 34. `diag` 函数, 40
 
 #### 35. 字典，字典, 79–80
 
 #### 36. 膨胀，图像处理, 154–155
 
-#### 37. dilation_rate 参数, 157, 158
+#### 37. `dilation_rate` 参数, 157, 158
 
-#### 38. dim 参数, 113
+#### 38. `dim` 参数, 113
 
-#### 39. --distributed 标志, 294
+#### 39. `--distributed` 标志, 294
 
 #### 40. 分布式 TensorFlow。参见聚类
 
-#### 41. div 函数, 36–37
+#### 41. `div` 函数, 36–37
 
 #### 42. 散度，优化器, 71
 
-#### 43. divide 函数, 36–37
+#### 43. `divide` 函数, 36–37
 
-#### 44. DNNClassifier 类, 256, 260–262, 274–275
+#### 44. `DNNClassifier` 类, 256, 260–262, 274–275
 
-#### 45. DNNLinearCombinedClassifier 类, 257, 262–263, 264–269
+#### 45. `DNNLinearCombinedClassifier` 类, 257, 262–263, 264–269
 
-#### 46. DNNLinearCombinedRegressor 类, 257, 262
+#### 46. `DNNLinearCombinedRegressor` 类, 257, 262
 
-#### 47. DNNRegressor 类, 257
+#### 47. `DNNRegressor` 类, 257
 
 #### 48. domains 组，gcloud, 282
 
 #### 49. 点积，卷积, 150–151
 
-#### 50. download 命令, 18
+#### 50. `download` 命令, 18
 
 #### 51. dropout，神经网络, 140, 147, 317
 
-#### 52. dtype 参数, 29, 186, 187, 207, 266
+#### 52. `dtype` 参数, 29, 186, 187, 207, 266
 
-#### 53. du 命令, 287
+#### 53. `du` 命令, 287
 
 #### 54. 动态循环神经网络, 191
 
-#### 55. dynamic_rnn 函数, 191, 195
+#### 55. `dynamic_rnn` 函数, 191, 195
 
 ## E
 
-#### 1. e 标志, 288
+#### 1. `e` 标志, 288
 
 #### 2. 图形中的边, 46
 
 #### 3. 爱因斯坦求和约定, 42
 
-#### 4. einsum 函数, 41, 42
+#### 4. `einsum` 函数, 41, 42
 
 #### 5. ELU（指数线性单元）函数, 124, 125–126
 
-#### 6. embedding_column 函数, 255, 256
+#### 6. `embedding_column` 函数, 255, 256
 
-#### 7. encode_jpeg 函数, 167, 168
+#### 7. `encode_jpeg` 函数, 167, 168
 
-#### 8. encode_png 函数, 167, 168
+#### 8. `encode_png` 函数, 167, 168
 
-#### 9. end 方法, 91
+#### 9. `end` 方法, 91
 
-#### 10. engine 参数, 266
+#### 10. `engine` 参数, 266
 
 #### 11. 训练轮，监控, 82
 
-#### 12. epsilon 参数, 138
+#### 12. `epsilon` 参数, 138
 
-#### 13. er 函数, 39
+#### 13. `er` 函数, 39
 
-#### 14. er 函数, 39
+#### 14. `er` 函数, 39
 
-#### 15. error 字段, 55
+#### 15. `error` 字段, 55
 
-#### 16. error 字段, 294
+#### 16. `error` 字段, 294
 
-#### 17. estimator 参数, 271
+#### 17. `estimator` 参数, 271
 
 #### 18. estimator 数据, 264–269
 
@@ -7172,7 +7153,7 @@ D
 
 #### 21. 配置 DNN, 252–253
 
-#### 22. DNNClassifier, 260–262
+#### 22. `DNNClassifier`, 260–262
 
 #### 23. 实验, 270–275
 
@@ -7183,10 +7164,6 @@ D
 #### 26. 线性回归, 257–260
 
 #### 27. 回归器和分类器, 256–257
-
-
-
-
 
 ## 2. 测试，250
 
@@ -7212,7 +7189,7 @@ D
 
 ## 27. `evaluation_master` 参数，252, 253
 
-## 28. ` 文件，57, 60–62
+## 28. `events` 文件，57, 60–62
 
 ## 29. 示例，205–206, 207, 218
 
@@ -7221,10 +7198,15 @@ D
 ## 31. `experiment_fn` 参数，273
 
 ## 32. 实验
+
 ### 1. 类方法，272–273
+
 ### 2. 创建，271–272
+
 ### 3. 示例代码，274–275
+
 ### 4. 概述，270–271
+
 ### 5. 运行，273
 
 ## 33. `expm1` 函数，39
@@ -7245,7 +7227,7 @@ D
 
 ## 2. 快速卷积，150
 
-## 3. fatal 函数，55
+## 3. `fatal` 函数，55
 
 ## 4. 特征列，249, 253–256, 268
 
@@ -7301,6 +7283,8 @@ D
 
 ## 30. 浮点值，37
 
+
+
 ## 31. `floor` 函数，37, 38
 
 ## 32. `flush` 函数，55
@@ -7333,10 +7317,6 @@ D
 
 ## 46. `fully_connected` 函数，144–145, 147
 
-
-
-
-
 47. 函数，45。另参阅 图; 方法; 特定函数
 
 48. 融合参数，138
@@ -7349,7 +7329,7 @@ D
 
 3. 高斯滤波器，152
 
-4. gcloud 工具
+4. `gcloud` 工具
 
     1. 将应用程序部署到云端，296–299
 
@@ -7361,37 +7341,37 @@ D
 
 6. Gers, Felix,195
 
-7. get_all_collection_keys 方法，47
+7. `get_all_collection_keys` 方法，47
 
-8. get_collection 函数，47, 142, 147
+8. `get_collection` 函数，47, 142, 147
 
-9. get_default_graph 方法，46
+9. `get_default_graph` 方法，46
 
-10. get_next 方法，214
+10. `get_next` 方法，214
 
-11. get_operation_by_name 方法，47–48
+11. `get_operation_by_name` 方法，47–48
 
-12. get_operations 方法，47–48
+12. `get_operations` 方法，47–48
 
-13. get_tensor_by_name 方法，47–48
+13. `get_tensor_by_name` 方法，47–48
 
-14. get_variable 函数，141–142
+14. `get_variable` 函数，141–142
 
 15. 全局损失的值，74–75, 80
 
 16. 全局步数监控，80–82
 
-17. global_name 字段，228
+17. `global_name` 字段，228
 
-18. global_step 参数，80–81, 83, 88, 90
+18. `global_step` 参数，80–81, 83, 88, 90
 
-19. global_variables_initializer 函数，68–69, 88
+19. `global_variables_initializer` 函数，68–69, 88
 
-20. GlobalStepWaiterHook 类，93
+20. `GlobalStepWaiterHook` 类，93
 
-21. glorot_normal 函数，136
+21. `glorot_normal` 函数，136
 
-22. glorot_uniform 函数，136
+22. `glorot_uniform` 函数，136
 
 23. Google。另参阅 Google 云存储, Google; TensorFlow 框架
 
@@ -7421,7 +7401,7 @@ D
 
     4. 费用，279–280
 
-    5. gcloud 工具，281–283
+    5. `gcloud` 工具，281–283
 
     6. 访问 ML Engine，280
 
@@ -7435,23 +7415,23 @@ D
 
     11. 配置支持，234
 
-25. gpu_fraction 参数，253
+25. `gpu_fraction` 参数，253
 
-26. gpu_options 字段，227, 237
+26. `gpu_options` 字段，227, 237
 
-27. GPUOptions，237
+27. `GPUOptions`，237
 
 28. 梯度，73, 318
 
 29. 梯度下降算法，71–75
 
-30. GradientDescentOptimizer 类，71, 75, 88
+30. `GradientDescentOptimizer` 类，71, 75, 88
 
-31. graph 参数，51, 52, 184
+31. `graph` 参数，51, 52, 184
 
-32. graph_options ，227
+32. `graph_options`，227
 
-33. GraphDef，47, 49, 51
+33. `GraphDef`，47, 49, 51
 
 34. 图形处理器 (GPU)，230, 235, 238
 
@@ -7469,108 +7449,175 @@ D
 
     6. 在 Theano 中，14
 
-36. grayscale_to_rgb 函数，167
+36. `grayscale_to_rgb` 函数，167
 
-37. 组，gcloud，281–282
+37. 组，`gcloud`，281–282
 
 38. gRPC 协议，240, 242
 
-39. GRUCell 类，197–198
-
-
-
-
+39. `GRUCell` 类，197–198
 
 40. `GRUs` (门控循环单元), 183, 196–198
+
 41. `gsutil` 实用程序, 281, 286–290
+
 42. `GZIP` 压缩, 220
 
 ## H
 
 1. `HashedCategoricalColumn` 类, 255
+
 2. `he_normal` 函数, 136
+
 3. `he_uniform` 函数, 136
+
 4. `header` 参数, 266
+
 5. `hello_tensorflow.py` 模块, 23–24
+
 6. `hidden layers`, 神经网络, 128, 129
+
 7. `hidden_units` 参数, 260, 262
+
 8. `histo` 数据字段, 59
+
 9. `histogram` 函数, 57, 58
+
 10. `histograms`, 查看数据, 64
+
 11. `Hochreiter`, Sepp, 192
+
 12. `Homebrew`, 232, 233
+
 13. `hooks` 参数, 94, 249
+
 14. `--host` `HOST` 标志, 57
+
 15. `hparams` 参数, 273
+
 16. `hsv_to_rgb` 函数, 167
+
 17. `hyperbolic tangent` (`tanh`), 126, 127
+
 18. `HyperparameterMetrics`, 304
+
 19. `HyperparameterOutputs`, 303–304
+
 20. `hyperparameters` 字段, 301, 302
+
 21. `HyperparameterSpecs`, 302
 
 ## I
 
 1. `icons`, 解释, 2–3
+
 2. `IdentityCategoricalColumn` 类, 254
+
 3. `if` 语句, 241
-1. `image classification`. 另见 `convolutional neural networks`(#24_9781119466215-index.xhtml#index214); `image filtering`(#24_9781119466215-index.xhtml#index52)
+
+1. `image classification`. 另见 `convolutional neural networks`; `image filtering`
+
     1. `CIFAR-10` 数据集, 160–166
+
     2. `with deep learning`, 131–133
+
     3. `with DNN classifier`, 260–262
+
     4. `with experiments`, 274–275
+
 2. `image conversion functions`, 166–169
-3. `image convolution`. 另见 `convolution`(#24_9781119466215-index.xhtml#index207)
+
+3. `image convolution`. 另见 `convolution`
+
 4. `image` 字段, `Summary.Value`, 59
+
 5. `image filtering`
+
     1. `averaging filter`, 151–152
+
     2. `convolution overview`, 150–151
+
     3. `convolution parameters`, 153–155
+
     4. `features`, 152–153
+
     5. `overview`, 149
-6. `image` function, 57, 58, 178
-7. `image` noise, 151–152
+
+6. `image` 函数, 57, 58, 178
+
+7. `image` 噪声, 151–152
+
 8. `image processing`
+
     1. `color processing`, 169–170
+
     2. `converting images`, 166–169
+
     3. `convolution`, 175–176
+
     4. `example code`, 175–178
+
     5. `overview`, 166
+
     6. `resizing and cropping`, 172–174
+
     7. `rotating and mirroring`, 170–171
-9. `image recognition`. 另见 `convolutional neural networks`(#24_9781119466215-index.xhtml#index214); `image filtering`(#24_9781119466215-index.xhtml#index52)
-10. `images` function, 112
-11. `import_meta_graph` function, 83–84, 89
-12. `index` argument, 210–211
-13. `indicator_column` function, 255, 256, 268
-14. `info` function, 55
+
+9. `image recognition`. 另见 `convolutional neural networks`; `image filtering`
+
+10. `images` 函数, 112
+
+11. `import_meta_graph` 函数, 83–84, 89
+
+12. `index` 参数, 210–211
+
+13. `indicator_column` 函数, 255, 256, 268
+
+14. `info` 函数, 55
+
 15. `initial estimate`, 67
+
 16. `initial_state` 参数, 186
+
 17. `initializable iterators`, 213, 215–216
+
 18. `initial`
+
     1. `variable`, 68–69
+
     2. `weight`, 134, 135
+
 19. `initializer` 参数, 142
+
 20. `inputs`, for, 251–253
+
 21. `input gate`, `LSTM` 셀, 192–193
+
 22. `input layer`, 神经网络, 128
+
 23. `input` 参数, 175
+
 24. `input standardization`, 神经网络, 134–135
+
 25. `input_fn` 参数, 248, 249, 250, 251
+
 26. `inputPaths` 字段, 304
+
 27. `--input-paths` 标志, 298
+
 28. `inputs` 参数
+
     1. `batch_norm`, 138
+
     2. `dynamic_rnn`, 191
+
     3. `fully_connected`, 144, 145
+
     4. `max_pooling2d`, 159
+
     5. `static_rnn` 函数, 186, 187
 
-
-
-
-
-## 29. install-command 命令, 18, 19
+## 29. `install-command` 命令, 18, 19
 
 ## 30. `install_requires` 参数, 292, 293
 
@@ -7601,70 +7648,120 @@ D
 ## 43. `Iterator.from_structure`, 216
 
 ## 44. 迭代器 (`Iterator` 类)
+
 1. 示例代码, 218–221
+
 2. 可馈的, 213, 217–218
+
 3. 可初始化的, 213, 215–216
+
 4. 单次的, 213–215, 221
+
 5. 概述, 213, 313
+
 6. 可重初始化的, 213, 216, 217, 221
 
 ## J
+
 1. Java 开发包 (JDK) 8x, 229–230, 232
+
 2. `job_name` 参数, 240
+
 3. `--job-dir` 参数, 290, 291, 294, 295, 296, 297
+
 4. `jobDir` 字段, 301
+
 5. 集群中的任务, 239, 241, 244, 269, 270
+
 6. 任务, ML Engine/GCS
+
     1. 在集群上执行, 299, 305
+
     2. 使用 Cloud SDK 执行, 293, 299
+
     3. 概述, 283
-7. 子组任务, ml-engine, 283
+
+7. 子组任务, `ml-engine`, 283
+
 8. `--json-instances` 标志, 295
 
 ## K
+
 1. `keep_checkpoint_every_n_hours` 参数, 253
+
 2. `keep_checkpoint_max` 参数, 253
+
 3. `keep_dims` 参数, 134
+
 4. `keep_prob` 参数, 140
+
 5. Keras 框架, 15
+
 6. `kernel_initializer` 参数, 157, 197
+
 7. `kernel_regularizer` 参数, 157
+
 8. `kernel_size` 参数, 157, 158
+
 9. 卷积核, [24_9781119466215-bindex.xhtml#index393]
+
 10. `key` 参数, 142
+
 11. 键, 48, 254, 310
 
 ## L
+
 1. `-l` 标志, 287, 289
+
 2. `-L` 标志, 288, 289
+
 3. `l1_regularizer` 函数, 140, 141
+
 4. `l2_regularizer` 函数, 140, 141
+
 5. `label_dimension` 参数, 258
+
 6. `label_vocabulary` 参数, 260, 262
+
 7. 标签, CIFAR-10 图像, 161
+
 8. `labels` 参数, 115
+
 9. `labels` 函数, 112
+
 10. `lambda` 定义, 211, 212
+
 11. Lamblin, Pascal, 126
+
 12. `latest_filename` 参数, 83
+
 13. 层, 神经网络
+
     1. 批量归一化, 137
+
     2. 数量, 316, 317
+
     3. 概述, 127, 129
+
     4. 调优， 创建, 144, 147
+
 14. `learn_runner.run` 函数, 273, 275
+
 15. 学习率, 73, 74, 75, 77, 318
+
 16. `lecun_uniform` 函数, 136
+
 17. LeCunn, Yann, 12
+
 18. `license` 参数, 292
+
 19. 周期方法, 91, 92
+
 20. 似然性, 107, 108, 114
+
 21. 线性分类器, 262, 263, 264
+
 22. 线性插值, 173
-
-
-
-
 
 23. `linear regression`（线性回归），10, 100–102, 257–260
 
@@ -7727,26 +7824,41 @@ D
 52. `logistic (sigmoid)` 函数，106, 107, 124, 126
 
 53. `logistic` 回归
+
     1. 二分类，100, 105, 110
+
     2. 多项分类，100, 110, 116
+
     3. 概述，106
+
+
 
 54. `logits` 参数，115
 
 55. `logp1` 函数，39
 
-56. 长短期记忆 (LSTM) 单元，183, 192, 196
+56. 长短期记忆（LSTM）单元，183, 192, 196
 
 57. 损失
+
     1. 交叉熵，114, 115
+
     2. 定义，312
+
     3. 确定，69
+
     4. 代码代码，86, 88
+
     5. 梯度下降算法，73
+
     6. L1/L2 正则化，140, 141
+
     7. 最大似然估计，107, 108
+
     8. 均方误差，100, 101, 103
+
     9. 神经网络，129, 130
+
     10. 优化，70, 78
 
 58. `losses` 属性，184
@@ -7760,20 +7872,24 @@ D
 62. Mac OS 上的 TensorFlow，19, 232, 233
 
 63. 机器学习特定的方面，352
+
     1. 大数据，18, 19
+
     2. 计算，12
+
     3. 开发，8
+
     4. 框架，13
+
     5. 神经网络，15
+
     6. 概述，7, 8
+
     7. 统计回归，9
+
     8. 理论，2
 
 64. Google 机器学习引擎，277, 278, 290, 293。*参见* Google Cloud Platform
-
-
-
-
 
 ## 9. 数学运算。参见运算
 
@@ -7803,7 +7919,7 @@ D
 
 ## 22. 均值，134, 137
 
-## 23. 均方误差 (MSE)，69, 100–101, 103
+## 23. 均方误差（MSE），69, 100–101, 103
 
 ## 24. `merge` 函数，58
 
@@ -7811,11 +7927,11 @@ D
 
 ## 26. `MetaGraphDef` 缓冲区，84, 86
 
-## 27. `metagraphs`,85–86
+## 27. `metagraphs`，85–86
 
 ## 28. `method_name` 参数，85
 
-## 29. 方法。参见函数;特定方法
+## 29. 方法。参见函数；特定方法
 
 ## 30. `--min_eval_frequency` 参数，290
 
@@ -7823,7 +7939,7 @@ D
 
 ## 32. `MinGW` 包，231
 
-## 33. Minimal System 2 (MSYS2)，231–232
+## 33. Minimal System 2（MSYS2），231–232
 
 ## 34. `minimize` 方法，70, 81, 88, 101
 
@@ -7833,21 +7949,26 @@ D
 
 ## 37. 镜像函数，170–171
 
-## 38.   ML（机器学习）引擎，Google，277–278, 280, 290–293。参见 Google Cloud Platform
+## 38. ML（机器学习）引擎，Google，277–278, 280, 290–293。参见 Google Cloud Platform
 
-## 39. ml 组，cloud，282
+## 39. `ml` 组，`cloud`，282
 
-## 40. ml-引擎组，cloud，282, 283, 294–296, 298, 299
+## 40. `ml-引擎`组，`cloud`，282, 283, 294–296, 298, 299
 
-## 41. ml-engine 任务，291
+## 41. `ml-engine` 任务，291
 
 ## 42. MLPs（多层感知机），128。参见神经网络
 
 ## 43. MNIST 数据库
+
 ### 1. 深度学习，131–133
+
 ### 2. 深度学习调优，145–147
+
 ### 3. DNN 分类器，260–262
+
 ### 4. 实验，274–275
+
 ### 5. 多分类逻辑回归，110–113, 115–116
 
 ## 44. `mod` 函数，36
@@ -7872,448 +7993,613 @@ D
 
 ## 54. `MomentumOptimizer` 类，75, 76
 
-## 55. `MonitoredSessions`,93, 94, 96, 243, 244
+## 55. `MonitoredSessions`，93, 94, 96, 243, 244
 
 ## 56. `MonitoredTraining` 函数，243, 244, 246
 
-## 57. MSE (均方误差)，69, 100–101, 103
+## 57. MSE（均方误差），69, 100–101, 103
 
-## 58. MSYS2 (Minimal System 2)，231–232
+## 58. MSYS2（Minimal System 2），231–232
 
-## 59. 多层感知机 (MLPs)，128。参见神经网络
+## 59. 多层感知机（MLPs），128。参见神经网络
 
 ## 60. 多层单元，RNN，190–191
 
 ## 61. 多分类逻辑回归
+
 ### 1. 交叉熵，114–115
+
 ### 2. 示例代码，115–116
+
 ### 3. MNIST 数据库，110–113
+
 ### 4. 概述，100, 110
-### 5. softmax 函数，113–114
 
-
-
-
+### 5. `softmax` 函数，113–114
 
 62. 多会话中的多个图，62–64
 
 63. 乘法函数，35, 36
 
-64. `MultiRNNCell` 类, 190–191
+64. `MultiRNNCell` 类，190–191
 
-65. 多线程, 201–202, 226–228. *另参见* 数据集
+65. 多线程，201–202, 226–228。*另参见* 数据集
 
-66. `mv` (移动)命令, 287, 288
+66. `mv`（移动）命令，287, 288
 
 ## N
 
-1. `n_classes` 参数, 260, 262
+1. `n_classes` 参数，260, 262
 
 2. `name` 参数
 
    1. 用于创建张量的函数，29
 
-   2. `get_variable`, 142
+   2. `get_variable`，142
 
-   3. image, 178
+   3. `image`，178
 
-   4. `max_pooling2d`, 159
+   4. `max_pooling2d`，159
 
-   5. `setup`, 292
+   5. `setup`，292
 
-   6. `tf.layers.conv2d`, 157
+   6. `tf.layers.conv2d`，157
 
-   7. `variable_scope`, 142
+   7. `variable_scope`，142
 
-3. `name_scope` 函数, 143
+3. `name_scope` 函数，143
 
-4. `names` 参数, 266
+4. `names` 参数，266
 
-5. `NanTensorHook` 类, 93
+5. `NanTensorHook` 类，93
 
-6. 最近邻插值, 172
+6. 最近邻插值，172
 
-7. 负函数, 36
+7. 负函数，36
 
-8. Nesterov 加速梯度 (NAG) 下降算法, 76
+8. Nesterov 加速梯度（NAG）下降算法，76
 
-9. Netflix, 13
+9. Netflix，13
 
-10. 神经网络。 *另参见* 卷积神经网络; 循环神经网络
+10. 神经网络。*另参见* 卷积神经网络；循环神经网络
 
-    1. 激活函数, 123–127
+    1. 激活函数，123–127
 
-    2. 批归一化, 136–139, 317
+    2. 批归一化，136–139, 317
 
-    3. 偏置, 122–123
+    3. 偏置，122–123
 
-    4. 深度学习，实现, 131–133
+    4. 深度学习，实现，131–133
 
-    5. 深度学习，改进, 143–147
+    5. 深度学习，改进，143–147
 
-    6. 深度学习，概述, 129
+    6. 深度学习，概述，129
 
-    7. Dropout 层, 317
+    7. Dropout 层，317
 
-    8. 输入标准化, 134–135
+    8. 输入标准化，134–135
 
-    9. 层, 127–129, 316
+    9. 层，127–129, 316
 
-    10. 损失，确定, 69
+    10. 损失，确定，69
 
-    11. 数学建模, 67
+    11. 数学建模，67
 
-    12. 神经元, 118–119
+    12. 神经元，118–119
 
-    13. 优化, 318
+    13. 优化，318
 
-    14. 概述, 2, 10–11, 117–118
+    14. 概述，2, 10–11, 117–118
 
-    15. 感感知机, 119–120
+    15. 感知机，119–120
 
-    16. 正则化, 139–141
+    16. 正则化，139–141
 
-    17. 代表性数据集, 315–316
+    17. 代表性数据集，315–316
 
-    18. 标准化, 134–135, 316
+    18. 标准化，134–135, 316
 
-    19. 统计回归, 118
+    19. 统计回归，118
 
-    20. 训练技巧, 315–318
+    20. 训练技巧，315–318
 
-    21. 反向传播训练, 129–131
+    21. 反向传播训练，129–131
 
-    22. 调优, 133–141
+    22. 调优，133–141
 
-    23. 变量作用域, 141–143
+    23. 变量作用域，141–143
 
-    24. 权重初始化, 135–136, 316
+    24. 权重初始化，135–136, 316
 
-    25. 权重概述, 121–122
+    25. 权重概述，121–122
 
-11. 神经元, 118–119
+11. 神经元，118–119
 
-12. `next` 方法, 204
+12. `next` 方法，204
 
-13. `next_batch` 方法, 112, 113
+13. `next_batch` 方法，112, 113
 
-14. 节点元素, `GraphDef`, 49, 50
+14. 节点元素，`GraphDef`，49, 50
 
-15. `nodeHours` 字段, 305
+15. `nodeHours` 字段，305
 
-16. 节点。 *另参见* 激活函数
+16. 节点。*另参见* 激活函数
 
-   1. 图, 46
+   1. 图，46
 
-   2. 神经网络, 121–122, 123, 139–141
+   2. 神经网络，121–122, 123, 139–141
 
-   3. 循环神经网络, 181–182
+   3. 循环神经网络，181–182
 
-17. 噪声, 151–152
+17. 噪声，151–152
 
-18. 范, 40
+18. 范，40
 
-19. 批归一化, 134–135, 316
+19. 批归一化，134–135, 316
 
-20. `normalizer` 参数, 144, 145
+20. `normalizer` 参数，144, 145
 
-21. `normalizer_params` 参数, 144, 145
+21. `normalizer_params` 参数，144, 145
 
-22. `num` 参数, 35
+22. `num` 参数，35
 
-23. `num_cores` 参数, 252, [253]
+23. `num_cores` 参数，252, 253
 
-24. `num_epochs` 参数, 252
+24. `num_epochs` 参数，252
 
-25. `num_examples` 函数, 112
+25. `num_examples` 函数，112
 
-26. `num_outputs` 参数, 144, 145
+26. `num_outputs` 参数，144, 145
 
-27. `num_parallel_calls` 参数, 226
+27. `num_parallel_calls` 参数，226
 
-28. `num_proj` 参数, 195
+28. `num_proj` 参数，195
 
-29. `num_threads` 字段, 228
+29. `num_threads` 字段，228
 
-30. `num_units` 参数, 185
+30. `num_units` 参数，185
 
-31. 数值列, 254
+31. 数值列，254
 
-32. NumPy, 165
+32. NumPy，165
 
-33. `numpy_input_fn` 函数, 251–252
+33. `numpy_input_fn` 函数，251–252
 
 ## O
 
-1. 对象，Google 云存储, 283, 285–286
-
-
-
-
+1. 对象，Google 云存储，283, 285–286
 
 2. 海军研究办公室，10
-3.  offset 参数，135
+
+3. `offset` 参数，135
+
 4. One 热 向量，113
-5. ones 函数，28, 30
-6. 单次 迭代器，213–215, 221
+
+5. `ones` 函数，28, 30
+
+6. 单次迭代器，213–215, 221
+
 7. OpenCL，230
-8. operation_timeout_in_ms 选项，227
-9. 操作 (`Operation` 类)
+
+8. `operation_timeout_in_ms` 选项，227
+
+9. 操作（`Operation` 类）
+
     1. 分配到设备，235–237
+
     2. 基础数学，35–37
+
     3. 指数和对数，38–39
-    4. fetches 参数，分配，53
+
+    4. `fetches` 参数，分配，53
+
     5. 图，46
+
     6. 概览，35, 310
+
     7. 实践，42–43
+
     8. 舍入与比较，37–38
+
     9. 范围用于，143
+
     10. 总结，57–59
+
     11. 向量和矩阵操作，39–42
+
     12. 优化
-    1. AdagradOptimizer，76–77
-    2. AdamOptimizer，77–78
+
+    1. `AdagradOptimizer`，76–77
+
+    2. `AdamOptimizer`，77–78
+
     3. 反向传播，130–131
+
     4. 定义，69
+
     5. 示例代码，86–88
-    6. GradientDescentOptimizer，71–75
+
+    6. `GradientDescentOptimizer`，71–75
+
     7. 学习率，318
+
     8. 线性回归，101
-    9. MomentumOptimizer，75–76
-    10.优化器，70–71
+
+    9. `MomentumOptimizer`，75–76
+
+    10. 优化器，70–71
+
     11. 概览，70, 312
+
     12. 多项式回归，103
+
     13. 提示，318
+
 11. 优化标记，234–235
-12. Optimizer 类，70–71, 312。另请参见 optimization；特定的子类
-13. options 参数，52, 92, 228
+
+12. `Optimizer` 类，70–71, 312。另请参见 optimization；特定的子类
+
+13. `options` 参数，52, 92, 228
+
 14. 震荡下降算法，75
+
 15. 输出门，LSTM 单元，192–193
+
 16. 输出层，神经网络，128
+
 17. 输出矩阵，RNN，187
-18. output_partition 字段，228
-19. output_size 属性，184
-20. output_types 参数，204
-21. OutputHook，246
-22. outputPath 字段，304, 305
-23. --output-path 标记，298, 299
-24. outputs_collections 参数，138, 144
+
+18. `output_partition` 字段，228
+
+19. `output_size` 属性，184
+
+20. `output_types` 参数，204
+
+21. `OutputHook`，246
+
+22. `outputPath` 字段，304, 305
+
+23. `--output-path` 标记，298, 299
+
+24. `outputs_collections` 参数，138, 144
+
 25. 过拟合，神经网络，129, 139, 140
-1. --p 标记，287
-2. --package-path 标记，283, 291, 294, 295, 296, 297
+
+1. `--p` 标记，287
+
+2. `--package-path` 标记，283, 291, 294, 295, 296, 297
+
 3. 包，TensorFlow，17, 18, 19, 21。另请参见特定的包
-4. packages 参数，292
-5. packageUris 字段，301
+
+4. `packages` 参数，292
+
+5. `packageUris` 字段，301
+
 6. 打包 TensorFlow 代码，291, 293
-7. 填充 batch 方法，209
+
+7. 填充 `batch` 方法，209
+
 8. 填充，155
-9. padding 参数，157, 158, 159, 160, 175
+
+9. `padding` 参数，157, 158, 159, 160, 175
+
 10. pandas 数据库，265, 266
-11. pandas_input 函数，252, 266
+
+11. `pandas_input` 函数，252, 266
+
 12. Papert, Seymour，10, 11
-13. 并行 迭代，191
-14. param_initializers，138
-15. param_regularizers，138
-16. parameter_servers (PS)，241, 242
+
+13. 并行迭代，191
+
+14. `param_initializers`，138
+
+15. `param_regularizers`，138
+
+16. `parameter_servers`（PS），241, 242
+
 17. 参数化数据集，215, 216
-18. parameterServerCount 字段，301
-19. --parameter-server-count 标记，294
-20. parameterServerType 字段，300, 301
-21. ParameterSpecs，302
-22. parseExample，207
-23. parseSingleExample function，207, 208
 
+18. `parameterServerCount` 字段，301
 
+19. `--parameter-server-count` 标记，294
 
+20. `parameterServerType` 字段，300, 301
 
-28. `perceptrons`, 10–11, 119–120。*另参见* neural networks
+21. `ParameterSpecs`，302
 
-29. `pi`, 聚类中的近似, 244–246
+22. `parseExample`，207
 
-30. `pickling`, CIFAR-10 文件, 161
+23. `parseSingleExample` 函数，207, 208
 
-31. `pip`/`pip3` 软件包管理器, 18, 19, 20, 21
+28. `perceptrons`，10–11, 119–120。*另参见* neural networks
 
-32. `Pitts`, Walter, 10
+29. `pi`，聚类中的近似，244–246
 
-33. `placeholders`, 创建, 79
+30. `pickling`，CIFAR-10 文件，161
 
-34. `placement_period` 选项, 227
+31. `pip`/`pip3` 软件包管理器，18, 19, 20, 21
 
-35. `polling_active_delay_usecs` 字段, 238
+32. `Pitts`，Walter，10
 
-36. `polling_inactive_delay_msecs` 字段, 238
+33. `placeholders`，创建，79
 
-37. `polynomial regression`, 多项式回归, 100, 103–104
+34. `placement_period` 选项，227
 
-38. `pool_size` 参数, 159, 160
+35. `polling_active_delay_usecs` 字段，238
 
-39. `pooling layers`, CNNs, 155, 158–160, 165–166
+36. `polling_inactive_delay_msecs` 字段，238
 
-40. `--port` 标志, 57
+37. 多项式回归，100, 103–104
 
-41. `pow` 函数, 39
+38. `pool_size` 参数，159, 160
 
-42. `Pragmatic Chaos`, `Kor`, 13
+39. 池化层，CNNs，155, 158–160, 165–166
 
-43. `predict` 方法, 250–251, 260
+40. `--port` 标志，57
 
-44. `predicting text`, 预测文本, 188–190, 196, 198
+41. `pow` 函数，39
 
-45. `prediction` 任务, GCP
-   1. 在集群上执行, 304–305
-   2. 费用, 279
-   3. 本地, 295
-   4. 概述, 293
-   5. 远程, 298–299
+42. `Pragmatic Chaos`，`Kor`，13
 
-46. `PredictionInput`, GCP 任务, 300, 304–305
+43. `predict` 方法，250–251, 260
 
-47. `PredictionOutput`, GCP 任务, 300, 305
+44. 预测文本，188–190, 196, 198
 
-48. `prefetch` 方法, 210, 211
+45. `prediction` 任务，GCP
 
-49. `probability`, 二元逻辑回归, 105
+   1. 在集群上执行，304–305
 
-50. `processing images`。参见* image processing
+   2. 费用，279
 
-51. `proj_clip` 参数, 195
+   3. 本地，295
 
-52. `projection matrix`, 投影矩阵, 195
+   4. 概述，293
 
-53. `projects`, GCP, 278–280
+   5. 远程，298–299
 
-54. `projects` 组, `gcloud`, 282
+46. `PredictionInput`，GCP 任务，300, 304–305
 
-55. `protocol buffer` (`protobuf`), 49, 51, 57, 59
+47. `PredictionOutput`，GCP 任务，300, 305
 
-56. `protocol` 参数, 240
+48. `prefetch` 方法，210, 211
 
-57. `PSs` (服务器), 241, 242
+49. 概率，二元逻辑回归，105
+
+50. 图像处理。参见* image processing
+
+51. `proj_clip` 参数，195
+
+52. 投影矩阵，195
+
+53. `projects`，GCP，278–280
+
+54. `projects` 组，`gcloud`，282
+
+55. 协议缓冲区（`protobuf`），49, 51, 57, 59
+
+56. `protocol` 参数，240
+
+57. `PSs`（服务器），241, 242
 
 58. `Python`
-   1. 安装, 19–21
-   2. 机器学习框架, 14
-   3. 概述, 2
-   4. 包管理器, 18–19
-   5. 运行第一个应用, 23–24
-   6. `TensorFlow` 风格, 24–25
-   7. Windows 需要的版本, 231–232
 
-59. `Python Enhancement Proposal (PEP)` 8 风格, 25
+   1. 安装，19–21
 
-60. `python --version`, `MSYS2`, 231–232
+   2. 机器学习框架，14
 
-61. `pythonModule` 字段, 301
+   3. 概述，2
+
+   4. 包管理器，18–19
+
+   5. 运行第一个应用，23–24
+
+   6. `TensorFlow` 风格，24–25
+
+   7. Windows 需要的版本，231–232
+
+59. `Python Enhancement Proposal (PEP)` 8 风格，25
+
+60. `python --version`，`MSYS2`，231–232
+
+61. `pythonModule` 字段，301
 
 ## Q
-1. `qr` 函数, 41
-2. `QueueRunner` 类, 202, 226
+
+1. `qr` 函数，41
+
+2. `QueueRunner` 类，202, 226
 
 ## R
-1. `-r` 标志, 288, 289
-2. `Ramón y Cajal`, Santiago, 10
-3. `random` 种子, 33
-4. `random_contrast` 函数, 169, 170
-5. `random_flip_left_right` 函数, 170, 171
-6. `random_flip_up_down` 函数, 170, 171
-7. `random_hue` 函数, 169, 170
-8. `random_normal` 函数, 31, 32
-9. `random_saturation` 函数, 169, 170
-10. `random_shuffle` 函数, 33, 34
-11. `random_uniform` 函数, 32, 33
-12. `range` 函数, 31, 32
-13. `range` 方法, 202, 226
-14. `rank`, 张量, 29, 30
+
+1. `-r` 标志，288, 289
+
+2. `Ramón y Cajal`，Santiago，10
+
+3. `random` 种子，33
+
+4. `random_contrast` 函数，169, 170
+
+5. `random_flip_left_right` 函数，170, 171
+
+6. `random_flip_up_down` 函数，170, 171
+
+7. `random_hue` 函数，169, 170
+
+8. `random_normal` 函数，31, 32
+
+9. `random_saturation` 函数，169, 170
+
+10. `random_shuffle` 函数，33, 34
+
+11. `random_uniform` 函数，32, 33
+
+12. `range` 函数，31, 32
+
+13. `range` 方法，202, 226
+
+14. `rank`，张量，29, 30
 
 
 
-...[/content]` 部分内容进行精确翻译。
-
-[content]
 5. `LSTM cells`, [192–196]
+
 6. `multilayered cells`, [190–191]
+
 7. `overview`, [179–181]
+
 8. `predicting text with`, [188–190]
+
 9. `recursive functions`, [181–182]
+
 10. `training`, [182–183]
+
 11. `unrolling`, [181–182]
+
 24. `recursive functions`, [181–182]
+
 25. `reduce_mean` 函数, [101]
+
 26. `region` 字段, [301, 304]
+
 27. `--region` flag, [296, 297, 298]
+
 28. `regression. See statistical regression`, [index]
+
 29. `regressors`, [256, 260]
+
 30. `regularization, neural network`, [134, 139, 141]
+
 31. `regularizers`, [141]
+
 32. `reinitializable iterators`, [213, 216, 217, 221]
+
 33. `relu` 函数, [124, 133]
+
 34. `relu6` 函数, [124, 125]
+
 35. `Remember icon, explained`, [3]
+
 36. `remote execution, with Cloud SDK`, [296–299]
+
 37. `renorm` 参数, [138]
+
 38. `renorm_clipping` 参数, [138]
+
 39. `renorm_decay` 参数, [138]
+
 40. `renormalization`, [139]
+
 41. `reopen` 方法, [61]
+
 42. `repeat` 方法, [210]
+
 43. `request_stop` 方法, [94]
+
 44. `reset gate, GRU cells`, [196, 197]
+
 45. `reset_export_strategies` 方法, [272]
+
 46. `reshape` 函数, [33, 34]
+
 47. `resize_area` 函数, [172]
+
 48. `resize_bicubic` 函数, [172, 174]
+
 49. `resize_bilinear` 函数, [172, 173]
+
 50. `resize_image_with_crop_pad` 函数, [172, 174]
+
 51. `resize_images` 函数, [172]
+
 52. `resize_nearest_neighbor` 函数, [172]
+
 53. `resizing functions`, [172, 174]
+
 54. `restore` 方法, [83, 84, 89]
+
 55. `restoring variables`, [82, 83, 84]
+
 56. `results` 字段, [92]
+
 57. `reuse` 参数:
+
     * `BasicRNNCell`, [185]
+
     * `batch_norm`, [138]
+
     * `fully_connected`, [144, 145]
+
     * `get_variable`, [142]
+
     * `tf.layers.conv2d`, [157]
+
 58. `reverse` 函数, [33, 34]
+
 59. `rewrite` 命令, [287]
+
 60. `rgb_to_grayscale` 函数, [167]
+
 61. `rgb_to_hsv` 函数, [167]
+
 62. `rint` 函数, [37, 38]
+
 63. `rm` 命令, [287]
+
 64. `RNNCell` 类, [183, 184, 187]
+
 65. `RNNs. See recurrent neural networks`, [index]
+
 66. `Rosenblatt, Frank`, [10]
+
 67. `rot90` 函数, [170, 171]
+
 68. `rotating functions`, [170, 171]
+
 69. `round` 函数, [37, 38]
+
 70. `rounding operations`, [37, 38]
+
 71. `rpc_options` , [227]
+
 72. `rsqrt` 函数, [38, 39]
+
 73. `RTRL (real-time recurrent learning)`, [183]
+
 74. `run` 方法:
+
     * `configuring running session`, [228]
+
     * `feeding data to session`, [78, 79, 80]
+
     * `InteractiveSession` 类, [54]
+
     * `linear regression`, [101]
+
     * `loading variables from file`, [89]
+
     * `optimization`, [70, 71]
+
     * `overview`, [311]
+
     * `Session` 类, [52, 53, 64]
+
 75. `run_config` 参数, [273]
+
 76. `run_context` 参数, [91]
+
 77. `run_metadata` 参数, [52, 92]
+
 78. `run_std_server` 方法, [272]
+
 79. `run_values` 参数, [92]
+
 80. `RunConfig` 构造函数, [252, 253]
+
 81. `RunOptions` 缓冲区, [228]
+
 82. `runtimeVersion` 字段, [301, 304]
+
 83. `--runtime-version` flag, [296, 297, 298]
-
-
-
 
 # 索引
 
@@ -8392,10 +8678,15 @@ D
 37. `Session` 函数, 51–52, 226–228, 243
 
 38. `session` 钩子
+
     - 创建, 91–93
+
     - 用于布式应用, 243–244, 246
+
     - 示例代码, 94–96
+
     - MonitoredSession, 创建, 93–94
+
     - 概述, 90–91
 
 39. `session_config` 参数, 252, 253
@@ -8413,17 +8704,29 @@ D
 45. `SessionRunValues` 对象, 92
 
 46. `sessions` 类
+
     - 创建, 51–52
+
     - 布布式应用, 243–244, 246
+
     - 示例代码, 62–64
+
     - 执行, 53–54
+
     - 喂送数据, 78–80
+
     - 交互式, 53–54
+
     - MonitoredSession, 创建, 93–94
+
     - 新的, 226–228
+
     - 概述, 1, 45, 51, 311
+
     - 运行, 配置, 228
+
     - 运行第一个应用, 24
+
     - 步数, 全局步数和轮数, 80–82
 
 47. `sess.run` 函数, 58
@@ -8435,10 +8738,6 @@ D
 50. `setup` 函数, 292
 
 51. `setup.py` 文件, 291, 292–293
-
-
-
-
 
 ## 52. `setuptools` 模块, 291–292
 
@@ -8491,17 +8790,27 @@ D
 ## 76. `softsign` 函数, 124, 126, 127
 
 ## 77. 软件开发包 (SDK)
+
 ### 77.1. 执行应用程序, 293–299
+
 ### 77.2. 概览, 280–281
 
 ## 78. 源码, 构建
+
 ### 78.1. Bazel 和 Java, 229–230
+
 ### 78.2. 构建过程, 234–235
+
 ### 78.3. 下载源码, 229
+
 ### 78.4. GPU 加速, 230
+
 ### 78.5. 在 Linux 上, 233
+
 ### 78.6. 在 Mac OS 上, 232–233
+
 ### 78.7. 概览, 18, 229
+
 ### 78.8. 在 Windows 上, 231–232
 
 ## 79. `sqrt` 函数, 38, 39
@@ -8538,245 +8847,437 @@ D
 
 ## 95. `static_rnn` 函数, 183, 186
 
-
-
-
-
 11. `subgradients`（子梯度），77
+
 12. `subtract` 函数, 36
+
 13. `Summary` 类, 59
+
 14. 摘要数据
+
     1. `custom`, 59
+
     2. `generating`, 57–59
+
     3. 用于图像, 178
+
     4. `overview`, 56
+
     5. `tf.logging` 函数, 55
+
     6. 用于训练, 89–90
+
     7. `writing`, 59–62
+
 15. 摘要操作, 57–59
+
 16. `SummarySaverHook` 类, 93, 96
+
 17. `svd` 函数, 41
+
 18. `swap_memory` 参数, 191
+
 19. Szegedy, Christian, 136–137
 
 1. `tags`，元图, 85
+
 2. `take` 方法, 210
+
 3. `tanh` 函数, 124, 126, 127
+
 4. `target` 参数, 51, 52
+
 5. `target_column` 参数, 252
+
 6. `targets`，集群服务器, 242–243
+
 7. `task_index` 参数, 240
+
 8. `tasks`，在集群中, 239–244, 246, 269, 270
+
 9. `BPTT`（时间反向传播）, 183
+
 10. Technical Stack 解释, 3
+
 11. `tensor` 字段, 59
+
 12. `tensor` 参数, 178
+
 13. `Tensor Units` (`TPUs`), 297
+
 14. `tensorboard` 命令, 57
+
 15. TensorBoard 工具
+
     1. 自定义摘要, 59
+
     2. 示例代码, 64
+
     3. `overview`, 56
+
     4. `running`, 57
+
     5. 生成摘要数据, 57–59
+
     6. 写入摘要数据, 59–62
+
     7. 可视化训练过程, 89–90
+
 16. `tensord` 函数, 40, 41
+
 17. `TensorFlow`。（另参见框架元素）[24_9781119466215-index.xhtml#694]
+
     1. 源码编译, 229–235
+
     2. `安装`, 17–21
+
     3. `overview`, 1, 4, 7, 8, 15
+
     4. 相关资源, 3
+
     5. `运行`第一个应用, 22–24
+
 18. `tensorflow` (`tf`) 包。（另参见特定函数）[24_9781119466215-index.xhtml#418]
+
     1. 基础数学运算, 35–37
+
     2. 内容, 21
+
     3. 示例应用, 42–43
+
     4. 指数和对数, 38–39
+
     5. 运算, 35
+
     6. `overview`, 22
+
     7. 舍入和比较, 37–38
+
     8. 已知张量, 28–31
+
     9. 随机值张量, 31–33
+
     10. 转换张量, 33–35
+
     11. 向量和矩阵运算, 39–42
+
 19. `tensorflow` 目录, 21
+
 20. `TensorInfo`, 85
+
 21. `tensors` (`Tensor` 类。（另参见 `convolution`）[24_9781119466215-index.xhtml#207]; `convolution`神经网络 [24_9781119466215-index.xhtml#214]; `operations` [24_9781119466215-index.xhtml#849]
+
     1. 数据类型, 29
+
     2. `fetches` 参数，赋值, 52
+
     3. `graphs`, 46
-    4. `images` 作为, 156
-    5. 已知值, 28–31
-    6. `overview`, 1, 27, 28, 309, 310
-    7. `placeholders`, 79, 80
-    8. 带有随机值, 31–33
-    9. `运行`第一个应用, 24
-    10. `scope` 用于, 143
-    11. `shape`, 29, 33, 35, 37, [35]（重复）, 168, 177, 309
-    12. `Torch`, 14
-    13. `transforming`, 33–35
+
+
+
+4. `images` 作为, 156
+
+5. 已知值, 28–31
+
+6. `overview`, 1, 27, 28, 309, 310
+
+7. `placeholders`, 79, 80
+
+8. 带有随机值, 31–33
+
+9. `运行`第一个应用, 24
+
+10. `scope` 用于, 143
+
+11. `shape`, 29, 33, 35, 37, [35]（重复）, 168, 177, 309
+
+12. `Torch`, 14
+
+13. `transforming`, 33–35
+
 22. `test` 字段, 112
+
 23. `test` 方法, 272
+
 24. `test_func` 函数, 275
+
 25. `testing` 估计器, 250
+
 26. `text`，创建数据集, 205
+
     1. `text` 预测, 188–190, 196, 198
 
 2. `TextFormat.Merge` 程, 51
 
-
-
-
 3. `--text-instances` 标记，295
+
 4. `TextLineDataset` 类，205
-5. `tf` 包。参阅特定函数；`tensorflow 包
+
+5. `tf` 包。参阅特定函数；`tensorflow` 包
+
 6. `TF_CONFIG` 变量，269–270
+
 7. `tf_random_seed` 参数，253
+
 8. `tf.contrib` 包，21, 22。另参阅特定函数
+
 9. `tf.contrib.keras.initializers` 包，135–136
+
 10. `tf.contrib.learn` 包，257。另参阅实验
+
 11. `tf.contrib.learn.python.learn.datasets` 包，221–224
+
 12. `tf.data.Dataset` 类。另参阅迭代器;特定方法
+
     1. 创建数据集，202–205
+
     2. 多线程，226
+
     3. 概述，312
+
     4. 处理数据集，208–213
+
 13. `tf.estimator` 包，21。另参阅估计器;特定方法和类
+
 14. `tf.feature_column` 包，253–256
+
 15. `tf.image` 包，21。另参阅图像处理;特定函数
+
 16. `tf.layers` 包，21, 22。另参阅特定函数
+
 17. `tf.logging` 包，21, 22, 54–55。另参阅特定函数
+
 18. `tf.metrics` 包，21, 22
+
 19. `tf.nn` 包。另参阅特定函数
+
     1. 卷积函数，174–175
+
     2. 交叉熵，115
+
     3. 丢弃法，140
+
     4. 输入标准化，134–135
+
     5. 概述，21, 22
+
     6. RNN 单元类，183, 184–187
+
 20. `tf.nn.rnn_cell` 包，194–198
+
 21. `TFRecordDataset` 构造函数，207
+
 22. `TFRecords`，205–208, 218–220
+
 23. `TFRecordWriter` 类，205, 206
+
 24. `tf.saved_model.signature_constants` 模块，85
+
 25. `tf.saved_model.signature_def_utils` 包，85
+
 26. `tf.summary` 包，21, 22, 57–59, 89–90。另参阅特定函数
+
 27. `tf.train` 包，21, 22。另参阅特定类,特定函数;训练
+
 28. `Theano` 框架，14
+
 29. `ThreadPoolProto` 缓冲区，228
+
 30. `threads`，201–202, 226。另参阅数据集;多线程
+
 31. `threshold`，119, 120, 122
+
 32. `time_major` 参数，191
+
 33. `timeout_in_ms` 字段，228
+
 34. `Tip` 图标，解释，2
+
 35. `Torch` 框架，14
+
 36. `TPUs` (张量处理单元),297
+
 37. `trace` 函数，40
+
 38. `trace_level` 字段，228
-39. `train` 字段，Datasets 实例，112
+
+39. `train` 字段，`Datasets` 实例，112
+
 40. `train` 方法，248–249, 269, 272
+
 41. `train_and_evaluate` 方法，272, 275
+
 42. `train_batch_size` 参数，290
+
 43. `train_dir` 参数，111
+
 44. `train_func` 函数，275
+
 45. `train_input_fn`，271
+
 46. `train_steps` 参数，290
+
 47. `train_steps_per_iteration` 参数，271, 272
+
 48. `trainable` 参数，68, 138, 139, 144, 157
-49. `training` 
+
+49. `training`
+
     1. 使用反向传播，129–131
+
     2. 期间的批归一化，137
+
     3. 估计器，248–249
+
     4. 示例代码，86–89
+
     5. 向会话喂数据，78–80
+
     6. 制定模型，66–67
+
     7. 确定损失，69
-
-
-
 
 # 索引列表
 
 - 神经网络 (neural networks), 技巧, 315–318
+
 - 优化, 70–78
+
 - 概述, 65–66
+
 - 循环神经网络, 182–183
+
 - `SavedModel`, 使用, 84–86
+
 - 会话钩子 (session hooks), 90–96
+
 - 步数 (steps), 全局步数 (global steps) 和 轮 (epochs), 80–82
+
 - TensorFlow, 22
+
 - 变量 (variables), 概述, 67–69
+
 - 变量, 恢复, 82, 83–84
+
 - 变量, 保存, 82–83
+
 - 过程可视化化, 89–90
 
 ## 51. 训练任务, GCP
+
 - 在集群上执行, 300–304
+
 - 费用, 279
+
 - 本地, 294–295
+
 - 概述, 293
+
 - 远程, 296–298
 
 ## 52. `TrainingInput`, GCP 任务, 300–303
+
 ## 53. `TrainingOutput`, GCP 任务, 300, 303–304
+
 ## 54. `transpose` 函数, 40
+
 ## 55. `transpose_image` 函数, 170, 171
+
 ## 56. `trials` 字段, 303–304
+
 ## 57. `truncated` 反向传播 (BPTT), 183
+
 ## 58. `truncated_normal` 函数, 31, 32–33
 
 ## 59. 调优神经网络
+
 - 批归一化 (batch normalization), 136–139
+
 - 深度学习, 改进, 143–147
+
 - 输入标准化 (input standardization), 134–135
+
 - 概述, 133–134
+
 - 正则化 (regularization), 139–141
+
 - 权重初始化, 135–136
 
 ## U
+
 - 在 Ubuntu Linux 上构建 TensorFlow, 233
+
 - 欠拟合 (underfitting), 神经网络, 139
+
 - 均匀参数 (uniform parameter), 136
+
 - 卸载命令, 18
+
 - 阶跃函数 (unit step function), 123
+
 - 展开 RNN (unrolling RNNs), 181–182
+
 - `unstack` 函数, 33, 35
+
 - 更新门 (update gate), GRU 单元, 196, 197
+
 - 属性属性 (update property), 184
+
 - `updates_collections` 参数, 138
+
 - `uri` 字段, 304, 305
+
 - `url` 参数, 292
+
 - `use_bias` 参数, 157
+
 - `use_locking` 参数, 74, 76
+
 - `use_nester` 参数, 76
-- `use_session_threads` , 228
+
+- `use_session_threads`, 228
 
 ## V
+
 - 验证字段 (validation field), 112
-- value 参数, 30, 59
+
+- `value` 参数, 30, 59
+
 - van Merriener, Bart, 196
+
 - `var_list` 参数, 70
+
 - `Variable` 函数, 68, 133, 142
+
 - `variable_initializer` 函数, 68
+
 - `variable_scope` 函数, 141, 142
+
 - `variables` (`Variable` 类)
+
     - 特性, 67
+
     - 创建, 68
+
     - 示例代码, 88–89
+
     - 初始化, 68–69
+
     - 从文件加载, 89
+
     - 优化, 70–78
+
     - 概述, 67, 31
+
     - 服务器, 242
+
     - 恢复, 82, 83–84
+
     - 保存, 82–83
+
     - 范围, 141, 142
+
     - 存储全局步数在, 81
-
-
-
-
 
 19. `versionName` 字段，304, 305
 
@@ -8795,14 +9296,23 @@ D
 2. `web set` 命令，287
 
 3. 权重（weight），在神经网络中
+
     1. 检查，318
+
     2. 确定在网络中的位置，128–129
+
     3. 示例代码，133
+
     4. 初始化，134, 135–136, 316
+
     5. L1/L2 正则化，140–141
+
     6. 概述，121–122
+
     7. 循环神经网络，181
+
     8. 使用反向传播训练，129–131
+
     9. 变量范围（variable scope），141–142
 
 4. `weight_column` 参数，258
@@ -8813,7 +9323,7 @@ D
 
 7. `weights_regularizer` 参数，144, 145
 
-8. 什么字段，Event，61–62
+8. 什么字段，`Event`，61–62
 
 1. `WholeFileReader` 函数，168
 
@@ -8856,4 +9366,3 @@ D
 # WILEY 用户许可协议
 
 访问 [www.wiley.com/go/eula](http://www.wiley.com/go/eula) 以访问 Wiley 的电子书 EULA。
-

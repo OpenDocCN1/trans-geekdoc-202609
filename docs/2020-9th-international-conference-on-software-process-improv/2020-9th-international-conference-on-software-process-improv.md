@@ -1,18 +1,15 @@
+
 # 2020 第9届国际软件过程改进会议 (CIMPS)
 
-
-
-
-
-
-Juan Mosquera
+**Juan Mosquera**  
 jmosquera@utlp.edu
 
-Nelson Piedra
-Grupo de Investigación de Sistemas Basados en Conocimiento
+**Nelson Piedra**  
+Grupo de Investigación de Sistemas Basados en Conocimiento  
 nopiedra@utlp.edu
 
-**Resumen -** En los últimos años, la tecnología blockchain ha logrado una aplicación móvil en múltiples industrias debido a sus características únicas como la transparencia, trazabilidad, interoperabilidad e integridad, entre otras. Este trabajo presenta un marco metodológico para la integración de la tecnología blockchain en la industria del café. Para ello, se propone una metodología para la implementación de esta tecnología en esta industria, el análisis detallado de los aspectos de producción, la definición de una arquitectura para el desarrollo y soluciones de tecnología blockchain. Esta investigación plantea que las características de la tecnología blockchain sugieren que se puede establecer una solución que permita la transparencia y trazabilidad en el proceso productivo realizado por la industria del café.
+## Resumen
+En los últimos años, la tecnología blockchain ha logrado una aplicación móvil en múltiples industrias debido a sus características únicas como la transparencia, trazabilidad, interoperabilidad e integridad, entre otras. Este trabajo presenta un marco metodológico para la integración de la tecnología blockchain en la industria del café. Para ello, se propone una metodología para la implementación de esta tecnología en esta industria, el análisis detallado de los aspectos de producción, la definición de una arquitectura para el desarrollo y soluciones de tecnología blockchain. Esta investigación plantea que las características de la tecnología blockchain sugieren que se puede establecer una solución que permita la transparencia y trazabilidad en el proceso productivo realizado por la industria del café.
 
 Para gestionar diversos desafíos relacionados con garantizar la producción de calidad, y lograr que este sector sea atractivo y rentable para los pequeños agricultores [1].
 
@@ -20,21 +17,24 @@ En este contexto, el mercado del café es una industria global. Según el Depart
 
 El café cultivado en Ecuador ha ocupado, durante las últimas décadas, un lugar importante en el desarrollo de la agricultura. En Ecuador existen alrededor de 60.000 agricultores de café a lo largo del país. Esto tiene una capacidad de exportación de aproximadamente 80.000 sacos de café por año [8]. Las variedades de café con mayor demanda de exportar son Washed Arabica, Natural y Robusta. Las variedades de café que más se consumen en el mundo son el café suave, considerado en el resultado del mercado como un café de gran calidad.
 
-**Abstract -** In recent years, blockchain technology has showed remarkable application in multiple industries due to its inherent characteristics such as transparency, traceability, interoperability, integrity, and among others. This work presents a methodological framework for the integration of blockchain technology in the coffee industry. For this, several necessary steps are proposed to implement this technology in this industry, the detailed analysis of production aspects, definition of an architecture for the development and solutions of blockchain technology. This suggests that the characteristics of blockchain technology can be used to establish a solution that allows transparency and traceability in the production process carried out the coffee industry.
+## Abstract
+In recent years, blockchain technology has showed remarkable application in multiple industries due to its inherent characteristics such as transparency, traceability, interoperability, integrity, and among others. This work presents a methodological framework for the integration of blockchain technology in the coffee industry. For this, several necessary steps are proposed to implement this technology in this industry, the detailed analysis of production aspects, definition of an architecture for the development and solutions of blockchain technology. This suggests that the characteristics of blockchain technology can be used to establish a solution that allows transparency and traceability in the production process carried out the coffee industry.
 
-**Palabras clave -** Blockchain, trazabilidad, Aplicación descentralizada, Industria del Café, Agricultura
+## Palabras clave
+Blockchain, trazabilidad, Aplicación descentralizada, Industria del Café, Agricultura
 
-**Keywords -** Blockchain, Trazabilidad, Aplicaciones descentralizadas, Café, Agricultura
+## Keywords
+Blockchain, Trazabilidad, Aplicaciones descentralizadas, Café, Agricultura
 
-Durante los últimos años, la implementación de las tecnologías emergentes Blockchain (BC) y de Ledger Distribuido ha liderado un impacto en una variedad de dominios, desde los financieros hasta los de Internet, la educación, las cadenas de producción y suministro. La tecnología blockchain se constituye en un libro en el cual se registran. Estos sistemas permiten garantizar la integridad de las transacciones [2], [3] en un entorno distribuido. Existen números funcionando en varios países; por ejemplo: aplicaciones relacionadas con el gobierno, la identificación digital, el registro de tierras, entre otras [4], [5].
+Durante los últimos años, la implementación de las tecnologías emergentes **Blockchain (BC)** y de Ledger Distribuido ha liderado un impacto en una variedad de dominios, desde los financieros hasta los de Internet, la educación, las cadenas de producción y suministro. La tecnología blockchain se constituye en un libro en el cual se registran. Estos sistemas permiten garantizar la integridad de las transacciones [2], [3] en un entorno distribuido. Existen números funcionando en varios países; por ejemplo: aplicaciones relacionadas con el gobierno, la identificación digital, el registro de tierras, entre otras [4], [5].
 
 # I. INTRODUCCIÓN
 
 En la actualidad, muchos países del mundo han impulsado la innovación en el sector agrícola con el objetivo de lograr
 
-Como resultado, se ha desarrollado cada vez más aplicaciones descentralizadas basadas en BC para numerosos servicios, entre otros. Estas aplicaciones implementan programas informáticos descentralizados especializados llamados Smart Contracts (SC) que se implementan en el mercado de BC. Estos SC están abiertos a una amplia gama de desafíos y son utilizados para cualquier tipo de
+Como resultado, se ha desarrollado cada vez más aplicaciones descentralizadas basadas en **BC** para numerosos servicios, entre otros. Estas aplicaciones implementan programas informáticos descentralizados especializados llamados **Smart Contracts (SC)** que se implementan en el mercado de **BC**. Estos **SC** están abiertos a una amplia gama de desafíos y son utilizados para cualquier tipo de
 
-II. TRABAJOS RELACIONADOS
+# II. TRABAJOS RELACIONADOS
 
 (Nota: El texto original proporcionado contiene fragmentos cortados o repetitivos en la sección final, pero se han traducido siguiendo la estructura de las líneas presentes).
 
@@ -42,11 +42,7 @@ II. TRABAJOS RELACIONADOS
 
 En [14], realizan una revisión de la literatura académica de aplicaciones y servicios basados en la tecnología blockchain, los autores analizan varias ventajas de esta tecnología, entre algunos de los sectores que mencionan el sector financiero, cadena de suministro, gobierno.
 
-En lugar Bueno-Almeida et al [15] realizan una investigación con el objetivo de obtener los beneficios que consiga la aplicación de la tecnología blockchain en la cadena de suministro. Analizan un caso de uso real, por ejemplo, herramientas y métodos para mejorar la autenticidad de los productos alimenticios. Además, realizan varios casos de uso y la propuesta de blockchain para la producción de alimentos.
-
-
-
-
+En lugar **Bueno-Almeida et al [15]** realizan una investigación con el objetivo de obtener los beneficios que consiga la aplicación de la tecnología blockchain en la cadena de suministro. Analizan un caso de uso real, por ejemplo, herramientas y métodos para mejorar la autenticidad de los productos alimenticios. Además, realizan varios casos de uso y la propuesta de blockchain para la producción de alimentos.
 
 用于此类目的的代币进行产品认证的认证机构。
 
@@ -64,7 +60,7 @@ En lugar Bueno-Almeida et al [15] realizan una investigación con el objetivo de
 
 此外，还定义了构成生产过程的参与者，其中包括农业生产者、生产者、运输商等许多人员。
 
-## III. 方法论
+# III. 方法论
 
 区块链在行业和供应链中的集成必须与生产流程保持一致。为此，本工作提出了一个方法论框架，分为 4 个阶段，包括范围定义、价值链定义、区块链架构中的功能定义，以及最终的去中心化应用开发。
 
@@ -79,9 +75,9 @@ En lugar Bueno-Almeida et al [15] realizan una investigación con el objetivo de
 
 ![](img/cfc3096c2400a0b12b787e5556e76b72_2_0.png)
 
-图 1 建议在农业领域集成区块链的方法论。
+**图 1** 建议在农业领域集成区块链的方法论。
 
-## C. 通过技术分析定义解决方案架构。
+## C. 通过技术分析定义解决方案架构
 
 建议认为必须进行行业分析，即对生产流程进行分析，因为这些方面有助于系统。此外，它有助于在执行技术集成过程时理解并解决重要问题。
 
@@ -94,12 +90,12 @@ En lugar Bueno-Almeida et al [15] realizan una investigación con el objetivo de
 根据需要考虑的特性来决定某些区块链平台，其中一些特性如下 [23]：
 
 - 要求的区块链类型
-- 对语言或 SDK 的支持
+- 对语言或 **SDK** 的支持
 - 共识协议
 - 对智能合约的支持
 - 平台的扩展性
 
-根据 Fluence Labs 进行的一项研究 [25]，用于开发去中心化应用的区块链平台包括：
+根据 **Fluence Labs** 进行的一项研究 [25]，用于开发去中心化应用的区块链平台包括：
 
 - Ethereum
 - EOS
@@ -114,11 +110,11 @@ En lugar Bueno-Almeida et al [15] realizan una investigación con el objetivo de
 
 一旦定义了技术，就可以根据下一阶段的结果建立系统架构。
 
-图 2 中展示了一个适用于 Ethereum 的通用架构，其主要分为本地部分和远程部分。本地部分是访问去中心化应用的团队，而远程部分与网络相关。
+图 2 中展示了一个适用于 **Ethereum** 的通用架构，其主要分为本地部分和远程部分。本地部分是访问去中心化应用的团队，而远程部分与网络相关。
 
 ![](img/cfc3096c2400a0b12b787e5556e76b72_3_0.png)
 
-## IV. 开发
+# IV. 开发
 
 在本节中根据方法论中提出的阶段的设计。
 
@@ -132,9 +128,9 @@ En lugar Bueno-Almeida et al [15] realizan una investigación con el objetivo de
 
 ### B. 价值链定义
 
-为了该阶段的发展，作者们进行了与供应链相关的价值链验证工作。Diaz 等人 [29] 在其工作中分析了咖啡供应链，表征了构成该链的主要参与者：农民、生产者、国内和外国消费者，并详细说明了每个人的功能。表 1 可以观察参与者和活动。
+为了该阶段的发展，作者们进行了与供应链相关的价值链验证工作。**Diaz 等人 [29]** 在其工作中分析了咖啡供应链，表征了构成该链的主要参与者：农民、生产者、国内和外国消费者，并详细说明了每个人的功能。表 1 可以观察参与者和活动。
 
-表 I. 参与者的活动与功能
+**表 I. 参与者的活动与功能**
 
 | 主要参与者 | 活动 |
 | :--- | :--- |
@@ -149,7 +145,7 @@ En lugar Bueno-Almeida et al [15] realizan una investigación con el objetivo de
 
 一旦建立了架构和与信息相关的方面，就在编码、部署、执行和维护之后开发。为了配置支持智能合约的平台，在此阶段设计了根据指令可以执行的一系列计算机程序。值得注意的是，解决方案的维护取决于所使用的技术。
 
-另一方面，Viere、Enden 和 Schaltegge [30] 在其工作中分析了咖啡供应链，其他作者描绘了以下 7 个对应阶段：
+另一方面，**Viere、Enden 和 Schaltegge [30]** 在其工作中分析了咖啡供应链，其他作者描绘了以下 7 个对应阶段：
 
 - 种植
 - 干处理
@@ -159,8 +155,8 @@ En lugar Bueno-Almeida et al [15] realizan una investigación con el objetivo de
 - 销售
 - 消费
 
-- 收获阶段：在此阶段，一旦农民收获了果实，即进行收获。在此阶段可能被记录的信息是收获，例如细节、其他方面。
-- 前处理阶段：在此阶段，收获完成后，农民结束该流程。存在两种方法：干法（干燥）和湿法（脱皮、发酵、清洗）。完成任何工艺后，下一个活动是处理。在前处理阶段，可能记录的信息与批次有关，例如它是经过干法还是湿法（水合）处理的，以及进行该工艺的日期和时间。
+- **收获阶段**：在此阶段，一旦农民收获了果实，即进行收获。在此阶段可能被记录的信息是收获，例如细节、其他方面。
+- **前处理阶段**：在此阶段，收获完成后，农民结束该流程。存在两种方法：干法（干燥）和湿法（脱皮、发酵、清洗）。完成任何工艺后，下一个活动是处理。在前处理阶段，可能记录的信息与批次有关，例如它是经过干法还是湿法（水合）处理的，以及进行该工艺的日期和时间。
 
 同样，[31] 中对秘鲁的咖啡供应链进行了分析，作者展示了以下一些阶段：
 
@@ -172,7 +168,7 @@ En lugar Bueno-Almeida et al [15] realizan una investigación con el objetivo de
 - 包装
 - 装载
 
-- 处理阶段：在此阶段，进行对果实的转化。该阶段的参与者有农民、脱皮工、磨坊等可能被考虑的参与者。这从果实的脱皮开始，经过选择和包装，随后是果实的烘焙。在某些演示中，咖啡豆被选择并等待；而在另一些情况下则进行封装后销售。可能生成的信息将涉及每个阶段执行的日期和地点，以及每个阶段的特性，例如进行的烘焙类型。
+- **处理阶段**：在此阶段，进行对果实的转化。该阶段的参与者有农民、脱皮工、磨坊等可能被考虑的参与者。这从果实的脱皮开始，经过选择和包装，随后是果实的烘焙。在某些演示中，咖啡豆被选择并等待；而在另一些情况下则进行封装后销售。可能生成的信息将涉及每个阶段执行的日期和地点，以及每个阶段的特性，例如进行的烘焙类型。
 
 因此，根据处理的工作和专家意见，为价值链立了以下阶段：收获、前处理、包装；运输（发送和接收），如图 3 所示。
 
@@ -181,29 +177,29 @@ En lugar Bueno-Almeida et al [15] realizan una investigación con el objetivo de
 | 生产 | 收获 | 前处理 |
 | 运输 | 包装 | 处理 |
 
-图 3 农业领域集成区块链的方法论。
+**图 3** 农业领域集成区块链的方法论。
 
 下文描述了上述阶段：
 
-- 种植阶段：构成了咖啡供应链的开始。在此阶段，农民种植咖啡植物以供日后的生长和收获。在此阶段，生成的信息对应于种植细节，如执行日期、农场名称、农民名称、咖啡品种。此外，还可能记录细节以允许农场的地理定位和有关种植的其他信息。
-- 收获阶段：在此阶段，一旦农民收获了果实，即进行收获。在此阶段可能被记录的信息是收获，例如细节、其他方面。
-- 前处理阶段：在此阶段，收获完成后，农民结束该流程。存在两种方法：干法（干燥）和湿法（脱皮、发酵、清洗）。完成任何工艺后，下一个活动是处理。在前处理阶段，可能记录的信息与批次有关，例如它是经过干法还是湿法（水合）处理的，以及进行该工艺的日期和时间。
+- **种植阶段**：构成了咖啡供应链的开始。在此阶段，农民种植咖啡植物以供日后的生长和收获。在此阶段，生成的信息对应于种植细节，如执行日期、农场名称、农民名称、咖啡品种。此外，还可能记录细节以允许农场的地理定位和有关种植的其他信息。
 
 
 
+- **收获阶段**：在此阶段，一旦农民收获了果实，即进行收获。在此阶段可能被记录的信息是收获，例如细节、其他方面。
 
+- **前处理阶段**：在此阶段，收获完成后，农民结束该流程。存在两种方法：干法（干燥）和湿法（脱皮、发酵、清洗）。完成任何工艺后，下一个活动是处理。在前处理阶段，可能记录的信息与批次有关，例如它是经过干法还是湿法（水合）处理的，以及进行该工艺的日期和时间。
 
 ## 平台
 
+表 III. 平台对比
+
 | 特性 | Ethereum | Hyperledger Fabric | Hyperledger Sawtooth |
 | --- | --- | --- | --- |
-| 加密货币令牌 | Ether (ETH) |否 | 否 |
+| 加密货币令牌 | Ether (ETH) | 否 | 否 |
 | 行业类型 | 所有 | 所有 | 金融行业 |
 | 区块链类型 | 公有 | 联盟 | 联盟 |
 | 可扩展性 | 允许 | 允许 | 允许 |
 | 流行程度和开发状态 | 非常流行，状态活跃 | 活跃 | 活跃 |
-
-表 III. 平台对比
 
 | 特性 | Corda | Quorum |
 | --- | --- | --- |
@@ -226,40 +222,33 @@ En lugar Bueno-Almeida et al [15] realizan una investigación con el objetivo de
 
 在定义应用案例的区块链平台和框架之前，已对最流行的平台进行了分析。
 
-目前存在多种区块链平台，其中最流行的有 Ethereum、Hyperledger Fabric、Ric 3 和 Quorum。这些平台广泛使用了针对特定工业的解决方案 [32]–35]。
+目前存在多种区块链平台，其中最流行的有 `Ethereum`、`Hyperledger Fabric`、`Ric 3` 和 `Quorum`。这些平台广泛使用了针对特定工业的解决方案 [32]–[35]。
+
+表 II. 平台对比 (1)
 
 | 特性 | Ethereum | Hyperledger Fabric | Hyperledger Sawtooth |
 | --- | --- | --- | --- |
-| 创始人 | Vitalik Buterin | Linux Linux Foundation | |
+| 创始人 | Vitalik Buterin | Linux Foundation | |
 | 智能合约 | 是 (Solidity) | 是 (Java, Golang) | 是 (C++, Golang) |
 | 共识算法 | PoW, PoS | 可插件式, Trusted Solo, Crash Fault Tolerant | PoET, BFT |
-
-表 II. 平台对比 (1)
 
 ## 平台
 
 表 IV. 前端框架对比
 
-## 特性
-
 | 平台 | 描述 | 开发者 | 学习难度 |
 | --- | --- | --- | --- |
 | React | 一种用于构建用户界面的高效、声明式且灵活的 JavaScript | Facebook | 中等 |
 | Vuejs | 一个渐进式的、增量适应的构建 Web 图界面的框架 | 2013 | 高 |
+| Angular | 一个移动端和桌面端的框架 | Evan You | 中等 (Typescript) |
 
-关于最流行的解决方案的前端框架，涉及 React、Angular 和 Vue.js。表 IV 对这些框架进行了比较。
-
-## 特性
-
-| 平台 | 描述 | 开发者 | 学习难度 |
-|---|---|---|---|
-| Angular | 一个移动端和桌面端的框架 | Evan You* | 中等 (Typescript) |
+关于最流行的解决方案的前端框架，涉及 `React`、`Angular` 和 `Vue.js`。表 IV 对这些框架进行了比较。
 
 https://www.trufflesuite.com/ganache。图中显示了它提供的图表。
 
 ![](img/cfc3096c2400a0b12b787e5556e76b72_6_0.png)
 
-在所开发的框架中，选择了 React，因为其与连接区块链技术所需的库兼容性，以及该框架的学习曲线。
+在所开发的框架中，选择了 `React`，因为其与连接区块链技术所需的库兼容性，以及该框架的学习曲线。
 
 通过图 5 展示了本案例研究去中心化开发的架构。
 
@@ -281,19 +270,15 @@ https://www.trufflesuite.com/ganache。图中显示了它提供的图表。
 
 ## D. 去中心化架构开发
 
-- Remix IDE：是一个开发接口编译器，允许对多种功能进行合约的测试。要访问它，必须输入以下地址：remix.org。示例强调该工具对于 Ethereum 至关重要。图 7 展示了通过 remix 进行的开发，即合约部署。
+- **Remix IDE**：是一个开发接口编译器，允许对多种功能进行合约的测试。要访问它，必须输入以下地址：`remix.org`。示例强调该工具对于 `Ethereum` 至关重要。图 7 展示了通过 remix 进行的开发，即合约部署。
 
-在定义了用例中架构涵盖的方面后（如带有解决方案架构的工作流定义），此阶段即为去中心化开发。在应用案例中选择了 Ethereum 架构，因此重要的是说明该平台支持智能合约。在此阶段，必须进行合约的分析和开发。合约语言方面使用的是 Solidity。
+在定义了用例中架构涵盖的方面后（如带有解决方案架构的工作流定义），此阶段即为去中心化开发。在应用案例中选择了 `Ethereum` 架构，因此重要的是说明该平台支持智能合约。在此阶段，必须进行合约的分析和开发。合约语言方面使用的是 `Solidity`。
 
-为了部署合约，需要一个允许执行此过程的工具，可用工具之一是 Truffle。Truffle 是一个智能合约开发环境，允许在以太坊虚拟机 (EVM) 上执行。
+为了部署合约，需要一个允许执行此过程的工具，可用工具之一是 `Truffle`。`Truffle` 是一个智能合约开发环境，允许在以太坊虚拟机 (`EVM`) 上执行。
 
-在开发智能合约时，在生产阶段之前进行测试非常重要。可用工具之一是 Truffle（此处由于原文截断重复）。
+在开发智能合约时，在生产阶段之前进行测试非常重要。可用工具之一是 `Truffle`（此处由于原文截断重复）。
 
 ![](img/cfc3096c2400a0b12b787e5556e76b72_6_2.png)
-
-
-
-
 
 [5] J. Bashir, 《区块链精通》，第二版. Birmingham: Pact Publishing Ltd., 2018. [22]
 
@@ -360,4 +345,3 @@ Web3, 《Web3》，[2020]。访问于：https://github.com/web3/
 Metamask, 《Metamask 扩展程序》，2020。访问于：https://github.com/Metamask/metamask-extension。
 
 Piedra, N., Tovar, E., Contreras-Palacios, R., Lopez-Vargas, J., and Chiezaza, J. A. (2014). 消费和产生链接开放数据：开源案例：Program。
-

@@ -1,143 +1,80 @@
-# 
-Tech Today 的 x86 软件逆向工程、破解与防御指南
 
+# Tech Today 的 x86 软件逆向工程、破解与防御指南
+
+## 引言
+
+### 谁应该阅读本书
+### 本书的预期内容
+### 历史
+### 法律
+
+#### 反汇编
+#### 实验 1：反汇编
+#### 架构
+
+##### x86 入门
+##### 汇编语法
+##### 数据表示
+##### 寄存器
+##### 内存访问
+##### 寻址模式
+
+#### x86 指令格式
+#### x86 指令
+#### 整体概述
+#### 常见 x86 指令错误
+
+##### 输出
+##### 系统调用
+##### 构建和链接
+##### objdump
+##### 实验：Hello World
+
+#### 条件码
+
+##### 二进制分析
+##### 断点
+##### gdb
+##### 实验：Shark Sim 3000
+
+#### 控制流
+#### x86 逻辑构造
+#### 栈
+#### 函数调用和栈帧
+
+##### 查找起始代码
+##### 编译器
+
+###### 实验：RE Bingo
+###### 基础逆向工程
+###### 逆向工程策略
+
+####### 关键检查
+####### 关键生成器
+####### 实验：入门关键生成器
+
+#### Resource Hacker
+#### 补丁
+
+##### 在 010 Editor 中补丁
+##### CodeFusion 补丁
+##### Cheat Engine
+##### 实验：LaFarge 破解
+
+#### IDA 补丁
+#### 实验：IDA 逻辑流
+#### Ghidra
+
+##### 混淆
+##### 实验：混淆
+
+###### 防範篡改
+###### 打包
+###### 实验：检测和解包
+###### 虚拟化
+###### 加密/解密
+###### 摘要
 
-
-4.  引言 
-
-    1.  谁应该阅读本书
-
-    2.  本书的预期内容
-
-    3.  历史
-
-    4.  法律
-
-
-    1.  反汇编
-
-    2.  实验 1：反汇编
-
-    3.  架构
-
-
-
-    1.  x86 入门
-
-    2.  汇编语法
-
-    3.  数据表示
-
-    4.  寄存器
-
-    5.  内存访问
-
-    6.  寻址模式
-
-
-
-    1.  x86 指令格式
-
-    2.  x86 指令
-
-    3.  整体概述
-
-    4.  常见 x86 指令错误
-
-
-    1.  输出
-
-    2.  系统调用
-
-    3.  构建和链接
-
-    4.  objdump
-
-    5.  实验：Hello World
-
-
-
-
-    1.  条件码
-
-
-     1.  二进制分析
-
-     2.  断点
-
-     3.  gdb
-
-
-     5.  实验：Shark Sim 3000
-
-
-
-
-     1.  控制流
-
-     2.  x86 逻辑构造
-
-     3.  栈
-
-     4.  函数调用和栈帧
-
-
-
-     1.  查找起始代码
-
-     2.  编译器
-
-
-
-     1.  实验：RE Bingo
-
-     2.  基础逆向工程
-
-     3.  逆向工程策略
-
-
-
-     1.  关键检查
-
-     2.  关键生成器
-
-     3.  实验：入门关键生成器
-
-
-     5.  Resource Hacker
-
-     6.  补丁
-
-
-     1.  在 010 Editor 中补丁
-
-     2.  CodeFusion 补丁
-
-     3.  Cheat Engine
-
-     4.  实验：LaFarge 破解
-
-
-     6.  IDA 补丁
-
-     7.  实验：IDA 逻辑流
-     8.  Ghidra
-
-     1.  混淆
-
-     2.  实验：混淆
-
-
-
-     1.  防範篡改
-
-     2.  打包
-
-     3.  实验：检测和解包
-     4.  虚拟化
-
-     5.  加密/解密
-     6.  摘要
 ## Introduction
 
 Reverse engineering and software cracking are disciplines with a long, rich history. For decades, software developers have attempted to build defenses into their applications to protect intellectual property or to prevent modifications to the program code. The art of cracking has been around nearly as long as reverse engineers have been examining and modifying code for fun or profit.
@@ -153,20 +90,16 @@ From security professionals to hobbyists, this book is for anyone who wants to l
 This book is based on these three core tenets of reverse engineering:
 
 *   There is no such thing as uncrackable software.
-
 *   The goal in offense is to try to go faster.
-
 *   The goal in defense is to try to slow down.
 
 Based on this philosophy, any software can be reverse engineered and have its secrets stolen and protections circumvented. It's just a matter of time.
 
 Like other areas of cybersecurity, both offensive and defensive reverse engineers benefit from having a similar set of skills. This book is designed to provide an introduction to these three interrelated skill sets:
 
-*   **Reverse engineering:** Reverse engineering is the process of taking software apart and figuring out how it works.
-
-*   **Cracking:** Cracking builds on reverse engineering by manipulating a program's internals to get it to do something that it was not intended to.
-
-*   **Defense:** While all software is crackable, defenses can make a program more difficult and time-consuming to crack.
+*   `Reverse engineering`: Reverse engineering is the process of taking software apart and figuring out how it works.
+*   `Cracking`: Cracking builds on reverse engineering by manipulating a program's internals to get it to do something that it was not intended to.
+*   `Defense`: While all software is crackable, defenses can make a program more difficult and time-consuming to crack.
 
 Both offensive and defensive reverse engineers benefit from the same set of skills. Without an understanding of reverse engineering and cracking, a defender can't craft effective protections. On the other hand, an attacker can more effectively bypass and overcome these protections if they can understand and manipulate how a program works.
 
@@ -174,89 +107,12 @@ Both offensive and defensive reverse engineers benefit from the same set of skil
 
 This book is organized based on these three core capabilities and skill sets. The structure is as follows:
 
-| PART || TOPICS || GOAL |
-
+| PART | TOPICS | GOAL |
 | --- | --- | --- |
-
-| Part 1: Background || History and legal considerations  
-
-x86 crash course || Understand x86 and learn to move quickly. |
-
-| --- | --- | --- |
-
-| Part 2: Software Reverse Engineering || Reconnaissance  
-
-Key checkers  
-
-Key generators  
-
-Process monitoring  
-
-Resource manipulation  
-
-Static analysis  
-
-Dynamic analysis  
-
-Writing key gens  
-
-Cracking software || Master the tools, approaches, and mindset required to take software apart and understand its inner workings. |
-
-| Part 3: Software Cracking || Manual patching  
-
-Automated patchers  
-
-Advanced dynamic analysis  
-
-Execution tracing  
-
-Advanced static analysis  
-
-Trial periods  
-
-Nag screens  
-
-More key gens  
-
-More cracks || Master the tools, approaches, and mindset necessary to isolate behavior and modify software. |
-
-
-
-| Part 4: Defenses, Countermeasures, and Advanced Topics || Obfuscation/deobfuscation  
-
-Anti-debugging/anti-anti-debugging  
-
-Packing/unpacking  
-
-Cryptors/decryptors  
-
-Architectural defenses  
-
-Legal  
-
-Timeless debugging  
-
-Binary instrumentation  
-
-Intermediate representations  
-
-Decompiling  
-
-Automatic structure recovery  
-
-Visualization  
-
-Theorem provers  
-
-Symbolic analysis  
-
-Cracking extravaganza || Master defenses and counter-defenses.  
-
-Evaluate defensive posture and tradeoffs.  
-
-Explore advanced topics.  
-
-Exercise reverse engineering and cracking tools, techniques, and mindset. |
+| Part 1: Background | History and legal considerations<br>x86 crash course | Understand x86 and learn to move quickly. |
+| Part 2: Software Reverse Engineering | Reconnaissance<br>Key checkers<br>Key generators<br>Process monitoring<br>Resource manipulation<br>Static analysis<br>Dynamic analysis<br>Writing key gens<br>Cracking software | Master the tools, approaches, and mindset required to take software apart and understand its inner workings. |
+| Part 3: Software Cracking | Manual patching<br>Automated patchers<br>Advanced dynamic analysis<br>Execution tracing<br>Advanced static analysis<br>Trial periods<br>Nag screens<br>More key gens<br>More cracks | Master the tools, approaches, and mindset necessary to isolate behavior and modify software. |
+| Part 4: Defenses, Countermeasures, and Advanced Topics | Obfuscation/deobfuscation<br>Anti-debugging/anti-anti-debugging<br>Packing/unpacking<br>Cryptors/decryptors<br>Architectural defenses<br>Legal<br>Timeless debugging<br>Binary instrumentation<br>Intermediate representations<br>Decompiling<br>Automatic structure recovery<br>Visualization<br>Theorem provers<br>Symbolic analysis<br>Cracking extravaganza | Master defenses and counter-defenses.<br>Evaluate defensive posture and tradeoffs.<br>Explore advanced topics.<br>Exercise reverse engineering and cracking tools, techniques, and mindset. |
 
 ### Hands-On Experience and Labs
 
@@ -266,11 +122,9 @@ The goal of this book isn't to teach a particular set of tools and techniques. W
 
 Hands-on labs and exercises will also focus on reverse engineering and cracking a variety of different targets, including the following:
 
-*   **Real software:** Some exercises will use real-world software carefully selected to avoid copyright violations.
-
-*   **Manufactured examples:** Software written specifically for this book to illustrate concepts that are impractical to demonstrate with real-world examples.
-
-*   **Crackmes:** Manufactured software developed by crackers to illustrate a concept or challenge others.
+*   `Real software`: Some exercises will use real-world software carefully selected to avoid copyright violations.
+*   `Manufactured examples`: Software written specifically for this book to illustrate concepts that are impractical to demonstrate with real-world examples.
+*   `Crackmes`: Manufactured software developed by crackers to illustrate a concept or challenge others.
 
 ### Companion Download Files
 
@@ -284,11 +138,13 @@ Before diving into the nitty-gritty details of cracking and reverse engineering,
 
 The first software copy protections emerged in the 1970s. Some of the early movers in the space were as follows:
 
-*   **Apple II:** The Apple II incorporated proprietary disk drivers that would allow writing at half-tracks, writing extra rings, and staggering and overlapping sectors. The purpose of this was to make the disks unusable by non-Apple machines and software that wouldn't know to read and write at these odd offsets.
+*   `Apple II`: The Apple II incorporated proprietary disk drivers that would allow writing at half-tracks, writing extra rings, and staggering and overlapping sectors. The purpose of this was to make the disks unusable by non-Apple machines and software that wouldn't know to read and write at these odd offsets.
 
-*   **Atari 800:** Atari 800 systems would intentionally include bad sectors in their disks and attempt to load these sectors. If these loads didn't return a “bad sector” error, then the software knew it wasn't a valid disk and would halt execution.
 
-*   **Commodore 64:** Legitimate Commodore 64 software was distributed only on read-only disks. The software would attempt to overwrite the disk, and, if it succeeded, it knew the disk was counterfeit.
+
+* `Atari 800`: `Atari 800` systems would intentionally include bad sectors in their disks and attempt to load these sectors. If these loads didn't return a “bad sector” error, then the software knew it wasn't a valid disk and would halt execution.
+
+* `Commodore 64`: Legitimate `Commodore 64` software was distributed only on read-only disks. The software would attempt to overwrite the disk, and, if it succeeded, it knew the disk was counterfeit.
 
 These protections all depended on unusual behavior by the software, such as the use of invalid memory or attempting to overwrite the program's own code. Defeating these protections required an understanding of how the software worked.
 
@@ -298,36 +154,33 @@ The rise of cracking and reverse engineering began in the 1980s. However, these 
 
 Over the next several decades, the reverse engineering and cracking scene evolved. These are some of the key dates in the history of reverse engineering:
 
-*   **1987:** Fairlight's formation in 1987 by Bacchus defines one of the first operational groups. Fairlight will later come to prominence in FBI crackdowns of the early 2000s. For more historic details visit `www.fairlight.to` and `csdb.dk`.
+* `1987`: Fairlight's formation in 1987 by Bacchus defines one of the first operational groups. Fairlight will later come to prominence in FBI crackdowns of the early 2000s. For more historic details visit `www.fairlight.to` and `csdb.dk`.
 
-*   **1990:** Elliot J. Chikofsky and James H. Cross II defined reverse engineering as “the process of analyzing a subject system to identify the system's components and their interrelationships and to create representations of the system in another form or at a higher level of abstraction. (“Reverse Engineering and Design Recovery: A Taxonomy.” *IEEE Software*, Vol. 7, Issue 1, Jan 1990).
+* `1990`: Elliot J. Chikofsky and James H. Cross II defined reverse engineering as “the process of analyzing a subject system to identify the system's components and their interrelationships and to create representations of the system in another form or at a higher level of abstraction. (“Reverse Engineering and Design Recovery: A Taxonomy.” `IEEE Software`, Vol. 7, Issue 1, Jan 1990).
 
-*   **1997:** Old Red Cracker (handle +ORC) founds the Internet-based High Cracking University (+HCU) to allow everyone to learn about cracking. +ORC released “how to crack” lessons online and authored academic papers. +HCU students had handles that began with an +.
+* `1997`: Old Red Cracker (handle `+ORC`) founds the Internet-based High Cracking University (`+HCU`) to allow everyone to learn about cracking. `+ORC` released “how to crack” lessons online and authored academic papers. `+HCU` students had handles that began with an `+`.
 
-*   **1997–2009:** The “warez scene” emerges with groups competing to be the first to release copyrighted material. Insiders (aka “suppliers”) provided early access to their groups, “crackers” broke the protections, and “couriers” distributed cracked software to FTP sites. Between 2003 and 2009, approximately 3,164 active groups were on “the scene”, competing primarily for pride and bragging rights, not money.
+* `1997–2009`: The “warez scene” emerges with groups competing to be the first to release copyrighted material. Insiders (aka “suppliers”) provided early access to their groups, “crackers” broke the protections, and “couriers” distributed cracked software to FTP sites. Between 2003 and 2009, approximately 3,164 active groups were on “the scene”, competing primarily for pride and bragging rights, not money.
 
-*   **2004:** The FBI and other countries begin raids against “the scene”. Operation Fastlink (2004) led to the conviction of 60 warez members, and Operation Site Down (2005) took down 25 warez groups.
+* `2004`: The FBI and other countries begin raids against “the scene”. Operation Fastlink (`2004`) led to the conviction of 60 warez members, and Operation Site Down (`2005`) took down 25 warez groups.
 
 The arms race between software protections and crackers continues to rage, and reverse engineering is an invaluable skill set on both sides. Crackers need to understand how a program works to manipulate it and bypass defenses. On the defensive side, it's important to understand the latest cracking techniques to develop defenses that protect intellectual property and other sensitive data.
 
 ## Legal
 
-The best way to learn is by doing. This is why this book includes labs and exercises with real-world software as well as manufactured examples and crackmes. We are not lawyers, and those with concerns should consult a lawyer. We recommend the Electronic Frontier Foundation (`www.eff.org`). Chapter 15 covers legal topics because we feel it's important for everyone to understand the US-based laws that affect this area. There are two main laws to be aware of: the Copyright Act and the Digital Millennium Copyright Act (DMCA).
+The best way to learn is by doing. This is why this book includes labs and exercises with real-world software as well as manufactured examples and crackmes. We are not lawyers, and those with concerns should consult a lawyer. We recommend the Electronic Frontier Foundation (`www.eff.org`). Chapter 15 covers legal topics because we feel it's important for everyone to understand the US-based laws that affect this area. There are two main laws to be aware of: the Copyright Act and the Digital Millennium Copyright Act (`DMCA`).
 
 The Fair Use Clause of the Copyright Act (Copyright Act, 17 U.S.C. § 107) states that reverse engineering falls under “fair use” when done for “…purposes such as criticism, comment, news reporting, teaching (including multiple copies for classroom use), scholarship, or research….” This exception is balanced against “the effect of the use upon the potential market for or value of the copyrighted work.” In essence, reverse engineering used for educational purposes is legal if you don't share or sell the cracked software.
 
-In October 2016, the DMCA also added an exception for good faith security research. It states, “accessing a computer program solely for purposes of **good-faith testing**, …where such activity is carried out in a controlled environment designed to **avoid any harm** to individuals or the public, …and is not used or maintained in a manner that facilitates copyright infringement.”
+In October 2016, the DMCA also added an exception for good faith security research. It states, “accessing a computer program solely for purposes of `good-faith testing`, …where such activity is carried out in a controlled environment designed to `avoid any harm` to individuals or the public, …and is not used or maintained in a manner that facilitates copyright infringement.”
 
 The software examined in this book and used in exercises was carefully selected to fall under the fair use and DMCA exceptions. If you are planning to reverse engineer and crack software for anything other than self-education, you should consult a lawyer. The legal considerations of reverse engineering will also be explored in greater detail in a later chapter.
 
 Software reverse engineering and cracking have a rich history, and this skill set has both offensive and defensive applications. However, it is important to understand the laws around these disciplines and ensure that your activities fall under the good-faith testing and fair use exemptions.
 
-
-
-
 这本书旨在为软件逆向工程和破解所需的技能和工具提供坚实的基础。从基础入手，书中将通过关于软件逆向工程和破解的章节，最终探讨高级攻防技术。
 
-# CHAPTER 1  
+# CHAPTER 1
 
 反编译与架构
 
@@ -337,25 +190,25 @@ Software reverse engineering and cracking have a rich history, and this skill se
 
 ## 反编译
 
-大多数程序员使用 C/C++ 或 Java 等高级编程语言，这些语言设计为易于人类阅读。但计算机是为运行机器代码而设计的，它表示二进制中的指令。
+大多数程序员使用 `C/C++` 或 `Java` 等高级编程语言，这些语言设计为易于人类阅读。但计算机是为运行机器代码而设计的，它表示二进制中的指令。
 
-*编译* 是将编程语言转换为机器代码的过程。这意味着*反编译* 是将机器代码转换回原始编程语言，恢复原始源代码的过程。当有可用的反编译工具时，这是最简便的逆向工程方法，因为源代码设计为供人类阅读和解释。本书大部分内容聚焦于反编译不可行的典型情况，但为了学习目的，需了解有时可以反编译回源代码，且在可行时应优先选择。
+`编译` 是将编程语言转换为机器代码的过程。这意味着`反编译` 是将机器代码转换回原始编程语言，恢复原始源代码的过程。当有可用的反编译工具时，这是最简便的逆向工程方法，因为源代码设计为供人类阅读和解释。本书大部分内容聚焦于反编译不可行的典型情况，但为了学习目的，需了解有时可以反编译回源代码，且在可行时应优先选择。
 
 ### 反编译何时有用？
 
 对于许多编程语言，完全反编译是不可能的。这些语言直接编译为机器代码，部分信息（如变量名）在过程中丢失。虽然高级反编译工具可以生成伪代码，但过程并不完美。
 
-然而，一些编程语言采用所谓的*即时编译*（JIT）技术。当使用 JIT 语言编写的程序“构建”时，它们会先从源代码转换为*中间语言（IL）*，而非机器代码。JIT 编译器会在程序运行时将 IL 转换为机器代码，并暂存 IL 版本的代码副本。JIT 语言的例子包括 Java、Dalvik（Android）和 .NET。
+然而，一些编程语言采用所谓的`即时编译`（`JIT`）技术。当使用 `JIT` 语言编写的程序“构建”时，它们会先从源代码转换为`中间语言（IL）`，而非机器代码。`JIT` 编译器会在程序运行时将 `IL` 转换为机器代码，并暂存 `IL` 版本的代码副本。`JIT` 语言的例子包括 `Java`、`Dalvik`（`Android`）和 `.NET`。
 
-例如，Java 因使用中间语言（Java 字节码）和 Java 虚拟机（JVM）而广泛平台无关。它将程序代码以字节码形式分发，仅在运行时编译为特定机器的机器代码。JVM 将 Java IL 转换为该机器的特定机器代码。这种方式虽然可能增加文件体积和影响性能，但极大提升了可移植性。
+例如，`Java` 因使用中间语言（`Java` 字节码）和 `Java` 虚拟机（`JVM`）而广泛平台无关。它将程序代码以字节码形式分发，仅在运行时编译为特定机器的机器代码。`JVM` 将 `Java IL` 转换为该机器的特定机器代码。这种方式虽然可能增加文件体积和影响性能，但极大提升了可移植性。
 
-JIT 编译也使得逆向工程这些应用更加容易。这些中间语言与原始源代码足够相似，可以反编译或转换回可用的源代码。源代码设计为易于人类阅读，从而更容易理解应用逻辑，并识别软件保护或其他隐藏秘密。
+`JIT` 编译也使得逆向工程这些应用更加容易。这些中间语言与原始源代码足够相似，可以反编译或转换回可用的源代码。源代码设计为易于人类阅读，从而更容易理解应用逻辑，并识别软件保护或其他隐藏秘密。
 
 ### 反编译 JIT 编程语言
 
-对于 .NET 等 JIT 语言，目前有多个免费反编译工具可用。其中 JetBrains dotPeek 是广泛使用的 .NET 反编译器，可从 `www.jetbrains.com/decompiler` 获取。Figure 1.1 展示了 dotPeek 中反编译的 .NET 代码示例。
+对于 `.NET` 等 `JIT` 语言，目前有多个免费反编译工具可用。其中 `JetBrains dotPeek` 是广泛使用的 `.NET` 反编译器，可从 `www.jetbrains.com/decompiler` 获取。`Figure 1.1` 展示了 `dotPeek` 中反编译的 `.NET` 代码示例。
 
-如图所示，反编译后的 .NET 代码易于阅读，因为中间语言在元数据中编码了大量信息，从而更准确地重构源代码。代码中包含的任何敏感信息或商业机密对逆向工程师都轻易可见。
+如图所示，反编译后的 `.NET` 代码易于阅读，因为中间语言在元数据中编码了大量信息，从而更准确地重构源代码。代码中包含的任何敏感信息或商业机密对逆向工程师都轻易可见。
 
 ![Figure 1.1: JetBrains dotPeek .NET decompiler](img/c01f001.png)
 
@@ -363,15 +216,15 @@ JIT 编译也使得逆向工程这些应用更加容易。这些中间语言与�
 
 ### 防御 JIT 语言
 
-与真正的机器代码程序不同，JIT 编译程序通常可以转换为源代码。降低逆向工程门槛使许多在 x86 领域讨论的反向工程防御措施变得不必要且过度。
+与真正的机器代码程序不同，`JIT` 编译程序通常可以转换为源代码。降低逆向工程门槛使许多在 `x86` 领域讨论的反向工程防御措施变得不必要且过度。
 
-对于可反编译的语言，常用的防御手段是混淆（obfuscation）。Figure 1.2 展示了 .NET 应用在混淆前后的示例。
+对于可反编译的语言，常用的防御手段是混淆（`obfuscation`）。`Figure 1.2` 展示了 `.NET` 应用在混淆前后的示例。
 
 图上半部分展示混淆前的代码，函数和变量名称以及字符串均清晰可辨。这些名称帮助逆向工程师理解每个函数的作用及整体应用逻辑。
 
 图下半部分展示混淆后的同一代码，函数名、变量名和字符串均被混淆，使得难以理解该函数的目的，更不用说整体应用了。
 
-另一项重要的安全最佳实践是避免在 JIT 语言中编写安全或隐私关键代码，因为此类代码易于反编译。应改用 C/C++ 等更难反编译的编译语言编写，并将其包含在 DLL 中，与使用 JIT 语言编写的不敏感代码一起链接到可执行文件中。
+另一项重要的安全最佳实践是避免在 `JIT` 语言中编写安全或隐私关键代码，因为此类代码易于反编译。应改用 `C/C++` 等更难反编译的编译语言编写，并将其包含在 `DLL` 中，与使用 `JIT` 语言编写的不敏感代码一起链接到可执行文件中。
 
 ![Figure 1.2: Obfuscation in JetBrains dotPeek](img/c01f002.png)
 
@@ -389,17 +242,17 @@ JIT 编译也使得逆向工程这些应用更加容易。这些中间语言与�
 
 本书每个实验旨在教授并提供特定技能的实践经验。本实验的练习技能包括：
 
-*   反编译
+* `反编译`
 
-*   入门级逆向工程
+* `入门级逆向工程`
 
-为掌握这些技能，您将使用 JetBrains dotPeek 对 .NET 应用进行逆向工程和修改。
+为掌握这些技能，您将使用 `JetBrains dotPeek` 对 `.NET` 应用进行逆向工程和修改。
 
 ### 要点总结
 
-反编译是理解和修改程序的强大且简便的方法。但它并非万能。C/C++ 等语言可通过 IDA 的 Hex-Rays 反编译器或 Ghidra 等工具反编译，但结果往往质量较低且难以使用。
+反编译是理解和修改程序的强大且简便的方法。但它并非万能。`C/C++` 等语言可通过 `IDA` 的 `Hex-Rays` 反编译器或 `Ghidra` 等工具反编译，但结果往往质量较低且难以使用。
 
-在开发包含敏感信息或希望防止修改的应用时，选择不易反编译的语言更为合适。例如，C/C++ 优于 .NET 语言（如 C#）用于敏感功能。
+在开发包含敏感信息或希望防止修改的应用时，选择不易反编译的语言更为合适。例如，`C/C++` 优于 `.NET` 语言（如 `C#`）用于敏感功能。
 
 ## 架构
 
@@ -409,34 +262,34 @@ JIT 编译也使得逆向工程这些应用更加容易。这些中间语言与�
 
 通常认为普通程序员无需深入理解计算机工作原理。在编写过程式语言程序时，操作系统处理所有低级操作。程序以进程形式运行，按需访问处理器、内存和文件系统。进程看似拥有独立的连续内存空间，文件仅是字节序列，用于读取和写入。
 
-
-
-
-然而，这些都不是事实，你的操作系统一直在向你隐瞒真相（为了让编程更简单）。要真正理解计算机体系结构的工作原理是反向工程师的基础。Figure 1.3 展示了构成计算机的主要组件，包括中央处理器、桥、内存和外设。
+然而，这些都不是事实，你的操作系统一直在向你隐瞒真相（为了让编程更简单）。要真正理解计算机体系结构的工作原理是反向工程师的基础。`Figure 1.3` 展示了构成计算机的主要组件，包括中央处理器、桥、内存和外设。
 
 ![Figure 1.3: Computer architecture](img/c01f003.png)
 
 **Figure 1.3**: 计算机体系结构
 
-#### *The Central Processing Unit*
+#### `The Central Processing Unit`
 
-*central processing unit (CPU)* 是计算机上处理的地方。CPU 内部包含以下组件：
+`central processing unit (CPU)` 是计算机上处理的地方。`CPU` 内部包含以下组件：
 
-*   **算术逻辑单元 (ALU)：** ALU 在计算机内执行数学运算，如加法和乘法。
 
-*   **寄存器：** 寄存器用于临时存储数据，作为 x86 指令的主要输入和输出。寄存器提供极快的单词大小数据访问，通常按名称访问。
 
-*   **控制单元：** 控制单元执行代码，包括读取指令和协调计算机内其他元素的操作。
+### 算术逻辑单元 (ALU)
+`ALU` 在计算机内执行数学运算，如加法和乘法。
 
-#### *桥和外设*
+### 寄存器
+寄存器用于临时存储数据，作为 `x86` 指令的主要输入和输出。寄存器提供极快的单词大小数据访问，通常按名称访问。
 
-CPU 通过 *总线* 与 *桥* 相连。桥的作用是将 CPU 与系统的其他组件（包括内存和 *I/O 总线*）连接起来，I/O 总线是键盘、鼠标和扬声器等外设连接到系统的地方。虽然信息通过总线流动，桥负责控制此流量，并确保通过一条总线传入的流量被路由到合适的总线上。
+### 控制单元
+控制单元执行代码，包括读取指令和协调计算机内其他元素的操作。
 
-通过 I/O 总线连接的 *外设* 使计算机能够与外部通信。这包括向显卡、键盘、鼠标、扬声器等发送和接收数据。
+#### 桥和外设
+CPU 通过 `总线` 与 `桥` 相连。桥的作用是将 CPU 与系统的其他组件（包括内存和 `I/O 总线`）连接起来，`I/O 总线` 是键盘、鼠标和扬声器等外设连接到系统的地方。虽然信息通过总线流动，桥负责控制此流量，并确保通过一条总线传入的流量被路由到合适的总线上。
 
-#### *内存和寄存器*
+通过 `I/O 总线` 连接的 `外设` 使计算机能够与外部通信。这包括向显卡、键盘、鼠标、扬声器等发送和接收数据。
 
-顾名思义，*内存* 是计算机上存储数据的地方。数据以线性字节序存储，并通过地址访问。这种设计能够对系统中存储的数据提供中等速度的访问。
+#### 内存和寄存器
+顾名思义，`内存` 是计算机上存储数据的地方。数据以线性字节序存储，并通过地址访问。这种设计能够对系统中存储的数据提供中等速度的访问。
 
 当程序需要访问内存中的数据时，CPU 会通过总线向桥发送请求，桥再转发到内存，获取指定地址的数据。请求的数据随后需要沿相同的路径返回 CPU 才能供程序使用。相比之下，寄存器物理位于 CPU 内部，因此更易于访问。
 
@@ -447,12 +300,10 @@ CPU 通过 *总线* 与 *桥* 相连。桥的作用是将 CPU 与系统的其他
 程序代码及其数据的大部分将存储在内存中。运行时，程序会将少量数据复制到寄存器中进行处理。
 
 ### Assembly
+计算机基于二进制数字工作，逻辑为开（1）或关（0）。这包括在计算机上运行的程序。所有高级语言最终都会转换为称为 `机器代码` 的位序列。机器代码定义了计算机执行以完成所需功能的指令集。
 
-计算机基于二进制数字工作，逻辑为开（1）或关（0）。这包括在计算机上运行的程序。所有高级语言最终都会转换为称为 *机器代码* 的位序列。机器代码定义了计算机执行以完成所需功能的指令集。
-
-#### *机器代码入门*
-
-每位程序员都会从“Hello, World”程序开始学习。在 x86 架构中，“Hello, World”的机器代码如下：
+#### 机器代码入门
+每位程序员都会从“Hello, World”程序开始学习。在 `x86` 架构中，“Hello, World”的机器代码如下：
 
 ```
 55 89 e5 83 e4 f0 83 ec 10 b8 b0 84 04 08 89 04 24 e8 1a ff ff ff b8 00 00 00 00 c9 c3 90
@@ -462,17 +313,16 @@ CPU 通过 *总线* 与 *桥* 相连。桥的作用是将 CPU 与系统的其他
 
 机器代码在最细粒度级别控制处理器。机器代码执行的功能包括：
 
-*   将数据在内存和寄存器之间移动
-*   控制系统总线
-*   控制 ALU、控制单元及其他组件
+* 将数据在内存和寄存器之间移动
+* 控制系统总线
+* 控制 `ALU`、控制单元及其他组件
 
 这种低层次控制意味着用机器代码编写的应用可以极其强大且高效。然而，记忆和输入各种位序列来执行任务虽然很酷，但效率低且易出错。
 
-#### *从机器代码到 Assembly*
-
+#### 从机器代码到 Assembly
 在机器代码中，一系列位代表特定操作。例如，`0x81` 或 `10000001` 是一条指令，用于将两个值相加并将结果存储在特定位置。
 
-*Assembly code*（伪代码）是机器代码的可读性版本。与记忆二进制或十六进制字符串（如 `0x81` 或 `10000001`）不同，程序员可以使用 `add` 这样的助记符。`add` 助记符映射到 `0x81`，这种简写使编程更便捷，同时保留了机器代码的所有优势。
+`Assembly code`（伪代码）是机器代码的可读性版本。与记忆二进制或十六进制字符串（如 `0x81` 或 `10000001`）不同，程序员可以使用 `add` 这样的助记符。`add` 助记符映射到 `0x81`，这种简写使编程更便捷，同时保留了机器代码的所有优势。
 
 将机器代码转换为伪代码极大地提高了可理解性。例如，前面的 “Hello, World” 示例可以转换为一系列易懂的指令。
 
@@ -492,7 +342,7 @@ CPU 通过 *总线* 与 *桥* 相连。桥的作用是将 CPU 与系统的其他
 
 如果你理解机器代码，直接在其上编写可以很有趣，且在某些情况下可能是合理的。但大多数情况下，它是低效且不切实际的。编写伪代码能够提供机器代码的所有好处，同时更加实用。
 
-代码编写完后，可以通过 *assembler*（汇编器）将其转换为机器代码，过程称为 *assembling*。已有的机器代码程序可以通过 *disassembler*（反汇编器）转换为伪代码。
+代码编写完后，可以通过 `assembler`（汇编器）将其转换为机器代码，过程称为 `assembling`。已有的机器代码程序可以通过 `disassembler`（反汇编器）转换为伪代码。
 
 许多程序员不直接编写机器代码或伪代码，而是使用更高级的语言，这些语言抽象了更多细节。例如，以下伪代码类似于许多高级过程化语言：
 
@@ -511,22 +361,18 @@ lea   eax, [edx+1*eax]
 mov   [ebp-0xc], eax  
 ```
 
-随后，使用 *assembler* 将伪代码转换为计算机可执行的机器代码：
+随后，使用 `assembler` 将伪代码转换为计算机可执行的机器代码：
 
 ```
 c7 45 fc 01 00 00 00 c7 45 f8 02 00 00 00 8b 45 f8 8b 55 fc 8d 04 02 89 45 f4
 ```
 
-#### *指令集架构和微架构*
+#### 指令集架构和微架构
+术语 `computer` 涵盖广泛的系统。智能手表和台式计算机的工作方式相似，但其内部组件可能有显著差异。
 
-术语 *computer* 涵盖广泛的系统。智能手表和台式计算机的工作方式相似，但其内部组件可能有显著差异。
+`Instruction set architecture (ISA)` 描述了程序运行的生态系统。`ISA` 定义的因素包括：
 
-*Instruction set architecture (ISA)* 描述了程序运行的生态系统。ISA 定义的因素包括：
-
-*   **寄存器：** ISA 指定处理器是有单个寄存器还是数百个。它还定义了这些寄存器的大小，是 8 位还是 128 位。
-
-
-
+* `寄存器`：`ISA` 指定处理器是有单个寄存器还是数百个。它还定义了这些寄存器的大小，是 8 位还是 128 位。
 
 # CHAPTER 2  
 
@@ -538,22 +384,27 @@ Thousands of computer architectures exist. While they all work similarly, a comp
 
 To study reverse engineering, we need to select an architecture to focus on. In this book, we'll be using x86, which was selected for a few different reasons:  
 
-*   **Ubiquity:** x86 is the most widely used assembly language, making it widely applicable for reverse engineering.  
-*   **Computer support:** x86 applications can be built, run, and reverse engineered on any desktop, laptop, or server.  
-*   **Market share:** x86 is the core of the major operating systems (Windows, Linux, and macOS), so it is used in billions of systems.  
+* `Ubiquity`: x86 is the most widely used assembly language, making it widely applicable for reverse engineering.  
+
+* `Computer support`: x86 applications can be built, run, and reverse engineered on any desktop, laptop, or server.  
+
+* `Market share`: x86 is the core of the major operating systems (Windows, Linux, and macOS), so it is used in billions of systems.  
 
 The x86 architecture has been around for decades and has evolved significantly over the years. It was first introduced in 1974 by Intel, and some of the main milestones in the history of x86 include the following:  
 
-*   **Intel 8080:** 8-bit microprocessor, introduced in 1974  
-*   **Intel 8086:** 16-bit microprocessor, introduced in 1978  
-*   **Intel 80386:** 32-bit microprocessor, introduced in 1985  
-*   **Intel Prescott, AMD Opteron, and Athlon 64:** 64-bit microprocessor, introduced in 2003/2004  
+* `Intel 8080`: 8-bit microprocessor, introduced in 1974  
+
+* `Intel 8086`: 16-bit microprocessor, introduced in 1978  
+
+* `Intel 80386`: 32-bit microprocessor, introduced in 1985  
+
+* `Intel Prescott`, `AMD Opteron`, and `Athlon 64`: 64-bit microprocessor, introduced in 2003/2004  
 
 Over its nearly 50-year history, the x86 architecture has regularly added new features while maintaining backward compatibility. Even if a feature was determined to be unused, it was never removed from the system. As a result, programs written for the Intel 8086 processor released in 1978 can still run on the latest x86 chips with no modifications.  
 
 This focus on backward compatibility has created an immense, complex, and interesting architecture. The latest Intel Software Developer's manual (`www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html`) is more than 5,000 pages long and only begins to scratch the surface of what this architecture can do. This book focuses on understanding the basics of x86, which is all that is needed to read, write, and manipulate most x86 code.  
 
-As the x86 architecture has changed, the term *x86* has become an umbrella term for all of the architectures that have evolved from the Intel 8086 16-bit architecture. This includes the Intel 80286 architecture, which contains both 16-bit and 32-bit architectures, and the Intel 80886 architecture, which adds a 64-bit architecture. The term *x64* specifically refers to the 64-bit version of x86.  
+As the x86 architecture has changed, the term `x86` has become an umbrella term for all of the architectures that have evolved from the Intel 8086 16-bit architecture. This includes the Intel 80286 architecture, which contains both 16-bit and 32-bit architectures, and the Intel 80886 architecture, which adds a 64-bit architecture. The term `x64` specifically refers to the 64-bit version of x86.  
 
 ## x86 Assembly: Data, Modes, Registers, and Memory Access  
 
@@ -561,60 +412,59 @@ Most software reverse engineering requires disassembling a compiled executable a
 
 While a few assembly languages exist, x86 is one of the most widely used. This chapter introduces some of the key concepts of x86 assembly, providing a foundation for later chapters.  
 
+这本书将在 `32-bit x86` 架构中展示示例。`32-bit x86` 的所有概念都能精确对应到 `x64`。在学习时，使用 `32 bits` 进行示例比 `64` 更容易上手。学完本书中的 `32-bit x86` 后，你会立刻能够阅读 `x64-bit assembly` 并理解它。不过，你的眼睛会感谢自己不必时刻盯着 `64 bits`，因为即使是 `32 bits` 也已经有些难以长时间凝视。因此，不要因为示例使用的是 `32-bit` 而对此产生疑虑，认为它过时或必须立即专注于 `64-bit`。我们都先学习 `32-bit`，并且我们在软件破解领域积累了丰富经验，可以确信：如果你先建立坚实的 `32-bit` 基础，`64-bit` 不过是几个寄存器名称和更长的数值而已。
+
+## Assembly Syntax  
+
+在数千种可能的计算机架构中选择 `x86` 很重要，但这还不够。虽然指令集架构（ISA）定义了寄存器、数据格式和机器指令等因素，但它并不指定语法。  
+
+只要一个组装语言遵循寄存器、寻址等规则，并定义正确的指令集，它就是一个合法的 `x86` 语言。例如，一个 `x86` 语言必须包含乘法操作。但其助记符（mnemonic）可以是 `mul`、`MUL`、`multiply`，或者在任何语言中出现的其他变体。  
+
+组装语言的语法完全由组装器（assembler）决定，一般情况下，`x86` 组装语言也没有统一的语法规范。  
+
+这本书专注于 `32-bit` 架构。在传统的 `32-bit` 架构中，这意味着一个词是 `32 bits`。但这只是 `x86` 架构的一个特性。由于 `x86` 保持了与原始 `16-bit` 架构的向后兼容性，`x86` 中一个词是 `16 bits`，而双字是 `32 bits`。  
+
+### Working with Binary Values  
+
+逆向工程通常涉及处理跨多字节的大型二进制数。在处理这些数字时，理解诸如零扩展、位和字节意义以及字节序（endianness）等概念是正确解释二进制字符串所代表的数值所必需。  
+
+#### Zero-Extension and Readability  
+
+二进制值通常会进行 `零填充` 或 `零扩展` 到架构的字长。在 `32-bit` 架构上，这意味着在值左侧添加 0，使其长度为 32 位。例如，值 `11001[2]` 会被零填充为 `00000000 00000000 00000000 00011001[2]`。  
+
+注意，位也会被分组为四位或八位，以提高可读性。这就像在十进制中，有时会在每三位数字后加逗号（即 1,000 而不是 1000）。当数值以十六进制表示时，也会按字节分组，每字节两个字符。例如，值 `4D2[16]`（等于 `1234[10]`）可以写作 `04[16] D2[16]`。  
+
+#### Bit and Byte Significance  
+
+二进制数中的位和字节可以根据它们在数值中的相对权重进行标记。Figure 2.3 展示了一些常见的标签。  
+
+![Figure 2.3: Bit and byte significance labels](img/c02f003.png)  
+
+**Figure 2.3**: Bit and byte significance labels  
+
+在值 `00000000 00000000 00000000 00011001[2]` 中，最低有效位（LSB）位于最右侧，其值为 1。最高有效位（MSB）位于最左侧，其值为 0。在将二进制转换为十进制时，MSB 会乘以 `2³¹`，而 LSB 会乘以 `2⁰`。  
+
+除了 MSB 和 LSB，还有最低有效字节和最高有效字节的概念。在值 `00000000 00000000 00000000 00011001[2]` 中，最低有效字节的值为 `00011001[2]`，而最高有效字节的值为 `00000000[2]`。  
+
+位和字节也可以根据它们到值两端的距离进行标记。例如，靠近 LSB 的位和字节被称为低位（low-order），而靠近 MSB 的位和字节被称为高位（high-order）。  
+
+#### Endianness  
+
+在内存中，数据以字节存储。然而，许多数据类型使用多个字节。例如，一个 `int` 是 32 位或 4 字节。  
+
+`Endianness` 描述这些字节在内存中的存储顺序。在 `小端序`（little-endian）系统中，最低有效字节先存储（位于最低地址）。在 `大端序`（big-endian）系统中，最高有效字节先存储（位于最低地址）。  
+
+例如，考虑值 `1337[10]`，其二进制表示为 `0000 0000 0000 0000 0000 0101 0011 1001[2]`，或十六进制表示为 `0x00000539`。Figure 2.4 展示了这些值在内存中的存储方式。  
+
+![Figure 2.4: Endianness](img/c02f004.png)  
+
+**Figure 2.4**: Endianness  
+
+无论系统的字节序如何，与变量关联的地址是其使用的最低地址或 `基地址`。在小端序和大端序系统中，这将是地址 1828。  
+
+这本书专注于 `x86` 架构，它是小端序。因此，数据块的最低有效字节将位于基地址偏移 0 处。你会发现这对人类来说“反直觉”，因为我们习惯于大端序。
 
 
-这本书将在`32-bit x86`架构中展示示例。`32-bit x86`的所有概念都能精确对应到`x64`。在学习时，使用`32 bits`进行示例比`64`更容易上手。学完本书中的`32-bit x86`后，你会立刻能够阅读`x64-bit assembly`并理解它。不过，你的眼睛会感谢自己不必时刻盯着`64 bits`，因为即使是`32 bits`也已经有些难以长时间凝视。因此，不要因为示例使用的是`32-bit`而对此产生疑虑，认为它过时或必须立即专注于`64-bit`。我们都先学习`32-bit`，并且我们在软件破解领域积累了丰富经验，可以确信：如果你先建立坚实的`32-bit`基础，`64-bit`不过是几个寄存器名称和更长的数值而已。
-
-## Assembly Syntax
-
-在数千种可能的计算机架构中选择`x86`很重要，但这还不够。虽然指令集架构（ISA）定义了寄存器、数据格式和机器指令等因素，但它并不指定语法。
-
-只要一个组装语言遵循寄存器、寻址等规则，并定义正确的指令集，它就是一个合法的`x86`语言。例如，一个`x86`语言必须包含乘法操作。但其助记符（mnemonic）可以是`mul`、`MUL`、`multiply`，或者在任何语言中出现的其他变体。
-
-组装语言的语法完全由组装器（assembler）决定，一般情况下，`x86`组装语言也没有统一的语法规范。
-
-
-这本书专注于`32-bit`架构。在传统的`32-bit`架构中，这意味着一个词是`32 bits`。但这只是`x86`架构的一个特性。由于`x86`保持了与原始`16-bit`架构的向后兼容性，`x86`中一个词是`16 bits`，而双字是`32 bits`。
-
-### Working with Binary Values
-
-逆向工程通常涉及处理跨多字节的大型二进制数。在处理这些数字时，理解诸如零扩展、位和字节意义以及字节序（endianness）等概念是正确解释二进制字符串所代表的数值所必需。
-
-#### *Zero-Extension and Readability*
-
-二进制值通常会进行`零填充`或`零扩展`到架构的字长。在`32-bit`架构上，这意味着在值左侧添加 0，使其长度为 32 位。例如，值`11001[2]`会被零填充为`00000000 00000000 00000000 00011001[2]`。
-
-注意，位也会被分组为四位或八位，以提高可读性。这就像在十进制中，有时会在每三位数字后加逗号（即 1,000 而不是 1000）。当数值以十六进制表示时，也会按字节分组，每字节两个字符。例如，值`4D2[16]`（等于`1234[10]`）可以写作`04[16] D2[16]`。
-
-#### *Bit and Byte Significance*
-
-二进制数中的位和字节可以根据它们在数值中的相对权重进行标记。Figure 2.3 展示了一些常见的标签。
-
-![Figure 2.3: Bit and byte significance labels](img/c02f003.png)
-
-**Figure 2.3**: Bit and byte significance labels
-
-在值`00000000 00000000 00000000 00011001[2]`中，最低有效位（LSB）位于最右侧，其值为 1。最高有效位（MSB）位于最左侧，其值为 0。在将二进制转换为十进制时，MSB 会乘以`2³¹`，而 LSB 会乘以`2⁰`。
-
-除了 MSB 和 LSB，还有最低有效字节和最高有效字节的概念。在值`00000000 00000000 00000000 00011001[2]`中，最低有效字节的值为`00011001[2]`，而最高有效字节的值为`00000000[2]`。
-
-位和字节也可以根据它们到值两端的距离进行标记。例如，靠近 LSB 的位和字节被称为低位（low-order），而靠近 MSB 的位和字节被称为高位（high-order）。
-
-#### *Endianness*
-
-在内存中，数据以字节存储。然而，许多数据类型使用多个字节。例如，一个`int`是 32 位或 4 字节。
-
-Endianness 描述这些字节在内存中的存储顺序。在*小端序*（little-endian）系统中，最低有效字节先存储（位于最低地址）。在*大端序*（big-endian）系统中，最高有效字节先存储（位于最低地址）。
-
-例如，考虑值`1337[10]`，其二进制表示为`0000 0000 0000 0000 0000 0101 0011 1001[2]`，或十六进制表示为`0x00000539`。Figure 2.4 展示了这些值在内存中的存储方式。
-
-![Figure 2.4: Endianness](img/c02f004.png)
-
-**Figure 2.4**: Endianness
-
-无论系统的字节序如何，与变量关联的地址是其使用的最低地址或*基地址*。在小端序和大端序系统中，这将是地址 1828。
-
-这本书专注于`x86`架构，它是小端序。因此，数据块的最低有效字节将位于基地址偏移 0 处。你会发现这对人类来说“反直觉”，因为我们习惯于大端序。
 
 ## Registers
 
@@ -625,11 +475,8 @@ Endianness 描述这些字节在内存中的存储顺序。在*小端序*（litt
 寄存器的主要限制是数量有限，且整个程序共享这些寄存器。如果程序用完寄存器，就需要将信息存储到内存中，这会对性能产生负面影响。由于寄存器数量有限，正常执行周期如下：
 
 *   从内存获取数据并存储到寄存器中
-
 *   对数据进行操作
-
 *   将数据保存回内存
-
 *   重复
 
 ### Registers in x86
@@ -637,7 +484,6 @@ Endianness 描述这些字节在内存中的存储顺序。在*小端序*（litt
 如前所述，在架构概述中提到，寄存器是 CPU 内部非常快速的操作名称和位置。所有寄存器都可以分为两类。
 
 *   **通用寄存器（GPRs）**：用于存储数据、地址等，且可直接操作
-
 *   **专用寄存器（SPRs）**：用于存储程序状态
 
 x86 架构定义了众多寄存器，如 Figure 2.5 所示。但其中许多是 CPU 自用的，因此只需了解其中一部分即可。
@@ -646,49 +492,47 @@ x86 架构定义了众多寄存器，如 Figure 2.5 所示。但其中许多是 
 
 **Figure 2.5**: x86 registers ¶ Source: Liam McSherry/ wikimedia Commons /CC BY-SA 3.0.
 
-#### *x86 General-Purpose Registers*
+#### x86 General-Purpose Registers
 
 GPRs 承担应用的大部分工作，存储从内存中获取的值、进行数据操作、存储计算结果。以下是 x86 中最重要的 GPRs，每个都可存储 32 位数据。每个累加器寄存器都有其传统用途和命名来源；然而，GPRs 可用于任何目的，你可以在任何寄存器中存储计数器，而不仅仅是`ecx`寄存器。
 
 ##### `eax`
 
-*`eax`*是“累加器”寄存器。其名称源于其常用于保存算术操作的结果。例如，程序可能执行`eax += ebx`。
+`eax`是“累加器”寄存器。其名称源于其常用于保存算术操作的结果。例如，程序可能执行`eax += ebx`。
 
 ##### `ebx`
 
-*`ebx`*是“基”寄存器。它常用于保存变量所在内存块的基地址。例如，`[ebx + 5]`可用于访问数组的第五个元素。
+`ebx`是“基”寄存器。它常用于保存变量所在内存块的基地址。例如，`[ebx + 5]`可用于访问数组的第五个元素。
 
 ##### `ecx`
 
-*`ecx`*是“计数”寄存器，传统上用于计数。例如，*`ecx`*可能用于跟踪循环的当前迭代次数。在命令`(i=0; i<10; i++)`中，变量*i*很可能存储在`ecx`寄存器中。
+`ecx`是“计数”寄存器，传统上用于计数。例如，`ecx`可能用于跟踪循环的当前迭代次数。在命令`(i=0; i<10; i++)`中，变量`i`很可能存储在`ecx`寄存器中。
 
 ##### `edx`
 
-*`edx`*是“数据”寄存器。其名称源于其常用于保存数据。例如，应用可能包含指令`sub edx, 7`。
+`edx`是“数据”寄存器。其名称源于其常用于保存数据。例如，应用可能包含指令`sub edx, 7`。
 
 ##### `esi`
 
-*`esi`*是“源索引”寄存器。它传统上用于存储源数组的索引。例如，在命令`array[i] = array[k]`中，*`k`*的值可能存储在 esi 中。
+`esi`是“源索引”寄存器。它传统上用于存储源数组的索引。例如，在命令`array[i] = array[k]`中，`k`的值可能存储在`esi`中。
 
 ##### `edi`
 
-*`edi`*是“目的索引”寄存器。它用于存储目的数组的索引。例如，在命令`array[i] = array[k]`中，*`i`*的值可能存储在 edi 中。
+`edi`是“目的索引”寄存器。它用于存储目的数组的索引。例如，在命令`array[i] = array[k]`中，`i`的值可能存储在`edi`中。
 
 ##### `ebp`
 
-*`ebp`*是“帧指针”寄存器。其用途是存储当前栈帧的基地址。程序栈和栈帧的概念将在后续章节中探讨。
+`ebp`是“帧指针”寄存器。其用途是存储当前栈帧的基地址。程序栈和栈帧的概念将在后续章节中探讨。
 
 ##### `esp`
 
-*`esp`*是“栈指针”寄存器。它存储当前栈帧的栈顶地址。
+`esp`是“栈指针”寄存器。它存储当前栈帧的栈顶地址。
 
-#### *Special-Purpose Registers*
+#### Special-Purpose Registers
 
 SPRs 设计用于特定任务，且不能直接修改。例如，指令`mov eip, 1`（使用 SPR）将无法编译，而`mov eax, 1`（使用 GPR）则可以。
 
 ##### `eip`
-
-
 
 `eip` 是“指令指针”寄存器。它存储下一个要执行的指令的地址。
 
@@ -708,11 +552,11 @@ SPRs 设计用于特定任务，且不能直接修改。例如，指令`mov eip,
 
 **Figure 2.6**: Pieces of the `eax` register
 
-#### *64-Bit Registers*
+### 64-Bit Registers
 
 在 64 位 x86 中，所有指令和行为与 32 位 x86 相同。然而，64 位架构拥有更多且更大的寄存器。
 
-Figure 2.7 展示了 64 位 x86 中常用的寄存器。除了描述不同的 32 位寄存器外，64 位架构还额外包含八个标记为 r8‑r15 的寄存器。
+Figure 2.7 展示了 64 位 x86 中常用的寄存器。除了描述不同的 32 位寄存器外，64 位架构还额外包含八个标记为 `r8`‑`r15` 的寄存器。
 
 所有 64 位寄存器的大小都大于它们 32 位 counterparts。对于 32 位 x86 中存在的寄存器（如 `eax`），其完整的 64 位 counterpart 将 `e` 替换为 `r`，从而得到 `rax`。该寄存器的低 32 位仍可通过 32 位名称访问，而 `ax`、`al` 和 `ah` 的使用方式保持不变。
 
@@ -756,9 +600,7 @@ mov dword[100], 1
 
 在 Intel x86 语法中，内存地址使用方括号 `[]` 表示。例如，`[0x1234]` 表示程序应访问地址 `0x1234` 处的内存。
 
-然而，内存地址的表示不限于使用立即值（如 `0x1234`）。x86 语言支持多种 *地址模式*，[]<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk> 
- to[^.] 3ouS, being [2] ah., 1,, [ 学习 学 [Students]]] , [ the students have,, , [ 1 , [User...,]  - [ [to]]] being the [ [1]]]  [ [ [to]]] being the [ [1 (]] being, [ [1(]] being ** [ [1 (]] to! [ [1]]] being [ [ [1 (]]  [ [[1]]] [[[content]]] [[[ [1]]] [] [ [1]]] " [ [ [学]** [学 [nUH_" or not? ]" then you have to **_quit_** the [content]...
-
+然而，内存地址的表示不限于使用立即值（如 `0x1234`）。x86 语言支持多种地址模式。
 
 `Base + displacement addressing` 或 `based addressing` 使用寄存器值与偏移量的组合来指示地址。此模式常用于访问数组。因此，在一种语言中，如果你有 `*myList[8]`，你实际上是从 `*myList` 的基地址开始访问八个元素。在汇编中，例如，`[eax + 8]` 表示从寄存器 `*eax` 中存储的数组基地址开始的 8 个字节。
 
@@ -768,11 +610,11 @@ mov dword[100], 1
 
 在这些情况下，`indexed addressing` 可能是更好的选择。Indexed addressing 使用索引寄存器、比例因子和偏移量来指定地址。比例因子必须始终是 1、2、4 或 8。
 
-#### *Example: Arrays*
+#### Example: Arrays
 
 让我们定义一个整数数组，`int x[100];`，它声明了一个包含 100 个 `int` 的数组。在内存中，数组中的每个值都存储在相对于基地址的特定偏移量处。这个偏移量由数组元素的大小决定，例如 32 位或 4 字节的 `int`。
 
-假设该 `int` 数组的起始偏移量为 `0x1000`。下面的指令会将数组中的第 *`n`* 个元素移动到 `*eax*` 中，前提是 *`n`* 存储在 `*ebx*`：
+假设该 `int` 数组的起始偏移量为 `0x1000`。下面的指令会将数组中的第 `n` 个元素移动到 `eax` 中，前提是 `n` 存储在 `ebx`：
 
 ```
 mov eax, [ ebx * 4 + 0x1000]
@@ -782,15 +624,15 @@ mov eax, [ ebx * 4 + 0x1000]
 
 `Based-index addressing` 结合了 indexed addressing 和 `base + displacement addressing` 的元素。它使用基寄存器、索引寄存器、比例因子（1、2、4 或 8）以及偏移量来指定地址。
 
-例如，考虑 `[ ebx + edi * 4 + 0x1000 ]`。该地址包含存储在 `*ebx*` 中的基值、存储在 `*edi*` 中的索引值，以及偏移量 `0x1000`。
+例如，考虑 `[ ebx + edi * 4 + 0x1000 ]`。该地址包含存储在 `ebx` 中的基值、存储在 `edi` 中的索引值，以及偏移量 `0x1000`。
 
-#### *Example: Structs*
+#### Example: Structs
 
 `Based-index addressing` 非常适合访问嵌套数据类型的元素。例如，考虑 C 语句 `struct { int i; short a[4]; } s;`。这创建了一个包含多个字段的结构体，其中包括一个数组。
 
-每个结构体内的元素都存储在特定的偏移量处，这意味着数组 *`a`* 有一个特定的偏移量或基地址。然而，数组 *`a`* 中的元素也存储在相对于这个基地址的不同偏移量处。
+每个结构体内的元素都存储在特定的偏移量处，这意味着数组 `a` 有一个特定的偏移量或基地址。然而，数组 `a` 中的元素也存储在相对于这个基地址的不同偏移量处。
 
-假设结构体 `s` 的基地址存储在 `*ebx*` 中，而数组 `a` 距离该基地址 4 字节。下面的指令将在 *`n`* 存储在 `*ecx*` 时，访问数组 *`a`* 中的第 *`n`* 个元素：
+假设结构体 `s` 的基地址存储在 `ebx` 中，而数组 `a` 距离该基地址 4 字节。下面的指令将在 `n` 存储在 `ecx` 时，访问数组 `a` 中的第 `n` 个元素：
 
 ```
 mov eax, [ebx + 2 * ecx + 4]
@@ -804,9 +646,7 @@ mov eax, [ebx + 2 * ecx + 4]
 
 本章探讨了一些 x86 汇编的关键概念，包括数据表示、汇编语法以及用于数据访问和存储的寄存器和内存地址。
 
-# CHAPTER 3  
-
-x86 Assembly: Instructions
+# CHAPTER 3: x86 Assembly: Instructions
 
 破解和逆向工程涉及阅读、编写和修改汇编代码。本书的重点是 x86 汇编语言。
 
@@ -814,13 +654,15 @@ x86 Assembly: Instructions
 
 ## x86 Instruction Format
 
-Mnemonics 用于使 x86 汇编代码更易阅读。每个这些助记符指令都会被组装成控制处理器的机码。因此，处理器并不认识助记符，只有机码。例如，助记符 `add` 会组装成机码值 0x04。
+Mnemonics 用于使 x86 汇编代码更易阅读。每个这些助记符指令都会被组装成控制处理器的机码。因此，处理器并不认识助记符，只有机码。例如，助记符 `add` 会组装成机码值 `0x04`。
 
 x86 中，指令具有特定的格式。一个简单的 x86 指令示例是：
 
 ```
 add eax, 1
 ```
+
+
 
 在这条指令中，`add` 是用于指示处理器执行什么操作的助记符。该指令还包含一个或多个操作数，指示用于操作的数据。本例中，操作数是寄存器 `eax` 和立即数 1。在正常情况下，x86 指令最多可以有三个操作数（如果有的话）。虽然有 VEX 前缀的扩展允许最多四个操作数，但本文不涉及此部分。
 
@@ -832,61 +674,48 @@ x86 指令的操作数可以是寄存器、立即数或内存地址。寄存器�
 
 x86 汇编语言包含数百条不同的指令。以下是其中一些最常用的：
 
-*   算术 
+### 算术
 
-    *   `add`
+*   `add`
+*   `sub`
+*   `mul`
+*   `inc`
+*   `dec`
 
-    *   `sub`
+### 位操作
 
-    *   `mul`
+*   `and`
+*   `or`
+*   `xor`
+*   `not`
 
-    *   `inc`
+### 栈
 
-    *   `dec`
+*   `call`
+*   `return`
+*   `push`
+*   `pop`
 
-*   位操作 
+### 数据移动
 
-    *   `and`
+*   `mov`
 
-    *   `or`
+### 执行流程
 
-    *   `xor`
+*   `jmp`
+*   条件跳转
 
-    *   `not`
+### 比较
 
-*   栈 
+*   `test`
+*   `cmp`
 
-    *   `call`
+### 其他
 
-    *   `return`
+*   `lea`
+*   `nop`
 
-    *   `push`
-
-    *   `pop`
-
-*   数据移动： 
-
-    *   `mov`
-
-*   执行流程 
-
-    *   `jmp`
-
-    *   条件跳转
-
-*   比较 
-
-    *   `test`
-
-    *   `cmp`
-
-*   其他 
-
-    *   `lea`
-
-    *   `nop`
-
-虽然这看起来很多，但考虑编程语言中常用的操作符（`+`, `−`, `*`, `/`, `%`, `&&`, `||`, `&`, `|`, `^`, `!`, `~`, `<`, `>`, `>=`, `<=`, `==`, `.`, `->` 等）以及主要关键字（`if`, `else`, `switch`, `while`, `do`, `case`, `break`, `continue`, `for`, 等），在汇编中实现这些行为需要很强的能力。
+虽然这看起来很多，但考虑编程语言中常用的操作符（`+`, `−`, `*`, `/`, `%`, `&&`, `||`, `&`, `|`, `^`, `!`, `~`, `<`, `>`, `>=`, `<=`, `==`, `.`, `->` 等）以及主要关键字（`if`, `else`, `switch`, `while`, `do`, `case`, `break`, `continue`, `for` 等），在汇编中实现这些行为需要很强的能力。
 
 事实上，没有人能记住所有的 x86 指令，也没人需要记住（除非想给朋友们一个惊喜）。完整的 x86 指令列表可在 `http://ref.x86asm.net/coder32.html` 找到，需要时可以查询任何指令的详细信息。
 
@@ -900,93 +729,99 @@ x86 汇编语言包含数百条不同的指令。以下是其中一些最常用�
 
 在使用 `mov` 和类似指令时，需要记住变量名称会影响移动的数据大小。例如，指令 `mov eax, [0x100]` 会将 32 位值移动到 `eax`，而指令 `mov dx, [0x100]` 会将 16 位值移动到 `dx`。
 
-
-
 `mov` 是一个极其通用的操作数，是记忆法（mnemonics）相对于机器代码（machine code）力量的一个很好的例子。`mov` 可以以多种不同的方式使用，如图 Figure 3.1 所示，每种方式对应不同的机器代码，具体取决于使用的两个操作数。然而，所有这些不同的变体在助记符（mnemonic）层面都表示为 `mov`。汇编器的任务是将助记符翻译成正确的机器代码。
 
 ![Figure 3.1: mov instructions](img/c03f001.png)
 
 **Figure 3.1**: `mov` 指令
 
-#### ************Hands-on Example************
+#### Hands-on Example
 
-下面的伪代码如何在汇编中编写？假设变量 *`i`* 位于地址 `100`，*`j`* 位于地址 `200`。
+下面的伪代码如何在汇编中编写？假设变量 `i` 位于地址 `100`，`j` 位于地址 `200`。
 
-```
+```c
 int i = 42, j = i;
 ```
 
 这行伪代码可以被编译成三条 x86 指令。
 
-```
+```asm
 mov [100], 42
 mov eax, [100]
 mov [200], eax
 ```
 
-注意，寄存器 *`eax`* 用于暂存从内存地址 `100` 复制到内存地址 `200` 的值。原因是单条指令无法同时进行两次内存访问，必须使用寄存器（如 *`eax`*）进行临时存储。
+注意，寄存器 `eax` 用于暂存从内存地址 `100` 复制到内存地址 `200` 的值。原因是单条指令无法同时进行两次内存访问，必须使用寄存器（如 `eax`）进行临时存储。
 
 从代码直观上看，直接用立即数 `42` 加载地址 `200` 似乎更合理，而不是分两步从地址 `100` 加载。但编译器不会也不能这么做。
 
-原因是多线程环境的可能性。如果系统上有其他线程运行，值在 `100` 位置的内容可能在“赋值为 42”和“将其值写入 200”之间被修改。从 `100` 读取值而非使用立即数，可以确保变量 *`j`* 在 `200` 位置得到最新的 *`i`* 存储值。
+原因是多线程环境的可能性。如果系统上有其他线程运行，值在 `100` 位置的内容可能在“赋值为 42”和“将其值写入 200”之间被修改。从 `100` 读取值而非使用立即数，可以确保变量 `j` 在 `200` 位置得到最新的 `i` 存储值。
 
 ### inc, dec
 
 `inc` 和 `dec` 是 x86 指令，用于分别对指定值加 1 或减 1，等价于传统代码中的 `i++` 或 `i--`。
 
-这两条指令只接受一个操作数，可以是寄存器或内存地址。例如，`inc eax` 使 *`eax`* 登记器中的值加 1，而 `dec [0x12345678]` 使内存地址 `0x12345678` 中的值减 1。
+这两条指令只接受一个操作数，可以是寄存器或内存地址。例如，`inc eax` 使 `eax` 登记器中的值加 1，而 `dec [0x12345678]` 使内存地址 `0x12345678` 中的值减 1。
 
 ### add, sub
 
-`add` 和 `sub` 指令分别对指定值进行加法或减法运算，它们接受两个操作数。例如，`add destination, value` 表示对 *`destination`* 加上 *`value`*，结果存回 *`destination`*。这意味着 *`destination`* 的原始值参与计算，但会被覆盖以保存结果。两个操作数的大小必须相同。例如，`add eax, ebx` 是合法的（32 位 + 32 位），而 `sub eax, bx` 不合法（32 位减 16 位）。
+`add` 和 `sub` 指令分别对指定值进行加法或减法运算，它们接受两个操作数。例如，`add destination, value` 表示对 `destination` 加上 `value`，结果存回 `destination`。这意味着 `destination` 的原始值参与计算，但会被覆盖以保存结果。两个操作数的大小必须相同。例如，`add eax, ebx` 是合法的（32 位 + 32 位），而 `sub eax, bx` 不合法（32 位减 16 位）。
 
-在使用 `add` 和 `sub` 时必须注意操作数的大小。例如，`sub ecx, [100]` 暗示 32 位值（因为使用 *`ecx`* 作为目的寄存器），但 `add dword [edx], 100` 必须加 `dword` 关键字，因为 *`edx`* 是 32 位指针，表明地址长度为 32 位，但并未说明要修改的数据大小。
+在使用 `add` 和 `sub` 时必须注意操作数的大小。例如，`sub ecx, [100]` 暗示 32 位值（因为使用 `ecx` 作为目的寄存器），但 `add dword [edx], 100` 必须加 `dword` 关键字，因为 `edx` 是 32 位指针，表明地址长度为 32 位，但并未说明要修改的数据大小。
 
 ### mul
 
-`mul` 执行无符号整数乘法，但其行为略不寻常：只接受一个操作数，却隐式使用另外两个寄存器。语法为 `mul operand`，其中 *`operand`* 可以是寄存器或内存地址。该操作将 *`eax`* 的值与 *`operand`* 的值相乘。
+`mul` 执行无符号整数乘法，但其行为略不寻常：只接受一个操作数，却隐式使用另外两个寄存器。语法为 `mul operand`，其中 `operand` 可以是寄存器或内存地址。该操作将 `eax` 的值与 `operand` 的值相乘。
 
-乘法结果存放在 *`edx:eax`* 中，`edx` 保存高 32 位，`eax` 保存低 32 位。即使结果小于 32 位、`edx` 仍会被 `mul` 修改（通常为 0）。`mul` 的特点是可以在 32 位运算中得到 64 位的输出（`edx:eax`）。
+乘法结果存放在 `edx:eax` 中，`edx` 保存高 32 位，`eax` 保存低 32 位。即使结果小于 32 位、`edx` 仍会被 `mul` 修改（通常为 0）。`mul` 的特点是可以在 32 位运算中得到 64 位的输出（`edx:eax`）。
 
-`mul eax` 的示例会对 *`eax`* 中的 32 位值进行平方。若 *`operand`* 为内存地址，则乘数的长度可变。例如，`mul dword [0x555]` 乘以地址 `0x555` 中的 32 位值，而 `mul byte [0x123]` 则使用地址 `0x123` 中的 8 位值进行乘法。
+`mul eax` 的示例会对 `eax` 中的 32 位值进行平方。若 `operand` 为内存地址，则乘数的长度可变。例如，`mul dword [0x555]` 乘以地址 `0x555` 中的 32 位值，而 `mul byte [0x123]` 则使用地址 `0x123` 中的 8 位值进行乘法。
 
 ### div
 
-`div` 执行无符号除法，和 `mul` 类似，只接受一个操作数，并隐式修改 *`eax`* 与 *`edx`* 寄存器。商存放在 *`eax`*，余数存放在 *`edx`*。例如，5 除以 2 的商为 2，余数为 1。
+`div` 执行无符号除法，和 `mul` 类似，只接受一个操作数，并隐式修改 `eax` 与 `edx` 寄存器。商存放在 `eax`，余数存放在 `edx`。例如，5 除以 2 的商为 2，余数为 1。
 
-`div` 与 `mul` 同样使用 *`eax`* 和 *`edx`* 作为输入，输出格式相同：高 32 位在 *`edx`*，低 32 位在 *`eax`*。即使余数为 0，`edx` 仍会被 `div` 修改。
+`div` 与 `mul` 同样使用 `eax` 和 `edx` 作为输入，输出格式相同：高 32 位在 `edx`，低 32 位在 `eax`。即使余数为 0，`edx` 仍会被 `div` 修改。
 
 `div eax` 的示例相当于 `eax, edx = edx:eax / eax`，操作数是 32 位寄存器，但也可以使用不同长度的内存地址作为除数。
 
-#### ************Hands-on Example************
+#### Hands-on Example
 
 要计算 `123/4` 的余数，需要四条汇编指令：
 
-```
+```asm
 mov eax, 123  ; 将被除数的低 32 位加载到 eax
 mov edx, 0    ; 清空 edx，存放被除数的高 32 位
 mov ecx, 4    ; 将除数加载到 ecx，因为 div 不能直接使用立即数
 div ecx       ; 执行除法
 ```
 
-执行完毕后，商保存在 *`eax`*，余数保存在 *`edx`*。
+执行完毕后，商保存在 `eax`，余数保存在 `edx`。
 
 ### and, or, xor
 
 x86 标准提供了几种布尔运算指令：`and`、`or`、`xor`，它们均接受两个操作数。下面的表格展示了这三种运算的真值表。输入选项在表格的上方和左侧边缘。例如，要计算 1 AND 1，找到第 1 列与第 1 行的交点，结果为 1。因此，1 AND 1 等于 1。
 
-| AND || 1 || 0 ||  || OR || 1 || 0 ||  || XOR || 1 || 0 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| **1** || 1 || 0 ||  || **1** || 1 || 1 ||  || **1** || 0 || 1 |
-| **0** || 0 || 0 ||  || **0** || 1 || 0 ||  || **0** || 1 || 0 |
+| AND | 1 | 0 |
+| --- | --- | --- |
+| 1 | 1 | 0 |
+| 0 | 0 | 0 |
+
+| OR | 1 | 0 |
+| --- | --- | --- |
+| 1 | 1 | 1 |
+| 0 | 1 | 0 |
+
+| XOR | 1 | 0 |
+| --- | --- | --- |
+| 1 | 0 | 1 |
+| 0 | 1 | 0 |
 
 这三种运算的语法相同：`mnemonic destination, source`。例如，`and` 的语法是 `and destination, source`。和 `add` 类似，`destination` 必须是寄存器或内存地址，而 `source` 可以是寄存器、内存地址或立即数。同时，`destination` 参与运算并被覆盖以保存结果。
 
-布尔运算可用于多种目的。例如，`or eax, 0xffffffff` 可快速将 *`eax`* 设为全 1；`and dword [0xdeadbeef], 0x1` 用于掩码，只保留低位；`xor eax, eax` 是常用的清零 *`eax`* 的方法。
+布尔运算可用于多种目的。例如，`or eax, 0xffffffff` 可快速将 `eax` 设为全 1；`and dword [0xdeadbeef], 0x1` 用于掩码，只保留低位；`xor eax, eax` 是常用的清零 `eax` 的方法。
 
 ### not
-
-
 
 The `not` operation is a Boolean operation that computes the one's complement of a value. For those not familiar with the term `one's complement`, you can essentially think of it as taking all 0s and making them 1s and vice versa. It inverts the number. It takes a single operand with the syntax `not operand`.
 
@@ -1024,37 +859,34 @@ The `nop` operator stands for “no operation.” It is a one-byte operator (`0x
 While `nop` technically does nothing, it is used for a variety of legitimate purposes, including the following:
 
 *   Timing
-
 *   Memory alignment
-
 *   Hazard prevention
-
 *   Branch delay slot (RISC architectures)
-
 *   A placeholder to be replaced later by a future patch
 
 And in the security world it is used for the following:
 
 *   Hacking (`nop` sleds)
-
 *   Cracking (`nop` outs)
 
 ### lea
 
-The `lea` operator stands for *load effective address*. It takes two operators, including the *`destination`* (a register or memory address) and the *`source`*, which must be a memory address. The `lea` instruction computes the address of the indicated source operand and places it in the destination. For those familiar with pointers, it is similar to the `&` operator.
+
+
+The `lea` operator stands for *load effective address*. It takes two operators, including the `destination` (a register or memory address) and the `source`, which must be a memory address. The `lea` instruction computes the address of the indicated source operand and places it in the destination. For those familiar with pointers, it is similar to the `&` operator.
 
 While `lea` is designed to work with addresses, it is also commonly used for simple mathematical operations. For example, the operation `lea eax, [ebx + ecx + 5]` asks what address `ebx+ecx+5` points to and then stores that into `eax`. This essentially computes `ebx + ecx + 5` and stores the result in `eax`. A more standard use of the `lea` operator, `lea eax, [100]`, would place the value 100 in `eax`.
 
 While on the surface this can look a little silly or pointless, `lea` is a useful operator because it makes working with arrays in assembly more efficient. In arrays, values are stored at a particular offset from a base address. (Remember our base + displacement addressing modes?) With `lea`, it is possible to efficiently calculate the address of a particular element in an array. For example, assume that `eax` contains the base address of a character array. In that case, the instruction `lea ebx, [eax + 2]` would place the address of the second element in the array in `ebx`. This single instruction is more efficient than the series of instructions `mov ebx, eax` and `add ebx, 2`, which accomplishes the same result.
 
-#### ************Hands-on Example************
+#### Hands-on Example
 
-How would the following pseudocode be written in assembly? Assume that *`i`* is at address `100`, *`j`* is at address `200`, and *`k`* is at address `300`.
+How would the following pseudocode be written in assembly? Assume that `i` is at address `100`, `j` is at address `200`, and `k` is at address `300`.
 
 ```
 int i = 7;
 char j = 5;
-int k = i * i + j * j; 
+int k = i * i + j * j;
 ```
 
 This pseudocode would be assembled into the following x86 instructions:
@@ -1062,17 +894,14 @@ This pseudocode would be assembled into the following x86 instructions:
 ```
 mov dword [ 100 ], 7  ; set i
 mov byte [ 200 ], 5   ; set j
- 
 mov eax, [ 100 ]      ; load i into eax
 xor ebx, ebx          ; zero ebx
 mov bl, [ 200 ]       ; load j into ebx
- 
 add eax, ebx          ; add ebx to eax, store in eax
- 
 mov [ 300 ], eax      ; save result to k
 ```
 
-In this example, note the use of both *`ebx`* and *`bl`*. The value that was to be stored in this register fits in `bl`. However, when performing the `add` operation, the entire *`ebx`* register is used. This is because of class promotion, if you add a 1 byte value to a 4 byte value the 1 byte values promoted to 4 bytes, and the additional bytes must be 0. So in this case what was 0x05 in bl, is promoted to 0x00000005 in ebx. The XOR operation to clear *`ebx`* was necessary to ensure that the previous value stored in the *`ebx`* register was completely purged and did not affect the result of the `add`.
+In this example, note the use of both `ebx` and `bl`. The value that was to be stored in this register fits in `bl`. However, when performing the `add` operation, the entire `ebx` register is used. This is because of class promotion, if you add a 1 byte value to a 4 byte value the 1 byte values promoted to 4 bytes, and the additional bytes must be 0. So in this case what was `0x05` in `bl`, is promoted to `0x00000005` in `ebx`. The `XOR` operation to clear `ebx` was necessary to ensure that the previous value stored in the `ebx` register was completely purged and did not affect the result of the `add`.
 
 ### Common x86 Instruction Mistakes
 
@@ -1080,23 +909,15 @@ x86 is a powerful assembly language, and most instructions follow a consistent s
 
 Here are some examples of common mistakes that people make when trying to write their own x86 that result in code that will not assemble:
 
-*   `mov [bl], 0xf`: x86 supports indirect addressing using 16 and 32-bit GPRs. Since `bl` is only 8 bits long, it can't be used for addressing.
-
-*   `mov [0xabcd], 1337`: This instruction doesn't specify the size of the value to be moved since 1337 may be recorded as `0x0539` or `0x00000539`.
-
-*   `mov word [0xabcd], eax`: This instruction has an incorrect memory size specified since a `word` is 16 bits but `eax` holds 32 bits.
-
-*   `mov byte [1], byte [2]`: Two memory locations can't be used in the same instruction.
-
-*   `mov sl, al`: While `eax` has an `al` register, no `sl` register exists.
-
-*   `mov 0x1234, eax`: The value `0x1234` is an immediate, not a memory address, and can't be the destination of a command.
-
-*   `mov eax, dx`: This instruction has a size mismatch between the 16-bit source `dx` and the 32-bit destination `eax`.
+* `mov [bl], 0xf`: x86 supports indirect addressing using 16 and 32-bit GPRs. Since `bl` is only 8 bits long, it can't be used for addressing.
+* `mov [0xabcd], 1337`: This instruction doesn't specify the size of the value to be moved since 1337 may be recorded as `0x0539` or `0x00000539`.
+* `mov word [0xabcd], eax`: This instruction has an incorrect memory size specified since a `word` is 16 bits but `eax` holds 32 bits.
+* `mov byte [1], byte [2]`: Two memory locations can't be used in the same instruction.
+* `mov sl, al`: While `eax` has an `al` register, no `sl` register exists.
+* `mov 0x1234, eax`: The value `0x1234` is an immediate, not a memory address, and can't be the destination of a command.
+* `mov eax, dx`: This instruction has a size mismatch between the 16-bit source `dx` and the 32-bit destination `eax`.
 
 ### When In Doubt, Look It Up
-
-
 
 记住，没有人（包括我，尽管这对我来说很难承认）能够把所有的 x86 指令记熟。无论你是在编写 x86 还是阅读它，如果你遇到不理解的内容，快速查找是关键。我们总是保持这个标签页打开以便快速查找：`http://ref.x86asm.net/coder32.html`。
 
@@ -1106,9 +927,7 @@ x86 是一种复杂而强大的汇编语言。然而，要成为有效的软件�
 
 本章介绍了构成大多数汇编代码的 x86 指令。学习这些指令是必不可少的，并为反汇编提供了坚实的基础。
 
-# CHAPTER 4  
-
-构建和运行汇编程序
+# CHAPTER 4 构建和运行汇编程序
 
 软件反汇编是指将已编译的可执行文件转换为可读的源代码。但反过来，构建并运行汇编程序也是理解这一过程的重要手段。
 
@@ -1126,26 +945,26 @@ x86 是一种复杂而强大的汇编语言。然而，要成为有效的软件�
 
 **Table 4.1**: x86 Ports
 
-| PORT RANGE || SUMMARY |
+| PORT RANGE | SUMMARY |
 | --- | --- |
-| `0x0000-0x001F` || 第一个传统 DMA 控制器，常用于向软盘进行数据传输 |
-| `0x0020-0x0021` || 第一个可编程中断控制器 |
-| `0x0022-0x0023` || 访问赛扬处理器的特定寄存器 |
-| `0x0040-0x0047` || 可编程定时器（PIT） |
-| `0x0060-0x0064` || “8042” PS/2 控制器或其前代 |
-| `0x0070-0x0071` || CMOS 与实时时钟寄存器 |
-| `0x0080-0x008F` || DMA（页寄存器） |
-| `0x0092` || 快速 A20 门寄存器的地址 |
-| `0x00A0-0x00A1` || 第二个中断控制器 |
-| `0x00C0-0x00DF` || 第二个 DMA 控制器，常用于音频卡 |
-| `0x00E9` || Port E9 针的所在地 |
-| `0x0170-0x0177` || 次级 ATA 硬盘控制器 |
-| `0x01F0-0x01F7` || 主要 ATA 硬盘控制器 |
-| `0x0278-0x027A` || 并行端口 |
-| `0x02F8-0x02FF` || 第二个串行端口 |
-| `0x03B0-0x03DF` || 用于 IBM VGA 及其前代的范围 |
-| `0x03F0-0x03F7` || 软盘控制器 |
-| `0x03F8-0x03FF` || 第一个串行端口 |
+| `0x0000-0x001F` | 第一个传统 DMA 控制器，常用于向软盘进行数据传输 |
+| `0x0020-0x0021` | 第一个可编程中断控制器 |
+| `0x0022-0x0023` | 访问赛扬处理器的特定寄存器 |
+| `0x0040-0x0047` | 可编程定时器（PIT） |
+| `0x0060-0x0064` | “8042” PS/2 控制器或其前代 |
+| `0x0070-0x0071` | CMOS 与实时时钟寄存器 |
+| `0x0080-0x008F` | DMA（页寄存器） |
+| `0x0092` | 快速 A20 门寄存器的地址 |
+| `0x00A0-0x00A1` | 第二个中断控制器 |
+| `0x00C0-0x00DF` | 第二个 DMA 控制器，常用于音频卡 |
+| `0x00E9` | Port E9 针的所在地 |
+| `0x0170-0x0177` | 次级 ATA 硬盘控制器 |
+| `0x01F0-0x01F7` | 主要 ATA 硬盘控制器 |
+| `0x0278-0x027A` | 并行端口 |
+| `0x02F8-0x02FF` | 第二个串行端口 |
+| `0x03B0-0x03DF` | 用于 IBM VGA 及其前代的范围 |
+| `0x03F0-0x03F7` | 软盘控制器 |
+| `0x03F8-0x03FF` | 第一个串行端口 |
 
 ### 控制引脚
 
@@ -1169,24 +988,24 @@ x86 是一种复杂而强大的汇编语言。然而，要成为有效的软件�
 
 系统调用在 x86 中用于通过操作系统提供有限的 I/O 功能。系统调用的集合随操作系统而变化。
 
-由于系统调用是操作系统的概念，它们是操作系统依赖的。我们将介绍一些在 Linux 上常用的系统调用。系统调用通过在 *`eax`* 寄存器中加载函数编号来调用。在 Linux 中，系统调用通过 `int 0x80` 指令触发。
+由于系统调用是操作系统的概念，它们是操作系统依赖的。我们将介绍一些在 Linux 上常用的系统调用。系统调用通过在 `eax` 寄存器中加载函数编号来调用。在 Linux 中，系统调用通过 `int 0x80` 指令触发。
 
-### sys_write
+### `sys_write`
 
 在高级语言中，`sys_write` 的语法大致为 `ssize_t sys_write(unsigned int fd, const char * buf, size_t count)`，它返回写入的实际字节数。
 
-`sys_write` 接受三个参数：第一个 *`fd`* 是文件描述符，指示数据写入的位置，值为 1 表示写入 Linux 控制台；*`buf`* 保存要输出的数据；*`count`* 指示要写入的字符数。
+`sys_write` 接受三个参数：第一个 `fd` 是文件描述符，指示数据写入的位置，值为 1 表示写入 Linux 控制台；`buf` 保存要输出的数据；`count` 指示要写入的字符数。
 
 在 x86 汇编中，函数调用方式不同，参数需装入寄存器，如 Table 4.2 所示。装好寄存器后，使用 `int 0x80` 发起系统调用。
 
 **Table 4.2**: `sys_write`
 
-| REGISTER || VALUE || DESCRIPTION |
+| REGISTER | VALUE | DESCRIPTION |
 | --- | --- | --- |
-| `eax` || 4 || `sys_write` 标识符 |
-| `ebx` || 1 (console out) || 文件描述符 |
-| `ecx` || `const char*` *`buf`* || 要写入的字符串 |
-| `edx` || `size_t` *`count`* || 字符串长度 |
+| `eax` | 4 | `sys_write` 标识符 |
+| `ebx` | 1 (console out) | 文件描述符 |
+| `ecx` | `const char*` `buf` | 要写入的字符串 |
+| `edx` | `size_t` `count` | 字符串长度 |
 
 下面的示例展示了 `sys_write` 的使用方式：
 
@@ -1198,27 +1017,28 @@ mov   eax,4         ; 系统调用号(sys_write)
 int   0x80          ; 调用内核
 ```
 
-### sys_exit
+### `sys_exit`
 
-`sys_exit` 系统调用相当于高级语言中 `main` 函数的 `return status;`，用于结束程序并返回状态码。它只接受一个参数，即状态码，存放在 *`ebx`* 中，如 Table 4.3 所示。
+`sys_exit` 系统调用相当于高级语言中 `main` 函数的 `return status;`，用于结束程序并返回状态码。它只接受一个参数，即状态码，存放在 `ebx` 中，如 Table 4.3 所示。
 
 **Table 4.3**: `sys_exit`
 
-| REGISTER || VALUE || DESCRIPTION |
+| REGISTER | VALUE | DESCRIPTION |
 | --- | --- | --- |
-| `eax` || 1 || `sys_exit` 标识符 |
-| `ebx` || int || 状态码 |
+| `eax` | 1 | `sys_exit` 标识符 |
+| `ebx` | int | 状态码 |
 
 下面的示例展示了 `sys_exit` 的调用过程：
 
+```
+mov eax, 1          ; system function (sys_exit)
+mov ebx, 0          ; return 0;
+int 0x80            ; call kernel
+```
+
+### Printing a String
 
 
-
-`mov` `eax`, `1`          ; `system` `function` (`sys_exit`)
-`mov` `ebx`, `0`          ; `return` `0`;
-`int` `0x80`            ; `call` `kernel`
-
-### `Printing` `a` `String`
 
 `Printing` `a` `string` `requires` `turning` `certain` `pins` `on` `and` `off` `on` `the` `processor`. `By` `making` `a` `system` `call`, `an` `assembly` `program` `can` `offload` `the` `work` `of` `determining` `which` `pins` `to` `turn` `on` `and` `off` `to` `the` `operating` `system`. `The` `OS` `informs` `the` `graphics` `card`, `which` `selects` `its` `bits` `to` `turn` `on` `and` `off`. `This` `sends` `information` `to` `the` `monitor` `microcontroller`, `causing` `it` `to` `turn` `its` `pins` `on` `and` `off`, `which` `draws` `on` `the` `screen`. `Along` `the` `way`, `dozens` `of` `other` `controllers` `may` `be` `involved` `in` `the` `process` `as` `well`.
 
@@ -1244,25 +1064,23 @@ msg:    `db` `"Hello, world!",` `10`
 .len:   `equ` `$` `-` `msg`
 ```
 
-
-
 -   在处理字符串时，需要注意它们默认并不以空字符（null‑terminated）结尾。要显式地在字符串末尾加入空字符（0x0），如 `label: db “hello”, 0`。空字符用于几乎所有编程语言存储字符串，但编译器已经在帮你完成此工作。现在你掌握了汇编的力量，需要手动完成此操作，因此任何使用字符串的函数都能正确执行。若字符串末尾缺少空字符，字符串函数会继续读取其后的内存并尝试将其作为字符使用，结果不可预测——从打印不可打印字符，到因访问无权限的内存而导致程序崩溃。
 
-#### *times*
+#### `times`
 
 `times` 前缀用于指定某条指令或前缀重复指定次数。这对于创建固定长度的缓冲区等场景很有帮助，示例如下：
 
-```
 ```
 times 100 db 0   ; 创建 100 字节，初始化为 0
 
 times 64 db 0x55 ; 创建 64 字节，每个字节初始化为 0x55
 
 ; 为 "hello world" 填充到长度 64
+
 buffer: db      'hello, world' times 64-$+buffer db ' '
 ```
-```
-#### *$*
+
+#### `$`
 
 `$` 是当前行地址的简写，可用于类似标签的方式，示例如下：
 
@@ -1272,7 +1090,8 @@ jmp $                ; 无限循环
 string: db "hello"
 length EQU $-string  ; 计算 string 上一行的长度
 ```
-在此示例中，*`length`* 是变量名，其值等于当前地址（`$`）减去标签 *`string`* 的地址。因为 *`length`* 紧跟在字符串之后，等价于取字符串之后的地址并减去起始地址，从而得到 "hello" 的长度。
+
+在此示例中，`length` 是变量名，其值等于当前地址（`$`）减去标签 `string` 的地址。因为 `length` 紧跟在字符串之后，等价于取字符串之后的地址并减去起始地址，从而得到 "hello" 的长度。
 
 ### objdump
 
@@ -1284,13 +1103,18 @@ length EQU $-string  ; 计算 string 上一行的长度
 
 *   `-Mintel`：指定输出使用 Intel 语法（默认是 AT&T 语法）。
 
-基于上述，反汇编名为 *`appname`* 的程序的命令是 `objdump -d -Mintel appname`。下面给出该命令的示例输出：
+基于上述，反汇编名为 `appname` 的程序的命令是 `objdump -d -Mintel appname`。下面给出该命令的示例输出：
 
 | `804a030` || `<test_key>:` ||  ||  |
+
 | --- | --- | --- | --- |
+
 | `804a030` || `55` || `push` || `ebp` |
+
 | `804a031` || `89 5e` || `mov` || `ebp, esp` |
+
 | `804a033` || `53` || `push` || `ebx` |
+
 | `804a034` || `83 ec 14` || `sub` || `esp, 0x14` |
 
 `objdump` 的输出分为三列。第一列是内存地址，即代码在运行时的虚拟地址；第二列是该地址的机器码（十六进制）；第三列是对应的 x86 汇编指令。
@@ -1394,9 +1218,6 @@ ASCII 设计使得大写字母和小写字母之间的差值恒为 `0x20`，如 
 
 本章从正向视角探讨了汇编程序是如何组合在一起的，包括它们与外部环境的交互、构建和链接过程，以及字符串的管理方式。
 
-
-
-
 -   [理解这些过程的正向方向可以对理解其反向工作非常有价值。如果你知道汇编代码是如何从代码变为可执行文件的，你就更能理解如何将其拆解并再次组装。]
 
 # CHAPTER 5  
@@ -1429,7 +1250,7 @@ x86 使用 *条件码* 来跟踪这些效果。本章探讨这些条件码，并
 
 在这四个状态标志中，对逆向工程最重要的包括 **进位标志（carry flag）**、**零标志（zero flag）**、**符号标志（sign flag）** 和 **溢出标志（overflow flag）**。
 
-#### *进位标志*
+#### `进位标志`
 
 进位标志（CF）是 `eflags` 寄存器的第 0 位。它指示上一次算术操作是否产生进位。
 
@@ -1446,7 +1267,7 @@ x86 使用 *条件码* 来跟踪这些效果。本章探讨这些条件码，并
 
 在该示例中，追踪加法可以看到最左侧一列产生了进位。对无符号数而言，进位标志表示溢出，即结果超出了指定的位宽（这里以 1 字节为例）。这也是传统上用于检测无符号数的溢出/下溢。当满足进位条件时，CF 置 1。
 
-#### *零标志*
+#### `零标志`
 
 零标志（ZF）是 `eflags` 寄存器的第 6 位，指示上一次算术操作的结果是否为零。例如，下面的计算会置位零标志：
 
@@ -1458,7 +1279,7 @@ x86 使用 *条件码* 来跟踪这些效果。本章探讨这些条件码，并
 
 零标志的判断非常直接：结果全为 0 则置 1，无需区分有符号还是无符号。
 
-#### *符号标志*
+#### `符号标志`
 
 符号标志（SF）是 `eflags` 寄存器的第 7 位，表示上一次算术操作的结果是否设置了符号位。在有符号数中，符号位是用于表示正负的最高位。
 
@@ -1466,13 +1287,14 @@ x86 使用 *条件码* 来跟踪这些效果。本章探讨这些条件码，并
 
 当符号位被置 1 时，数值采用“两的补码”表示，需要额外的处理才能恢复其真实值。
 
-#### *溢出标志*
+#### `溢出标志`
 
 溢出标志（OF）是 `eflags` 寄存器的第 11 位，指示上一次算术操作是否发生溢出。溢出发生在进位和出位不一致时。正如进位标志对无符号数有用，溢出标志用于有符号数的溢出检测。
 
 常见的两种溢出情形：
 
 *   **正数 + 正数 = 负数**
+
 *   **负数 + 负数 = 正数**
 
 第一种情况示例：
@@ -1495,7 +1317,7 @@ x86 使用 *条件码* 来跟踪这些效果。本章探讨这些条件码，并
 
 两个负数相加，结果意外为正，同样是因为进位不匹配出位。二进制层面可以看到左侧没有进位，但最高位有进出，导致进位不匹配，进而产生错误的正数结果。
 
-#### *其他状态标志*
+#### `其他状态标志`
 
 虽然上述四个标志最为重要，但还有其他不太常用的标志值得了解：
 
@@ -1513,7 +1335,7 @@ x86 使用 *条件码* 来跟踪这些效果。本章探讨这些条件码，并
 
 状态标志可以由多种操作影响，常见的包括 `add`、`sub`、`cmp` 和 `test`。
 
-#### *add*
+#### `add`
 
 `add` 指令可能会修改进位、零、符号和溢出标志。例如，`add al, bl` 根据 `al` 和 `bl` 的值可能触发不同组合的标志。图 5.1 展示了五种不同 `add` 操作的结果。
 
@@ -1521,17 +1343,17 @@ x86 使用 *条件码* 来跟踪这些效果。本章探讨这些条件码，并
 
 **Figure 5.1**: Effects of `add al,bl` with various inputs
 
-
-
 注意使用有符号或无符号整数对值的解释及其正确性有影响。例如，第二个 `add` 操作在有符号值时结果正确，但在无符号值时结果错误。
 
-#### *sub*
+#### `sub`
+
+
 
 `sub` 指令也有可能修改与 `add` 相同的标志，即所有四个重要状态标志。图 5.2（`#c05.xhtml#c05-fig-0002`）展示了 `sub al, bl` 在不同 `al` 和 `bl` 值下的各种结果。
 
 与 `add` 操作类似，`sub` 的结果正确性取决于 `al` 和 `bl` 中存储的值。例如，第一个例子的两种版本均正确，但只有有符号版本的第二个例子结果才正确。
 
-#### *cmp*
+### cmp
 
 `cmp` 指令用于比较两个值，这些值可以是内存、常量或寄存器。它通过减去第二个操作数来实现比较，但减法的结果被丢弃，仅调整标志位。
 
@@ -1573,7 +1395,7 @@ cmp eax, ebx  ; 计算 eax-ebx
 
 **Figure 5.3**: `cmp` 真值表
 
-#### *test*
+### test
 
 `test` 指令执行两个操作数之间的位运算 `and`，这些操作数可以是内存、常量或寄存器。与 `cmp` 类似，`test` 的结果被丢弃，但标志位会被调整。
 
@@ -1615,7 +1437,7 @@ test ax, 0x05 ; 检查位 0 或位 2 是否被设置
 
 条件码用于记录操作可能未体现在目的寄存器中的效果，例如操作结果为零或导致溢出。跟踪这些条件码对于理解逆向工程时应用程序的当前状态至关重要。
 
-# CHAPTER 6  
+# CHAPTER 6
 
 Analyzing and Debugging Assembly Code
 
@@ -1655,7 +1477,7 @@ Analyzing and Debugging Assembly Code
 
 调试通常是多阶段过程。典型的调试流程包括以下步骤：
 
-1.  在感兴趣的位置设置 *breakpoints*。
+1.  在感兴趣的位置设置 `breakpoints`。
 
 2.  运行代码。
 
@@ -1674,9 +1496,6 @@ Breakpoints 指示处理器在特定点停止程序执行。Breakpoints 有两�
 *   **Software:** 软件断点设置在字节码上，数量无限。
 
 *   **Hardware:** 最多四个硬件断点（在 x86 中），可设置在字节码或内存访问上。
-
-
-
 
 # 使用软件断点和硬件断点
 
@@ -1714,7 +1533,7 @@ GNU Debugger（`gdb`）是 Linux 调试的事实标准。它在许多 Linux 发�
 
 *   支持远程调试
 
-`gdb` 是极其普遍的调试器，以至于许多系统和处理器都包含一个 *`gdb` 命令行* 以支持 `gdb` 调试。虽然许多调试器受限于少数架构和平台，`gdb` 支持数百种。
+`gdb` 是极其普遍的调试器，以至于许多系统和处理器都包含一个 `gdb` 命令行以支持 `gdb` 调试。虽然许多调试器受限于少数架构和平台，`gdb` 支持数百种。
 
 本书将探索多种调试器，并在后续章节介绍基于 GUI 的调试器。但首先需要深入理解如何使用 **GDB**，这是基于命令行的。许多“更美观”的调试器在内部使用 GDB 及其协议；它们仅在外层包装了更友好的界面。
 
@@ -1724,7 +1543,7 @@ GNU Debugger（`gdb`）是 Linux 调试的事实标准。它在许多 Linux 发�
 
 `gdb` 的一个有用特性是命令可以使用最简洁的非歧义形式输入。例如，`run` 可以缩写为 `r`，`info registers` 可以缩写为 `info reg`，`disassemble` 可以缩写为 `disas`。你会在实践中逐步了解这些简写。
 
-#### *Launching gdb*
+#### Launching gdb
 
 `gdb` 可以通过 `gdb` 命令启动。例如，可执行文件 `printreg-shift.out` 可通过 `gdb printreg-shift.out` 启动，如图 6.1 所示。
 
@@ -1732,15 +1551,17 @@ GNU Debugger（`gdb`）是 Linux 调试的事实标准。它在许多 Linux 发�
 
 **Figure 6.1**: The `gdb` command
 
-#### *Disassembly with gdb*
+#### Disassembly with gdb
 
 x86 架构支持多种语法，包括 Intel 和 AT&T 两种。在 `gdb` 中指定 Intel 语法的命令是 `(gdb) set disassembly-flavor intel`。
 
 设置完语法后，可以选择多种启动调试的方式：
 
 *   `disassemble` 从当前指针位置开始反汇编。
+
 *   `disassemble address` 从指定地址开始反汇编。
-*   `disassemble label` 从指定标签（如 *`loop`*、 *`main`*）开始反汇编。
+
+*   `disassemble label` 从指定标签（如 `loop`、`main`）开始反汇编。
 
 图 6.2 展示了使用标签进行反汇编的示例，左侧为原始源代码，右侧为 `gdb` 中的对应反汇编。
 
@@ -1748,9 +1569,9 @@ x86 架构支持多种语法，包括 Intel 和 AT&T 两种。在 `gdb` 中指�
 
 **Figure 6.2**: Disassembly in `gdb`
 
-指定起始点后，还可以限定反汇编的指令数量。例如，命令 `disassemble main +50` 会从 *`main`* 标签开始，打印 50 条指令。
+指定起始点后，还可以限定反汇编的指令数量。例如，命令 `disassemble main +50` 会从 `main` 标签开始，打印 50 条指令。
 
-#### *Starting and Stopping Code in gdb*
+#### Starting and Stopping Code in gdb
 
 `run` 命令用于从程序起始位置执行。此操作会丢弃之前的运行状态。
 
@@ -1758,7 +1579,7 @@ x86 架构支持多种语法，包括 Intel 和 AT&T 两种。在 `gdb` 中指�
 
 程序执行可以通过 `quit` 和 `kill` 终止。`kill` 终止运行的进程，而 `quit` 则终止并退出 `gdb`。
 
-#### *gdb Breakpoints*
+#### gdb Breakpoints
 
 断点用于暂停代码执行以便分析程序状态。`gdb` 中的 `break address` 命令在指定地址设置断点，而 `break label` 使用标签指定位置，如图 6.3 所示。
 
@@ -1766,7 +1587,7 @@ x86 架构支持多种语法，包括 Intel 和 AT&T 两种。在 `gdb` 中指�
 
 **Figure 6.3**: Setting a breakpoint in `gdb`
 
-#### *gdb info Commands*
+#### gdb info Commands
 
 `info` 命令用于获取各种信息。常用 `info` 命令包括：
 
@@ -1798,12 +1619,9 @@ $1 = (void *) 0xffffd260
 
 **Figure 6.6**: `gdb info variable` command
 
-#### *Stepping Through Instructions*
+#### Stepping Through Instructions
 
 `run` 和 `continue` 命令仅用于启动程序运行，直到出现断点等停止条件。这样使得难以实时观察程序行为或变量随时间的变化。
-
-
-
 
 -   步进命令 `stepi` 按指令逐步执行，如图 6.7 所示，可实现更深入的分析。请注意，因为应用是在调试模式下构建的，所以会显示注释。
 
@@ -1815,39 +1633,39 @@ $1 = (void *) 0xffffd260
 
 `nexti` 命令允许跳过函数调用。它会执行函数调用并直接跳转到下一条可见指令。
 
-#### *Examining Memory*
+#### Examining Memory
 
 在 `gdb` 中，`x` 命令（意为“eXamine memory”）用于查看内存。命令语法为 `x/nfu addr`。
 
 在该命令中，`n`、`f`、`u` 是可选参数，含义如下：
 
-*   *`n`*：指定要显示的单元数量（`u`）。
+*   `n`：指定要显示的单元数量（`u`）。
 
-*   *`f`*：指定显示格式  
+*   `f`：指定显示格式  
 
-    *   *`s`*：以空字符终止的字符串  
+    *   `s`：以空字符终止的字符串  
 
-    *   *`i`*：机器指令  
+    *   `i`：机器指令  
 
-    *   *`x`*：十六进制（默认）
+    *   `x`：十六进制（默认）
 
-*   *`u`*：指定单元大小  
+*   `u`：指定单元大小  
 
-    *   *`b`*：字节  
+    *   `b`：字节  
 
-    *   *`h`*：半字（两字节）  
+    *   `h`：半字（两字节）  
 
-    *   *`w`*：字（默认）  
+    *   `w`：字（默认）  
 
-    *   *`g`*：双字（八字节）
+    *   `g`：双字（八字节）
 
-Figure 6.6 展示了名为 *`byteToPrint`* 的变量，其地址为 `0x080490e4`。要显示该地址 16 字节的内容，命令为 `x/16x 0x80490e4`，如图 6.8 所示。命令输出表明，感兴趣的字节值为 `0x41`，在 ASCII 中对应 *A*。
+Figure 6.6 展示了名为 `byteToPrint` 的变量，其地址为 `0x080490e4`。要显示该地址 16 字节的内容，命令为 `x/16x 0x80490e4`，如图 6.8 所示。命令输出表明，感兴趣的字节值为 `0x41`，在 ASCII 中对应 `A`。
 
 ![Figure 6.8: gdb x command](img/c06f008.png)
 
 **Figure 6.8**: `gdb x` 命令
 
-除了使用内存地址，`x` 命令还可以使用寄存器指定转储位置。例如，图 6.9 显示了使用 *`esp`* 寄存器转储 10 字节的十六进制内容。
+除了使用内存地址，`x` 命令还可以使用寄存器指定转储位置。例如，图 6.9 显示了使用 `esp` 寄存器转储 10 字节的十六进制内容。
 
 ![Figure 6.9: Printing 10 bytes with the gdb x command](img/c06f009.png)
 
@@ -1855,7 +1673,7 @@ Figure 6.6 展示了名为 *`byteToPrint`* 的变量，其地址为 `0x080490e4`
 
 ## Segmentation Faults
 
-段错误（segmentation faults），即 *segfaults*，当 CPU 尝试读取或写入不可访问的内存位置时发生。这可能是因为该位置不存在，或是 CPU 没有相应的读写权限。
+段错误（segmentation faults），即 `segfaults`，当 CPU 尝试读取或写入不可访问的内存位置时发生。这可能是因为该位置不存在，或是 CPU 没有相应的读写权限。
 
 例如，命令 `mov eax, [0x00000000]` 必然导致段错误。原因是地址 0x0 通常未被映射或对应的应用程序无法访问，导致从内存地址 `0x0` 进行读取。`gdb` 在触发段错误时也会出现此情况。
 
@@ -1871,17 +1689,19 @@ Figure 6.6 展示了名为 *`byteToPrint`* 的变量，其地址为 `0x080490e4`
 
 本实验旨在测试逆向工程的基础技能，包括拆解和理解未知程序的能力。所测试的技能包括：
 
-*   ASCII  
+*   `ASCII`
 
-*   条件码  
+*   条件码
 
-*   调试编译后的程序  
+*   调试编译后的程序
 
-*   解读未知的汇编指令和程序  
+*   解读未知的汇编指令和程序
 
 ### Takeaways
 
 调试是逆向工程中的重要工具。理解新指令的基本功能是逆向工程的关键——时间往往不足以完全掌握所有细节！
+
+
 
 成功逆向工程的秘诀之一是不要在未知的汇编指令上耗费过多时间。尽快掌握其基本用途，以便继续前进。后续章节将继续使用 `gdb` 及其他更强大的调试器。现在你已经开始修改汇编代码，便可以在没有源代码的情况下进行汇编操作。
 
@@ -1889,35 +1709,35 @@ Figure 6.6 展示了名为 *`byteToPrint`* 的变量，其地址为 `0x080490e4`
 
 有效的逆向工程和软件破解需要掌握多种技能，但其中最重要的能力是“屏蔽噪声”，专注于关键内容。
 
-即使是小程序，其代码量也远超需要分析的范围。大多数指令与核心功能无关，浪费时间。往往，**知道关注点**比**知道不关注点**更重要。
+即使是小程序，其代码量也远超需要分析的范围。大多数指令与核心功能无关，浪费时间。往往，`知道关注点`比`知道不关注点`更重要。
 
 在确定关注与不关注点时，理解基础概念至关重要。以下是极常见、一眼即可辨认的代码模式：
 
-*   控制流构造  
+* 控制流构造
 
-*   栈布局（局部变量、入口参数、出口参数）  
+* 栈布局（局部变量、入口参数、出口参数）
 
-*   编译器模板（函数前置/后置、保护码、栈分配、寄存器管理）  
+* 编译器模板（函数前置/后置、保护码、栈分配、寄存器管理）
 
 这些将在后续章节中详细探讨，帮助你快速识别它们。
 
 在确定逆向工程的优先级时，执行顺序为：函数调用 ➪ 控制流 ➪ 单条指令 ➪ 模板代码。
 
-*   **函数调用**：关注被调用的函数。知道某函数调用 `CreateDialog` 已足以理解其大致目的。
+* `函数调用`：关注被调用的函数。知道某函数调用 `CreateDialog` 已足以理解其大致目的。
 
-*   **控制流**：如有需要，分析控制流，例如确认 `CreateDialog` 是在循环中被调用的。
+* `控制流`：如有需要，分析控制流，例如确认 `CreateDialog` 是在循环中被调用的。
 
-*   **单条指令**：若仍不足，检查单条指令。
+* `单条指令`：若仍不足，检查单条指令。
 
-*   **模板代码**：分析模板代码几乎对软件逆向或破解无实际帮助。但了解常见模板有助于快速识别并忽略它们。
+* `模板代码`：分析模板代码几乎对软件逆向或破解无实际帮助。但了解常见模板有助于快速识别并忽略它们。
 
 ## Summary
 
 本章介绍了 `gdb`，这是一个在 Linux 系统中广泛使用的强大调试器。熟悉并动手使用 `gdb` 对有志成为逆向工程师或破解者至关重要，因为该工具可用于分析各种系统的软件。
 
-# CHAPTER 7  
+# CHAPTER 7
 
-Functions and Control Flow
+## Functions and Control Flow
 
 程序是一系列指令，应用程序不一定按顺序从一条指令跳转到下一条。在逆向和破解应用时，理解控制流以及影响它的因素（如高级语言中的 `if` 语句和循环）至关重要。
 
@@ -1933,22 +1753,19 @@ if (x) {
 }
 ```
 
-
-
-
 当执行这段代码时，处理器会评估条件，`x`，并判断其是否为真。如果为真，则继续执行 `if` 块内的指令。
 
 然而，如果条件，`x`，不为真，则 `if` 块内的指令将被跳过。这需要能够指示处理器执行某些指令和跳过其他指令，从而改变执行流程。
 
 ### 指令指针
 
-*`eip`* 寄存器被称为指令指针，保存要执行的下一条指令的地址。处理器在执行一条指令后会自动增量 `eip` 中存储的值。
+`eip` 寄存器被称为指令指针，保存要执行的下一条指令的地址。处理器在执行一条指令后会自动增量 `eip` 中存储的值。
 
-允许 `eip` 在每条指令之后递增，使得可以运行一系列顺序执行的指令。但在某些情况下，我们需要有条件地执行代码。这时需要对 `eip` 进行不同的更新。然而，`eip` 不能被直接操作（记得它是特殊用途寄存器 \[SPR\]）。相反，使用控制流指令来调整 `eip`。
+允许 `eip` 在每条指令之后递增，使得可以运行一系列顺序执行的指令。但在某些情况下，我们需要有条件地执行代码。这时需要对 `eip` 进行不同的更新。然而，`eip` 不能被直接操作（记得它是特殊用途寄存器 `[SPR]`）。相反，使用控制流指令来调整 `eip`。
 
 ### 控制流指令
 
-最常见的、强制改变正常执行流并导致 `eip` 变化的偏离顺序的操作被称为 *jumps* 或 *branches*。例如，下面的代码块在 `if` 语句处有一个分支：
+最常见的、强制改变正常执行流并导致 `eip` 变化的偏离顺序的操作被称为 `jumps` 或 `branches`。例如，下面的代码块在 `if` 语句处有一个分支：
 
 ```
 int x = 1;
@@ -1958,13 +1775,13 @@ if (!y) { // branch!
 }
 ```
 
-当将这种高级语言代码编译成机器码时，会使用跳转指令来指示 `eip` 寄存器应被设置到的位置。`jmp` 指令的语法为 `jmp op`，其中 *`op`* 可以是内存地址或标签。
+当将这种高级语言代码编译成机器码时，会使用跳转指令来指示 `eip` 寄存器应被设置到的位置。`jmp` 指令的语法为 `jmp op`，其中 `op` 可以是内存地址或标签。
 
 `jmp` 指令是非条件跳转，始终执行（后面会介绍条件跳转）。
 
-#### *jmp*
+#### `jmp`
 
-`jmp` 指令的语法为 `jmp op`。其作用是通过将 `eip` 设置为 *`op`* 所存储的值，将程序的控制流转移到内存位置 *`op`*。
+`jmp` 指令的语法为 `jmp op`。其作用是通过将 `eip` 设置为 `op` 所存储的值，将程序的控制流转移到内存位置 `op`。
 
 `jmp` 指令的示例包括：
 
@@ -1983,7 +1800,7 @@ loop: add eax, 1
       jmp loop
 ```
 
-#### *条件跳转*
+#### `条件跳转`
 
 条件跳转是一种将跳转是否执行与条件是否为真或假关联起来的机制。跳转是否执行取决于状态标志寄存器中的值。例如，下面的指令：
 
@@ -1992,31 +1809,39 @@ cmp eax, ebx
 jle done
 ```
 
-`jle`（jump less than or equal to）指令会在之前的比较操作结果设置状态标志后，如果标志表明结果小于或等于零，则跳转到指定的地址或标签。这里的 `cmp` 指令用于比较 *`eax`* 和 *`ebx`*，并设置标志。`cmp` 实际上是用操作数 1 减去操作数 2 并丢弃结果。要使条件为“小于或等于”，*`eax`* 必须小于或等于 *`ebx`*。在这种情况下，处理器会跳转到标签 *`done`*。否则，跳转被跳过，执行继续到 `jle` 之后的下一条指令。
+`jle`（jump less than or equal to）指令会在之前的比较操作结果设置状态标志后，如果标志表明结果小于或等于零，则跳转到指定的地址或标签。这里的 `cmp` 指令用于比较 `eax` 和 `ebx`，并设置标志。`cmp` 实际上是用操作数 1 减去操作数 2 并丢弃结果。要使条件为“小于或等于”，`eax` 必须小于或等于 `ebx`。在这种情况下，处理器会跳转到标签 `done`。否则，跳转被跳过，执行继续到 `jle` 之后的下一条指令。
 
 x86 语言中有大量的条件跳转指令。下表（表 7.1）列出了这些指令及其决定是否执行跳转的条件。
 
 **Table 7.1**: x86 conditional jump instructions
 
 | INSTRUCTION || MEANING || CONDITIONS |
+
 | --- | --- | --- |
+
 | `je` || Jump if equal. || ZF = 1 |
+
 | `jz` || Jump if last result is zero. || ZF = 1 |
+
 | `jne` || Jump if not equal. || ZF = 0 |
+
 | `jge` || Jump if greater than or equal to. || SF = OF |
+
 | `jl` || Jump if less than. || SF != OF |
+
 | `jle` || Jump if less than or equal to. || ZF = 1 OR SF != OF |
+
 | `jg` || Jump if greater than. || ZF = 0 AND SF == OF |
 
 从表中可以看出，有些指令的条件是相同的。例如，`jz` 和 `je` 都在零标志（ZF）为 1 时跳转，这意味着它们跳转时指示的两个值相等。但从逻辑上看，它们的语义不同。“跳转如果上一结果为零”可能用于减法操作后的结果为零的情况，而“跳转相等”更多用于比较操作后的相等判断。
 
-例如，当 *`eax`* = *`ebx`* = `0x10` 时，`cmp eax, ebx` 执行后会设置零标志，因为两者相等。`jz` 和 `je` 指令都会在它们紧随其后时进行跳转。
+例如，当 `eax` = `ebx` = `0x10` 时，`cmp eax, ebx` 执行后会设置零标志，因为两者相等。`jz` 和 `je` 指令都会在它们紧随其后时进行跳转。
 
 这些指令可以互换使用，但通常根据设置标志的指令选择。例如，如果使用 `sub eax, ebx` 来设置标志，则 `jz` 更可能被使用，因为它关注数学操作的结果是否为零。如果使用 `cmp eax, ebx`，则 `je` 更常用，因为它基于比较的等价性。
 
 请记住，`cmp` 在内部执行减法，因此它对标志的影响与 `sub` 操作相同。`jz` 和 `je` 是为使代码更易读而设计的同义指令。
 
-#### *条件跳转的陷阱*
+#### `条件跳转的陷阱`
 
 条件跳转依赖于状态标志来决定是否跳转。但每条指令都是独立执行的，条件跳转并不关心你想要对哪个比较或数学表达式进行条件跳转。如果在条件指令和跳转之间修改了状态标志，这会导致问题。虽然编译器不会犯这种错误，但在编写汇编代码时，你必须考虑这一点。
 
@@ -2039,9 +1864,9 @@ je done
  
 ```
 
-在这组指令中，你的意图可能是使用 `cmp` 来设置跳转的标志。但 `add` 指令也会更新状态标志，覆盖之前的设置。于是，跳转不再是基于 *`eax`* = *`ebx`*，而是基于 `add` 指令设置的零标志（即 *`ecx`* + 1 = 0）。
+在这组指令中，你的意图可能是使用 `cmp` 来设置跳转的标志。但 `add` 指令也会更新状态标志，覆盖之前的设置。于是，跳转不再是基于 `eax` = `ebx`，而是基于 `add` 指令设置的零标志（即 `ecx` + 1 = 0）。
 
-#### *示例*
+#### `示例`
 
 跳转指令常用于实现 `if` 语句和循环。下面的汇编代码演示了一个循环，用于累加 0–4 的数：
 
@@ -2058,11 +1883,9 @@ loop:
 done:
 ```
 
-循环中的计数器存储在 *`ecx`* 寄存器中，循环开始前初始化。累加器 *`eax`* 保存运行的求和结果。
+循环中的计数器存储在 `ecx` 寄存器中，循环开始前初始化。累加器 `eax` 保存运行的求和结果。
 
 循环开始时，先将当前计数器值加到累加器，然后递增计数器。这实现了将 0–4 的值累加的逻辑。
-
-
 
 The branch occurs at the `jne` (jump not equal to) instruction in the second-to-last line. The previous instruction is a `cmp`, which checks if the loop counter is equal to 5 and sets the status flags accordingly. If the loop counter does not equal 5, the jump triggers, and the `eip` register is set to the address indicated by `loop` , beginning another iteration. If the loop counter does equal 5, the jump is not taken, and the processor continues on to the `done` label.
 
@@ -2079,15 +1902,16 @@ do { … } while (…);
 for (…; …; …) { … }
 switch (…) { … }
 ```
+
 In assembly, these logical constructs are written using a combination of comparison (`cmp`) and jump (`jmp`, `je`, `jne`, `jl`, `jle`, `jg`, and `jge`) instructions. When code is compiled, the compiler will automatically perform the translation to assembly code.
 
 When writing assembly code, it is necessary to perform the conversion from high-level concepts to assembly manually. Or when reasoning about other people's code, it is essential to be able to understand how these structures look in assembly. To build up this recognition, focus on how you would take these higher-level language concepts and translate them to assembly. Accomplishing this is a two-step process:
 
-1. **Remove code blocks:** Rewrite code replacing logical constructs with `goto` statements.
+1. `Remove code blocks:` Rewrite code replacing logical constructs with `goto` statements.
 
-2. **Assemble:** Rewrite the program in assembly.
+2. `Assemble:` Rewrite the program in assembly.
 
-### if (…) {…}
+### `if (…) {…}`
 
 An `if` statement is one of the simplest high-level logical constructs. With code blocks, it looks like the following:
 
@@ -2111,7 +1935,7 @@ skip_block:
 
 Note that, in this version, the condition is inverted. This is because the jump past the `if` block occurs only if the condition is false, while the `if` block of an `if` statement specifies what happens if the condition is true. Removing code blocks will always involve inverting the condition.
 
-Converting this from pseudocode to a functional application requires replacing *`condition`* and *`code_if_true`* with actual code.
+Converting this from pseudocode to a functional application requires replacing `condition` and `code_if_true` with actual code.
 
 | WITH BLOCKS || WITHOUT BLOCKS |
 
@@ -2160,7 +1984,7 @@ After removing the code blocks, converting the code to assembly is much easier. 
 
 | `if (x!=5)`  
 
-`     goto skip_block;`  
+`    goto skip_block;`  
 
 `x++;`  
 
@@ -2180,227 +2004,48 @@ After removing the code blocks, converting the code to assembly is much easier. 
 
 | --- | --- |
 
-### if (…) { … } else { … }
+### `if (…) { … } else { … }`
 
 Adding an `else` statement to an `if` construct increases the complexity and the required number of jumps. In addition to skipping over the `if` block if the condition evaluates as false, an `if (…) { … } else { … }` construct jumps over the `else` block after executing the code in the if block.
 
+
+
 The following samples show how this logical construct appears with and without blocks:
 
-| WITH BLOCKS || WITHOUT BLOCKS |
-
+| WITH BLOCKS | WITHOUT BLOCKS |
 | --- | --- |
+| `if (condition)`<br>`{`<br>`    code_if_true;`<br>`}`<br>`else`<br>`{`<br>`    code_if_false;`<br>`}` | `if (!condition)`<br>`    goto false_block;`<br>`code_if_true;`<br>`goto skip_block;`<br>`false_block:`<br>`code_if_false;`<br>`skip_block:` |
 
-| `if (condition)`  
-
-`{`  
-
-`    code_if_true;`  
-
-`}`  
-
-`else`  
-
-`{`  
-
-`    code_if_false;`  
-
-`}` || `if (!condition)`  
-
-`    goto false_block;`  
-
-`code_if_true;`  
-
-`goto skip_block;`  
-
-`false_block:`  
-
-`code_if_false;`  
-
-`skip_block:` |
-
-| --- | --- |
-
-Note that the code uses two different labels in its `goto` statements. The label *`false_block`* is used to skip over the `if` block if the condition is false, while the label *`skip_block`* is used to jump past the `else` block after executing the `if` block. Just like before, invert the conditional statement when rewriting code without blocks.
+Note that the code uses two different labels in its `goto` statements. The label `false_block` is used to skip over the `if` block if the condition is false, while the label `skip_block` is used to jump past the `else` block after executing the `if` block. Just like before, invert the conditional statement when rewriting code without blocks.
 
 Replacing the pseudocode with actual code yields the following with and without code blocks:
 
-| WITH BLOCKS || WITHOUT BLOCKS |
-
+| WITH BLOCKS | WITHOUT BLOCKS |
 | --- | --- |
-
-| `if (x)`  
-
-`{`  
-
-`    x++;`  
-
-`}`  
-
-`else`  
-
-`{`  
-
-`    x--;`  
-
-`}` || `if (!x)`  
-
-`    goto false_block;`  
-
-`x++;`  
-
-`goto skip_block;`  
-
-`false_block:`  
-
-`x--;`  
-
-`skip_block:` |
-
-| --- | --- |
+| `if (x)`<br>`{`<br>`    x++;`<br>`}`<br>`else`<br>`{`<br>`    x--;`<br>`}` | `if (!x)`<br>`    goto false_block;`<br>`x++;`<br>`goto skip_block;`<br>`false_block:`<br>`x--;`<br>`skip_block:` |
 
 As before, removing the blocks makes it easier to convert the high-level code into assembly code.
 
-| CODE || X86 ASSEMBLY |
-
+| CODE | X86 ASSEMBLY |
 | --- | --- |
+| `if (!x)`<br>`    goto false_block;`<br>`x++;`<br>`goto skip_block;`<br>`false_block:`<br>`x--;`<br>`skip_block:` | `cmp dword [x], 0`<br>`je false_block`<br>`inc dword [x]`<br>`jmp skip_block`<br>`false_block:`<br>`dec dword [x]`<br>`skip_block:` |
 
-| `if (!x)`  
-
-`    goto false_block;`  
-
-`x++;`  
-
-`goto skip_block;`  
-
-`false_block:`  
-
-`x--;`  
-
-`skip_block:` || `cmp dword [x], 0`  
-
-`je false_block`  
-
-`inc dword [x]`  
-
-`jmp skip_block`  
-
-`false_block:`  
-
-`dec dword [x]`  
-
-`skip_block:` |
-
-| --- | --- |
-
-#### *if (…) { … } else if { … } else { … }*
+#### `if (…) { … } else if { … } else { … }`
 
 `if` statements can be made more complex and evaluate multiple different conditions. The following demonstrates an `if` statement with `else if` and `else` with and without blocks. But the process still stays the same. Invert the condition, and add `goto`s.
 
-| WITH BLOCKS || WITHOUT BLOCKS |
-
+| WITH BLOCKS | WITHOUT BLOCKS |
 | --- | --- |
-
-| `if (condition_1)`  
-
-`{`  
-
-`    code_if_1;`  
-
-`}`  
-
-`else if (condition_2)`  
-
-`{`  
-
-`    code_if_2;`  
-
-`}`  
-
-`else`  
-
-`{`  
-
-`    code_if_false;`  
-
-`}` || `if (!condition_1)`  
-
-`    goto test_2;`  
-
-`code_if_1;`  
-
-`goto skip_block;`  
-
-`test_2:`  
-
-`if (!condition_2)`  
-
-`    goto false_block;`  
-
-`code_if_2;`  
-
-`goto skip_block;`  
-
-`false_block:`  
-
-`code_if_false;`  
-
-`skip_block:` |
-
-| --- | --- |
+| `if (condition_1)`<br>`{`<br>`    code_if_1;`<br>`}`<br>`else if (condition_2)`<br>`{`<br>`    code_if_2;`<br>`}`<br>`else`<br>`{`<br>`    code_if_false;`<br>`}` | `if (!condition_1)`<br>`    goto test_2;`<br>`code_if_1;`<br>`goto skip_block;`<br>`test_2:`<br>`if (!condition_2)`<br>`    goto false_block;`<br>`code_if_2;`<br>`goto skip_block;`<br>`false_block:`<br>`code_if_false;`<br>`skip_block:` |
 
 Note that, once again, converting to a blockless version requires flipping the conditions. The strictly less than statements become greater than or equal to 1. The following example shows how this code is then easily translated to assembly:
 
-| CODE || X86 ASSEMBLY |
-
+| CODE | X86 ASSEMBLY |
 | --- | --- |
+| `if (score<=70)`<br>`    goto test_2;`<br>`grade='a';`<br>`goto skip_block;`<br>`test_2:`<br>`if (score<=50)`<br>`    goto false_block;` | `cmp dword [score], 70`<br>`jle test_2`<br>`mov byte [grade], 'a'`<br>`jmp skip_block`<br>`test_2:`<br>`cmp dword [score], 50`<br>`jle false_block` |
+| `grade='b';`<br>`goto skip_block;`<br>`false_block:`<br>`grade='c';`<br>`skip_block:` | `mov byte [grade], 'b'`<br>`jmp skip_block`<br>`false_block:`<br>`mov byte [grade], 'c'`<br>`skip_block:` |
 
-| `if (score<=70)`  
-
-`    goto test_2;`  
-
-`grade='a';`  
-
-`goto skip_block;`  
-
-`test_2:`  
-
-`if (score<=50)`  
-
-`    goto false_block;` || `cmp dword [score], 70`  
-
-`jle test_2`  
-
-`mov byte [grade], 'a'`  
-
-`jmp skip_block`  
-
-`test_2:`  
-
-`cmp dword [score], 50`  
-
-`jle false_block` |
-
-| --- | --- |
-
-| `grade='b';`  
-
-`goto skip_block;`  
-
-`false_block:`  
-
-`grade='c';`  
-
-`skip_block:` || `mov byte [grade], 'b'`  
-
-`jmp skip_block`  
-
-`false_block:`  
-
-`mov byte [grade], 'c'`  
-
-`skip_block:` |
-
-### do { ... } while (...);
+### `do { ... } while (...);`
 
 Higher-level programming languages have a number of different loop structures, each of which works slightly differently. A `do…while` loop is guaranteed to perform at least one iteration before evaluating the condition that would terminate the loop. The following is an example of a `do…while` loop with blocks:
 
@@ -2412,9 +2057,7 @@ do
 while (condition);
 ```
 
-
-
--   [与 `if` 语句不同，`do…while` 循环在循环的末尾评估其条件，因此要继续循环需要向后跳转。如前所述，此代码需要重写为不使用代码块的形式。下面展示了使用 `goto` 语句而非代码块的相同 `do…while` 循环：]
+- [与 `if` 语句不同，`do…while` 循环在循环的末尾评估其条件，因此要继续循环需要向后跳转。如前所述，此代码需要重写为不使用代码块的形式。下面展示了使用 `goto` 语句而非代码块的相同 `do…while` 循环：]
 
 ```
 loop:
@@ -2425,231 +2068,59 @@ if (condition)
     goto loop;
 ```
 
--   [与 `if` 语句不同，`do..while` 循环不会对其被测试的条件进行取反。这是因为向后跳转仅在条件为真且需要再次通过循环时执行。]
+- [与 `if` 语句不同，`do..while` 循环不会对其被测试的条件进行取反。这是因为向后跳转仅在条件为真且需要再次通过循环时执行。]
 
--   [现在，请查看使用真实条件和逻辑的代码版本。]
+- [现在，请查看使用真实条件和逻辑的代码版本。]
 
-| WITH BLOCKS || WITHOUT BLOCKS |
+| WITH BLOCKS | WITHOUT BLOCKS |
 | --- | --- |
-| `do`  
+| `do`<br>`{`<br>`    y*=x;`<br>`    x--;`<br>`}`<br>`while (x);` | `loop:`<br>`y*=x;`<br>`x--;`<br>`if (x)`<br>`    goto loop;` |
 
-`{`  
+- [将此代码转换为不使用代码块相对简单，因为指令流基本保持不变。主要区别在于将 `while` 语句替换为 `if` 和 `goto`。]
 
-`    y*=x;`  
+- [与前面的示例不同，将此转换为汇编代码的复杂性主要取决于示例代码的复杂性，而非分支结构。]
 
-`    x--;`  
-
-`}`  
-
-`while (x);` || `loop:`  
-
-`y*=x;`  
-
-`x--;`  
-
-`if (x)`  
-
-`    goto loop;` |
-
+| CODE | X86 ASSEMBLY |
 | --- | --- |
+| `loop:`<br>`y*=x;`<br>`x--;`<br>`if (x)`<br>`    goto loop;` | `loop:`<br>`mov eax, [y]`<br>`mul dword [x]`<br>`mov [y], eax`<br>`sub dword [x], 1`<br>`cmp dword [x], 0`<br>`jne loop` |
+
+- [`do…while` 循环保证在条件被评估之前至少执行一次循环体。`while` 循环立即评估条件，因此循环体可能根本不执行。下面的表格展示了带代码块和不带代码块的 `while` 循环。`while` 循环可以分解为 `if` 语句，因此遵循常规的 `if` 语句转换模式。]
+
+| WITH BLOCKS | WITHOUT BLOCKS |
 | --- | --- |
+| `while (condition)`<br>`{`<br>`    code;`<br>`}` | `loop:`<br>`if (!condition)`<br>`    goto done;`<br>`code;`<br>`goto loop;`<br>`done:` |
 
--   [将此代码转换为不使用代码块相对简单，因为指令流基本保持不变。主要区别在于将 `while` 语句替换为 `if` 和 `goto`。]
+- [由于条件在循环开始时评估，它的逻辑与 `if` 语句相同（需要取反）。下面的表格展示了从伪代码到实际代码的转换示例：]
 
--   [与前面的示例不同，将此转换为汇编代码的复杂性主要取决于示例代码的复杂性，而非分支结构。]
-
-| CODE || X86 ASSEMBLY |
+| WITH BLOCKS | WITHOUT BLOCKS |
 | --- | --- |
-| `loop:`  
+| `while (tired)`<br>`{`<br>`    sleep();`<br>`}` | `loop:`<br>`if (!tired)`<br>`    goto done;`<br>`sleep();`<br>`goto loop;`<br>`done:` |
 
-`y*=x;`  
+- [代码去除代码块后，可转换为 x86 汇编如下：]
 
-`x--;`  
-
-`if (x)`  
-
-`    goto loop;` || `loop:`  
-
-`mov eax, [y]`  
-
-`mul dword [x]`  
-
-`mov [y], eax`  
-
-`sub dword [x], 1`  
-
-`cmp dword [x], 0`  
-
-`jne loop` |
-
+| CODE | X86 ASSEMBLY |
 | --- | --- |
+| `loop:`<br>`if (!tired)`<br>`    goto done;`<br>`sleep();`<br>`goto loop;`<br>`done:` | `loop:`<br>`cmp dword [tired], 0`<br>`je done`<br>`call sleep`<br>`jmp loop`<br>`done:` |
 
--   [`do…while` 循环保证在条件被评估之前至少执行一次循环体。`while` 循环立即评估条件，因此循环体可能根本不执行。下面的表格展示了带代码块和不带代码块的 `while` 循环。`while` 循环可以分解为 `if` 语句，因此遵循常规的 `if` 语句转换模式。]
+- [`for` 循环的运行方式不同于 `while` 或 `do…while` 循环。它包含三个表达式：初始化循环计数器、定义循环终止条件、以及在每次迭代中更新计数器的表达式。]
 
-| WITH BLOCKS || WITHOUT BLOCKS |
+| WITH BLOCKS | WITHOUT BLOCKS |
 | --- | --- |
-| `while (condition)`  
+| `for (expr_1; expr_2; expr_3)`<br>`{`<br>`    code;`<br>`}` | ` expr_1;`<br>` loop:`<br>` if (!expr_2)`<br>`    goto done;`<br>` code;`<br>` expr_3;`<br>` goto loop;`<br>` done:` |
 
-`{`  
+- [在去除代码块后，`for` 循环的三个表达式会被拆分：第一个表达式在循环开始前执行一次，第二个表达式开始循环，第三个表达式在每次迭代结束时执行以更新计数器。]
 
-`    code;`  
-
-`}` || `loop:`  
-
-`if (!condition)`  
-
-`    goto done;`  
-
-`code;`  
-
-`goto loop;`  
-
-`done:` |
-
+| WITH BLOCKS | WITHOUT BLOCKS |
 | --- | --- |
+| `for (i=0; i<100; i++)`<br>`{`<br>`    sum+=i;`<br>`}` | ` i=0;`<br>` loop:`<br>` if (i>=100)`<br>`    goto done;`<br>` sum+=i;`<br>` i++;`<br>` goto loop;`<br>` done:` |
 
--   [由于条件在循环开始时评估，它的逻辑与 `if` 语句相同（需要取反）。下面的表格展示了从伪代码到实际代码的转换示例：]
+- [与 `while` 或 `if` 语句一样，`for` 循环在条件评估时会取反条件，因为条件在循环开始时而非结束时评估。]
 
-| WITH BLOCKS || WITHOUT BLOCKS |
+| CODE | X86 ASSEMBLY |
 | --- | --- |
-| `while (tired)`  
+| ` i=0;`<br>` loop:`<br>` if (i>=100)`<br>`    goto done;`<br>` sum+=i;`<br>` i++;`<br>` goto loop;`<br>` done:` | `mov dword [i], 0`<br>`loop:`<br>`cmp dword [i], 100`<br>`jge done`<br>`mov eax,[i]`<br>`add [sum],eax`<br>`inc dword [i]`<br>`jmp loop`<br>`done:` |
 
-`{`  
-
-`    sleep();`  
-
-`}` || `loop:`  
-
-`if (!tired)`  
-
-`    goto done;`  
-
-`sleep();`  
-
-`goto loop;`  
-
-`done:` |
-
-| --- | --- |
-
--   [代码去除代码块后，可转换为 x86 汇编如下：]
-
-| CODE || X86 ASSEMBLY |
-| --- | --- |
-| `loop:`  
-
-`if (!tired)`  
-
-`    goto done;`  
-
-`sleep();`  
-
-`goto loop;`  
-
-`done:` || `loop:`  
-
-`cmp dword [tired], 0`  
-
-`je done`  
-
-`call sleep`  
-
-`jmp loop`  
-
-`done:` |
-
--   [`for` 循环的运行方式不同于 `while` 或 `do…while` 循环。它包含三个表达式：初始化循环计数器、定义循环终止条件、以及在每次迭代中更新计数器的表达式。]
-
-| WITH BLOCKS || WITHOUT BLOCKS |
-| --- | --- |
-| `for (expr_1; expr_2; expr_3)`  
-
-`{`  
-
-`    code;`  
-
-`}` || ` expr_1;`  
-
-` loop:`  
-
-` if (!expr_2)`  
-
-`    goto done;`  
-
-` code;`  
-
-` expr_3;`  
-
-` goto loop;`  
-
-` done:` |
-
-| --- | --- |
-
--   [在去除代码块后，`for` 循环的三个表达式会被拆分：第一个表达式在循环开始前执行一次，第二个表达式开始循环，第三个表达式在每次迭代结束时执行以更新计数器。]
-
-| WITH BLOCKS || WITHOUT BLOCKS |
-| --- | --- |
-| `for (i=0; i<100; i++)`  
-
-`{`  
-
-`    sum+=i;`  
-
-`}` || ` i=0;`  
-
-` loop:`  
-
-` if (i>=100)` |
-
-| --- | --- |
-|  || `    goto done;`  
-
-` sum+=i;`  
-
-` i++;`  
-
-` goto loop;`  
-
-` done:` |
-
--   [与 `while` 或 `if` 语句一样，`for` 循环在条件评估时会取反条件，因为条件在循环开始时而非结束时评估。]
-
-| CODE || X86 ASSEMBLY |
-| --- | --- |
-| ` i=0;`  
-
-` loop:`  
-
-` if (i>=100)`  
-
-`    goto done;`  
-
-` sum+=i;`  
-
-` i++;`  
-
-` goto loop;`  
-
-` done:` || `mov dword [i], 0`  
-
-`loop:`  
-
-`cmp dword [i], 100`  
-
-`jge done`  
-
-`mov eax,[i]`  
-
-`add [sum],eax`  
-
-`inc dword [i]`  
-
-`jmp loop`  
-
-`done:` |
-
--   [`switch` 语句是某些编程语言中用于根据变量值选择执行不同操作的逻辑结构。下面的示例根据变量 `op` 的值打印对应的字符：]
+- [`switch` 语句是某些编程语言中用于根据变量值选择执行不同操作的逻辑结构。下面的示例根据变量 `op` 的值打印对应的字符：]
 
 ```
  typedef enum {ADD, SUB, MUL, DIV, MOD} op_t;
@@ -2670,123 +2141,39 @@ switch (op) {
 }
 ```
 
--   [任何 `switch` 语句都可以用一系列 `if` 和 `else-if` 语句表示，但这样会导致代码复杂且执行效率低。例如，若要匹配最后一个案例，需要依次执行所有前面的比较。]
+- [任何 `switch` 语句都可以用一系列 `if` 和 `else-if` 语句表示，但这样会导致代码复杂且执行效率低。例如，若要匹配最后一个案例，需要依次执行所有前面的比较。]
 
-| WITH BLOCKS || WITHOUT BLOCKS |
+| WITH BLOCKS | WITHOUT BLOCKS |
 | --- | --- |
-| `while (condition)`  
+| `while (condition)`<br>`{`<br>`    code;`<br>`}` | `loop:`<br>`if (!condition)`<br>`    goto done;`<br>`code;`<br>`goto loop;`<br>`done:` |
 
-`{`  
+- [下面的表格展示了 `switch` 语句的 `if`/`else-if` 等价形式：]
 
-`    code;`  
-
-`}` || `loop:`  
-
-`if (!condition)`  
-
-`    goto done;`  
-
-`code;`  
-
-`goto loop;`  
-
-`done:` |
-
+| WITH BLOCKS | WITHOUT BLOCKS |
 | --- | --- |
+| `while (tired)`<br>`{`<br>`    sleep();`<br>`}` | `loop:`<br>`if (!tired)`<br>`    goto done;`<br>`sleep();`<br>`goto loop;`<br>`done:` |
 
--   [下面的表格展示了 `switch` 语句的 `if`/`else-if` 等价形式：]
+- [下面的表格展示了 `for` 循环的 `if`/`else-if` 等价形式：]
 
-| WITH BLOCKS || WITHOUT BLOCKS |
+| WITH BLOCKS | WITHOUT BLOCKS |
 | --- | --- |
-| `while (tired)`  
+| `for (expr_1; expr_2; expr_3)`<br>`{`<br>`    code;`<br>`}` | ` expr_1;`<br>` loop:`<br>` if (!expr_2)`<br>`    goto done;`<br>` code;`<br>` expr_3;`<br>` goto loop;`<br>` done:` |
 
-`{`  
+- [下面的表格展示了 `for` 循环的 x86 汇编实现：]
 
-`    sleep();`  
-
-`}` || `loop:`  
-
-`if (!tired)`  
-
-`    goto done;`  
-
-`sleep();`  
-
-`goto loop;`  
-
-`done:` |
-
+| CODE | X86 ASSEMBLY |
 | --- | --- |
+| ` i=0;`<br>` loop:`<br>` if (i>=100)`<br>`    goto done;`<br>` sum+=i;`<br>` i++;`<br>` goto loop;`<br>` done:` | `mov dword [i], 0`<br>`loop:`<br>`cmp dword [i], 100`<br>`jge done`<br>`mov eax,[i]`<br>`add [sum],eax`<br>`inc dword [i]`<br>`jmp loop`<br>`done:` |
 
--   [下面的表格展示了 `for` 循环的 `if`/`else-if` 等价形式：]
+- [`switch` 语句通过枚举类型 `op_t` 根据变量 `op` 的值选择执行不同操作。下面的 `switch` 语句根据 `op` 的值打印对应的字符：]
 
-| WITH BLOCKS || WITHOUT BLOCKS |
-| --- | --- |
-| `for (expr_1; expr_2; expr_3)`  
 
-`{`  
 
-`    code;`  
-
-`}` || ` expr_1;`  
-
-` loop:`  
-
-` if (!expr_2)`  
-
-`    goto done;`  
-
-` code;`  
-
-` expr_3;`  
-
-` goto loop;`  
-
-` done:` |
-
-| --- | --- |
-
--   [下面的表格展示了 `for` 循环的 x86 汇编实现：]
-
-| CODE || X86 ASSEMBLY |
-| --- | --- |
-| ` i=0;`  
-
-` loop:`  
-
-` if (i>=100)`  
-
-`    goto done;`  
-
-` sum+=i;`  
-
-` i++;`  
-
-` goto loop;`  
-
-` done:` || `mov dword [i], 0`  
-
-`loop:`  
-
-`cmp dword [i], 100`  
-
-`jge done`  
-
-`mov eax,[i]`  
-
-`add [sum],eax`  
-
-`inc dword [i]`  
-
-`jmp loop`  
-
-`done:` |
-
--   [`switch` 语句通过枚举类型 `op_t` 根据变量 `op` 的值选择执行不同操作。下面的 `switch` 语句根据 `op` 的值打印对应的字符：]
+## `switch` 语句与跳转表
 
 ```
- typedef enum {ADD, SUB, MUL, DIV, MOD} op_t;
- 
+typedef enum {ADD, SUB, MUL, DIV, MOD} op_t;
+
 switch (op) {
     case ADD:
         c='+'; break;
@@ -2803,7 +2190,7 @@ switch (op) {
 }
 ```
 
--   [下面的代码展示了使用 `if` 和 `else-if` 语句实现的等价 `switch`：]
+下面的代码展示了使用 `if` 和 `else-if` 语句实现的等价 `switch`：
 
 ```
 if (op==ADD)
@@ -2820,13 +2207,13 @@ else
     c='?';
 ```
 
--   [为了避免在执行大量 `if`/`else-if` 检查时的低效，编译器可以构建 **跳转表**（jump table）。跳转表是一种汇编数据结构，存储 `switch` 语句各分支的目标地址，使得根据 case 编号直接索引到对应代码块，实现直接跳转。]
+为了避免在执行大量 `if`/`else-if` 检查时的低效，编译器可以构建**跳转表**（jump table）。跳转表是一种汇编数据结构，存储 `switch` 语句各分支的目标地址，使得根据 case 编号直接索引到对应代码块，实现直接跳转。
 
 ![Figure 7.1: Example jump table](img/c07f001.png)
 
 **Figure 7.1**: Example jump table
 
--   [下面的代码展示了使用跳转表的汇编实现：]
+下面的代码展示了使用跳转表的汇编实现：
 
 ```
 .section data
@@ -2836,52 +2223,49 @@ dd target_1
 dd target_2
 dd target_3
 dd target_4
- 
+
 .section text
 mov eax, [op]
 cmp eax, 5
 jge default
 jmp [table+eax*4]
- 
+
 target_0:
 mov byte [c], '+'
 jmp done
- 
+
 target_1:
 mov byte [c], '-'
 jmp done
- 
+
 target_2:
 mov byte [c], '*'
 jmp done
- 
+
 target_3:
 mov byte [c], '/'
 jmp done
- 
+
 target_4:
 mov byte [c], '%'
- jmp done
- 
+jmp done
+
 default:
 mov byte [c], '?'
 jmp done
- 
+
 done:
 ```
 
+It begins with the jump table, which contains the addresses of the various code blocks in memory. Each of these code blocks, labeled as `target_x`, moves the appropriate character into `byte [c]` and then jumps to the `done` label.
 
+In between the table and the target code blocks is the code that actually implements the `switch` statement under the `.section text` heading. This code begins by moving `op` into `eax`. It then checks if `op` is greater than or equal to 5. If so, it jumps to the `default` case.
 
-
-It begins with the jump table, which contains the addresses of the various code blocks in memory. Each of these code blocks, labeled as `*target_x*` , moves the appropriate character into `byte` [c] and then jumps to the `*done*` label.
-
-In between the table and the target code blocks is the code that actually implements the `switch` statement under the `.section text` heading. This code begins by moving `*op*` into `eax` . It then checks if `*op*` is greater than or equal to 5. If so, it jumps to the `*default*` case.
-
-If the value of `*op*` is less than 5, it maps to one of the targets. By using it as a lookup into the jump table, the processor can retrieve the address of the corresponding code block and jump to that location to execute the code.
+If the value of `op` is less than 5, it maps to one of the targets. By using it as a lookup into the jump table, the processor can retrieve the address of the corresponding code block and jump to that location to execute the code.
 
 In this case, using the jump table, the execution time is the same regardless of which case it is. The last case doesn't take any more instructions or comparisons than the first.
 
-##### Missing Cases
+### Missing Cases
 
 A jump table assumes that the cases cover a continuous range of values. For example, in the following code sample, a `switch` statement has the cases 1, 2, 4, and 5. In this scenario, the missing 3 can be a problem. Something needs to go in the third spot in the jump table.
 
@@ -2900,23 +2284,19 @@ switch (x) {
 }
 ```
 
-Missing values in a jump table can be filled with the default address or done if there is no default, as shown next. This will cause the processor to jump to the proper location when `*op*` equals 3, and it attempts to jump to the corresponding location in the jump table.
+Missing values in a jump table can be filled with the `default` address or `done` if there is no `default`, as shown next. This will cause the processor to jump to the proper location when `op` equals 3, and it attempts to jump to the corresponding location in the jump table.
 
-#### JUMP TABLE
+**JUMP TABLE**
 
-| target_0 |
-
+|  |
 | --- |
+| `target_0` |
+| `target_1` |
+| `target_2` |
+| `default` |
+| `target_4` |
 
-| target_1 |
-
-| target_2 |
-
-| default |
-
-| target_4 |
-
-##### Nonzero Bases
+### Nonzero Bases
 
 A jump table is designed to have a set of cases that start at 0. However, a `switch` statement may have nonzero case values, as shown in the following code sample:
 
@@ -2933,38 +2313,35 @@ switch (x) {
 }
 ```
 
-In this case, it's necessary to find a way to zero the cases. With ASCII, it's necessary to find the lowest case in the jump table that, for this example, has a value of `*a*` , or 97. When implementing a jump table for this `switch` statement, the code can use an offset, accessing values as `table[x-97]`. In the following jump table, `*target_a*` will point to case `a` of the `switch` statement.
+In this case, it's necessary to find a way to zero the cases. With ASCII, it's necessary to find the lowest case in the jump table that, for this example, has a value of `a`, or 97. When implementing a jump table for this `switch` statement, the code can use an offset, accessing values as `table[x-97]`. In the following jump table, `target_a` will point to case `a` of the `switch` statement.
 
-#### JUMP TABLE
+**JUMP TABLE**
 
-| target_a |
-
+|  |
 | --- |
+| `target_a` |
+| `target_b` |
+| `target_c` |
+| `target_d` |
 
-| target_b |
-
-| target_c |
-
-| target_d |
-
-##### Impractical Jump Tables
+### Impractical Jump Tables
 
 A compiler will use these tricks to improve code efficiency, and you can too when writing code by hand. However, sometimes a jump table just won't work. For example, consider the following code:
 
 ```
 switch (x) {
     case 1:
-         printf("this is the beginning."); break;
+        printf("this is the beginning."); break;
     case 1000:
         printf("this is the end."); break;
 }
 ```
 
-A jump table for this `switch` statement would need to have 1,000 entries and 998 of them would point to the done label. In this case, an `if/else` statement is the more efficient option.
+A jump table for this `switch` statement would need to have 1,000 entries and 998 of them would point to the `done` label. In this case, an `if/else` statement is the more efficient option.
 
 That's not the only case where it's impractical; a larger jump table with hundreds of cases, or a table that uses an index that can't easily be zeroed or has too many gaps in the table, can be impractical. But as you both write and dissect assembly code, it's important to be able to understand these structures and how they're used.
 
-### Continue
+## Continue
 
 Some higher-level languages include the `continue` keyword. `continue` is used inside a loop and instructs the processor to jump to the next iteration of the loop, skipping any instructions that follow.
 
@@ -2984,7 +2361,6 @@ A loop with a `continue` statement looks similar to a normal loop of that type w
 
 ```
 loop:
-
 code;
 goto check_condition;
 code;
@@ -2996,105 +2372,21 @@ if (condition)
 
 The following examples show an example of a loop with a `continue` statement using actual code:
 
-| WITH BLOCKS || WITHOUT BLOCKS |
-
+| WITH BLOCKS | WITHOUT BLOCKS |
 | --- | --- |
-
-| `do`  
-
-`{`  
-
-`    x--;`  
-
-`    continue;`  
-
-`    x++;`  
-
-`}`  
-
-`while (x);` || `loop:`  
-
-`x--;`  
-
-`goto check_condition;`  
-
-`x++;`  
-
-`check_condition:`  
-
-`if (x)`  
-
-`    goto loop;` |
-
-| --- | --- |
-
-| `do`  
-
-`{`  
-
-`    x--;`  
-
-`    continue;`  
-
-`    x++;`  
-
-`}`  
-
-`while (x);` || `loop:`  
-
-`x--;`  
-
-`goto check_condition;`  
-
-`x++;`  
-
-`check_condition:`  
-
-`if (x)`  
-
-`    goto loop;` |
-
-| --- | --- |
+| `do`<br>`{`<br>`    x--;`<br>`    continue;`<br>`    x++;`<br>`}`<br>`while (x);` | `loop:`<br>`x--;`<br>`goto check_condition;`<br>`x++;`<br>`check_condition:`<br>`if (x)`<br>`    goto loop;` |
 
 In this code, the instruction `x++;` will never execute because the `continue` always causes it to be skipped. Typically, a `continue` will be located inside of an `if` statement because, otherwise, the code following it is pointless. This contrived example is designed to demonstrate how `continue` works without the complexity of `if` statements nested within a loop.
 
 Once the code has been converted to remove code blocks, it can be translated to assembly. As before, a `goto` can be implemented using a nonconditional jump.
 
-| CODE || X86 ASSEMBLY |
-
+| CODE | X86 ASSEMBLY |
 | --- | --- |
+| `loop:`<br>`x--;`<br>`goto check_condition;`<br>`x++;`<br>`check_condition:`<br>`if (x)`<br>`    goto loop;` | `loop:`<br>`sub dword [x], 1`<br>`jmp check_condition`<br>`add dword [x], 1`<br>`check_condition:`<br>`cmp dword [x], 0`<br>`jne loop` |
 
-| `loop:`  
+## break
 
-`x--;`  
-
-`goto check_condition;`  
-
-`x++;`  
-
-`check_condition:`  
-
-`if (x)`  
-
-`    goto loop;` || `loop:`  
-
-`sub dword [x], 1`  
-
-`jmp check_condition`  
-
-`add dword [x], 1`  
-
-`check_condition:`  
-
-`cmp dword [x], 0`  
-
-`jne loop` |
-
-| --- | --- |
-
-### break
-
-The `break` keyword also exists in some programming languages, and it instructs the processor to exit the current loop. As with `continue`, the second chunk of code in the following example will never execute, as the break would typically be inside of a conditional statement, but this is an example simply to demonstrate the break mechanism.
+The `break` keyword also exists in some programming languages, and it instructs the processor to exit the current loop. As with `continue`, the second chunk of code in the following example will never execute, as the `break` would typically be inside of a conditional statement, but this is an example simply to demonstrate the `break` mechanism.
 
 ```
 do
@@ -3110,34 +2402,23 @@ The following example demonstrates how this code would be implemented without co
 
 ```
 loop:
-
 code;
 goto break;
 code;
- 
+
 if (condition)
     goto loop;
- 
+
 break:
 ```
 
-In the following example, the `break` statement would terminate the loop after the operation `x--` has been evaluated once. In this case, the `x++` statement and the loop conditional will never be executed, but again this is sample code. It shows how you'd easily put the break into a conditional.
+In the following example, the `break` statement would terminate the loop after the operation `x--` has been evaluated once. In this case, the `x++` statement and the loop conditional will never be executed, but again this is sample code. It shows how you'd easily put the `break` into a conditional.
 
-| WITH BLOCKS || WITHOUT BLOCKS |
-
+| WITH BLOCKS | WITHOUT BLOCKS |
 | --- | --- |
+| `do`<br>`{`<br>`    x--;`<br>`    break;`<br>`    x++;`<br>`}` | |
 
-| `do`  
 
-`{`  
-
-`    x--;`  
-
-`    break;`  
-
-`    x++;`  
-
-`}`  
 
 `while (x);` || `loop:`  
 
@@ -3217,7 +2498,7 @@ The following example shows how the code can be converted to assembly:
 
 | --- | --- |
 
-### &&
+### `&&`
 
 In higher-level languages, a conditional in an `if` statement or a loop has the potential to evaluate multiple different conditions such as a Boolean AND (`&&`). In the following example, the `if` block will be executed only if both `condition_1` and `condition_2` are true.
 
@@ -3239,8 +2520,6 @@ skip_block:
 
 Once rewritten like this (without code blocks), follow the same formula to translate this to assembly.
 
-
-
 在 `if` 语句中，另一种选择是使用布尔或（`||`）组合多个条件。下面的伪代码展示了这一点：
 
 ```
@@ -3259,9 +2538,9 @@ code;
 skip_block: 
 ```
 
-布尔或语句为真，只要两个条件中任意一个为真。在前面的例子中，第一个 `if` 语句使用原始 *`condition_1`*，因为它为真，所以不需要评估第二个条件，直接跳转到 *`true`* 标签。
+布尔或语句为真，只要两个条件中任意一个为真。在前面的例子中，第一个 `if` 语句使用原始 `condition_1`，因为它为真，所以不需要评估第二个条件，直接跳转到 `true` 标签。
 
-如果该条件为假，代码会继续评估 *`condition_2`*。该条件取反，跳转到 `if` 语句末尾。如果 *`condition_2`* 为真，代码会顺流进入 *`true`* 块；否则，它会跳过 `if` 语句。
+如果该条件为假，代码会继续评估 `condition_2`。该条件取反，跳转到 `if` 语句末尾。如果 `condition_2` 为真，代码会顺流进入 `true` 块；否则，它会跳过 `if` 语句。
 
 ## Stack
 
@@ -3275,7 +2554,7 @@ skip_block:
 
 栈得名于它是一种后进先出（LIFO）结构，类似于纸张堆。这个概念与编程的控制流相匹配，栈在各种架构中非常常见。
 
-栈拥有一个 *栈指针*，指示栈的顶部。一些专门用于栈操作的指令将在本节中详细探讨。 *push* 将新值存储在栈的当前顶部，并更新栈指针以指示新的栈顶（相当于在栈上放入一张新的纸）。 *pop* 将栈顶的值移动到寄存器或内存地址，并更新栈指针，使其指向栈中位于该值下方的新顶部（相当于从栈上取下一张纸）。
+栈拥有一个 `栈指针`，指示栈的顶部。一些专门用于栈操作的指令将在本节中详细探讨。 `push` 将新值存储在栈的当前顶部，并更新栈指针以指示新的栈顶（相当于在栈上放入一张新的纸）。 `pop` 将栈顶的值移动到寄存器或内存地址，并更新栈指针，使其指向栈中位于该值下方的新顶部（相当于从栈上取下一张纸）。
 
 ### 栈的工作原理
 
@@ -3301,9 +2580,7 @@ stack equ $-4
 
 ![Figure 7.2: Stack address growth](img/c07f002.png)
 
-[**Figure 7.2**](#c07.xhtml#R_c07-fig-000.<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>
-
-
+[**Figure 7.2**](#c07.xhtml#R_c07-fig-000. 
 
 x86 具有有限数量的寄存器，很容易用完。通常需要某种暂存/垃圾区域来暂时存储尚未使用完的信息。栈提供了一个便捷的位置来暂时存储值。
 
@@ -3320,7 +2597,7 @@ pop eax      ; retrieve saved eax
 
 在这个例子中，`push` 和 `pop` 指令用于将 `eax` 的内容暂时存储到栈上。这释放了寄存器，以便用于其他计算。当需要存储的值时，可以使用 `pop` 将其恢复到 `eax` 。
 
-#### *Using Pop Cautiously*
+#### `Using Pop Cautiously`
 
 数据在计算机上很少被删除。例如，当文件在文件系统中被删除或程序释放变量时，与该数据关联的内存仅仅被标记为可用于其他用途。存储的数据仍然存在于磁盘上。
 
@@ -3340,20 +2617,35 @@ push 0xc0ffee ;(4)
 **Table 7.4**: Stack trace examples
 
 | (1)  ||      || (2) |
+
 | --- | --- | --- |
+
 | ADDRESS || VALUE || ADDRESS || VALUE |
+
 | `0x1000` || `??` ||  || `0x1000` || `??` |
+
 | `0x1004` || `??` || `0x1004` || `??` |
+
 | `0x1008` || `??` || `0x1008 (esp)` || `0xbadc0de` |
+
 | `0x100c (esp)` || `0x11223344` || `0x100c` || `0x11223344` |
+
 | `0x1010` || `0x55667788` || `0x1010` || `0x55667788` |
+
 |   ||   |
+
 | **(3)** || **(4)** |
+
 | **ADDRESS** || **VALUE** || **ADDRESS** || **VALUE** |
+
 | `0x1000` || `??` || `0x1000` || `??` |
+
 | `0x1004` || `??` || `0x1004` || `??` |
+
 | `0x1008` || `0xbadc0de` || `0x1008 (esp)` || `0xc0ffee` |
+
 | `0x100c (esp)` || `0x11223344` || `0x100c` || `0x11223344` |
+
 | `0x1010` || `0x55667788` || `0x1010` || `0x55667788` |
 
 请注意，在栈跟踪 3 中，`0xbadc0de` 已被弹出栈，但它仍然存在，直到有其他操作将其覆盖，如栈状态 4 所示。在合法条件下，你不应依赖或使用栈中当前已分配的部分（`[esp-..]`）之外的内容，但这种知识对于其他不太合法的用途可能很有洞察力。后续示例要么不再列出“未分配”在栈中的内容，要么用 ~~example~~ 划掉该值，以表示它已未分配。
@@ -3368,7 +2660,7 @@ push 0xc0ffee ;(4)
 
 x86 的 `call` 和 `ret` 指令提供了在 x86 中创建函数的能力，类似于高级编程语言。
 
-#### *call*
+#### `call`
 
 `call` 指令的语法为 `call op`，其中 *`op`* 表示被调用函数的地址。参数 *`op`* 可以是寄存器、标签或内存地址。
 
@@ -3380,7 +2672,7 @@ call 0x1000 ; branch to 0x1000
 
 与 `push` 和 `pop` 类似，`call` 实际上将多个步骤包装成一个操作。首先，它通过将下一条指令的地址压栈来创建返回地址，然后无条件跳转到由 *`op`* 指示的代码位置。
 
-#### *ret*
+#### `ret`
 
 `ret` 指令不接受参数。它的作用是将执行返回到调用函数。
 
@@ -3442,17 +2734,29 @@ void c() { int x; }
 **Table 7.5**: Function calls and the stack
 
 | (1)  ||     || (2) ||     || (3) |
+
 | --- | --- | --- | --- | --- |
+
 | ADDRESS || VALUE || ADDRESS || VALUE || ADDRESS || VALUE |
+
 | `0x9000` || `??` ||     || `0x9000` || `??` ||     || `0x9000` || `??` |
+
 | --- | --- | --- | --- | --- |
+
 | `0x9004` || `??` || `0x9004` || `??` || `0x9004` || `??` |
+
 | `0x9008` || `??` || `0x9008` || `??` || `0x9008` || `??` |
+
 | `0x900c` || `??` || `0x900c` || `0x10003` || `0x900c` || `0x10003` |
+
 | `0x9010` || `??` || `0x9010` || `??` || `0x9010` || `??` |
+
 |   ||   ||   |
+
 | **REGISTER** || **VALUE** || **REGISTER** || **VALUE** || **REGISTER** || **VALUE** |
+
 | `esp` || `0x9010` || `esp` || `0x900c` || `esp` || `0x9010` |
+
 | `eip` || `0x10000` || `eip` || `0x20012` || `eip` || `0x10003` |
 
 这从 `a()` 函数开始，它有一个局部变量 `x`，然后调用 `b` 函数。Table 7.6 说明了 `a` 被调用后栈的结构。注意 `a` 的局部数据会在栈上分配空间。
@@ -3460,22 +2764,28 @@ void c() { int x; }
 **Table 7.6**: Program stack after calling *`a`*
 
 | **STACK** |
+
 | --- |
+
 |   |
+
 |   |
+
 |   |
+
 |   |
+
 |   |
+
 |   |
+
 | `a's local data` |
+
 |   |
 
 当 `a` 执行时，它声明 `x` 并调用 `b`。这意味着执行流会切换到运行 `b` 中的代码，然后返回到 `a`。
 
 为了确保返回到 `a` 中的正确位置，处理器在栈上保存一个 *返回地址*。该返回地址是 `b` 调用在 `a` 中的下一条指令的地址。
-
-
-
 
 -   [在 `a` 的返回地址被压栈后，处理器会将 `b` 的局部数据存储到栈上。] Table 7.7 显示在处理器执行 `b` 的第一条指令之前，栈的状态。
 
@@ -3513,25 +2823,27 @@ void c() { int x; }
 
 | `b'sreturn address` |
 
+
+
 | `b's local data` |
 
 | `a's return address` |
 
 | `a's local data` |
 
-|   |
+| |
 
--   在 `c` 中，局部变量 *`x`* 被声明，随后函数结束。处理器完成 `c` 后，需要 `return` 到调用函数 `b`。
+- 在 `c` 中，局部变量 `x` 被声明，随后函数结束。处理器完成 `c` 后，需要 `return` 到调用函数 `b`。
 
--   此时，`c` 的局部数据位于栈顶但已不再需要。处理器可以弹出这段数据，使栈指针指向 `b` 的返回地址。
+- 此时，`c` 的局部数据位于栈顶但已不再需要。处理器可以弹出这段数据，使栈指针指向 `b` 的返回地址。
 
--   接着，处理器弹出返回地址并将其存入 *`eip`*，通过 *`ret`* 指令更新栈指针，从而使程序返回 `b` 并恢复执行 `c` 之后的代码。此时，栈回到 Table 7.7 所示的状态。
+- 接着，处理器弹出返回地址并将其存入 `eip`，通过 `ret` 指令更新栈指针，从而使程序返回 `b` 并恢复执行 `c` 之后的代码。此时，栈回到 Table 7.7 所示的状态。
 
--   `c` 的调用是 `b` 的最后一条指令，因此 `b` 会立即 `return`。与 `c` 的返回类似，它会弹出局部变量并通过弹出 `a` 的返回地址到 *`eip`*（使用 *`ret`*）来更新 *`eip`*。完成后，栈的形态与 Table 7.6 相同。
+- `c` 的调用是 `b` 的最后一条指令，因此 `b` 会立即 `return`。与 `c` 的返回类似，它会弹出局部变量并通过弹出 `a` 的返回地址到 `eip`（使用 `ret`）来更新 `eip`。完成后，栈的形态与 Table 7.6 相同。
 
--   在 `b` 返回后，`a` 也会返回。`a` 的局部数据会从栈上弹出，随后 *`eip`* 根据调用函数的返回地址（在分析前已存在，未在 Table 7.6 中显示）更新，执行在该函数内部继续进行。
+- 在 `b` 返回后，`a` 也会返回。`a` 的局部数据会从栈上弹出，随后 `eip` 根据调用函数的返回地址（在分析前已存在，未在 Table 7.6 中显示）更新，执行在该函数内部继续进行。
 
-### 栈分析
+## 栈分析
 
 当函数被调用并从调用中返回时，程序栈会受到影响。例如，考虑以下代码：
 
@@ -3547,9 +2859,9 @@ void c() { a(); b(); }
 
 栈上保存的返回地址能够提供程序到达特定位置的可见性。每个函数在调用栈中都会在栈上保存其返回地址、局部变量和临时数据。
 
-这种做法称为 *栈展开*（unwinding the stack）。在 `gdb` 中，`info stack` 命令会显示当前栈的状态。
+这种做法称为 `栈展开`（unwinding the stack）。在 `gdb` 中，`info stack` 命令会显示当前栈的状态。
 
-### 调用约定
+## 调用约定
 
 `call` 和 `ret` 指令使得在汇编中创建函数成为可能，但仅凭这两条指令，函数必须是自包含的，无法在函数之间传递数据。
 
@@ -3557,7 +2869,7 @@ void c() { a(); b(); }
 
 x86 架构拥有所有必要的工具来创建参数。使用参数的高级语言在编译成汇编时会被转换为相应的指令。选择如何使用这些工具的责任在于程序员或编译器。
 
-#### *为什么约定是必要的*
+### 为什么约定是必要的
 
 通过寄存器、栈和内存，x86 能够在函数之间传递值。参数可以存放在寄存器中，或通过栈压入/弹出来传递。
 
@@ -3571,51 +2883,51 @@ void caller() {   … callee()} //nomenclature definition
 
 在小型程序中，开发者可以自行设计方案，例如通过寄存器或栈传递函数的参数，或在内存中预留特定位置来传递结构体。但这种做法在规模扩大时不可持续，且容易出错。一次疏忽可能导致关键数据被 `mul` 操作意外破坏，且团队协作会变得困难。
 
-#### *介绍调用约定*
+### 介绍调用约定
 
-*调用约定*（calling conventions）是为了通过定义函数之间的交互规则，简化函数之间的数据传递。它们属于应用二进制接口（ABI），即代码片段之间交互的最低层定义。
+`调用约定`（calling conventions）是为了通过定义函数之间的交互规则，简化函数之间的数据传递。它们属于应用二进制接口（ABI），即代码片段之间交互的最低层定义。
 
 调用约定必须定义以下几条规则：
 
-*   **参数位置**：参数是从调用者向被调用者传递的（栈还是寄存器）？
+* 参数位置：参数是从调用者向被调用者传递的（栈还是寄存器）？
 
-*   **参数顺序**：参数在栈上或寄存器中是如何组织的？
+* 参数顺序：参数在栈上或寄存器中是如何组织的？
 
-*   **栈清理**：如果使用栈，是由调用者还是被调用者负责弹出栈上的值？
+* 栈清理：如果使用栈，是由调用者还是被调用者负责弹出栈上的值？
 
-*   **寄存器访问**：被调用者可以使用哪些寄存器而无需保存并恢复其之前的值？
+* 寄存器访问：被调用者可以使用哪些寄存器而无需保存并恢复其之前的值？
 
-*   **返回值**：被调用者如何以及在哪里返回值给调用者？
+* 返回值：被调用者如何以及在哪里返回值给调用者？
 
 调用约定会受到多种因素影响，包括：
 
-*   架构（x86 与 ARM）
+* 架构（x86 与 ARM）
 
-*   操作系统（UN\*X 与 Windows）
+* 操作系统（UN\*X 与 Windows）
 
-*   编程语言（C 与 Java）
+* 编程语言（C 与 Java）
 
-*   编译器（GCC 与 Microsoft）
+* 编译器（GCC 与 Microsoft）
 
 在编程早期，标准并不存在，导致不同开发者之间的约定差异，程序之间难以协作。随着时间推移，各公司各自的约定逐渐汇聚，最终形成了一 handful 热门的标准，包括：
 
-*   `cdecl`
+* `cdecl`
 
-*   `syscall`
+* `syscall`
 
-*   `optlink`
+* `optlink`
 
-*   `pascall`
+* `pascall`
 
-*   `register`
+* `register`
 
-*   `stdcall`
+* `stdcall`
 
-*   `fastcall`
+* `fastcall`
 
-*   `safecall`
+* `safecall`
 
-*   `thiscall`
+* `thiscall`
 
 ### cdecl
 
@@ -3623,16 +2935,13 @@ void caller() {   … callee()} //nomenclature definition
 
 `cdecl` 定义了以下规则：
 
-*   **基于栈的参数**：参数从右向左依次压栈，传递给被调用者。
+* 基于栈的参数：参数从右向左依次压栈，传递给被调用者。
 
-*   **调用者清理**：调用者在被调用者返回后负责弹出参数。
+* 调用者清理：调用者在被调用者返回后负责弹出参数。
 
-*   **返回值**：函数的返回值存放在 *`eax`* 寄存器中。
+* 返回值：函数的返回值存放在 `eax` 寄存器中。
 
-
-
-
--   **可用寄存器：** 子程序可以自由修改 *`eax`* 、 *`ecx`* 和 *`edx`* 。调用者应在进行调用前将需要的值保存在这些寄存器中。子程序在使用其他寄存器前应保存它们的值，并在返回前恢复它们。
+* 可用寄存器：子程序可以自由修改 `eax`、`ecx` 和 `edx`。调用者应在进行调用前将需要的值保存在这些寄存器中。子程序在使用其他寄存器前应保存它们的值，并在返回前恢复它们。
 
 考虑指令 `int s = add(1,2)`。使用 `cdecl` 标准，这将如下 x86 汇编代码翻译：
 
@@ -3661,9 +2970,9 @@ pop ecx
 pop eax
 ```
 
-#### *保存寄存器*
+#### 保存寄存器
 
-在 `cdecl` 标准中，函数可以在不保存 *`eax`* 、 *`ecx`* 和 *`edx`* 的情况下修改它们。因此，下面的函数 *f* 在标准下是有效的。
+在 `cdecl` 标准中，函数可以在不保存 `eax`、`ecx` 和 `edx` 的情况下修改它们。因此，下面的函数 `f` 在标准下是有效的。
 
 ```
 f:  mov ecx, 0xd15ea5e
@@ -3688,9 +2997,9 @@ f:  push   ebx
     ret
 ```
 
-此函数使用 *`ebx`* 、 *`ebp`* 和 *`esi`* ，因此在使用寄存器前会将它们的值压栈，并在返回前将值弹出。
+此函数使用 `ebx`、`ebp` 和 `esi`，因此在使用寄存器前会将它们的值压栈，并在返回前将值弹出。
 
-对于 `cdecl`，调用函数在调用另一个函数后知道哪些寄存器的值可以信任。子程序可以随意修改 *`eax`* 、 *`ecx`* 和 *`edx`* 的值，因此如果调用者希望在后续使用这些寄存器，应自行保存它们的值。然而，其他所有寄存器的值必须由子程序保存，因此调用者无需在调用前保存它们。
+对于 `cdecl`，调用函数在调用另一个函数后知道哪些寄存器的值可以信任。子程序可以随意修改 `eax`、`ecx` 和 `edx` 的值，因此如果调用者希望在后续使用这些寄存器，应自行保存它们的值。然而，其他所有寄存器的值必须由子程序保存，因此调用者无需在调用前保存它们。
 
 例如，考虑以下代码块：
 
@@ -3701,9 +3010,9 @@ g:
     call  f
 ```
 
-调用 `f` 后，函数 `g` 可以信任 *`ebx`* 保持值 `0xd15ea5e`。但是，它不能假设 *`ecx`* 仍然保持值 `0xfee1dead`。
+调用 `f` 后，函数 `g` 可以信任 `ebx` 保持值 `0xd15ea5e`。但是，它不能假设 `ecx` 仍然保持值 `0xfee1dead`。
 
-#### *返回值*
+#### 返回值
 
 在高级编程语言中，函数通常使用返回值向调用者传递信息。例如，函数可能在成功完成时返回 0，在出错时返回错误代码。例如，下面的函数在完成时返回 1：
 
@@ -3714,7 +3023,7 @@ int f()
 }
 ```
 
-在 `cdecl` 调用约定中，返回值存放在 *`eax`* 寄存器中。以下 x86 代码等价于前面的函数 `f`：
+在 `cdecl` 调用约定中，返回值存放在 `eax` 寄存器中。以下 x86 代码等价于前面的函数 `f`：
 
 ```
 f:
@@ -3732,7 +3041,7 @@ char* f()
 }
 ```
 
-在 x86 中，寄存器可以用作指针。下面的 x86 代码使用 0 表示 `NULL` 指针等价；*`eax`* 也可以用来指示字符数组在内存中的位置。
+在 x86 中，寄存器可以用作指针。下面的 x86 代码使用 0 表示 `NULL` 指针等价；`eax` 也可以用来指示字符数组在内存中的位置。
 
 ```
 f:
@@ -3740,7 +3049,7 @@ f:
     ret
 ```
 
-#### *访问参数*
+#### 访问参数
 
 `cdecl` 标准使用栈来传递参数给函数。在尝试访问参数时需要注意以下几点：
 
@@ -3752,7 +3061,7 @@ f:
 
 * 调用者从右向左推入参数。
 
-* 子程序的返回值应存放在 *`eax`* 中。
+* 子程序的返回值应存放在 `eax` 中。
 
 基于这些因素，考虑如何实现对下面函数的调用：
 
@@ -3791,9 +3100,9 @@ add:
 
 | --- | --- |
 
-| `0xeff0` ||   |
+| `0xeff0` || |
 
-| `0xeff4` ||   |
+| `0xeff4` || |
 
 | `0xeff8 (esp)` || `(Return address)` |
 
@@ -3801,7 +3110,7 @@ add:
 
 | `0xf000` || `1` |
 
-While it's possible to access parameters from `[esp]`, this approach can run into problems. Consider how the following instructions within add affect the value of *`esp`* :
+While it's possible to access parameters from `[esp]`, this approach can run into problems. Consider how the following instructions within add affect the value of `esp` :
 
 ```
 ; int f(int x);
@@ -3812,25 +3121,25 @@ f:
     ...
 ```
 
-As parameters are popped from the stack by the callee, the location of the top of the stack changes. As a result, the locations of parameters relative to *`esp`* change as well.
+As parameters are popped from the stack by the callee, the location of the top of the stack changes. As a result, the locations of parameters relative to `esp` change as well.
 
-### Stack Frames
+## Stack Frames
 
-The value of *`esp`* changes too frequently to be a useful frame of reference for the locations of variables within the stack. Each time a value is pushed or popped, the value of *`esp`* and the relative locations of the other stack variables change.
+The value of `esp` changes too frequently to be a useful frame of reference for the locations of variables within the stack. Each time a value is pushed or popped, the value of `esp` and the relative locations of the other stack variables change.
 
-This is where the other stack register *`ebp`* (also known as the base pointer or frame pointer) comes into play. The *`ebp`* register points to the bottom of the current *stack frame*, which is the bottom of a section of memory on the stack used by a particular function.
+This is where the other stack register `ebp` (also known as the base pointer or frame pointer) comes into play. The `ebp` register points to the bottom of the current `stack frame`, which is the bottom of a section of memory on the stack used by a particular function.
 
-#### *Prologues and Epilogues*
+### Prologues and Epilogues
 
 x86 functions commonly start and end with chunks of boilerplate code. The purpose of this code is to set up and tear down the function's stack frame.
 
-##### Setting Up a Stack Frame
+#### Setting Up a Stack Frame
 
-The function *prologue* or preamble sets up the stack frame and is found at the very beginning of the function. The prologue performs two functions.
+The function `prologue` or preamble sets up the stack frame and is found at the very beginning of the function. The prologue performs two functions.
 
-*   Save the previous stack frame with `push ebp`.
+* Save the previous stack frame with `push ebp`.
 
-*   Set the new stack frame with `mov ebp, esp`.
+* Set the new stack frame with `mov ebp, esp`.
 
 These instructions appear at the very beginning of a function. Table 7.10 shows the effect of each on the stack.
 
@@ -3843,13 +3152,13 @@ push 0x11223344 ;(4)
 
 **Table 7.10**: Effects of function prologue on stack
 
-| (1)  ||     || (2) |
+| (1) || || (2) |
 
 | --- | --- | --- |
 
 | ADDRESS || VALUE || ADDRESS || VALUE |
 
-| `0xefe8` || `??` ||   || `0xefe8` || `??` |
+| `0xefe8` || `??` || || `0xefe8` || `??` |
 
 | `0xeff0` || `??` || `0xeff0` || `??` |
 
@@ -3879,13 +3188,13 @@ push 0x11223344 ;(4)
 
 The first table shows the stack before the function begins. At this point, the function parameters are pushed to the stack (from right to left) as well as the caller's return address.
 
+当 `push ebp` 指令执行时，前一个函数的基指针会被保存到栈上。随后的栈如第二个表格所示。
+
+第三个表格显示在执行 `mov ebp, esp` 指令后栈的状态。栈本身没有更新，新的 `ebp` 指向调用函数的返回地址，与 `esp` 相同。
 
 
-当`push ebp`指令执行时，前一个函数的基指针会被保存到栈上。随后的栈如第二个表格所示。
 
-第三个表格显示在执行`mov ebp, esp`指令后栈的状态。栈本身没有更新，新的*`ebp`*指向调用函数的返回地址，与*`esp`*相同。
-
-执行完这些指令后，调用函数可以将局部变量压栈。虽然这会修改*`esp`*的值，但*`ebp`*的值保持不变（表四）。这使得可以相对于固定的*`ebp`*而非更具可变性的*`esp`*来访问参数和局部变量。
+执行完这些指令后，调用函数可以将局部变量压栈。虽然这会修改`esp`的值，但`ebp`的值保持不变（表四）。这使得可以相对于固定的`ebp`而非更具可变性的`esp`来访问参数和局部变量。
 
 ##### Tearing Down a Stack Frame
 
@@ -3914,7 +3223,6 @@ pop ebp ; (3)
 ```
 mov esp, ebp
 pop ebp
- 
 ```
 
 **Table 7.11**: Effects of function epilogue on stack
@@ -3957,7 +3265,7 @@ pop ebp
 
 #### *Accessing Parameters*
 
-栈帧设计用于简化在函数内部访问栈上的参数和其他值。使用静态*`ebp`*作为参考点简化了确定特定值在栈上的位置的过程。例如，Table 7.12 显示了使用`cdecl`约定的任何函数中栈上特定值的位置。由于*`ebp`*在函数内不移动，这些关系和偏移量始终相同。这意味着如果调用者传入了变量，第一个永远位于`ebp+8`，第二个永远位于`ebp+12`，以此类推。
+栈帧设计用于简化在函数内部访问栈上的参数和其他值。使用静态`ebp`作为参考点简化了确定特定值在栈上的位置的过程。例如，Table 7.12 显示了使用`cdecl`约定的任何函数中栈上特定值的位置。由于`ebp`在函数内不移动，这些关系和偏移量始终相同。这意味着如果调用者传入了变量，第一个永远位于`ebp+8`，第二个永远位于`ebp+12`，以此类推。
 
 **Table 7.12**: Stack locations for common values
 
@@ -4028,7 +3336,7 @@ Table 7.13 显示程序中第(1)、(2)和(3)点的栈内容。
 
 #### *Local Variables*
 
-函数的局部变量存储在栈上，位于前一个帧指针（较低地址）之上。栈帧设置完成后，只需从*`esp`*减去所需的空间即可为局部变量分配空间。分配会在函数尾声自动撤销，因为栈指针会根据基指针重置。
+函数的局部变量存储在栈上，位于前一个帧指针（较低地址）之上。栈帧设置完成后，只需从`esp`减去所需的空间即可为局部变量分配空间。分配会在函数尾声自动撤销，因为栈指针会根据基指针重置。
 
 例如，考虑以下函数：
 
@@ -4055,7 +3363,7 @@ one_up:
     ret
 ```
 
-此程序的栈帧在 Table 7.14 中显示。注意，虽然*`esp`*现在指向`0xeff4`，但*`ebp`*的值在分配局部变量后保持不变（指向调用者的保存`ebp`）。参数和局部变量都可以轻松相对于*`ebp`*访问。
+此程序的栈帧在 Table 7.14 中显示。注意，虽然`esp`现在指向`0xeff4`，但`ebp`的值在分配局部变量后保持不变（指向调用者的保存`ebp`）。参数和局部变量都可以轻松相对于`ebp`访问。
 
 **Table 7.14**: Stack frame of one_up program
 
@@ -4073,7 +3381,7 @@ one_up:
 
 | `0xf000` || `x` |
 
-与参数一样，`cdecl` 确保局部变量在不同函数中存储位置保持一致。Table 7.15 显示了相对于*`ebp`*的局部变量位置。在反汇编中，对*`ebp`*的了解变得极其强大。
+与参数一样，`cdecl` 确保局部变量在不同函数中存储位置保持一致。Table 7.15 显示了相对于`ebp`的局部变量位置。在反汇编中，对`ebp`的了解变得极其强大。
 
 **Table 7.15**: Stack locations for local variables
 
@@ -4104,10 +3412,8 @@ push 2
 
 更有可能被编译为以下指令：
 
-
-
-
 -   堆栈对齐  
+
     当某些编译器在进入函数时会强制执行 32 字节的堆栈对齐。这意味着栈指针的内存地址必须能被 32 整除。历史上，这对于系统在 32 字节对齐边界上获取内存更高效。虽然这种效率优势可能已经不存在，但你仍会偶尔看到编译器为保持堆栈对齐而做的操作。常见的表现是，在为局部变量分配空间时，编译器会额外分配空间以维持对齐。
 
     这意味着在函数的堆栈帧中，未使用的空间很常见。在逆向工程时，不要过度关注这些多余空间，因为它完全是正常的。编写代码时，你无需手动处理它，但本书的目标是让你能够在代码中识别出这种情况，并知道它大体上可以忽略。
@@ -4168,7 +3474,7 @@ x86 汇编程序可能很复杂。要在 x86 逆向工程中高效工作，必�
 
 |   || `...` |
 
-另一个需要记住的点是 **boilerplate**（模板代码）与 **完整函数前置**（complete function prologue）之间的区别。Table 7.17 展示了两者在前置代码中的不同。
+另一个需要记住的点是 `boilerplate`（模板代码）与 `完整函数前置`（complete function prologue）之间的区别。Table 7.17 展示了两者在前置代码中的不同。
 
 **Table 7.17**: Two types of prologues
 
@@ -4224,9 +3530,9 @@ x86 汇编程序可能很复杂。要在 x86 逆向工程中高效工作，必�
 
 | --- | --- |
 
-函数的**函数尾声**（function epilogue）会逆转函数前置的效果。Table 7.18 展示了这两种前置方式对应的尾声。
+函数的`函数尾声`（function epilogue）会逆转函数前置的效果。Table 7.18 展示了这两种前置方式对应的尾声。
 
-## Summary
+# Summary
 
 本章探讨了反向工程和破解应用的关键概念。在继续前进之前，请确保你已牢固掌握控制流在应用中的工作方式以及函数和其堆栈帧的细节。
 
@@ -4245,6 +3551,8 @@ When code is compiled, the compiler introduces a large amount of boilerplate tha
 When reversing someone else's code, it's unlikely that the code will be compiled with debugging symbols. This means function and variable names and other information that could provide a hint regarding the actual code's entry point have been stripped from the application. Figure 8.1 shows what opening a file without debugging symbols looks like in `gdb`.
 
 ![Figure 8.1: Application without debugging symbols in gdb](img/c08f001.png)
+
+
 
 **Figure 8.1**: Application without debugging symbols in `gdb`
 
@@ -4294,8 +3602,6 @@ Entry point: 0x80483a0
 0xf7ffccc0 - 0xf7ffcf3c is .data.rel.ro in /lib/ld-linux.so.2
 0xf7ffcf3c - 0xf7ffcff4 is .dynamic in /lib/ld-linux.so.2
 ```
-
-
 
 This 列表在更复杂的二进制文件中可能会变得更长，包含众多依赖和库。查看此输出，你会知道可执行文件的 `.text` 部分位于地址 `0x080483a0`。在该地址处解码代码可以为目标代码的入口点提供线索。Figure 8.2 显示在 `gdb` 中对该位置代码进行解码的结果。
 
@@ -4351,7 +3657,7 @@ Figure 8.6 展示了仅基于磁盘空间进行优化的代码。同样，两个
 
 #### 去符号（Stripping）
 
-*去符号*（stripping）二进制文件意味着移除所有运行代码所不需要的信息，包括符号表。未去符号的二进制文件保留符号表，而去符号的二进制文件则不保留。
+`去符号（stripping）`二进制文件意味着移除所有运行代码所不需要的信息，包括符号表。未去符号的二进制文件保留符号表，而去符号的二进制文件则不保留。
 
 符号对于调试应用非常有用。例如，考虑以下代码：
 
@@ -4398,9 +3704,6 @@ double foo(int count)
 然而，静态链接也有缺点。静态链接的应用体积更大，因为即使只使用库中的一个函数，整个库也会被嵌入可执行文件。此外，库更新需要重新编译使用该库的应用。
 
 静态链接导致的文件膨胀可能非常显著。例如，如 Figure 8.8 所示，即使是一个简单的“一行 hello world”程序也会链接数十个库。
-
-
-
 
 -   [动态链接是另一种选择，也是许多编译器的默认选项。使用动态链接时，所需的库在运行时位于系统上。如果库尚未加载到系统内存中，则必须在系统上查找该库并加载到共享库内存中；然而，常用库很可能已经加载并可用。](https://wiki.example.org/feynmans_learning_method)
 
@@ -4506,30 +3809,29 @@ Reverse Engineering: Tools and Strategies
 
 -   `strace` 和 `ltrace` 可以监控系统调用（`strace`）和库调用（`ltrace`），从而跟踪程序的执行并了解其使用的库和外部功能。
 
--   如果任何程序想要做任何有用的事情，它都必须发出系统调用。对库和外部功能的特征化在系统侦察时非常有用。你会发现，使用这些工具不仅能看到程序使用了哪些库和功能，还能看到是哪个地址的代码调用了它们，这有助于你集中关注感兴趣的函数。例如，你可能看到频繁调用加密库的代码；这在破解时很有兴趣。
-
-#### ************ltrace************
-
--   `ltrace`（库跟踪）是一个 Linux 命令行实用程序，用于跟踪库调用。库调用是应用程序向动态链接库发出的调用。命令的语法为 `ltrace <`*`command`*`>`。
 
 
+如果任何程序想要做任何有用的事情，它都必须发出系统调用。对库和外部功能的特征化在系统侦察时非常有用。你会发现，使用这些工具不仅能看到程序使用了哪些库和功能，还能看到是哪个地址的代码调用了它们，这有助于你集中关注感兴趣的函数。例如，你可能看到频繁调用加密库的代码；这在破解时很有兴趣。
 
+## `ltrace`
 
--   例如，如果你 `#include <stdio.h>`，当程序加载时，该库会以动态链接的方式被加载。当你调用 `printf` 或 `fopen` 时，实际上是在调用标准 C 库。这种构造适用于所有编程语言，所有语言都包含包含外部库的概念。
+`ltrace`（库跟踪）是一个 Linux 命令行实用程序，用于跟踪库调用。库调用是应用程序向动态链接库发出的调用。命令的语法为 `ltrace <command>`。
 
-#### `strace`
+例如，如果你 `#include <stdio.h>`，当程序加载时，该库会以动态链接的方式被加载。当你调用 `printf` 或 `fopen` 时，实际上是在调用标准 C 库。这种构造适用于所有编程语言，所有语言都包含外部库的概念。
 
-`strace`（system trace）是一个 Linux 命令行工具，用于跟踪系统调用。命令的语法是 `strace <`*`command`*`>`。
+## `strace`
+
+`strace`（system trace）是一个 Linux 命令行工具，用于跟踪系统调用。命令的语法是 `strace <command>`。
 
 系统调用是应用程序向操作系统发起的调用，操作系统负责管理文件和控制台窗口等事务。`fopen` 和 `printf` 等函数在内部实现时，最终必须向操作系统发起调用。正如 `ltrace` 那样，这对于所有编程语言都适用；很少有应用程序不使用操作系统级别的功能。
 
-#### `strace` 示例：`echo`
+### `strace` 示例：`echo`
 
 监控系统调用是一种粗糙的方法，用于跟踪程序的执行。假设你编写了 `echo` 实用程序，并想观察它的运行情况。
 
 `echo` 是一个 Linux 命令，用于将输入回显到输出。例如，命令 `echo hello!` 会在终端中打印 `"hello!"`。
 
-但它实际在做什么呢？运行 `strace echo hello!` 会产生类似 [Figure 9.3 的输出。
+但它实际在做什么呢？运行 `strace echo hello!` 会产生类似 Figure 9.3 的输出。
 
 ![Figure 9.3: strace 输出 for echo hello!](img/c09f003.png)
 
@@ -4539,16 +3841,15 @@ Reverse Engineering: Tools and Strategies
 
 下面的几行是有趣的输出，位于结果的最末尾：
 
-```
-```
+```text
 write(1, "hello!\n", 7hello!
 )                 = 7
 close(1)          = 0
 ```
 
-这表明 `echo` 向流 1 写入了字符串，而流 1 是 *`stdout`*。`write` 命令返回值为 7，因为写入了七个字符。最后，`echo` 关闭了流 1，返回值为 0 表示成功。虽然这看起来很简单，但你可以将其用于跟踪应用程序写入配置数据的位置。例如，当你修改设置并想查看它是如何在系统上存储时。
+这表明 `echo` 向流 1 写入了字符串，而流 1 是 `stdout`。`write` 命令返回值为 7，因为写入了七个字符。最后，`echo` 关闭了流 1，返回值为 0 表示成功。虽然这看起来很简单，但你可以将其用于跟踪应用程序写入配置数据的位置。例如，当你修改设置并想查看它是如何在系统上存储时。
 
-#### `strace` 示例：恶意小猫
+### `strace` 示例：恶意小猫
 
 Comet Cursor 是 Windows 系统早期的一个间谍软件示例。它允许用户更改鼠标游标的外观，并使用自定义游标对网站进行定制。该应用程序在未经用户同意的情况下安装，并秘密跟踪用户。
 
@@ -4556,11 +3857,11 @@ Comet Cursor 是 Windows 系统早期的一个间谍软件示例。它允许用�
 
 运行代码时，没有显示恶意功能的迹象，如下所示：
 
-```
-deltaop@deltaleph-ubuntu:~$ ./kittens 
+```text
+deltaop@deltaleph-ubuntu:~$ ./kittens
 Registering kitten cursor!
 Done!  Enjoy the kitties!
-deltaop@deltaleph-ubuntu:~$ 
+deltaop@deltaleph-ubuntu:~$
 ```
 
 ![Figure 9.4: 小猫游标应用](img/c09f004.png)
@@ -4569,7 +3870,7 @@ deltaop@deltaleph-ubuntu:~$
 
 然而，通过 `strace` 分析代码会告诉另一个故事，如下所示：
 
-```
+```text
 deltaop@deltaleph-ubuntu:~$ strace ./kittens
 ...
 poll([{fd=3, events=POLLOUT}], 1, 0)    = 1 ([{fd=3, revents=POLLOUT}])
@@ -4589,9 +3890,8 @@ connect(3, {sa_family=AF_INET, sin_port=htons(53),
 
 这段 `strace` 输出显示了多个事件。为了关注感兴趣的事件，可以使用 `grep`（它会限制只显示包含搜索字符串的行，这里是 `connect`）。
 
-```
+```text
 deltaop@deltaleph-ubuntu:~$ strace -f ./kittens 2>&1 | grep connect
- 
 connect(3, {sa_family=AF_FILE, path="/var/run/nscd/socket"},
        110) = -1 ENOENT
 connect(3, {sa_family=AF_FILE, path="/var/run/nscd/socket"},
@@ -4607,27 +3907,24 @@ connect(3, {sa_family=AF_INET, sin_port=htons(80),
 write(2, "connected.\n", 11) = 11
 ```
 
-前一个示例查找包含单词 *connect* 的事件。这包括多个互联网连接，其中一个是到 195.208.24.91 的连接，这很可疑，因为它是外部 IP 地址，鼠标游标为什么需要这么做？
+前一个示例查找包含单词 `connect` 的事件。这包括多个互联网连接，其中一个是到 195.208.24.91 的连接，这很可疑，因为它是外部 IP 地址，鼠标游标为什么需要这么做？
 
-### `strings`
+## `strings`
 
 `strings` 是一个 Linux 工具，用于从应用程序中提取可打印的字符串。它会查找一系列 ASCII 可打印字符（长度可配置）并打印找到的所有字符串。
 
 `strings` 在逆向工程中非常有用，因为它能提供程序可能执行的高层次行为的洞察。此外，一旦你找到感兴趣的字符串，你就可以在后续中轻松地使用这些字符串来定位相关的代码。例如，包含 `"incorrect password"` 的字符串可以快速定位密码处理代码。例如，以下字符串提供了有价值的提示：
 
 *   `"Enter password:"`
-
 *   `"open_socket"`
-
 *   `"YOUR FILES HAVE BEEN ENCRYPTED!"`
 
 命令的语法是 `strings program`。虽然通常不带选项使用，但下面的标志在逆向工程中有时很有用：
 
-*   **`-a`**：显示文件中所有字符串，而不仅仅是加载的对象文件的加载部分中的字符串。这对于处理混淆、嵌套或其他异常二进制文件时非常有用。
-
+*   `-a`：显示文件中所有字符串，而不仅仅是加载的对象文件的加载部分中的字符串。这对于处理混淆、嵌套或其他异常二进制文件时非常有用。
 *   `-n`：指定连续可打印字符的最小长度。默认值为 4。通常可以通过扩大或限制字符串的数量来调整工具的行为。
 
-### 依赖分析器（Dependency Walker）
+## 依赖分析器（Dependency Walker）
 
 依赖分析是一种快速了解应用程序导入和导出函数的技术。Dependency Walker 是一个这样的工具。（参见我们仓库的“工具”部分，获取链接。）
 
@@ -4639,11 +3936,9 @@ write(2, "connected.\n", 11) = 11
 
 **Figure 9.5**: 在 Dependency Walker 中检查注册表修改
 
-Reverse Engineering Strategy
+## Reverse Engineering Strategy
 
 逆向工程仍然更多是一门艺术，而非科学。虽然有大量优秀的工具和技术可供帮助，但有效的逆向工程最终仍然高度依赖于直觉和经验。
-
-
 
 因此，无法给出一个规定的解决方案。但是，有一些通用的方法和最佳实践可以帮助。
 
@@ -4654,11 +3949,8 @@ Reverse Engineering Strategy
 你将继续学习许多有趣的技巧来缩小范围，但基于对之前工具的了解，现在已有几种可用的方法：
 
 *   **有趣的字符串**：查找你感兴趣的程序字符串（例如“Incorrect Key”），并找到这些字符串的使用位置（例如，识别使用这些字符串的 `printf` 调用）。
-
 *   **用户输入**：查找用户输入的接收位置（例如 `scanf`、对话框等），并找到这些输入的处理位置。
-
 *   **系统输入**：查找从系统读取输入的位置，例如配置文件和注册表设置。
-
 *   **身份验证代码**：如果可能，使用调试器在输入用户名/密钥后暂停程序。然后，在内存中扫描已输入的值，在该位置设置硬件断点，并重新运行应用程序，以找到这些值的读取或写入位置。
 
 ### 逐步注释代码
@@ -4667,15 +3959,11 @@ Reverse Engineering Strategy
 
 为此，使用以下过程注释目标区域，直到你理解它的工作原理：
 
-*   **识别并标记局部变量**：使用调用约定规则识别局部变量（例如 `cdecl` 中的 `[ebp-4]`）。这些可以先用模糊的名称标记（例如 *`local1`*）。
-
-*   **识别并标记函数参数**：使用调用约定规则识别参数（例如 `cdecl` 中的 `[ebp+12]`）。这些也可以先用模糊的名称标记（例如 *`arg1`*）。
-
-*   **识别 API 调用（例如 `atoi`）**：利用 API 参数的知识进一步标记局部变量。例如，API 文档表明 `atoi` 接收一个字符串并将其转换为整数，因此可以将我们的参数重命名为 *`integer_string`*。
-
+*   **识别并标记局部变量**：使用调用约定规则识别局部变量（例如 `cdecl` 中的 `[ebp-4]`）。这些可以先用模糊的名称标记（例如 `local1`）。
+*   **识别并标记函数参数**：使用调用约定规则识别参数（例如 `cdecl` 中的 `[ebp+12]`）。这些也可以先用模糊的名称标记（例如 `arg1`）。
+*   **识别 API 调用（例如 `atoi`）**：利用 API 参数的知识进一步标记局部变量。例如，API 文档表明 `atoi` 接收一个字符串并将其转换为整数，因此可以将我们的参数重命名为 `integer_string`。
 *   **为复杂的控制流添加注释**：例如，“这段代码用于对数字进行因式分解”。
-
-*   **根据观察到的数据流细化描述**：例如，*`local1`* 如果在 `for` 循环中作为计数器使用，可以改为 *`loop_counter`*。
+*   **根据观察到的数据流细化描述**：例如，`local1` 如果在 `for` 循环中作为计数器使用，可以改为 `loop_counter`。
 
 有效的反向工程很大程度上取决于速度。即使是小程序也有太多的代码需要逐一分析。
 
@@ -4685,9 +3973,7 @@ Reverse Engineering Strategy
 
 本章介绍了一些作为软件反向工程师和破解者将使用的核心工具和技术。在继续之前，花一些时间进行实践并获得使用这些工具的实际经验是有价值的。这种练习时间在你以后处理更复杂的软件和更高级的反向工程和破解技术时将会非常有用。
 
-# CHAPTER 10  
-
-Cracking: Tools and Strategies
+# CHAPTER 10 Cracking: Tools and Strategies
 
 Cracking 是通过反向工程软件来绕过保护措施或其他不良功能的艺术。本章探讨了软件破解中使用的关键工具和策略，包括使用密钥生成器和修补来击败密钥检查器。
 
@@ -4698,7 +3984,6 @@ Cracking 是通过反向工程软件来绕过保护措施或其他不良功能�
 许可证密钥是常见的防盗方案，它们有其优势。以下是两个最重要的：
 
 *   许可证密钥易于生成和验证。
-
 *   有效密钥与无效密钥的比例非常小，随机猜测生成有效密钥的可能性极低（假设密钥长度合理）。
 
 然而，与所有安全措施一样，如果实现不当，它们极易受到破解，而且并非完全不可靠。足够知识和动机的破解者最终可以击败或绕过它们。但它们仍然是较强有力的保护措施；这只是提醒你，不存在 100% 安全的软件。
@@ -4709,7 +3994,7 @@ Cracking 是通过反向工程软件来绕过保护措施或其他不良功能�
 
 过去，非常流行的电脑游戏 *StarCraft* 和 *Half-life* 都使用了检查和验证的检查码作为许可证密钥。请记住，检查码通常是对二进制块执行的简单数学表达式，例如简单的将所有数字相加。在 *StarCraft* 和 *Half-life* 使用的检查码中，第 13 位验证前 12 位。
 
-这意味着用户可以对前 12 位输入任何他们想要的内容，然后计算第 13 位以创建一个有效的检查码。这个安全漏洞导致了著名的 1234-56789-1234 密钥，它被广泛用于盗版这些游戏。
+这意味着用户可以对前 12 位输入任何他们想要的内容，然后计算第 13 位以创建一个有效的检查码。这个安全漏洞导致了著名的 `1234-56789-1234` 密钥，它被广泛用于盗版这些游戏。
 
 这些情况的最大问题是检查码的计算算法过于简单。
 
@@ -4722,9 +4007,12 @@ for(int i = 0; i < 12; i++)
 lastDigit = x % 10;
 ```
 
+
+
+
 针对这种情况有两种破解方法。第一种是运行算法并计算最后一位的有效值，如上文所示。
 
-另一种是粗力攻击。由于最后一位只有一位数字，所以只有 10 种可能（0-9）。你可以随机选择一组 12 位数字，然后尝试这 10 种可能的最后一位，直到成功为止。著名的 1234-56789-1234 密钥之所以闻名遐迩，是因为它容易记住，但通过上述两种方法（计算或粗力），你可以生成任意数量的新密钥。
+另一种是粗力攻击。由于最后一位只有一位数字，所以只有 10 种可能（0-9）。你可以随机选择一组 12 位数字，然后尝试这 10 种可能的最后一位，直到成功为止。著名的 `1234-56789-1234` 密钥之所以闻名遐迩，是因为它容易记住，但通过上述两种方法（计算或粗力），你可以生成任意数量的新密钥。
 
 ### 合理的方法
 
@@ -4732,18 +4020,15 @@ lastDigit = x % 10;
 
 那么，如何防止粗力攻击呢？在其他上下文中，一个常见的选项是使用密码散列。例如，许可证密钥可以实现为以下选项之一：
 
-*   **用户名**：SHA(username)
+*   `用户名`：`SHA(username)`
 
-*   **随机值**：WXYZ-SHA(WXYZ)
+*   `随机值`：`WXYZ-SHA(WXYZ)`
 
 使用散列函数使得粗力攻击变得困难得多。然而，破解者很容易通过查看代码来确定算法的工作方式。取决于你的思维方式，如果你是攻击者，这意味着利用你已学到的反向工程技能去找到算法并将其拆解；如果你是防御者，这意味着这是你需要保护的关键代码。
 
+- [使用自定义、复杂的哈希代替标准哈希。虽然在安全性方面这通常是个糟糕的想法，但在这种应用中它并非不被采用的选择。目标不是提供绝对的保护，仅仅是为了延缓反向工程。对于安全领域的同行，若对自行生成哈希的建议感到毛骨悚然，请记住该建议的前提是你能够生成一个相当优秀的哈希。作为防御方，请牢记市面上已有大量工具可执行常见的哈希算法，攻击者首先会尝试使用这些工具来破解你的密钥。
 
-
-
--   [使用自定义、复杂的哈希代替标准哈希。虽然在安全性方面这通常是个糟糕的想法，但在这种应用中它并非不被采用的选择。目标不是提供绝对的保护，仅仅是为了延缓反向工程。对于安全领域的同行，若对自行生成哈希的建议感到毛骨悚然，请记住该建议的前提是你能够生成一个相当优秀的哈希。作为防御方，请牢记市面上已有大量工具可执行常见的哈希算法，攻击者首先会尝试使用这些工具来破解你的密钥。
-
--   还应尝试加入独特的复杂度，使密钥只能在特定环境下使用，而不会被广泛复制。例如，在哈希值中拼接产品名称、版本号以及机器名称，可为密钥提供坚实的复杂度层。这样，针对某一安装生成的被破解密钥无法解锁其他发行版。
+- 还应尝试加入独特的复杂度，使密钥只能在特定环境下使用，而不会被广泛复制。例如，在哈希值中拼接产品名称、版本号以及机器名称，可为密钥提供坚实的复杂度层。这样，针对某一安装生成的被破解密钥无法解锁其他发行版。
 
 ### 更好的做法
 
@@ -4753,13 +4038,13 @@ lastDigit = x % 10;
 
 在生成微软许可证密钥时，会使用大量关于软件的信息，包括但不限于：
 
--   比特性（32 位、64 位）
+- 比特性（32 位、64 位）
 
--   版本类型（家庭版、专业版、企业版）
+- 版本类型（家庭版、专业版、企业版）
 
--   产品 ID
+- 产品 ID
 
--   硬件特征
+- 硬件特征
 
 将这些信息全部纳入密钥中，可使产品密钥与特定的软件安装绑定。若想了解更多关于该协议的细节，网络上有大量资源详细剖析微软的密钥生成过程。
 
@@ -4942,9 +4227,6 @@ Procmon 是 Sysinternals 套件的一部分（可在 `http://technet.microsoft.c
 Process Monitor 每秒捕获数千条记录，手动审查太繁琐。因此，需要通过过滤结果来关注感兴趣的事件。要做到这一点，请点击漏斗图标打开“过滤”菜单（如图 10.2 所示）。
 
 ![Figure 10.2: Filtering events in Procmon](img/c10f002.png)
-
-
-
 
 ## Figure 10.2
 `**Figure 10.2**: Filtering events in Procmon`
@@ -5151,7 +4433,7 @@ Patching 涉及修改已编译的二进制文件以修改其执行代码。根�
 
 对于那些好奇为何直接删除代码不工作的人，原因有很多，但最重要的一点是，某些 x86 代码是相对的，某些是绝对引用。先看相对情况：这意味着某些代码会翻译为相对操作，例如“向前跳转 40 字节”。如果您在跳转和其目的地之间移除 40 字节的代码，就会破坏跳转。它仍然会向前跳转 40 字节，但可能会落在中间的字节或跳过关键指令，导致崩溃。如果您移除的代码在跳转前 40 字节的范围之外，而跳转后仍然落在相同位置，则该操作不会产生影响。
 
-现在考虑绝对引用。这些引用的形式类似于“使用地址 0x1234567 的数据值”。如果您在该地址之前的任何位置移除代码，所有引用都会发生偏移，导致它们获取的值或执行的绝对跳转错误。即使您只删除了 1 字节，绝对引用也会受到影响，因为所有位置都会变错。
+现在考虑绝对引用。这些引用的形式类似于“使用地址 `0x1234567` 的数据值”。如果您在该地址之前的任何位置移除代码，所有引用都会发生偏移，导致它们获取的值或执行的绝对跳转错误。即使您只删除了 1 字节，绝对引用也会受到影响，因为所有位置都会变错。
 
 这意味着相对引用仅在引用处和目标之间添加或删除字节时受影响。然而，所有绝对引用都会在应用程序即使移动 1 字节时被破坏。因此，在补丁时保持字节对齐至关重要（除非您故意导致崩溃，在这种情况下请随意破坏）。
 
@@ -5439,8 +4721,7 @@ CodeFusion 是一个流行的补丁生成器。它创建一个独立的可执行
 
 ![图 11.5：CodeFusion 启动界面](img/c11f005.png)
 
-[**图 11.5**](#c11.xhtml#R_c11-fig-001<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk> 
-
+[**图 11.5**](#c11.xhtml#R_c11-fig-001 
 
 -   使用 Cheat Engine 反转不需要先打开可执行文件，而是直接选择正在运行的进程进行编辑。
 
@@ -5539,10 +4820,7 @@ CodeFusion 是一个流行的补丁生成器。它创建一个独立的可执行
 
 -   IDA: 字符串
 
-  如前所述，字符串是分析新可执行文件的良好起点。但 IDA 默认不显示字符串。[Figure 11.18 展示了如何通过点击 "View ➪ Open Subviews ➪ Strings" bridge being being being to...11<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk> 11.11) and a hex dump at the bottom.
-
-
-
+  如前所述，字符串是分析新可执行文件的良好起点。但 IDA 默认不显示字符串。[Figure 11.18 展示了如何通过点击 "View ➪ Open Subviews ➪ Strings" bridge being being being to...11 
 
 ### IDA: 函数和变量
 
@@ -5599,13 +4877,22 @@ IDA 展示三种基本块之间的路径类型：
 例如，考虑以下包含简单 `if` 语句的代码示例：
 
 ```
+[/content]
+
+
+
 int main(int argc, char* argv[])
+
 {
+
        if (argc> 1)
+
               return 0;
- 
+
        return argc;
+
 }
+
 ```
 
 Figure 11.29 展示了这段代码在 IDA 中的表现。条件块之后，路径分叉。虽然本书中不显示颜色，但左侧路径（在 IDA 中为红色）表示跳转未被取时的情况。右侧路径（在 IDA 中为绿色）在条件为假时被遵循。
@@ -5621,16 +4908,27 @@ Figure 11.29 展示了这段代码在 IDA 中的表现。条件块之后，路�
 IDA 也是一款可用于修补可执行文件的工具。以下是一个示例代码：
 
 ```
+
 printf("please enter the password\n");
+
 scanf("%s", user_entered_password);
+
 if (strcmp(user_entered_password, correct_password) == 0)
+
 {
+
        printf("SUCCESS\n");
+
 }
+
 else
+
 {
+
        printf("Failure\n");
+
 }
+
 ```
 
 这段代码实现了一个简单的身份验证系统。它提示用户输入密码，并检查答案。如果答案正确，则打印 `SUCCESS`；否则，打印 `Failure`。虽然这是一个简化的例子，但请记住，检查密码并根据结果走不同路径的流程在实际中非常常见。在 IDA 中，你可以修补应用程序以绕过密码验证。
@@ -5741,13 +5039,21 @@ Defense
 做得好，obfuscation 可以让代码几乎变得不可读。例如，下面的 C 语言代码（来源于 `www.ioccc.org/1988/phillipps.c`），编译运行后会输出整首《12 天的圣诞》歌词。它是 IOCCC（International Obfuscated C Code Contest）获奖作品，旨在展示手工 obfuscation（代码混淆）的极致。阅读它会让人头疼，也让人难以猜测需要花多长时间才能弄清它的功能。
 
 ```
+
 #include <stdio.h>
+
 main(t,_,a)
+
 char
+
 *
+
 a;
+
 {
+
        return!
+
  0<t?
 t<3?
  main(-79,-13,a+
@@ -5771,7 +5077,7 @@ main( _, t,
 #q#n+,/+k#;*+,/'r :'d*'3,}{w+K w'K:'+}e#';dq#'l q#'+d'K#!
       /+k#;\
 q#'r}eKK#}w'r}eKK{nl]'/#;#q#n'){)#}w'){){nl]'/+#n';d}rw' 
-      i;# ){nl]!/n{n#'; \
+      i;# ){nl]!/n{n#'; \ 
 r{#w'r nc{nl]/#{l,+'K {rw' iK{;[{nl]'/w#q#\
 \
 n'wk nw' iwk{KK{nl]!/w{%'l##w#' i; :{nl]/*{q#'ld;r'}{nlwb!/*de}'c ;;\
@@ -5781,8 +5087,7 @@ n'wk nw' iwk{KK{nl]!/w{%'l##w#' i; :{nl]/*{q#'ld;r'}{nlwb!/*de}'c ;;\
 t<-50?
 _==*a ?
 putchar(31[a]):
- main(-65,_,a+1)
-:
+ main(-65,_,a+1):
 main((*a == '/') + t, _, a + 1 )
 :
  0<t?
@@ -5792,6 +5097,7 @@ main((*a == '/') + t, _, a + 1 )
  main(-61,*a, "!ek;dc i@bK'(q)-[w]*%n+r3#l,{}:\nuwloca-O;m .vpbks,
        fxntdCeghiry") 
 ,a+1);}
+
 ```
 
 The concept of obfuscation has also made its way into popular culture. The following quotes are from a scene in one of the James Bond movies, *Skyfall* when Q is attempting to get into Silva's laptop.
@@ -5855,136 +5161,231 @@ Obfuscation can be performed manually. However, it's almost always better to use
 After mangling, the purpose of functions and variables is no longer immediately apparent. For example, consider the following code sample:
 
 ```
+
 public static void SelectionSort <T> (T[] data, int size) 
+
        where T: IComparable
+
 {
+
        for (int num1 = size – 1; num1>= 1; num1--)
+
        {
+
              T local1 = data[0];
+
              int num2 = 0;
+
              for (int num3 = 1; num3 <= num1; num3++)
+
              {
+
                     if (data[num3].CompareTo(local1)> 0)
+
                     {
+
                           local1 = data[num3];
+
                           num2 = num3;
+
                     }
+
              }
+
              T local2 = data[num2];
+
              data[num2] = data[num1];
+
              data[num1] = local2;
+
        }
+
 } 
+
 ```
 
 After mangling, this might look something like the following:
 
 ```
+
 public static void a <a> (a[] A_0, int A_1) where a:IComparable
+
 {
+
        int num1 = A_1 – 1;
+
 Label_004D:
+
        if (num1 < 1)
+
        {
+
              return;
+
        }
+
        a local1 A_0[0];
+
        int num2 = 0;
+
        int num3 = 1;
+
        while(true)
+
        {
+
              if (num3 <= num1)
+
              {
+
                     if (A_0[num3].CompareTo(local1)> 0)
+
                     {
+
                           local1 = A_0[num3];
+
                           num2 = num3;
+
                     }
+
              }
+
              else
+
              {
+
                     a local2 = A_0[num2];
+
                     A_0[num2] = A_0[num1];
+
                     A_0[num1] = local2;
+
                     num1--;
+
                     goto Label_004D;
+
              }
+
              num3++;
+
        }
+
 }
-```
+
+
+
 
 In the original, it is relatively easy to determine that the code is a sort algorithm even without the function name. However, doing so after mangling is much harder.
 
-
-
-另一种混淆技术是混淆器在构建可执行文件时加密字符串。代码中的解密函数会在运行时按需解密单个 strings。这使得像 IDA 的字符串视图等工具无法使用。
+另一种混淆技术是混淆器在构建可执行文件时加密字符串。代码中的解密函数会在运行时按需解密单个 `strings`。这使得像 IDA 的字符串视图等工具无法使用。
 
 字符串加密会对代码可读性产生巨大影响。考虑以下代码：
 
 ```
 public a() {
+
        this.a = "Hi, my name is Paul."
+
 }
+
 public static void a() {
+
        a a1 = new a();
+
        Console.WriteLine("Enter password: ");
+
        string text1 = Console.ReadLine();
+
        if (!text1.Equals(a1.a))
+
        {
+
              Console.WriteLine("Incorrect password.");
+
        }
+
        else
+
        {
+
              Console.WriteLine("Correct password.");
+
        }
+
        Console.ReadLine();
+
 }
+
 ```
 
 加密字符串后，这段代码可能会变成：
 
 ```
 pubic a() {
+
        int num1 = 5;
+
        this.a = 
+
 a("\ue6ad\u9eb1\u94b3\uc1b7\u9ab9\ud2bb\uadbf\ua7c1\ue4c
+
       3\uafc5\ubbc7\ueac9\u9ccb\uafcd\ua5cf\ubed1\ufad3", num1;
+
 }
- 
+
 public static void a()
+
 {
+
        int num1 = 13;
+
        a a1 = new a();
+
        Console.WriteLine(a("\uf3b5\ud6b7\uceb9\uccbd\ue0bf\ub2c1\ua5c3\u
+
              b5c5\ubbc7\ubdc9\ua3cb\ubccd\ub4cf\ue8d1\uf4d3, num1));
+
        string text1 = Console.ReadLine();
+
        if (1text1.Equals(a1.a)) {
+
                 Console.WriteLine(a(\uffb5\ud8b7\ud3bb\uccbd\ub2bf\ua7c1
+
                     \ua7c3\ub2c5\ue8c7\ubac9\uadcb\ubdcd\ua3cf\ua5d1\ubb
+
                     d3\ua4d5\ubcd7\uf4d9, num1));
+
        }
+
        else
+
        {
+
                Console.WriteLine(a("\uf5b5\ud7b7\uc8b9\ucebb\ua3bf\ub6c1
+
                     \ue4c3\ub6c5\ua9c7\ub9c9\ubfcb\ub9cd\ubfcf\ua0d1\ub0
+
                     d3\uf8d5", num1));
+
        }
+
        Console.ReadLine();
+
 }
+
 ```
 
-在原始代码中，字符串使得可以很容易判断这是认证代码（这通常是攻击者非常感兴趣的）。没有这些字符串，代码逻辑对分析者来说就显得非常难以理解。请记住，打击应用逆向工程的最大困难之一是找到相关代码。在包含数十万行代码的二进制文件中，可能只有五行与关键检查器相关，而像 strings 工具这样的方法是快速定位这五行代码的有力手段。去掉字符串会对反向工程师造成很大的痛苦。
+在原始代码中，字符串使得可以很容易判断这是认证代码（这通常是攻击者非常感兴趣的）。没有这些字符串，代码逻辑对分析者来说就显得非常难以理解。请记住，打击应用逆向工程的最大困难之一是找到相关代码。在包含数十万行代码的二进制文件中，可能只有五行与关键检查器相关，而像 `strings` 工具这样的方法是快速定位这五行代码的有力手段。去掉字符串会对反向工程师造成很大痛苦。
 
-#### ***Control Flow Flattening***
+### Control Flow Flattening
 
 使用这种混淆技术，每个函数的控制流会被“扁平化”。具体步骤如下：
 
-1.  将函数折叠成一个在无限循环中的 `switch` 语句。
+1. 将函数折叠成一个在无限循环中的 `switch` 语句。
 
-2.  为原始流中的每个基本块分配一个状态编号。
+2. 为原始流中的每个基本块分配一个状态编号。
 
-3.  `switch` 语句在基本块之间选择，并按正确顺序派发它们。
+3. `switch` 语句在基本块之间选择，并按正确顺序派发它们。
 
 Figure 12.1 展示了扁平化过程如何在 IDA 中转换应用程序。虽然逻辑相同，但控制流变得更难分析。
 
@@ -5992,9 +5393,9 @@ Figure 12.1 展示了扁平化过程如何在 IDA 中转换应用程序。虽然
 
 **Figure 12.1**: Control flow flattening in IDA
 
-#### ***Opaque Predicates***
+### Opaque Predicates
 
-Opaque predicates 在真实代码与无用代码之间插入干扰代码。干扰代码永远不会执行，而真实代码总是执行。但对反向工程师来说，这会让他们在无关紧要的无用代码中浪费数小时，从而延缓分析。
+`Opaque predicates` 在真实代码与无用代码之间插入干扰代码。干扰代码永远不会执行，而真实代码总是执行。但对反向工程师来说，这会让他们在无关紧要的无用代码中浪费数小时，从而延缓分析。
 
 ![Figure 12.2: Opaque predicates in IDA](img/c12f002.png)
 
@@ -6008,14 +5409,17 @@ if ( (a<<1)%2 ) { b = a * b + a; } else { a = a + b; }
 
 这里的无用代码在哪里？
 
-#### ***Instruction Substitution***
+### Instruction Substitution
 
-Instruction substitution 是将易于识别的指令替换为执行相同操作的复杂指令。例如，考虑以下代码：
+`Instruction substitution` 是将易于识别的指令替换为执行相同操作的复杂指令。例如，考虑以下代码：
 
 ```
 sub edx, 0x192A6C72
+
 neg ecx
+
 sub edx, ecx
+
 add edx, 0x192A6C72
 ```
 
@@ -6023,39 +5427,39 @@ add edx, 0x192A6C72
 
 ### Obfuscators
 
-Obfuscators 通常提供“旋钮”，让开发者可以调整混淆程度。原因是更多的混淆不一定更好。通常，混淆程度越高，执行速度越慢，文件体积越大。此外，大幅增加混淆程度并不会显著提高逆向工程的难度。平衡可用性和安全性需要找到一个中间点。
+`Obfuscators` 通常提供“旋钮”，让开发者可以调整混淆程度。原因是更多的混淆不一定更好。通常，混淆程度越高，执行速度越慢，文件体积越大。此外，大幅增加混淆程度并不会显著提高逆向工程的难度。平衡可用性和安全性需要找到一个中间点。
 
-如果你能做到这一点，混淆可以成为有价值的工具，尤其是对于那些容易反编译的代码（如前面提到的 JIT 语言，如 .NET 等）。但也要确保所使用的工具不提供易于获取的去混淆工具。
+如果你能做到这一点，混淆可以成为有价值的工具，尤其是对于那些容易反编译的代码（如前面提到的 JIT 语言，如 `.NET` 等）。但也要确保所使用的工具不提供易于获取的去混淆工具。
 
-对于通用混淆，OLLVM 是一个不错的起点。该工具的优势包括：它基于 LLVM 中间表示 (IR)，并支持所有 LLVM 前端（gcc、clang）以及多种源语言（C、C++、C#、Lisp、Fortran、Haskell、Python、Ruby 等）。
+对于通用混淆，`OLLVM` 是一个不错的起点。该工具的优势包括：它基于 `LLVM` 中间表示 (`IR`)，并支持所有 `LLVM` 前端（`gcc`、`clang`）以及多种源语言（`C`、`C++`、`C#`、`Lisp`、`Fortran`、`Haskell`、`Python`、`Ruby` 等）。
 
-OLLVM 不建议用于生产代码，但可以作为自定义混淆器的基础，或仅用于学习和玩耍混淆技术。
+`OLLVM` 不建议用于生产代码，但可以作为自定义混淆器的基础，或仅用于学习和玩耍混淆技术。
 
-除了 OLLVM，还有大量语言特定的混淆器工具和技巧。例如，Dotfuscator 用于 C#，Proguard 用于 Java。
+除了 `OLLVM`，还有大量语言特定的混淆器工具和技巧。例如，`Dotfuscator` 用于 `C#`，`Proguard` 用于 `Java`。
 
-对于 JavaScript 程序，可以使用 YUICompressor 和 UglifyJS 进行混淆。总体而言，最小化器（minimizers）作为副产品，会引入一定程度的合理混淆。
+对于 `JavaScript` 程序，可以使用 `YUICompressor` 和 `UglifyJS` 进行混淆。总体而言，最小化器（`minimizers`）作为副产品，会引入一定程度的合理混淆。
 
-Python 代码可以编译为字节码，去除部分变量名和注释。随后，字节码可以被混淆并配合定制解释器发布。一些 Python 混淆器包括 Tigress、BitBoost 和 Opy，但相比前面提到的工具，它们的知名度较低。
+`Python` 代码可以编译为字节码，去除部分变量名和注释。随后，字节码可以被混淆并配合定制解释器发布。一些 `Python` 混淆器包括 `Tigress`、`BitBoost` 和 `Opy`，但相比前面提到的工具，它们的知名度较低。
 
 ### Defeating Obfuscators
 
-Obfuscators 设计用于通过增加逆向工程的难度和耗时来防止其分析。但混淆并不完美，正如前文多次强调的，有动机的 cracker 最终可以击败它。
+`Obfuscators` 设计用于通过增加逆向工程的难度和耗时来防止其分析。但混淆并不完美，正如前文多次强调的，有动机的 `cracker` 最终可以击败它。
 
 反向工程师加速分析混淆二进制文件的方法包括：
 
-*   运行 traces 以区分真实代码与伪代码
+* 运行 `traces` 以区分真实代码与伪代码
 
-*   使用象征性分析（symbolic analysis）简化复杂度
+* 使用象征性分析（`symbolic analysis`）简化复杂度
 
-*   编写定制脚本以移除混淆
+* 编写定制脚本以移除混淆
 
 ## Lab: Obfuscation
 
-本实验探讨混淆技术。T Labs 及相关说明可在对应文件夹中找到：
+本实验探讨混淆技术。`T Labs` 及相关说明可在对应文件夹中找到：
 
 `https://github.com/DazzleCatDuo/X86-SOFTWARE-REVERSE-ENGINEERING-CRACKING-AND-COUNTER-MEASURES`
 
-对于本实验，请找到 Lab Obfuscation 并遵循提供的说明。
+对于本实验，请找到 `Lab Obfuscation` 并遵循提供的说明。
 
 ### Skills
 
@@ -6069,26 +5473,25 @@ Obfuscators 设计用于通过增加逆向工程的难度和耗时来防止其�
 
 调试是动态分析可执行文件的最快方式。反调试是一系列技术，旨在阻止他人使用调试器动态分析你的应用。市面上有许多技术，但大多数是为了检测调试器的存在。常见的反调试检查包括：
 
-*   内存检查
+* 内存检查
 
-*   CPU 检查
+* CPU 检查
 
-*   时间检查
+* 时间检查
 
-*   异常检查
+* 异常检查
 
-*   环境检查
+* 环境检查
 
+- [反调试功能](https://wiki.example.org/anti-debugging)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
 
-
-
--   [反调试功能](https://wiki.example.org/anti-debugging)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+1. 运用费曼技巧，你只需花上 `20 min` 就能深入理解知识点，而且记忆深刻，难以遗忘。
 
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
+
+
 
 
 
@@ -6098,11 +5501,11 @@ if (condVar > someVal) {console.log("xxx")}
 
 `https://github.com/DazzleCatDuo/X86-SOFTWARE-REVERSE-ENGINEERING-CRACKING-AND-COUNTER-MEASURES`
 
-为此实验，请找到 **Lab Anti-Debugging** 并遵循提供的指示。
+为此实验，请找到 `Lab Anti-Debugging` 并遵循提供的指示。
 
 ### 技能
 
-本实验使用 x64dbg 来规避反调试技术。目标是理解常见防御性编码技术的影响。
+本实验使用 `x64dbg` 来规避反调试技术。目标是理解常见防御性编码技术的影响。
 
 ### 收获
 
@@ -6112,7 +5515,7 @@ if (condVar > someVal) {console.log("xxx")}
 
 开发者希望防范自己和代码免受逆向工程师和黑客的攻击。本章探讨了一些常见的实现方法，包括混淆和反调试保护措施。
 
-# CHAPTER 13  
+# CHAPTER 13
 
 ## 高级防御技术
 
@@ -6188,7 +5591,7 @@ if (condVar > someVal) {console.log("xxx")}
 
 ### 打包
 
-*打包*是一个广义术语，指在可执行文件上常用的压缩和混淆技术。常见的打包技术包括：
+`打包`是一个广义术语，指在可执行文件上常用的压缩和混淆技术。常见的打包技术包括：
 
 *   数据段的压缩/加密
 
@@ -6206,9 +5609,9 @@ if (condVar > someVal) {console.log("xxx")}
 
 *   **反转储**：打包工具可以擦除内存中的头部信息，使内存转储变得困难。
 
-*   **反篡改**：通过校验和实现反篡改，包括常见的滚动校验和、CRC32、MD5、SHA-1，以及 Tiger、Whirlpool、MD4、Adler 等。
+*   **反篡改**：通过校验和实现反篡改，包括常见的滚动校验和、`CRC32`、`MD5`、`SHA-1`，以及 `Tiger`、`Whirlpool`、`MD4`、`Adler` 等。
 
-打包可以使用加密来隐藏代码。通常采用比特运算（XOR/ROL…）、线性合同生成（LCG）、RC4、Tea 等简单算法；也可以使用更高级的算法，如 DES、AES、Blowfish、Trivium、IDEA、ElGamal 等。若应用的代码和数据段均被加密，则在静态分析工具或十六进制编辑器中只会看到少量代码以及大量看似随机的垃圾数据。可运行的代码仅是解包器一小段，它需要在运行时把自己解包到内存中，这使得静态分析无法看到完整的代码。
+打包可以使用加密来隐藏代码。通常采用比特运算（`XOR`/`ROL`…）、线性合同生成（`LCG`）、`RC4`、`Tea` 等简单算法；也可以使用更高级的算法，如 `DES`、`AES`、`Blowfish`、`Trivium`、`IDEA`、`ElGamal` 等。若应用的代码和数据段均被加密，则在静态分析工具或十六进制编辑器中只会看到少量代码以及大量看似随机的垃圾数据。可运行的代码仅是解包器一小段，它需要在运行时把自己解包到内存中，这使得静态分析无法看到完整的代码。
 
 打包还可以使用**混淆（obfuscation）**，即在保持相同指令集和架构的前提下，对代码进行变形。常见的混淆技术包括**回流（reflow）**和**多态化（oligomorphism）**，以及本章第 12 章 “防御”节中讨论的其他技术。
 
@@ -6216,16 +5619,13 @@ if (condVar > someVal) {console.log("xxx")}
 
 打包工具（独立的工具）对可执行文件进行压缩、混淆等处理，然后在可执行文件开头加入一个解包器。可执行文件运行时，解包器是第一段代码，它会把原始的代码和数据解压到内存中。
 
-Figure 13.1 展示了打包可执行文件在 IDA 中的外观。IDA 会看到指向解包器的初始跳转；其余代码则看起来像是数据。
+Figure 13.1 展示了打包可执行文件在 `IDA` 中的外观。`IDA` 会看到指向解包器的初始跳转；其余代码则看起来像是数据。
 
 ![Figure 13.1: Packed code in IDA](img/c13f001.png)
 
 **Figure 13.1**: Packed code in IDA
 
 #### 这是否是一种强保护？
-
-
-
 
 在下面的章节中，我们将讨论一些保护技术，并询问它们是否是强有力的保护。这些评估旨在从极高层次上，将每种保护在哪些方面具有最强影响力进行分类。我们的书籍主要侧重于攻击性，但我们觉得快速浏览一些防御措施很重要。在每个章节中，为了评估反破解防御的有效性，我们将使用所谓的 CIA 三元组（CIA 代表保密性、完整性和可用性）。对于不熟悉此概念的读者，它是思考安全控制的常见方式，因为并非所有安全控制都覆盖三元组的全部部分，因此了解哪些控制在每个支柱中有用是很重要的。*完整性* 是某事物的真实性。它是否与原始意图一致，或者是否被修改？*保密性* 是某事物只能被授权方访问的能力。*可用性* 是某事物执行其预定功能的程度。这三者合起来通常被称为 CIA 三元组。针对打包程序（packers）进行 CIA 三元组评估：
 
@@ -6241,17 +5641,17 @@ Figure 13.1 展示了打包可执行文件在 IDA 中的外观。IDA 会看到�
 
 自然会有人想，一旦在内存中解包，能否直接内存转储出一个新的解包二进制文件？这在技术上是可行的，但操作困难。应用程序包含大量启动代码，而将其加载到正确的内存位置、设置栈等并不是简单地转储内存并直接将其视为 EXE 文件就能实现的。
 
-另一种思路是看看是否可以直接解包程序。市面上一些常见的打包工具有专门的解包工具，例如 UPX、MEW 和 ASPack。
+另一种思路是看看是否可以直接解包程序。市面上一些常见的打包工具有专门的解包工具，例如 `UPX`、`MEW` 和 `ASPack`。
 
-然而，可能并不存在独立的解包工具，解包代码仅存在于打包可执行文件中。但这并不意味着我们束手无策！专门为此目的开发的众多插件和工具非常有用，例如 OllyDumpEx 和 ImpRec，它们旨在重构导入表。这是一个复杂但可行的过程，不过本书并不以此为重点。如果你对此感兴趣，网上有不少关于导入表重构的优秀博客。
+然而，可能并不存在独立的解包工具，解包代码仅存在于打包可执行文件中。但这并不意味着我们束手无策！专门为此目的开发的众多插件和工具非常有用，例如 `OllyDumpEx` 和 `ImpRec`，它们旨在重构导入表。这是一个复杂但可行的过程，不过本书并不以此为重点。如果你对此感兴趣，网上有不少关于导入表重构的优秀博客。
 
 ### PEiD
 
-当我们面对文件时，往往很难判断它经历了哪些操作。如果你一开始就知道它是由某个特定工具打包的，那么就可以直接沿着这条思路去分析。但破解通常并没有现成的手册告诉你当前面临的防御措施。PEiD 是一款用于检测大多数常见打包、加密和编译工具的便携式可执行文件（如应用程序）的工具。它能够检测到超过 470 种伪装工具的签名。近年来，该领域还出现了另一款更近期的工具——Detect it Easy。
+当我们面对文件时，往往很难判断它经历了哪些操作。如果你一开始就知道它是由某个特定工具打包的，那么就可以直接沿着这条思路去分析。但破解通常并没有现成的手册告诉你当前面临的防御措施。`PEiD` 是一款用于检测大多数常见打包、加密和编译工具的便携式可执行文件（如应用程序）的工具。它能够检测到超过 470 种伪装工具的签名。近年来，该领域还出现了另一款更近期的工具——`Detect it Easy`。
 
 如前所述，许多防御工具（如打包和加密工具）都有对应的解包或解密工具。识别所使用的工具可以将分析时间缩短一个数量级，因为你可以剥离掉应用程序的许多保护措施。
 
-Figure 13.2 展示了使用 PEiD 的示例。首先选择要检查的文件，PEiD 会随后显示其打包、加密和编译的详细信息。
+Figure 13.2 展示了使用 `PEiD` 的示例。首先选择要检查的文件，`PEiD` 会随后显示其打包、加密和编译的详细信息。
 
 ![Figure 13.2: 使用 PEiD 识别打包程序](img/c13f002.png)
 
@@ -6267,7 +5667,7 @@ Figure 13.2 展示了使用 PEiD 的示例。首先选择要检查的文件，PE
 
 ### 技能
 
-打包程序是常见的反向工程保护手段。本实验室通过 IDA、Cheat Engine 和 PEiD 探索以下技能：
+打包程序是常见的反向工程保护手段。本实验室通过 `IDA`、`Cheat Engine` 和 `PEiD` 探索以下技能：
 
 *   检测打包程序的存在
 
@@ -6278,9 +5678,6 @@ Figure 13.2 展示了使用 PEiD 的示例。首先选择要检查的文件，PE
 ### 收获
 
 市面上为许多打包程序提供现成的解包工具（不要自行 reinvent the wheel）。当解包工具不存在时，仍然可以从内存中手动恢复原始程序。
-
-
-
 
 在该情况下，程序逻辑被翻译为自定义指令集。因此，逆向工具不再直接可用，因为它们无法恢复/分析程序逻辑。随后，VM 会编译为目标架构（即 x86）。
 
@@ -6352,7 +5749,7 @@ Figure 13.2 展示了使用 PEiD 的示例。首先选择要检查的文件，PE
 
 ### Cryptors/Decryptors（加密/解密工具）
 
-Cryptors 会对应用的代码段（属于前文提到的打包技术子集）进行加密，通常用于规避恶意软件检测。许多反恶意软件工具在运行软件前会分析其 API 调用，并基于可疑的系统函数阻止软件。通过加密代码段，恶意软件使得在执行前无法检查应用内容。
+`Cryptors` 会对应用的代码段（属于前文提到的打包技术子集）进行加密，通常用于规避恶意软件检测。许多反恶意软件工具在运行软件前会分析其 API 调用，并基于可疑的系统函数阻止软件。通过加密代码段，恶意软件使得在执行前无法检查应用内容。
 
 一般来说，加密软件在执行前必须对自身进行解密。通常这意味着解密密钥在软件内部。因此，逆向工程应能够找到密钥并解密软件。
 
@@ -6404,18 +5801,15 @@ Cryptors 会对应用的代码段（属于前文提到的打包技术子集）�
 
 没有万能解决方案。不要让完美成为良好的敌人。一旦确定合理的方案，混淆、反调试、打包等工具即可在你的 DevOps 流程中集成。
 
-# CHAPTER 14  
+# CHAPTER 14
 
 Detection and Prevention
 
-
-
-
-# 应用程序开发人员使用各种机制来检测和防范反编译和破解。然而，这些方法中有些比其他方法更有效。本章探讨了一些最常见的技术，它们的相对优势和劣势，以及如何被击败。
+应用程序开发人员使用各种机制来检测和防范反编译和破解。然而，这些方法中有些比其他方法更有效。本章探讨了一些最常见的技术，它们的相对优势和劣势，以及如何被击败。
 
 ## CRC
 
-循环冗余检查 (CRC) 是对要保护的数据字节执行的数学计算。结果以 CRC 形式存储，通常会附加到数据后（即 `data data data data data data CRC`）。要验证数据，重新计算并比较。
+循环冗余检查 (`CRC`) 是对要保护的数据字节执行的数学计算。结果以 CRC 形式存储，通常会附加到数据后（即 `data data data data data data CRC`）。要验证数据，重新计算并比较。
 
 CRC 算法具有以下优势：
 
@@ -6425,7 +5819,7 @@ CRC 算法具有以下优势：
 
 *   快速计算和比较
 
-*   选项众多（IEEE802.3、CRC-32 等）
+*   选项众多（IEEE802.3、`CRC-32` 等）
 
 总体而言，CRC 非常适合检测意外错误或修改，例如传输错误。
 
@@ -6459,11 +5853,11 @@ CRC 算法具有以下优势：
 
 代码签名使用公钥或非对称加密。这些算法使用一对公钥和私钥。要进行代码签名，首先需要生成公钥/私钥对。
 
-数字签名使用公钥进行验证；但需要证明特定的公钥属于你。这就是公钥基础设施 (PKI) 的作用。使用生成的公钥，你可以向代码签名证书颁发机构 (CA) 申请证书。CA 会验证你的身份并发布数字证书，其中包含你的公钥并验证你的所有权。
+数字签名使用公钥进行验证；但需要证明特定的公钥属于你。这就是公钥基础设施 (`PKI`) 的作用。使用生成的公钥，你可以向代码签名证书颁发机构 (`CA`) 申请证书。`CA` 会验证你的身份并发布数字证书，其中包含你的公钥并验证你的所有权。
 
 有了这个证书，你可以生成数字签名。具体做法是生成可执行文件的哈希值，然后用私钥加密该哈希值。在分发可执行文件时，你会将生成的签名和数字证书与可执行文件一起打包。
 
-虽然可以手动完成此过程，但许多构建工具会为你完成。你仍需购买证书并将其加载到构建工具中，但可以让构建工具为应用程序进行签名。如果你初次接触 PKI，请注意，这仅仅是表面的介绍；专门介绍这一概念的书籍很多。
+虽然可以手动完成此过程，但许多构建工具会为你完成。你仍需购买证书并将其加载到构建工具中，但可以让构建工具为应用程序进行签名。如果你初次接触 `PKI`，请注意，这仅仅是表面的介绍；专门介绍这一概念的书籍很多。
 
 ### 如何验证已签名的应用程序
 
@@ -6481,13 +5875,13 @@ CRC 算法具有以下优势：
 
 原因是必须有一段未签名的代码来执行签名检查。这包括执行以下操作：
 
-1.  计算代码的哈希值。
+1. 计算代码的哈希值。
 
-2.  检查哈希值是否符合预期。
+2. 检查哈希值是否符合预期。
 
-    1.  如果答案是正确，则运行代码。
+    1. 如果答案是正确，则运行代码。
 
-    2.  如果答案是错误，则不运行代码。
+    2. 如果答案是错误，则不运行代码。
 
 这段签名验证代码不能包含在代码签名中，因为它需要包含（或访问）哈希值以进行比较。如果没有先对应用程序进行哈希，就无法预知这个值。如果在应用程序中包含哈希值，那么修改后的应用程序将拥有新的哈希值。
 
@@ -6510,9 +5904,6 @@ CRC 通常用于检测网络传输中的位错误。但它们只能防范意外�
 *   **可用性：** 无
 
 击败代码签名的更困难方法是窃取私钥并使用它们对修改后的应用程序进行数字签名。
-
-
-
 
 ### RASP 的风险
 
@@ -6544,7 +5935,7 @@ CRC 通常用于检测网络传输中的位错误。但它们只能防范意外�
 
 有许多商业产品提供白名单功能。例如，Windows 操作系统内置了*软件限制策略*。
 
-从反向工程的角度来看，白名单可以阻止使用反编译和逆向工程工具。例如，像 Procmon、调试器、Cheat Engine、ResourceHacker、Dependency Walker 以及其他逆向和反编译应用程序，很可能不会被包含在白名单中。
+从反向工程的角度来看，白名单可以阻止使用反编译和逆向工程工具。例如，像 `Procmon`、调试器、`Cheat Engine`、`ResourceHacker`、`Dependency Walker` 以及其他逆向和反编译应用程序，很可能不会被包含在白名单中。
 
 创建白名单很难做到准确。很难知道应用程序需要的所有库。生成白名单时，需要进行大量的测试，以确保所有必要的应用程序和库都已包含在白名单中。
 
@@ -6568,9 +5959,9 @@ CRC 通常用于检测网络传输中的位错误。但它们只能防范意外�
 
 #### *示例：Metasploit*
 
-Metasploit 是一个流行的黑客工具。其主要目标是利用应用程序并注入 meterpreter，该工具为攻击者提供对受感染计算机的远程访问。（参见我们仓库的“工具”部分，获取相关链接。）
+`Metasploit` 是一个流行的黑客工具。其主要目标是利用应用程序并注入 meterpreter，该工具为攻击者提供对受感染计算机的远程访问。（参见我们仓库的“工具”部分，获取相关链接。）
 
-使用 Metasploit，不需要启动新的应用程序；meterpreter 注入到被攻击的进程中。从那时起，它可以“横向移动”到任何其他运行的应用程序。
+使用 `Metasploit`，不需要启动新的应用程序；meterpreter 注入到被攻击的进程中。从那时起，它可以“横向移动”到任何其他运行的应用程序。
 
 ### 这是否是强有力的保护？
 
@@ -6622,9 +6013,6 @@ Metasploit 是一个流行的黑客工具。其主要目标是利用应用程序
 
 实现远程认证的一种可能方法是加密除加载器外的所有部分。加载器会将系统信息、软件的哈希值和激活密钥发送到服务器。
 
-
-
-
 数字千年版权法案（DMCA）是 1998 年由国会通过的法律，使美国符合国际版权协定。它设计用于保护知识产权，能够在内容到达市场后跟踪并控制受保护内容。
 
 计算机欺诈与滥用法案（CFAA）于 1984 年制定，是一项联邦反黑客法，禁止未经授权访问计算机和网络。由于法律条文表述不清，检察官一直滥用该法。近年来，为保护安全研究人员免受其起诉，相关保护措施逐步出台。据《WIRED》2014 年文章所述：
@@ -6636,9 +6024,6 @@ Metasploit 是一个流行的黑客工具。其主要目标是利用应用程序
 CFAA 的另一起悲剧性滥用导致了 Aaron Swartz 的自杀。该案件发生在一位美国检察官利用 CFAA 对互联网活动家 Aaron Swartz 展开强力起诉，指控他非法获取 MIT closet 中的数百万份学术论文。尽管 JSTOR 未提出投诉，司法部仍推进起诉。检察官 Carmen Ortiz 坚称“盗窃即盗窃”，并称仅仅是维护法律。Aaron Swartz 因即将面临的审判和被定罪的恐惧而于 2013 年自杀。此事后，两名议员提出了迟长的修正案——Aaron's law，旨在防止检察官滥用该法。该修正案由 Rep. Zoe Lofgren (D-Calif.) 和 Sen. Ron Wyden (D-Oregon) 引入，内容包括：排除违反服务条款和用户协议的行为；缩小“未经授权访问”的定义，明确区分严重的黑客活动与轻微的超出授权范围的行为；将“未经授权访问”定义为“绕过一种或多种技术措施，阻止未经授权的个人获取或修改受保护计算机上的信息”；并明确“绕过”不包括仅仅更改 MAC 地址或 IP 地址以获取系统访问。
 
 版权法
-
-
-
 
 Under the Copyright Act of 1976, a copyright for a computer program comes into being as the source code for the computer program is being written by the programmer. The program does not need to be complete or even functional for copyright protection to come into being. Copyright case law treats the copyright of the source code and object code as equivalent.
 
@@ -6662,11 +6047,11 @@ The source code of software is generally kept as a trade secret and not released
 
 In addition to laws, court precedent is important to determining what is and isn't legal in the United States. A couple of important court cases include the following:
 
-*   **Apple Computer v. Franklin Computer:** Established that object programs are copyrightable. 
+*   **Apple Computer v. Franklin Computer:** Established that object programs are copyrightable.
 
     *   In the early 1980s Franklin Computer corporation started to produce the Franklin Ace computer to compete with the Apple II. The Franklin ACE was compatible with Apple 2 programs. To do that, the Franklin Ace had copied some of the operating system functions directly from the ROM on an Apple II. Apple sued Franklin Computers for copyright infringement because they copied their object code. Apple won.
 
-*   **Sega v. Accolate:** Established that disassembling object code to determine technical specifications is fair use. 
+*   **Sega v. Accolate:** Established that disassembling object code to determine technical specifications is fair use.
 
     *   A video game maker, Accolate, wanted to make some of its games for the Sega Genesis. However, Sega didn't share the technical specs for the system, so Accolade disassembled the object code of a Sega game to determine how it worked. Sega sued Accolade for infringing on their copyright. However, this time the court ruled in favor of Accolade, because Accolade's actions constituted fair use of the software.
 
@@ -6706,12 +6091,9 @@ This is not a get-out-of-jail-free card or a blank permission to go hack and cra
 
 Copyright law in relation to reverse engineering and code modification heavily emphasizes intent and effects. When proceeding on your own, consult with a lawyer…or keep it to yourself. This isn't meant in a sneaky way, but recall that a part of fair use is the effect your work has on the market. If you're tinkering and cracking for education or for research and your outcomes stay with you, they don't really affect the potential market for the work. That's a key factor in fair use. The second you use your knowledge to make a keygen that you put online that causes a vendor to lose money, then it's no longer considered fair use. But if you're keeping it all to yourself in a way that doesn't affect the market or others, then you've gone a long way to fall under fair use.
 
-# CHAPTER 16  
+# CHAPTER 16
 
 Advanced Techniques
-
-
-
 
 -   [Up to this point, this book has covered the core tools and skills used for reverse engineering and cracking. However, this is an evolving field, and new methods are being developed to make it faster and easier. This section describes at a high level some advanced techniques and tools on the cutting edge of reverse engineering. Our goal with this chapter is that if at this point you're still loving software cracking and looking to take it even further to the next level, we want to present you with a plethora of rabbit holes to go down. Depending on what interests you, we hope the following will point you in the right directions to go deeper.]
 
@@ -6845,128 +6227,152 @@ Advanced Techniques
 
 -   [For example, consider the following code:]
 
--   [```
+```
+
+
+
+```
 if (strlen(username)> 10)
+
        if (key_1^sum(username)==key_2)
+
               printf("key passed");
-```]
+```
 
--   [A symbolic analysis tool will automatically identify the combination of *`username`*, *`key_1`*, and *`key_2`* that will pass the checks and reach the “key passed” print statement.]
-
--   [Some symbolic analysis tools include the following:]
-
--   [Angr]
-
--   [Mayhem]
-
--   [KLEE]
-
--   [Triton]
-
--   [S2E]
-
--   [To see an example of symbolic analysis with Angr, check out the DEF CON 23 talk by Shoshitaishvili and Wang, “Angry Hacking: The next gen of binary analysis,” at `www.youtube.com/watch?v=oznsT-ptAbk`.]
+- A symbolic analysis tool will automatically identify the combination of `username`, `key_1`, and `key_2` that will pass the checks and reach the “key passed” print statement.
+- Some symbolic analysis tools include the following:
+- Angr
+- Mayhem
+- KLEE
+- Triton
+- S2E
+- To see an example of symbolic analysis with Angr, check out the DEF CON 23 talk by Shoshitaishvili and Wang, “Angry Hacking: The next gen of binary analysis,” at `www.youtube.com/watch?v=oznsT-ptAbk`.
 
 ## Summary
 
--   [At this point, the best way to improve your reversing and cracking skills is via more hands-on practice. On the Windows VM, the `allthethings` folder on the Desktop contains a variety of different crackmes to practice with sorted by difficulty level.]
+- At this point, the best way to improve your reversing and cracking skills is via more hands-on practice. On the Windows VM, the `allthethings` folder on the Desktop contains a variety of different crackmes to practice with sorted by difficulty level.
 
-## CHAPTER 17  
+## CHAPTER 17
 
 ### Bonus Topics
 
--   [This last chapter of this book introduces software reversing and cracking. It is primarily focused on understanding how a program works and bypassing or modifying undesirable functionality (like key checkers).]
-
--   [This chapter takes this knowledge and applies it to real-world hacking. Stack smashing and shellcoding both use an understanding of how a program and the stack works to run malicious code within a program.]
+- This last chapter of this book introduces software reversing and cracking. It is primarily focused on understanding how a program works and bypassing or modifying undesirable functionality (like key checkers).
+- This chapter takes this knowledge and applies it to real-world hacking. Stack smashing and shellcoding both use an understanding of how a program and the stack works to run malicious code within a program.
 
 ### Stack Smashing
 
--   [Stack smashing, also known as stack-based buffer overflows, is one of the most classic attacks against software. It takes advantage of the fact that non-memory-safe languages such as C/C++ have no built-in protection that prevents an application from accessing or overwriting data in other parts of memory. For example, C/C++ doesn't automatically check that the data written to an array fits within the bounds of that array. If you don't know C, don't worry. As long as you know any programming language, you should be able to follow along.]
+- Stack smashing, also known as stack-based buffer overflows, is one of the most classic attacks against software. It takes advantage of the fact that non-memory-safe languages such as C/C++ have no built-in protection that prevents an application from accessing or overwriting data in other parts of memory. For example, C/C++ doesn't automatically check that the data written to an array fits within the bounds of that array. If you don't know C, don't worry. As long as you know any programming language, you should be able to follow along.
 
--   [Because stack smashing has been around for such a long time, there are numerous compilers that have built-in automatic guards that are put into compiled code to prevent this. While it's not as easy of an attack as it used to be, everyone should fully understand how the attack works, because:]
+- Because stack smashing has been around for such a long time, there are numerous compilers that have built-in automatic guards that are put into compiled code to prevent this. While it's not as easy of an attack as it used to be, everyone should fully understand how the attack works, because:
 
--   [*   Some facets of it still work.]
--   [*   It's the foundation of other types of attacks.]
--   [*   Not every application has stack protections.]
+    - Some facets of it still work.
+    - It's the foundation of other types of attacks.
+    - Not every application has stack protections.
 
--   [For any of the following C code examples, if you build them with `gcc`, you must use the flag `-fno-stack-protector` to turn off these protections. Making the full command line for using `gcc` to build in Linux: `gcc myfile.c-fno-stack-protector`.]
+- For any of the following C code examples, if you build them with `gcc`, you must use the flag `-fno-stack-protector` to turn off these protections. Making the full command line for using `gcc` to build in Linux: `gcc myfile.c-fno-stack-protector`.
 
--   [For example, consider the following simple C program:]
+- For example, consider the following simple C program:
 
--   [```
-void function(int a, int b, int c) {
-   char buffer1[5];
-   char buffer2[10];
-}
- 
-void main() {
-  function(1,2,3);
-}
-```]
+    ```
+    void function(int a, int b, int c) {
 
--   [After this application has been compiled and the object has been dumped from memory, it results in the following assembly code:]
+       char buffer1[5];
 
+       char buffer2[10];
 
+    }
 
+    void main() {
 
-`push` `ebp`
-`mov` `esp`, `ebp`
-`sub` `ebp`, 20 `(*stack shown here)`
-`leave`
-`ret`
+      function(1,2,3);
 
-main:
-`push` `ebp`
-`mov` `ebp`, `esp`
-`push` 3
-`push` 2
-`push` 1
-`call` function
-`add` `esp` 0xc
-`leave`
-`ret`
+    }
+    ```
 
+- After this application has been compiled and the object has been dumped from memory, it results in the following assembly code:
 
+    ```
+    push ebp
+    mov esp, ebp
+    sub ebp, 20 (*stack shown here)
+    leave
+    ret
 
--   [对于不熟悉 C 的人来说，`&` 是“地址”，因此下面的代码将 `ret` 指向 `buffer+0x18` 在内存中的地址。通过绘制栈，你可以看到这正是保存的返回地址。此时返回地址没有被修改，但我们有一个指向它的指针。下一步是弄清楚要将它改为什么，以跳过 `x=1`。]
+    main:
+    push ebp
+    mov ebp, esp
+    push 3
+    push 2
+    push 1
+    call function
+    add esp 0xc
+    leave
+    ret
+    ```
+
+- 对于不熟悉 C 的人来说，`&` 是“地址”，因此下面的代码将 `ret` 指向 `buffer+0x18` 在内存中的地址。通过绘制栈，你可以看到这正是保存的返回地址。此时返回地址没有被修改，但我们有一个指向它的指针。下一步是弄清楚要将它改为什么，以跳过 `x=1`。
 
 ```c
 #include <stdio.h>
+
 void function(int a, int b, int c) {
+
        char buffer[16];
+
        int *ret;
- 
+
        //now we have the return value, what do we do with it?
+
        ret = (unsigned int)&buffer+0x18;
+
        buffer[0] = 0x88; //this is here so buffer is not optimized out
+
 } 
+
 void main() {
+
      int x;
+
      x = 0;
+
      function(1,2,3);
+
      x = 1;
+
      printf("%d\n",x);
+
  }
 ```
 
-
-
-
 ```
 jmp    ??
+
 pop   esi
+
 mov   [esi+0x8],esi
+
 mov   [esi+0x7],0x0
+
 mov   [esi+0xc],0x0
+
 mov   eax, 0xb
+
 mov   ebx, esi
+
 lea   ecx, [esi+0x8]
+
 lea   edx, [0xc+esi] 
+
 int    0x80 
+
 mov   eax, 0x1
+
 mov   ebx, 0
+
 int    0x80
+
 call   ??
+
 .string \"/bin/sh\"
 ```
 
@@ -6980,19 +6386,33 @@ This 代码样本在原始 shellcode 的基础上增加了前两条和末尾两�
 
 ```
 jmp    0x26                     # 2 bytes
+
 pop   esi                       # 1 byte
+
 mov   [esi+0x8],esi             # 3 bytes
+
 mov   [esi+0x7],0x0             # 4 bytes
+
 mov   [esi+0xc],0x0             # 7 bytes
+
 mov   eax, 0xb                  # 5 bytes
+
 mov   ebx, esi                  # 2 bytes
+
 lea   ecx, [esi+0x8]            # 3 bytes
+
 lea   edx, [0xc+esi]            # 3 bytes
+
 int    0x80                     # 2 bytes
+
 mov   eax, 0x1                  # 5 bytes
+
 mov   ebx, 0                    # 5 bytes
+
 int    0x80                     # 2 bytes
+
 call   -0x2b                    # 5 bytes
+
 .string \"/bin/sh\"
 ```
 
@@ -7006,31 +6426,51 @@ call   -0x2b                    # 5 bytes
 
 ```
 0804845c <function>:
+
  804845c:    55                       push   ebp
+
  804845d:    89 e5                    mov    ebp,esp
+
  804845f:    83 ec 48                 sub    esp,0x48
+
  8048462:    8b 45 08                 mov    eax,DWORD PTR [ebp+0x8]
+
  8048465:    89 45 d4                 mov    DWORD PTR [ebp-0x2c],eax
+
  8048468:    65 a1 14 00 00 00        mov    eax,gs:0x14
+
  804846e:    89 45 f4                 mov    DWORD PTR [ebp-0xc],eax
+
  8048471:    31 c0                    xor    eax,eax
+
  8048473:    8b 45 d4                 mov    eax,DWORD PTR [ebp-0x2c]
+
  8048476:    89 44 24 04              mov    DWORD PTR [esp+0x4],eax
+
  804847a:    8d 45 e4                 lea    eax,[ebp-0x1c]
+
  804847d:    89 04 24                 mov    DWORD PTR [esp],eax
+
  8048480:    e8 bb fe ff ff           call   8048340 <strcpy@plt>
+
  8048485:    8b 45 f4                 mov    eax,DWORD PTR [ebp-0xc]
+
  8048488:    65 33 05 14 00 00 00     xor    eax,DWORD PTR gs:0x14
+
  804848f:    74 05                    je     8048496 <function+0x3a>
+
 8048491:    e8 9a fe ff ff           call   8048330 <__stack_chk
+
 _fail@plt>
+
  8048496:    c9                       leave
+
  8048497:    c3                       ret
 ```
 
 粗体显示的行是编译器为栈保护添加的代码。编译器添加了在函数入口保存返回地址的代码，并在 `strcpy` 操作后验证返回地址未被修改。编译器知道像 `strcpy` 这样的调用可能危险，因此防止其覆盖返回地址。
 
-保护免受栈溢出的选项包括 gcc 的内置栈保护、使用带有 bounds checking 的安全语言以及数据执行预防（DEP）。然而，缓冲区溢出仍然是一种威胁，因为并非所有编译器都支持栈保护或 DEP，并且保护机制并非为每个调用都添加栈守卫。保护机制主要针对特定操作（如 `strcpy`），而许多编译器会智能判断哪些调用最危险并需要保护。
+保护免受栈溢出的选项包括 `gcc` 的内置栈保护、使用带有 bounds checking 的安全语言以及数据执行预防（DEP）。然而，缓冲区溢出仍然是一种威胁，因为并非所有编译器都支持栈保护或 DEP，并且保护机制并非为每个调用都添加栈守卫。保护机制主要针对特定操作（如 `strcpy`），而许多编译器会智能判断哪些调用最危险并需要保护。
 
 ### 连接 C 和 x86
 
@@ -7040,13 +6480,10 @@ _fail@plt>
 
 同时，还需要知道如何向该函数传递信息，即其调用约定。这里假设我们的 C 函数使用 `cdecl` 调用约定。请记住，在 `cdecl` 中：
 
-*   参数从右向左依次压栈。
-
-*   调用者在函数返回后负责清理栈。
-
-*   函数的返回值存储在 `eax` 中。
-
-*   `eax`、`ecx` 和 `edx` 寄存器在函数调用后对调用者可用。调用者应在需要时保存这些寄存器的值，而 callee 应保存并恢复其使用的其他寄存器的值。
+* 参数从右向左依次压栈。
+* 调用者在函数返回后负责清理栈。
+* 函数的返回值存储在 `eax` 中。
+* `eax`、`ecx` 和 `edx` 寄存器在函数调用后对调用者可用。调用者应在需要时保存这些寄存器的值，而 callee 应保存并恢复其使用的其他寄存器的值。
 
 如果遵循正确的调用约定，你就可以在汇编代码中调用 C 函数。
 
@@ -7056,6 +6493,7 @@ _fail@plt>
 
 ```
 extern x
+
 call x
 ```
 
@@ -7065,16 +6503,19 @@ call x
 
 ```
 push [y]
+
 push [x]
+
 call add
+
 add esp, 8
+
 mov [sum], eax
 ```
 
+
+
 编写完汇编代码后，下一步是使用 `nasm` 进行汇编。例如：`nasm example.asm –o example.o`。
-
-
-
 
 在此时，所有内容都是汇编代码，除了那些占位符。如果你没有外部函数，你的代码就可以直接运行，但由于有外部函数，你需要链接器的帮助。最后一步是将你的汇编代码链接到 C 函数。如果你使用 `gcc` 并调用 C 库中的函数，`gcc` 会自动处理这件事。例如，`gcc example.o -o example` 将使用链接器填充它知道的任何地址，将 `call 0x????????` 转换为 `call 0x08048320`。
 
@@ -7082,22 +6523,23 @@ mov [sum], eax
 
 ```
 extern printf
+
 global main
- 
+
 section .text
+
 main:
- 
-push 42
-push world
-push hello
-call printf
-add esp, 12
- 
-mov eax, 1
-mov ebx, 0
-int 0x80
- 
+    push 42
+    push world
+    push hello
+    call printf
+    add esp, 12
+    mov eax, 1
+    mov ebx, 0
+    int 0x80
+
 section .data
+
 hello: db "hello %s %d", 0xa, 0
 world: db "world"
 ```
@@ -7114,9 +6556,10 @@ world: db "world"
 
 ```
 global f
+
 f:
-  mov eax, 0xdabbad00
-  ret
+    mov eax, 0xdabbad00
+    ret
 ```
 
 然后使用 `nasm` 汇编你的汇编代码，并使用 `gcc` 编译和链接完整程序。
@@ -7125,12 +6568,11 @@ f:
 
 ```
 // x.c
- 
 #include <stdio.h>
- 
+
 int add(int,int);
- 
-int main(void) 
+
+int main(void)
 {
     int x=add(1,2);
     printf("%d\n",x);
@@ -7142,16 +6584,13 @@ int main(void)
 
 ```
 ; y.asm
- 
 add:
-  push ebp
-  mov ebp, esp
- 
-  mov eax, [ebp+8]
-  add eax, [ebp+12]
- 
-  leave
-  ret
+    push ebp
+    mov ebp, esp
+    mov eax, [ebp+8]
+    add eax, [ebp+12]
+    leave
+    ret
 ```
 
 要链接和组装这个程序，运行以下命令：
@@ -7163,16 +6602,16 @@ gcc x.o y.o –o adder # produces executable adder
 # run with ./adder
 ```
 
-### _start vs. main()
+### `_start` vs. `main()`
 
 x86 程序通常以标签 `_start` 开头，而 C 程序则以 `main()` 函数开始。两者的区别是什么？
 
 程序的执行（无论是用 C、汇编还是其他语言编写）实际上并不是从 `main` 开始的。例如，考虑最简单的 C 函数：
 
 ```
-int main() 
+int main()
 {
-return 0;
+    return 0;
 }
 ```
 
@@ -7182,38 +6621,35 @@ return 0;
 
 ```
 80483b4:     55                   push   ebp
- 80483b5:    89 e5                mov    ebp,esp
- 80483b7:    5d                   pop    ebp
- 80483b8:    c3                   ret
+80483b5:    89 e5                mov    ebp,esp
+80483b7:    5d                   pop    ebp
+80483b8:    c3                   ret
 ```
 
 而 `_start` 函数的汇编如下：
 
 ```
 8048300:     31 ed                xor    ebp,ebp
- 8048302:    5e                   pop    esi
- 8048303:    89 e1                mov    ecx,esp
- 8048305:    83 e4 f0             and    esp,0xfffffff0
- 8048308:    50                   push   eax
- 8048309:    54                   push   esp
- 804830a:    52                   push   edx
- 804830b:    68 30 84 04 08       push   0x8048430
- 8048310:    68 c0 83 04 08       push   0x80483c0
- 8048315:    51                   push   ecx
- 8048316:    56                   push   esi
- 8048317:    68 b4 83 04 08       push   0x80483b4
- 804831c:    e8 cf ff ff ff       call   80482f0 <__libc_start_main@plt>
- 8048321:    f4                   hlt
+8048302:    5e                   pop    esi
+8048303:    89 e1                mov    ecx,esp
+8048305:    83 e4 f0             and    esp,0xfffffff0
+8048308:    50                   push   eax
+8048309:    54                   push   esp
+804830a:    52                   push   edx
+804830b:    68 30 84 04 08       push   0x8048430
+8048310:    68 c0 83 04 08       push   0x80483c0
+8048315:    51                   push   ecx
+8048316:    56                   push   esi
+8048317:    68 b4 83 04 08       push   0x80483b4
+804831c:    e8 cf ff ff ff       call   80482f0 <__libc_start_main@plt>
+8048321:    f4                   hlt
 ```
 
 `_start` 函数负责以下几个任务：
 
 *   初始化帧指针
-
 *   配置栈
-
 *   设置标准参数（即 `main()` 的参数）
-
 *   调用 `libc_start_main`，它执行安全检查、线程子系统、初始化、调用你的 `main` 函数，最后调用 `exit()`
 
 当编写纯汇编代码时，你需要自己完成所有这些任务，不需要 C 的所有设置，可以自定义 `_start` 函数。
@@ -7223,32 +6659,30 @@ return 0;
 当编写一个将链接到标准 C 库的汇编程序时，请遵循以下步骤：
 
 1.  使用 `main` 而不是 `_start`（`libc_start_main` 会为你调用 `main`）。
-
 2.  只设置栈帧，不需要设置整个栈（`_start` 已经配置了你的栈）。
-
 3.  以 `ret` 结尾，而不是 `int 0x80`（`ret` 会返回到 `libc_start_main`，它会调用 C 的 `exit` 函数，然后调用 `int 0x80`）。
-
 4.  在 `ret` 之前，将返回值设置在 `eax` 中（通常为 0）。
 
 例如，考虑下面的独立汇编程序，它定义了自己的 `_start`：
 
 ```
 global _start
- 
+
 section .text
+
 _start:
     mov  esp, stack
     mov  ebp, esp
- 
+
     …
- 
+
     mov  esp, ebp
- 
     mov  eax, 1
     mov  ebx, 0
     int  0x80
-    
+
 section .data
+
 times 128 db 0
 stack equ $-4
 ```
@@ -7257,14 +6691,15 @@ stack equ $-4
 
 ```
 global main
- 
+
 section .text
+
 main:
     push ebp
     mov  ebp, esp
- 
+
     …
- 
+
     mov  eax, 0
     leave
     ret
@@ -7277,44 +6712,40 @@ main:
 在编写 `main` 函数的汇编版本时，它也会自动以 `cdecl` 调用。请记住以下几点：
 
 *   参数是从右到左在栈上压入的。
-
 *   参数位于 `[ebp+8]`，`[ebp+12]` 等位置。
-
 *   `argc` 是列表中的最后一个参数，位于栈顶，即 `[ebp+8]`。
-
 *   `argv` 是第一个压入栈的参数，位于 `[ebp+12]`。
 
 例如，下面的汇编程序会打印命令行的第一个参数：
 
 ```
 extern printf
+
 global main
- 
+
 main:
-   push  ebp 
-   mov   ebp, esp 
- 
-   mov   eax, [ebp+12]  ; load argv into eax
-   push  dword [eax+4]  ; push argv[1]
-   call  printf         ; print argv[1]
-   add   esp, 4         ; clean up stack
-   mov   eax, 0
-   leave
-   ret
+    push  ebp
+    mov   ebp, esp
+    mov   eax, [ebp+12]  ; load argv into eax
+    push  dword [eax+4]  ; push argv[1]
+    call  printf         ; print argv[1]
+    add   esp, 4         ; clean up stack
+    mov   eax, 0
+    leave
+    ret
+```
 
-
-
-# 变量
+### 变量
 
 变量是您在内联汇编代码中希望在 C 代码中使用的值。
 
-# 被破坏寄存器：
+### 被破坏寄存器
 
 `gcc` 将 C 翻译成汇编，并确定要使用哪些寄存器。此列表确保 C 代码和汇编代码使用的寄存器不会冲突。
 
 Extended assembly 可按以下方式指定：
 
-``` 
+```
 __asm__(
              “assembly”
              : input constraints
@@ -7325,9 +6756,9 @@ __asm__(
 
 下面的代码示例展示了在 C 中使用 Extended Assembly 的示例：
 
-``` 
-#include <stdio.h> 
- 
+```
+#include <stdio.h>
+
 int main(void)
 {
     // 获取当前函数的返回地址
@@ -7343,7 +6774,6 @@ int main(void)
             :"%eax"
            );
 
- 
     printf("%08x\n", x);
 
     return 0;
@@ -7353,13 +6783,9 @@ int main(void)
 内联汇编在 C 中被广泛使用于：
 
 *   操作系统内核（查看 Linux 内核源码）。
-
 *   嵌入式系统。
-
 *   需要与硬件交互的代码。
-
 *   需要运行得非常快的代码。
-
 *   你偶尔会在 C 开发中看到它，甚至可能需要自己使用。
 
 请记住，使用内联汇编时，需要为 `gcc` 添加一个新标志。例如，命令 `gcc –masm=intel myFile.c` 告诉 `gcc` 你已在 C 文件中写入了一些 Intel 汇编。
@@ -7376,7 +6802,7 @@ int main(void)
 
 现在你知道了 `mov`，你就能轻松理解 `movs`（字符串版本）。你已经掌握了位操作，如 `not`，所以 `neg`（取反）很快就能理解。你已经掌握了比较指令，如 `cmp`，所以 `cmps` 并不算什么难度，从而可以使用 `cmpxchg`、`cmpxchg16b` 或 `lock cmpxchg8b`。关键是：现在你掌握了基础，理解新指令（无论是 `ud`（未定义指令）还是 `gf2p8affineinvqb`（Galois field affine transformation inverse））变得越来越容易；基础原则对所有事物都大同小异。
 
-当然，学习不止于此。新指令很棒，但如果你继续沿着这条道路前进，你很快就会遇到全新的架构。好消息是，它们也往往遵循相同的基本模式，现在你已经掌握了一种，很快就能理解新的架构。x64（64 位 x86）现在很容易，因为你已经掌握了 x86——只需将寄存器扩展为 64 位（`rax` 代替 `eax`，`rsp` 代替 `esp`），并遵循不同的调用约定（AMD64 ABI 以及 cdecl），你就可以将所有工具和技术应用于 64 位代码。从这里，Arm 架构也能轻松掌握——同样是新寄存器（`r0` 代替 `rax`），新指令（`b` 代替 `jmp`），以及调用约定（Arm 代替 cdecl）。底层模式大体相同，无论目标是 PowerPC、MIPS、RISC‑V、MIL‑STD‑1750A 等，你通常只需几小时即可掌握基础。扩展到新架构也能让你将技能应用于新设备，如手机、路由器、汽车或卫星。无论目标是什么，基础原则相当统一。
+当然，学习不止于此。新指令很棒，但如果你继续沿着这条道路前进，你很快就会遇到全新的架构。好消息是，它们也往往遵循相同的基本模式，现在你已经掌握了一种，很快就能理解新的架构。x64（64 位 x86）现在很容易，因为你已经掌握了 x86——只需将寄存器扩展为 64 位（`rax` 代替 `eax`，`rsp` 代替 `esp`），并遵循不同的调用约定（AMD64 ABI 以及 `cdecl`），你就可以将所有工具和技术应用于 64 位代码。从这里，Arm 架构也能轻松掌握——同样是新寄存器（`r0` 代替 `rax`），新指令（`b` 代替 `jmp`），以及调用约定（Arm 代替 `cdecl`）。底层模式大体相同，无论目标是 PowerPC、MIPS、RISC‑V、MIL‑STD‑1750A 等，你通常只需几小时即可掌握基础。扩展到新架构也能让你将技能应用于新设备，如手机、路由器、汽车或卫星。无论目标是什么，基础原则相当统一。
 
 随着你不断前进，你不仅会遇到新架构，还会遇到新工具。好消息是，它们通常基于相同的核心概念。我们已经通过大量的反汇编器、十六进制编辑器、调试器和反编译器进行了探索。现在是时候开始探索新的选项，看看哪种最适合你。Ghidra、Binary Ninja 和 Cutter/radare2 是流行的下一步，它们在 IDA 的经验基础上提供了更多 dissect 和理解程序的方式。
 
@@ -7390,1617 +6816,1428 @@ int main(void)
 
 # Index
 
-*   **A**
-
-*   absolute addressing, 27
-
-*   accumulator register, 22
-
-*   `add` instruction, 35–36, 60–61, 116
-
-*   addresses 
-
-    *   about, 9
-
-    *   getting in Cheat Engine, 188–189
-
-*   addressing modes 
-
-    *   about, 27
-
-    *   absolute addressing, 27
-
-    *   base + displacement addressing, 28
-
-    *   based-index addressing, 28–29
-
-    *   indexed addressing, 28
-
-    *   indirect addressing, 27–28
-
-*   adjust flag (AF), 60
-
-*   advanced techniques 
-
-    *   about, 227–228, 245, 249
-
-    *   automatic structure recovery, 247
-
-    *   binary instrumentation, 246
-
-    *   cryptors/decryptors, 227
-
-    *   decompiling, 247
-
-    *   deobfuscation, 248
-
-    *   intermediate representations, 246
-
-    *   lab, 222–223
+* **A**
+* absolute addressing, 27
+* accumulator register, 22
+* `add` instruction, 35–36, 60–61, 116
+* addresses
+    * about, 9
+    * getting in Cheat Engine, 188–189
+* addressing modes
+    * about, 27
+    * absolute addressing, 27
+    * base + displacement addressing, 28
+    * based-index addressing, 28–29
+    * indexed addressing, 28
+    * indirect addressing, 27–28
+* adjust flag (AF), 60
+* advanced techniques
+    * about, 227–228, 245, 249
+    * automatic structure recovery, 247
+    * binary instrumentation, 246
+    * cryptors/decryptors, 227
+    * decompiling, 247
+    * deobfuscation, 248
+    * intermediate representations, 246
+    * lab, 222–223
+* packing, 219–222
+* symbolic analysis, 248–249
+* tamper-proofing, 217–219
+* theorem provers, 248
+* timeless debugging, 245–246
+* virtualization, 223–226
+* visualization, 247
 
 
 
-*   packing, 219–222
-*   symbolic analysis, 248–249
-*   tamper-proofing, 217–219
-*   theorem provers, 248
-*   timeless debugging, 245–246
-*   virtualization, 223–226
-*   visualization, 247
 *   allowlisting, 234–235
+
 *   AMD Omperon, 14
+
 *   American Standard Code for Information Interchange (ASCII) 
+
     *   about, 54–55
+
     *   identifying strings, 55
+
     *   manipulating, 55–56
+
 *   analyzing assembly code, 65–75
-*   AND (`&&`), 99
+
+*   `AND` (`&&`), 99
+
 *   `and` instruction, 37
+
 *   anti-debugging 
+
     *   about, 212, 219
+
     *   debug registers, 213
+
     *   defeating, 215–216
+
     *   directory scanning, 215
+
     *   invalid `CloseHandle()`, 214
+
     *   `IsDebuggerPresent()`, 212–213
+
     *   lab, 216
+
     *   offensive, 215
-    *   Read Timestamp Counter (RDTSC), 214
+
+    *   Read Timestamp Counter (`RDTSC`), 214
+
 *   anti-dumping, 219
+
 *   anti-tampering, 220
+
 *   anti-virtualization, 219
+
 *   API calls, 145
+
 *   *Apple Computer v. Franklin Computer,* 242
+
 *   application binary interface (ABI), 110
+
 *   architectures 
+
     *   about, 12
+
     *   assembly, 7–12
+
     *   complex instruction set computing (CISC) architecture, 10–12
+
     *   computer, 5–7
+
     *   instruction set, 9–10
+
     *   microarchitectures, 9–10
+
     *   reduced instruction set computing (RISC) architecture, 10–12
+
     *   32-bit x86, 14
+
 *   arguments, standard, 268
+
 *   arithmetic logic unit (ALU), 6
+
 *   arithmetic shift, 38
+
 *   arrays, 28
+
 *   assembly 
+
     *   machine code, 7–9
+
     *   mixing with C, 268–270
+
     *   syntax of, 14–15
+
 *   assembly code 
+
     *   about, 8, 75
+
     *   analyzing and debugging, 65–75
+
     *   binary analysis, 65–66
+
     *   breakpoints, 66–67
+
     *   `gdb`, 68–73
+
     *   Immunity, 168–170
+
     *   lab: Shark Sim 3000, 73–74
+
     *   noise, 74–75
+
     *   segmentation faults, 73
+
 *   assembly programs 
+
     *   about, 56
+
     *   American Standard Code for Information Interchange (ASCII), 54–56
+
     *   building and linking, 48–52
+
     *   building and running, 43–56
+
     *   lab: Hello World, 53–54
+
     *   `objdump`, 52–53
+
     *   output, 43–46
+
     *   system calls, 46–48
+
     *   writing, 49–52
+
 *   Athlon 64, 14
+
 *   AT&T syntax, 15
+
 *   authentication, remote, 236–237
+
 *   authentication code, 145
+
 *   authenticity, code signing and, 230
+
 *   automated obfuscation, 206–210
+
 *   automatic structure recovery, 247
+
 *   AV detection, 225
+
 *   availability, in CIA triad, 221, 226, 227, 230, 232, 233, 235, 236, 237
+
 *   available registers, 113
+
 *   **B**
+
 *   base address, 20
-*   base + displacement addressing, 28
+
+*   base `+` displacement addressing, 28
+
 *   base pointer register, 22
+
 *   base register, 22
+
 *   based addressing, 28
+
 *   based-index addressing, 28–29
+
 *   bases 
+
     *   about, 16
+
     *   nonzero, 95
+
 *   big-endian system, 20
+
 *   binary analysis 
+
     *   debugging, 66
+
     *   dynamic analysis, 65–66
+
     *   static analysis, 65–66
+
 *   binary instrumentation, 246
+
 *   binary values, 19–20
+
 *   bits, 17–18, 19
+
 *   blocklisting, 235–236
+
 *   blocks, in Interactive Disassembler (IDA), 193–194
+
 *   branches, 78
+
 *   `break` keyword, 97–99
+
 *   breakpoints 
+
     *   about, 66–67
+
     *   `gdb`, 69–70
+
 *   bridges, 6
+
 *   building 
+
     *   jump tables, 92–94
+
     *   in Linux, 48–49
+
 *   bytes 
+
     *   about, 17–18, 19
+
     *   copying in Cheat Engine, 188
+
 *   **C**
+
 *   C 
+
     *   connecting with x86, 262–270
+
     *   functions, 263–264
+
     *   mixing with assembly, 268–270
+
 *   `call` instruction, 106, 110
+
 *   call stacks, in Procmon, 158
+
 *   caller cleanup, 112
+
 *   calling conventions, 110–116
+
 *   carry flag (CF), 58
+
 *   `cdecl`, 112–116
+
 *   central processing unit (CPU), 6
+
 *   Cheat Engine 
+
     *   about, 184, 247
+
     *   allowlisting and, 234
+
     *   copying bytes, 188
+
     *   getting addresses, 188–189
+
     *   opening processes, 184–185
+
     *   rewriting programs, 187–188
+
     *   string references, 187
+
     *   viewing memory, 185–186
+
 *   CIA triad, 221
+
 *   clobbered registers, 269
+
 *   `CloseHandle()`, 214
+
 *   `cmp` instruction, 61–63, 80–81
+
 *   code 
+
     *   iteratively annotating, 145–146
+
     *   signing, 230–232
+
 *   code blocks, removing, 82
+
 *   code-dispatch scheme, 226
+
 *   CodeFusion, patching with, 182–184
+
 *   Comet Cursor, 141
+
 *   comments, in Interactive Disassembler (IDA), 196–197
+
 *   commercial off-the-shelf (COTS) packers, 228
+
 *   compiler boilerplate, 75
+
 *   compilers and optimizers 
+
     *   about, 127, 130
+
     *   finding starting code, 127–130
+
     *   linking, 134–136
+
     *   optimization, 130–132
+
     *   stripping, 132–134
 
-
-
 # 复杂指令集计算 (CISC) 架构 (CISC) architecture, 10–12
-
-### 计算机架构
-
-## 关于, 5, 9–10
-
-## 桥梁, 6
-
-## 中央处理器 (CPU), 6
-
-## 内存, 6–7
-
-## 外设, 6
-
-## 寄存器, 6–7
-
+## 计算机架构
+### 关于, 5, 9–10
+### 桥梁, 6
+### 中央处理器 (CPU), 6
+### 内存, 6–7
+### 外设, 6
+### 寄存器, 6–7
 # 计算机欺诈与滥用法案 (CFAA), 240–241
-
 # 计算机支持, 为 x86, 13
-
-### 条件码
-
-## 关于, 57, 64
-
-## `add` 指令, 60–61
-
-## 进位标志 (CF), 58
-
-## `cmp` 指令, 61–63
-
-## `eflags` 寄存器, 58
-
-## 影响状态标志的操作, 60–63
-
-## 其他状态标志, 60
-
-## 溢出标志 (OF), 59–60
-
-## 符号标志 (SF), 59
-
-## `sub` 指令, 61
-
-## `test` 指令, 63
-
-## 零标志 (ZF), 59
-
+## 条件码
+### 关于, 57, 64
+### `add` 指令, 60–61
+### 进位标志 (CF), 58
+### `cmp` 指令, 61–63
+### `eflags` 寄存器, 58
+### 影响状态标志的操作, 60–63
+### 其他状态标志, 60
+### 溢出标志 (OF), 59–60
+### 符号标志 (SF), 59
+### `sub` 指令, 61
+### `test` 指令, 63
+### 零标志 (ZF), 59
 # 条件跳转, 79–81
-
 # 保密性, 在 CIA 三元组中, 221, 226, 227, 230, 232, 233, 235, 236, 237
-
 # 常量, 50
-
 # `continue` 命令, 71–72, 96–97
-
 # 控制标志, 58
-
 # 控制流
-
 ## 关于, 75, 77–78
-
 ## 在复杂指令中添加注释, 145
-
 ## 条件跳转, 79–81
-
 ## 平整化, 209
-
 ## 程序计数器, 78
-
 ## 指令, 78–81
-
 ## `jmp` 指令, 78–79
-
 # 控制单元, 6
-
 # 约定, 调用, 110–116
-
 # 版权法 (1976), 241, 243
-
 # 成本, 混淆和, 205
-
 # 计数寄存器, 22
-
 # 破解
-
 ## 关于, 147, 177
-
 ## 使用免疫调试, 168–176
-
 ## 密钥检查器, 147–151
-
 ## 密钥生成器, 151–154
-
 ## 实验室, 155, 176–177
-
 ## 其他调试器, 167–168
-
 ## 补丁, 165–167
-
 ## Procmon 为, 155–160
-
 ## Resource Hacker, 160–165
-
 # crackmes, 137
-
 # CRC32 算法, 154
-
 # 加密/解密程序, 227
-
-# 大括号 ({}), 82
-
+# 大括号 (`{}`), 82
 # 循环冗余校验 (CRC), 229–230
-
 # D
-
 # Dalvik, 2
-
 # 数据
-
 ## 全局, 50–51
-
 ## 指定长度, 23–26
-
 # Data Execution Prevention (DEP), 262
-
 # 数据流, 145
-
 # 数据格式
-
 ## 关于, 9
-
 ## 全局, 50–51
-
 # 数据寄存器, 22
-
 # 数据表示
-
 ## 二进制值, 19–20
-
 ## 位, 17–18
-
 ## 字节, 17–18
-
 ## 数字系统基数, 16–17
-
 ## 字, 17–18
-
 # `.data` 段, 49
-
 # 调试寄存器, 213
-
 # 调试器
-
 ## 允许列表和, 234
-
 ## 其他, 167–168
-
 # 调试
-
 ## 组装代码, 65–75
-
 ## 使用 Immunity, 168–176
-
 ## 永恒, 245–246
-
 ## 使用 GNU 调试器 (`gdb`), 68–73
-
 # `dec` 指令, 35
-
-## 反编译
-
+# 反编译
 ## 关于, 1–2, 12
-
 ## JIT 编程语言的反编译, 2–4
-
 ## 实验室为, 4–5
-
 ## 用途, 2
-
 # decompiling, 247
-
 # decryptors/cryptors, 227
-
 # 防御
-
 ## 关于, 203, 216
-
 ## 反调试, 212–216
-
 ## 混淆, 203–212
-
 # Demand Progress, 240
-
 # deobfuscation, 248
-
 # Dependency Walker
-
 ## 关于, 143–144
-
 ## 允许列表和, 234
-
 # 目的索引寄存器, 22
-
 # 检测与防范
-
 ## 关于, 229, 238
-
 ## 允许列表, 234–235
-
 ## 阻止列表, 235–236
-
 ## 代码签名, 230–232
-
 ## 循环冗余校验 (CRC), 229–230
-
 ## 实验室, 238
-
 ## 远程身份验证, 236–237
-
 ## 运行时应用自我保护 (RASP), 232–234
-
 # Digital Millennium Copyright Act (DMCA), 239
-
 # 数字权益管理 (DRM), 239
-
 # 数字签名, 150, 231
-
 # 数字签名密钥, 150
-
 # 方向标志 (DF), 60
-
 # 目录扫描, 215
-
 # 反汇编, 使用 `gdb`, 69
-
 # `div` 指令, 36
-
 # DMCA 研究例外, 243
-
 # Domas, Christopher, 247
-
 # 双字节, 18
-
-# 双字 (DWORD), 18
-
+# 双字 (`DWORD`), 18
 # `do…while` 循环, 87–88
-
 # 动态链接, 134–135
-
 # dynStruct, 247
-
 # E
-
 # `eax` 寄存器, 22, 81
-
 # `ebp` 寄存器, 22, 116, 118, 119–121, 122
-
 # `ebx` 寄存器, 22
-
 # `echo` 命令, 140–141
-
 # `ecx` 寄存器, 22, 81
-
 # `edi` 寄存器, 22
-
 # `edx` 寄存器, 22
-
 # `eflags` 寄存器, 23, 58
-
 # `eip` 寄存器, 23, 78
-
 # ELF, 48–49
-
 # `else if` 语句, 85–87
-
 # 编码数据在密钥中, 151
-
 # 加密, 字符串, 207–209
-
 # 端 ianness, 20
-
 # Enigma, 246
-
 # 尾声, 117
-
 # `esi`, 22
-
 # `esp`, 23
-
 # 评估混淆, 205
-
 # 示例, 示例 x86 组装指令, 35, 37, 40
-
 # 异常, 在 Immunity 中, 173–174
-
 # F
-
 # fair use, 243
-
 # 文件膨胀, 226
-
-
-
-
 # 文件操作
 *   文件操作，在 Procmon 中，158–160
-
-*   标志寄存器，23
-
-*   `for` 循环，90–91
-
-*   格式，x86 汇编指令格式，31–32
-
+*   标志寄存器, 23
+*   `for` 循环, 90–91
+*   格式, x86 汇编指令格式, 31–32
 *   函数调用 
-
-    *   关于，75, 106, 123–125
-
-    *   约定，110–116
-
-    *   x86 中的函数，106–110
-
-*   函数挂钩，233
-
-*   函数参数，145
-
+    *   关于, 75, 106, 123–125
+    *   约定, 110–116
+    *   x86 中的函数, 106–110
+*   函数挂钩, 233
+*   函数参数, 145
 *   函数 
-
-    *   C，263–264
-
-    *   交互反汇编器 (IDA)，194–195
-
-    *   x86，264–265
-
+    *   C, 263–264
+    *   交互反汇编器 (IDA), 194–195
+    *   x86, 264–265
 *   **G**
-
-*   通用寄存器 (GPRs)，21–22
-
-*   `GetThreadContext()`，213
-
-*   Ghidra，5, 201
-
-*   全局数据，50–51
-
-*   全局变量，27
-
+*   通用寄存器 (GPRs), 21–22
+*   `GetThreadContext()`, 213
+*   Ghidra, 5, 201
+*   全局数据, 50–51
+*   全局变量, 27
 *   GNU 调试器 (`gdb`) 
-
-    *   关于，68
-
-    *   使用 gdb 调试，68–73
-
-*   GNU 链接器，49
-
-*   `goto` 语句，82, 84
-
-*   guards，219
-
+    *   关于, 68
+    *   使用 `gdb` 调试, 68–73
+*   GNU 链接器, 49
+*   `goto` 语句, 82, 84
+*   guards, 219
 *   **H**
-
-*   halfword，18
-
-*   硬件断点，67
-
-*   基于哈希的白名单，234–235
-
-*   哈希，218
-
-*   十六进制编辑器，179
-
-*   十六进制，16–17
-
-*   Hotz, George，246
-
+*   halfword, 18
+*   硬件断点, 67
+*   基于哈希的白名单, 234–235
+*   哈希, 218
+*   十六进制编辑器, 179
+*   十六进制, 16–17
+*   Hotz, George, 246
 *   **I**
-
-*   IDA's Hex-Rays 反编译器，5
-
-*   `if` 语句，82–83, 85–87
-
-*   `if…else` 语句，83–87
-
+*   IDA's Hex-Rays 反编译器, 5
+*   `if` 语句, 82–83, 85–87
+*   `if…else` 语句, 83–87
 *   Immunity 
-
-    *   关于，168
-
-    *   汇编，168–170
-
-    *   异常，173–174
-
-    *   实验室，176–177
-
-    *   模块，170
-
-    *   重写程序，174–176
-
-    *   运行程序，172–173
-
-    *   字符串，170–172
-
-*   `inc` 指令，35
-
-*   索引寻址，28
-
-*   间接寻址，27–28
-
-*   `info breakpoints` 命令，70
-
-*   `info` 命令，70–71
-
-*   `info files` 命令，70
-
-*   `info register` 命令，70
-
-*   `info variables` 命令，70
-
-*   内联汇编，268
-
-*   输入变量，269
-
-*   指令指针，78
-
-*   指令指针寄存器，23
-
-*   指令集架构 (ISA)，9–10, 14–15
-
-*   指令替换，210
-
-*   完整性 
-
-    *   在 CIA 三元组中，221, 226, 227, 230, 232, 233, 235, 236, 237
-
-    *   代码签名和，230
-
-*   Intel Prescott，14
-
-*   Intel 软件开发人员手册，14
-
-*   Intel 语法，15
-
-*   Interactive Disassembler (IDA) 
-
-    *   关于，190–191
-
-    *   基本块，193–194
-
-    *   注释，196–197
-
-    *   函数，194–195
-
-    *   实验室，200–202
-
-    *   修补，198–200
-
-    *   路径，197–198
-
-    *   字符串，192–193
-
-    *   变量，194–195
-
-*   中间语言 (IL)，2
-
-*   中间表示，246
-
-*   中断使能标志 (IF)，60
-
-*   I/O 总线，6
-
-*   `IsDebuggerPresent`，212–213
-
-*   **J**
-
-*   Java，2
-
-*   Java 虚拟机 (JVM)，2
-
-*   JetBrains dotPeek，2
-
-*   `jle` 指令，79–80
-
-*   `jmp` 指令，78–79
-
-*   JSTOR，240
-
-*   跳表 
-
-    *   构建，92–94
-
-    *   不实用，95–96
-
-*   跳转 
-
-    *   关于，78
-
-    *   条件，79–81
-
-*   实时编译 (JIT) 语言 
-
-    *   关于，2
-
-    *   反编译，2–4
-
-    *   防御，3–4
-
-*   **K**
-
-*   关键检查器 
-
-    *   关于，147–151
-
-    *   破解不同类型的，153–154
-
-*   关键生成器 
-
-    *   关于，151
-
-    *   破解不同类型的关键检查，153–154
-
-    *   哲学，152–153
-
-    *   建立原因，152
-
-*   键盘快捷键，用于 Immunity，170
-
-*   关键生成与补丁比较，165–166
-
-*   关键生成器，154–155
-
-*   **L**
-
-*   标签，49–50
-
-*   实验室 
-
-    *   反调试，216
-
-    *   反编译，4–5
-
-    *   检测与防范，238
-
-    *   Hello World，53–54
-
-    *   Immunity，176–177
-
-    *   Interactive Disassembler (IDA)，200–202
-
-    *   关键生成器，155
-
-    *   LaFarge，190
-
-    *   混淆，211–212
-
-    *   打包，222–223
-
-    *   ProcMon，238
-
-    *   反向工程，138
-
-    *   Shark Sim 3000，73–74
-
-    *   Windows 计算器，162–165
-
-*   LaFarge，190
-
-*   最后入先出 (LIFO) 结构，100
-
-*   启动 gdb，68
-
-*   层级虚拟化，225
-
-*   `lea` 指令，39
-
-*   法律 
-
-    *   关于，239, 244
-
-    *   DMCA 研究例外，243
-
-    *   公平使用，243
-
-    *   影响反向工程的美国法律，239–242
-
-*   链接 
-
-    *   关于，134
-
-    *   动态，134–135
-
-    *   在 Linux 中，48–49
-
-    *   安全影响，135–136
-
-    *   静态，134
-
-*   Linux，构建和链接，48–49
-
-*   小端系统，20
-
-*   加载有效地址，39
-
-*   局部变量，121–122, 145
-
-*   Lofgren, Zoe，241
-
-*   逻辑构造 
-
-    *   AND (`&&`)，99
-
-    *   关于，81–82
-
-    *   `break` 关键字，97–99
-
-    *   `continue` 关键字，96–97
-
-    *   `do…while` 循环，87–88
-
-    *   `else` 语句，85–87
-
-    *   `if` 语句，82–83, 85–87
-
-    *   `if…else` 语句，83–87
-
-    *   `for` 循环，90–91
-
-
-
--   OR (`||`), 100
-
--   `switch` 语句, 91–96
-
--   `while` 循环, 88–89
-
--   逻辑移位, 38
-
--   `ltrace`, 140–143
-
--   M
-
--   机器代码, 7–9
-
--   机器指令, 9
-
--   `main` 函数, 255, 265–267
-
--   市场份额, 于 x86, 13
-
--   内存
-
-    *   关于, 6–7, 72–73
-
-    *   在 Cheat Engine 中查看, 185–186
-
--   内存访问
-
-    *   关于, 24
-
-    *   指定数据长度, 24–26
-
--   Metasploit, 235
-
--   微架构, 9–10
-
--   缺失情况, 94–95
-
--   模块, 在 Immunity 中, 170
-
--   `mov` 指令, 33–34, 41
-
--   `mul` 指令, 36
-
--   N
-
--   名称混淆, 206–207
-
--   基于名称的白名单, 234–235
-
--   .NET, 2–3
-
--   Netwide Assembler, 48
-
--   `nexti` 命令, 72
-
--   字节 (nibble), 18
-
--   无操作, 39
-
--   噪声, 74–75
-
--   非零基址, 95
-
--   `nop` 指令, 39, 166–167
-
--   `not` 指令, 37–38
-
--   `notepad.exe`, 155–158
-
--   数字系统基数, 16–17
-
--   O
-
--   混淆
-
-    *   关于, 203–205
-
-    *   自动化, 206–210
-
-    *   评估, 205
-
-    *   实验室, 211–212
-
-    *   混淆器, 210–211
-
--   混淆器, 210–211
-
--   `objdump`, 52–53, 139
-
--   Object Dump (`objdump`), 52–53, 139
-
--   octoword, 双字 (DQWORD), 18
-
--   攻击性调试反调试, 215
-
--   离线激活, 151
-
--   OLLVM, 211
-
--   OllyDbg, 167–168
-
--   1 的补码, 37–38
-
--   透明的谓词, 209–210
-
--   操作系统 (OS), 46
-
--   优化器。 *See* 编译器和优化器
-
--   OR (`||`), 100
-
--   `or` 指令, 37
-
--   Ortiz, Carmen, 240
-
--   输出
-
-    *   关于, 43–46
-
-    *   控制引脚, 45
-
--   输出变量, 269
-
--   溢出标志 (OF), 59–60
-
--   P
-
--   包装
-
-    *   关于, 219–220
-
-    *   破解, 221
-
-    *   包装器的工作原理, 220
-
-    *   实验室, 222–223
-
-    *   PEiD, 221–222
-
-    *   保护与, 220–221
-
--   参数
-
-    *   访问, 115–116, 119–121
-
-    *   位置, 110
-
-    *   排序, 110
-
--   奇偶标志 (PF), 60
-
--   部分密钥验证, 151
-
--   修补及高级工具
-
-    *   关于, 179, 202
-
-    *   Cheat Engine, 184–189
-
-    *   CodeFusion 修补, 182–184
-
-    *   Ghidra, 201
-
-    *   交互反汇编器 (IDA), 190–200
-
-    *   与密钥生成相比, 165–166
-
-    *   实验室: 破解 LaFarge, 190
-
-    *   实验室: 使用 IDA 破解, 201–202
-
-    *   实验室: IDA 逻辑流, 200–201
-
-    *   `nop`, 166–167
-
-    *   在 010 Editor 中修补, 179–182
-
-    *   使用位置, 166
-
--   路径, 在交互反汇编器 (IDA) 中, 197–198
-
--   PEiD, 221–222
-
--   外设, 6
-
--   控制引脚, 45
-
--   指针, 27–28
-
--   `pop` 指令, 103–106
-
--   端口, 于 x86, 44–45
-
--   潜力, 混淆和, 205
-
--   预防。 *See* 检测和预防
-
--   `printf` 函数, 72
-
--   打印字符串, 47–48
-
--   进程, 在 Cheat Engine 中打开, 184–185
-
--   ProcMon
-
-    *   关于, 155–160
-
-    *   白名单和, 234
-
-    *   实验室, 238
-
--   程序, 在 Cheat Engine 中重写, 187–188
-
--   Prologues, 117
-
--   公钥基础设施 (PKI), 231
-
--   `push` 指令, 102–103
-
--   Q
-
--   四字节, 18
-
--   四字 (QWORD), 18
-
--   R
-
--   读取时间戳计数器 (RDTSC), 214
-
--   可读性, 19
-
--   精简指令集计算 (RISC) 架构, 10–12
-
--   寄存器访问, 110
-
--   寄存器
-
-    *   关于, 6–7, 9, 20–21
-
-    *   保存, 113–114
-
-    *   使用, 23–24
-
-    *   在 x86 中, 21–23
-
--   登录查询, 在 Procmon 中, 160
-
--   远程认证, 236–237
-
--   弹性, 混淆和, 205
-
--   Resource Hacker (ResHacker/ResHack)
-
-    *   关于, 160–165
-
-    *   白名单和, 234
-
--   `ret` 指令, 106–110
-
--   返回地址, 108
-
--   返回值, 111, 113, 114–115
-
--   逆向工程
-
-    *   关于, 137, 138–139
-
-    *   依赖项遍历, 143–144
-
-    *   实验室, 138
-
-    *   `ltrace`, 140–143
-
-    *   Object Dump (`objdump`), 139
-
-    *   `strace`, 140–143
-
-    *   策略, 144–146
-
-    *   `strings`, 143
-
-    *   影响美国法律, 239–242
-
--   `run` 命令, 71–72
-
--   运行时应用自我保护 (RASP), 232–234
-
--   S
-
--   `sal` 指令, 38
-
--   `sar` 指令, 38
-
--   保存寄存器, 113–114
-
--   部分, 49
-
--   安全, 链接和, 135–136
-
--   *Sega v. Accolate,* 242
-
--   栈溢出错误 (segfaults), 73
-
--   shellcode, 258–261
-
--   `shl` 指令, 38
-
--   `shr` 指令, 38
-
--   标志位 (SF), 59
-
--   签名, 218
-
--   64 位寄存器, 23
-
--   软件断点, 67
-
-
+    *   关于, 168
+    *   汇编, 168–170
+    *   异常, 173–174
+    *   实验室, 176–177
+    *   模块, 170
+    *   重写程序, 174–176
+    *   运行程序, 172–173
+    *   字符串, 170–172
+*   `inc` 指令, 35
+*   索引寻址, 28
+*   间接寻址, 27–28
+*   `info breakpoints` 命令, 70
+*   `info` 命令, 70–71
+
+
+
+# 索引
+
+## I
+
+- `info files` 命令，70
+- `info register` 命令，70
+- `info variables` 命令，70
+- 内联汇编，268
+- 输入变量，269
+- 指令指针，78
+- 指令指针寄存器，23
+- 指令集架构 (ISA)，9–10, 14–15
+- 指令替换，210
+- 完整性
+  - 在 CIA 三元组中，221, 226, 227, 230, 232, 233, 235, 236, 237
+  - 代码签名和，230
+- Intel Prescott，14
+- Intel 软件开发人员手册，14
+- Intel 语法，15
+- Interactive Disassembler (IDA)
+  - 关于，190–191
+  - 基本块，193–194
+  - 注释，196–197
+  - 函数，194–195
+  - 实验室，200–202
+  - 修补，198–200
+  - 路径，197–198
+  - 字符串，192–193
+  - 变量，194–195
+- 中间语言 (IL)，2
+- 中间表示，246
+- 中断使能标志 (IF)，60
+- I/O 总线，6
+- `IsDebuggerPresent`，212–213
+
+## J
+
+- Java，2
+- Java 虚拟机 (JVM)，2
+- JetBrains dotPeek，2
+- `jle` 指令，79–80
+- `jmp` 指令，78–79
+- JSTOR，240
+- 跳表
+  - 构建，92–94
+  - 不实用，95–96
+- 跳转
+  - 关于，78
+  - 条件，79–81
+- 实时编译 (JIT) 语言
+  - 关于，2
+  - 反编译，2–4
+  - 防御，3–4
+
+## K
+
+- 关键检查器
+  - 关于，147–151
+  - 破解不同类型的，153–154
+- 关键生成器
+  - 关于，151
+  - 破解不同类型的关键检查，153–154
+  - 哲学，152–153
+  - 建立原因，152
+- 键盘快捷键，用于 Immunity，170
+- 关键生成与补丁比较，165–166
+- 关键生成器，154–155
+
+## L
+
+- 标签，49–50
+- 实验室
+  - 反调试，216
+  - 反编译，4–5
+  - 检测与防范，238
+  - Hello World，53–54
+  - Immunity，176–177
+  - Interactive Disassembler (IDA)，200–202
+  - 关键生成器，155
+  - LaFarge，190
+  - 混淆，211–212
+  - 打包，222–223
+  - ProcMon，238
+  - 反向工程，138
+  - Shark Sim 3000，73–74
+  - Windows 计算器，162–165
+- LaFarge，190
+- 最后入先出 (LIFO) 结构，100
+- 启动 `gdb`，68
+- 层级虚拟化，225
+- `lea` 指令，39
+- 法律
+  - 关于，239, 244
+  - DMCA 研究例外，243
+  - 公平使用，243
+  - 影响反向工程的美国法律，239–242
+- 链接
+  - 关于，134
+  - 动态，134–135
+  - 在 Linux 中，48–49
+  - 安全影响，135–136
+  - 静态，134
+- Linux，构建和链接，48–49
+- 小端系统，20
+- 加载有效地址，39
+- 局部变量，121–122, 145
+- Lofgren, Zoe，241
+- 逻辑构造
+  - AND (`&&`)，99
+  - 关于，81–82
+  - `break` 关键字，97–99
+  - `continue` 关键字，96–97
+  - `do…while` 循环，87–88
+  - `else` 语句，85–87
+  - `if` 语句，82–83, 85–87
+  - `if…else` 语句，83–87
+  - `for` 循环，90–91
+  - OR (`||`)，100
+  - `switch` 语句，91–96
+  - `while` 循环，88–89
+- 逻辑移位，38
+- `ltrace`，140–143
+
+## M
+
+- 机器代码，7–9
+- 机器指令，9
+- `main` 函数，255, 265–267
+- 市场份额，于 x86，13
+- 内存
+  - 关于，6–7, 72–73
+  - 在 Cheat Engine 中查看，185–186
+- 内存访问
+  - 关于，24
+  - 指定数据长度，24–26
+- Metasploit，235
+- 微架构，9–10
+- 缺失情况，94–95
+- 模块，在 Immunity 中，170
+- `mov` 指令，33–34, 41
+- `mul` 指令，36
+
+## N
+
+- 名称混淆，206–207
+- 基于名称的白名单，234–235
+- .NET，2–3
+- Netwide Assembler，48
+- `nexti` 命令，72
+- 字节 (nibble)，18
+- 无操作，39
+- 噪声，74–75
+- 非零基址，95
+- `nop` 指令，39, 166–167
+- `not` 指令，37–38
+- `notepad.exe`，155–158
+- 数字系统基数，16–17
+
+## O
+
+- 混淆
+  - 关于，203–205
+  - 自动化，206–210
+  - 评估，205
+  - 实验室，211–212
+  - 混淆器，210–211
+- 混淆器，210–211
+- `objdump`，52–53, 139
+- Object Dump (`objdump`)，52–53, 139
+- octoword，双字 (DQWORD)，18
+- 攻击性调试反调试，215
+- 离线激活，151
+- OLLVM，211
+- OllyDbg，167–168
+- 1 的补码，37–38
+- 透明的谓词，209–210
+- 操作系统 (OS)，46
+- 优化器。 *See* 编译器和优化器
+- OR (`||`)，100
+- `or` 指令，37
+- Ortiz, Carmen，240
+- 输出
+  - 关于，43–46
+  - 控制引脚，45
+- 输出变量，269
+- 溢出标志 (OF)，59–60
+
+## P
+
+- 包装
+  - 关于，219–220
+  - 破解，221
+  - 包装器的工作原理，220
+  - 实验室，222–223
+  - PEiD，221–222
+  - 保护与，220–221
+- 参数
+  - 访问，115–116, 119–121
+  - 位置，110
+  - 排序，110
+- 奇偶标志 (PF)，60
+- 部分密钥验证，151
+- 修补及高级工具
+  - 关于，179, 202
+  - Cheat Engine，184–189
+  - CodeFusion 修补，182–184
+  - Ghidra，201
+  - 交互反汇编器 (IDA)，190–200
+  - 与密钥生成相比，165–166
+  - 实验室: 破解 LaFarge，190
+  - 实验室: 使用 IDA 破解，201–202
+  - 实验室: IDA 逻辑流，200–201
+  - `nop`，166–167
+  - 在 010 Editor 中修补，179–182
+  - 使用位置，166
+- 路径，在交互反汇编器 (IDA) 中，197–198
+- PEiD，221–222
+- 外设，6
+- 控制引脚，45
+- 指针，27–28
+- `pop` 指令，103–106
+- 端口，于 x86，44–45
+- 潜力，混淆和，205
+- 预防。 *See* 检测和预防
+- `printf` 函数，72
+- 打印字符串，47–48
+- 进程，在 Cheat Engine 中打开，184–185
+- ProcMon
+  - 关于，155–160
+  - 白名单和，234
+  - 实验室，238
+- 程序，在 Cheat Engine 中重写，187–188
+- Prologues，117
+- 公钥基础设施 (PKI)，231
+- `push` 指令，102–103
+
+## Q
+
+- 四字节，18
+- 四字 (QWORD)，18
+
+## R
+
+- 读取时间戳计数器 (RDTSC)，214
+- 可读性，19
+- 精简指令集计算 (RISC) 架构，10–12
+- 寄存器访问，110
+- 寄存器
+  - 关于，6–7, 9, 20–21
+  - 保存，113–114
+  - 使用，23–24
+  - 在 x86 中，21–23
+- 登录查询，在 Procmon 中，160
+- 远程认证，236–237
+- 弹性，混淆和，205
+- Resource Hacker (ResHacker/ResHack)
+  - 关于，160–165
+  - 白名单和，234
+- `ret` 指令，106–110
+- 返回地址，108
+- 返回值，111, 113, 114–115
+- 逆向工程
+  - 关于，137, 138–139
+  - 依赖项遍历，143–144
+  - 实验室，138
+  - `ltrace`，140–143
+  - Object Dump (`objdump`)，139
+  - `strace`，140–143
+  - 策略，144–146
+  - `strings`，143
+  - 影响美国法律，239–242
+- `run` 命令，71–72
+- 运行时应用自我保护 (RASP)，232–234
+
+## S
+
+- `sal` 指令，38
+- `sar` 指令，38
+- 保存寄存器，113–114
+- 部分，49
+- 安全，链接和，135–136
+- *Sega v. Accolate,* 242
+- 栈溢出错误 (segfaults)，73
+- shellcode，258–261
+- `shl` 指令，38
+- `shr` 指令，38
+- 标志位 (SF)，59
+- 签名，218
+- 64 位寄存器，23
+- 软件断点，67
 
 # 软件限制策略
+
 234
 
 # 来源索引寄存器
+
 22
 
 # 专用寄存器（SPRs）
+
 21, 23, 57
 
 # 栈帧
+
 106, 116
 
 ## 关于
+
 106, 116
 
 ## 访问参数
+
 119–121
 
 ## 尾声
+
 117
 
 ## 局部变量
+
 121–122
 
 ## 前置
+
 117
 
 ## 设置
+
 117–118
 
 ## 捷径
+
 122
 
 ## 栈对齐
+
 122–123
 
 ### 栈分析
+
 110
 
 ## 拆解
+
 118–119
 
 # 栈指针寄存器
+
 23
 
 # 栈保护
+
 261–262
 
 # 栈破坏
+
 251–258, 261–262
 
 # 基于栈的缓冲区溢出
+
 251
 
 # 基于栈的参数
+
 112
 
 # 栈
+
 100–101
 
 ## 对齐
+
 122–123
 
 ## 清理
+
 110
 
 ## 工作原理
+
 101
 
 ## x86
+
 101–106
 
 ### 标准参数
+
 268
 
 # _start
+
 265–267
 
 ## 查找
+
 127–130
 
 ## 在 `gdb`
+
 69
 
 # stat
+
 49
 
 #### 静态链接
+
 134
 
 # 状态标志
+
 58
 
 ## 关于
+
 58
 
 ## 影响操作
+
 60–63
 
 # 隐蔽、混淆和
+
 205
 
 # `stepi` 命令
+
 71–72
 
 ## 在 `gdb` 中停止代码
+
 69
 
 #### `strace`
+
 140–143
 
 # 逆向工程策略
+
 144–146
 
 # 字符串加密
+
 207–209
 
 # 字符串引用，在 Cheat Engine 中
+
 187
 
 # 字符串
+
 51
 
 ## 关于
+
 51
 
 ## ASCII
+
 53
 
 ## 免疫
+
 170–172
 
 ## 交互式反汇编器（IDA）
+
 192–193
 
 ## 打印
+
 47–48
 
 ## 逆向工程和
+
 143
 
 # 删除
+
 132–134
 
 # 结构体
+
 29
 
 # `sub` 指令
+
 35–36, 61
 
 # Swartz, Aaron
+
 240–241
 
 # `switch` 语句
+
 91–92
 
 # 象征性分析
+
 248–249
 
 # 语法，汇编
+
 14–15
 
 # `sys_exit` 函数
+
 47
 
 ## 系统调用
+
 46
 
 ## 关于
+
 46
 
 ## 打印字符串
+
 47–48
 
 ## `sys_exit`
+
 47
 
 ## `sys_write`
+
 46–47
 
 # 系统标志
+
 58
 
 # 系统输入
+
 145
 
 # `sys_write` 函数
+
 46–47
 
 # T
 
 ### 防篡改
+
 217
 
 ## 关于
+
 217
 
 #### 守卫
+
 219
 
 #### 哈希
+
 218
 
 #### 签名
+
 218
 
 #### 水印
+
 218–219
 
 # `test` 指令
+
 63
 
 # `.text` 段
+
 49
 
 # 定理证明器
+
 248
 
 # 32 位 x86 架构
+
 14, 18, 20, 23
 
 # 永恒调试
+
 245–246
 
 # `times` 前缀
+
 51–52
 
 # 陷阱标志（TF）
+
 60
 
 # U
 
 # 通用性，x86
+
 13
 
 # Unicode 转换格式（UTF）
+
 52
 
 # USENIX Enigma
+
 246
 
 # 用户输入
+
 145
 
 # V
 
 # 变量
+
 194–195
 
 ## 交互式反汇编器（IDA）
+
 194–195
 
 ## 局部
+
 121–122, 145
 
 # 虚拟化
+
 223–225
 
 ## 关于
+
 223–225
 
 ## 破坏
+
 226
 
 ## 工作原理
+
 225
 
 ## 与问题
+
 225–226
 
 ## 层叠
+
 225
 
 ## 保护和
+
 226
 
 # 可视化
+
 247
 
 # W
 
 #### 水印
+
 218–219
 
 # `while` 循环
+
 88–89
 
 # Wiens, Jordan
+
 246
 
 ### WinDbg
+
 168
 
 # Windows 计算器
+
 162–165
 
 # 词
+
 17–18
 
 # `write` 命令
+
 141
 
 # Wyden, Ron
+
 241
 
 # X
 
 # `x` 命令
+
 72–73
 
 # x86
+
 13–14, 29
 
 ## 关于
+
 13–14, 29
 
 ## 地址模式
+
 27–29
 
 ## 汇编语法
+
 14–15
 
 ## 与 C 连接
+
 262–270
 
 ## 数据表示
+
 16–20
 
 ## 逻辑构造在
+
 81–100
 
 ## 内存访问
+
 24–26
 
 ## 里程碑
+
 14
 
 ## 寄存器在
+
 20–24
 
 # x86 汇编指令
+
 31, 32–33, 40–41, 42
 
 ## `add` 指令
+
 35–36
 
 ## 常见错误
+
 41
 
 ## `dec` 指令
+
 35
 
 ## `div` 指令
+
 36
 
 ## 示例
+
 35, 37, 40
 
 ## 格式
+
 31–32
 
 ## `inc` 指令
+
 35
 
 ## `and` 指令
+
 37
 
 ## `lea` 指令
+
 39
 
 ## `mov` 指令
+
 33–34, 41
 
 ## `mul` 指令
+
 36
 
 ## `nop` 指令
+
 39
 
 ## `not` 指令
+
 37–38
 
 ## `or` 指令
+
 37
 
 ## `sal` 指令
+
 38
 
 ## `sar` 指令
+
 38
 
 ## `shl` 指令
+
 38
 
 ## `shr` 指令
+
 38
 
 ## `sub` 指令
+
 35–36
 
 ## `xor` 指令
+
 37
 
 # x86 函数
+
 264–265
 
 ### x86 栈
+
 101–106
 
 ### x86dbg
+
 168
 
 # `xor` 指令
+
 37
 
 # Z
 
 # 零标志（ZF）
+
 59, 80
 
 # 010 编辑器，在其中修补
+
 179–182
 
 # 零扩展
+
 19, 38
 
 # 零填充
+
 19
 
 Copyright © 2024 by John Wiley & Sons Inc. All rights reserved.
 
 Published by John Wiley & Sons, Inc., Hoboken, New Jersey.
 
+
+
 Published simultaneously in Canada and the United Kingdom.
 
-ISBNs: 9781394199884 (Paperback), 9781394199907 (ePDF), 9781394199891 (ePUB)
-
-
+ISBNs: `9781394199884` (Paperback), `9781394199907` (ePDF), `9781394199891` (ePUB)
 
 不得复制、存储在检索系统中或以任何形式或任何方式（电子、机械、影印、录音、扫描或其他方式）传播本出版物，除非获得出版商事先书面许可，或通过向版权许可中心缴纳适当的每份副本费用，或在 1976 年美国版权法第 107 或 108 条允许的范围内，除此以外均不得复制、存储或传播。
 
-**商标：** Wiley 和 Wiley 标志是 John Wiley & Sons, Inc. 及其关联公司在美国及其他国家的商标或注册商标，未经书面许可不得使用。其他所有商标均归其各自所有者所有。John Wiley & Sons, Inc. 与本书中提及的任何产品或供应商均不关联。
+**商标：** `Wiley` 和 `Wiley` 标志是 `John Wiley & Sons, Inc.` 及其关联公司在美国及其他国家的商标或注册商标，未经书面许可不得使用。其他所有商标均归其各自所有者所有。`John Wiley & Sons, Inc.` 与本书中提及的任何产品或供应商均不关联。
 
 **责任限制/免责声明：** 虽然出版商和作者在编写本书时尽力确保内容的准确性和完整性，但他们并不作出任何关于内容准确性或完整性的声明或保证，并明确否认任何隐含的商品适销性或针对特定目的的适用性保证。任何保证均不得由销售代表或书面销售材料创建或扩展。本书所含的建议和策略可能不适合您的情况，如有需要请咨询专业人士。此外，读者应注意，本书中列出的网站在本书撰写时与阅读时可能已发生变更或消失。出版商与作者均不对因本书内容导致的任何利润损失或其他商业损失（包括但不限于特殊、间接、后果性或其他损失）承担责任。
 
-如需了解我们其他产品和服务或技术支持的一般信息，请在美国境内致电 (800) 762-2974，美国境外致电 (317) 572-3993，或传真至 (317) 572-4002。
+如需了解我们其他产品和服务或技术支持的一般信息，请在美国境内致电 `(800) 762-2974`，美国境外致电 `(317) 572-3993`，或传真至 `(317) 572-4002`。
 
 如果您发现本书存在错误，请通过电子邮件将问题告知我们的读者支持团队，邮件地址为 `wileysupport@wiley.com`，邮件主题请写“Possible Book Errata Submission”。
 
-Wiley 还以多种电子格式出版其书籍。部分印刷内容可能在电子格式中不可用。关于 Wiley 产品的更多信息，请访问我们的网站 `www.wiley.com`。
+`Wiley` 还以多种电子格式出版其书籍。部分印刷内容可能在电子格式中不可用。关于 `Wiley` 产品的更多信息，请访问我们的网站 `www.wiley.com`。
 
-Library of Congress 控制号：2023951083
+Library of Congress 控制号：`2023951083`
 
-封面图片：© CSA-Printstock/Getty Images  
+封面图片：© CSA-Printstock/Getty Images
 
-封面设计：Wiley
+封面设计：`Wiley`
 
 # 关于作者
 
-凭借 10 年以上的伦理黑客、逆向工程和高级漏洞分析经验，作为一名防务承包商，`Stephanie Domas` 深谙黑客思维并热衷于此。她将攻击技能转向防守，建立并领导了两家专注于嵌入式系统、医疗设备以及医疗行业防御的网络安全企业。她目前是行业知名顾问和顾问，为从新创业公司到行业巨头的众多技术公司和设备制造商提供广泛技术支持，并担任 Canonical 的首席信息安全官 (CISO)，致力于使 Canonical 成为开源领域最受信赖的计算合作伙伴。她曾在 Intel 担任首席安全技术战略师，负责跨 Intel 安全技术战略的制定与实施，以加速 Intel 在安全领域的实力、竞争力和收入增长。
+凭借 10 年以上的伦理黑客、逆向工程和高级漏洞分析经验，作为一名防务承包商，`Stephanie Domas` 深谙黑客思维并热衷于此。她将攻击技能转向防守，建立并领导了两家专注于嵌入式系统、医疗设备以及医疗行业防御的网络安全企业。她目前是行业知名顾问和顾问，为从新创业公司到行业巨头的众多技术公司和设备制造商提供广泛技术支持，并担任 `Canonical` 的首席信息安全官 (`CISO`)，致力于使 `Canonical` 成为开源领域最受信赖的计算合作伙伴。她曾在 `Intel` 担任首席安全技术战略师，负责跨 `Intel` 安全技术战略的制定与实施，以加速 `Intel` 在安全领域的实力、竞争力和收入增长。
 
-`Christopher Domas` 是一名专注于固件、硬件以及低级处理器利用的安全研究员。他因发布“不切实际的解决不存在的问题”而闻名，包括世界上第一个单指令 C 编译器 (M/o/Vfuscator)、用于生成程序控制流图像的工具链 (REpsych) 以及在 vi 文本编辑器中实现的图灵机。其更具重要意义的工作包括 sandsifter 处理器模糊测试工具、rosenbridge 后门、二进制可视化工具 ..cantor.dust.. 以及记忆坑特权提升漏洞利用。
+`Christopher Domas` 是一名专注于固件、硬件以及低级处理器利用的安全研究员。他因发布“不切实际的解决不存在的问题”而闻名，包括世界上第一个单指令 C 编译器 (`M/o/Vfuscator`)、用于生成程序控制流图像的工具链 (`REpsych`) 以及在 `vi` 文本编辑器中实现的图灵机。其更具重要意义的工作包括 `sandsifter` 处理器模糊测试工具、`rosenbridge` 后门、二进制可视化工具 `..cantor.dust..` 以及记忆坑特权提升漏洞利用。
 
 # 关于技术编写人
 
@@ -9008,9 +8245,8 @@ Library of Congress 控制号：2023951083
 
 # 关于技术编辑
 
-`John Toterhi` 是一名高级安全研究员，专注于嵌入式系统逆向工程、漏洞研究和能力建设。John 于 2010 年以文职恶意软件分析员的身份加入美国空军，负责逆向分析针对美国空中及太空资产的恶意软件威胁。此后，他为多家政府和私营组织参与大规模软件漏洞发现和 CNO 工具开发。John 同时是俄亥俄州立大学的客座讲师，教授逆向工程和恶意软件分析，并联合主持一门私人高级安全训练营，帮助培养下一代网络工程师解决未来的网络挑战。
+`John Toterhi` 是一名高级安全研究员，专注于嵌入式系统逆向工程、漏洞研究和能力建设。`John` 于 2010 年以文职恶意软件分析员的身份加入美国空军，负责逆向分析针对美国空中及太空资产的恶意软件威胁。此后，他为多家政府和私营组织参与大规模软件漏洞发现和 `CNO` 工具开发。`John` 同时是俄亥俄州立大学的客座讲师，教授逆向工程和恶意软件分析，并联合主持一门私人高级安全训练营，帮助培养下一代网络工程师解决未来的网络挑战。
 
-# **WILEY END USER LICENSE AGREEMENT**
+# WILEY END USER LICENSE AGREEMENT
 
-访问 [www.wiley.com/go/eula](http://www.wiley.com/go/eula) 以查看 Wiley 电子书的 EULA。
-
+访问 `www.wiley.com/go/eula` 以查看 `Wiley` 电子书的 EULA。

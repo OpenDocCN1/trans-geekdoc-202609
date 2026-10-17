@@ -1,39 +1,31 @@
+
 # PHP 互补测试工具秘籍
 
+由
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-由  
 Chris Hartjes 撰写
 
-由  
-PHP Architect, LLC. 出版  
-9245 Twin Trails Dr #720503  
+由
+
+PHP Architect, LLC. 出版
+
+9245 Twin Trails Dr #720503
+
 San Diego, CA 92129 美国
 
-编辑  
+编辑
+
 Kara Ferguson
 
-版式设计  
+版式设计
+
 John Congdon
 
-406-PHP-ARCH (406-747-2724)  
-info@phparch.com  
+406-PHP-ARCH (406-747-2724)
+
+info@phparch.com
+
 www.phparch.com
-
-
 
 # Marco Pivetta 的序言
 
@@ -91,9 +83,6 @@ www.phparch.com
 
 - [3] https://cakephp.org
 
-
-
-
 ## 应用背景
 
 出于各种各样的原因，主要与“原型直接转正”这一概念有关，我们没有测试覆盖率。通常来说，对于任何人们频繁使用的网站，这都是一个巨大的问题。但我对于我们要解决的问题而言是一位“领域专家”。这让我可以非常省事地走捷径，并通过视觉验证来确保一切按预期工作。
@@ -137,11 +126,11 @@ www.phparch.com
 
 重点在于开始整合使用那些与以测试为中心的实践互补的工具。你选择工具并不会改变你必须做的事情，但它会影响你对待这些事项的方式。
 
-¹ https://brew.sh/  
-² https://www.jetbrains.com/phpstorm  
-³ https://phpa.me/php-inspections-extended  
-⁴ https://phpstan.org  
-⁵ https://pestphp.com  
+¹ https://brew.sh/
+² https://www.jetbrains.com/phpstorm
+³ https://phpa.me/php-inspections-extended
+⁴ https://phpstan.org
+⁵ https://pestphp.com
 
 ### 初始设置
 
@@ -235,9 +224,9 @@ Infection 的文档可以在 https://infection.github.io 找到。
 
 作为一个简短的总结，并将本章其余部分的焦点集中起来：静态代码分析提供了一种测试代码而无需运行它的方法。静态分析工具可以查看你的 PHP 代码，并根据与你的变量、函数和类相关的类型推断出它应该如何工作。它可以突出显示你是否可能传递了类型含糊的参数，你是否以意外方式调用函数，识别永远不会执行的代码区域，等等。随着 PHP 的成熟并添加了类型提示和严格模式等功能，静态分析工具可以帮你更好地理解应用程序代码并提供更有用的反馈。
 
-⁸ https://phpstan.org  
-⁹ https://psalm.dev  
-¹⁰ https://github.com/phan/phan  
+⁸ https://phpstan.org
+⁹ https://psalm.dev
+¹⁰ https://github.com/phan/phan
 ¹¹ https://exakat.io
 
 ### 我为什么要使用它？
@@ -251,10 +240,6 @@ Infection 的文档可以在 https://infection.github.io 找到。
 “我知道你接受一个数组作为这个参数，但看看在某个地方它被赋予了一个整数数组，而在其他地方它却是混合值的数组。你期望的是哪一个？”
 
 “我注意到你在这个对象上调用了这个方法，而你在几行代码之前生成了这个对象。由于背后有一些延迟加载，我无法确定它应该是哪种类型的对象。你能添加一个注解来帮助我弄清楚吗？”
-
-
-
-
 
 ## 谁应该使用它？
 
@@ -283,7 +268,6 @@ PHPStan 的文档涵盖了这些选项以及更多内容，但我想谈谈我正
 该应用程序的框架（CakePHP[6]）使用一个引导文件，因此我告诉 PHPStan 使用它，这样它就能看到框架相关的配置值以及我可能正在使用的任何自定义值。根据底层框架的不同，我可能根本不需要这个。
 
 [5] https://docs.phpdoc.org/latest/guide/guides/docblocks.html
-
 [6] https://cakephp.org
 
 我还可以告诉它我想让它扫描哪些路径。我绝对不希望对通过 Composer 安装包创建的 `vendor` 目录中的第三方代码进行任何分析。
@@ -303,6 +287,8 @@ Line    src/Shell/ConsoleShell.php
 好吧，只有一个错误。我应该使用返回类型提示，PHPStan 告诉我添加一个。一旦我这样做，PHPStan 报告没有错误。
 
 我不断提高级别，直到得到一组新的错误。在第二个级别，我得到：
+
+
 
 ```
 1.  Note: Using configuration file /Users/chartjes/Sites/ibl/phpstan.neon.
@@ -439,10 +425,6 @@ Line   src/Model/Table/GamesTable.php
 [ERROR] Found 6 errors
 ```
 
-
-
-
-
 ## 2. 静态代码分析工具
 
 此外，你现在可以看到 PHPStan 正在提供建议，说明如何解决这一级别中的一些问题。它似乎突出显示了相同的问题。我会去阅读该 URL 指向的页面。
@@ -462,46 +444,46 @@ Line    src/Model/Table/GamesTable.php
 public function findAllByTeams(int $week, array $teams): Query
 ```
 
-它想知道 $teams 里面是什么。我认为它是整数，所以我可以为该方法创建一个 docblock，确保添加在那里，然后我可以重新运行 PHPStan。
+它想知道 `$teams` 里面是什么。我认为它是整数，所以我可以为该方法创建一个 docblock，确保添加在那里，然后我可以重新运行 PHPStan。
 
 ```php
-1.  /**
-2.  * @param int $week
-3.  * @param array<int> $teams
-4.  * @return Query
-5.  */
-6.  public function findAllByTeams(int $week, array $teams): Query
-7.  {
-8.      return $this->find()
-9.          ->where(['week <=' => $week])
-10.         ->contain('HomeTeams, AwayTeams', function (Query $q) use ($teams) {
-11.             /** @phpstan-ignore-next-line */
-12.             return $q->where('HomeTeams in', $teams)
-13.                     ->orWhere('AwayTeams in', $teams);
-14.         });
-15.  }
+/**
+ * @param int $week
+ * @param array<int> $teams
+ * @return Query
+ */
+public function findAllByTeams(int $week, array $teams): Query
+{
+    return $this->find()
+        ->where(['week <=' => $week])
+        ->contain('HomeTeams, AwayTeams', function (Query $q) use ($teams) {
+            /** @phpstan-ignore-next-line */
+            return $q->where('HomeTeams in', $teams)
+                    ->orWhere('AwayTeams in', $teams);
+        });
+}
 ```
 
-PHPStan 抱怨的下一个问题是，它想知道 findAllByTeams() 方法返回的那个 Query 集合里面有什么。答案是更改返回类型，说明该 Query 集合返回的是 GamesTable 对象。有了这个更改，这是完整的方法。
+PHPStan 抱怨的下一个问题是，它想知道 `findAllByTeams()` 方法返回的那个 `Query` 集合里面有什么。答案是更改返回类型，说明该 `Query` 集合返回的是 `GamesTable` 对象。有了这个更改，这是完整的方法。
 
 ### 我该怎么做？
 
 ```php
-1.   /**
-2.     * @param int $week
-3.     * @param array<int, Team>
-4.     * @return Query<GameTable>
-5.     */
-6.   public function findAllByTeams(int $week, array $teams): Query
-7.   {
-8.       return $this->find()
-9.            ->where(['week <='=> $week])
-10.          ->contain(['HomeTeams, AwayTeams', function (Query $q) use ($teams) {
-11.              /** @phpstan-ignore-next-line */
-12.              return $q->where('HomeTeams in', $teams)
-13.                       ->orWhere('AwayTeams in', $teams);
-14.          });
-15.   }
+/**
+  * @param int $week
+  * @param array<int, Team>
+  * @return Query<GameTable>
+  */
+public function findAllByTeams(int $week, array $teams): Query
+{
+    return $this->find()
+         ->where(['week <='=> $week])
+         ->contain(['HomeTeams, AwayTeams', function (Query $q) use ($teams) {
+             /** @phpstan-ignore-next-line */
+             return $q->where('HomeTeams in', $teams)
+                      ->orWhere('AwayTeams in', $teams);
+         });
+}
 ```
 
 除了让 PHPStan 满意之外，这有什么意义？如本章前面所述，许多 IDE 可以查看这些文档块和代码本身，使代码补全更容易。如果其他代码正在遍历该方法返回的对象集合，它可以验证这些对象上有哪些可用方法。
@@ -519,16 +501,16 @@ Line           src/Model/Table/TeamsTable.php
 这是我刚才修复的问题的类似情况。类似的解决方案：
 
 ```php
-1.   /**
-2.     * @param string $conference
-3.     * @return Query<TeamTable>
-4.     */
-5.   public function findByConference(string $conference): Query
-6.   {
-7.       return $this->find()
-8.            ->contain('Divisions')
-9.            ->where(['Divisions.conference' => $conference]);
-10.   }
+/**
+  * @param string $conference
+  * @return Query<TeamTable>
+  */
+public function findByConference(string $conference): Query
+{
+    return $this->find()
+         ->contain('Divisions')
+         ->where(['Divisions.conference' => $conference]);
+}
 ```
 
 最后一组要修复的问题！
@@ -541,6 +523,8 @@ Line src/Util/Boxscore.php
 ```
 
 只是缺少一些类型提示。查看代码，我知道它应该是什么类型。更新后的代码应该如下所示：
+
+
 
 ```php
 1. <?php
@@ -679,7 +663,7 @@ Note: Using configuration file /Users/chartjes/ibl.dev/webreg/phpstan.neon.
 [OK] Baseline generated with 312 errors
 ```
 
-然后，根据说明，我在我的 phpstan.neon 配置文件中添加对该文件的引用。
+然后，根据说明，我在我的 `phpstan.neon` 配置文件中添加对该文件的引用。
 
 ```yaml
 1. includes:
@@ -707,20 +691,17 @@ Note: Using configuration file /Users/chartjes/ibl.dev/webreg/phpstan.neon.
 
 现在我可以在项目中开始重构或添加代码，而 PHPStan 将只报告它尚未见过的错误。这是一个非常大的遗留项目的实用工具。
 
-
-
-
 ## 第 3 章：变异测试
 
 ### 它是什么？
 
 你是否曾想过，有没有一种方法可以测试你编写的这些测试本身？这本质上就是**变异测试**所做的。
 
-我首选的 PHP 变异测试工具是 Infection[^1]，它这样定义变异测试：
+我首选的 PHP 变异测试工具是 `Infection`[^1]，它这样定义变异测试：
 
 > 变异测试涉及对程序进行微小修改。每个变异版本被称为一个**变异体**（Mutant）。为了评估一组测试的质量，这些变异体会针对输入测试集执行，以查看是否检测到了引入的故障。如果变异后的程序导致测试失败，则称为**被杀死的变异体**（killed mutant）。如果变异后的代码测试仍通过，则存在一个**逃逸的变异体**（escaped mutant）。
 
-在使用 Infection 的情况下，它会与 PHPUnit 协同工作，对代码进行有依据的随机更改，然后执行测试。
+在使用 `Infection` 的情况下，它会与 `PHPUnit` 协同工作，对代码进行有依据的随机更改，然后执行测试。
 
 [^1]: [https://infection.github.io](https://infection.github.io)
 
@@ -729,10 +710,15 @@ Note: Using configuration file /Users/chartjes/ibl.dev/webreg/phpstan.neon.
 我编写单元测试的方法大致如下：
 
 - 我要测试的场景是什么？
+
 - 我的依赖项有哪些？
+
 - 如何创建这些依赖项？
+
 - 如何将它们提供给被测试的代码？
+
 - 我需要做哪些断言？
+
 - 是否有任何代码需要更改才能使这些断言成功？
 
 如果我提出了足够的场景，我会开始理所当然地认为我的测试覆盖率足够，并且测试本身也很完善。
@@ -763,7 +749,7 @@ public function it_sorts_standings_correctly(): void
 
 这看起来是一个直截了当的测试。变异测试能否揭示我们的预期是错误的？
 
-在达到那一点之前，我不得不做一些配置工作。首先，我需要为 Infection 本身创建配置文件。它被命名为 `infection.json`，并存储在项目的根目录中：
+在达到那一点之前，我不得不做一些配置工作。首先，我需要为 `Infection` 本身创建配置文件。它被命名为 `infection.json`，并存储在项目的根目录中：
 
 ```json
 {
@@ -784,7 +770,7 @@ public function it_sorts_standings_correctly(): void
 }
 ```
 
-接下来，我确保我的 PHPUnit 配置文件按照我想要的方式设置。它被命名为 `phpunit.xml`，同样位于项目的根目录中：
+接下来，我确保我的 `PHPUnit` 配置文件按照我想要的方式设置。它被命名为 `phpunit.xml`，同样位于项目的根目录中：
 
 ```xml
 <phpunit bootstrap="tests/bootstrap.php">
@@ -805,7 +791,7 @@ public function it_sorts_standings_correctly(): void
 
 我正在使用的框架为我提供了 `bootstrap.php` 文件。有关更多详细信息，请查阅你的框架文档，或者如果你使用的是自定义解决方案，你需要弄清楚该文件中应该包含什么内容。
 
-有了这两个配置文件，我使用 Infection 的 `--filter=path/to/code/to/test` 命令行选项来告诉它我们要查看什么代码。那么运行的结果是什么？
+有了这两个配置文件，我使用 `Infection` 的 `--filter=path/to/code/to/test` 命令行选项来告诉它我们要查看什么代码。那么运行的结果是什么？
 
 ```
 $ php infection.phar --filter=src/Controller/Component/StandingsComponent.php
@@ -858,7 +844,9 @@ Time: 4m 33s. Memory: 0.03GB
 你希望这个值尽可能高。它代表了被你的测试捕获的变异百分比。要理解这意味着什么，过程如下：
 
 - 更改你正在分析的代码中的某些内容
+
 - 运行“覆盖”该代码的测试
+
 - 如果测试仍然通过，你就有一个未被捕获的变异体
 
 13% 是一个非常低的数字，表明我们现有的测试没有发现大多数变异，这意味着我们的测试愉快地通过了，尽管存在本应被发现的更改。这并不好！
@@ -869,9 +857,11 @@ Time: 4m 33s. Memory: 0.03GB
 
 ### 覆盖代码变异得分指标
 
-这是真正需要关注的值——它显示了实际被测试覆盖的代码的 MSI 是多少。现在，因为我过滤了内容并告诉 Infection 只查看一个文件，这应该与 MSI 完全映射。再次说明，这个数字真的很低。
+这是真正需要关注的值——它显示了实际被测试覆盖的代码的 MSI 是多少。现在，因为我过滤了内容并告诉 `Infection` 只查看一个文件，这应该与 MSI 完全映射。再次说明，这个数字真的很低。
 
 ### 变异体日志记录
+
+
 
 在我的配置文件中，我要求 Infection 将其正在执行的操作写入名为 `infection.log` 的文件，该文件写入我们应用程序的根目录。由于我实际上只有一个针对排序方法的测试，让我搜索针对该代码进行的任何变异：
 
@@ -910,15 +900,11 @@ foreach ($standings as $info) {
 
 如果你不熟悉这里的记号，它遵循的是你使用版本控制系统或可以显示两个文件之间差异的工具（通常称为“diff”工具）时会看到的内容。
 
-第一个变异体更改了一个获取我们想要排序的列详情的 foreach 循环。
+第一个变异体更改了一个获取我们想要排序的列详情的 `foreach` 循环。
 
 第二个变异体完全移除了对数组的排序。
 
 那些测试带着这些更改是如何通过的！我可以自己应用其中一个并查看测试是否通过。
-
-
-
-
 
 ## 我该如何使用它？
 
@@ -953,12 +939,14 @@ public function it_sorts_standings_correctly(): void
 接下来，我再次运行相同的测试用例，它通过了，这意味着我确实拥有不同的数据。我再次运行 Infection，情况有所改善……略微。
 
 > 变异得分指标 (MSI)：14%
+
 > 变异代码覆盖率：98%
+
 > 已覆盖代码 MSI：14%
 
 现在是时候去查看输出日志，寻找线索，看看是哪些变异体（mutants）成功躲过了我现有的那一个测试。
 
-## 3. 变异测试
+### 3. 变异测试
 
 ```diff
 67) /workspace/src/Controller/Component/StandingsComponent.php:202 [M] DecrementInteger
@@ -994,11 +982,11 @@ public function it_sorts_standings_correctly(): void
 
 只有这两个变异体涉及我们最新测试所处理的排序方法。和之前一样，我直接修改源代码，以查看测试是否如预期般失败。测试仍然通过。接下来需要问的问题是：“这真的重要吗？”有些变异体实际上是假阳性。
 
-对于变异体 67，关于它为什么是假阳性的答案可以在变异体 68 中找到。如果比较 $zVal 和 $leaderDiff 的条件得到满足，我会覆盖写入 $leaderDiff 的值，因此让该值从 -1 开始可能是不正确的，但这不会导致测试失败。
+对于变异体 67，关于它为什么是假阳性的答案可以在变异体 68 中找到。如果比较 `$zVal` 和 `$leaderDiff` 的条件得到满足，我会覆盖写入 `$leaderDiff` 的值，因此让该值从 -1 开始可能是不正确的，但这不会导致测试失败。
 
 变异体 68 更有趣。在什么情况下，该条件语句的改变会有影响？根据我计算球队“落后场次”（games behind）的方式，我认为这完全无关紧要。这个可以被视为假阳性。
 
-### 我何时应该使用变异测试？
+#### 我何时应该使用变异测试？
 
 正如我在上一节中展示的那样，使用变异测试的最佳时机是在开发阶段。通过检查任何“逃逸变异体”（escape mutants）来看是否可以采取某些措施，它可以作为一个工具引导你创建更好的测试。
 
@@ -1050,9 +1038,9 @@ Linter 和 Formatter 通常是开发人员可以在本地运行的 CLI 工具。
 
 - 强制使用短数组语法
 - 强制使用 PSR-12[^6]
-- 仅应用于我的 src 和 tests 目录
+- 仅应用于我的 `src` 和 `tests` 目录
 
-以下是 ecs.php 配置文件的样子：
+以下是 `ecs.php` 配置文件的样子：
 
 ```php
 <?php
@@ -1081,14 +1069,14 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 ```
 
 [^3]: https://github.com/squizlabs/PHP_CodeSniffer
+
 [^4]: https://github.com/FriendsOfPhp/PHP-CS-Fixer
+
 [^5]: https://github.com/psf/black
+
 [^6]: https://www.php-fig.org/psr/psr-12
 
-
-
-
-## 4. 代码的 LINTING 与格式化
+## 代码的 LINTING 与格式化
 
 是时候让它运行起来，看看它发现了什么问题！
 
@@ -1194,6 +1182,20 @@ $services->set(DeclareStrictTypesFixer::class);
 $services->set(OrderedImportsFixer::class);
 ```
 
+
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
+
 ```
 1. src/Model\Table\GamesTable.php
 2.  ----------- begin diff -----------
@@ -1232,21 +1234,31 @@ $services->set(PhpUnitTestAnnotationFixer::class)
 1. 3) tests/TestCase/Model/Table/GamesTableTest.php
 2.
 3. ```diff begin diff```
+
 4. --- Original
+
 5. +++ New
+
 6. @@ -15,7 +15,10 @@
+
 7. ```
 8. ```class GamesTableTest extends TestCase
+
 9. ```{
 10. - ```public function testGetWeeklyResult(): void
+
 11. + ```/**
 12. + ```* @test
+
 13. + ```*/
 14. + ```public function getWeeklyResult(): void
+
 15. + ```{
 16. ```/** @var GamesTable $table */
+
 17. ```$table = (new TableLocator())->get('Games');
 18. ```
+
 19. ```diff end diff```
 20.
 21. Applied checkers:
@@ -1318,10 +1330,6 @@ $services->set(PhpUnitTestAnnotationFixer::class)
 
 我强烈倡导对 Web 应用关键功能进行自动化测试的原因之一是，集成并部署的过程可能会非常有压力，尤其是在部署过程部分为手动操作的环境中。
 
-
-
-
-
 #### 自动化集成与测试
 
 那些每次向生产环境部署都令人倍感压力的场景都有一个共同点：缺乏测试来作为抵御集成问题的第一道防线。是的，我知道围绕遗留应用程序编写测试通常很困难。对我来说，这是值得的，因为它能增加对任何特定部署按预期运行的信心。
@@ -1379,6 +1387,7 @@ vendor/bin/phpunit tests/
 它们的文档非常好；我建议你阅读它以了解正在发生的事情。这是我项目的 GitHub Actions 配置文件。别担心，我会解释其中发生的事情：
 
 [^2]: https://www.jenkins.io
+
 [^3]: https://github.com/features/actions
 
 ```yaml
@@ -1453,9 +1462,11 @@ vendor/bin/phpunit tests/
 我希望你可以将我提供的示例 GitHub Action 文件作为你自己构建系统的模板。基本上，几乎任何你为了到达可以运行测试的状态而需要做的事情，都可以在这里重复执行。
 
 [^4]: https://ubuntu.com
+
 [^5]: https://git-lfs.github.com
 
 ## 6
+
 # 接下来做什么？
 
 就像几乎所有与你 PHP 代码的自动化测试编写相关的事情一样，这是一段不会停止的旅程。我总是在学习新事物！我所有工作的目标目标是：
@@ -1468,9 +1479,6 @@ vendor/bin/phpunit tests/
 
 在这一部分，我想简要谈谈我最近注意到的一些与测试互补的工具方面的事情。它们不需要整整一章的篇幅，但我认为花一点时间深入了解一下是值得的。
 
-
-
-
 ### 6. 接下来是什么？
 
 #### 编辑器/IDE 集成
@@ -1482,6 +1490,8 @@ vendor/bin/phpunit tests/
 减少工具使用中的摩擦至关重要。我总是观察其他开发者是如何完成类似任务的。视频结对会话——其中我观看他人如何充分利用他们的工具——是重新审视和评估我所做之事的绝佳方式。
 
 #### 容器化开发环境
+
+
 
 在我评估 [Visual Studio Code](https://code.visualstudio.com)[^1] 时，我受到长期在线好友 Alvaro Videla[^2] 的鼓励，去查看 [Remote Containers](https://code.visualstudio.com/docs/remote/create-dev-container)[^3] 扩展，该扩展提供了许多其他编辑器所缺失的粘合剂，允许你使用 [Docker](https://docker.com)[^4] 创建和使用容器化开发环境。从阅读文档的第一部分到拥有一个与 Visual Studio 协同工作的可用开发环境，我花了不到 30 分钟。
 
@@ -1505,4 +1515,3 @@ vendor/bin/phpunit tests/
 《互补的 PHP 测试工具烹饪书》是我试图为那些已经拥有编写测试经验但希望提升水平的 PHP 程序员提供额外工具的一种方式。我相信，通过学习测试相关的技能（无论是技术还是核心技能），你将能够使用几乎任何测试框架和几乎任何 PHP 应用程序来编写测试。
 
 在整个书中，我将向你展示我如何为我最古老的、仍在使用基于 PHP 的 web 应用程序添加有针对性的测试覆盖。它自 2004 年以来一直在运行，而我每隔几年更新一次基础框架，CakePHP。
-

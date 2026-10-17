@@ -1,10 +1,7 @@
+
 # 计算机科学和数学中的模糊逻辑概念
 
-
-
-
-
-### 关于编辑
+## 关于编辑
 
 ![](img/e9de70cd491e84262133af63cb33d500_5_0.png)
 
@@ -34,9 +31,6 @@
 
 贡詹·穆克吉博士目前在印度加尔各答 Brainware 大学计算科学系担任副教授。他的研究兴趣包括计算机视觉、机器学习、软计算、图像处理等。他是多个组织的终身会员，并在不同的期刊和国际会议上发表了多篇论文。穆克吉博士还指导了许多 BTech 和 MCA 学生完成他们的课题和研究工作。他还独立编写了学校计算机教科书系列（3 至 10 年级）以及针对工程学生的 IT 系统理论教科书
 
-
-
-
 他目前正在撰写一本关于Python技术的著作（即将出版）。他目前受雇于一家知名出版社，负责出版面向副学士和工程水平学生的问答式书籍。他还担任过多本技术书籍的审稿人。他曾担任 Sree Aurobindo 教育学院的助教；印度科学研究所（CSI）加尔各答分会的教育官员；NIT 有限公司的资深教员；以及加尔各答理工学院（Calcutta Institute of Technology）的讲师。他还曾担任 Aliah University、Techno India 学院和 JIS 学院的客座教员。他毕业于加尔各答大学物理系，获得理学学士学位；在英迪拉·甘迪国立开放大学（IGNOU）获得计算机应用硕士学位；在加尔各答大学获得工学硕士学位；并在印度贾达夫普尔大学获得工程学博士学位。
 
 ![](img/e9de70cd491e84262133af63cb33d500_7_0.png)
@@ -56,183 +50,176 @@ Rashmi Singh 博士是印度诺伊达阿玛蒂大学北方邦分校应用科学�
 ## 贡献者
 
 **Mahapara Abbass**
+
 Maharishi Markandeshwar 工程学院，Maharishi Markandeshwar 大学（被视为大学），Mullana, 哈里亚纳邦, 印度
 
 **Sudipta Adhikary**
+
 Brainware 大学法律系
 
 **Shalom Akhai**
+
 Chandigarh 工程学院，Jhanjeri, 印度
 
 **Jahanvi**
+
 阿玛蒂应用科学学院，阿玛蒂大学，诺伊达，北方邦，印度
 
 **H. D. Arora**
+
 数学系，阿玛蒂应用科学学院，阿玛蒂大学，诺伊达，北方邦，印度
 
 **Geeta Arora**
+
 数学系，Lovely Professional 大学，法格瓦拉，旁遮普邦，印度
 
 **Kaushik Banerjee**
+
 Brainware 大学法律系
 
 **S. Lingeswari**
+
 P.K.R. 女子艺术学院，Erode，泰米尔纳德邦，印度
 
 **Saswati Barman**
+
 工程与管理学院，加尔各答，西孟加拉邦，印度
 
 **Mansi Bhatia**
+
 数学系，阿玛蒂应用科学学院，阿玛蒂大学，诺伊达，北方邦，印度
 
 **Anagha Bhattacharaya**
+
 电气工程（AIML）系，NIT 米佐拉姆，Aizawl，米佐拉姆
 
 **Tanima Bhowmik**
+
 计算机科学与工程（AIML）系，工程与管理学院，加尔各答，印度
 
 **Kaushik Chanda**
+
 计算科学系，Brainware 大学，加尔各答，西孟加拉邦，印度
 
 **Udit Chawla**
+
 副教授，工商管理系，工程与管理学院，工程与管理大学，加尔各答，西孟加拉邦，印度
 
 **Gourab Dutta**
+
 计算科学系，Brainware 大学，加尔各答，西孟加拉邦，印度
 
 **Ayad Ahmed Nour El Islam**
+
 Kasdi Merbah 大学，奥阿尔拉，阿尔及利亚
 
 **Rahul Kumar Ghosh**
+
 计算科学系，Brainware 大学，加尔各答，西孟加拉邦，印度
-
-
-
 
 ## 作者所属机构
 
--   **Arpan Ghoshal**  
-    印度西孟加拉邦豪拉，Seacom工程学院基础科学与人文学系
-
--   **Subrata Jana**  
-    印度西孟加拉邦加尔各答，贾达普尔大学数学系
-
--   **Ramandeep Kaur**  
-    印度西孟加拉邦加尔各答，工程与管理大学
-
--   **Vijay Kumar**  
-    印度哈里亚纳邦法里达巴德，Manav Rachna国际研究与教育学院数学系
-
--   **Rajender Kumar**  
-    印度哈里亚纳邦法里达巴德，Manav Rachna国际研究与教育学院
-
--   **Deepak Kumar**  
-    印度哈里亚纳邦法里达巴德，Manav Rachna国际研究与教育学院
-
--   **Binay Maji**  
-    印度西孟加拉邦豪拉，Surendral Das教师进修学院教育学系
-
--   **Biswapdip Basu Mallik**  
-    印度西孟加拉邦加尔各答，工程与管理研究所（原工程与管理大学校）基础科学与人文学系数学教授
-
--   **Subrat Kumar Mohanty**  
-    印度奥里萨邦布巴内什瓦尔，爱因斯坦技术与管理学院电子与通信工程系
-
--   **Anita Mohanty**  
-    印度奥里萨邦布巴内什瓦尔，硅谷理工学院电子与仪表工程系
-
--   **Ambarish G. Mohapatra**  
-    印度奥里萨邦布巴内什瓦尔，硅谷理工学院电子与仪表工程系
-
--   **Gunjan Mukherjee**  
-    印度西孟加拉邦加尔各答，Brainware大学计算科学系
-
--   **Devika Mulchhandani**  
-    印度西孟加拉邦加尔各答，加尔各答安格鲁古吉拉特学院
-
--   **K. K. Mythili**  
-    印度泰米尔纳德邦埃罗德，Vellarar女子学院数学系（中央大学）
-
--   **Anjali Naithani**  
-    印度北方邦诺伊达，Amity大学Amity应用科学学院数学系
-
--   **C. Nandhini**  
-    印度泰米尔纳德邦埃罗德，Vellarar女子学院数学系
-
--   **Fezazi Omar**  
-    阿尔及利亚西迪贝阿卜巴斯，Jillali Liabes大学实验室（智能控制与电力系统）
-
--   **Sayantani Paul**  
-    印度西孟加拉邦豪拉，Seacom工程学院基础科学与人文学系
-
--   **Anirban Sarkar**  
-    印度泰米尔纳德邦埃罗德，P.K.R.女子艺术学院
-
--   **Madhurima Sen**  
-    印度西孟加拉邦巴拉萨特，西孟加拉邦州立大学管理与营销系
-
--   **Rashmi Singh**  
-    印度北方邦诺伊达，Amity大学Amity应用科学学院
-
--   **Amandeep Singh Wadhwa**  
-    印度昌迪加尔，旁遮普大学UIET
+- **Arpan Ghoshal**  
+  印度西孟加拉邦豪拉，Seacom工程学院基础科学与人文学系
+- **Subrata Jana**  
+  印度西孟加拉邦加尔各答，贾达普尔大学数学系
+- **Ramandeep Kaur**  
+  印度西孟加拉邦加尔各答，工程与管理大学
+- **Vijay Kumar**  
+  印度哈里亚纳邦法里达巴德，Manav Rachna国际研究与教育学院数学系
+- **Rajender Kumar**  
+  印度哈里亚纳邦法里达巴德，Manav Rachna国际研究与教育学院
+- **Deepak Kumar**  
+  印度哈里亚纳邦法里达巴德，Manav Rachna国际研究与教育学院
+- **Binay Maji**  
+  印度西孟加拉邦豪拉，Surendral Das教师进修学院教育学系
+- **Biswapdip Basu Mallik**  
+  印度西孟加拉邦加尔各答，工程与管理研究所（原工程与管理大学校）基础科学与人文学系数学教授
+- **Subrat Kumar Mohanty**  
+  印度奥里萨邦布巴内什瓦尔，爱因斯坦技术与管理学院电子与通信工程系
+- **Anita Mohanty**  
+  印度奥里萨邦布巴内什瓦尔，硅谷理工学院电子与仪表工程系
+- **Ambarish G. Mohapatra**  
+  印度奥里萨邦布巴内什瓦尔，硅谷理工学院电子与仪表工程系
+- **Gunjan Mukherjee**  
+  印度西孟加拉邦加尔各答，Brainware大学计算科学系
+- **Devika Mulchhandani**  
+  印度西孟加拉邦加尔各答，加尔各答安格鲁古吉拉特学院
+- **K. K. Mythili**  
+  印度泰米尔纳德邦埃罗德，Vellarar女子学院数学系（中央大学）
+- **Anjali Naithani**  
+  印度北方邦诺伊达，Amity大学Amity应用科学学院数学系
+- **C. Nandhini**  
+  印度泰米尔纳德邦埃罗德，Vellarar女子学院数学系
+- **Fezazi Omar**  
+  阿尔及利亚西迪贝阿卜巴斯，Jillali Liabes大学实验室（智能控制与电力系统）
+- **Sayantani Paul**  
+  印度西孟加拉邦豪拉，Seacom工程学院基础科学与人文学系
+- **Anirban Sarkar**  
+  印度泰米尔纳德邦埃罗德，P.K.R.女子艺术学院
+- **Madhurima Sen**  
+  印度西孟加拉邦巴拉萨特，西孟加拉邦州立大学管理与营销系
+- **Rashmi Singh**  
+  印度北方邦诺伊达，Amity大学Amity应用科学学院
+- **Amandeep Singh Wadhwa**  
+  印度昌迪加尔，旁遮普大学UIET
 
 ![](img/e9de70cd491e84262133af63cb33d500_14_0.png)
 
 ## 缩略语
 
--   ACC: 自适应巡航控制系统
--   ADAS: 高级驾驶辅助系统
--   AHP: 层次分析法
--   AI: 人工智能
--   BPCL: 印度石油公司
--   BSD: 盲区检测
--   BSI: 盲区干预
--   CVT: 无级变速箱
--   DCT: 离散余弦变换
--   DIFWA: 动态直觉模糊加权平均
--   DSS: 决策支持系统
--   FCM: 模糊C均值
--   FIS: 模糊推理系统
--   FLC: 模糊逻辑控制器
--   FS: 模糊集
--   fsQCA: 模糊集合定性比较分析
--   GTMA: 图论与矩阵方法
--   HAZOP: 危险与可操作性分析
--   HPCL: 印度斯坦石油有限公司
--   HR: 人力资源
--   HVAC: 暖通空调
--   ICU: 重症监护病房
--   IFL: 直觉模糊逻辑
--   IFBLP: 直觉模糊局部二值模式
--   IFN: 直觉模糊数
--   IFS: 直觉模糊集
--   IFT: 直觉模糊横截
--   IFCTC: 直觉模糊横截核心
--   IFTHGs: 直觉模糊阈值超图
--   IIoT: 工业物联网
--   IOC: 印度石油公司
--   IoT: 物联网
--   IT: 室内温度
--   ITrFN: 直觉梯形模糊数
--   KFCM: 核模糊C均值
--   LDC: 车道偏离纠正
--   LDW: 车道偏离预警
--   LMI: 线性矩阵不等式
--   MCDM: 多标准决策制定
--   ML: 机器学习
--   MQTT: 消息队列遥测传输
--   MRI: 磁共振成像
--   NSE: 国家证券交易所
--   O.S.: 过冲
--   ONGC: 石油和天然气公司
--   OPC UA: 开放平台通信统一架构
--   OT: 室外温度
--   PID: 比例、积分和微分
--   SCR: 选择性催化还原
--   SVM: 支持向量机
--   TFN: 三角形模糊数
--   XAI: 可解释性人工智能
+- ACC: 自适应巡航控制系统
+- ADAS: 高级驾驶辅助系统
+- AHP: 层次分析法
+- AI: 人工智能
+- BPCL: 印度石油公司
+- BSD: 盲区检测
+- BSI: 盲区干预
+- CVT: 无级变速箱
+- DCT: 离散余弦变换
+- DIFWA: 动态直觉模糊加权平均
+- DSS: 决策支持系统
+- FCM: 模糊C均值
+- FIS: 模糊推理系统
+- FLC: 模糊逻辑控制器
+- FS: 模糊集
+- fsQCA: 模糊集合定性比较分析
+- GTMA: 图论与矩阵方法
+- HAZOP: 危险与可操作性分析
+- HPCL: 印度斯坦石油有限公司
+- HR: 人力资源
+- HVAC: 暖通空调
+- ICU: 重症监护病房
+- IFL: 直觉模糊逻辑
+- IFBLP: 直觉模糊局部二值模式
+- IFN: 直觉模糊数
+- IFS: 直觉模糊集
+- IFT: 直觉模糊横截
+- IFCTC: 直觉模糊横截核心
+- IFTHGs: 直觉模糊阈值超图
+- IIoT: 工业物联网
+- IOC: 印度石油公司
+- IoT: 物联网
+- IT: 室内温度
+- ITrFN: 直觉梯形模糊数
+- KFCM: 核模糊C均值
+- LDC: 车道偏离纠正
+- LDW: 车道偏离预警
+- LMI: 线性矩阵不等式
+- MCDM: 多标准决策制定
+- ML: 机器学习
+- MQTT: 消息队列遥测传输
+- MRI: 磁共振成像
+- NSE: 国家证券交易所
+- O.S.: 过冲
+- ONGC: 石油和天然气公司
+- OPC UA: 开放平台通信统一架构
+- OT: 室外温度
+- PID: 比例、积分和微分
+- SCR: 选择性催化还原
+- SVM: 支持向量机
+- TFN: 三角形模糊数
+- XAI: 可解释性人工智能
 
 ## 前言
 
@@ -258,9 +245,6 @@ Kasdi Merbah 大学，奥阿尔拉，阿尔及利亚
 
 **—编辑**
 
-
-
-
 ## 第 1 章
 
 ### 通过模糊逻辑控制提升电机性能
@@ -275,7 +259,9 @@ FEZAZI OMAR¹, AYAD AHMED NOUR EL ISLAM², and BISWADIP BASU MALLIK³
 
 ## 摘要
 
-本章探讨了模糊逻辑在提升电机性能和控制中的应用，特别是针对直流电机和单相异步电机。传统的精确逻辑方法因其二元特性而受到限制，难以应对现实工业应用中固有的不确定性。相比之下，模糊逻辑能够容纳真值的程度，为电机控制提供了一种细致且灵活的方法。本章详细阐述了使用 MATLAB SimPowerSystems 设计和实现模糊逻辑控制器的过程，突出了其在管理复杂电机行为并确保精确速度调节方面的能力。案例研究证明，与常规方法相比，模糊逻辑具有优越的适应性和抗干扰能力。四象限斩波器等组件以及先进控制技术的集成强调了该方法在应对动态工业需求方面的鲁棒性。研究结果强调了模糊逻辑在提高各种应用中电机驱动系统效率、稳定性和可靠性方面的潜力。
+
+
+本章探讨了模糊逻辑在提升电机性能和控制中的应用，特别是针对直流电机和单相异步电机。传统的精确逻辑方法因其二元特性而受到限制，难以应对现实工业应用中固有的不确定性。相比之下，模糊逻辑能够容纳真值的程度，为电机控制提供了一种细致且灵活的方法。本章详细阐述了使用 `MATLAB SimPowerSystems` 设计和实现模糊逻辑控制器的过程，突出了其在管理复杂电机行为并确保精确速度调节方面的能力。案例研究证明，与常规方法相比，模糊逻辑具有优越的适应性和抗干扰能力。四象限斩波器等组件以及先进控制技术的集成强调了该方法在应对动态工业需求方面的鲁棒性。研究结果强调了模糊逻辑在提高各种应用中电机驱动系统效率、稳定性和可靠性方面的潜力。
 
 ## 1.1 引言
 
@@ -285,7 +271,7 @@ FEZAZI OMAR¹, AYAD AHMED NOUR EL ISLAM², and BISWADIP BASU MALLIK³
 
 模糊逻辑承认并非所有问题都有简单的“是”或“否”的答案，而是接纳部分真理和部分谬误的复杂性。它运行在一个灰色的世界中，变量可以取 0 到 1 之间的值，代表隶属度或真值的程度。这种范式转变开启了计算和数学的新时代——在这个时代，不确定性不仅被容忍，而且被拥抱为我们与世界互动的固有属性。
 
-本章探讨了将模糊逻辑应用于调节电机速度，包括直流电机（DCMs）和单相异步电机。工业应用的复杂性需要一种合适的方法，而模糊逻辑提供了这样的方法。本研究侧重于针对这些特定电机设计复杂模糊逻辑控制器的实施步骤。介绍了详细的案例研究，考察模糊逻辑在速度调节中的应用。被动观察者通过了解这些应用，获得了对通过集成模糊逻辑在 MATLAB SimPowerSystems 框架内实现精确控制的见解。强调了 MATLAB SimPowerSystems 作为强大模拟平台的作用，展示了其测试和探索模糊逻辑控制器有效性的能力。
+本章探讨了将模糊逻辑应用于调节电机速度，包括直流电机（`DCMs`）和单相异步电机。工业应用的复杂性需要一种合适的方法，而模糊逻辑提供了这样的方法。本研究侧重于针对这些特定电机设计复杂模糊逻辑控制器的实施步骤。介绍了详细的案例研究，考察模糊逻辑在速度调节中的应用。被动观察者通过了解这些应用，获得了对通过集成模糊逻辑在 `MATLAB SimPowerSystems` 框架内实现精确控制的见解。强调了 `MATLAB SimPowerSystems` 作为强大模拟平台的作用，展示了其测试和探索模糊逻辑控制器有效性的能力。
 
 ## 1.2 模糊逻辑与精确逻辑示例：电机速度控制
 
@@ -311,28 +297,25 @@ FEZAZI OMAR¹, AYAD AHMED NOUR EL ISLAM², and BISWADIP BASU MALLIK³
 
 ### 1.3.1 直流电机
 
-在广阔的工业领域中，直流电机（DCMs）扮演着关键角色，以卓越的精确度和效率渗透在各种应用中 [7]。复杂的制造任务证明了它们无声但显著的操作，它们精通制造过程的同步流动。在纺织行业，直流电机创造出复杂的图案，确保每个图案都精确地出现在织物上 [5, 8]。这些电机进入了医疗技术的核心，为手术工具赋予精密操作所需的灵巧性，并为其可靠性赋予挽救生命的医疗设备 [9–11]。
+在广阔的工业领域中，直流电机（`DCMs`）扮演着关键角色，以卓越的精确度和效率渗透在各种应用中 [7]。复杂的制造任务证明了它们无声但显著的操作，它们精通制造过程的同步流动。在纺织行业，直流电机创造出复杂的图案，确保每个图案都精确地出现在织物上 [5, 8]。这些电机进入了医疗技术的核心，为手术工具赋予精密操作所需的灵巧性，并为其可靠性赋予挽救生命的医疗设备 [9–11]。
 
 除了这些应用外，直流电机还是自动化的驱动力，协调仓库中的快速分拣和包装线上的精细编排。其适应性在各个行业中闪耀，展示了它们将机械能转化为有目的运动的能力，从机械臂的精确动作到传送带的节律运动。每一次旋转都象征着技术与工业的无缝融合，证明了直流电机为工业运营基础提供的精确性和可靠性 [12–15]。
 
 ### 1.3.2 在控制系统中使用 SimPowerSystems
 
-利用 SimPowerSystems 设计并模拟电动机的控制系统具有多种优势，使模拟非常接近现实场景，远超简单理论模型所能达到的范围。这个强大的工具使工程师和研究人员能够创建电力系统的复杂虚拟模型，例如直流电机、异步电机及其相应的控制系统。这些模型作为动态副本运行，模拟系统在不同负载和速度下的一系列场景中的行为 [16–18]。
+利用 `SimPowerSystems` 设计并模拟电动机的控制系统具有多种优势，使模拟非常接近现实场景，远超简单理论模型所能达到的范围。这个强大的工具使工程师和研究人员能够创建电力系统的复杂虚拟模型，例如直流电机、异步电机及其相应的控制系统。这些模型作为动态副本运行，模拟系统在不同负载和速度下的一系列场景中的行为 [16–18]。
 
+`SimPowerSystems` 的独特之处在于它采用了先进的数学模型，捕捉了系统内部电、磁和机械相互作用的复杂细节。这些仿真考虑了现实世界中的元素，如定子和转子电路中的电压降、转子电阻以及磁饱和。因此，`SimPowerSystems` 提供了系统行为的高精度可视化表示，其准确性甚至超过了更基础的理论模型。
 
-
-
-SimPowerSystems 的独特之处在于它采用了先进的数学模型，捕捉了系统内部电、磁和机械相互作用的复杂细节。这些仿真考虑了现实世界中的元素，如定子和转子电路中的电压降、转子电阻以及磁饱和。因此，SimPowerSystems 提供了系统行为的高精度可视化表示，其准确性甚至超过了更基础的理论模型。
-
-此外，SimPowerSystems 支持硬件在环仿真和控制器在环，允许工程师使用电机驱动和控制器等物理组件来彻底测试其控制系统。通过在控制系统应用于实际场景之前识别可能的问题或限制，这种方法论进一步提高了仿真的准确性。
+此外，`SimPowerSystems` 支持硬件在环仿真和控制器在环，允许工程师使用电机驱动和控制器等物理组件来彻底测试其控制系统。通过在控制系统应用于实际场景之前识别可能的问题或限制，这种方法论进一步提高了仿真的准确性。
 
 ### 1.3.3 MATLAB SimScape (SimPowerSystems) 中的 DCM
 
-使用 SimPowerSystems 在 SI 单位下建模 DCM 的过程涉及创建一个新的 Simulink 模型。工程师通过定制符合其特定要求的 Simulink 模型来启动这一过程。在此模型中，关键步骤是从 SimPowerSystems 库中选择适当的 DCM 模块。这个关键模块作为模型的基础，使工程师能够定义关键参数，例如电枢电阻 ($R_a$) 和电感 ($L_a$)，单位分别为欧姆和亨利 [16–18]。
+使用 `SimPowerSystems` 在 SI 单位下建模 `DCM` 的过程涉及创建一个新的 `Simulink` 模型。工程师通过定制符合其特定要求的 `Simulink` 模型来启动这一过程。在此模型中，关键步骤是从 `SimPowerSystems` 库中选择适当的 `DCM` 模块。这个关键模块作为模型的基础，使工程师能够定义关键参数，例如电枢电阻 (`$R_a$`) 和电感 (`$L_a$`)，单位分别为欧姆和亨利 [16–18]。
 
 选择在 SI 单位下工作是刻意的，旨在与国际标准保持一致，并确保建模过程的连贯性和准确性。以 SI 单位精确定义的直流电机在图 1.3 中以可视化形式呈现，为工程师提供了清晰的图形参考点。
 
-在图 1.3 中，MATLAB Simscape 提供了用于建模 DCM 的多功能平台。工程师拥有多种电机选择，例如“choice 1”，其特点为 5 HP、240 V 电枢电压、额定转速 1750 RPM 以及 300 V 励磁电压。值得注意的是，参数会根据所选电机自动调整，从而简化了配置过程。工程师从这种自动化精确性中受益，同时保留了手动调整的灵活性，从而实现对建模过程的完全控制。这种动态界面体现了 MATLAB 的用户友好方法，使工程师能够无缝地从理论过渡到实际应用，提高建模效率，并适应多种电机配置。
+在图 1.3 中，`MATLAB Simscape` 提供了用于建模 `DCM` 的多功能平台。工程师拥有多种电机选择，例如“choice 1”，其特点为 5 HP、240 V 电枢电压、额定转速 1750 RPM 以及 300 V 励磁电压。值得注意的是，参数会根据所选电机自动调整，从而简化了配置过程。工程师从这种自动化精确性中受益，同时保留了手动调整的灵活性，从而实现对建模过程的完全控制。这种动态界面体现了 `MATLAB` 的用户友好方法，使工程师能够无缝地从理论过渡到实际应用，提高建模效率，并适应多种电机配置。
 
 ![](img/e9de70cd491e84262133af63cb33d500_25_0.png)
 
@@ -340,9 +323,9 @@ SimPowerSystems 的独特之处在于它采用了先进的数学模型，捕捉�
 
 ### 1.3.3 四象限斩波器驱动 DCM
 
-在电力电子学的复杂领域中，四象限斩波器作为一个关键枢纽，提供了对 DCM 无与伦比的双向控制 [19]。在电压-电流平面的所有象限中无缝运行，这一电子奇迹促进了需要快速转换的应用中的动态反转和精细的速度调节。在本探讨中，我们将剖析四象限斩波器的理论基础和实际应用，揭示其在现代电力系统中的关键作用。特别值得一提的是，它被用作 DCM 的驱动力，这种战略选择旨在确保正向和反向的精确速度控制。这种有意的选择不仅凸显了斩波器的多功能性，还体现了其在确保高效且受控的电机性能方面的重要性，使其成为各种工业和商业环境中的基石 [15, 19–22]。
+在电力电子学的复杂领域中，四象限斩波器作为一个关键枢纽，提供了对 `DCM` 无与伦比的双向控制 [19]。在电压-电流平面的所有象限中无缝运行，这一电子奇迹促进了需要快速转换的应用中的动态反转和精细的速度调节。在本探讨中，我们将剖析四象限斩波器的理论基础和实际应用，揭示其在现代电力系统中的关键作用。特别值得一提的是，它被用作 `DCM` 的驱动力，这种战略选择旨在确保正向和反向的精确速度控制。这种有意的选择不仅凸显了斩波器的多功能性，还体现了其在确保高效且受控的电机性能方面的重要性，使其成为各种工业和商业环境中的基石 [15, 19–22]。
 
-在图 1.4 中，一个全面的表示揭示了由功率部分的四象限斩波器控制的 DCM。这个复杂的系统由四个绝缘栅双极晶体管 (IGBT)/二极管组件构建，其中每对 IGBTs (IGBT 1 和 2；IGBT 3 和 4) 形成一个独特的臂，经过战略设计以避免短路。控制机制确保对称操作，其中 IGBT 1 和 4，以及 IGBT 2 和 3 同步控制以保持平衡。标记为“Blco”的模块至关重要，提供必要的四象限控制。在此，DC 电压 1 调节励磁电压，而 DC 电压 2 控制电枢电压。总线选择器（Bus Selector）作为一个关键组件， facilitating DCM 输出的选择，统筹这个复杂系统的无缝运行。通过这种可视化表示，工程师能够深入了解四象限斩波器的复杂组件和控制机制，为 DCM 的精确双向控制指明方向。串联 RLC 分支用于添加值为 1e-4 [亨利] 的电感，以提高电流质量。进一步步骤包括通过定义的步骤施加转矩阻力。此步骤持续六个单位，从初始值 5 开始，逐渐达到最终值 20.35。目标是达到额定转矩，即功率除以速度（图 1.5）。
+在图 1.4 中，一个全面的表示揭示了由功率部分的四象限斩波器控制的 `DCM`。这个复杂的系统由四个绝缘栅双极晶体管 (`IGBT`)/二极管组件构建，其中每对 `IGBTs` (`IGBT 1` 和 2；`IGBT 3` 和 4) 形成一个独特的臂，经过战略设计以避免短路。控制机制确保对称操作，其中 `IGBT 1` 和 4，以及 `IGBT 2` 和 3 同步控制以保持平衡。标记为“`Blco`”的模块至关重要，提供必要的四象限控制。在此，`DC` 电压 1 调节励磁电压，而 `DC` 电压 2 控制电枢电压。总线选择器（`Bus Selector`）作为一个关键组件，facilitating `DCM` 输出的选择，统筹这个复杂系统的无缝运行。通过这种可视化表示，工程师能够深入了解四象限斩波器的复杂组件和控制机制，为 `DCM` 的精确双向控制指明方向。串联 `RLC` 分支用于添加值为 1e-4 [亨利] 的电感，以提高电流质量。进一步步骤包括通过定义的步骤施加转矩阻力。此步骤持续六个单位，从初始值 5 开始，逐渐达到最终值 20.35。目标是达到额定转矩，即功率除以速度（图 1.5）。
 
 ![](img/e9de70cd491e84262133af63cb33d500_26_0.png)
 
@@ -350,9 +333,10 @@ SimPowerSystems 的独特之处在于它采用了先进的数学模型，捕捉�
 
 选择总线选择器以选择电机的输出
 
-在图 1.6 中，描绘了由四象限斩波器操作的 DCM 的控制部分。该控制系统中的一个关键组件如下。
+在图 1.6 中，描绘了由四象限斩波器操作的 `DCM` 的控制部分。该控制系统中的一个关键组件如下。
 
-- “Powergui” 模块：在调节仿真时间和类型方面发挥着至关重要的作用。这个基本模块不仅促进对仿真时长的精确控制，还提供了一组工具，使工程师能够根据特定要求调整各种仿真参数：将仿真类型设置为离散，将采样时间（s）设置为 50e-5。
+- “`Powergui`” 模块：在调节仿真时间和类型方面发挥着至关重要的作用。这个基本模块不仅促进对仿真时长的精确控制，还提供了一组工具，使工程师能够根据特定要求调整各种仿真参数：将仿真类型设置为离散，将采样时间（s）设置为 50e-5。
+
 - 速度参考由设置的阶跃函数生成：阶跃时间：3，初始值：−150 *30/pi，最终值：170* 30/pi。
 
 ![](img/e9de70cd491e84262133af63cb33d500_27_0.png)
@@ -363,20 +347,21 @@ SimPowerSystems 的独特之处在于它采用了先进的数学模型，捕捉�
 
 图 1.6 由四象限斩波器驱动的直流电机，控制部分。
 
-由“From”模块产生的速度必须被赋值，类似于记录 DCM 输出速度的“Goto”模块。这确保了生成的速度数据和记录的电机速度输出之间的一致数据流和同步。
+由“`From`”模块产生的速度必须被赋值，类似于记录 `DCM` 输出速度的“`Goto`”模块。这确保了生成的速度数据和记录的电机速度输出之间的一致数据流和同步。
 
 系统中有三个增益：第一个设置为 1/1750 以确保误差归一化，第二个设置为 30/π 以将速度从 RPM 转换为弧度/秒，第三个增益经过调整以将速度从弧度/秒转换回 RPM。
 
-脉冲宽度调制 (PWM) 发生器（双电平）模块的频率设置为 100*50，凸显了其在控制系统中的关键作用。其功能至关重要，强调了其在调节系统运行中的重要性。
+脉冲宽度调制 (`PWM`) 发生器（双电平）模块的频率设置为 100*50，凸显了其在控制系统中的关键作用。其功能至关重要，强调了其在调节系统运行中的重要性。
 
-带有 Ruleviewer 的模糊逻辑控制器在 DCM 的模糊逻辑控制中发挥关键作用，具有两个输入：误差及其导数。
+带有 `Ruleviewer` 的模糊逻辑控制器在 `DCM` 的模糊逻辑控制中发挥关键作用，具有两个输入：误差及其导数。
 
 ### 1.3.4 带有 RULEVIEWER 的模糊逻辑控制器
 
-本节提供了一份全面的逐步指南，说明如何有效利用带有 Ruleviewer 的模糊逻辑控制器。这个强大的工具在控制系统中发挥关键作用，能够基于模糊逻辑原理实现智能决策。
+本节提供了一份全面的逐步指南，说明如何有效利用带有 `Ruleviewer` 的模糊逻辑控制器。这个强大的工具在控制系统中发挥关键作用，能够基于模糊逻辑原理实现智能决策。
 
-- 在 MATLAB 命令窗口中输入 “fuzzy”。
-- 点击 “file”，然后选择 “export”，并将文件保存为名称 “fuzzy controller”。该文件应以扩展名 “.fis” 保存。接下来，使用 “edit” 选项添加变量。使用光标修改输入和输出名称，如图 1.7 所示。
+- 在 `MATLAB` 命令窗口中输入 “`fuzzy`”。
+
+- 点击 “file”，然后选择 “export”，并将文件保存为名称 “fuzzy controller”。该文件应以扩展名 “`.fis`” 保存。接下来，使用 “edit” 选项添加变量。使用光标修改输入和输出名称，如图 1.7 所示。
 
 ![](img/e9de70cd491e84262133af63cb33d500_28_0.png)
 
@@ -386,13 +371,11 @@ SimPowerSystems 的独特之处在于它采用了先进的数学模型，捕捉�
 
 **图 1.8** 模糊逻辑设计器：输入和输出命名。
 
-在输入部分，修改所有输入参数，如图 1.8 所示。输入每个隶属函数图形的名称，并选择函数类型为 “gaussmf”。做出此选择是因为它与自然数据模式相符。根据图 1.8 中概述的细节调整范围、显示范围和参数。
+在输入部分，修改所有输入参数，如图 1.8 所示。输入每个隶属函数图形的名称，并选择函数类型为 “`gaussmf`”。做出此选择是因为它与自然数据模式相符。根据图 1.8 中概述的细节调整范围、显示范围和参数。
 
-图 1.9 阐明了对输出所做的修改。选择函数类型为 “trimf”，因为它更适合输出的性质。遵循图中概述的其他指定更改以实现最佳配置。
+图 1.9 阐明了对输出所做的修改。选择函数类型为 “`trimf`”，因为它更适合输出的性质。遵循图中概述的其他指定更改以实现最佳配置。
 
-图 1.10 阐明了使用模糊控制的 DCM 速度响应，其中电机准确跟踪指定的参考速度。系统表现出小于 1 秒的快速响应时间，没有超调或稳态误差。电机双向运行，有效响应 –1432 和 1623 RPM 的速度。这些响应是在 5 Nm 的电阻转矩下实现的。在 6 s 时施加 20.35 Nm 的相对转矩扰动后，电机迅速拒绝该扰动，经历
-
-
+图 1.10 阐明了使用模糊控制的 `DCM` 速度响应，其中电机准确跟踪指定的参考速度。系统表现出小于 1 秒的快速响应时间，没有超调或稳态误差。电机双向运行，有效响应 –1432 和 1623 RPM 的速度。这些响应是在 5 Nm 的电阻转矩下实现的。在 6 s 时施加 20.35 Nm 的相对转矩扰动后，电机迅速拒绝该扰动，经历
 
 微小的振荡。图 1.11 提供了直流电动机速度响应的详细特写视图，突出了由模糊控制模式引入的轻微振荡。
 
@@ -402,7 +385,7 @@ SimPowerSystems 的独特之处在于它采用了先进的数学模型，捕捉�
 
 **图 1.11 直流电动机速度响应**
 
-图 1.11 描绘了直流电动机（DCM）电枢电流和转矩的响应。电枢电流和电磁转矩的轮廓之间观察到显著的相似性，表明电流对转矩变化具有直接影响。即使电阻转矩增加导致电流升高，启动电流也会产生初始转矩以启动电机运行。改变电机方向需要另一个启动电流来产生额外的启动转矩。图 1.12 揭示了转矩和电流响应中的振荡，这些振荡直接影响速度响应中观察到的振荡。
+图 1.11 描绘了直流电动机（`DCM`）电枢电流和转矩的响应。电枢电流和电磁转矩的轮廓之间观察到显著的相似性，表明电流对转矩变化具有直接影响。即使电阻转矩增加导致电流升高，启动电流也会产生初始转矩以启动电机运行。改变电机方向需要另一个启动电流来产生额外的启动转矩。图 1.12 揭示了转矩和电流响应中的振荡，这些振荡直接影响速度响应中观察到的振荡。
 
 ## 1.4 模糊逻辑单相异步电动机控制
 
@@ -418,9 +401,9 @@ SimPowerSystems 的独特之处在于它采用了先进的数学模型，捕捉�
 
 ### 1.4.2 MATLAB Simulink (SimPowerSystems) 中的单相异步电动机
 
-图 1.13 至 1.15 说明了在 MATLAB Simulink (SimPowerSystems) 环境中由模糊逻辑控制的单相异步电动机。
+图 1.13 至 1.15 说明了在 `MATLAB Simulink` (`SimPowerSystems`) 环境中由模糊逻辑控制的单相异步电动机。
 
-在图 1.13 中，展示了功率部分，其中单相异步电动机连接到一个由两个桥臂组成的逆变器。每个桥臂由两个绝缘栅双极型晶体管（IGBT）组成，结构类似于四象限斩波器。该逆变器由设定为 $\sqrt{2} V_{Rms}$ 的直流电源供电 [26, 28]。
+在图 1.13 中，展示了功率部分，其中单相异步电动机连接到一个由两个桥臂组成的逆变器。每个桥臂由两个绝缘栅双极型晶体管（`IGBT`）组成，结构类似于四象限斩波器。该逆变器由设定为 $\sqrt{2} V_{Rms}$ 的直流电源供电 [26, 28]。
 
 ![](img/e9de70cd491e84262133af63cb33d500_33_0.png)
 
@@ -441,113 +424,118 @@ SimPowerSystems 的独特之处在于它采用了先进的数学模型，捕捉�
 **图 1.15 单相异步电机参数**
 
 -   **Repeating Sequence Stair（重复序列阶梯模块）**：此模块表示输出值的转速参考向量：[400 800]。采样时间：4。
--   **Fen（模糊函数模块）**：此模块表示构成控制逆变器的 PWM 的参考函数。
 
-“Fen”模块的输入由幅度和频率组成，两者均源自多路复用器（mux）组件。这些参数对于控制参考 PWM 函数至关重要，能够精确调制驱动单相异步电动机的输出信号。
+-   **Fen（模糊函数模块）**：此模块表示构成控制逆变器的 `PWM` 的参考函数。
 
--   **Repeating Sequence（重复序列模块）**：此模块表示构成控制逆变器 PWM 的另一部分的载波信号。时间值：[0 .25 .5 .75 1]/5000，输出值：[0 → 1 0 1 0]。
+“`Fen`”模块的输入由幅度和频率组成，两者均源自多路复用器（`mux`）组件。这些参数对于控制参考 `PWM` 函数至关重要，能够精确调制驱动单相异步电动机的输出信号。
 
-使用关系运算符与逻辑操作结合生成 PWM 信号。逆变器使用两个 PWM 信号工作。“Not”（非）运算符用于取反并生成互补的 PWM 信号。
+-   **Repeating Sequence（重复序列模块）**：此模块表示构成控制逆变器 `PWM` 的另一部分的载波信号。时间值：[0 .25 .5 .75 1]/5000，输出值：[0 → 1 0 1 0]。
+
+使用关系运算符与逻辑操作结合生成 `PWM` 信号。逆变器使用两个 `PWM` 信号工作。“`Not`”（非）运算符用于取反并生成互补的 `PWM` 信号。
 
 ![](img/e9de70cd491e84262133af63cb33d500_35_0.png)
 
 **图 1.16 由逆变器斩波器驱动的单相异步电机，控制部分**
 
+
+
 在实施了与直流电动机相同的模糊控制器后，单相异步电动机的速度响应如图 1.17 所示，展示了电机对指定参考速度的精确跟踪。系统表现出令人印象深刻的响应时间，仅为 0.5 秒，没有过冲或稳态误差。电机有效运行，响应 400 和 800 RPM 的速度。这些响应是在 2 Nm 的电阻转矩下实现的。在 6 秒时施加 5 Nm 的转矩扰动时，电机迅速抑制了扰动，仅观察到微小的振荡。
 
 ![](img/e9de70cd491e84262133af63cb33d500_35_1.png)
 
-**图 1.17 单相异步电动机速度响应**
+图 1.17 单相异步电动机速度响应
 
 图 1.18 说明了单相异步电动机的响应，展示了电流、速度和转矩。电流波形呈现出正弦模式。然而，与直流电动机相比，电流与转矩之间的关系更为复杂。同样，电流与速度之间的相关性也值得关注，尽管并不直接。对于单相异步电动机而言，频率在决定速度方面起着至关重要的作用，增加了电流与电机速度之间关系的复杂性。
 
 ![](img/e9de70cd491e84262133af63cb33d500_36_0.png)
 
-**图 1.18 单相异步电动机电流、速度和转矩响应**
+图 1.18 单相异步电动机电流、速度和转矩响应
 
 ## 1.5 结论
 
 模糊逻辑控制是一种可靠且灵活的方法，用于控制电机系统中实际运行固有的不确定性和复杂性。本研究通过彻底的仿真和分析强调了几个重要要点。
 
-1.  **模糊逻辑精度：** 模糊逻辑控制允许精确的电机速度调节，同时考虑到工业应用中固有的不精确性和不确定性。使用语言变量和模糊集允许细微的控制决策，从而增强电机响应的准确性。
-2.  **灵活性和适应性：** 模糊逻辑为电机控制提供了一种灵活的系统，因为它能够处理语言变量并定义精确的速度范围。这种灵活性在工业环境中至关重要，那里波动的操作条件和不可预测性是常态。
-3.  **扰动抑制：** 模糊逻辑控制表现出卓越的扰动抑制能力。电机能从扰动中迅速恢复，即使在具有挑战性的条件下也能确保稳定的性能。
-4.  **速度表示的真实性：** 模糊逻辑将电机速度表示为定义范围内的语言变量，这比清晰值方法更真实且适用于工业场景。这种复杂的方法确保了更准确的电机行为表示，捕捉了速度变化的细微差别。
-5.  **工业适用性：** 对于工业电机应用，模糊逻辑控制显示出巨大的前景。其管理不精确输入、适应变化情况以及提供稳定且精确控制的能力，使其成为实际制造和自动化流程中的竞争性选择。
+1. **模糊逻辑精度：** 模糊逻辑控制允许精确的电机速度调节，同时考虑到工业应用中固有的不精确性和不确定性。使用语言变量和模糊集允许细微的控制决策，从而增强电机响应的准确性。
+
+2. **灵活性和适应性：** 模糊逻辑为电机控制提供了一种灵活的系统，因为它能够处理语言变量并定义精确的速度范围。这种灵活性在工业环境中至关重要，那里波动的操作条件和不可预测性是常态。
+
+3. **扰动抑制：** 模糊逻辑控制表现出卓越的扰动抑制能力。电机能从扰动中迅速恢复，即使在具有挑战性的条件下也能确保稳定的性能。
+
+4. **速度表示的真实性：** 模糊逻辑将电机速度表示为定义范围内的语言变量，这比清晰值方法更真实且适用于工业场景。这种复杂的方法确保了更准确的电机行为表示，捕捉了速度变化的细微差别。
+
+5. **工业适用性：** 对于工业电机应用，模糊逻辑控制显示出巨大的前景。其管理不精确输入、适应变化情况以及提供稳定且精确控制的能力，使其成为实际制造和自动化流程中的竞争性选择。
 
 最后，本研究证明了模糊逻辑控制在增强工业环境中由电机驱动的系统效率、稳定性和适应性方面的重要性。通过弥合理论模型与实际应用之间的差距，模糊逻辑证明是工程师和研究人员寻求复杂电机控制挑战可靠解决方案的宝贵工具。
 
-# 关键词
+### 关键词
 
--   模糊逻辑
--   直流电动机
--   SimPowerSystems
--   四象限斩波器
--   绝缘栅双极型晶体管
+- 模糊逻辑
+- 直流电动机
+- SimPowerSystems
+- 四象限斩波器
+- 绝缘栅双极型晶体管
 
-# 参考文献
+### 参考文献
 
-1.  Chen, G., & Pham, T. T. (2000). *模糊集、模糊逻辑和模糊控制系统导论*. CRC 出版社. https://doi.org/10.1201/9781420039818
-2.  Ray, K. S. (2014). *软计算及其应用，第二卷：模糊推理和模糊控制*，第 1 版。Apple 学术出版社.
+1. Chen, G., & Pham, T. T. (2000). *模糊集、模糊逻辑和模糊控制系统导论*. CRC 出版社. https://doi.org/10.1201/9781420039818
 
+2. Ray, K. S. (2014). *软计算及其应用，第二卷：模糊推理和模糊控制*，第 1 版。Apple 学术出版社.
 
+3. Barazane, L., Sicard, P., & Ouiguini, R. (2009). Cascade fuzzy variable structure control of induction motor based on the approach of fuzzy modelling of Ben-Ghalia. International Journal of Systems Science, 40(3), 309–326. https://doi.org/10.1080/00207720802435986
 
+4. Wang, H. G., & Rooda, J. E. (1996). Fuzzy control in a single-machine system. Production Planning & Control, 7(6), 577–584. https://doi.org/10.1080/09537289608930391
 
-+   3. Barazane, L., Sicard, P., & Ouiguini, R. (2009). Cascade fuzzy variable structure control of induction motor based on the approach of fuzzy modelling of Ben-Ghalia. International Journal of Systems Science, 40(3), 309–326. https://doi.org/10.1080/00207720802435986
+5. Parhizkar, N., Shafiei, M., & Kouhshahi, M. B. (2011). Direct torque control of brushless DC motor drives with reduced starting current using fuzzy logic controller. In: Proceedings of the International Conference on Uncertainty Reasoning and Knowledge Engineering, URKE 2011, Vol. 1, pp, 129–132. https://doi.org/10.1109/URKE.2011.6007863
 
-+   4. Wang, H. G., & Rooda, J. E. (1996). Fuzzy control in a single-machine system. Production Planning & Control, 7(6), 577–584. https://doi.org/10.1080/09537289608930391
+6. Xiu, Z., Guo, W., & Wang, W. (2006). Design of adaptive fuzzy controllers for warship weapon control systems. In: 2006 6th World Congress on Intelligent Control and Automation, 1.
 
-+   5. Parhizkar, N., Shafiei, M., & Kouhshahi, M. B. (2011). Direct torque control of brushless DC motor drives with reduced starting current using fuzzy logic controller. In: Proceedings of the International Conference on Uncertainty Reasoning and Knowledge Engineering, URKE 2011, Vol. 1, pp, 129–132. https://doi.org/10.1109/URKE.2011.6007863
+7. Cheng, P.-J., Cheng, C.-H., & Tung, C.-C. (2009). Design of DC motor’s torque control using DSP. Journal of Information and Optimization Sciences, 30(6), 1197–1207. https://doi.org/10.1080/02522667.2009.10699935
 
-+   6. Xiu, Z., Guo, W., & Wang, W. (2006). Design of adaptive fuzzy controllers for warship weapon control systems. In: 2006 6th World Congress on Intelligent Control and Automation, 1.
+8. Kim, I. H., Son, Y. I., Kang, S. Y., & Lim, Y. (2018). Robust position control of DC motor using a low-order disturbance observer against biased harmonic disturbances. In: Proceedings—2018 IEEE International Conference on Industrial Electronics for Sustainable Energy Systems, IESES 2018, January, 2018, pp. 484-489. https://doi.org/ 10.1109/IESES.2018.8349925
 
-+   7. Cheng, P.-J., Cheng, C.-H., & Tung, C.-C. (2009). Design of DC motor’s torque control using DSP. Journal of Information and Optimization Sciences, 30(6), 1197–1207. https://doi.org/10.1080/02522667.2009.10699935
+9. Omar, F., Ahmed, M., & Zouaoui, D. E. Y. (2015). Adaptive control with reference model of a doubly fed induction generator for wind turbine with sliding mode. Electrical and Electronics Engineering: An International Journal (ELELLJ), 4(2), 41–52.
 
-+   8. Kim, I. H., Son, Y. I., Kang, S. Y., & Lim, Y. (2018). Robust position control of DC motor using a low-order disturbance observer against biased harmonic disturbances. In: Proceedings—2018 IEEE International Conference on Industrial Electronics for Sustainable Energy Systems, IESES 2018, January, 2018, pp. 484-489. https://doi.org/ 10.1109/IESES.2018.8349925
+10. Omar, F., Haddji, A., Mrabet, E., Belkraouane, I., & Djeriri, Y. (2021). Journal Europée en des Systèmes Automatisés. Journal Européen Des Systèmes Automatisés, 54(6), 897–902.
 
-+   9. Omar, F., Ahmed, M., & Zouaoui, D. E. Y. (2015). Adaptive control with reference model of a doubly fed induction generator for wind turbine with sliding mode. Electrical and Electronics Engineering: An International Journal (ELELLJ), 4(2), 41–52.
+11. Omar, F., Habib, H., Ahmed, N., & Sid, A. (2022). Adaptive control of DC motor without identification of parameters. Facta Universitatis Series: Electronics and Energetics, 35(3), 301–312. https://doi.org/10.2298/FUEEE2203301O
 
-+   10. Omar, F., Haddji, A., Mrabet, E., Belkraouane, I., & Djeriri, Y. (2021). Journal Europée en des Systèmes Automatisés. Journal Européen Des Systèmes Automatisés, 54(6), 897–902.
+12. Aberdharmae, H. E. M., Belkraouane, I., & Fezazi, O. (2021). Sliding Mode Control of a DC Machine. Djillali Liabes.
 
-+   11. Omar, F., Habib, H., Ahmed, N., & Sid, A. (2022). Adaptive control of DC motor without identification of parameters. Facta Universitatis Series: Electronics and Energetics, 35(3), 301–312. https://doi.org/10.2298/FUEEE2203301O
+13. Chaimaa, H., Chaheinez, B., & Omar, F. (2020). DC Motor Predictive Control. Djillali Liabes.
 
-+   12. Aberdharmae, H. E. M., Belkraouane, I., & Fezazi, O. (2021). Sliding Mode Control of a DC Machine. Djillali Liabes.
+14. Sabrina, B., Ribah, B., & Omar, F. (2021). Adaptive Control for a DC Machine. Djillali Liabes.
 
-+   13. Chaimaa, H., Chaheinez, B., & Omar, F. (2020). DC Motor Predictive Control. Djillali Liabes.
+15. Salima, T., Sihak, N., & Omar, F. (2022). LQR Control of an Electric Vehicle based on a DC Motor. Djillali Liabes.
 
-+   14. Sabrina, B., Ribah, B., & Omar, F. (2021). Adaptive Control for a DC Machine. Djillali Liabes.
+16. Fezazi, O., El Islam, A. A. N., & Bechehir, S. E. (2023). Validation of a SimPower system simulation for a buck-boost copter in the drive system of an electric vehicle using RT LAB. In: Conference: 1. International Selçuk Scientific Research Congress.
 
-+   15. Salima, T., Sihak, N., & Omar, F. (2022). LQR Control of an Electric Vehicle based on a DC Motor. Djillali Liabes.
+17. Omar, F., & El Islam, A. A. N. (2023). Association induction motors to converters. In: Induction Motors—Recent Advances, New Perspectives and Applications. IntechOpen. https://doi.org/10.5772/INTECHOPEN.1001574
 
-+   16. Fezazi, O., El Islam, A. A. N., & Bechehir, S. E. (2023). Validation of a SimPower system simulation for a buck-boost copter in the drive system of an electric vehicle using RT LAB. In: Conference: 1. International Selçuk Scientific Research Congress.
+18. Omar, F., & Djjelloul, B. (2023), Validation of a PV-integrated drive system for electric vehicles using MATLAB SimPower systems and RT LAB. In: 1. International Selçuk Scientific Research Congress.
 
-+   17. Omar, F., & El Islam, A. A. N. (2023). Association induction motors to converters. In: Induction Motors—Recent Advances, New Perspectives and Applications. IntechOpen. https://doi.org/10.5772/INTECHOPEN.1001574
+19. Melkebeek, J. A. (2018). DC chopper. Power Systems, 9783319727295, 263–275. https:// doi.org/10.1007/978-3-319-72730-1_8/COVER
 
-+   18. Omar, F., & Djjelloul, B. (2023), Validation of a PV-integrated drive system for electric vehicles using MATLAB SimPower systems and RT LAB. In: 1. International Selçuk Scientific Research Congress.
+20. Abdou, M. M. A., & Omar, F. (2019). *由光伏电源供电的斩波器的设计与控制*. Djillali Liabes.
 
-+   19. Melkebeek, J. A. (2018). DC chopper. Power Systems, 9783319727295, 263–275. https:// doi.org/10.1007/978-3-319-72730-1_8/COVER
+21. Fezazi, O., & Kötén, H. (2023). Study of buck-boost chopper control modes for electric vehicle propulsion. In: *第一届可持续能源与先进材料国际会议*.
 
-+   20. Abdou, M. M. A., & Omar, F. (2019). *由光伏电源供电的斩波器的设计与控制*. Djillali Liabes.
+22. Omar F., El Islam, A. A. N., & Djehaf, M. A. (n.d.). Integration of photovoltaic panels in electric drive motors for sustainable electric vehicle operation. In: *Le 1er Séminaire National Sur Les Pollutions Environnementales et Le Développement Durable*.
 
-+   21. Fezazi, O., & Kötén, H. (2023). Study of buck-boost chopper control modes for electric vehicle propulsion. In: *第一届可持续能源与先进材料国际会议*.
+23. Kirthey J. L. (1995). *单相电机：类型、构造与应用*. Wiley-IEEE Press.
 
-+   22. Omar F., El Islam, A. A. N., & Djehaf, M. A. (n.d.). Integration of photovoltaic panels in electric drive motors for sustainable electric vehicle operation. In: *Le 1er Séminaire National Sur Les Pollutions Environnementales et Le Développement Durable*.
+24. Types of single phase induction motors. (n.d.). Java T Point. https://www.javatpoint.com/types-of-single-phase-induction-motors
 
-+   23. Kirthey J. L. (1995). *单相电机：类型、构造与应用*. Wiley-IEEE Press.
+25. Aissa, O., Moulahoum, S., Colak, I., Kabache, N., & Babes, B. (2016). Improved performance and power quality of direct torque control of asynchoronous motor by using intelligent controllers. *电力元件与系统, 44*(4), 343–358. https://doi.org/10.1080/15325008.2015.1117541
 
-+   24. Types of single phase induction motors. (n.d.). Java T Point. https://www.javatpoint.com/types-of-single-phase-induction-motors
+26. Abdelhadi, B., Abellali, A., & Omar, F. (2019). *用于电动汽车的同步电机控制*. Djillali Liabes.
 
-+   25. Aissa, O., Moulahoum, S., Colak, I., Kabache, N., & Babes, B. (2016). Improved performance and power quality of direct torque control of asynchoronous motor by using intelligent controllers. *电力元件与系统, 44*(4), 343–358. https://doi.org/10.1080/15325008.2015.1117541
+27. Fezazi, O. A. M. (2016). Predictive control of doubly fed induction generator used for wind energy. *电气工程杂志, 1*, 1–8.
 
-+   26. Abdelhadi, B., Abellali, A., & Omar, F. (2019). *用于电动汽车的同步电机控制*. Djillali Liabes.
+28. Said, B., Kaouthar, B., & Omar, F. (2021). *逆变器控制技术*. Djillali Labes.
 
-+   27. Fezazi, O. A. M. (2016). Predictive control of doubly fed induction generator used for wind energy. *电气工程杂志, 1*, 1–8.
+29. Ershad, N. F., & Mehrjardi, R. T. (2018). A low cost single-phase to three-phase power converter for low-power motor drive applications. In: *2018年IEEE德克萨斯州电力与能源会议, TPEC 2018*, 2018年2月, 第 1–6 页. https://doi.org/10.1109/TPEC.2018.8312061
 
-+   28. Said, B., Kaouthar, B., & Omar, F. (2021). *逆变器控制技术*. Djillali Labes.
-
-+   29. Ershad, N. F., & Mehrjardi, R. T. (2018). A low cost single-phase to three-phase power converter for low-power motor drive applications. In: *2018年IEEE德克萨斯州电力与能源会议, TPEC 2018*, 2018年2月, 第 1–6 页. https://doi.org/10.1109/TPEC.2018.8312061
-
-+   30. Soomro, J., Memon, T. D., & Shah, M. A. (2017). Design and analysis of single phase voltage source inverter using Unipolar and Bipolar pulse width modulation techniques. In: *2016年电气、电子与系统工程进展国际会议, ICAEES 2016*, 第 277–282 页. https://doi.org/10.1109/ICAЕES.2016.7888052
+30. Soomro, J., Memon, T. D., & Shah, M. A. (2017). Design and analysis of single phase voltage source inverter using Unipolar and Bipolar pulse width modulation techniques. In: *2016年电气、电子与系统工程进展国际会议, ICAEES 2016*, 第 277–282 页. https://doi.org/10.1109/ICAЕES.2016.7888052
 
 ![Taylor & Francis](img/e9de70cd491e84262133af63cb33d500_40_0.png)
 
@@ -563,11 +551,11 @@ SUDIPTA ADHIKARY¹, KAUSHIK CHANDA², GUNJAN MUKHERJEE², and KAUSHIK BANERJEE¹
 
 ## 摘要
 
-模糊逻辑系统被广泛应用于许多多用途的工程领域。模糊推理系统是一种基于规则的系统，可以应用于多种类型的控制系统，其中控制能力和机制完全由推理规则集决定。传统的动力传输系统是通过手动或自动方式进行的。模糊逻辑系统的应用有助于增强和使传输系统更加平滑。无级变速箱（CVT）通过提供多种齿轮比，实现动力的高效和平稳传递。提升传输能力的不同应用流程涉及自适应过程、换挡控制过程、负载平衡过程、优化能量回收过程等。本文所述系统用于寻找最佳的优化参数值，这些值由两个变量 $K_{p}$ 和 $T_{i}$ 表示，用于设置一种称为比例积分控制器（或 PI 控制器）的特殊控制器。该 PI 控制器用于机械系统中，以控制通过 CVT 的能量传递，从而确保平稳运行。模糊控制器具有多项附加特性，所有特性均旨在提高机器的整体运行效率。本章基于模糊逻辑概念，详细概述了此类优化过程。
+模糊逻辑系统被广泛应用于许多多用途的工程领域。模糊推理系统是一种基于规则的系统，可以应用于多种类型的控制系统，其中控制能力和机制完全由推理规则集决定。传统的动力传输系统是通过手动或自动方式进行的。模糊逻辑系统的应用有助于增强和使传输系统更加平滑。无级变速箱（CVT）通过提供多种齿轮比，实现动力的高效和平稳传递。提升传输能力的不同应用流程涉及自适应过程、换挡控制过程、负载平衡过程、优化能量回收过程等。本文所述系统用于寻找最佳的优化参数值，这些值由两个变量 `K_p` 和 `T_i` 表示，用于设置一种称为比例积分控制器（或 PI 控制器）的特殊控制器。该 PI 控制器用于机械系统中，以控制通过 CVT 的能量传递，从而确保平稳运行。模糊控制器具有多项附加特性，所有特性均旨在提高机器的整体运行效率。本章基于模糊逻辑概念，详细概述了此类优化过程。
 
 ## 2.1 引言
 
-无级变速箱（CVT）是一种专门用于传统内燃机车辆的变速箱类型。发动机的功耗是影响发动机效率的重要因素。通过 CVT，可以将发动机功率利用率的优化降至最低。与通过离散齿轮比（如一档和二档）运行的传统变速箱相比，无级变速箱（CVT）具备根据车轮转速无缝且连续地调整发动机转速的能力。这有助于优化发动机的功率利用率。如果希望以经济的方式驾驶，可以节省燃料并减少污染。相反，如果希望进行运动型驾驶，则可以优化功率输出。无级变速箱（CVT）通过连接两个带有锥形结构的滑轮使用的皮带来运行。这些滑轮的尺寸是变化的，随着锥体相互靠近而扩大，随着它们分离而收缩。图 2.1 中的图展示了主题的运行机制。必须对滑轮（Pp 和 Ps）施加适量的压力，以确保皮带的最佳运行。如果张力超过推荐阈值，皮带可能因摩擦和应力过大而失效。发动机中张力不足可能会阻碍动力向车轮传递，可能导致皮带从滑轮上脱开并引发后续问题。发动机的正常转速（r.p.m.）范围是 1000 到 4000。为了调节气缸内的压力，使用了一种阀门系统，其功能类似于液压放大器。此外，在湿片离合器的情境中使用了第三种压力。该系统负责控制三个不同的组件。这意味着用于调节无级变速箱（CVT）的信号仅依赖电气手段。这 3 个附加阀门的压力水平由中央控制系统提供。主控制
+无级变速箱（CVT）是一种专门用于传统内燃机车辆的变速箱类型。发动机的功耗是影响发动机效率的重要因素。通过 CVT，可以将发动机功率利用率的优化降至最低。与通过离散齿轮比（如一档和二档）运行的传统变速箱相比，无级变速箱（CVT）具备根据车轮转速无缝且连续地调整发动机转速的能力。这有助于优化发动机的功率利用率。如果希望以经济的方式驾驶，可以节省燃料并减少污染。相反，如果希望进行运动型驾驶，则可以优化功率输出。无级变速箱（CVT）通过连接两个带有锥形结构的滑轮使用的皮带来运行。这些滑轮的尺寸是变化的，随着锥体相互靠近而扩大，随着它们分离而收缩。图 2.1 中的图展示了主题的运行机制。必须对滑轮（`Pp` 和 `Ps`）施加适量的压力，以确保皮带的最佳运行。如果张力超过推荐阈值，皮带可能因摩擦和应力过大而失效。发动机中张力不足可能会阻碍动力向车轮传递，可能导致皮带从滑轮上脱开并引发后续问题。发动机的正常转速（r.p.m.）范围是 1000 到 4000。为了调节气缸内的压力，使用了一种阀门系统，其功能类似于液压放大器。此外，在湿片离合器的情境中使用了第三种压力。该系统负责控制三个不同的组件。这意味着用于调节无级变速箱（CVT）的信号仅依赖电气手段。这 3 个附加阀门的压力水平由中央控制系统提供。主控制
 
 
 
@@ -625,7 +613,7 @@ $$C(s)=K_{p}\left(T,N_{\text {engine }}\right)\left(1+\frac{1}{T_{i}\left(T,N_{\
 
 $$C(z)=K_{p}\left(T,N_{\text {engine }}\right)\left(1+\frac{1}{T_{i}\left(T,N_{\text {engine }}\right)\left(1-z^{-1}\right)}\right). \tag{2.5}$$
 
-通过采用这种方法，考虑了所有量化效应，从而提高了控制器的精度。$K_p(T,N_{\text {engine }})$、$T_i(T,N_{\text {engine }})$和$\hat{f}^{-1}(V_{\text {in }}^{r}, N_{\text {engine }})$的值被限制在某些工作点。需要一种插值方法来促进不同运行位置之间的平滑过渡。必须利用插值方法。已确定，一种有效的方法将涉及利用FIS [6–9]来近似查找表。该FIS [10–13]的主要属性包括高斯隶属函数，采用重心法。控制器如图2.6所示。
+通过采用这种方法，考虑了所有量化效应，从而提高了控制器的精度。$K_p(T,N_{\text{engine}})$、$T_i(T,N_{\text{engine}})$和$\hat{f}^{-1}(V_{\text {in }}^{r}, N_{\text {engine }})$的值被限制在某些工作点。需要一种插值方法来促进不同运行位置之间的平滑过渡。必须利用插值方法。已确定，一种有效的方法将涉及利用FIS [6–9]来近似查找表。该FIS [10–13]的主要属性包括高斯隶属函数，采用重心法。控制器如图2.6所示。
 
 ## 2.5 稳定性分析
 
@@ -640,7 +628,9 @@ $$\dot{x} = A_{i}\tilde{x} + B_{i}\tilde{u}. \quad (2.6)$$
 在此上下文中，当存在一个满足以下不等式的共享正定矩阵$P$时，稳定性要求得以满足：
 
 $$P > 0 \quad (2.7)$$
+
 $$A_{i}^{T} P + P A_{i} < 0 \quad (2.8)$$
+
 $$\forall i \in \{1, ..., N_{\text{rules}}\} \quad (2.9)$$
 
 $P$矩阵的确定可以通过解决可行性线性矩阵不等式（LMI）问题来实现。已为该问题找到一个可行解，确保了稳定性。图2.6提供了模糊控制器与线性规划控制器的模型[23–27]。
@@ -650,8 +640,6 @@ $P$矩阵的确定可以通过解决可行性线性矩阵不等式（LMI）问�
 ## 2.6 结论
 
 本节阐明了设计无级传动控制系统的过程。控制系统采用模糊推理方法来
-
-
 
 根据对扰动的测量，动态修改控制器的参数。采取了以下措施。
 
@@ -703,14 +691,20 @@ $P$矩阵的确定可以通过解决可行性线性矩阵不等式（LMI）问�
 25. Espinosa, J., & Vandewalle, J. (2000). Constructing fuzzy models with linguistic integrity-afredl algorithm. *IEEE Transactions on Fuzzy Systems*, 8(5), 591–600.
 26. Espinosa, J., & Vandevvalle, J. (2003). Extracting linguistic fuzzy models from numerical data-afreli algorithm. In: Cassillas, J., Cordon, O., Herrera, F., & Magdalena, L. (Eds.), *Interpretable Issues in Fuzzy Modeling*. Springer-Verlag: London.
 27. Espinosa, J., Hadjili, M., Wertz, V., & Vandewalle, J. (1999). Predictive control using fuzzy models-comparative study. *Proceedings of the European Control Conference-99*.
+
+
+
 28. Rawlings, J. (1999). Tutorial: Model predictive control technology. In: *Proceedings of the ACC San Diego, CA*.
+
 29. Richalet, J. (1993). Industrial applications of model-based predictive control. *Automatica*, 29, 1251–1274.
+
 30. Sjberg, J., Zhang, Q., Ljung, L., Benveniste, A., Delyon, B., Glorermec, P., Hjalmarsson, J., & Juditsky, A. (1995). Nonlinear black-box modeling in system identification: A unified overview. *Automatica*, 31, 1691–1724.
 
 # Taylor & Francis
 
 Taylor & Francis Group
-http://taylorandfrancis.com
+
+`http://taylorandfrancis.com`
 
 ![](img/e9de70cd491e84262133af63cb33d500_52_0.png)
 
@@ -732,29 +726,25 @@ S. LINGESWARI 和 T. REVATHI
 
 #### 3.2.1 模糊集
 
-模糊集是模糊逻辑中的一个基本概念，它允许我们表示并处理不确定性和不精确性。与经典集合不同，在经典集合中，一个元素要么是成员（成员资格度为 1），要么不是成员
+模糊集是模糊逻辑中的一个基本概念，它允许我们表示并处理不确定性和不精确性。与经典集合不同，在经典集合中，一个元素要么是成员（成员资格度为 1），要么不是成员（成员度为 0），模糊集允许元素具有介于 0 和 1 之间的部分成员度。一些实时示例如下。
 
-
-
-（成员度为 0），模糊集允许元素具有介于 0 和 1 之间的部分成员度。一些实时示例如下。
-
-## 3.2.1.1 温度分类
+##### 3.2.1.1 温度分类
 
 想象一下，你想将温度归类为“冷”、“温”和“热”。在经典集合论中，你可能会设置一个明确的边界，例如 50°F 以下的温度是“冷”的，50°F 到 70°F 之间的温度是“温”的，而 70°F 以上的温度是“热”的。然而，在模糊集中，你可以为每个类别分配成员度。例如，60°F 的温度可能在“温”中的成员度为 0.6，在“冷”中的成员度为 0.4，这表明它既部分偏温又部分偏冷。
 
-## 3.2.1.2 图像分割
+##### 3.2.1.2 图像分割
 
 在图像处理中，模糊集可用于图像分割，其中你将每个像素归类到不同区域的成员度。当对象的边界不明确时，像素可以同时属于多个区域，且具有不同的成员度，这非常有用。
 
-## 3.2.1.3 控制系统
+##### 3.2.1.3 控制系统
 
 模糊集在控制系统中有着广泛的应用。例如，在空调系统中，你可以为“凉爽”、“舒适”和“温暖”定义模糊集，以确定系统如何根据用户偏好调整温度。这些集合允许系统进行渐进且平滑的调整。
 
-## 3.2.2 隶属函数
+#### 3.2.2 隶属函数
 
 隶属函数是模糊逻辑的一个关键组成部分，用于确定元素属于模糊集的程度。这些函数将输入值映射到 0 和 1 之间连续尺度上的隶属度。根据问题的性质和对不确定性的期望表示，这些函数可以具有各种形状，例如三角形、梯形或 S 形。
 
-### 3.2.2.1 三角形隶属函数
+##### 3.2.2.1 三角形隶属函数
 
 三角形隶属函数由三个参数定义：左边界、峰值和右边界。
 
@@ -764,7 +754,7 @@ S. LINGESWARI 和 T. REVATHI
 
 在这种情况下，如果一个人的身高是 165 厘米，他们在“高”集合中的隶属度将为 1。如果身高是 150 厘米，则隶属度将为 0。如果身高是 175 厘米，则隶属度将为 0.5。
 
-### 3.2.2.2 梯形隶属函数
+##### 3.2.2.2 梯形隶属函数
 
 梯形隶属函数有四个参数：最小值、左肩、右肩和最大值。它表示一种更平缓的过渡，中间有一个平坦区域。
 
@@ -772,7 +762,7 @@ S. LINGESWARI 和 T. REVATHI
 
 在空调系统中，你可能有一个“舒适温度”模糊集。梯形隶属函数的最小值可能为 20°C，左肩在 22°C，右肩在 26°C，最大值为 28°C。24°C 的房间温度将具有中等隶属度。
 
-### 3.2.2.3 高斯隶属函数
+##### 3.2.2.3 高斯隶属函数
 
 高斯隶属函数具有钟形曲线，其特征由均值（μ）和标准差（σ）参数定义。当中心值周围存在不确定性时，它通常被使用。
 
@@ -786,49 +776,49 @@ S. LINGESWARI 和 T. REVATHI
 
 此隶属函数表示个人的“高度”程度，峰值在 180 厘米，随着身高偏离均值，隶属度降低。
 
-### 3.2.2.4 S 形（S 状）隶属函数
+##### 3.2.2.4 S 形（S 状）隶属函数
 
 S 形隶属函数类似于“S”形，常用于隶属度之间具有渐进过渡的变量。
 
 示例：在“客户满意度”的背景下，你可以使用 S 形隶属函数来捕捉从“不满意”到“满意”的过渡。随着满意度评分的增加，隶属度逐渐增加。
 
-## 3.2.3 模糊逻辑算子
+#### 3.2.3 模糊逻辑算子
 
 模糊逻辑算子是模糊逻辑的基本组成部分，允许操作模糊集并使用不确定或不精确的信息进行推理。模糊逻辑算子类似于经典（布尔）逻辑中的逻辑算子（AND、OR、NOT），但它们被改编以处理隶属度而非二值的真/假值。
 
-### 3.2.3.1 模糊与（MIN 算子）
+##### 3.2.3.1 模糊与（MIN 算子）
 
 模糊 AND 算子计算两个或多个模糊集隶属度的最小值。它表示所有条件同时为真的程度。
 
-示例：如果你有两个模糊集，“高”的隶属度为 0.6，“瘦”的隶属度为 0.7，那么模糊 AND 运算产生的“高”和“瘦”交集的隶属度为 0.6 [min(0.6, 0.7)]。
+示例：如果你有两个模糊集，“高”的隶属度为 0.6，“瘦”的隶属度为 0.7，那么模糊 AND 运算产生的“高”和“瘦”交集的隶属度为 0.6 [`min(0.6, 0.7)`]。
 
-### 3.2.3.2 模糊或（MAX 算子）
+##### 3.2.3.2 模糊或（MAX 算子）
 
 模糊 OR 算子计算两个或多个模糊集隶属度的最大值。它表示任何条件为真的程度。
 
-示例：如果你有两个模糊集，“高”的隶属度为 0.8，“中”的隶属度为 0.6，那么模糊 OR 运算产生的“高”和“中”并集的隶属度为 0.8 [max(0.8, 0.6)]。
+示例：如果你有两个模糊集，“高”的隶属度为 0.8，“中”的隶属度为 0.6，那么模糊 OR 运算产生的“高”和“中”并集的隶属度为 0.8 [`max(0.8, 0.6)`]。
 
-### 3.2.3.3 模糊非（补运算子）
+##### 3.2.3.3 模糊非（补运算子）
 
 模糊 NOT 算子计算模糊集隶属度的补集。它表示条件为假的程度。
 
-示例：如果你有一个隶属度为 0.3 的模糊集“不太热”，那么模糊 NOT 运算产生的条件“不太热”的隶属度为 0.7 (1−0.3)。
+示例：如果你有一个隶属度为 0.3 的模糊集“不太热”，那么模糊 NOT 运算产生的条件“不太热”的隶属度为 0.7 (`1−0.3`)。
 
-### 3.2.3.4 模糊蕴含算子
+##### 3.2.3.4 模糊蕴含算子
 
 模糊蕴含算子用于模糊基于规则的系统，根据前件条件的真值来确定蕴含（后件）的强度。
 
 模糊蕴含算子的示例包括 Mamdani 蕴含和 Larsen 蕴含。
 
-### 3.2.3.5 模糊聚合算子
+##### 3.2.3.5 模糊聚合算子
 
-模糊聚合算子用于组合 FIS 中多个模糊规则的输出。常见的聚合算子包括最大（max）、求和和加权平均算子。
+模糊聚合算子用于组合 FIS 中多个模糊规则的输出。常见的聚合算子包括最大（`max`）、求和和加权平均算子。
 
-### 3.2.3.6 模糊 T-范数和 T-余范数算子
+##### 3.2.3.6 模糊 T-范数和 T-余范数算子
 
-T-范数（t-normative）和 T-余范数（t-conormative）算子分别用于计算模糊集的交集和并集。流行的 T-范数算子包括最小（min）和乘积（product）算子，而常见的 T-余范数算子包括最大（max）和概率和（probabilistic sum）算子。
+T-范数（t-normative）和 T-余范数（t-conormative）算子分别用于计算模糊集的交集和并集。流行的 T-范数算子包括最小（`min`）和乘积（`product`）算子，而常见的 T-余范数算子包括最大（`max`）和概率和（`probabilistic sum`）算子。
 
-### 3.2.3.7 模糊比较算子
+##### 3.2.3.7 模糊比较算子
 
 模糊比较算子用于比较两个模糊数或集，并确定它们的关系，例如相等、优势或交集。
 
@@ -836,120 +826,117 @@ T-范数（t-normative）和 T-余范数（t-conormative）算子分别用于计
 
 它们是 FIS 的重要组成部分，FIS 应用于各个领域，包括控制系统、模式识别和 AI，在这些领域中，传统的二值逻辑可能无法充分捕捉现实世界数据的复杂性。
 
-## 3.2.4 模糊推理系统
+#### 3.2.4 模糊推理系统
 
 FIS 是基于模糊逻辑的计算模型，通过结合不确定性和不精确性来模拟人类决策过程。这些系统使用模糊集、规则和隶属函数以比传统二值逻辑更灵活、更类人的方式做出决策或执行任务。FIS 广泛用于控制系统、决策支持、模式识别和 AI。
 
-## 3.2.4.1 模糊推理系统的组件
+##### 3.2.4.1 模糊推理系统的组件
 
-### 3.2.4.1.1 模糊化
+###### 3.2.4.1.1 模糊化
 
 在模糊化阶段，使用隶属函数将精确输入转换为模糊集。这一步将定量输入值转换为语言术语，例如“低”、“中”或“高”。
 
-### 3.2.4.1.2 知识库（规则库）
+###### 3.2.4.1.2 知识库（规则库）
 
 知识库由一组将模糊输入变量与模糊输出变量关联的语言规则组成。这些规则通常以“如果–那么”语句的形式表达，并捕获专家知识或特定领域的信息。每条规则定义了输入和输出模糊集之间的关系。
 
-### 3.2.4.1.3 推理引擎
+###### 3.2.4.1.3 推理引擎
 
 推理引擎是 FIS 的核心。它使用模糊输入值和知识库进行推理并确定模糊输出值。它使用模糊逻辑算子（AND、OR、NOT）来评估规则前件并将它们组合以产生中间模糊值。
 
-
-
-
-## 3.2.4.1.4 模糊规则评估
+###### 3.2.4.1.4 模糊规则评估
 
 通过计算输入变量的隶属度，对每条规则的前件（IF 部分）进行评估，以确定其真实性度。规则的真实性度代表该规则在当前输入值上的适用强度。
 
-## 3.2.4.1.5 聚合
+###### 3.2.4.1.5 聚合
 
-将多条规则的结果进行聚合，以生成一个组合输出的模糊集合。常见的聚合方法包括取最大值（maximum）算子、求和以及加权平均。
+将多条规则的结果进行聚合，以生成一个组合输出的模糊集合。常见的聚合方法包括取最大值（`maximum`）算子、求和以及加权平均。
 
-## 3.2.4.1.6 去模糊化
+###### 3.2.4.1.6 去模糊化
 
 在去模糊化阶段，将聚合后的模糊输出集转换为精确的输出值。可以使用各种去模糊化方法，例如重心法，它用于寻找聚合输出集的中心。
 
-# 3.2.5 模糊推理系统的工作原理
+### 3.2.5 模糊推理系统的工作原理
 
-## 3.2.5.1 输入模糊化
+#### 3.2.5.1 输入模糊化
 
 使用隶属函数将精确的输入值映射到模糊集合。这一步骤涉及根据输入值，为每个语言学术语分配隶属度。
 
-## 3.2.5.2 规则评估
+#### 3.2.5.2 规则评估
 
 将模糊输入值与模糊规则的前件进行匹配。根据输入值与规则条件的匹配程度，计算每条规则的真实性度。
 
-## 3.2.5.3 推理
+#### 3.2.5.3 推理
 
 推理引擎结合规则的输出，形成一个模糊输出集。这是通过根据规则的真实性度，对规则的后件（THEN 部分）应用模糊逻辑算子（AND、OR）来实现的。
 
-## 3.2.5.4 聚合
+#### 3.2.5.4 聚合
 
-聚合方法（例如，最大值算子）将来自不同规则的模糊输出结合起来，创建一个单一的聚合输出模糊集。
+聚合方法（例如，`最大值算子`）将来自不同规则的模糊输出结合起来，创建一个单一的聚合输出模糊集。
 
-## 3.2.5.5 去模糊化
+#### 3.2.5.5 去模糊化
 
 使用去模糊化方法将聚合后的输出模糊集转换为精确的输出值。该值代表系统的最终决策或动作。
 
 模糊推理系统（FIS）特别适用于决策过程涉及不确定或模糊信息的应用场景，因此适用于控制系统、专家系统和模式识别等领域。它们允许引入类似人类的推理能力，并能够有效处理复杂和模糊的数据。
 
-# 3.3 应用
+### 3.3 应用
 
 模糊逻辑已在各个领域找到应用，包括控制系统、人工智能、模式识别、决策制定、机器人技术等。它在模糊性和不精确性是固有的情况下表现出色，例如在自然语言处理、温度控制和金融预测中。
 
-# 3.4 控制系统
+### 3.4 控制系统
 
 模糊逻辑控制系统被广泛应用于多个行业，包括汽车、工业自动化以及暖通空调（HVAC）领域。它们能够适应不断变化的条件，即使系统动力学定义不明确，也能提供精确的控制。
 
-## 3.4.1 汽车工业
+#### 3.4.1 汽车工业
 
 模糊逻辑用于车辆系统，如防抱死制动系统（ABS）、自动变速箱和发动机控制单元（ECU），以优化性能并提高安全性。
 
-## 3.4.2 消费电子
+#### 3.4.2 消费电子
 
 模糊逻辑应用于洗衣机等家用电器，根据负载大小和脏污程度调整洗涤周期，使其更加节能且用户友好。
 
-## 3.4.3 机器人技术
+#### 3.4.3 机器人技术
 
 模糊控制器用于机器人系统中的任务，如路径规划、避障和抓取物体。模糊逻辑帮助机器人在不确定环境中做出实时决策。
 
-## 3.4.4 医疗诊断
+#### 3.4.4 医疗诊断
 
 模糊推理系统（FIS）可以通过结合模糊的医疗数据和专家知识，确定不同诊断的可能性，从而协助医疗专业人员诊断疾病和状况。
 
-## 3.4.5 交通管理
+#### 3.4.5 交通管理
 
 模糊逻辑被用于智能交通管理系统，以控制交通信号灯、优化交通流量并减少高峰时段的拥堵。
 
-## 3.4.6 金融建模
+#### 3.4.6 金融建模
 
 模糊逻辑可用于金融预测和投资组合优化，考虑模糊的市场数据和经济指标以做出投资决策。
 
-## 3.4.7 自然语言处理
+#### 3.4.7 自然语言处理
 
 模糊逻辑有助于自然语言处理任务，如情感分析、模糊搜索和语言翻译，这些任务中的词语和含义往往是不精确的。
 
-## 3.4.8 质量控制
+#### 3.4.8 质量控制
 
 模糊逻辑可用于改善制造过程中的质量控制，通过对生产参数进行实时调整来保持产品质量。
 
-## 3.4.9 经济与定价
+#### 3.4.9 经济与定价
 
 模糊逻辑应用于定价策略，特别是在电子商务中，用于动态调整价格。
 
-## 3.4.10 农业
+#### 3.4.10 农业
 
 模糊逻辑被用于精准农业，执行如灌溉调度、作物产量预测和害虫控制等任务，同时考虑土壤和天气条件的变化。
 
-# 3.5 优势
+### 3.5 优势
 
 在不适合进行精确二元决策的场景中，模糊逻辑比经典逻辑具有优势。它可以处理具有固有不确定性和变异性的现实世界问题，使其成为建模复杂系统的宝贵工具。
 
-# 3.6 挑战
+### 3.6 挑战
 
 模糊逻辑并非没有挑战。它在计算上可能非常密集，解释模糊规则和隶属函数可能很复杂。此外，确定适当的模糊集和规则需要领域专业知识。
 
-# 3.7 结论
+### 3.7 结论
 
 总之，模糊逻辑提供了一种系统性地捕获和处理不确定性的方法，使机器能够以类似人类推理的方式做出决策和控制系统。它在各个领域找到了广泛的应用，并继续作为人工智能和控制系统领域的重要工具。
 
@@ -963,26 +950,43 @@ FIS 是基于模糊逻辑的计算模型，通过结合不确定性和不精确�
 ## 参考文献
 
 1. Zadeh, L. A. (1965). 模糊集. *Information and Controls*, 8(3), 338–353.
+
 2. Jang, J. S. (1993). ANFIS：基于自适应网络的模糊推理系统. *IEEE Transactions on Systems, Man, and Cybernetics*, 23(3), 665–685.
+
 3. Mamdani, E. H., & Assilian, S. (1975). 使用模糊逻辑控制器的语言综合实验. *International Journal of Man-Machine Studies*, 7(1), 1–13.
+
 4. Klir, G. J., & Yuan, B. (1995). *模糊集与模糊逻辑：理论与应用*. Prentice Hall.
+
 5. Pedrycz, W., & Gomide, F. (2007). *模糊集导论：分析与设计*. MIT Press.
+
 6. Lee, C. C. (1990). 控制系统中的模糊逻辑：模糊逻辑控制器——第一部分. *IEEE Transactions on Systems, Man, and Cybernetics*, 20(2), 404–418.
+
 7. Bezdek, J. C., Ehrlich, R., & Full, W. (1984). FCM：模糊 C-均值聚类算法. *Computers & Geosciences*, 10(2–3), 191–203.
+
 8. Pal, N. R., & Pal, K. (1993). 图像分割技术综述. *Pattern Recognition*, 26(9), 1277–1294.
+
 9. Mamdani, E. H., & Assilian, S. (1975). 使用模糊逻辑控制器的语言综合实验. *International Journal of Man-Machine Studies*, 7(1), 1–13.
+
 10. Jang, J. S. R., Sun, C. T., & Mizutani, E. (1997). *神经模糊与软计算：学习与机器智能的计算方法*. Prentice-Hall.
+
 11. Sugeno, M., & Kang, G. T. (1988). 模糊模型的结构识别. *Fuzzy Sets and Systems*, 28(1), 15–33.
+
 12. Gupta, M. M., & Tanaka, K. (1988). 模糊在控制中的应用综述. *Fuzzy Sets and Systems*, 27(2), 113–131.
+
 13. Wu, D., & Mendel, J. M. (1998). 连续时间模糊系统的不确定性边界. *Fuzzy Sets and Systems*, 94(1), 67–76.
+
 14. Castaneda, V., & Melin, P. (2001). 模糊逻辑在图像处理中的应用. *Artificial Intelligence Review*, 15(3), 311–333.
+
 15. Ross, T. J. *带有工程应用的模糊逻辑*. John Wiley & Sons, Ltd.
 
 # 第 4 章
 
+
+
 # 模糊逻辑在卫生科学领域的应用
 
 **GEETA ARORA**
+
 印度旁遮普邦法古华拉洛维专业大学数学系
 
 ## 摘要
@@ -991,35 +995,31 @@ FIS 是基于模糊逻辑的计算模型，通过结合不确定性和不精确�
 
 ## 4.1 模糊逻辑简介
 
-模糊逻辑是一种用于解决解决问题和决策制定中不确定性和不精确性的数学和计算框架。它扩展了传统的二元（真/假）逻辑，以处理模糊、不完整、
-
-
-
-或不明确的信息。模糊逻辑 [1] 允许表达部分真实和部分的虚假，而无需进行绝对的区分（即某事不是完全真实，就是完全虚假）。这种适应性使模糊逻辑在涉及人类判断和自然语言的场景中特别有用 [2]。
+模糊逻辑是一种用于解决解决问题和决策制定中不确定性和不精确性的数学和计算框架。它扩展了传统的二元（真/假）逻辑，以处理模糊、不完整、或不明确的信息。模糊逻辑 [1] 允许表达部分真实和部分的虚假，而无需进行绝对的区分（即某事不是完全真实，就是完全虚假）。这种适应性使模糊逻辑在涉及人类判断和自然语言的场景中特别有用 [2]。
 
 模糊逻辑在许多领域都有应用，例如工程（特别是控制系统）、人工智能、机器人、医疗保健以及决策支持系统（DSS），在这些领域中，处理不确定性和不精确性至关重要 [3]。模糊逻辑通过引入模糊集和语言变量，将经典逻辑的原理扩展到了处理不确定和模糊情境中。在精确的二元逻辑可能不适用时，模糊逻辑为建模和解决问题提供了有用的工具 [4]。以下是模糊逻辑的基本核心概念 [5]。
 
-## 4.1.1 模糊集
+### 4.1.1 模糊集
 
 模糊逻辑基于模糊集，它是经典集的扩展。在经典集中，元素要么包含在内（真），要么被排除（假）。相比之下，在模糊集中，元素可以成为集合的成员，其程度介于 0 和 1 之间，这反映了其成员资格的程度。隶属度函数表征了每个元素的成员资格水平。
 
-## 4.1.2 语言变量
+### 4.1.2 语言变量
 
 模糊逻辑经常处理模糊的语言变量，例如“热”、“冷”、“高”或“矮”。语言变量被表示为模糊集，其隶属度函数将语言术语映射到不同等级的成员资格上。
 
-## 4.1.3 规则
+### 4.1.3 规则
 
 模糊逻辑采用一套 IF–THEN 原理，通常表达为“如果条件 A 为真，则采取动作 B”。这些原理基于模糊逻辑运算符（AND、OR、NOT）连接语言变量及其各自的隶属度函数。
 
-## 4.1.4 模糊推理
+### 4.1.4 模糊推理
 
 模糊推理是利用模糊原理做出决策或得出结论的过程。它由三个基本步骤组成：模糊化（将输入值转换为模糊集）、规则评估（应用模糊规则来确定满足程度）和去模糊化（将模糊输出转换为清晰值）。
 
-## 4.1.5 模糊运算符
+### 4.1.5 模糊运算符
 
 模糊逻辑运算符包括“AND”、“OR”和“NOT”，它们被修改以在模糊集中起作用。这些运算符用于结合模糊集，并确定结果集合中的成员资格程度。
 
-## 4.1.6 模糊控制系统
+### 4.1.6 模糊控制系统
 
 模糊逻辑被广泛应用于控制系统中，其中它可以建模和调节非线性、复杂的系统。模糊控制系统使用语言原理和模糊集来做出实时决策并适应不断变化的条件。
 
@@ -1051,10 +1051,7 @@ FIS 是基于模糊逻辑的计算模型，通过结合不确定性和不精确�
 
 ### 4.2.6 持续监测与反馈
 
-模糊逻辑非常适用于持续监测和适应目的。在医疗领域，患者的情况经常迅速变化，需要相应地调整治疗方案。模糊逻辑具有处理输入数据并在实时调整判断的能力，从而保证治疗和维持最新且高效的状态。基于模糊逻辑系统的可解释性通常优于黑盒机器学习算法。医疗保健专业人员能够理解并信任由...
-
-
-模糊逻辑系统之所以具有优势，是因为其能够追溯用于得出特定结果的底层逻辑和规则。
+模糊逻辑非常适用于持续监测和适应目的。在医疗领域，患者的情况经常迅速变化，需要相应地调整治疗方案。模糊逻辑具有处理输入数据并在实时调整判断的能力，从而保证治疗和维持最新且高效的状态。基于模糊逻辑系统的可解释性通常优于黑盒机器学习算法。医疗保健专业人员能够理解并信任由模糊逻辑系统之所以具有优势，是因为其能够追溯用于得出特定结果的底层逻辑和规则。
 
 总而言之，在医疗决策中利用模糊逻辑具有显著优势，因为它能够有效处理不确定性、整合语言变量、解决多准则决策场景、容纳专家知识、实现护理个性化、管理复杂性、提供持续反馈并促进可解释性 [9]。采用这种方法不仅提高了决策过程的整体有效性，还有助于提供更具以患者为中心和自适应性质的医疗服务。
 
@@ -1125,11 +1122,7 @@ FIS 是基于模糊逻辑的计算模型，通过结合不确定性和不精确�
 
 以下是模糊逻辑在辅助健康科学中应用的一些新方向和研究课题：
 
-
-
-
-
-## 4.4.1 基于模糊逻辑的诊断与治疗决策支持系统
+### 4.4.1 基于模糊逻辑的诊断与治疗决策支持系统
 
 以模糊逻辑为基础的决策支持系统（DSS）正在被开发，以帮助辅助医疗从业者诊断疾病并制定治疗方案。为了提供更精准、个性化的诊断和治疗方案，这些 DSS 可能使用一系列变量，包括患者的症状、病史和检查结果。模糊逻辑 DSS 的一个潜在应用是物理治疗师对肌肉骨骼问题的诊断和治疗。DSS 可以根据患者的疼痛阈值、关节活动度及其他变量创建定制化的治疗计划。
 
@@ -1175,13 +1168,16 @@ FIS 是基于模糊逻辑的计算模型，通过结合不确定性和不精确�
 12. Phung, N. H., & Kreinovich, V. (2001). 模糊逻辑及其在医学中的应用。*医疗信息学国际期刊*, *62*(2–3), 165–173.
 13. Gürsel, G. (2016). 医疗保健、不确定性与模糊逻辑。*数字医学*, *2*(3), 101–112.
 14. Quasim, M. T., Shaikh, A., Shuaib, M., Sulaiman, A., Alam, S., & Asiri, Y. (2021). 使用模糊决策方法评估智能医疗管理。doi:10.21203/rs.3.rs-424702/v1
+
+
+
 15. Patiarca, R., Ramos, M., Paltrinieri, N., Massaiu, S., Costantino, F., Di Gravio, G., & Boring, R. L. (2020). 人为可靠性分析：探索一个研究领域的知识结构。*可靠性工程与系统安全*, *203*, 107102.
 
 # 直觉模糊阈值超图的横截线及其性质
 
 K. K. Myithili 和 C. Nandhini
 
-*印度泰米尔纳德邦埃罗德威尔拉拉尔女子学院数学系*
+*印度泰米尔纳德邦埃罗德威尔拉尔女子学院数学系*
 
 ## 摘要
 
@@ -1190,89 +1186,84 @@ K. K. Myithili 和 C. Nandhini
 ## 5.1 引言
 
 莱昂哈德·欧拉（Leonhard Euler）[11] 关于图论的开创性论文题为《论位置几何学中的一个问题》，于 1736 年发表在《圣彼得堡科学院评论》上。邦迪（Bondy）和默蒂（Murty）的《图论及其应用》[2] 涵盖了图表示、图算法、网络流和匹配等基本概念。乔杜姆（Choudum）的《图论基础课程》[3] 涵盖了图论的一些基本和各个主题。
-
 查瓦特尔（Chvatal）和哈默（Hammer）[4] 撰写的论文《整数规划中的不等式聚合》发表于 1977 年。由 N. V.R. Mahadev 和 Peled 撰写的题为《阈值图及相关主题》[13] 的书籍提出了许多引人入胜的开放问题和研究建议。
-
 贝尔热（Berge）的《超图》[6] 是组合数学和图论领域的经典著作。贝尔热（Berge）的《图与超图》[5] 是一本经典教科书，提供了对图和超图的理论与应用的全面介绍。布雷托（Bretto）的《超图理论：导论》[1] 介绍了超图，旨在弥补该理论近期手稿的不足。巴赫马尼安（Bahmanian）和萨jna（Sajna）的《超图中的连接与分离》[14] 从图论的角度研究了超图的不同基本连接特性，重点关注割边、割顶和块。
-
 扎德（Zadeh）的《模糊集》[20] 在 1965 年讨论了包含、并集、交集、补集、关系、凸性等概念，并确立了这些概念在模糊集背景下的各种特性。马修（Mathew）等人的《模糊图论》[19] 是一本全面探索模糊图论的书籍，提供了理论基础、方法论和实际应用的均衡混合。莫德森（Mordeson）和奈尔（Nair）的《模糊图与模糊超图》[7] 提供了模糊图的全面介绍，涵盖了基本概念、性质和算法。帕尔（Pal）等人的《模糊图论现代趋势》[12] 提供了一套全面的方法，将图论和模糊数学应用于实际问题。
-
 阿塔纳索夫（Atanassov）[9] 题为《直觉模糊集：理论与应用》的书籍的一个重要优势在于其清晰且严谨的数学形式化。阿塔纳索夫（Atanassov）[8] 的《直觉模糊集论》一书涵盖了 IFS（直觉模糊集）的概念、IFS 上的运算和关系，以及 IFS 的几何解释。杨（Yang）和毛（Mao）[10] 的论文《直觉模糊阈值图》提出了直觉模糊阈值图、直觉模糊交替四元环以及直觉模糊图阈值维度的三个概念，并提供了阈值图的扩展。
-
 帕瓦蒂（Parvathi）等人 [18] 首先引入了直觉模糊超图。随后，阿克加（Akgar）和杜德克（Dudek）[15] 解释了直觉模糊超图及其应用。[16] 中讨论了几种类型的直觉模糊有向超图。在 [17] 中，讨论了直觉模糊有向超图横截线的性质。
-
-
-
 
 ## 5.2 预备知识
 
-**定义 5.2.1.** 直觉模糊阈值超图（IFTHG）记作 $\mathbb{H}_G = (U, E; s_1, s_2)$，其中：
+**定义 5.2.1.** 直觉模糊阈值超图（IFTHG）记作 `H_G = (U, E; s_1, s_2)`，其中：
+- 1. `U = {u_1, u_2, ..., u_n}` 是直觉模糊顶点的有限集合，
+- 2. `E = {E_1, E_2, ..., E_m}` 是 `U` 的清晰子集族，
+- 3. `E_j = { (mu_j^j(u_i), nu_j^j(u_i)) | 0 <= mu_j^j(u_i) + nu_j^j(u_i) <= 1 }, j = 1, 2, ..., m`
+- 4. `E_j != empty`, `j = 1, 2, ..., m`
+- 5. `union_{j=1}^m E_j = U`
+- 6. 若存在 `s_1` 和 `s_2 > 0`，使得 `sum_{u_i in V} mu_j^j(u_i) <= s_1` 且 `sum_{u_i in V}(1 - nu_j^j(u_i)) <= s_2`，则 `H_G` 中不相邻顶点的所有不同组合构成的独立集 `V subseteq U`。
+其中 `E_j` 的超边是直觉模糊顶点的清晰集合，`mu_i(u_i)` 和 `nu_i(u_i)` 分别表示顶点 `u_i` 对超边 `e_j` 的隶属度和非隶属度。
 
-- 1. $U = \{u_1, u_2, \dots, u_n\}$ 是直觉模糊顶点的有限集合，
-- 2. $E = \{E_1, E_2, \dots, E_m\}$ 是 $U$ 的清晰子集族，
-- 3. $E_j = \{ (\mu_j^j(u_i), \nu_j^j(u_i)) \mid 0 \le \mu_j^j(u_i) + \nu_j^j(u_i) \le 1 \}, j = 1, 2, \dots, m$
-- 4. $E_j \neq \varnothing, j = 1, 2, \dots, m$
-- 5. $\bigcup_{j=1}^m E_j = U$
-- 6. 若存在 $s_1$ 和 $s_2 > 0$，使得 $\sum_{u_i \in V} \mu_j^j(u_i) \le s_1$ 且 $\sum_{u_i \in V}(1 - \nu_j^j(u_i)) \le s_2$，则 $\mathbb{H}_G$ 中不相邻顶点的所有不同组合构成的独立集 $V \subseteq U$。
+**定义 5.2.2.** 设 `H_G = (U, E; s_1, s_2)` 为一个 IFTHG。若存在独立集 `V subseteq U`，则 `H_G` 的高度记为 `H_u(H_G) = { max(min(mu_i)), max(max(nu_i)) }`，满足对所有 `i = 1, 2, ..., m` 和 `j = 1, 2, ..., n`，有 `sum_{u_i in V} mu_i^j(u_i) <= s_1` 且 `sum_{u_i in V}(1 - nu_i^j(u_i)) <= s_2`，其中 `mu_i^j` 和 `nu_i^j` 分别是第 `i` 个顶点在第 `j` 个超边中的隶属值和非隶属值。
 
-其中 $E_j$ 的超边是直觉模糊顶点的清晰集合，$\mu_i(u_i)$ 和 $\nu_i(u_i)$ 分别表示顶点 $u_i$ 对超边 $e_j$ 的隶属度和非隶属度。
+**定义 5.2.3.** 设 `H_G = (U, E; s_1, s_2)` 为一个 IFTHG，且存在独立集 `V subseteq U`。若 `e_j x e_k in E` 且 `0 < alpha, beta < 1`，则定义 `(alpha, beta)`-水平为 `(e_j x e_k)^{alpha, beta} = { u_i | u_i in U | min((mu_i^j)^alpha(u_i)) >= alpha, max((nu_i^k)^beta(u_i)) <= beta }`，满足 `sum_{u_i in V} mu_j^j(u_i) <= s_1` 且 `sum_{u_i in V}(1 - nu_j^j(u_i)) <= s_2`。
 
-**定义 5.2.2.** 设 $\mathbb{H}_G = (U, E; s_1, s_2)$ 为一个 IFTHG。若存在独立集 $V \subseteq U$，则 $\mathbb{H}_G$ 的高度记为 $H_u(\mathbb{H}_G) = \{ \max(\min(\mu_i)), \max(\max(\nu_i)) \}$，满足对所有 $i = 1, 2, \dots, m$ 和 $j = 1, 2, \dots, n$，有 $\sum_{u_i \in V} \mu_i^j(u_i) \le s_1$ 且 $\sum_{u_i \in V}(1 - \nu_i^j(u_i)) \le s_2$，其中 $\mu_i^j$ 和 $\nu_i^j$ 分别是第 $i$ 个顶点在第 $j$ 个超边中的隶属值和非隶属值。
+**定义 5.2.4.** 设 `H_G = (U, E; s_1, s_2)` 为一个 IFTHG，存在独立集 `V subseteq U` 使得 `H_G^{(y_i, z_i)} = (U^{(y_i, z_i)}, E^{(y_i, z_i)})` 为 `H_G` 的 `(y_i, z_i)`-水平。满足以下条件的一列实数 `{ y_1, y_2, ..., y_n; z_1, z_2, ..., z_n }`，其中 `0 <= y_i <= H_u(H_G)` 且 `0 <= z_i <= H_v(H_G)`：
+- 1. 若 `y_1 < alpha < 1` 且 `0 < beta < z_1 => E^{alpha, beta} = empty`；
+- 2. 若 `y_{i+1} <= alpha <= y_i; z_i <= beta <= z_{i+1} => E^{alpha, beta} = E^{(y_i, z_i)}`；以及
+- 3. `E^{(y_i, z_i)} subset E^{(y_{i+1}, z_{i+1})}`
+满足 `sum_{u_i in V} mu_i^j(u_i) <= s_1` 且 `sum_{u_i in V}(1 - nu_i^j(u_i)) <= s_2` 的数列被称为 `H_G` 的*基本序列*，记为 `F(H_G)`。
 
-**定义 5.2.3.** 设 $\mathbb{H}_G = (U, E; s_1, s_2)$ 为一个 IFTHG，且存在独立集 $V \subseteq U$。若 $e_j \times e_k \in E$ 且 $0 < \alpha, \beta < 1$，则定义 $(\alpha, \beta)$-水平为 $(e_j \times e_k)^{\alpha, \beta} = \{ u_i \mid u_i \in U \mid \min((\mu_i^j)^\alpha(u_i)) \ge \alpha, \max((\nu_i^k)^\beta(u_i)) \le \beta \}$，满足 $\sum_{u_i \in V} \mu_j^j(u_i) \le s_1$ 且 $\sum_{u_i \in V}(1 - \nu_j^j(u_i)) \le s_2$。
+**定义 5.2.5.** 设 `H_G = (U, E; s_1, s_2)` 为一个 IFTHG，且存在独立集 `V subseteq U`。则 `H_G` 的*核集*记为 `C(H_G)`，其中 `0 < (y_i, z_i) <= H_u(H_G)`，定义为 `C(H_G) = {H_G^{(y_1, z_1)}, H_G^{(y_2, z_2)}, ..., H_G^{(y_n, z_n)}}`。对应的 `(y_n, z_n)`-水平超图集合为 `H_G^{(y_1, z_1)} subset H_G^{(y_2, z_2)} subset ... subset H_G^{(y_n, z_n)}`，满足 `sum_{u_i in V} mu_y(u_i) <= s_1` 且 `sum_{u_i in V}(1 - nu_y(u_i)) <= s_2`，称为 `H_G` 的诱导基本序列，记为 `I(H_G)`。`(y_r, z_r)`-水平被称为 `H_G` 的支撑水平，而 `H_G^{(y_r, z_n)}` 被称为 `H_G` 的支撑。
 
-**定义 5.2.4.** 设 $\mathbb{H}_G = (U, E; s_1, s_2)$ 为一个 IFTHG，存在独立集 $V \subseteq U$ 使得 $\mathbb{H}_G^{(y_i, z_i)} = (U^{(y_i, z_i)}, E^{(y_i, z_i)})$ 为 $\mathbb{H}_G$ 的 $(y_i, z_i)$-水平。满足以下条件的一列实数 $\{ y_1, y_2, \dots, y_n; z_1, z_2, \dots, z_n \}$，其中 $0 \le y_i \le H_u(\mathbb{H}_G)$ 且 $0 \le z_i \le H_v(\mathbb{H}_G)$：
+**定义 5.2.6.** 设 `H_G = (U, E, s_1, s_2)` 和 `H_G' = (U', E', s_1', s_2')` 为 IFTHG，且存在独立集 `V subseteq U` 使得 `H_G` 是 `H_G'` 的一个*部分 IFTHG*：
+```
+u' = {
+  min(supp(mu_y)) 且 sum_{u_j in V'} mu_y(u_j) <= s_1 | mu_y in E'
+  max(supp(nu_y)) 且 sum_{u_j in V'} (1 - nu_y(u_i)) <= s_2 | nu_y in E'
+}
+```
+由 `E'` 生成的部分 IFTHG 表示为 `H_G subseteq H_G'`。若 `H_G subseteq H_G'` 且 `H_G != H_G'`，则记作 `H_G subset H_G'`.
 
-- 1. 若 $y_1 < \alpha < 1$ 且 $0 < \beta < z_1 \Rightarrow E^{\alpha, \beta} = \varnothing$；
-- 2. 若 $y_{i+1} \le \alpha \le y_i; z_i \le \beta \le z_{i+1} \Rightarrow E^{\alpha, \beta} = E^{(y_i, z_i)}$；以及
-- 3. $E^{(y_i, z_i)} \subset E^{(y_{i+1}, z_{i+1})}$
-
-满足 $\sum_{u_i \in V} \mu_i^j(u_i) \le s_1$ 且 $\sum_{u_i \in V}(1 - \nu_i^j(u_i)) \le s_2$ 的数列被称为 $\mathbb{H}_G$ 的*基本序列*，记为 $F(\mathbb{H}_G)$。
-
-**定义 5.2.5.** 设 $\mathbb{H}_G = (U, E; s_1, s_2)$ 为一个 IFTHG，且存在独立集 $V \subseteq U$。则 $\mathbb{H}_G$ 的*核集*记为 $C(\mathbb{H}_G)$，其中 $0 < (y_i, z_i) \le H_u(\mathbb{H}_G)$，定义为 $C(\mathbb{H}_G) = \{\mathbb{H}_{G}^{(y_1, z_1)}, \mathbb{H}_{G}^{(y_2, z_2)}, \dots, \mathbb{H}_{G}^{(y_n, z_n)}\}$。对应的 $(y_n, z_n)$-水平超图集合为 $\mathbb{H}_{G}^{(y_1, z_1)} \subset \mathbb{H}_{G}^{(y_2, z_2)} \subset \dots \subset \mathbb{H}_{G}^{(y_n, z_n)}$，满足 $\sum_{u_i \in V} \mu_y(u_i) \leq s_1$ 且 $\sum_{u_i \in V}(1 - \nu_y(u_i)) \leq s_2$，称为 $\mathbb{H}_G$ 的诱导基本序列，记为 $I(\mathbb{H}_G)$。$(y_r, z_r)$-水平被称为 $\mathbb{H}_G$ 的支撑水平，而 $\mathbb{H}_{G}^{(y_r, z_n)}$ 被称为 $\mathbb{H}_G$ 的支撑。
-
-**定义 5.2.6.** 设 $\mathbb{H}_G = (U, \mathcal{E}, s_1, s_2)$ 和 $\mathbb{H}_G^{\prime} = (U^{\prime}, \mathcal{E}^{\prime}, s_1^{\prime}, s_2^{\prime})$ 为 IFTHG，且存在独立集 $V \subseteq U$ 使得 $\mathbb{H}_G$ 是 $\mathbb{H}_G^{\prime}$ 的一个*部分 IFTHG*：
-
-$$u^{\prime} = \begin{cases} \min(\supp(\mu_y)) \text{ 且 } \sum_{u_j \in V^{\prime}} \mu_y(u_j) \leq s_1 \mid \mu_y \in \mathcal{E}^{\prime} \\ \max(\supp(\nu_y)) \text{ 且 } \sum_{u_j \in V^{\prime}} (1 - \nu_y(u_i)) \leq s_2 \mid \nu_y \in \mathcal{E}^{\prime} \end{cases}$$
-
-由 $\mathcal{E}^{\prime}$ 生成的部分 IFTHG 表示为 $\mathbb{H}_G \subseteq \mathbb{H}_G^{\prime}$。若 $\mathbb{H}_G \subseteq \mathbb{H}_G^{\prime}$ 且 $\mathbb{H}_G \neq \mathbb{H}_G^{\prime}$，则记作 $\mathbb{H}_G \subset \mathbb{H}_G^{\prime}$。
-
-**定义 5.2.7.** 设 $\mathbb{H}_G = (U, \mathcal{E}, s_1, s_2)$ 为一个 IFTHG，存在独立集 $V \subseteq U$ 使得 $C(\mathbb{H}_G) = \{\mathbb{H}_G^{(y_1, z_1)}, \mathbb{H}_G^{(y_2, z_2)}, \dots, \mathbb{H}_G^{(y_n, z_n)}\}$，满足 $\sum_{u_i \in V} \mu_y(u_i) \leq s_1$ 且 $\sum_{u_i \in V}(1 - \nu_y(u_i)) \leq s_2$。若 $C(\mathbb{H}_G)$ 有序，则称 $\mathbb{H}_G$ 为*有序的*。即 $\mathbb{H}_G^{(y_1, z_1)} \subset \mathbb{H}_G^{(y_2, z_2)} \subset \dots \subset \mathbb{H}_G^{(y_n, z_n)}$，满足 $\sum_{u_i \in V} \mu_y(u_i) \leq s_1$ 且 $\sum_{u_i \in V}(1 - \nu_y(u_i)) \leq s_2$。若 $\{\mathbb{H}_G^{(y_j, z_j)} \mid j = 1, 2, \dots, n\}$ 是简单有序的，即它是有序的，并且若 $\mathcal{E} \in \mathbb{H}_G^{(y_{j+1}, z_{j+1})} \setminus \mathbb{H}_G^{(y_j, z_j)}$，则 $\mathcal{E} \not\subseteq \mathbb{H}_G^{(y_j, z_j)}$，则称该 IFTHG 为*简单有序的*。
+**定义 5.2.7.** 设 `H_G = (U, E, s_1, s_2)` 为一个 IFTHG，存在独立集 `V subseteq U` 使得 `C(H_G) = {H_G^{(y_1, z_1)}, H_G^{(y_2, z_2)}, ..., H_G^{(y_n, z_n)}}`，满足 `sum_{u_i in V} mu_y(u_i) <= s_1` 且 `sum_{u_i in V}(1 - nu_y(u_i)) <= s_2`。若 `C(H_G)` 有序，则称 `H_G` 为*有序的*。即 `H_G^{(y_1, z_1)} subset H_G^{(y_2, z_2)} subset ... subset H_G^{(y_n, z_n)}`，满足 `sum_{u_i in V} mu_y(u_i) <= s_1` 且 `sum_{u_i in V}(1 - nu_y(u_i)) <= s_2`。若 `{H_G^{(y_j, z_j)} | j = 1, 2, ..., n}` 是简单有序的，即它是有序的，并且若 `E in H_G^{(y_{j+1}, z_{j+1})} \ H_G^{(y_j, z_j)}`，则 `E not subseteq H_G^{(y_j, z_j)}`，则称该 IFTHG 为*简单有序的*。
 
 ## 5.3 符号
 
-- $\mathbb{H}_G = (U, \mathcal{E}; s_1, s_2)$：具有超边集 $\mathcal{E}$、顶点集 $U$ 以及阈值 $s_1$、$s_2$ 的 IFTHG。
-- $\mathcal{H}_t(\mathbb{H}_G)$：IFTHG 的高度。
-- $\mathcal{F}_t(\mathbb{H}_G)$：IFTHG 的基本序列。
-- $C(\mathbb{H}_G)$：IFTHG 的核集。
-- $I(\mathbb{H}_G)$：IFTHG 的诱导基本序列。
-- $\mathbb{H}_G^{(y_j, z_j)}$：$\mathbb{H}_G$ 的 $(y_j, z_j)$-水平。
-- $(y_j, z_j)$：超边的隶属值和非隶属值。
-- $T_G(\mathbb{H}_G)$：IFTHG 的最小直觉模糊横截集（IFT）。
+- `H_G = (U, E; s_1, s_2)`：具有超边集 `E`、顶点集 `U` 以及阈值 `s_1`、`s_2` 的 IFTHG。
+- `H_t(H_G)`：IFTHG 的高度。
+- `F_t(H_G)`：IFTHG 的基本序列。
+- `C(H_G)`：IFTHG 的核集。
+- `I(H_G)`：IFTHG 的诱导基本序列。
+- `H_G^{(y_j, z_j)}`：`H_G` 的 `(y_j, z_j)`-水平。
+- `(y_j, z_j)`：超边的隶属值和非隶属值。
+- `T_G(H_G)`：IFTHG 的最小直觉模糊横截集（IFT）。
 
 ## 5.4 主要结果
 
-**定义 5.4.1.** 设 IFTHG $\mathbb{H}_G = (U, \mathcal{E}; s_1, s_2)$。IFTHG 的 IFT $T$ 是 $U$ 的一个直觉模糊子集，满足 $T^{\langle e_j, e_k \rangle} \cap A^{\langle e_j, e_k \rangle} \neq \varnothing$ 对所有 $A \in \mathcal{E}$ 成立，其中 $e_j = \bigwedge (u_{ij})$ 且 $e_k = \bigvee(v_{ij})$，满足 $\sum_{u_i \in V} \mu_{ij}(u_i) \leq s_1$ 且 $\sum_{u_i \in V} (1 - \nu_{ij}(u_i)) \leq s_2$，$\forall 1 \leq i \leq m, 1 \leq j \leq n$。此外，$\mu_{ij}$ 和 $\nu_{ij}$ 分别是第 $j$ 个超边中第 $i$ 个顶点的隶属值和非隶属值。
+**定义 5.4.1.** 设 IFTHG `H_G = (U, E; s_1, s_2)`。IFTHG 的 IFT `T` 是 `U` 的一个直觉模糊子集，满足 `T^{<e_j, e_k>} intersect A^{<e_j, e_k>} != empty` 对所有 `A in E` 成立，其中 `e_j = bigwedge (u_{ij})` 且 `e_k = bigvee(v_{ij})`，满足 `sum_{u_i in V} mu_{ij}(u_i) <= s_1` 且 `sum_{u_i in V} (1 - nu_{ij}(u_i)) <= s_2`，`forall 1 <= i <= m, 1 <= j <= n`。此外，`mu_{ij}` 和 `nu_{ij}` 分别是第 `j` 个超边中第 `i` 个顶点的隶属值和非隶属值。
 
-**定义 5.4.2.** IFTHG 的最小 IFT $T$ 是 $\mathbb{H}_G$ 的一个横截集，满足若 $T_1 \subset T$，则 $T_1$ 不是 $\mathbb{H}_G$ 的 IFT。
+**定义 5.4.2.** IFTHG 的最小 IFT `T` 是 `H_G` 的一个横截集，满足若 `T_1 subset T`，则 `T_1` 不是 `H_G` 的 IFT。
 
-**注：** IFTHG 的所有最小 IFT 的集合表示为 $\mathcal{T}\sigma(\mathbb{H}_G)$。总有 $\mathcal{T}\sigma(\mathbb{H}_G) \neq \varnothing$。
+**注：** IFTHG 的所有最小 IFT 的集合表示为 `T sigma(H_G)`。总有 `T sigma(H_G) != empty`。
 
-**例 5.4.3.** 考虑一个具有 $U = \{u_1, u_2, u_3, u_4, u_5, u_6\}$，$\mathcal{E} = \{\mathcal{E}_1, \mathcal{E}_2, \mathcal{E}_3, \mathcal{E}_4\}$ 的 IFTHG $\mathbb{H}_G$。
+**例 5.4.3.** 考虑一个具有 `U = {u_1, u_2, u_3, u_4, u_5, u_6}`，`E = {E_1, E_2, E_3, E_4}` 的 IFTHG `H_G`。
 
 ![](img/e9de70cd491e84262133af63cb33d500_81_0.png)
 
-**图 5.1** 直觉模糊阈值超图 $\mathbb{H}_G$。
+**图 5.1** 直觉模糊阈值超图 `H_G`。
 
-利用图 5.1，我们可以构造一个具有 $\mathcal{E} = \{\mathcal{E}_1, \mathcal{E}_2, \mathcal{E}_3, \mathcal{E}_4\}$ 的 IFTHG $\mathbb{H}_G$，其对应的关联矩阵如下所示：
+利用图 5.1，我们可以构造一个具有 `E = {E_1, E_2, E_3, E_4}` 的 IFTHG `H_G`，其对应的关联矩阵如下所示：
 
-| | $\mathcal{E}_1$ | $\mathcal{E}_2$ | $\mathcal{E}_3$ | $\mathcal{E}_4$ |
+| | `E_1` | `E_2` | `E_3` | `E_4` |
 | :--- | :---: | :---: | :---: | :---: |
-| $u_1$ | $\langle 0.3, 0.5\rangle$ | $\langle 0, 1\rangle$ | $\langle 0, 1\rangle$ | $\langle 0, 1\rangle$ |
-| $u_2$ | $\langle 0, 1\rangle$ | $\langle 0.3, 0.4\rangle$ | $\langle 0, 1\rangle$ | $\langle 0, 1\rangle$ |
-| $u_3$ | $\langle 0, 1\rangle$ | $\langle 0, 1\rangle$ | $\langle 0.2, 0.6\rangle$ | $\langle 0.2, 0.6\rangle$ |
-| $u_4$ | $\langle 0, 1\rangle$ | $\langle 0.3, 0.5\rangle$ | $\langle 0, 1\rangle$ | $\langle 0.3, 0.6\rangle$ |
+| `u_1` | `<0.3, 0.5>` | `<0, 1>` | `<0, 1>` | `<0, 1>` |
+| `u_2` | `<0, 1>` | `<0.3, 0.4>` | `<0, 1>` | `<0, 1>` |
+| `u_3` | `<0, 1>` | `<0, 1>` | `<0.2, 0.6>` | `<0.2, 0.6>` |
+| `u_4` | `<0, 1>` | `<0.3, 0.5>` | `<0, 1>` | `<0.3, 0.6>` |
+
+
+
 | $u_5$ | $\langle 0, 1\rangle$ | $\langle 0.4, 0.5\rangle$ | $\langle 0, 1\rangle$ | $\langle 0, 1\rangle$ |
+
 | $u_6$ | $\langle 0.4, 0.6\rangle$ | $\langle 0.4, 0.6\rangle$ | $\langle 0.4, 0.6\rangle$ | $\langle 0.4, 0.6\rangle$ |
 
 该 IFTHG 的最小 IFT 表示如下：
@@ -1297,9 +1288,6 @@ $$u^{\prime} = \begin{cases} \min(\supp(\mu_y)) \text{ 且 } \sum_{u_j \in V^{\p
 **定理 5.4.6.** 每个 IFTHG 都有一个非空的 IFT。
 
 **注：** IFTHG 的每个 IFT 都包含一个最小 IFT。（即）$\mathcal{T}^{X}\left(\mathbb{H}_{G}\right) \subseteq T\left(\mathbb{H}_{G}\right)$。
-
-
-
 
 **定理 5.4.7.** 若 \( \text{T}' \in \mathcal{T}\sigma(\mathbb{H}_\mathbb{G}) \)，且对于每个 \( u \in U \)，\( \text{T}'(\mathbb{H}_\mathbb{G}) \in \mathcal{F}(\mathbb{H}_\mathbb{G}) \)，则 \( \mathcal{F}\mathcal{T}\sigma(\mathbb{H}_\mathbb{G}) \subseteq \mathcal{F}(\mathbb{H}_\mathbb{G}) \)。
 
@@ -1330,7 +1318,7 @@ $$u^{\prime} = \begin{cases} \min(\supp(\mu_y)) \text{ 且 } \sum_{u_j \in V^{\p
 
 ![](img/e9de70cd491e84262133af63cb33d500_84_0.png)
 
-**图 5.3** IFT HG（ \(\mathbb{H}_{\mathbb{G}}\) , \(\eth\) ）
+**图 5.3** IFT HG（\(\mathbb{H}_{\mathbb{G}}\) , \(\eth\) ）
 
 \(\mathbb{H}_{\mathbb{G}}\) 的关联矩阵给出如下：
 
@@ -1377,41 +1365,47 @@ IFTGH 的横截核如图 5.4 所示。
 
 1. T 是 IFTHG 的一个 IFT。
 2. 对于每个 IF 超边 \(\mathcal{A} \in \varepsilon\) 以及每个满足 \(0 < y_{i} \leq \underline{h}_{\mu}\left(\mathbb{H}_{\G}\right)\)，\(0 < z_{j} \leq \underline{h}_{\nu}\left(\mathbb{H}_{\G}\right)\) 的 \(\langle y_{i}z_{j}\rangle\)，有 \(\operatorname{T}^{(v_{i}z_{j})} \cap \mathcal{A}^{(v_{i}z_{j})} \neq \varnothing\)。
-3. 对于每个满足 \(0 < y_{i} \leq \alpha\)，\(0 < z_{j} \leq \beta\) 的 \(\langle y_{i}z_{j}\rangle\)，\(\operatorname{T}^{(v_{i}z_{j})}\) 是 \(\mathbb{H}_{\G}^{(v_{i}z_{j})}\) 的一个 IFT。
 
-*证明：* 根据定义，“IFTHG 的最小 IFT T 是 \(\mathbb{H}_{\G}\) 的一个横截，满足如下性质：如果 \(T_1 \subset T\)，则 \(T_1\) 不是 \(\mathbb{H}_{\G}\) 的一个 IFT”，证明是平凡的。
 
-**定理 5.4.17.** 对于一个简单 IFTHG \(\mathbb{H}_{\G}\)，有 \(T\mathfrak{H}(T\mathfrak{H}(\mathbb{H}_{\G})) = \mathbb{H}_{\G}\)。
 
-**定理 5.4.18.** 对于任意 IFTHG \(\mathbb{H}_{\G}\)，有 \(T\mathfrak{H}(T\mathfrak{H}(\mathbb{H}_{\G})) \subseteq \mathbb{H}_{\G}\)。
+3. 对于每个满足 \(0 < y_{i} \leq \alpha\)，\(0 < z_{j} \leq \beta\) 的 \(\langle y_{i}z_{j}\rangle\)，\(\operatorname{T}^{(v_{i}z_{j})}\) 是 \(\mathbb{H}_{\G}^{(v_{i}z_{j})}\) 的一个 `IFT`。
 
-*证明：* 根据定义 5.4.10，存在简单 IFTHG \(\mathbb{H}_{\G}\) 的一个部分 IFTHG \(\mathbb{H}_{\G}^{'}\)，使得 \(\exists T\mathfrak{H}(\mathbb{H}_{\G}^{'}) = T\mathfrak{H}(\mathbb{H}_{\G})\)。由定理 5.4.17，\(T\mathfrak{H}(T\mathfrak{H}(\mathbb{H}_{\G})) = T\mathfrak{H}(T\mathfrak{H}(\mathbb{H}_{\G}^{'}) = \mathbb{H}_{\G}^{'} \subseteq \mathbb{H}_{\G}\)。
+*证明：* 根据定义，“`IFTHG` 的最小 `IFT` `T` 是 \(\mathbb{H}_{\G}\) 的一个横截，满足如下性质：如果 `T1 \subset T`，则 `T1` 不是 \(\mathbb{H}_{\G}\) 的一个 `IFT`”，证明是平凡的。
 
-**定理 5.4.19.** 设 \(\mathbb{H}_{\G} = \langle U, \varepsilon, s_1, s_2\rangle\) 是一个 IFTHG，且假设
+### 定理 5.4.17
+对于一个简单 `IFTHG` \(\mathbb{H}_{\G}\)，有 `T\mathfrak{H}(T\mathfrak{H}(\mathbb{H}_{\G})) = \mathbb{H}_{\G}`。
 
-T \(\in T\mathfrak{H}(\mathbb{H}_{\G})\)。若 \(\mathbb{H}_{\G}^{'} \subseteq supp(T) \subseteq \mathbb{H}_{\G}\)，则 \(\exists\) 一个 IF 阈值超边 \(\mathcal{A}\)，其中 \(\langle y_{i}z_{j}\rangle \in \mathcal{A}\) 代表 \(\mathcal{A} \supseteq\) 的隶属度和非隶属度值：
+### 定理 5.4.18
+对于任意 `IFTHG` \(\mathbb{H}_{\G}\)，有 `T\mathfrak{H}(T\mathfrak{H}(\mathbb{H}_{\G})) \subseteq \mathbb{H}_{\G}`。
+
+*证明：* 根据定义 5.4.10，存在简单 `IFTHG` \(\mathbb{H}_{\G}\) 的一个部分 `IFTHG` \(\mathbb{H}_{\G}^{'}\)，使得 \(\exists T\mathfrak{H}(\mathbb{H}_{\G}^{'}) = T\mathfrak{H}(\mathbb{H}_{\G})\)。由定理 5.4.17，`T\mathfrak{H}(T\mathfrak{H}(\mathbb{H}_{\G})) = T\mathfrak{H}(T\mathfrak{H}(\mathbb{H}_{\G}^{'}) = \mathbb{H}_{\G}^{'} \subseteq \mathbb{H}_{\G}`。
+
+### 定理 5.4.19
+设 \(\mathbb{H}_{\G} = \langle U, \varepsilon, s_1, s_2\rangle\) 是一个 `IFTHG`，且假设
+
+`T \in T\mathfrak{H}(\mathbb{H}_{\G})`。若 \(\mathbb{H}_{\G}^{'} \subseteq supp(T) \subseteq \mathbb{H}_{\G}\)，则 \(\exists\) 一个 `IF` 阈值超边 \(\mathcal{A}\)，其中 \(\langle y_{i}z_{j}\rangle \in \mathcal{A}\) 代表 \(\mathcal{A} \supseteq\) 的隶属度和非隶属度值：
 
 1. \(\langle y_{p}z_{q}\rangle = \underline{h}_{t}(\mathcal{A}) = \underline{h}_{t}\left(T^{(v_{i}z_{j})}\right) > 0\)。
+
 2. \(\mathrm{T}_{\underline{h}_{t}(\mathcal{A})} \cap \mathcal{A}_{\underline{h}_{t}(\mathcal{A})} = \mathbb{H}_{\G}\)。
 
-*证明：* 假设 \(0 < \underline{h}_{t}\left(T^{(v_{i}z_{j})}\right) \leq 1\)，并设 \(\varepsilon^{'}\) 为 IF 阈值超边的集合，其中对于每个 \(\tau \in \varepsilon^{'}\)，满足 \(\underline{h}_{t}(\mathcal{A}^{(v_{i}z_{j})}) \geq \underline{h}_{t}\left(T^{(v_{i}z_{j})}\right)\)，且对于所有 \(1 \leq i \leq m\)，\(1 \leq j \leq n\)，有 \(\sum_{u_{i} \in U} \mu_{ij}\left(u_{i}\right) \leq s_{1}\) 和 \(\sum_{u_{i} \in U}\left(1 - \nu_{ij}\left(u_{i}\right)\right) \leq s_{2}\)。
+*证明：* 假设 \(0 < \underline{h}_{t}\left(T^{(v_{i}z_{j})}\right) \leq 1\)，并设 \(\varepsilon^{'}\) 为 `IF` 阈值超边的集合，其中对于每个 \(\tau \in \varepsilon^{'}\)，满足 \(\underline{h}_{t}(\mathcal{A}^{(v_{i}z_{j})}) \geq \underline{h}_{t}\left(T^{(v_{i}z_{j})}\right)\)，且对于所有 \(1 \leq i \leq m\)，\(1 \leq j \leq n\)，有 \(\sum_{u_{i} \in U} \mu_{ij}\left(u_{i}\right) \leq s_{1}\) 和 \(\sum_{u_{i} \in U}\left(1 - \nu_{ij}\left(u_{i}\right)\right) \leq s_{2}\)。
 
-由于 \(\mathrm{T}^{(v_{i}z_{j})}\) 是 \(\mathbb{H}_{\G}^{(v_{i}z_{j})}\) 的一个 IFT，且 \(\mathbb{H}_{\G}^{'} \subseteq \mathrm{T}^{(v_{i}z_{j})}\) 非空。此外，对于每个 \(\tau \in \varepsilon^{'}\)，\(\underline{h}_{t}(\tau) \geq \left(T^{(v_{i}z_{j})}\right)\) 成立。另外，假设 \(\mathrm{T}^{(v_{i}z_{j})}\) 是最小 IFT，则对于每个 \(\tau \in \varepsilon^{'}\)，\(\underline{h}_{t}(\tau) \geq \left(T^{(v_{i}z_{j})}\right)\)，且存在 \(\mathbb{H}_{\G^{'}t} \neq \mathbb{H}_{\G}\)，使得 \(\mathbb{H}_{\G^{'}t} \in \tau_{\underline{h}_{t}(\tau)} \cap T_{\underline{h}_{t}(\tau)}\)。
+由于 \(\mathrm{T}^{(v_{i}z_{j})}\) 是 \(\mathbb{H}_{\G}^{(v_{i}z_{j})}\) 的一个 `IFT`，且 \(\mathbb{H}_{\G}^{'} \subseteq \mathrm{T}^{(v_{i}z_{j})}\) 非空。此外，对于每个 \(\tau \in \varepsilon^{'}\)，\(\underline{h}_{t}(\tau) \geq \left(T^{(v_{i}z_{j})}\right)\) 成立。另外，假设 \(\mathrm{T}^{(v_{i}z_{j})}\) 是最小 `IFT`，则对于每个 \(\tau \in \varepsilon^{'}\)，\(\underline{h}_{t}(\tau) \geq \left(T^{(v_{i}z_{j})}\right)\)，且存在 \(\mathbb{H}_{\G^{'}t} \neq \mathbb{H}_{\G}\)，使得 \(\mathbb{H}_{\G^{'}t} \in \tau_{\underline{h}_{t}(\tau)} \cap T_{\underline{h}_{t}(\tau)}\)。
 
-定义一个 IFTHG \(\mathbb{H}_{\G^{1}} \supseteq\)
-
-
-
-
+定义一个 `IFTHG` \(\mathbb{H}_{\G^{1}} \supseteq\)
 
 $$\begin{array}{c} \mathrm{T}(W)\mathrm{if}\; W\ne\mathbb {H}_{\mathtt{G}}{}^{'}\\ \mathbb {H}_{\mathtt{G}_{1}}(u_{i}) = \left\{ \begin{array}{c} \Lambda(h_{t}(\mathcal{A}')/h_{t}(\mathcal{A})<f_{t}(\mathrm{T}^{(\upsilon_{i},z_{i})}),\; \lor(h_{t}(\mathcal{A}')/h_{t}(\mathcal{A})<f_{t}(\mathrm{T}^{(\upsilon_{i},z_{i})}))\mathrm{if}\; W=\mathbb{H}_{\mathtt{G}}{}^{'} \end{array}\right. \end{array}$$
 
-显然，$\mathbb {H}_{\mathtt{G}_{1}}$ 是 IFTHG 的一个 IFT，且 $\underline{{h}}_{t}(\mathbb {H}_{\mathtt{G}_{1}}{}^{(\upsilon_{i},z_{i})})<\underline{{h}}_{t}(\mathrm{T}^{(\upsilon_{i},z_{i})})$，这与 T 的最小性相矛盾。假设每个 $\tau\in\mathcal{E}^{'}$ 都满足部分 (i) 并且包含 $\mathbb {H}_{\mathtt{G}_{\tau}}{}^{'}\ne\mathbb {H}_{\mathtt{G}}{}^{'}$，其中 $\mathbb {H}_{\mathtt{G}_{\tau}}{}^{'}\in\tau_{\underline{{h}}_{t}(\mathcal{A}')}\cap\mathrm{T}_{\underline{{h}}_{t}(\mathcal{A})}{}^{'}$。该过程被重复，(1) 的论证得出了矛盾，从而完成了证明。
+显然，$\mathbb {H}_{\mathtt{G}_{1}}$ 是 `IFTHG` 的一个 `IFT`，且 $\underline{{h}}_{t}(\mathbb {H}_{\mathtt{G}_{1}}{}^{(\upsilon_{i},z_{i})})<\underline{{h}}_{t}(\mathrm{T}^{(\upsilon_{i},z_{i})})$，这与 `T` 的最小性相矛盾。假设每个 $\tau\in\mathcal{E}^{'}$ 都满足部分 (i) 并且包含 $\mathbb {H}_{\mathtt{G}_{\tau}}{}^{'}\ne\mathbb {H}_{\mathtt{G}}{}^{'}$，其中 $\mathbb {H}_{\mathtt{G}_{\tau}}{}^{'}\in\tau_{\underline{{h}}_{t}(\mathcal{A}')}\cap\mathrm{T}_{\underline{{h}}_{t}(\mathcal{A})}{}^{'}$。该过程被重复，(1) 的论证得出了矛盾，从而完成了证明。
 
-**定理 5.4.20.** 设 $\mathbb {H}_{\mathtt{G}}=(U,\mathcal{E},s_{1},s_{2})$ 是一个 IFTHG。那么，存在 $\mathrm{T}\in\mathfrak{T}(\mathbb {H}_{\mathtt{G}})$，使得对于 $\mathcal{A}\in\mathcal{E}$，满足 $\mathbb {H}_{\mathtt{G}}{}^{'}\subseteq\mathrm{supp}(\mathrm{T})\subseteq\mathbb {H}_{\mathtt{G}}{}^{'}$，则：
+### 定理 5.4.20
+设 $\mathbb {H}_{\mathtt{G}}=(U,\mathcal{E},s_{1},s_{2})$ 是一个 `IFTHG`。那么，存在 $\mathrm{T}\in\mathfrak{T}(\mathbb {H}_{\mathtt{G}})$，使得对于 $\mathcal{A}\in\mathcal{E}$，满足 $\mathbb {H}_{\mathtt{G}}{}^{'}\subseteq\mathrm{supp}(\mathrm{T})\subseteq\mathbb {H}_{\mathtt{G}}{}^{'}$，则：
 
 1.  $(\upsilon_{i},z_{i})=\underline{{h}}_{t}(\mathcal{A})$，
+
 2.  对于每个满足 $\underline{{h}}_{t}(\mathcal{A}')>\underline{{h}}_{t}(\mathcal{A})$ 的 $\mathcal{A}'\in\mathcal{E}$，$\underline{{h}}_{t}(\mathcal{A}')$ 的 $(\upsilon_{i},z_{i})$-水平截集不是 $\underline{{h}}_{t}(\mathcal{A})$ 的 $(\upsilon_{i},z_{i})$-水平截集的子超图，并且
+
 3.  $\underline{{h}}_{t}(\mathcal{A})$ 的 $(\upsilon_{i},z_{i})$-水平截集不包含 $\mathbb {H}_{\mathtt{G}}{}_{\underline{{h}}_{t}(\mathcal{A})}$ 的其他任何超边，其中 $(\upsilon_{i},z_{i})$ 表示 $\mathcal{A}$ 的成员度和非成员度值。
 
 *证明：*
@@ -1419,7 +1413,9 @@ $$\begin{array}{c} \mathrm{T}(W)\mathrm{if}\; W\ne\mathbb {H}_{\mathtt{G}}{}^{'}
 *必要性部分：*
 
 1.  设 $\mathrm{T}\in\mathfrak{T}(\mathbb {H}_{\mathtt{G}})$ 且 $0<\underline{{h}}_{t}(\mathrm{T}^{(\upsilon_{i},z_{i})})\leq 1$。那么根据定理 5.4.19，结果 (i) 成立。
+
 2.  假设对于所有满足 (i) 要求条件的 $\mathcal{A}$，存在 $\mathcal{A}'\in\mathcal{E}$ 使得 $\underline{{h}}_{t}(\mathcal{A}')>\underline{{h}}_{t}(\mathcal{A})$ 且 $\mathcal{A}'^{\underline{{h}}_{t}(\mathcal{A})}\subseteq\mathcal{A}^{\underline{{h}}_{t}(\mathcal{A}')}$，则存在 $u\notin\mathbb {H}_{\mathtt{G}}{}^{'}$，使得 $U\in\mathcal{A}'^{\underline{{h}}_{t}(\mathcal{A}')}\cap\mathrm{T}_{\underline{{h}}_{t}(\mathcal{A}')}\subseteq\mathcal{A}^{\underline{{h}}_{t}(\mathcal{A})}\cap\mathrm{T}_{\underline{{h}}_{t}(\mathcal{A})}$，这与定理 5.4.19 相矛盾。
+
 3.  假设对于满足 (1) 和 (2) 的所有 $\mathcal{A}$，存在 $\mathcal{A}'\in\mathcal{E}$，使得 $\emptyset\ne\mathcal{A}'^{\underline{{h}}_{t}(\mathcal{A})}\subset\mathcal{A}^{\underline{{h}}_{t}(\mathcal{A}')}$。由于 $\mathcal{A}'^{\underline{{h}}_{t}(\mathcal{A})}\ne\emptyset$ 且根据 (2)，意味着 $\underline{{h}}_{t}(\mathcal{A}')=\underline{{h}}_{t}(\mathcal{A})=(\upsilon_{i},z_{i})$。
 
 如果 $(\upsilon_{i},z_{i})=\underline{{h}}_{t}(\mathcal{A}')\ \&\ \mathcal{A}'\in\mathcal{E}$ 且 $\emptyset\ne\mathcal{A}''^{\underline{{h}}_{t}(\mathcal{A})}<\mathcal{A}'^{\underline{{h}}_{t}(\mathcal{A})}\subset\mathcal{A}^{\underline{{h}}_{t}(\mathcal{A}')}$，继续该过程，该链必须在无穷多步后终止，因此不妨假设 $(\upsilon_{i},z_{i})<\underline{{h}}_{t}(\mathcal{A})$。但是，存在 $U\nsubseteq\mathbb {H}_{\mathtt{G}}{}^{'}$ 使得 $U\in\mathcal{A}'^{\underline{{h}}_{t}(\mathcal{A})}\cap\mathrm{T}_{\underline{{h}}_{t}(\mathcal{A})}\subseteq\mathcal{A}^{\underline{{h}}_{t}(\mathcal{A})}\cap\mathrm{T}_{\underline{{h}}_{t}(\mathcal{A}')}$，这与定理 5.4.19 相矛盾。
@@ -1428,9 +1424,12 @@ $$\begin{array}{c} \mathrm{T}(W)\mathrm{if}\; W\ne\mathbb {H}_{\mathtt{G}}{}^{'}
 
 假设 $\mathcal{A}\in\mathcal{E}$ 满足条件 (1) 和 (2)。由 (1) 可知，$\underline{{h}}_{t}(\mathcal{A})=(\upsilon_{i},z_{i})$，其中 $(\upsilon_{i},z_{i})$ 是 $\mathcal{F}(\mathbb {H}_{\mathtt{G}})$ 中的某个成员。由 (2) 和 (3) 可知，对于所有 $\mathcal{A}'\in\mathcal{E}$ 且 $\mathcal{A}'\ne\mathcal{A}\ \&\ \underline{{h}}_{t}(\mathcal{A}')\ge\underline{{h}}_{t}(\mathcal{A})$，存在 $U\in\mathcal{A}'^{\underline{{h}}_{t}(\mathcal{A})}\setminus\mathcal{A}^{\underline{{h}}_{t}(\mathcal{A})}$。设 $V_{\mathcal{A}}$ 为 $\mathbb {H}_{\mathtt{G}}$ 中所有顶点的集合，且 $V_{\mathcal{A}}\cap\mathcal{A}^{\underline{{h}}_{t}(\mathcal{A})}=\emptyset$。
 
-构造初始横截序列 $\tau_{s} \subseteq U$，对于每个 $s, 1 \leq s < i$ 且 $\tau_{s} \subseteq U_{v} \cup U_{f}$。显然，$U_{i} \in \tau_{i} \setminus \backslash$。重复该过程，最终得到一个最小 IFT，其值为 $(y_{p} z_{i}) = \underline{h}_{i}(\mathcal{A}) = \underline{h}_{t}(T^{y_{i} z_{i}})$。
+构造初始横截序列 $\tau_{s} \subseteq U$，对于每个 $s, 1 \leq s < i$ 且 $\tau_{s} \subseteq U_{v} \cup U_{f}$。显然，$U_{i} \in \tau_{i} \setminus \backslash$。重复该过程，最终得到一个最小 `IFT`，其值为 $(y_{p} z_{i}) = \underline{h}_{i}(\mathcal{A}) = \underline{h}_{t}(T^{y_{i} z_{i}})$。
 
-**定理 5.4.21.** 设 $\mathbb{H}_{\mathbb{G}}=(U, \mathcal{E}; s_{1}, s_{2})$ 是一个 IFTHG，其中 $\mathcal{F}(\mathbb{H}_{\mathbb{G}}) = \{y_{1}, y_{2}, \ldots, y_{i}^{*}, z_{1}, z_{2}, \ldots, z_{i}^{*}\}$，使得 $0 \leq y_{i} \leq \underline{h}_{u}(\mathbb{H}_{\mathbb{G}})$ 且 $0 \leq z_{i} \leq \underline{h}_{f}(\mathbb{H}_{\mathbb{G}})$。此外，设 $\mathbb{H}^{(y_{i} z_{i})}$ 为基本 IFTHG，满足重复 $\mathcal{A}^{\prime} \Longleftrightarrow \underline{h}_{i}(\mathcal{A}^{\prime}) = (y_{p} z_{i})$ 且 supp($\mathcal{A}^{\prime}$) 是 $\mathbb{H}^{(y_{i} z_{i})}$ 的超边。那么 $\mathrm{T}\mathfrak{G}(\mathrm{T}\mathfrak{G}(\mathbb{H}_{\mathbb{G}}))$ 是 $\mathbb{H}_{\mathbb{G}}^{(y_{i} z_{i})}$ 的一个部分 IFTHG。
+### 定理 5.4.21
+设 $\mathbb{H}_{\mathbb{G}}=(U, \mathcal{E}; s_{1}, s_{2})$ 是一个 `IFTHG`，其中 $\mathcal{F}(\mathbb{H}_{\mathbb{G}}) = \{y_{1}, y_{2}, \ldots, y_{i}^{*}, z_{1}, z_{2}, \ldots, z_{i}^{*}\}$，使得 $0 \leq y_{i} \leq \underline{h}_{u}(\mathbb{H}_{\mathbb{G}})$ 且 $0 \leq z_{i} \leq \underline{h}_{f}(\mathbb{H}_{\mathbb{G}})$。此外，设 $\mathbb{H}^{(y_{i} z_{i})}$ 为基本 `IFTHG`，满足重复 $\mathcal{A}^{\prime} \Longleftrightarrow \underline{h}_{i}(\mathcal{A}^{\prime}) = (y_{p} z_{i})$ 且 `supp`($\mathcal{A}^{\prime}$) 是 $\mathbb{H}^{(y_{i} z_{i})}$ 的超边。那么 `T\mathfrak{G}(T\mathfrak{G}(\mathbb{H}_{\mathbb{G}}))` 是 $\mathbb{H}_{\mathbb{G}}^{(y_{i} z_{i})}$ 的一个部分 `IFTHG`。
+
+
 
 *证明：* 根据定理 5.4.9 以及最小 IFT 的构造，$\mathrm{T}\mathfrak{G}(\mathbb{H}_{\mathbb{G}})$ 的 $(y_{p}, z_{i})$-水平 IFTHG 是 $\mathrm{T}\mathfrak{G}(\mathbb{H}_{\mathbb{G}}^{(y_{i} z_{i})})$，这意味着 $(\mathrm{T}\mathfrak{G}(\mathbb{H}_{\mathbb{G}}))^{(y_{i} z_{i})} = \mathrm{T}\mathfrak{G}(\mathbb{H}_{\mathbb{G}}^{(y_{i} z_{i})})$。设 $\mathfrak{T} \in \mathrm{T}\mathfrak{G}(\mathrm{T}\mathfrak{G}(\mathbb{H}_{\mathbb{G}}))$。根据定理 5.4.19，$\underline{h}_{i}(\tau)(U)>0$，这意味着存在 $\mathrm{T} \in \mathrm{T}\mathfrak{G}(\mathbb{H}_{\mathbb{G}})$，使得 $\underline{h}_{i}(\tau)(U)=\underline{h}_{i}(\mathrm{T})$。根据定理 5.4.5，对于每个最小 IFT T，$\underline{h}_{i}(\mathrm{T})=\{\max(\min(\mu_{y})), \max(\max(v_{y})) | |v_{y}^{i}|, v_{y}^{i} \in \varepsilon^{i}\} = \underline{h}_{i}(\mathbb{H}_{\mathbb{G}})$。因此 $\tau$ 是值为 $(y_{p} z_{i})$ 的基本超边。由于 supp$(\tau)=\tau^{(y_{i} z_{i})}$，定理 5.4.9 表明 supp($\tau$) 是 $(\mathrm{T}\mathfrak{G}(\mathbb{H}_{\mathbb{G}}))^{(y_{i} z_{i})}$ 的最小 IFT。显然，supp$(\tau)$ 是 $\mathbb{H}_{\mathbb{G}}^{(y_{i} z_{i})}$ 的超边。因此 $\tau$ 是 $\mathbb{H}_{\mathbb{G}}^{(y_{i} z_{i})}$ 的超边。
 
@@ -1444,16 +1443,15 @@ $$\begin{array}{c} \mathrm{T}(W)\mathrm{if}\; W\ne\mathbb {H}_{\mathtt{G}}{}^{'}
 
 为了应对这一挑战，该农场决定利用 IFTHG。这些数学结构提供了一种对复杂进行建模和分析的方法
 
-
 影响水分分布的不同因素之间的关系，例如作物类型、土壤含水量水平和天气状况。在直觉模糊阈值超图（IFT HG）中，每个因素都被表示为一个顶点，而顶点之间的超边则指示了依赖性和相互作用。
 
 在此背景下，横截集（transversals）作为一种识别最佳水分分配策略的手段应运而生。超图的横截集代表了一组因素或区域的集合，对这些区域进行灌溉可以确保满足所有关键的依赖关系。通过寻找最小横截集，农场可以确定在水分分配方面最有效的方法，同时满足不同作物和土壤条件的各种约束和要求。农场的灌溉系统配备了传感器和执行器，可以实时调整水流速率和灌溉计划。通过在超图中应用横截集，系统可以智能地决定在哪里以及何时分配水资源。
 
 例如：
 
--   **资源分配**：超图分析可以识别在给定时间内农场哪些区域需要水，同时考虑特定作物的需求和土壤含水量水平。
--   **容错性**：如果灌溉系统的某一部分发生故障或阻塞，系统可以利用横截集快速重新路由，以确保所有必需区域获得足够的灌溉。
--   **适应天气状况**：通过考虑天气预报作为超图中的因素，系统可以调整灌溉计划，以应对预期的降雨或干旱状况。
+- **资源分配**：超图分析可以识别在给定时间内农场哪些区域需要水，同时考虑特定作物的需求和土壤含水量水平。
+- **容错性**：如果灌溉系统的某一部分发生故障或阻塞，系统可以利用横截集快速重新路由，以确保所有必需区域获得足够的灌溉。
+- **适应天气状况**：通过考虑天气预报作为超图中的因素，系统可以调整灌溉计划，以应对预期的降雨或干旱状况。
 
 ### 5.6 结论
 
@@ -1461,22 +1459,22 @@ $$\begin{array}{c} \mathrm{T}(W)\mathrm{if}\; W\ne\mathbb {H}_{\mathtt{G}}{}^{'}
 
 ## 关键词
 
--   直觉模糊横截集
--   最小 IFT
--   局部最小 IFT
--   IFTHG 的 IFTC
+- 直觉模糊横截集
+- 最小 IFT
+- 局部最小 IFT
+- IFTHG 的 IFTC
 
 ## 参考文献
 
-1.  Alain, B. (2013). *Hypergraph Theory: An Introduction*. Springer International Publishing: Switzerland.
-2.  Bondy, J. A., & Murty, U. S. R. (1976). *Graph Theory with Applications*. Elsevier Science Publishing Co.: New York.
-3.  Choudum, S. A. (2000). *A First Course in Graph Theory*. Laxmi Publications, Macmillan India.
-4.  Vaclav, C., & Hammer, P. L. (1977). Aggregation of inequalities in integer programming. In: *Annals of Discrete Mathematics*, North-Holland: Amsterdam, Vol. 1, pp. 145–162.
-5.  Berge, C. (1973). *Graphs and Hypergraphs*. North-Holland Publishing Company: Amsterdam.
-6.  Berge, C. (1989). *Hypergraphs: Combinatorics of Finite Sets*. Elsevier Science Publishing Company: New York.
-7.  Mordeson, J. N., & Nair, P. S. (2012). *Fuzzy Graphs and Fuzzy Hypergraphs*. Physica-Verlag.
-8.  Atanassov, K. T. (2012). *On Intuitionistic Fuzzy Set Theory*. Springer-Verlag Berlin Heidelberg.
-9.  Atanassov, K. T. (1999). *On Intuitionistic Fuzzy Sets: Theory and Applications*. Springer-Verlag: Berlin Heidelberg.
+1. Alain, B. (2013). *Hypergraph Theory: An Introduction*. Springer International Publishing: Switzerland.
+2. Bondy, J. A., & Murty, U. S. R. (1976). *Graph Theory with Applications*. Elsevier Science Publishing Co.: New York.
+3. Choudum, S. A. (2000). *A First Course in Graph Theory*. Laxmi Publications, Macmillan India.
+4. Vaclav, C., & Hammer, P. L. (1977). Aggregation of inequalities in integer programming. In: *Annals of Discrete Mathematics*, North-Holland: Amsterdam, Vol. 1, pp. 145–162.
+5. Berge, C. (1973). *Graphs and Hypergraphs*. North-Holland Publishing Company: Amsterdam.
+6. Berge, C. (1989). *Hypergraphs: Combinatorics of Finite Sets*. Elsevier Science Publishing Company: New York.
+7. Mordeson, J. N., & Nair, P. S. (2012). *Fuzzy Graphs and Fuzzy Hypergraphs*. Physica-Verlag.
+8. Atanassov, K. T. (2012). *On Intuitionistic Fuzzy Set Theory*. Springer-Verlag Berlin Heidelberg.
+9. Atanassov, K. T. (1999). *On Intuitionistic Fuzzy Sets: Theory and Applications*. Springer-Verlag: Berlin Heidelberg.
 10. Yang, L., & Mao, H. (2019). Intuitionistic fuzzy threshold graphs. *Journal of Intelligent and Fuzzy Systems, 36*, 6641–6651.
 11. Euler, L. (1763). Solution of a problem in the geometry of position. *The Journal Commentaries of the St. Petersburg Academy of Sciences*, Mathematical Association of America.
 12. Pal, M., Samanta, S., & Ghurai, G. (2020). *Modern Trends in Fuzzy Graph Theory*. Springer Nature Singapore Pvt. Ltd.
@@ -1523,8 +1521,6 @@ Atanassov [7] 在20世纪80年代提出的 IFS 是经典 FS 的推广，其中�
 
 IFS 是一个超前于时代出现的概念，如今为我们提供了管理内在不确定性和不精确性的重要工具。图 6.2 展示了 FS 的发展和扩展。
 
-
-
 ![](img/e9de70cd491e84262133af63cb33d500_95_0.png)
 
 **图 6.1** 模糊集与其他集合之间的关系。
@@ -1550,6 +1546,8 @@ IFS 是一种 FS，定义在论域中，其中 FS 的每个成员表示为一个
 *A* = { ⟨*e*, μₐ(*e*), πₐ(*e*), νₐ(*e*)⟩ | *e* ∈ *U* }, *e* ∈ *U*
 
 其中，符号 μₐ、πₐ 和 νₐ 分别表示隶属函数 μₐ: *U* → [0,1]、犹豫函数 πₐ: *U* → [0,1] 和非隶属函数 νₐ: *U* → [0,1]。在此，μₐ(*e*)、πₐ(*e*) 和 νₐ(*e*) 分别表示 *e* ∈ *U* 对于 IFS *A* 的隶属度、犹豫度和非隶属度。我们可以借助图 6.3 所示的图表来表示 μₐ（隶属）、πₐ（犹豫）和 νₐ（非隶属）度。
+
+
 
 对于每个 *e* ∈ *U*，μₐ(*e*) + πₐ(*e*) + νₐ(*e*) = 1，且 0 ≤ μₐ(*e*), πₐ(*e*), νₐ(*e*) ≤ 1。例如，如果我们知道 μₐ(*e*) 和 νₐ(*e*) 的度，就可以计算 πₐ(*e*) 的度，即 πₐ(*e*) = 1 − μₐ(*e*) − νₐ(*e*) (*e* ∈ *U*)。
 
@@ -1710,30 +1708,50 @@ IFSs 为处理控制系统中的犹豫性提供了更全面的框架，使其在
 - 10. Bacour, L., & Alimi, A. M. (2009). 应用于手写阿拉伯语句子识别的一些直觉模糊相似度度量比较。载：*IEEE International Conference on Fuzzy Systems*. https://doi.org/10.1109/FUZZY.2009.5276877
 - 11. Bacour, L., Kanoun, S., Maergner, V., & Alimi, M. A. (2008). 直觉模糊信息在手写阿拉伯语单词识别中的应用。载 *NIFS*. Vol. 14.
 - 12. Bharati, S. K. (2022). 用于多目标优化问题的犹豫直觉模糊算法。*Operational Research*, 22(4), 3521–3547. https://doi.org/10.1007/s12351-021-00685-8
+
+
+
 - 13. Bouchet, A., Montes, S., & Diaz, I. (2021). 应用于彩色图像处理的直觉模糊集。载：*CEUR Workshop Proceedings*, 3074.
+
 - 14. Bureva, V., Vovchura, P., & Sotirou, S. (2018). 具有直觉模糊评估的指纹识别广义网模型。载：*Advances in Intelligent Systems and Computing*. Springer: Cham. p. 641. https://doi.org/10.1007/978-3-319-66830-7_26
+
 - 15. Cagac Yolcu, O., & Yolcu, U. (2023). 一种用于金融时间序列的新型级联结构直觉模糊时间序列预测模型。*Expert Systems with Applications*, 215, 119336. https://doi.org/10.1016/j.esswa.2022.119336
+
 - 16. Chaira, T. (2019). 模糊/直觉模糊集在图像处理中的应用。载 *Fuzzy Set and Its Extension*. Wiley, pp. 237–257. https://doi.org/10.1002/9781119544203.ch9
+
 - 17. Chang, K. H., & Cheng, C. H. (2010). 在 FMEA 中使用直觉模糊集的风险评估方法。*International Journal of Systems Science*, 41(12), 1457–1471. https://doi.org/10.1080/00207720903353633
+
 - 18. Chen, Z. Hui, Wan, Z. Ping, & Dony, Y. Ying. (2023). 在新冠疫情防控期间用于恢复风险评估的综合区间值直觉模糊技术。*Information Sciences*, 619, 695–721. https://doi.org/10.1016/j.ins.2022.11.028
+
 - 19. Dhimam, N., Gupta, M. M., Singh, D. P., Vandana, Mishra, V. N., & Sharma, M. K. (2022). 关于 Z-直觉模糊分数估值用于医学诊断：一种直觉模糊知识专家系统。*Fractional and Fractional*, 6(3), 151. https://doi.org/10.3390/fractalfract6030151
+
 - 20. Dhyani, M., Kushwaha, G. S., & Kumar, S. (2022). 一种用于情感分析的新型直觉模糊推理系统。*International Journal of Information Technology (Singapore), 14*(6), 3193–3200. https://doi.org/10.1007/s41870-022-01014-8
+
 - 21. Fahmi, A., Derakhshan, A., & Kahraman, C. (2015). 使用区间值直觉模糊层次分析法进行人力资源管理。载：*IEEE International Conference on Fuzzy Systems*. November, 2015. https://doi.org/10.1109/FUZZ-IEEE.2015.7338094
+
 - 22. Giveki, D., Montazer, G. A., & Solanshahi, M. A. (2017). Atanassov 的直觉模糊 hister 用于鲁棒移动物体检测。*International Journal of Approximate Reasoning, 91*, 80–95. https://doi.org/10.1016/j.jar.2017.08.014
+
 - 23. Guo, Z., & Zhang, Q. (2009). 基于直觉模糊集的项目风险评估新方法。载 *6th International Conference on Fuzzy Systems and Knowledge Discovery*, FSKD 2009, 6. https://doi.org/10.1109/FSKD.2009.683
+
 - 24. Iancu, I., Gabroveau, M., & Cotsulici, M. (2013). 基于关联规则的直觉模糊控制。载 *Lecture Notes in Computer Science (Including Subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics), 8083 LNAI*. https://doi.org/10.1007/978-3-642-40495-5_24
+
 - 25. Jana, B., & Mohanty, S. N. (2017). 不确定性下用于多准则决策的直觉模糊逻辑模型。*Journal of the Institution of Engineers (India): Series C*, 98(2), 197–201. https://doi.org/10.1007/s40032-016-0299-9
+
 - 26. Khare, M., & Singh, R. (2008). 完整的 ξ-筛和 (L, n)-近邻拓扑。*Fuzzy Sets and Systems, 159*(5), 620–628. https://doi.org/10.1016/j.fss.2007.10.007
+
 - 27. Kumar, V., Gupta, S. K., Kaushik, R., Verma, S. K., & Sakovska, O. (2023). 商业中利用 MATLAB 分析财务风险承受能力的直觉模糊方法。载 *International Conference on IoT, Intelligent Computing and Security*. Lecture Notes in Electrical Engineering, Vol. 981. https://doi.org/10.1007/978-981-19-8136-4_26
+
 - 28. Michalková, A. (2019). 直觉模糊集及其在图像分类中的应用。*Notes on Intuitionistic Fuzzy Sets, 25*(2), 60–66. https://doi.org/10.7546/nifs.2019.25.2.60-66
+
 - 29. Milovanović, V., Aleksić, V., Sokolović, V., & Milenkov, M. (2021). 使用 929 个直觉模糊数进行不确定性建模。*Vojnotehnički Glasnik, 69*(4), 905–929. https://doi.org/10.5937/vojtehg69-33301
+
 - 30. Otay, I., & Jaller, M. (2020). 使用区间值直觉模糊集评估多专家灾难风险管理响应能力。*Journal of Intelligent and Fuzzy Systems, 38*(1), 835–852. https://doi.org/10.3233/JIFS-197452
+
 - 31. Pal, N. R., Bustince, H., Pagola, M., Mukherjee, U. K., Goswami, D. P., & Beliakov, G. (2013). Atanassov 直觉模糊集中的不确定性：模糊性和知识缺乏。*Information Sciences, 228*, 61–74. https://doi.org/10.1016/j.ins.2012.11.016
+
 - 32. Peters, J. F., Tiwari, S., Singh, R., & Peters, J. (2013). 近似近邻拓扑及相关的近邻集。载 *Theory and Applications of Mathematics & Computer Science*. Vol. 3, Issue 1. https://www.researchgate.net/publication/236162604
+
 - 33. Quek, S. G., Selvarachandra, G., Davaz, B., & Pal, M. (2016). 与群和子群相关的复杂直觉模糊软集的代数结构。*Scientia Iranica E*, 26(3), 1898–1912. https://doi.org/10.24200/sci.2018.50050.1485
-
-
-
 
 34. Revathi, R., & Hemalatha, M. (2013). 基于直觉模糊逻辑的视频处理中可移动与不可移动对象。收录于：*2013 4th International Conference on Computing, Communications and Networking Technologies, ICCCNt 2013*。https://doi.org/10.1109/ICCCNT.2013.6726746
 
@@ -1783,156 +1801,158 @@ VIJAY KUMAR, RAJENDER KUMAR, and DEEPAK KUMAR
 
 ### 7.2 文献综述
 
-当MCDM问题与模糊理论结合时，增强了该概念的力量。这些问题是跨学科的，并吸引了研究人员的注意力，以解决在一种情况下多种观点的问题。模糊集和IF集的领域对于处理不完美和不完整信息是离散的。Wang和Zhang [9] 通过以直觉梯形模糊数（ItrFN）的形式定义模糊信息的期望值来解释MCDM问题。Wang和Zhang [10]、Guorong [5] 以及Wan和Dong [11] 通过定义ITrFN中的期望值建立了某些聚合算子，并研究出这些聚合算子在MCDM问题中表现良好。为了汇总从领域专家那里收到的信息，部署了聚合算子以了解优先级。Wei [12] 介绍了Yager [16, 17] 提出的聚合算子的泛化，并开发了一些犹豫模糊聚合算子。基于模糊和IF的MCDM模型已由多位研究人员提出，例如Chen和Hwang [3]、Kacprzyk [7]、Herrera [6] 以及Bordogna [2]。诸如Chen和Hwang [3]、Kacprzyk [7]、Fodor和Runens [4]、Herrera [6] 以及Bordogna [2] 等研究人员提出了某些模糊MCDM技术。在本章中，使用聚合算子DIFWG来选择适合制造工厂的地点。该工作的主要目标是建立一个决策支持系统，不仅帮助决策者做出最优决策，还提供一些逻辑解决方案。给定的系统从三位领域专家那里收集初始信息，并通过算法进行决策以对地点进行排名。
 
-### 7.3 预备知识
 
-设 $X = \{x_1, x_2, \dots, x_n\}$ 为离散话语宇宙。以下预备知识定义为
+当`MCDM`问题与模糊理论结合时，增强了该概念的力量。这些问题是跨学科的，并吸引了研究人员的注意力，以解决在一种情况下多种观点的问题。模糊集和`IF`集的领域对于处理不完美和不完整信息是离散的。`Wang`和`Zhang` [9] 通过以直觉梯形模糊数（`ItrFN`）的形式定义模糊信息的期望值来解释`MCDM`问题。`Wang`和`Zhang` [10]、`Guorong` [5] 以及`Wan`和`Dong` [11] 通过定义`ITrFN`中的期望值建立了某些聚合算子，并研究出这些聚合算子在`MCDM`问题中表现良好。为了汇总从领域专家那里收到的信息，部署了聚合算子以了解优先级。`Wei` [12] 介绍了`Yager` [16, 17] 提出的聚合算子的泛化，并开发了一些犹豫模糊聚合算子。基于模糊和`IF`的`MCDM`模型已由多位研究人员提出，例如`Chen`和`Hwang` [3]、`Kacprzyk` [7]、`Herrera` [6] 以及`Bordogna` [2]。诸如`Chen`和`Hwang` [3]、`Kacprzyk` [7]、`Fodor`和`Runens` [4]、`Herrera` [6] 以及`Bordogna` [2] 等研究人员提出了某些模糊`MCDM`技术。在本章中，使用聚合算子`DIFWG`来选择适合制造工厂的地点。该工作的主要目标是建立一个决策支持系统，不仅帮助决策者做出最优决策，还提供一些逻辑解决方案。给定的系统从三位领域专家那里收集初始信息，并通过算法进行决策以对地点进行排名。
 
-#### 7.3.1 FSS
+## 7.3 预备知识
 
-Zadeh [18] 将FS定义为：FS A 定义为：$A = \{< x, \phi_A(x) > : x \in X\}$，其中，$\phi_A : X \to [0,1]$，且 $\phi_A(x)$ 分别是 $x \in X$ 在 A 中的隶属函数和隶属度等级。
+设 `$X = \{x_1, x_2, \dots, x_n\}$` 为离散话语宇宙。以下预备知识定义为
+
+### 7.3.1 FSS
+
+`Zadeh` [18] 将`FS`定义为：`FS A` 定义为：`A = \{< x, \phi_A(x) > : x \in X\}`，其中，`\phi_A : X \to [0,1]`，且 `\phi_A(x)` 分别是 `x \in X` 在 `A` 中的隶属函数和隶属度等级。
 
 它是经典集概念的泛化。
 
+### 7.3.2 IFS
 
-
-
-## 7.3.2 IFS
-
-Atanassov [1] 将 IFS 定义为 FS 的推广：
+`Atanassov` [1] 将 `IFS` 定义为 `FS` 的推广：
 
 $$A = \{<x, \phi_{A}(x), \psi_{A}(x)>|x \in X\}$$
 
-其中，$\phi_{A}(x), \psi_{A}(x): X \rightarrow [0,1]$ 是 $x \in X$ 的隶属度和非隶属度函数，而 $\pi_{A}(x)=1-\phi_{A}(x)-\psi_{A}(x)$ 是 $A$ 在 $X$ 中的直觉主义指数或犹豫指数。
+其中，`\phi_{A}(x), \psi_{A}(x): X \rightarrow [0,1]` 是 `x \in X` 的隶属度和非隶属度函数，而 `\pi_{A}(x)=1-\phi_{A}(x)-\psi_{A}(x)` 是 `A` 在 `X` 中的直觉主义指数或犹豫指数。
 
-## 7.3.3 直觉模糊变量
+### 7.3.3 直觉模糊变量
 
-对于时间变量 $t$，$\zeta(t)=\left(\phi_{\zeta(t)}, \psi_{\zeta(t)}\right)$ 被称为直觉模糊变量。
+对于时间变量 `t`，`\zeta(t)=\left(\phi_{\zeta(t)}, \psi_{\zeta(t)}\right)` 被称为直觉模糊变量。
 
-通常，如果 $t = t_{1}, t_{2}, \ldots, t_{p}$，则 $\zeta\left(t_{1}\right), \ldots, \zeta\left(t_{p}\right);\left(\phi_{\zeta\left(t_{i}\right)}, \psi_{\zeta\left(t_{i}\right)}\right) \in[0,1]$ 为在不同时期收集的直觉模糊数 (IFN)。
+通常，如果 `t = t_{1}, t_{2}, \ldots, t_{p}`，则 `\zeta\left(t_{1}\right), \ldots, \zeta\left(t_{p}\right);\left(\phi_{\zeta\left(t_{i}\right)}, \psi_{\zeta\left(t_{i}\right)}\right) \in[0,1]` 为在不同时期收集的直觉模糊数 (`IFN`)。
 
-该概念由 Xu 和 Yager [15] 提出。
+该概念由 `Xu` 和 `Yager` [15] 提出。
 
-## 7.3.4 ITrFN
+### 7.3.4 ITrFN
 
-Wang [13] 应用了 ITrFN 的概念并将其定义为：
+`Wang` [13] 应用了 `ITrFN` 的概念并将其定义为：
 
-设 $A$ 是 $\Re$ 中的一个 IFS，其隶属度和非隶属度函数定义如下：
+设 `A` 是 `\Re` 中的一个 `IFS`，其隶属度和非隶属度函数定义如下：
 
 ![](img/e9de70cd491e84262133af63cb33d500_112_0.png)
 
-其中，$0 \leq \phi_{A}+\psi_{A} \leq 1, \tilde{\phi}_{A}$ 和 $\tilde{\psi}_{A}$ 分别为最大值和最小值，且 $t_{1}, t_{2}, t_{3}, t_{4}, t_{11}, t_{14} \in \Re$。那么 $A$ 被称为 ITrFN，表示为
+其中，`0 \leq \phi_{A}+\psi_{A} \leq 1, \tilde{\phi}_{A}` 和 `\tilde{\psi}_{A}` 分别为最大值和最小值，且 `t_{1}, t_{2}, t_{3}, t_{4}, t_{11}, t_{14} \in \Re`。那么 `A` 被称为 `ITrFN`，表示为
 
 $$A=\langle\left([t_{1}, t_{2}, t_{3}, t_{4}] ; \phi_{A}\right),\left([t_{11}, t_{12}, t_{13}, t_{14}] ; \psi_{A}\right)\rangle$$
 
-## 7.3.5 动态直觉模糊加权平均 (DIFWA) 算子
+### 7.3.5 动态直觉模糊加权平均 (DIFWA) 算子
 
-根据 Xu 和 Yager [15]，设 $\zeta(t_1),\ldots,\zeta(t_q)$ 为在 $q$ 个不同时期收集的 IFN 集合，且 $\tau$ 为时期 $t_*$ 的权重向量，则 $DIFWA_{\tau(t)}$ $(\zeta(t_1),... ,\zeta(t_q)) = \tau(t_1)\zeta(t_1) \oplus \cdots \oplus \tau(t_q)\zeta(t_q)$ 被称为 DIFWA 算子。
+根据 `Xu` 和 `Yager` [15]，设 `\zeta(t_1),\ldots,\zeta(t_q)` 为在 `q` 个不同时期收集的 `IFN` 集合，且 `\tau` 为时期 `t_*` 的权重向量，则 `DIFWA_{\tau(t)}` `(\zeta(t_1),... ,\zeta(t_q)) = \tau(t_1)\zeta(t_1) \oplus \cdots \oplus \tau(t_q)\zeta(t_q)` 被称为 `DIFWA` 算子。
 
 $$\begin{gathered} DIFWA_{\tau(t)}(\zeta(t_1),...,\zeta(t_q)) \\ = \left(1-\prod_{k=1}^{q}(1-\phi_{\zeta(t_k)})^{\tau(t_k)},\prod_{k=1}^{q}\psi_{\zeta(t_k)}^{\tau(t_k)}, \prod_{k=1}^{q}(1-\phi_{\zeta(t_k)})^{\tau(t_k)}-\prod_{k=1}^{q}\psi_{\zeta(t_k)}^{\tau(t_k)} \right) \end{gathered}$$
 
-其中，$\tau(t_k) \geq 0 ; \sum_{k=1}^{q}\tau(t_k) = 1$
+其中，`\tau(t_k) \geq 0 ; \sum_{k=1}^{q}\tau(t_k) = 1`
 
-在本章中，信息以 ITrFN 的形式获取，并借助 DIFWA 算子进行决策。
+在本章中，信息以 `ITrFN` 的形式获取，并借助 `DIFWA` 算子进行决策。
 
 ## 7.4 主要概念
 
-许多研究者利用 MCDM 的思想来讨论日常生活中遇到的实际情况。在本章中，讨论了由 Xu 和 Yager [15] 提出的 DIFWA 算子的算法方法，其中信息以 ITrFN 形式给出，用于在特定属性下为制造工厂选择合适的位置。用于决策的属性以 IFN 形式给出。开发了一个假设性案例研究来解释该算法。在此研究中，考虑了五个负责选择制造工厂合适位置的因素，如 图 7.1 所示。
+许多研究者利用 `MCDM` 的思想来讨论日常生活中遇到的实际情况。在本章中，讨论了由 `Xu` 和 `Yager` [15] 提出的 `DIFWA` 算子的算法方法，其中信息以 `ITrFN` 形式给出，用于在特定属性下为制造工厂选择合适的位置。用于决策的属性以 `IFN` 形式给出。开发了一个假设性案例研究来解释该算法。在此研究中，考虑了五个负责选择制造工厂合适位置的因素，如 图 7.1 所示。
 
 ### 7.4.1 算法
 
 考虑了以下假设：
 
-- **I:** 设 $\Theta = \{\theta_1,\ldots, \theta_n\}$ 为 $n$ 个备选方案的集合。
-- **II:** 设 $MP = \{MP_1,\ldots, MP_m\}$ 为以 IFN 形式表述的有限属性集合，其权重向量为 $\omega = (\omega_1,\ldots, \omega_m)^T$，其中 $\omega_j \geq 0$ 且 $\sum_{j=1}^{m}\omega_j = 1$
+- **I:** 设 `\Theta = \{\theta_1,\ldots, \theta_n\}` 为 `n` 个备选方案的集合。
+- **II:** 设 `MP = \{MP_1,\ldots, MP_m\}` 为以 `IFN` 形式表述的有限属性集合，其权重向量为 `\omega = (\omega_1,\ldots, \omega_m)^T`，其中 `\omega_j \geq 0` 且 `\sum_{j=1}^{m}\omega_j = 1`
+- **III:** 设 `t_k` 具有 `q` 个时期，其权重向量为 `\zeta(t)=(\zeta(t_1),...,\zeta(t_q))^T`，
+
+  $$\zeta(t_k)\geq 0;\sum_{k=1}^q \zeta(t_k)=1$$
+- **IV:** 设 `\mathfrak{R}(t_k) = (r_{ij}(t_k))_{n\times m}` 为时期 `t_k` 的 `IF` 决策矩阵，其中 `r_{ij}(t_k) = \big(\phi_{r_{ij}}(t_k), \psi_{r_{ij}}(t_k), \pi_{r_{ij}}(t_k)\big); (i=1, ..., n, j=1, ..., m)` 为以 `IFN` 形式定义的属性值。
 
 ![](img/e9de70cd491e84262133af63cb33d500_114_0.png)
 
 **图 7.1** 负责选择制造工厂合适位置的参数。
 
-- **III:** 设 $t_k$ 具有 $q$ 个时期，其权重向量为 $\zeta(t)=(\zeta(t_1),...,\zeta(t_q))^T$，
-  $$\zeta(t_k)\geq 0;\sum_{k=1}^q \zeta(t_k)=1$$
-- **IV:** 设 $\mathfrak{R}(t_k) = (r_{ij}(t_k))_{n\times m}$ 为时期 $t_k$ 的 IF 决策矩阵，其中 $r_{ij}(t_k) = \big(\phi_{r_{ij}}(t_k), \psi_{r_{ij}}(t_k), \pi_{r_{ij}}(t_k)\big); (i=1, ..., n, j=1, ..., m)$ 为以 IFN 形式定义的属性值。
-
 **算法的步骤如下：**
 
-- **步骤 I:** 使用第 7.3 节中定义的 DIFWA 算子：
+- **步骤 I:** 使用第 7.3 节中定义的 `DIFWA` 算子：
 
   $$r_{ij} = DIFWA_{\zeta(t)} \left( r_{ij}(t_1), ..., r_{ij}(t_q) \right)$$
 
   $$= \left( 1-\prod_{k=1}^q (1-\phi_{r_{ij}}(t_k))^{\zeta(t_k)}, \prod_{k=1}^q \psi_{r_{ij}}(t_k)^{\zeta(t_k)}, \prod_{k=1}^q (1-\phi_{r_{ij}}(t_k))^{\zeta(t_k)} - \prod_{k=1}^q \psi_{r_{ij}}(t_k)^{\zeta(t_k)} \right)$$
 
-  聚合所有 IF 决策矩阵：
+  聚合所有 `IF` 决策矩阵：
 
   $$\mathfrak{R} = (r_{ij})_{m\times n}$$
 
-  其中，$r_{ij} = \big(\phi_{ij}, \psi_{ij}, \pi_{ij}\big)$；$\phi_{ij} = 1-\prod_{k=1}^{q} (1-\phi_{r_{ij}}(t_k))^{\zeta(t_k)}$；$\psi_{ij} = \prod_{k=1}^{q} \psi_{r_{ij}}(t_k)^{\zeta(t_k)}$。
+  其中，`r_{ij} = \big(\phi_{ij}, \psi_{ij}, \pi_{ij}\big)`；`\phi_{ij} = 1-\prod_{k=1}^{q} (1-\phi_{r_{ij}}(t_k))^{\zeta(t_k)}`；`\psi_{ij} = \prod_{k=1}^{q} \psi_{r_{ij}}(t_k)^{\zeta(t_k)}`。
 
-- **步骤 II:** 设 $\hat{\Phi} = (\hat{\Phi}_1,...,\hat{\Phi}_m)^T$ 和 $\bar{\Phi} = (\bar{\Phi}_1,...,\bar{\Phi}_m)^T$ 分别为 IF 正向和负向理想解，其中 $\hat{\Phi}_j$ 和 $\bar{\Phi}_j$ 分别为最大的和最小的 $m$ 个 IFN。此外，设 $\theta_i = (r_{i1},...,r_{im})^T$。
+- **步骤 II:** 设 `\hat{\Phi} = (\hat{\Phi}_1,...,\hat{\Phi}_m)^T` 和 `\bar{\Phi} = (\bar{\Phi}_1,...,\bar{\Phi}_m)^T` 分别为 `IF` 正向和负向理想解，其中 `\hat{\Phi}_j` 和 `\bar{\Phi}_j` 分别为最大的和最小的 `m` 个 `IFN`。此外，设 `\theta_i = (r_{i1},...,r_{im})^T`。
 
-- **步骤 III:** 确定 IF 正向和负向理想解：IFPIS($\Phi^{+}$) 和 IFNIS ($\Phi^{-}$)，基于备选方案 $\theta_{i}$：
+- **步骤 III:** 确定 `IF` 正向和负向理想解：`IFPIS(\Phi^{+})` 和 `IFNIS (\Phi^{-})`，基于备选方案 `\theta_{i}`：
 
   $$\delta(\theta_{i}, \Phi_{i}^{+}) = \sum_{j=1}^{m} \omega_{j} \delta\left(r_{ij}, \Phi_{i}^{+}\right) = \sum_{j=1}^{m} \omega_{j}\left(1-\phi_{ij}\right)$$
 
   $$\delta\left(\theta_{i}, \Phi_{i}^{-}\right) = \sum_{j=1}^{m} \omega_{j} \delta\left(r_{ij}, \Phi_{i}^{-}\right) = \sum_{j=1}^{m} \omega_{j}\left(1-\psi_{ij}\right)$$
 
-  其中，$r_{ij} = \left(\phi_{ij}, \psi_{ij}, \pi_{ij}\right)$
+  其中，`r_{ij} = \left(\phi_{ij}, \psi_{ij}, \pi_{ij}\right)`
 
 - **步骤 IV:** 计算每个备选方案的贴近度系数：
 
   $$C(\theta_{i}) = \frac{\delta(\theta_{i}, \Phi_{i}^{-})}{\delta(\theta_{i}, \Phi_{i}^{+}) + \delta(\theta_{i}, \Phi_{i}^{-})}$$
 
-  由于 $\delta(\theta_{i}, \Phi_{i}^{+}) + \delta(\theta_{i}, \Phi_{i}^{-}) = \sum_{j=1}^{m} \omega_{j}(1+\pi_{ij})$
+  由于 `\delta(\theta_{i}, \Phi_{i}^{+}) + \delta(\theta_{i}, \Phi_{i}^{-}) = \sum_{j=1}^{m} \omega_{j}(1+\pi_{ij})`
 
   $$\therefore \quad C(\theta_{i}) = \frac{\sum_{j=1}^{m} \omega_{j}(1-\psi_{ij})}{\sum_{j=1}^{m} \omega_{j}(1+\pi_{ij})}$$
 
-- **步骤 V:** 根据贴近度系数 $C(\theta_{i})$ 对备选方案 $\theta_{i}$ 进行排序。$C(\theta_{i})$ 越大，备选方案越好。
-
+- **步骤 V:** 根据贴近度系数 `C(\theta_{i})` 对备选方案 `\theta_{i}` 进行排序。`C(\theta_{i})` 越大，备选方案越好。
 - **步骤 VI:** 结束。
 
 ### 7.4.2 案例研究评估
 
-设 $MP_{i}$ ($i=1,2,\ldots,11$) 为制造工厂可用的地点集合。工厂地点的选择可以根据 图 7.1 中所示的特定因素 $\Theta = (\theta_{1},\ldots,\theta_{5})$ 来确定。此外，最终地点的选择决策可以通过考虑来自三位决策者的输入 $D = \langle d_{1},d_{2},d_{3}\rangle$ 来做出。设 $\tau(t) = \langle 0.16,0.33,0.5\rangle^{T}$ 为专家 $t_{i}$ 的权重向量，$\omega(i) = \langle 0.1,0.15,0.2,0.25,0.3,0.4\rangle^{T}$ 为因素 $\theta_{j}$ ($j=1,\ldots,5$) 的权重向量。在可用地点中为制造工厂选择地点的决策是基于算法 7.4.1 做出的。从各专家收集的意见以 IFN 形式表述，见 表 7.1-7.3。
+设 `MP_{i}` (`i=1,2,\ldots,11`) 为制造工厂可用的地点集合。工厂地点的选择可以根据 图 7.1 中所示的特定因素 `\Theta = (\theta_{1},\ldots,\theta_{5})` 来确定。此外，最终地点的选择决策可以通过考虑来自三位决策者的输入 `D = \langle d_{1},d_{2},d_{3}\rangle` 来做出。设 `\tau(t) = \langle 0.16,0.33,0.5\rangle^{T}` 为专家 `t_{i}` 的权重向量，`\omega(i) = \langle 0.1,0.15,0.2,0.25,0.3,0.4\rangle^{T}` 为因素 `\theta_{j}` (`j=1,\ldots,5`) 的权重向量。在可用地点中为制造工厂选择地点的决策是基于算法 7.4.1 做出的。从各专家收集的意见以 `IFN` 形式表述，见 表 7.1-7.3。
 
 来自专家集合的集体结果在 表 7.4 中呈现。
 
-**表 7.1 专家 $d_{1}$ 提供的 IFN 信息**
+**表 7.1 专家 `d_{1}` 提供的 `IFN` 信息**
 
-| 地点/因素 | $\theta_{1}$ | $\theta_{2}$ | $\theta_{3}$ | $\theta_{4}$ | $\theta_{5}$ |
+| 地点/因素 | `\theta_{1}` | `\theta_{2}` | `\theta_{3}` | `\theta_{4}` | `\theta_{5}` |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| $MP_{1}$ | (0.8,0.1,0.1) | (0.9,0.1,0.0) | (0.7,0.2,0.1) | (0.7,0.2,0.1) | (0.2,0.4,0.4) |
-| $MP_{2}$ | (0.7,0.3,0.0) | (0.6,0.2,0.2) | (0.6,0.3,0.1) | (0.5,0.2,0.3) | (0.2,0.7,0.1) |
-| $MP_{3}$ | (0.5,0.4,0.1) | (0.7,0.3,0.0) | (0.6,0.1,0.3) | (0.4,0.6,0.2) | (0.1,0.8,0.1) |
-| $MP_{4}$ | (0.9,0.1,0.0) | (0.7,0.1,0.2) | (0.8,0.2,0.0) | (0.7,0.1,0.2) | (0.5,0.1,0.4) |
-| $MP_{5}$ | (0.6,0.1,0.3) | (0.8,0.2,0.0) | (0.5,0.1,0.4) | (0.2,0.4,0.4) | (0.4,0.5,0.1) |
-| $MP_{6}$ | (0.3,0.6,0.1) | (0.5,0.4,0.1) | (0.4,0.5,0.1) | (0.2,0.7,0.1) | (0.5,0.5,0.0) |
-| $MP_{7}$ | (0.5,0.2,0.3) | (0.4,0.6,0.0) | (0.5,0.5,0.0) | (0.1,0.8,0.1) | (0.8,0.2,0.0) |
-| $MP_{8}$ | (0.8,0.1,0.1) | (0.9,0.1,0.0) | (0.7,0.2,0.1) | (0.7,0.2,0.1) | (0.5,0.4,0.1) |
-| $MP_{9}$ | (0.7,0.3,0.0) | (0.6,0.2,0.2) | (0.6,0.3,0.1) | (0.5,0.2,0.3) | (0.4,0.6,0.0) |
-| $MP_{10}$ | (0.5,0.4,0.1) | (0.7,0.3,0.0) | (0.6,0.1,0.3) | (0.4,0.6,0.0) | (0.6,0.1,0.3) |
-| $MP_{11}$ | (0.9,0.1,0.0) | (0.7,0.1,0.2) | (0.8,0.2,0.0) | (0.7,0.1,0.2) | (0.3,0.6,0.1) |
+| `MP_{1}` | (0.8,0.1,0.1) | (0.9,0.1,0.0) | (0.7,0.2,0.1) | (0.7,0.2,0.1) | (0.2,0.4,0.4) |
+| `MP_{2}` | (0.7,0.3,0.0) | (0.6,0.2,0.2) | (0.6,0.3,0.1) | (0.5,0.2,0.3) | (0.2,0.7,0.1) |
+| `MP_{3}` | (0.5,0.4,0.1) | (0.7,0.3,0.0) | (0.6,0.1,0.3) | (0.4,0.6,0.2) | (0.1,0.8,0.1) |
+| `MP_{4}` | (0.9,0.1,0.0) | (0.7,0.1,0.2) | (0.8,0.2,0.0) | (0.7,0.1,0.2) | (0.5,0.1,0.4) |
+| `MP_{5}` | (0.6,0.1,0.3) | (0.8,0.2,0.0) | (0.5,0.1,0.4) | (0.2,0.4,0.4) | (0.4,0.5,0.1) |
+| `MP_{6}` | (0.3,0.6,0.1) | (0.5,0.4,0.1) | (0.4,0.5,0.1) | (0.2,0.7,0.1) | (0.5,0.5,0.0) |
+| `MP_{7}` | (0.5,0.2,0.3) | (0.4,0.6,0.0) | (0.5,0.5,0.0) | (0.1,0.8,0.1) | (0.8,0.2,0.0) |
+| `MP_{8}` | (0.8,0.1,0.1) | (0.9,0.1,0.0) | (0.7,0.2,0.1) | (0.7,0.2,0.1) | (0.5,0.4,0.1) |
+| `MP_{9}` | (0.7,0.3,0.0) | (0.6,0.2,0.2) | (0.6,0.3,0.1) | (0.5,0.2,0.3) | (0.4,0.6,0.0) |
+| `MP_{10}` | (0.5,0.4,0.1) | (0.7,0.3,0.0) | (0.6,0.1,0.3) | (0.4,0.6,0.0) | (0.6,0.1,0.3) |
+| `MP_{11}` | (0.9,0.1,0.0) | (0.7,0.1,0.2) | (0.8,0.2,0.0) | (0.7,0.1,0.2) | (0.3,0.6,0.1) |
 
-**表 7.2 专家 $d_{2}$ 提供的 IFN 信息**
+**表 7.2 专家 `d_{2}` 提供的 `IFN` 信息**
 
-| 地点/因素 | $\theta_{1}$ | $\theta_{2}$ | $\theta_{3}$ | $\theta_{4}$ | $\theta_{5}$ |
+| 地点/因素 | `\theta_{1}` | `\theta_{2}` | `\theta_{3}` | `\theta_{4}` | `\theta_{5}` |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| $MP_{1}$ | (0.9,0.1,0.0) | (0.8,0.2,0.0) | (0.8,0.1,0.1) | (0.6,0.3,0.1) | (0.4,0.3,0.3) |
-| $MP_{2}$ | (0.8,0.2,0.0) | (0.5,0.1,0.4) | (0.7,0.2,0.1) | (0.4,0.3,0.3) | (0.7,0.1,0.2) |
-| $MP_{3}$ | (0.5,0.5,0.0) | (0.7,0.2,0.1) | (0.8,0.2,0.0) | (0.7,0.1,0.2) | (0.3,0.5,0.2) |
-| $MP_{4}$ | (0.9,0.1,0.0) | (0.9,0.1,0.0) | (0.7,0.3,0.0) | (0.3,0.5,0.2) | (0.7,0.2,0.1) |
-| $MP_{5}$ | (0.5,0.2,0.3) | (0.6,0.3,0.1) | (0.6,0.2,0.2) | (0.6,0.1,0.3) | (0.8,0.2,0.0) |
-| $MP_{6}$ | (0.4,0.6,0.0) | (0.3,0.4,0.3) | (0.5,0.5,0.0) | (0.2,0.3,0.5) | (0.7,0.3,0.0) |
-| $MP_{7}$ | (0.3,0.5,0.2) | (0.5,0.3,0.2) | (0.6,0.4,0.0) | (0.1,0.5,0.4) | (0.5,0.1,0.4) |
-| $MP_{8}$ | (0.9,0.1,0.0) | (0.8,0.2,0.0) | (0.8,0.1,0.1) | (0.6,0.3,0.1) | (0.7,0.2,0.1) |
-| $MP_{9}$ | (0.8,0.2,0.0) | (0.5,0.1,0.4) | (0.7,0.2,0.1) | (0.4,0.3,0.3) | (0.9,0.1,0.0) |
-| $MP_{10}$ | (0.5,0.5,0.0) | (0.7,0.2,0.1) | (0.8,0.2,0.0) | (0.7,0.1,0.2) | (0.5,0.5,0.0) |
+| `MP_{1}` | (0.9,0.1,0.0) | (0.8,0.2,0.0) | (0.8,0.1,0.1) | (0.6,0.3,0.1) | (0.4,0.3,0.3) |
+| `MP_{2}` | (0.8,0.2,0.0) | (0.5,0.1,0.4) | (0.7,0.2,0.1) | (0.4,0.3,0.3) | (0.7,0.1,0.2) |
+| `MP_{3}` | (0.5,0.5,0.0) | (0.7,0.2,0.1) | (0.8,0.2,0.0) | (0.7,0.1,0.2) | (0.3,0.5,0.2) |
+| `MP_{4}` | (0.9,0.1,0.0) | (0.9,0.1,0.0) | (0.7,0.3,0.0) | (0.3,0.5,0.2) | (0.7,0.2,0.1) |
+| `MP_{5}` | (0.5,0.2,0.3) | (0.6,0.3,0.1) | (0.6,0.2,0.2) | (0.6,0.1,0.3) | (0.8,0.2,0.0) |
+| `MP_{6}` | (0.4,0.6,0.0) | (0.3,0.4,0.3) | (0.5,0.5,0.0) | (0.2,0.3,0.5) | (0.7,0.3,0.0) |
+| `MP_{7}` | (0.3,0.5,0.2) | (0.5,0.3,0.2) | (0.6,0.4,0.0) | (0.1,0.5,0.4) | (0.5,0.1,0.4) |
+| `MP_{8}` | (0.9,0.1,0.0) | (0.8,0.2,0.0) | (0.8,0.1,0.1) | (0.6,0.3,0.1) | (0.7,0.2,0.1) |
+| `MP_{9}` | (0.8,0.2,0.0) | (0.5,0.1,0.4) | (0.7,0.2,0.1) | (0.4,0.3,0.3) | (0.9,0.1,0.0) |
+| `MP_{10}` | (0.5,0.5,0.0) | (0.7,0.2,0.1) | (0.8,0.2,0.0) | (0.7,0.1,0.2) | (0.5,0.5,0.0) |
+
+
+
 | $MP_{11}$ | (0.9,0.1,0.0) | (0.9,0.1,0.0) | (0.7,0.3,0.0) | (0.3,0.5,0.2) | (0.9,0.1,0.0) |
 
-**表 7.3 专家 $d_{3}$ 提供的 IFN 信息**
+### 表 7.3 专家 $d_{3}$ 提供的 IFN 信息
 
 | 地点/因素 | $\theta_{1}$ | $\theta_{2}$ | $\theta_{3}$ | $\theta_{4}$ | $\theta_{5}$ |
-| :--- | :--- | :--- | :--- | :--- | :--- |
+|:---|:---|:---|:---|:---|:---|
+
 | $MP_{1}$ | (0.7,0.1,0.2) | (0.9,0.1,0.0) | (0.9,0.1,0.0) | (0.6,0.1,0.3) | (0.4,0.5,0.1) |
 | $MP_{2}$ | (0.9,0.1,0.0) | (0.6,0.2,0.2) | (0.5,0.2,0.3) | (0.5,0.2,0.3) | (0.7,0.1,0.2) |
 | $MP_{3}$ | (0.4,0.5,0.1) | (0.8,0.1,0.1) | (0.7,0.1,0.2) | (0.3,0.3,0.4) | (0.8,0.2,0.0) |
@@ -1945,13 +1965,11 @@ $$\begin{gathered} DIFWA_{\tau(t)}(\zeta(t_1),...,\zeta(t_q)) \\ = \left(1-\prod
 | $MP_{10}$ | (0.6,0.1,0.3) | (0.6,0.2,0.0) | (0.5,0.1,0.4) | (0.2,0.4,0.4) | (0.4,0.5,0.1) |
 | $MP_{11}$ | (0.3,0.6,0.1) | (0.5,0.4,0.1) | (0.4,0.5,0.1) | (0.2,0.7,0.1) | (0.5,0.5,0.0) |
 
-
-
-
-## **表 7.4** 专家提供的集体 IFN 信息 $D=(d_{1},d_{2},d_{3})$
+### 表 7.4 专家提供的集体 IFN 信息 $D=(d_{1},d_{2},d_{3})$
 
 | 地点/因素 | $\theta_{1}$ | $\theta_{2}$ | $\theta_{3}$ | $\theta_{4}$ | $\theta_{5}$ |
 |:---|:---|:---|:---|:---|:---|
+
 | $MP_{1}$ | 0.806, 0.1, 0.094 | 0.874, 0.126, 0.0 | 0.849, 0.112, 0.039 | 0.619, 0.162, 0.219 | 0.371, 0.406, 0.223 |
 | $MP_{2}$ | 0.849, 0.151, 0.0 | 0.569, 0.159, 0.272 | 0.594, 0.214, 0.192 | 0.469, 0.229, 0.302 | 0.647, 0.138, 0.215 |
 | $MP_{3}$ | 0.452, 0.482, 0.066 | 0.755, 0.151, 0.094 | 0.725, 0.126, 0.149 | 0.486, 0.233, 0.281 | 0.610, 0.342, 0.048 |
@@ -1964,12 +1982,13 @@ $$\begin{gathered} DIFWA_{\tau(t)}(\zeta(t_1),...,\zeta(t_q)) \\ = \left(1-\prod
 | $MP_{10}$ | 0.553, 0.215, 0.232 | 0.755, 0.214, 0.031 | 0.645, 0.126, 0.229 | 0.450, 0.270, 0.280 | 0.472, 0.382, 0.145 |
 | $MP_{11}$ | 0.735, 0.245, 0.020 | 0.731, 0.200, 0.069 | 0.603, 0.362, 0.035 | 0.350, 0.452, 0.197 | 0.691, 0.301, 0.008 |
 
-使用算法 7.4.1 的第 2–5 步，针对制造工厂的每种地点类型计算的相对贴近系数 $C(S_i)$ 的值列于表 7.5 中。
+使用算法 `7.4.1` 的第 2–5 步，针对制造工厂的每种地点类型计算的相对贴近系数 `C(S_i)` 的值列于表 7.5 中。
 
-## **表 7.5** 制造工厂不同地点类型的相对贴近系数
+### 表 7.5 制造工厂不同地点类型的相对贴近系数
 
 | 地点类型 | 相对贴近系数 C(MP_i) |
-| :--- | :--- |
+|:---|:---|
+
 | $MP_1$ | 0.690 |
 | $MP_2$ | 0.672 |
 | $MP_3$ | 0.654 |
@@ -1982,21 +2001,21 @@ $$\begin{gathered} DIFWA_{\tau(t)}(\zeta(t_1),...,\zeta(t_q)) \\ = \left(1-\prod
 | $MP_{10}$ | 0.622 |
 | $MP_{11}$ | 0.625 |
 
-相对贴近系数 $C(MP_i)$ 的最大值代表对地点类型的偏好。
+相对贴近系数 `C(MP_i)` 的最大值代表对地点类型的偏好。
 
 ## 7.5 结果与讨论
 
 基于表 7.5 中给出的相对贴近系数值，以图形方式呈现在图 7.2 中。
 
-从图 7.2 可以观察到，地点 $MP_9$ 是最合适的，其排名如下：
+从图 7.2 可以观察到，地点 `MP_9` 是最合适的，其排名如下：
 
-$MP_9 \succ MP_5 \succ MP_4 \succ MP_1 \succ MP_2 \succ MP_3 \succ MP_8 \succ MP_{11} \succ MP_{10} \succ MP_6 \succ MP_7$
+`MP_9` ≻ `MP_5` ≻ `MP_4` ≻ `MP_1` ≻ `MP_2` ≻ `MP_3` ≻ `MP_8` ≻ `MP_11` ≻ `MP_10` ≻ `MP_6` ≻ `MP_7`
 
-决策是基于从决策者 $D = \langle d_1, d_2, d_3 \rangle$ 获得的集体信息做出的。与聚合算子一起使用的 IF 信息在基于因素开发制造工厂合适地点选择的支撑系统方面给出了有前景的结果。
+决策是基于从决策者 `D = <d_1, d_2, d_3>` 获得的集体信息做出的。与聚合算子一起使用的 IF 信息在基于因素开发制造工厂合适地点选择的支撑系统方面给出了有前景的结果。
 
 ## 7.6 结论
 
-本章使用 MCDM 技术来根据所需要求选择制造工厂的合适地点。给出的信息形式为 ITrFNs，使用 DIFWA 算子进行聚合。此外，在做出决策时考虑了三位领域专家的意见。根据计算出的相对贴近系数值进行决策并对备选方案进行排名。相对贴近系数的值越大，该备选方案获得的优先级就越高。该模型可用于其他类似情况，以避免在调查上产生不必要的开支。在不确定性下，该模型更适合对手头问题进行初步调查。
+本章使用 MCDM 技术来根据所需要求选择制造工厂的合适地点。给出的信息形式为 ITrFNs，使用 `DIFWA` 算子进行聚合。此外，在做出决策时考虑了三位领域专家的意见。根据计算出的相对贴近系数值进行决策并对备选方案进行排名。相对贴近系数的值越大，该备选方案获得的优先级就越高。该模型可用于其他类似情况，以避免在调查上产生不必要的开支。在不确定性下，该模型更适合对手头问题进行初步调查。
 
 ![](img/e9de70cd491e84262133af63cb33d500_119_0.png)
 
@@ -2038,12 +2057,9 @@ ANITA MOHANTY¹, AMBARISH G. MOHAPATRA¹, and SUBRAT KUMAR MOHANTY²
 
 ²*电子与通信工程系，爱因斯坦技术与管理学院，印度奥里萨邦布巴内什瓦尔*
 
-## **摘要**
+## 摘要
 
 模糊逻辑与工业物联网（IIoT）的融合开启了智能制造的新纪元，为效率、质量和适应性提供了前所未有的机遇。本章分析了模糊逻辑在追求智能制造的背景下，于 IIoT 领域中的关键作用。模糊逻辑内置的处理不确定性和不精确数据的能力，使其成为复杂动态制造环境中决策的宝贵机制。我们深入探讨了模糊逻辑用于优化流程、改善资源分配以及提升整体制造绩效的实际应用案例。此外，我们还分析了模糊逻辑与 IIoT 传感器及平台的集成，突出展示了它如何促进对实现智能制造目标至关重要的实时自适应决策。通过揭示模糊逻辑与 IIoT 之间的协作，本章为这些技术在现代制造中的变革潜力提供了洞察，并为构建更具适应性和响应性的工业环境奠定了基础。
-
-
-
 
 ## 8.1 引言
 
@@ -2058,6 +2074,8 @@ ANITA MOHANTY¹, AMBARISH G. MOHAPATRA¹, and SUBRAT KUMAR MOHANTY²
 ### 8.1.1 制造业中 IIoT 的背景与意义
 
 IIoT 已成为制造业的一个变革性力量，重新定义了传统流程，并促进了工业 4.0 的到来。将尖端传感器、执行器和通信技术引入工业机器，以创建互联设备网络，是 IIoT 在生产中的基础 [3]。这种互联使得数据能够顺畅交换，从而实现生产过程的实时监控、分析和控制。IIoT 在制造业中的重要性体现在多个方面。
+
+
 
 首先，IIoT 通过提供对生产线各个方面的前所未有的可见性，提高了运营效率。来自传感器和设备的实时数据使得能够主动检测低效或瓶颈，优化工作流程，并改善决策。因此，这导致了产量的增加和资源的高效利用。
 
@@ -2090,17 +2108,13 @@ IIoT 已成为制造业的一个变革性力量，重新定义了传统流程，
 在工业 4.0 背景下，模糊逻辑是智能制造中决策的一个基本工具 [5]。它解决了当代工业流程中固有的复杂性和不确定性。图 8.2 展示了模糊逻辑对智能制造的贡献，可总结如下：
 
 - **处理不确定和模糊信息：** 在智能制造环境中，传感器、机器和其他联网设备产生大量数据。模糊逻辑接受真值程度而非严格的二元区分，擅长处理这种模糊且经常不明确的数据。这种适应性在基于故障或不充分信息做决策时是必要的。
-
 - **自适应过程控制：** 自适应过程控制，其中制造条件可以动态变化，是模糊逻辑表现卓越的领域。它使得设计控制系统能够立即修改参数以响应变化的输入和外部环境成为可能。这种灵活性提高了生产操作的鲁棒性和效率。
 
 ![](img/e9de70cd491e84262133af63cb33d500_125_0.png)
 
 **图 8.2** 模糊逻辑在智能制造中作为决策工具的作用。
 
-- **质量控制与故障检测：** 智能制造利用模糊逻辑实现故障检测和质量控制。它使
-
-有可能创建智能算法，通过同时考虑多个要素来评估产品质量。为了维持产品质量，模糊逻辑还可以识别异常情况或偏离预期参数的现象，并启动纠正措施。
-
+- **质量控制与故障检测：** 智能制造利用模糊逻辑实现故障检测和质量控制。它使有可能创建智能算法，通过同时考虑多个要素来评估产品质量。为了维持产品质量，模糊逻辑还可以识别异常情况或偏离预期参数的现象，并启动纠正措施。
 - **优化资源分配：** 智能制造涉及对能源、材料和设备等资源的优化。模糊逻辑通过同时考虑多个因素和权衡来辅助决策。这在考虑不断变化的生产需求和运营约束的同时，对高效分配资源尤为宝贵。
 - **预测性维护：** 智能制造中的预测性维护解决方案使用了模糊逻辑。模糊逻辑模型能够通过评估机械设备的历史和当前数据来预见可能的故障或维护需求。通过采取主动策略，这一方法减少了停机时间并延长了工业资产的使用寿命。
 - **人机协作：** 在智能制造环境中，模糊逻辑实现了人与机器的协作，使人类操作员能够与自动化系统进行交流。这使得将人类的判断和经验纳入自动化程序成为可能，确保决策既得到定性信息也得到定量信息的支持。
@@ -2145,26 +2159,16 @@ IIoT 已成为制造业的一个变革性力量，重新定义了传统流程，
 
 ### 8.2.3 实时决策制定的需求
 
-在智能制造 IIoT 中，实时决策制定的需求至关重要，它塑造了产业运营方式的范式转变
+在智能制造 IIoT 中，实时决策制定的需求至关重要，它塑造了产业运营方式的范式转变并优化其流程。若干因素凸显了在此背景下实时决策的重要性：
 
-
-并优化其流程。若干因素凸显了在此背景下实时决策的重要性：
-
--   **动态运行环境：** 智能制造环境是动态的，且处于不断变化之中。实时决策允许对需求波动、设备状态和意外事件进行快速适应。它确保响应是即时的，从而增强制造过程的敏捷性。
-
--   **优化效率与生产力：** 来自传感器和设备的实时数据提供了生产线的实时图像。通过实时数据分析，制造商可以发现瓶颈、简化流程并提高整体运营效率。这种敏捷性缩短了提前期并提高了生产力。
-
--   **预测性维护：** 对设备健康状况的及时洞察使得制定预测性维护计划成为可能。利用实时数据分析，制造商可以通过识别表明即将发生故障的异常或趋势，在问题恶化之前规划维护。这降低了维护成本，延长了设备寿命，并最大限度地减少了停机时间。
-
--   **质量控制：** 在智能制造中保持产品质量至关重要。实时监控和分析生产数据的能力有助于及时发现偏离质量要求的情况。这确保了纠正措施可以立即实施，避免生产不合格产品并减少浪费。
-
--   **供应链协调：** 实时决策不仅发生在制造车间，还贯穿整个供应链。通过定期评估有关库存水平、需求预测和物流的数据，制造商可以更好地应对市场需求，优化供应链效率并缩短提前期。
-
--   **客户响应能力：** 客户和市场需求可能迅速变化。实时决策使生产商能够快速应对消费者偏好或行业趋势的变化。保持竞争力和满足客户期望需要这种灵活性。
-
--   **应急响应：** 需要立即行动的不期望事件，如供应链中断或设备故障，必须立即解决。通过促进快速响应和备用计划的执行，实时决策减少了紧急事件对生产时间表的影响。
-
--   **减少信息延迟：** 信息延迟可能会阻碍充分知情的决策。通过降低这种延迟，实时处理确保决策者能够获取最新且相关的数据。这在快节奏的制造环境中尤为重要。
+- **动态运行环境：** 智能制造环境是动态的，且处于不断变化之中。实时决策允许对需求波动、设备状态和意外事件进行快速适应。它确保响应是即时的，从而增强制造过程的敏捷性。
+- **优化效率与生产力：** 来自传感器和设备的实时数据提供了生产线的实时图像。通过实时数据分析，制造商可以发现瓶颈、简化流程并提高整体运营效率。这种敏捷性缩短了提前期并提高了生产力。
+- **预测性维护：** 对设备健康状况的及时洞察使得制定预测性维护计划成为可能。利用实时数据分析，制造商可以通过识别表明即将发生故障的异常或趋势，在问题恶化之前规划维护。这降低了维护成本，延长了设备寿命，并最大限度地减少了停机时间。
+- **质量控制：** 在智能制造中保持产品质量至关重要。实时监控和分析生产数据的能力有助于及时发现偏离质量要求的情况。这确保了纠正措施可以立即实施，避免生产不合格产品并减少浪费。
+- **供应链协调：** 实时决策不仅发生在制造车间，还贯穿整个供应链。通过定期评估有关库存水平、需求预测和物流的数据，制造商可以更好地应对市场需求，优化供应链效率并缩短提前期。
+- **客户响应能力：** 客户和市场需求可能迅速变化。实时决策使生产商能够快速应对消费者偏好或行业趋势的变化。保持竞争力和满足客户期望需要这种灵活性。
+- **应急响应：** 需要立即行动的不期望事件，如供应链中断或设备故障，必须立即解决。通过促进快速响应和备用计划的执行，实时决策减少了紧急事件对生产时间表的影响。
+- **减少信息延迟：** 信息延迟可能会阻碍充分知情的决策。通过降低这种延迟，实时处理确保决策者能够获取最新且相关的数据。这在快节奏的制造环境中尤为重要。
 
 总之，在IIoT驱动的智能制造中对实时决策的需求源于工业流程的动态特性、对卓越运营的追求以及快速应对不断变化的条件的必要性。通过利用实时数据分析的力量，制造商不仅可以优化当前的运营，还能在快速演进的工业4.0格局中为自身的敏捷性和竞争力做好定位。
 
@@ -2179,11 +2183,8 @@ IIoT 已成为制造业的一个变革性力量，重新定义了传统流程，
 这些隶属程度在很大程度上由隶属函数定义。这些函数通过将输入值映射到0和1之间的范围，表明特定元素属于模糊集的程度。模糊集的性质由隶属函数的形式决定，它可以采取多种形式，如图8.4所示的三角形、梯形、高斯形或更复杂的形状。
 
 ![](img/e9de70cd491e84262133af63cb33d500_132_0.png)
-
 ![](img/e9de70cd491e84262133af63cb33d500_132_1.png)
-
 ![](img/e9de70cd491e84262133af63cb33d500_132_2.png)
-
 ![](img/e9de70cd491e84262133af63cb33d500_132_3.png)
 
 **图 8.4** 四类参数化隶属函数（MF）的示例：(a) 三角形；(b) 梯形；(c) 高斯形；以及 (d) 钟形。
@@ -2224,18 +2225,11 @@ FIS在包括控制系统、决策支持系统和模式识别在内的多个领�
 
 FIS建立在模糊逻辑中基于规则的推理基础之上，这涉及利用模糊逻辑的思想从一组if–then规则中得出推论。由于这些规则捕获了专家知识和类人推理，模糊逻辑擅长对具有不确定性和不精确性的复杂系统进行建模和管理。基于规则的推理通过几个关键步骤进行：
 
--   **模糊化：** 使用隶属函数，输入变量从尖锐的数值转换为模糊集。此阶段使得能够描绘现实数据中包含的不确定性和不精确性。
-
--   **规则库：** 规则库由一组if–then规则组成，将模糊输入变量与模糊输出变量联系起来。每个规则阐明了特定输入条件和结果输出动作之间的语言关系。例如，一个规则可能陈述“如果温度高，则空调强劲”。
-
-
-
-
-**推理引擎：** 推理引擎根据当前的模糊输入值评估模糊规则。每条规则被满足的程度由与输入变量相关的隶属度函数决定。推理引擎结合这些规则的强度以生成模糊输出值。
-
-**聚合：** 为了创建完整的模糊输出，将多条规则产生的模糊输出值进行合并。这涉及合并每条规则生成的不同模糊集，通常使用如最大值或平均值聚合等方法。
-
-**去模糊化：** 去模糊化是最后阶段，将模糊输出转换为清晰、有用的结果。在此过程中，合并后的模糊输出集通常被概括为单一的数值。质心法、最大均值法和加权平均去模糊化是常用的技术。
+- **模糊化：** 使用隶属函数，输入变量从尖锐的数值转换为模糊集。此阶段使得能够描绘现实数据中包含的不确定性和不精确性。
+- **规则库：** 规则库由一组if–then规则组成，将模糊输入变量与模糊输出变量联系起来。每个规则阐明了特定输入条件和结果输出动作之间的语言关系。例如，一个规则可能陈述“如果温度高，则空调强劲”。
+- **推理引擎：** 推理引擎根据当前的模糊输入值评估模糊规则。每条规则被满足的程度由与输入变量相关的隶属度函数决定。推理引擎结合这些规则的强度以生成模糊输出值。
+- **聚合：** 为了创建完整的模糊输出，将多条规则产生的模糊输出值进行合并。这涉及合并每条规则生成的不同模糊集，通常使用如最大值或平均值聚合等方法。
+- **去模糊化：** 去模糊化是最后阶段，将模糊输出转换为清晰、有用的结果。在此过程中，合并后的模糊输出集通常被概括为单一的数值。质心法、最大均值法和加权平均去模糊化是常用的技术。
 
 模糊逻辑是控制系统、专家系统、智能制造、机器人技术和决策制定中宝贵的工具，因为它使用基于规则的推理过程来考虑现实系统中固有的不确定性。由于基于规则的推理的灵活性能够捕捉类似人类的决策复杂性，模糊逻辑在精确和确定性方法不足的场景中特别有用。
 
@@ -2244,6 +2238,8 @@ FIS建立在模糊逻辑中基于规则的推理基础之上，这涉及利用�
 模糊逻辑融入工业物联网（IIoT）是控制系统和智能制造领域的一项重大进展。由于模糊逻辑能够处理不确定性和不精确性，它非常适合 IIoT 环境的动态特性。模糊逻辑原则可以集成到 IIoT 框架中 [9]，以提升面临现实复杂性的行业的决策能力。通过允许对网络设备与传感器产生的海量数据进行更复杂的解释，模糊逻辑推动了数据分析的发展。得益于这种集成，制造系统现在可以立即响应变化的条件，简化工作流程并提高整体效率。无论是应用于预测性维护、质量控制还是自适应自动化，模糊逻辑与 IIoT 的结合都促进了智能、自优化系统的发展，这些系统定义了工业 4.0 时代智能制造的本质。这种协同效应不仅增强了控制系统的鲁棒性，还强调了将类似人类的推理融入互联工业生态系统中具有变革性的潜力。
 
 ### 8.4.1 用于制造过程的模糊逻辑控制器（FLC）
+
+
 
 FLC 已成为优化制造过程的重要工具，为工业环境中的控制系统提供了灵活且自适应的方法。与传统控制系统不同，FLC 擅长管理复杂、非线性和不确定的制造环境。这些控制器利用语言规则和类似人类的推理，基于不精确或不完整的信息做出决策，而这往往是工业过程固有的特征。在制造领域，FLC 应用于温度控制、压力调节和质量保证等多个领域 [10]。
 
@@ -2274,14 +2270,9 @@ FLC 通过将专家知识转化为基于规则的系统来运行。例如，在�
 - **基于模糊规则的系统：** 模糊逻辑利用封装了专家知识和操作经验的基于规则的系统。这些规则定义了输入变量（如尺寸、温度或材料特性）与相应质量输出之间的关系。使用诸如“高”、“中”和“低”等语言变量来表示对质量标准的符合程度。
 - **数据模糊化：** 模糊逻辑的第一步是模糊化输入数据，将数值测量转换为带有相应隶属度函数的语言变量。在此步骤中，不精确和不确定的信息可以以模糊逻辑系统可处理的格式表示。
 - **推理机制：** 模糊逻辑使用推理引擎通过利用模糊化后的输入数据来评估模糊规则。通过结合这些规则，它产生指示产品质量水平的模糊输出值。该过程实现了对产品质量复杂且具备情境感知的评估。
-- **聚合与去模糊化：** 将模糊输出值结合并随后进行去模糊化的过程，得出清晰、实用
-
-模糊质量评估中得出的决策。在这最后一步中，产品的质量等级被清晰地表明，从而能够采取适当的行动方针。
-
+- **聚合与去模糊化：** 将模糊输出值结合并随后进行去模糊化的过程，得出清晰、实用模糊质量评估中得出的决策。在这最后一步中，产品的质量等级被清晰地表明，从而能够采取适当的行动方针。
 - **自适应决策制定：** 在动态生产环境中，质量控制严重依赖于模糊逻辑适应不断变化的局面的能力。通过使生产参数波动下的实时修改成为可能，即使在不确定性的面前，它也能确保产品保持一致的质量。
-
 - **与传感器和自动化的集成：** 模糊逻辑可以轻松地与自动化系统和传感器数据集成。传感器持续监测关键质量指标，模糊逻辑分析这些数据以对产品状态做出决策。随后，自动化系统可以利用这些不精确的数据做出纠正性决策。
-
 - **多准则决策制定：** 模糊逻辑主要擅长同时处理多个准则。当多个因素影响最终产品质量时，模糊逻辑允许对质量控制进行全面评估。这是通过考虑各种质量参数之间的相互依赖性来实现的。
 
 通过在质量控制中利用模糊逻辑，制造工艺可以达到更高的精度、适应性和稳健性。在波动是常态的行业（例如，生产持续高质量产品的行业）中，这种方法特别有用。
@@ -2295,19 +2286,12 @@ FLC 通过将专家知识转化为基于规则的系统来运行。例如，在�
 自适应生产调度是一种灵活且可适应的规划组织制造运营的方法，它考虑了不确定性、优先级变化以及实时调整。与传统静态调度技术不同，自适应生产调度利用尖端技术和智能算法，根据工业环境的变化持续优化生产计划[14]。自适应生产调度的概念由许多关键组成部分定义：
 
 - **实时数据集成：** 为了使自适应生产调度正常工作，必须在整个制造生态系统中无缝集成来自多个来源的实时数据。这包括传感器、制造设备、库存水平以及外部变量（如消费者需求）的信息。
-
 - **预测分析：** 通过预测未来对生产环境的干扰或修改，预测分析对于自适应调度至关重要。这涉及使用数据分析、机器学习和其他预测建模技术来预测未来事件和趋势。
-
 - **动态重新调度：** 自适应生产调度指的是根据不断发展的情况动态修改生产计划的能力。这可能包括意外的设备故障、需求变化或资源可用性的调整。
-
 - **机器学习和人工智能算法：** 使用人工智能和机器学习算法来检查过去的数据、识别趋势并随时间增强自适应调度模型。这些算法通过适应和从新输入中学习，提高了系统深思熟虑的决策能力。
-
 - **优化目标：** 自适应调度根据预定目标优化生产计划，例如最大化资源利用率、最小化生产成本、满足交货期限或最大化能源效率。这些目标可以根据生产过程的特定目标进行调整。
-
 - **人机协作：** 自适应生产调度通常涉及一定程度的人机协作。虽然算法管理数据分析和决策过程，但人类操作员提供专业知识，处理意外困难，并做出支持总体公司目标的战略性选择。
-
 - **与工业4.0原则的集成：** 自适应生产调度强调使用互联技术、物联网（IoT）设备和信息物理系统，这与工业4.0的原则保持一致。这种集成促进了一个自动化、可适应且智能的制造环境。
-
 - **敏捷制造概念：** 敏捷性是自适应生产调度的一个关键组成部分。由于系统对变化的快速响应时间，生产者可以在面临不断变化的市场动态和运营挑战时保持适应能力。
 
 自适应生产调度是智能制造的主要组成部分之一，它开启了通往更高生产力、更短交货时间以及对市场波动更强响应能力的大门。最终，它有助于实现建立稳健且具有竞争力的制造环境这一主要目标。它象征着从严格的预设时间表向更灵活和自适应的生产过程的转变。
@@ -2338,28 +2322,15 @@ FLC 通过将专家知识转化为基于规则的系统来运行。例如，在�
 供应链优化的目标是使用战略性和数据驱动的策略，提高供应链的整体绩效、灵活性和效率。为了优化价值并节省成本，必须系统地分析、计划和执行供应链活动。供应链优化由几个基本要素表征：
 
 - **需求预测：** 精确的需求预测是供应链优化的基础。通过利用市场趋势、历史数据和预测分析，组织可以预见未来需求并主动分配资源。
-
-
-
-
-
--   **库存管理**：适当的库存控制确保在正确的时间和地点有合适数量的物品可用。优化供应链旨在实现降低持有成本与避免缺货之间的平衡。
-
--   **物流与运输优化**：简化运输路线、选择最经济的承运商以及缩短运输时间都是物流优化的例子。实时跟踪、使用路线优化技术以及与物流合作伙伴的合作都可以是其中的一部分。
-
--   **供应商关系管理**：具有弹性和高效的供应链依赖于与其供应商的牢固联系。在这种情况下，优化意味着与可靠的供应商合作，协商有利的条件，并合作开展旨在持续改进的项目。
-
--   **技术整合**：利用人工智能、区块链和物联网等尖端技术可以自动执行程序，提供实时的供应链可视化，并促进数据驱动的优化决策。
-
--   **风险管理**：识别和减少可能损害运营的风险是供应链优化的关键组成部分。这包括评估可能影响供应链的外部因素，如自然灾害和地缘政治事件。
-
--   **多级优化**：在优化供应链时，需要考虑的组织包括供应商、制造商、分销商和零售商等。多级优化的目标是最大化整个供应链中信息和物资的流动。
-
--   **可持续性考量**：可持续性是当代供应链优化的一个关键组成部分。这包括减少浪费，实施环保做法，并最小化供应链运营对环境的负面影响。
-
--   **协同计划**：对于优化而言，供应链参与者之间的合作与沟通至关重要。协同计划平台与工具促进了信息共享，帮助所有利益相关者协调其努力，以符合供应链的总体目标。
-
--   **持续改进**：供应链优化是一个持续的过程，包括监控、分析和改进。通过定期评估关键绩效指标和绩效指标，组织可以确定需要改进的领域。
+- **库存管理**：适当的库存控制确保在正确的时间和地点有合适数量的物品可用。优化供应链旨在实现降低持有成本与避免缺货之间的平衡。
+- **物流与运输优化**：简化运输路线、选择最经济的承运商以及缩短运输时间都是物流优化的例子。实时跟踪、使用路线优化技术以及与物流合作伙伴的合作都可以是其中的一部分。
+- **供应商关系管理**：具有弹性和高效的供应链依赖于与其供应商的牢固联系。在这种情况下，优化意味着与可靠的供应商合作，协商有利的条件，并合作开展旨在持续改进的项目。
+- **技术整合**：利用人工智能、区块链和物联网等尖端技术可以自动执行程序，提供实时的供应链可视化，并促进数据驱动的优化决策。
+- **风险管理**：识别和减少可能损害运营的风险是供应链优化的关键组成部分。这包括评估可能影响供应链的外部因素，如自然灾害和地缘政治事件。
+- **多级优化**：在优化供应链时，需要考虑的组织包括供应商、制造商、分销商和零售商等。多级优化的目标是最大化整个供应链中信息和物资的流动。
+- **可持续性考量**：可持续性是当代供应链优化的一个关键组成部分。这包括减少浪费，实施环保做法，并最小化供应链运营对环境的负面影响。
+- **协同计划**：对于优化而言，供应链参与者之间的合作与沟通至关重要。协同计划平台与工具促进了信息共享，帮助所有利益相关者协调其努力，以符合供应链的总体目标。
+- **持续改进**：供应链优化是一个持续的过程，包括监控、分析和改进。通过定期评估关键绩效指标和绩效指标，组织可以确定需要改进的领域。
 
 通过采取全面和综合的策略，组织可以提高其供应链优化水平，变得更加具有韧性、高效和响应能力。在当今快节奏的商业环境中，这尤为重要，因为全球市场、不断变化的消费者期望和技术突破的影响要求供应链策略必须灵活且经过优化。
 
@@ -2397,14 +2368,11 @@ FLC 通过将专家知识转化为基于规则的系统来运行。例如，在�
 
 **图 8.8** 使用模糊逻辑控制器（FLC）提高自适应生产控制系统中的生产力。
 
-
-
-
 在案例研究中展示了响应速度、灵活性和生产效率方面的显著提升。利用模糊逻辑的自适应生产控制系统成功缓解了未预期中断的影响，最大限度地减少了空闲时间，并优化了资源分配。由于其灵活性，制造工厂能够更快地应对不断变化的生产需求，从而提高了整体运营效率。
 
 模糊逻辑成功融入了自适应生产控制，展示了该方法在应对现代制造环境动态特性方面提供巧妙且适应性强的响应能力。案例研究展示了基于模糊逻辑的控制系统如何有助于实现既符合工业 4.0 标准又具备灵活性的制造流程。
 
-## 8.6.3 案例研究 3：智能制造中的质量保证
+### 8.6.3 案例研究 3：智能制造中的质量保证
 
 在一项展示智能制造如何融入质量保证的工业 4.0 案例研究中，一家创新汽车制造厂旨在通过应用尖端技术来提升其生产流程 [17]。主要目标包括提高产品质量、降低故障率，并确保生产线的更加流畅和高效。
 
@@ -2426,21 +2394,23 @@ FLC 通过将专家知识转化为基于规则的系统来运行。例如，在�
 
 虽然智能制造有望提高效率和促进创新，但它面临着各种需要深思熟虑的挑战。
 
+
+
 由多样化技术引发的互操作性问题、数据安全顾虑以及隐私考量需要稳健的策略 [18]。弥合技能差距并培训擅长数据分析和自动化的劳动力至关重要，同时还需解决部署智能技术所涉及的高昂前期成本。集成遗留系统并建立标准化框架以实现无缝协作构成了额外的障碍。高效的数据管理、应对组织变革的变更管理策略，以及确保数字系统的可靠性和弹性是关键考量因素。在不断演进的监管框架内遵守法规增加了实施过程的复杂性。应对这些挑战需要一种全面且自适应的方法，强调在技术和人力资本两方面进行投资，以释放智能制造的完全潜力。
 
 ### 8.7.1 可扩展性与实时性能
 
-可扩展性和实时性能是智能制造领域的重要考量，反映了系统处理增加的工作负载并及时响应需求的能力。智能制造基础设施必须具备可扩展性，以适应需求变化或新设备和程序的添加。这种灵活性对于满足生产环境不断变化的需求是必要的。相反，实时性能对于保证数据处理和决策中的最小延迟至关重要，从而能够对车间内变化的状况做出快速响应。实时性能和可扩展性相辅相成，因为可扩展系统需要在扩展过程中保持最高效率的运作。为了实现这一平衡，必须利用边缘计算等尖端技术，它在靠近数据源处处理数据，以最小化延迟并提高实时能力 [19]。建立有韧性的通信网络、数据分析平台和灵活控制系统，有助于智能制造实现工业 4.0 环境所需的可扩展性和实时性能。
+可扩展性和实时性能是智能制造领域的重要考量，反映了系统处理增加的工作负载并及时响应需求的能力。智能制造基础设施必须具备可扩展性，以适应需求变化或新设备和程序的添加。这种灵活性对于满足生产环境不断变化的需求是必要的。相反，实时性能对于保证数据处理和决策中的最小延迟至关重要，从而能够对车间内变化的状况做出快速响应。实时性能和可扩展性相辅相成，因为可扩展系统需要在扩展过程中保持最高效率的运作。为了实现这一平衡，必须利用`边缘计算`等尖端技术，它在靠近数据源处处理数据，以最小化延迟并提高实时能力 [19]。建立有韧性的通信网络、数据分析平台和灵活控制系统，有助于智能制造实现`Industrial 4.0`环境所需的可扩展性和实时性能。
 
 ### 8.7.2 数据集成与互操作性
 
-在工业 4.0 框架内构建有效生态系统，智能制造的基本概念——数据集成和互操作性——是不可或缺的。在整个制造过程中，数据集成指的是来自多个来源的信息的无缝传输和聚合。这包括由机器、传感器和企业资源规划系统以及其他设备产生的信息。相反，互操作性确保这些不同的系统通过遵循共同的指南和规范来和平共处。
+在`Industrial 4.0`框架内构建有效生态系统，智能制造的基本概念——数据集成和互操作性——是不可或缺的。在整个制造过程中，数据集成指的是来自多个来源的信息的无缝传输和聚合。这包括由机器、传感器和企业资源规划系统以及其他设备产生的信息。相反，互操作性确保这些不同的系统通过遵循共同的指南和规范来和平共处。
 
 在智能制造中，高效的数据集成使能够全面理解生产过程，从而更容易进行实时监测、分析和决策。这一集成数据有利于总体流程优化、质量保证和预测性维护。然而，由于设备、协议和标准的多样性，确保顺畅的互操作性通常颇具挑战性。
 
-组织使用 MQTT 等数据共享格式、OPC UA 等通信标准以及 IIoT 协议来克服这些问题。这些标准为系统和设备提供了通用语言，保证兼容性并促进轻松的数据共享。
+组织使用`MQTT`等数据共享格式、`OPC UA`等通信标准以及`IIoT`协议来克服这些问题。这些标准为系统和设备提供了通用语言，保证兼容性并促进轻松的数据共享。
 
-此外，边缘计算通过在靠近源头处理数据、降低延迟并促进快速响应，显著改善了数据集成和互操作性。基于云的解决方案通过启用集中平台用于数据共享和异构系统之间的通信，也有助于互操作性。
+此外，`边缘计算`通过在靠近源头处理数据、降低延迟并促进快速响应，显著改善了数据集成和互操作性。基于云的解决方案通过启用集中平台用于数据共享和异构系统之间的通信，也有助于互操作性。
 
 要在智能制造中成功实施数据集成和互操作性，需要进行战略规划、投资兼容技术并与行业合作伙伴合作。通过建立标准化通信协议并采用支持无缝数据交换的技术，制造商可以释放智能制造的完全潜力，推动运营中的效率、创新和敏捷性。
 
@@ -2448,94 +2418,77 @@ FLC 通过将专家知识转化为基于规则的系统来运行。例如，在�
 
 在实施智能制造时，安全和隐私顾虑是首要考虑的问题，因为连接的增加和数据交换引入了新的漏洞和风险 [20]。在这方面的一些主要挑战包括：
 
-- **网络威胁：** 智能制造系统的互联性质使其容易受到网络威胁，如黑客攻击、恶意软件和勒索软件攻击。保护工业控制系统并防止对关键基础设施的未授权访问是关键优先事项。
-
-
-
-
-
-- **数据完整性与保密性：** 确保敏感数据的完整性和保密性至关重要。对生产数据、知识产权或商业机密的未经授权的访问或篡改可能会带来严重后果。
-
-- **供应链风险：** 智能制造通常涉及全球供应链，这会在各个环节引入安全风险。保护从设计到生产的数字供应链对于防止被破坏或仿冒至关重要。
-
-- **互操作性挑战：** 集成多样的技术和系统可能会导致互操作性挑战，从而可能产生安全漏洞。确保所有组件都遵循强大的安全标准对于防止漏洞至关重要。
-
-- **员工意识与培训：** 人为因素在安全中起着重要作用。员工意识和培训的不足可能导致无意的安全违规。对劳动力进行网络安全最佳实践的教育至关重要。
-
-- **法规合规：** 遵守数据保护和隐私法规是一个复杂的挑战，特别是在法律严格的地区。在保持运营效率的同时应对多样的法规环境需要谨慎处理。
-
-- **遗留系统漏洞：** 许多制造设施仍在运行可能缺乏现代安全功能的遗留系统。改造或保护这些系统对于防止漏洞被利用至关重要。
-
-- **物理安全：** 保护包括机械设备和数据中心在内的物理基础设施至关重要。对关键组件的未经授权的物理访问可能会破坏整个制造过程。
-
-- **数据所有权与共享：** 制定关于数据所有权和共享的明确政策至关重要。在智能制造生态系统中，平衡协作需求与保护专有信息对于至关重要。
-
-- **持续监控与事件响应：** 实施持续监控和事件响应机制对于及时识别和缓解安全威胁至关重要。对安全事件的及时响应可以最大限度地减少其对运营的影响。
+- `网络威胁：` 智能制造系统的互联性质使其容易受到网络威胁，如黑客攻击、恶意软件和勒索软件攻击。保护工业控制系统并防止对关键基础设施的未授权访问是关键优先事项。
+- `数据完整性与保密性：` 确保敏感数据的完整性和保密性至关重要。对生产数据、知识产权或商业机密的未经授权的访问或篡改可能会带来严重后果。
+- `供应链风险：` 智能制造通常涉及全球供应链，这会在各个环节引入安全风险。保护从设计到生产的数字供应链对于防止被破坏或仿冒至关重要。
+- `互操作性挑战：` 集成多样的技术和系统可能会导致互操作性挑战，从而可能产生安全漏洞。确保所有组件都遵循强大的安全标准对于防止漏洞至关重要。
+- `员工意识与培训：` 人为因素在安全中起着重要作用。员工意识和培训的不足可能导致无意的安全违规。对劳动力进行网络安全最佳实践的教育至关重要。
+- `法规合规：` 遵守数据保护和隐私法规是一个复杂的挑战，特别是在法律严格的地区。在保持运营效率的同时应对多样的法规环境需要谨慎处理。
+- `遗留系统漏洞：` 许多制造设施仍在运行可能缺乏现代安全功能的遗留系统。改造或保护这些系统对于防止漏洞被利用至关重要。
+- `物理安全：` 保护包括机械设备和数据中心在内的物理基础设施至关重要。对关键组件的未经授权的物理访问可能会破坏整个制造过程。
+- `数据所有权与共享：` 制定关于数据所有权和共享的明确政策至关重要。在智能制造生态系统中，平衡协作需求与保护专有信息对于至关重要。
+- `持续监控与事件响应：` 实施持续监控和事件响应机制对于及时识别和缓解安全威胁至关重要。对安全事件的及时响应可以最大限度地减少其对运营的影响。
 
 解决这些安全和隐私问题需要综合的网络安全策略。这包括定期进行风险评估，实施强大的加密协议，持续的员工培训以及与网络安全专家的合作。制造商必须保持警惕，适应不断演变的威胁，并优先考虑安全，以在保护运营和敏感信息的同时充分实现智能制造的利益。
 
 ## 8.8 模糊逻辑与 IIoT 的未来趋势
 
-模糊逻辑与 IIoT 融合的未来趋势有望重新定义决策流程，并提升工业领域的运营效率。模糊逻辑能够处理不确定性和不精确性，注定将在优化 IIoT 应用中发挥关键作用。先进的模糊逻辑系统将演化为融合更复杂的机器学习算法，从而在动态制造环境中实现自适应决策。模糊逻辑与 IIoT 的协同效应将超越预测性维护和质量控制，涵盖生产、供应链管理和人机交互的更广泛方面。将边缘计算与模糊逻辑结合使用，将在源头促进实时分析和决策，减少延迟并增强响应能力。此外，未来将向更可解释的人工智能转变，模糊逻辑固有的可解释性将有助于建立对自主决策系统的信任 [21]。随着各行业迎接下一波工业变革浪潮，模糊逻辑与 IIoT 的融合有望在智能制造生态系统中开启智能、适应性和韧性的新维度。
+模糊逻辑与`IIoT`融合的未来趋势有望重新定义决策流程，并提升工业领域的运营效率。模糊逻辑能够处理不确定性和不精确性，注定将在优化`IIoT`应用中发挥关键作用。先进的模糊逻辑系统将演化为融合更复杂的机器学习算法，从而在动态制造环境中实现自适应决策。模糊逻辑与`IIoT`的协同效应将超越预测性维护和质量控制，涵盖生产、供应链管理和人机交互的更广泛方面。将`边缘计算`与模糊逻辑结合使用，将在源头促进实时分析和决策，减少延迟并增强响应能力。此外，未来将向更可解释的人工智能转变，模糊逻辑固有的可解释性将有助于建立对自主决策系统的信任 [21]。随着各行业迎接下一波工业变革浪潮，模糊逻辑与`IIoT`的融合有望在智能制造生态系统中开启智能、适应性和韧性的新维度。
 
 ### 8.8.1 边缘计算与分布式控制
 
-边缘计算和分布式控制是塑造智能制造未来的关键趋势，特别是在工业 4.0 的背景下。边缘计算涉及在靠近数据生成源的地方处理数据，以减少延迟并实现实时分析。在智能制造中，这意味着来自传感器、设备和机器的数据可以在网络边缘进行处理，从而允许更快的决策和更高效的资源利用 [22]。另一方面，分布式控制将决策权分布在制造系统内的各个组件中，使设备能够基于本地信息做出自主决策。
+边缘计算和分布式控制是塑造智能制造未来的关键趋势，特别是在`Industrial 4.0`的背景下。边缘计算涉及在靠近数据生成源的地方处理数据，以减少延迟并实现实时分析。在智能制造中，这意味着来自传感器、设备和机器的数据可以在网络边缘进行处理，从而允许更快的决策和更高效的资源利用 [22]。另一方面，分布式控制将决策权分布在制造系统内的各个组件中，使设备能够基于本地信息做出自主决策。
 
 边缘计算与分布式控制之间的协同效应对于智能制造具有变革意义。通过利用边缘计算，可以在本地处理实时产生的海量数据，减少对将大量数据传输到集中式云服务器的需求。这不仅减少了网络拥塞，还增强了系统的响应能力。分布式控制通过允许设备和传感器基于本地数据做出独立决策，与边缘计算相辅相成，从而促进制造过程的灵活性和适应性。
 
-这些趋势共同增强了智能制造系统的效率、可靠性和可扩展性。它们通过减少对集中式处理的依赖，改善实时决策，并促进自适应和自主制造流程的快速部署，从而有助于构建更强大和更具韧性的制造生态系统。随着工业 4.0 的持续演变，边缘计算与分布式控制的融合成为智能制造未来的关键推动力。
+这些趋势共同增强了智能制造系统的效率、可靠性和可扩展性。它们通过减少对集中式处理的依赖，改善实时决策，并促进自适应和自主制造流程的快速部署，从而有助于构建更强大和更具韧性的制造生态系统。随着`Industrial 4.0`的持续演变，边缘计算与分布式控制的融合成为智能制造未来的关键推动力。
 
 ### 8.8.2 机器学习-模糊逻辑混合方法
 
 机器学习和模糊逻辑的融合代表了智能制造的前沿方法，提供了一种强大的混合范式，结合了两种方法的优势。机器学习擅长模式识别、数据分析和复杂建模，而模糊逻辑则通过语言变量和基于规则的推理提供了一个处理不精确和不确定信息的框架 [23]。在智能制造中，这种混合体现在几个关键应用中：
 
-- **预测性维护：** 机器学习模型可以分析历史数据以预测设备故障，而模糊逻辑可以解释这些预测，并根据确定性程度做出决策，从而实现更细致的维护计划。
-- **质量控制：** 机器学习算法可以从庞大的数据集中学习，以识别与高质量产品相关的模式，然后模糊逻辑可以评估当前产品的质量，考虑制造过程中的不精确因素和不确定性。
-- **流程优化：** 混合方法可以通过利用机器学习识别数据中的模式，并利用模糊逻辑根据实时条件自适应地调整控制参数，从而优化制造流程，确保效率和品质。
-- **供应链管理：** 机器学习可以分析数据以预测需求并优化库存水平，而模糊逻辑可以处理供应链变量中的不确定性，从而实现动态环境中的自适应决策。
-- **能源管理：** 混合方法可以通过使用机器学习识别节能模式，并利用模糊逻辑根据变化的生产需求和环境因素调整能源使用，从而优化能源消耗。
-- **人机交互：** 机器学习模型可以被训练以理解人类行为和偏好，而模糊逻辑可以解释与用户满意度相关的语言变量，从而带来更直观和自适应的人机界面。
+- `预测性维护：` 机器学习模型可以分析历史数据以预测设备故障，而模糊逻辑可以解释这些预测，并根据确定性程度做出决策，从而实现更细致的维护计划。
+- `质量控制：` 机器学习算法可以从庞大的数据集中学习，以识别与高质量产品相关的模式，然后模糊逻辑可以评估当前产品的质量，考虑制造过程中的不精确因素和不确定性。
+- `流程优化：` 混合方法可以通过利用机器学习识别数据中的模式，并利用模糊逻辑根据实时条件自适应地调整控制参数，从而优化制造流程，确保效率和品质。
+- `供应链管理：` 机器学习可以分析数据以预测需求并优化库存水平，而模糊逻辑可以处理供应链变量中的不确定性，从而实现动态环境中的自适应决策。
+- `能源管理：` 混合方法可以通过使用机器学习识别节能模式，并利用模糊逻辑根据变化的生产需求和环境因素调整能源使用，从而优化能源消耗。
+- `人机交互：` 机器学习模型可以被训练以理解人类行为和偏好，而模糊逻辑可以解释与用户满意度相关的语言变量，从而带来更直观和自适应的人机界面。
 
-机器学习和模糊逻辑的整合提供了一种协同解决方案，解决了智能制造中的不确定性和复杂性挑战。这种混合方法利用机器学习的学习能力，结合模糊逻辑的可解释性和基于规则的推理，从而产生更强大、自适应且具有上下文感知能力的系统，有助于工业 4.0 的发展。
+机器学习和模糊逻辑的整合提供了一种协同解决方案，解决了智能制造中的不确定性和复杂性挑战。这种混合方法利用机器学习的学习能力，结合模糊逻辑的可解释性和基于规则的推理，从而产生更强大、自适应且具有上下文感知能力的系统，有助于`Industrial 4.0`的发展。
 
 ## 8.8.3 工业 4.0 与智能制造的未来
 
-工业 4.0 [24] 标志着制造领域的范式转变，开创了以集成数字技术、自动化和数据驱动决策为特征的智能制造时代 [25]。在工业 4.0 的背景下，有几个变革性趋势标志着智能制造的未来：
+`Industrial 4.0` [24] 标志着制造领域的范式转变，开创了以集成数字技术、自动化和数据驱动决策为特征的智能制造时代 [25]。在`Industrial 4.0`的背景下，有几个变革性趋势标志着智能制造的未来：
 
-- **互连性：** 工业 4.0 设想了一个高度互连的生态系统，其中机器、设备和系统能够无缝通信。IIoT 促进了实时数据交换，使整个生产过程的全局视图成为可能。
-- **数据分析和 AI：** 智能制造的未来严重依赖于先进的数据分析和 AI。机器学习算法分析大型数据集以提取见解、改进流程并允许预测性维护，有助于提高效率并减少停机时间。
-- **边缘计算：** 边缘计算正在发展成为智能制造的重要推动力。在更靠近数据源的地方处理数据，在
+- `互连性：` `Industrial 4.0`设想了一个高度互连的生态系统，其中机器、设备和系统能够无缝通信。`IIoT`促进了实时数据交换，使整个生产过程的全局视图成为可能。
+- `数据分析和 AI：` 智能制造的未来严重依赖于先进的数据分析和 AI。机器学习算法分析大型数据集以提取见解、改进流程并允许预测性维护，有助于提高效率并减少停机时间。
+- `边缘计算：` `边缘计算`正在发展成为智能制造的重要推动力。在更靠近数据源的地方处理数据，在网络边缘，降低延迟，改善实时决策能力，并减轻集中式云系统的负担。
+- `数字孪生`：数字孪生是物理资产和流程的虚拟副本，在智能制造中发挥着至关重要的作用。它们能够模拟、监控和优化生产流程，支持主动调整，从而最小化风险。
+- `去中心化决策`：去中心化的控制机制允许单个设备和组件基于本地数据做出自主决策，提高面对动态制造环境时的敏捷性、适应性和灵活性。
+- `信息物理系统`：信息物理系统将计算智能与物理流程相结合，构建出智能、自我监控的系统。这种集成增强了对变化进行实时感知、适应和反应的能力。
+- `定制化和灵活性`：智能制造拥抱定制化和灵活性，使得小批量甚至个性化产品的高效生产成为可能。这种从大规模生产向更具灵活性和适应性制造模式的转变，顺应了不断变化的消费者需求。
+- `可持续性和能效`：智能制造的未来强调可持续性和能效。智能电网、可再生能源整合和资源优化等技术有助于实现环保且经济高效的生产。
+- `人机协作`：协作机器人、增强现实界面和直观的人机交互是智能制造未来的重要组成部分。工人和机器协同工作，自动化处理常规任务，而人类则贡献创造力和解决问题的能力。
+- `安全与韧性`：随着连接性的增加，对网络安全的高度重视也随之而来。未来的智能制造系统优先考虑强健的安全措施，以防范网络威胁，确保关键工业基础设施的韧性。
 
-
-网络边缘，降低延迟，改善实时决策能力，并减轻集中式云系统的负担。
-
-1.  **数字孪生**：数字孪生是物理资产和流程的虚拟副本，在智能制造中发挥着至关重要的作用。它们能够模拟、监控和优化生产流程，支持主动调整，从而最小化风险。
-2.  **去中心化决策**：去中心化的控制机制允许单个设备和组件基于本地数据做出自主决策，提高面对动态制造环境时的敏捷性、适应性和灵活性。
-3.  **信息物理系统**：信息物理系统将计算智能与物理流程相结合，构建出智能、自我监控的系统。这种集成增强了对变化进行实时感知、适应和反应的能力。
-4.  **定制化和灵活性**：智能制造拥抱定制化和灵活性，使得小批量甚至个性化产品的高效生产成为可能。这种从大规模生产向更具灵活性和适应性制造模式的转变，顺应了不断变化的消费者需求。
-5.  **可持续性和能效**：智能制造的未来强调可持续性和能效。智能电网、可再生能源整合和资源优化等技术有助于实现环保且经济高效的生产。
-6.  **人机协作**：协作机器人、增强现实界面和直观的人机交互是智能制造未来的重要组成部分。工人和机器协同工作，自动化处理常规任务，而人类则贡献创造力和解决问题的能力。
-7.  **安全与韧性**：随着连接性的增加，对网络安全的高度重视也随之而来。未来的智能制造系统优先考虑强健的安全措施，以防范网络威胁，确保关键工业基础设施的韧性。
-
-随着工业4.0的不断演进，智能制造的未来特征是一个日益互联、智能和自适应的工业生态系统。采纳这些技术趋势不仅提升了运营效率，还使制造企业能够在数字转型时代蓬勃发展。
+随着`Industrial 4.0`的不断演进，智能制造的未来特征是一个日益互联、智能和自适应的工业生态系统。采纳这些技术趋势不仅提升了运营效率，还使制造企业能够在数字转型时代蓬勃发展。
 
 ## 8.9 结论
 
-总之，在智能制造的工业物联网（IIoT）中整合模糊逻辑代表了一种范式转变，迈向更智能、更具适应性和高效性的工业流程。模糊逻辑处理不确定性、不精确数据和复杂决策的能力，与工业物联网动态且互联的特性相辅相成。通过实时数据分析、预测性维护和决策支持，模糊逻辑有助于优化制造运营，减少停机时间，并提高整体生产力。模糊逻辑与工业物联网之间的协同作用，使对制造变量的理解更加细致入微，从而促进对变化条件的适应性反应。随着智能制造在工业4.0的大背景下发展，模糊逻辑的整合在处理工业环境中不可预测性和变异性问题方面变得日益重要。这种技术组合为构建更稳健、灵活和智能的制造环境奠定了基础，同时也提高了运营效率。模糊逻辑在工业物联网中的重要性，通过其在不断变化的智能制造领域中所处的地位得到验证，用于驾驭当代工业过程的细节。
+总之，在智能制造的工业物联网（`IIoT`）中整合模糊逻辑代表了一种范式转变，迈向更智能、更具适应性和高效性的工业流程。模糊逻辑处理不确定性、不精确数据和复杂决策的能力，与工业物联网动态且互联的特性相辅相成。通过实时数据分析、预测性维护和决策支持，模糊逻辑有助于优化制造运营，减少停机时间，并提高整体生产力。模糊逻辑与工业物联网之间的协同作用，使对制造变量的理解更加细致入微，从而促进对变化条件的适应性反应。随着智能制造在`Industrial 4.0`的大背景下发展，模糊逻辑的整合在处理工业环境中不可预测性和变异性问题方面变得日益重要。这种技术组合为构建更稳健、灵活和智能的制造环境奠定了基础，同时也提高了运营效率。模糊逻辑在工业物联网中的重要性，通过其在不断变化的智能制造领域中所处的地位得到验证，用于驾驭当代工业过程的细节。
 
 ### 8.9.1 关键见解回顾
 
 回顾而言，在智能制造的工业物联网中整合模糊逻辑，带来了塑造现代工业流程格局的关键见解：
 
--   **处理不确定性**：模糊逻辑的优势在于其处理模糊性和不精确数据的能力。模糊逻辑为不确定的制造环境提供了强大的决策框架，在这种环境中，变量无法拥有确切的值。
--   **实时决策支持**：工业物联网与模糊逻辑的结合使得实时数据分析和决策支持成为可能。这赋予了工业系统在工厂环境中不断变化的条件下进行智能调整和决策的能力。
--   **预测性维护**：模糊逻辑是预测性维护技术的关键组成部分。模糊逻辑模型通过评估历史数据和当前数据来预测设备故障并建议预防性维护措施。这最小化了停机时间并最大化了运营效率。
--   **适应性制造**：工业物联网与模糊逻辑的结合增强了制造流程的适应性。模糊逻辑中基于规则的推理能够对不断变化的情况进行适应性反应，确保工业系统能够动态适应意外事件。
--   **细致入微的决策**：通过引入语言因素和基于规则的推理，模糊逻辑为决策过程增加了细致入微的程度。这种细致的处理方法使得能够对影响制造的众多复杂方面做出更复杂和情境感知的响应。
--   **整合挑战**：尽管模糊逻辑有许多优势，但也存在缺点。这些问题包括标准化、互操作性以及合格人员需求方面的挑战。要释放模糊逻辑在智能制造中的全部潜力，需要克服这些障碍。
--   **未来趋势**：模糊逻辑和工业物联网的未来方向包括自适应决策系统、边缘计算和去中心化控制的持续发展。这些发展凸显了本地化和更高效的数据处理对于提高实时性能和降低延迟的必要性。
--   **工业4.0变革**：工业物联网中模糊逻辑的应用与工业4.0的更广泛变革相一致。为了发展更智能和互联的制造生态系统，这一变革强烈强调连接性、数据驱动的洞察以及数字技术的融合。
+- `处理不确定性`：模糊逻辑的优势在于其处理模糊性和不精确数据的能力。模糊逻辑为不确定的制造环境提供了强大的决策框架，在这种环境中，变量无法拥有确切的值。
+- `实时决策支持`：工业物联网与模糊逻辑的结合使得实时数据分析和决策支持成为可能。这赋予了工业系统在工厂环境中不断变化的条件下进行智能调整和决策的能力。
+- `预测性维护`：模糊逻辑是预测性维护技术的关键组成部分。模糊逻辑模型通过评估历史数据和当前数据来预测设备故障并建议预防性维护措施。这最小化了停机时间并最大化了运营效率。
+- `适应性制造`：工业物联网与模糊逻辑的结合增强了制造流程的适应性。模糊逻辑中基于规则的推理能够对不断变化的情况进行适应性反应，确保工业系统能够动态适应意外事件。
+- `细致入微的决策`：通过引入语言因素和基于规则的推理，模糊逻辑为决策过程增加了细致入微的程度。这种细致的处理方法使得能够对影响制造的众多复杂方面做出更复杂和情境感知的响应。
+- `整合挑战`：尽管模糊逻辑有许多优势，但也存在缺点。这些问题包括标准化、互操作性以及合格人员需求方面的挑战。要释放模糊逻辑在智能制造中的全部潜力，需要克服这些障碍。
+- `未来趋势`：模糊逻辑和工业物联网的未来方向包括自适应决策系统、边缘计算和去中心化控制的持续发展。这些发展凸显了本地化和更高效的数据处理对于提高实时性能和降低延迟的必要性。
+- `工业4.0变革`：工业物联网中模糊逻辑的应用与`Industrial 4.0`的更广泛变革相一致。为了发展更智能和互联的制造生态系统，这一变革强烈强调连接性、数据驱动的洞察以及数字技术的融合。
 
 在智能制造的工业物联网中采用模糊逻辑，本质上是一种主动策略，用于应对当代工业流程中普遍存在的不确定性和复杂性。它是向更高适应性、效率和韧性持续演进的有力证明。
 
@@ -2543,20 +2496,16 @@ FLC 通过将专家知识转化为基于规则的系统来运行。例如，在�
 
 在智能制造的工业物联网中整合模糊逻辑，对制造业的未来具有深远的影响。这些影响涵盖了技术进步、运营增强和战略考量：
 
--   **效率和生产力的提高**：模糊逻辑基于不精确数据做出细致入微决策的能力，有助于提高运营效率。这带来了优化的生产流程、减少的停机时间和提高的整体生产力。
--   **预测性和主动性维护**：模糊逻辑在预测性维护中的应用，使制造设施能够从被动反应型维护策略转向主动预防型维护策略。通过预测设备故障，组织可以提前安排维护活动，从而最小化干扰并延长机器寿命。
--   **自适应和敏捷制造**：模糊逻辑的自适应决策能力，特别是与工业物联网结合时，促进了敏捷的制造流程。实时应对变化条件的能力确保了制造系统保持灵活性，并能响应市场需求和不可预见的中断。
--   **质量改进和缺陷减少**：模糊逻辑在质量控制中的应用，通过考虑制造过程中的不精确因素，提高了产品质量。这导致缺陷减少，并增强了最终产品的一致性和可靠性。
--   **人机协作和用户友好界面**：模糊逻辑有助于开发更直观的人机交互界面。这促成了协作工作环境，使工人能够轻松地与智能制造系统互动，从而增强人类直觉和机器精度的优势。
--   **资源优化和可持续性**：模糊逻辑在流程优化中的应用涵盖了资源管理，从而促进了可持续的工业实践。组织可以通过根据当前情况动态调整资源使用，来降低浪费和能源消耗。
--   **技术协同和工业4.0整合**：模糊逻辑和工业物联网的结合是工业4.0的自然契合点，后者基于通过数字技术融合使生产成为智能网络化系统的理念。这种整合使得更具包容性和集成度的工业生态系统成为可能。
--   **实施和技能开发的挑战**：模糊逻辑在生产中的应用还存在额外的困难，例如对标准化、互操作性以及
+- `效率和生产力的提高`：模糊逻辑基于不精确数据做出细致入微决策的能力，有助于提高运营效率。这带来了优化的生产流程、减少的停机时间和提高的整体生产力。
+- `预测性和主动性维护`：模糊逻辑在预测性维护中的应用，使制造设施能够从被动反应型维护策略转向主动预防型维护策略。通过预测设备故障，组织可以提前安排维护活动，从而最小化干扰并延长机器寿命。
+- `自适应和敏捷制造`：模糊逻辑的自适应决策能力，特别是与工业物联网结合时，促进了敏捷的制造流程。实时应对变化条件的能力确保了制造系统保持灵活性，并能响应市场需求和不可预见的中断。
+- `质量改进和缺陷减少`：模糊逻辑在质量控制中的应用，通过考虑制造过程中的不精确因素，提高了产品质量。这导致缺陷减少，并增强了最终产品的一致性和可靠性。
+- `人机协作和用户友好界面`：模糊逻辑有助于开发更直观的人机交互界面。这促成了协作工作环境，使工人能够轻松地与智能制造系统互动，从而增强人类直觉和机器精度的优势。
+- `资源优化和可持续性`：模糊逻辑在流程优化中的应用涵盖了资源管理，从而促进了可持续的工业实践。组织可以通过根据当前情况动态调整资源使用，来降低浪费和能源消耗。
+- `技术协同和工业4.0整合`：模糊逻辑和工业物联网的结合是`Industrial 4.0`的自然契合点，后者基于通过数字技术融合使生产成为智能网络化系统的理念。这种整合使得更具包容性和集成度的工业生态系统成为可能。
+- `实施和技能开发的挑战`：模糊逻辑在生产中的应用还存在额外的困难，例如对标准化、互操作性以及技能培养。为了让企业能够完全从智能制造业中的模糊逻辑中获利，必须解决这些问题。
 
-
-
-技能培养。为了让企业能够完全从智能制造业中的模糊逻辑中获利，必须解决这些问题。
-
-制造业的未来将主要受到向更智能、数据驱动和自适应系统转型的影响。将模糊逻辑与工业物联网（IIoT）整合是实现这些目标的关键组成部分，它支持了数字化转型时代制造业的持续发展。
+制造业的未来将主要受到向更智能、数据驱动和自适应系统转型的影响。将模糊逻辑与工业物联网（`IIoT`）整合是实现这些目标的关键组成部分，它支持了数字化转型时代制造业的持续发展。
 
 ## 8.9.3 关于模糊逻辑在智能制造工业物联网中作用的最终思考
 
@@ -2564,50 +2513,77 @@ FLC 通过将专家知识转化为基于规则的系统来运行。例如，在�
 
 当模糊逻辑与工业物联网结合时，制造过程不再仅仅是自动化；它们变得具有响应性、敏捷性，并能即时做出情境感知决策。通过预测性维护、质量控制和适应性制造，效率和效能达到了新的高度，从而提高了产量并节省了运营成本。
 
-未来的影响是深远的，因为它们承诺了卓越运营能力的提升以及资源高效和可持续制造技术的进步。工业4.0正在显著塑造制造业环境，而模糊逻辑与工业物联网之间的相互作用是这一转变的主要推动力，它创造了一个人类、机器和过程和谐共生的生态系统。
+未来的影响是深远的，因为它们承诺了卓越运营能力的提升以及资源高效和可持续制造技术的进步。`Industrial 4.0`正在显著塑造制造业环境，而模糊逻辑与工业物联网之间的相互作用是这一转变的主要推动力，它创造了一个人类、机器和过程和谐共生的生态系统。
 
 然而，互操作性以及需要具备专业技能的人才等挑战，凸显了战略规划和持续创新的重要性。克服这些挑战将在释放模糊逻辑在智能制造中的全部潜力方面发挥关键作用，推动行业迈向一个以韧性、适应性和智能为特征的未来。在这个数字化转型的时代，模糊逻辑在工业物联网中的作用证明了其在驾驭制造业复杂局面并将其引向更高效、更智能未来的重要性。
 
 ## 关键词
 
-- **模糊逻辑**
-- **工业物联网**
-- **智能制造**
-- **决策制定**
-- **自适应控制**
+- `模糊逻辑`
+- `工业物联网`
+- `智能制造`
+- `决策制定`
+- `自适应控制`
 
 ## 参考文献
 
 1. Grace, J., Mahmoud, M. A., Mahdi, M. N., & Mostafa, S. A. (2022). An evaluation model of smart manufacturing system configurations prior to implementation using fuzzy logic. *Applied Science*, *12*(5), 2753.
+
 2. Wang, B., Tao, F., Fang, X., Liu, C., Liu, Y., & Freiheit, T. (2021). Smart manufacturing and intelligent manufacturing: A comparative review. *Engineering*, *7*(6), 738–757.
+
+
+
 3. Hamdia, S. E., Oudania, M., Aboubetalah, A., & Sebbar, A. (2019). Fuzzy approach for locating sensors in industrial internet of things. *Procedia Computer Science*, *160*, 772–777.
+
 4. Yildizbasi, A., & Unlu, V. (2020). Performance evaluation of SMEs towards industry 4.0 using fuzzy group discussion making methods. *SN Applied Science*, *2*, 355.
+
 5. Caiado, R., Scavarda, L. F., Gavião, L., Ivson, P., Nascimento, D. L. D. M., & Garza-Reyes, J. A. (2020). A fuzzy rule-based industry 4.0 maturity model for operations and supply chain management. *International Journal of Production Economics*, *231*, 107883.
+
 6. Yang, H., Kumara, S., Bukkapatnam, S. T. S., & Tsung, F. The internet of things for smart manufacturing: A review. *IIE Transactions*, 2019.
+
 7. Mehbodniya, A., Webber, J. L., Rani, R., Ahmad, S. S., Wattaar, I., Ali, L., & Nuaghah, S. J. (2022). Energy-aware routing protocol with fuzzy logic in industrial internet of things with blockchain technology. In: *Wireless Communications and Mobile Computing*, pp. 1–15.
+
 8. Sobrino, A. (2013). Fuzzy logic and education: Teaching the basics of fuzzy logic through an example (by Way of Cycling). *Education Sciences*, *3*(2), 75–97.
+
 9. Kerimkulle, S., Dildebayeva, Z., Tokhmetov, A., Amirova, A., Tussupov, J., Makhazhanova, U., Adalbek, A., Taberkhan, R., Zakirova, A., & Salykbayeva, A. (2023). Fuzzy logic and its application in the assessment of information security risk of industrial internet of things. *Symmetry*, *15*(10).
+
 10. Tashtoush, T., Alazzam, A., & Rodan, A. (2020). Utilizing fuzzy logic controller in manufacturing facilities design: Machine and operator allocation. *Cogent Engineering*, *7*(1), 1–16.
+
 11. Mitrofanı, I. A., Emirıs, D. M., & Koulouiotıs, D. E. (2020). An industrial maintenance decision support system based on fuzzy inference to optimize scope definition. *Procedia Manufacturing*, *51*, 1538–1543.
+
 12. Moreno-Cabezali, B. M., & Fernandez-Crehuet, J. M. Application of a fuzzy-logic based model for risk assessment in additive manufacturing R&D projects. *Computer & Industrial Engineering*, 145, 2020.
+
 13. Al-Saadi, T., Rossiter, A., & Panousos, G. (2022). Fuzzy logic control in metal additive manufacturing: A literature review and case study. *IFAC-PapersOnLine*, 55(21), 37–42.
+
 14. Azadeegan, A., Porobic, L., Ghazinoury, S., Samoeui, P., & Kheirkhah, A. S. (2011). Fuzzy logic in manufacturing: A review of literature and a specialized application. *International Journal of Production Economics*, 132, (2), 258–270.
+
 15. Baban, C. F., Baban, M., & Darius, S. M. (2016). Using a fuzzy logic approach for the predictive maintenance of textile machines. *Journal of Intelligent & Fuzzy Systems*, 30(2), 999–1006.
+
 16. Zou, M., Yi, J., Yang, C., Liao, Q., Xiong, W., & Wang, X. (2022). Adaptive fuzzy logic control for grinding process based on grinding sound trend. *IFAC-PapersOnLine*, 55(21), 120–125.
+
 17. Galindo-Salcado, M., Pertúz-Morenoa, A., Guzmán-Castillo, S., Gómez-Charissa, Y., & Romero-Conrado, A. R. (2022). Smart manufacturing applications for inspection and quality assurance processes. *Procedia Computer Science*, 198, 536–541.
+
 18. Phuyal, S., Bista, D., & Bista, R. (2020). Challenges, opportunities and future directions of smart manufacturing: A state of art review. *Sustainable Futures*, 2, 100023.
+
 19. Narwane, V. S., Raut, R. D., Gardas, B. B., Narkhede, B. E., & Awasthi, A. (2022). Examining smart manufacturing challenges in the context of micro, small and medium enterprises. *International Journal of Computer Integrated Manufacturing*, 35(12), 1395–1412.
+
 20. Tuptuk, N., & Hailes, S. (2018). Security of smart manufacturing systems. *Journal of Manufacturing Systems*, 47, 93–106.
+
 21. Qu, Y., Ming, X. G., Liu, Z. W., Zhang, X., & Hou, Z. T. (2019). Smart manufacturing systems: State of the art and future trends. *The International Journal of Advanced Manufacturing Technology*, 103(1), 3751–3768.
+
 22. Pronier, J., Pipan, M., Zupan, H., Resman, M., Simic, M., & Herakovic, N. (2021). Edge computing and digital twin based smart manufacturing. *IFAC-PapersOnLine*, 54(1), 831–836.
+
 23. Wang, J., Ma, Y., Zhang, L., Gao, R. X., & Wu, D. (2018). Deep learning for smart manufacturing: Methods and applications. *Journal of Manufacturing Systems*, 48, 144–156.
+
 24. Vaidya, S., Ambad, P., & Bhsole, S. (2018). Industry 4.0—a glimpse. *Procedia Manufacturing*, 20, 233–238.
+
 25. Hozdic, E. (2015). Smart factory for industry 4.0: A review. *Journal of Modern Manufacturing Systems and Technology*, 7(1), 28–35.
 
 ## Taylor & Francis
 
 Taylor & Francis 集团
-http://taylorandfrancis.com
+
+`http://taylorandfrancis.com`
 
 ![](img/e9de70cd491e84262133af63cb33d500_162_0.png)
 
@@ -2616,16 +2592,18 @@ http://taylorandfrancis.com
 SUBRATA JANA¹, ANIRBAN SARKAR², ARPAN GHOSHAL³, BINAY MAJI⁴, SAYANTANI PAUL³, and BISWADIP BASU MALLIK⁵
 
 ¹印度西孟加拉邦加尔各答贾达普尔大学数学系
+
 ²印度西孟加拉邦巴拉萨特西孟加拉邦州立大学管理与营销系
+
 ³印度西孟加拉邦豪拉Seacom工程学院基础科学与人文学系
+
 ⁴印度西孟加拉邦豪拉Surendralal Das教师培训学院教育系
+
 ⁵印度西孟加拉邦加尔各答工程与管理学院（大学工程与管理学校）基础科学与人文学系
 
 ### 摘要
 
-石油公司在推动国家内部社会经济发展方面扮演着至关重要的角色。近年来，印度的石油行业经历了显著增长。石油公司在服务质量和可用性方面表现出色。毫无疑问，石油公司的财务表现是其核心组成部分。在当前市场日益激烈的竞争格局下，对财务表现进行准确和精确的评估
-
-对于旨在有效维持其市场地位石油公司而言，这一点具有重大现实意义。本研究旨在评估财务绩效，并对印度国家证券交易所（NSE）于2023年8月16日列出的六家NIFTY石油公司进行排名，使用其财务指标进行评估。这六家石油公司的估值基于九个财务指标，这些指标随后结合使用多标准决策制定（MCDM）方法，得出财务绩效分数。在本研究中，利用三角模糊数（TFN）和模糊图论及矩阵方法（F-GTMA），根据财务绩效对石油公司进行排名。研究结果表明，印度信实工业（Reliance）展现出最高的财务效率，印度石油天然气公司（ONGC）和印度石油公司（IOC）分别排名第二和第三。
+石油公司在推动国家内部社会经济发展方面扮演着至关重要的角色。近年来，印度的石油行业经历了显著增长。石油公司在服务质量和可用性方面表现出色。毫无疑问，石油公司的财务表现是其核心组成部分。在当前市场日益激烈的竞争格局下，对财务表现进行准确和精确的评估对于旨在有效维持其市场地位石油公司而言，这一点具有重大现实意义。本研究旨在评估财务绩效，并对印度国家证券交易所（NSE）于2023年8月16日列出的六家NIFTY石油公司进行排名，使用其财务指标进行评估。这六家石油公司的估值基于九个财务指标，这些指标随后结合使用多标准决策制定（MCDM）方法，得出财务绩效分数。在本研究中，利用三角模糊数（TFN）和模糊图论及矩阵方法（F-GTMA），根据财务绩效对石油公司进行排名。研究结果表明，印度信实工业（Reliance）展现出最高的财务效率，印度石油天然气公司（ONGC）和印度石油公司（IOC）分别排名第二和第三。
 
 ## 9.1 引言
 
@@ -2676,18 +2654,17 @@ MCDM是一种系统化过程，应用于必须同时考虑多个标准或因素�
 
 ### 9.1.6 模糊图论及矩阵方法（F-GTMA）的论证
 
-F-GTMA 是两种决策制定方法，它们扩展了传统的 GTMA 技术以处理决策问题中的不确定性和不精确性。使用这些技术的一些理由是不确定性和
-
-
-决策中的模糊性、主观性及MCDM（多准则决策）、不一致和不完整的数据、权衡与排序、灵活建模、复杂决策场景、项目评估与选择、风险评估、敏感性分析，以及在各个领域的应用性。简而言之，使用F-GTMA（模糊图论矩阵法）的理由在于它们能够处理不确定性、主观偏好、MCDM以及复杂决策场景，使其成为在现实情况下做出明智且稳健决策的宝贵工具。
+F-GTMA 是两种决策制定方法，它们扩展了传统的 GTMA 技术以处理决策问题中的不确定性和不精确性。使用这些技术的一些理由是不确定性和决策中的模糊性、主观性及MCDM（多准则决策）、不一致和不完整的数据、权衡与排序、灵活建模、复杂决策场景、项目评估与选择、风险评估、敏感性分析，以及在各个领域的应用性。简而言之，使用F-GTMA（模糊图论矩阵法）的理由在于它们能够处理不确定性、主观偏好、MCDM以及复杂决策场景，使其成为在现实情况下做出明智且稳健决策的宝贵工具。
 
 ## 9.1.7 受益者
+
+
 
 对印度石油公司效率测量研究可能有多方受益者：监管机构与政策制定者、投资者、石油公司本身、学术共同体、金融分析师与顾问、借款人与消费者、经济分析师与预测者、行业协会与贸易组织、公众，以及更多。
 
 ## 9.1.8 创新点
 
-许多研究者已使用MCDM方法论（AHP、TOPSIS、MARCOS和COPRAS）对模糊数进行了研究。在GTMA MCDM范式下，几乎没有关于三角模糊数（TFN）的研究被开展。三角模糊数的去模糊化公式已被创建并应用。此外，还定义了两个TFN之间的距离测量。为计算因素和子因素的三角模糊权重，已创建了相关公式。还创建了一种将多个决策者的意见合并为一个关于TFN的单一完整值的方法。
+许多研究者已使用`MCDM`方法论（`AHP`、`TOPSIS`、`MARCOS`和`COPRAS`）对模糊数进行了研究。在`GTMA` `MCDM`范式下，几乎没有关于三角模糊数（`TFN`）的研究被开展。三角模糊数的去模糊化公式已被创建并应用。此外，还定义了两个`TFN`之间的距离测量。为计算因素和子因素的三角模糊权重，已创建了相关公式。还创建了一种将多个决策者的意见合并为一个关于`TFN`的单一完整值的方法。
 
 ## 9.1.9 研究结构
 
@@ -2695,7 +2672,7 @@ F-GTMA 是两种决策制定方法，它们扩展了传统的 GTMA 技术以处�
 
 ## 9.2 文献综述
 
-在进行广泛的文献综述后，本研究注意到，在金融和其他行业的不同领域，已开展了大量研究工作，采用了一系列MCDM技术来解决MCDM挑战。有多种MCDM方法可用于进行对比分析和建立排名。研究者根据各自研究的具体要求，采用了这些方法的不同组合，以确定最合适的替代方案（表9.1）。
+在进行广泛的文献综述后，本研究注意到，在金融和其他行业的不同领域，已开展了大量研究工作，采用了一系列`MCDM`技术来解决`MCDM`挑战。有多种`MCDM`方法可用于进行对比分析和建立排名。研究者根据各自研究的具体要求，采用了这些方法的不同组合，以确定最合适的替代方案（表9.1）。
 
 ![](img/e9de70cd491e84262133af63cb33d500_169_0.png)
 
@@ -2705,8 +2682,8 @@ F-GTMA 是两种决策制定方法，它们扩展了传统的 GTMA 技术以处�
 
 本研究的目标是：
 
-1. 找出印度NIFTY石油公司的财务效率得分。
-2. 找出印度NIFTY石油公司的排名。
+1. 找出印度`NIFTY`石油公司的财务效率得分。
+2. 找出印度`NIFTY`石油公司的排名。
 
 ### 表 9.1 广泛的文献综述
 
@@ -2736,7 +2713,7 @@ F-GTMA 是两种决策制定方法，它们扩展了传统的 GTMA 技术以处�
 
 ### 9.4.1 替代方案的选择
 
-本章旨在提出一个用于评估和比较截至2023年8月16日在印度国家证券交易所（NSE）的NIFTY指数下上市的六家石油公司财务绩效的“MCDM”框架。评估包括为这些石油公司分配财务绩效得分并随后进行排名。在表9.2中，提供了六家石油公司的股票信息。
+本章旨在提出一个用于评估和比较截至2023年8月16日在印度国家证券交易所（`NSE`）的`NIFTY`指数下上市的六家石油公司财务绩效的“`MCDM`”框架。评估包括为这些石油公司分配财务绩效得分并随后进行排名。在表9.2中，提供了六家石油公司的股票信息。
 
 ### 表 9.2 石油公司（替代方案）股票信息
 
@@ -2749,16 +2726,16 @@ F-GTMA 是两种决策制定方法，它们扩展了传统的 GTMA 技术以处�
 | A05 | ONGC | ONGC | 500312 | IN E213401029 |
 | A06 | Reliance | RELIANCE | 500325 | IN E002401018 |
 
-*ISIN代码，或国际证券识别码，用作特定证券发行的唯一标识符。它由给定国家的国家编号机构分配，以区别于该司法管辖区内的其他金融工具。
+*`ISIN`代码，或国际证券识别码，用作特定证券发行的唯一标识符。它由给定国家的国家编号机构分配，以区别于该司法管辖区内的其他金融工具。
 
 ### 9.4.2 准则的选择
 
-已选取六家于2023年8月16日在NSE的NIFTY指数中列出的石油公司的九项财务比率，涵盖六个财务年度，即2017–2018财年、2018–2019财年、2019–2020财年、2020–2021财年、2021–2022财年和2022–2023财年。
+已选取六家于2023年8月16日在`NSE`的`NIFTY`指数中列出的石油公司的九项财务比率，涵盖六个财务年度，即2017–2018财年、2018–2019财年、2019–2020财年、2020–2021财年、2021–2022财年和2022–2023财年。
 
-1. 数据来源：NSE网站。
+1. 数据来源：`NSE`网站。
 2. 数据类型：二手数据。
 3. 研究周期：6年（从2017–2018财年到2022–2023财年）。
-4. 使用技术：F-GTMA。
+4. 使用技术：`F-GTMA`。
 
 本研究分析了九项财务比率。其中，七项被确定为受益者准则，包括速动比率、流动比率、资本回报率、净资产回报率、总资产回报率、每股收益和股息收益率。其余两项，即债务–股权比率和价格–收益比率，被视为非受益者准则。在表9.3中，列出了财务比率的公式，并定义了受益者和非受益者准则。
 
@@ -2781,10 +2758,6 @@ F-GTMA 是两种决策制定方法，它们扩展了传统的 GTMA 技术以处�
 模糊集合论由Zadeh [20] 引入，它是将经典离散逻辑扩展到多元形式的结果。
 
 > 定义：集合 $\bar{A}$ 定义为 $\bar{A} = \{(\Xi, \mu_\bar{A}(\Xi)\!: \Xi \in \bar{A}, \mu_\bar{A}(\Xi) \in (0, 1)\}$，其中 $\mu_\bar{A}(\Xi)$ 表示 $\bar{A}$ 的隶属度函数
-
-
-
-
 
 ### 9.4.4 TFN
 
@@ -2810,22 +2783,16 @@ $\mu_{\bar{A}}(x) = \begin{cases} 0; x \leq a \\ \frac{x - a}{b - a}; a < x \leq
 
 1. **加法：**
    $(E + F) = (e_1 + f_1, e_2 + f_2, e_3 + f_3)$
-
 2. **减法：**
    $E - F = (e_1 + f_3, e_2 - f_2, e_3 + f_1)$
-
 3. **乘法：**
    $(E \times F) = (e_{1}f_{1}, e_{2}f_{2}, e_{3}f_{3})$  (9.4)
-
 4. **标量乘法：**
    $\theta E = (\theta e_{1}, \theta e_{2}, \theta e_{3})$  (9.5)
-
 5. **除法：**
    $(E/F) = (e_{1}/f_{3}, e_{2}/f_{2}, e_{3}/f_{1})$  (9.6)
-
 6. **逆运算：**
    $E^{-1} = (\frac{1}{e_{3}}, \frac{1}{e_{2}}, \frac{1}{e_{1}})$  (9.7)
-
 7. **距离度量：**
    $d(\tilde{E}, \tilde{F}) = \sqrt{\frac{1}{3}[ (e_{1}-f_{1})^{2} + (e_{2}-f_{2})^{2} + (e_{3}-f_{3})^{2}]}$  (9.8)
 
@@ -2835,11 +2802,11 @@ $\mu_{\bar{A}}(x) = \begin{cases} 0; x \leq a \\ \frac{x - a}{b - a}; a < x \leq
 
 ### 9.4.8 F-GTMA
 
-GTMA 是多准则决策（MCDM）领域中一种突出的方法，用于解决存在多个准则的决策问题。本研究引入了一种用于替代方案排序的 F-GTMA 模型。基于运筹学模型的广泛背景，该方法采用了逻辑且系统的基础。
+`GTMA` 是多准则决策（`MCDM`）领域中一种突出的方法，用于解决存在多个准则的决策问题。本研究引入了一种用于替代方案排序的 `F-GTMA` 模型。基于运筹学模型的广泛背景，该方法采用了逻辑且系统的基础。
 
-Rao [21] 在其书中详细阐述了 GTMA，重点介绍了其方法论和应用。图论的全面性质及其多样化的应用已有详尽记载。在有向图模型表示中，其在科学技术领域对各类系统进行建模和分析的价值已得到证明。矩阵方法作为一种特别有效的工具，能够高效地分析图/有向图模型，从而推导出与特定目标相符的系统功能和指标。
+Rao [21] 在其书中详细阐述了 `GTMA`，重点介绍了其方法论和应用。图论的全面性质及其多样化的应用已有详尽记载。在有向图模型表示中，其在科学技术领域对各类系统进行建模和分析的价值已得到证明。矩阵方法作为一种特别有效的工具，能够高效地分析图/有向图模型，从而推导出与特定目标相符的系统功能和指标。
 
-GTMA 方法论包括有向图表示、矩阵表示和永函数（permanent function）表示。有向图直观地捕捉了变量及其相互依赖性，而矩阵则将这种视觉表示转化为数学形式 [22]。永函数作为一种数学表示，在确定与模型相关的数值指标方面发挥着关键作用 [23]。
+`GTMA` 方法论包括有向图表示、矩阵表示和永函数（permanent function）表示。有向图直观地捕捉了变量及其相互依赖性，而矩阵则将这种视觉表示转化为数学形式 [22]。永函数作为一种数学表示，在确定与模型相关的数值指标方面发挥着关键作用 [23]。
 
 该方法论的逐步说明如下：
 
@@ -2853,7 +2820,7 @@ GTMA 方法论包括有向图表示、矩阵表示和永函数（permanent funct
 
 ![](img/e9de70cd491e84262133af63cb33d500_177_0.png)
 
-**步骤 5：** 推导矩阵的替代方案选择准则函数涉及使用矩阵的永函数作为定义度量。永矩阵的概念由 Cauchy 在 1812 年开发行列式理论时引入，涉及后来由 Muir 定义为永函数的对称函数特定子集 [24]。永矩阵是组合数学中使用的常规矩阵函数。其推导方式类似于行列式，但具有一个独特特征——与涉及负号的行列式不同，永函数在计算中用正号替代这些负号。理解永函数的概念有助于加深选择属性的理解。此外，采用这种方法可确保表达式中不存在负号，从而无损地保留所有信息 [21]。PER (CS) 涵盖了按 (M + 1) 组排列的项，分类涉及这些对应于准则度量和相对重要性循环显著性的组。第一组表示 M 个准则的度量，第二组因有向图中不存在自循环而被省略。第三组包含 2-准则相对重要性循环和 (M-2) 个准则的度量。第四组中的每一项表示一组 3-准则相对重要性循环，或其对应项，以及 (M-3) 个准则的度量。第五组分为两个子组。第一个子组由两组 2-准则相对重要性循环和 (M-4) 个准则的度量组成。同时，第二个子组中的每一项表示一组 4-属性相对重要性循环，或其对应项，以及 (M-4) 个准则的度量。第六组也包含两个子组。第一个子组中的项是一组 3-准则相对重要性循环，或其对应项，加上一个 2-准则重要性循环以及 (M-5) 个准则的度量。另一方面，第二个子组中的每一项表示一组 5-准则相对重要性循环，或其对应项，以及 (M-5) 个准则的度量。方程中的其余项遵循类似的模式。因此，CS 的综合结构完全定义了替代方案选择评估问题，封装了准则及其相对重要性的所有可预见的结构组件。值得注意的是，该方程本质上是 M-M 矩阵的行列式，且所有项均视为正数。
+**步骤 5：** 推导矩阵的替代方案选择准则函数涉及使用矩阵的永函数作为定义度量。永矩阵的概念由 Cauchy 在 1812 年开发行列式理论时引入，涉及后来由 Muir 定义为永函数的对称函数特定子集 [24]。永矩阵是组合数学中使用的常规矩阵函数。其推导方式类似于行列式，但具有一个独特特征——与涉及负号的行列式不同，永函数在计算中用正号替代这些负号。理解永函数的概念有助于加深选择属性的理解。此外，采用这种方法可确保表达式中不存在负号，从而无损地保留所有信息 [21]。`PER (CS)` 涵盖了按 (M + 1) 组排列的项，分类涉及这些对应于准则度量和相对重要性循环显著性的组。第一组表示 M 个准则的度量，第二组因有向图中不存在自循环而被省略。第三组包含 2-准则相对重要性循环和 (M-2) 个准则的度量。第四组中的每一项表示一组 3-准则相对重要性循环，或其对应项，以及 (M-3) 个准则的度量。第五组分为两个子组。第一个子组由两组 2-准则相对重要性循环和 (M-4) 个准则的度量组成。同时，第二个子组中的每一项表示一组 4-属性相对重要性循环，或其对应项，以及 (M-4) 个准则的度量。第六组也包含两个子组。第一个子组中的项是一组 3-准则相对重要性循环，或其对应项，加上一个 2-准则重要性循环以及 (M-5) 个准则的度量。另一方面，第二个子组中的每一项表示一组 5-准则相对重要性循环，或其对应项，以及 (M-5) 个准则的度量。方程中的其余项遵循类似的模式。因此，CS 的综合结构完全定义了替代方案选择评估问题，封装了准则及其相对重要性的所有可预见的结构组件。值得注意的是，该方程本质上是 M-M 矩阵的行列式，且所有项均视为正数。
 
 ![](img/e9de70cd491e84262133af63cb33d500_178_0.png)
 
@@ -2875,137 +2842,235 @@ GTMA 方法论包括有向图表示、矩阵表示和永函数（permanent funct
 | **M** | 1.08 | 1.18 | 1.50 | 1.08 | 1.18 | 1.50 | 0.60 | 0.77 | 0.87 |
 | **U** | 1.08 | 1.18 | 1.50 | 1.08 | 1.18 | 1.50 | 0.60 | 0.77 | 0.87 |
 | **I** | 0.50 | 0.65 | 0.80 | 0.50 | 0.65 | 0.80 | 0.77 | 0.94 | 0.95 |
-| **M** | 0.50 | 0.65 | 0.80 | 0.50 | 0.65 | 0.80 | 0.77 | 0.94 | 0.95 |
-| **U** | 0.50 | 0.65 | 0.80 | 0.50 | 0.65 | 0.80 | 0.77 | 0.94 | 0.95 |
-| **I** | 0.73 | 0.97 | 0.93 | 0.73 | 0.97 | 0.93 | 1.04 | 1.08 | 1.31 |
-| **M** | 0.73 | 0.97 | 0.93 | 0.73 | 0.97 | 0.93 | 1.04 | 1.08 | 1.31 |
-| **U** | 0.73 | 0.97 | 0.93 | 0.73 | 0.97 | 0.93 | 1.04 | 1.08 | 1.31 |
-| **I** | 1.17 | 1.36 | 1.75 | 1.17 | 1.36 | 1.75 | 1.08 | 1.18 | 1.50 |
-| **M** | 1.17 | 1.36 | 1.75 | 1.17 | 1.36 | 1.75 | 1.08 | 1.18 | 1.50 |
-| **U** | 1.17 | 1.36 | 1.75 | 1.17 | 1.36 | 1.75 | 1.08 | 1.18 | 1.50 |
-| **I** | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.87 | 0.77 | 0.94 | 0.95 |
-| **M** | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.87 | 0.77 | 0.94 | 0.95 |
-| **U** | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.87 | 0.77 | 0.94 | 0.95 |
-| **I** | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.80 |
-| **M** | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.80 |
-| **U** | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.80 |
-| **I** | 1.08 | 1.18 | 1.50 | 1.08 | 1.18 | 1.50 | 1.08 | 1.31 | 1.17 |
-| **M** | 1.08 | 1.18 | 1.50 | 1.08 | 1.18 | 1.50 | 1.08 | 1.31 | 1.17 |
-| **U** | 1.08 | 1.18 | 1.50 | 1.08 | 1.18 | 1.50 | 1.08 | 1.31 | 1.17 |
+
+
+
+| `M` | 0.50 | 0.65 | 0.80 | 0.50 | 0.65 | 0.80 | 0.77 | 0.94 | 0.95 |
+
+| `U` | 0.50 | 0.65 | 0.80 | 0.50 | 0.65 | 0.80 | 0.77 | 0.94 | 0.95 |
+
+| `I` | 0.73 | 0.97 | 0.93 | 0.73 | 0.97 | 0.93 | 1.04 | 1.08 | 1.31 |
+
+| `M` | 0.73 | 0.97 | 0.93 | 0.73 | 0.97 | 0.93 | 1.04 | 1.08 | 1.31 |
+
+| `U` | 0.73 | 0.97 | 0.93 | 0.73 | 0.97 | 0.93 | 1.04 | 1.08 | 1.31 |
+
+| `I` | 1.17 | 1.36 | 1.75 | 1.17 | 1.36 | 1.75 | 1.08 | 1.18 | 1.50 |
+
+| `M` | 1.17 | 1.36 | 1.75 | 1.17 | 1.36 | 1.75 | 1.08 | 1.18 | 1.50 |
+
+| `U` | 1.17 | 1.36 | 1.75 | 1.17 | 1.36 | 1.75 | 1.08 | 1.18 | 1.50 |
+
+| `I` | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.87 | 0.77 | 0.94 | 0.95 |
+
+| `M` | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.87 | 0.77 | 0.94 | 0.95 |
+
+| `U` | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.87 | 0.77 | 0.94 | 0.95 |
+
+| `I` | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.80 |
+
+| `M` | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.80 |
+
+| `U` | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.80 |
+
+| `I` | 1.08 | 1.18 | 1.50 | 1.08 | 1.18 | 1.50 | 1.08 | 1.31 | 1.17 |
+
+| `M` | 1.08 | 1.18 | 1.50 | 1.08 | 1.18 | 1.50 | 1.08 | 1.31 | 1.17 |
+
+| `U` | 1.08 | 1.18 | 1.50 | 1.08 | 1.18 | 1.50 | 1.08 | 1.31 | 1.17 |
 
 **表 9.4** 准则间比较矩阵
 
 | | C1 | C2 | C3 | C4 | C5 | C6 | C7 | C8 | C9 |
+
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **I** | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.73 | 0.97 | 0.93 |
-| **M** | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.73 | 0.97 | 0.93 |
-| **U** | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.73 | 0.97 | 0.93 |
-| **I** | 0.77 | 0.94 | 0.95 | 0.77 | 0.94 | 0.95 | 1.00 | 1.00 | 1.00 |
-| **M** | 0.77 | 0.94 | 0.95 | 0.77 | 0.94 | 0.95 | 1.00 | 1.00 | 1.00 |
-| **U** | 0.77 | 0.94 | 0.95 | 0.77 | 0.94 | 0.95 | 1.00 | 1.00 | 1.00 |
-| **I** | 1.08 | 1.18 | 1.50 | 1.08 | 1.18 | 1.50 | 0.60 | 0.77 | 0.87 |
-| **M** | 1.08 | 1.18 | 1.50 | 1.08 | 1.18 | 1.50 | 0.60 | 0.77 | 0.87 |
-| **U** | 1.08 | 1.18 | 1.50 | 1.08 | 1.18 | 1.50 | 0.60 | 0.77 | 0.87 |
-| **I** | 0.50 | 0.65 | 0.80 | 0.50 | 0.65 | 0.80 | 0.77 | 0.94 | 0.95 |
-| **M** | 0.50 | 0.65 | 0.80 | 0.50 | 0.65 | 0.80 | 0.77 | 0.94 | 0.95 |
-| **U** | 0.50 | 0.65 | 0.80 | 0.50 | 0.65 | 0.80 | 0.77 | 0.94 | 0.95 |
-| **I** | 0.73 | 0.97 | 0.93 | 0.73 | 0.97 | 0.93 | 1.04 | 1.08 | 1.31 |
-| **M** | 0.73 | 0.97 | 0.93 | 0.73 | 0.97 | 0.93 | 1.04 | 1.08 | 1.31 |
-| **U** | 0.73 | 0.97 | 0.93 | 0.73 | 0.97 | 0.93 | 1.04 | 1.08 | 1.31 |
-| **I** | 1.17 | 1.36 | 1.75 | 1.17 | 1.36 | 1.75 | 1.08 | 1.18 | 1.50 |
-| **M** | 1.17 | 1.36 | 1.75 | 1.17 | 1.36 | 1.75 | 1.08 | 1.18 | 1.50 |
-| **U** | 1.17 | 1.36 | 1.75 | 1.17 | 1.36 | 1.75 | 1.08 | 1.18 | 1.50 |
-| **I** | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.87 | 0.77 | 0.94 | 0.95 |
-| **M** | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.87 | 0.77 | 0.94 | 0.95 |
-| **U** | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.87 | 0.77 | 0.94 | 0.95 |
-| **I** | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.80 |
-| **M** | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.80 |
-| **U** | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.80 |
-| **I** | 1.08 | 1.18 | 1.50 | 1.08 | 1.18 | 1.50 | 1.08 | 1.31 | 1.17 |
-| **M** | 1.08 | 1.18 | 1.50 | 1.08 | 1.18 | 1.50 | 1.08 | 1.31 | 1.17 |
-| **U** | 1.08 | 1.18 | 1.50 | 1.08 | 1.18 | 1.50 | 1.08 | 1.31 | 1.17 |
 
+| `I` | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.73 | 0.97 | 0.93 |
 
+| `M` | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.73 | 0.97 | 0.93 |
 
+| `U` | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.73 | 0.97 | 0.93 |
 
+| `I` | 0.77 | 0.94 | 0.95 | 0.77 | 0.94 | 0.95 | 1.00 | 1.00 | 1.00 |
+
+| `M` | 0.77 | 0.94 | 0.95 | 0.77 | 0.94 | 0.95 | 1.00 | 1.00 | 1.00 |
+
+| `U` | 0.77 | 0.94 | 0.95 | 0.77 | 0.94 | 0.95 | 1.00 | 1.00 | 1.00 |
+
+| `I` | 1.08 | 1.18 | 1.50 | 1.08 | 1.18 | 1.50 | 0.60 | 0.77 | 0.87 |
+
+| `M` | 1.08 | 1.18 | 1.50 | 1.08 | 1.18 | 1.50 | 0.60 | 0.77 | 0.87 |
+
+| `U` | 1.08 | 1.18 | 1.50 | 1.08 | 1.18 | 1.50 | 0.60 | 0.77 | 0.87 |
+
+| `I` | 0.50 | 0.65 | 0.80 | 0.50 | 0.65 | 0.80 | 0.77 | 0.94 | 0.95 |
+
+| `M` | 0.50 | 0.65 | 0.80 | 0.50 | 0.65 | 0.80 | 0.77 | 0.94 | 0.95 |
+
+| `U` | 0.50 | 0.65 | 0.80 | 0.50 | 0.65 | 0.80 | 0.77 | 0.94 | 0.95 |
+
+| `I` | 0.73 | 0.97 | 0.93 | 0.73 | 0.97 | 0.93 | 1.04 | 1.08 | 1.31 |
+
+| `M` | 0.73 | 0.97 | 0.93 | 0.73 | 0.97 | 0.93 | 1.04 | 1.08 | 1.31 |
+
+| `U` | 0.73 | 0.97 | 0.93 | 0.73 | 0.97 | 0.93 | 1.04 | 1.08 | 1.31 |
+
+| `I` | 1.17 | 1.36 | 1.75 | 1.17 | 1.36 | 1.75 | 1.08 | 1.18 | 1.50 |
+
+| `M` | 1.17 | 1.36 | 1.75 | 1.17 | 1.36 | 1.75 | 1.08 | 1.18 | 1.50 |
+
+| `U` | 1.17 | 1.36 | 1.75 | 1.17 | 1.36 | 1.75 | 1.08 | 1.18 | 1.50 |
+
+| `I` | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.87 | 0.77 | 0.94 | 0.95 |
+
+| `M` | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.87 | 0.77 | 0.94 | 0.95 |
+
+| `U` | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.87 | 0.77 | 0.94 | 0.95 |
+
+| `I` | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.80 |
+
+| `M` | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.80 |
+
+| `U` | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.87 | 0.60 | 0.77 | 0.80 |
+
+| `I` | 1.08 | 1.18 | 1.50 | 1.08 | 1.18 | 1.50 | 1.08 | 1.31 | 1.17 |
+
+| `M` | 1.08 | 1.18 | 1.50 | 1.08 | 1.18 | 1.50 | 1.08 | 1.31 | 1.17 |
+
+| `U` | 1.08 | 1.18 | 1.50 | 1.08 | 1.18 | 1.50 | 1.08 | 1.31 | 1.17 |
 
 ## 表 9.5 模糊 GTMA 决策矩阵
 
 | | C1 | C2 | C3 | ... | C9 |
+
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| | **l** | **m** | **u** | **l** | **m** | **u** | **l** | **m** | **u** | ... | **l** | **m** | **u** |
+
+| | `l` | `m` | `u` | `l` | `m` | `u` | `l` | `m` | `u` | ... | `l` | `m` | `u` |
+
 | A1 | 0.28 | 0.43 | 0.55 | 0.25 | 0.35 | 0.50 | 0.62 | 0.65 | 0.80 | ... | 1.00 | 1.00 | 1.00 |
+
 | A2 | 0.14 | 0.25 | 0.35 | 0.50 | 0.50 | 0.60 | 0.71 | 0.81 | 0.88 | ... | 0.25 | 0.35 | 0.50 |
+
 | A3 | 0.62 | 0.65 | 0.80 | 0.80 | 0.80 | 0.87 | 0.90 | 0.90 | 0.90 | ... | 0.73 | 0.97 | 0.93 |
+
 | A4 | 1.00 | 1.00 | 1.00 | 0.62 | 0.65 | 0.80 | 0.14 | 0.25 | 0.35 | ... | 0.80 | 0.87 | 0.90 |
+
 | A5 | 0.25 | 0.35 | 0.50 | 0.71 | 0.81 | 0.88 | 0.62 | 0.65 | 0.80 | ... | 0.62 | 0.65 | 0.80 |
+
 | A6 | 0.14 | 0.25 | 0.35 | 0.50 | 0.50 | 0.60 | 1.00 | 1.00 | 1.00 | ... | 0.71 | 0.81 | 0.88 |
 
 ## 表 9.6 成对比较矩阵
 
 | | C1 | C2 | C3 | C4 | C5 | C6 | C7 | C8 | C9 |
+
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+
 | C1 | | 0.27 | 0.11 | 0.08 | 0.08 | 0.06 | 0.22 | 0.18 | 0.19 |
+
 | C2 | 0.89 | | 0.77 | 0.19 | 0.25 | 0.62 | 0.77 | 0.94 | 0.44 |
+
 | C3 | 0.93 | 0.78 | | 0.35 | 0.74 | 0.27 | 0.43 | 0.67 | 0.67 |
+
 | C4 | 0.08 | 0.06 | 0.22 | | 0.28 | 0.72 | 0.22 | 0.18 | 0.08 |
+
 | C5 | 0.25 | 0.22 | 0.18 | 0.08 | | 0.37 | 0.77 | 0.94 | 0.26 |
+
 | C6 | 0.74 | 0.77 | 0.94 | 0.26 | 0.24 | | 0.43 | 0.67 | 0.77 |
+
 | C7 | 0.77 | 0.43 | 0.67 | 0.77 | 0.78 | 0.46 | | 0.12 | 0.38 |
+
 | C8 | 0.25 | 0.08 | 0.06 | 0.22 | 0.62 | 0.77 | 0.45 | | 0.58 |
+
 | C9 | 0.74 | 0.25 | 0.62 | 0.77 | 0.27 | 0.43 | 0.11 | 0.49 | |
 
 ## 表 9.7 基于 A1 的成对比较矩阵（下界模糊决策矩阵）
 
 | | C1 | C2 | C3 | C4 | C5 | C6 | C7 | C8 | C9 |
+
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+
 | C1 | 0.92 | 0.81 | 0.59 | 0.87 | 0.11 | 0.08 | 0.42 | 0.28 | 0.38 |
+
 | C2 | 0.92 | 0.82 | 0.61 | 0.52 | 0.25 | 0.19 | 0.73 | 0.87 | 0.81 |
+
 | C3 | 0.93 | 0.85 | 0.66 | 0.58 | 0.28 | 0.42 | 0.88 | 0.33 | 0.54 |
+
 | C4 | 0.55 | 0.36 | 0.42 | 0.54 | 0.48 | 0.65 | 0.37 | 0.65 | 0.54 |
+
 | C5 | 0.38 | 0.38 | 0.73 | 0.98 | 0.36 | 0.28 | 0.42 | 0.80 | 0.11 |
+
 | C6 | 0.80 | 0.11 | 0.08 | 0.42 | 0.62 | 0.37 | 0.65 | 0.34 | 0.69 |
+
 | C7 | 0.48 | 0.69 | 0.27 | 0.87 | 0.87 | 0.25 | 0.19 | 0.73 | 0.76 |
+
 | C8 | 0.18 | 0.28 | 0.42 | 0.88 | 0.38 | 0.28 | 0.38 | 0.65 | 0.65 |
+
 | C9 | 0.58 | 0.39 | 0.54 | 0.88 | 0.11 | 0.87 | 0.81 | 0.28 | 0.42 |
 
 ## 表 9.8 基于 A1 的成对比较矩阵（均值界模糊决策矩阵）
 
 | | C1 | C2 | C3 | C4 | C5 | C6 | C7 | C8 | C9 |
+
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
 | C1 | 0.65 | 0.56 | 0.38 | 0.79 | 0.58 | 0.54 | 0.49 | 0.54 | 0.77 |
+
 | C2 | 0.38 | 0.76 | 0.86 | 0.55 | 0.36 | 0.42 | 0.67 | 0.11 | 0.55 |
+
 | C3 | 0.78 | 0.78 | 0.67 | 0.38 | 0.38 | 0.73 | 0.78 | 0.67 | 0.38 |
+
 | C4 | 0.67 | 0.81 | 0.57 | 0.80 | 0.11 | 0.08 | 0.81 | 0.54 | 0.67 |
+
 | C5 | 0.68 | 0.94 | 0.54 | 0.48 | 0.69 | 0.27 | 0.94 | 0.45 | 0.78 |
+
 | C6 | 0.25 | 0.74 | 0.87 | 0.36 | 0.28 | 0.42 | 0.33 | 0.36 | 0.87 |
+
 | C7 | 0.28 | 0.57 | 0.80 | 0.62 | 0.37 | 0.65 | 0.76 | 0.62 | 0.65 |
+
 | C8 | 0.48 | 0.54 | 0.48 | 0.87 | 0.25 | 0.19 | 0.54 | 0.87 | 0.38 |
+
 | C9 | 0.97 | 0.48 | 0.69 | 0.54 | 0.45 | 0.67 | 0.57 | 0.38 | 0.80 |
 
 ## 表 9.9 基于 A1 的成对比较矩阵（上界模糊决策矩阵）
 
 | | C1 | C2 | C3 | C4 | C5 | C6 | C7 | C8 | C9 |
+
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
 | C1 | 0.67 | 0.38 | 0.69 | 0.27 | 0.65 | 0.48 | 0.08 | 0.81 | 0.46 |
+
 | C2 | 0.57 | 0.80 | 0.28 | 0.42 | 0.38 | 0.73 | 0.27 | 0.88 | 0.25 |
+
 | C3 | 0.54 | 0.38 | 0.73 | 0.80 | 0.11 | 0.08 | 0.39 | 0.37 | 0.65 |
+
 | C4 | 0.87 | 0.11 | 0.08 | 0.48 | 0.43 | 0.91 | 0.94 | 0.73 | 0.78 |
+
 | C5 | 0.80 | 0.77 | 0.80 | 0.76 | 0.28 | 0.42 | 0.27 | 0.08 | 0.81 |
+
 | C6 | 0.48 | 0.69 | 0.27 | 0.74 | 0.87 | 0.73 | 0.80 | 0.27 | 0.94 |
+
 | C7 | 0.36 | 0.28 | 0.42 | 0.57 | 0.80 | 0.47 | 0.57 | 0.27 | 0.48 |
+
 | C8 | 0.62 | 0.37 | 0.65 | 0.54 | 0.48 | 0.71 | 0.54 | 0.61 | 0.76 |
+
 | C9 | 0.57 | 0.80 | 0.11 | 0.08 | 0.57 | 0.77 | 0.61 | 0.28 | 0.74 |
 
 ## 表 9.10 模糊与 crisp 永久矩阵
 
 | 备选方案 | 模糊永久矩阵 | Crisp 永久矩阵 |
+
 | :--- | :--- | :--- |
+
 | A1 | (7.8, 7.9, 8.3) | 0.05 |
+
 | A2 | (7.2, 7.5, 8.8) | 0.11 |
+
 | A3 | (5.5, 5.6, 7.7) | 0.12 |
+
 | A4 | (4.7, 5.1, 6.8) | 0.04 |
+
 | A5 | (6.1, 6.7, 7.9) | 0.13 |
+
 | A6 | (6.2, 8.2, 8.8) | 0.34 |
 
 # 9.6 研究发现
@@ -3015,25 +3080,34 @@ GTMA 方法论包括有向图表示、矩阵表示和永函数（permanent funct
 ## 表 9.11 排名
 
 | 备选方案 | Crisp 永久矩阵 | 排名 |
+
 | :--- | :--- | :--- |
+
 | A1 (BPCL) | 0.05 | 5 |
+
 | A2 (Hind Petro) | 0.11 | 4 |
+
 | A3 (IOC) | 0.12 | 3 |
+
 | A4 (Oil India) | 0.04 | 6 |
+
 | A5 (ONGC) | 0.13 | 2 |
+
 | A6 (Reliance) | 0.34 | 1 |
 
 排名通过图 9.4 中的折线图展示。
 
 ![](img/e9de70cd491e84262133af63cb33d500_181_0.png)
 
-## 图 9.4 排名折线图。
 
-# 9.7 结论
+
+## 图 9.4 排名折线图
+
+### 9.7 结论
 
 本研究对印度石油和能源领域的主要参与者——Reliance、BPCL、Hind Petro、IOC、Oil India 和 ONGC——的财务排名进行了分析，揭示了它们各自财务地位的一些有趣见解。Reliance 脱颖而出，以财务排名第 1 的成绩位居榜首，表明其具有稳健的财政健康状况和战略定位。ONGC 紧随其后，位列第二，进一步巩固了其在行业内的实力。IOC 占据第三位，展示了其稳定性和财务韧性。HPCL 和 Oil India 分别位于第四位和第五位，表明与同行相比，它们的财务状况虽然扎实但略低。BPCL 排在第六位，暗示其财务表现仍有提升空间。总体而言，这些排名为利益相关者和投资者评估印度石油和能源领域的动态格局提供了宝贵的基准，有助于他们为未来的业务和投资做出明智的决策。
 
-# 关键词
+### 关键词
 
 - 财务指标
 - NIFTY
@@ -3042,7 +3116,7 @@ GTMA 方法论包括有向图表示、矩阵表示和永函数（permanent funct
 - 三角模糊数
 - 图论与矩阵方法
 
-# 参考文献
+### 参考文献
 
 1. Xidonas, P., Mavrotas, G., & Psarras, J. (2009). A multicriteria methodology for equity selection using financial analysis. *Computers & Operations Research*, *36*(12), 3187–3203.
 2. Galilzo, J. L., Jiménez, F., & Salvador, M. (2002). Adjusting financial ratios: A Bayesian analysis of the Spanish manufacturing sector. *Omega*, *30*(3), 185–195.
@@ -3069,18 +3143,16 @@ GTMA 方法论包括有向图表示、矩阵表示和永函数（permanent funct
 23. Faisal, M. N., Banwet, D. K., & Shankar, R. (2007). Quantification of risk mitigation environment of supply chains using graph theory and matrix methods. *European Journal of Industrial Engineering, 1*(1), 22–39.
 24. Nourani, Y., & Andresen, B. (1999). Exploration of NP-hard enumeration problems by simulated annealing—the spectrum values of permanents. *Theoretical Computer Science, 215*(1–2), 51–68.
 
-
-
-
-
 泰勒与弗朗西斯集团
+
 http://taylorandfrancis.com
 
 ![](img/e9de70cd491e84262133af63cb33d500_184_0.png)
 
 # 模糊逻辑在控制能力增强的决策模型和专家系统中的应用
 
- Gourab Dutta, Rahul Kumar Ghosh, 和 Gunjan Mukherjee
+Gourab Dutta, Rahul Kumar Ghosh, 和 Gunjan Mukherjee
+
 *Brainware University, Kolkata, West Bengal, India 计算科学系*
 
 ## 摘要
@@ -3105,7 +3177,7 @@ http://taylorandfrancis.com
 
 ### 10.1.4 金融和交易
 
-在金融市场中，控制能力对于算法交易系统至关重要。这些系统基于市场状况做出快速决策，优化交易策略并最小化风险。控制增强使金融机构能够以无与伦比的速度和准确性应对市场波动。
+在金融市场中，控制对于算法交易系统至关重要。这些系统基于市场状况做出快速决策，优化交易策略并最小化风险。控制增强使金融机构能够以无与伦比的速度和准确性应对市场波动。
 
 ### 10.1.5 航空航天和航空
 
@@ -3153,23 +3225,30 @@ http://taylorandfrancis.com
 
 ## 10.3 控制能力增强
 
+
+
 控制能力增强指的是在各个领域中改进和加强调节、管理和优化系统、过程或操作的能力的过程。它涉及整合先进技术、方法和决策工具，以在给定的情境中实现更好的控制、准确性和适应性[35]。控制能力增强具有重要意义。
-
-
-
-
 
 ### 控制能力提升的优势
 
 1. *效率提升*：增强控制能力能带来更高效的运营。它使组织能够优化流程、减少浪费，并实现更高的生产力水平。
+
 2. *决策优化*：随着控制能力的增强，决策者能够获取更准确且实时的数据。这使他们能够做出明智的选择并迅速应对不断变化的环境。
+
 3. *错误减少*：控制能力提升将错误降至最低，并降低犯下高代价错误的可能性。这在精密至关重要的领域尤为关键，例如制造业、医疗保健和金融。
+
 4. *适应性*：先进的控制系统能够适应变化的条件和需求。它们具有灵活性，能够处理各种变化，因此适用于动态环境 [20]。
+
 5. *成本节约*：通过优化流程并减少错误，控制能力提升通常会导致成本节约。它可以降低运营支出并提高盈利能力。
+
 6. *竞争优势*：在控制能力方面表现卓越的组织通常在各自行业中更具竞争力。它们能够在保持成本效益的同时提供更高质量的产品和服务。
+
 7. *风险缓解*：增强的控制能力有助于有效识别和缓解风险。这在航空、医疗保健和能源等安全至关重要的行业中尤为重要 [5]。
+
 8. *创新*：追求控制能力提升往往能推动创新。它鼓励开发新技术和新方法以实现更好的控制。
+
 9. *跨领域应用*：控制能力提升适用于多个领域，包括制造业、医疗保健、金融、交通等。其多功能性使其在许多领域都成为一个有价值的概念。
+
 10. *可持续性*：在能源和环境管理等领域，控制能力提升可以通过优化资源使用和减少浪费来促进可持续发展。
 
 总之，控制能力提升是一个至关重要的概念，在提高运营效率、减少错误以及推动多元领域的创新方面发挥着重要作用。它使组织能够适应变化，做出明智的决策，并在当今动态且复杂的世界中保持竞争优势。
@@ -3182,57 +3261,73 @@ http://taylorandfrancis.com
 
 **简介：**
 
-ICU 是高压力环境，危重患者在此接受专门的医疗护理。及时且准确的决策，以及对医疗设备的精确控制，对于患者的生存和康复至关重要。控制能力提升对于改善 ICU 中的患者护理和治疗效果极为重要。
+`ICU` 是高压力环境，危重患者在此接受专门的医疗护理。及时且准确的决策，以及对医疗设备的精确控制，对于患者的生存和康复至关重要。控制能力提升对于改善 `ICU` 中的患者护理和治疗效果极为重要。
 
 **目标：**
 
-在 ICU 中实施控制能力提升的主要目标如下：
+在 `ICU` 中实施控制能力提升的主要目标如下：
 
 1. 实时监测：实现对患者生命体征（如心率、血压和血氧水平）的实时监测。
+
 2. 精确给药：确保药物（包括剂量和时间）的精确施用。
+
 3. 呼吸机控制：根据患者需求优化机械通气参数。
+
 4. 报警系统：开发先进的报警系统，向医疗人员提示患者病情的危急变化。
+
 5. 数据分析：收集和分析患者数据，用于并发症的早期发现和预测性分析。
 
 **实施：**
 
 - **先进监测系统**：使用高科技监测设备持续跟踪患者的生命体征，并向医疗服务提供者提供即时反馈。
+
 - **智能输液泵**：这些设备以精确的速率输送药物，降低用药错误的风险。
+
 - **闭环通气**：先进呼吸机使用闭环控制系统，根据患者的呼吸状况调整通气设置。
+
 - **机器学习算法**：机器学习算法分析患者数据以实时预测病情恶化，从而实现早期干预。
 
 **结果：**
 
-在 ICU 中实施控制能力提升已取得显著成效：
+在 `ICU` 中实施控制能力提升已取得显著成效：
 
 - **患者治疗效果改善**：对患者护理的增强控制提高了存活率并减少了并发症。
+
 - **用药错误减少**：精确的药物施用最小化了剂量错误，提高了患者安全性。
+
 - **早期预警系统**：先进的报警系统提供及时提醒，使对危急情况的反应更快。
+
 - **数据驱动的护理**：数据分析促进了基于证据的决策制定，并加深了对患者趋势的了解。
 
 **结论：**
 
-ICU 中的控制能力提升通过为医疗服务提供者提供必要的工具系统，彻底改变了重症监护，使其能够提供更精确、及时和有效的护理。这一应用展示了控制能力提升如何在现实世界的医疗保健环境中显著影响患者治疗效果和安全性。
+`ICU` 中的控制能力提升通过为医疗服务提供者提供必要的工具系统，彻底改变了重症监护，使其能够提供更精确、及时和有效的护理。这一应用展示了控制能力提升如何在现实世界的医疗保健环境中显著影响患者治疗效果和安全性。
 
 ## 10.3.2 控制系统中的挑战与复杂性
 
 控制系统在工程、制造业、医疗保健等多个领域发挥着关键作用。然而，它们并非没有挑战和复杂性。在此，我们讨论与控制系统相关的一些主要问题和困难：
 
 1. **非线性**：许多现实系统表现出非线性行为，这使得其控制更加复杂。传统的线性控制技术可能无法有效处理非线性系统。非线性可能导致意外行为以及控制策略设计上的困难 [27]。
+
 2. **不确定性**：系统参数、外部干扰和噪声中的不确定性会严重影响控制系统的性能。需要采用鲁棒控制技术来处理不确定性，并在变化条件下保持稳定性和性能。
+
 3. **模型复杂性**：建立复杂系统的精确数学模型可能具有挑战性。在某些情况下，模型可能过于复杂，无法准确捕捉所有相关动态。这可能导致设计有效控制器时遇到困难 [33]。
+
 4. **时间延迟**：控制系统经常在测量、执行或通信中遇到时间延迟。时间延迟可能导致不稳定或性能下降，尤其是在需要快速响应的系统中。
+
 5. **多变量系统**：具有多个相互作用变量的系统可能难以控制。变量间的耦合可能导致设计最优控制器的困难，同时避免相互干扰 [3]。
+
 6. **传感器和执行器限制**：控制系统依靠传感器测量系统变量，依靠执行器施加控制动作。传感器不准确、测量范围有限以及执行器约束可能在控制系统设计中带来重大挑战 [37]。
+
 7. **人机交互**：在某些应用中，控制系统需要与人类操作员交互。设计对用户友好且直观的界面和控制策略可能很复杂。
+
 8. **安全与可靠性**：关键应用中的控制系统，如汽车控制或医疗设备，必须满足严格的安全和可靠性要求。确保失效安全机制和冗余可能很复杂且成本高昂。
+
 9. **适应与学习**：某些控制系统需要具备自适应或学习能力，以调整不断变化的运行条件或随时间提高性能。设计鲁棒且稳定的自适应控制算法是一项复杂的任务。
-10. **控制系统集成**：在现代工业中，控制系统通常需要与其他系统（如数据分析、物联网（IoT）设备和通信网络）集成。确保无缝集成和互操作性可能具有挑战性 [24]。
+
+10. **控制系统集成**：在现代工业中，控制系统通常需要与其他系统（如数据分析、物联网（`IoT`）设备和通信网络）集成。确保无缝集成和互操作性可能具有挑战性 [24]。
+
 11. **法规合规**：许多控制系统需要遵守法规标准和认证，这会在文档、测试和验证方面引入额外的复杂性。
-
-
-
-
 
 ## 10.3.3 高级决策工具的需求
 
@@ -3243,16 +3338,27 @@ ICU 中的控制能力提升通过为医疗服务提供者提供必要的工具�
 在当今复杂且数据驱动的世界中，高级决策工具至关重要。这些工具为组织和个人提供了在各种领域做出知情、及时且最优决策的手段。以下是一些突出高级决策工具需求的关键原因：
 
 - 1) *决策环境的复杂性*：在许多领域，由于全球化、技术进步和相互关联性等因素，决策环境变得越来越复杂。简单的经验法则决策往往不足以应对这些环境中变量和约束之间的复杂相互作用 [16]。
-- 2) *大数据和信息过载*：数字时代开启了大规模数据生成的时代。决策者面临着来自各种来源的海量数据。数据分析、机器学习和人工智能（AI）等高级工具对于筛选这些数据、提取有价值见解并支持决策至关重要。
+
+- 2) *大数据和信息过载*：数字时代开启了大规模数据生成的时代。决策者面临着来自各种来源的海量数据。数据分析、机器学习和人工智能（`AI`）等高级工具对于筛选这些数据、提取有价值见解并支持决策至关重要。
+
 - 3) *快速变化的市场*：商业环境高度动态，市场演变迅速。组织必须迅速做出决策以保持竞争力。高级工具提供实时数据分析和预测能力，使企业能够迅速应对市场变化。
+
 - 4) *风险管理*：决策通常涉及评估和减轻风险。包括风险建模和情景分析在内的高级决策工具帮助组织识别潜在风险、量化其影响，并制定管理或减轻这些风险的策略。
+
 - 5) *资源优化*：高效的资源分配对组织最大化其成果至关重要。高级优化算法可以帮助最优地分配财务、人员和设备等资源，减少浪费并提高整体效率。
+
 - 6) *战略规划*：组织需要精密的工具进行战略规划和目标设定。决策支持系统可以协助长期战略决策，使目标与可用资源和市场状况保持一致。
+
 - 7) *竞争优势*：利用高级决策工具的方将获得竞争优势。这些工具使组织能够做出基于数据的决策，从而降低成本、增加收入并提高客户满意度。
+
 - 8) *个性化体验*：在营销和医疗保健等领域，个性化是关键。高级工具分析个人偏好和行为，以定制产品、服务和推荐，从而增强客户体验。
+
 - 9) *科学研究与探索*：在科学研究中，高级工具辅助数据分析、假设检验和模拟。它们在基因组学、气候建模和粒子物理等领域发挥着重要作用。
+
 - 10) *医疗保健*：临床决策支持系统协助医疗保健提供者进行疾病诊断、选择治疗方案并改善患者护理。这些工具整合了患者数据、医学知识和最佳实践。
+
 - 11) *政府和公共政策*：政府机构使用高级决策工具来评估政策影响、分配资源并高效应对危机。
+
 - 12) *环境管理*：环境决策，如气候变化缓解和自然资源保护，需要精密的建模和分析工具来理解复杂生态系统并预测结果。
 
 综上所述，对高级决策工具的需求源于我们世界日益复杂、数据丰富和快节奏的特性。这些工具赋予组织和个人广泛应用能力范围内做出知情、战略性且有效决策的能力，最终推动成功和创新。
@@ -3264,38 +3370,40 @@ ICU 中的控制能力提升通过为医疗服务提供者提供必要的工具�
 ### 10.4.1 语言变量和模糊集合
 
 - 1) *语言变量*：模糊逻辑引入了语言变量的概念，这些变量的值用语言术语而非精确数值表示。例如，在温度控制的背景下，语言变量可以是“温度”，与之相关的语言术语可能包括“冷”、“温暖”和“热”。语言变量允许决策者以更接近人类的方式表达他们的知识和偏好 [2]。
+
 - 2) *模糊集合*：模糊集合是模糊逻辑中的一个基本概念。与传统集合中元素要么属于集合（隶属度 = 1）要么不属于（隶属度 = 0）不同，模糊集合允许部分隶属。每个元素都有一个介于 0 和 1 之间的隶属值，表示其属于该集合的程度。这种部分隶属度适应了现实世界数据中的不确定性和模糊性。
 
 ### 10.4.2 隶属函数
 
 隶属函数定义了元素与模糊集合之间的关系。它们根据元素在集合中的隶属程度为每个元素分配一个隶属值。根据语言术语的性质和上下文，隶属函数可以具有不同的形状，如三角形、梯形或 S 形（sigmoidal）。例如，语言术语“温暖”的隶属函数可能具有三角形形状，在被认为是中度温暖的点达到峰值 [6]。
 
-### 10.4.3 模糊推理系统 (FIS)
+### 10.4.3 模糊推理系统 (`FIS`)
 
-FIS 是基于模糊逻辑决策的核心。它们由三个主要部分组成：
+`FIS` 是基于模糊逻辑决策的核心。它们由三个主要部分组成：
 
 - 1) *模糊化*：在此步骤中，精确的输入值（数值数据）使用适当的隶属函数转换为模糊值。此过程使模型能够处理不精确的输入 [30]。
-- 2) *模糊规则*：FIS 依赖于一组 IF--THEN 规则，这些规则将模糊输入变量与模糊输出变量相关联。这些规则编码了专家知识或决策标准。例如，一条规则可以是“如果温度低并且湿度高，则打开加热器。”
+
+- 2) *模糊规则*：`FIS` 依赖于一组 `IF--THEN` 规则，这些规则将模糊输入变量与模糊输出变量相关联。这些规则编码了专家知识或决策标准。例如，一条规则可以是“如果温度低并且湿度高，则打开加热器。”
+
 - 3) *去模糊化*：在应用模糊规则后，系统产生模糊输出值。去模糊化是将这些模糊输出转换回精确值的过程，从而做出最终决策或控制动作。可以使用各种去模糊化方法，如质心法或最大隶属度法 [26]。
 
 ### 模糊逻辑的主要特征和优势：
 
 - *处理不确定性*：模糊逻辑在数据不精确或存在不确定性的情况下表现出色。它允许对知识进行更细致的表示。
+
 - *以人为本*：模糊逻辑提供了一个与人类思维和自然语言表达良好对齐的框架，使其适用于专家系统和决策支持。
+
 - *可解释性*：模糊逻辑模型通常比复杂的数学模型更具可解释性，使其在透明度至关重要的情况下非常有价值。
+
 - *鲁棒性*：模糊逻辑系统能够容忍噪声数据和变化，使其在现实世界应用中具有鲁棒性。
 
-模糊逻辑在诸如控制系统（例如暖通空调 (HVAC) 系统中的温度控制）、决策支持系统（例如医疗诊断）和专家系统（例如工业自动化）等应用中特别有价值，在这些应用中，决策受到定性信息和不确定信息的影响。
+模糊逻辑在诸如控制系统（例如暖通空调（`HVAC`）系统中的温度控制）、决策支持系统（例如医疗诊断）和专家系统（例如工业自动化）等应用中特别有价值，在这些应用中，决策受到定性信息和不确定信息的影响。
 
 ## 10.5 决策模型和专家系统
 
 决策模型和专家系统在控制应用中发挥着至关重要的作用，通过促进智能和数据驱动的决策。这些工具利用高级算法和领域专业知识来增强各种行业和领域的控制能力。以下是对其应用的探索：
 
 - 1) *过程控制*：在制造业和工业过程中，使用决策模型和专家系统来监测和控制诸如温度、压力和流量等变量。它们使用实时数据做出决策、优化流程并确保产品质量 [10]。
-
-
-
-
 
 2) *供应链管理*：利用决策模型来优化供应链运营，包括库存管理、需求预测和物流。专家系统协助进行路线规划、仓库管理和订单履行，以增强对供应链的控制。
 
@@ -3310,19 +3418,29 @@ FIS 是基于模糊逻辑决策的核心。它们由三个主要部分组成：
 ## 使用决策模型和专家系统的优势：
 
 - *数据驱动决策*：这些工具利用数据分析来做出明智的决策，减少了对直觉和猜测的依赖。
+
 - *一致性*：专家系统确保基于预定义规则和专家知识进行一致的决策，减少变异性。
+
 - *自动化*：它们可以自动化常规任务和决策，释放人力资源以用于更复杂和战略性的活动。
+
 - *可扩展性*：决策模型和专家系统可以处理大数据集和复杂场景，使其适用于各种行业和应用程序。
+
 - *持续改进*：随着它们从新数据和经验中学习，它们可以不断适应和改进，从而增强控制能力。
 
 ## 行业与领域示例
 
 1) *制造业*：决策模型和专家系统用于制造行业，以控制生产过程、质量保证和预测性维护。
+
 2) *金融*：金融机构使用这些工具进行风险管理、欺诈检测和算法交易。
+
 3) *医疗保健*：医疗专家系统协助疾病诊断、治疗计划和药物发现。
+
 4) *交通运输*：航空公司和物流公司利用决策模型进行路线优化和车队管理。
+
 5) *能源*：智能电网系统使用决策模型高效控制能源分配和消费。
+
 6) *农业*：精准农业依靠决策模型来控制灌溉、施肥和害虫管理。
+
 7) *零售*：零售商使用这些工具进行库存管理、需求预测和价格优化。
 
 总之，决策模型和专家系统是多功能工具，可增强广泛行业的控制能力，提供数据驱动、一致且自动化的决策过程。其适应性和可扩展性使其成为实现控制能力增强的宝贵资产。
@@ -3335,8 +3453,9 @@ FIS 是基于模糊逻辑决策的核心。它们由三个主要部分组成：
 
 ### 解决方案：
 
-1) *数据收集*：在生产线上的各个位置放置传感器，以收集温度 ($T$)、电压 ($V$) 和速度 ($S$) 等参数的数据。对于每个生产的微芯片，记录一组测量值 ($T, V, S$)。
-2) *决策模型*：创建一个决策模型，根据收集的数据评估每个微芯片的质量。该模型使用数学公式计算每个芯片的质量分数 ($Q$)。
+1) *数据收集*：在生产线上的各个位置放置传感器，以收集温度（`$T$`）、电压（`$V$`）和速度（`$S$`）等参数的数据。对于每个生产的微芯片，记录一组测量值（`$T, V, S$`）。
+
+2) *决策模型*：创建一个决策模型，根据收集的数据评估每个微芯片的质量。该模型使用数学公式计算每个芯片的质量分数（`$Q$`）。
 
 该公式可以简单如
 
@@ -3352,9 +3471,11 @@ $$Q = 2T + 3V - 0.5S$$
 
 假设生产了一个具有以下测量值的微芯片：
 
-- 温度 ($T$) = 100°C
-- 电压 ($V$) = 5.2 V
-- 速度 ($S$) = 800 单位
+- 温度（`$T$`） = 100°C
+
+- 电压（`$V$`） = 5.2 V
+
+- 速度（`$S$`） = 800 单位
 
 使用质量公式：
 
@@ -3372,8 +3493,11 @@ Q = 2(100) + 3(5.2) - 0.5(800) = 200 + 15.6 - 400 = -184.4
 模糊逻辑可以有效集成到决策模型和专家系统中，以增强其在各个领域中的控制能力。以下是实现这种集成的方法：
 
 1) *语言变量和模糊集合*：模糊逻辑允许表示语言变量和模糊集合，从而捕捉现实世界数据的不确定性。与二进制值（真/假）不同，模糊逻辑为元素分配隶属度，从而允许更细致的数据表示 [25]。
+
 2) *隶属函数*：隶属函数定义模糊集合的形状，并确定元素的隶属程度。它们可以根据特定应用领域进行调整，使决策模型能够有效地捕捉专家知识和不确定信息。
-3) *FISs*：FISs（模糊推理系统）用于基于模糊逻辑规则对决策过程进行建模。这些系统涉及模糊逻辑运算符（AND、OR、NOT）和模糊 if-then 规则，模拟人类专家的推理。FIS 结合语言变量和隶属函数来得出有意义的结论 [34]。
+
+3) *`FISs`*：`FISs`（模糊推理系统）用于基于模糊逻辑规则对决策过程进行建模。这些系统涉及模糊逻辑运算符（`AND`、`OR`、`NOT`）和模糊 `if-then` 规则，模拟人类专家的推理。`FIS` 结合语言变量和隶属函数来得出有意义的结论 [34]。
+
 4) *控制系统*：基于模糊逻辑的控制系统，如模糊控制器，被用于管理复杂和非线性过程。这些控制器可以适应变化的条件，并基于语言规则做出决策，使其适用于控制应用。
 
 ### 集成模糊逻辑的好处：
@@ -3381,20 +3505,25 @@ Q = 2(100) + 3(5.2) - 0.5(800) = 200 + 15.6 - 400 = -184.4
 将模糊逻辑集成到决策模型和专家系统中为控制能力增强提供了多项优势：
 
 1) *处理不确定性*：模糊逻辑可以有效处理现实世界数据中的不确定性和不精确性，使其适用于难以获得精确数值的领域的决策。
+
 2) *结合专家知识*：模糊逻辑允许通过语言规则和隶属函数结合专家知识。这使得系统能够做出与人类专业知识相一致的决策。
-3) *适应性*：基于模糊逻辑的系统可以适应变化的条件并相应调整其决策。这种适应性在条件可能变化的控制系统中非常有价值。
-4) *复杂系统*：模糊逻辑非常适合控制复杂和非线性系统，使其适用于汽车、机器人技术和制造等各种行业。
-
-### 集成的现实世界示例：
-
-1) *汽车巡航控制*：模糊逻辑用于自适应巡航控制系统，根据距离调整车辆速度
 
 
 
-以及与前方车辆的相对速度。模糊控制器能够在多变的交通状况下做出平滑的决策。
+### 适应性
+基于模糊逻辑的系统可以适应变化的条件并相应调整其决策。这种适应性在条件可能变化的控制系统中非常有价值。
+
+### 复杂系统
+模糊逻辑非常适合控制复杂和非线性系统，使其适用于汽车、机器人技术和制造等各种行业。
+
+### 集成的现实世界示例
+
+1. *汽车巡航控制*：模糊逻辑用于自适应巡航控制系统，根据距离调整车辆速度以及与前方车辆的相对速度。模糊控制器能够在多变的交通状况下做出平滑的决策。
 
 - **空调系统**：基于模糊逻辑的控制器用于暖通空调（HVAC）系统中，以优化建筑物的温度和湿度控制。这些系统能够适应不断变化的环境条件。
+
 - **洗衣机**：模糊逻辑被应用于洗衣机中，根据负载量、织物类型和污垢程度等因素确定最佳的洗涤周期。
+
 - **交通信号控制**：基于模糊逻辑的交通信号控制器根据交通流量调整信号配时，从而减少拥堵并改善交通管理。
 
 将模糊逻辑纳入决策模型和专家系统，通过处理不确定性、利用专家知识并实现适应性，从而增强了其控制能力，使其成为跨行业和应用领域的宝贵工具。
@@ -3413,71 +3542,71 @@ Q = 2(100) + 3(5.2) - 0.5(800) = 200 + 15.6 - 400 = -184.4
 
 **解决方案：**
 
-模糊逻辑控制器（FLC）可以通过引入语言规则隶属函数来有效处理这一复杂问题。
+模糊逻辑控制器（`FLC`）可以通过引入语言规则隶属函数来有效处理这一复杂问题。
 
 **变量：**
 
-- *IT*：表示为具有“冷”、“舒适”和“暖”隶属函数的语言变量。
-- *人员密度 (O)*：表示为具有“低”、“中”和“高”隶属函数的语言变量。
-- *室外温度 (OT)*：表示为具有“冷”、“温和”和“热”隶属函数的语言变量。
-- *暖通空调输出*：表示为具有“冷却”、“无动作”和“加热”隶属函数的语言变量。
+- `IT`：表示为具有“冷”、“舒适”和“暖”隶属函数的语言变量。
+- 人员密度 (`O`)：表示为具有“低”、“中”和“高”隶属函数的语言变量。
+- 室外温度 (`OT`)：表示为具有“冷”、“温和”和“热”隶属函数的语言变量。
+- 暖通空调输出：表示为具有“冷却”、“无动作”和“加热”隶属函数的语言变量。
 
-### 模糊规则：
+### 模糊规则
 
-FLC 包含诸如以下的规则：
+`FLC` 包含诸如以下的规则：
 
-- 如果 IT 为“冷”且 O 为“高”，则暖通空调为“加热”
-- 如果 IT 为“暖”且 O 为“低”，则暖通空调为“冷却”
-- 如果 IT 为“舒适”且 O 为“中”，则暖通空调为“无动作”
+- 如果 `IT` 为“冷”且 `O` 为“高”，则暖通空调为“加热”
+- 如果 `IT` 为“暖”且 `O` 为“低”，则暖通空调为“冷却”
+- 如果 `IT` 为“舒适”且 `O` 为“中”，则暖通空调为“无动作”
 
-### 隶属函数：
+### 隶属函数
 
-为每个语言变量定义了隶属函数。例如，IT 的“冷”可能有一个以 65°F 为中心的三角形隶属函数，而 O 的“高”可能有一个以 80 名人员为中心的重型隶属函数。
+为每个语言变量定义了隶属函数。例如，`IT` 的“冷”可能有一个以 65°F 为中心的三角形隶属函数，而 `O` 的“高”可能有一个以 80 名人员为中心的重型隶属函数。
 
-### 模糊推理：
+### 模糊推理
 
-控制器使用 IT、O 和 OT 的当前值评估模糊规则，以确定适当的暖通空调输出。此过程考虑语言变量及其隶属度值。
+控制器使用 `IT`、`O` 和 `OT` 的当前值评估模糊规则，以确定适当的暖通空调输出。此过程考虑语言变量及其隶属度值。
 
-### 去模糊化：
+### 去模糊化
 
 最终的模糊输出通过去模糊化获得一个表示暖通空调输出的精确值。该精确值决定暖通空调系统是应冷却、加热还是保持空闲。
 
-### 计算：
+### 计算
 
 假设当前条件如下：
 
-- IT = 72°F（隶属度值：冷 = 0.2，舒适 = 0.8，暖 = 0.3）
-- O = 60 人（隶属度值：低 = 0.3，中 = 0.7，高 = 0.2）
-- OT = 80°F（隶属度值：冷 = 0.1，温和 = 0.9，热 = 0.3）
+- `IT` = 72°F（隶属度值：冷 = 0.2，舒适 = 0.8，暖 = 0.3）
+- `O` = 60 人（隶属度值：低 = 0.3，中 = 0.7，高 = 0.2）
+- `OT` = 80°F（隶属度值：冷 = 0.1，温和 = 0.9，热 = 0.3）
 
 使用模糊逻辑，控制器评估模糊规则和隶属函数以确定暖通空调输出。假设输出为“冷却”，隶属度值为 0.6。
 
-### 结论：
+### 结论
 
-基于模糊逻辑的暖通空调控制器根据 IT、O 和 OT 之间的复杂交互关系，高效地调整暖通空调输出。通过考虑语言变量和隶属函数，它提供实时、自适应且节能的温度控制。
+基于模糊逻辑的暖通空调控制器根据 `IT`、`O` 和 `OT` 之间的复杂交互关系，高效地调整暖通空调输出。通过考虑语言变量和隶属函数，它提供实时、自适应且节能的温度控制。
 
 此案例研究展示了模糊逻辑在增强控制能力方面的实际应用，特别是在传统控制系统难以有效适应的场景中。
 
 ## 10.7 挑战与未来方向
 
-- **计算复杂性**：模糊逻辑系统在大规模应用中可能会变得计算密集型。需要开发高效的算法和硬件加速方法来处理复杂的模糊推理（FI）。
+- **计算复杂性**：模糊逻辑系统在大规模应用中可能会变得计算密集型。需要开发高效的算法和硬件加速方法来处理复杂的模糊推理（`FI`）。
 - **数据不确定性**：虽然模糊逻辑在处理不确定性方面非常有效，但准确建模和量化不确定性可能具有挑战性。改进不确定性建模和传播至关重要。
 - **互操作性**：将基于模糊逻辑的控制器与现有控制系统或物联网平台集成可能很复杂。需要无缝集成的标准和协议。
 - **调优与优化**：模糊系统通常需要手动调整隶属函数和规则，这可能很耗时。自动化调优方法（如基于机器学习的方法）是一个持续的研究领域。
 - **可解释性**：模糊逻辑系统常被视为“黑箱”，使其决策难以解释。开发增强模糊模型透明度和可解释性的方法至关重要，特别是在关键应用中。
 
-### 未来方向：
+### 未来方向
 
 - **混合系统**：将模糊逻辑与其他人工智能技术（如神经网络和强化学习）相结合是一个有前景的方向。混合系统可以利用每种方法的优势，以改进控制和决策 [36]。
 - **边缘计算**：模糊逻辑非常适合边缘计算环境，在这些环境中需要本地且实时地做出决策。未来的研究应重点优化资源有限的边缘设备上的模糊系统 [17]。
-- **可解释人工智能 (XAI)**：XAI 的进展将使模糊逻辑受益，使其决策过程对用户和利益相关者更加透明和易懂 [14]。
+- **可解释人工智能 (XAI)**：`XAI` 的进展将使模糊逻辑受益，使其决策过程对用户和利益相关者更加透明和易懂 [14]。
 - **人机协作**：模糊逻辑可以在人类与自主系统之间的协作决策中发挥重要作用。该领域的研究可以增强各种领域中自主系统的有效性和接受度 [9]。
 - **能源效率**：开发节能的模糊控制器至关重要，特别是在可再生能源、智能建筑和绿色技术中的应用。模糊系统可以帮助实时优化能源使用。
 - **医疗保健与生物技术**：基于模糊逻辑的专家系统在医疗保健领域（如诊断、治疗建议以及慢性病监测）具有巨大潜力。进一步的研究可以提高此类系统的准确性和可靠性 [12]。
 
-### 新兴趋势：
+### 新兴趋势
 
-- **XAI**：随着人工智能伦理和透明度日益重要，与模糊逻辑协同工作的 XAI 技术将成为一个显著趋势。
+- **XAI**：随着人工智能伦理和透明度日益重要，与模糊逻辑协同工作的 `XAI` 技术将成为一个显著趋势。
 - **自主系统中的 AI**：在自动驾驶汽车、无人机和机器人等领域，模糊逻辑将继续发挥作用，因为在不确定性下进行实时决策至关重要 [8]。
 - **工业 4.0**：模糊逻辑将成为实现智能工厂和工业自动化、实现灵活且自适应制造过程的关键技术。
 - **健康科技**：模糊逻辑将应用于可穿戴设备和健康应用程序中，以实现个性化健康监控和决策支持 [11]。
@@ -3488,10 +3617,6 @@ FLC 包含诸如以下的规则：
 ## 10.8 结论
 
 在本章中，我们通过决策模型、专家系统以及模糊逻辑集成的视角，探讨了增强控制能力的迷人世界。以下是主要要点：
-
-
-
-
 
 1) 控制能力增强：控制能力增强是多个领域的重要方面，包括工业自动化、医疗保健、环境管理等。它涉及提高做出决策、控制流程以及有效应对动态局势的能力。
 
@@ -3505,7 +3630,7 @@ FLC 包含诸如以下的规则：
 
 6) 现实应用：我们探讨了这些技术在各个领域对产生重大影响的现实应用。从工业过程控制到医疗诊断，决策模型、专家系统和模糊逻辑都展示了其有效性。
 
-7) 挑战与未来方向：我们讨论了与这些技术相关的挑战，如计算复杂性和可解释性。此外，我们还强调了未来方向，包括混合系统、边缘计算以及XAI（可解释人工智能）的进展。
+7) 挑战与未来方向：我们讨论了与这些技术相关的挑战，如计算复杂性和可解释性。此外，我们还强调了未来方向，包括混合系统、边缘计算以及`XAI`（可解释人工智能）的进展。
 
 8) 新兴趋势：控制领域的新兴趋势预示着决策模型、专家系统和模糊逻辑将继续演进，并为智能决策、自主系统和可持续性做出贡献。
 
@@ -3569,28 +3694,40 @@ FLC 包含诸如以下的规则：
 
 23. Peifer, R., & Lüthi, H.-J. (1987). 决策支持系统与专家系统：互补关系？见： *Expert Systems and Artificial Intelligence in Decision Support Systems*. Springer: Dordrecht, pp. 41–51. https://doi.org/978-94-009-3805-2_4
 
+24. 参考文献
 
 
-
-
-## 24. 参考文献
 
 - Rajendran, N., Singh, R., Moudgil, M. R., Turukmane, A. V., Umadevi, M., & Glory, K. B. (2022). Secured control systems through integrated IOT devices and control systems. *Measurement: Sensors, 24*, 100487. https://doi.org/10.1016/j.measen.2022.100487
+
 - Reyes-Garcia, C. A., & Torres-Garcia, A. A. (2022). Fuzzy logic and fuzzy systems. In: *Biosignal Processing and Classification Using Computational Learning and Intelligence*. Academic Press, pp. 153–176. https://doi.org/10.1016/b978-0-12-820125-1.00020-8
+
 - Rondeau, L., Ruelas, R., Levrat, L., & Lamotte, M. (1997). A defuzzification method respecting the fuzzification. *Fuzzy Sets and Systems, 86*(3), 311–320. https://doi.org/10.1016/s0165-1014(95)00399-1
+
 - Schoukens, J., & Ljung, L. (2019). Nonlinear system identification: A user-oriented road map. *IEEE Control Systems Magazine, 39*(6), 28–99. https://doi.org/10.1109/mcs.2019.2938121
+
 - Shang, Y. (2005). Expert systems. In: *The Electrical Engineering Handbook*. Academic Press, pp. 367–377. https://doi.org/10.1016/b978-0-12170960-0/50031-1
+
 - Singh, P., Pandey, P. C., Petropoulos, G. P., Pavlidis, A., Srivastava, P. K., Koutsias, N., Deng, K. A., & Bao, Y. (2020). Hyperspectral remote sensing in precision agriculture: Present status, challenges, and future trends. In: *Hyperspectral Remote Sensing*, Elsevier, pp. 121–146. https://doi.org/10.1016/b978-0-08-102894-0.00009-7
+
 - Sinha, D., & Dougherty, E.R. (1993). Fuzzification of set inclusion: Theory and applications. *Fuzzy Sets and Systems, 55*(1), 15–42. https://doi.org/10.1016/0165-0114(93)90299-w
+
 - Sridhar, B., & Bell, D. (2022). Sustainable aviation operations and the role of information technology and data science: Background, current status and future directions. *AIAA AVIATION 2022 Forum*. https://doi.org/10.2514/6.2022-3705
+
 - Story, M. F. (n.d.). Medical Devices in home health care. In: *The Role of Human Factors in Home Health Care*. National Academies Press: Washington (DC). https://www.ncbi.nlm.nih.gov/books/NBK210047/
+
 - Tedeschi, L. O. (2023). Review: The prevailing mathematical modeling classifications and paradigms to support the advancement of sustainable animal production. *Animal, 17*, 100813. https://doi.org/10.1016/j.animal.2023.100813
+
 - Wang, K. (2001). Computational intelligence in agile manufacturing engineering. In: *Agile Manufacturing: The 21st Century Competitive Environment*. Elsevier Science Ltd, pp. 297–315. https://doi.org/10.1016/b978-008043567-1/50016-4
+
 - Ying Xiao, Song, Y. H., Chen-Ching Liu, & Sun, Y. Z. (2003). Available transfer capability enhancement using facts devices. *IEEE Transactions on Power Systems, 18*(1), 305–312. https://doi.org/10.1109/tpwrs.2002.807073
+
 - Zhang, G., Band, S. S., Ardabili, S., Chau, K.-W., & Mosavi, A. (2022). Integration of neural network and fuzzy logic decision making compared with bilayered neural network in the simulation of Daily Dew Point temperature. *Engineering Applications of Computational Fluid Mechanics, 16*(1), 713–723. https://doi.org/10.1080/19942060.2022.2043187
+
 - Zook, D., & Samad, T. (n.d.). Sensors in control systems. In: Bonhe, U. (Ed.), *Control Systems, Robotics, and Automation. Essay. Encyclopedia of Life Support Systems*. Vol. XXI.
 
 ## 第 11 章
+
 ### 利用模糊集定性比较分析（fsQCA）评估印度西孟加拉州加尔各答的旅游吸引力
 
 **UDIT CHAWLA**$^{1}$、**RAMANDEEP KAUR**$^{2}$ 和 **DEVIKA MULCHANDANI**$^{3}$
@@ -3606,24 +3743,13 @@ FLC 包含诸如以下的规则：
 ### 11.1 引言
 
 互联网作为一个整体及其特别的一项功能——万维网 [2]，是一个庞大且几乎无限的数据库。互联网接入的普及改变了人们参与旅游相关活动的方式 [20]。预订交通票务、住宿、安排前往景点的交通以及其他服务，过去仅能通过中介完成；但如今，任何人都可以独立完成 [39]。通过利用租车、酒店预订、博物馆和主题公园售票处以及航空公司和铁路网站等服务，每个人都可以充当自己的旅行社 [43]。这一变化是通过一种被称为电子旅游（e-tourism）的趋势实现的 [33]。
-
 旅游行业近期的繁荣和扩张已成为世界各国经济发展和增长的关键因素，提升了就业机会、外汇收入并推动了基础设施增长 [27]。印度政府认识到旅游行业的价值及其对印度众多美丽地点的经济和文化发展的贡献 [3]。电子旅游，即在旅游行业中应用技术进步，从根本上改变了游客发现和互动其旅游目的地的方式 [11]。充满活力的“欢乐之城”加尔各答也不例外，符合这一普遍趋势。电子旅游在加尔各答具有诸多优势。它提供了一个令人兴奋的框架，在允许游客以无与伦比的简便性规划、安排和导航其行程的同时，突显其独特的文化遗产、历史遗迹和多样化的乐趣。电子旅游还提高了连通性，因为它吸引了全球观众，促进了当地企业，并通过吸引更多游客支持经济 [6]。
-
 然而，这场数字革命带来了一些挑战，包括对稳定设施和安全预防措施的需求、对技术进步可能的过度依赖，以及保持旅游体验真实本质的必要性 [18]。此外，印度旅游行业必须克服某些困难，例如需要加大广告和推广力度、某些地区缺乏标准化和质量监管，以及其他地区设施和服有限 [25]。此外，由于过度依赖互联网预订服务，人们对缺乏定制化以及旅游体验中真实人际互动的减少提出了争议 [7]。
-
 除这些技术挑战外，基础设施的建设和维护也是一个重要关切。尽管加尔各答拥有许多著名景点，但该市的基础设施，包括道路、交通系统和住宿选择，经常需要升级以满足游客的需求。评估和改善该市的旅游体验吸引力是这个蓬勃发展的旅游业所引发的议题之一 [15]。因此，为了吸引广泛的本地和全球游客，高效的旅游分析至关重要 [31]。
-
 尽管使用传统方法评估旅游景点具有价值，但现代研究越来越多地依赖先进和创新的方法论来理解游客选择和决策过程的复杂动态 [1]。使用模糊集定性比较分析（fsQCA），一种确定和分析旅游吸引力的技术先进方法，构成了一种类似的创新途径 [5]。
-
 通过采用结合模糊集理论和定性比较分析的组合方法 fsQCA，可以更深入地理解复杂和多样的因素 [22]。它随后呈现了一项深入研究，突显了个体愿望中隐蔽和复杂的特征，并对塑造旅游景点的因素提供了更全面的视角 [46]。
-
 > **RQ1：** 哪些因素会影响旅游吸引力评估中的游客满意度？
-
-这种方法考虑了多个因素如何相互作用，通过提供这些因素影响游客决定访问特定地点的全面图景，包括“感知乐趣”、“文化遗产”、“可信度”、“历史意义”、“住宿与接待”以及整体“游客满意度”。通过分析，我们可以获取构成提供游客满意度必要条件的因素，进而 [44]，这些发现可用于影响战略决策、政策制定和营销活动，最终实现加尔各答旅游业的持续发展和增长。它是一个强大的工具，可以引导加尔各答旅游业朝着改进的和分析的方法发展，以理解和提高其游客吸引力 [29]。本研究旨在全面评估
-
-
-
-利用前沿的模糊集定性比较分析（fsQCA）方法，探讨加尔各答的旅游吸引力。通过将该方法应用于更广泛背景下的旅游景点评估，本研究为最大化加尔各答作为游客目的地的潜力迈出了至关重要的一步。
+这种方法考虑了多个因素如何相互作用，通过提供这些因素影响游客决定访问特定地点的全面图景，包括“感知乐趣”、“文化遗产”、“可信度”、“历史意义”、“住宿与接待”以及整体“游客满意度”。通过分析，我们可以获取构成提供游客满意度必要条件的因素，进而 [44]，这些发现可用于影响战略决策、政策制定和营销活动，最终实现加尔各答旅游业的持续发展和增长。它是一个强大的工具，可以引导加尔各答旅游业朝着改进的和分析的方法发展，以理解和提高其游客吸引力 [29]。本研究旨在全面评估利用前沿的模糊集定性比较分析（fsQCA）方法，探讨加尔各答的旅游吸引力。通过将该方法应用于更广泛背景下的旅游景点评估，本研究为最大化加尔各答作为游客目的地的潜力迈出了至关重要的一步。
 
 ## 11.2 文献综述
 
@@ -3632,46 +3758,39 @@ FLC 包含诸如以下的规则：
 ### 11.2.1 感知享受
 
 评估加尔各答旅游吸引力的一个关键考量因素是感知享受。研究强调了当地美食、文化活动和休闲追求如何影响游客对乐趣的评价 [41]。加尔各答美味的餐厅、正宗的孟加拉菜以及充满活力的烹饪场景，极大地促进了游客的美食享受。感知享受与整体体验密切相关，进而影响游客的满意度、回头客业务以及良好的口碑 [30]。除了影响游客的快乐感外，感知享受还影响他们重游加尔各答以及向他人推荐该地的倾向 [17]。加尔各答将创新与传统元素独特的融合，以其丰富的历史和创造遗产为例，培育了一种有利于主观愉悦的氛围 [4]。该城市充满活力的舞蹈、文学、文化和艺术风尚广为人知。这些文化方面不仅提升了游客体验的各个方面，还反映了与该城市相关的文化和智力意义 [35]。
-
 尽管游客在加尔各答的文化和美食景点中获得了极大的乐趣，但维持和扩展这些方面面临着持续的挑战 [47]。同样，艺术表演的过度商业化可能会损害其真正的意义，并降低游客对这些表演的享受 [12]。通过考虑游客意见和倾向的不准确和复杂特征，这种方法可以揭示促成该城市高或低报告满意度的复杂因素组合 [10]。此外，它通过识别政策制定者必须具备的特定情境和特征组合，以便相应地调整其目标和努力，从而促进了识别提升感知满意度所需的情况和特征混合 [21]。
 
 ### 11.2.2 文化遗产
 
 加尔各答丰富的历史和创意多样性与其文化遗留紧密相连 [9]。其多样化的文化景点、艺术和文学作品是吸引游客前往该城市的重要因素 [13]。维多利亚纪念堂、泰戈尔故居、大理石宫以及其他传统寺庙和教堂等重要场所展示了该城市的智识和文化过去 [14]。对于城市官员和旅游组织而言，在保护历史真实性与响应游客不断变化的需求和愿望之间保持平衡是一项复杂的职责 [32]。这一深深融入城市历史基础的因素，对游客的体验和享受水平产生了重大影响 [8]。
-
 尽管存在需要解决的可持续性和真实性问题，但使用 fsQCA 作为研究方法论，可以更全面、细致地了解影响文化遗产评估的各种元素之间的互动 [24]。总之，为了保护并有效宣传加尔各答的文化遗产，以提高游客的愉悦感并支持该城市在旅游方面的持续稳定性。
 
 ### 11.2.3 可信赖性
 
 从旅游框架来看，“可信赖性”包括安全性、准确性、可靠性和诚信。它是影响游客决策和整体满意度水平的重要组成部分 [37]。这一方面影响了很多人，因为游客正在寻求更可靠和安全的旅行体验，这大大增加了他们对一个地方的信任 [19]。在加尔各答的旅游业中，安全感和可靠性的感知密切相关 [42]。城市保证游客个人卫生和安全的程度影响了游客对地点的信心 [23]。服务和公共交通网络的可靠性是建立城市整体信誉的重要因素 [36]。当游客相信加尔各答是一个可靠的地点时，他们更倾向于在那里放松和享受。
-
 fsQCA 提供了一种潜在的方式来彻底检查可信赖性在加尔各答热门旅游景点中的重要性 [26]。由于这些印象是模糊和复杂的，fsQCA 可以识别出促成该城市不同可信赖程度的复杂因素模式 [24]。政策制定者可以利用这种方法来确定对于增强可信赖性至关重要的特征和情境的特定配对，从而为其政策和举措提供路线图。这一包括可信赖性、安全性、诚实和可靠性的因素，对游客对城市的整体印象和满意度水平有巨大影响 [38]。
 
 ### 11.2.4 历史意义
 
 加尔各答的历史意义吸引了游客，它与印度独立运动的故事以及其作为创意和艺术追求中心的地位紧密交织在一起 [45]。该城市拥有多个目的地，不仅仅代表了历史重要性，还为游客提供了综合体验。本章强调了文化游作为游客完全融入该城市丰富历史之方式的价值。这段历史记载极大地提升了城市的旅游吸引力，并产生了强烈的社区感 [40]。加尔各答的文化意义吸引了许多游客，但维护和突出这些历史特征是持续的斗争 [34]。对于城市官员和旅游利益相关者来说，在保持遗产的真实性与适应游客不断变化的需求和标准之间取得平衡是一项具有挑战性的工作 [16]。
-
 这一因素与该城市的历史意义及其社会和艺术评论交织在一起，对游客对该城市的感知及其整体愉悦度产生重大影响 [28]。尽管必须解决与保护和完整性相关的挑战，但将 fsQCA 作为调查方法有可能提供对影响历史价值评估的各要素互动的更复杂和全面的理解 [26]。
 
 ### 11.2.5 好客性与住宿
 
 好客性是指当地人和旅游业向客人提供的温暖和高质量服务 [48]。它包括一个地方当地人的热情、礼貌和友好的态度。酒店、酒吧、咖啡馆及其他提供食品和饮料服务的机构均包含在酒店业中 [49]。热情友好的当地人，让游客感到轻松和被重视，可以极大地改善游客的体验 [50]。热情友好的当地人，让游客感到轻松和被重视，可以极大地改善游客的体验 [51]。住宿是指为旅行者提供的住房和租赁选择。这些可以包括汽车旅馆、度假村，以及小屋、青年旅舍和其他住宿选择 [52]。通过为旅行者提供休息和充电的地方，住宿在吸引游客方面起着至关重要的作用 [53]。由于它们容纳了不同口味、消费限制和度假风格，目的地住宿选择的品质和多样性在决定游客来访决定中起着重大作用 [54]。
-
 住宿和好客性共同在吸引游客方面发挥着至关重要的作用。它们增强了游客的整体享受和体验，增加了他们重游或向他人推荐该地点的可能性 [55]。优越的设施和广泛的住宿选择可以增加该地点在旅游行业中的吸引力和竞争力。
 
 ## 11.3 研究方法
 
-在使用模糊集定性比较分析（fsQCA）评估旅游吸引力的背景下，数据收集的研究技术采用了有组织的策略。首先，本研究由明确定义的研究目标指导。确定影响旅游吸引力的重要因素，并选择旅游地点或区域为加尔各答。
 
-从 TripAdvisor 和 MakemyTrip 收集了在线评论和统计记录。创建了一个全面的数据收集框架，概述了每个要素的特征和数据收集技术。为确保准确性，数据经过清洗、检查和校准。使用 fsQCA 软件执行 fsQCA，并对结果进行评估，以确定影响游客吸引力的条件配置。结果在考虑局限性的情况下呈现，以阐明影响选定地点旅游吸引力的因素。
+
+在使用模糊集定性比较分析（`fsQCA`）评估旅游吸引力的背景下，数据收集的研究技术采用了有组织的策略。首先，本研究由明确定义的研究目标指导。确定影响旅游吸引力的重要因素，并选择旅游地点或区域为加尔各答。
+
+从 `TripAdvisor` 和 `MakemyTrip` 收集了在线评论和统计记录。创建了一个全面的数据收集框架，概述了每个要素的特征和数据收集技术。为确保准确性，数据经过清洗、检查和校准。使用 `fsQCA` 软件执行 `fsQCA`，并对结果进行评估，以确定影响游客吸引力的条件配置。结果在考虑局限性的情况下呈现，以阐明影响选定地点旅游吸引力的因素。
 
 ## 11.4 结果与分析
 
 通过使用李克特量表进行交叉表分析，可以更好地理解两个或多个类别变量之间的关联。
-
-
-
-
 
 李克特量表常被用于在 1–5 的范围内评估思想、意见和观点（从强烈不同意到强烈同意）。当我们对李克特量表的数据进行交叉列表分析时，本质上是要弄清楚不同群体或类别的受访者如何解读或反应各种因素。
 
@@ -3687,65 +3806,65 @@ fsQCA 提供了一种潜在的方式来彻底检查可信赖性在加尔各答�
 | 历史意义 | 史学中的一个基本概念，它探究并试图阐述世界各地文化如何挑选特定历史事件进入记忆。 |
 | 接待与住宿 | 为离家过夜者提供住宿的可得性以及外出就餐的替代选择。 |
 
-模糊集定性比较分析（fsQCA）是一种研究技术，用于检查和研究可能导致特定结果的多个要素之间的复杂联系。在运行 QCA 之前，必须对条件数据和结果数据进行校准。为了校准一个模糊集，必须确定一个目标集。这确立了集合的校准，并在理论论述与实证研究之间建立了明确的联系。本研究使用了 fsQCA，并通过直接校准方法将相关因素和结果校准为模糊集隶属度得分。fsQCA 的目标是以一种能够反映有意义群体的方式校准集合隶属度。
+模糊集定性比较分析（`fsQCA`）是一种研究技术，用于检查和研究可能导致特定结果的多个要素之间的复杂联系。在运行 QCA 之前，必须对条件数据和结果数据进行校准。为了校准一个模糊集，必须确定一个目标集。这确立了集合的校准，并在理论论述与实证研究之间建立了明确的联系。本研究使用了 `fsQCA`，并通过直接校准方法将相关因素和结果校准为模糊集隶属度得分。`fsQCA` 的目标是以一种能够反映有意义群体的方式校准集合隶属度。
 
-使用 fsQCA 3 软件来理解影响游客吸引力评估的因素之间的复杂关系。收集的原始数据被校准为从 0.00 到 1.00 的模糊隶属度得分，其中非隶属度得分代表 5%，交叉锚点为 50%，完全隶属度得分代表 95% 的数值；我们在 fsQCA 3 软件中校准变量时，将获得的数值用作三个阈值。接下来，构建真值表。然后通过“数值”排序方法按频率对真值表进行排序（图 11.1）。
+使用 `fsQCA 3` 软件来理解影响游客吸引力评估的因素之间的复杂关系。收集的原始数据被校准为从 0.00 到 1.00 的模糊隶属度得分，其中非隶属度得分代表 5%，交叉锚点为 50%，完全隶属度得分代表 95% 的数值；我们在 `fsQCA 3` 软件中校准变量时，将获得的数值用作三个阈值。接下来，构建真值表。然后通过“数值”排序方法按频率对真值表进行排序（图 11.1）。
 
 ![](img/e9de70cd491e84262133af63cb33d500_219_0.png)
 
-**图 11.1** 真值表的解得分分布（fsQCA）。
+**图 11.1** 真值表的解得分分布（`fsQCA`）。
 
 真值表在按频率排序后，按“原始一致性”进行排序，并应用 0.8 的频率阈值。标准分析得出三种不同的结果：复杂解、简约解和中间解。我们将广泛讨论这些解。
 
-通过对数据模式的彻底检查，fsQCA 得出一个复杂的解答，揭示了特定数据集中的一些复杂解和条件。从数据中提取有价值见解的能力可见于其卓越的指标，包括原始覆盖度、独特覆盖度和一致性。表 11.2 给出了通过 fsQCA 分析生成的复杂解。
+通过对数据模式的彻底检查，`fsQCA` 得出一个复杂的解答，揭示了特定数据集中的一些复杂解和条件。从数据中提取有价值见解的能力可见于其卓越的指标，包括原始覆盖度、独特覆盖度和一致性。表 11.2 给出了通过 `fsQCA` 分析生成的复杂解。
 
 本研究此处的三个主要焦点是“感知乐趣”、“文化遗产”和“可信度”。首先，“感知乐趣”一词与游客吸引力中不可或缺的愉悦和满足感有关。“可信度”表示可靠性和信心的存在，而“文化遗产”表示文化和历史成分的存在。复杂的解答基于这些要素之间的相互作用。
 
-## 表 11.2 交叉数据列表分析
+### 表 11.2 交叉数据列表分析
 
-| 构念/五等分 | | 1 | 2 | 3 | 4 | 5 | 总数 |
+| 构念/五等分 |  | 1 | 2 | 3 | 4 | 5 | 总数 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **游客满意度** | | | | | | | |
+| **游客满意度** |  |  |  |  |  |  |  |
 | 感知乐趣 | 1 | 0 | 12 | 0 | 3 | 0 | 15 |
-| | 2 | 15 | 27 | 9 | 0 | 9 | 60 |
-| | 3 | 6 | 42 | 75 | 90 | 12 | 225 |
-| | 4 | 0 | 18 | 12 | 78 | 9 | 117 |
-| | 5 | 0 | 0 | 9 | 48 | 60 | 117 |
-| 总数 | | 21 | 99 | 105 | 219 | 90 | 534 |
-| | | 1 | 2 | 3 | 4 | 5 | |
+|  | 2 | 15 | 27 | 9 | 0 | 9 | 60 |
+|  | 3 | 6 | 42 | 75 | 90 | 12 | 225 |
+|  | 4 | 0 | 18 | 12 | 78 | 9 | 117 |
+|  | 5 | 0 | 0 | 9 | 48 | 60 | 117 |
+| 总数 |  | 21 | 99 | 105 | 219 | 90 | 534 |
+|  |  | 1 | 2 | 3 | 4 | 5 |  |
 | 历史意义 | 1 | 3 | 0 | 6 | 0 | 0 | 9 |
-| | 2 | 18 | 33 | 15 | 21 | 3 | 90 |
-| | 3 | 0 | 60 | 69 | 93 | 27 | 249 |
-| | 4 | 0 | 3 | 12 | 36 | 0 | 51 |
-| | 5 | 0 | 3 | 3 | 69 | 60 | 135 |
-| 总数 | | 21 | 99 | 105 | 219 | 90 | 534 |
-| | | 1 | 2 | 3 | 4 | 5 | |
+|  | 2 | 18 | 33 | 15 | 21 | 3 | 90 |
+|  | 3 | 0 | 60 | 69 | 93 | 27 | 249 |
+|  | 4 | 0 | 3 | 12 | 36 | 0 | 51 |
+|  | 5 | 0 | 3 | 3 | 69 | 60 | 135 |
+| 总数 |  | 21 | 99 | 105 | 219 | 90 | 534 |
+|  |  | 1 | 2 | 3 | 4 | 5 |  |
 | 文化遗产 | 1 | 0 | 6 | 3 | 6 | 6 | 21 |
-| | 2 | 15 | 18 | 9 | 12 | 3 | 57 |
-| | 3 | 6 | 51 | 42 | 63 | 24 | 186 |
-| | 4 | 0 | 21 | 45 | 117 | 30 | 213 |
-| | 5 | 0 | 3 | 6 | 21 | 27 | 57 |
-| 总数 | | 21 | 99 | 105 | 219 | 90 | 534 |
+|  | 2 | 15 | 18 | 9 | 12 | 3 | 57 |
+|  | 3 | 6 | 51 | 42 | 63 | 24 | 186 |
+|  | 4 | 0 | 21 | 45 | 117 | 30 | 213 |
+|  | 5 | 0 | 3 | 6 | 21 | 27 | 57 |
+| 总数 |  | 21 | 99 | 105 | 219 | 90 | 534 |
 
 ### 表 11.2（续）
 
 | 构念/五等分 | 1 | 2 | 3 | 4 | 5 | 总数 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **游客满意度** | **1** | **2** | **3** | **4** | **5** | |
+| **游客满意度** | **1** | **2** | **3** | **4** | **5** |  |
 | 住宿与接待 | 1 | 0 | 6 | 3 | 0 | 0 | 9 |
-| | 2 | 15 | 15 | 9 | 3 | 3 | 45 |
-| | 3 | 6 | 66 | 75 | 48 | 21 | 216 |
-| | 4 | 0 | 12 | 18 | 129 | 6 | 165 |
-| | 5 | 0 | 0 | 0 | 39 | 60 | 99 |
+|  | 2 | 15 | 15 | 9 | 3 | 3 | 45 |
+|  | 3 | 6 | 66 | 75 | 48 | 21 | 216 |
+|  | 4 | 0 | 12 | 18 | 129 | 6 | 165 |
+|  | 5 | 0 | 0 | 0 | 39 | 60 | 99 |
 | 总数 | 21 | 99 | 105 | 219 | 90 | 534 |
 | 可信度 | 1 | 0 | 6 | 0 | 3 | 3 | 12 |
-| | 2 | 6 | 12 | 15 | 18 | 15 | 66 |
-| | 3 | 12 | 54 | 21 | 78 | 21 | 186 |
-| | 4 | 3 | 27 | 66 | 114 | 45 | 255 |
-| | 5 | 0 | 0 | 3 | 6 | 6 | 15 |
+|  | 2 | 6 | 12 | 15 | 18 | 15 | 66 |
+|  | 3 | 12 | 54 | 21 | 78 | 21 | 186 |
+|  | 4 | 3 | 27 | 66 | 114 | 45 | 255 |
+|  | 5 | 0 | 0 | 3 | 6 | 6 | 15 |
 | 总数 | 21 | 99 | 105 | 219 | 90 | 534 |
 
-复杂解（表 11.3）的高覆盖度得分 0.992757 表明它捕获了数据集中几乎所有相关事件，显示出其捕捉数据模式主要部分的能力。这种广泛的覆盖度展示了 fsQCA 在数据中发现和捕捉重要关系和条件的能力。此外，复杂解中的高一致性值 0.997574 显示了其中强大且一致的链接。这意味着发现的关系由数据中大量证据支持，而不仅仅是随机事件。这种程度的规律性使得三个主导因素之间存在真实关系而非巧合关系的可能性更大。
+复杂解（表 11.3）的高覆盖度得分 0.992757 表明它捕获了数据集中几乎所有相关事件，显示出其捕捉数据模式主要部分的能力。这种广泛的覆盖度展示了 `fsQCA` 在数据中发现和捕捉重要关系和条件的能力。此外，复杂解中的高一致性值 0.997574 显示了其中强大且一致的链接。这意味着发现的关系由数据中大量证据支持，而不仅仅是随机事件。这种程度的规律性使得三个主导因素之间存在真实关系而非巧合关系的可能性更大。
 
 ### 表 11.3 复杂解
 
@@ -3758,23 +3877,20 @@ fsQCA 提供了一种潜在的方式来彻底检查可信赖性在加尔各答�
 | ~乐趣 * ~历史 * 遗产 * 接待 * ~信任 | 0.0462777 | 0.037827 | 1 |
 
 **解覆盖度：** 0.992757
+
 **解一致性：** 0.997574
 
 对该复杂解的理论检查提供了许多有见地的发现。它显示，在数据集中，“乐趣”与“文化遗产”和“可信度”强相关，一致性水平为 0.996857。这意味着，根据证据，遗产相关体验及其产生的信任对游客满意度有重大影响。这一结论强调了信任和遗产在提升游客整体体验方面的价值，对旅游业尤为相关。
 
 某些成分，如“历史意义”，包含否定符号（~），这表明理解数据集中的关系还需要了解某些方面的缺失。例如，历史成分的缺失可能会显著影响遗产、信任和乐趣。这种细致的理解提供了关于影响这些性质的变量的更深入了解。
 
-fsQCA 分析产生的中间解（表 11.4）提供了关于确定旅游吸引力的见解。该分析探讨了在旅游地点背景下，“感知乐趣”、“文化遗产”和“可信度”如何相互关联。
-
-
-
-
+`fsQCA` 分析产生的中间解（表 11.4）提供了关于确定旅游吸引力的见解。该分析探讨了在旅游地点背景下，“感知乐趣”、“文化遗产”和“可信度”如何相互关联。
 
 Solution 是一种有效的工具，用于确定和改进旅游景点的吸引力，因为它具有高度的覆盖性、原创性和一致性标准。
 
-## 表 11.4 中间解
+### 表 11.4 中间解
 
-| | 原始覆盖度 | 唯一覆盖度 | 一致性 |
+|  | 原始覆盖度 | 唯一覆盖度 | 一致性 |
 | :--- | :--- | :--- | :--- |
 | 愉悦*遗产*信任 | 0.765795 | 0.757344 | 0.996857 |
 | ~愉悦*~历史*~遗产*~款待 | 0.0804829 | 0.037827 | 1 |
@@ -3783,6 +3899,7 @@ Solution 是一种有效的工具，用于确定和改进旅游景点的吸引�
 | ~愉悦*~历史*遗产*~款待*~信任 | 0.0462777 | 0.037827 | 1 |
 
 解的覆盖度：**0.992757**
+
 解的一致性：**0.997574**
 
 “感知愉悦”是旅行中非常重要的一部分。在旅行过程中，游客寻求满足感、快乐以及特殊的时刻。这一方法中的组成部分强调了提供愉悦体验以吸引游客的重要性。“文化遗产”指的是一个地方的历史和文化特征。为了更多地了解和欣赏一个地区的历史、习俗和文化多样性，许多游客被拥有丰富文化遗产的地方所吸引。对于游客来说，“可信度”在选择地点时至关重要。信任与机构的可靠性、安全性和良好声誉相关。游客需要对所选的地方有信心并感到安全。
@@ -3791,11 +3908,11 @@ Solution 是一种有效的工具，用于确定和改进旅游景点的吸引�
 
 分析表明，感知愉悦、文化遗产和可信度在提高游客满意度方面做出了重大贡献，一致性水平为 **0.996857**。这意味着为了达到预期结果，需要传统、愉悦和信任的融合。当这三个特质存在时，它们与遗产相关的最高满意度之间存在着显著且稳定的关联。
 
-总而言之，fsQCA 研究提供了关于影响“愉悦 遗产 信任”结果的变量的深刻见解。它阐明了关键要素、它们如何协同工作，以及当这些要素缺失时会发生什么。考虑到所涉及互动的复杂性和多样性，此分析有助于指导决策方法和达成预期结果的手段。深入的案例研究和额外调查可能需要在特定情况下完全探究这些结果并提供更透彻的见解。
+总而言之，`fsQCA` 研究提供了关于影响“愉悦 遗产 信任”结果的变量的深刻见解。它阐明了关键要素、它们如何协同工作，以及当这些要素缺失时会发生什么。考虑到所涉及互动的复杂性和多样性，此分析有助于指导决策方法和达成预期结果的手段。深入的案例研究和额外调查可能需要在特定情况下完全探究这些结果并提供更透彻的见解。
 
 决定结果的充分条件配置（表 11.5）以上表明了影响游客吸引力评估的各种因素的解覆盖度。空白域意味着一个不显著的领域，在该领域中结果独立于因果因素的存在或缺失；而当某种情况存在时，黑色圆圈（•）表示它存在，而当它缺失时，白色圆圈（○）表示它缺失。研究结果表明，如果不同条件路径以同等效力导致相同结果，则回答了因果复杂性的三个重要特征：联立性、非对称性和等值性。
 
-## 表 11.5 决定结果的充分条件配置
+### 表 11.5 决定结果的充分条件配置
 
 | 感知愉悦 | 可信度 | 文化遗产 | 历史意义 | 款待与住宿 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -3805,15 +3922,15 @@ Solution 是一种有效的工具，用于确定和改进旅游景点的吸引�
 | ○ |  | ○ | • | ○ |
 | • | ○ | ○ | • | • |
 
-# 11.5 结论
+## 11.5 结论
 
-近年来，旅游业部门显著扩张，加尔各答等地方正变得越来越成为受欢迎的旅游目的地。本研究旨在利用 fsQCA 方法评估加尔各答的旅游吸引力。本研究旨在识别影响加尔各答作为度假目的地吸引力的众多因素之间的复杂相互关系。通过仔细的数据收集和 fsQCA 分析，它提供了有关城市旅游吸引力各种特征的深刻见解。
+近年来，旅游业部门显著扩张，加尔各答等地方正变得越来越成为受欢迎的旅游目的地。本研究旨在利用 `fsQCA` 方法评估加尔各答的旅游吸引力。本研究旨在识别影响加尔各答作为度假目的地吸引力的众多因素之间的复杂相互关系。通过仔细的数据收集和 `fsQCA` 分析，它提供了有关城市旅游吸引力各种特征的深刻见解。
 
 我们的研究结果表明，加尔各答的旅游吸引力受众多相互关联的因素影响，而不仅仅是一个主导因素。在调查中考虑了众多重要因素，包括周边环境、安全、设施以及文化。在评估城市的整体旅游吸引力时，这些组成部分的重要性各不相同。为了制定成功提升加尔各答对游客吸引力的政策，立法者、旅游开发者以及其他合作伙伴必须认识到这种多样性。
 
 加尔各答的旅游吸引力在很大程度上归功于其丰富的祖先遗产。城市迷人的过去和多种文化，通过其历史遗址、博物馆和庆祝活动体现出来，是吸引游客的主要亮点。其他事物的相互作用方式也非常重要。总之，本研究显示，加尔各答的游客吸引力是多个变量复杂相互作用的结果，每个变量都为城市的整体魅力做出了贡献。城市的自然景观、基础设施、安全性、温暖氛围以及历史和文化遗产都起着重要作用。提升加尔各答对游客的吸引力需要一种综合策略，考虑到并利用这些多样的情况。地方政府、旅游委员会和企业可以利用本研究提供的基础，定制其战略和投资，以有效增加旅游吸引力。通过识别和利用这些众多但相互关联的因素，可以进一步实现加尔各答作为繁荣旅游目的地的潜力，最终为该城市及其公民带来增加的经济和文化利益。
 
-# 关键词
+## 关键词
 
 - 模糊集定性比较分析
 - 吸引力
@@ -3821,82 +3938,137 @@ Solution 是一种有效的工具，用于确定和改进旅游景点的吸引�
 - 旅游
 - 旅游业
 
-# 参考文献
+## 参考文献
 
 1. Kutsenko, A., Megel, Y., Kovalenko, S., Kovalenko, S., et al. (2019). An approach to quality evaluation of embryos based on their geometrical parameters. In: *Photonics Applications in Astronomy, Communications, Industry, and High-Energy Physics Experiments*. SPIE, p. 11176.
+
 2. Adobayo, W. J. (2014). The economic impact of tourism development. *Journal of Tourism, Hospitality and Sports*.
+
 3. Aerts, J. C., Botzen, W. J., Clarke, K. C., Cutter, S. L., Hall, J. W., Merz, B., et al. (2018). Integrating human behaviour dynamics into flood disaster risk assessment. *Nature Climate Change*, 8(3), 193–199.
+
 4. Andereck, K. L., & Nyaupane, G. P. (2011). Exploring the nature of tourism and quality of life perceptions among residents. *Journal of Travel Research*, 50(3), 248–260.
+
 5. Chang, B., & Chang, J. R. Using fuzzy theory to analyze tourism preference. In: *Future Information Technology*. Springer: Berlin, Heidelberg, 2014, pp. 705–711.
+
 6. Boletsis, C., & Chasanidi, D. Smart tourism in cities: Exploring urban destinations with audio augmented reality. In: *Proceedings of the 11th Pervasive Technologies Related to Assistive Environments Conference*. PETRA, 2018, Corfu, Greece.
+
 7. Brauckmann, S. (2017). City tourism and the sharing economy–potential effects of online peer-to-peer marketplaces on urban property markets. *Journal of Tourism Futures*, 3(2), 114–126.
+
 8. Buonocontri, P., & Marasco, A. (2017). Enhancing cultural heritage experiences with smart technologies: An integrated experiential framework. *European Journal of Tourism Research*, 17, 83–101.
-9. Camarero, C., Garrido, M. J., & Vicente, E. (2015). Achieving effective visitor orientation in European museums. Innovation versus custodial. *Journal of Cultural Heritage*, 16(2), 228–235.
-10. Casady, C. B. (2021). Examining the institutional drivers of public-private partnership (PPP) market performance: A fuzzy set qualitative comparative analysis (fsQCA). *Public Management Review*, 23(3), 981–1005. https://doi.org/10.1080/14719037.2019.1708439
-11. Chen, X., Cheng, Z. F., & Kim, G. B. (2020). Make it memorable: Tourism experience, fun, recommendation and revisit intentions of Chinese outbound tourists. *Sustainability*, 12(5), 1904. https://doi.org/10.3390/su12051904
-12. Chiu, Y. T. H., Lee, W. I., & Chen, T. H. (2014a). Environmentally responsible behaviour in ecotourism: Antecedents and implications. *Tourism Management*, 40, 321–329.
-13. Davis, P., Huang, H.-Y., & Liu, W.-C. (2010). Heritage, local communities and the safeguarding of “Spirit of Place” in Taiwan. *Museum and Society*, 8(2), 80-89. http://openarchive.icos.org/84/1/77-LtNt-2012_.pdf
-14. du Cros, H., & McKercher, B. (2015). *Cultural Tourism*, 2nd edn. Routledge.
-15. Fathima, K. M., Sowdesh, R. M., Mugilanandam, R., Anand, S. N., & Raj, D. K. (2023). Trip Backer: A fuzzy logic based approach to E-tourist attractiveness assessment. *International Journal of Research in Engineering, Science and Management*, 6(6), 74–77.
-16. Go, H., & Kang, M. (2023). Metaverse tourism for sustainable tourism development: Tourism agenda 2030. *Tourism Review*, 78, 381–394.
-17. Gössling, S., Scott, D., Hall, C. M., Ceron, J. P., & Dubois, G. (2012). Consumer behaviour and demand response of tourists to climate change. *Annals of Tourism Research*, 39(1), 36–58.
-18. Hadinnead, A., Moylo, B. D., Scott, N., Kralj, A., & Nunkoo, R. (2019). Residents’ attitudes to tourism: A review. *Tourism Review*, 74(2), 150–165. https://doi.org/10.118/ TR-01-2018-0003
-19. Han, H., & Hyun, S. S. (2017). Drivers of customer decision to visit an environmentally responsible museum: Merging the theory of planned behavior and norm activation theory. *Journal of Travel & Tourism Marketing*, 34(9), 1155–1168.
-
-
 
 
 
 ## 参考文献
 
+9. Camarero, C., Garrido, M. J., & Vicente, E. (2015). Achieving effective visitor orientation in European museums. Innovation versus custodial. *Journal of Cultural Heritage*, 16(2), 228–235.
+
+10. Casady, C. B. (2021). Examining the institutional drivers of public-private partnership (PPP) market performance: A fuzzy set qualitative comparative analysis (fsQCA). *Public Management Review*, 23(3), 981–1005. https://doi.org/10.1080/14719037.2019.1708439
+
+11. Chen, X., Cheng, Z. F., & Kim, G. B. (2020). Make it memorable: Tourism experience, fun, recommendation and revisit intentions of Chinese outbound tourists. *Sustainability*, 12(5), 1904. https://doi.org/10.3390/su12051904
+
+12. Chiu, Y. T. H., Lee, W. I., & Chen, T. H. (2014a). Environmentally responsible behaviour in ecotourism: Antecedents and implications. *Tourism Management*, 40, 321–329.
+
+13. Davis, P., Huang, H.-Y., & Liu, W.-C. (2010). Heritage, local communities and the safeguarding of “Spirit of Place” in Taiwan. *Museum and Society*, 8(2), 80-89. http://openarchive.icos.org/84/1/77-LtNt-2012_.pdf
+
+14. du Cros, H., & McKercher, B. (2015). *Cultural Tourism*, 2nd edn. Routledge.
+
+15. Fathima, K. M., Sowdesh, R. M., Mugilanandam, R., Anand, S. N., & Raj, D. K. (2023). Trip Backer: A fuzzy logic based approach to E-tourist attractiveness assessment. *International Journal of Research in Engineering, Science and Management*, 6(6), 74–77.
+
+16. Go, H., & Kang, M. (2023). Metaverse tourism for sustainable tourism development: Tourism agenda 2030. *Tourism Review*, 78, 381–394.
+
+17. Gössling, S., Scott, D., Hall, C. M., Ceron, J. P., & Dubois, G. (2012). Consumer behaviour and demand response of tourists to climate change. *Annals of Tourism Research*, 39(1), 36–58.
+
+18. Hadinnead, A., Moylo, B. D., Scott, N., Kralj, A., & Nunkoo, R. (2019). Residents’ attitudes to tourism: A review. *Tourism Review*, 74(2), 150–165. https://doi.org/10.118/ TR-01-2018-0003
+
+19. Han, H., & Hyun, S. S. (2017). Drivers of customer decision to visit an environmentally responsible museum: Merging the theory of planned behavior and norm activation theory. *Journal of Travel & Tourism Marketing*, 34(9), 1155–1168.
+
+### 参考文献
+
 - 20. Henry, A. D. (2018). Learning sustainability innovations. *Nature Sustainability, 1*(4), 164–165. https://doi.org/10.1038/s41893-018-0053-9
+
 - 21. Hultman, M., Kazemienia, A., & Ghasemi, V. (2015). Intention to visit and willingness to pay a premium for ecotourism: The impact of attitude, materialism, and motivation. *Journal of Business Research, 68*(9), 1854–1861.
+
 - 22. Merigé, J. M., Gil-Lafuente, A. M., & Yager, R. R. (2015). An overview of fuzzy research with bibliometric indicators. *Applied Soft Computing, 27*, 420–433.
+
 - 23. Jansson, J., Marell, A., & Nordlund, A. (2011). Exploring consumer adoption of a high involvement eco-innovation using value-belief-norm theory. *Journal of Consumer Behaviour, 10*(1), 51–60.
+
 - 24. Kraus, S., Ribeiro-Soriano, D., Schüssler, M. (2018). Fuzzy-set qualitative comparative analysis (fsQCA) in entrepreneurship and innovation research—The rise of a method. *International Entrepreneurship and Management Journal 14*(1), 15–33. https://doi.org/10.1007/S11365-017-0461-8.
+
 - 25. Khurhady, S., Seyfi, S., & Béal, L. (2022). Peer-to-peer (P2P) accommodation in the sharing economy: A review. *Current Issues in Tourism, 25*(19), 3115–3130.
+
 - 26. Kumar, S., Sahoo, S., Lim, W. M., Kraus, S., Bamel, U. K. (2022). Fuzzy-set qualitative comparative analysis (fsQCA) in business and management research: A contemporary overview. *Technological Forecasting and Social Change, 178*, 121599. https://doi.org/10.1016/j.techfore.2022.121599.
+
 - 27. Lawton, L. J., & Weaver, D. B. (2015). Using residents’ perceptions research to inform planning and management for sustainable tourism: A study of the Gold Coast Schoolies Week, a contentious tourism event. *Journal of Sustainable Tourism, 23*(5), 660–682. https://doi.org/10.1080/09669582.2014.991398
+
 - 28. Lopez-Caroceros, M. A., Pineiro-Chouza, J., Quiñoa-Piñeiro, L. (2020). An approach to a country’s innovation considering cultural, economic, and social conditions. *Economic Research-Ekonomska Istraživanja, 34*, 2747–2766. https://doi.org/10.1080/1331677X.2020.1838314.
+
 - 29. Chen, M. Y., & Linkens, D. A. (2004). Rule-base self-generation and simplification for data-driven fuzzy models. *Fuzzy Sets and Systems, 142*(2), 243–265.
+
 - 30. Nunkoo, R., & Gursoy, D. (2012). Residents’ support for tourism: An identity perspective. *Annals of Tourism Research, 39*(1), 243–268.
+
 - 31. Nunkoo, R., Ramkisson, H., & Gursoy, D. (2012). Public trust in tourism institutions. *Annals of Tourism Research, 39*(3), 1538–1564. https://doi.org/10.1016/j.annals.2012.04.004.
+
 - 32. Nunkoo, R., Ribeiro, M. A., Sunnassee, V., & Gursoy, D. (2018). Public trust in mega event planning institutions: The role of knowledge, transparency and corruption. *Tourism Management, 66*, 155–166.
+
 - 33. Bing, P. (2015). E-Tourism. In *Entry in Encyclopedia of Tourism*. Springer: New York.
+
 - 34. Pratt, M. (2022). Metaverse pros and cons: Top benefits and challenges. Retrieved from https://www.techtarget.com/searchcio/tip/Metaverse-pros-and-cons-Top-benefits-and-challenges.
+
 - 35. Prayag, G., & Ryan, C. (2012). Antecedents of tourists’ loyalty to Mauritius: The role and influence of destination image, place attachment, personal involvement, and satisfaction. *Journal of Travel Research, 51*(3), 342–356.
+
 - 36. Ramkisson, H., Mavondo, F., & Uysal, M. (2018). Social involvement and park citizenship as moderators for quality-of-life in a national park. *Journal of Sustainable Tourism, 26*(3), 341–361.
+
 - 37. Rasoolimanesh, S. M., & Jaafar, M. (2017). Sustainable tourism development and residents' perceptions in World Heritage Site destinations. *Asia Pacific Journal of Tourism Research, 22*(1), 34–48.
+
 - 38. Raymond, C. M., Brown, G., & Robinson, G. M. (2011). The influence of place attachment, and moral and normative concerns on the conservation of native vegetation: A test of two behavioural models. *Journal of Environmental Psychology, 31*(4), 323–335.
+
 - 39. Ribeiro, M. A., Pinto, P., Silva, J. A., & Woonsam, K. M. (2017). Residents' attitudes and the adoption of pro-tourism behaviours: The case of developing island countries. *Tourism Management, 61*, 523–537. https://doi.org/10.1016/j.tourman.2017.03.004
+
 - 40. Rubio-Escuderos, L., García-Andreu, H., & Michopoulou Buhalis, D. (2021). Perspectives on experiences of tourists with disabilities: Implications for their daily lives and the tourist industry. *Tourism Recreation Research, 49*, https://doi.org/10.1080/02508281.2021.1981071
+
 - 41. Sharpley, R., & Telfer, D. J. (Eds.). (2014). *Tourism and Development: Concepts and Issues*.
+
 - 42. Singh, S. S. (2015). The bankers of Bengal. *The Hindu*. India.
+
 - 43. Song, M., Noone, B. M., & Han, R. J. (2019). An examination of the role of booking lead time in consumers' reactions to online scarcity messages. *International Journal of Hospitality Management, 77*, 483–491. DOI: 10.1016/j.ijhm.2018.08.012.
+
 - 44. Terano, T., Asai, K., & Sugeno, M. (2014). *Applied Fuzzy Systems*. Academic Press.
+
 - 45. Tsai, S. (2022). Investigating metaverse marketing for travel and tourism. *Journal of Vacation Marketing, 30*(3), 479–488. https://doi.org/10.1177/13567667221145715
+
 - 46. Megel, Y., Kovalenko, S., Kovalenko, S., & Mikhnova, O. An approach to quantitative assessment of inbound tourism impact on the country's economy.
+
 - 47. Zhang, H., Wu, Y., & Buhalis, D. (2018). A model of perceived image, memorable tourism experiences and revisit intention. *Journal of Destination Marketing & Management, 8*, 326–336. https://doi.org/10.1016/j.jdmm.2017.06.004
+
 - 48. Venkatesh, M., & Raj, D. J. (2016). Impact of tourism in India. *International Journal of Scientific Engineering and Applied Science, 2*(1), 167–184.
+
+
+
 - 49. Gössling, S., & Higham, J. (2021). The low-carbon imperative: Destination management under urgent climate change. *Journal of Travel Research, 60*(6), 1167–1179.
+
 - 50. Jaswal, S. S. (2014). Role of tourism industry in India's development. *Journal of Tourism and Hospitality, 3*(2), 1–6.
+
 - 51. Chakraborty, N. (2020). A regression approach to distribution and trend analysis of quarterly foreign tourist arrivals in India. *Journal of Soft Computing Paradigm (JSCP), 2*(01), 57–82.
+
 - 52. Han, J. S., Lee, T. J., & Ryu, K. (2018). The promotion of health tourism products for domestic tourists. *International Journal of Tourism Research, 20*(2), 137–146.
+
 - 53. Jørgensen, H. (2019). Postcolonial perspectives on colonial heritage tourism: The domestic tourist consumption of French heritage in Puduicherry, India. *Annals of Tourism Research, 77*, 117–127.
+
 - 54. Bosanict, C., Hibbert, S., & McCabe, S. (2015). “If I was going to die, I should at least be having fun”: travel blogs, meaning, and tourist experience. *Annals of Tourism Research, 55*, 1–14.
+
 - 55. Vernekar, S. (2015). The growth of travel and tourism: An overview. *Journal of Commerce and Management Thought, 6*(3), 547–557.
 
-## 基于智能模糊逻辑控制器的传感器网络温室自动化
+# 基于智能模糊逻辑控制器的传感器网络温室自动化
 
 TANIMA BHOWMIK$^1$ 和 ANAGHA BHATTACHARAYA$^2$
 
 $^1$印度西孟加拉邦加尔各答工程与管理学院（AIML）计算机科学与工程系
+
 $^2$印度米佐拉姆邦艾扎awl NIT米佐拉姆电气工程系
 
 ### 摘要
 
 由于对可持续和高效农业实践的迫切需求，先进控制系统和传感器网络在温室自动化中的应用近年来引起了极大的关注。本章探讨了智能模糊逻辑控制器（FLC）与传感器网络的集成，以增强温室环境的自动化和管理。传感器网络起着至关重要的作用，提供包括温度、湿度、光照强度、土壤湿度、灌溉和二氧化碳浓度在内的环境变量的实时数据。这些传感器将数据输入智能FLC，它作为自动化系统的决策中枢。它使用模糊逻辑规则和隶属度函数来调整参数，为植物生长创造最佳的小气候。本章还介绍了案例研究和实验结果，证明了该系统在维持有利于各种植物物种生长的环境方面的有效性。深入探讨了拟议系统的环境和经济效益，强调其在减少能源消耗、用水量和化学品投入需求方面的潜力，从而有助于
-
 
 向可持续且环保的农业实践转变；从而最终促进粮食安全与环境的可持续性。
 
@@ -3925,9 +4097,6 @@ $^2$印度米佐拉姆邦艾扎awl NIT米佐拉姆电气工程系
 从文献中可以明显看出，无线通信增加了自主温室设计的复杂性。将基于模糊逻辑的控制器与基于ZigBee等平台的无线通信系统相结合，在气候控制方面既带来机遇也带来挑战。如文献[15]所述，实施的FLC系统可能复杂且不用户友好，该文献提出了一种利用模糊逻辑和无线信息监测的智能变量温室控制系统，并提供实时数据访问。所提出的控制系统经过实验验证，证明在节约水和电力方面是有效的。
 
 文献综述还强调了在灌溉系统决策中使用模糊逻辑分析传感器收集的数据[16]。此外，温室中的模糊逻辑不仅限于气候控制。模糊逻辑也已应用于温室管理的其他各个方面，包括作物产量预测、病虫害检测和资源分配优化。文献综述表明，基于模糊逻辑的控制器和无线通信系统已成功应用于温室自动化[17]。随着技术的不断进步，基于模糊逻辑的控制器与无线通信系统的集成显著提高了温室的自动化和效率。它不仅促进了气候控制，还扩展到温室管理的其他各个方面，如作物产量预测、病虫害检测和资源分配优化。
-
-
-
 
 无线通信技术，主要通过 ZigBee 等平台实现，能够对环境因素进行实时监控和调节，从而提升温室运营的整体生产力和可持续性 [18, 19]。
 
@@ -4038,11 +4207,7 @@ PID 控制器的调优是获得最佳输出的另一个挑战。传统方法，�
 | Med | 25–80 |
 | Large | 55–100 |
 
-
-
-
-
-## 12.3.2.5 加湿器控制器
+### 12.3.2.5 加湿器控制器
 
 当湿度超过预定湿度时，加湿器会开启并提高风速。加湿器有三种隶属函数：关闭、中等和大。模糊控制器决定采取何种措施来调节湿度（表12.5）。
 
@@ -4054,13 +4219,13 @@ PID 控制器的调优是获得最佳输出的另一个挑战。传统方法，�
 | 中等 | 25–60 |
 | 大 | 55–100 |
 
-## 12.3.2.6 加热器控制器
+### 12.3.2.6 加热器控制器
 
 加热器主要用于调节温度。模糊控制器有助于在加热器处于开启或关闭状态时，根据房间当前温度加快供热；而标准逻辑仅包含两种形式：开启和关闭。输出变量加热器有三种隶属函数：大、中等和关闭。
 
 为控制温室温度和湿度设计基于规则的模糊系统，涉及定义模糊隶属函数、模糊规则以及推理机制。
 
-## 12.3.2.6 模糊规则
+### 12.3.2.6 模糊规则
 
 1.  存储在数据库中的规则是模糊控制器在运行过程中做出决策的基础。这些选择以固定规则的形式保存。规则仅仅是一种语言断言，是一种直观且易于理解的if–then语句。
 2.  该温室中水泵的运行时间根据27条规则进行调整。图12.7显示了这些规则输入到“规则编辑器”中。
@@ -4082,30 +4247,26 @@ PID 控制器的调优是获得最佳输出的另一个挑战。传统方法，�
 
 ## 12.4 结果与讨论
 
+
+
 嵌入在Arduino微控制器中的模糊逻辑提高了系统的准确性和性能（图12.11）。模糊推理的输出控制Arduino微控制器的如下：
 
-1.  模糊规则 1：微控制器自动开启水泵，关闭加热器，关闭加湿器。
-2.  模糊规则 2：微控制器自动开启水泵，关闭加热器，关闭加湿器。
-3.  模糊规则 3：微控制器自动开启水泵，开启加热器，关闭加湿器。
-4.  模糊规则 4：微控制器自动开启水泵，关闭加热器，关闭加湿器。
-5.  模糊规则 5：微控制器自动关闭水泵，关闭加热器，关闭加湿器。
-6.  模糊规则 6：微控制器自动关闭水泵，开启加热器，关闭加湿器。
-7.  模糊规则 7：微控制器自动开启水泵，关闭加热器，开启加湿器。
-8.  模糊规则 8：微控制器自动关闭水泵，关闭加热器，开启加湿器。
-9.  模糊规则 9：微控制器自动关闭水泵，开启加热器，开启加湿器。
+1. 模糊规则 1：微控制器自动开启水泵，关闭加热器，关闭加湿器。
+2. 模糊规则 2：微控制器自动开启水泵，关闭加热器，关闭加湿器。
+3. 模糊规则 3：微控制器自动开启水泵，开启加热器，关闭加湿器。
+4. 模糊规则 4：微控制器自动开启水泵，关闭加热器，关闭加湿器。
+5. 模糊规则 5：微控制器自动关闭水泵，关闭加热器，关闭加湿器。
+6. 模糊规则 6：微控制器自动关闭水泵，开启加热器，关闭加湿器。
+7. 模糊规则 7：微控制器自动开启水泵，关闭加热器，开启加湿器。
+8. 模糊规则 8：微控制器自动关闭水泵，关闭加热器，开启加湿器。
+9. 模糊规则 9：微控制器自动关闭水泵，开启加热器，开启加湿器。
 
 ![](img/e9de70cd491e84262133af63cb33d500_242_0.png)
-
 ![](img/e9de70cd491e84262133af63cb33d500_242_1.png)
-
 ![](img/e9de70cd491e84262133af63cb33d500_242_2.png)
-
 ![](img/e9de70cd491e84262133af63cb33d500_242_3.png)
-
 ![](img/e9de70cd491e84262133af63cb33d500_243_0.png)
-
 ![](img/e9de70cd491e84262133af63cb33d500_243_1.png)
-
 ![](img/e9de70cd491e84262133af63cb33d500_243_2.png)
 
 图12.11 规则库的曲面视图。
@@ -4145,40 +4306,24 @@ PID 控制器的调优是获得最佳输出的另一个挑战。传统方法，�
 
 # 参考文献
 
-1.  Choab, N., Allouhi, A., El Maakoul, A., Kousksou, T., Saadeddine, S., & Jamil, A. (2019). Review on greenhouse microclimate and application: Design parameters, thermal modeling and simulation, climate controlling technologies. *Solar Energy, 191*, 109–137, https://doi.org/10.1016/j.solener.2019.08.042.
-2.  Ahamed, M. S., Guo, H., & Tanino, K. (2018). A quasi-steady state model for predicting the heating requirements of conventional greenhouses in cold regions. *Information Processing in Agriculture, 5*(1), 33–46, https://doi.org/10.1016/j.ipa.2017.12.003.
-3.  Shen, M., Huang, W., Chen, M., Song, B., Zeng, G., & Zhang, Y. (2020). (Micro) plastic crisis: Un-ignorable contribution to global greenhouse gas emissions and climate change. *Journal of Cleaner Production, 254*, 120138, https://doi.org/10.1016/j.jclepro.2020.120138.
-4.  Liu, Y., Li, D., Wan, S., et al. (2022). A long short-term memory-based model for greenhouse climate prediction. *International Journal of Intelligent Systems, 37*, 135–151. https://doi.org/10.1002/int.22620.
-5.  Rayhana, R., Xiao, G., & Liu, Z. (2020). Internet of things empowered smart greenhouse farming. *IEEE Journal of Radio Frequency Identification, 4*(3), 195–211, https://doi.org/10.1109/JRFID.2020.2984391.
-6.  Sigirimis, N., Arvanitis, K. G., Kookos, I. K., & Paraskeopoulos, P. N. (1999). $\mathrm{H} \infty$-PI controller tuning for greenhouse temperature control. *IFAC Proceedings Volumes, 32*(2), 5644–5649, https://doi.org/10.1016/S1474-6670(17)56963-3.
-
-
-
-
+1. Choab, N., Allouhi, A., El Maakoul, A., Kousksou, T., Saadeddine, S., & Jamil, A. (2019). Review on greenhouse microclimate and application: Design parameters, thermal modeling and simulation, climate controlling technologies. *Solar Energy, 191*, 109–137, https://doi.org/10.1016/j.solener.2019.08.042.
+2. Ahamed, M. S., Guo, H., & Tanino, K. (2018). A quasi-steady state model for predicting the heating requirements of conventional greenhouses in cold regions. *Information Processing in Agriculture, 5*(1), 33–46, https://doi.org/10.1016/j.ipa.2017.12.003.
+3. Shen, M., Huang, W., Chen, M., Song, B., Zeng, G., & Zhang, Y. (2020). (Micro) plastic crisis: Un-ignorable contribution to global greenhouse gas emissions and climate change. *Journal of Cleaner Production, 254*, 120138, https://doi.org/10.1016/j.jclepro.2020.120138.
+4. Liu, Y., Li, D., Wan, S., et al. (2022). A long short-term memory-based model for greenhouse climate prediction. *International Journal of Intelligent Systems, 37*, 135–151. https://doi.org/10.1002/int.22620.
+5. Rayhana, R., Xiao, G., & Liu, Z. (2020). Internet of things empowered smart greenhouse farming. *IEEE Journal of Radio Frequency Identification, 4*(3), 195–211, https://doi.org/10.1109/JRFID.2020.2984391.
+6. Sigirimis, N., Arvanitis, K. G., Kookos, I. K., & Paraskeopoulos, P. N. (1999). $\mathrm{H} \infty$-PI controller tuning for greenhouse temperature control. *IFAC Proceedings Volumes, 32*(2), 5644–5649, https://doi.org/10.1016/S1474-6670(17)56963-3.
 7. Zeng, S., Hu, H., Xu, L., & Li, G. (2012). 基于RBF网络的温室环境非线性自适应PID控制。*Sensors*（传感器）, 12(5), 5328–5348. https://doi.org/10.3390/s120505328.
-
 8. Giraldo, S. A. C., Flesch, R. C. C., & Norney-Rico, J. E. (2016). 使用滤波史密斯预测器进行多变量温室控制。*Journal of Control, Automation and Electrical Systems*（控制、自动化与电气系统期刊）, 27(4), 349–358.
-
 9. Su, Y., Yu, Q., & Zeng, L. (2020). 针对温室气候控制问题的PID控制器参数自整定。*IEEE Access*（IEEE互联网）, 8, 186157–186171, https://doi.org/10.1109/ACCESS.2020.3030416.
-
 10. Joseph, S. B., Dada, E. G., Abidemi, A., Oyewola, D. O., & Khanmas, B. M. (2022). PID控制器参数整定的元启发式算法：综述、方法与开放问题。*Heliyon*（Heliyon）, 8*(5), e09399, https://doi.org/10.1016/j.heliyon.2022.e09399.
-
 11. Latha, K., Rajinikanth, V., & Surekha, P. M. (2013). 基于PSO的稳定和不稳定系统类PID控制器设计。*In International Scholarly Research Notices*（载于国际学术研究通报）。Wiley出版社.
-
 12. Thangavel, K. D., Seerengasamy, U., Palaniappan, S., & Sekar, R. (2023). 基于模糊多类支持向量机的温室农业控制因素预测。*Alexandria Engineering Journal*（亚历山大工程大学期刊）, 62, 279–289, https://doi.org/10.1016/j.aej.2022.07.016.
-
 13. Kia, P. J., et al. (2009). 基于模糊逻辑的智能控制用于温室灌溉系统的自动化及其与传统系统的评估。*World Applied Sciences Journal*（世界应用科学期刊）, 6*(1), 16–23.
-
 14. Sriraman, A., & Mayorga, R. V. (2007). 温室内部气候控制：采用模糊逻辑编程的智能系统方法。*Journal of Environmental Informatics*（环境信息学杂志）, 10*(2), 68–74.
-
 15. Pacco, H. C. (2022). 使用模糊逻辑模拟郁金香生产中的温度控制和灌溉时间。*Procedia Computer Science*（过程计算机科学）, 200, 1–12, https://doi.org/10.1016/j.procs.2022.01.199.
-
 16. Atia, D. M., & El-madany, H. T. (2017). 使用自适应神经模糊推理系统进行温室温度控制的分析与设计。*Journal of Electrical Systems and Information Technology*（电气系统与信息技术杂志）, 4*(1), 34–48.
-
 17. Riahi, J., Vergusa, S., Mezghani, D., & Mami, A. (2020). 由支持光伏系统供电的农业温室微气候智能控制。*Applied Sciences*（应用科学）, 10, 1350. https://doi.org/10.3390/app10041350.
-
 18. Wang, Z. (2021). 基于ZigBee无线传感器网络的温室数据采集系统，促进农业经济发展。*Environmental Technology & Innovation*（环境技术与创新）, 24, 101689, https://doi.org/10.1016/j.eti.2021.101689.
-
 19. Ding, F., & Song, A. (2016). 基于ZigBee的无线网络应用开发与覆盖评估。*Journal of Sensors*（传感器杂志）, 2016, 1–9. 10.1155/2016/2943974.
 
 ![](img/e9de70cd491e84262133af63cb33d500_248_0.png)
@@ -4199,9 +4344,6 @@ $^{2}$* Punjabi 大学工程技术学院（UIET），印度旁遮普邦昌迪iga
 
 在20世纪60年代，Lotfi Zadeh 创造了模糊逻辑，这是一种利用现实世界不确定性而非二元推理的计算范式。它有许多用途，特别是在汽车行业 [1]。模糊逻辑的数学框架处理决策的模糊性和不精确性。它使用模糊集来表示混淆的数据。模糊集是经典集的泛化，其成员资格值在 0 和 1 之间 [2, 3]。成员函数将输入值转换为成员资格程度。并集、交集和补集使用模糊集做出判断。模糊规则，即如果-那么语句，利用语言和模糊逻辑建立输入-输出关系。模糊推理使用模糊规则从输入变量预测输出 [4, 5]。模糊逻辑处理部分或模糊数据并做出定性结论。它模拟不确定和不精确的人类行为，如车辆速度、负载和驾驶员行为，模糊逻辑得以实施。这种自适应方法通过有效导航各种驾驶条件增强了车辆的性能和机动性。此外，模糊逻辑通过同时评估多个因素（如驾驶员误差和道路条件）来辅助换档。
 
-
-
-
 # **表 13.1** *（续）*
 
 | 类别 | 角色 | 描述 |
@@ -4216,7 +4358,7 @@ $^{2}$* Punjabi 大学工程技术学院（UIET），印度旁遮普邦昌迪iga
 | | 状态监测 | 模糊逻辑分析传感器和诊断数据以持续监测车辆组件。它检查发动机、变速箱和制动系统的健康状况。模糊集提供精细的评估和早期异常识别，从而允许及时的维护以达到最佳车辆性能。 |
 | | 诊断中的模糊推理 | 模糊逻辑有助于诊断系统准确识别和定位故障，并评估问题的严重程度，从而实现有效的维护行动。这种自适应推理分析症状对预定故障模式的隶属度，即使症状模糊或多变，也能识别和定位缺陷。 |
 
-# 13.2 模糊逻辑在汽车控制系统中的应用
+## 13.2 模糊逻辑在汽车控制系统中的应用
 
 汽车控制系统，包括自适应巡航控制（ACC）、防碰撞系统、发动机管理和变速箱控制，使用模糊逻辑来提高安全性和经济性 [11, 12]。
 
@@ -4232,8 +4374,11 @@ $^{2}$* Punjabi 大学工程技术学院（UIET），印度旁遮普邦昌迪iga
 
 ### 13.2.3 变速箱控制与换挡
 
-- *优化变速箱控制：* 模糊逻辑根据车辆速度、负载和驾驶员行为动态调整传动比，以增强变速箱控制系统 [19]。这种自适应技术通过有效处理不同的驾驶环境来提高车辆性能和操控性。
-- *平稳换挡：* 模糊逻辑通过同时评估包括驾驶员误差和道路状况在内的众多因素来改善换挡 [20]。这改善了驾驶体验并延长了变速箱系统的使用寿命。
+
+
+*优化变速箱控制：* 模糊逻辑根据车辆速度、负载和驾驶员行为动态调整传动比，以增强变速箱控制系统 [19]。这种自适应技术通过有效处理不同的驾驶环境来提高车辆性能和操控性。
+
+*平稳换挡：* 模糊逻辑通过同时评估包括驾驶员误差和道路状况在内的众多因素来改善换挡 [20]。这改善了驾驶体验并延长了变速箱系统的使用寿命。
 
 # 13.3 自动驾驶中的模糊逻辑
 
@@ -4241,13 +4386,15 @@ $^{2}$* Punjabi 大学工程技术学院（UIET），印度旁遮普邦昌迪iga
 
 ### 13.3.1 导航与障碍物检测
 
-- *动态环境中的导航：* 模糊逻辑方法使用实时交通、路线布局和车辆能力来增强自动驾驶汽车的导航 [24, 25]。在复杂情况下，如交通状况多样的大都市地区，自适应路线规划提高了导航的安全性和效率。
-- *障碍物检测与规避：* 模糊逻辑帮助自动驾驶汽车识别障碍物并进行基于传感器的决策 [26, 27]。它利用模糊集和规则解释数据的不确定性，通过改变车辆路线或速度来防止碰撞，同时考虑各种障碍物的置信度 [28]。
+*动态环境中的导航：* 模糊逻辑方法使用实时交通、路线布局和车辆能力来增强自动驾驶汽车的导航 [24, 25]。在复杂情况下，如交通状况多样的大都市地区，自适应路线规划提高了导航的安全性和效率。
+
+*障碍物检测与规避：* 模糊逻辑帮助自动驾驶汽车识别障碍物并进行基于传感器的决策 [26, 27]。它利用模糊集和规则解释数据的不确定性，通过改变车辆路线或速度来防止碰撞，同时考虑各种障碍物的置信度 [28]。
 
 ### 13.3.2 复杂交通场景中的决策
 
-- *实时决策：* 自动驾驶汽车使用模糊逻辑进行实时交通选择 [29, 30]。考虑交通流量、行人活动和道路标志以做出情境感知的判断。这种灵活性使汽车能够直觉性地管理交通状况，像人类驾驶员一样提高安全性和效率 [31, 32]。
-- *处理不确定条件：* 自动驾驶汽车中的模糊逻辑表示决策的置信度或不确定性，以应对现实世界的不精确性 [33]。这有助于应对模糊不清的情况，如冲突的交通灯或突然的道路状况。模糊集和规则允许做出明智的判断，提高了自动驾驶系统的可靠性和车辆的可信度 [34, 35]。
+*实时决策：* 自动驾驶汽车使用模糊逻辑进行实时交通选择 [29, 30]。考虑交通流量、行人活动和道路标志以做出情境感知的判断。这种灵活性使汽车能够直觉性地管理交通状况，像人类驾驶员一样提高安全性和效率 [31, 32]。
+
+*处理不确定条件：* 自动驾驶汽车中的模糊逻辑表示决策的置信度或不确定性，以应对现实世界的不精确性 [33]。这有助于应对模糊不清的情况，如冲突的交通灯或突然的道路状况。模糊集和规则允许做出明智的判断，提高了自动驾驶系统的可靠性和车辆的可信度 [34, 35]。
 
 # 13.4 优化燃油效率与排放
 
@@ -4255,172 +4402,183 @@ $^{2}$* Punjabi 大学工程技术学院（UIET），印度旁遮普邦昌迪iga
 
 ### 13.4.1 基于模糊逻辑的生态驾驶策略
 
-- *生态驾驶原则：* 生态驾驶使用模糊逻辑提高燃油经济性并减少环境影响。模糊逻辑算法基于车辆速度、加速度和交通状况提供实时的节能驾驶建议 [36, 37]。
-- *自适应速度控制：* 自适应速度控制系统使用模糊逻辑和实时输入（包括交通密度和道路坡度）来优化车辆速度。这种策略通过减少燃油消耗和改善驾驶体验来优化燃油经济性的速度 [38, 39]。
-- *优化加速与减速：* 模糊逻辑根据驾驶员行为、交通流量和道路地形优化生态驾驶的加速和减速模式。更平滑的过渡通过最小化燃油使用和环境影响来提高生态驾驶效果 [40]。
+*生态驾驶原则：* 生态驾驶使用模糊逻辑提高燃油经济性并减少环境影响。模糊逻辑算法基于车辆速度、加速度和交通状况提供实时的节能驾驶建议 [36, 37]。
+
+*自适应速度控制：* 自适应速度控制系统使用模糊逻辑和实时输入（包括交通密度和道路坡度）来优化车辆速度。这种策略通过减少燃油消耗和改善驾驶体验来优化燃油经济性的速度 [38, 39]。
+
+*优化加速与减速：* 模糊逻辑根据驾驶员行为、交通流量和道路地形优化生态驾驶的加速和减速模式。更平滑的过渡通过最小化燃油使用和环境影响来提高生态驾驶效果 [40]。
 
 ### 13.4.2 使用模糊逻辑进行排放控制与减排
 
-- *自适应发动机控制：* 排放控制系统使用模糊逻辑，根据发动机温度、负载和排气组成动态调整参数，以优化燃烧效率并减少有害排放，确保环境合规 [41, 42]。
-- *选择性催化还原（SCR）系统：* 柴油汽车使用 SCR 系统减少氮氧化物排放。这些系统
+*自适应发动机控制：* 排放控制系统使用模糊逻辑，根据发动机温度、负载和排气组成动态调整参数，以优化燃烧效率并减少有害排放，确保环境合规 [41, 42]。
 
+*选择性催化还原（SCR）系统：* 柴油汽车使用 SCR 系统减少氮氧化物排放。这些系统利用模糊逻辑和实时传感器数据优化尿素喷射。在不浪费尿素的前提下实现最大程度的氮氧化物（NOx）减少，从而保证尿素的最佳喷射效果[43, 44]。
 
-利用模糊逻辑和实时传感器数据优化尿素喷射。在不浪费尿素的前提下实现最大程度的氮氧化物（NOx）减少，从而保证尿素的最佳喷射效果[43, 44]。
+*连续排放监测*：使用模糊逻辑处理传感器数据并调整控制系统，确保持续的排放优化以适应不同情境。响应传感器数据的不精确性能够有效且可靠地减少排放[45, 46]。
 
-- **连续排放监测**：使用模糊逻辑处理传感器数据并调整控制系统，确保持续的排放优化以适应不同情境。响应传感器数据的不精确性能够有效且可靠地减少排放[45, 46]。
-
-### 13.5 增强内部舒适性与安全性
+# 13.5 增强内部舒适性与安全性
 
 模糊逻辑应用于汽车温度控制和安全系统，通过直观地适应动态情境，提升车内舒适度和乘员保护，确保护乘员的安全与舒适[47–50]。
 
 #### 13.5.1 空调控制与座舱温度调节中的模糊逻辑
 
-- **自适应气候控制**：模糊逻辑控制自适应温度管理以提升车内舒适度。这些系统会考虑天气、日照以及乘员偏好。车辆的气候管理系统利用模糊逻辑算法智能地调节气流、温度和风扇转速，以最大化乘客舒适度。
-- **乘员舒适度建模**：模糊逻辑用于乘员舒适度建模，以确定乘客偏好和舒适需求。它根据气候条件和座位占用情况定制温度曲线，使驾驶更加舒适。
+*自适应气候控制*：模糊逻辑控制自适应温度管理以提升车内舒适度。这些系统会考虑天气、日照以及乘员偏好。车辆的气候管理系统利用模糊逻辑算法智能地调节气流、温度和风扇转速，以最大化乘客舒适度。
+
+*乘员舒适度建模*：模糊逻辑用于乘员舒适度建模，以确定乘客偏好和舒适需求。它根据气候条件和座位占用情况定制温度曲线，使驾驶更加舒适。
 
 #### 13.5.2 基于模糊逻辑的乘员保护安全系统
 
-- **自适应安全气囊部署**：安全系统利用模糊逻辑评估碰撞期间的气囊部署。它根据撞击强度、乘员位置和事故类型做出实时判断，以保护乘员并降低受伤风险。
-- **动态安全带预紧**：动态安全带预紧系统利用模糊逻辑响应驾驶状况和乘员行为。它根据加速、减速和姿势优化安全带张力以确保安全。
-- **个性化安全配置**：模糊逻辑考虑体型、年龄和健康状况来构建乘员安全配置。通过优化气囊部署和安全带预紧，这种方法能最大化乘客保护并降低危险。
+*自适应安全气囊部署*：安全系统利用模糊逻辑评估碰撞期间的气囊部署。它根据撞击强度、乘员位置和事故类型做出实时判断，以保护乘员并降低受伤风险。
 
-### 13.6 高级驾驶辅助系统（ADAS）中的模糊逻辑应用
+*动态安全带预紧*：动态安全带预紧系统利用模糊逻辑响应驾驶状况和乘员行为。它根据加速、减速和姿势优化安全带张力以确保安全。
+
+*个性化安全配置*：模糊逻辑考虑体型、年龄和健康状况来构建乘员安全配置。通过优化气囊部署和安全带预紧，这种方法能最大化乘客保护并降低危险。
+
+# 13.6 高级驾驶辅助系统（ADAS）中的模糊逻辑应用
 
 模糊逻辑在高级驾驶辅助系统（ADAS）中的应用，如车道偏离预警（LDW）及纠正、盲点检测（BSD）及干预，提升了驾驶员的安全性和体验[51]。模糊逻辑的通用性及其接受不精确输入的能力，使其在智能、情境感知的事故预防和道路安全系统中非常有用[52]。
 
 #### 13.6.1 车道偏离预警（LDW）及车道偏离纠正（LDC）
 
-- **LDW**：车道偏离预警系统使用模糊逻辑来提高车道保持的准确性和可靠性。摄像头和传感器实时分析车辆轨迹，并预警无意中的车道偏离，从而允许基于路况和驾驶员行为进行复杂的决策。
-- **LDC**：车道偏离纠正系统利用模糊逻辑检测车道偏离。根据偏离风险、道路状况和速度，算法引导车辆回到其车道内。这种自适应调整提高了安全性和驾驶的平稳性。
+*LDW*：车道偏离预警系统使用模糊逻辑来提高车道保持的准确性和可靠性。摄像头和传感器实时分析车辆轨迹，并预警无意中的车道偏离，从而允许基于路况和驾驶员行为进行复杂的决策。
+
+*LDC*：车道偏离纠正系统利用模糊逻辑检测车道偏离。根据偏离风险、道路状况和速度，算法引导车辆回到其车道内。这种自适应调整提高了安全性和驾驶的平稳性。
 
 #### 13.6.2 盲点检测（BSD）及盲点干预（BSI）
 
-- **BSD**：盲点检测设备利用模糊逻辑通知驾驶员其盲点区域的车辆[53]。它使用传感器、摄像头和雷达检测车辆接近程度和速度。这种自适应技术使警报及时且具有情境感知能力。
-- **BSI**：盲点干预系统利用模糊逻辑主动避免碰撞。它评估邻近车辆的速度、轨迹和驾驶员反应，以引导转向调整或定向制动。模糊逻辑的通用性提供了恰当且符合情境的干预措施。
+*BSD*：盲点检测设备利用模糊逻辑通知驾驶员其盲点区域的车辆[53]。它使用传感器、摄像头和雷达检测车辆接近程度和速度。这种自适应技术使警报及时且具有情境感知能力。
 
-### 13.7 车辆诊断与维护
+*BSI*：盲点干预系统利用模糊逻辑主动避免碰撞。它评估邻近车辆的速度、轨迹和驾驶员反应，以引导转向调整或定向制动。模糊逻辑的通用性提供了恰当且符合情境的干预措施。
+
+# 13.7 车辆诊断与维护
 
 车辆诊断与维护利用模糊逻辑来管理监测车辆状态和预测维护需求中的复杂性和模糊性[54]。智能诊断系统中的自适应推理通过主动维护确保车辆的可靠性、安全性和耐用性[55]。
 
 #### 13.7.1 预测性维护与状态监测中的模糊逻辑
 
-- **预测性维护策略**：预测性维护系统利用模糊逻辑根据发动机性能、传感器数据和维护历史来预判问题。这种主动策略预测组件故障或性能退化，以减少意外故障和维护费用。
-- **状态监测**：模糊逻辑分析传感器和诊断数据以连续监测车辆部件。它检查发动机、变速箱和制动系统的健康状况。模糊集提供了精细的评估和早期异常检测，允许及时维护以实现车辆性能最优化。
+*预测性维护策略*：预测性维护系统利用模糊逻辑根据发动机性能、传感器数据和维护历史来预判问题。这种主动策略预测组件故障或性能退化，以减少意外故障和维护费用。
+
+*状态监测*：模糊逻辑分析传感器和诊断数据以连续监测车辆部件。它检查发动机、变速箱和制动系统的健康状况。模糊集提供了精细的评估和早期异常检测，允许及时维护以实现车辆性能最优化。
 
 #### 13.7.2 基于模糊推理的诊断系统
 
-- **诊断中的模糊推理**：诊断系统采用模糊逻辑来发现和诊断故障，特别是当传感器数据不精确或令人困惑时[56]。这种自适应推理分析症状对预定义故障模式的隶属度，即使在症状模糊或多变的情况下也能识别和定位缺陷[57]。
-- **故障定位与严重性评估**：模糊逻辑利用传感器读数、历史数据和情境知识来定位和诊断错误[58]。这种自适应技术准确定位故障并揭示问题的严重性，从而允许采取有效的维护措施[59]。
+*诊断中的模糊推理*：诊断系统采用模糊逻辑来发现和诊断故障，特别是当传感器数据不精确或令人困惑时[56]。这种自适应推理分析症状对预定义故障模式的隶属度，即使在症状模糊或多变的情况下也能识别和定位缺陷[57]。
 
-### 13.8 以人为本的设计：模糊逻辑与用户体验
+*故障定位与严重性评估*：模糊逻辑利用传感器读数、历史数据和情境知识来定位和诊断错误[58]。这种自适应技术准确定位故障并揭示问题的严重性，从而允许采取有效的维护措施[59]。
+
+# 13.8 以人为本的设计：模糊逻辑与用户体验
 
 模糊逻辑正被用于以人为本的信息娱乐和人机界面设计，使驾驶员与车辆的交互更加直观、自适应且愉悦。其通用性有助于创建符合当前汽车用户对安全和幸福期望的用户中心系统。
 
 #### 13.8.1 信息娱乐与人机界面设计中的模糊逻辑
 
-- **自适应信息娱乐系统**：信息娱乐系统利用模糊逻辑根据用户偏好、驾驶状况和情境信息自动调整内容和布局，以提升体验的愉悦感[60]。提供情境相关的信息、娱乐和控制功能可增强用户参与度[61]。
-- **直观的人机界面**：模糊逻辑分析用户交互、驾驶行为和反馈以提供直观的人机界面。这种通用性减少了分心，使驾驶更安全、更愉悦。
+*自适应信息娱乐系统*：信息娱乐系统利用模糊逻辑根据用户偏好、驾驶状况和情境信息自动调整内容和布局，以提升体验的愉悦感[60]。提供情境相关的信息、娱乐和控制功能可增强用户参与度[61]。
+
+*直观的人机界面*：模糊逻辑分析用户交互、驾驶行为和反馈以提供直观的人机界面。这种通用性减少了分心，使驾驶更安全、更愉悦。
 
 #### 13.8.2 通过基于模糊逻辑的系统实现个性化驾驶体验
 
-- **自适应驾驶配置**：利用模糊逻辑的可调节驾驶配置是根据个人口味和行为定制的。它根据驾驶风格、座位位置和温度控制设置自动调整车辆特性，以个性化每位驾驶员的体验。
-- **智能辅助与建议**：智能辅助系统利用模糊逻辑基于驾驶员行为、交通状况和历史记录提供情境感知的建议。这种自适应智能使汽车成为主动的助手，提升驾驶体验。
+*自适应驾驶配置*：利用模糊逻辑的可调节驾驶配置是根据个人口味和行为定制的。它根据驾驶风格、座位位置和温度控制设置自动调整车辆特性，以个性化每位驾驶员的体验。
 
-### 13.9 挑战与未来展望
+*智能辅助与建议*：智能辅助系统利用模糊逻辑基于驾驶员行为、交通状况和历史记录提供情境感知的建议。这种自适应智能使汽车成为主动的助手，提升驾驶体验。
+
+# 13.9 挑战与未来展望
 
 在汽车行业中实施模糊逻辑面临着伦理、安全、与新技术集成以及适应电动车辆和自动驾驶车辆等方面的复杂挑战。必须克服这些问题，才能最大限度地发挥模糊逻辑的潜力，并确保其在汽车技术中的恰当使用。
 
 #### 13.9.1 伦理考量与安全担忧
 
-- **伦理影响**：在汽车行业中，模糊逻辑在自动驾驶车辆干预中引发伦理难题[62]。系统决策引发关于责任、问责制和道德的问题。公众信任和接受度需要模糊逻辑系统遵循伦理和社会规范。
-- **安全挑战**：碰撞避免和自适应巡航控制（ACC）利用模糊逻辑提高了安全性，但鲁棒性和故障模式仍是问题[63]。必须严格测试、验证和改进模糊逻辑算法，以避免事故和错误。
+*伦理影响*：在汽车行业中，模糊逻辑在自动驾驶车辆干预中引发伦理难题[62]。系统决策引发关于责任、问责制和道德的问题。公众信任和接受度需要模糊逻辑系统遵循伦理和社会规范。
+
+*安全挑战*：碰撞避免和自适应巡航控制（ACC）利用模糊逻辑提高了安全性，但鲁棒性和故障模式仍是问题[63]。必须严格测试、验证和改进模糊逻辑算法，以避免事故和错误。
 
 #### 13.9.2 模糊逻辑与其他新兴技术的集成
 
-- **与人工智能（AI）的协同**：模糊逻辑与人工智能方法的集成可能会增加适应性和学习能力，尽管在可解释性与AI模型复杂度和不透明度之间取得平衡是困难的，并且可能无法完全解决某些模型的问题[64]。
-- **与连接性和物联网（IoT）的集成**：具有模糊逻辑的物联网连接汽车面临数据安全和隐私问题。为了保持用户信心并遵守数据保护法律，必须妥善保护敏感数据[65]。
+*与人工智能（AI）的协同*：模糊逻辑与人工智能方法的集成可能会增加适应性和学习能力，尽管在可解释性与AI模型复杂度和不透明度之间取得平衡是困难的，并且可能无法完全解决某些模型的问题[64]。
+
+*与连接性和物联网（IoT）的集成*：具有模糊逻辑的物联网连接汽车面临数据安全和隐私问题。为了保持用户信心并遵守数据保护法律，必须妥善保护敏感数据[65]。
 
 以上可以通过空调的例子来说明。空调是一种用于产生人类舒适度的设备，也用于现代汽车和车辆中[66–71]。空调可以采用模糊逻辑进行自适应温度管理。固定规则使典型的空调在多变的环境中效率低下。空调使用模糊逻辑以适应个人舒适度和环境因素。主要特征包括可调节控制、能源效率、以用户为中心的舒适度、容错能力和物联网集成。传统空调通过遵循限制条件来节省能源和资金。模糊逻辑增强了系统对传感器和设备故障的抵抗力。这种结合产生了智能、可持续的居住环境[72, 73]。
 
-
-
-
-
 ## 13.9.3 模糊逻辑在向电动化和自动驾驶过渡中的作用
 
--   电动汽车（EV）优化：模糊逻辑通过增强能量使用、电池管理和充电程序，提高了电动汽车的燃油经济性和排放表现，从而延长其使用寿命 [74]。
--   自动驾驶车辆的挑战：模糊逻辑正被应用于自动驾驶汽车，但它必须做出复杂决策并抵御意外事件 [75]。适应性和安全性需要持续研究。
+*电动汽车（EV）优化*：模糊逻辑通过增强能量使用、电池管理和充电程序，提高了电动汽车的燃油经济性和排放表现，从而延长其使用寿命 [74]。
 
-## 13.10 结论与未来展望
+*自动驾驶车辆的挑战*：模糊逻辑正被应用于自动驾驶汽车，但它必须做出复杂决策并抵御意外事件 [75]。适应性和安全性需要持续研究。
+
+# 13.10 结论与未来展望
 
 汽车行业利用模糊逻辑来改进控制系统、自动驾驶汽车、降低环境影响、提升内饰舒适性和安全性、以人为中心的设计以及预测性维护。其处理不确定性、适应动态环境以及提供情境感知解决方案的能力，与汽车的复杂性相匹配。模糊逻辑将基于规则的系统与智能、自适应和自动驾驶车辆技术联系起来。从安全性和经济性到环境可持续性，模糊逻辑都在提升车辆技术。随着汽车行业迅速演变，需要研究和创新。以下领域需要进一步研究。
 
--   伦理框架：为模糊逻辑在关键决策中的应用创建伦理框架，以确保道德性。
--   AI 集成：将模糊逻辑与 AI 结合使用，以创造协同效应并解决可解释性和透明度问题。
--   网络安全与连接性：提高模糊逻辑系统的网络安全，特别是针对联网汽车和物联网。
--   自动驾驶中的适应性：提高模糊逻辑在复杂交通条件下的适应性和决策能力。
--   人机交互：通过创新以人为中心的设计、信息娱乐系统和个性化驾驶体验，使模糊逻辑始终处于直观且用户友好的汽车界面的前沿。模糊逻辑可能推动汽车行业的创新，使出行解决方案更安全、更高效、更愉悦。
+*伦理框架*：为模糊逻辑在关键决策中的应用创建伦理框架，以确保道德性。
+
+*AI 集成*：将模糊逻辑与 AI 结合使用，以创造协同效应并解决可解释性和透明度问题。
+
+*网络安全与连接性*：提高模糊逻辑系统的网络安全，特别是针对联网汽车和物联网。
+
+*自动驾驶中的适应性*：提高模糊逻辑在复杂交通条件下的适应性和决策能力。
+
+*人机交互*：通过创新以人为中心的设计、信息娱乐系统和个性化驾驶体验，使模糊逻辑始终处于直观且用户友好的汽车界面的前沿。模糊逻辑可能推动汽车行业的创新，使出行解决方案更安全、更高效、更愉悦。
 
 ## 关键词
 
--   模糊逻辑
--   汽车工业
--   先进技术
--   控制系统
--   自动驾驶车辆
--   安全性增强
--   环境意识
+- 模糊逻辑
+- 汽车工业
+- 先进技术
+- 控制系统
+- 自动驾驶车辆
+- 安全性增强
+- 环境意识
 
 ## 参考文献
 
--   Upadhyay, E. (2022). A critical evaluation of handling uncertainty in Big Data processing. *Advances in Engineering Software*, 173, 103246.
--   Gadars, I. (2009). *The Proposal and Development of a General, Accurate Comprehensible Fuzzy Classification Framework and its Application to Medical Diagnosis*. The University of Manchester: United Kingdom.
--   Balo, D., & Price, A. D. (2003). Modelling global risk factors affecting construction cost performance. *International Journal of Project Management*, 21(4), 261–269.
--   Celikyilmaz, A., & Turksen, I. B. (2009). Modeling uncertainty with fuzzy logic. *Studies in Fuzziness and Soft Computing*, 240(1), 149–215.
--   Yogesh, N. (2023). Fuzzy logic modelling of nonlinear metamaterials. In *Metamaterial Technology and Intelligent Metasurfaces for Wireless Communication Systems*. IGI Global, pp. 230–269.
--   Steczyk, A., & Micula, I. (2023). Empowering sustainable energy solutions through real-time data, visualization, and fuzzy logic. *Energies*, 16(21), 7451.
--   Mizrak, F. (2023). Analyzing criteria affecting decision-making processes of human resource management in the aviation sector—A fuzzy logic approach. *Journal of Aviation*, 7(3), 376–387.
--   Chauhan, V., Chang, C. M., Javanmardi, E., Nakazato, J., Lin, P., Igarashi, T., & Tsukada, M. (2023). Fostering fuzzy logic in enhancing pedestrian safety: Harnessing smart pole interaction unit for autonomous vehicle-to-pedestrian communication and decision optimization. *Electronics*, 12(20), 4207.
--   Rajak, S., Parthiban, P., & Dhanalakshmi, R. (2016). Sustainable transportation systems performance evaluation using fuzzy logic. *Ecological Indicators*, 71, 503–513.
--   Hazam, I. M., Mishra, A. R., Rani, P., Cavallaro, F., Saha, A., Ali, J., ... & Štreimikienė, D. (2022). A hybrid intuitive fuzzy MEREC-RS-DNMA method for assessing the alternative fuel vehicles with sustainability perspectives. *Sustainability*, 14(9), 5463.
--   Yu, L., & Wang, R. (2022). Researches on adaptive cruise control system: A state of the art review. *Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering*, 236(2–3), 211–240.
--   Chen, J., Ye, Y., Wu, Q., Langari, R., & Tang, C. (2023). Low-cost and high-performance adaptive cruise control based on inertial-triggered mechanism and multi-objective optimization. *IEEE Transactions on Vehicular Technology*, 72(6), 7279–7289.
--   Batayneh, W., Al-Araidah, O., Bataineh, K., & Al-Ghaseem, A. (2013). Fuzzy-based adaptive cruise controller with collision avoidance and warning system. *Mechanical Engineering Research*, 3(1), 143.
--   Zhu, M., & Tan, G. (2023). Research on Cooperate Adaptive Cruise Control (CACC) Based on Fuzzy PID Algorithm (No. 2023-01-0682). *SAE Technical Paper*.
--   Lin, Y. C., & Nguyen, H. L. T. (2019). Adaptive neuro-fuzzy predictor-based control for cooperative adaptive cruise control system. *IEEE Transactions on Intelligent Transportation Systems*, 21(3), 1054–1063.
--   Almadi, A. I., Al Mamlook, R. E., Almahrabi, Y., Ullah, I., Jamal, A., & Bandara, N. (2022). A fuzzy-logic approach based on driver decision-making behavior modeling and simulation. *Sustainability*, 14(14), 8874.
--   Malik, H., Larue, G. S., Rakotoarirany, A., & Maire, F. (2014). Fuzzy logic to evaluate driving maneuvers: An integrated approach to improve training. *IEEE Transactions on Intelligent Transportation Systems*, 16(4), 1728–1735.
--   Hentout, A., Maoudj, A., & Aouache, M. (2023). A review of the literature on fuzzy-logic approaches for collision-free path planning of manipulator robots. *Artificial Intelligence Review*, 56(4), 3369–3444.
--   Miranda, M. H., Silva, F. L., Lourenço, M. A., Eckert, J. J., & Silva, L. C. (2022). Vehicle drivetrain and fuzzy controller optimization using a planar dynamics simulation based on a real-world driving cycle. *Energy*, 257, 124769.
--   Moslem, S., Farooq, D., Esztergár-Kiss, D., Yaseen, G., Senapati, T., & Deveci, M. (2023). A novel spherical decision-making model for measuring the separateness of preferences for drivers’ behavior factors associated with road traffic accidents. *Expert Systems with Applications*, 238, 122318.
--   Ellalid, B. B., Benamar, N., Hafd, A. S., Rachidi, T., & Mrani, N. (2022). A comprehensive survey on the application of deep and reinforcement learning approaches in autonomous driving. *Journal of King Saud University-Computer and Information Sciences*, 34(9), 7366–7390.
--   Fıscac, J. F., Bajcsy, A., Herbert, S. L., Friedovich-Keil, D., Wang, S., Tomlin, C. J., & Dragan, A. D. (2018). Probabilistically safe robot planning with confidence-based human predictions. *arXiv preprint arXiv:1806.00109*.
--   David, M. (2019). AI and the illusion of human-algorithm complementarity. *Social Research: An International Quarterly*, 86(4), 887–908.
--   Ali, M. A., Mailah, M., Jabbar, W. A., Moiduddin, K., Ameen, W., & Alkhalefah, H. (2020). Autonomous road roundabout detection and navigation system for smart vehicles and cities using laser simulator–fuzzy logic algorithms and sensor fusion. *Sensors*, 20(13), 3694.
--   Deveci, M., Pamucar, D., & Gokaslan, I. (2021). Fuzzy Power Heronian function based CoCoSo method for the advantage prioritization of autonomous vehicles in real-time traffic management. *Sustainable Cities and Society*, 69, 102846.
--   Nakrani, N. M., & Joshi, M. M. (2022). A human-like decision intelligence for obstacle avoidance in autonomous vehicle parking. *Applied Intelligence*, 52, 3728–3747.
--   Kamil, F., & Moghriabih, M. Y. (2022). Multi-layer decision-based fuzzy logic model to navigate mobile robot in unknown dynamic environments. *Fuzzy Information and Engineering*, 14(1), 51–73.
--   Lopez, I., & Sarioglu-Klijln, N. (2010). A review of uncertainty in flight vehicle structural damage monitoring, diagnosis and control: Challenges and opportunities. *Progress in Aerospace Sciences*, 46(7), 247–273.
--   Jafari, S., Shahbazi, Z., & Byun, Y. C. (2022). Improving the road and traffic control prediction based on fuzzy logic approach in multiple intersections. *Mathematics*, 10(16), 2832.
--   Jafari, S., Shahbazi, Z., & Byun, Y. C. (2021). Traffic control prediction design based on fuzzy logic and Lyapunov approaches to improve the performance of road intersection. *Processes*, 9(12), 2205.
--   Nyholm, S., & Smids, J. (2020). Automated cars meet human drivers: Responsible human-robot coordination and the ethics of mixed traffic. *Ethics and Information Technology*, 22, 335–344.
--   Yu, H., Jiang, R., He, Z., Zheng, Z., Li, L., Liu, R., & Chen, X. (2021). Automated vehicle-involved traffic flow studies: A survey of assumptions, models, speculations, and perspectives. *Transportation Research Part C: Emerging Technologies*, 127, 103101.
--   Yilin, C., & Jianhua, W. (2022). Optimization and implementation of fuzzy logic controllers for precise path tracking in autonomous driving. *Journal of Sustainable Urban Futures*, 12(12), 1–15.
--   Rahman, Z., Yi, X., Khalil, I., Anwar, A., & Pal, S. (2023). Blockchain-based and fuzzy logic-enabled false data discovery for the intelligent autonomous vehicular system. In: *Proceedings of the Third International Symposium on Advanced Security on Software and Systems*, pp. 1–11.
--   Sadaf, M., Iqbal, Z., Javed, A. R., Saba, I., Richen, M., Majeed, S., & Raza, A. (2023). Connected and automated vehicles: Infrastructure, applications, security, critical challenges, and future aspects. *Technologies*, 11(5), 117.
--   Mata-Carballeria, Ó., Diaz-Rodríguez, M., del Campo, I., & Martínez, V. (2020). An intelligent system-on-a-chip for a real-time assessment of fuel consumption to promote eco-driving. *Applied Sciences*, 10(18), 6549.
--   Reddy, N. R. (2019). *Driving Behaviour Classification: An Eco-driving Approach* (Master's thesis, University of Twente).
--   Li, P., Jiao, X., & Li, Y. (2021). Adaptive real-time energy management control strategy based on fuzzy inference system for plug-in hybrid electric vehicles. *Control Engineering Practice*, 107, 104703.
--   Nie, Z., Jia, Y., Wang, W., & Outbib, R. (2022). Eco-Co-Optimization strategy for connected and automated fuel cell hybrid vehicles in dynamic urban traffic settings. *Energy Conversion and Management*, 263, 115690.
--   Xu, N., Li, X., Liu, Q., & Zhao, D. (2021). An overview of eco-driving theory, capability evaluation, and training applications. *Sensors*, 21(19), 6547.
--   Deb, M., Majumder, P., Majumder, A., Roy, S., & Banerjee, R. (2016). Application of artificial intelligence (AI) in characterization of the performance-emission profile of a single cylinder CI engine operating with hydrogen in dual fuel mode: An ANN approach with fuzzy-logic based topology optimization. *International Journal of Hydrogen Energy*, 41(32), 14330–14350.
--   Tarafdar, A. A., Majumder, P., Deb, M., & Bera, U. K. (2023). Application of a q-rung orthopair hesitant fuzzy aggregated Type-3 fuzzy logic in the characterization of performance-emission profile of a single cylinder CI-engine operating with hydrogen in dual fuel mode. *Energy*, 269, 126751.
+- Upadhyay, E. (2022). A critical evaluation of handling uncertainty in Big Data processing. *Advances in Engineering Software*, 173, 103246.
+- Gadars, I. (2009). *The Proposal and Development of a General, Accurate Comprehensible Fuzzy Classification Framework and its Application to Medical Diagnosis*. The University of Manchester: United Kingdom.
+- Balo, D., & Price, A. D. (2003). Modelling global risk factors affecting construction cost performance. *International Journal of Project Management*, 21(4), 261–269.
+- Celikyilmaz, A., & Turksen, I. B. (2009). Modeling uncertainty with fuzzy logic. *Studies in Fuzziness and Soft Computing*, 240(1), 149–215.
+- Yogesh, N. (2023). Fuzzy logic modelling of nonlinear metamaterials. In *Metamaterial Technology and Intelligent Metasurfaces for Wireless Communication Systems*. IGI Global, pp. 230–269.
+- Steczyk, A., & Micula, I. (2023). Empowering sustainable energy solutions through real-time data, visualization, and fuzzy logic. *Energies*, 16(21), 7451.
+- Mizrak, F. (2023). Analyzing criteria affecting decision-making processes of human resource management in the aviation sector—A fuzzy logic approach. *Journal of Aviation*, 7(3), 376–387.
+- Chauhan, V., Chang, C. M., Javanmardi, E., Nakazato, J., Lin, P., Igarashi, T., & Tsukada, M. (2023). Fostering fuzzy logic in enhancing pedestrian safety: Harnessing smart pole interaction unit for autonomous vehicle-to-pedestrian communication and decision optimization. *Electronics*, 12(20), 4207.
+- Rajak, S., Parthiban, P., & Dhanalakshmi, R. (2016). Sustainable transportation systems performance evaluation using fuzzy logic. *Ecological Indicators*, 71, 503–513.
+- Hazam, I. M., Mishra, A. R., Rani, P., Cavallaro, F., Saha, A., Ali, J., ... & Štreimikienė, D. (2022). A hybrid intuitive fuzzy MEREC-RS-DNMA method for assessing the alternative fuel vehicles with sustainability perspectives. *Sustainability*, 14(9), 5463.
+- Yu, L., & Wang, R. (2022). Researches on adaptive cruise control system: A state of the art review. *Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering*, 236(2–3), 211–240.
+- Chen, J., Ye, Y., Wu, Q., Langari, R., & Tang, C. (2023). Low-cost and high-performance adaptive cruise control based on inertial-triggered mechanism and multi-objective optimization. *IEEE Transactions on Vehicular Technology*, 72(6), 7279–7289.
+- Batayneh, W., Al-Araidah, O., Bataineh, K., & Al-Ghaseem, A. (2013). Fuzzy-based adaptive cruise controller with collision avoidance and warning system. *Mechanical Engineering Research*, 3(1), 143.
+- Zhu, M., & Tan, G. (2023). Research on Cooperate Adaptive Cruise Control (CACC) Based on Fuzzy PID Algorithm (No. 2023-01-0682). *SAE Technical Paper*.
 
 
 
+- Lin, Y. C., & Nguyen, H. L. T. (2019). Adaptive neuro-fuzzy predictor-based control for cooperative adaptive cruise control system. *IEEE Transactions on Intelligent Transportation Systems*, 21(3), 1054–1063.
+- Almadi, A. I., Al Mamlook, R. E., Almahrabi, Y., Ullah, I., Jamal, A., & Bandara, N. (2022). A fuzzy-logic approach based on driver decision-making behavior modeling and simulation. *Sustainability*, 14(14), 8874.
+- Malik, H., Larue, G. S., Rakotoarirany, A., & Maire, F. (2014). Fuzzy logic to evaluate driving maneuvers: An integrated approach to improve training. *IEEE Transactions on Intelligent Transportation Systems*, 16(4), 1728–1735.
+- Hentout, A., Maoudj, A., & Aouache, M. (2023). A review of the literature on fuzzy-logic approaches for collision-free path planning of manipulator robots. *Artificial Intelligence Review*, 56(4), 3369–3444.
+- Miranda, M. H., Silva, F. L., Lourenço, M. A., Eckert, J. J., & Silva, L. C. (2022). Vehicle drivetrain and fuzzy controller optimization using a planar dynamics simulation based on a real-world driving cycle. *Energy*, 257, 124769.
+- Moslem, S., Farooq, D., Esztergár-Kiss, D., Yaseen, G., Senapati, T., & Deveci, M. (2023). A novel spherical decision-making model for measuring the separateness of preferences for drivers’ behavior factors associated with road traffic accidents. *Expert Systems with Applications*, 238, 122318.
+- Ellalid, B. B., Benamar, N., Hafd, A. S., Rachidi, T., & Mrani, N. (2022). A comprehensive survey on the application of deep and reinforcement learning approaches in autonomous driving. *Journal of King Saud University-Computer and Information Sciences*, 34(9), 7366–7390.
+- Fıscac, J. F., Bajcsy, A., Herbert, S. L., Friedovich-Keil, D., Wang, S., Tomlin, C. J., & Dragan, A. D. (2018). Probabilistically safe robot planning with confidence-based human predictions. *arXiv preprint arXiv:1806.00109*.
+- David, M. (2019). AI and the illusion of human-algorithm complementarity. *Social Research: An International Quarterly*, 86(4), 887–908.
+- Ali, M. A., Mailah, M., Jabbar, W. A., Moiduddin, K., Ameen, W., & Alkhalefah, H. (2020). Autonomous road roundabout detection and navigation system for smart vehicles and cities using laser simulator–fuzzy logic algorithms and sensor fusion. *Sensors*, 20(13), 3694.
+- Deveci, M., Pamucar, D., & Gokaslan, I. (2021). Fuzzy Power Heronian function based CoCoSo method for the advantage prioritization of autonomous vehicles in real-time traffic management. *Sustainable Cities and Society*, 69, 102846.
+- Nakrani, N. M., & Joshi, M. M. (2022). A human-like decision intelligence for obstacle avoidance in autonomous vehicle parking. *Applied Intelligence*, 52, 3728–3747.
+- Kamil, F., & Moghriabih, M. Y. (2022). Multi-layer decision-based fuzzy logic model to navigate mobile robot in unknown dynamic environments. *Fuzzy Information and Engineering*, 14(1), 51–73.
+- Lopez, I., & Sarioglu-Klijln, N. (2010). A review of uncertainty in flight vehicle structural damage monitoring, diagnosis and control: Challenges and opportunities. *Progress in Aerospace Sciences*, 46(7), 247–273.
+- Jafari, S., Shahbazi, Z., & Byun, Y. C. (2022). Improving the road and traffic control prediction based on fuzzy logic approach in multiple intersections. *Mathematics*, 10(16), 2832.
+- Jafari, S., Shahbazi, Z., & Byun, Y. C. (2021). Traffic control prediction design based on fuzzy logic and Lyapunov approaches to improve the performance of road intersection. *Processes*, 9(12), 2205.
+- Nyholm, S., & Smids, J. (2020). Automated cars meet human drivers: Responsible human-robot coordination and the ethics of mixed traffic. *Ethics and Information Technology*, 22, 335–344.
+- Yu, H., Jiang, R., He, Z., Zheng, Z., Li, L., Liu, R., & Chen, X. (2021). Automated vehicle-involved traffic flow studies: A survey of assumptions, models, speculations, and perspectives. *Transportation Research Part C: Emerging Technologies*, 127, 103101.
+- Yilin, C., & Jianhua, W. (2022). Optimization and implementation of fuzzy logic controllers for precise path tracking in autonomous driving. *Journal of Sustainable Urban Futures*, 12(12), 1–15.
+- Rahman, Z., Yi, X., Khalil, I., Anwar, A., & Pal, S. (2023). Blockchain-based and fuzzy logic-enabled false data discovery for the intelligent autonomous vehicular system. In: *Proceedings of the Third International Symposium on Advanced Security on Software and Systems*, pp. 1–11.
+- Sadaf, M., Iqbal, Z., Javed, A. R., Saba, I., Richen, M., Majeed, S., & Raza, A. (2023). Connected and automated vehicles: Infrastructure, applications, security, critical challenges, and future aspects. *Technologies*, 11(5), 117.
+- Mata-Carballeria, Ó., Diaz-Rodríguez, M., del Campo, I., & Martínez, V. (2020). An intelligent system-on-a-chip for a real-time assessment of fuel consumption to promote eco-driving. *Applied Sciences*, 10(18), 6549.
+- Reddy, N. R. (2019). *Driving Behaviour Classification: An Eco-driving Approach* (Master's thesis, University of Twente).
+- Li, P., Jiao, X., & Li, Y. (2021). Adaptive real-time energy management control strategy based on fuzzy inference system for plug-in hybrid electric vehicles. *Control Engineering Practice*, 107, 104703.
+- Nie, Z., Jia, Y., Wang, W., & Outbib, R. (2022). Eco-Co-Optimization strategy for connected and automated fuel cell hybrid vehicles in dynamic urban traffic settings. *Energy Conversion and Management*, 263, 115690.
+- Xu, N., Li, X., Liu, Q., & Zhao, D. (2021). An overview of eco-driving theory, capability evaluation, and training applications. *Sensors*, 21(19), 6547.
+- Deb, M., Majumder, P., Majumder, A., Roy, S., & Banerjee, R. (2016). Application of artificial intelligence (AI) in characterization of the performance-emission profile of a single cylinder CI engine operating with hydrogen in dual fuel mode: An ANN approach with fuzzy-logic based topology optimization. *International Journal of Hydrogen Energy*, 41(32), 14330–14350.
+- Tarafdar, A. A., Majumder, P., Deb, M., & Bera, U. K. (2023). Application of a q-rung orthopair hesitant fuzzy aggregated Type-3 fuzzy logic in the characterization of performance-emission profile of a single cylinder CI-engine operating with hydrogen in dual fuel mode. *Energy*, 269, 126751.
 
 ## 参考文献
-
 - 43. Sitichompoo, S., Theinnoi, K., Sawatmongkhon, B., Wongchang, T., Iamcheerangkoon, T., & Phugot, S. (2022). 在加氢情况下对柴油-生物柴油-乙醇混合燃料柴油发动机氮氧化物排放的选择性催化还原的促进作用。*Alexandria Engineering Journal, 61*(7), 5383–5395。
 - 44. Jung, Y., Pyo, Y. D., Jang, J., Kim, G. C., Cho, C. P., & Yang, C. (2019)。使用 DOC 和 DPF 系统及 Pt 还原的 SCR 过程中 NO、NO2 和 N2O 的排放。*Chemical Engineering Journal, 369*, 1059–1067。
 - 45. Alves de Araujo Junior, C. A., Mauricio Villanueva, J. M., Almeida, R. J. S. D., & Azevedo de Medeiros, I. E. (2021)。基于模糊逻辑的发电厂水冷系统数字孪生。*Sensors, 21*(20), 6737。
@@ -4431,31 +4589,56 @@ $^{2}$* Punjabi 大学工程技术学院（UIET），印度旁遮普邦昌迪iga
 - 50. Fayaz, M., Ullah, I., Shah, A. S., & Kim, D. (2019)。基于学习优化和学习控制算法的高效能耗与用户舒适度最大化方法。*Journal of Intelligent & Fuzzy Systems, 37*(5), 6683–6706。
 - 51. Bruno, D. R., Berri, R., Barbosa, F., & Osorio, F. S. (2023)。CARINA 项目：应用于自动驾驶车辆和先进驾驶辅助系统（ADAS）的视觉感知系统。*IEEE Access, 11*, 69720–69749。
 - 52. Capitanie, M. P., & Cárdenas, H. M. G. (2023)。墨西哥先进驾驶辅助系统（ADAS）的人工智能及其吸收情况。*Ciencia Nicolaita*, (88)。
+
+
+
 - 53. Kim, W., Yang, H., & Kim, J. (2023)。智能车辆安全驾驶盲点探测雷达系统设计。*Applied Sciences, 13*(10), 6147。
+
 - 54. Makarova, I., Shepelev, V. D., Mukhametdinov, E. M., & Pashkevich, A. (2020)。在扩大联网车队规模时更改维护和修理系统。载于：*VEHITS*，第 622–633 页。
+
 - 55. Ineza Havugimana, L. F., Liu, B., Liu, F., Zhang, J., Li, B., & Wan, P. (2023)。发动机性能、控制和诊断的人工智能算法综述。*Energies, 16*(3), 1206。
+
 - 56. Djelloul, I., Sari, Z., & Latreche, K. (2018)。使用神经模糊方法和概率模型解决制造系统的故障诊断不确定性问题。*Applied Intelligence, 48*, 3143–3160。
+
 - 57. Gougam, F., Rahmoune, C., Benazzouz, D., Afia, A., & Zair, M. (2020)。使用时域特征、奇异值分解和模糊逻辑系统在各种运行模式下对轴承故障进行分类。*Advances in Mechanical Engineering, 12*(10), 1687814020967874。
+
 - 58. Dowdeswell, B., Sinha, R., & MacDonell, S. G. (2020)。查找故障：工业信息物理系统故障诊断的范围界定研究。*Journal of Systems and Software, 168*, 110638。
+
 - 59. Mazzoleni, M., Sarda, K., Acerrese, A., Russo, L., Manfredi, L., Gielmio, L., & Del Miraz, C. (2022)。一种基于模糊逻辑的工业 4.0 制造过程故障诊断和状态监测方法。*Engineering Applications of Artificial Intelligence, 115*, 105317。
+
 - 60. Miraz, M. H., Ali, M., & Excell, P. S. (2021)。通过用户界面设计可塑性实现自适应用户界面和通用可用性。*Computer Science Review, 40*, 100363。
+
 - 61. Khan, M., & KhusrO, S. (2023)。面向智能电视观众的个性化自适应用户界面设计。*Journal of King Saud University-Computer and Information Sciences, 35*(9), 101777。
+
 - 62. Erdoğan, M., Kaya, İ., Karaşan, A., & Çolak, M. (2021)。基于三维不确定语言变量进行风险评估的自动驾驶车辆驾驶系统评估。*Applied Soft Computing, 113*, 107934。
+
 - 63. Vahidi, A., & Eskandarian, A. (2003)。智能防撞和自适应巡航控制的研究进展。*IEEE Transactions on Intelligent Transportation Systems, 4*(3), 143–153。
+
 - 64. Alcalá, R., Alcalá-Fdez, J., Casillas, J., Cordon, O., & Herrera, F. (2006)。混合学习模型以实现模糊建模中的可解释性-准确性权衡。*Soft Computing, 10*, 717–734。
+
 - 65. Loxhande, S. A., & Chauhan, N. (2023)。SPHA-VC：通过车载通信进行安全乘客健康评估。*Microprocessors and Microsystems, 98*, 104799。
+
 - 66. Tanwar, N., & Akhai, S. (2017)。空调教室质量控制与舒适度管理调查分析。*Journal of Advanced Research in Civil and Environmental Engineering, 4*(1&2), 20–23。
+
 - 67. Akhai, S., Mala, S., & Jerin, A. A. (2021)。了解空调器的空气过滤是否降低环境中病毒传播的概率。*Journal of Advanced Research in Medical Science & Technology (ISSN: 2394-6539), 8*(1), 36–41。
+
 - 68. Akhai, S., Mala, S., & Jerin, A. A. (2020)。结合 COVID-19 和人类健康背景理解空调系统：简讯。*International Journal of Healthcare Education & Medical Informatics (ISSN: 2455-9199), 7*(1&2), 28–30。
+
 - 69. Akhai, S., Singh, V. P., & John, S. (2016)。调查办公环境中分体式空调器的室内空气质量及其对人类表现的影响。*Journal of Mechanical Civil Engineering, 13*(6), 113–118。
+
 - 70. Kumar, P., & Akhai, S. (2022)。使用 VRV/VRF 系统在智能建筑中进行有效的能源管理。载于 *Additive Manufacturing in Industry 4.0: Methods, Techniques, Modeling, and Nano Aspects*。第 27 页。
+
 - 71. Akhai, S., Thareja, P., & Singh, V. P. (2017)。评估空调教室的室内环境健康维持状况。*Advanced Research in Civil and Environmental Engineering, 4*(1&2), 1–9。
+
 - 72. Furizal, F., Sunardi, S., & Yudhana, A. (2023)。基于模糊逻辑和物联网的空调器温湿度控制系统。*Journal of Robotics and Control (JRC), 4*(3), 308–322。
+
 - 73. Belman-Flores, J. M., Rodríguez-Valderrama, D. A., Ledesma, S., García-Pabón, J. J., Hernández, D., & ParDo-Cely, D. M. (2022)。模糊逻辑控制在制冷系统中应用的综述。*Applied Sciences, 12*(3), 1302。
+
 - 74. Mounica, V., & Obulesu, Y. P. (2022)。面向混合动力电动汽车应用燃油经济性的燃料电池、电池和超级电容器的混合功率管理策略。*Energies, 15*(12), 4185。
+
 - 75. Bakdi, A., & Vanem, E. (2022)。使用模糊逻辑进行复杂情况下自主船舶协作决策分析的最完整 COLREGs 评估。*IEEE Transactions on Intelligent Transportation Systems, 23*(10), 18433–18445。
 
-## 第 14 章
+# 第 14 章
 
 ### 图像处理与模式识别中的模糊逻辑
 
@@ -4469,11 +4652,9 @@ $^{2}$* Punjabi 大学工程技术学院（UIET），印度旁遮普邦昌迪iga
 
 模糊逻辑是一种问题解决工具和数学框架，它处理的是近似的逻辑推理而非精确性。在过去几年中，由于实际世界图像中包含的噪声和失真具有模糊性和不确定性，经典图像处理在处理这些图像时遇到了困难。因此，本章探讨了在图像处理和模式识别中应用模糊逻辑的最新发展。此外，本文还探讨并报告了模糊逻辑与机器学习算法和深度学习算法的集成，这在防御目标识别与分类、物体检测、医学图像分析、视频监控场景识别以及许多其他应用领域中是一项重大进展。最后，文章总结了进一步发展的领域以及未来研发的兴趣方向。
 
-### 14.1 引言
+## 14.1 引言
 
 为了在数学上模仿人类的推理和决策能力，引入一种称为模糊逻辑的逻辑系统变得至关重要。与布尔逻辑不同，引入了一种无限值逻辑
-
-
 
 为了同时处理对象在不同类别中的归属度。为了定义归属度，引入了成员函数。它为机器提供了额外的机制，使其能够基于部分归属度而非完全归属度来做出决策。特别是对于图像处理任务，为了达成最终决策，必须以像素值的形式处理图像中不同种类的不确定性和模糊性。有时过滤掉这些内容会导致关键信息的丢失，而这些信息实际上对于做出最佳决策是必需的。模糊图像处理引入了图像的模糊版本，并通过具有规则形式专家知识的推理规则引擎对其进行处理。之后，执行去模糊化以获取实际结果。除此之外，在图像处理的各个步骤中，研究人员使用模糊逻辑从该步骤获取精确输出，该输出再次成为下一步骤的输入。神经网络已整合模糊逻辑，以增强在缺乏专家知识的情况下解决复杂问题的能力。层级模糊逻辑系统被组织成子系统，每个子系统进一步划分为层级连接的模糊逻辑单元。
 
@@ -4494,8 +4675,6 @@ $$A_f = \{(16,0.2), (17,0.1), (18,0.7), (19,1.0) \mid x \in X\}$$
 模式识别是理解不同系统并在应用领域进一步工作的广泛谱系。如今，所有类型的先进机器学习方法和数据分析技术都在忙于理解某种潜在的隐藏模式，这可以极大地帮助深入研究以及开发新的应用领域，以改善人类生活。模式识别中的模糊逻辑仅仅激发了搜索的冲动，并伴随着更多归属度的灵活性。
 
 模式识别和聚类在其目标之间存在细微差别。聚类方法旨在揭示数据中的自然结构，而没有预定义的类别或标签；而模式识别旨在关注根据预定义的模式或类别来识别和分类数据。因此，聚类是关于探索和分组数据，而不是根据已知的模式或类别来识别和分类数据。图像处理中的模式识别是通过机器学习算法自动识别图像数据的模式和规律的过程。通过模式识别过程，机器学习算法可以识别熟悉和陌生的物体。因此，模式识别在图像处理中起着至关重要的作用。模式识别系统由三个部分组成：特征空间、测量空间和决策空间。正如我们所知，信息的不足会导致系统中的不确定性，这可能会由模式识别系统不同阶段中的矛盾、模糊、不可靠和定义不清的信息引起。不同的模式识别阶段因系统而异，以发现有用的模式。由于实验误差或仪器或测量的局限性导致精确度缺乏或模糊性，可能导致测量空间中的模糊性。同样，有时将输入特征值表示为区间形式可能是合适且方便的，其中区间的一侧或两侧是模糊的。决策空间中相应的类别可能变得难以管理，变得非凸、扩展和重叠。也就是说，决策空间可能会受到影响，以决定数据点的 100% 归属度。然而，在人类感知中，如果数据点具有表示部分归属度的 90% 成员度，那是可以接受的。因此，所有这些问题都由模式识别中的模糊逻辑来解决。模式识别中的模糊逻辑提供了生成分类器的能力，该分类器可以对重叠的类别边界进行建模并生成线性或非线性边界。1977 年，模式识别中的模糊逻辑应用于说话人识别和语音识别问题。语音的特征取决于说话人的健康状况、年龄、性别、心智和气质，包含一定量的模糊性和重叠类别。因此，对于元音声音识别，使用模糊集进行机器识别的分类分析给出了 82% 的准确率
-
-
 
 ……最高的隶属度值上。此外，结合基于语言约束的监督学习使准确率提高了15%。
 
@@ -4525,6 +4704,8 @@ $$G = \bigcup_{m} \bigcup_{n} \mu_{mn} \quad (14.1)$$
 
 这是最重要的一步，适当的模糊技术可以在此处修正隶属度值。对象满足特定属性的程度由其隶属度值表示。此外，隶属度值显示集合的模糊程度。模糊聚类是一种无监督学习技术，它通过分类和组织数据到分区以形成簇来归纳规则。模糊聚类方法，即模糊 C 均值（FCM）算法，广泛用于许多应用中，包括模式识别、图像分割和数据分析。模糊聚类包括输入空间的模糊分区，以及由数据点及多个簇的部分隶属度组成的模糊集的创建。
 
+
+
 该聚类算法用于创建基于规则的分类模型，其中每个规则与一个模糊聚类相关联。与模糊图像处理不同，已开发了一种方法，用于将基于透明语言规则的模糊逻辑模型从基于模糊聚类的分类模型中进行转换。此外，通过结合 FCM 算法与遗传算法和粒子群优化，建立了优化算法，以改进基于规则的模糊聚类过程。图像模糊处理的隶属函数是通过选择 $\alpha$-截集进行阈值处理。研究表明，用于疾病检测的模糊规则方法在各种方法和技术的表现优于支持向量机（SVMs）、人工神经网络、模糊逻辑、卷积神经网络等。模糊规则是从特征提取方法获得的参数值中开发的，即 blob 分析，然后通过隶属函数实现 [9]。
 
 ## 14.7 图像去模糊化
@@ -4537,16 +4718,14 @@ $$G = \bigcup_{m} \bigcup_{n} \mu_{mn} \quad (14.1)$$
 
 图像增强是指用于提高数字图像质量、清晰度和视觉外观的技术。它涉及改变图像，使其更适合特定应用或提高其可解释性。图像增强中采用了多种方法：
 
--   **空间域技术**：直接操纵像素值以增强对比度、亮度或锐度。直方图均衡化、对比度拉伸和空间滤波等操作属于此类。
--   **频域技术**：使用变换（如傅里叶变换）通过修改其频率分量来增强图像。滤波器（如高通、低通或带通滤波器）可以通过强调或抑制某些频率来使图像变清晰或平滑。
--   **直方图修改**：调整直方图中像素强度的分布可以改善整体对比度和亮度。
--   **多尺度变换**：如小波变换等技术通过将其分解为多个尺度来增强图像，从而允许局部增强。
+- **空间域技术**：直接操纵像素值以增强对比度、亮度或锐度。直方图均衡化、对比度拉伸和空间滤波等操作属于此类。
+- **频域技术**：使用变换（如傅里叶变换）通过修改其频率分量来增强图像。滤波器（如高通、低通或带通滤波器）可以通过强调或抑制某些频率来使图像变清晰或平滑。
+- **直方图修改**：调整直方图中像素强度的分布可以改善整体对比度和亮度。
+- **多尺度变换**：如小波变换等技术通过将其分解为多个尺度来增强图像，从而允许局部增强。
 
 图像恢复涉及从退化或损坏的版本中恢复原始图像的过程。其目的是消除导致图像质量退化的各种因素的影响，如模糊、噪声或压缩伪影。图像恢复中使用了几种方法：
 
--   **反卷积**：是一种试图
-
-
+- **反卷积**：是一种试图
 以消除运动或光学缺陷等因素引起的模糊。诸如维纳反卷积或理查森–卢西反卷积等算法旨在恢复图像的清晰度和锐利度。降噪是一种通过中值滤波、高斯平滑或小波去噪等方法来消除或减少不必要噪声，从而提升图像质量的技术。超分辨率是一种从低分辨率版本重建更高分辨率图像的方法，旨在恢复更精细的细节。图像修补（Inpainting）用于填充图像中缺失或损坏的部分；图像修补算法通过估计和重建缺失信息来完成这一任务。
 
 彩色图像处理涉及对包含颜色信息的图像进行操作和分析。它在颜色起关键作用的多种应用中至关重要，例如摄影、医学、艺术和计算机视觉。彩色图像处理的主要方面包含许多步骤。色彩模型是各种代表颜色不同属性的模型，例如红绿蓝（RGB）；青品黄黑（CMYK）；色相、饱和度、亮度（HSL）；以及色相、饱和度、明度（HSV），这些模型允许根据其特性进行不同的操作和分析。色彩增强利用诸如色彩校正、白平衡调整和直方图均衡化等技术，以提升彩色图像的整体外观和质量。色彩分割根据颜色信息将图像划分为不同的区域或对象。这项技术在目标检测、跟踪和分类中至关重要。彩色图像压缩方法旨在压缩彩色图像而不显著损失质量，同时考虑人类视觉感知特性和颜色数据中的冗余。
@@ -4595,10 +4774,6 @@ $$G = \bigcup_{m} \bigcup_{n} \mu_{mn} \quad (14.1)$$
 
 一项针对不同分类和模式识别算法的比较研究已经进行，观察到控制图方法是能给出有希望结果的决策方法，但无法检测重叠事件。因此，为克服此问题，使用了模糊逻辑技术，准确率从 95.6% 提高到了 97.2% [13]。然而，在图像处理和模式识别中，不确定性可能出现在图像处理任务的任何阶段，如增强、降噪、滤波、轮廓提取、分割和骨架提取，以从图像模式中提取物特征。
 
-
-
-
-
 ### 14.8.1 去噪与畸变校正
 
 模糊逻辑可以通过减少预处理阶段的噪声来增强图像质量。使用模糊滤波器来去除加性噪声，它们使用对应于滤波器不同阶段模糊规则的隶属度函数 [14]。引入了一种递归双作用模糊滤波器，该滤波器将模糊推理分为两个阶段执行，在不退化图像结构的情况下强力消除噪声 [15]。研究人员还提出了一种自适应模糊滤波器，该滤波器通过执行涂抹图像的边缘检测，有望增强图像质量。该模糊滤波器具有两种机制：自适应加权模糊均值和模糊归一化推理系统。用于滤波器的模糊集的隶属度函数是针对不同图像自适应确定的。该滤波器可以有效消除随机脉冲噪声和高斯脉冲噪声 [16]。该文章提出使用模糊逻辑和基于 Alpha-截断均值的滤波器来平滑灰度图像中均匀脉冲噪声造成的畸变。为了防止离群值效应，建议的方法将模糊逻辑与 Alpha-截断均值的思想结合起来。使用 Alpha-截断均值和中值来开发模糊隶属度函数，进而用于寻找噪声像素的估计值。文中 [17] 描述的方法优于所有以前的脉冲噪声去除方法。基于序列图像的脉冲噪声也被去除 [18]。此外，盐椒噪声（脉冲噪声的一种）可以通过使用自适应切换中值滤波器来去除 [19]。在最近的生物医学图像分析研究中，应用高斯模糊来去除光相干断层扫描 B 扫描图像中的非期望噪声，以识别糖尿病黄斑水肿 [20]。
@@ -4619,7 +4794,7 @@ $$G = \bigcup_{m} \bigcup_{n} \mu_{mn} \quad (14.1)$$
 
 在图像处理初期或早期阶段，分类方法主要基于像素，而不是利用图像中对象及其周围环境的空间和上下文信息。随着时间推移，方法被修改并开始纳入空间和上下文信息。可以通过对象特征跟踪对分割后的对象进行分类，并且可以进行监督分割 [27] 以实现基于对象的分类。通过确定适当的对象参数，可以使用模糊-神经逻辑检测组织异常。医学图像可以被完美地分类和分割 [28]。
 
-### 14.8.4.1 模糊聚类算法
+#### 14.8.4.1 模糊聚类算法
 
 模糊聚类技术被广泛用于分配属于一个或多个簇的数据点的隶属度。数据的分组基于它们彼此之间的邻近程度执行。c-均值聚类算法提供数据点聚类的硬分配。然而，c-均值聚类在计算上复杂且对初始化敏感。很难获得确切的聚类数量并获得次优分割。通过完美调整参数，可以在一定程度上实现性能提升。模糊聚类算法的近期进步，如 FCMs 聚类算法及其不同变体（如标准模糊 C-均值、核模糊 C-均值（KFCMs）聚类和基于小波的模糊 C-均值聚类算法 [29]），通过向不同簇分配部分隶属度，显著提高了准确性。基于小波的 FCMs 聚类在标准 FCM 或 KFCM 之上给出了令人满意的结果 [30]。该技术的优势在于我们可以处理图像的交叠区域。模糊聚类通过允许像素以不同程度的隶属度属于多个簇（与硬隶属度函数相反），从而更好地实现图像数据的分割和分类。通过将模糊聚类技术与基于模糊神经网络的模型结合，开发了一种用于预测的模糊模型。粗糙模糊模式识别技术或粗糙模糊聚类算法被引入用于对微阵列基因表达数据中的相似基因进行聚类，以及对脑部磁共振图像进行分割。这是一种称为粗糙模糊可能性 C-均值算法的通用混合无监督学习算法，它可以给出 C-均值算法所有组合的泛化。粗糙集和模糊集的组合原则同时结合概率和可能性隶属度，其中不确定性、模糊性和近似度可以在粗糙集中处理，而交叠部分可以通过模糊集的隶属度函数处理 [31]。通过修改目标函数算法改进了模式识别 [32]。引入了一种模糊引力搜索算法，用于使用脑部磁共振成像（MRI）图像进行自动分割 [33, 34]。然而，针对脑部肿瘤分割在不同 MRI 图像上的 FCMs 中引入了并行算法，该算法改善了计算时间，速度是传统 FCM 的两倍 [35]。通过使用计算统一设备架构（CUDA）技术中的任务流水线概念并行实现算法，模糊聚类算法的性能得到了提升。实验结果表明性能提升了 23.35 倍。最终分割通过应用分水岭算法实现 [36, 37]。
 
@@ -4631,10 +4806,7 @@ $$G = \bigcup_{m} \bigcup_{n} \mu_{mn} \quad (14.1)$$
 
 ## 14.9 模糊逻辑与神经网络
 
-神经网络是由大量简单的并行排列的处理元素组成的互连网络，具有执行协作操作以及做出复杂决策的能力。神经元之间的大量连接确保了系统具有容错性，无论噪声或组件故障是否存在，但为了处理不确定性并融入人类推理，引入了模糊集合理论模型。如前所述，模糊规则系统的设计是表达人类知识所必需的 IF–THEN 规则。该过程包括识别和标记输入和输出变量，指定每个输入和输出变量的值范围，以及指定用于表征模糊集的隶属度函数。为了执行此过程，已经存在诸如模糊推理系统专业版（fuzzy inference system professional）等通用工具，它提供了一个交互环境来设计和优化模糊推理系统。但另一方面，为图像处理定义基于规则的系统是
-
-
-难以手动定义。此外，它基于定性模型模拟了一个简单的过程。对于复杂的过程，定义和调优参数非常耗时，这使得模糊逻辑的应用仅限于那些有领域专家知识可用的领域。但我们对那些在缺乏专家知识的情况下能够从示例中学习的基于模糊逻辑的模型感兴趣。此外，引入了一种改进的神经网络，它利用了语言信息的优势。因此，神经模糊模型被提出。它最终减少了时间和成本，并提高了效率。一种结合深度学习和视网膜图像中的模糊图像处理来开发自动微动脉瘤检测方法 [42]。如今，神经模糊模型在农业、生物医学以及许多其他领域有着广泛的应用 [43–45]。
+神经网络是由大量简单的并行排列的处理元素组成的互连网络，具有执行协作操作以及做出复杂决策的能力。神经元之间的大量连接确保了系统具有容错性，无论噪声或组件故障是否存在，但为了处理不确定性并融入人类推理，引入了模糊集合理论模型。如前所述，模糊规则系统的设计是表达人类知识所必需的 IF–THEN 规则。该过程包括识别和标记输入和输出变量，指定每个输入和输出变量的值范围，以及指定用于表征模糊集的隶属度函数。为了执行此过程，已经存在诸如模糊推理系统专业版（fuzzy inference system professional）等通用工具，它提供了一个交互环境来设计和优化模糊推理系统。但另一方面，为图像处理定义基于规则的系统是难以手动定义。此外，它基于定性模型模拟了一个简单的过程。对于复杂的过程，定义和调优参数非常耗时，这使得模糊逻辑的应用仅限于那些有领域专家知识可用的领域。但我们对那些在缺乏专家知识的情况下能够从示例中学习的基于模糊逻辑的模型感兴趣。此外，引入了一种改进的神经网络，它利用了语言信息的优势。因此，神经模糊模型被提出。它最终减少了时间和成本，并提高了效率。一种结合深度学习和视网膜图像中的模糊图像处理来开发自动微动脉瘤检测方法 [42]。如今，神经模糊模型在农业、生物医学以及许多其他领域有着广泛的应用 [43–45]。
 
 ## 14.10 层次模糊逻辑
 
@@ -4664,38 +4836,64 @@ $$G = \bigcup_{m} \bigcup_{n} \mu_{mn} \quad (14.1)$$
 
 ## 参考文献
 
+
+
 1. Zadeh, L. A. (1965). 模糊集。*Information and Control*, *8*(3), 338–353, https://doi.org/10.1016/S0019-9958(65)90241-X.
+
 2. Sharma, Y. K. 使用基于模糊集的图像处理增强图像质量的新型框架的设计与开发；2020 年。[在线]。可获取于：www.ijiset.com
+
 3. Sharma, S., & Bhatia, A. (2015). 使用模糊逻辑进行图像对比度增强。*International Journal of Computers and Applications*, *111*(17), 14–20, https://doi.org/10.5120/19757-1410.
+
 4. Lepcha, D. C., Goyal, B., Dogra, A., Sharma, K. P., & Gupta, D. N. (2023). 深入图像增强：当前和新兴趋势综述。*Information Fusion*, *93*, 36–76, https://doi.org/10.1016/j.inffus.2022.12.012.
+
 5. Chacon, M. I., Aguilar, L., & Delgado, A. 模糊图像处理方案的定义与应用。见：*2002 年 IEEE 第 10 届数字信号处理研讨会，2002 年及第 2 届信号处理教育研讨会论文集*。IEEE，第 102–107 页。https://doi.org/10.1109/DSPWS.2002.1231085.
+
 6. Gonzalez, R. C., Woods, R. E., & Hall, P. P. *数字图像处理*，第 3 版。Pearson International。
+
 7. Jähne, B., Haubecker, H., & Geißler, P. *计算机视觉与应用手册 第 2 卷 信号处理与模式识别*。Academic Press。
+
 8. Caponetto, L., & Castellano, G. 使用 Java 的模糊逻辑图像处理温和介绍。[在线]。可获取于：http://www.springer.com/series/10059
+
 9. Kour, V. P., & Arora, S. (2019). 使用基于规则的分类进行水果病害检测。见：*通信与计算科学的智能创新*。第 295–312 页。https://doi.org/10.1007/978-981-13-2414-7_28.
+
 10. Sladoje, N., Lindblad, J., & Nyström, I. (2011). 通过特征距离最小化进行空间模糊集的去模糊化。*Image and Vision Computing*, *29*(2–3), 127–141, https://doi.org/10.1016/j.imavis.2010.08.007.
+
 11. bin MohamadAzmi, M. T., & Isa, N. M. (2013). 使用图像处理和模糊逻辑进行兰花病害检测。见：*2013 年国际电气、电子和系统工程会议 (ICEES)*。IEEE，第 37–42 页。https://doi.org/10.1109/ICEES.2013.6895039.
+
 12. Muthukannan, K., & Latha, P. (2014). 基于模糊推理系统的植物叶片图像中不健康区域分类。
+
 13. Elbåşı, E. (2013). 基于模糊逻辑从视频序列中识别场景。*Journal of Applied Research and Technology, 11*(5), 702–707, https://doi.org/10.1016/S1665-6423(13)71578-5.
+
 14. Van De Ville, D., Nachtegeal, M., Van der Weken, D., Kerre, E. E., Philips, W., & Lemahieu, I. (2003). 通过模糊图像滤波进行降噪。*IEEE Transactions on Fuzzy Systems, 11*(4), 429–436. https://doi.org/10.1109/TFUZZ.2003.814830.
+
 15. Russo, F., & Ramponi, G. (1996). 用于受脉冲噪声破坏图像的模糊滤波器。*Ieee Signal Processing Letters, 3*(6), 168–170, https://doi.org/10.1109/7.503279.
+
 16. Kerle, U., & Nachtigal, M. (2000). *图像处理中的模糊技术*。Physica-Verlag HD：Heidelberg，Vol. 52, https://doi.org/10.1007/978-3-7908-1847-5.
+
 17. Hussain, A., Javadi, Q., & Siddique, M. (2011). 使用模糊逻辑和 alpha-截尾均值去除脉冲噪声。见：*2011 年 IEEE 国际信号和图像处理应用会议 (ICSIPA)*，IEEE，第 216–220 页。https://doi.org/10.1109/ICSIPA.2011.6144066.
+
 18. Mélange, T. (2011). 基于模糊逻辑从图像序列中去除随机脉冲噪声。*Journal of Electronic Imaging, 20*(1), 013024, https://doi.org/10.1117/1.3564922.
+
 19. Thirilogasundari, V., babu, V. S., & Janet, S. A. (2012). 使用自适应开关中值滤波器去除基于模糊的椒盐噪声。*Procedia Engineering, 38*, 2858–2865, https://doi.org/10.1016/j.proeng.2012.06.334.
+
 20. Tripathi, A. et al. (2023). 使用 DRIL、HRF 和囊泡状结构从 OCT B 扫图像中识别糖尿病黄斑水肿严重程度的基于模糊逻辑系统。*Diagnostics, 13*(15), 2550, https://doi.org/10.3390/diagnostics13152550.
+
 21. Zanaty, E. A., & Aljihadli, S. (2012). 用于可靠图像分割的自动模糊算法。[在线]。可获取于：https://www.researchgate.net/publication/284182671
+
 22. Singh, S. K., Abolghasemi, V., & Anisi, M. H. (2023). 使用模糊逻辑和深度学习检测皮肤癌。*Applied Sciences, 13*(15), 8927, https://doi.org/10.3390/app13158927.
+
 23. Amirfakhrian, M., & Parhizkar, M. (2021). 集成图像分割和模糊理论以提高交通事故中损伤检测区域的准确性。*Journal of Big Data, 8*(1), https://doi.org/10.1186/s40537-021-00539-2.
+
 24. Xu, L., Wang, Y., Li, R., Yang, X., & Li, X. (2020). 一种在工业环境中使用模糊逻辑和笔画贝叶斯程序学习以及朴素贝叶斯的混合字符识别方法。*IEEE Access, 8*, 124767–124782, https://doi.org/10.1109/ACCESS.2020.3007487.
+
 25. Argote Pedraza, I. L., Faber Archila Diaz, J., Pinto, R. M., Becker, M., & Tronco, M. L. (2019). 使用模糊图像处理在热图像中检测甜柑橘果实。见：*2019 年 IEEE 哥伦比亚计算智能应用会议 (CoCAI)*，IEEE，第 1–6 页。https://doi.org/10.1109/CoCAI.2019.8781965.
+
 26. Katteda, S. R. (2011). 使用模糊逻辑方法和蚁群优化进行图像分类和分析的特征提取。*Signal Image Process, 2*(4), 137–143, https://doi.org/10.5121/sipij.2011.2412.
-
-
 
 # 泰勒与弗朗西斯（Taylor & Francis）
 
 泰勒与弗朗西斯集团
+
 http://taylorandfrancis.com
 
 ![](img/e9de70cd491e84262133af63cb33d500_290_0.png)
@@ -4710,54 +4908,77 @@ ${ }^{1}$ 印度，北方邦，诺伊达，阿米蒂大学应用科学学院，�
 
 ${ }^{2}$ 印度，哈里亚纳邦，法里达巴德，马纳夫·拉恰纳国际研究与学院，数学系
 
-# 摘要
+## 摘要
 
 直觉模糊集（Intuitionistic Fuzzy Sets, IFS）的概念是阿塔纳西夫（Atanassov）引入的模糊集理论的一次宝贵扩展，旨在有效利用不确定性。相似度和距离度量的概念被证明是处理建模活动的最佳技术。虽然理论上存在多种度量方法，但它们缺乏精确性，需要增强以获得改进的结果。在本章中，我们提出了基于直觉模糊集的距离及其孪生相似度度量。此外，还讨论并比较了医学诊断和模式识别等应用与其他现有度量方法。分析了不同的属性，并利用实际的数值案例来评估该度量的可靠性。对比分析展示了新颖距离-相似度度量的实用性。结果表明，所提出的度量方法可信、灵活，并能更有效地处理具有不确定性的情况。
 
 ### 15.1 引言
 
-决策制定是从一系列选择中挑选出最有利行动路径的技能，这能够带来个人或组织的成功。它不是一个单一步骤的过程，需要仔细理解偏好，从而促进组织的更好运作。在日常生活中，我们经常遇到需要有效决策的情况。这项技能广泛应用于多个领域，如医疗诊断、模式识别、商业管理和经济学。制定决策往往是一个复杂的过程，纠缠于不确定性以及无法整齐地归结为二元“是”或“否”结果的场景中。扎德（Zadeh）[1] 意识到这个问题，并将康托尔（Cantor）的经典集合论扩展为模糊集理论。在该理论中，扎德强调隶属程度并不总是严格落入“是”或“否”的类别；相反，在这些确定状态之间存在相当大的模糊性或不清晰性。为了简化并考虑相关问题，扎德制定了 $\varphi(a)$，其中 $\varphi(a) \in [0, 1]$，被称为隶属度。后来人们意识到，非隶属度并不总是等于 $1 - \text{隶属度}$，因为有时存在模糊性。为了解决这个问题，阿塔纳西夫 [2, 3] 提出了包含犹豫度的直觉模糊集，可以表示为 $\varphi(a) + \tilde{\varphi}(a) \leq 1$，其中 $\tilde{\varphi}(a)$ 是非隶属度，并且还陈述了定义在直觉模糊集上的运算。
+决策制定是从一系列选择中挑选出最有利行动路径的技能，这能够带来个人或组织的成功。它不是一个单一步骤的过程，需要仔细理解偏好，从而促进组织的更好运作。在日常生活中，我们经常遇到需要有效决策的情况。这项技能广泛应用于多个领域，如医疗诊断、模式识别、商业管理和经济学。制定决策往往是一个复杂的过程，纠缠于不确定性以及无法整齐地归结为二元“是”或“否”结果的场景中。扎德（Zadeh）[1] 意识到这个问题，并将康托尔（Cantor）的经典集合论扩展为模糊集理论。在该理论中，扎德强调隶属程度并不总是严格落入“是”或“否”的类别；相反，在这些确定状态之间存在相当大的模糊性或不清晰性。为了简化并考虑相关问题，扎德制定了 `φ(a)`，其中 `φ(a) ∈ [0, 1]`，被称为隶属度。后来人们意识到，非隶属度并不总是等于 `1 - 隶属度`，因为有时存在模糊性。为了解决这个问题，阿塔纳西夫 [2, 3] 提出了包含犹豫度的直觉模糊集，可以表示为 `φ(a) + ~φ(a) ≤ 1`，其中 `~φ(a)` 是非隶属度，并且还陈述了定义在直觉模糊集上的运算。
 
 在其提出后，它迅速引起了众多研究人员的关注，他们使用 IFS 作为工具应用于各个领域，如医学诊断、模式识别、图像分割、聚类等。德等 [4] 将 IFS 应用于医学诊断，李和陈 [5] 将 IFS 用作模式识别工具，徐 [6] 将其应用于多准则决策，而徐等 [7] 将其应用扩展到聚类分析。借助 IFS 还提出了一些相关性度量，应用于诸如 涛 [8, 9] 在模式识别中及其后在医学诊断中的相关性研究。埃杰加瓦和奥伊恩凯 [10] 将其应用于各种多准则决策（MCDM）问题。
 
 直觉模糊集（IFS）的概念被广泛用于距离和相似度度量，因为它作为合理信息源的手段。距离度量用于寻找两个模糊集之间的距离，而相似度度量用于寻找它们之间的接近程度。布里略和布斯廷斯 [11] 提出了 IFS 的距离概念。 szmidt 和 Kacprzyk [12] 通过利用构成 IFS 的所有三个参数来计算距离，进一步扩展了这一工作。 Wang 和 Xin [13] 讨论了
 
 - 27. 张，Y.，& 麦克斯韦，T. 面向对象的分类中的监督分割的模糊逻辑方法。
+
 - 28. 库马尔，S. S.，莫尔蒂，M.，马杜，M.，& 阿穆莎，R. (2010). 使用模糊-神经逻辑的改进分割方法。载于：2010 年第二届国际计算机研究与发展会议，IEEE，第 671–675 页。https://doi.org/10.1109/ICCRD.2010.155.
+
 - 29. 扎纳蒂，E. A. (2012). 确定用于自动医学图像分割的核化模糊 C-均值算法的聚类数量。埃及信息学杂志，13(1), 39–58, https://doi.org/10.1016/ej.cej.2012.01.004.
+
 - 30. 哈利法，I.，优西夫，A.，& 尤斯里，H. (2012). 基于小波和 FCM 算法的 MRI 脑图像分割。国际计算机与应用杂志，47(16), 32–39, https://doi.org/10.5120/7275-0446.
+
 - 31. 马吉，P.，& 帕尔，S. K.，粗糙-模糊模式识别：生物信息学和医学成像中的应用。威利-IEEE 计算机学会出版社。
+
 - 32. 贝兹德克，J. C. (1981). 使用模糊目标函数算法的模式识别。Springer US: 波士顿，MA。https://doi.org/10.1007/978-1-4757-0450-1.
+
 - 33. 胡兹，H.，& 维尔玛，O. P. (2022). 使用引力搜索算法进行脑图像分割的模糊聚类。多媒体工具与应用，81(20), 29633–29652, https://doi.org/10.1007/s11042-022-12336-x.
+
 - 34. 卡乌尔，H. (2013). 使用引力搜索算法的模糊聚类 软件工程技术硕士。
+
 - 35. 拉维，A.，苏瓦尔纳，A.，D’Souza，A.，雷迪，G. R. M.，& 梅加。 (2012). 多 MRI 图像上脑肿瘤分割的并行模糊 C 均值算法。载于：国际计算进展会议论文集。
+
 - 36. 霍西尼，F.，& 沙巴赫拉米，A. (2016). 用于 MRI 分割的模糊 C 均值和水文分割算法的高效实现。载于：2016 年第八届国际电信会议 (IST), IEEE, 第 178–184 页。https://doi.org/10.1109/ISTEL.2016.7881806.
+
 - 37. 霍西尼，F.，& 德卡希，G. M. (2019). 用于 MRI 分割的高性能模糊 C 均值和水文分割算法实现。[在线]. 可访问网址: www. jacr.iausari.ac.ir
+
 - 38. 门卡蒂尼，A.，拉博蒂诺，G.，塔米利亚，E.，萨尔梅里，M.，& 洛贾卡诺，R. (2011). 特征提取和基于模糊逻辑的分类以减少乳腺图像中的假阳性。乳腺图像中假阳性减少的特征提取和基于模糊逻辑的分类。[在线]. 可访问网址: https://www. researchgate.net/publication/221334072
+
 - 39. 霍桑，J.，本宁森，R.，& 西耶尔，B. 学习非极大值抑制。
+
 - 40. 张，X.，江，M.，郑，Z.，谭，X.，丁，E.，& 杨，Y. (2020). 理解图像检索重排序：图神经网络视角。[在线]. 可访问网址: http://arxiv.org/abs/2012.07620
+
 - 41. 高，X.，拉姆，S.，& 罗德里格，J. J. 目标筛选和形态学闭合以减少大范围航空图像中的误报。
+
 - 42. 拉希姆，S. S.，帕拉德，V.，阿尔玛凯，I.，& 霍尔辛格，A. (2020). 用于微动脉瘤检测的模糊图像处理和深度学习。载于：数字病理学的人工智能与机器学习，计算机科学讲座笔记，Springer, 第 321–339 页。https://doi.org/10.1007/978-3-030-50402-1_19.
+
 - 43. 曼达尔，D. (2019). 基于图像处理技术的自适应神经模糊推理系统对巴斯马蒂稻米的分级。*罗马尼亚信息科学与技术杂志, 22*(3–4), https://doi.org/10.3390/asi1020019.
+
 - 44. 米努，M.，库拉德，C.，尼拉普，B. C.，卡拉，S.，拉马斯瓦米，H. S.，& 尤，Y. (2021). 使用数字图像处理评估食品质量的简明综述。*食品科学与趋势, 118*, 106–124, https://doi.org/10.1016/j.tifs.2021.09.014.
+
 - 45. 阿尔哈姆迪，M. I. (2022). 用于肝肿瘤分割和分类模型的自适应神经模糊推理系统中立集。*国际中立科学杂志, 18*(2).
+
 - 46. 坎瑟，S.，& 辛格，H. (2023). 用于各类图像的分层模糊深度学习系统。*记忆 - 材料、器件、电路和系统, 4*, 100023, https://doi.org/10.1016/j.memori.2022.100023.
+
 - 47. 辛格，H. 等 (2013). 模糊逻辑的实际应用。*模糊系统进展, 2013*, 1–3, https://doi.org/10.1155/2013/581879.
+
 - 48. 洪，L.，& 钟，H. (2006). 移动机器人系统的分层模糊逻辑控制设计。载于：*2006 年 IEEE 机器人、自动化和机电一体化会议*，IEEE. 第 1–6 页。https://doi.org/10.1109/RAMECH.2006.252616.
+
 - 49. 王，D.，曾，X.-J.，& 基恩，J. A. (2006). 分层模糊系统综述（邀请论文）。
+
 - 50. 坎瑟，S.，辛格，H.，& 迈茨勒，T. (2022). 用于图像分类的分层模糊深度学习。*记忆 - 材料、器件、电路和系统, 2*, 100016, https://doi.org/10.1016/j.memori.2022.100016.
+
+
+
 - 51. 卡斯特洛，O.，桑切斯，M.，冈萨雷斯，C.，& 马丁内斯，G. (2017). 近期二型模糊图像处理应用综述。*信息, 8*(3), 97, https://doi.org/10.3390/info8030097.
 - 52. 坎瑟，S. (2021). *分层智能系统及其在生存能力中的应用*。
 - 53. 坎瑟，S.，& 辛格，H. (2020). 多输入多输出系统的分层模糊逻辑。*IEEE 访问, 8*, 206966–206981, https://doi.org/10.1109/ACCESS.2020.3037901.
 - 54. 米塔尔，K.，贾因，A.，维斯拉，K. S.，卡斯特洛，O.，& 卡普齐克，J. (2020). 二型模糊逻辑应用综合综述：过去、现在和未来。*人工智能工程应用, 95*, 103916, https://doi.org/10.1016/j.engappai.2020.103916.
 - 55. 卡拉纳里，R.，莫卡达姆，R.，洛格马尼，N.，阿拉赫弗迪，A.，希兰，M.，& 扎雷-萨德吉，A. (2022). 使用模糊逻辑和元胞自动机的分层组合进行脑肿瘤分割。*医学信号与传感器杂志, 12*(3), 263, https://doi.org/10.4103/jmss.jmss 128 21.
 
-
-
-
 一种加权距离度量，并将其应用于模式识别。该领域的应用也被 Park 等人 [14]、Hatzimichailidis 等人 [15]、Solanki 等人 [16] 等所采用。Davaz 和 Sadradadi [17] 提出了一种距离度量，并将其应用扩展到了诊断问题。Dutta 和 Goala [18] 在医学诊断中制定了先进的距离度量。此外，Goala 和 Bora [19] 在医学诊断中提出了多准则直觉模糊集。Garg 和 Kaur [20] 发现了一种新的距离度量，并展示了其在医学诊断和模式识别中的应用。此外，Mahanta 和 Panda [21] 引入了一种距离度量，并研究了其在医学诊断和模式识别中的应用。Dutta 等人 [22] 提出了距离和相似度度量，并讨论了其多种应用。Ohlan [23] 讨论了区间值 IFS 的新型距离度量，及其在多准则群决策中的应用。Zeng 等人 [24] 提出了一种指数距离度量来研究模式识别。Smidzt 和 Kacprzk [25] 以及 Chen 和 Radyany [26] 提出了基于 IFS 的相似度度量，并将其用途扩展到医学领域。Ye [27] 制定了基于余弦函数的一些相似度度量，并展示了其在机械设计方案中的应用。Luo 和 Liang [28] 提出了针对区间值 IFS 的相似度度量，及其在模式识别中的应用。此外，Iqbal 和 Rizwan [29] 提出了一种相似度度量，并讨论了其在医学诊断和模式识别领域的重要性。Kumari 和 Mishra [30] 讨论了基于 IFS 原理的多准则模糊技术，并研究了其在供应商选择中的应用。Adamu [31] 应用 IFS 来做出与环境管理相关的更好决策。Augustine [32] 提出了一种距离-相似度度量，其根源延伸至展示其在医学诊断和模式识别中的实际应用。Gohain 等人提出了两种新的相似度度量，其关键特征是交叉评估因子。Thao 和 Chou [33] 提出了相似度度量，并研究了软件质量评估中的决策制定。Gupta 和 Kumar [34] 讨论了 IFS 及其在模式识别和聚类中的应用。此外，Kumar 和 Kumar [35] 提出了一篇关于 IFS 的文章，讨论了其在模式识别中的可能性。Patel 等人 [36] 提出了基于 IFS 的相似度度量，并讨论了其在人脸识别和软件质量评估中的效用。Dutta 等人 [37] 制定了一种基于 IFS 的度量，其根源扩展到了与 COVID-19 相关场景中的决策制定。Bajaj 等人 [38] 提出了基于 IFS 的相关系数度量，以简化决策问题。Patel 等人 [39] 讨论了一种基于 IFS 的度量，及其在模式识别和医学诊断中的应用。Chakraborty 等人 [40] 推荐了一种相似度度量，用于解决基于不同标准选择智能手机的通用决策问题。同时，Panda 等人 [41] 提出了一种基于 IFS 用于识别软件错误的度量。
 
-## 15.1.1 研究空白
+### 15.1.1 研究空白
 
 处于前沿的是各种根植于 IFS 的相似度和距离度量，然而这些方法面临着固有的局限性，需要仔细考虑和改进。Li 等人 [5] 和 Ye [27] 提出的度量只考虑了 IFS 的两个参数，从而未能充分利用其特性。此外，三角函数度量有助于进一步增强决策能力并克服缺陷。向量空间中的余弦相似度度量存在一些缺陷，会导致不合理的结果。余切相似度度量有助于克服这些缺陷，并展示其在各个领域中的决策能力。
 
@@ -4805,11 +5026,7 @@ ${ }^{2}$ 印度，哈里亚纳邦，法里达巴德，马纳夫·拉恰纳国�
 
 在本节中，我们将讨论一些现有的和新的基于 IFS 的距离-相似度度量。
 
-
-
-
-
-## 15.3.1 现有的距离与相似度度量
+### 15.3.1 现有的距离与相似度度量
 
 **定义 15.6. [Hong 和 Kim 1999]** 设 $\mathbb{Q}$ 和 $\mathbb{P}$ 为 $\Delta$ 中的两个 IFS，则它们之间的相似度度量定义为
 
@@ -4825,6 +5042,8 @@ $$ \hat{D}2(\mathbb{Q},\mathbb{P}) = \frac{1}{2}\sum_{i=1}^{n}\left[\left|\mu_{\
 
 $$ \hat{S}3(\mathbb{Q},\mathbb{P}) = 1-\sqrt{\frac{1}{2}\sum_{i=1}^{n}\left[\left|\mu_{\mathbb{Q}}\left(a_{i}\right)-\mu_{\mathbb{P}}\left(a_{i}\right)\right|^{2}+\left|\gamma_{\mathbb{Q}}\left(a_{i}\right)-\gamma_{\mathbb{P}}\left(a_{i}\right)\right|^{2}+\left|\omega_{\mathbb{Q}}\left(a_{i}\right)-\omega_{\mathbb{P}}\left(a_{i}\right)\right|^{2}\right]} $$
 
+
+
 $$ \hat{D}3(\mathbb{Q},\mathbb{P}) = \sqrt{\frac{1}{2}\sum_{i=1}^{n}\left[\left|\mu_{\mathbb{Q}}\left(a_{i}\right)-\mu_{\mathbb{P}}\left(a_{i}\right)\right|^{2}+\left|\gamma_{\mathbb{Q}}\left(a_{i}\right)-\gamma_{\mathbb{P}}\left(a_{i}\right)\right|^{2}+\left|\omega_{\mathbb{Q}}\left(a_{i}\right)-\omega_{\mathbb{P}}\left(a_{i}\right)\right|^{2}\right]} $$
 
 $$ \hat{S}4(\mathbb{Q},\mathbb{P}) = 1-\frac{1}{2n}\sum_{i=1}^{n}\left[\left|\mu_{\mathbb{Q}}\left(a_{i}\right)-\mu_{\mathbb{P}}\left(a_{i}\right)\right|+\left|\gamma_{\mathbb{Q}}\left(a_{i}\right)-\gamma_{\mathbb{P}}\left(a_{i}\right)\right|+\left|\omega_{\mathbb{Q}}\left(a_{i}\right)-\omega_{\mathbb{P}}\left(a_{i}\right)\right|\right] $$
@@ -4835,13 +5054,15 @@ $$ \hat{S}5(\mathbb{Q},\mathbb{P}) = 1-\sqrt{\frac{1}{2n}\sum_{i=1}^{n}\left[\le
 
 $$ \hat{D}5(\mathbb{Q},\mathbb{P}) = \sqrt{\frac{1}{2n}\sum_{i=1}^{n}\left[\left|\mu_{\mathbb{Q}}\left(a_{i}\right)-\mu_{\mathbb{P}}\left(a_{i}\right)\right|^{2}+\left|\gamma_{\mathbb{Q}}\left(a_{i}\right)-\gamma_{\mathbb{P}}\left(a_{i}\right)\right|^{2}+\left|\omega_{\mathbb{Q}}\left(a_{i}\right)-\omega_{\mathbb{P}}\left(a_{i}\right)\right|^{2}\right]} $$
 
-**定义 15.8. [Li 2007]** 设 $\mathbb{Q}$ 和 $\mathbb{P}$ 为 $\Delta$ 中的两个 IFS，则它们之间的相似度度量定义为
+### 定义 15.8. [Li 2007]
+设 `$\mathbb{Q}$` 和 `$\mathbb{P}$` 为 `$\Delta$` 中的两个 IFS，则它们之间的相似度度量定义为
 
 $$ \hat{S}6(\mathbb{Q},\mathbb{P}) = 1-\sqrt{\frac{1}{2n}\sum_{i=1}^{n}\left[\left|\mu_{\mathbb{Q}}\left(a_{i}\right)-\mu_{\mathbb{P}}\left(a_{i}\right)\right|^{2}+\left|\gamma_{\mathbb{Q}}\left(a_{i}\right)-\gamma_{\mathbb{P}}\left(a_{i}\right)\right|^{2}\right]} $$
 
 $$ \hat{D}6(\mathbb{Q},\mathbb{P}) = \sqrt{\frac{1}{2n}\sum_{i=1}^{n}\left[\left|\mu_{\mathbb{Q}}\left(a_{i}\right)-\mu_{\mathbb{P}}\left(a_{i}\right)\right|^{2}+\left|\gamma_{\mathbb{Q}}\left(a_{i}\right)-\gamma_{\mathbb{P}}\left(a_{i}\right)\right|^{2}\right]} $$
 
-**定义 15.9. [Sharma 和 Tripathi 2020]** 假设 $\mathbb{A}$ 为全集，则两个 IFS $\mathbb{Q}$ 和 $\mathbb{P}$ 之间的正弦距离度量和余弦相似度度量可以定义为
+### 定义 15.9. [Sharma 和 Tripathi 2020]
+假设 `$\mathbb{A}$` 为全集，则两个 IFS `$\mathbb{Q}$` 和 `$\mathbb{P}$` 之间的正弦距离度量和余弦相似度度量可以定义为
 
 $$ \dot{D}7(\mathbb{Q}, \mathbb{P}) = \frac{1}{2n}\sum_{i=1}^{n}\left(\sin\left(\frac{\left|\rho_{\mathbb{Q}}\left(\mathbf{a}_{i}\right)-\rho_{\mathbb{P}}\left(\mathbf{a}_{i}\right)\right|}{2}\right)\pi + \sin\left(\frac{\left|\aleph_{\mathbb{Q}}\left(\mathbf{a}_{i}\right)-\aleph_{\mathbb{P}}\left(\mathbf{a}_{i}\right)\right|}{2}\right)\pi\right) $$
 
@@ -4851,7 +5072,8 @@ $$ \dot{S}7(\mathbb{Q}, \mathbb{P}) = \frac{1}{2n}\sum_{i=1}^{n}\left(\cos\left(
 
 $$ \dot{S}8(\mathbb{Q}, \mathbb{P}) = \frac{1}{2n}\sum_{i=1}^{n}\left(\cos\left(\frac{\left|\sqrt{\rho_{\mathbb{Q}}\left(\mathbf{a}_{i}\right)}-\sqrt{\rho_{\mathbb{P}}\left(\mathbf{a}_{i}\right)}\right|}{2}\right)\pi + \cos\left(\frac{\left|\sqrt{\aleph_{\mathbb{Q}}\left(\mathbf{a}_{i}\right)}-\sqrt{\aleph_{\mathbb{P}}\left(\mathbf{a}_{i}\right)}\right|}{2}\right)\pi\right) $$
 
-**定义 15.10. [Ejegwa 2022]** 假设 $\mathbb{Q}$ 和 $\mathbb{P}$ 为话语域 $\mathbb{A}$ 中的两个 IFS，则它们之间的距离相似度度量可以定义为
+### 定义 15.10. [Ejegwa 2022]
+假设 `$\mathbb{Q}$` 和 `$\mathbb{P}$` 为话语域 `$\mathbb{A}$` 中的两个 IFS，则它们之间的距离相似度度量可以定义为
 
 $$ \dot{S}9(\mathbb{Q}, \mathbb{P}) = \frac{1}{n}\sum_{i=1}^{n}\sqrt{\rho_{\mathbb{Q}}\left(\mathbf{a}_{i}\right)\rho_{\mathbb{P}}\left(\mathbf{a}_{i}\right) + \aleph_{\mathbb{Q}}\left(\mathbf{a}_{i}\right)\aleph_{\mathbb{P}}\left(\mathbf{a}_{i}\right) + \omega_{\mathbb{Q}}\left(\mathbf{a}_{i}\right)\omega_{\mathbb{P}}\left(\mathbf{a}_{i}\right)} $$
 
@@ -4861,20 +5083,17 @@ $$ \dot{D}9(\mathbb{Q}, \mathbb{P}) = 1 - \frac{1}{n}\sum_{i=1}^{n}\sqrt{\rho_{\
 
 在下一节中，我们将讨论所提出的距离度量。由于相似度度量是距离度量的孪生概念，我们将在本节中同时讨论两者。
 
-设 $\mathbb{Q}$ 和 $\mathbb{P}$ 为话语域 $\mathbb{A}$ 中的两个 IFS，则它们之间的距离相似度度量可以定义如下：
+设 `$\mathbb{Q}$` 和 `$\mathbb{P}$` 为话语域 `$\mathbb{A}$` 中的两个 IFS，则它们之间的距离相似度度量可以定义如下：
 
 $$ \dot{D}10\left(\mathbb{Q}, \mathbb{P}\right) = 1 - \frac{1}{n}\sum_{i=1}^{n}\left[\sin\frac{\pi}{2}\left(\sqrt{\rho_{\mathbb{Q}}\left(\mathbf{a}_{i}\right)\rho_{\mathbb{P}}\left(\mathbf{a}_{i}\right) + \aleph_{\mathbb{Q}}\left(\mathbf{a}_{i}\right)\aleph_{\mathbb{P}}\left(\mathbf{a}_{i}\right) + \omega_{\mathbb{Q}}\left(\mathbf{a}_{i}\right)\omega_{\mathbb{P}}\left(\mathbf{a}_{i}\right)}\right)\right] $$
 
 $$ \dot{S}10(\mathbb{Q}, \mathbb{P}) = \frac{1}{n}\sum_{i=1}^{n}\left[\sin\frac{\pi}{2}\left(\sqrt{\rho_{\mathbb{Q}}\left(\mathbf{a}_{i}\right)\rho_{\mathbb{P}}\left(\mathbf{a}_{i}\right) + \aleph_{\mathbb{Q}}\left(\mathbf{a}_{i}\right)\aleph_{\mathbb{P}}\left(\mathbf{a}_{i}\right) + \omega_{\mathbb{Q}}\left(\mathbf{a}_{i}\right)\omega_{\mathbb{P}}\left(\mathbf{a}_{i}\right)}\right)\right] $$
 
-
-
-
 # 15.4 数值示例
 
 在本节中，我们将对建议的度量进行数值验证。为了测试所提出度量的有效性，我们将借助示例对提议的距离度量进行计算。
 
-设 $\mathbb{Q}, \mathbb{P}$ 和 $\mathbb{O}$ 是集合 $A=\{a_{1},a_{2},\ldots,a_{n-1},a_{n}\}$ 中的三个 IFS，则
+设 `$\mathbb{Q}, \mathbb{P}$` 和 `$\mathbb{O}$` 是集合 `A=\{a_{1},a_{2},\ldots,a_{n-1},a_{n}\}` 中的三个 IFS，则
 
 $$
 \begin{split}
@@ -4892,31 +5111,31 @@ $$
 \end{split}
 $$
 
-同理，我们可以证明 $\hat{D}_{9}(\mathbb{Q}, \mathbb{P}), \hat{D}_{10}(\mathbb{Q}, \mathbb{O}), \hat{D}_{11}(\mathbb{Q}, \mathbb{O})$。
+同理，我们可以证明 `$\hat{D}_{9}(\mathbb{Q}, \mathbb{P}), \hat{D}_{10}(\mathbb{Q}, \mathbb{O}), \hat{D}_{11}(\mathbb{Q}, \mathbb{O})$`。
 
 数值依据：从上述计算中可以得出以下结论。
 
-1. $0 \leq \hat{D}_{i} (\mathbb{Q}, \mathbb{O}) \leq 1$。
-2. $\hat{D}_{i} (\mathbb{Q}, \mathbb{O}) = 0 \iff \mathbb{Q} \equiv \mathbb{O}$。
-3. $\hat{D}_{i} (\mathbb{Q}, \mathbb{O}) = \hat{D}_{i} (\mathbb{O}, \mathbb{Q})$。
-4. $\hat{D}_{i} (\mathbb{Q}, \mathbb{P}) \leq \hat{D}_{i} (\mathbb{Q}, \mathbb{O}) + \hat{D}_{i} (\mathbb{O}, \mathbb{P})$。
+1. `0 \leq \hat{D}_{i} (\mathbb{Q}, \mathbb{O}) \leq 1`。
+2. `$\hat{D}_{i} (\mathbb{Q}, \mathbb{O}) = 0 \iff \mathbb{Q} \equiv \mathbb{O}$`。
+3. `$\hat{D}_{i} (\mathbb{Q}, \mathbb{O}) = \hat{D}_{i} (\mathbb{O}, \mathbb{Q})$`。
+4. `$\hat{D}_{i} (\mathbb{Q}, \mathbb{P}) \leq \hat{D}_{i} (\mathbb{Q}, \mathbb{O}) + \hat{D}_{i} (\mathbb{O}, \mathbb{P})$`。
 
 表 15.1 展示了提议的距离度量和加权距离度量的数值。
 
-**表 15.1** $\mathbb{Q}, \mathbb{O},$ 和 $\mathbb{P}$ 的提议距离度量
+**表 15.1** `$\mathbb{Q}, \mathbb{O},$` 和 `$\mathbb{P}$` 的提议距离度量
 
-| 距离度量 | $\hat{d}_{10}(\mathbb{Q}, \mathbb{O})$ | $\hat{d}_{10}(\mathbb{O}, \mathbb{P})$ | $\hat{d}_{10}(\mathbb{Q}, \mathbb{P})$ |
+| 距离度量 | `$\hat{d}_{10}(\mathbb{Q}, \mathbb{O})$` | `$\hat{d}_{10}(\mathbb{O}, \mathbb{P})$` | `$\hat{d}_{10}(\mathbb{Q}, \mathbb{P})$` |
 |---|---|---|---|
-| $\hat{d}_{10}(\mathbb{Q}, \mathbb{O})$ | 0.001614 | 0.014157 | 0.014268 |
-| $\hat{d}_{10}(\mathbb{Q}, \mathbb{O})$ | 0.667305 | 0.670701 | 0.670644 |
+| `$\hat{d}_{10}(\mathbb{Q}, \mathbb{O})$` | 0.001614 | 0.014157 | 0.014268 |
+| `$\hat{d}_{10}(\mathbb{Q}, \mathbb{O})$` | 0.667305 | 0.670701 | 0.670644 |
 
-### 15.5 应用
+## 15.5 应用
 
 在这里，我们展示了与所提议的距离度量相关的应用，以证明该提议度量的可靠性。
 
-#### 15.5.1 模式识别
+### 15.5.1 模式识别
 
-假设有三个模式 $\mathbb{Q}, \mathbb{P}$ 和 $\mathbb{O}$，我们想确定以下哪个模式最接近 $\mathbb{Y}$，其中
+假设有三个模式 `$\mathbb{Q}, \mathbb{P}$` 和 `$\mathbb{O}$`，我们想确定以下哪个模式最接近 `$\mathbb{Y}$`，其中
 
 $$
 \mathbb{Q} = \langle 1.0/a_{1} \rangle, \langle 0.8,0/a_{2} \rangle, \langle 0.7,0.1/a_{3} \rangle, \quad \mathbb{P} = \langle 0.8,0.1/a_{1} \rangle, \langle 1.0/a_{2} \rangle, \langle 0.9,0.1/a_{3} \rangle,
@@ -4926,22 +5145,24 @@ $$
 \mathbb{O} = \langle 0.6,0.2/a_{1} \rangle, \langle 0.8,0/a_{2} \rangle, \langle 1.0/a_{3} \rangle.
 $$
 
-并设 $\mathbb{Y} = \langle 0.5,0.3/a_{1} \rangle, \langle 0.6,0.2/a_{2} \rangle, \langle 0.8,0.1/a_{3} \rangle$。
+并设 `$\mathbb{Y} = \langle 0.5,0.3/a_{1} \rangle, \langle 0.6,0.2/a_{2} \rangle, \langle 0.8,0.1/a_{3} \rangle$`。
 
-设权重 $w_{i}$ 分别为 0.5、0.3 和 0.2。
 
-表 15.2 表明，$\mathbb{P}$ 表现出与 $\mathbb{Y}$ 最近的接近度，因为它显示了最小的距离，这表明 $\mathbb{Y}$ 是被确认的且最接近的模式。
 
-**表 15.2** $\mathbb{Q}, \mathbb{P},$ 和 $\mathbb{O}$ 之间的距离度量
+设权重 `w_i` 分别为 0.5、0.3 和 0.2。
 
-| 距离度量 | $\hat{d}(\mathbb{Q}, \mathbb{Y})$ | $\hat{d}(\mathbb{P}, \mathbb{Y})$ | $\hat{d}(\mathbb{O}, \mathbb{Y})$ |
+表 15.2 表明，`mathbb{P}` 表现出与 `mathbb{Y}` 最近的接近度，因为它显示了最小的距离，这表明 `mathbb{Y}` 是被确认的且最接近的模式。
+
+**表 15.2** `mathbb{Q}, mathbb{P},` 和 `mathbb{O}` 之间的距离度量
+
+| 距离度量 | `hat{d}(mathbb{Q}, mathbb{Y})` | `hat{d}(mathbb{P}, mathbb{Y})` | `hat{d}(mathbb{O}, mathbb{Y})` |
 | :--- | :--- | :--- | :--- |
-| $\hat{d}_{10}(\mathbb{Q}, \mathbb{P})$ | 0.07 | **0.02** | 0.04 |
-| $\hat{d}_{11}(\mathbb{Q}, \mathbb{P})$ | 0.08 | **0.02** | 0.03 |
+| `hat{d}_{10}(mathbb{Q}, mathbb{P})` | 0.07 | **0.02** | 0.04 |
+| `hat{d}_{11}(mathbb{Q}, mathbb{P})` | 0.08 | **0.02** | 0.03 |
 
-#### 15.5.2 医疗诊断
+### 15.5.2 医疗诊断
 
-假设一名患者已由医疗顾问根据五个症状进行检查，如体温（$a_1$）、疲劳（$a_2$）、胃部问题（$a_3$）、头痛（$a_4$）和胸痛（$a_5$），诊断集合 $O = \{\text{病毒性发烧, 伤寒, 胃部问题, 疟疾, 和胸部问题}\}$。利用患者提供的反馈，我们旨在识别与其症状或状况最相符的疾病。
+假设一名患者已由医疗顾问根据五个症状进行检查，如体温（`a_1`）、疲劳（`a_2`）、胃部问题（`a_3`）、头痛（`a_4`）和胸痛（`a_5`），诊断集合 `O = {病毒性发烧, 伤寒, 胃部问题, 疟疾, 和胸部问题}`。利用患者提供的反馈，我们旨在识别与其症状或状况最相符的疾病。
 
 $$
 \begin{array}{l}
@@ -4953,67 +5174,66 @@ $$
 \end{array}
 $$
 
-并设 $\mathbb{O} = \{<0.8,0.1>, <0.6,0.1>, <0.2,0.8>, <0.6,0.1>, <0.1,0.6>\}$。
+并设 `mathbb{O} = {<0.8,0.1>, <0.6,0.1>, <0.2,0.8>, <0.6,0.1>, <0.1,0.6>}`。
 
-设权重 $w_i$ 分别为 0.15、0.2、0.1、0.25 和 0.3。
+设权重 `w_i` 分别为 0.15、0.2、0.1、0.25 和 0.3。
 
-表 15.3 显示，$\mathbb{O}$ 最接近 $\mathbb{Q}_{1}$，因为它具有最小的距离，这意味着该人可能患有病毒性发烧。
+表 15.3 显示，`mathbb{O}` 最接近 `mathbb{Q}_{1}`，因为它具有最小的距离，这意味着该人可能患有病毒性发烧。
 
 **表 15.3** 医疗诊断与患者之间的距离度量
 
-| 距离度量 | $\hat{d}(\mathbb{O}, \mathbb{Q}_{1})$ | $\hat{d}(\mathbb{O}, \mathbb{Q}_{2})$ | $\hat{d}(\mathbb{O}, \mathbb{Q}_{3})$ | $\hat{d}(\mathbb{O}, \mathbb{Q}_{4})$ | $\hat{d}(\mathbb{O}, \mathbb{Q}_{5})$ |
+| 距离度量 | `hat{d}(mathbb{O}, mathbb{Q}_{1})` | `hat{d}(mathbb{O}, mathbb{Q}_{2})` | `hat{d}(mathbb{O}, mathbb{Q}_{3})` | `hat{d}(mathbb{O}, mathbb{Q}_{4})` | `hat{d}(mathbb{O}, mathbb{Q}_{5})` |
 |:------------------|:-------------------------------:|:-------------------------------:|:-------------------------------:|:-------------------------------:|:-------------------------------:|
-| $\hat{D}10(\mathbb{Q}_{j}, \mathbb{P})$ | 0.01 | 0.01 | 0.01 | 0.12 | 0.13 |
-| $\hat{D}11(\mathbb{Q}_{j}, \mathbb{P})$ | 0.01 | 0.01 | 0.02 | 0.07 | 0.14 |
+| `hat{D}10(mathbb{Q}_{j}, mathbb{P})` | 0.01 | 0.01 | 0.01 | 0.12 | 0.13 |
+| `hat{D}11(mathbb{Q}_{j}, mathbb{P})` | 0.01 | 0.01 | 0.02 | 0.07 | 0.14 |
 
-### 15.6 比较分析
+## 15.6 比较分析
 
 比较分析是一种有价值的工具，它允许考察和评估不同变量、主题或现象之间的相似性、差异、模式和关系。在本文中，我们的目标是通过将其应用于模式识别和医疗诊断等实际场景，来评估所提议度量的可靠性。
 
 已经对一些著名研究人员提出的距离度量进行了比较，并得到了模式识别和医疗诊断的统一结果。表 15.4 和 15.5 分别展示了针对本文中列出的所有距离度量在模式识别和医疗诊断中所得到的结果。
 
-**表 15.4** 模式识别中 $\mathbb{Q}_{j}, \mathbb{P}$, $\mathbb{O}$ 与 $\mathbb{G}$ 之间距离度量的比较分析
+**表 15.4** 模式识别中 `mathbb{Q}_{j}, mathbb{P}`, `mathbb{O}` 与 `mathbb{G}` 之间距离度量的比较分析
 
-| 距离度量 | $\hat{d}(\mathbb{Q}_{j}, \mathbb{G})$ | $\hat{d}(\mathbb{P}, \mathbb{G})$ | $\hat{d}(\mathbb{O}, \mathbb{G})$ |
+| 距离度量 | `hat{d}(mathbb{Q}_{j}, mathbb{G})` | `hat{d}(mathbb{P}, mathbb{G})` | `hat{d}(mathbb{O}, mathbb{G})` |
 |:------------------|:-------------------------:|:----------------------:|:-----------------------:|
-| $\hat{D}1(\mathbb{Q}_{j}, \mathbb{P})$ | 0.37 | 0.35 | 0.15 |
-| $\hat{D}2(\mathbb{Q}_{j}, \mathbb{P})$ | 1 | 1 | 1 |
-| $\hat{D}3(\mathbb{Q}_{j}, \mathbb{P})$ | 0.56 | 0.56 | 0.25 |
-| $\hat{D}4(\mathbb{Q}_{j}, \mathbb{P})$ | 0.5 | 0.5 | 0.22 |
-| $\hat{D}5(\mathbb{Q}_{j}, \mathbb{P})$ | 0.40 | 0.40 | 0.18 |
-| $\hat{D}6(\mathbb{Q}_{j}, \mathbb{P})$ | 0.37 | 0.35 | 0.15 |
-| $\hat{D}7(\mathbb{Q}_{j}, \mathbb{P})$ | 0.55 | 0.52 | 0.23 |
-| $\hat{D}8(\mathbb{Q}_{j}, \mathbb{P})$ | 0.39 | 1.07 | 0.53 |
-| $\hat{D}9(\mathbb{Q}_{j}, \mathbb{P})$ | 0.20 | 0.10 | 0.14 |
-| $\hat{D}10(\mathbb{Q}_{j}, \mathbb{P})$ | 0.07 | 0.02 | 0.04 |
-| $\hat{D}11(\mathbb{Q}_{j}, \mathbb{P})$ | 0.08 | 0.02 | 0.03 |
-
-
-
+| `hat{D}1(mathbb{Q}_{j}, mathbb{P})` | 0.37 | 0.35 | 0.15 |
+| `hat{D}2(mathbb{Q}_{j}, mathbb{P})` | 1 | 1 | 1 |
+| `hat{D}3(mathbb{Q}_{j}, mathbb{P})` | 0.56 | 0.56 | 0.25 |
+| `hat{D}4(mathbb{Q}_{j}, mathbb{P})` | 0.5 | 0.5 | 0.22 |
+| `hat{D}5(mathbb{Q}_{j}, mathbb{P})` | 0.40 | 0.40 | 0.18 |
+| `hat{D}6(mathbb{Q}_{j}, mathbb{P})` | 0.37 | 0.35 | 0.15 |
+| `hat{D}7(mathbb{Q}_{j}, mathbb{P})` | 0.55 | 0.52 | 0.23 |
+| `hat{D}8(mathbb{Q}_{j}, mathbb{P})` | 0.39 | 1.07 | 0.53 |
+| `hat{D}9(mathbb{Q}_{j}, mathbb{P})` | 0.20 | 0.10 | 0.14 |
+| `hat{D}10(mathbb{Q}_{j}, mathbb{P})` | 0.07 | 0.02 | 0.04 |
+| `hat{D}11(mathbb{Q}_{j}, mathbb{P})` | 0.08 | 0.02 | 0.03 |
 
 图 15.1 展示了模式识别比较分析所得结果的图形表示。
 
 ![](img/e9de70cd491e84262133af63cb33d500_302_0.png)
 
 ## 图 15.1
+
 模式识别距离测度的比较分析。
 
 ### 表 15.5
+
 患者与症状之间距离测度的比较分析
 
-| 距离测度 | $D_1(Q_1, Q_3)$ | $D_1(Q_2, Q_3)$ | $D_1(Q_4, Q_3)$ | $D_1(Q_5, Q_3)$ | $D_1(Q_7, Q_3)$ |
+| 距离测度 | `D_1(Q_1, Q_3)` | `D_1(Q_2, Q_3)` | `D_1(Q_4, Q_3)` | `D_1(Q_5, Q_3)` | `D_1(Q_7, Q_3)` |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| $D_1(Q_3, P)$ | 0.19 | 0.18 | 0.20 | 0.46 | 0.50 |
-| $D_2(Q_3, P)$ | 1.4 | 1.2 | 1.4 | 2.7 | 2.8 |
-| $D_3(Q_3, P)$ | 0.64 | 0.56 | 0.70 | 1.17 | 1.29 |
-| $D_4(Q_3, P)$ | 0.18 | 0.16 | 0.18 | 0.36 | 0.37 |
-| $D_5(Q_3, P)$ | 0.23 | 0.20 | 0.25 | 0.43 | 0.40 |
-| $D_6(Q_3, P)$ | 0.23 | 0.23 | 0.28 | 0.51 | 0.56 |
-| $D_7(Q_3, P)$ | 0.28 | 0.26 | 0.29 | 0.62 | 0.65 |
-| $D_8(Q_3, P)$ | 0.27 | 0.32 | 0.23 | 0.56 | 0.60 |
-| $D_9(Q_3, P)$ | 0.30 | 0.30 | 0.29 | 0.24 | 0.23 |
-| $D_{10}(Q_3, P)$ | 0.01 | 0.01 | 0.01 | 0.12 | 0.13 |
-| $D_{11}(Q_3, P)$ | 0.01 | 0.01 | 0.02 | 0.07 | 0.14 |
+| `D_1(Q_3, P)` | 0.19 | 0.18 | 0.20 | 0.46 | 0.50 |
+| `D_2(Q_3, P)` | 1.4 | 1.2 | 1.4 | 2.7 | 2.8 |
+| `D_3(Q_3, P)` | 0.64 | 0.56 | 0.70 | 1.17 | 1.29 |
+| `D_4(Q_3, P)` | 0.18 | 0.16 | 0.18 | 0.36 | 0.37 |
+| `D_5(Q_3, P)` | 0.23 | 0.20 | 0.25 | 0.43 | 0.40 |
+| `D_6(Q_3, P)` | 0.23 | 0.23 | 0.28 | 0.51 | 0.56 |
+| `D_7(Q_3, P)` | 0.28 | 0.26 | 0.29 | 0.62 | 0.65 |
+| `D_8(Q_3, P)` | 0.27 | 0.32 | 0.23 | 0.56 | 0.60 |
+| `D_9(Q_3, P)` | 0.30 | 0.30 | 0.29 | 0.24 | 0.23 |
+| `D_{10}(Q_3, P)` | 0.01 | 0.01 | 0.01 | 0.12 | 0.13 |
+| `D_{11}(Q_3, P)` | 0.01 | 0.01 | 0.02 | 0.07 | 0.14 |
 
 图 15.2 展示了医疗诊断比较分析所得结果的图形表示。
 
@@ -5022,30 +5242,36 @@ $$
 ![](img/e9de70cd491e84262133af63cb33d500_303_0.png)
 
 ## 图 15.2
+
 医疗诊断距离测度的比较分析。
 
-### 15.7 敏感性分析
+## 15.7 敏感性分析
 
 最初，决策者被赋予相等的权重来对选项进行排序。然而，可能出现分配给决策者观点的偏好不一致的情况。本节中已考虑了此类情形。
 
 我们考察了六种情况：在前三种情况中，分别优先照顾每一位决策者；在后三种情况中，每次同时赋予两位决策者相等的权重。
 
-情况 I：若 $w_1 = 0.45, w_2 = 0.35, w_3 = 0.20$；
-情况 II：若 $w_1 = 0.10, w_2 = 0.55, w_3 = 0.35$；
-情况 III：若 $w_1 = 0.33, w_2 = 0.27, w_3 = 0.40$；
-情况 IV：若 $w_1 = 0.40, w_2 = 0.40, w_3 = 0.20$；
-情况 V：若 $w_1 = 0.30, w_2 = 0.35, w_3 = 0.35$；
-情况 VI：若 $w_1 = 0.30, w_2 = 0.40, w_3 = 0.30$。
+情况 I：若 `w_1 = 0.45, w_2 = 0.35, w_3 = 0.20`；
+
+情况 II：若 `w_1 = 0.10, w_2 = 0.55, w_3 = 0.35`；
+
+情况 III：若 `w_1 = 0.33, w_2 = 0.27, w_3 = 0.40`；
+
+情况 IV：若 `w_1 = 0.40, w_2 = 0.40, w_3 = 0.20`；
+
+情况 V：若 `w_1 = 0.30, w_2 = 0.35, w_3 = 0.35`；
+
+情况 VI：若 `w_1 = 0.30, w_2 = 0.40, w_3 = 0.30`。
 
 上述六种情况的结果汇总于表 15.6 中。
 
-### 15.8 结论
+## 15.8 结论
 
 距离测度是分析众多现实决策场景的实用工具。本章探讨了距离测度及其对应的相似性测度。该测度的目的是为决策提供一个可靠且灵活的工具。本文将该测度应用于与模式识别和医疗诊断相关的情境，但它也可以与其他决策情境结合使用。该测度还可应用于多准则决策（MCDM）问题，以研究决策的其他方面。通过数值计算证明了该测度的能力。通过与著名作者的对比，展示了该测度的新颖性。所做的敏感性分析表明，即使决策者的优先级发生变化，该测度依然有效。该研究的局限性在于，在决策结果中未能充分考量个别决策者的评估。根据所示结果，我们可以得出结论：预期的距离-相似性测度是解决现实问题的良好工具。我们期待对所提出测度的扩展与推广，以及其在多准则决策问题中的应用。
 
 | **表 15.6** | 使用六种不同权重标准的敏感性分析 |
 | :--- | :--- | :--- | :--- |
-| 距离测度 | $\overline{D}_{11}(Q, P)$ | $\overline{D}_{11}(Q, P)$ | $\overline{D}_{11}(Q, P)$ |
+| 距离测度 | `overline{D}_{11}(Q, P)` | `overline{D}_{11}(Q, P)` | `overline{D}_{11}(Q, P)` |
 | 情况 I | 0.70 | 0.30 | 0.81 |
 | 情况 II | 0.78 | 0.30 | 0.80 |
 | 情况 III | 0.73 | 0.30 | 0.75 |
@@ -5055,12 +5281,12 @@ $$
 
 # 关键词
 
-- **决策**
-- **距离测度**
-- **直觉模糊集**
-- **医疗诊断**
-- **模式识别**
-- **相似性测度**
+- `决策`
+- `距离测度`
+- `直觉模糊集`
+- `医疗诊断`
+- `模式识别`
+- `相似性测度`
 
 # 参考文献
 
@@ -5077,39 +5303,67 @@ $$
 11. Burillo, P., & Bustince, H. (1996). 直觉模糊集及区间值模糊集上的熵。*Fuzzy Sets and Systems*, 78(3), 305-316. https://doi.org/10.1016/0165-0114(96)84611-2.
 12. Smidt, E., & Kacprzyk, J. (2006). 直觉模糊集之间的距离：直接方法可能无效。收录于：第三届 IEEE 智能系统国际会议，第 716-721 页，https://doi.org/10.1109/IS.2006.348507.
 13. Wang, W., & Xin, X. (2005). 直觉模糊集之间的距离测度。*Pattern Recognition Letters*, 26, 2063-2069. https://doi.org/10.1016/j.patrec.2005.03.018.
-14. Park, J. H., Lim, K. M., & Kwon, Y. C. (2009). 直觉模糊集之间的距离测度及其在模式识别中的应用。*Journal of Korean Institute of Intelligent Systems*, 19(4). https://doi.org/10.5391/jkiiis.2009.19.4.556.
-15. Hatzimichailidis, A., Papakostas, G., & Kaburlasos, V. (2012). 直觉模糊集的新距离测度及其在模式识别问题中的应用。*International Journal of Intelligent Systems*, 27(4), 396-409. https://doi.org/10.1002/int.21529
-16. Solanki, R., Rahman, M.M., Kaushal, M., Lohani, M. Q., & Muhuri, P. (2018). 直觉模糊集上的新距离测度及其在模式识别中的应用。收录于：IEEE 计算智能研讨会系列 (SSCI)，第 1466-1471 页，https://doi.org/10.1109/SSCI.2018.8628798.
-17. Davvaz, B., & Sadrabadi, E. (2015). 直觉模糊集在医学中的应用。*International Journal of Biomathematics*, 9(3), 150813193917005. https://doi.org/10.1142/S1793524516500376.
-18. Dutta, P., & Goala, S. (2018). 使用直觉模糊集上的先进距离测度进行医疗诊断中的模糊决策。*The Open Cybernetics & Systems Journal*, 12, 136-149. https://doi.org/10.2174/1877410X0181010136.
-19. Goala, S., & Bora, S. L. (2020). 通过新距离测度进行医疗诊断中的直觉模糊多属性决策。*International Journal of Scientific & Technology Research (IJSTR)*, 9(1), 2277-8616.
-
 
 
 
 ## 参考文献
 
+14. Park, J. H., Lim, K. M., & Kwon, Y. C. (2009). 直觉模糊集之间的距离测度及其在模式识别中的应用。*Journal of Korean Institute of Intelligent Systems*, 19(4). https://doi.org/10.5391/jkiiis.2009.19.4.556.
+
+15. Hatzimichailidis, A., Papakostas, G., & Kaburlasos, V. (2012). 直觉模糊集的新距离测度及其在模式识别问题中的应用。*International Journal of Intelligent Systems*, 27(4), 396-409. https://doi.org/10.1002/int.21529
+
+16. Solanki, R., Rahman, M.M., Kaushal, M., Lohani, M. Q., & Muhuri, P. (2018). 直觉模糊集上的新距离测度及其在模式识别中的应用。收录于：IEEE 计算智能研讨会系列 (SSCI)，第 1466-1471 页，https://doi.org/10.1109/SSCI.2018.8628798.
+
+17. Davvaz, B., & Sadrabadi, E. (2015). 直觉模糊集在医学中的应用。*International Journal of Biomathematics*, 9(3), 150813193917005. https://doi.org/10.1142/S1793524516500376.
+
+18. Dutta, P., & Goala, S. (2018). 使用直觉模糊集上的先进距离测度进行医疗诊断中的模糊决策。*The Open Cybernetics & Systems Journal*, 12, 136-149. https://doi.org/10.2174/1877410X0181010136.
+
+19. Goala, S., & Bora, S. L. (2020). 通过新距离测度进行医疗诊断中的直觉模糊多属性决策。*International Journal of Scientific & Technology Research (IJSTR)*, 9(1), 2277-8616.
+
+### 参考文献
+
 20. Garg, H., & Kaur, G. (2020). 立方直觉模糊集的新距离度量及其在模式识别和医学诊断中的应用。*《颗粒计算》(Granular Computing), 5*, 169–184. https://doi.org/10.1007/s41066-018-0140-3.
+
 21. Mahanta, J., & Panda, S. (2021). 具有多种应用的直觉模糊集新距离度量。*《智能系统国际杂志》(International Journal of Intelligent Systems), 36*. https://doi.org/10.1002/int.22312.
+
 22. Gohain, B., Chutia, R., Dutta, P., & Gogoi, S. (2022). 直觉模糊集的两个新相似性度量及其应用。*《智能系统国际杂志》(International Journal of Intelligent Systems), 37*, 5557–5596. https://doi.org/10.1002/int.22802.
+
 23. Orlan, A. (2022). 区间值直觉模糊集的新熵和距离度量及其在多准则群体决策中的应用。*《一般系统国际杂志》(International Journal of General Systems), 51*(4), 413–440. https://doi.org/10.1080/03081079.2022.2036138.
+
 24. Zeng, W., Cui, H., Liu, Y., Yin, Q., & Xu, Z. (2022). 直觉模糊集之间的新距离度量及其在模式识别中的应用。*《伊朗模糊系统杂志》(Iranian Journal of Fuzzy Systems), 19*(3), 127–137. https://doi.org/10.22111/ijfs.2022.6947.
+
 25. Szmidt, E., & Kacprzyk, J. (2004). 使用直觉模糊集相似性度量的医学诊断推理。*《直觉模糊集笔记》(Note on Intuitionistic Fuzzy Sets), 10*(4), 61–69.
+
 26. Chen, S. M., & Randyanto, Y. (2013). 直觉模糊集之间的新相似性度量及其应用。*《模式识别与人工智能国际杂志》(International Journal of Pattern Recognition and Artificial Intelligence), 27*, 350021. https://doi.org/10.1142/S0218081413500213.
+
 27. Ye, J. (2016). 基于余弦函数的直觉模糊集相似性度量在机械设计决策中的应用。*《智能与模糊系统杂志》(Journal of Intelligent & Fuzzy Systems), 30*, 151–158. https://doi.org/10.3233/IFS-151741.
+
 28. Luo, M., & Liang, J. (2019). 区间值直觉模糊集的新相似性度量及其应用。*《对称性》(Symmetry), 10*(10), 441. https://doi.org/10.5281/zenodo.3047937.
+
 29. Iqbal, M., & Rizwan, U. (2019). 使用新相似性度量的直觉模糊集的一些应用。*《环境智能与人机计算杂志》(Journal of Ambient Intelligence and Humanized Computing)*, https://doi.org/10.1007/s12652-019-01516-7.
+
 30. Kumari, R., & Misha, A. R. (2020). 基于参数度量的直觉模糊集多准则 COPRAS 方法：绿色供应商选择的应用。*《伊朗科学与技术国际杂志，电气工程事务》(The Iranian Journal of Science and Technology, Transactions of Electrical Engineering), 44*, 1645–1662. https://doi.org/10.1007/s40998-020-00312-w.
+
 31. Adamu, I. M. (2021). 直觉模糊集在环境管理中的应用。*《直觉模糊集笔记》(Notes on Intuitionistic Fuzzy Sets), 27*(3), 40–50. https://doi.org/10.7546/nifs.2021.27.3.40-50.
+
 32. Ejegwa, P. A., & Agbetayo, J. M. (2022). 通过直觉模糊对实现的相似度-距离决策技术及其应用。*《计算与认知工程杂志》(Journal of Computational and Cognitive Engineering), 2*(1). https://doi.org/10.47852/bonviewJCCE512522514.
+
 33. Thao, N. X., & Chou, S. Y. (2022). 直觉模糊集的新相似性度量、熵及其在软件质量评估中的应用。*《软计算》(Soft Computing), 26*(4), 0009–2020, https://doi.org/10.1007/s0500-021-06373-1.
+
 34. Gupta, R., & Kumar, S. (2022). 直觉模糊基于相似性的信息度量在模式识别和聚类中的应用。*《模糊系统国际杂志》(International Journal of Fuzzy Systems), 24*, 2493–2510. https://doi.org/10.1007/s40815-022-01272-5.
+
 35. Kumar, R., & Kumar, S. (2023). 一种新的直觉模糊相似性度量及其在决策、模式识别和聚类问题中的应用。*《颗粒计算》(Granular Computing), 8*, 1027–1050. https://doi.org/10.1007/s41066-023-00366-1.
+
 36. Patel, A., Jana, S., & Mahanta, J. (2024). 直觉模糊集相似性度量的构建及其在面部识别和软件质量评估中的应用。*《专家系统与应用程序》(Expert Systems with Applications), 237*, 121491.
+
 37. Dutta, P., & Borah, G. (2023). 通过基于广义梯形直觉模糊数的新相似性度量进行多准则群体决策及其在多种 COVID-19 场景中的应用。*《人工智能评论》(Artificial Intelligence Review), 56*, 3543–3617. https://doi.org/10.1007/s10462-022-10251-z.
+
 38. Bajaj, J., & Kumar, S. (2023). 一种新的直觉模糊相关系数方法及其在多准则决策中的应用。*《决策分析杂志》(Decision Analytics Journal), 9*, 100340.
+
 39. Patel, A., Lemtur, S., & Mahanta, J. (2023). 一种新的直觉模糊相关系数方法及其在多准则决策中的应用。*《决策分析杂志》(Decision Analytics Journal), 9*, 100340.
+
 40. Chakraborty, J., Mukherjee, S., & Sahoo, L. (2023). 在模糊环境中使用相似性度量为智能手机选择进行的直觉模糊多指标多准则决策。*《工业智能杂志》(Journal of Industrial Intelligence), 1*(1), 1–7.
+
 41. Panda, R. R., & Nagwani, N. K. (2024). 基于直觉模糊表示和类别不平衡学习的软件缺陷优先级预测技术。*《知识与信息系统》(Knowledge and Information Systems), 66*, 2135–2164.
 
 ## 索引
@@ -5261,49 +5515,27 @@ $$
       - 预测性维护，135
       - 质量控制，135
 
-
-
-
-
 # F
-
 模糊集，36–37
-
 在机器学习和人工智能中的应用，组件，36–43
-
 在医学诊断中的应用，52–54
 - 鉴别诊断，其中的益处，54
-
 在隶属度函数修改中的应用，257
-
 在优化燃油效率和排放中的应用，238–239
-
 在模式识别中的应用，251, 253–255
-
 在机械预测性维护中的应用，127f
-
 在智能制造中的应用，基础，113–117
 - FIS，115–116
 - 模糊集和隶属度函数，113–114
-
 在车辆诊断和维护中的应用，241
-
 工业适用性，19
-
 智能制造中工业物联网（IIoT）的洞察，138–139
-
 隶属度函数，37–39
-
 算子，39–41
-
 部分隶属度，253
-
 质量控制，120–121
-
 集成应用的实际案例，183–186
-
 在智能制造中工业物联网的角色，141
-
 单相异步电机控制，13–18
 - 由逆变器斩波电路驱动，控制部分，17f
 - 由逆变器斩波电路驱动，功率部分，16f
@@ -5311,8 +5543,10 @@ $$
 - 在MATLAB Simscape (SimPowerSystems)中，14–18
   - 参数，16f
   - 速度响应，17f
-
 供应链优化，124–126
+
+
+
 - 协同规划，125
 - 持续改进，125–126
 - 需求预测，124
@@ -5688,4 +5922,3 @@ TripAdvisor，199
 齐格勒-尼科尔斯方法，216
 
 ZigBee平台，215
-

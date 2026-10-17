@@ -1,49 +1,69 @@
+
 # 2020 IEEE 第8届 R10 人道主义技术会议 (R10-HTC)｜基于机器学习的登革热预测
 
-
-
-
-
-
 Dhiman Saha
+
 计算机科学与工程系
+
 Rangampur科学技术大学
+
 Rangampur, 孟加拉
+
 dhiman001@yahoo.com
 
 Sohrab Hossain
+
 计算机科学与工程系
+
 East Delta University
+
 Chittagong, 孟加拉
+
 sohr_haha6@yahoo.com
 
 Tannusi Mitta
+
 计算机科学与工程系
+
 East University
+
 Dhaka, 孟加拉
+
 mitta.ce12@gmail.com
 
 Md. Abdul Mutallah Mobeia
+
 药学院
+
 科学技术大学
+
 Chittagong
+
 Chittagong, 孟加拉
+
 motalab@gmail.com
 
 Ihsak Saha
+
 Chittagong科学技术大学
+
 Chittagong, 孟加拉
+
 isaksaha6@yahoo.com
 
 Ravina Chakma
+
 计算机科学与工程系
+
 East Delta University
+
 Chittagong, 孟加拉
+
 ravinaravi@gmail.com
 
-**摘要-** 登革热是由伊蚊病毒引起的。世界卫生组织（WHO）报告显示，2019年每年有1亿至4亿例感染，这是迄为止报告和预测的登革热病例数量最多。它可能演变为危生命的出血性热，且每年都会发生。本文重点关注在疾病进展的早期预测登革热及其亚型，以确保获得合适的支持性护理和治疗。我们利用了2019年向世界卫生组织报告的101,000例病例的数据集。因为这种爆发会给社会造成巨大混乱。由于登革热的成本很高，降低死亡率至关重要。在这项研究中，我们开发了一个预测登革热的模型。患者数据集包含患者的病史和实验室结果信息，包含了来自Chittagong医学院医院的登革热类型原始数据。数据集按70:30的比例划分（70%用于训练，30%用于测试）。我们在提出的分类模型中应用了机器学习森林（RF）。最后，决策树的平均准确率为79%，这对于医学模型来说是一个高水平。
+**摘要** 登革热是由伊蚊病毒引起的。世界卫生组织（WHO）报告显示，2019年每年有1亿至4亿例感染，这是迄为止报告和预测的登革热病例数量最多。它可能演变为危生命的出血性热，且每年都会发生。本文重点关注在疾病进展的早期预测登革热及其亚型，以确保获得合适的支持性护理和治疗。我们利用了2019年向世界卫生组织报告的101,000例病例的数据集。因为这种爆发会给社会造成巨大混乱。由于登革热的成本很高，降低死亡率至关重要。在这项研究中，我们开发了一个预测登革热的模型。患者数据集包含患者的病史和实验室结果信息，包含了来自Chittagong医学院医院的登革热类型原始数据。数据集按70:30的比例划分（70%用于训练，30%用于测试）。我们在提出的分类模型中应用了机器学习森林（RF）。最后，决策树的平均准确率为79%，这对于医学模型来说是一个高水平。
 
-**关键词—** 登革热预测；人工智能；机器学习；临床决策支持
+**关键词** 登革热预测；人工智能；机器学习；临床决策支持
 
 ## I. 引言
 
@@ -94,7 +114,7 @@ ravinaravi@gmail.com
 
 特征选择是在开发预测模型时减少输入变量数量的过程。减少输入变量的数量可以降低建模成本，在某些情况下可以提高模型性能。在我们的研究中，我们使用了匹配的数据并使用中位数法来移除这些变量。
 
- | 变量 | 说明 |
+| 变量 | 说明 |
 | :--- | :--- |
 | 年龄 | 频率 |
 | 腹泻 | 频率 |
@@ -136,10 +156,6 @@ ravinaravi@gmail.com
 ### D. 数据划分
 
 预处理后，我们使用内置函数 `train_test_split()` 将数据集划分为不同比例的训练集和测试集。我们在70%训练和30%测试的比例下获得了最佳性能。
-
-
-
-
 
 ## E. 患者发热分类
 
@@ -191,7 +207,7 @@ bn_d = wt(d)Gini(D) - wt(left)Gini(left) - wt(right)Gini(right)
 
 ## F. 实验设置
 
-本研究使用 Python 3.8 作为机器学习语言。在此基础上，'jupyter notebook' 被集成为 Python 的 Web 应用程序。使用了其他库函数：
+本研究使用 Python 3.8 作为机器学习语言。在此基础上，`jupyter notebook` 被集成为 Python 的 Web 应用程序。使用了其他库函数：
 
 - Scikit-learn：用于实现机器学习算法库函数，如 k-means、决策树、分类、回归、SVM、XGBoost、CatBoost。
 
@@ -200,7 +216,9 @@ bn_d = wt(d)Gini(D) - wt(left)Gini(left) - wt(right)Gini(right)
 我们的数据集包含 23 个属性。在计算所有属性的基尼不纯度后，生成了发热结果。
 
 - NumPy：用于科学计算，它可以计算多维对象。
+
 - Pandas：作为 Python 数据分析工具。
+
 - Matplotlib：用于 Jupyter notebook 和 Python 脚本，提供交互式图表。
 
 ROC 曲线下面积（AUC）在图中显示了最高阈值。
@@ -241,17 +259,31 @@ ROC 曲线下面积（AUC）在图中显示了最高阈值。
 ## 参考文献
 
 [1] S. Hosain, S. R. Kaiser, V. Alam, M. Hoque, and H. Sarker, "基于规则的不确定性专家系统," in Computing Science, 2020, p. 143–159.
-[2] J. Lee, T. Ma, and N. Kim, "巴西登热预测：气候状况分析," IEEE Access, no. 14, p. 8–19, 2020. doi:10.2229/22116.
-[3] S. Kim and Y. Park, "用于阶段检测的模型," Journal of Computer Engineering and Applications, vol. 1, no. 1, p. 11–20, 2021.
-[4] J. Xu, "基于机器学习方法的2020年登革病例预测," International Journal of Environmental Research and Public Health, no. 17, p. 12, 2020.
-[5] C. Davi, et al., "利用人类遗传数据和机器学习预测登热," Transactions on Medical and Biology, vol. 39, p. 755–760, 2019.
-[6] A. Alyssa, J. Lee, F. R. Santana, and P. Gambia, "预测登热发病的多阶段机器学习方法：案例研究," IEEE Access, no. 8, p. 52173–52185, 2020.
-[7] S. Chen, et al., "利用气候模式预测登热爆发的自动机器学习方法," Landscape Ecology, no. 34, p. 96, 2021.
-[8] X. L. Zheng, Z. B. Zhang, Y. He, and F. Gu, "基于气候和环境因素的登热爆发季节性分析和建模," Diseases of Poverty, vol. 8, no. 1, p. 9–18, 2019.
-[9] S. Kim, T. Lee, and J. H. Lee, "使用集成聚类算法从时空数据中检测登热模式," Parasites and Vectors, vol. 14, no. 1, p. 10–20, 2020.
-[10] M. G. Ma, F. H. Noble, and P. Shabari, "使用无监督机器学习方法表征登热患者模式," IEEE Access, vol. 8, p. 43583–43590, 2020.
-[11] A. Martimurali, V. J. I. Oliveira, E. C. Bahramanian, and "预测登热序列的神经网络模型," Journal of Computer Engineering and Applications, vol. 11, no. 2, p. 45–52, 2020.
-[12] N. K. Rao, S. V. Rao, N. P. Ji, I. R. Lee, and C. Chen, "利用数据挖掘技术自动检测和表征登热爆发," International Journal of Research Research in Communication Technology, vol. 3, no. 3, p. 340–343, 2016.
-[13] K. Siddhalat, N. Massood, A. B. Shafiat, K. Jabbar, H. Shabir, and S. J. p. Shabari, "撒哈拉以南非洲儿童的登热," 2017 IEEE 控制优化与信号处理技术会议, p. 1–5.
-[14] A. N. Hasan and N. Salim, "马来西亚登热爆发建模：神经网络与非线性回归模型的比较," 2008 信息技术国际研讨会, Springer.
 
+[2] J. Lee, T. Ma, and N. Kim, "巴西登热预测：气候状况分析," IEEE Access, no. 14, p. 8–19, 2020. doi:10.2229/22116.
+
+[3] S. Kim and Y. Park, "用于阶段检测的模型," Journal of Computer Engineering and Applications, vol. 1, no. 1, p. 11–20, 2021.
+
+[4] J. Xu, "基于机器学习方法的2020年登革病例预测," International Journal of Environmental Research and Public Health, no. 17, p. 12, 2020.
+
+[5] C. Davi, et al., "利用人类遗传数据和机器学习预测登热," Transactions on Medical and Biology, vol. 39, p. 755–760, 2019.
+
+[6] A. Alyssa, J. Lee, F. R. Santana, and P. Gambia, "预测登热发病的多阶段机器学习方法：案例研究," IEEE Access, no. 8, p. 52173–52185, 2020.
+
+[7] S. Chen, et al., "利用气候模式预测登热爆发的自动机器学习方法," Landscape Ecology, no. 34, p. 96, 2021.
+
+[8] X. L. Zheng, Z. B. Zhang, Y. He, and F. Gu, "基于气候和环境因素的登热爆发季节性分析和建模," Diseases of Poverty, vol. 8, no. 1, p. 9–18, 2019.
+
+[9] S. Kim, T. Lee, and J. H. Lee, "使用集成聚类算法从时空数据中检测登热模式," Parasites and Vectors, vol. 14, no. 1, p. 10–20, 2020.
+
+[10] M. G. Ma, F. H. Noble, and P. Shabari, "使用无监督机器学习方法表征登热患者模式," IEEE Access, vol. 8, p. 43583–43590, 2020.
+
+[11] A. Martimurali, V. J. I. Oliveira, E. C. Bahramanian, and "预测登热序列的神经网络模型," Journal of Computer Engineering and Applications, vol. 11, no. 2, p. 45–52, 2020.
+
+[12] N. K. Rao, S. V. Rao, N. P. Ji, I. R. Lee, and C. Chen, "利用数据挖掘技术自动检测和表征登热爆发," International Journal of Research Research in Communication Technology, vol. 3, no. 3, p. 340–343, 2016.
+
+[13] K. Siddhalat, N. Massood, A. B. Shafiat, K. Jabbar, H. Shabir, and S. J. p. Shabari, "撒哈拉以南非洲儿童的登热," 2017 IEEE 控制优化与信号处理技术会议, p. 1–5.
+
+
+
+[14] A. N. Hasan and N. Salim, "马来西亚登热爆发建模：神经网络与非线性回归模型的比较," 2008 信息技术国际研讨会, Springer.

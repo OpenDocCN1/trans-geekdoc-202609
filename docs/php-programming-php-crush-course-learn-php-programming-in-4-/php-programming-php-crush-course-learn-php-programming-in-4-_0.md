@@ -1,19 +1,17 @@
-# PHP 编程：PHP 速成课程！4 小时学会 PHP 编程！PHP 初学者指南 - 智能且简单的 PHP 与 MySQL 方法（PHP 和 MySQL Web 开发，PHP 编程）
 
+# PHP 编程：PHP 速成课程！4 小时学会 PHP 编程！PHP 初学者指南——智能且简单的 PHP 与 MySQL 方法
 
-
-
+（PHP 和 MySQL Web 开发，PHP 编程）
 
 ## 书籍简介
 
-《4 小时学会 PHP！》承诺将为你提供关于 PHP 和 MySQL 的完整介绍性知识。你将开启构建优秀动态网站的旅程，帮助你短在内实现梦想。
+《4 小时学会 PHP！》承诺将为你提供关于 PHP 和 MySQL 的完整介绍性知识。你将开启构建优秀动态网站的旅程，帮助你短时间内实现梦想。
 
 本书包含了直白易懂的定义、短小精悍的示例以及能够确保你快速掌握基础知识的解释。
 
 你将能够快速读完这本书的同时获得深度知识，使你准备好应对 PHP 和 MySQL 的高级功能，同时利用最佳实践完成非常实用的工作。这是一本极好的教育书籍！
 
 ### 书中包含什么？
-
 
 我们将讨论 Web 服务器软件包的安装，并展示如何使用它来运行 PHP 脚本。我们还将涵盖 PHP 的一些基础知识。
 
@@ -25,21 +23,19 @@
 
 让我们开始吧！
 
-
-
 ## 简介
 
-“不读书就学不到任何东西。” —— 孔子
+“不读书就学不到任何东西。”——孔子
 
-人们学习 PHP 有很多原因。每种语言都有的一定的学习曲线，人们可能会陷入过多的理论中，导致它失去吸引力，因为眼前的任务看起来很枯燥。也许你想建立一个简单的博客，或者像拥有成千上万商品出售的大型在线电子商务网站那样复杂的网站。要知道从哪里开始获取所需的知识是很的。
+人们学习 PHP 有很多原因。每种语言都有一定的学习曲线，人们可能会陷入过多的理论中，导致它失去吸引力，因为眼前的任务看起来很枯燥。也许你想建立一个简单的博客，或者像拥有成千上万商品出售的大型在线电子商务网站那样复杂的网站。要知道从哪里开始获取所需的知识是很重要的。
 
-如果你正在寻找一种快速上手的方法让你的愿景变为现实，那么你来对地方了！本书旨在让你在 4 小时内开启 PHP 和 MySQL 精通之旅！它通过告诉对于绝对初学者来说（无论是 PHP 还是 MySQL）快速上手需要知道的最重要内容来实现，让你能够尽可能快地做实用的事情。
+如果你正在寻找一种快速上手的方法让你的愿景变为现实，那么你来对地方了！本书旨在让你在 4 小时内开启 PHP 和 MySQL 精通之旅！它通过告诉绝对初学者（无论是 PHP 还是 MySQL）快速上手需要知道的最重要内容来实现，让你能够尽可能快地做实用的事情。
 
 这不是一份涵盖所有层面的 PHP 和 MySQL 全方位指南，而是一门速成课程，为你提供实用的指南，教你如何单独以及结合使用 PHP 和 MySQL 完成非常酷的基础操作。这两者可以变得非常高级，但有了书中的知识，你在应对更高级的话题时，应该能够让原型运行起来。
 
 之前需要一些 HTML 和 CSS 的基础知识，因为实际上，PHP 只是用来生成网页的语言，其最终输出是 HTML。我们将涵盖 PHP 和 MySQL 的所有基础知识，最后将它们整合在一起，构建一个简单的网站，你将可以使用这对“黄金搭档”存储你喜欢的艺术家的记录。
 
-基础知识就是你在 4 小时内所需的一切（当然，还有这本书）是你所需的一切。
+基础知识就是你在 4 小时内所需的一切（当然，还有这本书）。
 
 但什么是 PHP 或 MySQL？你为什么需要它们来完成这项以前不可能的任务呢？
 
@@ -47,17 +43,17 @@
 
 PHP 代表超文本处理器（Hypertext Processor）。它是一种服务器端脚本语言，用于生成动态 Web 内容等。这意味着 PHP 所做的一切都不是在用于查看网页的电脑（称为客户端）上完成的，而是在一台名为服务器的特殊计算机上，服务器托管了你在客户端机器上查看的所有网页。
 
-作为一种脚本语言，PHP 实际上不能用于制作运行在你的计算机上的独立应用程序，因为它被设计为仅在网页内发生事件时执行操作，例如：点击链接或提交 Web 表单时获取表单数据。
+作为一种脚本语言，PHP 实际上不能用于制作运行在你的计算机上的独立应用程序，因为它被设计为仅在网页内发生事件时执行操作，例如点击链接或提交 Web 表单时获取表单数据。
 
 你可以将 PHP 嵌入到 HTML 网页中，并根据从用户那里获得的信息生成自定义页面。这使得网页比静态页面更令人兴奋。PHP 可以用于生成网页，因为它的最终输出是 HTML。
 
 它在服务器端非常高效，被广泛使用，跨平台（运行在 Windows、Linux、UNIX、Mac OS X 等），并且比任何其他功能齐全的语言（如 C、Java 或 Perl）更容易学习。
 
-PHP 也非常强大。如果你怀疑它的力量，下次当你决定登录 Facebook 时，只需仔细看浏览器中的地址栏。你会发现，全球最大的社交网络网站是由 PHP 驱动的！甚至维基百科（那个告诉你需要知道的一一切的网站）也是由 PHP 驱动的。这就是 PHP 背后的力量，使其成为微软 Active Server Pages (ASP) 等竞争对手的良好替代方案。
+PHP 也非常强大。如果你怀疑它的力量，下次当你决定登录 Facebook 时，只需仔细看浏览器中的地址栏。你会发现，全球最大的社交网络网站是由 PHP 驱动的！甚至维基百科（那个告诉你需要知道的一切的网站）也是由 PHP 驱动的。这就是 PHP 背后的力量，使其成为微软 Active Server Pages（ASP）等竞争对手的良好替代方案。
 
 它还有一个活跃的社区，可以在你困难时真正提供帮助，并且始终保持活跃。
 
-根据 [`www.w3schools.com`](http://www.w3schools.com) 页面；PHP 允许你完成：
+根据 [`www.w3schools.com`](http://www.w3schools.com) 页面，PHP 允许你完成：
 
 ### MySQL 简介绍
 
@@ -65,22 +61,19 @@ MySQL 是一种流行的开源关系型数据库，以 SQL 为基础。它允许
 
 许多基于 Web 的程序（包括计算机程序）使用数据库来存储信息。社交应用程序需要一个地方来存储用户信息、图片、评论等，这就是像 MySQL 这样的数据库大显身手的地方，它让存储和检索大量信息变得简单。
 
-SQL（读作 sequel）代表结构化查询语言。它仅仅是为 MySQL 等数据库管理数据的语言。它们使用特殊的命令，并不很难学习。最重要的，你可以将 SQL 嵌入 PHP 等编程语言中。
+SQL（读作 sequel）代表结构化查询语言。它仅仅是为 MySQL 等数据库管理数据的语言。它们使用特殊的命令，并不很难学习。最重要的是，你可以将 SQL 嵌入 PHP 等编程语言中。
 
-此外，MySQL 是开源的，免费并且可以通过修改源代码进行更改。
+此外，MySQL 是开源的、免费的，并且可以通过修改源代码进行更改。
 
 ## 本书将涵盖的内容
 
 本书分为四个主要章节或小时，帮助你进入 PHP 和 SQL 的核心，并让你迅速成为大师。
 
-在第一小时，我们将花时间安装非常需要的 Web 服务器软件包——XAMPP。我建议你在开始该章节之前在这里下载：[`www.apachefriends.org/index.html`](https://www.apachefriends.org/index.html)。这将使我们在整本书中运行示例。然后我们将为 PHP 代码选择一个文本编辑器。然后我们将查看如何运行 PHP 脚本，最后我们将涵盖 PHP 的一些基础知识，如注释、变量、常量和运算符。
+在第一小时，我们将花时间安装非常需要的 Web 服务器软件包——XAMPP。我建议你在开始该章节之前在这里下载：[`www.apachefriends.org/index.html`](https://www.apachefriends.org/index.html)。这将使我们在整本书中运行示例。然后我们将为 PHP 代码选择一个文本编辑器。接着我们将查看如何运行 PHP 脚本，最后我们将涵盖 PHP 的一些基础知识，如注释、变量、常量和运算符。
 
 书中的示例可以手动输入，也可以为了节省时间复制并粘贴到你的代码编辑器或命令行界面中。
 
 在第二小时，我们将继续学习 PHP 并涵盖条件语句、循环、数组和函数。在本章之后，你应该认为自己已经熟悉了 PHP，可以应对更高级的话题。
-
-
-
 
 完成这一部分后你可以休息一下，让这些内容融入脑海，然后去泡杯咖啡。
 
@@ -90,31 +83,31 @@ SQL（读作 sequel）代表结构化查询语言。它仅仅是为 MySQL 等数
 
 让我们开始吧。拿起你的第一杯咖啡！
 
-# 第 1 章 - 第 1 小时：安装与 PHP 基础
+# 第 1 章——第 1 小时：安装与 PHP 基础
 
-“开始的方法是带着梦想的乐观主义迈出第一步。” - Debasish Mridha
+“开始的方法是带着梦想的乐观主义迈出第一步。”——Debasish Mridha
 
 本章将涵盖：
 
-*   安装 Web  服务器
-*   安装文本编辑器
-*   启动 Apache 以运行 PHP 脚本
-*   创建并运行 PHP 脚本
-*   PHP 基础（注释、变量、运算符、常量、字符串）
+- 安装 Web 服务器
+- 安装文本编辑器
+- 启动 Apache 以运行 PHP 脚本
+- 创建并运行 PHP 脚本
+- PHP 基础（注释、变量、运算符、常量、字符串）
 
-请稍等我一下。我知道几乎每本编程书籍的第一章都会堆砌大量的大量的理论，以确保你了解自己正在面对什么。我不我不骗你；即使在这本简短的书中，我们仍然需要稍微过一遍。只需要过一点点，涵盖 PHP 的一些基础知识。那是为了本小时后面之后的内容。现在，你需要安装服务器，并选择一个合适的文本编辑器来编写 PHP 代码！
+请稍等我一下。我知道几乎每本编程书籍的第一章都会堆砌大量的理论，以确保你了解自己正在面对什么。我不骗你；即使在这本简短的书中，我们仍然需要稍微过一遍。只需要过一点点，涵盖 PHP 的一些基础知识。那是为了本小时后面的内容。现在，你需要安装服务器，并选择一个合适的文本编辑器来编写 PHP 代码！
 
 ## 安装 Web 服务器
 
 你通往 PHP 的第一个真正步骤带你来到了这里。你不能像运行 HTML 那样直接在浏览器中运行 PHP。要运行 PHP，你需要在本地机器上安装服务器，以便浏览器解析 PHP 脚本并在数据库上运行 MySQL 查询返回结果。或者，你可以使用支持 PHP 和 MySQL 的主机，这样你可以将其上传到他们的服务器，并直接在那里测试和部署你的梦想网站。但我猜你真的想在本地快速地测试。因此，我们将安装一个本地服务器，让你自己的电脑变成一台测试服务器。
 
-你可以在本地机器上安装许多服务器，例如 XAMP、WAMP（适用于 Windows）以及适用于 Mac OS X 的 MAMP 等，本书涵盖了 XAMP。它是一个免费的开源跨平台 Web 服务器包，适用于 Windows、Mac 和 Linux。
+你可以在本地机器上安装许多服务器，例如 XAMPP、WAMP（适用于 Windows）以及适用于 Mac OS X 的 MAMP 等，本书涵盖了 XAMPP。它是一个免费的开源跨平台 Web 服务器包，适用于 Windows、Mac 和 Linux。
 
-访问此网站
+访问此网站：
 
-`www.apachefriends.org/index.html` 
+[`www.apachefriends.org/index.html`](https://www.apachefriends.org/index.html)
 
-并下载适用于 windows 的最新版本 XAMP（同样的步骤可以轻松适用于 Mac OSX 或 Linux）。下载完成后，在本地机器上找到该文件并双击它进行安装。
+并下载适用于 Windows 的最新版本 XAMPP（同样的步骤可以轻松适用于 Mac OS X 或 Linux）。下载完成后，在本地机器上找到该文件并双击它进行安装。
 
 简单！现在 PHP 和 MySQL 已经准备就绪。
 
@@ -122,15 +115,15 @@ SQL（读作 sequel）代表结构化查询语言。它仅仅是为 MySQL 等数
 
 ## 安装文本编辑器
 
-现在，你需要一个文本编辑器来编写优美的 PHP。理想情况下，任何文本编辑器都可以，即使是 Windows 默认的记事本或 Mac OS X 的终端都可以用于编写 PHP。我们将使用 notepad++，因为它具有一些实用的功能，有助于快速编写整洁高效的代码，例如语法高亮和自动补全。
+现在，你需要一个文本编辑器来编写优美的 PHP。理想情况下，任何文本编辑器都可以，即使是 Windows 默认的记事本或 Mac OS X 的终端都可以用于编写 PHP。我们将使用 `Notepad++`，因为它具有一些实用的功能，有助于快速编写整洁高效的代码，例如语法高亮和自动补全。
 
 而且它是免费的！
 
-只需在此安装文本编辑器 下载并安装，这些文本编辑器将为你节省大量时间并避免许多痛苦。只需记住，任何文本都可以。所以即使你没有 notepad++，也可以可以使用任何你喜欢的工具。
+只需在此安装文本编辑器，下载并安装。这个文本编辑器将为你节省大量时间并避免许多痛苦。只需记住，任何文本编辑器都可以。所以即使你没有 `Notepad++`，也可以使用任何你喜欢的工具。
 
 ## 启动 Apache 运行 PHP 脚本
 
-现在你已经安装了 XAMPP，你需要启动 apache Web 服务，以便浏览器能够运行 PHP 脚本。要做到这一点，双击图标打开 XAMPP 控制面板。默认情况下，它应该会自动启动，但你可以通过点击下图中的“Start”手动启动：
+现在你已经安装了 XAMPP，你需要启动 Apache Web 服务，以便浏览器能够运行 PHP 脚本。要做到这一点，双击图标打开 XAMPP 控制面板。默认情况下，它应该会自动启动，但你可以通过点击下图中的“Start”手动启动：
 
 ![XAMPP 控制面板](img/00001.jpeg)
 
@@ -140,16 +133,16 @@ SQL（读作 sequel）代表结构化查询语言。它仅仅是为 MySQL 等数
 
 这部分非常简单。你只需要遵循以下步骤：
 
-### 第一步 - 创建 PHP 文件
+### 第一步——创建 PHP 文件
 
 打开你的文本编辑器，创建一个普通的文本文件并将以下代码放入其中：
 
 ```html
-<!DOCTYPE html>  
-<html>  
+<!DOCTYPE html>
+<html>
     <body>
-        <?php  
-            echo "My first script!";  
+        <?php
+            echo "My first script!";
         ?>
     </body>
 </html>
@@ -157,7 +150,7 @@ SQL（读作 sequel）代表结构化查询语言。它仅仅是为 MySQL 等数
 
 `echo` 语句会将之后的所有内容输出到屏幕上。文件仍然看起来像 `<?php` 和 `?>`。将文件保存为 `example.php`。
 
-### 第二步 - 将其放在 XAMPP 根目录下
+### 第二步——将其放在 XAMPP 根目录下
 
 获取 `example.php` 并将其放入 `htdocs` 文件夹。
 
@@ -165,7 +158,7 @@ SQL（读作 sequel）代表结构化查询语言。它仅仅是为 MySQL 等数
 
 ![XAMPP 根目录](img/00002.jpeg)
 
-### 第三步 - 在浏览器中运行
+### 第三步——在浏览器中运行
 
 打开你的浏览器（推荐 Google Chrome）并输入：
 
@@ -192,16 +185,16 @@ SQL（读作 sequel）代表结构化查询语言。它仅仅是为 MySQL 等数
 
 ### 变量
 
-为了构建你的梦想网站，你需要数据以及存储这些数据的方法。PHP 提供了使用变量将它们存储在内存的方法。每个变量都以 `$` 符号开头。
+为了构建你的梦想网站，你需要数据以及存储这些数据的方法。PHP 提供了使用变量将它们存储在内存中的方法。每个变量都以 `$` 符号开头。
 
 让我们通过以下代码查看一些操作：
 
 ```html
-<!DOCTYPE html>  
-<html>  
+<!DOCTYPE html>
+<html>
     <body>
-        <?php  
-            $txt = "My second PHP script!";  
+        <?php
+            $txt = "My second PHP script!";
             echo $txt;
         ?>
     </body>
@@ -214,40 +207,37 @@ SQL（读作 sequel）代表结构化查询语言。它仅仅是为 MySQL 等数
 
 关于变量还有几点需要记住：
 
-*   它们是大小敏感的。这意味着 `$name` 和 `$naMe` 是两个不同的变量
-*   变量必须以字母或下划线开头
-*   变量不能以数字开头
-*   变量只能包含字母数字
-
-
-
+- 它们是大小写敏感的。这意味着 `$name` 和 `$naMe` 是两个不同的变量。
+- 变量必须以字母或下划线开头。
+- 变量不能以数字开头。
+- 变量只能包含字母数字字符。
 
 PHP 是一种弱类型语言，因此你不需要为变量定义数据类型。PHP 将根据赋值给变量的值，自动将变量转换为正确的数据类型。
 
 以下是你将用到的常用数据类型列表：
 
-- `Integer`（整数）– 整数
-- `Float`（浮点数）– 小数
-- `String`（字符串）– 字符串或字符
-- `Boolean`（布尔）– 真或假
-- `Array`（数组）– 多个项目
-- `Object`（对象）– 由类定义的对象
+- `Integer`（整数）——整数
+- `Float`（浮点数）——小数
+- `String`（字符串）——字符串或字符
+- `Boolean`（布尔）——真或假
+- `Array`（数组）——多个项目
+- `Object`（对象）——由类定义的对象
 
 你可以通过变量来实现与示例相同的结果：
 
 ```html
 <!DOCTYPE html>
 <html>
-<<body>
+<body>
     <?php
         $txt = "third";
-        echo "My " .  $txt ." PHP script!";
+        echo "My " . $txt . " PHP script!";
     ?>
 </body>
-</</html>
+</html>
 ```
 
-在例例中，我们使用句号（`.`）将两个字符串连接在一起，因为它用于连接两个字符串，并将连接后的字符串输出到屏幕上。
+在例子中，我们使用句号（`.`）将两个字符串连接在一起，因为它用于连接两个字符串，并将连接后的字符串输出到屏幕上。
 
 ## 常量
 
@@ -257,12 +247,13 @@ PHP 是一种弱类型语言，因此你不需要为变量定义数据类型。P
 
 ```php
 <?php
-    define("MESSAGE", "Happy Learning!");  //定义常量的函数
+    define("MESSAGE", "Happy Learning!");  // 定义常量的函数
     echo MESSAGE;
 ?>
 ```
 
 输出：
+
 Happy Learning!
 
 与变量不同，你实际上可以在定义值之后再添加一个参数（接受一个布尔值）来指定你是否想要常量不区分大小写（默认认为 false）：
@@ -275,23 +266,24 @@ Happy Learning!
 ```
 
 关于常量需要记住的规则：
-- 它们必须以字母或下划线开头（不需要以 `$` 开头）
-- 它们在整个脚本中全局有效
+
+- 它们必须以字母或下划线开头（不需要以 `$` 开头）。
+- 它们在整个脚本中全局有效。
 
 ## 运算符
 
-PHP 使用运算符来对变量和值执行各种操作。我们现在来看 PHP 组使用的运算符。
+PHP 使用运算符来对变量和值执行各种操作。我们现在来看 PHP 使用的运算符。
 
 ### 算术运算符
 
-这些是对值上执行数学运算并返回结果的运算符：
+这些是对值执行数学运算并返回结果的运算符：
 
 | 示例 | 运算符 | 结果 |
 | :--- | :--- | :--- |
 | `$x + $y` | 加法 | `$x` 和 `$y` 的和 |
 | `$x - $y` | 减法 | `$x` 和 `$y` 的差 |
 | `$x * $y` | 乘法 | `$x` 和 `$y` 的积 |
-| `$x / $y` | 除法 | `$x` 和 `$y` 的被除 |
+| `$x / $y` | 除法 | `$x` 和 `$y` 的商 |
 | `$x % $y` | 取模 | `$x` 除以 `$y` 的余数 |
 | `$x ** $y` | 幂 | `$x` 的 `$y` 次方的结果（PHP 5.6 新增） |
 
@@ -301,12 +293,12 @@ PHP 使用运算符来对变量和值执行各种操作。我们现在来看 PHP
 
 | 赋值 | 等同于 | 描述 |
 | :--- | :--- | :--- |
-| `$x = $y` | | 获取 `$y` 的值并将其赋给 `$x` |
-| `$x += $y` | | 获取 `$x` 和 `$y` 的和并将结果设置为 `$x` |
-| `$x -= $y` | | 获取 `$x` 和 `$y` 的差并将结果设置为 `$x` |
-| `$x *= $y` | | 获取 `$x` 和 `$y` 的积并将结果设置为 `$x` |
-| `$x /= $y` | | 获取 `$x` 和 `$y` 的被除并将结果设置为 `$x` |
-| `$x %= $y` | | 获取 `$x` 除以 `$y` 的余数并将结果设置为 `$x` |
+| `$x = $y` |  | 获取 `$y` 的值并将其赋给 `$x` |
+| `$x += $y` |  | 获取 `$x` 和 `$y` 的和并将结果设置为 `$x` |
+| `$x -= $y` |  | 获取 `$x` 和 `$y` 的差并将结果设置为 `$x` |
+| `$x *= $y` |  | 获取 `$x` 和 `$y` 的积并将结果设置为 `$x` |
+| `$x /= $y` |  | 获取 `$x` 和 `$y` 的商并将结果设置为 `$x` |
+| `$x %= $y` |  | 获取 `$x` 除以 `$y` 的余数并将结果设置为 `$x` |
 
 ### 比较运算符
 
@@ -326,7 +318,7 @@ PHP 中的比较运算符用于比较两个值：
 
 ### 逻辑运算符
 
-逻辑运算符用于组合布尔值值（我们将在接下来的小时内讨论条件语句），以得到真或假的结果：
+逻辑运算符用于组合布尔值（我们将在接下来的小时内讨论条件语句），以得到真或假的结果：
 
 | 示例 | 运算符 | 结果 |
 | :--- | :--- | :--- |
@@ -354,6 +346,9 @@ PHP 中的比较运算符用于比较两个值：
 | 示例 | 名称 | 结果 |
 | :--- | :--- | :--- |
 | `$str1 . $str2` | 连接 | 返回 `$str1` 和 `$str2` 的连接 |
+
+
+
 | `$str1 .= $str2` | 连接赋值 | 将 `$str2` 追加到 `$str1` |
 
 ### 数组运算符
@@ -372,10 +367,10 @@ PHP 中的比较运算符用于比较两个值：
 
 在本章中我们将涵盖：
 
--   条件语句
--   循环
--   数组
--   函数
+- 条件语句
+- 循环
+- 数组
+- 函数
 
 这部分我们将深入探讨 PHP 基础并学习很多酷的东西。你已经完成了基础部分的蔬菜，现在是肉部分。
 
@@ -385,16 +380,16 @@ PHP 中的比较运算符用于比较两个值：
 
 以下是 PHP 中使用的条件语句列表：
 
--   if 语句
--   if…else 语句
--   if…else if…else 语句
--   switch 语句
+- `if` 语句
+- `if…else` 语句
+- `if…else if…else` 语句
+- `switch` 语句
 
 让我们详细查看每一个。
 
 ### if 语句
 
-if 语句评估表达式，结果为真，则执行代码块。如果评估结果为假，则代码块被忽略。
+`if` 语句评估表达式，结果为真，则执行代码块。如果评估结果为假，则代码块被忽略。
 
 下面的示例如果条件为真，将输出“5 小于 10!”，否则，代码块将被忽略：
 
@@ -409,17 +404,15 @@ if 语句评估表达式，结果为真，则执行代码块。如果评估结�
 
 让我们继续吧！
 
-
-
-
-
 ```php
 if ($x < 10) {
     echo "$x is less than 10!";
 }
 ?>
 ```
+
 Output:
+
 5 is less than 10!
 
 ### if…elseif 语句
@@ -438,7 +431,9 @@ if ($x < 10) {
 }
 ?>
 ```
+
 Output:
+
 50 is greater than 20!
 
 ### if…elseif…else 语句
@@ -459,7 +454,9 @@ if ($x < 10) {
 }
 ?>
 ```
+
 Output:
+
 15 is between 10 and 20!
 
 ### switch 语句
@@ -486,17 +483,19 @@ switch ($lunch) {
 }
 ?>
 ```
+
 Output:
+
 Burgers are yummy!
 
 ## 循环
 
 以下是 PHP 中的循环语句列表：
 
-* `while`
-* `do…while`
-* `for`
-* `foreach`
+- `while`
+- `do…while`
+- `for`
+- `foreach`
 
 我们将详细介绍每一个循环。
 
@@ -515,11 +514,17 @@ while ($x <= 5) {
 }
 ?>
 ```
+
 Output:
+
 value of x is: 1
+
 value of x is: 2
+
 value of x is: 3
+
 value of x is: 4
+
 value of x is: 5
 
 ### do…while 循环
@@ -537,12 +542,19 @@ do {
 } while ($x >= 0);
 ?>
 ```
+
 Output:
+
 value of x is: 5
+
 value of x is: 4
+
 value of x is: 3
+
 value of x is: 2
+
 value of x is: 1
+
 value of x is: 0
 
 ### for 循环
@@ -560,11 +572,17 @@ for ($x = 1; $x <= 5; $x++) {
 }
 ?>
 ```
+
 Output:
+
 value of x is: 1
+
 value of x is: 2
+
 value of x is: 3
+
 value of x is: 4
+
 value of x is: 5
 
 ### foreach 循环
@@ -588,15 +606,15 @@ foreach ($foods as $food) {
 
 关于函数的几点注意事项：
 
-* 它们对大小写不敏感
-* 在被代码调用之前，它们不会自动执行
-* PHP 有超过 1000 个内置函数可以满足你的需求
+- 它们对大小写不敏感
+- 在被代码调用之前，它们不会自动执行
+- PHP 有超过 1000 个内置函数可以满足你的需求
 
 ### 创建函数
 
 创建自己的函数非常简单；只需以 `function` 关键字开头，后跟函数名。之后将你的代码放在两个大括号 `{` 和 `}` 之间，分别称为左括号和右括号。现在你可以根据需要多次使用该函数。这节省了每次都重写代码的麻烦。
 
-下面的代码演示了一个向屏幕输出消息的函数
+下面的代码演示了一个向屏幕输出消息的函数：
 
 ```php
 <?php
@@ -622,16 +640,13 @@ functionsubFunction($num1, $num2) {
 ?>
 ```
 
-
-
-
-
 ```php
 subFunction(5, 6);
 ?>
 ```
 
 输出:
+
 5 和 6 之间的差是：-1
 
 ### 返回值的函数
@@ -653,6 +668,7 @@ echo "The value returned by the function is: " . $return_val;
 ```
 
 输出:
+
 函数返回的值是：5
 
 ### 参数的默认值
@@ -673,8 +689,11 @@ PrintName("Adam");
 ```
 
 输出:
+
 Hi, my name is Jack
+
 Hi, my name is Jill
+
 Hi, my name is Adam
 
 ## 数组
@@ -686,6 +705,7 @@ Hi, my name is Adam
 这些是使用数字作为索引的数组。索引默认从零开始。
 
 创建数值数组有两种方法：
+
 1. 这种方法会自动分配索引：`$dairy = array("yogurt", "ice cream");`
 2. 这种方法手动分配索引：`$dairy[0] = "yogurt"`, `$dairy[1] = "ice cream"`, `$dairy[2] = "cheese cake"`
 
@@ -706,9 +726,13 @@ for ($i = 0; $i < $arrayCount; $i++) {
 ```
 
 输出:
+
 I to eat yoghurt, ice cream and cheese cake!
+
 yogurt
+
 ice cream
+
 cheese cake
 
 ### 关联数组
@@ -716,6 +740,7 @@ cheese cake
 使用字符串作为索引，这使得键和值之间建立了强有关联。
 
 创建关联数组有两种方法。我们将通过西装的价格来演示：
+
 1. 第一种方法：`$suit_prices = array("batman" => 4000, "arrow" => 1500, "superman" => 0);`
 2. 第二种方法：`$suit_prices["batman"] = 4000;`, `$suit_prices["arrow"] = 1500;`, `$suit_prices["superman"] = 0;`
 
@@ -733,12 +758,12 @@ echo "The Superman suit costs: " . $suit_prices['superman'] . "<br />";
 ```
 
 输出:
+
 The Bat suit costs: 4000
+
 The Green Arrow suit costs: 1500
+
 The Superman suit costs: 0
-
-
-
 
 让我们通过输入以下命令来创建一个数据库：
 
@@ -813,20 +838,29 @@ SHOW tables;
 
 1. **创建 Album 表**：`CREATE TABLE()` 创建新表，括号内的行定义了表的结构。
 2. **为每个专辑分配唯一 ID**：字段（列）`AlbumID` 具有以下属性：
-   - `smallint unsigned`（无符号整数）——这意味着我们可以在 `0` 到 `65,535` 范围内存储数据。 
+   - `smallint unsigned`（无符号整数）——这意味着我们可以在 `0` 到 `65,535` 范围内存储数据。
    - `NOT NULL` —— 意味着在创建记录时该字段不能为空。
    - `auto_increment` —— 意味着你不需要在该字段中输入任何内容。当创建记录时，MySQL 会为其分配一个新值。
-   - `PRIMARY KEY` - 每个表只能有一个主键。它用于唯一标识数据库中的记录/行，且一旦创建，它永远不会更改（这将是以牺牲一些存储为代价的）。
-3. **添加 AlbumName 字段**：接下来创建一个字段来存储专辑名称。数据类型 `varchar` 表示最多 255 个可变字符。
-4. **添加 AlbumArtist 字段**：此字段存储可变字符，并限制为 80 个。
-5. **添加 AlbumType 字段**：枚举类型 `ENUM` 是一个有一组允许值的字符串对象。在我们的情况下，允许的值为 `'L'`（长胶 Long Play）、`'E'`（扩展播放 Extended Play）和 `'M'`（混合 mix）。
-6. **添加 numTracks 字段**：如果你觉得这不对，说明你很专注！此字段用于存储专辑拥有的曲目数量，应该是数值类型而不是字符串类型。这样做是为了演示以后如何更改字段的数据类型。
-7. **添加 DateReleased 字段**：最后创建的一行存储专辑的发行日期。`date` 数据类型用于存储日期值。
+
+
+
+- `PRIMARY KEY`：每个表只能有一个主键。它用于唯一标识数据库中的记录/行，且一旦创建，它永远不会更改（这将是以牺牲一些存储为代价的）。
+
+3. **添加 `AlbumName` 字段**：接下来创建一个字段来存储专辑名称。数据类型 `varchar` 表示最多 255 个可变字符。
+
+4. **添加 `AlbumArtist` 字段**：此字段存储可变字符，并限制为 80 个。
+
+5. **添加 `AlbumType` 字段**：枚举类型 `ENUM` 是一个有一组允许值的字符串对象。在我们的情况下，允许的值为 `'L'`（长胶 Long Play）、`'E'`（扩展播放 Extended Play）和 `'M'`（混合 mix）。
+
+6. **添加 `numTracks` 字段**：如果你觉得这不对，说明你很专注！此字段用于存储专辑拥有的曲目数量，应该是数值类型而不是字符串类型。这样做是为了演示以后如何更改字段的数据类型。
+
+7. **添加 `DateReleased` 字段**：最后创建的一行存储专辑的发行日期。`date` 数据类型用于存储日期值。
 
 让我们来看你将使用的一些常用数据类型：
+
 - **数值类型**：`INT`（整数 -2³¹ 到 2³¹-1）、`FLOAT`（小数 -1.1E-38 到 1.1E37）、`Double`（小数 -1.7E-308 到 1.7E307）。
 - **字符串类型**：`CHAR`（固定长度字符串）、`VARCHAR`（变长字符串）、`ENUM`（具有有限值的字符字符串）。
-- **日期和时间**：`DATE` (`YYYY-MM-DD`）、`TIME` (`HH:MM:SS`）、`DATETIME` (`YYYY-MM-DD HH:MM:SS`）、`YEAR` (`YYYY`）。
+- **日期和时间**：`DATE`（`YYYY-MM-DD`）、`TIME`（`HH:MM:SS`）、`DATETIME`（`YYYY-MM-DD HH:MM:SS`）、`YEAR`（`YYYY`）。
 
 ### 修改表
 
@@ -838,7 +872,7 @@ DESCRIBE Album;
 
 你应该看到以下输出：
 
-```
+```text
 +--------------+----------------------+-----++----------------+
 | Field       | Type                 | Null | Default | Extra           |
 +--------------+----------------------+-----++----------------+
@@ -861,7 +895,7 @@ RENAME TABLE Album TO Albums;
 
 如果我们输入 `show tables` 命令，应该看到表名已经更改：
 
-```
+```text
 +-----------------+
 | Tables_in_music |
 +-----------------+
@@ -869,23 +903,19 @@ RENAME TABLE Album TO Albums;
 +-----------------+
 ```
 
-2. **更改 numTracks 的数据类型**：`numTracks` 字段不应该是字符串类型而是数值。以下代码应将其数据类型更改为相应的：
+2. **更改 `numTracks` 的数据类型**：`numTracks` 字段不应该是字符串类型而是数值。以下代码应将其数据类型更改为相应的：
 
 ```sql
 ALTER TABLE Albums MODIFY COLUMN numTracks smallint(2) NOT NULL;
 ```
 
-3. **更改 numTracks 的列名**：看起来我们还没有处理完 `numTracks` 字段。我们需要更改它使其更具可读性，从 `numTracks` 更改为 `NumberOfTracks`。
+3. **更改 `numTracks` 的列名**：看起来我们还没有处理完 `numTracks` 字段。我们需要更改它使其更具可读性，从 `numTracks` 更改为 `NumberOfTracks`。
 
 ```sql
 ALTER TABLE Albums CHANGE numTracks NumberOfTracks smallint(2) NOT NULL;
 ```
 
 注意：即使更改列名，我们仍然需要定义数据类型。经过这些更改后，当我们输入描述表的语句时，应该看到以下内容：
-
-
-
-
 
 | 字段 | 类型 | 空空 | 键 | 默认 | 额外 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -926,7 +956,7 @@ INSERT INTO Albums VALUES
 
 感觉 Coldplay 有点太多了。
 
-## SELECT 语句
+## `SELECT` 语句
 
 `SELECT` 语句允许你从数据库中检索数据。接下来的示例演示了如何使用 `SELECT` 从 `Albums` 表中检索所有记录：
 
@@ -966,7 +996,7 @@ SELECT AlbumName, AlbumArtist FROM Albums;
 | Random Access Memories | Daft Punk |
 | X & Y | Coldplay |
 
-## WHERE 子句
+## `WHERE` 子句
 
 有时你需要过滤记录并只选择符合条件的记录。这就是 `WHERE` 子句发挥作用的地方，接下来的示例演示：
 
@@ -982,7 +1012,7 @@ SELECT * FROM Albums WHERE AlbumArtist = 'Coldplay';
 | 6 | Prospekts March | Coldplay | E | 8 | 2008-09-21 |
 | 8 | X & Y | Coldplay | A | 13 | 2005-06-01 |
 
-你可以使用 `AND` 和 `OR` 运算符来进一步缩小结果：
+你可以使用 `AND` 和 `OR` 运算符来进一步缩小结果。
 
 `AND` 运算符显示符合两个条件的记录：
 
@@ -1010,7 +1040,7 @@ SELECT * FROM Albums WHERE AlbumType = 'E' OR AlbumType = 'M';
 | 3 | Back to the Woods | Angel Haze | M | 13 | 2015-09-15 |
 | 6 | Prospekts March | Coldplay | E | 8 | 2008-09-21 |
 
-## ORDER BY 关键字
+## `ORDER BY` 关键字
 
 为了根据一个或多个列对结果集进行排序，我们使用 `ORDER BY` 关键字并指定是降序还是升序：
 
@@ -1033,10 +1063,7 @@ SELECT AlbumName, AlbumArtist FROM Albums ORDER AlbumArtist ASC;
 | Random Access Memories | Daft Punk |
 | 1989 (Delux Edition) | Taylor Swift |
 
-## UPDATE 语句
-
-
-
+## `UPDATE` 语句
 
 回顾我们目前展示的一些记录，似乎我们在其中一条记录中犯了错误，将 Coldplay 命名为了 Coldplays。这可以通过使用 `UPDATE` 语句更新该记录来纠正。
 
@@ -1049,7 +1076,7 @@ FROM Albums;
 
 输出应该是：
 
-```
+```text
 +---------+---------------------------+--------------+
 | AlbumID | AlbumName                 | AlbumArtist  |
 +---------+---------------------------+--------------+
@@ -1076,7 +1103,9 @@ WHERE AlbumID = 1;
 
 如果现在输出它，我们应该看到记录已经过更新：
 
-```
+
+
+```text
 +---------+---------------------------+--------------+
 | AlbumID | AlbumName                 | AlbumArtist  |
 +---------+---------------------------+--------------+
@@ -1093,72 +1122,71 @@ WHERE AlbumID = 1;
 
 ## 在表中删除记录
 
-要删除表中的记录，我们使用 `DELETE` 语句。以下示例删除了表中 `AlbumID` 为 1 的记录/行：
+要删除表中的记录，我们使用`DELETE`语句。以下示例删除了表中`AlbumID`为 1 的记录/行：
 
 ```sql
 DELETE FROM Albums
 WHERE AlbumID = 1;
 ```
 
-警告：不要省略 `WHERE` 子句，否则表中的所有记录都将被删除。
+警告：不要省略`WHERE`子句，否则表中的所有记录都将被删除。
 
-现在我们输出表中的记录。我们将列限制为仅包含 `AlbumID`、`AlbumName` 和 `AlbumArtist`。`AlbumID` 为 1 的记录应该已经从 `result_set` 中出现，因为它已经被删除。
+现在我们输出表中的记录。我们将列限制为仅包含`AlbumID`、`AlbumName`和`AlbumArtist`。`AlbumID`为 1 的记录应该已经从`result_set`中出现，因为它已经被删除。
 
-```
+```text
 +---------+------------------------+--------------+
 | AlbumID | AlbumName              | AlbumArtist  |
 +---------+------------------------+--------------+
-|       2 | Dirty Gold               | Angel Haze   |
-|       3 | Back to the Woods         | Angel Haze   |
-|       4 | Parachutes                | Coldplay      |
-|       5 | 1989 (Delux Edition)      | Taylor Swift |
-|       6 | Prospekts March           | Coldplay      |
-|       7 | Random Access Memories    | Daft Punk    |
-|       8 | X & Y                     | Coldplay      |
+|       2 | Dirty Gold             | Angel Haze   |
+|       3 | Back to the Woods      | Angel Haze   |
+|       4 | Parachutes             | Coldplay     |
+|       5 | 1989 (Delux Edition)   | Taylor Swift |
+|       6 | Prospekts March        | Coldplay     |
+|       7 | Random Access Memories | Daft Punk    |
+|       8 | X & Y                  | Coldplay     |
 +---------+------------------------+--------------+
 ```
 
-如果你想删除表中的所有记录，使用以下 `DELETE` 语句即可：
+如果你想删除表中的所有记录，使用以下`DELETE`语句即可：
 
 ```sql
-DELETE from Albums;
+DELETE FROM Albums;
 ```
 
 ## 总结
 
-好了，现在你已经熟悉了 `MySQL`，并且可以使用命令行访问它，用它创建和删除数据库；创建、修改和删除表；选择、插入、更新和删除数据；并使用 `MySQL` 命令对数据进行其他漂亮的操作，如按你想要的方式进行过滤和排序。
-
-
+好了，现在你已经熟悉了`MySQL`，并且可以使用命令行访问它，用它创建和删除数据库；创建、修改和删除表；选择、插入、更新和删除数据；并使用`MySQL`命令对数据进行其他漂亮的操作，如按你想要的方式进行过滤和排序。
 
 现在我们已经完成了命令行操作（但尚未完成 MySQL），所以可以将其关闭。
 
 ## 为网站创建 PHP 配置文件
 
-我们必须首先创建一个命名为 `Family` 的文件夹，并将其放在 `htdocs` 文件夹中。该文件夹位于我们 XAMPP 安装的根目录下。然后，我们创建一个名为 `config.php` 的文件，并将其放在网站的根目录下。
+我们必须首先创建一个命名为`Family`的文件夹，并将其放在`htdocs`文件夹中。该文件夹位于我们 XAMPP 安装的根目录下。然后，我们创建一个名为`config.php`的文件，并将其放在网站的根目录下。
 
 > **警告：** 为了安全考虑，此文件需要放置在服务器外部，因为虽然通过浏览器读取 PHP 并不容易，如果服务器配置不当，这种情况可能会发生。但由于我们想尽可能保持简单，我们将将其放在这里。
 
 接下来，我们定义了建立连接字符串所需的常量，我们将使用该字符串来连接音乐数据库：
 
 ```php
-<?php  
-define('DB_NAME', 'Family');  
-define('DB_USER', 'root');  
-define('DB_PASSWORD', '');   
-define('DB_HOST', 'localhost');  
+<?php
+define('DB_NAME', 'Family');
+define('DB_USER', 'root');
+define('DB_PASSWORD', '');
+define('DB_HOST', 'localhost');
 ?>
 ```
 
-> **警告：** 出于安全考虑，明文密码是一个重大的安全风险。你可以使用 `hash()` 并哈希值存储在配置文件 `config.php` 中。这样在登录时，你就可以检查输入的密码是否与哈希值匹配。
+> **警告：** 出于安全考虑，明文密码是一个重大的安全风险。你可以使用`hash()`并哈希值存储在配置文件`config.php`中。这样在登录时，你就可以检查输入的密码是否与哈希值匹配。
 
-然后，通过通过将主机名、用户名、密码和数据库名称传递给建立连接的方法来建立连接字符串：
+然后，通过将主机名、用户名、密码和数据库名称传递给建立连接的方法来建立连接字符串：
 
 ```php
 <?php
-define('DB_NAME','Family');
-define('DB_USER','root');
-define('DB_PASSWORD','');
-define('DB_HOST','localhost');
+define('DB_NAME', 'Family');
+define('DB_USER', 'root');
+define('DB_PASSWORD', '');
+define('DB_HOST', 'localhost');
+
 $conn = @mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 ?>
 ```
@@ -1167,11 +1195,13 @@ $conn = @mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
 ```php
 <?php
-define('DB_NAME','Family');
-define('DB_USER','root');
-define('DB_PASSWORD','');
-define('DB_HOST','localhost');
+define('DB_NAME', 'Family');
+define('DB_USER', 'root');
+define('DB_PASSWORD', '');
+define('DB_HOST', 'localhost');
+
 $conn = @mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+
 if (!$conn) {
     die('Could not connect: ' . mysqli_error());
 }
@@ -1182,7 +1212,7 @@ if (!$conn) {
 
 ## 创建索引页
 
-现在我们需要创建一个落地页，该页面将以表格的形式列出数据库中的家庭成员。我们将一些 CSS（通过链接外部表格）来创建一个吸引人的表格以显示我们的数据。我们创建一个名为 `index.php` 的文件并将其放在网站的根目录。代码应该如下：
+现在我们需要创建一个落地页，该页面将以表格的形式列出数据库中的家庭成员。我们将一些 CSS（通过链接外部表格）来创建一个吸引人的表格以显示我们的数据。我们创建一个名为`index.php`的文件并将其放在网站的根目录。代码应该如下：
 
 ```html
 <!DOCTYPE html>
@@ -1204,7 +1234,8 @@ if (!$conn) {
             require_once('config.php');
             $sql = "SELECT MemberID, FirstName, LastName, Age, Gender, Relationship FROM FamilyMembers";
             $response = @mysqli_query($conn, $sql);
-            if ($response){
+
+            if ($response) {
                 echo '<table>
                     <tr>
                         <th>Member ID</th>
@@ -1214,31 +1245,30 @@ if (!$conn) {
                         <th>Gender</th>
                         <th>Relationship</th>
                     </tr>';
-                while ($row = mysqli_array($response)){
+
+                while ($row = mysqli_array($response)) {
                     echo '<tr>
-                        <td>'.'.$row['MemberID'].'</td>
-                        <td>'.'.$row['FirstName'].'</td>
-                        <td>'.'.$row['LastName'].'</td>
-                        <td>'.'.$row['Age'].'</td>
-                        <td>'.'.$row['Gender'].'</td>
-                        <td>'.'.$row['Relationship'].'</td>
+                        <td>' . $row['MemberID'] . '</td>
+                        <td>' . $row['FirstName'] . '</td>
+                        <td>' . $row['LastName'] . '</td>
+                        <td>' . $row['Age'] . '</td>
+                        <td>' . $row['Gender'] . '</td>
+                        <td>' . $row['Relationship'] . '</td>
                     </tr>';
                 }
+
                 echo '</table>';
-            }
-            else {
+            } else {
                 echo "Cound not get a response from database " . mysqli_error($conn);
             }
+
             mysqli_close($conn);
-    ?>
+?>
         </div>
     </div>
 </body>
 </html>
 ```
-
-
-
 
 ```html
 <th>Relationship</th>
@@ -1248,9 +1278,8 @@ if (!$conn) {
 好了，列的部分就完成了。现在我们需要动态地逐行显示行，以防有很多数据。以下代码实现了这一功能：
 
 ```php
-while ($row = mysqli_fetch_array($response)){
-
-    echo '<tr
+while ($row = mysqli_fetch_array($response)) {
+    echo '<tr>
                 <td>' . $row['MemberID'] . '</td>
                 <td>' . $row['FirstName'] . '</td>
                 <td>' . $row['LastName'] . '</td>
@@ -1261,7 +1290,7 @@ while ($row = mysqli_fetch_array($response)){
 }
 ```
 
-在上面的代码中，我们使用循环来遍历通过 `mysqli_fetch_array()` 函数从 `response` 获取的数组，并将 `$response` 变量作为参数传递。我们将从函数获取的值（也是一个包含行字段的数组）赋值给变量 `$row`，并在周围嵌入 HTML 标签，从而根据数组中元素的数量动态地创建新的表格行。
+在上面的代码中，我们使用循环来遍历通过`mysqli_fetch_array()`函数从`response`获取的数组，并将`$response`变量作为参数传递。我们将从函数获取的值（也是一个包含行字段的数组）赋值给变量`$row`，并在周围嵌入 HTML 标签，从而根据数组中元素的数量动态地创建新的表格行。
 
 然后我们关闭表格，动态显示数据就完成了：
 
@@ -1269,23 +1298,23 @@ while ($row = mysqli_fetch_array($response)){
 echo '</table>';
 ```
 
-但如果因为某些错误导致数据库没有响应该怎么办？这种情况可能会发生。在这种情况下，我们在 `if` 语句之后添加一个 `else` 语句，使用 `mysqli_error` 函数显示错误信息，并将连接作为参数传递：
+但如果因为某些错误导致数据库没有响应该怎么办？这种情况可能会发生。在这种情况下，我们在`if`语句之后添加一个`else`语句，使用`mysqli_error`函数显示错误信息，并将连接作为参数传递：
 
 ```php
-else{ 
-    echo "Cound not get a response from database " .             mysqli_error($conn);
+else {
+    echo "Cound not get a response from database " . mysqli_error($conn);
 }
 ```
 
-最后，我们使用 `mysqli_close` 函数关闭数据库连接，并将连接作为参数，索引页就写完了：
+最后，我们使用`mysqli_close`函数关闭数据库连接，并将连接作为参数，索引页就写完了：
 
 ```php
 mysqli_close($conn);
 ```
 
-进入浏览器并输入如下路径 `index.php`，然后按回车：
+进入浏览器并输入如下路径`index.php`，然后按回车：
 
-https://localhost/Family/index.php
+`https://localhost/Family/index.php`
 
 下面的窗口应该显示：
 
@@ -1295,119 +1324,133 @@ https://localhost/Family/index.php
 
 ### 索引页的 CSS
 
-在网站根目录下创建一个名为 `css` 的文件夹，并创建两个名为 `main.css` 和 `table_styling.css` 的 CSS 文件。这些是页面的外部样式表。
+在网站根目录下创建一个名为`css`的文件夹，并创建两个名为`main.css`和`table_styling.css`的 CSS 文件。这些是页面的外部样式表。
 
-我们在 `main.css` 中输入以下代码来为主体、头部和链接设置样式。它还让内容居中：
+我们在`main.css`中输入以下代码来为主体、头部和链接设置样式。它还让内容居中：
 
 ```css
 body {
-background-color: #EEE;
+    background-color: #EEE;
 }
 
 #container {
-width: 900px;
-margin-left: auto;
-margin-right: auto;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #header {
-color: #2ca089;
-text-align: center;
-font-size: 2em;
+    color: #2ca089;
+    text-align: center;
+    font-size: 2em;
 }
 
 /* links */
-a:link, a:visited {
-background-color: #2ca089;
-color: white;
-padding: 5px 12px;
-text-align: center;             
-text-decoration: none;
-display: inline-block;
+a:link,
+a:visited {
+    background-color: #2ca089;
+    color: white;
+    padding: 5px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
 
-a:hover, a:active {
-background-color: #AFDCB1;
+a:hover,
+a:active {
+    background-color: #AFDCB1;
 }
 
 #btn_add {
-padding: 5px 0px;
-text-align: right;
+    padding: 5px 0px;
+    text-align: right;
 }
 ```
 
-然后我们在 `table_styling.css` 中输入以下代码来设置表格样式：
+然后我们在`table_styling.css`中输入以下代码来设置表格样式：
 
 ```css
 table {
-border-collapse: collapse;
-width: 100%;
+    border-collapse: collapse;
+    width: 100%;
 }
 
-th, td {
-text-align: left;
-padding: 8px;
+th,
+td {
+    text-align: left;
+    padding: 8px;
 }
 
-tr:nth-child(even){background-color: white; }
+tr:nth-child(even) {
+    background-color: white;
+}
 
 th {
-background-color: #2ca089;
-color: white;
+    background-color: #2ca089;
+    color: white;
 }
 ```
 
 ## 创建输入数据的表单
 
-我们创建一个名为 `form.php` 的文件，并将其放在网站的根目录下。然后放入以下代码：
+我们创建一个名为`form.php`的文件，并将其放在网站的根目录下。然后放入以下代码：
 
 ```html
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="css/main.css">
-<link rel="stylesheet" type="text/css" href="css/form_styling.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/form_styling.css">
 </head>
 <body>
-<div id="container">
-<div id=content>
-<div>
-<form action="member_added.php" method="post">
-<div id="header">
-<h3>Add Family Member</h3>
-</div>
-<div id="btn_add">
-<a href="index.php">View Members</a>
-</div>
-<label for="fname">First Name</label>
-<input type="text" id="first_name" name="first_name" maxlength="80">
-<label for="lname">Last Name</label>
-<input type="text" id="last_name" name="last_name" maxlength="80">
-<label for="age">Age</label>
-<input type="number" id="age" name="age" min="1" max="100">
-<label for="gender">Gender</label>
-<select id="gender" name="gender">
-<option value="Male">Male</option>
-<option value="Female">Female</option>
-</select>
-<label for="relationship">Relationship</label>
-<input type="text" id="relationship" name="relationship" maxlength="80">
-<input type="submit" name="submit" value="ADD">
-</form>
-</div>
-</div>
-</div>
+    <div id="container">
+        <div id="content">
+            <div>
+                <form action="member_added.php" method="post">
+                    <div id="header">
+                        <h3>Add Family Member</h3>
+                    </div>
+                    <div id="btn_add">
+                        <a href="index.php">View Members</a>
+                    </div>
+
+                    <label for="fname">First Name</label>
+                    <input type="text" id="first_name" name="first_name" maxlength="80">
+
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="last_name" name="last_name" maxlength="80">
+
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" min="1" max="100">
+
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+
+                    <label for="relationship">Relationship</label>
+                    <input type="text" id="relationship" name="relationship" maxlength="80">
+
+                    <input type="submit" name="submit" value="ADD">
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 ```
 
 这里没有任何其他内容。表单使用了以下 HTML 属性：
-- `action`: 它将数据发送到 `member_added.php`。
-- `method="post"`: 这意味着通过 POST 请求发送数据。
+
+- `action`：它将数据发送到`member_added.php`。
+- `method="post"`：这意味着通过 POST 请求发送数据。
 
 ### 表单页的 CSS
 
-创建一个 `form_styling.css` 文件并将其放在根目录下。使用以下 CSS 规则来设置表单：
+创建一个`form_styling.css`文件并将其放在根目录下。使用以下 CSS 规则来设置表单：
+
+
 
 ```css
 input[type=text], input[type=number], select {
@@ -1436,9 +1479,9 @@ input[type=submit]:hover {
 }
 ```
 
-## 创建成员成员页
+## 创建成员页面
 
-最后，你需要创建一个最后的 PHP 脚本来处理表单发送的数据。我们创建一个名为 `member_added` 的新 PHP 文件并放在根目录下。然后放入以下代码：
+最后，你需要创建一个 PHP 脚本来处理表单发送的数据。我们创建一个名为`member_added`的新 PHP 文件并放在根目录下。然后放入以下代码：
 
 ```php
 <!DOCTYPE html>
@@ -1483,10 +1526,6 @@ if(isset($_POST['submit'])) {
 if (empty($null_fields)) {
 ```
 
-
-
-
-
 ```php
 $null_variable = NULL;
 $sql = "INSERT INTO FamilyMembers VALUES ('$null_variable', '$first_name', '$last_name', '$age', '$gender', '$relationship')";
@@ -1503,7 +1542,8 @@ else {
 }
 ```
 
-```<form action="member_added.php" method="post">
+```html
+<form action="member_added.php" method="post">
     <div id="header">
         <h3>添加家庭成员</h3>
     </div>
@@ -1527,16 +1567,17 @@ else {
 </form>
 ```
 
-让我们拆解一下并看看最有趣的部分。在处理信息之前，我们必须检查这些信息是否由表单提交。我们通过一个 `if` 语句并使用 PHP 内置函数 `isset()` 来实现，该函数检查变量是否为空。我们将关联数组 `$_POST` 作为参数传入。它包含了输入表单的所有值。该数组通过表单的 post 方法传递给脚本：
+让我们拆解一下并看看最有趣的部分。在处理信息之前，我们必须检查这些信息是否由表单提交。我们通过一个`if`语句并使用 PHP 内置函数`isset()`来实现，该函数检查变量是否为空。我们将关联数组`$_POST`作为参数传入。它包含了输入表单的所有值。该数组通过表单的`post`方法传递给脚本：
 
 ```php
 if(isset($_POST['submit'])) {
 ```
 
 在条件语句内部，我们声明了一个数组来检查我们是否不小心遗漏了任何表单输入：
+
 `$null_fields = array();`
 
-接下来，在将值发送到数据库之前，我们开始检查数组中的任何值是否为空。如果是，将其添加到 `$null_fields` 数组中；否则，我们创建一个变量并存储它们。我们只需看一个 `if…else` 语句，因为：
+接下来，在将值发送到数据库之前，我们开始检查数组中的任何值是否为空。如果是，将其添加到`$null_fields`数组中；否则，我们创建一个变量并存储它们。我们只需看一个`if…else`语句，因为：
 
 ```php
 if (empty($_POST['first_name'])) {
@@ -1546,22 +1587,22 @@ if (empty($_POST['first_name'])) {
 }
 ```
 
-我们对 `$_POST` 中的其余值也执行此操作。警告：这可能不是在数据进入数据库之前验证数据最安全的方法。对于这一点，我们需要使用正则表达式，那是一个高级话题。我们只是试图保持保持简单。
+我们对`$_POST`中的其余值也执行此操作。警告：这可能不是在数据进入数据库之前验证数据最安全的方法。对于这一点，我们需要使用正则表达式，那是一个高级话题。我们只是试图保持简单。
 
-接下来，我们必须检查 `$null_fields` 数组是否为空。这意味着所有数据都已提交：
+接下来，我们必须检查`$null_fields`数组是否为空。这意味着所有数据都已提交：
 
 ```php
 if (empty($null_fields)) {
 ```
 
-如果我们处于该条件内部，意味着所有数据都已提交，我们可以查询数据库。我们使用 `INSERT TO` 语句将数据插入 `FamilyMembers` 表中。我们遵循向表中插入数据的规则，确保变量的顺序与它们在表中定义的顺序一致。在创建查询字符串之前，我们声明了一个额外变量作为主键的空值传入。我们还确保参数的数量与表字段匹配：
+如果我们处于该条件内部，意味着所有数据都已提交，我们可以查询数据库。我们使用`INSERT TO`语句将数据插入`FamilyMembers`表中。我们遵循向表中插入数据的规则，确保变量的顺序与它们在表中定义的顺序一致。在创建查询字符串之前，我们声明了一个额外变量作为主键的空值传入。我们还确保参数的数量与表字段匹配：
 
 ```php
 $null_variable = NULL;
 $sql = "INSERT INTO FamilyMembers VALUES ('$null_variable', '$first_name', '$last_name', '$age', '$gender', '$relationship')";
 ```
 
-接下来我们使用 `mysqli_query()` 操作数据库，将连接和查询字符串作为参数，同时检查返回的错误。失败时返回 `FALSE`。如果发现错误，我们将显示它们以便修复。如果没有发现错误，我们将输出成功消息：
+接下来我们使用`mysqli_query()`操作数据库，将连接和查询字符串作为参数，同时检查返回的错误，同时检查返回的错误。失败时返回`FALSE`。如果发现错误，我们将显示它们以便修复。如果没有发现错误，我们将输出成功消息：
 
 ```php
 if (!mysqli_query($conn, $sql)) {
@@ -1571,7 +1612,7 @@ if (!mysqli_query($conn, $sql)) {
 }
 ```
 
-所以现在我们处理了用户输入所有数据的情况，但如果他漏掉了任何内容，我们将通过 `foreach` 循环遍历 `$null_fields` 数组并将它们显示在屏幕上：
+所以现在我们处理了用户输入所有数据的情况，但如果他漏掉了任何内容，我们将通过`foreach`循环遍历`$null_fields`数组并将它们显示在屏幕上：
 
 ```php
 else {
@@ -1582,7 +1623,8 @@ else {
 }
 ```
 
-之后，我们退出检查 `$_POST` 数组是否为空的条件并关闭数据库连接：
+之后，我们退出检查`$_POST`数组是否为空的条件并关闭数据库连接：
+
 `mysqli_close($conn);`
 
 然后在 PHP 标签之后，我们再次显示表单，允许 PHP 脚本自调用以便我们可以继续输入。
@@ -1593,28 +1635,28 @@ else {
 
 在本章中，我们创建了一个存储数据库连接的配置文件，并在整个网站中使用它建立数据库连接，并通过查询来存储和检索数据。我们创建了一个允许你查看已添加到数据库的家庭成员信息的页面。
 
-# 结语
+## 结语
 
 “教育是点燃火火焰，而不是填满一个容器。” —— 苏格拉底
 
 这本书到此结束，但并不是你学习的终点。你仍然需要出去学习还可以用 PHP 和 MySQL 做哪些其他事情，并对这些概念有更深入的理解。尽管在此，我诚地希望你已经具备了足够的知识，能够根据 PHP 和 MySQL 的基础知识完成你需要的工作。
 
+## 第一小时：PHP 基础
 
+在第一小时中，我们涵盖了 PHP 的基础知识，如注释、变量、常量和运算符。在此之前，我们学习了如何安装服务器软件包`XAMPP`，以获取服务器提供`Apache`服务。我们运行了 PHP 脚本并在屏幕上显示了整洁的消息。我们还选择了一个酷的文本编辑器来编写优美的 PHP 代码。
 
+## 第二小时：控制流与函数
 
+在第二小时，我们更深入地学习了 PHP 基础，并了如何编写条件语句，允许我们根据指定的条件执行代码块。接着，我们学习了如何使用`while`和`for`循环来遍历代码，直到满足特定条件。然后，我们学习了如何通过`functions`封装代码块并在程序中复用它们。我们以参数的形式向函数传递信息，函数会在对这些信息进行操作后返回部分结果。最后，我们学习了如何将数据集合存储在`arrays`中以及如何遍历它们。
 
-# 第一小时：PHP 基础
-在第一小时中，我们涵盖了 PHP 的基础知识，如注释、变量、常量和运算符。在此之前，我们学习了如何安装服务器软件包 `XAMPP`，以获取服务器提供 `Apache` 服务。我们运行了 PHP 脚本并在屏幕上显示了整洁的消息。我们还选择了一个酷的文本编辑器来编写优美的 PHP 代码。
+## 第三小时：MySQL
 
-# 第二小时：控制流与函数
-在第二小时，我们更深入地学习了 PHP 基础，并了如何编写条件语句，允许我们根据指定的条件执行代码块。接着，我们学习了如何使用 `while` 和 `for` 循环来遍历代码，直到满足特定条件。然后，我们学习了如何通过 `functions` 封装代码块并在程序中复用它们。我们以参数的形式向函数传递信息，函数会在对这些信息进行操作后返回部分结果。最后，我们学习了如何将数据集合存储在 `arrays` 中以及如何遍历它们。
+在第三小时，我们学习了`MySQL`。我们学习了如何调出命令行提示符并输入`MySQL`命令来执行各种操作，例如创建和删除数据库；创建、修改和删除表；检索、插入、更新和删除表中的数据。
 
-# 第三小时：MySQL
-在第三小时，我们学习了 `MySQL`。我们学习了如何调出命令行提示符并输入 `MySQL` 命令来执行各种操作，例如创建和删除数据库；创建、修改和删除表；检索、插入、更新和删除表中的数据。
+## 第四小时：集成
 
-# 第四小时：集成
-在第四章也是最后一章中，我们学习了如何结合使用 `PHP` 和 `MySQL` 为我们正在制作的简单网站创建动态内容，我们正在列出我们喜欢的家庭成员及其详细信息。
+在第四章也是最后一章中，我们学习了如何结合使用`PHP`和`MySQL`为我们正在制作的简单网站创建动态内容，我们正在列出我们喜欢的家庭成员及其详细信息。
 
-# 结语
+## 结语
+
 这些都是为绝对初学者提供的知识，他们需要清晰的示例和解释来快速引导。祝愿你未来的事业一切顺利，我相信你正走在实现梦想的道路上。很高兴能帮上忙。
-

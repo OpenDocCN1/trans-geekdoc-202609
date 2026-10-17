@@ -1,22 +1,5 @@
+
 # 机器学习实用指南
-
-
-
-
-
-
-
-
-
-
-
-* * * * * *
-
-
-* * * * * *
-
-
-
 
 ## 机器学习基础
 
@@ -28,7 +11,7 @@
 
 > **Lamer** 是一个认为自己很聪明其实是个失败者的人。例如：**那个想黑客其实只是个菜鸟**。
 
-你可能注意到，阅读深度学习和 TensorFlow/PyTorch 教程可能会让你了解如何完成特定任务，但当你想要将其应用于自己的问题时就不够了。导入库并调用 4-5 个方法可能完成工作，但会让你对它为什么有效一无所知。你能解决这个问题吗？
+你可能注意到，阅读深度学习和 `TensorFlow`/`PyTorch` 教程可能会让你了解如何完成特定任务，但当你想要将其应用于自己的问题时就不够了。导入库并调用 4-5 个方法可能完成工作，但会让你对它为什么有效一无所知。你能解决这个问题吗？
 
 > “我无法创造的东西，我不理解” —— 理查德·费曼
 
@@ -36,12 +19,9 @@
 
 #### 本书有什么帮助？
 
-*   提供一条清晰的路径（减少选择过载和分析瘫痪）来学习日益复杂的机器学习模型。
-*   机器学习算法的简洁实现，解决你可以进行优化的真实世界问题。
-*   提供足够的理论+数学知识，帮助你在理解了解决什么问题之后，理解它们为什么有效。
-
-
-
+* 提供一条清晰的路径（减少选择过载和分析瘫痪）来学习日益复杂的机器学习模型。
+* 机器学习算法的简洁实现，解决你可以进行优化的真实世界问题。
+* 提供足够的理论+数学知识，帮助你在理解了解决什么问题之后，理解它们为什么有效。
 
 机器学习（ML）是一门教授机器在不进行显式编程的情况下完成复杂任务的艺术与科学。作为一名黑客（hacker），你的工作是：
 
@@ -54,13 +34,13 @@
 
 ## 监督学习
 
-在`监督学习`设置中，你拥有一个数据集，它是一组带有 ![N](img/leanpub_equation_0.png)标签的示例。每个示例都包含一个特征向量 ![x\_i](img/leanpub_equation_1.png) 和一个标签 ![y\_i](img/leanpub_equation_2.png)。标签 ![y\_i](img/leanpub_equation_3.png)可以属于有限类别集 `\{1, \ldots, C\}`、实数或更复杂的类型。
+在`监督学习`设置中，你拥有一个数据集，它是一组带有 ![N](img/leanpub_equation_0.png) 标签的示例。每个示例都包含一个特征向量 ![x_i](img/leanpub_equation_1.png) 和一个标签 ![y_i](img/leanpub_equation_2.png)。标签 ![y_i](img/leanpub_equation_3.png) 可以属于有限类别集 `\{1, \ldots, C\}`、实数或更复杂的类型。
 
-监督学习算法的目标是构建一个模型，接收特征向量 ![x](img/leanpub_equation_5.png)作为输入并为其推导出正确的标签。
+监督学习算法的目标是构建一个模型，接收特征向量 ![x](img/leanpub_equation_5.png) 作为输入并为其推导出正确的标签。
 
 ## 无监督学习
 
-在`无监督学习`设置中，你拥有一个包含 ![N](img/leanpub_equation_6.png)无标签示例的数据集。同样，你有一个特征向量 ![x](img/leanpub_equation_7.png)，目标是构建一个模型接收它并将其转换为另一种。一些实际示例包括**聚类**、**降维**和**异常检测**。
+在`无监督学习`设置中，你拥有一个包含 ![N](img/leanpub_equation_6.png) 无标签示例的数据集。同样，你有一个特征向量 ![x](img/leanpub_equation_7.png)，目标是构建一个模型接收它并将其转换为另一种。一些实际示例包括**聚类**、**降维**和**异常检测**。
 
 ## 强化学习
 
@@ -74,7 +54,7 @@
 * 基于损失函数的优化准则
 * 优化例程 - 使用数据根据优化准则寻找“良好”的解决方案
 
-这些是我们实现的所有算法的主要组件。虽然有许多优化例程，但[随机梯度下降](https://en.wikipedia.org/wiki/Stochastic_gradient_descent)在实践中最常用。它用于为逻辑回归、神经网络以及许多其他模型寻找最优参数。
+这些是我们实现的所有算法的主要组件。虽然有许多优化例程，但[随机梯度下降](https://en.wikipedia.org/wiki/Stochastic_gradient_descent)在实践中最常用。它用于为`逻辑回归`、`神经网络`以及许多其他模型寻找最优参数。
 
 #### 预测
 
@@ -88,7 +68,7 @@
 
 ## 工具箱
 
-我们将使用许多由不同人士提供的库，但主要的有 NumPy、Pandas 和 Matplotlib。
+我们将使用许多由不同人士提供的库，但主要的有 `NumPy`、`Pandas` 和 `Matplotlib`。
 
 ### NumPy
 
@@ -99,82 +79,86 @@
 * 集成 C/C++ 和 Fortran 代码的工具
 * 有用的线性代数、傅里叶变换和随机数功能
 
-除了显而易见的科学用途外，NumPy 还可以作为通用数据的高效多维容器。可以定义任意的数据类型。这允许 NumPy 无缝且快速地与各种数据库集成。
+除了显而易见的科学用途外，`NumPy` 还可以作为通用数据的高效多维容器。可以定义任意的数据类型。这允许 `NumPy` 无缝且快速地与各种数据库集成。
 
 这里有一个非常简单的演示：
 
-```
-1 import numpy as np
-2 
-3 a = np.array([1, 2, 3]) # 1D array
-4 type(a)
+```python
+import numpy as np
+
+a = np.array([1, 2, 3]) # 1D array
+type(a)
 ```
 
 ```
-1 numpy.ndarray
+numpy.ndarray
+```
+
+```python
+a.shape
 ```
 
 ```
-1 a.shape
+(3,)
 ```
 
-```
-1 (3,)
-```
 我们有一个包含 3 个元素的一维数组。你可以获取它的第一个元素：
 
-```
-1 a[0]
+```python
+a[0]
 ```
 
 ```
-1 1
+1
 ```
+
 并修改它：
 
-```
-1 a[0] = 5
-2 
-3 a
+```python
+a[0] = 5
+
+a
 ```
 
 ```
-1 array([5, 2, 3])
+array([5, 2, 3])
 ```
+
 让我们创建一个二维数组：
 
-```
-1 b = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]) # 2D array
-2 
-3 b.shape
+```python
+b = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]) # 2D array
+
+b.shape
 ```
 
 ```
-1 (3, 3)
+(3, 3)
 ```
+
 我们有一个 3x3 的矩阵。让我们选择前 2 行：
 
-```
-1 b[:2]
+```python
+b[:2]
 ```
 
 ```
-1 array([[1, 2, 3],
-2        [4, 5, 6]])
+array([[1, 2, 3],
+       [4, 5, 6]])
 ```
 
 ### Pandas
 
 [pandas](https://pandas.pydata.org/) 是一个开源的 BSD 许可库，为 Python 语言提供了高性能的数据结构和数据分析工具。
 
-我们将使用 pandas 作为数据集的容器。主要的实体是 `DataFrame`。我们还将进行一些转换/预处理和可视化。
+我们将使用 `pandas` 作为数据集的容器。主要的实体是 `DataFrame`。我们还将进行一些转换/预处理和可视化。
 
 让我们从创建一个 `DataFrame` 开始：
 
-```
-1 import pandas as pd
-2 
-3 df = pd.DataFrame(dict(customers=["Jill", "Jane", "Hanna"], payments=[120, 180, 90]))
+```python
+import pandas as pd
+
+df = pd.DataFrame(dict(customers=["Jill", "Jane", "Hanna"], payments=[120, 180, 90]))
 ```
 
 ### Matplotlib
@@ -183,14 +167,14 @@
 
 这是它的一个快速示例：
 
-```
-1 import matplotlib.pyplot as plt
-2 import numpy as np
-3 
-4 x = np.arange(0, 3 * np.pi, 0.1)
-5 y = np.sin(x)
-6 
-7 plt.plot(x, y)
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.arange(0, 3 * np.pi, 0.1)
+y = np.sin(x)
+
+plt.plot(x, y)
 ```
 
 ### 准备好了吗？
@@ -205,87 +189,76 @@
 
 你从数据库、分析包等收集了一些数据。这里是你可能得到的结果：
 
+让我们将数据加载到 `Pandas` 数据帧中：
 
-让我们将数据加载到 Pandas 数据帧中：
+```python
+import pandas as pd
+from collections import OrderedDict
 
-```
-1 import pandas as pd
-2 from collections import OrderedDict
-3 
-4 data = OrderedDict(
-5         amount_spent =  [50,  10, 20, 5,  95,  70,  100,  200, 0],
-6         send_discount = [0,   1,  1,  1,  0,   0,   0,    0,   1]
-7     )
+data = OrderedDict(
+        amount_spent =  [50,  10, 20, 5,  95,  70,  100,  200, 0],
+        send_discount = [0,   1,  1,  1,  0,   0,   0,    0,   1]
+    )
 ```
 
 并查看它：
 
+```python
+df = pd.DataFrame.from_dict(data)
 ```
-1 df = pd.DataFrame.from_dict(data)
-```
 
-
-
-逻辑回归用于因变量/目标变量为二分类时的分类问题。也就是说，它的值为真（true）或假（false）。`回归` 是实践中最流行和使用最广泛的算法之一（[参见此处](https://www.kaggle.com/surveys/2017)）。
+`逻辑回归`用于因变量/目标变量为二分类时的分类问题。也就是说，它的值为真（`true`）或假（`false`）。`回归` 是实践中最流行和使用最广泛的算法之一（[参见此处](https://www.kaggle.com/surveys/2017)）。
 
 可以使用逻辑回归解决的问题包括：
 
-*   **邮件** — 判断是否为垃圾邮件
-*   **在线交易** — 是否为欺诈
-*   **肿瘤分类** — 恶性还是良性
-*   **客户升级** — 是否会购买高级升级
+* **邮件** — 判断是否为垃圾邮件
+* **在线交易** — 是否为欺诈
+* **肿瘤分类** — 恶性还是良性
+* **客户升级** — 是否会购买高级升级
 
 我们想要预测变量 `y` 的结果，使得：
-
 
 并将 `0` 设置为负类（例如：邮件不是垃圾邮件）或 `1` 设置为正类（例如：邮件是垃圾邮件）。
 
 ## 我们不能直接使用线性回归吗？
 
-
 *图片来源：[machinelearningplus.com](https://machinelearningplus.com/)*
 
-线性回归另一种非常流行的模型。它的工作假设是观测到的现象（你的数据）可以用直线来解释。
+`线性回归`另一种非常流行的模型。它的工作假设是观测到的现象（你的数据）可以用直线来解释。
 
-线性回归的响应变量 `y` 在 \[0, 1\] 范围内是**不受限制**。这使得很难根据它的输出做出二分类决策。因此，不符合我们的需求。
+线性回归的响应变量 `y` 在 \[0, 1\] 范围内是**不受限制**的。这使得很难根据它的输出做出二分类决策。因此，不符合我们的需求。
 
 ## 逻辑回归模型
 
-针对我们的问题，我们想要一个使用 1 个变量（预测器）(![x\_1](img/leanpub_equation_9.png)\-支出金额）的模型来预测我们是否应该给客户提供折扣。
+针对我们的问题，我们想要一个使用 1 个变量（预测器）(![x_1](img/leanpub_equation_9.png)\-支出金额）的模型来预测我们是否应该给客户提供折扣。
 
-![h\_w(x) = w\_1x\_1 + w\_0](img/leanpub_equation_10.png)
+![h_w(x) = w_1x_1 + w_0](img/leanpub_equation_10.png)
 
-其中系数 ![w\_i](img/leanpub_equation_11.png) 是模型的参数。令系数向量 ![W](img/leanpub_equation_12.png) 为：
+其中系数 ![w_i](img/leanpub_equation_11.png) 是模型的参数。令系数向量 ![W](img/leanpub_equation_12.png) 为：
 
-![W = \\begin{pmatrix} w\_1 \\ w\_0 \\ \\end{pmatrix}](img/leanpub_equation_13.png)
+![W = \begin{pmatrix} w_1 \\ w_0 \\ \end{pmatrix}](img/leanpub_equation_13.png)
 
-然后我们可以用更紧凑的形式表示 ![h\_w(x)](img/leanpub_equation_14.png)：
+然后我们可以用更紧凑的形式表示 ![h_w(x)](img/leanpub_equation_14.png)：
 
-![h\_w(x) = w^Tx](img/leanpub_equation_15.png)
+![h_w(x) = w^Tx](img/leanpub_equation_15.png)
 
 这就是`线性回归` 模型。
 
 我们想要构建一个输出值为 0 到 1 之间的模型，因此我们想要得到一个满足以下条件的的假设：
 
-
 对于`逻辑回归`，我们想要修改这一点并引入另一个函数 `g`：
-
 
 我们将 `g` 定义为：
 
-
 其中
 
-
 `g` 也称为 `sigmoid 函数`或 `logistic 函数`。代入后，我们得到：
-
 
 作为我们的假设。
 
 ### 深入观察 sigmoid 函数
 
 直观上，我们将使用 sigmoid 函数“覆盖在”线性回归模型上，将其限制在 \[0;1\] 之间。记得 sigmoid 函数定义为：
-
 
 让我们将其转换为 Python 函数：
 
@@ -295,7 +268,6 @@ def sigmoid(z):
 ```
 
 sigmoid 函数的图形表示：
-
 
 看起来很眼熟，对吧？注意它收敛到 -1 或 +1 有有多快。
 
@@ -307,21 +279,21 @@ sigmoid 函数的图形表示：
 
 我们有一个可以用来决策的模型，但我们仍然需要找到参数 `W`。为了做到，我们需要一个目标来衡量一组参数有多好。为了这个目的，我们将使用一个`代价`函数：
 
-![J(W) = \\frac{1}{m}\\sum_{i = 1}Cost(h\_w^{(i)}, y^{(i)})](img/leanpub_equation_22.png)
+![J(W) = \frac{1}{m}\sum_{i = 1}Cost(h_w^{(i)}, y^{(i)})](img/leanpub_equation_22.png)
 
-![Cost(h\_w(x), y) = \\begin{cases} -log(h\_w(x)) &\\text{if} y = 1 \\ -log(h\_w(x)) &\\text{if} y = 0 \\end{cases}](img/leanpub_equation_23.png)
+![Cost(h_w(x), y) = \begin{cases} -log(h_w(x)) &\text{if} y = 1 \\ -log(h_w(x)) &\text{if} y = 0 \end{cases}](img/leanpub_equation_23.png)
 
 这也被称为`对数损失`或[`交叉熵损失`](https://mlcheatsheet.readthedocs.io/latest/loss_functions)。
+
 ![](img/1_cost.png)
 
 *图片来源：[mlcheatsheet](https://mlcheatsheet.readthedocs.io/)*
 
 我们可以将上面的函数压缩成一个：
 
-
 其中
 
-![h\_w(x) = g(w^Tx)](img/255.png)
+![h_w(x) = g(w^Tx)](img/255.png)
 
 让我们在 Python 中实现它：
 
@@ -347,7 +319,9 @@ def print_result(y_hat, y):
 y_hat = predict(X[0], .5)
 ```
 
-`loss: 25.0 predicted: 0.999999999986112 actual: 0.0`
+```
+loss: 25.0 predicted: 0.999999999986112 actual: 0.0
+```
 
 遗憾的是，我很懒，这个方法看起来太费力了。我们看下一个：
 
@@ -361,7 +335,7 @@ for w in np.arange(-1, 1, 0.1):
     print(loss(y_hat, y))
 ```
 
-```text
+```
 0.0
 0.0
 0.0
@@ -375,12 +349,7 @@ for w in np.arange(-1, 1, 0.1):
 0.6931471805599397
 ```
 
-
-
-
-
 参数 `a` 被称为*学习率*。高 `learning rate` 可以快速收敛，但存在越过最低点的风险。低 `learning rate` 允许在负梯度的方向上进行更有信心的移动。然而，它是耗时的，因此会花费我们很多时间才能收敛。
-
 
 *图片来源：[Towards Data Science](https://towardsdatascience.com/)*
 
@@ -389,29 +358,29 @@ for w in np.arange(-1, 1, 0.1):
 我们将使用的算法工作如下：
 
 ```
-1 重复直到收敛 {
-2   1. 计算平均梯度
-3   2 乘以学习率
-3   3 从权重中减去
-5 }
+重复直到收敛 {
+  1. 计算平均梯度
+  2. 乘以学习率
+  3. 从权重中减去
+}
 ```
 
 让我们用 Python 来实现它：
 
 ```python
- 1 def predict(X, W):
- 2   return sigmoid(np.dot(X, W))
- 3 
- 4 def fit(X, y, n_iter=100000, lr=0.01):
- 5 
- 6   W = np.zeros(X.shape[1])
- 7 
- 8   for i in range(n_iter):
- 9       z = np.dot(X, W)
-10       h = sigmoid(z)
-11       gradient = np.dot(X.T, (h - y)) / y.size
-12       W -= lr * gradient
-13   return W
+def predict(X, W):
+  return sigmoid(np.dot(X, W))
+
+def fit(X, y, n_iter=100000, lr=0.01):
+
+  W = np.zeros(X.shape[1])
+
+  for i in range(n_iter):
+      z = np.dot(X, W)
+      h = sigmoid(z)
+      gradient = np.dot(X.T, (h - y)) / y.size
+      W -= lr * gradient
+  return W
 ```
 
 关于“直到收敛”这部分。你可能会注意到我们有点是用暴力的方法解决的。也就是说，我们将按照预设的迭代次数运行算法。另一个有趣点是我们的权重 `W` 的初始化——最初设置为零。
@@ -419,23 +388,23 @@ for w in np.arange(-1, 1, 0.1):
 让我们从字面上测试一下我们的实现。但首先，我们需要一个函数来根据某些数据 `X` 预测 `y`（根据客户的支出情况判断是否应该给其发送折扣）：
 
 ```python
-1 def predict(X, W):
-2   return sigmoid(np.dot(X, W))
+def predict(X, W):
+  return sigmoid(np.dot(X, W))
 ```
 
 现在来做我们的简单测试：
 
 ```python
- 1 class TestGradientDescent(unittest.TestCase):
- 2 
- 3     def test_correct_prediction(self):
- 4       global X
- 5       global y
- 6       if len(X.shape) != 2:
- 7         X = X.reshape(X.shape[0], 1)
- 8       w = fit(X, y)
- 9       y_hat = predict(X, w).round()
-10       self.assertTrue((y_hat == y).all())
+class TestGradientDescent(unittest.TestCase):
+
+    def test_correct_prediction(self):
+      global X
+      global y
+      if len(X.shape) != 2:
+        X = X.reshape(X.shape[0], 1)
+      w = fit(X, y)
+      y_hat = predict(X, w).round()
+      self.assertTrue((y_hat == y).all())
 ```
 
 注意我们使用 `reshape` 为 `X` 增加了一个伪维度。此外，在调用 `predict` 之后，我们对结果进行了舍入。记住 `sigmoid` 函数输出的是（就像胃不舒服的龙一样）`[0; 1]`范围内的数字。我们只需要对结果进行舍入，以获得 0 或 1（是或否）的答案。
@@ -444,11 +413,15 @@ for w in np.arange(-1, 1, 0.1):
 
 这是我们运行测试用例的结果：
 
+```
 F
+```
 
 嗯，这不太好，在忙了之后，我们完全没有达到为模型找到良好参数的目标。但是，哪里出问题了？
 
 欢迎来到你的首次模型调试！让我们先看看我们的算法是否随着时间的推移而有所改进。我们可以使用损失指标来实现这一点：
+
+
 
 ```python
  1 def fit(X, y, n_iter=100000, lr=0.01):
@@ -470,7 +443,7 @@ F
 
 `run_tests()`
 
-我们几乎是复制粘贴了训练代码，不同的是我们每 *10,000* 次迭代打印一次训练损失。让我们来看：
+我们几乎是复制粘贴了训练代码，不同的是我们每 `10,000` 次迭代打印一次训练损失。让我们来看：
 
 ```text
  1     loss: 0.6931471805599453
@@ -486,7 +459,6 @@ F
 ```
 
 F
-
 
 可疑的是，我们在第一次尝试就找到了问题的可能原因！我们的损失没有足够低，换句话说，我们的算法卡在一个对我们来说不够好的点上。如何修复？？尝试不同的学习率或用不同的值初始化参数？
 
@@ -524,10 +496,6 @@ F
  9 loss: 0.41899283818630056
 ```
 
-
-
-
-
 [在 Google Colaboratory Notebook 中的完整源代码](https://colab.research.google.com/drive/1kmtjoULbyRtAtDPKYlhWSwATLpF7PQd8)
 
 接下来，你将从零实现一个线性回归模型 :)
@@ -550,7 +518,7 @@ F
 
 将 Kaggle 数据集加载到 `Pandas` 数据帧中：
 
-```
+```python
 1 df_train = pd.read_csv('house_prices_train.csv')
 ```
 
@@ -558,38 +526,33 @@ F
 
 我们要预测 `SalePrice` 列（美元），让我们从它开始：
 
+```text
+ 1 count      1460.0000000
+ 2 mean     180921.195890
+ 3 std       79442.502883
+ 4 min       34900.000000
+ 5 25%      129975.000000
+ 6 50%      163000.000000
+ 7 75%      214000.000000
+ 8 max      755000.000000
+ 9 Name: SalePrice, dtype: float64
 ```
-1 count      1460.0000000
-2 mean     180921.195890
-3 std       79442.502883
-4 min       34900.000000
-5 25%      129975.000000
-6 50%      163000.000000
-7 75%      214000.000000
-8 max      755000.000000
-9 Name: SalePrice, dtype: float64
-```
-
 
 大部分密度分布在 10 万到 25 万之间，但在高价端似乎有许多离群值。
 
 接下来，让我们看看较大的居住面积（平方英尺）与售价的关系：
 
-
 你可能预期较大的居住面积意味着更高的价格。这张图显示你大体是正确的。但那 2-3 栋拥有巨大居住面积的“便宜”房子有什么呢？
 
 有一个你可能没有考虑到探索的列是 `TotalBsmtSF` —— 地室区域的总平方英尺，但我们还是看一眼吧：
-
 
 趣，不是吗？地下室面积似乎对我们的模型有很强的预测能力。
 
 好了，最后一个。让我们看看 `OverallQual` —— 整体材料和装修质量。当然，这个特征看起来主观性要强得多，因此它可能会为售价提供略有不同的视角。
 
-
 这个特征看起来一切都很正常，但当你向右看时，情况开始变得非常微妙得多。这会“困扰”我们的模型吗？
 
 让我们对与售价相关性最高的 8 个特征进行更全局的观察：
-
 
 惊讶吗？我们到为止讨论的所有特征都出现了。这简直就像我们从一开始就知道它们一样……
 
@@ -597,10 +560,9 @@ F
 
 我们还没有讨论如何“处理”缺失数据，所以我们像大佬一样处理它们——直接不使用这些特征：
 
-| | 行数 | 百比 |
+| 特征 | 行数 | 百比 |
 | --- | --- | --- |
 | PoolQC | 1453 | 0.995205 |
-| --- | --- | --- |
 | MiscFeature | 1406 | 0.963014 |
 | Alley | 1369 | 0.937671 |
 | Fence | 1179 | 0.807534 |
@@ -630,16 +592,13 @@ F
 
 简单线性回归使用传统的截距形式，其中 `a` 和 `b` 是我们尝试“学习”并产生最准确预测的系数。`X` 代表我们的输入数据。
 
-
 #### 多变量回归
 
 一个复杂的多元线性方程可能如下，其中 `w` 代表模型尝试学习的系数或权重。
 
-
 ### 损失函数
 
 MSE 定义为：
-
 
 我们可以使用以下函数来寻找参数：
 
@@ -649,11 +608,9 @@ MSE 衡量预测值与正确值之间的偏差。当模型在训练数据上表�
 
 MSE 的一阶导数为：
 
-
 #### 半误差 (OHMSE)
 
 我们将对 MSE 进行一个微小的修改——乘以 `1/2`，这样在求导时，`2` 就抵消了：
-
 
 OHMSE 的一阶导数为：
 
@@ -690,7 +647,7 @@ def loss(h, y):
 
 结果耗时：
 
-```
+```text
 .....
 --------------------------------------------------------------
 Ran 5 tests in 0.007s
@@ -701,7 +658,6 @@ OK
 ### 数据预处理
 
 我们将使用以下公式（标准化）对数据进行一些预处理：
-
 
 其中 ![mu](img/leanpub_equation_42.png) 是均值平均值，![sigma](img/leanpub_equation_43.png) 是标准差。
 
@@ -715,17 +671,13 @@ x = (x - x.mean()) / x.std()
 x = np.c_[np.ones(x.shape[0]), x]
 ```
 
-
-
-
-
 我们将仅在第一个模型中使用“较大居住面积”功能。
 
 ## 实现线性回归
 
 首先，是我们的测试：
 
-```
+```python
 1 class TestLinearRegression(unittest.TestCase):
 2 
 3     def test_find_coefficients(self):
@@ -739,7 +691,7 @@ x = np.c_[np.ones(x.shape[0]), x]
 
 废话不多说，这是简单的线性回归实现：
 
-```
+```python
  1 class LinearRegression:
  2 
 3   def predict(self, X):
@@ -748,26 +700,26 @@ x = np.c_[np.ones(x.shape[0]), x]
 6   def _gradient_descent_step(self, X, targets, lr):
  7 
 8     predictions = self.predict(X)
- 9 10     error = predictions - targets
-11     gradient = np.dot(X.T,  error) / len(X)
+ 9     error = predictions - targets
+10     gradient = np.dot(X.T,  error) / len(X)
+11 
+12     self._W -= lr * gradient
  13 
-14     self._W -= lr * gradient
+14   def fit(self, X, y, n_iter=100000, lr=0.01):
  15 
-16   def fit(self, X, y, n_iter=100000, lr=0.01):
+16     self._W = np.zeros(X.shape[1])
  17 
-18     self._W = np.zeros(X.shape[1])
- 19 
-20     for i in range(n_iter):
-21         self._gradient_descent_step(x, y, lr)
- 22 
-23     return self
+18     for i in range(n_iter):
+19         self._gradient_descent_step(x, y, lr)
+ 20 
+21     return self
 ```
 
 你可能会发现，我们的 `LinearRegression` 实现比为 `Logistic Regression` 展示的要简单。注意，`Gradient Descent`算法的使用几乎是相同的。很有趣，不是吗？单一算法可以构建两种类型的模型。我们还能用它构建更多吗？
 
 `run_tests()`
 
-```
+```text
 1 ......
 2 -----------------------------------------------------------------
 3 Ran 6 tests in 1.094s
@@ -779,7 +731,7 @@ x = np.c_[np.ones(x.shape[0]), x]
 
 让我们使用新创建的模型开始我们的房产市场霸主之路：
 
-```
+```python
 1 clf = LinearRegression()
 2 clf.fit(x, y, n_iter=2000, lr=0.01)
 ```
@@ -798,7 +750,7 @@ x = np.c_[np.ones(x.shape[0]), x]
 
 让我们利用更多可用数据构建一个 `Multivariable Linear Regression` 模型，看看这是否能改进我们的 `MSE` 误差。别忘了缩放：
 
-```
+```python
 1 x = df_train[['OverallQual', 'GrLivArea', 'GarageCars']]
 2 
 3 x = (x - x.mean()) / x.std()
@@ -819,13 +771,12 @@ x = np.c_[np.ones(x.shape[0]), x]
 
 我们的客户端接口也保持不变：
 
-```
+```python
 1 clf = LinearRegression()
 2 clf.fit(x, y, n_iter=2000, lr=0.01)
 ```
 
 结果如下：
-
 
 `822817042.8437098`
 
@@ -853,61 +804,13 @@ x = np.c_[np.ones(x.shape[0]), x]
 
 抱歉，你可能会失眠了。在内心深处你知道你的 `Linear Regression` 模型是不够的。
 
-我们可以改进它吗？[`Linear Regression` 笔记本](https://colab.research.google.com/drive/1DXkpo9PmH9_HiCSz9NQlZ9vGQtMIYqmF) 源代码。
 
-抱歉，你可能会失眠了。在内心深处你知道你的 `Linear Regression` 模型是不够的。
-
-我们可以改进它吗？[`Linear Regression` 笔记本](https://colab.research.google.com/drive/1DXkpo9PmH9_HiCSz9NQlZ9vGQtMIYqmF) 源代码。
-
-抱歉，你可能会失眠了。在内心深处你知道你的 `Linear Regression` 模型是不够的。
 
 我们可以改进它吗？[`Linear Regression` 笔记本](https://colab.research.google.com/drive/1DXkpo9PmH9_HiCSz9NQlZ9vGQtMIYqmF) 源代码。
 
 抱歉，你可能会失眠了。在内心深处你知道你的 `Linear Regression` 模型是不够的。
 
-我们可以改进它吗？[`Linear Regression` 笔记本](https://colab.research.google.com/drive/1DXkpo9PmH9_HiCSz9NQlZ9vGQtMIYqmF) 源代码。
-
-抱歉，你可能会失眠了。在内心深处你知道你的 `Linear Regression` 模型是不够的。
-
-我们可以改进它吗？[`Linear Regression` 笔记本](https://colab.research.google.com/drive/1DXkpo9PmH9_HiCSz9NQlZ9vGQtMIYqmF) 源代码。
-
-抱歉，你可能会失眠了。在内心深处你知道你的 `Linear Regression` 模型是不够的。
-
-我们可以改进它吗？[`Linear Regression` 笔记本](https://colab.research.google.com/drive/1DXkpo9PmH9_HiCSz9NQlZ9vGQtMIYqmF) 源代码。
-
-抱歉，你可能会失眠了。在内心深处你知道你的 `Linear Regression` 模型是不够的。
-
-我们可以改进它吗？[`Linear Regression` 笔记本](https://colab.research.google.com/drive/1DXkpo9PmH9_HiCSz9NQlZ9vGQtMIYqmF) 源代码。
-
-抱歉，你可能会失眠了。在内心深处你知道你的 `Linear Regression` 模型是不够的。
-
-我们可以改进它吗？[`Linear Regression` 笔记本](https://colab.research.google.com/drive/1DXkpo9PmH9_HiCSz9NQlZ9vGQtMIYqmF) 源代码。
-
-抱歉，你可能会失眠了。在内心深处你知道你的 `Linear Regression` 模型是不够的。
-
-我们可以改进它吗？[`Linear Regression` 笔记本](https://colab.research.google.com/drive/1DXkpo9PmH9_HiCSz9NQlZ9vGQtMIYqmF) 源代码。
-
-抱歉，你可能会失眠了。在内心深处你知道你的 `Linear Regression` 模型是不够的。
-
-我们可以改进它吗？[`Linear Regression` 笔记本](https://colab.research.google.com/drive/1DXkpo9PmH9_HiCSz9NQlZ9vGQtMIYqmF) 源代码。
-
-
-
-
-
-```python
-class Node:
-    def __init__(self, x, y, idxs, min_leaf=5):
-        self.x = x
-        self.y = y
-        self.idxs = idxs
-        self.min_leaf = min_leaf
-        self.row_count = len(idxs)
-        self.col_count = x.shape[1]
-        self.val = np.mean(y[idxs])
-        self.score = float('inf')
-        self.find_varsplit()
-```
+## 决策树实现
 
 树是递归数据结构，而我们将充分利用这一点。我们的 `Node` 类代表了模型中的某一个决策点。模型中的每个划分都有寻找解决方案的 2 种可能结果——向左走或向右走。该决策点还会将我们的数据划分为两个集合。
 
@@ -1045,9 +948,7 @@ class Node:
         return node.predict_row(xi)
 ```
 
-
-
-
+## 无监督学习与 K-Means 聚类
 
 一种方法是前往 `PROs` 分享作品的地方。像 [Dribbble](https://dribbble.com/)、[uplabs](https://www.uplabs.com/) 和 [Behance](https://www.behance.net/) 这样的页面有很多优秀素材。
 
@@ -1055,15 +956,13 @@ class Node:
 
 [**完整源代码笔记本**](https://colab.research.google.com/drive/1_p1nptDfvJhcSvprmi1WtoIugsCI40Xa)
 
-## 无监督学习
+### 什么是聚类？
 
 到目前为止，我们只看了需要特征和标签形式的训练数据的模型。换句话说，对于每个示例，我们都需要对应的正确答案。
 
 通常，这种训练数据很难获得，需要人类花费许多小时的人工工作（是的，我们已经在服务于“终结者”了）。我们可以跳过所有这一切吗？
 
 可以，至少对于某些问题，我们可以在不知道正确答案的情况下使用示例数据。其中一个问题就是 `聚类`。
-
-### 什么是聚类？
 
 给定一组数据点向量 ![X](img/leanpub_equation_48.png)，聚类方法允许你将每个点放入一个组中。换句话说，你可以根据它们的属性自动对一组实体进行分类。
 
@@ -1085,7 +984,7 @@ class Node:
 
 ### 什么是 K-Means 聚类？
 
-K-Means 聚类由 [Wikipedia](https://en.wikipedia.org/wiki/K-means_clustering) 定义为：
+`K-Means 聚类` 由 [Wikipedia](https://en.wikipedia.org/wiki/K-means_clustering) 定义为：
 
 > 均聚类是一种向量量化方法，源自信号处理，在数据挖掘的聚类分析中非常流行。k 聚类的目标是将 n 个观测值划分 k 个簇，其中每个观测属于均值最近的簇，该均值作为簇的原型。这导致数据空间被划分为沃罗伊单元。
 
@@ -1108,42 +1007,44 @@ K-Means 聚类由 [Wikipedia](https://en.wikipedia.org/wiki/K-means_clustering) 
 
 让我们先定义两个类来表示点和簇：
 
-```
-1 class Point:
-2 
-3   def __init__(self, coordinates):
-4     self.coordinates = coordinates
+```python
+class Point:
+    def __init__(self, coordinates):
+        self.coordinates = coordinates
 ```
 
 我们的 `Point` 只是每个点坐标的容器。
 
-```
-1 class Point:
-2 
-3   def __init__(self, coordinates):
-4     self.coordinates = coordinates
+```python
+class Cluster:
+    def __init__(self, center):
+        self.center = center
 ```
 
 `Cluster` 由其中心定义。
 
-```
-1 class Cluster:
-2 
-3   def __init__(self, center):
-4     self.center = center
+
+
+## 代码示例：Cluster 类
+
+```python
+class Cluster:
+
+    def __init__(self, center):
+        self.center = center
 ```
 
 给定一个路径，我们可以如下创建点：
 
-```
-1 def get_points(path):
-2   img = Image.open(path)
-3   w, h = img.size
-4   points = []
-5   for x in range(w):
-6     for y in range(h):
-7       points.append(img.getpixel((x, y)))
-8   return points
+```python
+def get_points(path):
+    img = Image.open(path)
+    w, h = img.size
+    points = []
+    for x in range(w):
+        for y in range(h):
+            points.append(img.getpixel((x, y)))
+    return points
 ```
 
 发生了几件事：
@@ -1156,107 +1057,104 @@ K-Means 聚类由 [Wikipedia](https://en.wikipedia.org/wiki/K-means_clustering) 
 
 注意，虽然 `Euclidean` 距离很简单，但它可能不是最好的方法。这里是 Python 的实现：
 
-```
-1 def euclidean(p, q):
-2   n_dim = len(p.coordinates)
-3   return sqrt(sum([
-4       p.coordinates[i] - q.coordinates[i]) ** 2 for i in range(n_dim))
-5   
+```python
+def euclidean(p, q):
+    n_dim = len(p.coordinates)
+    return sqrt(sum([
+        p.coordinates[i] - q.coordinates[i]) ** 2 for i in range(n_dim))
 ```
 
 ### 实现 K-Means 聚类
 
 现在你已经有了拼图的碎片，可以实现 K-Means 算法了。让我们从寻找点中心的方法开始：
 
+```python
+def calculate_center(self, points):
+    n_dim = len(points[0].coordinates)
+    vals = [0.0 for i in range(n_dim)]
+    for p in points:
+        for i in range(n_dim):
+            vals[i] += p.coordinates[i]
+    coords = [v / len(points) for v in vals]
+    return Point(coords)
 ```
-1 def calculate_center(self, points):
-2   n_dim = len(points[0].coordinates)
-3   vals = [0.0 for i in range(n_dim)]
-4   for p in points:
-5     for i in range(n_dim):
-6       vals[i] += p.coordinates[i]
-7   coords = [v / len(points) for v in vals]
-8   return Point(coords)
-```为了找到点的中心，我们将每个维度的值相加并除以点的数量。
+
+为了找到点的中心，我们将每个维度的值相加并除以点的数量。
 
 现在寻找实际的簇：
 
-```
-1 def assign_points(self, clusters, points):
-2   plists = [[] for i in range(self.n_clusters)]
-3 
-4   for p in points:
-5     smallest_distance = float('inf')
-6 
-7     for i in range(self.n_clusters):
-8       distance = euclidean(p, clusters[i].center)
-9       if distance < smallest_distance:
-10         smallest_distance = distance
-11         idx = i
-12 
-13     plists[idx].append(p)
-14 
-15   return plists
-16 
-17 def fit(self, points):
-18   clusters = [Cluster(center=p, points=[p]) for p in random.sample(points, self.n_clusters)]
-20 
-21   while True:
-22 
-23     plists = self.assign_points(clusters, points)
-24 
-25     diff = 0
-26 
-27     for i in range(self.n_clusters):
-28       if not plists[i]:
-29         continue
-30       old = clusters[i]
-31       center = self.calculate_center(plists[i])
-32       new = Cluster(center, plists[i])
-33       clusters[i] = new
-34       diff = max(diff, euclidean(old.center, new.center))
-35 
-36     if diff < self.min_diff:
-37       break
-38 
-39   return clusters
+```python
+def assign_points(self, clusters, points):
+    plists = [[] for i in range(self.n_clusters)]
+
+    for p in points:
+        smallest_distance = float('inf')
+
+        for i in range(self.n_clusters):
+            distance = euclidean(p, clusters[i].center)
+            if distance < smallest_distance:
+                smallest_distance = distance
+                idx = i
+
+        plists[idx].append(p)
+
+    return plists
+
+def fit(self, points):
+    clusters = [Cluster(center=p, points=[p]) for p in random.sample(points, self.n_clusters)]
+
+    while True:
+
+        plists = self.assign_points(clusters, points)
+
+        diff = 0
+
+        for i in range(self.n_clusters):
+            if not plists[i]:
+                continue
+            old = clusters[i]
+            center = self.calculate_center(plists[i])
+            new = Cluster(center, plists[i])
+            clusters[i] = new
+            diff = max(diff, euclidean(old.center, new.center))
+
+        if diff < self.min_diff:
+            break
+
+    return clusters
 ```
 
 实现遵循了上述算法的描述。注意，当颜色差异低于我们设置的数值时，我们将退出训练循环。
 
-
-
-
-
-### 评估 (Evaluation)
+### 评估
 
 现在你已经实现了一个 K-Means 聚类，可以将其用于 UI 截图了。我们需要编写少量的“胶水代码”为了更容易提取调色板：
 
-```
-1 def rgb_to_hex(rgb):
-2   return '#%s' % ''.join(('%02x' % p for p in rgb))
-3 
-4 def get_colors(filename, n_colors=3):
-5   points = get_points(filename)
-6   clusters = KMeans(n_clusters=n_colors).fit(points)
-7   clusters.sort(key=lambda c: len(c.points), reverse = True)
-8   rgbs = [map(int, c.center.coordinates) for c in clusters]
-9   return list(map(rgb_to_hex, rgbs))
+```python
+def rgb_to_hex(rgb):
+    return '#%s' % ''.join(('%02x' % p for p in rgb))
+
+def get_colors(filename, n_colors=3):
+    points = get_points(filename)
+    clusters = KMeans(n_clusters=n_colors).fit(points)
+    clusters.sort(key=lambda c: len(c.points), reverse=True)
+    rgbs = [map(int, c.center.coordinates) for c in clusters]
+    return list(map(rgb_to_hex, rgbs))
 ```
 
 `get_colors` 函数接收图像文件的路径以及你想从图像中提取的颜色数量。我们根据算法获得的聚类按照每个类中的点进行排序（降序）。最后，我们将 RGB 颜色转换为十六进制值。
 
 让我们从数据中提取第一个 UI 截图的调色板：
 
-```
-1 colors = get_colors('ui1.png', n_colors=5)
-2 ", ".join(colors)
+```python
+colors = get_colors('ui1.png', n_colors=5)
+", ".join(colors)
 ```
 
 这里是十六进制颜色值：
 
-```
-1 #f9f8fa, #4252a6, #fc6693, #bdbcd0, #374698
+```text
+#f9f8fa, #4252a6, #fc6693, #bdbcd0, #374698
 ```
 
 这里是我们结果的可视化表示：
@@ -1273,44 +1171,44 @@ K-Means 聚类由 [Wikipedia](https://en.wikipedia.org/wiki/K-means_clustering) 
 
 嗯，看起来很酷，对吧？去在你自己的图片上试试吧！
 
-[**在 Google Colaboratory 上完整的源代码笔记本**](https://colab.research.google.com/drive/1_p1nptDfvJhcSvprmi1WtoIugsCI40Xa)
+[在 Google Colaboratory 上完整的源代码笔记本](https://colab.research.google.com/drive/1_p1nptDfvJhcSvprmi1WtoIugsCI40Xa)
 
-### 结论 (Conclusion)
+### 结论
 
 恭喜，你刚刚从零实现了你的第一个无监督算法！它似乎在尝试从图像中提取调色板时也能获得良好的结果。
 
 接下来，我们将对短语进行情感分析，并学习更多关于如何处理文本数据。
 
-## 使用朴素贝叶斯进行电影评论情感分析 (Movie review sentiment analysis with Naive Bayes)
+## 使用朴素贝叶斯进行电影评论情感分析
 
-> 摘要 (TL;DR)：使用 Python 从零构建朴素贝叶斯文本分类模型。使用该模型将 IMDB 电影评论分类为正面或负面。
+> 摘要：使用 Python 从零构建朴素贝叶斯文本分类模型。使用该模型将 IMDB 电影评论分类为正面或负面。
 
 文本数据主宰我们的世界，从你读的推特到塞内卡的永恒著作。尽管我们以越来越快的速度消耗图像（说的就是 Instagram）和视频，但你每天仍然多次阅读 Google 搜索结果。
 
-文本数据中经常出现的问题之一是[情感分析](https://en.wikipedia.org/wiki/Sentiment_analysis)(分类）。假设你是一家大型糖水饮料公司。你想知道人们对你的产品有什么看法。你会搜索带有某些标签、标志或名称的文本。然后你可以使用情感分析来判断观点是正面的还是负面的。当然，你会把负面评论发送到你在印度的薪水极低的支持中心来处理问题。
+文本数据中经常出现的问题之一是[情感分析](https://en.wikipedia.org/wiki/Sentiment_analysis)（分类）。假设你是一家大型糖水饮料公司。你想知道人们对你的产品有什么看法。你会搜索带有某些标签、标志或名称的文本。然后你可以使用情感分析来判断观点是正面的还是负面的。当然，你会把负面评论发送到你在印度的薪水极低的支持中心来处理问题。
 
 在这里，我们将构建一个通用的文本分类器，将电影评论文本分为两类之一——负面或正面情感。我们将简要查看贝叶斯定理，并使用朴素假设来放宽它的要求。
 
 [Google Colaboratory 笔记本中的完整源代码](https://colab.research.google.com/drive/1OPQDDJTKy0b40pziZWSsoBCmQV6HyXsm)
 
-### 处理文本 (Dealing with Text)
+### 处理文本
 
 计算机不理解文本数据，但它们对数字处理得很好。[自然语言处理 (NLP)](https://en.wikipedia.org/wiki/Natural_language_processing) 提供了一系列工具来处理文本数据。
 
-### 数据 (The Data)
+### 数据
 
 我们的数据来自 Kaggle，包含了标记为正面或负面的评论。
 
-### 读取数据 (Reading the data)
+### 读取数据
 
 使用 Pandas 加载训练和测试数据：
 
-```
-1 train = pd.read_csv("imdb_train.tsv")
-2 test = pd.read_csv("imdb_test.tsv")
+```python
+train = pd.read_csv("imdb_train.tsv")
+test = pd.read_csv("imdb_test.tsv")
 ```
 
-### 探索 (Exploration)
+### 探索
 
 让我们对数据有一个直观的感受。这里是训练集的几行：
 
@@ -1322,39 +1220,35 @@ K-Means 聚类由 [Wikipedia](https://en.wikipedia.org/wiki/K-means_clustering) 
 | 4 | 0 | what a waste of time... |
 | 5 | 1 | the acting was superb... |
 
-### 清理 (Cleaning)
+### 清理
 
 现实世界中的文本数据非常混乱。它包含标点符号、HTML 标签、多个空格。我们将使用[正则表达式](https://en.wikipedia.org/wiki/Regular_expression) 来尝试消除它们：
 
-```
-1 def clean(self, text):
-2     no_html = BeautifulSoup(text).get_text()
-3     clean = re.sub("[^a-z\s]+", " ", no_html, flags=re.IGNORECASE)
-4     return clean.strip()
+```python
+def clean(self, text):
+    no_html = BeautifulSoup(text).get_text()
+    clean = re.sub("[^a-z\s]+", " ", no_html, flags=re.IGNORECASE)
+    return clean.strip()
 ```
 
-### 分词 (Tokenization)
+### 分词
 
 现在我们的评论已经“干净”，我们就可以为词袋模型做进一步准备。让我们将其小写并拆分成单个单词。这个过程被称为分词：
 
-```
-1 def tokenize(self, text):
-2     clean = self.clean(text).lower()
-3     stopwords_en = stopwords.words("english")
-4     return [w for w in re.split("\W+", clean) if not w in stopwords_en]
+```python
+def tokenize(self, text):
+    clean = self.clean(text).lower()
+    stopwords_en = stopwords.words("english")
+    return [w for w in re.split("\W+", clean) if not w in stopwords_en]
 ```
 
 我们预处理的最后一步是使用库中定义的词移除[停用词](https://en.wikipedia.org/wiki/Stop_words)。停用词通常是高频出现的词，可能不会影响文本的意思。
 
-
-
-
-
 其中 ![A](img/leanpub_equation_57.png) 和 ![B](img/leanpub_equation_58.png) 是某些事件，![P(.)](img/leanpub_equation_59.png) 是概率。
 
-该方程给出了在 ![B](img/leanpub_equation_61.png) 发生的情况下，事件 ![A](img/leanpub_equation_60.png) 发生的条件概率。为了找到这一点，我们需要计算在 ![A](img/leanpub_equation_63.png) 发生的情况下，![B](img/leanpub_equation_62.png) 发生的概率，并将其乘以 ![A](img/leanpub_equation_64.png) 发生的概率（即 `Prior`，先验概率）。所有所有内容都除以 ![B](img/leanpub_equation_65.png) 独立发生的概率。
+该方程给出了在 ![B](img/leanpub_equation_61.png) 发生的情况下，事件 ![A](img/leanpub_equation_60.png) 发生的条件概率。为了找到这一点，我们需要计算在 ![A](img/leanpub_equation_63.png) 发生的情况下，![B](img/leanpub_equation_62.png) 发生的概率，并将其乘以 ![A](img/leanpub_equation_64.png) 发生的概率（即 `Prior`，先验概率）。所有内容都除以 ![B](img/leanpub_equation_65.png) 独立发生的概率。
 
-朴素假设（naive assumption）允许我们将该示例的贝叶斯定理重新表述为：
+朴素假设允许我们将该示例的贝叶斯定理重新表述为：
 
 ![P(Sentiment|w\_1,\dots,w\_n)=\frac{P(Sentiment) \displaystyle \prod\_{i=1}^{n}{P(w\_i|Sentiment)}}{P(w\_1,\dots,w\_n)}](img/leanpub_equation_66.png)
 
@@ -1368,7 +1262,7 @@ K-Means 聚类由 [Wikipedia](https://en.wikipedia.org/wiki/K-means_clustering) 
 
 正如你现在可能猜到的那样，我们正在将文本分为两个组/类别——正面情感和负面情感。
 
-多项朴素贝叶斯（Multinomial Naive Bayes）允许我们把模型的特征表示为它们出现的频率（某个词在我们的评论中出现的次数）。换句话说，它告诉我们正在使用的概率分布是[多项分布](https://en.wikipedia.org/wiki/Multinomial_distribution)。
+多项朴素贝叶斯允许我们把模型的特征表示为它们出现的频率（某个词在我们的评论中出现的次数）。换句话说，它告诉我们正在使用的概率分布是[多项分布](https://en.wikipedia.org/wiki/Multinomial_distribution)。
 
 #### 关于数值稳定性的注意
 
@@ -1380,17 +1274,17 @@ K-Means 聚类由 [Wikipedia](https://en.wikipedia.org/wiki/K-means_clustering) 
 
 #### 构建我们的模型
 
-最后，是是在 Python 中实现我们的模型了。让我们先定义一些变量并按类别对数据分组，这样我们的训练代码会整洁一些：
+最后，是实现我们的模型了。让我们先定义一些变量并按类别对数据分组，这样我们的训练代码会整洁一些：
 
 ```python
-1 def fit(self, X, y):
-2     self.n_class_items = {}
-3     self.log_class_priors = {}
-4     self.word_counts = {}
-5     self.vocab = set()
-6     n = len(X)
-7     grouped_data = self.group_by_class(X, y)
-8     ...
+def fit(self, X, y):
+    self.n_class_items = {}
+    self.log_class_priors = {}
+    self.word_counts = {}
+    self.vocab = set()
+    n = len(X)
+    grouped_data = self.group_by_class(X, y)
+    ...
 ```
 
 我们将实现一个通用的文本分类器，它不假设类别的数量。你可以将其用于新闻分类、情感分析等。
@@ -1398,35 +1292,37 @@ K-Means 聚类由 [Wikipedia](https://en.wikipedia.org/wiki/K-means_clustering) 
 对于每个类别，我们将找到它中的示例数量和对数概率（先验概率）。我们还将记录每个词出现的次数并创建一个词汇表——我们在训练数据中见过的所有词的集合：
 
 ```python
-1 for c, data in grouped_data.items():
-2       self.n_class_items[c] = len(data)
-3       self.log_class_priors[c] = math.log(self.n_class_items[c] / n)
-4       self.word_counts[c] = defaultdict(lambda: 0)
-5 
-6       for text in data:
-7         counts = self.tokenizer.tokenize(text)
-8         for word, count in counts.items():
-9             if word not in self.vocab:
-10                 self.vocab.add(word)
-11 
-12             self.word_counts[c][word] += count
+for c, data in grouped_data.items():
+    self.n_class_items[c] = len(data)
+    self.log_class_priors[c] = math.log(self.n_class_items[c] / n)
+    self.word_counts[c] = defaultdict(lambda: 0)
+
+    for text in data:
+        counts = self.tokenizer.tokenize(text)
+        for word, count in counts.items():
+            if word not in self.vocab:
+                self.vocab.add(word)
+
+            self.word_counts[c][word] += count
 ```
 
-注意我们使用了 `Tokenizer` 和内置的 [Counter](https://docs.python.org/3/library/Counter) 类将评论转换为词袋（bag of words）。
+注意我们使用了 `Tokenizer` 和内置的 `Counter` 类将评论转换为词袋。
 
 如果你感兴趣，`group_by_class` 的工作如下：
 
 ```python
-1 def group_by_class(self, X, y):
-2   data = dict()
-3   for c in self.classes:
-4     data[c] = X[np.where(y == c)]
-5   data
+def group_by_class(self, X, y):
+    data = dict()
+    for c in self.classes:
+        data[c] = X[np.where(y == c)]
+    data
 ```
 
 #### 预测
 
 为了从文本数据预测情感，我们将使用类先验概率和词汇表：
+
+
 
 ```python
 1 def predict(self, X):
@@ -1451,9 +1347,9 @@ K-Means 聚类由 [Wikipedia](https://en.wikipedia.org/wiki/K-means_clustering) 
 
 对于每条评论，我们使用正面和负面情感的对数概率并对文本进行分词。对于每个词，我们检查它是否在词汇表中，不在则跳过。然后我们计算该词在每个类别中的对数概率。我们将类别得分并选择得分最高的类别作为预测。
 
-##### 拉普拉斯平滑
+### 拉普拉斯平滑
 
-注意 ![log(0)](img/leanpub_equation_69.png) `undefined`（而且我们没有使用 JavaScript）。词汇表中的词可能出现在一个类别中而不是另一个——在该类别中找到该词的概率为 0！我们可以使用[拉普拉斯平滑](https://en.wikipedia.org/wiki/Additive_smoothing）来解决这个问题。我们将只需在分子中加 1，同时在分母中加上词汇表的大小：
+注意 `log(0)` `undefined`（而且我们没有使用 JavaScript）。词汇表中的词可能出现在一个类别中而不是另一个——在该类别中找到该词的概率为 0！我们可以使用[拉普拉斯平滑](https://en.wikipedia.org/wiki/Additive_smoothing)来解决这个问题。我们将只需在分子中加 1，同时在分母中加上词汇表的大小：
 
 ```python
 1 def laplace_smoothing(self, word, text_class):
@@ -1468,7 +1364,7 @@ K-Means 聚类由 [Wikipedia](https://en.wikipedia.org/wiki/K-means_clustering) 
 
 #### 数据准备
 
-如之前讨论的，我们将只使用训练数据中的 review 和 sentiment 列。将其分为训练和测试：
+如之前讨论的，我们将只使用训练数据中的 `review` 和 `sentiment` 列。将其分为训练和测试：
 
 ```python
 1 X = train['review'].values
@@ -1532,10 +1428,6 @@ K-Means 聚类由 [Wikipedia](https://en.wikipedia.org/wiki/K-means_clustering) 
 
 接下来，你将从开始构建一个推荐系统！
 
-
-
-
-
 > 简来说：在 Python 中从零构建一个推荐系统。从 last.fm 数据集中创建一个 `ratings` 矩阵并对数据进行预处理。使用随机梯度下降（SGD）训练模型，并用它来推荐音乐艺术家。
 
 随着“互联网”上信息量的指数级增长，推荐系统正变得越来越重要：
@@ -1567,7 +1459,7 @@ K-Means 聚类由 [Wikipedia](https://en.wikipedia.org/wiki/K-means_clustering) 
 
 让我们将数据加载到 Pandas dataframe 中：
 
-```
+```python
 1 plays = pd.read_csv('user_artists.dat', sep='\t')
 2 artists = pd.read_csv(
 3   'artists.dat',
@@ -1580,7 +1472,7 @@ K-Means 聚类由 [Wikipedia](https://en.wikipedia.org/wiki/K-means_clustering) 
 
 在处理数据之前，你需要进行一些清洗：
 
-```
+```python
 1 ap = pd.merge(
 2   artists, plays,
 3   how="inner",
@@ -1590,36 +1482,34 @@ K-Means 聚类由 [Wikipedia](https://en.wikipedia.org/wiki/K-means_clustering) 
 7 ap = ap.rename(columns={"weight": "playCount"})
 ```
 
-我们合并艺术家和用户播放数据，并将 weight 列重命名为 `playCount`。让我们根据用户播放次数对艺术家进行排序：
+我们合并艺术家和用户播放数据，并将 `weight` 列重命名为 `playCount`。让我们根据用户播放次数对艺术家进行排序：
 
-```
+```python
 1 artist_rank = ap.groupby(['name']) \
 2   .agg({'userID' : 'count', 'playCount' : 'sum'}) \
 3   .rename(columns={"userID" : 'totalUniqueUsers', "playCount" : "totalArtistPlays"})\
-4  \
+4   \
 5   .sort_values(['totalArtistPlays'], ascending=False)
 6 
-7 artist_rank['avgUserPlays'] = artist_rank['totalArtistPlays'] / artist_rank['totalUn\
-8 iqueUsers']
+7 artist_rank['avgUserPlays'] = artist_rank['totalArtistPlays'] / artist_rank['totalUniqueUsers']
 ```
 
 并将结果与之前的 dataframe 合并：
 
-```
+```python
 1 ap = ap.join(artist_rank, on="name", how="inner") \
 2   .sort_values(['playCount'], ascending=False)
 ```
 
 这里是数据的子集：
 
-| name || userID || artistID || playCount |
+| name | userID | artistID | playCount |
 | --- | --- | --- | --- |
-| Depeche Mode || 1642 || 72 | 352698 |
-| --- | --- | --- | --- |
-| Thalía || 2071 || 792 || 324663 |
-| U2 || 1094 || 511 || 320725 |
-| Blur || 1905 || 203 || 257978 |
-| Paramore || 1664 || 498 || 227829 |
+| Depeche Mode | 1642 | 72 | 352698 |
+| Thalía | 2071 | 792 | 324663 |
+| U2 | 1094 | 511 | 320725 |
+| Blur | 1905 | 203 | 257978 |
+| Paramore | 1664 | 498 | 227829 |
 
 ### 探索
 
@@ -1656,7 +1546,9 @@ K-Means 聚类由 [Wikipedia](https://en.wikipedia.org/wiki/K-means_clustering) 
 基于内存的 CF 方法分为两个部分：用户过滤和物品过滤。这里的区别如下：
 
 * 物品过滤：“喜欢此物品的用户也喜欢……”
-* 用户过滤：“与你相似的用户（你从未认识的朋友）也喜欢……”这两种方法都需要包含评分的用户-物品矩阵。由此，你可以计算相似性矩阵。
+* 用户过滤：“与你相似的用户（你从未认识的朋友）也喜欢……”
+
+这两种方法都需要包含评分的用户-物品矩阵。由此，你可以计算相似性矩阵。
 
 物品协同过滤的相似性值通过考虑评分过该物品的所有用户来计算。
 
@@ -1664,32 +1556,27 @@ K-Means 聚类由 [Wikipedia](https://en.wikipedia.org/wiki/K-means_clustering) 
 
 #### 基于模型的协同过滤
 
-基于模型的 CF 方法基于矩阵分解 [MF](https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems)。它们比基于内存的方法更好地处理扩展性和稀疏性问题。MF 的目标是从已知评分中学习用户的偏好和物品属性，然后通过用户和物品特征的点积预测未知评分。
+基于模型的 CF 方法基于矩阵分解 [MF](https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems))。它们比基于内存的方法更好地处理扩展性和稀疏性问题。MF 的目标是从已知评分中学习用户的偏好和物品属性，然后通过用户和物品特征的点积预测未知评分。
 
 矩阵分解将用户-物品矩阵重构为低秩矩阵。你可以通过两个低秩矩阵的乘积来表示它。你希望这个矩阵尽可能地接近原始矩阵。这样，你就可以预测原始矩阵中的缺失项。
 
-###### 奇异值分解
+##### 奇异值分解
 
-协同过滤可以通过使用奇异值分解（SVD）来近似矩阵 ![X](img/leanpub_equation_72.png)。在 [Netflix 赛赛](https://medium.com/netflix-techblog/netflix-recommendations-beyond-the-5-stars-part-1-55838468f429)中，获胜团队使用了 SVD 矩阵分解模型。SVD 可以表示为：
+协同过滤可以通过使用奇异值分解（SVD）来近似矩阵 `X`。在 [Netflix 赛赛](https://medium.com/netflix-techblog/netflix-recommendations-beyond-the-5-stars-part-1-55838468f429)中，获胜团队使用了 SVD 矩阵分解模型。SVD 可以表示为：
 
-![X = USV^T](img/leanpub_equation_73.png)
+`X = USV^T`
 
-给定 ![m \times n](img/leanpub_equation_74.png)矩阵 ![X](img/leanpub_equation_75.png)：
+给定 `m × n` 矩阵 `X`：
 
-* ![U](img/leanpub_equation_76.png)是 ![(m \times r)](img/leanpub_equation_77.png)正交矩阵
+* `U` 是 `(m × r)` 正交矩阵
+* `S` 是一个 `(r × r)` 对角线上为非负实数的对角矩阵
+* `V^T` 是一个 `(r × n)` 正交矩阵
 
+其中 `U` 代表用户的特征向量，`V` 代表物品的特征向量，`S` 对角线上的元素被称为 `奇异值`。
 
+你可以通过取 `U`、`S` 和 `V^T` 的点积来预测。这是一个在 Python 中实现 SVD 的快速示例：
 
-
-
-*   ![S](img/leanpub_equation_78.png)是一个 ![(r \times r)](img/leanpub_equation_79.png)对角线上为非负实数的对角矩阵
-*   ![V^T](img/leanpub_equation_80.png)是一个 ![(r \times n)](img/leanpub_equation_81.png)正交矩阵
-
-其中 ![U](img/leanpub_equation_82.png)代表用户的特征向量，![V](img/leanpub_equation_83.png)代表物品的特征向量，![S](img/leanpub_equation_84.png)对角线上的元素被称为`奇异值`。
-
-你可以通过取 ![U](img/leanpub_equation_85.png)、![S](img/leanpub_equation_86.png)和![V^T](img/leanpub_equation_87.png)的点积来预测。这是一个在 Python 中实现 SVD 的快速示例：
-
-```
+```python
 1 import scipy.sparse as sp
 2 from scipy.sparse.linalg import svds
 3 
@@ -1698,25 +1585,27 @@ K-Means 聚类由 [Wikipedia](https://en.wikipedia.org/wiki/K-means_clustering) 
 6 Y_hat = np.dot(np.dot(U, S_diagonal), VT)
 ```
 
-##推荐艺术家
+## 推荐艺术家
 
 虽然互联网上的大多数教程关注基于内存的方法，但它们在实践中并不常用。尽管它们能产生良好的结果，但扩展性不好，并且受到[冷启动](https://en.wikipedia.org/wiki/Cold_start)问题的影响。
 
 另一方面，应用 `SVD` 需要对用户物品矩阵进行分解，当矩阵非常稀疏时（缺失大量的用户物品评分），这种开销很大。此外，经常需要填充缺失值，因为当数据缺失时 `SVD` 无法工作。这会显著增加数据量和算法的运行时间。
 
-最近的方法关注通过最小化关于隐含特征矩阵 $P$ 和 $Q$ 的正则误差来预测评分：
+最近的方法关注通过最小化关于隐含特征矩阵 `P` 和 `Q` 的正则误差来预测评分：
 
-$$\displaystyle \min_{Q*, P*} \sum_{(u, i) \in K}(r_{ui} - P_{u}^{T}Q_i)² + \lambda(||Q\_i||² + ||P\_u||²)(images/leanpub_equation_88.png)$$
+$$\displaystyle \min_{Q*, P*} \sum_{(u, i) \in K}(r_{ui} - P_{u}^{T}Q_i)² + \lambda(||Q_i||² + ||P_u||²)$$
 
-其中 ![K](img/leanpub_equation_89.png)是一组 (u, i)对，![r(u, i)](img/leanpub_equation_91.png)是用户 ![u](img/leanpub_equation_92.png)对物品 ![i] 的评分，![lambda](img/94.png) 是正则化项（用于防止过拟合）。我们的模型训练包括最小化正则误差。在估计 ![P](img/leanpub_equation_95.png)和 ![Q](img/leanpub_equation_96.png)后，你可以通过用户和物品隐含特征的点积来预测未知评分。
+其中 `K` 是一组 (u, i) 对，`r(u, i)` 是用户 `u` 对物品 `i` 的评分，`lambda` 是正则化项（用于防止过拟合）。我们的模型训练包括最小化正则误差。在估计 `P` 和 `Q` 后，你可以通过用户和物品隐含特征的点积来预测未知评分。
 
 我们可以应用[随机梯度下降 (SGD)](https://en.wikipedia.org/wiki/Stochastic_gradient_descent)或[交替最小二乘法 (ALS)](https://www.quora.com/What-is-the-Alternating-Least-Squares-method-in-recommendation-systems-And-why-does-this-algorithm-work-intuition-behind-this)来最小化损失函数。两种方法都可以在新评分进入时增量地更新我们的模型（在线学习）。
 
-在这里我们将实现 `SGD`，因为它似乎比 ALS](http://cs229.stanford.edu/proj2014/Christopher%20Aberger,%20Recommender.pdf)[通常更快且更准确]。作为一个额外的奖励，`SGD` 被广泛用于训练深度神经网络（我们稍后会讨论）。因此，该算法有很多高质量的实现。
+
+
+在这里我们将实现 `SGD`，因为它似乎比 ALS 通常更快且更准确。作为一个额外的奖励，`SGD` 被广泛用于训练深度神经网络（我们稍后会讨论）。因此，该算法有很多高质量的实现。
 
 ### 预处理
 
-为了应用 CF 算法，我们需要将数据集转换为用户-艺术家计数矩阵。让我们先进行数据缩放到处理：
+为了应用 CF 算法，我们需要将数据集转换为用户-艺术家计数矩阵。让我们先进行数据缩放处理：
 
 ```
 1 pc = ap.playCount
@@ -1737,7 +1626,7 @@ $$\displaystyle \min_{Q*, P*} \sum_{(u, i) \in K}(r_{ui} - P_{u}^{T}Q_i)² + \la
 7 ratings = ratings_df.fillna(0).values
 ```
 
-我们使用 Pandas 的 [pivot](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.pivot.html) 方法创建索引/列数据框，并用 `0` 填充缺失的播放次数。
+我们使用 Pandas 的 `pivot` 方法创建索引/列数据框，并用 `0` 填充缺失的播放次数。
 
 让我们看看数据框有多稀疏：
 
@@ -1785,11 +1674,11 @@ $$\displaystyle \min_{Q*, P*} \sum_{(u, i) \in K}(r_{ui} - P_{u}^{T}Q_i)² + \la
 
 评估推荐系统准确性的最流行的指标之一是均方根误差 (RMSE)，定义为：
 
-$$\text{RMSE} = \sqrt{\frac{1}{N}\sum(y_i - \hat{y}_i)²}(images/leanpub_equation_97.png)$$
+$$\text{RMSE} = \sqrt{\frac{1}{N}\sum(y_i - \hat{y}_i)^2}$$
 
-其中 ![y](img/leanpub_equation_98.png) 是物品的真实值，![hat{y}_i](img/leanpub_equation_99.png) 是预测值，$N$ 是训练集的大小。[关于更多指标的讨论可以在这里找到](https://www.microsoft.com/en-us/research/evaluating-recommender-systems/)。
+其中 $y_i$ 是物品的真实值，$\hat{y}_i$ 是预测值，$N$ 是训练集的大小。关于更多指标的讨论可以在这里找到。
 
-这是 Python 版的 *RMSE*：
+这是 Python 版的 `RMSE`：
 
 ```python
 def rmse(prediction, ground_truth):
@@ -1800,7 +1689,7 @@ def rmse(prediction, ground_truth):
 
 ### 训练
 
-让我们 SGD 训练我们的推荐系统：
+让我们用 `SGD` 训练我们的推荐系统：
 
 ```
  1 fit(self, X_train, X_val):
@@ -1828,10 +1717,7 @@ def rmse(prediction, ground_truth):
  23       self.val_error.append(val_rmse)
 ```
 
-
-
-
-正如我们之前讨论的，我们通过对转置后的 ![P](img/leanpub_equation_103.png)矩阵与 ![Q](img/ml-scratch-7----train-error.png)
+正如我们之前讨论的，我们通过对转置后的 $P$ 矩阵与 $Q$ 矩阵相乘来获得预测。
 
 我们的模型似乎在逐渐训练，随着 epoch 数量的增加，误差都在下降。请注意，你可能想花费更多时间来训练模型，因为它可能会变得更好。
 
@@ -1906,17 +1792,18 @@ def rmse(prediction, ground_truth):
 | Archie Star | 0.535147 |
 
 恭喜你从零开始构建了一个高性能的推荐系统！你学习了如何：
+
 - 为推荐准备原始数据
-- 从零开始实现简单的随机梯度下降（Stochastic Descent）
+- 从零开始实现简单的随机梯度下降
 - 使用模型对你可能真正喜欢的艺术家进行预测！你能将此模型应用到你的数据集上吗？在下方的评论区告诉我结果如何！
 
 ## 使用神经网络进行时尚分类
 
-> 简而言之：从零开始构建神经网络。使用该模型将时尚产品图像分类为 10 类。我们生活在 Instagram、YouTube 和 Twitter 的时代。图像（一系列图像）主导了千禧一代和其他“怪咖”消费信息的方式。拥有理解图像的模型对于理解你所在的状态至关重要（是的，你可能在发布定位自拍后立即就会收到个性化广告）。在实践中，理解图像数据的模型主要是是深度学习模型。在这里，我们将从零实现一个神经网络分类器。希望计算机无法像我们一样看到图像这一点并不会让你感到完全意外。你设备上的每张图像都表示为一个矩阵，其中每个像素是一个或多个数字。`Fashion-MNIST` 是 Zalando 文章中的数据集——包含一个 60,000 个示例的训练集和一个 10,000 个示例的测试集。每个示例都是 28x28 的灰度图像，对应 10 类中的一个标签。我们打算让 `Fashion-MNIST` 作为机器学习算法中原始 `MNIST` 数据集的直接替代品。它具有相同的训练和测试划分的大小和结构。以下是图像示例：
+> 简而言之：从零开始构建神经网络。使用该模型将时尚产品图像分类为 10 类。我们生活在 Instagram、YouTube 和 Twitter 的时代。图像（一系列图像）主导了千禧一代和其他“怪咖”消费信息的方式。拥有理解图像的模型对于理解你所在的状态至关重要（是的，你可能在发布定位自拍后立即就会收到个性化广告）。在实践中，理解图像数据的模型主要是深度学习模型。在这里，我们将从零实现一个神经网络分类器。希望计算机无法像我们一样看到图像这一点并不会让你感到完全意外。你设备上的每张图像都表示为一个矩阵，其中每个像素是一个或多个数字。`Fashion-MNIST` 是 Zalando 文章中的数据集——包含一个 60,000 个示例的训练集和一个 10,000 个示例的测试集。每个示例都是 28x28 的灰度图像，对应 10 类中的一个标签。我们打算让 `Fashion-MNIST` 作为机器学习算法中原始 `MNIST` 数据集的直接替代品。它具有相同的训练和测试划分的大小和结构。以下是图像示例：
 
 ![](img/ml-scratch-6----fashion-mnist.png)
 
-你可能熟悉原始的手写 `MNIST`(http://yann.lecun.com/exdb/mnist/) 数据集，并好奇我们为什么不使用它？[好吧，使用它可能太容易了](http://yann.lecun.com/exdb/mnist/)。时尚当然更酷，不是吗？
+你可能熟悉原始的手写 `MNIST` 数据集，并好奇我们为什么不使用它？好吧，使用它可能太容易了。时尚当然更酷，不是吗？
 
 ### 探索
 
@@ -1940,7 +1827,7 @@ def rmse(prediction, ground_truth):
 11 ]]
 ```
 
-注意这些值在 0-255 范围内内。
+注意这些值在 0-255 范围内。
 
 我们有 10 类可能的时尚产品：
 
@@ -1949,7 +1836,7 @@ def rmse(prediction, ground_truth):
 2  'Sandal',      'Shirt',   'Sneaker',  'Bag',   'Ankle boot']
 ```
 
-让我们使用 `t-SNE`(https://en.wikipedia.org/T-distributed_stochastic_neighbor_embedding) 查看一些产品的低维表示。我们将使用 `scikit-learn`(https://scikit-learn.org/stable/generated/sklearn.manifold.TSNE) 的实现将数据转换为 2 维：
+让我们使用 `t-SNE` 查看一些产品的低维表示。我们将使用 `scikit-learn` 的实现将数据转换为 2 维：
 
 ![](img/ml-scratch-6----product-tsne.png)
 
@@ -1958,16 +1845,14 @@ def rmse(prediction, ground_truth):
 ## 结论
 
 恭喜你从零开始构建了一个高性能的推荐系统！你学习了如何：
+
 - 为推荐准备原始数据
 - 从零开始实现简单的随机梯度下降
 - 使用模型对你可能真正喜欢的艺术家进行预测！
 
+$$Y = f\bigg(\sum_{i}w_i x_i + b\bigg)$$
 
-
-
-![Y = f\\bigg(\\sum\_{i}w\_ix\_i + b\\bigg)](img/leanpub_equation_108.png)
-
-其中 ![f](img/leanpub_equation_109.png) 是一个激活函数，用于控制神经元输出信号的强度。
+其中 $f$ 是一个激活函数，用于控制神经元输出信号的强度。
 
 ## 神经网络架构
 
@@ -1975,7 +1860,7 @@ def rmse(prediction, ground_truth):
 
 ![](img/ml-scratch-6----neural-net.jpeg)
 
-*图片来源：[CS231n](https://cs231n.github.io/)*
+*图片来源：CS231n*
 
 这个简单的神经网络包含：
 
@@ -1987,19 +1872,19 @@ def rmse(prediction, ground_truth):
 
 ![](img/ml-scratch-6----deep-neural-net.jpeg)
 
-*图片来源：[CS231n](https://cs231n.github.io/)*
+*图片来源：CS231n*
 
 ## Sigmoid
 
-[sigmoid 函数](https://en.wikipedia.org/wiki/Sigmoid_function)是一种非常常用的激活函数，至少在最近之前是。它具有独特的 `S` 形状，对于任何实数输入值都是可微的实函数，且输出值在 ![0](img/leanpub_equation_110.png) 和 ![1](img/leanpub_equation_111.png) 之间。此外，它在每处的导数均为正。更重要的是，我们将它作为模型隐藏层的激活函数。
+Sigmoid 函数是一种非常常用的激活函数，至少在最近之前是。它具有独特的 `S` 形状，对于任何实数输入值都是可微的实函数，且输出值在 0 和 1 之间。此外，它在每处的导数均为正。更重要的是，我们将它作为模型隐藏层的激活函数。
 
 ![](img/ml-scratch-6----sigmoid.png)
 
 它的定义如下：
 
-![\\sigma (x) = \\frac{1}{1+e^{-x}}](img/leanpub_equation_112.png)
+$$\sigma (x) = \frac{1}{1+e^{-x}}$$
 
-以下是是它的实现方式：
+以下是它的实现方式：
 
 ```python
 def sigmoid(z):
@@ -2008,9 +1893,9 @@ def sigmoid(z):
 
 它的一阶导数（我们在训练算法的反向传播步骤中使用它）具有以下公式：
 
-![\\frac{d\\sigma (x)}{d(x)} = \\sigma (x)\\cdot (1-\\sigma(x))](img/leanpub_equation_113.png)
+$$\frac{d\sigma (x)}{d(x)} = \sigma (x)\cdot (1-\sigma(x))$$
 
-我们的实现复用了 sigmoid  sigmoid 身的实现：
+我们的实现复用了 `sigmoid` 自身的实现：
 
 ```python
 def sigmoid_prime(z):
@@ -2019,6 +1904,8 @@ def sigmoid_prime(z):
 ```
 
 ## Softmax
+
+
 
 softmax 函数可以很容易求导，它是纯的（输出仅取决于输入），且结果向量的元素和为 1。它的定义如下：
 
@@ -2047,9 +1934,9 @@ array([[0.00214401, 0.015842 , 0.11705891, 0.8649548]])
 
 反向传播是我们几乎所有使用神经网络所做工作的核心。该算法由 3 个子任务组成：
 
-1.  进行前向传播
-2.  计算误差
-3.  进行后向传播（反向传播）
+1. 进行前向传播
+2. 计算误差
+3. 进行后向传播（反向传播）
 
 在第一步中，`backprop` 使用数据和网络权重计算预测值。接下来根据预测值和提供的标签计算误差。最后一步是从最后一层开始将误差传播到整个网络。因此，权重根据误差一点一点地更新。
 
@@ -2141,128 +2028,6 @@ error 1.4984252e-14
 
 我们将采样一个 -1 到 1 之间的均匀分布作为初始化权重。以下是实现代码：
 
-
-
-
-
-```python
-def fit(self, X, y):
-    self.error_ = []
-    X_data, y_data = X.copy(), y.copy()
-    y_data_enc = one_hot(y_data, self.n_classes)
-
-    X_mbs = np.array_split(X_data, self.n_batches)
-    y_mbs = np.array_split(y_data_enc, self.n_batches)
-
-    for i in range(self.epochs):
-        epoch_errors = []
-        for Xi, yi in zip(X_mbs, y_mbs):
-            # update weights
-            error, grad1, grad2 = self._backprop_step(Xi, yi)
-            epoch_errors.append(error)
-            self.w1 -= self.learning_rate * grad1
-            self.w2 -= self.learning_rate * grad2
-        self.error_.append(np.mean(epoch_errors))
-    return self
-```
-
-对于每个 epoch（轮次），我们应用反传播算法，评估误差以及相对于权重的梯度。然后我们使用学习率和梯度来更新权重。
-
-```python
-def _backprop_step(self, X, y):
-    net_input, net_hidden, act_hidden, net_out, act_out = self._forward(X)
-    y = y.T
-
-    grad1, grad2 = self._backward(net_input, net_hidden, act_hidden, act_out, y)
-
-    # regularize
-    grad1 += self.w1 * (self.l1 + self.l2)
-    grad2 += self.w2 * (self.l1 + self.l2)
-
-    error = self._error(y, act_out)
-
-    return error, grad1, grad2
-```
-
-执行反传播步骤比我们的 XOR 示例要复杂一点。在返回梯度之前，我们额外执行了一个步骤——应用 [L1 和 L2 正则化](http://www.chioka.in/differences-between-l1-and-l2-as-loss-function-and-regularization/)。正则化通过通过惩罚参数的大值，引导我们的训练训练向更简单的方法发展 ![W](img/leanpub_equation_122.png)。
-
-```python
-def _forward(self, X):
-    net_input = X.copy()
-    net_hidden = self.w1.dot(net_input.T)
-    act_hidden = sigmoid(net_hidden)
-    net_out = self.w2.dot(act_hidden)
-    act_out = sigmoid(net_out)
-    return net_input, net_hidden, act_hidden, net_out, act_out
-
-def _backward(self, net_input, net_hidden, act_hidden, act_out, y):
-    sigma3 = act_out - y
-    sigma2 = self.w2.T.dot(sigma3) * sigmoid_prime(net_hidden)
-    grad1 = sigma2.dot(net_input)
-    grad2 = sigma3.dot(act_hidden.T)
-    return grad1, grad2
-```
-
-我们的 `forward` 和 `backward` 步骤与上一个示例中的非常相似，那么误差呢？
-
-### 测量误差
-
-我们将使用 [交叉熵损失](https://en.wikipedia.org/wiki/Cross_entropy）（称为对数损失）函数来评估误差。该函数衡量输出为概率的分类模型的性能。它会（严厉地）惩罚那些错误且自信的预测。以下是其定义：
-
-![Cross-Entropy=-\sum_{c=1}^Cy_{o,c}\log(p_{o,c})](img/leanpub_equation_123.png)
-
-其中 ![C](img/leanpub_equation_124.png) 是类别数量，![y](img/leanpub_equation_125.png) 是类别标签是否为观测值正确分类的二指示器，而 ![p](img/leanpub_equation_126.png) 是预测 ![o](img/leanpub_equation_127.png) 属于类别 ![c](img/leanpub_equation_128.png) 的概率。
-
-在 Python 中的实现如下：
-
-```python
-def cross_entropy(outputs, y_target):
-    return -np.sum(np.log(outputs) * y_target, axis=1)
-```
-
-现在我们有了损失函数，终于可以为模型定义误差了：
-
-```python
-def _error(self, y, output):
-    L1_term = L1_reg(self.l1, self.w1, self.w2)
-    L2_term = L2_reg(self.l2, self.w1, self.w2)
-    error = cross_entropy(output, y) + L1_term + L2_term
-    return 0.5 * np.mean(error)
-```
-
-在计算交叉熵损失后，我们添加正则化项并计算平均误差。以下是 L1 和 L2 正则化的实现：
-
-```python
-def L2_reg(lambda_, w1, w2):
-    return (lambda_ / 2.0) * (np.sum(w1 ** 2) + np.sum(w2 ** 2))
-
-def L1_reg(lambda_, w1, w2):
-    return (lambda_ / 2.0) * (np.abs(w1).sum() + self.abs(w2).sum())
-```
-
-### 进行预测
-
-现在我们的模型可以从数据中学习了，是时候对它未见过的数据进行预测了。我们将实现两个预测方法——`predict` 和 `predict_proba`：
-
-```python
-def predict(self, X):
-    Xt = X.copy()
-    _, _, _, net_out, _ = self._forward(Xt)
-    return mle(net_out.T)
-```
-
-回想起神经网络中的预测（通常）是相似的。让我们实现 `predict` 和 `predict_proba`：
-
-```python
-def predict(self, X):
-    Xt = X.copy()
-    _, _, _, net_out, _ = self._forward(Xt)
-    return mle(net_out.T)
-```
-
-等等，我很抱歉，之前的文本有一些重复的部分和格式问题。让我根据你的特定指令为你提供最终的清理后的版本。
-
-[content]
 ```python
 def fit(self, X, y):
     self.error_ = []
@@ -2325,7 +2090,7 @@ def _backward(self, net_input, net_hidden, act_hidden, act_out, y):
 
 ### 测量误差
 
-我们将使用 [交叉熵损失](https://en.wikipedia.org/wiki/Cross_entropy）（称为对数损失）函数来评估误差。该函数衡量输出为概率的分类模型的性能。它会（严厉地）惩罚那些错误且自信的预测。以下是其定义：
+我们将使用 [交叉熵损失](https://en.wikipedia.org/wiki/Cross_entropy)（称为对数损失）函数来评估误差。该函数衡量输出为概率的分类模型的性能。它会（严厉地）惩罚那些错误且自信的预测。以下是其定义：
 
 ![Cross-Entropy=-\sum_{c=1}^Cy_{o,c}\log(p_{o,c})](img/leanpub_equation_123.png)
 
@@ -2355,7 +2120,7 @@ def L2_reg(lambda_, w1, w2):
     return (lambda_ / 2.0) * (np.sum(w1 ** 2) + np.sum(w2 ** 2))
 
 def L1_reg(lambda_, w1, w2):
-    return (lambda_ / 2.0) * (np.abs(w1).sum() + self.abs(w2).sum())
+    return (lambda_ / 2.0) * (np.abs(w1).sum() + np.abs(w2).sum())
 ```
 
 ### 进行预测
@@ -2369,24 +2134,57 @@ def predict(self, X):
     return mle(net_out.T)
 ```
 
-回想起神经网络中的预测（通常）是相似的。让我们实现 `predict` 和 `predict_proba`：（等等，用户文本在这里有重复块，我将保留核心逻辑）。
+回想起神经网络中的预测（通常）是相似的。让我们实现 `predict` 和 `predict_proba`：
 
-*自我修正：用户提供的文本包含大量的冗余/重复块。我将它们合并为一个清晰的流程，同时遵循所有格式规则。*
-
-
-
-
-```
-1 print('Train Accuracy: %.2f%%' % (nn.score(X_train_scaled, y_train) * 100))
-2 print('Test Accuracy: %.2f%%' % (nn.score(X_test_scaled, y_test) * 100))
+```python
+def predict(self, X):
+    Xt = X.copy()
+    _, _, _, net_out, _ = self._forward(Xt)
+    return mle(net_out.T)
 ```
 
-```
-1 Train Accuracy: 92.13%
-2 Test Accuracy: 87.03%
+
+
+```python
+def _error(self, y, output):
+    L1_term = L1_reg(self.l1, self.w1, self.w2)
+    L2_term = L2_reg(self.l2, self.w1, self.w2)
+    error = cross_entropy(output, y) + L1_term + L2_term
+    return 0.5 * np.mean(error)
 ```
 
-训练集上约 87%的准确率（相比未缩放方法的约 50%）有了巨大的改进。最后，你的努力没有白付 o！
+在计算交叉熵损失后，我们添加正则化项并计算平均误差。以下是 L1 和 L2 正则化的实现：
+
+```python
+def L2_reg(lambda_, w1, w2):
+    return (lambda_ / 2.0) * (np.sum(w1 ** 2) + np.sum(w2 ** 2))
+
+def L1_reg(lambda_, w1, w2):
+    return (lambda_ / 2.0) * (np.abs(w1).sum() + np.abs(w2).sum())
+```
+
+### 进行预测
+
+现在我们的模型可以从数据中学习了，是时候对它未见过的数据进行预测了。我们将实现两个预测方法——`predict` 和 `predict_proba`：
+
+```python
+def predict(self, X):
+    Xt = X.copy()
+    _, _, _, net_out, _ = self._forward(Xt)
+    return mle(net_out.T)
+```
+
+```python
+print('Train Accuracy: %.2f%%' % (nn.score(X_train_scaled, y_train) * 100))
+print('Test Accuracy: %.2f%%' % (nn.score(X_test_scaled, y_test) * 100))
+```
+
+```
+Train Accuracy: 92.13%
+Test Accuracy: 87.03%
+```
+
+测试集上约 87% 的准确率（相比未缩放方法的约 50%）有了巨大的改进。最后，你的努力没有白费！
 
 ## 结论
 
@@ -2418,11 +2216,11 @@ def predict(self, X):
 
 ## 强化学习
 
-强化学习（Reinforcement Learning）关注产生试图实现某些预定义目标的算法（代理）。该目标的实现取决于选择一组动作——对好的行为给予奖励，对坏的行为给予惩罚——“强化”部分源于此。代理在具有状态的环境中行动，给出奖励和一组动作。
+强化学习关注产生试图实现某些预定义目标的算法（代理）。该目标的实现取决于选择一组动作——对好的行为给予奖励，对坏的行为给予惩罚——“强化”部分源于此。代理在具有状态的环境中行动，给出奖励和一组动作。
 
 ![](img/ml-scratch-8----reinforcement-learning.png)
 
-图片来源：[`phrasee.co/`](https://phrasee.co/)*
+图片来源：[`phrasee.co/`](https://phrasee.co/)
 
 深度强化学习（使用深度神经网络选择动作）最近取得了一些伟大的成就：
 
@@ -2489,50 +2287,51 @@ Q*(s, a) = max_pi Q_pi(s, a) for all s in S
 V*(s) = max_a Q*(s, a) for all s in S
 ```
 
-
-
-
-我们可以通过选择能为状态 ![s](img/equation167.png) 提供最大奖励 ![Q*(s, a)](img/equation166.png) 的动作 ![a](img/equation165.png) 来找到最优策略 ![pi^*](img/equation164.png)：images/equation168.png
+我们可以通过选择能为状态 `s` 提供最大奖励 `Q*(s, a)` 的动作 `a` 来找到最优策略 `pi^*`。
 
 这似乎是目前定义的所有函数之间的协同。更重要的是，我们现在可以为给定环境构建一个最优智能体。这在实践中可以实现吗？
 
-## ![Q](img/equation169.png)-学习
+## Q-学习
 
-`Q-Learning` 是一种用于[时序差分学习](https://en.wikipedia.org/wiki/Temporal_difference_learning) 的离策略算法。事实证明，通过足够的训练，它以概率 1 收敛到任意目标策略的动作值函数的近似。即使在使用探索性（随机）策略选择动作时，它也能学习最优策略。
+`Q-Learning` 是一种用于时序差分学习的离策略算法。事实证明，通过足够的训练，它以概率 1 收敛到任意目标策略的动作值函数的近似。即使在使用探索性（随机）策略选择动作时，它也能学习最优策略。
 
-给定一个状态 ![s](img/equation170.png) 和动作 ![a](img/equation171.png)，我们可以递归地表示 ![Q(s, a)](img/equation172.png)：
+给定一个状态 `s` 和动作 `a`，我们可以递归地表示 `Q(s, a)`：
 
-Q(s, a) = r + \gamma \max_{a'}Q(s', a')/equation173.png
+```
+Q(s, a) = r + \gamma \max_{a'}Q(s', a')
+```
 
-这是**贝尔曼方程**。它将未来奖励定义为智能体在状态 ![s](img/equation175.png) 时获得的奖励 ![r]，加上对于状态 ![s'](img/equation176.png) 的最大未来奖励。
+这是**贝尔曼方程**。它将未来奖励定义为智能体在状态 `s` 时获得的奖励 `r`，加上对于状态 `s'` 的最大未来奖励。
 
-我们将 ![Q](img/equation177.png)-学习定义为 ![Q^*](img/equation178.png) 的迭代近似，使用贝尔曼方程：
+我们将 `Q`-学习定义为 `Q^*` 的迭代近似，使用贝尔曼方程：
 
-Q_{t+1}(s\_t, a\_t) = Q\_t(s\_t, a\_t) + \alpha(r_{t+1} + \gamma \max_{a}Q\_t(s_{t + 1}, a) - Q\_t(s\_t, a\_t))/images/equation179.png
+```
+Q_{t+1}(s_t, a_t) = Q_t(s_t, a_t) + \alpha(r_{t+1} + \gamma \max_{a}Q_t(s_{t + 1}, a) - Q_t(s_t, a_t))
+```
 
-其中 ![alpha](img/equation180.png) 是学习率，控制旧 Q 值与新值之间差异的大小。
+其中 `alpha` 是学习率，控制旧 Q 值与新值之间差异的大小。
 
 这是我们要实现的通用算法：
 
-1. 初始化 ![Q](img/equation181.png)-值表
-2. 观察初始状态 ![s](img/equation182.png)
-3. 选择动作 ![a](img/equation183.png) 并执行
-4. 观察奖励 ![r](img/equation184.png) 和新状态 ![s'](img/equation185.png)
-5. 使用 ![r](img/equation187.png) 和来自 ![s'](img/equation188.png) 的最大奖励更新 ![Q](img/equation186.png) 表
+1. 初始化 `Q`-值表
+2. 观察初始状态 `s`
+3. 选择动作 `a` 并执行
+4. 观察奖励 `r` 和新状态 `s'`
+5. 使用 `r` 和来自 `s'` 的最大奖励更新 `Q` 表
 6. 将当前状态设置为新状态，并从 `第 2 步` 重复直到达到终止状态
 
-注意，![Q](img/equation189.png)-学习只是解决强化学习问题的可能算法之一。[这是其中一些算法的对比](https://en.wikipedia.org/wiki/Reinforcement_learning#Comparison_of_reinforcement_learning_algorithms)。
+注意，`Q`-学习只是解决强化学习问题的可能算法之一。[这是其中一些算法的对比](https://en.wikipedia.org/wiki/Reinforcement_learning#Comparison_of_reinforcement_learning_algorithms)。
 
 ## 探索 vs 开发
 
 你可能已经注意到我们简述了选择动作的策略。你实现的任何策略都必须选择尝试新事物或使用已知内容的频率。这被称为探索与开发的权衡。
 
-- 探索（Exploration）：寻找有关环境的新信息。
-- 开发（Exploitation）：利用现有信息最大化奖励。
+- **探索（Exploration）**：寻找有关环境的新信息。
+- **开发（Exploitation）**：利用现有信息最大化奖励。
 
 记住，我们强化学习智能体的目标是最大化期望累计奖励。这对我们的自动驾驶出租意味着什么？
 
-最初，我们的驾驶智能体对于接送乘客的最优驾驶路线几乎一无所知。它还应该学会避免异常区域，因为那些地方对生意不利（乘客在那些往往消失甚至糟糕）！期间，我们预计会进行大量的探索。
+最初，我们的驾驶智能体对于接送乘客的最优驾驶路线几乎一无所知。它还应该学会避免异常区域，因为那些地方对生意不利（乘客在那那些往往消失甚至糟糕）！期间，我们预计会进行大量的探索。
 
 在获得一些经验后，智能体可以使用它更频繁地选择动作。最终，所有选择将基于所学知识。
 
@@ -2553,7 +2352,7 @@ register(
     id='SafeCab-v0',
     entry_point=f"{__name__}:SafeCab",
     timestep_limit=100,
- )
+)
 ```
 
 ## 环境
@@ -2568,86 +2367,83 @@ print("Action Space {}".format(env.action_space))
 print("State Space {}".format(env.observation_space))
 ```
 
-images/ml-scratch-8----environment.png)
-
 ```
 Action Space Discrete(6)
 State Space Discrete(500)
 ```
 
-
-
-
 ```python
- def __init__(
-   self,
-   n_states,
-   n_actions,
-   decay_rate=0.0001,
-   learning_rate=0.7,
-   gamma=0.618
- ):
-   self.n_actions = n_actions
-   self.q_table = np.zeros((n_states, n_actions))
-   self.max_epsilon = 1.0
-   self.min_epsilon = 0.01
-   self.epsilon = self.max_epsilon
-   self.decay_rate = decay_rate
-   self.learning_rate = learning_rate
-   self.gamma = gamma # discount rate
-   self.epsilons_ = []
+def __init__(
+    self,
+    n_states,
+    n_actions,
+    decay_rate=0.0001,
+    learning_rate=0.7,
+    gamma=0.618
+):
+    self.n_actions = n_actions
+    self.q_table = np.zeros((n_states, n_actions))
+    self.max_epsilon = 1.0
+    self.min_epsilon = 0.01
+    self.epsilon = self.max_epsilon
+    self.decay_rate = decay_rate
+    self.learning_rate = learning_rate
+    self.gamma = gamma # discount rate
+    self.epsilons_ = []
 ```
 
-`__init__` 中有趣的部分是初始化我们的 ![Q](img/leanpub_equation_190.png)表。初始情况下，它全为零。我们可以用其他方式初始化它吗？
+`__init__` 中有趣的部分是初始化我们的 `Q`表。初始情况下，它全为零。我们可以用其他方式初始化它吗？
 
 ```python
- def choose_action(self, explore=True):
-   exploration_tradeoff = np.random.uniform(0, 1)
+def choose_action(self, state, explore=True):
+    exploration_tradeoff = np.random.uniform(0, 1)
 
-   if explore and exploration_tradeoff < self.epsilon:
-     # 探索
-     return np.random.randint(self.n_actions)
-   else:
-     # 利用（针对该状态获取最大的 Q 值）
-     return np.argmax(self.q_table[state, :])
+    if explore and exploration_tradeoff < self.epsilon:
+        # 探索
+        return np.random.randint(self.n_actions)
+    else:
+        # 利用（针对该状态获取最大的 Q 值）
+        return np.argmax(self.q_table[state, :])
 ```
 
-我们的策略相当简单。我们从 ![0](img/leanpub_equation_191.png) 到 ![1](img/leanpub_equation_192.png) 之间的均匀分布中抽取一个随机数。如果这个数字小于 `epsilon` 且我们想要探索，我们就采取一个随机动作。否则，我们根据当前的知识采取最佳动作。
+我们的策略相当简单。我们从 `0` 到 `1` 之间的均匀分布中抽取一个随机数。如果这个数字小于 `epsilon` 且我们想要探索，我们就采取一个随机动作。否则，我们根据当前的知识采取最佳动作。
 
 ```python
- def learn(
-   self,
-   state,
-   action,
-   reward,
-   next_state,
-   done,
-   episode
- ):
-   # Update Q(s,a):= Q(s,a) + lr [R(s,a) + gamma * max Q(s',a') - Q(s,a)]
-   self.q_table[state, action] = self.q_table[state, action] + \
-     self.learning_rate * (reward + self.gamma * \
-       np.max(self.q_table[new_state, :]) - self.q_table[state, action])
+def learn(
+    self,
+    state,
+    action,
+    reward,
+    next_state,
+    done,
+    episode
+):
+    # Update Q(s,a):= Q(s,a) + lr [R(s,a) + gamma * max Q(s',a') - Q(s,a)]
+    self.q_table[state, action] = self.q_table[state, action] + \
+        self.learning_rate * (reward + self.gamma * \
+        np.max(self.q_table[next_state, :]) - self.q_table[state, action])
 
-   if done:
-     # 随着时间的推移减少探索率
-     self.epsilon = self.min_epsilon + (self.max_epsilon - self.min_epsilon) * \
-       np.exp(-self.decay_rate * episode)
-     self.epsilons_.append(self.epsilon)
+    if done:
+        # 随着时间的推移减少探索率
+        self.epsilon = self.min_epsilon + (self.max_epsilon - self.min_epsilon) * \
+            np.exp(-self.decay_rate * episode)
+        self.epsilons_.append(self.epsilon)
 ```
 
-学习涉及使用 ![Q](img/leanpub_equation_194.png) 来更新 ![Q](img/leanpub_equation_193.png)表，并降低 `epsilon`](images/leanpub_equation_195.png) 速率。
+学习涉及使用 `Q` 来更新 `Q`表，并降低 `epsilon` 速率。
 
 ### 训练
 
 现在智能体已经就绪，我们可以训练它了。以下是注册环境并对其训练 5000 个回合的方法：
 
-```python
- total_episodes = 5000
- test_episodes = 10
- agent = Agent(env.observation_space, env.action_space)
 
- for episode in range(total_episodes):
+
+```python
+total_episodes = 5000
+test_episodes = 10
+agent = Agent(env.observation_space, env.action_space)
+
+for episode in range(total_episodes):
     state = env.reset()
     episode_rewards = []
     while True:
@@ -2670,25 +2466,23 @@ State Space Discrete(500)
 
 注意，学习曲线随着训练的进行变得更加平滑。请看：
 
-![images/ml-scratch-8.png
-
-### 
+![images/ml-scratch-8.png](images/ml-scratch-8.png)
 
 注意，我们希望智能体只使用它已有的经验，因此我们设置了 `explore=False`。以下是每个回合的总奖励情况：
 
-![images/ml-scratch-8.png
+![images/ml-scratch-8.png](images/ml-scratch-8.png)
 
 我知道这张图可能无法让你直观地了解智能体的能力。这里有一段它在城市中行驶的视频：
 
 [查看 YouTube 视频](https://www.youtube.com/watch?v=HHIuVNZNMNg)
 
-以下是 s 测试我们的智能体并记录帧的方法：
+以下是测试我们的智能体并记录帧的方法：
 
 ```python
- frames = []
- rewards = []
+frames = []
+rewards = []
 
- for episode in range(test_episodes):
+for episode in range(test_episodes):
     state = env.reset()
     episode_rewards = []
     step = 1
@@ -2696,11 +2490,11 @@ State Space Discrete(500)
         action = agent.choose_action(explore=False)
         new_state, reward, done, info = env.step(action)
         frames.append({
-          'frame': env.render(mode='ansi'),
-          'state': state,
-          'episode': episode + 1,
-          'step': step,
-          'reward': reward
+            'frame': env.render(mode='ansi'),
+            'state': state,
+            'episode': episode + 1,
+            'step': step,
+            'reward': reward
         })
         episode_rewards.append(reward)
         if done:
@@ -2715,13 +2509,12 @@ env.close()
 
 ### 总结
 
-恭喜你构建了一个自动驾驶出租智能体。你学会了如何
+恭喜你构建了一个自动驾驶出租智能体。你学会了如何：
 
 *   基于 OpenAI `Gym` 提供的环境构建自己的环境
-*   实现并应用 ![Q](img/leanpub_equation_196.png)-学习
+*   实现并应用 Q-学习
 *   构建一个学习如何接送乘客并避开危险区域的智能体
 
 [Google Colaboratory 笔记本中的完整源代码](https://colab.research.google.com/drive/1FMo6Lpf1UtO1blfMyA4yznzDN7tlgIWm)
 
 你可以增大城市的大小吗？智能体学习得还好吗？在下方的评论区告诉结果如何！
-

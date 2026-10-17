@@ -1,143 +1,23 @@
+
 # 机器学习. 监督学习技术与工具：非线性模型. R、SAS、STATA、EVIEWS 和 SPSS 练习
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
-
 | --- | --- | --- |
-
 ![image](img/chapter_title_above.png)
 
 ## 机器学习与非线性建模
 
 ![image](img/chapter_title_below.png)
 
-
-
-
-
 在机器学习领域，有不同类型的模型用于分析和预测数据。其中最常见的两种类型是线性模型和非线性模型。
-
 机器学习使用两种技术：监督学习，它在已知输入和输出数据上训练模型以预测未来结果；无监督学习，它在输入数据中寻找隐藏模式或内在结构。
-
 监督机器学习的目的是建立一个在不确定性存在下做出基于证据预测的模型。监督学习算法采用已知输入数据集和对数据的已知响应（输出），并训练模型为新数据的响应生成合理预测。监督学习使用分类和回归技术来开发预测模型。
-
 预测分类模型预测分类响应，例如，纳税人是否欺诈或不欺诈，或肿瘤是癌性还是良性。分类模型将输入数据分类为模型因变量的类别，而自变量可以是连续的、分类的或混合的。
-
 预测回归模型预测连续响应，自变量通常也是连续的。
-
 线性模型是假设输入变量与输出变量之间存在线性关系。换句话说，数据被假设遵循线性趋势，并在多维空间中拟合一条直线。这种模型基于这样一个想法：输入变量的变化会转化为输出变量的成比例变化。
-
 另一方面，非线性模型不假设输入变量与输出变量之间存在线性关系。相反，它们可以拟合不同的形状和更复杂的模式，例如曲线、多项式甚至更不规则的结构。这些模型能够捕捉变量之间更复杂和灵活的关系，从而更好地拟合数据。
-
 线性和非线性模型具有不同的假设和特征。线性模型假设线性关系，更加简单且可解释，而非线性模型更灵活，可以更好地拟合非线性数据。在两者之间的选择将取决于数据的特征和机器学习问题的目标。
-
 建议在你想以成比例的方式理解输入变量如何影响输出变量并且数据遵循线性趋势时使用线性模型。非线性模型具有能够捕捉变量之间更复杂关系并更好地拟合非线性数据的优势。
-
 在本书中，我们将开发与非线性回归相关的监督学习机器学习技术。更具体地说，我们将深入探讨非线性多元回归模型及其所有识别、估计和诊断问题。特别强调广义线性模型和所有类型的派生非线性模型：Logit 模型、Probit 模型、Poisson 模型和负二项模型。随后是受限因变量模型、离散选择、计数、截尾和样本选择模型。非线性面板数据模型也进行了深入讨论。专门有一节致力于神经分析网络的预测模型。所有章节都配有示例和代表性练习，使用 `R`、`SAS`、`SPSS`、`EVIEWS` 和 `STATGRAPHICS` 等最新软件求解。
 
 ## 非线性模型
@@ -145,69 +25,39 @@
 ### 1.1 非线性模型
 
 在科学界，识别变量之间的关系是常见的，但不识别关系的性质是很常见的。很明显，不同的变量彼此相关，但不清楚的是这些关系的函数形式。因此，模型通常以如下形式指定：
-
 ![image](img/image200.png)
-
 其中 ![image](img/image693.png) 通常是向量 ![image](img/image607.png) 分量的非线性函数。作为特例，线性模型出现在 ![image](img/image145.png) 时。
 
 ### 1.2 简单非线性模型
 
 以下类型的非线性模型被常用：
-
 ![Texto, Carta Descripción generada automáticamente](img/image405.png)
-
 上述模型，除最后一个外，均可通过适当的变换处理为线性或多项式模型。例如，第四个模型可通过变换 ![image](img/image067.png) 和 ![image](img/image084.png) 处理为线性。
-
 最后一个模型中，非线性影响内生变量，使其无法表示为外生变量的函数，构成了隐式函数模型，其一般函数形式为：
-
 ![image](img/image085.png)
-
 显然，模型 ![image](img/image052.png) 是隐式函数模型的特例。
 
 ### 1.3 非线性最小二乘。牛顿和 Marquardt 算法
 
 对于模型 ![image](img/image057.png) 的最小二乘方法的一般方法不依赖于函数 `f` 的线性。然而，非线性使估计问题的解析求解变得复杂。
-
 最小二乘问题是找到使残差和最小化的向量 `β` 的值：
-
 ![image](img/image697.png)
-
 对向量 ![image](img/image249.png) 的每个分量求导并令其等于零得到以下正规方程组：
-
 ![Texto Descripción generada automáticamente con confianza media](img/image090.png)
-
 偏导数 ![Texto Descripción generada automáticamente con confianza baja](img/image199.png) 对于每个 `i` = 1,...,`k` 和每个时期 `t` = 1,...,`T` 都是一个标量，对于每个 `t` = 1,...,`T`，差值 ![image](img/image154.png) 也是如此。上述 `k` 个方程构成一个正规方程组，完全类似于线性模型中得到的方程组，可简写为：
-
 ![image](img/image462.png) 或矩阵形式为：
-
 ![image](img/image392.png)
-
 线性情形是特例，其中 ![image](img/image688.png) = `X` 且 ![image](img/image096.png) = ![image](img/image710.png)。上述方程将转化为 ![image](img/image035.png)，这是在线性普通最小二乘 `OLS` 模型中通常的参数估计。
-
 与线性情形一样，对于非线性情形，残差 ![image](img/image054.png) 定义为差值 ![image](img/image120.png)，使得正规方程可以写为：
-
 ![image](img/image436.png) 或矩阵形式：
-
 ![image](img/image422.png)
-
-
-
-
-
 expression that is equivalent to the orthogonality between the residuals and the explanatory variables when the model is linear.
-
 We can say that the least squares estimator of the model:
-
 ![image](img/image386.png)
-
 is the vector of residues orthogonal to each of the components of the gradient vector of the function ![image](img/image216.png) evaluated at ![image](img/image411.png).
-
 Practical problems in the case of non-linearity arise when the non-linear system of normal equations has no or no unique solution or is very difficult to compute (in which case iterative algorithms such as Newton's, Marquardt's and others are used). Moreover, the estimator obtained may not be unbiased.
-
 For large sample sizes, the non-linear least squares estimator has a normal distribution with expectation `β` and variance-covariance matrix:
-
 ![Diagrama Descripción generada automáticamente con confianza baja](img/image544.png)
-
 where the parameter ![image](img/image037.png) is estimated by means of ![image](img/image270.png) with ![image](img/image669.png)
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
@@ -219,17 +69,11 @@ where the parameter ![image](img/image037.png) is estimated by means of ![image]
 ![image](img/chapter_title_below.png)
 
 Suppose a linear model with dependent variable `Y` and explanatory variable `X`. Assume that the relationship linking `Y` and `X` is not the same for values less than one `X*` value of `X` as it is for values of `X` greater than `X*`.
-
 In this case, it will be necessary to consider two legs of the variable ![image](img/image596.png). This regression will be approached by considering the dummy variable `D` which is 0 for values of `X` less than `X*` and one otherwise. The equation of the model to be fitted will be the following:
-
 ![image](img/image162.png)
-
 ![image](img/image617.png)
-
 Assuming `E(ut) = 0`, it follows that:
-
 ![image](img/image232.png)
-
 It can be seen that `α2` corresponds to the slope of the regression line in the first leg ![image](img/image517.png) is the slope of the regression line in the second leg. ![image](img/image540.png)
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
@@ -240,7 +84,7 @@ It can be seen that `α2` corresponds to the slope of the regression line in the
 
 ![image](img/chapter_title_below.png)
 
-SPSS has procedures for fitting non-linear models. If the non-linear model to be fitted is polynomial, SPSS uses the procedure `Curvilinear estimation`, but if the non-linear model is defined by a more complicated equation, SPSS uses the procedure `Non-linear regression`.
+`SPSS` has procedures for fitting non-linear models. If the non-linear model to be fitted is polynomial, `SPSS` uses the procedure `Curvilinear estimation`, but if the non-linear model is defined by a more complicated equation, `SPSS` uses the procedure `Non-linear regression`.
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
 | --- | --- | --- |
@@ -250,8 +94,7 @@ SPSS has procedures for fitting non-linear models. If the non-linear model to be
 
 ![image](img/chapter_title_below.png)
 
-This SPSS procedure can be used to fit non-linear models, easily reduced to linear by appropriate transformations. One or more curvilinear regression estimation models can be selected. To determine which model to use, pre-plot the data. If the variables appear to be linearly related, use a simple linear regression model. When the variables are not linearly related, try transforming the data. When transformation is not useful, you may need a more complicated model. Inspect the scatterplot of the data and if the scatterplot resembles a recognisable mathematical function, fit the data to that type of model. For example, if the data resembles an exponential function, use an exponential model. The Curvilinear estimation procedure considers the following models:
-
+This `SPSS` procedure can be used to fit non-linear models, easily reduced to linear by appropriate transformations. One or more curvilinear regression estimation models can be selected. To determine which model to use, pre-plot the data. If the variables appear to be linearly related, use a simple linear regression model. When the variables are not linearly related, try transforming the data. When transformation is not useful, you may need a more complicated model. Inspect the scatterplot of the data and if the scatterplot resembles a recognisable mathematical function, fit the data to that type of model. For example, if the data resembles an exponential function, use an exponential model. The `Curvilinear estimation` procedure considers the following models:
 * Linear: model whose equation is ![image](img/image020.png). The values of the series are modelled as a linear function of time.
 * Logarithmic: model for which the equation is ![image](img/image610.png)
 * Inverse: model whose equation is ![image](img/image578.png)
@@ -263,8 +106,9 @@ This SPSS procedure can be used to fit non-linear models, easily reduced to line
 * Logistic: model whose equation is ![image](img/image603.png) ![image](img/image128.png) where `u` is the upper bound value. After selecting Logistic, specify a value for the upper bound to be used in the regression equation. The value must be a positive number greater than the maximum value of the dependent variable.
 * Growth: model whose equation is ![image](img/image641.png)
 * Exponential: model whose equation is ![image](img/image419.png)
+The `Curvilinear Estimation` procedure generates regression estimation statistics (regression coefficients, multiple R, R-squared, corrected R-squared, standard error of the estimate, analysis of variance table, predicted values, residuals and forecast intervals) and related graphs. You can also save predicted values, residuals and predicted intervals as new variables.
 
-The Curvilinear Estimation procedure generates regression estimation statistics (regression coefficients, multiple R, R-squared, corrected R-squared, standard error of the estimate, analysis of variance table, predicted values, residuals and forecast intervals) and related graphs. You can also save predicted values, residuals and predicted intervals as new variables.
+
 
 As an example, from the file `cars.sav`, we look for the best polynomial fit for the model that explains the weight of the cars (`weight`) as a function of their displacement (`engine`). To do this we choose `Analyse→ Regression→ Curvilinear estimation` (Figure 1-1) and fill in the input screen as shown in Figure 1-2. In the Model field we tick Linear, Quadratic and Cubic to test the fit of the three polynomial model types. We also point to Include constant in equation and Represent models (to get an idea of the best fit). With the Save button the predicted values and residuals are stored (Figure 1-3). If we enter several dependent variables, a different model is fitted for each of them.
 
@@ -311,10 +155,6 @@ Based on the fit data, we would be left with the quadratic model, a choice that 
 Figure 1-4
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
-
-
-
-
 
 | --- | --- | --- |
 
@@ -383,10 +223,6 @@ Figure 1-11
 ![image](img/image581.png)
 
 `BOUNDS` 语句将估计参数限制为指定条件。`BY` 语句指定变量以执行子组。`DER` 语句指定一阶或二阶偏导数。`ID` 语句指定要添加到输出数据集的附加变量。`MODEL` 语句定义因变量与自变量之间拟合的关系。`OUTPUT` 语句创建输出数据集。`PARMS` 语句标识要估计的参数及其初始值。`CONTROL` 语句声明控制变量并指定其值。
-
-
-
-
 
 `PROC NLIN` 选项有：`DATA=` 输入数据集，`OUTEST=` 迭代中估计值的输出数据集，`SAVE` 指定当迭代超出时保存结果 `BEST=n` 以便显示残差平方和，`METHOD=GAUSS | MARQUARDT | NEWTON | GRADIENT | DUD` 选择拟合的迭代方法，`MAXSUBIT=n`、`RHO=n`、`SMETHOD=n` 和 `TAU=n` 控制步长，`G4` 和 `SIGSQ=n` 指定迭代细节，`CONVERGE=c`、`CONVERGEOBJ=c`、`CONVERGEPARM=c`、`SINGULAR=c` 和 `MAXITER=c` 调整最小化，`HOUGAARD`、`NOITPRINT` 和 `NOPRINT` 修改输出量，`LIST`、`LISTALL`、`LISTCODE`、`LISTDEP`、`LISTDER` 和 `XREF` 列出模型结构，`FLOW`、`PRINT` 和 `TRACE` 提供模型执行的跟踪。
 
@@ -492,6 +328,8 @@ Figure 1-11
 
 ![image](img/image464.png)
 
+
+
 ![image](img/image530.png)
 
 输出中估计的模型如下：
@@ -504,7 +342,7 @@ Figure 1-11
 
 ![image](img/image506.png)
 
-诊断是正确的，因为调整后的 `R2` 很高，且参数的 p 值非常低，表明参数具有很强的显著性。此外，图形诊断显示残差是正态且随机的，如下图所示所示：
+诊断是正确的，因为调整后的 `R2` 很高，且参数的 `p` 值非常低，表明参数具有很强的显著性。此外，图形诊断显示残差是正态且随机的，如下图所示所示：
 
 ![image](img/image681.png)
 
@@ -520,7 +358,7 @@ Figure 1-11
 
 ![image](img/chapter_title_below.png)
 
-Eviews 允许你只需使用 `Quick → Estimate Equation` 并在 Specification 屏幕中输入模型方程即可简单地估计非线性模型。点击 `OK` 会产生请求的估计。
+`Eviews` 允许你只需使用 `Quick → Estimate Equation` 并在 `Specification` 屏幕中输入模型方程即可简单地估计非线性模型。点击 `OK` 会产生请求的估计。
 
 ![image](img/image664.png)![image](img/image264.png)
 
@@ -564,11 +402,7 @@ nl model equation, options
 
 ![image](img/scene_break.png)
 
-
-
-
-
-观察到非常小的 p 值，表明估计参数具有很高的个体显著性。Fisher 的 `F` 的 p 值也很小，表明估计参数具有很高的联合显著性。还观察到较高的 `R²` 和估计误差的小值。因此模型拟合相当可接受。
+观察到非常小的 `p` 值，表明估计参数具有很高的个体显著性。Fisher 的 `F` 的 `p` 值也很小，表明估计参数具有很高的联合显著性。还观察到较高的 `R²` 和估计误差的小值。因此模型拟合相当可接受。
 
 ––––––––
 
@@ -606,7 +440,7 @@ Figure 1-19    Figure 1-20
 
 ![image](img/image050.png)
 
-我们已经看到拟合是良好的，因为系数 `R²` 非常高。此外我们通过图形→ Sequence 并按图 1-21 所示填写输入屏幕来绘制残差。图 1-22 中的图形显示残差遵循随机演变。我们还通过使用 `Graphs`→ `Histogram` 并按图 1-23 所示填写输入屏幕来制作残差直方图。图 1-24 中的图形显示残差近似正态。最后我们通过 Graphing→ Dispersion→ Simple Dispersion 并按图 1-25 所指示填写输入屏幕绘制残差与预测值的关系图。图 1-26 显示随机演变。
+我们已经看到拟合是良好的，因为系数 `R²` 非常高。此外我们通过 `Graphs`→ `Sequence` 并按图 1-21 所示填写输入屏幕来绘制残差。图 1-22 中的图形显示残差遵循随机演变。我们还通过使用 `Graphs`→ `Histogram` 并按图 1-23 所示填写输入屏幕来制作残差直方图。图 1-24 中的图形显示残差近似正态。最后我们通过 `Graphing`→ `Dispersion`→ `Simple Dispersion` 并按图 1-25 所指示填写输入屏幕绘制残差与预测值的关系图。图 1-26 显示随机演变。
 
 ![image](img/image628.png)![image](img/image000.png)
 
@@ -638,7 +472,7 @@ Figure 1-25    Figure 1-26
 
 ![image](img/image322.png)
 
-拟合模型将为 `population=244/(1+e^(3,88901-0,289) 7*decade)`。总体拟合相当好，因为 `F` 的 p 值小于千分之一。
+拟合模型将为 `population=244/(1+e^(3,88901-0,289) 7*decade)`。总体拟合相当好，因为 `F` 的 `p` 值小于千分之一。
 
 ### Exercise 1-3
 
@@ -656,7 +490,7 @@ Figure 1-25    Figure 1-26
 
 ![image](img/image160.png)
 
-拟合模型方程，参数显著性良好（p 值很小），如下：
+拟合模型方程，参数显著性良好（`p` 值很小），如下：
 
 ![image](img/image212.png)
 
@@ -690,7 +524,7 @@ Figure 1-25    Figure 1-26
 
 ![image](img/scene_break.png)
 
-观察到估计参数具有非常小的 p 值，因此高度显著，模型拟合得非常好。
+观察到估计参数具有非常小的 `p` 值，因此高度显著，模型拟合得非常好。
 
 残差正态性和随机性在下面的图中显示：
 
@@ -701,7 +535,9 @@ Figure 1-25    Figure 1-26
 # Chapter 2
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
+
 | --- | --- | --- |
+
 ![image](img/chapter_title_above.png)
 
 ## GENERALISED LINEAR MODELS . TREATMENT WITH R, SAS, SPSS and STATGRAPHICS
@@ -709,7 +545,9 @@ Figure 1-25    Figure 1-26
 ![image](img/chapter_title_below.png)
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
+
 | --- | --- | --- |
+
 ![image](img/chapter_title_above.png)
 
 ### 2.1  GENERALIZED LINEAR model
@@ -719,16 +557,14 @@ Figure 1-25    Figure 1-26
 在非线性模型族中，广义线性模型发挥着重要作用。广义线性模型扩展了一般线性模型，使得因变量 `y` 通过某个链接函数 `g` 与因子和协变量线性相关：![image](img/image024.png)。如果 ![image](img/image209.png) 则 ![image](img/image401.png)
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
+
 | --- | --- | --- |
+
 ![image](img/chapter_title_above.png)
 
 #### 2.1.1  Components of a generalised linear model:
 
 ![image](img/chapter_title_below.png)
-
-
-
-
 
 *   响应变量，and1 ,...,andn ，假定服从指数族中的一个共同分布。
 
@@ -816,6 +652,8 @@ Poisson 回归模型假设每个 `yi` 是参数为`λ`的 Poisson 分布随机�
 
 ![image](img/image545.png)
 
+
+
 参数![image](img/image546.png)是一个离散参数，因此如果![image](img/image459.png)则![image](img/image063.png)且负二项分布收敛于 Poisson 分布。
 
 另一方面，对于 `k` 的固定值，该分布属于自然指数族，因此可以定义负二项 GLM 模型。一般使用对数型函数。
@@ -865,10 +703,6 @@ Poisson 回归模型假设每个 `yi` 是参数为`λ`的 Poisson 分布随机�
 `BAYES` 语句使用 Gibbs 采样默认执行贝叶斯估计（`DIAGNOSTICS=ALL` 选项执行完整诊断，`PLOTS=TRACE|AUTOCORR|DENSITY|ALL` 选项执行诊断图，`SAMPLING=ARMS|GIBSS|GAMERMAN|GAM|IN` 选项使用不同采样类型且 `STATISTICS=ALL` 生成所有输出统计量），`CLASS` 定义模型的分类变量，`EFFECTPLOT` 生成估计模型的图形（可指定 `BOX`、`CONTOUR`、`FIT`、`INTERACTION` 和 `SLICEFIT` 选项），`EXACT` 对指定参数运行精确检验，`EXACTOPTIONS` 收集应用于 `EXACT` 的选项（最重要的选项是 `METHOD = DIRECT |NETWORK| NETWORKMC` 以指定 `EXACT` 使用的算法），`FWDLINK` 指定 `MODEL` 中未指定的链接函数，`INVLINK` 指定 `FWDLINK` 中定义的链接函数的逆，`LSMEANS` 计算并计算固定效应均值（`CL` 选项计算均值和效应均值差的置信区间，`PLOTS=ALL` 执行均值和均值比较的图，`MEANS` 计算效应均值且 `ALPHA=α` 设置置信水平`α`），`MODEL` 定义要估计的模型，`OUTPUT` 指定要发送到文件的输出以及 `BY`、`FREQ` 和 `WEIGHT` 选项具有与所有 SAS 过程中相同的熟悉功能。
 
 `GENMOD` 的选项如下：
-
-
-
-
 
 ![图形用户界面，文本，应用程序 自动生成描述 置信度中等](img/image108.png)
 
@@ -946,13 +780,13 @@ Poisson 回归模型假设每个 `yi` 是参数为`λ`的 Poisson 分布随机�
 
 ![image](img/chapter_title_below.png)
 
-IBM SPSS 在路径 Analyse → Generalised Linear Models → Generalised Linear Models 中实现广义线性模型 `Figure 2-1`。
+IBM SPSS 在路径 `Analyse → Generalised Linear Models → Generalised Linear Models` 中实现广义线性模型 `Figure 2-1`。
 
 ![image](img/image674.png)
 
 图 2-1
 
-除了 SPSS 提供的默认模型类型外，在模型类型屏幕中，Custom 选项可以让用户选择因变量分布的族和链接函数 `Figure 2-2`。
+除了 SPSS 提供的默认模型类型外，在模型类型屏幕中，`Custom` 选项可以让用户选择因变量分布的族和链接函数 `Figure 2-2`。
 
 ![image](img/image489.png)
 
@@ -971,47 +805,56 @@ IBM SPSS 在路径 Analyse → Generalised Linear Models → Generalised Linear 
 不同的模型类型是通过指定模型的分布 `y` 和链接函数 `g` 获得的。这导致了一系列按响应类型分类的常见模型。
 
 ##### 尺度响应
+
 以下选项常用：
 
 - Linear. 指定正态分布和恒等链接函数。
+
 - Gamma with log link. 指定伽马分布和对数链接函数。
 
 ##### 顺序响应
+
 以下选项常用：
 
 - Ordinal logit. 指定多项式 `ordinal` 分布和累积 logit 链接函数。
+
 - Ordinal probit. 指定多项式 `ordinal` 分布和累积 probit 链接函数。
 
 ##### 计数
+
 以下选项常用：
 
 - Poisson log-linear. 指定泊松分布和对数链接函数。
+
 - Negative binomial with log link. 指定负二项分布，辅助参数取值为 1 和对数链接函数。若要让过程计算辅助参数的值，请指定自定义模型，使用负二项分布并在参数组中选择 Estimate value。
 
 ##### 二元响应或事件/试验数据
+
 以下选项通常使用：
 
 - Binary logit. 指定二项分布和 logit 链接函数。
+
 - Binary probit. 指定二项分布和 probit 链接函数。
+
 - Interval censored survival. 指定二项分布和互补对数-对数链接函数。
 
 ##### 组合
+
 以下选项常用：
 
 - Tweedie with log link. 指定 Tweedie 分布和对数链接函数。
+
 - Tweedie with identity linking. 指定 Tweedie 分布和恒等链接函数。
 
 ##### 自定义
+
 有时会使用分布与自定义链接函数的组合。
 
 能够指定因变量的特定分布，而不仅仅是正态分布，以及能够指定链接函数，而不仅仅是恒等链接，是广义线性模型相对于一般线性模型的主要改进。有许多可能的分布和链接函数的组合，其中几种可能适用于给定的数据集，因此其选择可能由先验理论考虑以及哪些组合效果最好来指导。
 
 - Binomial. 该分布仅适用于表示二元响应或事件数的变量。
+
 - Gamma. 该分布适用于具有正尺度值且偏向较大正值的变量。如果数据值小于或等于 0 或为缺失值，则相应案例不应用于分析。
-
-
-
-
 
 #### 分布
 
@@ -1028,7 +871,9 @@ IBM SPSS 在路径 Analyse → Generalised Linear Models → Generalised Linear 
 - **多项分布**。该分布适用于表示有序响应的变量。因变量可以是数值型或字符串型，且必须具有至少两个不同的有效数据值。
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
+
 | --- | --- | --- |
+
 ![image](img/chapter_title_above.png)
 
 ### 2.5.2 联系函数
@@ -1072,33 +917,41 @@ IBM SPSS 在路径 Analyse → Generalised Linear Models → Generalised Linear 
 由于因变量是具有两个互斥值的分类变量，我们使用二元逻辑回归。通过广义线性模型执行二元逻辑回归分析时，我们使用 `Analyse → Generalised linear models → Generalised linear models`（图 2-1）。在广义线性模型向导的模型类型选项卡中选择 `Binary Logistic`（图 2-3）。在响应选项卡中选择模型的因变量（图 2-4）。在预测选项卡中选择模型自变量（图 2-5）。在模型选项卡中设置因子、协变量及其交互作用（图 2-6）。在统计选项卡中选择输出统计量。其余选项卡保持默认值。单击确定以获得模型估计。
 
 ![image](img/image561.png)
+
 图 2-3
 
 ![image](img/image344.png)
+
 图 2-4
 
 ![image](img/image689.png)
+
 图 2-5
 
 ![image](img/image073.png)
+
 图 2-6
 
 ![image](img/image255.png)
+
 图 2-7
 
 在输出中我们观察到族为二项分布，联系函数为对数几率函数，因为模型为逻辑模型（图 2-8）。
 
 ![image](img/image519.png)
+
 图 2-8
 
 在图 2-9 中我们看到全距对比，表明模型的整体显著性非常好（p 值非常小），且模型效应的对比显示出良好的显著性。
 
 ![image](img/image233.png)
+
 图 2-9
 
 最后，呈现了拟合到数据的 Logit 模型的估计（图 2-10）。
 
 ![image](img/image271.png)
+
 图 2-10
 
 估计的 Logit 模型的预测方程为：
@@ -1110,26 +963,29 @@ IBM SPSS 在路径 Analyse → Generalised Linear Models → Generalised Linear 
 要拟合 Probit 模型，我们在广义线性模型向导的模型类型选项卡中选择 `Binary Probit`（图 2-11）。
 
 ![image](img/image637.png)
+
 图 2-11
+
+
 
 图 2-12 至 2-14 展示了二项概率族与 Probit 联系函数的模型拟合。模型具有良好的整体拟合度（全距对比 p 值很小）、显著的效应以及参数估计具有可接受的小 p 值。
 
 ![image](img/image152.png)![image](img/image131.png)
+
 图 2-12 图 2-13
 
 ![image](img/image562.png)
+
 图 2-14
 
 估计的 Probit 模型的预测方程为：
 
-
-
-
-
 ![Imagen que contiene Tabla Descripción generada automáticamente](img/image076.png)
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
+
 | --- | --- | --- |
+
 ![image](img/chapter_title_above.png)
 
 ### 2.6 GENERALISED LINEAR MODELS WITH R
@@ -1147,16 +1003,27 @@ IBM SPSS 在路径 Analyse → Generalised Linear Models → Generalised Linear 
 对于 GLM 模型可以获得以下信息：
 
 | `summary(r)` || 显示拟合模型的详细结果 |
+
 | --- | --- |
+
 | `coefficients(r)` || 列出模型的拟合参数 |
+
 | `confint(r)` || 列出估计模型参数的 95% 置信区间。 |
+
 | `plot(hatvalues(model))` || 列出拟合模型中的预测值 |
+
 | `residuals(r)` || 列出拟合模型的残差 |
+
 | `anova(r)` || 列出拟合模型的 ANOVA 表 |
+
 | `plot(rstudent(model))` || 绘制研究的废料图 |
+
 | `influencePlot(model)` || 找出杠杆点 |
+
 | `plot(cooks.distance(model))` || 检测异常废料 |
+
 | `plot(r)` || 显示拟合模型的图形诊断 |
+
 | `predict(r)` || 使用拟合模型预测值 |
 
 作为第一个例子，我们拟合一个 logit 模型，用来预测汽车故障的概率作为燃油消耗、功率和发动机函数的模型。
@@ -1184,7 +1051,9 @@ IBM SPSS 在路径 Analyse → Generalised Linear Models → Generalised Linear 
 ![image](img/image321.png)
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
+
 | --- | --- | --- |
+
 ![image](img/chapter_title_above.png)
 
 ### 2.7 Generalised linear models IN R THROUGH MENUS
@@ -1194,9 +1063,11 @@ IBM SPSS 在路径 Analyse → Generalised Linear Models → Generalised Linear 
 统计菜单的 Fit models 选项中的 General linear model 子选项允许（图 2-15）拟合广义线性、logit、probit、clogloglog 及其他模型。按图 2-16 所示填写输入屏幕可得到下一页所示的二项 logit 模型的输出。
 
 ![image](img/image292.png)
+
 Figure 2-15
 
 ![image](img/image222.png)
+
 Figure 2-16
 
 ![image](img/image711.png)
@@ -1208,6 +1079,7 @@ Figure 2-16
 如果我们想使用 probit 模型进行上述调整，我们按图 2-17 所示填写输入屏幕。点击 OK 后会产生下一页的输出。
 
 ![image](img/image634.png)
+
 Figure 2-17
 
 ![image](img/image390.png)
@@ -1219,7 +1091,9 @@ Figure 2-17
 ![image](img/image330.png)
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
+
 | --- | --- | --- |
+
 ![image](img/chapter_title_above.png)
 
 ### 2.8 Generalised linear models THROUGH STATGRAPHICS CENTURION
@@ -1229,6 +1103,7 @@ Figure 2-17
 STATGRAPHICS 在 Relate → Attribute Data 选项中包含了 Logit、Probit、Poisson 和 Negative Binomial 模型（图 2-18）。
 
 ![image](img/image678.png)
+
 Figure 2-18
 
 作为一个例子，我们考虑文件 `7-10.xls` 包含变量 `narr86` 的信息，该变量代表 1986 年一个人被逮捕的次数，我们希望用变量 `pcnv`（以前被逮捕中被定罪的比例）、`avgsen`（刑期平均长度，月）、`tottime`（监禁时间，月）、`ptime86`（1986 年监禁时间，月）、`qemp86`（1986 年就业季度）、`inc86`（1986 年合法收入，百美元）、`black`（黑人被捕者虚拟变量，值为 1）、`hispan`（西班牙裔被捕者虚拟变量，值为 1）和 `born60`（被捕者出生于 1960 年的虚拟变量，值为 1）来解释它。
@@ -1238,17 +1113,21 @@ Figure 2-18
 为了将我们的问题拟合到负二项式模型，我们使用 Relate → Attribute Data → Negative Binomial Regression（图 2-19）并按图 2-20 所示填写该过程的输入屏幕。
 
 ![image](img/image017.png)
+
 Figure 2-19
 
 ![image](img/image621.png)
+
 Figure 2-20
 
 按下 OK 并按图 2-21 所示填写 Negative Binomial Regression Options 屏幕。按图 2-22 所示填充 Tables and graphs 屏幕。
 
 ![image](img/image368.png)
+
 Figure 2-21
 
 ![image](img/image092.png)
+
 Figure 2-22
 
 分析摘要输出显示模型拟合非常好，联合显著性非常好，估计参数的粗略个体显著性可接受（也许除 AVGSEN 和 BORN60 外，它们在约 50% 时显著）。
@@ -1268,17 +1147,29 @@ Figure 2-22
 95.0% confidence intervals for coefficient estimates
 
 |  ||  || Error ||  ||  |
+
 | --- | --- | --- | --- | --- |
+
 | Parameter || Dear || Standard || Lower Limit || Upper Limit |
+
 | CONSTANT || 0,510418 || 0,0891951 || 0,335599 || 0,685238 |
+
 | PCNV || \-0,401615 || 0,0717093 || \-0,542163 || \-0,261067 |
+
 | AVGSEN || \-0,0238654 || 0,0156566 || \-0,0545519 || 0,00682115 |
+
 | TOTTIME || 0,0245856 || 0,0113967 || 0,00224842 || 0,0469228 |
+
 | PTIME86 || \-0,0985997 || 0,0182358 || \-0,134341 || \-0,0628582 |
+
 | QEMP86 || \-0,0380555 || 0,0241328 || \-0,0853549 || 0,00924395 |
+
 | INC86 || \-0,00808062 || 0,000930773 || \-0,00990491 || \-0,00625634 |
+
 | BLACK=0 || \-0,661117 || 0,0593497 || \-0,77744 || \-0,544793 |
+
 | HISPAN=0 || \-0,499853 || 0,0612882 || \-0,619976 || \-0,37973 |
+
 | BORN60=0 || 0,0510633 || 0,0525824 || \-0,0519964 || 0,154123 |
 
 ![Tabla Descripción generada automáticamente](img/image493.png)
@@ -1288,22 +1179,22 @@ Figure 2-22
 然后使用 Poisson 回归模型拟合上述模型。为此，我们使用 Relate → Attribute Data → Poisson Regression（图 2-23）并按图 2-24 所示填写该过程的输入屏幕。
 
 ![image](img/image457.png)
+
 Figure 2-23
 
 ![image](img/image705.png)
+
 Figure 2-24
 
 按下 OK 并按图 2-25 所示填充 Poisson Regression Options 屏幕。按图 2-26 所示填充 Tables and Graphs 屏幕。
 
 ![image](img/image438.png)
+
 Figure 2-25
 
 ![image](img/image100.png)
+
 Figure 2-26
-
-
-
-
 
 The Analysis Summary output shows a very good model fit with very good joint significance and acceptable coarse individual significance of the estimated parameters (except perhaps `BORN60` which is significant at about 60%). The fit is better than in the previous case of the Negative Bnomial.
 
@@ -1371,6 +1262,8 @@ To estimate the same model using a Poisson regression, fill in the Model Type ta
 
 Figure 2-34
 
+
+
 Pressing OK produces the output presented in Figures 2-35 to 2-37. A fit with Poisson likelihood family and Log link function is observed. The individual and joint significance of the estimated parameters is quite acceptable.
 
 It can be seen that the estimated predictive model does not coincide exactly with that obtained in STATGRAPHICS, but it is practically similar.
@@ -1426,7 +1319,9 @@ The model is already more or less acceptable, except perhaps for the `GRADE` var
 # Chapter 3
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
+
 | --- | --- | --- |
+
 ![image](img/chapter_title_above.png)
 
 ## LIMITED DEPENDENT VARIABLE, DISCRETE CHOICE, COUNT, CENSORED, TRUNCATED AND SAMPLE SELECTION MODELS. TREATMENT WITH STATA
@@ -1434,7 +1329,9 @@ The model is already more or less acceptable, except perhaps for the `GRADE` var
 ![image](img/chapter_title_below.png)
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
+
 | --- | --- | --- |
+
 ![image](img/chapter_title_above.png)
 
 ### 3.1 limited dependent variable models
@@ -1449,11 +1346,7 @@ Another important example of a limited dependent variable is the count variable,
 
 In econometric analysis, other types of limited dependent variables appear, especially when we analyse the behaviour of individuals, households, or firms. For example, suppose that during a given year a large number of households in a region do not make any charitable donations. Therefore, the population distribution of donations made by households is highly dispersed over positive values, but with a high concentration at zero. This is an example of a corner solution. The Tobit model is explicitly designed for dependent variables that have corner solutions. These variables are zero for a considerable proportion of the population but are approximately continuously distributed for positive values.
 
-
-
-
-
-另一种受限因变量是由数据删失引起的。删失回归模型是指其因变量在某个值以上（上删失）或以下（下删失）被删失的模型，即对于总体的一部分，因变量未被观测到。在删失回归模型中，潜在的因变量近似连续，但由于数据收集方式或制度性约束而被下删失或上删失。截断回归模型与删失回归模型相似，但有一个重要区别：在截断回归模型中，我们没有关于总体中某个重要部分的<|message|>数据。这通常发生在样本针对总体中的特定子集时，并且可能由于成本原因而忽略其余总体。这是样本选择这一更一般问题的特例，在该问题中，我们观测到的是总体中一个非随机的样本。
+另一种受限因变量是由数据删失引起的。删失回归模型是指其因变量在某个值以上（上删失）或以下（下删失）被删失的模型，即对于总体的一部分，因变量未被观测到。在删失回归模型中，潜在的因变量近似连续，但由于数据收集方式或制度性约束而被下删失或上删失。截断回归模型与删失回归模型相似，但有一个重要区别：在截断回归模型中，我们没有关于总体中某个重要部分的
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
 
@@ -1549,34 +1442,30 @@ In econometric analysis, other types of limited dependent variables appear, espe
 
 其中 `g(.)` 是正态或逻辑密度函数（由分布函数导出）。
 
+
+
 问题的非线性意味着为了从 `β` 得到 `MV` 估计量，我们需要应用迭代算法并通过迭代数值方法获得估计量。通过 Scoring 算法我们有：
 
 ![Diagrama, Texto Descripción generada automáticamente](img/image044.png)
 
-为了在 `Logit` 和 `Probit` 模型中进行假设检验，我们将考虑到渐近协方差矩阵主对角线元素的平方根是每个 ![image](img/image379.png) 的（渐近）标准误，我们可以用它来构造 t 统计量（将具有渐近正态分布）或为每个参数构建近似置信区间。我们也可以同时检验多个限制。通常，我们感兴趣的是排除限制，因此我们将重点关注这一点。
+为了在 `Logit` 和 `Probit` 模型中进行假设检验，我们将考虑到渐近协方差矩阵主对角线元素的平方根是每个 `β` 的（渐近）标准误，我们可以用它来构造 t 统计量（将具有渐近正态分布）或为每个参数构建近似置信区间。我们也可以同时检验多个限制。通常，我们感兴趣的是排除限制，因此我们将重点关注这一点。
 
 检验一组参数等于零的原假设时，我们可以使用多种程序：
 
 *   Wald 统计量。它渐近服从自由度为 `q`（限制数量）的卡方分布，并且大多数程序都提供。
-
-
-
-
-
 *   似然比（LR）检验。它基于无约束模型和约束模型中似然函数对数的差异：
 
 ![image](img/image559.png)
 
-该值渐近服从自由度为 q 的卡方分布。
+该值渐近服从自由度为 `q` 的卡方分布。
 
-对于 Logit 和 Probit 模型中的拟合优度度量，我们有：
+对于 `Logit` 和 `Probit` 模型中的拟合优度度量，我们有：
 
-*   正确预测百分比。对每个 i 我们计算估计的 `Yi = 1` 的概率：
+*   正确预测百分比。对每个 `i` 我们计算估计的 `Yi = 1` 的概率：
 
 ![image](img/image440.png)
 
-*   如果 ![image](img/image118.png) 我们的预测将是 `Yi` 为 1，如果 ![image](img/image118.png) 我们的预测将是 `Yi` 为 0。观测值 `Yi` 与预测值相符的次数百分比即为正确预测百分比。有趣的是分别计算零和一的正确预测百分比。
-
+*   如果 `P(Yi=1|X)>0.5` 我们的预测将是 `Yi` 为 1，如果 `P(Yi=1|X)<=0.5` 我们的预测将是 `Yi` 为 0。观测值 `Yi` 与预测值相符的次数百分比即为正确预测百分比。有趣的是分别计算零和一的正确预测百分比。
 *   伪 R²（McFadden）。它基于似然函数对数：
 
 ![image](img/image626.png)
@@ -1585,19 +1474,19 @@ In econometric analysis, other types of limited dependent variables appear, espe
 
 *   信息准则。这些是试图在拟合优度与模型简约设定之间取得平衡的度量，拟合优度由似然函数对数的值衡量。（示例：赤池信息准则 AIC、施瓦茨准则 SC 和汉南-奎因准则 HQ。）选择信息准则值最低的模型。
 
-在解释 Probit 和 Logit 模型中的估计值时，我们通常感兴趣的是变量 `Xj` 的变化对响应概率的影响，如果该变量是连续的，则为：
+在解释 `Probit` 和 `Logit` 模型中的估计值时，我们通常感兴趣的是变量 `Xj` 的变化对响应概率的影响，如果该变量是连续的，则为：
 
 ![image](img/image642.png)
 
-由于 ![image](img/image226.png) 依赖于 X，因此有必要对 X 的感兴趣值（样本均值、感兴趣变量的最大值和最小值等）计算偏效应。也可以为每个个体计算偏效应，然后计算其均值。
+由于 `g(X)` 依赖于 `X`，因此有必要对 `X` 的感兴趣值（样本均值、感兴趣变量的最大值和最小值等）计算偏效应。也可以为每个个体计算偏效应，然后计算其均值。
 
-连续变量 `Xj` 对响应概率 `P(Y \= 1|X)` 的偏效应将为：
+连续变量 `Xj` 对响应概率 `P(Y = 1|X)` 的偏效应将为：
 
 ![image](img/image046.png)
 
-其中 `g(.)` 是 logistic（logit）或标准正态（probit）密度函数。该效应因个体而异。如同 Probit 和 Logit 的情况，`g(z)>0` 对所有 z 成立，`Xj` 的偏效应的符号与 `βj` 的符号相同。
+其中 `g(.)` 是 logistic（logit）或标准正态（probit）密度函数。该效应因个体而异。如同 `Probit` 和 `Logit` 的情况，`g(z)>0` 对所有 `z` 成立，`Xj` 的偏效应的符号与 `βj` 的符号相同。
 
-两个连续变量 `Xj` 和 `Xh` 的相对效应不依赖于 X。请注意，偏效应的商为 `βj /βh`。
+两个连续变量 `Xj` 和 `Xh` 的相对效应不依赖于 `X`。请注意，偏效应的商为 `βj /βh`。
 
 如果 `X1`，例如，是一个虚拟解释变量，其从 1 变到 0 的偏效应将由下式给出：
 
@@ -1605,35 +1494,29 @@ In econometric analysis, other types of limited dependent variables appear, espe
 
 该值也因个体而异，因为它取决于所有 `X'sj` 的值。
 
-由于在 Probit 中 `g(0) ≈ 0.4`，在 Logit 中 `g(0) ≈ 0.25` 而在 MPL 中 `g(0) = 1`，可以得到估计值之间的以下关系：
+由于在 `Probit` 中 `g(0) ≈ 0.4`，在 `Logit` 中 `g(0) ≈ 0.25` 而在 `MPL` 中 `g(0) = 1`，可以得到估计值之间的以下关系：
 
 ![image](img/image490.png)
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
-
 | --- | --- | --- |
-
 ![image](img/chapter_title_above.png)
 
 ### 3.4 多项选择模型
-
 ![image](img/chapter_title_below.png)
 
 迄今为止研究的模型是离散选择模型，其中选择集只有两种可能的备选方案，被称为二元选择模型。但当选择集有多个离散值时，我们就是处理多项选择模型或多项模型。现在我们将研究最常见的模型。
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
-
 | --- | --- | --- |
-
 ![image](img/chapter_title_above.png)
 
 #### 3.4.1 多项 Logit 模型
-
 ![image](img/chapter_title_below.png)
 
-多项 Logit 模型是二元模型的扩展，用于响应“无序”且可能性超过 2 种的情况。设 `(Xi , Yi)` 为总体中 i = 1..n 的随机样本。
+多项 `Logit` 模型是二元模型的扩展，用于响应“无序”且可能性超过 2 种的情况。设 `(Xi , Yi)` 为总体中 `i = 1..n` 的随机样本。
 
-与二元情况一样，我们感兴趣的是 X 的元素变化如何影响响应概率：
+与二元情况一样，我们感兴趣的是 `X` 的元素变化如何影响响应概率：
 
 ![Texto Descripción generada automáticamente con confianza media](img/image305.png)
 
@@ -1647,99 +1530,83 @@ In econometric analysis, other types of limited dependent variables appear, espe
 
 ![Texto, Carta Descripción generada automáticamente](img/image683.png)
 
-选择 j 的概率，如果选择是在 j 和 h 之间，则遵循参数向量为 `βj -βh` 的标准 Logit 模型：
+选择 `j` 的概率，如果选择是在 `j` 和 `h` 之间，则遵循参数向量为 `βj -βh` 的标准 `Logit` 模型：
 
 ![Texto, Carta Descripción generada automáticamente](img/image289.png)
 
 一般而言，我们将得到一致且渐近正态的估计量。
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
-
 | --- | --- | --- |
-
 ![image](img/chapter_title_above.png)
 
 #### 3.4.2 条件 Logit 模型
-
 ![image](img/chapter_title_below.png)
 
-条件 Logit 模型用于个体（或企业）的选择至少部分基于每个备选方案的可观测属性的问题。在多项 Logit 中，解释变量在备选方案之间不发生变化，即对每个 i，`Xi` 包含特定于个体的变量，而非特定于备选方案的变量，适用于备选方案特征不重要（或我们未观察到它们）的情况。在条件 Logit 模型中，对每个 i，`Xi` 包含个体特定和备选方案特定的变量，适用于备选方案特征可被观察到的情况。
+条件 `Logit` 模型用于个体（或企业）的选择至少部分基于每个备选方案的可观测属性的问题。在多项 `Logit` 中，解释变量在备选方案之间不发生变化，即对每个 `i`，`Xi` 包含特定于个体的变量，而非特定于备选方案的变量，适用于备选方案特征不重要（或我们未观察到它们）的情况。在条件 `Logit` 模型中，对每个 `i`，`Xi` 包含个体特定和备选方案特定的变量，适用于备选方案特征可被观察到的情况。
 
-假设我们从基础总体中抽取了大小为 n 的随机样本（i = 1,..., n）。选择备选方案 j 的效用为：
+假设我们从基础总体中抽取了大小为 `n` 的随机样本（`i = 1,..., n`）。选择备选方案 `j` 的效用为：
 
 ![image](img/image290.png)
 
 其中 `aij` 是影响偏好的不可观测因素，而 `Xij` 在备选方案之间（也许也在个体之间）变化，但不能包含仅在个体之间变化的元素（不包含常数项）。
 
-例如，我们可以考虑个体 i 使用交通方式 j 通勤所需的时间或交通方式 j 的成本（可能在个体之间变化也可能不变）。
+例如，我们可以考虑个体 `i` 使用交通方式 `j` 通勤所需的时间或交通方式 `j` 的成本（可能在个体之间变化也可能不变）。
 
 如果扰动项 `atij` 独立服从 Weibull 分布且：
 
 ![Texto, Carta Descripción generada automáticamente](img/image284.png)
 
-其中 `βk` 是 `β` 的第 k 个元素。
+其中 `βk` 是 `β` 的第 `k` 个元素。
 
-条件 Logit 模型的估计通过最大似然法进行。
+条件 `Logit` 模型的估计通过最大似然法进行。
 
-在条件 Logit 模型中，无关替代品独立性 IAI 假设也得到满足，因为选择 2 个备选方案的概率之比（`Y= j` 而非 `Y=h`）与剩余备选方案无关。 有
+在条件 `Logit` 模型中，无关替代品独立性 `IAI` 假设也得到满足，因为选择 2 个备选方案的概率之比（`Y= j` 而非 `Y=h`）与剩余备选方案无关。 有
 
 ![image](img/image571.png)
 
-无关替代品独立性 IAI 假设源于扰动项独立性假设，对估计很方便，但在某些具有相似备选方案的应用中可能是不现实的限制。无关替代品独立性 IAI 假设认为，两个现有备选方案的相对可能性不受引入第三个备选方案的影响。可以使用 Hausman 和 McFadden 提出的检验来检验 IAI 假设。
+无关替代品独立性 `IAI` 假设源于扰动项独立性假设，对估计很方便，但在某些具有相似备选方案的应用中可能是不现实的限制。无关替代品独立性 `IAI` 假设认为，两个现有备选方案的相对可能性不受引入第三个备选方案的影响。可以使用 Hausman 和 McFadden 提出的检验来检验 `IAI` 假设。
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
-
 | --- | --- | --- |
-
 ![image](img/chapter_title_above.png)
 
 #### 3.4.3 嵌套 Logit 模型
-
 ![image](img/chapter_title_below.png)
 
+嵌套 `Logit` 模型是条件 `Logit` 模型的一种特例，其中 `IAI` 假设通过将 `J` 个备选方案分组为 `L` 个相似备选方案的子组而得到放松。它被广泛用于建模消费决策。`IAI` 在每个组内仍然保持，但在组间不保持。选择过程被视为首先选择 `L` 个组之一 `P(Y G∈L |X)`，然后在该组内选择备选方案 `j` `P(Y = j|Y G∈L ,X)`。感兴趣的对象 `P(Y = j| X)` 通过将前两个相乘得到。
 
-
-
-
-嵌套 Logit 模型是条件 Logit 模型的一种特例，其中 `IAI` 假设通过将 `J` 个备选方案分组为 `L` 个相似备选方案的子组而得到放松。它被广泛用于建模消费决策。`IAI` 在每个组内仍然保持，但在组间不保持。选择过程被视为首先选择 `L` 个组之一 `P(Y G∈L |X)`，然后在该组内选择备选方案 `j` `P(Y = j|Y G∈L ,X)`。感兴趣的对象 `P(Y = j| X)` 通过将前两个相乘得到。
-
-嵌套 Logit 模型可以通过最大似然法进行估计，采用完全信息（两个决策）或 2 阶段法（每个组内每个 `j` 的选择的条件 Logit，然后是选择组 `L` 的概率）。
+嵌套 `Logit` 模型可以通过最大似然法进行估计，采用完全信息（两个决策）或 2 阶段法（每个组内每个 `j` 的选择的条件 `Logit`，然后是选择组 `L` 的概率）。
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
-
 | --- | --- | --- |
-
 ![image](img/chapter_title_above.png)
 
 #### 3.4.4 多项 Probit 模型
-
 ![image](img/chapter_title_below.png)
 
-当在条件 Logit 模型中 `IAI` 假设可以通过使用关于 `aij` 具有更灵活假设的模型而得到放松时，多项 Probit 模型可以作为其特例得到。
+当在条件 `Logit` 模型中 `IAI` 假设可以通过使用关于 `aij` 具有更灵活假设的模型而得到放松时，多项 `Probit` 模型可以作为其特例得到。
 
-假设 `aij` 服从多元正态分布，且 `aij` 与 `aih` 之间具有任意相关性（其中 `j≠ h`），我们就得到多项 Probit 模型。尽管该模型在理论上具有吸引力，但响应概率非常复杂，且当备选方案超过 5 个时，最大似然估计几乎不可能。最近的计量经济学进展使得使用这些模型变得更容易。
+假设 `aij` 服从多元正态分布，且 `aij` 与 `aih` 之间具有任意相关性（其中 `j≠ h`），我们就得到多项 `Probit` 模型。尽管该模型在理论上具有吸引力，但响应概率非常复杂，且当备选方案超过 5 个时，最大似然估计几乎不可能。最近的计量经济学进展使得使用这些模型变得更容易。
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
-
 | --- | --- | --- |
-
 ![image](img/chapter_title_above.png)
 
 ### 3.5 有序 Logit 和 Probit 模型
-
 ![image](img/chapter_title_below.png)
 
 迄今为止所看到的多种选择模型并未考虑 `Y` 的顺序性质。有时在多种选择模型中 `Y` 是有序响应，且分配给每个备选方案的值并非任意。我们此时处理的是有序响应模型。例如，当 `Y` 可以反映对信用的估值时，它是一个从 0 到 6 的量表。
 
-设 `Y` 为有序响应变量，取值 `{0, 1, 2, ..., J}`。`Y` 的有序 Probit（或 Logit）模型（条件于解释变量 `X`）可由潜在变量模型导出：
+设 `Y` 为有序响应变量，取值 `{0, 1, 2, ..., J}`。`Y` 的有序 `Probit`（或 `Logit`）模型（条件于解释变量 `X`）可由潜在变量模型导出：
 
 ![Texto, Carta Descripción generada automáticamente](img/image404.png)
 
-如果 `J=1` 我们得到二元 Probit，其中常数 `\-α1` 包含在 `Ф(.)` 内（在二元模型中我们通常将截断点设为零并估计常数）。
+如果 `J=1` 我们得到二元 `Probit`，其中常数 `\-α1` 包含在 `Ф(.)` 内（在二元模型中我们通常将截断点设为零并估计常数）。
 
-参数 `α` 和 `β` 可以通过最大似然法估计。如果不用 `Ф(.)` 而用逻辑函数 `Λ(.)`，我们将得到有序 Logit 模型。
+参数 `α` 和 `β` 可以通过最大似然法估计。如果不用 `Ф(.)` 而用逻辑函数 `Λ(.)`，我们将得到有序 `Logit` 模型。
 
-对于有序 Probit，我们有偏效应为：
+对于有序 `Probit`，我们有偏效应为：
 
 ![Texto, Carta Descripción generada automáticamente](img/image452.png)
 
@@ -1752,56 +1619,50 @@ In econometric analysis, other types of limited dependent variables appear, espe
 其中 `a0`、`a1`、...、`aJ` 是变量取的值。一旦我们估计出概率，我们就可以对我们感兴趣的任何 `X` 值估计 `E(Y|X)`。
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
-
 | --- | --- | --- |
-
 ![image](img/chapter_title_above.png)
 
 ### 3.6 计数数据模型
-
 ![image](img/chapter_title_below.png)
 
-一种重要的受限因变量类型是计数变量，其取非负整数值。计数数据模型是以离散计数变量作为因变量的模型，该变量取非负整数值。Poisson 回归模型适用于分析计数变量。指数回归模型和负二项回归模型也适用。
+一种重要的受限因变量类型是计数变量，其取非负整数值。计数数据模型是以离散计数变量作为因变量的模型，该变量取非负整数值。`Poisson` 回归模型适用于分析计数变量。指数回归模型和负二项回归模型也适用。
 
 计数数据模型的特征通常是它们没有自然的上限，对总体中的某些成员取零值，并且通常取值较少。
 
-如果 `Y` 是计数变量且 ![image](img/image463.png) 为解释变量，我们通常感兴趣的是：
+如果 `Y` 是计数变量且 `X` 为解释变量，我们通常感兴趣的是：
 
 ![image](img/image654.png)
 
-在 `Y` 严格为正的情况下，我们可以采用 `log(Y)` 变换并使用线性模型。然而，在计数数据中 `Y` 通常对总体中不可忽略的比例取零值。对于计数数据，我们通常对 ![image](img/image410.png) 进行建模，选择能确保对所有 `X` 和所有参数值都为正值的函数形式。
+在 `Y` 严格为正的情况下，我们可以采用 `log(Y)` 变换并使用线性模型。然而，在计数数据中 `Y` 通常对总体中不可忽略的比例取零值。对于计数数据，我们通常对 `E(Y|X)` 进行建模，选择能确保对所有 `X` 和所有参数值都为正值的函数形式。
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
-
 | --- | --- | --- |
-
 ![image](img/chapter_title_above.png)
 
 #### 3.6.1 Poisson 回归模型
-
 ![image](img/chapter_title_below.png)
 
-对于计数数据，其中变量 `Y` 取值较少，最常见的是假设 `Y` 在给定 ![image](img/image463.png) 的条件下服从 Poisson 分布。Poisson 分布完全由其均值决定，因此只需指定 ![image](img/image265.png)：
+对于计数数据，其中变量 `Y` 取值较少，最常见的是假设 `Y` 在给定 `X` 的条件下服从 `Poisson` 分布。`Poisson` 分布完全由其均值决定，因此只需指定 `E(Y|X)`：
 
 ![Texto, Carta Descripción generada automáticamente](img/image622.png)
 
 我们可以将系数解释为以对数形式为因变量的线性模型。
 
-我们可以通过 ![image](img/image324.png) 来衡量在 ![image](img/image410.png) 处 `Xk` 单位变化时的精确 % 变化
+我们可以通过 `∂logE(Y|X)/∂Xk` 来衡量在 `E(Y|X)` 处 `Xk` 单位变化时的精确 % 变化
 
 ![Diagrama Descripción generada automáticamente con confianza media](img/image161.png)
 
-基于我们对 Poisson 分布以及条件期望形式的假设，我们可以构造对数似然函数为：
+基于我们对 `Poisson` 分布以及条件期望形式的假设，我们可以构造对数似然函数为：
 
 ![image](img/image142.png)
 
-其中项 `-log(Yi!)` 已被移除，因为它不依赖于 ![image](img/image007.png)。
+其中项 `-log(Yi!)` 已被移除，因为它不依赖于 `β`。
 
-最大化该函数得到 ![image](img/image007.png) 的 `MV` 估计量，如果 `Y` 的条件分布为 Poisson 且 ![image](img/image585.png) 设定良好，则该估计量将是一致的、高效的且渐近正态的。从这些估计可以得到 ![image](img/image478.png) 的标准误。
+最大化该函数得到 `β` 的 `MV` 估计量，如果 `Y` 的条件分布为 `Poisson` 且 `E(Y|X)` 设定良好，则该估计量将是一致的、高效的且渐近正态的。从这些估计可以得到 `β` 的标准误。
 
-有时 Poisson 分布施加的限制在实证应用中并不满足。特别地，在 Poisson 中所有高阶概率和矩都由均值决定，因此 `E(Y|X) = V(Y|X)`。该等式在许多应用中不成立。然而，即使 Poisson 分布不满足，只要条件均值设定良好，我们仍将得到 ![image](img/image260.png) 的一致且渐近正态估计量。
+有时 `Poisson` 分布施加的限制在实证应用中并不满足。特别地，在 `Poisson` 中所有高阶概率和矩都由均值决定，因此 `E(Y|X) = V(Y|X)`。该等式在许多应用中不成立。然而，即使 `Poisson` 分布不满足，只要条件均值设定良好，我们仍将得到 `β` 的一致且渐近正态估计量。
 
-当 `Y` 在给定 `X1`、...、`Xk` 的条件下不服从 Poisson 分布时，通过最大化对数似然函数得到的估计量：
+当 `Y` 在给定 `X1`、...、`Xk` 的条件下不服从 `Poisson` 分布时，通过最大化对数似然函数得到的估计量：
 
 ![image](img/image325.png)
 
@@ -1811,37 +1672,35 @@ In econometric analysis, other types of limited dependent variables appear, espe
 
 
 
-
-
 其中![image](img/image369.png)是一个未知参数。如果![image](img/image424.png)我们有泊松方差假设。如果![image](img/image671.png)我们有过度离散，这在许多应用中都会发生。如果![image](img/image671.png)我们有欠离散，这在经验应用中很少见。
 
 在方差与均值成比例的假设下，很容易调整通过最大似然得到的泊松标准误。它们必须乘以![image](img/image525.png)，其中![image](img/image301.png)是![image](img/image301.png)的相合估计量：
 
 ![image](img/image121.png)
 
-这样得到的标准误称为 GLM（广义线性模型）标准误。这些标准误是在方差与均值成比例的假设下得到的，但也可以在不限制方差的情况下获得泊松模型 CMV 估计量的标准误。
+这样得到的标准误称为 `GLM`（广义线性模型）标准误。这些标准误是在方差与均值成比例的假设下得到的，但也可以在不限制方差的情况下获得泊松模型 `CMV` 估计量的标准误。
 
 在泊松分布的假设下，对于排除限制检验，我们可以使用似然比检验：
 
 ![image](img/image163.png)
 
-它渐近服从自由度为 q 的卡方分布。
+它渐近服从自由度为 `q` 的卡方分布。
 
-在方差与均值成比例的假设下，要进行排除限制检验，只需将似然比检验除以![image](img/image494.png)即可得到非受限模型（CMV 统计量）。为了衡量这些模型的拟合优度，可以使用定义为 Yi 与![image](img/image547.png)之间的相关系数的平方的 R²。它具有始终介于 0 和 1 之间的优点。
+在方差与均值成比例的假设下，要进行排除限制检验，只需将似然比检验除以![image](img/image494.png)即可得到非受限模型（`CMV` 统计量）。为了衡量这些模型的拟合优度，可以使用定义为 `Yi` 与![image](img/image547.png)之间的相关系数的平方的 `R²`。它具有始终介于 0 和 1 之间的优点。
 
-##### 3.6.2 负二项回归模型
+### 3.6.2 负二项回归模型
 
-还有其他用于计数数据的回归模型，使用推广泊松的分布，例如使用负二项分布。这就是负二项回归模型。该模型用于过度离散的情况，因为假设 V(Y|X) =σ²  E(Y|X) = (1+η² ) E(Y|X)。在这种情况下，参数![image](img/image007.png)和![image](img/image211.png)通过最大似然法联合估计。为了使估计量相合且有效，必须满足负二项假设。如果我们对固定的![image](img/image211.png)估计![image](img/image007.png)，只要 E(Y|X) 设定良好，估计量就会相合。
+还有其他用于计数数据的回归模型，使用推广泊松的分布，例如使用负二项分布。这就是负二项回归模型。该模型用于过度离散的情况，因为假设 `V(Y|X) = σ² E(Y|X) = (1+η²) E(Y|X)`。在这种情况下，参数![image](img/image007.png)和![image](img/image211.png)通过最大似然法联合估计。为了使估计量相合且有效，必须满足负二项假设。如果我们对固定的![image](img/image211.png)估计![image](img/image007.png)，只要 `E(Y|X)` 设定良好，估计量就会相合。
 
-##### 3.6.3 指数回归模型
+### 3.6.3 指数回归模型
 
-在指数回归模型中，参数使用指数分布通过最大似然法估计。如果 E(Y|X) 设定良好，即使分布不是指数分布，估计量也会相合（与其他 CMV 估计量类似）。为了得到 GLM 标准误，假设：V(Y|X) =σ 2 \[E(Y|X)\]2。
+在指数回归模型中，参数使用指数分布通过最大似然法估计。如果 `E(Y|X)` 设定良好，即使分布不是指数分布，估计量也会相合（与其他 `CMV` 估计量类似）。为了得到 `GLM` 标准误，假设：`V(Y|X) = σ 2 [E(Y|X)]2`。
 
-##### 3.6.4 正态回归模型
+### 3.6.4 正态回归模型
 
-在正态回归模型中，参数使用正态分布通过最大似然法估计。对于固定的σ 2，如果 E(Y|X) 设定良好，即使分布不是正态的，估计量也会相合。
+在正态回归模型中，参数使用正态分布通过最大似然法估计。对于固定的`σ 2`，如果 `E(Y|X)` 设定良好，即使分布不是正态的，估计量也会相合。
 
-### 3.7 截断模型：托比特模型
+## 3.7 截断模型：托比特模型
 
 一种非常特殊的受限因变量类型是由数据截断引起的。截断回归模型是指其因变量在某个值以上（上截断）或以下（下截断）被截断，即因变量对部分人群不可观察。在截断回归模型中，潜在的因变量近似连续，但由于我们收集数据的方式或制度约束，它要么被低截断要么被高截断。
 
@@ -1851,47 +1710,43 @@ In econometric analysis, other types of limited dependent variables appear, espe
 
 ![Texto, Carta Descripción generada automáticamente](img/image010.png)
 
-我们将托比特模型表述为潜在变量 Y\*，它满足经典回归模型的假设，正态分布、同方差且条件均值线性。
+我们将托比特模型表述为潜在变量 `Y*`，它满足经典回归模型的假设，正态分布、同方差且条件均值线性。
 
-给定 X 的 Y 的密度与给定 X 的 Y\* 的密度在正值上相同。此外，我们知道：
+给定 `X` 的 `Y` 的密度与给定 `X` 的 `Y*` 的密度在正值上相同。此外，我们知道：
 
 ![Texto, Carta Descripción generada automáticamente](img/image513.png)
 
-通过最大化似然函数，我们得到β 和σ 的 MV 估计量。可以得到估计系数的标准误并构建 Student t 统计量用于对比。Wald 统计量和 RV 也可使用。
+通过最大化似然函数，我们得到`β` 和`σ` 的 `MV` 估计量。可以得到估计系数的标准误并构建 Student t 统计量用于对比。Wald 统计量和 RV 也可使用。
 
-#### 3.7.1 托比特模型中系数的解释
+### 3.7.1 托比特模型中系数的解释
 
 我们注意到：
 
 ![Texto, Carta Descripción generada automáticamente](img/image567.png)
 
-然后，如果我们仅使用 Y>0 的观测值，用 OLS 估计托比特模型，省略零值，我们将得到β 的无偏且不一致的估计量，因为我们省略了与 X 相关的 Mills 比值。
+然后，如果我们仅使用 `Y>0` 的观测值，用 `OLS` 估计托比特模型，省略零值，我们将得到`β` 的无偏且不一致的估计量，因为我们省略了与 `X` 相关的 Mills 比值。
 
 在托比特模型中我们有：
 
 ![Texto, Carta Descripción generada automáticamente](img/image501.png)
 
-我们于是面对 X 和β 的非线性函数，这使我们得出结论：如果我们用所有观测值将托比特模型作为线性模型用 OLS 估计，我们将没有相合估计量。
+我们于是面对 `X` 和`β` 的非线性函数，这使我们得出结论：如果我们用所有观测值将托比特模型作为线性模型用 `OLS` 估计，我们将没有相合估计量。
 
-#### 3.7.2 托比特模型中的偏效应
+### 3.7.2 托比特模型中的偏效应
 
-如果 Xj 是连续变量，则对正值子人群中 Y 的期望值的偏效应将取决于βj 和一个介于 0 和 1 之间的项，其值为（\*）：
+如果 `Xj` 是连续变量，则对正值子人群中 `Y` 的期望值的偏效应将取决于`βj` 和一个介于 0 和 1 之间的项，其值为（*）：
 
 ![image](img/image589.png)
 
-我们可以使用β 和σ 的 MV 估计值来估计该偏效应，用于 X 的均值或其他在我们应用中有兴趣的值。如果 Xj 是二元变量，我们可以计算 E(Y|Y>0,X) 在 Xj = 1 和 Xj = 0 之间的差值。同样，这也可以对任何离散 Xj 进行。
-
-
-
-
+我们可以使用`β` 和`σ` 的 `MV` 估计值来估计该偏效应，用于 `X` 的均值或其他在我们应用中有兴趣的值。如果 `Xj` 是二元变量，我们可以计算 `E(Y|Y>0,X)` 在 `Xj = 1` 和 `Xj = 0` 之间的差值。同样，这也可以对任何离散 `Xj` 进行。
 
 Likewise, if `Xj` is a continuous variable, we can compute the partial effect on the expected value of `Y`. This partial effect can be decomposed into two parts, the effect on the mean value of `Y` in the positive part of the distribution, and the effect on the probability in the other part of the distribution. We have (**):
 
 ![Tabla Descripción generada automáticamente con confianza media](img/image389.png)
 
-This value of the effects can be easily estimated using the MV estimates of `β` and `σ` for the mean values of `X` or for other values of interest in our applications.
+This value of the effects can be easily estimated using the `MV` estimates of `β` and `σ` for the mean values of `X` or for other values of interest in our applications.
 
-The Tobit model is based on the assumptions of normality and homoscedasticity in the latent model. When these assumptions are not met, the problem is not only the inconsistency of the MV estimator of `β` and `σ`. Even the expressions of the conditional expectation are not adequate. The model can be generalised to allow for certain forms of heteroskedasticity and non-normality. There are also tests for certain types of normality and heteroscedasticity, for example:
+The Tobit model is based on the assumptions of normality and homoscedasticity in the latent model. When these assumptions are not met, the problem is not only the inconsistency of the `MV` estimator of `β` and `σ`. Even the expressions of the conditional expectation are not adequate. The model can be generalised to allow for certain forms of heteroskedasticity and non-normality. There are also tests for certain types of normality and heteroscedasticity, for example:
 
 ![image](img/image377.png)
 
@@ -1903,7 +1758,7 @@ But, for mild breaches of the assumptions, it is thought that the Tobit model ca
 
 ![image](img/chapter_title_above.png)
 
-#### 3.7.3 Tobit model with censorship in the data
+### 3.7.3 Tobit model with censorship in the data
 
 ![image](img/chapter_title_below.png)
 
@@ -1921,15 +1776,15 @@ We can write the Tobit model as:
 
 ![image](img/chapter_title_above.png)
 
-#### 3.7.4 Maximum Likelihood (MV) estimation of the censored Tobit model
+### 3.7.4 Maximum Likelihood (MV) estimation of the censored Tobit model
 
 ![image](img/chapter_title_below.png)
 
-If we had a random sample we could estimate `β` by OLS and perform inference in the usual way, but censoring the data causes us problems of inconsistency in OLS estimation (with all observations or without the censored ones). Given a random sample, we can obtain consistent estimates from `β` and `σ` if we estimate by OLS. For uncensored observations, `Y = Y*`, the density of `Y` is the same as that of `Y*`. For censored observations we have:
+If we had a random sample we could estimate `β` by `OLS` and perform inference in the usual way, but censoring the data causes us problems of inconsistency in `OLS` estimation (with all observations or without the censored ones). Given a random sample, we can obtain consistent estimates from `β` and `σ` if we estimate by `OLS`. For uncensored observations, `Y = Y*`, the density of `Y` is the same as that of `Y*`. For censored observations we have:
 
 ![image](img/image465.png)
 
-We will calculate the logarithm of the likelihood function and perform the MV estimation. In this model the `βj` are interpreted as in the linear regression model.
+We will calculate the logarithm of the likelihood function and perform the `MV` estimation. In this model the `βj` are interpreted as in the linear regression model.
 
 The expression for the logarithm of the likelihood function for a sample of size `n` is as follows:
 
@@ -1941,17 +1796,17 @@ The expression for the logarithm of the likelihood function for a sample of size
 
 ![image](img/chapter_title_above.png)
 
-#### 3.7.5 Two-stage ordinary least squares estimation of the censored Tobit model
+### 3.7.5 Two-stage ordinary least squares estimation of the censored Tobit model
 
 ![image](img/chapter_title_below.png)
 
-Although the estimation of the OLS-censored Tobit model cannot be done directly, we can use the following two-step method:
+Although the estimation of the `OLS`-censored Tobit model cannot be done directly, we can use the following two-step method:
 
 1. The dichotomous dummy variable is constructed which is worth 1 for positive values of `Y` (`Yi > 0` or `Yi > c`) and which is worth 0 for values of `Y` less than or equal to zero (`Y i≤ 0` or `Y i≤ c`). The corresponding Probit model is estimated and the Mills ratio is obtained from the estimated values:
 
 ![image](img/image026.png)
 
-1. We estimate by OLS the model ![image](img/image268.png)
+1. We estimate by `OLS` the model ![image](img/image268.png)
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
 
@@ -1959,7 +1814,7 @@ Although the estimation of the OLS-censored Tobit model cannot be done directly,
 
 ![image](img/chapter_title_above.png)
 
-### 3.8 SAMPLE SELECTION: TRUNCATED MODELS
+## 3.8 SAMPLE SELECTION: TRUNCATED MODELS
 
 ![image](img/chapter_title_below.png)
 
@@ -1969,11 +1824,13 @@ Suppose we have an underlying population model that satisfies the assumptions of
 
 ![image](img/image476.png)
 
-If we had a random sample of the population, the most efficient estimation procedure would be OLS. However, in the case of the truncated model the problem is that we do not have a random sample, because our observed sample has a bound of the type `Yi ≤ ci` or `Yi > ci` (Truncated Tobit Model). If we want to estimate `β` and `σ` we need to know the distribution of `Yi` given `X` and that `Yi ≤ ci` or `Yi > ci`. That is:
+If we had a random sample of the population, the most efficient estimation procedure would be `OLS`. However, in the case of the truncated model the problem is that we do not have a random sample, because our observed sample has a bound of the type `Yi ≤ ci` or `Yi > ci` (Truncated Tobit Model). If we want to estimate `β` and `σ` we need to know the distribution of `Yi` given `X` and that `Yi ≤ ci` or `Yi > ci`. That is:
 
 ![Texto, Carta Descripción generada automáticamente](img/image051.png)
 
 where `f(Y|X ,iβσ² )` is the density of a normal with mean `Xiβ` and variance `σ²` and `F(ci |X ,iβσ² )` is the distribution function of a normal with mean `Xiβ` and variance `σ` evaluated at `ci`.
+
+
 
 If we divide the density of `Y` given `X` by the probability that `Yi ≤ ci` or `Yi > ci` (given `X`), we take logarithms and sum for all `n` maximising the result we obtain the MV estimators of `β` and `σ²`, which will be consistent and asymptotically normal. But if the assumptions of homoscedasticity and normality are not met, the MV estimators will be inconsistent.
 
@@ -1983,7 +1840,7 @@ If we divide the density of `Y` given `X` by the probability that `Yi ≤ ci` or
 
 ![image](img/chapter_title_above.png)
 
-#### 3.8.1 Truncated Tobit model estimation
+### 3.8.1 Truncated Tobit model estimation
 
 ![image](img/chapter_title_below.png)
 
@@ -2001,7 +1858,7 @@ The truncated variable model can be specified as follows:
 
 ![image](img/chapter_title_above.png)
 
-#### 3.8.2 Partial effects in the truncated Tobit model
+### 3.8.2 Partial effects in the truncated Tobit model
 
 ![image](img/chapter_title_below.png)
 
@@ -2019,17 +1876,13 @@ Then the marginal effect of variable `Xk` with respect to the explained variable
 
 ![image](img/chapter_title_above.png)
 
-#### 3.8.3 Maximum Likelihood (MV) estimation of the truncated Tobit model
+### 3.8.3 Maximum Likelihood (MV) estimation of the truncated Tobit model
 
 ![image](img/chapter_title_below.png)
 
 The likelihood function of the truncated regression model is calculated from the density function:
 
 ![image](img/image008.png)
-
-
-
-
 
 应用对数似然，我们得到样本量为 n 的似然函数的对数：
 
@@ -2038,19 +1891,24 @@ The likelihood function of the truncated regression model is calculated from the
 求导并令其等于零，我们得到 `β` 和 `σ` 的 MV 估计量。
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
+
 | --- | --- | --- |
+
 ![image](img/chapter_title_above.png)
 
-#### 3.8.4 Amemiya 两步法估计
+### 3.8.4 Amemiya 两步法估计
 
 ![image](img/chapter_title_below.png)
 
 尽管 OLS 截断 Tobit 模型无法直接估计，但我们可以使用以下两步法：
+
 1. 我们用 OLS 估计模型 ![image](img/image529.png) 并得到 ![image](img/image675.png)
-1. 辅助方程 ![image](img/image277.png) 被指定并通过工具变量法估计，使用回归量 ![image](img/image180.png) 作为工具。
+2. 辅助方程 ![image](img/image277.png) 被指定并通过工具变量法估计，使用回归量 ![image](img/image180.png) 作为工具。
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
+
 | --- | --- | --- |
+
 ![image](img/chapter_title_above.png)
 
 ### 3.9 样本选择校正：两阶段 Heckman 或 Heckman 两步估计
@@ -2060,8 +1918,10 @@ The likelihood function of the truncated regression model is calculated from the
 截断回归是非随机样本选择这一更一般问题的特例，当用于估计的样本不是随机样本时就会出现这种情况。
 
 Heckman 提出了一种两阶段程序，用于在存在附带截断的情况下估计模型，从而克服选择偏差问题：
+
 阶段 1. 使用 n 个观测值，我们估计 s 关于 Z 的 Probit 模型，由此得到 ![image](img/image104.png)。根据这些估计值，我们计算每个 i 的 ![image](img/image651.png)。
-阶段 2. 使用选定样本 (s=1) 我们通过 OLS 估计 Y 对 X 和 ![image](img/image246.png) 的回归。
+
+阶段 2. 使用选定样本 `s=1` 我们通过 OLS 估计 Y 对 X 和 ![image](img/image246.png) 的回归。
 
 该程序产生一致且渐近正态的估计量。
 
@@ -2074,7 +1934,9 @@ Heckman 提出了一种两阶段程序，用于在存在附带截断的情况下
 除了使用 2 阶段程序外，此类模型也可以通过 MV 估计，尽管更复杂，因为我们需要 Y 和 s 的联合分布。
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
+
 | --- | --- | --- |
+
 ![image](img/chapter_title_above.png)
 
 ### 3.10 STATA 中的有界因变量模型：Logit 和 Probit
@@ -2103,11 +1965,11 @@ STATA 具有 `probit` 命令，允许我们拟合二元 Probit 模型。作为�
 
 ![image](img/image346.png)
 
-STATA 提供 `mlogit` 命令来拟合多项 Logit 模型。作为示例，拟合一个模型来解释拥有保险的概率，保险有三种替代模式 (insure)，即预付、赔偿和无保险，作为被保险人种族 (nonwhite) 的函数，将白人和非白人视为可能的种族。STATA 的语法如下：
+STATA 提供 `mlogit` 命令来拟合多项 Logit 模型。作为示例，拟合一个模型来解释拥有保险的概率，保险有三种替代模式 `insure`，即预付、赔偿和无保险，作为被保险人种族 `nonwhite` 的函数，将白人和非白人视为可能的种族。STATA 的语法如下：
 
 ![image](img/image275.png)
 
-根据此输出，白人 (nonwhite=0) 的预付概率建模如下：
+根据此输出，白人 `nonwhite=0` 的预付概率建模如下：
 
 ![image](img/image412.png)
 
@@ -2120,7 +1982,9 @@ STATA 提供 `mprobit` 命令用于拟合多项 Probit 模型。对于上述示�
 ![image](img/image580.png)
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
+
 | --- | --- | --- |
+
 ![image](img/chapter_title_above.png)
 
 ### 3.11 STATA 中的截尾和截断 Tobit 模型。Heckman 方法和 Mills 比率。
@@ -2134,6 +1998,7 @@ STATA 使用 `tobit` 命令拟合具有截尾的模型。作为示例，我们�
 ––––––––
 
 ![image](img/scene_break.png)
+
 ![image](img/image021.png)
 
 我们然后拟合上述模型，但假设没有 mpg 值高于 24，即在右截尾存在的情况下。相应 Tobit 模型的语法可以如下：
@@ -2149,7 +2014,9 @@ STATA 使用 `heckman` 命令拟合具有选择偏差的模型。作为示例，
 ![image](img/image387.png)
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
+
 | --- | --- | --- |
+
 ![image](img/chapter_title_above.png)
 
 ### 3.12 STATA 中的 Poisson 模型
@@ -2163,7 +2030,9 @@ STATA 允许您使用 `poisson` 命令处理 Poisson 计数数据模型。下面
 4 第 4 章
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
+
 | --- | --- | --- |
+
 ![image](img/chapter_title_above.png)
 
 ## 使用 EVIEWS 处理 LOGIT、PROBIT、TOBIT、TRUNCATED、RECOUNTED、CENSORED 和 SAMPLE SELECTION 模型
@@ -2171,14 +2040,12 @@ STATA 允许您使用 `poisson` 命令处理 Poisson 计数数据模型。下面
 ![image](img/chapter_title_below.png)
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
+
 | --- | --- | --- |
+
 ![image](img/chapter_title_above.png)
 
 ### 4.1 EVIEWS 中的有界因变量模型：MLP、LOGIT 和 PROBIT
-
-
-
-
 
 ![image](img/chapter_title_below.png)
 
@@ -2212,13 +2079,15 @@ STATA 允许您使用 `poisson` 命令处理 Poisson 计数数据模型。下面
 
 除 `kidsge6` 外，所有变量在统计上均显著且符号符合预期。联合显著性也很强。对系数的解释表明，如果教育增加一年（其他变量保持不变），女性参与劳动力市场的概率将增加 0.038。其他收入来源（`nwifeinc`）的影响显著，但非常小，因为如果其他收入增加一个单位，在其他因素保持不变的情况下，女性参与劳动力市场的概率将下降 0.0034。
 
+
+
 在其他因素固定的情况下，工作经验变化一年时，女性劳动力市场参与概率的估计变化为 `0.039-2(0.0006)exper`。经验不影响参与概率的点（斜率改变符号的点）为 `0.039/0.0012=32.5`（只有 13 名女性的 `exper>32`）。随着年龄增加一年（其他条件不变），女性参与劳动力市场的概率下降 0.016。在其他变量水平给定的情况下，多一个 6 岁以下的孩子会使女性参与劳动力市场的概率降低 0.262。在其他变量水平固定的情况下，有一个 6 至 18 岁的孩子会使女性劳动力市场参与概率增加 0.013。
 
 MLP 的主要问题之一是，对于解释变量的某些取值组合，估计的概率可能小于 0 或大于 1：
 
 ![image](img/image102.png)
 
-为此，单击 Forecast 并如图所示填写预测屏幕（变量 `inlff` 包含样本中 753 名女性的 ![image](img/image125.png) 值）。当我们单击 OK 时，我们得到图 4-8 表示 ![image](img/image125.png)，注意到存在大于 1 和小于 0 的值）。事实上，如果我们在 Workfile 屏幕中双击变量 `inlff`，我们可以看到其值。图 4-9 显示了一些大于 1 的值，图 4-10 显示了小于零的值。总共有 17 个 ![image](img/image125.png) 值大于 1，16 个小于零。
+为此，单击 `Forecast` 并如图所示填写预测屏幕（变量 `inlff` 包含样本中 753 名女性的 ![image](img/image125.png) 值）。当我们单击 `OK` 时，我们得到图 4-8 表示 ![image](img/image125.png)，注意到存在大于 1 和小于 0 的值）。事实上，如果我们在 `Workfile` 屏幕中双击变量 `inlff`，我们可以看到其值。图 4-9 显示了一些大于 1 的值，图 4-10 显示了小于零的值。总共有 17 个 ![image](img/image125.png) 值大于 1，16 个小于零。
 
 MLP 的另一个不一致之处是，对似然的影响对于所有解释变量的值都是相同的。
 
@@ -2232,7 +2101,7 @@ MLP 的另一个不一致之处是，对似然的影响对于所有解释变量�
 
 在下面，鉴于线性概率模型的可能缺陷，我们使用 Probit 模型和 Logit 模型解决上述问题。此外，解释变量对女性参与劳动力市场概率的影响以适当的方式进行量化并解释。
 
-#### Probit 模型
+### Probit 模型
 
 我们首先考虑 Probit 模型：
 
@@ -2240,7 +2109,7 @@ MLP 的另一个不一致之处是，对似然的影响对于所有解释变量�
 
 其中 `Ф` 是正态（0,1）的分布函数。
 
-我们将首先使用 Probit 模型进行估计。为此，选择 `Quick→ Estimate Equation`，在 Specification 选项卡的 Equation Specification 字段中输入拟合模型的方程，在 Method 字段中选择 `BINARY-Binary choice (logit, probit, extreme value)`，在 Binary estimation method 字段中选择 `Probit` 以拟合 Probit 模型（图 4-11），然后单击 OK。
+我们将首先使用 Probit 模型进行估计。为此，选择 `Quick→ Estimate Equation`，在 `Specification` 选项卡的 `Equation Specification` 字段中输入拟合模型的方程，在 `Method` 字段中选择 `BINARY-Binary choice (logit, probit, extreme value)`，在 `Binary estimation method` 字段中选择 `Probit` 以拟合 Probit 模型（图 4-11），然后单击 `OK`。
 
 图 4-12 的结果显示估计参数具有良好的个体显著性（常数和 `kidsge6` 除外）。联合显著性非常高，因为似然比统计量的 p 值非常小。McFadden 的伪 `R²` 不太接近 1（0.22）。信息准则（Akaike、Schwarz 和 Hannan-Quinn）的值是合适的，因为它们很低且非常接近。
 
@@ -2250,7 +2119,7 @@ MLP 的另一个不一致之处是，对似然的影响对于所有解释变量�
 
 衡量 Probit 模型拟合优度的另一个标准是正确预测百分比的标准，它包括观察观察到的 Y 值 i 与其预测值相匹配的百分比。该任务是通过 Eviews 通过 `View → Expectation-Prediction Table`（图 4-13）完成的。
 
-单击 OK 后得到图 4-14 的输出，显示模型充分预测了 73.44%的观测值。参与者（女性劳动力市场参与）的预测更好，正确率为 81.31%，而非参与者的正确率为 63.08%。
+单击 `OK` 后得到图 4-14 的输出，显示模型充分预测了 73.44%的观测值。参与者（女性劳动力市场参与）的预测更好，正确率为 81.31%，而非参与者的正确率为 63.08%。
 
 ![image](img/image640.png)![image](img/image706.png)
 
@@ -2260,7 +2129,7 @@ MLP 的另一个不一致之处是，对似然的影响对于所有解释变量�
 
 ![image](img/image018.png)
 
-由于我们对每个观测值都有一个效应，我们将避免计算 753 个效应，而是计算平均观测值的效应。为此，我们通过在 Workfile 屏幕中选择模型中的变量并使用右键按钮以 `Open → as Group` 的方式将其打开为组来计算变量的均值（图 4-15）。然后选择 `View → Descriptive Statistics→ Individual samples`（图 4-16）并获得模型中所有变量的描述性统计，包括均值（图 4-17）。
+由于我们对每个观测值都有一个效应，我们将避免计算 753 个效应，而是计算平均观测值的效应。为此，我们通过在 `Workfile` 屏幕中选择模型中的变量并使用右键按钮以 `Open → as Group` 的方式将其打开为组来计算变量的均值（图 4-15）。然后选择 `View → Descriptive Statistics→ Individual samples`（图 4-16）并获得模型中所有变量的描述性统计，包括均值（图 4-17）。
 
 ![image](img/image395.png)![image](img/image700.png)
 
@@ -2283,10 +2152,6 @@ MLP 的另一个不一致之处是，对似然的影响对于所有解释变量�
 ![image](img/image240.png)
 
 `ϕ` = 正态（0,1）的密度函数
-
-
-
-
 
 我们可以通过将 `Probit` 模型的估计系数乘以 `0.391` 来获得连续变量在 X 的均值处的估计边际效应。
 
@@ -2376,10 +2241,6 @@ MLP 的另一个不一致之处是，对似然的影响对于所有解释变量�
 
 图 4-32      图 4-33
 
-
-
-
-
 Good individual and joint significance is observed for the estimated parameters (except for `avgsen`, `totttime` and `born60`). The Pseudo R² is large and the values of the information criteria are quite acceptable. Furthermore, very similar results to the previous methods are observed. The most suitable count data model for this fit is the exponential model, as it has the lowest values for the Akaike, Schwarz and Hannan-Quinn information criteria.
 
 ![image](img/image095.png)![image](img/image331.png)
@@ -2399,6 +2260,8 @@ Figure 4-34      Figure 4-35
 We considered data from a company report on 753 households (file `families.wf1`) in which a model was estimated relating expenditure on car purchase ![image](img/image647.png) to household income in the last year ![image](img/image203.png), the number of children under 18 ![image](img/image019.png) and the age of the head of household ![image](img/image707.png). The following behavioural equation was specified:
 
 ![image](img/image266.png)
+
+
 
 This involves estimating the above model bearing in mind that there may be individuals surveyed who have not purchased a vehicle in that period, in which case they have been assigned a zero expenditure. The task is to find the marginal effects of the explanatory variables on the explained variable and compare them with the OLS estimates of the model coefficients and calculate the income elasticity of demand at the midpoint.
 
@@ -2462,10 +2325,6 @@ Then the marginal effect of variable `Xk` with respect to the explained variable
 
 ![Imagen de la pantalla de un celular con letras Descripción generada automáticamente con confianza media](img/image507.png) We have:
 
-
-
-
-
 ![Diagrama 自动生成的描述](img/image606.png)
 
 对变量 ![image](img/image573.png) 对工资的边际效应将按如下方式计算：
@@ -2478,7 +2337,7 @@ Then the marginal effect of variable `Xk` with respect to the explained variable
 
 与前一种情况一样，这是一个具有附带截断的 Tobit 模型，因为劳动力市场参与取决于劳动力供给。
 
-#### 第一阶段
+### 第一阶段
 
 在第一阶段，我们估计 `Inlf` 对常数项和所有解释变量的 Probit 模型。模型为：
 
@@ -2496,11 +2355,13 @@ Then the marginal effect of variable `Xk` with respect to the explained variable
 
 图 4-46    图 4-47
 
-#### 第二阶段
+### 第二阶段
 
 在第二阶段，我们通过 OLS 估计工资方程，将广义 Probit 残差作为额外的回归变量。待估计的模型为：
 
 ![image](img/image166.png)
+
+
 
 为此，选择 `Quick→ Estimate Equation`，在 Specification 选项卡的 Equation Specification 字段中输入拟合模型的方程，在 Method 字段中选择 `LS-Two stage Least Squares (NLS and ARMA)` 以进行最小二乘拟合（图 4-48），然后单击 OK。结果显示在图 4-49 中。
 
@@ -2510,7 +2371,7 @@ Then the marginal effect of variable `Xk` with respect to the explained variable
 
 我们观察到估计系数的显著性非常好，无论是单独还是联合，信息准则的值良好，且 Durbin Watson 统计量非常接近 2，表明不会存在序列自相关问题。
 
-#### Exercise 4-1
+### Exercise 4-1
 
 在房地产市场的一项研究中，我们拥有家庭收入水平的信息（`INCOME`）、家庭子女数量（`CHILDREN`）、一个二元变量（`SUB`），如果房屋为补贴则取值为 1，否则为 0，以及离散变量 `HOUSE`，指可供买家购买的房屋的平方米数，其值取决于面积如下：
 
@@ -2538,13 +2399,9 @@ Then the marginal effect of variable `Xk` with respect to the explained variable
 
 信息准则值最低且似然函数值最高的方法是 Probit 模型。因此，最佳拟合由有序多项 Probit 模型提供。
 
-#### Exercise 4-2
+### Exercise 4-2
 
 在西班牙家庭电视拥有情况的一项研究中，对 940 个家庭进行了调查，询问家庭中的电视数量（`TV`）、年收入（以百万货币单位计，`FI`）以及家庭户主的教育水平（`NI`）。变量 `TV` 可以取 1、2 或 3，取决于家庭拥有 1 台、2 台和 3 台或更多电视机。家庭户主的教育水平已通过四个等级编码（Básica、Bachillerato superior、Universitaria media 和 Universitaria superior），其整数值分别为 1 至 4。利用包含在文件 `7-8.wf1` 中的指定数据，我们被要求拟合一个 logit 模型，用来解释家庭拥有给定数量电视机的概率如何取决于上述定义的其余变量。
-
-
-
-
 
 对于户主受教育程度为基础水平（`NI=1`）且年收入为三百万货币单位（`IF=3`）的家庭，求其仅拥有一台电视机的概率。还计算该家庭拥有 2 台电视机的概率。此外，计算该家庭拥有三台或以上电视机的概率。
 
@@ -2582,7 +2439,7 @@ Then the marginal effect of variable `Xk` with respect to the explained variable
 
 ![image](img/image074.png)
 
-#### 练习 4-3
+### 练习 4-3
 
 文件 `4-3.wf1` 包含 1445 名囚犯的数据，关于囚犯获释后被重新逮捕前的月数（`durat`）。认为 `log(durat)` 取决于囚犯是否参与了监狱就业项目（`workprg`）、之前的定罪次数（`priors`）、在监狱中服刑的月数（`tserved`）、囚犯是否使用酒精（`alcohol`）、囚犯是否使用毒品（`drugs`）、所犯的罪行是否严重（`felon`）、囚犯是否为黑人（`black`）、囚犯是否已婚（`married`）、囚犯的教育水平（`educ`）和囚犯的年龄（`age`）。还已知在 1445 名囚犯中，有 893 人在被跟踪期间未被逮捕。我们还拥有一个指示每个观测值是否被删失的虚拟变量（`cens`）。
 
@@ -2612,17 +2469,13 @@ Then the marginal effect of variable `Xk` with respect to the explained variable
 
 ![image](img/scene_break.png)
 
-#### 练习 4-4
+### 练习 4-4
 
 这是研究两种止痛药对头痛的效果。患者被分为两组，使每组接受不同类型的止痛药（`TYPE`），并记录每位患者在服用止痛药后头痛缓解所需的时间（`MINUT`）。由于在观察期结束时仍可能有患者头痛，这是一种右删失数据的情况。删失变量（`CENS`）对于删失数据为 1，对于未删失数据为零。数据收集在文件 `4-4.wf1` 中。
 
 拟合适当的模型来解释头痛缓解时间作为患者组函数的模型，以便比较两种止痛药。假设正态、逻辑和极值分布拟合模型。比较三个模型。
 
 由于在观察期结束时仍可能有患者头痛，这是一种右删失 Tobit 模型的情况，删失由充当删失指示变量的变量 `CENS` 定义。
-
-
-
-
 
 我们将通过最大似然法估计右删失的 Tobit 模型。为此，选择 `Quick→ Estimate Equation`，在 `Specification` 选项卡的 `Equation Specification` 字段中写出拟合模型的方程，在 `Method` 字段中选择 `CENSORED-Censored or truncated data (Tobit)`，将删失变量放入 `Right` 字段并勾选 `Zero/One indicator of censoring`，因为 Tobit 模型在右侧删失，删失指示变量为 `CENS` 变量，选择 `Normal` 因为我们考虑的是正态分布的模型（图 4-60）并点击 `Accept`。图 4-61 中的结果得到，估计参数具有良好的个体显著性。信息准则的值是可以接受的并且彼此一致。
 
@@ -2653,7 +2506,9 @@ Then the marginal effect of variable `Xk` with respect to the explained variable
 # 第 5 章
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
+
 | --- | --- | --- |
+
 ![image](img/chapter_title_above.png)
 
 ## 面板数据的广义线性模型。非线性面板模型
@@ -2661,7 +2516,9 @@ Then the marginal effect of variable `Xk` with respect to the explained variable
 ![image](img/chapter_title_below.png)
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
+
 | --- | --- | --- |
+
 ![image](img/chapter_title_above.png)
 
 ### 5.1 面板数据的介绍：数据结构
@@ -2675,7 +2532,9 @@ Then the marginal effect of variable `Xk` with respect to the explained variable
 在下面的段落中，我们更深入地探讨嵌入面板数据集两个维度的数据结构。一方面是横截面或截面数据，另一方面是时间序列数据。
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
+
 | --- | --- | --- |
+
 ![image](img/chapter_title_above.png)
 
 #### 5.1.1 横截面数据
@@ -2686,21 +2545,21 @@ Then the marginal effect of variable `Xk` with respect to the explained variable
 
 在我们考虑的个人所得税面板中，我们考虑纳税申报模型中包含的所有变量，并将它们针对某一年度进行分析。考虑到不同的年份，我们将逐年拥有所有横截面。
 
+
+
 横截面数据在经济学和其他社会科学中被广泛使用。在经济学中，横截面数据分析与应用微观经济学的不同分支密切相关，例如税收分析、劳动经济学、州和地方公共财政、产业组织、城市经济学、人口统计学和健康经济学。在某一时间点对个人、家庭、企业和城市的数据对于检验微观经济假设和评估经济政策和财政政策非常重要。
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
+
 | --- | --- | --- |
+
 ![image](img/chapter_title_above.png)
 
-#### 5.1.2 时间序列数据
+### 5.1.2 时间序列数据
 
 ![image](img/chapter_title_below.png)
 
 时间序列数据集由随时间对一个或多个变量的观测值组成。时间序列数据的典型例子是国内生产总值、货币供应量、消费者价格指数、年度凶杀率或汽车销售数据。由于过去的事件可能对未来的事件产生影响，并且滞后效应在社会科学中对个体的行为很常见，因此时间是时间序列集合中的一个重要参数。与横截面数据的顺序相反，时间序列中观测值的 chronological 排列确实传达了潜在的重要信息。
-
-
-
-
 
 时间序列数据倾向于更多地用于宏观经济分析，而截面数据则主要用于宏观经济分析。时间序列通常比截面数据更难分析，因为我们几乎永远不能假设经济观测在时间上是独立的。
 
@@ -2714,7 +2573,7 @@ Then the marginal effect of variable `Xk` with respect to the explained variable
 
 ![image](img/chapter_title_above.png)
 
-#### 5.1.3 数据结构。截面组合
+### 5.1.3 数据结构。截面组合
 
 ![image](img/chapter_title_below.png)
 
@@ -2730,7 +2589,7 @@ Then the marginal effect of variable `Xk` with respect to the explained variable
 
 ![image](img/chapter_title_above.png)
 
-#### 5.1.4 数据结构。面板或纵向数据
+### 5.1.4 数据结构。面板或纵向数据
 
 ![image](img/chapter_title_below.png)
 
@@ -2750,15 +2609,11 @@ Then the marginal effect of variable `Xk` with respect to the explained variable
 
 ![image](img/chapter_title_above.png)
 
-### 5.2 纯面板和扩展面板
+## 5.2 纯面板和扩展面板
 
 ![image](img/chapter_title_below.png)
 
 纯面板在整个时间段内跟踪同一批个人。随着时间的推移，这会导致样本代表性丧失的问题，因为可能有个人因不同原因退出样本。这样，面板会随时间磨损（流失），并可能变得无效。
-
-
-
-
 
 这个问题通常通过决定使用“扩展”面板而不是更常见的纯面板的想法来缓解。做出这一决定的原因是，后者由于受到随时间推移的流入和流出流动的影响，不能构成其来源总体的忠实横截面代表，在个人所得税面板或任何其他税的情况下，这种流动将分别表现为新纳税人以及每年不再成为纳税人的那些人。从统计上讲，这意味着此类纯面板每年都不会构成当年纳税人的随机样本。这将在至少两个方面产生有害影响。一方面，横截面面板研究需要每年开发不同的统计估计量，基于样本重新缩放技术，即为面板中的每个个体分配特定的年度权重（提升因子）。显然，这些估计量的复杂程度自然会随着纯面板与所考虑年份的总受访者数量之间的相似程度降低而增加。因此，一年与另一年的估计量之间的差异将取决于前面提到的相似程度（面板/纳税人总体）。
 
@@ -2772,7 +2627,7 @@ Then the marginal effect of variable `Xk` with respect to the explained variable
 
 ![image](img/chapter_title_above.png)
 
-### 5.3 年度样本、横截面组合（合并数据）与面板的比较
+## 5.3 年度样本、横截面组合（合并数据）与面板的比较
 
 ![image](img/chapter_title_below.png)
 
@@ -2790,10 +2645,6 @@ Then the marginal effect of variable `Xk` with respect to the explained variable
 
 2. 当我们比较同质单位（个人或家庭或纳税单位）时，改革的影响可以更可靠地衡量。例如，当我们分析改革对最贫困个人（第一收入十分位）净收入的影响时，我们比较的是同一组个人。因此，处理不同时间点的同一批个体的观察结果至关重要。
 
-
-
-
-
 但我们也不应低估年度样本。单独的年度样本可能没有多大效力，但当一系列连续的年度样本积累起来时，分析的丰富性呈指数级增长，甚至可以与面板分析得到的结果进行对比。切勿忘记，面板计量经济学技术并不容易实施，而使用合并数据则没有那么多困难。显而易见的是，在个人所得税的情况下，由于有行政记录可用，采用地理标准和某种其他附加标准（如收入区间或收入来源）进行分层抽样很容易进行。这意味着同时拥有连续的年度样本和一个面板是非常合适的。
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
@@ -2802,7 +2653,7 @@ Then the marginal effect of variable `Xk` with respect to the explained variable
 
 ![image](img/chapter_title_above.png)
 
-### 5.4 面板数据的计量经济学模型
+## 5.4 面板数据的计量经济学模型
 
 ![image](img/chapter_title_below.png)
 
@@ -2832,7 +2683,7 @@ Then the marginal effect of variable `Xk` with respect to the explained variable
 
 ![image](img/chapter_title_above.png)
 
-### 5.5 具有常数系数的面板模型
+## 5.5 具有常数系数的面板模型
 
 ![image](img/chapter_title_below.png)
 
@@ -2856,7 +2707,7 @@ Then the marginal effect of variable `Xk` with respect to the explained variable
 
 ![image](img/chapter_title_above.png)
 
-### 5.6 固定效应面板模型
+## 5.6 固定效应面板模型
 
 ![image](img/chapter_title_below.png)
 
@@ -2886,6 +2737,8 @@ Then the marginal effect of variable `Xk` with respect to the explained variable
 
 | --- | --- | --- |
 
+
+
 ![image](img/chapter_title_above.png)
 
 ### 5.7 随机效应面板模型
@@ -2909,10 +2762,6 @@ Then the marginal effect of variable `Xk` with respect to the explained variable
 总误差方差应为
 
 ![image](img/image197.png)
-
-
-
-
 
 带随机效应的面板数据模型使用广义最小二乘 `GCM` 方法进行估计。
 
@@ -3060,10 +2909,6 @@ xtreg dependent_independent variable independent variables, mle options
 xtreg dependent_independent variable independent variables, pa options
 ```
 
-
-
-
-
 最重要选项是 `i(variable)` 用于指示面板 ID 变量，`noconstant` 用于从模型中移除常数项，`offset(variable)` 用于将变量以系数限制为 1 的方式纳入模型，`vce(type)` 用于指示 bootstrap 或 jackknife 估计的类型以及 `level(n)` 用于置信水平 n，`corr(correlations)` 用于给定的组相关结构，`forcé` 用于在观测值在时间上不等间距时获得估计值，`mnp` 用于作为 N-P 均值的除数，`rgf` 将估计的稳健方差乘以 (N-1)/(N-P)，`scale(x2)` 使用 Pearson 卡方统计量作为尺度参数，`scale(dev)` 使用自由度之间的方差作为尺度参数，`scale(phi)` 不重新缩放方差，`scale(n)` 使用 n 作为尺度参数。
 
 首先，使用回归估计量 between 举例说明。
@@ -3198,6 +3043,8 @@ STATA 具有 `xtabond` 语句，允许估计类型为以下面板数据的动态
 
 6Chapter 6
 
+
+
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
 
 | --- | --- | --- |
@@ -3218,8 +3065,6 @@ STATA 具有 `xtabond` 语句，允许估计类型为以下面板数据的动态
 
 ![image](img/chapter_title_below.png)
 
-##
-
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
 
 | --- | --- | --- |
@@ -3229,10 +3074,6 @@ STATA 具有 `xtabond` 语句，允许估计类型为以下面板数据的动态
 ### 6.1.1 定义
 
 ![image](img/chapter_title_below.png)
-
-
-
-
 
 We can define a neural network as a set of highly interconnected information processing elements, which are able to learn from the information fed to them. The main feature of this new neural network technology is that it can be applied to a large number of problems ranging from real complex problems to sophisticated theoretical models such as image recognition, speech recognition, signal analysis and filtering, classification, discrimination, financial analysis, dynamic prediction, etc.
 
@@ -3274,15 +3115,13 @@ Whether an input has an excitatory or inhibitory effect depends on whether the s
 
 The process of transforming inputs into outputs in a forward-fed artificial neural network with `r` inputs, a single hidden layer composed of `q` processing elements, and an output unit can be summarised in the following formulation of the network output function:
 
+
+
 ![image](img/image333.png)where, ![image](img/image524.png)is the output of the network, the vector![image](img/image005.png)represents the inputs of the network the 1 corresponds to the bias of a traditional model, ![image](img/image119.png)are the weights of the neurons of the input layer to those of the intermediate or hidden layer, ![image](img/image388.png), represents the connection strength of the hidden units to the output units `j=0` indexes the bias unit, `q` is the number of intermediate units, i.e. the number of nodes in the hidden layer, ![image](img/image475.png)is the activation function of the output unit and ![image](img/image447.png)corresponds to the activation function of the intermediate neurons. `W` is a vector that includes all the weights of the network, i.e. ![image](img/image492.png). Figure 6-3 represents the function![image](img/image215.png).
 
 ![image](img/image288.png)
 
 Figure 6-3
-
-
-
-
 
 Historically, threshold functions were used as activation functions, the effect of which is that the units are activated abruptly, i.e. either they are not activated, or they are activated suddenly. The response can only be black or white, so these functions are suitable for classification and recognition tasks. Over time, activation functions were introduced that allow neurons to gradually activate as the activity level of their inputs increases, rather than their state being only on-off. Specifically, the function proposed is the sigmoidal or logistic function ![image](img/image079.png), which produces a smoothed sigmoidal response.
 
@@ -3324,10 +3163,6 @@ After designing an artificial neural network, what we want to achieve with it is
 
 Three basic types of learning are generally considered to give rise to different types of neural networks. When the trainer provides the network with the desired output, the learning is said to be supervised. Otherwise, it is unsupervised learning. Finally, an intermediate type of learning is reinforcement or hybrid learning, in which the trainer only provides the network with an indication of whether the response to a given input is good or bad.
 
-
-
-
-
 ### 无监督学习神经网络
 
 无监督学习神经网络是指无需外部监督者或训练者提供网络期望输出即可进行训练的网络，因为它们能够通过适应环境以最佳方式内部组织其参数。网络在呈现输入后，能够自行确定输入的特征、相关性、规律性或类别，并提供编码后的输出。因此，我们可以说这些网络具有自组织特性。
@@ -3347,6 +3182,8 @@ Three basic types of learning are generally considered to give rise to different
 具有有监督学习的神经网络，通常与多层感知器（`Multilayer Perceptron MLP`）和径向基函数 `RBF` 相关联，具有输出模式或因变量，使其能够对比和校正数据。
 
 具有输出模式的神经网络是一种用于分类和预测的技术，可用于细分市场、定位产品、进行需求预测、评估信用档案或分析股票交易所的股票价值，以及大量其他应用。
+
+
 
 多层感知器神经网络模型基于反向传播学习，通常使用 `back-propagation algorithm`、`conjugate gradient descent algorithm` 和 `Levenberg-Marquardt algorithm`。
 
@@ -3374,7 +3211,7 @@ Three basic types of learning are generally considered to give rise to different
 
 学习完成后，必须对网络进行测试。测试阶段包括引入新的输入模式并检查生成系统的效率。如果不可接受，则使用新的示例模式重复训练阶段，甚至可能需要修改网络结构。
 
-### 6.4 神经网络的工作原理
+## 6.4 神经网络的工作原理
 
 为了创建和应用神经网络解决特定问题，我们必须区分以下步骤：
 
@@ -3391,10 +3228,6 @@ Three basic types of learning are generally considered to give rise to different
 作为说明性示例，我们考虑一家银行希望建立一个用于发放购车个人贷款的模型。信息集由 5,000 名先前客户的文件组成，其中记录了每个客户的以下变量：`sex`、`marital status`、`salary`、`assets`、`current account`、等，以及客户是否已定期付款。
 
 因此，该模型将具有一个输入层，其节点数与文件中变量数相同，一个或多个中间层，以及一个输出层，其节点数为一个，其中期望输出为零或一，具体取决于客户是否已定期付款。
-
-
-
-
 
 我们将把文件分成两部分，一部分构成学习集，另一部分构成验证集。网络以学习集作为输入，网络将被训练，我们将用验证集来验证模型，当新客户到来时，我们将他的信息呈现给网络，如果网络训练得当，它将把客户分类到按时付款的类别或其补集类别中。
 
@@ -3478,10 +3311,6 @@ Three basic types of learning are generally considered to give rise to different
 
 ![Texto, Carta Descripción generada automáticamente](img/image167.png)
 
-
-
-
-
 感知器和高斯最大似然分类器都是线性分类器。感知器在两类线性可分的前提假设下工作，而高斯分类器则不做此假设。感知器是一种非参数方法，因为它不对每个类别的分布形状做出任何假设。在此意义上它是一种更稳健的方法。高斯分类器的正态性假设限制了其应用范围。感知器算法具有自适应性且实现简单；存储需求仅限于突触权重和阈值。另一方面，高斯分类器的设计是固定的，虽然可以使其自适应，但这需要显著增加存储量，且计算更为复杂。高斯分类器最小化了平均误分类概率。感知器相对于哪种准则或期望度量是最优的？Shynk（1990）已从以下准则推导出感知器算法：最小化误差与突触电位和阈值之差的乘积的期望值，即 ![image](img/image676.png)其中 `d(k)` 是第 `kth` 次迭代时的期望输出。
 
 上述目标函数的瞬时估计量为：
@@ -3562,10 +3391,6 @@ Three basic types of learning are generally considered to give rise to different
 
 我们将要考虑的学习规则由 Hebb 提出（Hebbian 学习）。Hebb 假说指出，突触权重变化（突触效能变化）与突触前（输入）信号 `x` 和突触后信号 `y` 的乘积成正比。也就是说，![image](img/image179.png)或，以向量形式![image](img/image012.png)学习率。
 
-
-
-
-
 假设现在输入向量 `x` 是一个具有密度函数 `f(x)` 的随机向量。在每个时刻 `k`，`k=1, 2,...` 我们向网络呈现一个输入向量 `x`，它是具有密度函数 `f(x)` 的随机向量的一个取值，并根据上面提到的赫布规则更新突触权重。因此，我们可以认为![image](img/image191.png)是一个随机向量，其期望值为：
 
 ![image](img/image221.png)
@@ -3574,9 +3399,11 @@ Three basic types of learning are generally considered to give rise to different
 
 ![image](img/image143.png)
 
-此外，我们可以不失一般性地假设随机向量 `x` 在所有分量上均值为零，因此矩阵![image](img/image124.png)是协方差矩阵。
 
-网络如果![image](img/image644.png)就可能达到平衡（稳定）。这导致 `C ω = 0`，因此 `ω^* = 0` 是唯一的平衡状态。矩阵 `C`（实对称）是半正定的，因此其特征值 ![image](img/image224.png)为正或零，且其有正交于^i ， i \= 1, 2,...,n 的特征向量，满足：
+
+此外，我们可以不失一般性地假设随机向量 `x` 在所有分量上均值为零，因此矩阵 ![image](img/image124.png) 是协方差矩阵。
+
+网络如果 ![image](img/image644.png) 就可能达到平衡（稳定）。这导致 `C ω = 0`，因此 `ω^* = 0` 是唯一的平衡状态。矩阵 `C`（实对称）是半正定的，因此其特征值 ![image](img/image224.png) 为正或零，且其有正交于 ^i ， i \= 1, 2,...,n 的特征向量，满足：
 
 ![image](img/image132.png)
 
@@ -3588,7 +3415,7 @@ Three basic types of learning are generally considered to give rise to different
 
 ![image](img/image531.png)
 
-Oja 规则在平均意义上收敛到一个状态 `ω^*`，该状态在条件![image](img/image262.png]下使 `y²` 的均值 `E(y²)` 最大化。因此，`ω^*` 是协方差矩阵的主特征向量（对应于最大特征值的那个）。
+Oja 规则在平均意义上收敛到一个状态 `ω^*`，该状态在条件 ![image](img/image262.png] 下使 `y²` 的均值 `E(y²)` 最大化。因此，`ω^*` 是协方差矩阵的主特征向量（对应于最大特征值的那个）。
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
 
@@ -3602,9 +3429,9 @@ Oja 规则在平均意义上收敛到一个状态 `ω^*`，该状态在条件![i
 
 聚类技术关注将给定的数据集划分为若干组或类别。它们在医学、生物学、动物学以及尤其是信息技术等许多领域都有应用。已开发的大多数技术可分为三大类：层次、代价或失真最小化和图论。然而，在处理大型数据集时，出于计算复杂度的原因，只有代价最小化技术才适用。
 
-给定一组数据![image](img/image543.png)对应于随机向量 `X` 的 `n` 个取值，其分布函数 `Fx` 未知，但已知是 `m` 个分布函数的混合，问题是根据某个距离函数或失真度量将数据形成 `m` 个组或类别，在我们这里将是平方欧几里得距离（平方欧几里得距离）。
+给定一组数据 ![image](img/image543.png) 对应于随机向量 `X` 的 `n` 个取值，其分布函数 `Fx` 未知，但已知是 `m` 个分布函数的混合，问题是根据某个距离函数或失真度量将数据形成 `m` 个组或类别，在我们这里将是平方欧几里得距离（平方欧几里得距离）。
 
-每个组将由其质心，即其均值向量表示。因此，目标是确定 `m` 个质心，![image](img/image101.png)，使得每个数据与其质心之间的失真最小，即最小化：
+每个组将由其质心，即其均值向量表示。因此，目标是确定 `m` 个质心， ![image](img/image101.png)，使得每个数据与其质心之间的失真最小，即最小化：
 
 ![image](img/image576.png)
 
@@ -3628,7 +3455,7 @@ Oja 规则在平均意义上收敛到一个状态 `ω^*`，该状态在条件![i
 
 这种新的学习范式由 Rumelhart 和 Zipser 于 1985 年提出，名称为竞争学习。网络由 `m` 个神经元或处理单元的一层组成，它们连接到输入信号或模式，这些连接具有相关的突触权重，将代表原型模式。每个神经元只有两种可能的输出值：0（未激活）或 1（激活），并且对于每个输入模式只有一个神经元被激活，即接收到更高突触电位的那个（获胜神经元）。
 
-如果神经元 `i` 接收到输入信号 ![image](img/image528.png)并且具有突触权重 `ωi = (ωi1 , ωi2 ,..., ωin)'`，其突触电位由表达式给出：
+如果神经元 `i` 接收到输入信号 ![image](img/image528.png) 并且具有突触权重 `ωi = (ωi1 , ωi2 ,..., ωin)'`，其突触电位由表达式给出：
 
 ![Texto Descripción generada automáticamente](img/image168.png)
 
@@ -3647,10 +3474,6 @@ Oja 规则在平均意义上收敛到一个状态 `ω^*`，该状态在条件![i
 ![image](img/image461.png)
 
 其中 `ηr` 是神经元 `r` 的学习率。
-
-
-
-
 
 The other neurons do not change their synaptic weights. This is the standard rule of competitive learning. Note that it is a linear combination between the input vector and the vector of synaptic weights, and the smaller the value of the learning rate, the smaller the modification of the synaptic weights. The learning rate of each neuron must be a decreasing function with respect to the stage number, so that after a suitable number of stages the network stabilises and stops learning. During the learning process, an input pattern is introduced at each iteration and the synaptic weights are updated, so that the learning process ends after the data set has been introduced several times.
 
@@ -3694,6 +3517,8 @@ The IBM SPSS Multi-Layer Perceptron (`MLP`) procedure generates a predictive mod
 A bank loan officer wants to be able to identify characteristics that are indicative of individuals who may cause credit delinquency and use these characteristics to identify positive and negative credit risks. Using a sample of past customers, he can train a multilayer perceptron, validate the analysis using a reserved sample of past customers, and then use the network to classify potential customers according to the credit risks they present. A hospital system is interested in tracking the costs and lengths of inpatient stays for myocardial infarction treatment. Obtaining accurate estimates of these measures allows the administration to properly manage the available beds as patients are treated. Using the treatment records of a sample of patients treated for myocardial infarction, the administrator can train a network that predicts both cost and length of stay.
 
 In our case we consider an example similar to the first one presented here. A bank decision-maker has to identify to which customers he can grant a loan with sufficient guarantee of repayment. He has a database with a history of customers in which he knows whether or not the customers have repaid the loan (`CREDIT_V`), the professional category of the customers (`CAT_PROF`), their monthly salary (`PAY_MONTH`), their age (`AGE`) and whether or not they have credit cards (`AMEX`). With this information, it must build a predictive model that predicts the category of the dependent variable (does or does not repay the credit in the variable `CREDIT_V`) in which it must classify any new customer who applies for credit, knowing the values of its independent variables (`CAT_PROF`, `PAYMENT_MONTH` and `AMEX`).
+
+
 
 We will use a multilayer Perceptron neural network. To do this, after loading the `credits.sav` file containing the information on the variables mentioned above into memory, we choose from the SPSS menus `Analyse → Neural Networks → Multilayer Perceptron` (Figure 6-4).
 
@@ -3741,36 +3566,40 @@ Clicking OK produces the output. A summary of cases and network information is s
 
 Figure 6-13
 
-
-
-
-
 图 6-14 显示了网络结构。图 6-15 显示了拟合网络模型及其参数估计的汇总。图 6-16 显示了混淆矩阵，该矩阵表明预测已知数据的准确率超过 80%。图 6-17 显示了 ROC 曲线，该曲线足够接近上三角，表明拟合良好，并得到曲线下面积为 87.2% 的证实。图 6-18 和图 6-19 显示了增益曲线和提升曲线非常接近理论值。图 6-20 显示了预测变量在排名中的重要性，注意到最具影响力的变量是职业类别和薪资。
 
 数据集（图 6-21）显示其最后三列是与因变量类别相关的变量，每个观测值已被分类到该类别，以及每个观测值属于因变量每个类别的概率。要使用神经网络预测未来观测值，只需将其实测变量的值作为数据集中额外的一行纳入即可。因变量可以赋予任意值。再次运行该过程，即可获得新观测值的成员类别预测。
 
 ![image](img/image611.png)
+
 图 6-14
 
 ![image](img/image655.png)
+
 图 6-15
 
 ![image](img/image202.png)
+
 图 6-16
 
 ![image](img/image558.png)
+
 图 6-17
 
 ![image](img/image273.png)
+
 图 6-18
 
 ![image](img/image592.png)
+
 图 6-19
 
 ![image](img/image093.png)
+
 图 6-20
 
 ![image](img/image538.png)
+
 图 6-21
 
 #### 网络输出规范
@@ -3778,13 +3607,17 @@ Figure 6-13
 下面将扩展网络输出各部分的规范。
 
 ##### 网络结构
+
 显示有关神经网络的汇总信息。
 
 - **描述**。显示有关神经网络的信息，包括因变量、输入和输出单元的数量、隐藏单元和层的数量以及激活函数。
+
 - **图表**。以可编辑图形的形式显示网络图。请注意，随着协变量和因子水平数量的增加，图表变得更难解释。
+
 - **突触权重**。抽样系数估计值，显示给定层单元与下一层单元之间的关系。突触权重基于训练样本，即使活动数据集被划分为训练、测试和保留数据。注意，突触权重数量可能相当高，并且这些权重通常不用于解释网络结果。
 
 ##### 网络性能
+
 显示用于确定模型是否“良好”的结果。注意：本组中的图表基于训练和测试样本合并，或如果没有测试样本则仅基于训练样本。
 
 - **模型汇总**。按分区和总体显示神经网络结果的汇总，包括误差、相对误差或预测错误百分比、用于停止训练的停止规则以及训练时间。
@@ -3806,13 +3639,17 @@ Figure 6-13
 - **残差与预测值图**。为每个比例尺因变量显示残差与预测值的图。残差与预测值之间不应有可见模式。该图仅针对比例尺因变量生成。
 
 ##### 案例处理汇总
+
 显示案例处理汇总表，该表汇总了分析中包含和排除的案例数量，按总数以及训练、测试和保留样本划分。
 
 ##### 自变量重要性分析
+
 执行敏感性分析，计算每个预测变量在确定神经网络中的重要性。分析基于合并的训练和测试样本，或如果没有测试样本则仅基于训练样本。这会创建显示每个预测变量的重要性及其标准化重要性的表格和图表。请注意，敏感性分析涉及非常广泛的计算过程，如果预测变量或案例数量很大，可能需要很长时间。
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
+
 | --- | --- | --- |
+
 ![image](img/chapter_title_above.png)
 
 ### 6.10.2 径向基函数（RBF）
@@ -3823,59 +3660,70 @@ IBM SPSS 径向基函数（RBF）过程基于预测变量的值为一个或多�
 
 我们考虑一个银行决策者的例子，他必须确定可以向哪些客户发放贷款并有足够的还款保证。他有一个客户历史数据库，其中他知道客户是否已偿还贷款（`CREDIT_V`）、客户的职业类别（`CAT_PROF`）、其月薪（`PAY_MONTH`）、其年龄（`AGE`）以及是否拥有信用卡（`AMEX`）。利用这些信息，必须建立一个预测模型，预测因变量的类别（在变量 `CREDIT_V` 中是否偿还信用），以便对申请信用的任何新客户进行分类，已知其自变量的值（`CAT_PROF`、`PAY_MONTH`、`AGE` 和 `AMEX`）。
 
-我们将使用径向基函数类型的神经网络。为此，在将包含上述变量信息的 `credits.sav` 文件加载到内存后，我们从 SPSS 菜单中选择 分析 → 神经网络 → 径向基函数（图 6-22）。
-
-
-
-
+我们将使用径向基函数类型的神经网络。为此，在将包含上述变量信息的 `credits.sav` 文件加载到内存后，我们从 SPSS 菜单中选择 `分析 → 神经网络 → 径向基函数`（图 6-22）。
 
 径向基函数屏幕被打开，在其 `Variables` 选项卡（图 6-23）中我们定义模型的因变量、分类自变量（`Factors`）和度量自变量（`Covariates`）。在 `Partitions` 选项卡（图 6-24）中我们定义文件中将用于网络训练、测试和保留的案例百分比。在 `Architecture` 选项卡（图 6-25）中我们通过允许自动选择架构（推荐选项）或通过自定义网络的隐藏层数、单元数、激活函数、输出层的激活函数以及尺度相关变量的缩放来定义神经网络的架构。`Results` 选项卡（图 6-26）定义了在神经网络模型拟合中要获得的结果，既包括网络的结构，也包括其性能以及案例处理摘要和自变量的重要性。在 `Save` 选项卡（图 6-27）中我们定义要在数据文件中保存的变量（因变量的预测类别及其概率）。在 `Export` 选项卡（图 6-28）中我们可以决定将突触权重导出到 XML 文件。在 `Options` 选项卡（图 6-29）中我们可以定义缺失值的处理方式、停止规则、网络的训练时间、用于计算预测误差的数据、要存储在内存中的案例数量以及其他用于调整网络的值。
 
 点击 `OK` 会生成输出。图 6-30 显示了案例摘要和有关网络的信息。图 6-31 显示了网络结构。图 6-32 显示了拟合到混淆矩阵的网络模型摘要，表明预测已知数据的准确率超过 90%。图 6-33 显示的 ROC 曲线足够接近上三角，表明拟合良好，并得到曲线下面积为 94.5% 的证实。图 6-34 和 6-35 显示的增益和提升曲线非常接近理论值。图 6-36 显示了预测变量在排名中的重要性，注意到最具影响力的变量是年龄、薪资和职业类别。
 
 ![image](img/image029.png)
+
 图 6-22
 
 ![image](img/image403.png)
+
 图 6-23
 
 ![image](img/image257.png)
+
 图 6-24
 
 ![image](img/image614.png)
+
 图 6-25
 
 ![image](img/image588.png)
+
 图 6-26
 
 ![image](img/image317.png)
+
 图 6-27
 
 ![image](img/image549.png)
+
 图 6-28
 
 ![image](img/image153.png)
+
 图 6-29
 
 ![image](img/image171.png)
+
 图 6-30
 
 ![image](img/image126.png)
+
 图 6-31
 
 ![image](img/image535.png)
+
 图 6-32
 
 ![image](img/image146.png)
+
 图 6-33
 
 ![image](img/image043.png)
+
 图 6-34
 
 ![image](img/image520.png)
+
 图 6-35
 
 ![image](img/image295.png)
+
 图 6-36
 
 如果显示数据集（图 6-37），可以看到其最后三列是与每个观测值被分类到的因变量类别相关的变量，以及每个观测值属于因变量每个类别的概率。要用神经网络预测未来观测值，只需将其实测自变量的值作为数据集中额外的一行纳入即可。因变量可以赋予任意值。再次运行过程，即可获得新观测值的成员类别预测。
@@ -3883,20 +3731,29 @@ IBM SPSS 径向基函数（RBF）过程基于预测变量的值为一个或多�
 将问题拟合与多层感知器和径向基函数神经网络进行比较，我们看到后者更准确，因为它具有更好的 COR 曲线、命中率更高的混淆矩阵以及个体属于因变量类别的更高概率。因此，径向基函数神经网络比多层感知器神经网络预测得更准确。然而，为每个个体预测的因变量类别对于几乎所有个体来说都是相同的。
 
 ![image](img/image237.png)
+
 图 6-37
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
+
 | --- | --- | --- |
+
 ![image](img/chapter_title_above.png)
+
 ## 6.11 通过 R 进行神经网络
+
 ![image](img/chapter_title_below.png)
 
 R 库 `neuralnet` 和 `nnet` 具有适用于在 R 中使用神经网络的函数。
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
+
 | --- | --- | --- |
+
 ![image](img/chapter_title_above.png)
+
 ### 6.11.1 neuralnet 库
+
 ![image](img/chapter_title_below.png)
 
 `neuralnet` 库的 `neuralnet` 命令具有以下简化语法：
@@ -3912,6 +3769,7 @@ neuralnet(formula, data=dataset, hidden = c(m,n),...)
 我们首先加载文件，分离其变量并获取它们的基本统计信息。
 
 ![Imagen que contiene Interfaz de usuario gráfica Descripción generada automáticamente](img/image185.png)
+
 ![Una captura de pantalla de un celular Descripción generada automáticamente con confianza media](img/image122.png)
 
 接下来，我们安装并加载 `neuralnet` 库。
@@ -3921,13 +3779,19 @@ neuralnet(formula, data=dataset, hidden = c(m,n),...)
 现在使用 `neuralnet` 函数创建具有两个隐藏层分别包含 2 和 3 个节点的网络模型并表示它（图 6-38 显示了估计的突触权重）。
 
 ![image](img/image169.png)
+
 ![Gráfico, Gráfico radial Descripción generada automáticamente](img/image208.png)
+
 图 6-38
 
 然后我们计算预测概率并绘制密度函数（图 6-39）。
 
+
+
 ![Texto Descripción generada automáticamente](img/image077.png)
+
 ![Gráfico, Diagrama Descripción generada automáticamente](img/image533.png)
+
 图 6-39
 
 我们得到一个双峰密度，表明对于信贷演变的低概率和高概率，客户密度都很高。对于中等概率，客户密度较低。
@@ -3947,19 +3811,19 @@ neuralnet(formula, data=dataset, hidden = c(m,n),...)
 现在让我们绘制 ROC 曲线（图 6-40）。
 
 ![image](img/image094.png)
+
 ![Gráfico Descripción generada automáticamente](img/image703.png)
+
 图 6-40
 
 由于 ROC 曲线下面积为 0.963（非常接近 1），因此得出神经网络模型非常好的结论。此外，它优于上一章的决策树模型，后者的 ROC 曲线下面积较低（0.877）。如果我们使用以下方法，我们将获得大量关于神经网络的数值信息：
 
-
-
-
-
 ![image](img/image394.png)
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
+
 | --- | --- | --- |
+
 ![image](img/chapter_title_above.png)
 
 ### 6.11.2 nnet bookshop
@@ -4005,7 +3869,9 @@ nnet(formula, data, weights, size=n ...,)
 我们看到 ROC 曲线下的面积也与 `nnet` 和 `neuralnet` 函数一致。两个网络的准确性相似。
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
+
 | --- | --- | --- |
+
 ![image](img/chapter_title_above.png)
 
 ## 6.12 R AND TIME SERIES USING NEURAL NETWORKS
@@ -4014,7 +3880,7 @@ nnet(formula, data, weights, size=n ...,)
 
 R 在 `forecast` 库中有 `nnetar` 命令，可以通过神经网络预测时间序列。
 
-让我们考虑 seasonal.sav 文件中从 1968 年 1 月开始到 1981 年 10 月结束的月度序列 `X`。目标是使用神经网络计算一年的预测。
+让我们考虑 `seasonal.sav` 文件中从 1968 年 1 月开始到 1981 年 10 月结束的月度序列 `X`。目标是使用神经网络计算一年的预测。
 
 我们首先读取序列并赋予其时间序列的结构。
 
@@ -4037,6 +3903,7 @@ R 在 `forecast` 库中有 `nnetar` 命令，可以通过神经网络预测时�
 ![image](img/image352.png)
 
 ### Exercise 6-1
+
 考虑公司月度销售序列，名称为 `sales`，来自文件 `test.sav`，从 1988 年 1 月开始到 1996 年 4 月结束。使用自动建模和神经网络建模计算一年的预测。比较结果。
 
 我们首先读取序列并赋予其时间序列的结构。
@@ -4047,9 +3914,10 @@ R 在 `forecast` 库中有 `nnetar` 命令，可以通过神经网络预测时�
 
 ![Texto, Carta Descripción generada automáticamente](img/image175.png)
 
-我们看到 ARIMA(1,1,1) 模型被识别为最优。R 已自动检测到销售序列的非平稳性。然后我们通过分析估计参数的个体显著性并进行残差分析来进行诊断。
+我们看到 `ARIMA(1,1,1)` 模型被识别为最优。R 已自动检测到销售序列的非平稳性。然后我们通过分析估计参数的个体显著性并进行残差分析来进行诊断。
 
 ![Texto Descripción generada automáticamente](img/image326.png)
+
 所有参数都是显著的，因为它们的 p 值非常小。
 
 我们现在执行残差诊断（图 6-44）。
@@ -4062,7 +3930,7 @@ R 在 `forecast` 库中有 `nnetar` 命令，可以通过神经网络预测时�
 
 图 6-44
 
-我们看到残差是随机的（Ljung-Box 统计量的 p 值 = 0.5846 大于 0.05）且正态（直方图很好地拟合高斯钟形）。接下来我们看到估计误差很小。
+我们看到残差是随机的（`Ljung-Box` 统计量的 p 值 = 0.5846 大于 0.05）且正态（直方图很好地拟合高斯钟形）。接下来我们看到估计误差很小。
 
 ![image](img/image177.png)
 
@@ -4110,5 +3978,4 @@ R 在 `forecast` 库中有 `nnetar` 命令，可以通过神经网络预测时�
 
 图 6-47
 
-预测增长过度且比自动模型的情况不那么合理。对于这个销售时间序列，很明显最优模型是由 `auto.arima` 命令提供的自动方法。我们保留 ARIMA(1,1,1) 模型及其预测。
-
+预测增长过度且比自动模型的情况不那么合理。对于这个销售时间序列，很明显最优模型是由 `auto.arima` 命令提供的自动方法。我们保留 `ARIMA(1,1,1)` 模型及其预测。

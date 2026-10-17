@@ -1,13 +1,10 @@
-# 2021 第6届国际智能计算与信号处理会议 (ICSP) (中国西安 2021.4.9-2021.4.11) 2021 第6届国际智能计算与信号处理会议
 
-
-
-
-
-
+# 2021 第6届国际智能计算与信号处理会议 (ICSP) (中国西安 2021.4.9-2021.4.11)
 
 郑凯东*
+
 西安科技职业大学计算机学院，中国西安，西安
+
 kdzzheng@xyxu.edu
 
 **摘要—** 本文描述了针对油气储层地球物理参数空间分布的数据驱动机器学习方法。利用多核学习来整合多尺度特征，从而有效地将储层先验知识与地震数据相结合。通过机器学习技术对地震数据中的属性进行聚类，可以提取地质特征。最后，利用预测值调整模型参数，并更新储层地质参数。利用实际油气现场数据对储层进行了重建。
@@ -104,11 +101,7 @@ $(\phi(x), y_1), (\phi(x), y_2), \dots, (\phi(x), y_j)$
 $k(x,z) = \exp(-\frac{||x-z||^2}{2\sigma^2})$
 ```
 
-
-
-
-
-### C. 实验流程的建立
+### E. 实验流程的建立
 
 对于提取出的地质特征，可以使用多核学习（multiple kernel learning）作为回归方法来预测这些特征。在完成核学习训练后，井测数据可以作为模型的指标值。模型在目标上的误差可用于优化多核学习过程中的参数。
 
@@ -140,7 +133,7 @@ $K(\tilde{x},\tilde{y}) = \mathbf{d} \cdot \mathbf{d} + e^{-\frac{(\tilde{x}-\ti
 
 在油气勘探中，河道位置和边缘区域是重要的地质特征 [2]。地震属性的边界可以突出地震数据中变化剧烈的局部区域，并确定该区域埋藏的主要沉积体的边界。Laplace 梯度算子用于检测地震属性的边缘。
 
-### D. 地物理参数的孔隙度预测
+### C. 地物理参数的孔隙度预测
 
 实验使用了多种组合特征来构建多核学习模型以预测孔隙度，包括使用不同输入方法的多核学习和单一支持向量回归核模型。模型的内部参数根据地震数据值和孔隙度值进行更新。
 
@@ -161,14 +154,23 @@ $K(\tilde{x},\tilde{y}) = \mathbf{d} \cdot \mathbf{d} + e^{-\frac{(\tilde{x}-\ti
 ## 参考文献
 
 - [1] Wang Hongsuao, Sun Feichi, Cai Yan, Ning Chen, Ding Ling. Multiple kernel learning method [J]. Acta Automatica, 2010, 36(6):3069.
-- [2] Wang Jian, Xia Zihui. 三维地震多点建模回归以减少跨井预测的不确定性 [J]. Acta Sinica, 2013, 31(8):878-888. 中文.
-- [3] Mou Shaolin, Zhang Shengping, Yuan Chuanan. 基于协同聚类的多核学习 [J]. 北京大学学, 2008, 32.
-- [4] Demaynov, V, Forest, L., Podoznuk, A., Kanaev, M. Geomodeling of fluvial system with semi-supervised machine [J]. Geosciences, 2018, 8:222.
-- [5] Demaynov, V., Christie, M., A. Learning & Geosci., 2015, 85:50093415024.
-- [6] Demaynov, V., Forest, L., Shi, M., A. Physics Physics. doi:10.1063/5179-3083/ac06722
-- [7] Sun, Y., Li, J., Aziz, K. Kernel Component Analysis for Efficient Parameterization of geophysical [J]. Mathematical Geosciences, 2008, 40:103-118.
-- [8] Wang, J., et al. Support vector regression for Property Prediction in Heterogeneous Environments: A Comparative Study [J]. Computers & Geosciences, 2016, 36(12):1492-1503.
-- [9] Takeuchi, A., Bach, R., Cano, S. et al. Sim. Kernel Learning [J]. Neural Networks, 2009, 19(3):243-257.
-- [10] Tomaguchi, A. F., Baek, S., and Mai, G. Selecting Relevant Features with Multiple-Kernel Classification [J]. IEEE Transactions on Geoscience & Remote Sensing, 2010, 48(10):3760-3791.
-- [11] Kuzumaki, A., Yamamoto, M. Scaling up Multiple Kernel Clustering Methods for Large Data Sets via Core-sets [J]. IEEE Workshop on Machine Learning for Processing. 2008.
 
+- [2] Wang Jian, Xia Zihui. 三维地震多点建模回归以减少跨井预测的不确定性 [J]. Acta Sinica, 2013, 31(8):878-888. 中文.
+
+- [3] Mou Shaolin, Zhang Shengping, Yuan Chuanan. 基于协同聚类的多核学习 [J]. 北京大学学, 2008, 32.
+
+- [4] Demaynov, V, Forest, L., Podoznuk, A., Kanaev, M. Geomodeling of fluvial system with semi-supervised machine [J]. Geosciences, 2018, 8:222.
+
+- [5] Demaynov, V., Christie, M., A. Learning & Geosci., 2015, 85:50093415024.
+
+- [6] Demaynov, V., Forest, L., Shi, M., A. Physics Physics. doi:10.1063/5179-3083/ac06722
+
+- [7] Sun, Y., Li, J., Aziz, K. Kernel Component Analysis for Efficient Parameterization of geophysical [J]. Mathematical Geosciences, 2008, 40:103-118.
+
+- [8] Wang, J., et al. Support vector regression for Property Prediction in Heterogeneous Environments: A Comparative Study [J]. Computers & Geosciences, 2016, 36(12):1492-1503.
+
+- [9] Takeuchi, A., Bach, R., Cano, S. et al. Sim. Kernel Learning [J]. Neural Networks, 2009, 19(3):243-257.
+
+- [10] Tomaguchi, A. F., Baek, S., and Mai, G. Selecting Relevant Features with Multiple-Kernel Classification [J]. IEEE Transactions on Geoscience & Remote Sensing, 2010, 48(10):3760-3791.
+
+- [11] Kuzumaki, A., Yamamoto, M. Scaling up Multiple Kernel Clustering Methods for Large Data Sets via Core-sets [J]. IEEE Workshop on Machine Learning for Processing. 2008.

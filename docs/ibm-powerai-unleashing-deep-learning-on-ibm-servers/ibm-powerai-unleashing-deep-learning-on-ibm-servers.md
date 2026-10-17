@@ -1,35 +1,32 @@
+
 # IBM PowerAI：在 IBM 服务器上释放深度学习能力
 
-
-
-
-
-
 Dino Quintero
+
 Bing He
+
 Bruno C. Faria
+
 Alfonso Jara
+
 Chris Parsons
+
 Shota Tsukamoto
+
 Richard Wale
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_0_0.png)
 
-
 ![](img/f6f95c5defc8b3406a94a86b8d202807_2_0.png)
 
 国际技术支持组织
-
-
-
-
 
 - 本版适用于：
 - 适用于 IBM Power Systems 的 Ubuntu 16.04
 - 适用于 IBM Power Systems 的 Red Hat Enterprise Linux 7.4
 - NVIDIA CUDA Toolkit V8.0 和 V9.0
 - NVIDIA cuDNN V8.4.66
-- NVIDIA  384.60 和 V7
+- NVIDIA 384.60 和 V7
 - IBM PowerAI V1.4 和 V1.5
 - 伯克利视觉与学习中心 (BVLC) Caffe V1.0.0
 - IBM Caffe V1.0.0
@@ -42,54 +39,28 @@ Richard Wale
 - IBM Spectrum MPI V10.1.0
 - Anaconda V5.0
 - Python V2
-
-
-
-- 前言 ................................................................................................................................................................. . . . . . . . . ix
-- 作者 ................................................................................................................................................................. . . . . . . . . ix
-- 现在也可以成为作者！................................................................................................................................................ . . . . . . . x
-
-
-
-#### 3.1.10 其他软件和功能 ................................................................................................... 54
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 附录 A 情感分析代码 .................................... 241
-
-- 使用 TensorFlow 进行情感分析 ................................ 242
-- 代码是如何组织的. . ........................................ 242
-- 情感分析代码 ........................................ 242
-- 模型与训练 .................................................... 245
-- 使用模型 .................................................... 247
-
-## 附录 B 问题确定工具 . . . . . . . . . . . . . . . . . . . 249
-
-- 日志和配置收集工具 . . . . . . . . . . . . . . . . . . . 250
-- sosreport 工具 . . . . . . . . . . . . . . . . . . . . . . . 250
-- Scale-out LC 事件日志收集工具. . . 251
-- Power 上 Linux 故障排除指南. . . . . . . . . . . . . 252
-
-
-
-
+- 前言
+- 作者
+- 现在也可以成为作者！
+- 3.1.10 其他软件和功能
+- 附录 A 情感分析代码
+- 使用 TensorFlow 进行情感分析
+- 代码是如何组织的
+- 情感分析代码
+- 模型与训练
+- 使用模型
+- 附录 B 问题确定工具
+- 日志和配置收集工具
+- sosreport 工具
+- Scale-out LC 事件日志收集工具
+- Power 上 Linux 故障排除指南
 
 本信息是为在美国提供的产品和服务而开发的。IBM 可能会以其他语言提供此类材料。但是，您可能需要获取该语言版本的产品或产品版本才能访问它。
 
 IBM 可能在其他国家不提供本文档中讨论的产品、服务或功能。请咨询您当地的 IBM 代表以获取有关您所在地区当前提供的产品和服务的信息。对 IBM 产品、程序或服务的任何引用，均不提供或暗示可以使用该 IBM 产品、程序或服务。可以使用不侵犯 IBM 知识产权的任何功能等产品、程序或服务。然而，验证和评估任何非 IBM 产品、程序或服务的信息是用户的责任。
 
 IBM 可能拥有涵盖本文档所述主题的待决专利申请。本文档的提供并不授予您对这些专利的任何许可。您可以致信以下地址发送许可查询：
+
 Director of Licensing, IBM Corporation, North Castle Drive, MD-NC119, Armonk, NY 10504-1785
 
 国际商业机器公司按“原样”提供本出版物，没有任何任何形式的保证，无论是明确还是暗示的，包括但不限于非侵权、适销性或针对特定用途的适用性的暗示保证。某些管辖区不允许排除明确或暗示的保证。
@@ -108,13 +79,11 @@ IBM 可以以其认为适当的方式使用或发产品的任何信息，而不�
 
 本信息包含业务运营中使用的数据和报告示例。为了尽可能完整地说明这些示例，示例包含了个人、公司、品牌和产品的名称。所有这些名称均为虚构，与实际个人或业务的任何相似之处均为偶然。
 
+本信息包含源语言的示例程序，展示了在各种操作系统上的编程技术。您可以无需向 IBM 付费以任何形式复制、修改和分发这些示例程序，用于开发、使用或分发符合示例程序编写的操作系统平台应用程序接口的程序。这些示例尚未在所有条件下进行过测试。因此，IBM 无法保证这些程序的可靠性、维护性或功能。示例程序按“原样”提供，无任何形式的保证。IBM 对您使用示例程序而产生的任何损害不承担责任。
 
-本信息包含源语言的示例程序，展示了在各种操作系统上的编程技术。您可以无需向 IBM付费以任何形式复制、修改和分发这些示例程序，用于开发、使用或分发符合示例程序编写的操作系统平台应用程序接口的程序。这些示例尚未在所有条件下进行过测试。因此，IBM 无法保证这些程序的可靠性、维护性或功能。示例程序按“原样”提供，无任何形式的保证。IBM 对您使用示例程序而产生的任何损害不承担责任。
+IBM、IBM 标志和 ibm 是国际商业机器公司的商标或注册商标，已在全球许多司法辖区注册。其他产品和服务名称可能是 IBM 或其他公司的商标。网站 `com/legal/copytrade.shtml` 提供 IBM 商标的当前列表。
 
-
-IBM、IBM 标志和 ibm 是国际商业机器公司的商标或注册商标，已在全球许多司法辖区注册。其他产品和服务名称可能是 IBM 或其他公司的商标。网站com/legal/copytrade.shtml 提供 IBM 商标的当前列表。
-
-以下术语是国际商业机器公司的商标或注册商标，也可能是其他国家的商标或注册商标。
+以下术语是国际商业机器公司的商标或注册商标，也可能是其他国家的商标或注册商标：
 
 - AIX® IBM Watson® PowerLinux™
 - Bluemix® LSP® PowerPCO®
@@ -153,10 +122,7 @@ Dino Quintero 是纽约州普普基西西 IBM Redbooks 的解决方案增强项�
 
 Bruno C. Faria 是 IBM 巴西的数据工程师。他在数据和机器学习 (ML) 领域拥有 9 年经验。他在 IBM 工作了 9 年，过去 3 年致力于大数据以及如何扩展和管理海量数据和实时数据，以及如何在这些系统中应用机器学习技术。他的专业领域包括多个 SQL 和 NoSQL 数据库、ETL、DL 等。
 
-
-
-
-Alfonso Jara 于 2001 年加入 IBM 西班牙。他在设计和部署针对 AIX 和 P 系列的高可用高虚拟化解决方案方面拥有 15 年以上的经验。他拥有马德里康大学（Universidad Complutense de Madrid）的物理学学位。目前， IBM 全球服务的认证 IT 架构师，主要帮助将工作负载迁移到 IBM Cloud 以及基础架构服务（IaaS）解决方案。
+Alfonso Jara 于 2001 年加入 IBM 西班牙。他在设计和部署针对 AIX 和 P 系列的高可用高虚拟化解决方案方面拥有 15 年以上的经验。他拥有马德里康大学（Universidad Complutense de Madrid）的物理学学位。目前，IBM 全球服务的认证 IT 架构师，主要帮助将工作负载迁移到 IBM Cloud 以及基础架构服务（IaaS）解决方案。
 
 Chris Parsons 是英国 IBM Lab Services 的机器学习工程师。他在 AI 领域有 3 年经验。Chris 在斯文西大学获得计算机科学一等荣誉学位。他在多个领域拥有专长，包括移动应用开发、Web 开发和 DevOps。他目前的重点是运行在 IBM Power Systems 上的 DL 和 TensorFlow 应用。
 
@@ -186,7 +152,7 @@ IBM 加
 
 这是一个展示你的技能、发展职业并成为书籍作者的机会——这一切同时进行。加入 ITSO 驻留计划，帮助在你的专业领域编写一本书，同时利用领先技术磨练你的经验。你的努力将有助于增加产品接受度和客户满意度，同时扩大你的技术联系人网络和关系。驻留期时长为两到六周不等，你可以现场参加，也可以作为远程人员在你的基地工作。
 
-了解更多关于驻留计划的信息、浏览驻留索引并在在线申请：ibm.com/redbooks/residencies.html
+了解更多关于驻留计划的信息、浏览驻留索引并在在线申请：`ibm.com/redbooks/residencies.html`
 
 # 欢迎意见
 
@@ -194,17 +160,17 @@ IBM 加
 
 我们希望我们的书籍能尽可能有用。请通过以下方式向我们反馈关于此书或其他 IBM Redbooks 出版的意见：
 
-- 使用位于 ibm.com/redbooks 的在线“联系我们” Redbooks 反馈单
-- 通过电子邮件将意见发送至：redbooks@us.ibm.com
+- 使用位于 `ibm.com/redbooks` 的在线“联系我们” Redbooks 反馈单
+- 通过电子邮件将意见发送至：`redbooks@us.ibm.com`
 - 将意见邮寄至：IBM Corporation, International Technical Support Organization Dept. HYTD Mail Station P099 2455 South Road Poughkeepsie, NY 12601-5400
 
 # 与 IBM Redbooks 保持联系
 
-- 在 Facebook 上找到我们：http://www.facebook.com/IBMRedbooks
-- 在 Twitter 上关注我们：http://twitter.com/ibmredbooks
-- 在 Linkedin 上寻找我们：http://www.linkedin.com/groups?home=gid=2130806
-- 通过 IBM Redbooks 每周通讯报探索新的 Redbooks 出版物、驻留和研讨会：https://www.redbooks.ibm.com/Redbooks.nsf/subscribe?7openForm
-- 通过 RSS 订阅获取最新的 Redbooks 版：http://www.redbooks.ibm.com/rss.html
+- 在 Facebook 上找到我们：`http://www.facebook.com/IBMRedbooks`
+- 在 Twitter 上关注我们：`http://twitter.com/ibmredbooks`
+- 在 Linkedin 上寻找我们：`http://www.linkedin.com/groups?home=gid=2130806`
+- 通过 IBM Redbooks 每周通讯报探索新的 Redbooks 出版物、驻留和研讨会：`https://www.redbooks.ibm.com/Redbooks.nsf/subscribe?7openForm`
+- 通过 RSS 订阅获取最新的 Redbooks 版：`http://www.redbooks.ibm.com/rss.html`
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_14_0.png)
 
@@ -218,7 +184,7 @@ IBM 加
 - 神经网络概述
 - 深度学习框架
 
-# 1.1 深度学习
+## 1.1 深度学习
 
 尽管这些路径似乎彼此遥远，但自从数学发展以来，很少有人梦想过能找到一种合并所有这些路径的方法，主要是通过可以开发出某种智能的人造设备来实现。
 
@@ -232,7 +198,7 @@ AI 中最大的领域可能是机器学习（ML），它可以被描述为决策
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_16_0.png)
 
-## 1.1.1 人工智能里程碑与深度学习的发展
+### 1.1.1 人工智能里程碑与深度学习的发展
 
 深度学习表明，DL 的历史上有三个时代：
 
@@ -242,34 +208,33 @@ AI 中最大的领域可能是机器学习（ML），它可以被描述为决策
 
 这三个时代表明 DL 是一门根源于计算机科学初期的成熟学科，在其历史过程中受到趋势的影响。历史表明，每一波浪潮都是由那个时代的某些发展推动的。
 
-
-
-
 | 日期 (公元) | 人工智能 | 机器学习 | 深度学习 |
-|---|---|---|--|
-| 1943 | McCulloch 和 Pitts 对图灵完备神经元的正式设计是第一篇涵盖 AI 主题的论文。b 这篇文章标志着生物学习理论理论发展的开始。 | | | |
-| 1956 | AI 研究领域在达特茅学院的一次研讨会上诞生了。 | | | |
-| 1958 | Frank Rosenblatt 发明了感知器算法，c，使得单个神经元的训练成为可能。 | | | |
-| 1965 | | | Ivakhnenko 和 Lapa 发表了第一种用于监督、深度前馈和多层感知器 (MLP) 的通用工作学习算法。d |
-| 1980 | 专家系统的商业化应用增加。 | | | |
+|---|---|---|---|
+| 1943 | McCulloch 和 Pitts 对图灵完备神经元的正式设计是第一篇涵盖 AI 主题的论文。b 这篇文章标志着生物学习理论理论发展的开始。 | | |
+| 1956 | AI 研究领域在达特茅学院的一次研讨会上诞生了。 | | |
+| 1958 | Frank Rosenblatt 发明了感知器算法，c，使得单个神经元的训练成为可能。 | | |
+
+
+
+| 日期（公元） | 人工智能 | 机器学习 | 深度学习 |
+|---|---|---|---|
+| 1965 | | | Ivakhnenko 和 Lapa 发表了第一种用于监督、深度前馈和多层感知器（MLP）的通用工作学习算法。d |
+| 1980 | 专家系统的商业化应用增加。 | | |
 | 1986 | | | Rina Dechter 引入了“深度学习”这一术语。e |
 | 1986 | | | Rumelhart 等人提出了反向传播算法f，通过一个或两个隐藏层来训练神经网络。 |
-| 1990 | | 一种简单的 ML 算法可以判断是否建议进行剖宫产。g | | |
-| 1990s | | 随着数字化信息可用性的增加，机器学习学科得到了蓬勃发展。 | | | |
-| 1997 | IBM 深蓝号击败了现任国际象棋冠军加里·卡斯帕罗夫。 | | | |
+| 1990 | | 一种简单的 ML 算法可以判断是否建议进行剖宫产。g | |
+| 1990s | | 随着数字化信息可用性的增加，机器学习学科得到了蓬勃发展。 | |
+| 1997 | IBM 深蓝号击败了现任国际象棋冠军加里·卡斯帕罗夫。 | | |
 | 2000 | | | Igor Aizemberg 等人创造了“人工神经网络”这一术语。h |
 | 2005 | | | Gomez 和 Schmidhuber 发表了一篇建立强化学习概念的论文。i |
-| 2006 | | | Hinton 等人在深度神经网络的背景下引入了监督反向传播的概念。 | |
-
-| 日期 (公元) | 人工智能 | 机器学习 | 深度学习 |
-|---|---|---|--|
-| 2010 | | IBM Watson 在《危险一答》节目中击败了人类选手。l | | |
-| 2015 | | | AlphaGo 击败了现任世界冠军。k | |
+| 2006 | | | Hinton 等人在深度神经网络的背景下引入了监督反向传播的概念。 |
+| 2010 | | IBM Watson 在《危险一答》节目中击败了人类选手。l | |
+| 2015 | | | AlphaGo 击败了现任世界冠军。k |
 
 - a. https://www.cs.virginia.edu/robins/Turing_Paper_1936.pdf
 - b. https://www.cs.cmu.edu/epxing/Class/1075/reading/McCulloch.&Pitts.pdf
 - c. https://citeseer.ist.psu.edu/vedoc/download?doi=10.1.1.335&3398=rep&type=pdf
-- d. Ivankhenko, A. G., "Cybernetic Predicting Devices," IBM Information Corporation, 1973 
+- d. Ivankhenko, A. G., "Cybernetic Predicting Devices," IBM Information Corporation, 1973
 - e. https://www.aaai.org/AAAI/1986/AAAI86-029.pdf
 - f. https://www.ifr.unmontreal.edu/~ub3386/lectures/backup_old.pdf
 - g. https://nci.nlm.nih.gov/pubmed/2342742
@@ -308,15 +273,11 @@ AI 中最大的领域可能是机器学习（ML），它可以被描述为决策
 
 神经网络有不同的类型或架构。本节介绍了基础知识并简要回顾了主要架构。
 
-
-
-
-
 神经网络的灵感来源于突触结构及其传递和处理信号的方式。通过使用这种结构作为基础，科学家可以实现一种新的数据处理方法，其中不同的简单元素（神经元）构成更大、更复杂结构（神经网络）的一部分，能够执行更复杂的任务。
 
 在这种情况下，神经网络是一种人工结构，由人工神经元组成，这些神经元排列成具有特定专业化分层。某一层中的神经元接收来自上一层的输入，对其进行处理（即对输入信号进行加权以生成输出信号），并将结果传递给下一层的相邻神经元。
 
-图 1-5 显示了人工神经元如何接收多个输入，并根据函数 f(S) 对其进行处理，产生传播到下一层的输出。
+图 1-5 显示了人工神经元如何接收多个输入，并根据函数 `f(S)` 对其进行处理，产生传播到下一层的输出。
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_22_0.png)
 
@@ -396,7 +357,7 @@ LSTM 网络是 RNN 的特定类型。LSTM 更加健壮，旨在解决经典 RNN 
 
 图 1-8 图像像素矩阵（简化）与滤波器
 
-![](
+![](img/f6f95c5defc8b3406a94a86b8d202807_26_1.png)
 
 图 1-9 卷积过程示例
 
@@ -412,19 +373,17 @@ LSTM 网络是 RNN 的特定类型。LSTM 更加健壮，旨在解决经典 RNN 
 
 - 下一个阶段是池化（pooling），它减少卷积阶段生成的特征图的维度，并对上一个阶段进行修正。这一过程被称为下采样。尽管维度降低了，最重要的信息被保留了下来。
 
-
-
-
 有不同的池化方法，例如提取特定组的平均值或获取最大数值。这个过程类似于卷积过程，在卷积过程中定义一个特定区域，然后在其上移动（不重叠），并保留最大数值（在最大池化场景下），如图 1-11 所示。
 
 | 1 | 0 | 3 | 6 |
+|---|---|---|---|
 | 2 | 4 | 5 | 2 |
 | 2 | 6 | 2 | 0 |
 | 3 | 4 | 1 | 7 |
 
 图 1-11 最大池化过程示例
 
--   最后是最后一个阶段：全连接层。这是一个经典的前馈神经网络（FFNN），在输出层具有特定的激活函数（通常是 softmax）。其核心思想是学习并分类在之前阶段提取的特征。它是全连接的，是因为就像 FFNN 中一样，某一层的所有神经元都连接到下一层的所有神经元。
+- 最后是最后一个阶段：全连接层。这是一个经典的前馈神经网络（FFNN），在输出层具有特定的激活函数（通常是 softmax）。其核心思想是学习并分类在之前阶段提取的特征。它是全连接的，是因为就像 FFNN 中一样，某一层的所有神经元都连接到下一层的所有神经元。
 
 值得注意的是，在到达全连接阶段之前，可以重复卷积、线性整流和池化阶段，以从物体中提取更多特征。
 
@@ -482,7 +441,7 @@ Caffe 在计算机视觉领域（如图像识别）表现良好，但在其他�
 
 该框架还通过 CUDA 深度神经网络 (cuDNN) 库支持 GPU。代码可以在 GitHub 上找到。
 
-## Chainer
+#### Chainer
 
 Chainer 是一个灵活的框架，能够以简单的方式实现复杂的神经网络架构。
 
@@ -490,10 +449,7 @@ Chainer 实现了“定义即运行”（Define-by-Run）方法，这意味着 C
 
 该框架使用 Python 开发，没有其他接口。
 
-
-
-
-# TensorFlow
+#### TensorFlow
 
 TensorFlow 始于 2011 年，最初是 Google Brain 开发的一个名为 DistBelief 的专有系统。由于其在公司各个应用中的成功，Google 专注于改进 DistBelief，随后演变为了 TensorFlow。第一个开源版本于 2017 年发布。
 
@@ -505,9 +461,11 @@ TensorFlow 是著名的框架之一，其使用量随时间推不断增加。它
 
 - 该框架支持 GPU 并以分布式模式运行。在“定义并运行”模式下运行会导致灵活性不足，因为图是静态的，但它也能以更好的方式将代码分发到不同的节点，确保图可以被传输，并在所有 GPU 上等同运行。
 
-## Theano
+#### Theano
 
 Theano 是一个类似于 TensorFlow 的数值计算库。它的开发始于 2007 年的蒙特利尔大学，因此它是较老的框架之一。它用 Python 开发，这是唯一支持的接口。
+
+
 
 与 TensorFlow 类似，Theano 也采用“定义并运行”方案，在编译期间先构建图，然后在运行时让过程流经图。Theano 支持 GPU 工作并可以以分布式模式运行。
 
@@ -546,6 +504,7 @@ PyTorch 采用类似于 Chainer 的“运行即定义”（Defined-by-Run）方�
 IBM PowerAI 是一个用于深度学习（DL）的软件包，它包含了多种深度学习框架，以及用于人工智能（AI）系统训练和运行的企业级软件。IBM PowerAI 能够利用 NVIDIA GPU 进行加速，并且在 POWER8 和 POWER9 架构上运行。
 
 IBM PowerAI 包含了以下深度学习框架：
+
 - TensorFlow
 - Caffe
 - Chainer
@@ -556,7 +515,7 @@ IBM PowerAI 包含了以下深度学习框架：
 
 IBM PowerAI 软件包包含了多个版本，并在 2.1 发布了 4.0 版本。
 
-2.1.1 IBM PowerAI 的内容
+### 2.1.1 IBM PowerAI 的内容
 
 IBM PowerAI 软件包包含了多个版本，并在 2.1 发布了 4.0 版本。
 
@@ -572,7 +531,7 @@ IBM PowerAI 软件包包含了多个版本，并在 2.1 发布了 4.0 版本。
 | 库 | DIGITS |
 | 分布式 DL | OpenBLAS | Bazel |
 
-2.1.2 IBM PowerAI 的最小硬件要求
+### 2.1.2 IBM PowerAI 的最小硬件要求
 
 IBM PowerAI 可以运行在 POWER8 上。然而，为了运行，IBM 建议的配置：
 
@@ -602,21 +561,15 @@ IBM PowerAI 可以运行在 POWER8 上。然而，为了运行，IBM 建议的�
 IBM PowerAI 提供以下利益：
 
 - 快速部署 DL 环境，以便客户能够立即工作：
-- 安装简单，通常少于 1 小时
-- 预编译的 DL 库，包括所有必要的
-
+  - 安装简单，通常少于 1 小时
+  - 预编译的 DL 库，包括所有必要的
 - 优化性能使用用户可以更快地获得价值：
-- 为具有 NVLink CPU 和 NVIDIA GPU 的 IBM Power Systems 构建，提供了在其他地方无法实现的性能
-- 分布式 DL，利用并行处理
-
+  - 为具有 NVLink CPU 和 NVIDIA GPU 的 IBM Power Systems 构建，提供了在其他地方无法实现的性能
+  - 分布式 DL，利用并行处理
 - 针对企业部署设计：
-- 支持多用户和多业务线（LOB）
-- 通过与其他软件集成实现集中式管理和监控
-- IBM 对整个解决方案的服务和支持，包括开源 DL 框架
-
-
-
-
+  - 支持多用户和多业务线（LOB）
+  - 通过与其他软件集成实现集中式管理和监控
+  - IBM 对整个解决方案的服务和支持，包括开源 DL 框架
 
 ## 2.3 IBM 独特能力
 
@@ -650,7 +603,7 @@ IBM PowerAI DDL 是一种软硬件协同优化的分布式深度学习系统，�
 
 IBM PowerAI DDL 的当前实现基于 IBM Spectrum MPI，这是因为 IBM Spectrum MPI 提供了许多所需功能，例如在可移植、高效且成熟的软件基础设施中调度进程和通信。IBM Spectrum MPI 专门为 IBM Power Systems 和 InfiniBand 网络技术提供了函数和优化。
 
-IBM PowerAI DDL 的 `objects()` 对象是 IBM PowerAI DDL 的基础。每个对象实例都包含数据和相关的元数据。数据结构组件本身可以包含各种负载，例如梯度张量。元数据提供了主机、设备类型（GPU 或其他）、设备标识符以及数据结构所处内存类型的定义。IBM PowerAI DDL 内的所有函数都于这些对象的操作，这些对象等同于变量。
+IBM PowerAI DDL 的`objects()`对象是 IBM PowerAI DDL 的基础。每个对象实例都包含数据和相关的元数据。数据结构组件本身可以包含各种负载，例如梯度张量。元数据提供了主机、设备类型（GPU 或其他）、设备标识符以及数据结构所处内存类型的定义。IBM PowerAI DDL 内的所有函数都于这些对象的操作，这些对象等同于变量。
 
 在 256 个 GPU 环境中，执行一个简单的归约操作必须传输约 90 GB 数据，并且必须传输相同的数据将结果复制到所有 GPU 中。即使是传输速率为 10 Gbps 的快速网络连接将这些数据带到单个参数服务器 (PS)，也需要 9 秒钟。IBM PowerAI DDL 使用针对特定网络拓扑优化的通信方案，在不到 100 毫秒内完成了 350 MB 的整个归约和分。
 
@@ -691,24 +644,32 @@ IBM PowerAI: Deep Learning Unleashed on IBM Power Servers
 图 2-2 神经网络图
 
 要在 IBM Caffe 中使用 LMS，请在运行时添加以下标志：
+
+```
 -lms <单位为 KB>
+```
 
 此标志设置了决定哪些内存分配在 CPU 内存中，哪些在 GPU 内存中的阈值大小。例如：
+
+```
 -lms 1028
+```
 
 使用此参数时，任何大于 1028 KB 的内存块都由 CPU 在主内存地址空间中处理，仅在计算需要时才获取到 GPU 内存。因此，较小的值意味着更积极地使用 LMS 并使用更多的系统内存。然而，较大的值（例如 100,000,000）实际上禁用了 LMS 功能并确保所有块都分配到 GPU 内存。
 
 此参数用于控制性能权衡，因为运行时从 CPU 引入更多数据会导致运行时影响。
 
-在您的环境中使用 LMS 的另一种方法是使用 lms_frac 标志：
+在您的环境中使用 LMS 的另一种方法是使用`lms_frac`标志：
+
+```
 -lms_frac <0 < x < 1.0>
-
-
-
+```
 
 在这种情况下，在 GPU 内存分配达到特定阈值之前，LMS 不使用系统内存来分配数据块。例如：
 
-- lms_frac 0.75
+```
+-lms_frac 0.75
+```
 
 在可用 GPU 内存分配超过 75% 之前，系统可以为 GPU 分配任何大小的数据块。这种方法的优势在于，您基本上可以禁用 LMS 功能，以更快地训练较小的网络，或者为较大的网络更高效地利用 GPU 内存。
 
@@ -762,11 +723,13 @@ IBM DSX 本地客户可以选择两种默认安装选项：三服务器集群或
 
 三节点和九节点集群安装是起点。在安装后，可以根据需要添加更多节点。
 
+
+
 安装详情请见“安装本地 Data Science Experience”文档。
 
 ## 2.4.2 IBM PowerAI Vision（技术预览）
 
-IBM PowerAI Vision 为图像分析提供完整的平台，用于创建数据集、标记、训练模型、验证并部署模型。该工具加快了从原始数据到部署模型的进程，且不会阻碍数据科学家的需求。IBM PowerAI 实现了从图像中快速标记、从视频创建标记数据集，以及对视频流进行自自动标记以增强训练数据集，如图 2-4 所示。
+IBM PowerAI Vision 为图像分析提供完整的平台，用于创建数据集、标记、训练模型、验证并部署模型。该工具加快了从原始数据到部署模型的进程，且不会阻碍数据科学家的需求。IBM PowerAI 实现了从图像中快速标记、从视频创建标记数据集，以及对视频流进行自动标记以增强训练数据集，如图 2-4 所示。
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_43_0.png)
 
@@ -776,12 +739,9 @@ IBM PowerAI Vision 为图像分析提供完整的平台，用于创建数据集�
 
 - CPU：POWER8 或 OpenPOWER 基础架构，至少有八个硬件核心
 - 内存：128 GB 或更大
-
-
-- GPU:
-- 至少一个 NVIDIA Tesla GPU
-- 单个 GPU 核心的内存大于 4 GB
-
+- GPU：
+  - 至少一个 NVIDIA Tesla GPU
+  - 单个 GPU 核心的内存大于 4 GB
 - 磁盘：大于 20 GB 的可用磁盘空间
 - 网络：至少一个以太网接口
 
@@ -790,19 +750,18 @@ IBM PowerAI Vision 为图像分析提供完整的平台，用于创建数据集�
 以下是 IBM PowerAI Vision 的软件前提：
 
 - 操作系统：
-- IBM PowerAI V1.4 使用 Ubuntu 16.04 LTS
-- V1.5 使用 Red Hat Enterprise Linux 7.4 (架构 pcpc64le)
-
-- Docker:1.12.0 或更高版本。
- 需要 NVIDIA 驱动程序版本 384.59 或更高。
-- 需要 NVIDIA CUDA 版本 8.0.44 或更高。
-- 需要 NVIDIA cuDNN 版本 6.0 或更高。
+  - IBM PowerAI V1.4 使用 Ubuntu 16.04 LTS
+  - V1.5 使用 Red Hat Enterprise Linux 7.4（架构 `ppc64le`）
+- Docker：1.12.0 或更高版本
+- 需要 NVIDIA 驱动程序版本 384.59 或更高
+- 需要 NVIDIA CUDA 版本 8.0.44 或更高
+- 需要 NVIDIA cuDNN 版本 6.0 或更高
 
 有关 IBM PowerAI 的更多信息，请参阅“深度学习”。
 
 ## 2.4.3 IBM Conductor Deep Learning Impact
 
-IBM Conductor Deep Learning Impact 是一种端端解决方案，提供了数据、建模和推理。IBM Conductor Deep Learning 利用 IBM PowerAI 为深度学习负载提供性能优势，如图 2-5 所示。
+IBM Conductor Deep Learning Impact 是一种端到端解决方案，提供了数据、建模和推理。IBM Conductor Deep Learning 利用 IBM PowerAI 为深度学习负载提供性能优势，如图 2-5 所示。
 
 | 数据 | 建模 | 推理 |
 |---|---|---|
@@ -814,9 +773,6 @@ IBM Conductor Deep Learning Impact 是一种端端解决方案，提供了数据
 | DLI | IBM PowerAI | DLI |
 
 图 2-5 Power Systems 上的 Data Science Experience 层
-
-
-
 
 对于属于 IBM PowerAI 的组件，在编写本文时，我们记录了这些组件与特定 IBM PowerAI 版本之间的依赖关系表。
 
@@ -830,10 +786,10 @@ IBM 为 IBM PowerAI 提供可选的 3 级企业级支持，并为客户提供 IB
 
 ## 销售支持
 
-技术支持在全球范围内提供，包括 IBM 系统组和 IBM 销售与交付部门的专业人员。资源包括现场技术支持专家 (FTSS)，他们通过试点、原型和演示为销售机会提供现场支持。额外资源还包括：
+技术支持在全球范围内提供，包括 IBM 系统组和 IBM 销售与交付部门的专业人员。资源包括现场技术支持专家（FTSS），他们通过试点、原型和演示为销售机会提供现场支持。额外资源还包括：
 
-- 高级技术技能 (ATS)：复杂解决方案设计、解决方案保证、概念验证、早期产品引入以及性能和基准支持。
-- Techline：售前服务包括系统设计与配置、设计评估、中间件和 SV 规模、服务支持、知识产权、竞争评估以及合作伙伴赋能。
+- 高级技术技能（ATS）：复杂解决方案设计、解决方案保证、概念验证、早期产品引入以及性能和基准支持
+- Techline：售前服务包括系统设计与配置、设计评估、中间件和 SV 规模、服务支持、知识产权、竞争评估以及合作伙伴赋能
 
 有关 IBM 售前支持，请参阅全球技术销售。
 
@@ -847,7 +803,7 @@ IBM 系统实验室服务的设立是为了帮助您成功实施新兴技术，�
 
 ## IBM Power Systems PowerAI 基础启动服务
 
-IBM 系统实验室服务提供 IBM Systems PowerAI 基础启动服务，这包括实施前的前的设计工作坊，并为客户的 IBM PowerAI 解决方案提供软件硬件基础设施的安装、配置和实施现场协助。
+IBM 系统实验室服务提供 IBM Systems PowerAI 基础启动服务，这包括实施前的前期设计工作坊，并为客户的 IBM PowerAI 解决方案提供软件硬件基础设施的安装、配置和实施现场协助。
 
 > 注意：请联系您的 IBM 代表人了解所在国家的可用性。
 
@@ -855,15 +811,15 @@ IBM 系统实验室服务提供 IBM Systems PowerAI 基础启动服务，这包�
 
 作为解决方案的主要部分，IBM PowerAI 同时依赖 Power Systems 服务器和 NVIDIA GPU，为 DL 负载提供最大的性能和可靠的解决方案。这是一种软件产品，IBM PowerAI 不包含硬件，但解决方案的运行需要硬件。
 
-## 用于高性能计算的 IBM Power System S822LC (8335-GTB) 服务器
+## 用于高性能计算的 IBM Power System S822LC（8335-GTB）服务器
 
 用于高性能计算的 IBM Power System S822LC 是运行 DL 负载的选择平台。该服务器受益于 POWER8 CPU 加上 NVIDIA 专用 P100 GPU，以支持高需求负载，例如训练阶段典型的 DL 负载。
 
-用于高性能计算的 IBM Power System S822LC 是与 OpenPOWER 合作伙伴 NVIDIA、Mellanox 和 Wiston 合作设计设计的，用于跟踪高性能和技术计算负载。这是第一个将 NVIDIA NVLink 技术整合到处理器技术的服务器。更多信息请参阅 NVIDIA NVlink 网站。
+用于高性能计算的 IBM Power System S822LC 是与 OpenPOWER 合作伙伴 NVIDIA、Mellanox 和 Wistron 合作设计的，用于跟踪高性能和技术计算负载。这是第一个将 NVIDIA NVLink 技术整合到处理器技术的服务器。更多信息请参阅 NVIDIA NVLink 网站。
 
-该系统旨在为使用 GPU 加速的负载提供最高性能和最高效率，包括 CFD 和分子建模应用。GPU 加速广泛用于机器学习 (ML) 和认知负载。
+该系统旨在为使用 GPU 加速的负载提供最高性能和最高效率，包括 CFD 和分子建模应用。GPU 加速广泛用于机器学习（ML）和认知负载。
 
-该系统支持最多四个 NVIDIA Tesla P100 GPU，这些 GPU 通过 NVIDIA NVLink 连接。每个节点可以处理多达 1 TB 的 DDR4 内存，支持 Mellanox 100 Gbps (增强数据速率 (EDR)) InfiniBand 适配器进行互连。大型集群可实现节点之间的高速互连。
+该系统支持最多四个 NVIDIA Tesla P100 GPU，这些 GPU 通过 NVIDIA NVLink 连接。每个节点可以处理多达 1 TB 的 DDR4 内存，支持 Mellanox 100 Gbps（增强数据速率（EDR））InfiniBand 适配器进行互连。大型集群可实现节点之间的高速互连。
 
 该系统还包括以下项目：
 
@@ -875,24 +831,22 @@ IBM 系统实验室服务提供 IBM Systems PowerAI 基础启动服务，这包�
 
 ## IBM POWER9 服务器：IBM Power System AC922 服务器
 
-IBM Power AC922 服务器是下一代基于 IBM 处理器的系统，专为 DL、AI 以及高性能计算 (HPC) 设计。
+IBM Power AC922 服务器是下一代基于 IBM 处理器的系统，专为 DL、AI 以及高性能计算（HPC）设计。
 
-IBM Power System AC822 (8335-GTW 和 8335-GTG) 是一种 OpenPOWER Linux 扩展服务器。在两种外形中，这两台服务器提供了 POWER9 单芯片模块处理器，具有最多 40 个处理器核心，并共享 16 个直接附加的 DDR4 内联内存模块 DIMM。支持的内存 DIMM 为 8 - 12 GB。
+IBM Power System AC922（8335-GTW 和 8335-GTG）是一种 OpenPOWER Linux 扩展服务器。在两种外形中，这两台服务器提供了 POWER9 单芯片模块处理器，具有最多 40 个处理器核心，并共享 16 个直接附加的 DDR4 内联内存模块 DIMM。支持的内存 DIMM 为 8 - 12 GB。
 
-这些服务器支持带有 NVLink2 接口的 NVIDIA SXM2 外形处理器单元 (GPU)。系统还包含四个直接附加的、支持相干加速器处理器接口 (CAPI) 的 Gen4 围域组件部件 Express (PCIe) 插槽。
+这些服务器支持带有 NVLink2 接口的 NVIDIA SXM2 外形处理器单元（GPU）。系统还包含四个直接附加的、支持相干加速器处理器接口（CAPI）的 Gen4 外围组件互连 Express（PCIe）插槽。
 
-系统背板上可以安装四到六个 GV 100 GPU。
+系统背板上可以安装四到六个 GV100 GPU。
 
-表 3-1 显示了 NVIDIA GV 100 GPU 特性。
+表 3-1 显示了 NVIDIA GV100 GPU 特性。
 
-## 表 3-1 NVIDIA GV 100 GPU 特性
+## 表 3-1 NVIDIA GV100 GPU 特性
 
 | GPU | 双精度浮点峰性能 | 内存带宽 | GPU 内存大小 |
 |---|---|---|---|
 | Tesla V100 | 7.8 teraflops baseᵃ | 1.2 TBps | 16 GB 或 32 GB |
 | a. 这是 NVIDIA 截至 2017 年 11 月的预测。 | | | |
-
-6-GPU 配置为水冷。4-GPU 配置为气冷。（注：OCR 文本碎片化/重复，根据上下文重建）。
 
 6-GPU 配置为水冷。4-GPU 配置为气冷。
 
@@ -901,50 +855,43 @@ IBM Power System AC822 (8335-GTW 和 8335-GTG) 是一种 OpenPOWER Linux 扩展�
 - POWER9 处理器：
   - 16 核 2.6 GHz 处理器模块
   - 20 核 2.0 GHz 处理器模块
-- 高达 102 GB 的 2666 MHz DDR4 内存
+- 高达 1024 GB 的 2666 MHz DDR4 内存
 - NVIDIA Tesla V100 GPU：
   - 基于 NVIDIA SXM2 外形连接器，气冷
-
-
-
 - 集成功能：
-- IBM EnergyScale™ 技术
-- 热插拔和冗余冷却
-- 一个用于用途的前置 USB 3.0 端口
-- 一个用于用途的后端 USB 3.0 端口
-- 一个带有 RJ45 连接器的系统端口
-- 两个电源（两者均需要）
+  - IBM EnergyScale™ 技术
+  - 热插拔和冗余冷却
+  - 一个用于用途的前置 USB 3.0 端口
+  - 一个用于用途的后端 USB 3.0 端口
+  - 一个带有 RJ45 连接器的系统端口
+  - 两个电源（两者均需要）
 
 # IBM Power System AC922 服务器机型 8335-GTW
 
 本摘要描述了 Power AC922 8335-GTW 型号标准功能：
 
-- 19 英寸机架式 (2U) 机箱
-
+- 19 英寸机架式（2U）机箱
 - 两个 POWER9 处理器：
-- 16 核 2.6 GHz 处理器模块
-- 20 核 2.0 GHz 处理器模块
+  - 16 核 2.6 GHz 处理器模块
+  - 20 核 2.0 GHz 处理器模块
 - 高达 1024 GB 的 2666 MHz DDR4 ECC 内存
 - 两个用于 HDD 或 SSD 的 SFF 槽位，支持：
-- 两个 1 TB 7200 RPM NL SATA 硬盘 (#ELD0)
-- 两个 2 TB 7200 RPM NL SATA 硬盘 (#ES6A)
-- 两个 960 GB SATA SSD (#ELS6)
-- 两个 1.92 TB SATA SSD (#ELSZ)
-- 两个 3.84 TB SATA SSD (#ELU0)
-
+  - 两个 1 TB 7200 RPM NL SATA 硬盘（#ELD0）
+  - 两个 2 TB 7200 RPM NL SATA 硬盘（#ES6A）
+  - 两个 960 GB SATA SSD（#ELS6）
+  - 两个 1.92 TB SATA SSD（#ELSZ）
+  - 两个 3.84 TB SATA SSD（#ELU0）
 - 集成 SATA 控制器
-- 两个 PCIe x16 Gen4 低配置插槽 (Low Profile)，支持 CAPI
+- 两个 PCIe x16 Gen4 低配置插槽（Low Profile），支持 CAPI
 - 一个 PCIe x8 Gen4 低配置插槽，支持 CAPI
 - 一个 PCIe x4 Gen4 低配置插槽
-
-四块 NVIDIA Tesla V100 GPU (#EC4J)，基于 NVIDIA SXM2 形式因子连接器，水冷
-
+- 四块 NVIDIA Tesla V100 GPU（#EC4J），基于 NVIDIA SXM2 形式因子连接器，水冷
 - 集成功能：
-- IBM EnergyScale 技术
-- 热插拔和冗余冷却
-- 一个用于用途的后端 USB 3.0 端口
-- 一个带有 RJ45 连接器的系统端口
-- 两个电源（两者均需要）
+  - IBM EnergyScale 技术
+  - 热插拔和冗余冷却
+  - 一个用于用途的后端 USB 3.0 端口
+  - 一个带有 RJ45 连接器的系统端口
+  - 两个电源（两者均需要）
 
 表 3-3 显示了支持 NVIDIA GPU 以及 NVLink 或 NVLink2 总线的 IBM 服务器列表。配备 NVLink CPU 和 NVIDIA GPU 的 IBM Power Systems 服务器支持 IBM PowerAI。
 
@@ -972,19 +919,19 @@ IBM PowerAI 构建在 Power 之上。IBM PowerAI 受益于 Power 平台的性能
 | V1.4.0 | | |
 | V1.5.0 | 用于 POWER8 的 RHEL 7.4 / 用于 POWER9 的 RHEL 7.4 | 额外仓库：可选 EFEL |
 
-a. 在安装 Ubuntu 16.04 后，将 libc6 包更新到 2.23-ubuntu5 或更高版本。该版本解决了 Torch 和 TensorFlow 的问题。你可能需要启用更新仓库以安装此更新。
+a. 在安装 Ubuntu 16.04 后，将 `libc6` 包更新到 2.23-ubuntu5 或更高版本。该版本解决了 Torch 和 TensorFlow 的问题。你可能需要启用更新仓库以安装此更新。
 
-# 用于 IBM POWER8 的 Ubuntu 16.04 LTS (ppc64le)²
+# 用于 IBM POWER8 的 Ubuntu 16.04 LTS（ppc64le）²
 
-Ubuntu for POWER8 为 IBM POWER8 引入了 Ubuntu 服务器和 Ubuntu 基础设施。Ubuntu 16.04 继续为 POWER8 提供快速创新支持，包括对新的 POWER8 型号、内存和热插拔 (Hot Hotplug)、Docker 以及性能的支持。更多信息请参见 [Ubuntu Server Guide]。
+Ubuntu for POWER8 为 IBM POWER8 引入了 Ubuntu 服务器和 Ubuntu 基础设施。Ubuntu 16.04 继续为 POWER8 提供快速创新支持，包括对新的 POWER8 型号、内存和热插拔（Hot Plug）、Docker 以及性能的支持。更多信息请参见 [Ubuntu Server Guide]。
 
 # 用于 IBM POWER 的 Red Hat Enterprise Linux
 
-从 Red Hat Enterprise Linux 7.1 开始，Red Hat 为 Power Systems 的大端和小端版本提供了单独的许可。用于 Power LE (POWER9) 的 Red Hat Enterprise Linux 7.4 引入了更新的内核。Red Hat Enterprise Linux 7.4 取于 CPU 架构，因此更适合 POWER8 和 POWER9 处理。有关用于 POWER 的 Red Hat Enterprise Linux 的更多信息，请参阅 [Red Hat Enterprise Linux 7.4 for Power LE - Release Notes] 和 [用于高性能计算的 Power System S822LC]。
+从 Red Hat Enterprise Linux 7.1 开始，Red Hat 为 Power Systems 的大端和小端版本提供了单独的许可。用于 Power LE（POWER9）的 Red Hat Enterprise Linux 7.4 引入了更新的内核。Red Hat Enterprise Linux 7.4 取决于 CPU 架构，因此更适合 POWER8 和 POWER9 处理。有关用于 POWER 的 Red Hat Enterprise Linux 的更多信息，请参阅 [Red Hat Enterprise Linux 7.4 for Power LE - Release Notes] 和 [用于高性能计算的 Power System S822LC]。
 
 ## 3.1.4 NVIDIA GPUs
 
-在涉及深度学习 (DL) 的计算方面，GPU 是高效。与 CPU 不同，GPU 的设计和优化是为了执行矩阵和向量运算，这是深度学习的核心，特别是在训练任务（最密集的任务）中。IBM PowerAI 依赖于 IBM 架构（以其韧性和 SMT 能力著称），以及 NVIDIA GPU 和 NVLink 技术，如表 3-6 所示。
+在涉及深度学习（DL）的计算方面，GPU 是高效的。与 CPU 不同，GPU 的设计和优化是为了执行矩阵和向量运算，这是深度学习的核心，特别是在训练任务（最密集的任务）中。IBM PowerAI 依赖于 IBM 架构（以其韧性和 SMT 能力著称），以及 NVIDIA GPU 和 NVLink 技术，如表 3-6 所示。
 
 表 3-5 显示了 CPU 和 GPU 的主要区别。
 
@@ -1003,22 +950,22 @@ Ubuntu for POWER8 为 IBM POWER8 引入了 Ubuntu 服务器和 Ubuntu 基础设�
 | 架构 | Volta | Pascal |
 | CUDA 核心 | 5376 | 3840 |
 
-² pp64le 是随 POWER8 引入的纯小端，旨在为 OpenPower Foundation 提供的 x86 Linux 软件提供最小工作。
+² `ppc64le` 是随 POWER8 引入的纯小端，旨在为 OpenPower Foundation 提供的 x86 Linux 软件提供最小工作。
 
 | 组件 | Tesla V100 | Tesla P100 |
 | --- | --- | --- |
 | Tensor 核心 | 640 | N/A |
 | 核心频率 | 未公布 | 1328 MHz |
-| 睿频率 | 1455 MHz | 1480 MHz |
+| 睿频频率 | 1455 MHz | 1480 MHz |
 | SM | 84 | 60 |
 | 内存 | HBM2 | |
-| 内存位 | 4096-bit | |
+| 内存位宽 | 4096-bit | |
 | 内存带宽 | 900 Gbps | 600 Gbps |
-| 共享内存 | 128 KB，可配置 | 24 KB L1，64 KB  |
+| 共享内存 | 128 KB，可配置 | 24 KB L1，64 KB |
 | L2 缓存 | 5 MB | 4 MB |
 | 半精度 | 30 teraflops | 21.2 teraflops |
 | 单精度 | 15.7 teraflops | 10.6 teraflops |
-| 双精度 | 7.8 teraflops (1/2 速率) | 5.3 teraflops (1/2 速率) |
+| 双精度 | 7.8 teraflops（1/2 速率） | 5.3 teraflops（1/2 速率） |
 | 用于 DL | 125 teraflops | N/A |
 | 芯片尺寸 | 815 mm² | 610 mm² |
 | 晶体管数量 | 21.1 x 10⁹ | 15.3 x 10⁹ |
@@ -1027,9 +974,11 @@ Ubuntu for POWER8 为 IBM POWER8 引入了 Ubuntu 服务器和 Ubuntu 基础设�
 
 ## 3.1.5 NVIDIA 组件
 
-为了正常运行，IBM PowerAI 需要访问 NVIDIA GPU 和 NVLink 技术提供的所有功能。为了实现这种访问，需要 NVIDIA 驱动程序、CUDA 和 CUDA 深度神经网络 (cuDNN) 软件，由于与 NVIDIA 的许可限制，IBM PowerAI 未提供这些软件。这些组件可以从供应商网页下载（见第 42 页的“NVIDIA 组件”和第 44 页的“NVIDIA 驱动”）。
+为了正常运行，IBM PowerAI 需要访问 NVIDIA GPU 和 NVLink 技术提供的所有功能。为了实现这种访问，需要 NVIDIA 驱动程序、CUDA 和 CUDA 深度神经网络（cuDNN）软件，由于与 NVIDIA 的许可限制，IBM PowerAI 未提供这些软件。这些组件可以从供应商网页下载（见第 42 页的“NVIDIA 组件”和第 44 页的“NVIDIA 驱动”）。
 
 #### CUDA
+
+
 
 CUDA 是一种并行计算平台和编程模型，允许 GPU 加速计算性能。CUDA 广泛释放数据并行计算模型。通常，每个线程在数据的不同元素上执行相同的操作。
 
@@ -1039,7 +988,7 @@ CUDA 是一种并行计算平台和编程模型，允许 GPU 加速计算性能�
 
 NVIDIA CUDA Toolkit 提供用于高性能、GPU 加速应用程序的开发环境。GPU 加速的 CUDA 库实现了多个领域的无缝加速，例如线性代数、图像和视频处理、深度学习和图分析。开发自定义算法时，可以使用常用语言、数值包以及已发布的 API 的集成。表 3-7 显示了支持的 NVIDIA CUDA Toolkit 版本。
 
-表 3-7 支持的 NVIDIA CUDA Toolkit 版本
+**表 3-7 支持的 NVIDIA CUDA Toolkit 版本**
 
 | IBM PowerAI | 最小 | 推荐 |
 |---|---|---|
@@ -1054,11 +1003,11 @@ NVIDIA CUDA Toolkit 提供用于高性能、GPU 加速应用程序的开发环�
 
 对于更多信息，请参见 CUDA Toolkit。
 
-#### NVIDIA cuDNN
+## NVIDIA cuDNN
 
 NVIDIA cuDNN 库是用于深度神经网络的原始语 GPU 加速库。cuDNN 为标准程序提供了高度调过的实现，例如正向和反向卷积、池化、归一化和激活层。表 3-8 显示了支持的 NVIDIA cuDNN。
 
-表 3-8 支持的 NVIDIA cuDNN
+**表 3-8 支持的 NVIDIA cuDNN**
 
 | IBM PowerAI | 最小 | 推荐 | NVIDIA cuDNN | 运行时库 |
 |---|---|---|---|---|
@@ -1067,14 +1016,9 @@ NVIDIA cuDNN 库是用于深度神经网络的原始语 GPU 加速库。cuDNN �
 | V1.3.2 | | | | Power (Deb) 的 cuDNN v5.1 代码示例和用户指南 |
 | V1.3.3 | | | | |
 | V1.4.0 | 版本 | 6.0.20 | | 用于 Ubuntu 16.04 POWER8 (Deb) 的 cuDNN v6.0 运行时库 |
-
-
-
-
-
-| IBM PowerAI | NVIDIA cuDNN | |
-|---|---|---|
-| 最小 | 推荐 | 运行时库 |
+| IBM PowerAI | NVIDIA cuDNN | | | |
+|---|---|---|---|
+| 最小 | 推荐 | 运行时库 | |
 | V1.5.0 for POWER8 | 版本 7.0 | 7.0.4 | |
 | V1.5.0 for POWER9 | | 7.0.5 | |
 
@@ -1095,11 +1039,11 @@ cuDNN 加速了广泛使用的 DL 框架，包括 Caffe2、TensorFlow 和 Theano
 
 NVIDIA 驱动程序是帮助操作系统访问 NVIDIA GPU 所有能力的软件。这些驱动程序由 NVIDIA 提供，由于 NVIDIA 的专有策略，它们并不是 IBM PowerAI 发行版的一部分。
 
-## NVIDIA 驱动程序下载
+### NVIDIA 驱动程序下载
 
 要下载合适的驱动程序（见第 45 页表 3-9），请完成以下步骤：
 
-- 1. 转到 NVIDIA。
+1. 转到 NVIDIA。
 2. 选择 DRIVERS（驱动程序）。
 3. 从下拉菜单中选择 ALL NVIDIA DRIVERS（所有 NVIDIA 驱动程序）。
 4. 选择手动查找我的 NVIDIA 查找驱动程序：
@@ -1109,7 +1053,7 @@ NVIDIA 驱动程序是帮助操作系统访问 NVIDIA GPU 所有能力的软件�
    d. 操作系统：选择所有操作系统，然后根据您的操作系统选择 Linux POWER8 Ubuntu 16.04 或 Linux POWER8 RHEL。
 5. 选择适用于您的 IBM PowerAI 版本的 CUDA 版本，并将语言设置为英语，点击 Search（搜索）。然后，您将进入一个网页，可以在那里下载驱动程序并阅读一些建议和发布说明。
 
-## 表 3-9 支持的 NVIDIA 驱动程序
+**表 3-9 支持的 NVIDIA 驱动程序**
 
 | IBM PowerAI | NVIDIA 驱动程序 最小 | 推荐 |
 |---|---|---|
@@ -1128,17 +1072,17 @@ IBM 提供了一系列库、框架和若干种定制内容，通过一个方便�
 
 表 3-10 显示了 IBM PowerAI DL 程序包。
 
-## 表 3-10 IBM PowerAI DL 程序包
+**表 3-10 IBM PowerAI DL 程序包**
 
 | PowerAI | IBM PowerAI DL 包 |
 |---|---|
-| V1.3.0 | mdl1-repo-local-1-31bm2_ppc64e.deb |
-| V1.3.1 | mdl1-repo-local-1-31bm5_ppc64e.deb |
-| V1.3.2 | mdl1-repo-local-1-31bm7_ppc64e.deb |
-| V1.3.3 | mdl1-repo-local-3_3_0_ppc64e.deb |
-| V1.3.4 | mdl1-repo-local-3_4_1_ppc64e.deb<br>mdl1-repo-local-3_4_2_ppc64e.deb |
-| V1.4.0 | mdl1-repo-local-4_0_0_ppc64e.deb |
-| V1.5.0 | mdl1-repo-local-cuda9.0-5.0-.ppc64e.rpm |
+| V1.3.0 | `mdl1-repo-local-1-31bm2_ppc64e.deb` |
+| V1.3.1 | `mdl1-repo-local-1-31bm5_ppc64e.deb` |
+| V1.3.2 | `mdl1-repo-local-1-31bm7_ppc64e.deb` |
+| V1.3.3 | `mdl1-repo-local-3_3_0_ppc64e.deb` |
+| V1.3.4 | `mdl1-repo-local-3_4_1_ppc64e.deb`<br>`mdl1-repo-local-3_4_2_ppc64e.deb` |
+| V1.4.0 | `mdl1-repo-local-4_0_0_ppc64e.deb` |
+| V1.5.0 | `mdl1-repo-local-cuda9.0-5.0-.ppc64e.rpm` |
 
 IBM PowerAI DL 程序包的主仓库位于 Ubuntu 归档中。
 
@@ -1146,38 +1090,38 @@ IBM PowerAI DL 程序包的主仓库位于 Ubuntu 归档中。
 
 IBM PowerAI 元包中包含了一些库，它们是表 3-11 所示解决方案的一部分。尽管这些许多库并非所有场景下都会使用，但它们是 IBM PowerAI 正常运行的前提。每个 IBM PowerAI 发行版都包含该版本框架所需的库和版本。
 
-表 3-11 包含的额外库
+**表 3-11 包含的额外库**
 
 | IBM PowerAI | OpenBLAS | NVIDIA 通信库 | Bazel | OpenMPI |
 | --- | --- | --- | --- | --- |
 | V1.3.0 | N/A | N/A | N/A | N/A |
-| V1.3.1 | IBM PowerAI 分布式包的一部分 | 版本 1 | | | |
-| V1.3.2 | | | IBM PowerAI 分布式包的一部分 | | |
-| V1.3.3 | | | | | |
-| V1.3.4 | | | | | |
-| V1.4.0 | | | | IBM PowerAI 的 | |
+| V1.3.1 | IBM PowerAI 分布式包的一部分 | 版本 1 | | |
+| V1.3.2 | | | IBM PowerAI 分布式包的一部分 | |
+| V1.3.3 | | | | |
+| V1.3.4 | | | | |
+| V1.4.0 | | | | IBM PowerAI 的 |
 | V1.5.0 | | | IBM PowerAI 的 | |
 
 a. IBM PowerAI 发布版包含了该框架所需的库和版本。
 b. IBM PowerAI 发布版包含了该框架所需的库和版本。
 
-#### OpenBLAS
+### OpenBLAS
 
 IBM PowerAI 元包中包含了一些库，它们是表 3-11 所示解决方案的一部分。尽管这些许多库并非所有场景下都会使用，但它们是 IBM PowerAI 正常运行的前提。每个 IBM PowerAI 发行版都包含该版本框架所需的库和版本。
 
-#### NVIDIA Communications Library
+### NVIDIA Communications Library
 
 NVIDIA 通信库（NCCL）实现了多 GPU 和多节点通信原语，如 all-gather、all-reduce、broadcast 和 reduce-scatter，这些原语在 PCIe 和 NVLink 上进行了优化。
 
 注意：此库通常读作 "nickel"。
 
-#### Bazel
+### Bazel
 
 Bazel 是一种能够快速可靠地构建代码的工具。支持构建的任务包括运行编译器和链接器以及组合部署包。
 
 Bazel 是 Google 用于构建软件的工具。
 
-#### OpenMPI
+### OpenMPI
 
 OpenMPI 是消息传递接口 (MPI) 项目，结合了来自以下领域的技术和资源：
 
@@ -1194,10 +1138,12 @@ OpenMPI 代码三个主要模块：
 - ORTE：开放运行时（后端支持）
 - OPAL：开放访问层（OMPI 和 ORTE 使用的工具和胶水代码）
 
-在安装 IBM Caffe 或 TensorFlow 的分布式深度学习 (DDL) 算子之前，卸载任何 openmpi 或 libopenmpi 包。运行以下命令清除任何配置文件以避免干扰：
+在安装 IBM Caffe 或 TensorFlow 的分布式深度学习 (DDL) 算子之前，卸载任何 `openmpi` 或 `libopenmpi` 包。运行以下命令清除任何配置文件以避免干扰：
 
+```
 $ dpkg -l | grep openmpi
 $ sudo apt-get purge
+```
 
 ## 3.1.9 框架
 
@@ -1207,13 +1153,9 @@ IBM Power 提供了一个易于部署和设置的单一框架，包含了常用�
 
 Caffe 是一个具有表现力、速度和模块化的框架。它由伯克利人工智能研究院 (BAIR)、伯克利视觉与学习中心 (BLVC) 和社区贡献者开发。
 
-
-
-
-
 Yangqing Jia⁷ 在于加州大学伯克利分校攻读博士期间创建了该项目。Caffe 根据 BSD 2-Clause许可证发布。表 3-12 显示了适用于 IBM PowerAI 的 Caffe BVLC 版本。
 
-## 表 3-12 Caffe 视觉与学习中心版本
+**表 3-12 Caffe 视觉与学习中心版本**
 
 | IBM PowerAI | Berkeley Vision and Learning Center 上游 Caffe |
 |---|---|
@@ -1236,11 +1178,11 @@ Yangqing Jia⁷ 在于加州大学伯克利分校攻读博士期间创建了该�
 
 更多信息，请参见 Caffe Berkeley Vision。
 
-## IBM 优化的 Berkeley Vision and Learning Center Caffe
+### IBM 优化的 Berkeley Vision and Learning Center Caffe
 
 IBM Caffe 是 BVLC/Caffe 的变体，并针对支持 NVLink 的 IBM Power Systems进行了优化。表 3-13 显示了与 IBM PowerAI 使用的 Caffe 版本。
 
-## 表 3-13 IBM Caffe 版本
+**表 3-13 IBM Caffe 版本**
 
 | IBM PowerAI 版本 | IBM 优化的 Berkeley Vision and Learning Center Rc3 |
 |---|---|
@@ -1254,71 +1196,59 @@ IBM Caffe 是 BVLC/Caffe 的变体，并针对支持 NVLink 的 IBM Power System
 | V1.5.0 for POWER9 | 不包含在 IBM PowerAI V1.5 for P9 ESP 中 |
 
 > ⁸ http://dapperfs.com/
-用于封装 Caffe 模型信息的标准包，外带有向 GitHub Gists 上传/下载模型信息的工具，以及下载 .caffemodel 二进制文件的工具。
+
+用于封装 Caffe 模型信息的标准包，外带有向 GitHub Gists 上传/下载模型信息的工具，以及下载 `.caffemodel` 二进制文件的工具。
 
 48 IBM PowerAI：在 IBM Power 系统服务器上释放深度学习潜力
 
 除了 BVLC Caffe 提供的所有功能和能力外，IBM 优化的 BVLC Caffe 还提供了额外优势：
 
 - 此编译版本由 IBM Power 系统工程师优化，专为在 Power Systems上运行，因此对 POWER 处理器进行了高度优化。
-
 - 作为与 NVIDIA 合作的一部分，此编译版本针对 NVIDIA GPU 也进行了优化（包括 NVCAaffe 包含的许多优化）。
-
 - 包含对大模型支持 (LMS)。
 
 更多信息，请参阅 GitHub - open-power-ref-design/deep-learning。
 
-## NVIDIA 的 Caffe 分支
+### NVIDIA 的 Caffe 分支
 
 NVIDIA Caffe 是由 NVIDIA 维护的 BVLC Caffe 分支，针对 NVIDIA GPU 调整，特别是在多 GPU 配置下。表 3-14 显示了适用于 IBM PowerAI 的 NVIDIA Caffe 版本。
 
-## 表 3-14 NVIDIA Caffe 版本
+**表 3-14 NVIDIA Caffe 版本**
 
 | IBM PowerAI 版本 | Caffe 的 NVIDIA 分支 | | |
 |---|---|---|---|
-| V1.3.0 | 备用 | 默认 |
+| V1.3.0 | 备用 | 默认 | |
 | | V0.14.15 | | |
 | V1.3.1 | | | |
 | | V0.15.13 | | |
 | V1.3.2 | | | |
 | V1.3.3 | | | |
-| V1.3.4 | | V0.15.14 |
-| V1.4.0 | | V0.15.14 |
+| V1.3.4 | | V0.15.14 | |
+| V1.4.0 | | V0.15.14 | |
 | V1.5.0 | 已弃，不再是 IBM PowerAI 的 | | |
 
 以下是主要特性：
 
 - 支持 16 位（半精度）浮点训练和推理。
-
 - 混合精度支持，可以 64 位、32 位或 16 位格式存储和计算数据。可以为每一层定义精度（前向和反向传播可能不同），也可以为整个网络设置精度。
-
 - 与 cuDNN v6 集成。
-
 - 自动选择最佳的 cuDNN 卷积算法。
-
 - 与 NCCL 库版本 1.3.4 集成，以提高多 GPU 扩展。
-
 - 针对数据和参数存储、I/O 缓冲区以及卷积层工作空间优化的 GPU 内存管理。
-
 - 并行数据解析器和转换器，提高 I/O 性能。
-
 - 多 GPU 系统上的并行反向传播和梯度归约。
-
 - 使用融合 CUDA 内核（fused CUDA kernels）进行权重和历史更新的快速求解器。
-
 - 多 GPU 测试阶段，在多个 GPU 之间实现内存负载均衡。
-
 - 兼容早期版本的 BVLC Caffe 和 Caffe 0.15。
-
 - 扩展的优化模型集（包括 16 位浮点示例）。
 
 更多信息，请参阅 GitHub - NVIDIA/Caffe: 一个快速的深度学习开放框架。
 
-## Theano
+### Theano
 
 Theano 是一个 Python 库，你可以它高效地定义、优化和评估涉及多维数组的数学表达式。计算使用类似于 NumPy 的语法表示，并被编译为在 CPU 或 GPU 架构上高效运行。
 
-## 表 3-15 IBM PowerAI 支持的 Theano 版本。
+**表 3-15 IBM PowerAI 支持的 Theano 版本**
 
 | IBM PowerAI 版本 | Theano |
 |---|---|
@@ -1332,11 +1262,11 @@ Theano 是一个 Python 库，你可以它高效地定义、优化和评估涉�
 
 更多信息，请参阅 GitHub - Theano 和 Torch。
 
-## Torch
+### Torch
 
 Torch 是一个开源机器学习库、科学计算框架以及基于 Lua 语言的编程语言。通过 LuaJIT 提供了深度学习算法。
 
-## 表 3-16 IBM PowerAI 支持的 Torch 版本。
+**表 3-16 IBM PowerAI 支持的 Torch 版本**
 
 | IBM PowerAI 版本 | Torch |
 |---|---|
@@ -1350,26 +1280,23 @@ Torch 是一个开源机器学习库、科学计算框架以及基于 Lua 语言
 
 > 7 https://www.lua.org/
 
-Torch 是深度学习 系统的支持。
+Torch 是深度学习系统的支持。
 
-## Deep Learning System
+### Deep Learning System
 
 深度学习系统 (DIGITS) 提供了一个用于训练神经网络的工具，可以通过 Web 浏览器进行访问。表 3-17 显示了适用于 PowerAI 的 DIGITS。
 
-## 表 3-17 深度学习系统版本
+**表 3-17 深度学习系统版本**
 
 | IBM PowerAI 版本 | DIGITS |
 |---|---|
 | V1.3.0 | N/A |
 | V1.3.1 | Version 5.0.0-rc.1ᵃ |
 | V1.3.2 | |
-| V1.3.3 | |
-| V1.3.4 | Version 5.0.0ᵇ |
-| V1.4.0 | |
-| V1.5.0 | 深度的 |
 
-ᵃ. digits 与 python-socket 软件包冲突。在安装 DIGITS 前请卸载 python-socket 软件包。
-ᵇ. digits 与 python-socket 软件包冲突。在安装 DIGITS 前请卸载 python-socket 软件包。
+
+
+# DIGITS 与深度学习框架
 
 DIGITS 能够轻松可视化网络并快速比较准确率。在训练完成期间，DIGITS 显示训练状态和准确率。
 
@@ -1380,39 +1307,46 @@ Caffe 和 Torch 都用于 DIGITS 的图像分类。表 3-18 显示了 Torch + DI
 | IBM PowerAI 版本 | 前提条件 |
 |---|---|
 | V1.3.0 | N/A |
-| V1.3.1 | libhdf5-serial-dev libmdb-dev |
+| V1.3.1 | `libhdf5-serial-dev libmdb-dev` |
 | V1.3.2 | (+ extra luarocks)ᵃ |
 | V1.3.3 | |
 | V1.3.4 | N/A |
 | V1.4.0 | |
 | V1.5.0 | |
 
-ᵃ. 使用 Torch DIGITS 需要 IBM PowerAI 3.1 发行版未包含的额外包。参见第 52 页的步骤1-3。
+ᵃ. 使用 Torch DIGITS 需要 IBM PowerAI 3.1 发行版未包含的额外包。参见第 52 页的步骤 1-3。
 
 要让 Torch 工作，请完成以下步骤：
 
 1. 安装 IBM PowerAI Torch 和 DIGITS 软件包：
-   `$ sudo apt-get install digits torch`
+
+   ```
+   $ sudo apt-get install digits torch
+   ```
+
 2. 安装 Ubuntu 的前提包：
-   `$ sudo apt-get install libhdf5-serial-dev liblmdb-dev`
+
+   ```
+   $ sudo apt-get install libhdf5-serial-dev liblmdb-dev
+   ```
+
 3. 安装 DIGITS 支持所需的额外库：
-   `$ source /opt/DL/torch/bin/activate`
-   `$ luarocks install --local --dep-mode=order tds`
-   `$ luarocks install --local --dep-mode=order totem`
-   `$ luarocks install --local --dep-mode=order="https://raw.github.com/deepmind/torch-hdf5/hdf5-0-0.roc kspec"`
-   `$ luarocks install --local --dep-mode=order="https://raw.github.com/Neopallium/lua-pb-master/lua-pb-scm-0-r kspec"`
-   `$ luarocks install --local --dep-mode=order lightningdb 0.98.1-1 LMDB_INDIR=/usr/include/LMDB_LIDIR=/usr/lib/powerpc64le-linux-gnu`
-   `$ luarocks install --local --dep-mode=order`
-   `"https://raw.githubusercontent.com/ngimmel/ncl.torch/master/ncl-scm-1.rockspec`
 
-
-
-
+   ```
+   $ source /opt/DL/torch/bin/activate
+   $ luarocks install --local --dep-mode=order tds
+   $ luarocks install --local --dep-mode=order totem
+   $ luarocks install --local --dep-mode=order="https://raw.github.com/deepmind/torch-hdf5/hdf5-0-0.roc kspec"
+   $ luarocks install --local --dep-mode=order="https://raw.github.com/Neopallium/lua-pb-master/lua-pb-scm-0-r kspec"
+   $ luarocks install --local --dep-mode=order lightningdb 0.98.1-1 LMDB_INDIR=/usr/include/LMDB_LIDIR=/usr/lib/powerpc64le-linux-gnu
+   $ luarocks install --local --dep-mode=order
+   "https://raw.githubusercontent.com/ngimmel/ncl.torch/master/ncl-scm-1.rockspec
+   ```
 
 ## 表 3-19 TensorFlow 版本
 
 | IBM PowerAI 版本 | TensorFlow 替代方案 | ddl-tensorflow 推荐 |
-|---|---|---||
+|---|---|---|
 | V1.3.0 | N/A | |
 | V1.3.1 | 版本 0.9.0 | |
 | V1.3.2 | 版本 0.12.0 | N/A |
@@ -1425,11 +1359,11 @@ Caffe 和 Torch 都用于 DIGITS 的图像分类。表 3-18 显示了 Torch + DI
 
 此版本的 IBM PowerAI 包含了 TensorFlow DDL 自定义算子的技术预览。DDL 自定义算子使用 CUDA 感知的 OpenMPI 和 NCCL 为分布式 TensorFlow 提供高速通信。
 
-在 `ddl-tensorflow` 包中可以找到 DDL 自定义算子。有关 DDL 和 TensorFlow 算子的更多信息，请参考以下文件：
+在`ddl-tensorflow`包中可以找到 DDL 自定义算子。有关 DDL 和 TensorFlow 算子的更多信息，请参考以下文件：
 
-- /opt/DDL/ddl/doc/README.md
-- /opt/DDL/ddl-tensorflow/doc/README.md
-- /opt/DDL/ddl-tensorflow/doc/README-API.md
+- `/opt/DDL/ddl/doc/README.md`
+- `/opt/DDL/ddl-tensorflow/doc/README.md`
+- `/opt/DDL/ddl-tensorflow/doc/README-API.md`
 
 TensorFlow 算子可以轻松启用 Slim 风格的模型用于分布式。该包包含了使用 DDL 启用的 Slim 模型示例，您可以通过运行以下命令访问它们：
 
@@ -1484,7 +1418,7 @@ Chainer 采用“运行即定义”（Define-by-Run）方案，例如，网络�
 
 本节介绍了其他软件及其功能。
 
-## Python
+### Python
 
 Python 是扩展性最好的编程语言之一，也是深度学习领域使用最广泛的语言。IBM PowerAI 中包含的大多数框架都支持 Python（以及一些额外的编程语言，如 C 和 Java）。
 
@@ -1492,7 +1426,7 @@ Python 是扩展性最好的编程语言之一，也是深度学习领域使用�
 
 更多信息，请参阅 Python。
 
-## Anaconda
+### Anaconda
 
 从 IBM PowerAI V1.5 开始，以 Red Hat Enterprise Linux 作为操作系统，需要 Anaconda 来分发、更新和安装软件。Anaconda 是 Fedora、Red Hat Enterprise Linux 以及其他其他发行版使用的程序。在安装期间，会识别并配置目标计算机的硬件，并为系统架构创建适当的文件系统。Anaconda 允许用户在目标计算机上安装操作系统。安装完成后，您可以重启系统并继续使用初始设置。
 
@@ -1500,7 +1434,7 @@ Anaconda 是一个复杂的安装程序，支持从本地和远程源（如 CD�
 
 从 IBM PowerAI V1.5 开始，使用 TensorFlow 和 Caffe 框架时需要 Anaconda。
 
-## 表 3-21 用于 IBM PowerAI 的 Anaconda 版本。
+## 表 3-21 用于 IBM PowerAI 的 Anaconda 版本
 
 | PowerAI 版本 | Anaconda |
 |---|---|
@@ -1516,7 +1450,7 @@ Anaconda 是一个复杂的安装程序，支持从本地和远程源（如 CD�
 
 更多信息，请参阅 Fedora Project 上的 Anaconda。
 
-## IBM PowerAI 分布式深度学习
+### IBM PowerAI 分布式深度学习
 
 许多时候，需要处理的数据量超过了单台服务器的容量。在其他情况下，通过在服务器集群之间分配任务，可能会缩短训练时间。
 
@@ -1532,7 +1466,7 @@ IBM PowerAI 的独特之处在于，它作为集成二进制包含在深度学�
 
 更多信息，请参阅 Deep Learning Development。
 
-## 大模型支持
+### 大模型支持
 
 由于模型变得越来越复杂且数据集增大，深度学习负载变得更大。在许多情况下，数据集的大小超过了 GPU 内存，导致这些工作负载无法在这些系统中进行分析。
 
@@ -1552,7 +1486,7 @@ LMS 使用系统内存来克服深度训练中的 GPU 内存限制。
 
 从 V14.0 开始的 IBM PowerAI 包含了 IBM Caffe 中的 LMS 技术支持。
 
-## IBM Spectrum MPI
+### IBM Spectrum MPI
 
 IBM Spectrum MPI 是一种高性能、生产级的 MPI 实现，可加速分布式计算环境中的应用程序性能。IBM Spectrum MPI 基于 OpenMPI，提供了易于迁移的接口。IBM Spectrum MPI 集成了先进的 CPU 亲和性特性、接口库选择、卓越的工作调度器集成和性能提升，以及支持 NVIDIA GPU 的改进 RDMA 网络。IBM Spectrum MPI 支持广泛的行业平台、互连和操作系统，确保并行应用程序可以在多个平台上运行。
 
@@ -1570,23 +1504,20 @@ IBM Spectrum MPI 提供了许多功能：
 
 更多信息，请参阅 IBM Spectrum MPI。
 
-
-
-
 表 3-22 汇总了本节中描述的所有额外软件和功能。
 
-表 3-22 额外软件
+## 表 3-22 额外软件
 
 | IBM PowerAI 版本 | Python | IBM PowerAI DDL | LMS | IBM Spectrum MPI |
-|---|---|---|---|---|---|
+|---|---|---|---|---|
 | V1.3.0 | 版本 2 | N/A | N/A | N/A |
-| V1.3.1 | | | | | |
-| V1.3.2 | | | | | |
-| V1.3.3 | | | | | |
-| V1.3.4 | | | | | |
-| V1.4.0 | | 技术预览 | 技术预览 | | | |
-| 用于 POWER8 的 V1.5.0 | | | | | 10.1 |
-| 用于 POWER9 的 V1.5.0 | | | | | 10.2 |
+| V1.3.1 | | | | |
+| V1.3.2 | | | | |
+| V1.3.3 | | | | |
+| V1.3.4 | | | | |
+| V1.4.0 | | 技术预览 | 技术预览 | |
+| 用于 POWER8 的 V1.5.0 | | | | 10.1 |
+| 用于 POWER9 的 V1.5.0 | | | | 10.2 |
 
 ## 3.2 IBM PowerAI 兼容性矩阵
 
@@ -1595,22 +1526,22 @@ IBM Spectrum MPI 提供了许多功能：
 | | PowerAI 发布 | R 3.0 | R 3.1 | R 3.2 | R 3.3 | R 3.4 | R 4.0 | R 5.0 | |
 |---|---|---|---|---|---|---|---|---|---|
 | 硬件 | | | | | | | | | AC9322 |
-| | Ubuntu | | | | | Power 上的 Ubuntu 16.04 | | 4.4 | 不支持 |
-| Linux | Linux 内核（无内核） | | N/A | N/A | >= 2.6-ubuntu5 | | | | |
+| | Ubuntu | | | | Power 上的 Ubuntu 16.04 | | 4.4 | 不支持 |
+| Linux | Linux 内核（无内核） | | N/A | N/A | >= 2.6-ubuntu5 | | | |
 | | 额外包 | | | | 不支持 | 不支持 | | 用于 PBS 的 RHEL 7.4 | 用于 PBS 的 RHEL 7.4 |
-| | NVIDIA CUDA 工具链 | 最小推荐 | | | | >= 8.0.4 | | | | |
+| | NVIDIA CUDA 工具链 | 最小推荐 | | | | >= 8.0.4 | | | |
 | NVIDIA 组件 | NVIDIA cuDNN | | >= 8.0.4 | | v5.1 | 8.0.1 | v6.0 | 9.017 | 9.185 |
 | | NVIDIA 驱动 | 最小推荐 | | >= 361.93 | | >= 361.11 | 361.121 | 384.66 | 384.81 | 387.36 |
-| 库 | | | | | | | | | | | |
+| 库 | | | | | | | | | |
 | | OpenSSL | | | | | | PowerAI 的一部分 | PowerAI 的一部分 |
 | | IBM PowerAI 深度学习包 | 1-dbmn2 | 1-dbmn5 | 1-dbmn7 | 3.3 | 3.4.1 | 4.0 | | 5.0 |
-| IBM 优化版 TensorFlow | | | | | | v1.0.0 | | 不包含 | | |
-| 伯克利视觉与学习中心 (BVLC) | | | | | v1.0.3 | v1.0.4 | v1.0.5 | v1.0.6 | | | |
-| PowerAI 分支的 Caffe | | | | v1.5.13 (默认) | v1.5.14 (默认) | v1.5.14 | | | | |
-| 框架 | theano | | | | v6.0 | v8.0 | | | | |
-| | Google TensorFlow | | | v0.9.0 | v1.2.0 | v1.0.0 | v1.5.0 | v1.1.0 | 技术预览 | | |
-| | (DGL) | | | v5.0.0-min | | v1.20.1 | v1.20.3 | N/A | 0.4 | | |
-| | Chainer | | | | libvmf-dev | | | N/A | | |
+| IBM 优化版 TensorFlow | | | | | | v1.0.0 | | 不包含 | |
+| 伯克利视觉与学习中心 (BVLC) | | | | | v1.0.3 | v1.0.4 | v1.0.5 | v1.0.6 | | |
+| PowerAI 分支的 Caffe | | | | v1.5.13 (默认) | v1.5.14 (默认) | v1.5.14 | | | |
+| 框架 | theano | | | | v6.0 | v8.0 | | | |
+| | Google TensorFlow | | | v0.9.0 | v1.2.0 | v1.0.0 | v1.5.0 | v1.1.0 | 技术预览 | |
+| | (DGL) | | | v5.0.0-min | | v1.20.1 | v1.20.3 | N/A | 0.4 | |
+| | Chainer | | | | libvmf-dev | | | N/A | |
 | | Torch + Digits 的前提条件 | | | | additional | | | | |
 | | Python | | | | v2 | 技术预览 | | | |
 | | IBM PowerAI 分布式深度学习大模型 (anaconda) | | | | | | 技术预览 | | |
@@ -1621,7 +1552,7 @@ IBM Spectrum MPI 提供了许多功能：
 
 58 IBM PowerAI: IBM Power Systems 深度学习
 
-## 部署 IBM PowerAI
+# 部署 IBM PowerAI
 
 本章包含了在 IBM PowerAI 内部设置和测试不同框架的指南。本章主要面向部署和支持 IBM PowerAI 的系统管理员。
 
@@ -1632,7 +1563,9 @@ IBM Spectrum MPI 提供了许多功能：
 - 测试 IBM PowerAI V1.4
 - 在 POWER822SC 服务器上设置 IBM PowerAI V1.5.0
 
-![](img/f6f95c5defc8b3406a94a86bd202807_72_0)## 4.1 IBM PowerAI V1.4 安装指南
+
+
+## 4.1 IBM PowerAI V1.4 安装指南
 
 本章包含关于设置 IBM PowerAI V1.4 的信息。
 
@@ -1658,34 +1591,34 @@ IBM Spectrum MPI 提供了许多功能：
 
 本节介绍了要下载的安装包。
 
-### Ubuntu 安装媒体
+##### Ubuntu 安装媒体
 
 Ubuntu 安装媒体如下：
 
-- Ubuntu 16.04.x ISO 文件 (ubuntu-16.04.3-server-ppc64.iso)
+- Ubuntu 16.04.x ISO 文件 (`ubuntu-16.04.3-server-ppc64.iso`)
 - Ubuntu 16.04.3 LTS (Xenial Xerus)
 
 下载文件，请参见 Ubuntu 16.04.3 LTS (Xenial Xerus)。
 
-## IBM Power System S822LC 高性能服务器更新
+##### IBM Power System S822LC 高性能服务器更新
 
 作为推荐做法，请在 IBM Fix 检查 S822LC 高性能服务器的固件更新。
 
-### NVIDIA 设备驱动程序
+##### NVIDIA 设备驱动程序
 
 NVIDIA Tesla P100 设备驱动程序可以从 NVIDIA 下载。下载驱动程序时，选择第 94 页“安装 NVIDIA 驱动程序和组件”所述的适当版本，如图 4-1 所示。
 
-![](img/f6f95c5defc8b3406a94a86bd202807_74_0) 图 4-1 NVIDIA 驱动程序下载选项
+![图 4-1 NVIDIA 驱动程序下载选项](img/f6f95c5defc8b3406a94a86bd202807_74_0)
 
 图 4-2 显示了 POWER8 上的 Tesla 下载窗口。
 
-![](img/f6f95c5defc8b3406a94a86bd202807_74_1) 图 4-2 NVIDIA 驱动程序下载网页
+![图 4-2 NVIDIA 驱动程序下载网页](img/f6f95c5defc8b3406a94a86bd202807_74_1)
 
-## IBM PowerAI
+##### IBM PowerAI
 
-IBM PowerAI 深度学习 (DL) 包可以从 /software/server/POWER/Linux/ubuntu 索引下载。
+IBM PowerAI 深度学习 (DL) 包可以从 `/software/server/POWER/Linux/ubuntu` 索引下载。
 
-# NVIDIA 组件
+##### NVIDIA 组件
 
 本节显示了要下载的额外组件：
 
@@ -1702,19 +1635,21 @@ IBM PowerAI 深度学习 (DL) 包可以从 /software/server/POWER/Linux/ubuntu �
 
 本节介绍了 S822LC 高性能服务器的初始设置。
 
-### 配置管理处理器 IP
+#### 配置管理处理器 IP
 
 本节描述了配置处理器 IP 的步骤：
 
 1. 将 S822LC 高性能服务器背部的 VGA 端口连接到显示器和 USB 键盘，如图 4-3 所示。
 
-![](img/f6f95c5defc8b3406a94a86bd202807_75_0) 图 4-3 VGA 和 USB 连接端口 提示：处理器的 IP 地址默认设置为 DHCP。因此，如果通过 DHCP 分配了 IP 地址，必须进入 Petitboot shell 进行更改。
+![图 4-3 VGA 和 USB 连接端口](img/f6f95c5defc8b3406a94a86bd202807_75_0)
+
+提示：处理器的 IP 地址默认设置为 DHCP。因此，如果通过 DHCP 分配了 IP 地址，必须进入 Petitboot shell 进行更改。
 
 4. 使用 `itmitool` 命令检查或更改分配给处理器的网络设置：
-[content]
-itmitool 
 
-
+```
+itmitool
+```
 
 5. 将 IP 地址更改为静态：
 
@@ -1743,22 +1678,18 @@ itmitool
 ```
 
 9. 系统断开后，拔掉两个电源线，并在 30 秒后重新连接电源线。
-
 10. 将电源设置为开启。
-
-11. 使用设置的 IP 地址，通过浏览器连接到 https://IP_ADDRESS 来确认可以访问 BMC。
+11. 使用设置的 IP 地址，通过浏览器连接到 `https://IP_ADDRESS` 来确认可以访问 BMC。
 
 图 4-6 显示了用于高性能计算的 IBM Power System S822LC 的 BMC/IPMI 以太网端口。
 
-![](img/f6f95c5defc8b3406a94a86b8d202807_77_0.png)
+![图 4-6 BMC/IPMI 以太网端口（高性能计算 IBM Power System S822LC 后面板）](img/f6f95c5defc8b3406a94a86b8d202807_77_0.png)
 
-图 4-6 BMC/IPMI 以太网端口（高性能计算 IBM Power System S822LC 后面板）
-
-## 如何访问基本管理控制器
+#### 如何访问基本管理控制器
 
 要访问 BMC，请完成以下步骤：
 
-- 1. 使用您的浏览器连接到 https://IP_ADDRESS。
+1. 使用您的浏览器连接到 `https://IP_ADDRESS`。
 
 第 65 页的图 4-7 显示了 BMC 登录窗口。
 
@@ -1766,75 +1697,67 @@ itmitool
 
 64 IBM PowerAI: 在 IBM Power 服务器上释放深度学习
 
-## BMC 高级系统管理
+#### BMC 高级系统管理
 
-![](img/f6f95c5defc8b3406a94a86b8d202807_78_0.png)
+![图 4-7 BMC 登录窗口](img/f6f95c5defc8b3406a94a86b8d202807_78_0.png)
 
-### 4-7 BMC 登录窗口
+2. 使用以下值登录系统（这些是默认值）：
 
-- 2. 使用以下值登录系统（这些是默认值）：
-    - 用户名：ADMIN
-    - 密码：admin
+- 用户名：`ADMIN`
+- 密码：`admin`
 
 3. 访问远程 Java 控制台：
-    - 选择远程控制（Remote Control），然后选择控制台重定向（Console Redirection），如图 4-8 所示。
 
-![](img/f6f95c5defc8b3406a94a86b8d202807_78_1.png)
+a. 选择远程控制（Remote Control），然后选择控制台重定向（Console Redirection），如图 4-8 所示。
 
-### 4-8 启用控制台重定向
+![图 4-8 启用控制台重定向](img/f6f95c5defc8b3406a94a86b8d202807_78_1.png)
 
 b. 选择 Java 控制台（Java Console），如图 4-9 所示。
 
-![](img/f6f95c5defc8b3406a94a86b8d202807_79_0.png)
-
-图 4-9 打开 Java 控制台
+![图 4-9 打开 Java 控制台](img/f6f95c5defc8b3406a94a86b8d202807_79_0.png)
 
 c. 接受 Java 查看器对话框。
+
 Java 应用程序启动并打开控制台窗口，如图 4-10 所示。
 
-![](img/f6f95c5defc8b3406a94a86b8d202807_79_1.png)
+![图 4-10 Java 控制台示例](img/f6f95c5defc8b3406a94a86b8d202807_79_1.png)
 
-图 4-10 Java 控制台示例
-
-## 4.1.4 安装 Ubuntu 16.04.x
+### 4.1.4 安装 Ubuntu 16.04.x
 
 本节详细介绍了 Ubuntu 16.04.x 的安装详细信息。
 
-## 挂载虚拟介质（作为 CD/DVD 的 .iso 文件）
+#### 挂载虚拟介质（作为 CD/DVD 的 .iso 文件）
 
 本节描述了如何挂载虚拟介质。请完成以下步骤：
 
-- 1. 在 Java 控制台应用程序菜单中，选择媒体（Media）→ 虚拟介质向导（Virtual Media Wizard），如图 4-11 所示。
+1. 在 Java 控制台应用程序菜单中，选择媒体（Media）→ 虚拟介质向导（Virtual Media Wizard），如图 4-11 所示。
 
-![](img/f6f95c5defc8b3406a94a86b8d202807_80_0.png)
+![图 4-11 虚拟介质向导](img/f6f95c5defc8b3406a94a86b8d202807_80_0.png)
 
-- 2. 在访问计算机上，选择之前下载的 .iso 文件（第 60 页的“Downloads”）并分配为 CD/DVD：
-    a. 点击浏览 CD/DVD 介质：1，如图 4-12 所示。
+2. 在访问计算机上，选择之前下载的 `.iso` 文件（第 60 页的“Downloads”）并分配为 CD/DVD：
 
-![](img/f6f95c5defc8b3406a94a86b8d202807_80_1.png)
+a. 点击浏览 CD/DVD 介质：1，如图 4-12 所示。
 
-    b. 点击打开（Open）并选择一个文件。
+![图 4-12 浏览 CD/DVD 介质](img/f6f95c5defc8b3406a94a86b8d202807_80_1.png)
 
-- 3. 选择 CD/DVD，如图 4-13 所示。
+b. 点击打开（Open）并选择一个文件。
 
-![](img/f6f95c5defc8b3406a94a86b8d202807_81_0.png)
+3. 选择 CD/DVD，如图 4-13 所示。
 
-图 4-13 点击 CD/DVD
+![图 4-13 点击 CD/DVD](img/f6f95c5defc8b3406a94a86b8d202807_81_0.png)
 
-- 4. 点击关闭（Close）结束挂载。
+4. 点击关闭（Close）结束挂载。
 
-## 安装 Ubuntu 16.04
+#### 安装 Ubuntu 16.04
 
 本节描述了安装 Ubuntu 16.04 的步骤：
 
-- 使用控制台右上角的红色图标或电源选项（Power On Server）启动服务器。
-- 系统启动并出现预启动（Preboot）菜单。选择 Ubuntu 安装媒体，如图 4-14 所示。
+1. 使用控制台右上角的红色图标或电源选项（Power On Server）启动服务器。
+2. 系统启动并出现预启动（Preboot）菜单。选择 Ubuntu 安装媒体，如图 4-14 所示。
 
-![](img/f6f95c5defc8b3406a94a86b8d202807_81_1.png)
+![图 4-14 预启动菜单](img/f6f95c5defc8b3406a94a86b8d202807_81_1.png)
 
-图 4-14 预启动菜单
-
-- 3. 点击安装 Ubuntu Server，如图 4-15 所示。
+3. 点击安装 Ubuntu Server，如图 4-15 所示。
 
 ```
 [CD/DVD]: /dev/s0
@@ -1854,15 +1777,15 @@ Java 应用程序启动并打开控制台窗口，如图 4-10 所示。
 
 图 4-15 安装 Ubuntu Server
 
-- 4 此过程适用于 Ubuntu 16.04 和 16.04。点击并选择内核（kernel），如图 4-16 所示。
+4. 此过程适用于 Ubuntu 16.04 和 16.04。点击并选择内核（kernel），如图 4-16 所示。
 
 | 设备 | (*) sr0 |
 | :--- | :--- |
 | 手动指定路径 | |
-| 内核 | /install/linux |
-| Initrd | /initrd.gz |
+| 内核 | `/install/linux` |
+| Initrd | `/initrd.gz` |
 | 设备树 | |
-| 启动参数 | file=/cdrom/preseed/ubuntu-server.seed quiet |
+| 启动参数 | `file=/cdrom/preseed/ubuntu-server.seed quiet` |
 | | [ 完成 ] [ 帮助 ] [ 取消 ] |
 
 图 4-16 选择内核
@@ -1871,7 +1794,7 @@ Java 应用程序启动并打开控制台窗口，如图 4-10 所示。
 
 注意：除了普通内核，Ubuntu 安装媒体还可以使用硬件启用（HWE）。
 
-- 5. 在语言选择中点击 English（英语），如图 4-17 所示。
+5. 在语言选择中点击 English（英语），如图 4-17 所示。
 
 | --- 选择语言 --- |
 | :--- |
@@ -1881,28 +1804,24 @@ Java 应用程序启动并打开控制台窗口，如图 4-10 所示。
 
 图 4-17 选择语言
 
-- 6. 选择您偏好的位置。选择普通内核，而不是 hwe-vmlin。
+6. 选择您偏好的位置。选择普通内核，而不是 `hwe-vmlin`。
+7. 配置系统区域语言，如图 4-18 所示。
 
-- 7. 配置系统区域语言，如图 4-18 所示。
+![图 4-18 选择区域语言](img/f6f95c5defc8b3406a94a86b8d202807_83_0.png)
 
-![](img/f6f95c5defc8b3406a94a86b8d202807_83_0.png)
+注意：为了避免与 IBM PowerAI 部署的某些区域语言设置冲突，请选择 United States - `en_US_UTF-8` 或其他 UTF-8 作为默认区域语言。
 
-图 4-18 选择区域语言
+8. 设置键盘：
 
-注意：为了避免与 IBM PowerAI 部署的某些区域语言设置冲突，请选择 United States - en_US_UTF-8 或其他 UTF-8 作为默认区域语言。
+a. 当询问 **Detect Keyboard layout** 时，点击 No（否），如图 4-19 所示。
 
-- 8. 设置键盘：
-    a. 当询问 **Detect Keyboard layout** 时，点击 No（否），如图 4-19 所示。
+![图 4-19 自动选择键盘](img/f6f95c5defc8b3406a94a86b8d202807_83_1.png)
 
-![](img/f6f95c5defc8b3406a94a86b8d202807_83_1.png)
-
-图 4-19 自动选择键盘
-
-    b. 在键盘布局中，选择您偏好的键盘，如第 71 页的图 4-20 所示。
+b. 在键盘布局中，选择您偏好的键盘，如第 71 页的图 4-20 所示。
 
 70 IBM PowerAI: 在 IBM Power 服务器上释放深度学习
 
-## 配置键盘
+#### 配置键盘
 
 布局随国家而异，某些国家有多种常用布局。请选择此计算机键盘的来源。
 
@@ -1923,7 +1842,7 @@ Java 应用程序启动并打开控制台窗口，如图 4-10 所示。
 
 图 4-21 显示键盘选择。
 
-## 配置键盘
+#### 配置键盘
 
 请选择与机器匹配的布局。
 
@@ -1941,11 +1860,11 @@ Java 应用程序启动并打开控制台窗口，如图 4-10 所示。
 
 第 4 章 部署 IBM PowerAI 71
 
-## 网络设置
+#### 网络设置
 
 本节描述了配置网络设置的步骤：
 
-- 1. 选择设置为主网络的网络接口，如图 4-22 所示。
+1. 选择设置为主网络的网络接口，如图 4-22 所示。
 
 ```
 ### !!! 配置网络
@@ -1966,7 +1885,7 @@ en4s00f3: Broadcom NetXtreme 57800 1/10 Gigab
 
 图 4-22 选择主网络接口
 
-- 2. 如果网络中没有 DHCP 服务器，则配置接口。显示如第 73 页图 4-24 所示的消息。手动继续配置网络。
+2. 如果网络中没有 DHCP 服务器，则配置接口。显示如第 73 页图 4-24 所示的消息。手动继续配置网络。
 
 ```
 ### !!! 配置网络
@@ -1979,65 +1898,45 @@ DHCP 服务器可能慢或某些网络硬件未正常工作
 
 图 4-23 不存在 DHCP 服务器
 
-- 3. 开始手动网络设置，如第 73 页的图 4-24 所示。
+3. 开始手动网络设置，如第 73 页的图 4-24 所示。
 
 如果存在 DHCP 服务器，在选择网络接口后，主网络设置将自动完成。
 
-
-
-
-
-![](img/f6f95c5defc8b3406a94a86b8d202807_86_0.png)
-
-**图 4-24** 手动配置网络
+![图 4-24 手动配置网络](img/f6f95c5defc8b3406a94a86b8d202807_86_0.png)
 
 4. 配置 IP 地址，如图 4-25 所示。
 
-![](img/f6f95c5defc8b3406a94a86b8d202807_86_1.png)
-
-**图 4-25** 配置 IP
+![图 4-25 配置 IP](img/f6f95c5defc8b3406a94a86b8d202807_86_1.png)
 
 5. 配置子网掩码，如图 4-26 所示。
 
-![](img/f6f95c5defc8b3406a94a86b8d202807_87_0.png)
-
-**图 4-26** 配置默认网关，如图 4-27 所示。
+![图 4-26 配置默认网关](img/f6f95c5defc8b3406a94a86b8d202807_87_0.png)
 
 6. 配置默认网关，如图 4-27 所示。
 
-![](img/f6f95c5defc8b3406a94a86b8d202807_87_1.png)
-
-**图 4-27** 配置默认网关，如图 4-28 所示。
+![图 4-27 配置默认网关](img/f6f95c5defc8b3406a94a86b8d202807_87_1.png)
 
 7. 配置名称服务器 (DNS)，如图 4-28 所示。
 
-![](img/f6f95c5defc8b3406a94a86b8d202807_87_2.png)
+![图 4-28 配置名称服务器](img/f6f95c5defc8b3406a94a86b8d202807_87_2.png)
 
-**图 4-28** 配置名称服务器，如图第75 页的图 4-29 所示。
+8. 选择一个名称，如图第 75 页的图 4-29 所示。
 
-8. 选择一个名称，如图第75 页的图 4-29 所示。
+![图 4-29 选择域名](img/f6f95c5defc8b3406a94a86b8d202807_88_0.png)
 
-![](img/f6f95c5defc8b3406a94a86b8d202807_88_0.png)
+9. 配置域名，如图 4-30 所示。
 
-图 4-29 选择域名
+![图 4-30 配置域名](img/f6f95c5defc8b3406a94a86b8d202807_88_1.png)
 
-- 9. 配置域名，如图 4-30 所示。
-
-![](img/f6f95c5defc8b3406a94a86b8d202807_88_1.png)
-
-图 4-30 配置域名
-
-## 创建默认用户
+#### 创建默认用户
 
 本节解释了如何创建默认用户：
 
-- 1. 设置新用户的全名和用户名，如图 4-31 所示。
+1. 设置新用户的全名和用户名，如图 4-31 所示。
 
-![](img/f6f95c5defc8b3406a94a86b8d202807_88_2.png)
+![图 4-31 为默认用户提供全名](img/f6f95c5defc8b3406a94a86b8d202807_88_2.png)
 
-图 4-31 为默认用户提供全名
-
-* 第 4 章 部署 IBM PowerAI 75
+第 4 章 部署 IBM PowerAI 75
 
 图 4-32 显示了为该账户设置默认用户名。
 
@@ -2045,7 +1944,7 @@ DHCP 服务器可能慢或某些网络硬件未正常工作
 | :--- |
 | 为新账户选择用户名。使用您的名字是一个合理的选择。用户名应该以小写字母开头，后面可以是任意数字和小写字母的组合。 |
 | 您的账户的用户名： |
-| user0 |
+| `user0` |
 | <上一步> <继续> |
 
 图 4-32 为默认用户选择用户名
@@ -2056,7 +1955,7 @@ DHCP 服务器可能慢或某些网络硬件未正常工作
 | :--- |
 | 一个良好的密码应包含字母、数字和标点符号的混合，并应定期更改。 |
 | 为新用户选择密码： |
-| ***** |
+| `*****` |
 | <上一步> <继续> |
 
 图 4-43 重新输入密码
@@ -2067,17 +1966,17 @@ DHCP 服务器可能慢或某些网络硬件未正常工作
 | :--- |
 | 请再次输入相同的用户密码以验证您的输入是否正确。 |
 | 重新输入密码以验证： |
-| | |
+| |
 | [ ] 明文密码 |
 | <上一步> <继续> |
 
 图 4-34 确认密码
 
-3. 您可以选择为此用户加密 $HOME，但在本示例中我们选择不加密它，如图第77 页的图 4-35 所示。
+3. 您可以选择为此用户加密 `$HOME`，但在本示例中我们选择不加密它，如图第 77 页的图 4-35 所示。
 
 76 IBM PowerAI: 在 IBM Power 服务器上释放深度学习
 
-## [!] 设置用户和密码
+#### [!] 设置用户和密码
 
 您可以对您的主目录进行加密配置，这样即使电脑被盗，存储在其中的任何文件也能保持私密。
 
@@ -2089,19 +1988,21 @@ DHCP 服务器可能慢或某些网络硬件未正常工作
 <上一步>                <是> []
 ```
 
-图 4-35 $HOME 目录加密
+图 4-35 `$HOME` 目录加密
 
-## 为 RAID 阵列准备磁盘
+#### 为 RAID 阵列准备磁盘
+
+
 
 由于板载 SATA 适配器不提供任何硬件 RAID 功能，可以采取以下步骤配置软件 RAID。虽然软件 RAID 不是 IBM PowerAI 的要求，但它是缓解本地磁盘故障的首选方法。创建 RAID 设备对于安装 IBM PowerAI 不是强制的，但由于如果 RAID 阵列部分的 SSD 或硬盘发生故障，它可以提供高可用性 (HA)。
 
 更多信息，请参阅 Ubuntu wiki。
 
-如果您选择不定义 RAID 设备，请继续查看第86 页的图 4-55。
+如果您选择不定义 RAID 设备，请继续查看第 86 页的图 4-55。
 
 完成以下步骤：
 
-- 1. 选择“手动”作为分区方法，如图 4-36 所示。
+1. 选择“手动”作为分区方法，如图 4-36 所示。
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_90_0.png)
 
@@ -2115,12 +2016,15 @@ DHCP 服务器可能慢或某些网络硬件未正常工作
 - 引导式 - 使用整个磁盘并设置 LVM
 - 引导式 - 使用整个磁盘并设置 LVM
 - 引导式 - 使用整个磁盘并设置 LVM
-```Manual
-<上一步>```
+
+```
+Manual
+<上一步>
+```
 
 图 4-36 选择分区方法
 
-- 2. 初始化设备的分区表。
+2. 初始化设备的分区表。
 
 3. 为显示的每个磁盘创建一个空分区表：
 
@@ -2137,7 +2041,7 @@ DHCP 服务器可能慢或某些网络硬件未正常工作
 
 图 4-38 设备的分区表确认。
 
-4. 检查每个磁盘的容量均为可用空间，如图第79 页的图 4-39 所示。
+4. 检查每个磁盘的容量均为可用空间，如图第 79 页的图 4-39 所示。
 
 这是配置分区和挂载点的概述。选择一个分区来配置设置。
 
@@ -2162,11 +2066,11 @@ DHCP 服务器可能慢或某些网络硬件未正常工作
 
 本节解释了如何创建 PRP 分区。
 
-> 注意：PRP 是一个原始且较小的（8 MB 分区），仅携带阶段1 二进制文件。
+> 注意：PRP 是一个原始且较小的（8 MB 分区），仅携带阶段 1 二进制文件。
 
 执行以下步骤：
 
-- 选择 sda 的可用空间分区，如图 4-40 所示。
+1. 选择 sda 的可用空间分区，如图 4-40 所示。
 
 这是配置分区和挂载点的概述。选择一个分区来配置设置。
 
@@ -2207,13 +2111,13 @@ DHCP 服务器可能慢或某些网络硬件未正常工作
 
 图 4-43 新分区的位置
 
-5. 定义分区文件系统，如图第81 页的图 4-44 所示。然后，将新分区用途设置为 IBM PowerPC® PRReP 启动分区，⁷⁷如如图第81 页的图 4-45 所示。
+5. 定义分区文件系统，如图第 81 页的图 4-44 所示。然后，将新分区用途设置为 IBM PowerPC® PRReP 启动分区，⁷⁷如如图第 81 页的图 4-45 所示。
 
-> 7 PRReP 是一个原始且较小的（8 MB 分区），仅携带阶段1 二进制文件。
+> 7 PRReP 是一个原始且较小的（8 MB 分区），仅携带阶段 1 二进制文件。
 
 80 IBM PowerAI: 在 IBM Power 服务器上释放深度学习
 
-### ### !!! 分区
+### !!! 分区
 
 您正在编辑 SCSI (0,0,0) (sda) 的 #1 分区。在此分区未检测到现有文件系统。
 
@@ -2238,22 +2142,18 @@ DHCP 服务器可能慢或某些网络硬件未正常工作
 如何使用此分区：
 
 - 将分区作为 PowerPC PReP 启动分区
-Ext4 日志文件系统
-Ext3 日志文件系统
-Ext2 文件系统
-extfs 日志文件系统
-JFS 日志文件系统
-XFS 日志文件系统
-FAT16 文件系统
-FAT32 文件系统
-交换区域
-预留 BIOS 启动区域
-物理加密卷
-物理 RAID卷
-
-
-
-
+- Ext4 日志文件系统
+- Ext3 日志文件系统
+- Ext2 文件系统
+- extfs 日志文件系统
+- JFS 日志文件系统
+- XFS 日志文件系统
+- FAT16 文件系统
+- FAT32 文件系统
+- 交换区域
+- 预留 BIOS 启动区域
+- 物理加密卷
+- 物理 RAID 卷
 
 6. 点击设置分区，如图 4-46 所示。
 
@@ -2274,7 +2174,7 @@ FAT32 文件系统
 
 本节将介绍如何创建 RAID1 阵列配置：
 
-- 1. 选择配置软件 RAID，如图 4-47 所示。
+1. 选择配置软件 RAID，如图 4-47 所示。
 
 | [!] 分区磁盘 |
 | :--- |
@@ -2292,7 +2192,7 @@ FAT32 文件系统
 
 图 4-47 配置软件 RAID
 
-- 2. 确认你正在使用 sda 和 sdb 并点击“是”，如第 83 页的图 4-48 所示。
+2. 确认你正在使用 sda 和 sdb 并点击“是”，如第 83 页的图 4-48 所示。
 
 ### !!! 分区磁盘
 
@@ -2301,6 +2201,7 @@ FAT32 文件系统
 当配置 RAID 时，不允许对包含物理卷的磁盘中的分区进行任何额外更改。请确保你对这些磁盘中的当前分区方案感到满意。
 
 以下设备的分区表将发生更改：
+
 SCSI1 (0,0,0) (sda)
 SCSI2 (0,0,0) (sdb)
 
@@ -2310,7 +2211,7 @@ SCSI2 (0,0,0) (sdb)
 
 图 4-48 确认设备选择
 
-- 3. 选择创建 MD,8，如图 4-49 所示。
+3. 选择创建 MD,8，如图 4-49 所示。
 
 ### !!! 分区磁盘
 
@@ -2334,33 +2235,33 @@ SCSI2 (0,0,0) (sdb)
 
 该名称源于构成 RAID 的多设备 (MD) 设备节点。
 
-- 4. 选择 RAID1 作为要使用的 RAID 阵列级别，如图 4-50 所示。
+4. 选择 RAID1 作为要使用的 RAID 阵列级别，如图 4-50 所示。
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_97_0.png)
 
 图 4-50 选择（输入）2 作为要使用的镜像数量，如图 4-51 所示。
 
-- 5. 指定（输入）2 作为要使用的镜像数量，如图 4-51 所示。
+5. 指定（输入）2 作为要使用的镜像数量，如图 4-51 所示。
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_97_1.png)
 
 图 4-51 定义镜像数量
 
-- 6. 指定（输入）0，因为没有热备驱动，如图 4-52 所示。
+6. 指定（输入）0，因为没有热备驱动，如图 4-52 所示。
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_97_2.png)
 
 图 4-52 将备用设备数量设置为无
 
-- 7. 选择 /dev/sda 和 /dev/sdb 中的所有空闲空间并点击“继续”，如 85 页的图 4-53 所示。
+7. 选择 /dev/sda 和 /dev/sdb 中的所有空闲空间并点击“继续”，如 85 页的图 4-53 所示。
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_98_0.png)
 
-- 8. 应用更改，如图 4-54 所示。
+8. 应用更改，如图 4-54 所示。
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_98_1)
 
-- 9. 点击“完成”完成 RAID 配置，如图 4-55 所示。
+9. 点击“完成”完成 RAID 配置，如图 4-55 所示。
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_99_0)
 
@@ -2370,19 +2271,13 @@ SCSI2 (0,0,0) (sdb)
 
 本节介绍了如何为操作系统分区 RAID 阵列：
 
-- 1. 选择引导式分区，如图 4-56 所示。
-
-- 2. 选择使用整个磁盘并设置 LVM，如 87 页的图 4-57 所示。
-
-- 3. 选择 RAID1 #0 作为要使用的设备，如图 4-58 所示。
-
-- 4. 点击“是”以配置卷组，如图 4-59 所示。
-
-- 5. 指定卷组的大小，如图 4-60 所示。
-
-- 6. 点击“完成”分区并将更改写入磁盘，如图 4-61 所示。
-
-- 7. 检查要创建的 LV 或分区并点击“是”，如第 89 页的图 4-62 所示。
+1. 选择引导式分区，如图 4-56 所示。
+2. 选择使用整个磁盘并设置 LVM，如 87 页的图 4-57 所示。
+3. 选择 RAID1 #0 作为要使用的设备，如图 4-58 所示。
+4. 点击“是”以配置卷组，如图 4-59 所示。
+5. 指定卷组的大小，如图 4-60 所示。
+6. 点击“完成”分区并将更改写入磁盘，如图 4-61 所示。
+7. 检查要创建的 LV 或分区并点击“是”，如第 89 页的图 4-62 所示。
 
 ## 安装操作系统软件包
 
@@ -2390,10 +2285,7 @@ SCSI2 (0,0,0) (sdb)
 
 完成以下步骤：
 
-- 1. 设置 HTTP 代理，如图 4-63 所示。
-
-
-
+1. 设置 HTTP 代理，如图 4-63 所示。
 
 2. 配置自动更新，如图 4-64 所示。
 
@@ -2445,11 +2337,16 @@ SCSI2 (0,0,0) (sdb)
 
 完成以下步骤：
 
-- 1. 以安装时创建的用户身份登录。
-- 2. 如必要，设置其他网络适配器。提供如下示例配置：
-   $ sudo vi /etc/network/interfaces
-   auto enP3p3s0f1
-   iface enP3p3s0f1 static
+1. 以安装时创建的用户身份登录。
+
+2. 如必要，设置其他网络适配器。提供如下示例配置：
+
+```
+$ sudo vi /etc/network/interfaces
+
+auto enP3p3s0f1
+iface enP3p3s0f1 static
+```
 
 第 4 章 部署 IBM PowerAI 91
 
@@ -2466,32 +2363,59 @@ auto enP3p3sf2
 iface enP3p3sf1 inet dhcp
 ```
 
-- 3. 更新包列表：
-    - 如果有可用互联网连接，运行以下命令从默认操作系统存储库更新：
-        sudo apt-get update
-    - 如果没有互联网连接，使用 DVD 镜像创建本地存储库并更新列表：
-        i. 使用远程控制虚拟媒体挂载 DVD ISO 镜像。
-        ii. 在 /etc/fstab 中添加以下条并挂载它：
-            /dev/sr0 /media/cdrom iso 9660 0 0
-        iii. 运行命令并将 DVD 添加到存储库：
-            sudo apt-cdrom -d /media/cdrom add 0
-        iv. 更新包列表：
-            sudo apt-get update
+3. 更新包列表：
+
+- 如果有可用互联网连接，运行以下命令从默认操作系统存储库更新：
+
+```
+sudo apt-get update
+```
+
+- 如果没有互联网连接，使用 DVD 镜像创建本地存储库并更新列表：
+
+i. 使用远程控制虚拟媒体挂载 DVD ISO 镜像。
+
+ii. 在 /etc/fstab 中添加以下条并挂载它：
+
+```
+/dev/sr0 /media/cdrom iso 9660 0 0
+```
+
+iii. 运行命令并将 DVD 添加到存储库：
+
+```
+sudo apt-cdrom -d /media/cdrom add 0
+```
+
+iv. 更新包列表：
+
+```
+sudo apt-get update
+```
 
 安装软件包。例如，安装 OpenSSH：
+
+```
 sudo apt-get install openssh-server
+```
 
 ## 设置启动设备
 
 本节描述了如何如下所示设置 /dev/sdb 中的启动设备：
 
-- 1. 在 /dev/sdb 中指定 PowerPC PReP 启动类型
-   sudo fdisk /dev/sdb
-   欢迎使用 fdisk (util-linux 2.27.1)。
-   更改将保留在内存中，直到您决定写入它们。
-   在使用 write 命令前请小心。
+1. 在 /dev/sdb 中指定 PowerPC PReP 启动类型
 
-   命令 (m 可获取帮助): p
+```
+sudo fdisk /dev/sdb
+```
+
+欢迎使用 fdisk (util-linux 2.27.1)。
+
+更改将保留在内存中，直到您决定写入它们。
+
+在使用 write 命令前请小心。
+
+命令 (m 可获取帮助): p
 
 ```
 Disk /dev/sdb: 931.5 GiB, 1000204886016 bytes, 195325168 sectors
@@ -2505,35 +2429,44 @@ Device Start End Sectors Size Type
 /dev/sdb 2 16384 195 23 71 195 30 7 32 8 931.5 G Linux RAID
 ```
 
-   命令 (m 可获取帮助): t
+命令 (m 可获取帮助): t
 
-   分区编号 (1, 2, 默认): 1
-   十六进制代码 (输入 L 列出所有代码): 7
+分区编号 (1, 2, 默认): 1
+
+十六进制代码 (输入 L 列出所有代码): 7
 
 已将分区 'Linux filesystem' 类型更改为 'PowerPC PReP boot'.
 
-   命令 (m 可获取帮助): p
-   /dev/sdb: 931.5 GiB, 100024886016 bytes, 1953525168 sectors
-   Units: sector 1 * 512 = 512 bytes
-   Size (logical / physical): 512 bytes / 512 bytes
-   I / O size (minimum / optimal): 512 bytes / 512 bytes
-   Disklabel type: gpt
-   Disk identifier: FADB8551-1006-4D21-8BB2-2D0EF-1689-3
-   Device Start End Sectors Size Type
-   /dev/sdb 1 1028 163336 7 M PowerPC PReP boot
-   /dev/sdb 2 16384 195 23 71 195 30 7 32 8 931.5 G Linux RAID
+命令 (m 可获取帮助): p
 
-   命令 (m 可获取帮助): w
+```
+/dev/sdb: 931.5 GiB, 100024886016 bytes, 1953525168 sectors
+Units: sector 1 * 512 = 512 bytes
+Size (logical / physical): 512 bytes / 512 bytes
+I / O size (minimum / optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: FADB8551-1006-4D21-8BB2-2D0EF-1689-3
+Device Start End Sectors Size Type
+/dev/sdb 1 1028 163336 7 M PowerPC PReP boot
+/dev/sdb 2 16384 195 23 71 195 30 7 32 8 931.5 G Linux RAID
+```
 
+命令 (m 可获取帮助): w
 
-
-
+```
 redbooks@pts153:~/downloads sudo apt dpkg -i cuda-repo-ubuntu1604-8.0-local-gav2_8.0.61-1_ppc64el.deb
+```
+
 正在选择尚未发布的包 cuda-repo-ubuntu1604-8.0-local-gav2。
+
 (读取数据库 ... 当前安装了 57530 个文件和目录。)
+
 准备安装 cuda-repo-ubuntu1604-8.0-local-gav2_8.0.61-1.ppc64el.deb
+
 写入 cuda-repo-ubuntu1604-8.0-local-gav2 (8.0.61-1)
+
 正在设置 cuda-repo-ubuntu1604-8.0-local-gav2 (8.0.61-1)
+
 OK
 
 图 4-89 *安装 CUDA*
@@ -2544,38 +2477,67 @@ c. 重新同步软件包索引文件，如图 4-70 所示：
 $ sudo apt-get update
 ```
 
+```
 redbooks@pts153:~/downloads sudo apt-get update
+```
+
 获取:1: file:/var/cuda-repo-ubuntu-8.0-local-gav2 InRelease
-忽略: 1: file:/var/cuda-repo-ubuntu-8.0-local-gav2 InRelease
-获取: 2: file:/var/cuda-repo-ubuntu-8.0-local-gav2 Release [54 B]
-获取: 2: file:/var/cuda-repo-ubuntu-8.0-local-gav2 Release [54 B]
-获取: 3: file:/var/cuda-repo-ubuntu-8.0-local-gav2 Release [219 B]
-获取: 3: file:/var/cuda-repo-ubuntu-8.0-local-gav2 Release [219 B]
-获取: 4: http://ports.ubuntu.com/ubuntu-ports xenial-security InRelease [102 kB]
-获取: 5: file:/var/cuda-repo-ubuntu-8.0-local-gav2 Packages [10.8 KB]
-命中: 6: http://ports.ubuntu.com/ubuntu-ports xenial InRelease [102 kB]
-命中: 7: http://ports.ubuntu.com/ubuntu-ports xenial-security/universe ppc64el Packages [146 kB]
-命中: 8: http://ports.ubuntu.com/ubuntu-ports xenial-updates InRelease [102 kB]
-获取: 9: http://ports.ubuntu.com/ubuntu-ports xenial-backports InRelease [102 kB]
+
+
+
+忽略: 1: `file:/var/cuda-repo-ubuntu-8.0-local-gav2 InRelease`
+
+获取: 2: `file:/var/cuda-repo-ubuntu-8.0-local-gav2 Release` [54 B]
+
+获取: 2: `file:/var/cuda-repo-ubuntu-8.0-local-gav2 Release` [54 B]
+
+获取: 3: `file:/var/cuda-repo-ubuntu-8.0-local-gav2 Release` [219 B]
+
+获取: 3: `file:/var/cuda-repo-ubuntu-8.0-local-gav2 Release` [219 B]
+
+获取: 4: `http://ports.ubuntu.com/ubuntu-ports xenial-security InRelease` [102 kB]
+
+获取: 5: `file:/var/cuda-repo-ubuntu-8.0-local-gav2 Packages` [10.8 KB]
+
+命中: 6: `http://ports.ubuntu.com/ubuntu-ports xenial InRelease` [102 kB]
+
+命中: 7: `http://ports.ubuntu.com/ubuntu-ports xenial-security/universe ppc64el Packages` [146 kB]
+
+命中: 8: `http://ports.ubuntu.com/ubuntu-ports xenial-updates InRelease` [102 kB]
+
+获取: 9: `http://ports.ubuntu.com/ubuntu-ports xenial-backports InRelease` [102 kB]
+
 在 1 秒内获取了 9 个文件 (86 kB kBed)
+
 读取软件包列表... 完成。
 
-图 4-70 apt-get update 输出示例
+图 4-70 `apt-get update` 输出示例
 
 +   d. 安装 CUDA 工具：
-   $ sudo apt-get install cuda
+
+```
+$ sudo apt-get install cuda
+```
+
 e. 导出路径到 CUDA 库：
-   $ export PATH=/usr/local/cuda-8.0/bin:$PATH:$PATH
-   $ export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH:$LD_LIBRARY_PATH
-f. 在系统启动时设置 PATH 变量定义。向 /etc/bash.bashrc 中添加以下两行：
-      PATH=/usr/local/cuda-8.0/bin:$PATH:$PATH
-      LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH
+
+```
+$ export PATH=/usr/local/cuda-8.0/bin:$PATH:$PATH
+$ export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH:$LD_LIBRARY_PATH
+```
+
+f. 在系统启动时设置 `PATH` 变量定义。向 `/etc/bash.bashrc` 中添加以下两行：
+
+```
+PATH=/usr/local/cuda-8.0/bin:$PATH:$PATH
+LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH
+```
 
 > 提示：此步骤是可选的，但更好，因为 IBM PowerAI 不会为每次登录导出这些变量。
 
 第 4 章 部署 IBM PowerAI 95
 
-g. 使用 dpkg 工具安装 cuDNN 库，如图 4-71 所示：
+g. 使用 `dpkg` 工具安装 cuDNN 库，如图 4-71 所示：
 
 ```
 $ sudo dpkg -i libcudnn*
@@ -2600,10 +2562,13 @@ redbook@pts153:~/downloads sudo dpkg -i libcudnn*
 
 > 注意：CUDA 和 cuDNN 库包含过时的 NVIDIA 驱动程序。出于性能和支持考虑，请安装当前版本。第 43 页的 3-7 显示了每个 IBM PowerAI 的 NVIDIA 驱动程序的最低和推荐级别。
 
-3. 安装 NVIDIA 驱动程序：
+## 3. 安装 NVIDIA 驱动程序
 
 +   a. 解压驱动安装文件，如图 4-72 所示：
-   $ sudo dpkg -l nvidia-driver-local-repo-ubuntu1604-384.81.1.0-1_ppc64el.deb
+
+```
+$ sudo dpkg -l nvidia-driver-local-repo-ubuntu1604-384.81.1.0-1_ppc64el.deb
+```
 
 ```
 redbook@pts153:~/downloads sudo dpkg -l nvidia-driver-local-repo-ubuntu1604-384.81.1.0-1_ppc64el.deb
@@ -2616,33 +2581,57 @@ redbook@pts153:~/downloads sudo dpkg -l nvidia-driver-local-repo-ubuntu1604-384.
 图 4-72 解压 NVIDIA 驱动程序
 
 +   b. 从源重新同步软件包索引文件：
+
 c. 安装驱动：
-   $ sudo apt-get install cuda-drivers
+
+```
+$ sudo apt-get install cuda-drivers
+```
+
 d. 重启：
-   $ sudo reboot
-i. 检查 PATH 变量是否已设置且组件已安装：
-   i. 运行 NVIDIA 编译器：
-   $ nvcc -V
+
+```
+$ sudo reboot
+```
+
+i. 检查 `PATH` 变量是否已设置且组件已安装：
+
+i. 运行 NVIDIA 编译器：
+
+```
+$ nvcc -V
+```
+
+```
 nvcc: NVIDIA (R) CUDA compiler (2005) Built Jan 10 13:28, release 8.0
-ii. 系统重启后，运行 nvidia-smi 查看 GPU 状态，如图 4-73 所示：
-   $ nvidia-smi
+```
+
+ii. 系统重启后，运行 `nvidia-smi` 查看 GPU 状态，如图 4-73 所示：
+
+```
+$ nvidia-smi
+```
 
 | GPU | Name | Volatility | ECC | Temp | Memory Usage | Util |
-|---|---|---|---|---|---|
-| 0 | | | | | |
+|---|---|---|---|---|---|---|
+| 0 | | | | | | |
 
-图 4-73 nvidia-smi 输出示例
+图 4-73 `nvidia-smi` 输出示例
 
-> 提示：关于 nvidia-smi 命令的完整选项，请查看第 97 页的 PowerAI 手册。
+> 提示：关于 `nvidia-smi` 命令的完整选项，请查看第 97 页的 PowerAI 手册。
 
 | GPU | Name | Volatility | ECC | | |
+|---|---|---|---|---|---|
 
 第 4 章 安装 IBM PowerAI
 
 本节描述了安装 IBM PowerAI：
 
 +   1. 解压 IBM PowerAI，如图 4-74 所示：
-   $ sudo dpkg -i cuda-repo-local
+
+```
+$ sudo dpkg -i cuda-repo-local
+```
 
 ```
 redbooks@pts153:~/downloads sudo dpkg -i cuda-repo-ubuntu1604-8.0-local-gav2_8.0.61-1_ppc64el.deb
@@ -2657,7 +2646,10 @@ OK
 图 4-74 解压 IBM PowerAI
 
 +   2. 从源重新同步软件包索引文件，如图 4-75 所示：
-   $ sudo apt-get update
+
+```
+$ sudo apt-get update
+```
 
 ```
 redbooks@pts153:~/downloads sudo apt-get update
@@ -2680,16 +2672,19 @@ redbooks@pts153:~/downloads sudo apt-get update
 图 4-75 更新软件包信息
 
 +   3. 如果你使用某些框架，还有额外的步骤需要执行：
-   a. 安装 Caffe 和深度学习 (DDL) TensorFlow 自定义优化器
-   caffe-bin 和 ddl-tensorflow 包需要 IBM PowerAI OpenMPI 包，该包带有 NVIDIA CUDA 支持构建。该 OpenMPI 包与 Ubuntu-non-OpenMPI 包冲突。
-   在安装 IBM Caffe 或 DDL 自定义优化器之前，请卸载任何 openmpi 或 libopenmpi 包。
-   $ dpkg -l | grep openmpi
-   $ sudo apt-get purge ...
+
+a. 安装 Caffe 和深度学习 (DDL) TensorFlow 自定义优化器
+
+`caffe-bin` 和 `ddl-tensorflow` 包需要 IBM PowerAI OpenMPI 包，该包带有 NVIDIA CUDA 支持构建。该 OpenMPI 包与 Ubuntu-non-OpenMPI 包冲突。
+
+在安装 IBM Caffe 或 DDL 自定义优化器之前，请卸载任何 `openmpi` 或 `libopenmpi` 包。
+
+```
+$ dpkg -l | grep openmpi
+$ sudo apt-get purge ...
+```
 
 98 IBM PowerAI: Deep Learning Unleashed on IBM Power Systems
-
-
-
 
 b. DIGITS 的安装说明
 
@@ -2702,17 +2697,20 @@ $ sudo apt-get install power-mld
 ```
 
 > 提示：也可以通过运行以下命令安装单个框架而不是整个包：
-$ sudo apt-get install <framework name>
 
-- caffe-bvlc: 伯克利视觉中心 (BVLC) 上游 Caffe V1.0.0
-- caffe-ibm: BVLC Caffe V1.0.0 的优化版本
-- caffe-nv: Caffe V0.15.14 的 NVIDIA 分支
-- chainer: Chainer V1.23.0
-- digits: DIGITS V5.0.0
-- tensorflow: 谷歌 de TensorFlow V1.1.0
-- ddl-tensorflow: 用于 TensorFlow 的 DDL 自定义算子
-- theano: Theano V0.9.0
-- torch: Torch V7
+```
+$ sudo apt-get install <framework name>
+```
+
+- `caffe-bvlc`: 伯克利视觉中心 (BVLC) 上游 Caffe V1.0.0
+- `caffe-ibm`: BVLC Caffe V1.0.0 的优化版本
+- `caffe-nv`: Caffe V0.15.14 的 NVIDIA 分支
+- `chainer`: Chainer V1.23.0
+- `digits`: DIGITS V5.0.0
+- `tensorflow`: 谷歌 de TensorFlow V1.1.0
+- `ddl-tensorflow`: 用于 TensorFlow 的 DDL 自定义算子
+- `theano`: Theano V0.9.0
+- `torch`: Torch V7
 
 IBM PowerAI V4.0 包含的框架包如下：
 
@@ -2736,33 +2734,42 @@ openml
 ...
 ```
 
-# 关于 Python 设置工具和 easy_install 的说明：
+## 关于 Python 设置工具和 easy_install 的说明
 
 Python `easy_install` 软件包可能会干扰某些 IBM PowerAI 框架包（包括 TensorFlow 和 Chainer）的正常运行。
 
 IBM PowerAI 软件包包含了 Python 模块的本地副本，例如 `protobuf` (用于 TensorFlow) 和 `pillow` (用于 Chainer)，因为它们需要的版本比 Canonical 和 Ubuntu 提供的版本更高。`<framework>-activate` 脚本设置了运行所需的路径（设置 `PYTHONPATH` 使本地副本的优先级高于系统默认版本）。
 
-`easy_install` 工具会添加一个脚本，可以使系统路径在 `PYTHONPATH` 条目之前进行搜索，这可能导致 TensorFlow 和 Chainer 中的 protobuf 或 pillow 失败。
+`easy_install` 工具会添加一个脚本，可以使系统路径在 `PYTHONPATH` 条目之前进行搜索，这可能导致 TensorFlow 和 Chainer 中的 `protobuf` 或 `pillow` 失败。
 
-如果 `easy_install` 以 root 身份运行，问题脚本可能位于以下目录：/usr/local/lib/python2.7/dist-packages/easy-install.pth
+如果 `easy_install` 以 root 身份运行，问题脚本可能位于以下目录：`/usr/local/lib/python2.7/dist-packages/easy-install.pth`
 
 ## 优化环境
 
 为了充分发挥系统性能，还需要进行调优工作，在某些情况下，调优取决于所使用的框架：
 
 - 启用调度器 (Governor)：
-- sudo apt-get install linux-tools-common linux-tools-generic cpufreqputils lsb-release
-- sudo cpower -c all frequency-set -g performance
+
+```
+sudo apt-get install linux-tools-common linux-tools-generic cpufreqputils lsb-release
+sudo cpower -c all frequency-set -g performance
+```
 
 - TensorFlow 的 SMT 值：
+
 这是为 TensorFlow 工作负载设置的特定参数。它通过将 SMT 值从默认的 (8) 更改为推荐的 (2) 来降低 CPU 的并行性。
-- sudo apt-get install powerpc-ibm-utils
-- sudo ppc64_cpu --smt=2
+
+```
+sudo apt-get install powerpc-ibm-utils
+sudo ppc64_cpu --smt=2
+```
 
 如果你打算在系统中运行其他工作负载，可能会对这些负载产生负面影响。
 
 - 适用于所有框架的 HW 参数：
+
 - 启用 NVIDIA 驱动持久性模式 (persistence mode)：
+
 这可以防止驱动在运行时挂起，从而消除等待驱动初始化事件时的延迟：
 
 ```
@@ -2775,11 +2782,14 @@ All done.
 ```
 
 - 将 GPU 时钟设置为最优值：
+
+```
 $ sudo nvidia-smi -ac 715,1480
 Applications clocks set to "MEM 715, SM 1480" for GPU 00000002:01:00.00
 Applications clocks set to "MEM 715, SM 1480" for GPU 00000002:03:00.00
 Applications clocks set to "MEM 715, SM 1480" for GPU 00000002:04:00.00
 Applications clocks set to "MEM 715, SM 1480" for GPU 00000002:08:00.00
+```
 
 IBM PowerAI: 在 IBM Power 系统服务器上释放深度学习能力
 
@@ -2787,13 +2797,13 @@ IBM PowerAI: 在 IBM Power 系统服务器上释放深度学习能力
 
 ## 4.2 测试 IBM PowerAI V1.4
 
-在使用机器学习 (ML) 框架之前，必须先 source 框架，以确保它是可用的。如图 76 所示，这种测试可以在 shell 中完成，或者在 ~/.bashrc 中执行。
+在使用机器学习 (ML) 框架之前，必须先 source 框架，以确保它是可用的。如图 76 所示，这种测试可以在 shell 中完成，或者在 `~/.bashrc` 中执行。
 
 ```
 $ source /opt/DL/framework/activate
 ```
 
-对于所有 IBM PowerAI 框架的测试，首先需要 source 框架。通过在 /etc/bash 中执行 `source /opt/DL/framework/activate` 可以确保测试工作正常。然后运行以下命令：
+对于所有 IBM PowerAI 框架的测试，首先需要 source 框架。通过在 `/etc/bash` 中执行 `source /opt/DL/framework/activate` 可以确保测试工作正常。然后运行以下命令：
 
 ```
 $ <framework>-test
@@ -2814,22 +2824,28 @@ $ source /opt/DL/tensorflow/activate
 ```
 $ tensorflow-test
 ```
-tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA
-libtensorflow.so.0.919
-====================================DONE
-```
 
+
+
+`tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA`
+
+`libtensorflow.so.0.919`
+
+====================================DONE
+
+```
 这证明安装是正确的。现在你可以运行一些负载了。
+```
 
 ### 4.2.2 在数据集上使用多层感知机
 
-这种测试需要 source 框架。如图 75 所示，选择了 MNIST 手写数字数据库。
+这种测试需要 `source` 框架。如图 75 所示，选择了 MNIST 手写数字数据库。
 
-# MNIST 数据
+## MNIST 数据
 
 该数据集训练集包含 60,000 个样本，测试集包含 10,000 个样本。它是来自更大数据集的子集。数字被归一化以适应 20x20 的框。由于消除技术，图像包含灰度级。
 
-# 多层感知机
+## 多层感知机
 
 神经网络中最基础且常用的前传播网络是 MLP。MLP 至少由三层节点组成，每个节点是一个非线性激活函数的神经元。MLP 使用监督学习技术进行训练。其多层和非线性可以区分非线性分离的数据。
 
@@ -2841,36 +2857,38 @@ MLP 有时被俗称为原生神经网络，特别是当它们只有一个隐藏�
 
 本节介绍了如何使用 Caffe 处理 MNIST。
 
-- 1. 激活 Caffe：
-2. 使用 IBM PowerAI 包含的示例脚本拷贝 Caffe 示例以测试任何数据集（在本例中为 ./caffe）：
+1. 激活 Caffe：
+2. 使用 IBM PowerAI 包含的示例脚本拷贝 Caffe 示例以测试任何数据集（在本例中为 `./caffe`）：
 3. 下载 MNIST 数据：
 4. 使用 Caffe 将 MNIST 数据转换为 LMDB 格式：
-
 5. 运行训练和测试：
-
-
-
-
 
 ### 4.2.4 使用 TensorFlow 的 Caffe
 
-本节描述了如何结合 TensorFlow 使用 Caffe：10
+本节描述了如何结合 TensorFlow 使用 Caffe：
 
 1. 激活 TensorFlow：
    `$ /opt/DL/tensorflow/bin/tensorflow-activate`
-2. 从 GitHub 下载 TensorFlow并将教程脚本解压到任意目录（
-   `mkdir ~/tensorflow`
-   `git clone https://github.com/tensorflow/tensorflow.git`
-   `cd clone/tensorflow/examples/tutorials/mnist/`)
+2. 从 GitHub 下载 TensorFlow 并将教程脚本解压到任意目录：
+   ```
+   mkdir ~/tensorflow
+   git clone https://github.com/tensorflow/tensorflow.git
+   cd clone/tensorflow/examples/tutorials/mnist/
+   ```
 3. 运行训练和测试：
-   `cd clone/tensorflow/examples/`
-   `$ python mnist_softmax.py`
-   [tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcubas.8.0 locally [tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcudnn.so.8.0 locally [tensorflow/stream_executor/dso_loader.cc:135] Successfully opened CUDA library libcuband.so.1 locally [tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcuband.so.8.0 locally
+   ```
+   cd clone/tensorflow/examples/
+   $ python mnist_softmax.py
+   [tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcubas.8.0 locally
+   [tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcudnn.so.8.0 locally
+   [tensorflow/stream_executor/dso_loader.cc:135] Successfully opened CUDA library libcuband.so.1 locally
+   [tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcuband.so.8.0 locally
    Extracting /tensorflow/mnist/input/data-train-indices-idx3-ubyte.gz
    Extracting /tensorflow/mnist/input/data-train-labels-idx1-ubyte.gz
    Extracting /tensorflow/mnist/input/data/10k-images-idx3-ubyte.gz
    [tensorflow/compiler/xla/service/service.cc:187] StreamExecutor device (2): Tesla P100-SXM2-16GB, Compute Capability 6.0
    [tensorflow/compiler/xla/service/service.cc:187] StreamExecutor device (3): Tesla P100-SXM2-16GB, Compute Capability 6.0
+   ```
 
 ## 4.3 在用于高性能计算的 POWER L822SC 上设置 IBM PowerAI V1.5
 
@@ -2890,7 +2908,7 @@ IBM PowerAI V1.5 为多个深度学习（DL）框架、支持库和工具提供�
   - Bazel
   - TensorBoard
 
-后续 TensorFlow MNIST 教程的测试可以在 https://www.tensorflow.org/tutorials/ 找到。
+后续 TensorFlow MNIST 教程的测试可以在 `https://www.tensorflow.org/tutorials/` 找到。
 
 注意：更多信息请参阅 IBM PowerAI。开发者资源可以在 IBM PowerAI Developer 处找到。
 
@@ -2911,20 +2929,17 @@ IBM PowerAI V1.5 为多个深度学习（DL）框架、支持库和工具提供�
 本节描述如何设置操作系统存储库：
 
 1. 启用可选（optional）和额外（extra）存储库通道：
-
-```
-$ sudo subscription-manager repos --enable=rhel-7-for-power-le-optional-rpms
-$ sudo subscription-manager repos --enable=rhel-7-for-power-le-extras-rpms
-```
-
+   ```
+   $ sudo subscription-manager repos --enable=rhel-7-for-power-le-optional-rpms
+   $ sudo subscription-manager repos --enable=rhel-7-for-power-le-extras-rpms
+   ```
 2. 启用 EPEL 存储库：
+   ```
+   $ wget http://dl.fedaproject.org/pub/epel/epel-release-latest-7.noarch
+   $ sudo rpm -ivh epel-release-latest-7.rpm
+   ```
 
-```
-$ wget http://dl.fedaproject.org/pub/epel/epel-release-latest-7.noarch
-$ sudo rpm -ivh epel-release-latest-7.rpm
-```
-
-# NVIDIA 组件
+## NVIDIA 组件
 
 DL 软件包需要 CUDA、cuDNN 和 GPU 驱动程序。
 
@@ -2945,17 +2960,17 @@ DL 软件包需要 CUDA、cuDNN 和 GPU 驱动程序。
    b. 选择架构：ppc64
    c. 选择发行版：RHEL
    d. 选择适合你的版本
-2. 遵循 IBM PowerAI 快速指南，通过更新 PATH 和 LD_LIBRARY_PATH 设置 CUDA 开发环境。
+2. 遵循 IBM PowerAI 快速指南，通过更新 `PATH` 和 `LD_LIBRARY_PATH` 设置 CUDA 开发环境。
 3. 下载适用于 CUDA 9.0 的 cuDNN 7.4（Linux 库）。
    > 注意：需要注册 NVIDIA 加速计算计划。
 4. 安装 cuDNN V7.0 软件包：
    `sudo tar -C /usr/local --no-owner -xzf cudnn-9.0-linux-ppc64-v7tgz`
 
-Anaconda
+## Anaconda
 
 许多 DL 框架利用 Anaconda。Anaconda 是一种包含 1000 多个补充软件包的平台无关数据科学分发版。
 
-你需要下载并安装 Anaconda。安装需要输入许可协议、安装位置（默认为 $HOME/anaconda2），以及通过编辑 .bashrc 修改 PATH 变量，操作如下：
+你需要下载并安装 Anaconda。安装需要输入许可协议、安装位置（默认为 `$HOME/anaconda2`），以及通过编辑 `.bashrc` 修改 `PATH` 变量，操作如下：
 
 ```bash
 $ wget https://repo.continuum.io/archive/Anaconda2-5.0.0-Linux-ppc64.sh
@@ -2964,12 +2979,12 @@ $ bash Anaconda2-5.0.0-Linux-ppc64.sh
 source .bashrc
 ```
 
-注意：Anaconda2-5.0.0-Linux-ppc64.sh 是一个大文件（283 MB），其 md5 为 157890d591c1a9b51f84527。如果多个用户使用同一系统，每个用户必须单独安装 Anaconda。
+注意：`Anaconda2-5.0.0-Linux-ppc64.sh` 是一个大文件（283 MB），其 md5 为 `157890d591c1a9b51f84527`。如果多个用户使用同一系统，每个用户必须单独安装 Anaconda。
 
 以下适用于 POWER 的 IBM PowerAI V1.5 的特定框架 Anaconda 设置：
 
-- TensorFlow ("tensorflow")
-- TensorBoard ("tensorboard")
+- TensorFlow (`tensorflow`)
+- TensorBoard (`tensorboard`)
 
 这些软件包中的每一个都包含一个 `install_dependencies` 脚本，用于在用户的 Anaconda 环境中安装必要的软件包：
 
@@ -3000,10 +3015,9 @@ PowerAI 深度学习软件包依赖 IBM Spectrum MPI。要安装它，请完成�
    e. 选择 `ibm-smpi-10.1.1-rh7.ppc64.rpm`。
    f. 点击立即下载。
 2. 运行以下命令在系统上安装 RPM：
-
-```
-$ rpm -ihv ibm_smpi_lic-s-10.1-rh7.ppc64.rpm ibm-smpi-10.1.1-rh7.ppc64.rpm
-```
+   ```
+   $ rpm -ihv ibm_smpi_lic-s-10.1-rh7.ppc64.rpm ibm-smpi-10.1.1-rh7.ppc64.rpm
+   ```
 
 #### 软件存储库设置
 
@@ -3017,7 +3031,7 @@ $ sudo rpm -ihv mldl-repo-*
 
 #### 同时安装所有框架
 
-可以使用 power-mldl 元数据包同时安装 DL 框架：
+可以使用 `power-mldl` 元数据包同时安装 DL 框架：
 
 ```
 $ sudo yum install power-mldl-cuda-9.0
@@ -3027,13 +3041,14 @@ $ sudo yum install power-mldl-cuda-9.0
 
 如果你愿意，可以单独安装 DL 框架。以下是框架软件包：
 
-- caffe-bvlc：BVLC 上游版本 V1.0.0
-- caffe-ibmm：IBM 优化的 BVLC V1.0.0
-- tensorflow：用于检查 TensorFlow V1.4.0 的 Google TensorFlow
-- tensorboard：用于检查 TensorFlow 运行和图表的 Web 应用 V0.4.0rc3
-- ddl-tensorflow：用于 TensorFlow 的 DDL 自定义运算符
+- `caffe-bvlc`：BVLC 上游版本 V1.0.0
+- `caffe-ibmm`：IBM 优化的 BVLC V1.0.0
+- `tensorflow`：用于检查 TensorFlow V1.4.0 的 Google TensorFlow
+- `tensorboard`：用于检查 TensorFlow 运行和图表的 Web 应用 V0.4.0rc3
+- `ddl-tensorflow`：用于 TensorFlow 的 DDL 自定义运算符
 
 可以通过运行以下命令安装每一个：
+
 ```
 $ sudo yum install <framework>-cuda9.0
 ```
@@ -3053,7 +3068,6 @@ source /opt/DL/license/bin/accept-powerai.sh
 ```bash
 $ sudo IBM_SPECTR_MPI_LICENSE_ACCEPT=yes
 /opt/ibm/spectrum_mpi/lap_se/bin/accept_spectrum_mpi.sh
-
 sudo IBM_POWERAI_LICENSE_ACCEPT=yes
 /opt/DL/license/bin/accept-powerai.sh
 ```
@@ -3063,19 +3077,19 @@ sudo IBM_POWERAI_LICENSE_ACCEPT=yes
 以下是在用于高性能计算的 Power S822LC 上获得最佳 DL 性能的推荐设置：
 
 - Performance Governor：
-  `$ sudo yum install kernel-tools`
-  `$ sudo cpower -c all frequency-set -g performance`
+  ```
+  $ sudo yum install kernel-tools
+  $ sudo cpower -c all frequency-set -g performance
+  ```
 - GPU 持久模式：
-  `$ sudo systemctl enable nvidia-persisted`
-  `$ sudo systemctl start nvidia-persisted`
+  ```
+  $ sudo systemctl enable nvidia-persisted
+  $ sudo systemctl start nvidia-persisted
+  ```
 - 设置 GPU 显存和图形频率（仅限 P100 GPU）：
   `$ sudo nvidia-smi -ac 715,1480`
 - 对于 TensorFlow，设置 SMT 模式：
   `$ sudo ppc64_cpu --smt=2`
-
-
-
-
 
 ### 4.3.5 开始使用机器学习和深度学习框架
 
@@ -3083,15 +3097,21 @@ sudo IBM_POWERAI_LICENSE_ACCEPT=yes
 
 #### 通用设置
 
-大多数 IBM PowerAI 软件包安装在常规系统路径之外（位于 `/opt/DL...`），因此，每个框架包都提供了一个 shell 脚本来简化环境设置（例如 Path、LD_LIBRARY_PATH、PYTHONPATH）。
+大多数 IBM PowerAI 软件包安装在常规系统路径之外（位于 `/opt/DL...`），因此，每个框架包都提供了一个 shell 脚本来简化环境设置（例如 `Path`、`LD_LIBRARY_PATH`、`PYTHONPATH`）。
 
-更新您的 shell 配置文件（.bashrc）以加载必要的设置脚本。例如：
+更新您的 shell 配置文件（`.bashrc`）以加载必要的设置脚本。例如：
+
+```
 source /opt/DL/<framework>/bin/<framework>-activate
+```
 
 在运行激活脚本时发生的任何错误，都必须在使用框架框架之前予以解决。
 
 每个框架还提供了一个测试脚本来验证基本功能：
+
+```
 $ <framework>-test
+```
 
 #### 依赖项
 
@@ -3100,6 +3120,8 @@ $ <framework>-test
 对于这些框架，在激活之前必须运行 `/opt/<framework>/bin/install_dependencies` 脚本以安装所需的包。
 
 例如：
+
+```
 $ source /opt/DL/tensorflow/bin/tensorflow-activate
 缺少依赖项 ['backports.weareaf', 'mock', 'protobuf']
 运行 `/opt/DL/tensorflow/bin/install_dependencies` 来解决此问题。
@@ -3112,13 +3134,11 @@ $ /opt/DL/tensorflow/bin/install_dependencies
 
 以下新包将将被安装：
 
-```
 backports.weareaf: 1.0rcl1-py27_0
 protobuf: 3.4.0-hd26fab5_0
 mock: 2.0.0-py27_0
 pbr: 1.10.0-py27_0
 protobuf: 3.4.0-py27h748ec6_0
-```
 
 继续 ([j]/n?) y
 
@@ -3128,9 +3148,9 @@ protobuf: 3.4.0-py27h748ec6_0
 | pbr-1.10.0-py22 | 100% ####################### Time: 0:00:00 3.35 MB/s |
 | mock-2.0.0-py22 | 100% ####################### Time: 0:00:00 3.26 MB/s |
 
-```
 $ source /opt/DL/tensorflow/bin/tensorflow-activate
-$ 
+$
+```
 
 #### 开始使用 Caffe
 
@@ -3138,7 +3158,7 @@ $
 
 #### Caffe 替代方案
 
-提供了上游 Caffe (/opt/DL/caffe-bvlc)、IBM 优化 Caffe (/opt/DL/caffe-ibm) 和系统默认 Caffe (/opt/DL/caffe) 的软件包。可以使用系统的替代方案进行选择：
+提供了上游 Caffe (`/opt/DL/caffe-bvlc`)、IBM 优化 Caffe (`/opt/DL/caffe-ibm`) 和系统默认 Caffe (`/opt/DL/caffe`) 的软件包。可以使用系统的替代方案进行选择：
 
 ```
 $ update-alternatives --config caffe
@@ -3147,8 +3167,12 @@ $ update-alternatives --config caffe
 
 | 选择 | 命令 |
 |---|---|
-| 1 | /opt/DL/caffe-bvlc |
-| * 2 | /opt/DL/caffe-ibm |
+
+
+
+| 1 | `/opt/DL/caffe-bvlc` |
+
+| * 2 | `/opt/DL/caffe-ibm` |
 
 按回键保持当前选择，或输入数字：
 
@@ -3165,7 +3189,8 @@ source /opt/DL/caffe-bvlc/bin/caffe-activate
 ```
 
 尝试激活多个 Caffe 包会导致不可预测的行为。
-> 注意：在 DeconvolutionLayer 中运行 caffe-test 可能会失败，参见 Caffe Issue 4083。解决方法是在运行之前将 OMP_NUM_THREADS 设置为1：
+
+> 注意：在 `DeconvolutionLayer` 中运行 `caffe-test` 可能会失败，参见 Caffe Issue 4083。解决方法是在运行之前将 `OMP_NUM_THREADS` 设置为 1：
 
 ```
 $ source /opt/DL/caffe/bin/caffe-activate
@@ -3173,7 +3198,7 @@ $ export OMP_NUM_THREADS=1
 $ caffe-test
 ```
 
-#### Caffe 示例
+## Caffe 示例
 
 每个 Caffe 包都包含示例脚本和模型。提供了一个脚本将示例复制到指定的目录：
 
@@ -3181,28 +3206,34 @@ $ caffe-test
 $ caffe-install-samples <directory>
 ```
 
-#### 参考文献
+## 参考文献
 
 对于可以开始使用的教程和示例，请参 Caffe。以下是示例链接：
 
 - LeNet 教程训练神经网络识别数字。
+
 - CIFAR-10 教程训练 CNN 进行图像分类。
 
-#### IBM Caffe 中的优化
+## IBM Caffe 中的优化
 
-IBM PowerAI 中的 IBM Caffe 包 (caffe-ibm) 基于 BVLC Caffe，并包含了 IBM 的优化：
+IBM PowerAI 中的 IBM Caffe 包（`caffe-ibm`）基于 BVLC Caffe，并包含了 IBM 的优化：
 
 - CPU 和 GPU 层归约
-- 大模型支持 (LMS)
+
+- 大模型支持（LMS）
+
 - DDL
 
-#### 命令行选项
+## 命令行选项
 
 IBM Caffe 支持 BVLC Caffe 选项并添加了新选项来控制增强：
 
-- -bvlc: 启用 CPU 和 GPU 层归约。
-- -threshold: 调整 CPU 和 GPU 层归约。如果一个层的参数数量大于阈值，则在 CPU 上并行进行累加。否则，由一个线程进行累加。默认设置为 2,000,000。
-- -ddl [-option1 param -option2 param]: 使用空格分隔的参数字符串启用 DDL。支持的参数如下：
+- `-bvlc`：启用 CPU 和 GPU 层归约。
+
+- `-threshold`：调整 CPU 和 GPU 层归约。如果一个层的参数数量大于阈值，则在 CPU 上并行进行累加。否则，由一个线程进行累加。默认设置为 2,000,000。
+
+- `-ddl [-option1 param -option2 param]`：使用空格分隔的参数字符串启用 DDL。支持的参数如下：
+
 ```
 mode <mode>
 dummy_iter <N>
@@ -3210,43 +3241,48 @@ dev_sync <0, 2>
 rebind_iter <N>
 dbg_level <0, 2>
 ```
-- -ddl_update: 此选项指示 Caffe 使用针对 DDL 优化的自定义 ApplyUpdate 版本。速度更快，但不支持裁剪（clipping），因此默认关闭的。它可以用于不支持裁剪的网络。
-- -ddl_align: 此选项确保梯度缓冲区长度是 256 的倍数，且起始地址是 256 的倍数，从而确保在多个平台上的缓存对齐以及与缓存的对齐。此选项默认关闭的。
-- -ddl_database_restart: 此选项确保每个 epoch 都查看同一个数据集，这使得系统仅缓存包含其中的学习器所触的页面。此选项默认关闭的。
-- -lms <size>: 此选项启用阈值为 <size> 的 LMS。
-- -lms_frac <fraction>: 此选项调整 CPU 和 GPU 之间的 LMS 内存使用。
+
+- `-ddl_update`：此选项指示 Caffe 使用针对 DDL 优化的自定义 `ApplyUpdate` 版本。速度更快，但不支持裁剪（clipping），因此默认关闭的。它可以用于不支持裁剪的网络。
+
+- `-ddl_align`：此选项确保梯度缓冲区长度是 256 的倍数，且起始地址是 256 的倍数，从而确保在多个平台上的缓存对齐以及与缓存的对齐。此选项默认关闭的。
+
+- `-ddl_database_restart`：此选项确保每个 epoch 都查看同一个数据集，这使得系统仅缓存包含其中的学习器所触的页面。此选项默认关闭的。
+
+- `-lms <size>`：此选项启用阈值为 `<size>` 的 LMS。
+
+- `-lms_frac <fraction>`：此选项调整 CPU 和 GPU 之间的 LMS 内存使用。
 
 表 4-2 IBM Caffe 命令行选项
 
 | 特性 | bvlc | -ddl | -lms | -gpu |
-|---|---|---|---|
+|---|---|---|---|---|
 | CPU/GPU 层归约 | 不指定。 | 不关心。 | 不关心。 | 多个 GPU |
 | DDL | 不关心。 | 指定。 | 不关心。 | 不指定。 |
 | LMS | 不关心。 | 不关心。 | 指定。 | 不关心。 |
 
-如果指定了 -lms，无论使用其他哪些选项，LMS 都是有效的。例如，你可以同时使用 DDL 和层归约。只有当指定 -lms 且 layerwise_reduce 为 false 时，在使用多 GPU 的 DDL 时，层归约才是有效的。
+如果指定了 `-lms`，无论使用其他哪些选项，LMS 都是有效的。例如，你可以同时使用 DDL 和层归约。只有当指定 `-lms` 且 `layerwise_reduce` 为 false 时，在使用多 GPU 的 DDL 时，层归约才是有效的。
 
-#### 关于 CPU 和 GPU 层归约
+## 关于 CPU 和 GPU 层归约
 
 此优化通过使用 CPU 来减少多 GPU 训练运行时间。
 
 > 注意：如果你使用单个 GPU，IBM Caffe 和 BVLC 性能相似。
 
-IBM Caffe 中的优化不会改变神经网络的收敛。IBM Caffe 和 BVLC 产生相同的收敛结果。除非使用了 -bvlc 命令行标记，否则将启用层归约。
+IBM Caffe 中的优化不会改变神经网络的收敛。IBM Caffe 和 BVLC 产生相同的收敛结果。除非使用了 `-bvlc` 命令行标记，否则将启用层归约。
 
-#### 关于深度学习
+## 关于深度学习
 
 更多关于使用 PowerAI DDL 的信息，请参阅 `/opt/dl/ddl-doc/README.md`。
 
-#### 关于大模型支持
+## 关于大模型支持
 
 带有 LMS 的 IBM Caffe 将模型和数据集加载到系统内存并将活动缓存到 GPU，使得方法和训练批大小能够显著扩展。LMS 以技术预览的形式提供。
 
-可以通过添加 -lms <单位为 KB> 来启用 LMS，例如 -lms 1000。然后，任何大于 100 KB 的内存块都会获取到 GPU 内存中，并且仅在计算需要时从 GPU 内存。如果你使用如 -lms 1000000000 的大值，则实际上禁用了它，较小的值意味着更激进的 LMS。该值用于控制性能权衡。
+可以通过添加 `-lms <单位为 KB>` 来启用 LMS，例如 `-lms 1000`。然后，任何大于 100 KB 的内存块都会获取到 GPU 内存中，并且仅在计算需要时从 GPU 内存。如果你使用如 `-lms 1000000000` 的大值，则实际上禁用了它，较小的值意味着更激进的 LMS。该值用于控制性能权衡。
 
-作为次要选项，有一个 -lms_frac <1.0>。例如，-lms_frac 0.4，MS 不产生影响。这对于小网络禁用 LMS 很有用。
+作为次要选项，有一个 `-lms_frac <1.0>`。例如，`-lms_frac 0.4`，MS 不产生影响。这对于小网络禁用 LMS 很有用。
 
-#### 结合大模型支持和深度学习
+## 结合大模型支持和深度学习
 
 可以通过运行以下命令结合 LMS 和 DDL：
 
@@ -3254,18 +3290,17 @@ IBM Caffe 中的优化不会改变神经网络的收敛。IBM Caffe 和 BVLC 产
 $ mpirun -x PATH -LD_LIBRARY_PATH -rf 4x4x2.rf -n 8 cafe train -solver alexnet_solver.prototxt -d
 ```
 
-
-
-
 # 用于 TensorFlow 的分布式深度学习自定义算子
 
 此版本的 IBM PowerAI 包含了 TensorFlow 的 IBM DDL 自定义算子的技术预览。DDL 自定义算子使用 Spectrum MPI 和 NCCL 为分布式 TensorFlow 提供高速通信。
 
-在 `ddl-tensorflow` 包中可以找到 DDL自定义算子。关于 DDL 和 TensorFlow 算子的更多信息，请参阅以下 readme 文件：
+在 `ddl-tensorflow` 包中可以找到 DDL 自定义算子。关于 DDL 和 TensorFlow 算子的更多信息，请参阅以下 readme 文件：
 
-- /opt/DDL/ddl-doc/doc/README.md
-- /opt/DDL/ddl-tensorflow/doc/README.md
-- /opt/DDL/ddl-tensorflow/doc/README-API.md
+- `/opt/DDL/ddl-doc/doc/README.md`
+
+- `/opt/DDL/ddl-tensorflow/doc/README.md`
+
+- `/opt/DDL/ddl-tensorflow/doc/README-API.md`
 
 DDL TensorFlow 算子可以轻松启用 Slim 风格模型的分布式。以下软件包包含了已 DDL 启用的 Slim 模型示例：
 
@@ -3290,7 +3325,9 @@ IBM PowerAI TensorFlow 包包含 TensorBoard。
 TensorFlow V1.4.0 包包含了对额外功能的支持：
 
 - HDFS
+
 - NCCL
+
 - 实验性 XLA JIT 编译
 
 ## 4.3.6 卸载机器学习和深度学习框架
@@ -3311,9 +3348,13 @@ $ sudo yum remove mdl-repo-local-cuda9.0
 适用于 Power AC922 的 IBM TensorFlow ESP 为多个 DL 框架提供了软件软件包、支持库和工具：
 
 - Bazel
+
 - NCCL
+
 - OpenBLAS
+
 - TensorFlow
+
 - TensorBoard
 
 它还包含了 IBM PowerAI DDL 的技术预览。DDL 支持分布式（多主机）模型训练。TensorFlow 由包含在 IBM PowerAI 分行中的独立软件包提供。
@@ -3339,12 +3380,19 @@ DL 包需要适用于 IBM POWER9 的 RHEL 7.4。必须从 Red Hat 获取 RHEL �
 要设置操作系统和仓库，请完成以下步骤：
 
 1. 启用 'optional' 和 'extra' 仓库：
+
    $ sudo subscription-manager repos --enable=rhel-7-for-power-9-optional-repos
+
    $ sudo subscription-manager repos --enable=rhel-7-for-power-9-extras-repos
+
 2. 安装安装所需的包：
+
    $ sudo yum -y install wget nano bzip2
+
 3. 启用 EPEL 仓库：
+
    $ wget http://dl.fedoraject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
    $ sudo rpm -ivh epel-release-latest-7.noarch.rpm
 
 4. 加载当前内核：
@@ -3365,11 +3413,18 @@ $ reboot # 此重启可能会推迟到下方的 NVIDIA 步骤之后
 
 在安装 NVIDIA 组件之前，必须禁用 udev 内存自动外廓（Memory Auto-Outlining），以便 CUDA 驱动正常工作。要禁用它，请完成以下步骤：
 
-1. 编辑 /lib/udev/rules/40-redhat.rules 文件：
+1. 编辑 `/lib/udev/rules/40-redhat.rules` 文件：
+
    $ sudo nano /lib/udev/rules/40-redhat.rules
+
 2. 注释该行并保存更改：
+
+```
 SUBSYSTEM="memory", ACTION="add", PROGRAM="/bin/uname -p", RESULT="$s39*", ATTR(state)="offline", ATTR(state)="online"
+```
+
 3. 重启系统使更改生效：
+
    $ reboot
 
 DL 包需要 NVIDIA 的 CUDA、cuDNN 和 GPU 驱动包。
@@ -3385,20 +3440,24 @@ DL 包需要 NVIDIA 的 CUDA、cuDNN 和 GPU 驱动包。
 要安装这些组件，请完成以下步骤：
 
 1. 从 CUDA 下载并安装 NVIDIA CUDA 9.1：
+
    a. 选择操作系统：Linux。
+
    b. 选择架构：ppc64le。
+
    c. 选择发行版：RHEL。
+
    d. 选择版本 7。
+
    e. 选择适合您需求的程序类型。
-   f. 遵循 CUDA 快速入门中的 Linux POWER9 安装说明，包括如何通过更新 PATH 和 LD_LIBRARY_PATH 设置 CUDA 开发环境的步骤。
+
+   f. 遵循 CUDA 快速入门中的 Linux POWER9 安装说明，包括如何通过更新 `PATH` 和 `LD_LIBRARY_PATH` 设置 CUDA 开发环境的步骤。
 
 2. 从 NVIDIA cuDNN 下载 CUDA 9.1 的 cuDNN V7.0.5（需要注册 NVIDIA 加速计算开发计划）。确保您下载了适用于 Linux (Power8/Power9) 的 cuDNN V7.0.5 库。
 
 3. 安装 CUDA V7.0 包：
+
    $ sudo tar -C /usr/local --no-same-owner -xzf cudnn-9.1-linux-ppc64.tgz
-
-
-
 
 # 依赖
 
@@ -3419,22 +3478,30 @@ Solving package specifications:
 ..............
 ```
 
-在环境 /home/rhel/anaconda2 中的安装包计划：
+在环境 `/home/rhel/anaconda2` 中的安装包计划：
 
 以下新包将被**安装**：
 
 + - backports.wecref: 1.0rc1-py27_0
+
 - protobuf: 3.4.0-hd26fab5_0
+
 - mock: 2.0.0-py27_0
+
 - pbr: 1.10.0-py27_0
+
 - protobuf-py7448ec_6
 
 Proceed ([y/n])?
 
 | libprotobuf-3.3 | 100% | Time: 00:00:02 | 2.04 MB/s |
+
 | backports-weak | 100% | Time: 00:00:00 | 12.83 MB/s |
+
 | protobuf-3.4.0 | 100% | Time: 00:00:00 | 2.20 MB/s |
+
 | pbr-1.10.0-py22 | 100% | Time: 00:00:00 | 3.35 MB/s |
+
 | mock-2.0.0-py22 | 100% | Time: 00:00:00 | 3.26 MB/s |
 
 ```
@@ -3448,6 +3515,7 @@ TensorFlow 页包含各种丰富信息，包括教程、操作指南和入门指
 如需更多教程和示例，请参考以下资源：
 
 - TensorFlow 教程
+
 - 针对最新 API 的初学者 TensorFlow 教程和示例
 
 # TensorFlow 分布式深度学习自定义算子
@@ -3455,9 +3523,12 @@ TensorFlow 页包含各种丰富信息，包括教程、操作指南和入门指
 适用于 Power AC922 的 IBM TensorFlow ESP 包含了 IBM PowerAI DDL TensorFlow 自定义算子的技术预览。DDL 自定义算子使用 IBM Spectrum MPI 和 NCCL 为分布式 TensorFlow 提供高速通信。
 
 可以在 `ddl-tensorflow` 包中找到 DDL 自定义算子。有关 DDL 和 TensorFlow 算子的更多信息，请参以下文档：
-/opt/DL/ddl-doc/doc/README.md
-/opt/DL/ddl-tensorflow/doc/README.md
-/opt/DL/ddl-tensorflow/doc/README-API.md
+
+`/opt/DL/ddl-doc/doc/README.md`
+
+`/opt/DL/ddl-tensorflow/doc/README.md`
+
+`/opt/DL/ddl-tensorflow/doc/README-API.md`
 
 DDL TensorFlow 算子可以轻松启用分布式 Slim 式模型。该包包含了通过 D 启用的 Slim 模型示例：
 
@@ -3480,6 +3551,8 @@ $ cp /opt/DL/ddl-tensorflow/examples/slim/train_image_classifier.py/
 
 IBM Power TensorFlow 包包含 TensorBoard。
 
+
+
 TensorFlow V1.4.0 包包含对额外功能的支持：
 
 - HDFS
@@ -3493,9 +3566,6 @@ IBM Power TensorFlow 包包含 TensorBoard。要卸载机器学习和框架，�
 ```
 $ sudo uninstall-machine-learning
 ```
-
-
-
 
 第二阶段是使转换后的数据准备好以供神经网络导入。这个过程通常需要大量的处理，出现一些数据扩展是正常的，因为你必须以不同的格式表示你的数据。描述具体的细节超出了本节的范围，因此此阶段所需的方法取决于数据的格式（图像、声音、文本或数字）以及所选神经网络的架构。
 
@@ -3554,7 +3624,7 @@ $ sudo uninstall-machine-learning
 
 #### 清洗数据集
 
-你必须要做的是移除不需要的列，例如 Twitter ID、日期等，只保留情感和 Twitter 文本。要完成这项任务，请使用 clean_dataset 函数，如示例 5-1 所示。
+你必须要做的是移除不需要的列，例如 Twitter ID、日期等，只保留情感和 Twitter 文本。要完成这项任务，请使用 `clean_dataset` 函数，如示例 5-1 所示。
 
 > 示例 5-1 负责清洗原始数据集的函数
 
@@ -3579,9 +3649,9 @@ os.remove('tempds.csv')
 print('data set cleanup')
 ```
 
-shuffer 函数接收输入并生成一个以 <sep> 分隔的 CSV 文件以避免字符冲突。尽管数据集是 CSV 文件，但 Twitter 文字中存在逗号，仅使用 split 函数不起作用，因此使用正则表达式来获取所需内容。
+`shuffer` 函数接收输入并生成一个以 `<sep>` 分隔的 CSV 文件以避免字符冲突。尽管数据集是 CSV 文件，但 Twitter 文字中存在逗号，仅使用 `split` 函数不起作用，因此使用正则表达式来获取所需内容。
 
-clean_dataset 函数遍历数据集的每一行并应用正则表达式将新行写入临时文件。最后一步是洗牌生成的数据集以确保神经网络得到训练。对于此示例，使用 Pandas 库并写入为参数提供的输出。对于洗牌过程，Pandas 库被设计用于处理大文件。
+`clean_dataset` 函数遍历数据集的每一行并应用正则表达式将新行写入临时文件。最后一步是洗牌生成的数据集以确保神经网络得到训练。对于此示例，使用 Pandas 库并写入为参数提供的输出。对于洗牌过程，Pandas 库被设计用于处理大文件。
 
 #### 生成词汇字典
 
@@ -3605,7 +3675,6 @@ print('Word dictionary generated'.format(dict_size))
 with open('word_dict.pickle', 'wb') as wd:
     pickle.dump(cleaned_dict, wd)
 ```
-
 
 然后，逐词遍历句子并检查该词是否存在于词汇字典中。如果是，则在句子向量中与其在词汇列表相同的位置上加 1。
 
@@ -3660,7 +3729,7 @@ def sentence_to_vector(word_dict, cleaned_ds, output_file):
 
 现在，我们必须构建基于 TensorFlow 的模型。在数据准备阶段，我们保存了一些关于词汇表列表大小以及生成的向量文件中行数的信息。示例 5-4 显示了负责创建神经网络架构的函数。
 
->  5-4 创建神经网络架构
+> 5-4 创建神经网络架构
 
 ```python
 def neural_net(input_data):
@@ -3691,8 +3760,6 @@ def neural_net(input_data):
 ```
 
 本节未提供相关细节，因为它们超出了本书的范围。
-
-
 
 计算模型输出与正确标签之间产生的成本或误差。在计算成本（误差）的过程中，应用了一个名为 Adam 的优化器，这是一种随机梯度下降（SGD）方法，它通过使用反向传播算法更新神经网络中的所有权重和偏置来降低成本。
 
@@ -3730,6 +3797,8 @@ def get_sentiment(input_data):
 
 for word in lemm_words:
 
+
+
 ```python
 if word.lower() in word_dict:
     index_value = word_dict.index(word.lower())
@@ -3745,7 +3814,7 @@ elif result[0] == 1:
     print('Positive:', input_data)
 ```
 
-开始定义占位符的函数，它接收我们的句子，并创建一个 saver 对象来加载我们训练的模型。我们还使用了单词字典文件。
+开始定义占位符的函数，它接收我们的句子，并创建一个 `saver` 对象来加载我们训练的模型。我们还使用了单词字典文件。
 
 我们创建一个 TensorFlow 会话并恢复保存的模型。恢复基本上是从存储在 `model.ckpt` 中的变量中读取值，并将它们赋值给在运行 `ff_neural_function` 模型时创建的变量。
 
@@ -3787,11 +3856,9 @@ elif result[0] == 1:
 
 在此阶段，我们将集合中的每个短语转换为单词列表并将其保存到 pickle 文件中，以便我们可以处理更大的数据集，而无需将它们全部保存在内存中。
 
-
-
 示例 5-7 为你提供了代码示例。
 
-示例 5-7 create_word_list 函数
+**示例 5-7 `create_word_list` 函数**
 
 ```python
 def create_word_list(source_ds):
@@ -3815,7 +3882,9 @@ def create_word_list(source_ds):
         word_list_final.keys()))
 ```
 
+```python
 list_size = len(word_list_final)
+```
 
 ```python
 print("Word dictionary: {}".format(list_size))
@@ -3835,7 +3904,7 @@ return list_size, num_lines
 
 `create_word_list` 函数接收数据集并逐行处理它。对于每一行，该函数使用 NLTK 库中的 `word_tokenize` 函数将其转换为单词列表，使用 `pickle` 将其保存到文件中，并添加到名为 `words_list` 的列表中，然后使用 `set` 进行唯一化存储。
 
-我们创建一个字典并为每个单词分配一个从 0 到 word_count 的数字。这些数字被用于输入神经网络。我们必须创建一个反向单词字典，以便当我们拥有单词数字并需要回溯单词时更容易进行映射。基本上，该字典是通过使用第一个字典的值作为键、其键作为值创建的。
+我们创建一个字典并为每个单词分配一个从 0 到 `word_count` 的数字。这些数字被用于输入神经网络。我们必须创建一个反向单词字典，以便当我们拥有单词数字并需要回溯单词时更容易进行映射。基本上，该字典是通过使用第一个字典的值作为键、其键作为值创建的。
 
 处理此过程后，我们将两个字典都写入文件，以便在不同的模块中使用。该函数返回单词字典的大小和原始数据的大小，以便它们可以在不同的模块中用于循环控制。
 
@@ -3843,7 +3912,7 @@ return list_size, num_lines
 
 在创建了每个单词对应数字的字典后，数据集的格式为每个短语一个列表，列表中的每个项是短语的一个单词，我们使用 LSTM 神经网络创建模型。`lst_rnn` 函数就是定义发生的地方，如示例 5-8 所示。
 
-示例 5-8 lstm_rnn 函数
+**示例 5-8 `lstm_rnn` 函数**
 
 ```python
 output_weight = tf.Variable(tf.random_normal([num_neurons,
@@ -3863,17 +3932,21 @@ return tf.matmul(outputs[-1], output_weight) + output_biases
 
 完成以下步骤：
 
-- 1. 为神经网络输出层定义权重和偏置。权重是一个所有权重随机初始化的矩阵，偏置也是随机初始化的。它们是 TensorFlow 变量，因此框架知道它们在训练阶段必须进行更新和调整。
-- 2. 创建 TensorFlow-placeholder 来接收数据集（newmer 格式），并将其重塑为符合 `rnn.static_rnn` 函数预期的格式。
-- 3. TensorFlow 通过准备好使用的函数来设置 LSTM 神经网络。
-- 4. 使用 `rnn.MultiRNNCell` 创建一个具有多个隐藏层的 RNN。此函数接收每层的神经元，在这种情况下是 LSTM 神经元。必须使用指定神经元数量的 `BasicLSTMCell` 函数。`static_rnn` 函数将整个模型与标识符绑定以创建神经网络。TensorFlow 帮助定义神经网络的完整结构。
-- 5. 执行输出层操作，即将第二个隐藏层的输出乘以输出权重和偏置之和。使用输出的最后一个位置是因为我们对 RNN 的最后一个输出感兴趣。RNN 在每次迭代后生成一个输出，因此它生成一个数组作为输出。
+1. 为神经网络输出层定义权重和偏置。权重是一个所有权重随机初始化的矩阵，偏置也是随机初始化的。它们是 TensorFlow 变量，因此框架知道它们在训练阶段必须进行更新和调整。
+
+2. 创建 TensorFlow-placeholder 来接收数据集（newmer 格式），并将其重塑为符合 `rnn.static_rnn` 函数预期的格式。
+
+3. TensorFlow 通过准备好使用的函数来设置 LSTM 神经网络。
+
+4. 使用 `rnn.MultiRNNCell` 创建一个具有多个隐藏层的 RNN。此函数接收每层的神经元，在这种情况下是 LSTM 神经元。必须使用指定神经元数量的 `BasicLSTMCell` 函数。`static_rnn` 函数将整个模型与标识符绑定以创建神经网络。TensorFlow 帮助定义神经网络的完整结构。
+
+5. 执行输出层操作，即将第二个隐藏层的输出乘以输出权重和偏置之和。使用输出的最后一个位置是因为我们对 RNN 的最后一个输出感兴趣。RNN 在每次迭代后生成一个输出，因此它生成一个数组作为输出。
 
 ## 5.4.5 训练
 
 训练阶段与 5.3 中应用于情感分析的阶段相似。参考第 123 页的“在 IBM PowerAI 上使用 TensorFlow 进行情感分析”。区别在于向神经网络提供了什么以及如何。示例 5-9 解析了代码并展示了其细节。
 
-示例 5-9 训练函数
+**示例 5-9 训练函数**
 
 ```python
 def training(in_placeholder):
@@ -3921,14 +3994,13 @@ def training(in_placeholder):
         saver.save(session, 'model.ckpt')
 ```
 
-
-
-
 ## 5.4.6 使用模型
 
 要使用训练过的网络模型，请如示例 5-10 所示创建 `get_word` 函数。该函数负责提供一个 CLI（命令行界面）体验，提示用户至少输入三个单词，根据输入调用神经网络模型，获取其返回并呈现三个最佳单词选项，以便用户自动补全正在输入的句子。
 
-示例 5-10 `get_word` 函数：
+**示例 5-10 `get_word` 函数**
+
+
 
 ```python
 def get_word():
@@ -4001,13 +4073,13 @@ else:
 
 考虑到此处的大部分代码与用户体验以及验证输入信息的规则有关，本节将不涉及细节，尽管指出网络如何接收输入是重要的。
 
-我们使用三个单词对网络进行检查，因此即使网络中超过三个单词，只有最后三个会被输入网络。我们获取一个热向量作为返回，使用 `get_top` 函数对其进行排序，然后选出三个最高值及其索引。
+我们使用三个单词对网络进行检查，因此即使网络中超过三个单词，只有最后三个会被输入网络。我们获取一个热向量作为返回，使用`get_top`函数对其进行排序，然后选出三个最高值及其索引。
 
 ## 5.4.7 运行代码
 
 考虑到此处的大部分代码与用户体验以及验证输入信息的规则有关，本节将不涉及细节，尽管指出网络如何接收输入是重要的。
 
-我们使用三个单词对网络进行检查，因此即使网络中超过三个单词，只有最后三个会被输入网络。我们获取一个热向量作为返回，使用 `get_top` 函数对其进行排序，然后选出三个最高值及其索引。
+我们使用三个单词对网络进行检查，因此即使网络中超过三个单词，只有最后三个会被输入网络。我们获取一个热向量作为返回，使用`get_top`函数对其进行排序，然后选出三个最高值及其索引。
 
 代码是用 TensorFlow 构建的。要运行模型，请遵循以下步骤：
 
@@ -4060,10 +4132,6 @@ IBM Conductor Deep Impact (DLI) 基于 Spark 的 IBM Conductor 构建，是一�
 | Underfitting | 欠拟合是指无法模拟训练数据或生成新数据的模型。 |
 | Overfitting | 过拟合是指模型很好地模拟了训练数据。 |
 
-
-
-
-
 ## 6.2 IBM Spectrum Conductor 深度学习的影响
 
 在 IBM Power 平台上，IBM PowerAI 为客户提供了许多深度学习（DL）框架和有用技术供其利用和实施。在许多情况下，客户希望使用 DL 技术并将其与现有应用程序集成，为他们的业务带来新价值。为了确保一个（而非多个）DL 项目成功投入生产，有一些重要的要素，例如数据管理、算术和神经网络管理以及计算资源管理。
@@ -4078,14 +4146,14 @@ DL 始终于业务需求（步骤 1）。大多数情况下，数据由客户提
 
 在理解业务需求和可用数据后，你可以通过完成以下高层步骤来实现一个或多个神经网络：
 
-- 1. 对数据进行重新格式化或重构，以符合模型使用的可用/所需格式（步骤 3）。
-- 2. 导入 DL 网络创建训练模型（步骤 4）。
-- 3. 启动模型训练任务（步骤 4）。
-- 4. 调整模型以提高准确性（步骤 5）。
-- 5. 根据训练好的模型生成推理模型（步骤 6）。
-- 6. 将推理模型与客户应用程序集成（步骤 6 和 7）。
-- 7. 将模型投入生产（步骤 7）。
-- 8. 生成更新的推理模型以适应变化的数据（步骤 8）。
+1. 对数据进行重新格式化或重构，以符合模型使用的可用/所需格式（步骤 3）。
+2. 导入 DL 网络创建训练模型（步骤 4）。
+3. 启动模型训练任务（步骤 4）。
+4. 调整模型以提高准确性（步骤 5）。
+5. 根据训练好的模型生成推理模型（步骤 6）。
+6. 将推理模型与客户应用程序集成（步骤 6 和 7）。
+7. 将模型投入生产（步骤 7）。
+8. 生成更新的推理模型以适应变化的数据（步骤 8）。
 
 这些步骤解释了 DL 项目的闭环生命周期。
 
@@ -4102,6 +4170,7 @@ DLI 从步骤 3 到 8 起效，步骤 7 例除外。DLI 还可以提供其他益
 ## 6.3 深度学习影响的关键特性
 
 本节介绍了 DLI 的一些关键特性。
+
 作为一个 DLI 开发和管理平台，DLI 的主要目标是以下：
 
 - 提高神经网络模型的准确性
@@ -4118,7 +4187,6 @@ DLI 数据集用于模型调优、训练、测试和验证。数据集管理功�
 - 图像处理
 - 目标分类
 - 卷积
-
 - 原始数据
 - 记录（Records）
 
@@ -4127,7 +4195,6 @@ DLI 数据集用于模型调优、训练、测试和验证。数据集管理功�
 - 随机洗分
 - 结构化帕森估计器方法（TPE）
 - 贝叶斯搜索
-
 - 能够监控 DLI 的训练状态
 
 ### 6.3.2 DLI 监控与优化
@@ -4155,10 +4222,6 @@ DLI 使用 IBM Fabric 技术作为其通用框架的一部分。
 - 随机搜索
 - 贝叶斯搜索
 
-
-
-
-
 ## 6.3.6 DLI 推理模型
 
 该模型将训练好的 DL 模型投入生产环境，这是数据科学家最令人兴奋的时刻。DLI 推理模型通过在门户中点击几个按钮，即可让这一步变得简单且高效。推理模型也是用户真正从 DL 模型中获益的主要方式。IBM Conductor 通过在 IBM Spectrum Conductor with Spark 集群中将推理模型作为服务进行管理，为数据科学家和用户提供服务，并提供高级推理引擎供用户访问。基于 IBM Spectrum Conductor with Spark 强大的调度、弹性伸缩和高效的资源管理功能，用户的推理请求可以在 IBM Spectrum Conductor with Spark DLI 中顺畅高效地得到服务。
@@ -4168,7 +4231,7 @@ DLI 推理模型支持以下功能：
 - 将训练好的模型转换为推理模型。
 - 使用预训练权重文件创建推理模型。
 - 通过 IBM Spectrum Conductor with Spark DLI Web 门户和 REST API 进行推理。
-- 通过 门户和 REST API 管理推理模型和结果。
+- 通过门户和 REST API 管理推理模型和结果。
 - 支持推理模型预安装，以缩短响应时间并提高资源利用率。
 - 提供高吞吐量。
 - 支持在大型动态集群中运行。
@@ -4209,15 +4272,20 @@ DLI 构建在 IBM Spectrum Conductor with Spark 之上，它使用 IBM Enterpris
 图 6-5 是一个直观的场景。在此场景中，有两台服务器及其对应的 CPU 和 GPU 资源。
 
 | CPU_RG1 | CPU_RG2 |
-| --- | --- |
+|---|---|
 | GPU_RG1 | GPU_RG2 |
 | host01 | host02 |
 | CPU | CPU |
 | GPU | GPU |
-
 | 租户_1, 租户_2... | 租户_a, 租户_b... |
-| --- | --- |
+|---|---|
+
+
+
+## 多租户示例 1
+
 | Spark 实例组_1 | Spark 实例组_2 |
+| --- | --- |
 | 消费者_1 | 消费者_2 |
 | CPU_RG1 | CPU_RG2 |
 | GPU_RG1 | GPU_RG2 |
@@ -4230,10 +4298,10 @@ DLI 构建在 IBM Spectrum Conductor with Spark 之上，它使用 IBM Enterpris
 
 该场景具有以下特征：
 
-- 用户为每个主机创建一个资源组。host1 拥有 CPU_RG1 和 GPU_RG1 资源组，host2 拥有 CPU_RG2 和 GPU_RG2 资源组。
-- 消费者_1 包含 CPU_RG1 和 GPU_RG1 资源组以及租户组 1（租户_1、租户_2 等）。
-- 消费者_2 包含 CPU_RG2 和 GPU_RG2 资源组以及租户组 2（租户_a、租户_b 等）。
-- Spark 实例组 (SIG)包含消费者_1 及其资源组。Spark 2 包含消费者_2 及其资源组。
+- 用户为每个主机创建一个资源组。`host1` 拥有 `CPU_RG1` 和 `GPU_RG1` 资源组，`host2` 拥有 `CPU_RG2` 和 `GPU_RG2` 资源组。
+- `消费者_1` 包含 `CPU_RG1` 和 `GPU_RG1` 资源组以及租户组 1（`租户_1`、`租户_2` 等）。
+- `消费者_2` 包含 `CPU_RG2` 和 `GPU_RG2` 资源组以及租户组 2（`租户_a`、`租户_b` 等）。
+- Spark 实例组 (SIG) 包含 `消费者_1` 及其资源组。Spark 2 包含 `消费者_2` 及其资源组。
 
 通过这种配置，两个租户组使用两个租户组。
 
@@ -4245,7 +4313,6 @@ DLI 构建在 IBM Spectrum Conductor with Spark 之上，它使用 IBM Enterpris
 | --- | --- |
 | CPU | CPU |
 | GPU | GPU |
-
 | 租户_1, 租户_2... | 租户_a, 租户_b... |
 | --- | --- |
 | Spark 实例组_1 | Spark 实例组_2 |
@@ -4261,12 +4328,12 @@ DLI 构建在 IBM Spectrum Conductor with Spark 之上，它使用 IBM Enterpris
 
 该场景具有以下特征：
 
-- host1 的所有资源被配置到一个组中：CPU_RG1。
-- host2 的所有资源被配置到一个组中：GPU_RG1。
-- 消费者_1 包含 CPU_RG1 和 GPU_RG1 资源组以及租户组 1（租户_1、租户_2 等）。
-- 消费者_2 包含 CPU_RG2 和 GPU_RG2 资源组以及租户组 2（租户_a、租户_b 等）。*（注：此处原文可能有误，应为 CPU_RG2）
-- SIG 1 包含消费者_1 及其资源组。
-- SIG 2 包含消费者_2 及其资源组。
+- `host1` 的所有资源被配置到一个组中：`CPU_RG1`。
+- `host2` 的所有资源被配置到一个组中：`GPU_RG1`。
+- `消费者_1` 包含 `CPU_RG1` 和 `GPU_RG1` 资源组以及租户组 1（`租户_1`、`租户_2` 等）。
+- `消费者_2` 包含 `CPU_RG2` 和 `GPU_RG2` 资源组以及租户组 2（`租户_a`、`租户_b` 等）。*（注：此处原文可能有误，应为 `CPU_RG2`）*
+- SIG 1 包含 `消费者_1` 及其资源组。
+- SIG 2 包含 `消费者_2` 及其资源组。
 
 通过这种配置，两个租户组使用独立的硬件。
 
@@ -4278,7 +4345,6 @@ DLI 构建在 IBM Spectrum Conductor with Spark 之上，它使用 IBM Enterpris
 | --- | --- | --- |
 | CPU | CPU | CPU |
 | GPU | GPU | GPU |
-
 | 租户_1, 租户_2... | 租户_a, 租户_b... |
 | --- | --- |
 | Spark 实例组_1 | Spark 实例组_2 |
@@ -4294,12 +4360,12 @@ DLI 构建在 IBM Spectrum Conductor with Spark 之上，它使用 IBM Enterpris
 
 该场景具有以下特征：
 
-- host1 的所有资源被配置到一个组中：CPU_RG1。
-- host2 的所有资源被配置到一个组中：GPU_RG1。
-- 消费者_1 包含 CPU_RG1 和 GPU_RG1 资源组以及租户组 1（租户_1、租户_2 等）。
-- 消费者_2 包含 CPU_RG2 和 GPU_RG2 资源组以及租户组 2（租户_a、租户_b 等）。
-- SIG 1 包含消费者_1 及其资源组。
-- SIG 2 包含消费者_2 及其资源组。
+- `host1` 的所有资源被配置到一个组中：`CPU_RG1`。
+- `host2` 的所有资源被配置到一个组中：`GPU_RG1`。
+- `消费者_1` 包含 `CPU_RG1` 和 `GPU_RG1` 资源组以及租户组 1（`租户_1`、`租户_2` 等）。
+- `消费者_2` 包含 `CPU_RG2` 和 `GPU_RG2` 资源组以及租户组 2（`租户_a`、`租户_b` 等）。
+- SIG 1 包含 `消费者_1` 及其资源组。
+- SIG 2 包含 `消费者_2` 及其资源组。
 
 通过这种配置，两个租户组共享硬件。
 
@@ -4326,9 +4392,6 @@ DLI 构建在 IBM Spectrum Conductor with Spark 之上，它使用 IBM Enterpris
 
 在这种模式下，只有一个节点。这种模式通常用于开发和测试。该节点既是主节点也是计算节点。第 155 页的图 6-8 显示了安装步骤的顺序。
 
-
-
-
 ![](img/f6f95c5defc8b3406a94a86b8d202807_168_0.png)
 
 图 6-8 单节点 DLI 环境的安装步骤
@@ -4339,7 +4402,7 @@ DLI 构建在 IBM Spectrum Conductor with Spark 之上，它使用 IBM Enterpris
 
 接下来可以安装 DLI 应用本身，并配置 GPU 资源和 SIG。随后，环境即为深度学习（DL）活动准备绪。
 
-## 6.4.3 不带高可用功能的 DLI 集群
+### 6.4.3 不带高可用功能的 DLI 集群
 
 在此模式下，DLI 集群中包含多个节点，并且始终有一个节点作为管理节点。在这种情况下，该节点也作为主节点，如图 6-9 所示。
 
@@ -4353,7 +4416,7 @@ DLI 构建在 IBM Spectrum Conductor with Spark 之上，它使用 IBM Enterpris
 
 第 6 章 IBM Spectrum Conductor 简介 深度学习 157
 
-## 6.4.4 带有高可用功能的 DLI 集群
+### 6.4.4 带有高可用功能的 DLI 集群
 
 图 6-11 显示了启用 HA 功能的一种拓扑。该拓扑有两个管理节点和两个计算节点。
 
@@ -4367,13 +4430,13 @@ DLI 构建在 IBM Spectrum Conductor with Spark 之上，它使用 IBM Enterpris
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_172_0.png)
 
-## 6.4.5 高可用集群的二进制文件安装
+### 6.4.5 高可用集群的二进制文件安装
 
 在安装启用 HA 的 DLI 集群之前，您必须考虑放置带有 Spark 的 IBM Spectrum Conductor 和 DLI 文件的位置。两个典型选项是本地或共享文件系统。
 
 > 注意：本节未描述共享文件系统的实现。我们假设您已经使用 IBM Spectrum Scale™ 或任何您喜欢的文件系统实现了共享文件系统。
 
-### 本地磁盘中的二进制文件
+#### 本地磁盘中的二进制文件
 
 在安装过程中，所有二进制文件都安装在本地文件系统中，如图 6-13 所示。然而，所有的配置文件和日志文件都安装在共享文件系统中。
 
@@ -4381,9 +4444,9 @@ DLI 构建在 IBM Spectrum Conductor with Spark 之上，它使用 IBM Enterpris
 
 图 6-13 本地安装的文件系统布局示例
 
-> 注意：/opt/ibm/spectrumcomputing目录是放置带有 Spark 的 IBM Spectrum Conductor 和 DLI 二进制文件的默认目录。您可以在安装期间更改它。
+> 注意：`/opt/ibm/spectrumcomputing` 目录是放置带有 Spark 的 IBM Spectrum Conductor 和 DLI 二进制文件的默认目录。您可以在安装期间更改它。
 
-### 共享文件系统中的二进制文件
+#### 共享文件系统中的二进制文件
 
 图 6-13 展示了启用 HA 的 DLI 集群的安装示例。在安装序列期间，您设置一个选项来指定目标安装目录，该目录位于共享文件系统中。然后，所有二进制文件和其他文件都安装在此共享文件系统中，如第 161 页的图 6-14 所示。
 
@@ -4391,22 +4454,21 @@ DLI 构建在 IBM Spectrum Conductor with Spark 之上，它使用 IBM Enterpris
 
 图 6-14 共享文件系统安装
 
-> 注意：/sharefs/spectrumcomputing 直接是安装带有 Spark 的 IBM Spectrum Conductor 的示例共享文件系统。
+> 注意：`/sharefs/spectrumcomputing` 直接是安装带有 Spark 的 IBM Spectrum Conductor 的示例共享文件系统。
+> `/sharefs/dli_userdata` 目录是 DLI 安装期间设置共享文件系统的示例。
+> `/sharefs/sig_share` 目录是创建 SIG 期间设置共享文件系统的示例，因为它被用于 SIG HA 功能。
 
-/sharefs/dli_userdata 目录是 DLI 安装期间设置共享文件系统的示例。
-/sharefs/sig_share目录是创建 SIG 期间设置共享文件系统的示例，因为它被用于 SIG HA 功能。
-
-## 6.4.6 带有高可用功能的 DLI 集群安装指南
+### 6.4.6 带有高可用功能的 DLI 集群安装指南
 
 本节提供了如何设置 DLI 集群并启用 HA 功能的概述。
 
-### 拓扑
+#### 拓扑
 
 在这种情况下，拓扑由三个节点组成：两个节点被配置为管理节点，一个节点配置为计算节点。两个管理节点启用 HA 功能。计算节点运行 DL 负载，如图 6-15 所示。
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_175_0.png)
 
-图 6-15 DLI 集群拓扑。关于二进制文件的位置，此示例使用了默认值为 /opt/ibm/spectrumcomputing 的本地文件系统。
+图 6-15 DLI 集群拓扑。关于二进制文件的位置，此示例使用了默认值为 `/opt/ibm/spectrumcomputing` 的本地文件系统。
 
 第 163 页的图 6-16 显示了此配置的安装步骤。
 
@@ -4418,7 +4480,7 @@ DLI 构建在 IBM Spectrum Conductor with Spark 之上，它使用 IBM Enterpris
 - 安装 DL 框架和 DLI 需要的源软件
 - 安装 DLI
 - 配置资源组和 SIG
-- 从 GUI  DLI
+- 从 GUI DLI
 - 使用 DL 负载进行故障转移测试
 - 在两个节点上部署带有 Spark 的 IBM Spectrum Conductor
 - 创建集群并启用 Conductor Spark HA 及故障转移测试
@@ -4429,7 +4491,7 @@ DLI 构建在 IBM Spectrum Conductor with Spark 之上，它使用 IBM Enterpris
 
 预期所需的操作系统已根据安装指南安装并配置，并且所有节点上都安装了 PowerAI。由于 DLI 依赖于带有 Spark 的 IBM Spectrum Conductor HA 框架，在启动 DLI 之前需要对带有 Spark 的 Conductor 进行任何必要的 HA 测试。HA 测试必须在随后的 DLI 安装以及再次运行负载后重复。
 
-安装两个节点的步骤
+#### 安装两个节点的步骤
 
 如示例 6-1 所示，在开始安装之前需要在所有节点上进行某些配置。
 
@@ -4488,39 +4550,63 @@ egoadmin nproc -65536
 | egoadmin | 为带有 Spark 的 IBM Spectrum Conductor 启用 HA 功能: `source /opt/ibm/spectrumcomputing/profile.platform econfig myhost /shares/cws_share` | | |
 | root | 启动带有 Spark 的 IBM Spectrum Conductor 集群服务: `source /opt/ibm/spectrumcomputing/profile.platform egosh start all egosh user logon -u Admin -x Admin egosh service list` | | |
 
-
-
-
-
 # 对 dli01 节点的操作
 
 # 对 dli02 节点的操作
 
 | root | 描述 |
 | :--- | :--- |
-| root | 如预期，所有主节点的服务都会在 3 分钟内被 dli02 节点接管:<br>egosh service list<br>egosh resource list<br>egosh resource -m \|\| |
-| root | 启动 dli01 虚拟机 (VM) 并启动带有 Spark 的 IBM Spectrum Conductor:<br>source /opt/ibm/spectrumcomputing/profile.platform<br>egosh start all<br>egosh user logon -u Admin -x Admin<br>egosh service list<br>检查集群状态。 |
+| root | 如预期，所有主节点的服务都会在 3 分钟内被 `dli02` 节点接管:<br>`egosh service list`<br>`egosh resource list`<br>`egosh resource -m` |
+| root | 启动 `dli01` 虚拟机 (VM) 并启动带有 Spark 的 IBM Spectrum Conductor:<br>`source /opt/ibm/spectrumcomputing/profile.platform`<br>`egosh start all`<br>`egosh user logon -u Admin -x Admin`<br>`egosh service list`<br>检查集群状态。 |
 | root | 安装神经网络框架所需的开源软件。 |
-| root | 安装 DLI:<br>cd /bin<br>rm sh<br>ln -s bash<br>source /opt/ibm/spectrumcomputing/profile.platform<br>export CLUSTERADMIN=egoadmin<br>export CLUSTERNAME=dichlor<br>export DLI_CONDA_HOME=/opt/anaconda2<br>export DLI_SHARED_FS=/shares/dli_userdata<br>LANG=C bash dli-1.1.0_ppc64.bin --quiet \| | |
-| root | 停止两个节点带有 Spark 的 IBM Spectrum Conductor:<br>source /opt/ibm/spectrumcomputing/profile.platform<br>egosh service stop all<br>egosh shutdown all |
-| egoadmin | 添加 DLI 权限:<br>eoconfig setitlement entitlement_file_dli.dat |
-| egoadmin | 启用 HA 功能:<br>source /opt/ibm/spectrumcomputing/profile.platform<br>eoconfig mhost /shares/cws_share \|\| |
+| root | 安装 DLI:<br>`cd /bin`<br>`rm sh`<br>`ln -s bash`<br>`source /opt/ibm/spectrumcomputing/profile.platform`<br>`export CLUSTERADMIN=egoadmin`<br>`export CLUSTERNAME=dichlor`<br>`export DLI_CONDA_HOME=/opt/anaconda2`<br>`export DLI_SHARED_FS=/shares/dli_userdata`<br>`LANG=C bash dli-1.1.0_ppc64.bin --quiet` |
 
-# 对 dli01 节点的操作
 
-# 对 dli02 节点的操作
 
-| egoadmin | 启用 HA 功能:<br>source /opt/ibm/spectrumcomputing/profile.platform<br>eoconfig mhost /shares/cws_share \| |
-| root | 刷新环境变量并启动两个节点带有 Spark 的 IBM Spectrum Conductor:<br>source /opt/ibm/spectrumcomputing/profile.platform<br>egosh ego start all |
-| root | 运行 'init 0' 以模拟 dli02 崩溃。 |
+# 对 `dli01` 节点的操作
+
+| root | 停止两个节点带有 Spark 的 IBM Spectrum Conductor： |
+| :--- | :--- |
+| | `source /opt/ibm/spectrumcomputing/profile.platform` |
+| | `egosh service stop all` |
+| | `egosh shutdown all` |
+
+| egoadmin | 添加 DLI 权限： |
+| :--- | :--- |
+| | `eoconfig setitlement entitlement_file_dli.dat` |
+
+| egoadmin | 启用 HA 功能： |
+| :--- | :--- |
+| | `source /opt/ibm/spectrumcomputing/profile.platform` |
+| | `eoconfig mhost /shares/cws_share \|\|` |
+
+# 对 `dli02` 节点的操作
+
+| egoadmin | 启用 HA 功能： |
+| :--- | :--- |
+| | `source /opt/ibm/spectrumcomputing/profile.platform` |
+| | `eoconfig mhost /shares/cws_share \|` |
+
+| root | 刷新环境变量并启动两个节点带有 Spark 的 IBM Spectrum Conductor： |
+| :--- | :--- |
+| | `source /opt/ibm/spectrumcomputing/profile.platform` |
+| | `egosh ego start all` |
+
+| root | 运行 `init 0` 以模拟 `dli02` 崩溃。 |
+| :--- | :--- |
+
 | root | 检查集群状态和 DLI 服务。 |
-| root | 启动 dli02 并启动服务。 |
+| :--- | :--- |
+
+| root | 启动 `dli02` 并启动服务。 |
+| :--- | :--- |
 
 # 安装计算节点的步骤
 
 完成两个管理节点的安装和测试后，在计算节点上安装 DLI，如表 6-3 所示。
 
-| 表 6-3 计算节点安装步骤 | |
+**表 6-3 计算节点安装步骤**
+
 | 用户 | 操作 |
 | :--- | :--- |
 | root | 安装操作系统、GPU 驱动程序和 IBM PowerAI。 |
@@ -4559,13 +4645,13 @@ Candidate(master) : dli01.com,dli02.com
 
 要创建资源组，请完成以下步骤：
 
-- 1. 点击资源 (Resources) -> 资源规划 (Resource Planning) -> 资源组 (Resource Groups)。图 6-17 显示默认资源组配置。(img/f6f95defc8b3406a94b2807_181_0.png)
+1. 点击**资源 (Resources)** -> **资源规划 (Resource Planning)** -> **资源组 (Resource Groups)**。图 6-17 显示默认资源组配置。
 
-图 6-17 资源组窗口
+![图 6-17 资源组窗口](img/f6f95defc8b3406a94b2807_181_0.png)
 
 或者，可以通过运行命令获取相同的信息，如示例 6-3 所示。
 
-示例 6-3：从命令行查看资源组
+**示例 6-3：从命令行查看资源组**
 
 ```
 root@dli01:"# egosh resourcegroup view ComputeHosts
@@ -4587,6 +4673,7 @@ root@dli01:"# egosh resourcegroup view ManagementHosts
 Name        : ManagementHosts
 Description : 
 ```
+
 ```
 Type : Dynamic
 ResReq : select(mg)
@@ -4597,17 +4684,19 @@ SLOTS FREE ALLOCATED
 64 43 21
 ```
 
-Resource List : dli02.com dli01.com
+Resource List : `dli02.com` `dli01.com`
 
-- 2. 从下拉列表中选择“创建资源组”(Create a Resource Group)，并为此新资源组设置参数，如第 170 页的图 6-18 所示。
+2. 从下拉列表中选择“创建资源组”(Create a Resource Group)，并为此新资源组设置参数，如第 170 页的图 6-18 所示。
 
 # 资源组
 
-icluster > 创建资源组
+`icluster` > 创建资源组
 
 识别您的资源组 (*)
 
-资源组名称：(img/f6f95defc8b3406a94b2807_183_0.png)
+资源组名称：
+
+![资源组名称输入框](img/f6f95defc8b3406a94b2807_183_0.png)
 
 描述：
 
@@ -4616,27 +4705,32 @@ icluster > 创建资源组
 - 每个主机的槽数：
 - 每个主机的 CPU 数
 - 高级公式：
+
 资源选择方法：动态 (requirements)
 
-成员主机显示 (img/f6f95defc8b3406a94b2807_183_1.png)
+成员主机显示
+
+![成员主机显示](img/f6f95defc8b3406a94b2807_183_1.png)
 
 成员主机（在当前集群中找到）
 
 成员主机摘要：Hosts: 1 CPUs: 4 此组总槽数：0 检查重叠
 
-过滤标准：select(img)。找到：1/3
+过滤标准：`select(img)`。找到：1/3
 
 | 主机名称 | 类型 | 模型 | CPU | CPU 因子 | 最大内存 | 最大交换 | 温度 | 此组总槽数 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| dli03 | LINUXP64LE | PPC64LE | 4 | 12.0% | 61352 | 167 | 40896.00 | 0 |
+| `dli03` | `LINUXP64LE` | `PPC64LE` | 4 | 12.0% | 61352 | 167 | 40896.00 | 0 |
 
-* 必填字段 (img/f6f95defc8b3406a94b18_2.png)
+* 必填字段
 
-图 6-18 为 GPU 组设置参数
+![必填字段标记](img/f6f95defc8b3406a94b18_2.png)
 
-注意：ngpus 值将槽数设置为物理 GPU 适配器。如果有多个任务共享 GPU 适配器的需求，可以使用适当的倍数定义字段，例如 ngpus2。也可以从命令行创建相同的资源组，如示例 6-4 所示。
+**图 6-18 为 GPU 组设置参数**
 
-示例 6-4：从命令行查看 GPU 组
+注意：`ngpus` 值将槽数设置为物理 GPU 适配器。如果有多个任务共享 GPU 适配器的需求，可以使用适当的倍数定义字段，例如 `ngpus2`。也可以从命令行创建相同的资源组，如示例 6-4 所示。
+
+**示例 6-4：从命令行查看 GPU 组**
 
 ```
 root@dli01:~# egosh resourcegroup list
@@ -4651,37 +4745,43 @@ ManagementHosts    2      64     43
 
 创建 GPU 资源组后，通过以下步骤创建 SIG：
 
-- 1. 选择负载 (Workload) → Spark → 实例组 (Instance Groups)，如图 6-19 所示。(img/f6f95defc8b3406a94b2807_184_0.png)
+1. 选择**负载 (Workload)** → **Spark** → **实例组 (Instance Groups)**，如图 6-19 所示。
 
-图 6-19 创建 Spark 实例组：1
+![图 6-19 创建 Spark 实例组：1](img/f6f95defc8b3406a94b2807_184_0.png)
 
-- 2. 点击“新建”(New) → 模板 (Template)，如图 6-20 所示。(img/f6f95defc8b3406a94b2807_185_0.png)
+2. 点击**新建 (New)** → **模板 (Template)**，如图 6-20 所示。
 
-图 6-20 创建 Spark 实例组：2
+![图 6-20 创建 Spark 实例组：2](img/f6f95defc8b3406a94b2807_185_0.png)
 
-- 3. 在模板窗口中，有一个名为 dli-template 的现有模板，如图 6-21 所示。(img/f6f95defc8b3406a94b2807_185.png)
+3. 在模板窗口中，有一个名为 `dli-template` 的现有模板，如图 6-21 所示。
 
-图 6-21 创建 Spark 实例组：3
+![图 6-21 创建 Spark 实例组：3](img/f6f95defc8b3406a94b2807_185.png)
 
-- 4. 完成此新 SIG 的所需参数，如表 6-4 所示。
+4. 完成此新 SIG 的所需参数，如表 6-4 所示。
+
+**表 6-4 SIG 参数**
 
 | 参数 | 值 |
 | :--- | :--- |
-| 实例组名称 | SIG |
-| Spark 部署目录 | /opt/SIG |
-| JAVA_HOME | /usr/lib/jvm/java-1.8 |
-| HA 恢复目录 | /shares/sig |
-| Spark 执行器 (槽数) | gpu_rg |
+| 实例组名称 | `SIG` |
+| Spark 部署目录 | `/opt/SIG` |
+| JAVA_HOME | `/usr/lib/jvm/java-1.8` |
+| HA 恢复目录 | `/shares/sig` |
+| Spark 执行器 (槽数) | `gpu_rg` |
 
-图 6-22、第 174 页和第 175 页显示了这些 SIG 的配置窗口。(img/f6f95defc8b3406a94b2807_186_0.png)
+图 6-22、第 174 页和第 175 页显示了这些 SIG 的配置窗口。
 
-图 6-23 设置 JAVA_HOME 变量
+![图 6-22 SIG 配置窗口](img/f6f95defc8b3406a94b2807_186_0.png)
 
-注意：如果用户想要启用笔记本笔记本工具，请选择图 6-22 所示的三个选项之一。(img/f6f95defc8b3406a94b2807_187_0.png)
+**图 6-23 设置 `JAVA_HOME` 变量**
 
-图 6-24 创建 SIG
+注意：如果用户想要启用笔记本工具，请选择图 6-22 所示的三个选项之一。
 
-注意：JAVA_HOME 的所需值取决于安装的实际环境。
+![图 6-23 笔记本工具选项](img/f6f95defc8b3406a94b2807_187_0.png)
+
+**图 6-24 创建 SIG**
+
+注意：`JAVA_HOME` 的所需值取决于安装的实际环境。
 
 174 IBM PowerAI：在 Power 服务器上深度学习
 
@@ -4691,27 +4791,26 @@ ManagementHosts    2      64     43
 
 | | |
 | :--- | :--- |
-| Spark 驱动程序 | ComputeHosts |
-| Spark 执行器 (CPU 槽数) | ComputeHosts |
-| Spark 执行器 (GPU 槽数) | gpu_rg |
+| Spark 驱动程序 | `ComputeHosts` |
+| Spark 执行器 (CPU 槽数) | `ComputeHosts` |
+| Spark 执行器 (GPU 槽数) | `gpu_rg` |
 | Spark 调度服务 | |
-| 批量主服务 | ComputeHosts |
+| 批量主服务 | `ComputeHosts` |
 | | 使用云主机工厂启用云扩展，以便实例组可以从云提供计算主机 |
 
-显示成员主机的 (img/f6f95defc8b3406a94b2807_183_1.png)
+显示成员主机
 
-图 6-24 为 SIG 分配 GPU 资源
+![成员主机显示](img/f6f95defc8b3406a94b2807_183_1.png)
 
-- 5. 点击“创建并部署实例组”(Create and Deploy Instance Group) 并继续启动此 SIG 服务。当此 SIG 成功创建时，状态显示为“已启动”，如图 6-25 所示。(img/f6f95defc8b3406a94b2807_188_0.png)
+**图 6-24 为 SIG 分配 GPU 资源**
 
-图 6-25 检查 SIG 状态
+5. 点击**创建并部署实例组**(Create and Deploy Instance Group) 并继续启动此 SIG 服务。当此 SIG 成功创建时，状态显示为“已启动”，如图 6-25 所示。
 
-
-
-
+![图 6-25 检查 SIG 状态](img/f6f95defc8b3406a94b2807_188_0.png)
 
 提供的 OCR 文本似乎是日志类的状态信息与来自名为《IBM PowerAI: Deep Learning own（在 IBM Power 服务器上释放深度学习）一书的技术文档的混合体。根据提供的内容，我对文本进行了清理，合并了页面，并按照您的要求进行了格式化。
 
+```
 - elk-ela* STARTED 258 /Managed d101.d 1 RUN 624
 - plc* STARTED 243 d102.d 1 RUN 654
 - elk-shi* STARTED 283 /Managed d101.d 1 RUN 644
@@ -4741,8 +4840,9 @@ ManagementHosts    2      64     43
 - d102.d 1 RUN 639
 - SparkCl* STARTED 280 /Cluster*Intern*d101.d 2 RUN 650
 - d103.d 1 RUN 638
+```
 
-与 SIG ITS50-SIG-sparkss 和 ITS50-SIG-sparkss 相关的两个服务。
+与 SIG `ITS50-SIG-sparkss` 和 `ITS50-SIG-sparkss` 相关的两个服务。
 
 ## 6.5 工作负载正在运行时主节点崩溃
 
@@ -4750,7 +4850,7 @@ ManagementHosts    2      64     43
 
 关于如何使用 LI 进行深度学习项目的更多信息，请参见第 212 页的 6.8，“用例：使用带有深度学习 Caffe Cisco-10 网络”。
 
-在这种情况下，计算节点正在运行一个工作负载，此时主节点崩溃，但工作负载继续运行。带有 Spark 和 DLI 服务的 IBM Spectrum Conductor 由 dl02 接管，可以在那里继续监控和管理工作负载。访问网站更改为 https://dl02.dli.com:8443。
+在这种情况下，计算节点正在运行一个工作负载，此时主节点崩溃，但工作负载继续运行。带有 Spark 和 DLI 服务的 IBM Spectrum Conductor 由 `dl02` 接管，可以在那里继续监控和管理工作负载。访问网站更改为 `https://dl02.dli.com:8443`。
 
 > 注意：运行时，DLI HA 不提供浮动服务 IP。
 
@@ -4758,21 +4858,19 @@ ManagementHosts    2      64     43
 
 图 6-26 展示了 DLI HA 接管过程。
 
-![](img/f6f95c5defc8b3406a94a86b8d202807_190_0.png)
+![图 6-26 故障转移场景说明](img/f6f95c5defc8b3406a94a86b8d202807_190_0.png)
 
-dli01（主节点），dli02（备用主节点），dli03 计算节点，服务正在接管……接管期间工作负载继续运行，/Shares/cws_share /Shares/dli_userdata /Shares/sig_share
-
-图 6-26 故障转移场景说明
+`dli01`（主节点），`dli02`（备用主节点），`dli03` 计算节点，服务正在接管……接管期间工作负载继续运行，`/Shares/cws_share` `/Shares/dli_userdata` `/Shares/sig_share`
 
 ## 如何登录 IBM Spectrum Computing 管理控制台
 
 本节介绍了如何登录 IBM Spectrum Computing 管理控制台。
 
-### 在笔记本电脑上编辑 /etc/hosts
+### 在笔记本电脑上编辑 `/etc/hosts`
 
-您使用 FQDN（完全限定域名）访问 DLI，因此您必须在 hosts 文件中添加 IP 和主机名解析。如果您使用 Windows 笔记本电脑，文件位于 C:\Windows\System32\drivers\etc 目录下。如果你使用 Mac 笔记本电脑，文件位于 /etc 目录。无论哪种情况，向 /etc/hosts 文件添加一行，如示例 6-6 所示。
+您使用 FQDN（完全限定域名）访问 DLI，因此您必须在 `hosts` 文件中添加 IP 和主机名解析。如果您使用 Windows 笔记本电脑，文件位于 `C:\Windows\System32\drivers\etc` 目录下。如果你使用 Mac 笔记本电脑，文件位于 `/etc` 目录。无论哪种情况，向 `/etc/hosts` 文件添加一行，如示例 6-6 所示。
 
-示例 6-6 客户端中的 /etc/hosts 文件配置
+**示例 6-6 客户端中的 `/etc/hosts` 文件配置**
 
 ```
 172.16.51.96 dli01.dli.com
@@ -4786,41 +4884,35 @@ dli01（主节点），dli02（备用主节点），dli03 计算节点，服务�
 
 ### 手动添加异常
 
-您必须为以下六个端口添加异常：5000、5001、8443、8543、8643 和 9243。例如，如果使用 Firefox 浏览器，输入 https://dli01.dli.com:8443 并回车，浏览器会显示安全无效。点击“添加异常”，如图 6-27 所示。然后弹出一个窗口提示您确认，如第 179 页的图 6-28 所示。
+您必须为以下六个端口添加异常：`5000`、`5001`、`8443`、`8543`、`8643` 和 `9243`。例如，如果使用 Firefox 浏览器，输入 `https://dli01.dli.com:8443` 并回车，浏览器会显示安全无效。点击“添加异常”，如图 6-27 所示。然后弹出一个窗口提示您确认，如第 179 页的图 6-28 所示。
 
-![](img/f6f95c5defc8b3406a94a86b8d202807_191_0.png)
+![图 6-27 异常窗口：1](img/f6f95c5defc8b3406a94a86b8d202807_191_0.png)
 
-图 6-27 异常窗口：1
-
-![](img/f6f95c5defc8b3406a94a86b8d202807_192_0.png)
-
-图 6-28 异常窗口：2
+![图 6-28 异常窗口：2](img/f6f95c5defc8b3406a94a86b8d202807_192_0.png)
 
 ### 获取证书导入浏览器
 
-从管理主机的 /opt/ibm/spectrumcomputing/security/cacert.pem 下载证书。然后打开 Firefox 并完成以下步骤：
+从管理主机的 `/opt/ibm/spectrumcomputing/security/cacert.pem` 下载证书。然后打开 Firefox 并完成以下步骤：
 
-1. 点击工具（Tools）-> 高级（Advanced）。
-2. 点击机构（Authorities）选项卡并导入（Import）。
+1. 点击**工具（Tools）** -> **高级（Advanced）**。
+2. 点击**机构（Authorities）**选项卡并**导入（Import）**。
 3. 浏览到保存证书的位置并选择它。
 
 第 6 章 IBM Spectrum Conductor 深度学习 179
 
-4. 当提示信任 CA 时，确保选择此 CA 以识别网站并点击确定。您可以查看证书，如图 6-29 所示。
+4. 当提示信任 CA 时，确保选择此 CA 以识别网站并点击**确定**。您可以查看证书，如图 6-29 所示。
 
-![](img/f6f95c5defc8b3406a94a86b8d202807_193_0.png)
-
-图 6-29 查看证书
+![图 6-29 查看证书](img/f6f95c5defc8b3406a94a86b8d202807_193_0.png)
 
 5. 重启浏览器。
 
 ## 登录 IBM Spectrum Computing 管理控制台
 
-图 6-30 显示 IBM Spectrum Computing 管理控制台的登录窗口。默认用户名密码为 Admin。
+图 6-30 显示 IBM Spectrum Computing 管理控制台的登录窗口。默认用户名密码为 `Admin`。
 
-![](img/f6f95c5defc8b3406a94a86b8d202807_193_1.png)
+![图 6-30 IBM Spectrum Computing 管理控制台登录窗口](img/f6f95c5defc8b3406a94a86b8d202807_193_1.png)
 
-图 6-30 IBM Spectrum Computing 管理控制台登录窗口
+
 
 点击登录（Login）即可看到集群主窗口。
 
@@ -4834,7 +4926,7 @@ dli01（主节点），dli02（备用主节点），dli03 计算节点，服务�
 
 图 6-31 带有 Spark 的 IBM Spectrum Conductor 主节点配置：1
 
-2. 您可以看到 dl02 节点在可用列表中。选择它并添加到主候选列表中，如图 6-32 所示。
+2. 您可以看到 `dl02` 节点在可用列表中。选择它并添加到主候选列表中，如图 6-32 所示。
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_194_1.png)
 
@@ -4848,7 +4940,7 @@ dli01（主节点），dli02（备用主节点），dli03 计算节点，服务�
 
 ## 6.6 DLI 图形界面简介
 
-本节介绍了如何使用 DLI 功能。环境是一台带有四个 POWER8 CPU 和一个 NVIDIA P100 GPU 的 IBM Power 服务器虚拟机。/etc/hosts 文件如示例 6-7 所示。
+本节介绍了如何使用 DLI 功能。环境是一台带有四个 POWER8 CPU 和一个 NVIDIA P100 GPU 的 IBM Power 服务器虚拟机。`/etc/hosts` 文件如示例 6-7 所示。
 
 ```
 示例 6-7 /etc/hosts 内容
@@ -4857,13 +4949,14 @@ dli01（主节点），dli02（备用主节点），dli03 计算节点，服务�
 
 客户端是一个 Mac 笔记本电脑。
 
-带有 Spark 的 IBM Spectrum Conductor 安装在默认目录 /opt/ibm/spectrumcomputing，DLI 用户数据安装在 /scratch/dli_userdata 目录。
+带有 Spark 的 IBM Spectrum Conductor 安装在默认目录 `/opt/ibm/spectrumcomputing`，DLI 用户数据安装在 `/scratch/dli_userdata` 目录。
 
 ### 6.6.1 数据集管理
 
 开始管理您的数据集，完成以下步骤：
 
 1. 登录带有 Spark 的 IBM Spectrum Conductor，选择工作负载（Workload）→ Spark 深度学习（Spark Deep Learning）。打开 DLI 主窗口，如图 6-34 所示。
+
 有三个菜单：数据集（Data sets）、模型（Models）和 Spark 应用程序（Spark Applications）。
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_195_1.png)
@@ -4889,28 +4982,30 @@ dli01（主节点），dli02（备用主节点），dli03 计算节点，服务�
 从 LMDB 创建数据集。
 
 * 数据集名称：
+
 * 在 Spark 实例组创建：
+
 * 训练文件夹：
+
 * 验证文件夹：
+
 * 测试文件夹：
+
 * 均值文件：
+
 * 标签文件：
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_197_0.png)
 
 图 6-36 导入 LMDB 数据集的窗口
 
-4. 输入所有参数后，点击创建（Create），DLI 将数据导入其工作目录，位于 ${DLI_SHARED_FS}/datasets。操作完成后，您可以查看结果。点击数据集名称将打开一个窗口显示详细信息（图 6-37）。
+4. 输入所有参数后，点击创建（Create），DLI 将数据导入其工作目录，位于 `${DLI_SHARED_FS}/datasets`。操作完成后，您可以查看结果。点击数据集名称将打开一个窗口显示详细信息（图 6-37）。
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_197_1.png)
 
 图 6-37 查看数据集导入结果
 
 5. 重启浏览器。
-
-
-
-
 
 注意：不同数据集类型的窗口中的信息可能有所不同。
 
@@ -4951,15 +5046,21 @@ dli01（主节点），dli02（备用主节点），dli03 计算节点，服务�
 如果你想创建一个训练模式，必须取消勾选“创建推理模型”（Create an inference model）。对于 Caffe 模型，有一个属性名为“训练引擎”（Training engine），它有四个选项：
 
 - 单节点训练
+
 - 使用 Caffe 的分布式训练
+
 - 使用 IBM Fabric 的分布式训练
+
 - 使用 IBM Fabric 和自动扩缩容的分布式训练
 
 对于 TensorFlow 模型，也有四个选项：
 
 - 单节点训练
+
 - 使用 Caffe 的分布式训练
+
 - 使用 IBM Fabric 的分布式训练
+
 - 使用 IBM Fabric 和自动扩缩容的分布式训练
 
 关于这些选项的更多信息，请参见第 203 页 6.7，“DLI 中支持的深度学习网络和训练引擎”。
@@ -4979,18 +5080,27 @@ dli01（主节点），dli02（备用主节点），dli03 计算节点，服务�
 要训练你的模型，请完成以下步骤：
 
 - 工作节点数（Number of workers）意味着启动多少个工作节点。
+
 - 每个工作节点的 GPU 数（GPUs per worker）意味着每个工作节点使用多少 GPU。
+
 - 远程服务器上的权重文件（Weight files on remote server）是远程服务器上权重文件的路径，用于持续训练。
+
 - 上传本地权重文件（Upload local weight files）是用于持续训练的本地权重文件路径。
 
 - 2. 点击“训练”（Training）启动此作业，如图 6-43 所示。
 
 | 模型名称 | Cifar10-2017120618038 |
+
 | :--- | :--- |
+
 | 数据集 | cifar10-dataset |
+
 | 工作节点数 | 1 |
+
 | 每个工作节点的 GPU 数 | 1 |
+
 | 远程服务器上的权重文件 | 指定包含权重文件的文件夹。 |
+
 | 上传本地权重文件 | 选择文件。 |
 
 图 6-43 训练窗口
@@ -5000,13 +5110,21 @@ dli01（主节点），dli02（备用主节点），dli03 计算节点，服务�
 - 3. 点击模型名称打开窗口（图 6-64）。有四个菜单：概览（Overview）、超参数调优（Hyperparameter Tuning）、训练（Training）和验证（Validation）。
 
 | 深度学习 | |
+
 | :--- | :--- |
+
 | Cifar10 训练模型 | 概览 超参数调优 训练 验证结果 |
+
 | 框架: Caffe | 实例组: test1 |
-| 模型文件: /scratch/08/datasets/models/Cifar10 | Batch大小: 96 |
+
+| 模型文件: `/scratch/08/datasets/models/Cifar10` | Batch大小: 96 |
+
 | 数据集: Cifar10-datasets | |
+
 | 超参数 | 基础学习率: 0.1 动量: 0.9 |
+
 | 权重衰减: 0.0004 最大迭代次数: 5000 |
+
 | 求解器类型: SGD 学习率策略: 固定 |
 
 图 6-44 训练或训练模型的菜单
@@ -5028,13 +5146,21 @@ dli01（主节点），dli02（备用主节点），dli03 计算节点，服务�
 窗口包含以下信息：
 
 - 已用时间和迭代
+
 - 训练进度估计
+
 - 训练和测试网络中损失的学习曲线
+
 - 训练和测试网络中准确率的学习曲线
+
 - 优化建议
+
 - 早期停止警告
+
 - 每个感兴趣层的权重直方图
+
 - 每个感兴趣层的梯度直方图
+
 - 每个感兴趣层的激活直方图
 
 第 6 章 IBM Spectrum Conductor Deep Learning 影响 191
@@ -5042,11 +5168,16 @@ dli01（主节点），dli02（备用主节点），dli03 计算节点，服务�
 对于早期停止警告，训练过程中检测并建议了以下问题：
 
 - 梯度爆炸
+
 - 溢出
+
 - 饱和
+
 - 散散
+
 - 过拟合
--欠拟合
+
+- 欠拟合
 
 ## 模型验证
 
@@ -5073,7 +5204,9 @@ dli01（主节点），dli02（备用主节点），dli03 计算节点，服务�
 超参数调优是 DLI 的一项关键功能。它有三种定义：
 
 - 参数调优：对于要训练的网络，输入的不同参数会影响训练结果，例如时间成本或准确率。参数调优有助于找到较好的参数。
+
 - 调优任务：你启动的任务之一。
+
 - 调优作业：带一组运行的调优作业。
 
 - 选择一个训练模型，点击其名称并选择**超参数调优**（Hyperparameter Tuning）→**新建调优**（New Tuning）开始配置，如图 6-50 所示。
@@ -5085,7 +5218,9 @@ dli01（主节点），dli02（备用主节点），dli03 计算节点，服务�
 在方法中，你可以为此调优任务选择策略。搜索类型方面，DLI 支持随机搜索（Random Search）、TPE 和贝叶斯（Bayesian）。下节解释了其中每一个：
 
 - **随机搜索**（Random Search）：随机搜索算法通过使用 UI 中输入的超参数生成随机对组合，并根据这些随机组合找到调优作业结果的最优。
+
 - **TPE**：通过评估某些调优（训练）作业，自动为机器学习中的目标函数优化选择一组更好的参数。原理上，它使用 Parzen 窗口在参数的每个维度上通过指定的随机生成器区分所选样本，然后使用高斯混合模型高损失值导出新的随机生成器。
+
 - **贝叶斯**（Bayesian）：批量运行随机选择参数的调优和训练作业。在每个批次中，它计算对应于损失值的良好参数的可能性，并将这种可能性作为来自理论推导的分布，用来估计良好参数的高斯密度。最终，它通过改变分布找到良好的参数组合。
 
 关于这些策略的更多信息，请参见第 147 页 6.6.3，“超参数优化和搜索”。
@@ -5094,44 +5229,60 @@ dli01（主节点），dli02（备用主节点），dli03 计算节点，服务�
 
 194 IBM PowerAI: Deep Learning Unleashed on IBM Power Systems
 
-
-
-
-
 ## 为模型 Cifar10 调优超参数
 
 调优任务将启动多个作业来搜索超参数。将创建一个包含调优后超参数的模型。
 
 | 调优尝试名称 | Cifar10-tuning-201710210918348 |
+
 |--- |---|---|
+
 | | 新模型将命名为 Cifar10-tuning-201710210918348 |
 
 | 超参数搜索类型 | 随机搜索 (RandomSearch) |
+
 | 框架 | CafeOnSpark |
 
 ### 调优参数设置
+
 编辑将调优的参数：
 
 | 优化器（至少选择 1 个） | |
+
 |--- |---|
+
 | SGD | |
+
 | AdaDelta | |
+
 | AdaGrad | |
+
 | Adam | |
+
 | RMSProp | |
+
 | 学习率 | |
+
 | 权重衰减范围 | |
+
 | 动量范围 | |
+
 | 最大批大小 | |
 
 ### 调优工作流设置
+
 查看控制调优作业和进程的参数
 
 | 工作节点数量 | 1 |
+
 | 每个工作节点的 GPU | 1 |
+
 | 最大迭代次数 | |
+
 | 总作业数 | 10 |
+
 | 最大并行作业数 | 2 |
+
 | 最大运行时间（分钟） | 80 |
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_208_0.png)
@@ -5152,7 +5303,7 @@ DLI 还根据你选择的原始模型创建一个带有调优超参数的训练�
 
 当一个训练好的模型满足准确率要求时，你可以通过以下步骤将其转换为推理模型：
 
-- 1. 选择一个训练好的模型并点击**创建推理模型**Create Inference Model），如图 6-54 所示。
+- 1. 选择一个训练好的模型并点击**创建推理模型**（Create Inference Model），如图 6-54 所示。
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_209_1.png)
 
@@ -5160,28 +5311,37 @@ DLI 还根据你选择的原始模型创建一个带有调优超参数的训练�
 
 然后，DLI 会创建一个命名为 **(原始训练模型名称)-(时间戳)-Inference** 的新推理模型。你可以在模型列表中找到它。
 
-- 2. 使用此模型可以进行预测操作。选择一个推理模型并点击**推理**(Inference），如第 197 页的图 6-55 所示。
+- 2. 使用此模型可以进行预测操作。选择一个推理模型并点击**推理**（Inference），如第 197 页的图 6-55 所示。
 
 ## 深度学习
 
 数据集 模型 Spark 应用
 
 | 名称 | 查看 | 编辑 | 推理 | 数据集 | 框架 | 实例组 | 创建时间 | 创建者 |
+
 |---|---|---|---|---|---|---|---|---|
+
 | Cycle-base-model | | | | Power12dataset | TensorFlow | testing | 2017-10-24 03:55:01 | Admin |
+
 | Fashion-mnist | | | | FashionMNIST-dataset | TensorFlow | testing | 2017-10-25 11:41:42 | Admin |
+
 | Cifar0-training-201702115468 | | | | Cifar0-datasets | Cafe | testing | 2017-10-21 09:46:45 | |
-| cifar-model-1-2017021145005-2017021145303-Inference | | | | | | 2017-10-21 09:46:23 | Admin |
-| Cifar10 | | | | Cifar10-datasets | Cafe | testing | 2017-10-21 09:58:08 | Admin |
+
+
+
+| `cifar-model-1-2017021145005-2017021145303-Inference` | | | | | | 2017-10-21 09:46:23 | Admin |
+
+| `Cifar10` | | | | `Cifar10-datasets` | `Cafe` | testing | 2017-10-21 09:58:08 | Admin |
+
 图 6-55 查看推理模型的推理列表
 
-3. 完成阈值并选择要预测的文件。然后点击“推理”（Inference），如图 6-56 所示。
+3. 完成阈值并选择要预测的文件。然后点击“推理”（`Inference`），如图 6-56 所示。
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_210_0.png)
 
 图 6-56 为推理作业设置参数
 
-4. 点击模型名称并选择“推理”（Inference），显示所有推理任务，如图 6-57 所示。
+4. 点击模型名称并选择“推理”（`Inference`），显示所有推理任务，如图 6-57 所示。
 
 ![](img/f6f95c5defc8b3406a94a86b8d2011_0.png)
 
@@ -5193,7 +5353,7 @@ Inference: cifar-model-1-2017021145005-2017021145303-Inference/outputs/result.js
 
 | 样本 | 缩略图 | 概率 |
 |---|---|---|
-| car.png | 1 | 38.2% |
+| `car.png` | 1 | 38.2% |
 | | 3 | 13.4% |
 | | 8 | 12.8% |
 | | 0 | 12.4% |
@@ -5202,7 +5362,7 @@ Inference: cifar-model-1-2017021145005-2017021145303-Inference/outputs/result.js
 
 ### 深度学习监控与管理
 
-有很多工作负载，例如数据集导入、模型训练、模型验证、模型调优和模型预测。DLI 为调试或其他目的保存所有日志。对于数据集导入，当用户选择数据集并点击名称时，概述窗口中有一个链接，如图 6-59 所示。
+有很多工作负载，例如数据集导入、模型训练、模型验证、模型调优和模型预测。`DLI` 为调试或其他目的保存所有日志。对于数据集导入，当用户选择数据集并点击名称时，概述窗口中有一个链接，如图 6-59 所示。
 
 ## 深度学习数据集 - Spark 应用
 
@@ -5210,31 +5370,37 @@ Inference: cifar-model-1-2017021145005-2017021145303-Inference/outputs/result.js
 
 | 名称 | 格式 | 状态 | 大小 |
 |---|---|---|---|
-| citron1 | TFRecords | Created | 8.59GB |
-| citron1 | Parquet | 创建 | 256GB |
-| citron2 | Parquet | Created | 256GB |
-| Power-dataset | Other | Created | 45GB |
-| UCS-dataset | TFRecords | Created | 256GB |
-| citron10-datasets | AVRO | Created | 256GB |
+| `citron1` | `TFRecords` | Created | 8.59GB |
+| `citron1` | `Parquet` | 创建 | 256GB |
+| `citron2` | `Parquet` | Created | 256GB |
+| `Power-dataset` | Other | Created | 45GB |
+| `UCS-dataset` | `TFRecords` | Created | 256GB |
+| `citron10-datasets` | `AVRO` | Created | 256GB |
 
 图 6-59 查看数据集导入作业的日志
 
 对于模型训练作业，链接位于 Spark 仪表板中，如图 6-60 所示。
 
-## Cifar10-datasets 数据集 - 图像分类
+## `Cifar10-datasets` 数据集 - 图像分类
 
-ID: F4B62D3
+ID: `F4B62D3`
+
 创建：2017-11-01 2:55:42
-所有者：LA60B
-格式：JSON
-位置：s3://cifar10-datasets/cifar10-datasets/cifar10-datasets/train_data/ s3://cifar10-datasets/cifar10-datasets/test_data/
+
+所有者：`LA60B`
+
+格式：`JSON`
+
+位置：`s3://cifar10-datasets/cifar10-datasets/cifar10-datasets/train_data/` `s3://cifar10-datasets/cifar10-datasets/cifar10-datasets/test_data/`
 
 ## Spark 应用
 
 应用：模型导入
 
-app-20171101025542-0000-2016-7940-76d8-0
+`app-20171101025542-0000-2016-7940-76d8-0`
+
 状态：已完成
+
 耗时：0:32 分
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_212_0.png)
@@ -5245,8 +5411,8 @@ app-20171101025542-0000-2016-7940-76d8-0
 
 | 名称 | 状态 | 数据集 |
 |---|---|---|
-| Cifar10-ITSO-demo1-2017110102554214730 查看作业 | 已完成 | Cifar10-testdata-1 |
-| Cifar10-ITSO-demo1-2017110102554210242 查看作业 | 已完成 | Cifar10-testdata-1 |
+| `Cifar10-ITSO-demo1-2017110102554214730` 查看作业 | 已完成 | `Cifar10-testdata-1` |
+| `Cifar10-ITSO-demo1-2017110102554210242` 查看作业 | 已完成 | `Cifar10-testdata-1` |
 
 图 6-61 查看验证作业的日志
 
@@ -5276,20 +5442,17 @@ app-20171101025542-0000-2016-7940-76d8-0
 
 | 执行器 | 状态 | 内存 |
 |---|---|---|
-| 0-35b7c5d9-8e63-4d58-a3e7-7f48fca7d0 | 运行 | 49152 |
+| `0-35b7c5d9-8e63-4d58-a3e7-7f48fca7d0` | 运行 | 49152 |
 
 图 6-65 关于如何获取深度学习活动不同日志的一个示例
 
-
-
-
-Performance 窗口提供了运行中和已完成的任务信息，如图 6-66 所示。
+`Performance` 窗口提供了运行中和已完成的任务信息，如图 6-66 所示。
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_215_0.png)
 
 图 6-66 任务性能数据显示窗口
 
-Resource Usage 窗口提供了任务运行期间的 CPU、GPU 和物理内存使用情况，如图 6-67 所示。
+`Resource Usage` 窗口提供了任务运行期间的 CPU、GPU 和物理内存使用情况，如图 6-67 所示。
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_215_1.png)
 
@@ -5299,28 +5462,30 @@ IBM PowerAI: 在 IBM Power Systems 服务器上释放深度学习能力
 
 ## 6.7 DLI 中支持的深度学习网络和训练引擎
 
-本节描述了 DLI 中支持的 DL 网络和训练引擎。
+本节描述了 `DLI` 中支持的 DL 网络和训练引擎。
 
 ### 6.7.1 深度学习网络示例
 
-当你想要在 DLI 平台上使用 DL 网络进行训练或推理工作负载处理时，可以使用 IBM 提供的网络示例。
+当你想要在 `DLI` 平台上使用 DL 网络进行训练或推理工作负载处理时，可以使用 IBM 提供的网络示例。
 
-在本文撰写时，DLI 支持表 6-5 所示的网络。
+在本文撰写时，`DLI` 支持表 6-5 所示的网络。
 
 表 6-5 DLI V1.1 中支持的深度学习网络
 
 | 框架 | 网络 | 支持的训练引擎 |
 | --- | --- | --- |
-| Caffe | Cifar10, Resnet 和 VGG19 | 单节点训练<br>使用 Caffe 进行分布式训练<br>使用 IBM Fabric 进行分布式训练<br>使用 IBM Fabric 和自动扩缩进行分布式训练 |
-| TensorFlow | Cifar10, Inception 和 VGG19 | 使用 TensorFlow 原生分布式模式进行训练<br>使用 IBM Fabric 进行分布式训练<br>使用 IBM Fabric 和自动扩缩进行分布式训练 |
+| `Caffe` | `Cifar10`, `Resnet` 和 `VGG19` | 单节点训练<br>使用 `Caffe` 进行分布式训练<br>使用 IBM Fabric 进行分布式训练<br>使用 IBM Fabric 和自动扩缩进行分布式训练 |
+| `TensorFlow` | `Cifar10`, `Inception` 和 `VGG19` | 使用 `TensorFlow` 原生分布式模式进行训练<br>使用 IBM Fabric 进行分布式训练<br>使用 IBM Fabric 和自动扩缩进行分布式训练 |
 
-DLI 提供了包括 Caffenet、Darkflow、Facenet、LSTM、Triplet-loss、Faster-RCNN 等具有以下特征的网络。
+`DLI` 提供了包括 `Caffenet`、`Darkflow`、`Facenet`、`LSTM`、`Triplet-loss`、`Faster-RCNN` 等具有以下特征的网络。
 
 > 注意：上一个链接中列出的网络来自开源网站，并由 IBM DL 开发者团队进行了优化。请检查更新。
 
-- 单节点训练 (Caffe)：使用本地 Cafe 模式进行训练任务。
-- 使用 Caffe 进行分布式训练：CaffeOnSpark 支持训练任务的分布式模式。
-- 使用 TensorFlow 进行分布式训练：使用 TensorFlow 原生分布式模式进行训练任务。
+- 单节点训练 (`Caffe`)：使用本地 `Cafe` 模式进行训练任务。
+
+- 使用 `Caffe` 进行分布式训练：`CaffeOnSpark` 支持训练任务的分布式模式。
+
+- 使用 `TensorFlow` 进行分布式训练：使用 `TensorFlow` 原生分布式模式进行训练任务。
 
 ## 使用 IBM Fabric 进行分布式训练
 
@@ -5328,20 +5493,23 @@ DLI 提供了包括 Caffenet、Darkflow、Facenet、LSTM、Triplet-loss、Faster
 
 ## IBM Fabric 单节点和多 GPU 训练
 
-如果你将 worker 数量设置为 1，则 fabric 训练引擎将不使用 PS（参数服务器）。IBM Fabric 单节点和多 GPU 的训练过程如下，如图 6-68 所示。
+如果你将 `worker` 数量设置为 1，则 `fabric` 训练引擎将不使用 PS（参数服务器）。IBM Fabric 单节点和多 GPU 的训练过程如下，如图 6-68 所示。
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_217_0.png)
 
 图 6-68 IBM Fabric 单节点和多 GPU 训练过程
 
 1. 更新模型的权重值并在多 GPU 上启动模型原生训练。
+
 2. 从 GPU 卡收集梯度数据。
-3. 归约梯度数据（Reduce）。
+
+3. 归约梯度数据（`Reduce`）。
+
 4. 将归约后的梯度数据应用于权重值，返回步骤 1。
 
 ## IBM Fabric 多节点和多 GPU 训练
 
-如果你将 worker 数量设置为大于 1，则 fabric 训练引擎将使用 PS。IBM Fabric 多节点和多 GPU 的训练过程如下，并在图 6-69 中描述。
+如果你将 `worker` 数量设置为大于 1，则 `fabric` 训练引擎将使用 PS。IBM Fabric 多节点和多 GPU 的训练过程如下，并在图 6-69 中描述。
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_217_1.png)
 
@@ -5349,24 +5517,27 @@ DLI 提供了包括 Caffenet、Darkflow、Facenet、LSTM、Triplet-loss、Faster
 
 204 IBM PowerAI: 在 IBM Power Systems 服务器上释放深度学习能力
 
-1. 从 PS 拉取权重，更新 worker 中 GPU 的权重值，并启动模型训练。
-2. 在 worker 中收集并归约梯度数据，将其推送到 PS。
+1. 从 PS 拉取权重，更新 `worker` 中 GPU 的权重值，并启动模型训练。
+
+2. 在 `worker` 中收集并归约梯度数据，将其推送到 PS。
+
 3. 同步和异步更新 PS 中的梯度数据。
+
 4. 将梯度数据应用于 PS 中的权重值，返回步骤 1。
 
-如果你将 worker 数量设置为 1，则 fabric 训练引擎不使用 PS。
+如果你将 `worker` 数量设置为 1，则 `fabric` 训练引擎不使用 PS。
 
 ## NVIDIA Collective Library 支持的 IBM Fabric 核心引擎
 
-IBM Fabric 核心引擎支持 GPU 卡之间数据交换的 NCCL 功能。使用它时无需进行其他配置。完成以下步骤：
+IBM Fabric 核心引擎支持 GPU 卡之间数据交换的 `NCCL` 功能。使用它时无需进行其他配置。完成以下步骤：
 
-1. NCCL 广播权重数据，如图 6-70 所示。
+1. `NCCL` 广播权重数据，如图 6-70 所示。
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_218_0.png)
 
-当权重数据分配给 GPU:0 时，NCCL 可以将其广播到 worker 中的其他 GPU 上。
+当权重数据分配给 `GPU:0` 时，`NCCL` 可以将其广播到 `worker` 中的其他 GPU 上。
 
-2. NCCL 归约梯度数据，如图 6-71 所示。GPU:0 与其他 GPU 归约梯度数据。
+2. `NCCL` 归约梯度数据，如图 6-71 所示。`GPU:0` 与其他 GPU 归约梯度数据。
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_219_0.png)
 
@@ -5374,7 +5545,7 @@ IBM Fabric 核心引擎支持 GPU 卡之间数据交换的 NCCL 功能。使用�
 
 ## 使用 IBM Fabric 和自动扩缩进行分布式训练
 
-要此此功能需要设置两个参数：
+要使用此功能需要设置两个参数：
 
 - 使用 IBM Fabric 和自动扩缩进行分布式训练，如图 6-72 所示。
 
@@ -5382,7 +5553,7 @@ IBM Fabric 核心引擎支持 GPU 卡之间数据交换的 NCCL 功能。使用�
 
 图 6-72 使用 IBM Fabric 和自动扩缩进行分布式训练
 
-要此此功能需要设置两个参数：
+要使用此功能需要设置两个参数：
 
 - 使用 IBM Fabric 和自动扩缩进行分布式训练，如图 6-73 所示。
 
@@ -5390,7 +5561,7 @@ IBM Fabric 核心引擎支持 GPU 卡之间数据交换的 NCCL 功能。使用�
 
 图 6-73 使用 IBM Fabric 和自动扩缩进行分布式训练
 
-要此此功能需要设置两个参数：
+要使用此功能需要设置两个参数：
 
 - 使用 IBM Fabric 和自动扩缩进行分布式训练，如图 6-74 所示。
 
@@ -5398,51 +5569,59 @@ IBM Fabric 核心引擎支持 GPU 卡之间数据交换的 NCCL 功能。使用�
 
 图 6-74 使用 IBM Fabric 和自动扩缩进行分布式训练
 
+以下是 `tf_parameter_mgr` 的函数：
 
+- `getBaseLearningRate()`
 
+- `getLearningRateDecay()`
 
+- `getLearningDecaySteps()`
 
-以下是 tf_parameter_mgr 的函数：
+- `getTrainBatchSize()`
 
-- getBaseLearningRate()
-- getLearningRateDecay()
-- getLearningDecaySteps()
-- getTrainBatchSize()
-- getTestBatchSize()
-- getHNDenseState()
-- getTrainData(getfile=True)
-- getTestData(getfile=True)
-- getValData(getfile=True)
-- getMaxSteps()
-- getTestInterval()
-- getOptimizer(learning_rate)
-- getLearningRate(global_step=None)
+- `getTestBatchSize()`
 
-你必须修改代码以调用之前编写的 API 函数。IBM Bluemix 的 DLI 共享了一些示例 TensorFlow 模型。有关这些 API 函数的详细用法的更多信息，请参阅模型的 readme 文件。
+- `getHNDenseState()`
+
+- `getTrainData(getfile=True)`
+
+- `getTestData(getfile=True)`
+
+- `getValData(getfile=True)`
+
+- `getMaxSteps()`
+
+- `getTestInterval()`
+
+- `getOptimizer(learning_rate)`
+
+- `getLearningRate(global_step=None)`
+
+你必须修改代码以调用之前编写的 API 函数。IBM Bluemix 的 `DLI` 共享了一些示例 `TensorFlow` 模型。有关这些 API 函数的详细用法的更多信息，请参阅模型的 `readme` 文件。
 
 ## 将 Caffe 模型适配到 IBM Fabric
 
-本节介绍了将 Caffe 模型适配到 IBM Fabric 的过程。当你拥有一个 Caffe 模型并想要使用 IBM Fabric 加速训练过程时，你可能修改一些 Caffe 配置：
+本节介绍了将 `Caffe` 模型适配到 IBM Fabric 的过程。当你拥有一个 `Caffe` 模型并想要使用 IBM Fabric 加速训练过程时，你可能修改一些 `Caffe` 配置：
 
-- 1. 你必须将 Caffe 解决方案文件重命名为 `solver.prototxt`。在 `solver.prototxt` 文件中，添加示例 6-9 所示的配置。
+1. 你必须将 `Caffe` 解决方案文件重命名为 `solver.prototxt`。在 `solver.prototxt` 文件中，添加示例 6-9 所示的配置。
 
-示例 6-9 solver.prototxt 示例
+示例 6-9 `solver.prototxt` 示例
 
 ```
 test_compute_loss:true
 ```
 
-- 2. 你必须将 Caffe 训练和测试网络文件重命名为 `train_test.prototxt`。在 `train_test.prototxt` 文件中，`input_param data` 必须是形状类型，如示例 6-10 所示。
+2. 你必须将 `Caffe` 训练和测试网络文件重命名为 `train_test.prototxt`。在 `train_test.prototxt` 文件中，`input_param data` 必须是形状类型，如示例 6-10 所示。
 
-示例 6-10 用于 input_param 的 train_test.prototxt 示例
+示例 6-10 用于 `input_param` 的 `train_test.prototxt` 示例
 
 ```
 input_param ( shape: { dim:200 dim: 3 dim: 32 dim: 32 } )
 ```
 
-- 3. 在 `train_test.prototxt` 文件中，准确率层配置如示例 6-11 所示。
+3. 在 `train_test.prototxt` 文件中，准确率层配置如示例 6-11 所示。
 
-示例 6-11 用于准确率层的 train_test.prototxt 示例
+示例 6-11 用于准确率层的 `train_test.prototxt` 示例
 
 ```
 layer {
@@ -5456,21 +5635,21 @@ layer {
 
 ## 将 TensorFlow 模型适配到 IBM Fabric
 
-本节介绍了将 TensorFlow 模型适配到 IBM Fabric 的过程。当你有一个单节点单卡的 TensorFlow 模型并想要使用 IBM Fabric 进行布式训练以加速训练过程时，你必须调用 IBM Fabric API 并修改模型的某些代码。
+本节介绍了将 `TensorFlow` 模型适配到 IBM Fabric 的过程。当你有一个单节点单卡的 `TensorFlow` 模型并想要使用 IBM Fabric 进行分布式训练以加速训练过程时，你必须调用 IBM Fabric API 并修改模型的某些代码。
 
-在将模型适配到 IBM Fabric 之前，你必须理解 fabric TensorFlow 模型的两个局限性：
+在将模型适配到 IBM Fabric 之前，你必须理解 `fabric` `TensorFlow` 模型的两个局限性：
 
-- 1. IBM Fabric 不支持 `tf.placeholder()` 作为数据输入。你必须使用 TensorFlow 队列方案作为数据输入。关于 TensorFlow 队列方案的更多信息，请参阅《TensorFlow 程序员指南》。
+1. IBM Fabric 不支持 `tf.placeholder()` 作为数据输入。你必须使用 `TensorFlow` 队列方案作为数据输入。关于 `TensorFlow` 队列方案的更多信息，请参阅《TensorFlow 程序员指南》。
 
-- 2. 在 TensorFlow 模型中，你不需要定义 `tf.device()` 操作。IBM Fabric 会自动将模型部署到单节点/多节点以及多 GPU 设备上。
+2. 在 `TensorFlow` 模型中，你不需要定义 `tf.device()` 操作。IBM Fabric 会自动将模型部署到单节点/多节点以及多 GPU 设备上。
 
-> 注意：由于第一个限制，IBM Fabric TensorFlow 训练引擎用于分类和目标检测等深度学习 场景。
+> 注意：由于第一个限制，IBM Fabric `TensorFlow` 训练引擎用于分类和目标检测等深度学习场景。
 
-当你将 TensorFlow 模型适配到 DLI IBM Fabric 时，请完成以下步骤：
+当你将 `TensorFlow` 模型适配到 `DLI` IBM Fabric 时，请完成以下步骤：
 
-- 1. 你必须定义 `fabricmodel.py`。
+1. 你必须定义 `fabricmodel.py`。
 
-- 2. 在 `fabricmodel.py` 文件中，你必须如示例 6-12 所示导入 IBM API。开发时，你可以从 DLI Fabric 工具获取 IBM API 文件 `meta_writer` 和 `tf_meta_pb2.py`。
+2. 在 `fabricmodel.py` 文件中，你必须如示例 6-12 所示导入 IBM API。开发时，你可以从 `DLI` Fabric 工具获取 IBM API 文件 `meta_writer` 和 `tf_meta_pb2.py`。
 
 示例 6-12：导入 IBM Fabric 模块
 
@@ -5478,7 +5657,7 @@ layer {
 from meta_writer import *
 ```
 
-- 3. 对于 DLI Fabric 平台集成，你如示例 6-13 所示定义 API。
+3. 对于 `DLI` Fabric 平台集成，你如示例 6-13 所示定义 API。
 
 ```
 DEFAULT_CKPT_DIR = './train'
@@ -5505,16 +5684,19 @@ tf.app.DEFINE_string('graph_file', DEFAULT_GRAPH_FILE,
 ```
 
 ## 注意：
-- #DEFAULT_CKPT_DIR 用于 TensorFlow point 文件。
-- #DEFAULT_WEIGHT_FILE 用于使用 BlueMind API 继续训练。
-- #DEFAULT_MODEL_FILE 用于 fabric 使用的 TensorFlow 图 Protobuf 文件。
-- #DEFAULT_META_FILE 用于 fabric 元数据文件。
-- #DEFAULT_GRAPH_FILE 用于 TensorFlow 图文本文件。
-- #DEFAULT_MODEL_FILE, DEFAULT_META_FILE, DEFAULT_GRAPH_FILE 将由 fabric API 生成并并在 DLI 引擎中使用。
 
-- 4. 在 `fabricmodel.py` 文件中，你必须如示例 6-14 所示定义 main 方法。该方法由 DLI 平台调用。
 
-示例 6-14 fabricmodel.py 中的 main 方法
+
+- `#DEFAULT_CKPT_DIR` 用于 TensorFlow point 文件。
+- `#DEFAULT_WEIGHT_FILE` 用于使用 BlueMind API 继续训练。
+- `#DEFAULT_MODEL_FILE` 用于 fabric 使用的 TensorFlow 图 Protobuf 文件。
+- `#DEFAULT_META_FILE` 用于 fabric 元数据文件。
+- `#DEFAULT_GRAPH_FILE` 用于 TensorFlow 图文本文件。
+- `#DEFAULT_MODEL_FILE`、`DEFAULT_META_FILE`、`DEFAULT_GRAPH_FILE` 将由 fabric API 生成并在 DLI 引擎中使用。
+
+在 `fabricmodel.py` 文件中，你必须如示例 6-14 所示定义 `main` 方法。该方法由 DLI 平台调用。
+
+**示例 6-14** `fabricmodel.py` 中的 `main` 方法
 
 ```python
 def main(argv=None):
@@ -5563,16 +5745,16 @@ if __name__ == '__main__':
   tf.app.run()
 ```
 
-根据 IBM Fabric write_meta API，DL 模型提供了：
+根据 IBM Fabric `write_meta` API，DL 模型提供了：
 
 - 准确率操作
 - 损失操作
 - 准确率操作
 - 损失操作
-- grads_and_vars，可以通过 optimizer.gradients(train_loss) 获取
-- 应用梯度操作，可以通过 optimizer.apply_gradients(grads, global_step) 获取
+- `grads_and_vars`，可以通过 `optimizer.gradients(train_loss)` 获取
+- 应用梯度操作，可以通过 `optimizer.apply_gradients(grads, global_step)` 获取
 
-> 注意：训练和测试准确率、损失操作必须 TensorFlow 标量。如果你无法在特定模型中提供训练准确率、测试准确率和损失操作，可以将它们设置为 `tf.constant(0.5, dtype=tf.float32)`。
+> **注意**：训练和测试准确率、损失操作必须 TensorFlow 标量。如果你无法在特定模型中提供训练准确率、测试准确率和损失操作，可以将它们设置为 `tf.constant(0.5, dtype=tf.float32)`。
 
 ## 6.8 用例：使用 Caffe Cifar-10
 
@@ -5582,7 +5764,7 @@ Caffe Cifar-10 是 DLI 提供的神经网络之一。本节使用该网络和 Ci
 
 Cifar-10 数据集包含 60000 张 32x32 的彩色图像，每类 6000 张。有 50000 个训练图像和 10000 个测试图像。原始数据分为五个训练批和一个测试批次，每个批次 10000 个图像。测试批从每个类中随机选择 1000 图像。示例 6-15 显示了准备数据的脚本。
 
-示例 6-15 Cifar-10 数据集
+**示例 6-15** Cifar-10 数据集
 
 ```bash
 wget http://www.cs.toronto.edu/~riz/cifar-10-binary.tar.gz
@@ -5611,7 +5793,7 @@ echo "Done."
 
 示例 6-16 显示了第 213 页示例 6-15 中脚本的输出。
 
-## 示例 6-16 此数据处理的输出
+**示例 6-16** 此数据处理的输出
 
 ```text
 Generate LMDB files...
@@ -5639,10 +5821,7 @@ Compute mean...
 1130 09:25:41.348415 641 compute_image_mean.cpp:119] mean value channel [2]:n113.865
 ```
 
-
-
-
-```
+```text
 -rw-r--r-- 1 egoadmin egoadmin 182255616 Oct 30 09:25 data.mdb
 -rw-r--r-- 1 egoadmin egoadmin 8192 Oct 30 09:25 lock.mdb
 ```
@@ -5652,73 +5831,73 @@ Compute mean...
 /demodata/userdata/cifar10_binary
 ```
 
-## 6.8.2 数据集导入
+### 6.8.2 数据集导入
 
 要导入数据集，请完成以下步骤：
 
-+   1. 登录 DLI GUI，具体方法见第 177 页的“如何登录 IBM Spectrum Computing Management 控制台”。
+1. 登录 DLI GUI，具体方法见第 177 页的“如何登录 IBM Spectrum Computing Management 控制台”。
+2. 点击“data sets”（数据集），选择您的 SIG，并点击“New → Select LMDBs”。系统将打开一个新的新数据集窗口，在其中输入参数。在这种情况下，参数如表 6-6 所示。
 
-+   2. 点击“data sets”（数据集），选择您的 SIG，并点击“New → Select LMDBs”。系统将打开一个新的新数据集窗口，在其中输入参数。在这种情况下，参数如表 6-6 所示。
-
-表 6-6 数据集导入参数设置
+**表 6-6** 数据集导入参数设置
 
 | 参数 | 值 |
 |---|---|
 | 数据集名称 | Cifar10-testdata-1 |
 | 在 SIG 中创建 | testsig |
-| 训练文件夹 | /demodata/userdata/cifar10_binary/cifar10_testdata/cifar10_tra_in_lmdb |
-| 验证文件夹（可选） | /demodata/userdata/cifar10_binary/cifar10_testdata/cifar10_test_lmdb |
-| 测试文件夹 | /demodata/userdata/cifar10_binary/cifar10_testdata/cifar10_test_lmdb |
-| 均值文件 | /demodata/userdata/cifar10_binary/cifar10_testdata/meta.bin.ryproto |
-| 标签文件（可选） | /demodata/userdata/cifar10_binary/cifar10-batches-bin/batches.meta.txt |
+| 训练文件夹 | `/demodata/userdata/cifar10_binary/cifar10_testdata/cifar10_tra_in_lmdb` |
+| 验证文件夹（可选） | `/demodata/userdata/cifar10_binary/cifar10_testdata/cifar10_test_lmdb` |
+| 测试文件夹 | `/demodata/userdata/cifar10_binary/cifar10_testdata/cifar10_test_lmdb` |
+| 均值文件 | `/demodata/userdata/cifar10_binary/cifar10_testdata/meta.bin.ryproto` |
+| 标签文件（可选） | `/demodata/userdata/cifar10_binary/cifar10-batches-bin/batches.meta.txt` |
 
-> 注意：此数据集不包含验证数据集。通常情况下，不需要配置验证文件夹。但为了展示验证功能，我们使用测试数据集作为验证数据集。
+> **注意**：此数据集不包含验证数据集。通常情况下，不需要配置验证文件夹。但为了展示验证功能，我们使用测试数据集作为验证数据集。
 
-该数据集为二进制格式。如果没有配置标签文件，在进行推理时，结果将仅显示类别编号。如果有标签文件，它将转换为特定的类别名称。Cifar-10 数据集提供了一个标签文件，文件名为 batches.meta.txt。
+该数据集为二进制格式。如果没有配置标签文件，在进行推理时，结果将仅显示类别编号。如果有标签文件，它将转换为特定的类别名称。Cifar-10 数据集提供了一个标签文件，文件名为 `batches.meta.txt`。
 
-+   3. 点击“Create”（创建）。DLI 会转换其工作目录中的数据。当任务完成后，选择该任务并点击名称。你可以看到如图 6-76 所示的结果。
+3. 点击“Create”（创建）。DLI 会转换其工作目录中的数据。当任务完成后，选择该任务并点击名称。你可以看到如图 6-76 所示的结果。
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_229_0.png)
 
 **图 6-76** 显示数据集导入结果
 
-## 6.8.3 模型创建
+### 6.8.3 模型创建
 
 导入数据集后，通过完成以下步骤导入模型模板并创建训练模型：
 
-+   1. **Models（模型）→ New（新建）→ Add Location（添加位置）。** DLI 提示你为模型文件添加位置，这也称为添加模型模板。您可以使用表 6-7 所示的参数。
+1. **Models（模型）→ New（新建）→ Add Location（添加位置）。** DLI 提示你为模型文件添加位置，这也称为添加模型模板。您可以使用表 6-7 所示的参数。
 
-| 表 6-7 Cifar-10 模型导入参数 |
+**表 6-7** Cifar-10 模型导入参数
+
 | 参数 | 值 |
 |---|---|
 | 框架 | Caffe |
-| 路径 | /opt/ibm/spectrumcomputing/dli/dlpd/examples/caffe/cifar10 |
+| 路径 | `/opt/ibm/spectrumcomputing/dli/dlpd/examples/caffe/cifar10` |
 | 描述（可选） | 用于 ITSO （Caffe Cifar-10 网络） |
 
-> 注意：Caffe Cifar-10 模型文件在 DLI 安装期间会自动安装。
+> **注意**：Caffe Cifar-10 模型文件在 DLI 安装期间会自动安装。
 
-系统创建了一个名为 Caffe-mt20171029214611 的模型模板，如图 6-77 所示。
+系统创建了一个名为 `Caffe-mt20171029214611` 的模型模板，如图 6-77 所示。
 
-216 IBM PowerAI: Deep Learning Unleashed on Power Systems Servers
-
-New Model（新建模型）
+**New Model（新建模型）**
 
 选择一个位置拷贝模型文件。或者，从列表中选择一个模型模板。
 
 | 名称 | 描述 | 框架 |
 |---|---|---|
-| Caffe-20170112/2204 | model template/caffe10 | Caffe |
-| Caffe-20170112/14478 | | Caffe |
-| Caffe-20170112/164611 | For ITSO-demoCaffe-10 network | Caffe |
-| TensorFlow-20170112/196204 | Faster-rnn model template | TensorFlow |
-| TensorFlow-20170112/207028 | | TensorFlow |
-| TensorFlow-20170112/235114 | Triple-loss model template | TensorFlow |
+| `Caffe-20170112/2204` | model template/caffe10 | Caffe |
+| `Caffe-20170112/14478` |  | Caffe |
+| `Caffe-20170112/164611` | For ITSO-demoCaffe-10 network | Caffe |
+| `TensorFlow-20170112/196204` | Faster-rnn model template | TensorFlow |
+| `TensorFlow-20170112/207028` |  | TensorFlow |
+| `TensorFlow-20170112/235114` | Triple-loss model template | TensorFlow |
 
 显示 1 到 6 条目
 
-图 6-77 创建 Caffe-10 模型
+**图 6-77** 创建 Caffe-10 模型
 
 2. 选择此模型模板并点击“Next”（下一步）。打开 Caffe 模型窗口。表 6-8 显示了在此窗口中输入的参数。
+
+**表 6-8** Caffe 模型参数
 
 | 参数 | 值 |
 |---|---|
@@ -5741,17 +5920,17 @@ New Model（新建模型）
 
 对于超参数，您可以根据自己的经验进行更改。
 
-+   3. 点击“Add”（添加）完成模型创建。新项将添加到 Models 列表中。选择它并点击“Edit”（编辑），然后您可以修改配置和 prototxt 文件，如图 6-78 所示。
+3. 点击“Add”（添加）完成模型创建。新项将添加到 Models 列表中。选择它并点击“Edit”（编辑），然后您可以修改配置和 `prototxt` 文件，如图 6-78 所示。
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_231_0.png)
 
-## 6.8.4 模型训练
+### 6.8.4 模型训练
 
 模型创建后可以通过以下步骤启动训练会话：
 
 1. 选择模型并点击“Train”（训练）。打开 Cifar10-ITSO-demo 窗口。表 6-9 显示训练所需的参数。
 
-表 6-9 训练任务参数
+**表 6-9** 训练任务参数
 
 | 参数 | 值 |
 |---|---|
@@ -5762,15 +5941,9 @@ New Model（新建模型）
 | 框架 | Caffe on Spark |
 | 远程服务器上的权重文件 | 见下文 |
 
-> 注意：在此环境中，我们只有一个带 GPU 的节点，因此工作节点数和每个节点的 GPU 数量应为 1。
+> **注意**：在此环境中，我们只有一个带 GPU 的节点，因此工作节点数和每个节点的 GPU 数量应为 1。
 
 对于最后一个参数，我们有一个想要使用的权重文件。
-
-（注：原文后续部分存在大量由于 OCR 错误导致的文本重复，已根据翻译要求进行清理。）
-
-
-
-
 
 2. 点击 Start Tuning（开始调优），等待几分钟直到调优任务完成。选择调优任务并点击名称。窗口将显示调优结果，如图 6-86 所示。
 
@@ -5780,13 +5953,13 @@ New Model（新建模型）
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_236_1.png)
 
-第 6 章 IBM Spectrum Deep Learning Impact 简介 223 页
-
 3. 使用此模型启动一个新的训练作业，如图 6-88 所示 MAO 仪表板所示。
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_237_0.png)
 
-图 6-88 此训练模型的监控与优化窗口
+**图 6-88** 此训练模型的监控与优化窗口
+
+
 
 4. 选择此已训练的作业（图 6-88）并点击 **Validation Trained Model**（验证已训练模型）以触发验证作业。结果如图 6-69 所示。
 
@@ -5804,23 +5977,23 @@ New Model（新建模型）
 | 训练期间 DLI 建议 | 学习率：0.01 - 0.005 | 73.1% |
 | 超参数搜索期间 DLI 建议 | 权重衰减：0.0004 - 0.0019329544 | 75.21% |
 
-> 注意：这是一个演示如何使用 DLI 调优神经网络模型的简单直的示例。在生产案例中，DLI 可以帮助您保持正确的调优方向并获得更高的准确率。
+> 注意：这是一个演示如何使用 DLI 调优神经网络模型的简单直接的示例。在生产案例中，DLI 可以帮助您保持正确的调优方向并获得更高的准确率。
 
 ## 6.8.7 模型预测
 
 当您对某个已训练模型的准确率满意时，可以通过完成以下步骤创建一个推理模型进行预测：
 
-1. 选择一个已训练的模型并点击 Create Inference Model（创建推理模型），如图 6-90 所示。
+1. 选择一个已训练的模型并点击 **Create Inference Model**（创建推理模型），如图 6-90 所示。
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_238_0.png)
 
 图 6-90 生成推理模型
 
-2. DLI 创建了一个新的推理模型，你可以在模型列表中找到它，如图 6-91 所示。选择此模型并点击 Inference（推理）。
+2. DLI 创建了一个新的推理模型，你可以在模型列表中找到它，如图 6-91 所示。选择此模型并点击 **Inference**（推理）。
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_239_0.png)
 
-3. 完成阈值设置并选择你想要预测的文件。点击 Start Inference（开始推理），如图 6-92 所示。
+3. 完成阈值设置并选择你想要预测的文件。点击 **Start Inference**（开始推理），如图 6-92 所示。
 
 > 注意：如果你将阈值设置为 0.1，则意味着 DLI 将显示所有可能性 >= 10% 的类别。
 
@@ -5950,7 +6123,7 @@ else:
 
 训练作业完成后，下载其权重文件。此权重文件用于在任何其他服务器上部署推理模型或进行持续训练。然后，完成以下步骤：
 
-1. 选择一个已训练的模型并点击 Weight Files（权重文件），如图 6-95 所示。
+1. 选择一个已训练的模型并点击 **Weight Files**（权重文件），如图 6-95 所示。
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_242_0.png)
 
@@ -5962,13 +6135,10 @@ else:
 
 **图 6-96** 下载权重文件
 
-
-
-
-3. 将此文件传输到另一个服务器，例如将其上传到 `/demodata/userdata/cifar10_weightfile`，如图 6-97 所示。
+3. 将此文件传输到另一个服务器，例如将其上传到`/demodata/userdata/cifar10_weightfile`，如图 6-97 所示。
 
 | 创建推理模型 |
-|---|---|
+| --- |
 | 模型名称： | Cifar10-ITSO-Inference-Test |
 | 模型描述： | 用于 ITSO 导入推理模型 |
 | 加速器： | Native |
@@ -6004,7 +6174,7 @@ else:
 
 ## 7.1 用用例一：裸机环境
 
-在许多现代行业中，公司需要并依赖应用程序和系统的实时响应来维持业务的成功。此类客户对新技术（如 DL）持开放性态，并对任何能够快速有助于满足其业务目标和需求的新技术抱有期望。
+在许多现代行业中，公司需要并依赖应用程序和系统的实时响应来维持业务的成功。此类客户对新技术（如 DL）持开放性态度，并对任何能够快速有助于满足其业务目标和需求的新技术抱有期望。
 
 ### 7.1.1 客户需求
 
@@ -6098,9 +6268,6 @@ else:
 
 236 IBM PowerAI：在 IBM Power 服务器上释放深度学习
 
-
-
-
 ### 7.3.1 客户需求
 
 以下是客户请求的示例：
@@ -6109,40 +6276,43 @@ else:
 - 支持以下组件：
   - NVIDIA GPU
   - Infiniband 网络
-  - 开源深度学习框架，如 Caffe、Torch 或 TensorFlow
+
+
+
+- 开源深度学习框架，如`Caffe`、`Torch`或`TensorFlow`
 - 使用其他厂商的技术。
-- 适配带有 Spark 的 HPC 集群。
+- 适配带有`Spark`的`HPC`集群。
 - 缓解设备间网络相关的瓶颈。
 
 ### 7.3.2 IBM 解决方案
 
 为了满足 238 页 7.3.1“客户需求”所示的要求，IBM 提供了可以与其他软件集成的经验和解决方案。作为基础建议（图 7-6），IBM 可以提供包含以下组件的解决方案：
 
-- 硬件：用于高性能计算服务器的 Power 8S22LC
-- 主机操作系统：Ubuntu 16.04
+- 硬件：用于高性能计算服务器的`Power 8S22LC`
+- 主机操作系统：`Ubuntu 16.04`
 - 软件：带有分布式深度学习 (DDL) 和大模型支持 (LMS) 功能的 IBM PowerAI Release 4：
-  - CUDA：版本 8
-  - cuDNN：版本 6
-  - NVIDIA 驱动版本：384.66
-  - 带有 Spark 的 IBM Spectrum Conductor
-  - LSF
-- 网络：用于 EDR 的 Infiniband 机和电缆
+  - `CUDA`：版本 8
+  - `cuDNN`：版本 6
+  - `NVIDIA`驱动版本：384.66
+  - 带有`Spark`的`IBM Spectrum Conductor`
+  - `LSF`
+- 网络：用于`EDR`的`Infiniband`机和电缆
 
 ### 7.3.3 收益
 
 通过考虑到 238 页 7.3.2“IBM 解决方案”所示的所有组件的 IBM PowerAI 端到端解决方案，客户可以获得以下收益：
 
 - 通过最新技术使训练时间缩减。
-- LMS 和 DDL 提供了更好的 GPU 可扩展性。
-- 通过本地 Power System 解决方案轻松更改数据和人工智能 (AI) 模型。
-- 使用带有优化 DL 库的 IBM PowerAI 工具包实现更简单、更快速。
+- `LMS`和`DDL`提供了更好的`GPU`可扩展性。
+- 通过本地`Power System`解决方案轻松更改数据和人工智能 (AI) 模型。
+- 使用带有优化`DL`库的 IBM PowerAI 工具包实现更简单、更快速。
 - 通过作业调度器轻松管理和控制资源。
 
 ## 7.4 结论
 
-在接下来的章节中，我们描述了 IBM PowerAI 深度学习框架的组件，总结了 GPU 加速 Power Systems 硬件的优势，并提供了 IBM PowerAI 版本 4 和 5 的示例安装和实现。
+在接下来的章节中，我们描述了 IBM PowerAI 深度学习框架的组件，总结了`GPU`加速`Power Systems`硬件的优势，并提供了 IBM PowerAI 版本 4 和 5 的示例安装和实现。
 
-IBM PowerAI 让深度学习领域对所有人（包括普通用户、小型企业和传统 HPC 组织）变得触及且易用。GPU 带来的加速意义体现在处理时间和物理占用的节省上。使用云提供商容量的小型案例（如 IBM 和 NVIDIA 合作推出的全球最快深度学习企业解决方案）提供了一种低成本的评估和实施路径；而在较大的案例中，物理服务器的数量与过去几十年的传统计算需求相比有所减少。
+IBM PowerAI 让深度学习领域对所有人（包括普通用户、小型企业和传统 HPC 组织）变得触及且易用。`GPU`带来的加速意义体现在处理时间和物理占用的节省上。使用云提供商容量的小型案例（如 IBM 和 NVIDIA 合作推出的全球最快深度学习企业解决方案）提供了一种低成本的评估和实施路径；而在较大的案例中，物理服务器的数量与过去几十年的传统计算需求相比有所减少。
 
 如果您不熟悉深度学习领域，这些示例案例提供了背景和视角。了解您拥有什么数据是使用深度学习的关键。连接、趋势或观察结果可能隐藏了您的视野？使用深度学习进行数据处理为学术、科学、工业、零售和商业领域提供了许多以前未有的机会和兴趣。深度学习的普及已经持续段时间，但目前易于采用的特性使其在我们日常生活的许多领域变得普遍。
 
@@ -6154,27 +6324,27 @@ IBM PowerAI 让深度学习领域对所有人（包括普通用户、小型企�
 
 本附录包含以下主题：
 
-- 使用 TensorFlow 进行情感分析
+- 使用`TensorFlow`进行情感分析
 
 ## 使用 TensorFlow 进行情感分析
 
-本节介绍了使用 TensorFlow 代码进行情感分析。
+本节介绍了使用`TensorFlow`代码进行情感分析。
 
 ## 代码结构组织
 
 情感分析代码组织在三个 Python (.py) 文件中：
 
-- data_prep.py：此文件用于准备数据。您可以独立运行它，并生成后续步骤使用的输出数据集和字典。
-- sentiment_neural_net.py：此文件包含负责模型创建和训练的函数。由于代码的准备方式，您可以从 `use_neural_net.py` 文件运行训练。
-- use_neural_net.py：从此文件，您可以运行训练并使用神经网络向 `get_sentiment` 函数提供句子。如果您不想运行训练函数，请注释掉调用训练函数的行。
+- `data_prep.py`：此文件用于准备数据。您可以独立运行它，并生成后续步骤使用的输出数据集和字典。
+- `sentiment_neural_net.py`：此文件包含负责模型创建和训练的函数。由于代码的准备方式，您可以从`use_neural_net.py`文件运行训练。
+- `use_neural_net.py`：从此文件，您可以运行训练并使用神经网络向`get_sentiment`函数提供句子。如果您不想运行训练函数，请注释掉调用训练函数的行。
 
 该代码也可以在 GitHub 上找到。
 
 ## 情感分析代码
 
-示例 A-1 显示了 data_prep.py 准备文件。
+示例 A-1 显示了`data_prep.py`准备文件。
 
-示例 A-1 data_prep.py 文件
+示例 A-1 `data_prep.py`文件
 
 ```python
 from nltk import word_tokenize
@@ -6263,15 +6433,11 @@ word_count = Counter(word_dict)
 cleaned_word = [word for word in word_count]
 ```
 
-
-
-
-
 # 模型与训练
 
-示例 A-2 显示了 `sentiment_neural_net.py` 模型和训练文件。
+示例 A-2 显示了`sentiment_neural_net.py`模型和训练文件。
 
-示例 A-2 `sentiment_neural_net.py` 文件
+示例 A-2 `sentiment_neural_net.py`文件
 
 ```python
 import tensorflow as tf
@@ -6289,7 +6455,7 @@ def load_details():
         return det
 ```
 
-line_sizes = load_details()
+`line_sizes = load_details()`
 
 ```python
 # 创建神经网络模型
@@ -6330,45 +6496,71 @@ def ff_neural_net(input_data):
     return output
 ```
 
+```python
 def training(in_placeholder):
+
     nn_output = ff_neural_net(in_placeholder)
+
     saver = tf.train.Saver()
+
     cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(
+
         logits=nn_output, labels=y))
 
     optimizer = tf.train.AdamOptimizer(learning_rate=0.001).minimize(cost)
 
     with tf.Session() as sess:
+
         sess.run(tf.global_variables_initializer())
+
         for epoch in range(num_epochs):
+
             epoch_loss = 0
+
             buffer = []
+
             buffer_label = []
+
             with open('train_hot_vectors.pickle', 'rb') as train_vec:
+
                 for i in range(line_sizes['train']):
+
                     hot_vector_line = pickle.load(train_vec)
+
                     buffer.append(hot_vector_line[0])
+
                     buffer_label.append(hot_vector_line[1])
 
                 if len(buffer) >= batch_size:
+
                     cost_iter = sess.run(optimizer, cost,
+
                         feed_dict={in_placeholder: buffer, y: buffer_label})
+
                     epoch_loss += cost_iter
+
                     buffer = []
+
                     buffer_label = []
 
             print('Epoch {}. Total loss: {}'.format(epoch+1, epoch_loss))
 
     correct = tf.equal(tf.argmax(nn_output, 1), tf.argmax(y, 1))
+
     accuracy = tf.reduce_mean(tf.cast(correct, 'float'))
 
     with open('test_hot_vectors.pickle', 'rb') as train_vec:
+
         buffer = []
+
         buffer_label = []
 
         for i in range(line_sizes['test']):
+
             test_vector_line = pickle.load(train_vec)
+
             buffer.append(test_vector_line[0])
+
             buffer_label.append(test_vector_line[1])
 
     print('Accuracy using test dataset: {}'.format(accuracy.eval({in_placeholder: buffer})))
@@ -6376,9 +6568,9 @@ def training(in_placeholder):
 
 # 使用模型
 
-示例 A-3 显示了 `use_neural_net.py` 模型。
+示例 A-3 显示了`use_neural_net.py`模型。
 
-示例 A-3 `use_neural_net.py` 文件
+示例 A-3 `use_neural_net.py`文件
 
 ```python
 import tensorflow as tf
@@ -6388,12 +6580,12 @@ from nltk.tokenize import word_tokenizer
 from nltk.stem import WordNetLemmatizer
 from sentiment_neural_net import ff_neural_net
 from sentiment_neural_net import training
+
 lem = WordNetLemmatizer()
-
 x = tf.placeholder('float')
-
 ```
 
+```python
 def get_sentiment(input_data):
     tf.reset_default_graph()
     pl = tf.placeholder('float')
@@ -6401,10 +6593,7 @@ def get_sentiment(input_data):
     saver = tf.train.Saver()
     with open('word_dict.pickle', 'rb') as f:
         word_dict = pickle.load(f)
-
-
-
-
+```
 
 注意：此脚本生成的文件保存在运行脚本时的相同目录中。
 
@@ -6416,214 +6605,324 @@ def get_sentiment(input_data):
 $ plc.pl [-b bmc_address | -i ] [-a admin_pw] [-s sysadmin_pw] [-h host -u user -p password] [-f]
 ```
 
+
+
 以下是各个标志：
 
 | | |
 |---|---|
-| -b | BMC 主机名或 IP 地址 |
-| -a | 如果更改了默认值 (admin)，则是 BMC ADMIN 密码 |
-| -s | 如果更改了默认值 (superuser)，则是 BMC sysadmin 密码 |
-| -i | 交互模式 |
-| -f | 收集 BMC 固件镜像 |
-| -h | Linux 主机地址 |
-| -u | Linux 主机用户 ID |
-| -p | Linux 主机密码 |
+| `-b` | BMC 主机名或 IP 地址 |
+| `-a` | 如果更改了默认值 (`admin`)，则是 BMC ADMIN 密码 |
+| `-s` | 如果更改了默认值 (`superuser`)，则是 BMC sysadmin 密码 |
+| `-i` | 交互模式 |
+| `-f` | 收集 BMC 固件镜像 |
+| `-h` | Linux 主机地址 |
+| `-u` | Linux 主机用户 ID |
+| `-p` | Linux 主机密码 |
 
-要使用此工具，请运行以下命令（在此示例中，BMC IP 为 10.10.10.10）：
+要使用此工具，请运行以下命令（在此示例中，BMC IP 为 `10.10.10.10`）：
+
+```
 $ ./plc.pl -b 10.10.10.10 -a admin -f
+```
 
 获取 BMC 数据
+
+```
 警告：已永久将 '10.10.10.10' (RSA) 添加到已知主机列表。
 ................
 获取 IPMI 数据
 ................
+```
 
 要列出生成的文件，请运行以下命令：
+
+```
 $ ls -l
 10.7.22.1-2017-06-30145.powerlc.tar.gz
+```
 
-# 错误信息
+## 错误信息
 
 - 本节重点介绍几个错误消息及其退出代码：
-- 如果系统中未找到 sshpass，plc.pl 脚本将打印 "sshpass is required and not found on this system" 并以返回代码 1 退出。
-- 如果无法通过 ping 访问 BMC，plc.pl 脚本将打印 "Unable to ping bmhostname/IPAddress" 并以返回代码 2 退出。
-- 如果运行 plc.pl 命令时返回“command not found”错误，请尝试在命令前加上 `./` 前缀，使命令变为 ./plc.pl。
+- 如果系统中未找到 `sshpass`，`plc.pl` 脚本将打印 "sshpass is required and not found on this system" 并以返回代码 1 退出。
+- 如果无法通过 ping 访问 BMC，`plc.pl` 脚本将打印 "Unable to ping bmhostname/IPAddress" 并以返回代码 2 退出。
+- 如果运行 `plc.pl` 命令时返回“command not found”错误，请尝试在命令前加上 `./` 前缀，使命令变为 `./plc.pl`。
 
-# Power 平台上 Linux 的故障排除指南
+## Power 平台上 Linux 的故障排除指南
 
 IBM 在 IBM Knowledge Center 为 Power Systems 上的 Linux 提供了故障排除和问题分析列表及技术。
 
 IBM Knowledge Center 是错误分析代码、工具、过程和其他资源的良好来源，可以帮助您解决 Power 平台上的 Linux 问题，特别是针对运行在这些系统中的 NVIDIA 图形处理器 (GPU)。
 
-# 解决 RAID 故障
+## 解决 RAID 故障
 
 虽然软件 RAID 不是 IBM PowerAI 的要求，但它是缓解磁盘故障的一种首选做法。在 IBM PowerAI 的某一个磁盘故障时，创建 RAID 设备并非强制性，但如果 RAID 阵列中的某个磁盘（固态硬盘 (SSD) 或硬盘设备 (HDD)）发生故障，它可以提供高可用性 (HA)。创建双盘 RAID 阵列所需的步骤见“创建 RAID1 阵列”第 82 页。
 
-# RAID 故障
+## RAID 故障
 
 本节涵盖了 RAID 阵列中某一个磁盘发生故障后的恢复程序。
 
-此测试假设 /dev/sda 发生故障，那里是创建 PreBoot 区域的地方。
+此测试假设 `/dev/sda` 发生故障，那里是创建 PreBoot 区域的地方。
 
 在此示例中，我们完成了以下步骤来模拟磁盘故障场景及随后的恢复。如果发生实际故障，我们将从第 3 步开始。
 
 1. 确认当前的软件 RAID 配置。
-2. 模拟一个磁盘的故障（对 /dev/sda 进行伪故障）。
-3. 移除 /dev/sda 中的磁盘。
+2. 模拟一个磁盘的故障（对 `/dev/sda` 进行伪故障）。
+3. 移除 `/dev/sda` 中的磁盘。
 4. 添加磁盘并创建分区。
 
-# 确认当前的软件 RAID 配置
+### 确认当前的软件 RAID 配置
 
 要确认当前的软件 RAID 配置，请运行以下命令检查软件定义 RAID 的状态：
 
 ```
 $ sudo mdadm --detail /dev/md0
+
 /dev/md 0:
+
 Version: 1.2
+
 Creation Time: Mon 6 10:38:20 2017
+
 RAID Level: raid 1
+
 Array Size: 97626592 (931.08 GiB 1000.06 GB)
+
 Used Dev Size: 97626592 (931.08 GiB 1000.06 GB)
+
 RAID Devices: 2
+
 Total Devices: 2
+
 Persistence: Superblock persistent
+
 Intent Bitmap: Internal
+
 Update Time: Wed 8 16:10:02 2017
+
 State: clean
+
 Active Devices: 2
+
 Working Devices: 2
+
 Failed Devices: 0
+
 Spares Devices: 0
+
 Name: ubuntu-disk0:0 (local to host ubuntu-disk0)
+
 UUID: 8d57fc2cd:c43f9176:8cf093de:4a0abdb3
+
 Events: 1696
+
 Number Minor RAID Device State
+
 0 8 2 0 active sync /dev/sda2
+
 1 8 18 1 active sync /dev/sdb2
 ```
 
 ```
 $ cat /proc/mdstat
+
 Personalities: [raid 1] [linear] [multipath] [raid 0] [raid 6] [raid 5] [raid 4] [raid 10]
+
 md 0: active raid 1 sda2 [0] sdb2 [1]
+
 97622592 blocks super 1.2 [2/2] [UU]
+
 bitmap: 0/1 pages [0], 6536 KB chunk
+
 unused devices: <none>
 ```
 
-# 模拟一个磁盘的故障
+### 模拟一个磁盘的故障
 
 要模拟一个磁盘的故障，请完成以下步骤。注意：此练习在系统中完成。某些命令具有破坏性，请在执行这些更改之前验证您的配置。
 
 1. 通过以下命令模拟 RAID 阵列中的一个磁盘故障：
+
 ```
 $ sudo mdadm --fail /dev/md0 /dev/sda2
+
 mdadm: device /dev/sda2 failed in /md0
 ```
 
 2. 运行以下命令检查故障后 RAID 阵列的状态：
+
 ```
 $ sudo mdadm --detail /dev/md0
+
 /dev/md 0:
+
 Version: 1.2
+
 Creation Time: Mon 6 10:38:20 2017
+
 RAID Level: raid 1
+
 Array Size: 97622592 (931.08 GiB 1000.06 GB)
+
 Used Device Size: 97622592 (931.08 GiB 1000.06 GB)
+
 RAID Devices: 2
+
 Total Devices: 2
+
 Persistence: Superblock persistent
+
 Intent Bitmap: Internal
+
 Update Time: Wed 8 16:10:02 2017
+
 State: degraded
+
 Active Devices: 1
+
 Working Devices: 1
+
 Failed Devices: 1
+
 Spares Devices: 0
+
 Name: ubuntu-disk0:0 (local to host ubuntu-disk0)
+
 UUID: 8d57fc2cd:c43f9176:8cf093de:4a0abdb3
+
 Events: 1700
+
 Number Minor RAID Device State
+
 0 0 0 faulty /dev/sda2
+
 1 8 18 active sync /dev/sdb2
 ```
 
-# 移除 /dev/sda 中的磁盘
+### 移除 `/dev/sda` 中的磁盘
 
-要移除磁盘 /dev/sda，请完成以下步骤：
+要移除磁盘 `/dev/sda`，请完成以下步骤：
 
 1. 从软件定义 RAID 中移除磁盘：
+
 ```
 $ sudo mdadm --remove /dev/md0 /dev/sda2
+
 mdadm: removed /dev/sda2 from /md0
 ```
 
-2. 从系统中排除 /dev/sda：
+2. 从系统中排除 `/dev/sda`：
+
 ```
 $ sudo echo - /sys/block/sda/delete
 ```
 
-3. 确认 /dev/sda 已从系统中排除：
+3. 确认 `/dev/sda` 已从系统中排除：
+
 ```
 $ fdisk -l
 ```
 
-# 添加磁盘并创建分区
+### 添加磁盘并创建分区
 
 要添加磁盘并创建分区，请完成以下步骤：
 
 1. 将磁盘安装到系统中。识别系统中的磁盘：
+
 ```
 $ sudo echo - /sys/class/scsi_host0/scan
+
 $ fdisk -l
 ```
 
 2. 在磁盘上创建分区：
+
 ```
 $ fdisk /dev/sda
+
 Welcome to fdisk (util-linux 2.27).
+
 Changes将留在内存中，直到你决定写入。
+
 在使用 write 命令前要小心。
+
 Command (m for help): n
+
 Partition type
+
 p primary (1, 0 extended, 4 free)
+
 e extended (container for logical partitions)
+
 Select (default p):
+
 Using default response.
+
 Partition number (1-4, default 1):
+
 First sector (2048-195325167, default 2048):
+
 Last sector, + sectors or size (K,M,G,T,P) (2048-195325167)
+
 Created a new partition 1 of type 'Linux' and size 7 MiB.
+
 Command (m for help): n
+
 Partition type
+
 p primary (1, 0 extended, 4 free)
+
 e extended (container for logical partitions)
+
 Select (default p):
+
 Using default response.
+
 Partition number (2-4, default 2):
+
 First sector (16384-195325167, default 16384):
+
 Last sector, + sectors or size (K,M,G,T,P) (16384-195325167):
+
 Created a new partition 2 of type 'Linux' and of size 931.5 GiB.
+
 Command (m for help): t
+
 Partition number (1, 2, default 2): 1
+
 Partition type (L to list all types): 64
+
 Changed type of partition 'Linux' to 'PPC PreP Boot'.
+
 Command (for help): p
+
 Dev/sda: 931.5 GiB, 1000204886016 bytes, 1953525168 sectors
+
 Units of sector: 1 * 512 = 512 bytes
+
 Sector size (logical / physical): 512 bytes / 512 bytes
+
 I / size (minimum / optimal): 512 bytes / 512 bytes
+
 Disklabel type: dos
+
 Disk identifier: 0x19cc23d
 
 Device     Boot End Sectors Size Id Type
+
 /dev/sda   2048 16383 14336 7 M 41 PreP Boot
+
 /dev/sda2 16383 195325 167 195 3 50 8 83 Linux
 
 Command (for help): w
+
 分区表已更改。
+
 调用 ioctl () 重新读取分区表。
+
 正在同步磁盘。
+```
 
 ```
 $ sudo dd if=/dev/sdb1 of=/dev/sda
@@ -6633,6 +6932,7 @@ $ sudo dd if=/dev/sdb1 of=/dev/sda
 ```
 
 3. 将磁盘添加到 RAID 定义：
+
 ```
 $ mdadm -add /dev/sda2
 mdadm: added: /dev/sda
@@ -6641,37 +6941,56 @@ mdadm: added: /dev/sda
 4. 在完成之前检查 RAID 阵列是否已重建：
 
 - 示例输出显示阵列仍在重建：
+
+```
 $ sudo mdadm --detail /dev/md0
+
 /dev/md 0:
+
 Version: 1.2
+
 Creation Time: Mon 6 10:38:20 2017
+
 RAID Level: raid 1
+
 Array Size: 976622592 (931.38 GiB 1000.06 GB)
+
 Used Device Size: 976622592 (931.38 GiB 1000.06 GB)
+
 RAID Devices: 2
+
 Total Devices: 2
+
 Persistence: Superblock is persistent
+
 Intent Bitmap: Internal
+
 Update Time: Wed Mar 18 17:20:31 2017
+
 State: degraded, recovering
+
 Active Devices: 1
+
 Working Devices: 2
+
 Failed Devices: 1
+
 Spares Devices: 0
+
 Name: ubuntu-disk0:0 (local to host ubuntu-disk0)
+
 UUID: 8d57fc2cd:c43f9176:8cf093de:4a0abdb3
+
 Events: 1700
+
 Number Minor RAID Device State
+
 0 0 0 faulty /dev/sda2
+
 1 8 18 active sync /dev/sdb2
 ```
 
-256 IBM PowerAI: Deep Learning Unleashed on IBM Power Systems Servers
-
-
-
-
-
+```
 失败设备：0
 备用设备：1
 重建状态：完成 0%
@@ -6683,6 +7002,7 @@ UUID：85d7fc2cd:c43f9176:8cf093de:44a0db03
 | :--- | :--- | :--- | :--- | :--- |
 | 2 | 8 | 2 | 0 | 正在重建 /dev/sda2 |
 | 1 | 18 | 1 | | 激活同步 /dev/sdb2 |
+```
 
 阵列重建完成示例输出：
 
@@ -6690,31 +7010,53 @@ UUID：85d7fc2cd:c43f9176:8cf093de:44a0db03
 $ sudo mdadm --dev /md0
 
 /dev/md0
+
 Version: 1.2
+
 Creation Time: Mon Mar 6 10:38: 20 2017
+
 Raid Level: 1
+
 Array Size: 976622592 (93.18 GiB 1000.06 GB)
+
 Used Size: 976622592 (93.18 GiB 1000.06 GB)
+
 Raid Devices: 2
+
 Total Devices: 2
+
 Persistence: Superblock is persistent
+
 Intent Bitmap: Internal
+
 Update Time: Thu Mar 9 09:58: 42 2017
+
 State: clean
+
 Active Devices: 2
+
 Working Devices: 2
+
 Failed Devices: 0
+
 Spare Devices: 0
+
 Name: ubuntu-disktest: 0 (本地于主机 ubuntu-disktest)
+
 UUID: 85d7fc2cd:c43f9176:8cf093de:44a0db03
+
 Events: 3277
+
 | 编号 | 主设备号 | 次设备号 | Raid | 设备 | 状态 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | 2 | 8 | 2 | 0 | 激活同步 /dev/sda2 |
 | 1 | 18 | 1 | | 激活同步 /dev/sdb2 |
 ```
 
-重建
+
+
+# 重建
+
 重建完成
 
 # 相关出版物
@@ -6731,45 +7073,39 @@ Events: 3277
 - IBM Power Systems L and LC Server Positioning Guide, RED-5414
 
 您可以在以下网站搜索、查看、下载或订购这些以及 Redbooks、Redpapers、网页文档、草稿和额外材料：
-ibm.com/redbooks
+
+`ibm.com/redbooks`
 
 # 在线资源
 
 这些网站作为进一步的信息源也是相关的：
 
-- IBM 技术咨询服务
-https://www.ibm.com/services/technology-consulting-and-services/
-- IBM 实验室服务
-https://www.ibm.com/it-infrastructure/services/lab-services
-- IBM PowerAI
-https://public.dhe.ibm.com/server/server/POWER/Linux/mld/ubuntu/
-- IBM Power Vision
-https://ibm.co/2AXPZKJ
-- IBM Spectrum Conductor Deep Learning V1.1.0
-https://ibm.co/2h0FHJO
-- NVIDIA CUDA Toolkit
-https://developer.nvidia.com/cuda-toolkit
-- NVIDIA 驱动下载网站
-http://www.nvidia.com
-- OpenBLAS
-http://www.openblas.net/
-- Ubuntu 服务器安装指南
-https://help.ubuntu.com/lts/serverguide/index.html
+- IBM 技术咨询服务：`https://www.ibm.com/services/technology-consulting-and-services/`
+- IBM 实验室服务：`https://www.ibm.com/it-infrastructure/services/lab-services`
+- IBM PowerAI：`https://public.dhe.ibm.com/server/server/POWER/Linux/mld/ubuntu/`
+- IBM Power Vision：`https://ibm.co/2AXPZKJ`
+- IBM Spectrum Conductor Deep Learning V1.1.0：`https://ibm.co/2h0FHJO`
+- NVIDIA CUDA Toolkit：`https://developer.nvidia.com/cuda-toolkit`
+- NVIDIA 驱动下载网站：`http://www.nvidia.com`
+- OpenBLAS：`http://www.openblas.net/`
+- Ubuntu 服务器安装指南：`https://help.ubuntu.com/lts/serverguide/index.html`
 
 # IBM 帮助
 
-IBM 支持与下载
-ibm.com/support
+IBM 支持与下载：`ibm.com/support`
 
-IBM 全球服务
-ibm.com/services
+IBM 全球服务：`ibm.com/services`
 
 # IBM PowerAI: Deep Learning Unleashed on IBM Power Systems
 
 SG24-8409-00
+
 ISBN 0738442941
+
 (0.5" 书脊)
+
 0.475"-0.83"
+
 250 ~ 459 页
 
 ![](img/f6f95c5defc8b3406a94a86b8d202807_274_0.png)
@@ -6783,4 +7119,3 @@ SG24-8409-00
 ISBN 0738442941
 
 美国打印
-

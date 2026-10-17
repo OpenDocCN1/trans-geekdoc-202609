@@ -1,66 +1,23 @@
+
 # 加纳穆斯林赋权：互联网时代穆斯林社会动员光谱分析
-
-
-
-
-
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_0_0.png)
 
-
-
-
-
-
-
-
-
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_4_0.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## 前言
 
-本书结束了由芬兰研究理事会和芬兰科学和文学学会资助的研究项目 *加纳穆斯林赋权*。本书标志着我旅程的结束，而其开端则更难确定，因为它至少有三个起点。其中一个是在 2015 年，当时我在瑞典达拉纳大学担任客座教授。我已经出版了几本关于加纳穆斯林历史和 *zakat* 的书籍，但已离开这些主题并开展了全球历史研究。然而，当我的同事 Torsten Hylén 建议启动一个联合研究项目时，重新研究 *zakat* 的可能性出现了。尽管我们的联合项目从未实现，但本书是我们的愿望的结果。
+本书结束了由芬兰研究理事会和芬兰科学和文学学会资助的研究项目 `加纳穆斯林赋权`。本书标志着我旅程的结束，而其开端则更难确定，因为它至少有三个起点。其中一个是在 2015 年，当时我在瑞典达拉纳大学担任客座教授。我已经出版了几本关于加纳穆斯林历史和 `zakat` 的书籍，但已离开这些主题并开展了全球历史研究。然而，当我的同事 Torsten Hylén 建议启动一个联合研究项目时，重新研究 `zakat` 的可能性出现了。尽管我们的联合项目从未实现，但本书是我们的愿望的结果。
 
-本书的另一个起点是 2017 年 11 月由 Franz Kogelmann 和我本人于德国拜罗伊特非洲研究学院组织的关于穆斯林 *NGOs* 和非洲社会福利提供的研讨会。我们的研讨会成果是一部文集，其中包含我撰写的两章，概述了关于 *zakat* 作为减贫工具的国际讨论，以及加纳穆斯林学者对 *zakat* 的话语。¹ 这两篇文本构成了本书的背景。
+本书的另一个起点是 2017 年 11 月由 Franz Kogelmann 和我本人于德国拜罗伊特非洲研究学院组织的关于穆斯林 `NGOs` 和非洲社会福利提供的研讨会。我们的研讨会成果是一部文集，其中包含我撰写的两章，概述了关于 `zakat` 作为减贫工具的国际讨论，以及加纳穆斯林学者对 `zakat` 的话语。¹ 这两篇文本构成了本书的背景。
 
-本书的第三个起点是 Yunus Dumbe 于 2017 年 2 月邀请我在库马西会见穆斯林学者。在概述了二十一世纪初期加纳关于贫困和 *zakat* 的话语并在此后偶尔更新对加纳情况的了解后，我意识到自出版我的书籍以来出现了一些新的发展。其中最引人注目的是 2010 年 Zakat and Sadaqa Trust Fund 的成立。在与 Haji Mumuni Sulemana（Haji Sulley）进行了长时间的讨论后——他在我早期的加纳田野工作中是我的亲密合作者、朋友和导师——我意识到我的文本已成为过去的记录。因此，我决定更新对 *zakat* 话语的研究，并与 Yunus Dumbe 和 Haji Sulley 一起概述了一种与穆斯林学者和活动人士互动的新方法，从而形成了上述芬兰研究理事会的研究项目。
+本书的第三个起点是 Yunus Dumbe 于 2017 年 2 月邀请我在库马西会见穆斯林学者。在概述了二十一世纪初期加纳关于贫困和 `天课` 的话语并在此后偶尔更新对加纳情况的了解后，我意识到自出版我的书籍以来出现了一些新的发展。其中最引人注目的是 2010 年 Zakat and Sadaqa Trust Fund 的成立。在与 Haji Mumuni Sulemana（Haji Sulley）进行了长时间的讨论后——他在我早期的加纳田野工作中是我的亲密合作者、朋友和导师——我意识到我的文本已成为过去的记录。因此，我决定更新对 `zakat` 话语的研究，并与 Yunus Dumbe 和 Haji Sulley 一起概述了一种与穆斯林学者和活动人士互动的新方法，从而形成了上述芬兰研究理事会的研究项目。
 
-1 Holger Weiss，“穆斯林非政府组织、Zakat 与撒哈拉以南非洲社会福利的提供：导论”，载于 *非洲穆斯林信仰为基础的组织与社会福利*，编者 Holger Weiss（纽约：Palgrave Macmillan，2020），1–38；Holger Weiss，“当代加纳 Zakat 的话语及其实施”，载于 *非洲穆斯林信仰为基础的组织与社会福利*，编者 Holger Weiss（纽约：Palgrave Macmillan，2020），273–303。
+1 Holger Weiss，“穆斯林非政府组织、Zakat 与撒哈拉以南非洲社会福利的提供：导论”，载于 `非洲穆斯林信仰为基础的组织与社会福利`，编者 Holger Weiss（纽约：Palgrave Macmillan，2020），1–38；Holger Weiss，“当代加纳 Zakat 的话语及其实施”，载于 `非洲穆斯林信仰为基础的组织与社会福利`，编者 Holger Weiss（纽约：Palgrave Macmillan，2020），273–303。
 
+我的研究始于在互联网和加纳在线报纸上追踪穆斯林在加纳关于贫困和 `天课` 的话语。很快，搜索揭示了大量的话语和参与，我因此将我的田野调查和讨论扩展到包括穆斯林非政府组织的利益相关者。作为结果，我收集了大量关于加纳本地、区域、国家和国际穆斯林慈善机构和组织的信息，关于 `施舍` 和 `捐赠`、穆斯林赋权，以及在加纳引入伊斯兰银行、`瓦克夫` 和伊斯兰小额信贷的各种尝试和辩论。这被证明是一个非常有趣的话题，因为此前几乎没有人撰写过关于他们活动的文章。因此，我决定就该主题出版两部“临时”出版物，面向加纳的本地读者，即 `加纳的天课：穆斯林社区赋权的工具`（2021 年）和 `移山：加纳的穆斯林非政府组织`（2022 年）。这两卷本作为当前出版物的草案版本；我在 2022 年 10 月的田野调查期间将它们分发给穆斯林学者和活动人士。我收到的评论，加上大量的更新，尤其是通过在本书中添加约 250 个非政府组织的信息，导致对两部早期文本进行了修订和大幅重写，并合并成一本单一的书籍。
 
-
-我的研究始于在互联网和加纳在线报纸上追踪穆斯林在加纳关于贫困和 *天课* 的话语。很快，搜索揭示了大量的话语和参与，我因此将我的田野调查和讨论扩展到包括穆斯林非政府组织的利益相关者。作为结果，我收集了大量关于加纳本地、区域、国家和国际穆斯林慈善机构和组织的信息，关于 *施舍* 和 *捐赠*、穆斯林赋权，以及在加纳引入伊斯兰银行、*瓦克夫* 和伊斯兰小额信贷的各种尝试和辩论。这被证明是一个非常有趣的话题，因为此前几乎没有人撰写过关于他们活动的文章。因此，我决定就该主题出版两部“临时”出版物，面向加纳的本地读者，即 *加纳的天课：穆斯林社区赋权的工具*（2021 年）和 *移山：加纳的穆斯林非政府组织*（2022 年）。这两卷本作为当前出版物的草案版本；我在 2022 年 10 月的田野调查期间将它们分发给穆斯林学者和活动人士。我收到的评论，加上大量的更新，尤其是通过在本书中添加约 250 个非政府组织的信息，导致对两部早期文本进行了修订和大幅重写，并合并成一本单一的书籍。
-
-访谈、报纸报道和社会媒体构成了追踪加纳 *天课* 话语和穆斯林非政府组织活动的资料的主要类别。我在二十年前进行的调查和当前调查所咨询的各种资料类别之间的主要差异是我的田野调查在加纳的地理覆盖范围以及对社交媒体的聚焦使用。我最近一轮田野调查的背景是我在 1999 年至 2005 年间在塔马莱、延迪、萨拉加和阿克拉与伊玛目和穆斯林学者进行的访谈。最初的访谈是半结构化的，包含关于 *天课*、*施舍* 和贫困的固定问题清单，并作为我讨论的基线。[^2] 然而，我很快意识到，当我向他们提出开放性问题时，我从受访者那里获得了更多信息，他们自行阐述并对主题进行了更深入的分析。结果是一次学术交流，其中穆斯林学者，大多年长于我，设定了互动的条款，而我则聆听他们对主题的回答和阐述。这种方法被证明是相当有效的方法，因为穆斯林学者阐述并解决了对他们自己而言重要的议题。
+访谈、报纸报道和社会媒体构成了追踪加纳 `天课` 话语和穆斯林非政府组织活动的资料的主要类别。我在二十年前进行的调查和当前调查所咨询的各种资料类别之间的主要差异是我的田野调查在加纳的地理覆盖范围以及对社交媒体的聚焦使用。我最近一轮田野调查的背景是我在 1999 年至 2005 年间在塔马莱、延迪、萨拉加和阿克拉与伊玛目和穆斯林学者进行的访谈。最初的访谈是半结构化的，包含关于 `天课`、`施舍` 和贫困的固定问题清单，并作为我讨论的基线。[^2] 然而，我很快意识到，当我向他们提出开放性问题时，我从受访者那里获得了更多信息，他们自行阐述并对主题进行了更深入的分析。结果是一次学术交流，其中穆斯林学者，大多年长于我，设定了互动的条款，而我则聆听他们对主题的回答和阐述。这种方法被证明是相当有效的方法，因为穆斯林学者阐述并解决了对他们自己而言重要的议题。
 
 因此，我决定以类似的方式为进一步调查勾勒后续访谈，即以半结构化的方式提出开放式问题。我与 Yunus Dumbe 一起与来自逊尼派穆斯林社区的学者互动，包括提贾尼派和萨拉菲派，以及与这两派均无关的伊玛目。由于我在芬兰的母校的学术参与，我不得不将我的田野调查时间限制为每次能够前往加纳时为期两周的密集互动（2017 年 2 月、2017 年 12 月、2018 年 9 月、2019 年 4 月和 2019 年 12 月）。到 2019 年底，我已在六个地点，即阿克拉、埃朱拉、哈米勒、库马西、塔马莱和瓦，与五十多位学者和穆斯林活动人士会面。
 
@@ -78,9 +35,7 @@ COVID-19 大流行阻碍了我于 2020 年秋季进行后续访谈以完成本�
 
 然而，Facebook 对信息搜索提出了若干挑战，尤其是识别穆斯林非政府组织，因为加纳没有它们的目录，而且没有明确的定义来识别穆斯林非政府组织，如第 1.2 章所讨论的那样。对这一挑战的“开放式”且整体的解决方案是使用不同的关键词及其组合（例如：“Muslim”、“Islamic”、“NGO”、“Ghana”、“Zongo”、“women”、“youth”等）。另一种方法是在诸如 Google 之类的搜索引擎中输入已在搜索中识别的那些非政府组织的名称。通用资源定位符（URLs） of hyperlinks posted on the Facebook pages of some identified groups also provide snowball references to other associations, foundations and NGOs. 这些 URL 还为在互联网上搜索相关信息提供了新的关键词或关键词组合的提示。众多青年、Zongo 和妇女协会和团体的 Facebook 账户是识别和追踪世俗穆斯林非政府组织或
 
-[^2]: Holger Weiss, Hajj Mumuni Sulemana, Afa Razaq Taufeeq Abdallah, eds., *北加纳的天课。田野笔记1。2000年1月和2月进行的访谈* (Helsinki: Department for African Studies, 2001); “Appendix 1. Questionnaire for Interviews with Muslim Scholars in Northern Ghana January–February 2000,” in Holger Weiss, *加纳的乞讨与施舍：穆斯林对贫困与困境的立场* (Uppsala: Nordiska Afrikainstitutet, 2007), 160.
-
-
+[^2]: Holger Weiss, Hajj Mumuni Sulemana, Afa Razaq Taufeeq Abdallah, eds., `北加纳的天课。田野笔记1。2000年1月和2月进行的访谈` (Helsinki: Department for African Studies, 2001); “Appendix 1. Questionnaire for Interviews with Muslim Scholars in Northern Ghana January–February 2000,” in Holger Weiss, `加纳的乞讨与施舍：穆斯林对贫困与困境的立场` (Uppsala: Nordiska Afrikainstitutet, 2007), 160.
 
 广义定义的穆斯林非政府组织类别（关于本研究使用的框架的讨论，见第1.1章）。这些信息检索方法在2023年12月之前产生了关于683个狭义和广义定义的穆斯林非政府组织的信息数据库（列于附录）。^3^ 尽管如此，由于远程研究的局限性，例如技术和地理障碍，我数据库中列出的约60个协会、俱乐部、基金会、运动和组织无法被识别。未被识别的组织均未在互联网上留下任何痕迹，不使用社交媒体，或已停止活动。
 
@@ -88,7 +43,7 @@ Facebook 提供的信息既有定量也有定性。通常，Facebook 账户的�
 
 互联网格局的快速变化是把 Facebook 纳入加纳穆斯林学者和非政府组织主要信息来源的原因。许多加纳穆斯林非政府组织最初通过建立主页开始，但很快停止更新。因此，一些主页包含过时信息和材料（但对像我这样有兴趣追溯变化和断裂的历史学家而言很重要）。我在之前研究中查阅的一些主页已不再存在，其中一些自2017年我查阅以来已有更新版本；少数已有2022/2023版的更新。
 
-^3^ 《Moving Mountains》（2022）一书的数据库包含约430个穆斯林非政府组织的信息。
+^3^ `Moving Mountains`（2022）一书的数据库包含约430个穆斯林非政府组织的信息。
 
 然而，我的研究档案包括我在之前和现在的调查中查阅过的各种主页的印刷版和数字版副本。这些副本构成了追溯加纳穆斯林赋权兴起和内容的资料语料库。
 
@@ -108,23 +63,28 @@ Facebook 提供的信息既有定量也有定性。通常，Facebook 账户的�
 
 追溯穆斯林赋权的第三类资料是（在线）加纳报纸。与主页和社交媒体——即穆斯林学者和活动人士控制的领域——相比，报纸包含由记者或新闻机构过滤和再现的穆斯林的公开公告和表达。有时新闻报道包含穆斯林的引语，尽管它们很少再现原文。然而，加纳的新闻格局在过去几十年中发生了深刻变化，这与互联网的可及性以及穆斯林新闻公司和在线广播电台的建立直接相关。文本和 com-
 
-通过这些方式在线传播的文件构成了概述和分析当代加纳穆斯林非政府组织活动广度与深度以及 *天课* 论述的宝贵语料库。
+通过这些方式在线传播的文件构成了概述和分析当代加纳穆斯林非政府组织活动广度与深度以及 `天课` 论述的宝贵语料库。
 
 各类主要来源使我能够编年并分析当代加纳穆斯林非政府组织不断变化的格局和空间。第一章作为背景并确立了本次研究的基石，概述了自1957年独立以来加纳穆斯林逐渐被边缘化的过程，以及他们自1990年代以来通过能力建设进行自我代表和自我赋权的尝试。虽然代表机构和委员会在与加纳国家整体互动时充当其发言人，但此后一系列穆斯林社会运动已成为加纳公民社会的一部分。此外，数量不断增加的穆斯林协会、运动、工会组织和智库标志着当代穆斯林格局。作为结果，我确定了穆斯林非政府组织的三个世代，指向加纳穆斯林领域非政府组织化程度不断提高，与撒哈拉以南非洲其他地区类似的过程相平行。这种非政府组织化的最显著现象是协会、俱乐部、基金会和组织对社交媒体的广泛使用；本章以对 Facebook 上穆斯林非政府组织的定量分析作结。
 
 接下来的三章勾勒出当代加纳穆斯林非政府组织格局的轮廓。第二章介绍了部分关键穆斯林活动家和慈善家，从穆斯林学者到企业家、政治家、名人和社会媒体影响者不等。尤其是后两者是互联网时代的产物。一种新现象是青年组织的蓬勃发展，这在被称为 Zongo 的城市以穆斯林为主的居住区尤为明显。此外，互联网时代彻底改变了社会运动行动主义，因为社交媒体超越了地点和领土边界，使青年和其他群体能够与成员、同龄人和同情者（几乎）在全球各地联系起来。这种“全球化”的一个效应是非加纳穆斯林慈善机构和非政府组织的虚拟爆炸。到2020年代初，除拉丁美洲和加勒比地区外，所有大洲的穆斯林非政府组织都已直接或间接（即通过当地非政府组织）在加纳存在。
 
-第三章描绘了穆斯林信仰为基础的人道主义救济，例如在宗教节日提供食物（开斋饭和古尔邦）和衣物，抚养孤儿、寡妇和（非常模糊/不确定的）需要人士，以及监狱囚犯。慈善事业穆斯林格局上的一个新现象是为听力障碍和视力障碍人士建立学校。此外，本章追踪了当地穆斯林非政府组织和青年运动开展的宣传活动和集会，以募集萨达卡和捐款，用于结合传教活动（da‘wa，传教）和对贫困穆斯林农村社区的人道主义外展，近年来常与教育、清真寺和水项目相结合。
 
-第四章介绍了穆斯林非政府组织主导的八种社区发展形式，范围从奖学金、卫生和健康、医疗、清洁水到社区中心和绿色环境项目。其中最雄心勃勃的是诊所和医院的建设；最具创新性的是用废塑料瓶建造学校。最后提到的项目也是界定穆斯林非政府组织困难的一个例子——负责该项目的运动由一位年轻穆斯林女性创立，但该组织并不以宗教为导向，且项目地点位于几乎没有穆斯林居民的农村村庄。我仍决定将该项目纳入我的介绍，因为它作为当代加纳穆斯林行动主义广泛光谱的例子。
 
-最后两章概述了以伊斯兰社会金融为自我赋权和能力建设工具的当代话语和活动。第五章确定了关于天课或强制性施舍的三种话语，即传统的、水平的和非正式的一种，以及两种较新的垂直慈善的工具主义和制度主义版本。第六章概述了在加纳引入伊斯兰银行（仍未实现）的尝试以及现有的伊斯兰投资、微型金融和瓦克夫（宗教捐赠）形式。合起来，两章指向制度化能力建设的局限性和潜力。前者强调了这些活动的流动性和短寿命，尤其是在缺乏致力于长期甚至终身持续投资的富裕成员群体支持时。后者认识到，穆斯林中产阶级的出现以及受薪的正规部门家庭，加上少数穆斯林高净值人士，在过去十年中为穆斯林社区的自我赋权打开了一个前所未有的窗口。在这种意义上，穆斯林活动家和非政府组织已经开始移山。他们以何种方式以及在多大程度上取得成功，将是未来研究的课题。
+### 第三章
+描绘了穆斯林信仰为基础的人道主义救济，例如在宗教节日提供食物（开斋饭和古尔邦）和衣物，抚养孤儿、寡妇和（非常模糊/不确定的）需要人士，以及监狱囚犯。慈善事业穆斯林格局上的一个新现象是为听力障碍和视力障碍人士建立学校。此外，本章追踪了当地穆斯林非政府组织和青年运动开展的宣传活动和集会，以募集萨达卡和捐款，用于结合传教活动（da‘wa，传教）和对贫困穆斯林农村社区的人道主义外展，近年来常与教育、清真寺和水项目相结合。
+
+### 第四章
+介绍了穆斯林非政府组织主导的八种社区发展形式，范围从奖学金、卫生和健康、医疗、清洁水到社区中心和绿色环境项目。其中最雄心勃勃的是诊所和医院的建设；最具创新性的是用废塑料瓶建造学校。最后提到的项目也是界定穆斯林非政府组织困难的一个例子——负责该项目的运动由一位年轻穆斯林女性创立，但该组织并不以宗教为导向，且项目地点位于几乎没有穆斯林居民的农村村庄。我仍决定将该项目纳入我的介绍，因为它作为当代加纳穆斯林行动主义广泛光谱的例子。
+
+### 最后两章
+概述了以伊斯兰社会金融为自我赋权和能力建设工具的当代话语和活动。第五章确定了关于天课或强制性施舍的三种话语，即传统的、水平的和非正式的一种，以及两种较新的垂直慈善的工具主义和制度主义版本。第六章概述了在加纳引入伊斯兰银行（仍未实现）的尝试以及现有的伊斯兰投资、微型金融和瓦克夫（宗教捐赠）形式。合起来，两章指向制度化能力建设的局限性和潜力。前者强调了这些活动的流动性和短寿命，尤其是在缺乏致力于长期甚至终身持续投资的富裕成员群体支持时。后者认识到，穆斯林中产阶级的出现以及受薪的正规部门家庭，加上少数穆斯林高净值人士，在过去十年中为穆斯林社区的自我赋权打开了一个前所未有的窗口。在这种意义上，穆斯林活动家和非政府组织已经开始移山。他们以何种方式以及在多大程度上取得成功，将是未来研究的课题。
 
 Holger Weiss
+
 赫尔辛基，2023年12月15日
 
 ## 致谢
-
 本书汇集了过去四十年间众多穆斯林学者和活动家以及同事和朋友的见解。有些讨论是非正式的，有些是计划好的访谈。所有这些都塑造了我对穆斯林行动主义以及关于贫困缓解和社会经济改善的智力思考的理解。没有这些投入，本书永远无法完成。因此，我特别感谢文中提到的所有受访者，感谢你们分享你们的时间和智慧。
 
 此外，我非常感谢来自加纳、芬兰、德国和瑞典的许多朋友和同事的鼓励和富有启发性的讨论，尤其是 Yunus Dumbe、Haji Mumuni Sulemana、Afa Razaq Tawheed、Haji Mohammad Damba、Sani Mohammed Sani aka Garba、Franz Kogelmann、Roman Loimeier、Rüdiger Seesemann 和 Torsten Hylén 以及手稿的两位匿名审稿人。没有你们积极的回应和支持，我关于加纳穆斯林赋权的调研永远无法达到最后阶段。但最重要的是，我要感谢我的妻子 Minna 的陪伴和鼓励。
@@ -134,7 +94,6 @@ Holger Weiss
 ## 表格、图表和图
 
 ### 表格
-
 - 1. 2021年加纳人口普查：按地区划分的穆斯林人口 — 11
 - 2. 加纳穆斯林非政府组织的框架 — 26
 - 3. FOMWAG 在 Facebook 上 — 99
@@ -145,7 +104,6 @@ Holger Weiss
 - 8. 加纳伊斯兰医院项目（2023 年 6 月状态） — 328
 
 ### 图表
-
 - 1. 列于非营利组织在线目录的穆斯林非政府组织的最后注册年份 — 66
 - 2. 穆斯林非政府组织总部所在地 — 70
 - 3. 穆斯林非政府组织运营地点 — 72
@@ -161,15 +119,10 @@ Holger Weiss
 - 13. 天课和萨达卡信托基金：资金来源，2019–2021 年 — 406
 
 ### 图
-
 - 1. Iqra 教育中心广告 — 16
 - 2. 湖畔大学学院 — 18
 - 3. *乌莱玛2030愿景* — 29
 - 4a. 清真寺组织的非正式募捐。哈米勒中央清真寺捐款图表 — 30
-
-
-
-
 - 4b 阿克拉尼马Ar-Rahma清真寺的捐款箱 31
 - 5 巴拉卡 48
 - 6 穆斯林高管基金会 59
@@ -211,9 +164,9 @@ Holger Weiss
 - 42 瓦的尼萨布计算 359
 - 43 谢赫奥兰多2017年天课尼萨布计算 358
 
-## 第1章
-### 通过非政府组织实现赋权
+# 第1章
 
+## 通过非政府组织实现赋权
 1957年独立时，加纳是非撒哈拉非洲最富裕的国家之一，其经济在1960年代中期至1980年代初遭受了严重的经济不稳定和衰退。世界银行和国际货币基金组织在1980年代和1990年代实施严厉的宏观经济结构改革后，加纳经济复苏并迅速扩张，其中很大程度上得益于21世纪初石油部门的开放。¹ 自2010年代初以来，世界银行将加纳评为中低收入国家（LMIC），并将其视为政治和经济发展的成功案例，² 尽管其经济增长率因2019年和2020年油价下跌和新冠疫情的综合影响而大幅下降。³
 
 过去二十年里，非政府组织（NGOs）在加纳经济中是增长最快的“企业”。⁴ 自1990年代以来连续的和平选举、相对强大的治理机构和问责制度，以及充满活力的公民社会，使加纳成为双边和多边捐助者的“捐助宠儿”。流入该国的官方发展援助（ODA）从2006年的12.4亿美元增加到2009年的21亿美元。然而，这种捐助者的善意在2010年急剧下降，当时该国获得中低收入国家地位；ODA从2010年的18亿美元下降到2014年的11亿美元。⁵
@@ -231,15 +184,18 @@ Holger Weiss
 1 Jacob Songsore, *加纳的区域发展：理论与现实* (Accra: Woeli Publishing Services, 2011); Ernest Aryeetey and Ravi Kanbur, eds., *独立六十年后的加纳* (Oxford: Oxford University Press, 2017). 2 World Bank, *加纳——2013-2018财年国家伙伴关系战略绩效与学习回顾* (Washington, D.C.: World Bank Group, 2016). 3 The World Bank in Ghana, Overview, updated 28.9.2022, https://www.worldbank.org/en/country/ghana/overview, accessed 27.12.2022. 4 George Bob-Milliar, “加纳的非政府组织——盈利性组织？”, 28.4.2005, https://www.modernghana.com/news/116769/ngos-in-ghana-profit-making-organisations.html, accessed 24.7.2021. 5 Albert A. Arhin, Emmanuel Kumi, Mohammed-Anwar Sadat Adam, “面对子弹？加纳非政府组织对变化援助格局的回应,” *Voluntas* 29 (2018): 349–350.
 
 6. World Bank, *贫困与公平简报——撒哈拉以南非洲：加纳*, April 2019, https://databank.worldbank.org/data/download/poverty/33EF03BB-9722-4AE2-ABC7-AA2972D68AFE/Archives-2019/Global_POVEQ_GHA.pdf, accessed 29.12.2021.
+
 7. International poverty rate in Ghana from 2017 to 2022, October 2020, https://www.statista.com/statistics/1222084/international-poverty-rate-in-ghana/, accessed 29.12.2021.
+
 8. World Bank, *贫困与公平简报——撒哈拉以南非洲：加纳*, April 2019, https://databank.worldbank.org/data/download/poverty/33EF03BB-9722-4AE2-ABC7-AA2972D68AFE/Archives-2019/Global_POVEQ_GHA.pdf, accessed 29.12.2021.
+
 9. See further L. Atindiguiti et alii, “加纳的非营利部门,” in *发展中国家的非营利部门*, eds. H.K. Anheier and L.M. Salamon (Manchester: Manchester University Press, 1997), 158–197.
+
 10. Bob-Milliar, “NGOs in Ghana.”
+
 11. NPO Secretariat, https://npos.mogcsp.gov.gh/, accessed 29.9.2021.
+
 12. Hans Holmén, “撒哈拉以南非洲的非政府组织,” in *Routledge Handbook of NGOs and Inter-
-
-
-
 
 研究以及妇女发展与权利。¹⁷ Bob-Milliar 指出，在加纳北部贫困的农村社区中，
 
@@ -255,23 +211,35 @@ Kumi 认定的跨境捐赠的其他趋势是，在动员跨境捐赠方面，数
 
 当代加纳的非政府组织格局主要由基督教、非教派和世俗派别组成。地方和国际穆斯林非政府组织、穆斯林社区组织和穆斯林民间社会组织的存在、议程和活动迄今一直被视为一种边缘现象，如果被提及的话。²⁶ 这些非政府组织构成了当代加纳大多数注册非政府组织，并在媒体和公共空间中占主导地位。Tuandike Sasa 于 2018 年列出的加纳国际卫生、环境、农业和教育非政府组织清单具有说明性，因为人们徒劳地寻找关于在加纳运营的国际穆斯林非政府组织的任何说明，27 并且其中任何一个也没有被 www.ghstudents.com 提供的清单所包含。28
 
+
+
 本书的目标有二。首先是绘制当代加纳穆斯林非政府组织的活动并对其在当代加纳的运作进行评估。关于殖民时期和早期后殖民时期撒哈拉以南非洲穆斯林非政府组织的历史知之甚少；它们在 1980 年代和 1990 年代的兴起在学术研究中鲜受关注，少数观察者迄今才注意到它们在 2010 年代的蓬勃发展和倍增。甚至更少关注的是穆斯林社区在撒哈拉以南非洲，包括加纳，试图应对政治和社会经济边缘化过程的各种方式。29 另一方面，穆斯林领袖和学者一再强调需要赋权穆斯林群-
 
 17 另见 Thomas Yarrow，《Development beyond Politics: Aid, Activism and NGOs in Ghana》（Basingstoke: Palgrave MacMillan, 2011）。
+
 18 Bob-Milliar，“NGOs in Ghana。”
+
 19 Benjamin Kwao and Daniel Amoak，“Does Size Really Matter? The Prevalence of NGOs and Challenges to Development in Northern Ghana，”Norsk Geografisk Tidsskrift/Norwegian Journal of Geography（2022）：149–163。
+
 20 Emmanuel Kumi，《Diversify or die? The responses of Ghanaian Non-Governmental Development Organisations（NGDOs）to a changing aid landscape》，PhD thesis，University of Bath，2017。
+
 21 Emmanuel Kumi，《Global Philanthropy Tracker: Ghana》，2020年10月，1–2，https://scholarworks.iupui.edu/bitstream/handle/1805/25915/ghana-report21.pdf?sequence=1&isAllowed=y，访问于13.7.2021。
+
 22 Kumi，《Global Philanthropy Tracker: Ghana》，2020年10月，2。
+
 23 另见 Arhin, Kumi, Adam，“Facing the Bullet?”
+
 24 另见 SDG Philanthropy Platform，*Enabling Environment for Philanthropy in Ghana*（United Nations Development Programme，2017），可查阅 https://www.sdgphilanthropy.org/system/files/2018-02/SDG%20Ghana%20Final-2.pdf。关于加纳中产阶级的出现，另见 Rachel Sponk，“Structures, Feelings and *savoir faire*: Ghana’s Middle Classes in the Making，”*Africa* 90，no. 3（2020）：470–488。Sponk 认为追求社会流动的三个促成条件分别是教育、社会网络以及各种形式的金融资源获取。另见 Carola Lentz and Andrea Noll，“Across Regional Disparities and Beyond Family Ties. A Ghanaian Middle Class in the Making，”*History and Anthropology*（2021），DOI：10.1080/02757206.2021.1885400。
+
 25 另见 WASCI，《Exploring Faith-based Giving as an Alternative Funding Model for Civil Society Organisations in Ghana—Experiences, Prospects and Challenges》（Accra: West Africa Civil Society Institute，2020）。
+
 26 例如，《西非民间社会名录 2010–2012》仅列出七个穆斯林组织，即 *Educational Development Fund for Muslim Youth*、*Federation of Muslim Women Association in Ghana*、*Ahmadiyya Muslim Youth Organization*、Zongo Youth Foundation、Berekum 中央清真寺俱乐部、Muslim Family Counselling Services 和 Muslim Relief Association。另见 Civil Society Directory for West Africa 2010–2012，eds. Charles Kojo Vandyck, Jimm Chick Fomunjong and Ramde Yaya（Accra: West African Civil Society Institute，2012），62，84，89，92，96，104。
+
 27 Tuandike Sasa，“List of International NGOs in Ghana，”5.4.2018，https://yen.com.gh/108012-list-international-ngos-ghana.html，访问于16.12.2021。
+
 28 “List of International NGOs in Ghana and Contact details，”https://ghstudents.com/list-of-international-ngos-in-ghana-and-contact-details/，访问于16.12.2021。然而，该清单至少包括一个地方穆斯林非政府组织，即位于阿克拉的 Sabon Zango Youth Movement。该清单也以“NGOs in Ghana: Full List, Functions & Contacts（2021）”4.8.2021，https://pricesghana.com/ngos-in-ghana/，访问于16.12.2021 的形式发布。
+
 29 M.A. Mohammad Salih，《Islamic NGOs in Africa: The Promise and Peril of Islamic Voluntarism》（Copenhagen: University of Copenhagen, Centre for African Studies，2001，修订版2002）。关于加纳，另见 Mumuni Sulemana，《Islamic Organisations in Accra: Their Structure, Role and Impact on the Proselytization of Islam》，MPhil thesis，University of Ghana，1994；Fatimatu N-Eyare Sulemanu，《Leadership in the Ghanaian Muslim Community: The Role of the Federation of Muslim Women's Association in Ghana》，MPhil thesis，Department for the Studies of Religions，University of Ghana，2006；Holger Weiss，《Begging and Almsgiving in Ghana: Muslim Positions towards Poverty and Distress》（Uppsala: Nordiska Afrikainstitutet，2007）；Yunus Dumbe，《Transnational Contacts and Muslim Religious Orientation in Ghana》，PhD thesis，Department for the Study of Religions，University of Ghana，2009；Holger Weiss，《Zakat in Ghana: A Tool for the Empowerment of the Muslim Community》（Kumasi: University Printing Press, KNUST，2021）；Sandy Zook and Cassidy Arndt，“Islamic NGOs in Education in Ghana: Analysis of the Scope, Activities, and Revenue Portfolios，”Journal of Education in Muslim Societies 2，no. 2（2021）：57–81；Holger Weiss，《Moving Mountains: Muslim NGOs in Ghana》（Kumasi: University Printing Press, KNUST，2022）。
-
-
 
 它们的地方、区域、国家和国际联系。尽管穆斯林非政府组织在建立和资助加纳现代伊斯兰教育部门以及支持达瓦（宣教）方面的作用已在先前研究中得到分析，34 但它们在促进社会福利方面的作用对于学术研究而言却是一片鲜为人知的领域。更不为人知的是，在这个“互联网时代”，加纳穆斯林非政府组织、民间社会组织和社区组织将社交媒体用作召集成员的网络平台，以及用作争取国内外捐助者支持的工具。本书所识别的关键动员力量包括各类穆斯林青年和宗戈（Zongo）协会、博主、社区和网络；这一加纳穆斯林“Facebook一代”在很大程度上未被学术研究涉及。35
 
@@ -299,12 +267,10 @@ Kumi 认定的跨境捐赠的其他趋势是，在动员跨境捐赠方面，数
 
 40 另见Weiss的《加纳的乞讨与施舍》；Weiss的《在调和与复兴之间》。Zongo一词（源自豪萨语：Zango，即营地）描述一种城市多民族定居点，最初是作为长途贸易商和行商的营地而建立的。在当代加纳，该词具有负面含义，因为Zongo指代过度拥挤的居住区和卫生设施不足。其大部分居民是穆斯林。另见Emily Anne Williamson，《理解宗戈：加纳社会空间边缘化过程》，载于《非洲大都市：城市空间、公民身份与城市权利研究》，Toyin Falola和Bisola Falola编（阿宾顿、牛津郡和纽约：劳特利奇出版社，2018年）；Giulia Casentini，《加纳的移民网络与叙事：来自宗戈的案例研究》，《非洲》88，第3期（2018年）：452–468；Benedikt Pontzen，《宗戈中的伊斯兰：加纳阿散蒂的穆斯林生活世界》（剑桥：剑桥大学出版社，2021年）；Joseph Mensah和Joseph Kofi Teye，《一个地理
 
-
-
-#### 表1  加纳2021年人口普查：各地区穆斯林人口
+#### 表1 加纳2021年人口普查：各地区穆斯林人口
 
 | 地区 | 缩写 | 总人口 | 穆斯林人口 | 穆斯林/总人口 % | 穆斯林/总穆斯林人口 % |
-|---|---:|---:|---:|---:|---:|
+|---|---|---:|---:|---:|---:|
 | 所有地区，男女合计 |  | 30,753,327 | 6,108,530 | 19.9 |  |
 | *南部地区* |  |  |  | 11.9 | 48.5 |
 | 西部省 | WR | 2,054,863 | 193,794 | 9.4 | 3.1 |
@@ -314,6 +280,11 @@ Kumi 认定的跨境捐赠的其他趋势是，在动员跨境捐赠方面，数
 | 东部省 | ER | 2,918,623 | 194,838 | 6.7 | 3.2 |
 | 阿散蒂省 | AR | 5,428,181 | 866,117 | 16 | 14.2 |
 | 西部北省 | WNR | 878,855 | 105,226 | 12 | 1.7 |
+
+
+
+| 省份 | 缩写 | 总人口 | 穆斯林人口 | `Mp/tp` (%) | `Mp/tMp` (%) |
+|------|------|--------|------------|-------------|--------------|
 | 阿哈福省 | AhR | 563,643 | 93,153 | 16.5 | 1.5 |
 | 博诺省 | BR | 1,205,462 | 154,145 | 12.8 | 2.5 |
 | 博诺东省 | BER | 1,199,786 | 289,268 | 24.1 | 4.7 |
@@ -325,80 +296,81 @@ Kumi 认定的跨境捐赠的其他趋势是，在动员跨境捐赠方面，数
 | 上东省 | UER | 1,298,179 | 385,020 | 29.7 | 6.3 |
 | 上西省 | UWR | 898,970 | 406,731 | 45.2 | 6.5 |
 
-图例：Abbr. = 缩写；Mp/tp = 穆斯林人口（地区）/总人口（地区）；Mp/tMp = 穆斯林人口（地区）/穆斯林总人口（全国）
+图例：`Abbr.` = 缩写；`Mp/tp` = 穆斯林人口（地区）/总人口（地区）；`Mp/tMp` = 穆斯林人口（地区）/穆斯林总人口（全国）
 
 来源：*《加纳2021年人口与住房普查 总报告第3C卷 背景特征》* [阿克拉：加纳统计服务局，2021年11月]
 
-从经济和心理上看，加纳最显著的划分是其南北之分。该国的沿海和森林地区，即南部十一个（2019年前为七个）行政区省，[^41]是加纳较为富裕的部分；其居民从事具有经济价值的农林部门（可可、木材）、采矿业和石油工业。毫不奇怪，南部地区对国家政治具有深远影响。相比之下，五个（2019年前为三个）北部行政区省[^42]被视为该国贫穷的后院。[^43]
+从经济和心理上看，加纳最显著的划分是其南北之分。该国的沿海和森林地区，即南部十一个（2019年前为七个）行政区省[^41]，是加纳较为富裕的部分；其居民从事具有经济价值的农林部门（可可、木材）、采矿业和石油工业。毫不奇怪，南部地区对国家政治具有深远影响。相比之下，五个（2019年前为三个）北部行政区省[^42]被视为该国贫穷的后院[^43]。
 
-北部在政治和经济方面均被边缘化。根据自1990年代初以来进行的各项国家生活水平调查，五个萨凡纳地区是加纳迄今为止最贫困的地区。英国殖民政府及随后的加纳政府试图改造农业、畜牧业和林业部门并使其现代化。然而，这些努力对北部的小农户和牧牛群体的生活影响甚微；那里的第一产业主要以自给为导向，规模小，且以传统技术和实践为主导。[^44]相反，自二十一世纪初以来，降水变率增大以及气候变化导致雨季缩短，增加了农民和牧牛者的脆弱性。这两个群体之间的地方紧张局势有时升级为武装冲突。自伊斯兰主义团体进入马里和布基纳法索导致萨赫勒地区局势不稳以来，非法采金以及地下边境经济的迅速蔓延进一步恶化了加纳北部的安全局势。[^45]
+北部在政治和经济方面均被边缘化。根据自1990年代初以来进行的各项国家生活水平调查，五个萨凡纳地区是加纳迄今为止最贫困的地区。英国殖民政府及随后的加纳政府试图改造农业、畜牧业和林业部门并使其现代化。然而，这些努力对北部的小农户和牧牛群体的生活影响甚微；那里的第一产业主要以自给为导向，规模小，且以传统技术和实践为主导[^44]。相反，自二十一世纪初以来，降水变率增大以及气候变化导致雨季缩短，增加了农民和牧牛者的脆弱性。这两个群体之间的地方紧张局势有时升级为武装冲突。自伊斯兰主义团体进入马里和布基纳法索导致萨赫勒地区局势不稳以来，非法采金以及地下边境经济的迅速蔓延进一步恶化了加纳北部的安全局势[^45]。
 
-尽管加纳自1990年代以来的强劲经济增长使贫困率从1991年的56.5%降至2013年的24.2%，从而实现了千年发展目标1，[^46]但这一进展非常不均衡，主要局限于南部。2012年，南部贫困率约为20%，而北部约为60%。[^47]因此，联合国粮食及农业组织（粮农组织）在2015年将加纳定义为低收入缺粮国。[^48]相应地，联合国儿童基金会加纳办事处在2016年国别报告中强调，当时的北部、上东部和上西部三个北部地区仍然是该国贫困率最高的地区。报告指出，当时的北部地区贫困率高企，但仅从2006年的55.7%小幅下降至2013年的50.4%：“鉴于北部地区目前占加纳（当时）十个地区中贫困人口数量最多，这对该国来说是一个重大问题。”[^49]
+尽管加纳自1990年代以来的强劲经济增长使贫困率从1991年的56.5%降至2013年的24.2%，从而实现了千年发展目标1[^46]，但这一进展非常不均衡，主要局限于南部。2012年，南部贫困率约为20%，而北部约为60%[^47]。因此，联合国粮食及农业组织（粮农组织）在2015年将加纳定义为低收入缺粮国[^48]。相应地，联合国儿童基金会加纳办事处在2016年国别报告中强调，当时的北部、上东部和上西部三个北部地区仍然是该国贫困率最高的地区。报告指出，当时的北部地区贫困率高企，但仅从2006年的55.7%小幅下降至2013年的50.4%：“鉴于北部地区目前占加纳（当时）十个地区中贫困人口数量最多，这对该国来说是一个重大问题。”[^49]
 
-对加纳贫困问题的各项调查表明，穆斯林占主导地位的北部地区贫困率最高；自2019年起，该地区划分为萨凡纳地区和北部地区，尤以农村萨凡纳地区最为突出。然而，贫困在北部和南部的部分城市社区中也普遍存在，尤其是在非正规部门寻求每日收入的农村移民中。[^50]海外发展研究所（ODI）最近的一份研究报告揭示了加纳脆弱性和排斥的多重维度，并确定了七个关键群体。其中受威胁最大的是女孩和妇女，尤其是孤儿、老年妇女，以及从事galamsey（非法小规模采矿）或充当kayayei（搬运工）的妇女。其他群体则是低收入个人和家庭。
+对加纳贫困问题的各项调查表明，穆斯林占主导地位的北部地区贫困率最高；自2019年起，该地区划分为萨凡纳地区和北部地区，尤以农村萨凡纳地区最为突出。然而，贫困在北部和南部的部分城市社区中也普遍存在，尤其是在非正规部门寻求每日收入的农村移民中[^50]。海外发展研究所（ODI）最近的一份研究报告揭示了加纳脆弱性和排斥的多重维度，并确定了七个关键群体。其中受威胁最大的是女孩和妇女，尤其是孤儿、老年妇女，以及从事galamsey（非法小规模采矿）或充当kayayei（搬运工）的妇女。其他群体则是低收入个人和家庭。在农村和城市地区，以及残疾人士和生活在没有公共服务地区的居民中[^51]。
 
 《加纳城市中“Zongo”的理论化：一种复杂系统方法》，《加纳地理杂志》13卷，第2期（2021年）：66–95，DOI: 10.4314/gjg.v13i2.3。
+
+城市贫困，包括街头乞丐的高比例[^52]，是在阿克拉和库马西占主导地位的穆斯林佐戈聚居区以及其他南部和北部城市地区的一个显著现象，这些地区被外界和媒体描绘为‘贫民窟’和‘squatter settlements’[^53]，并加剧了外界对穆斯林构成加纳一个贫困且边缘化的少数群体的负面看法[^54]。其结果是‘zongolism’的负面形象，即卫生设施简陋、卫生不当的‘areas of filth’，居住着声名狼藉的青年，他们以精通 sakawa 网络诈骗而闻名。尽管如此，zongolism 并不是伊斯兰教，正如一位批判性观察者在他的博客中强调的那样[^55]。
+
+穆斯林另一方面，视其边缘化为历史轨迹的结果。穆斯林构成了一个相对富裕的商人、学者和贸易者群体，主要居住在北部前殖民时期的城市中心，他们在英国殖民时期的经济和政治地位发生了变化。部分原因是对殖民当局和穆斯林当局之间在各自‘spheres’相互不干涉的蓄意政策的效应：穆斯林社区获得了内部文化和宗教自治，并避免挑战殖民秩序。副作用是穆斯林教育（古兰经学校）与殖民‘sphere’脱钩，包括现代资本主义部门，因为只有西方教育（基督教传教士和政府学校）才能进入现代（殖民和后殖民）公共和私营部门的就业[^56]。
+
+因此，虽然穆斯林父母将子女送往古兰经学校作为阻止基督教影响和‘luring’其子女脱离伊斯兰教的蓄意策略，但从长远来看，其影响是破坏性的。穆斯林在后殖民初期加纳的结构性失权进一步因穆斯林的政治边缘化而加剧，这是1950年代末驱逐部分穆斯林领导人，随后在1960年代末大规模驱逐‘aliens’的结果。后者的大规模驱逐影响了穆斯林社区的构成，因为大量具有约鲁巴和豪萨族裔血统的穆斯林不得不离开该国并定居尼日利亚[^57]。
+
+穆斯林的社会经济和政治边缘化在1970年代和1980年代加纳经济衰退时进一步加剧。各种经济复苏计划的长期效应，结合自1980年代中期以来政治稳定和充满活力的公民社会的兴起，包括其‘NGO-isation’（见第1.3章下文），仅对穆斯林在加纳的地位和生活产生了积极影响。1983年饥荒之后，北部加纳成为国际穆斯林非政府组织的重点区域。然而，在最初二十年里，他们的活动在公众（或学术研究）中很少被注意到，主要局限于修建清真寺和礼拜场所[^58]。
+
+自1980年代以来，加纳的穆斯林领导层强调改革穆斯林教育体系的必要性，尤其是古兰经学校，以改善该国穆斯林的政治和社会状况。众多穆斯林活动家、领导人和学者反复强调穆斯林及其组织需要在现代化教育设施以及世俗教育方面进行投资[^59]。因此，一个市场特征是设立了教育部的伊斯兰教育单位，以及全国范围内的阿拉伯语/英语小学和中学，最初由 MFBOS 资助（图1）[^60]。
+
+![](img/2ddf018ff5f5842e4fd5ba53f93c058a_38_0.png)
+
+图1 Iqra 教育中心的广告。位于阿克拉的 Iqra 教育中心是众多努力之一，旨在现代化加纳的穆斯林教育体系。
+
+广告刊登于《每日新闻》，2018年9月17日。
+
+作者收藏
+
+在过去二十年里，通过建立私立穆斯林高等教育机构，穆斯林教育领域出现了新的机遇。到目前为止，唯一存在的机构是位于阿克拉的加纳伊斯兰大学学院（IUGG）和加纳湖畔大学学院（LUCG），以及阿散蒂地区贝波索的加纳穆斯林传教教育学院和库马西的穆斯林教师培训学院。IUGG 成立于2000年，由四个学院组成，即艺术、工商管理、传播研究和教育。尽管它由伊朗阿胡尔-拜特基金会运营和资助，IUGG 仍包括逊尼派教职员工和教师[^61]。LUCG[^62]，前身为马迪纳科学与技术学院（MIST），由马迪纳科学与技术基金会于2013年成立，2017年开始运营，由三个学院组成，即工程、商业与技术，以及文理学院（图2）[^63]。与 IUGG 相比，湖畔大学学院并不声称自己是伊斯兰大学，但强调其致力于维护伊斯兰价值观和道德[^64]。
+
+除了两所运营中的大学外，穆斯林学者和非政府组织还启动了其他几个雄心勃勃的项目。其中一些项目的筹款活动仍在进行中，其他项目已被搁置。其中最早的一个是伊玛目拉希德在塔马莱的拉希迪亚伊斯兰大学，计划于2000年开始开设农业、工程和医学的文学学士和理学学士课程[^65]。然而，由于缺乏
+
+## 脚注
 
 [^41]: 阿哈福省、阿散蒂省、博诺省、博诺东省、中部省、东部省、大阿克拉省、奥蒂省、沃尔特省、西部省和西部北省。
 
 [^42]: 北部省、东北省、萨凡纳省、上东省和上西省。
 
-[^43]: Dzodzi Tsikata和Wayo Seini，《加纳的身份认同、不平等与冲突》，CRISE不平等、人类安全与族裔研究中心，牛津大学伊丽莎白女王学院，CRISE工作论文第5号（2004年11月），见 https://www.qeh.ox.ac.uk/publications/identities-inequalities-and-conflicts-ghana，访问于2021年4月1日；Joseph A. Yaro和Jan Hesselberg，《加纳北部贫困的轮廓：抗击粮食不安全政策启示》，《研究评论新系列》26卷第1期（2010年）：81–112。
+[^43]: Dzodzi Tsikata和Wayo Seini，《加纳的身份认同、不平等与冲突》，CRISE不平等、人类安全与族裔研究中心，牛津大学伊丽莎白女王学院，CRISE工作论文第5号（2004年11月），见 <https://www.qeh.ox.ac.uk/publications/identities-inequalities-and-conflicts-ghana>，访问于2021年4月1日；Joseph A. Yaro和Jan Hesselberg，《加纳北部贫困的轮廓：抗击粮食不安全政策启示》，《研究评论新系列》26卷第1期（2010年）：81–112。
 
 [^44]: Jeff Grischow和Holger Weiss，《殖民饥荒救济与发展政策：迈向加纳北部的环境史》，《全球环境》7/8（2011年）：50–97；Yaw Agyeman Boafo、Godfred Seidu Jasaw和Frederick Dayour，《探索半干旱加纳传统养护农业实践与可持续性的社会维度》，《环境与地球科学杂志》4卷第10期（2014年）：47–58；Jeff Grischow和Holger Weiss，《泛非主义、社会主义与未来：1951–1966年加纳的发展规划》，载于Jenny Andersson和Eglė Rindzevičiūtė主编《跨国科学与政治中的长期斗争：锻造未来》（伦敦和纽约：劳特利奇出版社，2015年），218–239；Martin Oteng-Ababio、Simon Mariwah和Louis Kusi，《加纳北部的不发达是环境决定论还是治理危机的案例？》，《加纳地理杂志》9卷第2期（2017年）：5–39。
 
 [^45]: 另见：康拉德·阿登纳基金会（编），《加纳北部的圣战威胁和
 
-[^46]: 《全球粮食安全战略（GFSS）加纳国别计划》，2018年8月28日，第5页，见 https://www.usaid.gov/sites/default/files/documents/1867/Ghana_Country_Plan_Public_Version_WS_Edits.pdf，访问于2021年4月1日。
+[^46]: 《全球粮食安全战略（GFSS）加纳国别计划》，2018年8月28日，第5页，见 <https://www.usaid.gov/sites/default/files/documents/1867/Ghana_Country_Plan_Public_Version_WS_Edits.pdf>，访问于2021年4月1日。
 
-[^47]: 美国国际开发署/加纳国家发展合作战略2013–2017（2012年12月），第1页，见 https://www.usaid.gov/sites/default/files/documents/1860/Ghana_CDCS_fy2013-17.pdf，访问于2021年4月1日。
+[^47]: 美国国际开发署/加纳国家发展合作战略2013–2017（2012年12月），第1页，见 <https://www.usaid.gov/sites/default/files/documents/1860/Ghana_CDCS_fy2013-17.pdf>，访问于2021年4月1日。
 
-[^48]: 粮农组织国家营养概况——加纳，http://www.fao.org/ag/agn/nutrition/gha_en.stm，访问于2021年4月1日。
+[^48]: 粮农组织国家营养概况——加纳，<http://www.fao.org/ag/agn/nutrition/gha_en.stm>，访问于2021年4月1日。
 
-[^49]: Edgar Cooke、Sarah Hague和Andy McKay，《加纳贫困与不平等报告：利用第六次加纳生活水平调查》（联合国儿童基金会加纳办事处，2016年3月），见 https://www.unicef.org/ghana/reports/ghana-poverty-and-inequality-analysis，访问于2021年4月1日。
+[^49]: Edgar Cooke、Sarah Hague和Andy McKay，《加纳贫困与不平等报告：利用第六次加纳生活水平调查》（联合国儿童基金会加纳办事处，2016年3月），见 <https://www.unicef.org/ghana/reports/ghana-poverty-and-inequality-analysis>，访问于2021年4月1日。
 
 [^50]: Kenneth Ofori-Boateng，《加纳城市贫困移民贫困程度与社会凝聚力分析》，《贫困杂志》21:3（2017年）：265–287。
 
+[^51]: Moizza B. Sarwar、Rebecca Holmes、David Korboe、Alex Afram 和 Heiner Salomon，《Understanding Vulnerability and Exclusion in Ghana》（伦敦：ODI，2022）。
+
+[^52]: Alex B. Asiedu 和 Samuel Agyei-Mensah，“Traders on the Run: Activities of Street Vendors in the Accra Metropolitan Area, Ghana,” Norsk Geografisk Tidsskrift/Norwegian Journal of Geography 62, no. 3 (2008): 191–202; Tufeliru Fuseini 和 Marguerite Daniel，“Exploring the Stressors and Resourses of Muslim Child Beggars in Dagbon of Northern Ghana in the Context of Child Rights and Existing Realities,” Cogent Social Sciences 4 (2018), <https://doi.org/10.1080/23311886.2018.1542955>; Tufeliru Fuseini & Marguerite Daniel，“Child Begging as a Manifestation of Child Labour in Dagbon in Northern Ghana, the Perspective of Mallams and Parents,” Children and Youth Services Review 111 (2020), <https://doi.org/10.1016/j.childyouth.2020.104836>。
+
+[^53]: George Owusu et alii，“Slums of Hope and Slums of Despair: Mobility and Livelihoods in Nima, Accra,” Norsk Geografisk Tidsskrift/Norwegian Journal of Geography 62, no. 3 (2008): 180–190; Stig H. Jorgensen，“Some Perspectives on the Geographies of Poverty and Health: A Ghanaian Context,” Norsk Geografisk Tidsskrift/Norwegian Journal of Geography 62, no. 3 (2008): 241–250; Marta M. Jankowska、John R. Weeks 和 Ryan Engstrom，“Do the Most Vulnerable People Live in the Worst Slums? A Spatial Analysis of Accra, Ghana,” Annals of GIS 17, no. 4 (2011): 221–235。
+
+[^54]: Rabiatu Ammah，“Christian-Muslim Relations in Contemporary Sub-Saharan Africa,” Islam–Christian Muslim Relations 18, no. 2 (2007): 146。
+
+[^55]: Voice of Zongo Youth Foundation，“Poverty must never be an excuse for our poor sanitary conditions [...]”，21.6.2023，<https://www.facebook.com/voiceofzongoyouthfoundation>，访问日期 17.8.2023。
+
+[^56]: Weiss, Between Accommodation and Revivalism. 另见 David E. Skinner，“The Incorporation of Muslim Elites into the Colonial Administrative Systems of Sierra Leone, The Gambia and the Gold Coast,” Journal of Muslim Minority Affairs 29, no. 1 (2009): 91–108。
+
+[^57]: Weiss, Between Accommodation and Revivalism. 另见 Ousman Kobo，“‘We Are Citizens Too’: The Politics of Independence in Ghana,” Journal of Modern African Studies 48, no. 1 (2010): 67–94; Johnson Olaosebikan Aremu 和 Adeyinka Theresa Ajayi，“Expulsion of Nigerian Immigrant Community from Ghana in 1969: Causes and Impact,” Developing Country Studies 4, no. 10 (2014): 176–186。
+
+[^58]: Weiss, Begging and Almsgiving in Ghana。
 
 
-
-在农村和城市地区，以及残疾人士和生活在没有公共服务地区的居民中。51
-
-城市贫困，包括街头乞丐的高比例，52 是在阿克拉和库马西占主导地位的穆斯林佐戈聚居区以及其他南部和北部城市地区的一个显著现象，这些地区被外界和媒体描绘为‘贫民窟’和‘squatter settlements’，53 并加剧了外界对穆斯林构成加纳一个贫困且边缘化的少数群体的负面看法。54 其结果是‘zongolism’的负面形象，即卫生设施简陋、卫生不当的‘areas of filth’，居住着声名狼藉的青年，他们以精通 sakawa 网络诈骗而闻名。尽管如此，zongolism 并不是伊斯兰教，正如一位批判性观察者在他的博客中强调的那样。55
-
-穆斯林另一方面，视其边缘化为历史轨迹的结果。穆斯林构成了一个相对富裕的商人、学者和贸易者群体，主要居住在北部前殖民时期的城市中心，他们在英国殖民时期的经济和政治地位发生了变化。部分原因是对殖民当局和穆斯林当局之间在各自‘spheres’相互不干涉的蓄意政策的效应：穆斯林社区获得了内部文化和宗教自治，并避免挑战殖民秩序。副作用是穆斯林教育（古兰经学校）与殖民‘sphere’脱钩，包括现代资本主义部门，因为只有西方教育（基督教传教士和政府学校）才能进入现代（殖民和后殖民）公共和私营部门的就业。56
-
-因此，虽然穆斯林父母将子女送往古兰经学校作为阻止基督教影响和‘luring’其子女脱离伊斯兰教的蓄意策略，但从长远来看，其影响是破坏性的。穆斯林在后殖民初期加纳的结构性失权进一步因穆斯林的政治边缘化而加剧，这是1950年代末驱逐部分穆斯林领导人，随后在1960年代末大规模驱逐‘aliens’的结果。后者的大规模驱逐影响了穆斯林社区的构成，因为大量具有约鲁巴和豪萨族裔血统的穆斯林不得不离开该国并定居尼日利亚。57
-
-穆斯林的社会经济和政治边缘化在1970年代和1980年代加纳经济衰退时进一步加剧。各种经济复苏计划的长期效应，结合自1980年代中期以来政治稳定和充满活力的公民社会的兴起，包括其‘NGO-isation’（见第1.3章下文），仅对穆斯林在加纳的地位和生活产生了积极影响。1983年饥荒之后，北部加纳成为国际穆斯林非政府组织的重点区域。然而，在最初二十年里，他们的活动在公众（或学术研究）中很少被注意到，主要局限于修建清真寺和礼拜场所。58
-
-自1980年代以来，加纳的穆斯林领导层强调改革穆斯林教育体系的必要性，尤其是古兰经学校，以改善该国穆斯林的政治和社会状况。众多穆斯林活动家、领导人和学者反复强调穆斯林及其组织需要在现代化教育设施以及世俗教育方面进行投资。59 因此，一个市场特征是设立了教育部的伊斯兰教育单位，以及全国范围内的阿拉伯语/英语小学和中学，最初由 MFBOS 资助（图1）。60
-
-![](img/2ddf018ff5f5842e4fd5ba53f93c058a_38_0.png)
-
-图1 Iqra 教育中心的广告。位于阿克拉的 Iqra 教育中心是众多努力之一，旨在现代化加纳的穆斯林教育体系。
-广告刊登于《每日新闻》，2018年9月17日。
-作者收藏
-
-在过去二十年里，通过建立私立穆斯林高等教育机构，穆斯林教育领域出现了新的机遇。到目前为止，唯一存在的机构是位于阿克拉的加纳伊斯兰大学学院（IUGG）和加纳湖畔大学学院（LUCG），以及阿散蒂地区贝波索的加纳穆斯林传教教育学院和库马西的穆斯林教师培训学院。IUGG 成立于2000年，由四个学院组成，即艺术、工商管理、传播研究和教育。尽管它由伊朗阿胡尔-拜特基金会运营和资助，IUGG 仍包括逊尼派教职员工和教师。61 LUCG，62 前身为马迪纳科学与技术学院（MIST），由马迪纳科学与技术基金会于2013年成立，2017年开始运营，由三个学院组成，即工程、商业与技术，以及文理学院（图2）。63 与 IUGG 相比，湖畔大学学院并不声称自己是伊斯兰大学，但强调其致力于维护伊斯兰价值观和道德。64
-
-除了两所运营中的大学外，穆斯林学者和非政府组织还启动了其他几个雄心勃勃的项目。其中一些项目的筹款活动仍在进行中，其他项目已被搁置。其中最早的一个是伊玛目拉希德在塔马莱的拉希迪亚伊斯兰大学，计划于2000年开始开设农业、工程和医学的文学学士和理学学士课程。65 然而，由于缺乏
-
-51 Moizza B. Sarwar、Rebecca Holmes、David Korboe、Alex Afram 和 Heiner Salomon，《Understanding Vulnerability and Exclusion in Ghana》（伦敦：ODI，2022）。
-
-52 Alex B. Asiedu 和 Samuel Agyei-Mensah，“Traders on the Run: Activities of Street Vendors in the Accra Metropolitan Area, Ghana,” Norsk Geografisk Tidsskrift/Norwegian Journal of Geography 62, no. 3 (2008): 191–202; Tufeliru Fuseini 和 Marguerite Daniel，“Exploring the Stressors and Resourses of Muslim Child Beggars in Dagbon of Northern Ghana in the Context of Child Rights and Existing Realities,” Cogent Social Sciences 4 (2018), https://doi.org/10.1080/23311886.2018.1542955; Tufeliru Fuseini & Marguerite Daniel，“Child Begging as a Manifestation of Child Labour in Dagbon in Northern Ghana, the Perspective of Mallams and Parents,” Children and Youth Services Review 111 (2020), https://doi.org/10.1016/j.childyouth.2020.104836。
-
-53 George Owusu et alii，“Slums of Hope and Slums of Despair: Mobility and Livelihoods in Nima, Accra,” Norsk Geografisk Tidsskrift/Norwegian Journal of Geography 62, no. 3 (2008): 180–190; Stig H. Jorgensen，“Some Perspectives on the Geographies of Poverty and Health: A Ghanaian Context,” Norsk Geografisk Tidsskrift/Norwegian Journal of Geography 62, no. 3 (2008): 241–250; Marta M. Jankowska、John R. Weeks 和 Ryan Engstrom，“Do the Most Vulnerable People Live in the Worst Slums? A Spatial Analysis of Accra, Ghana,” Annals of GIS 17, no. 4 (2011): 221–235。
-
-54 Rabiatu Ammah，“Christian-Muslim Relations in Contemporary Sub-Saharan Africa,” Islam–Christian Muslim Relations 18, no. 2 (2007): 146。
-
-55 Voice of Zongo Youth Foundation，“Poverty must never be an excuse for our poor sanitary conditions [...]”，21.6.2023，https://www.facebook.com/voiceofzongoyouthfoundation，访问日期 17.8.2023。
-
-56 Weiss, Between Accommodation and Revivalism. 另见 David E. Skinner，“The Incorporation of Muslim Elites into the Colonial Administrative Systems of Sierra Leone, The Gambia and the Gold Coast,” Journal of Muslim Minority Affairs 29, no. 1 (2009): 91–108。
-
-57 Weiss, Between Accommodation and Revivalism. 另见 Ousman Kobo，“‘We Are Citizens Too’: The Politics of Independence in Ghana,” Journal of Modern African Studies 48, no. 1 (2010): 67–94; Johnson Olaosebikan Aremu 和 Adeyinka Theresa Ajayi，“Expulsion of Nigerian Immigrant Community from Ghana in 1969: Causes and Impact,” Developing Country Studies 4, no. 10 (2014): 176–186。
-
-58 Weiss, Begging and Almsgiving in Ghana。
 
 59 “Invest in secular education—Islamic NGOs told”，9.11.2004，https://www.modernghana.com/news/66283/invest-in-secular-education-islamic-ngos-told.html；“Muslim workers asked to support Islamic Education Fund”，29.6.2005，https://www.modernghana.com/news/81012/muslim-workers-asked-to-support-islamic-education-fund.html；“Muslims urged to prioritise, invest in education”，27.7.2023，https://gna.org.gh/2023/07/muslims-urged-to-prioritise-invest-in-education/，访问日期 12.11.2023；全部访问日期 12.11.2023。
 
@@ -414,21 +386,22 @@ Kumi 认定的跨境捐赠的其他趋势是，在动员跨境捐赠方面，数
 
 65 “Tamale Islamic University admits first students”，13.3.2000，https://www.modernghana.com/news/8581/tamale-islamic-university-admits-first-students.html，访问日期 23.12.2022。
 
-
-
-
-
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_40_0.png)
 
 图2 加纳湖畔大学学院（LUCG），前身为马迪纳理工学院（MIST）
+
 摄影：霍尔格·魏斯/2017
 
 资金。⁶⁶ 自2008年以来，谢赫·穆斯塔法·易卜拉欣开始推动位于阿克拉图巴的ICODEHS大学项目，主要赞助方为迪拜慈善机构；⁶⁷ 2014年，阿尔胡达伊斯兰协会在中央省戈莫阿达苏姆启动了可容纳20,000人的大学项目。⁶⁸ 然而，这两个项目目前似乎已被搁置。⁶⁹ 第三个大学项目——位于阿散蒂省阿索科雷的加纳蒂贾尼亚大学学院（TUCG）于2016年成立；⁷⁰ 尽管如此，该项目在吸引足够资金方面也遇到了困难。
 
 66 Weiss，《乞讨与施舍》，122–123。
+
 67 “伊斯兰委员会将建立大学”，2008年4月9日，https://www.modernghana.com/news/162209/islamic-council-to-establish-university.html；“伊斯兰团体在加纳开展大规模发展项目”，2011年1月24日，https://www.modernghana.com/news/313486/islamic-group-embarks-on-massive-development-in-country.html，均访问于2022年12月23日。
+
 68 Gilbert Mawuli Agbey 和 Charles Andoh，“阿尔胡达在戈莫阿达苏姆建设大学”，《每日写真报》2014年3月10日，https://www.graphic.com.gh/news/education/al-huda-constructs-university-at-gomoa-dasum.html，访问于2017年11月8日。
+
 69 对哈吉·苏莱马纳·穆穆尼的访谈，2017年12月5日。据哈吉·苏莱马纳·穆穆尼称，谢赫·穆斯塔法·易卜拉欣在为ICODEHS大学项目争取足够资金方面遇到了困难。
+
 70 “蒂贾尼亚大学学院建设工程启动”，http://www.tijjaniyamuslims.org/news/?news_id=15703d6f39dd87&pn=5，该主页已失效（2024年5月）。
 
 另一方面，加纳穆斯林使团（GMM）计划在其位于贝波索的教育学院旁建立一所伊斯兰大学，目前进展缓慢。⁷¹ 同样，伊斯兰传教秘书处（ISM）在2019年前成功完成了其位于阿哈福省杜阿亚-恩克万塔的伊斯兰大学学院项目。⁷² 另一方面，位于中央省波辛的伊斯兰护理培训学院项目的命运仍不明朗。⁷³ 相反，GMM于2022年初委托开办了第一所伊斯兰护理学院，并于2022年底开始招生，详见第4.4章。
@@ -457,10 +430,7 @@ Kumi 认定的跨境捐赠的其他趋势是，在动员跨境捐赠方面，数
 
 NGO的狭义定义强调其专业性。例如，阿林、库米和萨达特·亚当将专业NGO定义为一个表现出五个特征的组织：正式性、私有性、非营利分配性、自治性和自愿性。因此，一个专业NGO具有制度化的定期会议、办公室工作人员、某种形式的组织持续性以及一定程度的自愿参与来开展和管理组织。⁸⁰ 而格劳科·达戈斯蒂诺则将公民社会组织与政治宗教主体、NGO和第三部门区分开来。最后一种类型由一系列独立机构组成，每个机构都有组织且不以营利为目的，每个机构都旨在服务于公共利益。第三部门组织与阿林、库米和萨达特·亚当所称的专业NGO相似，即正式、非营利分配、私有、独立和自愿。⁸¹ 然而，专业NGO的狭义定义排除了大量基层和志愿协会、俱乐部、运动和网络，这些组织没有或仅初步专业化。在加纳，尤其是在穆斯林社区中，其中许多组织被称为“NGO”，无论是在其活动人士的日常用语中，还是当他们注册Facebook并开设账户时。
 
-加纳非营利组织秘书处（NPO秘书处）采用了另一种类型划分，将非营利组织（NPO）与社区组织（CBO）区分开来。根据NPO秘书处的定义，NPO是指非营利、非政府的法人、协会或组织，是自愿建立的。它还进一步解释说，NPO主要从事动员和利用资源，用于慈善、宗教、文化、教育、社会或社区目的，或开展其他类型的非营利活动和公益事业。而社区组织（CBO）则是一群在特定地区支持共同目标的爱好者组成的团体。CBO也被称为基层组织和人民组织，其性质和目的与其他NPO不同。CBO通常是“会员制”组织，由
-
-
-由为了促进自身利益而聚集在一起的个人组成（例如，妇女团体、信用合作社、青年俱乐部、合作社和农民协会、社区发展协会等）。然而，非营利组织秘书处也指出，NPOS 和 CBOS 在相同的领域工作并共享共同的动机——社会的福祉和人民的福祉。82
+加纳非营利组织秘书处（NPO秘书处）采用了另一种类型划分，将非营利组织（NPO）与社区组织（CBO）区分开来。根据NPO秘书处的定义，NPO是指非营利、非政府的法人、协会或组织，是自愿建立的。它还进一步解释说，NPO主要从事动员和利用资源，用于慈善、宗教、文化、教育、社会或社区目的，或开展其他类型的非营利活动和公益事业。而社区组织（CBO）则是一群在特定地区支持共同目标的爱好者组成的团体。CBO也被称为基层组织和人民组织，其性质和目的与其他NPO不同。CBO通常是“会员制”组织，由由为了促进自身利益而聚集在一起的个人组成（例如，妇女团体、信用合作社、青年俱乐部、合作社和农民协会、社区发展协会等）。然而，非营利组织秘书处也指出，NPOS 和 CBOS 在相同的领域工作并共享共同的动机——社会的福祉和人民的福祉。82
 
 Heuser 和 Koehrsen 指出，宗教非政府组织是混合体，因为它们参与宗教和“世俗”领域的开发机构，因此构成了专业非政府组织、CBOS 和 CSOS 的子类别。83 其他人，如 Clark，在指宗教非政府组织时使用信仰型（慈善/发展）组织的术语。84 与世俗人道主义组织相比，信仰型组织（即宗教非政府组织）被 Ferris 概括为与宗教团体有隶属关系、使命声明明确提及宗教价值观、从宗教来源获得财政支持、治理结构中董事会成员或员工的选拔基于宗教信仰或隶属关系，和/或决策过程基于宗教价值观。85
 
@@ -476,17 +446,19 @@ Heuser 和 Koehrsen 指出，宗教非政府组织是混合体，因为它们参
 
 86 另见 Susumu Nejima、Egbert Harmsen 和 Masayuki Akutsu，“导言”，载于 *穆斯林世界的非政府组织：信仰与社会服务*，编者 Susumu Nejima（伦敦和纽约：Routledge，2016），1–16。另见 Matthew Clarke 和 Vicki-Anne Ware，“理解信仰型组织：国际发展文献中 FBOs 与非政府组织的对比”，*发展研究进展* 15, 第 1 期 (2015): 37–48。
 
-Kaag 强调，狭义定义的穆斯林（国家和跨国）非政府组织基于对伊斯兰团结的理解，该理解由三个要素组成：*ighatha* 或人道主义救援，*daʿwa* 或传召伊斯兰，以及 *jihad* 在支持伊斯兰事业的武装冲突意义上的含义。88 然而，正如 Petersen 在其对跨国穆斯林非政府组织轨迹的分析中所指出的，大多数组织结合了其中两个要素。第一个跨国穆斯林非政府组织出现在 1970 年代末，并在 1980 年代非洲之角饥荒期间成为头条新闻。Petersen 将这些组织——如国际伊斯兰救援组织（IIRO，成立于 1979 年）、伊斯兰救援（成立于 1984 年）和穆斯林援助（成立于 1985 年）——定义为 *daʿwatist*，因为其目标不仅是提供援助，还要抵制西方基督教非政府组织的影响，以保护穆斯林信仰和身份。89
 
-1980 年代和 1990 年代阿富汗和波斯尼亚的冲突见证了两种不同类型的穆斯林跨国非政府组织的出现，即圣战主义者和基于团结的非政府组织。*Jihadist NGOs* 将人道主义救援与支持穆斯林团体的武装斗争相结合，并在 1998 年肯尼亚袭击以及 2001 年纽约和华盛顿特区 9/11 袭击之后，被政府标记为恐怖组织。*Solidarity-based Muslim NGOs* 另一方面，强调中立性和跨信仰对话而非 jihad 和 da‘wa，尽管正如 Petersen 所强调的，大多数这些跨国穆斯林非政府组织仍然保持特殊主义的关注，将其救援工作限制在穆斯林同胞身上。90
+
+Kaag 强调，狭义定义的穆斯林（国家和跨国）非政府组织基于对伊斯兰团结的理解，该理解由三个要素组成：`ighatha` 或人道主义救援，`daʿwa` 或传召伊斯兰，以及 `jihad` 在支持伊斯兰事业的武装冲突意义上的含义。88 然而，正如 Petersen 在其对跨国穆斯林非政府组织轨迹的分析中所指出的，大多数组织结合了其中两个要素。第一个跨国穆斯林非政府组织出现在 1970 年代末，并在 1980 年代非洲之角饥荒期间成为头条新闻。Petersen 将这些组织——如国际伊斯兰救援组织（IIRO，成立于 1979 年）、伊斯兰救援（成立于 1984 年）和穆斯林援助（成立于 1985 年）——定义为 `daʿwatist`，因为其目标不仅是提供援助，还要抵制西方基督教非政府组织的影响，以保护穆斯林信仰和身份。89
+
+1980 年代和 1990 年代阿富汗和波斯尼亚的冲突见证了两种不同类型的穆斯林跨国非政府组织的出现，即圣战主义者和基于团结的非政府组织。`Jihadist NGOs` 将人道主义救援与支持穆斯林团体的武装斗争相结合，并在 1998 年肯尼亚袭击以及 2001 年纽约和华盛顿特区 9/11 袭击之后，被政府标记为恐怖组织。`Solidarity-based Muslim NGOs` 另一方面，强调中立性和跨信仰对话而非 jihad 和 da‘wa，尽管正如 Petersen 所强调的，大多数这些跨国穆斯林非政府组织仍然保持特殊主义的关注，将其救援工作限制在穆斯林同胞身上。90
 
 87 Zook 和 Arndt，“加纳教育中的伊斯兰非政府组织”，64。
 
 88 Mayke Kaag，“援助、乌玛与政治：乍得的跨国伊斯兰非政府组织”，载于 *伊斯兰教与非洲的穆斯林政治*，编者 Benjamin F. Soares 和 René Otayek（纽约 & Houndsmills，Basingstoke：Palgrave Macmillan 2007），85–102。
 
-89 Marie Juul Petersen，“跨国穆斯林非政府组织的轨迹”，*发展实践* 22, 第 5–6 期 (2012): 766–767; Marie Juul Petersen，*为了人类还是为了乌玛？跨国穆斯林非政府组织中的援助与伊斯兰*（伦敦：Hurst，2015）；Marie Juul Petersen，“伊斯兰与发展：国际穆斯林非政府组织”，载于 *宗教是否有所不同？国际发展合作中的宗教非政府组织*，编者 Andreas Heuser 和 Jens Koehrsen（巴登-巴登：Nomos Verlag，2020），111–134。Chanfi Ahmed 对撒哈拉以南非洲一些穆斯林非政府组织的混合特征，即结合救援和 *daʿwa*，提供了类似的讨论，参见 Chanfi Ahmed，“撒哈拉以南非洲伊斯兰非政府组织的网络：比拉勒穆斯林传教团、非洲穆斯林机构（直接援助）和 al-Haramayn”，*东非研究杂志* 3, 第 3 期 (2009): 426–427。
+89 Marie Juul Petersen，“跨国穆斯林非政府组织的轨迹”，*发展实践* 22, 第 5–6 期 (2012): 766–767; Marie Juul Petersen，*为了人类还是为了乌玛？跨国穆斯林非政府组织中的援助与伊斯兰*（伦敦：Hurst，2015）；Marie Juul Petersen，“伊斯兰与发展：国际穆斯林非政府组织”，载于 *宗教是否有所不同？国际发展合作中的宗教非政府组织*，编者 Andreas Heuser 和 Jens Koehrsen（巴登-巴登：Nomos Verlag，2020），111–134。Chanfi Ahmed 对撒哈拉以南非洲一些穆斯林非政府组织的混合特征，即结合救援和 `daʿwa`，提供了类似的讨论，参见 Chanfi Ahmed，“撒哈拉以南非洲伊斯兰非政府组织的网络：比拉勒穆斯林传教团、非洲穆斯林机构（直接援助）和 al-Haramayn”，*东非研究杂志* 3, 第 3 期 (2009): 426–427。
 
-da‘watist、jihadist 和基于团结的穆斯林非政府组织是信仰型非政府组织的变体，在地方、国家或国际层面运作。Da‘watist 非政府组织在撒哈拉以南非洲的大部分地区主导了穆斯林非政府组织格局，实施自我提升计划并为穆斯林社区的基础设施做出贡献，如学校、清真寺、健康诊所和住房。这些计划反过来具有积极的地方乘数效应，因为它们为建筑工人和维护人员、教师、管理人员和其他工人创造了就业机会。91
+`da‘watist`、`jihadist` 和基于团结的穆斯林非政府组织是信仰型非政府组织的变体，在地方、国家或国际层面运作。Da‘watist 非政府组织在撒哈拉以南非洲的大部分地区主导了穆斯林非政府组织格局，实施自我提升计划并为穆斯林社区的基础设施做出贡献，如学校、清真寺、健康诊所和住房。这些计划反过来具有积极的地方乘数效应，因为它们为建筑工人和维护人员、教师、管理人员和其他工人创造了就业机会。91
 
 然而，穆斯林非政府组织的狭义定义不一定会涵盖服务于穆斯林人口但没有明确或可证明的对伊斯兰原则承诺的组织。这在欧洲是一个明显的现象，那里许多当地慈善机构，尤其是由穆斯林年轻一代建立的慈善机构，在 William Braylo 的话中“并非专门‘穆斯林’慈善机构”。据他说，它们不将自己定义为‘穆斯林’，其志愿者并非全部是穆斯林，它们也不仅向穆斯林提供服务……它们更可以被描述为基于‘伊斯兰伦理’的慈善机构。92 在加纳也是如此，许多青年协会、俱乐部、运动和 Zongo 组织也运作于宽泛而非狭窄的框架内。此外，遵循 Antje Daniel 和 Dieter Neubert 的定义，其中一些可以归类为社会运动，因为它们表达“基于共同身份的公共抗议和集体行动，旨在实现社会变革”，有时会导致暴力抗议表达。93 因此，要涵盖穆斯林非政府组织的谱系，需要一个宽泛的框架。Petersen 将此类组织定义为世俗穆斯林非政府组织，将包容性关注如减贫、可持续发展和能力建设作为其主要且唯一的目标，而不论信仰如何。94 此外，穆斯林非政府组织的狭义定义不包括 Kumi 所定义的各种形式的倡议。他将它们定义为专业或正式实质性慈善机构，例如成立的基金会
 
@@ -510,7 +482,7 @@ da‘watist、jihadist 和基于团结的穆斯林非政府组织是信仰型非
 
 无论是狭义还是广义定义的穆斯林非政府组织都代表了不同的垂直和混合慈善类别。与其他撒哈拉以南非洲国家类似，加纳的慈善格局包含非正式的本土和传统（水平）以及更正式的制度化（垂直）慈善的混合。根据 Kumi 的说法，加纳本土慈善文化的例子包括个人和宗教团体的捐赠以及志愿服务。他的调查发现，宗教团体的捐赠在很大程度上是非制度化的。他还强调，基督徒和穆斯林更关心向宗教组织如教堂和清真寺的捐赠，而不是支持有需要的人（图 4）。此外，宗教捐赠的非制度化性质指出了财务透明度和问责制等重要问题。[^100]
 
-穆斯林宗教捐赠形式的*天课*、*开斋天课*和*施舍*传统上是非正式的、私人的和水平的，尽管通过 2010 年启动的*加纳天课和施舍信托基金*（见第 5.3.1 章），正式的、制度化的和垂直的慈善形式有了显著的扩张。[^101] 同样，可以将过去二十年中蓬勃发展的许多穆斯林举措识别为垂直慈善的形式。
+穆斯林宗教捐赠形式的`天课`、`开斋天课`和`施舍`传统上是非正式的、私人的和水平的，尽管通过 2010 年启动的`加纳天课和施舍信托基金`（见第 5.3.1 章），正式的、制度化的和垂直的慈善形式有了显著的扩张。[^101] 同样，可以将过去二十年中蓬勃发展的许多穆斯林举措识别为垂直慈善的形式。
 
 制度化慈善格局的一个共同特征是对信托、基金会和非政府组织之间区别的明显缺乏。它们都作为公司或以担保有限公司形式的信托在公司注册。[^100]
 
@@ -522,7 +494,7 @@ da‘watist、jihadist 和基于团结的穆斯林非政府组织是信仰型非
 
 | 狭义框架 | 广义框架 |
 |---|---|
-| – 由穆斯林建立<br>– 成员：穆斯林<br>– 目标：乌玛的赋权；*宣教* 加上精神/宗教发展<br>– 项目：<br>  – 斋月开斋饭和宰牲节献祭<br>  – 水项目<br>  – 清真寺<br>  – 教育项目<br>  – 孤儿 | – 由穆斯林建立<br>– 成员：穆斯林和非穆斯林<br>– 目标：社区赋权（穆斯林以及非穆斯林）<br>– 项目：<br>  – 社区发展<br>  – 人道主义救助 |
+| – 由穆斯林建立<br>– 成员：穆斯林<br>– 目标：乌玛的赋权；`宣教` 加上精神/宗教发展<br>– 项目：<br>  – 斋月开斋饭和宰牲节献祭<br>  – 水项目<br>  – 清真寺<br>  – 教育项目<br>  – 孤儿 | – 由穆斯林建立<br>– 成员：穆斯林和非穆斯林<br>– 目标：社区赋权（穆斯林以及非穆斯林）<br>– 项目：<br>  – 社区发展<br>  – 人道主义救助 |
 
 95 库米，《全球慈善追踪：加纳》。
 
@@ -534,14 +506,14 @@ da‘watist、jihadist 和基于团结的穆斯林非政府组织是信仰型非
 
 99 Inge Storgaard Bonfils 和 Ole Petter Askheim，“赋权与个人协助——抵抗、消费者选择、伙伴关系或纪律？”，*斯堪的纳维亚残疾研究* 16，no. S1（2014）：62–78。
 
-
-
-
 ## 愿景2030
+
 致乌莱玛
 
 ## 致穆斯林社区
+
 你也能
+
 发展
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_51_0.png)
@@ -549,8 +521,11 @@ da‘watist、jihadist 和基于团结的穆斯林非政府组织是信仰型非
 只要你遵循《古兰经》的教诲和先知穆罕默德（愿主福安之）的圣训
 
 作者：
+
 谢赫·奥马尔·易卜拉欣·伊玛目
+
 阿赫勒-逊奈与贾马阿全国伊玛目
+
 手机：0242 802399
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_52_0.png)
@@ -562,19 +537,25 @@ da‘watist、jihadist 和基于团结的穆斯林非政府组织是信仰型非
 1963年法典（第179号法案）。加纳法律不区分民间社会组织（CSO）、非政府组织（NGO）或慈善组织，也没有任何立法机构或政府机构（包括加纳税务局、社会福利部或注册总局）专门处理或监管慈善工作和慈善捐赠¹⁰²。因此，基金会已成为一种带有主张性的标签，个人避免将其基金会称为非政府组织。许多由政治家和政党建立的基金会因吸引选民而受到批评。¹⁰³ 此外，企业社会责任（CSR）已成为加纳慈善领域的一个关键特征。加纳的企业捐赠是自愿的，因此电信和采掘业的一些国内及跨国公司建立了基金会来实施其发展项目。104
 
 102 可持续发展目标慈善平台，《加纳慈善事业的有利环境》，第51页；Tijani和Abdallah，“穆斯林世界的慈善事业：加纳”，第60页。
+
 103 Emmanuel Kumi，“推进可持续发展目标：分析慈善事业在加纳的潜在作用”，《亚洲与非洲研究杂志》54卷，第7期（2019年）：1090。
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_53_0.png)
 
 图4B
+
 阿克拉尼马区拉赫曼清真寺的捐款箱
+
 照片：霍尔格·魏斯/2022
 
 加纳第四共和国1992年宪法为基层运动、民间社会组织和非政府组织设定了法律框架，因为它保障了言论自由、思想自由、良心和信仰自由、新闻及其他媒体自由、宗教自由、集会自由、结社自由、信息自由和迁徙自由。105 原则上，宗教团体和非政府组织必须在司法部注册总局办公室登记，以获得政府的正式承认和法人实体地位。已登记的宗教团体和非政府组织免于为非营利性的宗教、慈善和教育活动纳税。然而，不登记并不会受到处罚。106 此外，齐卡塔、盖基-詹多赫和胡希认为，大多数非正式的民间社会组织和非政府组织并未登记，107 这一观察似乎也适用于穆斯林非政府组织。
 
 104 Kumi，“推进可持续发展目标”，第1092页。
+
 105 Tsikata、Gyekye-Jandoh和Hushie，《加纳民间社会政治经济分析》，第30页。
+
 106 美国国务院国际宗教自由办公室，《2022年国际宗教自由报告：加纳》，https://www.state.gov/reports/2022-report-on-international-religious-freedom/ghana/，访问日期：2023年11月14日。
+
 107 Tsikata、Gyekye-Jandoh和Hushie，《加纳民间社会政治经济分析》，第14页。
 
 此外，正如勒布朗和戈塞林所指出的，穆斯林非政府组织是新自由主义全球化的产物。从20世纪70年代末撒哈拉以南非洲后殖民国家面临经济和政治危机开始，非政府组织承担了此前由国家提供的服务的大量责任，尤其是在教育、医疗保健和公共安全领域。勒布朗和戈塞林强调，这种协会和宗教团体的“非政府组织化”导致正式的（西方）非政府组织模式扩展到大量此前并未自我认同为非政府组织的公民和宗教组织。另一方面，小规模协会和信仰型非政府组织的急剧增加，在他们看来，也反映了宗教和宗教活动人士在政治领域和社会发展逻辑中的可见度提高。108
@@ -587,15 +568,19 @@ da‘watist、jihadist 和基于团结的穆斯林非政府组织是信仰型非
 
 加纳穆斯林组织的广泛格局反映在拉比亚图·阿玛和其他研究者的区分中，他们将传统与现代形式区分开来。传统形式包括苏菲教团和活跃在该国的各种穆斯林教派的清真寺社区，包括各种提加尼、萨拉菲以及什叶派、伊巴迪和阿赫迈迪亚团体。阿玛列出的现代穆斯林组织包括各种委员会、学生组织、非政府组织和穆斯林妇女团体。^110 苏莱曼纳·穆穆尼也对传统穆斯林组织和现代穆斯林非政府组织作出了类似区分，并讨论了直至20世纪90年代中期加纳穆斯林领域的初步非政府组织化。穆穆尼聚焦于阿克拉现代穆斯林非政府组织的出现，采用了狭义的定义，概述了二十世纪伊斯兰组织的激增。根据他的分析，穆斯林非政府组织构成了一个由不同协会、委员会、团体和组织组成的集合，从非政府伊斯兰组织（如黄金海岸穆斯林协会和加纳穆斯林传教会）到各种代表机构（如穆斯林酋长委员会、伊斯兰事务最高委员会、加纳穆斯林代表委员会、国家首席伊玛目办公室或加纳穆斯林组织联盟），详见下文第1.3.1章。^111
 
+
+
 110. Rabiatu Ammah，“伊斯兰、性别与加纳的领导力”，《CrossCurrents》63卷，第2期（2013年）：233。
+
 111. Mumuni，《阿克拉的伊斯兰组织》，第68–74页；Sulemana Mumuni，“阿克拉伊斯兰非政府组织调查”，载于《非洲穆斯林社会的社会福利》，Holger Weiss编（乌普萨拉：Nordiska Afrikainstitutet，2002年），第146–148页。
 
 穆斯林非政府组织在加纳慈善领域中只占很小一部分。与撒哈拉以南非洲其他地区一样，这一领域正在发生变化，并趋向于捐赠的制度化。尽管自1957年独立以来，基督教非政府组织一直主导着加纳的慈善领域，但制度化的纵向穆斯林非政府组织是相对较新的现象，并且总体上对非穆斯林来说并不显眼。^112 尽管一些穆斯林个人在加纳公民社会中成功获得了经济和政治上有影响力的地位，其中一些人甚至成为穆斯林高净值人士；但加纳穆斯林人口的大多数在经济和政治上仍是被边缘化的少数群体。^113 传统上，各种形式的横向慈善构成了穆斯林社区内部支持的基本形式。天课也是一件私事：非正式、个人对个人。有时会咨询伊玛目，但不存在清真寺或天课基金。^114 此外，分发给乞丐的金额
 
 112. SDG慈善平台，《加纳慈善事业的有利环境》，第27–28页；Kumi，《多元化或死亡？》
-113. Weiss，《加纳的乞讨与施舍》；Skinner，“西非的达瓦与政治。”
-114. Holger Weiss，“重组穆斯林社会福利——伊斯兰志愿主义与
 
+113. Weiss，《加纳的乞讨与施舍》；Skinner，“西非的达瓦与政治。”
+
+114. Holger Weiss，“重组穆斯林社会福利——伊斯兰志愿主义与
 
 而穷人所获得的通常只是小额施舍，仅能让接受者维持一天的生计，却几乎无法改变他们的生活。因此，在二十世纪的加纳，天课既不是消除贫困的工具，也不是赋予穆斯林权力的手段。至少，这是大约15至20年前我就此问题采访大多数穆斯林学者时得出的结论。115
 
@@ -611,7 +596,7 @@ da‘watist、jihadist 和基于团结的穆斯林非政府组织是信仰型非
 
 118 Musa Ibrahim，《媒体与宗教参与：谢赫·西巴维·扎卡里亚与加纳广播媒体》，载于《伊斯兰教在非洲年度评论》第11期（2012年）：第7–11页；Benedikt Pontzen，《“关心人民”：ZuriaFM——加纳阿散蒂的一个伊斯兰广播电台》，载于《伊斯兰非洲》第9卷第2期（2018年）：第209–231页；Amin Bamba Muzzammil，《加纳的伊斯兰改革：部分特定伊斯兰学者与运动的作用》，哲学硕士论文，加纳大学宗教学系，2018年10月。
 
-#### 3.1 加纳穆斯林自助的悠久历史
+### 3.1 加纳穆斯林自助的悠久历史
 
 加纳穆斯林的集体行动有着悠久的传统，集中于两种制度，即清真寺和苏菲兄弟会（tariqa）。这两种制度在前殖民时期已经出现，前者作为独特的地方社区的中心，后者以其谢赫或领袖的地位和（跨区域）网络为特征。穆雷·拉斯特（Murray Last）和本杰明·苏亚雷斯（Benjamin Soares）引入了“祈祷经济”一词，用以描述西非穆斯林社会和飞地中的复杂实践，在这些实践中，信徒们向穆斯林学者支付可观的金钱，以换取祈祷、祝福和伊斯兰医学。119 苏亚雷斯进一步将祈祷经济描述为通过资本——经济资本、政治资本以及精神或象征资本——的流通而运作，特定的社会行动者可以将这些资本从一个领域转换到另一个领域。在他看来，祈祷经济实际上是一种宗教实践经济，人们大规模地向某些宗教领袖赠送礼物，以换取祈祷和祝福。他认为，用祝福和祈祷交换物品导致了商品化过程，在后殖民时期，这种商品化在围绕这些宗教领袖的活动中不断扩散并加剧。120
 
@@ -637,17 +622,18 @@ da‘watist、jihadist 和基于团结的穆斯林非政府组织是信仰型非
 
 123 Weiss，《加纳的乞讨与施舍》，第26–27页。
 
-
-
-
 与北部老牌的穆斯林（城市和农村）中心相比。最古老的一个是总部位于阿克拉的黄金海岸穆斯林协会，它于1932年124起初作为社区自助组织成立，并改组为第一个（迄今为止唯一一个）穆斯林政治组织穆斯林协会党，存在于1954年至1957年，后被恩克鲁玛政府取缔。125 在库马西，这一时期穆斯林豪萨社区出现了多个自愿协会，有时与现有组织竞争，例如穆斯林友好协会、Katsiro、Jamiyyat Takadum Al-Islam、Zongo志愿者、穆斯林青年组织、加纳穆斯林协会、Jamiyat al-Ulama、阿散蒂穆斯林理事会、穆斯林青年理事会、穆斯林青年大会、Jamiyat Al-Yatiyati 以及穆斯林进步联盟协会。126 这些组织的主要特点是它们主要是社会福利协会，充当未来领导人的培训基地，且按民族而非宗教界限组建。127
 
 恩克鲁玛时代存在多个穆斯林政治/公民社会协会：穆斯林青年大会、穆斯林青年协会、黄金海岸穆斯林理事会以及加纳穆斯林理事会，均在1966年针对恩克鲁玛的军事政变后解散。128 此外，恩克鲁玛时代也标志着与北非和中东国家的外交接触开始，包括埃及（1957年）、沙特阿拉伯王国（1960年）和利比亚（1961年）。这些接触使加纳穆斯林学生得以出国，在这些国家的大学学习。这些中东接触的另一个后果是，各种伊斯兰政府和非政府机构开始直接和间接地支持加纳穆斯林组织。自1970年代以来，沙特阿拉伯与其他一些海湾国家一起——自1980年代以来还包括伊朗（外交接触
 
 124 Mumuni，《阿克拉的伊斯兰组织》，96–100；Mumuni，“阿克拉伊斯兰非政府组织的调查”，138–161。
+
 125 Mishahudeen Ahmed-Rufai，“穆斯林协会党：加纳宗教政治的考验”，《加纳历史学会会刊》，新系列6（2002）：99–114；Sean Hanretta，“‘卡菲尔’伦纳的皈依：在殖民加纳公开做穆斯林”，《过去与现在》210卷，第1期（2011）：187–220。
+
 126 另见 Norris Brian Winchester，《陌生人与城市非洲的政治：加纳库马西豪萨人的研究》，政治学博士论文，印第安纳大学，1976年。另见 Prof. Sheikh Osman B. Bari，《加纳穆斯林与宗教综合史》，第一卷（阿克拉：Dezine Focus，印刷与出版公司，第二版，2014年），288–294。
+
 127 Nathan Samwini，《1950年以来加纳的穆斯林复兴：其对穆斯林及穆斯林-基督教关系的影响》（柏林：LIT-Verlag，2006年），85–86。
+
 128 Mumuni，《阿克拉的伊斯兰组织》。
 
 于1982年由劳林斯军事政府重新建立）以及自2010年代以来的土耳其——已成为加纳穆斯林组织和理事会最重要的合作伙伴。归国的穆斯林学生不仅成为真正的“伊斯兰”（萨拉菲）道路的热心传播者，有时导致苏菲派与萨拉菲派信徒之间的冲突，而且还能够建立比旧穆斯林（苏菲）精英更具财务效率的网络。129
@@ -659,7 +645,9 @@ da‘watist、jihadist 和基于团结的穆斯林非政府组织是信仰型非
 三十年前的大部分批评反映了加纳第四共和国第一个十年期间草根和社会运动的新条件。1992年宪法为充满活力的公民社会和非政府组织的建立铺平了道路，包括第一代穆斯林非政府组织，随后在2000年代初期出现了第二代
 
 129 Weiss，《在调适与复兴主义之间》，351–353。另见 Dumbe，“加纳的伊斯兰两极分化与排斥政治”，以及 Kobo，“加纳萨拉菲/阿赫勒逊奈改革主义的转变轨迹”，
+
 130 Weiss，《在调适与复兴主义之间》，354–355。
+
 131 Weiss，《加纳的乞讨与施舍》，124。
 
 以及自2010年代以来出现的第三代，将在下一小节中讨论。与这一进程并行的是穆斯林代表机构和理事会的重新组织。其中一些成立于1960年代和1970年代，其中几个并存，有时相互对立。它们包括加纳穆斯林社区（GMC，成立于1966年）、伊斯兰事务最高理事会（SCIA，成立于1969年）、加纳伊斯兰理事会（GIC，成立于1971年）、加纳穆斯林代表理事会（GMRC，成立于1973年）、联合加纳穆斯林代表理事会（UGMRC，成立于1984年）以及国家伊斯兰秘书处（NIS，成立于1984年），1988年改组为穆斯林理事会联合会（FMC）、加纳Dinil-Islam（DIG，成立于1991年）。由于1992年宪法只承认FMC，它们都在1990年代初成为名存实亡。约十年后，穆斯林组织联盟——加纳（COMOG，成立于2002年），[^132]挑战了FMC——有时也挑战国家首席伊玛目办公室，见下文——作为穆斯林代表机构和组织的国家平台。[^133]在公众场合，各穆斯林利益相关者之间的口头冲突几乎每年都会成为全国头条新闻，当他们互相指责对方管理不善组织年度朝觐或前往麦加的朝圣时。[^134]
@@ -672,19 +660,19 @@ da‘watist、jihadist 和基于团结的穆斯林非政府组织是信仰型非
 
 [^134] 另见 Holger Weiss，“当代加纳的朝觐管理”，载于 *后殖民时代的朝觐政治*，Cedric Jourde、Marie Brossier 和 Muriel Gomez-Perez 编（剑桥：剑桥大学出版社，2024年即将出版）。
 
-
-
 其青年翼为伊斯兰研究青年组织（IRYO，成立于1972年），138 伊斯兰传教与研究最高委员会（SCICR，成立于1985年），139 阿赫勒·逊奈瓦勒·贾马阿（ASWAJ，成立于1997年），提贾尼团体，如加纳提贾尼亚穆斯林理事会和加纳提贾尼亚穆斯林运动，140 以及加纳穆斯林妇女协会联合会（FOMWAG）。141 2021年，多个穆斯林利益相关方成立了加纳国家穆斯林会议（NMC），作为推动穆斯林社区自我赋权的国家论坛。142
 
 除上述宗教代表机构外，加纳全国范围内还运作着广泛的正式化和制度化的穆斯林专业和倡导协会、团体和平台。其中大多数是非政府组织，其中一些自1990年代起就已运作。
 
 加纳穆斯林学生协会（GMSA）是现存最古老的穆斯林青年组织之一，成立于1972年，在所有高等教育机构和大学均设有分支。GMSA很早就使用社交媒体，并在2013年建立了Facebook账号。这同样适用于加纳穆斯林专业人士学院（GAMP，前称加纳穆斯林学院，143 自2012年起在Facebook上）以及过去十年成立的穆斯林专业组织，包括加纳穆斯林护士和助产士协会（GMNMA，自2012年起在Facebook上），144 穆斯林流动布道者协会（MMPA，自2012年起在Facebook上），145 穆斯林专业人士联盟（UMP-GH，成立于2014年，自2016年起在Facebook上），146 加纳穆斯林卫生工作者协会（MHWAG，成立于2015年，自2018年起在Facebook上），147 加纳伊斯兰医学协会（IMAGH，2016年注册，自2017年起在Facebook上），148 加纳穆斯林记者协会和穆斯林女教师协会穆斯林女性教师，两者均成立于2020年并自此在Facebook上，149 以及加纳穆斯林会计师协会（GAMA），成立于2021年。150
 
-穆斯林卫生工作者协会（MHWAG）和伊斯兰医学协会是将专业与人道主义事业相结合的民间社会组织的典型例子。两个组织都开展了医疗外展项目以及针对贫困社区居民的流动健康筛查活动。两个组织都强调将伊斯兰视角融入医学伦理的必要性。MHWAG 的目标是通过教育、指导、职业指导和咨询实现青年赋权。此外，MHWAG 在阿散蒂地区为弱势群体开展特别项目，包括儿童、妇女、残疾人和孤儿，其中最著名的是‘Zongo 年度健康检查’。151 2020年，MHWAG 发起了一项雄心勃勃的筹款活动，用于翻修、配备和运营库马西中央清真寺诊所。<sup>152</sup> 除上述两个组织外，*加纳穆斯林健康学生协会*（MUHSAG）是科威·恩克鲁玛科技大学穆斯林健康学生的统一机构。除组织成员的社会化项目外，MUHSAG 还在库马西的 Zongo 社区组织了所谓的迷你诊所或健康筛查活动。<sup>153</sup>
 
-除穆斯林专业协会外，过去二十年里还建立了城市-based 穆斯林倡导团体和智库。城市-based 穆斯林倡导团体包括各种专注于促进政治稳定的民间社会组织和中心，例如 *反全球恐怖主义之友*（FAGLAT）、*社区发展与青年咨询中心*、*加纳北部人和宗戈关切青年协会*，以及 *穆斯林青年和平发展中心*。
 
-*反全球恐怖主义之友*（FAGLAT）由穆斯林领袖于2001年“9·11”事件后为声援全球反恐战争而成立。其最杰出的成员包括国家首席伊玛目谢赫博士奥斯曼·努胡·沙鲁布图和阿赫勒·逊奈瓦勒·贾马阿国家伊玛目谢赫乌马尔·易卜拉欣·伊玛目。FAGLAT 活跃了十年，并与阿克拉的美国大使馆密切合作，后者利用 FAGLAT 分发大使馆的斋月食品捐赠。此外，FAGLAT 和美国大使馆还组织了与美国穆斯林的文化交流项目，以及与加纳穆斯林领袖的讲座系列、工作坊和圆桌讨论。<sup>154</sup> 其亲美立场十分鲜明，该组织一再要求穆斯林活动人士避免 pro-
+穆斯林卫生工作者协会（MHWAG）和伊斯兰医学协会是将专业与人道主义事业相结合的民间社会组织的典型例子。两个组织都开展了医疗外展项目以及针对贫困社区居民的流动健康筛查活动。两个组织都强调将伊斯兰视角融入医学伦理的必要性。MHWAG 的目标是通过教育、指导、职业指导和咨询实现青年赋权。此外，MHWAG 在阿散蒂地区为弱势群体开展特别项目，包括儿童、妇女、残疾人和孤儿，其中最著名的是‘Zongo 年度健康检查’。151 2020年，MHWAG 发起了一项雄心勃勃的筹款活动，用于翻修、配备和运营库马西中央清真寺诊所。<sup>152</sup> 除上述两个组织外，`加纳穆斯林健康学生协会`（MUHSAG）是科威·恩克鲁玛科技大学穆斯林健康学生的统一机构。除组织成员的社会化项目外，MUHSAG 还在库马西的 Zongo 社区组织了所谓的迷你诊所或健康筛查活动。<sup>153</sup>
+
+除穆斯林专业协会外，过去二十年里还建立了城市-based 穆斯林倡导团体和智库。城市-based 穆斯林倡导团体包括各种专注于促进政治稳定的民间社会组织和中心，例如 `反全球恐怖主义之友`（FAGLAT）、`社区发展与青年咨询中心`、`加纳北部人和宗戈关切青年协会`，以及 `穆斯林青年和平发展中心`。
+
+`反全球恐怖主义之友`（FAGLAT）由穆斯林领袖于2001年“9·11”事件后为声援全球反恐战争而成立。其最杰出的成员包括国家首席伊玛目谢赫博士奥斯曼·努胡·沙鲁布图和阿赫勒·逊奈瓦勒·贾马阿国家伊玛目谢赫乌马尔·易卜拉欣·伊玛目。FAGLAT 活跃了十年，并与阿克拉的美国大使馆密切合作，后者利用 FAGLAT 分发大使馆的斋月食品捐赠。此外，FAGLAT 和美国大使馆还组织了与美国穆斯林的文化交流项目，以及与加纳穆斯林领袖的讲座系列、工作坊和圆桌讨论。<sup>154</sup> 其亲美立场十分鲜明，该组织一再要求穆斯林活动人士避免 pro-
 
 138 关于 IRRC 和 IRYO 活动的分析，参见 Yunus Dumbe、Mustapha Abdul-Hamid 和 Musa Ibrahim，《加纳萨拉菲伊斯兰改革中的现代性竞争愿景》，《伊斯兰与穆斯林研究》6 卷第1期（2021年）：1–28。
 
@@ -720,8 +708,6 @@ da‘watist、jihadist 和基于团结的穆斯林非政府组织是信仰型非
 
 <sup>154</sup> “美国政府与加纳穆斯林共度斋月”，7.11.2002，https://www.modernghana.com/news/27744/1/us-govt-observes-ramadan-with-ghanaian-muslims.html；“真正的伊斯兰是宽容的宗教——兰尼尔”，2.11.2003，https://www.modernghana.com/news/43766/1/true-islam-is-religion-of-tolerance-lanier.html；“美国向上东穆斯林伸出友谊之手”，19.10.2006，https://www.ghanaweb.com/GhanaHomePage/NewsArchive/US-Extends-Hand-of-Friendship-to-U-E-Muslims-112441，均访问于 18.8.2021。另见 Scott Ticknor，《向加纳穆斯林伸出援手——远方的伸出援手》，*State Magazine*（2006年3月）：22–23。
 
-
-
 卓越奖虽然在2021年初变成了一个政治平台，当时它呼吁阿库福-阿多总统不要废除内城与宗戈发展部——但事实证明这一呼吁徒劳无功——因为他赢得2020年选举后开始组建新政府。161
 
 穆斯林青年和平与发展中心（CMYPD）在城市宗戈社区率先开展和平与能力建设计划，以及反腐败和反毒品运动。162 该中心成立于2020年，总部位于阿克拉，与其他具有类似议程的穆斯林非政府组织和民间社会组织合作，例如位于库马西的穆斯林青年与社区发展孵化器——穆斯林青年赋权与发展志愿者组织（VOMYED）。VOMYED的公共活动包括加纳穆斯林青年营，这是VOMYED自2012年以来举办的年度活动（但2020年因COVID-19取消）。近年来，该活动包括数字技能培训（手机、平面设计、社交媒体、数字工具使用和管理）、糕点制作培训（馅饼、春卷、披萨），以及串珠和饰品制作。163
@@ -738,21 +724,26 @@ da‘watist、jihadist 和基于团结的穆斯林非政府组织是信仰型非
 
 政党参与分散的地方治理，ZCF在互联网上没有留下其他痕迹。<sup>165</sup>
 
-总部位于库马西的*宗戈国际之声*（VOZI）是少数跨国和国际运营的加纳宗戈及穆斯林非政府组织之一。它最初作为库马西的一个民间社会组织，旨在促进当地宗戈社区的卫生和经济活动，于2019年9月举办了阿散蒂穆斯林商业高管晚宴<sup>166</sup>，并很快建立了国际网络。在2021年7月31日的正式成立仪式上，它列出了在比利时、加拿大、芬兰、德国、加纳、意大利、尼日利亚、西班牙、阿联酋、英国和美国的分支机构。VOZI似乎是穆斯林商业大亨Alhaji Abdul-lahi Usman的创意，他是Karima企业的首席执行官和Karima基金会的创始人。VOZI的中长期项目计划雄心勃勃，包括为双轨制学生组织额外课程和职业培训课程，同时在社交媒体和广播上开展*达瓦*节目，以及资助水项目（第一批已于2020年完成）和建设医院。<sup>167</sup>
+总部位于库马西的`宗戈国际之声`（VOZI）是少数跨国和国际运营的加纳宗戈及穆斯林非政府组织之一。它最初作为库马西的一个民间社会组织，旨在促进当地宗戈社区的卫生和经济活动，于2019年9月举办了阿散蒂穆斯林商业高管晚宴<sup>166</sup>，并很快建立了国际网络。在2021年7月31日的正式成立仪式上，它列出了在比利时、加拿大、芬兰、德国、加纳、意大利、尼日利亚、西班牙、阿联酋、英国和美国的分支机构。VOZI似乎是穆斯林商业大亨Alhaji Abdul-lahi Usman的创意，他是Karima企业的首席执行官和Karima基金会的创始人。VOZI的中长期项目计划雄心勃勃，包括为双轨制学生组织额外课程和职业培训课程，同时在社交媒体和广播上开展*达瓦*节目，以及资助水项目（第一批已于2020年完成）和建设医院。<sup>167</sup>
 
-第四部分包括非政府组织和政治压力团体，有时附属于或由政党建立，如NPP宗戈先锋队和宗戈纳萨拉俱乐部（即NPP的宗戈分支）。其中一些还将社会福利和社区发展纳入其议程。例如，*加纳宗戈民主党*，自称是一个非政府组织和智库，致力于捍卫宗戈人民和无声的加纳人的事业，<sup>168</sup> 以与许多宗戈青年团体类似的呼声抨击对宗戈居民的边缘化和污名化：
+第四部分包括非政府组织和政治压力团体，有时附属于或由政党建立，如NPP宗戈先锋队和宗戈纳萨拉俱乐部（即NPP的宗戈分支）。其中一些还将社会福利和社区发展纳入其议程。例如，`加纳宗戈民主党`，自称是一个非政府组织和智库，致力于捍卫宗戈人民和无声的加纳人的事业，<sup>168</sup> 以与许多宗戈青年团体类似的呼声抨击对宗戈居民的边缘化和污名化：
 
 ## 对宗戈人民的政治剥削。
 
 > 我思故我在。
+
 > 你思考得越好，就越接近人性。
+
 > 你思考得越糟，就越远离人性。
+
 > 人类和动物在技术上都是动物，区别我们的是思考能力，所以如果一个人缺乏思考能力，那么他就不那么像人，而更像动物……
 
 > 宗戈人民思考，因此我们也是人，够了就是够了，在开斋节和斋月期间，不再要油、大米、羊和小信封……我们需要宗戈的发展……
+
 > 宗戈发展现在就要……169
 
 169 对宗戈人民的政治剥削，2021年10月20日，加纳宗戈民主党，https://www.facebook.com/profile.php?id=100081453124517，访问于2022年12月29日。
+
 170 “压力团体谴责国家安全部门在执法中的歧视，”2021年7月23日，https://www.graphic.com.gh/news/general-news/pressure-group-condemns-state-security-of-discrimination-in-law-enforcement.html，访问于2022年12月29日。
 
 与其他宗戈青年团体类似，宗戈民主党强烈反对警察暴力，以及他们所描述的针对穆斯林主导社区中弱势和无声人群的系统性定性和社会不公正。170
@@ -762,22 +753,24 @@ da‘watist、jihadist 和基于团结的穆斯林非政府组织是信仰型非
 BPI自2014年开始运作，率先推动教育和能力建设的改进，旨在通过社会政策研究、系列讲座和为政策制定者及机构领导者举办的工作坊，促进加纳社会中边缘化和弱势群体的社会正义和赋权（图5）。171 另一方面，ACAILP是一个较新的机构，更狭义地将自己定义为法律、政策、社会和发展倡导以及宗教内部和宗教间对话领域的伊斯兰政策智库。172 朝觐研究基金会充当加纳朝觐委员会和年度朝觐行动的监督机构，173 而IFRIG及其已解散的前身——位于塔马利的非洲伊斯兰经济基金会（AFRIEF）——则倡导在加纳引入伊斯兰银行。174
 
 171 另见 http://barakapolicy.org/ 和 https://www.facebook.com/barakapolicy/。
+
 172 另见 https://www.facebook.com/Africa-Center-for-the-Advancement-of-Islamic-Law-and-Policy-105780171067989/。
+
 173 另见 https://www.facebook.com/hajjresearch2017/。
+
 174 AFRIEF和IFRIG的活动将在第6.1章讨论。
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_70_0.png)
 
 #### 图5
 
-*巴拉卡。* 该杂志是巴拉卡政策研究所的年度出版物。
+`巴拉卡。` 该杂志是巴拉卡政策研究所的年度出版物。
+
 作者收藏
 
-*进步穆斯林论坛*（PMF）通过组织其辩论论坛，将自己描绘成卡塔尔多哈辩论、美国皮尤研究中心和英国Dispatches辩论的加纳对应物。其愿景是成为加纳领先的穆斯林研究智库机构，重点关注和平、宽容、宗教共存和国家发展。辩论论坛最初是一个穆斯林青年论坛，PMF成员于2016年参与圆桌讨论。此后，辩论论坛及其主要途径——富塔广场系列讲座——已发展成为一个知识平台，供加纳跨领域的穆斯林代表冷静讨论影响穆斯林的从社会政治到教派分歧等关键问题。¹⁷⁵
+`进步穆斯林论坛`（PMF）通过组织其辩论论坛，将自己描绘成卡塔尔多哈辩论、美国皮尤研究中心和英国Dispatches辩论的加纳对应物。其愿景是成为加纳领先的穆斯林研究智库机构，重点关注和平、宽容、宗教共存和国家发展。辩论论坛最初是一个穆斯林青年论坛，PMF成员于2016年参与圆桌讨论。此后，辩论论坛及其主要途径——富塔广场系列讲座——已发展成为一个知识平台，供加纳跨领域的穆斯林代表冷静讨论影响穆斯林的从社会政治到教派分歧等关键问题。¹⁷⁵
 
 175 见关于辩论论坛和富塔广场讲座的帖子，https://www.facebook.com/Progressive-Muslims-Forum-1072297466167510/?ref=page_internal，2016年1月20日，2016年7月13日，2017年11月2日，2018年1月23日，2019年5月10日，2019年5月23日，访问于2022年1月5日。
-
-
 
 赞戈研究学院（ZRI）进而致力于解决城市赞戈社区的药物成瘾问题，以及通过提供职业培训进行能力建设。176 作为后一目标的一部分，ZRI 于 2020 年 9 月在 Nsawam Adoagyiri 举办了创业培训课程。177 Dr Salah Muhammad Salis 及其伊斯兰思想与文明中心在最近的（在线）报纸文章中阐述了对暴力极端主义的批判立场，178 并推广了关于人权和性别平等的多维度伊斯兰视角。179
 
@@ -788,6 +781,8 @@ BPI自2014年开始运作，率先推动教育和能力建设的改进，旨在�
 177 https://www.facebook.com/Zango-Research-Institute-107348394425049/?ref=page_internal，2020 年 9 月 1 日，访问日期 2021 年 12 月 30 日。
 
 178 “通过伊斯兰视角重新思考暴力极端主义（I）”，2022 年 10 月 15 日，https://www.theghanareport.com/rethinking-violent-extremism-through-the-islamic-lens-i/；“通过伊斯兰视角重新思考暴力极端主义（II）”，2022 年 10 月 23 日，https://www.theghanareport.com/rethinking-violent-extremism-through-the-islamic-lens-ii/；均于 2022 年 12 月 13 日访问。
+
+
 
 179 “伊斯兰人权观念”，2022 年 9 月 25 日，https://www.graphic.com.gh/features/opinion/islamic-conception-of-human-rights.html；“伊斯兰教赋予男女平等地位”，2022 年 11 月 11 日，https://www.graphic.com.gh/features/opinion/islam-grants-men-women-equal-status.html，均于 2022 年 12 月 13 日访问。
 
@@ -800,6 +795,7 @@ BPI自2014年开始运作，率先推动教育和能力建设的改进，旨在�
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_72_0.png)
 
 图 6 穆斯林执行基金会。库马西 MEF 办公室前的横幅
+
 照片：HOLGER WEISS/2017
 
 在高级中学，MEF 于 2018 年 12 月在库马西大都会区 Asawase 的 Nurul Ameen 中学为女学生组织了一场关于性卫生和性骚扰的工作坊。183 在工作坊后公布的视频广播中，MEF 妇女分支的代表强烈站出来谴责任何形式的性骚扰和家庭暴力，“无论是谁做的，即使是警察、Malam、他们的叔叔或任何人。”184
@@ -808,9 +804,7 @@ BPI自2014年开始运作，率先推动教育和能力建设的改进，旨在�
 
 184 https://www.ghanaweb.com/GhanaHomePage/religion/Speak-up-against-sexual-harassment-Muslim-Executive-Foundation-urges-ladies-706199?video=1，访问日期 2021 年 8 月 25 日。
 
-然而，大多数类似于智库的穆斯林中心和学院，例如位于阿克拉的伊斯兰世界观与发展中心、伊斯兰社区事务中心或家庭发展慈善中心，本质上是伊斯兰传播中心和学院。例如，位于阿克拉的加纳伊斯兰最高委员会是一个由 Sheikh Hussain Zachariah 于 2017 年创立的非教派 da‘wa 和倡导机构。其主要目标是促进不分种族、宗教和信仰的人类兄弟情谊并增强
-
-通过教育、健康和卫生“侍奉真主”来实现社会发展。此外，该委员会旨在成为无声者的声音，并与许多其他穆斯林非政府组织类似，主张穆斯林与其他信仰信徒之间的和平共处。185 与 Shaikh Hussain Zachariah Foundation Ghana 和 Islam for Humanity International 186 合作，Shaykh Hussain Zachariah 的中心主要专注于 da‘wa，尽管它偶尔也涉及赞戈社区的卫生和环境问题，就像它在 2020 年 1 月初所做的那样：
+然而，大多数类似于智库的穆斯林中心和学院，例如位于阿克拉的伊斯兰世界观与发展中心、伊斯兰社区事务中心或家庭发展慈善中心，本质上是伊斯兰传播中心和学院。例如，位于阿克拉的加纳伊斯兰最高委员会是一个由 Sheikh Hussain Zachariah 于 2017 年创立的非教派 da‘wa 和倡导机构。其主要目标是促进不分种族、宗教和信仰的人类兄弟情谊并增强通过教育、健康和卫生“侍奉真主”来实现社会发展。此外，该委员会旨在成为无声者的声音，并与许多其他穆斯林非政府组织类似，主张穆斯林与其他信仰信徒之间的和平共处。185 与 Shaikh Hussain Zachariah Foundation Ghana 和 Islam for Humanity International 186 合作，Shaykh Hussain Zachariah 的中心主要专注于 da‘wa，尽管它偶尔也涉及赞戈社区的卫生和环境问题，就像它在 2020 年 1 月初所做的那样：
 
 > 是时候让宗教组织、团体和清真寺教众站出来帮助解决加纳赞戈社区的卫生问题了。加纳伊斯兰最高委员会已树立榜样，加入工作团队……清理赞戈社区。187
 
@@ -818,17 +812,7 @@ BPI自2014年开始运作，率先推动教育和能力建设的改进，旨在�
 
 > 我们目前有 35 名需要帮助的人，他们在 2020 年 3 月 25 日关于如何帮助有需要者的演讲后联系了我们……他们在封锁期间需要食物；还有一个人需要在封锁期间及以后为其家庭提供住宿支持……请通过手机支付号码 0240598190 捐款，以支持这些需要帮助的穆斯林和基督徒生存。188
 
-另一家智库兼伊斯兰中心是位于阿克拉的 Al-Islaah Center。Al-Islaah Center 是 Abdul-Hamid Bashir Yandu 的创举，他被称为 Kishk，是阿克拉 Rahman 清真寺的伊玛目。Imam Abdul-Hamid 自 2014 年以来一直担任加纳伊斯兰乌玛（IUG）的负责人。作为该中心的负责人，他主要处理暴力极端主义、动机、教育、
-
-185 与 Shaikh Hussain Zachariah Foundation Ghana 和 Islam for Humanity International 合作，Shaykh Hussain Zachariah 的中心主要专注于 da‘wa，尽管它偶尔也涉及赞戈社区的卫生和环境问题，就像它在 2020 年 1 月初所做的那样：
-
-186 
-
-187 
-
-188 
-
-能力建设、宗教宽容和慈善事业。189 根据其主页上的政策声明，Al-Islaah Center 旨在“利用宗教的软实力，通过教育、能力建设和慈善事业在我们的社区中发起积极的社会变革。”190
+另一家智库兼伊斯兰中心是位于阿克拉的 Al-Islaah Center。Al-Islaah Center 是 Abdul-Hamid Bashir Yandu 的创举，他被称为 Kishk，是阿克拉 Rahman 清真寺的伊玛目。Imam Abdul-Hamid 自 2014 年以来一直担任加纳伊斯兰乌玛（IUG）的负责人。作为该中心的负责人，他主要处理暴力极端主义、动机、教育、能力建设、宗教宽容和慈善事业。189 根据其主页上的政策声明，Al-Islaah Center 旨在“利用宗教的软实力，通过教育、能力建设和慈善事业在我们的社区中发起积极的社会变革。”190
 
 众多的 daʿwa 和伊斯兰宣传中心是加纳穆斯林景观中不可或缺的一部分。对这些中心的全面清单需要一个完整的研究项目来调查、分析和绘制其活动图，以便为未来的研究提供信息。其中许多中心是穆斯林学者为穆斯林的精神和宗教发展而建立的老牌机构。其中一些获得了国家和国际声誉。其他则是“现代”清真寺型机构，由教育综合体、学生宿舍、行政建筑以及——始终——一座清真寺组成；有时它们还设有卫生站。此类中心主要作为非政府组织运营。其中一些积极参与或至少评论当地穆斯林社区的政治和社会状况。尽管如此，这些组织共同的特征是其制度化和“现代”，有时甚至是“西方”的外观，与传统的非制度化和非正式的协会、伊玛目和学者的网络、当地的 makarantas、madrasas 和清真寺社区形成对比。
 
@@ -841,8 +825,6 @@ BPI自2014年开始运作，率先推动教育和能力建设的改进，旨在�
 190 https://al-islaahcenter.home.blog/2019/07/09/welcome-to-my-blog/，访问日期 2021 年 7 月 25 日。
 
 191 Mark Sey，“加纳穆斯林社区：当代景象”，Jurnal Syariah 5，第 2 期（1997 年）：249–258；Samwini，《1950 年以来加纳的穆斯林复兴》，141–145；Ammah，“伊斯兰教与贫困减缓战略”；Dumbe，《当代加纳的伊斯兰复兴主义》；Muhammed Haron，“非洲穆斯林非政府组织：竞争性慈善机构，利他主义盟友？”，载于 Ezra 编辑的《非洲的宗教与发展》
-
-
 
 一些当地的第一代穆斯林非政府组织，穆穆尼强调，是“...名义上存在而结构上不存在”，将其定义为“抬头”、“招牌”和“清真寺铭文”组织。事实上，他强调它们根本不存在为非政府组织，而是作为中介组织，用于向中东地区募集资金和物资援助，以兴建清真寺、诊所、学校，并照顾孤儿和贫困穆斯林。根据他对1990年代初的观察，穆穆尼批评它们存在公然的管理不善和腐败：“当它们收到这些资金时，就被挪作私用。”192
 
@@ -857,6 +839,7 @@ BPI自2014年开始运作，率先推动教育和能力建设的改进，旨在�
 第一代和第二代穆斯林组织都是传教主义非政府组织。它们（通常）将传教与人道主义救济和社会福利项目相结合，旨在改善（通常是当地的）穆斯林社区。然而，其中一些组织，如光明基金会，自成立以来已转变为包容性组织，其项目针对穆斯林和非穆斯林，另见第4.3章。（一些）第一代穆斯林活动家和非政府组织的另一个特点是它们渴望创办穆斯林杂志和报纸，在那里它们开始阐述穆斯林自我赋权的新方法。谢赫·穆斯塔法·易卜拉欣的非政府组织伊斯兰发展与人道服务理事会（ICODEHS）在1990年代下半年出版了《人道主义——慈善月刊》。评论穆斯林边缘化和贫困化的需要，ICODEHS 杂志强调需要在主要穆斯林地区提供学校、咨询服务、职业机构，同时设立工业和商业农场。“政府应与伊斯兰理事会和其他非政府组织协商，成立一个委员会来调查困扰宗戈的问题。”196 尤努斯·法瓦兹在 ASWAJ 赞助的报纸《穆斯林探照灯》（图7）中认为，“[...] 我们穆斯林一直在抱怨我们缺乏自己的医生、教师、在政府和其他无限重要领域的人民的强有力代表；但我们似乎没有认识到送孩子上学的需要。”197
 
 196. “加纳的穆斯林与发展”，《人道主义——慈善月刊》2，第3期（1997）：5–7。
+
 197. 尤努斯·法瓦兹，“教育穆斯林儿童”，《穆斯林探照灯》1，第1期（1999年8月20日至9月2日）。
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_77_0.png)
@@ -886,9 +869,7 @@ Z.M. Seebaway，《喷泉》（图7）的编辑，同样敦促读者重新思考
 
 > 我们的使命是建立并实现最佳质量：伊斯兰教育、伊斯兰医院、创造就业机会以雇用我们的青年、照顾孤儿和穷人等。如果你想加入我们的 WhatsApp 平台，请在屏幕上选择我们的 WhatsApp 号码。200
 
-互联网时代的一个新现象是穆斯林在线电视和电台的蓬勃发展；它们在 Facebook 上运营，并作为传教和社区发展的载体。例如，Sharubutu TV 在2020年4月发起“记住我”和“慈善不伤人”活动，此前“一些兄弟姐妹”（在阿克拉宗戈社区）呼吁电视台解决他们的挑战。“他们大多数人靠日薪生活，因此在七天不活跃后无法提供基本生活必需品，”Sharubutu TV 在 Facebook 上提醒听众。201 呼吁立即得到回应，Sharubutu TV 分发了25袋5公斤大米和25瓶一升的
-
-向舒库拉、法达马、阿贝卡、阿奇莫塔、阿贝莱姆克佩、尼马和纽敦的贫困家庭提供了食用油。202
+互联网时代的一个新现象是穆斯林在线电视和电台的蓬勃发展；它们在 Facebook 上运营，并作为传教和社区发展的载体。例如，Sharubutu TV 在2020年4月发起“记住我”和“慈善不伤人”活动，此前“一些兄弟姐妹”（在阿克拉宗戈社区）呼吁电视台解决他们的挑战。“他们大多数人靠日薪生活，因此在七天不活跃后无法提供基本生活必需品，”Sharubutu TV 在 Facebook 上提醒听众。201 呼吁立即得到回应，Sharubutu TV 分发了25袋5公斤大米和25瓶一升的向舒库拉、法达马、阿贝卡、阿奇莫塔、阿贝莱姆克佩、尼马和纽敦的贫困家庭提供了食用油。202
 
 *沙巴尼耶电视台*则告知其听众，加纳提贾尼耶·易卜拉欣耶理事会办事处已“……向大阿克拉地区阿莫莫凯（马迪纳图-沙巴尼耶）、阿菲尼亚和阿沙拉贾·奥巴库罗的贫困及弱势社区进行了慷慨捐赠。”此外，该电视台还提醒听众，上述理事会“劝诫所有能够参与此类慈善活动的人，将自己的资源用于帮助这一斋戒季节中的贫困者和有需要者。”203
 
@@ -896,9 +877,11 @@ Z.M. Seebaway，《喷泉》（图7）的编辑，同样敦促读者重新思考
 
 以团结互助为宗旨的穆斯林非政府组织，如总部位于库马西的*希望种子基金会*或总部位于塔马利的*BALNISA基金会*，在其外联项目中同时面向穆斯林和非穆斯林。他们在Facebook上的帖子（通常）几乎不含宗教语言，也很少涉及*宣教*的任何方面。例如，后一个组织声称其（主要）目标是促进各层次优质教育、增强所有加纳人的能力，并与关键利益相关者合作，“制定有助于减少贫困社区贫困的政策和项目，以建设一个更美好的加纳。”205 然而，除了建造和修复学校、水井和诊所，推动女童教育、能力建设和青年创业，以及向孤儿和贫困者提供支持外，*BALNISA基金会*还修建清真寺，并支持“倡导、教育和宣传”，换言之：*宣教*。206
 
-与团结互助型组织类似，世俗穆斯林非政府组织在2010年代和2020年代初期数量成倍增长，它们完全不涉及*宣教*。其中几个由穆斯林女性活动人士创办，例如哈吉娅·扎因-阿布·萨利富的*松比埃拉基金会*，或纳迪亚图·阿卜杜勒·拉赫曼的*人道主义进步组织*，它们总体上关注社区发展，尽管它们会在尔德节期间开展特别活动，为“贫困者和有需要者”提供食物。另一方面，*加纳星光创意生活基金会*专注于医疗保健以及健康和急救教育与培训。该非政府组织于2021年6月在阿克拉市中心的尼马-马莫比社区学习中心举办了首届年度健康论坛。然而，由于该基金会两个月前组织了一次斋月研讨会，可以将其认定为世俗穆斯林非政府组织。207
 
-宣教型非政府组织很容易识别，因为其名称中包含“穆斯林”或“伊斯兰”等字样，或含有体现宗教信息的阿拉伯语词，如“乌玛”、“吉哈德”、“萨达卡”或“塔尔比亚”。208 它们的活动仅限于增强穆斯林社区的权能，并且从不以非穆斯林为受助对象。例如，穆斯林妇女团体*乌玛倡议*于2022年组织了穆斯林女性卫生专业人才计划，“通过导师计划，增加我们医学院中穆斯林学生，尤其是女学生的数量。”209 有时，一个群体会决定将名称从激进的改为更中性的，例如2021年，总部位于海岸角的*加纳伊斯兰吉哈德基金会（GIJF）*更名为*加纳伊斯兰萨达卡基金会（GISF）*。210
+
+与团结互助型组织类似，世俗穆斯林非政府组织在2010年代和2020年代初期数量成倍增长，它们完全不涉及`宣教`。其中几个由穆斯林女性活动人士创办，例如哈吉娅·扎因-阿布·萨利富的`松比埃拉基金会`，或纳迪亚图·阿卜杜勒·拉赫曼的`人道主义进步组织`，它们总体上关注社区发展，尽管它们会在尔德节期间开展特别活动，为“贫困者和有需要者”提供食物。另一方面，`加纳星光创意生活基金会`专注于医疗保健以及健康和急救教育与培训。该非政府组织于2021年6月在阿克拉市中心的尼马-马莫比社区学习中心举办了首届年度健康论坛。然而，由于该基金会两个月前组织了一次斋月研讨会，可以将其认定为世俗穆斯林非政府组织。207
+
+宣教型非政府组织很容易识别，因为其名称中包含“穆斯林”或“伊斯兰”等字样，或含有体现宗教信息的阿拉伯语词，如“乌玛”、“吉哈德”、“萨达卡”或“塔尔比亚”。208 它们的活动仅限于增强穆斯林社区的权能，并且从不以非穆斯林为受助对象。例如，穆斯林妇女团体`乌玛倡议`于2022年组织了穆斯林女性卫生专业人才计划，“通过导师计划，增加我们医学院中穆斯林学生，尤其是女学生的数量。”209 有时，一个群体会决定将名称从激进的改为更中性的，例如2021年，总部位于海岸角的`加纳伊斯兰吉哈德基金会（GIJF）`更名为`加纳伊斯兰萨达卡基金会（GISF）`。210
 
 另一方面，宗戈协会有时仅凭名称很难判断其是地方穆斯林民间社会组织、非政府组织还是青年团体。虽然其中许多组织以穆斯林为服务对象或让穆斯林参与其生计项目，有些甚至自称穆斯林团体；另一些则具有明显的世俗（甚至可以说是非教派）立场和议程。许多宗戈青年团体将行动主义与包容性方法结合起来，批判性地回应国家和地方政府对贫困内城社区投资不足、居民形象负面，以及宗戈青年无论其宗教背景如何都缺乏机会的问题。
 
@@ -911,8 +894,6 @@ Z.M. Seebaway，《喷泉》（图7）的编辑，同样敦促读者重新思考
 然而，最重要的是加纳穆斯林自己如何定义哪些组织算作穆斯林非政府组织。2015年，在首届加纳穆斯林成就奖中，有四个组织获得“年度穆斯林非政府组织”提名：加纳穆斯林学院、伊斯兰发展与人道服务理事会、加纳穆斯林妇女协会联合会和帕拉贡基金会。217 2020年，有七个组织获得提名，分别是成就加纳、比林慈善组织、伊斯兰乌玛救济、宗戈创新中心、青年女性领袖网络、宗戈励志团队和祖拉克癌症基金会。218 获提名穆斯林非政府组织的范围广得令人吃惊。提名涵盖了宣教派组织以及世俗非政府组织（成就加纳；青年女性领袖网络）、基金会、公益创投（宗戈励志团队）和社会创业（宗戈创新中心）。
 
 事后看来，加纳伊斯兰人道主义组织联盟（CIHOG）将成为认定加纳穆斯林非政府组织的一个里程碑。CIHOG的宗旨是促进和协调加纳伊斯兰人道主义非政府组织的工作。此外，CIHOG还将在伊斯兰人道主义非政府组织、在宗戈社区开展工作的其他慈善机构以及政府机构（如宗戈发展基金秘书处）之间发挥对接作用。219 CIHOG由分为三个区域的成员组织组成。第一区包括在南部地区开展工作的非政府组织，其中42个于2022年9月在阿克拉参加了磋商会议。第二区（即中部地区）的52个非政府组织于2022年10月参加了类似会议，而第三区约有30至40个非政府组织预计于2022年11月抵达塔马利参加会议。220 2023年3月，在库马西举行首次会议后的新闻发布会上，CIHOG行政主管苏莱曼·阿尔-哈桑·阿塔克波通报了临时执行委员会成员的选举情况，其中包括代理主席谢赫·哈迪尔·亚当斯·伊德里斯。出席此次会议的总统宗戈与内城发展协调员本·阿卜杜拉·班达承诺全力支持该联盟，并呼吁建立伙伴关系，共同推动政府对其活动的认可与支持。221
-
-
 
 ### 4 探测和分析穆斯林非政府组织的谱系
 
@@ -940,13 +921,15 @@ Z.M. Seebaway，《喷泉》（图7）的编辑，同样敦促读者重新思考
 
 自 2020 年 12 月起，非营利组织秘书处（NPO Secretariat）接管了社会福利部的注册职能，共计 10,390 个注册非营利组织被转移至该新国家机构。根据《2020 年非营利组织政策》和《2020 年非营利组织指令》，NPO 秘书处负责监管和赋能加纳非营利组织部门。<sup>234</sup>
 
-NPO 秘书处提供其在线名录的访问权限，该名录截至 2021 年 9 月/10 月约有 4,200 个区域、国家和国际注册组织，<sup>235</sup>其中至少 164 个可被识别为穆斯林社区组织或非政府组织（见附录）。在加纳社会服务提供者名录中列出但未在 NPO 在线名录中被识别的组织有几个，例如 *Dar Al Haq Charitable Society*、*Salah Foundation*、*Muslim Family Counselling Services*、*Zongo Inspiration Team* 和 *Hajj Abdulai Yaro Memorial Clinic and Maternity*。前两个上述组织无法追踪（或许表明它们已停办或不活跃），但其余组织仍在运营。此外，NPO 在线名录中所列的二十二个组织是国际穆斯林慈善机构在加纳的分部或办事处。其中包括总部设在塔马利的 *Al-Maktoum Foundation*（迪拜/阿联酋慈善机构）和 *African Islamic Heritage Foundation*（美国慈善机构），以及位于库马西的美国穆斯林慈善机构 *Zakat Foundation of America* 和沙特慈善机构 *Al-Qimmah Foundation* 的办事处、位于恩斯瓦姆的美国穆斯林慈善机构 *Mercy for Mankind* 的加纳分会，以及位于卡索阿的美国穆斯林慈善机构 *Islamic Ummah Relief* 的加纳办事处。其余的位于大阿克拉地区，例如 *Qatar Charity* 以及沙特阿拉伯的 *International Islamic Relief Organisation*、科威特的 *Care and Social Development Organisation* 以及 *Direct Aid*、摩洛哥的 *Mohammad VI Foundation for African Ualama* 以及土耳其的 *Human Development Assistance International*
+NPO 秘书处提供其在线名录的访问权限，该名录截至 2021 年 9 月/10 月约有 4,200 个区域、国家和国际注册组织，<sup>235</sup>其中至少 164 个可被识别为穆斯林社区组织或非政府组织（见附录）。在加纳社会服务提供者名录中列出但未在 NPO 在线名录中被识别的组织有几个，例如 `Dar Al Haq Charitable Society`、`Salah Foundation`、`Muslim Family Counselling Services`、`Zongo Inspiration Team` 和 `Hajj Abdulai Yaro Memorial Clinic and Maternity`。前两个上述组织无法追踪（或许表明它们已停办或不活跃），但其余组织仍在运营。此外，NPO 在线名录中所列的二十二个组织是国际穆斯林慈善机构在加纳的分部或办事处。其中包括总部设在塔马利的 `Al-Maktoum Foundation`（迪拜/阿联酋慈善机构）和 `African Islamic Heritage Foundation`（美国慈善机构），以及位于库马西的美国穆斯林慈善机构 `Zakat Foundation of America` 和沙特慈善机构 `Al-Qimmah Foundation` 的办事处、位于恩斯瓦姆的美国穆斯林慈善机构 `Mercy for Mankind` 的加纳分会，以及位于卡索阿的美国穆斯林慈善机构 `Islamic Ummah Relief` 的加纳办事处。其余的位于大阿克拉地区，例如 `Qatar Charity` 以及沙特阿拉伯的 `International Islamic Relief Organisation`、科威特的 `Care and Social Development Organisation` 以及 `Direct Aid`、摩洛哥的 `Mohammad VI Foundation for African Ualama` 以及土耳其的 `Human Development Assistance International`
 
 <sup>233</sup> 加纳共和国非营利组织秘书处，*How To Register A Non-Profit Organization (NPO) In Ghana*，16.2.2021，https://npos.mogcsp.gov.gh/how-to-register-a-not-for-profit-or-ngo-in-ghana/，访问于 4.10.2021。
 
 <sup>234</sup> 加纳共和国非营利组织秘书处，*Who we are*，https://npos.mogcsp.gov.gh/profile/，访问于 4.10.2021。
 
 <sup>235</sup> 在线名录列出注册的社区非营利组织、国家非营利组织和国际非营利组织，可获取于 https://npos.mogcsp.gov.gh/regional-npos/（1,823 条目），https://npos.mogcsp.gov.gh/national-npos/（2,304 条目），和（159 条目），访问于 29.9.–1.10.2021。
+
+
 
 国际：Cansuyu Charity and Solidarity Association、Ghana-Turkey Co-operation and Development Association 和 Insana Deger Veren Dernekler Federasyonu。此外，几家西方穆斯林国际非政府组织在阿克拉设有分支机构，包括美国慈善机构 Life for Relief and Development 和 Mercy Without Limits，英国慈善机构 Human Relief Foundation 和 Caravan of Mercy，以及德国慈善机构 Ansaar International。此外，国际伊斯兰青年联盟是总部设在塞拉利昂弗里敦的 International Islamic Youth League—African Youth Development Centre 的加纳办事处。
 
@@ -960,15 +943,15 @@ NPO 在线目录提供有关非政府组织状态的信息，包括其注册号�
 
 来源：directory.mogesp.gov.gh，访问日期 30.9.2021
 
-对所列穆斯林非政府组织中一些已解散或不活跃的假设，对于 2013 年、2014 年或 2015 年注册的组织来说似乎是成立的，尽管有少数值得注意的例外。例如，Shia Mission 和 Madina Islamic Center 并未消失。Zakat Foundation of America、Insana Deger Veren Dernekler Federasyonu、Ghana 的 Zakat and Sadaqa Fund 以及 Nuuru Usmaniyyah Foundation for Humanitarian Services，以及 Caravan of Mercy 和 Al-Huda Islamic Society，依次在各自的业务领域保持活跃。另一方面，库马西的 El-Mamun Centre 似乎已解散，因为其 2013 年建立的 Facebook 账户为空。Ibadul Hanan Humanitarian Organisation 于 2020 年开设了 Facebook 账户，但没有任何内容或帖子。Orphans and Needy Helpline、Noor-Ul-Alam Mission of Ghana、Bachey Jiwa Foundation 和 Ghana Muslims Education Concern 在网络空间中未留下任何痕迹。Peace Project Foundation 在其 Facebook 账户上的最后活跃帖子来自 2018 年 10 月。[236] 在 2017 年之前注册的穆斯林非政府组织包括 Ansaar International Ghana。其 Facebook 账户显示该组织已解散，因为它仅列出 2013 年的帖子，当时它与 Taqwa school 联合发起了一项建立孤儿院的筹款活动。[237] Northern Childcare Voluntary Organisation，其主页（http://www.nocvo.org）自 2021 年以来已停止运作。
+对所列穆斯林非政府组织中一些已解散或不活跃的假设，对于 2013 年、2014 年或 2015 年注册的组织来说似乎是成立的，尽管有少数值得注意的例外。例如，Shia Mission 和 Madina Islamic Center 并未消失。Zakat Foundation of America、Insana Deger Veren Dernekler Federasyonu、Ghana 的 Zakat and Sadaqa Fund 以及 Nuuru Usmaniyyah Foundation for Humanitarian Services，以及 Caravan of Mercy 和 Al-Huda Islamic Society，依次在各自的业务领域保持活跃。另一方面，库马西的 El-Mamun Centre 似乎已解散，因为其 2013 年建立的 Facebook 账户为空。Ibadul Hanan Humanitarian Organisation 于 2020 年开设了 Facebook 账户，但没有任何内容或帖子。Orphans and Needy Helpline、Noor-Ul-Alam Mission of Ghana、Bachey Jiwa Foundation 和 Ghana Muslims Education Concern 在网络空间中未留下任何痕迹。Peace Project Foundation 在其 Facebook 账户上的最后活跃帖子来自 2018 年 10 月。[236] 在 2017 年之前注册的穆斯林非政府组织包括 Ansaar International Ghana。其 Facebook 账户显示该组织已解散，因为它仅列出 2013 年的帖子，当时它与 Taqwa school 联合发起了一项建立孤儿院的筹款活动。[237] Northern Childcare Voluntary Organisation，其主页（`http://www.nocvo.org`）自 2021 年以来已停止运作。
 
 另一个例子是 Al-Hayat Foundation，成立于 2011 年，最后注册日期为 2015 年。它在 2015 年登上头条，当时该基金会在 2015 年 11 月在阿克拉组织了一场宫颈癌宣传研讨会。[238] Al-Hayat Foundation 的创始人兼首席执行官 Hajia Hanatu Abubakar 于 2017 年 2 月被 Professional Muslimah’s Network 提名为‘Muslimah of the Month’，[239] 表明当时该基金会仍在运营和活跃。然而，该基金会 Facebook 账户上关于其癌症宣传项目的最后帖子是在 26 September 2017。其后出现的帖子都是关于运动探测器和报警系统的，表明该基金会在年底前变得不活跃或已解散。
 
-[237] 最后帖子 22.9.2013，https://www.facebook.com/Ansaar-International-Accra-Ghana-233429190145018/，访问日期 4.10.2021。
+[237] 最后帖子 22.9.2013，`https://www.facebook.com/Ansaar-International-Accra-Ghana-233429190145018/`，访问日期 4.10.2021。
 
-[238] “Women! Beware of cervical cancer—Al-Hayat Foundation，” 28.11.2015，https://newsghana.com.gh/women-beware-of-cervical-cancer-al-hayat-foundation/，访问日期 4.10.2021。
+[238] “Women! Beware of cervical cancer—Al-Hayat Foundation，” 28.11.2015，`https://newsghana.com.gh/women-beware-of-cervical-cancer-al-hayat-foundation/`，访问日期 4.10.2021。
 
-[239] 参见 https://www.facebook.com/ThePMNetwork/photos/muslima-of-the-month-february-hajia-hanatu-abubakar-in-most-of-the-muslim-communi/640821862775871/，访问日期 4.11.2021。
+[239] 参见 `https://www.facebook.com/ThePMNetwork/photos/muslima-of-the-month-february-hajia-hanatu-abubakar-in-most-of-the-muslim-communi/640821862775871/`，访问日期 4.11.2021。
 
 列于 NPO 在线目录中的大多数穆斯林非政府组织仍在活跃。例如，由 Sheikh Abdul Karim Zakaria 运营的阿克拉当地穆斯林非政府组织 *International Unique Human Welfare Institution*，于 2020 年从德国的土耳其人道主义组织 Hasene International 获得了捐赠，以提供 COVID-19 救济食品包。[240] 此外，它在 2020 年启动了其新的旗舰项目 Bustan Rashidun Project，该项目是一个教育综合体，包括幼儿园、托儿所、基础和初中、清真寺和会议厅、医疗中心以及一座计划在 Insahina、Greater Accra Region 建造的供孤儿和贫困学生使用的宿舍。[241]
 
@@ -984,9 +967,9 @@ NPO 在线目录中的一些非政府组织难以追踪。例如，除了被列�
 
 *An-Nur al-Islamiyya* 是由 2003 年在加纳大学就读的穆斯林学生建立的 *da‘wa* 组织。[245] 它自 2009 年起在 Facebook 上存在并拥有主页。该阿克拉青年组织主要专注于 *da‘wa* 和教育项目。其大部分活动，包括讲座和研讨会系列以及 Sisters Entrepreneurship Dialogue、An-Nur E-learning Centre of Excellence，以及 2018 年启动的指导计划，均通过内部筹款组织。对于特定项目，例如为有需要的成员筹集资金，该团体会在社交媒体和主页上呼吁。一些倡议由外国捐助者资助，例如其与土耳其国际非政府组织 Human Development and Relief Organization 于 2015 年合作启动的 SHS 奖学金项目。[246] 其主要的社会福利项目是 2016 年启动的 Ummah Support Fund。主页上关于 Ummah Support Fund 的信息仅显示一张海报，呼吁每月捐赠 GHS 10（USD 1.60）给该基金，“以支持病人、新皈依者、有需要的学生以及急需经济帮助的穆斯林。”[247] 然而，目前尚不清楚该支持基金是否已正式化，还是更多地以临时方式存在。该支持基金唯一已公布的财务报告涵盖 2017 年第一季度，列出捐款总额为 GHS 1,534.06（USD 248），教育支持 GHS 970（USD 157）为主要支出。[248]
 
-[246] "SHS Scholarship Project 2015," https://www.facebook.com/annuralislamgh/posts/10156047575225333，检查日期 20.10.2020。
+[246] "SHS Scholarship Project 2015," `https://www.facebook.com/annuralislamgh/posts/10156047575225333`，检查日期 20.10.2020。
 
-[247] Ummah Support Fund，http://annuralislam.com/en/2016/01/ummah-support-fund/，访问日期 17.8.2021。
+[247] Ummah Support Fund，`http://annuralislam.com/en/2016/01/ummah-support-fund/`，访问日期 17.8.2021。
 
 #### 4.3 穆斯林非政府组织在 Facebook 上的定量分析
 
@@ -996,11 +979,10 @@ NPO 在线目录中的一些非政府组织难以追踪。例如，除了被列�
 
 不出所料，超过一半的穆斯林非政府组织的总部位于 Greater Accra Region，几乎全部位于阿克拉，除了 *Al-Aman Humanitarian Development*、*International Voice of Islam*、*Caravan of Mercy*、*Grain of Hope Foundation*、*Maarif Foundation* 和 *Sheikh Alhaji Umar Karki Memorial Foundation* 位于 Tema，*Orphans and Needy Helpline* 位于 Amasaman。
 
-
-
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_92_0.png)
 
 图表 2 穆斯林非政府组织总部的所在地。缩写：GAR = 大阿克拉地区；AR = 阿散蒂地区；NR = 北部地区；ER = 东部地区；WR = 西部地区；CR = 中央地区；UWR = 上西部地区；BER = 博诺东地区；UER = 上东部地区；BR = 博诺地区；NER = 东北部地区；SR = 萨瓦纳地区；AhR = 阿哈弗地区；VR = 沃尔塔地区
+
 来源：2022 年 GMNGO 数据库；N = 591
 
 man, 阿什海曼的 Al-Abrar Foundation，以及 Weija 的 Act Right Foundation。穆斯林非政府组织在阿克拉的集中反映了该市拥有穆斯林最集中的情况，尤其是在阿克拉众多的 Zongo 社区，以及该市是国家的政治和经济中心。
@@ -1018,17 +1000,22 @@ man, 阿什海曼的 Al-Abrar Foundation，以及 Weija 的 Act Right Foundation
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_94_0.png)
 
 图表 3 穆斯林非政府组织的运营地点
+
 来源：2022 年 GMNGO 数据库；N = 516
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_94_1.png)
 
 图表 4 穆斯林非政府组织的活动领域。缩写：HR = 人道主义救济（开斋饭、宰牲节；孤儿；寡妇）；WP = 水项目（钻井等）；EP = 教育项目（学校/经学院、教室、图书捐赠等）；MP = 清真寺项目（含清真寺）；DP = 宣教项目；CP = 社区项目（含卫生、健康中心/诊所、社区中心、图书馆）；GP = 性别项目（女孩/妇女）
+
 来源：2022 年 GMNGO 数据库；N = 953；总非政府组织数 = 515
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_95_0.png)
 
 图表 5 穆斯林非政府组织活动的关联。缩写：HR = 人道主义救济；WP = 水项目；EP = 教育项目；MP = 清真寺项目；DP = 宣教项目；CP = 社区项目；GP = 性别项目
+
 来源：2022 年 GMNGO 数据库；N = 953；总非政府组织数 = 515
+
+
 
 在所分析的 516 个非政府组织的活动范围中也可以观察到类似的变化，见图表 6。DP-、HR-、CP- 和 GP-NGO 大多数从事一到两个活动领域（正如上文所述，这将是 DP+HR/HR+DP 或 CP+GP/GP+CP），而从事教育、水和清真寺项目的非政府组织可能参与至少另外两个活动领域。
 
@@ -1037,6 +1024,7 @@ man, 阿什海曼的 Al-Abrar Foundation，以及 Weija 的 Act Right Foundation
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_96_0.png)
 
 图表 6 穆斯林非政府组织的活动范围。缩写：n + 0 = 仅一项活动；n + 1 = 两项活动；n + 2 = 三项活动；n + 3 = 四项活动；n + 4 = 五项活动；n + 5 = 六项活动
+
 来源：2022 年 GMNGO 数据库；N = 953；总非政府组织数 = 515
 
 互联网时代加纳穆斯林非政府组织格局的构成变化在社交媒体上可见一斑。图表 7 突出了过去十年间加纳穆斯林非政府组织的快速扩张；其 Facebook 账号的推出表明了它们各自通过使用社交媒体宣传自身存在并扩大网络的雄心。
@@ -1045,7 +1033,8 @@ man, 阿什海曼的 Al-Abrar Foundation，以及 Weija 的 Act Right Foundation
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_97_0.png)
 
-**图 7**  加纳穆斯林非政府组织在 Facebook 上的开始时间和最后更新  
+**图 7** 加纳穆斯林非政府组织在 Facebook 上的开始时间和最后更新
+
 **来源：** 2022 年 GMNGO 数据库；总条目数：548
 
 2020 年和 2021 年似乎表明 COVID-19 推迟或否定了受影响组织/团体的雄心，尽管更可能的是他们已将沟通转移到 WhatsApp 上的封闭/非公开群组，或将公开沟通转移到 Twitter 和 Instagram。
@@ -1060,7 +1049,8 @@ Facebook 上的粉丝数量反过来表明了非政府组织的影响力和能�
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_99_0.png)
 
-#### 图 8  穆斯林非政府组织：Facebook 上的粉丝数量（截至 2022 年 9 月）
+#### 图 8 穆斯林非政府组织：Facebook 上的粉丝数量（截至 2022 年 9 月）
+
 来源：2022 年 GMNGO 数据库；N = 528
 
 青年团体 *援助全球组织* 参与了为通过《肯定性行动法案》而举行的游行以及呼吁加速加纳妇女发展的呼吁²⁵¹，并在 2020 年 2 月呼吁其成员植树。²⁵² 其他团体很快效仿，其中包括 *加纳提贾尼耶伊布拉希米耶理事会*，该组织呼吁其成员加入其“Barhama Goes Green”和“穆斯林应对气候变化”宣传活动，于 2022 年 6 月在阿布莱库马-阿莫莫利-波库阿塞高速公路沿线植树。²⁵³ 正如 NGO/穆斯林社区的一位评论员，库马西的 *Jamatul-huda Adabraka* 于 2013 年宣布并间接强烈批评了已建立的狭窄目标项目：“为什么加纳所有的马拉姆总是建清真寺而不考虑医院？请帮助我们解决这个问题。”²⁵⁴ 有趣的是，目前（2022 年）至少有十二个医院项目由当地穆斯林非政府组织发起，将在第 4.4 章中讨论。
@@ -1097,8 +1087,10 @@ Facebook 上的粉丝数量反过来表明了非政府组织的影响力和能�
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_103_0.png)
 
-*汇编：哈吉·萨利赫·奥马鲁*  
-*图9 哈吉·萨利赫·奥马鲁宣传结核病免疫接种的小册子*  
+*汇编：哈吉·萨利赫·奥马鲁*
+
+*图9 哈吉·萨利赫·奥马鲁宣传结核病免疫接种的小册子*
+
 *作者收藏*
 
 本章展示了相关行动者，并分析了21世纪头二十年加纳穆斯林非政府组织不断变化的格局。本章首先介绍了一些慈善企业的主要创始人，然后通过审视基层协会、运动和代表机构的活动，以及日益增多的外国穆斯林慈善机构和半官方机构的直接与间接存在，讨论了加纳穆斯林非政府组织的范围。
@@ -1109,19 +1101,23 @@ Facebook 上的粉丝数量反过来表明了非政府组织的影响力和能�
 
 尽管第一代非政府组织完全由穆斯林学者建立，但第二代中的一些则由当地穆斯林公民社会活动家、商业企业家和政治家创立。鉴于穆斯林中产阶级的崛起，以及过去二十年（直到 COVID-19 造成的挫折）加纳经济繁荣所催生的一小部分穆斯林高净值个人（HNWIs）的出现，许多这类非政府组织仍坚持典型的狭义达瓦议程目标：修建清真寺、教育、供水和斋月/开斋节/古尔邦节项目，并附加对孤儿、寡妇和贫困者的支持。因此，由穆斯林学者和商业企业家运营的达瓦基金会和非政府组织，是企业型伊斯兰的表现形式，即利用非政府组织、社交媒体平台和视听媒体等公共机构进行宗教外联，<sup>8</sup> 通过社会与经济抱负的结合，将其创始人转变为“宗教企业家”。<sup>9</sup>
 
----
+
 
 2. 制止结核病伙伴关系组织，“查看合作伙伴简介”，https://stoptb.org/partners/partner_profile2.asp?PID=68839，最后更新于2011年8月25日，访问于2022年1月5日。
+
 3. 制止结核病伙伴关系组织，“查看合作伙伴简介”，https://stoptb.org/partners/partner_profile2.asp?PID=68839，最后更新于2011年8月25日，访问于2022年1月5日。
+
 4. 对沙姆苏丁·萨利夫中尉（Lieutenant Shamsudeen Salifu）的访谈，库马西，2019年12月13日。另见 https://www.facebook.com/Islamic-Centre-for-Peace-Democracy-Human-Rights-icpdhr-157194971066792/，访问于2022年1月5日。
+
 5. 关于伊玛目侯赛因·阿里的背景及 De Koepel 清真寺与 Assalaam 基金会合作的概况，见最初的募捐呼吁“Assalaam 基金会——加纳”，https://www.facebook.com/Belgisch-Islamitisch-Centrum-De-Koepel-moskee-14265135676614411/，访问于2017年11月7日。然而，当我在2021年12月查看 De Koepel 清真寺的 Facebook 账号时，该文档已不再可用，但有关该活动的引用仍然存在；见 https://www.facebook.com/page/14265135676614411/search/?q=Assalaam%20Foundation，访问于2021年12月31日。
+
 6. 见“2016年为加纳打井”（Waterput voor Ghana 2016），https://de-koepel.be/waterput-voor-ghana/liefdadigheid/liefdadigheid-2016/，访问于2021年12月31日。
+
 7. “2019年为加纳的萨达卡”（Sadaqa voor Ghana 2019），https://de-koepel.be/sadaqah-voor-ghana/liefdadigheid/，访问于2021年12月31日；https://www.facebook.com/UMMAH-Foundation-122337079156638/，2019年9月21日，访问于2021年12月31日。
+
 8. 关于“穆斯林企业家”和“企业型伊斯兰”的概念，参见 Emin Baki Adas, “The Making of Entrepreneurial Islam and the Islamic Spirit of Capitalism,” Journal of Cultural Research 10, no. 2 (2006): 113–137; Filippo Osella and Caroline Osella, “Muslim Entrepreneurs in Public Life Between India and the Gulf: Making Good and Doing Good,” Journal of the Royal Anthropological Institute (N.S.), S202–S221 (2009); Abdoulaye Sounaye, “Let’s Do Good for Islam: Two Muslim Entrepreneurs in Niamey,” in Cultural Entrepreneurship in Africa, eds. Ute Röschenthaler and Dorothea Schulz (New York: Routledge, 2016), 37–57.
+
 9. 关于宗教企业家的讨论，进一步参见 Karen Lauterbach, “Religious Entrepreneurs in Ghana,” in Cultural Entrepreneurship in Africa, eds. Ute Röschenthaler and Dorothea Schulz (New York: Routledge, 2016), 19–36.
-
-
-
 
 令人启发的穆斯林宗教创业典范是 Haji Saeed Hamid Jallo、Sheikh Sani Kuwait 和 Abubakar Sadiq Hussein。Takoradi 的穆斯林广播记者和学者 Haji Saeed Hamid Jallo 于 2005 年创立了 Tawheed Development Foundation（TDF）。TDF 是一个宣教和慈善组织，主要组织当地季节性救济活动。它在 2016 年斋月期间扩大了重点，当时呼吁穆斯林慈善基金会和个人慈善家支持其难民援助项目。与其土耳其姐妹组织 Genc Tebessum 一起，组织成员在 2015 年宰牲节期间访问了位于西部地区 Ellembelle 区 Krisan 难民营，并在一些穆斯林家庭中分发肉类。联合国最初于 1996 年设立该难民营，以为流离失所者和战争难民提供安全和保护。10 在项目启动前，Haji Saeed Hamid Jallo 呼吁制定一项全面计划，为 Krisan 营地的 58 个穆斯林难民家庭增添价值，并得到了 Takoradi 伊玛目和 Sekondi Zabarma 社区酋长双方的支持。11 尽管难民援助项目在随后几年未再跟进类似活动，TDF 仍继续利用社交媒体进行临时性慈善干预。例如，在 2021 年，它在马来西亚电子平台 ENSANY 上发布呼吁，截至 2022 年 1 月 10 日筹集了 989 美元，以支持一名 80 岁女性的住宿和医疗需求。12
 
@@ -1146,6 +1142,7 @@ Al-Mannan Charity Foundation 至今仍是一个地方性慈善机构，尽管其
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_108_0.png)
 
 图 10 Al-Mannan Charity Foundation。Abdul Mannan Ibrahim 与 Al-Mannan Charity 成员在库马西进行筹款
+
 照片：HOLGER WEISS/2022
 
 每个个人项目都始于以视频呈现案例，并以发布展示干预效果的视频结束。通常，Abdul Mannan Ibrahim 称，他的团队能在一个月内筹集到所需资金。当我于 2022 年 10 月采访他时，他已支付总额达 700 万塞地 的发票。16
@@ -1176,67 +1173,25 @@ Abdul Mannan Ibrahim 的轨迹与许多从企业家转型为慈善家的创始�
 
 26 “Alhaji Yusif Offers Succour to Students”，《Accra Mail》16.11.2000。
 
-
-
 基金会还支付开斋饭、苏胡尔和古尔邦的费用，并向其教育综合体附近的十座清真寺提供食物，同时在宰牲节期间为监狱和孤儿院提供捐赠。31
 
 卡里玛慈善基金会是一个典型的跨地方/跨国团体，在加纳和美国均有成员。其总部位于库马西，尽管其创始人兼首席执行官穆罕默德·阿米努·奥斯曼及其家人一年中有部分时间居住在美国。教育综合体的活动，包括六名工作人员的薪水，在很大程度上由穆罕默德·阿米努·奥斯曼资助，除基金会成员的不定期捐款外。然而，缺乏额外的捐助者和支持者阻碍了该综合体的扩张，32尤其是为贫困学生计划建造的技术和职业培训楼。33
 
 Yaasalam 机会中心反过来担任 Afro Arab 集团公司的企业社会责任部门。Alhaji Salamu Adamu 于 2007 年创立的多元化企业包括 Afro Arab 小额信贷（另见第 6.2 章）等，是其对贫困 Zongo 社区慈善外展的一部分。Yaasalam 机会中心位于阿克拉，并注册为非政府组织。它于 2017 年启动，是 Alhaji Salamu Adamu 与 Past、Present and Future 研究与和平研究所的首席研究员 Mr. Abdusalam Mohammed Daaru 之间的合作项目。其目标是提供人道主义救济、促进教育、青年赋权、能力建设、企业家发展、引领就业创造计划，以及对 Zongo 居民和小商贩在读写能力和商业方面的能力建设。34 其赋能 Zongo 青年的举措包括多个项目，名为 Zongo 360、Zongo Business Incubator、Zongo Business Network 和 Yaasalaam Publishers。35
+
+
 
 然而，大多数穆斯林企业家并不一定成立非政府组织来引导他们的捐赠。穆斯林企业家、Class Media Group 所有者 Alhaji Seidu Agongo 阐明了非正式和非制度化捐赠的传统做法。他以 GHS 857,000（约 140,000 美元）的费用为阿克拉科尔布教学医院儿童急诊科建造了一座 30 张床位的病房。他还通过为他们提供启动资金和设备来积极增强贫困人群的赋权，以开展小规模企业。后者反映了他的穆斯林慈善思维：
 
 > 人生中重要的是你在人们生活中产生的[content]
+
 基金会还支付开斋饭、苏胡尔和古尔邦的费用，并向其教育综合体附近的十座清真寺提供食物，同时在宰牲节期间为监狱和孤儿院提供捐赠。31
 
 卡里玛慈善基金会是一个典型的跨地方/跨国团体，在加纳和美国均有成员。其总部位于库马西，尽管其创始人兼首席执行官穆罕默德·阿米努·奥斯曼及其家人一年中有部分时间居住在美国。教育综合体的活动，包括六名工作人员的薪水，在很大程度上由穆罕默德·阿米努·奥斯曼资助，除基金会成员的不定期捐款外。然而，缺乏额外的捐助者和支持者阻碍了该综合体的扩张，32尤其是为贫困学生计划建造的技术和职业培训楼。33
 
 Yaasalam 机会中心反过来担任 Afro Arab 集团公司的企业社会责任部门。Alhaji Salamu Adamu 于 2007 年创立的多元化企业包括 Afro Arab 小额信贷（另见第 6.2 章）等，是其对贫困 Zongo 社区慈善外展的一部分。Yaasalam 机会中心位于阿克拉，并注册为非政府组织。它于 2017 年启动，是 Alhaji Salamu Adamu 与 Past、Present and Future 研究与和平研究所的首席研究员 Mr. Abdusalam Mohammed Daaru 之间的合作项目。其目标是提供人道主义救济、促进教育、青年赋权、能力建设、企业家发展、引领就业创造计划，以及对 Zongo 居民和小商贩在读写能力和商业方面的能力建设。34 其赋能 Zongo 青年的举措包括多个项目，名为 Zongo 360、Zongo Business Incubator、Zongo Business Network 和 Yaasalaam Publishers。35
 
-然而，大多数穆斯林企业家并不一定成立非政府组织来引导他们的捐赠。穆斯林企业家、Class Media Group 所有者 Alhaji Seidu Agongo 阐明了非正式和非制度化捐赠的传统做法。他以 GHS 857,000（约 140,000 美元）的费用为阿克拉科尔布教学医院儿童急诊科建造了一座 30 张床位的病房。他还通过为他们提供启动资金和设备来积极增强贫困人群的赋权，以开展小规模企业。后者反映了他的穆斯林慈善思维：
-
-> 人生中重要的是你在人们生活中产生的[content]
-基金会还支付开斋饭、苏胡尔和古尔邦的费用，并向其教育综合体附近的十座清真寺提供食物，同时在宰牲节期间为监狱和孤儿院提供捐赠。31
-
-卡里玛慈善基金会是一个典型的跨地方/跨国团体，在加纳和美国均有成员。其总部位于库马西，尽管其创始人兼首席执行官穆罕默德·阿米努·奥斯曼及其家人一年中有部分时间居住在美国。教育综合体的活动，包括六名工作人员的薪水，在很大程度上由穆罕默德·阿米努·奥斯曼资助，除基金会成员的不定期捐款外。然而，缺乏额外的捐助者和支持者阻碍了该综合体的扩张，32尤其是为贫困学生计划建造的技术和职业培训楼。33
-
-Yaasalam 机会中心反过来担任 Afro Arab 集团公司的企业社会责任部门。Alhaji Salamu Adamu 于 2007 年创立的多元化企业包括 Afro Arab 小额信贷（另见第 6.2 章）等，是其对贫困 Zongo 社区慈善外展的一部分。Yaasalam 机会中心位于阿克拉，并注册为非政府组织。它于 2017 年启动，是 Alhaji Salamu Adamu 与 Past、Present and Future 研究与和平研究所的首席研究员 Mr. Abdusalam Mohammed Daaru 之间的合作项目。其目标是提供人道主义救济、促进教育、青年赋权、能力建设、企业家发展、引领就业创造计划，以及对 Zongo 居民和小商贩在读写能力和商业方面的能力建设。34 其赋能 Zongo 青年的举措包括多个项目，名为 Zongo 360、Zongo Business Incubator、Zongo Business Network 和 Yaasalaam Publishers。35
-
-然而，大多数穆斯林企业家并不一定成立非政府组织来引导他们的捐赠。穆斯林企业家、Class Media Group 所有者 Alhaji Seidu Agongo 阐明了非正式和非制度化捐赠的传统做法。他以 GHS 857,000（约 140,000 美元）的费用为阿克拉科尔布教学医院儿童急诊科建造了一座 30 张床位的病房。他还通过为他们提供启动资金和设备来积极增强贫困人群的赋权，以开展小规模企业。后者反映了他的穆斯林慈善思维：
-
-> 人生中重要的是你在人们生活中产生的[content]
-基金会还支付开斋饭、苏胡尔和古尔邦的费用，并向其教育综合体附近的十座清真寺提供食物，同时在宰牲节期间为监狱和孤儿院提供捐赠。31
-
-卡里玛慈善基金会是一个典型的跨地方/跨国团体，在加纳和美国均有成员。其总部位于库马西，尽管其创始人兼首席执行官穆罕默德·阿米努·奥斯曼及其家人一年中有部分时间居住在美国。教育综合体的活动，包括六名工作人员的薪水，在很大程度上由穆罕默德·阿米努·奥斯曼资助，除基金会成员的不定期捐款外。然而，缺乏额外的捐助者和支持者阻碍了该综合体的扩张，32尤其是为贫困学生计划建造的技术和职业培训楼。33
-
-Yaasalam 机会中心反过来担任 Afro Arab 集团公司的企业社会责任部门。Alhaji Salamu Adamu 于 2007 年创立的多元化企业包括 Afro Arab 小额信贷（另见第 6.2 章）等，是其对贫困 Zongo 社区慈善外展的一部分。Yaasalam 机会中心位于阿克拉，并注册为非政府组织。它于 2017 年启动，是 Alhaji Salamu Adamu 与 Past、Present and Future 研究与和平研究所的首席研究员 Mr. Abdusalam Mohammed Daaru 之间的合作项目。其目标是提供人道主义救济、促进教育、青年赋权、能力建设、企业家发展、引领就业创造计划，以及对 Zongo 居民和小商贩在读写能力和商业方面的能力建设。34 其赋能 Zongo 青年的举措包括多个项目，名为 Zongo 360、Zongo Business Incubator、Zongo Business Network 和 Yaasalaam Publishers。35
-
-然而，大多数穆斯林企业家并不一定成立非政府组织来引导他们的捐赠。穆斯林企业家、Class Media Group 所有者 Alhaji Seidu Agongo 阐明了非正式和非制度化捐赠的传统做法。他以 GHS 857,000（约 140,000 美元）的费用为阿克拉科尔布教学医院儿童急诊科建造了一座 30 张床位的病房。他还通过为他们提供启动资金和设备来积极增强贫困人群的赋权，以开展小规模企业。后者反映了他的穆斯林慈善思维：
-
-> 人生中重要的是你在人们生活中产生的影响；不同的人以不同的方式产生影响，但每个人都有自己的选择；我的选择是寡妇、单身母亲、弱势儿童以及创造就业。[...] 遭受苦难的是妇女和儿童。男人不会遭受苦难。36
-
-最重要的是，他认为投资寡妇和单身女性的子女是打破贫困循环的最好方式：
-
-> 一旦你投资孩子：投资他们的教育，同样的孩子将来会成为医生、律师、企业家，而且会产生乘数效应……因为一旦孩子成为像我这样的商人，他就会帮助人们，帮助家庭，家庭就会在某个程度上摆脱贫困。37
-
-#### 1.2 穆斯林政治家
-
-穆斯林在政党政治和国家企业业务中的参与度[content]
-基金会还支付开斋饭、苏胡尔和古尔邦的费用，并向其教育综合体附近的十座清真寺提供食物，同时在宰牲节期间为监狱和孤儿院提供捐赠。31
-
-卡里玛慈善基金会是一个典型的跨地方/跨国团体，在加纳和美国均有成员。其总部位于库马西，尽管其创始人兼首席执行官穆罕默德·阿米努·奥斯曼及其家人一年中有部分时间居住在美国。教育综合体的活动，包括六名工作人员的薪水，在很大程度上由穆罕默德·阿米努·奥斯曼资助，除基金会成员的不定期捐款外。然而，缺乏额外的捐助者和支持者阻碍了该综合体的扩张，32尤其是为贫困学生计划建造的技术和职业培训楼。33
-
-Yaasalam 机会中心反过来担任 Afro Arab 集团公司的企业社会责任部门。Alhaji Salamu Adamu 于 2007 年创立的多元化企业包括 Afro Arab 小额信贷（另见第 6.2 章）等，是其对贫困 Zongo 社区慈善外展的一部分。Yaasalam 机会中心位于阿克拉，并注册为非政府组织。它于 2017 年启动，是 Alhaji Salamu Adamu 与 Past、Present and Future 研究与和平研究所的首席研究员 Mr. Abdusalam Mohammed Daaru 之间的合作项目。其目标是提供人道主义救济、促进教育、青年赋权、能力建设、企业家发展、引领就业创造计划，以及对 Zongo 居民和小商贩在读写能力和商业方面的能力建设。34 其赋能 Zongo 青年的举措包括多个项目，名为 Zongo 360、Zongo Business Incubator、Zongo Business Network 和 Yaasalaam Publishers。35
-
-然而，大多数穆斯林企业家并不一定成立非政府组织来引导他们的捐赠。穆斯林企业家、Class Media Group 所有者 Alhaji Seidu Agongo 阐明了非正式和非制度化捐赠的传统做法。他以 GHS 857,000（约 140,000 美元）的费用为阿克拉科尔布教学医院儿童急诊科建造了一座 30 张床位的病房。他还通过为他们提供启动资金和设备来积极增强贫困人群的赋权，以开展小规模企业。后者反映了他的穆斯林慈善思维：
-
-> 人生中重要的是你在人们生活中产生的影响；不同的人以不同的方式产生影响，但每个人都有自己的选择；我的选择是寡妇、单身母亲、弱势儿童以及创造就业。[...] 遭受苦难的是妇女和儿童。男人不会遭受苦难。36
-
-最重要的是，他认为投资寡妇和单身女性的子女是打破贫困循环的最好方式：
-
-> 一旦你投资孩子：投资他们的教育，同样的孩子将来会成为医生、律师、企业家，而且会产生乘数效应……因为一旦孩子成为像我这样的商人，他就会帮助人们，帮助家庭，家庭就会在某个程度上摆脱贫困。37
-
-#### 1.2 穆斯林政治家
+### 1.2 穆斯林政治家
 
 穆斯林在政党政治和国家企业业务中的参与度增加，他们被提名为高级部长和政府职位，已在加纳创造了一种新的穆斯林宗教企业家形式，即从政客转变为慈善家。Alhaji Hanan Abdul-Wahab Aludiba，Bawku 居民慈善家、国家粮食缓冲库存公司（NAFCO）执行官、NPP 领导成员，是一个例子。他是 Aludiba 基金会的创始人和主席，“该基金会是一家致力于贫困者、弱势群体、儿童和老年人困境的人道主义组织。”38 在没有外部支持的情况下自筹资金运营基金会，他能够支持上东区的教育、商业发展、农业和健康项目。2019 年 4 月，该基金会因在 Bawku 市为居民安排为期三天的免费医疗筛查和手术而登上头条。39 在活动期间，Hanan Abdul-Wahab 向长老会健康服务的贫困与疾病基金捐赠了 GHS 5,000（约 800 美元）以及各种医疗用品给 Bawku 长老会医院。40 同年宰牲节期间，该基金会向 Bawku 的 Ansarul 穆斯林和 NPP 选区捐赠了 300 袋大米，41 清楚地表明了其创始人与其政治参与之间的错综复杂联系。2021 年 5 月，Alhaji Hanan Abdul-Wahab 通过其基金会向上东区四个区捐赠了六辆多功能救护车。42
 
@@ -1276,7 +1231,7 @@ Hajia Humu Awudu，NPP 青年翼前成员、Wa Central 选区 NPP 国会议员�
 
 2019年，她以5万GHS的种子资金设立了Tunshuuni基金，作为HHF为有志女性企业家提供的初创企业和中小企业支持计划的一部分。^46^ 同年，她及其基金会分别荣获上西穆斯林执行奖的年度变革者奖和年度女性人物奖。^47^
 
-*阿里乌·马哈马基金会*（AMF）由已故副总统阿里哈吉·阿里乌·马哈马于2011年卸任后成立，旨在帮助社会中需要帮助和弱势群体。AMF于2017年在北部地区设立了电子图书馆，^48^ 于2018年为加纳监狱启动医疗外展项目，^49^ 并在同年向北部地区延迪市政区的111名乳木果行业妇女投资了12,000 GHS（约1,900美元）作为启动资金。^50^ 尽管由穆斯林创立，该基金会很难被定义为穆斯林非政府组织；相反，它是其主要利益相关者的特殊用途平台。另一方面，其主要目标区域之一是全国各地的贫困城市社区，为此它于2019年与内城和佐戈发展部以及国家首席伊玛目办公室合作启动了Zongo Laafia外展项目。^51^ 根据AMF首席执行官阿里哈吉·乌马尔·法鲁克·阿里乌·马哈马的说法，该基金会针对SDG#3，目标是对约10,000名佐戈居民进行高血压、疟疾、皮肤感染和眼部问题的筛查。^52^
+`阿里乌·马哈马基金会`（AMF）由已故副总统阿里哈吉·阿里乌·马哈马于2011年卸任后成立，旨在帮助社会中需要帮助和弱势群体。AMF于2017年在北部地区设立了电子图书馆，^48^ 于2018年为加纳监狱启动医疗外展项目，^49^ 并在同年向北部地区延迪市政区的111名乳木果行业妇女投资了12,000 GHS（约1,900美元）作为启动资金。^50^ 尽管由穆斯林创立，该基金会很难被定义为穆斯林非政府组织；相反，它是其主要利益相关者的特殊用途平台。另一方面，其主要目标区域之一是全国各地的贫困城市社区，为此它于2019年与内城和佐戈发展部以及国家首席伊玛目办公室合作启动了Zongo Laafia外展项目。^51^ 根据AMF首席执行官阿里哈吉·乌马尔·法鲁克·阿里乌·马哈马的说法，该基金会针对SDG#3，目标是对约10,000名佐戈居民进行高血压、疟疾、皮肤感染和眼部问题的筛查。^52^
 
 - 46. 2019年5月8日帖子，https://www.facebook.com/humuofficial/，访问时间2022年12月16日。另见“哈吉亚·胡穆基金会支持瓦的妇女”，2019年2月19日，https://www.watchghana.com/en/details/11394/hajia-humu-foundation-supports-women-in-wa，访问时间2022年12月16日。
 - 47. 2019年12月1日、2019年12月29日帖子，https://www.facebook.com/humuofficial/，访问时间2022年12月16日。另见“2020版《来自北部加纳的100名MIPs项目启动》”，2020年7月17日，https://wundef.com/2020-edition-of-the-100-mips-from-northern-ghana-project-launched/，访问时间2022年12月16日。
@@ -1286,26 +1241,26 @@ Hajia Humu Awudu，NPP 青年翼前成员、Wa Central 选区 NPP 国会议员�
 - 51. “阿里乌·马哈马基金会、佐戈部、首席伊玛目启动‘Zongo Laafia’筛查10,000人”，2019年1月10日，https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Aliu-Mahama-Foundation-Zongo-Ministry-Chief-Imam-initiate-Zongo-Laafia-to-screen-10-000-714269，访问时间2022年1月10日。
 - 52. 阿里乌·法鲁克·阿里乌·马哈马，“展示和扩大医疗保健与福祉方面的本土创新”，2019年5月18日，发表于 https://www.graphic.com.gh/news/general-news/empowered-healthy-youth-needed-for-ghana-s-development-alhaji-aliu-mahama.html，2019年5月20日，访问时间2022年1月11日。
 
-阿里哈吉·法鲁克·阿里乌·马哈马本人创立了*扶贫伙伴关系*（PPR），以支持北部地区农业、教育和妇女赋权项目。53 例如，总部位于塔马利的组织在延迪组织了开斋饭项目，同时在2018年向延迪地区的选定农民捐赠了400台背负式喷雾机，并在2020年为延迪的妇女组织了金融素养课程。54 PPR与哈基姆·雷亚娜女士的非政府组织*HealthWay基金会*类似。该基金会由她和一群卫生工作者于2019年创立，瓦地区非政府组织的目标对于世俗穆斯林非政府组织来说是典型的，因为它专注于为上西地区贫困和弱势社区和个人提供医疗保健和社会服务。55
+阿里哈吉·法鲁克·阿里乌·马哈马本人创立了`扶贫伙伴关系`（PPR），以支持北部地区农业、教育和妇女赋权项目。53 例如，总部位于塔马利的组织在延迪组织了开斋饭项目，同时在2018年向延迪地区的选定农民捐赠了400台背负式喷雾机，并在2020年为延迪的妇女组织了金融素养课程。54 PPR与哈基姆·雷亚娜女士的非政府组织`HealthWay基金会`类似。该基金会由她和一群卫生工作者于2019年创立，瓦地区非政府组织的目标对于世俗穆斯林非政府组织来说是典型的，因为它专注于为上西地区贫困和弱势社区和个人提供医疗保健和社会服务。55
 
 - 53 https://www.facebook.com/Partnership-for-Poverty-Reduction-PPR-101033057928394，访问时间2022年2月2日。
 - 54 “扶贫伙伴关系（PPR）背负式喷雾器分发和开斋饭项目”，2018年5月30日，https://www.modernghana.com/news/857494/partnership-for-poverty-reduction-ppr-knapsack.html；“扶贫伙伴关系向农民赠送喷雾机”，2018年6月2日，https://www.graphic.com.gh/news/general-news/partnership-for-poverty-reduction-presents-spraying-machines-to-farmers.html；“法鲁克·马哈马的扶贫伙伴关系（PPR）在延迪为妇女提供金融素养培训”，2020年9月8日，https://precisenewsgh.com/farouk-mahamas-partnership-for-poverty-reduction-ppr-trains-women-in-yendi-on-financial-literacy/，访问时间2022年2月2日（2024年5月失效）。
 - 55 HealthWay基金会：目标，https://m.facebook.com/story.php?story_fbid=470771327060053&id=45203162267357&fs=0&focus_composer=0&m_entstream_source=timeline，2019年6月18日，访问时间2022年2月3日。
 
-*萨米拉赋权与人道主义项目*（SEHP）是一个由加纳第二夫人哈吉亚·萨米拉·鲍乌米亚创立并管理的非营利组织。SEHP可被定义为世俗穆斯林非政府组织，因为它寻求通过社会干预项目，不分教派背景地赋权加纳的弱势群体。其目标是支持加纳实现联合国可持续发展目标（SDG）1（无贫困）、SDG 3（良好健康与福祉）、SDG 4（优质教育）、SDG 5（性别平等）、SDG 6（清洁饮水和卫生设施）、SDG 7（经济适用的清洁能源）和SDG 17（促进目标实现的伙伴关系）。自2017年启动以来，SEHP的重点领域一直是教育、健康和妇女赋权。56 其‘盒中学校图书馆’项目迄今已针对三个地区的十七所学校；57 2021年，它为200所公立幼儿园提供了互动教科书、工作簿和教师指南，使数学学习变得有趣，并为儿童开发令人兴奋的数学课程。58 其‘安全分娩’项目包括向贫困的准妈妈分发‘分娩包’，同时向选定的医疗机构提供医疗设备和药品，以及支持在加纳各地对卫生工作者的培训和再培训。59 就妇女赋权而言，1,200名妇女于2019年受益于其乳木果赋权计划，培训她们进行优质乳木果采摘、乳木果仁生产和保存。60
+`萨米拉赋权与人道主义项目`（SEHP）是一个由加纳第二夫人哈吉亚·萨米拉·鲍乌米亚创立并管理的非营利组织。SEHP可被定义为世俗穆斯林非政府组织，因为它寻求通过社会干预项目，不分教派背景地赋权加纳的弱势群体。其目标是支持加纳实现联合国可持续发展目标（SDG）1（无贫困）、SDG 3（良好健康与福祉）、SDG 4（优质教育）、SDG 5（性别平等）、SDG 6（清洁饮水和卫生设施）、SDG 7（经济适用的清洁能源）和SDG 17（促进目标实现的伙伴关系）。自2017年启动以来，SEHP的重点领域一直是教育、健康和妇女赋权。56 其‘盒中学校图书馆’项目迄今已针对三个地区的十七所学校；57 2021年，它为200所公立幼儿园提供了互动教科书、工作簿和教师指南，使数学学习变得有趣，并为儿童开发令人兴奋的数学课程。58 其‘安全分娩’项目包括向贫困的准妈妈分发‘分娩包’，同时向选定的医疗机构提供医疗设备和药品，以及支持在加纳各地对卫生工作者的培训和再培训。59 就妇女赋权而言，1,200名妇女于2019年受益于其乳木果赋权计划，培训她们进行优质乳木果采摘、乳木果仁生产和保存。60
 
 - 56 https://sehp.sbawumia.org.
 - 57 “萨米拉赋权与人道主义项目向Play and Learn捐赠300本书
 
-#### 1.3 穆斯林名人与影响者
+### 1.3 穆斯林名人与影响者
 
-随着2010年代加纳科技创业的扩张，一批新的穆斯林宗教企业家进入了这一领域并改变了穆斯林非政府组织的格局。该群体由青年领袖、电视名人和社会媒体影响者组成。使他们结合在一起的是他们主要使用社交媒体作为倡导、联系、激励、建立网络以及动员追随者——有时被定义为成员——的主要工具，无论远近，跨越地方、区域和国家领土和边界，并催生了拥有令人印象深刻的追随者和志愿者数量的社会运动。其中最早的一个是Princess Umul Hatiyya基金会，由“摇滚的非洲女性”Umul Hatiyya Ibrahim Mahama于2008年发起，但仅活跃了几年。61 随着社交媒体在加纳的突破，其他人也随之而来：‘佐戈之星’Kansar Abdulai的HajiaPosh基金会，Hajia Wassila Mohammad的别名Queen Lady的Haske Bisa Kan Haske—Nuur fauka nuur（光之上之光），Hajia Ibrahim Sadiq的Kuburah Diamonds基金会及其Zango妇女生计与赋权项目，Issah Agyeman的Essa Ajeman慈善基金会，Issah Ibrahim Yunus别名Teacher 1B及其Teacher 1B Jihad基金会，Humu Gaage的*全民崛起倡议*及其*佐戈女孩崛起项目*和*佐戈女孩考试诊所*，Hajia Aisha Abdallah Ibrahim别名Aisha Freedom及其*姐妹聚会加纳*，以及Ibrahim Baba Maltiti的*问题共享问题解决*（PSPS）。
+随着2010年代加纳科技创业的扩张，一批新的穆斯林宗教企业家进入了这一领域并改变了穆斯林非政府组织的格局。该群体由青年领袖、电视名人和社会媒体影响者组成。使他们结合在一起的是他们主要使用社交媒体作为倡导、联系、激励、建立网络以及动员追随者——有时被定义为成员——的主要工具，无论远近，跨越地方、区域和国家领土和边界，并催生了拥有令人印象深刻的追随者和志愿者数量的社会运动。其中最早的一个是Princess Umul Hatiyya基金会，由“摇滚的非洲女性”Umul Hatiyya Ibrahim Mahama于2008年发起，但仅活跃了几年。61 随着社交媒体在加纳的突破，其他人也随之而来：‘佐戈之星’Kansar Abdulai的HajiaPosh基金会，Hajia Wassila Mohammad的别名Queen Lady的Haske Bisa Kan Haske—Nuur fauka nuur（光之上之光），Hajia Ibrahim Sadiq的Kuburah Diamonds基金会及其Zango妇女生计与赋权项目，Issah Agyeman的Essa Ajeman慈善基金会，Issah Ibrahim Yunus别名Teacher 1B及其Teacher 1B Jihad基金会，Humu Gaage的`全民崛起倡议`及其`佐戈女孩崛起项目`和`佐戈女孩考试诊所`，Hajia Aisha Abdallah Ibrahim别名Aisha Freedom及其`姐妹聚会加纳`，以及Ibrahim Baba Maltiti的`问题共享问题解决`（PSPS）。
 
-时装设计师Ibrahim Baba Maltiti于2017年创立了他的组织。与互联网时代的其他社会运动类似，总部位于库马西的*问题共享问题解决*仅在社交媒体上运营，并通过Facebook和WhatsApp上的呼吁向其成员筹集资金；其多媒体/电视频道（PSPS Media Channel）在Facebook上拥有近26,000名粉丝（截至2022年12月）。PSPS的主要目标是识别佐戈社区的问题，例如支付有需要人士的医院和/或医疗账单或为孤儿和寡妇提供支持，并从他的网络中为该事业寻求财政援助。对于其他项目，例如在延迪钻井，Ibrahim Baba Maltiti获得了法国穆斯林慈善机构Nouvelle Optique的资金，他与法国组织之间的初步联系是通过美国的一名PSPS成员建立的。62
+时装设计师Ibrahim Baba Maltiti于2017年创立了他的组织。与互联网时代的其他社会运动类似，总部位于库马西的`问题共享问题解决`仅在社交媒体上运营，并通过Facebook和WhatsApp上的呼吁向其成员筹集资金；其多媒体/电视频道（PSPS Media Channel）在Facebook上拥有近26,000名粉丝（截至2022年12月）。PSPS的主要目标是识别佐戈社区的问题，例如支付有需要人士的医院和/或医疗账单或为孤儿和寡妇提供支持，并从他的网络中为该事业寻求财政援助。对于其他项目，例如在延迪钻井，Ibrahim Baba Maltiti获得了法国穆斯林慈善机构Nouvelle Optique的资金，他与法国组织之间的初步联系是通过美国的一名PSPS成员建立的。62
 
 PSPS社交网络由加纳的Facebook粉丝组成，其中约7,000人在阿克拉，6,000人在库马西，另外还有数百人在尼日利亚、美国、沙特阿拉伯和意大利。其大部分活动局限于库马西，其中包括年度斋月开斋饭包裹的分发（2021年每天约100个包裹）以及在开斋节和宰牲节的捐赠，主要是因为这些由当地捐赠者支付。另一个当地倡议是PSPS寡妇赋权项目：该组织通过为七名寡妇购买装满软饮料的冰箱来支持她们，以此作为谋生的方式。2022年9月，Ibrahim Baba Maltiti为其组织启动了一个新的、雄心勃勃的创收项目。放弃了因原料变得过于昂贵而无法制作和销售肥皂的早期项目，新项目包括一条鲶鱼养殖场和一个蜗牛养殖场，预计在未来6个月内产生资金。63
 
-*梅里亚姆·扎卡里亚·亚哈亚基金会*（MZYF），又名Mariam基金会，在最近成立的非政府组织中脱颖而出。该基金会由Meryam Zakariya Yahya创立，她是书籍*《来自我灵魂的笔记：与精神疾病共存的现实》*（2021年）的作者，64作为解决精神疾病问题的平台
+`梅里亚姆·扎卡里亚·亚哈亚基金会`（MZYF），又名Mariam基金会，在最近成立的非政府组织中脱颖而出。该基金会由Meryam Zakariya Yahya创立，她是书籍《来自我灵魂的笔记：与精神疾病共存的现实》（2021年）的作者，64作为解决精神疾病问题的平台
 
 在与宗戈社区年轻妇女结合（临时性）人道主义救助倡议的情况下，该基金会在其愿景和使命上独一无二。65
 
@@ -1317,29 +1272,16 @@ Khalifa Faith 作为有影响力的穆斯林博主的崛起既具有症候性，
 
 ### 2 草根协会、运动和代表机构
 
-由协会、团体或运动发起的正式穆斯林倡议已存在数十年，尽管其中大多数往往局限于特定的地方或社区。它们的寿命通常相当短暂。总体趋势是志同道合的人们组成行动小组来应对特定目标，在许多情况下，是伊斯兰教育的改善甚至现代化。其他人则专注于宗戈居民的社会和经济发展，或遏制宗戈地区的政治警惕主义。关于此类（信仰为本/穆斯林）民间社会组织在加纳何时开始发展，目前知之甚少；迄今为止发现的最早痕迹可追溯到 1990 年代末，似乎与加纳公民社会的[content]
-在与宗戈社区年轻妇女结合（临时性）人道主义救助倡议的情况下，该基金会在其愿景和使命上独一无二。65
+由协会、团体或运动发起的正式穆斯林倡议已存在数十年，尽管其中大多数往往局限于特定的地方或社区。它们的寿命通常相当短暂。总体趋势是志同道合的人们组成行动小组来应对特定目标，在许多情况下，是伊斯兰教育的改善甚至现代化。其他人则专注于宗戈居民的社会和经济发展，或遏制宗戈地区的政治警惕主义。关于此类（信仰为本/穆斯林）民间社会组织在加纳何时开始发展，目前知之甚少；迄今为止发现的最早痕迹可追溯到 1990 年代末，似乎与加纳公民社会的
 
-超越所有加纳穆斯林影响者在 Facebook 粉丝数方面的是 Khalifa Faith 的和平宣教媒体（PDW），截至 2022 年 8 月拥有超过一百万粉丝，以及他的 Ali Amir 盲人基金会。66 将这些新倡议结合起来的，是它们通过社交媒体开展筹款活动来吸引大量追随者的能力。PDW 是一个非常成功的媒体渠道，在库马西办公室外的一条横幅上宣布其自身和 Ali Amir 基金会为宣教中心、古兰经课程中心、摄影中心、先知医学中心、抑郁症中心、孤儿院中心以及教育基金。它表示要支持弱势群体、盲目穆斯林以及（穆斯林）监狱囚犯，还有清真寺和经学院。此外，它还提供婚姻咨询、为孤儿提供食物储藏室，并投资于钻井和水项目。67
 
-Khalifa Faith 作为有影响力的穆斯林博主的崛起既具有症候性，也可作为如何利用社交媒体发起和运营社会福利项目和倡导运动的范例。“当 Facebook 推出视频和 Facebook 直播时，一种被称为宗戈博主的现象出现了，”他的朋友兼穆斯林博主 Sabit Ali 在 2022 年 1 月发布的一篇悼文中指出：“[Khalifa Faith] 是宗戈博主之一 [...] 他选择将自己的博客提升到下一个层次，通过帮助宗戈社区中的贫穷和弱势群体。”68 Lean On Me Foundation（LOMEF）首席执行官 Sheikh Firdaus Ladan 在 2021 年 7 月颁发 LOMEF 嘉许奖时赞扬了他的行动并称赞了他：
 
 > > 为了您对人类的福祉和改善的奉献、韧性、无差别和坚定不移的承诺，Lean On Me Foundation 代表您在非洲和全世界拯救的生命，谨感谢您每天所做的如此不懈和 jannatic [sic] 的工作。您拯救的人们以及全世界都非常感激您所做的慈善工作，请继续保持并永远蒙福。69
 
 ### 2 草根协会、运动和代表机构
 
-由协会、团体或运动发起的正式穆斯林倡议已存在数十年，尽管其中大多数往往局限于特定的地方或社区。它们的寿命通常相当短暂。总体趋势是志同道合的人们组成行动小组来应对特定目标，在许多情况下，是伊斯兰教育的改善甚至现代化。其他人则专注于宗戈居民的社会和经济发展，或遏制宗戈地区的政治警惕主义。关于此类（信仰为本/穆斯林）民间社会组织在加纳何时开始发展，目前知之甚少；迄今为止发现的最早痕迹可追溯到 1990 年代末，似乎与加纳公民社会的[content]
-在与宗戈社区年轻妇女结合（临时性）人道主义救助倡议的情况下，该基金会在其愿景和使命上独一无二。65
+由协会、团体或运动发起的正式穆斯林倡议已存在数十年，尽管其中大多数往往局限于特定的地方或社区。它们的寿命通常相当短暂。总体趋势是志同道合的人们组成行动小组来应对特定目标，在许多情况下，是伊斯兰教育的改善甚至现代化。其他人则专注于宗戈居民的社会和经济发展，或遏制宗戈地区的政治警惕主义。关于此类（信仰为本/穆斯林）民间社会组织在加纳何时开始发展，目前知之甚少；迄今为止发现的最早痕迹可追溯到 1990 年代末，似乎与加纳公民社会的
 
-超越所有加纳穆斯林影响者在 Facebook 粉丝数方面的是 Khalifa Faith 的和平宣教媒体（PDW），截至 2022 年 8 月拥有超过一百万粉丝，以及他的 Ali Amir 盲人基金会。66 将这些新倡议结合起来的，是它们通过社交媒体开展筹款活动来吸引大量追随者的能力。PDW 是一个非常成功的媒体渠道，在库马西办公室外的一条横幅上宣布其自身和 Ali Amir 基金会为宣教中心、古兰经课程中心、摄影中心、先知医学中心、抑郁症中心、孤儿院中心以及教育基金。它表示要支持弱势群体、盲目穆斯林以及（穆斯林）监狱囚犯，还有清真寺和经学院。此外，它还提供婚姻咨询、为孤儿提供食物储藏室，并投资于钻井和水项目。67
-
-Khalifa Faith 作为有影响力的穆斯林博主的崛起既具有症候性，也可作为如何利用社交媒体发起和运营社会福利项目和倡导运动的范例。“当 Facebook 推出视频和 Facebook 直播时，一种被称为宗戈博主的现象出现了，”他的朋友兼穆斯林博主 Sabit Ali 在 2022 年 1 月发布的一篇悼文中指出：“[Khalifa Faith] 是宗戈博主之一 [...] 他选择将自己的博客提升到下一个层次，通过帮助宗戈社区中的贫穷和弱势群体。”68 Lean On Me Foundation（LOMEF）首席执行官 Sheikh Firdaus Ladan 在 2021 年 7 月颁发 LOMEF 嘉许奖时赞扬了他的行动并称赞了他：
-
-> > 为了您对人类的福祉和改善的奉献、韧性、无差别和坚定不移的承诺，Lean On Me Foundation 代表您在非洲和全世界拯救的生命，谨感谢您每天所做的如此不懈和 jannatic [sic] 的工作。您拯救的人们以及全世界都非常感激您所做的慈善工作，请继续保持并永远蒙福。69
-
-### 2 草根协会、运动和代表机构
-
-由协会、团体或运动发起的正式穆斯林倡议已存在数十年，尽管其中大多数往往局限于特定的地方或社区。它们的寿命通常相当短暂。总体趋势是志同道合的人们组成行动小组来应对特定目标，在许多情况下，是伊斯兰教育的改善甚至现代化。其他人则专注于宗戈居民的社会和经济发展，或遏制宗戈地区的政治警惕主义。关于此类（信仰为本/穆斯林）民间社会组织在加纳何时开始发展，目前知之甚少；迄今为止发现的最早痕迹可追溯到 1990 年代末，似乎与加纳公民社会的[content]
 在与宗戈社区年轻妇女结合（临时性）人道主义救助倡议的情况下，该基金会在其愿景和使命上独一无二。65
 
 超越所有加纳穆斯林影响者在 Facebook 粉丝数方面的是 Khalifa Faith 的和平宣教媒体（PDW），截至 2022 年 8 月拥有超过一百万粉丝，以及他的 Ali Amir 盲人基金会。66 将这些新倡议结合起来的，是它们通过社交媒体开展筹款活动来吸引大量追随者的能力。PDW 是一个非常成功的媒体渠道，在库马西办公室外的一条横幅上宣布其自身和 Ali Amir 基金会为宣教中心、古兰经课程中心、摄影中心、先知医学中心、抑郁症中心、孤儿院中心以及教育基金。它表示要支持弱势群体、盲目穆斯林以及（穆斯林）监狱囚犯，还有清真寺和经学院。此外，它还提供婚姻咨询、为孤儿提供食物储藏室，并投资于钻井和水项目。67
@@ -1429,6 +1371,8 @@ FOMWAG由多个地方性的正式和非正式团体与协会组成。其中较�
 
 82. https://www.facebook.com/fomwagghana/，2020年8月13日，访问于2021年9月27日。
 
+
+
 83. YouTube视频链接，https://www.youtube.com/watch?v=WLigydwOy2o，2020年8月15日，访问于2021年9月27日。
 
 84. https://www.facebook.com/fomwagghana/，2020年8月13日，访问于2021年9月27日。
@@ -1445,19 +1389,24 @@ FOMWAG由多个地方性的正式和非正式团体与协会组成。其中较�
 
 90. https://www.annisaafoundation.org/what-we-do/，访问于2022年1月25日。
 
-
-
 2016年和2017年，该组织因在麦地那中央清真寺举办开斋节游乐会，¹⁰¹ 以及在社交媒体上发起倡导使用*希贾布*和*尼卡布*的运动而登上头条新闻。¹⁰² 其赋权女性的主要活动是提供缝纫、肥皂制作、消毒剂制作和杀菌消毒方面的辅导和培训项目。¹⁰³ *达瓦项目*（ODP）于2016年和2017年在阿克拉和库马西举办了类似的技能发展工作坊。¹⁰⁴ 2017年成立的*穆斯林女性指导网络*（MMN）的使命是为年轻的穆斯林女孩提供指导，并帮助她们追求高等教育；¹⁰⁵ 其目标是到2050年在加纳全国的每一所学校和每一个城镇建立职业咨询中心，并随后推广到整个非洲。¹⁰⁶ 到目前为止，总部位于阿克拉的MMN已扩展到库马西、塔科拉迪和塔马利。¹⁰⁷ 结合2020年国际妇女节，MMN在Facebook上发布了一篇谴责教师、长辈、同学和家人性骚扰女孩的强烈抗议，敦促穆斯林女性与这一社会毒瘤作斗争：
 
 > 确保这个国家的女性和年轻女孩在自己的环境中感到安全。行动的时刻就是现在。发声的时刻就是现在。不再让受害者沉默，不再指责受害者。¹⁰⁸
 
 - 101. https://www.facebook.com/Islamic-Centre-For-Future-Women-1763674863848125/?ref=page_internal，新闻报道视频发布于2016年8月3日和2017年8月9日，访问于2021年9月29日。ICFW于2014年组织了首届游乐会（见2016年8月1日的Facebook帖子）。Facebook上没有关于2018年及以后活动的记录。
+
 - 102. https://www.facebook.com/Islamic-Centre-For-Future-Women-1763674863848125/?ref=page_internal，2016年10月9日，访问于2021年9月29日。
+
 - 103. https://www.facebook.com/Islamic-Centre-For-Future-Women-1763674863848125/?ref=page_internal，2017年11月15日、2019年7月28日，访问于2021年9月29日。
+
 - 104. https://www.facebook.com/One-Daawah-Project-ODP-1422770657848480，2017年12月22日、2018年1月3日，访问于2022年8月5日。工作坊专注于制作以下产品：液体肥皂、沐浴露、条皂、漂白粉状肥皂、洗发水、护发素、冰淇淋饼干、肉馅饼、蛋糕、薯片、甜甜圈、鞋油、婴儿润肤露、凡士林、身体乳、热巧克力润肤露和化妆品。
+
 - 105. 《穆斯林女性指导网络（MMN）章程》，于2019年6月的一次全体会议上通过，可在 https://muslimahmentorshipnetwork.com/wp-content/uploads/2019/04/MuslimahMentorshipNetworkConstitution.pdf 查阅，访问于2021年7月28日。
+
 - 106. https://www.facebook.com/NetworkMuslimah/photos/787590905399198，2020年11月2日，访问于2021年10月5日。
+
 - 107. https://www.facebook.com/NetworkMuslimah/photos/541673649990926，2019年11月25日，访问于2021年10月5日。
+
 - 108. https://www.facebook.com/NetworkMuslimah/photos/620000078824949，2020年3月8日，访问于2021年10月5日。
 
 另一个由穆斯林女性建立和运营的公民社会组织是总部位于阿克拉的年轻女性领袖网络（YWLN），也被称为“年轻女性领袖成就者网络”。尽管其形象和公开面貌是非宗派性的，但其健康教育和个人发展项目面向贫困城乡社区中的穆斯林女孩和年轻女性。2017年，YWLN启动了其月经卫生管理项目，旨在消除女孩和男孩中围绕月经的污名化，并培训女孩使用可重复利用的布料制作卫生巾。两年后，它发起了一项广泛的运动——“送给女童一片卫生巾”，并宣布其雄心是向大阿克拉地区郊区和农村学校的10至15岁女孩分发10,000片免费卫生巾。109 2021年，它通过巡回访问阿散蒂、北部和东北部地区的学校，扩展了其月经卫生管理教育。110
@@ -1469,17 +1418,22 @@ Awdad基金会于2022年为穆斯林女性安排了职业和指导项目。114 �
 *姐妹聚会*是另一个为女性开展倡导和意识提升项目的团体。其关键目标是解决健康问题，包括镰状细胞病、乳腺癌和宫颈癌、植树、清理院落以及家庭暴力。这个拥有200名成员的团体于2017年7月作为一个讨论小组成立，由穆斯林意见领袖Hajia Aisha Abdallah Ibrahim（又名Aisha Freedom）领导。迄今为止，该团体尚未申请注册，尽管它计划在不久的将来这样做（届时将更名）。该团体拥有全国性成员，主要依靠社交媒体和Zoom运作。它参与跨宗教对话，并提供斋月救济包。后一个项目始于2019年，与Al-Qalam研究所和穆斯林非政府组织萨达卡列车（Sadaqa Train）合作；2022年，姐妹聚会成功支持了阿克拉内外的150个家庭。该团体还计划支持孤儿和寡妇。2022年，它收到来自沙特阿拉伯的捐款，在阿克拉组织了一次乳腺癌筛查。然而，其主要活动是定期举行的月度会议。这些会议部分以线下活动的形式组织，活动费用由Aisha Freedom承担（因为该团体没有资金支付租金等）。参与女性的反馈非常积极，Aisha Freedom设想她的组织建立一个穆斯林女性中心来应对家庭暴力。¹¹⁷
 
 - 109 https://ywlngh.org/category/project/；https://youngwln.wordpress.com/。
+
 - 110 https://www.facebook.com/youngwomenlenetwork/，2021年5月7日，访问于2022年1月16日。
+
 - 111 https://www.facebook.com/eemaanempowered，2021年8月24日，访问于2022年8月5日。
+
 - 112 https://www.facebook.com/ZangoWomenLivelihoodAndEmpowermentProgramme，访问于2022年8月5日。
+
 - 113 加纳新闻社，《赞戈社区之声在Dodowa、Rahama镇培训妇女》，2023年2月14日，https://www.facebook.com/newsservicegh/posts/pfbid023XYbdbEnHoRvLWrY7KZT9grBExe6YNBzQwircpvBLpwrhEJEvJdVk4EsNmTKQNI，访问于2023年8月17日。
+
 - 114 https://www.facebook.com/AWDAD-Foundation-11025017988303，访问于2022年8月5日。迄今为止，该组织已安排了两个在线指导项目，第一个从2月到6月，第二个从2022年7月到9月。
 
 - 115 穆斯林女性从教组织获得全球非洲女性网络认可，2022年12月10日，https://www.facebook.com/muslimwomeninteaching，访问于2023年8月17日。
+
 - 116 https://www.facebook.com/HumanitarianHeadway，2020年12月21日，访问于2022年8月5日。
+
 - 117 对Hajia Aisha Abdallah Ibrahim（又名Aisha Freedom）的采访，阿克拉，2022年10月15日。
-
-
 
 *理想穆斯林女性网络* (IMN) 是年轻穆斯林女性社区的一个例子，在阿克拉、库马西和塔马利设有分支。自2020年起在阿散蒂地区农村村庄开展外展项目后，该网络于2021年更名为 *乡村连接非洲基金会* (VCA)。其使命是改善贫困农村社区孤儿和寡妇的生活，并为他们提供优质医疗、清洁饮水、教育、清真寺、食物和衣物。其年度活动包括探访孤儿院和监狱。118 该基金会从其成员处筹集部分资金以及全部捐款。119 IMN/VCA 在阿散蒂地区阿布姆村运营一所乡村马卡兰塔，并在该村修建了一座清真寺。120 此外，它还在社交媒体上组织临时募捐以帮助有需要的人，例如成功发起筹集 GHS 3,500（约 370 美元）为一名妇女支付子宫肌瘤切除手术费用的呼吁。德国非政府组织 Ansaar International E.V. 与加纳穆斯林非政府组织 Peace Dawah Media 和 Paragon Foundation 一起赞助了其后续项目，例如在阿散蒂地区农村村庄钻井。121
 
@@ -1494,23 +1448,34 @@ Awdad基金会于2022年为穆斯林女性安排了职业和指导项目。114 �
 Ideal Muslimah（TIM）是当地穆斯林非政府组织中的一个新成员，由一位专注于穆斯林女孩和妇女的穆斯林女性活动家创立。由 Hajia Fatimatu Sahabi 发起，TIM 最初是科特卡斯特地区年轻穆斯林女性活动家之间的社交网络。2021年3月成立后，关于一家新穆斯林非政府组织的新闻在社交媒体上传播。137 TIM 的雄心是在全国层面运营并启动项目以
 
 124 "童婚意识项目帮助塔马利的年轻女孩培养技能," 15.6.2022, https://www.myjoyonline.com/child-marriage-awareness-project-helps-young-girls-grow-skills-in-tamale/, 访问于 5.8.2022.
+
 125 Abdulai Majeed, "Tiyumba 希望基金会在北部地区召集青年参加其青少年峰会," 13.4.2021, https://diamondfmonline.com/tiyumba-hope-foundation-rallies-youth-in-the-northern-region-to-its-teens-summit/; "2022年塔马利地区青少年峰会举行," 1.6.2022, https://dailyguidenetwork.com/2022-regional-teens-summit-held-in-tamale/, 访问于 5.8.2022.
+
 126 "利益相关者制定战略遏制青少年怀孕," 17.10.2014, https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Stakeholders-to-curb-teenage-pregnancies-330812; "年轻女孩需要生殖健康教育——团体," 26.9.2014, https://newsghana.com.gh/young-girls-need-education-on-reproductive-health-group/; "护理母亲被敦促实行纯母乳喂养," 15.9.2016, https://www.modernghana.com/news/719827/practice-exclusive-breast-feeding-nursing-mothers-urged.html, 访问于 5.8.2022.
+
 127 https://www.facebook.com/Pagba-SAHA-on-GTV-280247575329116/, 访问于 5.8.2022.
-128 Christabel Addo, "加纳传统统治者承诺支持消除性别暴力," 30.11.2019, http://ghheadlines.com/agency/ghana-news-agency/20191130/132859347/ghanas-traditional-rulers-pledges-support-to-zero-gender-based-violence, 访问于 5.8.2022.
-129 https://www.facebook.com/zaman2000.
-130 https://www.facebook.com/Yamboni-Foundation-17268396004516/.
-131 https://www.facebook.com/Yamboni-Foundation-172683960045116/, 12.8.2020, 访问于 5.8.2022.
-132 https://www.facebook.com/172683960045116/photos/a.172696200043892/631092504204257/?type=3&theater, 27.7.2020, 核查 30.11.2020.
-133 https://www.facebook.com/Yamboni-Foundation-172683960045116/, 8.6.2022, 访问于 5.8.2022.
-134 https://www.facebook.com/Dansaba-Foundation-Ghana-104420034759980, 22.12.2020, 访问于 5.8.2022.
-135 https://www.facebook.com/Aliffghana.
-136 “穆斯林女性接受职业指导,” 23.8.2012, https://www.modernghana.com/news/413063/female-muslims-receive-career-guidance.html, 访问于 5.8.2022.
-137 https://www.facebook.com/ideal.muslimah.3152, 发布于 12.4.2021. 有趣的是，关于 TIM 包括该团体愿景和使命的文本的新闻已于2021年3月在社交媒体上传播，其中一篇于11.3.2021发布在 Hijab Tranz Gh（https://www.facebook.com/felujah/）的 Facebook 账号上，发布于11.3.2021。TIM 在此时尚未激活其自己的 Facebook 账号！
 
 
 
+128 Christabel Addo, "加纳传统统治者承诺支持消除性别暴力," 30.11.2019, `http://ghheadlines.com/agency/ghana-news-agency/20191130/132859347/ghanas-traditional-rulers-pledges-support-to-zero-gender-based-violence`, 访问于 5.8.2022.
 
+129 `https://www.facebook.com/zaman2000`.
+
+130 `https://www.facebook.com/Yamboni-Foundation-17268396004516/`.
+
+131 `https://www.facebook.com/Yamboni-Foundation-172683960045116/`, 12.8.2020, 访问于 5.8.2022.
+
+132 `https://www.facebook.com/Yamboni-Foundation-172683960045116/photos/a.172696200043892/631092504204257/?type=3&theater`, 27.7.2020, 核查 30.11.2020.
+
+133 `https://www.facebook.com/Yamboni-Foundation-172683960045116/`, 8.6.2022, 访问于 5.8.2022.
+
+134 `https://www.facebook.com/Dansaba-Foundation-Ghana-104420034759980`, 22.12.2020, 访问于 5.8.2022.
+
+135 `https://www.facebook.com/Aliffghana`.
+
+136 “穆斯林女性接受职业指导,” 23.8.2012, `https://www.modernghana.com/news/413063/female-muslims-receive-career-guidance.html`, 访问于 5.8.2022.
+
+137 `https://www.facebook.com/ideal.muslimah.3152`, 发布于 12.4.2021. 有趣的是，关于 TIM 包括该团体愿景和使命的文本的新闻已于2021年3月在社交媒体上传播，其中一篇于11.3.2021发布在 Hijab Tranz Gh（`https://www.facebook.com/felujah/`）的 Facebook 账号上，发布于11.3.2021。TIM 在此时尚未激活其自己的 Facebook 账号！
 
 穆斯林女孩在精神、经济、职业、身体、心理和社会方面的发展，包括伊斯兰教育、经济赋权和技能习得，以及为初创企业、健康、食品和营养教育筹集资金。此外，人道主义（临时）支持项目还包括探访医院、学校和贫困社区。[^138]
 
@@ -1518,7 +1483,7 @@ Ideal Muslimah（TIM）是当地穆斯林非政府组织中的一个新成员，
 
 最后，纳夫特斯基金会（Nafthess Foundation）总部位于博尔加坦加，在北部地区开展活动。该组织由纳菲萨·阿尔哈桑（Nafisah Alhassan）创立，其活动始于2016年和2017年向上东地区和上西地区的农村学校捐赠物资。2018年，它发起了"女童教育与妇女赋权更新计划"，并协助上东地区农村村庄办理健康保险卡登记。一年后，它在巴乌库地区发起了一项经期卫生意识宣传活动。此外，它还组织了每年一度的斋月"扶贫日"活动。[^143]
 
-#### 2.2 萨拉菲、提加尼和非教派达瓦（宣教）组织
+## 2.2 萨拉菲、提加尼和非教派达瓦（宣教）组织
 
 大多数穆斯林非政府组织，无论注册与否，都是达瓦（宣教）组织。它们的数量在过去十年中似乎激增，表明加纳穆斯林领域的非政府组织化进程仍在继续（图13）。它们中的大多数在开斋饭、斋月和古尔邦节/宰牲节筹款活动中使用社交媒体，例如总部位于塔科拉迪的逊奈豪萨救济组织，[^144] 总部位于阿克拉的伊玛-安拉基金会，[^145] 总部位于阿克拉的希望之路，[^146] 或总部位于塔马利的伊斯兰基金会中心，[^147] 仅举数例。
 
@@ -1534,42 +1499,39 @@ Ideal Muslimah（TIM）是当地穆斯林非政府组织中的一个新成员，
 
 许多此类地方达瓦组织是当地伊玛目和活动人士在社交媒体上为清真寺、宗教学校、小学/初中校舍、水井钻探项目和人道主义救济筹集外部捐款和资金的尝试，例如当地达瓦组织伊斯兰援助加纳（Islamic Aid Ghana）[^154] 所做的此类尝试。
 
-[^138]: "我们的产品供应/使命"，https://www.facebook.com/felujah/photos/a.277352365981897/1333105850406538，2021年3月11日，访问于2021年9月29日。有趣的是，TIM的Facebook账户上找不到愿景/使命文本！
+[^138]: "我们的产品供应/使命"，`https://www.facebook.com/felujah/photos/a.277352365981897/1333105850406538`，2021年3月11日，访问于2021年9月29日。有趣的是，TIM的Facebook账户上找不到愿景/使命文本！
 
-[^139]: https://www.facebook.com/Esidofficial，2019年5月8日，2021年5月12日，访问于2022年8月5日。
+[^139]: `https://www.facebook.com/Esidofficial`，2019年5月8日，2021年5月12日，访问于2022年8月5日。
 
-[^140]: https://www.facebook.com/Esidofficial，2019年3月2日，2019年11月1日，访问于2022年8月5日。
+[^140]: `https://www.facebook.com/Esidofficial`，2019年3月2日，2019年11月1日，访问于2022年8月5日。
 
-[^141]: https://www.facebook.com/Esidofficial，2020年4月2日，访问于2022年8月5日。
+[^141]: `https://www.facebook.com/Esidofficial`，2020年4月2日，访问于2022年8月5日。
 
-[^142]: https://www.facebook.com/Esidofficial，2020年8月31日，访问于2022年8月5日。
+[^142]: `https://www.facebook.com/Esidofficial`，2020年8月31日，访问于2022年8月5日。
 
-[^143]: https://www.facebook.com/NafthessfoundationGhana.
+[^143]: `https://www.facebook.com/NafthessfoundationGhana`.
 
-[^144]: https://www.facebook.com/SUNNA-HAUSA-Relief-Organization-122639568466788/，2018年7月4日，访问于2021年12月30日。
+[^144]: `https://www.facebook.com/SUNNA-HAUSA-Relief-Organization-122639568466788/`，2018年7月4日，访问于2021年12月30日。
 
-[^145]: https://www.facebook.com/MUASSAIMA.
+[^145]: `https://www.facebook.com/MUASSAIMA`.
 
-[^146]: https://www.facebook.com/hoperoad20.
+[^146]: `https://www.facebook.com/hoperoad20`.
 
-[^147]: https://m.facebook.com/Islamic-Foundation-Centre-Ghana-107079227466612/.
+[^147]: `https://m.facebook.com/Islamic-Foundation-Centre-Ghana-107079227466612/`.
 
-[^148]: 另见 https://www.facebook.com/Paragon-Foundation-972936829397174/ 和 https://www.facebook.com/fatimafaridaacademy/，访问于2022年1月12日。
+[^148]: 另见 `https://www.facebook.com/Paragon-Foundation-972936829397174/` 和 `https://www.facebook.com/fatimafaridaacademy/`，访问于2022年1月12日。
 
 [^149]: 对谢赫·阿卜杜勒·纳西尔-丁的采访，库马西，2017年12月12日。
 
-[^150]: 另见 http://www.imamzaitun.com/ 和 https://www.facebook.com/Zaitun-Center-for-Education-and-Charitable-Services-1739132076385280/。
+[^150]: 另见 `http://www.imamzaitun.com/` 和 `https://www.facebook.com/Zaitun-Center-for-Education-and-Charitable-Services-1739132076385280/`。
 
-[^151]: https://www.facebook.com/FIFghanaBA.
+[^151]: `https://www.facebook.com/FIFghanaBA`.
 
-[^152]: 哈桑·南克韦（Hassan Nankwe），"赋权穆斯林女孩（EMG）俱乐部在苏尼亚尼启动"，2019年2月24日，https://www.modernghana.com/news/917707/empowered-muslim-girl-emg-club-launched-in-sunya.html，访问于2021年7月25日。
+[^152]: 哈桑·南克韦（Hassan Nankwe），"赋权穆斯林女孩（EMG）俱乐部在苏尼亚尼启动"，2019年2月24日，`https://www.modernghana.com/news/917707/empowered-muslim-girl-emg-club-launched-in-sunya.html`，访问于2021年7月25日。
 
-[^153]: Hutuba——布道真人秀，https://www.facebook.com/Sufilifefoundation，访问于2022年8月2日。
+[^153]: Hutuba——布道真人秀，`https://www.facebook.com/Sufilifefoundation`，访问于2022年8月2日。
 
-[^154]: "我们需要资金在加纳学校建造清真寺"，2015年5月25日，https://www.facebook.com/Islamic-AID-GHANA-26077845416244/，访问于2016年1月26日；自2016年以来Facebook上无更新。
-
-
-
+[^154]: "我们需要资金在加纳学校建造清真寺"，2015年5月25日，`https://www.facebook.com/Islamic-AID-GHANA-26077845416244/`，访问于2016年1月26日；自2016年以来Facebook上无更新。
 
 在阿特布布，与位于奥布瓦西的 *Urbanhive Charity Foundation*，¹⁵⁵ 或 *Al-Muslim Foundation Ghana*。¹⁵⁶ 一些组织成功地从外部/外国捐助者（通常是沙特慈善家）为其项目筹集资金。其中包括位于库马西的 *Al-Imam Charity Foundation*、位于恩斯瓦姆的 *Darus Salaam Humanitarian Foundation*，以及位于苏尼扬尼的 *Al-Islah Humanitarian Foundation*，用于其钻井和水井项目。¹⁵⁷ 位于塔马利的 *Lights of Guidance and Humanity Foundation* 则是一个第二代 *dawatist* 组织的例子，因为它既依靠外国捐助者，也自2021年起为组织其前往北部地区农村村庄的斋月 Daʿwah 巡回活动筹集自己的资金。¹⁵⁸ 谢赫哈比卜·穆罕默德·巴巴古纳的 *Qawiyun AMIN Foundation* 则在 Facebook 上用阿拉伯语、英语和土耳其语发布了为奖学金、清真寺和水项目筹集资金的请求，并成功从土耳其非政府组织获得捐款，用于在埃朱拉/塞基杜马塞区各个城市和农村社区钻井。¹⁵⁹
 
@@ -1581,27 +1543,45 @@ Ideal Muslimah（TIM）是当地穆斯林非政府组织中的一个新成员，
 
 > 在一个权力被少数精英主导的世界里，在一个资源被支配者——显而易见的是政治家——掌控的社区里，每个人似乎都放纵了。当某人自任治理职位时，当事情进展不顺利时，他/她理应被追究责任。对这种立场进行批评并不完全是错误的。然而，我们需要改变这一点，使其不再成为日常秩序。确实，当我们面临众多棘手问题时，这还能持续多久。我们未能承认和欣赏我们在与我们社区欠发展状态作斗争中所拥有的能力；我们的 educa-
 
-155. https://www.facebook.com/Urbanhive-Charity-Foundation-11661860639167.
+155. `https://www.facebook.com/Urbanhive-Charity-Foundation-11661860639167`.
+
+
+
 156. Al-Muslim Foundation Ghana：“我们旨在帮助穆斯林社区在伊斯兰方面发展——建造清真寺、伊斯兰教育、奖学金、钻井等，” https://www.facebook.com/Al-Muslim-Foundation-GHANA-404459083670757，于 3.1.2022 访问。 Facebook 账户不包含任何帖子。
+
 157. 关于 Al-Imam Charity Foundation，参见带有铭牌/路标告知其捐助者的已完工水井照片，例如 23.6.2021，https://www.facebook.com/alimancharityfoundation/photos/pcb.208826037768307/208824934435084，https://www.facebook.com/alimancharityfoundation/photos/pcb.208826037768307/2088248310... 均于 25.8.2021 访问。关于 Darus Salaam Humanitarian Foundation 的水项目，参见 https://www.facebook.com/Darus-Salaam-Humanitarian-Foundation-281529848467177，5.5.2019 和 6.5.2019，于 30.12.2021 访问。关于 Al-Islah Humanitarian Foundation，参见 https://www.facebook.com/Al-Islah-humanitarian-foundation-Ghana-100215518087377/，2.11.2019，于 3.1.2022 访问。
+
 158. https://www.facebook.com/Lights-of-Guidance-Humanity-Foundation-...
+
 159. https://www.facebook.com/qawiyunaminf/，4.6.2020，5.6.2020，27.9.2021，2.12.2021 于 2.8.2022 访问。
+
 160. 参见 https://www.facebook.com/106080131094295/photos/pb.100057422140647.-220752000/155155642853410/?type=3，1.8.2020，于 27.5.2024 访问。
+
 161. Nurul Bayaan 项目（高级中学、孤儿院、诊所和清真寺）的介绍，视频（豪萨语）7.7.2021，https://www.facebook.com/106080131094295/videos/836374280417238，于 11.9.2021 访问。
+
 162. https://www.facebook.com/Ghana-Islamic-Youth-Foundation-143751339162890；https://www.facebook.com/profile.php?id=100064802853768（Abofu Faila Youth Association），于 24.8.2022 访问。
+
 163. https://www.facebook.com/FORMYGHANA/，于 23.8.2019 访问。该团体主要在2015年和2016年在 Facebook 上活跃，此后偶尔更新。
+
 164. https://www.facebook.com/Banu-Abdalla-Faida-1530194497096201/.
+
 165. https://www.facebook.com/BayedoEverything/?ref=page_internal.
+
 166. https://www.facebook.com/YMYRF/.
+
 167. https://www.facebook.com/Dawahstorm。关于 Imoru Sadat 的 Facebook 账户，参见 https://www.facebook.com/profile.php?id=100044449881575。
+
 168. https://www.facebook.com/IERA-GHANA-111394317313530；https://iera.org/about/.
+
 169. https://www.facebook.com/shafazongoyouthfoundation/；Facebook 上的海报，https://www.facebook.com/shafazongoyouthfoundation/photos/a.100465635518438/256200272878306，26.3.2021，于 12.8.2021 访问。
+
 170. https://www.facebook.com/Network-for-Zongo-Transformation-Ghana-101950703206082，于 24.8.2022 访问。
+
 171. https://www.facebook.com/Ahlusunnah-Youth-Association-101484918189603，于 24.8.2022 访问。
+
 172. https://m.facebook.com/CMY2015/；公告“Zongo Youth Re-Awakening Summit 2019”的海报，29.12.2018，https://www.facebook.com/crfgh/photos/ecnf.100002031752923/2539894112748717/，于 24.8.2022 访问。然而，似乎 CMY 在峰会后不久就停止了活动，因为其 Facebook 账户的最后一次更新来自2019年10月。
+
 173. https://www.facebook.com/MYAUWR/，于 10.8.2021 访问。
-
-
 
 国家机构、卫生设施、应急救护车服务不可用，等等。我们至多不过是舒舒服服地坐在营地里，把责任推给我们的领导人——总统及其任命官员、意见领袖、神职人员以及其他身居领导职位的人。然而，我们总是没有责备自己。坐在营地里抱怨的你，用手机读到这篇文章的你，问问自己：“我为穆斯林同胞的生活做了些什么？我为社区的发展在经济上付出了什么？”174
 
@@ -1623,7 +1603,9 @@ Ideal Muslimah（TIM）是当地穆斯林非政府组织中的一个新成员，
 与AMYDA类似，许多穆斯林青年协会和组织在2020年和2021年新冠疫情期间在全国各地开展了广泛活动。如前所述，2020年春季的封锁导致非官方团体和网络与既有协会一起，利用社交媒体，尤其是Facebook，作为其沟通和互动的主要工具，尤其是在斋月开斋饭和开斋节活动中（另见第3.1章）。其中一些组织发起了为抗击新冠病毒提供免费消毒剂筹集资金的活动，或利用Facebook传播有关该病毒以及如何保护自己的信息。其中一个组织是位于海岸角（Cape Coast）的萨拉菲青年组织加纳伊斯兰圣战基金会（GISJF；自2021年8月起称为加纳伊斯兰慈善基金会，GISF），该组织于2021年3月初在Facebook上发布了此类呼吁。181 然而，在进行了一些临时活动后，该组织重新回到达瓦活动，于2021年秋季与伊斯兰圣训频道（ASWAJ）合作，此后一直推广其在线电视节目和视频。182
 
 179 捐款呼吁，https://m.facebook.com/101892801512288/photos/a.10190704484497/106414881060080/?type=3&source=48，发布于2020年4月30日，访问于2021年8月2日。
+
 180 https://www.facebook.com/Association-of-Muslim-Youth-for-Dawah-101892801512288，2020年5月10日，2020年5月16日，访问于2022年8月24日。
+
 181 https://www.facebook.com/GISF-Ghana-Islamic-sadaqqa-foundation-10624879427932/，2021年3月6日，访问于2022年8月24日。
 
 上文和先前提到的大多数捐款呼吁和项目都与加纳的萨拉菲派或非苏非派群体和社区有关。苏非派社区，如加纳提加尼穆斯林运动（TMG），在通过社交媒体公开呼吁捐款来调动资金方面是后来者。然而，这一情况在扎伊姆（Zaeem，主席）谢赫阿卜杜勒·瓦杜德·哈伦（Sheikh Abdul Wadud Harun）的领导下发生了改变，他于2009年在阿散蒂地区埃吉苏（Ejisu）附近的阿索科雷（Asokore）建立了提加尼高级中学。183 此外，TMG还建立了主页并开设了Facebook账户，于2018年8月发起了一项在线活动（2021年9月重新激活），为提加尼高级中学的基础设施扩建、在大阿克拉地区阿金·科托库（Agyin Kotoku）建设和建立提加尼教育综合体，以及建设计划中的加纳提加尼大学学院筹集捐款。184
@@ -1631,23 +1613,24 @@ Ideal Muslimah（TIM）是当地穆斯林非政府组织中的一个新成员，
 另一个提加尼社区——Jallo Tijānīyya（加纳提加尼穆斯林理事会），也在谢赫哈利法·艾哈迈德·阿布勒·法伊德·迈卡诺（Sheikh Khalifa Ahmad Abul-Faid Maikano）的领导下，并于2015年成立谢赫阿卜杜拉·迈卡诺慈善基金会之后，开始公开筹集资金。与TMG类似，Jallo Tijānīyya的捐款呼吁主要涉及教育设施和综合体的建设，例如普朗（Prang）的一所职业培训学院。185 提加尼穆斯林理事会在2019年年度圣纪（Mawlid）期间宣布了这个名为“谢赫阿卜杜拉希·艾哈迈德·迈卡诺教育综合体”（Sheikh Abdullahi Ahmed Maikano Education Complex）的项目。项目最终落地的具体步骤始于2022年2月，当时在建筑工地举行了破土动工仪式，最终向其成员发出了捐款呼吁。186
 
 182 伊斯兰圣训频道位于 https://www.facebook.com/ISC-Online-TVradio-6o6783713310150。
+
 183 Atiku Iddrisu，“加纳：提加尼开展教育项目”，2006年7月19日，https://allafrica.com/stories/200607190835.html，访问于2019年5月14日；http://www.tijjaniyamuslimsgh.org/photos?gallery_id=156a445688bc3&pn=2
+
 184 http://www.tijjaniyamuslimsgh.org/events?event_id=15b4b8c88a38a0a&pn=3，访问于2019年5月14日。该主页此后已失效。更新通过Facebook进行，例如，“重要公告”，2021年9月10日，https://www.facebook.com/profile/100022272312293，访问于2024年5月27日。
+
 185 https://www.facebook.com/jalloNgo/photos/pcb.1838774063069437/1838773919736118/?type=3&theater，访问于2019年5月14日。
+
 186 “纳纳·法尼亚纳马（Nana Fanyinama）为谢赫阿卜杜拉·迈卡诺教育综合体的建设捐款”，https://business.facebook.com/pg/Jallottv/posts/?ref=page_internal，2022年1月24日；谢赫阿卜杜拉·艾哈迈德·迈卡诺教育综合体破土动工邀请，包括综合体的建筑图纸，https://business.facebook.com/pg/Jallottv/posts/?ref=page_internal，2022年1月24日，访问于2022年2月3日。
 
 2019年11月，*Jallo青年服务组织*（JYKO）创始人兼主席谢赫海鲁·阿卜杜拉·迈卡诺（Sheikh Khairu Abdullahi Maikano）敦促世界各地的Jallo提加尼青年加入并支持JYKO的健康教育和健康促进活动。187 在先前于普朗举行的圣纪活动中，JYKO组织了健康筛查，并花费10,600加纳塞地（GHS）提供了20个移动厕所；2020年的圣纪和Tilawa活动中再次如此。188 然而，最终目标是将健康筛查活动转化为一个标准、永久的卫生设施，即计划在普朗建造的巴阿巴·格瓦纪念医院（Baaba Geewa Memorial Hospital），将通过Jallo青年的捐款来实现。189
 
 近年来，一些地方提加尼人道主义倡议不断发展。谢赫马斯伍德·阿卜杜勒·拉赫曼·西塞（Sheikh Maswud Abdul Rahman Cisse）在（约）2010年创立了*劳达图尔·里贾尔基金会*。他的非政府组织主要专注于达瓦活动，以及在克韦辛齐姆藏戈（Kwesimintsim Zongo）和塔科拉迪（Takoradi）的禁毒运动和人道主义救济活动。2020年10月，该基金会宣布支持可持续发展目标第二项目标，即消除饥饿。190 此外，*马拉姆·提加尼·科福里杜阿基金会*于2021年成立，旨在监督并完成已故的谢赫艾哈迈德·提加尼·阿卜杜勒·拉赫曼（马拉姆·提加尼）在科福里杜阿藏戈（Koforidua Zongo）发起的社区图书馆项目。191 位于塔马利（Tamale）的*伊斯兰造福所有人组织*与阿克拉的谢赫拉希德·侯赛因·萨尔瓦特（Sheikh Rashid Hussein Salwat）的萨尔瓦提亚伊斯兰传播中心（Salwatiyya Islamic Propagation Center）联系紧密。192
 
-#### 2.3 非教派、非部落、非政治：GMM与IMS
+## 2.3 非教派、非部落、非政治：GMM与IMS
 
 *加纳穆斯林传教会*（GMM）是加纳最古老的穆斯林组织之一。它最初于1957年作为一个代表加（Ga）穆斯林利益的协会而成立，其最初的框架是族裔性的而非教派性的，其活动……
 
-
-
-
-##### 表4 加纳穆斯林宣教团在Facebook上的情况
+### 表4 加纳穆斯林宣教团在Facebook上的情况
 
 | 分支 | Facebook，成立/最近更新 | FB（2021年12月） | FB（2022年8月） |
 |---|---|---|---|
@@ -1666,11 +1649,13 @@ Ideal Muslimah（TIM）是当地穆斯林非政府组织中的一个新成员，
 
 GMM拥有一个结构化的组织框架，由地方、地区和省级分支组成。基本单位是地方分支，成员每月缴纳捐款（infaq）以支持GMM的议程。三个层级均设有执行委员会。组织金字塔的顶端是国家执行委员会，负责国家层面的决策和行政事务。地区、省级和国家层面会组织会议及其他筹资活动，194自2007年起，该组织的妇女部也参与其中。195该组织及其分支活跃于互联网和社交媒体上（见表4），尽管其主页自2016年以来未曾更新。
 
+
+
 随着扩展，GMM开始致力于增强加纳穆斯林的能力。这原本是该组织的宗旨和目标之一，但在第一个十年里，重点一直放在自助和援助成员，以及向成员传授伊斯兰教知识、公民意识、社会、健康和其他发展问题上。然而，随着活动扩展到全国其他地区，GMM的工作重心已转向大规模调动资源，用于建立各级教育机构，并为品学兼优但经济困难的学生提供奖学金。此外，GMM还投资兴建清真寺、医疗中心和诊所（见第4.4章），提供医疗和社会服务以支持贫困者、老年人、残疾人和病人，并钻探水井。196这些目标主要通过年度捐款（infaq）和地区天课基金（见第5.3.2章），或通过其作为宗教公产（awqaf）设立的商业和贸易企业的收入来实现，见第6.3章。有时，该组织还与其他穆斯林非政府组织和慈善机构合作开展联合外展项目。例如，2022年12月，GMM与光明基金会和美国穆斯林慈善机构阿尔-拉赫曼基金会合作，在大阿克拉地区组织了免费医疗筛查。197此外，宣教团通过其捐赠基金、寡妇和孤儿基金、教育和健康基金以及创业基金来支持其社会干预项目。
 
 一个特别关注的领域是GMM运营的各种教育项目，这也是GMM全国主席谢赫·阿明·邦苏博士的主要工作重点。邦苏谢赫在2013年第55届全国会议上指出：“……加纳穆斯林社区的祸根是无知，以及缺乏推动其发展的全面教育”，198并在2017年的一次采访中进一步强调：
 
-> > 让我们努力建设更多学校，以照顾穆斯林儿童的精神和学业发展。一些学校的穆斯林学生不被允许践行自己的信仰，这对孩子的心理造成了影响。199
+> 让我们努力建设更多学校，以照顾穆斯林儿童的精神和学业发展。一些学校的穆斯林学生不被允许践行自己的信仰，这对孩子的心理造成了影响。199
 
 因此，该组织运营着165个教育单位，包括150多所基础学校综合体，涵盖幼儿园、小学和初中，以及两所政府资助的高中：库马西的伊斯兰高级中学（1969年成立，图14）200和2008年在阿散蒂省塞基雷-贝波索建立的加纳穆斯林宣教团高级中学。201此外，宣教团还在布伊佩（萨凡纳省）和贝波索开办伊斯兰师范学院，为伊斯兰教育单位下属的学校培养教师。202在2010年代，宣教团启动了一项雄心勃勃的计划，以扩大其高等教育机构，并在阿桑克拉瓜和塞夫维-博阿科（西部省）、曼卡西姆（中部省）、科福里杜亚和东科克罗姆（东部省）以及多梅阿布拉（大阿克拉省）购置土地，用于建立高中。203此外，该计划还包括在博诺东部省阿特布布附近的米姆建设一所护士和助产士培训学院，204以及在库库姆（阿哈福省）和科福里杜亚（东部省）建设教育学院。205
 
@@ -1678,70 +1663,73 @@ GMM各教育项目的资金筹措遵循一种模式，科福里杜亚项目的�
 
 193 进一步参见Mumuni，《阿克拉的伊斯兰组织》，66、117–122；Nana Apau-Gyekye，《加纳穆斯林宣教团对加纳穆斯林社区发展的贡献》，加纳大学宗教研究系硕士论文，2010年；Rabiatu Deinyo Ammah，“加纳穆斯林以‘成为穆斯林’促进可持续发展”，载于《宗教与可持续发展：加纳视角》，George Ossom-Batsa、Nicoletta Gatti和Rabiatu Deinyo Ammah主编（梵蒂冈城：乌尔班纳大学出版社，2018年），227–242。
 
-194 “关于宣教团”，http://ghanamuslimmission.com/the-mission/，访问于2022年1月16日。
+194 “关于宣教团”，`http://ghanamuslimmission.com/the-mission/`，访问于2022年1月16日。
 
-195 加纳穆斯林宣教团妇女联谊会东部地区发布的帖子，2019年6月27日：第12届全国妇女会议，为学校项目筹款，https://www.facebook.com/pg/Ghana-Muslim-Mission-womens-Fellowship-Eastern-Region-547889672409193/posts/?ref=page_internal，访问于2021年8月2日。
+195 加纳穆斯林宣教团妇女联谊会东部地区发布的帖子，2019年6月27日：第12届全国妇女会议，为学校项目筹款，`https://www.facebook.com/pg/Ghana-Muslim-Mission-womens-Fellowship-Eastern-Region-547889672409193/posts/?ref=page_internal`，访问于2021年8月2日。
 
-196 “我们的使命”，http://ghanamuslimmission.com/the-mission/，访问于2022年1月16日。
+196 “我们的使命”，`http://ghanamuslimmission.com/the-mission/`，访问于2022年1月16日。
 
-197 “加纳人被告知要对自己的健康负责”，2022年12月5日，https://gna.org.gh/2022/12/ghanaians-charged-to-take-responsibility-of-their-health/，访问于2023年12月5日。
+197 “加纳人被告知要对自己的健康负责”，2022年12月5日，`https://gna.org.gh/2022/12/ghanaians-charged-to-take-responsibility-of-their-health/`，访问于2023年12月5日。
 
-198 Rafiq A. Tschannen，“穆斯林宣教团在加纳建立13所教育机构”，https://newsghana.com.gh/muslim-mission-establishes-13-educational-institutions-in-ghana/，访问于2022年1月16日。
+198 Rafiq A. Tschannen，“穆斯林宣教团在加纳建立13所教育机构”，`https://newsghana.com.gh/muslim-mission-establishes-13-educational-institutions-in-ghana/`，访问于2022年1月16日。
 
-199 “穆斯林宣教团建设更多学校”，2017年7月4日，https://dailyguidenetwork.com/muslim-mission-builds-schools/，访问于2021年8月2日。
+199 “穆斯林宣教团建设更多学校”，2017年7月4日，`https://dailyguidenetwork.com/muslim-mission-builds-schools/`，访问于2021年8月2日。
 
-200 “GMM接管学校”，2005年10月11日，https://www.modernghana.com/news/87859/gmm-takes-over-school.html，访问于2021年8月2日。这所伊斯兰学校由沙特阿拉伯的捐赠创办。
+200 “GMM接管学校”，2005年10月11日，`https://www.modernghana.com/news/87859/gmm-takes-over-school.html`，访问于2021年8月2日。这所伊斯兰学校由沙特阿拉伯的捐赠创办。
 
-201 加纳穆斯林宣教团高级中学，贝波索-阿散蒂，加纳，https://ghammish.blogspot.com。
+201 加纳穆斯林宣教团高级中学，贝波索-阿散蒂，加纳，`https://ghammish.blogspot.com`。
 
-202 “教育机构”，http://ghanamuslimmission.com/educational-institutions-2/，访问于2021年8月2日。贝波索的单位此后已升格为教育学院大学学院。2022年，有250名学生获得GMM奖学金在该大学学院学习，采访GMM全国主席谢赫·阿明·邦苏，阿克拉，2022年10月13日。
+202 “教育机构”，`http://ghanamuslimmission.com/educational-institutions-2/`，访问于2021年8月2日。贝波索的单位此后已升格为教育学院大学学院。2022年，有250名学生获得GMM奖学金在该大学学院学习，采访GMM全国主席谢赫·阿明·邦苏，阿克拉，2022年10月13日。
 
-203 “教育机构”，http://ghanamuslimmission.com/educational-institutions-2/，访问于2021年8月2日。
+203 “教育机构”，`http://ghanamuslimmission.com/educational-institutions-2/`，访问于2021年8月2日。
 
-204 “教育机构”，http://ghanamuslimmission.com/educational-institutions-2/，访问于2021年8月2日。
+204 “教育机构”，`http://ghanamuslimmission.com/educational-institutions-2/`，访问于2021年8月2日。
 
-205 “政府将支持GMM的教育学院项目——副总统”，2019年12月25日，https://www.rainbowradioline.com/govt-will-support-college-of-education-project-by-gmm-veep/，访问于2022年1月16日（项目在库库姆启动）；“巴武米亚支持GMM教育学院”，2018年1月6日，https://www.modernghana.com/news/826788/bawumia-supports-gmm-college-of-education.html，访问于2021年8月2日（项目在科福里杜亚启动）。
-
-
-
+205 “政府将支持GMM的教育学院项目——副总统”，2019年12月25日，`https://www.rainbowradioline.com/govt-will-support-college-of-education-project-by-gmm-veep/`，访问于2022年1月16日（项目在库库姆启动）；“巴武米亚支持GMM教育学院”，2018年1月6日，`https://www.modernghana.com/news/826788/bawumia-supports-gmm-college-of-education.html`，访问于2021年8月2日（项目在科福里杜亚启动）。
 
 然而，谢赫·阿明·邦苏博士（Sheikh Dr Amin Bonsu）最具雄心的教育项目是创办一所大学。加纳穆斯林传教会（GMM）于2009年启动了该项目，在库马西附近的埃斯雷索获得了9.5英亩土地，²¹⁰ 于2012年开始为其耗资1860万加纳塞地（约30.1万美元）的加纳穆斯林传教大学学院（Ghana Muslim Mission University College）平整场地，²¹¹ 并于2014年筹集了2万加纳塞地（约3.23万美元）用于支持基础设施建设。²¹² 2015年，GMM阿散蒂大区在召开区域会议后呼吁加纳国内外的会员支持该项目：“那些因各种原因无法出席的人，你们仍然可以支持伊斯兰大学项目 [...]。”²¹³ 2016年，在第58届全国会议上，全国副主席穆罕默德·杜阿博士（Dr Mohammed Duah）呼吁政府和利益相关方与GMM合作以确保项目成功，同时会议敦促会员继续为该项目捐款。²¹⁴ 其愿景是建立一所设施完善的大学，开设伊斯兰神学与教育、语言学与教育及国际关系、商业课程（包括物流与采购、商业管理与人力资源管理），以及护理、医学和工程等科学课程。²¹⁵
 
 GMM最初的一个分支——*伊斯兰传教秘书处*（Islamic Mission Secretariat，IMS）于1963年在库马西作为一个脱离团体逐渐发展起来，由谢赫·亚当·穆罕默德·阿皮杜（Sheikh Adam Mohammed Appiedu）领导。²¹⁶ 1980年代末，IMS成为一个独立团体。
 
-年——宗戈部长，” 2020年10月29日，https://awakenewsroom.com/government-will-build-an-islamic-university-college-of-education-with-getfund-next-year-zongo-minister/，访问于2021年8月2日。
+年——宗戈部长，” 2020年10月29日，`https://awakenewsroom.com/government-will-build-an-islamic-university-college-of-education-with-getfund-next-year-zongo-minister/`，访问于2021年8月2日。
 
-210. “加纳穆斯林传教会在库马西附近建立大学，” 2009年12月8日，https://www.modernghana.com/news/253166/ghana-muslim-mission-to-establish-university.html，访问于2021年8月2日。
+210. “加纳穆斯林传教会在库马西附近建立大学，” 2009年12月8日，`https://www.modernghana.com/news/253166/ghana-muslim-mission-to-establish-university.html`，访问于2021年8月2日。
 
-211. “伊斯兰大学学院工程动工，” 2012年11月19日，https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Work-starts-on-Islamic-University-College-256905，访问于2021年8月2日。
+211. “伊斯兰大学学院工程动工，” 2012年11月19日，`https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Work-starts-on-Islamic-University-College-256905`，访问于2021年8月2日。
 
-212. “穆斯林传教会在加纳再建一所大学，” 2014年12月30日，https://www.newsghana.com.gh/muslim-mission-build-another-university-ghana/?__cf_chl_jschl_tk__=pmd_7o5fcd f55298ab95o4cd5944e2oaf48ab13230-1627897425-0-gqNtZGzNAg2jcnBszQjO，访问于2021年8月2日。
+212. “穆斯林传教会在加纳再建一所大学，” 2014年12月30日，`https://www.newsghana.com.gh/muslim-mission-build-another-university-ghana/?__cf_chl_jschl_tk__=pmd_7o5fcdf55298ab95o4cd5944e2oaf48ab13230-1627897425-0-gqNtZGzNAg2jcnBszQjO`，访问于2021年8月2日。
 
-213. https://www.facebook.com/permalink.php?story_fbid=1033705090013071&id=167077143342541，2015年12月5日，访问于2021年8月2日。
+213. `https://www.facebook.com/permalink.php?story_fbid=1033705090013071&id=167077143342541`，2015年12月5日，访问于2021年8月2日。
 
-214. “加纳穆斯林传教会举行第58届全国年会，” 2016年11月17日，https://www.ghanabusinessnews.com/2016/11/17/ghana-muslim-mission-holds-58th-annual-national-conference/，访问于2021年8月2日；https://www.facebook.com/167077143342541/photos/a.1256606464389598/1256606401056271/?type=3&theater，2016年10月30日，访问于2021年8月2日。
+214. “加纳穆斯林传教会举行第58届全国年会，” 2016年11月17日，`https://www.ghanabusinessnews.com/2016/11/17/ghana-muslim-mission-holds-58th-annual-national-conference/`，访问于2021年8月2日；`https://www.facebook.com/167077143342541/photos/a.1256606464389598/1256606401056271/?type=3&theater`，2016年10月30日，访问于2021年8月2日。
 
-215. “高等教育，” http://ghanamuslimmission.com/author/gmm_admin/，访问于2021年8月2日。
+215. “高等教育，” `http://ghanamuslimmission.com/author/gmm_admin/`，访问于2021年8月2日。
 
-216. https://www.facebook.com/IslamicMissionSecretariatGh/。
+216. `https://www.facebook.com/IslamicMissionSecretariatGh/`。
 
 此后，IMS在全国范围扩展。它积极推动加纳的伊斯兰教育和世俗教育，并在全国各地开办多所学校。2005年，IMS宣布计划在阿哈福大区塔诺北市政区的杜亚尤-恩夸塔（Duayaw-Nkwanta）建造一所伊斯兰教师培训学院，并为此项目筹集了5500万加纳塞地（4700美元）。²¹⁸ 十年后，在其第50届全国大会上，时任IMS全国书记谢赫·奥斯曼·穆斯塔法·奥波库（Sheikh Osman Mustapha Opoku）宣布计划建造一所伊斯兰大学教育学院，并告知听众，传统当局已为该项目划拨了约120英亩土地。此外，IMS还设想在苏尼亚尼的特奇曼和新多尔马建造医院，详见第4.4章。²¹⁹ 自2022年起，IMS运营自己的在线电视频道。²²⁰
 
 IMS最终通过全国性筹款项目完成了其学院项目，尽管在此过程中其结构变为了一所伊斯兰高中/技术学校。2022年1月，IMS为新学校发布了公开招聘公告（校长、伊玛目、教师、行政人员、会计、财务人员、秘书、女舍监、保安、杂工和仓库管理员）。四个月后，它发布了新学校的招生通知。²²¹
 
-#### 2.4 低调但可见且具有影响力：GISER 与加纳人道至上组织
+217 `https://www.facebook.com/IslamicMissionSecretariatGh/`。
+
+218 “伊斯兰传教团为培训学院筹集5500万塞地，” 2005年3月，`https://www.modernghana.com/news/72829/islamic-mission-bagged-55-million-cedis-for-training-college.html`，访问于2022年8月24日。
+
+219 “伊斯兰传教秘书处举行第50届全国大会，” 2015年1月11日，`https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Islamic-Mission-Secretariat-holds-50th-Annual-National-Convention-342108`，访问于2022年8月24日；“伊斯兰传教团设想在西部省建造医院，” 2015年1月11日，`https://newsghana.com.gh/islamic-mission-envisages-constructing-hospitals-wr/`，访问于2022年12月5日。
+
+220 `https://www.facebook.com/IMS-TVGH100972669248188/`。
+
+221 `https://www.facebook.com/Islamic-Mission-Secretariat-Youth-Wing-Techiman-Bono-East-389172531927708`，2022年1月7日、2022年4月15日，访问于2022年8月24日。
+
+## 2.4 低调但可见且具有影响力：GISER 与加纳人道至上组织
 
 黎巴嫩和艾哈迈迪亚的非政府组织已经活跃了几十年。与其他地方或国际穆斯林非政府组织相比，它们的活动很少成为头条新闻。然而，在教育、医疗保健项目和人类发展方面，它们的影响深刻改变了当地社区。
 
-217 https://www.facebook.com/IslamicMissionSecretariatGh/。 218 “伊斯兰传教团为培训学院筹集5500万塞地，” 2005年3月，https://www.modernghana.com/news/72829/islamic-mission-bagged-55-million-cedis-for-training-college.html，访问于2022年8月24日。 219 “伊斯兰传教秘书处举行第50届全国大会，” 2015年1月11日，https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Islamic-Mission-Secretariat-holds-50th-Annual-National-Convention-342108，访问于2022年8月24日；“伊斯兰传教团设想在西部省建造医院，” 2015年1月11日，https://newsghana.com.gh/islamic-mission-envisages-constructing-hospitals-wr/，访问于2022年12月5日。 220 https://www.facebook.com/IMS-TVGH100972669248188/。 221 https://www.facebook.com/Islamic-Mission-Secretariat-Youth-Wing-Techiman-Bono-East-389172531927708，2022年1月7日、2022年4月15日，访问于2022年8月24日。
-
-加纳黎巴嫩社区的起源可以追溯到1890年代，当时第一批黎巴嫩商人和企业家开始在黄金海岸经商。此后，这个包括基督徒和穆斯林家庭的社区人数不断增长。其中大多数拥有加纳公民身份，有些人已与加纳家庭通婚。黎巴嫩企业家名列加纳最富有的人之列，一个领先的黎巴嫩家族企业也是该国最成功的企业之一。自1920年代以来，为黎巴嫩社区服务的社会协会和俱乐部一直存在，包括叙利亚-黎巴嫩慈善协会。²²²
+加纳黎巴嫩社区的起源可以追溯到1890年代，当第一批黎巴嫩商人和企业家开始在黄金海岸经商。此后，这个包括基督徒和穆斯林家庭的社区人数不断增长。其中大多数拥有加纳公民身份，有些人已与加纳家庭通婚。黎巴嫩企业家名列加纳最富有的人之列，一个领先的黎巴嫩家族企业也是该国最成功的企业之一。自1920年代以来，为黎巴嫩社区服务的社会协会和俱乐部一直存在，包括叙利亚-黎巴嫩慈善协会。²²²
 
 几十年来，黎巴嫩社区整体上很少参与社区发展。1985年，一群黎巴嫩和加纳企业家创立了加纳伊斯兰教育与社会改革协会（GISER），这一情况发生了改变。作为加纳最古老的穆斯林非政府组织之一，总部位于阿克拉的该非政府组织专注于三大核心使命领域：教育、社区发展和宗教意识。GISER在阿克拉都市区建立并管理了多所教育机构，包括麦地那伊斯兰学校（MIS）、²²³ 加纳-黎巴嫩伊斯兰学校（GLIS）、²²⁴ 阿尔拉扬国际学校²²⁵ 和《古兰经》与伊斯兰研究学院（CQIS），²²⁶ 以及位于库马西的穆斯林教师培训学院（MTTI）。²²⁷
 
-艾哈迈迪亚传教士则于1921年在黄金海岸定居，随后在萨尔特庞德和瓦城建立了艾哈迈迪亚社区。其中，关于伊玛目职位的摩擦导致与逊尼派穆斯林群体发生严重冲突，
-
-222 斯蒂芬·贾西（Stephen Gyasi），《黎巴嫩在加纳的影响》，《Top Reports》，加纳/黎巴嫩特别报告，2011年6月18日，https://www.topreports.org/wp-content/uploads/2018/06/Ghana_Lebanon_2011.pdf，访问于2021年7月27日。
+222 斯蒂芬·贾西（Stephen Gyasi），《黎巴嫩在加纳的影响》，《Top Reports》，加纳/黎巴嫩特别报告，2011年6月18日，`https://www.topreports.org/wp-content/uploads/2018/06/Ghana_Lebanon_2011.pdf`，访问于2021年7月27日。
 
 223 MIS自2006年起运营，包括一所幼儿园、一所小学和一所初中。
 
@@ -1753,21 +1741,21 @@ IMS最终通过全国性筹款项目完成了其学院项目，尽管在此过�
 
 227 MTTI成立于1999年，于2019年从阿克拉迁至库马西。该学院开设三年制教育项目，招收来自加纳及其他西非国家的学生。
 
-
-
-尤其是在1930年代的该国北部地区。阿赫迈底亚-逊尼派的紧张关系在随后的几十年中引人注目，但在二十世纪末有所缓和。228 虽然是逊尼派，尤其是萨拉菲派穆斯林教士与阿赫迈底亚人保持距离，将其定义为异端，但在加纳的机构——阿赫迈底亚穆斯林传教团（AMM）——在国家首席伊玛目办公室以及天课和萨达卡信托基金中均有代表。
+艾哈迈迪亚传教士则于1921年在黄金海岸定居，随后在萨尔特庞德和瓦城建立了艾哈迈迪亚社区。其中，关于伊玛目职位的摩擦导致与逊尼派穆斯林群体发生严重冲突，尤其是在1930年代的该国北部地区。阿赫迈底亚-逊尼派的紧张关系在随后的几十年中引人注目，但在二十世纪末有所缓和。228 虽然是逊尼派，尤其是萨拉菲派穆斯林教士与阿赫迈底亚人保持距离，将其定义为异端，但在加纳的机构——阿赫迈底亚穆斯林传教团（AMM）——在国家首席伊玛目办公室以及天课和萨达卡信托基金中均有代表。
 
 阿赫迈底亚穆斯林传教团很早就通过福利活动开展传教，包括引入现代教育和医疗保健。从1924年创办的塔利姆·乌尔·伊斯兰阿赫迈底亚学校开始，阿赫迈底亚学校采用标准的英国课程，并提供阿拉伯语和伊斯兰宗教教学。阿赫迈底亚英语学校随后成立，得到了英国殖民地以及后来的加纳政府的财政支持。229 到二十一世纪初，阿赫迈底亚教育综合体包括托儿中心和幼儿园、小学、初中和高中，以及一所教师培训学院。230
 
 自1970年代以来，阿赫迈底亚穆斯林传教团还开始在农村社区建设医院以提供医疗保健。231 作为这些活动的成果，卫生部承认AMM为官方卫生机构。232 通过努斯拉特·贾汉计划或服务人类计划，阿赫迈底亚医生成为阿赫迈底亚医院服务。五十多年后，该传教团在整个加纳运营着十二家医疗机构（另见第4.4章）。233 医院是通过第三任阿赫迈底亚哈里发米尔扎·纳西尔·艾哈迈德于1970年发起的努斯拉特·贾汉建立的。他还在巴基斯坦创立了阿赫迈底亚穆斯林医学协会，使阿赫迈底亚医生能够在阿赫迈底亚医院工作数周、数月或数年。此后，该协会已在许多国家产生分支机构，其中包括阿赫迈底亚穆斯林医学协会AMMA等，在英国、美国、澳大利亚和加拿大等地。²³⁴ 2021年，AMM启动了一项新的农村倡议，即植树。从2021年6月开始于北部地区库姆布ungu区，其计划是动员所有AMM分区团体并在全国范围内复制该项目。²³⁵
 
-国际非政府组织 *Humanity First International* 于1995年加入了阿赫迈底亚社会福利机构。此前的协会如AMMA和国际阿赫迈底亚建筑师和工程师协会具有明显的宗教隶属关系。*Humanity First International* 然而并未将自己呈现为阿赫迈底亚组织。相反，正如Katrin Langewiesche所强调的，该组织面向一个国家的全体人口，并不突出其宗教隶属关系。她进一步指出，该组织在自我展示为阿赫迈底亚非政府组织方面存在变化趋势，与早期将其与阿赫迈底亚的关联置于背景中的情况形成对比。然而，她进一步强调 *Humanity First International* 并不是一个 *daʿwa* 组织，传教活动并不在其核心活动中。²³⁶
 
-*Humanity First International* 在全球60个国家运营。²³⁷ 阿赫迈底亚和非阿赫迈底亚医生通过努斯拉特·贾汉或通过 *Humanity First* 在阿赫迈底亚医院服务；²³⁸ 例如，来自 *Humanity First USA* 的医生于2008年访问加纳，协助当地医生提供免费外科护理，²³⁹ 而来自 *Humanity First UK* 的团队于2019年访问加纳。²⁴⁰ 此外，*Humanity First International* 参与教育项目并协助阿赫迈底亚学校。例如，它于2018年启动了“教室改造项目”，此后 *Humanity First UK* 和 *Humanity First Norway* 已协助加纳的学校。241
 
-与AMMA不同，*Humanity First* 在加纳设有分支机构，于1996年注册，总部设在阿克拉。242 *Humanity First Ghana* 开展了多个人道主义计划，包括年度外科任务项目、位于达博阿塞的 *Humanity First* 临床实验室以及“生命之水项目”。243 此外，它还在2019年5月向北部地区洪水受害者提供了救灾援助，除资助水井和供水项目外。244
+国际非政府组织 `Humanity First International` 于1995年加入了阿赫迈底亚社会福利机构。此前的协会如AMMA和国际阿赫迈底亚建筑师和工程师协会具有明显的宗教隶属关系。`Humanity First International` 然而并未将自己呈现为阿赫迈底亚组织。相反，正如Katrin Langewiesche所强调的，该组织面向一个国家的全体人口，并不突出其宗教隶属关系。她进一步指出，该组织在自我展示为阿赫迈底亚非政府组织方面存在变化趋势，与早期将其与阿赫迈底亚的关联置于背景中的情况形成对比。然而，她进一步强调 `Humanity First International` 并不是一个 `daʿwa` 组织，传教活动并不在其核心活动中。²³⁶
 
-*Humanity First Ghana* 在过去几十年中已发展成为一个具有令人印象深刻参与度的全国性慈善机构，可通过其Facebook账号追踪（成立于2018年；2021年7月有1,829名关注者）。持续呼吁为金萨拉大集会筹集资金和献血，尤其是在阿赫迈底亚的年度聚会 *Jalsa Ghana* 期间：
+`Humanity First International` 在全球60个国家运营。²³⁷ 阿赫迈底亚和非阿赫迈底亚医生通过努斯拉特·贾汉或通过 `Humanity First` 在阿赫迈底亚医院服务；²³⁸ 例如，来自 `Humanity First USA` 的医生于2008年访问加纳，协助当地医生提供免费外科护理，²³⁹ 而来自 `Humanity First UK` 的团队于2019年访问加纳。²⁴⁰ 此外，`Humanity First International` 参与教育项目并协助阿赫迈底亚学校。例如，它于2018年启动了“教室改造项目”，此后 `Humanity First UK` 和 `Humanity First Norway` 已协助加纳的学校。241
+
+与AMMA不同，`Humanity First` 在加纳设有分支机构，于1996年注册，总部设在阿克拉。242 `Humanity First Ghana` 开展了多个人道主义计划，包括年度外科任务项目、位于达博阿塞的 `Humanity First` 临床实验室以及“生命之水项目”。243 此外，它还在2019年5月向北部地区洪水受害者提供了救灾援助，除资助水井和供水项目外。244
+
+`Humanity First Ghana` 在过去几十年中已发展成为一个具有令人印象深刻参与度的全国性慈善机构，可通过其Facebook账号追踪（成立于2018年；2021年7月有1,829名关注者）。持续呼吁为金萨拉大集会筹集资金和献血，尤其是在阿赫迈底亚的年度聚会 `Jalsa Ghana` 期间：
 
 > 1 DAY TO #JALSAGHANA: YOUR DONATION CAN MAKE A DIFFERENCE IN THE LIVES OF MANY IN DEPRIVED COMMUNITIES. WATCH THIS AND MEET US @GHANAJALSA.245
 
@@ -1778,30 +1766,44 @@ IMS最终通过全国性筹款项目完成了其学院项目，尽管在此过�
 在2020年4月的COVID-19封锁期间，它在大阿克拉地区、库马西大都会区和卡索阿的多个地点组织了食品捐赠，247 并向其成员发出一般呼吁，要求捐赠给其COVID-19人道-
 
 228 另见 Hanson，《The Ahmadiyya in the Gold Coast》。
+
 229 Skinner，《Conversion to Islam and the Promotion of ‘Modern’ Islamic Schools in Ghana》。
+
 230 David E. Skinner，《Modernity, Religion and Development in Ghana: The Example of the Ahmadiyya Muslim Community》，《Ghana Studies》12/13 (2009/2010)。
+
 231 Mohammed Bin Ibrahim，《Contribution by the Ahmadiyya Muslim Mission towards Health Care in Ghana》，《The Review of Religions》LXXXIII，第11期（1988年11月）：36–37。作者曾担任阿克罗富姆阿丹西阿赫迈底亚医院的资深医务官。在此之外：“Ahmadiyya Ghana serves the humanity through hospitals”，21.5.2018，https://themuslimtimes.info/2018/05/21/ahmadiyya-ghana-serves-the-humanity-through-hospitals/，访问于17.11.2022。
+
 232 https://www.moh.gov.gh/ahmadiya-muslim-mission/。
+
 233 John H. Hanson，《Modernity, Religion and Development in Ghana: The Example of the Ahmadiyya》，《Ghana Studies》12–13 (2011)：55–75。
 
 234 Katrin Langewiesche，《Politics of Humanitarianism: The Ahmadiyya and the Provision of Social Welfare》，载于《Muslim Faith-Based Organizations and Social Welfare in Africa》，Holger Weiss 编（纽约：Palgrave MacMillan，2020），254。
+
 235 “Ahmadiyya Muslim Mission plants trees at Tingnyoring”，13.6.2021，https://gna.org.gh/2021/06/ahmadiyya-muslim-mission-plants-trees-at-tingnyoring/，访问于2.1.2023。
+
 236 Katrin Langewiesche，《Ahmadiyya and Development Aid in West Africa》，载于《Does Religion Make a Difference? Religious NGOs in International Development Collaboration》，Andreas Heuser 和 Jens Koehrsen 编（巴登-巴登：Nomos Verlag，2020），273。
+
 237 https://humanityfirst.org/about-us/。
+
 238 Hazrat Mirza Masroor Ahmad，《Ahmadi Doctors and the Need for True Sacrifice》，30.11.2019，https://www.alislam.org/updates/ahmadi-doctors-need-for-true-sacrifice/，访问于29.7.2021。
+
 239 “Welcome to Humanity First Ghana”，https://gh.humanityfirst.org/，访问于16.1.2022。
+
 240 “This weekend a team of medical volunteers from the USA has been training clinicians at Swedru hospital in southern Ghana on Hernia mesh surgery”，https://www.facebook.com/humanityfirstuk，17.2.2019，访问于16.1.2022。
 
 241 Dwayne Nimoh，《Humanity First International Classroom Project in Ghana》，23.2.2018，https://ghanasociety.org.uk/humanity-first-international-classroom-project-in-ghana，访问于22.7.2021；“#ClassroomTransformation”，https://www.facebook.com/HumanityFirstGhana/，3.2.2019，访问于22.7.2021。
+
 242 “2020 marks 25 years since Humanity First was officially registered in the UK. Now registered in 58 countries, Humanity First Ghana was registered in June 1996”，https://www.facebook.com/HumanityFirstGhana/，8.6.2020，访问于22.7.2021。
+
 243 “Welcome to Humanity First Ghana”，http://gh.humanityfirst.org，访问于29.7.2021。
+
 244 例如，在东北地区扬卡齐亚安装手动水泵，https://www.facebook.com/HumanityFirstGhana/，1.12.2021，访问于6.1.2021。
+
 245 https://www.facebook.com/HumanityFirstGhana/，3.1.2019，访问于22.7.2021。
+
 246 https://www.facebook.com/HumanityFirstGhana/，5.1.2019，访问于22.7.2021。
+
 247 见2020年4月8日至15日的持续食品捐赠帖子，发布于https://www.facebook.com/HumanityFirstGhana/，访问于22.7.2021。
-
-
-
 
 人道主义支持计划。<sup>248</sup> 除了其成员的支持外，该组织还收到了加纳银行家协会捐赠的500份家庭食品包，价值75,000加纳塞地，并在阿克拉分发。<sup>249</sup> 另一批来自加纳Access银行的物资在库马西分发。<sup>250</sup> 尽管其Facebook页面未提及，但加纳人道第一组织很可能也支持了北部地区的家庭，因为它在2020年8月指出：“加纳人道第一组织在加纳北部恢复分发#家庭食品包。”<sup>251</sup>
 
@@ -1809,11 +1811,11 @@ IMS最终通过全国性筹款项目完成了其学院项目，尽管在此过�
 
 #### 2.5 加纳什叶派慈善机构与倡议
 
-加纳什叶派社区的第一位领导人，已故谢赫·阿卜杜勒·萨拉姆·阿卜杜勒·哈米德·班西（1956-2012）于1988年创立了*伊玛目侯赛因基金会*，作为他在加纳传播什叶派文献活动的一部分。<sup>255</sup> 该基金会很可能在伊朗的资助下，还开展了一项雄心勃勃的计划，在全国范围内建造17座什叶派清真寺、6所学校和5所霍扎（什叶派穆斯林学者的宗教教育中心），并钻探水井。<sup>256</sup>
+加纳什叶派社区的第一位领导人，已故谢赫·阿卜杜勒·萨拉姆·阿卜杜勒·哈米德·班西（1956-2012）于1988年创立了`伊玛目侯赛因基金会`，作为他在加纳传播什叶派文献活动的一部分。<sup>255</sup> 该基金会很可能在伊朗的资助下，还开展了一项雄心勃勃的计划，在全国范围内建造17座什叶派清真寺、6所学校和5所霍扎（什叶派穆斯林学者的宗教教育中心），并钻探水井。<sup>256</sup>
 
-加纳的*马吉玛·阿赫利拜特*（a.s.）或阿赫利拜特大会（a.s.）成立于2000年，总部位于阿克拉，是加纳什叶派社区的总括组织。有趣的是，它将自己定义为非政府组织，并在2017年版的首页上注明其大部分资金自筹。除了专注于宗教教育和传播什叶派伊斯兰教外，其社会福利计划还包括为什叶派青年提供经济支持以改善其经济状况、教育奖学金以及对贫困学生的经济资助。<sup>257</sup>
+加纳的`马吉玛·阿赫利拜特`（a.s.）或阿赫利拜特大会（a.s.）成立于2000年，总部位于阿克拉，是加纳什叶派社区的总括组织。有趣的是，它将自己定义为非政府组织，并在2017年版的首页上注明其大部分资金自筹。除了专注于宗教教育和传播什叶派伊斯兰教外，其社会福利计划还包括为什叶派青年提供经济支持以改善其经济状况、教育奖学金以及对贫困学生的经济资助。<sup>257</sup>
 
-*伊玛目巴基尔伊斯兰中心*是阿克拉什叶派社区的一个“非营利性慈善组织”。除了为其社区提供宗教、教育和慈善服务外，其目标还在于在全国范围内建立*霍扎*高等教育机构、*侯赛尼亚*（集会厅）和清真寺。除了其*达瓦*计划外，该中心还为孤儿、残疾人和贫困人口动员人道主义救济，并组织斋月开斋饭计划。此外，其长期议程的一部分是建立诊所、医院以及小学、中学和中学后各级教育学校，并启动供水项目。<sup>258</sup> 该中心及其伊玛目谢赫·苏莱曼·纳迪·班巴于2021年3月成为头条新闻，当时它向阿克拉精神病医院捐赠了各种物品。这笔捐赠
+`伊玛目巴基尔伊斯兰中心`是阿克拉什叶派社区的一个“非营利性慈善组织”。除了为其社区提供宗教、教育和慈善服务外，其目标还在于在全国范围内建立`霍扎`高等教育机构、`侯赛尼亚`（集会厅）和清真寺。除了其`达瓦`计划外，该中心还为孤儿、残疾人和贫困人口动员人道主义救济，并组织斋月开斋饭计划。此外，其长期议程的一部分是建立诊所、医院以及小学、中学和中学后各级教育学校，并启动供水项目。<sup>258</sup> 该中心及其伊玛目谢赫·苏莱曼·纳迪·班巴于2021年3月成为头条新闻，当时它向阿克拉精神病医院捐赠了各种物品。这笔捐赠
 
 该基金会资助了13名青年的教育，并与加纳合作社联盟协会（CUAG）和Kamsly-Nough金融服务公司合作制定了一项小额信贷计划。该小额信贷计划首批支持的对象是十名寡妇，她们每人获得300加纳塞地（约48美元）的贷款，用于开展自己选择的生意。2013年，该组织在西部地区组织了伊玛目侯赛因免费食品分发活动，面向贫困和弱势穆斯林社区，以及赛义达·法蒂玛·扎赫拉免费蚊帐分发和疟疾疫苗接种计划。<sup>262</sup>
 
@@ -1821,13 +1823,13 @@ IMS最终通过全国性筹款项目完成了其学院项目，尽管在此过�
 
 #### 2.6 新兴世俗穆斯林非政府组织
 
-这种组织的一个例子是总部位于塔马利的*社区发展倡导者*（ACDEV），它始于2017年的一个青年团体，与其他处于起步阶段的青年团体类似，专注于清洁活动和向学校捐赠。其核心成员是穆斯林大学生，尽管该协会明显不分教派，但强调倡导是其活动的首要任务。该团体确定其使命是促进实现可持续发展目标1（消除贫困）和可持续发展目标4（优质教育），并访问了塔马利郊外的尚吉尼，以与当地居民进行接触。<sup>269</sup> 这次访问对该团体来说是一个启示：
+这种组织的一个例子是总部位于塔马利的`社区发展倡导者`（ACDEV），它始于2017年的一个青年团体，与其他处于起步阶段的青年团体类似，专注于清洁活动和向学校捐赠。其核心成员是穆斯林大学生，尽管该协会明显不分教派，但强调倡导是其活动的首要任务。该团体确定其使命是促进实现可持续发展目标1（消除贫困）和可持续发展目标4（优质教育），并访问了塔马利郊外的尚吉尼，以与当地居民进行接触。<sup>269</sup> 这次访问对该团体来说是一个启示：
 
 > 我们此次访问最重要的方面是，社区成员告知我们应采取何种措施来帮助改善当地状况。他们建议调整措施以改善耕作制度，并为社区成员特别是妇女提供基本技能培训，使其学习和实施，从而惠及个人、家庭、社区乃至整个国家，这给我们留下了极为深刻的印象。 [...] 我们对尚吉尼人民提供的第一份帮助将帮助我们确定何种方式最能有效遏制当前状况。如果结果积极且成效显著，将在该地区不同社区推广同样的方法。<sup>270</sup>
 
 该团体的“自下而上”方法关注女性赋权。与年轻女性领导者网络一样，ACDEV聚焦经期卫生，并于2019年初开展了“健康解决方案之旅”，访问北部地区的学校。健康解决方案之旅结合了年轻女孩赋权的三个领域：缝制可重复使用的卫生巾、创业培训，以及在年轻女孩中组建“我们安全”小组。<sup>271</sup>
 
-另一个由穆斯林建立并主要运营的教派性民间社会组织是总部位于阿克拉的*妇女救济联盟基金会*（WRAF）。该组织成立于2019年，此后发起了COVID-19宣传、乳腺癌意识和经期卫生捐赠运动，在尼玛和马迪纳宗戈安排了健康筛查，并在东北地区博库农村社区启动了饮用水项目和对农村妇女的支持计划。<sup>272</sup>
+另一个由穆斯林建立并主要运营的教派性民间社会组织是总部位于阿克拉的`妇女救济联盟基金会`（WRAF）。该组织成立于2019年，此后发起了COVID-19宣传、乳腺癌意识和经期卫生捐赠运动，在尼玛和马迪纳宗戈安排了健康筛查，并在东北地区博库农村社区启动了饮用水项目和对农村妇女的支持计划。<sup>272</sup>
 
 248  Facebook海报，2021年4月9日：https://www.facebook.com/HumanityFirstGhana/photos/a.291677091489619/540939706563355/?type=3&eid=ARAVD7kqLEIp-tBaDJMXg8TUZwtFFzUMPqUClV9_kk9ptYkj4EMYWShdIqItdtccgwrH54twaDvJ5Vl&__xts__%5B0%5D=-68.ARBUsIKN7RL4ZXqq2PvDvgmB-4_hrEwloEPzrEoYbDoCZJiCs4pHYYkPu5pgB0DtYQeXT8qeXMBwLFSyn_D8ItGBAQwGEqWeukr5LXXGwDI_YMe6AIqtrcMXOLwhEipsIQ2bMaoBSPfYvPWQvl9HQ8VLeG76AK88RXfhLIL7bJWf5G6uvbXr6GYJGCKblpmByLICXgsoAYrSVV0m-DqDeO6YnkLX9dlD6Mc63swUWWV605-mmkiJSsq-h27YSXcV7gC4ZVKNL_5EkIQln-xO-b_5TMakeAwnpjhN1AgTuQp7a3Ef_ccA&__tn__=EEHH-R
 
@@ -1839,116 +1841,143 @@ IMS最终通过全国性筹款项目完成了其学院项目，尽管在此过�
 
 252  参见2021年7月22日、2022年4月30日和2023年7月4日的帖子，https://www.facebook.com/HumanityFirstGhana/，访问于2023年8月17日。
 
-253  “加纳广播公司（#GBC）关于#HumanityFirstGhana📸#COVID_19🌐在#Accra危机捐赠的新闻，”https://www.facebook.com/HumanityFirstGhana/videos/236368264086271/，访问于2021年7月29日。
-
-254  “阿赫迈迪亚青年协会向海岸角聋哑盲人学校捐赠，”2019年2月10日，https://www.graphic.com.gh/news/general-news/ahmadiyya-youth-association-donates-to-cape-coast-school-for-the-deaf-and-blind.html，访问于2021年7月25日。
-
-255  穆罕默德·哈希鲁，“伊朗外交使团与什叶派在加纳的传播”，*国际科学杂志：基础与应用研究*（IJSBAR）第34卷，第3期（2017年），第253页。伊玛目侯赛因基金会自2018年起拥有Facebook账户，参见https://www.facebook.com/Imam-Hussein-as-Foundation-Ghana-212357002875391。
-
-256  “加纳的穆斯林，”2018年12月3日，rooralism-lb.net/en/2018/12/03/muslims-in-ghana，访问于2021年7月21日。此后该主页已失效（截至2024年5月）。
-
-257  http://www.majmahahlulbait.org/about-us/，访问于2017年11月。此后该主页已失效（截至2024年5月）。该组织运营着多个Facebook账户，包括https://www.facebook.com/Majmah-ahlul-bait-ghana-12608717466628、https://www.facebook.com/MAJMA-AHLUL-BAITE-as-Kumasi-branch-11033059574319、https://www.facebook.com/Ahlul-Bayt-AS-Youth-Activist-294056204051933和https://www.facebook.com/Zaawiyatu，以及一个在线媒体频道https://www.facebook.com/ShiaIslamicMediaGh。
-
-258  https://www.facebook.com/markazgh/。
-
-269  https://www.facebook.com/ACDEVTAMALE/，2017年9月28日，访问于2021年1月5日。
-
-270  https://www.facebook.com/ACDEVTAMALE/，2017年10月4日，访问于2021年1月5日。
-
-271  https://www.facebook.com/ACDEVTAMALE/。
-
-272  https://www.facebook.com/Women-Relief-Alliance-Foundation-107672190649483/，访问于2021年1月5日。
 
 
+253 “加纳广播公司（#GBC）关于#HumanityFirstGhana📸#COVID_19🌐在#Accra危机捐赠的新闻，”https://www.facebook.com/HumanityFirstGhana/videos/236368264086271/，访问于2021年7月29日。
 
+254 “阿赫迈迪亚青年协会向海岸角聋哑盲人学校捐赠，”2019年2月10日，https://www.graphic.com.gh/news/general-news/ahmadiyya-youth-association-donates-to-cape-coast-school-for-the-deaf-and-blind.html，访问于2021年7月25日。
 
-西马迪纳发展基金会（WEMADEF）则是由穆斯林运营的教派性地方社区协会的一个例子。该协会成立于2020年8月，拥有约200名成员，致力于“促进西马迪纳人民的团结阵线、生产力和赋权，使其成为该镇经济和社会发展的主要支柱”。273 WEMADEF启动了“2040年愿景：西马迪纳再生计划”，旨在加速教育、经济赋权、现代医疗设施和基础设施发展，例如在阿克拉的马迪纳宗戈建设社区图书馆、青年与企业中心以及社区休闲公园。274 其第一个项目——修复乌马尔·本·哈塔布小学和初中（Umar Bin Hatab Primary and JHS）——通过2020年12月一次成功的募捐活动得以实现。275 最近的一个现象是，过去十年间加纳出现了多个世俗穆斯林非政府组织。例如，AMAL倡议的使命是实施教育项目，以改善“社会中所有成员”的健康、经济和社会生活，并承诺支持可持续发展目标。276 而文艺复兴宗戈青年援助组织（R-ZOYA）于2021年5月组织了首个项目——疟疾预防运动，随后于2021年8月举办为期两天的女性创业研讨会，提供关于数字化创业、商业动机和创意以及数字技能的强化培训。277 另一个例子是延迪青年联系组织（Yendi Youth Connect），该组织于2020年10月举办了青年赋权研讨会。其想法是推动工作服行业的发展、品牌化和营销，使延迪成为加纳的工作服中心。278
+255 穆罕默德·哈希鲁，“伊朗外交使团与什叶派在加纳的传播”，*国际科学杂志：基础与应用研究*（IJSBAR）第34卷，第3期（2017年），第253页。伊玛目侯赛因基金会自2018年起拥有Facebook账户，参见https://www.facebook.com/Imam-Hussein-as-Foundation-Ghana-212357002875391。
 
-273 什么是WEMADEF，https://www.facebook.com/WEMADEF/?ref=page_internal，15.10.2020，访问于23.8.2021。
+256 “加纳的穆斯林，”2018年12月3日，rooralism-lb.net/en/2018/12/03/muslims-in-ghana，访问于2021年7月21日。此后该主页已失效（截至2024年5月）。
+
+257 http://www.majmahahlulbait.org/about-us/，访问于2017年11月。此后该主页已失效（截至2024年5月）。该组织运营着多个Facebook账户，包括https://www.facebook.com/Majmah-ahlul-bait-ghana-12608717466628、https://www.facebook.com/MAJMA-AHLUL-BAITE-as-Kumasi-branch-11033059574319、https://www.facebook.com/Ahlul-Bayt-AS-Youth-Activist-294056204051933和https://www.facebook.com/Zaawiyatu，以及一个在线媒体频道https://www.facebook.com/ShiaIslamicMediaGh。
+
+258 https://www.facebook.com/markazgh/。
+
+269 https://www.facebook.com/ACDEVTAMALE/，2017年9月28日，访问于2021年1月5日。
+
+270 https://www.facebook.com/ACDEVTAMALE/，2017年10月4日，访问于2021年1月5日。
+
+271 https://www.facebook.com/ACDEVTAMALE/。
+
+272 https://www.facebook.com/Women-Relief-Alliance-Foundation-107672190649483/，访问于2021年1月5日。
+
+西马迪纳发展基金会（`WEMADEF`）则是由穆斯林运营的教派性地方社区协会的一个例子。该协会成立于2020年8月，拥有约200名成员，致力于“促进西马迪纳人民的团结阵线、生产力和赋权，使其成为该镇经济和社会发展的主要支柱”。273 `WEMADEF`启动了“2040年愿景：西马迪纳再生计划”，旨在加速教育、经济赋权、现代医疗设施和基础设施发展，例如在阿克拉的马迪纳宗戈建设社区图书馆、青年与企业中心以及社区休闲公园。274 其第一个项目——修复乌马尔·本·哈塔布小学和初中（`Umar Bin Hatab Primary and JHS`）——通过2020年12月一次成功的募捐活动得以实现。275 最近的一个现象是，过去十年间加纳出现了多个世俗穆斯林非政府组织。例如，`AMAL`倡议的使命是实施教育项目，以改善“社会中所有成员”的健康、经济和社会生活，并承诺支持可持续发展目标。276 而文艺复兴宗戈青年援助组织（`R-ZOYA`）于2021年5月组织了首个项目——疟疾预防运动，随后于2021年8月举办为期两天的女性创业研讨会，提供关于数字化创业、商业动机和创意以及数字技能的强化培训。277 另一个例子是延迪青年联系组织（`Yendi Youth Connect`），该组织于2020年10月举办了青年赋权研讨会。其想法是推动工作服行业的发展、品牌化和营销，使延迪成为加纳的工作服中心。278
+
+273 什么是`WEMADEF`，https://www.facebook.com/WEMADEF/?ref=page_internal，15.10.2020，访问于23.8.2021。
+
 274 2040愿景，https://www.facebook.com/WEMADEF/photos/a.100917098408439/1440147 90765336/，29.10.2020，访问于23.8.2021。
+
 275 https://www.facebook.com/WEMADEF/photos/pcb.197463035420511/197462752420542，以及 https://www.facebook.com/WEMADEF/photos/pcb.197463035420511/1974626187538 86，23.12.2020，访问于23.8.2021。
+
 276 https://www.facebook.com/Amalinitiative。
+
 277 https://www.facebook.com/Rzongoyouthaid。
+
 278 https://www.facebook.com/YendiYouthConnect，26.10.2020，访问于30.12.2021。
 
-位于库马西的希望种子基金会（Seed of Hope Foundation）成立于2016年，是一个世俗穆斯林非政府组织，自成立以来一直关注街头儿童的困境，尤其是kayaye（女搬运工）女孩。尽管该组织在其2020年的主页上并未声明自己是穆斯林非政府组织，但Facebook上的一些早期帖子表明它是由穆斯林活动家创立的。例如，2018年5月，它组织了“我们一年一度的斋月健身步行和锻炼”。280 此外，其他帖子表明其与当地穆斯林非政府组织有联系。2018年11月，它与库马西的准入妇女网络（Access Women Network）合作组织了“与Kayaye的一天”，2020年4月，它向库马西的贫困人口分发了穆斯林专业协会捐赠的食品。281
+位于库马西的希望种子基金会（`Seed of Hope Foundation`）成立于2016年，是一个世俗穆斯林非政府组织，自成立以来一直关注街头儿童的困境，尤其是`kayaye`（女搬运工）女孩。尽管该组织在其2020年的主页上并未声明自己是穆斯林非政府组织，但Facebook上的一些早期帖子表明它是由穆斯林活动家创立的。例如，2018年5月，它组织了“我们一年一度的斋月健身步行和锻炼”。280 此外，其他帖子表明其与当地穆斯林非政府组织有联系。2018年11月，它与库马西的准入妇女网络（`Access Women Network`）合作组织了“与Kayaye的一天”，2020年4月，它向库马西的贫困人口分发了穆斯林专业协会捐赠的食品。281
 
 279 https://www.seedofhopefdn.org/about，访问于3.8.2022。该主页的日期/最后更新于2020年，但已于2024年失效。
+
 280 https://www.facebook.com/sophghana/，14.5.2018，访问于3.8.2022。
+
 281 https://www.facebook.com/sophghana/，14.11.2018，2.4.2020，访问于3.8.2022。
 
-而成立于2007年的Faata Africa/Final Point Foundation（FPF）最初是一个宗戈青年组织。此后，其雄心一直是“激励非洲青年培养积极心态，发现他们的才能/天赋，为非洲乃至整个世界的进步做出贡献”，282 以及“建立一种面向生活、学习、勤奋、志愿服务和爱国精神的新信念体系”。283 近年来，Faata Africa专注于开展禁毒运动（“加纳梦想梦想家向毒品说不”）和倡导无烟环境，284 同时自2017年起与当地非政府组织和青年团体在阿克拉、阿希曼和库马西的多个地点组织“宗戈励志饮食”活动。285 尽管该组织并未声明自己是穆斯林非政府组织，但其顾问委员会成员以及管理团队似乎都是穆斯林，这表明它是一个世俗穆斯林非政府组织。此外，Facebook上的一些帖子暗示文莱苏丹和阿联酋红新月会是该组织的捐助者之一。286 2020年，它在阿克拉的马迪纳市场停车场为500名kayaye组织了“宰牲节慈善项目”，同时转发了一个链接，指向在上西部地区举办的“拯救援助项目2020年宰牲节肉类礼物和孤儿派对”，并敦促其成员为该项目的捐款。287 同样在2020年，并在2021年再次举行，它与穆斯林监狱在押人员组织了开斋饭活动。288 尽管如此，遵循其非教派使命，它也在圣诞节和复活节进行捐赠。289
+而成立于2007年的`Faata Africa/Final Point Foundation`（`FPF`）最初是一个宗戈青年组织。此后，其雄心一直是“激励非洲青年培养积极心态，发现他们的才能/天赋，为非洲乃至整个世界的进步做出贡献”，282 以及“建立一种面向生活、学习、勤奋、志愿服务和爱国精神的新信念体系”。283 近年来，`Faata Africa`专注于开展禁毒运动（“加纳梦想梦想家向毒品说不”）和倡导无烟环境，284 同时自2017年起与当地非政府组织和青年团体在阿克拉、阿希曼和库马西的多个地点组织“宗戈励志饮食”活动。285 尽管该组织并未声明自己是穆斯林非政府组织，但其顾问委员会成员以及管理团队似乎都是穆斯林，这表明它是一个世俗穆斯林非政府组织。此外，Facebook上的一些帖子暗示文莱苏丹和阿联酋红新月会是该组织的捐助者之一。286 2020年，它在阿克拉的马迪纳市场停车场为500名`kayaye`组织了“宰牲节慈善项目”，同时转发了一个链接，指向在上西部地区举办的“拯救援助项目2020年宰牲节肉类礼物和孤儿派对”，并敦促其成员为该项目的捐款。287 同样在2020年，并在2021年再次举行，它与穆斯林监狱在押人员组织了开斋饭活动。288 尽管如此，遵循其非教派使命，它也在圣诞节和复活节进行捐赠。289
 
 282 https://www.facebook.com/foundation2000/，访问于3.8.2022。
+
 283 https://faataafrica.org/vision_mission/，访问于3.8.2022。
+
 284 https://www.facebook.com/foundation2000/，12.2.2022、24.2.2022、31.3.2022、18.4.2022、26.4.2022、9.5.2022、29.5.2022、1.6.2022、20.6.2022、26.6.2022、13.7.2022，访问于3.8.2022。
+
 285 https://www.facebook.com/foundation2000/，6.10.2017、25.10.2017、17.11.2017、24.11.2017、13.1.2018、24.4.2019、3.5.2019、12.3.2021、7.3.2022、8.11.2022，访问于23.8.2023。
+
 286 https://www.facebook.com/foundation2000/，15.7.2020、15.7.2021、17.3.2022、18.3.2022、2.6.2022、15.7.2022，访问于3.8.2022。
+
 287 https://www.facebook.com/foundation2000/，1.8.2020，访问于3.8.2022。
+
 288 https://www.facebook.com/foundation2000/，18.7.2020，访问于3.8.2022。
+
 289 https://www.facebook.com/foundation2000/，18.4.2021，访问于3.8.2022。
 
-2019年，作为合作机构研究与开发机构（CARD）。除了各种农村发展计划，该组织还运营一个社区健康、教育和技能教学援助（CHESTA）项目。2014年至2018年间，ROCCAD Ghana与英国穆斯林慈善机构“慈悲商队”（Caravan of Mercy）合作，向加纳北部贫困农村社区提供食品和水。294
+2019年，作为合作机构研究与开发机构（`CARD`）。除了各种农村发展计划，该组织还运营一个社区健康、教育和技能教学援助（`CHESTA`）项目。2014年至2018年间，`ROCCAD Ghana`与英国穆斯林慈善机构“慈悲商队”（`Caravan of Mercy`）合作，向加纳北部贫困农村社区提供食品和水。294
 
 294 https://www.facebook.com/roccad2014。
 
-一个类似的活动是宗戈女童教育组织（Zongo Girls for Education，简称Zonged），由Safia Abdallah Raabo创立，并得到国家首席伊玛目办公室的支持。该组织已与国际计划组织和宗戈发展基金合作，于2020年开展新冠病毒宣传活动（包括在ZongoLink TV上以豪萨语播出的节目）。它还参与艾滋病毒/艾滋病项目（其中包括2022年在商业司机中开展安全套推广运动，以鼓励安全性行为）、反巫术运动，并宣传世界月经健康日。295 同样，宗戈母亲希望基金会（ZMUF）旨在降低宗戈社区孕产妇死亡率的流行，改善妇女的健康和福祉。它还以豪萨语发起了一项COVID-19宣传活动。ZMUF在美国设有分支机构，其成员收集并捐赠物资寄往加纳。296 而总部位于阿克拉的万国之母基金会（MOANF）则专注于提升宗戈儿童的教育技能，此外还开展乳腺癌宣传活动。自2015年以来，它每年组织阅读营，并于2023年启动了“Adesua Kruwa项目”作为新的旗舰项目。该项目旨在为阿克拉拉-恩克万坦-马迪纳市的基础教育6年级公立学校学生提供针对性的指导和支持，以培养他们的识字能力、口语表达能力和分析技能。297 2017年，MOANF与Final Point Foundation和Tabrama青年组织共同组织了首届“宗戈励志饮食”活动（见下文第2.3.2节）。
+一个类似的活动是宗戈女童教育组织（`Zongo Girls for Education`，简称`Zonged`），由`Safia Abdallah Raabo`创立，并得到国家首席伊玛目办公室的支持。该组织已与国际计划组织和宗戈发展基金合作，于2020年开展新冠病毒宣传活动（包括在`ZongoLink TV`上以豪萨语播出的节目）。它还参与艾滋病毒/艾滋病项目（其中包括2022年在商业司机中开展安全套推广运动，以鼓励安全性行为）、反巫术运动，并宣传世界月经健康日。295 同样，宗戈母亲希望基金会（`ZMUF`）旨在降低宗戈社区孕产妇死亡率的流行，改善妇女的健康和福祉。它还以豪萨语发起了一项COVID-19宣传活动。`ZMUF`在美国设有分支机构，其成员收集并捐赠物资寄往加纳。296 而总部位于阿克拉的万国之母基金会（`MOANF`）则专注于提升宗戈儿童的教育技能，此外还开展乳腺癌宣传活动。自2015年以来，它每年组织阅读营，并于2023年启动了“`Adesua Kruwa`项目”作为新的旗舰项目。该项目旨在为阿克拉拉-恩克万坦-马迪纳市的基础教育6年级公立学校学生提供针对性的指导和支持，以培养他们的识字能力、口语表达能力和分析技能。297 2017年，`MOANF`与`Final Point Foundation`和`Tabrama`青年组织共同组织了首届“宗戈励志饮食”活动（见下文第2.3.2节）。
 
 295 另见 https://www.facebook.com/zongedgh。
-296 https://www.facebook.com/zongomothershopefoundation/。
-297 https://www.facebook.com/moanfaoundation/。关于Adesua Kruwa项目，见 https://docs.google.com/forms/d/e/1FAIpQLSdvi_G2hjJZrpLaEvzV9fll3mjoVzHo24fOkPdFZJRk95jm6A/viewform，访问于17.8.2023。
 
-最后，最大胆的第三代世俗穆斯林倡议之一是加纳的One Love Sisters Facebook账号。尽管加纳的穆斯林宗教和政治领导层整体上拒绝了女同性恋、男同性恋、双性恋和跨性别者（LGBT）的权利，并强烈谴责同性婚姻，但一些组织，如穆斯林流动传教士协会（Muslim Mobile Preachers Asso-）298
+296 https://www.facebook.com/zongomothershopefoundation/。
+
+297 https://www.facebook.com/moanfaoundation/。关于`Adesua Kruwa`项目，见 https://docs.google.com/forms/d/e/1FAIpQLSdvi_G2hjJZrpLaEvzV9fll3mjoVzHo24fOkPdFZJRk95jm6A/viewform，访问于17.8.2023。
+
+最后，最大胆的第三代世俗穆斯林倡议之一是加纳的`One Love Sisters` Facebook账号。尽管加纳的穆斯林宗教和政治领导层整体上拒绝了女同性恋、男同性恋、双性恋和跨性别者（LGBT）的权利，并强烈谴责同性婚姻，但一些组织，如穆斯林流动传教士协会（`Muslim Mobile Preachers Asso-`）298
 
 298 “穆斯林组织联盟敦促议员支持反同性恋法案”，
-
 
 一些协会甚至将“同性恋行为”和“女同性恋行为”定义为“撒旦行为”，²⁹⁹ 社交媒体已成为（匿名的）穆斯林LGBT与酷儿群体的表达空间。³⁰⁰
 
 ### 3 青年作为生力军
 
-一个显著的特征是，2010年代加纳穆斯林青年领导的非政府组织如雨后春笋般涌现。有些组织致力于全国性的外展服务，例如Rayuwa基金会、加纳伊斯兰乌玛、希望之粒、ADIL发展组织、伊斯兰惠及全民组织和拯救援助项目。其中大多数组织在当地或区域内开展活动，例如位于阿克拉的伊斯兰之光青年组织（LIYO），该组织在阿克拉拉特比奥科希（Lartebiokoshie）结合了宣教（daʿwa）和临时社区救助，比如其2017年4月的医疗筛查项目。³⁰¹
+一个显著的特征是，2010年代加纳穆斯林青年领导的非政府组织如雨后春笋般涌现。有些组织致力于全国性的外展服务，例如`Rayuwa`基金会、加纳伊斯兰乌玛、希望之粒、`ADIL`发展组织、伊斯兰惠及全民组织和拯救援助项目。其中大多数组织在当地或区域内开展活动，例如位于阿克拉的伊斯兰之光青年组织（`LIYO`），该组织在阿克拉拉特比奥科希（`Lartebiokoshie`）结合了宣教（`daʿwa`）和临时社区救助，比如其2017年4月的医疗筛查项目。³⁰¹
 
-社交媒体是Zongo青年群体的关键基础设施，以前所未有的程度和规模促进筹款活动。前Facebook时代的社会运动通常局限于本地，与互联网时代的社会运动相比，成员寥寥无几；后者可能拥有成百上千的关注者。社交媒体本质上超越了其起源的地域性，因为一个特定Zongo青年群体的关注者可能住在附近或国外。当地关注者被动员起来参加本地、限地的活动，如街道清洁活动，或协助、探访医院、孤儿院、监狱和学校的项目。任何潜在访问该群体Facebook页面的关注者都被要求为该群体和/或其本地外展项目提供经济支持。
+社交媒体是`Zongo`青年群体的关键基础设施，以前所未有的程度和规模促进筹款活动。前Facebook时代的社会运动通常局限于本地，与互联网时代的社会运动相比，成员寥寥无几；后者可能拥有成百上千的关注者。社交媒体本质上超越了其起源的地域性，因为一个特定`Zongo`青年群体的关注者可能住在附近或国外。当地关注者被动员起来参加本地、限地的活动，如街道清洁活动，或协助、探访医院、孤儿院、监狱和学校的项目。任何潜在访问该群体Facebook页面的关注者都被要求为该群体和/或其本地外展项目提供经济支持。
 
-加纳社交媒体的快速扩张和易获取性推动了穆斯林青年协会和运动的发展。这一现象最初是城市现象，扎根于阿克拉各个Zongo社区的青年活动家中。在2010年代，这一现象扩展到全国其他Zongo社区。这些社交网络中有许多（如果不是大多数）未经注册且非正式，缺乏清晰的结构和成员制度。相反，它们的优势在于通过社交媒体，特别是Facebook和WhatsApp动员关注者。将它们团结在一起的是对Zongo青年被污名化为一群土匪、罪犯和贫民窟居民的沮丧，甚至愤怒；对因缺乏教育、就业和投资而被剥夺权力和边缘化的愤慨；以及对长辈、领导人和政治人物的忽视和不尊重。萨米哈·苏莱曼（Samiha Sulleyman）在她的诗中写道：“宗戈宗戈宗戈/我们有许多（原文如此）问题”，这首诗在社交媒体上被各Zongo群体和博主广泛传播，表达、描述并宣泄了Zongo青年的沮丧：
+加纳社交媒体的快速扩张和易获取性推动了穆斯林青年协会和运动的发展。这一现象最初是城市现象，扎根于阿克拉各个`Zongo`社区的青年活动家中。在2010年代，这一现象扩展到全国其他`Zongo`社区。这些社交网络中有许多（如果不是大多数）未经注册且非正式，缺乏清晰的结构和成员制度。相反，它们的优势在于通过社交媒体，特别是`Facebook`和`WhatsApp`动员关注者。将它们团结在一起的是对`Zongo`青年被污名化为一群土匪、罪犯和贫民窟居民的沮丧，甚至愤怒；对因缺乏教育、就业和投资而被剥夺权力和边缘化的愤慨；以及对长辈、领导人和政治人物的忽视和不尊重。萨米哈·苏莱曼（`Samiha Sulleyman`）在她的诗中写道：“宗戈宗戈宗戈/我们有许多（原文如此）问题”，这首诗在社交媒体上被各`Zongo`群体和博主广泛传播，表达、描述并宣泄了`Zongo`青年的沮丧：
 
 > 卫生是个问题/ 少女怀孕泛滥/ 贫困率极高/ 住房恶劣/ 婚姻虐待，别提了/ 大多数人没受过教育，也看不出上学的意义/
+> 
 > 我们人数众多/ 但医生却很少/ 我们人数众多/ 但护士却很少/ 我们人数众多/ 但律师却很少/ 我们人数众多/ 但飞行员少之又少/ 我们人数众多/ 但工程师却很少/ 我们人数众多/ 但变革者却很少/
+> 
 > 我们穿的头巾和长袍是中国制造的/ 我们的排水系统很差/ 垃圾处理方式糟糕/ 我们等到下雨才处置垃圾/
+> 
 > 在宗戈，男人可以打妻子，打得她眼睛和下巴脱臼，还被称赞为一家之主/ 而女人却被责骂，被迫回到婚家/
+> 
 > 在宗戈/ 在宗戈，守规矩的人被视为‘munufukai’，是的，那些希波克拉底（原文如此）不随大流/ 在宗戈，真主赐予青年能量和力量，但他们却用它来打架和加入自卫队/ 在宗戈，真主赐予我们口才，但我们更擅长侮辱/
+> 
 > 凭我们的口才，我们可以有更多记者、更多主持人、更多政治家、更多律师、更多营销人员/ 但他们轻易就说‘andutwa’和‘sheegiya’/
-> 在宗戈，sakawa是那些有魅力有头脑的人做的事/ 在宗戈，即使你建了图书馆，它也总是空的。比如Kanda图书馆/ 整个地方都被糖堵住了，赌博是年轻人的新职业/
+> 
+> 在宗戈，`sakawa`是那些有魅力有头脑的人做的事/ 在宗戈，即使你建了图书馆，它也总是空的。比如`Kanda`图书馆/ 整个地方都被糖堵住了，赌博是年轻人的新职业/
+> 
 > 面对宗戈的所有问题/ 我们只关心一夫多妻制/ 真主保佑宗戈/ 和平。³⁰²
 
-³⁰² 萨米哈·苏莱曼，《宗戈宗戈宗戈》，https://www.facebook.com/groups/2092458301045987/user/10000759639060/，2019年7月4日；关联到Zango Connect，2019年7月4日，https://www.facebook.com/groups/2092458301045987/permalink/2237870056504810/，访问于2022年8月4日。这个开放的Facebook群组有超过39,000名成员。
+³⁰² 萨米哈·苏莱曼，《宗戈宗戈宗戈》，https://www.facebook.com/groups/2092458301045987/user/10000759639060/，2019年7月4日；关联到`Zango Connect`，2019年7月4日，https://www.facebook.com/groups/2092458301045987/permalink/2237870056504810/，访问于2022年8月4日。这个开放的Facebook群组有超过39,000名成员。
 
-博主Dem Police表达了类似关切。该博主将Zongo穆斯林青年视为社会悲剧的受害者，被父母和领导层所抛弃：“没有任何制度化的措施来教育、培训甚至引导他们，使他们能够对自己、家庭、社区和整个国家有所作为。”303
+博主`Dem Police`表达了类似关切。该博主将`Zongo`穆斯林青年视为社会悲剧的受害者，被父母和领导层所抛弃：“没有任何制度化的措施来教育、培训甚至引导他们，使他们能够对自己、家庭、社区和整个国家有所作为。”303
 
-将负面形象转化为正面形象一直是Zongo青年团体的主要目标之一。“年轻是变革、进步和未来的代名词，”宗戈青年之声基金会宣称，并向其关注者保证，“年轻归根结底是直面挑战，并为未来的全面发展创造或重塑空间[...]，将问题转化为机遇[...]，并成为社会的驱动力。”304
+将负面形象转化为正面形象一直是`Zongo`青年团体的主要目标之一。“年轻是变革、进步和未来的代名词，”宗戈青年之声基金会宣称，并向其关注者保证，“年轻归根结底是直面挑战，并为未来的全面发展创造或重塑空间[...]，将问题转化为机遇[...]，并成为社会的驱动力。”304
 
-许多Zongo青年团体的活动轨迹相似。一个新团体成立并命名后，会创建一个Facebook账户。Facebook随后成为团体的连接器，因此对其中许多团体来说，Facebook也是唯一可识别的结构和制度。该团体随后宣布其愿景和使命，通常还会发表声明，谴责对Zongo社区的边缘化以及政客对资源的管理不善。草根政治批评和行动主义在加纳有着悠久的传统；Zongo社交网络的新颖之处在于它们专注于自我赋权。随后，大多数Zongo青年团体开始各种形式的本地行动，其中一些变成了年度活动。结果是，一个Zongo青年团体将发展为一个成员制组织，尽管大多数团体在可识别的机构、职能人员和办公场所方面仍缺乏稳定的基础设施。这些团体的优势在于，它们可以通过社交媒体动员本地关注者参与特定项目。
+许多`Zongo`青年团体的活动轨迹相似。一个新团体成立并命名后，会创建一个Facebook账户。Facebook随后成为团体的连接器，因此对其中许多团体来说，Facebook也是唯一可识别的结构和制度。该团体随后宣布其愿景和使命，通常还会发表声明，谴责对`Zongo`社区的边缘化以及政客对资源的管理不善。草根政治批评和行动主义在加纳有着悠久的传统；`Zongo`社交网络的新颖之处在于它们专注于自我赋权。随后，大多数`Zongo`青年团体开始各种形式的本地行动，其中一些变成了年度活动。结果是，一个`Zongo`青年团体将发展为一个成员制组织，尽管大多数团体在可识别的机构、职能人员和办公场所方面仍缺乏稳定的基础设施。这些团体的优势在于，它们可以通过社交媒体动员本地关注者参与特定项目。
 
-穆斯林和Zongo青年协会的可见性与加纳社交媒体的扩张相关。可以说，穆斯林青年协会在互联网时代之前就存在，但它们的影响在成员、沟通和产出方面受到限制。社交媒体彻底改变了它们的沟通速度和范围，并扩大了它们的活动。早期的青年协会可能只有十几个成员，而在Facebook上的协会则能接触到数百甚至数千名关注者。Facebook上的活动和组织的一代超越了固定地点和地域边界，一个组织的关注者可以遍布世界各地。例如，*沙法宗戈青年基金会*于2020年9月呼吁“所有居住在加纳内外的沙法青年”为其当地学校和*伊斯兰学校*（makaranta）的建设项目提供经济支持（*持续施舍*，sadaqa jariya），³⁰⁵ 并于2021年3月再次恳请全球捐助者支持该项目。³⁰⁶ 2020年11月，*宗戈联合*（Zango United）也发布了类似的请求，以完成一个伊斯兰学校项目；这是一个位于阿克拉Sabon Zongo的本地穆斯林非政府组织，于2020年成立。³⁰⁷
 
-另一个新现象是加纳Zongo侨民协会在欧洲和北美的建立，例如德国的*宗戈侨民外展基金会*（*ZDOF*）和*汉堡宗戈青年协会*，瑞典的*瑞典宗戈青年协会*（*ZYAS*），以及美国的*库马西宗戈青年加速发展组织*（*KUZYAD*）和*北美库马西大都会区宗戈协会*（*KMZANA*）。这两个德国团体是有趣的案例。非宗教、无党派的*宗戈侨民外展基金会*（*ZDOF*）在阿克拉设有分支机构，并于2019年在加纳北部启动了发展项目和多媒体系列节目。³⁰⁸ *ZDOF*的重点是促进萨凡纳地区的和平。³⁰⁹ 另一方面，*汉堡宗戈青年协会*似乎是汉堡加纳移民的自助组织。³¹⁰ 成立于2018年的*ZYAS*拥有约650名成员，是瑞典宗戈移民的伞形组织。³¹¹ 与欧洲其他加纳侨民团体类似，*ZYAS*自2020年起向加纳特定目标社区发送捐赠（*sadaqa*）。³¹² 而*KUZYAD*则是一个“向
+
+穆斯林和Zongo青年协会的可见性与加纳社交媒体的扩张相关。可以说，穆斯林青年协会在互联网时代之前就存在，但它们的影响在成员、沟通和产出方面受到限制。社交媒体彻底改变了它们的沟通速度和范围，并扩大了它们的活动。早期的青年协会可能只有十几个成员，而在Facebook上的协会则能接触到数百甚至数千名关注者。Facebook上的活动和组织的一代超越了固定地点和地域边界，一个组织的关注者可以遍布世界各地。例如，`沙法宗戈青年基金会`于2020年9月呼吁“所有居住在加纳内外的沙法青年”为其当地学校和`伊斯兰学校`（makaranta）的建设项目提供经济支持（`持续施舍`，sadaqa jariya），³⁰⁵ 并于2021年3月再次恳请全球捐助者支持该项目。³⁰⁶ 2020年11月，`宗戈联合`（Zango United）也发布了类似的请求，以完成一个伊斯兰学校项目；这是一个位于阿克拉Sabon Zongo的本地穆斯林非政府组织，于2020年成立。³⁰⁷
+
+另一个新现象是加纳Zongo侨民协会在欧洲和北美的建立，例如德国的`宗戈侨民外展基金会`（`ZDOF`）和`汉堡宗戈青年协会`，瑞典的`瑞典宗戈青年协会`（`ZYAS`），以及美国的`库马西宗戈青年加速发展组织`（`KUZYAD`）和`北美库马西大都会区宗戈协会`（`KMZANA`）。这两个德国团体是有趣的案例。非宗教、无党派的`宗戈侨民外展基金会`（`ZDOF`）在阿克拉设有分支机构，并于2019年在加纳北部启动了发展项目和多媒体系列节目。³⁰⁸ `ZDOF`的重点是促进萨凡纳地区的和平。³⁰⁹ 另一方面，`汉堡宗戈青年协会`似乎是汉堡加纳移民的自助组织。³¹⁰ 成立于2018年的`ZYAS`拥有约650名成员，是瑞典宗戈移民的伞形组织。³¹¹ 与欧洲其他加纳侨民团体类似，`ZYAS`自2020年起向加纳特定目标社区发送捐赠（`sadaqa`）。³¹² 而`KUZYAD`则是一个“向
 
 303 DemPolice，《加纳穆斯林青年的悲伤故事》，Opera News，https://gh.opera.news/gh/en/society/e659cfei8cd4523f55b82773e2fa194c，访问于2023年8月17日；该链接已于2024年5月失效。
 
 304 “年轻是变革的代名词 [...]”，2023年6月21日，https://www.facebook.com/voiceofzongoyouthfoundation，访问于2023年8月17日。
 
 305 https://www.facebook.com/shafazongoyouthfoundation/，2020年9月15日，访问于2021年9月28日。
+
 306 https://www.facebook.com/shafazongoyouthfoundation/，2021年3月5日，访问于2021年9月28日。
+
 307 https://www.facebook.com/zangounited，2020年11月22日，访问于2022年1月6日。
+
 308 “来自加纳北部的三位大使共同让世界和平，”2019年2月22日，http://www.africanewsanalysis.com/three-ambassadors-from-the-northern-ghana-are-peacing-the-world-together/，访问于2021年10月18日。
+
 309 https://www.facebook.com/Zongo-Diaspora-Outreach-Foundation-321849638427418/?ref=page_internal，2020年3月7日，访问于2021年10月18日。
+
 310 参见《汉堡宗戈青年协会规章与规则》，可访问 https://www.facebook.com/Hamburg-Zongo-Youth-Association-1281887791962028/，2020年3月1日，访问于2021年10月18日。
+
 311 其Facebook账户，https://www.facebook.com/ZANGO-YOUTH-in-Sweden-102527234794548/，创建于2020年5月6日，拥有186名关注者（2022年1月16日）。
+
 312 捐赠交付的YouTube视频，2020年5月6日，https://www.facebook.com/102527234794548/videos/2631225503867040，访问于2021年4月11日；瑞典宗戈青年汇款的YouTube视频，https://www.facebook.com/102527234794548/videos/248508489816364，2020年5月26日，访问于2022年1月16日。
-
-
-
 
 任何自称来自库马西宗戈、313并声称其总部设在库马西的人。然而，其首次主要活动——在2017年9月初于美国纽约布朗克斯的范科特兰公园举办“阿克拉青年”与“库马西青年”之间的萨拉足球赛——表明其成员由居住在美国的（穆斯林）移民组成。314
 
@@ -1970,13 +1999,13 @@ IMS最终通过全国性筹款项目完成了其学院项目，尽管在此过�
 
 是否此类帖子导致了更大规模的抗议或正面/负面赞扬尚不得而知。宗戈青年团体没有呼吁举行大规模集会或公开抗议疫苗，甚至 Zenu 宗戈青年协会也没有做出任何努力回应该帖子。另一方面，它也没有发布正面/负面的回应。
 
-#### 3.1 宗戈青年团体的广泛光谱
+### 3.1 宗戈青年团体的广泛光谱
 
-宗戈和穆斯林青年团体的形成和扩张已成为全国性现象。附录中列出的大多数青年团体和网络在 Facebook 上的寿命相对较短，或许与它们在现实生活中的活动相关。例如，*负责任穆斯林青年联合会*（FORMY）于2015年建立其 Facebook 账号，但一年后停止了活动。尽管如此，其中少数已转变为准机构，即（主要是）转变为非注册的非政府组织和民间社会组织。
+宗戈和穆斯林青年团体的形成和扩张已成为全国性现象。附录中列出的大多数青年团体和网络在 Facebook 上的寿命相对较短，或许与它们在现实生活中的活动相关。例如，`负责任穆斯林青年联合会`（FORMY）于2015年建立其 Facebook 账号，但一年后停止了活动。尽管如此，其中少数已转变为准机构，即（主要是）转变为非注册的非政府组织和民间社会组织。
 
-大多数宗戈青年团体要么由穆斯林领导，要么是穆斯林青年的联络者，尽管宗教因素本身很少成为它们的显着或独特标志。其中一些是 *宣教* 团体，例如 *马迪纳关怀青年协会* 或 *埃朱拉关怀青年协会*。其他的是教派性的，如 *宗戈青年热情*（ZOZY）。大多数都带有标志，表示其发展和激励的使命，或其团结和推动积极变革的愿景。其中一些标志带有政治信息，但也许并不表示政治隶属或灵感——黑星（泛非主义/恩克鲁玛主义/非洲解放和反对殖民主义的团结），见于 *复兴宗戈青年援助* 和 *宗戈转型网络* 的标志；拳头（反叛、激进主义、抵抗、团结），被 *宗戈青年联盟*（黑拳）、*劳拉宗戈青年协会*（红拳）、*恩索阿特雷宗戈青年协会*（红拳）和 *赞戈联合*（绿拳）使用。
+大多数宗戈青年团体要么由穆斯林领导，要么是穆斯林青年的联络者，尽管宗教因素本身很少成为它们的显着或独特标志。其中一些是 `宣教` 团体，例如 `马迪纳关怀青年协会` 或 `埃朱拉关怀青年协会`。其他的是教派性的，如 `宗戈青年热情`（ZOZY）。大多数都带有标志，表示其发展和激励的使命，或其团结和推动积极变革的愿景。其中一些标志带有政治信息，但也许并不表示政治隶属或灵感——黑星（泛非主义/恩克鲁玛主义/非洲解放和反对殖民主义的团结），见于 `复兴宗戈青年援助` 和 `宗戈转型网络` 的标志；拳头（反叛、激进主义、抵抗、团结），被 `宗戈青年联盟`（黑拳）、`劳拉宗戈青年协会`（红拳）、`恩索阿特雷宗戈青年协会`（红拳）和 `赞戈联合`（绿拳）使用。
 
-在这个互联网时代，宗戈青年团体的新颖之处不在于其数量的增加，而在于其中一些团体从临时干预转向雄心勃勃的长期投资项目。这些团体的共同点是自我赋权。这正是 *宗戈青年发展协会* 的精髓和核心信息，该协会是2013年和2014年活跃的第一个新宗戈青年团体之一：
+在这个互联网时代，宗戈青年团体的新颖之处不在于其数量的增加，而在于其中一些团体从临时干预转向雄心勃勃的长期投资项目。这些团体的共同点是自我赋权。这正是 `宗戈青年发展协会` 的精髓和核心信息，该协会是2013年和2014年活跃的第一个新宗戈青年团体之一：
 
 > [O]我们的愿景只有在我们以承诺、努力工作、决心和团结携手合作时才能实现。请记住，我们社区的发展掌握在我们自己手中，而不是在议员/议员、MCES、DCES、MPS、部长或总统手中。是我们为子孙后代谋福利的时候了。
 
@@ -1988,13 +2017,11 @@ IMS最终通过全国性筹款项目完成了其学院项目，尽管在此过�
 
 > > 这些宗戈社区的长老们忽视了通过同样的手段（即动员资金）为每户提供厕所设施这一更紧迫的问题。相反，他们依赖那些不断许诺却不兑现所需发展的政客。但当这些社区被认为虔诚的领导人忽视厕所散发出的恶臭以及肮脏造成的疾病时，政客们为何要操心？根据伊斯兰教义，清洁是虔诚的邻居；因此，当社区的房屋缺乏厕所设施时，修建和翻新清真寺几乎没有虔诚可言。宗戈社区必须醒悟这一真理，停止依赖历届政府提供永远难以捉摸的发展。³²¹
 
-两位博主的言论输出从要求转变为识别积极变化，当他们认识到2016年一个新宗戈青年团体的动员时，即 cozy 或 *为宗戈青年而变*：“这本身就代表了从青年团体中无意义和无关紧要的名称的巨大转变
+两位博主的言论输出从要求转变为识别积极变化，当他们认识到2016年一个新宗戈青年团体的动员时，即 cozy 或 `为宗戈青年而变`：“这本身就代表了从青年团体中无意义和无关紧要的名称的巨大转变
 
 ³²⁰ Zakiyu Iddris Tandaywir，“你知道关于宗戈梦想导师诊所吗？”，https://bloggingzongo.blogspot.com/2014/11/did-you-know-about-zongo-dream.html，28.11.2014，访问于28.9.2021。
 
 ³²¹ Musah Larry Prince（Ijahra），“清真寺胜过厕所：宗戈社区肮脏中的虔诚”，https://bloggingzongo.blogspot.com/2014/12/mosques-over-toilets-piety-in-filth-in.html，4.12.2014，访问于5.9.2021。
-
-
 
 过去宗戈所采取的。”322 COZY，在他们看来，代表了从古老传统中的转变，因为该团体高度重视将女孩和妇女纳入社区发展：
 
@@ -2007,15 +2034,18 @@ COZY的成立在当地穆斯林博主和青年活动家（如Inusah Mohammed）�
 > 我并不是建议穆斯林应该像基督徒一样生活。我的观点是，加纳的穆斯林尤其没有很好地融入加纳社会。我们也许一直与非穆斯林和平共处。然而，我们不应将自己视为需要被帮助摆脱当前处境的失败者和少数群体。我们必须作为与任何其他加纳人一样享有充分和平等权利的加纳人生活！325
 
 322 “谁来解决这个问题，” https://bloggingzongo.blogspot.com/2016/06/who-will-solve-problems.html, 2016年6月29日，访问于2021年9月5日。
+
 323 “谁来解决这个问题，” https://bloggingzongo.blogspot.com/2016/06/who-will-solve-problems.html, 2016年6月29日，访问于2021年9月5日。
+
 324 关于我们， https://www.facebook.com/ChangeforZongoYouth/，访问于2021年9月5日。
+
 325 Inusah Mohammed，“为宗戈青年发起的变革与不当行为”
 
-COZY的核心活动是“宗戈青年月”，自2018年起与另外两个总部位于阿克拉的宗戈青年团体——*宗戈焦点*和*宗戈励志团队*——合作举办，最终以“宗戈青年外出日”达到高潮，期间各宗戈企业向潜在客户和投资者展示其产品。326 COZY主席Zakiyu Iddris Tindannayil在2018年4月第三届宗戈青年月启动仪式上强调，该活动作为赋予宗戈青年权力、抵消媒体对宗戈社区的负面报道和刻板印象的工具的重要性。327
+COZY的核心活动是“宗戈青年月”，自2018年起与另外两个总部位于阿克拉的宗戈青年团体——`宗戈焦点`和`宗戈励志团队`——合作举办，最终以“宗戈青年外出日”达到高潮，期间各宗戈企业向潜在客户和投资者展示其产品。326 COZY主席Zakiyu Iddris Tindannayil在2018年4月第三届宗戈青年月启动仪式上强调，该活动作为赋予宗戈青年权力、抵消媒体对宗戈社区的负面报道和刻板印象的工具的重要性。327
 
 对宗戈青年自我赋权的呼吁，以及他们反对歧视和污名化的斗争，最终在2018年7月库马西警方杀害七名宗戈青年时达到高潮。随后，宗戈青年团体在全国范围内发出强烈抗议，其中一些团体呼吁将其所认定的警察暴行和负面刻板印象的斗争激进化。328
 
-*宗戈青年之声基金会*是最近成立的青年团体的一个例子。自2020年1月初以来，它一直活跃在Facebook上，表明它始于2019年底。它声称是一个民主、无党派、非宗教的运动，希望向政策制定者表达宗戈青年的关切，并倡导和影响教育、就业机会、卫生和青年发展方面的政策问题。329 *加纳伊斯兰研究协会*（IRAG）成立于2019年春季，是一个将*宣教*和教育和培训相结合以促进经济赋权的青年团体。
+`宗戈青年之声基金会`是最近成立的青年团体的一个例子。自2020年1月初以来，它一直活跃在Facebook上，表明它始于2019年底。它声称是一个民主、无党派、非宗教的运动，希望向政策制定者表达宗戈青年的关切，并倡导和影响教育、就业机会、卫生和青年发展方面的政策问题。329 `加纳伊斯兰研究协会`（IRAG）成立于2019年春季，是一个将`宣教`和教育和培训相结合以促进经济赋权的青年团体。
 
 自成立以来，该团体在斋月期间在达库曼开展了开斋饭项目330，同时还举办了2019年世界儿童日节日331和2020年大阿克拉伊斯兰学校间古兰经背诵与知识竞赛。332
 
@@ -2025,20 +2055,25 @@ COZY的核心活动是“宗戈青年月”，自2018年起与另外两个总部
 
 > 我们的社会正在堕落，对我们来说最好的解决方案就是改变。让我们一起战斗吧；否则社会将不适合我们生存。当木虫把树枝堆在自己头上时，它自己背着。同志们，我们还要坐视社会沉沦到底吗？起来为改变而奋斗吧，宗戈青年……336
 
-“你们对宗戈青年的发展有什么计划？”*劳拉宗戈青年协会*大声喊道。337 *宗戈青年促进发展*则指责阿克拉舒库拉和扎马里马线宗戈的长老和伊玛目助长了宗教不宽容和政治文盲。338 总部位于阿克拉的*宗戈焦点*在声明中则更为间接：
+“你们对宗戈青年的发展有什么计划？”`劳拉宗戈青年协会`大声喊道。337 `宗戈青年促进发展`则指责阿克拉舒库拉和扎马里马线宗戈的长老和伊玛目助长了宗教不宽容和政治文盲。338 总部位于阿克拉的`宗戈焦点`在声明中则更为间接：
 
 > [...] 勇敢地挑战世界各地年轻人的体系中阻碍他们充分发挥潜力和发展的因素。我们的承诺是建立具体的结构和解决方案，以应对宗戈社区青年面临的发展挑战。339
+
+
 
 宗戈青年的批评声音有时甚至出现在报纸文章中。例如，2018年5月，Ahmed Abubakar Saddique指出，埃朱拉宗戈青年的问题是缺乏教育、适当的父母关爱、一夫多妻制加上无节制的生育、缺乏工作、缺乏导师计划、高度不守纪律，以及缺乏良好的卫生条件和医疗保健。在他看来，在宗戈地区产生结构性变革的起点是建立学校，而不是建清真寺。他进一步呼吁伊玛目劝阻男性不要娶多个妻子，并开始谈论节育。他继续说，政府的任务是创造就业机会和建立技能培训中心，而宗戈传统议会和酋长则要启动导师计划。340 也许是对他文章的回应，两个青年团体在埃朱拉成立，即*埃朱拉有志青年*和*埃朱拉宗戈青年论坛*。341
 
 336 https://www.facebook.com/realzangoconnect, 2019年12月28日，访问于2021年8月6日。
+
 337 https://www.facebook.com/lawrazongoyouthclub, 2015年9月1日，访问于2021年12月30日。
+
 338 Zongo Youth For Development (Zoyfod)，发布于Facebook 2018年12月31日， https://www.prod.facebook.com/ZOYFODGHANA/，访问于2021年9月5日。
+
 339 https://www.ghanayello.com/company/52373/ZONGO_FOCUS, 访问于2021年8月12日。另见 https://www.facebook.com/zongofocus1/。
+
 340 Ahmed Abubakar Saddique，“当代宗戈青年面临的挑战及前进之路”，2018年5月20日， https://www.ghanaweb.com/GhanaHomePage/features/Challenges-facing-the-contemporary-Zongo-youth-and-the-way-forward-653366, 访问于2021年10月5日。
+
 341 参见 https://www.facebook.com/Concerned-Youth-Of-Ejura-172469137027147/，以及 https://www.facebook.com/Ejura-Zango-Youth-Forum-714200698935250, 访问于2021年10月5日。
-
-
 
 传播“变革”的一种方式是使用社交媒体，尤其是 Facebook。例如，*Moshie Zongo 项目*是库马西众多青年倡议之一，它希望积极地建议、激励和鼓励青年，为库马西 Moshie Zongo 的发展游说，最重要的是追究 Moshie Zongo 领导人的责任。342 Facebook 页面上的帖子很容易演变成对 Zongo 当前状况的讽刺性批评：
 
@@ -2052,11 +2087,11 @@ COZY的核心活动是“宗戈青年月”，自2018年起与另外两个总部
 
 Prang TV 是在线穆斯林新闻和 da‘wa 频道之一，于 2021 年 7 月报道了 Zongo First 成员的沮丧情绪。抨击“Zongo 和伊斯兰博主”只关注“我们的伊斯兰导师”的争斗，以及 Zongo 政治和宗教领导人只关心自己，忽视了其社区的社会和经济发展：“Our Kings Imams And Ulama’a will request and ask for TOYOTA v8 whilst in our localities we are lacking Schools, Hospitals, and proper roads.” 唯一的解决方案是通过加入 Zongo First Campaign ‘Operation Fixing Yourself.’ 进行自我赋权。346
 
-#### 3.2 倡导 Zongo 发展的青年运动
-
-对变革的需求也是 *Initiative for Youth Development*（IYD）的关键目标之一，IYD 是 Facebook 上最古老且仍活跃的面向青年的 Zongo 组织之一。2015 年（并于 2017 年重新启动），它发起了青年 Zongo 领袖论坛，作为年度会议讨论影响 Zongo 社区的时事问题。347 2018 年 9 月，它启动了 Zongo 青年政策对话，旨在概述和讨论关于 Zongo 青年挑战和愿景的国家政策文件。地区论坛在阿克拉、温奇、特奇曼、苏尼扬、库马西和 Cape Coast 举行。348 该文件题为 *Zongo Youth Agenda 2030*，于 2020 年 6 月 13 日在 Zoom 网络研讨会上发布，349 是青年主导的可持续发展运动的蓝图，旨在实现 Zongo 社区的积极转型。受联合国可持续发展目标启发，Zongo Youth Agenda 2030 包括十项目标，即 1) 消除贫困和饥饿，2) 促进健康和福祉，以及 3) 优质教育和 4) 性别平等。此外，5) 促进清洁饮水和卫生设施的可及性，6) 经济适用的清洁能源，以及 7) 体面工作和就业。最后，8) 实现可持续的 Zongo 社区，加上 9) 和平和
-
 346 “In our Zongo, do we really need to be fixed or are we going to fix our selves?” Prang TV, 6.7.2021, https://www.facebook.com/permalink.php?story_fbid=234310981866760&id=102940925003767, accessed 28.9.2021.
+
+### 3.2 倡导 Zongo 发展的青年运动
+
+对变革的需求也是 *Initiative for Youth Development*（IYD）的关键目标之一，IYD 是 Facebook 上最古老且仍活跃的面向青年的 Zongo 组织之一。2015 年（并于 2017 年重新启动），它发起了青年 Zongo 领袖论坛，作为年度会议讨论影响 Zongo 社区的时事问题。347 2018 年 9 月，它启动了 Zongo 青年政策对话，旨在概述和讨论关于 Zongo 青年挑战和愿景的国家政策文件。地区论坛在阿克拉、温奇、特奇曼、苏尼扬、库马西和 Cape Coast 举行。348 该文件题为 *Zongo Youth Agenda 2030*，于 2020 年 6 月 13 日在 Zoom 网络研讨会上发布，349 是青年主导的可持续发展运动的蓝图，旨在实现 Zongo 社区的积极转型。受联合国可持续发展目标启发，Zongo Youth Agenda 2030 包括十项目标，即 1) 消除贫困和饥饿，2) 促进健康和福祉，以及 3) 优质教育和 4) 性别平等。此外，5) 促进清洁饮水和卫生设施的可及性，6) 经济适用的清洁能源，以及 7) 体面工作和就业。最后，8) 实现可持续的 Zongo 社区，加上 9) 和平和正义，以及 10) 寻求实现目标的伙伴关系。350 作为其促进实施 Zongo Youth Agenda 2030 的活动之一，它开始为青年领袖组织培训研讨会，即所谓的 Zongo 守门员，351 并启动了一个在线平台 Zongo Youth Empowerment Webinar Series 来讨论发展和赋权问题。352 2018 年，IYD 组织了首届青年 Zongo 女性赋权论坛，并以其 Zongo Coders Initiative 的成果建立了 ZongoVation Hub。353 此外，它在内城和 Zongo 发展部的支持下运营 Zongo Skills Project。354
 
 347 https://www.facebook.com/YoungZongoLeaders, accessed 4.8.2022. However, it seems as if the initiative never took off; at least its Facebook account carries no information about the planned meetings in 2016 and 2018 and the last update is from 2017.
 
@@ -2064,18 +2099,11 @@ Prang TV 是在线穆斯林新闻和 da‘wa 频道之一，于 2021 年 7 月�
 
 349 Official Launching of the Zongo Youth Agenda 2030, 9.6.2020, https://www.facebook.com/IYDGhana/, accessed 5.8.2021.
 
-正义，以及 10) 寻求实现目标的伙伴关系。350 作为其促进实施 Zongo Youth Agenda 2030 的活动之一，它开始为青年领袖组织培训研讨会，即所谓的 Zongo 守门员，351 并启动了一个在线平台 Zongo Youth Empowerment Webinar Series 来讨论发展和赋权问题。352 2018 年，IYD 组织了首届青年 Zongo 女性赋权论坛，并以其 Zongo Coders Initiative 的成果建立了 ZongoVation Hub。353 此外，它在内城和 Zongo 发展部的支持下运营 Zongo Skills Project。354
-
 总部位于阿克拉的 ZongoVationHub 是穆斯林自我赋权的鼓舞人心范例。由其创始人兼首席执行官（也是主要资助者）Mahmoud Jajah 和九名员工（外加不定数量的志愿者和实习生）运营，该非政府组织将其活动面向 Zongo 居民，不分宗教背景。355 自 2018 年成立以来，它已组织了一系列 IT 技能和培训活动（插图 15）。大多数项目持续数月，其中包括 Zongo Coders Program、Zongo Technician Program、Zongo Kids Coding Bootcamp 和 Zongo Women in Tech。最后提到的项目是为期一年的实践项目，面向年轻女性学习移动应用开发、物联网和人工智能。一些项目与其他非政府组织和 IT 实验室合作组织，包括 Economic Rights Advocacy Training（与 Reach for Change 和 Social Enterprise Ghana 合作），以及 Digital Media Training Program、National Mobile App Training 和 Data Science and Analytics 项目（与 Ghana Tech Lab 合作）。356
 
 网络安全和就业是该中心另外两个支柱。357 Zongo Cyber Security 项目向学童介绍儿童在线保护，而 Zongo Cyber Security Project 则向 Zongo 居民介绍网络安全问题。其多个技能项目侧重于培训年轻人掌握数字媒体技能并帮助他们创办小型企业。其他活动旨在促进 Zongo 企业家，例如 Digital Zongo Project 和 Zongo Data 项目，或旨在通过数字技能和创业识别和解决实现可持续发展的关键挑战。358 作为其外展活动的一部分，该中心组织了一系列 Zongo Startup Summits，最近一次于 2022 年 9 月与 Ghana Tech Lab 合作举行。359 2023 年又跟进两个新举措。与 Star Ghana Foundation 合作，ZongoVation Hub 于 2023 年 4 月启动了 Zongo Digital Skills and Empowerment Program（ZoDSEP），此后在阿克拉、库马西和 Koforidua 组织了培训课程。360 其中多个课程得到了当地穆斯林非政府组织的支持和合作组织，包括位于阿克拉 Madina 的 Mother of all Nations Foundation，361 以及位于库马西的 Voice of Zongo Youth Foundation 和 Zongo Youth Association。362 2023 年 6 月，ZongoVation Hub 利用来自国家创业和创新计划的 10 万美元拨款启动了 Zongo Startup Program，以支持 Zongo 社区的初创企业生态系统。363
 
-ZongoVationHub 的当地合作伙伴之一是 Zongo Inspiration Team（ZIT），由 AR Zakari Mcim 创立。364 ZIT 起源于志同道合者
-
-357 Interview with Alhassan Khalid, ZongoVationHub Finance and Administration Manager, Accra, 7.10.2022. 358 Non-training programs, https://zongovationhub.org/non-training/, accessed 13.12.2022. 359 “Third annual Zongo Startup Summit held in Accra,” 7.9.2022, https://www.ghanaweb.com/GhanaHomePage/business/Third-annual-Zongo-Startup-Summit-held-in-Accra-1618904, accessed 10.12.2022. 360 https://www.facebook.com/ZongoVation/, postings 28.4.2023, 17.5.2023, 22.5.2023, 29.5.2023, 15.6.2023, 21.6.2023, 23.6.2023, accessed 17.8.2023. 361 https://www.facebook.com/moanfoundation/, posting 5.6.2023, accessed 17.8.2023. 362 https://www.facebook.com/voiceofzongoyouthfoundation, posting 21.6.2023, accessed 17.8.2023. 363 https://www.facebook.com/ZongoVation/, postings 9.6.2023, 26.6.2023, accessed 17.8.2023. Under the Zongo Startup program, young entrepreneurs are to receive funding (grant and seed investment), technical and mentorship support, office space, networking opportunities and access to global investors. 364 Iddris Tindannayil, “ZIT 5 Social Media Change Markers,” 21.10.2015, https://www.linkedin.com/pulse/zit-5-social-media-change-makers-zakiyu-iddris-tindannayil?articleId=60625549321273344, accessed 28.9.2021.
-
-
-
+ZongoVationHub 的当地合作伙伴之一是 Zongo Inspiration Team（ZIT），由 AR Zakari Mcim 创立。364 Iddris Tindannayil, “ZIT 5 Social Media Change Markers,” 21.10.2015, https://www.linkedin.com/pulse/zit-5-social-media-change-makers-zakiyu-iddris-tindannayil?articleId=60625549321273344, accessed 28.9.2021.
 
 ## 宗戈科技革命
 
@@ -2095,6 +2123,8 @@ ZIT的首场活动是2014年在阿克拉举办的“宗戈梦想指导诊所”�
 
 ZIT由40名缴纳会费的成员组成，其中10人构成其核心活动小组。除奖学金项目外，其大部分活动由内部资助；奖学金项目获得了EPP Books Fund的1.5万加纳塞地捐赠。该组织的目标是利用社交媒体向国际捐助者募集资金，以扩大其奖学金项目。370
 
+
+
 366 Abdur Rahman Shaban Alfa，“宗戈梦想指导诊所：当宗戈崛起！”，2014年12月19日，https://www.ghanaweb.com/GhanaHomePage/features/The-Zongo-Dream-Mentorship-Clinic-When-Zongo-Rose-339554，访问于2021年9月28日。
 
 367 “为宗戈社区青年举办的梦想指导诊所”，2015年5月19日，https://newsghana.com.gh/dream-mentorship-clinic-for-youth-in-zongo-communities/，访问于2021年9月28日；Abdul-Rahman Zulyaddain，“库马西宗戈青年将通过ZIT指导计划获得赋能”，2015年10月12日，https://www.modernghana.com/news/648682/1/kumasi-zongo-youth-to-be-empowered-through.html，访问于2021年9月28日。
@@ -2112,9 +2142,13 @@ ZIT由40名缴纳会费的成员组成，其中10人构成其核心活动小组�
 然而，ZYUSDG似乎仅在2017年上半年活跃于Facebook。2017年10月，另外两个总部位于库马西的宗戈青年组织——“阿散蒂宗戈青年联盟”和“加纳宗戈豪萨青年协会”——开通了Facebook账户。两个组织最近开始合作，并与穆斯林机构联盟和ASALI基金会一道，于2021年5月启动了“宗戈项目”，以“吸引青年参与并征求他们的意见，共同发展我们的宗戈社区”。376 这两个组织早些时候都曾寻求赋能宗戈青年：ZOHYAG于2020年8月庆祝世界豪萨日，而AZOYU则于2020年11月组织了首届宗戈青年代表大会。377
 
 371 https://www.facebook.com/ZongoRising，帖子日期2021年2月18日、2021年5月29日，访问于2021年9月10日。
+
 372 “Bawa Mogtari赞扬Zongo Inspiration Team组织Ayawaso基础学校问答活动”，2022年10月3日，https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Bawah-Mogtari-lauds-Zongo-Inspiration-Team-for-Ayawaso-Basic-Schools-quiz-1634834，访问于2022年10月8日。
+
 373 对Alhaji Rabiu Maude的采访，阿克拉，2022年10月8日。
+
 374 https://www.facebook.com/Zongo-youth-for-Unity-And-Sustainable-Development-of-Ghana-739120419596809，2017年2月25日、3月1日、3月3日、3月5日，均访问于2021年8月5日。
+
 375 https://www.facebook.com/Zongo-youth-for-Unity-And-Sustainable-Development-of-Ghana-739120419596809，2017年5月5日，访问于2021年8月5日。
 
 多个宗戈青年组织的典型参与方式是在斋月之前或期间召集成员进行社区服务和健康促进活动。例如，Voice of Zongo Youth Foundation的成员参与了库马西郊区Aboabo No. 2的清洁行动，而加纳宗戈豪萨青年协会则于2021年4月以库马西中央清真寺为重点。总部位于阿克拉的Concerned Zongo Youth Group于2018年和2019年组织了“斋月健康步行”活动，而总部位于阿克拉的穆斯林青年和平与发展中心和总部位于库马西的Voice of Zongo Youth Foundation都开展了反毒品滥用运动。另一方面，Kasoa穆斯林圣战青年于2020年12月以及2021年1月、2月、3月、5月、6月、7月和8月清理了Kasoa的Tuba和Kojo-Ojo穆斯林墓地。378 总部位于瓦镇的“加纳宗戈发展青年联盟基金会”则于2019年4月发起了气候变化和卫生意识宣传活动。Bekwai宗戈青年发展协会在其2021年7月的启动周期间安排了清洁行动和健康筛查活动。379 同样，Nsoatre宗戈青年协会于2021年8月开展了“保持Nsuatre清洁”行动，而D.Line青年协会Bolga的成员则于2019年10月和2021年10月呼吁其成员清理博尔加坦加的穆斯林墓地。380
@@ -2128,9 +2162,6 @@ ZIT由40名缴纳会费的成员组成，其中10人构成其核心活动小组�
 379 https://www.facebook.com/bezydagh/photos/a.109889494135950/336934984764732/，2021年7月14日，访问于2021年9月28日。
 
 380 https://www.facebook.com/Nsoatre-Zongo-Youth-association-118121293355020/，2021年8月29日，访问于2021年9月28日；https://www.facebook.com/d.lineyouthassociationbolga，2019年10月8日、2021年10月31日，访问于2021年12月30日。
-
-
-
 
 位于阿克拉的*宗戈焦点*，一个成立于2016年的青年团体，截至2021年底在Facebook上拥有近8,000名关注者，已发起多项倡议和项目，旨在提升年轻宗戈居民的社会和精神层面。自2016年起，[^381]该团体组织了年度开斋饭收集和分发活动，以及清洁行动（“让我们清洁宗戈”项目于2018年启动），[^382]同时还向特定目标群体进行临时性捐赠，其中包括2017年11月的马迪纳诊所。[^383]它还发起了Inter-Madaris Game，即面向高中生的体育赛事。[^384]其两个主要项目是Zongo Youth Day Out以及技能发展倡议；两者均于2018年启动。前者是四月年度宗戈青年月庆祝活动的一部分；其目的是通过开放市场让年轻的宗戈企业接触潜在客户和投资者，在该市场中，各类宗戈企业展示其品牌并展出产品和服务。该活动还为宗戈青年中的网络交流和表彰变革者提供了平台。[^385]技能发展倡议于2018年11月启动，首届创业工作坊及技能培训，包括糕点、天然果汁、冰淇淋、液体肥皂和蛋糕的制作，于2018年12月安排。[^386]
 
@@ -2174,6 +2205,8 @@ ZIT由40名缴纳会费的成员组成，其中10人构成其核心活动小组�
 
 [^393]: 一般性讨论，参见Kwame Asamoah，“通过‘顽固问题’概念透镜看加纳政治自卫主义问题”，*亚洲与非洲研究杂志* 55，第3期（2020）：457–471；Justice Richard Kwabena Owusu Kyei和Lidewyde H. Berckmoes，“加纳政治自卫团体：暴力还是民主？”，*非洲光谱* 55，第3期（2020）：321–338。
 
+
+
 [^394]: 例如参见，“加纳：COMOG要求NDC和NPP表现出对和平竞选的承诺”，9.5.2012，https://allafrica.com/stories/201205100483.html；“采取正确的敬拜态度——Sheikh Dr Sharubutu”，15.8.2012，https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Adopt-the-right-attitude-to-worship-Sheikh-Dr-Sharubutu-247755；Alhaji Alhasan Abdulai，“我不认为加纳穆斯林会走向激进主义”，1.2.2016，https://www.ghanaweb.com/GhanaHomePage/features/I-do-not-see-Muslims-in-Ghana-falling-to-radicalism-412015；“穆斯林青年被敦促抵制政治自卫主义”，30.5.2019，https://www.graphic.com.gh/news/politics/muslim-youth-urged-to-shun-political-vigilantism.html。
 
 [^395]: “抵制参与政治暴力的呼吁——副总统Bawumia对宗戈青年说”，11.3.2019，https://theworldnews.net/gh-news/resist-calls-to-engage-in-political-violence-vice-president-bawumia-tells-zongo-youth，访问日期28.9.2021。
@@ -2184,12 +2217,12 @@ ZIT由40名缴纳会费的成员组成，其中10人构成其核心活动小组�
 
 [^398]: Kwadwo Baffoe Donkor，“宗戈青年被敦促帮助纠正暴力认知”，17.12.2020，https://www.graphic.com.gh/news/politics/zongo-youths-urged-to-help-correct-perception-of-violence.html，访问日期28.9.2021。
 
-
-
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_185_0.png)
 
 苏丹·乌马尔·法鲁克·萨义德（Sarkin Zango）
+
 谢赫·阿卜杜勒·穆明·哈鲁纳（地区首席伊玛目）
+
 纳巴·穆萨·穆罕默德·阿卡邦加（Zongo酋长委员会主席）
 
 ## 处理Zongo社区的民兵主义和其他选举相关冲突（AVECZOC）
@@ -2202,12 +2235,17 @@ ZIT由40名缴纳会费的成员组成，其中10人构成其核心活动小组�
 #IslamMeansPeace #ZongoForPeace
 
 由以下机构实施
+
 MFCS 穆斯林家庭咨询服务
+
 COMI 穆斯林机构联盟
 
 由以下机构支持
+
 STAR 加纳基金会
+
 资金来自
+
 UKaid 欧洲联盟
 
 图16 穆斯林非政府组织推动选举和平。由穆斯林家庭咨询服务和穆斯林机构联盟（COMI）发行的传单，用于推广其AVECZOC（处理Zongo社区的民兵主义和其他选举相关冲突）活动，2020年。COMI成立于2016年。作者收藏
@@ -2248,8 +2286,6 @@ UKaid 欧洲联盟
 
 国际穆斯林非政府组织（穆斯林国际非政府组织）的第二阶段始于2000年代初。这一阶段的特点是西方穆斯林慈善机构和伊斯兰团结组织在加纳的出现，例如美国扎卡特基金会以及英国慈善机构Al-Muntada Aid和Muslim Aid。多个阿拉伯和西方国际穆斯林慈善机构在加纳设立了实地或区域办事处并开始开展自己的项目。一些较大的国际穆斯林慈善机构还参与了针对非穆斯林或混合社区的项目，而另一些则将活动限制在穆斯林社区。它们都开展斋月/开斋和乌德希亚/古尔邦项目，要么直接捐赠食物和肉类包裹或待宰牲畜，要么间接资助当地穆斯林非政府组织的活动。总的来说，国际穆斯林慈善机构的主要活动是致力于人道主义、教育、卫生和供水项目的实施。它们还资助了各种daʿwa项目，其中最著名的是建造清真寺或清真寺。
 
-
-
 另一方面，根据互联网上的新闻报道，截至2016年，NOGAID 在加纳仍保持活跃。
 
 阿拉伯之春及其后果导致了穆斯林国际非政府组织在加纳活动的第三个也是当代阶段。这一第三阶段见证了在加纳运营的穆斯林国际非政府组织格局的重组，最显著的是土耳其穆斯林慈善机构的出现和大规模介入（见下文第2.4.4章）。此外，西方和非阿拉伯穆斯林国际非政府组织的数量以及日益增多的西方国家/地方穆斯林非政府组织已大幅扩张。这一现象部分归因于社交媒体所实现的网络联系的加强，而这又是加纳穆斯林侨民社区在北美和西欧建立的结果。这一扩张最 recent 的方面是巴基斯坦、中国（香港）、新加坡、印度尼西亚、澳大利亚和新西兰的穆斯林团体和协会参与加纳的 daʿwa 和人道主义项目。
@@ -2287,15 +2323,27 @@ UKaid 欧洲联盟
 | 摩洛哥 | Mohammed VI Foundation for African Oulama |
 | 新西兰 | Voice of Islam |
 | 巴基斯坦 | Dawat-e-Islami |
+
+
+
 | 卡塔尔 | Qatar Charity/Qatar Charitable Society; Sheikh Thani bin Abdullah Foundation for Humanitarian Services (RAF Foundation); Sheikh Eid Bin Muhammad Al Thani Charitable Foundation (Eid Charity) |
+
 | 塞拉利昂 | International Islamic Youth League |
+
 | 新加坡 | Global Ehsan Relief |
+
 | 南非 | Al-Imdaad Foundation |
+
 | 苏丹 | Tanmiyat Humanitarian Foundation |
+
 | 瑞士 | Swiss Barakah Charity |
+
 | 土耳其 | Kimse Yok Mu Solidarity Foundation; Ghana-Turkey Co-operation and Development Association (TUDEC); Ghana Friendship and Solidarity Association (GANADER); Maarif Foundation; Human Development Association International (HUDAI); CANSUYU; Humanitarian Relief Foundation (IHH); IH-Da Vakfi; Türkiye Diyanet Vakfi (TDV); Insana Deger Veren Dernekler Federasyonu; Hayrat Yardim; Hayat Yolu; Turkish Red Crescent; Deniz Feneri Association; Universal Islamic and Cultural Trust Turkey |
+
 | 阿联酋 | Emirates Red Crescent; Al-Makhtoum Foundation/Mohammed bin Rashid Al Maktoum Global Initiatives; Dubai Charity Association; Sharjah International Charity; Dar al-Ber Society |
+
 | 英国 | Muslim Global Relief; Caravan of Mercy; Salam Charity; IERA Charity; InTouch Foundation; Human Relief Foundation; Love Mercy Hope; Muntada Aid; Al-Imdaad UK; Illuminations Welfare Foundation; International Islamic Youth League/Africa Youth Development; Haji Bashir Ahmed Foundation |
+
 | 美国 | Zakat Foundation of America; Islamic Relief USA; Generation Wealthy, Unity & Faith; Hidaya Foundation; Islamic Ummah Relief (IUR); Salaam Ul-Muslimiyun Foundation; Life for Relief and Development (LIFE); African Islamic Heritage Foundation; Global Deaf Muslim; Mercy Without Limits; Mercy for Mankind Foundation; Wal Jamaha Alliance Charity Foundation; Al-Fadl People Organization; |
 
 #### 表6 2006–2023年阿拉伯/海湾慈善机构向加纳的财务交易 (续)
@@ -2343,8 +2391,6 @@ UKaid 欧洲联盟
 
 423 https://www.advance-africa.com/qatar-charity-country-director-jobs-in-ghana.html，访问日期13.7.2021。
 
-
-
 以及开斋节期间，该组织多次因资助偏远地区和宗戈社区的教育项目而登上头条。^426^
 
 卡塔尔慈善组织多年来一直支持内城和宗戈发展部以及政府的宗戈发展基金。^427^ 2018年，该组织宣布将在选定的宗戈社区钻探36眼水井，并向该部提供缝纫机、补胎设备和自行车维修小型工具，以支持该部提升贫困宗戈居民创业能力的计划。^428^ 2019年，它开始建设诊所和卫生中心；到2023年，已有30所投入使用。^429^ 2023年，它启动了新的经济赋权和粮食安全项目，目标人群为大阿克拉、中部、东部、阿散蒂、北部和沃尔特地区的农村和贫困城市社区受益者。该新项目在其十二个重点项目中包括种子资金以及为杂货店、面包店、缝纫机及配件提供设备，提供客运和载货三轮车、家禽养殖、粮食种植、牛羊养殖、温室，以及为自由职业者提供媒体设备。^430^
@@ -2375,6 +2421,8 @@ UKaid 欧洲联盟
 
 435. Augustus Acquaye, “卡塔尔慈善组织在斋月期间支持穆斯林，” 4.5.2021, https://www.gbcghanaonline.com/general/qatar-charity-supports-muslims-during-ramadan/2021/, 访问于 13.7.2021.
 
+
+
 436. “宗戈部、卡塔尔慈善组织支持有需要的家庭，” 27.8.2018, https://ghananewspage.com/zongo-ministry-qatar-charity-supports-needy-families/, 访问于 13.7.2021.
 
 *直接援助协会*，前身为非洲穆斯林机构，是一个1981年在科威特成立的慈善机构，并在1999年扩大慈善项目范围时采用了新名称。它目前（2020年）在包括加纳在内的30个国家运营，并在加纳活跃至今自1988年起。直接援助是加纳最知名的国际穆斯林慈善机构之一，开展多个项目，包括教育、水、卫生服务、孤儿和贫困减缓，以及人道主义救援和倡导项目。^437 过去十年以来，直接援助在公众面前将自己定位为非营利、非政治、非教派组织。其重点是为所有人提供教育和农业，无论种族、民族、政治或宗教信仰如何，
@@ -2395,8 +2443,6 @@ UKaid 欧洲联盟
 
 441. Isaac Yeboah, “DirectAid 与 CWSA 合作向农村社区供水，” 22.10.2018, https://www.graphic.com.gh/news/general-news/directaid-partners-cwsa-to-deliver-water-to-rural-communities.html, 访问于 14.7.2021.
 
-
-
 （3,200 美元）供 CWSA 自行选择的任何公共卫生机构使用的水和卫生设施，并计划为全国各地的贫困社区提供 180 个水井。⁴⁴² 年内稍后，它向阿克拉的 James Camp 监狱移交了一个价值 GHS 12,600（2,000 美元）的供水项目。⁴⁴³ Direct Aid 与性别、儿童和社会保护部的合作可追溯至（至少）2012 年⁴⁴⁴，甚至更早。它已赞助了多项针对老年人和残疾人的政府捐赠和项目。⁴⁴⁵ 2015 年中，Direct Aid 与该部合作，并向 Keta⁴⁴⁶、Kumasi⁴⁴⁷ 和 Accra⁴⁴⁸ 的 1,000 名洪水受害者提供了人道主义救济。四年后，Direct Aid 与卫生部、性别、儿童和社会保护部以及加纳卫生服务合作，在大阿克拉地区医院组织了免费眼部筛查活动，并为当地居民支付在该机构接受治疗的费用。⁴⁴⁹ 一年后，当 COVID-19 大流行关闭了加纳的公共生活并严重影响了社会的底层民众生计时，Direct Aid 支持该部试图缓解 Agona West 选区老年人的痛苦，并宣布其目标是在加纳支持超过 27,000 个家庭。⁴⁵⁰ 此外，它向卫生部捐赠了价值 GHS 80,000（约 13,000 美元）的个人防护设备⁴⁵¹，并通过 Henry Djaba 纪念基金会在 2020 年 5 月为 50 名残疾穆斯林提供了各种食品。⁴⁵²
 
 此外，Direct Aid 在斋月和穆斯林节日期间几乎每年都会出现在全国新闻中。2013 年，它向 670 个家庭分发了食品包⁴⁵³，第二年向 720 个家庭分发。⁴⁵⁴ 价值 GHS 312,000（约 500,000 美元）的食品捐赠分发给了阿克拉的 500 个家庭，其余约 200 个家庭分发到西部和中部地区。⁴⁵⁵ 此后，科威特慈善机构的斋月捐赠成倍增加。2018 年，仅在库马西大都会的各个 Zongo 社区就有超过 1,000 名贫困穆斯林受益于食品援助。⁴⁵⁶ 2021 年，Direct Aid 告知媒体称其在全国范围内支持了超过 25,000 名穆斯林。食品包在其位于大阿克拉 Adenta 的 Lakeside Estate 总部以及其在 Cape Coast、Kumasi 和 Tamale 的地区办公室分发，同时也在“一些 Zongos、城镇和村庄”分发，包括 Accra Central、Ashaiman、Aflao、Kasoa 和 Swedru。⁴⁵⁷
@@ -2410,19 +2456,33 @@ UKaid 欧洲联盟
 *阿联酋红新月会*（ERC，前称 *阿联酋红新月会*）已在加纳存在数十年，并通常通过当地合作组织开展工作。2013 年，它捐赠了 440 万迪拉姆（约 120 万美元）用于资助孤儿、促进教育、建设医疗服务和挖掘水井。⁴⁶⁶ 其主要加纳合作组织之一是 ICODEHS。其中，在 2016 年，它赞助向西部地区 Sekondi 的女孩捐赠 20 台缝纫机。它还资助了在 Salaga 建造一座新的校舍，以及在加纳北部 Kandiga-Bolgatanga、Guntigli、Salaga 和 Yendi 建造清真寺。⁴⁶⁷ 2017 年，ERC 赞助为位于 Alajo 的 ICODEHS 培训中心购买缝纫机和冰箱
 
 442. Isaac Yeboah, “Direct Aid to fund $20,000 Water & Sanitation facility for CWSA,” 2.5.2019, https://www.graphic.com.gh/news/general-news/direct-aid-to-fund-20-000-water-sanitation-facility-for-cwsa.html, 访问于 14.7.2021.
+
 443. Isaac Yeboah, “DirectAid Ghana hands over water project to James Camp Prison,” 2.10.2019, https://www.graphic.com.gh/news/general-news/directaid-ghana-hands-over-water-project-to-james-camp-prison.html, 访问于 14.7.2021.
+
 444. 看起来该部与 Direct Aid 之间的合作始于 Sheikh Omar Ahmed 于 2012 年接任 Direct Aid Ghana 国家主任之时；参见 “Gender Ministry salutes Direct Aid Country Director,” 23.7.2015, https://www.modernghana.com/news/631696/gender-ministry-salutes-direct-aid-country-director.html, 访问于 14.7.2021.
+
 445. “Gender ministry donates to the aged,” 6.1.2014, https://www.modernghana.com/news/512101/gender-ministry-donates-to-the-aged.html; “Gender Ministry fetes mothers with disability and special needs,” 11.5.2019, https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Gender-Ministry-fetes-mothers-with-disability-and-special-needs-745328, 均访问于 14.7.2021.
+
 446. Ivy Setordjie, “Gender Ministry distributes relief items to Keta communities hit by flood, tidal waves,” 25.6.2015, https://www.modernghana.com/news/625908/gender-ministry-distributes-relief-items-to-keta.html, 访问于 14.7.2021.
+
 447. “Flood victims receive relief items,” 10.7.2015, https://www.modernghana.com/news/628957/flood-victims-receive-relief-items.html, 访问于 14.7.2021.
+
 448. “Gender Ministry announces programme to support flood victims,” 15.6.2015, https://www.modernghana.com/news/623692/gender-ministry-announces-programme-to-support.html; “Gender Ministry to expand LEAP in 2016,” 15.11.2015, https://www.modernghana.com/news/656192/gender-ministry-to-expand-leap-in-2016.html, 均访问于 14.7.2021.
+
 449. Isaac Yeboah, “DirectAid, Health Ministry and others hold free eye screening, cataract surgery,” 14.10.2019, https://www.graphic.com.gh/news/general-news/directaid-health-ministry-and-others-hold-free-eye-screening-cataract-surgery.html, 访问于 14.7.2021.
+
 450. “Gender Minister supports aged in Agona West,” 6.5.2020, https://www.ghanaweb.com/GhanaHomePage/regional/Gender-Minister-supports-aged-in-Agona-West-943519, 访问于 14.7.2021.
+
 451. https://www.facebook.com/pg/Direct-Aid-Society-Ghana-105673817734336/posts/?ref=page_internal, 7.7.2020, 以及视频广播，https://www.facebook.com/105673817734336/videos/2571064826543261/, 均访问于 14.7.2021.
+
 452. Edmond Gyebi, “Otiko Djaba Surprises 50 Disabled Muslims With Food Items,” 20.5.2020, https://www.modernghana.com/news/1003363/otiko-djaba-surprises-50-disabled-muslims-with.html, 访问于 14.7.2021.
+
 453. Alhassan Abdulai, “DirectAid: Ghana Office Supports Less Privileged As Revealed In Its 2013 Annual Report,” 11.6.2014, https://www.modernghana.com/news/548388/direct-aid-ghana-office-supports-less-privileged.html, 访问于 14.7.2021.
+
 454. Alhaji Alhassan Abdulai, “Direct Aid Ghana begins food donation for the Ramadan,” 11.7.2014, https://www.ghanaweb.com/GhanaHomePage/features/Direct-Aid-Ghana-begins-food-donation-for-the-Ramadan-316463, 访问于 26.2.2019.
+
 455. “Direct Aid gives to Muslims,” 9.7.2014, https://www.graphic.com.gh/news/general-news/direct-aid-gives-to-muslims.html, 访问于 14.7.2021; Nana Acquah, “Muslim Charged to Show Concern For The Needy,” 9.7.2014, https://www.modernghana.com/news/554889/muslims-charged-to-show-concern-for-the-needy.html, 访问于 14.7.2021.
+
 456. Felix A. Baidoo, “1,000 needy Muslims in Kumasi get support during Ramadan,” 22.5.2018, https://www.graphic.com.gh/news/general-news/1-000-needy-muslims-in-kumasi-get-support-during-ramadan.html, 访问于 14.7.2021.
 
 
@@ -2478,6 +2538,7 @@ Ahlul-Bait 基金会是伊斯兰共和国伊朗的半政府组织。它运营着
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_209_0.png)
 
 图18 美国扎卡特基金会。库马西总部的路标
+
 照片：霍尔格·魏斯/2018
 
 该基金会加纳办事处经理（2015年）在一次采访中表示，他的主要关注点——也是扎卡特基金会（ZF）的愿景——是制定可持续的生计计划，以彻底消除该国贫困穆斯林社区的贫困。497 除了上述活动外，扎卡特基金会还开展孤儿赞助计划、牲畜计划，并在加纳各地贫困的穆斯林社区中募集捐款，以建立清真寺、学校和图书馆。498
@@ -2496,8 +2557,6 @@ Ahlul-Bait 基金会是伊斯兰共和国伊朗的半政府组织。它运营着
 
 同年，扎卡特基金会的职业培训中心计划即将结束。该计划是扎卡特基金会性别赋权计划的一部分，始于2006年，由基金会资助的志愿培训中心（VTC）在博莱运营。512 该中心开设了为期两年的学徒课程，已培训约100名妇女，她们毕业后获得缝纫机和配件，以创办自己的微型企业。在最后一批学生的毕业典礼上，扎卡特基金会国家项目经理哈比布·阿布巴卡尔呼吁民间社会组织、社区领导人和政治家支持VTC计划，以改善年轻女性的生活，并敦促政府在贫困社区中设立更多的VTC。
 
-
-
 社区。[513] 然而，终止该计划的决定被撤销了。相反，它从两年缩减为一年的培训项目。[514]
 
 由于未说明的原因，天课基金会（ZF）于2017年中止了其在加纳的项目，但古尔巴尼捐献除外。一年后，它恢复了水利项目和纺织缝纫职业培训项目，并启动了一个汽车维修项目。2019年，它恢复了孤儿资助计划。[515]
@@ -2514,6 +2573,8 @@ Ahlul-Bait 基金会是伊斯兰共和国伊朗的半政府组织。它运营着
 
 517 https://irusa.org/，访问于2021年10月6日。https://www.lifeusa.org/post/ram-2019，访问于2021年10月6日。
 
+
+
 518 根据其2019年斋月报告，LIFE在加纳向93,600名受益者分发了食品篮，参见 https://www.lifeusa.org/post/ram-2019，访问于2021年10月6日。
 
 519 https://www.lifeusa.org/post/the-ho-teaching-hospital-1，访问于2021年10月6日。
@@ -2522,7 +2583,7 @@ Ahlul-Bait 基金会是伊斯兰共和国伊朗的半政府组织。它运营着
 
 521 https://www.facebook.com/salaamulmuslimiynghana/。
 
-成立于2009年的*非洲伊斯兰遗产基金会*在塔马利开始运作，其目标是提供人道主义援助，并“修建学校、清真寺、医院，照顾孤儿和寡妇”。[520] 然而，由于未知原因，该基金会的加纳分会在2015年后停止了活动。总部位于纽约的萨拉姆·乌尔·穆斯林云基金会则于2013/14年在加纳开设了分支机构。此后，它一直在阿克拉、库马西和塔马利开展孤儿和寡妇支持项目以及斋月和开斋节项目。[521]
+成立于2009年的`非洲伊斯兰遗产基金会`在塔马利开始运作，其目标是提供人道主义援助，并“修建学校、清真寺、医院，照顾孤儿和寡妇”。[520] 然而，由于未知原因，该基金会的加纳分会在2015年后停止了活动。总部位于纽约的萨拉姆·乌尔·穆斯林云基金会则于2013/14年在加纳开设了分支机构。此后，它一直在阿克拉、库马西和塔马利开展孤儿和寡妇支持项目以及斋月和开斋节项目。[521]
 
 自2010年代中期以来，活跃在加纳的美国穆斯林慈善机构和非政府组织的范围急剧扩大。伊斯兰乌玛救济会（IUR）专注于加纳、尼日利亚和尼日尔的人道主义项目。IUR于2019年7月在阿克拉开设了加纳分会，并将其业务扩展到北部、中部和东部地区。[522] 最初，IUR专注于孤儿、开斋饭、开斋节和古尔巴尼，以及水利项目。2019年，它开始筹集捐款，为穆斯林孤儿建立一个安全场所，即位于中部地区波辛的Al Amaan孤儿院。住宅、学校和清真寺的地基于2021年完工。[523] 孤儿项目还包括阿克拉的街头儿童派对，以及世界孤儿日和世界粮食日的庆祝活动。此外，它发起了“每月食品募捐”项目，以帮助600多个家庭和1,800名寡妇及孤儿。它为90多名孤儿提供了开斋饭，为40名孤儿提供了古尔巴尼食物，并在宰牲节为40名孤儿提供了衣物。2019年，IUR还与加纳非政府组织Sadaqa Train合作（见第3.6节），向恩萨瓦姆监狱的穆斯林囚犯运送斋月食品包和衣物。此外，它委托在北部地区库姆布古区的农村社区建造三口水井。[524] 此后，IUR通过启动新的旗舰项目“寡妇技能发展项目”扩大了其活动。[525] 此外，它启动了一个教育支持项目，包括在Jasikan Zongo的“返校与食品募捐活动”（2021年2月），以及支持塔马利的Kashful（Khishful）Uloom古兰经背诵学校（2021年3月）。[526] 2021年6月，它庆祝了第十六个水井项目的启用，[527] 并通过将古尔巴尼捐赠扩展到五个地区（阿散蒂、东部、北部、上东部和沃尔特地区）来庆祝。[528]
 
@@ -2556,46 +2617,61 @@ Ahlul-Bait 基金会是伊斯兰共和国伊朗的半政府组织。它运营着
 
 533 加纳洪灾海报，2021年9月5日，https://www.facebook.com/onehandoneheartofficial/photos/a.451744128506934/154361524939811/，访问于2021年10月18日。
 
-
-
-（成立于1972年），为加纳的孤儿院和学校提供支持。534 *慈悲车队*（成立于2003年）的首次活动是其2012年的古尔班/乌德希亚（Qurbani/Udhiya）运动。此后，该组织一直从事学校建设和资助、清真寺建设、斋月和古尔班/乌德希亚食品分发、水项目以及寡妇支持。535 其他在加纳开展自己的开斋饭和古尔班项目的英国穆斯林慈善机构包括*人类救济基金会*536 和*全球福利救济*。537
+（成立于1972年），为加纳的孤儿院和学校提供支持。534 `慈悲车队`（成立于2003年）的首次活动是其2012年的古尔班/乌德希亚（Qurbani/Udhiya）运动。此后，该组织一直从事学校建设和资助、清真寺建设、斋月和古尔班/乌德希亚食品分发、水项目以及寡妇支持。535 其他在加纳开展自己的开斋饭和古尔班项目的英国穆斯林慈善机构包括`人类救济基金会`536 和`全球福利救济`。537
 
 534 https://www.facebook.com/GMUUK/.
+
 535 https://www.facebook.com/CaravanofMercy/.
+
 536 https://www.hrf.org.uk/galleries/ghana-meals-for-the-fasting/， https://www.hrf.org.uk/galleries/ghana-distribution-of-ramadan-food-parcels/， https://www.hrf.org.uk/galleries/ghana-zakat-ul-fitr-distribution/， https://www.hrf.org.uk/galleries/ghana-qurbani-preparation-2017/，访问于2019年4月28日。
+
 537 “加纳（非洲）——三个贫困村庄”， https://mydonate.bt.com/events/2018ghanavillages/466785，访问于2019年2月26日。
 
-*穆斯林全球救济*（MGR，成立于2000年）则于2015年开始在加纳开展工作，最初仅作为捐赠组织。MGR资助了其在上东部地区的当地合作伙伴组织——El-Ehsan 慈善救济基金会——的项目。2015年，MGR启动了其“加纳生命之水”（Water4Life Ghana）项目。该项目旨在上东部地区普西加区的 Tes-Natinga 村建造一口手压井，并由其当地合作伙伴组织实施。538 2016年，它针对上东部地区 Kuose-Jingiri 的一个水和卫生项目发起募捐活动，由当地合作伙伴实施。除了一口井，该项目还包括一个男女分设的公共厕所，以及淋浴和净礼设施。539 MGR在其主页上将该项目展示为其“启动”发展项目的范例。540 2017年，它将捐款用于为 Bawku 的 Winamzua 学校130名儿童提供食物，并向上东部地区三个村庄和五所学校的穆斯林社区捐赠了斋月食品援助。541 此外，MGR和 El-Ehsan 慈善救济基金会在2017年启动了一个肉类分发（古尔班）项目。542
+`穆斯林全球救济`（MGR，成立于2000年）则于2015年开始在加纳开展工作，最初仅作为捐赠组织。MGR资助了其在上东部地区的当地合作伙伴组织——El-Ehsan 慈善救济基金会——的项目。2015年，MGR启动了其“加纳生命之水”（Water4Life Ghana）项目。该项目旨在上东部地区普西加区的 Tes-Natinga 村建造一口手压井，并由其当地合作伙伴组织实施。538 2016年，它针对上东部地区 Kuose-Jingiri 的一个水和卫生项目发起募捐活动，由当地合作伙伴实施。除了一口井，该项目还包括一个男女分设的公共厕所，以及淋浴和净礼设施。539 MGR在其主页上将该项目展示为其“启动”发展项目的范例。540 2017年，它将捐款用于为 Bawku 的 Winamzua 学校130名儿童提供食物，并向上东部地区三个村庄和五所学校的穆斯林社区捐赠了斋月食品援助。541 此外，MGR和 El-Ehsan 慈善救济基金会在2017年启动了一个肉类分发（古尔班）项目。542
 
 538 YouTube视频：Water4Life-Ghana 2015（https://www.youtube.com/watch?v=rLRZ8vtyaXg），上传于2016年2月4日； https://issuu.com/muslimglobalreliefmgr/docs/mgr_ramadan_booklet，访问于2017年11月8日； 穆斯林全球救济受托人报告和截至2016年3月31日的年度财务报表，apps.charitycommission.gov.uk/Accounts/Ends18/0001081018_AC_20160401_E_C.PDF，访问于2017年11月8日。
+
 539 https://www.muslimglobalrelief.org/water4life/2017/water-and-sanitation-in-kouse-jingiri-village/； “Kouse-Jingiri 村的供水与卫生设施 / 穆斯林全球救济”， https://www.youtube.com/watch?v=TBcO1wR8Bms&t=140s，上传于2017年5月8日； https://www.muslimglobalrelief.org/water-and-sanitation-in-kouse-jingiri-village/，访问于2017年11月8日。
+
 540 “加纳Kouse-Jingiri的供水与卫生设施”， https://www.muslimglobalrelief.org/water/，访问于2021年7月15日。
+
 541 https://www.muslimglobalrelief.org/ramadan/2017/ramadan-food-aid-ghana/； https://www.muslimglobalrelief.org/feedme/2017/feeding-children-ghana-ramadan/，两个链接均访问于2021年7月15日。
+
 542 “2017年肉类分发项目 / MGR El-Ehsan 慈善救济基金会（ECRF）”， https://www.facebook.com/251553680207368/videos/1400647506631300/?__so__=watchlist&__rv__=video_home_www.playlist_video_list，访问于2021年7月15日。
 
 由于（迄今）未知的原因，各项举措在2018年未再继续。MGR在接下来的几年中停止了为加纳筹款的活动，似乎已停止在该国的行动。然而，MGR于2020年重启了在加纳的活动，不过其项目由其加纳团队实施，没有任何当地合作伙伴组织。与其之前的参与类似，MGR在上东部地区的村庄建造了手压井、洗涤和卫生设施以及社区清真寺。543 此外，MGR在YouTube上发布了一段视频，显示其团队于2021年2月在一个未标明的地点（可能是 Bawku）组织食品厨房，并从一个售货亭发放食品盒，以缓解COVID-19疫情造成的苦难。544
 
 543 井的照片，可能位于加纳北部，2021年5月12日，https://www.facebook.com/muslimglobalrelief/photos/a.66357287372104/4530551796974173/?type=3&theater； 井的照片，加纳北部，2021年5月11日，https://www.facebook.com/muslimglobalrelief/photos/a.66357287372104/4526928997336453/?type=3&theater； “加纳洗涤与卫生设施” | 穆斯林全球救济，https://www.youtube.com/watch?v=H4aYVpLPh-c，上传于2021年3月29日； “加纳已完工的水井”，https://www.youtube.com/watch?v=f2LfUFdrDKk，上传于2021年3月29日； “在加纳建造安拉之家 / 清真寺建设 / 穆斯林全球救济”，https://www.youtube.com/watch?v=kVgIHU5Z-Jk，上传于2021年3月29日。
+
 544 “加纳日常食品厨房 / 免费熟食 / 穆斯林全球救济”， https://www.youtube.com/watch?v=2Dji-plyDoo，上传于2021年3月29日。
 
 总部位于英国布拉德福德的穆斯林慈善机构 InTouch 基金会（InTouch Foundation）于2012年成立，其在加纳首次亮相时，与 Ustadh Alyas Karmani 合作，于2016年在库马西分发开斋节和古尔班食品包，并向库马西 Manhyia 监狱的500名穆斯林及非穆斯林囚犯提供开斋节餐。2017年，它宣布收取天课（zakat）并在英国、巴基斯坦和加纳进行分发。其在加纳的海外项目目标是筹集15,000英镑，以提供财政支持建立鸡和牛养殖场，帮助“库马西社区”。545 另一方面，Salam 慈善机构声称已停止在加纳的运营，546 尽管它在2021年（据推测是通过当地非政府组织）提供了古尔班肉类，547 并为其两个水项目筹集了超过45万英镑。548 加纳IERA 549 则是伊斯兰教育与研究学院（Islamic Education and Research Academy）的一个分支，该学院是一个成立于2009年的全球性伊斯兰传教组织，并在英国注册为慈善机构。有趣的是，IERA 并未将宣教（daʿwa）与人道主义救济结合起来。550
 
 545 “2017年天课”， https://www.intouchfoundation.co.uk/zakat，访问于2021年7月13日。
+
 546 https://salamcharity.org.uk/about/where-we-work/，访问于2021年10月6日。
+
 547 https://salamcharity.org.uk/qurbani-2021/，访问于2021年10月6日。
+
 548 Salam 慈善机构2021年筹款报告， https://app.justcharity.org/charities/salam-charity，访问于2021年10月6日。另见 https://muslimmamas.com/muslim-mamas-ramadan-fundraiser-rain-in-her-name-salam-charity/，访问于2021年10月6日。
+
 549 https://www.facebook.com/IERA-GHANA-111394317313530/?ref=page_internal。
+
 550 https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/5004234/what-who-how-where。
 
 美国和英国穆斯林非政府组织和慈善机构在加纳的参与并不令人意外。一个新的趋势是来自其他非阿拉伯/海湾/伊朗或土耳其非政府组织的穆斯林慈善机构涌入，例如南非的 Al-Imdaad 基金会，551 巴基斯坦逊尼派宣教组织 Dawat-e Islami，552 新加坡的 Global Ehsan Relief，553 印度尼西亚的 Global Wakaf 和 ACT（Aksi Cepat Tanggap 或 Care for Humanity），554 澳大利亚的 Muslim Aid Australia International 555 以及 International Human Care and Relief Organisation Australia
 
-551 Al-Imdaad 基金会于2012年在加纳组织了斋月食品援助计划；参见 https://www.alimdaad.com/content/gallerydetails.jsf?id=315，访问于2021年10月6日，尽管尚不清楚该计划是否重复进行。2021年，加纳不再被列为该基金会的运营国家。然而，根据阿克拉的 Al-Qalam 学院提供的信息，Al-Imdaad 的英国分支自2018年起通过该学院捐赠斋月和开斋节食品包以及开斋饭；参见 https://www.facebook.com/alqalminstitute/，2018年6月1日、2019年5月3日、2019年6月1日、2021年7月17日。此外，Al-Imdaad 基金会通过 Al-Qalam 学院于2017年筹集资金支持罗兴亚难民（https://www.facebook.com/alqalminstitute/ ，2017年11月7日、11月13日、11月27日、12月20日），并于2020年通过 Al-Qalam 学院为200名孤儿赞助了学校用品包，https://www.facebook.com/alqalminstitute/，2020年1月6日，全部访问于2021年10月6日。
-552 https://www.facebook.com/Dawteisl.../
+
+
+551 Al-Imdaad 基金会于2012年在加纳组织了斋月食品援助计划；参见 `https://www.alimdaad.com/content/gallerydetails.jsf?id=315`，访问于2021年10月6日，尽管尚不清楚该计划是否重复进行。2021年，加纳不再被列为该基金会的运营国家。然而，根据阿克拉的 Al-Qalam 学院提供的信息，Al-Imdaad 的英国分支自2018年起通过该学院捐赠斋月和开斋节食品包以及开斋饭；参见 `https://www.facebook.com/alqalminstitute/`，2018年6月1日、2019年5月3日、2019年6月1日、2021年7月17日。此外，Al-Imdaad 基金会通过 Al-Qalam 学院于2017年筹集资金支持罗兴亚难民（`https://www.facebook.com/alqalminstitute/` ，2017年11月7日、11月13日、11月27日、12月20日），并于2020年通过 Al-Qalam 学院为200名孤儿赞助了学校用品包，`https://www.facebook.com/alqalminstitute/`，2020年1月6日，全部访问于2021年10月6日。
+
+552 `https://www.facebook.com/Dawteisl.../`
+
 553 Global Ehsan Relief 偶尔资助 Abdul-Aziz 慈善与人道主义基金会的项目和计划；见下文第2.4.5节。
-554 https://www.facebook.com/GlobalWakaf/?locale=id_ID 和 https://www.facebook.com/AksiCepatTanggap。印度尼西亚国际非政府组织在撒哈拉以南非洲（包括加纳）的开端和活动需要进一步调查。
-555 Muslim Aid Australia International 自2015年起在加纳开展工作，并资助古尔班肉类的分发；参见 https://www.maainternational.org.au/our-projects/qurban。最近，它开始与 Bawku 的 El-Ehsan 慈善救济基金会合作，并于2021年资助钻探了90口钻井；参见 Atubugri Simon Atule，“澳大利亚国际穆斯林援助组织向缺乏饮用水的社区捐赠90口钻井”，2021年3月25日，https://www.modernghana.com/news/1070487/muslim-aid-australia-international-donates-90-bore.html，访问于2021年10月6日。
 
+554 `https://www.facebook.com/GlobalWakaf/?locale=id_ID` 和 `https://www.facebook.com/AksiCepatTanggap`。印度尼西亚国际非政府组织在撒哈拉以南非洲（包括加纳）的开端和活动需要进一步调查。
 
+555 Muslim Aid Australia International 自2015年起在加纳开展工作，并资助古尔班肉类的分发；参见 `https://www.maainternational.org.au/our-projects/qurban`。最近，它开始与 Bawku 的 El-Ehsan 慈善救济基金会合作，并于2021年资助钻探了90口钻井；参见 Atubugri Simon Atule，“澳大利亚国际穆斯林援助组织向缺乏饮用水的社区捐赠90口钻井”，2021年3月25日，`https://www.modernghana.com/news/1070487/muslim-aid-australia-international-donates-90-bore.html`，访问于2021年10月6日。
 
 (IHCRO Australia),[556] *加拿大Al-Huda救济*,[557] 来自新西兰的 *伊斯兰之声*, *香港穆斯林理事会*,[558] 法国的 *Nouvelle Optique*,[559] 比利时的 *Hearts 4 Mercy* (H4M),[560] 丹麦的 *VIOMIS Aid*, 瑞士的 *Barakah Charity*,[561] 以及总部设在德国的多个穆斯林慈善机构，如 *Help Dunya*、*Ahkwaat G Foundation* 和 *Hajia Akweley Legacy Foundation*。
 
@@ -2609,61 +2685,66 @@ Ahlul-Bait 基金会是伊斯兰共和国伊朗的半政府组织。它运营着
 
 与这一进程密切相关的是广泛的土耳其非政府组织，其中最引人注目的是各种土耳其非政府组织在斋月、开斋节和宰牲节期间提供的救济物资和（肉类）捐赠，尤其是 *Turkish Religious Affairs Foundation*、*TSK Mehmetçik Foundation*、*Foundation of Humanitarian Relief*（IHH，也称为非洲人权与自由和人道主义救济基金会，成立于1992年）、*Cansuyu Charity and Solidarity Organisation*（CANSUYU，成立于2005年）、*Turkish Red Crescent*、*Kimse Yok Mu Association*、*Türkiye Diyanet Vakfı*（TDV）和 *Deniz Feneri Association*。[572] 他们最引人注目且最负盛名的项目是位于坎达的阿克拉Furqan综合体，包括为15,000名 worshippers 设计的奥斯曼风格的新国家清真寺、休闲中心、图书馆综合体、首席伊玛目办公室和住所、研究综合体、高中综合体、诊所、行政楼、礼堂和会议中心，于2021年落成（图19）。[573] 该项目是在不同土耳其国家和非政府组织合作伙伴的合作下进行的，包括土耳其政府、土耳其宗教事务局、萨姆松大都会市政府以及 *Aziz Mahmud Hudai Foundation* 和HUDAI，以及由土耳其非政府组织 *Ghana Friendship and Solidarity Association*（GANADER）领导的当地加纳组织。[574]
 
-[556] IHCRO Australia是2014年成立的英国国际穆斯林慈善机构的一个分支。IHCRO Australia自2020/21年以来资助了教育、清真寺和水项目以及人道主义救济。另见“IHCRO为Abubakar Siddick伊斯兰学校建设新设施”，2021年8月4日，https://gna.org.gh/2021/08/ihcro-constructs-new-facility-for-abubakar-siddick-islamic-school/，访问时间2023年1月2日；IHCRO Australia，2021年3月6日、2021年4月20日、2021年4月25日、2021年8月2日、2021年8月6日、2021年8月9日、2021年8月12日、2021年9月1日、2021年9月4日、2021年9月30日、2021年11月13日、2021年12月16日、2022年7月14日，https://www.facebook.com/ihcroaustralia。
+[556] IHCRO Australia是2014年成立的英国国际穆斯林慈善机构的一个分支。IHCRO Australia自2020/21年以来资助了教育、清真寺和水项目以及人道主义救济。另见“IHCRO为Abubakar Siddick伊斯兰学校建设新设施”，2021年8月4日，`https://gna.org.gh/2021/08/ihcro-constructs-new-facility-for-abubakar-siddick-islamic-school/`，访问时间2023年1月2日；IHCRO Australia，2021年3月6日、2021年4月20日、2021年4月25日、2021年8月2日、2021年8月6日、2021年8月9日、2021年8月12日、2021年9月1日、2021年9月4日、2021年9月30日、2021年11月13日、2021年12月16日、2022年7月14日，`https://www.facebook.com/ihcroaustralia`。
 
-[557] 该组织在加拿大和加纳运营；另见 https://www.alhudarelief.com/about-page/，以及 https://www.facebook.com/groups/154042615281824/about。
+[557] 该组织在加拿大和加纳运营；另见 `https://www.alhudarelief.com/about-page/`，以及 `https://www.facebook.com/groups/154042615281824/about`。
 
-[558] 香港穆斯林理事会（MCHK）于2021年转向加纳并开始资助“3合1 sadaqa jariyah 项目”，即水井+清真寺+古兰经。据其主页提供的信息，MCHK很可能通过总部位于库马西的非政府组织United Ansaru al-Islam al-Muttadidah运作；见 https://muslimcouncil.org.hk/event/hassan-mustafa-water-well-completion-%e2%80%a2-in-memory-of-hassan-mustafa-%e2%80%a2-3-in-1-sadaqah-jariyah-project/，访问时间2021年10月6日。
+[558] 香港穆斯林理事会（MCHK）于2021年转向加纳并开始资助“3合1 sadaqa jariyah 项目”，即水井+清真寺+古兰经。据其主页提供的信息，MCHK很可能通过总部位于库马西的非政府组织United Ansaru al-Islam al-Muttadidah运作；见 `https://muslimcouncil.org.hk/event/hassan-mustafa-water-well-completion-%e2%80%a2-in-memory-of-hassan-mustafa-%e2%80%a2-3-in-1-sadaqah-jariyah-project/`，访问时间2021年10月6日。
 
-[559] Nouvelle Optique 对加纳多个钻井、清真寺和学校项目开放捐赠征集；另见 https://www.nouvelleoptique.org/fr/。自2021年以来，Nouvelle Optique 为加纳一个独特的植树项目筹集资金；见 https://www.facebook.com/nouvelle.optique/，2021年11月2日、2021年11月5日，访问时间2022年1月9日。
+[559] Nouvelle Optique 对加纳多个钻井、清真寺和学校项目开放捐赠征集；另见 `https://www.nouvelleoptique.org/fr/`。自2021年以来，Nouvelle Optique 为加纳一个独特的植树项目筹集资金；见 `https://www.facebook.com/nouvelle.optique/`，2021年11月2日、2021年11月5日，访问时间2022年1月9日。
 
-[560] 该组织在布基纳法索和加纳支持水项目和人道主义救济（斋月开斋）项目；另见 https://www.facebook.com/Hearts4Mercy。其主页 http://hearts4mercy.org/NL/index.html 自2017年以来未更新，且未列出加纳项目。根据Facebook上的信息，该组织于2020年开始资助水项目，2021年开始斋月开斋。
+[560] 该组织在布基纳法索和加纳支持水项目和人道主义救济（斋月开斋）项目；另见 `https://www.facebook.com/Hearts4Mercy`。其主页 `http://hearts4mercy.org/NL/index.html` 自2017年以来未更新，且未列出加纳项目。根据Facebook上的信息，该组织于2020年开始资助水项目，2021年开始斋月开斋。
 
-[561] 瑞士Barakah慈善机构于2021年10月建造了一眼水井，并于2022年11月分发天课；见帖子2021年10月9日、2021年11月5日、2022年11月21日，https://www.facebook.com/swissbarakah/，访问时间2022年12月15日。
+[561] 瑞士Barakah慈善机构于2021年10月建造了一眼水井，并于2022年11月分发天课；见帖子2021年10月9日、2021年11月5日、2022年11月21日，`https://www.facebook.com/swissbarakah/`，访问时间2022年12月15日。
 
-[562] Help Dunya，《2019年年度报告》，可获取于 https://help-dunya.com/Download/Jahresbericht/Help%20Dunya%20Jahresbericht%202019.pdf，下载时间2021年7月21日。
+[562] Help Dunya，《2019年年度报告》，可获取于 `https://help-dunya.com/Download/Jahresbericht/Help%20Dunya%20Jahresbericht%202019.pdf`，下载时间2021年7月21日。
 
-[563] Help Dunya，《2020年年度报告》，可获取于 https://help-dunya.com/Download/Jahresbericht/Help%20Dunya%20Diagram%202020%20-%20Jahresbericht.pdf，下载时间2022年1月16日；https://help-dunya.com/projekte/waisenhaus-projekte/，访问时间2021年7月21日。
+[563] Help Dunya，《2020年年度报告》，可获取于 `https://help-dunya.com/Download/Jahresbericht/Help%20Dunya%20Diagram%202020%20-%20Jahresbericht.pdf`，下载时间2022年1月16日；`https://help-dunya.com/projekte/waisenhaus-projekte/`，访问时间2021年7月21日。
 
-[564] Emmanuel Gamson，https://gna.org.gh/2021/04/mp-constructs-100-boreholes-in-yendi/ 2021年4月28日，https://www.gna.org.gh/1/2063619，访问时间2021年7月21日。
+[564] Emmanuel Gamson，`https://gna.org.gh/2021/04/mp-constructs-100-boreholes-in-yendi/` 2021年4月28日，`https://www.gna.org.gh/1/2063619`，访问时间2021年7月21日。
 
-[565] https://www.facebook.com/AkhwaatGFoundation-Ghana-101559801515951/，访问时间2021年10月6日。
+[565] `https://www.facebook.com/AkhwaatGFoundation-Ghana-101559801515951/`，访问时间2021年10月6日。
 
-[566] 见Facebook上于2022年6月5日发布的多个视频，https://www.facebook.com/Bamba-international-humanitarian-aid-organisation-11663497093582，访问时间2022年8月24日。
+[566] 见Facebook上于2022年6月5日发布的多个视频，`https://www.facebook.com/Bamba-international-humanitarian-aid-organisation-11663497093582`，访问时间2022年8月24日。
 
-[567] https://www.facebook.com/profile.php?id=10009198622694
+[567] `https://www.facebook.com/profile.php?id=10009198622694`
 
-[570] “土耳其大使馆支持穆斯林”，2021年5月17日，https://thebftonline.com/2021/05/17/turkish-embassy-supports-muslims/，访问时间2023年12月5日。
+[570] “土耳其大使馆支持穆斯林”，2021年5月17日，`https://thebftonline.com/2021/05/17/turkish-embassy-supports-muslims/`，访问时间2023年12月5日。
 
-[571] “土耳其非政府组织支持北部地区穆斯林社区”，2017年6月7日，https://citifmonline.com/2017/06/turkish-ngo-supports-muslim-communities-in-northern-region/，访问时间2018年9月17日。
+[571] “土耳其非政府组织支持北部地区穆斯林社区”，2017年6月7日，`https://citifmonline.com/2017/06/turkish-ngo-supports-muslim-communities-in-northern-region/`，访问时间2018年9月17日。
 
-[572] “土耳其开斋节救济惠及超过250万家庭”，2013年10月17日，https://www.aa.com.tr/en/world/turkish-eid-reliefs-reach-over-25-million-families/210930，访问时间2022年1月9日。
+[572] “土耳其开斋节救济惠及超过250万家庭”，2013年10月17日，`https://www.aa.com.tr/en/world/turkish-eid-reliefs-reach-over-25-million-families/210930`，访问时间2022年1月9日。
 
-[573] Hafsa Obeng，“加纳国家清真寺综合体：加纳与土耳其友谊的象征”，2021年7月27日，https://gna.org.gh/2021/07/ghana-national-mosque-complex-symbol-of-friendship-between-ghana-and-turkey/，访问时间2022年1月9日。
+[573] Hafsa Obeng，“加纳国家清真寺综合体：加纳与土耳其友谊的象征”，2021年7月27日，`https://gna.org.gh/2021/07/ghana-national-mosque-complex-symbol-of-friendship-between-ghana-and-turkey/`，访问时间2022年1月9日。
 
-[574] “非政府组织将加快坎达清真寺综合体建设”，2013年7月8日，https://www.modernghana.com/news/473633/1/ngo-to-expedite-work-on-kanda-mosque-complex.html，访问时间2024年5月28日；Jeffrey Haynes，“加纳-土耳其关系中的宗教与经济软实力”，*Religions* 13, no. 1030 (2022)，https://doi.org/10.3390/rel1311030；Michelle Apotsos，“清真寺、地标、文献：通过阿克拉Furqan重新想象加纳的伊斯兰”，*Ghana Studies* 25 (2022): 144–152。另见加纳国家清真寺官方主页，https://www.ghananationalmosque.com/。
-
-
+[574] “非政府组织将加快坎达清真寺综合体建设”，2013年7月8日，`https://www.modernghana.com/news/473633/1/ngo-to-expedite-work-on-kanda-mosque-complex.html`，访问时间2024年5月28日；Jeffrey Haynes，“加纳-土耳其关系中的宗教与经济软实力”，*Religions* 13, no. 1030 (2022)，`https://doi.org/10.3390/rel1311030`；Michelle Apotsos，“清真寺、地标、文献：通过阿克拉Furqan重新想象加纳的伊斯兰”，*Ghana Studies* 25 (2022): 144–152。另见加纳国家清真寺官方主页，`https://www.ghananationalmosque.com/`。
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_221_0.png)
 
 图19 阿克拉富尔坎。加纳国家清真寺综合体
+
 照片：HOLGER WEISS/2020
 
 然而，撒哈拉以南非洲土耳其发展援助的首批大使却是与服务运动 Hizmet Movement 有关联的机构，该运动是土耳其穆斯林知识分子和舆论领袖费特胡拉·居伦 Fethullah Gülen 自1999年起流亡美国的教育网络，并得到全球居伦启发的慈善机构 Kimse Yok Mu 支持。575 其加纳分支机构是2001年成立于阿克拉的银河国际学校 Galaxy International School，以及加纳-土耳其合作与发展协会 Ghana-Turkey Cooperation and Development Association，TUDEC。576 后者倡议由一些当地加纳商人于2011年成立，旨在促进加纳与土耳其之间的教育和贸易活动，同时在加纳提供社会和人道主义服务。577 直到那时，服务运动曾与埃尔多安的正义与发展党 AKP 结盟，但在2016年未遂政变后被土耳其政府取缔。
 
 575 另见 David Shinn，《Hizmet in Africa: The Activities and Significance of the Gülen Movement》Tsehai Publishers，2015，以及 Tomas Michel，“Fighting Poverty with Kimse Yok Mu”，载于 Erkan Toguslu 和 Johan Leman 编《Modern Islamic Thinking and Activism: Dynamics in the West and in the Middle East》，Leuven：Leuven University Press，2014，183-194页。
 
-576 Musah Yahaya Jafaru，“Fighting poverty, ignorance and disunity in Ghana—TUDEC’s experience”，2016年5月19日，https://www.graphic.com.gh/news/general-news/fighting-poverty-ignorance-and-disunity-in-ghana-tudec-s-experience.html，访问于2021年7月15日。
+576 Musah Yahaya Jafaru，“Fighting poverty, ignorance and disunity in Ghana—TUDEC’s experience”，2016年5月19日，`https://www.graphic.com.gh/news/general-news/fighting-poverty-ignorance-and-disunity-in-ghana-tudec-s-experience.html`，访问于2021年7月15日。
 
 将居伦/服务运动贴上“恐怖组织”标签后，土耳其政府与包括加纳在内的32个非洲国家签署了议定书，以取代居伦/服务运动的学校，并将重点转向马阿瑞夫基金会 Türkiye Maarif Vakfı，该基金会此后成为政府支持的教育合作与发展的主要组织，包括为非洲学生提供赴土耳其大学学习的奖学金。578 马阿瑞夫基金会于2019年在阿克拉开设了其首个教育机构，国际马阿瑞夫学校幼儿园。579
+
+
 
 土耳其对居伦/服务运动的打击在一些非洲国家取得成功，但在加纳并非如此。例如在马里，所有前服务运动关联的教育机构均移交给了马阿瑞夫基金会。580 在加纳，土耳其要求将银河国际学校和TUDEC列入黑名单在加纳媒体上引发了强烈抗议581，并未能使它们被贴上“恐怖组织”标签。两者仍在其各自的业务领域活跃。其中，TUDEC每年因其在斋月和宰牲节期间向阿克拉、Cape Coast、Koforidua、Kumasi、Takoradi、Tamale、Tema和Wa等地穆斯林社区的捐赠而频频上头条，在斋月期间 2016年：10,000份开斋和食品包，每天供养700人；2017年：1,500份开斋和食品包；2019年：1,400份开斋和食品包 2023年：超过1,750份开斋和食品包，582 以及在宰牲节期间 2018年：1,200个家庭；2020年：4,200个；2021年：6,000个；2022年：10,800个；2023年：10,000个。583 反映其作为世俗穆斯林非政府组织的特征，其捐赠也包括非穆斯林/基督教和地方市政机构。584 除人道主义救济项目外，TUDEC还赞助钻井。585
 
 577 Alhassan Abdulai，“Developing Ghana, The Role of Tudec and Galaxy Int’l School”，2016年5月17日，https://hizmetnews.com/i8018/developing-ghana-role-tudec-galaxy-intl-school/#.Ydqf0hNBwI8，访问于2022年1月9日。
+
 578 Erkan Toguslu，《The Turbulence between AKP and Hizmet: the African case》London：Centre for Hizmet Studies，2017，可查阅于 https://www.hizmetstudies.org/assets/docs/The_Turbulence_between_AKP_and_Hizmet.pdf；Haynes，“Religious and Economic Soft Power；”“Ghana benefits from 432 Turkish university scholarships”，2019年11月28日，https://www.graphic.com.gh/news/general-news/ghana-benefits-from-432-turkish-university-scholarships-ambassador-says-at-maarif-school-opening.html，均访问于2022年1月8日。
+
 579 “Maarif Schools start education in Ghana”，2019年11月11日，https://www.turkiyemaarif.org/post/7-maarif-schools-start-education-in-ghana-842?lang=en，访问于2022年1月8日。
+
 580 “Turkey aims to provide ‘transparent’ education in Mali”，2018年4月20日，https://www.aa.com.tr/en/education/turkey-aims-to-provide-transparent-education-in-mali/124055，访问于2024年5月28日。
+
 581 Vladimir Antwi Danso，“Turkey: Carrying The Fight Beyond Borders”，2016年6月12日，https://www.ghanaweb.com/GhanaHomePage/features/Turkey-Carrying-the-fight-beyond-borders-446500；“The Ottoman Delight”，2016年7月23日，https://dailyguidenetwork.com/the-ottoman-delight/，均访问于2022年1月9日。
 
 582 "TUDEC fetes thousands to mark Eid-ul-Fitr," 2016年7月8日，https://www.modernghana.com/news/7026539/tudec-fetes-thousands-to-mark-eid-ul-fitr.html, "TUDEC feeds individuals, families to mark Eid-ul-Fitr," 2017年6月26日，https://citifmonline.com/2017/06/tudec-feeds-individuals-families-to-mark-eid-ul-fitr/；"TUDEC reaches out to thousands on Eid day," 2019年8月16日，https://newsghana.com.gh/tudec-reaches-out-to-thousands-on-eid-day/，均访问于2022年7月10日；"Ramadan Iftar and Food Packages," 2023年5月27日，https://www.facebook.com/ghanatudec，访问于2023年8月18日。
@@ -2678,7 +2759,15 @@ Ahlul-Bait 基金会是伊斯兰共和国伊朗的半政府组织。它运营着
 
 586 "Eid 2023 free meat [...]", 2023年6月28日，https://www.facebook.com/PeaceDawahMedia，访问于2023年8月18日。
 
-587 “With our beloved @turkiyediyanetvakfi we slaughtered a lot of animals [...],” 2023年7月4日，https://www.facebook.com/blessingsteimako，访问于2023年8月18日；“Türkiye Diyanet Foundation reaches out to needy families in Ghana,” 2023年7月11日，https://tdv.org/en-EN/turkiye-diyanet-foundation-reaches-out-to-needy-families-in-ghana/，访问于2023年12月5日。 588 有关2011年的活动信息，cansuyu.org.tr，2017年11月访问。 589 IHH Annual Report 2015，www.ihh.org.tr，2017年11月访问。 590 IHH Annual Report 2016，www.ihh.org.tr，2017年11月访问；Africa Cataract Project，见 http://medbox.iiab.me/kiwix/wikipedia_en_medicine_2019-12/A/Africa_Cataract_Project，以及 https://ihh.org.tr/en/news/cataract-surgery-for-14000-people，访问于2022年1月10日。 591 Permanent works，http://www.ih-davakfi.org/en/operations/3/permanent-works/1092/asikafо-water-supply-wellghana.aspx，访问于2022年1月9日；主页在2024年5月已失效。IH-DA Vakfi Facebook 群组上在加纳的水项目最后一次发布是在2017年5月，见 https://www.facebook.com/photo.php?fbid=1681757458794496&set=pb.10008807746526.-2207520000.&type=3，2017年5月11日，访问于2022年1月9日。
+587 “With our beloved @turkiyediyanetvakfi we slaughtered a lot of animals [...],” 2023年7月4日，https://www.facebook.com/blessingsteimako，访问于2023年8月18日；“Türkiye Diyanet Foundation reaches out to needy families in Ghana,” 2023年7月11日，https://tdv.org/en-EN/turkiye-diyanet-foundation-reaches-out-to-needy-families-in-ghana/，访问于2023年12月5日。
+
+588 有关2011年的活动信息，cansuyu.org.tr，2017年11月访问。
+
+589 IHH Annual Report 2015，www.ihh.org.tr，2017年11月访问。
+
+590 IHH Annual Report 2016，www.ihh.org.tr，2017年11月访问；Africa Cataract Project，见 http://medbox.iiab.me/kiwix/wikipedia_en_medicine_2019-12/A/Africa_Cataract_Project，以及 https://ihh.org.tr/en/news/cataract-surgery-for-14000-people，访问于2022年1月10日。
+
+591 Permanent works，http://www.ih-davakfi.org/en/operations/3/permanent-works/1092/asikafо-water-supply-wellghana.aspx，访问于2022年1月9日；主页在2024年5月已失效。IH-DA Vakfi Facebook 群组上在加纳的水项目最后一次发布是在2017年5月，见 https://www.facebook.com/photo.php?fbid=1681757458794496&set=pb.10008807746526.-2207520000.&type=3，2017年5月11日，访问于2022年1月9日。
 
 #### 4.5 加纳穆斯林非政府组织作为外国穆斯林捐助者的中介
 
@@ -2687,6 +2776,7 @@ Ahlul-Bait 基金会是伊斯兰共和国伊朗的半政府组织。它运营着
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_225_0.png)
 
 图 20 阿克拉尼玛的 HUDAI 钻井
+
 照片：HOLGER WEISS/2022
 
 新成立的组织与当地组织合作。它们构成了穆斯林非政府组织的 第一代。第二代由当地活动人士建立，通常是穆斯林学者，他们是与外国穆斯林慈善机构合作的独立非政府组织。大多数第二代穆斯林非政府组织不产生自己的资金，但在开展其项目和计划时在很大程度上，甚至完全依赖外国捐助者。592
@@ -2698,6 +2788,7 @@ Ahlul-Bait 基金会是伊斯兰共和国伊朗的半政府组织。它运营着
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_228_0.png)
 
 图 21 阿克拉 Mamobi 的 Al-Huda 水井
+
 照片：HOLGER WEISS/2022
 
 三个沙特关联的加纳穆斯林非政府组织中最活跃的是成立于 2004 年的 al-Hudaibiyya 救济服务。正如 Dumbe 所指出的，该组织已发展成为一方面沙特官方宗教中心、组织和慈善家与另一方面加纳穆斯林之间的接口。其核心活动是在北部地区为主建造教育综合体（*markaz*），包括学校、清真寺、饮用水以及（有时）伊玛目的住所，尽管它还在其他地区，尤其是萨凡纳和东北地区，建造了学校、诊所和卫生中心、殡仪馆、清真寺和钻井。596 此外，该组织在北部地区 Savelugu 运营一所孤儿院，同时开展全国性孤儿支持计划。597 其活动的一个近期例子是在 Tamale 建造一所伊斯兰培训中心，由沙特企业家 Alsayida Luululwa Alzaward 在世界穆斯林青年大会（WAMY）的 auspices 下资助。价值 120,000 美元的 12 间教室教学楼、诊所、清真寺和钻井综合体于 2019 年 1 月移交，预计将提升为伊斯兰教育学院的地位。598
@@ -2706,6 +2797,8 @@ Ahlul-Bait 基金会是伊斯兰共和国伊朗的半政府组织。它运营着
 
 597. 采访 Alhaji Suraj，Al-Hudaibiyya 在北部地区的代表，Tamale，10.12.2019。
 
+
+
 598. Abdul-Gafaru Abdulai，“沙特慈善家为 Gukpegu-Tua 社区提供学校和其他基础设施项目”，9.1.2019，http://diamondmfonline.com/%E2%80%A2saudi-philanthropist-provides-school-and-other-infrastructural-projects-for-gukpegu-tua-community/，访问 17.8.2021。
 
 这两个组织经常合作，后者是资助 Al-Hudaibiyya 项目和研讨会的沙特组织之一。599 自 2010 年代初以来，al-Hudaibiyya 还启动了全国性筹款计划，尤其用于资助其清真寺和开斋节外展项目。尽管如此，其约三分之二的开支仍通过外部捐赠支付，主要来自 WAMY 和沙特慈善家和慈善机构。600
@@ -2713,6 +2806,8 @@ Ahlul-Bait 基金会是伊斯兰共和国伊朗的半政府组织。它运营着
 599. “Veep calls on people in leadership to be morally upright”，25.7.2021，http://www.ghanadot.com/news.gnadot.0725071.html，访问 17.8.2021。
 
 600. 采访 Alhaji Suraj，Al-Hudaibiyya 在北部地区的代表，Tamale，10.12.2019。
+
+### Aldiaa Society
 
 *Aldiaa Society* 则实施由外国捐助者资助的项目，包括卡塔尔慈善机构、Sheikh Abdullah Al-Nouri 慈善协会、穆斯林世界联盟/国际古兰经背诵组织、世界穆斯林青年大会、国际穆斯林学者联盟、国际伊斯兰慈善组织（IICO）、土耳其红新月会、IHH、TDV（Türkiye Diyanet Vakfı）和伊斯兰救援。601 根据其 2017 年主页，Aldiaa Society 主要集中于由上述捐助机构资助的清真寺、水和斋月/开斋饭项目以及孤儿支持。此外，它与几家土耳其非政府组织一起，通过卡塔尔捐助者的资金于 2017 年启动了 Madina 科学技术大学（图 22）。602 自 2020 年以来，Aldiaa Society 已与美国穆斯林慈善机构 Africa Relief and Community Development 合作，并委托后者组织的水和教育中心项目，同时组织 Udhiya/Qurbani 的分发。
 
@@ -2723,9 +2818,14 @@ Ahlul-Bait 基金会是伊斯兰共和国伊朗的半政府组织。它运营着
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_229_0.png)
 
 图 22 卡塔尔慈善/Aldiaa 教育项目。 在（当时）Madina 科学技术学院（现 Lakeside 大学学院）建设宿舍
+
 照片：HOLGER WEISS/2017
 
+### Voice of Islam-Ghana
+
 Voice of Islam-Ghana（VOI）是新西兰穆斯林慈善机构 Voice of Islam 的分支。603 它以大阿克拉地区 Tema 的总部为基地，从事宣教活动，包括向当地社区分发伊斯兰材料和《古兰经》，并为新穆斯林安排活动。此外，该组织声称在斋月期间为约 2,000 人提供食物，并通过提供英语、数学、阅读和基础信息技术技能的额外课程来支持学龄儿童。604 2021 年 11 月，VOI 团队与国家血库和 Tema 总医院合作，在 Tema 举办了第八届年度献血活动。605
+
+### 当地中介非政府组织
 
 与此同时，1990 年代第一代当地穆斯林非政府组织的推出，所有这些组织都依赖外国资金实施其项目。这类当地中介非政府组织中最古老的是伊斯兰发展和人道主义服务委员会（ICODEHS），由 Sheikh Mustapha Ibrahim 于 1991 年创立。606 ICODEHS 是第一个建立网页的加纳穆斯林非政府组织，网址为 http://www.Africaonline.com.gh/Islamic/activity.html，尽管第一个网页只存在了有限的时间。此外，它在 1990 年代末/2000 年代初出版月刊—The Humanitarian—，以宣传其事业并传播其发展项目的信息。在此期间，ICODEHS 是 SAPRIN-Ghana（结构调整参与审查国际网络）民间社会协调委员会（CivisoC）成员中唯一列出的加纳穆斯林非政府组织。607 此后，总部位于阿克拉的该组织在外国捐助者和当地穆斯林社区中获得了认可、尊重和信任，608 使 Sheikh Mustapha Ibrahim 跻身最具影响力的 500 名穆斯林之列
 
@@ -2795,6 +2895,8 @@ wakaf2.rssing.com/chan-8574659/latest.php，于 18.10.2021 访问。然而，该
 
 630 “加纳开斋活动”，http://mbrch.gov.ae/en/node/305，于 25.2.2019 访问。
 
+
+
 631 https://reliefweb.int/report/syrian-arab-republic/qatar-charity-distributes-ramadan-food-baskets-inside-syria，于 25.2.2019 访问。
 
 632 https://www.facebook.com/race4aid，帖子 24.5.2023、31.5.2023、5.6.2023，于 18.8.2023 访问。
@@ -2802,20 +2904,53 @@ wakaf2.rssing.com/chan-8574659/latest.php，于 18.10.2021 访问。然而，该
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_235_0.png)
 
 图 23 阿克拉马莫比的 Nouvelle Optique 钻井。由 Abdul-Aziz 慈善和人道主义基金会监督
+
 照片：HOLGER WEISS/2022
 
-最近的一个阿克拉穆斯林非政府组织是 *Naqshbandi Ghana Foundation.*633 关于该组织知之甚少，尽管其名称似乎表明加纳出现了一个新的逊尼派教团 *Naqshbandiyya*。这或许并不令人意外，鉴于自 2012 年以来土耳其 *NGOs* 在加纳的显著存在以及穆斯林学生从土耳其大学回流。*Naqshbandi Ghana Foundation* 于 2020 年 5 月注册，并在社会福利服务名录中被列为“本地非政府组织”。其活动范围被描述为“支持社会中的弱势群体”以及“…为聪颖但贫困的儿童提供教育支持”634 该组织与英国穆斯林慈善机构 *Love Mercy Hope*（LMH）合作，LMH 成立于 2019 年，并在加纳开展水项目。两家组织共同于 2019 年 12 月在阿克拉发起了一个 *Naqshbandi Dargah* 或精神圣地，635 并在 *Justgiving.com* 上启动了一项国际筹款活动。根据计划，Dargah 复合体将包括一座清真寺、孤儿院、宗教学校和寄宿学校。此外，它还将设有厨房和餐厅，每周三次为低收入家庭提供食物，以及 Mawlana Shaykh Nazim 的 *maqam*（圣墓）。636
+最近的一个阿克拉穆斯林非政府组织是 `Naqshbandi Ghana Foundation.`633 关于该组织知之甚少，尽管其名称似乎表明加纳出现了一个新的逊尼派教团 `Naqshbandiyya`。这或许并不令人意外，鉴于自 2012 年以来土耳其 `NGOs` 在加纳的显著存在以及穆斯林学生从土耳其大学回流。`Naqshbandi Ghana Foundation` 于 2020 年 5 月注册，并在社会福利服务名录中被列为“本地非政府组织”。其活动范围被描述为“支持社会中的弱势群体”以及“…为聪颖但贫困的儿童提供教育支持”634 该组织与英国穆斯林慈善机构 `Love Mercy Hope`（LMH）合作，LMH 成立于 2019 年，并在加纳开展水项目。两家组织共同于 2019 年 12 月在阿克拉发起了一个 `Naqshbandi Dargah` 或精神圣地，635 并在 `Justgiving.com` 上启动了一项国际筹款活动。根据计划，Dargah 复合体将包括一座清真寺、孤儿院、宗教学校和寄宿学校。此外，它还将设有厨房和餐厅，每周三次为低收入家庭提供食物，以及 Mawlana Shaykh Nazim 的 `maqam`（圣墓）。636
 
-几家总部位于库马西的穆斯林 *NGOs* 充当外国穆斯林慈善机构的中介或合作伙伴。其中最古老的是 *Ansarudeen Organisation*，由 Sheikh Abdar-Rahman Muhammad 于 1996 年发起，很快获得了政府和外国捐助者的认可。*Ansarudeen Organisation* 于 1997/1998 年开始其活动，成功委托建设了一座由外国资助的清真寺、Danso 的水井项目以及 Aboaso 的一座可容纳 300 人的清真寺。清真寺和水项目，以及支持孤儿和组织斋月/开斋/古尔邦捐赠，一直是该非政府组织的核心支柱，其主要资助者是阿联酋慈善机构 *Dar al-Ber Society*。*Ansarudeen’s* 第二大支柱是教育和医疗基础设施项目，尽管它在 2006 年停止建设医疗中心，因为官僚挑战超出了组织的承受能力。相反，它开始在阿散蒂地区 Domanofu 建设一所护理培训中心（图 24），于 2022 年完工，正在等待卫生部的批准和认证。它还在阿散蒂地区 Woraso 发起了类似项目。637
+几家总部位于库马西的穆斯林 `NGOs` 充当外国穆斯林慈善机构的中介或合作伙伴。其中最古老的是 `Ansarudeen Organisation`，由 Sheikh Abdar-Rahman Muhammad 于 1996 年发起，很快获得了政府和外国捐助者的认可。`Ansarudeen Organisation` 于 1997/1998 年开始其活动，成功委托建设了一座由外国资助的清真寺、Danso 的水井项目以及 Aboaso 的一座可容纳 300 人的清真寺。清真寺和水项目，以及支持孤儿和组织斋月/开斋/古尔邦捐赠，一直是该非政府组织的核心支柱，其主要资助者是阿联酋慈善机构 `Dar al-Ber Society`。`Ansarudeen’s` 第二大支柱是教育和医疗基础设施项目，尽管它在 2006 年停止建设医疗中心，因为官僚挑战超出了组织的承受能力。相反，它开始在阿散蒂地区 Domanofu 建设一所护理培训中心（图 24），于 2022 年完工，正在等待卫生部的批准和认证。它还在阿散蒂地区 Woraso 发起了类似项目。637
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_237_0.png)
 
 图 24 Ansaruddeen 护理学院。阿散蒂地区 Domunafu 的护理培训学院建筑平面图，由 Dar al-Ber Society 和阿联酋援助资助并由 Ansaruddeen 实施。建设始于 2018 年，并于 2020 年完工。
+
 照片：HOLGER WEISS/2019
 
 自 2019 年以来，该组织在其活动中增加了两个新支柱。第四个支柱是为当地社区提供医疗服务。该组织对非法小规模采金（galamsey）造成的铅中毒影响表示担忧，并开始支付医院的肾透析费用，每次费用为 GHS 400–500，每位患者每周需要三次至四次透析。此外，该组织开始向 500 名婴儿提供婴儿食品，同时开始支付耳部手术费用。后者项目是新颖的，因为它要求组织从国外引进必要的专业能力，因为加纳此前并不存在，迄今已支付约 500 例手术费用。638
 
-每天为约 800 个家庭提供食物捐赠构成了 Ansarudeen 的第五大支柱。该项目不属于年度开斋和斋月食物分发，但作为后 COVID-19 救济措施，于 2022 年 2 月至 7 月间有效。7 月，项目的[content]
+每天为约 800 个家庭提供食物捐赠构成了 Ansarudeen 的第五大支柱。该项目不属于年度开斋和斋月食物分发，但作为后 COVID-19 救济措施，于 2022 年 2 月至 7 月间有效。7 月，项目的
+
+年），其古尔邦分发项目由新加坡穆斯林慈善机构 Global Ehsan Relief 资助（2021 年：开斋饭）；⁶²⁶ 自 2018 年起，TACAHF 与法国穆斯林慈善机构 Nouvelle Optique 合作，并获得用于水项目、孤儿护理和古尔邦（Qurbani）项目的资金（图 23）。⁶²⁷
+
+加纳穆斯林专业人士学院随后自 2009 年起通过穆斯林慈善家和国际穆斯林慈善机构的捐赠开展其年度救济服务项目，⁶²⁸ 其中包括土耳其 İHH 和德国 WEFA（2011 年至 2016 年）。受益人由加纳穆斯林学院的伊玛目和当地穆斯林酋长确定；主要目标群体是所谓的“被遗忘的孤儿”，即未接受孤儿院定期照顾的儿童，且在食物分发日之前已在学院注册。⁶²⁹ 同样，阿克拉的伊斯兰发展与人道服务委员会于 2016 年执行了迪拜的 Mohammed Bin Rashid al Maktoum 人道主义和慈善基金会的开斋项目。⁶³⁰ 一年后，它执行了卡塔尔慈善组织的项目。⁶³¹ Race4Aid 随后实施了由阿拉伯联合酋长国捐赠资助的各种项目，包括孤儿赞助项目以及清真寺的建设，以及 2023 年在北部地区 Nanton Zuo 的职业培训中心。⁶³²
+
+wakaf2.rssing.com/chan-8574659/latest.php，于 18.10.2021 访问。然而，该主页已于 2024 年 5 月失效，原帖 http://www.wakafproject.com/terkini/appeal-for-qurban-for-poor-and-needy-in-ghana-2013/ 已不再可用。
+
+626 见关于加纳的帖子，29.9.2015 和 22.5.2021，https://www.facebook.com/pg/Global EhsanRelief/，于 18.10.2021 访问。
+
+627 TACAHF 的资助/捐助组织 Nouvelle Optique 在 TACAHF 主页的照片库中有所体现，http://www.tacahf.org/index.php?p=gallery，于 18.10.2021 访问；然而，该主页已于 2024 年 5 月失效。另见 Nouvelle Option Facebook 账户上的帖子，从 2018 年首个 TACAHF/Nouvelle Option 水项目视频开始，https://www.facebook.com/nouvelle.optique/videos/191486052242530，于 18.10.2021 访问。
+
+628 “GMA 年度救济服务，2015”，https://www.facebook.com/GhanaAcademyOfMuslimProfessionals/，于 15.1.2022 访问。
+
+629 “2012 年度救济服务”，“GMA 年度救济服务，2015”，30.5.2015，斋月帖子 28.1.2016，“为 2020 年斋月做准备”，2.3.2021，https://www.facebook.com/GhanaAcademyOfMuslimProfessionals/，于 15.11.2017 和 15.1.2022 访问。
+
+630 “加纳开斋活动”，http://mbrch.gov.ae/en/node/305，于 25.2.2019 访问。
+
+
+
+几家总部位于库马西的穆斯林 `NGOs` 充当外国穆斯林慈善机构的中介或合作伙伴。其中最古老的是 `Ansarudeen Organisation`，由 Sheikh Abdar-Rahman Muhammad 于 1996 年发起，很快获得了政府和外国捐助者的认可。`Ansarudeen Organisation` 于 1997/1998 年开始其活动，成功委托建设了一座由外国资助的清真寺、Danso 的水井项目以及 Aboaso 的一座可容纳 300 人的清真寺。清真寺和水项目，以及支持孤儿和组织斋月/开斋/古尔邦捐赠，一直是该非政府组织的核心支柱，其主要资助者是阿联酋慈善机构 `Dar al-Ber Society`。`Ansarudeen’s` 第二大支柱是教育和医疗基础设施项目，尽管它在 2006 年停止建设医疗中心，因为官僚挑战超出了组织的承受能力。相反，它开始在阿散蒂地区 Domanofu 建设一所护理培训中心（图 24），于 2022 年完工，正在等待卫生部的批准和认证。它还在阿散蒂地区 Woraso 发起了类似项目。637
+
+![](img/2ddf018ff5f5842e4fd5ba53f93c058a_237_0.png)
+
+图 24 Ansaruddeen 护理学院。阿散蒂地区 Domunafu 的护理培训学院建筑平面图，由 Dar al-Ber Society 和阿联酋援助资助并由 Ansaruddeen 实施。建设始于 2018 年，并于 2020 年完工。
+
+照片：HOLGER WEISS/2019
+
+自 2019 年以来，该组织在其活动中增加了两个新支柱。第四个支柱是为当地社区提供医疗服务。该组织对非法小规模采金（galamsey）造成的铅中毒影响表示担忧，并开始支付医院的肾透析费用，每次费用为 GHS 400–500，每位患者每周需要三次至四次透析。此外，该组织开始向 500 名婴儿提供婴儿食品，同时开始支付耳部手术费用。后者项目是新颖的，因为它要求组织从国外引进必要的专业能力，因为加纳此前并不存在，迄今已支付约 500 例手术费用。638
+
+每天为约 800 个家庭提供食物捐赠构成了 Ansarudeen 的第五大支柱。该项目不属于年度开斋和斋月食物分发，但作为后 COVID-19 救济措施，于 2022 年 2 月至 7 月间有效。7 月，项目的
+
 年），其古尔邦分发项目由新加坡穆斯林慈善机构 Global Ehsan Relief 资助（2021 年：开斋饭）；⁶²⁶ 自 2018 年起，TACAHF 与法国穆斯林慈善机构 Nouvelle Optique 合作，并获得用于水项目、孤儿护理和古尔邦（Qurbani）项目的资金（图 23）。⁶²⁷
 
 加纳穆斯林专业人士学院随后自 2009 年起通过穆斯林慈善家和国际穆斯林慈善机构的捐赠开展其年度救济服务项目，⁶²⁸ 其中包括土耳其 İHH 和德国 WEFA（2011 年至 2016 年）。受益人由加纳穆斯林学院的伊玛目和当地穆斯林酋长确定；主要目标群体是所谓的“被遗忘的孤儿”，即未接受孤儿院定期照顾的儿童，且在食物分发日之前已在学院注册。⁶²⁹ 同样，阿克拉的伊斯兰发展与人道服务委员会于 2016 年执行了迪拜的 Mohammed Bin Rashid al Maktoum 人道主义和慈善基金会的开斋项目。⁶³⁰ 一年后，它执行了卡塔尔慈善组织的项目。⁶³¹ Race4Aid 随后实施了由阿拉伯联合酋长国捐赠资助的各种项目，包括孤儿赞助项目以及清真寺的建设，以及 2023 年在北部地区 Nanton Zuo 的职业培训中心。⁶³²
@@ -2839,20 +2974,23 @@ wakaf2.rssing.com/chan-8574659/latest.php，于 18.10.2021 访问。然而，该
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_235_0.png)
 
 图 23 阿克拉马莫比的 Nouvelle Optique 钻井。由 Abdul-Aziz 慈善和人道主义基金会监督
+
 照片：HOLGER WEISS/2022
 
-最近的一个阿克拉穆斯林非政府组织是 *Naqshbandi Ghana Foundation.*633 关于该组织知之甚少，尽管其名称似乎表明加纳出现了一个新的逊尼派教团 *Naqshbandiyya*。这或许并不令人意外，鉴于自 2012 年以来土耳其 *NGOs* 在加纳的显著存在以及穆斯林学生从土耳其大学回流。*Naqshbandi Ghana Foundation* 于 2020 年 5 月注册，并在社会福利服务名录中被列为“本地非政府组织”。其活动范围被描述为“支持社会中的弱势群体”以及“…为聪颖但贫困的儿童提供教育支持”634 该组织与英国穆斯林慈善机构 *Love Mercy Hope*（LMH）合作，LMH 成立于 2019 年，并在加纳开展水项目。两家组织共同于 2019 年 12 月在阿克拉发起了一个 *Naqshbandi Dargah* 或精神圣地，635 并在 *Justgiving.com* 上启动了一项国际筹款活动。根据计划，Dargah 复合体将包括一座清真寺、孤儿院、宗教学校和寄宿学校。此外，它还将设有厨房和餐厅，每周三次为低收入家庭提供食物，以及 Mawlana Shaykh Nazim 的 *maqam*（圣墓）。636
+最近的一个阿克拉穆斯林非政府组织是 `Naqshbandi Ghana Foundation.`633 关于该组织知之甚少，尽管其名称似乎表明加纳出现了一个新的逊尼派教团 `Naqshbandiyya`。这或许并不令人意外，鉴于自 2012 年以来土耳其 `NGOs` 在加纳的显著存在以及穆斯林学生从土耳其大学回流。`Naqshbandi Ghana Foundation` 于 2020 年 5 月注册，并在社会福利服务名录中被列为“本地非政府组织”。其活动范围被描述为“支持社会中的弱势群体”以及“…为聪颖但贫困的儿童提供教育支持”634 该组织与英国穆斯林慈善机构 `Love Mercy Hope`（LMH）合作，LMH 成立于 2019 年，并在加纳开展水项目。两家组织共同于 2019 年 12 月在阿克拉发起了一个 `Naqshbandi Dargah` 或精神圣地，635 并在 `Justgiving.com` 上启动了一项国际筹款活动。根据计划，Dargah 复合体将包括一座清真寺、孤儿院、宗教学校和寄宿学校。此外，它还将设有厨房和餐厅，每周三次为低收入家庭提供食物，以及 Mawlana Shaykh Nazim 的 `maqam`（圣墓）。636
 
-几家总部位于库马西的穆斯林 *NGOs* 充当外国穆斯林慈善机构的中介或合作伙伴。其中最古老的是 *Ansarudeen Organisation*，由 Sheikh Abdar-Rahman Muhammad 于 1996 年发起，很快获得了政府和外国捐助者的认可。*Ansarudeen Organisation* 于 1997/1998 年开始其活动，成功委托建设了一座由外国资助的清真寺、Danso 的水井项目以及 Aboaso 的一座可容纳 300 人的清真寺。清真寺和水项目，以及支持孤儿和组织斋月/开斋/古尔邦捐赠，一直是该非政府组织的核心支柱，其主要资助者是阿联酋慈善机构 *Dar al-Ber Society*。*Ansarudeen’s* 第二大支柱是教育和医疗基础设施项目，尽管它在 2006 年停止建设医疗中心，因为官僚挑战超出了组织的承受能力。相反，它开始在阿散蒂地区 Domanofu 建设一所护理培训中心（图 24），于 2022 年完工，正在等待卫生部的批准和认证。它还在阿散蒂地区 Woraso 发起了类似项目。637
+几家总部位于库马西的穆斯林 `NGOs` 充当外国穆斯林慈善机构的中介或合作伙伴。其中最古老的是 `Ansarudeen Organisation`，由 Sheikh Abdar-Rahman Muhammad 于 1996 年发起，很快获得了政府和外国捐助者的认可。`Ansarudeen Organisation` 于 1997/1998 年开始其活动，成功委托建设了一座由外国资助的清真寺、Danso 的水井项目以及 Aboaso 的一座可容纳 300 人的清真寺。清真寺和水项目，以及支持孤儿和组织斋月/开斋/古尔邦捐赠，一直是该非政府组织的核心支柱，其主要资助者是阿联酋慈善机构 `Dar al-Ber Society`。`Ansarudeen’s` 第二大支柱是教育和医疗基础设施项目，尽管它在 2006 年停止建设医疗中心，因为官僚挑战超出了组织的承受能力。相反，它开始在阿散蒂地区 Domanofu 建设一所护理培训中心（图 24），于 2022 年完工，正在等待卫生部的批准和认证。它还在阿散蒂地区 Woraso 发起了类似项目。637
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_237_0.png)
 
 图 24 Ansaruddeen 护理学院。阿散蒂地区 Domunafu 的护理培训学院建筑平面图，由 Dar al-Ber Society 和阿联酋援助资助并由 Ansaruddeen 实施。建设始于 2018 年，并于 2020 年完工。
+
 照片：HOLGER WEISS/2019
 
 自 2019 年以来，该组织在其活动中增加了两个新支柱。第四个支柱是为当地社区提供医疗服务。该组织对非法小规模采金（galamsey）造成的铅中毒影响表示担忧，并开始支付医院的肾透析费用，每次费用为 GHS 400–500，每位患者每周需要三次至四次透析。此外，该组织开始向 500 名婴儿提供婴儿食品，同时开始支付耳部手术费用。后者项目是新颖的，因为它要求组织从国外引进必要的专业能力，因为加纳此前并不存在，迄今已支付约 500 例手术费用。638
 
-每天为约 800 个家庭提供食物捐赠构成了 Ansarudeen 的第五大支柱。该项目不属于年度开斋和斋月食物分发，但作为后 COVID-19 救济措施，于 2022 年 2 月至 7 月间有效。7 月，项目的[content]
+每天为约 800 个家庭提供食物捐赠构成了 Ansarudeen 的第五大支柱。该项目不属于年度开斋和斋月食物分发，但作为后 COVID-19 救济措施，于 2022 年 2 月至 7 月间有效。7 月，项目的
+
 年），其古尔邦分发项目由新加坡穆斯林慈善机构 Global Ehsan Relief 资助（2021 年：开斋饭）；⁶²⁶ 自 2018 年起，TACAHF 与法国穆斯林慈善机构 Nouvelle Optique 合作，并获得用于水项目、孤儿护理和古尔邦（Qurbani）项目的资金（图 23）。⁶²⁷
 
 加纳穆斯林专业人士学院随后自 2009 年起通过穆斯林慈善家和国际穆斯林慈善机构的捐赠开展其年度救济服务项目，⁶²⁸ 其中包括土耳其 İHH 和德国 WEFA（2011 年至 2016 年）。受益人由加纳穆斯林学院的伊玛目和当地穆斯林酋长确定；主要目标群体是所谓的“被遗忘的孤儿”，即未接受孤儿院定期照顾的儿童，且在食物分发日之前已在学院注册。⁶²⁹ 同样，阿克拉的伊斯兰发展与人道服务委员会于 2016 年执行了迪拜的 Mohammed Bin Rashid al Maktoum 人道主义和慈善基金会的开斋项目。⁶³⁰ 一年后，它执行了卡塔尔慈善组织的项目。⁶³¹ Race4Aid 随后实施了由阿拉伯联合酋长国捐赠资助的各种项目，包括孤儿赞助项目以及清真寺的建设，以及 2023 年在北部地区 Nanton Zuo 的职业培训中心。⁶³²
@@ -2876,89 +3014,17 @@ wakaf2.rssing.com/chan-8574659/latest.php，于 18.10.2021 访问。然而，该
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_235_0.png)
 
 图 23 阿克拉马莫比的 Nouvelle Optique 钻井。由 Abdul-Aziz 慈善和人道主义基金会监督
+
 照片：HOLGER WEISS/2022
 
-最近的一个阿克拉穆斯林非政府组织是 *Naqshbandi Ghana Foundation.*633 关于该组织知之甚少，尽管其名称似乎表明加纳出现了一个新的逊尼派教团 *Naqshbandiyya*。这或许并不令人意外，鉴于自 2012 年以来土耳其 *NGOs* 在加纳的显著存在以及穆斯林学生从土耳其大学回流。*Naqshbandi Ghana Foundation* 于 2020 年 5 月注册，并在社会福利服务名录中被列为“本地非政府组织”。其活动范围被描述为“支持社会中的弱势群体”以及“…为聪颖但贫困的儿童提供教育支持”634 该组织与英国穆斯林慈善机构 *Love Mercy Hope*（LMH）合作，LMH 成立于 2019 年，并在加纳开展水项目。两家组织共同于 2019 年 12 月在阿克拉发起了一个 *Naqshbandi Dargah* 或精神圣地，635 并在 *Justgiving.com* 上启动了一项国际筹款活动。根据计划，Dargah 复合体将包括一座清真寺、孤儿院、宗教学校和寄宿学校。此外，它还将设有厨房和餐厅，每周三次为低收入家庭提供食物，以及 Mawlana Shaykh Nazim 的 *maqam*（圣墓）。636
+最近的一个阿克拉穆斯林非政府组织是 `Naqshbandi Ghana Foundation.`633 关于该组织知之甚少，尽管其名称似乎表明加纳出现了一个新的逊尼派教团 `Naqshbandiyya`。这或许并不令人意外，鉴于自 2012 年以来土耳其 `NGOs` 在加纳的显著存在以及穆斯林学生从土耳其大学回流。`Naqshbandi Ghana Foundation` 于 2020 年 5 月注册，并在社会福利服务名录中被列为“本地非政府组织”。其活动范围被描述为“支持社会中的弱势群体”以及“…为聪颖但贫困的儿童提供教育支持”634 该组织与英国穆斯林慈善机构 `Love Mercy Hope`（LMH）合作，LMH 成立于 2019 年，并在加纳开展水项目。两家组织共同于 2019 年 12 月在阿克拉发起了一个 `Naqshbandi Dargah` 或精神圣地，635 并在 `Justgiving.com` 上启动了一项国际筹款活动。根据计划，Dargah 复合体将包括一座清真寺、孤儿院、宗教学校和寄宿学校。此外，它还将设有厨房和餐厅，每周三次为低收入家庭提供食物，以及 Mawlana Shaykh Nazim 的 `maqam`（圣墓）。636
 
-几家总部位于库马西的穆斯林 *NGOs* 充当外国穆斯林慈善机构的中介或合作伙伴。其中最古老的是 *Ansarudeen Organisation*，由 Sheikh Abdar-Rahman Muhammad 于 1996 年发起，很快获得了政府和外国捐助者的认可。*Ansarudeen Organisation* 于 1997/1998 年开始其活动，成功委托建设了一座由外国资助的清真寺、Danso 的水井项目以及 Aboaso 的一座可容纳 300 人的清真寺。清真寺和水项目，以及支持孤儿和组织斋月/开斋/古尔邦捐赠，一直是该非政府组织的核心支柱，其主要资助者是阿联酋慈善机构 *Dar al-Ber Society*。*Ansarudeen’s* 第二大支柱是教育和医疗基础设施项目，尽管它在 2006 年停止建设医疗中心，因为官僚挑战超出了组织的承受能力。相反，它开始在阿散蒂地区 Domanofu 建设一所护理培训中心（图 24），于 2022 年完工，正在等待卫生部的批准和认证。它还在阿散蒂地区 Woraso 发起了类似项目。637
+几家总部位于库马西的穆斯林 `NGOs` 充当外国穆斯林慈善机构的中介或合作伙伴。其中最古老的是 `Ansarudeen Organisation`，由 Sheikh Abdar-Rahman Muhammad 于 1996 年发起，很快获得了政府和外国捐助者的认可。`Ansarudeen Organisation` 于 1997/1998 年开始其活动，成功委托建设了一座由外国资助的清真寺、Danso 的水井项目以及 Aboaso 的一座可容纳 300 人的清真寺。清真寺和水项目，以及支持孤儿和组织斋月/开斋/古尔邦捐赠，一直是该非政府组织的核心支柱，其主要资助者是阿联酋慈善机构 `Dar al-Ber Society`。`Ansarudeen’s` 第二大支柱是教育和医疗基础设施项目，尽管它在 2006 年停止建设医疗中心，因为官僚挑战超出了组织的承受能力。相反，它开始在阿散蒂地区 Domanofu 建设一所护理培训中心（图 24），于 2022 年完工，正在等待卫生部的批准和认证。它还在阿散蒂地区 Woraso 发起了类似项目。637
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_237_0.png)
 
 图 24 Ansaruddeen 护理学院。阿散蒂地区 Domunafu 的护理培训学院建筑平面图，由 Dar al-Ber Society 和阿联酋援助资助并由 Ansaruddeen 实施。建设始于 2018 年，并于 2020 年完工。
-照片：HOLGER WEISS/2019
 
-自 2019 年以来，该组织在其活动中增加了两个新支柱。第四个支柱是为当地社区提供医疗服务。该组织对非法小规模采金（galamsey）造成的铅中毒影响表示担忧，并开始支付医院的肾透析费用，每次费用为 GHS 400–500，每位患者每周需要三次至四次透析。此外，该组织开始向 500 名婴儿提供婴儿食品，同时开始支付耳部手术费用。后者项目是新颖的，因为它要求组织从国外引进必要的专业能力，因为加纳此前并不存在，迄今已支付约 500 例手术费用。638
-
-每天为约 800 个家庭提供食物捐赠构成了 Ansarudeen 的第五大支柱。该项目不属于年度开斋和斋月食物分发，但作为后 COVID-19 救济措施，于 2022 年 2 月至 7 月间有效。7 月，项目的[content]
-年），其古尔邦分发项目由新加坡穆斯林慈善机构 Global Ehsan Relief 资助（2021 年：开斋饭）；⁶²⁶ 自 2018 年起，TACAHF 与法国穆斯林慈善机构 Nouvelle Optique 合作，并获得用于水项目、孤儿护理和古尔邦（Qurbani）项目的资金（图 23）。⁶²⁷
-
-加纳穆斯林专业人士学院随后自 2009 年起通过穆斯林慈善家和国际穆斯林慈善机构的捐赠开展其年度救济服务项目，⁶²⁸ 其中包括土耳其 İHH 和德国 WEFA（2011 年至 2016 年）。受益人由加纳穆斯林学院的伊玛目和当地穆斯林酋长确定；主要目标群体是所谓的“被遗忘的孤儿”，即未接受孤儿院定期照顾的儿童，且在食物分发日之前已在学院注册。⁶²⁹ 同样，阿克拉的伊斯兰发展与人道服务委员会于 2016 年执行了迪拜的 Mohammed Bin Rashid al Maktoum 人道主义和慈善基金会的开斋项目。⁶³⁰ 一年后，它执行了卡塔尔慈善组织的项目。⁶³¹ Race4Aid 随后实施了由阿拉伯联合酋长国捐赠资助的各种项目，包括孤儿赞助项目以及清真寺的建设，以及 2023 年在北部地区 Nanton Zuo 的职业培训中心。⁶³²
-
-wakaf2.rssing.com/chan-8574659/latest.php，于 18.10.2021 访问。然而，该主页已于 2024 年 5 月失效，原帖 http://www.wakafproject.com/terkini/appeal-for-qurban-for-poor-and-needy-in-ghana-2013/ 已不再可用。
-
-626 见关于加纳的帖子，29.9.2015 和 22.5.2021，https://www.facebook.com/pg/Global EhsanRelief/，于 18.10.2021 访问。
-
-627 TACAHF 的资助/捐助组织 Nouvelle Optique 在 TACAHF 主页的照片库中有所体现，http://www.tacahf.org/index.php?p=gallery，于 18.10.2021 访问；然而，该主页已于 2024 年 5 月失效。另见 Nouvelle Option Facebook 账户上的帖子，从 2018 年首个 TACAHF/Nouvelle Option 水项目视频开始，https://www.facebook.com/nouvelle.optique/videos/191486052242530，于 18.10.2021 访问。
-
-628 “GMA 年度救济服务，2015”，https://www.facebook.com/GhanaAcademyOfMuslimProfessionals/，于 15.1.2022 访问。
-
-629 “2012 年度救济服务”，“GMA 年度救济服务，2015”，30.5.2015，斋月帖子 28.1.2016，“为 2020 年斋月做准备”，2.3.2021，https://www.facebook.com/GhanaAcademyOfMuslimProfessionals/，于 15.11.2017 和 15.1.2022 访问。
-
-630 “加纳开斋活动”，http://mbrch.gov.ae/en/node/305，于 25.2.2019 访问。
-
-631 https://reliefweb.int/report/syrian-arab-republic/qatar-charity-distributes-ramadan-food-baskets-inside-syria，于 25.2.2019 访问。
-
-632 https://www.facebook.com/race4aid，帖子 24.5.2023、31.5.2023、5.6.2023，于 18.8.2023 访问。
-
-![](img/2ddf018ff5f5842e4fd5ba53f93c058a_235_0.png)
-
-图 23 阿克拉马莫比的 Nouvelle Optique 钻井。由 Abdul-Aziz 慈善和人道主义基金会监督
-照片：HOLGER WEISS/2022
-
-最近的一个阿克拉穆斯林非政府组织是 *Naqshbandi Ghana Foundation.*633 关于该组织知之甚少，尽管其名称似乎表明加纳出现了一个新的逊尼派教团 *Naqshbandiyya*。这或许并不令人意外，鉴于自 2012 年以来土耳其 *NGOs* 在加纳的显著存在以及穆斯林学生从土耳其大学回流。*Naqshbandi Ghana Foundation* 于 2020 年 5 月注册，并在社会福利服务名录中被列为“本地非政府组织”。其活动范围被描述为“支持社会中的弱势群体”以及“…为聪颖但贫困的儿童提供教育支持”634 该组织与英国穆斯林慈善机构 *Love Mercy Hope*（LMH）合作，LMH 成立于 2019 年，并在加纳开展水项目。两家组织共同于 2019 年 12 月在阿克拉发起了一个 *Naqshbandi Dargah* 或精神圣地，635 并在 *Justgiving.com* 上启动了一项国际筹款活动。根据计划，Dargah 复合体将包括一座清真寺、孤儿院、宗教学校和寄宿学校。此外，它还将设有厨房和餐厅，每周三次为低收入家庭提供食物，以及 Mawlana Shaykh Nazim 的 *maqam*（圣墓）。636
-
-几家总部位于库马西的穆斯林 *NGOs* 充当外国穆斯林慈善机构的中介或合作伙伴。其中最古老的是 *Ansarudeen Organisation*，由 Sheikh Abdar-Rahman Muhammad 于 1996 年发起，很快获得了政府和外国捐助者的认可。*Ansarudeen Organisation* 于 1997/1998 年开始其活动，成功委托建设了一座由外国资助的清真寺、Danso 的水井项目以及 Aboaso 的一座可容纳 300 人的清真寺。清真寺和水项目，以及支持孤儿和组织斋月/开斋/古尔邦捐赠，一直是该非政府组织的核心支柱，其主要资助者是阿联酋慈善机构 *Dar al-Ber Society*。*Ansarudeen’s* 第二大支柱是教育和医疗基础设施项目，尽管它在 2006 年停止建设医疗中心，因为官僚挑战超出了组织的承受能力。相反，它开始在阿散蒂地区 Domanofu 建设一所护理培训中心（图 24），于 2022 年完工，正在等待卫生部的批准和认证。它还在阿散蒂地区 Woraso 发起了类似项目。637
-
-![](img/2ddf018ff5f5842e4fd5ba53f93c058a_237_0.png)
-
-图 24 Ansaruddeen 护理学院。阿散蒂地区 Domunafu 的护理培训学院建筑平面图，由 Dar al-Ber Society 和阿联酋援助资助并由 Ansaruddeen 实施。建设始于 2018 年，并于 2020 年完工。
-照片：HOLGER WEISS/2019
-
-自 2019 年以来，该组织在其活动中增加了两个新支柱。第四个支柱是为当地社区提供医疗服务。该组织对非法小规模采金（galamsey）造成的铅中毒影响表示担忧，并开始支付医院的肾透析费用，每次费用为 GHS 400–500，每位患者每周需要三次至四次透析。此外，该组织开始向 500 名婴儿提供婴儿食品，同时开始支付耳部手术费用。后者项目是新颖的，因为它要求组织从国外引进必要的专业能力，因为加纳此前并不存在，迄今已支付约 500 例手术费用。638
-
-每天为约 800 个家庭提供食物捐赠构成了 Ansarudeen 的第五大支柱。该项目不属于年度开斋和斋月食物分发，但作为后 COVID-19 救济措施，于 2022 年 2 月至 7 月间有效。7 月，项目的[content]
-年），其古尔邦分发项目由新加坡穆斯林慈善机构 Global Ehsan Relief 资助（2021 年：开斋饭）；⁶²⁶ 自 2018 年起，TACAHF 与法国穆斯林慈善机构 Nouvelle Optique 合作，并获得用于水项目、孤儿护理和古尔邦（Qurbani）项目的资金（图 23）。⁶²⁷
-
-加纳穆斯林专业人士学院随后自 2009 年起通过穆斯林慈善家和国际穆斯林慈善机构的捐赠开展其年度救济服务项目，⁶²⁸ 其中包括土耳其 İHH 和德国 WEFA（2011 年至 2016 年）。受益人由加纳穆斯林学院的伊玛目和当地穆斯林酋长确定；主要目标群体是所谓的“被遗忘的孤儿”，即未接受孤儿院定期照顾的儿童，且在食物分发日之前已在学院注册。⁶²⁹ 同样，阿克拉的伊斯兰发展与人道服务委员会于 2016 年执行了迪拜的 Mohammed Bin Rashid al Maktoum 人道主义和慈善基金会的开斋项目。⁶³⁰ 一年后，它执行了卡塔尔慈善组织的项目。⁶³¹ Race4Aid 随后实施了由阿拉伯联合酋长国捐赠资助的各种项目，包括孤儿赞助项目以及清真寺的建设，以及 2023 年在北部地区 Nanton Zuo 的职业培训中心。⁶³²
-
-wakaf2.rssing.com/chan-8574659/latest.php，于 18.10.2021 访问。然而，该主页已于 2024 年 5 月失效，原帖 http://www.wakafproject.com/terkini/appeal-for-qurban-for-poor-and-needy-in-ghana-2013/ 已不再可用。
-
-626 见关于加纳的帖子，29.9.2015 和 22.5.2021，https://www.facebook.com/pg/Global EhsanRelief/，于 18.10.2021 访问。
-
-627 TACAHF 的资助/捐助组织 Nouvelle Optique 在 TACAHF 主页的照片库中有所体现，http://www.tacahf.org/index.php?p=gallery，于 18.10.2021 访问；然而，该主页已于 2024 年 5 月失效。另见 Nouvelle Option Facebook 账户上的帖子，从 2018 年首个 TACAHF/Nouvelle Option 水项目视频开始，https://www.facebook.com/nouvelle.optique/videos/191486052242530，于 18.10.2021 访问。
-
-628 “GMA 年度救济服务，2015”，https://www.facebook.com/GhanaAcademyOfMuslimProfessionals/，于 15.1.2022 访问。
-
-629 “2012 年度救济服务”，“GMA 年度救济服务，2015”，30.5.2015，斋月帖子 28.1.2016，“为 2020 年斋月做准备”，2.3.2021，https://www.facebook.com/GhanaAcademyOfMuslimProfessionals/，于 15.11.2017 和 15.1.2022 访问。
-
-630 “加纳开斋活动”，http://mbrch.gov.ae/en/node/305，于 25.2.2019 访问。
-
-631 https://reliefweb.int/report/syrian-arab-republic/qatar-charity-distributes-ramadan-food-baskets-inside-syria，于 25.2.2019 访问。
-
-632 https://www.facebook.com/race4aid，帖子 24.5.2023、31.5.2023、5.6.2023，于 18.8.2023 访问。
-
-![](img/2ddf018ff5f5842e4fd5ba53f93c058a_235_0.png)
-
-图 23 阿克拉马莫比的 Nouvelle Optique 钻井。由 Abdul-Aziz 慈善和人道主义基金会监督
-照片：HOLGER WEISS/2022
-
-最近的一个阿克拉穆斯林非政府组织是 *Naqshbandi Ghana Foundation.*633 关于该组织知之甚少，尽管其名称似乎表明加纳出现了一个新的逊尼派教团 *Naqshbandiyya*。这或许并不令人意外，鉴于自 2012 年以来土耳其 *NGOs* 在加纳的显著存在以及穆斯林学生从土耳其大学回流。*Naqshbandi Ghana Foundation* 于 2020 年 5 月注册，并在社会福利服务名录中被列为“本地非政府组织”。其活动范围被描述为“支持社会中的弱势群体”以及“…为聪颖但贫困的儿童提供教育支持”634 该组织与英国穆斯林慈善机构 *Love Mercy Hope*（LMH）合作，LMH 成立于 2019 年，并在加纳开展水项目。两家组织共同于 2019 年 12 月在阿克拉发起了一个 *Naqshbandi Dargah* 或精神圣地，635 并在 *Justgiving.com* 上启动了一项国际筹款活动。根据计划，Dargah 复合体将包括一座清真寺、孤儿院、宗教学校和寄宿学校。此外，它还将设有厨房和餐厅，每周三次为低收入家庭提供食物，以及 Mawlana Shaykh Nazim 的 *maqam*（圣墓）。636
-
-几家总部位于库马西的穆斯林 *NGOs* 充当外国穆斯林慈善机构的中介或合作伙伴。其中最古老的是 *Ansarudeen Organisation*，由 Sheikh Abdar-Rahman Muhammad 于 1996 年发起，很快获得了政府和外国捐助者的认可。*Ansarudeen Organisation* 于 1997/1998 年开始其活动，成功委托建设了一座由外国资助的清真寺、Danso 的水井项目以及 Aboaso 的一座可容纳 300 人的清真寺。清真寺和水项目，以及支持孤儿和组织斋月/开斋/古尔邦捐赠，一直是该非政府组织的核心支柱，其主要资助者是阿联酋慈善机构 *Dar al-Ber Society*。*Ansarudeen’s* 第二大支柱是教育和医疗基础设施项目，尽管它在 2006 年停止建设医疗中心，因为官僚挑战超出了组织的承受能力。相反，它开始在阿散蒂地区 Domanofu 建设一所护理培训中心（图 24），于 2022 年完工，正在等待卫生部的批准和认证。它还在阿散蒂地区 Woraso 发起了类似项目。637
-
-![](img/2ddf018ff5f5842e4fd5ba53f93c058a_237_0.png)
-
-图 24 Ansaruddeen 护理学院。阿散蒂地区 Domunafu 的护理培训学院建筑平面图，由 Dar al-Ber Society 和阿联酋援助资助并由 Ansaruddeen 实施。建设始于 2018 年，并于 2020 年完工。
 照片：HOLGER WEISS/2019
 
 自 2019 年以来，该组织在其活动中增加了两个新支柱。第四个支柱是为当地社区提供医疗服务。该组织对非法小规模采金（galamsey）造成的铅中毒影响表示担忧，并开始支付医院的肾透析费用，每次费用为 GHS 400–500，每位患者每周需要三次至四次透析。此外，该组织开始向 500 名婴儿提供婴儿食品，同时开始支付耳部手术费用。后者项目是新颖的，因为它要求组织从国外引进必要的专业能力，因为加纳此前并不存在，迄今已支付约 500 例手术费用。638
@@ -2967,12 +3033,17 @@ wakaf2.rssing.com/chan-8574659/latest.php，于 18.10.2021 访问。然而，该
 
 Sheikh Abdar-Rahman 的非政府组织运作表明大多数本地穆斯林非政府组织充当外国捐助组织的中介。Ansarudeen 列出七名有薪员工负责监督各种项目，以及十五名在现场的有薪承包商和工人，其薪水由每个外部资助项目征收的 7.5% 管理费覆盖。640
 
+
+
 库马西的 Iqra 教育与发展基金会于 2005 年注册，2006 年开始活动。641 其前身沙特非政府组织 Iqra 教育与发展基金会于 1991 年在 Wenchi 外建立了 Al-Faruq 学院作为英语/阿拉伯语基础学校。该校于 2006 年关闭并于 2011 年改建为私立教育学院。642 它于 2015 年被政府吸收为公立教育学院，成为唯一一所政府资助的伊斯兰教育学院。Al-Faruq 教育学院培养小学和初中教师，并开设普通基础教育、幼儿教育和伊斯兰/阿拉伯教育的文凭课程。643
 
-633 另见 https://www.facebook.com/imamhussein.naqshbandigh，于 9.1.2022 访问。
-634 “Naqshbandi Foundation Ghana”，directory.mogcsp.gov.gh，于 5.7.2021 访问。
-635 Love Mercy Hope，主页：www.lovemercyandhope.com（2020），当前项目，于 3.7.2021 访问。2020 年主页已不再可用，其 2024 年新主页提供了加纳过去项目的概述，见 https://lovemercyandhope.com/about-us/。
-636 “Naqshbandi Dergah”，https://www.justgiving.com/campaign/ghanadergah，于 3.7.2021 访问。2021 年 7 月初，该活动列出了 46 名支持者，已捐赠约 £7,000，占目标 £40,000 的 17%。
+633 另见 `https://www.facebook.com/imamhussein.naqshbandigh`，于 9.1.2022 访问。
+
+634 “Naqshbandi Foundation Ghana”，`directory.mogcsp.gov.gh`，于 5.7.2021 访问。
+
+635 Love Mercy Hope，主页：`www.lovemercyandhope.com`（2020），当前项目，于 3.7.2021 访问。2020 年主页已不再可用，其 2024 年新主页提供了加纳过去项目的概述，见 `https://lovemercyandhope.com/about-us/`。
+
+636 “Naqshbandi Dergah”，`https://www.justgiving.com/campaign/ghanadergah`，于 3.7.2021 访问。2021 年 7 月初，该活动列出了 46 名支持者，已捐赠约 £7,000，占目标 £40,000 的 17%。
 
 637 与 Sheikh Abdar-Rahman 和 Sheikh Abdallah 的访谈，库马西，12.12.2019 和 11.10.2022。
 
@@ -2982,34 +3053,29 @@ Sheikh Abdar-Rahman 的非政府组织运作表明大多数本地穆斯林非政
 
 640 与 Sheikh Abdar-Rahman 和 Sheikh Abdallah 的访谈，库马西，12.12.2019。
 
-641 见 https://iqrai.org/?p=2891 和 https://iqrai.org/?page_id=2，均于 17.8.2021 访问。然而，根据 Ishaq Kantier 的说法，Iqra 是沙特组织，可被视为 Al-Muntada 的替代品；与 Ishaq Kantier 的访谈，库马西，12.10.2022。Iqra 教育与发展基金会主页的链接在 2024 年 5 月已无法访问。
+641 见 `https://iqrai.org/?p=2891` 和 `https://iqrai.org/?page_id=2`，均于 17.8.2021 访问。然而，根据 Ishaq Kantier 的说法，Iqra 是沙特组织，可被视为 Al-Muntada 的替代品；与 Ishaq Kantier 的访谈，库马西，12.10.2022。Iqra 教育与发展基金会主页的链接在 2024 年 5 月已无法访问。
 
-642 https://gh.africabz.com/brong-ahafo/al-faruq-college-of-education-227317；https://ghadmissionforms.com/2021/01/19/al-faruq-college-online-admission-forms/，均于 17.8.2021 访问。
+642 `https://gh.africabz.com/brong-ahafo/al-faruq-college-of-education-227317`；`https://ghadmissionforms.com/2021/01/19/al-faruq-college-online-admission-forms/`，均于 17.8.2021 访问。
 
-643 https://www.prod.facebook.com/www.afcoe.edu.gh/，于 17.8.2021 访问。然而，由于设施和基础设施不足，该学院仅接受 350 名学生——计划中的政府投资为现有基础学校综合体增加一座 4 层宿舍、一座 4 层讲堂和实验室、一座 2 层学院行政楼以及讲师和校长的平房已停滞，该学院被迫于 2021 年将其清真寺改造成多功能厅。见“Al-Faruq 教育学院将清真寺改造成讲堂”，19.2.2021，https://www.honestynewsgh.com/2021/02/19/al-faruq-college-of-education-converts-mosque-into-lecture-halls/，
+643 `https://www.prod.facebook.com/www.afcoe.edu.gh/`，于 17.8.2021 访问。然而，由于设施和基础设施不足，该学院仅接受 350 名学生——计划中的政府投资为现有基础学校综合体增加一座 4 层宿舍、一座 4 层讲堂和实验室、一座 2 层学院行政楼以及讲师和校长的平房已停滞，该学院被迫于 2021 年将其清真寺改造成多功能厅。见“Al-Faruq 教育学院将清真寺改造成讲堂”，19.2.2021，`https://www.honestynewsgh.com/2021/02/19/al-faruq-college-of-education-converts-mosque-into-lecture-halls/`，
 
-
-
-伊克拉教育与发展基金会或伊克拉基金会与萨拉菲社群密切相关，其主页上展示的来自伊斯兰呼吁与研究最高委员会、ASWAJ 阿散蒂地区和安萨鲁逊纳协会的（阿拉伯语）推荐即表明了这一点。644 其宗旨是“为有需要者提供教育机会和社会服务”，通过支持教师、学校、孤儿和寡妇，以及挖掘水井、修建清真寺和组织宣传车队或达瓦巡回活动来实现。645 其阿拉伯语主页进一步说明该基金会在加纳以及贝宁、布基纳法索、几内亚、毛里塔尼亚、尼日利亚和多哥等其他西非国家开展工作。646 该基金会与资助其各项项目的沙特慈善家有联系，647 其2020年用阿拉伯语发布的年度报告清楚地表明了这一点。例如，除2020年的清真寺建设和水项目外，该基金会向72,000人提供了开斋、斋月和开斋节食品包；全年以食物和肉类篮子支持8,271名孤儿和寡妇；将捐助者的现金施舍（天课）分发给1,260名病人和有需要者以及穆斯林囚犯；资助了392名孤儿，其中150名在Al-Noor孤儿院，并为2,184名受资助和未受资助的孤儿提供了书包和开斋节服装，同时还为90名伊玛目和穆斯林教师提供经济援助。648
-
-伊克拉教育与发展基金会与社会服务盖伊姆基金会合作，649 这是另一家总部位于库马西的本地MFBO，[content]
 伊克拉教育与发展基金会或伊克拉基金会与萨拉菲社群密切相关，其主页上展示的来自伊斯兰呼吁与研究最高委员会、ASWAJ 阿散蒂地区和安萨鲁逊纳协会的（阿拉伯语）推荐即表明了这一点。644 其宗旨是“为有需要者提供教育机会和社会服务”，通过支持教师、学校、孤儿和寡妇，以及挖掘水井、修建清真寺和组织宣传车队或达瓦巡回活动来实现。645 其阿拉伯语主页进一步说明该基金会在加纳以及贝宁、布基纳法索、几内亚、毛里塔尼亚、尼日利亚和多哥等其他西非国家开展工作。646 该基金会与资助其各项项目的沙特慈善家有联系，647 其2020年用阿拉伯语发布的年度报告清楚地表明了这一点。例如，除2020年的清真寺建设和水项目外，该基金会向72,000人提供了开斋、斋月和开斋节食品包；全年以食物和肉类篮子支持8,271名孤儿和寡妇；将捐助者的现金施舍（天课）分发给1,260名病人和有需要者以及穆斯林囚犯；资助了392名孤儿，其中150名在Al-Noor孤儿院，并为2,184名受资助和未受资助的孤儿提供了书包和开斋节服装，同时还为90名伊玛目和穆斯林教师提供经济援助。648
 
 伊克拉教育与发展基金会与社会服务盖伊姆基金会合作，649 这是另一家总部位于库马西的本地MFBO，严重依赖阿拉伯捐助者来开展其宣传、教育和建设（清真寺、学校、水）项目。
 
-访问时间 17.8.2021；Nestor Kafui Adjomah，“Inadequate infrastructure negatively impacts academic work at Al-Faruq College of education，” 22.2.2021，https://www.myjoyonline.com/inadequate-infrastructure-negatively-impacts-academic-work-at-al-faruq-college-of-education/，访问时间 17.8.2021。
+访问时间 17.8.2021；Nestor Kafui Adjomah，“Inadequate infrastructure negatively impacts academic work at Al-Faruq College of education，” 22.2.2021，`https://www.myjoyonline.com/inadequate-infrastructure-negatively-impacts-academic-work-at-al-faruq-college-of-education/`，访问时间 17.8.2021。
 
-644 见 https://iqrai.org/wp-content/uploads/2020/06/45844.jpg （伊斯兰呼吁与研究最高委员会），https://iqrai.org/wp-content/uploads/2020/06/45845.jpg （ASWAJ），和 https://iqrai.org/wp-content/uploads/2020/06/45846.jpg （安萨鲁逊纳）。
+644 见 `https://iqrai.org/wp-content/uploads/2020/06/45844.jpg`（伊斯兰呼吁与研究最高委员会），`https://iqrai.org/wp-content/uploads/2020/06/45845.jpg`（ASWAJ），和 `https://iqrai.org/wp-content/uploads/2020/06/45846.jpg`（安萨鲁逊纳）。
 
-645 https://www.islamicfinder.org/world/view-place/51538/；https://iqrai.org/?page_id=778，均于 17.8.2021 访问。
+645 `https://www.islamicfinder.org/world/view-place/51538/`；`https://iqrai.org/?page_id=778`，均于 17.8.2021 访问。
 
-646 https://iqrai.org/。
+646 `https://iqrai.org/`。
 
-647 Al-Ihsaan 水井，由沙特阿拉伯慈善家捐赠，https://iqrai.org/ 5.8.2020；Waliday As-Saf 水井，由沙特阿拉伯慈善家捐赠，https://iqrai.org/，20.6.2020，访问时间 29.9.2021。
+647 Al-Ihsaan 水井，由沙特阿拉伯慈善家捐赠，`https://iqrai.org/` 5.8.2020；Waliday As-Saf 水井，由沙特阿拉伯慈善家捐赠，`https://iqrai.org/`，20.6.2020，访问时间 29.9.2021。
 
-648 2020 年度报告（阿拉伯语），https://iqrai.org/?p=30308，访问时间 17.8.2021。 该链接于 2024 年 5 月已无法访问。
+648 2020 年度报告（阿拉伯语），`https://iqrai.org/?p=30308`，访问时间 17.8.2021。 该链接于 2024 年 5 月已无法访问。
 
-649 https://www.facebook.com/qayyimgh/?ref=py_c。
+649 `https://www.facebook.com/qayyimgh/?ref=py_c`。
 
 总部位于库马西的 *United Ansaru al-Islam al-Muttadidah*，成立于 1995 年，又称 *Ansar for Charity and Development Foundation*（ACDF），同样依赖沙特阿拉伯和阿拉伯联合酋长国（其中包括迪拜的 Dar al-Ber Society）的捐助者；650 *Association of the Servant of the Most Gracious, Ghana* 与约旦捐助者有联系，651 而巴林慈善机构 حياة بلا أحزان（‘Life Without Sorrow’）赞助 *Kafiul Yateem Foundation for Social Services*（مؤسسة كافل اليتيم لخدمات الاجتماعية دولة غانا）的孤儿项目。652 *Markaz Aleawn Alyaqin Humanitarian Services* 则至少依赖埃及和土耳其组织的捐款来开展其人道主义服务、钻井、孤儿院、开斋和清真寺项目。自 2020 年起，该组织已从 MWL（水项目）获得资金，同时还有印度尼西亚的 Global Wakaf（水项目）和 ACT（Care for humanity；水项目以及斋月和开斋包和古兰经捐赠）。653 此外，它还担任 KSRelief 斋月食品捐赠计划在 2022 年和 2023 年斋月期间的当地合作伙伴，以及 KSRelief 的水项目。654
 
@@ -3017,30 +3083,29 @@ Sheikh Abdar-Rahman 的非政府组织运作表明大多数本地穆斯林非政
 
 总部位于库马西的 *Tarbiyya Foundation* 自 2020 年起与土耳其 Hayrat Yardım 合作，其中包括资助其斋月开斋捐赠、水项目和孤儿支持项目。^657 2022 年，该基金会还开始与德国-土耳其慈善机构 Emin Humanitärer Hilfsverein e.V.（Emin Humanitarian Aid）合作，实施后者组织的水和斋月开斋项目。^658 *Teimako and Blessing Organisation*（TBO）同样从多个土耳其非政府组织获得支持，以资助其对孤儿和贫困家庭的支持以及太阳能水井的钻探和建设（使用太阳能运行的机械化水井）。^659 *FOMWAG Ashanti* 则从卡塔尔慈善机构获得了其在阿马萨曼的学校项目的捐款，以及通过土耳其慈善机构 Deniz Feneri 资助的 Paragon Foundation 在 2022 年提供的 100 个开斋节礼包。^660 *Muslim Access Movement* 则协调了美国慈善机构 Salaam Ul Muslimyin Foundation Ghana 的类似捐赠；^661 总部位于库马西 Old Tafo Zongo 的 *Ummah Foundation* 自 2020 年起已分发来自汉堡的德国慈善和孤儿基金会的斋月礼包，以及来自比利时非政府组织 Hearts
 
-650 https://www.facebook.com/profile.php?id=100083641036045。
+650 `https://www.facebook.com/profile.php?id=100083641036045`。
 
-651 https://www.facebook.com/ibaaadurrahaman/photos/pcb.2413859238701935/2413856118702247/?type=3&theater，发布于 6.9.2019，访问时间 23.10.2020。
+651 `https://www.facebook.com/ibaaadurrahaman/photos/pcb.2413859238701935/2413856118702247/?type=3&theater`，发布于 6.9.2019，访问时间 23.10.2020。
 
-652 https://www.facebook.com/%D9%85%D9%85%D8%A4%D8%B3%D8%B3%D8%A9-%D9%83%D8%A7%D9%81%D9%84-%D8%A7%D9%84%D9%8A%D8%AA%D9%8A%D9%85-%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA-%D8%A7%D9%84%D8%A7%D8%AC%D8%AA%D9%85%D8%A7%D8%B9%D9%8A%D8%A9-%D8%AF%D9%88%D9%84%D8%A9-%D8%BA%D8%A7%D9%86%D8%A7-516839181840172/，16.3.2019，17.4.2019，23.7.2019，14.9.2019，26.4.2020，访问时间 2.2.2022。
+652 `https://www.facebook.com/%D9%85%D9%85%D8%A4%D8%B3%D8%B3%D8%A9-%D9%83%D8%A7%D9%81%D9%84-%D8%A7%D9%84%D9%8A%D8%AA%D9%8A%D9%85-%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA-%D8%A7%D9%84%D8%A7%D8%AC%D8%AA%D9%85%D8%A7%D8%B9%D9%8A%D8%A9-%D8%AF%D9%88%D9%84%D8%A9-%D8%BA%D8%A7%D9%86%D8%A7-516839181840172/`，16.3.2019，17.4.2019，23.7.2019，14.9.2019，26.4.2020，访问时间 2.2.2022。
 
-653 https://www.facebook.com/markaz.aleawn.alyaqin/，14.9.2021（穆斯林世界联盟），25.11.2020，20.12.2020，12.2.2021，11.5.2021，9.6.2021，26.9.2021，2.11.2021，10.1.2021，2.6.2022，8.6.2022（Global Wakaf 和 ACT 水项目），9.5.2021（ACT 斋月捐赠），23.5.2021（ACT 开斋捐赠），3.4.2021，2.12.2021，4.5.2022（ACT 古兰经捐赠）。
+653 `https://www.facebook.com/markaz.aleawn.alyaqin/`，14.9.2021（穆斯林世界联盟），25.11.2020，20.12.2020，12.2.2021，11.5.2021，9.6.2021，26.9.2021，2.11.2021，10.1.2021，2.6.2022，8.6.2022（Global Wakaf 和 ACT 水项目），9.5.2021（ACT 斋月捐赠），23.5.2021（ACT 开斋捐赠），3.4.2021，2.12.2021，4.5.2022（ACT 古兰经捐赠）。
 
-654 https://m.facebook.com/markaz.aleawn.alyaqin/posts，29.3.2022，1.4.2022，5.4.2022，17.4.2022，21.4.2022，29.3.2023，5.4.2023，23-28.5.2023，4.8.2023，访问时间 29.6.2022 和 18.8.2023。
+654 `https://m.facebook.com/markaz.aleawn.alyaqin/posts`，29.3.2022，1.4.2022，5.4.2022，17.4.2022，21.4.2022，29.3.2023，5.4.2023，23-28.5.2023，4.8.2023，访问时间 29.6.2022 和 18.8.2023。
 
-655 https://www.facebook.com/Al-Fadl-Organization-for-Humanitarian-Services-Kumasi-Ghana-10519138083244/?ref=page_internal，水项目（14.11.2020，15.11.2020，25.11.2020，2.12.2020，3.12.2020，5.12.2020，27.8.2021，29.8.2021，15.9.2021，16.9.2021，17.10.2021），清真寺项目（15.10.2020，2.12.2020，23.12.2020，1.1.2021，4.1.2021，11.1.2021，19.1.2021，23.1.2021），小牛捐赠（14.11.2020），访问时间 16.1.2022。
+655 `https://www.facebook.com/Al-Fadl-Organization-for-Humanitarian-Services-Kumasi-Ghana-10519138083244/?ref=page_internal`，水项目（14.11.2020，15.11.2020，25.11.2020，2.12.2020，3.12.2020，5.12.2020，27.8.2021，29.8.2021，15.9.2021，16.9.2021，17.10.2021），清真寺项目（15.10.2020，2.12.2020，23.12.2020，1.1.2021，4.1.2021，11.1.2021，19.1.2021，23.1.2021），小牛捐赠（14.11.2020），访问时间 16.1.2022。
 
-656. Stephen Asante，“Al-Adahi’ Project to support the needy, deprived communities，”3.8.2020，https://gna.org.gh/2020/08/al-adahi-project-to-support-the-needy-deprived-communities/；“Emirates Red Crescent fetes 1,200 underprivileged Muslim households，”21.7.2021，https://gna.org.gh/2021/07/emirates-red-crescent-fetes-1-200-underprivileged-muslim-households/；均于 28.5.2024 访问。
+656. Stephen Asante，“Al-Adahi’ Project to support the needy, deprived communities，”3.8.2020，`https://gna.org.gh/2020/08/al-adahi-project-to-support-the-needy-deprived-communities/`；“Emirates Red Crescent fetes 1,200 underprivileged Muslim households，”21.7.2021，`https://gna.org.gh/2021/07/emirates-red-crescent-fetes-1-200-underprivileged-muslim-households/`；均于 28.5.2024 访问。
 
-657. 另见 https://www.facebook.com/TARBIYYAGH/，与 Hayrat Yardım 合作的首贴为 19.10.2020，访问时间 9.1.2022。
+657. 另见 `https://www.facebook.com/TARBIYYAGH/`，与 Hayrat Yardım 合作的首贴为 19.10.2020，访问时间 9.1.2022。
 
-658. https://www.facebook.com/TARBIYYAGH，12.1.2022，3.4.2022，访问时间 25.8.2022。
+658. `https://www.facebook.com/TARBIYYAGH`，12.1.2022，3.4.2022，访问时间 25.8.2022。
 
-659. https://www.facebook.com/blessingteamako/，25.7. & 28.11. & 29.11. & 6.12. & 8.12.2021（太阳能水井）；3.2.2022（太阳能水井）；18.2. & 21.2.2022（孤儿支持）；21.3.2022（太阳能水井）；31.3.2022（开斋包：Larabanga）；8.4.2022（300 个开斋包：Tamale；300 个开斋包：Koforidua），13.4.2022（开斋包：Accra），3.6.2022（开斋包），17.7.2022（太阳能水井），访问时间 25.8.2022。TBO 列出的合作伙伴（17.3.2022）包括以下组织：Turkiye Diyanet Vakfı，Tadd Afrika，TIKA，IHH，Hayrat Yardım，Haim Sani Yardım，CADERNERDEGI，Ummetin Yardım Eden Leritkderdag，Kızılay，TDV，Kardeseli，Iddef Konya，Idemalilk Ghana，hasene，Iyilik vakfı，Iyilikdernegi，American Helps，和 Canada Helps。
+659. `https://www.facebook.com/blessingteamako/`，25.7. & 28.11. & 29.11. & 6.12. & 8.12.2021（太阳能水井）；3.2.2022（太阳能水井）；18.2. & 21.2.2022（孤儿支持）；21.3.2022（太阳能水井）；31.3.2022（开斋包：Larabanga）；8.4.2022（300 个开斋包：Tamale；300 个开斋包：Koforidua），13.4.2022（开斋包：Accra），3.6.2022（开斋包），17.7.2022（太阳能水井），访问时间 25.8.2022。TBO 列出的合作伙伴（17.3.2022）包括以下组织：Turkiye Diyanet Vakfı，Tadd Afrika，TIKA，IHH，Hayrat Yardım，Haim Sani Yardım，CADERNERDEGI，Ummetin Yardım Eden Leritkderdag，Kızılay，TDV，Kardeseli，Iddef Konya，Idemalilk Ghana，hasene，Iyilik vakfı，Iyilikdernegi，American Helps，和 Canada Helps。
 
-660. https://www.facebook.com/Fomwag-Ashanti-112442813643597，21.4.2022，5.7.2022，访问时间 25.8.2022。
+660. `https://www.facebook.com/Fomwag-Ashanti-112442813643597`，21.4.2022，5.7.2022，访问时间 25.8.2022。
 
-661. https://www.facebook.com/mamtyonline，22.1.2019，8.5.2019，9.9.2019，14.7.2020，访问时间 25.8.2022。
-
+661. `https://www.facebook.com/mamtyonline`，22.1.2019，8.5.2019，9.9.2019，14.7.2020，访问时间 25.8.2022。
 
 
 
@@ -3061,26 +3126,40 @@ LOMEF在加纳和美国设有分支机构的双重结构服务于实际需求。
 光明之眼基金会最初是2010年库马西一群人的私人倡议。成立初期，该运动专注于帮助单亲父母和低收入家庭。2017年，该运动注册为一个名为“加纳光明之眼基金会”（ELF GH）的非营利组织。该基金会有两个办事处，一个位于库马西的Old Tafo，另一个位于德国比特堡。至少从基金会的主页来看，其总部位于德国，其德国分支Eyes of Light e.V. [eingetragener Verein = 注册协会]主要专注于筹款。675 此外，德国主页呼吁读者向该组织缴纳天课（zakat）和开斋捐（zakat al-fitr）。676 尽管该组织并未将自己标识为穆斯林信仰组织（FBO），但其目标和使命声明中也没有直接提及贫困穆斯林或伊斯兰教。与LOMEF一样，光明之眼基金会强调其活动的人道主义方面，“改变贫困、受压迫和被遗忘者的生活[...]转变最弱势群体的生活。”677 然而，无论是在筹款活动还是在实施本地项目中，所涉及的目标群体都是德国和加纳的穆斯林。例如，2021年，该基金会在德国开展了一场筹款活动，为加纳2021年的古尔巴尼献祭筹集资金。678 此外，德国主页还链接到了Karawane der Liebe E.V. Verein für die Vervollkommnung des menschlichen Charakters的主页。这是一个苏菲组织，也被称为“爱的苏菲之道”。679
 
 662 https://www.facebook.com/UMMAH-Foundation-122337079156638, 1.5.2020, 23.5.2020, 13.5.2021, 4.5.2022, 访问于 25.8.2022.
+
 663 https://www.facebook.com/alazizhumanitarianprojects, 26.2.2020, 24.4.2020, 6.6.2022, 23.6.2022, 访问于 2022.
+
 664 Taimaka非洲基金会支持霍霍埃宗戈发展协会, https://www.ghanaw... https://www.ghanaw... 访问于 28.5.2024.
+
 665 加纳安萨鲁勒伊斯兰青年组织，帖子发布于 5.12.2021, 26.1.2022, 17.3.2022, 5.4.2023, https://www.facebook.com/profile.php?id=100071654437847, 访问于 18.8.2023.
+
 666 https://www.facebook.com/JusticeYateemFoundation.
+
 667 宰牲节期间宰杀240头牛...牛肉分发给贫困穆斯林, 13.7.2022, https://www.ghanai... 访问于 2.1.2023.
+
 668 参见 https://www.facebook.com/The-Life-Empowerment-Foundation-101467618273741/, 以及 https://thelifeempowermentfoundation.co.uk/.
+
 669 http://www.lomef.org/about-us/, 访问于 3.7.2021.
+
 670 http://www.lomef.org/what-we-do/projects/, 访问于 3.7.2021.
+
 671 http://www.lomef.org/what-we-do/projects/, 访问于 3.7.2021.
+
 672 https://www.facebook.com/groups/84194605913720/user/1201572531, 2.8.2022, 访问于 25.8.2022.
+
 673 https://www.facebook.com/groups/84194605913720/user/1201572531, 19.4.2022, 访问于 25.8.2022.
+
 674 http://www.lomef.org/what-we-do/achievements/, 访问于 3.7.2021.
+
 675 另见 https://www.eyesoflight.de
+
 676 "Zakaat-Maal kann bei uns eingezahlt werden, um es an die Armen zu verteilen," https://www.eyesoflight.de/projekte/sonstiges; "Zakat Distribution," https://www.eyesoflight.org; "Zakat Al-fitr," https://www.eyesoflight.org/zakat, 均访问于 1.7.2021; 英文主页已于2024年5月停用。
+
 677 https://www.eyesoflight.org/about, 访问于 1.7.2021; 该主页已于2024年5月停用。
+
 678 https://www.eyesoflight.de, 访问于 1.7.2021.
+
 679 另见 https://sufipathoflove.com.
-
-
-
 
 除了在库马西的开斋节捐赠外，光明之眼基金会在其主页上列出了五个项目。其中包括建设一座孤儿院，以及一项孤儿院赞助计划、一个水井项目、一个妇女裁缝项目和一个幼儿园项目。然而，除了孤儿院之外，其他项目似乎仍处于规划阶段；主页上关于它们的信息很少。基金会宣称，寄宿之家项目目前是“我们迄今为止最大的项目”。寄宿之家容纳着30多名男孩，其中大多数是孤儿。该基金会还旨在为他们的教育提供支持。680
 
@@ -3091,6 +3170,7 @@ El-Ehsan慈善救济基金会（ECRF）成立于2010年，684总部位于巴乌�
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_246_0.png)
 
 图25 努尔伊斯兰发展研究所。瓦城一块破旧的街道标志牌，上面写着该研究所符合伊斯兰教法的创收活动  
+
 摄影：霍尔格·魏斯/2019年
 
 自称是“一个帮助受自然灾害、冲突和贫困影响者的加纳非政府组织”。685 根据其主页，该基金会征集天课、慈善捐款、礼品和捐赠基金，但没有说明其呼吁对象是本地赞助人还是国际捐助者。686
@@ -3112,22 +3192,30 @@ ECRF的孤儿资助计划很可能吸引了一些资金，因为它出现在基�
 然而，ECRF与穆斯林全球救济组织之间的合作似乎在2018年后减弱了。相反，ECRF已成为穆斯林援助澳大利亚国际组织（MAA）的合作伙伴组织，正如ECRF首席执行官Sheikh Usman Tanko Ibrahim担任MAA经理所表明的那样。这家澳大利亚穆斯林慈善机构参与水项目，并资助了以下建设：
 
 692 “对100多名孤儿的支持”，18.3.2018，http://www.ecrfgh.org/support-to-100-plus-orphans/，访问于2021年7月15日。  
+
 693 “水与卫生”，http://www.ecrfgh.org/water-sanitation/，访问于2021年7月15日。  
+
 694 “库塞-金吉里的水和卫生项目”，http://www.ecrfgh.org/water-and-sanitation-project-at-kouse-jingiri/，访问于2021年7月15日。  
+
 695 “饥饿问题”，http://www.ecrfgh.org/hunger-issue/，访问于2021年7月15日。  
+
 696 “库塞-金吉里的清真寺项目”，http://www.ecrfgh.org/mosque-project-at-kouse-jingiri/，访问于2021年7月15日。  
+
 697 “我们在加纳为儿童提供食物：2016年斋月”，http://www.ecrfgh.org/we-fed-children-in-ghana-ramadan-2016/，访问于2021年7月15日。  
+
 698 “MGR食品援助计划”，3.7.2017，https://www.facebook.com/el.charity.gh/videos/641528409374745/?_so_=channel_tab&_rv_=all_videos_card，访问于2021年7月15日。  
-699 “谢里夫先生的感谢致辞”，3.7.2017，https://www.facebook.com/el.charity.gh/videos/64154259376160/?_so_=channel_tab&_rv_=all_videos_card; https://www.facebook.com/el.charity.gh/videos/during-ramadan-2017-we-were-able-to-reach-out-to-5-different-schools-including-w/641509042710015/?_so_=permalink&_rv_=related_videos，均访问于2021年7月15日。
 
-
+699 “谢里夫先生的感谢致辞”，3.7.2017，https://www.facebook.com/el.charity.gh/videos/64154259376160/?_so_=channel_tab&_rv_=related_videos; https://www.facebook.com/el.charity.gh/videos/during-ramadan-2017-we-were-able-to-reach-out-to-5-different-schools-including-w/641509042710015/?_so_=permalink&_rv_=related_videos，均访问于2021年7月15日。
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_249_0.png)
 
 图 26 加纳慈善发展协会。塔马莱组织总部外的路标
+
 照片：HOLGER WEISS/2019
 
 2020 年在上东区打了 90 口水井。700 其中 20 口由 ECRF 建造。701
+
+
 
 在加纳北部运营的中间型穆斯林非政府组织的第三个例子是总部位于塔马莱的加纳慈善发展协会（GCAD，图 26）。其使命是通过提供水井以提供饮用水、建设教室、学校和清真寺，以及在开斋节期间为有需要的人分发食物和衣物来进行人道主义活动。^702 GCAD 是谢赫·凯兰的创举，他于 2015 年创立了该组织。他成立该组织的动机源于他意识到在加纳北部地区需要做更多社会动员和发展工作，因为该地区穆斯林人口大幅增加。拥有此前十年与穆斯林组织如 Muntada Islam 和非洲穆斯林机构合作的经验，他希望通过创立自己的非政府组织特别强调教育项目。然而，他的愿景最初与他联系寻求帮助的资助方（即国际穆斯林非政府组织）的愿景相冲突。他们的重点是社会发展的“伊斯兰”解释，即提供伊斯兰中心、清真寺和水井。尽管如此，谢赫·凯兰最终与两个阿拉伯慈善机构——阿联酋援助和沙迦国际慈善达成妥协，GCAD 于 2016 年开始运营。^703
 
@@ -3137,7 +3225,7 @@ ECRF的孤儿资助计划很可能吸引了一些资金，因为它出现在基�
 
 加纳慈善发展协会是一个典型的中介组织，充当当地社区与国际资助方之间的桥梁。GCAD 的工作人员数量有限，这对穆斯林非政府组织来说是典型的：11 人，包括上述地区中的组织代表。行政费用由外国资金承担。708 谢赫·凯兰和 GCAD 地区代表收集当地社区的基础设施项目请求，并在初步内部评估后将其提交给国际捐助方。随着其主页于 2021 年建立，GCAD 还开始发布针对特定项目的捐款呼吁，包括三个教室项目、四个水项目、六个清真寺项目、一个“房屋”项目和一个“商店”项目。709
 
-#### 4.6 加纳穆斯林非政府组织走向国际
+## 4.6 加纳穆斯林非政府组织走向国际
 
 一些加纳穆斯林非政府组织近年来扩大了活动范围并启动了国际项目。这是一种新现象，因为它挑战了加纳穆斯林社区是外部干预的接受者以及当地穆斯林为赋权而动员仅限于加纳国界内的旧观念。另一方面，考虑到许多加纳穆斯林活动家和学者——无论是萨拉菲、苏菲、什叶派还是阿赫迈迪亚——多方面的区域和大陆网络，加纳穆斯林非政府组织的跨国和国际雄心并不令人惊讶。穆斯林跨境网络可以追溯到前殖民时期，在殖民时期从未停止，并且随着现代交通和通信技术的使用，在当代后殖民时代得到了加强和倍增。
 
@@ -3152,9 +3240,13 @@ ECRF的孤儿资助计划很可能吸引了一些资金，因为它出现在基�
 701 “MAA International 与 ECRF 合作在加纳提供清洁饮用水”，2021 年 1 月 3 日，https://www.facebook.com/el.charity.gh/photos/a.4096970065893915/1497674083760169/?type=3&theater，访问时间 2021 年 7 月 15 日。
 
 702. 加纳慈善发展协会主页 2021，http://gcharity.org/about-us/，访问时间 2021 年 8 月 10 日。
+
 703. 与谢赫·凯兰在塔马莱的访谈，2019 年 4 月 10 日和 2019 年 12 月 9 日。根据 GCAD 主页提供的信息，该组织成立于 2018 年。
+
 704. 请参阅 http://gcharity.org/gallery/ 上的照片，访问时间 2021 年 8 月 10 日。
+
 705. 与谢赫·凯兰在塔马莱的访谈，2019 年 4 月 10 日和 2019 年 12 月 9 日。
+
 706. 与谢赫·凯兰在塔马莱的访谈，2019 年 12 月 9 日。
 
 710 “愿景与使命”，https://islamichumanitarianfoundation.blogspot.com/2016/01/vision-and-mission.html，2016 年 1 月 5 日，访问时间 2022 年 1 月 13 日。
@@ -3167,11 +3259,9 @@ ECRF的孤儿资助计划很可能吸引了一些资金，因为它出现在基�
 
 714 https://iqraorg/?page_id=778（捐赠报告 2014 年 10 月 24 日），和 /?page=26696（捐赠报告 2019 年 6 月 3 日），访问时间 2020 年 11 月 17 日。2024 年 5 月，伊克拉教育与发展基金会主页的链接已无法访问。
 
-
-
 GIYSA 反过来，在其成员中为尼日利亚南部农村社区的饮用水井项目筹集资金。715
 
-#### 4.7 依赖外国捐助者——挑战与限制
+## 4.7 依赖外国捐助者——挑战与限制
 
 对外部投资的依赖使加纳穆斯林非政府组织陷入问题境地，因为外国捐助者决定资助的内容。因此，为了实现当地贫困人口的赋权，需要确定其他方法，尤其是由受益者设计的、旨在实现当地社区结构性变革且由执行组织完全能够控制资金的举措。这种方法需要动员加纳穆斯林人口承担集体责任，不仅改善其生计，还要就‘穆斯林’扶贫方案展开富有成效的讨论。716
 
@@ -3201,9 +3291,9 @@ Anika Altaf 关于北部地区当地和全国穆斯林非政府组织的报告�
 
 722 Anika Altaf, 《对加纳北部伊斯兰发展倡议的认知与反思》 (Amsterdam: PADEV, 2010), 可在 http://dare.uva.nl 获取, 访问于 2.11.2017.
 
-
-
 他强调需要建立一个篮子来满足他们的需求和愿望，并为他们提供职业培训。奥斯曼·努胡·沙鲁布图（Osman Nuhu Sharubutu）强调，有必要开发新机制，接触穆斯林社区中富裕和有资源的人士，让他们在慈善方面做得更多。723
+
+
 
 2019年4月与哈吉·苏莱曼纳·穆穆尼（Haji Sulemana Mumuni，又称哈吉·苏莱）的一次长谈中，出现了一个关于依赖外部捐助者的发人深省的反思。在他看来，接受世俗教育训练的穆斯林和接受非世俗教育训练的穆斯林之间存在根本区别。前者“只说不做”，而后者——主要是传统的穆斯林学者——依赖他人，即他们的信众，并且日益依赖来自阿拉伯世界的捐款。关于与政治领袖关系的一个关键问题是：宗教领袖应该与他们合作（并从中获取资源），还是保持独立并从自己社区内部产生资源？同样，在与外部穆斯林慈善家和慈善机构的关系方面，哈吉·苏莱强调，最好保持独立，依赖从自己社区内部积累的资源，而不是依赖外部捐助者。关键在于从内部赋能，哈吉·苏莱强调，依赖外部捐助者的短期策略是有风险的，因为他们的目标可能与受助者的目标不一致。虽然资助修建清真寺在穆斯林捐助者中排名很高，但当地社区的优先事项可能是“世俗”基础设施，如学校、医疗中心或职业培训中心。哈吉·苏莱指出，成立一个NGO比在众多挑战中有效运营它更容易，尤其是在没有计划如何为其活动提供资金的情况下。外部捐助者拨付的资金很少包括支付NGO工作人员薪酬的间接费用，或者在极端情况下，这些资金被挪用于其他目的。他进一步指出，外部捐助者投资于新项目，而不投资于这些项目的维护。结果是一个恶性循环：地方NGO只要收到外部资金就能生存，一旦资金停止就会崩溃。724
 
@@ -3217,7 +3307,6 @@ Anika Altaf 关于北部地区当地和全国穆斯林非政府组织的报告�
 
 未来的发展将告诉我们，NMC的成立是否开启了加纳穆斯林社区历史的新篇章。至少它的设计者设想它发展成核心国家机构，超越教派界限促进穆斯林社区的福祉和自我赋权。NMC的《盟约》文件概述，它将率先组建三个新机构来满足穆斯林的需求，即加纳伊斯兰教育局（Ghana Islamic Education Service）、加纳伊斯兰卫生局（Ghana Islamic Health Service）和加纳伊斯兰金融局（Ghana Islamic Financial Service）。732
 
----
 725 绿色圣洁基金会的正式成立典礼于2011年举行，当地媒体对此进行了报道，见“Muslims inaugurate NGO in Accra”，15.5.2011，https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Muslims-inaugurate-NGO-in-Accra-209665，访问于7.10.2011。
 
 726 HGF 序言，30.12.2012，https://www.facebook.com/HOLY-GREEN-Foundation-205915012866979/，访问于7.10.2021。
@@ -3234,25 +3323,28 @@ Anika Altaf 关于北部地区当地和全国穆斯林非政府组织的报告�
 
 732 “加纳全国穆斯林大会盟约”，[无日期]，https://www.theinsightnews online.com/deed-of-national-muslim-conference-of-ghana/，访问于8.7.2022。
 
-## 第三章
-### 穆斯林信仰本位人道主义救济的本质
+# 第三章
 
-穆斯林NGO将*infaq*（施舍）和*sadaqa/sadaqa jariya*（施舍/持续性施舍）定义为赋能穆斯林社区的核心概念。一方面，穆斯林NGO用这个词来表明其作为捐助者和受助者之间中介的立场。是NGO而非捐助者来识别合格的受助者，或提供合格项目的清单，如宗教中心、水利项目、教育项目或健康项目等。另一方面，*sadaqa jariya*尤其需要在捐助者和NGO之间建立并创造信任，因为对作为*sadaqa jariya*捐赠的资金的管理不善或挪用，不仅会破坏NGO与其捐助者之间的纽带，还会导致那些对NGO负责的人在安拉眼中受到谴责。
+## 穆斯林信仰本位人道主义救济的本质
 
-穆斯林学者和论著将*sadaqa*视为自愿施舍。而*zakat*（天课）则被定义为强制性的，受特定条件约束，并针对《古兰经》中列出的特定受益人群体（忏悔章 9:60），*sadaqa*不受任何条件、限制或准则的约束，也可以给予非穆斯林。^1^ 加纳穆斯林组织和活动人士的捐款呼吁通常被认定为*sadaqa*而非*zakat*，并且随着过去十年穆斯林NGO的激增及其在社交媒体上的活动，这类呼吁已变得相对普遍。*Infaq*，在阿拉伯语中是一个通用术语，意为支出和发放。然而，它也带有行善而不求回报或不期待任何奖赏的道德义务。*Infaq*在《古兰经》中的解释是，只为取悦安拉，应在死亡之前进行，不应为了炫耀，也不应带有任何公开宣传的欲望。^2^ 因此它不同于*sadaqa*或自愿施舍，也不同于*sadaqa jariya*（持续性/永久性/不间断的慈善），^3^ 因为这两个术语都暗含着对后世回报的希望，以及通过施舍予 needy 来实现捐助者救赎的行为。
+穆斯林NGO将`*infaq*`（施舍）和`*sadaqa/sadaqa jariya*`（施舍/持续性施舍）定义为赋能穆斯林社区的核心概念。一方面，穆斯林NGO用这个词来表明其作为捐助者和受助者之间中介的立场。是NGO而非捐助者来识别合格的受助者，或提供合格项目的清单，如宗教中心、水利项目、教育项目或健康项目等。另一方面，`*sadaqa jariya*`尤其需要在捐助者和NGO之间建立并创造信任，因为对作为`*sadaqa jariya*`捐赠的资金的管理不善或挪用，不仅会破坏NGO与其捐助者之间的纽带，还会导致那些对NGO负责的人在安拉眼中受到谴责。
+
+穆斯林学者和论著将`*sadaqa*`视为自愿施舍。而`*zakat*`（天课）则被定义为强制性的，受特定条件约束，并针对《古兰经》中列出的特定受益人群体（忏悔章 9:60），`*sadaqa*`不受任何条件、限制或准则的约束，也可以给予非穆斯林。^1^ 加纳穆斯林组织和活动人士的捐款呼吁通常被认定为`*sadaqa*`而非`*zakat*`，并且随着过去十年穆斯林NGO的激增及其在社交媒体上的活动，这类呼吁已变得相对普遍。`*Infaq*`，在阿拉伯语中是一个通用术语，意为支出和发放。然而，它也带有行善而不求回报或不期待任何奖赏的道德义务。`*Infaq*`在《古兰经》中的解释是，只为取悦安拉，应在死亡之前进行，不应为了炫耀，也不应带有任何公开宣传的欲望。^2^ 因此它不同于`*sadaqa*`或自愿施舍，也不同于`*sadaqa jariya*`（持续性/永久性/不间断的慈善），^3^ 因为这两个术语都暗含着对后世回报的希望，以及通过施舍予 needy 来实现捐助者救赎的行为。
 
 1. 参见，例如，https://islamqa.info/en/answers/9449/the-difference-between-zakaah-and-sadaqah，访问于17.5.2019。
+
 2. Farooq Aziz, Muhammad Mahmud and Emad ul Karim，“The Nature of *Infaq* and its Effects on Distribution of Wealth”，*KASBIT Business Journal* 1, 第1期 (2008): 44–48。
+
 3. https://www.zakat.org/what-is-sadaqah-jariyah-charity-ever-flowing，访问于8.10.2021。
-
-
-
 
 Facebook 上的许多论著和阐述都将“sadaqa”（施舍）视为一种日常慈善形式。在《萨达卡之门》（“Doors of Sadaqa”）的阐述中，Rayhan Yakub 基金会 Facebook 账号上一篇帖子的（匿名）作者，除了赞美安拉的言辞和经文外，还将世俗的行为列为 sadaqa。后者包括：清除人们道路上的荆棘、骨头和石头；引导和倾听残障人士；利用自己可支配的资源帮助穷人；以及日常的礼貌行为，只要其意图是取悦安拉。⁴ Grain of Hope Foundation（希望种子基金会）也发布了类似的建议。他们给追随者的建议是：在任何清真寺里放置一本《古兰经》；在窗台上放一碗或一杯水给鸟儿；或者把布料分给贫困者。另一个建议是：在房间里放一个盒子，每当认为自己犯了罪，就往里投一枚硬币；一个月后打开盒子，将现金施舍给贫困者，或用于资助孤儿。⁵ 因此，穆斯林被建议将财产分成几部分用于多种施舍：一部分为贫困者提供开斋饭（Iftar），一部分资助孤儿，一部分资助老人，还有一部分用于修建清真寺等等。⁶
 
 4 “《萨达卡之门》”，https://www.facebook.com/page/260303714019557/，2015年11月19日，访问于2022年8月26日。
+
 5 “施舍（sadaqah）小贴士”，2016年5月18日，https://www.facebook.com/Grain-Of-Hope-Foundation-687684279998950，访问于2022年8月26日。
+
 6 “给予sadaqah的最佳方式是什么？”，https://www.facebook.com/Grain-Of-Hope-Foundation-687684279998950，2022年2月9日，访问于2022年8月26日。
+
 7 “关于为安拉而行的真诚施舍”，https://www.facebook.com/page/260303714019557/，2016年5月20日，访问于2022年8月26日。
 
 另一方面，Sadaqa jariya（持续施舍）被穆斯林学者定义为“为了真主而给出的‘真诚施舍’”。“作为一个有产出的穆斯林，你应该每个月从工资中留出一部分用于sadaqah，即使金额很小，”Rayhan Yakub Foundation 的（匿名）作者解释道，并建议将这些钱投资于修建清真寺、挖井、开办学校或植树。⁷ Grain of Hope Foundation 的（匿名）作者进一步提醒说，sadaqa jariya 是一种 waqf（虔诚的宗教捐赠）：
@@ -3269,7 +3361,7 @@ Facebook 上的许多论著和阐述都将“sadaqa”（施舍）视为一种�
 
 众多穆斯林慈善机构主要在城区和宗戈（Zongo）社区组织本地斋月食品捐赠、开斋饭以及献牲捐赠和宰牲（Udhiya）项目，其中包括阿克拉（例如 Fadil Islamic Foundation、Ghana Society for Islamic Education and Reform、Islamic Ummah of Ghana、Grain of Hope Foundation、Zongo Educational Aid）¹⁰、卡索阿（*Muslim Aid Ghana*）<sup>11</sup>、库马西（例如 *Al-Sidiq Foundation for Care and Charity, Ansar al-Din Association, Muslim Ummah of Ghana, Muslim Access Movement, Sunna Hausa Relief Organization, Ummah Foundation* 和 *Yamboni Foundation*）<sup>12</sup>、塞孔迪和塔科拉迪（*Attaqwa Foundation*）<sup>13</sup>、奥布阿西（*Deen Al-Haqq Islamic Foundation* 以及 *Hajia Saratu Sidi Ali Foundation*）<sup>14</sup>、塔马利和宾比拉（*Sayfudeen Fund*）。其中也有一些针对农村社区，例如总部位于阿克拉的 *Grain of Hope Foundation* 和 *Make Zongo Great Again*<sup>15</sup>、总部位于塔马利的 *Awakening Muslimah*<sup>16</sup>，以及总部位于塔科拉迪的 *Al-Salaam Charitable Foundation*<sup>17</sup>。其他组织则在多个地区的城乡地点开展了项目，如 *Eid Feast Ghana*、GIYSA、*MY Akhirah Account*、*MY Hereafter Project*、*Peace Dawah Media* 和 *Save Aid Project*，详见下文及第3.6章。
 
-非正式协会和团体也开展临时外展活动，为特定目标群体募集现金、食物和衣物。其中一些是旅居海外的加纳穆斯林组成的松散网络，他们因共同事业而聚集，例如2021年由德国穆斯林发起的 Nsawam-Adoaqyiri Zongo 的 Tuo Ladan 斋月食品项目。<sup>18</sup>
+非正式协会和团体也开展临时外展活动，为特定目标群体募集现金、食物和衣物。其中一些是旅居海外的加纳穆斯林组成的松散网络，他们因共同事业而聚集，例如2021年由德国穆斯林发起的 Nsawam-Adoaqyiri Zongo 的 Tuo Ladan 斋月食品项目。¹⁸
 
 9 国际穆斯林慈善机构在加纳的开斋饭和开斋节项目将在第2.4章讨论。
 
@@ -3277,7 +3369,9 @@ Facebook 上的许多论著和阐述都将“sadaqa”（施舍）视为一种�
 
 11. https://www.facebook.com/muslimaidgh/.
 
-12. https://www.facebook.com/مؤسسة-الغذيرية-والاعمال-الخيرية-مؤسسة-الصديق-133403143679490/?__tn__=-UC*F; مؤسسة المشاريع الموسمية https://ramadan-sy? مؤسسة-المشاريع-الموسمية، https://ramadan-sy? https://ramadan-sy? https://ramadan-sy? https://ramadan-sy?; https://ramadan-sy?; 访问于2020年11月17日；Facebook 视频，2017年9月7日；Facebook 帖子，2018年7月4日；MUG 和 MAM 的2018年斋月开斋饭项目视频，https://www.launchgood.com/project/ramadan_iftar_#!，访问于2019年2月26日。
+
+
+12. https://www.facebook.com/مؤسسة-الغذيرية-والاعمال-الخيرية-مؤسسة-الصديق-133403143679490/?__tn__=-UC*F; مؤسسة المشاريع الموسمية https://ramadan-sy? مؤسسة-المشاريع-الموسمية、https://ramadan-sy? https://ramadan-sy? https://ramadan-sy? https://ramadan-sy?; https://ramadan-sy?; 访问于2020年11月17日；Facebook 视频，2017年9月7日；Facebook 帖子，2018年7月4日；MUG 和 MAM 的2018年斋月开斋饭项目视频，https://www.launchgood.com/project/ramadan_iftar_#!，访问于2019年2月26日。
 
 13. https://www.facebook.com/profile.php?id=100079780847255.
 
@@ -3291,19 +3385,6 @@ Facebook 上的许多论著和阐述都将“sadaqa”（施舍）视为一种�
 
 18. “斋月：约190名穆斯林获得德国团体的捐赠”，2021年5月12日。
 
-
-
-在线斋月捐款呼吁在 2012 年获得发展势头，当时 *伊斯兰和平与安全委员会* (*IPASEC*) 发起了支持贫困穆斯林家庭的呼吁。*IPASEC* 是一个独立的倡导机构，由国家首席伊玛目 Sheikh Osman Nuhu Sharubutu 设立并担任主席。其使命一直是促进 Zongo 社区中的和平与稳定，而 2012 年斋月筹款活动似乎是一次孤立的事件。尽管如此，该活动是首批公布所需物资、受益家庭和成本详细估算的活动之一。该项目的总预算约为 GHS 780,000（USD 400,000），其中 GHS 40,500 由国家首席伊玛目在阿克拉 New Fadama 用于住宅和社区支持，GHS 638,000 用于区域分配，GHS 89,500 用于各个地方和区域首席伊玛目。然而，我不知道该项目是否成功实现了其目标。尽管呼吁声明所有捐赠者都将收到感谢信、收据并在其姓名公布于 *IPASEC* 的主页上，但主页上找不到此类信息。19
-
-https://3news.com/ramadan-about-190-muslims-receive-donation-from-germany-based-group/, 访问于 2.1.2023。
-
-19 *IPASEC*，‘斋月前后及期间所需的慈善物资筹款’，http://www.ipasecgh.org/projects?project_id=14ff6c3131487o&pn=1，核查于 21.3.2019；主页已于 2024 年 5 月失效。
-
-20 https://www.facebook.com/GhanaAcademyOfMuslimProfessionals/photos/a.483772608350207/2389938067733642/?type=3&theater，访问于 13.5.2019。然而，*GAMP* 的教育与福利主管 Said Mohammed Sani 在 2022 年告诉我，该组织在 2019 年后停止了斋月/开斋节救济，此后未向其成员发布任何捐款呼吁。相反，*GAMP* 计划设立一个福利基金，以支持生病或去世成员的家庭。与 Said Mohammed Sani 的访谈，阿克拉，9.10.2022。
-
-21 https://www.facebook.com/Clamstart/photos/a.412950692890074/412950639556746/?type=3&theater，发布于 11.5.2019，访问于 23.10.2020。
-
-此后 Facebook 已成为穆斯林 *NGOs* 传播捐款呼吁并开展斋月和开斋节活动的[content]
 在线斋月捐款呼吁在 2012 年获得发展势头，当时 *伊斯兰和平与安全委员会* (*IPASEC*) 发起了支持贫困穆斯林家庭的呼吁。*IPASEC* 是一个独立的倡导机构，由国家首席伊玛目 Sheikh Osman Nuhu Sharubutu 设立并担任主席。其使命一直是促进 Zongo 社区中的和平与稳定，而 2012 年斋月筹款活动似乎是一次孤立的事件。尽管如此，该活动是首批公布所需物资、受益家庭和成本详细估算的活动之一。该项目的总预算约为 GHS 780,000（USD 400,000），其中 GHS 40,500 由国家首席伊玛目在阿克拉 New Fadama 用于住宅和社区支持，GHS 638,000 用于区域分配，GHS 89,500 用于各个地方和区域首席伊玛目。然而，我不知道该项目是否成功实现了其目标。尽管呼吁声明所有捐赠者都将收到感谢信、收据并在其姓名公布于 *IPASEC* 的主页上，但主页上找不到此类信息。19
 
 https://3news.com/ramadan-about-190-muslims-receive-donation-from-germany-based-group/, 访问于 2.1.2023。
@@ -3321,11 +3402,8 @@ https://3news.com/ramadan-about-190-muslims-receive-donation-from-germany-based-
 #### 图 9 开斋饭、开斋节和宰牲节捐赠，2019–2023（n = 85 个组织；R = 斋月开斋饭，EaF = 开斋节，EaA = 宰牲节）
 
 [^22]: https://www.facebook.com/Clamstart/photos/a.412982966220180/425832628268547/?type=3&theater，发布于 1.6.2019，访问于 23.10.2020。
-
 [^23]: https://www.facebook.com/GIRA4ALL/，12.5.2019，访问于 23.10.2020。
-
 [^24]: https://www.facebook.com/GIRA4ALL/，4.5.2020，访问于 15.1.2022。
-
 [^25]: https://www.facebook.com/Charity-Foundation-in-Ghana-CFG-114626476760389，2.2.2020，访问于 29.8.2022。
 
 社交媒体的使用在 2020 年斋月期间急剧增加，并在随后三年保持在高水平；见图 9。值得注意的是，即使在 2020 年之后社交媒体的使用仍然很高，这或许是 2020 年项目产生的积极影响所致，当时斋月和随后的开斋节节日正值该国被 SARS-CoV-2 病毒困扰。加纳穆斯林非政府组织广泛使用 Facebook，并动员其努力以缓解当地穆斯林社区弱势成员的苦难。*The Light Foundation* 等组织作为其 2020 年斋月活动的一部分，向大阿克拉地区的地方清真寺社区捐赠了价值超过 GHS 7,000 的 2,000 个食品包裹。26 *Emmoa Foundation* 在阿克拉开展了为期五天的食品募捐活动，于 2020 年 3 月至 4 月为超过 2,100 人提供食物。27
@@ -3337,9 +3415,7 @@ https://3news.com/ramadan-about-190-muslims-receive-donation-from-germany-based-
 其他团体发起了类似活动。例如，*ASWAJ Ashanti Region Zakat, Sadaqah and Waqf Committee* 于 2020 年 4 月在 Facebook 上发布了捐款视频呼吁。28 作为其斋月 COVID-19 活动的一部分，该组织通过社交媒体分发传单，而 ASWAJ Ashanti 地区伊玛目于 2020 年 3 月在 Facebook 上发布了布道。29 该呼吁——或 Sheikh Ismail Adam Sakafia 的联系——取得了成功，社区能够在 Facebook 上宣布 ASWAJ 地区伊玛目办公室已从美国的 Yi Domin Allah Platform 收到 360 美元的慈善捐款，用于在抗击 COVID-19 封锁中帮助有需要的人。30
 
 28 https://www.facebook.com/aswajashantii/videos/245742459798076，发布于 7.4.2020，访问于 23.10.2020。
-
 29 https://www.facebook.com/aswajashantii/photos/a.239240292771837/32712463399554156/?type=3&theater，发布于 7.4.2020，访问于 22.10.2020。
-
 30 https://www.facebook.com/aswajashantii/photos/a.2392402920771837/3326630800682373，https://www.facebook.com/aswajashantii/videos/224639101917798，均发布于 25.4.2020，访问于 22.10.2020。
 
 *Ummil Mu-Mineen Aishatu Siddeeqa Foundation* 在其 2020 年斋月慈善项目中提及了 COVID-19：
@@ -3349,11 +3425,8 @@ https://3news.com/ramadan-about-190-muslims-receive-donation-from-germany-based-
 类似的呼吁——“Feed the Needy COVID-19”——于 2020 年 4 月初由总部位于 Kumasi 的 *Markaz Aleawn Alyaqin Humanitarian Services* 在 Facebook 上发布。32 2020 年 5 月，来自埃及伊斯兰非政府组织 *Relief Development Foundation* 的捐款使其得以组织开斋饭项目。该组织还在 Kumasi 郊区 Asawasi 向盲人分发小米饮料和食物，但在发现为残疾人准备的食物不足时发出了额外的捐款呼吁。33 Seed of Hope Foundation 则于 4 月初发布了呼吁，呼吁人们与有需要的人分享多余的食物。十天后，它得以在 Kumasi 帮助 100 名贫困人士。34
 
 31 https://www.facebook.com/Clamstart/photos/a.412982966220180/661575538027587/?type=3&theater，16.4.2020，访问于 23.10.2020。
-
 32 https://www.facebook.com/markaz.aleawn.alyaqin/，4.4.2020，访问于 23.10.2020。
-
 33 Facebook 视频：开斋、1441AH 慈善家捐款；照片和评论发布于 https://www.facebook.com/markaz.aleawn.alyaqin/，6.5.2020，访问于 23.10.2020。
-
 34 https://www.facebook.com/sopghana/，1.4.2020，10.4.2020，访问于 29.8.2022。
 
 一个新颖的特征是青年主导的斋月活动。从 Accra 青年团体 Muslim Society 在 2020 年斋月期间组织的 Feed the Street 活动开始（到 2022 年扩展到 Kumasi 和 Tamale，到 2023 年加入 Kasoa），35 其他基层倡议在次年随之而来。Street Iftar Ghana，一个总部位于 Accra 的临时社交社区，于 2021 年在 Kanda、New Fadama 和 Lakeside 组织了食品捐赠，并在 2022 年在 Madina、Mamobi 和 Botwe 组织。36 Make Zongo Great Again 也在 2020 年封锁期间启动了其开斋饭项目，覆盖约 300 人。它于 4 月初启动了第二个 2021 年斋月开斋饭喂养项目，并于 2021 年 4 月中旬至 5 月中旬向 Ashaiman 的 200 名贫困人士分发了食品包裹。一年后，它启动了第三个斋月食品项目，这次针对东部地区农村村庄的有需要居民，并组织了在 Ashaiman Zongo Laka 的首次儿童开斋节盛宴。37 根据其 2023 年斋月食品呼吁，它旨在将覆盖范围翻倍，目标为农村村庄的 100 个家庭。38 Zango Youth Volunteers Association 则于 2023 年在 Kumasi 组织了其首次街头开斋饭活动。39 Muslim Aid Ghana，一家于 2022 年正式成立的位于 Kasoa 的当地非政府组织，于 2021 年开始其斋月捐赠，并在次年分发了斋月救济包裹给 Kasoa 和 Gomoa Gyama 的有需要人士。40
@@ -3361,8 +3434,9 @@ https://3news.com/ramadan-about-190-muslims-receive-donation-from-germany-based-
 Save Aid Project 在 2022 年斋月期间通过启动多个新举措扩大了其在社交媒体上的筹款活动。该团体在 2021 年除了组织活动外还访问了中部和东部地区的农村村庄
 
 35 https://www.facebook.com/profile.php?id=100063728246497。
-
 36 https://www.facebook.com/Street-Iftar-Gh-104709211742743，26.4.2021，4.5.2021，13.5.2021，12.4.2022，20.4.2022，23.4.2022，访问于 29.8.2022。
+
+
 
 37 https://www.facebook.com/MakeZongoGreatAgain，1.4.2021，18.4.2021，15.3.2021，4.4.2022，23.4.2022，1.5.2022，访问于 29.8.2022。
 
@@ -3372,11 +3446,9 @@ Save Aid Project 在 2022 年斋月期间通过启动多个新举措扩大了其
 
 40 https://www.facebook.com/muslimaidgh/。
 
-
-
 在大阿克拉地区，最引人注目的是其“斋月开斋餐车”计划。次年，该团体推出了“10gh 项目”（“您的 10 gh [加纳新塞地] 将让我们访问奥蒂和博诺地区的愿望成真”），同时还有“捐赠保温瓶”活动（“捐赠 30 塞地购买一个保温瓶，帮助村庄在斋月期间保存热水”）。2022年4月，该团体启动了斋月外展活动，作为其“领养一个家庭”项目的一部分，为农村和城市的目标群体提供开斋餐。41 一年后，其斋月及古尔邦捐赠惠及大阿克拉、东部、萨凡纳和上东部地区的贫困者和孤儿。42 Hand to Hold 基金会也早早行动，早在2022年1月就在 Facebook 上发起了其 2022 年斋月项目，成功筹集到 900 加纳塞地购买食品，并捐赠给阿克拉纽敦、阿拉乔、马迪纳和卡索阿的六名寡妇。43 伊斯兰萨达卡基金会则在四月中旬启动了其在线活动，宣布其筹集 10,000 加纳塞地并在斋月期间为 100 户贫困家庭提供一天饮食的目标。五月初，它在 Facebook 上向支持者和关注者通报了该项目的成功实施。44
 
-### 2 孤儿
+## 2 孤儿
 
 关于加纳孤儿的资料很少，关于穆斯林社区中孤儿数量的信息更是少之又少。传统上，当地穆斯林学者和伊玛目会通过提供食物和在家中及马卡拉塔（古兰经学校）提供住所来照顾至少一部分孤儿。一位学者或伊玛目能够照顾的孤儿数量取决于他从当地社区通过天课（zakat）和施舍（sadaqa）获得的资金。这些资金通常不稳定，大多数情况下，孤儿会加入学者的学生的行列，到街头乞讨。45 自二十世纪下半叶以来，民间社会组织（首先是加纳的基督教传教团体和非政府组织）的孤儿院及孤儿捐赠倡议和项目，已经取代了传统的非正式孤儿照护。穆斯林机构也随后跟进，尽管几十年来很少在公众中获得认可。有组织、正式的穆斯林孤儿项目的常见轨迹通常是：一位伊玛目建立一所私立孤儿院，并创办一个非政府组织来筹集资金以维持其运营。
 
@@ -3387,6 +3459,42 @@ Save Aid Project 在 2022 年斋月期间通过启动多个新举措扩大了其
 > 愿主赐你们平安。安萨尔的兄弟们和姐妹们，加纳安萨尔孤儿院向你们所有人致意，同时也向你们流泪求助。他们再也得不到其他人的帮助了，他们是我们未来的安萨尔子弟。他们需要帮助，如果真主愿意，你们可以帮助他们，而不是别人。愿真主回赐你们。51
 
 目前没有关于加纳有多少穆斯林孤儿院或由伊玛目或穆斯林非政府组织运营的孤儿院的数据，而我只设法收集到其中一些的初步资料。除了上述戈阿索的阿达比亚孤儿院和阿克拉的安萨里孤儿院之外，努鲁·奥斯曼尼亚人道服务与发展基金会（NUSMA）是位于阿克拉的一个孤儿院中心，由谢赫·奥斯曼·努胡·沙鲁布图创立。52 其他还有阿克拉的达鲁斯萨拉姆孤儿院，53 阿登塔的慈悯伊斯兰学校和孤儿院，54 多多瓦的泰格瓦孤儿院和学校，55 以及库马西尼亚纳欣的达鲁萨法巴·萨拉姆孤儿院。56 沙特
+
+学者和慈善家谢赫·穆罕默德·本·法赫德·鲁比安资助了位于阿散蒂地区贝奥波索的 *加纳穆斯林传教孤儿院*，并计划以一所技术和职业学校对其进行扩展。^57^ 土耳其慈善机构 Deniz Feneri 资助了位于阿索科雷宗戈的 ASWAJ Eiduase Asokore 的 *苏丹·迪拉鲁·阿斯兰孤儿院*。^58^
+
+当地清真寺社区开展着各种孤儿支持项目。阿克拉尼玛的 Majid Ar-Rasul 就是一个例子。其现有的支持计划包括每年为孤儿分发新衣服，以及在穆斯林节日提供开斋饭和宰牲。最近，清真寺社区启动了一个雄心勃勃的项目，计划将年度支持转变为每月和永久性的支持计划；其想法是在成员中为该项目募集 *萨达卡* 捐赠，并为该计划建立一个基金会。此外，清真寺社区还设想该基金会也能照顾有需要者和寡妇。^59^
+
+*艾莎·西迪卡伊斯兰女子学院*（ASIGA）是阿克拉一所包含孤儿院的学校综合体，已从英国慈善机构 Caravan of Mercy 和其他国际赞助者处获得捐赠，以照顾 90 名孤儿和贫困儿童。^60^ 斯韦德鲁的 *首要需求孤儿院机构* 自 2019 年以来一直是美国慈善机构 Forgotten People Organisation 孤儿项目的资助对象。^61^ 同样，Al-Jihad Muslimah Foundation 也支持了阿散蒂地区博阿迪的 *艾哈迈德·乌瓦伊西孤儿院* 和老塔福的 *安努尔孤儿院* 的学生。^62^ *非洲知识分子穆斯林网络（NIMA）关怀* 是 2014 年成立的阿克拉非政府组织，自 2019 年起与国家首席伊玛目合作运营一家孤儿院。此外，它还为 143 名孤儿提供每月奖学金项目。^63^
+
+多个非政府组织参与资助新建孤儿院的建设。最近在阿散蒂地区埃朱拉塞凯兴建孤儿院的倡议由 Peace Charity Foundation 和 Al Jihad Muslimah Foundation 于 2020 年 9 月发起。^64^ 一个月后，Al-Mannan Charity Foundation 宣布了在库马西兴建孤儿院的计划。^65^ 第三项倡议是谢赫·尤西夫·萨义德·亚赫亚于 2021 年 1 月在阿散蒂地区博阿曼兴建孤儿院教育中心的计划，该计划依靠内部和外部资金，并通过 Facebook 定期更新项目进展。建成后，该综合体将包括一栋教学楼、男女分开的宿舍楼、一栋行政楼和一座清真寺。值得注意的是，该项目的 Facebook 账号包含用阿拉伯语和英语呼吁捐赠的视频片段。^66^
+
+一些塔马利穆斯林向 Salam Ul-Muslimiyn Ghana 的塔马利孤儿院项目捐赠了土地，尽管该非政府组织未提供项目进展的任何更新；^67^ 由一些土耳其非政府组织支持的 Tarbiyya Foundation 计划在阿克拉兴建一所孤儿院。^68^ 自 2019 年起在加纳活跃的美国慈善机构 Islamic Ummah Relief（IUR）^69^ 于 2020 年筹集了近 43,000 美元以完成位于中部地区戈莫阿东区波茨因的 Al-Amaam 孤儿院。^70^ Techiman Muslim Youth Association（TEMYAS）于 2020 年 1 月启动了其孤儿院项目；该组织已在图博多姆购置了三块土地，并获得了当地捐助者的部分资金以启动项目。^71^
+
+运营和维持一所孤儿院费用昂贵。因此不足为奇的是，并没有建立很多穆斯林孤儿院，而且几乎没有获得政府支持。一些照顾孤儿的伊玛目利用社交媒体呼吁援助，例如阿散蒂地区阿戈戈中央清真寺的伊玛目，他通过其 Facebook 群组和当地非政府组织 *帮助有需要者之友* 发布呼吁为 36 名孤儿和有需要儿童提供实物和现金援助的帖子。^72^ 该非政府组织将自助与呼吁外部、地方、国家和国际捐赠相结合；其过往活动之一是，2019 年该组织的志愿者种植了 9 英亩玉米以实现组织的目标。^73^
+
+穆斯林非政府组织的参与是一种并行现象。其中最古老的倡议之一是 *加纳伊斯兰教育与改革协会*（GSIER）的孤儿项目。该项目始于 1996 年的阿克拉马迪纳，其孤儿项目成为 GSIER 妇女部的责任。孤儿项目的核心思想是照顾孤儿，在经济和道德上帮助他们，并给予他们学术和宗教教育。^74^ 此外，GSIER 在阿克拉的各个小学、初中和高中赞助了超过 200 名孤儿，并在大学赞助了 10 名。自 2017 年起，它已组织了年度孤儿日。^75^ 这似乎激发了多个穆斯林组织组织类似活动。例如，*加纳伊斯兰乌玛* 于 2018 年支持了世界孤儿日，^76^ 而 *宗戈灵感团队*（ZIT）则于 2018 年世界孤儿日在阿克拉举办了大型孤儿聚会。^77^ 2019 年，ZIT 与 Rayuwa Foundation 合作庆祝世界孤儿日。^78^ *光明基金会* 通过其组织主页上的电子申请运行在线孤儿赞助项目。^79^
+
+加纳-英国 *正义耶提姆基金会*（JYF，成立于 2018 年）在埃朱拉运营孤儿赞助计划，为 400 名孤儿提供学费、衣物和生活费用。^80^ *萨拉加伊斯兰研究基金会*（SIRF，成立于 2014 年）在萨拉加运营每月孤儿支持项目。^81^
+
+- 57. “沙特慈善家为穆斯林社区修建孤儿院”， 15.4.2016, https://www.modernghana.com/news/686175/saudi-philanthropist-builds-orphanage-for-muslim.html, 访问 15.1.2022.
+
+- 58. “ASWAJ Eiduase Asokore Zongo 加纳孤儿院中心落成”， 4.7.2023, https://www.facebook.com/PeaceDawahMedia/, 访问 21.8.2023.
+
+- 59. 与尼玛、阿克拉 Majid Ar-Rasul 的伊玛目 Khidir Issah 的访谈，19.10.2022.
+
+- 60. https://www.totalgiving.co.uk/mypage/asiga, 访问 15.1.2022. ASIGA 曾是 Caravan of Mercy 2018 年筹款活动的一部分，但现在不再是该组织捐赠计划的一部分。
+
+- 61. 参见 FPO 2021 年西非斋月食品分发，https://www.facebook.com/aishahassan64/, 17.4.2021, 访问 15.1.2022.
+
+- 62. https://www.facebook.com/pmuajhi/, 7.8.2021, 31.10.2021, 访问 15.1.2022.
+
+- 63. https://nimacare.org/who-we-are/, 访问 19.11.2021.
+
+- 64. Facebook 上的海报，17.9.2020, https://www.facebook.com/109402179097845/photos/a.114504063997656/114504037064325/?type=3&theater, 访问 23.10.2020.
+
+- 65. “基金会寻求修建孤儿院，同时在库马西为 200 多名孤儿提供食物”， 12.10.2020, https://ghanaonlinenews.com/foundation-seeks-to-build-orphanage-as-it-feeds-over-200-orphans-in-kumasi/, 访问 29.8.2022.
+
+- 66. 孤儿院教育与道德培训中心，Facebook 账号于 13.1.2021 建立，拥有 66 名关注者，https://www.facebook.com/Orphanage-Centre-For-Education-And-Moral-Training-102223418521787/, 访问 9.9.2021.
 
 41 https://www.facebook.com/SaveAidProject，2021年5月4日（斋月开斋餐车），2022年1月16日（2022年斋月项目），2022年3月24日（捐赠保温瓶），2022年4月7日、2022年4月9日、2022年4月27日，访问于2022年8月29日。
 
@@ -3422,49 +3530,21 @@ Save Aid Project 在 2022 年斋月期间通过启动多个新举措扩大了其
 
 
 
-学者和慈善家谢赫·穆罕默德·本·法赫德·鲁比安资助了位于阿散蒂地区贝奥波索的 *加纳穆斯林传教孤儿院*，并计划以一所技术和职业学校对其进行扩展。^57^ 土耳其慈善机构 Deniz Feneri 资助了位于阿索科雷宗戈的 ASWAJ Eiduase Asokore 的 *苏丹·迪拉鲁·阿斯兰孤儿院*。^58^
-
-当地清真寺社区开展着各种孤儿支持项目。阿克拉尼玛的 Majid Ar-Rasul 就是一个例子。其现有的支持计划包括每年为孤儿分发新衣服，以及在穆斯林节日提供开斋饭和宰牲。最近，清真寺社区启动了一个雄心勃勃的项目，计划将年度支持转变为每月和永久性的支持计划；其想法是在成员中为该项目募集 *萨达卡* 捐赠，并为该计划建立一个基金会。此外，清真寺社区还设想该基金会也能照顾有需要者和寡妇。^59^
-
-*艾莎·西迪卡伊斯兰女子学院*（ASIGA）是阿克拉一所包含孤儿院的学校综合体，已从英国慈善机构 Caravan of Mercy 和其他国际赞助者处获得捐赠，以照顾 90 名孤儿和贫困儿童。^60^ 斯韦德鲁的 *首要需求孤儿院机构* 自 2019 年以来一直是美国慈善机构 Forgotten People Organisation 孤儿项目的资助对象。^61^ 同样，Al-Jihad Muslimah Foundation 也支持了阿散蒂地区博阿迪的 *艾哈迈德·乌瓦伊西孤儿院* 和老塔福的 *安努尔孤儿院* 的学生。^62^ *非洲知识分子穆斯林网络（NIMA）关怀* 是 2014 年成立的阿克拉非政府组织，自 2019 年起与国家首席伊玛目合作运营一家孤儿院。此外，它还为 143 名孤儿提供每月奖学金项目。^63^
-
-多个非政府组织参与资助新建孤儿院的建设。最近在阿散蒂地区埃朱拉塞凯兴建孤儿院的倡议由 Peace Charity Foundation 和 Al Jihad Muslimah Foundation 于 2020 年 9 月发起。^64^ 一个月后，Al-Mannan Charity Foundation 宣布了在库马西兴建孤儿院的计划。^65^ 第三项倡议是谢赫·尤西夫·萨义德·亚赫亚于 2021 年 1 月在阿散蒂地区博阿曼兴建孤儿院教育中心的计划，该计划依靠内部和外部资金，并通过 Facebook 定期更新项目进展。建成后，该综合体将包括一栋教学楼、男女分开的宿舍楼、一栋行政楼和一座清真寺。值得注意的是，该项目的 Facebook 账号包含用阿拉伯语和英语呼吁捐赠的视频片段。^66^
-
-一些塔马利穆斯林向 Salam Ul-Muslimiyn Ghana 的塔马利孤儿院项目捐赠了土地，尽管该非政府组织未提供项目进展的任何更新；^67^ 由一些土耳其非政府组织支持的 Tarbiyya Foundation 计划在阿克拉兴建一所孤儿院。^68^ 自 2019 年起在加纳活跃的美国慈善机构 Islamic Ummah Relief（IUR）^69^ 于 2020 年筹集了近 43,000 美元以完成位于中部地区戈莫阿东区波茨因的 Al-Amaam 孤儿院。^70^ Techiman Muslim Youth Association（TEMYAS）于 2020 年 1 月启动了其孤儿院项目；该组织已在图博多姆购置了三块土地，并获得了当地捐助者的部分资金以启动项目。^71^
-
-运营和维持一所孤儿院费用昂贵。因此不足为奇的是，并没有建立很多穆斯林孤儿院，而且几乎没有获得政府支持。一些照顾孤儿的伊玛目利用社交媒体呼吁援助，例如阿散蒂地区阿戈戈中央清真寺的伊玛目，他通过其 Facebook 群组和当地非政府组织 *帮助有需要者之友* 发布呼吁为 36 名孤儿和有需要儿童提供实物和现金援助的帖子。^72^ 该非政府组织将自助与呼吁外部、地方、国家和国际捐赠相结合；其过往活动之一是，2019 年该组织的志愿者种植了 9 英亩玉米以实现组织的目标。^73^
-
-穆斯林非政府组织的参与是一种并行现象。其中最古老的倡议之一是 *加纳伊斯兰教育与改革协会*（GSIER）的孤儿项目。该项目始于 1996 年的阿克拉马迪纳，其孤儿项目成为 GSIER 妇女部的责任。孤儿项目的核心思想是照顾孤儿，在经济和道德上帮助他们，并给予他们学术和宗教教育。^74^ 此外，GSIER 在阿克拉的各个小学、初中和高中赞助了超过 200 名孤儿，并在大学赞助了 10 名。自 2017 年起，它已组织了年度孤儿日。^75^ 这似乎激发了多个穆斯林组织组织类似活动。例如，*加纳伊斯兰乌玛* 于 2018 年支持了世界孤儿日，^76^ 而 *宗戈灵感团队*（ZIT）则于 2018 年世界孤儿日在阿克拉举办了大型孤儿聚会。^77^ 2019 年，ZIT 与 Rayuwa Foundation 合作庆祝世界孤儿日。^78^ *光明基金会* 通过其组织主页上的电子申请运行在线孤儿赞助项目。^79^
-
-加纳-英国 *正义耶提姆基金会*（JYF，成立于 2018 年）在埃朱拉运营孤儿赞助计划，为 400 名孤儿提供学费、衣物和生活费用。^80^ *萨拉加伊斯兰研究基金会*（SIRF，成立于 2014 年）在萨拉加运营每月孤儿支持项目。^81^
-
-- 57. “沙特慈善家为穆斯林社区修建孤儿院”， 15.4.2016, https://www.modernghana.com/news/686175/saudi-philanthropist-builds-orphanage-for-muslim.html, 访问 15.1.2022.
-- 58. “ASWAJ Eiduase Asokore Zongo 加纳孤儿院中心落成”， 4.7.2023, https://www.facebook.com/PeaceDawahMedia/, 访问 21.8.2023.
-- 59. 与尼玛、阿克拉 Majid Ar-Rasul 的伊玛目 Khidir Issah 的访谈，19.10.2022.
-- 60. https://www.totalgiving.co.uk/mypage/asiga, 访问 15.1.2022. ASIGA 曾是 Caravan of Mercy 2018 年筹款活动的一部分，但现在不再是该组织捐赠计划的一部分。
-- 61. 参见 FPO 2021 年西非斋月食品分发，https://www.facebook.com/aishahassan64/, 17.4.2021, 访问 15.1.2022.
-- 62. https://www.facebook.com/pmuajhi/, 7.8.2021, 31.10.2021, 访问 15.1.2022.
-- 63. https://nimacare.org/who-we-are/, 访问 19.11.2021.
-- 64. Facebook 上的海报，17.9.2020, https://www.facebook.com/109402179097845/photos/a.114504063997656/114504037064325/?type=3&theater, 访问 23.10.2020.
-- 65. “基金会寻求修建孤儿院，同时在库马西为 200 多名孤儿提供食物”， 12.10.2020, https://ghanaonlinenews.com/foundation-seeks-to-build-orphanage-as-it-feeds-over-200-orphans-in-kumasi/, 访问 29.8.2022.
-- 66. 孤儿院教育与道德培训中心，Facebook 账号于 13.1.2021 建立，拥有 66 名关注者，https://www.facebook.com/Orphanage-Centre-For-Education-And-Moral-Training-102223418521787/, 访问 9.9.2021.
-- 67. “塔马利穆斯林向 Salaam Ul-Muslimiyn, Ghana 捐赠土地”， http://hungerclaimsourchildrenfirst.zohosites.com/tamale-orphanage-project.html, 访问 15.1.2022；该主页于 2024 年 5 月已失效。
-- 68. https://www.facebook.com/TARBIYYAGH/, 13.10.2020, 访问 15.1.2022.
-- 69. 参见 IUR 2019 年度报告，可在 https://islamicummahrelief.org/wp-content/uploads/2020/07/IUR-2019-Report.pdf 获取，访问 15.1.2022.
-- 70. “帮助完成加纳的孤儿院（萨达卡·贾里亚）”， https://www.launchgood.com/campaign/help_complete_the_orphanage_in_ghana_sadaqah_jariyah#!/, 1.1.2021, 访问 15.1.2022.
-- 71. “为提奇曼孤儿院筹款”， 15.12.2019, https://www.modernghana.com/news/973802/fund-raising-in-support-of-orphanage-project-in.html, 访问 15.1.2022.
-- 72. https://www.facebook.com/Friends-for-the-needy-2323915811185564/, 28.5.2019, 15.6.2019, 12.5.2021, 访问 9.9.2021.
-- 73. https://www.facebook.com/pg/Friends-for-the-needy-2323915811185564/posts/?ref=page_internal, 14.5.2019, 访问 9.9.2021.
-- 74. https://gsier.org.gh/sponsorship-programmes/, 访问 22.11.2020.
-- 75. “2017 年孤儿日”， https://gsier.org.gh/orphan-day/, 访问 22.11.2020.
-- 76. https://www.facebook.com/islamicummahofghana/, 视频 20.4.2018 和帖子 21.4.2018, 访问 10.9.2021.
-- 77. 参见 2019 年活动视频，https://www.facebook.com/AsmaAyub/videos/10216408967830277, 访问 10.9.2021.
-- 78. https://www.facebook.com/ZongoRising, 帖子 4.5.2019, 访问 10.9.2021. COVID-19 大流行似乎取消了 2020 年和 2021 年的庆祝活动。
-- 79. https://tlfghana.org/orphans-forms-page/, 访问 16.1.2022.
-- 80. https://www.facebook.com/JusticeYateemFoundation/, 17.4.2020, 访问 15.1.2022.
-- 81. https://www.facebook.com/Salaga-Islamic-Research-Foundation-SIRF-101205651665810/, 25.2.2021, 6.3.2021, 5.5.2021, 访问 15.1.2022.
-
-
+- 67. “塔马利穆斯林向 Salaam Ul-Muslimiyn, Ghana 捐赠土地”， `http://hungerclaimsourchildrenfirst.zohosites.com/tamale-orphanage-project.html`, 访问 15.1.2022；该主页于 2024 年 5 月已失效。
+- 68. `https://www.facebook.com/TARBIYYAGH/`, 13.10.2020, 访问 15.1.2022.
+- 69. 参见 IUR 2019 年度报告，可在 `https://islamicummahrelief.org/wp-content/uploads/2020/07/IUR-2019-Report.pdf` 获取，访问 15.1.2022.
+- 70. “帮助完成加纳的孤儿院（萨达卡·贾里亚）”， `https://www.launchgood.com/campaign/help_complete_the_orphanage_in_ghana_sadaqah_jariyah#!/`, 1.1.2021, 访问 15.1.2022.
+- 71. “为提奇曼孤儿院筹款”， 15.12.2019, `https://www.modernghana.com/news/973802/fund-raising-in-support-of-orphanage-project-in.html`, 访问 15.1.2022.
+- 72. `https://www.facebook.com/Friends-for-the-needy-2323915811185564/`, 28.5.2019, 15.6.2019, 12.5.2021, 访问 9.9.2021.
+- 73. `https://www.facebook.com/pg/Friends-for-the-needy-2323915811185564/posts/?ref=page_internal`, 14.5.2019, 访问 9.9.2021.
+- 74. `https://gsier.org.gh/sponsorship-programmes/`, 访问 22.11.2020.
+- 75. “2017 年孤儿日”， `https://gsier.org.gh/orphan-day/`, 访问 22.11.2020.
+- 76. `https://www.facebook.com/islamicummahofghana/`, 视频 20.4.2018 和帖子 21.4.2018, 访问 10.9.2021.
+- 77. 参见 2019 年活动视频，`https://www.facebook.com/AsmaAyub/videos/10216408967830277`, 访问 10.9.2021.
+- 78. `https://www.facebook.com/ZongoRising`, 帖子 4.5.2019, 访问 10.9.2021. COVID-19 大流行似乎取消了 2020 年和 2021 年的庆祝活动。
+- 79. `https://tlfghana.org/orphans-forms-page/`, 访问 16.1.2022.
+- 80. `https://www.facebook.com/JusticeYateemFoundation/`, 17.4.2020, 访问 15.1.2022.
+- 81. `https://www.facebook.com/Salaga-Islamic-Research-Foundation-SIRF-101205651665810/`, 25.2.2021, 6.3.2021, 5.5.2021, 访问 15.1.2022.
 
 总部位于阿克拉的 *Race 4 Aid* 在库马西和塔马利每月为 202 名孤儿提供津贴。82 相应地，*Care Bridge Foundation*（成立于 2020 年）支持阿克拉的塔格瓦孤儿院和学校以及塔马利外面的 Kpawumo 儿童之家，并加入了 IUR 为在波茨因兴建 Al-Amaam 孤儿院而发起的筹款活动。83 此外，*Tarbiyya Foundation* 在阿克拉、库马西、耶吉、普朗、阿特布布、埃朱拉和温奇赞助孤儿。84
 
@@ -3474,83 +3554,70 @@ Save Aid Project 在 2022 年斋月期间通过启动多个新举措扩大了其
 
 这显然是夸大其词，因为许多谢赫和伊玛目在他们的学校照顾孤儿或经营孤儿院。尽管如此，MYHP 希望“[...] 成为孤儿，尤其是加纳穆斯林孤儿的代言人”，并决定在一年内开展四个主要项目，除此之外还开展间歇性的“小型项目”。此外，孤儿项目集中在北部地区的 Nyohini 孤儿院，MYHP 还开展了首个志愿者培训项目，并在 2020 年 7 月宰牲节前启动了该项目的首个支持活动。87
 
-82 https://www.facebook.com/race4aid/.
-83 https://www.facebook.com/careBridgeF/?ref=page_internal, 16.8.2020, 20.10.2020, 21.10.2020, 5.1.2021, accessed 15.1.2022.
-84 https://www.facebook.com/TARBIYYAGH, 21.8.2022, accessed 29.8.2022.
-85 https://www.facebook.com/tlfghana/, donation to Teshie Children's Home (4.8.2020) and Tamale Children's Home (2.6.2021); Muslim Health Workers' Association of Ghana, “Video of orphanage donation,” 11.6.2018, https://www.facebook.com/341974059650439/videos/vb.341974059650439/425518731295971/?type=2&theater, accessed 21.10.2020.
-86 https://www.facebook.com/helpintherightcourse/, 2.7.2020, accessed 16.1.2022.
-87 https://www.facebook.com/helpintherightcourse/, 15.7.2020. The MYHP heralded the campaign as a success and stated that it donated a wide range of goods to the orphanage, including a variety of health, hygiene and food products, “Eid Adha Celebration and Donation at Nyohini Children's home,” https://www.facebook.com/helpintherightcourse/, 5.8.2020. A few months later, it organised a training course for volunteers, see https://www.facebook.com/helpintherightcourse/, 11.10.2020.
+82 `https://www.facebook.com/race4aid/`.
+83 `https://www.facebook.com/careBridgeF/?ref=page_internal`, 16.8.2020, 20.10.2020, 21.10.2020, 5.1.2021, accessed 15.1.2022.
+84 `https://www.facebook.com/TARBIYYAGH`, 21.8.2022, accessed 29.8.2022.
+85 `https://www.facebook.com/tlfghana/`, donation to Teshie Children's Home (4.8.2020) and Tamale Children's Home (2.6.2021); Muslim Health Workers' Association of Ghana, “Video of orphanage donation,” 11.6.2018, `https://www.facebook.com/341974059650439/videos/vb.341974059650439/425518731295971/?type=2&theater`, accessed 21.10.2020.
+86 `https://www.facebook.com/helpintherightcourse/`, 2.7.2020, accessed 16.1.2022.
+87 `https://www.facebook.com/helpintherightcourse/`, 15.7.2020. The MYHP heralded the campaign as a success and stated that it donated a wide range of goods to the orphanage, including a variety of health, hygiene and food products, “Eid Adha Celebration and Donation at Nyohini Children's home,” `https://www.facebook.com/helpintherightcourse/`, 5.8.2020. A few months later, it organised a training course for volunteers, see `https://www.facebook.com/helpintherightcourse/`, 11.10.2020.
 
 其他穆斯林非政府组织也开展类似的项目和计划。加纳穆斯林专业人士学院（GAMP）于 2008 年决定启动孤儿支持项目 OSP。OSP 每年根据项目的财务能力确定受益人，并通过其家庭监护人向他们提供帮助。GAMP 为约 20 名孤儿支付学费、提供生活费并购买学习和教学材料。88 然而，OSP 似乎在近年变得不活跃。取而代之的是，GAMP 每年向各个孤儿院捐赠。89 总部位于库马西的阿欣桑 Kafilul Yateem 社会服务基金会、老塔福的 Markaz Aleawn Alyaqin 人道服务以及 Ummah Foundation 通常以临时方式开展当地孤儿支持项目，因为它们依赖外部资金。90 另一方面，FOMWAG 的 Sekondi-Takoradi 分会以及总部位于塔科拉迪的 Attaqwa Foundation 已向 Daboase 孤儿院捐赠。91
 
+88 “About,” `https://www.facebook.com/GhanaAcademyOfMuslimProfessionals/`, accessed 16.1.2022. Apart from orphans’ programme of GAMP, the organisation also provides annual donations to Muslim inmates in two prisons. Interview with Said Mohammed Sani, Accra, 8.10.2022.
+89 See, for example, “GAMP gifts food items, toiletries to orphanage,” 10.5.2022, `https://www.ghanaian...`, accessed 2.1.2023.
+90 The Kumasi-based Ummah Foundation receives donation from a Muslim FBO in Germany, the German Charity and Orphan Foundation (unidentified!), to support orphans in the Old Tafo Zongo, `https://www.facebook.com/UMMAH-Foundation-122337079156638`, 23.8.2019, 1.5.2020, 13.1.2021, accessed 16.1.2022.
+91 `https://www.facebook.com/Fomwag-Ashanti-112442813643597/`, 11.7.2021, accessed 16.1.2022; Attaqwa Foundation Eid ul-Adha Project 2023, 5.7.2023, `https://www.facebook.com/profile.php?id=100079780847255`, accessed 21.8.2023.
+
 多个青年组织，其中包括加纳伊斯兰青年萨达卡协会和加纳穆斯林学生协会在 KNUST 的分会，以及由穆斯林名人运营的非政府组织，如 Problems Shared Problems Solved Foundation 和 Essa Ajeman Charity Foundation，通过其社交媒体网络为帮助孤儿筹集捐款。92 例如，Al-Yataama Care Foundation 通过其 WhatsApp 群组开展募捐活动，其中包括其“学校书包捐赠”计划（2022 年 9 月/10 月初共筹集 GHS 3580 并购买 100 个书包）、其“为孤儿捐赠自行车”项目以及其“OrphansBack2School”项目（两个项目的总估计费用：GHS 16,830）。93 总部位于塔马利的 MY Akhirah Account 自 2017 年以来在塔马利、宾比拉、库马西和阿克拉组织了斋月外展项目；2022 年，该团体在宰牲节期间的捐赠中启动了“Eid for orphans”项目。94
 
-88 “About,” https://www.facebook.com/GhanaAcademyOfMuslimProfessionals/, accessed 16.1.2022. Apart from orphans’ programme of GAMP, the organisation also provides annual donations to Muslim inmates in two prisons. Interview with Said Mohammed Sani, Accra, 8.10.2022.
-89 See, for example, “GAMP gifts food items, toiletries to orphanage,” 10.5.2022, https://www.ghanaian... , accessed 2.1.2023.
-90 The Kumasi-based Ummah Foundation receives donation from a Muslim FBO in Germany, the German Charity and Orphan Foundation (unidentified!), to support orphans in the Old Tafo Zongo, https://www.facebook.com/UMMAH-Foundation-122337079156638, 23.8.2019, 1.5.2020, 13.1.2021, accessed 16.1.2022.
-91 https://www.facebook.com/Fomwag-Ashanti-112442813643597/, 11.7.2021, accessed 16.1.2022; Attaqwa Foundation Eid ul-Adha Project 2023, 5.7.2023, https://www.facebook.com/profile.php?id=100079780847255, accessed 21.8.2023.
-92 https://www.facebook.com/GIYS-A-Ghana-Islamic-Youth-Sadaqqa-Association-109699093960381/, 6.11.2020; https://www.facebook.com/gmsaknustofficial/, 24.2.2021; https://www.facebook.com/B.B.MALTITI/, 16.7.2021; https://www.facebook.com/Essa-Ajeman-Charity-Foundation-108497807812470/, 17.12.2020, 29.5.2021, all accessed 16.1.2022.
-93 https://www.facebook.com/profile.php?id=10008021994513, 16.8.2022, 8.10.2022, 18.12.2022, accessed 21.8.2023.
-94 https://www.facebook.com/myAkhirah, 6.6.2017, 13.5.2019, 1.5.2020, 16.5.2021, 8.7.2022, 11.4.2023, 4.6.2023, accessed 21.8.2023.
+92 `https://www.facebook.com/GIYS-A-Ghana-Islamic-Youth-Sadaqqa-Association-109699093960381/`, 6.11.2020; `https://www.facebook.com/gmsaknustofficial/`, 24.2.2021; `https://www.facebook.com/B.B.MALTITI/`, 16.7.2021; `https://www.facebook.com/Essa-Ajeman-Charity-Foundation-108497807812470/`, 17.12.2020, 29.5.2021, all accessed 16.1.2022.
+93 `https://www.facebook.com/profile.php?id=10008021994513`, 16.8.2022, 8.10.2022, 18.12.2022, accessed 21.8.2023.
+94 `https://www.facebook.com/myAkhirah`, 6.6.2017, 13.5.2019, 1.5.2020, 16.5.2021, 8.7.2022, 11.4.2023, 4.6.2023, accessed 21.8.2023.
 
 另一种常见做法是在开斋节期间向孤儿分发食物和衣服。一些倡议已存在数十年，包括 Haji Abubakar Yakubu Batalima 的孤儿和残疾人援助协会（SAFOAD），自 1990 年代末以来在加纳报纸上有所记载。95 其他则是最近的，例如 Immaa-Allah Foundation、96 Al-Qalam Institute、97 和 Baye Do Everything、98 在阿克拉多个地点组织的孤儿 Sallah 派对，Bunyan Foundation 对 Chereponi 和塔马利孤儿的支持，99 Al-Aziz Humanitarian Projects、100 Al-Bushra Foundation、101 和 Al-Mannan Charity Foundation 在库马西组织的孤儿开斋饭；102 或 Justice Yateem Foundation 在埃朱拉组织的活动。103
 
-95 "Society fetes needy persons," The Mirror, 6.6.1998, "Reception held for orphans, physically challenged," Daily Graphic, 8.10.2005; "NGO provides water for 3 communities," Daily Graphic, 1.5.2006; "NGO donates to physically challenged," Daily Graphic, 22.9.2014, "SAFOAD donates to Muslims," 26.6.2017, https://www.graphic.com.gh/news/general-news/safoad-donates-to-muslims.html; "SAFOAD support vulnerable groups," 12.4.2022, https://www.graphic.com.gh/news/general-news/safoad-supports-vulnerable-groups.html, all accessed 12.11.2023.
-96 https://www.facebook.com/MUASSAIMA/, 21.9.2018, 17.5.2019, 27.5.2020, 20.5.2021, accessed 15.1.2022.
-97 https://www.facebook.com/alqalaminstitute, 2.5.2022, accessed 29.5.2022.
-98 https://www.facebook.com/Bayedo everything, 25.4.2023, accessed 18.8.2023.
-99 https://www.facebook.com/bunyanfoundation, 25.4.2022, accessed 29.8.2022.
-100 https://www.facebook.com/alazizhumanitarianprojects, 6.4.2022, accessed 29.8.2022.
-101 https://www.facebook.com/Al-Bushra-Foundation-109767600843666, 26.4.2022, accessed 29.8.2022.
-102 "Al-Mannan Charity Foundation fetes 80 orphans to mark Eid-ul-Fitr," 27.5.2022, https://gna.org.gh/2020/05/al-mannan-charity-foundation-fetes-80-orphans-to-mark-eid-ul-fitr/, accessed 29.8.2022.
-103 https://www.facebook.com/JusticeYateemFoundation, accessed 18.8.2023.
-104 https://www.facebook.com/Kpibsi-Mini-Gbala-Foundation-106756760814410/, accessed 18.8.2023.
+95 "Society fetes needy persons," The Mirror, 6.6.1998, "Reception held for orphans, physically challenged," Daily Graphic, 8.10.2005; "NGO provides water for 3 communities," Daily Graphic, 1.5.2006; "NGO donates to physically challenged," Daily Graphic, 22.9.2014, "SAFOAD donates to Muslims," 26.6.2017, `https://www.graphic.com.gh/news/general-news/safoad-donates-to-muslims.html`; "SAFOAD support vulnerable groups," 12.4.2022, `https://www.graphic.com.gh/news/general-news/safoad-supports-vulnerable-groups.html`, all accessed 12.11.2023.
+96 `https://www.facebook.com/MUASSAIMA/`, 21.9.2018, 17.5.2019, 27.5.2020, 20.5.2021, accessed 15.1.2022.
+97 `https://www.facebook.com/alqalaminstitute`, 2.5.2022, accessed 29.5.2022.
+98 `https://www.facebook.com/Bayedo everything`, 25.4.2023, accessed 18.8.2023.
+99 `https://www.facebook.com/bunyanfoundation`, 25.4.2022, accessed 29.8.2022.
+100 `https://www.facebook.com/alazizhumanitarianprojects`, 6.4.2022, accessed 29.8.2022.
+101 `https://www.facebook.com/Al-Bushra-Foundation-109767600843666`, 26.4.2022, accessed 29.8.2022.
+102 "Al-Mannan Charity Foundation fetes 80 orphans to mark Eid-ul-Fitr," 27.5.2022, `https://gna.org.gh/2020/05/al-mannan-charity-foundation-fetes-80-orphans-to-mark-eid-ul-fitr/`, accessed 29.8.2022.
+103 `https://www.facebook.com/JusticeYateemFoundation`, accessed 18.8.2023.
+104 `https://www.facebook.com/Kpibsi-Mini-Gbala-Foundation-106756760814410/`, accessed 18.8.2023.
 
 同样，总部位于塔马利的 Kpibsi Mini Gbala Foundation（成立于 2017 年）自 2018 年以来已在该国北部多个地点支持孤儿，包括塔马利、萨韦卢古、库姆布ungu、宾比拉、瓦勒瓦勒、博尔加塔加和延迪。104 近年来，这些活动已发展
 
-
 大规模庆祝活动随之而来，正如2019年宰牲节时，*加纳穆斯林使团*的阿克拉分会招待了一千多名孤儿、寡妇和鳏夫，这是其一年前启动的项目。¹⁰⁵ 这种做法同样植根于当地传统和非正式的援助形式，但在社交媒体时代已成为一种制度化、正式且公开的活动，许多当地穆斯林非政府组织设法为这些项目筹集到内部及外部/国外的年度资金。其中一些组织将其宰牲节捐款专门用于孤儿。
 
-自2012年起，GAMP一直参与监督斋月期间（食品包）和宰牲节期间（按仪式宰杀的牛肉）向孤儿和贫困家庭分发救济物品的工作。土耳其的IHH和德国的WEFA主要支持这项年度救济服务。GAMP的宰牲节孤儿救济目标群体是“被遗忘的孤儿”，即那些由伊玛目和穆斯林首领确认未从孤儿院获得任何照顾，并在食品分发日前已由GAMP登记的人。¹⁰⁶ *孤儿抚养社会服务基金会*（可能）从阿拉伯/沙特慈善家那里获得捐款，用于其宰牲节孤儿捐赠。¹⁰⁷
 
-*拯救援助项目* 则属于社交媒体时代发起的一类非政府组织，通过Facebook向其成员募捐。这家总部位于阿克拉的穆斯林非政府组织于2018年开始组织与孤儿共度的特别宰牲节聚会，第一次于2020年在“阿克拉的一个孤儿院”举行，第二次于2021年在卡索阿的伊斯兰慈善中心——儿童之家及古兰经背诵学校举行。¹⁰⁸
 
-*加纳伊斯兰乌玛*（IUG）与*全球穆斯林女性困境组织*（GMD）合作组织了类似活动。从2017年开始，IUG和GMD在阿克拉为孤儿和寡妇组织了首次开斋饭聚会。¹⁰⁹ 2018年4月，IUG发布了一项筹款呼吁，为超过1,000名孤儿和寡妇提供开斋饭；两个月后，IUG和GMD在阿克拉为孤儿和寡妇供餐，并为中部地区阿武图阿克罗蓬一所孤儿院的100名孤儿提供食物和衣物。¹¹⁰ 同年晚些时候，总部位于阿克拉的*未来女性伊斯兰中心*向慈悲伊斯兰学校孤儿院捐赠了食品、洗漱用品和其他物资。¹¹¹ 总部位于阿克拉的*拉尤瓦基金会*则于2018年和2019年组织了世界孤儿日；后者在阿克拉坎达举行，聚集了阿克拉的500名孤儿、街头儿童和弱势群体。¹¹² 为减轻COVID-19大流行的负面影响，*拉尤瓦基金会*成员于2020年11月在阿克拉达库曼的蒙选儿童中心孤儿院组织了一场外展活动，捐赠衣物、玩具和文具。¹¹³
+自2012年起，GAMP一直参与监督斋月期间（食品包）和宰牲节期间（按仪式宰杀的牛肉）向孤儿和贫困家庭分发救济物品的工作。土耳其的IHH和德国的WEFA主要支持这项年度救济服务。GAMP的宰牲节孤儿救济目标群体是“被遗忘的孤儿”，即那些由伊玛目和穆斯林首领确认未从孤儿院获得任何照顾，并在食品分发日前已由GAMP登记的人。¹⁰⁶ `孤儿抚养社会服务基金会`（可能）从阿拉伯/沙特慈善家那里获得捐款，用于其宰牲节孤儿捐赠。¹⁰⁷
 
-*信仰赋权姐妹会*（ESID）于2018年12月发起*ESID萨达卡之面*倡议，由此开始其活动。该初始倡议很快被称为*ESID孤儿院项目*，于2019年1月支持库马西的博阿迪伊斯兰孤儿院。2019年4月该组织成立后，这一倡议变成了由其全国分支机构支持的年度活动。2020年2月，ESID向塔克瓦孤儿院学校捐款；2021年2月，访问了塔马利儿童之家；2022年2月，支持了西部地区安托的法瑟斯孤儿院。¹¹⁴
+`拯救援助项目`则属于社交媒体时代发起的一类非政府组织，通过Facebook向其成员募捐。这家总部位于阿克拉的穆斯林非政府组织于2018年开始组织与孤儿共度的特别宰牲节聚会，第一次于2020年在“阿克拉的一个孤儿院”举行，第二次于2021年在卡索阿的伊斯兰慈善中心——儿童之家及古兰经背诵学校举行。¹⁰⁸
 
-在社交媒体时代，一个常见特征是通过YouTube和Facebook上的视频呼吁来支持当地（临时）的孤儿外展项目。哈贾·瓦西拉·穆罕默德的非政府组织*努尔·法乌卡·努尔*，也以其豪萨语名称*哈斯克·比萨·坎·哈斯克*（两者均意为“光上之光”）闻名，除其他外，通过在其Facebook视频帖子中用豪萨语呼吁*萨达卡*，从当地捐款中为其孤儿斋月/开斋节/宰牲节项目筹集资金。¹¹⁵ 哈贾·瓦西拉·穆罕默德，也被称为幸运女王，是一位公共电视名人，在希吉拉电视台主持自己的节目《Taimaka Min》，并在阿克拉经营一家孤儿院。¹¹⁶
+`加纳伊斯兰乌玛`（IUG）与`全球穆斯林女性困境组织`（GMD）合作组织了类似活动。从2017年开始，IUG和GMD在阿克拉为孤儿和寡妇组织了首次开斋饭聚会。¹⁰⁹ 2018年4月，IUG发布了一项筹款呼吁，为超过1,000名孤儿和寡妇提供开斋饭；两个月后，IUG和GMD在阿克拉为孤儿和寡妇供餐，并为中部地区阿武图阿克罗蓬一所孤儿院的100名孤儿提供食物和衣物。¹¹⁰ 同年晚些时候，总部位于阿克拉的`未来女性伊斯兰中心`向慈悲伊斯兰学校孤儿院捐赠了食品、洗漱用品和其他物资。¹¹¹ 总部位于阿克拉的`拉尤瓦基金会`则于2018年和2019年组织了世界孤儿日；后者在阿克拉坎达举行，聚集了阿克拉的500名孤儿、街头儿童和弱势群体。¹¹² 为减轻COVID-19大流行的负面影响，`拉尤瓦基金会`成员于2020年11月在阿克拉达库曼的蒙选儿童中心孤儿院组织了一场外展活动，捐赠衣物、玩具和文具。¹¹³
 
-同样，*NIMA关怀*于2020年9月为其“COVID-19孤儿和街头儿童食品分发项目”募款；¹¹⁷ *酋长哈吉·苏利·伊萨基金会*（成立于2019年）以及*泰马科与祝福组织*为达鲁斯-萨拉姆孤儿院筹款；¹¹⁸ *法迪勒伊斯兰基金会*为塔克瓦孤儿院筹款；¹¹⁹ *拉赫曼基金会*为其2020年启动的阿克拉孤儿和街头儿童项目以及支持达鲁斯-萨拉姆孤儿院募款；¹²⁰ 而*和平慈善基金会*（成立于2019年）为埃朱拉的孤儿筹集支持。¹²¹ *塔克瓦宣教与发展基金会*则为其斋月慈善基金及其孤儿赞助计划筹款；2023年3月，它呼吁200人每人捐赠20塞地，到4月中旬，呼吁已筹得2,618加纳塞地。¹²² 其他组织，例如*帮助塔马利孤儿*和*加纳伊斯兰福利援助的孤儿救济与资助*，仅将社交媒体用作公开的支持呼吁，希望吸引国际捐助者的注意，在互联网上几乎没有留下关于其活动的其他痕迹。¹²³
+`信仰赋权姐妹会`（ESID）于2018年12月发起`ESID萨达卡之面`倡议，由此开始其活动。该初始倡议很快被称为`ESID孤儿院项目`，于2019年1月支持库马西的博阿迪伊斯兰孤儿院。2019年4月该组织成立后，这一倡议变成了由其全国分支机构支持的年度活动。2020年2月，ESID向塔克瓦孤儿院学校捐款；2021年2月，访问了塔马利儿童之家；2022年2月，支持了西部地区安托的法瑟斯孤儿院。¹¹⁴
+
+在社交媒体时代，一个常见特征是通过YouTube和Facebook上的视频呼吁来支持当地（临时）的孤儿外展项目。哈贾·瓦西拉·穆罕默德的非政府组织`努尔·法乌卡·努尔`，也以其豪萨语名称`哈斯克·比萨·坎·哈斯克`（两者均意为“光上之光”）闻名，除其他外，通过在其Facebook视频帖子中用豪萨语呼吁`萨达卡`，从当地捐款中为其孤儿斋月/开斋节/宰牲节项目筹集资金。¹¹⁵ 哈贾·瓦西拉·穆罕默德，也被称为幸运女王，是一位公共电视名人，在希吉拉电视台主持自己的节目《Taimaka Min》，并在阿克拉经营一家孤儿院。¹¹⁶
+
+同样，`NIMA关怀`于2020年9月为其“COVID-19孤儿和街头儿童食品分发项目”募款；¹¹⁷ `酋长哈吉·苏利·伊萨基金会`（成立于2019年）以及`泰马科与祝福组织`为达鲁斯-萨拉姆孤儿院筹款；¹¹⁸ `法迪勒伊斯兰基金会`为塔克瓦孤儿院筹款；¹¹⁹ `拉赫曼基金会`为其2020年启动的阿克拉孤儿和街头儿童项目以及支持达鲁斯-萨拉姆孤儿院募款；¹²⁰ 而`和平慈善基金会`（成立于2019年）为埃朱拉的孤儿筹集支持。¹²¹ `塔克瓦宣教与发展基金会`则为其斋月慈善基金及其孤儿赞助计划筹款；2023年3月，它呼吁200人每人捐赠20塞地，到4月中旬，呼吁已筹得2,618加纳塞地。¹²² 其他组织，例如`帮助塔马利孤儿`和`加纳伊斯兰福利援助的孤儿救济与资助`，仅将社交媒体用作公开的支持呼吁，希望吸引国际捐助者的注意，在互联网上几乎没有留下关于其活动的其他痕迹。¹²³
 
 105. “加纳穆斯林使团在宰牲节庆祝活动中招待超千名孤儿，”2019年8月12日，https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Ghana-Muslim-Mission-fetes-over-thousand-orphans-in-Eid-ul-Adha-celebration-771259，访问于2021年9月10日。
-
 106. https://www.facebook.com/GhanaAcademyOfMuslimProfessionals/, 2013年7月16日、2015年5月30日、2016年1月28日，访问于2022年1月16日。
-
-107. 为孤儿和贫困人群提供宰牲节保障项目；发布于2019年9月16日的照片：向孤儿捐赠金钱（每人约40加纳塞地）、铅笔和笔记本，https://www.facebook.com/%D9%85%D8%A4%D8%B3%D8%B3%D8%A9-%D9%83%D8%A7%D9%81%D9%84-%D8%A7%D9%84%D9%8A%D8%AA%D9%8A%D8%A7%D9%85-%D9%84%D9%84%D8%A7%D9%8A%D8%AA%D8%A7%D9%85-%D9%84%D8%AF%D8%B9%D9%85-%D8%A7%D9%84%D8%AF%D8%B9%D9%88%D8%A7%D9%81%D9%8A%D9%86-%D9%88%D8%A7%D9%84%D9%85%D8%B3%D8%A7%D9%83%D9%8A%D9%86-%D9%88%D8%A7%D9%84%D9%85%D8%B1%D8%A7%D8%AD%D9%84%D9%8A%D9%86-%D9%88%D8%A7%D9%84%D9%85%D8%B3%D8%A7%D9%83%D9%8A%D9%86/168339181840172/，访问于2022年2月3日。
-
+107. 为孤儿和贫困人群提供宰牲节保障项目；发布于2019年9月16日的照片：向孤儿捐赠金钱（每人约40加纳塞地）、铅笔和笔记本，https://www.facebook.com/%D9%85%D8%A4%D8%B1%D8%B3%D8%A9-%D9%83%D8%A7%D9%81%D9%84-%D8%A7%D9%84%D9%8A%D8%AA%D9%8A%D8%A7%D9%85-%D9%84%D9%84%D8%A7%D9%8A%D8%AA%D8%A7%D9%85-%D9%84%D8%AF%D8%B9%D9%85-%D8%A7%D9%84%D8%AF%D8%B9%D9%88%D8%A7%D9%81%D9%8A%D9%86-%D9%88%D8%A7%D9%84%D9%85%D8%B3%D8%A7%D9%83%D9%8A%D9%86-%D9%88%D8%A7%D9%84%D9%85%D8%B1%D8%A7%D8%AD%D9%84%D9%8A%D9%86-%D9%88%D8%A7%D9%84%D9%85%D8%B3%D8%A7%D9%83%D9%8A%D9%86/168339181840172/，访问于2022年2月3日。
 108. https://www.facebook.com/SaveAidProject/, 2018年8月25日、2020年7月23日、2021年7月29日，访问于2022年1月16日。
-
 115. www.facebook.com/105221041258834/videos/2578813445691449，2020年11月6日；https://www.facebook.com/105221041258834/videos/765356910858699，2020年11月6日，均访问于2021年9月9日。另见萨拉节肉品捐赠通知，https://www.facebook.com/wasilalukman.3，2021年7月24日，访问于2021年9月9日。
-
 116. 另见视频片段“哈斯克·比萨·坎·哈斯克·奎恩·卢基”，https://www.facebook.com/wasilalukman.3/videos/5949863498371971，2021年6月7日，以及哈贾·瓦西拉·穆罕默德向孤儿分发衣物和加纳健康保险卡，https://www.facebook.com/wasilalukman.3/videos/1436958233328317，2021年7月25日，均访问于2021年9月9日。
-
 117. https://www.facebook.com/NIMACares/, 2020年9月24日，访问于2022年1月15日。
-
 118. https://www.facebook.com/sulley.issa.33，2021年6月25日；“酋长哈吉·苏利·伊萨基金会为弱势群体提供支持，”https://www.newsghana.com.gh/chief-alhaji-sulley-issah-foundation-provides-support-to-vulnerable-groups/，访问于2022年1月15日；https://www.facebook.com/blessingsteimako，2022年2月18日，访问于2022年8月29日。
-
 119. https://www.facebook.com/Fadil-Islamic-Foundation-FIF-2096199234038627/, 2020年10月25日，访问于2022年1月15日。
-
 120. https://www.facebook.com/Ar-Rahman-Foundation-842801265769837/?hc_ref=ARQhsDNgl-V-42VsWTFjyvqCVwtnGts2TLfrilWGjoCiz2kl6vZyOPsBOShzumExkwk&ref=nf，2020年9月27日、2020年12月18日，访问于2022年1月15日。
-
 121. https://www.facebook.com/Peace-Charity-Foundation-594177327732659/, 2019年9月17日、2019年9月19日、2019年9月23日、2019年12月11日、2020年1月3日，访问于2022年1月15日。
-
 122. https://www.facebook.com/Taqwadawaanddevelopmentfoundation, 2023年3月31日、2023年4月12日，访问于2023年8月21日。
-
 123. https://www.facebook.com/Help-orphans-tamale-104404448138332/ 仅包含两张图片，没有提供更多信息。http://iwaghana.blogspot.com/2015/07/the-islamic-welfare-aid-i.html，则仅包含2015年的信息。
-
-
-
 
 ### 3 监狱囚犯
 
@@ -3558,9 +3625,9 @@ Save Aid Project 在 2022 年斋月期间通过启动多个新举措扩大了其
 
 在这些捐赠开始公开宣布之前，关于临时性捐赠给穆斯林监狱囚犯的情况知之甚少。例如，由 Alhaji Seebaway Zakariya（又名 Paapa Angola）和 Malam Faatullahi 协调的一群穆斯林在先知穆罕默德诞辰节 Eid al-Mawlid al-Nawabi 时向 Nsawam 中级安全监狱进行的年度捐赠，在公众中未被注意十五年，直到2016年才登上头条。125
 
-很可能在斋月和开斋节期间也进行了类似的捐赠。其中一些上了头条，例如2009年当地的库马西穆斯林非政府组织 *阅读与录音伊斯兰图书馆* 向库马西中央监狱和曼希亚监狱的囚犯捐赠时，126 或2013年阿戈纳斯韦德鲁的穆斯林社区向戈莫阿奥萨姆克龙监狱营地捐赠价值 GHS 1,000（约160美元）的物品时。127 此后，鉴于穆斯林非政府组织的扩张及其对社交媒体的过度使用，穆斯林监狱囚犯在开斋节期间的捐赠已成为年度活动。
+很可能在斋月和开斋节期间也进行了类似的捐赠。其中一些上了头条，例如2009年当地的库马西穆斯林非政府组织 `阅读与录音伊斯兰图书馆` 向库马西中央监狱和曼希亚监狱的囚犯捐赠时，126 或2013年阿戈纳斯韦德鲁的穆斯林社区向戈莫阿奥萨姆克龙监狱营地捐赠价值 GHS 1,000（约160美元）的物品时。127 此后，鉴于穆斯林非政府组织的扩张及其对社交媒体的过度使用，穆斯林监狱囚犯在开斋节期间的捐赠已成为年度活动。
 
-Nsawam 监狱一直是开斋节捐赠的主要目标之一。2015年，作为该组织外展活动的一部分，它从 *萨达卡列车* 获得了价值 GHS 3,000（约485美元）的米、伊斯兰书籍、衣物和日用品。128 2016年，当监狱的3,350名囚犯中有近900名穆斯林时，129 Islam for Ghana 与 Al-Mumin Foundation—Ghana 为其穆斯林囚犯组织了捐赠活动。130 Al-Mumin Foundation 于2017年和2018年继续为 Nsawam 监狱开展开斋饭项目；后一年旨在为1,000名男性囚犯和20名女性囚犯提供食物，并计划启动一个康复项目，教授囚犯裁缝、编织和手工艺。131 2019年，Nsawam 监狱从 Kabore Oil Limited（KOL）收到了价值 GHS 15,000（约2,500美元）的物品作为开斋节捐赠。132
+Nsawam 监狱一直是开斋节捐赠的主要目标之一。2015年，作为该组织外展活动的一部分，它从 `萨达卡列车` 获得了价值 GHS 3,000（约485美元）的米、伊斯兰书籍、衣物和日用品。128 2016年，当监狱的3,350名囚犯中有近900名穆斯林时，129 Islam for Ghana 与 Al-Mumin Foundation—Ghana 为其穆斯林囚犯组织了捐赠活动。130 Al-Mumin Foundation 于2017年和2018年继续为 Nsawam 监狱开展开斋饭项目；后一年旨在为1,000名男性囚犯和20名女性囚犯提供食物，并计划启动一个康复项目，教授囚犯裁缝、编织和手工艺。131 2019年，Nsawam 监狱从 Kabore Oil Limited（KOL）收到了价值 GHS 15,000（约2,500美元）的物品作为开斋节捐赠。132
 
 几周前，Crime Creek Foundation（CCF）将从美国穆斯林慈善机构 Amaana Foundation 收到的斋月捐赠转给了该监狱。133 2020年，Crime Creek Foundation 重复了对该监狱的斋月捐赠，由一名匿名捐赠者和居住在美国的 Hajia Barikisu 资助。134 KOL 和 CCF 既不是穆斯林经营的企业，也不是在日常活动中特别针对穆斯林，但它们作为非穆斯林倡议，关注穆斯林社区中一个独特群体的需求而脱颖而出。此外，CCF 的捐赠很可能是临时的，因为其 Facebook 账户上没有关于此的记录。然而，一个当地的穆斯林倡议在2021年重新出现，当时 Problems Shared Problems Solved Foundation 发起了一项筹款活动，为 Nsawam 监狱的穆斯林囚犯收集衣物、食物和金钱。135
 
@@ -3579,30 +3646,50 @@ Nsawam 监狱一直是开斋节捐赠的主要目标之一。2015年，作为该
 133 https://crimecheckfoundation.org/2019/05/24/ccf-donates-to-muslim-inmates-at-sekon-di-central-prison/，访问于2021年9月15日。
 134 “斋月期间 Nsawam 监狱的穆斯林囚犯获得 CCF 支持”，2020年5月12日，https://crimecheckfoundation.org/2020/05/12/muslim-inmates-at-nsawam-prisons-gets-ccf-support-during-ramadan/，访问于2021年9月15日。
 135 Ibrahim Baba Maltiti 的筹款视频，https://www.facebook.com/B.B.MALTITI/videos/158712896382166，2021年8月14日，访问于2021年9月15日。
+
+
+
 136 优惠券照片，https://business.facebook.com/Ar-Rahman-Foundation-8428012657698 37/photos/a.845904902126140/1267663309950295，2017年5月3日，访问于2021年9月15日。
+
 137 https://www.facebook.com/Eid-Feast-Ghana-454901921910937/，2019年6月26日，访问于2022年2月3日。
+
 138 https://www.facebook.com/profile.php?id=100070003501969，2023年7月5日，访问于2023年8月21日。
+
 139 https://www.facebook.com/Al-Mumin-foundation-Ghana-410983056040597/，2018年5月30日，访问于2020年10月23日。
+
 140 “加纳穆斯林专业人士学院向 James Camp 监狱捐赠”，2020年5月31日，https://newsghana.com.gh/ghana-academy-of-muslim-professionals-donates-to-james-c-amp-prisons/，访问于2021年9月15日；https://www.facebook.com/GhanaAcademyOfMuslimProfessionals，2023年4月23日，访问于2023年8月21日。
+
 141 https://www.facebook.com/motherofallnationsfoundation，2023年4月25日，访问于2023年8月21日。
+
 142 https://www.facebook.com/MunSam-Foundation-583631862100641/，2020年5月29日，2020年6月4日，访问于2022年2月3日。
+
 143 https://www.facebook.com/profile.php?id=10006479046176，2023年4月8日，访问于2023年8月21日。
+
 144 Afedzi Abdullah，“Ahmadiyya 穆斯林传教团向 Ankaful 最高监狱囚犯捐赠”，2021年4月30日，https://gna.org.gh/2021/04/ahmadiyya-muslim-mission-donates-to-inmates-at-ankaful-maximum-prisons/，访问于2021年9月15日。
+
 145 “Bamba 伊斯兰学院向监狱囚犯捐赠”，2017年6月6日，http://www.ghananewagency.org/social/bamba-islamic-institute-donates-to-prison-inmates-117885，访问于2019年5月17日；https://www.facebook.com/bighana/12.6.2017，访问于2019年5月17日。
+
 146 2017年监狱开斋饭呼吁，取自 https://www.facebook.com/Hayat-The-Muslim-lifestyle-Magazine-in-Ghana-25149924558283/，2017年5月20日，访问于2021年8月12日。
+
 147 Adnan Abdul-Hamid 插入内容，https://www.awakeningmuslimah.org/about-us/who-we-are/，访问于2021年7月16日。
+
 148 https://www.facebook.com/awakeningmuslimah/，2019年5月30日，2020年4月16日，2020年5月9日，访问于2021年7月16日。
+
 149 “年度斋月供餐”，https://www.awakeningmuslimah.org/ramadan/，访问于2021年7月16日。
+
 150 “Awakening Muslimah 为220名穆斯林囚犯提供餐食”，2021年4月21日，https://www.awakeningmuslimah.org/ramadan-eid-outreach/awakening-muslimah-serves-meals-for-220-muslim-inmates/，访问于2021年7月16日。
+
 151 “Awakening Muslimah 为320+名囚犯提供餐食”，2021年5月20日，https://www.awakeningmuslimah.org/eid-celebration/awakening-muslimah-serves-meals-for-320-inmates/，访问于2021年7月16日。
+
 152 https://www.facebook.com/fomwagghana/，2023年4月16日，访问于2023年8月21日。
+
 153 “Sadaqa Train 拜访加纳监狱的斋月之旅”，2019年5月19日，https://www.sadaqatrain.org/sadaqa-train-pays-ramadhan-visit-to-ghana-prisons/，访问于2022年2月3日。
+
 154 https://www.facebook.com/youthconnectg/，2021年5月13日，访问于2022年2月3日。
+
 155 https://m.facebook.com/Healthway-Foundation-452031622267357/，2019年6月11日，访问于2022年2月3日。
+
 156 https://www.facebook.com/Healthway-Foundation-107995270549152/，2020年8月22日；Sanni Abacha，“UWR：HealthWay Foundation 与监狱囚犯共同庆祝开斋节”，2021年5月16日，https://homeradionews.com/2021/05/16/uwr-healthway-foundation-celebrates-eid-ul-fitr-with-prison-inmates/，访问于2022年2月3日。
-
-
-
 
 “我们失明的老妇人”位于塔夸（Tarkwa）附近的瓦萨恩克兰村（Wassa Nkran），162“我们的老奶奶和她妹妹”位于沃尔特地区（Volta Region）的佩基村（Peki），163塔马利（Tamale）的一位寡妇，164阿克拉（Accra）的寡妇和她们的孩子，165以及街头乞讨的男孩女孩。166有时金额很小，比如GIYSA想帮助佩基村一位失明的老妇人支付交通费，让她能参加当地清真寺的星期五礼拜。167有时该组织试图筹集高达12,000加纳塞地（GHS）的资金，用于支付一位年长妇女的手术费用。168
 
@@ -3611,13 +3698,21 @@ Nsawam 监狱一直是开斋节捐赠的主要目标之一。2015年，作为该
 另一种与传统施舍形式无关的新现象是，尤其是穆斯林青年协会推动将临时施舍转变为自助资金的动力，GIYSA在2021年初发布的一则Facebook帖子就说明了这一点：
 
 162 https://www.facebook.com/GIYSA-Ghana-Islamic-youth-sadaqqa-Association-10969909396038/，2020年10月26日、2020年11月2日，访问于2021年9月15日。
+
 163 https://www.facebook.com/GIYSA-Ghana-Islamic-youth-sadaqqa-Association-10969909396038/，2020年3月30日、2020年8月13日、2020年8月14日、2021年4月22日（捐赠视频：2021年7月18日），访问于2021年9月15日。
+
 164 https://www.facebook.com/GIYSA-Ghana-Islamic-youth-sadaqqa-Association-10969909396038/，2020年12月10日、2020年12月19日，访问于2021年9月15日。
+
 165 https://www.facebook.com/GIYSA-Ghana-Islamic-youth-sadaqqa-Association-10969909396038/，2020年3月31日、2020年4月4日、2020年4月6日和2020年7月20日，访问于2021年9月15日；视频2021年8月19日（https://www.facebook.com/10969909396038/videos/1947810462063106），访问于2021年9月15日。
+
 166 https://www.facebook.com/GIYSA-Ghana-Islamic-youth-sadaqqa-Association-10969909396038/，2020年6月28日、2021年5月6日，访问于2021年9月15日。
+
 167 https://www.facebook.com/GIYSA-Ghana-Islamic-youth-sadaqqa-Association-10969909396038/，2020年8月12日，访问于2021年9月15日。
+
 168 https://www.facebook.com/GIYSA-Ghana-Islamic-youth-sadaqqa-Association-10969909396038/，2020年8月20日、2020年10月20日，访问于2021年9月15日。
+
 169 https://www.facebook.com/GIYSA-Ghana-Islamic-youth-sadaqqa-Association-10969909396038/，2020年4月17日，访问于2021年9月15日。
+
 170 https://www.facebook.com/SUNNA-HAUSA-Relief-Organization-122639568466788/，2019年10月15日，访问于2021年9月15日。
 
 愿真主的平安、慈悯与吉庆降临于你们。今天，我们进行了一次街头调查，与其中一位街头乞丐进行了交流，以了解一些情况。
@@ -3635,6 +3730,7 @@ Nsawam 监狱一直是开斋节捐赠的主要目标之一。2015年，作为该
 GIYSA将其外联活动称为“吉哈德之旅”。与其他受萨拉菲派（Salafi）团体启发或与之有联系的穆斯林青年组织（如Sadaqa Train，见下文第3.6章）一样，人道主义援助与其宣教使命紧密相连。社交媒体的影响非常深远，这从该穆斯林青年组织发布在Facebook上的众多视频中可见一斑，例如展示其成员已经捐赠的食品和物资数量（并呼吁进一步捐赠）。¹⁷²
 
 ¹⁷¹ https://www.facebook.com/GIYSA-Ghana-Islamic-youth-sadaqqa-Association-109699093960381/，2021年1月12日，访问于2021年9月15日。
+
 ¹⁷² 参见，例如，GIYSA于2020年3月6日发布的视频（“这些是我们迄今为止收到的物品……”），https://www.facebook.com/109699093960381/videos/2680447485504348，访问于2021年9月15日。
 
 ### 5 残疾人
@@ -3647,10 +3743,6 @@ GIYSA将其外联活动称为“吉哈德之旅”。与其他受萨拉菲派（
 
 174 Jeff Grischow、Magnus Mfoafo-M'Carthy、Ann Vermeyden和Jessica Cammaert，“Physical Disability, Rights and Stigma in Ghana: A Review of Literature”（加纳的身体残疾、权利与污名：文献综述），Disability, CBR & Inclusive Development 29，第4期（2018）：5-24；Magnus Mfoafo-M'Carthy、Jeff Grischow和Nicole Stocco，“Cloak of Invisibility: A Literature Review of Physical Disability in Ghana”（隐形之斗篷：加纳身体残疾文献综述），SAGE Open 2020年1月-3月：1-8，https://doi.org/10.1177/2158244019900567。
 
-
-
-
-
 能力。175 身体和言语障碍者并未受到穆斯林非政府组织太多（如果有的话）的特殊关注，而通常被归入“穷人”和“赤贫者”之列，176 尽管位于阿克拉的非政府组织“伊斯兰残疾人及伊斯兰机构服务局”偶尔会为身体障碍者提供轮椅和月度支持。177
 
 情绪或智力障碍者在加纳社会中属于最受污名化的群体之一。迄今为止，信仰治疗师和传统治疗师，178 包括穆斯林治疗师，179 已治疗了他们中的许多人，即便不是大多数。长期以来，没有穆斯林非政府组织将他们列入议程，但库马西的“阿尔-布什拉基金会”除外，这是一项为唐氏综合征患者福祉而设的新创举。180
@@ -3661,6 +3753,8 @@ GIYSA将其外联活动称为“吉哈德之旅”。与其他受萨拉菲派（
 
 针对盲人教育和培训的定向干预始于20世纪40年代。最初作为私立机构，绝大多数都与基督教倡议有关，目前有五所公认的盲人学校接受政府补贴或由教育部监管。184 它们都面临若干挑战和制约，尤其是长期缺乏资金、设备、教育材料以及专业教师。185 区域失衡十分显著，只有一所学校位于该国北部地区。加纳盲人联盟呼吁在塔马利建立一所盲人学校，但得到的只是同情，鲜有行动。186
 
+
+
 穆斯林盲人学生全国发言人穆斯塔法·易卜拉欣提出在塔马利郊外为盲人建造一所学校的新举措，这属于少数几个在全国乃至国际引起呼吁的定向项目之一，该倡议得到了多个穆斯林非政府组织的支持，详见下文。此前，穆斯林团体和慈善家会支持收容视障穆斯林儿童的学校，例如“光明基金会”于2014年9月向阿克罗庞盲人学校捐款。187 两个月后，该基金会作为其宰牲节捐赠的一部分，向学校送去了肉包。188 然而，这些捐赠是临时性的而非经常性活动，因为该基金会的Facebook账户上没有再发布此类活动的消息。同样，2017年5月阿尔-穆明基金会向阿克罗庞盲人学校的穆斯林囚犯提供的开斋饭捐赠，以及2023年法塔非洲组织的开斋节活动和加纳伊斯兰研究协会的慈善捐赠，都是临时性事件。189 相比之下，萨达卡列车在2015年至2020年间每年组织访问该校，190 同时向视障穆斯林学生分发盲文《古兰经》。191 “伊斯兰未来女性中心”则在2019年向阿布里盲人学校捐款。192 此外，希克马图拉研究基金会在2016年和2017年将瓦聋哑盲人学校作为其斋月捐赠和开斋饭活动的目标。193
 
 没有任何穆斯林非政府组织发起干预计划来解决视障穆斯林的教育需求。总部位于阿克拉的“残疾人穆斯林网络”194 主任艾莎·弗林蓬在2019年11月由总部位于伊斯坦布尔的国际盲文古兰经服务联盟组织的一次会议上指出了这一点，该会议旨在促进撒哈拉以南非洲的盲文《古兰经》扫盲。她指出，加纳35所特殊学校中没有一所考虑到穆斯林儿童的特殊需求，更不用说提供伊斯兰研究课程了。195
@@ -3668,30 +3762,46 @@ GIYSA将其外联活动称为“吉哈德之旅”。与其他受萨拉菲派（
 与艾莎·弗林蓬在2019年呼吁关注视障穆斯林儿童和学生特殊需求的同时，穆斯塔法·易卜拉欣也崭露头角，成为他们的全国发言人。他于2013年创立了自己的非政府组织“詹纳特-乌尔-菲尔道斯慈善基金会”，2018年成为博主，一年后成为盲人穆斯林学生全国协调员。他和他的基金会，作为
 
 175 加纳统计局，《加纳残疾状况》（阿克拉：加纳统计局，2014年），第28页。
+
 176 社会福利服务目录列出了“马克塔布·努尔基金会”，这是一个总部位于阿克拉的非政府组织，专门培训和教育自闭症和言语障碍者（http://directory.mogcsp.gov.gh/listings/maktab-nuur-foundation-cjko，访问于2021年9月27日）。根据目录提供的信息，该非政府组织于2015年注册，这可能表明其工作人员没有费心更新注册，或者该组织已停运。然而，我未能在互联网上找到有关该组织的任何进一步信息。
+
 177 哈希姆·M·阿里·马赫迪博士，“伊斯兰之旅：穆斯林在加纳发展良好”，2013年3月1日，https://www.arabnews.com/islam-perspective/journey-through-islam-muslims-have-come-well-ghana，访问于2021年9月23日。
+
 178 杰西卡·E·兰伯特等人，“加纳信仰和传统治疗中心对精神疾病的治疗：服务使用者和治疗者的观点”，《全球精神卫生》7（2020年），e28：1–7，https://doi.org/10.1017/gmh.2020.21。
+
 179 莉莉·N.A. 克波比和莱斯利·斯瓦茨，“加纳阿克拉的穆斯林传统治疗师：对精神障碍的信念和治疗”，《宗教与健康杂志》58（2019年）：833–846。关于穆斯林治疗师的批判性评论，见阿杜-贾姆菲等人，“穆斯林治疗师与治疗”。
+
 180 阿尔-布什拉基金会：关于，https://www.facebook.com/Al-Bushra-Foundation-109767600843666/，访问于2022年8月2日。
+
 181 A. 波特、O. 德布拉、J. 阿顺、K.J. 布兰切特，《眼健康系统评估：加纳国家报告》（阿克拉：加纳卫生局和国际眼健康中心、光明拯救者，2013年）。
+
 182 纳纳-夸德沃·比里特伍姆、齐兹佐姆·K. 德·苏扎、奥德梅·阿西杜、本杰明·马尔福、乌切·维罗妮卡·阿马齐戈和约翰·奥乌苏·贾蓬，“加纳盘尾丝虫病控制（1974–2016）”，《寄生虫与媒介》14，第3期（2021年）。https://doi.org/10.1186/s13071-020-04507-2
+
 183 安妮特·C·莫尔、A.J. 范·德·林登、M. 霍格韦格和W.E. 沙德，“加纳文奇地区30岁以上人群失明和低视力患病率及其与眼保健计划的关系”，《英国眼科学杂志》78，第4期（1994年）：275–279。
+
 184 阿克罗庞盲人学校、新视野特殊学校（阿克拉）、兹奥武鲁特殊学校（阿克拉）、海岸角盲聋学校、阿塞布聋哑盲人学校、瓦卫理公会盲人学校。
+
 185 路易斯·多格贝，“在加纳失明的后果”，https://www.medicusmundi.ch/de/advocacy/publikationen/mms-bulletin/vernachlaessigte-krankheiten/versteckt,-verdraengt,-vernachlaessigt/the-consequences-of-being-blind-in-ghana，访问于2021年9月19日。
+
 186 “我们需要在塔马利为盲人设立融合学校——加纳盲人联盟”，2014年1月30日，https://www.graphic.com.gh/news/education/we-need-integrated-schools-for-the-blind-in-tamale-ghana-blind-union.html，访问于2021年9月19日。
+
 187 https://www.facebook.com/tlfghana/，2014年9月25日，访问于2022年1月16日。
+
 188 https://www.facebook.com/tlfghana/，2014年11月21日，访问于2022年1月16日。
+
 189 https://www.facebook.com/profile/100064289335502/search/?q=Akropong，2023年4月18日；https://www.facebook.com/GIRA4ALL，2023年6月22日，访问于2023年8月21日。
+
 190 https://www.facebook.com/SadaqaTrainGh/，2020年8月13日，访问于2022年1月16日。
+
 191 萨达卡列车2019年年度报告，可在 https://www.sadaqatrain.org/wp-content/uploads/2020/11/2019-Sadaqa-Train-Report-1.pdf 获取，访问于2022年12月13日。
+
 192 向阿布里盲人学校的捐赠，2019年7月28日，https://www.facebook.com/Islamic-Centre-For-Future-Women-1763674863848125，访问于2021年9月27日。
+
 193 https://www.facebook.com/Hikmatullah-Research-Foundation-668552963239832/，2016年6月27日，2017年7月14日，2017年7月19日，访问于2021年12月30日。
+
 194 我在互联网上未找到该组织的任何踪迹，或许其拼写应为“Disabled Muslims Network”（？）。
+
 195 尼莱·卡尔，“非洲穆斯林寻求资助视障儿童教育”，2019年11月9日，https://www.aa.com.tr/en/africa/african-muslims-seek-aid-for-education-of-sight-impaired-children/1639991，访问于2021年9月23日。
-
-
-
-
 
 以及他于2021年创立的Kausar Drilling Services公司，在过去十年中已成为赋能穆斯林残障人士和孤儿的主要推动者。196
 
@@ -3737,12 +3847,11 @@ GIYSA将其外联活动称为“吉哈德之旅”。与其他受萨拉菲派（
 
 然而，学校项目的完工还有很长的路要走，尤其是缺乏资金（截至2022年10月）来建造清真寺、宿舍和操场。穆斯塔法·易卜拉欣感叹，大多数穆斯林相当肤浅，或者不为该活动捐款。他担心，这主要是由于加纳普遍存在的对盲人和视障人士的偏见，这种偏见由“盲人（穆斯林）乞丐”的负面形象所维持。尽管如此，他仍然相信，只要有资金到位，学校就能在2022年底/2023年初开学。他告诉我，目前有三名视障学生正在南非接受培训，包括学习盲人穆斯林的布莱叶盲文，他们将在学校开学后担任教师。211
 
-
-
-
-#### 5.2 *聋穆斯林儿童学校*
+### 5.2 聋穆斯林儿童学校
 
 约有0.4%的加纳人口被估计为听力障碍者。^212 这个群体也已成为穆斯林非政府组织的特殊目标群体。第一所聋校于1957年建立；如今约有16所聋校。^213 其中一所是位于萨韦卢古、北部地区的萨韦卢古聋校，是唯一一所为听力障碍的穆斯林儿童提供伊斯兰辅导和教育的特殊学校。
+
+
 
 *穆斯林聋人发展*（MDD）的成立或许标志着首次有针对性地尝试解决加纳穆斯林中受歧视和边缘化群体的困境。2012年在塔马莱举行的组织启动活动上发言时，MDD主任Iddrisu Mukhtar^214 告知，该组织隶属于美国的Global Deaf Muslims（GDM），^215 并致力于与家长、伊斯兰学者和组织合作，推动聋穆斯林的伊斯兰教育。此外，MDD还将促进聋人与听人穆斯林之间的对话，提高对聋人权利的认识，并在清真寺和其他伊斯兰活动上加强手语翻译的提供。^216 自成立以来，MDD每年都在塔马莱的中心组织开斋饭、开斋节和宰牲节庆祝活动，^217 大多（如果不是完全？）得益于Global Deaf Muslims的捐赠。^218 例如，2023年，MDD从Global Deaf Muslim Foundation获得了捐赠，使其能够在2023年为萨韦卢古聋校（78名聋穆斯林）、聋人Mamprong高级技术学校（60人）、博尔加廷加的Gbeogo聋校（46人）、塔马莱中心（180人）、Yendi聋人区（30人）以及纳夫龙戈-托诺的St. John’s综合SHS（48人）提供开斋饭。219
 
@@ -3766,19 +3875,20 @@ Sadaqa Train 在2015年8月下旬报纸报道一些穆斯林学生加入了ISIS�
 
 2015年9月初，Sadaqa Train 发布声明称该组织是一个注册的非政府穆斯林青年组织；其主要目标是“弥合加纳城市与农村社区之间舒适与知识的差距”。它进一步强调了其使命的和平维度，即向内陆穆斯林伸出援手以分享知识和慈善。最后，它保证其 WhatsApp 群组从未讨论过极端思想，而且该组织“……甚至从未稍有考虑过任何恐怖主义活动的想法。”235
 
-Sadaqa Train 创始人 Sharif Shaban 又名 Jannah Focus 的公开声明澄清了空气，该组织在2015年挺过了危机。为了进一步提高其运作的透明度和问责制，Sadaqa Train 自2015年起在其主页上发布年度报告，其中包括其活动和项目的财务统计数据（见图27）。
-
 大众媒体引发了公众抗议和组织的否认，参见“Sadaqa Train 强烈否认极端主义指控”，2015年8月27日，https://www.ghanaweb.com/GhanaHomePage/features/Sadaqa-Train-vehemently-denies-extremism-allegations-378018, 访问 17.5.2019。 232 “KNUST 毕业生加入 ISIS”，25.8.2015，https://www.ghanaweb.com/GhanaHomePage/NewsArchive/KNUST-graduate-joins-ISIS-377496, 访问 8.10.2021。 关于穆斯林大学生激进化过程的分析，参见 Yunus Dumbe 和 George M. Bob-Milliar，“加纳公立大学中不受监管的宗教空间：穆斯林大学生激进化的证据”，《当代非洲研究杂志》（2022），DOI:10.1080/02589001.2022.2121808。 233 “伊斯兰不是极端宗教—Dr Konney”，9.9.2015，https://www.modernghana.com/news/641632/islam-is-not-an-extremist-religion-dr-armah-konney.html, 访问 8.10.2021。 234 “我不会因 ISIS 指控解散 Sadaqa train—Leader”，30.8.2015，https://www.pulse.com.gh/ece-frontpage/terrorism-ill-not-disband-sadaqa-train-over-isis-claims-leader/9y55pwf, 访问 8.10.2021。 235 “与加纳 ISIS 招募有关联的团体 Sadaqa Train 否认指控”，2.9.2015，https://ugfile.com, 访问 17.5.2019。
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_297_0.png)
 
 **图 27**  Sadaqa Train。2019 年度报告封面  
+
 作者收藏
 
 最初，其主要资金来源是通过现金和实物捐赠获得，通过社交媒体广播以及通过“清真寺和市场风暴”收集，即通过访问选定的清真寺和市场筹集资金。^236^ 起初，所有社区访问都在阿克拉组织，但为了削减交通费用，Sadaqa Train 分成三个区域部门，运营中心设在阿克拉（南部部门）、库马西（中部部门）和塔马利（北部部门）。这足以在早期阶段覆盖慈善和 *宣教* 行程前往偏远农村地区的费用。^237^ 每年，每个部门都会组织社区和监狱访问，称为“三重之旅”，尽管 COVID-19 大流行在2020年和2021年暂停了农村外展项目。此外，Sadaqa Train 每年向孤儿院和寡妇捐款；这一活动未受 COVID-19 影响。^238^
 
 236  https://www.sadaqatrain.org/about-us/, 访问 11.12.2022。  
+
 237  与 Sadaqa Train 创始人 Sharif Shaban 的访谈，阿克拉，8.10.2022。  
+
 238  https://www.sadaqatrain.org/about-us/, 访问 11.12.2022; 与 Sharif Shaban 的访谈，阿克拉，8.10.2022。 根据2019、2020和2021年的年度报告，只有 Sadaqa Train 南部部门安排了监狱访问。2022年，北部部门恢复了外展工作并向 Wa 监狱捐赠，参见“Sadaqa Train 向 Wa 监狱提供食品”，20.4.2022，https://www.ghanaiantimes.com.gh/sadaqat-train-presents-eatables-to-wa-prisons/, 访问 22.8.2022。 另见第 3.3 章。
 
 Sadaqa Train 的活动范围在2017年扩大，当时它启动了第一个钻井项目，导致其年度预算大幅增加。根据财务报告，每年内部筹集的捐款从约 GHS 17,400（USD 4,200）在2015年、GHS 15,600（USD 3,900）在2016年和 GHS 17,500（USD 6,600）在2017年不等。239 2017年至2019年，该组织资助了农村社区的八个水项目，240 2020年第九个，241 2021年三个。242 水项目的资金由加纳私人慈善家和捐助者提供，2017年为 GHS 12,000（2018年的数据不可用），2019年为 GHS 40,000，2020年为 GHS 10,500，2021年为 GHS 31,000。243
@@ -3790,11 +3900,17 @@ Sadaqa Train 已发展成为一个成熟的全国性 *宣教* 和穆斯林发展
 尽管活动不断扩展，Sadaqa Train 更像是一个网络而非制度化的组织。其在阿克拉的总部既没有办公室也没有薪资员工。该组织完全通过
 
 239 参见年度报告中提供的财务统计数据，http://www.sadaqatrain.org/reports/, 访问 17.5.2019。
+
 240 参见 http://www.sadaqatrain.org/borehole-projects/, 以及 http://www.sadaqatrain.org/water-project-report-2017-till-2019/, 访问 17.5.2019。
+
 241 参见 Sadaqa Train 年度报告 2020。
+
 242 参见 Sadaqa Train 年度报告 2021。
+
 243 数据取自年度报告 2017、2019、2020、2021。
+
 244 https://www.facebook.com/SadaqaTrainGh/photos/a.845077278869094/1123223714387781/?type=3&theater, 访问 17.5.2019。
+
 245 参见 Sadaqa Train 年度报告 2021。
 
 246 “Sadaqa Train 向北部、东北部地区医院捐赠设备”，https://www.ghanaian times.com.gh/sadaqa-train-donates-equipment-to-hospitals-in-northern-north-east-regions/, 28.4.2021，https://www.facebook.com/ViomisAid/, 17.2.2021；“Sadaqa Train 访问 Gbewaa 宫殿”，22.5.2021，https://www.prod.facebook.com/SadaqaTrainGh/, 访问 11.12.2022；关于2021年斋月和古尔邦项目，参见 https://www.facebook.com/ViomisAid/, 15.5.2021，12.7.2021，29.7.2021，均访问 11.12.2022。
@@ -3813,9 +3929,9 @@ Sadaqa Train 已发展成为一个成熟的全国性 *宣教* 和穆斯林发展
 
 253 “开斋节衣物分发”，10.5.2021，https://www.prod.facebook.com/SadaqaTrainGh/, 访问 11.12.2022。
 
-
-
 志愿者通过WhatsApp参与；据Sharif Shaban称，WhatsApp广播名单包括约800至1000人。新项目（水井项目、清真寺）的申请由当地社区转交给他，之后Sharif Shaban在WhatsApp上公布之前，会与捐助者和承包商核实项目的可行性。而该组织的Facebook账户则由塔马利方面监控。254
+
+
 
 穆斯林青年项目（Muslim Youth Project）则于2013年发起了“MY Hereafter Project (MHP)”，并于2018年启动了“MY Hereafter Project Ummah Welfare Fund”。2018年，它成为联合国可持续发展解决方案网络（UN-SDSN）的伙伴组织。255 直到2020年，MHP的主要活动是每年斋月期间在加纳各地进行的筹款活动，以帮助寡妇、孤儿和监狱囚犯。至少在2020年斋月活动期间，其Facebook关注者被呼吁：“[..]请考虑献上你们的sadaqah（自愿施舍）和zakat（天课），以便我们能够养活那些失去丈夫并为照顾孤儿而挣扎的母亲们。”256 2017年，MHP志愿者在库马西组织了“Kayaye（女性搬运工）职业技能”项目。该项目包括肥皂制作、烘焙和裁缝。257 在2020年斋月募捐之后，该组织决定重塑MHP品牌，专注于帮助北部地区的孤儿。MHP的管理人员和志愿者只从该地区招募，因为该组织希望他们全力参与当地的计划和倡议。另一方面，该组织在Facebook上宣布：“[..]无论你们身处世界何处，我们都欢迎你们的捐赠、建议、提议以及任何善举”，表明它仍然依赖外部资金来维持运营。258
 
@@ -3828,6 +3944,7 @@ Sadaqa Train的一些成员于2013年成立了穆斯林接入运动（MAM，见�
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_302_0.png)
 
 图28 穆斯林接入运动。MAM成员在库马西的总部，其主要媒体渠道MAM Online的演播室也设在这里
+
 摄影：HOLGER WEISS/2018
 
 然而，MAM赋能的主要工具是其在线广播和电视频道MAM TV Online。除了作为宣教频道外，其公共卫生教育委员会（MAMPHEC，265成立于2016年）于2018年发起了一项建立伊斯兰医院的宣传活动。266 该医院项目似乎从未进入规划阶段，也没有实现。另一方面，MAM组织了一些临时活动，其中包括2016年在库马西的献血活动。267 2019年，MAMPHEC宣布雄心勃勃地将活动扩展到库马西以外，并为塔马利的选定医院发起了一项捐赠活动，268
@@ -3840,37 +3957,35 @@ GIYSA的关键目标是“实现我们支持者的Sadaqa Jariyha”。Sadaqa jar
 
 254 与Sharif Shaban的访谈，阿克拉，2022年10月8日。
 
-255 MHP主页，http://myhereafterproject.org/about-us/，以及关于MY Ummah Welfare Fund的信息，http://myhereafterproject.org/service/ummah-welfare-fund/，访问于2021年11月5日。
+255 MHP主页，`http://myhereafterproject.org/about-us/`，以及关于MY Ummah Welfare Fund的信息，`http://myhereafterproject.org/service/ummah-welfare-fund/`，访问于2021年11月5日。
 
-256 https://www.facebook.com/helpintherightcourse/, 2020年4月30日，访问于2022年1月16日。
+256 `https://www.facebook.com/helpintherightcourse/`, 2020年4月30日，访问于2022年1月16日。
 
-257 关于在库马西启动职业技能项目及募捐呼吁的公告，2017年10月20日，https://www.facebook.com/helpintherightcourse/photos/95758054440419，访问于2021年10月5日。
+257 关于在库马西启动职业技能项目及募捐呼吁的公告，2017年10月20日，`https://www.facebook.com/helpintherightcourse/photos/95758054440419`，访问于2021年10月5日。
 
-258 https://www.facebook.com/helpintherightcourse/, 2020年6月29日，2020年7月3日，访问于2021年10月5日。
+258 `https://www.facebook.com/helpintherightcourse/`, 2020年6月29日，2020年7月3日，访问于2021年10月5日。
 
-259 My Hereafter Project Ummah Welfare Fund，https://www.facebook.com/helpintherightcourse/，2020年10月4日；MY Hereafter Project，https://www.facebook.com/helpintherightcourse/，2020年10月13日，2020年10月26日；访问于2021年10月5日。
+259 My Hereafter Project Ummah Welfare Fund，`https://www.facebook.com/helpintherightcourse/`，2020年10月4日；MY Hereafter Project，`https://www.facebook.com/helpintherightcourse/`，2020年10月13日，2020年10月26日；访问于2021年10月5日。
 
-260 https://www.facebook.com/myhereafterproject, 2023年7月20日，访问于2023年8月21日。
+260 `https://www.facebook.com/myhereafterproject`, 2023年7月20日，访问于2023年8月21日。
 
-261 https://www.facebook.com/myhereafterproject, 2023年6月15日，2023年7月1日，访问于2023年8月21日。另见 https://www.myhereafterproject.org/programs/。
+261 `https://www.facebook.com/myhereafterproject`, 2023年6月15日，2023年7月1日，访问于2023年8月21日。另见 `https://www.myhereafterproject.org/programs/`。
 
-262 https://www.facebook.com/myAkhirah, 2017年6月6日，2021年5月16日，2023年4月12日，访问于2023年8月21日。
+262 `https://www.facebook.com/myAkhirah`, 2017年6月6日，2021年5月16日，2023年4月12日，访问于2023年8月21日。
 
-263 https://www.facebook.com/striveforjannahgh, 2022年6月21日，2023年3月28日，2023年5月12日；访问于2023年8月21日。
+263 `https://www.facebook.com/striveforjannahgh`, 2022年6月21日，2023年3月28日，2023年5月12日；访问于2023年8月21日。
 
 264 与穆斯林接入运动成员的集体访谈——Umar Muhammed, Abdul-Aziz Ishaq, Yunus Muhammad and Imam Mahmood Afari Yeobah——库马西，2018年9月15日。
 
-265 尽管仍然活跃，MAMPHEC的Facebook账户（https://www.facebook.com/MAMPHEC2016/?paipv=o&eav=AfaquBTqNKU7qHKtcle-NqvojNdHmsOsZLA2-NHwg3zoR8FgkHXISpTthegwcSqzVQ&_rdr）自2017年以来没有发布任何与健康教育相关的帖子或视频。相反，其内容大部分涉及宣教。
+265 尽管仍然活跃，MAMPHEC的Facebook账户（`https://www.facebook.com/MAMPHEC2016/?paipv=o&eav=AfaquBTqNKU7qHKtcle-NqvojNdHmsOsZLA2-NHwg3zoR8FgkHXISpTthegwcSqzVQ&_rdr`）自2017年以来没有发布任何与健康教育相关的帖子或视频。相反，其内容大部分涉及宣教。
 
-266 https://www.facebook.com/mamtvonline, 2018年8月14日，2018年9月9日，2018年9月10日，2018年9月12日，访问于2022年8月26日。另见31分钟视频“帮助建设第一座伊斯兰医院——MAMPHEC时间”，2018年8月9日，https://www.youtube.com/watch?v=yqW-yhL4KY，访问于2018年8月26日。
+266 `https://www.facebook.com/mamtvonline`, 2018年8月14日，2018年9月9日，2018年9月10日，2018年9月12日，访问于2022年8月26日。另见31分钟视频“帮助建设第一座伊斯兰医院——MAMPHEC时间”，2018年8月9日，`https://www.youtube.com/watch?v=yqW-yhL4KY`，访问于2018年8月26日。
 
-267 https://www.facebook.com/mamtvonline, 2016年12月17日，访问于2022年8月26日。
+267 `https://www.facebook.com/mamtvonline`, 2016年12月17日，访问于2022年8月26日。
 
-268 “MAMPHEC以医院捐赠结束这一年——立即支持”，https://www.mamghonline.org/2019/12/11/mamphec-to-end-the-year-with-hospital-donations-support-now
+268 “MAMPHEC以医院捐赠结束这一年——立即支持”，`https://www.mamghonline.org/2019/12/11/mamphec-to-end-the-year-with-hospital-donations-support-now`
 
-
-
-从中受益的知识，以及为他祈祷的义子。（《穆斯林圣训实录》）当你捐赠给萨达卡贾里亚项目时，你将获得无尽的回报。这是其中最美好的慈善形式之一，因为它为捐赠者和接受者提供长期的利益。我们已为你准备了变革性、影响深远的项目供你支持，让你在帮助人们摆脱贫困的同时倍增你的祝福。捐赠你的慈善款至 0249530504（KABIRATU ZAKARI）。273
+> 从中受益的知识，以及为他祈祷的义子。（《穆斯林圣训实录》）当你捐赠给萨达卡贾里亚项目时，你将获得无尽的回报。这是其中最美好的慈善形式之一，因为它为捐赠者和接受者提供长期的利益。我们已为你准备了变革性、影响深远的项目供你支持，让你在帮助人们摆脱贫困的同时倍增你的祝福。捐赠你的慈善款至 0249530504（KABIRATU ZAKARI）。273
 
 GISYA 在 Facebook 上发布的一份声明中强调了其管理萨达卡贾里亚的经验：
 
@@ -3880,38 +3995,39 @@ GISYA 已在加纳启动了多个钻井项目，其中包括 Techiman 附近的�
 
 Daybreak Dawah Charity 主要在阿克拉、库马西和 Techiman 以志愿形式运营，见图 29。有趣的是，成员既有穆斯林也有非穆斯林年轻人。其活动最初主要是微观层面的干预，即支付学费和医院账单，同时捐赠衣服和蚊帐。资金完全通过在加纳的推广活动内部筹集。279 2021 年，该组织加大了投入并启动了两个额外的干预方案，即发放无息贷款以及孤儿支持和康复项目。自那时起（截至 2022 年 8 月），该组织（至少）向阿克拉和库马西的妇女商贩发放了九笔无息小额贷款。280 孤儿支持项目则在 2022 年斋月期间筹集资金。281
 
-276 https://www.facebook.com/Day-Break-Dawah-and-Development-Centre-398838943696853/?hc_ref=ARTH-yrtifloYkQbvZK bqITMttDDHHzFGSuX4175nDplQhRAppg9BjzgD77IKMVS5E&fref=tag, accessed 13.5.2019. Facebook 账户于 2015 年创建，但此后未更新。相反，有关该组织的进一步信息，包括其截至 2018 年的活动，可在该组织主席 Akurugu Iddrisu Yakubu 的 Facebook 账户上找到。
+276 `https://www.facebook.com/Day-Break-Dawah-and-Development-Centre-398838943696853/?hc_ref=ARTH-yrtifloYkQbvZK bqITMttDDHHzFGSuX4175nDplQhRAppg9BjzgD77IKMVS5E&fref=tag`, accessed 13.5.2019. Facebook 账户于 2015 年创建，但此后未更新。相反，有关该组织的进一步信息，包括其截至 2018 年的活动，可在该组织主席 Akurugu Iddrisu Yakubu 的 Facebook 账户上找到。
 
 277 路标由作者于 2018 年 9 月 16 日在库马西拍摄，作者档案。
 
-278 https://www.facebook.com/daybreakdawahdc/, 15.8.2018, accessed 13.5.2019.
+278 `https://www.facebook.com/daybreakdawahdc/`, 15.8.2018, accessed 13.5.2019.
 
 279 与 Daybreak Daʿwah Center 成员 Dapai Emanuel、Idriss、Charles 和 Kevin 的小组访谈，库马西 2019 年 12 月 12 日。
 
-280 https://www.facebook.com/profile.php?id=100010935812364, 11.11.2021 (Accra), 11.12.2021 (Accra), 6.1.2022 (poster); 30.1.2022 (Kumasi), 4.3.2022 (Kumasi), 8.3.2022 (Kumasi), 13.3.2022 (Kumasi), 22.4.2022 (Kumasi), 23.5.2022 (Kumasi?), 17.7.2022 (Kumasi), accessed 29.8.2022.
+280 `https://www.facebook.com/profile.php?id=100010935812364`, 11.11.2021 (Accra), 11.12.2021 (Accra), 6.1.2022 (poster); 30.1.2022 (Kumasi), 4.3.2022 (Kumasi), 8.3.2022 (Kumasi), 13.3.2022 (Kumasi), 22.4.2022 (Kumasi), 23.5.2022 (Kumasi?), 17.7.2022 (Kumasi), accessed 29.8.2022.
 
-281 https://www.facebook.com/profile.php?id=100010935812364, 21.4.2022 (fundraising call in support of orphanage), 1.5.2022 (donation of clothes to orphans), accessed 29.8.2022.
+281 `https://www.facebook.com/profile.php?id=100010935812364`, 21.4.2022 (fundraising call in support of orphanage), 1.5.2022 (donation of clothes to orphans), accessed 29.8.2022.
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_306_0.png)
 
 FIGURE 29 Daybreak Dawah Charity. Signpost of Daybreak Dawah Charity in Kumasi
+
 PHOTO: HOLGER WEISS/2018
 
 图 29 Daybreak Dawah Charity。库马西的 Daybreak Dawah Charity 路标
+
 照片：HOLGER WEISS/2018
 
 Wa 地区的伊斯兰青年非政府组织 Hikmatullah Research Foundation (HRF) 组织季节性外展项目，名为 Ramadan Sadaqa Quest（2015 年、2016 年）和 Ramadan Sadaqa Trip（2017 年）。它通过 Facebook 上对 zakat al-fitr 捐赠的呼吁募集现金、衣物和食物。该项目于 2015 年启动时在 Wa 四所选定的高级中学和一个农村社区开展开斋活动，以及向 Wa 地区医院捐赠，随后将重点转移并在 2016 年和 2017 年针对 Wa 盲人学校以及 Wa West 区一些农村社区。282 显然，似乎 HRF 此后已停止其活动；至少其 Facebook 账户对其活动没有进一步更新。
 
 另一方面，Tamale 的 Tiyumba Hope Foundation 是一项最近由穆斯林名人发起的倡议，其季节性外展活动称为 THF Ramadan Sadaqa，从其成员处收集现金和食物；283
-282 https://www.facebook.com/Hikmatullah-Research-Foundation-668552963239832/, 29.6.2015, 2.7.2015, 25.12.2015, 26.5.2016, 27.6.2016, 25.7.2016, 11.6.2017, 26.6.2017, 14.7.2017, 19.7.2017, all accessed 30.12.2021.
-
-283 Announcement of start of THF Ramadan Sadaqa 2021, https://www.facebook.com/tiyumbahopefoundation20, 19.4.2021, accessed 15.1.2022.
 
 接受者是北部地区农村社区中的寡妇和孤儿。284
 
-284 Mohammed Gadafi，“Tiyumba Hope Foundation 为斋月向寡妇、孤儿分发食品”，20.4.2021, https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Tiyumba-Hope-Foundation-distribute-food-items-to-widows-orphans-for-Ramadan-1237681, accessed 15.1.2022.
+284 Mohammed Gadafi，“Tiyumba Hope Foundation 为斋月向寡妇、孤儿分发食品”，20.4.2021, `https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Tiyumba-Hope-Foundation-distribute-food-items-to-widows-orphans-for-Ramadan-1237681`, accessed 15.1.2022.
 
-关于 Gosoa 的 *Sadaqa Association*、Facebook 群组 *SadaqaOnline.com* 以及库马西的社交媒体平台 *Sadaqount* 的活动知之甚少。前两家组织似乎属于同一青年运动或倡议，因为它们使用相同的标志。285 两者都是 *daʿwa* 组织，并通过 *zakat al-fitr* 和 *sadaqa* 捐赠为其斋月供餐项目提供资金；它们于 2021 年 5 月在 Facebook 上发布了首次呼吁。*Sadaqount* 则敦促其追随者在 2021 年开斋节为 *sadaqa* 捐赠 20,000 瓶水，并发布了 2021 年 *zakat* 的 *nisab* 计算。286
+
+
+关于 Gosoa 的 `Sadaqa Association`、`Facebook` 群组 `SadaqaOnline.com` 以及库马西的社交媒体平台 `Sadaqount` 的活动知之甚少。前两家组织似乎属于同一青年运动或倡议，因为它们使用相同的标志。285 两者都是 `daʿwa` 组织，并通过 `zakat al-fitr` 和 `sadaqa` 捐赠为其斋月供餐项目提供资金；它们于 2021 年 5 月在 Facebook 上发布了首次呼吁。`Sadaqount` 则敦促其追随者在 2021 年开斋节为 `sadaqa` 捐赠 20,000 瓶水，并发布了 2021 年 `zakat` 的 `nisab` 计算。286
 
 285 见 https://m.facebook.com/Sadaqa-onlinecom-105406038212472/, 和 https://www.facebook.com/Sadaqa-Association-103138211845264/, both accessed 11.1.2022.
 
@@ -3921,14 +4037,13 @@ Wa 地区的伊斯兰青年非政府组织 Hikmatullah Research Foundation (HRF)
 
 众筹已成为互联网时代为各种项目筹集资金的重要工具。通常，它涉及三种类型的参与者：发起人、支持者以及调解或促进组织，通常是 GlobalGiving 等互联网平台。然而，下面讨论的两个案例改变了众筹的概念，因为促进者不是 dot-com 组织，而是社交媒体，包括 Facebook 和 WhatsApp。大多数穆斯林 CSO 和 NGO 使用社交媒体筹集资金，尽管主要是在有限的时期内。最常见形式是在斋月期间在社交媒体上发起呼吁，由发起人（以组织或伊玛目的名义）向协会、团体或组织的成员和支持者呼吁为开斋节（开斋和宰牲）捐款。有时它们也针对海外成员。尽管如此，这种众筹形式是临时性的，通常没有要筹集的目标金额。或者，如某些斋月呼吁的情况，目标筹款金额可以在一个月内筹集。
 
-阿克拉的 *Save Aid Project*（SAP，见图 30）于 2016 年以呼吁斋月和开斋捐款开始。自那时起，它已举办年度开斋，
+阿克拉的 `Save Aid Project`（SAP，见图 30）于 2016 年以呼吁斋月和开斋捐款开始。自那时起，它已举办年度开斋，
+
 284 Mohammed Gadafi，“Tiyumba Hope Foundation 为斋月向寡妇、孤儿分发食品”，20.4.2021, https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Tiyumba-Hope-Foundation-distribute-food-items-to-widows-orphans-for-Ramadan-1237681, accessed 15.1.2022.
 
 285 见 https://m.facebook.com/Sadaqa-onlinecom-105406038212472/, 和 https://www.facebook.com/Sadaqa-Association-103138211845264/, both accessed 11.1.2022.
 
 286 https://www.facebook.com/sadaqount/, 11.5.2021, 13.9.2021, accessed 11.1.2022.
-
-
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_308_0.png)
 
@@ -3949,39 +4064,40 @@ Ayuna Huudu 的主要挑战是将他的志愿组织转变为拥有薪资员工�
 Feed the Street 和 Eid Feast Ghana 是两个近期有针对性的、专门用途的斋月活动，广泛使用社交媒体的例子。Feed the Street（FTS）活动最初由阿克拉的一个青年协会 The Muslim Society 于 2020 年发起，目标是阿克拉和库马西的小贩。当其他非政府组织和协会，包括 KR Foundation、Sawrah Foundation、Back to the Community、人道主义机构和 Al-Farhaan Family 加入活动，同时获得 KR Live Media、A+Concept、Reigans 和 Shams Enterprise 等当地私营企业和创业公司的支持时，该活动获得了动力。2020 年的活动主要由 Facebook 上的每日文字帖子加上几段视频组成，而组织者在 2021 年大量使用由男性和女性活动人士背书的短视频来号召加入活动。293 至少组织者认为他们的活动是成功的——2020 年，他们在阿克拉喂养了 500 人；2021 年，他们在阿克拉喂养了 1,000 人，并在库马西组织了类似活动，喂养了 500 人；2022 年，他们在阿克拉喂养了 1,000 人，在库马西喂养了 500 人，并将活动扩展到塔马利，在那里喂养了 500 人。294
 
 293 有关 2020 年和 2021 年 Feed the Street 活动，请进一步参阅 https://m.facebook.com/Feed-The-Street-111929177218259/。Sawrah Foundation 和 KR Foundation 仅在 2020 年积极参与了该活动，见 https://m.facebook.com/Sawrah-Foundation-SF-561247134376004/，FTS 帖子 2020 年 6 月 10 日、2020 年 7 月 22 日（视频）；https://www.facebook.com/krfoundationgh/，FTS 帖子 2020 年 5 月 9 日–7 月 22 日，访问时间 2022 年 2 月 3 日。
+
 294 https://www.facebook.com/Feed-The-Street-111929177218259, 2022 年 5 月 28 日，访问时间 2022 年 8 月 29 日。
 
 相比之下，Eid Feast Ghana 是库马西的一个本地活动，始于 2019 年的 Eid Feast for Prisoners 和 Eid Feast 2k19。虽然 COVID-19 在 2020 年阻碍了该项目，但组织者在 2021 年重新启动了它，导致捐赠了价值 GHS 8,000（1,300 美元）的食品。295 2022 年，该团体支持了 150 户家庭，一年后为 160 户。296
 
 295 https://www.facebook.com/Eid-Feast-Ghana-454901921910937/.
+
 296 https://www.facebook.com/profile.php?id=100068478520245, 2022 年 5 月 6 日，2023 年 4 月 25 日，访问时间 2023 年 8 月 21 日。
 
 雄心勃勃的、长期众筹活动用于 sadaqa jariya 或持续慈善在 2017 年之前似乎在加纳穆斯林互联网界是缺席的。那年二月，库马西理工学院的学生 Fareed Ibrahim 和他的同伴在 Facebook 上发起“每月一百万戈塞瓦”活动。297 起初，发起者和他们的支持者将自己定义为一个本地穆斯林青年团体，以推动伊斯兰社会发展298，但于 2018 年 9 月正式成立为伊斯兰社区协会。299 “每月一百万戈塞瓦”活动很快在 Facebook 上传播，其中得到 Deen TV 等支持，并与各种穆斯林 da‘wa 和
 
-青年 Facebook 群组和网络相关联，例如 *Al-Noor Ghana Foundation*。^301 在 2017 年 3 月的初始帖子中，Fareed Ibrahim 宣布，
+青年 Facebook 群组和网络相关联，例如 `Al-Noor Ghana Foundation`。^301 在 2017 年 3 月的初始帖子中，Fareed Ibrahim 宣布，
 
 > > ... 我们只需要 100 万名愿意每月捐赠 60 戈塞瓦持续一年的穆斯林）：如果这样做，我们将在年底筹集到 GHC 720 万 [约 1.2 美元]，即 0.60* 1000000*^12 = 7,200,000。这笔钱足以建造最漂亮的 makaranta 建筑和三辆全新的 49 座 Yutong 巴士。^302
 
 伊斯兰社区医院项目的启动是在 2017 年 5 月由一名建筑师无偿绘制建筑平面图。^303 年底，活动愿景扩大，不仅包括古兰经背诵中心，还将其长期项目增加为建设伊斯兰医院，为公众提供医疗服务，采用伊斯兰医疗体系的特殊模式，并启动面向初入社会的低价住房项目。^304
 
 301 在 Al-Noor Ghana Foundation Facebook 账号上链接到 Deen TV 的呼吁和支持，2018 年 8 月 15 日，https://www.facebook.com/page/772924506195833/search/?q=Deen，访问时间 2021 年 10 月 5 日。
+
 302 https://www.facebook.com/One-Million-Muslims-60-Pesewas-a-Month-Project-1112423655551697/, 2017 年 3 月 3 日，访问时间 2021 年 8 月 7 日。
+
 303 2017 年 5 月 20 日；3.01 MILLION MUSLIMS 60 PESEWAS A MONTH CAMPAIGN
+
 304 https://www.facebook.com/One-Million-Muslims-60-Pesewas-a-Month-Project-1112423655551697/, 2017 年 12 月 9 日，访问时间 2021 年 8 月 7 日，以及“新加入成员信息”，https://www.facebook.com/One-Million-Muslims-60-Pesewas-a-Month-Project-1112423655551697/, 2018 年 3 月 12 日/2018 年 6 月 21 日/2018 年 7 月 23 日，访问时间 2021 年 8 月 7 日。
 
-*Islamic Community Association* 的学校项目也取得了首个里程碑。到 2018 年 9 月，该项目列出了 932 名成员，通过众筹筹集了 GHS 11,557.76 [约 1,870 美元]，并在八个地区（大阿克拉、阿散蒂、布朗阿哈弗、上东、上西、北部、西部、东部、中部）建立了代表处。305 然而，不到一年后，该团体面临了一次小危机，当它宣布到 2020 年 7 月活动已收到约 GHS 18,000（约 2,900 美元）时，并宣布：
+`Islamic Community Association` 的学校项目也取得了首个里程碑。到 2018 年 9 月，该项目列出了 932 名成员，通过众筹筹集了 GHS 11,557.76 [约 1,870 美元]，并在八个地区（大阿克拉、阿散蒂、布朗阿哈弗、上东、上西、北部、西部、东部、中部）建立了代表处。305 然而，不到一年后，该团体面临了一次小危机，当它宣布到 2020 年 7 月活动已收到约 GHS 18,000（约 2,900 美元）时，并宣布：
 
 > > 为什么我们还没有用筹集到的资金做点什么？根据我们的建筑设计，我们至少需要 4 块地（但按筹集到的金额，我们只能负担 3 块）——今晚星期五 2019 年 7 月 19 日 In Shaa Allah，
 
 305 2018 年 9 月 16 日，以及“了解本项目的地区代表”，2018 年 9 月 27 日，https://www.facebook.com/One-Million-Muslims-60-Pesewas-a-Month-Project-1112423655551697/，访问时间 2022 年 1 月 26 日。
 
-
-
 我们将就是否应该缩小项目规模、采用不同的筹资策略，或对领导层进行适当改革并尝试新阵容进行广泛讨论。306
 
 在与建筑设计师协商后，计划于八月缩小规模，一个月后，该团体成功在恩通索购得两块土地。307 虽然它无力购买另外两块剩余土地（它向成员发出新的呼吁，要求增加捐款以确保四块土地），但该团体——此时已注册为伊斯兰社区协会——开始在土地上工作。到2021年5月，它已制作了3,500块建筑砖并围起了这两块地。308
-
-Race 4 Aid 也是一个第二代穆斯林非政府组织，广泛使用社交媒体筹集资金，同时向其本地和外国捐助者（其主要捐助者似乎在阿联酋）报告其各种农村社区活动的进展（Drink Life Campaign、Water4all Campaign、Building Bridges Campaign [即带清真寺的校舍]、古尔邦和开斋节礼物、孤儿赞助）。根据其在2021年6月下旬至9月下旬在 Facebook 上的帖子，它宣布在中央大区阿戈纳东区 Obrecheowo 社区（6月23日）、中央大区 Old Manponteng（7月7日）完成水项目，在东部大区 Seyikrom（7月8日）和北部大区 Nyakpala（7月17日）向孤儿发放月度津贴，在开斋节期间向 Nyakpala 的有孤儿的老人发放现金津贴（7月18日），向大阿克拉地区孤儿（7月19日）发放开斋节礼物，向东北大区 Buayinny 和北部大区 Kagbali（7月20日）的家庭户主赠送开斋节礼物，Zenu 社区/阿克拉（7月21日），Botiano 社区（7月22日），北部大区 Chashegu（7月23日），在 Tampion 社区完成清真寺项目（7月25日），并提醒其追随者“我们仍在 Dhul Hijjah 月，多倍善行仍被推荐”（7月30日）。八月，它报告了向孤儿发放津贴的情况（8月5日和12日），呼吁缓解气候变化和水资源短缺（“种一棵树，受环境友好活动的启发。一起，我们恢复了优质的地下水”，8月6日），宣布在 Adenta Commandos 完成伊斯兰学校项目（8月13日），同时在东北大区 Buayinny（8月23日）和中央大区 Gomoa Mpota（8月30日）启用水项目。九月，关于其孤儿赞助、水和清真寺的几乎每日更新仍在继续，另外还在中央大区阿戈纳斯韦德鲁区启动了其国家健康保险服务项目（9月9日）。309
 
 306 “A million Ummah 60 pesewas a month fundraiser Update,” https://www.facebook.com/One-Million-Muslims-60-Pesewas-a-Month-Project-1112423655551697, 19.7.2019, accessed 26.1.2022.
 
@@ -3995,6 +4111,8 @@ Race 4 Aid 也是一个第二代穆斯林非政府组织，广泛使用社交媒
 
 Sayfudeen 基金会则在北部大区运营。该慈善机构的发起人是 Sheikh Khalid Abdul Mumin（1981 年出生），他于 2017 年与 Haji Shaibu Abiru 一起成立了该组织。后者此后一直担任该基金的负责人。该基金的总部位于塔马利。其主要活动地点在塔马利和宾比拉。
 
+
+
 该基金将自己定位为一个地区性自助倡议，是由一群穆斯林青年组成的成果，“他们聚集在一起，将现金、实物和物资资源汇聚起来，以便为了真主的缘故将它们送到社会中的有需要者手中。”310 它是少数在主页上列出其成员的穆斯林信仰组织之一，显示了其在 2017 年的影响力。48 名被命名成员中有 19 名居住在塔马利，其他人居住在宾比拉（18 名）、切雷波尼（1 名）、詹加（1 名）、坎帕伊（1 名）、库马西（1 名）、纳勒里古（1 名）、普萨加（2 名）和扎布祖古（3 名），以及伊朗的一人。311
 
 该基金列出宣教、教育和人道主义项目为其主要活动领域，包括清真寺建设和向非穆斯林社区的外展项目、资助优秀但贫困的学生、支持孤儿和被遗弃儿童、帮助贫困社区中的有需要者以及帮助穆斯林或因需要接受复杂手术而危及生命的人。312 按照其对宣教的关注，该基金的第一个项目是在塔马利大都会区 Tampei Kukuo 建设一座清真寺313，并在 2017 年呼吁捐赠头巾、zalabias（油炸面食）和衣服给贫困人群，以便他们在 2017 年庆祝开斋节。314
@@ -4003,64 +4121,69 @@ Sayfudeen 基金会则在北部大区运营。该慈善机构的发起人是 She
 
 Sayfudeen 基金会在 Facebook 上的帖子似乎表明，2017 年斋月期间的活动并未得到跟进，或者至少此后的开斋节活动没有留下任何帖子。然而，2021 年 5 月，该基金在北部大区的选定高级中学组织了开斋饭聚会，317 表明类似的活动在过去几年中也存在，但未在 Facebook 上留下痕迹，或者该组织开辟了新的活动领域。
 
-312 “General List and Targeted Projects,” sayfudeenfund.simplesite.com/433950535, accessed 3.7.2021.
-313 “Construction of a masjid at Tampei Kukuo,” 12.5.2017, sayfudeenfund.simplesite.com/433952461, accessed 3.7.2021.
-314 “Celebrating This year's Eidul Fitr with the poor,” 14.6.2017, sayfudeenfund.simplesite.com/433852303, accessed 3.7.2021.
-315 https://www.facebook.com/sayfudeenfund/.
-316 https://www.facebook.com/sayfudeenfund/, 22.6.2017; 23.12.2018; 14.5.2020, 22.5.2020, 30.12.2020; 8.3.2021, 22.3.2021, accessed 12.7.2021.
-317 https://www.facebook.com/sayfudeenfund/, 15.5.2021, accessed 12.7.2021.
+312 “General List and Targeted Projects,” `sayfudeenfund.simplesite.com/433950535`, accessed 3.7.2021.
+
+313 “Construction of a masjid at Tampei Kukuo,” 12.5.2017, `sayfudeenfund.simplesite.com/433952461`, accessed 3.7.2021.
+
+314 “Celebrating This year's Eidul Fitr with the poor,” 14.6.2017, `sayfudeenfund.simplesite.com/433852303`, accessed 3.7.2021.
+
+315 `https://www.facebook.com/sayfudeenfund/`.
+
+316 `https://www.facebook.com/sayfudeenfund/`, 22.6.2017; 23.12.2018; 14.5.2020, 22.5.2020, 30.12.2020; 8.3.2021, 22.3.2021, accessed 12.7.2021.
+
+317 `https://www.facebook.com/sayfudeenfund/`, 15.5.2021, accessed 12.7.2021.
 
 Sayfudeen 基金会在 Facebook 和主页上提供的照片和信息显示，该组织是由年轻穆斯林发起的。该组织似乎完全依赖其成员的捐款，迄今为止尚未建立与全国或国际穆斯林组织或资助机构的任何可见联系。迄今为止，该组织已协助建造了两座清真寺和一所小学，并组织了（至少一次）斋月募捐。对于一个没有外部财政援助的地区性自助组织来说，这已相当令人印象深刻。然而，实现其许多目标，例如学生赞助和孤儿支持，要么需要一个能够支持此类活动的更庞大的成员，要么需要全国/外国穆斯林慈善家或慈善机构的支持。
 
-*Aris Social Centre* 是接收被确定为 *sadaqa* 捐赠的本地穆斯林非政府组织的例子。成立于 2009 年，它使用本地收集的 *sadaqa* 在塔马利及其周边乡村建造清真寺和钻井。“人们愿意支持清真寺建设，因为它在后世有回报，”Sheikh Jamal Deen Omar Muhammad 解释道，并强调这些捐赠是 *sadaqa garin* 或“*sadaqa* 将会留存”。此外，该中心每年还收到本地捐赠用于其开斋饭计划；2018 年，三人支付了该计划并在每日封斋后为一百人提供食物。318
+`Aris Social Centre` 是接收被确定为 `sadaqa` 捐赠的本地穆斯林非政府组织的例子。成立于 2009 年，它使用本地收集的 `sadaqa` 在塔马利及其周边乡村建造清真寺和钻井。“人们愿意支持清真寺建设，因为它在后世有回报，”Sheikh Jamal Deen Omar Muhammad 解释道，并强调这些捐赠是 `sadaqa garin` 或“`sadaqa` 将会留存”。此外，该中心每年还收到本地捐赠用于其开斋饭计划；2018 年，三人支付了该计划并在每日封斋后为一百人提供食物。318
 
-*Anbariya Relief Project*（ARP）另一方面，是塔马利 Anbariya Sunni 社区的一个临时倡议。它在北部大区 1989 年以及 2003/04 年洪水过后组织了其首次活动。与其在 2018 年严重洪水后的第三次活动相比，前两次活动是在没有任何与国家灾害管理组织（NADMO）合作的情况下组织的，团体收集和分发救济物资花了很长时间。319
+`Anbariya Relief Project`（ARP）另一方面，是塔马利 Anbariya Sunni 社区的一个临时倡议。它在北部大区 1989 年以及 2003/04 年洪水过后组织了其首次活动。与其在 2018 年严重洪水后的第三次活动相比，前两次活动是在没有任何与国家灾害管理组织（NADMO）合作的情况下组织的，团体收集和分发救济物资花了很长时间。319
 
-Anbariya Sunni 社区 2018 年的救济活动在全国引起了关注。洪水发生后不久，该社区负责人 Sheikh Saeed Abubakar Zakaria 召集了 Anbariya 伊玛目们，他们决定发起一项支持倡议。这一次，ARP 与 NADMO 合作；其在 Anbariyya 场所分类的救济物资由 NADMO 根据书面名单分发。320 ARP 提供了诸如衣物等救济物资，
-
-食品、建筑材料、器具和价值 GHS 3,854,000（约 624,000 美元）的垫子用于后续分发。321 2018 年行动的积极经验促使安巴里亚逊尼社区考虑将临时救济委员会转变为永久性救济机构，并将 ARP 转变为救济服务基金。据计划，该基金将接收天课和萨达卡捐赠用于紧急干预。322
+Anbariya Sunni 社区 2018 年的救济活动在全国引起了关注。洪水发生后不久，该社区负责人 Sheikh Saeed Abubakar Zakaria 召集了 Anbariya 伊玛目们，他们决定发起一项支持倡议。这一次，ARP 与 NADMO 合作；其在 Anbariyya 场所分类的救济物资由 NADMO 根据书面名单分发。320 ARP 提供了诸如衣物等救济物资，食品、建筑材料、器具和价值 GHS 3,854,000（约 624,000 美元）的垫子用于后续分发。321 2018 年行动的积极经验促使安巴里亚逊尼社区考虑将临时救济委员会转变为永久性救济机构，并将 ARP 转变为救济服务基金。据计划，该基金将接收天课和萨达卡捐赠用于紧急干预。322
 
 塔马莱慈善协会随后在其 2019 年主页上邀请潜在捐助者投资其萨达卡贾里亚项目，即清真寺、供水与卫生、学校、孤儿资助以及扶贫（即开斋饭和宰牲节）。然而，该协会的下落不明，因为其主页与伊玛目达瓦伊斯兰中心的主页相同，且迄今为止在 Google 上未留下任何可识别的痕迹。323 推测，后者中心与伊玛目达瓦组织有关，该非政府组织由 Sheikh Hussein Khalid Jimah 于 2003 年创立。该组织开展的项目与塔马莱慈善协会和伊玛目达瓦伊斯兰中心类似，其资金部分来自会员，部分来自沙特、卡塔尔和阿联酋慈善家的捐赠。324
 
-穆斯林青年协会（MYA）是一个穆斯林*宣教*团体，总部设在上西部的 Wa。成立该团体的动因来自曾是加纳穆斯林学生协会成员的前高级中学学生。MYA 自 2010 年 1 月起活跃，最初以穆斯林青年发展组织和缩写 EDUFUND 的名称为人所知。然而，由于 EDUFUND 被视为老年人的团体，经与 Wa 市政的各利益相关者协商后，名称改为 MYA，这些利益相关者包括地区首席伊玛目、市政首席伊玛目、Yerinaa（穆斯林首领）以及 Ahlus-Sunna 的多位伊玛目。325
+穆斯林青年协会（MYA）是一个穆斯林`宣教`团体，总部设在上西部的 Wa。成立该团体的动因来自曾是加纳穆斯林学生协会成员的前高级中学学生。MYA 自 2010 年 1 月起活跃，最初以穆斯林青年发展组织和缩写 EDUFUND 的名称为人所知。然而，由于 EDUFUND 被视为老年人的团体，经与 Wa 市政的各利益相关者协商后，名称改为 MYA，这些利益相关者包括地区首席伊玛目、市政首席伊玛目、Yerinaa（穆斯林首领）以及 Ahlus-Sunna 的多位伊玛目。325
 
-321 Tim Afrik, “安巴里亚伊斯兰学院向 NADMO 捐赠,” 4.11.2018, https://tamaleonline.net/2018/11/04/anbariya-islamic-institute-donates-to-nadmo/, 访问于 17.5.2019; https://www.facebook.com/9328069109094/photos/anbariya_relief_project-arp the-anbariya-islamic-institute-in-tamale-has-presente/202367812768628/, 访问于 17.5.2019.
+321 Tim Afrik, “安巴里亚伊斯兰学院向 NADMO 捐赠,” 4.11.2018, `https://tamaleonline.net/2018/11/04/anbariya-islamic-institute-donates-to-nadmo/`, 访问于 17.5.2019; `https://www.facebook.com/9328069109094/photos/anbariya_relief_project-arp the-anbariya-islamic-institute-in-tamale-has-presente/202367812768628/`, 访问于 17.5.2019.
 
 322 与安巴里亚教育综合体秘书长兼校长 Sheikh Dr Tamin 的访谈，Tamale，10.12.2019。
 
-323 Tamale Charity Association: https://tamalecharityassociation.online/（主页于 2024 年 5 月已失效）；Imam Dawa Islamic Center: https://imamdawaislamiccenter.org/。
+323 Tamale Charity Association: `https://tamalecharityassociation.online/`（主页于 2024 年 5 月已失效）；Imam Dawa Islamic Center: `https://imamdawaislamiccenter.org/`。
 
 324 与伊玛目达瓦组织秘书 Sheikh Abdul Majeed 以及伊玛目达瓦组织成员 Sheikh Abdul Falah 的访谈，Tamale 10.4.2019。
 
-325 A BRIEF HISTORY OF MYA, 10.3.2019; THE GENESIS OF MYA, 22.9.2019, https://www.facebook.com/MYA UWR/, 访问于 10.8.2021。
+325 A BRIEF HISTORY OF MYA, 10.3.2019; THE GENESIS OF MYA, 22.9.2019, `https://www.facebook.com/MYA UWR/`, 访问于 10.8.2021。
 
 MYA 的使命是在 Wa 为穆斯林青年提供一个平台，“朝着对伊斯兰更可持续的理解和欣赏”，并发展成为“在追求纪律、高道德标准和宗教责任方面卓越的有组织团体，以促进穆斯林青年对伊斯兰的发展和欣赏”。该协会集中于三个重点领域。其首要目标是通过支持并最终建立伊斯兰教学和学习中心来普及《古兰经》学习，已通过偶尔向伊斯兰学习中心捐赠伊斯兰学习和教学材料，如白板、记号笔、长凳和《古兰经》来实现。326 为实现第二个目标，即传播伊斯兰的真正信息以消除宗教误解、媒体神话和反伊斯兰偏见，该协会为青年组织了关于时事问题的年度研讨会。327 该协会特别强调其第三个目标，即鼓励穆斯林妇女学习伊斯兰，因为她们将成为未来世代的教师，“怀有多元文化主义和和平共处的愿景”。因此，它安排了年度斋月女士研讨会，并有兴趣为妇女单独建立独立的经学院（或更确切地说是周末课程）。328
 
-穆斯林青年协会收取月度会员费以资助其活动。将此类捐赠定义为 *萨达卡* 并非牵强，因为它曾引用伊玛目提尔密济的话：“萨达卡消除罪恶，正如水熄灭火焰。” 通过动员月度捐赠，MYA 于 2019 年设定的目标是购买一辆医疗紧急服务车辆，329 并建立一所具有寄宿设施和健康中心的现代伊斯兰学习中心。后一项目的启动是在 2019 年 6 月，当时 MYA 在 Sing 收购了 50 块地皮。330
+穆斯林青年协会收取月度会员费以资助其活动。将此类捐赠定义为 `萨达卡` 并非牵强，因为它曾引用伊玛目提尔密济的话：“萨达卡消除罪恶，正如水熄灭火焰。” 通过动员月度捐赠，MYA 于 2019 年设定的目标是购买一辆医疗紧急服务车辆，329 并建立一所具有寄宿设施和健康中心的现代伊斯兰学习中心。后一项目的启动是在 2019 年 6 月，当时 MYA 在 Sing 收购了 50 块地皮。330
 
-Wa 的另一项地方倡议是由 *伊斯兰兄弟会贝特·马尔基金会* 发起的建立利马尼亚广播电台的运动。该基金会是一个 *宣教* 组织，并于 2019 年注册。它于 2021 年启动了伊斯兰广播项目，并在 Facebook 上呼吁支持广播站场地的建设。331 *穆斯林知识分子网络*（MIN）最后是鼓励穆斯林青年学术卓越的地方倡议。受 2019 年在 Wa 举行的穆斯林青年峰会的启发，该网络自 2022 年起组织了年度 MIN 奖学金计划，以表彰在各自教育努力领域树立榜样的中小学生。此外，它还组织了多场创业论坛。332
+Wa 的另一项地方倡议是由 `伊斯兰兄弟会贝特·马尔基金会` 发起的建立利马尼亚广播电台的运动。该基金会是一个 `宣教` 组织，并于 2019 年注册。它于 2021 年启动了伊斯兰广播项目，并在 Facebook 上呼吁支持广播站场地的建设。331 `穆斯林知识分子网络`（MIN）最后是鼓励穆斯林青年学术卓越的地方倡议。受 2019 年在 Wa 举行的穆斯林青年峰会的启发，该网络自 2022 年起组织了年度 MIN 奖学金计划，以表彰在各自教育努力领域树立榜样的中小学生。此外，它还组织了多场创业论坛。332
 
-326 CONTINUATION: Muslim Youth Association, 7.8.2019; [教学材料捐赠], https://www.facebook.com/MYAUWR/, 20.6.2019, 访问于 10.8.2021。
-327 CONTINUATION: Objective No. 2, https://www.facebook.com/MYAUWR/, 26.8.2019, 访问于 10.8.2021。
-328 CONTINUATION, https://www.facebook.com/MYAUWR/, 11.1.2020, 访问于 10.8.2021。
-329 https://www.facebook.com/MYAUWR/, 28.8.2019, 访问于 10.8.2021。
-330 https://www.facebook.com/MYAUWR/, 23.6.2019（土地收购），16.6.2020（钻井平台建设），均访问于 10.8.2021。
-331 Islamic Brotherhood for Bayt al Mal Foundation Ghana, https://www.facebook.com/baytumal gh/?ref=py_c, 16.10.2021, 25.10.2021, 访问于 16.12.2021。
+326 CONTINUATION: Muslim Youth Association, 7.8.2019; [教学材料捐赠], `https://www.facebook.com/MYAUWR/`, 20.6.2019, 访问于 10.8.2021。
 
-332 https://www.facebook.com/profile.php?id=100079993028598。
+327 CONTINUATION: Objective No. 2, `https://www.facebook.com/MYAUWR/`, 26.8.2019, 访问于 10.8.2021。
+
+328 CONTINUATION, `https://www.facebook.com/MYAUWR/`, 11.1.2020, 访问于 10.8.2021。
+
+329 `https://www.facebook.com/MYAUWR/`, 28.8.2019, 访问于 10.8.2021。
+
+330 `https://www.facebook.com/MYAUWR/`, 23.6.2019（土地收购），16.6.2020（钻井平台建设），均访问于 10.8.2021。
+
+331 Islamic Brotherhood for Bayt al Mal Foundation Ghana, `https://www.facebook.com/baytumal gh/?ref=py_c`, 16.10.2021, 25.10.2021, 访问于 16.12.2021。
+
+332 `https://www.facebook.com/profile.php?id=100079993028598`。
 
 ### 启动社区发展
 
 社区发展和赋权已成为加纳穆斯林非政府组织的核心使命。以一种或另一种方式，它们中的大多数都在通过从为现有伊斯兰教育机构筹集资金到建立伊斯兰幼儿园、初级和中级综合伊斯兰/世俗教育设施等活动来促进教育。其中少数组织，最著名的是 Dr Sheikh Osman Nuhu Sharubutu 教育信托基金（SONSETFUND，见第 4.1 章以下）和加纳天课和萨达卡信托基金（见第 5.3.1 章），将其核心使命定为为贫困穆斯林学生提供中学和大学奖学金。其他组织，如总部位于阿克拉的 Rayuwa 基金会，则专注于心理健康和福祉倡导与培训，并与学生和学校管理层合作开发促进整体学习方法的课外活动。作为其活动的一部分，它设计了儿童保护课程，并以俱乐部为基础开展儿童保护学校，以提高人们对儿童保护问题的认识。此外，它积极致力于遏制早婚和在加纳终结针对妇女和女童的暴力。1 总部位于中部地区 Agona Swedru 的青年教育与意识协会（YEAS）则最初专注于教育支持项目，最著名的是为穆斯林和非穆斯林学生提供奖学金和捐赠。2 此外，它还安排年度青年发展营进行技能培训；在营地结束时，参与者会获得启动资金，以便在大学期间和之后从事创收活动。3 2023 年，该组织开始实施卫生和供水
 
-1 另见 "Podcast: About or foundation," 3.9.2019, https://www.rayuwafoundation.org/news-and-events/podcast-about-our-foundation/, 访问于 22.11.2020，以及 "Teaching Human Rights," 14.3.2016, https://www.youtube.com/watch?v=opobYpBRSWQ, 和 "Parent Engagement Forum on Child Protection," 7.1.2020, https://www.youtube.com/watch?v=QFXQh5WWkNQ&feature=youtu.be。
+1 另见 "Podcast: About or foundation," 3.9.2019, `https://www.rayuwafoundation.org/news-and-events/podcast-about-our-foundation/`, 访问于 22.11.2020，以及 "Teaching Human Rights," 14.3.2016, `https://www.youtube.com/watch?v=opobYpBRSWQ`, 和 "Parent Engagement Forum on Child Protection," 7.1.2020, `https://www.youtube.com/watch?v=QFXQh5WWkNQ&feature=youtu.be`。
 
-2 "NGO presents scholarships to 44 students," 15.12.2022, https://www.graphic.com.gh/news/general-news/ngo-presents-scholarship-to-44-students.html, 和 "YEAS presents scholarships to 60 students," 19.10.2023, https://www.ghanaweb.com/GhanaHomePage/NewsArchive/YEAS-presents-scholarship-to-60-students-1864778, 均访问于 13.11.2023。
+2 "NGO presents scholarships to 44 students," 15.12.2022, `https://www.graphic.com.gh/news/general-news/ngo-presents-scholarship-to-44-students.html`, 和 "YEAS presents scholarships to 60 students," 19.10.2023, `https://www.ghanaweb.com/GhanaHomePage/NewsArchive/YEAS-presents-scholarship-to-60-students-1864778`, 均访问于 13.11.2023。
 
-3 "220 Muslim youth acquire vocational skills," 12.1.2023, https://www.myjoyonline.com/220-muslim-youth-acquire-vocational-technical-skills/, 访问于 13.11.2023。
-
-
-
+3 "220 Muslim youth acquire vocational skills," 12.1.2023, `https://www.myjoyonline.com/220-muslim-youth-acquire-vocational-technical-skills/`, 访问于 13.11.2023。
 
 项目以及由科威特Alhedaya慈善机构70,000美元项目捐款资助的人道主义救济。⁴
 
@@ -4070,37 +4193,40 @@ Wa 的另一项地方倡议是由 *伊斯兰兄弟会贝特·马尔基金会* �
 
 此外，少数组织专注于解决宗戈（Zongo）社区的卫生问题。虽然提供清洁水几乎是所有穆斯林非政府组织不可或缺的一部分，但粪便管理的新方法，如生物消化池厕所，将在下文第4.3.5节中讨论。其他举措，如穆斯林乌玛发展倡议和全球伊斯兰银行、保险与咨询研究所，则促进伊斯兰投资、小额信贷和小微企业，将在第6.2节中详述。
 
-4 联合国人道主义事务协调厅财务跟踪服务：加纳2023，https://fts.unocha.org/countries/84/flows/2023?order=directional_property&sort=asc，访问于2023年11月13日。Alhedaya Kuwait很可能指科威特的Al-Hidaya慈善协会。
+4 联合国人道主义事务协调厅财务跟踪服务：加纳2023，`https://fts.unocha.org/countries/84/flows/2023?order=directional_property&sort=asc`，访问于2023年11月13日。Alhedaya Kuwait很可能指科威特的Al-Hidaya慈善协会。
 
 5 对谢赫·阿纳斯·陶菲克·易卜拉欣·巴克里和STF执行主任哈桑博士的访谈，库马西，2017年12月12日和2018年9月18日。
 
 #### 1 SONSETFUND与穆斯林学生奖学金
 
+
+
 在2003年全国斋月会议之后，朝着扶贫的工具性方法迈出了第一步。会议期间，全国大伊玛目谢赫·奥斯曼·努胡·沙拉布图提出了建立全国天课基金的必要性。尽管他的呼吁被视为过于雄心勃勃，未能实现建立国家机构，但各穆斯林团体发起了新的举措，旨在以结构性方式帮助贫困穆斯林学生。这种结构性方法通过建立专注于教育项目推广的组织得以实现，例如谢赫·奥斯曼·努胡·沙拉布图的伊斯兰教育信托基金。虽然它并未被定义为天课基金，但其宗旨是将捐赠、天课、施舍或企业资金引导到具有集体/社区/结构性影响的举措中。投资于穆斯林青年的教育已被认识到是赋权穆斯林社区的关键一步。⁶
 
-谢赫·奥斯曼·努胡·沙拉布图的倡议起步缓慢，几年后便陷入沉寂。然而，他在2009年重新启动该项目，成立了谢赫·奥斯曼·努胡·沙拉布图博士教育信托基金（SONSETFUND，也称SUNSETFUND、谢赫·奥斯曼·努胡·沙拉布图教育信托基金；见图31）。⁷ 该基金注册为非政府组织，总部设在国家大伊玛目办公室，谢赫·穆斯塔法·易卜拉欣担任执行委员会主席，阿尔哈吉·库扎伊马·穆罕默德·奥斯曼担任总书记。⁸ 该基金旨在资助教育设施和奖学金项目，⁹ 并着手在全国范围内建设和翻新幼儿园及学校。¹⁰
+谢赫·奥斯曼·努胡·沙拉布图的倡议起步缓慢，几年后便陷入沉寂。然而，他在2009年重新启动该项目，成立了谢赫·奥斯曼·努胡·沙拉布图博士教育信托基金（`SONSETFUND`，也称`SUNSETFUND`、谢赫·奥斯曼·努胡·沙拉布图教育信托基金；见图31）。⁷ 该基金注册为非政府组织，总部设在国家大伊玛目办公室，谢赫·穆斯塔法·易卜拉欣担任执行委员会主席，阿尔哈吉·库扎伊马·穆罕默德·奥斯曼担任总书记。⁸ 该基金旨在资助教育设施和奖学金项目，⁹ 并着手在全国范围内建设和翻新幼儿园及学校。¹⁰
 
-为中学和大学阶段的穆斯林学生提供奖学金和经济支持很快成为该基金的主要活动。¹¹ 2014年，该基金启动了一项计划，以支持家境困难但成绩优异的学生完成中学学业。10个三年期奖学金的资格基于经济需求和初中毕业考试的良好成绩。¹² 到2015年初，该基金承诺为教育计划投入80,000加纳塞地（约13,000美元）。¹³ 根据该计划，资助七名高中学生三年的费用约为20,000加纳塞地（约3,200美元）。此外，该基金还推出了“穆斯林学生支持包年度助学金”，以帮助弱势穆斯林获得加纳高等教育机构的入学资格。¹⁴ 同年，天课与施舍信托基金开始与SONSETFUND合作，为已获得高等教育机构录取的穆斯林和北部学生提供担保。根据该计划，学生在毕业前无需偿还学习贷款，而是在毕业两年后才开始以大幅补贴的利率偿还。¹⁵ 然而最重要的是，该基金与学生贷款信托基金（SLTF）合作，开始为穆斯林学生获得政府助学贷款并受益提供担保。据SONSETFUND的Facebook公告，到2020年，自2011/12学年启动以来，已有超过4,000名穆斯林学生从该安排中受益。¹⁶
+为中学和大学阶段的穆斯林学生提供奖学金和经济支持很快成为该基金的主要活动。¹¹ 2014年，该基金启动了一项计划，以支持家境困难但成绩优异的学生完成中学学业。10个三年期奖学金的资格基于经济需求和初中毕业考试的良好成绩。¹² 到2015年初，该基金承诺为教育计划投入80,000加纳塞地（约13,000美元）。¹³ 根据该计划，资助七名高中学生三年的费用约为20,000加纳塞地（约3,200美元）。此外，该基金还推出了“穆斯林学生支持包年度助学金”，以帮助弱势穆斯林获得加纳高等教育机构的入学资格。¹⁴ 同年，天课与施舍信托基金开始与`SONSETFUND`合作，为已获得高等教育机构录取的穆斯林和北部学生提供担保。根据该计划，学生在毕业前无需偿还学习贷款，而是在毕业两年后才开始以大幅补贴的利率偿还。¹⁵ 然而最重要的是，该基金与学生贷款信托基金（`SLTF`）合作，开始为穆斯林学生获得政府助学贷款并受益提供担保。据`SONSETFUND`的Facebook公告，到2020年，自2011/12学年启动以来，已有超过4,000名穆斯林学生从该安排中受益。¹⁶
 
-然而，2017年加纳政府在中学阶段引入免费教育，加上捐助者疲劳导致的资金减少，促使SONSETFUND进行重组。除其他调整外，该基金终止了帮助穆斯林学生上高中的项目。相反，该基金的唯一目标是通过一项新的奖学金计划来支持大学阶段的穆斯林学生，即帮助贫困学生支付大学学费——金额从每学期900至1,500加纳塞地，或每年3,000加纳塞地（约485美元）不等。到2020年，该基金已资助加纳多所高等教育机构的50多名穆斯林学生的学费。¹⁷
+然而，2017年加纳政府在中学阶段引入免费教育，加上捐助者疲劳导致的资金减少，促使`SONSETFUND`进行重组。除其他调整外，该基金终止了帮助穆斯林学生上高中的项目。相反，该基金的唯一目标是通过一项新的奖学金计划来支持大学阶段的穆斯林学生，即帮助贫困学生支付大学学费——金额从每学期900至1,500加纳塞地，或每年3,000加纳塞地（约485美元）不等。到2020年，该基金已资助加纳多所高等教育机构的50多名穆斯林学生的学费。¹⁷
 
-除了自己的奖学金项目外，该基金还与多个外部合作伙伴合作提供教育项目。2015年，加纳伊斯兰大学学院与SONSETFUND合作，推出了伊玛目培训项目，这是一个针对伊玛目的培训项目。该项目旨在通过提升伊玛目的技能来培训他们，课程包括阿拉伯语和英语、信息与通信技术、公共演讲、伊斯兰法学、清真寺管理、宣教方法（daʿwa）以及筹款技巧。¹⁸ 一年后，该基金宣布了一个由伊朗资助的项目，每年为伊斯兰大学学院的7名穆斯林学生提供奖学金，另有土耳其政府奖学金资助两名加纳穆斯林学生赴土耳其继续学业。¹⁹ 2020年2月，办公室
+除了自己的奖学金项目外，该基金还与多个外部合作伙伴合作提供教育项目。2015年，加纳伊斯兰大学学院与`SONSETFUND`合作，推出了伊玛目培训项目，这是一个针对伊玛目的培训项目。该项目旨在通过提升伊玛目的技能来培训他们，课程包括阿拉伯语和英语、信息与通信技术、公共演讲、伊斯兰法学、清真寺管理、宣教方法（daʿwa）以及筹款技巧。¹⁸ 一年后，该基金宣布了一个由伊朗资助的项目，每年为伊斯兰大学学院的7名穆斯林学生提供奖学金，另有土耳其政府奖学金资助两名加纳穆斯林学生赴土耳其继续学业。¹⁹ 2020年2月，办公室
 
-6 对SONSETFUND总书记阿尔哈吉·库扎伊马·穆罕默德·奥斯曼的访谈，阿克拉，2017年12月6日。
+6 对`SONSETFUND`总书记阿尔哈吉·库扎伊马·穆罕默德·奥斯曼的访谈，阿克拉，2017年12月6日。
 
-7 《大伊玛目介绍SONSETFUND》，2009年7月15日，https://www.modernghana.com/news/22749/chief-imam-introduces-the-sonsetfund.html，访问于2017年11月7日。
+7 《大伊玛目介绍`SONSETFUND`》，2009年7月15日，https://www.modernghana.com/news/22749/chief-imam-introduces-the-sonsetfund.html，访问于2017年11月7日。
 
-8 《大伊玛目促进世俗教育的努力值得称赞》，2016年1月28日，https://newsghana.com.gh/chief-imams-efforts-in-promoting-secular-education-commendable/，访问于2019年2月21日。2020年9月，大伊玛目咨询委员会宣布阿尔哈吉·穆罕默德·马尔祖克为SONSETFUND新任执行主任；参见Ameen,《加纳的全国大伊玛目》，第31页。
+8 《大伊玛目促进世俗教育的努力值得称赞》，2016年1月28日，https://newsghana.com.gh/chief-imams-efforts-in-promoting-secular-education-commendable/，访问于2019年2月21日。2020年9月，大伊玛目咨询委员会宣布阿尔哈吉·穆罕默德·马尔祖克为`SONSETFUND`新任执行主任；参见Ameen,《加纳的全国大伊玛目》，第31页。
 
 9 http://www.sonsetfund.com/about，访问于2017年11月7日；该主页于2024年5月失效。另见 https://www.facebook.com/SONSETFUND/。
 
 10 《大伊玛目促进世俗教育的努力值得称赞》。
 
-11 《穆斯林学生的好消息》，SONSETFUND，2017年9月7日，http://www.sonsetfund.com/newsevents/news?news_id=159b4f0aif77f，访问于2017年11月7日；该主页于2024年5月失效。
+11 《穆斯林学生的好消息》，`SONSETFUND`，2017年9月7日，http://www.sonsetfund.com/newsevents/news?news_id=159b4f0aif77f，访问于2017年11月7日；该主页于2024年5月失效。
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_322_0.png)
 
-图31 SONSETFUND总部位于阿克拉
+图31 `SONSETFUND`总部位于阿克拉
+
 摄影：霍尔格·魏斯/2017
 
 12 《十名高中学生将从Sunset基金受益》，2014年6月30日，https://www.newsghana.com.gh/ten-shs-students-beenfit-sunset-fund/，访问于2019年2月19日。
@@ -4109,7 +4235,7 @@ Wa 的另一项地方倡议是由 *伊斯兰兄弟会贝特·马尔基金会* �
 
 14 《大伊玛目促进世俗教育的努力值得称赞》。
 
-15 Alhaji Alhasan Abdulai，《天课基金与学生贷款信托基金合作支持贫困学生》，2015年10月9日，https://www.modernghana.com/print/648148/1/zakāt-fund-and-students-loans-trust-fund-collaborate-to-support-needy-students.html，访问于2016年1月21日；《教育福利伙伴关系的新趋势——SLTF与宗教团体的故事》，学生贷款信托基金，2015年11月26日，https://www.sltf.gov.gh/emerging-trends-in-educational-welfare-partnerships-the-story-of-sltf-and-religious-bodies/，访问于2017年11月7日。
+15 Alhaji Alhasan Abdulai，《天课基金与学生贷款信托基金合作支持贫困学生》，2015年10月9日，https://www.modernghana.com/print/648148/1/zakāt-fund-and-students-loans-trust-fund-collaborate-to-support-needy-students.html，访问于2016年1月21日；《教育福利伙伴关系的新趋势——`SLTF`与宗教团体的故事》，学生贷款信托基金，2015年11月26日，https://www.sltf.gov.gh/emerging-trends-in-educational-welfare-partnerships-the-story-of-sltf-and-religious-bodies/，访问于2017年11月7日。
 
 16 公告发布于2020年8月10日，https://www.facebook.com/SONSETFUND/，访问于2022年12月30日。
 
@@ -4117,55 +4243,68 @@ Wa 的另一项地方倡议是由 *伊斯兰兄弟会贝特·马尔基金会* �
 
 18 《IUCG愿与穆斯林组织合作》，www.iug.edu.gh/iucg-ready-to-partner-muslim-organizations，访问于2017年11月7日。
 
-19 《SONSETFUND成就一览》，SONSETFUND，2017年8月28日，http://www.sonsetfund.com/newsevents?news_id=159a44263ecdd6&pn=1，访问于2017年11月7日；该主页于2024年5月失效；Alhaji Alhasan Abdulai，《全国大伊玛目基金 [SONSET-
+19 《`SONSETFUND`成就一览》，`SONSETFUND`，2017年8月28日，http://www.sonsetfund.com/newsevents?news_id=159a44263ecdd6&pn=1，访问于2017年11月7日；该主页于2024年5月失效；Alhaji Alhasan Abdulai，《全国大伊玛目基金 [`SONSET-`
 
-国家首席伊玛目办公室与 SONSETFUND 联合加纳德国技术学校培训 2,000 名宗戈青年参加为期六个月的技术技能培训项目，涵盖太阳能、人工智能技术和无人机技术，并基金向赞助商发出呼吁为参与者提供津贴。20
+国家首席伊玛目办公室与 `SONSETFUND` 联合加纳德国技术学校培训 2,000 名宗戈青年参加为期六个月的技术技能培训项目，涵盖太阳能、人工智能技术和无人机技术，并基金向赞助商发出呼吁为参与者提供津贴。20
 
-然而，尚不清楚宗戈青年培训项目是否最终得以实施。截至 2022 年 12 月，SONSETFUND Facebook 账号的更新中未再提及该项目。相反，COVID-19 大流行在 2020 年春季中断了其所有活动，似乎基金此后一直未恢复活动。可以说，基金处于休眠状态的一个原因在于其他非政府组织已接管了其主要使命，即提供奖学金。自 2010 年代中期以来，Zakat and Sadaqa Trust Fund 已成为提供奖学金的主要机构，参见第 5.3.1 章，而 2022 年 GMNGO 数据库列出了 104 个开展教育项目的非政府组织。例如，总部位于阿克拉的 Forever Islam Foundation 为希望在国际开放大学（IOU，前伊斯兰在线大学；之前：https://islamiconlineuniversity.com，新：https://iou.edu.gm/）获得从世俗到宗教知识的博士学位的人提供奖学金。21
+然而，尚不清楚宗戈青年培训项目是否最终得以实施。截至 2022 年 12 月，`SONSETFUND` Facebook 账号的更新中未再提及该项目。相反，COVID-19 大流行在 2020 年春季中断了其所有活动，似乎基金此后一直未恢复活动。可以说，基金处于休眠状态的一个原因在于其他非政府组织已接管了其主要使命，即提供奖学金。自 2010 年代中期以来，Zakat and Sadaqa Trust Fund 已成为提供奖学金的主要机构，参见第 5.3.1 章，而 2022 年 GMNGO 数据库列出了 104 个开展教育项目的非政府组织。例如，总部位于阿克拉的 Forever Islam Foundation 为希望在国际开放大学（IOU，前伊斯兰在线大学；之前：https://islamiconlineuniversity.com，新：https://iou.edu.gm/）获得从世俗到宗教知识的博士学位的人提供奖学金。21
 
-SONSETFUND 在加纳报纸的鼎盛时期曾登上正面头条，最初成功吸引了部分企业捐赠和财务支持，例如加纳电信公司 MTN 和 Tigo（2017 年起：AirtelTigo）、FAN Milk Company、Unibank Ghana Ltd 和 Ghana Commercial Bank。其他捐助者包括国家穆斯林组织，如 ICODEHS 和 Ghana Islamic Microfinance（GIMF），以及国际捐助机构，如土耳其国际发展公司（TIKA）。它还获得了政界人士和企业家以及个人穆斯林慈善家、学者和社区领袖的私人捐赠。22 然而，到 2017 年捐赠开始枯竭，
+`SONSETFUND` 在加纳报纸的鼎盛时期曾登上正面头条，最初成功吸引了部分企业捐赠和财务支持，例如加纳电信公司 `MTN` 和 `Tigo`（2017 年起：`AirtelTigo`）、FAN Milk Company、`Unibank Ghana Ltd` 和 Ghana Commercial Bank。其他捐助者包括国家穆斯林组织，如 `ICODEHS` 和 Ghana Islamic Microfinance（`GIMF`），以及国际捐助机构，如土耳其国际发展公司（`TIKA`）。它还获得了政界人士和企业家以及个人穆斯林慈善家、学者和社区领袖的私人捐赠。22 然而，到 2017 年捐赠开始枯竭，
 
 秘书长 Alhaji Khuzaima Mohammed Osman 建议将基金改组为独立的穆斯林捐赠、教育和奖学金学院。他还计划通过宣传基金的活动和项目，在穆斯林社区中提高认识，以应对捐助者疲劳。此外，他提议通过深化捐助者与大学之间的互动来削减行政成本。²³ 然而，这些计划从未实现。
 
-SONSETFUND 曾在斋月期间获得现金和实物捐赠。然而，2020 年政界人士、企业机构和外交使团的食物捐赠成为一个问题，全国宗戈政治团体联盟的全国主席 Yahaya Alhassan 指出，“食物捐赠 [...] 伴随着巨大的摄像机，是获得人气的一种廉价方式。” 批评捐助者利用捐赠在即将举行的选举中获得人气，Yahaya Alhassan（ rightly）强调，“食物捐赠不会让辍学的学生重返课堂，也不会遏制宗戈青年面临的贫困恶性循环等其他困境。” 相反，他敦促捐助者向 SONSETFUND 捐款现金，以资助贫困儿童的教育：“通过支票捐赠，首席伊玛目可以有效地规划项目并有效资助基金会塑造穆斯林社区积极发展的议程。”²⁴
+`SONSETFUND` 曾在斋月期间获得现金和实物捐赠。然而，2020 年政界人士、企业机构和外交使团的食物捐赠成为一个问题，全国宗戈政治团体联盟的全国主席 Yahaya Alhassan 指出，“食物捐赠 [...] 伴随着巨大的摄像机，是获得人气的一种廉价方式。” 批评捐助者利用捐赠在即将举行的选举中获得人气，Yahaya Alhassan（ rightly）强调，“食物捐赠不会让辍学的学生重返课堂，也不会遏制宗戈青年面临的贫困恶性循环等其他困境。” 相反，他敦促捐助者向 `SONSETFUND` 捐款现金，以资助贫困儿童的教育：“通过支票捐赠，首席伊玛目可以有效地规划项目并有效资助基金会塑造穆斯林社区积极发展的议程。”²⁴
 
-#### 2 零性别暴力
+## 2 零性别暴力
 
-总部位于阿克拉的 *穆斯林家庭咨询服务*（MFCS）是加纳最古老且仍在活跃的穆斯林非政府组织之一。自 1990 年成立以来，该组织在与政府机构以及联合国人口基金、联合国儿童基金会和世界卫生组织等国际发展机构的合作中脱颖而出，成为先行者。25 它还在家庭计划、生育管理、女性生殖器切割和儿童健康方面发挥作用，并倡导和预防性传播疾病，如 HIV/AIDS。26 其中，MFCS 属于 2011 年《改善家庭健康与福祉跨宗教宣言》的筹备组织之一，该宣言承诺通过提供教育和服务来支持家庭健康，使家庭能够根据其信仰计划怀孕的时间和间隔。27 此外，作为其对社区发展的承诺的一部分，MFCS 通过能力建设开展了收入激活和青年赋权项目，例如缝纫、肥皂制作和电气工作坊等职业培训。28
+总部位于阿克拉的 *穆斯林家庭咨询服务*（`MFCS`）是加纳最古老且仍在活跃的穆斯林非政府组织之一。自 1990 年成立以来，该组织在与政府机构以及联合国人口基金、联合国儿童基金会和世界卫生组织等国际发展机构的合作中脱颖而出，成为先行者。25 它还在家庭计划、生育管理、女性生殖器切割和儿童健康方面发挥作用，并倡导和预防性传播疾病，如 HIV/AIDS。26 其中，`MFCS` 属于 2011 年《改善家庭健康与福祉跨宗教宣言》的筹备组织之一，该宣言承诺通过提供教育和服务来支持家庭健康，使家庭能够根据其信仰计划怀孕的时间和间隔。27 此外，作为其对社区发展的承诺的一部分，`MFCS` 通过能力建设开展了收入激活和青年赋权项目，例如缝纫、肥皂制作和电气工作坊等职业培训。28
 
-MFCS 在多个方面是加纳穆斯林非政府组织的先驱。在 2003 年的一次采访中，其创始人 Alhaji Imoru Baba Issa 强调，MFCS 没有从阿拉伯捐助组织获得任何资金支持，主要是因为它在实施项目时不区分穆斯林和非穆斯林。29 因此，MFCS 可能是加纳第一家世俗穆斯林非政府组织，其监督委员会包括基督教成员，30 尽管它强调与穆斯林领袖和伊玛目保持密切合作。MFCS 项目主任 Mohammed Bun Bida 本人是一位穆斯林学者，在 2020 年的一次采访中透露：
+`MFCS` 在多个方面是加纳穆斯林非政府组织的先驱。在 2003 年的一次采访中，其创始人 Alhaji Imoru Baba Issa 强调，`MFCS` 没有从阿拉伯捐助组织获得任何资金支持，主要是因为它在实施项目时不区分穆斯林和非穆斯林。29 因此，`MFCS` 可能是加纳第一家世俗穆斯林非政府组织，其监督委员会包括基督教成员，30 尽管它强调与穆斯林领袖和伊玛目保持密切合作。`MFCS` 项目主任 Mohammed Bun Bida 本人是一位穆斯林学者，在 2020 年的一次采访中透露：
 
-- 25 例如，MFCS 被列在世界卫生组织《家庭计划手册》中为协作和支持组织，见 https://www.fphandbook.org/node/2971。
+- 25 例如，`MFCS` 被列在世界卫生组织《家庭计划手册》中为协作和支持组织，见 https://www.fphandbook.org/node/2971。
+
 - 26 Weiss，《加纳的乞讨与施舍》，118；联合国儿童基金会 2010 年加纳年度报告，https://www.unicef.org/about/annualreport/files/Ghana_COAR_2010.pdf。
+
 - 27 《改善家庭健康与福祉跨宗教宣言》，2011 年 6 月 29 日在肯尼亚内罗毕准备，可在 https://coregroup.org/wp-content/uploads/media-backup/documents/elluminates/declaration%20endorsed%202025july.pdf 获取，访问于 13.1.2022。 该宣言除其他外得到了比尔及梅琳达·盖茨基金会和美国国际开发署人口与生殖健康办公室的支持。
-- 28 http://mfcs Ghana.org/about-us/who-we-are/，访问于 14.1.2022。另见发布在 Facebook 上的介绍 MFCS 的视频，https://www.facebook.com/mfcsghana/，2.4.2022，访问于 3.8.2022。
-- 29 Weiss，《加纳的乞讨与施舍》，118。 这种情况在二十年后仍然如此；MFCS 在 2020 年的主要合作伙伴均为非穆斯林/世俗非政府组织和政府机构，包括 StreetInvest、AmplifyChange、Faith To Action Network、United Way Ghana、STAR Foundation Ghana、Consortium for Street Children、Tostan International、西非和平建设网络（WANEP）加纳、加纳卫生服务、欧洲联盟和 UKAid，见 2021 年圣诞问候海报，https://www.facebook.com/mfcsghana/photos/a.645127705690126/1613153042220916/，18.12.2020，访问于 14.1.2022。
-- 30 对库马西 MFCS 项目经理 Tijani Mahmud 的采访，10.10.2022。
+
+- 28 http://mfcs Ghana.org/about-us/who-we-are/，访问于 14.1.2022。另见发布在 Facebook 上的介绍 `MFCS` 的视频，https://www.facebook.com/mfcsghana/，2.4.2022，访问于 3.8.2022。
+
+- 29 Weiss，《加纳的乞讨与施舍》，118。 这种情况在二十年后仍然如此；`MFCS` 在 2020 年的主要合作伙伴均为非穆斯林/世俗非政府组织和政府机构，包括 StreetInvest、`AmplifyChange`、`Faith To Action Network`、`United Way Ghana`、`STAR Foundation Ghana`、`Consortium for Street Children`、`Tostan International`、西非和平建设网络（`WANEP`）加纳、加纳卫生服务、欧洲联盟和 UKAid，见 2021 年圣诞问候海报，https://www.facebook.com/mfcsghana/photos/a.645127705690126/1613153042220916/，18.12.2020，访问于 14.1.2022。
+
+- 30 对库马西 `MFCS` 项目经理 Tijani Mahmud 的采访，10.10.2022。
 
 作为信仰领袖，我们自愿在清真寺和教堂教育人们。我们还鼓励年轻人实行禁欲，或在必须进行性活动时使用避孕套……人们可能会惊讶地发现我们在清真寺进行避孕套演示。我们这样做是因为我们关心我们的人民，我们认识到拥有健康的会众很重要。31
 
-此外，MFCS 与国家首席伊玛目办公室密切合作。跨宗教对话是其关键支柱之一，这一点从其在多个国家和国际联盟和网络中的成员资格可见；其中最重要的是国家避孕委员会、 reproductive health 联盟、Faith To Action Network、Girls Not Brides 和加纳卫生非政府组织联盟。此外，MFCS 是街头儿童工作联盟的协调组织和合作伙伴。32
+此外，`MFCS` 与国家首席伊玛目办公室密切合作。跨宗教对话是其关键支柱之一，这一点从其在多个国家和国际联盟和网络中的成员资格可见；其中最重要的是国家避孕委员会、 reproductive health 联盟、`Faith To Action Network`、`Girls Not Brides` 和加纳卫生非政府组织联盟。此外，`MFCS` 是街头儿童工作联盟的协调组织和合作伙伴。32
 
-数十年来，MFCS 一直在培养开展其宣传活动和项目的当地志愿者队伍。该组织在全国范围内设有分支机构，设有项目经理、财务和行政官员、实地官员、秘书和社区志愿者，覆盖大阿克拉、阿散蒂、东部、（前）布朗阿哈弗、北部、上西和上东地区。33 其大部分项目资金仍来自国际（非阿拉伯）捐助组织，尽管 MFCS 已从沙特慈善机构 Al-Qimmah Foundation 获得其水项目的资金。34
+数十年来，`MFCS` 一直在培养开展其宣传活动和项目的当地志愿者队伍。该组织在全国范围内设有分支机构，设有项目经理、财务和行政官员、实地官员、秘书和社区志愿者，覆盖大阿克拉、阿散蒂、东部、（前）布朗阿哈弗、北部、上西和上东地区。33 其大部分项目资金仍来自国际（非阿拉伯）捐助组织，尽管 `MFCS` 已从沙特慈善机构 Al-Qimmah Foundation 获得其水项目的资金。34
 
-MFCS 已从第一代穆斯林非政府组织转型为第三代穆斯林非政府组织，因为它广泛使用社交媒体，包括 Facebook、Twitter、WhatsApp 和 LinkedIn 来传播和传达其宣传活动。35 不出所料，MFCS 是可负担互联网联盟（A4AI）的成员，36 这是一个跨非洲、亚洲、拉丁美洲和加勒比地区的组织全球伙伴关系，旨在促进可负担的互联网接入。
+`MFCS` 已从第一代穆斯林非政府组织转型为第三代穆斯林非政府组织，因为它广泛使用社交媒体，包括 Facebook、Twitter、WhatsApp 和 LinkedIn 来传播和传达其宣传活动。35 不出所料，`MFCS` 是可负担互联网联盟（`A4AI`）的成员，36 这是一个跨非洲、亚洲、拉丁美洲和加勒比地区的组织全球伙伴关系，旨在促进可负担的互联网接入。
 
+`MFCS` 的核心使命一直是促进女童和妇女的权利。该组织强烈谴责女性生殖器切割（FGM）和性别暴力，并积极倡导遏制女童婚姻（图 32）。37 `MFCS` 于 2015 年加入了 `Girls Not Brides` 全球伙伴关系，该伙伴关系由超过 1,500 个致力于终结童婚并使女孩实现其潜能的民间社会组织组成。38 此外，它是性别暴力（GBV）预防网络的成员，该网络是覆盖撒哈拉以南非洲的网络，由超过 500 名活动人士和致力于防止针对妇女暴力的成员组织组成。39 秉承其核心价值观，该组织在 2019 年 11 月的内罗毕峰会 ICPD+25（国际人口与发展大会）之前，承诺将其活动和资源致力于实现零性暴力和性别暴力以及有害做法，包括零童婚、早婚和强迫婚姻，以及女性生殖器切割。40
 
+37 “加纳：穆斯林不支持 FGM”，17.12.2001，https://allafrica.com/stories/200112170008.html；“携手终结童婚”，https://theworldnews.net/gh-news/work-together-to-end-child-marriages，13.10.2021，均访问于 13.1.2022；“终结童婚：`MFCS` 敦促政府优先保护”，12.10.2021，“携手终结童婚”，15.10.2021，以及“反对性别暴力 16 天行动”，25.11.2021，https://www.facebook.com/mfcsghana/，访问于 14.1.2022。
 
-MFCS 的核心使命一直是促进女童和妇女的权利。该组织强烈谴责女性生殖器切割（FGM）和性别暴力，并积极倡导遏制女童婚姻（图 32）。37 MFCS 于 2015 年加入了 Girls Not Brides 全球伙伴关系，该伙伴关系由超过 1,500 个致力于终结童婚并使女孩实现其潜能的民间社会组织组成。38 此外，它是性别暴力（GBV）预防网络的成员，该网络是覆盖撒哈拉以南非洲的网络，由超过 500 名活动人士和致力于防止针对妇女暴力的成员组织组成。39 秉承其核心价值观，该组织在 2019 年 11 月的内罗毕峰会 ICPD+25（国际人口与发展大会）之前，承诺将其活动和资源致力于实现零性暴力和性别暴力以及有害做法，包括零童婚、早婚和强迫婚姻，以及女性生殖器切割。40
-
-37 “加纳：穆斯林不支持 FGM”，17.12.2001，https://allafrica.com/stories/200112170008.html；“携手终结童婚”，https://theworldnews.net/gh-news/work-together-to-end-child-marriages，13.10.2021，均访问于 13.1.2022；“终结童婚：MFCS 敦促政府优先保护”，12.10.2021，“携手终结童婚”，15.10.2021，以及“反对性别暴力 16 天行动”，25.11.2021，https://www.facebook.com/mfcsghana/，访问于 14.1.2022。
 38 https://www.girlsnotbrides.org/our-partnership/member-directory/muslim-family-counselling-services/，访问于 13.1.2022。
+
 39 https://preventgbvafrica.org/member/muslim-family-counselling-services/，访问于 13.1.2022。
+
 40 “信仰和传统领袖作为终结 SGBV 的倡导者”，31.10.2019，https://www.nairobisummiticpd.org/commitment/faith-and-traditional-leaders-champions-end-sgbv，访问于 13.1.2022。
+
+
+
 41 “关于有意义的青少年和青年参与的全球共识声明”，7.8.2020，https://www.who.int/pmnch/media/news/2018/meaningful-adolescent-and-youth/en/，访问于 13.1.2022。
+
 42 儿童保护测绘：加纳参与儿童保护的机构数量和概况（阿克拉：联合国儿童基金会加纳办事处和人权与行政正义委员会，2018 年），可获取于 https://www.unicef.org/ghana/media/3086/file/Mapping%20of%20Child%20Protection%20Institutions%20in%20Ghana.pdf，访问于 13.1.2022。
+
 43 https://www.facebook.com/mfcsghana/，6.2.2021，访问于 14.1.2022。
+
 44 https://www.facebook.com/mfcsghana/，19.5.2022，访问于 3.8.2022。
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_329_0.png)
 
-图 32  MFCS “停止童婚” 运动。海报由穆斯林家庭咨询服务制作并分发  
+图 32 MFCS “停止童婚” 运动。海报由穆斯林家庭咨询服务制作并分发
+
 作者收藏
 
 此外，MFCS 是签署《关于有意义的青少年和青年参与的全球共识声明》的 200 个组织之一，41 并与 FOMWAG 一起被列入联合国儿童基金会加纳儿童保护机构名单。42 2021 年 2 月，它纪念了反对 FGM 零容忍国际日；43 2022 年 5 月，Mohammed Bun Bida 参加了一场全球网络研讨会，阐述了伊斯兰视角下防止针对妇女和女童暴力的观点。44 2022 年 6 月，MFCS 发起了一项为穆斯林女性囚犯捐赠卫生巾的筹资活动（“1000 包卫生巾给女性囚犯”），呼吁其成员每月捐赠 30 塞地用于此目的。45
@@ -4173,12 +4312,19 @@ MFCS 的核心使命一直是促进女童和妇女的权利。该组织强烈谴
 作为倡导儿童权利的延伸，MFCS 于 2013 年与英国慈善机构 StreetInvest 合作，以减少对街头儿童的污名化、歧视和虐待。46 作为打击青年失业和阻止儿童上街从事苦力工作的举措，MFCS 在 2010 年代在库马西开展了一个项目，培训年轻人掌握可销售技能，如美发、裁缝、制衣、电器维修和计算机素养（图 33）。47 此外，参与者还接受生活技能培训和创业培训。MFCS 与 StreetInvest 和其他当地组织一起参与了 2019 年国际街头儿童日的组织工作。48 一年后，它加入了加纳非政府组织的联盟，倡导街头儿童的权利并推动制定《街头儿童国家行动计划》。49 2021 年 4 月，MFCS 在社交媒体上开展筹款活动，吸引支持以帮助库马西的无家可归和街头儿童，50 同时在库马西组织国际街头儿童日。51
 
 45 https://www.facebook.com/mfcsghana/，11.6.2022，访问于 3.8.2022。
+
 46 “我们在加纳的工作”，https://streetinvest.org/ghana/，访问于 13.1.2022；该主页在 2024 年 5 月已失效。
+
 47 Deborah Ezra 筹款页面，28.5.2009，https://www.justgiving.com/fundraising/dezra_ghana_og/updates/donate，访问于 13.1.2022。
+
 48 “动员支持示例：2019 年国际街头儿童日：提升影响力”，https://www.changethegameacademy.org/nl/examples/mobilising-support/view/?id=25，访问于 13.1.2022。
+
 49 Emmanuel Akwasi Adu-Ampong，“加纳儿童权利 30 年：值得庆祝吗？”，19.11.2020，https://emmanueladuampong.com/2020/11/19/30-years-of-child-rights-in-ghana-reason-to-celebrate/；“教会机构呼吁政府将儿童保护置于加纳优先事项”，20.11.2020，https://www.aciafrica.org/news/2372/make-child-safeguarding-in-ghana-a-priority-church-based-entity-tells-government，均访问于 13.1.2022。
+
 50 https://www.facebook.com/mfcsghana/photos/a.645127705690126/1692236804312539，8.4.2021，访问于 14.1.2022。
+
 51 https://www.facebook.com/mfcsghana/photos/a.645127705690126/1693051014231118/，9.4.2021，访问于 14.1.2022。
+
 52 “携手终结童婚”，13.10.2021，https://newsghana.com.gh/work-together-to-end-child-marriages/?fbclid=IwARoXyhgZwzlfgtHJSvK7bsmhfwHngbwX-SrY5OW07qsenSjC3aqrK7KxfEs，访问于 14.1.2022。另见 Stephen Afranie、Esther Sylvia Gyan 和 Antoinette Tsiboe-Darko，“加纳的童婚：谁在乎？”《加纳社会科学杂志》16 卷，第 2 期（2019 年）：19–45。
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_331_0.png)
@@ -4188,11 +4334,15 @@ MFCS 的核心使命一直是促进女童和妇女的权利。该组织强烈谴
 库马西中央商务区及周边地区
 
 为儿童提供机会
+
 MFCS
+
 安全儿童倡导
+
 在技术合作伙伴 STREETINVEST 的支持下
 
 图 33 MFCS 库马西街头儿童运动。报告封面
+
 作者收藏
 
 在全国范围内，MFCS 在打击性别暴力与童婚的斗争中屡上头条，尽管有时进展艰难，部分原因在于其开展运动的经济资源有限。52 例如，资金不足阻碍了其在 2019 年将反性别暴力运动扩展到上东区 Bawku West 农村社区，导致呼吁外部捐助者支持。53 在英国慈善机构 AmplifyChange 的支持下，并与社会福利部合作，MFCS 继续在 Bawku 地区开展项目。54 2022 年，它发起了一项预算分配运动，以解决东北区儿童权利问题并终结 CEFM（儿童早婚和强迫婚姻）。55
@@ -4200,8 +4350,6 @@ MFCS
 2010 年联合国关于水和卫生人权的决议出台后，MFCS 将该主题纳入其核心目标。该组织加入了全球“终结水贫困”（EWP）联盟，并在 2015 年制作了关于加纳的国家简报，以突出该国水和卫生状况不佳。56 特别是，该简报强调了改善加纳民众获得安全、负担得起、可获得且充足的水和卫生设施的必要性。鉴于加纳政府已签署上述 2010 年联合国决议，MFCS 呼吁政府履行其义务，因为只有 89% 的人口能够获得水，仅有 15% 能够获得卫生设施。57
 
 COVID-19 进一步拓宽了 MFCS 的活动范围。与其他从事社区支持活动的穆斯林非政府组织一起，MFCS 成为 United Way Ghana 和全球科技公司 3M 的合作伙伴，并在 2020 年 7 月在库马西分发了他们的救济包。58 另一项项目是儿童读写与远程学习倡议，该倡议是 United Way Ghana COVID-19 应对倡议的一部分，MFCS、Achievers Ghana 和 Mothers of All Nations Foundation 于 2020 年携手合作。59
-
-
 
 MFCS 特别是其在促进计划生育和女孩/妇女权利方面的十年长期投入一直是一场艰难的斗争。起初，其信息无人理会，其宣传者花了时间和精力来说服当地伊玛目和普通穆斯林，计划生育并不违背伊斯兰教。60 然而，国际穆斯林专家如艾资哈尔学者 Dr M. Sharif Chaudhury 关于该问题的论著支持了 MFCS 的立场，穆斯林家庭对计划生育的抵制开始减弱，其中一个原因是不少女性如今已在工作。61 其反对童婚和保障女孩权利的运动也以类似方式在当地穆斯林社区中产生了积极反馈。62
 
@@ -4215,13 +4363,14 @@ MFCS 特别是其在促进计划生育和女孩/妇女权利方面的十年长�
 
 64 关于 TLF 简介的演示文稿，发送给作者，收到日期 2022 年 10 月 9 日。
 
-#### 3 促进可持续发展目标和跨宗教对话
+### 3 促进可持续发展目标和跨宗教对话
 
 光基金会（TLF；图 34）将自己定义为一个以信仰为基础的人道主义发展导向的非政府组织。该基金会由 Sheikh Abubakar Ali Napari 于 2000 年创立，2005 年注册，在应对和促进社区发展方面有着悠久的背景。最初基金会专注于该国北部农村社区，当时 Sheikh Ali Napari 的主导思想是“找出《古兰经》中所教导的内容与实践中所做之事之间的差距”。此后他的使命一直是整合宗教领袖来引领社区发展和社会福利。63 宗教领袖被认为“在为社区成员提供指导和建议方面发挥着至关重要的作用，因而塑造、示范和/或强化社区、利益相关者中的积极社会和行为变革，并且备受尊敬。”64 此外，Sheikh Ali Napari 强调了
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_334_0.png)
 
 图 34 光基金会。来自 TLF 笔记本的标志
+
 作者收藏
 
 需要内部筹集资金，而不是依赖外国捐助者。65 在他看来，民间社会组织和非政府组织应识别传统领袖、议会成员和宗教领袖等有影响力的人物，以从社区成员那里动员支持，使他们能够成功实施项目，并呼吁政府制定法律框架来指导加纳的慈善环境。66
@@ -4246,38 +4395,49 @@ TLF 是少数已将联合国可持续发展目标（SDGs）作为其四个关键
 
 71 https://tlf Ghana.org/about-us/; https://tlf Ghana.org/our-works/。迄今为止，TLF 已在大阿克拉、北部和沃尔特地区建造了超过 1,000 座家庭厕所，此外还在阿散蒂、大阿克拉、北部、东北、奥蒂和沃尔特地区提供了超过 145 个深水井和钻井；对 Sheikh Ali Napari 的访谈，阿克拉，2022 年 10 月 8 日，以及关于 TLF 简介的演示文稿，发送给作者，收到日期 2022 年 10 月 9 日。
 
-
-
 加纳、Hope for Humanity UK、Direct Aid、Turkish International Development Cooperation、Save The Mothers Trust UK、Al Maktoum Foundation（Saudi Arabia）和 Salaam Charity UK。72
 
 TLF 对其 IPP 倡议获得积极认可表示欢迎，尤其是在选举前、中、后促进和平方面。在 2016 年选举期间，它推出了穆斯林社区团结促进和平选举（MUCP）运动，四年后，它启动了 RASE（宗教领袖支持与促进和平选举行动）2020 项目。73 2021 年，它通过倡导和政策影响活动扩大了该倡议，例如全国跨信仰道路安全运动，并组织了关于 2021 年人口和住房普查的一系列利益相关方参与活动，地点在阿克拉、库马西和塔马莱。74 2022 年，TLF 在鲍库地区参与促进和平与安全，以此作为遏制伊斯兰极端主义的一种方式。75
 
-女孩受教育权是另一个重点领域，与倡导反对青少年怀孕和童婚的运动密切相关。TLF 与非穆斯林合作伙伴在广播宣传节目中合作，关注针对女孩的暴力行为，并强调消除教育性别差距的必要性。按照 SDG#16.9 的要求，TLF 在其主页上通知访客，它还支持贫困父母为其未登记的子女办理出生证明。76 作为其 Zongo 和穆斯林女性赋权计划的一部分，它于 2016 年在塔马莱建立了 TLF 技能发展中心。77
 
-TLF 在与 World Education Ghana 合作并于 2014-2015 年在 Zongo 社区开展全国埃博拉宣传运动时获得了认可。78 作为运动的一部分，它分发了包含埃博拉信息的 CD-ROM，语言包括豪萨语、英语、埃维语和凡蒂语等八种语言，供在清真寺礼拜前后播放。TLF 还将其关于埃博拉的教育小册子转换为盲文格式，以帮助教育视障人士。^79 其 16 分钟纪录片视频“#Spread the Word Not The Disease”随后在 2015 年非洲电影节上获得了埃博拉最佳教育视频奖。^80
 
-埃博拉运动为 TLF 与 UNICEF 及其他联合国机构的合作打开了大门。自 2017 年以来，UNICEF 一直支持各种 WASH 和 CPS 项目，包括母乳喂养宣传活动。2021 年 9 月，TLF 与 UNICEF 联合开展了黄热病、COVID-19 和铅中毒项目。^81 2022 年，TLF 与 UNDP 联合开展了一项为期一年的塑料废弃物项目。此外，它于 2022 年 10 月与加纳卫生服务和 UNICEF 合作开展了全国脊髓灰质炎教育和促疫苗接种运动。^82
+女孩受教育权是另一个重点领域，与倡导反对青少年怀孕和童婚的运动密切相关。TLF 与非穆斯林合作伙伴在广播宣传节目中合作，关注针对女孩的暴力行为，并强调消除教育性别差距的必要性。按照 SDG#16.9 的要求，TLF 在其主页上通知访客，它还支持贫困父母为其未登记的子女办理出生证明。<sup>76</sup> 作为其 Zongo 和穆斯林女性赋权计划的一部分，它于 2016 年在塔马莱建立了 TLF 技能发展中心。<sup>77</sup>
 
-通过技能发展减少贫困在 TLF 议程中占有重要地位。一项创新举措是对黑沃尔塔盆地村庄的 50 名妇女进行有韧性的农业培训，其中一些是辍学学生、单身母亲和寡妇。^83 作为其项目的一部分，TLF 在塔马莱购置了 20 英亩土地，计划在那里建立一个技能发展中心。^84
+TLF 在与 World Education Ghana 合作并于 2014-2015 年在 Zongo 社区开展全国埃博拉宣传运动时获得了认可。<sup>78</sup> 作为运动的一部分，它分发了包含埃博拉信息的 CD-ROM，语言包括豪萨语、英语、埃维语和凡蒂语等八种语言，供在清真寺礼拜前后播放。TLF 还将其关于埃博拉的教育小册子转换为盲文格式，以帮助教育视障人士。<sup>79</sup> 其 16 分钟纪录片视频“#Spread the Word Not The Disease”随后在 2015 年非洲电影节上获得了埃博拉最佳教育视频奖。<sup>80</sup>
+
+埃博拉运动为 TLF 与 UNICEF 及其他联合国机构的合作打开了大门。自 2017 年以来，UNICEF 一直支持各种 WASH 和 CPS 项目，包括母乳喂养宣传活动。2021 年 9 月，TLF 与 UNICEF 联合开展了黄热病、COVID-19 和铅中毒项目。<sup>81</sup> 2022 年，TLF 与 UNDP 联合开展了一项为期一年的塑料废弃物项目。此外，它于 2022 年 10 月与加纳卫生服务和 UNICEF 合作开展了全国脊髓灰质炎教育和促疫苗接种运动。<sup>82</sup>
+
+通过技能发展减少贫困在 TLF 议程中占有重要地位。一项创新举措是对黑沃尔塔盆地村庄的 50 名妇女进行有韧性的农业培训，其中一些是辍学学生、单身母亲和寡妇。<sup>83</sup> 作为其项目的一部分，TLF 在塔马莱购置了 20 英亩土地，计划在那里建立一个技能发展中心。<sup>84</sup>
 
 72 合作伙伴，https://tlfghana.org/about-us/。
+
 73 我们的优势，https://tlfghana.org/about-us/；“拒绝煽动暴力的政客——光明基金会”，19.6.2020，https://www.graphic.com.gh/news/politics/reject-politicians-who-incite-violence-light-foundation.html，访问日期 21.1.2023。
+
 74 https://tlfghana.org/our-works/；“不要要求金钱以便参与 2021 年人口普查——北部地区统计局敦促居民”，25.6.2021，https://www.myjoyonline.com/dont-demand-money-to-avail-yourself-for-2021-census-statistical-service-in-northern-region-urges-residents/，访问日期 21.1.2023。
+
 75 与 Sheikh Ali Napari 的访谈，阿克拉，8.10.2022。
+
 76 目标 4：加纳 Zongo 和穆斯林社区的儿童权利、儿童生存干预和健康教育（SDG#4），https://tlfghana.org/about-us/。
+
 77 光明基金会 #tlf 加纳的技能发展中心毕业了十名（10 名）受训裁缝，https://www.facebook.com/tlfghana/，9.5.2019，6.6.2019，访问日期 10.1.2022。
+
 78 “光明基金会、World Education Ghana 将对 5,000 名穆斯林进行埃博拉宣传”，1.6.2015，https://www.myjoyonline.com/the-light-foundation-world-education-ghana-to-sensitize-5000-muslims-on-ebola/，访问日期 10.1.2022。
 
 79. https://www.facebook.com/tlfghana/，24.9.2014，25.9.2014，11.6.2015，访问日期 10.1.2022。
+
 80. Joseph Kobla Wemakor，“非洲电影节表彰加纳光明基金会”，11.6.2015，https://www.ghanahweb.com/GhanaHomePage/entertainment/Festival-of-Films-Africa-Honors-The-Light-Foundation-Ghana-361953，访问日期 10.1.2022。
+
 81. “光明基金会、UNICEF 启动 COVID-19 WASH 和铅中毒项目”，23.12.2021，https://www.ghanaweb.com/GhanaHomePage/NewsArchive/The-Light-Foundation-UNICEF-launches-COVID-19-WASH-and-Lead-Poisoning-Project-1430005，访问日期 2.1.2023。
+
 82. 与 Sheikh Ali Napari 的访谈，阿克拉，8.10.2022。
+
 83. 关于 TLF 简介的演示文稿，发送给作者，收到日期 9.10.2022。
+
 84. 与 Sheikh Ali Napari 的访谈，阿克拉，8.10.2022。
 
 #### 4 建立伊斯兰诊所和医院
 
-穆斯林赋权在 2022 年 9 月初成为头条新闻，当时两个伊斯兰医院项目移交给当地社区，第三个正在进行的项目获得了大量捐赠。在东北大区，Mamprugu 伊斯兰诊所的建设几乎完工，并于 9 月 10 日举行了移交仪式。该项目由地区穆斯林非政府组织 Concerned Muslim Youth Association（CMYA）发起，由 ICODEHS 委托，Qatar Charity 资助，是位于 Walewale-Nalerigu 路上 Kata-Banawa 的多功能清真寺综合体的最后一部分。评论该项目的完工，CMYA 总书记 Hisham Sulemana 自豪地宣布，该伊斯兰诊所“[...] 将增加政府在该地区大规模获得医疗服务方面的努力。”85 大约同一时间，First Gibrine Foundation（“First Jibril Foundation”）将阿克拉 Newtown 伊斯兰医院的钥匙移交给当地社区，86 而第二夫人 Samira Bawumia 为位于 Bono East 大区 Techiman South 市镇 Krobo 的伊斯兰传教秘书处的伊斯兰医院项目捐赠了一千袋水泥。87 几个月前，穆斯林非政府组织 Light Mindset International 在阿克拉开设了其 Zongo 穆斯林康复中心，88 这是首个使用 ruqya89 和先知医学治疗酒精和药物成瘾以及精神障碍的机构。90 2022 年 12 月初，加纳穆斯林传教团在阿克拉 Korle-Gonno 开设了 Ar-Rahman 穆斯林诊所；见下文。91
+穆斯林赋权在 2022 年 9 月初成为头条新闻，当时两个伊斯兰医院项目移交给当地社区，第三个正在进行的项目获得了大量捐赠。在东北大区，Mamprugu 伊斯兰诊所的建设几乎完工，并于 9 月 10 日举行了移交仪式。该项目由地区穆斯林非政府组织 Concerned Muslim Youth Association（CMYA）发起，由 ICODEHS 委托，Qatar Charity 资助，是位于 Walewale-Nalerigu 路上 Kata-Banawa 的多功能清真寺综合体的最后一部分。评论该项目的完工，CMYA 总书记 Hisham Sulemana 自豪地宣布，该伊斯兰诊所“[...] 将增加政府在该地区大规模获得医疗服务方面的努力。”<sup>85</sup> 大约同一时间，First Gibrine Foundation（“First Jibril Foundation”）将阿克拉 Newtown 伊斯兰医院的钥匙移交给当地社区，<sup>86</sup> 而第二夫人 Samira Bawumia 为位于 Bono East 大区 Techiman South 市镇 Krobo 的伊斯兰传教秘书处的伊斯兰医院项目捐赠了一千袋水泥。<sup>87</sup> 几个月前，穆斯林非政府组织 Light Mindset International 在阿克拉开设了其 Zongo 穆斯林康复中心，<sup>88</sup> 这是首个使用 ruqya<sup>89</sup> 和先知医学治疗酒精和药物成瘾以及精神障碍的机构。<sup>90</sup> 2022 年 12 月初，加纳穆斯林传教团在阿克拉 Korle-Gonno 开设了 Ar-Rahman 穆斯林诊所；见下文。<sup>91</sup>
 
 上述七个卫生项目是逊尼派穆斯林团体和协会为解决 Zongo 和（穆斯林）农村社区基本社会福利基础设施缺乏问题而进行的为期十年的尝试的体现。加纳实行多元化的卫生系统，包括公共和私立机构，其中一些由穆斯林组织运营。表 7 中提供的医院和诊所信息并不能全面反映
 
@@ -4295,8 +4455,6 @@ TLF 在与 World Education Ghana 合作并于 2014-2015 年在 Zongo 社区开�
 
 91 “加纳穆斯林传教团启用新诊所设施”，5.12.2022，https://newsghana.com.gh/ghana-muslim-mission-commissions-new-clinic-facility/，访问日期 5.12.2023；“加纳穆斯林传教团为 Korle-Gonno 居民启用诊所”，6.12.2022，https://gna.org.gh/2022/12/ghana-muslim-mission-commissions-clinic-for-residents-at-korle-gonno/，访问日期 13.12.2022。
 
-
-
 ##### 表7 2020年加纳按所有权划分的医疗机构
 
 |  |  |
@@ -4311,13 +4469,13 @@ TLF 在与 World Education Ghana 合作并于 2014-2015 年在 Zongo 社区开�
 
 来源： HTTPS://WWW.STATISTA.COM/STATISTICS/1238765/NUMBER-OF-HEALTH-FACILITIES-IN-GHANA-BY-OWNERSHIP/, 访问于 15.12.2022
 
-现有的由穆斯林非政府组织和私人医生运营的医疗机构与加纳卫生部提供的信息存在冲突。根据卫生部于2016年提供的（开放获取）医疗机构数据集，其中四家被列为具有“伊斯兰”所有权，即阿赫迈底亚穆斯林传教会在阿索科雷、卡莱奥和克帕古里的诊所和医院，以及加纳穆斯林传教会在朱阿贝索的产科医院。有趣的是，阿赫迈底亚穆斯林传教会在斯韦杜的诊所、阿克拉的伊朗诊所以及阿克拉的哈吉·阿卜杜勒·亚罗纪念诊所都被列为加纳基督教卫生协会（CHAG）的成员，92 该协会是私人医疗机构的主要提供者，而塔马利的哈吉·亚当斯健康中心则被列为政府机构！此外，卫生部2016年数据集中确定的其他私立穆斯林医疗机构包括库马西潘克罗诺的伊斯兰顺势疗法诊所、库马西博阿迪的穆斯林顺势疗法诊所、阿克拉马迪纳的非洲穆斯林诊所、阿克拉曼博比的苏莱曼纳纪念医院（原伊斯兰基金会诊所）、瓦的贾米阿图伊斯兰医院以及瓦的哈吉亚·拉比纳图·塞纳产科医院。^93^
+现有的由穆斯林非政府组织和私人医生运营的医疗机构与加纳卫生部提供的信息存在冲突。根据卫生部于2016年提供的（开放获取）医疗机构数据集，其中四家被列为具有“伊斯兰”所有权，即阿赫迈底亚穆斯林传教会在阿索科雷、卡莱奥和克帕古里的诊所和医院，以及加纳穆斯林传教会在朱阿贝索的产科医院。有趣的是，阿赫迈底亚穆斯林传教会在斯韦杜的诊所、阿克拉的伊朗诊所以及阿克拉的哈吉·阿卜杜勒·亚罗纪念诊所都被列为加纳基督教卫生协会（CHAG）的成员，<sup>92</sup> 该协会是私人医疗机构的主要提供者，而塔马利的哈吉·亚当斯健康中心则被列为政府机构！此外，卫生部2016年数据集中确定的其他私立穆斯林医疗机构包括库马西潘克罗诺的伊斯兰顺势疗法诊所、库马西博阿迪的穆斯林顺势疗法诊所、阿克拉马迪纳的非洲穆斯林诊所、阿克拉曼博比的苏莱曼纳纪念医院（原伊斯兰基金会诊所）、瓦的贾米阿图伊斯兰医院以及瓦的哈吉亚·拉比纳图·塞纳产科医院。<sup>93</sup>
 
 92 根据CHAG主页，CHAG是由34个不同基督教教派拥有的374家医疗机构和卫生培训机构组成的网络组织。参见 https://chag.org.gh/who-we-are/，访问于 15.12.2022。关于CHAG，另见 Jill Olivier、Mari Shojo 和 Quentin Wodon，《信仰驱动的加纳医疗保健：市场份额、覆盖贫困人群和绩效》，《信仰与国际事务评论》12卷第1期（2014年）：84–96。有趣的是，在一些统计资料中，布诺地区的两家阿赫迈底诊所以及西部地区的加纳穆斯林传教所产科/诊所都被列为加纳基督教卫生协会（CHAG）的医疗中心！参见加纳CHAG医院：加纳基督教卫生协会医疗中心列表，https://yen.com.gh/108186-list-chag-hospitals-ghana.html，访问于 15.12.2022。另一份名单包括七家阿赫迈底传教诊所和医院，参见“按类型列出（传教（CHAG））”，[2012]，https://ghanahospitals.org/categories/details.php?sel=ownership&page =mission，访问于 28.5.2024。
 
-尽管加纳穆斯林拥有和运营的医疗基础设施一直很少，但为年轻穆斯林提供的健康教育设施的缺乏更是如此。几十年来，穆斯林活动人士一直呼吁政府和私人慈善家投资护理培训，作为为年轻穆斯林设计的第三级教育体系的一部分，尤其是在该国的医疗保健部门一直因护士数量不足而苦苦挣扎。^94^
+尽管加纳穆斯林拥有和运营的医疗基础设施一直很少，但为年轻穆斯林提供的健康教育设施的缺乏更是如此。几十年来，穆斯林活动人士一直呼吁政府和私人慈善家投资护理培训，作为为年轻穆斯林设计的第三级教育体系的一部分，尤其是在该国的医疗保健部门一直因护士数量不足而苦苦挣扎。<sup>94</sup>
 
-近年来，一些穆斯林组织已开始通过建设专门设计的伊斯兰护理培训学院来解决这一空白，其中包括阿散蒂地区的安萨鲁丁（见第2.4.5章）以及大阿克拉地区的ASWAJ。虽然前一项目仍在等待卫生部的认证，但后一项目获得了政府通过宗戈发展基金以及尼日利亚学者和慈善家谢赫·哈桑·哈姆扎·穆萨的财政支持，并于2022年3月投入使用。位于大阿克拉地区科克罗比特的伊斯兰护理培训学院反过来隶属于海岸角大学，并提供普通护理以及公共卫生护理文凭课程。^95^ 它于2022年9月发布了其文凭课程的首次招生通知。^96^ 最后，在布诺东区阿特布布附近的新孔克罗姆，慈善家阿尔哈吉博士扎卡里亚·努尔在2020年为启动其伊斯兰护理培训学院项目做出了重大贡献。^97^
+近年来，一些穆斯林组织已开始通过建设专门设计的伊斯兰护理培训学院来解决这一空白，其中包括阿散蒂地区的安萨鲁丁（见第2.4.5章）以及大阿克拉地区的ASWAJ。虽然前一项目仍在等待卫生部的认证，但后一项目获得了政府通过宗戈发展基金以及尼日利亚学者和慈善家谢赫·哈桑·哈姆扎·穆萨的财政支持，并于2022年3月投入使用。位于大阿克拉地区科克罗比特的伊斯兰护理培训学院反过来隶属于海岸角大学，并提供普通护理以及公共卫生护理文凭课程。<sup>95</sup> 它于2022年9月发布了其文凭课程的首次招生通知。<sup>96</sup> 最后，在布诺东区阿特布布附近的新孔克罗姆，慈善家阿尔哈吉博士扎卡里亚·努尔在2020年为启动其伊斯兰护理培训学院项目做出了重大贡献。<sup>97</sup>
 
 93 加纳医疗机构开放数据集提供的信息，修改并于2016年2月5日发布，可在 https://data.gov.gh/dataset/health-facilities 获取，访问于 15.12.2022。
 
@@ -4335,29 +4493,29 @@ TLF 在与 World Education Ghana 合作并于 2014-2015 年在 Zongo 社区开�
 
 98 Elom Otchi 等，*加纳私营部门提供优质孕产妇和新生儿健康服务*，为多利益相关方对话准备的报告，11 January 2021，可在：https://www.qualityofcarenetwork.org/sites/default/files/2021-06/Ghana%20situational%20analysis%20report.pdf 获取，访问于 30.12.2022。
 
-99 参见，例如，Maria Polychronis，*加纳农村医疗保健可及性的局限性：案例研究：大阿克拉东部GA*，Global Futures，Occasional Papers 4，Rutgers University，[n.d.]，可在 https://policyrutgers.edu/publications/occasional-paper-series/273-occasional-paper-4-maria-polychronis/file 获取；Aminu Sulemana 和 Romanus D. Dinye，“加纳农村社区的医疗保健可及性：普鲁区部分选定社区的研究”，*欧洲社会科学研究期刊*，no. 4（2014）：122–132；Awolu Adam，Adam Fusheni 和 Daniel Dramani Kipo-Sunyehyi，“改善加纳农村卫生服务和健康结果的协作健康促进方法：以社区为基础的卫生规划和服务（CHPS）策略的案例”，载于 *农村卫生*，ed. Umar Bacha（London：IntechOpen，2021），doi：10.5772/intechopen.97882。
 
-100 “阿散蒂地区正在进行32个主要医院项目——总统阿库福-阿多”，17.10.2022，https://www.graphic.com.gh/news/politics/32-major-hospital-projects-ongoing-in-ashanti-president-akufo-addo.html，访问于 19.11.2022。
 
-101 参见 “北部地区孕产妇死亡率上升”，5.6.2008，https://www.modernghana.com/news/168466/maternal-deaths-on-the-increase-in-northern-region.html，访问于 16.11.2022。
+99 参见，例如，Maria Polychronis，*加纳农村医疗保健可及性的局限性：案例研究：大阿克拉东部GA*，Global Futures，Occasional Papers 4，Rutgers University，[n.d.]，可在`https://policyrutgers.edu/publications/occasional-paper-series/273-occasional-paper-4-maria-polychronis/file`获取；Aminu Sulemana 和 Romanus D. Dinye，“加纳农村社区的医疗保健可及性：普鲁区部分选定社区的研究”，*欧洲社会科学研究期刊*，no. 4（2014）：122–132；Awolu Adam，Adam Fusheni 和 Daniel Dramani Kipo-Sunyehyi，“改善加纳农村卫生服务和健康结果的协作健康促进方法：以社区为基础的卫生规划和服务（CHPS）策略的案例”，载于 *农村卫生*，ed. Umar Bacha（London：IntechOpen，2021），doi：10.5772/intechopen.97882。
+
+100 “阿散蒂地区正在进行32个主要医院项目——总统阿库福-阿多”，17.10.2022，`https://www.graphic.com.gh/news/politics/32-major-hospital-projects-ongoing-in-ashanti-president-akufo-addo.html`，访问于 19.11.2022。
+
+101 参见 “北部地区孕产妇死亡率上升”，5.6.2008，`https://www.modernghana.com/news/168466/maternal-deaths-on-the-increase-in-northern-region.html`，访问于 16.11.2022。
 
 102 Otchi et alii，*加纳私营部门提供优质孕产妇和新生儿健康服务*。
 
-
-
 尝试。在他们的论述中，宗戈斯及加纳北部地区穆斯林社区缺乏（公共）医疗保健和医疗机构，这突显了他们被边缘化的处境。因此，建立伊斯兰诊所和医院（与现代化伊斯兰教育体系并行）的愿望，成为他们当代话语中自我赋权的内在组成部分，也是应对边缘化的核心工具。早在2004年，提加尼教团、伊斯兰宣教秘书处和达鲁·萨拉姆社区就宣布计划在特奇曼建设一所伊斯兰医院，103 尽管该项目——看起来——因缺乏资金而搁置，直到大约十年后才由伊斯兰宣教秘书处重新启动。谢赫·穆斯塔法·易卜拉欣和ICODEHS在大约十年间向海湾慈善机构募集资金用于建设诊所，2020年1月他们因在全国各地建设了七所诊所而受到赞誉。104 四个月后，ICODEHS在大阿克拉地区的阿登塔和阿奎特曼建成了两所诊所。105 一年后，副总统穆罕马杜·巴武米亚博士为博诺东地区阿特布布的阿尔-努尔伊斯兰医疗中心揭幕。106
 
-103 “穆斯林在特奇曼建医院”，2004年9月22日，https://www.modernghana.com/news/63491/moslems-build-hospital-in-techiman.html，访问于2022年12月5日。
+103 “穆斯林在特奇曼建医院”，2004年9月22日，`https://www.modernghana.com/news/63491/moslems-build-hospital-in-techiman.html`，访问于2022年12月5日。
 
-104 苏莱曼·穆斯塔法，“首席伊玛目穆斯塔法·易卜拉欣入选全球500位偶像”，2020年1月20日，https://www.graphic.com.gh/news/general-news/chief-imam-mustapha-ibrahim-among-500-global-icons.html，访问于2022年12月13日。
+104 苏莱曼·穆斯塔法，“首席伊玛目穆斯塔法·易卜拉欣入选全球500位偶像”，2020年1月20日，`https://www.graphic.com.gh/news/general-news/chief-imam-mustapha-ibrahim-among-500-global-icons.html`，访问于2022年12月13日。
 
-105 “ICODEHS的社会保护干预措施正在改变生活”，2020年4月1日，https://www.graphic.com.gh/news/general-news/chief-imam-mustapha-ibrahim-among-500-global-icons.html，访问于2022年12月13日。
+105 “ICODEHS的社会保护干预措施正在改变生活”，2020年4月1日，`https://www.graphic.com.gh/news/general-news/chief-imam-mustapha-ibrahim-among-500-global-icons.html`，访问于2022年12月13日。
 
-106 “巴武米亚博士为阿特布布的伊斯兰医疗中心揭幕”，2020年10月19日，https://www.modernghana.com/videonews/UTV/1/137164/，访问于2023年11月12日。另见 https://www.facebook.com/p/Al-Noor-Islamic-Medical-Center-Atebubu-100070386603474/?paipv=0&eav=AfYW6cD44yAZkKVqL-EvgKCJJsC-xBgT3EjoUsv7r9WJ_XawFXLY3ddgnXFAJuMoCA&_rdr。
+106 “巴武米亚博士为阿特布布的伊斯兰医疗中心揭幕”，2020年10月19日，`https://www.modernghana.com/videonews/UTV/1/137164/`，访问于2023年11月12日。另见 `https://www.facebook.com/p/Al-Noor-Islamic-Medical-Center-Atebubu-100070386603474/?paipv=0&eav=AfYW6cD44yAZkKVqL-EvgKCJJsC-xBgT3EjoUsv7r9WJ_XawFXLY3ddgnXFAJuMoCA&_rdr`。
 
 此外，建立伊斯兰诊所和医院的迫切要求，源于对世俗医疗基础设施的批评，因为后者没有考虑到特别是穆斯林女性的特殊需求。大阿克拉地区特马附近阿杰伊·科乔和卡内武社区的伊玛目谢赫·哈吉·萨利赫·伊德里斯（谢赫·马尔维）在2021年指出了一种常见观点：“[..]我们的女性抱怨在一些世俗医院得不到良好对待，而且在非穆斯林男妇科医生处理她们的生育需求，甚至在分娩时在手术室里照顾她们时感到不舒服。”他推荐的解决方案是建立穆斯林或伊斯兰医院，“[..]雇佣我们自己的穆斯林护士和医生来照顾我们。”他强调，这不仅有助于穆斯林社区的发展，“[..]还能为国家发展做出贡献。”107
 
-107 “让我们在宗戈社区建设伊斯兰医院——谢赫·伊德里斯”，2021年11月4日，https://marhabafm.com/lets-build-islamic-hospitals-in-zongo-communities-sheikh-iddris/，访问于2022年11月16日。
+107 “让我们在宗戈社区建设伊斯兰医院——谢赫·伊德里斯”，2021年11月4日，`https://marhabafm.com/lets-build-islamic-hospitals-in-zongo-communities-sheikh-iddris/`，访问于2022年11月16日。
 
 要求对穆斯林患者给予特别对待，即便不是承认穆斯林患者的特殊需求，也构成了推动医疗部门采取穆斯林解决方案的核心论点，这与此前要求承认提供现代穆斯林教育基础设施的特殊需求是一致的。上述谢赫·马尔维的呼吁与类似要求尊重并承认患者宗教层面的诉求相吻合。穆斯林活动人士的核心批评指向世俗（和基督教）医疗机构在性别中立（甚至性别盲视）的做法，最重要的是医生和护士在检查和治疗患者时男女混在一起。108
 
@@ -4367,7 +4525,7 @@ TLF 在与 World Education Ghana 合作并于 2014-2015 年在 Zongo 社区开�
 
 109 邓贝，《加纳的跨国联系与穆斯林宗教取向》，133、139–140；邓贝，《当代加纳的伊斯兰复兴主义》，107；对谢赫·哈吉·优素福·伊萨赫的访谈，贾马特·希达亚·伊斯兰协会主席，瓦城，2019年12月7日。
 
-110 “伊朗红新月会在加纳启用综合诊所”，2014年9月18日，https://reliefweb.int/report/ghana/iranian-red-crescent-inaugurates-polyclinic-ghana，访问于2022年11月16日。另见第2.4.2章。
+110 “伊朗红新月会在加纳启用综合诊所”，2014年9月18日，`https://reliefweb.int/report/ghana/iranian-red-crescent-inaugurates-polyclinic-ghana`，访问于2022年11月16日。另见第2.4.2章。
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_344_0.png)
 
@@ -4377,63 +4535,65 @@ TLF 在与 World Education Ghana 合作并于 2014-2015 年在 Zongo 社区开�
 
 这十二所阿赫迈迪亚诊所和医院均位于农村地区，并获得了国家健康保险计划（NHIS）的认证。111
 
-111 阿赫迈迪亚医院分布在阿哈福地区（米姆）、阿散蒂地区（阿索科雷、埃菲杜阿塞、科科富、库马西都会/塞内·蒂姆彭、库马西都会/博阿迪）、博诺东地区（特奇曼）、中部地区（斯韦德鲁）、上西地区（纳多利/卡莱奥、瓦城/克帕古里）和西部地区（比亚/阿苏昂塔；姆福尔-瓦萨/达布塞）。见加纳卫生设施开放数据集，2016年2月5日修改并发布，可在 https://data.gov.gh/dataset/health-facilities 获取，访问于2022年12月15日。
+111 阿赫迈迪亚医院分布在阿哈福地区（米姆）、阿散蒂地区（阿索科雷、埃菲杜阿塞、科科富、库马西都会/塞内·蒂姆彭、库马西都会/博阿迪）、博诺东地区（特奇曼）、中部地区（斯韦德鲁）、上西地区（纳多利/卡莱奥、瓦城/克帕古里）和西部地区（比亚/阿苏昂塔；姆福尔-瓦萨/达布塞）。见加纳卫生设施开放数据集，2016年2月5日修改并发布，可在`https://data.gov.gh/dataset/health-facilities`获取，访问于2022年12月15日。
 
 私立穆斯林诊所也已在加纳存在数十年，尽管只有少数获得了政府认可。例如，由常驻英国的加纳医生兼投资人哈吉·易卜拉欣·亚罗于2004年在阿克拉发起的哈吉·阿卜杜莱·亚里纪念与妇产诊所，112 以及由哈吉·亚当·伊萨哈库在塔马利运营的哈吉·亚当诊所（又名：哈吉·亚当斯医疗中心）都在少数获得NHIS认证之列（图36）。113
 
 112 “常驻英国的加纳投资者建造医院”，《阿克拉每日邮报》2004年1月19日。
 
-113 “加纳区级医院列表”，https://myhealthbasics.site/list-of-district-hospitals -in-ghana/，访问于2022年11月16日；“非政府组织以5000万塞地援助诊所”，2007年6月29日，https://www.ghanaweb.com/GhanaHomePage/NewsArchive/NGO-assists-clinic-with-50-million-cedis-126400，访问于2022年11月16日。
+113 “加纳区级医院列表”，`https://myhealthbasics.site/list-of-district-hospitals-in-ghana/`，访问于2022年11月16日；“非政府组织以5000万塞地援助诊所”，2007年6月29日，`https://www.ghanaweb.com/GhanaHomePage/NewsArchive/NGO-assists-clinic-with-50-million-cedis-126400`，访问于2022年11月16日。
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_345_0.png)
 
 **图36** 哈吉·亚当诊所，塔马利  
+
 **照片：**HOLGER WEISS/2019
 
 在库马西郊区的博阿巴伊，达鲁尔·哈迪斯社区运营着谢赫·陶菲克纪念诊所（图37）。¹¹⁴ 在上西区的哈米莱，当地私营的穆斯林社区诊所在提供基础医疗保健之外，还提供化验和超声扫描服务，并设有药房。¹¹⁵ 数名在开罗爱资哈尔大学学习医学的加纳穆斯林学生建立了私立医疗中心，例如（已故的）谢赫·苏莱曼·穆罕默德·哈伦·巴库里博士在瓦城建立的爱资哈尔诊所（图38）。¹¹⁶ 现代穆斯林教育综合体配有清真寺和诊所，例如库马西的加纳穆斯林宣教团伊斯兰高级中学，¹¹⁷ 以及
 
-¹¹⁴ 对谢赫·阿纳斯·陶菲克·易卜拉欣·巴克里及STF执行董事哈桑医生的访谈，库马西，2018年9月18日。该诊所被列入接受政府人员薪酬补偿的医疗机构名单，见卫生部，《2021–2024年中期支出框架（MTEF）：基于项目的预算估算》（阿克拉：卫生部，2021），第143页，可查阅：https://mofep.gov.gh/sites/default/files/pbb-estimates/2021/2021-PBB-MoH.pdf，访问于2022年12月30日。
+¹¹⁴ 对谢赫·阿纳斯·陶菲克·易卜拉欣·巴克里及STF执行董事哈桑医生的访谈，库马西，2018年9月18日。该诊所被列入接受政府人员薪酬补偿的医疗机构名单，见卫生部，《2021–2024年中期支出框架（MTEF）：基于项目的预算估算》（阿克拉：卫生部，2021），第143页，可查阅：`https://mofep.gov.gh/sites/default/files/pbb-estimates/2021/2021-PBB-MoH.pdf`，访问于2022年12月30日。
 
-¹¹⁵ 穆斯林社区诊所——哈米莱，2021年5月3日，https://www.facebook.com/profile.php?id=100054577084871，访问于2022年11月19日。
+¹¹⁵ 穆斯林社区诊所——哈米莱，2021年5月3日，`https://www.facebook.com/profile.php?id=100054577084871`，访问于2022年11月19日。
 
-¹¹⁶ 对谢赫·苏莱曼·穆罕默德·哈鲁尼博士的访谈，瓦城，2019年12月5日；邓贝，《跨国》，第153页。苏莱曼博士于2020年（意外）去世。他的诊所如今由S.M.巴库里医生运营，见谷歌上的广告：https://www.google.com/maps/contrib/113541876747048141037/photos/@10.0648436,-2.5053795,3a,75y,90t/data=!3m7!1e2!3m5!1sAF1QipNakIXmInboIAAaCQbo06gQzQpzyPBVpL-7_H62e10!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNakIXmInboIAAaCQbo06gQzQpzyPBVpL-7_H6%3Dwy65-h482-k-no!7i729!8i963!4m3!3m2!1s0x0:0x0，访问于2022年11月25日。
+¹¹⁶ 对谢赫·苏莱曼·穆罕默德·哈鲁尼博士的访谈，瓦城，2019年12月5日；邓贝，《跨国》，第153页。苏莱曼博士于2020年（意外）去世。他的诊所如今由S.M.巴库里医生运营，见谷歌上的广告：`https://www.google.com/maps/contrib/113541876747048141037/photos/@10.0648436,-2.5053795,3a,75y,90t/data=!3m7!1e2!3m5!1sAF1QipNakIXmInboIAAaCQbo06gQzQpzyPBVpL-7_H62e10!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNakIXmInboIAAaCQbo06gQzQpzyPBVpL-7_H6%3Dwy65-h482-k-no!7i729!8i963!4m3!3m2!1s0x0:0x0`，访问于2022年11月25日。
 
 ¹¹⁷ 作者实地考察，2017年12月10日。
-
-
-
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_346_0.png)
 
 图37 谢赫·塔菲克纪念诊所，库马西
+
 照片：霍尔格·魏斯/2018
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_346_1.png)
 
 图38 阿兹哈尔诊所，瓦城
+
 照片：霍尔格·魏斯/2019
 
 阿尔-拉赫马教育综合体位于老塔福/库马西[118]，吉索纳伊利伊斯兰小学图书馆与诊所位于塔马利[119]，以及ICODEHS在北部省马尔谢古委托建造的诊所和学校。[120]
 
+118. 阿尔-拉赫马教育综合体由努尔·拉赫马社会组织（亦称 Nurur Rahma Social Organisation）运营，除幼儿园、小学和初中外，还包括职业中心、可容纳260名孤儿的孤儿院楼以及努尔·拉赫马医疗中心。另见视频：“阿尔-拉赫马教育综合体”，2021年3月20日，`https://www.youtube.com/watch?v=IoGI0V7yxY`，访问于2022年11月23日。努尔-拉赫马医疗中心为当地宗戈居民提供免费医疗；另见`https://www.facebook.com/people/Noorur-Rahmah-Medical-Centre/100065062956185/`，访问于2022年11月23日。该教育综合体和医疗中心由科威特慈善机构拉赫马国际协会以及关怀与社会发展组织资助，另见视频：“努尔·拉赫马医疗中心——库马西老塔福”，2021年5月20日，`https://www.youtube.com/watch?v=Razb8CorSIk`，访问于2022年11月23日。
+
+119. `https://www.africabizinfo.com/GH/jisonayili-islamic-primary-school`，访问于2022年12月30日。
+
+120. “ICODEHS为加纳贫困社区提供校舍、清真寺、诊所和水井”，2016年7月27日，`https://www.modernghana.com/news/707199/icodehs-provides-school-blocks-mosques-clinics-and-wells-t.html`，访问于2022年12月13日。
+
 尽管提供正统（西方）医疗和医药的穆斯林从业者（仍）为数不多，但穆斯林健康和医疗从业者与专家回顾了数百年来的伊斯兰精神疗愈（ruqya）和先知医学传统，同时还有当地关于健康和治愈的知识体系。传统医学及其从业者继续存在于殖民领域之外，也独立于西方/现代医学知识体系和实践的引入。尤其是穆斯林治疗师和医疗从业者继续在当地社区拥有实质性影响，有些人获得了区域、国家甚至大陆级的声誉。[121] 少数穆斯林治疗师有组织，其中一些是加纳穆斯林传统治疗师协会（GHAMTHA）的成员，[122] 而政府卫生部门——传统医学实践委员会（TMPC）注册的更少。[123]
-
-118. 阿尔-拉赫马教育综合体由努尔·拉赫马社会组织（亦称 Nurur Rahma Social Organisation）运营，除幼儿园、小学和初中外，还包括职业中心、可容纳260名孤儿的孤儿院楼以及努尔·拉赫马医疗中心。另见视频：“阿尔-拉赫马教育综合体”，2021年3月20日，https://www.youtube.com/watch?v=IoGI0V7yxY，访问于2022年11月23日。努尔-拉赫马医疗中心为当地宗戈居民提供免费医疗；另见https://www.facebook.com/people/Noorur-Rahmah-Medical-Centre/100065062956185/，访问于2022年11月23日。该教育综合体和医疗中心由科威特慈善机构拉赫马国际协会以及关怀与社会发展组织资助，另见视频：“努尔·拉赫马医疗中心——库马西老塔福”，2021年5月20日，https://www.youtube.com/watch?v=Razb8CorSIk，访问于2022年11月23日。
-
-119. https://www.africabizinfo.com/GH/jisonayili-islamic-primary-school，访问于2022年12月30日。
-
-120. “ICODEHS为加纳贫困社区提供校舍、清真寺、诊所和水井”，2016年7月27日，https://www.modernghana.com/news/707199/icodehs-provides-school-blocks-mosques-clinics-and-wells-t.html，访问于2022年12月13日。
 
 121. 塞缪尔·阿杜-贾姆菲等人，“穆斯林治疗师与治疗：加纳阿博博社区的民族志研究”，《国际现代人类学杂志》第2卷，第14期（2020年）：291–316。
 
-122. GHAMTHA在其Facebook账户上拥有64名关注者（https://www.facebook.com/Ghamtha-Ghana-Muslims-Traditional-Healers-Association-274765932626782/，访问于2021年9月22日）。其成员包括穆斯林草药医疗从业者、精神治疗师、万扎姆（Wanzams）、正骨师、传统助产士和传统牙医。协会总部设在东部区阿赫韦拉塞，表明该协会的穆斯林治疗师主要来自南方。GHAMTHA是加纳传统医学从业者协会联合会（GHAFTRAM）的附属成员，见https://ghaft ram.org/membership/，访问于2021年9月22日。
+122. GHAMTHA在其Facebook账户上拥有64名关注者（`https://www.facebook.com/Ghamtha-Ghana-Muslims-Traditional-Healers-Association-274765932626782/`，访问于2021年9月22日）。其成员包括穆斯林草药医疗从业者、精神治疗师、万扎姆（Wanzams）、正骨师、传统助产士和传统牙医。协会总部设在东部区阿赫韦拉塞，表明该协会的穆斯林治疗师主要来自南方。GHAMTHA是加纳传统医学从业者协会联合会（GHAFTRAM）的附属成员，见`https://ghaftram.org/membership/`，访问于2021年9月22日。
 
-123. 另见TMPC主页，https://tmpcghana.org/about-us/traditional-medicine-practice-council/。不过，当我试图评估时，2021版主页的许多部分仍“正在建设中”。
+123. 另见TMPC主页，`https://tmpcghana.org/about-us/traditional-medicine-practice-council/`。不过，当我试图评估时，2021版主页的许多部分仍“正在建设中”。
 
 穆斯林传统治疗、健康和医学知识体系，连同当地传统的非洲知识体系，近几十年来获得了官方认可，并成为加纳医疗保健版图中不可分割的一部分。传统治疗和医学通过从业者的专业化来回应当代的现代化和西化，最初一部分人在北非大学攻读文凭，在那里他们将西方医学与先知/传统医学相结合。[124] 他们中有些人已转型为现代传统/替代医疗中心，例如阿特布布的阿尔-努尔伊斯兰医疗中心。[125] 另一些人则具有国际联系，包括总部位于阿克拉的西非行为健康成瘾与康复管理组织（WABHARM），该组织隶属于英国少数族裔行为健康成瘾与康复管理基金会。[126] WABHARM自2018年起在其药物和酒精依赖、滥用以及精神健康障碍的治疗中采用一项伊斯兰自助计划——米拉蒂·伊斯兰（Millati Islami）。[127] 他们在阿克拉的两位最具影响力的从业者及其机构——阿明·邦苏博士与亚门科学草药医院，以及拉希德·侯赛因·萨尔瓦特博士与萨尔瓦特健康与康复医院和学校——因其在2020年的服务而获得西非传统与替代医学实践委员会授予的高度奖项。[128] 伊德里斯·桑巴雷博士及其希贾马草药诊所则获得了同一组织于2022年颁发的“年度最佳拔罐治疗中心”奖。[129]
 
 124. 另见法达卢拉利·阿尔哈桑·易卜拉欣，*《加纳的伊斯兰治疗：萨尔瓦特健康康复医院研究》*，加纳大学宗教学系硕士论文，2018年。
 
-125. 另见阿尔-努尔伊斯兰医疗中心，https://www.facebook.com/profile.php?id=100070386603474。该诊所于2020年10月启用，见“巴武米亚博士为阿特布布伊斯兰医疗中心揭幕”，2020年10月19日，https://utv.peacefmonline.com/pages/videos/202010/34654.php，访问于2022年11月19日。
+125. 另见阿尔-努尔伊斯兰医疗中心，`https://www.facebook.com/profile.php?id=100070386603474`。该诊所于2020年10月启用，见“巴武米亚博士为阿特布布伊斯兰医疗中心揭幕”，2020年10月19日，`https://utv.peacefmonline.com/pages/videos/202010/34654.php`，访问于2022年11月19日。
+
+
 
 126. 另见https://www.mhinnovation.net/organisations/west-africa-behavioural-health-addictions-and-recovery-management，访问于2022年11月12日。米拉蒂·伊斯兰（Millati Islami）的协调人（以及主要捐赠者？）是加纳穆斯林企业家与慈善家吉布里尔·穆罕默德。
 
@@ -4458,9 +4618,6 @@ TLF 在与 World Education Ghana 合作并于 2014-2015 年在 Zongo 社区开�
 134. https://www.facebook.com/islamicsadaqafoundation，2020年2月3日，访问于2021年8月7日。
 
 135. “关于土地问题的瓦城、布伦加、上西部省之行第二次报告”，https://www.facebook.com/islamicsadaqafoundation，2020年6月4日，访问于2021年8月7日。
-
-
-
 
 ##### 表 8 加纳伊斯兰医院项目（截至2023年6月状态）
 
@@ -4519,6 +4676,8 @@ SOURCE: ISLAMIC SADAQA FOUNDATION (ISFOUND), END OF YEAR ACCOUNT RENDERING OF IS
 
 In early June 2021, ISFOUND declared that the hospital building campaign so far had raised GHS 67,102.73 as sadaqa.140 A few days later, Khalifa Faith issued a strong backing for the project on Peace Dawah Media.141
 
+
+
 In 2022, ISFOUND changed the profile of its social media campaign. Already in September 2021, the organisation announced to invest in a small-scale rice milling company as a second source of income for the hospital project.142 In late December 2021, it created a GoFundMe account;143 in January 2022, it organised a fund raising symposium in Wa.144 In August, it posted an update of donations received from September 2021 to July 2022, totalling GHS 26,290.145 In October 2022, it celebrated the sod cutting ceremony for the commencement at Bulenga,146 and declared that the budget for finishing the first stage of its hospital project amounted to GHS 335,365, and renewed its campaign on Facebook: “if 10,000 generous people donate GHC 30 each it will be realize [sic] in no time in Sha Allah.”147
 
 The Zongo Medical Centre in Ashaiman, in turn, is a project spearheaded by the Ashaiman Sadaqatul Jariya (ASJ).148 Established in 2019, the group consists of six diaspora founders (one residing in the USA, four in the UK and one in
@@ -4540,8 +4699,6 @@ The Zongo Medical Centre in Ashaiman, in turn, is a project spearheaded by the A
 147 “Kindly support and share for Allah sake,” 9.10.2022, https://www.facebook.com/islamicsadaqafoundation/, accessed 30.12.2022.
 
 148 Ashaiman sadaqatul jariya hospital project, video (in Hausa) 8.8.2021, https://www.facebook.com/106380131094295/videos/22565766239513, accessed 11.9.2021. “ASHAIMAN SADA QATUL JARIYAH have embarked on mission deliver a health clinic to the Muslim community in Ashaiman, Ghana,” https://www.facebook.com/MakeZongoGreatAgainn,
-
-
 
 尼日利亚），此后吸纳了约200名侨民和本地成员。董事会大多数成员居住在美国（主席、一位副主席、总管理员/经理）和英国（组织者以及财务主管），其余成员分布在安提瓜、尼日利亚和沙特阿拉伯。唯一的本地董事会成员是乌斯曼·沙伊布（Usman Shaibu），担任ASJ的秘书。该团体的目标是汇集资源和临时捐款，资助各种年度项目，例如支付伊斯兰葬礼费用（包括将逝者遗体送往医院的救护车费用；图38），以及为无力支付医院账单的个人/家庭买单。此外，该团体还在开斋节和古尔邦节组织食品和肉类捐赠（根据每年募集的金额，大约可为500人提供食物），发放奖学金，并组织年度《古兰经》纪念竞赛。然而，其旗舰项目是宗戈医疗中心（Zongo Medical Centre）。^149
 
@@ -4574,6 +4731,7 @@ The Zongo Medical Centre in Ashaiman, in turn, is a project spearheaded by the A
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_355_0.png)
 
 图39 阿夏曼伊斯兰诊所项目
+
 摄影：霍尔格·魏斯/2022
 
 工程目前已完成约40%。愿真主帮助他们完成”（2022年2月15日），施工现场视频（2022年3月11日），以及“阿夏曼Sadaqatul Jariyah正在加纳阿夏曼建造一座最先进的医疗中心。阿夏曼有超过25万居民，却只有一家公共卫生设施（阿夏曼综合诊所）和少数私立诊所。这一新设施将有助于改善阿夏曼及其周边地区人民的整体健康状况。请捐款并告知其他潜在捐助者”（2022年7月6日），https://www.facebook.com/MakeZongoGreatAgain，访问于4.8.2022。
@@ -4601,13 +4759,18 @@ The Zongo Medical Centre in Ashaiman, in turn, is a project spearheaded by the A
 163 https://www.facebook.com/Ghana-Islamic-Health-Foundation-165526770663949/，2017年12月19日，2017年12月20日，访问于27.9.2021。
 
 164 https://www.facebook.com/Ghana-Islamic-Health-Foundation-165526770663949/，2018–2019年HIV/艾滋病防治筹款，2017年10月20日；宣布2018年4月23日在塔马利、2018年5月25日在库马西以及2018年6月25–28日在西部地区北部举办HIV/艾滋病会议，2017年12月5日，访问于27.9.2021。
-165 https://www.facebook.com/Ghana-Islamic-Health-Foundation-165526770663949/，2017年7月26日，访问于27.9.2021。
-166 贾洛青年服务组织的呼吁，发布于2019年11月6日，2020年1月8日，https://www.facebook.com/jallooyouth/，访问于16.12.2021。
-167 谢赫·凯鲁·阿卜杜拉希·迈卡诺的信，发布于2019年11月5日，https://www.facebook.com/jallooyouth/，访问于16.12.2021。
-168 VOZI中期和长期计划概要，2021年11月2日，https://www.facebook.com/VOZIWorld/photos/63999260703017，访问于16.12.2021。
-169 VOZI主席哈吉·阿卜杜拉希·乌斯曼（Karima Enterprise首席执行官）呼吁每位宗戈公民加入该组织，发布于2021年8月10日，https://www.facebook.com/VOZIWorld/?ref=page_internal，访问于16.12.2021。
-170 “伊克拉基金会西非将在加纳建造第一所穆斯林医院”，https://www.facebook.com/watch/?v=317021896250995，2020年9月14日，访问于3.2.2022。
 
+165 https://www.facebook.com/Ghana-Islamic-Health-Foundation-165526770663949/，2017年7月26日，访问于27.9.2021。
+
+166 贾洛青年服务组织的呼吁，发布于2019年11月6日，2020年1月8日，https://www.facebook.com/jallooyouth/，访问于16.12.2021。
+
+167 谢赫·凯鲁·阿卜杜拉希·迈卡诺的信，发布于2019年11月5日，https://www.facebook.com/jallooyouth/，访问于16.12.2021。
+
+168 VOZI中期和长期计划概要，2021年11月2日，https://www.facebook.com/VOZIWorld/photos/63999260703017，访问于16.12.2021。
+
+169 VOZI主席哈吉·阿卜杜拉希·乌斯曼（Karima Enterprise首席执行官）呼吁每位宗戈公民加入该组织，发布于2021年8月10日，https://www.facebook.com/VOZIWorld/?ref=page_internal，访问于16.12.2021。
+
+170 “伊克拉基金会西非将在加纳建造第一所穆斯林医院”，https://www.facebook.com/watch/?v=317021896250995，2020年9月14日，访问于3.2.2022。
 
 
 
@@ -4615,7 +4778,7 @@ The Zongo Medical Centre in Ashaiman, in turn, is a project spearheaded by the A
 
 截至2023年7月/12月，最近的医院项目包括塔马利的拉哈古项目（由伊斯兰教育组织于2021年初发起），¹⁷⁵ 库马西阿索科雷的提贾尼耶医院（由加纳萨达卡鲁尔-贾里亚协会于2021年8月发起），¹⁷⁶ 以及阿哈弗阿诺东南区伊玛目和宗戈酋长发起的伊斯兰医院项目（于2022年6月启动）。¹⁷⁷ 其他项目包括萨拉加的伊斯兰诊所项目（由马拉姆·阿布·萨拉加家族发起），¹⁷⁸ 扎卡特和萨达卡信托基金在塔科拉迪设想的医院项目，¹⁷⁹ 以及 ASWAJ 阿散蒂地区库马西宗戈医院项目。¹⁸⁰ 提贾尼耶医院项目可追溯至2017年提贾尼耶穆斯林运动青年翼在精神领袖扎伊姆谢赫·阿卜杜勒·瓦杜德·哈伦65岁生日时发表的公告。¹⁸¹ 与 ISFOUND 项目类似，其筹款活动利用社交媒体组织，向成员强调该项目将为所有参与者作为萨达卡·贾里亚服务。目标是在 WhatsApp 平台上聚集2,000名成员。¹⁸² 每位成员预计每周五至少捐赠2加纳塞地。小组的首要目标是在2022年至少购置2英亩土地。截至2022年9月底，小组已筹集约4,320加纳塞地。¹⁸³
 
-#### 5 沼气消化厕所项目
+## 5 沼气消化厕所项目
 
 总部位于卡索阿的伊斯兰人道主义与发展组织是加纳全国穆斯林非政府组织中的新成员。虽然我未能追溯其根源，但很可能它是当地青年运动的倡议。该组织于2019年11月建立了 Facebook 账号，或许是在其转变为组织之后。2020年2月，该组织获得了社会福利部的注册证书、¹⁸⁴ 作为全国性非政府组织的认可以及营业许可。¹⁸⁵
 
@@ -4663,11 +4826,9 @@ The Zongo Medical Centre in Ashaiman, in turn, is a project spearheaded by the A
 
 189 视频发布于 Facebook，5.10.2020，https://www.facebook.com/Islamic-Organization-for-Humanity-and-Development-110160223762133/?ref=page_internal，访问日期 23.8.2021。
 
-
-
 ZOLAOD（反对露天排便的宗族领袖）的成立。¹⁹⁷ 该联盟的目的是在库马西地区复制 GAMA-SWP，尤其是安装负担得起的家庭厕所。他们的首要目标是遏制露天排便，向当地伊玛目介绍项目的范围、成果和预期影响，并帮助 KMA 识别并说服家庭认识到项目的重要性。¹⁹⁸
 
-#### 6 社区资源中心、社区图书馆与塑料教育项目
+## 6 社区资源中心、社区图书馆与塑料教育项目
 
 三个近期举措作为穆斯林自我赋权的创新扩展而脱颖而出。其中两个以城市为基础，位于阿克拉，即由一个本地和一个外国穆斯林非政府组织联盟牵头的社区中心项目，以及 ICODEHS 的社区图书馆项目。第三个是由穆斯林领导的青年运动在沃尔特地区开展的农村教育基础设施项目，涵盖了塑料瓶的回收利用。
 
@@ -4713,6 +4874,8 @@ ZOLAOD（反对露天排便的宗族领袖）的成立。¹⁹⁷ 该联盟的�
 
 HOZDA 的活动和努力取得了回报。救护车于 2015 年 7 月抵达；社区图书馆于 2016 年 1 月以满负荷运转。^228^ 为
 
+
+
 .facebook.com/groups/hozda, 31.5.2012)。年底时，HOZDA 已筹集到购买 50 块土地所需现金出资的 60%，见“Hozda 202 成就回顾”，31.12.2012，https://www.facebook.com/groups/hozda, 访问于 26.8.2022.
 
 221 https://www.facebook.com/groups/hozda, 12.6.2012.
@@ -4731,11 +4894,7 @@ HOZDA 的活动和努力取得了回报。救护车于 2015 年 7 月抵达；�
 
 228 “Hohoe Zongo 救护车终于到了”，13.7.2015；“HOZDA 图书馆现已满负荷运转”
 
-
-
 维持协会所开展的各项项目，HOZDA 的全体大会决定所有成员自愿注册为执行董事，并且每人每月准备向协会支付至少 GHC 5。229 一年后，对协会活动的临时调查显示了一份令人印象深刻的成就清单。它已为墓地购买了 42 块土地，促成了 Hohoe Zongo 诊所的物资供应，提供了 Hohoe Zongo 图书馆并配备了现代书籍和 10 台电脑以及启动了 ICT 培训，向学校提供了奖学金以及免费的练习册、伊斯兰和英语书籍，提供了免费的医疗筛查和免费药品（2011 年和 2014 年）。此外，它还在 HOZDA 土地上赞助了造林用途的树木种植，组织了有关药物滥用和青少年怀孕的论坛（2012 年），另一个关于创业和启动资金的论坛，组织了古兰经背诵比赛（2015 年）和足球嘉年华杯，以及卫生和清理活动（2011 年、2012 年和 2013 年）。230
-
-在之前成就的推动下，HOZDA 决定在 5 年战略发展计划中进一步提高赌注。其主要目标是扩大奖学金计划，覆盖从基础教育到大学和护理的更多人群。此外，它计划为其 ICT 中心提供更多电脑和互联网设施，现代化并配备现代书籍和受过培训的图书管理员。此外，它计划将 Hohoe Zongo 的两所基础学校改造成示范学校，并确保所有儿童、男孩和女孩都能接受并完成小学和中学教育，同时消除各层面的性别差距并确保到 2021 年实现性别平等。另一个目标是扩大和改善伊斯兰教育，以确保所有儿童和成人具备伊斯兰读写能力。此外，它旨在与 Hohoe 市政卫生管理局合作，将 Hohoe Zongo 诊所扩展为综合诊所，并设立免费年度医疗筛查活动。最后，它设想与城际和 Zongo 部合作改善 Zongo 的卫生状况，以及启动 HOZDA 高中建设，并设立咨询中心，为 Zongo 青年提供职业发展以及药物滥用和青少年怀孕危险的建议。231
 
 能力," 19.1.2016, https://www.facebook.com/groups/hozda, 访问于 26.8.2022.
 
@@ -4745,17 +4904,17 @@ HOZDA 的活动和努力取得了回报。救护车于 2015 年 7 月抵达；�
 
 231 "HOZDA 5 年战略计划（2017-2021）亮点," 27.4.2017, https://www.facebook.com/groups/hozda, 访问于 26.8.2022.
 
+在之前成就的推动下，HOZDA 决定在 5 年战略发展计划中进一步提高赌注。其主要目标是扩大奖学金计划，覆盖从基础教育到大学和护理的更多人群。此外，它计划为其 ICT 中心提供更多电脑和互联网设施，现代化并配备现代书籍和受过培训的图书管理员。此外，它计划将 Hohoe Zongo 的两所基础学校改造成示范学校，并确保所有儿童、男孩和女孩都能接受并完成小学和中学教育，同时消除各层面的性别差距并确保到 2021 年实现性别平等。另一个目标是扩大和改善伊斯兰教育，以确保所有儿童和成人具备伊斯兰读写能力。此外，它旨在与 Hohoe 市政卫生管理局合作，将 Hohoe Zongo 诊所扩展为综合诊所，并设立免费年度医疗筛查活动。最后，它设想与城际和 Zongo 部合作改善 Zongo 的卫生状况，以及启动 HOZDA 高中建设，并设立咨询中心，为 Zongo 青年提供职业发展以及药物滥用和青少年怀孕危险的建议。231
+
 主要目标是扩大 Hohoe Zongo 诊所。2019 年 1 月，HOZDA 为诊所增设了一个新的产科病房，并组织向其成员呼吁现金捐款购买设备。232 一个月后，HOZDA 向诊所捐赠了大量物品，包括现代液压床、接生套装、灭菌桶、输液架、轮椅、钢制长椅、双开门冰箱、浴室热水器以及办公桌椅。233 一年后，协会决定升级其 5 年计划并推出一项新的十年项目：为未来的 HOZDA 教育综合体、医院和社会中心购置十块土地。234
-
-然而，COVID-19 大流行使所有计划陷入停滞。相反，HOZDA 发起了 COVID-19 基金，HOZDA 健康团队与政府卫生部门合作打击病毒，通过分发口罩、手套和洗手设备、在当地语言（Kotokoli、Hausa、Dagbali 和 Ewe）中对十二个分委会进行 COVID-19 防控教育，以及帮助执行社区集会禁令和确保 COVID-19 协议。235 健康团队采取的措施令人印象深刻：到 2020 年 5 月，Zongo 的居民中没有一人感染病毒。236 防止病毒传播的努力在 2020 年夏季继续，HOZDA 向该市的四座清真寺捐赠了体温枪，并向市场妇女免费分发了超过 1,000 个口罩。237
-
-HOZDA 于八月恢复了“正常”活动，当时它向 Hohoe Zongo 诊所捐赠了医院设备，包括三辆轮椅、20 件白色床单和一台健康秤。238 在 2021 年斋月期间，它启动了一个新举措，HOZDA Zakatul Fitr 项目，旨在用大米、油和番茄酱支持 140 个贫困家庭。239 在 2023 年，其目标是筹集
 
 232 “紧急需要的设备,” 9.1.2019, 29.1.2019, https://www.facebook.com/groups/hozda, 访问于 26.8.2022.
 
 233 “HOZDA 医院设备捐赠,” 9.2.2019, https://www.facebook.com/groups/hozda, 访问于 26.8.2022.
 
 234 “讨论议程,” 26.1.2020, https://www.facebook.com/groups/hozda, 访问于 26.8.2022.
+
+然而，COVID-19 大流行使所有计划陷入停滞。相反，HOZDA 发起了 COVID-19 基金，HOZDA 健康团队与政府卫生部门合作打击病毒，通过分发口罩、手套和洗手设备、在当地语言（Kotokoli、Hausa、Dagbali 和 Ewe）中对十二个分委会进行 COVID-19 防控教育，以及帮助执行社区集会禁令和确保 COVID-19 协议。235 健康团队采取的措施令人印象深刻：到 2020 年 5 月，Zongo 的居民中没有一人感染病毒。236 防止病毒传播的努力在 2020 年夏季继续，HOZDA 向该市的四座清真寺捐赠了体温枪，并向市场妇女免费分发了超过 1,000 个口罩。237
 
 235 “HOZDA 健康团队在 Hohoe Zongo 关于 COVID-19 的活动报告,” 17.4.2020, 22.4.2020, https://www.facebook.com/groups/hozda, 访问于 26.8.2022.
 
@@ -4767,39 +4926,19 @@ HOZDA 于八月恢复了“正常”活动，当时它向 Hohoe Zongo 诊所捐�
 
 239 “HOZDA Zakatul Fitr 项目 2021,” 13.5.2021, https://www.facebook.com/groups/hozda, 访问于 26.8.2022.
 
-GHS 34,000。最终，Hohoe Zongo 超过 160 个贫困家庭从 HOZDA Zakatul Fitr 2023 分发中受益。此外，协会于 2023 年 4 月推出了 HOZTEC Coding for Kids 活动，这是 Hohoe Zongo Tech Community 的一项倡议，旨在为 10 至 19 岁的儿童提供免费的基础计算机编程。240
-
-HOZDA 令人印象深刻的记录和成就总体上是极其积极成员的结果。协会充分利用了社交媒体——作为沟通、激励以及最重要的是持续报告的工具。其成员、支持者和同情者获得了持续的信息和更新流。此外，HOZDA 通过其 Facebook 群组能够保证其活动的最低程度的问责和透明度。
-
-然而，HOZDA 能够行动和参与的主要原因在于其侨民成员的国家和国际网络，他们有能力且愿意缴纳会费并响应捐款呼吁。从在三个加纳城市设立分支机构开始，协会列出了在六个加纳城市（Accra、Ashaiman、Kasoa、Ho、Hohoe 和 Kumasi）的分支机构，以及在非洲、欧洲、北美和西亚十多个国家的代表。241 其非居民成员的地点和数量在 2021 年 5 月的一张海报中有所体现，描绘了他们的天课捐款：
-
-| 地点 | Zakat al-fitr 捐款额 |
-|---|---|
-| Accra | GHC 1,000 |
-| Germany | GHC 1,000 |
-| USA | GHC 5,600 |
-| Italy | GHC 390 |
-| UK | GHC 380 |
-| France | GHC 370 |
-| Canada | GHC 185 |
-| South Africa | GHC 150 |
-| Brazil | GHC 100 |
-| Malta | GHC 40 |
-| Spain | GHC 1,280 |
-
-242 HOZDA 国际支持者的最新增加是美国穆斯林慈善机构 Taimaka Africa Foundation；2022 年 3 月，该基金会向 Hohoe Zongo 的三所学校捐赠了十一台电脑。243
+HOZDA 于八月恢复了“正常”活动，当时它向 Hohoe Zongo 诊所捐赠了医院设备，包括三辆轮椅、20 件白色床单和一台健康秤。238 在 2021 年斋月期间，它启动了一个新举措，HOZDA Zakatul Fitr 项目，旨在用大米、油和番茄酱支持 140 个贫困家庭。239 在 2023 年，其目标是筹集 GHS 34,000。最终，Hohoe Zongo 超过 160 个贫困家庭从 HOZDA Zakatul Fitr 2023 分发中受益。此外，协会于 2023 年 4 月推出了 HOZTEC Coding for Kids 活动，这是 Hohoe Zongo Tech Community 的一项倡议，旨在为 10 至 19 岁的儿童提供免费的基础计算机编程。240
 
 240 https://www.facebook.com/groups/hozda, 25.3.2023, 20.4.2023, 22.4.2023, 访问于 21.8.2023.
+
 241 "2020 年 2 月月度会费支付," 7.3.2020, https://www.facebook.com/groups/hozda, 访问于 26.8.2022. 此时月度会费已增加到 GHC 10。
+
 242 "HOZDA Zakatul Fitr 捐款," 13.5.2021, https://www.facebook.com/groups/hozda, 访问于 26.8.2022.
+
 243 "电脑捐赠," 11.3.2022, https://www.facebook.com/groups/hozda, 访问于 26.8.2022.
 
-#### 8 城市市场花园
+## 8 城市市场花园
 
-2022 年 10 月 14 日：我参加了在加纳管理与公共行政学院（GIMPA）举行的加纳气候变化纪录片展映。纪录片由十二部独立的影片组成，由年轻
-
-
-加纳的视频制作者们凸显了气候变化对环境和生计的影响，以及采用气候智慧型农业系统改善粮食生产。这些影片是加纳青年摄像项目（Ghana Youth Videography Programme）的一部分，该项目是GIMPA与加拿大威尔弗里德·劳里埃大学的合作项目，并由联合国青年气候报告平台推动，该平台展示了世界各地的青年在气候变化方面的行动。244
+2022 年 10 月 14 日：我参加了在加纳管理与公共行政学院（GIMPA）举行的加纳气候变化纪录片展映。纪录片由十二部独立的影片组成，由年轻加纳的视频制作者们凸显了气候变化对环境和生计的影响，以及采用气候智慧型农业系统改善粮食生产。这些影片是加纳青年摄像项目（Ghana Youth Videography Programme）的一部分，该项目是GIMPA与加拿大威尔弗里德·劳里埃大学的合作项目，并由联合国青年气候报告平台推动，该平台展示了世界各地的青年在气候变化方面的行动。244
 
 在纪录片收录的影片中，奥弗里·安卡·科菲（Ofori Ankah Kofi）的视频描绘了当地妇女团体“尼马-马莫比母亲俱乐部”（Nima-Mamobi Mothers' Club）在阿克拉市中心尼马种植蔬菜和打理小花园的努力。245 他的视频采访了该团体的活动人士，其中包括哈吉亚·玛丽亚姆·萨利富（Hajia Mariam Salifu）。我立刻意识到，该团体是当地众多基层穆斯林妇女协会之一。在奥弗里·安卡·科菲和我的研究助理加里巴（Gariba）的帮助下，几天后我与哈吉亚·玛丽亚姆·萨利富进行了交流，并亲眼看到了她那令人印象深刻的庭院花园（图40）。事实证明，该协会是当地少数参与缓解气候变化影响的穆斯林非政府组织之一。此外，我的背景研究和与哈吉亚·玛丽亚姆·萨利富的访谈显示，该团体在改善卫生条件和解决当地环境问题方面有着悠久的地方参与历史。
 
@@ -4824,10 +4963,8 @@ HOZDA 令人印象深刻的记录和成就总体上是极其积极成员的结�
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_371_0.png)
 
 图40：哈吉亚·玛丽亚姆在阿克拉尼马的城市花园
+
 摄影：Holger Weiss/2022
-
-
-
 
 无处不在。^259^ 尼玛-马莫比母亲俱乐部随后声明“[…] 绿色运动是食用健康食品和预防疾病的关键。”^260^
 
@@ -4836,6 +4973,9 @@ HOZDA 令人印象深刻的记录和成就总体上是极其积极成员的结�
 然而，哈吉亚·玛丽亚姆·萨利富告诉我，该倡议面临了一些挑战和障碍。其中之一是一些房东不允许在院子里种植，另一个是最初参与项目的一些较贫困家庭认为 GIZ 是来送钱的，而不是推广种植植物和蔬菜。其他参与者期望获得继续参与项目的激励措施和/或鼓励以及资金，由于这些都没有兑现，他们结束了参与。尽管遭遇这些挫折，其他人，其中包括哈吉亚·玛丽亚姆·萨利富，仍在照料他们的院子花园，并种植了足够的蔬菜在外出售。^265^
 
 - 259. Hipsters of Nature，“Mothers club of Nima makes Nima Green”，22.1.2017，https://hipster­sofnature.wordpress.com/2017/01/22/mothers-club-of-nima/，访问于 21.11.2022。
+
+
+
 - 260. Nima-Mamobi Mothers Club，24.10.2018，https://www.facebook.com/NMMClub/，访问于 21.11.2022。
 - 261. 参见 Green Nima Movement Garden Walk 的公告，15.2.2018，https://m.facebook.com/story.php?story_fbid=pfbid0YIr5HDGou2dpMSJbj7nHniAgDYTSk3YyBVwKS9FZdPC4vWXEiAHeCursbdospaal&id=170060016694360&ec=ev-s1&fabr­-hrbhbzOZhW-mcMFAZvT1QjrQIGq3HwtRzpoXUdlxMuBFolXQ125hS9soUcNXJKU&m_entstream_source=timeline&paipv=0，访问于 21.11.2022。
 - 262. JoyNews，“Backyard Farming”，28.10.2018，https://www.facebook.com/JoyNewsOnTV/videos/190478911874464，访问于 21.11.2022。
@@ -4864,6 +5004,7 @@ Facebook: My garden. My health. My wealth
 Contact: 0243901994 / 0209598897 / 0242281811
 
 图 41 “我的花园，我的健康，我的财富项目”。尼玛，阿克拉墙上的海报
+
 照片：HOLGER WEISS/2022
 
 ## 第 5 章
@@ -4887,9 +5028,6 @@ Zeinelabdin 和 Salih 的研究反映了自 1990 年代以来穆斯林学者之�
 - 7. World Bank and Islamic Development Bank Group，*Global Report on Islamic Finance—Islamic Finance: A Catalyst for Shared Prosperity?*（Washington DC: World Bank Group, 2016），174–199；Mustapha Abdul-Hamid and Mohammed Fawzi Aminu Amadu，“Islam and Ghana’s Sustainable Development Agenda: Negotiating the Involvement of the Muslim Community in Mainstream Economic Activity”，in *Religion and Sustainable Development: Ghanaian Perspectives*，ed. George Ossom-Batsa, Nicoletta Gatti and Rabiatu Deinyio Ammah（Città del Vaticano: Urbaniana University Press, 2018），131–144。
 - 8. Nasim Shah Shirazi, Md. Fouad Bin Amin and Talat Anwar，“Poverty Elimination Through Potential Zakat Collection in the OIC-member Countries”，*The Pakistan Development Review* 48, no. 4, Papers and Proceedings Parts I and II（2009）：739–754。
 - 9. Muhammad Ramzan Akhtar，“Poverty Alleviation on a Sustainable Basis in the Islamic Framework”，*The Pakistan Development Review* 39, no. 4 Part II（2000）：632。
-
-
-
 
 （riba），以及天课的非强制性。与强调 maslaha 的社群主义方面相反，这些学者旨在合法化个人自利的核心地位，并将他们的社会福利伦理置于个人自愿主义之中。10 事实上，穆斯林学者激烈争论国家的作用，尤其是在天课问题上。远非标志着伊斯兰主义的去政治化，非正式的、个人间的天课代表了一种抗议国家腐败、失败和非法性的方式，并回应了当代政治危机，与民族国家框架的逻辑相悖。11
 
@@ -4926,23 +5064,32 @@ Zeinelabdin 和 Salih 的研究反映了自 1990 年代以来穆斯林学者之�
 - b) 更多人会缴纳天课。
 - c) 穷人和有需要的人将受益于天课的本质。
 
-如需澄清和评论，请联系：  
-SHEIKH OSMAN BAWA ORLANDO  
-TEL: 0208120402/0266606262  
-Website: www.olandoweb.org  
-Email: shosman.bawa@gmail.com  
+如需澄清和评论，请联系：
 
-Sponsored by: Muslim Executive's Foundation  
-P. O. Box 4349  
+SHEIKH OSMAN BAWA ORLANDO
+
+TEL: 0208120402/0266606262
+
+Website: www.olandoweb.org
+
+Email: shosman.bawa@gmail.com
+
+Sponsored by: Muslim Executive's Foundation
+
+P. O. Box 4349
+
 Dichems o May 5 Kumasi
 
 以至仁至慈的真主之名
 
 ### 瓦中央清真寺维护委员会
 
-大伊玛目办公室  
-P O BOX 189  
-TEL: 0756-20336  
+大伊玛目办公室
+
+P O BOX 189
+
+TEL: 0756-20336
+
 WA – UW/R
 
 #### 天课
@@ -4959,15 +5106,20 @@ WA – UW/R
 
 截至2005年10月4日星期二。《每日图形》金融、商品和股市（第33页）：
 
-1 Oz of gold = $468.00. And USD = ₵9,050.00  
-30grams = 1 Oz  
-90 grams /30 = 3 Oz = $468 x 3 = $1,404.00  
+1 Oz of gold = $468.00. And USD = ₵9,050.00
+
+30grams = 1 Oz
+
+90 grams /30 = 3 Oz = $468 x 3 = $1,404.00
+
 = $1,404 x ₵9,050 = ₵12,706,200
 
 当地：由于黄金的不纯和称重时使用刀片，价格势必低于国际价格。结合两种价格来确定应缴天课的最低金额，可说从₵9,000,000到₵13,000,000或约₵11,000,000.00。
 
-货币、黄金、白银和商业货物上的天课年率为2.5%  
-即  
+货币、黄金、白银和商业货物上的天课年率为2.5%
+
+即
+
 2½/100 = 5/2 x 1/100 = 5/200 = 1/40
 
 #### 示例：
@@ -4988,9 +5140,9 @@ WA – UW/R
 
 
 
-(200迪拉姆 = 595克 = 19.13金衡盎司，按以下方式折算为现金：美元16.49 [2017年白银市场价值] × 19.13 = 美元315.45 × 4.19 [1美元兑加纳新塞地/GHS的汇率] = GHS 1,321.73；GHS 1,321.73的2.5%为GHS 33.04)并宣布2017年的*nisab*从GHS 1,300开始，为GHS 32.50。19
+(200迪拉姆 = 595克 = 19.13金衡盎司，按以下方式折算为现金：美元16.49 [2017年白银市场价值] × 19.13 = 美元315.45 × 4.19 [1美元兑加纳新塞地/GHS的汇率] = GHS 1,321.73；GHS 1,321.73的2.5%为GHS 33.04)并宣布2017年的`nisab`从GHS 1,300开始，为GHS 32.50。19
 
-推动对*nisab*达成共识的动力，也源于从实物缴纳*zakat*向现金缴纳*zakat*的转变。作为推广现金缴纳*zakat*的一部分，位于库马西的穆斯林非政府组织Ansarudeen Organisation于2015年创建了一款数字应用程序，GH Zakaatal Mal Software (ZMS)，用于计算白银的*nisab*。与Sheikh Orlando合作，该应用程序显示了一个功能，可以就*zakat*和*nisab*提出问题。20 该应用程序于2016年在Facebook上推出，包含*zakat*计算器（“calculate the *nisab*”-function）和关于*zakat*捐赠者与受赠者的信息。21 不幸的是，它并未取得很大成功，Sheikh Abdallah承认只有几百人下载了它。22 两年后，Facebook上发布了一段视频，报道了Sheikh Orlando在Hohoe举行的第24届年度斋月会议上对*zakat*的*nisab*的估算。23 然而，关于*nisab*最常见的沟通方式是由参加年度斋月会议的穆斯林学者进行的，在会上，国家新月委员会讨论并确定*nisab*的年度费率，学者们则在斋月布道中向当地社区传达这一决定。24
+推动对`nisab`达成共识的动力，也源于从实物缴纳`zakat`向现金缴纳`zakat`的转变。作为推广现金缴纳`zakat`的一部分，位于库马西的穆斯林非政府组织Ansarudeen Organisation于2015年创建了一款数字应用程序，GH Zakaatal Mal Software (ZMS)，用于计算白银的`nisab`。与Sheikh Orlando合作，该应用程序显示了一个功能，可以就`zakat`和`nisab`提出问题。20 该应用程序于2016年在Facebook上推出，包含`zakat`计算器（“calculate the `nisab`”-function）和关于`zakat`捐赠者与受赠者的信息。21 不幸的是，它并未取得很大成功，Sheikh Abdallah承认只有几百人下载了它。22 两年后，Facebook上发布了一段视频，报道了Sheikh Orlando在Hohoe举行的第24届年度斋月会议上对`zakat`的`nisab`的估算。23 然而，关于`nisab`最常见的沟通方式是由参加年度斋月会议的穆斯林学者进行的，在会上，国家新月委员会讨论并确定`nisab`的年度费率，学者们则在斋月布道中向当地社区传达这一决定。24
 
 19 [声明] United Forum for Islamic Affairs (Front)，Estimation of Nisaab Zakaat for cash presented by Sheikh Osman Bawa Hafiz for the year 2017，copy received by author 12.12.2017。
 
@@ -5006,9 +5158,9 @@ WA – UW/R
 
 ### 1 横向、非正式的慈善与施舍的传统话语
 
-传统话语由伊玛目在周五祷告时的布道和讲道中阐述，强调并提醒穆斯林支付*zakat*的道德义务以及减轻其贫困邻居的苦难。这一话语植根于将*zakat*解释为每个穆斯林都必须履行的集体义务的传统解释。虽然*zakat*在清真寺公开讨论，但其征收和分配仍然很大程度上是私人的。在加纳，征收和分配*zakat*的传统方式是地方性的，并非制度化。25 一些富有的穆斯林将其施舍给予各种受赠者；另一些人则捐赠给特定的受赠者，如寡妇、孤儿或清真寺。一般而言，*zakat*以现金或实物捐赠，如衣服和纺织品、凉鞋、鞋子和食品。26 然而，一般来说，清真寺不会设有专门的*bayt al-mal*或*zakat*基金。27
+传统话语由伊玛目在周五祷告时的布道和讲道中阐述，强调并提醒穆斯林支付`zakat`的道德义务以及减轻其贫困邻居的苦难。这一话语植根于将`zakat`解释为每个穆斯林都必须履行的集体义务的传统解释。虽然`zakat`在清真寺公开讨论，但其征收和分配仍然很大程度上是私人的。在加纳，征收和分配`zakat`的传统方式是地方性的，并非制度化。25 一些富有的穆斯林将其施舍给予各种受赠者；另一些人则捐赠给特定的受赠者，如寡妇、孤儿或清真寺。一般而言，`zakat`以现金或实物捐赠，如衣服和纺织品、凉鞋、鞋子和食品。26 然而，一般来说，清真寺不会设有专门的`bayt al-mal`或`zakat`基金。27
 
-传统话语在*Ramadan*（斋月）期间占主导地位，此时施舍和分享是布道的中心，并在开斋节期间达到高潮，此时征收*zakat al-fitr*并向贫困和需要帮助的穆斯林捐赠食品。在最近，传统话语在印刷媒体以及更近期的社交媒体上公开阐述，已成为加纳相对较新的现象。自1990年代初以来，当两个穆斯林宗教节日，Eid al-Fitr和Eid al-Adha，被宣布为全国公共假日时，国家和地方报纸开始在斋月期间刊登关于伊斯兰信仰和加纳穆斯林日常生活方面的文章。报纸和社交媒体通过刊登国家当局向穆斯林社区致以的节日问候等方式宣传两个穆斯林宗教节日的开始。28
+传统话语在`Ramadan`（斋月）期间占主导地位，此时施舍和分享是布道的中心，并在开斋节期间达到高潮，此时征收`zakat al-fitr`并向贫困和需要帮助的穆斯林捐赠食品。在最近，传统话语在印刷媒体以及更近期的社交媒体上公开阐述，已成为加纳相对较新的现象。自1990年代初以来，当两个穆斯林宗教节日，Eid al-Fitr和Eid al-Adha，被宣布为全国公共假日时，国家和地方报纸开始在斋月期间刊登关于伊斯兰信仰和加纳穆斯林日常生活方面的文章。报纸和社交媒体通过刊登国家当局向穆斯林社区致以的节日问候等方式宣传两个穆斯林宗教节日的开始。28
 
 25 Interview with Sheikh Abdul Mumin Harun, Ashanti Regional Chief Imam, Kumasi 15.9.2018; written response to questionnaire; handed to Sheikh Abdul-Razaq, Nurul Islam, Kumasi, 16.9.2018; written answer, transcribed by Dr Yunus Dumbe, 20.9.2018, received 21.9.2018; interview with Sheikh Abdar-Rahman, founder and president of Ansar Adeen, and Sheikh Abdallah, General Secretary of Ansar Adeen, Kumasi 7.4.2019。
 
@@ -5018,9 +5170,9 @@ WA – UW/R
 
 28 Weiss, *Between Accommodation and Revivalism.*
 
-更重要的是，在斋月开始时在印刷媒体和社交媒体上发表的穆斯林学者和记者关于施舍道德义务的文章。在2017年，例如，Ashongman Estates中央清真寺的Imam Ibrahim Toure强调了两种类型的zakat，即富人必须缴纳的普通zakat al-mal，以及每个有足够能力在开斋节那天和夜晚之外的日子支持自己和家人的个人都必须缴纳的zakat al-fitr。Imam Ibrahim Toure进一步强调，zakat al-fitr对见证了斋月最后部分和沙瓦尔月开始的人是义务的，并且必须代表家庭的每个成员缴纳，包括婴儿。Imam Ibrahim Toure解释说，慈善的理由是庆祝那天没有人挨饿。他进一步强调，先知穆罕默德已经体现了zakat al-fitr的两个主要目的。它帮助受赠者，即穷人庆祝Eid al-Fitr，同时也是在斋戒期间因放纵淫秽或粗俗言论而造成的损害来净化捐赠者的一种方式。29
+更重要的是，在斋月开始时在印刷媒体和社交媒体上发表的穆斯林学者和记者关于施舍道德义务的文章。在2017年，例如，Ashongman Estates中央清真寺的Imam Ibrahim Toure强调了两种类型的zakat，即富人必须缴纳的普通`zakat al-mal`，以及每个有足够能力在开斋节那天和夜晚之外的日子支持自己和家人的个人都必须缴纳的`zakat al-fitr`。Imam Ibrahim Toure进一步强调，`zakat al-fitr`对见证了斋月最后部分和沙瓦尔月开始的人是义务的，并且必须代表家庭的每个成员缴纳，包括婴儿。Imam Ibrahim Toure解释说，慈善的理由是庆祝那天没有人挨饿。他进一步强调，先知穆罕默德已经体现了`zakat al-fitr`的两个主要目的。它帮助受赠者，即穷人庆祝Eid al-Fitr，同时也是在斋戒期间因放纵淫秽或粗俗言论而造成的损害来净化捐赠者的一种方式。29
 
-与先前伊玛目和学者在Eid al-Fitr的问候相比，近期在报纸和社交媒体上发表的关于正确给予zakat al-fitr的简短解释性论述扩大了当代关于施舍道德义务的论述。30 因此，Alhaji Alhasan Abdulai向他的读者解释说，加纳的学者已将大米、玉米和高粱定义为zakat al-fitr的项目，应给予居住地附近的贫困和需要帮助的人。遵循zakat al-fitr的既定规则，他指出，如果在当地找不到应得的人，或在另一个国家有应得或需要的近亲，则可以把慈善用于当地以外的地方。他进一步明确指出，zakat al-fitr的目标是近处和远处的贫困和需要帮助的穆斯林：
+与先前伊玛目和学者在Eid al-Fitr的问候相比，近期在报纸和社交媒体上发表的关于正确给予`zakat al-fitr`的简短解释性论述扩大了当代关于施舍道德义务的论述。30 因此，Alhaji Alhasan Abdulai向他的读者解释说，加纳的学者已将大米、玉米和高粱定义为`zakat al-fitr`的项目，应给予居住地附近的贫困和需要帮助的人。遵循`zakat al-fitr`的既定规则，他指出，如果在当地找不到应得的人，或在另一个国家有应得或需要的近亲，则可以把慈善用于当地以外的地方。他进一步明确指出，`zakat al-fitr`的目标是近处和远处的贫困和需要帮助的穆斯林：
 
 在今天的世界里，当我们知道数百万人，其中很大一部分是穆斯林，生活在非人类的极端贫困和剥夺条件下时，持有资金或将其引导至order [sic: other?]渠道是没有理由的。31
 
@@ -5030,9 +5182,7 @@ WA – UW/R
 
 31 Alhaji Alhasan Abdulai, “Muslims to donate to poor before celebration of Eid al Fitr,”
 
-
-
-十年来，学者和伊玛目们（以及通常是匿名的作者和成员）与穆斯林非政府组织和青年组织一道，每年在社交媒体上发布关于*天课*和*开斋捐*的短论，提醒他们的追随者履行道德义务，并强调强制性施舍的宗教和教派层面。在回复关于*天课*的询问时，*加纳伊斯兰青年萨达卡协会*（GIYSA）解释了*天课*与*开斋捐*的区别。GIYSA的匿名专家强调，前者“是一种义务性慈善形式，人们须将收入的2.5%施予穷人和有需要者。”而*开斋捐*则是“为净化斋戒者而给予的施舍”，其形式相当于一*沙阿*（saa）的食物。“在加纳，我们认为大米是主食，因此每人需要给出一*奥隆卡*（olonka）大米。按人头计算意味着，如果你是家中之主，你需为自己、妻子、孩子、父母或家人缴纳开斋捐。每个人相当于一奥隆卡。[...] 不过，伊玛目·艾哈迈德说，你们也可以以金钱形式缴纳开斋捐，其价值相当于一沙阿或更多。”GIYSA的专家还指出，2023年一*奥隆卡*的价格在75至100加纳塞地之间，取决于大米品质。32 接受施舍者必须是穆斯林，但也有例外，正如穆斯林非政府组织*萨达卡特·加纳*（Sadaqont Ghana）提醒其追随者所言：
+十年来，学者和伊玛目们（以及通常是匿名的作者和成员）与穆斯林非政府组织和青年组织一道，每年在社交媒体上发布关于`天课`和`开斋捐`的短论，提醒他们的追随者履行道德义务，并强调强制性施舍的宗教和教派层面。在回复关于`天课`的询问时，`加纳伊斯兰青年萨达卡协会`（GIYSA）解释了`天课`与`开斋捐`的区别。GIYSA的匿名专家强调，前者“是一种义务性慈善形式，人们须将收入的2.5%施予穷人和有需要者。”而`开斋捐`则是“为净化斋戒者而给予的施舍”，其形式相当于一`沙阿`（saa）的食物。“在加纳，我们认为大米是主食，因此每人需要给出一`奥隆卡`（olonka）大米。按人头计算意味着，如果你是家中之主，你需为自己、妻子、孩子、父母或家人缴纳开斋捐。每个人相当于一奥隆卡。[...] 不过，伊玛目·艾哈迈德说，你们也可以以金钱形式缴纳开斋捐，其价值相当于一沙阿或更多。”GIYSA的专家还指出，2023年一`奥隆卡`的价格在75至100加纳塞地之间，取决于大米品质。32 接受施舍者必须是穆斯林，但也有例外，正如穆斯林非政府组织`萨达卡特·加纳`（Sadaqont Ghana）提醒其追随者所言：
 
 > 如果一个人不属于规定的八类人群之一，则禁止其接受天课。与我们相关的是，这包括六类人，但这些类型中也有例外：
 > - 富人
@@ -5051,7 +5201,7 @@ WA – UW/R
 
 照片：霍尔格·魏斯/2018
 
-而这些布道词的阐述因此无法追溯，被视为局限于特定时空的表演性行为。然而，也有少数学者是例外，因为他们会将自己的布道词写下来。其中之一是提贾尼（Tijani）学者谢赫·阿米努·班巴·法拉迪，又称马莱姆·阿米努·班巴·埃朱拉（Malam Aminu Bamba Ejura），他慷慨地从笔记本中抄录了七篇关于*天课*的布道词，共16页。谢赫·阿米努·班巴生于1950年，是一位受人尊敬的学者，居住在埃朱拉（Ejura），就天文学、诗歌、伊斯兰神学与改革等多个主题撰写了大量著作，以阿拉伯语和豪萨语出版，并出版了几本英文书籍（图44）。37
+而这些布道词的阐述因此无法追溯，被视为局限于特定时空的表演性行为。然而，也有少数学者是例外，因为他们会将自己的布道词写下来。其中之一是提贾尼（Tijani）学者谢赫·阿米努·班巴·法拉迪，又称马莱姆·阿米努·班巴·埃朱拉（Malam Aminu Bamba Ejura），他慷慨地从笔记本中抄录了七篇关于`天课`的布道词，共16页。谢赫·阿米努·班巴生于1950年，是一位受人尊敬的学者，居住在埃朱拉（Ejura），就天文学、诗歌、伊斯兰神学与改革等多个主题撰写了大量著作，以阿拉伯语和豪萨语出版，并出版了几本英文书籍（图44）。37
 
 最初，他于2006年1月至3月用阿拉伯语撰写了这七篇布道词。每篇布道词的结构分为两部分：第一部分介绍布道主题，接着引用《古兰经》和圣训中的经文并加以参引，他在此基础上对主题进行阐述和深化。第二部分则总结他关于该布道主题的论点。总体而言，他的七篇布道词简洁地呈现了逊尼派穆斯林学者对天课的立场。
 
@@ -5069,23 +5219,25 @@ WA – UW/R
 
 40 谢赫·阿米努·班巴，第三篇布道词，2006年1月，未出版手稿，由 Muhammad Salis Issah 翻译。
 
-“贫困与骑马或驾车无关。”他引用《古兰经》第2章第177节，提醒听众记住虔诚的真理之人，即那些将自己的财富施予亲属、孤儿、穷人和旅行者的人。他最后详细阐述了*施舍*与*天课*的区别；前者可以是隐秘的，也可以是公开的，而后者则总是要公开的，“以便人们知晓、消除疑虑，并让他人学习。”41
+“贫困与骑马或驾车无关。”他引用《古兰经》第2章第177节，提醒听众记住虔诚的真理之人，即那些将自己的财富施予亲属、孤儿、穷人和旅行者的人。他最后详细阐述了`施舍`与`天课`的区别；前者可以是隐秘的，也可以是公开的，而后者则总是要公开的，“以便人们知晓、消除疑虑，并让他人学习。”41
 
-义务与拒绝也是谢赫·阿米努·班巴第五篇布道词的主题。“拿出你们的*天课*，善待穷人和弱者，”他这样开始布道，接着用较长的篇幅阐述了拒绝或否认缴纳天课的伪善者将受到的愤怒，即地狱之火。42
+义务与拒绝也是谢赫·阿米努·班巴第五篇布道词的主题。“拿出你们的`天课`，善待穷人和弱者，”他这样开始布道，接着用较长的篇幅阐述了拒绝或否认缴纳天课的伪善者将受到的愤怒，即地狱之火。42
 
-天课的接受者，即《古兰经》忏悔章（Al-Tawba）第9章第60节提到的八类人或情况，在他的第七篇布道词中得到了详细披露和讨论：穷人和有需要者、受雇管理资金者、需要被安抚心灵者、解救奴役和债务中的人、为主道而奋斗者，以及旅行者。此外，接受者必须是穆斯林，且不能是缴纳者的家庭成员。另外，谢赫·阿米努·班巴强调，*天课*不能用于资助建造清真寺或学校。43
+天课的接受者，即《古兰经》忏悔章（Al-Tawba）第9章第60节提到的八类人或情况，在他的第七篇布道词中得到了详细披露和讨论：穷人和有需要者、受雇管理资金者、需要被安抚心灵者、解救奴役和债务中的人、为主道而奋斗者，以及旅行者。此外，接受者必须是穆斯林，且不能是缴纳者的家庭成员。另外，谢赫·阿米努·班巴强调，`天课`不能用于资助建造清真寺或学校。43
 
-谢赫·阿米努·班巴还在他的第六篇布道词中讨论了两种施舍形式和*举意*（niyyah），提醒听众即使缴纳了*天课*，也应当向穷人和有需要者施舍*施舍*（sadaqa）。因此，*施舍*是持续的，而*天课*是每年一次的义务：“真主的仆人啊！[...] 缴纳你们财富的*天课*，并在缴纳天课之后，供养你们的家人，向穷人和弱者施舍。”根据一段圣训，重要的是给予者的意图，而不是他分配的施舍数量。44
+谢赫·阿米努·班巴还在他的第六篇布道词中讨论了两种施舍形式和`举意`（niyyah），提醒听众即使缴纳了`天课`，也应当向穷人和有需要者施舍`施舍`（sadaqa）。因此，`施舍`是持续的，而`天课`是每年一次的义务：“真主的仆人啊！[...] 缴纳你们财富的`天课`，并在缴纳天课之后，供养你们的家人，向穷人和弱者施舍。”根据一段圣训，重要的是给予者的意图，而不是他分配的施舍数量。44
 
 #### 1.2 社交媒体上的天课布道词与视频
 
-尽管谢赫·阿米努·班巴·法拉迪在为*天课*制作（未出版的）文本集方面是个例外，但其他学者则利用各种音频和数字渠道传播他们关于*天课*和施舍的布道与思考。包含穆斯林学者布道词的视频和磁带已经……
+尽管谢赫·阿米努·班巴·法拉迪在为`天课`制作（未出版的）文本集方面是个例外，但其他学者则利用各种音频和数字渠道传播他们关于`天课`和施舍的布道与思考。包含穆斯林学者布道词的视频和磁带已经……
 
 在撒哈拉以南非洲已流传数十年，但包含加纳伊玛目和学者布道的本地制作版本似乎很少。
 
-此外，萨拉菲学者和伊玛目是首批使用现代技术和大众传播宣教（daʿwa）的人，例如在地方广播电台和电视台布道，尽管提贾尼学者很快也跟进。过去二十年间互联网的广泛可及性和社交媒体的传播，导致加纳穆斯林学者、活动人士和组织的媒体格局发生了深刻变化。<sup>45</sup> 许多穆斯林社区都在运营多媒体 Facebook 账号，上传布道视频或电视台节目。 其中一些拥有相当可观的关注度（即超过 10,000 名粉丝，状态于 2022 年 7 月初核查），例如总部位于库马西的穆斯林接入运动的在线电视频道 MAM TV Online，拥有约 180,000 名粉丝。 值得注意的萨拉菲社区例如有：总部位于阿克拉的 Golden Voice of Islam（约 64,000 名粉丝）、总部位于库马西的 Darul Hadith（约 218,000 名粉丝）和 Nurul Islam（近 147,000 名粉丝），以及总部位于塔马利的 Darul Tawheed（Masjidul Bayaan，近 42,000 名粉丝）和 Anbariyya Sunni Community（约 15,000 名粉丝）。 大型的提贾尼数字多媒体频道包括：Sharubutu TV（近 155,000 名粉丝）、Zaeem Cissey TV（约 78,000 名粉丝）、Tijjaniyya TV（近 32,000 名粉丝）、Aminiya Shukura TV（约 23,000 名粉丝）和 Shabaniyya TV（约 20,000 名粉丝）。<sup>46</sup>
 
-社交媒体使用的先驱之一是穆斯林学者和企业家 Haji Saeed Hamid Jallo，他是总部位于塔科拉迪的 Tawheed Development Foundation 的创始人。 2015 年斋月期间，他在 Facebook 上发布了一篇长文（布道）《Let's Show Love To Them》，提醒听众在斋戒月履行宗教义务，尤其是在帮助有需要者方面：
+
+此外，萨拉菲学者和伊玛目是首批使用现代技术和大众传播宣教（daʿwa）的人，例如在地方广播电台和电视台布道，尽管提贾尼学者很快也跟进。过去二十年间互联网的广泛可及性和社交媒体的传播，导致加纳穆斯林学者、活动人士和组织的媒体格局发生了深刻变化。[^45] 许多穆斯林社区都在运营多媒体 Facebook 账号，上传布道视频或电视台节目。其中一些拥有相当可观的关注度（即超过 10,000 名粉丝，状态于 2022 年 7 月初核查），例如总部位于库马西的穆斯林接入运动的在线电视频道 MAM TV Online，拥有约 180,000 名粉丝。值得注意的萨拉菲社区例如有：总部位于阿克拉的 Golden Voice of Islam（约 64,000 名粉丝）、总部位于库马西的 Darul Hadith（约 218,000 名粉丝）和 Nurul Islam（近 147,000 名粉丝），以及总部位于塔马利的 Darul Tawheed（Masjidul Bayaan，近 42,000 名粉丝）和 Anbariyya Sunni Community（约 15,000 名粉丝）。大型的提贾尼数字多媒体频道包括：Sharubutu TV（近 155,000 名粉丝）、Zaeem Cissey TV（约 78,000 名粉丝）、Tijjaniyya TV（近 32,000 名粉丝）、Aminiya Shukura TV（约 23,000 名粉丝）和 Shabaniyya TV（约 20,000 名粉丝）。[^46]
+
+社交媒体使用的先驱之一是穆斯林学者和企业家 Haji Saeed Hamid Jallo，他是总部位于塔科拉迪的 Tawheed Development Foundation 的创始人。2015 年斋月期间，他在 Facebook 上发布了一篇长文（布道）《Let's Show Love To Them》，提醒听众在斋戒月履行宗教义务，尤其是在帮助有需要者方面：
 
 > 讽刺的是，当我们在奢华的 suhoor 和 *iftaar* 上花费数百美元和塞地时，我们是否曾花时间问问自己，我们的家人和朋友是如何应对为这一崇高活动筹集一点微薄食物的艰难的？
 
@@ -5095,19 +5247,19 @@ Breaking the fast in the right way was not enough, Haji Saeed Hamid Jallo underl
 
 Haji Saeed Hamid Jallo 的论点指出了《古兰经》和沙里亚所规定的穆斯林的道德义务：
 
-> 啊，我们是否忘记了这是一个爱的月份、*sadaqa* 的月份、分享和关怀的月份、团聚的月份？？？让我们不要在明知街对面的老妇人与她的孙辈们无饭可吃，以及我们总是在同一座清真寺一起礼拜的那个人时，还沉溺于享受。<sup>47</sup>
+> 啊，我们是否忘记了这是一个爱的月份、*sadaqa* 的月份、分享和关怀的月份、团聚的月份？？？让我们不要在明知街对面的老妇人与她的孙辈们无饭可吃，以及我们总是在同一座清真寺一起礼拜的那个人时，还沉溺于享受。[^47]
 
-近年来 Facebook 已成为关键的数字平台，大多数伊玛目、学者和穆斯林非政府组织都建立了自己的（公开）账号。 一个显著特点是上传到 Facebook 和 YouTube 的视频，例如关于 *zakat* 和 *zakat al-fitr* 的布道以及斋月期间的捐款呼吁。 如今此类视频数量众多。 自 2018 年以来，Sheikh Aminu Bamba al-Faradhi 等人已在 Facebook 和 YouTube 上发布了几篇用阿拉伯语和豪萨语阐述 *zakat* 规定的布道。<sup>48</sup> 与 Darul Tawheed Institute 和塔马利的 Masjidul Bayaan 有关联的 Al-Bayaan Institute 于 2018 年 7 月在其问答活动的一部分中发布了一段关于 *zakat* 的视频。<sup>49</sup> 2019 年成立的穆斯林社会企业 *Make Zongo Great Again* 于 2020 年在 YouTube 上发布了 Sheikh Mohammad Awal Abdullah Haafiz 用豪萨语发表的 12 分钟布道“The Dangers of Keeping Wealth and Not Paying Zakat”。<sup>50</sup> 总部位于阿克拉的穆斯林非政府组织 Ummul Qura Centre for Islamic Education and Social Services 于 2020 年发布了一段视频，*Measurement and calculations of ZAKAATUL FITR*。<sup>51</sup> 同样，在 2020 年 *Eid al-Fitr* 庆祝活动临近时，Masjidul Bayaan 的创始人 Sheikh Ibrahim Basha 在 Facebook 上阐述了 *zakat al-fitr* 的规定和要求。<sup>52</sup>
+近年来 Facebook 已成为关键的数字平台，大多数伊玛目、学者和穆斯林非政府组织都建立了自己的（公开）账号。一个显著特点是上传到 Facebook 和 YouTube 的视频，例如关于 *zakat* 和 *zakat al-fitr* 的布道以及斋月期间的捐款呼吁。如今此类视频数量众多。自 2018 年以来，Sheikh Aminu Bamba al-Faradhi 等人已在 Facebook 和 YouTube 上发布了几篇用阿拉伯语和豪萨语阐述 *zakat* 规定的布道。[^48] 与 Darul Tawheed Institute 和塔马利的 Masjidul Bayaan 有关联的 Al-Bayaan Institute 于 2018 年 7 月在其问答活动的一部分中发布了一段关于 *zakat* 的视频。[^49] 2019 年成立的穆斯林社会企业 *Make Zongo Great Again* 于 2020 年在 YouTube 上发布了 Sheikh Mohammad Awal Abdullah Haafiz 用豪萨语发表的 12 分钟布道“The Dangers of Keeping Wealth and Not Paying Zakat”。[^50] 总部位于阿克拉的穆斯林非政府组织 Ummul Qura Centre for Islamic Education and Social Services 于 2020 年发布了一段视频，*Measurement and calculations of ZAKAATUL FITR*。[^51] 同样，在 2020 年 *Eid al-Fitr* 庆祝活动临近时，Masjidul Bayaan 的创始人 Sheikh Ibrahim Basha 在 Facebook 上阐述了 *zakat al-fitr* 的规定和要求。[^52]
 
-Facebook 上关于 *zakat* 的帖子通常很短，有时只包含《古兰经》或圣训的引文。 另一方面，它们会在数天内发布，以提醒追随者在斋月期间支付 *zakat* 的义务。 阿山蒂地区 Akyem Agogo 中央清真寺的 Imam Abdul Aziz 就是一个例子。 2019 年 5 月，Imam Abdul Aziz 在其斋月 *tafsir* 的一部分中发布了三条关于穆斯林帮助有需要者义务的通知。 与他的反思相关的是照片和他非政府组织 *Friends of the Needy* 的斋月呼吁。 第一次呼吁提醒他的追随者“[…] 我们是志愿者，努力伸出援手、抚慰和安慰脆弱[和]有需要的人”，引用《黄牛章》2:274 节，
+Facebook 上关于 *zakat* 的帖子通常很短，有时只包含《古兰经》或圣训的引文。另一方面，它们会在数天内发布，以提醒追随者在斋月期间支付 *zakat* 的义务。阿山蒂地区 Akyem Agogo 中央清真寺的 Imam Abdul Aziz 就是一个例子。2019 年 5 月，Imam Abdul Aziz 在其斋月 *tafsir* 的一部分中发布了三条关于穆斯林帮助有需要者义务的通知。与他的反思相关的是照片和他非政府组织 *Friends of the Needy* 的斋月呼吁。第一次呼吁提醒他的追随者“[…] 我们是志愿者，努力伸出援手、抚慰和安慰脆弱[和]有需要的人”，引用《黄牛章》2:274 节，
 
 > > 那些在夜间和白天、秘密和公开地在真主之道上花费自己财产的人——他们将在其主那里获得报酬。他们将无所畏惧，也不会悲伤。
 
-该帖子以他对追随者的断言结束：“[…] 凭借集体的力量，我们可以改变 Insha Allah”，并呼吁向该非政府组织捐款。<sup>53</sup>
+该帖子以他对追随者的断言结束：“[…] 凭借集体的力量，我们可以改变 Insha Allah”，并呼吁向该非政府组织捐款。[^53]
 
-几天后，他发布了第二次呼吁，评论了额外照片，描绘了志愿者参与清理 Agogo 墓地的活动。 这次他用阿拉伯语和英语发布了《布哈里圣训实录》（第 2 卷，第 23 书）中的圣训 331，概述了先知命令做七件善事，其中包括帮助受压迫者和探望病人，并禁止七种习惯。<sup>54</sup>
+几天后，他发布了第二次呼吁，评论了额外照片，描绘了志愿者参与清理 Agogo 墓地的活动。这次他用阿拉伯语和英语发布了《布哈里圣训实录》（第 2 卷，第 23 书）中的圣训 331，概述了先知命令做七件善事，其中包括帮助受压迫者和探望病人，并禁止七种习惯。[^54]
 
-他的第三次发布在两周后跟进，涉及斋月期间的斋戒和施舍。 他解释说，慈善是施舍者为其后世的投资，“这样你在末日贫困有需要时，你会发现你的慈善”。 他随后向信徒许诺，“你可以通过一口水、一把枣、果实、食物、金钱和你给予有需要者衣服来找到通往天堂的道路”，列出了穆斯林履行施舍义务的各种方式。 只有义务慈善或 zakat，Imam Abdul Aziz 强调，才能净化财富并保存和增加金钱；那些拒绝支付 zakat 的人将在审判日后悔。 在引用《古兰经》第 64 章第 17 节（“如果你借给真主一笔贷款，他会为你增加它并宽恕你”）以及穆斯林圣训集中的圣训“慈善永远不会减少财产”之后，Imam Abdul Aziz 结束了对 zakat 的阐述。<sup>55</sup>
+他的第三次发布在两周后跟进，涉及斋月期间的斋戒和施舍。他解释说，慈善是施舍者为其后世的投资，“这样你在末日贫困有需要时，你会发现你的慈善”。他随后向信徒许诺，“你可以通过一口水、一把枣、果实、食物、金钱和你给予有需要者衣服来找到通往天堂的道路”，列出了穆斯林履行施舍义务的各种方式。只有义务慈善或 zakat，Imam Abdul Aziz 强调，才能净化财富并保存和增加金钱；那些拒绝支付 zakat 的人将在审判日后悔。在引用《古兰经》第 64 章第 17 节（“如果你借给真主一笔贷款，他会为你增加它并宽恕你”）以及穆斯林圣训集中的圣训“慈善永远不会减少财产”之后，Imam Abdul Aziz 结束了对 zakat 的阐述。[^55]
 
 ---
 
@@ -5127,18 +5279,15 @@ Facebook 上关于 *zakat* 的帖子通常很短，有时只包含《古兰经�
 
 54. Friends for the needy（Agogo 中央清真寺伊玛目），关于 zakat 和 sadaqa 的神学反思/评论以及穆斯林帮助有需要者义务的反思
 
-
-
 (5) 建议将其给予自己没有经济责任的贫困亲属。59
 
-2016年发布并于2020年重新发布的一篇文字进一步指出天课（zakat）与天课 al-fitr 不同，60 后者是在斋月结束时发放的慈善。 “天课 al-Fitr 的主要目的是为斋戒者提供在斋戒月弥补过错的手段”，RYF 关于该主题的布道之一指出。它进一步指出“天课 al-Fitr 也为穷人提供了一种手段，使他们能够与穆斯林一起庆祝开斋节（‘Eid al-Fitr）”。其数额对每个人都相同，不论收入如何，通常以实物支付。然而，该文本为 RYF 成员提供了一种创新性的解读：
+2016年发布并于2020年重新发布的一篇文字进一步指出天课（zakat）与天课 al-fitr 不同，60 后者是在斋月结束时发放的慈善。“天课 al-Fitr 的主要目的是为斋戒者提供在斋戒月弥补过错的手段”，RYF 关于该主题的布道之一指出。它进一步指出“天课 al-Fitr 也为穷人提供了一种手段，使他们能够与穆斯林一起庆祝开斋节（‘Eid al-Fitr）”。其数额对每个人都相同，不论收入如何，通常以实物支付。然而，该文本为 RYF 成员提供了一种创新性的解读：
 
 > 如果基于地理位置或出于正当理由，您无法安排食物，您可以提供一些钱，但应足以支付至少一天的餐费，这样的钱可以给予穷人或任何向有需要者捐赠的慈善组织，如加沙受苦的人。我也在为孤儿院筹款，因此海外尤其是英国的人可以联系我通过我支付他们的 fitir。61
 
 有趣的是，RYF 不久后驳斥了这一说法：“请注意，我们不能将钱给予穷人作为我们的 zakaatul fitir。它必须是干粮，如大米、玉米、小麦、枣等。如果您代表穷人将钱交给任何人，请确保他们用这笔钱为穷人购买食物。”62 然而，正如2015年和2021年发布的文本所强调的那样——天课 al-fitr 的目标是给予者的精神发展以及接受者的经济福祉。63
 
-位于库马西的非政府组织 Muslim Access Movement (MAM) 提供了利用社交媒体传播天课阐释的第三个例子。Starting in
-February 2021, the group posted a video and sermon by Imam Abdul Somad Osman Dabre on the virtues of (obligatory) almsgiving on its homepage. Telling the moral tale of a farmer who always gave to the poor and the needy and his sons who refused to do so and lost the farm they inherited from him when Allah had sent an angel to burn it, Imam Abdul Somad concluded that
+位于库马西的非政府组织 Muslim Access Movement (MAM) 提供了利用社交媒体传播天课阐释的第三个例子。Starting in February 2021, the group posted a video and sermon by Imam Abdul Somad Osman Dabre on the virtues of (obligatory) almsgiving on its homepage. Telling the moral tale of a farmer who always gave to the poor and the needy and his sons who refused to do so and lost the farm they inherited from him when Allah had sent an angel to burn it, Imam Abdul Somad concluded that
 
 > 这是历史上发生的事情，但在我们最近的时代仍然在发生。在我们许多的 Zongo 社区里，有许多富人，他们的孩子在他们死后经历了很多困难。因为这些孩子没有考虑到他们的父亲在做什么，他是如何致富的等等，而是考虑他们自己想要的成功类型。我们所做的一切都应该为了寻求全能真主的恩惠而做。64
 
@@ -5158,7 +5307,7 @@ February 2021, the group posted a video and sermon by Imam Abdul Somad Osman Dab
 
 65 https://www.facebook.com/mamtvonline，12.3.2021，26.3.2021，2.4.2021，10.4.2021，访问于 25.8.2022。
 
-#### 1.3 天课 al-fitr 和斋月期间的捐赠
+### 1.3 天课 al-fitr 和斋月期间的捐赠
 
 穆斯林非政府组织在社交媒体上向其追随者呼吁在斋月期间捐赠，是当代社交媒体格局的一个显著特征。例如，总部位于特马的穆斯林非政府组织 Grain of Hope Foundation 自2016年以来一直在 Facebook 上开展年度斋月活动。2016年作为谦卑的提醒概述：
 
@@ -5175,6 +5324,8 @@ February 2021, the group posted a video and sermon by Imam Abdul Somad Osman Dab
 > 有需要的人正在接受考验，同样，神的恩典的接受者也在接受考验。让我们记住，每一顿摆在我们餐桌上的饭菜，都是许多人被剥夺的特权，尤其是在需要的时候。正如有需要的人在这种不安的时期接受考验，同样，神的恩典的接受者也应为他们提供一些解脱。我们守护和保护我们的小溪流，并不是因为害怕干渴；而是因为缺乏信仰。因为对于敞开的双手来说，寻找接受者是一种比给予更大的喜悦。让我们不要剥夺有需要的人从我们的小溪流中填满他们的杯子的权利。因此，在享受我们美味的餐食的同时，我们应该感谢这样的祝福，并向有需要的人伸出一些援助。无论是微小的捐助，都能为某人的脸上带来笑容。而在他们的眼中，真主必定会微笑于我们。让我们在传播爱和洗手的同时坚持祈祷。捐赠食品请联系：[mobile telephone number]。现金捐赠请发送至我们的 Momo 账户，名称：Markaz Aleawn Alyaqin Humanitarian Services。请加入我们！有了您的捐赠，我们就更接近于在继续祈祷驱逐 Covid-19 的同时喂养穷人和有需要的人。⁶⁸
 
 一些穆斯林非政府组织对施舍的阐述类似于穆斯林学者的阐述。例如，*Ghana Islamic Youth Sadaqa Association* (GISYA)
+
+
 
 ⁶⁷ Grain of Hope Foundation，发布于 Facebook，4.5.2020，https://www.facebook.com/permalink.php?story_fbid=251134705635889&id=687684277998950，访问于 4.5.2021。
 
@@ -5196,9 +5347,6 @@ GISYA 规定天课 al-fitr 对拥有剩余食物的每个穆斯林都是义务�
 
 72 NTV Zakat Fund，发布于 Facebook 28.4.2020，https://www.facebook.com/75931854448795/videos/2571770549760789/，访问于 1.2.2021；另见：https://www.facebook.com/Day-Break-NTV-with-DJ-Waris-75931854448795/videos/ntv-zakat-fund/2571770549760789/，访问于 1.2.2021。
 
-
-
-
 一个月后，NTV发布了一段视频，视频中其总经理伊诺克·纳希鲁·阿拉尔比拉在塔马利中央监狱前发表声明，展示了通过该活动收集的食品和卫生用品捐赠，包括八袋大米、一袋糖和数十瓶洗手液，这些物品将分发给囚犯。[^73] 与GIYSA一样，北方电视台也扮演了扎卡特（开斋捐）收集者的角色，从而扩展了谁可以自称中介的定义。然而，NTV活动的目标在知名度方面确实得到了实现，因为该视频通过北方电视台节目和多媒体公司的其他多个公共Facebook账号传播，例如《普林斯·西塔的隔离秀》（2020年4月27日：166名观众；2020年5月20日：839名观众；2022年7月初已不再活跃），[^74] 以及Nasara多媒体。[^75]
 
 然而，正如在分析Rayan Yakub基金会匿名作者撰写的两篇关于开斋捐的文章时所指出的那样，对于开斋捐是否可以现金支付存在分歧，这或许表明代际以及学者间解释的冲突。例如，穆斯林学生奥马尔·哈利法表示，开斋捐可以用现金支付，“为了更稳妥起见，如果你在加纳，10到15塞地就能起到很好的作用。”[^76] 另一方面，加纳伊斯兰研究协会的学者们则坚决否认这一点：现金形式的开斋捐是无效的，因为开斋捐被规定必须以食物形式施舍，并且必须在施舍者开斋时所在之地进行分发。[^77]
@@ -5216,29 +5364,44 @@ GISYA 规定天课 al-fitr 对拥有剩余食物的每个穆斯林都是义务�
 加纳的其他人呼应了瓦城学者的批判性反思：“你需要给穷人一千塞地，而不是五或二十，”谢赫·阿米努·班巴·法拉迪批判性地评论了周五礼拜后向乞丐和贫困者施舍小额款项的习惯。[^96] 其他学者，如谢赫·赛义德·阿布巴卡尔·扎卡里亚，甚至声称这种零散的分配方
 
 [^73]: NTV加纳，发布于2020年5月20日，https://www.facebook.com/watch/?v=236145834469275，访问于2021年2月1日。
+
 [^74]: https://www.facebook.com/pg/The-Quarantine-Show-with-Prince-Siita-100592288270598/posts/，访问于2021年2月1日。
+
 [^75]: https://www.facebook.com/NasaraMultimediafm/posts/2770661003062371，访问于2021年2月1日。
+
 [^76]: “Zakatul fitr!!!” 2017年6月26日、2018年6月13日、2020年5月20日、2021年6月12日，https://www.facebook.com/umar.halifa1，访问于2022年8月25日。
+
 [^77]: “Zakat al-fitr，” 2019年9月1日，https://www.facebook.com/GIRA4ALL，访问于2022年8月25日。
+
 [^78]: https://www.facebook.com/groups/hozda，2022年4月4日，访问于2022年8月25日。
+
 [^79]: https://www.facebook.com/gmdcharityproject，2022年4月5日，访问于2022年8月25日。
+
 [^80]: https://www.facebook.com/MakeZongoGreatAgain，2022年4月29日、2022年5月1日，访问于2022年8月25日。
+
 [^85]: 采访谢赫·卡米尔·穆罕默德，ASWAJ阿散蒂大区副首席伊玛目，库马西，2017年12月10日。
+
 [^86]: 采访谢赫·伊斯梅尔·赛义德·亚当博士，ASWAJ阿散蒂大区首席伊玛目，库马西，2019年4月5日。
+
 [^87]: 采访谢赫·贾马尔·迪恩·奥马尔·穆罕默德，塔马利中央清真寺伊玛目兼Aris社会中心主任，塔马利，2019年4月10日。
+
 [^88]: 采访谢赫·伊萨，伊斯兰教育局经理，塔马利，2019年4月9日。
+
 [^89]: 采访谢赫·阿卜杜勒·穆敏·哈鲁纳，阿散蒂大区首席伊玛目，库马西，2019年9月15日。
+
 [^90]: 采访穆罕默德·阿尔-马哈曼，文奇阿尔-法鲁克教育学院阿拉伯语与伊斯兰研究系主任，布朗阿哈福地区，库马西萨卡菲亚清真寺顾问，库马西，2019年9月15日。
+
 [^91]: 采访谢赫·阿纳斯·陶菲克·易卜拉欣·巴克里，库马西达尔-哈迪斯清真寺及教育综合体伊玛目，2017年12月12日。
+
 [^92]: 采访谢赫·哈吉·尤西夫·伊萨，瓦城Jama’at Hidayat Islamiyya主席，2019年12月7日。由谢赫·哈吉·丹巴翻译。
+
 [^93]: 采访谢赫·阿米努·班巴，埃朱拉，2019年4月4日；采访谢赫·阿卜杜勒-拉赫曼，Ansar Addeen创始人兼主席，及谢赫·阿卜杜拉，Ansar Addeen总书记，库马西，2019年4月7日；采访谢赫·伊萨，伊斯兰教育局经理，塔马利，2019年4月9日；谢赫·哈吉·努胡·阿卜杜勒-穆敏，瓦城，2019年12月7日。
+
 [^94]: 采访谢赫·阿布巴卡尔·艾哈迈德·伊德里斯、谢赫·阿纳斯·阿卜杜勒-穆敏·伊萨及谢赫·马什胡德·穆罕默德·穆赫塔尔，瓦城-东多利，2019年12月7日。采访由谢赫·阿尔-哈吉·丹巴翻译。
+
 [^95]: 采访谢赫·哈吉·尤西夫·伊萨，瓦城Jama’at Hidayat Islamiyya主席，2019年12月7日。由谢赫·哈吉·丹巴翻译。
+
 [^96]: 采访谢赫·阿米努·班巴，埃朱拉，2019年4月4日。
-
-
-
-
 
 施舍的分配根本就不算*天课*，也不能视为履行了*天课*，97 而谢赫·哈吉·努胡·阿卜杜勒-穆明则着重强调，拒绝缴纳*天课*就意味着此人不能再被视为穆斯林。98
 
@@ -5266,6 +5429,8 @@ GISYA 规定天课 al-fitr 对拥有剩余食物的每个穆斯林都是义务�
 
 101 采访谢赫·阿布达尔-拉赫曼，安萨尔·阿丁创始人兼主席，以及谢赫·阿卜杜拉，安萨尔·阿丁秘书长，库马西，2019年4月7日。
 
+
+
 ^102^ 塞，《加纳穆斯林定居点的发展》，144–148；另见韦斯，《加纳的乞讨与施舍》，141–142。在马克·塞与坎邦利穆斯林社区进行调查时，该社区还计划设立一家农村银行。然而，这些计划能否实现尚不得而知。
 
 ^103^ 苏莱曼·迪克鲁尔希，《吉丹·图巴的伊斯兰教》，54–55；阿卜杜勒-瓦哈卜·阿布巴卡尔，《阿克拉的天课实践与扶贫》，哲学硕士论文，加纳大学宗教研究系，2018年7月，第93页。
@@ -5276,14 +5441,11 @@ GISYA 规定天课 al-fitr 对拥有剩余食物的每个穆斯林都是义务�
 
 106 采访谢赫·扎卡里亚·阿卜杜勒-拉赫曼，阿散蒂地区副首席伊玛目，库马西，2017年12月11日。
 
-
-
-
 为了支持每日前来求助的贫困和需要帮助者。尽管如此，目前他无能为力，因为伊玛目们没有财富，因此无法提供任何帮助。^107
 
-建立 *bayt al-mal* 或 *zakat* 基金的必要性在许多社区中被讨论。一个典型案例是塔马利的安巴里亚逊尼社区。在社区创始人阿法·阿朱拉（Yusuf Soalih Ajurah 或 Alhaji Issifu Ajurah，1890–2004）生前，其成员将实物 *zakat* 交给他，他将其用于扩建自己的教育综合体以及支持贫困和需要帮助的成员。现金形式的 *zakat* 很少，且未捐赠给安巴里亚。实物 *zakat* 至今仍在实行。阿法·阿朱拉的继任者谢赫·赛义德·阿布巴卡尔·扎卡里亚告诉我，2019 年，一位匿名捐赠者捐赠了 100 袋大米并在市场上出售。由此产生的现金被分配给安巴里亚学者以支付其生活费用。他告诉我，*zakat* 的征收始于斋月，所收集的款项除其他用途外，还分配给医院中急需帮助的人、病人或用于支付负债者的费用。^108 然而，所收集的资源不足以启动社会福利项目，例如在塔马利的教育综合体建设诊所（图 45）。因此，安巴里亚学者们开始私下讨论建立 *zakat* 基金的可行性，尽管这一想法尚未公开提出。谢赫·德尔·塔米姆向我解释了这一主要原因，即缺乏组织和管理此类基金的承诺和专业知识，同时还需要在其运作中建立信任和透明度。尽管如此，谢赫·赛义德·阿布巴卡尔·扎卡里亚和谢赫·德尔·塔米姆都强调 *zakat* 是动员资金的关键，例如用于诊所项目。^109
+建立 `bayt al-mal` 或 `zakat` 基金的必要性在许多社区中被讨论。一个典型案例是塔马利的安巴里亚逊尼社区。在社区创始人阿法·阿朱拉（Yusuf Soalih Ajurah 或 Alhaji Issifu Ajurah，1890–2004）生前，其成员将实物 `zakat` 交给他，他将其用于扩建自己的教育综合体以及支持贫困和需要帮助的成员。现金形式的 `zakat` 很少，且未捐赠给安巴里亚。实物 `zakat` 至今仍在实行。阿法·阿朱拉的继任者谢赫·赛义德·阿布巴卡尔·扎卡里亚告诉我，2019 年，一位匿名捐赠者捐赠了 100 袋大米并在市场上出售。由此产生的现金被分配给安巴里亚学者以支付其生活费用。他告诉我，`zakat` 的征收始于斋月，所收集的款项除其他用途外，还分配给医院中急需帮助的人、病人或用于支付负债者的费用。^108 然而，所收集的资源不足以启动社会福利项目，例如在塔马利的教育综合体建设诊所（图 45）。因此，安巴里亚学者们开始私下讨论建立 `zakat` 基金的可行性，尽管这一想法尚未公开提出。谢赫·德尔·塔米姆向我解释了这一主要原因，即缺乏组织和管理此类基金的承诺和专业知识，同时还需要在其运作中建立信任和透明度。尽管如此，谢赫·赛义德·阿布巴卡尔·扎卡里亚和谢赫·德尔·塔米姆都强调 `zakat` 是动员资金的关键，例如用于诊所项目。^109
 
-有时，通过他们的非政府组织，一些穆斯林学者和伊玛目会从外国穆斯林慈善家和组织那里接收 *zakat*。谢赫·穆斯塔法·易卜拉欣和ICODEHS是首批利用此类资金的机构之一，并与海湾地区的多个 *zakat* 组织有着长期关系，例如科威特天课之家和迪拜慈善协会。^110 其他
+有时，通过他们的非政府组织，一些穆斯林学者和伊玛目会从外国穆斯林慈善家和组织那里接收 `zakat`。谢赫·穆斯塔法·易卜拉欣和ICODEHS是首批利用此类资金的机构之一，并与海湾地区的多个 `zakat` 组织有着长期关系，例如科威特天课之家和迪拜慈善协会。^110 其他
 
 107 采访谢赫·阿卜杜勒萨拉姆·艾哈迈德，北部地区区域首席伊玛目，塔马利，2019 年 4 月 10 日。
 
@@ -5296,6 +5458,7 @@ GISYA 规定天课 al-fitr 对拥有剩余食物的每个穆斯林都是义务�
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_407_0.png)
 
 图 45 安巴里亚教育综合体在塔马利的结构图
+
 照片：HOLGER WEISS/2019
 
 当地的穆斯林非政府组织，例如加纳发展慈善协会（成立于 2014 年），从阿拉伯联合酋长国援助和沙迦国际慈善机构获得资金。相比之下，伊玛目宣教组织（成立于 2003 年）已从阿拉伯联合酋长国、沙特阿拉伯和卡塔尔收到天课捐赠。前者组织利用这些资金每月为 300 个家庭提供食物、钻井以及协助北部地区、萨瓦纳地区和东北地区缺乏水资源的农村社区。后者则将指定现金捐赠用于北部地区的清真寺、学校和钻井项目。111
@@ -5306,31 +5469,29 @@ GISYA 规定天课 al-fitr 对拥有剩余食物的每个穆斯林都是义务�
 
 112 采访伊斯兰教育部门经理谢赫·伊萨，塔马利 2019 年 4 月 9 日。
 
-五年后调查捐赠的影响。¹¹² 谢赫·阿尔哈吉·尤西夫·达乌达·加里巴的非政府组织 *Adabiyya Islamic Society* 反而在 Facebook 上宣布，其作为支持老年人和被忽视人群的项目的一部分运营着一个‘信托基金’。他进一步呼吁向该基金捐款，包括 *zakat*：“我们打算将 *zakat* 资金和其他慈善资金用于有需要的受益者。”与此同时，他提醒观众：“我们很高兴有这么多人‘点赞’我们的页面，但我们无法用‘点赞’来养育和教育孤儿。请今天就捐赠。”¹¹³
+五年后调查捐赠的影响。¹¹² 谢赫·阿尔哈吉·尤西夫·达乌达·加里巴的非政府组织 `Adabiyya Islamic Society` 反而在 Facebook 上宣布，其作为支持老年人和被忽视人群的项目的一部分运营着一个‘信托基金’。他进一步呼吁向该基金捐款，包括 `zakat`：“我们打算将 `zakat` 资金和其他慈善资金用于有需要的受益者。”与此同时，他提醒观众：“我们很高兴有这么多人‘点赞’我们的页面，但我们无法用‘点赞’来养育和教育孤儿。请今天就捐赠。”¹¹³
 
 113 Adabiyya Islamic Society Ghana—AIS 孤儿院，Facebook 发布，2020 年 9 月 13 日，https://www.facebook.com/aisorphanagegh/photos/a.1020291948012012/440447412953760/?type=3&theater, 访问于 2021 年 2 月 5 日。
 
-非逊尼派社区也从国外收到 *zakat* 捐赠。其中之一是位于温奇的伊巴迪耶社区或伊斯提卡玛穆斯林传教团，其资金来自（伊巴迪派）阿曼苏丹国。资金由阿曼的伊斯提卡玛办公室收集，并在斋月期间转交给温奇当地办公室，指定为给穷人、需要帮助者和孤儿的 *zakat*。温奇办公室反过来也将寡妇、老年人和离婚妇女纳入其捐赠的受助者范围。据乌马尔·西纳·阿卜杜勒-瓦哈卜提供的信息，阿曼每年斋月捐赠在五千至一万美元之间。¹¹⁴
+非逊尼派社区也从国外收到 `zakat` 捐赠。其中之一是位于温奇的伊巴迪耶社区或伊斯提卡玛穆斯林传教团，其资金来自（伊巴迪派）阿曼苏丹国。资金由阿曼的伊斯提卡玛办公室收集，并在斋月期间转交给温奇当地办公室，指定为给穷人、需要帮助者和孤儿的 `zakat`。温奇办公室反过来也将寡妇、老年人和离婚妇女纳入其捐赠的受助者范围。据乌马尔·西纳·阿卜杜勒-瓦哈卜提供的信息，阿曼每年斋月捐赠在五千至一万美元之间。¹¹⁴
 
 114 Umar Sina Abdul-Wahab，《评估加纳伊巴迪耶穆斯林的宣教方法：温奇和特奇曼案例研究》，M.Phil. 论文，科马·恩克鲁玛科技大学宗教研究系，2016 年 11 月，93–94 页。
 
 ### 2 走向纵向慈善：工具主义话语
 
-关于 *zakat* 的工具主义话语将其视为促进社会福利的工具，并将讨论从横向转向纵向慈善。工具主义话语植根于半私人/公共社区收集和分配 *zakat* 的方式。伊玛目和学者都认为贫困是加纳穆斯林边缘化的主要原因。在横向、人与人之间的施舍形式根深蒂固的社区中，纵向慈善难以引入，正如谢赫·穆罕默德·哈伦·巴库里的经历所 exemplifies，见下文。尽管如此，尽管遭到各种抵制，我采访的大多数穆斯林学者都坚持从穆斯林社区内部赋权的理念，并将 *zakat* 视为实现这一目标的工具之一。
+关于 `zakat` 的工具主义话语将其视为促进社会福利的工具，并将讨论从横向转向纵向慈善。工具主义话语植根于半私人/公共社区收集和分配 `zakat` 的方式。伊玛目和学者都认为贫困是加纳穆斯林边缘化的主要原因。在横向、人与人之间的施舍形式根深蒂固的社区中，纵向慈善难以引入，正如谢赫·穆罕默德·哈伦·巴库里的经历所 exemplifies，见下文。尽管如此，尽管遭到各种抵制，我采访的大多数穆斯林学者都坚持从穆斯林社区内部赋权的理念，并将 `zakat` 视为实现这一目标的工具之一。
 
-与强调减轻穷人和需要帮助者苦难的道德义务的传统 *zakat* 话语相比，工具主义话语强调 *zakat* 作为伊斯兰扶贫工具的潜力。这一话语在加纳大约二十年前开始扎根。2004 年 10 月，大瓦学堂在塔马利组织了为期两天的关于伊斯兰在减贫和财富创造中作用的研讨会，这或许是首次尝试阐述 *zakat* 收集和分配变化的尝试。该研讨会的创新之处在于其关注通过定期支付 *zakat* 为社区发展筹集资金的重点。^115
+与强调减轻穷人和需要帮助者苦难的道德义务的传统 `zakat` 话语相比，工具主义话语强调 `zakat` 作为伊斯兰扶贫工具的潜力。这一话语在加纳大约二十年前开始扎根。2004 年 10 月，大瓦学堂在塔马利组织了为期两天的关于伊斯兰在减贫和财富创造中作用的研讨会，这或许是首次尝试阐述 `zakat` 收集和分配变化的尝试。该研讨会的创新之处在于其关注通过定期支付 `zakat` 为社区发展筹集资金的重点。^115
 
 ^115 “穆斯林参加天课研讨会”，2004 年 10 月 6 日，https://www.modernghana.com/news/64169/muslims-attends-seminar-on-zakat.html#google_vignette, 访问于 2012 年 11 月 16 日。
 
-十五年后，关于支付 *zakat* 的讨论不仅在穆斯林学者之间进行，并在斋月期间由伊玛目在布道中强调，也被穆斯林社交媒体评论员所讨论。例如，2019 年 2 月，互联网平台 Zongo Republic 向其穆斯林读者询问他们是否已就增值财富支付了 *zakat*，并讽刺地宣布：“Menzgold 客户，你们支付天课了吗？”^116
+十五年后，关于支付 `zakat` 的讨论不仅在穆斯林学者之间进行，并在斋月期间由伊玛目在布道中强调，也被穆斯林社交媒体评论员所讨论。例如，2019 年 2 月，互联网平台 Zongo Republic 向其穆斯林读者询问他们是否已就增值财富支付了 `zakat`，并讽刺地宣布：“Menzgold 客户，你们支付天课了吗？”^116
 
 ^116 “那么，穆斯林 Menzgold 客户支付天课了吗？”，2019 年 2 月 22 日，https://zongorepublic.com/so-did-muslim-menzgold-customers-pay-zakat/, 访问于 2019 年 4 月 23 日；该主页在 2024 年 5 月已失效。
 
-一些穆斯林学者对工具主义话语持接受态度，并试图在 Kambungli 和 Gidan Tuba 推出地方倡议。然而，从横向转向纵向慈善在许多地区都是一场艰难的斗争，大多数情况下以死胡同告终。此类流产倡议的主要原因是当地社区和利益相关者的冷淡回应。一个发人深省的例子是（已故）Jama‘a 伊玛目谢赫·德尔·苏莱曼·穆罕默德·哈伦·巴库里试图在他所在的瓦社区重新组织 *zakat* 的收集和分配。“作为首席伊玛目，我在斋月期间布道 *zakat* 并分发信封，但人们不愿支付 *zakat*，”他在 2019 年 12 月接受我采访时告知我。大约五年前，谢赫·穆罕默德·哈伦·巴库里曾试图建立一个地方 *zakat* 委员会并撰写了其收集和分配手册。该倡议以失败告终，因为只有少数人将 *zakat* 送交委员会。大多数人持抵制态度，谢赫·穆罕默德·哈伦·巴库里不得不认识到，尽管他传道并教授 *zakat*，人们并不了解 *zakat* 或 *nisab* 的规则。他的结论与我采访的许多其他学者相似：“你不能强迫任何人，我们没有权力让人们支付 *zakat*，人们以自己的方式去做。”^117
+一些穆斯林学者对工具主义话语持接受态度，并试图在 Kambungli 和 Gidan Tuba 推出地方倡议。然而，从横向转向纵向慈善在许多地区都是一场艰难的斗争，大多数情况下以死胡同告终。此类流产倡议的主要原因是当地社区和利益相关者的冷淡回应。一个发人深省的例子是（已故）Jama‘a 伊玛目谢赫·德尔·苏莱曼·穆罕默德·哈伦·巴库里试图在他所在的瓦社区重新组织 `zakat` 的收集和分配。“作为首席伊玛目，我在斋月期间布道 `zakat` 并分发信封，但人们不愿支付 `zakat`，”他在 2019 年 12 月接受我采访时告知我。大约五年前，谢赫·穆罕默德·哈伦·巴库里曾试图建立一个地方 `zakat` 委员会并撰写了其收集和分配手册。该倡议以失败告终，因为只有少数人将 `zakat` 送交委员会。大多数人持抵制态度，谢赫·穆罕默德·哈伦·巴库里不得不认识到，尽管他传道并教授 `zakat`，人们并不了解 `zakat` 或 `nisab` 的规则。他的结论与我采访的许多其他学者相似：“你不能强迫任何人，我们没有权力让人们支付 `zakat`，人们以自己的方式去做。”^117
 
 ^117 采访 Jama‘a 伊玛目谢赫·德尔·苏莱曼·穆罕默德·哈伦·巴库里，2019 年 12 月 5 日，瓦。谢赫·穆罕默德·哈伦·巴库里于 2020 年去世。
-
-
 
 谢赫·穆罕默德·哈伦·巴库里（Sheikh Mohammad Harun Bakuri）与加纳许多其他伊玛目和学者一样，批评他们的群体没有为社会和经济发展而奋斗。他强调：“天课必须用于促进伊斯兰教和社区发展。”他认为，迄今为止情况并非如此，因为瓦城的穆斯林不缴纳天课，而是缴纳开斋捐，在斋月期间以小份额直接发放给穷人。他总结道：“这样下去，我们永远无法消除贫困。”118
 
@@ -5340,17 +5501,17 @@ GISYA 规定天课 al-fitr 对拥有剩余食物的每个穆斯林都是义务�
 
 一年后，哈吉·亚当斯·戈德华特（Haji Adams Goldwater）在塔马利的斋月致辞中提出了类似的呼吁，要求将清真寺从纯粹的仪式礼拜场所转变为社会改革、教育和财富创造的机构。他的核心诉求是设立一个“教育捐赠/天课基金”，以筹集资源支持才华横溢但经济困难的学生，以及一个“商业发展基金”，帮助那些拥有可行商业计划的人创办企业，为青年提供就业途径。121 然而，他没有明确说明他设想的是设立一个国家基金还是若干个地区基金。
 
-其他组织利用社交媒体呼吁非加纳穆斯林慈善家将他们的施舍和*天课*投入到他们的慈善项目和计划中。例如，*伊克拉基金会*在其阿拉伯语主页上向潜在的沙特捐赠者发出呼吁。伊克拉承诺通过该基金会分配他们的*天课*和施舍，以缓解成千上万难民和赤贫者的困境。122 *伊赫桑慈善救济基金会*是一家自2010年以来在博库和上东部地区运营的当地穆斯林非政府组织，其主页上呼吁提供*天课*和捐款，以资助孤儿、清真寺建设、供水和卫生项目。123 这一呼吁不是针对当地穆斯林，而是针对国际捐赠者。*加纳光明之眼基金会*于2010年成立，2017年注册，是一个跨国非政府组织的例子，因为它也在德国运作。该组织的德国分支专注于筹款，在其德语主页上宣布*财产天课*和*开斋捐*可以存入其在德国的银行账户。所募集的资金用于支持穷人，并在库马西老塔福的开斋节期间捐赠食物。124
+其他组织利用社交媒体呼吁非加纳穆斯林慈善家将他们的施舍和`天课`投入到他们的慈善项目和计划中。例如，`伊克拉基金会`在其阿拉伯语主页上向潜在的沙特捐赠者发出呼吁。伊克拉承诺通过该基金会分配他们的`天课`和施舍，以缓解成千上万难民和赤贫者的困境。122 `伊赫桑慈善救济基金会`是一家自2010年以来在博库和上东部地区运营的当地穆斯林非政府组织，其主页上呼吁提供`天课`和捐款，以资助孤儿、清真寺建设、供水和卫生项目。123 这一呼吁不是针对当地穆斯林，而是针对国际捐赠者。`加纳光明之眼基金会`于2010年成立，2017年注册，是一个跨国非政府组织的例子，因为它也在德国运作。该组织的德国分支专注于筹款，在其德语主页上宣布`财产天课`和`开斋捐`可以存入其在德国的银行账户。所募集的资金用于支持穷人，并在库马西老塔福的开斋节期间捐赠食物。124
 
-上述穆斯林组织和非政府组织声称作为*天课*捐赠者的中介——无论是内部的、加纳本地的还是外部外国的——都指向了加纳在实施垂直慈善方面迈出的新步伐。在西方穆斯林少数群体国家，穆斯林非政府组织已发展成为实施*天课*作为促进社会福利工具的代理机构。其中一些甚至已成为*天课*制度化的工具，例如英国的阿尔-蒙塔达信托和全国天课基金会、美国的美国天课基金会、INCA Relief——穆斯林促进人道（美国）、澳大利亚全国天课基金会、加拿大全国天课基金会和加拿大天课。这些机构将*天课*的分配限制在征收地点/国家内的受助者或当地社区。125 此外，与地方和国家机构并行的，国际穆斯林慈善机构和非政府组织也将自己宣传为*天课*接受/管理组织。这类国际组织的例子包括“透明之手”（英国、美国、澳大利亚）、“穆斯林援助”（英国、美国、澳大利亚）、“穆斯林之手”（英国、加拿大、南非）、“伊斯兰救济”（英国、美国、加拿大）、“伊斯兰帮助”（英国）和“伊斯兰援助”（英国），以及“希达亚基金会”（美国）。这些组织将所征收的*天课*转移到其运作国家边界之外的姐妹和伙伴组织，特别是那些主要在亚洲和非洲国家运作的组织。
+上述穆斯林组织和非政府组织声称作为`天课`捐赠者的中介——无论是内部的、加纳本地的还是外部外国的——都指向了加纳在实施垂直慈善方面迈出的新步伐。在西方穆斯林少数群体国家，穆斯林非政府组织已发展成为实施`天课`作为促进社会福利工具的代理机构。其中一些甚至已成为`天课`制度化的工具，例如英国的阿尔-蒙塔达信托和全国天课基金会、美国的美国天课基金会、INCA Relief——穆斯林促进人道（美国）、澳大利亚全国天课基金会、加拿大全国天课基金会和加拿大天课。这些机构将`天课`的分配限制在征收地点/国家内的受助者或当地社区。125 此外，与地方和国家机构并行的，国际穆斯林慈善机构和非政府组织也将自己宣传为`天课`接受/管理组织。这类国际组织的例子包括“透明之手”（英国、美国、澳大利亚）、“穆斯林援助”（英国、美国、澳大利亚）、“穆斯林之手”（英国、加拿大、南非）、“伊斯兰救济”（英国、美国、加拿大）、“伊斯兰帮助”（英国）和“伊斯兰援助”（英国），以及“希达亚基金会”（美国）。这些组织将所征收的`天课`转移到其运作国家边界之外的姐妹和伙伴组织，特别是那些主要在亚洲和非洲国家运作的组织。
 
 ### 3 制度主义话语
 
-加纳关于*天课*的传统话语和工具主义话语通常只笼统地涉及加纳*天课*征收和分配的重新组织。这些话语中强调的基本论点是，大多数穆斯林很穷，更愿意按传统方式缴纳*天课*。此外，对*天课*分配存在一种隐蔽的、有时甚至是直言不讳的批评——分配似乎杂乱无章，且没有改变穷人和贫困者生活的明确目标。穆斯林学者在批评时很坦诚——至少在采访中询问他们对强制性施舍在消除贫困方面的潜力时是这样。
+加纳关于`天课`的传统话语和工具主义话语通常只笼统地涉及加纳`天课`征收和分配的重新组织。这些话语中强调的基本论点是，大多数穆斯林很穷，更愿意按传统方式缴纳`天课`。此外，对`天课`分配存在一种隐蔽的、有时甚至是直言不讳的批评——分配似乎杂乱无章，且没有改变穷人和贫困者生活的明确目标。穆斯林学者在批评时很坦诚——至少在采访中询问他们对强制性施舍在消除贫困方面的潜力时是这样。
 
-将*天课*以小份额分发给个别乞丐，能让穷人或贫困者维持一天或一周的生计，但无法使他们摆脱贫困。穆斯林学者和慈善家一再呼吁建立机构，在地区甚至国家层面监督*天课*的征收和分配。126 然而，塔马利的谢赫·阿明·班巴（Sheikh Amin Bamba）批评地指出，加纳穆斯林组织松散，缺乏协调和信任，影响了*天课*的征收和分配。他指出：“就目前而言，*天课*对穆斯林赋权没有任何影响。”127
+将`天课`以小份额分发给个别乞丐，能让穷人或贫困者维持一天或一周的生计，但无法使他们摆脱贫困。穆斯林学者和慈善家一再呼吁建立机构，在地区甚至国家层面监督`天课`的征收和分配。126 然而，塔马利的谢赫·阿明·班巴（Sheikh Amin Bamba）批评地指出，加纳穆斯林组织松散，缺乏协调和信任，影响了`天课`的征收和分配。他指出：“就目前而言，`天课`对穆斯林赋权没有任何影响。”127
 
-加纳关于*天课*的制度主义话语大约始于二十年前。2003年，全国首席伊玛目谢赫·奥斯曼·努胡·沙鲁布图（Sheikh Osman Nuhu Sharubutu）提出了
+加纳关于`天课`的制度主义话语大约始于二十年前。2003年，全国首席伊玛目谢赫·奥斯曼·努胡·沙鲁布图（Sheikh Osman Nuhu Sharubutu）提出了
 
 118 对瓦城贾马阿清真寺伊玛目谢赫·苏莱曼·穆罕默德·哈伦·巴库里博士的访谈，2019年12月5日，瓦城。
 
@@ -5372,21 +5533,24 @@ GISYA 规定天课 al-fitr 对拥有剩余食物的每个穆斯林都是义务�
 
 127 对塔马利伊玛目谢赫·阿明·班巴的访谈，2019年4月10日。
 
-
-
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_413_0.png)
 
 FIGURE 46 阿赫勒·逊奈派全国伊玛目贝特·乌尔·扎卡特基金。基金会委托的练习册封面
+
 作者收藏
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_414_0.png)
 
 FIGURE 47 用于“冰水”（饮用水）的塑料袋。考萨尔饮用水是谢赫·乌马尔·易卜拉欣·伊玛目贝特·乌尔·扎卡特基金在2000年代初期创办的企业之一。
+
 作者收藏
+
+
 
 将设立国家天课基金的问题列入了全国斋月会议议程。然而，当时成立的国家伊斯兰信托基金发展缓慢，并在几年后被搁置。128 2005年，阿赫勒·逊奈派的全国伊玛目谢赫·乌马尔·易卜拉欣·伊玛目发起了一项新倡议，即贝特·乌尔·扎卡特基金（图46）。然而，尽管该项目最初成功地将天课集中到一个共同基金中，并将所筹资金投资于一家用塑料袋装瓶饮用水的公司（图47），但它很快就陷入困境，并在几年后瓦解。129 同年，时任加纳穆斯林传教团第二副全国伊玛目的谢赫·阿明·邦苏博士呼吁穆斯林组织和个人向一个未指明的扎卡特基金捐款。130 目前尚不清楚他指的是（当时处于休眠状态的）国家伊斯兰信托基金、加纳穆斯林传教团现有的基金，还是一个尚未成立的机构。
 
 128 Weiss，《在加纳乞讨与施舍》，146页。
+
 129 Weiss，《在加纳乞讨与施舍》，142–143页；2017年3月4日在阿克拉对谢赫·乌马尔·易卜拉欣·伊玛目的访谈。
 
 到2007年，上述所有倡议都不复存在。时任加纳武装部队首席伊玛目的谢赫·塞杜·亚当就是其中一位发声并呼吁建立中央、即国家天课基金的人。他的设想是一个中央国家机构，从区、区域和国家层面接收天课以充实基金，“这样每年年底，穆斯林社区就会知道把天课放在哪里。”毫不奇怪，谢赫·塞杜·亚当的制度化做法遭到了其中一位评论者的批评，认为其官僚、不灵活，且容易被负责基金的人挪用：
@@ -5401,20 +5565,21 @@ FIGURE 47 用于“冰水”（饮用水）的塑料袋。考萨尔饮用水是�
 
 项目启动意向的公开宣布随后是——沉默。事实上，相关利益相关者的缺乏承诺很快使国家天课之家的愿景被搁置，且从未实现。136 然而，这并非对天课制度化话语的打击。多个社区推出了类似的倡议，例如穆斯林议会党团的天课与萨达卡信托基金、加纳穆斯林传教团和ASWAJ（图48）的地区天课基金、Jam’iyat Hidaya Islamiyya的天课委员会以及穆斯林乌玛发展倡议天课之家。
 
-133 “呼吁穆斯林记者合作传播伊斯兰教义”，Modern Ghana，2011年8月5日，http://www.modernghana.com/print/343699/1/muslim-journalists-urge-d-to-collaborate-to-propaga.html，访问于2019年2月25日。
+133 “呼吁穆斯林记者合作传播伊斯兰教义”，Modern Ghana，2011年8月5日，`http://www.modernghana.com/print/343699/1/muslim-journalists-urge-d-to-collaborate-to-propaga.html`，访问于2019年2月25日。
 
-134 “穆斯林社区因启动国家天课之家政策而受到赞扬”，2011年11月20日，http://www.ghanaweb.com，访问于2014年3月12日。
+134 “穆斯林社区因启动国家天课之家政策而受到赞扬”，2011年11月20日，`http://www.ghanaweb.com`，访问于2014年3月12日。
 
-135 “呼吁穆斯林记者合作传播伊斯兰教义”，Modern Ghana，2011年8月5日，http://www.modernghana.com/print/343699/1/muslim-journalists-urge-d-to-collaborate-to-propaga.html，访问于2019年2月25日。
+135 “呼吁穆斯林记者合作传播伊斯兰教义”，Modern Ghana，2011年8月5日，`http://www.modernghana.com/print/343699/1/muslim-journalists-urge-d-to-collaborate-to-propaga.html`，访问于2019年2月25日。
 
 136 由哈吉·穆穆尼·苏莱马纳提供信息，莱贡，2017年3月1日。据穆斯林天课之家执行秘书兼现任穆斯林发展倡议（MUDI）首席执行官哈吉·阿卜杜勒·马南称，穆斯林天课之家崩溃的主要原因是穆斯林议员同时启动了天课与萨达卡基金。与前一倡议相比，天课与萨达卡基金获得了广泛的媒体报道，并“抢走了”穆斯林天课之家的风头。对哈吉·阿卜杜勒·马南（穆斯林发展倡议（MUDI）首席执行官）的访谈，由尤努斯·杜姆贝博士记录，阿克拉，2021年1月3日。
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_417_0.png)
 
 FIGURE 48 ASWAJ 天课捐赠者桌
+
 作者收藏
 
-#### 3.1 天课与萨达卡信托基金
+### 3.1 天课与萨达卡信托基金
 
 第一次成功尝试在加纳全国范围内建立天课收集和分配机构发生在2010年9月，议会穆斯林党团启动了加纳天课与萨达卡信托基金。根据其使命宣言，该倡议的总体目的是打击该国穆斯林和非穆斯林中的贫困、疾病和剥夺。特别是，它旨在为陷入财务危机的学生提供奖学金，“以便根除无知，从而根除贫困”。新闻发布后，遭到基督教评论员的激烈攻击，其中许多人指责议员滥用职权，为该国伊斯兰化打开大门，并担心资金可能被挪用或用于支持穆斯林恐怖分子。其他人赞扬了议员的决定（“这是善良领导和兄弟情谊的体现”），敦促他们建立一个网站，以便任何人都可以向基金捐款，并将基金的账户详情公布在网站上，以便其他穆斯林可以轻松地将天课转入账户。137
 
@@ -5424,26 +5589,24 @@ FIGURE 48 ASWAJ 天课捐赠者桌
 
 起初，该基金成功招募了穆斯林议员和国家雇员，会员人数从2010年的54人增长到2013年的250人，直接反映了基金资产从2010年最初的12,000加纳塞地增长到2013年的100,000加纳塞地。141 2016年出现转折点，当年年底基金收到日本汽车管理层捐赠的94,000加纳塞地。142 两年
 
-137 “议会穆斯林党团启动天课与萨达卡基金”，2010年9月7日，http://www.ghanaweb.com/GhanaHomePage/NewsArchive/Muslim-Caucus-in-Parliament-launches-Zakat-and-Sadaqa-Fund-189934#，访问于2016年1月21日。
+137 “议会穆斯林党团启动天课与萨达卡基金”，2010年9月7日，`http://www.ghanaweb.com/GhanaHomePage/NewsArchive/Muslim-Caucus-in-Parliament-launches-Zakat-and-Sadaqa-Fund-189934#`，访问于2016年1月21日。
 
-138 “基金概况”，加纳天课与萨达卡信托基金，2019年度报告，可在 https://media-exp1.licdn.com/dms/document/C56iFAQFfxSjlkpF9dw/feedshare-document-pdf-analyzed/o/16i1317979754?e=163034000&v=beta&t=qnoKD5w7LOx27WurQgxRNNkHomH-mqWgXJpoMMNlgo 获取，下载于2021年2月10日。
+138 “基金概况”，加纳天课与萨达卡信托基金，2019年度报告，可在 `https://media-exp1.licdn.com/dms/document/C56iFAQFfxSjlkpF9dw/feedshare-document-pdf-analyzed/o/16i1317979754?e=163034000&v=beta&t=qnoKD5w7LOx27WurQgxRNNkHomH-mqWgXJpoMMNlgo` 获取，下载于2021年2月10日。
 
-139 “副总统敦促穆斯林向天课基金捐款”，2010年11月16日，http://www.ghanaweb.com/GhanaHomePage/NewsArchive/artikel.php?ID=19756#，访问于2019年2月25日；“马哈马敦促穆斯林支持天课基金”，《The Chronicle》，2010年11月17日，http://thechronicle.com.gh/，访问于2014年3月12日；“鲍威尔马敦促穆斯林利用技术进行天课收集”，Ghana Guardian，2018年6月8日，https://ghanaguardian.com/bawumia-urges-muslims-to-use-tech-for-zakat-collection，访问于2019年4月23日。
+139 “副总统敦促穆斯林向天课基金捐款”，2010年11月16日，`http://www.ghanaweb.com/GhanaHomePage/NewsArchive/artikel.php?ID=19756#`，访问于2019年2月25日；“马哈马敦促穆斯林支持天课基金”，《The Chronicle》，2010年11月17日，`http://thechronicle.com.gh/`，访问于2014年3月12日；“鲍威尔马敦促穆斯林利用技术进行天课收集”，Ghana Guardian，2018年6月8日，`https://ghanaguardian.com/bawumia-urges-muslims-to-use-tech-for-zakat-collection`，访问于2019年4月23日。
 
-140 “塔马利启动天课与萨达卡信托基金”，2016年1月26日，https://zaaradio.com/society/zakat-sadaqa-trust-fund-launched-in-tamale/，访问于2017年11月7日；https://www.facebook.com/ZakatandSadaqafundGhana/photos/a.2002861529962781/2149178201997779/?type=3&theater，访问于2019年5月14日；https://ar-ar.facebook.com/Hijrah-TV-News-Ghana-114730809961665/videos/zakat-zakat-and-sadaqa-fund-launched-in-kumasi/243343850865286/，访问于2021年5月3日。
+140 “塔马利启动天课与萨达卡信托基金”，2016年1月26日，`https://zaaradio.com/society/zakat-sadaqa-trust-fund-launched-in-tamale/`，访问于2017年11月7日；`https://www.facebook.com/ZakatandSadaqafundGhana/photos/a.2002861529962781/2149178201997779/?type=3&theater`，访问于2019年5月14日；`https://ar-ar.facebook.com/Hijrah-TV-News-Ghana-114730809961665/videos/zakat-zakat-and-sadaqa-fund-launched-in-kumasi/243343850865286/`，访问于2021年5月3日。
 
-141 Musah Yahaya Jafaru，“关键穆斯林团体担任朝觐委员会成员”，Daily Graphic，2013年7月16日，http://graphic.com.gh/archive/General-News/，访问于2014年3月12日。
+141 Musah Yahaya Jafaru，“关键穆斯林团体担任朝觐委员会成员”，Daily Graphic，2013年7月16日，`http://graphic.com.gh/archive/General-News/`，访问于2014年3月12日。
 
-142 “日本汽车支持天课与萨达卡基金”，Graphic Online，2016年12月29日，https://www.graphic.com.gh/news/general-news/japan-motors-supports-zakat-and-sadaqa-fund.html，访问于2019年5月21日。
-
-
-
-
+142 “日本汽车支持天课与萨达卡基金”，Graphic Online，2016年12月29日，`https://www.graphic.com.gh/news/general-news/japan-motors-supports-zakat-and-sadaqa-fund.html`，访问于2019年5月21日。
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_419_0.png)
 
 #### 图49
+
 天课与施舍信托基金。2021年年度报告封面
+
 作者收藏
 
 后来，在2018年斋月期间，副总统阿尔哈吉·马哈马杜·巴武米亚博士在高贵之夜（由穆斯林核心小组组织的募捐晚宴）上向该基金捐赠了50,000加纳塞地，该基金因此登上了新闻头条。此时，该基金成为世界天课论坛的成员，其活动获得了国际认可。^143^ 到2010年代末，其2020年主页上的“天课基金捐赠者名单”包含近1,100名（具名）个人，^144^ 而捐款总额在2019年已增至559,581.00加纳塞地。^145^ 2020年春季新冠封锁期间禁止社交聚会，对其“高贵之夜”等创收活动和其他外联项目产生了负面影响。因此，当年捐款总额（暂时）降至480,381加纳塞地。^146^ 一年后，捐款创下新纪录，累计达775,365加纳塞地；见图11。^147^ 同样，该基金在其活动中广泛使用社交媒体；其Facebook关注者数量从2019年5月中旬的3,000人增至2020年10月的4,500人，2021年10月的5,600人，以及2022年7月的5,700人（但在2022年12月又降至5,600人）。2022年，媒体评论人士称其扩张和社会影响“非同凡响”，并称赞其已成为穆斯林财富再分配的重要工具。^148^
@@ -5453,23 +5616,34 @@ FIGURE 48 ASWAJ 天课捐赠者桌
 天课与施舍信托基金的结构框架在加纳穆斯林非政府组织中独树一帜，因为其董事会由所有穆斯林教派和若干穆斯林组织的代表组成，并充当精神与财务专家平台。^153^ 此外，董事会任命、监督并批准秘书处成员。秘书处由其首席执行官领导，下设财务行政、项目和通讯部门。全体大会则是该基金的主要机构；它每年召开会议，审查其账目和余额。^154^
 
 天课与施舍信托基金管理着多个项目。最初，其主页列出了四个项目，标题为
+
 - 奖学金计划
+
 - 技术和职业计划
+
 - 技术支持计划
+
 - 经济赋权计划
+
 。^155^ 另一方面，2019/2020/2021年度报告则提到了五个所谓的“旗舰项目”，列为慈善支出的类别，即
+
 - 奖学金和教育支持
+
 - 医疗支持
+
 - 经济赋权
+
 - 斋月供应
+
 - 一般捐款
+
 2020年，又增加了两个慈善支出类别，即新冠疫情封锁期间的紧急支持以及职业支持。2019年至2021年间，各类别的资金分配出现了一些显著变化：2019年，66%用于教育项目和奖学金，而2021年为39%。另一方面，用于医疗支持（4%→16%）和斋月供应（5%→15%）的资金分别有所增加，而用于经济赋权的资金保持不变（20%）。^156^
 
 第一个项目，即奖学金计划，为加纳有需要的穆斯林学生提供助学金，以进入高等教育机构；第二个项目，即技术和职业计划，旨在通过技能能力建设增强受益者的经济能力。2013年至2016年，天课与施舍信托基金共资助了78名学生，总额为68,000加纳塞地，并向阿克龙庞盲人学校捐赠了笔记本电脑。^157^ 自那时起，教育项目的年度支出成倍增长，最高达到
 
-^143^ 世界天课论坛（WZF，成立于2007年）是一个由政府和非政府*天课*组织组成的平台；其总部位于印度尼西亚雅加达。截至2020年，WZF在35个国家拥有成员组织，其中10个位于撒哈拉以南非洲国家（贝宁、加纳、利比里亚、尼日利亚、塞内加尔、塞拉利昂、南非、苏丹、多哥和乌干达）。更多信息参见 https://www.wzwf.org。
+^143^ 世界天课论坛（WZF，成立于2007年）是一个由政府和非政府*天课*组织组成的平台；其总部位于印度尼西亚雅加达。截至2020年，WZF在35个国家拥有成员组织，其中10个位于撒哈拉以南非洲国家（贝宁、加纳、利比里亚、尼日利亚、塞内加尔、塞拉利昂、南非、苏丹、多哥和乌干达）。更多信息参见 `https://www.wzwf.org`。
 
-^144^ http://ghanazakatfundonline.com/list-contributors.php#，访问于2021年2月8日。
+^144^ `http://ghanazakatfundonline.com/list-contributors.php#`，访问于2021年2月8日。
 
 ^145^ 天课与施舍信托基金，《2019年年度报告》。
 
@@ -5478,33 +5652,34 @@ FIGURE 48 ASWAJ 天课捐赠者桌
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_420_0.png)
 
 #### 图11
+
 天课与施舍信托基金：2019–2021年捐款与支出
+
 来源：加纳天课与施舍信托基金，《2019、2020和2021年度报告》
 
-^147^ 天课与施舍信托基金，《2021年年度报告》；Salifu Abdul-Rahman，“天课与施舍信托基金：财富再分配的工具”，2022年7月8日，https://www.ghanaian...mes.com.gh/zakat-and-sadaqat-trust-fund-a-tool-for-redistribution-of-wealth/，访问于2023年12月5日。
+^147^ 天课与施舍信托基金，《2021年年度报告》；Salifu Abdul-Rahman，“天课与施舍信托基金：财富再分配的工具”，2022年7月8日，`https://www.ghanaian...mes.com.gh/zakat-and-sadaqat-trust-fund-a-tool-for-redistribution-of-wealth/`，访问于2023年12月5日。
 
-^148^ “天课与施舍信托基金：财富再分配的工具”，2022年7月8日，http://m.ghheadlines.com/agency/ghanaian-times/20220708/156014775/zakat-and-sadaqat-trust-fund-a-tool-for-redistribution-of-wealth，2022年7月8日。
+^148^ “天课与施舍信托基金：财富再分配的工具”，2022年7月8日，`http://m.ghheadlines.com/agency/ghanaian-times/20220708/156014775/zakat-and-sadaqat-trust-fund-a-tool-for-redistribution-of-wealth`，2022年7月8日。
 
-^149^ “从朝觐费用中收取1%注入天课基金——马哈马向穆斯林提议”，2016年6月26日，https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Charge-1-of-cost-of-Hajj-in-to-Zakāt-Fund-Mahama-proposes-to-Muslims-450727，访问于2019年2月21日；“干预朝觐事务不会动摇穆斯林选民”，2016年7月16日，https://www.newsghana.com.gh/snooping-in-hajj-affairs-wont-sway-muslim-voters/，访问于2019年5月14日。
+^149^ “从朝觐费用中收取1%注入天课基金——马哈马向穆斯林提议”，2016年6月26日，`https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Charge-1-of-cost-of-Hajj-in-to-Zakāt-Fund-Mahama-proposes-to-Muslims-450727`，访问于2019年2月21日；“干预朝觐事务不会动摇穆斯林选民”，2016年7月16日，`https://www.newsghana.com.gh/snooping-in-hajj-affairs-wont-sway-muslim-voters/`，访问于2019年5月14日。
 
-^150^ 参见 https://www.fundraisingafrica.com/DetailView/344 以及 https://www.fundraisingafrica.com/DetailView/343，访问于2019年5月19日。
+^150^ 参见 `https://www.fundraisingafrica.com/DetailView/344` 以及 `https://www.fundraisingafrica.com/DetailView/343`，访问于2019年5月19日。
 
-^151^ 1加纳塞地施舍项目，2022年1月11日，https://www.facebook.com/ZakatandSadaqafundGhana/，访问于2023年8月22日。
+^151^ 1加纳塞地施舍项目，2022年1月11日，`https://www.facebook.com/ZakatandSadaqafundGhana/`，访问于2023年8月22日。
 
-^152^ 第29届全国斋月会议公报，发布于2023年3月7日至9日在海岸角举行的为期两天的年度全国斋月会议，2023年3月11日发布在 https://www.facebook.com/GhanaAcademyOfMuslimProfessionals，访问于2023年8月22日。
+^152^ 第29届全国斋月会议公报，发布于2023年3月7日至9日在海岸角举行的为期两天的年度全国斋月会议，2023年3月11日发布在 `https://www.facebook.com/GhanaAcademyOfMuslimProfessionals`，访问于2023年8月22日。
 
 ^153^ 2021年，董事会成员包括Alhasan Andani（董事会主席）、Mohammed Inusah（副主席）、Hajia Azara Abukari-Haroun（首席执行官）、Supt.（伊玛目）Husein Abdur Rahim、Mohamed Hardi Nyagsi、Zackaria Abraham Ibn博士、Hajia Ayisha Salifu、Sheikh Alhaji Suleiman Bandago（什叶派代表）、Amin Abdul-Rahman、Marzuk Azindoo博士（提加尼教团代表）、Sheikh Salman M. Alhassan（逊尼派代表）、Sheikh Abdul Wahab Issah（阿赫迈迪亚派代表）。“董事会成员”，天课与施舍信托基金，《2021年年度报告》。
 
+
+
 ^154^ 与天课与施舍信托基金前首席执行官Sheikh Arimiyao Shu’ab的访谈，阿克拉/莱贡，2017年12月7日。我并不怀疑天课与施舍信托基金得到高效而恰当的管理。然而，当我在2017年开始调查时，其缺乏透明度是显而易见的。在其主页和Facebook账户的早期版本中找到了一些基本信息，但其活动年度报告当时并未公开。相反，我通过新闻报道和报表获取有关捐赠和支出的信息。尽管如此，近年来出现了明显的开放和公开其活动的动向。也许是公众批评的结果，天课与施舍信托基金自2020年起开始在Facebook、LinkedIn及其主页上发布其年度报告，包括财务报表。到目前为止，已有三份报告，即2019、2020和2021年的报告，包含其活动回顾、收支报表和独立审计报告。连同早期关于其活动的通知，这三份年度报告让人们得以了解天课与施舍信托基金在其成立头十年所取得的成就。
 
-^155^ 这四个计划列在主页的2017年版本上，http://ghanazakatfundonline.com，访问于2017年11月7日。
+^155^ 这四个计划列在主页的2017年版本上，`http://ghanazakatfundonline.com`，访问于2017年11月7日。
 
 ^156^ 数据取自天课与施舍信托基金《2019年年度报告》中的“财务活动/慈善支出报表2019”以及《2021年年度报告》中的“财务活动/慈善支出报表2021”。
 
-^157^ http://ghanazakatfundonline.com，访问于2017年11月7日。
-
-
-
+^157^ `http://ghanazakatfundonline.com`，访问于2017年11月7日。
 
 2019年金额为GHS 186,685.158。COVID-19产生负面影响，该项目仅收到GHS 52,000。159 一年后，教育和奖学金支出增加至几乎GHS 170,000。160
 
@@ -5520,13 +5695,13 @@ Zakat and Sadaqa Trust Fund于2018年在其实用和技术培训计划中启动�
 
 160 “财务活动报表”，Zakat and Sadaqa Trust Fund，2021年年度报告。
 
-161 Emmanuel Amoquandoh，“SLTF与ZSTF合作启动”，11.10.2015，https://www.ghanaweb.com/GhanaHomePage/regional/Partnership-between-SLTF-and-ZSTF-launched-387037，访问于21.5.2019；'学生贷款信托基金成立10周年'，6.9.2015，https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Students-Loan-Trust-Fund-is-10-years-380126，访问于21.2.2019；https://www.sltf.gov.gh/zakat-sadaqa-partnership-for-disbursement-repayment/，访问于14.5.2019。
+161 Emmanuel Amoquandoh，“SLTF与ZSTF合作启动”，11.10.2015，`https://www.ghanaweb.com/GhanaHomePage/regional/Partnership-between-SLTF-and-ZSTF-launched-387037`，访问于21.5.2019；'学生贷款信托基金成立10周年'，6.9.2015，`https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Students-Loan-Trust-Fund-is-10-years-380126`，访问于21.2.2019；`https://www.sltf.gov.gh/zakat-sadaqa-partnership-for-disbursement-repayment/`，访问于14.5.2019。
 
 162 “2021年活动首席执行官回顾”，Zakat and Sadaqa Trust Fund，2021年年度报告，3。
 
-163 http://ghanazakatfundonline.com/projects.php，访问于26.2.2021。
+163 `http://ghanazakatfundonline.com/projects.php`，访问于26.2.2021。
 
-164 http://ghanazakatfundonline.com，访问于7.11.2017。
+164 `http://ghanazakatfundonline.com`，访问于7.11.2017。
 
 165 “财务活动报表”，Zakat and Sadaqa Trust Fund，2019年年度报告。
 
@@ -5537,13 +5712,20 @@ Zakat and Sadaqa Trust Fund于2018年在其实用和技术培训计划中启动�
 除了四个（五个）项目外，Zakat and Sadaqa Trust Fund于2018年启动了斋月捐赠计划。与加纳许多，如果不是大多数，穆斯林非政府组织类似，斋月捐赠构成了提高组织公众知名度的重要途径。2019年，Zakat and Sadaqa Trust Fund向Akropong盲人学校捐赠了价值近GHS 15,500的各种食品。170 2020年，当全球Covid-19大流行瘫痪加纳和世界其他地区时，其斋月捐赠除其他外，还用于缓解阿克拉贫困穆斯林社区的苦难并支持塔马莱中央监狱的穆斯林囚犯。171 2021年，它在斋月期间推出了“供养穷人”活动，并与卡塔尔慈善机构合作向阿克拉的清真寺提供食品包（图50）。172 2023年，该基金在向土耳其地震受害者捐赠5,000美元时进行了首次国际捐赠。173
 
 166 "2021年活动首席执行官回顾"，Zakat and Sadaqa Trust Fund，2020年年度报告，3。“2021年活动首席执行官回顾”，Zakat and Sadaqa Trust Fund，2021年年度报告，4。
-167 http://ghanazakatfundonline.com，访问于7.11.2017。
+
+167 `http://ghanazakatfundonline.com`，访问于7.11.2017。
+
 168 "财务活动报表"，Zakat and Sadaqa Trust Fund，2019年年度报告。
+
 169 "2021年活动首席执行官回顾"，Zakat and Sadaqa Trust Fund，2020年年度报告，2。“2021年活动首席执行官回顾”，Zakat and Sadaqa Trust Fund，2021年年度报告，3。
+
 170 "财务活动报表"，Zakat and Sadaqa Trust Fund，2019年年度报告。
-171 https://www.linkedin.com/posts/zakat-sadaqa-trust-fund-of-ghana_covid-19-support-to-some-muslim-communities-activity-6662018064097382400-77zw；https://www.linkedin.com/posts/zakat-sadaqa-trust-fund-of-ghana_contribution-made-to-tamale-central-prison-activity-666130138658512288-5-Yg，均访问于12.2.2021。
+
+171 `https://www.linkedin.com/posts/zakat-sadaqa-trust-fund-of-ghana_covid-19-support-to-some-muslim-communities-activity-6662018064097382400-77zw`；`https://www.linkedin.com/posts/zakat-sadaqa-trust-fund-of-ghana_contribution-made-to-tamale-central-prison-activity-666130138658512288-5-Yg`，均访问于12.2.2021。
+
 172 "2021年活动首席执行官回顾"，Zakat and Sadaqa Trust Fund，2021年年度报告，5。
-173 土耳其地震捐赠，13.2.2023，https://www.facebook.com/ZakatandSadaqaFundGhana/，访问于22.8.2023。
+
+173 土耳其地震捐赠，13.2.2023，`https://www.facebook.com/ZakatandSadaqaFundGhana/`，访问于22.8.2023。
 
 #### ZAKAT & SADAQA基金“供养穷人”斋月2021活动
 
@@ -5567,17 +5749,15 @@ Zakat and Sadaqa Trust Fund于2018年在其实用和技术培训计划中启动�
 
 我们相信，通过您的慷慨捐赠，该基金可以在2021年斋月期间在全国范围内产生影响。
 
-Zakat and Sadaqa Fund因此恳请您帮助为加纳的弱势群体提供苏胡尔和开斋。请通过所有网络上的MoMo代码'*789*2#'或以下银行捐款支持“供养穷人”斋月2021活动。
+Zakat and Sadaqa Fund因此恳请您帮助为加纳的弱势群体提供苏胡尔和开斋。请通过所有网络上的MoMo代码'`*789*2#`'或以下银行捐款支持“供养穷人”斋月2021活动。
 
 愿真主赐予你们善报。
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_425_2.png)
 
-银行捐款详情和联系信息：UBA ARENA - LAPAZ BRANCH AC NO. 02413506401510；Stanbic Bank；Absa OBU BRANCH AC NO. 1031314；Ecobank；GCB；Bank of Africa MADINA BRANCH AC NO. 01343350064；Standard Chartered RING ROAD BRANCH；Zenith NORTH INDUSTRIAL AREA；CBG；ADB；Access NEW-TOWN BRANCH；联系电话 NO. 0542 216 231，NO. 0262 824 482，NO. 0573 229 984，CONTACT: 0202748382 0542216231，ZAKAT USSD CODE (*789*2#)
+银行捐款详情和联系信息：UBA ARENA - LAPAZ BRANCH AC NO. 02413506401510；Stanbic Bank；Absa OBU BRANCH AC NO. 1031314；Ecobank；GCB；Bank of Africa MADINA BRANCH AC NO. 01343350064；Standard Chartered RING ROAD BRANCH；Zenith NORTH INDUSTRIAL AREA；CBG；ADB；Access NEW-TOWN BRANCH；联系电话 NO. 0542 216 231，NO. 0262 824 482，NO. 0573 229 984，CONTACT: 0202748382 0542216231，ZAKAT USSD CODE (`*789*2#`)
 
 图50 ZSTF斋月活动2021 作者收藏
-
-
 
 天课和萨达卡信托基金的愿景是成为加纳最可行、最受信赖的穆斯林非政府组织。理论上，这一目标并非不可能实现。支持该倡议的学者强调，天课的征收和分配是法尔德·基法亚，即整个穆斯林社区共同承担的义务。遵循穆斯林为少数群体的国家（如英国或南非）学者的立场，阿里米亚奥·舒阿卜谢赫等人认为，天课和萨达卡信托基金承担着回应穆斯林社区乃至整个社会的需要的角色。174 然而，这一立场遭到其他学者的质疑，他们认为天课和萨达卡信托基金是穆斯林议会团的倡议，未获国家首席伊玛目办公室认可，而另一些人则表示他们不知道加纳存在这样一个组织。175
 
@@ -5590,6 +5770,7 @@ Zakat and Sadaqa Fund因此恳请您帮助为加纳的弱势群体提供苏胡�
 #### 图 12
 
 天课和萨达卡信托基金：天课缴纳，2018–2021年。缩写：C & ADG = 总审计与会计总局穆斯林员工；GAF = 加纳空军穆斯林员工；GPS = 加纳警察局穆斯林员工；JM = 日本汽车穆斯林员工；OP = 议会办公室穆斯林员工；SO = 常设命令（银行）；ZSTFS = 天课和萨达卡信托基金员工
+
 来源：天课和萨达卡信托基金，《年度报告》2019、2020、2021
 
 另一个障碍是沟通以及缴纳天课呼吁的传播。尽管天课和萨达卡信托基金有时会获得一些媒体报道，但穆斯林记者对其活动的定期报道甚至关于天课的出版物仍然缺乏。180 此外，大多数伊玛目和穆斯林布道者在其斋月布道中并未提及天课和萨达卡信托基金。相反，正如伊萨谢赫所声称的，他们更愿意自己收取天课。一个解决方案，他设想的是，当地伊玛目以实物形式接收全部天课，自行保留10%作为征收者的合法份额，将20%送交天课和萨达卡信托基金，该基金更改
@@ -5614,6 +5795,8 @@ GMM 模式在争取加纳穆斯林捐款方面相当成功，能够内部资助 
 
 逊尼派大众（Ahlus-Sunna Wa-Jama'a，ASWAJ）的全国伊玛目哈吉·奥马尔·易卜拉欣·伊玛目于 2009 年发起建立地区天课基金，但过了一段时间才得以实现。本节讨论其中两个地区单位，即库马西（Kumasi）和瓦城（Wa）的单位。这两个例子说明了此类地区倡议所遇到的各种挑战以及克服这些挑战的解决方案。最初，ASWAJ 地区天课基金采用分散结构，ASWAJ 全国总部和全国伊玛目均不监控或监督基金的管理。相反，它们是自主单位，各自由相应的 ASWAJ 地区总部控制。
 
+
+
 阿散蒂地区的 Ahlus-Sunna Wa-Jama'a（ASWAJ）是计划于 2015 年建立地区天课基金的区域单位之一。作为天课基金及其同时设立的瓦克夫基金会（Waqf Foundation）宣传的一部分，ASWAJ 阿散蒂地区创建了一个主页，并公布了地区天课基金的章程。195 该章程设想 ASWAJ 阿散蒂地区天课基金由一个中央天课基金和十个分区天课基金组成。196 分区天课账户中积累的所有资金每季度转入中央天课基金；记入中央天课基金的所有款项均存放在不计息的银行账户中。章程对每年募集的天课基金资产的利用和分配作了详细规定，并允许最多 15% 用于支付基金的征收、分配和管理费用（图 51）。地区天课预算的一半将用作贫困者、赤贫者、孤儿和寡妇的津贴；10% 用作遭受自然灾害而无家可归的穆斯林的津贴；18% 用于教育助学金，资助“在政府设立或认可的学校、学院、大学、理工学院和其他培训机构中就读的贫困但优秀的穆斯林”。而分区天课基金则将其总分配预算的 54% 用于向公立宗教学校（madrasas）和 Deeni Madaaris（宗教学校）的学生提供教育助学金。20% 用于支付未获得政府薪酬的 Deeni Madaaris 支持人员的工资。17% 专门用于教育机构的赠款和助学金。医疗保健分配 5%（即支付住院费等），4% 用于社会福利和康复，服务对象是未获得任何其他天课计划或政府补助的成年穆斯林。197
 
 然而，该项目提前终止，并沉寂了多年。Kamil Muhammad 谢赫解释说，主要且唯一的原因是人们拒绝向该基金缴纳天课。198 另一个问题是基金的集中性质——中央账户本应收缴 80% 的募集资产。然而，地方征收者很少将征收的款项转给中央账户。199 不过，2018 年，ASWAJ 阿散蒂地区领导层决定从尼日利亚索科托聘请一位天课和瓦克夫专家，并规划了基金的重建。讨论的一个结果是两个基金合并，于 2018 年重新启动为 ASWAJ 阿散蒂地区天课、瓦克夫和施舍基金（Zakat, Waqf and Sadaqa Fund）。
@@ -5627,14 +5810,18 @@ GMM 模式在争取加纳穆斯林捐款方面相当成功，能够内部资助 
 199 与 ASWAJ 阿散蒂地区天课、瓦克夫和施舍基金协调员 Ahmad Musa 的访谈，库马西，2019年4月6日。
 
 ## اهل السنة والجماعة
+
 AHLUSSUNA WAL'JAMAA (ASWAJ)
+
 TIJARA MA'ALLAH التجارة مع الله
 
 | 地区 | 区 | 清真寺 | 日期 |
 |---|---|---|---|
+
 | 名称 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 |
 
 更多信息请联系：0241 259 89（WA）
+
 0302226547 - 0243586626 - 0244023542
 
 与旧基金相比，新基金采用分散结构，活动集中在阿散蒂地区的 42 个市和区。200
@@ -5703,7 +5890,7 @@ MUDI主页的2020版本提供了关于MUDI天课之家的更多信息：
 
 220 https://www.facebook.com/pages/Zakat-foundation-of-Ghana，访问于2014年3月12日。该链接在2019年已不再有效。
 
-221 埃德蒙·杰比，“加纳：天课基金会向六所伊斯兰学校捐款”，2004年10月13日，https://allafrica.com/stories/200410130564.html，访问于2019年3月25日；“KATH收到
+221 埃德蒙·杰比，“加纳：天课基金会向六所伊斯兰学校捐款”，2004年10月13日，https://allafrica.com/stories/200410130564.html，访问于2019年3月25日；“KATH receives
 
 安努尔·伊斯兰协会（An-Nur al-Islamiyyah）另一方面，是一个成立于2003年的传教组织。根据其主页，该组织的首要目标是利用信息技术领域的最新进展向人们传播伊斯兰教的信息，并为穆斯林提供技能培训和定向项目。除此之外，它还旨在“为有需要者提供福利支持”。在其项目和计划中，也提到了其“乌玛支持基金”——尽管其主页并未透露该倡议的进一步信息。222
 
@@ -5713,10 +5900,14 @@ MUDI主页的2020版本提供了关于MUDI天课之家的更多信息：
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_441_0.png)
 
-**图 52**  
-萨卡菲亚慈善组织。  
-其2016年启动活动横幅。  
-该组织是萨卡菲亚社会福利部的先驱。  
+**图 52**
+
+萨卡菲亚慈善组织。
+
+其2016年启动活动横幅。
+
+该组织是萨卡菲亚社会福利部的先驱。
+
 *照片：HOLGER WEISS/2018*
 
 据穆罕默德·埃尔-阿利姆·马哈曼称，救济金既以现金形式也以实物形式给予，天课和萨达卡皆然，后者包括在斋月和开斋节期间的衣物、纺织品、凉鞋、鞋子和食品。部分捐赠转交给伊克拉基金会，后者进而利用这些资金照顾孤儿。该基金会的宗旨是帮助孤儿的亲属，并支持被父母/亲属遗弃在库马西萨卡菲亚学校的儿童。该基金会已在库马西、阿克拉和塔马莱接触了约200名孤儿，其中70人已登记。活动在斋月达到高潮，基金会在此期间收到大部分捐赠；2018年，37名孤儿直接受益，40名间接受益。此外，基金会还向居住在加纳北部偏远农村地区的孤儿寄送衣物。[227]
@@ -5727,15 +5918,18 @@ MUDI主页的2020版本提供了关于MUDI天课之家的更多信息：
 
 223 http://annuralislam.com/en/category/news/donations/, accessed 29.10.2017; 25.3.2019; 5.2.2021.
 
-224 天课计算器, http://annuralislam.com, accessed 12.3.2014.
 
-225 例如，An-Nur Announcement SHS scholarship project 2015, posted on Facebook 3.10.2015, https://www.facebook.com/annuralislamgh/posts/10156047575225333, accessed 20.10.2020.
 
-226 Annur Ummah Support Fund Financial Report for 1st Quarter 2017, available at http://annuralislam.com/en/about-us/financial-reports/, accessed 5.2.2021.
+224 天课计算器, `http://annuralislam.com`, accessed 12.3.2014.
 
-地方、社区为基础的倡议的第三个例子是*谢赫·塔夫菲克基金会*（STF），该基金会由谢赫·阿纳斯·塔夫菲克·易卜拉欣·阿尔-巴克里于2017年建立，以纪念其已故父亲谢赫·陶菲克·巴什里。该基金会最初的目标是从当地社区收集*天课*和*萨达卡*，并用其资金照顾孤儿、支付贫困和有需要者的医院账单、减轻失业者的社会负担，并支持医学、法律、药学和石油工程等领域的本科生。[228]
+225 例如，An-Nur Announcement SHS scholarship project 2015, posted on Facebook 3.10.2015, `https://www.facebook.com/annuralislamgh/posts/10156047575225333`, accessed 20.10.2020.
 
-[227] Interview with Mohammed El-Alim Mahaman, HOD (Arabic and Islamic Studies), Al-Faruq College of education in Wenchi, Brong-Ahafo Region, and advisor at Sakafiya, Kumasi 15.9.2018.  
+226 Annur Ummah Support Fund Financial Report for 1st Quarter 2017, available at `http://annuralislam.com/en/about-us/financial-reports/`, accessed 5.2.2021.
+
+地方、社区为基础的倡议的第三个例子是谢赫·塔夫菲克基金会（STF），该基金会由谢赫·阿纳斯·塔夫菲克·易卜拉欣·阿尔-巴克里于2017年建立，以纪念其已故父亲谢赫·陶菲克·巴什里。该基金会最初的目标是从当地社区收集天课和萨达卡，并用其资金照顾孤儿、支付贫困和有需要者的医院账单、减轻失业者的社会负担，并支持医学、法律、药学和石油工程等领域的本科生。[228]
+
+[227] Interview with Mohammed El-Alim Mahaman, HOD (Arabic and Islamic Studies), Al-Faruq College of education in Wenchi, Brong-Ahafo Region, and advisor at Sakafiya, Kumasi 15.9.2018.
+
 [228] Interview with Sheikh Anas Tawfiq Ibrahim al-Bakri, Kumasi 12.12.2017.
 
 谢赫·塔夫菲克基金会从为科威梅·恩克鲁玛科技大学有需要的穆斯林学生提供奖学金项目开始，于2018年启动了一个新建高级中学的新项目。为此目的，该基金会已购买了一块七英亩的土地。该基金会的另一个目标是赋权妇女，尤其是通过支持助产士培训。其在达鲁尔·哈迪斯社区中的筹款方式新颖且富有启发性——其600名成员中有约200人每周捐赠5加纳塞地，该基金会计划引入手机捐赠。未来，每笔捐赠都将转入SIM卡；现金捐赠在提取前会先转入SIM卡。迄今为止，捐赠以萨达卡形式进行。谢赫·阿纳斯解释说，未来也可以以天课形式进行，但他尚未开始与社区讨论这一问题。
@@ -5760,27 +5954,13 @@ MUDI主页的2020版本提供了关于MUDI天课之家的更多信息：
 
 加纳穆斯林学者对建立全国天课基金的可行性存在分歧。据谢赫·奥兰多称，普通穆斯林和许多伊玛目难以理解全国天课基金的好处。富有的企业家及其教士更喜欢传统方式，因为教士会指示天课应给予谁。在他看来，天课的征收和分配制度化需要一个统一且得到认可的委员会，但缺乏共识阻碍了其实现。234 谢赫·阿米努·班巴·阿尔-法拉迪提到了他在埃朱拉社区筹款的令人失望的经历：当地穆斯林反对为其小学和初中支付天课。235
 
-反过来，谢赫·贾马尔·丁·奥马尔·穆罕默德指出，富人不支持建立天课基金的想法，因为这违背了他们的利益。236 谢赫·优素福耶也表达了类似的感叹：“穆斯林不了解天课，捐赠者自行决定天课给予对象。天课
+反过来，谢赫·贾马尔·丁·奥马尔·穆罕默德指出，富人不支持建立天课基金的想法，因为这违背了他们的利益。236 谢赫·优素福耶也表达了类似的感叹：“穆斯林不了解天课，捐赠者自行决定天课给予对象。天课应被给予以改变一个人的生活”，但正如他批判性地指出的那样，在加纳并非如此。
 
-232 https://www.zakat.org; https://nzf.org.uk/pay-zakat/; https://nzf.org.uk/apply-for-zakat/, accessed 8.2.2021.
+Sheikh Yusufiyya 指出 天课 目前支出方式所面临的两大主要挑战。第一个涉及穆斯林应缴纳的年度 尼萨卜 缺乏认知。据他说，例如穆斯林运输业主并不知道年末其资产和机动车辆的价值，因而未缴纳 天课。第二个挑战是加纳穆斯林社区内部的分裂。Sheikh Yusufiyya 本人主张设立一个全国 天课 基金，这一想法他在库马西的布道和与 乌里玛 的讨论中不断提出。在他看来，全国 天课 基金要求各 subgroups 和教派之间相互容忍，反之亦然——团结与共识是设立全国 天课 基金的关键条件。这反过来应监督 天课 的征收与分配。Sheikh Yusufiyya 的设想是一个全国性、透明且公开的机构，任何有需要的穆斯林都可以申请，该机构列出捐赠者并公布账目。²³⁷
 
-233 Prof. Sheikh Osman Bari, A Comprehensive History of Muslims & Religion in Ghana (Accra: Dezine Focus, Printing & Publications Co, Second edition, 2014), 407.
+库马西伊玛目与乌里玛理事会反过来对阿散蒂地区首席伊玛目呼吁设立地区 天课 基金的提议进行了评论。²³⁸然而，尽管该问题已在议程上讨论数年，但由于 乌里玛 尚未就此达成共识，未能做出积极决定。²³⁹Sheikh Abdul Wadud Harun 对设立地区 天课 基金的必要性也持类似立场。他的观点强烈反映了加纳提贾尼耶穆斯林运动领导层的立场，即通过 天课 在地区层面为教育和教育基础设施动员资源。尽管如此，他同样指出，尽管提贾尼学者在多年的布道中，甚至数十年里一直在倡导此事，但成员们并未积极响应其提议。²⁴⁰
 
-234 Interview with Sheikh Osman Bawa Orlando, Kumasi, 12.12.2017.
-
-235 Interview with Sheikh Aminu Bamba, Ejura, 4.4.2019.
-
-236 Interview with Sheikh Jamal Deen Omar Muhammad, Director of Aris Social Center and Imam at Tamale Central Mosque, Tamale 10.4.2019.
-
-
-
-“应被给予以改变一个人的生活”，但正如他批判性地指出的那样，在加纳并非如此。
-
-Sheikh Yusufiyya 指出 *天课* 目前支出方式所面临的两大主要挑战。第一个涉及穆斯林应缴纳的年度 *尼萨卜* 缺乏认知。据他说，例如穆斯林运输业主并不知道年末其资产和机动车辆的价值，因而未缴纳 *天课*。第二个挑战是加纳穆斯林社区内部的分裂。Sheikh Yusufiyya 本人主张设立一个全国 *天课* 基金，这一想法他在库马西的布道和与 *乌里玛* 的讨论中不断提出。在他看来，全国 *天课* 基金要求各 subgroups 和教派之间相互容忍，反之亦然——团结与共识是设立全国 *天课* 基金的关键条件。这反过来应监督 *天课* 的征收与分配。Sheikh Yusufiyya 的设想是一个全国性、透明且公开的机构，任何有需要的穆斯林都可以申请，该机构列出捐赠者并公布账目。²³⁷
-
-库马西伊玛目与乌里玛理事会反过来对阿散蒂地区首席伊玛目呼吁设立地区 *天课* 基金的提议进行了评论。²³⁸然而，尽管该问题已在议程上讨论数年，但由于 *乌里玛* 尚未就此达成共识，未能做出积极决定。²³⁹Sheikh Abdul Wadud Harun 对设立地区 *天课* 基金的必要性也持类似立场。他的观点强烈反映了加纳提贾尼耶穆斯林运动领导层的立场，即通过 *天课* 在地区层面为教育和教育基础设施动员资源。尽管如此，他同样指出，尽管提贾尼学者在多年的布道中，甚至数十年里一直在倡导此事，但成员们并未积极响应其提议。²⁴⁰
-
-Abdul-Wahhab Abubakar 是加纳穆斯林学院（2017 年起：*加纳穆斯林专业人士学院*）的一员，他在 2015 年的斋月讲座中呼吁设立 *天课* 基金。²⁴¹据他说，GMA 计划在 2015 年启动其倡议，但从未动员其成员。他进一步强调了设立全国天课基金的制约因素。他指出，此类基金必须置于国家首席伊玛目办公室（ONCI）之下。然而，并非所有加纳穆斯林社区都一致承认 ONCI 的地位，一些团体可能会质疑全国性机构的适宜性。因此在他看来，解决和组织穆斯林社区消除贫困的最有效工具是地方或地区天课基金。242
+Abdul-Wahhab Abubakar 是加纳穆斯林学院（2017 年起：加纳穆斯林专业人士学院）的一员，他在 2015 年的斋月讲座中呼吁设立 天课 基金。²⁴¹据他说，GMA 计划在 2015 年启动其倡议，但从未动员其成员。他进一步强调了设立全国天课基金的制约因素。他指出，此类基金必须置于国家首席伊玛目办公室（ONCI）之下。然而，并非所有加纳穆斯林社区都一致承认 ONCI 的地位，一些团体可能会质疑全国性机构的适宜性。因此在他看来，解决和组织穆斯林社区消除贫困的最有效工具是地方或地区天课基金。242
 
 我在上西区采访的学者对设立全国天课基金的想法持冷淡态度。哈米勒及周边村庄的地方伊玛目认为全国基金不会成功，他们声称“[…] 当地人不信任自上而下引入的外来观念。”因此他们支持设立地方基金的想法。243
 
@@ -5790,7 +5970,35 @@ Sheikh Kamil Muhammad，ASWAJ 阿散蒂地区副首席伊玛目，对引入全�
 
 其他学者，如 Sheikh Aminu Bamba al-Faradhi 或 Haji Mumuni Sulemana，主张设立全国天课基金。249Sheikh Abdul-Mumin Abdur-Rahman 在库马西提出了类似的呼吁。他在 2014 年发起 Takaful 共同基金，以支持其教育综合体中的残疾和贫困学生（图 53）。该项目在几年后被搁置，因未获得当地社区的多少支持。当时，他明确区分了天课与用于教育目的的捐赠。然而，当地社区对通过投资儿童教育来减贫的冷淡态度使他改变了想法，他现在主张使用天课提供奖学金并支持教育部门。然而，他认为处理天课征收和分配的最佳方式是在国家层面，因此主张设立全国天课基金。250
 
-阿散蒂地区的 ASWAJ 地区伊玛目 Sheikh Ismail Saeed Adam 也推动设立全国天课基金。在他看来，全国基金可以弥合加纳各（逊尼派）穆斯林教派之间的差异，为穆斯林之间的相互尊重与宽容铺平道路。他设想该基金是一个向所有穆斯林开放的机构；其核心作用是评估申请并公布捐赠者名单以确保透明度。然而，他同样承认并非所有学者都认同他的愿景。251Sheikh Osman Bawa Orlando 同样讨论了全国基金的积极方面以及学者们对该问题的缺乏共识。然而，
+阿散蒂地区的 ASWAJ 地区伊玛目 Sheikh Ismail Saeed Adam 也推动设立全国天课基金。在他看来，全国基金可以弥合加纳各（逊尼派）穆斯林教派之间的差异，为穆斯林之间的相互尊重与宽容铺平道路。他设想该基金是一个向所有穆斯林开放的机构；其核心作用是评估申请并公布捐赠者名单以确保透明度。然而，他同样承认并非所有学者都认同他的愿景。251Sheikh Osman Bawa Orlando 同样讨论了全国基金的积极方面以及学者们对该问题的缺乏共识。然而，在他看来，设立全国天课基金的最大障碍是普通穆斯林的怀疑甚至负面态度，252
+
+上述对天课基金各种愿景的概述表明，讨论已陷入僵局。尽管曾多次尝试设立国家或地区机构，但单一全国天课基金的愿景与二十年前一样遥远。然而，新一代学者提出了有趣的妥协空间，以结合该问题上的各种早期方法。其中之一是塔马利的 Sheikh Issah 的想法，他强烈建议将富人纳入讨论。“召集社会上的富人并与他们组织研讨会”，将他们纳入规划过程并使他们成为项目的利益相关者。他进一步建议从地区层面开始，即设立负责征收天课的地区天课基金。地区天课基金将从每个地区基金中获得累计金额的四分之一，而全国天课基金反过来将获得地区基金。所有三个层级的指导方针和章程都需制定，且所有层级都应为捐助者和受益人进行登记。^253^
+
+Sheikh Amin Bamba 也阐述了类似的想法。在他的设想中，国家 天课 基金是一个分散的机构，在地区和区一级运作。制度上，它应是一个基金，由国家层面指导和协调。^254^ 他们的设想反过来可以与 Sheikh Abdul Majeed 和 Sheikh Abdul Fatah 的提案相结合，即在社区层面动员富人并组建一个强大的组织，用于当地动员 天课 和 萨达卡。^255^
+
+2020 年 5 月初，穆斯林非政府组织 Make Zongo Better Again 在 Facebook 上向其追随者提出了关于设立国家 天课 征收和分配机构的类似问题。26 条评论中的大多数对该想法持积极态度，似乎并不认为 Zakat and Sadaqa Trust Fund 符合国家机构的资格。所有评论都强调透明度和问责制是此类机构的前提条件。一些人建议首先从基层开始，并在每个穆斯林社区建立一个 bait al-mal，其他人则更倾向于分散模式，即在区一级登记有需要的人，每个区分支机构将信息发送给中央机构。天课 将由区分支机构征收并送交中央机构；中央机构反过来将根据登记的有需要的人数，按比例向每个区分配 天课 的份额。其他人则拒绝国家基金的想法，并质疑将资金转移到国家机构的想法，因为人们知道邻里中谁是贫困的。他们的立场类似于对 天课 的传统做法，即由施予者直接向受助者支付，没有任何中介或中介机构。有趣的是，这一立场收到了 Make Zongo Better Again 管理员（可能是 Malam Stephen Asiedu Issah）的批评性评论：如果 天课 留给个人，他们就会制定规则。因此，最好有一个值得信赖的穆斯林权威来监督征收和分配工作，尤其因为这可以为付款人和受益人提供更多匿名性。^256^
+
+有趣的是，关于匿名性的最后一条评论为关于施舍给予和接受的观念变化的更广泛讨论打开了空间。迄今为止，传统的施舍，无论是 天课 还是 开斋天课，同时是半私人和半公开的。富人会在周五祈祷后在清真寺外分发施舍。每个人都可以看到施予者和受助者，但没有人能看到所给予的金额。一个 天课 基金引入了施舍的系统性方法。天课 成为一个社会福利机构。
+
+Hajia Safia Salifu 采用了不同的做法，使用她的匿名收集箱。自 2021 年起，带有文字：“Zakat Sadaqa Orphans Disabled and Needy,” 一个邮政信箱地址和两个电话号码的绿色收集箱出现在阿克拉的战略位置，如 Kanda 的新国家清真寺和 New Fadama 的国家首席伊玛目住所（图 54）。每周一次，她打开这些箱子，并利用匿名收集的资金为孤儿、病人和寡妇提供资助。与她声称是为了其狭隘利益而工作的非政府组织不同，她更喜欢以她在与 Yunus Dumbe 的一次访谈中所说的“半制度化”方式收集和分发 天课 和 萨达卡。<sup>257</sup>
+
+#### 4.2 没有基金吗？
+
+在加纳支付 天课 的穆斯林比例难以评估。全国性调查缺乏，大多数研究反映的是伊玛目和学者的立场，而非当地社区成员的立场。穆斯林企业家和慈善家在访谈中宣布他们定期分发施舍，而 Zakat and Sadaqa Trust Fund 列出了穆斯林议会议员、部长和国家雇员作为每月支付 天课 的人。然而，正式部门雇员在年度或月度基础上支付 天课 的程度尚不清楚。同样不清楚的是非正式部门中支付 天课 的人数，尽管他们中的大多数可能声称其年收入远低于 nisab 或最低财富水平。根据我与他们交谈时伊玛目们一致的答复，从事非正式部门的大多数穆斯林更愿意将自己视为 天课 的潜在受助者而非施予者。可以说，他们支付 天课 的意愿很低，如果他们分发施舍，也是以传统的个人对个人方式进行的，而不是交给制度化的收集者，如非政府组织或当地 天课 基金。这种立场或许反映在穆斯林学生在对公立学校慈善反应的调查中观察到的遵守支付 天课 的低程度。<sup>258</sup>
+
+<sup>257</sup> 与 Hajia Safia Salifu 的访谈由 Dr Yunus Dumbe 进行，阿克拉，2022 年 11 月 29 日。作者于 2022 年 12 月 4 日收到访谈书面记录。
+
+<sup>258</sup> Richardson Addai-Mununkum，“Adding and Dividing by Religion: The Not-So-Hidden Curriculum of Mission-Public Schools in Ghana”，*Religion & Education* 44, no. 2 (2017): 235。文章中关于穆斯林学校的资料极其薄弱，因为它仅包括对一所学校 Akwei Allah Islamic School 的观察。
+
+232 `https://www.zakat.org`; `https://nzf.org.uk/pay-zakat/`; `https://nzf.org.uk/apply-for-zakat/`, accessed 8.2.2021.
+
+233 Prof. Sheikh Osman Bari, A Comprehensive History of Muslims & Religion in Ghana (Accra: Dezine Focus, Printing & Publications Co, Second edition, 2014), 407.
+
+234 Interview with Sheikh Osman Bawa Orlando, Kumasi, 12.12.2017.
+
+235 Interview with Sheikh Aminu Bamba, Ejura, 4.4.2019.
+
+236 Interview with Sheikh Jamal Deen Omar Muhammad, Director of Aris Social Center and Imam at Tamale Central Mosque, Tamale 10.4.2019.
 
 248 与 Sheikh Kamil Muhammad 访谈，ASWAJ 阿散蒂地区副首席伊玛目，库马西 2017 年 12 月 10 日。
 
@@ -5803,34 +6011,16 @@ Sheikh Kamil Muhammad，ASWAJ 阿散蒂地区副首席伊玛目，对引入全�
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_447_0.png)
 
 图 53 Takaful 共同基金。墙上海报
+
 照片：HOLGER WEISS/2017
-
-在他看来，设立全国天课基金的最大障碍是普通穆斯林的怀疑甚至负面态度，252
-
-上述对天课基金各种愿景的概述表明，讨论已陷入僵局。尽管曾多次尝试设立国家或地区机构，但单一全国天课基金的愿景与二十年前一样遥远。然而，新一代学者提出了有趣的妥协空间，以结合该问题上的各种早期方法。其中之一是塔马利的 Sheikh Issah 的想法，他强烈建议将富人纳入讨论。“召集社会上的富人并与他们组织研讨会”，将他们纳入规划过程并使他们成为项目的利益相关者。他进一步建议从地区层面开始，即设立负责征收天课的地区天课基金。地区天课基金将从每个地区基金中获得累计金额的四分之一，而全国天课基金反过来将获得
-
-地区基金。所有三个层级的指导方针和章程都需制定，且所有层级都应为捐助者和受益人进行登记。^253^
-
-Sheikh Amin Bamba 也阐述了类似的想法。在他的设想中，国家 *天课* 基金是一个分散的机构，在地区和区一级运作。制度上，它应是一个基金，由国家层面指导和协调。^254^ 他们的设想反过来可以与 Sheikh Abdul Majeed 和 Sheikh Abdul Fatah 的提案相结合，即在社区层面动员富人并组建一个强大的组织，用于当地动员 *天课* 和 *萨达卡*。^255^
-
-2020 年 5 月初，穆斯林非政府组织 *Make Zongo Better Again* 在 Facebook 上向其追随者提出了关于设立国家 *天课* 征收和分配机构的类似问题。26 条评论中的大多数对该想法持积极态度，似乎并不认为 Zakat and Sadaqa Trust Fund 符合国家机构的资格。所有评论都强调透明度和问责制是此类机构的前提条件。一些人建议首先从基层开始，并在每个穆斯林社区建立一个 *bait al-mal*，其他人则更倾向于分散模式，即在区一级登记有需要的人，每个区分支机构将信息发送给中央机构。*天课* 将由区分支机构征收并送交中央机构；中央机构反过来将根据登记的有需要的人数，按比例向每个区分配 *天课* 的份额。其他人则拒绝国家基金的想法，并质疑将资金转移到国家机构的想法，因为人们知道邻里中谁是贫困的。他们的立场类似于对 *天课* 的传统做法，即由施予者直接向受助者支付，没有任何中介或中介机构。有趣的是，这一立场收到了 Make Zongo Better Again 管理员（可能是 Malam Stephen Asiedu Issah）的批评性评论：如果 *天课* 留给个人，他们就会制定规则。因此，最好有一个值得信赖的穆斯林权威来监督征收和分配工作，尤其因为这可以为付款人和受益人提供更多匿名性。^256^
-
-有趣的是，关于匿名性的最后一条评论为关于施舍给予和接受的观念变化的更广泛讨论打开了空间。迄今为止，传统的施舍，无论是 *天课* 还是 *开斋天课*，同时是半私人和半公开的。富人会在周五祈祷后在清真寺外分发施舍。每个人都可以看到施予者和受助者，但没有人能看到所给予的金额。一个 *天课* 基金引入了施舍的系统性方法。*天课* 成为一个社会福利机构。
-
-Hajia Safia Salifu 采用了不同的做法，使用她的匿名收集箱。自 2021 年起，带有文字：“Zakat Sadaqa Orphans Disabled and Needy,” 一个邮政信箱地址和两个电话号码的绿色收集箱出现在阿克拉的战略位置，如 Kanda 的新国家清真寺和 New Fadama 的国家首席伊玛目住所（图 54）。每周一次，她打开这些箱子，并利用匿名收集的资金为孤儿、病人和寡妇提供资助。与她声称是为了其狭隘利益而工作的非政府组织不同，她更喜欢以她在与 Yunus Dumbe 的一次访谈中所说的“半制度化”方式收集和分发 *天课* 和 *萨达卡*。<sup>257</sup>
-
-#### 4.2 *没有基金吗？*
-
-在加纳支付 *天课* 的穆斯林比例难以评估。全国性调查缺乏，大多数研究反映的是伊玛目和学者的立场，而非当地社区成员的立场。穆斯林企业家和慈善家在访谈中宣布他们定期分发施舍，而 Zakat and Sadaqa Trust Fund 列出了穆斯林议会议员、部长和国家雇员作为每月支付 *天课* 的人。然而，正式部门雇员在年度或月度基础上支付 *天课* 的程度尚不清楚。同样不清楚的是非正式部门中支付 *天课* 的人数，尽管他们中的大多数可能声称其年收入远低于 *nisab* 或最低财富水平。根据我与他们交谈时伊玛目们一致的答复，从事非正式部门的大多数穆斯林更愿意将自己视为 *天课* 的潜在受助者而非施予者。可以说，他们支付 *天课* 的意愿很低，如果他们分发施舍，也是以传统的个人对个人方式进行的，而不是交给制度化的收集者，如非政府组织或当地 *天课* 基金。这种立场或许反映在穆斯林学生在对公立学校慈善反应的调查中观察到的遵守支付 *天课* 的低程度。<sup>258</sup>
-
-<sup>257</sup> 与 Hajia Safia Salifu 的访谈由 Dr Yunus Dumbe 进行，阿克拉，2022 年 11 月 29 日。作者于 2022 年 12 月 4 日收到访谈书面记录。
-
-<sup>258</sup> Richardson Addai-Mununkum，“Adding and Dividing by Religion: The Not-So-Hidden Curriculum of Mission-Public Schools in Ghana”，*Religion & Education* 44, no. 2 (2017): 235。文章中关于穆斯林学校的资料极其薄弱，因为它仅包括对一所学校 Akwei Allah Islamic School 的观察。
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_450_0.png)
 
-**FIGURE 54**  *天课和萨达卡* 收集箱位于阿克拉 Mamobi 的人行道上  
+**FIGURE 54** 天课和萨达卡 收集箱位于阿克拉 Mamobi 的人行道上
+
 **照片：HOLGER WEISS/2022**
+
+
 
 关于在加纳制度化征收和分配天课的各种尝试在社交媒体上引发了混合评论。一些穆斯林对这些努力赞不绝口；另一些人则批评它们滥用伊斯兰。虽然像 GhanaWeb 这样的在线平台上的负面评论并不具有代表性，但它们仍然反映了一些关于在非穆斯林世俗国家如何征收天课的批评——以及误解。核心问题是谁有权征收和分配。虽然穆斯林学者通常赞成在地方、地区或国家层面制度化天课，但对这些举措的负面在线评论以及我采访的穆斯林学者的回答表明，“普通”穆斯林并不赞成。相反，似乎传统的直接将自己的天课给予穷人和有需要者的方式更受欢迎。
 
@@ -5852,87 +6042,9 @@ Alhaji Nurideen Salih（已退休）在上西区的IEU地区经理，代表了�
 
 ### 在加纳引入伊斯兰社会金融：前景与挑战
 
-穆斯林非政府组织（NGOs）已成为当代加纳人道主义救助的重要提供者。许多组织参与了各种基础设施项目，包括全国范围内广泛的教育、健康和供水项目。尽管如此，任何非政府组织面临的主要挑战都是在较长时期内获得可持续资金，尤其是针对教育和健康项目。值得注意的是，穆斯林非政府组织和民间社会组织（CSOs）对成员的自我赋权至关重要，因为它们动员并[content]
-加纳福利制度：“天课不是社会主义制度，而是通过分配财富促进增长的社会制度[...]。”261
-
-Alhaji Nurideen Salih（已退休）在上西区的IEU地区经理，代表了那些在任何层面对加纳天课制度化持批评态度的学者和活动人士。在他看来，与任何天课基金相关最大的问题是资金（潜在）的挪用。到目前为止在加纳建立的任何基金和倡议都不缺乏透明度和问责制。因此，Alhaji Nurideen Salih建议在阐述穆斯林社区社会经济赋权时搁置天课，而转而关注infaq，即不求任何回报而为取悦真主的花费。他强调，infaq没有规则也没有限制，任何人可以在任何时候捐赠任何数额。262
-
-261 https://www.ghanaweb.com/GhanaHomePage/features/artikel.php?ID=181957&comment=5731737#com, 访问于 21.5.2019.
-
-262 对 Haji Nurideen Salih（已退休）IEU 地区经理的访谈，2019年12月5日，Wa。
-
-### 在加纳引入伊斯兰社会金融：前景与挑战
-
-穆斯林非政府组织（NGOs）已成为当代加纳人道主义救助的重要提供者。许多组织参与了各种基础设施项目，包括全国范围内广泛的教育、健康和供水项目。尽管如此，任何非政府组织面临的主要挑战都是在较长时期内获得可持续资金，尤其是针对教育和健康项目。值得注意的是，穆斯林非政府组织和民间社会组织（CSOs）对成员的自我赋权至关重要，因为它们尽管能力有限，仍动员和The output keeps truncating. Maybe the system has limit. Could be the content is too long for single response. Might need to split? The instruction says output should be in [content]...[/content]. Could be very long. Maybe we can provide full translation but it's huge ~ 2000 words. Might be okay.
-
-Alternative: maybe the assistant is hitting token limit. Let's try to produce concise but complete translation. Might need to ensure all lines present.
-
-Let's try again with full text but maybe shorter sentences.
-
-I'll produce full translation in one block.
-
-Given constraints, I'll attempt to output complete translation.
-
-Let's produce final answer with full content.
-
-[content]
-加纳福利制度：“天课不是社会主义制度，而是通过分配财富促进增长的社会制度[...]。”261
-
-Alhaji Nurideen Salih（已退休）在上西区的IEU地区经理，代表了那些在任何层面对加纳天课制度化持批评态度的学者和活动人士。在他看来，与任何天课基金相关最大的问题是资金（潜在）的挪用。到目前为止在加纳建立的任何基金和倡议都不缺乏透明度和问责制。因此，Alhaji Nurideen Salih建议在阐述穆斯林社区社会经济赋权时搁置天课，而转而关注infaq，即不求任何回报而为取悦真主的花费。他强调，infaq没有规则也没有限制，任何人可以在任何时候捐赠任何数额。262
-
-261 https://www.ghanaweb.com/GhanaHomePage/features/artikel.php?ID=181957&comment=5731737#com, 访问于 21.5.2019.
-
-262 对 Haji Nurideen Salih（已退休）IEU 地区经理的访谈，2019年12月5日，Wa。
-
-### 在加纳引入伊斯兰社会金融：前景与挑战
-
-穆斯林非政府组织（NGOs）已成为当代加纳人道主义救助的重要提供者。许多组织参与了各种基础设施项目，包括全国范围内广泛的教育、健康和供水项目。尽管如此，任何非政府组织面临的主要挑战都是在较长时期内获得可持续资金，尤其是针对教育和健康项目。值得注意的是，穆斯林非政府组织和民间社会组织（CSOs）对成员的自我赋权至关重要，因为它们尽管能力有限，仍动员和[content]
-加纳福利制度：“天课不是社会主义制度，而是通过分配财富促进增长的社会制度[...]。”261
-
-Alhaji Nurideen Salih（已退休）上西区IEU地区经理，代表了在任何层面对加纳天课制度化持批评态度的学者和活动人士。在他看来，与任何天课基金相关最大的问题是资金（潜在）的挪用。到目前为止在加纳建立的任何基金和倡议都不缺乏透明度和问责制。因此Alhaji Nurideen Salih建议在阐述穆斯林社区社会经济赋权时搁置天课，而转而关注infaq，即不求回报而为取悦真主的花费。他强调infaq没有规则也没有限制，任何人可以在任何时候捐赠任何数额。262
-
-261 https://www.ghanaweb.com/GhanaHomePage/features/artikel.php?ID=181957&comment=5731737#com, 访问于 21.5.2019.
-
-262 对 Haji Nurideen Salih（已退休）IEU 地区经理的访谈，2019年12月5日，Wa。
-
-### 在加纳引入伊斯兰社会金融：前景与挑战
-
-穆斯林非政府组织已成为当代加纳人道主义救助的重要提供者。许多组织参与各种基础设施项目，包括全国范围内的教育、健康和供水项目。尽管如此，任何非政府组织面临的主要挑战是在较长时期内获得可持续资金，尤其是教育和健康项目。穆斯林非政府组织和民间社会组织对成员自我赋权至关重要，它们尽管能力有限，仍动员成员和志愿者推动提升加纳穆斯林社区的结构性变革。毋庸置疑，为加纳公民提供社会福利和促进经济赋权应是加纳政府的核心义务。
-
-建立Zongo发展基金是政府在振兴Zongo社区方面进行结构性干预的重要里程碑，尽管其影响可能局限于城市地区。¹一些穆斯林学者和专家称赞该倡议是解决边缘化（穆斯林）城市社区的正确方向，并呼吁穆斯林非政府组织寻求与政府机构合作的途径。²另一些人则对Zongo发展基金在微观层面促进赋权或解决非正规部门从业者特殊需求的能力表示担忧，认为引入伊斯兰金融工具最能作为对抗边缘化的解药。³少数人甚至批评Zongo发展基金和穆斯林非政府组织的努力忽视了加纳人口中最贫困的部分——五大北部地区农村的小农户，其中大多数是穆斯林。他们进一步认为伊斯兰社会金融计划是穆斯林边缘群体社会经济发展和减贫的关键。⁴
-
-上述讨论反映了关于在撒哈拉以南非洲、⁵包括加纳⁶引入伊斯兰社会金融工具的愿望和可行性，以及作为减贫和社会发展工具的伊斯兰工具的持续学术辩论。⁷伊斯兰金融服务，如各种风险分担和成本加成融资合作伙伴关系以及伊斯兰债券（sukuk）和伊斯兰合作保险（takaful），⁸预计已从2003年的2000亿美元增长到2021年的2.7万亿美元，而其全球资产预计到2020年将超过3万亿美元。伊斯兰社会金融工具与伊斯兰微型金融机构和众筹一起，本质上被视为资助可持续发展目标的关键工具。9
-
-近期对传统与伊斯兰微型金融的比较表明，伊斯兰微型金融市场现在比以往获得了更多信誉。然而，微型金融及其社会影响的局限性低于之前的预测，传统或伊斯兰微型金融都无法使大多数低收入人口的经济状况变得更好。10
-
-关于在加纳引入伊斯兰社会金融工具，主要以伊斯兰银行补充传统银行业为形式的公共辩论在2010年代获得势头。11该辩论与穆斯林行动主义的扩张以及对加纳宏观和微观经济发展的公共辩论参与增加相关。一些穆斯林活动人士将伊斯兰风险分担/无息金融工具作为多元化加纳经济的工具。12其他人呼吁
-
-1 总统Nana Akufo-Addo于2017年与内城和Zongo部一起建立了Zongo发展基金（ZoDF）。该基金获得了超过5000万美元的种子资金，用于支持教育和培训、卫生和环境卫生、地方企业和文化中心等关键基础设施，并改善Zongo社区的安全。另见 https://zodf.gov.gh，访问于 28.5.2024。2021年政府改组的一部分，内城和Zongo部被撤销，ZoDF被移交至直接隶属于总统办公室的Zongo和内城发展秘书处。关于该部发展议程的分析，见Colleen Brady和Michael Hooper，“重新定义与社会空间边缘化人口的接触：从加纳内城和Zongo发展部学习”，Urbanisation 4, no. 1 (2019): 9–28。
-
-2 Fusheini Hudu，“穆斯林非政府组织在维持Zongo发展议程中的作用”，The Baraka，第三版（2018年2月）：42–47。
-
-3 Abdul-Hamid和Amadu，“伊斯兰教与加纳可持续发展议程”，132, 142。
-
-4 Ibrahim和Billah，“通过农业部门的伊斯兰社会金融减贫”，137–154。关于在尼日利亚北部引入伊斯兰金融机构以赋能农村小农户的类似论点，见Ibrahim Mohammed Lawal，“现金天课在实现尼日利亚机械化农业中的作用”，Journal of Islamic Banking and Finance 36, no. 2 (2019): 68–79。
-
-5 Issa Faye, Thouraya Triki, and Thierry Kangoye, “伊斯兰金融承诺：来自非洲的证据”，Review of Development Finance 3, no. 3 (2013): 136–151；A. Maghbul和R. Hassan，“喀土穆州伊斯兰银行下的小额信贷供给”，Southern African Business Review 21 (2017): 409–410。
-
-6 A.O. Abudu，《面向普通人的伊斯兰经济学》（阿克拉：Dyno-Media, 1996）。
-
-7 另见Zamir Iqbal和Abbas Mirakhor编，《经济发展与伊斯兰金融》（华盛顿特区：世界银行，2013），可查阅于 https://openknowledge.worldbank.org/bitstream/handle/10986/15787/798910PUB0EconoBox377374BooPUBLIC0.pdf?sequence=1&isAllowed=y；Muhamed Zulkhibri和Abdul Ghafar Ismail编，《金融包容与减贫：来自伊斯兰机构和工具的视角》（纽约：Palgrave Macmillan, 2017）。
-
-8 伊斯兰金融基于禁止利息（riba）、避免赌博（maisir）和不确定性（gharar）以及利润和亏损分享的概念。此外，伊斯兰金融规定金融交易必须直接或间接与真实经济交易挂钩。其主要工具是各种合作伙伴融资形式，包括mudaraba（信托融资或部分股权合作伙伴关系中的资本提供）、murabaha（成本加成/加价）、musharaka（利润和亏损分享；完全股权合作伙伴关系），以及ijara（租赁融资）、salam/bai salam（预售购买）、istisna（制造合同）和qard hassan（仁慈贷款）。另见Joseph Mbawuni和Simon Nimako，“在加纳引入伊斯兰银行和金融：机遇与挑战”，Journal of Islamic Banking and Finance 4, no. 1 (2016): 61；Abdul-Hamid和Amadu，“伊斯兰教与加纳可持续发展议程：”138–140。
-
-9 联合国开发计划署、伊斯坦布尔私营部门发展国际中心和伊斯兰研究与培训研究所，《为影响而行：融合伊斯兰金融与投资以实现全球目标》，2017年3月，http://www.irti.org/English/News/Documents/IRTI_UN_Islamic_Financial_Report.pdf，访问于 6.8.2019。
-
-10 Syedah Ahmad, Robert Lensink, and Annika Mueller，“微型金融的双重底线：传统与伊斯兰微型金融的全球比较”，World Development 136, no. 5 (2020)，在线 25.8.2020，https://doi.org/10.1016/j.worlddev.2020.105130。
-
-11 Mbawuni和Nimako，“在加纳引入伊斯兰银行和金融”，Joseph Mbawuni和Simon Nimako，“加纳伊斯兰银行采用的决定因素”，International Journal of Islamic and Middle Eastern Finance and Management 10, no. 2 (2017): 264–288；Joseph Mbawuni和Simon Gyasi Niamko，“穆斯林和非穆斯林消费者对在加纳引入伊斯兰银行的看法”，Journal of Islamic Accounting and Business Research 9, no. 3 (2018): 353–377；Su’un, Bayu Taufiq Posumah, Michael Karikari Appiah和Nurul Hilmiyah，“不同宗教群体在加纳采用伊斯兰银行的决定因素：全景视角”，Journal of International Studies 11, no. 4 (2018): 138–154；Abdul-Hamid和Amadu，“伊斯兰教与加纳可持续发展议程”。
-
-12 Baba Yunus Muhammad，“加纳为何必须拥抱伊斯兰金融”，Africa Islamic Finance Report 1, no. 2 (2016年4月–6月): 25–27；Mustapha Sarbeng，“伊斯兰金融与加纳粮食安全”，20.3.2017，https://www.graphic.com.gh/features/opinion/islamic-finance-and-food-security-in-ghana.html，访问于 16.2.2022；Alhassan Yusuf Trawule，“伊斯兰金融：原则和产品类型”，26.5.2020，https://www.graphic.com/gh/business/business-news/islamic-finance-principles-and-types-of-products.html，访问于 16.2.2022；Yusif Geoffrey，“伊斯兰金融是促进公平经济
+穆斯林非政府组织（NGOs）已成为当代加纳人道主义救助的重要提供者。许多组织参与了各种基础设施项目，包括全国范围内广泛的教育、健康和供水项目。尽管如此，任何非政府组织面临的主要挑战都是在较长时期内获得可持续资金，尤其是针对教育和健康项目。值得注意的是，穆斯林非政府组织和民间社会组织（CSOs）对成员的自我赋权至关重要，因为它们尽管能力有限，仍动员和
 
 
-加纳将加入伊斯兰开发银行，并推动引入伊斯兰银行业，以此作为应对后新冠疫情债务危机的解决方案。¹³
 
 尽管存在公开辩论，但伊斯兰银行业尚未在加纳引入。然而，公众多少未曾注意到的是，引入伊斯兰社会金融其他工具的尝试，例如伊斯兰小额信贷、伊斯兰投资和瓦克夫（waqf）或虔诚/宗教捐赠（复数：awqaf）。尽管这些尝试（迄今）尚未产生任何学术成果，但它们反映了当代一些穆斯林经济学家的呼吁，即从天课（zakat）转向瓦克夫和伊斯兰小额信贷，作为有效的扶贫工具。¹⁴ 认识到天课的僵化性和局限性，他们提出将瓦克夫作为一种伊斯兰开放式集合资金池系统，用于实现结构性变革并达成联合国可持续发展目标。¹⁵
 
@@ -5970,9 +6082,6 @@ Alhaji Nurideen Salih（已退休）上西区IEU地区经理，代表了在任�
 
 ²³ 信息检索自巴巴·尤努斯·穆罕默德在LinkedIn上的个人资料，https://gh.linkedin.com/in/babayunus，访问日期：2022年12月19日。
 
-
-
-
 *全球伊斯兰银行、保险和咨询研究所*（GIIBIC）成立于 2014 年，是加纳穆斯林企业发展经理 Abdul-Moumin Saeed 的倡议。<sup>24</sup> 他在 2013 年返回加纳，此前曾在叙利亚糖果公司 Katakit 和苏丹 DAL 集团从事国际管理工作。他已在伦敦的伊斯兰银行与保险学院（IIBI）完成了伊斯兰银行与金融方面的文凭和研究生学习。<sup>25</sup> 因此，虽然 AFRIEF 与尼日利亚利益相关者保持密切联系，但 GIIBIC 宣传其与 IIBI 以及总部位于迪拜的巴基斯坦（萨拉菲）穆斯林政策机构 Al-Huda 伊斯兰银行与伊斯兰经济学中心（AlHuda CIBE）的联系。<sup>26</sup> 有趣的是，AlHuda CIBE 还将 2019 年成立的、总部位于阿克拉的 *加纳伊斯兰金融研究所*（IFRIG）列为其战略合作伙伴。<sup>27</sup> IFRIG 是推动在加纳建立双重金融体系，即传统金融体系和伊斯兰金融体系的第三家穆斯林政策研究所。
 
 ##### 1.1 在加纳引入伊斯兰金融的初步推动
@@ -5992,69 +6101,96 @@ Baba Yunus Muhammad 和 AFRIEF 反过来设想开展大陆范围的推广工作�
 ##### Notes
 
 - 24. 对全球伊斯兰银行、保险和咨询研究所首席执行官 Abdul-Moumin Saeed 的采访，库马西，2019 年 12 月 14 日。
+
 - 25. https://www.linkedin.com/in/giibicic/details/education/. Abdul-Moumin Saeed 于 2022 年在 EUCLID 大学获得伊斯兰金融与经济博士学位。
+
 - 26. https://www.facebook.com/giibici?_rdc=1&_rdr，于 2022 年 2 月 16 日访问。
+
 - 27. http://www.alhudacibe.com/partners.php，于 2022 年 2 月 16 日访问。
+
 - 28. https://www.ghanalello.com/company/44137/GLOBAL_INSTITUTE_OF_ISLAMIC_BANKING_GIIBIC/；https://www.giibic.com/about-us/#，于 2022 年 2 月 16 日访问。
+
 - 29. “免息伊斯兰银行将加剧加纳银行业竞争”，2014 年 3 月 25 日，https://www.myjoyonline.com/interest-free-islamic-banks-to-heighten-competition-in-ghanas-banking-sector/，于 2022 年 2 月 16 日访问。注：该文章在 GIIBIC 主页上重复发布为“银行竞争加剧，因 BoG 审查银行法以纳入伊斯兰银行”，发布于 2021 年 9 月 10 日。“规范加纳的伊斯兰银行”，2014 年 6 月 16 日，https://www.graphic.com.gh/news/general-news/regularise-islamic-banking-in-ghana.html?fb_comment_id=940736956029558_1054276154675637，于 2022 年 2 月 16 日访问。注：该文章在 GIIBIC 主页上重复发布为“规范加纳的伊斯兰银行”，发布于 2021 年 9 月 10 日。“关于伊斯兰银行的公报”，2014 年 7 月 3 日，https://newsghana.com.gh/communique-issued-islamic-banking/，于 2022 年 2 月 16 日访问。另见 Ramatu Ussif 和 Umar Yussif，《在加纳建立伊斯兰银行与金融（IBF）：问题、挑战与前景》，《全球科学期刊》第 8 卷，第 5 期（2020 年）：1810–1811。
+
 - 30. “Reaching One Billion”，《Banker Africa》，2014 年 6 月 30 日，可在 https://www.thefreelibrary.com/Reaching+one+billion-a0376418396 获取，于 2022 年 2 月 16 日访问。
+
+
+
 - 31. “Reaching One Billion”，《Banker Africa》，2014 年 6 月 30 日，可在 https://www.thefreelibrary.com/Reaching+one+billion-a0376418396 获取，于 2022 年 2 月 16 日访问。
+
 - 32. “非洲伊斯兰经济论坛”，https://lotimes.com/africa-islamic-economic-forum，于 2022 年 2 月 16 日访问。
+
 - 33. 我尚未能确定第一届和第二届非洲伊斯兰金融峰会何时何地举行。第三届至第七届峰会分别于 2016 年、2017 年、2018 年、2019 年和 2021 年在达累斯萨拉姆召开。（COVID-19 大流行取消了 2020 年的峰会）。第八届以及第十届峰会分别于 2022 年 3 月和 2023 年 5 月在冈比亚班珠尔召开，第十一届于 2023 年 12 月在索马里兰哈尔格萨召开；见 https://www.alhudacibe.com/conference2022/ 和 https://www.alhudacibe.com/conference2023/，于 2023 年 12 月 5 日访问。然而，我未找到有关前两届峰会的信息，尽管我认为它们是在达累斯萨拉姆举行的。
+
 - 34. 首届非洲伊斯兰金融论坛于 2015 年 10 月在阿比让举行，见 https://icd-ps.org/fr/events/africa-islamic-finance-conference-abidjan-2015。第二届于 2016 年 10 月在科特迪瓦阿比让举行；见 Onyekachi Wambu，“Africa Islamic Finance Forum 2016”，2016 年 10 月 18 日，https://newafricanmagazine.com/12499/，于 2022 年 2 月 16 日访问。AIFF 第三届于 2018 年 3 月在拉各斯召开；见“3rd Africa Islamic Finance Forum”，https://islamicmarkets.com/events/3rd-africa-islamic-finance-forum-1，于 2022 年 2 月 16 日访问。
+
 - 35. 有关参加 2015 年 AIFF 的已确认演讲者名单，见“The Inaugural Africa Islamic Finance Forum by the Côte d'Ivoirian Government and the Islamic Corporation for the Development of the Private Sector”，2015 年 9 月 18 日，https://allafrica.com/stories/201509181929.html，于 2022 年 2 月 16 日访问。
+
 - 36. “加纳伊斯兰银行前景光明”，2015 年 10 月 15 日，https://oxfordbusinessgroup.com/news/promising-future-islamic-banking-ghana，于 2019 年 5 月 24 日访问；Felix Dela Klutse，“加纳：伊斯兰金融势头增强”，2017 年 8 月 28 日，https://allafrica.com/stories/201708280872.html，于 2019 年 5 月 24 日访问。
+
 - 37. “加纳应设立伊斯兰银行——企业家”，2015 年 4 月 1 日，https://www.modernghana.com/news/608679/time-for-ghana-to-have-islamic-banks-entrepreneur.html，于 2021 年 11 月 19 日访问。
+
 - 38. “进入通用银行仍开放”，2015 年 8 月 31 日，https://www.graphic.com.gh/business/business-news/entry-to-universal-banking-still-open.html，于 2022 年 2 月 16 日访问。
 
-
-
-包括加纳穆斯林组织联盟（COMOG）在内的组织公开呼吁，将伊斯兰银行业和伊斯兰金融纳入加纳现有银行与金融体系，以作为补充。[^39] 一家沙特阿拉伯机构甚至宣布有意创办伊斯兰金融机构，但该计划无果而终。[^40] GIIBIC 则从马来西亚、迪拜和英国了解了伊斯兰银行业的国家监管法规，并于 2015 年底起草了一份提交给加纳银行的提案。此外，GIIBIC 与 Al-Huda CIBE 还在当年组织了另一场面向加纳银行、财政部和商业银行代表的伊斯兰银行业研讨会。然而，大选一年后，政府引入伊斯兰银行业的兴趣有所减退。[^41]
+包括加纳穆斯林组织联盟（`COMOG`）在内的组织公开呼吁，将伊斯兰银行业和伊斯兰金融纳入加纳现有银行与金融体系，以作为补充。[^39] 一家沙特阿拉伯机构甚至宣布有意创办伊斯兰金融机构，但该计划无果而终。[^40] `GIIBIC` 则从马来西亚、迪拜和英国了解了伊斯兰银行业的国家监管法规，并于 2015 年底起草了一份提交给加纳银行的提案。此外，`GIIBIC` 与 `Al-Huda CIBE` 还在当年组织了另一场面向加纳银行、财政部和商业银行代表的伊斯兰银行业研讨会。然而，大选一年后，政府引入伊斯兰银行业的兴趣有所减退。[^41]
 
 令所有穆斯林利益相关者大为失望的是，加纳银行也几乎没有任何消息。在回应有关运营伊斯兰银行申请程序的询问时，加纳银行行长于 2017 年 1 月指出，新的银行法为开展伊斯兰银行产品业务提供了机会。“你可以持有全能银行执照，专门交易伊斯兰金融产品，这样你就成了一家伊斯兰银行，”他宣称。然而，实际上，行长所指的并不是纯粹的伊斯兰银行，而是由传统银行运营的伊斯兰金融窗口。他强调，银行可以提名一个教法咨询委员会，为银行提供基于充分了解的运营意见与建议。谈及约两年前向加纳银行提交的申请，该机构最初获得了临时执照。尽管执照最初获得延期，但加纳银行决定予以撤销，因为申请机构无法满足获得正式执照所需的全部条件。[^42] 由于没有其他待决申请，起草监管框架的准备工作
 
-第一个新的利益相关者是塔马利伊斯兰银行与金融学院（TIIFE）。外界对该学院知之甚少，因为它几乎没有留下什么痕迹。唯一能表明这一新平台成立的文件，是一份愿景、使命和目标声明，发布于该学院 2018 年 9 月初的 Facebook 账户上。这可能表明它是在几周前成立的。TIIFE 是否曾拥有实体办公场所尚不确定，因为 Facebook 上没有提供进一步信息。与此前的两个政策机构 AFRIEF 和 GIIBIC 类似，TIIFE 背后的活动人士设想，该平台将通过研究、倡导、政策分析、培训以及伊斯兰银行与金融知识的大众普及，为加纳和非洲的伊斯兰金融发展作出贡献。
+第一个新的利益相关者是塔马利伊斯兰银行与金融学院（`TIIFE`）。外界对该学院知之甚少，因为它几乎没有留下什么痕迹。唯一能表明这一新平台成立的文件，是一份愿景、使命和目标声明，发布于该学院 2018 年 9 月初的 `Facebook` 账户上。这可能表明它是在几周前成立的。`TIIFE` 是否曾拥有实体办公场所尚不确定，因为 `Facebook` 上没有提供进一步信息。与此前的两个政策机构 `AFRIEF` 和 `GIIBIC` 类似，`TIIFE` 背后的活动人士设想，该平台将通过研究、倡导、政策分析、培训以及伊斯兰银行与金融知识的大众普及，为加纳和非洲的伊斯兰金融发展作出贡献。
 
-与 AFRIEF 和 GIIBIC 不同，TIIFE 具有鲜明的北部和宗戈（Zongo）视角，特别是提供创新、基于证据的政策简报，以支持北部发展管理局、宗戈发展管理局等各类利益相关者，并主要支持加纳政府的发展议程。此外，收集和处理加纳目标地区（如加纳北部和宗戈社区）的相关数据，有助于政府和 NGOs 的政策制定与干预工作。[^48]
+与 `AFRIEF` 和 `GIIBIC` 不同，`TIIFE` 具有鲜明的北部和宗戈（`Zongo`）视角，特别是提供创新、基于证据的政策简报，以支持北部发展管理局、宗戈发展管理局等各类利益相关者，并主要支持加纳政府的发展议程。此外，收集和处理加纳目标地区（如加纳北部和宗戈社区）的相关数据，有助于政府和 NGOs 的政策制定与干预工作。[^48]
 
-将倡导组织制度化的下一次尝试发生在一年之后。经过一系列讨论，“加纳伊斯兰银行构想”（GIBI）WhatsApp 群组于 2019 年 9 月初转型重组为加纳伊斯兰金融研究所（IFRIG）。起初，工作人员专注于研究，并成功将自己关于加纳伊斯兰银行业前景与挑战的研究发表在一本国际期刊上。[^49] IFRIG 活动的起飞点是 2020 年春季的 COVID-19 封锁，当时 IFRIG——与其他多个穆斯林 NGOs 和 CSOs 一样——开始通过在线 Zoom 网络研讨会和 Facebook 组织其所有活动。[^50] 从 2020 年 5 月开始，IFRIG 每月组织一次关于伊斯兰银行与金融的 Zoom 直播网络研讨会，邀请嘉宾讲师或其工作人员授课。IFRIG 很早就引起了 al-Huda CIBE 的兴趣，[^51] 自 2020 年 7 月起，后者的成员定期出现在这些直播网络研讨会中。
+将倡导组织制度化的下一次尝试发生在一年之后。经过一系列讨论，“加纳伊斯兰银行构想”（`GIBI`）`WhatsApp` 群组于 2019 年 9 月初转型重组为加纳伊斯兰金融研究所（`IFRIG`）。起初，工作人员专注于研究，并成功将自己关于加纳伊斯兰银行业前景与挑战的研究发表在一本国际期刊上。[^49] `IFRIG` 活动的起飞点是 2020 年春季的 `COVID-19` 封锁，当时 `IFRIG`——与其他多个穆斯林 NGOs 和 CSOs 一样——开始通过在线 `Zoom` 网络研讨会和 `Facebook` 组织其所有活动。[^50] 从 2020 年 5 月开始，`IFRIG` 每月组织一次关于伊斯兰银行与金融的 `Zoom` 直播网络研讨会，邀请嘉宾讲师或其工作人员授课。`IFRIG` 很早就引起了 `al-Huda CIBE` 的兴趣，[^51] 自 2020 年 7 月起，后者的成员定期出现在这些直播网络研讨会中。
 
-除了其伊斯兰金融 Zoom 网络研讨会外，IFRIG 最初还计划每周举办专题培训。然而，在 2020 年 6 月下旬举办首次培训后，IFRIG 似乎就放弃了这一想法。那次培训的主题是“瓦克夫（waqf）作为社会金融部门推动社会发展与经济发展项目的有效工具”。相反，它开始与其他穆斯林利益相关者合作，扩展其活动。IFRIG 与加纳伊斯兰大学学院和马迪纳理工学院（MIST）合作，于 2020 年 11 月上旬组织了伊斯兰金融论坛。从宣传效果来看，伊斯兰金融论坛是成功的，因为它被加纳新闻媒体报道，使伊斯兰金融重新进入公共议程。[^52] 2021 年 2 月，IFRIG 在阿克拉为乌里玛（ulama）组织了一场关于伊斯兰金融的专题培训，2021 年 4 月上旬在塔科拉迪又组织了一场；随后于 2021 年 4 月中旬在阿克拉的 MIST 为研究生和专业人士举办了一场为期两天的专题培训。[^53]
+除了其伊斯兰金融 `Zoom` 网络研讨会外，`IFRIG` 最初还计划每周举办专题培训。然而，在 2020 年 6 月下旬举办首次培训后，`IFRIG` 似乎就放弃了这一想法。那次培训的主题是“瓦克夫（`waqf`）作为社会金融部门推动社会发展与经济发展项目的有效工具”。相反，它开始与其他穆斯林利益相关者合作，扩展其活动。`IFRIG` 与加纳伊斯兰大学学院和马迪纳理工学院（`MIST`）合作，于 2020 年 11 月上旬组织了伊斯兰金融论坛。从宣传效果来看，伊斯兰金融论坛是成功的，因为它被加纳新闻媒体报道，使伊斯兰金融重新进入公共议程。[^52] 2021 年 2 月，`IFRIG` 在阿克拉为乌里玛（`ulama`）组织了一场关于伊斯兰金融的专题培训，2021 年 4 月上旬在塔科拉迪又组织了一场；随后于 2021 年 4 月中旬在阿克拉的 `MIST` 为研究生和专业人士举办了一场为期两天的专题培训。[^53]
 
-IFRIG 进一步推进其伙伴关系，与伊斯兰文化与教育国际中心、加纳天课与施舍信托基金、国际伊斯兰银行与金融学院以及 MIST 携手，于 2021 年 11 月上旬在阿克拉组织了第二届伊斯兰金融年度论坛，该论坛已更名为“2021 年伊斯兰金融国际会议”。[^54] 在上一届会议之后，IFRIG 还设法发表了几篇文章或访谈，总结了其 Zoom 网络研讨会上的部分主题，其中包括在传统银行开设伊斯兰金融窗口的可行性，并强调双重体系可能有助于释放来自中东的投资。[^55]
+`IFRIG` 进一步推进其伙伴关系，与伊斯兰文化与教育国际中心、加纳天课与施舍信托基金、国际伊斯兰银行与金融学院以及 `MIST` 携手，于 2021 年 11 月上旬在阿克拉组织了第二届伊斯兰金融年度论坛，该论坛已更名为“2021 年伊斯兰金融国际会议”。[^54] 在上一届会议之后，`IFRIG` 还设法发表了几篇文章或访谈，总结了其 `Zoom` 网络研讨会上的部分主题，其中包括在传统银行开设伊斯兰金融窗口的可行性，并强调双重体系可能有助于释放来自中东的投资。[^55]
 
-[^39]: Haji Abdel-Manan Abdel-Rahman（COMOG 总书记），“加纳穆斯林组织联盟就各政党对影响加纳穆斯林社区相关问题立场的新闻发布会，2016 年 11 月 9 日，” http://www.mytawheedonline.com/2016/11/09/press-conference-by-the-coalition-of-muslim-organisations-ghana-on-political-parties-position-on-pertinent-issues-affecting-the-muslim-community-in-ghana-9th-november-2016/，访问于 2017 年 11 月 16 日；该主页已于 2024 年 5 月失效。
+[^39]: Haji Abdel-Manan Abdel-Rahman（`COMOG` 总书记），“加纳穆斯林组织联盟就各政党对影响加纳穆斯林社区相关问题立场的新闻发布会，2016 年 11 月 9 日，” http://www.mytawheedonline.com/2016/11/09/press-conference-by-the-coalition-of-muslim-organisations-ghana-on-political-parties-position-on-pertinent-issues-affecting-the-muslim-community-in-ghana-9th-november-2016/，访问于 2017 年 11 月 16 日；该主页已于 2024 年 5 月失效。
+
 [^40]: “加纳将迎来首家伊斯兰金融机构”，2015 年 10 月 1 日，https://www.mfw4a.org/news/ghana-welcome-its-first-islamic-finance-institution，访问于 2023 年 12 月 5 日。
+
 [^41]: 采访阿卜杜勒-穆明·萨伊德（Abdul-Muumin Saeed），全球伊斯兰银行、保险与咨询学院首席执行官，库马西，2019 年 12 月 14 日。
+
 [^42]: 加纳银行，2017 年 1 月 23 日货币政策委员会记者会记录，https://www.bog.gov.gh/privatecontent/MPC_Press_Releases/TRANSCRIPT%20-%20MPC%20PRESS%20CONFERENCE%20RD%20JANUARY%202017-74th%20Meeting.pdf，访问于 2019 年 5 月 24 日。
-[^48]: TIIFE 的目标声明，https://www.facebook.com/Tamale-Institute-of-Islamic-Banking-and-Finance-201567417124855/，2018 年 9 月 4 日，访问于 2022 年 2 月 16 日。TIIFE 或许是由塔马利一群志同道合者发起的雄心勃勃的项目。显然，他们与任何可能支持其活动的外部资助机构或组织都没有联系。它也不是注册的非营利组织。在 Facebook 上发布目标后，TIIFE 便从公共视野中消失了——如果它曾进入过公共视野的话。
+
+[^48]: `TIIFE` 的目标声明，https://www.facebook.com/Tamale-Institute-of-Islamic-Banking-and-Finance-201567417124855/，2018 年 9 月 4 日，访问于 2022 年 2 月 16 日。`TIIFE` 或许是由塔马利一群志同道合者发起的雄心勃勃的项目。显然，他们与任何可能支持其活动的外部资助机构或组织都没有联系。它也不是注册的非营利组织。在 `Facebook` 上发布目标后，`TIIFE` 便从公共视野中消失了——如果它曾进入过公共视野的话。
+
 [^49]: Shaibu Ali, Sherif Heiman Shaban, Musah Ismaila, Imoro Alhassan, and Yusif Ali, “Islamic Banking in Ghana: Prospects and Challenges,” International Journal of Multidisciplinary Research and Development 7, no. 8 (2020): 157–166.
-[^50]: 自 2020 年 5 月 17 日举办首次 Zoom 直播网络研讨会“COVID-19 对加纳经济的影响以及为何伊斯兰金融仍是最佳出路”以来，IFRIG 已举办 18 场网络研讨会，最后一场于 2022 年 1 月 31 日举行（状态截至：2022 年 2 月 16 日）。
-[^51]: Al-Huda CIBE 还与加纳伊斯兰研究协会（IRAG）签署了谅解备忘录，以在全球范围内推广伊斯兰银行与金融。然而，除了呼吁国家首席伊玛目办公室和加纳所有穆斯林展开公开讨论外，IRAG 的 Facebook 账户上未发现其他关于伊斯兰金融的帖子（https://www.facebook.com/GIRA4ALL/，2019 年 7 月 4 日，访问于 2022 年 2 月 16 日）。
+
+[^50]: 自 2020 年 5 月 17 日举办首次 `Zoom` 直播网络研讨会“`COVID-19` 对加纳经济的影响以及为何伊斯兰金融仍是最佳出路”以来，`IFRIG` 已举办 18 场网络研讨会，最后一场于 2022 年 1 月 31 日举行（状态截至：2022 年 2 月 16 日）。
+
+[^51]: `Al-Huda CIBE` 还与加纳伊斯兰研究协会（`IRAG`）签署了谅解备忘录，以在全球范围内推广伊斯兰银行与金融。然而，除了呼吁国家首席伊玛目办公室和加纳所有穆斯林展开公开讨论外，`IRAG` 的 `Facebook` 账户上未发现其他关于伊斯兰金融的帖子（https://www.facebook.com/GIRA4ALL/，2019 年 7 月 4 日，访问于 2022 年 2 月 16 日）。
+
 [^52]: “专家：伊斯兰金融需要多方共同推动”，2020 年 11 月 13 日，https://citinewsroom.com/2020/11/islamic-finance-in-ghana-requires-multi-stakeholder-push-experts/，访问于 2022 年 2 月 16 日。
+
 [^53]: https://www.facebook.com/ifrig/，2021 年 2 月 13 日、2021 年 4 月 3 日、2021 年 4 月 11 日，访问于 2022 年 2 月 16 日。
+
 [^54]: https://www.facebook.com/ifrig/，2021 年 11 月 6 日，访问于 2022 年 2 月 16 日。
+
 [^55]: “研究人员：利用银行‘窗口’在加纳启动伊斯兰金融”，2021 年 2 月 18 日，https://www.ghanaweb.com/GhanaHomePage/business/Use-banking-windows-to-kick-start-Islamic-finance-in-Ghana-Researcher-u183153；“伊斯兰金融将帮助政府解锁
 
 因此，2021年伊斯兰金融国际会议的宣布成为头条新闻也就不足为奇了，尤其是预计它将聚集来自加纳、西非和阿拉伯世界的伊斯兰金融专家，并邀请来自尼日利亚、马来西亚和阿联酋的主题演讲嘉宾。56 会议取得了成功，一些专家甚至宣称伊斯兰金融是加纳日益增长公共债务的解决方案。57 甚至加纳银行行长 Dr Ernest Addison 对伊斯兰金融持积极态度，尽管他警告忽视伊斯兰金融体系的潜在挑战的危险，例如透明度、披露和法律框架在加纳仍未得到解决。58
 
-半年后，建立伊斯兰银行的前景看起来更好了。IFRIG 斋月伊斯兰金融论坛上希望被点燃，但实现这一梦想需要穆斯林社区做出实质性承诺。斯坦比克银行前首席执行官 Naa Alhassan Andani 告知，需要约 GHS 400 million 来满足加纳银行的财务义务。59 然而，COVID-19 大流行和乌克兰危机引发的宏观经济动荡导致加纳经济衰退，并在近期内对在加纳引入伊斯兰银行的计划踩下了刹车。在 2022 年 12 月举行的第二次伊斯兰金融国际会议上，该问题仍未解决。IFRIG 随后重新努力推进其议程，其中包括于 2023 年 2 月发布关于在加纳引入无息银行和金融可行性的报告，60 同时安排一系列关于该主题的网络研讨会和研讨会，其中包括 2023 年 IFRIG 斋月伊斯兰论坛以及 2023 年 7 月在 Lakeside University 举办的一天研讨会。61
+半年后，建立伊斯兰银行的前景看起来更好了。`IFRIG` 斋月伊斯兰金融论坛上希望被点燃，但实现这一梦想需要穆斯林社区做出实质性承诺。斯坦比克银行前首席执行官 Naa Alhassan Andani 告知，需要约 `GHS 400 million` 来满足加纳银行的财务义务。59 然而，`COVID-19` 大流行和乌克兰危机引发的宏观经济动荡导致加纳经济衰退，并在近期内对在加纳引入伊斯兰银行的计划踩下了刹车。在 2022 年 12 月举行的第二次伊斯兰金融国际会议上，该问题仍未解决。`IFRIG` 随后重新努力推进其议程，其中包括于 2023 年 2 月发布关于在加纳引入无息银行和金融可行性的报告，60 同时安排一系列关于该主题的网络研讨会和研讨会，其中包括 2023 年 `IFRIG` 斋月伊斯兰论坛以及 2023 年 7 月在 Lakeside University 举办的一天研讨会。61
 
-“伊斯兰金融将帮助政府从中东解锁投资——IFRIG 主席”， 8.5.2021, https://www.ghanaweb.com/GhanaHomePage/business/Islamic-Finance-will-help-govt-unlock-investments-from-Middle-East-IFRIG-Chairman-1255027, 访问于 16.2.2022.
+“伊斯兰金融将帮助政府从中东解锁投资——`IFRIG` 主席”， 8.5.2021, https://www.ghanaweb.com/GhanaHomePage/business/Islamic-Finance-will-help-govt-unlock-investments-from-Middle-East-IFRIG-Chairman-1255027, 访问于 16.2.2022.
 
-56 “IFRIG 启动年度伊斯兰金融会议，IFIC 2021”， 2.10.2021, https://www.ghanaweb.com/GhanaHomePage/business/IFRIG-launches-annual-Islamic-finance-conference-IFIC-2021-1370740, 访问于 16.2.2022.
+56 “`IFRIG` 启动年度伊斯兰金融会议，`IFIC 2021`”， 2.10.2021, https://www.ghanaweb.com/GhanaHomePage/business/IFRIG-launches-annual-Islamic-finance-conference-IFIC-2021-1370740, 访问于 16.2.2022.
 
 57 “伊斯兰金融可以成为应对加纳日益增长公共债务的游戏规则改变者——专家”， 13.11.2021, https://www.ghanaweb.com/GhanaHomePage/business/Islamic-Finance-can-be-gamechanger-in-tackling-Ghana-s-rising-public-debt-Experts-1401040, 访问于 16.2.2022.
 
-58 “IFRIG 就加纳不断上升的债务举行会议”， 9.11.2021, https://www.businessghana.com/site/news/business/250070/IFRIG-holds-confab-on-rising-debt-in-Ghana, 访问于 16.2.2022.
+58 “`IFRIG` 就加纳不断上升的债务举行会议”， 9.11.2021, https://www.businessghana.com/site/news/business/250070/IFRIG-holds-confab-on-rising-debt-in-Ghana, 访问于 16.2.2022.
 
 59 Bernard Benghan, “为建立伊斯兰银行提供财政支持——Alhassan Andani”， Ghanaian Times, 19.4.2022, https://allafrica.com/stories/202204190821.html, 访问于 13.12.2022.
 
-60 《加纳无息银行和金融监管框架分析》。作者：加纳伊斯兰金融研究所（IFRIG）研究团队。发布：2023 年 2 月，上传 28.2.2023, https://www.facebook.com/ifrig h/, 访问于 22.8.2023.
+60 《加纳无息银行和金融监管框架分析》。作者：加纳伊斯兰金融研究所（`IFRIG`）研究团队。发布：2023 年 2 月，上传 28.2.2023, https://www.facebook.com/ifrig h/, 访问于 22.8.2023.
 
 61 https://www.facebook.com/ifrig h/, 8.4.2023, 9.7.2023, 访问于 22.8.2022.
 
 #### 2 伊斯兰投资与微型金融
+
+
 
 穆斯林经济学家们称赞伊斯兰投资和微型金融机构是减贫的有效工具，尽管最近的调查概述了对其实现目标潜力的更细致分析。尽管到 2019 年加纳没有任何一家完整的伊斯兰银行获得运营许可，Joseph Mbawuni 指出存在两家持牌伊斯兰微型金融机构，Ghana Islamic Microfinance 和 Salam Capital。62 此外，未包括在 Mbawuni 的报道中，至少有两个伊斯兰清真（道德）投资计划，Islamic Investment Ltd 和 MUDI Halal Co-operative Society，以及至少一家最近引入伊斯兰金融工具的微型金融公司 Afro-Arab Microfinance。
 
@@ -6062,84 +6198,85 @@ IFRIG 进一步推进其伙伴关系，与伊斯兰文化与教育国际中心�
 
 Ghana Islamic Microfinance (GIMF) 是加纳首家提供符合 Shari’a 的微型金融服务的机构。起初作为一个 NGO 项目，支持小农户在培训、生产和农产品营销方面。71 GIMF 的一个特殊焦点群体是小农户女性，她们获得了无息贷款用于提供投入品、推广服务、拖拉机服务和营销，以换取其农作物有保障的采购价格。伊斯兰开发银行认可了这一计划，并于 2014 年授予 GIMF 妇女发展奖。72 然而，出于未知原因，GIMF 在获得沙特奖项后不久便停止运作。73
 
-加纳第二家伊斯兰微型金融机构是 Salam Capital Microfinance，其于 2013 年作为一家初创企业开始运营，提供替代银行和微型金融解决方案；一年后，它转型为为现代和新兴市场提供伊斯兰解决方案的机构。74 然而，在本出版物撰写时，其运营信息尚未收集。到 2015 年，它未被列入现有 Shari'a-compliant 金融机构名单中，75 尽管有说法称其在 2019 年仍在运营。76 截至 2022 年 2 月，Salam Capital 的主页 http://www.salamcapital.net/ 已无法访问。
+加纳第二家伊斯兰微型金融机构是 Salam Capital Microfinance，其于 2013 年作为一家初创企业开始运营，提供替代银行和微型金融解决方案；一年后，它转型为为现代和新兴市场提供伊斯兰解决方案的机构。74 然而，在本出版物撰写时，其运营信息尚未收集。到 2015 年，它未被列入现有 Shari'a-compliant 金融机构名单中，75 尽管有说法称其在 2019 年仍在运营。76 截至 2022 年 2 月，Salam Capital 的主页 `http://www.salamcapital.net/` 已无法访问。
 
 Afro-Arab Microfinance 是 Alhaji Salamu Adamu 的 Afro-Arab Group 六家子公司之一（图 55）。77 他创立了他的第一家公司
 
 62 Joseph Mbawuni, “人口统计对银行家采用伊斯兰银行和在加纳转向传统银行意愿的影响”， Journal of Islamic Banking and Finance 7, no. 2 (2019): 17.
 
-63 M. Kabir Hassan, Munee M. Alshater, Rashedul Hasan, and Abul Bashar Bhuiyan, “伊斯兰微型金融：文献计量回顾”， Global Finance Journal 49 (2021), 在线 12.6.2021, https://doi.org/10.1016/j.gfj.2021.100651.
+63 M. Kabir Hassan, Munee M. Alshater, Rashedul Hasan, and Abul Bashar Bhuiyan, “伊斯兰微型金融：文献计量回顾”， Global Finance Journal 49 (2021), 在线 12.6.2021, `https://doi.org/10.1016/j.gfj.2021.100651`.
 
 64 Mohammed Aslam Haneef, Aliyu Dahiru Mohammad, Mustafa Omar, Ataul Huq Pramanik, and Fouad Amin, “在 OIC 成员国中整合 Waqf 和伊斯兰微型金融以减贫：尼日利亚案例研究”，载于 Equitable Islamic Finance, 编者 Muhammad Khaleequzzaman, Nasim Shah Shirazi, Abdul Rashid, and Mohammed Obaidullah (Jeddah: Islamic Research and Training Institute, 2016), 1–24.
 
 71 Mbawuni and Nimako, “在加纳引入伊斯兰银行和金融”， 62.
 
-72 “加纳伊斯兰微型金融获奖”， 21.6.2014, https://www.ghanaweb.com/GhanaHomePage/business/Ghana-Islamic-Microfinance-wins-award-313738, 访问于 24.5.2019; “加纳伊斯兰微型金融赢得享有盛誉的伊斯兰开发银行奖”， http://www.alhudacibe.com/imf/story01.php, 访问于 24.5.2019; al Amine, 《伊斯兰金融与非洲经济复兴》， 107. 伊斯兰开发银行于 2006 年设立了 IDB 妇女对发展贡献奖。
+72 “加纳伊斯兰微型金融获奖”， 21.6.2014, `https://www.ghanaweb.com/GhanaHomePage/business/Ghana-Islamic-Microfinance-wins-award-313738`, 访问于 24.5.2019; “加纳伊斯兰微型金融赢得享有盛誉的伊斯兰开发银行奖”， `http://www.alhudacibe.com/imf/story01.php`, 访问于 24.5.2019; al Amine, 《伊斯兰金融与非洲经济复兴》， 107. 伊斯兰开发银行于 2006 年设立了 IDB 妇女对发展贡献奖。
 
 73 与库马西全球伊斯兰银行、保险和咨询研究所首席执行官 Abdul-Muumin Saeed 的访谈，14.12.2019.
 
-74 “伊斯兰银行在加纳扎根”， 19.2015, https://newsghana.com.gh/islamic-banking-gains-root-in-ghana/, 访问于 22.2.2022. 另见其创始人兼首席执行官 Ismail Awudu 的 LinkedIn 账号， https://gh.linkedin.com/in/ismail-awudu-5b522790, 访问于 22.2.2022.
+74 “伊斯兰银行在加纳扎根”， 19.2015, `https://newsghana.com.gh/islamic-banking-gains-root-in-ghana/`, 访问于 22.2.2022. 另见其创始人兼首席执行官 Ismail Awudu 的 LinkedIn 账号， `https://gh.linkedin.com/in/ismail-awudu-5b522790`, 访问于 22.2.2022.
 
-75 “加纳伊斯兰银行的美好前景”， 15.10.2015, https://oxfordbusinessgroup.com/news/promising-future-islamic-banking-ghana, 访问于 23.2.2022.
+75 “加纳伊斯兰银行的美好前景”， 15.10.2015, `https://oxfordbusinessgroup.com/news/promising-future-islamic-banking-ghana`, 访问于 23.2.2022.
 
 76 与库马西全球伊斯兰银行、保险和咨询研究所首席执行官 Abdul-Muumin Saeed 的访谈，14.12.2019.
 
 77 其他子公司包括：Afro Arab Company（2007 年注册，从事一般商贸服务，尤其进口和出口农产品和金属产品、二手服装和汽车、汽车销售和租赁、土方机械租赁）；Afro Arab Properties and Construction（成立于 2009 年），Afro Arab Travel and Tour（成立于 2013 年）；Elecafetelero Ghana Limited（投资于作物和动物养殖，包括骆驼放牧）；以及 Yaasalam Opportunity Center（成立于 2017 年），以及 Afro-Arab Mining、Afro-Arab Telecommunication Company、A&A Sports、Afro-Arab Mineral Water Company 和 Afro-Arab Foundation。
 
-
-
 2007年，他年仅20岁。[78] 2017年，他公开宣布支持宗戈青年月，[79]开始登上加纳新闻媒体的头条，并入选“40位40岁以下”奖项。[80] 2018年，他被评为“尼马最具影响力的人物”；[81] 2019年，西非领导力发展中心将他列为西非十大新兴领袖之一，[82]而YCEO & Avance Media则将他列入加纳50位最具影响力的青年CEO榜单。[83] 被誉为有影响力的商业企业家，[84]他的慈善和社会参与得到了广泛认可。2021年，加纳穆斯林团体授予他“宗戈年度青年企业家”称号，以表彰他对宗戈青年产生的影响，以及他作为榜样、导师和教师所发挥的作用。[85] 同年，加纳金融中介机构因他在小额信贷领域的贡献授予他“杰出人物”荣誉。[86]
 
-78. “我赚了很多钱——Afro-Arab老板，”2020年8月13日，https://www.theghanareport.com/i-have-made-a-lot-of-money-afro-arab-boss/，访问于2022年11月10日。
+78. “我赚了很多钱——Afro-Arab老板，”2020年8月13日，`https://www.theghanareport.com/i-have-made-a-lot-of-money-afro-arab-boss/`，访问于2022年11月10日。
 
-79. “Afro-Arab首席执行官宣布支持宗戈青年月，”2017年4月11日，https://www.ghanaweb.com/GhanaHomePage/regional/Afro-Arab-CEO-declares-support-for-Zongo-Youth-Month-527945，访问于2022年11月9日。
+79. “Afro-Arab首席执行官宣布支持宗戈青年月，”2017年4月11日，`https://www.ghanaweb.com/GhanaHomePage/regional/Afro-Arab-CEO-declares-support-for-Zongo-Youth-Month-527945`，访问于2022年11月9日。
 
-80. “从尼马街头到40位40岁以下提名者，”2017年8月17日，https://nima24.com/from-the-streets-of-nima-to-40-under-40-nominee/，访问于2022年11月10日。
+80. “从尼马街头到40位40岁以下提名者，”2017年8月17日，`https://nima24.com/from-the-streets-of-nima-to-40-under-40-nominee/`，访问于2022年11月10日。
 
-81. “Afro-Arab老板被评为尼马最具影响力的人物，”2018年5月3日，https://www.businessghana.com/site/news/business/164277/Afro-Arab-boss-named-most-influential-personality-in-Nima，访问于2022年11月10日。
+81. “Afro-Arab老板被评为尼马最具影响力的人物，”2018年5月3日，`https://www.businessghana.com/site/news/business/164277/Afro-Arab-boss-named-most-influential-personality-in-Nima`，访问于2022年11月10日。
 
-82. “Farouk Khailann及其他九人被评为西非十大新兴领袖，”2019年8月19日，https://www.ghanaweb.com/GhanaHomePage/diaspora/Farouk-Khailann-and-nine-others-named-top-ten-emerging-leaders-in-West-Africa-773074；“Afro Arab集团董事长再获国际奖项，”2019年9月8日，https://www.ghanaweb.com/GhanaHomePage/business/Afro-Arab-Group-chairman-grabs-another-international-award-779431；两则均访问于2022年11月9日。
+82. “Farouk Khailann及其他九人被评为西非十大新兴领袖，”2019年8月19日，`https://www.ghanaweb.com/GhanaHomePage/diaspora/Farouk-Khailann-and-nine-others-named-top-ten-emerging-leaders-in-West-Africa-773074`；“Afro Arab集团董事长再获国际奖项，”2019年9月8日，`https://www.ghanaweb.com/GhanaHomePage/business/Afro-Arab-Group-chairman-grabs-another-international-award-779431`；两则均访问于2022年11月9日。
 
-83. “Stonebwoy、John Dumelo、D Black、David Asante入选加纳50位最具影响力青年CEO名单，”2019年6月7日，https://www.ghanaweb.com/GhanaHomePage/entertainment/Stonebwoy-John-Dumelo-D-Black-David-Asante-named-in-50-most-influential-Young-CEOs-list-in-Ghana-752986，访问于2022年11月9日。
+83. “Stonebwoy、John Dumelo、D Black、David Asante入选加纳50位最具影响力青年CEO名单，”2019年6月7日，`https://www.ghanaweb.com/GhanaHomePage/entertainment/Stonebwoy-John-Dumelo-D-Black-David-Asante-named-in-50-most-influential-Young-CEOs-list-in-Ghana-752986`，访问于2022年11月9日。
 
-84. 2022年，他当选年度青年CEO；“Beryl Agyekum-Ayaaba和Alhaji Salamu Adamu当选2022年度青年CEO，”2022年7月20日，https://www.ghanaweb.com/GhanaHomePage/business/Beryl-Agyekum-Ayaaba-and-Alhaji-Salamu-Adamu-voted-2022-Young-CEOs-of-the-Year-1586279，访问于2022年11月9日。
+84. 2022年，他当选年度青年CEO；“Beryl Agyekum-Ayaaba和Alhaji Salamu Adamu当选2022年度青年CEO，”2022年7月20日，`https://www.ghanaweb.com/GhanaHomePage/business/Beryl-Agyekum-Ayaaba-and-Alhaji-Salamu-Adamu-voted-2022-Young-CEOs-of-the-Year-1586279`，访问于2022年11月9日。
 
-85. “大使Alhaji Salamu Amadu获颁2021年度宗戈企业家，”https://www.ghanaweb.com/GhanaHomePage/pressreleases/Ambassador-Alhaji-Salamu-Amadu-awarded-the-Zongo-entrepreneur-of-the-year-2021-1453198，访问于2022年11月9日。
+85. “大使Alhaji Salamu Amadu获颁2021年度宗戈企业家，”`https://www.ghanaweb.com/GhanaHomePage/pressreleases/Ambassador-Alhaji-Salamu-Amadu-awarded-the-Zongo-entrepreneur-of-the-year-2021-1453198`，访问于2022年11月9日。
 
-86. “Afro-Arab集团董事长在GFI颁奖礼上荣获杰出人物荣誉，”2021年6月24日，https://www.ghanaweb.com/GhanaHomePage/pressreleases/Afro-Arab-Group-chairman-receives-outstanding-personality-honour-at-GFI-awards-1293982，访问于2022年11月9日。
+86. “Afro-Arab集团董事长在GFI颁奖礼上荣获杰出人物荣誉，”2021年6月24日，`https://www.ghanaweb.com/GhanaHomePage/pressreleases/Afro-Arab-Group-chairman-receives-outstanding-personality-honour-at-GFI-awards-1293982`，访问于2022年11月9日。
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_471_0.png)
 
 图55：Afro-Arab小额贷款有限公司位于阿克拉尼马的总部
+
 摄影：HOLGER WEISS/2019
 
 Afro-Arab小额贷款公司于2011年开始全面运营，提供农业企业贷款、社区银行服务、快速中小企业贷款、商业/个人贷款和储蓄账户。它是一家二级小额贷款公司，由加纳银行在其他金融机构监管部（OFISD）的监管下颁发牌照。在2019年加纳银行的清整行动中，该公司是少数幸存下来的加纳小额金融机构之一。[87] 早在一年前，该公司就为清真寺社区、伊斯兰学校以及穆斯林和宗戈团体推出了一款特别设计的产品，让他们可以在公司储蓄并获得无息贷款。该产品被称为Masalachi账户，遵循伊斯兰银行的理念，提供无息贷款，或不对该账户中的储蓄资金收取利息。[88] 2021年，该公司扩大了业务范围，为青年和妇女团体提供支持，帮助他们将想法发展为小规模/微型企业和初创企业。[89] 一年后，Afro-Arab小额贷款公司开始转型为一家成熟的伊斯兰银行，组织了一次为期三天、由加纳伊斯兰金融研究所（IFRIG）监督的伊斯兰金融员工培训。[90]
 
-87. 参见“Afro Arab Microfinance Co. LTD”，Afro Arab集团公司简介，[2022年]，见https://afroarabgroup.com/wp-content/uploads/2022/09/Afro-Arab-2022-Profile-1.pdf，访问于2022年12月19日；“Afro-Arab小额贷款公司背景，”2021年8月16日，https://www.facebook.com/AfroArabgroupGH，访问于2022年11月9日。
+87. 参见“Afro Arab Microfinance Co. LTD”，Afro Arab集团公司简介，[2022年]，见`https://afroarabgroup.com/wp-content/uploads/2022/09/Afro-Arab-2022-Profile-1.pdf`，访问于2022年12月19日；“Afro-Arab小额贷款公司背景，”2021年8月16日，`https://www.facebook.com/AfroArabgroupGH`，访问于2022年11月9日。
 
-88. “Afro-Arab推出Masalachi账户，”2018年5月29日，https://www.ghanaweb.com/GhanaHomePage/business/Afro-Arab-launches-Masalachi-account-655909，访问于2022年11月9日。
+88. “Afro-Arab推出Masalachi账户，”2018年5月29日，`https://www.ghanaweb.com/GhanaHomePage/business/Afro-Arab-launches-Masalachi-account-655909`，访问于2022年11月9日。
 
-Masalachi账户也对非穆斯林团体开放。例如，2022年，加纳滑板足球（Skate Soccer Ghana）从Afro-Arab小额贷款公司的Masalachi账户获得了一笔GHS 20,000的无息软贷款，见“阿联酋大使馆、Afro Arab集团支持残障人士，”2022年2月15日，https://www.ghanaweb.com/GhanaHomePage/pressreleases/United-Arab-Emirates-Embassy-Afro-Arab-Group-support-persons-with-disabilities-1528139?fbclid=IwARoZ7B3GRgjRXIs4iGNtpa-XTBvxnbj_iyNrleagMljh6msEDctuEcpp_sg，访问于2022年11月9日。
+Masalachi账户也对非穆斯林团体开放。例如，2022年，加纳滑板足球（Skate Soccer Ghana）从Afro-Arab小额贷款公司的Masalachi账户获得了一笔GHS 20,000的无息软贷款，见“阿联酋大使馆、Afro Arab集团支持残障人士，”2022年2月15日，`https://www.ghanaweb.com/GhanaHomePage/pressreleases/United-Arab-Emirates-Embassy-Afro-Arab-Group-support-persons-with-disabilities-1528139?fbclid=IwARoZ7B3GRgjRXIs4iGNtpa-XTBvxnbj_iyNrleagMljh6msEDctuEcpp_sg`，访问于2022年11月9日。
 
-89. “Afro-Arab小额贷款公司将继续赋能妇女和青年——集团董事长，”2021年9月16日，https://www.ghanaweb.com/GhanaHomePage/pressreleases/Afro-Arab-Microfinance-will-continue-to-empower-women-and-youth-Group-Chairman-1360369，访问于2022年11月9日。
+89. “Afro-Arab小额贷款公司将继续赋能妇女和青年——集团董事长，”2021年9月16日，`https://www.ghanaweb.com/GhanaHomePage/pressreleases/Afro-Arab-Microfinance-will-continue-to-empower-women-and-youth-Group-Chairman-1360369`，访问于2022年11月9日。
 
-90. “Afro-Arab小额贷款公司对员工进行伊斯兰金融培训，”2022年3月29日，https://www.ghanaweb.com/GhanaHomePage/pressreleases/Afro-Arab-Microfinance-trains-staff-on-Islamic-Finance-1502294，访问于2022年11月9日。
+90. “Afro-Arab小额贷款公司对员工进行伊斯兰金融培训，”2022年3月29日，`https://www.ghanaweb.com/GhanaHomePage/pressreleases/Afro-Arab-Microfinance-trains-staff-on-Islamic-Finance-1502294`，访问于2022年11月9日。
 
 迄今为止，其他由当地非政府组织发起的伊斯兰投资计划很少受到关注。巴基斯坦银行家G.M. Shahid的非政府组织“第一伊斯兰小额贷款研究所”（First Islamic Micro Finance Institute）便是一个例子：该倡议于2019年4月发起后，其创始人声称这在加纳尚属首创，并在LinkedIn上呼吁慈善家提供支持。[91] 截至目前（2023年12月），互联网上尚未发现该倡议的进一步消息。还有一些人呼吁投资于小规模农业种植。其中包括库马西的“穆斯林准入运动”发起的“为贫困者耕种”倡议，[92]以及伊斯兰宣教秘书处在博诺东省恩科兰扎和博诺省贾曼南部的腰果种植项目。[93] 此外，总部位于阿戈戈的“扶助贫困者”组织发起了9英亩的“慈善玉米农场”，依靠志愿者的时间和精力耕种这些农场，[94]并将收成分发给社区中需要帮助的人、穷人和老人。*正义Yateem基金会*是一家总部位于埃朱拉（Ejura）的英国-加纳穆斯林非政府组织，成立于2019年，通过投资农业和运输企业为其本地孤儿支持计划筹集资金。[95]
 
-91. “‘第一伊斯兰小额贷款研究所’加纳，”2019年4月17日，https://www.linkedin.com/pulse/first-islamic-micro-finance-institute-ghana-gm-shahid?trk=public_profile_article_view，访问于2023年12月5日。
+91. “‘第一伊斯兰小额贷款研究所’加纳，”2019年4月17日，`https://www.linkedin.com/pulse/first-islamic-micro-finance-institute-ghana-gm-shahid?trk=public_profile_article_view`，访问于2023年12月5日。
 
-92. https://www.facebook.com/Mam-GreenLand-1504216166285663/，2018年6月5日、2018年6月28日，访问于2022年2月28日。2018年9月15日在库马西与穆斯林准入运动成员——Umar Muhammed、Abdul-Aziz Ishaq、Yunus Muhammad和伊玛目Mahmood Afari Yeobah——进行的集体访谈。
+92. `https://www.facebook.com/Mam-GreenLand-1504216166285663/`，2018年6月5日、2018年6月28日，访问于2022年2月28日。2018年9月15日在库马西与穆斯林准入运动成员——Umar Muhammed、Abdul-Aziz Ishaq、Yunus Muhammad和伊玛目Mahmood Afari Yeobah——进行的集体访谈。
 
-然而，我怀疑该项目已经终止；在Facebook或MAM主页（https://www.mamghonline.org/farming/，访问于2022年2月28日）上没有发现任何更新。
+然而，我怀疑该项目已经终止；在Facebook或MAM主页（`https://www.mamghonline.org/farming/`，访问于2022年2月28日）上没有发现任何更新。
 
-93. “伊斯兰宣教秘书处为300多名妇女提供技能赋权培训，”https://newsghana.com.gh/islamic-mission-secretariat-trains-over-300-women-on-skills-empowerment/，访问于2022年12月13日。
+93. “伊斯兰宣教秘书处为300多名妇女提供技能赋权培训，”`https://newsghana.com.gh/islamic-mission-secretariat-trains-over-300-women-on-skills-empowerment/`，访问于2022年12月13日。
 
-94. https://www.facebook.com/Friends-for-the-needy-223391581185564/，2019年5月14日、2019年5月16日，访问于2021年9月9日。
+94. `https://www.facebook.com/Friends-for-the-needy-223391581185564/`，2019年5月14日、2019年5月16日，访问于2021年9月9日。
+
+
 
 95. “资金”。https://justiceyateemfoundation.org/background/；待收获农田的视频，2021年7月13日，https://www.facebook.com/JusticeYateemFoundation/，访问于2022年2月28日。
 
-另一方面，ICODEHS在其主页上宣布，将向妇女发放无息贷款，以支持她们从事创收活动。[96] 该计划是一个由社区主导的妇女贷款计划，用于开展小规模项目，包括油棕种植、面包烘焙、缝纫、染色、植树以及蘑菇和蜗牛养殖。[97] 然而，可用于小额信贷的资金取决于外部捐助者为此慈善项目拨出的金额（至少卡塔尔慈善机构自2005年以来一直在资助该计划）。[98] *Al-Mumin基金会*也于2019年2月为寡妇推出了一项微型企业计划，首先捐赠了七个配备齐全的商业售货亭，并附带现金捐赠，帮助她们创业。[99] GIIBIC同样运营着一个基于盈亏分享原则、符合伊斯兰教法的小额信贷计划。2019年，该计划支持了阿散蒂和北部地区的五个农业委员会，捐赠了约150只羊作为北部地区一个牲畜委员会的投资，同时还支持了五百家中小型女性企业。[100]
+另一方面，ICODEHS在其主页上宣布，将向妇女发放无息贷款，以支持她们从事创收活动。[96] 该计划是一个由社区主导的妇女贷款计划，用于开展小规模项目，包括油棕种植、面包烘焙、缝纫、染色、植树以及蘑菇和蜗牛养殖。[97] 然而，可用于小额信贷的资金取决于外部捐助者为此慈善项目拨出的金额（至少卡塔尔慈善机构自2005年以来一直在资助该计划）。[98] `Al-Mumin基金会`也于2019年2月为寡妇推出了一项微型企业计划，首先捐赠了七个配备齐全的商业售货亭，并附带现金捐赠，帮助她们创业。[99] GIIBIC同样运营着一个基于盈亏分享原则、符合伊斯兰教法的小额信贷计划。2019年，该计划支持了阿散蒂和北部地区的五个农业委员会，捐赠了约150只羊作为北部地区一个牲畜委员会的投资，同时还支持了五百家中小型女性企业。[100]
 
 96. https://icodehs.org/services/，访问于2022年2月24日；该主页已于2024年5月失效。
 
@@ -6151,7 +6288,7 @@ Masalachi账户也对非穆斯林团体开放。例如，2022年，加纳滑板�
 
 100. 2019年12月14日在库马西对全球伊斯兰银行、保险与咨询研究所首席执行官Abdul-Muumin Saeed的访谈。
 
-总部位于库马西的*伊斯兰投资基金有限公司*自2015年10月由ASWAJ阿散蒂地区伊玛目谢赫·伊斯梅尔·赛义德博士（Sheikh Dr Ismail Saeed）创立以来，一直是头条新闻（图56）。该基金是一个符合伊斯兰教法的金融体系，旨在从穆斯林社区调动资金用于公共……
+总部位于库马西的`伊斯兰投资基金有限公司`自2015年10月由ASWAJ阿散蒂地区伊玛目谢赫·伊斯梅尔·赛义德博士（Sheikh Dr Ismail Saeed）创立以来，一直是头条新闻（图56）。该基金是一个符合伊斯兰教法的金融体系，旨在从穆斯林社区调动资金用于公共……
 
 发展和青年就业。例如，在一次发行200股的首次公开发行中，每股价值500 GHS（约81美元），基金筹集了100,000 GHS（约16,000美元），据此建立了包含其投资组合中三种最低风险工具的投资计划。其投资组合的第一部分涉及短期业务，如养牛、汽车洗车场和经济作物种植。第二部分是中期投资，尤其是在运输和商品交易方面。第三部分是长期投资于房地产开发、伊斯兰小额信贷、项目融资和风险投资。101
 
@@ -6172,11 +6309,13 @@ Masalachi账户也对非穆斯林团体开放。例如，2022年，加纳滑板�
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_475_0.png)
 
 FIGURE 56 伊斯兰投资基金有限公司。库马西总部，位于ASWAJ地区办公室旁
+
 PHOTO: HOLGER WEISS/2018
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_476_0.png)
 
 FIGURE 57 库马西的ASWAJ面包坊项目
+
 PHOTO: HOLGER WEISS/2018
 
 因此，截至2022年10月，伊斯兰投资仍在努力重启面包坊项目并使其成为盈利性企业。107 早在2019年，他们就成立了投资委员会并开展了新项目。一位阿拉伯慈善家投资钻了三口井并将其作为瓦克夫移交给组织；计划是从井中生产瓶装水出售。108 不幸的是，与面包坊项目类似，将井转变为瓦克夫的想法适得其反。伊斯兰投资秘书伊沙克·坎蒂尔将该集团的挫折归咎于委员会缺乏具备扎实商业和创业专业知识的人员。因此，他于2022年10月向我解释说，“伊斯兰投资目前不活跃。”109
@@ -6184,15 +6323,21 @@ PHOTO: HOLGER WEISS/2018
 由穆斯林非政府组织发起的最新的清真（道德）投资计划是穆斯林乌玛发展倡议（MUDI）集团的计划。起初通过引入各种投资模式，如MUDI Farms（腰果、大豆、牲畜养殖），110 MUDI Kiddie Invest和MUDI Hajj-Umra Services Ltd，于2019年成立了MUDI多用途合作社有限公司。运营于阿克拉、库马西和塔马利，其目的是汇集其成员的贡献，使他们能够从资金池中获得资金而无需支付贷款利息。111 参与MUDI集团的方式要么是作为股东加入，要么是作为投资者；前者成为MUDI Farms Ltd（图58）和MUDI HajjUmra Services Ltd的部分所有者。后者收购一英亩或多英亩的腰果农场，由MUDI管理；三年后的利润在扣除包括税款和天课在内的所有费用后按比例与MUDI分享。112
 
 105 "STOLEN TRICYCLE!! (ABOBOYAA)", 2017年5月20日，https://www.facebook.com/pg/sakafiyagovshs/posts/，访问于2019年5月13日。
+
 106 对ASWAJ阿散蒂地区天课、瓦克夫和萨达卡基金协调员艾哈迈德·穆萨的访谈，库马西，2019年4月5日。
+
 107 对伊斯兰投资有限公司秘书伊沙克·坎蒂尔的访谈，库马西，2022年10月12日。
+
 108 对伊斯兰投资有限公司秘书伊沙克·坎蒂尔的访谈，库马西，2019年12月12日。有趣的是，谢赫乌马尔·易卜拉欣·伊玛目曾于2003年发起过一个类似的瓶装水项目，该项目持续了几年；参见Weiss，《Begging and Almsgiving in Ghana》，第143页。
+
 109 对伊斯兰投资有限公司秘书伊沙克·坎蒂尔的访谈，库马西，2019年12月12日。
 
 最最近的清真（道德）投资计划由穆斯林非政府组织发起，是穆斯林乌玛发展倡议（MUDI）集团的计划。起初通过引入各种投资模式，如MUDI Farms（腰果、大豆、牲畜养殖），110 MUDI Kiddie Invest和MUDI Hajj-Umra Services Ltd，于2019年成立了MUDI多用途合作社有限公司。运营于阿克拉、库马西和塔马利，其目的是汇集其成员的贡献，使他们能够从资金池中获得资金而无需支付贷款利息。111 参与MUDI集团的方式要么是作为股东加入，要么是作为投资者；前者成为MUDI Farms Ltd（图58）和MUDI HajjUmra Services Ltd的部分所有者。后者收购一英亩或多英亩的腰果农场，由MUDI管理；三年后的利润在扣除包括税款和天课在内的所有费用后按比例与MUDI分享。112
 
 110 MUDI已在博诺东区阿特布图收购了一块2,195英亩的土地用于腰果种植、大豆、水稻和牲畜饲养。
+
 111 海报及活动通知：穆斯林合作社概念介绍，2020年7月8日；海报：MUDI Ghana：农业投资、朝觐-副朝及穆斯林合作社概念，2020年12月27日，https://www.facebook.com/MUDIGHANA/?ref=page_internal，访问于2022年2月22日。
+
 112 “如何投资MUDI”，https://mudighana.com/how-to-invest-in-mudi/，访问于2022年2月22日。（2022年主页。）
 
 #### MUDI 腰果投资
@@ -6220,12 +6365,15 @@ MUDI Farms Ltd.是MUDI集团的子公司，正在寻求在2,195英亩土地上�
 ##### 找到我们
 
 **ACCRA OFFICE:** GNPA大楼，毗邻ATTC，科科姆勒-阿克拉
+
 0244470505 / 0241444616
 
 **KUMASI OFFICE:** 阿萨瓦塞新市场，奥德托比农村银行对面
+
 0559533113 / 0241444616
 
 **TAMALE OFFICE:** Airtel-Tigo办公室对面，靠近加纳银行 - 塔马利
+
 0244901575
 
 mudiboard@gmail.com / info@mudighana.com / www.mudighana.com
@@ -6233,8 +6381,6 @@ mudiboard@gmail.com / info@mudighana.com / www.mudighana.com
 FIGURE 58 MUDI Farms Ltd. 关于MUDI腰果投资的传单，MUDI Farms Ltd的一个项目
 
 AUTHOR’S COLLECTION
-
-
 
 关于其持股。除了提供无息贷款外，该协会还可以帮助会员进行家庭采购并参与联合购买土地房产以转售给会员。它还设有朝觐投资计划，通过定期分期付款帮助会员积累资金用于履行朝觐或副朝，同时还有 Kiddie Invest，这是一项基金，用于照顾儿童的未来并在会员子女中培养储蓄和投资文化。113 最后，在 2021 年 7 月，MUDI 推出 MUDI 清真投资博览会，以提高穆斯林投资者对无息和道德投资的认识。博览会计划于 2022 年 1 月举行，旨在为穆斯林企业家创建一个平台，向穆斯林和非穆斯林展示道德产品和服务。114
 
@@ -6254,7 +6400,9 @@ AUTHOR’S COLLECTION
 
 然而，二十世纪最后几十年伊斯兰经济学的发展导致了关于瓦克夫的讨论复兴。在这种讨论的推动下，瓦克夫成为主流伊斯兰金融话语不可或缺的一部分，被誉为解决当代穆斯林社会社会经济问题的替代方案。118 其在全球范围内的重新出现是伊斯兰开发银行于 2001 年建立世界瓦克夫基金会。119 此后，关于瓦克夫的研究大大增加，引入了现金瓦克夫、120 瓦克夫众筹模式、121 甚至全球现金瓦克夫的提案。122
 
-瓦克夫的复兴在穆斯林少数群体国家也是一个值得注意的现象。一个有趣的案例是缅甸曼德勒于 2009 年建立的 Myint Myat Phy Zin 诊所，可作为本章前几章概述的加纳正在进行的各种伊斯兰医院项目的模式。它是该国第一家伊斯兰诊所，由穆斯林的 *天课* 和 *施舍* 捐赠以及非穆斯林的慈善捐赠资助；其创始人将诊所建在其上的土地捐赠为 *瓦克夫*。[123] 这与各种国际穆斯林非政府组织（无论是西方还是非西方）的策略相平行，他们呼吁其成员和捐助者投资于 *持续施舍*，定义为无尽、持续或循环的慈善。“从技术上讲，萨达卡·贾里亚属于伊斯兰法律范畴中的瓦克夫，或捐赠，”美国天课基金会在其主页上指出。[124] “萨达卡·贾里亚项目是那些长期支持受助者和后代的项目，从而为捐助者带来持续的回报，”英国非政府组织穆斯林慈善组织强调。[125] “萨达卡·贾里亚将使受助者受益不止一次，而且那件善事甚至在你死后仍会继续回报你，”英国非政府组织穆斯林之手保证。[126] 最终，*持续施舍* 的概念根植于先知穆罕默德的传统（“把它作为捐赠并将其收益作为慈善[另译：为真主之道]”），并在正典汇编的几部圣训中有所阐述，例如《布哈里圣训实录》、[127]《布鲁格·马拉姆》、[128] 和《伊本·马贾》。[129] 基于这些圣训，穆斯林学者宣布，为建造清真寺、医院和孤儿院、钻井或种植树木捐款被视为 *持续施舍*，同样，将房屋或场所设计为 *瓦克夫* 使其收入用于穷人、孤儿、亲属（在家庭 *瓦克夫* 的情况下）以及求知者，也被视为 *持续施舍*。[130]
+瓦克夫的复兴在穆斯林少数群体国家也是一个值得注意的现象。一个有趣的案例是缅甸曼德勒于 2009 年建立的 Myint Myat Phy Zin 诊所，可作为本章前几章概述的加纳正在进行的各种伊斯兰医院项目的模式。它是该国第一家伊斯兰诊所，由穆斯林的 `天课` 和 `施舍` 捐赠以及非穆斯林的慈善捐赠资助；其创始人将诊所建在其上的土地捐赠为 `瓦克夫`。[123] 这与各种国际穆斯林非政府组织（无论是西方还是非西方）的策略相平行，他们呼吁其成员和捐助者投资于 `持续施舍`，定义为无尽、持续或循环的慈善。“从技术上讲，萨达卡·贾里亚属于伊斯兰法律范畴中的瓦克夫，或捐赠，”美国天课基金会在其主页上指出。[124] “萨达卡·贾里亚项目是那些长期支持受助者和后代的项目，从而为捐助者带来持续的回报，”英国非政府组织穆斯林慈善组织强调。[125] “萨达卡·贾里亚将使受助者受益不止一次，而且那件善事甚至在你死后仍会继续回报你，”英国非政府组织穆斯林之手保证。[126] 最终，`持续施舍` 的概念根植于先知穆罕默德的传统（“把它作为捐赠并将其收益作为慈善[另译：为真主之道]”），并在正典汇编的几部圣训中有所阐述，例如《布哈里圣训实录》、[127]《布鲁格·马拉姆》、[128] 和《伊本·马贾》。[129] 基于这些圣训，穆斯林学者宣布，为建造清真寺、医院和孤儿院、钻井或种植树木捐款被视为 `持续施舍`，同样，将房屋或场所设计为 `瓦克夫` 使其收入用于穷人、孤儿、亲属（在家庭 `瓦克夫` 的情况下）以及求知者，也被视为 `持续施舍`。[130]
+
+
 
 117 Muhammad Tariq Khan, “伊斯兰瓦克夫在穆斯林社会减贫中的历史作用,” The Pakistan Development Review 54, no. 4 (2015): 979–996; Muhamed Zulkhibri, “穆斯林国家瓦克夫土地和财产开发的性质,” in 《金融包容与贫困缓解：伊斯兰机构与工具的视角》, eds. Muhamed Zulkhibri, and Abdul Ghafar Ismail (Cham: Palgrave Macmillan/Springer International Publishing, 2017), 271–283; S. Atuman Chembea, “通过瓦克夫在肯尼亚协商穆斯林-基督教关系，1900–2010,” Islam and Christian-Muslim Relations 28, no. 4 (2017): 431–451.
 
@@ -6284,18 +6432,18 @@ AUTHOR’S COLLECTION
 
 130 See, for example, "什么是持续施舍（持续慈善）?" https://islamqa.info/en/answers/12236/what-is-sadaqah-jariyah-ongoing-charity, 访问于 28.2.2022.
 
+从穆斯林捐赠者的角度来看，任何由穆斯林非政府组织发起的清真寺、教育、卫生或水项目都可能成为`持续施舍`。如上所述，从技术上讲，它们类似于宗教捐赠或`卧格夫`，尽管很少有非政府组织在其主页上宣称建立了彻底的宗教捐赠。这很可能与现代国家法律、私人财产权、（殖民和后殖民）国家对`卧格夫`规范实践的干涉，以及穆斯林和非穆斯林国家中永久捐赠的建立有关。在加纳，在印尼的Global Waqaf-ACT到来之前，由外部穆斯林捐赠者资助的众多清真寺或水井中，没有一座被委托为`卧格夫`项目，直到2021年该组织宣布在阿散蒂地区建造所谓的`卧格夫`水井。131
 
+该印尼非政府组织的参与与美国Az-Zaituna学院的活动类似，后者于2021年秋季为加纳参与者举办了八场关于卧格夫管理的豪萨语网络研讨会。132 2022年1月初，它与当地合作方乌玛卧格夫基金会（Ummah Waqf Fund）和努里耶卧格夫农业企业（Nuriyah Waqf Agribusiness）一起，通过Zoom启动了一个定向项目，标题为“`卧格夫`制度及其对加纳乌玛社会经济发展的潜力”。133
 
-
-从穆斯林捐赠者的角度来看，任何由穆斯林非政府组织发起的清真寺、教育、卫生或水项目都可能成为*持续施舍*。如上所述，从技术上讲，它们类似于宗教捐赠或*卧格夫*，尽管很少有非政府组织在其主页上宣称建立了彻底的宗教捐赠。这很可能与现代国家法律、私人财产权、（殖民和后殖民）国家对*卧格夫*规范实践的干涉，以及穆斯林和非穆斯林国家中永久捐赠的建立有关。在加纳，在印尼的Global Waqaf-ACT到来之前，由外部穆斯林捐赠者资助的众多清真寺或水井中，没有一座被委托为*卧格夫*项目，直到2021年该组织宣布在阿散蒂地区建造所谓的*卧格夫*水井。131
-
-该印尼非政府组织的参与与美国Az-Zaituna学院的活动类似，后者于2021年秋季为加纳参与者举办了八场关于卧格夫管理的豪萨语网络研讨会。132 2022年1月初，它与当地合作方乌玛卧格夫基金会（Ummah Waqf Fund）和努里耶卧格夫农业企业（Nuriyah Waqf Agribusiness）一起，通过Zoom启动了一个定向项目，标题为“*卧格夫*制度及其对加纳乌玛社会经济发展的潜力”。133
-
-显然，这两个组织的活动是巧合，且至少卧格夫管理网络研讨会的当地组织者并不知道，除Ahlus-Sunna Wal-Jama'a（ASWAJ）的卧格夫基金会外，加纳还存在任何其他*卧格夫*组织，详见下文。然而，尽管ASWAJ项目有时成为头条新闻，但它并不是唯一现存的*卧格夫*项目。*加纳伊斯兰教育与社会改革协会*（GISER）捐赠基金于2006年和2011年在阿克拉的马迪纳建造了二十家商店；这些*卧格夫*的租金收入用于资助阿克拉的马迪纳伊斯兰学校（MIS）。134 *加纳穆斯林传道会*（GMM）有四个所谓的社会干预项目，包括捐赠基金、遗孀与孤儿基金、教育与健康基金以及创业基金。这些项目主要通过内部产生的捐款和每月会员费来资助。135 至少GMM在贝波索的医院和库马西的Asumpa面包店已被确立为卧格夫。136 GMM的其他投资涉及瓶装水生产和出租给小企业家的售货亭。137 2023年，GMM大阿克拉分部启动了一项筹款计划，计划在大阿克拉地区的萨姆萨姆建立一家新的水制造公司。这家公司同样被设想为向该传道会提供收入。138
+显然，这两个组织的活动是巧合，且至少卧格夫管理网络研讨会的当地组织者并不知道，除Ahlus-Sunna Wal-Jama'a（ASWAJ）的卧格夫基金会外，加纳还存在任何其他`卧格夫`组织，详见下文。然而，尽管ASWAJ项目有时成为头条新闻，但它并不是唯一现存的`卧格夫`项目。`加纳伊斯兰教育与社会改革协会`（GISER）捐赠基金于2006年和2011年在阿克拉的马迪纳建造了二十家商店；这些`卧格夫`的租金收入用于资助阿克拉的马迪纳伊斯兰学校（MIS）。134 `加纳穆斯林传道会`（GMM）有四个所谓的社会干预项目，包括捐赠基金、遗孀与孤儿基金、教育与健康基金以及创业基金。这些项目主要通过内部产生的捐款和每月会员费来资助。135 至少GMM在贝波索的医院和库马西的Asumpa面包店已被确立为卧格夫。136 GMM的其他投资涉及瓶装水生产和出租给小企业家的售货亭。137 2023年，GMM大阿克拉分部启动了一项筹款计划，计划在大阿克拉地区的萨姆萨姆建立一家新的水制造公司。这家公司同样被设想为向该传道会提供收入。138
 
 135 http://www.ghanamuslimmission.com/projects.html，访问于2019年5月22日。
+
 136 与GMM全国主席谢赫·阿明·邦苏博士访谈，库马西，2017年12月10日。
+
 137 与GMM全国主席谢赫·阿明·邦苏博士访谈，阿克拉，2022年10月13日。
+
 138 Hafsa Obeng，“加纳穆斯林传道会大阿克拉分部举办第十五届年会，”2023年7月12日，https://gna.org.gh/2023/07/ghana-muslim-mission-greater-accra-branch-launches-15th-annual-conference/，访问于2023年12月5日。
 
 Ahlus-Sunna的全国伊玛目谢赫·奥马尔·易卜拉欣·伊玛目，一直是加纳引入卧格夫的最热心倡导者之一。2005年，他设立了一个捐赠基金，即Al-Waqf捐赠基金，同时还有“你也可以建造有限公司”（图59），后者专注于宗戈斯的房地产开发。139 由于这些计划进展缓慢，他于2009年12月（重新）启动了Ahlussunna Wal Jama’a卧格夫（捐赠）基金。2010年初，该基金的一个分支由谢赫·苏莱曼·艾哈迈德·莫祖（ASWAJ西部地区伊玛目）在塔科拉迪设立，他恳请穆斯林向该基金投资一加纳塞地，为期五年。140 其他分支同时在库马西和博尔加坦加建立，141 这表明卧格夫基金具有分散化和区域性的结构。
@@ -6303,8 +6451,11 @@ Ahlus-Sunna的全国伊玛目谢赫·奥马尔·易卜拉欣·伊玛目，一直
 谢赫·奥马尔·易卜拉欣·伊玛目的愿景是创建一个互惠的慈善卧格夫；142 其募集资金的80%用于未来投资，15%用于委托收款人，5%用于行政管理。
 
 139 参见Weiss，《加纳的乞讨与施舍》，142-143页。
+
 140 “穆斯林捐赠基金在塔科拉迪启动”，2010年2月28日，https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Muslim-Endowment-Fund-launched-at-Takoradi-177584，访问于2019年5月20日。
+
 141 “基金会促进阿散蒂青年教育”，2010年2月16日，https://www.businessghana.com/site/news/general/104599/Foundation-to-promote-education-among-Ashanti-youth，访问于2019年5月20日；“ASWAJ穆斯林在上东部地区启动捐赠基金”，2010年2月9日，https://www.google.com/search?client=safari&rls=en&q=%27ASWAJ+Moslems+launches+endowment+fund+in+Upper+East%27&ie=UTF-8&oe=UTF-8，访问于2019年5月20日。
+
 142 https://www.facebook.com/aswajwaqffoundation.garghana，2011年3月31日，访问于2022年2月3日。
 
 ##### 你也可以建造有限公司
@@ -6314,28 +6465,30 @@ Ahlus-Sunna的全国伊玛目谢赫·奥马尔·易卜拉欣·伊玛目，一直
 在此向您介绍首家真正关心宗戈居民利益的房地产开发商。
 
 电话：240911 或 020-8120510
+
 邮政信箱 NM 99，尼马-阿克拉
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_486_0.png)
 
-**图60** ASWAJ卧格夫基金会宿舍项目。谢赫·奥马尔·易卜拉欣·伊玛目向作者展示的前景  
+`图60` ASWAJ卧格夫基金会宿舍项目。谢赫·奥马尔·易卜拉欣·伊玛目向作者展示的前景
+
 **摄影：霍尔格·魏斯/2019**
 
-将这块土地指定为*卧格夫*。捐赠的目标和宗旨首先是建造房屋用于出租，并利用收入资助穆斯林学者深造，同时通过建设学校、清真寺、水井和诊所来提高宗戈社区的生活水平。然而，进展甚微，多年来整个项目看起来已被搁置。^148 数年后，一位评论员对整个举措大加批评，并询问普通穆斯林每月向该基金捐赠的钱去了哪里。在他看来，卧格夫基金未能实现其目标和宗旨；从未建造过任何宿舍、学校、清真寺或水井。然而，他的主要批评是卧格夫基金缺乏透明度、协同性和问责制，并将其归咎于资源管理不善：“这种卧格夫制度不过是披着羊皮的豺狼。”^149
+将这块土地指定为`卧格夫`。捐赠的目标和宗旨首先是建造房屋用于出租，并利用收入资助穆斯林学者深造，同时通过建设学校、清真寺、水井和诊所来提高宗戈社区的生活水平。然而，进展甚微，多年来整个项目看起来已被搁置。^148 数年后，一位评论员对整个举措大加批评，并询问普通穆斯林每月向该基金捐赠的钱去了哪里。在他看来，卧格夫基金未能实现其目标和宗旨；从未建造过任何宿舍、学校、清真寺或水井。然而，他的主要批评是卧格夫基金缺乏透明度、协同性和问责制，并将其归咎于资源管理不善：“这种卧格夫制度不过是披着羊皮的豺狼。”^149
 
 148 艾哈迈德·阿尔哈桑，“Ahlussunna Wal-jama'a捐赠基金在哪里？” 2016年6月15日，https://www.ghanawab.com/GhanaHomePage/features/Where-is-the-Ahlussunna-Wal-jama-a-endowment-fund-455108，访问于2017年11月8日。
+
 149 艾哈迈德·阿尔哈桑，“Ahlussunna Wal-jama'a捐赠基金在哪里？” 2016年7月15日，https://www.ghanawab.com/GhanaHomePage/features/Where-is-the-Ahlussunna-Wal-jama-a-endowment-fund-455108，访问于2019年5月20日。
 
 ![](img/2ddf018ff5f5842e4fd5ba53f93c058a_487_0.png)
 
 图61 ASWAJ卧格夫基金会捐款券
+
 作者收藏
 
 谢赫·奥马尔·易卜拉欣·伊玛目反过来也没有对他的项目失去希望。150 2018年5月，阿克拉的伊斯兰社区事务中心为伊斯兰捐赠与教育项目（IEEP）发起了一项筹款活动。151 结果，宿舍项目开始成形，并计划于2020年底投入使用。152
 
 ASWAJ阿散蒂地区卧格夫基金（图61）面临与谢赫·奥马尔·易卜拉欣在阿克拉的举措类似的挑战。在开局顺利之后，ASWAJ阿散蒂地区卧格夫基金的捐款不断减少，不久便完全停止运作。然而，地区伊玛目并没有最终终止该项目，而是责成卧格夫委员会将其恢复。卧格夫委员会随后于2013年对该卧格夫基金的财务资产和账目进行了彻底调查。调查报告一定令人震惊：卧格夫委员会查出了480本收据簿，但只有335本被提交以
-
-
 
 核查与评估。由于部分收款人未将所有小册子提交给Waqf委员会核查，因此无法核实捐款人总数。此外，已完成一轮募捐者所获证书的数量也无法核实，因为证书是在地区伊玛目办公室印刷和发放的，且没有记录可查。更糟的是，并非所有收款人都已将其全部收款存入Waqf账户。截至2013年5月31日，该账户总余额为43,834.55加纳塞地（约7,100美元）。153
 
@@ -6361,13 +6514,15 @@ ASWAJ学者和伊玛目们长达数十年的关于将waqf作为增强穆斯林�
 
 158 采访ASWAJ阿散蒂地区首席地区伊玛目谢赫·伊斯梅尔·赛义德·亚当博士，库马西，2017年2月27日。
 
+
+
 159 采访ASWAJ阿散蒂地区首席地区伊玛目谢赫·伊斯梅尔·赛义德·亚当博士，库马西，2019年4月5日；采访ASWAJ阿散蒂地区天课、Waqf和施舍基金协调员艾哈迈德·穆萨，库马西，2019年4月5日。关于合并各种伊斯兰社会发展计划的可行性的一般性讨论，见Mohamed Yusri bin Yusuf, “Trust Fund: A Product Combining Waqf, Zakah and Sadaqah for Socio-Economic Agenda,” *Journal of King Abdulaziz University: Islamic Economics*, King Abdulaziz University, Islamic Economics Institute 27, no. 1 (2014): 101–121。
 
 160 详见第5.3.3章。
 
 161 采访ASWAJ阿散蒂地区天课、Waqf和施舍基金协调员艾哈迈德·穆萨，库马西，2019年4月6日。
 
-162 “Muslims urged to register on to Waqf fund,” 2021年7月21日，https://newsghana.com.gh/muslims-urged-to-register-on-to-waqf-fund/，访问于2022年2月28日。
+162 “Muslims urged to register on to Waqf fund,” 2021年7月21日，`https://newsghana.com.gh/muslims-urged-to-register-on-to-waqf-fund/`，访问于2022年2月28日。
 
 ## 结论反思
 
@@ -6377,10 +6532,7 @@ ASWAJ学者和伊玛目们长达数十年的关于将waqf作为增强穆斯林�
 
 与第一代和第二代不同，第三代穆斯林非政府组织由各种基层和青年组织组成。它们成立于2010年代，都是“互联网时代”和“脸书一代”的独特非政府组织。最重要的是，它们的存在生动地表明了加纳穆斯林中产阶级的兴起。它们的一个显著标志是相对于外国捐助者的独立地位。它们通过社交媒体，尤其是脸书，以及日益增长的Instagram、Twitter、WhatsApp和YouTube，开展动员、宣传、网络建设、筹款活动/众筹和外联活动。对它们而言，自我赋权是一个多层面的社会过程。它至多能增强它们行动的能力，转变社会（包括性别）、经济和政治结构，以及组织起来减少贫困、社会不公和环境退化。
 
-我的调查始于一个问题：天课能否作为增强加纳穆斯林社区权能的工具？我采访过的所有学者对此都表示肯定，但同时指出国家有义务照顾其公民的社会福利。归根结底在于
-
-
-贫穷和弱势群体——是国家还是当地社区来提供必需品？虽然在北欧和一些西欧国家，政府资助的社会福利体系一直是理所当然的，但“强国家”的理念自20世纪70年代末以来受到新自由主义的攻击，导致推动“弱国家”，尤其是在全球南方，但日益也在全球北方。与引入“弱”或“小”国家相一致的是1990年代“公民社会”的兴起，这一发展在加纳也有体现。公民社会以及非政府协会和组织取代了“强国家”成为社会福利的提供者，通常以社区和地方层面组织，并经常与国家和国际非政府组织密切合作并获得其财政援助。反过来，国家仍然是基本基础设施的提供者。
+我的调查始于一个问题：天课能否作为增强加纳穆斯林社区权能的工具？我采访过的所有学者对此都表示肯定，但同时指出国家有义务照顾其公民的社会福利。归根结底在于贫穷和弱势群体——是**国家还是当地社区**来提供必需品？虽然在北欧和一些西欧国家，政府资助的社会福利体系一直是理所当然的，但“强国家”的理念自20世纪70年代末以来受到新自由主义的攻击，导致推动“弱国家”，尤其是在全球南方，但日益也在全球北方。与引入“弱”或“小”国家相一致的是1990年代“公民社会”的兴起，这一发展在加纳也有体现。公民社会以及非政府协会和组织取代了“强国家”成为社会福利的提供者，通常以社区和地方层面组织，并经常与国家和国际非政府组织密切合作并获得其财政援助。反过来，国家仍然是基本基础设施的提供者。
 
 在大多数情况下，包括加纳，这仅限于市政规划以及道路、排水和污水系统的建设。有时包括水电，住房通常不包括。政府提供教育和医疗保健，包括学校和医院，至少在初级水平上。然而，在许多情况下，私营行为者和组织在加纳发挥着至关重要的作用。近年来，加纳政府甚至开始为宗戈社区的发展拨款，宗戈发展基金（est. 2017）。该倡议的理由是国家与公民社会之间的合作，特别是地方、区域和国家各级各种穆斯林利益相关者。一些穆斯林学者和专家称赞该倡议是解决边缘化（穆斯林）城市社区的正确一步，并呼吁穆斯林非政府组织寻求与政府机构合作的途径。另一些人则对宗戈发展基金在微观层面促进赋权或解决非正规部门从业者特殊需求的能力表示担忧，认为引入伊斯兰金融工具才是最能抵消边缘化的解药。
 
@@ -6395,6 +6547,7 @@ ASWAJ学者和伊玛目们长达数十年的关于将waqf作为增强穆斯林�
 此外，社交媒体为问责制和透明度提供了新的手段。许多非政府组织会发布特定项目进展和完成的更新和通知；有些会在社交媒体上发布计划、证书和月度筹款声明。这些数据不仅仅是信息；它是与成员和捐助者、现有和潜在未来的捐助者之间的对话和沟通的一部分。
 
 加纳穆斯林非政府组织在过去十年中开辟了其活动的新领域。最初，其主要运作领域集中在四个方面，即建设：
+
 - 清真寺
 - 宗教学校和教育设施
 - 打井和钻取水井
@@ -6406,10 +6559,7 @@ ASWAJ学者和伊玛目们长达数十年的关于将waqf作为增强穆斯林�
 
 穆斯林非政府组织的另一个新领域是孤儿和残疾人。这两组人传统上从其大家庭和穆斯林学者及伊玛目那里获得救济和支持。互联网时代的新事物是穆斯林非政府组织为孤儿和残疾人运营月度奖学金计划。反过来，随着穆斯林非政府组织开始关注其需求，穆斯林孤儿院的可见度成倍增加。有趣且新颖的举措是为穆斯林聋哑和盲童设立的特殊学校。
 
-也许穆斯林非政府组织最引人注目的活动是其年度人道主义援助活动和外展项目。开斋饭、开斋节庆祝活动以及在宰牲节为贫困和有需要成员宰杀牲畜构成了伊斯兰宗教义务的不可分割的一部分，也构成了加纳穆斯林领域的不可分割的一部分（以及穆斯林世界其他地方）。然而，随着加纳政府在20世纪90年代初承认两个穆斯林节日，斋月和两个开斋节已成为公共领域的一部分。虽然尚无关于与斋月和开斋节活动相关的调查
-
-
-在加纳，本研究表明，2010年代期间发生了一种变化，并且与该十年间加纳穆斯林非政府组织的激增相关。未来的系统性研究将验证或反驳我的假设，尽管此前各章所呈现的定性数据似乎表明，这种变化早在2010年代末就已开始，并在2020年和2021年的新冠疫情期间进一步扩大。
+也许穆斯林非政府组织最引人注目的活动是其年度人道主义援助活动和外展项目。开斋饭、开斋节庆祝活动以及在宰牲节为贫困和有需要成员宰杀牲畜构成了伊斯兰宗教义务的不可分割的一部分，也构成了加纳穆斯林领域的不可分割的一部分（以及穆斯林世界其他地方）。然而，随着加纳政府在20世纪90年代初承认两个穆斯林节日，斋月和两个开斋节已成为公共领域的一部分。虽然尚无关于与斋月和开斋节活动相关的调查在加纳，本研究表明，2010年代期间发生了一种变化，并且与该十年间加纳穆斯林非政府组织的激增相关。未来的系统性研究将验证或反驳我的假设，尽管此前各章所呈现的定性数据似乎表明，这种变化早在2010年代末就已开始，并在2020年和2021年的新冠疫情期间进一步扩大。
 
 穆斯林非政府组织在加纳是一种城市现象。它们大多位于阿克拉、库马西和塔马利，并将注意力投向城市和宗戈（Zongo）社区。其中少数组织以宣教（da'wa）和宗教学校（madrasa）项目或人道主义援助项目的形式开展农村外展项目。迄今为止，没有任何一个组织提出针对农村农业社区特殊社会经济和环境需求的概念或方案。这是所有穆斯林非政府组织——无论是地方性、全国性还是国际性——的一个空白。除了在农村社区钻井和建造机械化钻孔井之外，针对其特殊需求的创收活动一直付诸阙如。这一点值得注意，因为超过一半的穆斯林人口生活在农村社区，其中大多数居住在该国北部地区的热带草原地带。穆斯林非政府组织未来的挑战将是把农村社区纳入其增强加纳穆斯林社区权能的雄心之中，并帮助穆斯林农村社区组建自己的非政府组织，与国内和国际捐助者建立联系。
 
@@ -6422,27 +6572,30 @@ ASWAJ学者和伊玛目们长达数十年的关于将waqf作为增强穆斯林�
 | 名称 | 缩写 | 总部所在地 | 成立年份 | 主页 | Facebook |
 |---|---|---|---|---|---|
 | Abdul Rahman Abdul Aziz Foundation |  | Accra |  | n.a. | n.a. |
-| Abdul-Aziz Charitable and Humanitarian Foundation** | TACAHF | Accra |  | https://tacahf.org/index.php | n.a. |
-| Accra-Tudu Faila Youth |  | Accra |  | n.a. | https://www.facebook.com/people/Accra-Tudu-FAILA-YOUTH/100068034091569/?paipv=0&eav=Afbdlog8DRFgjoye4QZqpFBLM7_PqBtFHWFGwVz5LOADBnITq9y3Qgfajg8jDUXc&_rdr |
-| Achiase Islamic Youth | AIY | Amoam Achiase (AR) |  | n.a. | https://www.facebook.com/people/Achiasi-Islamic-Youth-AIY/100077054047192/ |
-| Achievers Ghana** |  | Accra | 2012 | https://achieversghana.org/ | https://www.facebook.com/theachieversghana/ |
-| Act Right Foundation** |  | Weija |  | n.a. | https://www.facebook.com/ACT-RIGHT-Foundation-1828877037194994/ |
-| Adabiyya Islamic Society | AIS | Goaso | 1996 | n.a. | https://www.facebook.com/aisorphanagegh/ |
-| Adansi Islamic Institute |  | Adansi | 2009 | n.a. | https://www.facebook.com/profile.php?id=100057608792402 |
-| ADIL for Development | AAFD | Kumasi |  | n.a. | https://www.facebook.com/profile.php?id=100068781525454 |
-| Advanced Ladies in Faith Foundation | ALIFF | Kumasi | 2020 | n.a. | https://www.facebook.com/Aliffghana/ |
-| Advocates for Community Development | ACDEV | Tamale | 2017 | n.a. | https://www.facebook.com/ACDEVTAMALE/ |
+| Abdul-Aziz Charitable and Humanitarian Foundation** | TACAHF | Accra |  | `https://tacahf.org/index.php` | n.a. |
+| Accra-Tudu Faila Youth |  | Accra |  | n.a. | `https://www.facebook.com/people/Accra-Tudu-FAILA-YOUTH/100068034091569/?paipv=0&eav=Afbdlog8DRFgjoye4QZqpFBLM7_PqBtFHWFGwVz5LOADBnITq9y3Qgfajg8jDUXc&_rdr` |
+| Achiase Islamic Youth | AIY | Amoam Achiase (AR) |  | n.a. | `https://www.facebook.com/people/Achiasi-Islamic-Youth-AIY/100077054047192/` |
+| Achievers Ghana** |  | Accra | 2012 | `https://achieversghana.org/` | `https://www.facebook.com/theachieversghana/` |
+| Act Right Foundation** |  | Weija |  | n.a. | `https://www.facebook.com/ACT-RIGHT-Foundation-1828877037194994/` |
+| Adabiyya Islamic Society | AIS | Goaso | 1996 | n.a. | `https://www.facebook.com/aisorphanagegh/` |
+| Adansi Islamic Institute |  | Adansi | 2009 | n.a. | `https://www.facebook.com/profile.php?id=100057608792402` |
+| ADIL for Development | AAFD | Kumasi |  | n.a. | `https://www.facebook.com/profile.php?id=100068781525454` |
+| Advanced Ladies in Faith Foundation | ALIFF | Kumasi | 2020 | n.a. | `https://www.facebook.com/Aliffghana/` |
+| Advocates for Community Development | ACDEV | Tamale | 2017 | n.a. | `https://www.facebook.com/ACDEVTAMALE/` |
 | Aflao Muslims Women Educational Association** |  | Aflao |  | n.a. | n.a. |
-| Africa Center for the Advancement of Islamic Law and Policy |  | Accra |  | n.a. | https://www.facebook.com/people/Africa-Center-for-the-Advancement-of-Islamic-Law-and-Policy/100065955487279/ |
-| Africa Islamic Economic Foundation | AFRIEF | Tamale | 2013 | https://afrief.org/ | https://www.facebook.com/AFRIEFOUNDATION |
+| Africa Center for the Advancement of Islamic Law and Policy |  | Accra |  | n.a. | `https://www.facebook.com/people/Africa-Center-for-the-Advancement-of-Islamic-Law-and-Policy/100065955487279/` |
+| Africa Islamic Economic Foundation | AFRIEF | Tamale | 2013 | `https://afrief.org/` | `https://www.facebook.com/AFRIEFOUNDATION` |
 | African Islamic Heritage Foundation**2 | AIHF | Tamale | 2009 | n.a. | n.a. |
-| Ahkwaat G Foundation |  | Accra | 2018 | n.a. | https://www.facebook.com/profile.php?id=10006757585634 |
-| Ahinsan Jihad Muslim Youth Association |  | Ahinsan |  | n.a. | https://www.facebook.com/people/Ahinsan-Jihad-Muslim-Youth-Association/100071402761354/ |
-| Ahlulbayt mission Bolga |  | Bolgatanga |  | n.a. | https://www.facebook.com/people/Ahlulbayt-mission-Bolga/100080312597528/?paipv=0&eav=Afa_7RaJ6TuTvTQho7IrhMk-GZYLi-yhqXW-bUTZ502w10-Mb6QtNDFMVdmowlADWfo&_rdr |
-| Ahlusunnah Youth Association |  | Accra |  | n.a. | https://www.facebook.com/people/Ahlusunnah-Youth-Association/100067675961820/ |
-| Ahwiaa Zongo Development | AZ Nation | Kumasi |  | n.a. | https://www.facebook.com/profile.php?id=100069663498971 |
-| Aid Global Organization | A.I.D. | Tamale | 2018 | n.a. | https://www.facebook.com/people/AID-Global-organization/100070153927985/ |
-| Akyekyere Muslim Youth Association | AMYA | Akyekyere |  | n.a. | https://www.facebook.com/profile.php?id=100065067908127&paipv=0&eav=AfbuyOLQ9NZr81lqfvCKv9V_yZrrXlo8fHlY27M6OVABonStx9ja5FupkyRJGM-fE |
+| Ahkwaat G Foundation |  | Accra | 2018 | n.a. | `https://www.facebook.com/profile.php?id=10006757585634` |
+| Ahinsan Jihad Muslim Youth Association |  | Ahinsan |  | n.a. | `https://www.facebook.com/people/Ahinsan-Jihad-Muslim-Youth-Association/100071402761354/` |
+| Ahlulbayt mission Bolga |  | Bolgatanga |  | n.a. | `https://www.facebook.com/people/Ahlulbayt-mission-Bolga/100080312597528/?paipv=0&eav=Afa_7RaJ6TuTvTQho7IrhMk-GZYLi-yhqXW-bUTZ502w10-Mb6QtNDFMVdmowlADWfo&_rdr` |
+| Ahlusunnah Youth Association |  | Accra |  | n.a. | `https://www.facebook.com/people/Ahlusunnah-Youth-Association/100067675961820/` |
+| Ahwiaa Zongo Development | AZ Nation | Kumasi |  | n.a. | `https://www.facebook.com/profile.php?id=100069663498971` |
+| Aid Global Organization | A.I.D. | Tamale | 2018 | n.a. | `https://www.facebook.com/people/AID-Global-organization/100070153927985/` |
+| Akyekyere Muslim Youth Association | AMYA | Akyekyere |  | n.a. | `https://www.facebook.com/profile.php?id=100065067908127&paipv=0&eav=AfbuyOLQ9NZr81lqfvCKv9V_yZrrXlo8fHlY27M6OVABonStx9ja5FupkyRJGM-fE` |
+
+
+
 | Al-Abrar Foundation for Education and General Contracting |  | Ashaiman |  | n.a. |  |
 | Al-Ain Islamic Foundation |  | Kasoa | 2016 | n.a. |  |
 | Al-Amal Charity Foundation** |  | Tamale |  | n.a. |  |
@@ -6479,9 +6632,6 @@ ASWAJ学者和伊玛目们长达数十年的关于将waqf作为增强穆斯林�
 1 缩写：HQS = 总部所在地；n.a. = 暂无  
 来源/标识：NPO秘书处在线上目录 [**]  
 2 美国穆斯林慈善机构的加纳分支。
-
-
-
 
 | Facebook |
 |---|
@@ -6561,6 +6711,7 @@ ASWAJ学者和伊玛目们长达数十年的关于将waqf作为增强穆斯林�
 - 7 脸书：穆斯林孤儿院，加纳阿克拉。
 
 ## Facebook
+
 - https://www.facebook.com/almubahabbat.fillah/
 - https://www.facebook.com/profile.php?id=100070057050319
 - https://www.facebook.com/profile.php?id=100080313941894
@@ -6639,6 +6790,9 @@ ASWAJ学者和伊玛目们长达数十年的关于将waqf作为增强穆斯林�
 | 非洲之家慈善加纳** |  | 恩萨瓦姆 |  | 无 |
 | 巴尔尼萨基金会 |  | 塔马利 |  | 无 |
 | 班巴国际人道援助组织 |  | 无 |  | 无 |
+
+
+
 | 班巴伊斯兰学院 |  | 塔马利 |  | 无 |
 | 班巴维亚伊斯兰学院基金会 |  | 塔马利 | 2017 | 无 |
 | 猴面包树·桑科法基金会** | BSF | 阿克拉 | 2015 | 无 |
@@ -6672,8 +6826,6 @@ ASWAJ学者和伊玛目们长达数十年的关于将waqf作为增强穆斯林�
 - 8 土耳其穆斯林慈善机构的加纳办事处。
 - 9 英国穆斯林慈善机构的加纳办事处。
 - 10 科威特组织的加纳办事处。
-
-
 
 ## 脸书
 
@@ -6817,6 +6969,11 @@ https://www.facebook.com/profile.php?id=100068032869747&paipv=0&eav=AfZd2WFo6RLB
 | Empowered Sisters In Deen | ESID | Sunyani |  | 无 |
 | ESRA |  | Tamale |  | https://esrafoundation.org (已停用) |
 | Essa Ajeman Charity Foundation | EACF | Kumasi |  | https://essaajemancharityfoundation.wordpress.com/ |
+
+
+
+|   |   |   |   |   |
+|---|---|---|---|---|
 | Eyes of Light Foundation**14 | ELF GH | Kumasi | 2010 | https://www.eyesoflight.org (已停用) |
 | Faata Africa/Final Point Foundation | FPF | Accra |  | https://faataafrica.org/ |
 | Fadil Islamic Foundation | FIF | Accra |  | 无 |
@@ -6827,7 +6984,7 @@ https://www.facebook.com/profile.php?id=100068032869747&paipv=0&eav=AfZd2WFo6RLB
 - 14 德国穆斯林非政府组织的加纳分部。
 
 | 脸书 |
-|---|
+| --- |
 | https://www.facebook.com/Dawahstorm/ |
 | https://www.facebook.com/profile.php?id=100068551760610 |
 | https://www.facebook.com/people/Day-Break-Dawah-and-Development-Centre/100069191719556/ |
@@ -6854,9 +7011,6 @@ https://www.facebook.com/profile.php?id=100068032869747&paipv=0&eav=AfZd2WFo6RLB
 | https://www.facebook.com/foundation2000/ |
 | https://www.facebook.com/profile.php?id=100064669213197 |
 | https://www.facebook.com/FAISfoundation |
-
-
-
 
 | 名称 | 缩写 | 总部 | 成立年份 | 主页 | Facebook |
 |---|---|---|---|---|---|
@@ -6911,129 +7065,245 @@ https://www.facebook.com/profile.php?id=100068032869747&paipv=0&eav=AfZd2WFo6RLB
 | Ghana Muslims Traditional Healers Association | GHAMTHA | Juaso |  | 不适用 | https://www.facebook.com/profile.php?id=100076041847950 |
 | Ghana-Turkey Co-operation and Development Association**<sup>19</sup> | TUDEC | Accra | 2011 | https://tudec.org/ | https://www.facebook.com/ghanatudec/ |
 | Global Islamic Entertainment NGO Foundation |  | Accra |  | 不适用 | https://www.facebook.com/people/Mallam-Mohammed/100012957072125/?paipv=o&eav=Af2Ft7bp2eHHTSdEfB3Tt1J1wd7NUJ82rOzVhtxWxol_S3ceT-Lp3B7EZvdn8mwMEfc&_rdr |
-| Global Muslimah Dilemma | GMD | Accra |  | 不适用 | https://www.facebook.com/gmdcharityproject/ |
-| Golden Inspires Foundation | GIF | Yendi | 2023 | https://goldeninspiresfoundation.org (已停用) | https://www.facebook.com/profile.php?id=100090094334869&locale=hi_IN&paipv=o&eav=AfbaLkSlP2_KGmKTlje8TxL6W2BhBop-hgZuT7yGZlr8eal5eiVpWwVawZaXoHsY8L4 |
-| Golden Voice of Jalloo Ghana |  | 不适用 |  | 不适用 | https://www.facebook.com/profile.php?id=100066763976283 |
-| Grain of Hope Foundation | GOH | Tema |  | 不适用 | https://www.facebook.com/people/Grain-Of-Hope-Foundation/100070480203516/ |
-| Great California Foundation | GCF | Accra |  | 不适用 | https://www.facebook.com/profile.php?id=100081933696106 |
-| Greater Accra Morshie Youth Association |  | Accra |  | 不适用 | https://www.facebook.com/Greateraccramorshieyounth |
-| Guidance Islamic Foundation | GIF | Accra |  | 不适用 | https://www.facebook.com/guidanceislamicfoundation/ |
-| Hajia Akweley Legacy Foundation | HALF | ? | 2023 |  | https://www.facebook.com/profile.php?id=100091983622694 |
-| Hajia Humu Foundation | HHF | Accra |  | 不适用 | https://www.facebook.com/hhumuofficial/ |
-| Hajia Saratu Sidi Ali Foundation |  | Obuasi |  | 不适用 | https://www.facebook.com/profile.php?id=100069492566841 |
-| Hajj Abdulai Yaro Memorial Clinic and Maternity** |  | Accra |  | 不适用 | 不适用 |
-| Hand to Hold Foundation | HTHF | Accra |  | 不适用 | https://www.facebook.com/profile.php?id=100064769946176 |
-| Hasaniya Foundation |  | Wa |  | 不适用 | https://www.facebook.com/profile.php?id=100069442690627 |
-| Haske Bisa Kan Haske—Nuur Fauka Nuur |  | Accra |  | 不适用 | https://www.facebook.com/profile.php?id=100063507313225 |
+
+
+
+| Global Muslimah Dilemma | GMD | Accra |  | 不适用 | `https://www.facebook.com/gmdcharityproject/` |
+
+| Golden Inspires Foundation | GIF | Yendi | 2023 | `https://goldeninspiresfoundation.org` (已停用) | `https://www.facebook.com/profile.php?id=100090094334869&locale=hi_IN&paipv=o&eav=AfbaLkSlP2_KGmKTlje8TxL6W2BhBop-hgZuT7yGZlr8eal5eiVpWwVawZaXoHsY8L4` |
+
+| Golden Voice of Jalloo Ghana |  | 不适用 |  | 不适用 | `https://www.facebook.com/profile.php?id=100066763976283` |
+
+| Grain of Hope Foundation | GOH | Tema |  | 不适用 | `https://www.facebook.com/people/Grain-Of-Hope-Foundation/100070480203516/` |
+
+| Great California Foundation | GCF | Accra |  | 不适用 | `https://www.facebook.com/profile.php?id=100081933696106` |
+
+| Greater Accra Morshie Youth Association |  | Accra |  | 不适用 | `https://www.facebook.com/Greateraccramorshieyounth` |
+
+| Guidance Islamic Foundation | GIF | Accra |  | 不适用 | `https://www.facebook.com/guidanceislamicfoundation/` |
+
+| Hajia Akweley Legacy Foundation | HALF | ? | 2023 |  | `https://www.facebook.com/profile.php?id=100091983622694` |
+
+| Hajia Humu Foundation | HHF | Accra |  | 不适用 | `https://www.facebook.com/hhumuofficial/` |
+
+| Hajia Saratu Sidi Ali Foundation |  | Obuasi |  | 不适用 | `https://www.facebook.com/profile.php?id=100069492566841` |
+
+| Hajj Abdulai Yaro Memorial Clinic and Maternity |  | Accra |  | 不适用 | 不适用 |
+
+| Hand to Hold Foundation | HTHF | Accra |  | 不适用 | `https://www.facebook.com/profile.php?id=100064769946176` |
+
+| Hasaniya Foundation |  | Wa |  | 不适用 | `https://www.facebook.com/profile.php?id=100069442690627` |
+
+| Haske Bisa Kan Haske—Nuur Fauka Nuur |  | Accra |  | 不适用 | `https://www.facebook.com/profile.php?id=100063507313225` |
 
 <sup>17</sup> GMM 及其分支运营多个 Facebook 账号，详见表 4。
+
 <sup>18</sup> 该封闭/私密的 GMSA Facebook 群组拥有 113,900 名关注者（2021/2022）。
+
 <sup>19</sup> 土耳其组织的加纳办事处。
 
-
-
-
 | 名称 | 缩写 | 总部 | 成立 | 主页 |
+
 |---|---|---|---|---|
+
 | Hausa Youth Ghana | HYG | Accra |  | 不适用 |
+
 | Hayat Mission |  | Accra | 2014 | 不适用 |
+
 | HealthWay Foundation |  | Wa | 2019 | 不适用 |
-| Help Orphans** |  | Tamale |  | 不适用 |
+
+| Help Orphans |  | Tamale |  | 不适用 |
+
 | HENA Foundation, Ghana |  | Wa |  | 不适用 |
+
 | Higher Institute of Islamic Studies and Research | HIISR | Kumasi |  | 不适用 |
-| Hikmah Charitable Foundation** | HCF | Kumasi |  | 不适用 |
+
+| Hikmah Charitable Foundation | HCF | Kumasi |  | 不适用 |
+
 | Hikmatullah Research Foundation | HRF | Wa |  | 不适用 |
+
 | Hizmet Foundation |  | Accra |  | 不适用 |
+
 | Hohoe Zongo Development Association | HOZDA | Hohoe |  | 不适用 |
+
 | Holy Green Foundation | HGF | Accra | 2010 | 不适用 |
+
 | Holy Qur'an Custody Society |  | Accra |  | 不适用 |
-| Holy Qur'an Heritage Society**20 |  | Accra |  | 不适用 |
+
+| Holy Qur'an Heritage Society20 |  | Accra |  | 不适用 |
+
 | Home of Taqwa Orphanage and School |  | Accra |  | 不适用 |
+
 | Honesty Muslim Youth | HOMY | Accra |  | 不适用 |
+
 | HOPE Foundation |  | Accra |  | 不适用 |
+
 | Hope Road |  | Accra |  | 不适用 |
+
 | Hope For Future Youth Association |  | Sunyani |  | 不适用 |
+
 | Hope for the Street Child Foundation |  | Kumasi |  | 不适用 |
-| Human Development Assistance International**21 | HUDAI | Accra | 2010 | 不适用 |
-| Human Relief Foundation**22 | HRF | Accra | 1991 | 不适用 |
+
+| Human Development Assistance International21 | HUDAI | Accra | 2010 | 不适用 |
+
+| Human Relief Foundation22 | HRF | Accra | 1991 | 不适用 |
+
 | Humanitarian Headway |  | Accra |  | 不适用 |
-| Humanity Charitable Foundation** |  | Agona Swedru |  | 不适用 |
+
+| Humanity Charitable Foundation |  | Agona Swedru |  | 不适用 |
+
 | Humanity First Ghana | HF Ghana | Accra | 1996 | 不适用 |
-| Ibadul Hanan Humanitarian Organisation** |  | Nsawam |  | 不适用 |
+
+| Ibadul Hanan Humanitarian Organisation |  | Nsawam |  | 不适用 |
+
 | Ibbadul Rahma Da'awa Association |  | Kumasi |  | 不适用 |
+
 | Ibn Memunatu Foundation for the Needy Ghana | IFNEG | 不适用 |  | 不适用 |
+
 | Ideal Muslimah Network/Village Connect Africa Foundation | IMN/VCA | Kumasi |  | 不适用 |
+
 | IERA Ghana |  | Accra |  | 不适用 |
+
 | Ihyaawu Sunnah Da'awah—Ghana |  | Kumasi |  | 不适用 |
+
 | Ihya'deen (Ihya'udeen) Foundation |  | 不适用 |  | 不适用 |
+
 | Imaa-Allah Foundation for Da'wa and Training |  | Accra |  | 不适用 |
-| Imaam Sha'atiby's Foundation for the Services of the Holy Quran and Development** |  | Tamale |  | 不适用 |
-| Imam Abdul Wadud Foundation** |  | Kumasi |  | 不适用 |
+
+| Imaam Sha'atiby's Foundation for the Services of the Holy Quran and Development |  | Tamale |  | 不适用 |
+
+| Imam Abdul Wadud Foundation |  | Kumasi |  | 不适用 |
+
 | Imam Hussein (as) Foundation |  | Accra | 1988 | 不适用 |
+
 | Imamiya Charity Foundation Ghana | ICFG | Kumasi |  |  |
-| Initiative for Youth Development | IYD | Accra |  | http://iydghana.org (已停用) |
-| Insana Deger Veren Dernekler Federasyonu (IDDEF)**23 | IDDEF | Accra |  | 不适用 |
+
+| Initiative for Youth Development | IYD | Accra |  | `http://iydghana.org` (已停用) |
+
+| Insana Deger Veren Dernekler Federasyonu (IDDEF)23 | IDDEF | Accra |  | 不适用 |
+
 | Inside Zango | iZ | Kumasi |  | 不适用 |
-| International Islamic Relief Organisation of Saudi Arabia**24 | IIRO | Accra |  | 不适用 |
-| International Islamic Youth League**25 | IIYL | Accra |  | 不适用 |
-| International Unique Human Welfare Institution** | IUHWI | Accra |  | 不适用 |
-| International Voice of Islam**26 | VOI | Tema |  | https://www.voiceofislam.me/voi-ghana |
-| Iqra Foundation For Education and Development**27 |  | Kumasi |  | 不适用 |
+
+| International Islamic Relief Organisation of Saudi Arabia24 | IIRO | Accra |  | 不适用 |
+
+| International Islamic Youth League25 | IIYL | Accra |  | 不适用 |
+
+| International Unique Human Welfare Institution | IUHWI | Accra |  | 不适用 |
+
+| International Voice of Islam26 | VOI | Tema |  | `https://www.voiceofislam.me/voi-ghana` |
+
+| Iqra Foundation For Education and Development27 |  | Kumasi |  | 不适用 |
+
 | IQRA Ghana |  | Accra |  | 不适用 |
+
 | Islam for All Organisation28 | IFAO | Tamale | 2013 | 不适用 |
+
 | Islam for Ghana |  | Accra |  | 不适用 |
+
 | Islam In Need |  | Tema |  | 不适用 |
+
 | Islam The Way To Paradise Foundation | ITWTPF | Kasoa |  | 不适用 |
+
 | Islamic Advocacy Foundation | IAF | Tamale |  | 不适用 |
+
 | Islamic Aid Association (جمعية العون الإسلامي) |  | Kumasi |  | 不适用 |
+
 | Islamic Aid Ghana |  | Atebubu |  | 不适用 |
+
 | Islamic Awareness Foundation Ghana | IAF | Accra |  | 不适用 |
+
 | Islamic Brotherhood for Bayt Al Mal Foundation |  | Wa | 2019 | 不适用 |
+
 | Islamic Bureau for the Disabled and Service to Islamic Institutions |  | Accra |  | 不适用 |
+
 | Islamic Care Society |  | 不适用 |  | 不适用 |
+
 | Islamic Centre for Community Affairs | ICCA | Accra |  | 不适用 |
+
 | Islamic Centre for Future Women | ICFW | Accra |  | 不适用 |
+
 | Islamic Centre for Peace, Democracy and Human Rights | ICPDHR | 不适用 |  | 不适用 |
+
 | Islamic Centre for the Muslim Youth | ICMY | Wa |  | 不适用 |
+
 | Islamic Charity Centre for Women Orientation | ICCWO | Accra |  | 不适用 |
+
 | Islamic Charity Home Organization—GH |  | 不适用 |  | 不适用 |
+
 | Islamic Community Association29 | ISCA | Kumasi | 2018 | 不适用 |
-| Islamic Council for Development and Humanitarian Services** | ICODEHS | Accra | 1991 | 不适用 |
+
+| Islamic Council for Development and Humanitarian Services | ICODEHS | Accra | 1991 | 不适用 |
+
 | Islamic Da'wah Foundation |  | Sunyani |  | 不适用 |
-| Islamic Daawa And Education And Development Services Centre** |  | Dormaa Ahenkro |  | 不适用 |
+
+| Islamic Daawa And Education And Development Services Centre |  | Dormaa Ahenkro |  | 不适用 |
+
 | Islamic Daawah Village | IDV | Kumasi |  | 不适用 |
+
 | Islamic Finance Foundation | IFF | Accra |  | 不适用 |
+
 | Islamic Finance Research Institute of Ghana | IFRIG | Accra |  | 不适用 |
+
 | Islamic Foundation Centre Ghana | IFC | Tamale |  | 不适用 |
-| Islamic Girls' Development Foundation | IGDF | Accra |  | https://islamicgirlsdf.org/ |
+
+| Islamic Girls' Development Foundation | IGDF | Accra |  | `https://islamicgirlsdf.org/` |
+
 | Islamic Healing Centre |  | Tamale |  | 不适用 |
+
 | Islamic Human Right Foundation Ghana | IHRFG | Accra |  | 不适用 |
+
 | Islamic Humanitarian Foundation International30 | IHF International | Accra | 2011 | 不适用 |
-| Islamic Institute For Knowledge And Work** |  | Accra |  | 不适用 |
-| Islamic Medical Association of Ghana** | IMAGH | Accra | 2018 | https://imaghana.com/ |
-| Islamic Mission Secretariat | IMS | Kumasi |  | https://islamicmissionsecretariat.org (已停用) |
+
+| Islamic Institute For Knowledge And Work |  | Accra |  | 不适用 |
+
+| Islamic Medical Association of Ghana | IMAGH | Accra | 2018 | `https://imaghana.com/` |
+
+| Islamic Mission Secretariat | IMS | Kumasi |  | `https://islamicmissionsecretariat.org` (已停用) |
+
 | Islamic Mission Secretariat Youth Wing Techiman |  | Techiman |  | 不适用 |
-| Islamic Nursing Training School | INS | Accra |  | https://islamicnursingtraining.com/ |
-| Islamic Organization For Humanity and Development** |  | Kasoa |  | 不适用 |
+
+| Islamic Nursing Training School | INS | Accra |  | `https://islamicnursingtraining.com/` |
+
+| Islamic Organization For Humanity and Development |  | Kasoa |  | 不适用 |
+
 | Islamic Propagation and Research Centre |  | Tamale |  | 不适用 |
+
 | Islamic Radio Foundation | IRF | Tamale (?) |  | 不适用 |
+
 | Islamic Sadaqa Foundation | ISFOUND | Kumasi | 2017 | 不适用 |
+
 | Islamic Service and Development Foundation | ISerDeF | Tamale |  | 不适用 |
+
 | Islamic Supreme Council of Ghana |  | Accra |  | 不适用 |
+
 | Islamic Tournament Association |  | Accra |  | 不适用 |
+
 | Islamic Ummah of Ghana | IUG | Accra | 2013 | 不适用 |
-| Islamic Ummah Relief**31 | IUR | Kasoa |  | 不适用 |
-| Islamic Voluntary Service** | ISVOSE | Accra |  | 不适用 |
+
+| Islamic Ummah Relief31 | IUR | Kasoa |  | 不适用 |
+
+| Islamic Voluntary Service | ISVOSE | Accra |  | 不适用 |
+
 | Islamic Way Association of Ghana | IWAG | Walewale |  | 不适用 |
-| Islamic Welfare Aid Ghana** | IWAG | Accra |  | 不适用 |
+
+| Islamic Welfare Aid Ghana | IWAG | Accra |  | 不适用 |
+
 | Islamic Youth for Development |  | Bolgatanga |  | 不适用 |
+
 | Islamic Youth Project | IYP | Accra |  | 不适用 |
+
 | Istiqaama Muslim Mission Ghana |  |  |  |  |
+
 | Ittaqul-lah Islamic Development Association |  | Takoradi |  | 不适用 |
 
 20. 沙特阿拉伯王国组织的加纳分会。
+
 21. 土耳其国际穆斯林慈善机构 HUDAI 在加纳的办事处。
+
 22. 英国穆斯林慈善机构在加纳的办事处。
+
+
+
 23. 土耳其组织在加纳的办事处。
 24. 国际伊斯兰救济组织（IIRO）在加纳的办事处。
 25. 国际伊斯兰青年联盟（IIYL）在加纳的办事处，总部位于塞拉利昂弗里敦。
@@ -7109,9 +7379,6 @@ https://www.facebook.com/profile.php?id=100068032869747&paipv=0&eav=AfZd2WFo6RLB
 - https://www.facebook.com/makarantanmaata/
 - https://www.facebook.com/groups/218402963228059/members/
 - https://www.facebook.com/profile.php?id=100065019061189
-
-
-
 
 ## Facebook
 
@@ -7218,6 +7485,9 @@ https://www.facebook.com/profile.php?id=100068032869747&paipv=0&eav=AfZd2WFo6RLB
 | Muslim Deaf Development | MDD | 塔马利 | 2012 | n.a. |
 | Muslim Development Organization** |  | 苏胡姆 |  | n.a. |
 | Muslim Entrepreneurs Network |  | 阿克拉 |  | n.a. |
+
+
+
 | Muslim Executive Foundation** | MEF | 库马西 |  | n.a. |
 | Muslim Family Counseling Services** | MFCS | 库马西 | 1990 | http://www.mfcsghana.org/ （已关闭？） |
 | Muslim Health Students’ Association of Ghana | MUHSAG | 库马西 |  | n.a. |
@@ -7292,9 +7562,6 @@ https://www.facebook.com/profile.php?id=100068032869747&paipv=0&eav=AfZd2WFo6RLB
 - https://www.facebook.com/National-Union-of-Ghana-Muslim-Scout-NUGMS-13768299357285 （已关闭？）
 - https://www.facebook.com/profile.php?id=100069948805560
 
-
-
-
 | 名称 | 缩写 | 总部 | 成立年份 | 主页 | Facebook |
 |---|---|---|---|---|---|
 | 加纳穆斯林青年组织网络 | NEMYOG | 阿克拉（？） |  | 无 | 无 |
@@ -7351,13 +7618,18 @@ https://www.facebook.com/profile.php?id=100068032869747&paipv=0&eav=AfZd2WFo6RLB
 | 宗戈复兴青年援助 | R-ZOYA | 无 | 2021 | 无 | https://www.facebook.com/Rzongoyouthaid |
 | 施舍列车基金会** |  | 阿克拉 | 2013 | 无（已解散？） | https://www.facebook.com/SadaqaTrainGh |
 | 加纳持续施舍协会 |  | 无 |  | 无 | https://www.facebook.com/profile.php?id=100080056492419 |
+
+
+
+| 名称 | 缩写 | 总部 | 成立 | 主页 | Facebook |
+|---|---|---|---|---|---|
 | 萨达库恩特加纳 |  | 库马西 |  | 无 | https://www.facebook.com/sadaqount/ |
 | 穆斯林和平基金会（加纳） |  | 库马西 |  | 无 | https://www.facebook.com/salaamulmuslimiynghana/ |
 | 萨拉加伊斯兰研究基金会 | SIRF | 萨拉加 |  | 无 | https://www.facebook.com/profile.php?id=10007048305567 |
 | 萨拉加恩关·马拉姆青年 |  | 萨拉加 |  | 无 | https://www.facebook.com/saydmuji |
 | 萨拉瓦提亚伊斯兰传播中心 |  | 阿克拉 |  | https://salawatiapress.wordpress.com/?fbclid=IwAR1FVNCdUugah_zc48487NkxKiiNVc-ml7onovODKeqqUKuddPa92D5-n88 | https://www.facebook.com/Salawatia369 |
 | 萨米拉赋能与人道项目 | SEHP | 阿克拉 |  | https://sbawumia.org/ | https://www.facebook.com/people/Samira-Empowerment-Humanitarian-Projects-SEHP/100076375486506/ |
-| 真理之声宣教组织** |  | 库马西 |  | 无 | 无 |
+| 真理之声宣教组织\*\* |  | 库马西 |  | 无 | 无 |
 | 萨凡纳妇女综合发展机构 | SWIDA-Ghana | 塔马利 |  | https://swidagh.org/ | https://www.facebook.com/swidagh?_rdc=1&_rdr |
 | 拯救援助项目 |  | 阿克拉 | 2017 | 无 | https://www.facebook.com/SaveAidProject |
 | 萨乌拉基金会 |  | 阿克拉 |  | 无 | https://www.facebook.com/profile.php?id=100067150442655 |
@@ -7366,7 +7638,7 @@ https://www.facebook.com/profile.php?id=100068032869747&paipv=0&eav=AfZd2WFo6RLB
 | 寻求天堂基金会 |  | 无 |  |  | https://www.facebook.com/SeekJannahFoundation |
 | 塞康第宗戈青年运动 |  | 塞康第 |  | 无 | 无（已解散？） |
 | 塞内西部穆斯林青年协会 | SWMYA | 夸梅丹索（博诺东地区） | 2018 | 无 | https://www.facebook.com/SWMYASSOC |
-| 加纳服务人类基金会** |  | 库马西 |  | 无 | https://www.facebook.com/profile.php?id=100022272543161 |
+| 加纳服务人类基金会\*\* |  | 库马西 |  | 无 | https://www.facebook.com/profile.php?id=100022272543161 |
 | 沙宁宗戈 |  | 无 |  | 无 | https://www.facebook.com/shaanin.zongo.5/ |
 | 沙法宗戈青年基金会 |  | 夸梅丹索 |  | 无 | https://www.facebook.com/shafazongoyouthfoundation |
 | 伊斯兰长老慈善基金会 |  | 阿克拉 |  | 无 | https://www.facebook.com/profile.php?id=100064877706608 |
@@ -7414,8 +7686,6 @@ https://www.facebook.com/profile.php?id=100068032869747&paipv=0&eav=AfZd2WFo6RLB
 | 无 |
 | https://www.facebook.com/blessingssteimako/ |
 
-
-
 | 名称 | 缩写 | 总部 | 成立 | 主页 |
 |---|---|---|---|---|
 | The Ghanaian Muslimah | TGM | Accra |  | n.a. |
@@ -7451,53 +7721,13 @@ https://www.facebook.com/profile.php?id=100068032869747&paipv=0&eav=AfZd2WFo6RLB
 | Voice of Zongo Communities in Ghana | VOZGH | Koforidua | 2019 | n.a. |
 
 43 也被称为 An Ideal Muslimah (AIM)。  
+
 44 FB：Feed the Street。  
+
 45 也被称为 United Ansaru al-Islam al-Muttadidah 和 Ansar for Charity and Development Foundation。
 
-## Facebook
 
-- n.a.
-- https://www.facebook.com/ideal.muslimah.3152/?paipv=o&eav=AfYjNUdJV6iihIt61JXuAWrUhw3jryTYltnqFk8_tm1cDszqU6cBKm2i-aeB6dvE8Q&_rdr
-- https://www.facebook.com/profile.php?id=100077478531048
-- https://www.facebook.com/tlfghana/
-- https://www.facebook.com/people/Feed-The-Street/100063728246497/?paipv=o&eav=AfYcLrHgkI8TrXiLUZQM_6jnaqHo3Sc5Zgsr9MCJ53sOLYNbkusUJ43WXTZnMFH2dAU&_rdr
-- https://www.facebook.com/thepreamblefoundation
-- https://www.facebook.com/profile.php?id=100065857323617
-- https://www.facebook.com/VOZIWorld
-- https://www.facebook.com/tzngh
-- https://www.facebook.com/TMCOG1
-- https://www.facebook.com/groups/1135260463175482/
-- https://www.facebook.com/YouthofTijaniyya
-- https://www.facebook.com/profile.php?id=100066902589453
-- https://www.facebook.com/profile.php?id=100081453101408
-- https://www.facebook.com/tiyumbahopefoundation20
-- https://www.facebook.com/profile.php?id=100076083563561
-- https://www.facebook.com/TICWAC1
-- https://www.facebook.com/profile.php?id=100068244212509&paipv=o&eav=AfZVMSukGVw64xMjxZj5V8ugyB4PnCikKlozvD9xm7DusCbVckooEwgtvDG-ZUvnbCQ
-- https://www.facebook.com/ummah.initiative.3
-- https://www.facebook.com/ufufou
-- https://www.facebook.com/ajarauma
-- https://www.facebook.com/ump.ghana/
-- https://www.facebook.com/profile.php?id=100083641036045
-- https://www.facebook.com/profile.php?id=100070178094811
-- https://www.facebook.com/groups/2755102444756353/
-- https://www.facebook.com/unitedmuslimsgroup/?paipv=o&eav=AfY3PxV8kjwqrRgCD2xLtmFoqVzCdcUaasJoeGNoW576AoXjv-ocwsl_ZuFajwkn8&_rdr
-- https://www.facebook.com/profile.php?id=100080730198499
-- https://www.facebook.com/abdulhamid3835
-- https://www.facebook.com/groups/2767309416613922
-- https://www.facebook.com/vozgh
 
-| 名称 | 缩写 | 总部 | 成立 | 主页 |
-|---|---|---|---|---|
-| Voice of Zongo Youth Foundation | V-ZYF | Kumasi |  | n.a. |
-| Volunteers for Muslim Youth Empowerment and Development | VOMYED | Kumasi |  | n.a. |
-| Vuielem-Hayat Foundation\*\*⁴⁶ |  | Accra |  | n.a. |
-| Wadie Adwumakase Akotosu Zongo Community | WAZOCO | Mampon-teng (AR) |  | n.a. |
-| Wash 4 all Foundation\*\* |  | Accra |  | n.a. |
-| Weija Zongo Youth Organisation |  | Weija |  | n.a. |
-| Wifaq Foundation for Development and Community |  | Tamale |  | n.a. |
-| Windows of Hope Empowerment Foundation | WOHEF | Kumasi |  |  |
-| With Us |  | Accra (?) |  | n.a. |
 | Women and Children Welfare Foundation | WACWF | Accra | 2019 | n.a. |
 | Women Relief Alliance Foundation |  | Accra |  | n.a. |
 | Yamboni Foundation for Zongo Women |  | Kumasi |  | n.a. |
@@ -7521,9 +7751,8 @@ https://www.facebook.com/profile.php?id=100068032869747&paipv=0&eav=AfZd2WFo6RLB
 | Zaitun Center for Education and Charitable Services |  | Tamale | 2007 | n.a. |
 | Zakat and Sadaqa Trust Fund of Ghana\*\* | ZSTF | Accra | 2010 | https://www.zakatfund.org.gh/ |
 | Zakat Foundation\*\*⁴⁸ |  | Kumasi |  | n.a. |
-
-46 与 MS-Hayat Foundation 相同（FB：2020/2021：289 followers）？  
-47 另称：Ghana Chamber of Muslim Entrepreneurs (GCME)。  
+46 与 MS-Hayat Foundation 相同（FB：2020/2021：289 followers）？
+47 另称：Ghana Chamber of Muslim Entrepreneurs (GCME)。
 48 美国穆斯林慈善机构的加纳办事处。
 
 ## Facebook
@@ -7600,9 +7829,6 @@ https://www.facebook.com/profile.php?id=100068032869747&paipv=0&eav=AfZd2WFo6RLB
 | Zurak Cancer Foundation |  | Accra | 2014 | n.a. |
 | Zuriya Youth Foundation |  | Accra | 2014 | n.a. |
 
-
-
-
 | Facebook |
 |----------|
 | 不适用 |
@@ -7641,42 +7867,52 @@ https://www.facebook.com/profile.php?id=100068032869747&paipv=0&eav=AfZd2WFo6RLB
 | 不适用 |
 
 ## 参考文献
+
 ### 文献资料
+
 少校安格斯·科林·邓肯-约翰斯通论文集 MSS.Afr.s.593 (1, 2–14)，牛津大学博德利图书馆。
-
 Sheikh Aminu Bamba，布道，未出版手稿，藏于作者档案。
-
 Weiss, Holger, Hajj Mumuni Sulemana, Afa Razaq Taufeeq Abdallah, 编. *加纳北部天课. 实地笔记 1. 2000年1月和2月期间进行的访谈.* 赫尔辛基：非洲研究系，2001年。
 
 ### *官方文件和报告*
+
 ### *FAO*
+
 - FAO 营养国家概况—加纳，http://www.fao.org/ag/agn/nutrition/ghana_en.stm，访问于 1.4.2021。
 
 ### *加纳卫生部*
+
 - 卫生部。*2021–2024年中期支出框架（MTEF）：方案为基础的预算估算。* 阿克拉：卫生部，2021年，可获取于：https://mofep.gov.gh/sites/default/files/pbb-estimates/2021/2021-PBB-MoH.pdf。
 
 ### *加纳统计局*
+
 - 加纳统计局。*加纳的残疾。* 阿克拉：加纳统计局，2014年。
 - 加纳统计局。*加纳2021年人口和住房普查. 总报告第3C卷 背景特征。* 阿克拉：加纳统计局，2021年11月。
 - *全球粮食安全战略（GFSS）加纳国家计划，* 2018年8月28日。
 
 ### *UNDP*
+
 - 联合国开发计划署，伊斯坦布尔私营部门发展国际中心和伊斯兰研究与培训研究所。*I For Impact: 融合伊斯兰金融与投资以实现全球目标，* 2017年3月，http://www.irti.org/English/News/Documents/IRTI_UN_Islamic_Financial_Report.pdf。
 
 ### *UNICEF*
+
 - UNICEF 加纳2010年年度报告。
 - *儿童保护测绘：加纳参与儿童保护的机构数量和概况。* 阿克拉：UNICEF 加纳和人权与行政司法委员会，2018年。
 
 ### *USAID*
+
 - USAID/加纳国家发展合作战略 2013–2017（2012年12月），可获取于 https://www.usaid.gov/sites/default/files/documents/1860/Ghana_CDCS_fy2013-17.pdf。
 
 ### *美国国务院*
+
+
+
 - 国际宗教自由办公室，*2022年国际宗教自由报告：加纳*，https://www.state.gov/reports/2022-report-on-international-religious-freedom/ghana/。
 
-### *WHO*
-- *WHO 家庭计划手册*，https://www.fphandbook.org/node/2971。
+### `WHO`
+- `WHO 家庭计划手册`，https://www.fphandbook.org/node/2971。
 
-### *世界银行*
+### `世界银行`
 - 伊斯兰金融全球报告。*伊斯兰金融——共同繁荣的催化剂？* 华盛顿特区：世界银行，2017年。
 - 世界银行民间社会团队。*与民间社会协商：资料汇编。* 华盛顿特区：世界银行，2007年。
 - 世界银行。*加纳——2013财年至2018财年国家伙伴关系战略绩效与学习回顾。* 华盛顿特区：世界银行集团，2016年。
@@ -7684,11 +7920,11 @@ Weiss, Holger, Hajj Mumuni Sulemana, Afa Razaq Taufeeq Abdallah, 编. *加纳北
 - 世界银行，*贫困与公平简报——撒哈拉以南非洲*，2019年4月。
 - 世界银行在加纳，概况，更新于 28.9.2022，https://www.worldbank.org/en/country/ghana/overview，访问于 27.12.2022。
 
-### ***在线数据***
+### `在线数据`
 Statista (https://www.statista.com)
 OCHA 财务跟踪服务 (https://fts.unocha.org)
 
-### ***非政府组织声明和报告***
+### `非政府组织声明和报告`
 - Al Muntada 受托人及账目报告 2011年8月1日–2012年7月31日；2013年8月1日–2014年7月31日。
 - Help Dunya，Jahresbericht [年度报告] 2019；2020。
 - 改善家庭健康与福祉的跨信仰宣言，2011年6月29日于肯尼亚内罗毕制定。
@@ -7701,15 +7937,10 @@ OCHA 财务跟踪服务 (https://fts.unocha.org)
 
 ### 出版的数据汇编和目录
 西非民间社会名录 2010–2012。编者 Charles Kojo Vandyck, Jimm Chick Fomunjong 和 Ramde Yaya。阿克拉：西非民间社会研究所，2012年。
-
 Kreidieh, Said Ibrahim，编。穆斯林社会与协会 in Africa—Asia—Australia—Europe—The Pacific—South & Central America。贝鲁特：Said Ibrahim Kreidieh，2011年。
-
 "加纳国际非政府组织名单及联系方式，" https://ghstudents.com/list-of-international-ngos-in-ghana-and-contact-details/，访问于 16.12.2021。
-
 "加纳的非政府组织：完整名单、职能与联系方式（2021）"，4.8.2021，https://pricesghana.com/ngos-in-ghana/，访问于 16.12.2021。
-
 Pew Forum on Religion & Public Life. *世界穆斯林：团结与多样性*。华盛顿特区：Pew Research Center's Forum on Religion & Public Life，2012年。
-
 Sasa, Tuandike. "加纳国际非政府组织名单，" 5.4.2018，https://yen.com.gh/108012-list-international-ngos-ghana.html，访问于 16.12.2021。
 
 ### 在线报纸和新闻博客/报告
@@ -7743,175 +7974,93 @@ Sasa, Tuandike. "加纳国际非政府组织名单，" 5.4.2018，https://yen.co
 - The Today’s Muslim (thetodaysmuslim.com; defunct)
 - Zaaradio (https://zaaradio.com)
 
-### *访谈*
+### `访谈`
 Abdul Fattah Adam，FYC创始人兼主席，阿克拉，19.10.2022。
-
 Abdul Mannan Ibrahim，Al-Manan Charity Foundation创始人，库马西，10.10.2022。
-
 Abdul-Wahhab Abubakar，加纳穆斯林学院成员，阿克拉/莱贡，14.12.2017。
-
 Abdul-Mu'min Saeed，Global Institute of Islamic Banking, Insurance and Consultancy 首席执行官，库马西，14.12.2019。
-
 Ahmad Musa，ASWAJ 阿散蒂地区天课、瓦克夫和萨达卡基金协调员，库马西，5.4.2019，6.4.2019。
-
 Aisha Mohammed，Achievers Ghana 公共关系主任，阿克拉，7.10.2022。
-
 Alhaji Khuzaima Mohammed Osman，SONSETFUND 总秘书，阿克拉，6.12.2017。
-
 Alhaji Rabiu Maude，阿克拉，8.10.2022。
-
 Alhaji Suraj，Al-Hudaibiyya 在北部地区的代表，塔马利，10.12.2019。
-
 Alhassan Khalil，ZongoVationHub 财务和行政经理，阿克拉，7.10.2022。
-
 Ayuna Huudu，SAP创始人，阿克拉，18.10.2022。
-
 Haji Abdul Manan，穆斯林发展倡议（MUDI）首席执行官，Dr Yunus Dumbe 撰写的书面笔记，阿克拉，3.1.2021（藏于作者档案）。
-
 Haji Khuzaima M. Osman，SONSETFUND 总秘书，阿克拉，6.12.2017。
-
 Haji Nurideen Salih，（退休）IEU 区域经理，瓦，5.12.2019。
-
 Haji Osman Mahama Kanhiri，区域首席伊玛目，以及长老，瓦，6.12.2019。
-
 Haji Sulemana Mumuni，伊斯兰研究高级讲师，加纳大学莱贡分校，1.3.2017，5.12.2017，12.9.2018，12.4.2019。
-
 Hajia Aisha Abdallah Ibrahim a.k.a. Aisha Freedom，阿克拉，15.10.2022。
-
 Hajia Fatimatu N-Eyare Sulemanu，FOMWAG 代表及加纳大学莱贡分校宗教研究系讲师（阿克拉），14.12.2017。
-
 Hajia Mariam Salifu，尼马，19.10.2022。
-
 Ibrahim Baba Maltiti，库马西，10.10.2020。
-
 Imam Khidir Issah，Majid Ar-Rasul，尼马，阿克拉，19.10.2022。
-
 Ishaq Kantier，Islamic Investment Ltd 秘书，库马西，15.8.2018，12.10.2022。
-
 Lieutenant Shamsudeen Salifu，库马西，13.12.2019。
-
 Mohammed Amin，Star Creative Life Foundation 创始人兼领导，阿克拉，17.10.2022。
-
-
-
-
 穆罕默德·阿米努·侯赛因，Karima航运企业首席执行官的个人助理，库马西，2022年10月11日。
-
 穆罕默德·埃勒-阿利姆·马哈曼，布朗阿哈福地区文奇市Al-Faruq教育学院阿拉伯语与伊斯兰研究系主任，兼库马西Sakafiya清真寺顾问，2018年9月15日。
-
 穆斯塔法·易卜拉欣，Janat-ut-Firdause慈善基金会创始人，阿克拉，2022年10月16日。
-
 赛义德·穆罕默德·萨尼，FYC行政主任，阿克拉，2022年10月9日。
-
 谢里夫·沙班，Sadaqa Train创始人，阿克拉，2022年10月8日。
-
 谢赫·阿卜杜勒·马吉德，伊玛目达瓦组织秘书，以及谢赫·阿卜杜勒·法拉，伊玛目达瓦组织成员，塔马利，2019年4月10日。
-
 谢赫·阿卜杜勒-穆明·阿卜杜勒-拉赫曼，库马西阿萨瓦西Nurul Ameen教育综合体主任，2017年12月11日。
-
 谢赫·阿卜杜勒·穆明·哈鲁纳，阿散蒂大区首席伊玛目，库马西，2019年9月15日。
-
 谢赫·阿卜杜勒-拉扎克，Nurul Islam（伊斯兰之光），库马西，2018年9月16日。
-
 谢赫·阿卜杜勒·瓦杜德·哈伦，加纳提加尼亚穆斯林运动主席，库马西，2019年4月5日。
-
 谢赫·阿卜杜勒萨拉姆·艾哈迈德，北部大区首席伊玛目，塔马利，2019年4月10日。
-
 谢赫·阿卜达尔-拉赫曼，Ansar Addeen创始人兼主席，以及谢赫·阿卜杜拉，Ansar Addeen总书记，库马西，2019年4月7日、2019年12月12日、2022年10月11日。
-
 谢赫·阿布巴卡尔·艾哈迈德·伊德里斯、谢赫·阿纳斯·阿卜杜勒-穆明·伊萨和谢赫·马舒德·穆罕默德·穆赫塔尔，瓦-多多利，2019年12月7日。
-
 谢赫·阿布巴卡尔·阿里·纳帕里，TLF创始人，阿克拉，2022年10月8日。
-
 谢赫·哈吉·努胡·阿卜杜勒-穆明，瓦，2019年12月7日。
-
 谢赫·哈吉·尤西夫·伊萨，Jama’at Hidayat Islamiyya主席，瓦，2019年12月7日；另有尤努斯·邓贝博士的书面笔记，瓦，2020年12月9日（存于作者档案）。
-
 谢赫·阿明·班巴·伊玛目，塔马利，2019年4月10日。
-
 谢赫·阿米努·班巴·法拉迪，埃朱拉，2019年4月4日。
-
 谢赫·阿纳斯·阿卜杜勒-穆明·伊萨，瓦，2019年12月7日。
-
 谢赫·阿纳斯·陶菲克·易卜拉欣·巴克里与哈桑博士，STF执行主任，库马西，2017年12月12日和2018年9月18日。
-
 谢赫·阿里米亚奥·舒阿卜，天课与施舍信托基金前首席执行官，阿克拉/莱贡，2017年12月7日。
-
 谢赫·阿明·邦苏博士，GMM全国主席，库马西，2017年12月10日；阿克拉，2022年10月13日。
-
 谢赫·伊斯梅尔·赛义德·亚当博士，ASWAJ阿散蒂大区首席伊玛目，库马西，2017年2月27日、2019年4月5日。
-
 谢赫·苏莱曼·穆罕默德·哈伦·巴库里博士，Jama’a伊玛目，瓦，2019年12月5日。
-
 谢赫·塔明博士，Anbariya教育综合体总书记兼校长，塔马利，2019年4月9日、2019年12月10日。
-
 谢赫·塔米姆博士，Anbariya逊尼派社区总书记，塔马利，2019年4月9日。
-
 谢赫·易卜拉欣·巴沙·伊德里斯，塔马利，2019年12月10日。
-
 谢赫·易卜拉欣·瓦塔拉，ASWAJ上西区首席伊玛目，瓦，2019年12月7日。
-
 谢赫·伊萨，伊斯兰教育部门经理，塔马利，2019年4月9日。
-
 谢赫·贾马尔·丁·奥马尔·穆罕默德，塔马利中央清真寺伊玛目兼Aris社会中心主任，塔马利，2019年4月10日。
-
 谢赫·凯兰，加纳发展慈善协会主任，塔马利，2019年4月10日和2019年12月9日。
-
 谢赫·卡米尔·穆罕默德，ASWAJ阿散蒂大区副首席伊玛目，库马西，2017年12月10日。
-
 谢赫·马吉德，伊玛目达瓦组织秘书，以及谢赫·阿卜杜勒·法塔赫，伊玛目达瓦组织成员，塔马利，2019年4月10日。
-
 谢赫·穆罕默德·甘斯·达乌德，ASWAJ大区副伊玛目，瓦，2019年12月7日。
-
 谢赫·奥斯曼·巴瓦·奥兰多，库马西，2017年12月12日。
-
 谢赫·赛义德·阿布巴卡尔·扎卡里亚，Anbariya逊尼派社区负责人，塔马利，2019年4月9日。
-
 谢赫·奥马尔·易卜拉欣·伊玛目，阿克拉，2017年3月4日、2017年12月。
-
 谢赫·优素菲亚，库马西，2017年12月12日。
-
 谢赫·扎卡里亚·阿卜杜勒-拉赫曼，阿散蒂大区副首席伊玛目，库马西，2017年12月11日。
-
 苏莱曼·哈桑·阿塔克波，CIHOG管理员，库马西，2022年10月11日。
-
 提加尼·马哈茂德，MFCS项目主管，库马西，2022年10月10日。
-
 奥斯曼·沙伊布，阿沙伊曼Sadaqatul Jariya总书记，阿沙伊曼，2020年10月16日。
-
 乌斯塔兹·艾哈迈德·赛义德，库马西伊玛目与乌里玛理事会秘书，库马西，2017年2月27日。
-
 尤西夫·扎卡里亚，哈米莱伊玛目；毛拉·阿卜杜勒·哈米德，菲尔蒙伊玛目；毛拉·巴亚亚，菲尔蒙副伊玛目；毛拉·哈桑，哈吉·努胡，以及毛拉·侯赛因，哈米莱，2019年12月6日。
-
 与穆斯林准入运动成员——奥马尔·穆罕默德、阿卜杜勒-阿齐兹·伊沙克、尤努斯·穆罕默德和伊玛目·马哈茂德·阿法里·约巴——的小组访谈，库马西，2018年9月15日。
-
 与GCF高管成员（哈吉·马苏德、哈吉·巴拉克·阿里、赛义德·穆罕默德·萨尼）的小组访谈，阿克拉，2022年10月19日。
 
 ## 参考文献
-
 阿卜杜勒-哈米德，穆斯塔法与穆罕默德·法兹维·阿米努·阿马杜。《伊斯兰教与加纳可持续发展议程：协商穆斯林社区参与主流经济活动》。载《宗教与可持续发展：加纳视角》，乔治·奥索姆-巴察、妮可莱塔·加蒂和拉比亚图·代尼奥·阿玛编，第131–144页。梵蒂冈城：乌尔巴尼亚大学出版社，2018年。
-
 阿卜杜勒-瓦哈卜，阿卜杜勒-哈米德，与祖尔贾斯特里·宾·阿卜杜勒·拉扎克。《伊斯兰银行在加纳的采用》。《国际商业、经济与法律杂志》第19卷，第2期（2019年）：第14–21页。
-
 阿卜杜勒-瓦哈卜，奥马尔·西纳。《评估加纳伊巴德派穆斯林开展达瓦的方式：文奇与特奇曼案例研究》。哲学硕士论文，夸梅·恩克鲁玛科技大学宗教学系，2016年11月。
-
 阿卜杜拉，穆罕默德。《瓦克夫、可持续发展目标（SDGs）与伊斯兰法宗旨（maqasid al-shariah）》。《国际社会经济学杂志》第45卷，第1期（2018年）：第158–172页。
-
 阿布巴卡尔，阿卜杜勒-瓦哈卜。《阿克拉的天课实践与减贫》。哲学硕士论文，加纳大学宗教研究系，2018年7月。
-
 阿布巴卡尔，哈比卜。《伊斯兰非政府组织在其加纳运营社区中的影响》。2015年3月25日，https://www.linkedin.com/pulse/impact-islamic-ngos-operational-communities-ghana-habib-abubakar，访问于2016年8月29日。
-
 阿布杜，A.O.《面向普通人的伊斯兰经济学》。阿克拉：Dyno-Media出版社，1996年。
-
 阿昌庞，乔治。《加纳的微型创业动机：穆斯林是否有差异？》。载《伊斯兰背景下的创业与管理》，韦兰·拉马达尼、莱奥-保罗·达纳、什奇佩·格尔古里-拉希蒂和瓦内萨·拉滕编，第33–47页。沙姆：施普林格出版社，2016年。
-
 亚当，阿沃卢，亚当·富谢尼和丹尼尔·德拉马尼·基波-苏涅齐。《以协作式健康促进方法改善加纳农村卫生服务供给与健康结果：基于社区的健康规划与服务（CHPS）战略案例》。载《农村健康》，乌马尔·巴查编。伦敦：IntechOpen出版社，2021年。DOI：10.5772/intechopen.97882。
-
 阿达斯，埃明·巴基。《创业型伊斯兰的形成与资本主义的伊斯兰精神》。《文化研究杂志》第10卷，第2期（2006年）：第113–137页。
-
 阿代-穆努努库姆，理查森。《以宗教进行加法与除法：加纳教会公立学校中并不隐晦的隐性课程》。《宗教与教育》第44卷，第2期（2017年）：第225–243页。
-
 阿杰伊，丹尼尔·夸梅·安波福，费斯图斯·安诺-弗雷姆蓬，和马丁·博松佩姆。《加纳大阿克拉地区非政府组织对社交网站的使用》。《公共关系评论》第42卷，第5期（2016年）：第920–928页。
+
+
 
 阿杜-贾姆菲，塞缪尔等。《穆斯林治疗师与疗愈：加纳阿博阿博社区的民族志研究》。《国际现代人类学杂志》第2卷，第14期（2020年）：第291–316页。
 
@@ -7946,9 +8095,6 @@ Mohammed Amin，Star Creative Life Foundation 创始人兼领导，阿克拉，1
 阿玛，拉比亚图。《“他们必须以智慧召唤人们走上主道”：一位穆斯林女性眼中的跨信仰相遇中的非洲女性》。《世界基督教与跨宗教关系研究》第48期（2014年）：第185–202页。
 
 阿玛，拉比亚图·代尼奥。《加纳穆斯林论为了可持续发展的“成为穆斯林”》。载《宗教与可持续发展：加纳视角》，乔治·奥索姆-巴察、妮可莱塔·加蒂和拉比亚图·代尼奥·阿玛编，第227–242页。梵蒂冈城：乌尔巴尼亚大学出版社，2018年。
-
-
-
 
 Aning, Emmanuel Kwesi 和 Mustapha Abdallah. “加纳的伊斯兰激进化与暴力。” 载*西非军事主义与暴力：宗教、政治与激进化*，James Gow、Funmi Olonisakin 和 Ernst Dijxhoorn 编，90–125页。伦敦：劳特利奇出版社，2013年。
 
@@ -8040,9 +8186,7 @@ Ferris, Elizabeth. “信仰组织与世俗人道主义组织。” 红十字国
 
 Fuseini, Tufeiru 和 Marguerite Daniel. “在儿童权利与现实背景下探讨加纳北部达格邦穆斯林儿童乞丐的压力源与资源。” Cogent社会科学 4, no. 1 (2018), https://doi.org/10.1080/23311886.2018.1542955.
 
-Fuseini, Tufeiru 和 Marguerite Daniel. “儿童乞讨，作为儿童的一种表现
-
-“加纳北部达格邦的劳动力：马拉姆与家长的观点。” *儿童与青少年服务评论* 111 (2020)， https://doi.org/10.1016/j.childyouth.2020.104836.
+Fuseini, Tufeiru 和 Marguerite Daniel. “儿童乞讨，作为儿童的一种表现：加纳北部达格邦的劳动力：马拉姆与家长的观点。” *儿童与青少年服务评论* 111 (2020)， https://doi.org/10.1016/j.childyouth.2020.104836.
 
 约翰·库奥穆罗·盖尔。“为什么加纳北部穆斯林妇女不在医疗机构使用熟练的孕产妇保健服务：一项定性研究。” *BMC国际健康与人权* 15，第10期（2015），doi:10.1186/s12914-015-0048-9.
 
@@ -8060,7 +8204,7 @@ Fuseini, Tufeiru 和 Marguerite Daniel. “儿童乞讨，作为儿童的一种�
 
 肖恩·哈内特。“‘异教徒’雷纳的皈依：在殖民时期加纳的公开穆斯林身份。” *过去与现在* 210，第1期（2011）：187–220。
 
-约翰·H·汉森。“加纳的现代性、宗教与发展：以艾哈迈迪亚为例。” *加纳研究* 12–13 (2011): 55–75。
+约翰·H·汉森。“加纳的现代性、宗教与发展：以艾哈迈迪亚为例。” *加纳研究* 12–13 (2011): 55–75.
 
 约翰·H·汉森。*黄金海岸的艾哈迈迪亚：英帝国中的穆斯林世界主义者*。布卢明顿：印第安纳大学出版社，2017年。
 
@@ -8075,6 +8219,8 @@ M·卡比尔·哈桑、穆尼尔·M·阿尔沙特尔、拉谢杜尔·哈桑和�
 安德烈亚斯·霍伊泽和延斯·柯尔森。“从静悄悄的革命到对模糊性的容忍：国际发展话语中的宗教非政府组织。” 载于 Does Religion Make a Difference? Religious NGOs in International Development Collaboration，安德烈亚斯·霍伊泽和延斯·柯尔森编，13–40页。巴登-巴登：诺莫斯出版社，2020年。
 
 汉斯·霍尔门。“撒哈拉以南非洲的非政府组织。” 载于 *劳特利奇非政府组织与国际关系手册*，托马斯·戴维斯编，516–528页。伦敦：劳特利奇出版社，2019年， https://doi.org/10.4324/9781315268927.
+
+
 
 纳齐穆尔·霍克、穆罕默德·阿克塔鲁扎曼·汗和哈齐·迪恩·穆罕默德。“转型经济中通过天课减贫：小企业创业框架。” Journal of Global Entrepreneurship Research 5，第7期（2015）：1–20。
 
@@ -8125,48 +8271,86 @@ M·卡比尔·哈桑、穆尼尔·M·阿尔沙特尔、拉谢杜尔·哈桑和�
 尼亚兹·艾哈迈德·汗和苏尔塔娜·贾琳。“瓦克夫与穆斯林占多数国家的人类安全：传统、现代实践与挑战。” 载于 *人类安-
 
 - 《慈善与公益：伊斯兰视角与穆斯林占多数的国家实践》，萨米乌尔·哈桑编，第183–204页。纽约：斯普林格出版社，2015年。
+
 - 科博，奥斯曼。“‘我们也是公民’：加纳独立的政治。”《现代非洲研究杂志》48卷，第1期（2010年）：第67–94页。
+
 - 科博，奥斯曼·穆尔齐克。《揭开二十世纪西非伊斯兰改革中的现代性》。莱顿：布里尔出版社，2012年。
+
 - 科博，奥斯曼·穆尔齐克。“加纳萨拉菲/逊尼派改良主义的转变轨迹。”《伊斯兰非洲》6卷，第1–2期（2015年）：第60–81页。
+
 - 科博，奥斯曼·穆尔齐克。“加纳的伊斯兰高等教育机构：以伊斯兰大学学院为例。”载于《后殖民非洲的穆斯林高等教育机构》，姆巴耶·洛和穆罕默德·哈龙编，第179–191页。纽约：帕尔格雷夫·麦克米伦出版社，2016年。
+
 - 科博，奥斯曼。“进步之路：马德拉萨教育与撒哈拉以南穆斯林对经济社会发展的追求。”载于《伊斯兰社会的社会进步状况》，哈比卜·蒂利温与理查德·J·埃斯蒂斯编，第156–177页。纽约：斯普林格出版社，2016年。
-- 康拉德·阿登纳基金会编。《加纳北部和多哥的圣战威胁：遏制扩张的盘点与前景》。2022年，可于 https://www.kas.de/documents/261825/16928652/The+jihadist+threat+in+northern+Ghana+and+Togo.pdf/ 获取。
+
+- 康拉德·阿登纳基金会编。《加纳北部和多哥的圣战威胁：遏制扩张的盘点与前景》。2022年，可于 `https://www.kas.de/documents/261825/16928652/The+jihadist+threat+in+northern+Ghana+and+Togo.pdf/` 获取。
+
 - 克波比，莉莉·N.A.，与莱斯利·斯瓦茨。“加纳阿克拉的穆斯林传统治疗师：关于精神障碍的信念与治疗。”《宗教与健康杂志》58卷（2019年）：第833–846页。
+
 - 库米，伊曼纽尔。《多样化还是死亡？加纳非政府发展组织（NGDOs）对不断变化的援助格局的回应》。博士论文，巴斯大学，2017年。
+
 - 库米，伊曼纽尔。“推进可持续发展目标：慈善事业在加纳潜在作用分析。”《亚洲与非洲研究杂志》54卷，第7期（2019年）：第1084–1104页。
+
 - 库米，伊曼纽尔。“援助削减与加纳非政府发展组织对可持续性的追求：慈善机构能否作为替代资源动员途径？”《VOLUNTAS：国际志愿与非营利组织杂志》30卷（2019年）：第1332–1347页。
-- 库米，伊曼纽尔。《全球慈善追踪：加纳》，2020年10月，https://scholarworks.iupui.edu/bitstream/handle/1805/25915/ghana-report21.pdf?sequence=1&isAllowed=y，访问于2021年7月13日。
+
+- 库米，伊曼纽尔。《全球慈善追踪：加纳》，2020年10月，`https://scholarworks.iupui.edu/bitstream/handle/1805/25915/ghana-report21.pdf?sequence=1&isAllowed=y`，访问于2021年7月13日。
+
 - 库亚泰，穆斯塔法·阿卜杜拉。《作为加纳非政府组织的世界伊斯兰宣教协会（WICS）研究》。学士论文，阿克拉伊斯兰大学学院，2006年。
+
 - 夸贝纳，贾斯蒂斯·理查德，奥乌苏·基耶，与利德维德·H·贝克莫斯。“加纳的政治自卫队团体：暴力还是民主？”《非洲光谱》55卷，第3期（2020年）：第321–338页。
+
 - 夸奥，本杰明，与丹尼尔·阿莫阿克。“规模真的重要吗？加纳北部非政府组织的普遍性与发展挑战。”《挪威地理杂志》76卷，第3期（2022年）：第149–163页。
+
 - 基耶，贾斯蒂斯·理查德·夸贝纳·奥乌苏，与利德维德·H·贝克莫斯。“加纳的政治自卫队团体：暴力还是民主？”《非洲光谱》55卷，第3期（2020年）：第321–338页。
-- 兰伯特，杰西卡·E.，等。“加纳基于信仰和传统治疗中心对精神疾病的治疗：服务使用者与治疗师的视角。”《全球心理健康》7卷（2020年），e28：第1–7页，https://doi.org/10.1017/gmh.2020.21。
+
+- 兰伯特，杰西卡·E.，等。“加纳基于信仰和传统治疗中心对精神疾病的治疗：服务使用者与治疗师的视角。”《全球心理健康》7卷（2020年），e28：第1–7页，`https://doi.org/10.1017/gmh.2020.21`。
+
 - 朗格维舍，卡特琳。“阿赫迈迪亚与西非的发展援助。”载于《宗教重要吗？国际发展合作中的宗教非政府组织》，安德烈亚斯·霍伊泽和延斯·科赫森编，第263–286页。巴登-巴登：诺莫斯出版社，2020年。
+
 - 朗格维舍，卡特琳。“人道主义政治：阿赫迈迪亚与社会福利的提供。”载于《非洲的穆斯林信仰组织与社会福利》，霍尔格·魏斯编，第247–272页。沙姆：帕尔格雷夫·麦克米伦出版社，2020年。
+
 - 拉斯特，默里。“尼日利亚北部的魅力与医学。”载于《非洲伊斯兰教中的魅力与兄弟情谊》，D.B.·克鲁兹·奥布莱恩和C.·库隆编，第183–204页。牛津：克拉伦登出版社，1988年。
+
 - 劳特巴赫，卡伦。“加纳的宗教企业家。”载于《非洲的文化创业》，乌特·勒申塔勒和多罗特娅·舒尔茨编，第19–36页。纽约：劳特利奇出版社，2016年。
+
 - 拉瓦尔，易卜拉欣·穆罕默德。“现金瓦克夫在尼日利亚实现农业机械化中的作用。”《伊斯兰银行与金融杂志》36卷，第2期（2019年）：第68–79页。
+
 - 勒布朗，玛丽·纳塔莉，与本杰明·苏亚雷斯，编。《新自由主义时代的穆斯林西非》。布卢明顿，印第安纳州：印第安纳大学出版社，2008年。
+
 - 勒布朗，玛丽·纳塔莉，与路易·奥代·戈瑟兰。“导言：西非的信仰、慈善与志愿主义伦理。”载于《信仰与慈善：西非的宗教与人道主义援助》，玛丽·纳塔莉·勒布朗和路易·奥代·戈瑟兰编，第1–23页。伦敦：普卢托出版社，2016年。
+
 - 伦茨，卡罗拉，与安德烈娅·诺尔。“跨越地区差异，超越家庭纽带：正在形成的加纳中产阶级。”《历史与人类学》（2021年），DOI：10.1080/02757206.2021.1885400。
+
 - 马格布尔，A.，与R.·哈桑。“苏丹喀土穆州伊斯兰银行下的小额信贷供给。”《南部非洲商业评论》21卷（2017年）：第409–410页。
+
 - 马斯克利耶，阿德琳，与本杰明·苏亚雷斯，编。《穆斯林青年与‘9·11’一代》。圣菲与阿尔伯克基：高级研究出版社与新墨西哥大学出版社，2016年。
+
 - 梅，萨曼莎。“政治虔诚：天课的政治化。”《中东批评》22卷，第2期（2013年）：第149–164页。
+
 - 姆巴乌尼，约瑟夫。“人口统计学对加纳银行家采用伊斯兰银行和转换传统银行意愿的影响。”《伊斯兰银行与金融杂志》7卷，第2期（2019年）：第14–28页。
+
 - 姆巴乌尼，约瑟夫，与西蒙·尼马科。“加纳伊斯兰银行与金融的引入：机遇与挑战。”《伊斯兰银行与金融杂志》4卷，第1期（2016年）：第60–70页。
+
 - 姆巴乌尼，约瑟夫，与西蒙·尼马科。“加纳采用伊斯兰银行的决定因素。”《国际伊斯兰与中东金融管理杂志》10卷，第2期（2017年）：第264–288页。
+
 - 姆巴乌尼，约瑟夫，与西蒙·贾西·尼马科。“穆斯林与非穆斯林消费者对加纳引入伊斯兰银行的看法。”《伊斯兰会计与商业研究杂志》9卷，第3期（2018年）：第353–377页。
+
 - 门萨，约瑟夫，与约瑟夫·科菲·泰耶。“加纳城市中‘宗戈’的地理理论化：一种复杂系统方法。”《加纳地理杂志》13卷，第2期（2021年）：第66–95页。DOI：10.4314/gjg.v13i2.3。
+
 - 姆福阿福-麦卡锡，马格努斯，杰夫·格里肖，与妮可·斯托科。“隐形斗篷：加纳肢体残疾文献综述。”《SAGE开放》（2020年1月至3月）：第1–8页。
+
 - 米歇尔，托马斯。“借助Kimse Yok Mu消除贫困。”载于《现代伊斯兰思想与行动主义：西方与中东的动态》，埃尔坎·托古斯卢和约翰·莱曼编，第183–194页。鲁汶：鲁汶大学出版社，2014年。
+
 - 穆罕默德，阿巴斯，塞缪尔·阿布-贾姆菲，谢赫·西巴威·穆罕默德·扎卡里亚，亨利·泰蒂·亚特利，与本杰明·多姆普雷·达克瓦。“加纳的穆斯林与政党政治：历史先例与当代分析。”《哲学、社会与人文学科年鉴》第1卷（2021年）：第27–50页。
+
 - 穆罕默德，阿里·巴巴。《阿克拉加纳穆斯林社区中的“基地”现象》。哲学硕士论文，加纳大学，2015年。
+
 - 穆罕默德，穆斯塔法·奥马尔，与奥马尔·艾哈迈德。“在乌干达建设现代瓦克夫医院的意愿与实际支持之间的关系。”载于《金融包容与减贫：伊斯兰机构和工具的观点》，穆罕默德·祖尔希布里和阿卜杜勒·加法尔·伊斯梅尔编，第285–305页。沙姆：帕尔格雷夫·麦克米伦/斯普林格国际出版公司，2017年。
+
 - 穆罕默德，奥马尔。《伊朗与加纳经济关系述评》。安卡拉：安卡拉伊朗研究中心，2017年。
+
 - 莫尔，安妮特·C.，范德林登，A.J.，霍赫韦赫，M.，与W.E.·沙德。“加纳文奇区30岁以上人群的失明和低视力患病率及其与眼保健项目的关系。”《英国眼科学杂志》78卷，第4期（1994年）：第275–279页。
+
 - 穆罕默德，巴巴·尤努斯。“加纳为何必须拥抱伊斯兰金融。”《非洲伊斯兰金融报告》1卷，第2期（2016年4月至6月）：第25–27页。
-
-
 
 穆罕默德，马哈茂德·穆赫塔尔 & 奥马尔·瓦哈卜·希纳，《国家发展中的信仰：加纳伊斯蒂卡马穆斯林组织活动述评》。论文提交于2018年9月6日至7日举行的第三届宗教与国家发展国际会议，加纳夸梅·恩克鲁玛科技大学宗教研究系。
 
@@ -8186,9 +8370,9 @@ M·卡比尔·哈桑、穆尼尔·M·阿尔沙特尔、拉谢杜尔·哈桑和�
 
 吉尔·奥利维尔，马里·舒乔，昆汀·沃登。《加纳基于信仰的医疗保健服务：市场份额、对穷人的覆盖及表现》。*信仰与国际事务评论*第12卷，第1期（2014年）：第84–96页。
 
-菲利波·奥塞拉，卡罗琳·奥塞拉。《印度与海湾之间公共生活中的穆斯林企业家：行善与做好事》。*皇家人类学研究所杂志*（新系列），S202–S221（2009年）。https://doi.org/10.1111/j.1467-9655.2009.01550-x.
+菲利波·奥塞拉，卡罗琳·奥塞拉。《印度与海湾之间公共生活中的穆斯林企业家：行善与做好事》。*皇家人类学研究所杂志*（新系列），S202–S221（2009年）。`https://doi.org/10.1111/j.1467-9655.2009.01550-x`.
 
-埃洛姆·奥奇等人。《加纳私营部门提供高质量孕产妇和新生儿健康服务》，为2021年1月11日多方利益相关者对话编写的报告，可查阅：https://www.qualityofcarenetwork.org/sites/default/files/2021-06/Ghana%20situational%20analysis%20report.pdf，访问于2022年12月30日。
+埃洛姆·奥奇等人。《加纳私营部门提供高质量孕产妇和新生儿健康服务》，为2021年1月11日多方利益相关者对话编写的报告，可查阅：`https://www.qualityofcarenetwork.org/sites/default/files/2021-06/Ghana%20situational%20analysis%20report.pdf`，访问于2022年12月30日。
 
 马丁·奥滕-阿巴比奥，西蒙·马里瓦，路易斯·库西。《加纳北部的不发达是环境决定论还是治理危机？》*加纳地理杂志*第9卷，第2期（2017年）：第5–39页。
 
@@ -8212,7 +8396,7 @@ M·卡比尔·哈桑、穆尼尔·M·阿尔沙特尔、拉谢杜尔·哈桑和�
 
 玛丽·尤尔·彼得森。《伊斯兰与发展：国际穆斯林非政府组织》。载于*宗教重要吗？国际发展合作中的宗教非政府组织*，安德里亚斯·霍伊泽和延斯·克尔森主编，第111–134页。巴登-巴登：诺莫斯出版社，2020年。
 
-玛丽亚·波利克罗尼斯。《加纳农村医疗可及性的局限：案例研究：大阿克拉地区东加（GA East），全球未来，不定期论文第4期》，罗格斯大学，[无日期]，可查阅 https://policy.rutgers.edu/publications/occasional-paper-series/273-occasional-paper-4-maria-polychronis/file.
+玛丽亚·波利克罗尼斯。《加纳农村医疗可及性的局限：案例研究：大阿克拉地区东加（GA East），全球未来，不定期论文第4期》，罗格斯大学，[无日期]，可查阅 `https://policy.rutgers.edu/publications/occasional-paper-series/273-occasional-paper-4-maria-polychronis/file`.
 
 贝内迪克特·蓬岑。《“关爱人民”：ZuriaFM——加纳阿散蒂的一个伊斯兰广播电台》。*伊斯兰非洲*第9卷，第2期（2018年）：第209–231页。
 
@@ -8220,9 +8404,13 @@ M·卡比尔·哈桑、穆尼尔·M·阿尔沙特尔、拉谢杜尔·哈桑和�
 
 吉娜·波特。《全球化世界中的非政府组织与减贫：来自加纳的视角》。*发展研究进展*第3卷，第2期（2003年）：第131–145页。
 
+
+
+# 参考文献
+
 A.波特，O.德布拉，J.阿顺，K.J.布兰切特。《眼健康系统评估（EHSA）：加纳国家报告》。阿克拉：加纳卫生服务与国际眼健康中心、光明拯救者，2013年。
 
-查尔斯·普伦佩。《加纳COVID-19事件中的宗教与国家》。*社会科学与人文学开放*第4卷，第1期（2020年）：100141，DOI: 10.1016/j.ssaho.2021.100141.
+查尔斯·普伦佩。《加纳COVID-19事件中的宗教与国家》。《社会科学与人文学开放》第4卷，第1期（2020年）：100141，DOI: 10.1016/j.ssaho.2021.100141.
 
 穆罕默德·奥马尔·伊本·拉伊斯。《加纳的伊斯兰与计划生育：曼普鲁古穆斯林社区研究》。夸梅·恩克鲁玛科技大学宗教研究系哲学硕士论文，2013年。
 
@@ -8256,9 +8444,7 @@ M.塞伊。《加纳穆斯林定居点的发展：1901年以来的坎布格利�
 
 大卫·欣恩。《非洲的“服务”（Hizmet）：居伦运动的活动与意义》。策海出版社，2015年。
 
-纳西姆·沙阿·希拉齐，Md.福阿德·本·阿明，塔拉特·安瓦尔。“消除贫困
-
-通过伊斯兰合作组织成员国的潜在天课征收。《巴基斯坦发展评论》48卷，第4期，论文与会议记录第一、二部分（2009）：739–754。
+纳西姆·沙阿·希拉齐，Md.福阿德·本·阿明，塔拉特·安瓦尔。“消除贫困通过伊斯兰合作组织成员国的潜在天课征收。《巴基斯坦发展评论》48卷，第4期，论文与会议记录第一、二部分（2009）：739–754。
 
 Siradag, Abdurrahman. “自私的善举：理解土耳其非政府组织和公民社会在非洲日益增长的作用。”《非洲洞察》7卷，第1期（2015）：1–20。
 
@@ -8342,36 +8528,33 @@ Yaro, Joseph A. 和 Jan Hesselberg. “加纳北部贫困的轮廓：对应对�
 
 Yarrow, Thomas. 《超越政治的发展：加纳的援助、行动主义与非政府组织》。贝辛斯托克：帕尔格雷夫·麦克米伦，2011年。
 
-Yashida, Etsuaki. “金融科技支持的现金瓦克夫：社会金融的有效中介。”载于《为社会经济发展重振瓦克夫，第一卷》，主编 Khal-
+Yashida, Etsuaki. “金融科技支持的现金瓦克夫：社会金融的有效中介。”载于《为社会经济发展重振瓦克夫，第一卷》，主编 Khal-哈利法·穆罕默德·阿里、M. 卡比尔·哈桑和阿卜杜勒拉赫曼·埃勒扎希·赛义德·阿里，第43–58页。尚：帕尔格雷夫·麦克米伦，2019年。
 
+索菲娅·亚斯明与罗扎伊尼·哈尼法。“英国穆斯林慈善组织的问责与叙述性披露。”《伊斯兰会计与商业研究杂志》第8卷第1期（2017年）：70–86。
 
-哈利法·穆罕默德·阿里、M. 卡比尔·哈桑和阿卜杜勒拉赫曼·埃勒扎希·赛义德·阿里，第43–58页。尚：帕尔格雷夫·麦克米伦，2019年。
+乔安娜·萨利富·延多克与斯宾塞·詹姆斯。“加纳的新冠疫情。”《比较家庭研究杂志》第51卷第3/4期（2020年）：369–384。
 
-索菲娅·亚斯明与罗扎伊尼·哈尼法。“英国穆斯林慈善组织的问责与叙述性披露。”*伊斯兰会计与商业研究杂志*第8卷第1期（2017年）：70–86。
+阿利尤·奥卢本加·优素福、贝洛·耶里马与格蕾丝·阿佩。“天课文献发展评估：科学计量分析。”《国际天课杂志》第5卷第1期（2020年）：29–43。
 
-乔安娜·萨利富·延多克与斯宾塞·詹姆斯。“加纳的新冠疫情。”*比较家庭研究杂志*第51卷第3/4期（2020年）：369–384。
+吉卜拉伊勒·本·优素福。“加纳的穆斯林领导力：批判性分析。”《苏格兰艺术、社会科学与科学研究杂志》第5卷第2期（2012年）：14–27。
 
-阿利尤·奥卢本加·优素福、贝洛·耶里马与格蕾丝·阿佩。“天课文献发展评估：科学计量分析。”*国际天课杂志*第5卷第1期（2020年）：29–43。
+吉卜拉伊勒·本·优素福。“加纳穆斯林青年的避孕与性及生殖健康意识：问题、挑战与积极发展前景。”《SAGE 开放期刊》，2014年7–9月：1–12，DOI: 10.1177/2158244014541771
 
-吉卜拉伊勒·本·优素福。“加纳的穆斯林领导力：批判性分析。”*苏格兰艺术、社会科学与科学研究杂志*第5卷第2期（2012年）：14–27。
-
-吉卜拉伊勒·本·优素福。“加纳穆斯林青年的避孕与性及生殖健康意识：问题、挑战与积极发展前景。”*SAGE 开放期刊*，2014年7–9月：1–12，DOI: 10.1177/2158244014541771
-
-穆罕默德·尤斯里·本·优素福。“信托基金：融合瓦克夫、天课与施舍的社会经济议程产品。”*阿卜杜勒阿齐兹国王大学学报：伊斯兰经济学，阿卜杜勒阿齐兹国王大学伊斯兰经济研究所*第27卷第1期（2014年）：101–121。
+穆罕默德·尤斯里·本·优素福。“信托基金：融合瓦克夫、天课与施舍的社会经济议程产品。”《阿卜杜勒阿齐兹国王大学学报：伊斯兰经济学，阿卜杜勒阿齐兹国王大学伊斯兰经济研究所》第27卷第1期（2014年）：101–121。
 
 美国天课基金会。《天课手册：西方穆斯林实用指南》。印第安纳州布卢明顿：AuthorHouse，2008年。
 
-A.R. 泽纳拉卜丁。“伊斯兰合作组织成员国的贫困：现状、决定因素与行动议程。”*伊斯兰国家经济合作杂志*第17卷第3–4期（1996年）：1–40。
+A.R. 泽纳拉卜丁。“伊斯兰合作组织成员国的贫困：现状、决定因素与行动议程。”《伊斯兰国家经济合作杂志》第17卷第3–4期（1996年）：1–40。
 
-桑迪·祖克与卡西迪·阿恩特。“加纳教育领域的伊斯兰非政府组织：范围、活动与收入组合分析。”*穆斯林社会教育杂志*第2卷第2期（2021年）：57–81。
+桑迪·祖克与卡西迪·阿恩特。“加纳教育领域的伊斯兰非政府组织：范围、活动与收入组合分析。”《穆斯林社会教育杂志》第2卷第2期（2021年）：57–81。
 
-穆罕默德·祖勒希布里。“金融包容、金融包容政策与伊斯兰金融。”*新兴市场经济体的宏观经济学与金融*第9卷第3期（2016年）：303–320。
+穆罕默德·祖勒希布里。“金融包容、金融包容政策与伊斯兰金融。”《新兴市场经济体的宏观经济学与金融》第9卷第3期（2016年）：303–320。
 
 穆罕默德·祖勒希布里。“穆斯林国家瓦克夫土地与房产开发的性质。”载于 *金融包容与减贫：伊斯兰机构与工具的视角*，穆罕默德·祖勒希布里与阿卜杜勒·加法尔·伊斯梅尔编，第271–283页。尚：帕尔格雷夫·麦克米伦/施普林格国际出版，2017年。
 
-穆罕默德·祖勒希布里与阿卜杜勒·加法尔·伊斯梅尔编。*金融包容与减贫：伊斯兰机构与工具的视角*。纽约：帕尔格雷夫·麦克米伦，2017年。
+穆罕默德·祖勒希布里与阿卜杜勒·加法尔·伊斯梅尔编。《金融包容与减贫：伊斯兰机构与工具的视角》。纽约：帕尔格雷夫·麦克米伦，2017年。
 
-## 协会、理事会、基金会、草根组织等索引
+# 协会、理事会、基金会、草根组织等索引
 
 | 条目 | 页码 |
 | --- | --- |
@@ -8430,6 +8613,9 @@ A.R. 泽纳拉卜丁。“伊斯兰合作组织成员国的贫困：现状、决
 | 拉扬国际学校 | 76, 127 |
 | 萨拉姆慈善基金会 | 240 |
 | 瓦吉德伊斯兰宣教基金会 | 76 |
+
+
+
 | 瓦克夫捐赠基金 | 461 |
 | 亚辛基金会（Aal Yaseen 加纳） | 133–134 |
 | 孤儿关怀基金会（Al-Yataama） | 252 |
@@ -8502,17 +8688,13 @@ A.R. 泽纳拉卜丁。“伊斯兰合作组织成员国的贫困：现状、决
 | 加纳慈善基金会 | 242 |
 | 酋长哈吉·苏莱·伊萨基金会 | 256 |
 | 辛加班尼马组织 | 340–341 |
-| 诊所、医院和医疗中心 | |
+| 诊所、医院和医疗中心 |  |
 | &emsp; 阿克拉纽敦伊斯兰医院 | 316, 327 |
 | &emsp; 非洲穆斯林诊所 | 318 |
 | &emsp; 艾哈迈迪穆斯林宣教团医院 | 128, 298, 317, 322 |
 | &emsp; 爱资哈尔诊所（WA） | 323 |
 | &emsp; 努尔伊斯兰医疗中心 | 320, 326 |
 | &emsp; 阿明科学草药医院 | 326 |
-
-
-
-
 Ar-Rahman 穆斯林诊所 316
 Baaba Geewa 纪念医院 120, 335
 Bustan Rashidun 项目 67
@@ -8707,9 +8889,6 @@ Generation Wealthy, Unity & Faith 192
 - 伊斯兰国际之声 69, 196, 208
 - InTouch 基金会 194
 - Iqra 教育与发展基金会 54, 109, 216–217, 230, 335, 389, 418
-
-
-
 - 伊克拉秀 57
 - 伊朗红新月会 185–186, 321
 - 全民伊斯兰组织 120, 140
@@ -8732,6 +8911,9 @@ Generation Wealthy, Unity & Faith 192
 - 伊斯兰投资 204, 298, 434, 445, 450, 474
 - 伊斯兰投资有限公司 445, 451–455
 - 加纳伊斯兰医学协会 39, 42
+
+
+
 - 伊斯兰微型金融 355, 433–435, 437, 445–447, 452, 474
 - 伊斯兰微型金融网络 446
 - 伊斯兰宣教秘书处 19, 39, 125–126, 316, 320, 450
@@ -8906,7 +9088,6 @@ Generation Wealthy, Unity & Faith 192
 - 苏丹·迪拉鲁·阿尔斯兰孤儿院 248
 - 塔马利儿童之家 110, 255
 - 塔格瓦孤儿院与学校 110, 247, 251, 255–256
-
 - 孤儿与贫困者热线 65, 69
 - 典范基金会 60, 83, 99–110, 107, 111, 219
 - 减贫伙伴关系 93
@@ -8916,9 +9097,6 @@ Generation Wealthy, Unity & Faith 192
 - 乌姆·哈蒂亚公主基金会 94
 - 问题共担、问题解决基金会 95
 - 职业穆斯林女性网络 66
-
-
-
 - 进步穆斯林青年运动 53
 - 进步穆斯林论坛 47–48
 - 卡塔尔慈善机构 64, 173–176, 205, 209, 212, 219, 223, 239, 315, 327, 402, 451
@@ -9061,6 +9239,11 @@ Generation Wealthy, Unity & Faith 192
 - 宗戈联合组织 143, 146
 - 宗戈妇女生计与赋权计划 94, 105
 - 瑞典宗戈青年协会 143
+
+
+
+# 索引
+
 - 宗戈青年志愿者协会 59, 244
 - 泽努宗戈青年协会 145
 - 宗戈广播直播 44
@@ -9167,50 +9350,47 @@ Generation Wealthy, Unity & Faith 192
 - 谢赫·哈比卜·穆罕默德·巴巴古纳 114
 - 谢赫·哈桑·哈姆扎·穆萨 318
 - 谢赫·侯赛因·扎卡里亚 50
+- 谢赫·侯赛因·哈立德·吉马 294
+- 谢赫·易卜拉欣·巴沙·伊德里斯 370, 413
+- 谢赫·伊德里斯·托波 133
+- 谢赫·伊萨 379, 385, 404-405, 425
+- 谢赫·贾迈勒·丁·奥马尔·穆罕默德 293, 379
+- 谢赫·凯兰 228-229
+- 谢赫·卡米勒·穆罕默德 379, 383, 411, 424
+- 谢赫·海鲁·阿卜杜拉希·迈卡诺 120, 335
+- 谢赫·哈立德·阿卜杜勒·穆敏 291
+- 谢赫·哈利法·艾哈迈德·阿布勒·法伊德·迈卡诺 119
+- 谢赫·马苏德·阿卜杜勒·拉赫曼·西塞 120
+- 谢赫·穆罕默德·阿瓦勒·阿卜杜拉·哈菲兹 369
+- 谢赫·穆罕默德·本·法赫德·鲁布扬 248
+- 谢赫·穆罕默德·本·比达 184, 304, 306
+- 谢赫·穆斯塔法·易卜拉欣 18, 54, 82, 208-209, 299, 320, 341, 384
+- 谢赫·奥斯曼·穆斯塔法·奥波库 126
+- 谢赫·拉希德·侯赛因·萨尔瓦特 83, 120, 326
+- 谢赫·赛义德·阿布巴卡尔·扎卡里亚 293, 380, 384
+- 谢赫·萨利斯·沙班 229-230
+- 谢赫·萨利斯·苏阿利赫·侯赛因 210
+- 谢赫·萨勒曼·穆罕默德·阿尔汉松 468
+- 谢赫·塞杜·亚当 393
+- 谢赫·苏莱曼·纳迪·班巴 132
+- 谢赫·奥马尔·博尔博吉 382
+- 谢赫·奥马尔·易卜拉欣·伊玛目 19, 43, 87, 231, 392, 410, 413, 446, 455, 461, 463, 465
+- 谢赫·奥斯曼·坦科·易卜拉欣 226
+- 谢赫·优素福·赛义德·叶海亚 249
+- 谢赫·优素菲亚 421-422
+- 谢赫·扎卡里亚·阿卜杜勒-拉赫曼 383
+- 苏莱曼·哈桑·阿塔克波 60
+- 苏莱曼·迪克鲁希 382
+- 奥马尔·哈利法 377
+- 乌穆尔·哈蒂亚·易卜拉欣·马哈马 94
+- 奥斯曼·沙伊布 332, 334
+- 尤努斯·邓贝 185, 204, 427
+- 尤努斯·法瓦兹 54
+- 扎卡里亚·哈桑 382-383
+- 扎基尤·伊德里斯·坦杜奈尔 (廷丹奈尔) 146, 149
+- Z.M. 西巴维 55
 
-
-
-
-谢赫·侯赛因·哈立德·吉马 294
-谢赫·易卜拉欣·巴沙·伊德里斯 370, 413
-谢赫·伊德里斯·托波 133
-谢赫·伊萨 379, 385, 404-405, 425
-谢赫·贾迈勒·丁·奥马尔·穆罕默德 293, 379
-谢赫·凯兰 228-229
-谢赫·卡米勒·穆罕默德 379, 383, 411, 424
-谢赫·海鲁·阿卜杜拉希·迈卡诺 120, 335
-谢赫·哈立德·阿卜杜勒·穆敏 291
-谢赫·哈利法·艾哈迈德·阿布勒·法伊德·迈卡诺 119
-谢赫·马苏德·阿卜杜勒·拉赫曼·西塞 120
-谢赫·穆罕默德·阿瓦勒·阿卜杜拉·哈菲兹 369
-谢赫·穆罕默德·本·法赫德·鲁布扬 248
-谢赫·穆罕默德·本·比达 184, 304, 306
-谢赫·穆斯塔法·易卜拉欣 18, 54, 82, 208-209, 299, 320, 341, 384
-谢赫·奥斯曼·穆斯塔法·奥波库 126
-谢赫·拉希德·侯赛因·萨尔瓦特 83, 120, 326
-谢赫·赛义德·阿布巴卡尔·扎卡里亚 293, 380, 384
-谢赫·萨利斯·沙班 229-230
-谢赫·萨利斯·苏阿利赫·侯赛因 210
-
-谢赫·萨勒曼·穆罕默德·阿尔汉松 468
-谢赫·塞杜·亚当 393
-谢赫·苏莱曼·纳迪·班巴 132
-谢赫·奥马尔·博尔博吉 382
-谢赫·奥马尔·易卜拉欣·伊玛目 19, 43, 87, 231, 392, 410, 413, 446, 455, 461, 463, 465
-谢赫·奥斯曼·坦科·易卜拉欣 226
-谢赫·优素福·赛义德·叶海亚 249
-谢赫·优素菲亚 421-422
-谢赫·扎卡里亚·阿卜杜勒-拉赫曼 383
-苏莱曼·哈桑·阿塔克波 60
-苏莱曼·迪克鲁希 382
-奥马尔·哈利法 377
-乌穆尔·哈蒂亚·易卜拉欣·马哈马 94
-奥斯曼·沙伊布 332, 334
-尤努斯·邓贝 185, 204, 427
-尤努斯·法瓦兹 54
-扎卡里亚·哈桑 382-383
-扎基尤·伊德里斯·坦杜奈尔 (廷丹奈尔) 146, 149
-Z.M. 西巴维 55
+## 书籍简介
 
 本书是关于当代加纳穆斯林非政府组织的第一部‘基础性著作’。它建立在一个包含600多个穆斯林非营利协会、基金会和草根组织的数据库之上，这些组织的活动通过广泛使用社交媒体得以追踪。本书第一部分审视了它们活动的多样性及运作空间、它们的运动和目标群体，以及它们的地方、地区、国家和国际联系。第二部分分析了当代关于因法格、萨达卡、瓦克夫和天课的讨论，以及旨在促进加纳穆斯林社区社会福利的伊斯兰银行和小额融资计划。
 

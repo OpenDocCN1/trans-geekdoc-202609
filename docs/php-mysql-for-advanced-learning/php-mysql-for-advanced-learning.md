@@ -1,7 +1,5 @@
+
 # 高级学习的 PHP MySQL
-
-
-
 
 ```php
 <?php
@@ -67,7 +65,7 @@ Webs Jyoti 是总部位于古尔冈的专业网页开发和信息技术（IT）�
 
 PHP 是目前最流行的服务器端脚本语言之一。如果你有一个用于运行博客或网站的主机账户，我可以保证 PHP 已安装在同一服务器上。
 
-PHP 代码可以嵌入到 HTML 中，也可与各种网页主题系统、网页内容管理系统（CMS）和框架如 CakePHP、Zend、Laravel 和 Symfony 结合使用。PHP 代码通常由 Zend Engine 驱动的 PHP 解释器处理。
+PHP 代码可以嵌入到 HTML 中，也可与各种网页主题系统、网页内容管理系统（CMS）和框架如 `CakePHP`、`Zend`、`Laravel` 和 `Symfony` 结合使用。PHP 代码通常由 `Zend Engine` 驱动的 PHP 解释器处理。
 
 ## PHP 事实
 
@@ -78,8 +76,6 @@ PHP 代码可以嵌入到 HTML 中，也可与各种网页主题系统、网页�
 - PHP 已安装在超过 2000 万个网站和 100 万个 Web 服务器上。
 - 75% 的 Web 2.0 网站使用 PHP 构建。81.7% 的服务器端编程语言已知的网站使用 PHP。
 - Facebook、Digg、Flickr、Technorati 和 Yahoo! 等一些最大的在线品牌均由 PHP 开发。
-
-
 
 ## PHP 开发工具
 
@@ -101,9 +97,10 @@ PHP 代码可以嵌入到 HTML 中，也可与各种网页主题系统、网页�
 从上述捆绑包列表中，我推荐下载并安装 **XAMPP**
 
 ### 使用 XAMPP 捆绑包，需要执行以下步骤 -
+
 - 下载并安装 XAMPP 最新版本。
 - 运行 XAMPP 控制面板，并启动 Apache 和 MySQL 服务。
-- 要测试 Apache 服务器的安装，请打开 Web 浏览器并输入 http://localhost/
+- 要测试 Apache 服务器的安装，请打开 Web 浏览器并输入 `http://localhost/`
 - 如果安装成功，您将在浏览器中看到 Apache “success” 页面。
 
 ### PHP IDE / 代码编辑器
@@ -114,39 +111,40 @@ PHP 代码可以嵌入到 HTML 中，也可与各种网页主题系统、网页�
 
 ### 自定义安装
 
-PHP 的主要配置文件是 php.ini；它可以在 XAMPP 的根目录中找到，例如 c:\xampp\apache\php.ini
+PHP 的主要配置文件是 `php.ini`；它可以在 XAMPP 的根目录中找到，例如 `c:\xampp\apache\php.ini`
 
 ### php.ini 中可用的一些主要设置 -
-short_open_tag: 允许解析短标签 (<? 和 ?>)
 
-output_buffering: 允许在 HTML 已发送到服务器后发送头部行。默认值为“Off”，
+`short_open_tag`: 允许解析短标签 (`<?` 和 `?>`)
 
-max_execution_time: 设置脚本运行或执行的最长时间限制
+`output_buffering`: 允许在 HTML 已发送到服务器后发送头部行。默认值为“Off”，
 
-max_input_time: 设置脚本解析数据的最长时间限制。
+`max_execution_time`: 设置脚本运行或执行的最长时间限制
 
-memory_limit: 设置脚本运行可使用的内存限制（以 MB 为单位）。
+`max_input_time`: 设置脚本解析数据的最长时间限制。
 
-file_uploads: 允许网站访问者向您的服务器上传文件。
+`memory_limit`: 设置脚本运行可使用的内存限制（以 MB 为单位）。
 
-upload_max_filesize: 设置上传文件大小的限制（以 MB 为单位）。
+`file_uploads`: 允许网站访问者向您的服务器上传文件。
 
-mysql.allow_persistent: 确定是否可以与 MySQL 服务器建立持久连接。
+`upload_max_filesize`: 设置上传文件大小的限制（以 MB 为单位）。
 
-mysql.max_persistent: 设置允许的持久连接数量限制。
+`mysql.allow_persistent`: 确定是否可以与 MySQL 服务器建立持久连接。
+
+`mysql.max_persistent`: 设置允许的持久连接数量限制。
 
 ## PHP 语法：
 
-PHP 程序使用文本编辑器编写，例如 Notepad 或 Dreamweaver，就像 HTML 页面一样。我们使用 .php 扩展名来创建 php 文件。此扩展名告诉服务器在将 HTML 响应发送到 Web 浏览器之前需要解析 PHP 代码，因为当访问您的网站时 PHP 代码对人们是不可见的。
+PHP 程序使用文本编辑器编写，例如 Notepad 或 Dreamweaver，就像 HTML 页面一样。我们使用 `.php` 扩展名来创建 php 文件。此扩展名告诉服务器在将 HTML 响应发送到 Web 浏览器之前需要解析 PHP 代码，因为当访问您的网站时 PHP 代码对人们是不可见的。
 
 ### PHP 语法的规则
 
 在使用 PHP 时，您应始终牢记以下规则：
 
-- PHP 在页面中用开始和结束标签表示，如下所示：<?php 和 ?>
+- PHP 在页面中用开始和结束标签表示，如下所示：`<?php` 和 `?>`
 - PHP 行以分号结束或终止
 
-您还可以通过使用双斜杠 (//) 或 /* 和 */ 在程序中添加注释来使程序更易于理解
+您还可以通过使用双斜杠 (`//`) 或 `/*` 和 `*/` 在程序中添加注释来使程序更易于理解
 
 ## PHP 中的变量
 
@@ -155,6 +153,7 @@ PHP 程序使用文本编辑器编写，例如 Notepad 或 Dreamweaver，就像 
 您为变量指定的名称应具有意义。然而在为变量命名时，您需要遵循某些命名规则。
 
 ### 命名约定
+
 - 变量名以美元符号开头
 - 只能包含字母、数字和下划线
 - 不能以数字值开头
@@ -168,7 +167,7 @@ PHP 程序使用文本编辑器编写，例如 Notepad 或 Dreamweaver，就像 
 
 ### 为变量赋值
 
-变量可以使用赋值运算符 (=) 进行赋值。以下是为变量赋值的一些示例 -
+变量可以使用赋值运算符 (`=`) 进行赋值。以下是为变量赋值的一些示例 -
 
 ```php
 $empCode = 231;
@@ -178,15 +177,15 @@ $empCode = 231;
 
 数据类型定义变量使用的数据类型。PHP 允许几种数据类型。
 
-**整数：** 它保存整数，包括正数和负数 示例 $rating = 8;
+**整数：** 它保存整数，包括正数和负数 示例 `$rating = 8;`
 
-**双精度：** 可以保存包含小数部分或小数点的数字，包括正数和负数。示例 $amount=50.85;
+**双精度：** 可以保存包含小数部分或小数点的数字，包括正数和负数。示例 `$amount=50.85;`
 
-**字符串：** 保存字母或任何字母以及数字 示例 Name ="Alex";
+**字符串：** 保存字母或任何字母以及数字 示例 `Name ="Alex";`
 
 **布尔：** 仅保存两个值，即 TRUE 或 FALSE
 
-**数组：** 可以保存相同数据类型的多个值 示例 $arr = array(5,8,12,15);
+**数组：** 可以保存相同数据类型的多个值 示例 `$arr = array(5,8,12,15);`
 
 **对象：** 对象被定义为用户定义类的实例，可以同时保存值和函数。
 
@@ -206,7 +205,7 @@ print($text . $num);
 ?>
 ```
 
-现在我们有两个变量。$text 保存我们的直接文本，而 $num 包含一个数值，即 10。当我们打印两个变量的内容时，使用点运算符来分隔或连接两个或多个变量。
+现在我们有两个变量。`$text` 保存我们的直接文本，而 `$num` 包含一个数值，即 10。当我们打印两个变量的内容时，使用点运算符来分隔或连接两个或多个变量。
 
 您也可以这样做：
 
@@ -220,7 +219,7 @@ echo ("Variable contains the value - " . $num);
 ?>
 ```
 
-这次，直接文本（不在变量中），但只是包含在 echo 语句中。再次使用点 (.) 将直接文本与变量名分隔开。
+这次，直接文本（不在变量中），但只是包含在 `echo` 语句中。再次使用点 (`.`) 将直接文本与变量名分隔开。
 
 您还可以通过分配 null 或空白来删除信息或重置变量值，如下所示
 
@@ -228,15 +227,15 @@ echo ("Variable contains the value - " . $num);
 $name = " ";
 ```
 
-这里，变量 $name 存在但不包含值。这并不意味着 $name 被设置为 0，因为 0 是一个值。这意味着 $name 不存储任何信息。
+这里，变量 `$name` 存在但不包含值。这并不意味着 `$name` 被设置为 0，因为 0 是一个值。这意味着 `$name` 不存储任何信息。
 
-*您甚至可以进一步使用 unset 语句取消创建变量或从内存存储中删除变量：*
+*您甚至可以进一步使用 `unset` 语句取消创建变量或从内存存储中删除变量：*
 
 ```php
 unset($name);
 ```
 
-执行 unset 语句后，变量 $name 将不再存在。
+执行 `unset` 语句后，变量 `$name` 将不再存在。
 
 变量在整个页面中保留其信息，而不仅仅是单行 PHP 代码。因此，如果在文件开头将变量设置为“OK”，它在页面末尾仍将保持“OK”。
 
@@ -256,16 +255,17 @@ echo "Sum is ".$sum;
 ?>
 ```
 
-减法或乘法基本相同。只需将加号 (+) 替换为减号 (-) 和 (*) 更改您的 $sum 行 –
+减法或乘法基本相同。只需将加号 (`+`) 替换为减号 (`-`) 和 (`*`) 更改您的 `$sum` 行 –
 
 ```php
 $sum = $num1 - $num2;
 ```
 
 ## echo 与 print 语句的区别：
-- echo 没有返回值，而 print 的返回值为 1，因此可以在表达式中使用。
-- echo 可以接受多个参数，而 print 只能接受一个参数。
-- echo 比 print 语句更快。
+
+- `echo` 没有返回值，而 `print` 的返回值为 1，因此可以在表达式中使用。
+- `echo` 可以接受多个参数，而 `print` 只能接受一个参数。
+- `echo` 比 `print` 语句更快。
 
 ## PHP 超全局变量
 
@@ -275,20 +275,21 @@ $sum = $num1 - $num2;
 
 有几种类型的超全局变量：-
 
-$_GET - 用于通过 URL 传递数据。示例：
-http://websjyoti.com?id=2
+`$_GET` - 用于通过 URL 传递数据。示例：
 
-$_POST - 用于通过隐藏 URL 将数据传递到服务器。
+`http://websjyoti.com?id=2`
 
-$_REQUEST – 是 $_GET、$_POST 和 $_COOKIE 的组合。
+`$_POST` - 用于通过隐藏 URL 将数据传递到服务器。
 
-$_SESSION - 用于维护会话和从本地机器到服务器的数据。
+`$_REQUEST` – 是 `$_GET`、`$_POST` 和 `$_COOKIE` 的组合。
 
-$_COOKIE – 用于在同一机器的浏览器 cookie 中保存/获取用户数据。
+`$_SESSION` - 用于维护会话和从本地机器到服务器的数据。
 
-$_SERVER – 是一个关联数组，用于了解服务器信息，即 IP 地址、主机名、查询字符串、文件名等。
+`$_COOKIE` – 用于在同一机器的浏览器 cookie 中保存/获取用户数据。
 
-$_FILES – 用于处理 PHP 中的上传文件操作。即文件大小、类型、名称等。
+`$_SERVER` – 是一个关联数组，用于了解服务器信息，即 IP 地址、主机名、查询字符串、文件名等。
+
+`$_FILES` – 用于处理 PHP 中的上传文件操作。即文件大小、类型、名称等。
 
 ### 示例 - $_SERVER 超全局变量
 
@@ -302,9 +303,7 @@ echo "You are Page at : " . $_SERVER['PHP_SELF'];
 ?>
 ```
 
-请注意，在 PHP 中 $_SERVER['REMOTE_ADDR'] 返回系统的当前 IP 地址。如果您在本地主机上运行此代码，则应返回 127.0.0.1
-
-
+请注意，在 PHP 中 `$_SERVER['REMOTE_ADDR']` 返回系统的当前 IP 地址。如果您在本地主机上运行此代码，则应返回 127.0.0.1
 
 ## PHP 中的函数
 
@@ -327,13 +326,13 @@ sum(10,5);  // Calling a PHP function
 ?>
 ```
 
-上述 sum 函数接受两个值，在技术术语中
+上述 `sum` 函数接受两个值，在技术术语中
 
 我们称之为参数，函数返回的和为
 
 我分配的数字。因此，从上述函数我们了解到：
 
-- 函数名称是 sum
+- 函数名称是 `sum`
 - 函数接受两个值或参数
 - 函数返回数值输出
 
@@ -349,7 +348,7 @@ Hirdesh Bhardwaj
 
 ### If-else 语句
 
-if…else 语句 – 如果条件为真则执行一组代码，如果条件为假则执行另一段代码
+`if…else` 语句 – 如果条件为真则执行一组代码，如果条件为假则执行另一段代码
 
 在语句中，如果某个条件为真，则会发生某事。否则，会发生其他事情。我们可以根据需要继续添加任意多次 else 语句。
 
@@ -374,12 +373,12 @@ else
 
 以下是条件运算符：
 
-- = 等于
-- > 大于
-- < 小于
-- >= 大于等于
-- <= 小于等于
-- != 或 <> 不等于
+- `=` 等于
+- `>` 大于
+- `<` 小于
+- `>=` 大于等于
+- `<=` 小于等于
+- `!=` 或 `<>` 不等于
 
 ### 逻辑运算符：
 
@@ -387,12 +386,12 @@ else
 
 以下是逻辑运算符：
 
-- And 或 && - 所有条件必须为真
-- Or || - 至少一个应为真
+- And 或 `&&` - 所有条件必须为真
+- Or `||` - 至少一个应为真
 - Xor - 一侧或另一侧必须为真但不能同时为真
-- == 比较运算符
+- `==` 比较运算符
 
-*请注意 = 是赋值运算符，而 == 是 PHP 中的比较运算符。*
+*请注意 `=` 是赋值运算符，而 `==` 是 PHP 中的比较运算符。*
 
 ### 基本 If else 示例 1
 
@@ -410,7 +409,7 @@ echo "Score is less than average";
 ?>
 ```
 
-上述程序将返回“Score is less than average”，因为变量 $avg 的值为 50。
+上述程序将返回“Score is less than average”，因为变量 `$avg` 的值为 50。
 
 ### 示例 2：
 
@@ -429,7 +428,7 @@ print ("<img src =images/cross.jpg>");
 ?>
 ```
 
-变量 $status 已被赋值为 1。if 语句的第一行测试变量 $status 中包含的内容。它正在测试该变量是否具有值 1。
+变量 `$status` 已被赋值为 1。`if` 语句的第一行测试变量 `$status` 中包含的内容。它正在测试该变量是否具有值 1。
 
 ### 示例 3：
 
@@ -454,7 +453,9 @@ echo "30 Days";
 ?>
 ```
 
-我们通过使用内置的 date 函数来获取变量 $month 的值。date("n") 返回服务器上设置的当前月份的数值（1 到 12），例如 1 代表一月，2 代表二月，以此类推。
+
+
+我们通过使用内置的`date`函数来获取变量`$month`的值。`date("n")`返回服务器上设置的当前月份的数值（1 到 12），例如 1 代表一月，2 代表二月，以此类推。
 
 Hirdesh Bhardwaj
 
@@ -492,13 +493,13 @@ for (Initialization; Condition; Progressive)
 
 ### 参数说明：
 
-Initialization: 初始化循环计数器的值
+`Initialization`：初始化循环计数器的值
 
 Hirdesh Bhardwaj
 
-**条件**：检查条件。如果它求值为 TRUE，则循环继续。如果为 FALSE，则循环结束。
+**条件**（`Condition`）：检查条件。如果它求值为`TRUE`，则循环继续。如果为`FALSE`，则循环结束。
 
-**递增**：增加/减少循环计数器的值
+**递增**（`Progressive`）：增加/减少循环计数器的值
 
 ### For 循环示例 1：
 
@@ -515,7 +516,7 @@ echo $var . " ";
 
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
 
-从上面的例子来看，$var=$var+1 语句可以简化为类似 $var++ 的形式
+从上面的例子来看，`$var=$var+1`语句可以简化为类似`$var++`的形式
 
 ### 示例 2：显示前 20 个自然数在下拉列表中
 
@@ -533,13 +534,13 @@ echo "</select>";
 ?>
 ```
 
-请注意，在循环区域内，我们使用变量 $i 在下拉列表中显示值（在 HTML 中称为 Select Option 字段），因为我们使用每次略有变化的变量。
+请注意，在循环区域内，我们使用变量`$i`在下拉列表中显示值（在 HTML 中称为 Select Option 字段），因为我们使用每次略有变化的变量。
 
 ### 嵌套 For 循环：
 
 我们可以在 PHP 中在另一个 for 循环内使用 for 循环，这称为嵌套 for 循环。对于内部或嵌套循环而言，嵌套 for 循环会为一次外部 for 循环完全执行。
 
-例如，如果外部循环 i 要执行 2 次，嵌套内部循环执行 2 次，则嵌套内部循环将执行 4 次（1 次外部循环执行 2 次，2 次外部循环执行 2 次）。
+例如，如果外部循环`i`要执行 2 次，嵌套内部循环执行 2 次，则嵌套内部循环将执行 4 次（1 次外部循环执行 2 次，2 次外部循环执行 2 次）。
 
 所以下面是 PHP 嵌套 for 循环的示例，用于设计三角形形状的输出
 
@@ -618,9 +619,9 @@ do..while 循环几乎与 while 循环相似，但它们之间有一个主要区
 
 ### while 和 do...while 循环之间的区别：
 
-对于 while 循环，待评估的条件在每次循环语句开始时进行测试，因此如果条件表达式求值为 false，循环将永远不会执行。
+对于 while 循环，待评估的条件在每次循环语句开始时进行测试，因此如果条件表达式求值为`false`，循环将永远不会执行。
 
-另一方面，对于 do-while 循环，即使条件表达式为 false，循环也总是会执行一次，因为条件是在循环语句结束时评估的。
+另一方面，对于 do-while 循环，即使条件表达式为`false`，循环也总是会执行一次，因为条件是在循环语句结束时评估的。
 
 Hirdesh Bhardwaj
 
@@ -639,8 +640,6 @@ while($i <= 3);
 ```
 
 输出：2 3 4
-
-
 
 ## PHP 中的 foreach 循环
 
@@ -675,6 +674,7 @@ echo "Total elements: ".count($tools);
 ### 输出：
 
 WP OpenCart Xampp Laravel Zend
+
 Total elements: 5
 
 Hirdesh Bhardwaj
@@ -739,34 +739,32 @@ echo "Sum=".$sum;
 break;
 ```
 
-### 注释
-
 ## PHP 中的数据发送方式
 
 有一些特定的方式可以将你的信息或数据发送到 PHP 页面-
 
-- 1. 使用表单方法 - Get & Post
+- 1. 使用表单方法 - `Get` & `Post`
 - 2. 使用 Cookies & Session
 - 3. 使用查询字符串 / URL 重写
 - 4. 使用隐藏表单字段
 
 ### 表单方法
 
-**GET 方法**：GET 方法通过 ? 运算符分隔发送信息。
+`GET`方法：`GET`方法通过`?`运算符分隔发送信息。
 
-**示例：** http://www.xyz.com/home.html?city=Gurgaon
+**示例：** `http://www.xyz.com/home.html?city=Gurgaon`
 
-请注意，GET 方法仅限发送最多 1024 个字符（1024 字节）。如果你有密码或其他机密信息需要在服务器上传输，就不应该使用 GET 方法。
+请注意，`GET`方法仅限发送最多 1024 个字符（1024 字节）。如果你有密码或其他机密信息需要在服务器上传输，就不应该使用`GET`方法。
 
-GET 不能用于向服务器发送二进制数据，如图像或 Word 文档。
+`GET`不能用于向服务器发送二进制数据，如图像或 Word 文档。
 
-PHP 提供了 $_GET 关联数组或超全局变量来访问使用 GET 方法发送的数据。
+PHP 提供了`$_GET`关联数组或超全局变量来访问使用`GET`方法发送的数据。
 
 ### 示例 – GET 方法：
 
 让我们创建一个包含表单元素-文本字段的 HTML 表单
 
-### HTML 页面：form.html
+### HTML 页面：`form.html`
 
 ```
 <form action ="thanks.php" method="GET">
@@ -777,11 +775,9 @@ Enter Name : <input type="text" name="txtName">
 
 ### 解释：
 
-这里我们有一个名为 txtName 的文本字段，基本上我们想要将此字段的值发送到名为 thanks.php 的 PHP 页面。请确保你的表单包含一个按钮类型 submit 以发送信息到 action 页面。
+这里我们有一个名为`txtName`的文本字段，基本上我们想要将此字段的值发送到名为`thanks.php`的 PHP 页面。请确保你的表单包含一个类型为`submit`的按钮，以将信息发送到`action`页面。
 
-让我们在与上述 html 页面相同的目录中创建一个 thanks.php 页面
-
-### PHP 页面：thanks.php
+### PHP 页面：`thanks.php`
 
 ```
 <?php
@@ -789,21 +785,21 @@ echo $_GET['txtName'];
 ?>
 ```
 
-同时你可以在浏览器的地址栏中看到相同的输入值。这里我们打印了通过文本字段名 txtName 接收到的相同值。请确保在超全局变量 $_GET 的 [ ] 中放入与 HTML 表单中提到的相同名称。
+同时你可以在浏览器的地址栏中看到相同的输入值。这里我们打印了通过文本字段名`txtName`接收到的相同值。请确保在超全局变量`$_GET`的`[]`中放入与 HTML 表单中提到的相同名称。
 
 ### POST 方法
 
-POST 方法通过 HTTP 头传输信息。
+`POST`方法通过 HTTP 头传输信息。
 
-POST 方法对发送的数据大小没有限制。因此它可以用于发送文件、图像以及二进制数据。
+`POST`方法对发送的数据大小没有限制。因此它可以用于发送文件、图像以及二进制数据。
 
-PHP 提供了 $_POST 超全局变量或关联数组来访问使用 POST 方法发送的数据。
+PHP 提供了`$_POST`超全局变量或关联数组来访问使用`POST`方法发送的数据。
 
 ### 示例 – POST 方法：
 
 让我们创建一个包含多个表单元素的 HTML 表单
 
-### HTML 页面：form.html
+### HTML 页面：`form.html`
 
 ```
 <form action ="thanks.php" method="POST">
@@ -813,11 +809,9 @@ Enter Password : <input type="password" name="pass">
 </form>
 ```
 
-这里我们有两个字段 email 字段名为 email，密码字段名为 pass，基本上我们想要将上述值发送到名为 thanks.php 的 PHP 页面
+这里我们有两个字段：`email`字段名为`email`，密码字段名为`pass`。基本上我们想要将上述值发送到名为`thanks.php`的 PHP 页面
 
-让我们在与上述 html 页面相同的目录中创建一个 thanks.php 页面
-
-### PHP 页面：thanks.php
+### PHP 页面：`thanks.php`
 
 ```
 <?php
@@ -826,7 +820,7 @@ echo $_POST['pass'];
 ?>
 ```
 
-这里我们分别打印了通过 email 和 password 字段接收到的相同值。
+这里我们分别打印了通过`email`和`password`字段接收到的相同值。
 
 我们可以使其更高级一些，通过将上述已发布的值赋给变量。使用变量的优点是我们可以在使用数据之前进行一些验证和清理，然后再将其传递到数据库。
 
@@ -845,11 +839,11 @@ echo "Welcome ".$email . " Your password is ".$password;
 ?>
 ```
 
-### $_REQUEST 变量
+### `$_REQUEST` 变量
 
-PHP $_REQUEST 变量包含 $_GET、$_POST 和 $_COOKIE 的内容。我们在讲解 cookies 时会讨论 $_COOKIE 变量。
+PHP`$_REQUEST`变量包含`$_GET`、`$_POST`和`$_COOKIE`的内容。我们在讲解 cookies 时会讨论`$_COOKIE`变量。
 
-PHP $_REQUEST 变量可用于获取使用 GET 和 POST 方法发送的表单数据的结果。
+PHP`$_REQUEST`变量可用于获取使用`GET`和`POST`方法发送的表单数据的结果。
 
 ### 示例
 
@@ -882,10 +876,11 @@ if( isset($_REQUEST["name"]) )
 </body>
 ```
 
-让我们创建一个 PHP 页面 [view.php](view.php) 应该接收两个变量值如下-
-city =Gurgaon, state=Haryana
+让我们创建一个 PHP 页面 [`view.php`](view.php) 应该接收两个变量值如下-
 
-### view.php
+`city=Gurgaon, state=Haryana`
+
+### `view.php`
 
 ```php
 <?php
@@ -895,7 +890,7 @@ echo "Location is ".$_REQUEST['city']." ".$_REQUEST['state'];
 ?>
 ```
 
-你也可以检索 ? 之后的所有内容并将其分配给一个变量，我们可以简单地使用 $_SERVER 超全局变量，如下所示：
+你也可以检索`?`之后的所有内容并将其分配给一个变量，我们可以简单地使用`$_SERVER`超全局变量，如下所示：
 
 ```php
 <?php
@@ -907,13 +902,11 @@ var_dump($txt);
 ?>
 ```
 
-请注意，如果没有查询字符串，则 $_SERVER 中的 QUERY_STRING 键将为空字符串
-
-### 注释
+请注意，如果没有查询字符串，则`$_SERVER`中的`QUERY_STRING`键将为空字符串
 
 ## PHP - 字符串函数
 
-字符串函数是 PHP 中最重要且经常使用的函数。字符串是字符的序列，如 "Let’s learn String functions"。使用字符串函数无需安装。
+字符串函数是 PHP 中最重要且经常使用的函数。字符串是字符的序列，如`"Let’s learn String functions"`。使用字符串函数无需安装。
 
 ### 示例
 
@@ -926,7 +919,7 @@ print($name);
 
 ### 字符串连接运算符
 
-要将两个字符串变量连接在一起，我们使用点 (.) 运算符 –
+要将两个字符串变量连接在一起，我们使用点（`.`）运算符：
 
 ```php
 <?php
@@ -936,9 +929,9 @@ echo $txt1 . " " . $txt2;
 ?>
 ```
 
-### 使用 strlen() 函数
+### 使用 `strlen()` 函数
 
-strlen() 函数用于获取字符串的长度。
+`strlen()`函数用于获取字符串的长度。
 
 ```php
 <?php
@@ -949,11 +942,11 @@ echo strlen($txt);
 
 这将产生以下结果 – 10 (including space)
 
-### 使用 strpos() 函数
+### 使用 `strpos()` 函数
 
-strpos() 函数用于在字符串中搜索文本或字符。如果找到该值，则返回第一个值的位置。如果未找到匹配项，则返回 FALSE。
+`strpos()`函数用于在字符串中搜索文本或字符。如果找到该值，则返回第一个值的位置。如果未找到匹配项，则返回`FALSE`。
 
-让我们看看是否能在我们的字符串中找到字符串 "PHP" –
+让我们看看是否能在我们的字符串中找到字符串`"PHP"` –
 
 ```
 <?php
@@ -965,9 +958,9 @@ echo strpos("Hello PHP","PHP");
 
 这将产生以下结果 – 6
 
-### explode() 函数：
+### `explode()` 函数：
 
-用于将字符串转换为数组变量。它可用于在你想要的信息位于更大的字符串中的情况下，可以使用 explode() 函数将其提取出来。
+用于将字符串转换为数组变量。它可用于在你想要的信息位于更大的字符串中的情况下，可以使用`explode()`函数将其提取出来。
 
 ### 示例：
 
@@ -979,7 +972,9 @@ print_r($settings);
 
 ### 输出：
 
+```
 Array ( [0] => host=localhost [1] => db=hirdesh [2] => uid=root [3]
+```
 
 ### 另一个示例：
 
@@ -995,16 +990,19 @@ echo (explode(' ',$text));
 
 输出
 
+```
 Array
+
 (
 [0] => Lets
 [1] => Learn
 [2] => PHP
 [3] => Strings
+```
 
-### substr() 函数：
+### `substr()` 函数：
 
-substr() 用于返回字符串的一部分。它接受三个 (3) 个基本参数。第一个是要缩短的字符串，第二个参数是起始位置，第三个参数是要返回的字符数。
+`substr()`用于返回字符串的一部分。它接受三个 (3) 个基本参数。第一个是要缩短的字符串，第二个参数是起始位置，第三个参数是要返回的字符数。
 
 ### 示例：
 
@@ -1012,17 +1010,16 @@ substr() 用于返回字符串的一部分。它接受三个 (3) 个基本参数
 echo str_replace(' ','-','PHP Tutorial');
 ```
 
-它会将空格替换为 -，最终输出将如下所示
+它会将空格替换为`-`，最终输出将如下所示
 
-PHP-Tutorial
+`PHP-Tutorial`
 
-
-
-### md5() 函数：
+### `md5()` 函数：
 
 用于计算字符串值的 md5 哈希。当你想要将密码从纯文本转换为哈希代码以防止未经授权的用户使用时，可以使用此函数。
 
 ### 示例
+
 ```php
 <?php
 echo md5('password123');
@@ -1030,16 +1027,21 @@ echo md5('password123');
 ```
 
 ### 输出
+
 9f161034ee4de758baf4de09c4eb1a75
 
-### trim() 函数：
+### `trim()` 函数：
 
-trim() 用于移除字符串两侧的空白字符和预定义字符。
+`trim()`用于移除字符串两侧的空白字符和预定义字符。
 
 ### 语法
+
+```
 trim(string,charlist)
+```
 
 ### 示例
+
 ```php
 <?php
 $txt = "Webs Jyoti";
@@ -1048,15 +1050,19 @@ echo trim($txt,"Weti");
 ```
 
 ### 输出
+
 bs Jyo
 
 Hirdesh Bhardwaj
 
-### str_replace() 函数
+### `str_replace()` 函数
 
 这可以用于当你只想将字符串中的某些单词或一组字符替换为其他内容时。
 
+
+
 ### 示例：
+
 ```php
 <?php
 
@@ -1074,9 +1080,11 @@ echo $newstr;
 ### 示例：字符串函数——综合应用
 
 ### 任务：
+
 收集用户的姓名和联系电话，并继续进行验证
 
 ### form.html
+
 ```html
 <form action="viewdata.php">
 Enter Name : <input type="text" name="txtName" />
@@ -1088,6 +1096,7 @@ Phone : <input type="text" name="phone" />
 ```
 
 ### viewdata.php
+
 ```php
 <?php
 $name= $_REQUEST['txtName'];
@@ -1112,7 +1121,7 @@ echo "<br> OTP should send to ".$lft."XXXXXX".$last;
 
 在任何编程语言中工作时，处理日期和时间都是常见任务，我们在 PHP 中经常使用。
 
-PHP 的 date() 函数为你提供关于当前日期所需的全部信息。
+PHP 的 `date()` 函数为你提供关于当前日期所需的全部信息。
 
 ```php
 <?php
@@ -1121,9 +1130,9 @@ echo "Today is ".$today;
 ?>
 ```
 
-我们可以使用带有分隔符的不同时间格式，如 d-m-Y、d.m.Y 等等。
+我们可以使用带有分隔符的不同时间格式，如 `d-m-Y`、`d.m.Y` 等等。
 
-**PHP 中的 DateTime 类**：DateTime 类在 PHP 5 及更高版本中可用。
+**PHP 中的 `DateTime` 类**：`DateTime` 类在 PHP 5 及更高版本中可用。
 
 ```php
 <?php
@@ -1143,9 +1152,10 @@ date_default_timezone_set('Asia/Kolkata ');
 
 ### PHP time()：
 
-time() 函数用于获取当前时间的 Unix 时间戳。
+`time()` 函数用于获取当前时间的 Unix 时间戳。
 
 示例：
+
 ```php
 <?php
 $cDate = 1394003958;
@@ -1155,6 +1165,7 @@ echo(date("F d, Y h:i:s", $cDate));
 ```
 
 示例：要打印类似 10 July 2015 的日期
+
 ```php
 <?php
 $date1 = date_create("2016-05-10");
@@ -1167,16 +1178,16 @@ echo date_format($date1, 'j-F-Y');
 
 | 代码示例 | 输出 |
 |---|---|
-| $d = new DateTime('now'); echo $d->format('Y-m-d') ; | 当前日期 2010-12-20 |
-| $d = new DateTime('tomorrow'); echo $d->format('Y-m-d') ; | 明天的日期 |
-| $d = new DateTime('yesterday'); echo $d->format('Y-m-d') ; | 昨天的日期 |
-| $d = new DateTime('+1 day'); echo $d->format('Y-m-d') ; | 当前系统日期的下一天（尝试以下代码：+1 month、Monday +1 day、+2 years 10 days、+3 years |
+| `$d = new DateTime('now'); echo $d->format('Y-m-d') ;` | 当前日期 2010-12-20 |
+| `$d = new DateTime('tomorrow'); echo $d->format('Y-m-d') ;` | 明天的日期 |
+| `$d = new DateTime('yesterday'); echo $d->format('Y-m-d') ;` | 昨天的日期 |
+| `$d = new DateTime('+1 day'); echo $d->format('Y-m-d') ;` | 当前系统日期的下一天（尝试以下代码：+1 month、Monday +1 day、+2 years 10 days、+3 years |
 
 ### PHP 时区
 
-如果 PHP DateTime 与你的当前时间不匹配，那可能是因为你使用的服务器位于不同的时区。
+如果 PHP `DateTime` 与你的当前时间不匹配，那可能是因为你使用的服务器位于不同的时区。
 
-**date_default_timezone_get()** 用于获取默认时区，脚本中的所有日期/时间函数都使用该时区。
+**`date_default_timezone_get()`** 用于获取默认时区，脚本中的所有日期/时间函数都使用该时区。
 
 *要在 PHP 中获取默认或当前时区，请使用以下代码*
 
@@ -1205,11 +1216,12 @@ echo "The Current time is " . date("h:i:sa");
 
 例如，如果要存储 50 个数字，那么与其定义多个变量，不如定义一个大小为 50 的数组来得简单。
 
-在 PHP 中，array() 函数用于创建数组。
+在 PHP 中，`array()` 函数用于创建数组。
 
 数组可以存储数字、字符串和任何对象，但其索引将由数字表示。默认情况下，数组索引从零开始。
 
 ### 示例
+
 ```php
 $x=array("Laxmi","Hirdesh","Rahim","Ashu","Amit");
 ```
@@ -1218,7 +1230,7 @@ $x=array("Laxmi","Hirdesh","Rahim","Ashu","Amit");
 
 从上图可以看出，每个方框中显示的值称为数组中的索引。数组中的值插入总是从第一个索引开始，即 0。
 
-要计算数组中存储的元素数量，在 PHP 数组中使用 count() 方法。
+要计算数组中存储的元素数量，在 PHP 数组中使用 `count()` 方法。
 
 ```php
 echo count($x);
@@ -1232,9 +1244,10 @@ echo $x[1];  // output – Hirdesh
 
 Hirdesh Bhardwaj
 
-要打印数组 x 中存在的所有元素，你可以使用 foreach 或简单的 for 循环，如下所示：
+要打印数组 `x` 中存在的所有元素，你可以使用 `foreach` 或简单的 `for` 循环，如下所示：
 
 ### 使用 foreach 循环
+
 ```php
 foreach ($x as $val)
 {
@@ -1243,6 +1256,7 @@ foreach ($x as $val)
 ```
 
 ### 使用 For 循环
+
 ```php
 for($i=0; $i<count($x); $i++)
 {
@@ -1252,20 +1266,22 @@ for($i=0; $i<count($x); $i++)
 
 **数组排序：** PHP 提供了许多简便的方法，按预定义顺序（升序和降序）对数组值进行排序。
 
-**arsort：** 按值降序对数组排序，并保持键/值关系。
+**`arsort`**：按值降序对数组排序，并保持键/值关系。
 
-**asort：** 按值升序对数组排序，并保持键/值关系。
+**`asort`**：按值升序对数组排序，并保持键/值关系。
 
-**rsort：** 按值降序对数组排序。
+**`rsort`**：按值降序对数组排序。
 
-**sort：** 按值升序对数组排序。
+**`sort`**：按值升序对数组排序。
 
 ### 示例 - 数组排序
+
 ```php
 $x=array("laxmi","hirdesh","rahim","ashu","amit", "mohit");
 ```
 
-### // rsort 用于降序，sort 用于升序
+### // `rsort` 用于降序，`sort` 用于升序
+
 ```php
 sort($x);
 
@@ -1281,7 +1297,8 @@ echo $val . " ";
 
 关联数组在功能上与默认数组相似，但它们的索引不同。关联数组的索引为字符串，因此你可以在键和相应的值之间进行绑定。
 
-### asort 用于按值（数值）升序显示，arsort 用于降序
+### `asort` 用于按值（数值）升序显示，`arsort` 用于降序
+
 ```php
 echo "<br> ASort <br>";
 
@@ -1300,7 +1317,8 @@ echo "Name=" . $x . ", Emp Code=" . $code . "<br>";
 }
 ```
 
-### ksort 用于按键（名称或首键字符串）升序显示，krsort 用于降序
+### `ksort` 用于按键（名称或首键字符串）升序显示，`krsort` 用于降序
+
 ```php
 echo "<br> KSort <br>";
 
@@ -1321,17 +1339,18 @@ foreach($emp as $x => $code)
 
 数据验证是处理表单的主要部分。无效的提交数据不仅会导致安全问题，还可能破坏你的页面和输出。因此，在继续操作或将数据插入数据库之前，你需要对其进行验证以避免任何错误。
 
-### PHP 中的 filter_var 函数
+### PHP 中的 `filter_var` 函数
 
-filter_var 既用于清理数据，也用于验证数据。清理将移除数据中的任何非法字符，而验证将确定数据是否符合预期或格式是否正确。
+`filter_var` 既用于清理数据，也用于验证数据。清理将移除数据中的任何非法字符，而验证将确定数据是否符合预期或格式是否正确。
 
-### 如何使用 filter_var
+### 如何使用 `filter_var`
 
-使用 filter_var 非常简单。它只是一个 PHP 函数，接受两个数据输入：
+使用 `filter_var` 非常简单。它只是一个 PHP 函数，接受两个数据输入：
 
 你要检查的变量和要使用的检查类型。
 
 ### 示例
+
 ```php
 $title = "<h1>Lets learn PHP Functions <br></h1>";
 $ftitle = filter_var($title, FILTER_SANITIZE_STRING);
@@ -1341,6 +1360,7 @@ echo "After SANITIZE data is ".$ftitle;
 输出：Lets learn PHP Functions
 
 ### 检查有效 IP 地址的示例
+
 ```php
 $ip = "127.0.0.1.33";
 
@@ -1361,6 +1381,7 @@ FILTER_SANITIZE_URL);
 ```
 
 ### 检查邮箱格式是否正确的示例
+
 ```php
 echo "<br>";
 
@@ -1383,7 +1404,6 @@ echo "$x is NOT a valid email address.<br/><br/>";
 
 }
 ```
-
 
 <form name="form1" method="post" action="form-sanitize.php">
 
@@ -1485,19 +1505,19 @@ PHP MariaDB 正式名称为 PHP MYSQL，于 2009 年开发，与 MySQL API 和�
 
 ### 数值数据类型：
 
-**INT（整数）：** Int 数据类型表示正常大小的整数。因此它可以简单地用于存储数值。还有 BIGINT、MEDIUMINT、SMALLINT 和 TINYINT，它们表示不同范围的整数值。
+**INT（整数）：** `Int` 数据类型表示正常大小的整数。因此它可以简单地用于存储数值。还有 `BIGINT`、`MEDIUMINT`、`SMALLINT` 和 `TINYINT`，它们表示不同范围的整数值。
 
-**DECIMAL：** Decimal 数据类型表示具有特定浮点值的数字。最大允许值为 65，最大小数位数为 30。还有 FLOAT 和 DOUBLE 用于存储带浮点数的数值。
+**DECIMAL：** `Decimal` 数据类型表示具有特定浮点值的数字。最大允许值为 65，最大小数位数为 30。还有 `FLOAT` 和 `DOUBLE` 用于存储带浮点数的数值。
 
 **BOOLEAN：** 该数据类型将值 0 与“false”关联，将值 1 与 true 关联。
 
 ### 日期和时间数据类型：
 
-**DATE：** DATE 数据类型以“YYYY-MM-DD”格式表示日期。
+**DATE：** `DATE` 数据类型以“YYYY-MM-DD”格式表示日期。
 
-**TIME：** TIME 数据类型以 "hh:mm:ss" 格式表示时间。
+**TIME：** `TIME` 数据类型以 "hh:mm:ss" 格式表示时间。
 
-**DATETIME：** DATETIME 数据类型以“YYYY-MM-DD HH:MM:SS”格式表示日期和时间。
+**DATETIME：** `DATETIME` 数据类型以“YYYY-MM-DD HH:MM:SS”格式表示日期和时间。
 
 **TIMESTAMP：** 该数据类型表示“YYYY-MM-DD HH:MM:SS”格式的时间戳。它主要用于插入记录插入/更新和删除过程中的当前日期和时间。
 
@@ -1507,11 +1527,11 @@ PHP MariaDB 正式名称为 PHP MYSQL，于 2009 年开发，与 MySQL API 和�
 
 **VARCHAR：** 该数据类型表示长度为 0 到 65535 的变长字符串。
 
-**TEXT：** 该数据类型表示最大长度为 65,535 个字符的文本列。还有一些文本数据类型是 MEDIUMTEXT、LONGTEXT 和 TINYTEXT。
+**TEXT：** 该数据类型表示最大长度为 65,535 个字符的文本列。还有一些文本数据类型是 `MEDIUMTEXT`、`LONGTEXT` 和 `TINYTEXT`。
 
-**ENUM：** ENUM 数据类型表示字符串对象，仅允许从给定列表中选择一个值。
+**ENUM：** `ENUM` 数据类型表示字符串对象，仅允许从给定列表中选择一个值。
 
-**SET：** SET 数据类型表示字符串对象，具有来自给定列表的零个或多个值。
+**SET：** `SET` 数据类型表示字符串对象，具有来自给定列表的零个或多个值。
 
 ## MySQL / MariaDB 表的类型
 
@@ -1527,29 +1547,30 @@ HEAP - 这些主要用于临时表，它们不支持 MyISAM 表的常见功能�
 
 当你处理日志数据并且不想长期存储时，可以使用它。
 
-InnoDB- 被认为是“事务安全”的，这意味着你可以从崩溃中恢复数据。
+
+
+InnoDB 被认为是“事务安全”的，这意味着你可以从崩溃中恢复数据。
 
 ## 一些流行的 MySQL 命令
 
-- CREATE：创建新的数据库和表
-- ALTER：修改现有表
-- SELECT：显示你想要的数据
-- DELETE：从表中擦除或删除数据
-- INSERT INTO...：将值放入表中
-- UPDATE：让你修改已存在表中的数据
+- `CREATE`：创建新的数据库和表
+- `ALTER`：修改现有表
+- `SELECT`：显示你想要的数据
+- `DELETE`：从表中擦除或删除数据
+- `INSERT INTO...`：将值放入表中
+- `UPDATE`：让你修改已存在表中的数据
+- `DROP`：删除整个表或数据库
 
 Hirdesh Bhardwaj
-
-DROP：删除整个表或数据库
 
 ## 使用 MySQL / MariaDB 数据库
 
 在使用 PHP 实现 Mysql 之前，让我们通过 MYSQL 控制台探索数据库和表的基本概念。
 
 - 打开 XAMPP 控制面板并启动 Apache 和 MYSQL\Mariadb 服务
-- 打开命令提示符（在运行选项中输入 cmd）并使用 cd 命令复制粘贴你的 MYSQL/Mariadb 路径，如 cd C:\xampp\mysql\bin
-- 要打开 MYSQL 环境，输入 mysql.exe –u root
-  （这里 root 是你的 Mysql 数据库的用户名。如果你的 Mysql 有密码，则输入 mysql.exe –u root –p mypassword）
+- 打开命令提示符（在运行选项中输入 `cmd`）并使用 `cd` 命令复制粘贴你的 MYSQL/Mariadb 路径，如 `cd C:\xampp\mysql\bin`
+- 要打开 MYSQL 环境，输入 `mysql.exe –u root`
+  （这里 `root` 是你的 Mysql 数据库的用户名。如果你的 Mysql 有密码，则输入 `mysql.exe –u root –p mypassword`）
 - 一旦你的 MYSQL 欢迎屏幕打开，你就可以开始使用 Mysql / MariaDB 环境工作了。
 
 ## MySQL 常用命令
@@ -1624,9 +1645,9 @@ SELECT * FROM users WHERE id >3;  (Using comparison operator)
 
 聚合函数对多行执行计算，使我们能够轻松地从数据库或表中生成汇总数据。
 
-Mysql 中的一些聚合函数，如 SUM、COUNT、MAX、MIN 和 AVG
+Mysql 中的一些聚合函数，如 `SUM`、`COUNT`、`MAX`、`MIN` 和 `AVG`
 
-**SUM 函数：** SUM 函数返回数值列的总和。让我们计算表中工资的总金额。
+**`SUM` 函数：** `SUM` 函数返回数值列的总和。让我们计算表中工资的总金额。
 
 ### 示例：
 
@@ -1634,7 +1655,7 @@ Mysql 中的一些聚合函数，如 SUM、COUNT、MAX、MIN 和 AVG
 SELECT SUM(salary) as 'Total Salary' from mytable;
 ```
 
-**COUNT 函数：** COUNT 函数返回列中行或记录的计数。让我们统计在 IT 部门工作的员工总数。
+**`COUNT` 函数：** `COUNT` 函数返回列中行或记录的计数。让我们统计在 IT 部门工作的员工总数。
 
 ### 示例：
 
@@ -1642,7 +1663,7 @@ SELECT SUM(salary) as 'Total Salary' from mytable;
 SELECT COUNT(name) from mytable where dept='IT';
 ```
 
-**DISTINCT 关键字：** DISTINCT 关键字允许我们省略重复项并从列中返回唯一记录。同样也可以通过分组（Group By 子句）将相似值组合在一起实现。
+**`DISTINCT` 关键字：** `DISTINCT` 关键字允许我们省略重复项并从列中返回唯一记录。同样也可以通过分组（`Group By` 子句）将相似值组合在一起实现。
 
 ### 示例：
 
@@ -1650,11 +1671,9 @@ SELECT COUNT(name) from mytable where dept='IT';
 SELECT DISTINCT (city) FROM mytable;
 ```
 
-
-
 ## 使用 GROUP BY 子句
 
-GROUP BY 广泛地与聚合函数一起使用，如 sum、avg、max、min、count 等。它为列中存在的每个元素创建唯一的组。
+`GROUP BY` 广泛地与聚合函数一起使用，如 `sum`、`avg`、`max`、`min`、`count` 等。它为列中存在的每个元素创建唯一的组。
 
 ### 示例
 
@@ -1668,17 +1687,17 @@ select dept, sum(salary) from emp_table group by dept;
 
 | 组按 | 唯一 |
 |---|---|
-| GROUP BY 子句广泛地与聚合函数一起使用，如 sum、avg、max min count 等。它为列中存在的每个元素创建唯一的组 | DISTINCT 关键字用于简单查询中与 WHERE 子句一起使用以获取唯一记录。DISTINCT 不能用于计算或聚合目的。 |
+| `GROUP BY` 子句广泛地与聚合函数一起使用，如 sum、avg、max min count 等。它为列中存在的每个元素创建唯一的组 | `DISTINCT` 关键字用于简单查询中与 `WHERE` 子句一起使用以获取唯一记录。`DISTINCT` 不能用于计算或聚合目的。 |
 
 ## HAVING 子句：
 
-HAVING 子句可以在应用 GROUP BY 子句后用于过滤记录。因此它可用于汇总组记录。因此只有满足 HAVING 条件的组（在 GROUP BY 子句后创建）才会被作为结果返回。
+`HAVING` 子句可以在应用 `GROUP BY` 子句后用于过滤记录。因此它可用于汇总组记录。因此只有满足 `HAVING` 条件的组（在 `GROUP BY` 子句后创建）才会被作为结果返回。
 
 ## HAVING 子句与 WHERE 子句有何不同？
 
-HAVING 应用于汇总的组记录，而 WHERE 应用于单个记录。简而言之，“ where clause never work with aggregate function with group by ”。
+`HAVING` 应用于汇总的组记录，而 `WHERE` 应用于单个记录。简而言之，“ where clause never work with aggregate function with group by ”。
 
-WHERE 子句在数据聚合之前过滤记录，而 HAVING 在聚合/计算执行后执行。
+`WHERE` 子句在数据聚合之前过滤记录，而 `HAVING` 在聚合/计算执行后执行。
 
 ## HAVING 子句语法
 
@@ -1710,9 +1729,9 @@ select dept,count(*) from emp group by dept having count(*)>3;
 
 ## MySQL 中的子查询：
 
-子查询或内部查询有时称为嵌套查询，是嵌入在 WHERE 子句中的另一个 SQL 查询内的查询。简单来说，子查询是一个内部查询，它使用不同的 SQL 子句放置在外部查询中。
+子查询或内部查询有时称为嵌套查询，是嵌入在 `WHERE` 子句中的另一个 SQL 查询内的查询。简单来说，子查询是一个内部查询，它使用不同的 SQL 子句放置在外部查询中。
 
-我们可以在 MySQL 中主要与 SELECT 命令一起在括号内使用子查询。ORDER BY 命令不能在子查询中使用，尽管主查询可以使用 ORDER BY。GROUP BY 命令可用于执行相同的操作。
+我们可以在 MySQL 中主要与 `SELECT` 命令一起在括号内使用子查询。`ORDER BY` 命令不能在子查询中使用，尽管主查询可以使用 `ORDER BY`。`GROUP BY` 命令可用于执行相同的操作。
 
 示例：查找部门员工数量超过 3 人的部门的姓名列表。
 
@@ -1741,7 +1760,7 @@ FROM employees WHERE salary >
 完成上述任务，我们需要遵循以下步骤-
 
 - 设计包含 HTML 表单字段的 HTML 页面
-- 使用 $_GET、$_REQUEST 或 $_POST 将表单字段数据接收到 PHP 页面
+- 使用 `$_GET`、`$_REQUEST` 或 `$_POST` 将表单字段数据接收到 PHP 页面
 - 准备数据库连接
 - 放置适当的查询将记录插入 MySQL 表
 
@@ -1784,7 +1803,7 @@ FROM employees WHERE salary >
 </html>
 ```
 
-现在让我们创建一个名为 thanks.php 的动作页面来接收来自上述 HTML 表单页面的数据。请确保您应有一个提交按钮以继续。
+现在让我们创建一个名为 `thanks.php` 的动作页面来接收来自上述 HTML 表单页面的数据。请确保您应有一个提交按钮以继续。
 
 ### thanks.php
 
@@ -1818,11 +1837,11 @@ mysql_close($con);
 
 现在让我们创建数据库和表（打开 MySQL localhost://phpmyadmin）如下所示
 
-**数据库名称：** mydb
+**数据库名称：** `mydb`
 
-**表名称：** employees
+**表名称：** `employees`
 
-**列列表：** name, email, password, phone
+**列列表：** `name`, `email`, `password`, `phone`
 
 ### 要创建上述数据库 mydb，请运行以下命令
 
@@ -1841,9 +1860,9 @@ password varchar(20), phone varchar(25));
 
 在使用 MySQL 之前，您必须首先使用特定的连接变量连接到 MySQL 服务器。连接变量由以下参数组成，您在连接到服务器之前必须知道这些参数：
 
-**主机名**- 在我们的例子中，它是 localhost，因为我们已在本地安装了所有内容。您需要将其更改为您 MySQL 服务器所在的主机。
+**主机名**- 在我们的例子中，它是 `localhost`，因为我们已在本地安装了所有内容。您需要将其更改为您 MySQL 服务器所在的主机。
 
-**用户名**- 我们仅对本地计算机使用了 root 用户，但您可能有另一个用户名，在网站上线时需要创建用户名。
+**用户名**- 我们仅对本地计算机使用了 `root` 用户，但您可能有另一个用户名，在网站上线时需要创建用户名。
 
 **密码**- 我们对本地计算机仅使用空白 " " 密码，但在网站上线时您需要使用自己的密码。
 
@@ -1892,23 +1911,23 @@ SELECT * FROM employees
 
 在 PHP 中检索数据库记录有一些流行的方法-
 
-mysql_fetch_row(): 它将以数字方式获取结果行。它返回一行，其中值按其在 SQL 查询中定义的顺序出现。
+`mysql_fetch_row()`: 它将以数字方式获取结果行。它返回一行，其中值按其在 SQL 查询中定义的顺序出现。
 
-mysql_fetch_assoc(): 它将以关联数组的形式获取结果行。此函数将返回一个关联数组行，其中列名将作为键存储相应的值。
+`mysql_fetch_assoc()`: 它将以关联数组的形式获取结果行。此函数将返回一个关联数组行，其中列名将作为键存储相应的值。
 
 这意味着我们可以通过表列名获取记录。
 
-mysql_fetch_array(): 它将以关联数组或数字数组的形式获取结果行。因此这是 mysql_fetch_row 和 mysql_fetch_assoc 两种方法的组合。
+`mysql_fetch_array()`: 它将以关联数组或数字数组的形式获取结果行。因此这是 `mysql_fetch_row` 和 `mysql_fetch_assoc` 两种方法的组合。
 
-mysql_fetch_object(): 它将以对象形式获取结果行
+`mysql_fetch_object()`: 它将以对象形式获取结果行
 
 ### 示例 1：从 MySQL 表检索数据 - 让我们检索最近添加的表记录如下-
 
-数据库名称：mydb
+数据库名称：`mydb`
 
-表名称：employees
+表名称：`employees`
 
-列列表：name, email, password, phone
+列列表：`name`, `email`, `password`, `phone`
 
 ```php
 <?php
@@ -1925,8 +1944,6 @@ $query = mysqli_query("SELECT * from employees");
 /* Now you can display columns using $row variable as all records
 to be processed by the $row variable */
 ```
-
-
 
 ```
 echo $row['name'] . "<br>";
@@ -1956,7 +1973,9 @@ mysqli_free_result($result);
 
 ### 示例3：在下拉列表中显示记录（姓名）
 
-```
+
+
+```php
 <?php
 //Connect to database
 $con = mysqli_connect("localhost", "root", "", "mydb");
@@ -1975,7 +1994,7 @@ mysqli_free_result($result);
 
 ### 示例4：在HTML表格中显示MySQL记录
 
-```
+```php
 <?php
 //Connecting to the database
 
@@ -1985,6 +2004,7 @@ $con = mysqli_connect("localhost", "root", "", "mydb");
 
 $result = mysqli_query("SELECT * FROM employee",$con);
 ?>
+```
 
 <table border="1" width="400" cellpadding="5">
 <?php
@@ -2000,7 +2020,6 @@ while ($row = mysqli_fetch_assoc($result))
 }
 ?>
 </table>
-```
 
 ### 示例4：使用MySQL where子句的基本搜索操作
 
@@ -2033,6 +2052,7 @@ $con = mysqli_connect("localhost", "root", "", "mydb");
 $result = mysqli_query("select * from employee where name like '%$name%' ",$con);
 
 ?>
+```
 
 <table border="1" width="400" cellpadding="5">
 
@@ -2061,13 +2081,12 @@ while ($row = mysqli_fetch_assoc($result))
 ?>
 
 </table>
-```
 
 ### 说明
 
 ### 示例
 
-```
+```php
 <?php
 if(!file_exists("/docs/resume.txt"))
 {
@@ -2082,7 +2101,7 @@ else
 
 ## 示例：
 
-```
+```php
 <?php
 $a = 0;
 $b = 200;
@@ -2095,7 +2114,7 @@ echo "RESULT: ". $result;
 
 ## 示例：
 
-```
+```php
 <?php
 echo "Hi lets learn PHP"
 echo "<br/>This is another line";
@@ -2106,20 +2125,27 @@ echo "<br/>This is another line";
 
 ## **PHP 中的一些可能错误**
 
-- E_ERROR——致命的运行时错误。脚本的执行被中止。
-- E_WARNING——非致命错误。执行不会中止。
-- E_PARSE——编译时的解析错误。
-- E_NOTICE——运行时的通知。
-- E_ALL——除E_STRICT级别之外的所有错误和警告。
-- E_CORE_WARNING——PHP初始启动期间发生的非致命运行时错误。
+- `E_ERROR`——致命的运行时错误。脚本的执行被中止。
+
+- `E_WARNING`——非致命错误。执行不会中止。
+
+- `E_PARSE`——编译时的解析错误。
+
+- `E_NOTICE`——运行时的通知。
+
+- `E_ALL`——除`E_STRICT`级别之外的所有错误和警告。
+
+- `E_CORE_WARNING`——PHP初始启动期间发生的非致命运行时错误。
 
 我们可以在以下几个不同的位置控制错误：
 
-- 在 php.ini 文件中
-- 在 Web 服务器上的 .htaccess 文件中
+- 在 `php.ini` 文件中
+
+- 在 Web 服务器上的 `.htaccess` 文件中
+
 - 从你自己的 PHP 代码中。
 
-我们也可以在运行时通过从自己的PHP代码中调用 error_reporting() 函数来做到这一点，如下所示：
+我们也可以在运行时通过从自己的PHP代码中调用 `error_reporting()` 函数来做到这一点，如下所示：
 
 ```
 error_reporting(E_ALL);
@@ -2161,36 +2187,37 @@ if ($test>=1)
 
 ## 解释：
 
-set_error_handler()：PHP 的默认错误处理器是内置的错误处理器。我们在脚本运行期间将上面的函数设为默认错误处理器。由于我们希望自定义函数处理所有错误，set_error_handler() 只需要一个参数，也可以添加第二个参数来指定错误级别。
+`set_error_handler()`：PHP 的默认错误处理器是内置的错误处理器。我们在脚本运行期间将上面的函数设为默认错误处理器。由于我们希望自定义函数处理所有错误，`set_error_handler()` 只需要一个参数，也可以添加第二个参数来指定错误级别。
 
 ### 示例
 
-set_error_handler("customError",E_USER_WARNING); 当非法输入发生时，trigger_error() 函数会引发错误。
+`set_error_handler("customError",E_USER_WARNING);` 当非法输入发生时，`trigger_error()` 函数会引发错误。
 
 ## 使用 include() 函数：
 
 假设你想在每个页面上打印相同的信息，比如公司的详细信息和地址，或者今天的日期。如果你在网站的每个页面中都放置相同的代码，那效率并不高，因为——
 
 - 你一遍又一遍地输入相同的信息，这不是一个好方法。
+
 - 如果需要更新或更改，你必须对网站的每个页面进行修改，这是一个非常耗时的过程。
 
-解决这个问题的方法是使用 include() 方法。你可以将常用信息放到一个单独的文件中。例如，如果有一组变量需要在网站的每个页面中使用，你可以在一个 PHP 文件中一次性定义它们。然后，在每个页面中，你可以通过引用该文件来 include() 它。
+解决这个问题的方法是使用 `include()` 方法。你可以将常用信息放到一个单独的文件中。例如，如果有一组变量需要在网站的每个页面中使用，你可以在一个 PHP 文件中一次性定义它们。然后，在每个页面中，你可以通过引用该文件来 `include()` 它。
 
 ## include 和 require 之间的区别：
 
-PHP 中 include 和 require 语句的主要区别在于：如果发生任何错误，include 将产生一条错误消息，然后继续执行页面中的其余代码；而 require 将产生一个致命错误并终止执行。
+PHP 中 `include` 和 `require` 语句的主要区别在于：如果发生任何错误，`include` 将产生一条错误消息，然后继续执行页面中的其余代码；而 `require` 将产生一个致命错误并终止执行。
 
-require() 函数会抛出一个错误（E_COMPILE_ERROR）并停止脚本。
+`require()` 函数会抛出一个错误（`E_COMPILE_ERROR`）并停止脚本。
 
-include() 函数会抛出一个警告（E_WARNING），但脚本将继续执行。
+`include()` 函数会抛出一个警告（`E_WARNING`），但脚本将继续执行。
 
 ## **require_once()**
 
-当代码的结果是必需的，但后续的包含会抛出错误时，require_once() 函数非常有用。这适用于带有函数的脚本。如果这样的脚本被多次包含，就会抛出错误，因为函数不能被重新声明。
+当代码的结果是必需的，但后续的包含会抛出错误时，`require_once()` 函数非常有用。这适用于带有函数的脚本。如果这样的脚本被多次包含，就会抛出错误，因为函数不能被重新声明。
 
 ## **include_once()**
 
-include_once() 函数在包含远程文件并且不希望因 HTTP 开销而多次包含它们的情况下非常有用。这在支付网关以及电子商务网站的处理过程中也很有用。
+`include_once()` 函数在包含远程文件并且不希望因 HTTP 开销而多次包含它们的情况下非常有用。这在支付网关以及电子商务网站的处理过程中也很有用。
 
 ### 示例
 
@@ -2230,15 +2257,11 @@ Fatal error: Call to undefined function xyz() in localhost/test.php on line 2
 
 PHP Warning: include(abc.php): failed to open stream: No such file or directory in localhost/test.php on line 2
 
-解决方案：此警告告诉你，一个包含文件（使用 PHP 的 include 语法包含的文件）未找到。如果你收到有关无法打开文件的警告或错误消息，请检查错误消息中提到的文件是否存在，以及你的路径是否正确。
+解决方案：此警告告诉你，一个包含文件（使用 PHP 的 `include` 语法包含的文件）未找到。如果你收到有关无法打开文件的警告或错误消息，请检查错误消息中提到的文件是否存在，以及你的路径是否正确。
 
 Warning: move_uploaded_file(upload/logo.jpg) [function.move-uploaded-file]: failed to open stream: Permission denied in localhost/upload.php on line 32
 
 **解决方案：** 此警告是一个权限错误的示例。脚本试图将文件上传到一个目录，但该目录没有足够的权限让文件移动进去。
-
-
-
-
 
 ## 备注
 
@@ -2266,9 +2289,13 @@ Choose File : <input name="myfile" type="file" />
 下面还有一些其他预定义属性：
 
 - `$_FILES['file']['tmp_name']` – 上传文件在 Web 服务器临时目录中的位置。
+
 - `$_FILES['file']['name']` – 上传文件的实际名称。
+
 - `$_FILES['file']['size']` – 上传文件的大小（以字节为单位）。
+
 - `$_FILES['file']['type']` – 上传文件的 MIME 类型。
+
 - `$_FILES['file']['error']` – 与文件相关的错误代码。
 
 那么让我们来看一个例子：
@@ -2331,15 +2358,24 @@ else
 **错误消息：** PHP 通过 HTML 表单上传文件时会返回一个错误代码。我们可以通过 PHP 获取文件上传过程中的错误代码。下面解释一些错误消息：
 
 - `UPLOAD_ERR_OK` – 没有错误，文件上传成功。
+
 - `UPLOAD_ERR_INI_SIZE` – 上传的文件超过了 `php.ini` 文件中 `upload_max_filesize` 指定的值。
+
 - `UPLOAD_ERR_FORM_SIZE` – 上传的文件超过了 HTML 表单中指定的 `MAX_FILE_SIZE` 指令。
+
 - `UPLOAD_ERR_PARTIAL` – 文件仅被部分上传，或者上传过程被中断。
+
 - `UPLOAD_ERR_NO_FILE` – 用户没有上传任何文件。当用户尝试上传文件但 PHP 没有收到任何内容时会发生。
+
 - `UPLOAD_ERR_NO_TMP_DIR` – 缺少临时文件夹。
+
 - `UPLOAD_ERR_CANT_WRITE` – 无法将文件写入磁盘。
+
 - `UPLOAD_ERR_EXTENSION` – 某个 PHP 扩展停止了文件上传过程。
 
 ### 示例
+
+
 
 ```php
 // Check if file already exists
@@ -2428,9 +2464,6 @@ else
 ?>
 ```
 
-
-
-
 ## 会话示例：
 
 在使用 `$_SESSION` 之前，你必须先调用 `session_start()`；这样会话才会启动，你才能在该页面访问 `$_SESSION` 变量。
@@ -2516,7 +2549,7 @@ echo "You have logged-out successfully";
 
 一个简单的例子是，当网站的访客填写咨询表单时。
 
-mail 函数返回一个布尔值：如果电子邮件发送成功，则返回 true，否则返回 false。
+`mail` 函数返回一个布尔值：如果电子邮件发送成功，则返回 true，否则返回 false。
 
 ### 语法
 
@@ -2524,13 +2557,13 @@ mail 函数返回一个布尔值：如果电子邮件发送成功，则返回 tr
 mail ($to, $subject, $message, $additional_headers);
 ```
 
-**$to：** 这是 mail 函数的第一个参数，包含收件人的电子邮件地址，即邮件需要发送到的地址。
+**$to：** 这是 `mail` 函数的第一个参数，包含收件人的电子邮件地址，即邮件需要发送到的地址。
 
 **$subject：** 每封电子邮件都应有主题。此参数不能包含任何换行字符。
 
-**$message：** 这是要发送的电子邮件的实际正文或内容。请注意，每一行都应由 \n 换行，并且每行不应超过 70 个字符的限制。
+**$message：** 这是要发送的电子邮件的实际正文或内容。请注意，每一行都应由 `\n` 换行，并且每行不应超过 70 个字符的限制。
 
-**$additional_headers：** 这包含额外的标头值，例如 From、CC 或 Bcc 等。这是 mail 函数中的可选参数。
+**$additional_headers：** 这包含额外的标头值，例如 From、CC 或 Bcc 等。这是 `mail` 函数中的可选参数。
 
 ### 示例
 
@@ -2564,9 +2597,13 @@ echo "Mail sent successfully";
 ```
 
 - 您的姓名
+
 - 您的电子邮件
+
 - 联系电话
+
 - 留言
+
 - 提交
 
 ### thanks.php
@@ -2698,28 +2735,38 @@ echo "You have been verified ";
 ### 使用 OOP 的一些优点：
 
 - 可重用性 – 代码易于使用和管理
+
 - 数据隐藏 – 数据抽象与封装
+
 - 模块化
+
 - 应对变化的弹性
+
 - 快速高效
+
 - 现实建模
 
 在深入了解之前，让我们先定义与面向对象编程相关的重要术语。
 
 - **类** – 类是成员变量和函数的集合。换句话说，类是一个蓝图或一段代码，描述了我们希望如何管理一个任务。
-- **对象** – 你只需定义一次类，然后创建多个属于该类的对象，就像根据蓝图建造多栋房屋一样。对象可以拥有状态、行为和身份。要创建对象，我们使用 *new* 关键字。
+
+- **对象** – 你只需定义一次类，然后创建多个属于该类的对象，就像根据蓝图建造多栋房屋一样。对象可以拥有状态、行为和身份。要创建对象，我们使用 `new` 关键字。
+
 - **成员函数和变量** – 这些是在类中定义的函数和变量，用于访问对象数据。例如，改变我房子的颜色或使用的材料，就是在我的房子对象上执行的一个方法。
+
 - **继承** – 继承被定义为从现有类创建新类。当一个类通过继承父类的现有函数来定义时，就称为继承。
+
 - **多态** – 使用多态，你可以创建多个同名函数。简单来说，函数名保持不变，但它可以接受不同数量的参数，并执行不同的任务。
+
 - **重载** – 多态的一种类型，其中部分或全部运算符根据其参数类型具有不同的实现。同样，函数也可以通过不同的实现进行重载。
+
 - **数据抽象** – 隐藏（抽象）了实现细节的任何数据表示形式。
+
 - **封装** – 指将所有数据和成员函数封装在一起以形成一个对象的概念。
+
 - **构造函数** – 构造函数与其类同名，一旦创建了该类的对象，它就会自动调用。
+
 - **析构函数** – 指的是一种特殊类型的函数，每当对象被删除或超出作用域时，它都会被自动调用。
-
-
-
-
 
 ## 定义 PHP 类和对象：
 
@@ -2737,11 +2784,13 @@ class Teacher
 }
 ```
 
-上面的 Teacher 类包含一个成员变量（类变量或属性），即 course，和一个函数，即 students()。这里的 public 是一个访问说明符，意味着变量 $course 可以被其他类访问或使用。请注意，在声明类变量或属性之前，我们应该添加可见性关键字（public / private / protected）来定义该变量在何处可用。
+上面的 `Teacher` 类包含一个成员变量（类变量或属性），即 `course`，和一个函数，即 `students()`。这里的 `public` 是一个访问说明符，意味着变量 `$course` 可以被其他类访问或使用。请注意，在声明类变量或属性之前，我们应该添加可见性关键字（`public` / `private` / `protected`）来定义该变量在何处可用。
 
 ## 命名类：
 
-你为类使用的名称（上例中的 “Teacher”）：
+
+
+你为类使用的名称（上例中的 “`Teacher`”）：
 
 - 不应是 PHP 保留字（关键字）。
 - 应以字母或下划线开头。
@@ -2764,9 +2813,9 @@ echo $obj->course;
 
 ## 什么是构造函数？
 
-如前所述，每个函数都需要被调用才能获得输出。但构造函数是一个不需要调用的函数，因为一旦创建了类的对象，它就会被自动调用。在 PHP 中，构造函数是通过 __construct() 方法定义的。示例如下：
+如前所述，每个函数都需要被调用才能获得输出。但构造函数是一个不需要调用的函数，因为一旦创建了类的对象，它就会被自动调用。在 PHP 中，构造函数是通过 `__construct()` 方法定义的。示例如下：
 
-**示例：PHP 构造函数**
+### 示例：PHP 构造函数
 
 ```php
 class Teacher
@@ -2787,11 +2836,11 @@ class Teacher
 $obj = new Teacher;
 ```
 
-在上面的程序中，我们创建了 2 个函数：__construct() 和 __destruct()，它们会在对象创建后自动被调用。构造函数用于初始化内存，而析构函数用于释放或取消初始化类的内存，通常是在脚本结束时。
+在上面的程序中，我们创建了 2 个函数：`__construct()` 和 `__destruct()`，它们会在对象创建后自动被调用。构造函数用于初始化内存，而析构函数用于释放或取消初始化类的内存，通常是在脚本结束时。
 
 *请注意：如果你的构造函数带有参数，你应该在创建对象时传入这些参数的值。*
 
-## $this 关键字
+## `$this` 关键字
 
 `$this` 是一个伪变量，仅在方法内部可用。`$this` 用于访问当前类的属性/成员变量。换句话说，我们使用 `$this` 变量来访问当前对象。示例如下：
 
@@ -2809,7 +2858,7 @@ class Users {
 
 ## PHP 中的访问说明符或可见性模式
 
-PHP 中有 3 种可见性/访问说明符：public、private 和 protected。这些可见性与属性或成员变量一起使用，以允许从类外部访问。这些说明符在验证和限制程序中的信息方面也起着重要作用。例如，我的信用卡及其 PIN 码详细信息是私有的，我不想与他人分享。
+PHP 中有 3 种可见性/访问说明符：`public`、`private` 和 `protected`。这些可见性与属性或成员变量一起使用，以允许从类外部访问。这些说明符在验证和限制程序中的信息方面也起着重要作用。例如，我的信用卡及其 PIN 码详细信息是私有的，我不想与他人分享。
 
 - **公共**属性和方法可以在任何地方或类外部访问。
 - **私有**属性和方法只能在类内部访问。
@@ -2832,7 +2881,7 @@ $ob = new myDetails;
 echo $ob->pin;   // Error: cannot access outside the class
 ```
 
-因此，从上面的例子可以看出，类内部的任何方法都可以访问私有属性（pin）。但是，你不能从类外部访问它。
+因此，从上面的例子可以看出，类内部的任何方法都可以访问私有属性（`pin`）。但是，你不能从类外部访问它。
 
 ## PHP 面向对象编程中的继承
 
@@ -2850,7 +2899,7 @@ PHP 面向对象编程中有几种继承类型，如下所示：
 
 *请注意，PHP 不支持多继承；不过，PHP 中有 **Traits** 可以解决这个问题。*
 
-Hirdesh Bhardwaj
+`Hirdesh Bhardwaj`
 
 ```php
 class B extends A   // First child class of A
@@ -2930,7 +2979,7 @@ class A
 echo A::fn(); // Calling function without creating object
 ```
 
-请注意，如果未声明可见性模式或访问说明符（public、private 或 protected），则可见性模式默认为 *public*。
+请注意，如果未声明可见性模式或访问说明符（`public`、`private` 或 `protected`），则可见性模式默认为 *public*。
 
 静态方法也可以使用 **self** 关键字和 `::`（解析运算符）从同一类的其他方法中访问。
 
@@ -2978,10 +3027,6 @@ class MyClass
     public function getProperty()
     {
 ```
-
-
-
-
 
 ```php
 return $this->greeting. "<br />";
@@ -3198,6 +3243,8 @@ create clustered index ids on employees (id desc);
 
 在多个列上创建复合聚集索引
 
+
+
 ```sql
 create clustered index myIndex on employees (id desc,gender ASC);
 ```
@@ -3206,18 +3253,15 @@ create clustered index myIndex on employees (id desc,gender ASC);
 
 聚集索引有助于在内存中物理地排列行。因此，索引后的更改可以在表中看到，而不是在堆中。另一方面，非聚集索引不会在内存中按排序顺序物理地排列行。
 
-请注意：MySQL InnoDB 引擎有强制性的聚集索引。这意味着总是存在一个聚集索引，通常使用主键。如果没有可用的合适唯一键，MySQL 将使用生成的行 ID 来实现该目的。MyISAM 存储引擎不支持聚集索引，并且一直使用堆表。
+请注意：`MySQL` `InnoDB` 引擎有强制性的聚集索引。这意味着总是存在一个聚集索引，通常使用主键。如果没有可用的合适唯一键，`MySQL` 将使用生成的行 ID 来实现该目的。`MyISAM` 存储引擎不支持聚集索引，并且一直使用堆表。
 
-在 MyISAM 引擎中只能使用一种类型的索引（非聚集）。
-
-
-
-
+在 `MyISAM` 引擎中只能使用一种类型的索引（非聚集）。
 
 ### 笔记
 
 ## MySQL – 存储过程：
-通常，存储过程有助于提升应用程序的性能。存储过程一旦创建，就会被编译并存储在数据库中。不过，MySQL 实现存储过程的方式略有不同。MySQL 存储过程是按需编译的。编译完存储过程后，MySQL 会将其放入缓存中。
+
+通常，存储过程有助于提升应用程序的性能。存储过程一旦创建，就会被编译并存储在数据库中。不过，`MySQL` 实现存储过程的方式略有不同。`MySQL` 存储过程是按需编译的。编译完存储过程后，`MySQL` 会将其放入缓存中。
 
 存储过程有助于减少应用程序与数据库服务器之间的通信流量，因为应用程序只需发送存储过程的名称和参数，而无需发送多条冗长的 SQL 语句。
 
@@ -3248,9 +3292,10 @@ call myproc();
 ```
 
 ### 说明：
-- 我们使用分隔符来指示存储过程的开始或结束。最后一条命令（DELIMITER;）将分隔符改回分号（;）。
-- 我们使用 CREATE PROCEDURE 语句来创建新的存储过程。在 CREATE PROCEDURE 语句之后，我们指定存储过程的名称。并在存储过程名称后面加上括号。
-- BEGIN 和 END 之间的部分称为存储过程的主体。我们在主体中编写声明式 SQL 语句以处理业务逻辑。
+
+- 我们使用分隔符来指示存储过程的开始或结束。最后一条命令（`DELIMITER;`）将分隔符改回分号（`;`）。
+- 我们使用 `CREATE PROCEDURE` 语句来创建新的存储过程。在 `CREATE PROCEDURE` 语句之后，我们指定存储过程的名称。并在存储过程名称后面加上括号。
+- `BEGIN` 和 `END` 之间的部分称为存储过程的主体。我们在主体中编写声明式 SQL 语句以处理业务逻辑。
 
 ### 带参数的存储过程
 
@@ -3270,11 +3315,11 @@ DELIMITER ;
 
 ### 执行存储过程 proc
 
-call proc ('delhi');
+`call proc ('delhi');`
 
 ### MySQL 存储过程中的循环
 
-MySQL 提供了循环语句，允许你根据条件重复执行一段 SQL 代码块。MySQL 中有三种循环语句：WHILE、REPEAT 和 LOOP。
+`MySQL` 提供了循环语句，允许你根据条件重复执行一段 SQL 代码块。`MySQL` 中有三种循环语句：`WHILE`、`REPEAT` 和 `LOOP`。
 
 ### WHILE 循环示例
 
@@ -3298,9 +3343,9 @@ END$$
 DELIMITER ;
 ```
 
-首先，我们重复构建 str 字符串，直到 x 变量的值大于 10。然后，我们使用 SELECT 语句显示最终的字符串。
+首先，我们重复构建 `str` 字符串，直到 `x` 变量的值大于 10。然后，我们使用 `SELECT` 语句显示最终的字符串。
 
-现在让我们调用 myloop 存储过程——
+现在让我们调用 `myloop` 存储过程——
 
 ```
 CALL myloop();
@@ -3310,7 +3355,7 @@ CALL myloop();
 
 ## MYSQL – 触发器
 
-SQL 触发器是存储在数据库中的一组 SQL 语句。每当与表关联的事件发生时（例如 insert、update 或 delete），它就会被触发。
+SQL 触发器是存储在数据库中的一组 SQL 语句。每当与表关联的事件发生时（例如 `insert`、`update` 或 `delete`），它就会被触发。
 
 触发器与存储过程的主要区别在于：当对表执行数据修改事件时，触发器会自动调用；而存储过程必须显式调用。
 
@@ -3332,14 +3377,14 @@ SQL 触发器是在客户端应用程序不可见的情况下被调用和执行�
 
 ### 触发器的两种类型
 
-- 1. BEFORE 触发器 - BEFORE 触发器在 INSERT、DELETE 和 UPDATE 命令执行之前触发。
-- 2. AFTER 触发器 - AFTER 触发器在 INSERT、DELETE 和 UPDATE 命令执行之后触发。
+- 1. `BEFORE` 触发器 - `BEFORE` 触发器在 `INSERT`、`DELETE` 和 `UPDATE` 命令执行之前触发。
+- 2. `AFTER` 触发器 - `AFTER` 触发器在 `INSERT`、`DELETE` 和 `UPDATE` 命令执行之后触发。
 
-我们将创建一个名为 customer 的表，该表有两个列，用于在同一表中添加或删除新记录时准备日志。
+我们将创建一个名为 `customer` 的表，该表有两个列，用于在同一表中添加或删除新记录时准备日志。
 
-- 只要添加/删除新值，表 logfile 将插入当前时间。
+- 只要添加/删除新值，表 `logfile` 将插入当前时间。
 
---DELIMITER $$ 用于避免每条行尾的 ; ，所有语句将被视为一组并持续连接，直到 DELIMITER $$ 结束
+--`DELIMITER $$` 用于避免每条行尾的 `;` ，所有语句将被视为一组并持续连接，直到 `DELIMITER $$` 结束
 
 ```sql
 DELIMITER $$
@@ -3363,7 +3408,7 @@ Hirdesh Bhardwaj
 DROP TRIGGER [IF EXISTS] [schema_name].trigger_name
 ```
 
-该语句用于删除触发器。schema（数据库）名称是可选的。如果省略 schema，触发器将从默认 schema 中删除。DROP TRIGGER 在 MySQL 5.0.2 中新增。使用此语句需要拥有与触发器关联的表的 TRIGGER 权限。
+该语句用于删除触发器。`schema`（数据库）名称是可选的。如果省略 `schema`，触发器将从默认 `schema` 中删除。`DROP TRIGGER` 在 `MySQL 5.0.2` 中新增。使用此语句需要拥有与触发器关联的表的 `TRIGGER` 权限。
 
 ### 笔记
 
@@ -3470,7 +3515,7 @@ catch (Exception $e)
 
 3. Web 浏览器接收到 XML 消息后，会解析该消息，以更新页面该部分的内容。
 
-XMLHttpRequest 对象是一种名为 Ajax（异步 JavaScript 和 XML）的技术的一部分。使用 Ajax，可以通过 XMLHttpRequest API 在浏览器和服务器之间传递数据，而无需重新加载网页。
+`XMLHttpRequest` 对象是一种名为 Ajax（异步 JavaScript 和 XML）的技术的一部分。使用 Ajax，可以通过 `XMLHttpRequest` API 在浏览器和服务器之间传递数据，而无需重新加载网页。
 
 ## XMLHttpRequest 对象：
 
@@ -3478,38 +3523,35 @@ XMLHttpRequest 对象是一种名为 Ajax（异步 JavaScript 和 XML）的技�
 
 ## 常用的 XMLHttpRequest 方法：
 
-abort()：abort 方法用于中途停止请求。如果你只想让请求持续特定时间，可以调用 abort 方法来提前停止请求。
+`abort()`：`abort` 方法用于中途停止请求。如果你只想让请求持续特定时间，可以调用 `abort` 方法来提前停止请求。
 
-getAllResponseHeaders()：你可以使用此方法获取所有正在传递的 HTTP 头的完整信息。例如 - 服务器名称、日期、连接和内容类型。
+`getAllResponseHeaders()`：你可以使用此方法获取所有正在传递的 HTTP 头的完整信息。例如 - 服务器名称、日期、连接和内容类型。
 
-open ("method","URL","async","username","pswd")：这是你用于打开与服务器上特定文件连接的方法。
-
-
-
+`open ("method","URL","async","username","pswd")`：这是你用于打开与服务器上特定文件连接的方法。
 
 服务器。在这里，你传入打开文件的方法（GET 或 POST），并定义文件的打开方式。
 
-## setRequestHeader("label","value")：
+## `setRequestHeader("label","value")`：
 
-你可以通过传入一个表示标签及其值的字符串来为请求头（header）设置标签。此方法只能在 open() 方法使用之后、调用 send 函数之前调用。
+你可以通过传入一个表示标签及其值的字符串来为请求头（header）设置标签。此方法只能在 `open()` 方法使用之后、调用 `send` 函数之前调用。
 
-## send(" ")：
+## `send(" ")`：
 
 这是实际将请求发送到服务器的方法。如果请求是异步发送的，响应将立即返回；如果不是异步的，则会在收到响应后返回。
 
 ## XMLHttpRequest 属性：
 
-一些主要的 XMLHttpRequest() 属性如下：
+一些主要的 `XMLHttpRequest()` 属性如下：
 
-## onreadystatechange：
+## `onreadystatechange`：
 
-onreadystatechange 属性是一个事件处理器，允许你在状态改变时触发特定的代码块或函数。
+`onreadystatechange` 属性是一个事件处理器，允许你在状态改变时触发特定的代码块或函数。
 
-## readyState：
+## `readyState`：
 
-readyState 是一个对异常处理非常有用的属性，在决定何时执行某些操作时也很重要。例如，你可以让一组代码在 readyState 为加载状态时执行，或在 readyState 为完成状态时停止执行。
+`readyState` 是一个对异常处理非常有用的属性，在决定何时执行某些操作时也很重要。例如，你可以让一组代码在 `readyState` 为加载状态时执行，或在 `readyState` 为完成状态时停止执行。
 
-responseText：一旦请求完成，responseText 属性将被返回。如果你向某种脚本发起请求，脚本的输出将通过此属性返回。
+`responseText`：一旦请求完成，`responseText` 属性将被返回。如果你向某种脚本发起请求，脚本的输出将通过此属性返回。
 
 一旦收到请求，服务器就会决定返回什么响应。有许多不同的响应代码，如下所示。
 
@@ -3535,11 +3577,11 @@ function sendRequest(serverPage, objID)
 ## AJAX 操作的步骤
 
 - 发生客户端事件。
-- 创建 XMLHttpRequest 对象。
-- 配置 XMLHttpRequest 对象。
-- XMLHttpRequest 对象向 Web 服务器发出异步请求。
+- 创建 `XMLHttpRequest` 对象。
+- 配置 `XMLHttpRequest` 对象。
+- `XMLHttpRequest` 对象向 Web 服务器发出异步请求。
 - Web 服务器返回包含 XML 文档的结果。
-- XMLHttpRequest 对象调用 callback() 函数并处理结果。
+- `XMLHttpRequest` 对象调用 `callback()` 函数并处理结果。
 - 更新 HTML DOM。
 
 ![](img/9ab4a56a650535285811bb802190e58f_172_0.png)
@@ -3601,7 +3643,7 @@ xmlhttp.send();
 </form>
 ```
 
-在这里，你将通过 getElementById 方法在 result 这个 id 中获取结果。
+在这里，你将通过 `getElementById` 方法在 `result` 这个 id 中获取结果。
 
 ```html
 <span id="result"></span>
@@ -3639,7 +3681,7 @@ echo "City is ".$city;
 
 ## 域名：
 
-域名是网址中最重要的部分。域名是公司在互联网上的身份标识。每个域名都有其后跟点的扩展名。例如，www.irctc.gov.in 是 .gov.in 域名，表示它是一个政府网站。一些常见的扩展名有 .com / .co / .in / .net / .me
+域名是网址中最重要的部分。域名是公司在互联网上的身份标识。每个域名都有其后跟点的扩展名。例如，`www.irctc.gov.in` 是 `.gov.in` 域名，表示它是一个政府网站。一些常见的扩展名有 `.com` / `.co` / `.in` / `.net` / `.me`
 
 ## 虚拟主机
 
@@ -3650,10 +3692,10 @@ echo "City is ".$city;
 
 在选择主机时，以下是外包托管时需要考虑的几个标准：
 
-- 支持的语言：PHP、JAVA、CGI 等。
-- 支持的数据库：MySQL、Postgresql、MSSQL 等。
+- 支持的语言：`PHP`、`JAVA`、`CGI` 等。
+- 支持的数据库：`MySQL`、`Postgresql`、`MSSQL` 等。
 - 服务器控制：超级用户访问权限（Super User Access）
-- 服务器访问：如 FTP、telnet、SSH 等。
+- 服务器访问：如 `FTP`、`telnet`、`SSH` 等。
 - 管理 GUI：电子邮件、数据库、用户设置等。
 - 带宽使用：网站、电子邮件、流媒体、数据库连接等。
 
@@ -3662,76 +3704,61 @@ echo "City is ".$city;
 几乎所有虚拟主机公司都为你提供以下三种流行的托管方案：
 
 - 共享主机（Shared hosting）。
+
+
+
+# 主机类型概述
+
 - 经销商主机（Reseller hosting）。
 - VPS 和独立主机（Dedicated hosting）。
 
-**共享主机：** 在此方案下，你可以托管许多网站。有些共享主机方案还允许你托管不限数量的网站。在共享主机方案中，你只能获得一个 CPanel（控制面板）来管理所有网站。
+## 共享主机
+在此方案下，你可以托管许多网站。有些共享主机方案还允许你托管不限数量的网站。在共享主机方案中，你只能获得一个 `CPanel`（控制面板）来管理所有网站。
 
-**经销商主机：** 经销商主机允许你将托管服务转售给其他客户。但你也可以用它来托管自己的网站。在经销商主机账户中，你可以为每个网站创建单独的账户。因此，当你购买经销商主机套餐时，你会获得一个 Cpanel（控制面板）和 WHM（网站托管管理器），用于创建和管理不同的网站账户。
+## 经销商主机
+经销商主机允许你将托管服务转售给其他客户。但你也可以用它来托管自己的网站。在经销商主机账户中，你可以为每个网站创建单独的账户。因此，当你购买经销商主机套餐时，你会获得一个 `Cpanel`（控制面板）和 `WHM`（网站托管管理器），用于创建和管理不同的网站账户。
 
 Hirdesh Bhardwaj
 
-**VPS 和独立主机：** VPS 主机更适合访问量非常高的网站和需要大量功能的网站。通常，如果你使用共享或经销商主机方案，虚拟主机服务商不会允许你消耗那么多资源。他们会停用你的网站，并要求你升级到 VPS 或独立主机方案。
+## VPS 和独立主机
+`VPS` 主机更适合访问量非常高的网站和需要大量功能的网站。通常，如果你使用共享或经销商主机方案，虚拟主机服务商不会允许你消耗那么多资源。他们会停用你的网站，并要求你升级到 `VPS` 或独立主机方案。
 
-**存储空间和带宽：** 如上所述，虚拟主机公司为你提供存储文件的空间和带宽，使你的文件可供公众访问。因此，基本上，存储空间就是用来存储你的博客文章、图片、媒体文件（视频、播客等）、WordPress 安装文件、主题、插件等的空间，它们都存储在服务器上。
+## 存储空间和带宽
+如上所述，虚拟主机公司为你提供存储文件的空间和带宽，使你的文件可供公众访问。因此，基本上，存储空间就是用来存储你的博客文章、图片、媒体文件（视频、播客等）、`WordPress` 安装文件、主题、插件等的空间，它们都存储在服务器上。
 
 **带宽：** 每次访问者访问你的网站时，他/她都会使用服务器资源。这是因为服务器需要将所有文件/图片/媒体发送到他的计算机。
-
 因此，以这种方式提供文件所消耗的资源被计算为带宽。
-
 你的访问者越多，所需的服务器资源就越多，因此你需要更多的带宽。
-
-带宽以字节为单位进行测量，其值通常以 GB（千兆字节）或 TB（太字节）表示。
+带宽以字节为单位进行测量，其值通常以 `GB`（千兆字节）或 `TB`（太字节）表示。
 
 ## 支持的语言
-
-首先，我们来说说支持的语言。显然，因为你购买了这本书，我们假设你正在考虑使用 PHP，但你可能还需要使用其他语言。有些时候，其他语言（如 JavaScript）可能比 PHP 更适合某项工作。例如，
-
-如果你想在网站上直播音频或视频，你可能会使用某种 Java 小程序（applet），因为 PHP 需要来自服务器的请求来处理信息。PHP 可以通过对服务器的不同调用来实现，但由于这更像是来自浏览器的客户端请求，因此客户端语言更适合此任务。
-
-有时，你可能需要使用另一种编程语言来完成客户在其他主机或服务器上已经设置好的功能。如果是这样，至少可以有选择地使用例如 Perl 脚本，而不是花费时间和金钱用 PHP 重新开发应用程序。
-
-
-
-类似 WordPress 的 CMS 使用 MySQL 数据库来存储和检索数据以动态生成网页。
-
-如果计划运行一个不使用任何 CMS 或 PHP 语言的静态网站，则不需要数据库。
+首先，我们来说说支持的语言。显然，因为你购买了这本书，我们假设你正在考虑使用 `PHP`，但你可能还需要使用其他语言。有些时候，其他语言（如 `JavaScript`）可能比 `PHP` 更适合某项工作。例如，
+如果你想在网站上直播音频或视频，你可能会使用某种 `Java` 小程序（applet），因为 `PHP` 需要来自服务器的请求来处理信息。`PHP` 可以通过对服务器的不同调用来实现，但由于这更像是来自浏览器的客户端请求，因此客户端语言更适合此任务。
+有时，你可能需要使用另一种编程语言来完成客户在其他主机或服务器上已经设置好的功能。如果是这样，至少可以有选择地使用例如 `Perl` 脚本，而不是花费时间和金钱用 `PHP` 重新开发应用程序。
+类似 `WordPress` 的 `CMS` 使用 `MySQL` 数据库来存储和检索数据以动态生成网页。
+如果计划运行一个不使用任何 `CMS` 或 `PHP` 语言的静态网站，则不需要数据库。
 
 ## 服务器控制和访问
-
 许多主机提供商不会给 Web 开发人员对其托管域的完全访问和/或控制权限。
-
 我们倾向于避开这些主机，因为当你想对服务器进行一些自定义配置时，更有可能遇到问题。
-
-查看你的主机提供的访问类型。显然，你的主机会提供 FTP 访问，以便你将文件上传到 Web 服务器。然而，有些主机只提供 FTP 访问，其他什么都没有。
-
-问题在于你很可能会遇到想要配置服务器的情况。为此你需要 telnet 或 SSH 访问来使用命令行。
-
-事实上，配置能力在执行主机默认通常不允许的任务时往往是必要的。例如，考虑 htaccess。使用 htaccess，你可以根据 htpasswd 文件中允许的用户来拒绝和允许对某些文件和目录的访问
+查看你的主机提供的访问类型。显然，你的主机会提供 `FTP` 访问，以便你将文件上传到 Web 服务器。然而，有些主机只提供 `FTP` 访问，其他什么都没有。
+问题在于你很可能会遇到想要配置服务器的情况。为此你需要 `telnet` 或 `SSH` 访问来使用命令行。
+事实上，配置能力在执行主机默认通常不允许的任务时往往是必要的。例如，考虑 `htaccess`。使用 `htaccess`，你可以根据 `htpasswd` 文件中允许的用户来拒绝和允许对某些文件和目录的访问
 
 ![](img/9ab4a56a650535285811bb802190e58f_183_0.png)
 
 ## 管理 GUI
-
-某些主机在其套餐中提供管理 GUI（图形用户界面）或用户控制面板作为功能。很多人并不特别喜欢 GUI，但当你别无选择时——要么是因为你没有足够的服务器访问权限，要么是因为你不完全了解如何通过 telnet 完成操作——点按式解决方案就是一个很棒的工具。
-
-界面可以简单到只允许你查看有关服务器的信息，也可以复杂到允许你一键安装应用程序和编程语言。另外，请记住，如果你的客户希望能够管理其电子邮件用户，许多控制面板都有实用程序允许客户自行操作。有了这样的功能，客户无需打电话给你或
-托管公司来设置电子邮件帐户，客户只需登录控制面板并根据需要设置和删除用户即可。
-
-## 备注
+某些主机在其套餐中提供管理 `GUI`（图形用户界面）或用户控制面板作为功能。很多人并不特别喜欢 `GUI`，但当你别无选择时——要么是因为你没有足够的服务器访问权限，要么是因为你不完全了解如何通过 `telnet` 完成操作——点按式解决方案就是一个很棒的工具。
+界面可以简单到只允许你查看有关服务器的信息，也可以复杂到允许你一键安装应用程序和编程语言。另外，请记住，如果你的客户希望能够管理其电子邮件用户，许多控制面板都有实用程序允许客户自行操作。有了这样的功能，客户无需打电话给你或托管公司来设置电子邮件帐户，客户只需登录控制面板并根据需要设置和删除用户即可。
 
 ## 备注
 
 ## PHP 分页
-
-当我们在同一页面上显示大量内容时，我们开始考虑添加分页，因为在同一页面上加载所有数据在优化方面不是正确选择。因此我们将所有内容拆分为多个页面。在这种情况下——每个页面包含我们信息的一部分。我们可以使用服务器端以及客户端分页，使用 javascript 和 PHP 来管理我们的页面。
-
-你的 SQL SELECT 语句查询可能产生数千条记录的情况总是存在的。但在一页上显示所有结果并不是一个好主意。因此我们可以根据需要将此结果分成多个页面。
-
+当我们在同一页面上显示大量内容时，我们开始考虑添加分页，因为在同一页面上加载所有数据在优化方面不是正确选择。因此我们将所有内容拆分为多个页面。在这种情况下——每个页面包含我们信息的一部分。我们可以使用服务器端以及客户端分页，使用 `javascript` 和 `PHP` 来管理我们的页面。
+你的 `SQL` `SELECT` 语句查询可能产生数千条记录的情况总是存在的。但在一页上显示所有结果并不是一个好主意。因此我们可以根据需要将此结果分成多个页面。
 分页意味着将查询结果显示在多个页面中，而不是全部放在一个页面上。
 
 ### 使用 LIMIT 获取记录以生成分页的简单示例
-
 ```
 <?php
 
@@ -3805,20 +3832,16 @@ echo " <a href='{$_SERVER['PHP_SELF']}?pageNum=$lastPage'>LAST</a>" ;
 
 ## 备注
 
-## **Bootstrap – 框架**
+## Bootstrap – 框架
+`Bootstrap` 是一个免费的开源 `CSS` 框架，面向响应式、移动优先的前端 Web 开发。它包含用于排版、表单、按钮、导航和其他界面组件的基于 `CSS-` 和（可选）`JavaScript` 的设计模板。*(来源：维基百科)*
+最初名为 `Twitter Blueprint`，由 **Mark Otto 和 Jacob Thornton** 在 **Twitter** 开发，作为一个框架以鼓励内部工具的一致性。
 
-Bootstrap 是一个免费的开源 CSS 框架，面向响应式、移动优先的前端 Web 开发。它包含用于排版、表单、按钮、导航和其他界面组件的基于 CSS- 和（可选）JavaScript 的设计模板。*(来源：维基百科)*
+**安装指南：** 你可以访问 `getbootstrap.com` 下载 `bootstrap` 的最新版本。下载设置后你需要解压或提取它。你将获得以下三个目录
+- **CSS** – 包含所需的 `css` 文件，例如 – `bootstrap.min.css`, `bootstrap-theme.css` 等
+- **Fonts** - 包含用于额外字体的 `ttf` 和 `otf` 文件
+- **JS** - 包含所需的 `JS` 文件 – 例如 – `bootstrap.min.js`, `npm.js` 等。
 
-最初名为 Twitter Blueprint，由 **Mark Otto 和 Jacob Thornton** 在 **Twitter** 开发，作为一个框架以鼓励内部工具的一致性。
-
-**安装指南：** 你可以访问 getbootstrap.com 下载 bootstrap 的最新版本。下载设置后你需要解压或提取它。你将获得以下三个目录
-
-- **CSS** – 包含所需的 css 文件，例如 – bootstrap.min.css, bootstrap-theme.css 等
-- **Fonts** - 包含用于额外字体的 ttf 和 otf 文件
-- **JS** - 包含所需的 JS 文件 – 例如 – bootstrap.min.js, npm.js 等。
-
-### **示例代码：安装 Bootstrap**
-
+### 示例代码：安装 Bootstrap
 ```
 <!DOCTYPE html>
 
@@ -3844,321 +3867,344 @@ Bootstrap 是一个免费的开源 CSS 框架，面向响应式、移动优先�
 ## Bootstrap 3 中可用的一些主要类
 
 ### .container
-
-- 为元素设置固定宽度（根据屏幕尺寸会更改为其他固定值，因此仍然具有响应性）在除 xs 之外的所有屏幕尺寸上 - 在 xs 上，宽度会自动计算（此行为可以更改）
-- 固定宽度的响应式网站应包装在 .container 中（或仅内容而不带菜单，随便你——由你决定）
-- .container 不能嵌套！
+- 为元素设置固定宽度（根据屏幕尺寸会更改为其他固定值，因此仍然具有响应性）在除 `xs` 之外的所有屏幕尺寸上 - 在 `xs` 上，宽度会自动计算（此行为可以更改）
+- 固定宽度的响应式网站应包装在 `.container` 中（或仅内容而不带菜单，随便你——由你决定）
+- `.container` 不能嵌套！
 
 ### .container-fluid
-
-- 设置 100% 宽度，margin-left 和 margin-right: auto，padding-left 和 padding-right: 15px
-- 全屏网站应包装在 .container - fluid 中
-- .container-fluid 不能嵌套！
+- 设置 100% 宽度，`margin-left` 和 `margin-right: auto`，`padding-left` 和 `padding-right: 15px`
+- 全屏网站应包装在 `.container - fluid` 中
+- `.container-fluid` 不能嵌套！
 
 ### .row
-
 - 创建列的水平组（通常具有宽度类，见下文）
-- 必须在 .container 内以确保正确的填充和对齐
+- 必须在 `.container` 内以确保正确的填充和对齐
 - 只有列（具有宽度类的块元素）可以是行的直接子元素
-- 设置 margin-left 和 margin-right: -15px
+- 设置 `margin-left` 和 `margin-right: -15px`
 
 ### .pull-right
 
 ### .pull-left
-
-- 将 float 设置为 left 或 right
+- 将 `float` 设置为 `left` 或 `right`
 
 ### .center-block
-
-- 将 margin-left 和 margin-right 设置为 auto
+- 将 `margin-left` 和 `margin-right` 设置为 `auto`
 
 ## Bootstrap 网格类
-
-- 可以嵌套，嵌套的列也必须包装在 .row 中
-- 所有列都有 float: left 和 position: relative 样式
+- 可以嵌套，嵌套的列也必须包装在 `.row` 中
+- 所有列都有 `float: left` 和 `position: relative` 样式
 
 ### .col-xs-1 .col-xs-2 .col-xs-3 .col-xs-4 .col-xs-5 .col-xs-6 .col-xs-7 .col-xs-8 .col-xs-9 .col-xs-10 .col-xs-11 .col-xs-12
-
 - 在超小屏幕（<768px）上设置列的宽度（以 % 指定）
 
 ### .col-sm-1 .col-sm-2 .col-sm-3 .col-sm-4 .col-sm-5 .col-sm-6 .col-sm-7 .col-sm-8 .col-sm-9 .col-sm-10 .col-sm-11 .col-sm-12
-
 - 在小屏幕（≥768px）上设置列的宽度（以 % 指定）
 
 ### .col-md-1.col-md-2.col-md-3.col-md-4.col-md-5.col-md-6.col-md-7.col-md-8.col-md-9.col-md-10.col-md-11.col-md-12
-
 - 在中等尺寸屏幕（≥992px）上设置列的宽度（以 % 指定）
 
 ### .col-lg-1.col-lg-2.col-lg-3.col-lg-4.col-lg-5.col-lg-6.col-lg-7.col-lg-8.col-lg-9.col-lg-10.col-lg-11.col-lg-12
-
 - 在大屏幕（≥1200px）上设置列的宽度（以 % 指定）
-- 通过指定列数设置偏移（margin-left）（例如，在小屏幕上将列移动三列，将 .col-sm-offset-3 类设置为列）
+- 通过指定列数设置偏移（`margin-left`）（例如，在小屏幕上将列移动三列，将 `.col-sm-offset-3` 类设置为列）
 
 ### .col-xs-pull-* (.col-xs-pull-1, .col-xs-pull-2 ... up to -12)
 .col-sm-pull-* (.col-sm-pull-1, .col-sm-pull-2 ... up to -12)
 .col-md-pull-* (.col-md-pull-1, .col-md-pull-2 ... up to -12)
 .col-lg-pull-* (.col-lg-pull-1, .col-lg-pull-2 ... up to -12)
-
-- 以与列相同的方式按 % 设置 left 位置（例如，使用 -pull-9 时 left: 75%）
+- 以与列相同的方式按 % 设置 `left` 位置（例如，使用 `-pull-9` 时 `left: 75%`）
 
 ## Bootstrap 可见性类
-
 - 你可以在单个元素上应用任意多个这些类，这种混合为你的布局提供了更多可能性
 
 ### .clearfix
-
-- 显而易见，clear: both
+- 显而易见，`clear: both`
 - 通常与下面的类组合使用
 
 ### .visible-xs-block and .visible-xs .visible-sm-block and .visible-sm .visible-md-block and .visible-md .visible-lg-block and .visible-lg
--   仅在指定尺寸的屏幕上显示元素（设置 display: block 属性），并在其他尺寸的屏幕上自动隐藏它（设置 display: none）
--   通常与 .clearfix 结合使用，使 clearfix 仅在选定的屏幕尺寸上生效
+- 仅在指定尺寸的屏幕上显示元素（设置 `display: block` 属性），并在其他尺寸的屏幕上自动隐藏它（设置 `display: none`）
+- 通常与 `.clearfix` 结合使用，使 `clearfix` 仅在选定的屏幕尺寸上生效
 
 ### .hidden-print
--   在打印（预览）时隐藏元素（设置 display: none）
+- 在打印（预览）时隐藏元素（设置 `display: none`）
 
 ## Bootstrap Typography Classes
--   <body> a <p> 元素的默认字体大小为 14px，行高为 1.428；<p> 还有 margin-bottom 为其行高的一半（14px 字体时为 20px），因此默认为 10px
--   b、big、code、em、i、mark、small、strong、sub、sup、ins、del、s、u、abbr、address 和 blockquote（以及内部的 small 和 cite）等元素都被正确样式化
--   这些类的绝大多数最常设置在段落、strong 或 em 元素上
+- `<body>` a `<p>` 元素的默认字体大小为 14px，行高为 1.428；`<p>` 还有 `margin-bottom` 为其行高的一半（14px 字体时为 20px），因此默认为 10px
+- `b`、`big`、`code`、`em`、`i`、`mark`、`small`、`strong`、`sub`、`sup`、`ins`、`del`、`s`、`u`、`abbr`、`address` 和 `blockquote`（以及内部的 `small` 和 `cite`）等元素都被正确样式化
+- 这些类的绝大多数最常设置在段落、`strong` 或 `em` 元素上
 
 ### .page-header
--   用于标题的包装 div 的类
--   添加一些 margin、padding 和 border-bottom
+- 用于标题的包装 `div` 的类
+- 添加一些 `margin`、`padding` 和 `border-bottom`
 
 ### .lead
--   用于突出显示元素
--   将元素的 font-size 设置为 21px，font-weight 为 300，line-height 为 1.4，margin-bottom 为 20px
+- 用于突出显示元素
+- 将元素的 `font-size` 设置为 21px，`font-weight` 为 300，`line-height` 为 1.4，`margin-bottom` 为 20px
 
 ### .text-left .text-center .text-right .text-justify
--   使用 text-align CSS 属性对齐文本，通常是段落
+- 使用 `text-align CSS` 属性对齐文本，通常是段落
 
 ### .text-nowrap
--   保持带有此类的整个文本在一行上，不换行，因为该类的 white-space: nowrap CSS 属性
+- 保持带有此类的整个文本在一行上，不换行，因为该类的 `white-space: nowrap CSS` 属性
 
 ### .text-lowercase .text-uppercase .text-capitalize
--   设置 text-transform CSS 属性，使带有此类的元素内的所有字符变为小写、大写或首字母大写
+- 设置 `text-transform CSS` 属性，使带有此类的元素内的所有字符变为小写、大写或首字母大写
 
 ### .text-muted
--   使文本变灰
+- 使文本变灰
 
 ### .text-primary
--   使文本变蓝
+- 使文本变蓝
 
 ### .text-success
--   使文本变绿
+- 使文本变绿
 
 ### .text-info
--   使文本变深蓝
+- 使文本变深蓝
 
 ### .text-warning
--   使文本变深黄
+- 使文本变深黄
 
 ### .text-danger
--   使文本变红
+- 使文本变红
 
 ## Bootstrap Lists' Classes
+
 ### .list-unstyled
--   在列表项上移除 list-style 和 margin-left
--   对嵌套列表不适用（如果需要，嵌套列表也必须具有 .list-unstyled 类）
+- 在列表项上移除 `list-style` 和 `margin-left`
+- 对嵌套列表不适用（如果需要，嵌套列表也必须具有 `.list-unstyled` 类）
 
 ### .list-inline
--   将列表项放置在一行上（使用 display: inline-block 和 padding）
+- 将列表项放置在一行上（使用 `display: inline-block` 和 `padding`）
 
 ### .dl-horizontal
--   用于定义列表（<dl>）的类
--   为定义列表内的 <dt> 和 <dd> 设置漂亮的样式（文本对齐、字体粗细）
+- 用于定义列表（`<dl>`）的类
+- 为定义列表内的 `<dt>` 和 `<dd>` 设置漂亮的样式（文本对齐、字体粗细）
 
 ### .list-group
--   列表项的父元素的类（通常是 <ul>，也可以是 <div>）
--   列表项必须具有 .list-group-item 类
+- 列表项的父元素的类（通常是 `<ul>`，也可以是 `<div>`）
+- 列表项必须具有 `.list-group-item` 类
 
 ### .list-group-item
--   用于 .list-group 子元素的类
--   使列表项看起来更美观
--   通常用于 <li>，也可以是 <a>
+- 用于 `.list-group` 子元素的类
+- 使列表项看起来更美观
+- 通常用于 `<li>`，也可以是 `<a>`
 
 ### .table-condensed
--   应与 .table 类结合使用
--   用于普通表格，单元格内边距减半，因此行不高
+- 应与 `.table` 类结合使用
 
-### .table-responsive
--   用于表格包装器（！大多是 div）的类，使其在超小设备上响应式，滚动条会出现
--   用于 <tr> 或仅 <td> 的类
--   将表格行中所有 <td>（或仅一个 <td>）的背景色设置为灰色（active）/绿色（success）/蓝色（info）/黄色（warning）/红色（danger）
+
+
+用于普通表格，单元格内边距减半，因此行不高
+
+### `.table-responsive`
+用于表格包装器（！大多是 `div`）的类，使其在超小设备上响应式，滚动条会出现
+
+用于 `<tr>` 或仅 `<td>` 的类
+
+将表格行中所有 `<td>`（或仅一个 `<td>`）的背景色设置为灰色（`active`）/绿色（`success`）/蓝色（`info`）/黄色（`warning`）/红色（`danger`）
 
 ## Bootstrap Forms' Classes
--   不要忘记即使是表单元素也可以在 Bootstrap 网格中，所以不要害怕在表单内使用 .row，然后使用 col-*-* 包装器
+不要忘记即使是表单元素也可以在 Bootstrap 网格中，所以不要害怕在表单内使用 `.row`，然后使用 `col-*-*` 包装器
 
-### .form-group
--   在创建垂直表单时，它是每个标签及其输入的包装器（大多是 div）的类，添加一些 margin-bottom
+### `.form-group`
+在创建垂直表单时，它是每个标签及其输入的包装器（大多是 `div`）的类，添加一些 `margin-bottom`
 
-### .form-control
--   用于每个表单元素（input、textarea...），使其宽度为 100%
--   要使其更窄，请使用更窄的包装器（row 和 col-*-* div）
+### `.form-control`
+用于每个表单元素（`input`、`textarea`...），使其宽度为 100%
 
-### .form-control-static
--   用于替换表单元素（input...）的段落
+要使其更窄，请使用更窄的包装器（`row` 和 `col-*-*` `div`）
 
-### .form-horizontal
--   用于标签与输入在同一行的水平表单
--   你必须为每个标签及其输入（或任何内容）使用列类（如 col-xs-10）
--   仍与 .form-group 包装器和 .form-control 类结合使用
+### `.form-control-static`
+用于替换表单元素（`input`...）的段落
 
-### .form-inline
--   用于单行表单（但在超小屏幕上仍为垂直）
--   通常与 placeholder 属性一起使用，以不需要标签
--   内联表单的标签应获得 .sr-only 类，以便定位使其不可见（但不会获得 display: none 或 visibility: hidden 属性）
+### `.form-horizontal`
+用于标签与输入在同一行的水平表单
 
-### .input-lg
-### .input-sm
--   使表单元素如 input 或 select 比默认更大或更小
+你必须为每个标签及其输入（或任何内容）使用列类（如 `col-xs-10`）
 
-### .input-group-lg
-### .input-group-sm
--   用于 .input-group（见下文）的类
--   始终与 .input-group 类一起使用
+仍与 `.form-group` 包装器和 `.form-control` 类结合使用
 
-### .caret
--   用于创建下拉箭头的空 span 的类
+### `.form-inline`
+用于单行表单（但在超小屏幕上仍为垂直）
 
-### .help-block
--   用于作为用户帮助文本的 span 的类
--   必须放在表单输入的正后方
+通常与 `placeholder` 属性一起使用，以不需要标签
 
-### .has-success
-### .has-warning
-### .has-error
--   用于带有 .form-group 类的包装 div 的类
--   将内部的标签、输入和 .help-block span 颜色变为绿色/黄色/红色
--   包装器内带有这些类之一的标签必须具有 .control-label 类才能被着色
+内联表单的标签应获得 `.sr-only` 类，以便定位使其不可见（但不会获得 `display: none` 或 `visibility: hidden` 属性）
 
-### .has-feedback
--   当在包装器内为输入使用 glyphicon 时，用于带有 .form-group 类的包装 div 的类
+### `.input-lg`
 
-要禁用输入，请使用 disabled="disabled" 或 readonly="readonly"。
+### `.input-sm`
+使表单元素如 `input` 或 `select` 比默认更大或更小
+
+### `.input-group-lg`
+
+### `.input-group-sm`
+用于 `.input-group`（见下文）的类
+
+始终与 `.input-group` 类一起使用
+
+### `.caret`
+用于创建下拉箭头的空 `span` 的类
+
+### `.help-block`
+用于作为用户帮助文本的 `span` 的类
+
+必须放在表单输入的正后方
+
+### `.has-success`
+
+### `.has-warning`
+
+### `.has-error`
+用于带有 `.form-group` 类的包装 `div` 的类
+
+将内部的标签、输入和 `.help-block` `span` 颜色变为绿色/黄色/红色
+
+包装器内带有这些类之一的标签必须具有 `.control-label` 类才能被着色
+
+### `.has-feedback`
+当在包装器内为输入使用 `glyphicon` 时，用于带有 `.form-group` 类的包装 `div` 的类
+
+要禁用输入，请使用 `disabled="disabled"` 或 `readonly="readonly"`。
 
 ## Bootstrap Image Classes
--   图像应具有 .img-responsive 或 .thumbnail 以实现响应式，并被包装在列包装器中（如 col-xs-3...）
+图像应具有 `.img-responsive` 或 `.thumbnail` 以实现响应式，并被包装在列包装器中（如 `col-xs-3`...）
 
-### .img-rounded
--   提供轻微 border-radius 的 img 类
+### `.img-rounded`
+提供轻微 `border-radius` 的 `img` 类
 
-### .img-circle
--   提供 50% border-radius 使图像呈圆形形状的 img 类
+### `.img-circle`
+提供 50% `border-radius` 使图像呈圆形形状的 `img` 类
 
-### .img-thumbnail
--   提供 1px 实心灰色边框、4px 内边距、白色背景、display: inline-block 属性和快速 CSS3 过渡的 img 类
+### `.img-thumbnail`
+提供 1px 实心灰色边框、4px 内边距、白色背景、`display: inline-block` 属性和快速 CSS3 过渡的 `img` 类
 
-### .thumbnail
--   用于图像的包装 div（或在图库情况下为 <a>）的类，添加一些样式（边框、内边距、背景、过渡）并设置图像 max-width: 100%、height: auto；display: block；以及 margin-left 和 margin-right 为 auto
+### `.thumbnail`
+用于图像的包装 `div`（或在图库情况下为 `<a>`）的类，添加一些样式（边框、内边距、背景、过渡）并设置图像 `max-width: 100%`、`height: auto`；`display: block`；以及 `margin-left` 和 `margin-right` 为 `auto`
 
-### .img-responsive
--   使任何图像响应式（相对于父元素缩放）的 img 类，因为它具有 max-width: 100% 和 height: auto
--   如果放置在浮动元素中可能不起作用！
+### `.img-responsive`
+使任何图像响应式（相对于父元素缩放）的 `img` 类，因为它具有 `max-width: 100%` 和 `height: auto`
 
-### .caption
--   用于 .thumbnail 元素（a 或 div）内部的 div 的类，可能包含 h3、p、a（也包括按钮）以获得适当的 margin/padding
+如果放置在浮动元素中可能不起作用！
+
+### `.caption`
+用于 `.thumbnail` 元素（`a` 或 `div`）内部的 `div` 的类，可能包含 `h3`、`p`、`a`（也包括按钮）以获得适当的 `margin`/`padding`
 
 ## Bootstrap Navbar Classes
--   nav 和 navbar 类之间的区别在于 navbar 可以折叠整个 nav（nav 不能自行完成）
+`nav` 和 `navbar` 类之间的区别在于 `navbar` 可以折叠整个 `nav`（`nav` 不能自行完成）
 
-### navbar
--   用于导航包装器（通常是 `<nav>`）的基本类，设置边框、下边距、最小高度和 position: relative
--   如果不打算固定，可以放置在 `.container` 或 `.container-fluid` 中的任何位置
+### `navbar`
+用于导航包装器（通常是 `<nav>`）的基本类，设置边框、下边距、最小高度和 `position: relative`
 
-### navbar-default
--   为导航包装器（背景渐变和 box-shadow）及其项目（包括 `<li>` 上的 `.active` 类）设置其他基本样式
--   对于深色，请参见下文的 `.navbar-inverse`
+如果不打算固定，可以放置在 `.container` 或 `.container-fluid` 中的任何位置
 
-### navbar-inverse
--   navbar-default 的变体，但使用深色
--   不要在同一个元素上同时使用 navbar-default 和 navbar-inverse，因为这没有任何意义
+### `navbar-default`
+为导航包装器（背景渐变和 `box-shadow`）及其项目（包括 `<li>` 上的 `.active` 类）设置其他基本样式
 
-### .navbar-brand
--   为菜单中的特殊超链接和其他“简单文本”设置样式（float: left、更大的字体大小、一些内边距、text-shadow...）
+对于深色，请参见下文的 `.navbar-inverse`
 
-### .navbar-fixed-top
-### .navbar-fixed-bottom
--   添加到 .navbar 的附加类，使导航在滚动时固定在页面顶部（或底部）
--   与 .navbar 以及 .navbar default 一起使用（只是为了保持美观）
--   你应该为 <body> 添加一些顶部或底部内边距，以防止导航覆盖你的内容
+### `navbar-inverse`
+`navbar-default` 的变体，但使用深色
 
-### .navbar-static-top
--   移除导航的顶部、右侧和左侧边框以及 border-radius
+不要在同一个元素上同时使用 `navbar-default` 和 `navbar-inverse`，因为这没有任何意义
 
-### .breadcrumb
--   用于作为面包屑的 <ul> 的类
--   使面包屑看起来很酷
+### `.navbar-brand`
+为菜单中的特殊超链接和其他“简单文本”设置样式（`float: left`、更大的字体大小、一些内边距、`text-shadow`...）
 
-### .pagination
--   用于作为分页的 <ul> 的类
--   正确样式化此分页内的 <li>，也包括 .disabled 和 .active 类（请记住 .disabled 不会移除链接的功能）
+### `.navbar-fixed-top`
 
-### .pagination-lg
-### .pagination-sm
--   与 .pagination 一起用于 <ul>，使分页比默认更大或更小
+### `.navbar-fixed-bottom`
+添加到 `.navbar` 的附加类，使导航在滚动时固定在页面顶部（或底部）
 
-### .pager
--   用于 <ul>，使“Previous”和“Next”链接看起来更好，带有灰色边框
--   其列表项可以具有 .previous、.next 以及 disabled 类以获得更好的样式
+与 `.navbar` 以及 `.navbar default` 一起使用（只是为了保持美观）
 
-### .next
+你应该为 `<body>` 添加一些顶部或底部内边距，以防止导航覆盖你的内容
 
+### `.navbar-static-top`
+移除导航的顶部、右侧和左侧边框以及 `border-radius`
 
+### `.breadcrumb`
+用于作为面包屑的 `<ul>` 的类
 
-## .previous
+使面包屑看起来很酷
 
-- 用于 `<ul class="pager">` 中的 `<li>`，为链接添加箭头。
+### `.pagination`
+用于作为分页的 `<ul>` 的类
+
+正确样式化此分页内的 `<li>`，也包括 `.disabled` 和 `.active` 类（请记住 `.disabled` 不会移除链接的功能）
+
+### `.pagination-lg`
+
+### `.pagination-sm`
+与 `.pagination` 一起用于 `<ul>`，使分页比默认更大或更小
+
+### `.pager`
+用于 `<ul>`，使“Previous”和“Next”链接看起来更好，带有灰色边框
+
+其列表项可以具有 `.previous`、`.next` 以及 `disabled` 类以获得更好的样式
+
+### `.next`
+
+## `.previous`
+用于 `<ul class="pager">` 中的 `<li>`，为链接添加箭头。
 
 ## Bootstrap 4：Bootstrap 4 的新变化
-
 **Bootstrap 4 中的新类：** Bootstrap 从 Bootstrap 3 迁移到 Bootstrap 4 时做了一些显著的更改。以下是一些主要更改：
 
 ### 表单
+重写了自定义和默认的复选框和单选按钮。
 
-- 重写了自定义和默认的复选框和单选按钮。
-- 弃用了 `.input-group-addon` 和 `.input-group-btn`，改用两个新类 `.input-group-prepend` 和 `.input-group-append`。
+弃用了 `.input-group-addon` 和 `.input-group-btn`，改用两个新类 `.input-group-prepend` 和 `.input-group-append`。
 
 ### 网格系统
-
-- `xs` 网格类已修改为无需断点，因此不再是 `.col-xs-6`，现在是 `.col-6`。
+`xs` 网格类已修改为无需断点，因此不再是 `.col-xs-6`，现在是 `.col-6`。
 
 ### 图片
+将 `.img-responsive` 重命名为 `.img-fluid`。
 
-- 将 `.img-responsive` 重命名为 `.img-fluid`。
-- 将 `.img-rounded` 重命名为 `.rounded`。
-- 将 `.img-circle` 重命名为 `.rounded-circle`。
+将 `.img-rounded` 重命名为 `.rounded`。
+
+将 `.img-circle` 重命名为 `.rounded-circle`。
 
 ### 表格
+响应式表格现在只需将 `.table-responsive` 直接放在 `<table>` 上。
 
-- 响应式表格现在只需将 `.table-responsive` 直接放在 `<table>` 上。
-- 新增了 `.table-inverse` 选项。
-- 将上下文类重命名为带有 `.table-` 前缀。因此 `.active`、`.success`、`.warning`、`.danger` 和 `.info` 变为 `.table-active`、`.table-success`、`.table-warning`、`.table-danger` 和 `.table-info`。
+新增了 `.table-inverse` 选项。
+
+将上下文类重命名为带有 `.table-` 前缀。因此 `.active`、`.success`、`.warning`、`.danger` 和 `.info` 变为 `.table-active`、`.table-success`、`.table-warning`、`.table-danger` 和 `.table-info`。
 
 ### 表单
+将 `.control-label` 重命名为 `.col-form-label`。
 
-- 将 `.control-label` 重命名为 `.col-form-label`。
-- 分别将 `.input-lg` 和 `.input-sm` 重命名为 `.form-control-lg` 和 `.form-control-sm`。
-- 弃用了 `.radio-inline` 和 `.checkbox-inline`。
-- 用 HTML5 表单验证替换了 `.has-error`、`.has-warning` 和 `.has-success` 类，通过 CSS 的 `:invalid` 和 `:valid` 伪类实现。
+分别将 `.input-lg` 和 `.input-sm` 重命名为 `.form-control-lg` 和 `.form-control-sm`。
+
+弃用了 `.radio-inline` 和 `.checkbox-inline`。
+
+用 HTML5 表单验证替换了 `.has-error`、`.has-warning` 和 `.has-success` 类，通过 CSS 的 `:invalid` 和 `:valid` 伪类实现。
 
 ### 按钮
+将 `.btn-default` 重命名为 `.btn-secondary`。
 
-- 将 `.btn-default` 重命名为 `.btn-secondary`。
-- 将按钮的 `[disabled]` 改为 `:disabled`。
-- 移除了按钮工具栏中按钮组之间的显式间距。
+将按钮的 `[disabled]` 改为 `:disabled`。
+
+移除了按钮工具栏中按钮组之间的显式间距。
 
 ### 面板
+`.panel` 变为 `.card`，现在使用 flexbox 构建。
 
-- `.panel` 变为 `.card`，现在使用 flexbox 构建。
-- `.panel-default` 已移除且无替代。
-- `.panel-group` 已移除且无替代。
-- `.panel-heading` 变为 `.card-header`。
-- `.panel-title` 变为 `.card-title`。
-- `.panel-body` 变为 `.card-body`。
-- `.panel-footer` 变为 `.card-footer`。
-- `.panel-primary`、`.panel-success`、`.panel-info`、`.panel-warning` 和 `.panel-danger` 已被弃用，改用从我们的 `$theme-colors` Sass 映射生成的 `.bg-`、`.text-` 和 `.border` 工具类。
+`.panel-default` 已移除且无替代。
+
+`.panel-group` 已移除且无替代。
+
+`.panel-heading` 变为 `.card-header`。
+
+`.panel-title` 变为 `.card-title`。
+
+`.panel-body` 变为 `.card-body`。
+
+`.panel-footer` 变为 `.card-footer`。
+
+`.panel-primary`、`.panel-success`、`.panel-info`、`.panel-warning` 和 `.panel-danger` 已被弃用，改用从我们的 `$theme-colors` Sass 映射生成的 `.bg-`、`.text-` 和 `.border` 工具类。
 
 ## 示例 – 使用 Container、Jumbotron、Well、按钮、文本类
 
@@ -4229,7 +4275,6 @@ Bootstrap 是一个免费的开源 CSS 框架，面向响应式、移动优先�
 ```
 
 ## 示例：理解网格系统 – 行与列
-
 Bootstrap 的网格系统允许页面跨度最多 12 列，因此一行最多可创建 12 列。
 
 示例 – 让我们在一行中创建 3 个相等列，每列各占 4 个网格。
@@ -4273,10 +4318,11 @@ Bootstrap 的网格系统允许页面跨度最多 12 列，因此一行最多可
 ![](img/9ab4a56a650535285811bb802190e58f_218_0.png)
 
 ## Bootstrap 中的面板
-
 面板是一个带边框且样式美观的框，其内容和标题、正文、页脚等部分周围有一些内边距。
 
 **代码示例：**
+
+
 
 ```html
 <!DOCTYPE html>
@@ -4383,8 +4429,6 @@ A panel is a bordered and stylish box having some padding around its content and
 <td>Development</td>
 </tr>
 ```
-
-
 
 ```html
 <tr>
@@ -4535,9 +4579,9 @@ A panel is a bordered and stylish box having some padding around its content and
 
 我想对出版团队表示感谢，他们在整个出版过程中一直鼓励我。感谢所有审阅我书籍的人。感谢我的读者抽出一天中的时间来阅读它。
 
-获取我即将推出的教程和书籍的最新更新和详情，您可以在 www.websjyoti.com 订阅我。
+获取我即将推出的教程和书籍的最新更新和详情，您可以在 `www.websjyoti.com` 订阅我。
 
-如果您想邀请我到您的校园或办公室进行全天培训，请写信至 info@websjyoti.com
+如果您想邀请我到您的校园或办公室进行全天培训，请写信至 `info@websjyoti.com`
 
 *****
 
@@ -4557,5 +4601,6 @@ Hirdesh Bhardwaj 在高中一年级时对写作产生了兴趣。他写了一首
 
 ![](img/9ab4a56a650535285811bb802190e58f_233_0.png)
 
-**您可以通过以下方式联系作者：**  
+**您可以通过以下方式联系作者：**
+
 *info@websjyoti.com*

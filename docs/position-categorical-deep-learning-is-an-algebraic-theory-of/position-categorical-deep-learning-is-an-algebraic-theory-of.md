@@ -1,7 +1,29 @@
+
 # 位置：分类深度学习是所有架构的代数理论
 
+Bruno Granovovic *12 Paul Lessard *1 Andrew Dudzik *3
 
+Tamara von Glehn *3 João Araújo *3 Petar Veličković *34
 
+## 摘要
+
+我们对寻求一个用于规范和研究深度学习架构的通用框架这一探索性任务提出了我们的观点。我们的直觉是，关键在于目前在很大程度上在必须满足约束的规范与其实现之间建立了一座连贯的桥梁。专注于这种桥梁，我们建议应用范畴论——具体来说，就是值在程序 2 范畴中的态的通用代数——作为一种在很大程度上涵盖了这些神经网络设计风格的理论。我们证明了我们的理论可以恢复几何深度学习的约束，以及来自神经网络多样化领域（如 `RNN`）的许多架构的实现。此外，我们还阐述了我们的理论如何使计算机科学和自动机中的许多标准构造可行。
+
+## 1 引言
+
+最令人期待的想法之一是提供一个引导性框架，通过该框架可以从原则上且广泛地推导出神经网络架构。近期人们进行了许多尝试，提供了框架来分类或描述大规模的深度学习架构（Cohen et al., 2019; Xu et al., 2019; Bronstein et al., 2021; Chami et al., 2022; Pavillion et al., 2023; Joshi et al., 2023; Weller et al., 2023）。
+
+我们观察到，深度学习架构描述模型通常有两种方式。首先是以自上而下的方式指定的，即通过模型满足的约束来描述模型（例如，为了尊重数据处理的结构）。另一种是自下而上的方法，通过实现描述模型，即通过执行前向/反向传播所需的一组张量操作。通常，为了在计算机科学的约束达成一致，我们必须超越几何学习（`GL`）。
+
+### 1.1 我们的观点
+
+我们认为，自上而下和自下而上的方法已经分别得到了大量的关注，但还没有足够的表达能力来同时处理它们。如果我们需要深度学习的引导性框架，这种情况需要改变。为了支持我们的观点，我们在分歧的两侧都做了努力。
+
+权衡框架最成功的案例之一是几何深度学习（Bronstein et al., 2021），`GDL`，它使用群论和表示论的视角，通过对称性保持约束来描述神经网络。此类层的实际实现是通过求解约束得出的。
+
+`GDL` 被证明是强大的：例如，允许将卷积层构造为网格中平移不变性的精确解（Fukushima et al., 1983; LeCun et al., 1998），并通过消息传递和自注意力机制在图上进行学习（Mayer et al., 2017; Vasikopoulos et al., 2017）。它还扩展到奇异领域，如球体（Coben et al., 2018; de Haan et al., 2020）和几何约束（Fuchs et al., 2020）。虽然这涵盖了许多感兴趣的架构，但 `GDL` 也有不可避免的限制。
+
+首先，`GDL` 实现架构的可用性与求解方程约束的易程度直接相关。虽然 `PyG`（Fe & Lensen, 2019）、`DGL`（Wang, 2019）和 `Jraph`（Godwin et al., 2020）在平移不变性模型方面取得了成功，且 `JNN`（Ceiper et al., 2021）在 E 等变模型方面取得了成功，但在未知领域很难复制这种成功。由于其关注群，`GDL` 仅能够表示与对称的等价性，但无法操作我们使用神经网络在可逆（Worrall & Welling, 2019）或完全组合（de Hahn et al., 2020a）中对齐的操作。
 
 
 
@@ -18,35 +40,7 @@ Tamara von Glehn *3 João Araújo *3 Petar Veličković *34
 
 我们观察到，深度学习架构描述模型通常有两种方式。首先是以自上而下的方式指定的，即通过模型满足的约束来描述模型（例如，为了尊重数据处理的结构）。另一种是自下而上的方法，通过实现描述模型，即通过执行前向/反向传播所需的一组张量操作。通常，为了在计算机科学的约束达成一致，我们必须超越几何学习（GL）。
 
-## 1.1 我们的观点
-
-我们认为，自上而下和自下而上的方法已经分别得到了大量的关注，但还没有足够的表达能力来同时处理它们。如果我们需要深度学习的引导性框架，这种情况需要改变。为了支持我们的观点，我们在分歧的两侧都做了努力。
-
-权衡框架最成功的案例之一是几何深度学习（Bronstein et al., 2021），GDL，它使用群论和表示论的视角，通过对称性保持约束来描述神经网络。此类层的实际实现是通过求解约束得出的。
-
-GDL 被证明是强大的：例如，允许将卷积层构造为网格中平移不变性的精确解（Fukushima et al., 1983; LeCun et al., 1998），并通过消息传递和自注意力机制在图上进行学习（Mayer et al., 2017; Vasikopoulos et al., 2017）。它还扩展到奇异领域，如球体（Coben et al., 2018; de Haan et al., 2020）和几何约束（Fuchs et al., 2020）。虽然这涵盖了许多感兴趣的架构，但DL 也有不可避免的限制。
-
-首先，GDL 实现架构的可用性与求解方程约束的易程度直接相关。虽然 PyG（Fe & Lensen, 2019）、DGL（Wang, 2019）和 Jraph（Godwin et al., 2020）在平移不变性模型方面取得了成功，且 JNN（Ceiper et al., 2021）在 E 等变模型方面取得了成功，但在未知领域很难复制这种成功。由于其关注群，GDL 仅能够表示与对称的等价性，但无法操作我们使用神经网络在可逆（Worrall & Welling, 2019）或完全组合（de Hahn et al., 2020a）中对齐的操作。由于其关注群，GDL 仅能够表示与对称的等价性，但无法操作我们使用神经网络在可逆（Worrall & Welling, 2019）或完全组合（de Hahn et al., 2020a）中对齐的操作。由于其关注群，GDL 仅能够表示与对称的等价性，但无法操作我们使用神经网络在可逆（Worrall & Welling, 2019）或完全组合（de Hahn et al., 2020a）中对齐的操作。由于其关注群，GDL 仅能够表示与对称的等价性，但无法操作我们使用神经网络在可逆（Worrall & Welling, 2019）或完全组合（de Hahn et al., 2020a）中对齐的操作。由于其关注群，GDL 仅能够表示与对称的等价性，但无法操作我们使用神经网络在可逆（Worrall & Welling, 2019）或完全组合（de Hahn et al., 2020a）中对齐的操作。由于其关注群，GDL 仅能够表示与对称的等价性，但无法操作我们使用神经网络在可逆（Worrall & Welling, 2019）或完全组合（de Hahn et al., 2020a）中对齐的操作。由于其关注群，GDL 仅能够表示与对称的等价性，但无法操作我们使用神经网络在可逆（Worrall & Welling, 2019）或完全组合（de Hahn et al., 2020a）中对齐的操作。由于其关注群，GDL 仅能够表示与对称的等价性，但无法操作我们使用神经网络在可逆（Worrall & Welling, 2019）或完全组合（de Hahn et al., 2020a）中对齐的操作。由于其关注群，GDL 仅能够表示与对称的等价性，但无法操作我们使用神经网络在可逆（Worrall & Welling， 2019）或完全组合（de Hahn et al., 2020a）中对齐的操作。
-
-（注：原文此处存在大量重复句子，翻译已根据逻辑一致性进行处理或按原文结构保留）
-
-重新整理翻译如下：
-
-
-Bruno Granovovic *12 Paul Lessard *1 Andrew Dudzik *3
-Tamara von Glehn *3 João Araújo *3 Petar Veličković *34
-
-## 摘要
-
-我们对寻求一个用于规范和研究深度学习架构的通用框架这一探索性任务提出了我们的观点。我们的直觉是，关键在于目前在很大程度上在必须满足约束的规范与其实现之间建立了一座连贯的桥梁。专注于这种桥梁，我们建议应用范畴论——具体来说，就是值在程序 2 范畴中的态的通用代数——作为一种在很大程度上涵盖了这些神经网络设计风格的理论。我们证明了我们的理论可以恢复几何深度学习的约束，以及来自神经网络多样化领域（如 RNN）的许多架构的实现。此外，我们还阐述了我们的理论如何使计算机科学和自动机中的许多标准构造可行。
-
-## 1 引言
-
-最令人期待的想法之一是提供一个引导性框架，通过该框架可以从原则上且广泛地推导出神经网络架构。近期人们进行了许多尝试，提供了框架来分类或描述大规模的深度学习架构（Cohen et al., 2019; Xu et al., 2019; Bronstein et al., 2021; Chami et al., 2022; Pavillion et al., 2023; Joshi et al., 2023; Weller et al., 2023）。
-
-我们观察到，深度学习架构描述模型通常有两种方式。首先是以自上而下的方式指定的，即通过模型满足的约束来描述模型（例如，为了尊重数据处理的结构）。另一种是自下而上的方法，通过实现描述模型，即通过执行前向/反向传播所需的一组张量操作。通常，为了在计算机科学的约束达成一致，我们必须超越几何学习（GL）。
-
-## 1.1 我们的观点
+### 1.1 我们的观点
 
 我们认为，自上而下和自下而上的方法已经分别得到了大量的关注，但还没有足够的表达能力来同时处理它们。如果我们需要深度学习的引导性框架，这种情况需要改变。为了支持我们的观点，我们在分歧的两侧都做了努力。
 
@@ -56,86 +50,11 @@ GDL 被证明是强大的：例如，允许将卷积层构造为网格中平移�
 
 首先，GDL 实现架构的可用性与求解方程约束的易程度直接相关。虽然 PyG（Fe & Lensen, 2019）、DGL（Wang, 2019）和 Jraph（Godwin et al., 2020）在平移不变性模型方面取得了成功，且 JNN（Ceiper et al., 2021）在 E 等变模型方面取得了成功，但在未知领域很难复制这种成功。由于其关注群，GDL 仅能够表示与对称的等价性，但无法操作我们使用神经网络在可逆（Worrall & Welling, 2019）或完全组合（de Hahn et al., 2020a）中对齐的操作。
 
-（注：原文此处存在大量重复句子，翻译已根据逻辑一致性进行处理或按原文结构保留）
-
-重新整理翻译如下：
-
-
-Bruno Granovovic *12 Paul Lessard *1 Andrew Dudzik *3
-Tamara von Glehn *3 João Araújo *3 Petar Veličković *34
-
-## 摘要 
-
-我们对寻求一个用于规范和研究深度学习架构的通用框架这一探索性任务提出了我们的观点。我们的直觉是，关键在于目前在很大程度上在必须满足约束的规范与其实现之间建立了一座连贯的桥梁。专注于这种桥梁，我们建议应用范畴论——具体来说，就是值在程序 2 范畴中的态的通用代数——作为一种在很大程度上涵盖了这些神经网络设计风格的理论。我们证明了我们的理论可以恢复几何深度学习的约束，以及来自神经网络多样化领域（如 RNN）的许多架构的实现。此外，我们还阐述了我们的理论如何使计算机科学和自动机中的许多标准构造可行。
-
-## 1 引言
-
-最令人期待的想法之一是提供一个引导性框架，通过该框架可以从原则上且广泛地推导出神经网络架构。近期人们进行了许多尝试，提供了框架来分类或描述大规模的深度学习架构（Cohen et al., 2019; Xu et al., 2019; Bronstein et al., 2021; Chami et al., 2022; Pavillion et al., 2023; Joshi et al., 2023; Weller et al., 2023）。
-
-我们观察到，深度学习架构描述模型通常有两种方式。首先是以自上而下的方式指定的，即通过模型满足的约束来描述模型（例如，为了尊重数据处理的结构）。另一种是自下而上的方法，通过实现描述模型，即通过执行前向/反向传播所需的一组张量操作。通常，为了在计算机科学的约束达成一致，我们必须超越几何学习（GL）。
-
-## 1.1 我们的观点
-
-我们认为，自上而下和自下而上的方法已经分别得到了大量的关注，但还没有足够的表达能力来同时处理它们。如果我们需要深度学习的引导性框架，这种情况需要改变。为了支持我们的观点，我们在分歧的两侧都做了努力。
-
-权衡框架最成功的案例之一是几何深度学习（Bronstein et al., 2021），GDL，它使用群论和表示论的视角，通过对称性保持约束来描述神经网络。此类层的实际实现是通过求解约束得出的。
-
-GDL 被证明是强大的：例如，允许将卷积层构造为网格中平移不变性的精确解（Fukushima et al., 1983; LeCun et al., 1998），并通过消息传递和自注意力机制在图上进行学习（Mayer et al., 2017; Vasikopoulos et al., 2017）。它还扩展到奇异领域，如球体（Coben et al., 2018; de Haan et al., 2020）和几何约束（Fuchs et al., 2020）。虽然这涵盖了许多感兴趣的架构，但GDL 也有不可避免的限制。
-
-首先，GDL 实现架构的可用性与求解方程约束的易程度直接相关。虽然 PyG（Fe & Lensen, 2019）、DGL（Wang, 2019）和 Jraph（Godwin et al., 2020）在平移不变性模型方面取得了成功，且 JNN（Ceiper et al., 2021）在 E 等变模型方面取得了成功，但在未知领域很难复制这种成功。由于其关注群，GDL 仅能够表示与对称的等价性，但无法操作我们使用神经网络在可逆（Worrall & Welling, 2019）或完全组合（de Hahn et al., 2020a）中对齐的操作。
-
-（注：原文此处存在大量重复句子，翻译已根据逻辑一致性进行处理或按原文结构保留）
-
-重新整理翻译如下：
-
-
-Bruno Granovovic *12 Paul Lessard *1 Andrew Dudzik *3
-Tamara von Glehn *3 João Araújo *3 Petar Veličković *34
-
-## 摘要 
-
-我们对寻求一个用于规范和研究深度学习架构的通用框架这一探索性任务提出了我们的观点。我们的直觉是，关键在于目前在很大程度上在必须满足约束的规范与其实现之间建立了一座连贯的桥梁。专注于这种桥梁，我们建议应用范畴论——具体来说，就是值在程序 2 范畴中的态的通用代数——作为一种在很大程度上涵盖了这些神经网络设计风格的理论。我们证明了我们的理论可以恢复几何深度学习的约束，以及来自神经网络多样化领域（如 RNN）的许多架构的实现。此外，我们还阐述了我们的理论如何使计算机科学和自动机中的许多标准构造可行。
-
-[/content]
-```
-
-由于你提供的原始文本中包含了大量的重复段落（从 1.1 节之后开始），根据“**注意一定不要重复输出原文**”的原则，我在翻译时去除了这些重复内容以确保输出逻辑清晰。以下是完整的中文译文：
-
-[content]
-
-
-Bruno Granovovic *12 Paul Lessard *1 Andrew Dudzik *3
-Tamara von Glehn *3 João Araújo *3 Petar Veličković *34
-
-## 摘要
-
-我们对寻求一个用于规范和研究深度学习架构的通用框架这一探索性任务提出了我们的观点。我们的直觉是，关键在于目前在很大程度上在必须满足约束的规范与其实现之间建立了一座连贯的桥梁。专注于这种桥梁，我们建议应用范畴论——具体来说，就是值在程序 2 范畴中的态的通用代数——作为一种在很大程度上涵盖了这些神经网络设计风格的理论。我们证明了我们的理论可以恢复几何深度学习的约束，以及来自神经网络多样化领域（如 RNN）的许多架构的实现。此外，我们还阐述了我们的理论如何使计算机科学和自动机中的许多标准构造可行。
-
-## 1 引言
-
-最令人期待的想法之一是提供一个引导性框架，通过该框架可以从原则上且广泛地推导出神经网络架构。近期人们进行了许多尝试，提供了框架来分类或描述大规模的深度学习架构（Cohen et al., 2019; Xu et al., 2019; Bronstein et al., 2021; Chami et al., 2022; Pavillion et al., 2023; Joshi et al., 2023; Weller et al., 2023）。
-
-我们观察到，深度学习架构描述模型通常有两种方式。首先是以自上而下的方式指定的，即通过模型满足的约束来描述模型（例如，为了尊重数据处理的结构）。另一种是自下而上的方法，通过实现描述模型，即通过执行前向/反向传播所需的一组张量操作。通常，为了在计算机科学的约束达成一致，我们必须超越几何学习（GL）。
-
-## 1.1 我们的观点
-
-我们认为，自上而下和自下而上的方法已经分别得到了大量的关注，但还没有足够的表达能力来同时处理它们。如果我们需要深度学习的引导性框架，这种情况需要改变。为了支持我们的观点，我们在分歧的两侧都做了努力。
-
-权衡框架最成功的案例之一是几何深度学习（Bronstein et al., 2021），GDL，它使用群论和表示论的视角，通过对称性保持约束来描述神经网络。此类层的实际实现是通过求解约束得出的。
-
-GDL 被证明是强大的：例如，允许将卷积层构造为网格中平移不变性的精确解（Fukushima et al., 1983; LeCun et al., 1998），并通过消息传递和自注意力机制在图上进行学习（Mayer et al., 2017; Vasikopoulos et al., 2017）。它还扩展到奇异领域，如球体（Coben et al., 2018; de Haan et al., 2020）和几何约束（Fuchs et al., 2020）。虽然这涵盖了许多感兴趣的架构，但GDL 也有不可避免的限制。
-
-首先，GDL 实现架构的可用性与求解方程约束的易程度直接相关。虽然 PyG（Fe & Lensen, 2019）、DGL（Wang, 2019）和 Jraph（Godwin et al., 2020）在平移不变性模型方面取得了成功，且 JNN（Ceiper et al., 2021）在 E 等变模型方面取得了成功，但在未知领域很难复制这种成功。由于其关注群，GDL 仅能够表示与对称的等价性，但无法操作我们使用神经网络在可逆（Worrall & Welling, 2019）或完全组合（de Hahn et al., 2020a）中对齐的操作。
-
-## 1.2 我们的立场
+### 1.2 我们的立场
 
 我们认为，构建一个适用于所有深度学习的框架，需要稳健地连接自上而下和自下而上的方法，这种连接的自然候选者是范畴论。
 
 值得注意的是，我们并不是第一个通过计算机科学视角处理神经网络的方法（Benglyn et al., 2015），但通过范畴论探索神经网络的语法语义（Sonoda et al., 2023a; 2024）并应用于机器学习（Gavranovic, 2020）。
-
-
-
-
 
 ## 范深度学习
 
@@ -209,18 +128,13 @@ $\mathbb{R}^{z \times z_h}$
 
 **示例 2.5 (等变映射)。** 令 $G$ 为一个群，$X, Y$ 为 $G$-集合。函数 $f: X \to Y$ 是 $G$-等变的，当且对于每个 $g \in G$ 和 $x \in X$，都有 $f(g \cdot x) = g \cdot f(x)$。
 
-
-
-
-
-
 ```haskell
 data Tree a = Leaf a | Node (Tree a) (Tree a)
 ```
 
 在有限多项式图的范畴上，编码了交换半环代数结构这一事实。我们在附录 D 中给出了这种联系的更多细节。
 
-## 2.2 内自算子与（共）代数
+### 2.2 内自算子与（共）代数
 
 几何深度学习虽然优雅，但受到群论公理的限制。Monad 及其代数可以通过群作用进行自然的推广。在这里，我们展示了通过研究二元内自算子的（共）代数，我们可以重新发现如树和列表等标准的计算机科学构造。这种重新发现并非偶然的观察；事实上，列表的内自算子视图被证明自然转化为神经网络架构的实现，如循环神经网络和卷积神经网络；见附录 I。
 
@@ -263,39 +177,6 @@ data List a = Nil | Cons a (List a)
 
 （注：此处原文似乎存在逻辑重复或表述断裂，根据翻译要求已按原文逻辑进行翻译）
 
-```haskell
-data Mealy i = MkMeely
- :: i → (O, Mealy i) | O
-```
-
-这以递归的方式描述了 Mealy，即给定一个输入，产生一个输出另一个 Mealy 机器。在图 1 中，我们将此完整用于循环神经网络，而在 A.4 和 H.7 中，共代数表达了两类不同的自动机：流式和 Moore 机器。
-
-**示例 2.9（列表）。** 设 A 为一个集合，内自算子 $F = A \times (-) \to Set \to Set$。类型为 A 的元素列表的集合 $List(A)$ 一同 Nil 和 Cons 构成了该内自算子的终点；这里 Nil 和 Cons 是由列表构造的，正如我们使用以下数据类型表示列表一样：
-
-```haskell
-data List a = Nil | Cons a (List a)
-```
-
-它递归地描述了 List(A)，其由空列表或另一个类型 A 的元素和另一个列表形成。在图 1 中，我们将看到它是如何折叠到 RNN 上的。
-
-**示例 2.10（二叉树）。** 设 A 为一个集合。内自算子 $+ = (1 + \times \times) \to Set$。带有 A 标签叶子的二叉树集合 $Tree(A)$，通过映射 $Leaf: A \to Tree(A)$ 和 $Node$，构成了该算子的一个代数。这里 Leaf 和 Node 使用以下数据类型构造了二叉树：
-
-我们已经在 GDL（几何深度学习）的情况下表达了数据和结构的（共）代数，为了描述神经网络的（线性）层，我们需要建立（共）代数同态的概念。内自算子代数同态的定义见定义 2.5，而结构同态的定义则指向另一个目标。
-
-**示例 2.12（作为代数同态的列表之列表）。** 考虑示例 2.9 中的内自算子 $(1 + \times \times)$，以及一个从 List(A) 到的代数同态。等价地，有限多项式算子的范畴。该框架也可以模拟任何变体，例如，带有 A 标签叶子的 n 元树对应 $A + (-)$，或者带有 A 标签节点的二叉树对应 $A + (-)$。因为它没有具有以下结构：
-
-映射 $f_r : List(A) \to X$ 是必要的，正如在一个列表之上。那么映射 $f_r$ 也是必要的，正如在列表之上。
-
-（注：此处原文似乎存在逻辑重复或表述断裂，根据翻译要求已按原文逻辑进行翻译）
-
-```haskell
-data Mealy i = MkMeely
- :: i → (O, Mealy i) | O
-```
-
-
-
-
 
 
 方程 (5)告诉我们，$f_n$ 在状态 $x$ 和输入 $i$ 下产生的 Mealy 机的输出由 $n$ 在状态 $x$ 和输入 $i$ 下的输出给出，而方程 (6)告诉我们，在 $x$ 和 $i$ 产生的下一个 Mealy 机是由 $f_n$ 在 $n(x)$ 产生的。
@@ -303,7 +184,6 @@ data Mealy i = MkMeely
 已有的加权技术。我们能为这些技术的正确性建立正式的标准吗？正如我们将 GDL 推广到范畴论设置一样，我们可以进一步进入 2-范畴设置——这是我们用于参数化态射的设置。
 
 这同样*推广了等价约束*，描述的是一个不再可逆的交互自动机。它在动态性质上是这样的，产生依赖于 Mealy 的当前状态和许多之前输入的输出。在示例 H.5 和 H.8 中，我们展示了两种余代数——流及更多是同构的。与之前一样，我们可以将所有对象和态射嵌入到 Vect 中，以研究由此类条件引发的权重约束——参见示例 H.5。
-
 
 虽然范畴论是一个强大的框架，但在态射之间的高阶关系方面它有许多不足之处。它处理的是态射集，而没有办法比较这些集合中的元素，这就是 2-范畴理论用用场，那里存在范畴的范畴。在具有对象以及对象（0-态射）之间态射的 1-范畴中，2-范畴拥有对象、态射（1-态射）以及态射之间的态射（2-态射）。事实上，我们已经在 Cat 中看到了这一点，它包含了范畴论的许多基本概念。具体来说，在 Cat 中，对象是它们之间的函数，态射是函数之间的自然变换。
 
@@ -330,7 +210,6 @@ data Mealy i = MkMeely
 2-态射捕捉捕捉了参数化函数之间的表示。重要的是，这允许显式的权重共用，其中一个参数化态射 $(P \times P, f)$ 通过与拷贝映射 $\Delta_P: P \Rightarrow P \times P$ 复合来将其权重系结。
 
 我们如何显式地建模参数和非线性映射，而不放弃所展示的范畴框架？此外，在实践中——例如带有递归 (Socher et al., 2013) 的神经网络——存在
-
 
 | 折叠的循环网络 | 展开的循环网络 | 递归神经网络 | 全循环网络 | 'Moore' 神经网络 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -379,7 +258,6 @@ data Mealy i = MkMeely
 
 首先，这里提出的任何深度学习结果依赖于选择正确的范畴；同样，深度学习依赖于对称性的选择。我们看到许多算法——推广约束——可以是参数化的，结果我们可以学习更多：学习正确的神经网络。
 
-
 本文工作属于机器学习。我们的工作有许多潜在的社会后果，我们认为必须在这里强调。
 
 # 致谢
@@ -407,12 +285,6 @@ Dudzik et al., 2024—Appendix H.1.
 Choraria et al. (2021) for example.
 
 Nüker & Vasek, 2023.
-
-
-
-
-
-
 
 Cho, K. and Jacobs, B. 基于字符串动力学的解体与贝叶斯推理。27(9):938–991, 2019. ISSN 0990-1295, 1469-8072. doi: 10.1017/S096091250000828. URL http://arxiv.org/abs/1709.03322.
 
@@ -455,7 +327,6 @@ Dudzik, A. J., von Ghn, T., Pascanu, R., and Veličić, P. 带有循环的异步
 Chami, I., El-Hajja, S., Perozzi, B., Ré, C., and Murphy, K. 图上的机器学习：一种模型与分类分类。机器学习研究期刊（Journal of Machine Learning Research），23(1):3840–3903, 2022.
 
 Elliott, C. 自动微分的简单本质。ACM编程语言会议集，2(ICFP):70–70:29, 2018. doi: 10.1145/323665 https://dl.acm.org/10.1145/323665
-
 
 Fey, M. and Lensen, J. 使用 pytorch 的快速表示。arXiv预印本 arXiv:1903.02428, 2019.
 
@@ -513,9 +384,6 @@ Sturtz, K. 范畴概率论。2015. URL http://arxiv.org/abs/1460.6030.
 
 Niu, N. and Spivak, D. 用于深层神经网络推导岭变换的统一傅里叶切片方法。*arXiv预印本 arXiv:2402.15984*,2024.
 
-
-
-
 ## A. 范畴论基础
 
 范畴“相同性”的自然概念是等价：
@@ -538,13 +406,12 @@ Niu, N. and Spivak, D. 用于深层神经网络推导岭变换的统一傅里叶
 
 **定义 A.5 (上极限)。** 图 $D : J \to C$ 的上极限 $\text{lim } D$ 是由 $D$ 的锥构成的范畴 $\text{Cone}(D)$ 中的初始对象，其中一个锥 $(C, c_j : D(j) \to C)$ 具有锥（上方）的对偶且态射方向相反。**小**（分别对应 $\kappa$-定向的、连通的……）上极限是指索引范畴 $\mathcal{J}$ 是小的（分别对应 $\kappa$-定向的、连通的……）的上极限。
 
-**示例 A.6.**** 范畴 $C$ 中的终态对象是从该范畴到 $C$ 的唯一图。类似，初始对象是上极限的一个例子。
-
+**示例 A.6.** 范畴 $C$ 中的终态对象是从该范畴到 $C$ 的唯一图。类似，初始对象是上极限的一个例子。
 
 **定义 B.1 (单子相干图)。** 三元组 $(M, \eta, \mu)$ 包含：
 
 - 一个自函子 $M : C \to C$；
-- 一个自然变换 $\eta : \text{id}_C \Rightarrow M；
+- 一个自然变换 $\eta : \text{id}_C \Rightarrow M$；
 - 一个变换 $\mu : M \circ M \Rightarrow M$
 
 如果以下图均交换，则构成一个单子：
@@ -552,7 +419,6 @@ Niu, N. and Spivak, D. 用于深层神经网络推导岭变换的统一傅里叶
 ![](img/92dd63b8e10fefd3f3f227bf65a30b83_12_2.png)
 
 **定义 B.2 (自函子的共代数)。** 令 $\mathcal{C}$ 为一个范畴，$F$ 为 $\mathcal{C}$ 上的一个自函子。$F$ 的代数是一个对 $(A, a)$，其中 $A$ 是 $\mathcal{C}$ 的对象，$a : A \to F(A)$ 是 $C$ 的一个态射。
-
 
 ### B.1. 良点自算子与代数自由的单子
 
@@ -591,11 +457,6 @@ $F$ 上的代数自由单子是一个单子 $\text{Free}(F)$ 连同一个范畴�
 
 *备注 B.13.* 可积性是 $D$ 的一种性质。图 $D$ 的极限记作 $\text{lim } D$，是由 $D$ 的锥以及它们之间的态射构成的范畴 $\text{Cone}(D)$ 中的终态对象。
 
-
-
-
-
-
 ## C.1. 图上的置换等变学习
 
 导致了图神经网络（Veličković, 2023）。
@@ -608,7 +469,6 @@ $F$ 上的代数自由单子是一个单子 $\text{Free}(F)$ 连同一个范畴�
 - 代数的载体对象为（标量）节点特征 $R^n$，以及可能的邻接矩阵 $R^{n \times n}$，
 - 第一个代数的结构映射 $P_{X,A} : \Sigma_n \times R^n \times R^{n \times n} \rightarrow R^{n \times n}$ 执行置换：$P_{X,A}(\sigma, X, A) = (P(\sigma)X, P(\sigma)AP(\sigma)^T)$，其中 $P(\sigma)$ 是由 $\sigma$ 指定排列矩阵。
 - 第二个代数的结构映射 $P_X$ 同样执行置换，但仅针对节点特征。归约并不是严格必要的，但在设计图神经网络时这是标准做法——因为它们通常被假设不会修改其底层的计算图。我们在这里故意省略了这一归约，以说明我们的框架如何处理跨越不同代数的神经网络转换。
-
 
 导致了球面卷积的第一层（Cohen et al., 2018）。
 
@@ -626,37 +486,45 @@ $F$ 上的代数自由单子是一个单子 $\text{Free}(F)$ 连同一个范畴�
 
 导致了 G-CNN（Cohen & Wiley, 2016）以及球面 CNN 的后续层（Cohen et al., 2018）。
 
-```
+
+
 $G \times (G \rightarrow \mathbb{R}) \xrightarrow{G \times f} G \times (G \rightarrow \mathbb{R})$$$
+
 $$
+
 Ag \quad \quad \quad \quad Ag$$
+
 $$
+
 nG \rightarrow \mathbb{R} \xrightarrow{f} G \rightarrow \mathbb{R}$
+
 ```
 
 在这种情况下：
 
-- 群 G 也是载体对象的载体（G $\rightarrow R$）。
-- 两个代数的映射都通过复合遵循 G 的正则表示 $A_G : G \times (G \rightarrow R) \rightarrow (G \rightarrow R)$，形式如下 $A_G(g,\psi)(h) = \psi(g^{-1}h)$。
-
+- 群 `G` 也是载体对象的载体（`G` $\rightarrow R$）。
+- 两个代数的映射都通过复合遵循 `G` 的正则表示 `A_G : G \times (G \rightarrow R) \rightarrow (G \rightarrow R)`，形式如下 `A_G(g,\psi)(h) = \psi(g^{-1}h)`。
 
 de Haan 等人 (202a) 利用函数自然变换的抽象扩展了神经网络中等变层的理论。在本节中，我们将解释如何从这些这些术语的角度来理解单子（monads）的态射以及代数的语义。
 
-定义 1.1. 如果 C 是一个范畴，则 C 上的预形（presheaf）是一个函子 $C^{op} \rightarrow Set$。对象为预形、态射为自然变换的范畴记为 P(C)。
+### 定义 1.1
+如果 `C` 是一个范畴，则 `C` 上的预形（presheaf）是一个函子 `C^{op} \rightarrow Set`。对象为预形、态射为自然变换的范畴记为 `P(C)`。
 
-固定 Set 上的单ad T，$C_T$ 表示其代数和同态的范畴。
+固定 `Set` 上的单ad `T`，`C_T` 表示其代数和同态的范畴。
 
-给定一个代数 $A \in C_T$，将 A 解释为函子的方法是通过 Yoneda 嵌入 $C_T \rightarrow P(C_T)$，它将 A 识别为预形 $[-, A]$。Yoneda 函子是忠实的，这是一个标准结论，这意味着我们可以根据极限和余极限的定义，将代数态射识别为预形。
+给定一个代数 `A \in C_T`，将 `A` 解释为函子的方法是通过 Yoneda 嵌入 `C_T \rightarrow P(C_T)`，它将 `A` 识别为预形 `[-, A]`。Yoneda 函子是忠实的，这是一个标准结论，这意味着我们可以根据极限和余极限的定义，将代数态射识别为预形。
 
-此外，这些预形具有一个特殊的性质。如果 $\lim j$ 是 C 中的一个小上极限，那么 $[\lim j, A] = [\lim j, A]$（本质上是向所有类添加所有，向空读者添加 0）。
+此外，这些预形具有一个特殊的性质。如果 `\lim j` 是 `C` 中的一个小上极限，那么 `[\lim j, A] = [\lim j, A]`（本质上是向所有类添加所有，向空读者添加 0）。
 
-定义 D.2. 如果 C 是一个范畴且 J 是 C 中一个小上极限的类，则 C 上的 J-连续预形是一个预形 $F \in P(C)$，使得对于所有 $j \in J$，都有 $F(\lim j) = \lim F(j)$。PSh(C) 对应的全子范畴记为 PSh(C)，或者当 J 是所有小上极限的类时简称为 PSh(C)。我们将使用 $[ ]$ 指代所有余积的类，用 0 指代空。
+### 定义 D.2
+如果 `C` 是一个范畴且 `J` 是 `C` 中一个小上极限的类，则 `C` 上的 `J`-连续预形是一个预形 `F \in P(C)`，使得对于所有 `j \in J`，都有 `F(\lim j) = \lim F(j)`。`PSh(C)` 对应的全子范畴记为 `PSh(C)`，或者当 `J` 是所有小上极限的类时简称为 `PSh(C)`。我们将使用 `[ ]` 指代所有余积的类，用 `0` 指代空。
 
-事实证明 C 具有一个很好的性质：它是强紧致的（strongly compact），这意味着每个连续预形都可以像上述那样通过 C 中的一个对象表示出来。换句话说，我们有等识别 $C = PSh(C)$。
+事实证明 `C` 具有一个很好的性质：它是强紧致的（strongly compact），这意味着每个连续预形都可以像上述那样通过 `C` 中的一个对象表示出来。换句话说，我们有等识别 `C = PSh(C)`。
 
-然而，处理整个范畴 C 是不实际的。在可能，我们希望用更易处理的词汇进行推理。这将为单子提供语法。
+然而，处理整个范畴 `C` 是不实际的。在可能，我们希望用更易处理的词汇进行推理。这将为单子提供语法。
 
-定义 D.3. Kleisli 范畴 $K_T$ 是 C 的一个全子范畴。有限 Kleisli 范畴 $K_T^F$ 是 $K_T$。一元 Kleisli 范畴 $K_T^U$ 是 $K_T$。
+### 定义 D.3
+Kleisli 范畴 `K_T` 是 `C` 的一个全子范畴。有限 Kleisli 范畴 `K_T^F` 是 `K_T`。一元 Kleisli 范畴 `K_T^U` 是 `K_T`。
 
 ```
 $C_T \supset K_T \supset K_T^F \supset K_T^U$
@@ -666,47 +534,42 @@ $C_T \supset K_T \supset K_T^F \supset K_T^U$
 
 （注：第 16-17 页的文本在原始源中似乎碎片或损坏；上述内容是根据第 15 页提供的定义的逻辑流重构的。）
 
+- 对于所有的 `f, g, h \in \mathcal{M}`，`*f \otimes (g \otimes h) = (f \otimes g) \otimes h`；
+- 对于所有的 `f \in \mathcal{M}`，`id \otimes f = f \otimes id`。
 
+**E.2** (Agories，参见 Capucci & Gavranović, 2023)，设 `(\mathcal{M}, \otimes, I, \alpha, \lambda, \rho)` 为一个单子畴。一个 `\mathcal{M}`-范畴 `C` 是一个范畴 `C`，连带有一个函子 `\blacktriangleright: \mathcal{M} \times C \to C` 以及自然同构 `\eta_X : I \blacktriangleright X \cong X` 和 `\mu_{M,N} : (M \otimes N) \blacktriangleright X \to M \blacktriangleright (N \blacktriangleright X)`，使得：
 
-
-
-
-- 对于所有的 $f, g, h \in \mathcal{M}$，$*f \otimes (g \otimes h) = (f \otimes g) \otimes h$；
-- 对于所有的 $f \in \mathcal{M}$，$id \otimes f = f \otimes id$。
-
-**E.2** (Agories，参见 Capucci & Gavranović, 2023)，设 $(\mathcal{M}, \otimes, I, \alpha, \lambda, \rho)$ 为一个单子畴。一个 $\mathcal{M}$-范畴 $C$ 是一个范畴 $C$，连带有一个函子 $\blacktriangleright: \mathcal{M} \times C \to C$ 以及自然同构 $\eta_X : I \blacktriangleright X \cong X$ 和 $\mu_{M,N} : (M \otimes N) \blacktriangleright X \to M \blacktriangleright (N \blacktriangleright X)$，使得：
-
-对于所有的 $M, N, P \in \mathcal{M}$ 和范畴 $C$，以下图表交换：
+对于所有的 `M, N, P \in \mathcal{M}` 和范畴 `C`，以下图表交换：
 
 ![](img/92dd63b8e10fefd3f3f227bf65a30b83_18_0.png)
 
-**左单位右单位**。对于所有的 $C$ 和 $M \in \mathcal{M}$，以下图表交换。
+**左单位右单位**。对于所有的 `C` 和 `M \in \mathcal{M}`，以下图表交换。
 
 ![](img/92dd63b8e10fefd3f3f227bf65a30b83_18_1.png)
 
-*备注* E.3. 由于我们可以假设单子畴是严格的，根据 MacLane 的一致性定理，我们也可以假设范畴是严格的（Capucci & Gavranović, 2023, 备注 3.4）。这意味着，对于任何 $\mathcal{M}$-范畴：
+*备注* E.3. 由于我们可以假设单子畴是严格的，根据 MacLane 的一致性定理，我们也可以假设范畴是严格的（Capucci & Gavranović, 2023, 备注 3.4）。这意味着，对于任何 `\mathcal{M}`-范畴：
 
-- * 单位 $\eta_X$ 是一个等式，即 $I \blacktriangleright X = id_C$ 作为类型为 $C \to C$ 的函子；且
+- * 单位 `\eta_X` 是一个等式，即 `I \blacktriangleright X = id_C` 作为类型为 `C \to C` 的函子；且
 
 我们将此类范畴称为**严格**（strict）范畴。我们将使用这些来简化叙述和某些定理。
 
 **示例 4**（单子作用）。任何单子畴都会产生一个自作用。
 
-**示例 5**（族范畴）。任何带有拷贝的范畴 $C$ 都有一个作用 $\blacktriangleright: Set \times C \to C$，映射 $(X$
+**示例 5**（族范畴）。任何带有拷贝的范畴 `C` 都有一个作用 `\blacktriangleright: Set \times C \to C`，映射 `(X`
 
 ## E.1. 范畴的态射
 
-**定义 6**（强丙单子）。设 $(\mathcal{C}, \blacktriangleright)$ 为一个 $\mathcal{M}$-范畴。$C$ 上的 $(T, \mu, \eta)$ 是**强**的，如果它配备了一个自然变换 $\sigma_{P,A} : P(A) \to T(P(A))$，这是一种强度，使得定义 E.9 中的图表交换。
+**定义 6**（强丙单子）。设 `(\mathcal{C}, \blacktriangleright)` 为一个 `\mathcal{M}`-范畴。`C` 上的 `(T, \mu, \eta)` 是**强**的，如果它配备了一个自然变换 `\sigma_{P,A} : P(A) \to T(P(A))`，这是一种强度，使得定义 E.9 中的图表交换。
 
-**示例 7**。对于任何单群 $A$，所有类型的 $A \blacktriangleright : Set \to Set$ 类型对于范畴 (Set, $\times$) 来说都是强的。这包含了来自示例 2.2 的 $G \blacktriangleright : Set \to Set,$^{11}$
+**示例 7**。对于任何单群 `A`，所有类型的 `A \blacktriangleright : Set \to Set` 类型对于范畴 `(Set, \times)` 来说都是强的。这包含了来自示例 2.2 的 `G \blacktriangleright : Set \to Set,`^{11}
 
-**定义 8**（强内算函子）。设 $(\mathcal{C}, \blacktriangleright)$ 为一个 $\mathcal{M}$-范畴。$C$ 上的内算函子 $F$ 是**强**的，如果它配备了一个自然变换 $\sigma_{P,A} : F(A) \to F(P(A))$，这是一种强度，使得定义 E.9 中的 AS1 和 AS2 图表交换。
+**定义 8**（强内算函子）。设 `(\mathcal{C}, \blacktriangleright)` 为一个 `\mathcal{M}`-范畴。`C` 上的内算函子 `F` 是**强**的，如果它配备了一个自然变换 `\sigma_{P,A} : F(A) \to F(P(A))`，这是一种强度，使得定义 E.9 中的 AS1 和 AS2 图表交换。
 
-$^{10}$此的另一个名称是 $\mathcal{M}$-线性态射，在 (Capucci & Gavranović, 2023)
+^{10}此的另一个名称是 `\mathcal{M}`-线性态射，在 (Capucci & Gavranović, 2023)
 
-$^{11}$该强度实际上是一个自然同构。
+^{11}该强度实际上是一个自然同构。
 
-**定义 E.9**（算子范强单子一致性图）。$\mathcal{M}$-范畴 $(\mathcal{C}, \blacktriangleright)$ 范畴 $C$ 上的单子 $(T, \mu, \eta)$ 被称为**强**的，如果它配备了一个自然变换 $\sigma_{P,A} : P \otimes A \to T(P \otimes A$，使得以下图表交换：
+**定义 E.9**（算子范强单子一致性图）。`\mathcal{M}`-范畴 `(\mathcal{C}, \blacktriangleright)` 范畴 `C` 上的单子 `(T, \mu, \eta)` 被称为**强**的，如果它配备了一个自然变换 `\sigma_{P,A} : P \otimes A \to T(P \otimes A`，使得以下图表交换：
 
 **AS1**: 强度与单子单位的兼容性。
 
@@ -720,23 +583,23 @@ $^{11}$该强度实际上是一个自然同构。
 
 **示例 E.10**。从示例 2.9 到 2.11 的内函子 H4 和 H7 是强内函子，它们相应的单子也是强的。参见附录。
 
-**示例 E.11**。我们展示了一些相关内函子（左侧）和它们的自由单子（右侧）的强度列表 $\sigma_{P,X}$。对于内函子 $1 + A : Set$，其强度 $\sigma_{P,X} : P \times (1 + A) \to 1 + A \times X$ 给出：
-$\sigma_{P,X}(p,inl) = inl(p)$
-$\sigma_{P,X}(p,inl) = inl(p,x)$
+**示例 E.11**。我们展示了一些相关内函子（左侧）和它们的自由单子（右侧）的强度列表 `\sigma_{P,X}`。对于内函子 `1 + A : Set`，其强度 `\sigma_{P,X} : P \times (1 + A) \to 1 + A \times X` 给出：
+`\sigma_{P,X}(p,inl) = inl(p)`
+`\sigma_{P,X}(p,inl) = inl(p,x)`
 
-对于内函子 $A + (-)^2$，其强度 $\sigma_{P,X} : P \times (A + (-)^2) \to A + (P \times X)^2$ 给出：
-$\sigma_{P,X}(p,inl) = inl(p)$
-$\sigma_{P,X}(p,pair(x,x')) = pair((p,x), (p,x'))$
+对于内函子 `A + (-)^2`，其强度 `\sigma_{P,X} : P \times (A + (-)^2) \to A + (P \times X)^2` 给出：
+`\sigma_{P,X}(p,inl) = inl(p)`
+`\sigma_{P,X}(p,pair(x,x')) = pair((p,x), (p,x'))`
 
-对于自由单子 $List_{+1}(A) : Set \to Set$，其强度 $\sigma_{P,Z} : P \times List_{+1}(A) \to List_{P \times Z}(A)$ 给出：
-$\sigma_{P,Z}(p, Nil) = Nil$
-$\sigma_{P,Z}(p, z) = (p,z)$
-$\sigma_{P,Z}(p,cons(a,as)) = cons(a, \sigma_{P,Z}(p,as))$
+对于自由单子 `List_{+1}(A) : Set \to Set`，其强度 `\sigma_{P,Z} : P \times List_{+1}(A) \to List_{P \times Z}(A)` 给出：
+`\sigma_{P,Z}(p, Nil) = Nil`
+`\sigma_{P,Z}(p, z) = (p,z)`
+`\sigma_{P,Z}(p,cons(a,as)) = cons(a, \sigma_{P,Z}(p,as))`
 
-对于自由单子 $Tree(A +-) : Set$，其强度 $\sigma_{P,Z} : P \times Tree(A + Z) \to Tree(A + P \times Z)$ 给出：
-$\sigma_{P,Z}(p,Leaf(a)) = Leaf(p,a)$
-$\sigma_{P,Z}(p,inl(z)) = Leaf(p,z)$
-$\sigma_{P,Z}(p,Node(l,r)) = Node(\sigma_{P,Z}(l), \sigma_{P,Z}(r))$
+对于自由单子 `Tree(A +-) : Set`，其强度 `\sigma_{P,Z} : P \times Tree(A + Z) \to Tree(A + P \times Z)` 给出：
+`\sigma_{P,Z}(p,Leaf(a)) = Leaf(p,a)`
+`\sigma_{P,Z}(p,inl(z)) = Leaf(p,z)`
+`\sigma_{P,Z}(p,Node(l,r)) = Node(\sigma_{P,Z}(l), \sigma_{P,Z}(r))`
 
 # F. 代数
 
@@ -746,21 +609,21 @@ $\sigma_{P,Z}(p,Node(l,r)) = Node(\sigma_{P,Z}(l), \sigma_{P,Z}(r))$
 
 2-单子可以简洁地定义为 Cat-单子（参见 Johnson 等，第 6.5 节）。以下是其定义的展开。
 
-**定义 F.1**（2-单子）。$2-\mathcal{C}$ 上的 2-单子包括：
+**定义 F.1**（2-单子）。`2-\mathcal{C}` 上的 2-单子包括：
 
-- $C$ 上的 2-内算函子 $T$；
-- 2-自然变换 $\mu : T^2 \Rightarrow T$；
-- 2-自然变换 $\eta : \text{id}_C \Rightarrow T$；
+- `C` 上的 2-内算函子 `T`；
+- 2-自然变换 `\mu : T^2 \Rightarrow T`；
+- 2-自然变换 `\eta : \text{id}_C \Rightarrow T`；
 
-使得定义 B.1 中的公理（C-丰富变体）成立。松弛 T 代数 $(A, a, \epsilon_A, \delta_A)$ 其中 $(T, \eta, \mu)$ 是 $C$ 上的 2-单子，$\epsilon_A$ 和 $\delta_A$ 是 $C$ 中的以下 2-态射：
+使得定义 B.1 中的公理（C-丰富变体）成立。松弛 T 代数 `(A, a, \epsilon_A, \delta_A)` 其中 `(T, \eta, \mu)` 是 `C` 上的 2-单子，`\epsilon_A` 和 `\delta_A` 是 `C` 中的以下 2-态射：
 
-$C$ 的一个对象，$a : T(A) \to A$ 是 $C$ 中的一个态射，
+`C` 的一个对象，`a : T(A) \to A` 是 `C` 中的一个态射，
 
 ![](img/92dd63b8e10fefd3f3f227bf65a30b83_20_0.png)
 
 满足单位和松弛结合条件（Johnson 等，2026, 6.5.6 和 6.5.7）。
 
-**定义 F.3**（松弛代数态射）。设 $\mathcal{E}$ 为一个 2-范畴，$T$ 为 $\mathcal{E}$ 上的 2-单子，$(A, a, \epsilon_A, \delta_A)$ 和 $(B, b, \epsilon_B, \delta_B)$ 为松弛 T 代数。那么从 $(A, a, \epsilon_A, \delta_A) \to (B, b, \epsilon_B, \delta_B)$ 的 alex 态射是一个对 $(f, \kappa)$，其中 $f : A \to B$ 是 $\mathcal{E}$ 中的一个态射，$\kappa$ 是一个 2-态射，跨越以下
+**定义 F.3**（松弛代数态射）。设 `\mathcal{E}` 为一个 2-范畴，`T` 为 `\mathcal{E}` 上的 2-单子，`(A, a, \epsilon_A, \delta_A)` 和 `(B, b, \epsilon_B, \delta_B)` 为松弛 T 代数。那么从 `(A, a, \epsilon_A, \delta_A) \to (B, b, \epsilon_B, \delta_B)` 的 alex 态射是一个对 `(f, \kappa)`，其中 `f : A \to B` 是 `\mathcal{E}` 中的一个态射，`\kappa` 是一个 2-态射，跨越以下
 
 ![](img/92dd63b8e10fefd3f3f227bf65a30b83_20_1.png)
 
@@ -768,21 +631,18 @@ $C$ 的一个对象，$a : T(A) \to A$ 是 $C$ 中的一个态射，
 
 弛代数和松弛代数态射构成了单子范畴 Lax-AlgMnd(T)。
 
-**示例 F.4**（对于 M-模块）。如果 $M$ 是一个单子，可以研究“M-模块”，我们将其定义为配备了 $M^{12}$ 兼容作用的单群，对于 2-单子 $\delta_\epsilon(M) \times -$。事实上，这是任何代数的特例。
+**示例 F.4**（对于 M-模块）。如果 `M` 是一个单子，可以研究“M-模块”，我们将其定义为配备了 `M^{12}` 兼容作用的单群，对于 2-单子 `\delta_\epsilon(M) \times -`。事实上，这是任何代数的特例。
 
-**示例 F.5**（作为松弛单群的环）。单子环，或“交叉单群”，用于 (Dudzik et al., 2024) 研究网络中的同步性，可以被描述为 2-单子代数的松弛单群。如果 $A$ 是一个 M-模块，$BA$ 是 $\delta_\epsilon(M) \times -$ 的代数。
+**示例 F.5**（作为松弛单群的环）。单子环，或“交叉单群”，用于 (Dudzik et al., 2024) 研究网络中的同步性，可以被描述为 2-单子代数的松弛单群。如果 `A` 是一个 M-模块，`BA` 是 `\delta_\epsilon(M) \times -` 的代数。
 
 G. 2-范畴 Para(C)
 
-**定义 G.1**（para，Curutt 等，2022；Capucci 等，2022）。给定一个单子畴 $(\mathcal{M}, \otimes)$ 和一个 $\mathcal{M}$-范畴 $\mathcal{C}$，让 Para$(\mathcal{C})$ 为 2-范畴：
+**定义 G.1**（para，Curutt 等，2022；Capucci 等，2022）。给定一个单子畴 `(\mathcal{M}, \otimes)` 和一个 `\mathcal{M}`-范畴 `\mathcal{C}`，让 Para`(\mathcal{C})` 为 2-范畴：
 
 - 范畴的对象；
-- 态射 $X \to Y$ 是对 $(P, f)$，$P$ 是 $M$ 的一个对象，$f : P \blacktriangleright X \to Y$ 是 $C$ 的一个态射。
+- 态射 `X \to Y` 是对 `(P, f)`，`P` 是 `M` 的一个对象，`f : P \blacktriangleright X \to Y` 是 `C` 的一个态射。
 
 > 12与 M-作用 A（其中 A 是一个集合）不同，在 M-模块中 A 也配备了单子结构。
-
-
-
 
 # 范畴深度学习
 
@@ -790,7 +650,7 @@ G. 2-范畴 Para(C)
 
 **图 2.** 参数化态射的弦图表示。我们通常将参数线画在垂直轴上，以表示参数轴是该态射数据的一部分。
 
-- 2-态射 $(P, f) \Rightarrow (P', f') : X \to Y$ 是 $M$ 的 1-态射 $r : P' \to P$，使得三角形
+- 2-态射 `(P, f) \Rightarrow (P', f') : X \to Y` 是 `M` 的 1-态射 `r : P' \to P`，使得三角形
 
 ![](img/92dd63b8e10fefd3f3f227bf65a30b83_21_1.png)
 
@@ -798,40 +658,41 @@ G. 2-范畴 Para(C)
 
 ![](img/92dd63b8e10fefd3f3f227bf65a30b83_21_2.png)
 
-**图 3.** 重参数化的弦图。重参数化映射 $r$ 垂直绘制。
+**图 3.** 重参数化的弦图。重参数化映射 `r` 垂直绘制。
 
-- $X$ 上的恒等态射是参数化映射 $(I, \eta^{-1})$，其中 $\eta$ 是基础范畴的单位。
+- `X` 上的恒等态射是参数化映射 `(I, \eta^{-1})`，其中 `\eta` 是基础范畴的单位。
 
-其中态射 $(P, f) : X \to Y$ 和 $(Q, g) : Y \to Z$ 的复合为 $(Q \otimes P, h)$，其中 $h$ 是复合映射
+其中态射 `(P, f) : X \to Y` 和 `(Q, g) : Y \to Z` 的复合为 `(Q \otimes P, h)`，其中 `h` 是复合映射
 
 ```
-$(Q \otimes P) \xrightarrow{\mu_{Q,P,X}} Q \otimes (P \otimes X) \xrightarrow{f} Q \otimes Y \xrightarrow{g} Z$
+(Q \otimes P) \xrightarrow{\mu_{Q,P,X}} Q \otimes (P \otimes X) \xrightarrow{f} Q \otimes Y \xrightarrow{g} Z
 ```
 
-且 2-态射的复合由 $\mathcal{M}$ 的复合给出。
+且 2-态射的复合由 `\mathcal{M}` 的复合给出。
 
 ![](img/92dd63b8e10fefd3f3f227bf65a30b83_21_3.png)
 
 **图 4.** 参数化态射复合的弦图表示。通过将参数视为独立的轴线，我们获得了它们复合的优雅图形化描述。
 
-**备注 G.2.** 当范畴是严格的时，范畴的恒等元简化为 $(I, \text{id}_X)$ 的参数化态射。
+**备注 G.2.** 当范畴是严格的时，范畴的恒等元简化为 `(I, \text{id}_X)` 的参数化态射。
 
 # 范畴深度学习
 
 **示例 G.3**（实向量空间与平滑映射）。考虑对象为实向量空间、态射为平滑函数的笛卡尔范畴 Smooth。当它是笛卡尔的时，我们可以通过 Para(Smooth) 建模参数化平滑函数。
 
+*备注 G.5.* 当范畴 `(\mathcal{C}, \triangleright)` 是严格平凡的时，参数函数不需要与 actory 的单位进行预复合。这意味着 `\mathcal{C}` 的态射 `f : X \to Y` 严格是参数化态射 `(I, f) : X \to Y`。
 
-*备注 G.5.* 当范畴 $(\mathcal{C}, \triangleright)$ 是严格平凡的时，参数函数不需要与 actory 的单位进行预复合。这意味着 $\mathcal{C}$ 的态射 $f : X \to Y$ 严格是参数化态射 $(I, f) : X \to Y$。
+**定理 G.6**（保持上积）。假设 `(\mathcal{M}, \eta, \mu)` 是单子范畴，`(\mathcal{C}, \triangleright)` 是一个 `\mathcal{M}`-范畴，且 `X \triangleright (\cdot) : \mathcal{C}` 保持连接上积。
 
-**定理 G.6**（保持上积）。假设 $(\mathcal{M}, \eta, \mu)$ 是单子范畴，$(\mathcal{C}, \triangleright)$ 是一个 $\mathcal{M}$-范畴，且 $X \triangleright (\cdot) : \mathcal{C}$ 保持连接上积。
-
-*备注 G.7.* 虽然在 $\mathcal{C}$ 中只有一种上积，但我们在 Para$(\mathcal{C})$ 中指的上积是严格的。与其他类型上积的关系是一个正在研究的课题。
+*备注 G.7.* 虽然在 `\mathcal{C}` 中只有一种上积，但我们在 Para`(\mathcal{C})` 中指的上积是严格的。与其他类型上积的关系是一个正在研究的课题。
 
 *证明。* 注意，为了使关于平凡参数化范畴的上积交换，上积的 1- 胞必须是相同的。那么，我们可以得到以下等同构链：
 
 ```
-$$\text{Tr}_1\((text{Para }(\mathcal{C}))\) \left(\lim_{d\in\mathcal{D}} X_d, Y\right) \nsimeq \lim_{P\in\mathcal{M}} \mathcal{C} \left(\lim_{d\in\mathcal{D}} P \triangleright X_d, Y\right) \nsimeq \lim_{P\in\mathcal{M}} \mathcal{C} \left(\lim_{d\in\mathcal{D}} P \triangleright X_d, Y\right) \nsimeq \lim_{P\in\mathcal{M}} \lim_{d\in\mathcal{C}} (P \triangleright X_d, Y) \nsimeq \text{Ob}(\mathcal{M}) \times \lim_{d\in\mathcal{D}} (\text{Ob}(\mathcal{M}) \times (\mathcal{C} \times (P \triangleright X_d, Y))) \nsimeq \lim_{d\in\mathcal{D}} \left(\prod_{P\in\mathcal{M}} \mathcal{C} (P \triangleright X_d, Y)\right) \nsimeq \lim_{d\in\mathcal{D}} \text{Tr}_1\((text{Para }(\mathcal{C}))\) (X_d, Y)\right)$
-```
+
+
+
+$$\text{Tr}_1\((text{Para }(\mathcal{C}))\) \left(\lim_{d\in\mathcal{D}} X_d, Y\right) \nsimeq \lim_{P\in\mathcal{M}} \mathcal{C} \left(\lim_{d\in\mathcal{D}} P \triangleright X_d, Y\right) \nsimeq \lim_{P\in\mathcal{M}} \mathcal{C} \left(\lim_{d\in\mathcal{D}} P \triangleright X_d, Y\right) \nsimeq \lim_{P\in\mathcal{M}} \lim_{d\in\mathcal{C}} (P \triangleright X_d, Y) \nsimeq \text{Ob}(\mathcal{M}) \times \lim_{d\in\mathcal{D}} (\text{Ob}(\mathcal{M}) \times (\mathcal{C} \times (P \triangleright X_d, Y))) \nsimeq \lim_{d\in\mathcal{D}} \left(\prod_{P\in\mathcal{M}} \mathcal{C} (P \triangleright X_d, Y)\right) \nsimeq \lim_{d\in\mathcal{D}} \text{Tr}_1\((text{Para }(\mathcal{C}))\) (X_d, Y)\right)$$
 
 **示例 G.8.** 固定 $\mathcal{M}$-范畴 $(\mathcal{C}, \triangleright)$ 以及 $\mathcal{C}$ 上的单子 $(T, \mu, \eta)$，其具有算子代强度 $\sigma : \mathcal{M} \triangleright T(X)$。这给了我们一个 $\text{Para}(\triangleright)$ 上的单子，其底层函子：
 
@@ -850,7 +711,6 @@ $P \triangleright T(X) \xrightarrow{\sigma_{P,X}} T(P \triangleright X) \xrighta
 $$\mathbf{I} \triangleright X^{\gamma_X^{-1}} \triangleright T(X)$$
 ```
 $^{13}$这里我们将 $\mathcal{C}$ 视为仅有恒等态射的 2-范畴。$^{14}$因为 $\text{Ob}(\text{Para}(\mathcal{C})) = \text{Ob}(\mathcal{C})$，这是良定义的。
-
 
 对于每个参数化映射 $(P, f) \in \text{Para}(C)$，我们得到严格自然方形 (9)。2-胞由重参数化 $\beta_{P,I}: P \otimes I \to I \otimes P$ 给出，因为我们假设 $\mathcal{M}$ 是单子的。可以检查这确实满足 $\text{Para}_{\mathcal{M}}(C)$ 的 2-态射条件。这使得 $\text{Para}(\eta)$ 成为一个自然变换。
 
@@ -878,7 +738,6 @@ $^{13}$这里我们将 $\mathcal{C}$ 视为仅有恒等态射的 2-范畴。$^{1
 
 我们可以看到它们由两个参数化给出：$\epsilon_P: P \otimes I \to I$ 和 $\delta_P: I \otimes P \to P \otimes P$。这些唯一地确定了态射 $!_P : P \to I$ 和 $\Delta_P : P \to P \otimes P$。为了证明这是一个共元，我们需要解包仅在 $\mathcal{M}$ 射上的 lax 法。这相对繁琐，但很容易检查这些条件确保了 $!_P$ 和 $\Delta_P$ 满足 lax 法。$\square$
 
-
 **推论 G.11.** 函子 $\text{Lax-AlgMnd}(\text{Para}(T)) \to \text{CoMon}(C) \times \text{Lax}(\to, C)$ 将 $\text{Para}(T)$ 的代数映射为底层共元和解释参数化结构映射的 $C$-态射对是全且忠的。
 
 *证明。* 证明是形式上的，留给读者。
@@ -887,12 +746,9 @@ $^{13}$这里我们将 $\mathcal{C}$ 视为仅有恒等态射的 2-范畴。$^{1
 
 ```
 X, (P,f): P \to X
+```
 
 定义了范畴 Lax-AlgMnd(Para(F))
-
-
-
-
 
 # 范畴深度学习
 
@@ -987,8 +843,9 @@ $f_m : x \to Moore \ o \nf_m \ x = MkStream (1 \ x) (\lambda i \to f_m (i))$
 
 ```
 $o(x) = output(f_o
+```
 
-```这里等式 (15) 告诉我们，$f_{o,n}$ 在 $x$ 处的输出是由 $n$ 在 $x$ 给出，而等式 (16) 告诉我们，$i$ 是由 $f_{o,n}$ 产生的。
+这里等式 (15) 告诉我们，$f_{o,n}$ 在 $x$ 处的输出是由 $n$ 在 $x$ 给出，而等式 (16) 告诉我们，$i$ 是由 $f_{o,n}$ 产生的。
 
 # I. 参数 2 内自子及其代数
 
@@ -1010,39 +867,41 @@ $o(x) = output(f_o
 
 $^{17}$ 根据载体的通用性质，我们可以将其视为一种类型的 $P \times S \to O \times S$ 或者两个单元。
 
-
-
-
-
 # 分类深度学习
 
 **示例 L4** (Mealy 单元 / 全连接 RNN)。考虑电感器 $I \rightarrow O$ – 示例 2.11。通过示例 E.10 中的强度，我们可以得到 2 阶自算子 $Para(I \rightarrow O) : Para(Set) \rightarrow Para(Set)$。然后一个 Mealy 单元作为余代（coalgebra）出现。
 
-更具体地说，一个余代包含载集 $S$ 和一个参数映射 $(P, cell^{\text{Mealy}}) \in Para(Set), (S, I \rightarrow S)$。这里，$cell^{\text{Mealy}}$ 可以被看作映射 $P \times S \rightarrow I \rightarrow O \times S$，如图所示。我们将其解释为一个消耗隐藏状态 $S$，并输出 $O$ 以及更新后的输入 $O$ 和更新后的隐藏状态的循环神经网络。
+
+
+更具体地说，一个余代包含载集 `$S$` 和一个参数映射 `$(P, cell^{\text{Mealy}}) \in Para(Set), (S, I \rightarrow S)$`。这里，`$cell^{\text{Mealy}}$` 可以被看作映射 `$P \times S \rightarrow I \rightarrow O \times S$`，如图所示。我们将其解释为一个消耗隐藏状态 `$S$`，并输出 `$O$` 以及更新后的输入 `$O$` 和更新后的隐藏状态的循环神经网络。
 
 ![](img/92dd63b8e10fefd3f3f227bf65a30b83_28_0.png)
 
-图 8. 对象 $S$ 的 $Para((I \rightarrow O))$ 2 阶自算子的示例，以及一个映射 $f: P \times S \rightarrow I$，我们对其进行了统一处理。
+图 8. 对象 `$S$` 的 `$Para((I \rightarrow O))$` 2 阶自算子的示例，以及一个映射 `$f: P \times S \rightarrow I$`，我们对其进行了统一处理。
 
-**示例 L5** (Mealy 机器)。考虑示例 H.7 中的电感器 $O \rightarrow (I \rightarrow -)$。通过 $\sigma_{p,X}: P \times O \times (I \rightarrow O) \rightarrow Para(O \times (I \rightarrow -))$,我们得到 2 阶自算子 $Para(O \times (I \rightarrow -)) : Para(Set) \rightarrow Para(Set)$。然后一个 Mealy 单元作为它的余代出现。
+## 示例 L5 (Mealy 机器)
 
-更具体地说，一个余代包含载集 $S$ 和一个参数映射 $(P, cell^{\text{More}}) \in Para(Set), (S, O \times (I \rightarrow S))$。这里，$cell^{\text{More}}$ 可以被看作映射 $P \times S \rightarrow O \times (I \rightarrow S)$，如图所示。将其分为两个部分 $cell^{\text{More}}: P \times S \rightarrow O$ 和 $cell^{\text{More}}: P \times S \rightarrow I$。
+考虑示例 H.7 中的电感器 `$O \rightarrow (I \rightarrow -)$`。通过 `$\sigma_{p,X}: P \times O \times (I \rightarrow O) \rightarrow Para(O \times (I \rightarrow -))$`，我们得到 2 阶自算子 `$Para(O \times (I \rightarrow -)) : Para(Set) \rightarrow Para(Set)$`。然后一个 Mealy 单元作为它的余代出现。
+
+更具体地说，一个余代包含载集 `$S$` 和一个参数映射 `$(P, cell^{\text{More}}) \in Para(Set), (S, O \times (I \rightarrow S))$`。这里，`$cell^{\text{More}}$` 可以被看作映射 `$P \times S \rightarrow O \times (I \rightarrow S)$`，如图所示。将其分为两个部分 `$cell^{\text{More}}: P \times S \rightarrow O$` 和 `$cell^{\text{More}}: P \times S \rightarrow I$`。
 
 ![](img/92dd63b8e10fefd3f3f227bf65a30b83_28_1.png)
 
-图 9. $Para(O \times (I \rightarrow -))$ 作为参数模型的示例。这里输出不依赖于当前输入。
+图 9. `$Para(O \times (I \rightarrow -))$` 作为参数模型的示例。这里输出不依赖于当前输入。
 
 # 通过超有限构造展开神经网络
 
 我们将从自算子到自由单子代（free monads）的超有限构造中获益，以及这些网络相应的展开。具体而言，凭借定理 G.10 迈向权重源自范畴框架的路径，我们可以对这些网络进行展开。为了空间和清晰起见，展开是通过 2 阶单子的自算子代数的长度同态来完成的。
 
-**示例 J.1** (迭代折叠 RNN)。考虑 $Para(1+A \times -)$ 的一个代数 $(P, cell^{\text{fold}})$，这是一个折叠 RNN 单元（示例 I.1）。它的展开是一个 $Para(1+A \times -)$，其中 $\Delta p: P \rightarrow P \times P$ 是复制映射。
+## 示例 J.1 (迭代折叠 RNN)
+
+考虑 `$Para(1+A \times -)$` 的一个代数 `$(P, cell^{\text{fold}})$`，这是一个折叠 RNN 单元（示例 I.1）。它的展开是一个 `$Para(1+A \times -)$`，其中 `$\Delta p: P \rightarrow P \times P$` 是复制映射。
 
 ```
 $$1+A \times List(A) \xrightarrow{\Delta p} 1+A \times X\n\gamma(Nil, Cell) \Downarrow (P, cell^{\text{fold}})\nList(A) \xrightarrow{f_{rent}} X\n\quad \quad \quad (17)$$
 ```
 
-这里映射 $f_{rent}$ 是 *fold*（折叠，示例 2.12）的参数类比：
+这里映射 `$f_{rent}$` 是 *fold*（折叠，示例 2.12）的参数类比：
 
 ```h
 front :: (p, List a) -> x
@@ -1050,11 +909,11 @@ front p Nil = cell^p (inl ())
 front p (Cons a as) = cell^p (inr a (front as))
 ```
 
-我们可以看到 `front` 是结构递归的：它通过将 `cell^front` 应用于参数 $p$ 与具有相同参数的 `front` 输出以及相同尾部的输出，来处理列表的头部。
+我们可以看到 `front` 是结构递归的：它通过将 `cell^front` 应用于参数 `$p$` 与具有相同参数的 `front` 输出以及相同尾部的输出，来处理列表的头部。
 
 ![](img/92dd63b8e10fefd3f3f227bf65a30b83_29_0.png)
 
-我们继续证明 $\Delta p$ 是参数态的有效参数化。分别解包等式 (17) 右上角和左下角的复合，得到参数映射：
+我们继续证明 `$\Delta p$` 是参数态的有效参数化。分别解包等式 (17) 右上角和左下角的复合，得到参数映射：
 
 ```
 P × (1 + A × List(A)) → X
@@ -1070,36 +929,44 @@ nP × (1 + A × List(A)) → X
 (p, (a, as)) -> cell^front (p, a, f(p, as))
 ```
 
-很容易看出 $\Delta p$ 是它们的有效参数化，“纽结”了参数 $p$ 和 $q$。
+很容易看出 `$\Delta p$` 是它们的有效参数化，“纽结”了参数 `$p$` 和 `$q$`。
 
-**示例 1.2** (迭代展开)。考虑 $Para(O \times -)$ 的一个余代 $(P, cell_0, cell_0)$，$i$ 是一个展开单元（示例 1.3）。它的展开是下方的 $Para(O \times -)$余代：
+## 示例 1.2 (迭代展开)
+
+考虑 `$Para(O \times -)$` 的一个余代 `$(P, cell_0, cell_0)$`，`$i$` 是一个展开单元（示例 1.3）。它的展开是下方的 `$Para(O \times -)$`余代：
 
 | | | |
-|---|---|---|
-| $(P, cell_0, cell_0)$ | $(P, f_n)$ | Stream(O) |
-| $\Delta p$ | $\gamma((output,next))$ | |
-| $O \times X$ | $Para(O \times -), (f_n)$ | Stream(O) |
 
-这里 $f_n :: P \times X \rightarrow Stream(O)$ 是 unfold（展开，示例 1.5）的语法类比：
+|---|---|---|
+
+| `$(P, cell_0, cell_0)$` | `$(P, f_n)$` | `Stream(O)` |
+
+| `$\Delta p$` | `$\gamma((output,next))$` | |
+
+| `$O \times X$` | `$Para(O \times -), (f_n)$` | `Stream(O)` |
+
+这里 `$f_n :: P \times X \rightarrow Stream(O)$` 是 unfold（展开，示例 1.5）的语法类比：
 
 ```
 f_n :: (p, x) -> Stream
 f_n p x = MKStream (cell_n p x) (f_n p)
 ```
 
-我们可以看到 $f_n$ 是结构递归的：它产生一个头部为 $cell_n(p,x)$ 的流。
+我们可以看到 `$f_n$` 是结构递归的：它产生一个头部为 `$cell_n(p,x)$` 的流。
 
 ![](img/92dd63b8e10fefd3f3f227bf65a30b83_29_1.png)
 
 图 1. 展开的“折叠”循环神经网络的字符串表示。
 
-**示例 J.3** (迭代递归 NN)。考虑 $Para(A + (-)^2)$ 的一个代数 $(P, cell^{f_{CSV}})$，即一个递归网络单元（示例 1.2）。它的展开是 $Para(A + (-)^2)$代数之间的映射：
+## 示例 J.3 (迭代递归 NN)
+
+考虑 `$Para(A + (-)^2)$` 的一个代数 `$(P, cell^{f_{CSV}})$`，即一个递归网络单元（示例 1.2）。它的展开是 `$Para(A + (-)^2)$`代数之间的映射：
 
 ```
 $$\begin{aligned} A + Tree(A)^2 & \text{Para}(A+(-)^2)((P,f_{CSV})) & \to A + X^2 \\ \downarrow \Delta_P & \downarrow (P,cell^{f_{CSV}}) \\ Tree(A) & X \end{aligned}$$
 ```
 
-$f_{CSV}$ 是具有以下实现的函数：
+`$f_{CSV}$` 是具有以下实现的函数：
 
 ```
 f_{CSV} :: (p, Tree a) -> x
@@ -1107,17 +974,19 @@ f_{CSV} p (Leaf a) = cell^p (inl a)
 f_{CSV} p (Node l r) = cell^p (in(f_{CSV} p l)) r
 ```
 
-该函数执行了权重共享，因为对子树的递归使用了相同的参数 $p$。
+该函数执行了权重共享，因为对子树的递归使用了相同的参数 `$p$`。
 
 ![](img/92dd63b8e10fefd3f3f227bf65a30b83_30_0.png)
 
-**示例 J.4** (迭代 Mealy 单元)。考虑 $Para(I \times -)$ 的一个代数 $(P, cell^{Mealy})$，即一个 Mealy 机器（示例 2.11）。它的展开是 $Para(I \times -)$代数同态：
+## 示例 J.4 (迭代 Mealy 单元)
+
+考虑 `$Para(I \times -)$` 的一个代数 `$(P, cell^{Mealy})$`，即一个 Mealy 机器（示例 2.11）。它的展开是 `$Para(I \times -)$`代数同态：
 
 ```
 $$\begin{aligned} (P,f_m) & \to Mealy_{O,I} \\ \downarrow \Delta_P & \downarrow \gamma(next) \\ I \times X & Para(I \times -), ((P,f_n)) \to (I \to O \times Mealy_{O,I}) \end{aligned}$$
 ```
 
-$f_n$ 是具有以下实现的核心函数：
+`$f_n$` 是具有以下实现的核心函数：
 
 ```
 f_n :: (p, x) -> Mealy
@@ -1126,13 +995,15 @@ f_n (p, x) = MkMealy $ i - let (o', x') = n p i in (o', x'), f_n p'
 
 ![](img/92dd63b8e10fefd3f3f227bf65a30b83_30_1.png)
 
-**示例 J.5** (迭代 Moore 机器)。考虑 $Para(O(I \rightarrow -))$ 的余代 $P, cell^{Moore}$，即一个 Moore 机器（示例 H.7）。它的展开是 $Para(O \times (I \rightarrow -))$ 余代同态：
+## 示例 J.5 (迭代 Moore 机器)
+
+考虑 `$Para(O(I \rightarrow -))$` 的余代 `$P, cell^{Moore}$`，即一个 Moore 机器（示例 H.7）。它的展开是 `$Para(O \times (I \rightarrow -))$` 余代同态：
 
 ```
 $$\begin{aligned} X & (P,f_n) & \rightarrow Moore_{O,I} \ (P,(o_n)) \\ \searrow \Delta_P & \gamma(next) O \times (I \rightarrow -) \rightarrow X & Para(O\times(I\rightarrow -))((P,f_n)) \rightarrow (I \to O \times Moore_{O,I}) \end{aligned}$$ (21)
 ```
 
-在代码中，$f_n$ 是一个强制函数：
+在代码中，`$f_n$` 是一个强制函数：
 
 ```
 f_n :: (p, x) \rightarrow Moore o

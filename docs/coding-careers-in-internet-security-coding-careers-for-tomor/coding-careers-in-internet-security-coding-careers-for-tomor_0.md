@@ -1,20 +1,11 @@
-# 
-网络安全编程职业（面向未来的编程职业）
 
-
-
-
-
-
-
+# 网络安全编程职业（面向未来的编程职业）
 
 Website: [cavendishsq.com](http://cavendishsq.com)
 
 This publication represents the opinions and views of the author based on his or her personal experience, knowledge, and research. The information in this book serves as a general guide only. The author and publisher have used their best efforts in preparing this book and disclaim liability rising directly or indirectly from the use and application of this book.
 
 All websites were available and accurate when this book was sent to press.
-
-
 
 Editorial Director: `David McNamara`
 
@@ -33,18 +24,20 @@ Photo Research: `J8 Media`
 The photographs in this book are used by permission and through the courtesy of: Cover `Emir Klepo/Alamy Stock Photo`; p. 1 (and used throughout the book) `Maciek905/iStockphoto.com`; p. 4 `ETham Photo/Getty Images`; p. 6 [Best-Backgrounds/Shutterstock.com](http://Best-Backgrounds/Shutterstock.com); p. 8 `Digital Vision/ Getty Images`; p. 10 Mary Holzer & Matt Crypto/Wikimedia Commons/File: Diffie and Hellman.jpg/CC BY-SA-3.0, (used throughout) [MF3d/iStockphoto.com](http://MF3d/iStockphoto.com); p. 12 `Aleksandar Nakic/Getty Images`; p. 14 `Miguel Candela/SOPA Images/LightRocket/Getty Images`; p. 18 `Michael J. Okoniewski/AP Photo`; p. 24 `Richard Ellis/Alamy Stock Photo`; p. 27 `Sundry Photography/Shutterstock.com`; p. 28 `Bangoland/Shutterstock.com`; p. 30 `Monsitj/iStock/Getty Images`; p. 33 `Matejmo/iStock/Getty Images`; p. 37 `Charles Brutlag/Shutterstock.com`; p. 39 `Izabela Habur/Getty Images`; p. 42 `Gerald Herbert/AP Photo`; p. 44 `Time Stopper/ Getty Images`; p. 50 `J.M. Eddins Jr./Air Force Photo`; p. 51 `Grinvalds/iStock/Getty Images`; p. 54 `Daniel Acker/Bloomberg/Getty Images`; p. 56 `South Agency/Getty Images`; p. 61 `Corey Williams/AP Photo`; p. 62 `Sol Stock/iStock/Getty Images`; p. 63 `David Becker/Bloomberg/Getty Images`; p. 64 `NSF`; p. 66 `NASA`.
 
 Printed in the United States of America
-About the Author
+
+## About the Author
 
 ![](img/page_4-1.jpg)
 
 Early coders used punch cards to create computer programs. This image shows an old punch card and a modern USB cord. Both give a computer instructions.
 
 ![](img/page_5-1.jpg)
-An Introduction to Coding in Internet Security
+
+### An Introduction to Coding in Internet Security
 
 Computer coding is the process of designing and building a computer program to perform a particular set of tasks. This process is also called computer programming or software development. Early computer coders used punch cards to build computer programs. It worked like this: a coder wrote out the data and program instructions for the program. The coder (or a helper) then punched holes into a card in a set pattern for each piece of data or program instruction. There might be hundreds or even thousands of these cards for a given program. The complete set of cards for a program was called the source deck. The source deck was fed into a machine called a compiler. The compiler converted the program instructions into a special language called machine language and produced a new stack of cards with holes punched through them called the program deck. This was the program. A computer operator could insert a program deck into a computer to perform the task the program was built to complete.
 
-COMPUTER CODING AS A CORE COMPETENCY
+#### COMPUTER CODING AS A CORE COMPETENCY
 
 Today, coders build programs by typing program instructions into a computer text file. These instructions are called source code. Program instructions are written in one of several programming languages. In most cases, coders feed the source code into a computer program called a compiler. The compiler converts the source code into a program. There are literally millions of computer programs designed to perform all sorts of tasks.
 
@@ -54,13 +47,11 @@ Here is an example of modern computer code.
 
 Computer coding used to be a special skill that few people knew how to do. Today, it is a core competency for young people—like reading, writing, or math. This is because more and more jobs require computer-coding skills.
 
-COMPUTER CODING AND INTERNET SECURITY
+#### COMPUTER CODING AND INTERNET SECURITY
 
-Computer coders work in many different industries. Some work in health care. Others work in manufacturing, communications, or transportation. Still others work in the military or in government agencies. Some computer coders specialize in an area called internet security or cybersecurity. A US Department of Defense division called the Advanced Research Projects Agency (ARPA) developed the internet during the 1960s—except they called it the ARPANET. At first, the ARPANET consisted of only four linked computers—three in California and one in Utah. Today, the internet connects billions of computers around the globe.
+Computer coders work in many different industries. Some work in health care. Others work in manufacturing, communications, or transportation. Still others work in the military or in government agencies. Some computer coders specialize in an area called internet security or cybersecurity. A US Department of Defense division called the Advanced Research Projects Agency (`ARPA`) developed the internet during the 1960s—except they called it the `ARPANET`. At first, the `ARPANET` consisted of only four linked computers—three in California and one in Utah. Today, the internet connects billions of computers around the globe.
 
-
-
--   [互联网的重要性不容小觑](https://example.org)。美国国家安全局（NSA）说：“作为一个国家，我们依赖互联网。”
+- [互联网的重要性不容小觑](https://example.org)。美国国家安全局（NSA）说：“作为一个国家，我们依赖互联网。”
 
 企业和其他组织，包括政府机构，都不断使用互联网。每天，人们都会利用网络购物、银行和通信。“我们都依赖随时随地访问互联网及其诸多功能”，NSA 表示。
 
@@ -78,11 +69,11 @@ Computer coders work in many different industries. Some work in health care. Oth
 
 专注于互联网安全的计算机代码专家可以帮助防止此类网络攻击。这些网络安全专业人员让互联网——乃至整个世界——更安全。
 
-CODING JOBS IN INTERNET SECURITY
+### CODING JOBS IN INTERNET SECURITY
 
 精通互联网安全的程序员拥有多种职业选择。其中一种职位是安全软件开发人员。安全软件开发人员编写程序，以保护计算机系统免受网络攻击。例如，防病毒程序就是一种安全程序。防病毒程序阻止恶意软件进入计算机系统，并扫描系统以检测并删除可能已经渗透的恶意软件。
 
-公钥加密
+#### 公钥加密
 
 ![](img/page_10-1.jpg)
 
@@ -112,10 +103,9 @@ Norton 只是一个防病毒程序的例子，它帮助管理程序安全。
 
 ![](img/page_15-1.jpg)
 
-
 计算机代码专家通过两种主要方式提升互联网安全。一种是构建阻止恶意软件的软件；另一种是设计安全性最小的计算机系统，以防止恶意软件或黑客访问这些系统。在这两种情况下，恶意软件都是主要威胁。
 
-恶意软件的威胁
+#### 恶意软件的威胁
 
 恶意软件有多种类型。有些仅仅是烦人的。其他则极其危险。在烦人的一端是广告软件（adware），它会在用户屏幕上弹出广告。更危险的是间谍软件（spyware），它可以扫描系统以获取个人信息，跟踪用户的上网活动，并记录键盘输入——包括用于访问各种互联网账户的用户名和密码。其他危险的恶意软件会修改或删除系统文件，破坏硬盘，或创建其他入口，使黑客能够完全接管系统。还有勒索软件（ransomware），它会锁定系统，直到用户支付赎金。
 
@@ -123,14 +113,11 @@ Norton 只是一个防病毒程序的例子，它帮助管理程序安全。
 
 恶意软件通常通过以下两种方式感染计算机系统。一种方法是检测系统中的安全漏洞并利用这些漏洞进行入侵。安全漏洞通常是由于 bugs（错误或缺陷）导致的。 bug 是计算机系统或程序（通常在其源代码中）中的错误或缺陷，会导致其行为出现意外情况，这往往为恶意软件提供了利用途径。利用安全漏洞进行感染的恶意软件有时被称为零日漏洞（zero‑day exploit）。
 
-
-
-
 第二种恶意软件感染方式是一种名为“特洛伊木马”（Trojan horse）或“特洛伊”（Trojan）的机制。黑客通过诱骗用户安装特洛伊木马来传播它们。一些特洛伊木马伪装成无害或甚至有用的程序；其恶意属性仅在用户安装后才显现。其他特洛伊木马通过电子邮件传播。这些信息警告用户出现某种问题，并指示他们点击信息中的链接以了解更多。当然，当用户点击链接时，他们会下载特洛伊木马。这种战术被称为“网络钓鱼”（phishing）。
 
 恶意软件是一个严重的问题。反恶意软件公司卡斯珀斯基实验室在 2017 年检测到超过十五百万份恶意代码，影响了近 30%的电脑。专家预测，由于恶意软件及其他网络犯罪行为，每年的财务损失将在 2021 年达到 6 万亿美元。这取决于专注于网络安全的计算机代码专家来阻止制作恶意软件的罪犯。
 
-早期恶意软件攻击示例
+#### 早期恶意软件攻击示例
 
 大多数早期恶意软件并非旨在损坏或利用计算机系统。相反，它们是计算机代码编写者实验的产物。
 
@@ -138,7 +125,9 @@ Norton 只是一个防病毒程序的例子，它帮助管理程序安全。
 
 另一个实验性例子是“莫里斯蠕虫”。一位名叫罗伯特·莫里斯的年轻计算机程序员构建了该蠕虫，旨在揭示 ARPANET 的安全漏洞。然而，代码中的缺陷导致蠕虫瘫痪了网络。
 
-Creeper 和莫里斯蠕虫没有恶意意图（尽管莫里斯蠕虫确实造成了损害）。这与 1974 年释放的另一种恶意软件程序——兔子病毒（Rabbit 或 Wabbit）不同。该病毒被设计为在计算机系统上快速自我复制，直到机器变得缓慢并崩溃。1986 年释放的另一种恶意软件程序也具有恶意意图。黑客们将该程序伪装成更新版的流行免费文字处理程序 PC-Write。当用户在机器上安装该程序时，它会删除系统上的所有文件。该程序是已知的第一个特洛伊木马。
+
+
+Creeper 和莫里斯蠕虫没有恶意意图（尽管莫里斯蠕虫确实造成了损害）。这与 1974 年释放的另一种恶意软件程序——兔子病毒（Rabbit 或 Wabbit）不同。该病毒被设计为在计算机系统上快速自我复制，直到机器变得缓慢并崩溃。1986 年释放的另一种恶意软件程序也具有恶意意图。黑客们将该程序伪装成更新版的流行免费文字处理程序`PC-Write`。当用户在机器上安装该程序时，它会删除系统上的所有文件。该程序是已知的第一个特洛伊木马。
 
 ![](img/page_18-1.jpg)
 
@@ -152,7 +141,7 @@ Creeper 和莫里斯蠕虫没有恶意意图（尽管莫里斯蠕虫确实造成
 
 一年后，另一种恶意软件程序——I Love You 病毒——引发了更严重的问题。它的工作方式与 Melissa 病毒相同，但它并未仅将自身转发给感染机器的 Outlook 通讯录中的前五十个联系人，而是转发给所有人，并随即删除随机文件。I Love You 病毒迅速感染了约五千万台机器，造成全球约 50 亿美元至 150 亿美元的损失。
 
-现代恶意软件攻击
+## 现代恶意软件攻击
 
 21 世纪出现了更具破坏性的恶意软件攻击。其中之一发生在 2017 年，使用的恶意程序名为 WannaCry。它利用某些版本的 Microsoft Windows 操作系统的安全漏洞，锁定全球范围内的电脑。攻击背后的黑客要求受影响的用户支付赎金以恢复数据，否则将永久丢失数据。幸运的是，Microsoft 迅速发布了针对该安全漏洞的补丁。补丁是用于修复或“补丁”操作系统或其他计算机程序安全漏洞的代码片段。软件开发商通过发布更新向用户分发补丁。更重要的是，安全专家还发现了该恶意程序中的“关闭开关”，用于阻止其传播。这有助于限制受影响的电脑数量和造成的损害——尽管损害仍然相当严重。
 
@@ -162,10 +151,7 @@ Creeper 和莫里斯蠕虫没有恶意意图（尽管莫里斯蠕虫确实造成
 
 新型恶意软件攻击被称为“加密劫持”（crypto-jacking）。这涉及在机器上安装恶意软件，该恶意软件秘密地“矿工”数字货币，即加密货币。当某人花费加密货币时，交易会记录在名为区块链（blockchain）的安全账本中。区块链通过复杂的算法（需要大量处理能力）来批准交易。为了增加区块链可用的处理能力，人们可以将电脑连接到区块链以换取少量加密货币支付。这种做法称为加密矿工（crypto-mining）。因此，加密劫持的恶意软件会在用户机器上连接该机器到区块链，但将支付发送给安装恶意软件的黑客。如果黑客感染足够多的机器，这可以相当有利可图。
 
-
-
-
--   [这些只是近期恶意软件攻击的几个例子。还有成千上万的其他攻击。事实上，现在就有成千上万的攻击正在发生。]
+- [这些只是近期恶意软件攻击的几个例子。还有成千上万的其他攻击。事实上，现在就有成千上万的攻击正在发生。]
 
 ## THE DANGERS OF BUGS
 
@@ -223,7 +209,6 @@ Creeper 和莫里斯蠕虫没有恶意意图（尽管莫里斯蠕虫确实造成
 
 ![](img/page_31-1.jpg)
 
-
 1987 年，著名计算机科学家`Fred Cohen`指出“没有能够完美检测所有可能的计算机病毒的算法”。计算机算法是一系列步骤或公式，用于让计算机完成任务或解决问题。Cohen 是正确的。这解释了为什么反恶意软件程序在检测和消除恶意软件时采取不同的方法。
 
 ![](img/page_33-1.jpg)
@@ -270,20 +255,17 @@ Creeper 和莫里斯蠕虫没有恶意意图（尽管莫里斯蠕虫确实造成
 
 在 20 世纪 90 年代后期，一些软件开发人员开始从构建**专有软件**（由特定个人或组织所有）转向使用**开源模式**。开源软件的源代码对公众开放，可供研究或修改。自其发展以来，开源软件已获得广泛 popularity。这种开发模式鼓励协作。由于更多人审查和修改开源代码，它几乎总是比专有代码更强大且更安全。例如，**Linux 操作系统**（开源）比**Windows**和**MacOS**（专有）更安全。
 
-
-
-
--   [开源模型](https://www.owasp.org)特别适合互联网安全领域。在该领域使用开源软件的实践被称为开源安全。根据开源倡导者大卫·A·维勒（David A. Wheeler）的说法，开源安全之所以有效，是因为“协同工作以消除和修复漏洞的防御者可能比孤立工作的防御者更有效”。除了协作使软件更安全外，“防御者”还可以团结起来构建更有效的反恶意软件程序。正如安全专家凯文·基尼（Kevin Keeney）所解释的，为了对抗“当今日益狡猾的网络对手”，程序员“需要朝开源项目的方向发展，以便我们能够协作并团结作战”。
+- [开源模型](https://www.owasp.org)特别适合互联网安全领域。在该领域使用开源软件的实践被称为开源安全。根据开源倡导者大卫·A·维勒（David A. Wheeler）的说法，开源安全之所以有效，是因为“协同工作以消除和修复漏洞的防御者可能比孤立工作的防御者更有效”。除了协作使软件更安全外，“防御者”还可以团结起来构建更有效的反恶意软件程序。正如安全专家凯文·基尼（Kevin Keeney）所解释的，为了对抗“当今日益狡猾的网络对手”，程序员“需要朝开源项目的方向发展，以便我们能够协作并团结作战”。
 
 一个致力于推广开源代码的组织是开放式应用程序安全项目（OWASP）。按照其自身的话，OWASP 是一个“面向全球的非营利性慈善组织，专注于改善软件安全”。该非营利组织分发阅读材料和工具，帮助希望采用开源方法以提升其计算机程序安全性的用户。（更多信息请参见[`https://www.owasp.org`](https://www.owasp.org)）。
 
-LEGISLATIVE AND GOVERNMENTAL EFFORTS TO STOP HACKERS
-
-创建安全程序和构建反恶意软件软件是应对网络犯罪的两种方式。第三种方式是通过立法来威慑黑客。
+## LEGISLATIVE AND GOVERNMENTAL EFFORTS TO STOP HACKERS
 
 美国立法者于 1977 年提出了第一部打击计算机犯罪的法律，名为《联邦计算机系统保护法》（Federal Computer Systems Protection Act）。然而，该法案未通过——可能是因为立法者不了解计算机及其可能被用于犯罪的方式。
 
 1983 年，一位 FBI 高级特工在国会作证称，计算机可以像“枪支、刀具或伪造者的笔”一样用于犯罪。此次作证促成了 1984 年的《计算机欺诈与滥用法》（Computer Fraud and Abuse Act of 1984）——美国首部打击计算机犯罪的联邦法律。此后，美国立法者陆续通过了多部网络犯罪法律。
+
+
 
 为执行网络犯罪法律并提升网络安全，美国政府在关键机构内设立了多个专门机构。这些机构包括计算机应急响应团队（Computer Emergency Response Team）、网络安全与通信办公室（Office of Cybersecurity and Communications）、网络犯罪中心（Cyber Crimes Center）、国家网络调查联合任务组（National Cyber Investigative Joint Task Force）、国家安全网络专家网络（National Security Cyber Specialist network）以及国家安全网络援助计划（National Security Cyber Assistance Program），仅举几例。许多这些政府机构招聘计算机编码员，以帮助遏制黑客。
 
@@ -300,4 +282,3 @@ FBI 只是一家招聘专精互联网安全的程序员的政府机构。这里�
 黑客不断尝试入侵线上安全场所。这种持续的尝试凸显了对互联网安全专家的需求。
 
 ![](img/page_45-1.jpg)
-

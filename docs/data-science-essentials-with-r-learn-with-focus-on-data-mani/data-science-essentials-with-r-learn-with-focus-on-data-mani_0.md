@@ -1,6 +1,5 @@
+
 ## R 语言数据科学核心指南：聚焦数据处理、可视化与机器学习
-
-
 
 ![](img/cover.jpg)
 
@@ -44,25 +43,21 @@ Abhishek Das 是一位资深数据科学家，拥有十余年的高级分析和�
 
 以下是各章节的简要概览，指引你完成这段旅程：
 
-第 1 章：数据科学全景 - 本章介绍处理数据和构建业务问题的基础知识。你将学习如何通过将问题拆解为可管理的部分来进行分析，并理解合理的问题构建如何决定数据驱动解决方案的成败。本章还探讨了四种业务分析类型——描述性、诊断性、预测性和处方性分析，及其基于业务需求的应用。
+**第 1 章：数据科学全景** - 本章介绍处理数据和构建业务问题的基础知识。你将学习如何通过将问题拆解为可管理的部分来进行分析，并理解合理的问题构建如何决定数据驱动解决方案的成败。本章还探讨了四种业务分析类型——描述性、诊断性、预测性和处方性分析，及其基于业务需求的应用。
 
-第 2 章：R 语言基础 - 本章概述 `R` 和 `RStudio`，指导你创建和管理向量、矩阵、列表和数据框等基本 `R` 对象。你将学习安装和加载包、使用内置和自定义函数，以及使用 `R` 的帮助系统。最后，你将掌握如何加载和导出数据集，为后续章节探索和分析数据奠定基础。
+**第 2 章：R 语言基础** - 本章概述 `R` 和 `RStudio`，指导你创建和管理向量、矩阵、列表和数据框等基本 `R` 对象。你将学习安装和加载包、使用内置和自定义函数，以及使用 `R` 的帮助系统。最后，你将掌握如何加载和导出数据集，为后续章节探索和分析数据奠定基础。
 
-第 3 章：探索数据 - 在可视化或机器学习之前探索数据至关重要。本章涵盖选择列、筛选行、添加新变量和处理重复值。你还将学习管理缺失值、理解其成因并有效处理它们。
+**第 3 章：探索数据** - 在可视化或机器学习之前探索数据至关重要。本章涵盖选择列、筛选行、添加新变量和处理重复值。你还将学习管理缺失值、理解其成因并有效处理它们。
 
-第 4 章：数据整理 - 处理真实数据集时，数据操作必不可少。本章重点介绍使用 `dplyr` 包进行数据整理。你将学习在宽格式和长格式之间重塑数据、聚合数据以生成摘要，以及合并数据框以进行分析。有了这些工具，你将简化数据处理流程并为深入洞察做好数据准备。
+**第 4 章：数据整理** - 处理真实数据集时，数据操作必不可少。本章重点介绍使用 `dplyr` 包进行数据整理。你将学习在宽格式和长格式之间重塑数据、聚合数据以生成摘要，以及合并数据框以进行分析。有了这些工具，你将简化数据处理流程并为深入洞察做好数据准备。
 
-第 5 章：处理日期 - 日期常以字符数据形式出现，不适合直接分析。本章教你使用 `R` 的 `lubridate` 包将此类数据转换为日期或日期时间类。你将学习从日期列中提取有意义的组件用于分析或机器学习、执行算术运算、计算区间，并有效处理时间差异。
+**第 5 章：处理日期** - 日期常以字符数据形式出现，不适合直接分析。本章教你使用 `R` 的 `lubridate` 包将此类数据转换为日期或日期时间类。你将学习从日期列中提取有意义的组件用于分析或机器学习、执行算术运算、计算区间，并有效处理时间差异。
 
-第 6 章：操作字符串 - 处理文本数据是数据科学中的常见任务，有效操作字符串对于清洗和准备数据至关重要。在本章中，你将深入了解 `stringr` 包，学习如何合并字符串、拆分字符串，以及通过更改大小写或删除多余空格来标准化文本。我们还将探索如何使用正则表达式 (`regex`) 查找和匹配特定模式，以高效处理文本数据。
+**第 6 章：操作字符串** - 处理文本数据是数据科学中的常见任务，有效操作字符串对于清洗和准备数据至关重要。在本章中，你将深入了解 `stringr` 包，学习如何合并字符串、拆分字符串，以及通过更改大小写或删除多余空格来标准化文本。我们还将探索如何使用正则表达式 (`regex`) 查找和匹配特定模式，以高效处理文本数据。
 
-第 7 章：数据可视化 - 数据可视化对于理解和传达洞察至关重要。本章专注于使用 `ggplot2` 创建有影响力的可视化图表。你将探索用于分布的条形图、直方图和密度图，以及用于特征关系的散点图。此外，你还将使用折线图可视化时间序列数据，并使用堆叠条形图和饼图展示比例。
+**第 7 章：数据可视化** - 数据可视化对于理解和传达洞察至关重要。本章专注于使用 `ggplot2` 创建有影响力的可视化图表。你将探索用于分布的条形图、直方图和密度图，以及用于特征关系的散点图。此外，你还将使用折线图可视化时间序列数据，并使用堆叠条形图和饼图展示比例。
 
-第 8 章：特征工程 - 有效的特征是提升机器学习模型性能的关键。本章解释如何将原始数据转化为有意义的输入。你将学习数值数据的分箱和缩放技术，以及分类变量的独热编码和标签编码等编码方法。本章还涵盖从现有数据创建新特征以增强预测性能。
-
-
-
-
+**第 8 章：特征工程** - 有效的特征是提升机器学习模型性能的关键。本章解释如何将原始数据转化为有意义的输入。你将学习数值数据的分箱和缩放技术，以及分类变量的独热编码和标签编码等编码方法。本章还涵盖从现有数据创建新特征以增强预测性能。
 
 # 第 9 章：统计与概率
 
@@ -151,10 +146,6 @@ BPB Publications 全家高度赞赏您的支持、建议和反馈。
 
 ![Figure 1.2](img/Figure1.2.png)
 
-
-
-
-
 ### Vedh 的 LinkedIn 分析之旅
 
 图 1.2：Vedh 的 LinkedIn 粉丝人口统计特征分布
@@ -194,6 +185,7 @@ Vedh 决定运用数据科学技能寻找机票和酒店的最佳优惠。他首
 嘿，你知道吗？Vedh 经营他的个人品牌机构“Being Minimalist Services”已有数年！虽然生意不错，但他知道还有改进空间。他一直基于经验和直觉做决策，但意识到需要开始在决策过程中引入数据。
 
 > **数据驱动型组织的标志是什么？**
+>
 > 成为数据驱动型组织意味着你的公司善于利用其数据，且数据团队在关键决策过程中有发言权。在这样的组织中，决策主要由数据洞察驱动，而非个人偏见或一己之见。
 
 怀着这个想法，Vedh 开始投资数据收集和分析工具。他开始追踪网站分析、社交媒体指标和其他关键绩效指标，以更好地了解他的业务和客户。随着他深入挖掘数据，Vedh 发现了此前从未注意到的趋势和模式。
@@ -205,11 +197,8 @@ Vedh 决定运用数据科学技能寻找机票和酒店的最佳优惠。他首
 通过将数据作为决策过程的核心部分，Vedh 能够做出更明智的决策，避免昂贵的错误。然而，他意识到数据驱动只是第一步，为了真正蓬勃发展，他需要在整个组织中建立数据主导的文化。
 
 > **如何界定数据主导型组织？**
+>
 > 数据主导型组织更进一步。在这里，数据融入公司各层级、各角色的工作中，在每次会议中被讨论，并融入同步和异步工作流中。在未来几年，成为数据主导型组织将对企业的成功和长久至关重要，并可能帮助企业抵御经济低迷，实现“面向未来”。这对于运营或财务复杂度高的企业尤其如此。
-
-
-
-
 
 ### Vedh 的目标：打造数据驱动型组织
 
@@ -244,6 +233,8 @@ Vedh 的目标是建立一支精干的团队，利用数据驱动业务决策。
 
 现在让我们来看一个关于 Vedh 妻子 Vedika 的精彩故事，她拥有一家连锁咖啡馆。她担心公司面临的高客户流失率。尽管拥有相当数量的客户，但连锁咖啡馆面临回头客下降的问题，Vedika 想弄清楚原因。为了解决这个问题，Vedika 寻求 Vedh 在数据科学方面的专业知识，帮助她找出问题的根本原因并寻找减少客户流失的解决方案。
 
+
+
 #### 关于数据应提出的问题
 
 为了更好地了解连锁咖啡馆的运营情况，Vedh 走访了多家咖啡馆并与咖啡馆经理（在本例中即我们的主题专家）进行了交谈。他请他们讲述咖啡馆日常运营的故事，以及他们认为可能导致客户流失的原因。他甚至亲自品尝了咖啡馆的餐饮，以更好地了解什么能驱动顾客回头，什么不能。
@@ -275,10 +266,6 @@ Vedh 还考虑到首先查看标准指标的重要性，即使他预期这些指
 虽然这种相关性看起来很有趣，但并不一定意味着使用移动 App 导致顾客不回头。其他因素可能同时驱动 App 的使用和不回头的决定。例如，使用 App 的顾客可能更懂技术，更倾向于从其他在线平台订餐；或者他们可能来自更年轻的群体，更倾向于在餐饮选择上寻求新奇和多样性；又或是由于地理位置和多样化的客户人口统计特征。
 
 这些潜在因素可能才是这些顾客不回头的真实原因，而与移动 App 使用的相关性只是巧合。
-
-
-
-
 
 ### 确定因果关系
 
@@ -352,10 +339,6 @@ Vedh 意识到咖啡质量不一致是一个异常值，这可能是导致客户
 
 通过查看每日披萨销量，披萨连锁店可以确定一周中最繁忙的日子和时段，从而安排员工排班并优化库存。例如，数据显示销售额在周五和周六晚上 5 点到 8 点之间最高，高峰时段平均售出 6,500 个披萨。在这种情况下，公司可能希望在那些时段增加人员配置，以确保订单能快速处理。
 
-
-
-
-
 #### Descriptive Analytics Empowers Business Decisions
 
 A pizza chain can gain valuable insights by analyzing its pizza sales data, enabling data-driven decisions to boost sales. For example, they can create targeted promotions or offers for the most popular pizzas, invest in improving their online and mobile ordering platforms, and increase staffing during peak hours to improve in-store sales. With descriptive analytics, the pizza chain can better understand customer preferences, identify sales trends, and make informed decisions to drive business growth.
@@ -384,9 +367,11 @@ For companies that collect customer data, diagnostic analytics plays a crucial r
 
 Here are some potential diagnostic analytics questions with examples:
 
-*   **Why did logins decrease last month?**
 
-    By analyzing the data, we might discover that the drop in platform usage was due to a higher-than-normal rate of errors during the login process. We can use diagnostic analytics to drill down into the root cause of these errors, identifying the specific factors causing them, such as mandatory password resets, updated security requirements, or technical issues with the platform. Addressing these underlying issues can improve the login process, enhance the overall customer experience, and ultimately increase customer engagement and retention on the platform.
+
+# Why did logins decrease last month?
+
+By analyzing the data, we might discover that the drop in platform usage was due to a higher-than-normal rate of errors during the login process. We can use diagnostic analytics to drill down into the root cause of these errors, identifying the specific factors causing them, such as mandatory password resets, updated security requirements, or technical issues with the platform. Addressing these underlying issues can improve the login process, enhance the overall customer experience, and ultimately increase customer engagement and retention on the platform.
 
 Suppose a mobile banking platform offers a cash-back rewards program for customers who make at least 10 transactions per month. The marketing team wants to analyze the effectiveness of this program and its impact on customer behavior.
 
@@ -402,7 +387,7 @@ By answering these questions, the team can make data-driven decisions to optimiz
 
 A use case for diagnostic analytics is determining the reasons behind product demand. Continuing with the pizza chain example:
 
-**Why did online orders decrease last quarter?**
+## Why did online orders decrease last quarter?
 
 *   Technical issues on the website or mobile app caused customer frustration, leading to reluctance to use the platform.
 *   Reduced marketing efforts for the online channel compared to other channels, such as in-store promotions or targeted advertising.
@@ -426,13 +411,9 @@ Now, let's look at a few examples of questions a marketing team might ask when u
 
 Thus, we have seen how diagnostic analytics allows you to uncover the underlying causes and factors leading to data trends.
 
-#### Predictive Analytics
+## Predictive Analytics
 
-
-
-
-
-#### 预测分析
+## 预测分析
 
 预测分析涉及使用数据分析、统计模型和机器学习技术来识别模式并预测潜在的未来结果或事件，为“未来可能发生什么？”这一问题提供洞察。预测分析通过分析过去和现在的数据来预测未来行为。下图描绘了预测分析为组织增加商业价值的阶段。
 
@@ -456,7 +437,7 @@ Thus, we have seen how diagnostic analytics allows you to uncover the underlying
 
 例如，营销团队可能会使用预测分析根据客户购买高端产品的可能性、首选沟通渠道或对特定类型促销的兴趣将其细分为不同群体。这有助于团队优化营销工作，提高客户参与度，并最终推动更多转化。
 
-#### 处方分析
+## 处方分析
 
 处方分析涉及使用数据来确定最佳行动方案。这种分析会考虑所有相关因素，并为后续步骤提供建议。因此，处方分析是做出数据驱动决策的宝贵工具。它有助于回答“下一步该采取什么措施？”这一问题。下图展示了为组织增加商业价值的第四个也是最后一个阶段，即处方分析。
 
@@ -476,11 +457,11 @@ Thus, we have seen how diagnostic analytics allows you to uncover the underlying
 
 无论是否使用算法，人类的判断仍然至关重要，因为算法的准确性和公正性仅取决于其训练数据的质量。
 
-### 结论
+## 结论
 
 本章讨论了数据驱动型组织如何利用数据科学创造更好的客户体验，并做出更快、更好的决策。然而，要充分发挥数据科学的潜力，组织需要确定要解决的正确业务问题。虽然数据分析和编码技能对数据科学家很重要，但他们还必须具备讲故事的技巧、批判性思维和对可视化展示的敏锐洞察力。此外，了解数据分析的四种主要类型——描述性、诊断性、预测性和处方性——对于从数据中获得最有价值的见解非常重要。
 
-### 加入我们书籍的 Discord 空间
+## 加入我们书籍的 Discord 空间
 
 加入书籍的 Discord 工作区，获取最新动态、优惠、全球科技资讯、新版本发布及作者专场活动：
 
@@ -488,13 +469,13 @@ Thus, we have seen how diagnostic analytics allows you to uncover the underlying
 
 ![](img/fm1.png)
 
-## 第 2 章：R 基础
+# 第 2 章：R 基础
 
-### 简介
+## 简介
 
 本章将简要概述 R 语言和 RStudio 界面。你将学习如何安装和加载包，以及创建不同类型的 R 对象，如向量、矩阵、列表、数组和数据框。R 拥有大量内置函数。该语言还拥有自己的帮助页面，可通过访问它来了解更多关于函数的信息。你还将了解如何自行创建函数。接下来，你将学习在 R 中加载数据集并将任意数据导出到你的系统。本章将使你能够舒适地在下一阶段探索你的数据。
 
-### 结构
+## 结构
 
 你将在本章涵盖以下主题：
 
@@ -507,44 +488,29 @@ Thus, we have seen how diagnostic analytics allows you to uncover the underlying
 *   **工作目录**
 *   **对象**
     *   向量
+    *   属性
+    *   矩阵
+    *   数组
+    *   类
+    *   列表
+    *   数据框
+    *   函数
+    *   使用帮助页面获取帮助
+    *   加载数据
+    *   保存数据
+*   **R 惯例**
 
-
-
-
-
-### 属性
-
-### 矩阵
-
-### 数组
-
-### 类
-
-### 列表
-
-### 数据框
-
-### 函数
-
-# 使用帮助页面获取帮助
-
-##### 加载数据
-
-### 保存数据
-
-# R 惯例
-
-### 目标
+## 目标
 
 在本章结束时，您将掌握 R 语言的基础知识，从而具备高效使用 R 进行数据分析的技能。本章将全面概述使用 R 所需的基本概念，包括 RStudio 界面、包、工作目录、不同的 R 对象、函数、加载和保存数据以及 R 惯例。
 
-### RStudio 界面
+## RStudio 界面
 
 R 是一种编程语言，能够处理大型数据集、执行复杂计算，并创建可视化图表以帮助您理解数据。它是开源且免费使用的，使得任何对统计计算感兴趣的人都能轻松上手。它拥有庞大且活跃的用户和开发者社区，他们为各种包和库的开发与维护做出贡献。下图展示了 R 编程的几个特性：
 
 ![](img/Figure2.1.png)
 
-图 2.1：R 的特性
+**图 2.1：** R 的特性
 
 当您首次打开 R 时，可能会感到无从下手。这就是 RStudio 发挥作用的地方。RStudio 是一个集成开发环境（IDE），它使得各个层次的用户都能更流畅、更便捷地使用 R。
 
@@ -559,11 +525,11 @@ RStudio 界面有四个主要面板：
 
 ![](img/Figure2.2.png)
 
-图 2.2：RStudio 界面
+**图 2.2：** RStudio 界面
 
 您还可以通过转到 `Tools | Global Options | Pane Layout` 来添加和移除面板。
 
-#### R 作为计算器
+### R 作为计算器
 
 现在，让我们进入 Aarya 的故事，她想用 R 来分析她的 Netflix 使用数据。她首先将 R 用作计算器。她想计算出过去一周内，她观看 Netflix 电影和电视剧总共花费了多少小时。以下是 Aarya 记下的信息：
 
@@ -572,7 +538,7 @@ RStudio 界面有四个主要面板：
 
 ![](img/Figure2.3.jpg)
 
-图 2.3：Aarya 分析其 Netflix 数据的示意图
+**图 2.3：** Aarya 分析其 Netflix 数据的示意图
 
 上图展示了 Aarya 分析其 Netflix 数据的过程。Aarya 使用 R 中的简单算术运算来计算总小时数。
 
@@ -582,17 +548,17 @@ RStudio 界面有四个主要面板：
 
 ![](img/Figure2.4.png)
 
-图 2.4：R 控制台中的基本计算
+**图 2.4：** R 控制台中的基本计算
 
 因此，Aarya 使用 R 中的简单算术运算计算了在 Netflix 上观看电视剧和电影的总小时数。
 
-#### 键盘快捷键
+### 键盘快捷键
 
 了解 RStudio 的键盘快捷键将帮助您更快地编程。您可以通过顶部菜单 `Tools | Keyboard Shortcuts Help`（快捷键：`Alt + Shift + K`）访问 RStudio 提供的数十个有用快捷键，如下所示。
 
 ![](img/Figure2.5.jpg)
 
-图 2.5：R 快捷键
+**图 2.5：** R 快捷键
 
 表 2.1 列出了一些基本的 RStudio 快捷键。
 
@@ -608,11 +574,13 @@ RStudio 界面有四个主要面板：
 | `Ctrl + Shift + H` | 更改工作目录 |
 | `Ctrl + Shift + M` | 插入 `%>%`（管道操作符） |
 
-表 2.1：常用 R 键盘快捷键
+**表 2.1：** 常用 R 键盘快捷键
+
+
 
 学习并熟练掌握快捷键值得花费时间，这能提高您的工作效率和流程效率。如果您想个性化外观，RStudio 提供了大量选项。请转到 `Tools | Global Options | Appearance` 探索各种选择。
 
-### 包
+## 包
 
 当您下载并安装 R 时，它附带一组默认函数，可用于各种用途。然而，随着全球 R 社区开发新的函数和功能，将它们全部纳入核心软件包已变得不切实际。相反，许多函数被捆绑到包中，可根据需要下载和安装，以解决这一问题。
 
@@ -630,14 +598,14 @@ R 包是函数、数据集和文档的集合，旨在协同工作。例如，一
 
 例如，要安装 `lubridate` 包（包含处理日期的实用函数），您只需将包名 `lubridate` 作为字符串参数传递给该函数：
 
-```
+```r
 # install the lubridate package
 install.packages("lubridate")
 ```
 
 包下载并安装完成后，您可以使用 `library()` 函数将其加载到 R 会话中：
 
-```
+```r
 # load the lubridate package
 library(lubridate)
 ```
@@ -652,21 +620,17 @@ library(lubridate)
 *   **定期更新包**：R 社区不断更新和改进包，因此保持包的更新很重要。您可以通过定期运行 `update.packages()` 函数来实现这一点，该函数将检查已安装包的更新并安装任何可用的新版本。
 *   **注意包的依赖关系**：某些包可能依赖于其他包，这意味着您需要安装并加载这些依赖包，才能使用您想要的包。
 
-
-
-
-
-### 避免命名空间冲突
+## 避免命名空间冲突
 
 如果您使用来自多个包且名称相同的函数，可能会遇到命名空间冲突。为避免这种情况，您可以使用 `::` 运算符来指定要使用哪个包的函数。例如，不使用 `summarize()`，而是可以使用 `dplyr::summarize()` 来指定要使用 `dplyr` 包中的 `summarize()` 函数。
 
-### 工作目录
+## 工作目录
 
 使用 R 时，保持文件井然有序至关重要。这意味着为您正在处理的每个项目创建一个文件夹，并将相关文件保留在该文件夹中。R 工作目录是 R 默认启动时所在的文件夹。
 
 R 使用您计算机上的一个指定文件夹（称为工作目录）来定位与特定项目相关的文件。在这里，R 查找要加载的文件并保存文件。在不同的计算机上，您的工作目录位置可能不同，并且一次只能打开一个工作目录。要确定当前工作目录，可以运行以下代码：
 
-```
+```r
 ### 查看当前工作目录
 getwd()
 ## “C:/Users/Hp/Documents”
@@ -674,22 +638,22 @@ getwd()
 
 在整理数据集时，您有两个选择：第一，将文件放入您的工作目录中；第二，将工作目录更改为存储文件的文件夹。您可以使用函数 `setwd()` 并指定新工作目录的文件路径，将工作目录修改为计算机上的任意文件夹。请看以下示例：
 
-```
+```r
 ### 设置工作目录
 setwd(“E:/Book_Project”)
 ```
 
-从菜单栏，您可以点击 **Session | Set Working Directory | Choose Directory**（会话 | 设置工作目录 | 选择目录）来更改工作目录。要查看工作目录中的文件，可以使用函数 `list.files()`。
+从菜单栏，您可以点击 `Session | Set Working Directory | Choose Directory`（会话 | 设置工作目录 | 选择目录）来更改工作目录。要查看工作目录中的文件，可以使用函数 `list.files()`。
 
 在 R 中读写文件时，注意您的工作目录至关重要。如果您不在正确的文件夹中工作，可能会遇到错误或覆盖现有文件。保持文件井然有序并适当设置工作目录，可确保您的 R 代码具有可复现性，且易于与他人共享。
 
-### 对象
+## 对象
 
 让我们回到 Aarya 的例子。为了分析她的 Netflix 使用情况，Aarya 首先必须理解 R 中对象的概念。对象是一种通过将数据存储在指定名称内来保存数据的方式，该名称可用于调用存储的数据。所有数据都存储在对象中，范围从简单的数字或字符串到复杂的结构，如统计分析摘要和绘图。
 
 为了继续她的分析，Aarya 创建了三个不同的 R 对象，分别称为 `hours_watched_movies`、`hours_watched_tv` 和 `total_hours_watched`，以分别保存她观看电影、电视节目以及观看 Netflix 总共花费的小时数。有了这些对象，Aarya 可以执行许多操作来高效地分析她的数据。要将名称分配给数字，您可以使用赋值运算符：`<-`（`<` 和 `-` 之间无空格）。请看以下示例：
 
-```
+```r
 # 定义 hours_watched_movies
 hours_watched_movies <- 6
 
@@ -702,7 +666,7 @@ total_hours_watched <- 18
 
 要检查 `total_hours_watched` 对象中存储的内容，Aarya 只需在 R 控制台中输入其名称 `total_hours_watched`，它将在下一行显示对象值：
 
-```
+```r
 # 显示存储在 total_hours_watched 中的值
 total_hours_watched
 ## 18
@@ -712,15 +676,15 @@ total_hours_watched
 
 现在，让我们看看 Aarya 如何创建各种 R 对象并为它们赋值，以高效地分析她的数据。
 
-### 向量
+## 向量
 
 向量是相同数据类型元素的集合。向量可以包含数字、字符或逻辑值，但不能包含这些数据类型的混合。向量是 R 最基本的数据结构，用于许多不同的目的，例如存储数据或执行数学运算。向量可以被视为一维数组，向量中的每个元素都有一个索引或位置。理解如何创建和操作向量至关重要，因为它们是更复杂的数据结构和分析的基础。让我们进一步了解其中一些类型的向量。
 
-#### 数值向量
+### 数值向量
 
 Aarya 可以使用数值向量来存储她在 Netflix 上观看的每部电影或电视节目的时长。例如，她可以创建一个名为 `movie_durations` 的数值向量，并将她观看的每部电影的时长分配给它。例如：
 
-```
+```r
 # 创建观看电影时长的向量
 movie_durations <- c(98, 109, 124, 138, 115, 149)
 
@@ -731,11 +695,11 @@ movie_durations
 
 这将创建一个名为 `movie_durations` 的数值向量，包含 6 个元素，分别代表她观看的每部电影的时长（以分钟为单位）。`c()` 用于创建向量或将两个或更多向量连接在一起。`c()` 函数代表 combine（合并）或 concatenate（连接），是 R 中最常用的函数之一。
 
-#### 字符向量
+### 字符向量
 
 字符向量存储一系列字符值。字符值是您想要存储的任何文本，例如单词、句子或单个字符。您可以使用 `c()` 函数通过用引号括起值来创建字符向量。例如，Aarya 创建一个字符向量来存储她观看的电影：
 
-```
+```r
 # 创建观看电影标题的向量
 movie_titles <- c(“Rush Hour”, “Knight and Day”, “The Notebook”, “Shutter Island”, “Now you see me”, “The Da Vinci Code”)
 
@@ -749,7 +713,7 @@ movie_titles
 
 现在，如果 Aarya 想知道她上个月看了多少部电影，她可以使用 `length()` 函数来确定该向量中有多少个元素，如以下示例所示：
 
-```
+```r
 # 计算 movie_titles 中的元素数量
 num_movie_titles <- length(movie_titles)
 
@@ -758,11 +722,11 @@ cat(“Number of movies watched on Netflix last month:”, num_movie_titles)
 ## Number of movies watched on Netflix last month: 6
 ```
 
-#### 逻辑向量
+### 逻辑向量
 
 R 形式的布尔数据是存储 `TRUE` 和 `FALSE` 的逻辑向量。指示 Aarya 在给定日期是否观看了电影的向量显示如下：
 
-```
+```r
 # 创建逻辑向量 watched
 watched <- c(TRUE, FALSE, TRUE, FALSE, TRUE, TRUE, FALSE)
 
@@ -773,7 +737,7 @@ watched
 
 对于指示 Aarya 是否在给定类型中观看了电影的向量：
 
-```
+```r
 # 创建向量 genre
 genre <- c(“Action”, “Action”, “Romance”, “Thriller”, “Thriller”, “Thriller”)
 
@@ -787,7 +751,7 @@ watched_thriller
 
 对于指示 Aarya 对电影或电视节目给出“赞”或“踩”评分的向量：
 
-```
+```r
 # 创建向量 rating
 rating <- c(“Thumbs Up”, “Thumbs Down”, “Thumbs Down”, “Thumbs Up”, “Thumbs Up”, “Thumbs Up”)
 
@@ -800,14 +764,6 @@ watched_good
 ```
 
 R 中最常用的逻辑运算符有：
-
-| Operators | Description |
-| --- | --- |
-
-
-
-
-#### 逻辑运算符
 
 | 运算符 | 含义 |
 | :--- | :--- |
@@ -823,9 +779,7 @@ R 中最常用的逻辑运算符有：
 
 **表 2.2：R 语言中使用的逻辑运算符**
 
-### 属性
-
-Attributes
+## 属性
 
 属性是与 R 对象关联的附加信息。它们提供关于对象的元数据，例如名称、维度、类或描述其属性的其他信息。属性不影响对象的行为，但有助于组织和操作数据。
 
@@ -833,7 +787,7 @@ Attributes
 
 通过使用属性，Aarya 可以跟踪数据的结构和属性，这有助于她更有效地操作和分析数据。属性在 R 编程中也起着至关重要的作用，因为许多函数和操作使用它们来确定如何处理或转换数据。下文将进一步讨论不同类型的属性。
 
-#### 名称
+### 名称
 
 `names()` 函数为向量、列表或数组的元素分配或检索名称。它是组织数据并使其更易于理解的宝贵工具。
 
@@ -872,7 +826,7 @@ duration
 ## 120 142 64 90 185
 ```
 
-#### 维度
+### 维度
 
 `dim()` 函数通过分配维度属性将向量转换为 n 维数组。为此，您可以将 `dim()` 设置为长度为 n 的向量，其中 n 是您希望数组拥有的维度数。这允许您重塑和操作存储在向量中的数据，以适应特定的矩阵或数组结构。
 
@@ -894,9 +848,7 @@ duration
 
 R 始终将 `dim` 中的第一个值视为行数，第二个值视为列数。在任何涉及行和列的 R 操作中，行总是排在第一位。
 
-### 矩阵
-
-Matrices
+## 矩阵
 
 矩阵是只能容纳同类数据的二维数组。您可以将矩阵视为一组长度相同、按矩形模式排列的向量。`matrix()` 方法用于构建矩阵。
 
@@ -939,6 +891,8 @@ tv_matrix
 
 默认情况下，`matrix()` 按列填充矩阵，如果您想按行填充，可以将参数 `byrow` 设置为 `TRUE`。现在 Aarya 可以使用 `dim()` 方法获取矩阵的维度：
 
+
+
 ```r
 # get the dimensions of the matrix
 dim(tv_matrix)
@@ -947,9 +901,7 @@ dim(tv_matrix)
 
 输出显示 `tv_matrix` 有 2 行 2 列（第一个值是行数，第二个值是列数）。
 
-### 数组
-
-Arrays
+## 数组
 
 数组是具有两个以上维度的多维对象，可以包含任意类型的数据，类似于矩阵。与向量或矩阵相比，Aarya 可以使用数组以更复杂的方式存储和分析她的 Netflix 数据。
 
@@ -1029,20 +981,14 @@ duration_array
 ## days      Comedy Action
 ## Week 1      20     25
 ## Week 2      21     26
+## Week 3      22     27
+## Week 4      23     28
+## Week 5      24     29
 ```
-
-
-
-
-## 第 3 周 22 27
-
-## 第 4 周 23 28
-
-## 第 5 周 24 29
 
 正如我们在此处所见，Aarya 创建了一个名为 `duration_array` 的三维数组来存储她的 Netflix 数据。该数组有 5 行（每周一行）、2 列（一列用于喜剧，一列用于动作片）和 3 层（每层对应一种观看 Netflix 的设备）。她使用 `dimnames()` 为数组的每个维度分配了名称。
 
-### 类
+## 类
 
 R 中的每个对象都有一个 `class` 属性，用于标识该对象的类型。这一点至关重要，因为 R 拥有大量可用于各种对象类型的函数。例如，你可以使用 `mean()` 函数计算数值向量的平均值，但不能用它来计算字符向量的平均值。这是因为对字符串求平均值在逻辑上讲不通。
 
@@ -1066,7 +1012,7 @@ R 中的每个对象都有一个 `class` 属性，用于标识该对象的类型
 
 > **注意：** 你也可以使用 `c()` 连接不同数据类型的向量，例如数值向量和字符向量。然而，当你连接不同数据类型的向量时，R 会将所有值转换为单一数据类型。
 
-### 日期和时间
+## 日期和时间
 
 R 提供了多种用于处理日期和时间的类，包括 `Date`、`POSIXct` 和 `POSIXlt`。这些类使 Aarya 能够存储和操作日期和时间值，从而更容易随时间分析她的 Netflix 使用情况。
 
@@ -1111,7 +1057,7 @@ jan_total_duration
 
 通过这种方式，Aarya 可以利用日期和时间对她的 Netflix 使用情况随时间的变化进行基本计算和分析。
 
-### 因子
+## 因子
 
 在 R 中，分类数据使用因子表示。电影类型或评分是固定可能值集合内分类数据的示例。在 R 对因子的表示中，每个数字代表一个不同的类别。
 
@@ -1139,7 +1085,7 @@ Aarya 可以按如下方式从这些向量创建因子：
 # 为电影类型创建因子
 movie_genres_factor <- factor(movie_genres)
 
-# movie_ratings 的类（原文如此，应为 movie_genres_factor 的类）
+# movie_genres_factor 的类
 class(movie_genres_factor)
 ## "factor"
 
@@ -1195,13 +1141,7 @@ levels(movie_ratings_ordered_factor)
 
 因子是 R 中表示分类数据的基本数据类型，`factor()` 函数可以轻松地将字符向量转换为因子。
 
-### 列表
-
-
-
-
-
-# R 语言中的列表
+## 列表
 
 列表是 R 语言中一种有用的数据结构，可以容纳任意 R 对象的集合。与向量和矩阵不同，列表中的对象允许不同的类型，包括字符型、数值型，甚至其他列表。因此，列表非常通用，有助于完成各种任务，例如排列复杂的数据结构或开发自定义函数。Aarya 可以使用列表以有意义的方式组织她的 Netflix 数据，如下面的列表所示：
 
@@ -1238,7 +1178,7 @@ movies_list
 
 在本例中，我们创建了一个名为 `movies_list` 的列表，它包含四个不同类型的向量——字符型、数值型、因子和有序因子。我们使用 `list()` 函数创建列表，并使用相同的语法为每个向量分配了名称。
 
-### 数据框
+## 数据框
 
 数据框是一种包含行和列的表格结构。它无非就是列表的二维版本。每一列可以有不同的数据类型，且必须有一个名称。数据框常用于存储和操作数据，因为它们易于处理，并允许进行许多操作，例如筛选、排序和汇总数据。让我们熟悉一下数据框，这是最常用的 R 对象之一。
 
@@ -1289,6 +1229,10 @@ str(netflix_df)
 
 ## 输出
 
+
+
+## 数据框结构输出
+
 ```
 ## 'data.frame': 3 obs. of 3 variables:
 ## $ movie_names: chr "Inception" "The Dark Knight" "Edge of Tomorrow"
@@ -1317,7 +1261,7 @@ View(netflix_data)
 
 ![](img/Figure2.8.jpg)
 
-图 2.8：View(netflix_data) 的 R 语言输出
+图 2.8：`View(netflix_data)` 的 R 语言输出
 
 ### 函数
 
@@ -1371,7 +1315,7 @@ calculate_conversion_rate <- function(impressions, clicks) {
 
 这里，`impressions` 是营销信息展示的次数，`clicks` 是被点击的次数。该函数通过将点击次数除以展示次数来计算转化率。
 
-你可以将 `conversion_rate` 函数用于包含展示次数和点击次数的数据向量：
+你可以将 `calculate_conversion_rate` 函数用于包含展示次数和点击次数的数据向量：
 
 ```r
 # 定义展示次数和点击次数向量
@@ -1391,7 +1335,7 @@ conversion_rates
 ## 0.07468880 0.03750000 0.05352480 0.05120702
 ```
 
-这里，我们定义了两个数据向量 `impressions` 和 `clicks`，分别包含四个不同广告活动的展示次数和点击次数。然后我们将这些向量作为参数传递给 `conversion_rate` 函数，该函数计算每个活动的转化率并返回一个结果向量。我们也可以使用 `round()` 来对结果进行四舍五入。
+这里，我们定义了两个数据向量 `impressions` 和 `clicks`，分别包含四个不同广告活动的展示次数和点击次数。然后我们将这些向量作为参数传递给 `calculate_conversion_rate` 函数，该函数计算每个活动的转化率并返回一个结果向量。我们也可以使用 `round()` 来对结果进行四舍五入。
 
 #### 金融
 
@@ -1407,14 +1351,6 @@ calculate_compound_interest <- function(principal, interest_rate, years, compoun
 
 # 定义向量输入
 principal <- c(5000, 7500, 9200)
-```
-
-
-
-
-## 计算复利
-
-```r
 interest_rate <- c(0.05, 0.06, 0.09)
 years <- c(1, 2, 3)
 compounding_frequency <- c(1, 2, 4)
@@ -1470,7 +1406,7 @@ help(select, package = "dplyr")
 
 上述命令将返回 `dplyr` 包中 `select` 函数的文档。随着你在 R 方面知识和熟练度的提高，帮助页面对于了解特定函数和包的更多信息非常有用。
 
-##### 加载数据
+#### 加载数据
 
 将外部数据导入 R 是项目的初始步骤之一。数据通常以表格格式保存，如电子表格或 CSV 文件。开源社区最常使用逗号分隔值（`.csv`）格式。可以使用 `read.csv()` 函数读取 CSV 文件，它要求 CSV 文件使用 `.` 作为小数点，`,` 作为分隔符。
 
@@ -1590,8 +1526,6 @@ saveRDS(my_data, file = "my_data.rds")
 
 ### R 编码规范
 
-
-
 您可以遵循许多约定和最佳实践，以在 R 中编写清晰、高效且可维护的代码。下面列出了一些：
 
 *   R 区分大小写，意味着大写和小写字母会被区别对待。对变量和函数名使用小写字母是一种良好的实践。
@@ -1617,6 +1551,8 @@ saveRDS(my_data, file = "my_data.rds")
 ![fm1](img/fm1.png)
 
 ## 第 3 章：探索数据
+
+
 
 ### 简介
 
@@ -1685,14 +1621,9 @@ library(dslabs)
 library(tidyverse)
 ```
 
-
-
-# 让我们加载 tidyverse
-
-让我们加载 tidyverse，它将加载 dplyr 以及其他包。tidyverse 是由 RStudio 开发的一组 R 包（Wickham 等人，2019），已成为数据分析最流行的框架之一。
+#### 加载数据
 
 ```r
-##### 加载数据
 data(gapminder)
 
 # 要熟悉此数据集，您可能想要使用以下函数
@@ -1752,7 +1683,7 @@ ncol(gapminder)
 
 #### 重命名列
 
-如何在数据集中将 population 列重命名为 `country_population`，将 GDP 列重命名为 `country_gdp`？
+如何在数据集中将 `population` 列重命名为 `country_population`，将 `gdp` 列重命名为 `country_gdp`？
 
 为了使我们的数据更易于处理，我们经常需要重命名列名以更好地反映其内容。以下是使用 `dplyr` 包中的 `rename()` 函数执行此操作的示例：
 
@@ -1761,7 +1692,7 @@ ncol(gapminder)
 gapminder <- rename(gapminder, country_population = population, country_gdp = gdp)
 ```
 
-> **注意：** 我们在上述命令中重命名了两列（population 和 gdp），并且在整个章节中将使用此更新后的 Gapminder DataFrame。
+> **注意：** 我们在上述命令中重命名了两列（`population` 和 `gdp`），并且在整个章节中将使用此更新后的 Gapminder DataFrame。
 
 探索数据是在数据准备和核心分析阶段都要完成的任务之一。
 
@@ -1771,7 +1702,7 @@ gapminder <- rename(gapminder, country_population = population, country_gdp = gd
 
 让我们探索一些可以向数据集提出的问题。
 
-## 如何从数据集中选择 country、year、infant mortality 和 life expectancy 变量？
+##### 如何从数据集中选择 country、year、infant mortality 和 life expectancy 变量？
 
 ```r
 # 选择 country、year、infant mortality 和 life expectancy 变量
@@ -1801,7 +1732,7 @@ gapminder_subset2 <- select(gapminder, country:life_expectancy)
 
 这些函数让您能够快速匹配满足某些标准的较大变量块。有关更多详细信息，请参阅 `?select`。让我们检查其中几个：
 
-## 如何从数据集中仅选择列名以字符串 country 开头的列？
+##### 如何从数据集中仅选择列名以字符串 country 开头的列？
 
 ```r
 # 选择所有以 "country" 开头的列
@@ -1818,7 +1749,7 @@ colnames(gapminder_subset3)
 
 `starts_with()` 函数在 `select()` 内部使用，用于选择以特定字符串开头的列。在本例中，它用于选择所有以单词 country 开头的列。
 
-## 如何排除 continent 和 region 列？
+##### 如何排除 continent 和 region 列？
 
 ```r
 # 选择除 continent 和 region 之外的所有列
@@ -1827,7 +1758,7 @@ gapminder_subset4 <- select(gapminder, -continent, -region)
 
 通过在我们想要消除的列名前放置一个减号（`-`），我们实际上是在指示 R 选择除指定列之外的所有列。
 
-## 数据是针对哪些年份收集的？
+##### 数据是针对哪些年份收集的？
 
 您需要从 `year` 列中提取此数据。使用 `dplyr` 包，您可以使用两个主要函数来提取变量：`pull()` 和 `select()`。
 
@@ -1852,9 +1783,7 @@ unique_years <- unique(select(gapminder, year))
 View(unique_years)
 ```
 
-
-
-# 确定数据收集的年份跨度
+##### 确定数据收集的年份跨度
 
 您可以使用存在的唯一年份数量的 `length()`。
 
@@ -1864,14 +1793,14 @@ View(unique_years)
 
 #### 筛选行
 
-如何筛选数据集，仅包含 2015 年预期寿命大于 70 岁的亚洲国家？
+##### 如何筛选数据集，仅包含 2015 年预期寿命大于 70 岁的亚洲国家？
 
 *   **筛选 2015 年预期寿命 > 70 岁的亚洲国家**
 *   `gapminder_asia <- filter(gapminder, year == 2015, continent == "Asia", life_expectancy > 70)`
 
 我们使用 `filter()` 仅提取 2015 年、亚洲大陆且预期寿命大于 70 的观测值。
 
-如何创建一个 Gapminder 数据集的子集，仅包含美洲和亚洲大陆的国家？
+##### 如何创建一个 Gapminder 数据集的子集，仅包含美洲和亚洲大陆的国家？
 
 *   **创建一个仅包含美洲和亚洲大陆国家的 gapminder 数据集子集。**
 *   `gapminder_asia_america <- filter(gapminder, continent == "Americas" | continent == "Asia")`
@@ -1882,13 +1811,13 @@ View(unique_years)
 
 与使用 `|` 运算符的前一个命令相比，上述使用 `%in%` 运算符的命令更好，因为它更简洁且易于阅读，尤其是在需要筛选多个值时。在这里，我们仅保留 `continent` 列的值属于两个类别之一（亚洲或美洲）的行。
 
-# 引入管道操作符
+#### 引入管道操作符
 
 `%>%` 操作符通常被称为管道操作符。它用于以可读且高效的方式将多个操作链接在一起。
 
-2010 年，预期寿命大于 70 岁的亚洲和欧洲国家的总人口、GDP 和婴儿死亡率是多少？
+##### 2010 年，预期寿命大于 70 岁的亚洲和欧洲国家的总人口、GDP 和婴儿死亡率是多少？
 
-```
+```r
 gapminder_asia_europe <- gapminder %>%
   filter(year == 2010, continent %in% c("Asia", "Europe"), life_expectancy > 70) %>%
   select(country, continent, country_population, country_gdp, infant_mortality, life_expectancy)
@@ -1899,6 +1828,8 @@ gapminder_asia_europe <- gapminder %>%
 此命令中的第二个操作是使用 `select()` 函数从筛选后的数据集中选择特定列。选定的列包括 `country`、`continent`、`country_population`、`country_gdp`、`infant_mortality` 和 `life_expectancy`。
 
 因此，生成的 `gapminder_subset` 数据集将仅包含年份为 2010、大陆为亚洲或欧洲且预期寿命大于 70 的行。
+
+
 
 `%>%` 操作符获取左侧函数的输出，并将其作为第一个参数传递给右侧的函数。这使您能够以一种易于阅读和理解的方式将多个函数链接在一起。
 
@@ -1930,7 +1861,7 @@ gapminder_asia_europe <- gapminder %>%
 
 管道操作符是一种多功能工具，有助于简化工作流，使编码更高效、更易读。它将复杂的数据转换转化为优雅且易于遵循的序列。
 
-#### 数据去重
+### 数据去重
 
 数据集中有哪些不同的大陆类别？
 
@@ -1985,7 +1916,7 @@ gapminder_asia_europe <- gapminder %>%
 
 此命令使用 `distinct()` 函数仅选择不同的国家名称。然后，使用 `dplyr` 中的 `count()` 函数计算唯一国家的数量。
 
-#### 数据排序
+### 数据排序
 
 如何根据人口规模对国家进行排名，以确定 2015 年人口最多的前几个国家？
 
@@ -2031,12 +1962,9 @@ gapminder_asia_europe <- gapminder %>%
 
 此命令包含 2015 年的数据，按预期寿命降序排序，选择三列（`country`、`life_expectancy` 和 `country_population`），并返回生成的 DataFrame 的前 10 行。
 
-#### 添加新列
+### 添加新列
 
 来自 `dplyr` 包的 `mutate()` 函数用于根据现有列在 DataFrame 中创建新列。它将 DataFrame 作为第一个参数，后续参数指定要添加的新列。
-
-
-
 
 `mutate()` 的一个关键方面是它会创建一个包含额外列的新 DataFrame，而不是就地修改原始 DataFrame。这是一个宝贵的特性，因为它允许用户保留原始数据的记录，并应用多重转换而不会覆盖它。
 
@@ -2065,7 +1993,7 @@ gapminder_asia_europe <- gapminder %>%
 
 该变量有助于分析和比较亚洲国家与区域外国家之间的趋势和模式。
 
-#### 处理因子
+### 处理因子
 
 在 R 中使用因子的一个主要优势是，它提供了一种保留数据底层顺序的方法，这对于分析和可视化可能是必要的。例如，假设你有一个客户满意度评分数据集，评分范围为 1 到 5，其中 1 代表非常不满意，5 代表非常满意。如果你将此变量存储为因子，R 将保留水平的顺序，这对于计算汇总统计量非常重要。
 
@@ -2153,7 +2081,7 @@ gapminder_asia_europe <- gapminder %>%
 
 此命令将通过将水平 Asia 移动到第一个默认水平之后的第二位来修改 `continent` 列。参数 `after` 指定了水平应移动到的位置。
 
-###### 处理缺失值
+### 处理缺失值
 
 符号 `NA`（不可用）在 R 中用于表示缺失值，而不可能的值（如除以零）则用非数字 (`NaN`) 表示。
 
@@ -2172,11 +2100,7 @@ gapminder_asia_europe <- gapminder %>%
 *   `## country year infant_mortality life_expectancy fertility`
 *   `## 0 0 1453 0 187`
 
-
-
-
-
-##### 初始数据概览
+#### 初始数据概览
 
 | country_population | country_gdp | continent | region |
 | :--- | :--- | :--- | :--- |
@@ -2184,7 +2108,9 @@ gapminder_asia_europe <- gapminder %>%
 
 初始阶段涉及识别数据集中每列缺失值的数量或比例。这有助于理解缺失值在各列中的模式和范围。首先，让我们编写一个函数来创建 DataFrame，以显示 Gapminder 数据集的缺失值摘要。
 
-###### 显示缺失值摘要的函数
+#### 显示缺失值摘要的函数
+
+
 
 ```r
 # function to display the missing values summary
@@ -2217,7 +2143,7 @@ gapminder_NA_summ <- missing_values_df(gapminder)
 gapminder_NA_summ
 ```
 
-###### 缺失值统计结果
+### 缺失值统计结果
 
 | | Missing Values | % of Total Values |
 | :--- | :--- | :--- |
@@ -2226,7 +2152,7 @@ gapminder_NA_summ
 | fertility | 187 | 1.8 |
 | country_population | 185 | 1.8 |
 
-###### 使用 naniar 库可视化检测缺失数据
+### 使用 naniar 库可视化检测缺失数据
 
 缺失值是数据分析中常见的现象，可能由多种原因引起，例如数据录入错误、设备故障或无响应。缺失值非常普遍，以至于很难找到一个没有缺失值的数据集。忽略或不当处理缺失值可能导致有偏或不准确的结果，后果可能很严重。幸运的是，有许多方法和技术可帮助您管理数据中的缺失值。这样，即使使用不完整的数据，也能确保分析可靠且有效。
 
@@ -2261,13 +2187,15 @@ gg_miss_var(gapminder)
 
 **图 3.3：可视化每个变量的缺失值数量**
 
-###### 缺失值的原因
+### 缺失值的原因
 
 在处理缺失数据时，首先必须了解数据缺失的原因。不同类型的缺失数据会以不同方式影响您的结果。让我们将其分为三类：
 
-*   **完全随机缺失**：当某变量中的缺失值与数据集中的任何其他变量或该变量本身完全无关时发生。换句话说，缺失性没有可辨别的模式，只是随机发生。
-*   **随机缺失**：对于 MAR，缺失性并非随机，但可以通过数据集中具有完整信息的其他变量来预测，这意味着缺失性取决于数据集中的其他因素，但这些因素是已知的且可被考虑在内。
-*   **非随机缺失**：当缺失性取决于未观测到的数据或缺失数据的实际值时发生。这比较棘手，因为缺失值可能与数据集中未包含的关键变量相关，从而导致有偏或不准确的结果。
+*   **完全随机缺失 (MCAR)**：当某变量中的缺失值与数据集中的任何其他变量或该变量本身完全无关时发生。换句话说，缺失性没有可辨别的模式，只是随机发生。
+
+*   **随机缺失 (MAR)**：对于 MAR，缺失性并非随机，但可以通过数据集中具有完整信息的其他变量来预测，这意味着缺失性取决于数据集中的其他因素，但这些因素是已知的且可被考虑在内。
+
+*   **非随机缺失 (MNAR)**：当缺失性取决于未观测到的数据或缺失数据的实际值时发生。这比较棘手，因为缺失值可能与数据集中未包含的关键变量相关，从而导致有偏或不准确的结果。
 
 通过了解不同类型的缺失数据，您可以就是如何处理它们以及它们如何影响分析做出明智的决定。
 
@@ -2301,16 +2229,13 @@ gg_miss_fct(x = gapminder, fct = year)
 
 图 3.4 提供了关于四个变量中 185 个缺失值的洞察。进一步检查数据，图 3.5 证实这些案例对应 2016 年。这一额外验证加深了我们对数据集中缺失值的理解，并为未来的分析提供了有用信息。
 
-###### 处理缺失值
+### 处理缺失值
 
 在处理真实世界的数据集时，缺失数据是一个常见问题，根据问题的性质和程度，有不同的策略来处理缺失值。一些流行的方法包括删除法（移除不完整的观测值或整个变量）和插补法（用从可用信息得出的估计值替换缺失值）。这两种方法都有优缺点，选择正确的策略取决于缺失量和模式以及分析目标等因素。
 
-###### 删除法
+#### 删除法
 
-
-
-
-# 删除缺失值
+##### 删除缺失值
 
 通常不建议删除缺失值，因为这可能导致数据集中有价值信息的丢失。在大多数情况下，最好避免删除，除非缺失值的比例非常小。在这种情况下，移除缺失值可以是一个合理的选择，而不会显著影响数据集的完整性。缺失值的不同删除方法如图 3.6 所示：
 
@@ -2318,11 +2243,11 @@ gg_miss_fct(x = gapminder, fct = year)
 
 **图 3.6：缺失值的删除方法**
 
-####### 逐列表删除（删除整行）
+##### 逐列表删除（删除整行）
 
 此方法移除包含缺失值的整行数据，也称为完全病例删除。然而，逐列表删除仅适用于完全随机缺失 `MCAR` 的值。下面的代码展示了使用 `drop_na()` 进行逐列表删除：
 
-```
+```r
 # check the dimensions of gapminder
 dim(gapminder)
 ## 10545 9
@@ -2343,11 +2268,11 @@ dim(drop_rows_fertility)
 # The above command removed 187 rows from gapminder that has missing values in the column "fertility"
 ```
 
-####### 删除整列
+##### 删除整列
 
 有时，数据集中的某一列可能包含高比例的缺失值，例如 80% 或更多。如果该特征对分析不重要，可能会想要将其从数据集中删除。然而，必须记住，删除数据是处理缺失值的一种不可靠方法。虽然移除高缺失率的特征可以使数据集变得易于管理，但也可能导致有价值信息的丢失，而这些信息对其他分析可能很有用。因此，通常建议在求助于删除之前，先探索处理缺失值的不同方法。在下面的示例中，我们将重点从 Gapminder 数据集中移除特定列 `country_gdp`：
 
-```
+```r
 # drop the column country_gdp (using base R)
 gapminder$country_gdp <- NULL
 
@@ -2357,7 +2282,7 @@ gapminder <- select(gapminder, -country_gdp)
 
 上述代码同时使用了基础 R 和 `dplyr` 包从 Gapminder 数据框中移除 `country_gdp` 列。
 
-###### 插补
+#### 插补
 
 插补是用估计值替换数据集中缺失值的另一种方法。插补使用的方法可能因问题的性质和被分析的数据而异。有许多插补方法，每种都有其优缺点，方法的选择应根据分析的具体需求仔细考虑。图 3.7 展示了在数据集中插补缺失值的各种技术：
 
@@ -2365,15 +2290,18 @@ gapminder <- select(gapminder, -country_gdp)
 
 **图 3.7：缺失值的插补技术**
 
-####### 针对非时间序列问题的典型插补技术
+##### 针对非时间序列问题的典型插补技术
 
 *   **用常数值插补**：处理缺失数据的一种方法是用常数值进行插补。这涉及用单个值（例如，替换为 `0`）替换数据集中的所有缺失值。虽然这种方法简单易行，但可能并不适用于所有数据类型。
+
 *   **使用列统计量插补**：插补缺失值的另一种常用方法是使用相应列的统计量，如 `mean`（均值）、`median`（中位数）或 `mode`（众数）。这种方法涉及计算非缺失值的列级统计量，并用计算出的值替换缺失值。当缺失数据没有显著影响数据的整体分布时，这种方法可能很有效。
 
-####### 时间序列问题的插补技术
+##### 时间序列问题的插补技术
 
 *   **用最后观测值替换缺失值（前向填充）**：此方法涉及用数据中最近观测到的前一个值替换缺失值。该方法假设缺失值可能与最近的前一个观测值相似。
+
 *   **用下一个观测值替换缺失值（后向填充）**：此方法用数据中最近观测到的后一个值替换缺失值。该方法假设缺失值与下一个观测值相似。
+
 *   **线性插值和样条插值方法**：插值根据周围的数据点估算缺失值。线性插值涉及用一条直线连接两个相邻数据点，并利用这条线估算缺失值。样条插值是一种复杂的方法，涉及拟合一条曲线通过数据点，并利用这条曲线估算缺失值。这两种方法都能有效插补缺失数据，但样条插值往往比线性插值更准确、更灵活。然而，必须注意，插值假设数据具有一定程度的连续性，如果缺失值不能被周围数据很好地代表，则可能不适用。
 
 表 3.2 列出了通常用于插补缺失值的基本 R 函数：
@@ -2407,9 +2335,6 @@ gapminder <- select(gapminder, -country_gdp)
 
 ### 简介
 
-
-
-
 ### 数据清洗
 
 本章将深入探讨数据清洗。在得出任何有意义的见解之前，操纵 `DataFrames`（如重塑和重组）的能力往往变得至关重要。`DataFrames` 通常需要重塑以用于分析或可视化目的。在本章的第一部分中，您将学习将数据表从长格式转换为宽格式以及反之亦然的过程。您将学习如何根据特定标准汇总数据并对分组数据执行操作。我们还将深入探讨选择列和筛选行，重点关注处理聚合数据。合并来自多个来源的数据是数据分析中的常见任务，因此我们也将探讨这一点。
@@ -2419,14 +2344,23 @@ gapminder <- select(gapminder, -country_gdp)
 在本章中，您将探索以下主题以增强您的数据操作技能：
 
 *   **数据透视**
+
     *   长格式和宽格式数据
+
     *   将宽格式转换为长格式
+
     *   将长格式转换为宽格式
+
 *   **分组与汇总**
+
     *   对分组数据进行筛选
+
     *   在分组数据上添加新列
+
 *   **合并数据**
+
     *   绑定数据：`rbind()` 和 `cbind()`
+
     *   连接：内连接、外连接、左连接和右连接
 
 ### 目标
@@ -2451,7 +2385,7 @@ gapminder <- select(gapminder, -country_gdp)
 | Thursday | 15 | 6 | 8 |
 | Friday | 11 | 4 | 10 |
 
-**表 4.1**：宽格式数据示例
+**表 4.1：宽格式数据示例**
 
 这是宽数据的一个示例，因为每种水果类型都有一个单独的列。宽数据的优势在于易于阅读和理解。您可能希望以不同方式分析数据集。有时，您希望在各自的列中查看每个变量，有时，您希望在单个列中查看所有变量。这就是宽格式和长格式数据发挥作用的地方。
 
@@ -2463,6 +2397,9 @@ gapminder <- select(gapminder, -country_gdp)
 | Monday | Bananas | 5 |
 | Monday | Oranges | 7 |
 | Tuesday | Apples | 8 |
+
+
+
 | Tuesday | Bananas | 3 |
 | Tuesday | Oranges | 9 |
 | Wednesday | Apples | 12 |
@@ -2479,11 +2416,11 @@ gapminder <- select(gapminder, -country_gdp)
 
 通常，当您有一组固定的列对应感兴趣的变量时，宽数据是合适的；当您有许多不同的变量应组织成行时，长数据是合适的。
 
-##### 介绍 reshape2
+### 介绍 reshape2
 
 Hadley Wickham 创建了 `reshape2` 包，它有助于轻松地在宽格式和长格式之间转换数据。`reshape2` 包使用两个主要函数：`melt()` 和 `cast()`。`melt()` 将数据从宽格式转换为长格式，而 `cast()` 接受长格式数据并将其转换回宽格式。
 
-##### 加载数据
+### 加载数据
 
 为了阐述本主题，我们将使用加州大学欧文分校（UCI）机器学习存储库上提供的伯明翰停车数据集作为示例数据集。**表 4.3** 描述了停车数据集：
 
@@ -2562,14 +2499,11 @@ nrow(parking_df)
 ## [1] 35501
 ```
 
-##### 将宽格式数据转换为长格式数据
+### 将宽格式数据转换为长格式数据
 
 `melt()` 函数是将宽格式数据转换为长格式数据的有用工具。这对于数据分析和可视化非常有帮助，因为许多统计和图形方法要求数据采用长格式。
 
-
-
-
-# 使用 `melt()` 和 `dcast()` 重塑数据
+### 使用 `melt()` 和 `dcast()` 重塑数据
 
 `melt()` 的关键参数之一是 `id.vars`。该参数指定在长格式数据中保留哪些列作为 ID 变量。这些列将保持原样，输出数据中的每一行将对应 ID 变量中值的唯一组合。
 
@@ -2615,7 +2549,7 @@ head(parking_melt)
 ## BHMBCCMKT01 2016-10-04 10:26:49 Capacity 577
 ```
 
-##### 将长格式数据转换为宽格式数据
+### 将长格式数据转换为宽格式数据
 
 `reshape2` 包提供了多个函数用于将数据从长格式转换为宽格式。由于我们经常处理 DataFrame，我们将重点关注 `dcast()` 函数。如果需要，也可以使用 `acast()` 转换为向量、矩阵或数组。
 
@@ -2722,17 +2656,12 @@ spending_summary <- wholesale_df %>%
             mean_milk = mean(Milk),
             mean_grocery = mean(Grocery),
             mean_frozen = mean(Frozen),
-            mean_detergents_paper = mean(Detergents_Paper))
+            mean_detergents_paper = mean(Detergents_Paper),
+            mean_delicatessen = mean(Delicassen))
+
+# print the summary
+spending_summary
 ```
-
-
-
-
-## 代码示例与输出
-
-*   `mean_delicatessen = mean(Delicassen)`
-*   `# print the summary`
-*   `spending_summary`
 
 ### 输出结果
 
@@ -2743,14 +2672,22 @@ spending_summary <- wholesale_df %>%
 
 在该代码片段中，使用 `dplyr` 包的 `summarise()` 计算整个数据集中不同产品类别的平均支出。值得注意的是，`summarise()` 结合 `group_by()` 使用时最为有用，后者将分析单位从整个数据集更改为由某一列定义的特定分组：
 
-*   `# group by region and calculate the mean spending on Fresh, Milk, and Grocery product category`
-*   `grouped_data1 <- wholesale_df %>%`
-*   `group_by(Region) %>%`
-*   `summarise(mean_fresh = mean(Fresh),`
-*   `mean_milk = mean(Milk),`
-*   `mean_grocery = mean(Grocery))`
-*   `# view the result`
-*   `View(grouped_data1)`
+
+
+# 分组数据分析
+
+## 按地区分组计算平均支出
+
+```r
+# group by region and calculate the mean spending on Fresh, Milk, and Grocery product category
+grouped_data1 <- wholesale_df %>%
+  group_by(Region) %>%
+  summarise(mean_fresh = mean(Fresh),
+            mean_milk = mean(Milk),
+            mean_grocery = mean(Grocery))
+# view the result
+View(grouped_data1)
+```
 
 ### 输出结果
 
@@ -2763,16 +2700,18 @@ spending_summary <- wholesale_df %>%
 
 上述代码按地区对数据分组，然后计算每个地区三个产品类别的平均年支出。
 
-接下来，计算两个客户渠道（Horeca 和 Retail）在几个产品类别上的总支出：
+## 按渠道分组计算总支出
 
-*   `# group by channel and calculate the total spending on product categories`
-*   `grouped_data2 <- wholesale_df %>%`
-*   `group_by(Channel) %>%`
-*   `summarise(total_fresh = sum(Fresh),`
-*   `total_milk = sum(Milk),`
-*   `total_grocery = sum(Grocery))`
-*   `# view the result`
-*   `View(grouped_data2)`
+```r
+# group by channel and calculate the total spending on product categories
+grouped_data2 <- wholesale_df %>%
+  group_by(Channel) %>%
+  summarise(total_fresh = sum(Fresh),
+            total_milk = sum(Milk),
+            total_grocery = sum(Grocery))
+# view the result
+View(grouped_data2)
+```
 
 ### 输出结果
 
@@ -2782,12 +2721,16 @@ spending_summary <- wholesale_df %>%
 ## Retail 1264414 1521743 2317845
 ```
 
-*   `# group by region and channel, and calculate the number of customers in each group`
-*   `grouped_data3 <- wholesale_df %>%`
-*   `group_by(Region, Channel) %>%`
-*   `summarise(count = n())`
-*   `# view the result`
-*   `View(grouped_data3)`
+## 按地区和渠道分组计算客户数量
+
+```r
+# group by region and channel, and calculate the number of customers in each group
+grouped_data3 <- wholesale_df %>%
+  group_by(Region, Channel) %>%
+  summarise(count = n())
+# view the result
+View(grouped_data3)
+```
 
 ### 输出结果
 
@@ -2801,32 +2744,36 @@ spending_summary <- wholesale_df %>%
 ## Other Region Retail 105
 ```
 
-上述代码使用 `group_by` 函数按 `Region` 和 `Channel` 列对数据集分组。然后使用 `summarize` 函数和 `n()` 函数计算每组的客户数量，`n()` 统计每组中的观测值数量。生成的 DataFrame 每行对应地区和渠道的唯一组合，并显示该组中的客户数量。
+上述代码使用 `group_by` 函数按 `Region` 和 `Channel` 列对数据集分组。然后使用 `summarise` 函数和 `n()` 函数计算每组的客户数量，`n()` 统计每组中的观测值数量。生成的 DataFrame 每行对应地区和渠道的唯一组合，并显示该组中的客户数量。
 
 ## 分组数据上的筛选
 
 分组数据通常在与 `summarise()` 函数结合使用时变得非常有价值，可进行简洁的计算和汇总。但值得注意的是，`mutate()` 和 `filter()` 也提供了可在分组数据上执行的便捷操作，如下所示：
 
-*   `region_high_grocery_spending <- wholesale_df %>%`
-*   `group_by(Region) %>%`
-*   `filter(Grocery > mean(Grocery))`
+```r
+region_high_grocery_spending <- wholesale_df %>%
+  group_by(Region) %>%
+  filter(Grocery > mean(Grocery))
+```
 
 此处，通过按 `Region` 变量对数据分组，并根据杂货产品的高支出（大于各地区内的平均支出）进行筛选，可找出在其所在地区杂货支出高于平均水平的客户子集。筛选后的数据将识别出消费者在杂货产品上的地区性行为差异和偏好。
 
 ## 分组数据上新增列
 
-*   `# Grouping by Region and calculating the total spending per region`
-*   `region_total_spending <- wholesale_df %>%`
-*   `group_by(Region) %>%`
-*   `mutate(total_spending = sum(Fresh, Milk, Grocery, Frozen, Detergents_Paper, Delicassen))`
+```r
+# Grouping by Region and calculating the total spending per region
+region_total_spending <- wholesale_df %>%
+  group_by(Region) %>%
+  mutate(total_spending = sum(Fresh, Milk, Grocery, Frozen, Detergents_Paper, Delicassen))
+```
 
 通过按 `Region` 变量对数据分组并使用 `mutate()` 函数，代码向数据集新增了一个名为 `total_spending` 的变量。该新变量表示各地区不同产品类别支出的总和。各地区的总支出可帮助企业就资源分配、地区支出差异和市场细分识别做出明智决策。
 
-### 合并数据
+# 合并数据
 
 让我们看看在 R 中合并数据的方法：
 
-#### 绑定数据：`rbind()` 和 `cbind()`
+## 绑定数据：`rbind()` 和 `cbind()`
 
 `rbind()` 代表行绑定，允许通过将行堆叠在一起，将两个或多个 DataFrame 合并为单个 DataFrame。为确保生成的 DataFrame 中的列正确对齐且结构一致，必须满足以下条件：
 
@@ -2834,23 +2781,28 @@ spending_summary <- wholesale_df %>%
 *   待合并的 DataFrame 必须具有相同数量的列。
 *   待合并的 DataFrame 中列的顺序应相同。
 
-*   `# create a DataFrame`
-*   `player_df1 <- data.frame(`
-*   `Player_Name = c("Virat Kohli", "Rohit Sharma", "Suresh Raina"),`
-*   `Score = c(102, 53, 45)`
-*   `)`
-*   `# create another DataFrame`
-*   `player_df2 <- data.frame(`
-*   `Player_Name = c("Ravindra Jadeja", "Hardik Pandya"),`
-*   `Score = c(82, 64)`
-*   `)`
+```r
+# create a DataFrame
+player_df1 <- data.frame(
+  Player_Name = c("Virat Kohli", "Rohit Sharma", "Suresh Raina"),
+  Score = c(102, 53, 45)
+)
+
+# create another DataFrame
+player_df2 <- data.frame(
+  Player_Name = c("Ravindra Jadeja", "Hardik Pandya"),
+  Score = c(82, 64)
+)
+```
 
 这里有两个 DataFrame：`player_df1` 和 `player_df2`，包含印度板球运动员在不同比赛中的得分信息。现在假设我们想将这两个 DataFrame 合并为一个显示所有球员所有得分的 DataFrame。可以使用 `rbind()` 函数实现，请看以下代码片段：
 
-*   `# combine the two DataFrames using rbind()`
-*   `player_df_combined <- rbind(player_df1, player_df2)`
-*   `# view the combined DataFrame`
-*   `player_df_combined`
+```r
+# combine the two DataFrames using rbind()
+player_df_combined <- rbind(player_df1, player_df2)
+# view the combined DataFrame
+player_df_combined
+```
 
 ### 输出结果
 
@@ -2865,15 +2817,17 @@ spending_summary <- wholesale_df %>%
 
 `cbind()` 代表列绑定，允许通过将一个 DataFrame 的列附加到另一个 DataFrame 旁边来合并多个 DataFrame。为确保生成的 DataFrame 结构一致，待合并的 DataFrame 必须具有相同数量的行。
 
-*   `# Create a DataFrame with characteristics of the match`
-*   `match_df <- data.frame(`
-*   `Venue = c("Mumbai", "Delhi", "Kolkata"),`
-*   `Date = c("2023-05-15", "2023-05-16", "2023-05-17")`
-*   `)`
-*   `# Combine player_df1 and match_df using cbind`
-*   `combined_df <- cbind(player_df1, match_df)`
-*   `# print combined_df`
-*   `combined_df`
+```r
+# Create a DataFrame with characteristics of the match
+match_df <- data.frame(
+  Venue = c("Mumbai", "Delhi", "Kolkata"),
+  Date = c("2023-05-15", "2023-05-16", "2023-05-17")
+)
+# Combine player_df1 and match_df using cbind
+combined_df <- cbind(player_df1, match_df)
+# print combined_df
+combined_df
+```
 
 ### 输出结果
 
@@ -2884,11 +2838,13 @@ spending_summary <- wholesale_df %>%
 ## Suresh Raina 45 Kolkata 2022-05-17
 ```
 
-#### 连接：内连接、外连接、左连接和右连接
+## 连接：内连接、外连接、左连接和右连接
 
 在数据库领域，有一种称为连接的强大操作，允许基于公共列或变量合并两个表。同样，在 R 中，可以使用 `merge()` 函数基于共享列合并两个 DataFrame。
 
 可以将其想象为拼合两块完美契合的拼图碎片。`merge()` 帮助你基于共同特征（如名称或 ID 号码）匹配碎片。DataFrame 合并后，你可以利用合并的信息进行各种分析和可视化。下表定义了 `merge()` 函数的基本参数。
+
+### `merge()` 函数参数说明
 
 | Argument | Description |
 | --- | --- |
@@ -2897,24 +2853,11 @@ spending_summary <- wholesale_df %>%
 | `by` | 要合并的列。 |
 | `all` | 逻辑值，指示是否包含两个 DataFrame 中的所有观测值（行）（外连接）。 |
 | `all.x` | 逻辑值，指示是否包含第一个 DataFrame 中的所有观测值，即使第二个 DataFrame 中没有匹配行（左连接）。 |
+| `all.y` | 逻辑值，指示是否包含第二个 DataFrame 中的所有观测值，即使在第一个 DataFrame 中没有匹配的行（右连接）。 |
 
+### 创建示例数据框
 
-
-
-
-##### 数据框合并操作
-
-## merge 函数参数说明
-
-| 参数 | 类型 | 说明 |
-|------|------|------|
-| `all.y` | 逻辑值 | 指示是否包含第二个数据框中的所有观测值，即使在第一个数据框中没有匹配的行（右连接）。 |
-
-**表 4.4：merge 函数参数说明**
-
-##### 创建示例数据框
-
-### transactions 数据框
+#### `transactions` 数据框
 
 创建一个包含借记卡交易信息的 `transactions` 数据框：
 
@@ -2948,7 +2891,7 @@ transactions
 ## 9              9       2023-05-07           1825.00         109
 ```
 
-### customers 数据框
+#### `customers` 数据框
 
 创建一个包含客户信息的 `customers` 数据框：
 
@@ -2983,15 +2926,15 @@ customers
 
 > **注意**：`customer_email` 列中 `customer_id` 为 108 和 110 的记录存在缺失值。
 
-##### 合并前的准备
+### 合并前的准备
 
 在合并数据集之前，识别每个数据集的**主键**非常重要。主键是唯一标识数据集中每个观测值的列或列集合，这意味着没有两个观测值应具有相同的主键值。
 
 下面将演示如何在这两个数据框上执行不同类型的合并操作。
 
-##### 连接类型示例
+### 连接类型示例
 
-###### 内连接
+#### 内连接
 
 内连接仅返回两个数据框中都有匹配值的行，即返回两个数据框的交集。使用 `merge()` 函数且不添加额外参数即可执行内连接：
 
@@ -3009,6 +2952,10 @@ inner_join_df
 
 输出结果：
 
+
+
+## 客户交易数据示例
+
 ```
 ##   customer_id transaction_id transaction_date transaction_amount customer_name customer_email
 ## 1         102              2       2023-05-02           1075.50         Penny  penny@gmail.com
@@ -3020,7 +2967,7 @@ inner_join_df
 ## 7         109              9       2023-05-07           1825.00         Emily  emily@gmail.com
 ```
 
-###### 外连接
+## 外连接
 
 外连接返回两个数据框中的所有行，并用 `NA` 填充无匹配列的值。将 `all` 参数设置为 `TRUE` 可执行外连接：
 
@@ -3052,7 +2999,7 @@ outer_join_df
 ## 10         110             NA             <NA>               NA         Missy           <NA>
 ```
 
-###### 左连接
+## 左连接
 
 左连接返回左侧数据框（`transactions`）的所有行，以及右侧数据框（`customers`）中匹配的行。若右侧无匹配行，结果中右侧列将显示 `NA`。将 `all.x` 设置为 `TRUE` 执行左连接：
 
@@ -3081,7 +3028,7 @@ left_join_df
 ## 9         109              9       2023-05-07           1825.00         Emily  emily@gmail.com
 ```
 
-###### 右连接
+## 右连接
 
 右连接返回右侧数据框（`customers`）的所有行，以及左侧数据框（`transactions`）中匹配的行。若左侧无匹配行，结果中左侧列将显示 `NA`。将 `all.y` 设置为 `TRUE` 执行右连接：
 
@@ -3111,32 +3058,27 @@ right_join_df
 ## 8         110             NA             <NA>               NA         Missy           <NA>
 ```
 
-### 结论
-
-结论
-
-
-
+## 结论
 
 在本章中，我们探讨了用于操作和转换数据以促进有效分析的基本技术。我们首先讨论了长格式和宽格式数据的概念，并演示了如何在这两种格式之间透视数据，这对于支持多样化的分析需求至关重要。随后，我们深入研究了数据的分组与汇总，涵盖了如何对分组数据进行筛选以及添加新列，从而实现更细粒度、更有洞察力的数据分析。最后，我们探索了合并数据的方法，包括使用 `rbind()` 和 `cbind()` 进行数据绑定，以及不同类型的连接（内连接、外连接、左连接和右连接），以灵活的方式组合数据集。掌握这些技能将显著增强您处理复杂数据集并从分析中获取有意义见解的能力。请记住要持续练习、探索新的包和库，并尝试新方法，以保持和提升您的专业水平。
 
 在下一章中，我们将探讨处理日期和日期时间对象的各种操作，进一步拓展我们的数据分析和操作技能。
 
-### 加入我们的图书 Discord 空间
+## 加入我们的图书 Discord 空间
 
 加入图书的 Discord 工作区，获取最新动态、优惠、全球科技资讯、新书发布及作者专场活动：
 
-**[`discord.bpbonline.com`](https://discord.bpbonline.com)**
+[`discord.bpbonline.com`](https://discord.bpbonline.com)
 
 ![fm1](img/fm1.png)
 
-## 第 5 章：处理日期
+# 第 5 章：处理日期
 
-### 简介
+## 简介
 
 日期和时间在许多数据分析任务中至关重要。本章将指导您了解处理日期和时间的各种操作和技术。首先，您将学习如何使用不同类型的输入创建日期、时间和日期时间。一旦拥有了日期/日期时间对象，您将学习如何提取特定组件，如年、月和日。因此，让我们逐步探索并理解如何处理日期和时间。在本章结束时，您将在实用技能方面打下坚实基础，帮助您应对典型的日期数据分析挑战。
 
-### 结构
+## 结构
 
 在本章中，我们将讨论与处理日期和时间组件相关的几个关键概念：
 
@@ -3146,11 +3088,11 @@ right_join_df
 *   深入电力生产数据
 *   日期和时间的计算
 
-### 目标
+## 目标
 
 从基础开始，您将学习如何创建、检索和修改日期和时间对象。这些技能将在使用电力生产数据的真实场景中接受检验，您将在其中探索日期操作、超前与滞后计算，以及持续时间、周期和区间的应用。掌握这些技能后，您将能够准确且自信地分析和解读时间序列数据。
 
-### 创建日期和日期时间对象
+## 创建日期和日期时间对象
 
 在本章中，我们将使用几个有用的包。随着我们深入本章，我们将发现 `lubridate` 包如何显著增强我们管理和分析时间信息的能力。安装 `lubridate` 有两种选择。
 
@@ -3166,9 +3108,9 @@ right_join_df
 
 让我们首先了解三种指代特定时间点的主要日期/时间数据类型：日期、一天中的时间、日期时间。在我们的数据分析中，我们必须处理日期或日期时间。
 
-#### 从字符串创建
+### 从字符串创建
 
-当事件的确切时间不相关，而日期本身才相关时，通常使用日期。设想这样一个场景：您的数据集包含一列以各种格式呈现的日期，如 Sep 02, 2023。这些日期的顺序可能不同；有些可能是月-日-年格式，而另一些可能是年-月-日顺序。
+当事件的确切时间不相关，而日期本身才相关时，通常使用日期。设想这样一个场景：您的数据集包含一列以各种格式呈现的日期，如 `Sep 02, 2023`。这些日期的顺序可能不同；有些可能是月-日-年格式，而另一些可能是年-月-日顺序。
 
 为了高效地将这些日期字符串转换为日期对象，`lubridate` 包提供了一系列针对不同日期元素顺序量身定制的函数。这些函数的命名使用了代表基本日期和时间元素的首字母组合：
 
@@ -3179,7 +3121,7 @@ right_join_df
 
 简而言之，`lubridate` 提供了函数来处理日期数据中 `m`、`d` 和 `y` 的每一种可想象的排列组合，无论您的数据集中日期格式如何变化，都能使转换过程无缝衔接。
 
-```
+```r
 # 从字符串创建日期对象
 
 ymd("2023-08-30")
@@ -3199,14 +3141,14 @@ dmy("31-Aug-2023")
 
 例如，如果您的数据包含类似 `2023-09-02 14:30:45` 的日期时间字符串，其中同时包含年-月-日 时:分:秒格式的日期和时间，您将使用 `ymd_hms()` 函数进行解析：
 
-```
+```r
 ymd_hms("2023-09-02 14:30:45")
 ## "2023-09-02 14:30:45 UTC"
 ```
 
 或者，如果您的数据包含不同格式的日期时间字符串，如 `"09/02/2023 14:30"`，其中日期和时间为月/日/年 时:分格式，您可以使用 `mdy_hm()` 函数进行解析：
 
-```
+```r
 mdy_hm("09/02/2023 14:30")
 ## "2023-09-02 14:30:00 UTC"
 
@@ -3221,13 +3163,13 @@ class(ymd_hms("2023-09-02 14:30:45"))
 
 有时，如果您的 CSV 或 Excel 表已经遵循 ISO8601 格式 ^(1)，您可能根本不需要转换日期或日期时间。
 
-#### 从变量创建
+### 从变量创建
 
 在数据分析中，经常会遇到日期信息分散在多个列中的数据集，例如年、月和日。为了有效处理这些数据，`lubridate` 提供了特定函数将此类列转换为单个日期列。
 
 例如，我们创建一个包含单独日期组件（年、月、日）的 `date_data` 数据框。
 
-```
+```r
 # 创建一个包含单独日期组件的数据框
 
 date_data <- data.frame(
@@ -3239,7 +3181,7 @@ date_data <- data.frame(
 
 我们使用 `lubridate` 中的 `make_date` 函数创建一个统一的日期列。该函数将单独的日期组件（年、月、日）作为参数，并将它们组合成单个日期对象。
 
-```
+```r
 # 添加新的日期列
 
 date_data <- date_data %>%
@@ -3258,10 +3200,9 @@ str(date_data$full_date)
 
 
 
-
 ## Date[1:3], 格式："2023-08-24" "2022-12-15" "2021-05-03"
 
-#### 缺失元素的默认值
+### 缺失元素的默认值
 
 ```r
 make_date(year = 2023, month = 9) # day = 1
@@ -3290,7 +3231,7 @@ datetime_data <- datetime_data %>%
   mutate(full_datetime = make_datetime(year, month, day, hour, minute))
 ```
 
-在 `mutate` 内部，我们调用 `lubridate` 包中的 `make_datetime` 函数，将 `year`、`month`、`day`、`hour` 和 `minute` 列合并为一个新的 `full_datetime` 列。
+在 `mutate` 内部，我们调用 `lubridate` 包中的 `make_datetime()` 函数，将 `year`、`month`、`day`、`hour` 和 `minute` 列合并为一个新的 `full_datetime` 列。
 
 ```r
 # 显示结果
@@ -3439,39 +3380,26 @@ head(monthly_electricity)
 ## Australia 2023-05-01 Net Electricity Production Electricity 22309.8804 GWh 5
 ## Australia 2023-05-01 Net Electricity Production Total Combustible Fuels 15224.3408 GWh 5
 ## Australia 2023-05-01 Net Electricity Production Coal, Peat and Manufactured Gases 10446.8998 GWh 5
+## Australia 2023-05-01 Net Electricity Production Oil and Petroleum Products 385.5876 GWh 5
+## Australia 2023-05-01 Net Electricity Production Natural Gas 4117.5758 GWh 5
+## Australia 2023-05-01 Net Electricity Production Combustible Renewables 274.2775 GWh 5
+## Year Quarter
+## 2023 2023.2
+## 2023 2023.2
+## 2023 2023.2
+## 2023 2023.2
+## 2023 2023.2
+## 2023 2023.2
 ```
 
-
-
-
-# 澳大利亚 2023-05-01 净发电量 石油及石油产品 385.5876 GWh 5
-
-# 澳大利亚 2023-05-01 净发电量 天然气 4117.5758 GWh 5
-
-# 澳大利亚 2023-05-01 净发电量 可燃可再生能源 274.2775 GWh 5
-
-# 年份 季度
-
-# 2023 2023.2
-
-# 2023 2023.2
-
-# 2023 2023.2
-
-# 2023 2023.2
-
-# 2023 2023.2
-
-# 2023 2023.2
-
-# 子集化 `electricity_subset` 数据框
+### 子集化 `electricity_subset` 数据框
 
 ```r
 electricity_subset <- monthly_electricity %>%
   filter(Country == "India", Product == "Electricity", Year >= 2021)
 ```
 
-# 汇总 `electricity_subset` 数据集
+### 汇总 `electricity_subset` 数据集
 
 ```r
 summary_electricity <- electricity_subset %>%
@@ -3482,39 +3410,31 @@ summary_electricity <- electricity_subset %>%
   )
 ```
 
-# 显示 `summary_electricity` 数据框
+### 显示 `summary_electricity` 数据框
 
 ```r
 View(summary_electricity)
 ```
 
+```
 # 季度 Total_Value Average_Value
-
 # 2021.1 386916.7 128972.2
-
 # 2021.2 389065 129688.3
-
 # 2021.3 413978.2 137992.7
-
 # 2021.4 370094.3 123364.8
-
 # 2022.1 393960.4 131320.1
-
 # 2022.2 439537.5 146512.5
-
 # 2022.3 422333.3 140777.8
-
 # 2022.4 393441.4 131147.1
-
 # 2023.1 422806.5 140935.5
-
 # 2023.2 301012.8 150506.4
+```
 
-### 日期与时间的计算
+## 日期与时间的计算
 
 在本节中，我们将探讨如何使用 `lubridate` 包计算领先值和滞后值、持续时间、周期以及区间。
 
-#### 领先与滞后计算
+### 领先与滞后计算
 
 来自 `dplyr` 包的 `lead()` 和 `lag()` 函数使我们能够访问序列中的前一个（滞后）或后一个（领先）值，无论该序列是数字序列还是日期序列。当您需要计算连续时间单位之间的变化或差异时，这些函数显得尤为重要。
 
@@ -3522,7 +3442,7 @@ View(summary_electricity)
 
 在以下分析中，我们将通过引入 `previous_month_Value` 列来探索 `electricity_subset` 数据集，以监测上个月的值。在此基础上，我们将计算与上个月相比的值，即连续月份之间的数值差异。我们还将在 `Percentage_Difference` 列中将这些差异表示为百分比。
 
-### 1. 创建 `previous_month_Value` 列
+#### 1. 创建 `previous_month_Value` 列
 
 ```r
 electricity_subset <- electricity_subset %>%
@@ -3532,7 +3452,7 @@ electricity_subset <- electricity_subset %>%
   )
 ```
 
-### 2. 计算“与上月相比的值” 和 `Percentage_Difference`
+#### 2. 计算“与上月相比的值” 和 `Percentage_Difference`
 
 ```r
 electricity_subset <- electricity_subset %>%
@@ -3546,29 +3466,25 @@ electricity_subset <- electricity_subset %>%
 head(electricity_subset)
 ```
 
+```
 # Time Value previous_month_Value Value_Compared_To_Previous_Month Percentage_Difference
-
 # 2023-05-01 153915.5 147097.3 6818.226 4.64
-
 # 2023-04-01 147097.3 144378.1 2719.146 1.88
-
 # 2023-03-01 144378.1 134485.0 9893.172 7.36
-
 # 2023-02-01 134485.0 143943.4 -9458.418 -6.57
-
 # 2023-01-01 143943.4 138183.0 5760.381 4.17
-
 # 2022-12-01 138183.0 128644.9 9538.127 7.41
+```
 
 在 `lubridate` 包中，有多种方式可以表示时间跨度——通过持续时间、周期和区间。每种表示方式都有其独特的用途，并提供不同的功能。
 
-#### 持续时间
+### 持续时间
 
 持续时间允许您以秒为单位来度量时间段。`lubridate` 包还提供了多个函数来处理持续时间，例如 `dweeks()`、`ddays()`、`dminutes()` 和 `dseconds()`。利用这些函数，您可以轻松地在不同的时间单位之间进行转换，并对它们执行计算。
 
 以下示例跟踪服务停机事件的持续时间以评估其影响。它使用 `duration()` 函数创建一个停机持续时间向量，并通过将给定的停机持续时间列表相加来计算总停机时间。
 
-### 1. 停机持续时间
+#### 1. 停机持续时间
 
 ```r
 downtime_durations <- c(duration(hours = 1), duration(minutes = 30), duration(hours = 2))
@@ -3592,7 +3508,7 @@ class(downtime_durations)
 ## "lubridate"
 ```
 
-### 2. 计算总停机时间
+#### 2. 计算总停机时间
 
 ```r
 total_downtime <- sum(downtime_durations)
@@ -3606,11 +3522,13 @@ total_downtime
 ## 12600
 ```
 
-#### 周期
+### 周期
 
 周期是时间跨度的灵活表示形式，允许您使用人类友好的单位，如年、月、周、日、小时、分钟和秒。与持续时间不同，周期不指定固定的秒数长度，而是根据底层的日期时间调整其长度。这使得周期非常适合在不必担心具体秒级细节的情况下，跟踪长时间段内的时钟时间变化。`lubridate` 提供了多种操作周期的方法，包括加法和减法运算，使执行复杂的时间分析任务变得容易。
 
 让我们看一个通过定义以周为单位的续订周期来设置订阅续订提醒的示例：
+
+
 
 ### 1. 订阅续订周期
 
@@ -3659,7 +3577,7 @@ print(renewal_dates)
 ## "2023-09-24" "2023-10-08" "2023-10-22"
 ```
 
-#### 区间
+### 区间
 
 区间提供了一种定义两个特定时间点之间时间范围的方法，在处理日期时间数据时能提供更高的精度。`lubridate` 包中的 `interval()` 函数创建一个 `Interval` 对象，表示指定的开始和结束日期。以下代码通过定义具有开始和结束时间的区间来安排事件。
 
@@ -3711,9 +3629,6 @@ print(overlapping_events)
 
 现在您已经在处理日期和时间方面打下了坚实的基础，可以继续学习下一章，在那里您将学习如何处理字符串。
 
-
-
-
 1. ISO 8601 是一项涵盖全球日期和时间相关数据交换与通信的国际标准 - 维基百科
 
 ## 第 6 章：操作字符串
@@ -3747,7 +3662,7 @@ print(overlapping_events)
 
 在整章中，我们将使用 `stringr` 包中的函数，该包是 Tidyverse 生态系统的组成部分。`stringr` 包提供了高效且有效的工具来执行字符串操作任务。首先，我们加载数据操作所需的包。
 
-```
+```r
 # load tidyverse
 library(tidyverse)
 
@@ -3785,7 +3700,7 @@ library(stringr)
 
 首先，我们创建一个名为 `books` 的数据框，包含三列：产品名称、产品类别和产品 ID。产品名称列包含产品的名称，产品类别列包含产品的类别，产品 ID 列包含产品的唯一标识符。
 
-```
+```r
 # Create a data frame of product data
 books <- data.frame(product_name = c("Mastering MEAN Stack", " Breaking Ransomware", "Data Science with R ", "Learning Google Cloud Vertex AI"),
   product_category = c("Web Development ", " Security ", "Machine Learning & AI", "Cloud & Networking"),
@@ -3810,7 +3725,7 @@ View(books)
 
 在创建 URL 之前将产品名称和类别转换为小写有几个好处。首先，这被认为是搜索引擎优化 (SEO) 的最佳实践，因为搜索引擎倾向于更有效地索引和排名小写 URL。其次，小写 URL 更便于用户理解和记忆，使其更加用户友好。下面的代码使用 `str_to_lower()` 函数将产品名称和产品类别转换为小写。
 
-```
+```r
 # Changing case of product_name and product_category
 books <- books %>%
   mutate(product_name = str_to_lower(product_name),
@@ -3828,15 +3743,6 @@ View(books)
 | learning google cloud vertex ai | cloud and networking | 537 |
 
 表 6.3：更改大小写后 `View(books)` 的输出
-
-
-
-
-# 表 6.3：标准化大小写后的图书数据
-
-| product_name | product_category | product_id |
-| :--- | :--- | :--- |
-| Learning Google Cloud Vertex AI | Cloud and networking | 537 |
 
 正如你所见，`product_name` 和 `product_category` 列现在均为小写。你可以使用 `str_to_upper()` 函数将字符串转换为大写。在文本分析中，将字符串转换为小写或大写是处理文本数据的基础操作。当比较字符串、消除大小写敏感性或统一格式化字符串时，这种转换是必要的。
 
@@ -3906,6 +3812,12 @@ View(books)
 
 `str_trim()` 函数移除字符串开头和结尾的空白字符，有助于规范化数据。它接受一个参数，即待修剪的字符串。
 
+
+
+# 字符串处理与正则表达式
+
+## 修剪与标准化字符串
+
 ```r
 # Remove leading and trailing spaces in product_name and product_category
 books <- books %>%
@@ -3966,9 +3878,7 @@ View(books)
 
 **表 6.8：产品名称和类别中空格被替换后的图书数据**
 
-#### 填充
-
-
+## 填充
 
 填充是一种可用于确保所有数据点具有相同长度的技术。`str_pad()` 函数使用指定的填充字符将字符串填充到指定长度。当您需要标准化字符串长度时（例如处理代码或标识符时），这特别有用。它接受四个参数：
 
@@ -3977,7 +3887,7 @@ View(books)
 *   `side`：要填充的字符串侧边。可以是 `left`、`right` 或 `both` 之一。
 *   `pad`：填充字符。
 
-```
+```r
 # 使用 str_pad() 通过前导零标准化 product_id
 books <- books %>%
   mutate(product_id = str_pad(product_id, width = 4, side = "left", pad = "0"))
@@ -3990,13 +3900,13 @@ View(books)
 
 在处理文本数据（如句子或段落）时，遇到长度不一的序列是常态。深度学习模型（如 LSTM 和 Transformer 模型）通常期望固定维度的输入序列。在这种情况下，填充可确保所有序列具有相同的长度。
 
-#### 连接字符串
+## 连接字符串
 
 `str_c()` 函数将多个字符向量合并为单个字符向量。它接受两个或更多参数，即要合并的字符向量。`str_c()` 是文本分析任务中一项方便的函数，适用于需要将多个字符串合并为一个字符串的场景。
 
 现在，您将使用 `str_c()` 为 `books` 数据框中的每个产品创建唯一的产品 URL。
 
-```
+```r
 # 使用 str_c() 生成唯一的产品 URL
 books <- books %>%
   mutate(product_url = str_c("https://in.bpbonline.com/", "collections/", product_category, "/", product_name, "/", product_id))
@@ -4012,12 +3922,11 @@ books <- books %>%
 *   `/`：分隔产品名称与产品 ID 的另一个正斜杠字符。
 *   `product_id`：每个产品的唯一标识符。
 
-```
+```r
 # 显示 product_url 列
 books %>% select(product_url)
 
 ## product_url
-
 ## https://in.bpbonline.com/collections/web-development/mastering-mean-stack/0255
 ## https://in.bpbonline.com/collections/security/breaking-ransomware/0078
 ## https://in.bpbonline.com/collections/machine-learning-ai/data-science-with-r/7077
@@ -4028,7 +3937,7 @@ books %>% select(product_url)
 
 `https://in.bpbonline.com/collections/[product_category]/[product_name]/[product_id]`
 
-#### 提取子字符串
+## 提取子字符串
 
 `str_sub()` 函数根据指定的起始和结束索引从字符串中提取子字符串。它接受三个参数：
 
@@ -4038,7 +3947,7 @@ books %>% select(product_url)
 
 您可以使用 `str_sub()` 从 `product_url` 列中提取最后四位数字，并创建一个名为 `extracted_product_id` 的新列。
 
-```
+```r
 # 从 product_url 列中提取最后 4 位数字。
 books <- books %>%
   mutate(extracted_product_id = str_sub(product_url, start = -4))
@@ -4049,7 +3958,7 @@ books <- books %>%
 *   `product_url`：包含 URL 的列。
 *   `start = -4`：指定提取应从字符串末尾的第 4 个字符开始，捕获最后四位数字。
 
-```
+```r
 # 打印 extracted_product_id
 books %>% select(extracted_product_id)
 
@@ -4062,7 +3971,7 @@ books %>% select(extracted_product_id)
 
 您会观察到，`str_sub()` 函数是文本分析任务中一项非常有用的函数，适用于需要提取字符串特定部分的场景。
 
-### 正则表达式
+# 正则表达式
 
 正则表达式是可用于描述特定字符串的模式。它们允许您定义模式，以便在较大文本中匹配和替换特定字符串。它们是文本分析和操作的强大工具。正则表达式可用于多种任务，例如：
 
@@ -4072,7 +3981,7 @@ books %>% select(extracted_product_id)
 
 > **注意：** 正则表达式区分大小写。
 
-#### 正则表达式的构成要素
+## 正则表达式的构成要素
 
 正则表达式由构建模块构成。每个构建模块都是一个简单的模式或规则，可以通过无限种方式组合以创建复杂模式。学习如何组合这些构建模块对于实现特定的文本分析目标至关重要。
 
@@ -4081,7 +3990,7 @@ books %>% select(extracted_product_id)
 下表概述了正则表达式中常用的字符类型及其对应的解释：
 
 | 字符类型 | 解释 |
-| --- | --- |
+| :--- | :--- |
 | `abc` | 精确匹配字符 abc |
 | `123` | 匹配数字序列 123 |
 | `\w` | 匹配任意单个 alphanumeric 字符（a-z, A-Z, 0-9） |
@@ -4094,14 +4003,14 @@ books %>% select(extracted_product_id)
 | `$` | 匹配输入字符串的结尾 |
 | `^` | 匹配输入字符串的开头 |
 
-表 6.10：正则表达式中常用的字符类型
+**表 6.10：正则表达式中常用的字符类型**
 
-#### 正则表达式中的分组
+## 正则表达式中的分组
 
 下表描述了正则表达式中各种分组模式：
 
 | 分组 | 解释 |
-| --- | --- |
+| :--- | :--- |
 | `[abc]` | 匹配集合 abc 中的任意单个字符 |
 | `[^abc]` | 匹配不在集合 abc 中的任意单个字符 |
 | `[0-9]` | 匹配 0 到 9 之间的任意单个数字 |
@@ -4112,19 +4021,16 @@ books %>% select(extracted_product_id)
 | `(a(bc))` | 捕获子组：在捕获组内捕获子模式 |
 | `(abc|def)` | 匹配 abc 或 def |
 
-表 6.11：正则表达式中使用的分组模式
+**表 6.11：正则表达式中使用的分组模式**
 
-
-
-
-##### 组修饰符
+### 组修饰符
 
 组修饰符是特殊的语法扩展，用于改变正则表达式中量词的行为。它们允许你指定量词应匹配其前面模式的次数。理解这些修饰符对于微调正则表达式以精确匹配文本数据至关重要。
 
 使用下面的组修饰符，你可以指定特定模式应重复的次数，无论是零次或多次、一次或多次、特定次数，还是在某个范围内。
 
 | 组修饰符 | 解释 |
-| --- | --- |
+| :--- | :--- |
 | `*` | 匹配前一个模式的零次或多次重复（贪婪量词） |
 | `+` | 匹配前一个模式的一次或多次重复（贪婪量词） |
 | `?` | 使前一个模式变为可选（匹配零次或一次）。 |
@@ -4133,18 +4039,18 @@ books %>% select(extracted_product_id)
 | `*?` | 匹配前一个模式的零次或多次重复（非贪婪量词） |
 | `+?` | 匹配前一个模式的一次或多次重复（非贪婪量词） |
 
-表 6.12：组修饰符列表
+**表 6.12：组修饰符列表**
 
-##### 贪婪与非贪婪匹配
+### 贪婪与非贪婪匹配
 
 在正则表达式中，量词用于指定模式应匹配的次数。当应用于一组字符时，量词决定了在输入字符串中的匹配范围。贪婪和非贪婪修饰符是控制量词行为的特殊扩展。下表总结了贪婪和非贪婪量词之间的主要区别：
 
 | 量词 | 行为 |
-| --- | --- |
+| :--- | :--- |
 | 贪婪 | 匹配尽可能多的内容 |
 | 非贪婪 | 匹配尽可能少的内容 |
 
-表 6.13：正则表达式中的贪婪与非贪婪量词
+**表 6.13：正则表达式中的贪婪与非贪婪量词**
 
 `str_extract()` 函数默认使用贪婪匹配。这意味着如果你有一个包含量词（如 `*`、`+` 或 `{}`）的正则表达式模式，`str_extract()` 将尝试匹配满足该模式的最长可能字符串。
 
@@ -4192,7 +4098,7 @@ str_extract(text, "<div>.*?</div>")
 
 区别在于非贪婪模式 `<div>.*?</div>` 一遇到第一个闭合的 `<div>` 标签就停止匹配，而贪婪模式 `<div>.*</div>` 则继续匹配直到输入字符串的末尾。
 
-#### 检测与提取模式
+## 检测与提取模式
 
 本节将教授正则表达式在分析和从数据框中提取信息方面的实际应用。下面的数据框包含两条银行短信，一条用于借记交易，一条用于贷记交易。我们可以使用正则表达式从这些短信中提取信息，例如交易类型、金额和日期。
 
@@ -4205,6 +4111,10 @@ bank_messages <- data.frame(
   )
 )
 ```
+
+
+
+# 从银行短信中提取交易信息
 
 让我们首先从 `bank_messages` 数据框的 `message` 列中提取提到的金额。这里我们假设所需的金额前面带有 INR 或 Rs。
 
@@ -4257,19 +4167,13 @@ View(bank_messages)
 上述命令确定每条消息是否包含单词 credit 或 debit 及其变体。`dplyr` 包中的 `mutate` 函数用于向银行短信数据框添加两个新列 `has_credit` 和 `has_debit`。
 
 *   `\\b`：这是一个单词边界断言。它确保匹配 credit 或 debit 作为完整单词，而不是作为另一个单词的一部分。
-
-
-
-
 *   `credit(ed)?`：此部分匹配单词 `credit`，并通过 `(ed)?` 使 `ed` 部分变为可选。这允许同时匹配 `credit` 和 `credited`。
-
 *   `debit(ed)?`：与 `credit` 部分类似，此部分匹配单词 `debit`，并使 `ed` 部分变为可选，允许匹配 `debit` 和 `debited` 等变体。
-
 *   如果消息包含单词 `credit` 或 `credited`，则 `has_credit` 列将为 `TRUE`，否则为 `FALSE`。同理，如果消息包含单词 `debit` 或 `debited`，则 `has_debit` 列将为 `TRUE`，否则为 `FALSE`。
 
 接下来，我们将从 `bank_messages` 数据框的 `message` 列中提取日期。日期预期采用 `dd/mm/yy` 或 `dd-mmm-yy` 格式。生成的 `date` 列将包含在每条消息中找到的日期列表。
 
-```
+```r
 # Extract date from the message column
 bank_messages <- bank_messages %>%
   mutate(
@@ -4302,7 +4206,7 @@ View(bank_messages)
 
 让我们检查另一种场景：从 `message` 列中提取遵循特定格式的电话号码。
 
-```
+```r
 # Extract phone number
 bank_messages <- bank_messages %>%
   mutate(
@@ -4312,7 +4216,7 @@ bank_messages <- bank_messages %>%
 
 上述命令提取预期遵循 `xxxx-xxx-xxxx` 格式的电话号码。
 
-```
+```r
 # View the dataframe
 View(bank_messages)
 ```
@@ -4328,7 +4232,7 @@ View(bank_messages)
 
 正如你所见，我们使用正则表达式从 `bank_messages` 数据框中提取了交易类型、金额、日期和电话号码。这些信息可用于各种目的，例如欺诈检测和客户细分。
 
-### 结论
+## 结论
 
 本章探讨了使用 `stringr` 包操作和清理字符串的基本技术。`stringr` 提供了多种用于操作字符串的函数。本章涵盖了基本字符串操作，如更改大小写、计算字符串长度、替换和移除子字符串、处理空白字符、填充和连接字符串。正则表达式提供了一种通用且高效的方式来搜索、编辑、操作和提取数据。它们可用于执行各种任务，例如：
 
@@ -4338,7 +4242,7 @@ View(bank_messages)
 
 在下一章中，您将学习如何使用数据可视化以可视化方式呈现您的发现。
 
-### 加入我们书籍的 Discord 空间
+## 加入我们书籍的 Discord 空间
 
 加入书籍的 Discord 工作区，获取最新动态、优惠、全球科技资讯、新书发布及作者见面会：
 
@@ -4346,13 +4250,13 @@ View(bank_messages)
 
 ![](img/fm1.png)
 
-## 第 7 章：数据可视化
+# 第 7 章：数据可视化
 
-### 简介
+## 简介
 
 数据可视化是艺术与科学的融合。在这两个方面之间实现微妙的平衡对于准确传达数据至关重要。在创建具有视觉吸引力的图形的同时准确呈现数据，是有效沟通的关键。数据可视化可以揭示模式、识别异常值、指导数据转换，并为机器学习模型启发新特征。成功的数据可视化应在不误导或扭曲数据的前提下准确传达数据，同时具有美感以增强其影响力。分散数据注意力的视觉元素（如刺眼的颜色或不平衡的元素）会阻碍解读。`ggplot2` 是一个广泛使用的 R 数据可视化包，它采用基于图形语法的绘图系统。这简化了创建复杂且富有洞察力的可视化的过程。它为指定图表的不同元素（如数据、美学映射和几何对象）提供了一套一致的规则。
 
-### 结构
+## 结构
 
 在本章中，我们将详细阐述与数据可视化相关的基本概念。
 
@@ -4369,16 +4273,13 @@ View(bank_messages)
     *   散点图
 *   使用折线图可视化时间序列
 
-### 目标
+## 目标
 
 本章将教您如何使用数据可视化正确呈现数据。您将获得使用 `ggplot2` 包生成多种可视化的知识，包括条形图、直方图、密度图、箱线图、饼图、折线图和散点图。您还将学习如何可视化时间序列数据和数据分布。在本章结束时，您将能够创建信息丰富且引人入胜的数据可视化，有效地向他人传达您的发现。
 
-### ggplot2 模板与美学映射
+## ggplot2 模板与美学映射
 
-
-
-
-# ggplot2：图形语法
+### ggplot2：图形语法
 
 与许多其他图形包不同，`ggplot2` 基于 Wilkinson 的*图形语法*（2005）运行，拥有一套独特的语法体系。这种语法允许您通过组装不同的组件来构建图形，使 `ggplot2` 成为数据可视化的强大工具。`ggplot2` 的方法论鼓励迭代过程：从代表原始数据的基础层开始，逐步添加用于注释和统计摘要的额外层。这种迭代方法使创建图形的过程与我们典型分析中涉及的结构化思维保持一致。
 
@@ -4421,7 +4322,7 @@ View(bank_messages)
 
 要开始可视化，第一步是安装必要的包。我们有两种选择：要么加载包含 `ggplot2` 包的 `tidyverse`，要么采用更专注的方法，单独安装 `ggplot2`。
 
-```
+```r
 # Load tidyverse:
 library(tidyverse)
 
@@ -4434,15 +4335,17 @@ library(ggplot2)
 library(forcats)
 ```
 
-### 可视化分布
+## 可视化分布
 
 有效传达数据分布是数据分析的一个基本方面，可视化方法因变量的性质而异——无论是分类变量还是数值变量。本节探讨三种基本的可视化技术：条形图、直方图和密度图。
 
-#### 条形图
+### 条形图
 
 在许多情况下，我们关注的是理解一组给定数值的规模。设想一家零售企业想要描绘各产品类别（如电子产品、书籍和家居用品）在特定时间段内的销售业绩。又或一位网站所有者可能希望剖析其网站流量的来源，区分直接访问、搜索引擎推荐和其他来源。同样，一位教育工作者可能想展示学生在不同学科中取得的平均分数。在每种情况下，我们都面临这样一种场景：不同的类别（如产品类别、流量来源或学科）与相应的定量数值相关联。此类情况下的首选可视化方法是条形图。
 
 有些人可能会避免使用条形图，因为他们认为条形图太过常见，但这是一个错误的假设。实际上，条形图的广泛使用反而对您有利，使您的受众能够更快地掌握您呈现的信息。受众无需费力去理解陌生的图表，而是可以专注于从视觉展示中提取有价值的见解。我们的眼睛可以轻松比较条形的长度，从而快速识别类别的排名，区分最大值和最小值，并感知它们之间的渐变变化。
+
+
 
 让我们深入研究一个源自联合国粮农组织企业统计数据库（FAOSTAT）的数据集，该数据集记录了 2021 年 185 个国家的香料总消费量。该数据集包含两列：一列表示国家名称，另一列表示以千吨（kt）为单位的香料消费量。我们将首先探索香料消费量最高的前 10 个国家。
 
@@ -4480,10 +4383,6 @@ ggplot(spice_top10, aes(x = Country, y = Value)) +
   geom_bar(stat = "identity") +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 ```
-
-
-
-
 
 ![](img/Figure7.3.png)
 
@@ -4529,17 +4428,14 @@ ggplot(spice_top10, aes(x = fct_reorder(Country, Value), y = Value)) +
 
 让我们探讨一下上述代码中用于更有意义、更易解释地呈现数据的一些新函数和参数。
 
-`fct_reorder(Country, Value)`：这是 `forcats` 包的一部分，用于根据 `Value` 列中的值重新排序 `Country` 因子的水平。这意味着条形图中的条形将按香料消费量递减的顺序排列。
-
-`fill = steelblue3`：此参数指定用于填充图表中条形的颜色。此处，`fill` 参数设置为 `steelblue3`。
-
-`labs()` 函数为绘图的坐标轴和标题添加标签。它将绘图标题设置为 Spice Consumption，x 轴标签设置为 Country，y 轴标签设置为 Spice Consumption (kt)。
-
-`theme_bw()` 函数为绘图应用黑白主题。`ggplot2` 中的 `theme_` 函数是一组允许用户自定义绘图视觉外观的函数。`ggthemes` 包通过提供具有特定样式的其他预定义主题，扩展了 `ggplot2` 中的主题选项。您可以轻松地将这些主题应用于 `ggplot2` 绘图，以获得美观的外观。
+*   `fct_reorder(Country, Value)`：这是 `forcats` 包的一部分，用于根据 `Value` 列中的值重新排序 `Country` 因子的水平。这意味着条形图中的条形将按香料消费量递减的顺序排列。
+*   `fill = "steelblue3"`：此参数指定用于填充图表中条形的颜色。此处，`fill` 参数设置为 `"steelblue3"`。
+*   `labs()` 函数为绘图的坐标轴和标题添加标签。它将绘图标题设置为 Spice Consumption，x 轴标签设置为 Country，y 轴标签设置为 Spice Consumption (kt)。
+*   `theme_bw()` 函数为绘图应用黑白主题。`ggplot2` 中的 `theme_` 函数是一组允许用户自定义绘图视觉外观的函数。`ggthemes` 包通过提供具有特定样式的其他预定义主题，扩展了 `ggplot2` 中的主题选项。您可以轻松地将这些主题应用于 `ggplot2` 绘图，以获得美观的外观。
 
 必须注意的是，只有当条形所代表的类别没有自然顺序或层级时，我们才应重新排列条形。如果类别已经有意义地排序（例如，如果我们的分类变量是有序因子），则建议在可视化中保留该顺序。
 
-#### 直方图
+### 直方图
 
 直方图是连续数据分布的图形表示。直方图是通过将 x 轴划分为等距的区间（称为箱）来创建的。直方图中每个条形的高度代表落在相应箱内的数据点数量。这创建了一个显示数据频率分布的图表，揭示了数据在数值范围内的分布情况。
 
@@ -4571,7 +4467,7 @@ ggplot(undernourishment_2021, aes(x = Value)) +
 
 > **注意：** 在 FAO 数据集中，营养不良率低于 2.5% 的国家和地区被归类为 2.5%。
 
-此处，`geom_histogram(binwidth = 2, fill = "steelblue3", color = "black")` 使用 `geom_histogram()` 向绘图添加直方图层。它将 x 轴划分为宽度为 2 的箱，并用 `steelblue3` 填充每个箱；每个箱的边框为黑色。
+此处，`geom_histogram(binwidth = 2, fill = "steelblue3", color = "black")` 使用 `geom_histogram()` 向绘图添加直方图层。它将 x 轴划分为宽度为 2 的箱，并用 `"steelblue3"` 填充每个箱；每个箱的边框为黑色。
 
 要在直方图的每个条形上方添加计数标签，可以使用统计变换函数 `stat_bin()`。它允许我们直接在相应条形顶部显示每个箱内的频率计数。这一简单的添加可以提供对潜在分布更精确的理解。它还可以帮助您准确比较不同箱以及跨不同数据集的情况。
 
@@ -4592,11 +4488,7 @@ ggplot(undernourishment_2021, aes(x = Value)) +
 
 图 7.7：营养不良患病率分布
 
-
-
-
-
-#### 密度图
+### 密度图
 
 当探索数值数据时，直方图常用于可视化分布。密度图是直方图的平滑版本。这使其特别适合快速掌握分布的整体形状，包括其偏度和多峰性。图 7.8 展示了营养不良患病率的密度图。
 
@@ -4614,11 +4506,11 @@ ggplot(undernourishment_2021, aes(x = Value)) +
 
 **图 7.8：营养不良患病率密度图**
 
-#### 可视化比例
+### 可视化比例
 
 有效传达一个群体、实体或数量分解为其组成部分是数据可视化中的常见任务。无论是描绘人口中的性别分布，还是选举中不同政党的得票份额，可视化比例在数据探索和沟通中都起着至关重要的作用。它帮助观众理解不同部分如何构成整体。
 
-##### 饼图
+#### 饼图
 
 饼图长期以来一直是比例或百分比的首选可视化方式，广泛用于商业演示和报告。其圆形布局和比例切片使其成为说明不同组成部分如何贡献于整体的流行选择。饼图能提供比例分布的总体概念，特别是在处理少量类别时。然而，数据科学家经常因以下几个缺点而批评饼图：
 
@@ -4684,9 +4576,9 @@ ggplot(hunger_2021, aes(x = "", y = Value, fill = fct_reorder(Region, Value))) +
 
 上图显示，亚洲是遭受饥饿人群的主要地区，2021 年有 4.14 亿人，占营养不良总人口的 56%。非洲拥有约 37%（2.71 亿）营养不良人口，而拉丁美洲和加勒比地区约占 6%（4600 万）。
 
-##### 堆叠条形图
+#### 堆叠条形图
 
-
+### 饼图与堆积条形图的对比
 
 
 
@@ -4698,7 +4590,7 @@ ggplot(hunger_2021, aes(x = "", y = Value, fill = fct_reorder(Region, Value))) +
 
 我们现在将在 `hunger_2021` 数据集中生成一个新列，该列代表各地区遭受饥饿（即营养不良）的人口百分比。随后，我们将使用堆积条形图来可视化这些数据。
 
-```
+```r
 # 创建新列 "Percentage"
 hunger_2021 <- hunger_2021 %>%
   mutate(Percentage = round((Value / sum(Value)) * 100, 1))
@@ -4724,11 +4616,11 @@ ggplot(hunger_2021, aes(x = "", y = Percentage,
 
 上述代码生成了一个以变量 `Percentage` 为 y 轴的堆积条形图。`Region` 变量用不同颜色填充条形，`fct_reorder` 函数根据百分比值对地区进行排序。`geom_bar()` 用于创建条形，`geom_text()` 用于向条形添加标签。`position_stack` 参数用于调整标签在条形内的位置。
 
-### 可视化关联关系
+## 可视化关联关系
 
 在接下来的章节中，我们将探讨用于描绘两个变量间关联关系的常用图表。
 
-#### 箱线图
+### 箱线图
 
 箱线图，又称箱须图，提供了集中趋势、离散程度和潜在异常值的图形化表示，特别适用于可视化数值变量与分类变量之间的关系。箱线图的关键组成部分包括：
 
@@ -4737,7 +4629,7 @@ ggplot(hunger_2021, aes(x = "", y = Percentage,
 *   **须线**：从箱体边缘延伸出的线条，通常延伸至最远的非异常值点。它们提供了数据总体范围的概念。
 *   **异常值**：绘制在须线之外的单个点，通常定义为距离箱体边缘超过 1.5 倍 IQR 的数值。这些异常值突出了可能与大部分数据显著不同的异常观测值。
 
-##### 数据分析中的核心应用
+#### 数据分析中的核心应用
 
 箱线图在以下任务中特别有用：
 
@@ -4759,7 +4651,7 @@ ggplot(hunger_2021, aes(x = "", y = Percentage,
 
 表 7.1：黄色出租车行程数据说明
 
-```
+```r
 cab_rides <- read.csv("cab_rides.csv")
 
 # 转换数据类型
@@ -4784,7 +4676,7 @@ ggplot(cab_rides, aes(x = "", y = speed)) +
 
 接下来，让我们探索车速如何随一天中的不同时段而变化。为此，我们将添加一个名为 `pickup_timeofday` 的新列。该列将包含每次乘车上客时的时间段信息，从而使我们能够分析驾驶速度在不同时段的变化情况。函数 `time_of_day` 接受单个参数 `x`，代表一天中的某个具体小时。该函数随后使用一系列 `if` 语句来判断给定小时是否落在四个预定义时段之一内：上午（6 点-11 点）、下午（12 点-16 点）、晚上（17 点-21 点）或夜间（22 点-次日 5 点）。根据这些检查的结果，函数返回相应的字符串值以指示时间段。生成的 `pickup_timeofday` 列使用 `factor` 函数转换为有序因子类型。这确保了该列中的值被视为具有定义顺序的分类数据，而非单纯的字符串。`levels` 参数指定类别的顺序，而 `ordered` 参数指示这些类别应被视为有序数据。
 
-```
+```r
 # 创建计算一天中时间段的函数
 time_of_day <- function(x) {
   if (x %in% 6:11) {
@@ -4806,9 +4698,6 @@ cab_rides <- cab_rides %>%
 cab_rides$pickup_timeofday <- factor(cab_rides$pickup_timeofday, levels = c("Morning", "Afternoon", "Evening", "Night"), ordered = TRUE)
 ```
 
-
-
-
 # 创建箱线图以可视化一天中不同时段的速度分布
 
 ```r
@@ -4828,13 +4717,13 @@ ggplot(cab_rides, aes(x = pickup_timeofday, y = speed)) +
 
 上述代码生成一个箱线图，用于可视化一天中不同时段的驾驶速度分布。它使用 `ggplot` 函数创建一个散点图，将 `pickup_timeofday` 置于 x 轴，`speed` 置于 y 轴。`geom_boxplot` 函数用于向图表添加箱线图层，显示每个时段类别速度分布的中位数、四分位数和异常值。上图说明驾驶速度的模式遵循典型趋势。平均而言，速度从深夜稳步增加至清晨时段。
 
-#### 散点图
+### 散点图
 
 散点图是描绘两个数值变量之间关系的图形表示。每个数据点在图上用一个点表示，该点的位置反映了该特定数据点两个变量的值。它让我们能够看到一个变量的值如何随着另一个变量的值而变化。这使得散点图在探索复杂数据集和识别值得进一步分析的潜在关注领域时特别有用。仔细考虑哪个变量应为解释变量，哪个应为响应变量也至关重要。解释变量影响或导致响应变量的变化。响应变量是被测量或观察的变量。
 
 让我们更仔细地观察行驶距离与其对应车费金额之间的关联。在此背景下，我们将行驶距离作为解释变量（x 坐标），将计价器计算的车费作为响应变量（y 坐标）。该图将帮助我们回答诸如以下的问题——短途行程是否总是比长途行程便宜？是否存在意外情况，如昂贵的短途行程或便宜的长途行程？是否有其他因素影响车费？
 
-##### 行程距离与车费金额之间的关系
+#### 行程距离与车费金额之间的关系
 
 ```r
 ggplot(cab_rides, aes(x = trip_distance, y = fare_amount)) +
@@ -4855,7 +4744,7 @@ ggplot(cab_rides, aes(x = trip_distance, y = fare_amount)) +
 
 此处，`geom_point` 图层向图表添加单个数据点，以钢蓝色表示（`col = "steelblue4"`），透明度为 0.5（`alpha = 0.5`）以提高可见性。上述散点图显示行程距离与车费金额呈正相关，意味着随着距离增加，车费金额也倾向于上升。我们将基于 `RatecodeID` 变量检查数据，以更好地理解这种关联。在下图中，点的颜色和形状由 `RatecodeID` 决定，为不同类别提供了视觉区分。
 
-##### 按 RatecodeID 分组的行程距离与车费金额关系
+#### 按 RatecodeID 分组的行程距离与车费金额关系
 
 ```r
 ggplot(cab_rides, aes(x = trip_distance, y = fare_amount)) +
@@ -4874,13 +4763,13 @@ ggplot(cab_rides, aes(x = trip_distance, y = fare_amount)) +
 
 在 `RatecodeID = 1`（标准费率类别）中，距离与车费金额之间的关系大体呈线性，车费随行驶距离增加而增加。然而，存在一些不遵循此趋势的异常值。另一方面，在 `RatecodeID = 2`（JFK 机场费率类别）中，由于往返 JFK 机场的行程具有 70 美元的固定初始统一费率，距离与车费金额之间的关系不是线性的。也存在车费低于 70 美元的异常值。
 
-#### 分面
+### 分面
 
 分面用于生成小倍数，即一系列显示数据不同子集的图表或图形。这些小倍数使我们能够快速轻松地比较数据不同部分的模式，并识别相似点或差异。通过根据分类变量将图表划分为分面，您可以深入了解特定于每个类别的变化和趋势。在处理包含多个维度或因素的复杂数据集时，分面尤为有价值。
 
 `ggplot2` 中常用的两个分面函数是 `facet_wrap()` 和 `facet_grid()`。`facet_wrap()` 将一维面板条带包装成二维显示，而 `facet_grid()` 则由变量定义创建二维面板网格，形成行和列。在下面的代码中，使用 `facet_grid(RatecodeID~.)` 根据 `RatecodeID` 变量创建分面网格。
 
-##### 按 RatecodeID 分面的行程距离与车费金额关系
+#### 按 RatecodeID 分面的行程距离与车费金额关系
 
 ```r
 ggplot(cab_rides, aes(x = trip_distance, y = fare_amount)) +
@@ -4900,13 +4789,13 @@ ggplot(cab_rides, aes(x = trip_distance, y = fare_amount)) +
 
 此处，我们观察到散点图被划分为多个面板，每个面板代表不同的 `RatecodeID` 类别。`RatecodeID~.` 符号表示分面应沿行（`RatecodeID`）进行，同时保持单列布局。
 
-### 使用折线图可视化时间序列
+## 使用折线图可视化时间序列
 
 折线图提供了一种直观的方式来表示变量随时间的变化，使其特别适用于时间相关数据。x 轴通常代表时间，而 y 轴表示感兴趣变量的值。通过观察折线图中的模式，分析师可以识别季节性、周期性行为和潜在异常。折线图还提供了一种直接的方法，在同一图表上比较多个时间序列，从而全面了解不同变量随时间的相互作用。
 
 现在让我们生成一个折线图，以可视化 2023 年 1 月每日出租车行程数量的变化。我们创建一个名为 `total_trips_per_day` 的数据集，按上车日期对数据进行分组，并使用 `group_by` 和 `summarize` 函数计算每个唯一日期的总行程数（`total_trips`）。然后，我们将利用 `total_trips_per_day` 数据集生成一个折线图，展示每日总行程数。
 
-#### 创建用于分析的汇总数据集
+### 创建用于分析的汇总数据集
 
 ```r
 total_trips_per_day <- cab_rides %>%
@@ -4914,7 +4803,7 @@ total_trips_per_day <- cab_rides %>%
   summarize(total_trips = n())
 ```
 
-#### 可视化 2023 年 1 月总行程数的折线图
+### 可视化 2023 年 1 月总行程数的折线图
 
 ```r
 ggplot(total_trips_per_day, aes(x = pickup_date, y = total_trips)) +
@@ -4934,17 +4823,15 @@ ggplot(total_trips_per_day, aes(x = pickup_date, y = total_trips)) +
 
 **图 7.17：2023 年 1 月行程分布**
 
-
-
 在上述代码中，`geom_point()` 向图表添加单个数据点，而 `geom_line()` 用线条连接这些点，创建一个连续的折线图，表示指定时间段内总行程数的趋势。该折线图展示了 1 月份出租车乘车数量一致的每周趋势。
 
-### 结论
+## 结论
 
 在本章中，我们探索了使用 `ggplot2` 包的各种可视化技术。我们首先讨论了 `ggplot2` 模板和美学映射，它们为创建自定义图表提供了框架。然后我们使用条形图、直方图和密度图来可视化分布。这些技术使我们能够检查不同类别中数据的频率和分布。接下来，我们讨论了使用饼图和堆叠条形图来可视化比例。这些技术使我们能够比较数据集中不同类别的相对大小。我们还探索了箱线图，它有助于检查数据的分布范围和中心趋势。最后，我们介绍了可视化变量间关联的技术，包括散点图和折线图。这些技术用于可视化两个或多个变量之间的关系，并识别数据中的模式或趋势。
 
 在下一章中，我们将专注于特征工程，它涉及转换变量并在数据集中创建新特征，以提高机器学习模型的性能。
 
-### 加入我们书籍的 Discord 空间
+## 加入我们书籍的 Discord 空间
 
 加入书籍的 Discord 工作区，获取最新动态、优惠、全球科技动态、新版本发布以及与作者的交流会：
 
@@ -4954,15 +4841,17 @@ ggplot(total_trips_per_day, aes(x = pickup_date, y = total_trips)) +
 
 # 第 8 章 特征工程
 
-### 简介
+## 简介
 
 特征是机器学习模型的基本组成部分，以算法易于处理的数值格式表示原始数据。然而，将原始数据转换为特征的方法有无数种，特征的选择会显著影响机器学习模型的准确性和有效性。
 
 在本章中，我们将探索特征工程的艺术，它涉及从数据中选择和转换最相关的特征，以提高机器学习模型的性能。机器学习模型中使用的特征数量在其性能中起着至关重要的作用。如果信息量大的特征不足，模型可能难以完成手头的任务。
 
+
+
 另一方面，拥有过多特征，尤其是无关特征，会使模型更加复杂且难以训练。因此，在特征数量及其与任务的相关性之间取得平衡至关重要。
 
-### 结构
+## 结构
 
 在本章中，我们将探索处理数值数据和分类数据的各种技术。
 
@@ -4977,13 +4866,13 @@ ggplot(total_trips_per_day, aes(x = pickup_date, y = total_trips)) +
     *   独热编码
     *   虚拟变量编码
 
-### 目标
+## 目标
 
 在本章中，我们将讨论特征工程的基本概念，即为有效的机器学习准备数据的艺术。您将学习如何识别数据中的关键特征，并使用分箱和特征缩放等技术来提取它们。此外，您将学习如何对分类数据进行编码，并基于现有数据创建新特征。在本章结束时，您将具备为机器学习准备数据的必要技能，从而做出更准确的预测。
 
-### 理解特征工程
+## 理解特征工程
 
-将特征工程视为一种协助机器学习模像您自己一样理解数据集的方式。正如艺术家雕去大理石块中不必要的部分以呈现杰作，特征工程仔细选择、改变并创建数据的新侧面，以揭示其隐藏的模式。
+将特征工程视为一种协助机器学习模型像您自己一样理解数据集的方式。正如艺术家雕去大理石块中不必要的部分以呈现杰作，特征工程仔细选择、改变并创建数据的新侧面，以揭示其隐藏的模式。
 
 特征工程旨在调整和改进模型中的预测变量，以便模型能更好地发现预测变量与响应变量之间有意义的关系。“工程”一词暗示了一种有目的地修复性能问题和改进预测的方法。知道在模型中表示特征有不同的方式，并意识到某些方式比其他方式效果更好，这是特征工程的核心。因此，特征工程成为制作优化模型有效性的数据表示的实践。它承认我们向模型呈现数据的方式会显著影响其预测能力。重要的是要注意，多种因素共同影响模型的有效性。例如，如果一个预测变量与响应变量缺乏有意义的关系，那么该预测变量的表示方式就变得无关紧要。
 
@@ -5007,41 +4896,45 @@ ggplot(total_trips_per_day, aes(x = pickup_date, y = total_trips)) +
 
 *   确保数据兼容性
 
+### 数值数据转换
 
+#### 数值表示
 
-#### 数值数据转换
-
-##### 数值表示
 机器学习算法依赖数值计算。因此，将非数值特征（如分类变量或文本数据）转换为数值表示，对于兼容性而言是必要的。
 
-##### 提升数据质量
+#### 提升数据质量
 
-###### 减少噪声
+##### 减少噪声
+
 应用分箱或平滑技术可减少噪声，使模式更加明显。
 
-###### 处理缺失值
+##### 处理缺失值
+
 使用插补技术（例如均值、中位数、众数或更复杂的方法）填补缺失数据点，或策略性地移除它们。
 
-##### 改进模型性能
+#### 改进模型性能
 
-###### 特征缩放
+##### 特征缩放
+
 将特征带到相似的尺度，以防止某些特征主导其他特征，特别是在对特征幅度敏感的算法中（例如基于距离的算法）。
 
 **技术**：归一化和标准化。
 
-###### 处理偏态分布
+##### 处理偏态分布
+
 转换偏态分布（例如收入、寿命）以提高模型准确性并减少异常值的影响。
 
 **技术**：对数变换和幂变换。
 
-##### 提取有意义的信息
+#### 提取有意义的信息
 
-###### 创建衍生特征
+##### 创建衍生特征
+
 组合或转换现有特征，以捕获可能与机器学习模型更相关的新信息或关系。
 
 ---
 
-### 转换数值数据
+## 转换数值数据
 
 假设我们要预测客户是否会点击网站上展示的特定广告。两个关键特征可能是：
 
@@ -5061,7 +4954,7 @@ ggplot(total_trips_per_day, aes(x = pickup_date, y = total_trips)) +
 
 ---
 
-#### Z-score 缩放
+### Z-score 缩放
 
 **Z-score 缩放（标准化）**将数值数据转换为均值为 0、标准差为 1 的标准化分布。该过程包括从每个数据点中减去数据集的均值，然后除以标准差。这确保了生成的分布以 0 为中心，并以距离均值的标准差数来表示。计算 z-score 的公式为：
 
@@ -5113,7 +5006,7 @@ Z-score 缩放过程将原始温度值转换为均值为 0、标准差为 1 的�
 
 ---
 
-#### Min-max 缩放
+### Min-max 缩放
 
 **Min-max 缩放（归一化）**将特征转换到标准范围，通常在 0 和 1 之间。Min-max 缩放通过从每个数据点减去特征的最小值，然后除以最大值和最小值的差值来工作。数学上可表示为：
 
@@ -5141,10 +5034,7 @@ ggplot(forest_fires, aes(x = Temperature_Scaled)) +
   geom_histogram(binwidth = 0.125, fill = "steelblue3", color = "black", boundary = 0) +
 ```
 
-
-
-
-#### 分箱
+### 分箱
 
 数值数据分箱是指将连续变量转换为离散的类别或区间，从而将其从定量属性变为定性属性。此过程可以识别线性模型可能遗漏的特征与目标变量之间潜在的非线性关系。此外，分类特征比数值特征更易于解释和说明。然而，分箱固有地涉及粒度的损失。请仔细权衡细节与泛化之间的取舍。分箱过少会过度简化模式；分箱过多会使分析复杂化并降低模型的泛化能力。您可以尝试不同的分箱大小并可视化结果，以确保分割的意义性。
 
@@ -5153,7 +5043,7 @@ ggplot(forest_fires, aes(x = Temperature_Scaled)) +
 *   等宽分箱
 *   分位数分箱
 
-##### 等宽分箱
+#### 等宽分箱
 
 等宽分箱是一种简单直接的分箱技术，它将数值特征的范围划分为宽度相等的箱。它通常是一种简单直观的方法，但也必须考虑其对不同数据分布的适用性。等宽分箱可能对异常值敏感，因为极端值会不成比例地影响分箱边界。现在，我们将把连续的温度值分为四个箱。
 
@@ -5189,7 +5079,7 @@ ggplot(forest_fires, aes(x = Temperature, fill = temp_bins)) +
 
 上图显示了分为四个箱的温度分布。虚线垂直线表示温度分箱的边界。应用 Set2 调色板以直观地区分各个箱。
 
-##### 分位数分箱
+#### 分位数分箱
 
 虽然等宽分箱将特征范围划分为大小均匀的区间，但分位数分箱采取了不同的方法，确保每个箱包含大致相同数量的观测值。这使其特别适合处理偏态或分布不规则的数据。它处理范围内密度变化的数据，确保每个箱具有相似的重要性。下面的代码对 Temperature 列执行分位数分箱。
 
@@ -5223,9 +5113,13 @@ ggplot(forest_fires, aes(x = Temperature, fill = temperature_quantile_bins)) +
 
 图 8.6：分位数分箱下的温度分布
 
-#### 特征截断
+### 特征截断
 
 在处理数据中的极端异常值时，请考虑实施特征截断以减轻其影响。它涉及将高于或低于定义阈值的特征值进行封顶，从而在不完全移除它们的情况下降低其影响力。例如，您可以将所有超过 5 毫米的 "Rain" 值进行截断，确保它们被封顶在 5。另一种有效的方法是使用标准差 (σ) 等度量来定义阈值。示例：截断均值 +3σ 或 -3σ 以外的值。请注意，特征截断是管理异常值的工具，但理解其成因并选择适当的方法对于稳健的模型开发至关重要。图 8.7 显示了 rain 列的原始分布：
+
+
+
+# Rain 的分布
 
 ```r
 # Rain 的分布
@@ -5259,11 +5153,11 @@ ggplot(forest_fires, aes(x = Rain_Capped)) +
 
 图 8.8：Rain 的分布（已截断）
 
-### 处理分类数据
+## 处理分类数据
 
 分类变量代表具有有限个不同值的不同类别或标签。这些值可能传达关于定性属性的信息，例如产品类型、客户细分或季节。将分类变量转换为数值对于机器学习至关重要，因为大多数机器学习算法专门设计用于处理和分析数值数据。它们使用固有基于数字的数学运算、距离计算和统计分析。数值表示使它们能够捕捉数据点之间有意义的差异和相似性。
 
-#### 标签编码
+### 标签编码
 
 标签编码是将分类变量转换为数值的一种简单而有效的方法。它涉及为变量中的每个类别分配唯一的整数标签。
 
@@ -5273,24 +5167,23 @@ ggplot(forest_fires, aes(x = Rain_Capped)) +
 ##### 创建示例数据框
 customer_category <- data.frame(
   customer_id = 1:7,
+  customer_segment = c("First-time purchasers", "Loyal customers", "Loyal customers", "Lapsed purchasers", "First-time purchasers", "Lapsed purchasers", "Loyal customers")
+)
 ```
-
-
-
-
-* `customer_segment = c("First-time purchasers", "Loyal customers", "Loyal customers", "Lapsed purchasers", "First-time purchasers", "Lapsed purchasers", "Loyal customers")`
-* `)`
 
 接下来，我们定义一个名为 `label_encode` 的标签编码函数。该函数接受一个向量 `x` 作为输入，识别向量中的唯一水平，并为每个唯一水平分配数字标签。然后，我们通过将定义的 `label_encode` 函数应用于 `customer_segment` 列来创建一个名为 `customer_segment_encoded` 的新列。
 
-* `# 定义标签编码函数`
-* `label_encode <- function(x) {`
-* `levels <- unique(x)`
-* `as.numeric(factor(x, levels = levels))`
-* `}`
-* `# 创建一个带有标签编码的新列`
-* `customer_category <- customer_category %>%`
-* `mutate(customer_segment_encoded = label_encode(customer_segment))`
+```r
+# 定义标签编码函数
+label_encode <- function(x) {
+  levels <- unique(x)
+  as.numeric(factor(x, levels = levels))
+}
+
+# 创建一个带有标签编码的新列
+customer_category <- customer_category %>%
+  mutate(customer_segment_encoded = label_encode(customer_segment))
+```
 
 | customer_id | customer_segment | customer_segment_encoded |
 | --- | --- | --- |
@@ -5308,15 +5201,18 @@ customer_category <- data.frame(
 
 例如，考虑分为“低”、“中”、“高”的客户满意度等级，表示不同程度的满意度。在这种情况下，序数编码会为这些满意度等级分配数值以反映其顺序。例如，“低”可分配值 1，“中”分配值 2，“高”分配值 3。这种编码确保数字标签捕捉满意度等级的固有顺序，即较高的数值对应较高的满意度。这种方法使机器学习模型能够理解并利用客户满意度等级中的序数关系，从而提高其基于数据有序性质进行预测或分类的能力。
 
-#### 独热编码
+### 独热编码
 
 此技术为名义特征中的每个唯一水平或类别创建一个新的二元变量。每个二元变量充当一个标志，指示特定类别的存在 (1) 或不存在 (0)。当处理类别之间没有固有顺序的分类变量时，独热编码特别有用。它确保模型不会通过向数字标签赋予非预期的重要性而误解数据。
 
 您可以使用 `fastDummies` 包中的 `dummy_cols()` 对 `customer_segment` 列执行独热编码，如下所示：
 
-* `library(fastDummies)`
-* `# 使用 dummy_cols() 执行独热编码`
-* `customer_category_encoded <- dummy_cols(customer_category, select_columns = "customer_segment")`
+```r
+library(fastDummies)
+
+# 使用 dummy_cols() 执行独热编码
+customer_category_encoded <- dummy_cols(customer_category, select_columns = "customer_segment")
+```
 
 | customer_id | customer_segment | customer_segment_First-time purchasers | customer_segment_Lapsed purchasers | customer_segment_Loyal customers |
 | --- | --- | --- | --- | --- |
@@ -5332,14 +5228,16 @@ customer_category <- data.frame(
 
 表 8.2 显示 `dummy_cols()` 为 `customer_segment` 列中的每个唯一类别创建了二元列。
 
-#### 虚拟编码
+### 虚拟编码
 
 对于虚拟编码，我们为每个类别创建一个二元变量，但除去一个类别，该类别将成为参考类别。这消除了**多重共线性**的可能性，这是一种当变量高度相关时可能出现的统计问题。
 
 要使用 `dummy_cols()` 应用虚拟编码，只需将 `remove_first_dummy` 参数设置为 `TRUE`，如下所示。移除一个虚拟变量有助于防止编码特征之间的线性相关性。
 
-* `# 执行虚拟编码`
-* `customer_category_encoded <- dummy_cols(customer_category, select_columns = "customer_segment", remove_first_dummy = TRUE)`
+```r
+# 执行虚拟编码
+customer_category_encoded <- dummy_cols(customer_category, select_columns = "customer_segment", remove_first_dummy = TRUE)
+```
 
 | customer_id | customer_segment | customer_segment_Lapsed purchasers | customer_segment_Loyal customers |
 | --- | --- | --- | --- |
@@ -5355,17 +5253,17 @@ customer_category <- data.frame(
 
 前面的表格显示，由于 `remove_first_dummy = TRUE` 设置，它保留了“流失购买者”和“忠诚客户”的虚拟列，而丢弃了“首次购买者”的虚拟列。虚拟编码在解决独热编码中可能出现的多重共线性问题的同时，有效地表示了分类数据。
 
-### 结论
+## 结论
 
 特征工程是一个创造性的过程，需要理解数据以及您试图解决的问题。它是一个迭代且耗时的过程。请尝试不同的技术，以找到最适合您特定数据集和模型的方法。目标是创建能够有效代表数据中潜在模式和关系的特征，从而带来更好的模型性能和洞察。特征的质量通常比算法的选择对机器学习模型性能有更显著的影响。本章广泛涵盖了数值数据转换，探讨了 Z-score 标准化、最小-最大缩放和分箱方法，并提供了关于何时以及如何应用这些技术的见解。处理分类数据是一个关键方面，本章全面涵盖了各种方法，包括标签编码、独热编码和虚拟编码。下一章将探讨数据科学所需的统计学和概率论基本原理。
 
 # 第 9 章 统计学与概率论
 
-### 简介
+## 简介
 
 数据科学的本质在于从海量结构化和非结构化信息中发现有价值的洞察。统计学构成了该领域的基础框架，为分析和解释数据提供了坚实的基础。它提供了理解和解释机器学习模型结果所必需的基本语法和词汇。但统计学不仅仅是理解机器学习输出。通过描述性统计对数据进行汇总和可视化，您可以清晰地描绘趋势、异常值和变量之间的关系。另一方面，概率论关注量化不确定性和随机现象。通过将概率推理纳入分析过程，您可以对复杂系统建模、预测未来行为、优化性能指标，并从海量数据集中得出可操作的洞察。
 
-### 结构
+## 结构
 
 在本章中，我们将涵盖以下主题：
 
@@ -5380,15 +5278,13 @@ customer_category <- data.frame(
 * 统计假设检验
 * 协方差与相关性
 
-### 目标
+## 目标
 
-
-
-### 统计与概率基础
+## 统计与概率基础
 
 虽然统计学和概率论是广泛的领域，无法在单个章节中完全涵盖，但本章旨在介绍理解和使用机器学习模型所必需的基本概念。您将学习如何从总体中选择有代表性的样本，并计算各种集中趋势和离散程度的度量。您还将学习如何进行统计假设检验并计算变量间的相关性。
 
-#### 总体抽样
+### 总体抽样
 
 总体是您感兴趣研究的整个个体或事物群体。其规模可以是任何大小，从一个班级里的一小群学生到一个国家的所有居民。样本是根据特定抽样策略从总体中抽取的有限子集，用于通过研究样本来估计总体特征。但为什么不直接研究整个总体呢？虽然理论上是理想的，但这通常是不切实际、不可行且没有必要的。
 
@@ -5402,15 +5298,15 @@ customer_category <- data.frame(
 
 在产量高、资源有限的制造业中，有效的样本考量对于在无需检查每个单元的情况下做出明智的产品质量决策至关重要。
 
-##### 简单随机抽样
+#### 简单随机抽样
 
 简单随机抽样（SRS）确保总体中的每个元素都具有等概率的机会被选入样本。这确保了样本能准确代表整个总体，最小化偏差并提高可靠性。在此方法中，抽样可以是有放回或无放回的。
 
-###### 有放回抽样
+##### 有放回抽样
 
 当我们进行有放回抽样时，每次抽取都独立于其他抽取。这意味着一个个体的选择不会影响或改变后续抽取中选择另一个个体的机会。在整个抽样过程中，选择任何特定个体的概率保持不变。例如，如果我们随机选择一名学生，记录其学习习惯，然后将其放回总体，那么在下一次抽取中再次选择该同一学生的机会与之前相同，不受先前选择的影响。
 
-```
+```r
 # Generate a population of 100 students
 population <- 1:100
 
@@ -5426,11 +5322,11 @@ print(sample_with_replacement)
 
 在上述示例中，选择是独立的。每个学生都是从整个总体中随机选取的，每次选取后，该学生被放回总体，确保其存在或缺席不影响后续的抽取。
 
-###### 无放回抽样
+##### 无放回抽样
 
 相反，在无放回抽样中，选择之间不是独立的。第一次抽取的结果会影响后续抽取的合格候选者池。一旦选中一个个体，他们就会从总体中移除，从而改变下一次抽取的概率。先前选择的结果会影响样本的构成。例如，如果我们随机选择学生，记录他们的学习习惯，并不将他们放回总体，那么下一次抽取的合格候选者池就会减少。再次选择同一学生的机会被消除，剩余个体的概率会根据第一次选择进行调整。
 
-```
+```r
 # Select a simple random sample of 5 students without replacement
 sample_without_replacement <- sample(population, size = 5, replace = FALSE)
 
@@ -5443,7 +5339,7 @@ print(sample_without_replacement)
 
 当进行无放回抽样时，选择不是独立的。每个学生都是从总体中随机选取的，但一旦被选中，他们就会从后续抽取的合格候选者池中移除。这改变了剩余个体的概率，并在选择之间引入了依赖性。
 
-##### 分层抽样
+#### 分层抽样
 
 分层抽样是另一种抽样技术，其中总体根据特定特征被划分为不同的子群（或层），然后从每个层中随机收集样本。这种方法确保了总体中所有相关子群都有代表性，从而得出更准确、更可靠的分析。
 
@@ -5453,27 +5349,21 @@ print(sample_without_replacement)
 
 让我们创建一个名为 `customers` 的数据集，包含两个分类变量：`age_group` 和 `shopping_frequency`。我们根据指定概率进行随机抽样，将每个客户分配给一个 `age_group` 和一个 `shopping_frequency`，并使用 `set.seed(123)` 以确保随机抽样的可重复性。
 
-```
+```r
 # Create a dataset with customer information
 set.seed(123) # For reproducibility
 customers <- data.frame(
   customer_id = 1:1000,
   age_group = sample(c("18-25", "26-35", "36-45", "46+"), 1000, replace = TRUE, prob = c(0.2, 0.3, 0.3, 0.2)),
+  shopping_frequency = sample(c("occasional", "regular", "frequent"), 1000, replace = TRUE, prob = c(0.4, 0.3, 0.3))
 )
-```
-
-
-
-
-# 分层抽样示例
-
-```r
-shopping_frequency = sample(c("occasional", "regular", "frequent"), 1000, replace = TRUE, prob = c(0.4, 0.3, 0.3))
 ```
 
 此处，分层基于客户人口统计学特征定义：年龄组（18-25、26-35、36-45、46+）和购物频率（偶尔、定期、频繁）。现在，让我们使用 `dplyr` 执行分层抽样以选择客户样本。
 
-## 分层抽样代码
+### 分层抽样代码
+
+
 
 ```r
 # Stratified sampling
@@ -5502,11 +5392,11 @@ table(stratified_sample$age_group, stratified_sample$shopping_frequency)
 
 在上表中，行代表 `age_group` 的不同取值，列代表 `shopping_frequency` 的不同取值。表中的每个单元格表示落入特定 `age_group` 和 `shopping_frequency` 组合的观测值计数（每个单元格均为 20）。
 
-#### 描述性统计
+### 描述性统计
 
 描述性统计是理解任何数据集的基础。它们提供了数据集关键特征的简明摘要，使我们能够了解其集中趋势、变异性和形状。均值、中位数和众数等指标捕捉典型值，而方差、标准差和极差则量化数据的离散程度和潜在异常值。从本质上讲，描述性统计使我们能够回答诸如“平均值是多少？”和“数据有多分散？”等基本问题，为进一步的分析和模型构建奠定基础。
 
-##### 集中趋势度量
+#### 集中趋势度量
 
 集中趋势度量是一种统计摘要，代表数据集中的中心或典型值。这些度量有助于总结和理解数据分布的中心位置或趋势。
 
@@ -5516,7 +5406,7 @@ table(stratified_sample$age_group, stratified_sample$shopping_frequency)
 
 虽然均值是常用的集中趋势度量，但在某些场景下它可能无法提供准确的洞察。均值对极端值（即异常值）敏感，这会扭曲其值并错误地代表集中趋势，正如 3 小时的派送时间所示。在这种情况下，对极端值不那么敏感的**中位数**可能提供更稳健的指标。
 
-###### 创建数据框并计算均值
+##### 创建数据框并计算均值
 
 ```r
 # Create a dataframe
@@ -5533,7 +5423,7 @@ cat("Mean Delivery Time:", mean_delivery_time, "hours")
 
 相比之下，**中位数**是一种对极端值不敏感的集中趋势度量。它代表数据按升序或降序排列后的中间值。请注意，中位数不依赖于数据中的每一个值，这与均值不同。在给定的派送时间数据集中，按顺序排列为 3、18、20、22、25、28 和 30，中位数被确定为第 4 项的值。在该实例中，有七个派送时间（奇数个），中位数为 25 小时。与均值不同，中位数不取决于数据集中的每个值，这使其成为一种能够抵御异常值影响的稳健度量。
 
-###### 计算中位数
+##### 计算中位数
 
 ```r
 # Calculate median
@@ -5544,7 +5434,7 @@ cat("Median Delivery Time:", median_delivery_time, "hours")
 
 **众数**是数据集中出现频率最高的值。经理现在想了解快递员中最普遍的包裹类型。例如，如果数据集显示“Small”包裹出现频率最高，则“Small”即为众数。基础 R 中没有内置的众数函数，因此我们可以创建一个自定义函数。
 
-###### 众数计算
+##### 众数计算
 
 ```r
 # Mode calculation
@@ -5563,7 +5453,7 @@ cat("Mode Package Type:", mode_package_type)
 
 必须仔细评估数据的特征，并选择最符合数据集固有性质的集中趋势度量。
 
-##### 离散程度度量
+#### 离散程度度量
 
 离散程度是指数据集内部传播或变异性的程度。它提供了关于单个值偏离集中趋势程度的洞察。离散程度度量对于理解数据点的分布和变异性至关重要。
 
@@ -5571,7 +5461,7 @@ cat("Mode Package Type:", mode_package_type)
 
 假设您正在分析电商平台的每日网站流量。您的数据包含一个名为 `daily_visits` 的向量，表示一个月内的网站访问量。
 
-###### 创建向量并计算极差
+##### 创建向量并计算极差
 
 ```r
 # Create a vector, daily_visits
@@ -5596,19 +5486,15 @@ cat("Range of daily website visits:", visits_range, "visits\n")
 - ![](img/eq-21.jpg) = 样本均值
 - `n–1` = 自由度
 
-
-
-
 通过对差值进行平方，我们确保了正偏差和负偏差不会相互抵消。因此，方差始终为非负数，即零或正数。方差为零表示所有数据点的值都相同，表明不存在变异性。另一方面，随着数据值变得更加分散，变异性也会增加。然而，由于方差涉及平方单位而非自然数据单位，因此解释起来可能具有挑战性。较高的方差意味着变异性增加；尽管如此，对于特定数值并没有明确的解释标准。
 
-###### 计算方差
+##### 计算方差
 
-```
+```r
 visits_variance <- var(daily_visits)
 cat("Variance of daily website visits:", visits_variance, "visits²\n")
-```
-
 ## Variance of daily website visits: 109472.2 visits²
+```
 
 `var()` 函数计算数值向量的方差，它衡量每个数据点偏离均值的平均平方偏差。在指定期间内，每日网站访问量的方差约为 109472.2 visits²。由于方差以平方单位（visits²）表示，其直观解释性可能不如原始数据。
 
@@ -5625,18 +5511,17 @@ cat("Variance of daily website visits:", visits_variance, "visits²\n")
 *   ![](img/eq-21.jpg) = 样本均值
 *   `N` = 观测值的数量
 
-###### 计算标准差
+##### 计算标准差
 
-```
+```r
 visits_std_dev <- sd(daily_visits)
 cat("Standard Deviation of daily website visits:", visits_std_dev, "visits\n")
-```
-
 ## Standard Deviation of daily website visits: 330.8659 visits
+```
 
 `sd()` 函数计算标准差，它代表单个每日访问计数偏离平均访问计数的平均量。平均而言，每日访问量偏离均值约 330 次。
 
-#### 概率
+### 概率
 
 概率是衡量事件发生可能性的指标。它定义了在所有可能结果中事件发生的几率或概率。概率总是表示为 0 到 1 之间的数字，其中 0 代表不可能事件，1 代表必然事件。
 
@@ -5669,7 +5554,7 @@ P(E | F) = P(E and F) / P(F)
 
 条件概率 = (购买商品的概率) × (拿起并查看商品的概率) / (拿起并查看商品的概率)
 
-#### 推断统计
+### 推断统计
 
 推断统计帮助我们根据样本数据得出有意义的结论并对总体进行预测。与仅总结和描述数据集主要特征的描述性统计不同，推断统计更进一步，利用从中抽取样本的更大总体进行推断或概括。这一过程涉及使用概率论和统计技术，将具有代表性的数据子集的发现推广到整个总体。
 
@@ -5678,7 +5563,9 @@ P(E | F) = P(E and F) / P(F)
 我们经常会遇到需要检验某个假设是否具有统计显著性的情况。这些假设的例子包括：实施新功能后，人均收入增加了；或者周末的客户参与度高于工作日。假设检验允许我们使用稳健的统计方法批判性地审视这些陈述。假设检验过程包含几个关键步骤：
 
 1.  **构建假设**：定义原假设（`H0`）和备择假设（`H1`）
+
     *   **原假设（`H0`）**：原假设假设被比较的变量或组别之间不存在显著关系、效应或差异。它总是包含一个等式条件，表明如果仅是随机偶然性在起作用，则结果不会偏离预期结果。
+
     *   **备择假设（`H1`）**：相反，备择假设是数据科学家旨在确立的内容。备择假设通过断言被比较的变量或组别之间存在统计上显著的关系、效应或差异，来挑战原假设。值得注意的是，备择假设从不包含等式条件。
 
 实质上，`H0` 和 `H1` 是数学上的对立面，代表了对数据中变量关系的两种截然不同的观点。让我们考虑一个实际场景。你正在调查电商平台引入个性化推荐系统是否显著提高了用户点击率。在这种情况下，原假设可能断言推荐系统没有效果，任何观察到的变化仅仅是由于随机偶然性。相反，备择假设断言归因于推荐系统的点击率存在切实的增加。
@@ -5687,39 +5574,43 @@ P(E | F) = P(E and F) / P(F)
 
 一旦设定了假设，我们需要选择一个统计检验来帮助我们确定是否可以拒绝原假设。有许多统计检验可用，但常用的包括：
 
-
-
-
 ##### 假设检验中的检验统计量
 
 ###### Z-test
+
 Z-test 是一种广泛使用的检验统计量，特别适用于涉及均值的假设检验。它适用于大样本（n > 30），并假设数据服从正态分布。
 
 ###### T-test
+
 T-test 是另一种常用的检验统计量，与 Z-test 类似但更通用。它可以处理小样本（n < 30），并放宽了正态性假设。
 
 ###### Chi-square test
+
 卡方检验，也称为 Pearson 卡方检验，用于分类数据。它评估两个变量的独立性，或评估理论分布与数据集的拟合优度。卡方检验适用于分析列联表或交叉表。它可以识别分类变量之间的关系，或将观测分布与预测分布进行比较。
 
 ###### ANOVA
+
 方差分析（ANOVA）是一种用于比较多组均值的强大检验统计量。它将 T-test 扩展到两组以上，允许检验多个因素或处理的效应。
 
 选择合适的检验统计量取决于数据的性质和研究问题。每种检验统计量都有其优势和局限性，选择合适的统计量可确保从假设检验中得出准确且有意义的结论。
 
-# 3. 设定拒绝域
+### 3. 设定拒绝域
 
 拒绝域是导致拒绝原假设而支持备择假设的取值范围。此步骤涉及基于特定统计指标确定接受或拒绝原假设的标准。要设定拒绝域，我们需要定义三个参数：Alpha (𝛼)、P-value 和临界值。
 
-###### Alpha (𝛼)
+##### Alpha (𝛼)
+
 Alpha（也称为显著性水平）是在原假设为真时拒绝原假设的概率。Alpha 的常用值包括 0.05 或 0.01，反映了决策中可接受的风险水平。例如，若 𝛼 设为 0.05，意味着有 5% 的风险错误地拒绝原假设。
 
-###### P-value
+##### P-value
+
 P-value 是在原假设为真时，获得观测结果（或更极端结果）的概率。较低的 P-value 表明观测效应不太可能仅由随机偶然性引起，从而提供了反对原假设的证据。
 
-###### 临界值
+##### 临界值
+
 临界值是定义拒绝域边界的检验统计量值。它是将拒绝域与接受域分开的值。
 
-# 4. 执行检验并得出结论
+### 4. 执行检验并得出结论
 
 利用样本数据计算检验统计量，并确定 P-value。将 P-value 与预先确定的显著性水平（通常为 0.05）进行比较。如果 P-value 小于显著性水平，则拒绝原假设。如果拒绝原假设，意味着观测效应具有统计学显著性，有证据支持备择假设。另一方面，如果不拒绝原假设，则表明观测效应可能归因于随机偶然性，没有足够证据支持备择假设。
 
@@ -5739,11 +5630,14 @@ P-value 是在原假设为真时，获得观测结果（或更极端结果）的
 
 *   **正协方差**：变量间存在正向关系。一个变量增加时，另一个也倾向于增加，反之亦然。
 *   **负协方差**：变量间存在反向关系。一个变量增加时，另一个减少，反之亦然。
+
+
+
 *   **零协方差**：表明变量间无线性关系。它们的变化在任何特定方向上都无一致关联。但必须认识到，这不一定意味着不存在关系。关系可能是非线性的，或受分析未捕捉的其他因素影响。
 
 `cov()` 函数计算两个向量之间的协方差。重要的是要注意，协方差提供了关系方向的洞察，但不提供关联强度。这就是相关性的作用，它提供一个从 -1 到 +1 的标准化分数来量化关系强度。
 
-相关性衡量两个变量之间线性关系的强度和方向。这有助于分析师识别一个变量的变化是否与另一个变量的变化相关联。相关性为 -1 表示完全负相关（反向变动），0 表示无线性关系，+1 表示完全正相关（同向变动)。越接近 -1 或 +1 的值表明关系越强，而越接近 0 的值表明关联越弱或不存在。识别这些关系对于进行预测和理解数据中观测模式背后的驱动因素至关重要。`cor()` 函数计算两个向量之间的相关系数。
+相关性衡量两个变量之间线性关系的强度和方向。这有助于分析师识别一个变量的变化是否与另一个变量的变化相关联。相关性为 -1 表示完全负相关（反向变动），0 表示无线性关系，+1 表示完全正相关（同向变动）。越接近 -1 或 +1 的值表明关系越强，而越接近 0 的值表明关联越弱或不存在。识别这些关系对于进行预测和理解数据中观测模式背后的驱动因素至关重要。`cor()` 函数计算两个向量之间的相关系数。
 
 考虑一个城市 Uber 乘车数据集。每个数据点包含行驶距离（公里）和对应的乘车时长（分钟）。距离与时间之间的正相关意味着，平均而言，较长的距离与较长的乘车时长相关联。
 
@@ -5754,9 +5648,6 @@ P-value 是在原假设为真时，获得观测结果（或更极端结果）的
 Figure 9.1: 距离与耗时之间的线性关系
 
 ### 结论
-
-
-
 
 统计学为您提供工具，以总结数据集的关键特征并识别模式与趋势。这些统计知识对于有效准备机器学习模型所需的数据至关重要。如果缺乏扎实的统计学掌握，您就有可能向模型输入理解不透彻或具有误导性的数据，从而导致结果不准确且不可靠。虽然概率论和统计学在数据科学中都扮演着关键角色，但它们的用途截然不同。概率论关注机会、可能性和随机性等概念。它探讨诸如“这一事件发生的概率是多少？”之类的问题。统计学则关注收集、分析、解读数据并从中得出结论。它提出诸如“这些数据告诉我们关于其所代表的总体的哪些信息？”之类的问题。在下一章中，您将接触到机器学习概念。
 
@@ -5836,8 +5727,6 @@ Figure 9.1: 距离与耗时之间的线性关系
 
 表 10.1：为各类应用明确定义业务目标
 
-
-
 #### 机器学习问题定义与数据要求
 
 #### 何时使用机器学习
@@ -5900,43 +5789,42 @@ Figure 9.1: 距离与耗时之间的线性关系
 *   **时间节省**：评估 ML 实施在多大程度上减少了用户搜索相关内容或解决问题所花费的时间。
 *   **成本效益**：计算利用 ML 技术实现的成本节约。此评估可能需要对比实施 ML 系统的支出与传统人工流程的相关成本。
 
+### 机器学习系统类型
 
+机器学习系统可以根据其学习方法进行分类，这决定了它们如何进行预测或生成内容：
 
+*   监督学习
+*   无监督学习
+*   强化学习
+*   生成式 AI
 
-### Types of Machine Learning Systems
+#### 监督学习
 
-Machine learning systems can be categorized based on their learning methods, which determine how they make predictions or generate content:
+在监督学习中，算法在包含输入数据和相应输出标签的数据集上进行训练。目标是让算法学习输入数据与正确输出标签之间的关系，从而能够对新的、未见过的数据做出准确预测。之所以称为“监督”学习，是因为人类向算法提供带标签的数据，引导其走向正确的解决方案。
 
-*   Supervised Learning
-*   Unsupervised Learning
-*   Reinforcement Learning
-*   Generative AI
+监督学习包含两类任务：回归和分类。
 
-#### Supervised Learning
+##### 回归
 
-In supervised learning, algorithms are trained on datasets containing input data and corresponding output labels. The goal is for the algorithm to learn the relationship between the input data and the correct output labels, enabling it to make accurate predictions on new, unseen data. It is called "supervised" learning because humans provide labeled data to the algorithm, guiding it toward the correct solution.
-
-Supervised learning encompasses two types of tasks: regression and classification.
-
-##### Regression
-
-Regression models predict numerical values based on input features. Their primary objective is to establish a relationship between input features and a target variable, allowing for accurate prediction of numerical outcomes. For example, predicting house prices based on a set of features (location, size, number of bedrooms, etc., known as predictors) (Figure 10.1). To train a model for this task, you need a diverse dataset with many house samples containing both the predictors (features) and their corresponding labels (prices).
+回归模型基于输入特征预测数值。其主要目标是建立输入特征与目标变量之间的关系，从而实现对数值结果的准确预测。例如，基于一组特征（位置、大小、卧室数量等，称为预测变量）预测房价（Figure 10.1）。要训练此任务的模型，您需要一个包含许多房屋样本的多样化数据集，这些样本同时包含预测变量（特征）及其对应的标签（价格）。
 
 ![Figure 10.1: Regression task example - predicting house prices based on house size](img/Figure10.1.png)
 
-The table below lists more examples of regression tasks.
+下表列出了更多回归任务示例。
 
-| Target | Potential Input Variables | Predicted Numerical Outcome |
+| 目标 | 潜在输入变量 | 预测数值结果 |
 | --- | --- | --- |
-| Stock Price Prediction | Historical stock prices, trading volume, economic indicators, company financials, news sentiment | Price of a specific stock |
-| Energy Consumption Forecasting | Historical energy usage, temperature, day of week, time of day | Energy consumption in kWh |
-| Crop Yield Estimation | Soil quality, weather conditions, irrigation levels, historical yield data | Yield in bushels |
-| Website Traffic Forecasting | Historical website traffic, marketing campaign data, seasonal trends | Expected website visits |
-| Air Quality Prediction | Air pollution levels, meteorological data, historical air quality indices | Air quality index for a specific area |
+| 股价预测 | 历史股价、交易量、经济指标、公司财务状况、新闻情绪 | 特定股票的价格 |
+| 能源消耗预测 | 历史能源使用量、温度、星期几、一天中的时间 | 以 kWh 为单位的能源消耗 |
+| 作物产量估算 | 土壤质量、天气状况、灌溉水平、历史产量数据 | 以蒲式耳为单位的产量 |
+| 网站流量预测 | 历史网站流量、营销活动数据、季节性趋势 | 预期网站访问量 |
+| 空气质量预测 | 空气污染水平、气象数据、历史空气质量指数 | 特定区域的空气质量指数 |
 
-Table 10.3: Regression Task Examples
+表 10.3：回归任务示例
 
-##### Classification
+
+
+# Classification
 
 Classification models are a subset of supervised learning algorithms used to predict the likelihood that an instance belongs to a specific category or class. Unlike regression models, which output numerical values, classification models output values indicating whether an item belongs to a specific category.
 
@@ -5956,7 +5844,7 @@ The table below shows several classification task scenarios:
 
 Table 10.4: Classification Task Examples
 
-#### Unsupervised Learning
+## Unsupervised Learning
 
 In unsupervised learning, training data lacks explicit labels, requiring the model to learn patterns and structures without explicit guidance. Unlike supervised learning, there are no labeled outputs to guide the model's learning process. This approach is particularly useful when exploring and understanding the inherent complexities and relationships within a dataset, especially when labeled examples are unavailable or difficult to obtain.
 
@@ -5966,18 +5854,15 @@ A common technique in unsupervised learning is clustering, where the model ident
 
 Besides clustering, there are several other unsupervised learning tasks. One is anomaly detection, which identifies data points that deviate significantly from the majority of the data. Anomaly detection can be used for applications like fraud detection, network intrusion detection, and manufacturing defect identification. Another task is dimensionality reduction, which reduces the number of features in a dataset while retaining the most important information. Dimensionality reduction can also be used for visualizing high-dimensional data.
 
-#### Reinforcement Learning
+## Reinforcement Learning
 
-Reinforcement Learning (RL) is a branch of machine learning where algorithms learn by interacting with an environment. RL models learn through exploration, taking actions, and receiving feedback in the form of rewards or penalties. The goal of RL is for the agent to discover a policy—a set of rules dictating the best action to take in different situations—to maximize cumulative reward.
+Reinforcement Learning (`RL`) is a branch of machine learning where algorithms learn by interacting with an environment. `RL` models learn through exploration, taking actions, and receiving feedback in the form of rewards or penalties. The goal of `RL` is for the agent to discover a policy—a set of rules dictating the best action to take in different situations—to maximize cumulative reward.
 
 Reinforcement learning has been successfully applied to various tasks, such as training robots to perform manipulation tasks like grasping and pouring, and navigating unknown environments. It is also used to recommend products or content based on user interactions, and to develop AI agents capable of achieving professional-level play in games like poker.
 
-#### Generative AI
+## Generative AI
 
 Generative AI models are deep learning algorithms capable of creating various types of content—such as images, music, articles, and even videos—using user input. A key advantage of generative AI is its ability to handle diverse inputs and outputs. For example, a model can accept text and images as input and generate video as output, or accept an image as input and generate a descriptive text caption.
-
-
-
 
 ### 生成式 AI 应用利用基础模型
 
@@ -6035,7 +5920,7 @@ ML 是一个快速发展的领域，有潜力改变众多行业，并彻底改�
 
 ![](img/fm1.png)
 
-## 第 11 章：训练机器学习模型
+# 第 11 章：训练机器学习模型
 
 ### 简介
 
@@ -6077,10 +5962,6 @@ ML 是一个快速发展的领域，有潜力改变众多行业，并彻底改�
 *   **确定业务目标：** 任何机器学习项目的第一步是确定您试图解决的问题。明确定义您旨在解决的业务问题，并量化预期收益。建立可衡量的目标和成功标准，以确保 ML 项目与组织的整体战略保持一致。
 *   **构建 ML 问题：** 通过识别输入（特征）和期望输出（目标变量），将业务问题转化为机器学习问题。确定用于评估模型成功的误差指标。
 *   **收集数据：** 下一步是收集和汇集与问题相关的数据。这可能涉及从各种来源收集数据，如数据库、API、文件和传感器。
-
-
-
-
 
 ### 数据预处理
 
@@ -6129,6 +6010,8 @@ Y = β₀ + β₁x₁ + β₂x₂ + ... + βₙxₙ + ε
 
 残差（`eᵢ`）是观测响应值（`yᵢ`）与预测响应值（`ŷᵢ`）之间的差异。残差（`eᵢ`）计算公式为 `eᵢ = yᵢ - ŷᵢ`。
 
+
+
 在线性回归中，成本函数通常定义为均方误差（MSE）。MSE 测量预测值与实际值之间平方差的平均值。
 
 ```
@@ -6139,12 +6022,12 @@ MSE = (1/n) Σ(yᵢ - ŷᵢ)²
 
 线性回归模型基于若干假设，必须满足这些假设才能确保模型预测的有效性。以下是线性回归的一些关键假设：
 
-*   假设自变量与因变量之间的关系是线性的。
-*   观测值必须相互独立。
-*   假设残差的方差在自变量的所有水平上是恒定的。当误差项的变异性在自变量的不同水平上发生变化时，就会出现异方差性。
-*   假设残差呈正态分布。
-*   自变量之间不应高度相关。变量间的高度相关性会在模型拟合过程和结果解释中造成困难。
-*   残差不应随时间相互关联。
+* 假设自变量与因变量之间的关系是线性的。
+* 观测值必须相互独立。
+* 假设残差的方差在自变量的所有水平上是恒定的。当误差项的变异性在自变量的不同水平上发生变化时，就会出现异方差性。
+* 假设残差呈正态分布。
+* 自变量之间不应高度相关。变量间的高度相关性会在模型拟合过程和结果解释中造成困难。
+* 残差不应随时间相互关联。
 
 #### 数据拆分
 
@@ -6156,9 +6039,9 @@ Figure 11.2: 将数据拆分为训练数据集和测试数据集
 
 现在，让我们讨论一些将数据拆分为训练数据集和测试数据集的最佳实践。
 
-*   首先，确保测试集足够大，以产生统计学上显著的结果。您要避免测试集过小，因为它可能无法准确反映模型的真实性能。根据经验，常见的拆分比例是 80% 训练和 20% 测试，但这可能因数据集的大小和复杂性而异。
-*   其次，至关重要的是要避免选取与训练集具有不同特征的测试集。这是因为测试集作为新数据的代理，目标是创建一个能很好地泛化到新的、未见过的数据的模型。
-*   第三，绝不要在测试数据上训练模型，也不要使用测试集的任何信息来影响模型训练。确保测试集在整个模型构建过程中始终与训练集完全分离。数据泄露，即测试集的信息无意中影响了模型，会导致过拟合和误导性的评估指标。
+* 首先，确保测试集足够大，以产生统计学上显著的结果。您要避免测试集过小，因为它可能无法准确反映模型的真实性能。根据经验，常见的拆分比例是 80% 训练和 20% 测试，但这可能因数据集的大小和复杂性而异。
+* 其次，至关重要的是要避免选取与训练集具有不同特征的测试集。这是因为测试集作为新数据的代理，目标是创建一个能很好地泛化到新的、未见过的数据的模型。
+* 第三，绝不要在测试数据上训练模型，也不要使用测试集的任何信息来影响模型训练。确保测试集在整个模型构建过程中始终与训练集完全分离。数据泄露，即测试集的信息无意中影响了模型，会导致过拟合和误导性的评估指标。
 
 在训练阶段，机器学习算法通过调整模型参数来学习训练数据中的模式。然而，模型可能会过拟合训练数据，意味着它在训练数据上表现良好，但在新的、未见过的数据上表现不佳。为了防止这种情况，我们可以使用验证集在训练过程中评估模型性能并根据需要进行调整。这确保模型不仅仅是记忆训练数据，而是学习能泛化到新数据的有用模式。下图 Figure 11.3 展示了数据拆分为三个子集的情况：
 
@@ -6168,13 +6051,9 @@ Figure 11.3: 将数据拆分为训练、验证和测试数据集
 
 典型的数据划分工作流包括以下步骤：
 
-1.  将初始数据集拆分为三个子集：训练集、验证集和测试集。常见的拆分比例为 80-10-10% 或 70-15-15%。
-2.  在训练集上训练模型，并在验证集上评估其性能。
-3.  调整模型的任何方面，添加或移除特征，应用正则化技术，甚至构建一个全新的模型。进行修改后，返回步骤 2 并继续迭代，直到达到满意的性能。
-
-
-
-
+1. 将初始数据集拆分为三个子集：训练集、验证集和测试集。常见的拆分比例为 80-10-10% 或 70-15-15%。
+2. 在训练集上训练模型，并在验证集上评估其性能。
+3. 调整模型的任何方面，添加或移除特征，应用正则化技术，甚至构建一个全新的模型。进行修改后，返回步骤 2 并继续迭代，直到达到满意的性能。
 
 #### 模型选择与评估
 
@@ -6190,11 +6069,11 @@ Figure 11.3: 将数据拆分为训练、验证和测试数据集
 
 以下是回归任务中最常用的一些评估指标：
 
-*   **平均绝对误差**：`MAE` 衡量实际值与预测值之间平均绝对差异。它提供直观的解释，数值越低表示模型性能越好。
-*   **均方误差**：`MSE` 计算实际值与预测值之间平方差的平均值。平方操作会对较大误差施加更重的惩罚，使 `MSE` 对异常值敏感。
-*   **均方根误差**：`RMSE` 是 `MSE` 的平方根，提供与目标变量相同单位的可解释度量。与 `MSE` 一样，`RMSE` 惩罚较大误差，但因量纲一致而更具可解释性。
-*   **均方根对数误差**：`RMSLE` 衡量预测值与实际值对数的 `RMSE`。当目标变量跨越多个数量级且关注相对误差而非绝对误差时，该指标非常实用。
-*   **平均绝对百分比误差**：`MAPE` 计算相对于实际值的实际值与预测值之间平均百分比差异。它以百分比形式表示误差，便于跨不同数据集进行解释和比较。
+* **平均绝对误差**：`MAE` 衡量实际值与预测值之间平均绝对差异。它提供直观的解释，数值越低表示模型性能越好。
+* **均方误差**：`MSE` 计算实际值与预测值之间平方差的平均值。平方操作会对较大误差施加更重的惩罚，使 `MSE` 对异常值敏感。
+* **均方根误差**：`RMSE` 是 `MSE` 的平方根，提供与目标变量相同单位的可解释度量。与 `MSE` 一样，`RMSE` 惩罚较大误差，但因量纲一致而更具可解释性。
+* **均方根对数误差**：`RMSLE` 衡量预测值与实际值对数的 `RMSE`。当目标变量跨越多个数量级且关注相对误差而非绝对误差时，该指标非常实用。
+* **平均绝对百分比误差**：`MAPE` 计算相对于实际值的实际值与预测值之间平均百分比差异。它以百分比形式表示误差，便于跨不同数据集进行解释和比较。
 
 这些指标用于评估回归模型的性能，帮助确定哪个模型最适合数据。每个指标都有其优缺点，指标的选择取决于具体问题和期望结果。
 
@@ -6204,7 +6083,7 @@ Figure 11.3: 将数据拆分为训练、验证和测试数据集
 
 以下命令读取数据集，并可视化网约车服务中行驶距离与耗时之间的线性关系。数据集 `cab_data.csv` 包含每趟行程的行驶距离及对应耗时信息。
 
-```
+```r
 # Load the required libraries
 library(dplyr)
 library(ggplot2)
@@ -6230,7 +6109,7 @@ Figure 11.5 展示了两个变量之间的线性关系。图表表明，随着�
 
 接下来，将数据集划分为训练集和测试集。
 
-```
+```r
 # Split data into train and test
 set.seed(123)
 rows = seq(1, nrow(cab_data), 1)
@@ -6243,7 +6122,7 @@ test = cab_data[-trainRows, ]
 
 使用 `lm()` 函数训练线性回归模型。以下代码基于 `Distance` 变量训练模型以预测 `Time_Taken` 变量。
 
-```
+```r
 # Train a linear Regression Model
 lm_time <- lm(Time_Taken ~ Distance, data = train)
 ```
@@ -6299,10 +6178,6 @@ summary(lm_time)
 # Predict on test set
 ```
 
-
-
-
-
 ###### 线性回归模型评估
 
 ```r
@@ -6344,8 +6219,8 @@ mae(compare_df$Actual, compare_df$Predicted)
 
 逻辑回归在生成概率估计作为输出方面非常高效。这些概率可通过以下两种方式使用：
 
-*   直接使用返回的概率，无需任何转换。
-*   根据指定阈值将概率转换为二元类别。
+* 直接使用返回的概率，无需任何转换。
+* 根据指定阈值将概率转换为二元类别。
 
 在逻辑回归中，我们建模自变量与因变量处于特定类别的对数几率之间的关系。几率定义为事件发生的概率与不发生的概率之比。
 
@@ -6389,11 +6264,11 @@ mae(compare_df$Actual, compare_df$Predicted)
 
 以下是分类中常用的一些评估指标：
 
-*   **混淆矩阵**：混淆矩阵是一个表格（如表 11.1 所示），通过比较预测类别和实际类别来显示分类器的性能。它包含四个类别：
-    *   **真阳性 (TP)**：预测类别和实际类别均为阳性。
-    *   **真阴性 (TN)**：预测类别和实际类别均为阴性。
-    *   **假阳性 (FP)**：实际类别为阴性，但预测类别为阳性。
-    *   **假阴性 (FN)**：实际类别为阳性，但预测类别为阴性。
+* **混淆矩阵**：混淆矩阵是一个表格（如表 11.1 所示），通过比较预测类别和实际类别来显示分类器的性能。它包含四个类别：
+    * **真阳性 (TP)**：预测类别和实际类别均为阳性。
+    * **真阴性 (TN)**：预测类别和实际类别均为阴性。
+    * **假阳性 (FP)**：实际类别为阴性，但预测类别为阳性。
+    * **假阴性 (FN)**：实际类别为阳性，但预测类别为阴性。
 
 | | Predicted positive | Predicted negative |
 | --- | --- | --- |
@@ -6402,23 +6277,23 @@ mae(compare_df$Actual, compare_df$Predicted)
 
 **Table 11.1: 混淆矩阵**
 
-*   **准确率**：正确分类实例的比例与总实例数的比值。它衡量分类器做出正确预测的频率。然而，它可能不适用于不平衡数据集，即某些类别的数据点多于其他类别的情况。
+* **准确率**：正确分类实例的比例与总实例数的比值。它衡量分类器做出正确预测的频率。然而，它可能不适用于不平衡数据集，即某些类别的数据点多于其他类别的情况。
 
 ![](img/eq-14.jpg)
 
-*   **精确率**：在分类器做出的所有阳性预测中，真阳性预测所占的比例。它指示分类器在预测阳性结果时的准确程度。
+* **精确率**：在分类器做出的所有阳性预测中，真阳性预测所占的比例。它指示分类器在预测阳性结果时的准确程度。
 
 ![](img/eq-15.jpg)
 
-*   **召回率 (灵敏度或真阳性率)**：在数据集中所有实际阳性实例中，真阳性预测所占的比例。它指示分类器识别阳性实例的能力。
+* **召回率 (灵敏度或真阳性率)**：在数据集中所有实际阳性实例中，真阳性预测所占的比例。它指示分类器识别阳性实例的能力。
 
 ![](img/eq-16.jpg)
 
-*   **F1 分数**：精确率和召回率的调和平均数。它通过结合精确率和召回率，提供了分类器性能的平衡度量。
+* **F1 分数**：精确率和召回率的调和平均数。它通过结合精确率和召回率，提供了分类器性能的平衡度量。
 
 `F1 Score = 2 * (precision * recall) / (precision + recall)`
 
-*   **AUC (ROC 曲线下面积)**：接收者操作特征 (ROC) 曲线在不同分类阈值下绘制真阳性率与假阳性率的关系。AUC 衡量分类器区分阳性和阴性类别的能力。较高的 AUC 值表示更好的分类性能。AUC 范围从 0 到 1，其中 0.5 表示随机分类，1 表示完美分类。
+* **AUC (ROC 曲线下面积)**：接收者操作特征 (ROC) 曲线在不同分类阈值下绘制真阳性率与假阳性率的关系。AUC 衡量分类器区分阳性和阴性类别的能力。较高的 AUC 值表示更好的分类性能。AUC 范围从 0 到 1，其中 0.5 表示随机分类，1 表示完美分类。
 
 下图展示了典型的 ROC 曲线：
 
@@ -6430,17 +6305,17 @@ AUC 评估模型的预测能力，而不依赖于选定的分类阈值。这种�
 
 #### 使用逻辑回归预测贷款违约
 
-
-
-
-
+```r
 # 构建用于贷款违约预测的逻辑回归模型
+```
+
+
 
 在本节中，我们将构建一个逻辑回归模型来预测贷款违约的发生。预测贷款违约是银行和放贷业务的关键组成部分。放贷人必须评估向借款人发放贷款的潜在盈利能力和相关风险。尽管大多数借款人履行了还款义务，但违约的可能性依然存在，这可能导致放贷人和借款人之间的信任破裂，也会对放贷人的业务构成财务威胁。因此，放贷人在批准贷款申请前，必须准确估算违约概率。
 
 准确的违约预测模型使放贷人能够就贷款审批、定价和风险管理策略做出明智决策。通过利用预测分析，放贷人可以识别高风险借款人，并采取适当措施降低违约可能性。这可能涉及调整贷款条款、要求额外抵押品，或完全拒绝贷款申请。
 
-##### 数据准备
+### 数据准备
 
 例如：我们将首先读取一个名为 `loan_df.csv` 的 CSV 文件到名为 `loan_df` 的数据框中。然后使用 `as.factor()` 函数将数据框中的 `default` 列转换为因子变量，该变量代表二元类别，如违约 (1) 和非违约 (0)。下表描述了数据框 `loan_df` 的列。
 
@@ -6477,7 +6352,7 @@ ggplot(loan_df, aes(x = credit_score, fill = default)) +
 
 图 11.8：信用评分分布
 
-##### 模型训练
+### 模型训练
 
 数据准备就绪后，我们现在将贷款数据集拆分为训练集和测试集，以评估预测模型的性能。然后我们将使用训练集拟合一个逻辑回归模型，该模型基于信用评分、负债收入比和年龄来预测违约的可能性。
 
@@ -6498,12 +6373,11 @@ LogReg <- glm(default ~ credit_score + debt_to_income_ratio + age,
 
 `glm()` 函数用于拟合广义线性模型，这是一大类统计模型，包括逻辑回归。`glm()` 函数的语法与 `lm()` 函数（用于线性模型）的语法相似，但有一个关键区别。在执行逻辑回归时，需要指定 `family = binomial` 参数，以告知 R 运行逻辑回归。
 
-###### 模型摘要
+#### 模型摘要
 
 为了了解逻辑回归模型的性能和特征，我们现在将生成模型的摘要。
 
 ```r
-###### 模型摘要
 summary(LogReg)
 ```
 
@@ -6538,7 +6412,7 @@ summary(LogReg)
 
 零偏差代表不包含任何预测变量时模型的拟合优度，而残差偏差衡量包含预测变量后模型的拟合优度。偏差的减少表明模型拟合得到改善。赤池信息准则 (AIC) 是针对给定数据集的统计模型相对质量的度量。较低的 AIC 值表示更好的拟合。
 
-##### 模型评估
+### 模型评估
 
 为了评估逻辑回归模型在未见数据上的性能，我们现在将使用训练好的模型对测试集进行预测，然后将预测概率转换为类别标签（违约或非违约）。
 
@@ -6554,32 +6428,27 @@ fitted_class <- ifelse(fitted_results > 0.5, 1, 0)
 
 为了评估模型预测的准确性，我们现在将创建一个混淆矩阵。
 
-
-
-
-
-###### 混淆矩阵
+#### 混淆矩阵
 
 ```r
 conf_matrix = table(test$default, fitted_class)
 conf_matrix
 ```
 
+```
 ## fitted_class
-
 ## 0 1
-
 ## 0 151 12
-
 ## 1 25 12
+```
 
 # 计算真阳性 (TP)、真阴性 (TN)、假阳性 (FP) 和假阴性 (FN)
 
 ```r
 TP <- conf_matrix[2,2]
-TN <- conf_matrix[1,1];
-FP <- conf_matrix[1,2];
-FN <- conf_matrix[2,1];
+TN <- conf_matrix[1,1]
+FP <- conf_matrix[1,2]
+FN <- conf_matrix[2,1]
 ```
 
 # 计算准确率
@@ -6589,7 +6458,9 @@ accuracy <- (TP + TN) / sum(conf_matrix)
 accuracy
 ```
 
+```
 ## 0.815
+```
 
 # 计算精确率
 
@@ -6598,7 +6469,9 @@ precision <- TP / (TP + FP)
 precision
 ```
 
+```
 ## 0.5
+```
 
 # 计算召回率 (灵敏度)
 
@@ -6607,7 +6480,9 @@ recall <- TP / (TP + FN)
 recall
 ```
 
+```
 ## 0.3243243
+```
 
 混淆矩阵用于总结模型的性能。它列出了模型预测的真阳性 (`TP`)、真阴性 (`TN`)、假阳性 (`FP`) 和假阴性 (`FN`) 的数量，并将其与测试数据集中的实际结果进行比较。模型达到了 `0.815` 的准确率，表明它正确分类了测试数据集中约 81.5% 的实例。精确率为 `0.5`，表明预测为违约的实例中约有一半是真阳性，而另一半是假阳性。召回率为 `0.324`，表明模型仅正确识别了约 32.4% 的实际违约案例。
 
@@ -6692,12 +6567,9 @@ Model_rpart = rpart(default ~ credit_score + debt_to_income_ratio,
 # Visualise the decision tree
 ```
 
+#### 决策树模型解读与评估
 
-
-
-##### 决策树模型解读与评估
-
-###### 可视化决策树
+##### 可视化决策树
 
 ```r
 rpart.plot(Model_rpart)
@@ -6707,10 +6579,9 @@ rpart.plot(Model_rpart)
 
 为了进一步解读决策树模型，我们将提取用于预测贷款违约的规则，这将提供一个简洁易读的摘要，总结用于分配违约概率的条件和阈值。
 
-###### 决策树规则
+##### 决策树规则
 
 ```r
-###### 决策树规则
 rpart.rules(Model_rpart, cover = T)
 ```
 
@@ -6724,7 +6595,7 @@ rpart.rules(Model_rpart, cover = T)
 
 `rpart.plot` 函数可视化决策树模型，创建树结构的图形表示。`rpart.rules` 函数提取决策树模型学习到的规则或条件。输出呈现了一组定义预测贷款违约二元结果条件的规则。每个规则由特征值的组合及相应的违约概率组成。
 
-####### 决策规则解读
+###### 决策规则解读
 
 *   如果 `credit_score` 大于或等于 506，预测违约概率为 0.05，覆盖约 66% 的数据集。
 *   如果 `credit_score` 小于 506 且 `debt_to_income_ratio` 小于 0.62，预测违约概率增加到 0.26，覆盖约 21% 的数据集。
@@ -6740,7 +6611,9 @@ rpart.rules(Model_rpart, cover = T)
 pred_rpart <- predict(Model_rpart, test, type="class")
 ```
 
-###### 混淆矩阵
+
+
+## 混淆矩阵
 
 ```r
 # Confusion Matrix
@@ -6755,7 +6628,7 @@ conf_matrix
 ## 1  28  9
 ```
 
-###### 性能指标计算
+## 性能指标计算
 
 ```r
 # Calculate True Positives (TP), True Negatives (TN), False Positives (FP), and False Negatives (FN)
@@ -6782,9 +6655,7 @@ recall
 
 基于混淆矩阵，我们计算了准确率、精确率和召回率（灵敏度）指标。准确率是正确预测实例占所有实例的比例，本例中为 0.84。精确率是真阳性占所有预测阳性的比例，结果为 0.69。召回率是真阳性占所有实际阳性的比例，结果为 0.24。
 
-#### 回归树
-
-回归树
+### 回归树
 
 回归树是另一种决策树类型，用于目标变量为连续值的场景。与预测分类结果的分类树不同，回归树预测数值。
 
@@ -6794,19 +6665,19 @@ RSS 方法使每个分区内预测值与实际值之间的平方差之和最小�
 
 MSE 方法与 RSS 类似，但在某些方面有所不同。它专注于使每个分区内的均方误差最小化。均方误差是预测值与实际值之间平方差的平均值。算法选择使所有分区总 MSE 最小化的分裂。
 
-#### 超参数调优
+### 超参数调优
 
 在训练决策树模型时，可以调整多个超参数以帮助降低过拟合风险。三个关键超参数包括：
 
 *   **最大深度** (`maxdepth`)：决策树的最大深度，控制模型的复杂度。更深的树可以捕捉数据中更复杂的模式，但也更容易过拟合。设置较低的最大深度有助于防止树变得过于复杂并拟合训练数据中的噪声。
+
 *   **分裂最小样本数** (`minsplit`)：分裂一个节点所需的最小样本数。增加此参数可以通过在分裂前要求更多样本来减少过拟合，防止树创建特定的、高方差的分裂。
+
 *   **叶节点最小样本数** (`minbucket`)：每个叶节点所需的最小样本数。为此参数设置较高值有助于防止创建样本极少的叶节点，这类节点更容易过拟合训练数据。
 
 通过微调这些超参数，可以在模型复杂度和泛化能力之间取得适当的平衡。一棵过深的树，若分裂和创建叶节点所需的样本太少，很可能会过拟合训练数据。调整这些超参数有助于决策树模型捕捉数据中的潜在模式，而不会变得过于复杂并对噪声或异常值敏感。
 
-### 偏差-方差权衡
-
-偏差-方差权衡
+## 偏差-方差权衡
 
 预测误差可理解为两个主要组成部分：偏差误差和方差误差。偏差代表用简化模型近似现实世界问题所引入的误差。它是模型平均预测值与被预测真实值之间的差异。高偏差模型倾向于欠拟合数据，它过度简化了特征与目标变量之间的关系。
 
@@ -6816,12 +6687,9 @@ MSE 方法与 RSS 类似，但在某些方面有所不同。它专注于使每�
 
 ![Figure 11.11: 偏差-方差权衡](img/Figure11.11.png)
 
-
-
-
 理想模型位于偏差和方差之间的最佳平衡点，实现了二者的平衡，从而将这两种误差源都降至最低。它既不简单（高偏差），也不复杂（高方差）。达到这种平衡可在新的、未见过的数据上产生最小的预测误差。这种平衡的模型能很好地泛化到未见过的数据，使其在进行预测时既稳健又可靠。
 
-### 聚类
+## 聚类
 
 聚类关注于发现无标签数据中固有的结构和关系。它是一种无监督学习，意味着它用于数据未被标记或分类的情况。聚类在众多行业中有着广泛的应用，服务于市场细分、社交网络分析、图像分割和异常检测等各种目的。执行聚类后，每个簇都会获得一个称为簇 ID 的唯一标识符。聚类输出也可用作下游机器学习系统的特征数据。
 
@@ -6829,7 +6697,7 @@ MSE 方法与 RSS 类似，但在某些方面有所不同。它专注于使每�
 
 聚类的成败取决于其可解释性和实用性。生成的簇能否被理解并转化为业务可执行的洞察？它们是否揭示了此前被忽视的新视角或模式？
 
-#### K-means 聚类
+### K-means 聚类
 
 K-means 聚类是一种流行的无监督机器学习算法，用于将数据集划分为预定义数量的簇。它通过迭代地将数据点分配给簇并更新簇质心，直到达到收敛。K-means 聚类数据预处理中的一个关键步骤是确保所有特征具有相同的尺度。这是必要的，因为 K-means 依赖于计算数据点之间的距离来将它们分配给簇，而具有不同尺度的特征会对聚类过程产生不成比例的影响。
 
@@ -6841,7 +6709,7 @@ K-means 聚类是一种流行的无监督机器学习算法，用于将数据集
 4.  更新簇质心：通过计算分配给该簇的所有数据点的均值，重新计算每个簇的质心。
 5.  迭代直到收敛：重复步骤 3 和 4，直到簇分配不再显著变化，或达到预定的迭代次数。
 
-##### 寻找最佳簇数量
+#### 寻找最佳簇数量
 
 肘部法则是一种用于识别最佳簇数量的流行技术。它将簇的数量 (k) 与相应的簇内平方和 (WCSS) 绘制在一起，并通过目测图表寻找肘部点。
 
@@ -6859,19 +6727,19 @@ K-means 聚类的目标是最小化 WCSS。当你增加簇的数量 (k) 时，WC
 
 肘部点代表最佳簇数量，因为它指示了 WCSS 下降速度显著减缓的位置。在此点之后增加更多簇，在提高聚类质量方面可能不会带来太多额外收益。
 
-##### K-means 的优势
+#### K-means 的优势
 
 *   该算法高效，能够处理包含大量数据点的大型数据集，使其适用于海量数据应用。
 *   K-means 可以轻松将新数据点纳入现有簇，使模型能够随时间适应数据集的变化。
 *   该算法可以处理不同形状和大小的簇。这种灵活性使 K-means 能够应用于各个领域的广泛聚类任务。
 
-### 结论
+## 结论
 
 理解机器学习生命周期的各个阶段及其相互作用，对于构建有效的 ML 模型至关重要。遵循所有步骤，我们可以开发、监控和部署满足需求的模型。线性回归使用直线来最小化误差，而逻辑回归使用 Sigmoid 函数将输出转换为概率。基于树的模型（如决策树）为分类和回归任务提供了直观的方法，能够解释数据中的复杂关系。然而，驾驭偏差与方差之间的权衡以防止过拟合并确保最佳模型性能至关重要。聚类技术（如 K-means 聚类）通过对相似数据点进行分组，提供有价值的洞察，并有助于模式发现和数据探索。
 
 有了这些基础技术的坚实基础，你现在已做好充分准备，可以进入下一章，学习如何在这个领域建立成功的职业生涯。
 
-### 加入我们书籍的 Discord 空间
+## 加入我们书籍的 Discord 空间
 
 加入书籍的 Discord 工作区，获取最新动态、优惠、全球科技资讯、新版本发布及作者专场活动：
 
@@ -6881,11 +6749,11 @@ K-means 聚类的目标是最小化 WCSS。当你增加簇的数量 (k) 时，WC
 
 # 第 12 章 在数据科学领域建立职业生涯
 
-### 简介
+## 简介
 
 在数据科学领域建立职业生涯，就像踏上一场长达十年的冒险，途中充满了曲折，让旅程始终保持趣味。前方的道路可能并不总是清晰可见，但这正是旅程刺激的部分。随着数据科学的迅猛发展，对 AI 技能的需求也随之激增。许多人正抓住这一时机，在该领域开创充实的职业生涯。必须理解的是，职业生涯不仅仅是一份工作，而是一段以成长、探索为特征、有时伴有不可预见的岔路的长期旅程。
 
-### 结构
+## 结构
 
 本章将涵盖以下主题：
 
@@ -6899,16 +6767,13 @@ K-means 聚类的目标是最小化 WCSS。当你增加簇的数量 (k) 时，WC
     *   思考未来之路
     *   进行信息性面试
 
-### 目标
+## 目标
 
-
-
-
-### 数据科学是一个充满机遇的迷人领域
+## 数据科学是一个充满机遇的迷人领域
 
 数据科学是一个充满机遇的迷人领域，但弄清楚从何入手可能比较棘手。本章旨在帮助你找到方向，并充分利用这些机遇。它将概述指导你在该领域成长的关键步骤，首先从扎实理解数据科学流程的基本方面和必要的数学概念开始。我们还将讨论掌握机器学习算法和编程语言以进行实际实现的重要性。本章还将强调参与数据科学项目以提升解决问题能力的重要性。最后，我们将重点介绍好奇心和有效沟通如何促进在该领域的职业成长与成功。
 
-#### 迈向数据科学职业成长的关键步骤
+### 迈向数据科学职业成长的关键步骤
 
 在开始数据科学的求职之前，遵循以下步骤至关重要，以便你做好充分准备，并在所需技能上建立坚实的基础。
 
@@ -6916,11 +6781,11 @@ K-means 聚类的目标是最小化 WCSS。当你增加簇的数量 (k) 时，WC
 2.  **步骤 2：获取机器学习算法知识**
 3.  **步骤 3：构建作品集**
 
-#### 打下坚实基础：数学与编程要点
+### 打下坚实基础：数学与编程要点
 
 以下是构建数据科学坚实基础所需的一些关键数学概念。
 
-##### 线性代数
+#### 线性代数
 
 它是数据科学的基础，特别是在处理高维数据和机器学习算法时。
 
@@ -6928,42 +6793,42 @@ K-means 聚类的目标是最小化 WCSS。当你增加簇的数量 (k) 时，WC
 *   **主成分分析（PCA）** 等降维技术依赖线性代数在保留大部分方差的同时降低数据维度。PCA 利用特征值和特征向量来识别最大方差的方向，从而实现数据向低维空间的压缩。
 *   许多机器学习算法，包括线性回归、逻辑回归和神经网络，都建立在线性代数概念之上。例如，在线性回归中，模型系数是通过最小化预测值与实际值之间平方差之和来估计的，这涉及矩阵运算。
 
-##### 微积分
+#### 微积分
 
 它为优化、梯度下降和高级机器学习主题提供了更深入的理解。
 
 *   微积分提供了寻找函数最大值和最小值的工具。这对于优化模型性能至关重要。例如，**梯度下降** 是一种广泛使用的优化算法，它依赖微积分来迭代更新模型参数以最小化损失函数。
 *   导数用于量化变化率和函数的斜率。积分用于计算曲线下的面积、累积量和期望值。
 
-##### 统计学
+#### 统计学
 
 它帮助我们得出有意义的结论、评估不确定性并做出数据驱动的决策。它使用均值和标准差等指标评估数据，利用概率分布建模数据，并通过假设检验和回归分析进行推断。它在质量保证中也发挥着关键作用，确保流程和产品达到预期标准。
 
-##### 概率论
+#### 概率论
 
 它是理解数据科学中不确定性和进行预测的基础。概率分布对数据行为进行建模，有助于风险评估和预测。
 
-##### 编程要点
+#### 编程要点
 
 需要学习的基本编程概念包括：
 
-###### R、Python 和 SQL 技能
+##### R、Python 和 SQL 技能
 
 掌握 **R** 和 **Python** 为你提供了数据操作、统计分析和机器学习的工具，这对于任何数据驱动的角色都至关重要。**SQL** 对于从关系型数据库访问和管理数据（即从原始数据中检索洞察的首选工具）至关重要。
 
-###### 机器学习实现
+##### 机器学习实现
 
 积累分类、回归和聚类模型的实战经验。了解如何实现和评估这些模型，能让你做好准备，利用数据驱动的洞察解决现实问题。
 
-###### 使用 Git 进行版本控制
+##### 使用 Git 进行版本控制
 
 **Git** 对于跟踪代码变更和简化协作至关重要。它完整记录你的工作，使团队合作更顺畅，并确保你能轻松管理项目随时间的演变——这是数据科学项目的必备条件。
 
-###### 软件开发最佳实践
+##### 软件开发最佳实践
 
 编写模块化、可复用的代码并记录你的工作。遵循最佳实践能保持代码整洁且易于他人理解，使协作更顺畅，并确保你的工作在专业环境中具备扩展能力。
 
-#### 获取机器学习算法知识
+### 获取机器学习算法知识
 
 扎实理解核心机器学习概念和模型至关重要。这包括理解线性回归、逻辑回归、决策树、集成模型、聚类和异常检测等模型。理解支撑机器学习功能和有效性的核心概念，比单纯死记硬背这些模型更重要。这意味着要理解偏差/方差权衡、代价函数、正则化技术、优化算法和误差分析等基本原理。
 
@@ -6971,52 +6836,51 @@ K-means 聚类的目标是最小化 WCSS。当你增加簇的数量 (k) 时，WC
 
 此外，要紧跟机器学习的最新进展和趋势。雇主看重精通深度学习、自然语言处理和大语言模型等新兴主题的候选人。展示在这些领域的知识能体现你对该领域的热情以及应对新挑战的能力。
 
-#### 构建作品集
+### 构建作品集
 
 在申请工作前构建数据科学作品集，在当今竞争激烈的就业市场中至关重要。随着数据科学项目及其相关课程日益普及，新人才涌现激增。这使得在人群中脱颖而出变得必不可少。精心打造的作品集是向潜在雇主展示你的技能、经验和专业知识的绝佳方式。
 
 *   **突出你的最佳作品**：数据科学作品集是你最佳作品的集合，突显你的解决问题能力、创造力和技术技能。这是一个展示你的项目、想法和对数据科学社区贡献的机会。一份强有力的作品集能帮你获得面试机会，给招聘经理留下深刻印象，并展示你对团队的潜在价值。
 *   **展示你的独特经历**：然而，创建一份脱颖而出的作品集颇具挑战。许多数据科学家都有作品集，但只有少数人拥有卓越的作品集。一份缺乏有趣项目或解释的普通作品集，会让读者难以跟进并保持兴趣。因此，你的作品集应展示你独特的技能、经历和个性。
-*   **包含多样化的项目**：包含展示在数据科学各个方面熟练度的多样化项目至关重要。每个项目都应展示你处理各类数据并有效解决现实问题的能力。此外，突出你在处理不同数据格式和来源方面的专长也很重要。这可能涉及处理来自数据库的结构化数据、来自文本文档或社交媒体源的非结构化数据，甚至是 **JSON** 或 **XML** 文件等半结构化数据。展示你处理多种数据类型的通用性，能增强作品集的说服力，并彰显你作为数据科学家的适应能力。
+*   **包含多样化的项目**：包含展示在数据科学各个方面熟练度的多样化项目至关重要。每个项目都应展示你处理各类数据并有效解决现实问题的能力。此外，突出你在处理不同数据格式和来源方面的专长也很重要。这可能涉及处理来自数据库的结构化数据、来自文本文档或社交媒体源的非结构化数据，甚至是 `JSON` 或 `XML` 文件等半结构化数据。展示你处理多种数据类型的通用性，能增强作品集的说服力，并彰显你作为数据科学家的适应能力。
 
-
-
-
-##### 利用深度洞察与分析凸显你的技能
+#### 利用深度洞察与分析凸显你的技能
 
 在创建数据科学作品集时，项目的深度也是一个重要的考量因素。虽然展示多样化的项目对于证明你的通用性很重要，但那些深入针对特定问题、涉及先进技术并经过严格评估的项目，能更好地展示你的专业技能和对细节的关注。包含具有详尽分析、高级机器学习建模以及有意义的评估指标的项目，有助于向潜在雇主突出你的技能与能力。
 
-##### 包含实战经验
+#### 包含实战经验
 
 此外，展示你在真实数据科学项目中的工作经验，能极大地增强作品集的说服力。这可以通过实习、自由职业工作、黑客马拉松或竞赛来实现。实战经验不仅增加了你技能的可信度，还展示了你应对专业挑战的准备程度，使你成为潜在雇主眼中更具吸引力的候选人。
 
-##### 寻求反馈
+#### 寻求反馈
 
 向经验丰富的数据科学家寻求反馈和指导，以找出改进空间，这一点同样重要。考虑联系能为你提供指导和行业洞见的导师。通过分享学习心得为数据科学社区做贡献，有助于确立你作为有价值贡献者的地位。可以考虑撰写博客文章、制作教程，或在本地聚会或会议上进行演讲。教授他人不仅能巩固自己的理解，还能帮助你在该领域建立声誉和公信力。
 
-### 数据科学中的沟通
+## 数据科学中的沟通
 
 有效沟通的能力是数据科学家的一项关键技能，因为它使他们能够向非技术利益相关者解释复杂的数据洞察和结果，并在组织内推动数据驱动的决策。虽然数据分析和模型构建的技术专长至关重要，但有效的沟通能确保业务方理解数据科学的价值并加以利用。
 
-#### 数据科学沟通的各个方面
+### 数据科学沟通的各个方面
 
-##### 讲故事
+#### 讲故事
 
 数据科学沟通的一个关键方面是讲故事。讲故事能让你以引人入胜且通俗易懂的方式呈现复杂信息。具有叙事结构的数据洞察，能让利益相关者轻松理解数据、其背景、相关性和潜在价值。例如，你不必仅仅展示一组数字和统计数据，而可以围绕某个特定的数据驱动决策如何带来成功的业务成果来编织故事。这种方法有助于吸引受众，并使数据更令人难忘且可落地执行。
 
-##### 演示技巧
+#### 演示技巧
 
 无论是向一小群高管汇报，还是面对大型会议受众，你都必须能够清晰、自信地传达你的发现。这包括使用恰当的视觉元素（如数据可视化）来支撑叙事，并确保演示引人入胜且易于理解。有效的演示需要周密的计划和对受众的考量，拥有清晰的开头、中间和结尾，并引导出具体的行动号召。
 
-##### 数据的可视化呈现
+#### 数据的可视化呈现
 
 图表和仪表盘能帮助利益相关者快速理解复杂信息，并识别模式与趋势。最后，商业洞察和敏锐度对于数据科学中的有效沟通至关重要。你必须能够将发现转化为可执行的业务建议。这涉及理解更广泛的业务背景、行业趋势，以及数据可能揭示的潜在机遇或挑战。
 
-### 用数据讲故事
+## 用数据讲故事
 
 数据可视化和数据叙事是两种用于传达数据分析所得洞察和信息的强大工具。虽然它们常被结合使用，但服务于不同的目的，并对有效的数据沟通做出独特贡献。
 
-#### 数据可视化
+### 数据可视化
+
+
 
 它是以图表、地图和仪表盘等视觉格式呈现数据的过程。数据可视化的主要目的是以一种视觉上引人注目且易于理解的格式呈现数据，使受众能一眼掌握模式、趋势和关系。设计良好的数据可视化应适配数据、清晰易读且不具误导性，确保视觉呈现准确传达底层数据。
 
@@ -7024,7 +6888,7 @@ K-means 聚类的目标是最小化 WCSS。当你增加簇的数量 (k) 时，WC
 
 杂乱的视觉元素会分散并迷惑受众，削弱故事的效果。简化可视化并移除不必要的元素，有助于将注意力集中在最重要的数据点和洞察上。
 
-#### 数据叙事
+## 数据叙事
 
 它是利用数据构建引人入胜且有影响力的叙事来吸引受众的艺术。它涉及在结构化的故事框架内呈现数据洞察，通常遵循开头、中间和结尾的格式。数据叙事超越了数据的简单展示。它提供背景，突出关键洞察，并引导受众得出特定结论或采取行动号召。
 
@@ -7032,38 +6896,35 @@ K-means 聚类的目标是最小化 WCSS。当你增加簇的数量 (k) 时，WC
 
 虽然数据可视化侧重于数据的清晰准确呈现，但数据叙事强调对数据的解读和背景阐述。数据叙事为原始数字增加了一层意义和冲击力，使信息更令人难忘且更具说服力。它将数据洞察转化为一个引人入胜的叙事，引起受众共鸣并深刻传达核心信息。以下是一些推荐做法，助你打造引人入胜且具有教育意义的数据故事：
 
-##### 了解你的受众
+### 了解你的受众
 
 在构思数据故事之前，花时间了解你的目标受众。考虑他们的兴趣、需求和数据素养水平。通过定制你的信息和可视化以符合他们的预期，你可以确保数据故事对他们具有吸引力且易于理解。
 
-##### 设定明确目标
+### 设定明确目标
 
 清晰界定你希望受众记住的关键信息或洞察。你是要突出趋势、对比方案，还是揭示问题的解决方案？设定明确的目标将有助于构建你的叙事结构，并确保你的数据故事产生强大且聚焦的影响力。
 
-##### 选择引人注目的可视化
+### 选择引人注目的可视化
 
 选择能有效传达你洞察的数据可视化。确保你的视觉元素清晰易读、标签恰当且无杂乱干扰。
 
-##### 运用轶事和案例
+### 运用轶事和案例
 
 用相关的轶事和案例让你的数据故事栩栩如生。运用叙事技巧来说明你的观点，使故事更具吸引力。
 
-##### 经常练习
+### 经常练习
 
 将数据叙事融入你的日常工作流程。寻找机会应用你的知识，无论是向同事演示、撰写客户报告，还是进行数据可视化项目。持续的练习将磨练你的技能，提升你的数据叙事能力。
-
-
-
 
 *   **倾听并调整：** 在展示你的数据故事时，积极倾听受众的反应和问题。准备好根据需要提供额外背景或澄清信息。表明你重视他们的意见，并乐于解决他们可能存在的任何疑虑或好奇心。
 
 你可以探索不同的讲故事技巧，找到你独特的风格。尝试不同的叙事结构、人物塑造或数据洞察的创意框架。尝试新方法将帮助你发现什么最能有效吸引受众并传达复杂信息。
 
-### 精通数据科学求职
+## 精通数据科学求职
 
 求职过程包含几个预期阶段，例如确定目标公司、准备面试，以及最终选择职位。
 
-#### 思考未来之路
+### 思考未来之路
 
 首先，考虑你在数据科学领域想要发展的方向。你是想在数据科学内部转型，例如从软件工程转向机器学习工程？还是想转行到不同行业，例如从供应链转向科技行业？明确你的目标将为有效规划提供清晰方向。
 
@@ -7075,7 +6936,7 @@ K-means 聚类的目标是最小化 WCSS。当你增加簇的数量 (k) 时，WC
 
 首先，决定你的优先级是转换角色还是转换行业。一旦确立了这个基础，你就可以逐步扩大范围，探索更多机会。这种方法能让过渡更顺利，为建立精彩的数据科学职业生涯打下坚实基础。
 
-#### 进行信息性面试
+### 进行信息性面试
 
 信息性面试，即与感兴趣角色或公司的专业人士进行非正式交谈，是深入了解各种职位及其要求的有力策略。在不断发展的 AI 领域，职位名称在不同组织间可能差异巨大，这些面试显得尤为重要。
 
@@ -7099,13 +6960,13 @@ K-means 聚类的目标是最小化 WCSS。当你增加簇的数量 (k) 时，WC
 
 参加聚会和行业活动是拓展人脉、联系潜在面试对象的另一好途径。这些聚会提供了结识志同道合之人的机会，他们与你兴趣相投，可能乐于接受信息性面试。
 
-你也可以探索在线平台和专业社交网站，如 LinkedIn，寻找在符合你兴趣的公司或角色工作的人士。你可以发送礼貌的消息，表达你了解其职业路径的兴趣，并请求简短交谈。
+你也可以探索在线平台和专业社交网站，如 `LinkedIn`，寻找在符合你兴趣的公司或角色工作的人士。你可以发送礼貌的消息，表达你了解其职业路径的兴趣，并请求简短交谈。
 
-### 结语
+## 结语
 
 数据科学职业的魅力在于其持续演进的潜力。随着技术进步和新创新涌现，新的挑战和机遇也随之而来。拥抱这不断变化的格局，能让你的旅程充满激情与无限可能。请记住，重要的不仅是终点，更是沿途那迷人的探索过程。每一步，你都将发掘新可能、培养宝贵技能，并创造一条充实而有回报的职业道路。请记住，专注于打牢基础。尝试不同的机器学习算法、探索数据集，并寻找教程和在线资源。随着你不断进步，你将获得解决现实数据挑战的技能，并创造利用机器学习力量的创新解决方案。学习愉快！
 
-### 加入我们书籍的 Discord 空间
+## 加入我们书籍的 Discord 空间
 
 加入书籍的 Discord 工作区，获取最新动态、优惠、全球科技资讯、新书发布及作者见面会：
 
@@ -7115,324 +6976,313 @@ K-means 聚类的目标是最小化 WCSS。当你增加簇的数量 (k) 时，WC
 
 # 索引
 
-**A**
+## A
 
-accuracy 217
-
-alternative hypothesis 186
-
-Analysis of Variance (ANOVA) 186
-
-arrays 35\-37
-
-associations, visualizing 149
-
-boxplot 149
-
-scatter plot 153\-155
-
-attributes 32
-
-dim() function 33, 34
-
-names() function 32, 33
-
-AUC (Area under the ROC curve) 218
-
-**B**
-
-
-
-
-
-# 索引
+*   `accuracy` 217
+*   `alternative hypothesis` 186
+*   `Analysis of Variance (ANOVA)` 186
+*   `arrays` 35-37
+*   `associations, visualizing` 149
+*   `boxplot` 149
+*   `scatter plot` 153-155
+*   `attributes` 32
+*   `dim() function` 33, 34
+*   `names() function` 32, 33
+*   `AUC (Area under the ROC curve)` 218
 
 ## B
 
-- **条形图** 136\-140
-- **偏差** 230
-- **偏差-方差权衡** 230
-- **分箱** 166, 167
-  - **等宽分箱** 167, 168
-  - **分位数分箱** 168
-- **箱线图** 149
-- **箱形图** 149
-  - **应用** 149\-152
-- **商业分析** 11
-  - **描述性分析** 11\-13
-  - **诊断性分析** 14\-16
-  - **预测性分析** 16\-18
-  - **处方性分析** 18, 19
-- **业务问题** 5\-7
+*   **条形图** 136-140
+*   **偏差** 230
+*   **偏差-方差权衡** 230
+*   **分箱** 166, 167
+    *   **等宽分箱** 167, 168
+    *   **分位数分箱** 168
+*   **箱线图** 149
+*   **箱形图** 149
+    *   **应用** 149-152
+*   **商业分析** 11
+    *   **描述性分析** 11-13
+    *   **诊断性分析** 14-16
+    *   **预测性分析** 16-18
+    *   **处方性分析** 18, 19
+*   **业务问题** 5-7
 
 ## C
 
-- **日期和时间的计算**
-  - **超前和滞后计算** 109, 110
-- **微积分** 237
-- **数据科学职业生涯** 235
-- **分类数据**
-  - **处理** 171
-  - **虚拟编码** 173, 174
-  - **标签编码** 171, 172
-  - **独热编码** 172, 173
-- **cbind()** 91
-- **卡方检验** 186
-- **类** 37
-  - **日期和时间** 38, 39
-  - **因子** 39\-41
-- **分类树** 225
-  - **构建** 226\-229
-- **点击率 (CTR)** 16
-- **聚类** 200, 231
-  - **K 均值聚类** 231
-- **逗号分隔值 (CSV) 文件** 49
-- **完全案例删除** 75
-- **条件概率** 184
-- **混淆矩阵** 217
-- **相关性** 188, 189
-- **协方差** 188
-- **cov() 函数** 188
+*   **日期和时间的计算**
+    *   **超前和滞后计算** 109, 110
+*   **微积分** 237
+*   **数据科学职业生涯** 235
+*   **分类数据**
+    *   **处理** 171
+    *   **虚拟编码** 173, 174
+    *   **标签编码** 171, 172
+    *   **独热编码** 172, 173
+*   `cbind()` 91
+*   **卡方检验** 186
+*   **类** 37
+    *   **日期和时间** 38, 39
+    *   **因子** 39-41
+*   **分类树** 225
+    *   **构建** 226-229
+*   **点击率 (CTR)** 16
+*   **聚类** 200, 231
+    *   **K 均值聚类** 231
+*   **逗号分隔值 (CSV) 文件** 49
+*   **完全案例删除** 75
+*   **条件概率** 184
+*   **混淆矩阵** 217
+*   **相关性** 188, 189
+*   **协方差** 188
+*   `cov() 函数` 188
 
 ## D
 
-- **数据**
-  - **排序** 64, 65
-  - **列，添加** 65, 66
-  - **去重** 63
-  - **寻找证据** 9, 10
-  - **提出假设** 9
-  - **处理数据的过程** 7
-  - **要问的问题** 8
-  - **检查可复现性和一致性** 9
-- **数据框** 42
-- **数据合并** 90
-- **数据绑定** 90, 91
-- **数据保存，在 R 中**
-  - **作为二进制文件** 50
-  - **作为 CSV 文件** 49, 50
-  - **作为文本文件** 50
-- **数据科学** 2\-5
-  - **沟通** 239, 240
-  - **所需分析技能** 10, 11
-- **数据科学职业发展** 236
-  - **沟通** 239, 240
-  - **数据科学求职** 242
-  - **数据叙事** 240\-242
-  - **数据可视化** 240\-242
-  - **数学** 236, 237
-  - **机器学习算法** 238
-  - **作品集构建** 238, 239
-  - **编程基础** 237
-  - **打下坚实基础** 236
-- **数据科学求职**
-  - **深思熟虑** 242
-  - **信息面试** 243, 244
-- **数据科学作品集**
-  - **构建** 238, 239
-- **数据转换** 162
-- **数据可视化** 133
-  - **关联** 149
-  - **分布** 136
-  - **比例** 144
-  - **时间序列** 156
-- **数据清洗** 79
-  - **数据分组和汇总** 86\-89
-    - **基于分组数据筛选** 89, 90
-  - **数据透视** 80
-- **日期和时间组件**
-  - **修改** 104
-  - **检索** 103
-- **日期** 99
-  - **创建** 100
-  - **从字符串创建** 100, 101
-  - **从变量创建** 102, 103
-- **日期时间对象**
-  - **创建** 100
-- **决策树** 224
-  - **优势** 225
-  - **分类树** 225, 226
-  - **缺点** 225
-  - **回归树** 229
-  - **结构** 224
-- **密度图** 143
-- **描述性分析** 11\-13
-- **描述性统计** 180
-  - **集中趋势度量** 180\-182
-  - **离散程度度量** 182\-184
-- **诊断性分析** 14\-16
-- **分布可视化** 136
-  - **条形图** 136\-140
-  - **密度图** 143
-  - **直方图** 141\-143
-- **dplyr** 58
-  - **重命名列** 58
-  - **选择列** 58\-60
-  - **筛选行** 60, 61
-- **虚拟编码** 173, 174
-- **持续时间** 110
+*   **数据**
+    *   **排序** 64, 65
+    *   **列，添加** 65, 66
+    *   **去重** 63
+    *   **寻找证据** 9, 10
+    *   **提出假设** 9
+    *   **处理数据的过程** 7
+    *   **要问的问题** 8
+    *   **检查可复现性和一致性** 9
+*   **数据框** 42
+*   **数据合并** 90
+*   **数据绑定** 90, 91
+*   **数据保存，在 R 中**
+    *   **作为二进制文件** 50
+    *   **作为 CSV 文件** 49, 50
+    *   **作为文本文件** 50
+*   **数据科学** 2-5
+    *   **沟通** 239, 240
+    *   **所需分析技能** 10, 11
+*   **数据科学职业发展** 236
+    *   **沟通** 239, 240
+    *   **数据科学求职** 242
+    *   **数据叙事** 240-242
+    *   **数据可视化** 240-242
+    *   **数学** 236, 237
+    *   **机器学习算法** 238
+    *   **作品集构建** 238, 239
+    *   **编程基础** 237
+    *   **打下坚实基础** 236
+*   **数据科学求职**
+    *   **深思熟虑** 242
+    *   **信息面试** 243, 244
+*   **数据科学作品集**
+    *   **构建** 238, 239
+*   **数据转换** 162
+*   **数据可视化** 133
+    *   **关联** 149
+    *   **分布** 136
+    *   **比例** 144
+    *   **时间序列** 156
+*   **数据清洗** 79
+    *   **数据分组和汇总** 86-89
+        *   **基于分组数据筛选** 89, 90
+    *   **数据透视** 80
+*   **日期和时间组件**
+    *   **修改** 104
+    *   **检索** 103
+*   **日期** 99
+    *   **创建** 100
+    *   **从字符串创建** 100, 101
+    *   **从变量创建** 102, 103
+*   **日期时间对象**
+    *   **创建** 100
+*   **决策树** 224
+    *   **优势** 225
+    *   **分类树** 225, 226
+    *   **缺点** 225
+    *   **回归树** 229
+    *   **结构** 224
+*   **密度图** 143
+*   **描述性分析** 11-13
+*   **描述性统计** 180
+    *   **集中趋势度量** 180-182
+    *   **离散程度度量** 182-184
+*   **诊断性分析** 14-16
+*   **分布可视化** 136
+    *   **条形图** 136-140
+    *   **密度图** 143
+    *   **直方图** 141-143
+*   `dplyr` 58
+    *   **重命名列** 58
+    *   **选择列** 58-60
+    *   **筛选行** 60, 61
+*   **虚拟编码** 173, 174
+*   **持续时间** 110
 
 ## E
 
-- **发电数据**
-  - **探索** 105\-107
-- **熵** 225, 226
-- **等宽分箱** 167, 168
-- **基本字符串操作** 114\-116
-  - **更改大小写** 116, 117
-  - **连接字符串** 122
-  - **长度计算** 117, 118
-  - **填充** 121
-  - **提取子字符串** 123
-  - **替换子字符串** 118, 119
-  - **移除多余空白字符** 119, 120
-- **探索性数据分析 (EDA)** 53, 54
+*   **发电数据**
+    *   **探索** 105-107
+*   **熵** 225, 226
+*   **等宽分箱** 167, 168
+*   **基本字符串操作** 114-116
+    *   **更改大小写** 116, 117
+    *   **连接字符串** 122
+    *   **长度计算** 117, 118
+    *   **填充** 121
+    *   **提取子字符串** 123
+    *   **替换子字符串** 118, 119
+    *   **移除多余空白字符** 119, 120
+*   **探索性数据分析 (EDA)** 53, 54
 
 ## F
 
-- **F1 分数** 218
-- **因子**
-  - **处理** 66\-68
-- **特征裁剪** 169, 170
-- **特征工程** 159\-162
-- **基础模型** 201
-- **函数** 44
-  - **电子商务** 44, 45
-  - **金融** 46
-  - **市场营销** 45, 46
+*   **F1 分数** 218
+*   **因子**
+    *   **处理** 66-68
+*   **特征裁剪** 169, 170
+*   **特征工程** 159-162
+*   **基础模型** 201
+*   **函数** 44
+    *   **电子商务** 44, 45
+    *   **金融** 46
+    *   **市场营销** 45, 46
 
 ## G
 
-- **Gapminder 数据集**
-  - **定义** 55\-57
-- **生成式 AI** 201
-- **ggplot2** 134
-  - **创建** 135
-- **基尼指数** 225
-- **分组数据** 89, 90
-  - **添加列** 90
+*   **Gapminder 数据集**
+    *   **定义** 55-57
+*   **生成式 AI** 201
+*   `ggplot2` 134
+    *   **创建** 135
+*   **基尼指数** 225
+*   **分组数据** 89, 90
+    *   **添加列** 90
 
 ## H
 
-- **帮助页面，R** 47
-- **高偏差模型** 230
+*   **帮助页面，R** 47
+*   **高偏差模型** 230
+*   **高方差模型** 230
+*   **直方图** 141-143
 
+## I
 
+*   **插补** 76
+    *   针对非时间序列问题 77
+    *   针对时间序列问题 77
+*   **推断统计** 185
+*   **信息增益** 226
+*   **内连接** 94
+*   **集成开发环境 (IDE)** 23
+*   **国际能源署 (IEA)** 105
+*   **四分位距 (IQR)** 149
+*   **区间** 112
+
+## J
+
+*   **连接** 92
+    *   **内连接** 94
+    *   **左连接** 95, 96
+    *   **外连接** 95
+    *   **右连接** 96
+
+## K
+
+*   **关键绩效指标 (KPIs)** 197
+*   **K 均值聚类** 231, 232
+    *   优势 232, 233
+    *   寻找最佳聚类数 232
+
+## L
+
+*   **标签编码** 171, 172
+*   **大语言模型 (LLMs)** 201
+*   **左连接** 95
+*   **似然函数** 216
+*   **线性代数** 236
+*   **线性回归** 208, 209
+    *   数据拆分 209, 210
+    *   ETA 预测 212-215
+    *   评估指标 211
+*   **折线图**
+    *   用于可视化时间序列 156, 157
+*   **列表** 41
+*   **逻辑回归** 215, 216
+    *   评估指标 217, 218
+    *   似然函数 216, 217
+    *   线性模型的局限性 223
+    *   预测贷款违约 218-223
+*   `lubridate` 103
+
+## M
+
+*   **机器学习 (ML)** 191
+    *   优势 193
+    *   基础 192
+*   **矩阵** 34, 35
+*   **最大似然估计 (MLE)** 217
+*   **平均绝对误差 (MAE)** 211
+*   **平均绝对百分比误差 (MAPE)** 211
+*   **均方误差 (MSE)** 211
+*   **集中趋势度量** 180-182
+*   **离散程度度量** 182
+*   `merge() 函数` 92
+*   **最小-最大缩放** 165
+*   **随机缺失 (MAR)** 72
+*   **完全随机缺失 (MCAR)** 72
+*   **非随机缺失 (MNAR)** 72
+*   **缺失值**
+    *   删除 75
+    *   检测，使用 `naniar` 库 70-72
+    *   删除整列 76
+    *   处理 68, 69
+    *   插补 76
+    *   逐列表删除 75
+    *   原因 72-74
+    *   处理 74
+*   **ML 算法** 238
+*   **ML 生命周期** 206
+    *   阶段 207, 208
+*   **ML 模型训练** 205
+*   **ML 问题构建** 193-197
+*   **ML 系统** 197
+    *   生成式 AI 201
+    *   强化学习 (RL) 201
+    *   监督学习 197
+    *   无监督学习 200
+*   `mutate()` 65
+
+## N
+
+*   **归一化** 165
+*   **非数值 (NaN)** 68
+*   **数值数据转换** 162, 163
+    *   分箱 166, 167
+    *   特征裁剪 169, 170
+    *   最小-最大缩放 165
+    *   Z-score 缩放 163-165
+
+## O
+
+*   **对象** 28
+*   **R 中的对象** 28, 29
+    *   数组 35
+    *   类 37, 38
+    *   数据框 42, 43
+    *   列表 41, 42
+    *   矩阵 34, 35
+    *   向量 29, 32
 
 
 
 # 索引
 
-## H
-- **高方差模型** 230
-- **直方图** 141–143
-
-## I
-- **插补** 76
-  - 针对非时间序列问题 77
-  - 针对时间序列问题 77
-- **推断统计** 185
-- **信息增益** 226
-- **内连接** 94
-- **集成开发环境 (IDE)** 23
-- **国际能源署 (IEA)** 105
-- **四分位距 (IQR)** 149
-- **区间** 112
-
-## J
-- **连接** 92
-  - **内连接** 94
-  - **左连接** 95, 96
-  - **外连接** 95
-  - **右连接** 96
-
-## K
-- **关键绩效指标 (KPIs)** 197
-- **K 均值聚类** 231, 232
-  - 优势 232, 233
-  - 寻找最佳聚类数 232
-
-## L
-- **标签编码** 171, 172
-- **大语言模型 (LLMs)** 201
-- **左连接** 95
-- **似然函数** 216
-- **线性代数** 236
-- **线性回归** 208, 209
-  - 数据拆分 209, 210
-  - ETA 预测 212–215
-  - 评估指标 211
-- **折线图**
-  - 用于可视化时间序列 156, 157
-- **列表** 41
-- **逻辑回归** 215, 216
-  - 评估指标 217, 218
-  - 似然函数 216, 217
-  - 线性模型的局限性 223
-  - 预测贷款违约 218–223
-- **lubridate** 103
-
-## M
-- **机器学习 (ML)** 191
-  - 优势 193
-  - 基础 192
-- **矩阵** 34, 35
-- **最大似然估计 (MLE)** 217
-- **平均绝对误差 (MAE)** 211
-- **平均绝对百分比误差 (MAPE)** 211
-- **均方误差 (MSE)** 211
-- **集中趋势度量** 180–182
-- **离散程度度量** 182
-- **merge() 函数** 92
-- **最小-最大缩放** 165
-- **随机缺失 (MAR)** 72
-- **完全随机缺失 (MCAR)** 72
-- **非随机缺失 (MNAR)** 72
-- **缺失值**
-  - 删除 75
-  - 检测，使用 `naniar` 库 70–72
-  - 删除整列 76
-  - 处理 68, 69
-  - 插补 76
-  - 逐列表删除 75
-  - 原因 72–74
-  - 处理 74
-- **ML 算法** 238
-- **ML 生命周期** 206
-  - 阶段 207, 208
-- **ML 模型训练** 205
-- **ML 问题构建** 193–197
-- **ML 系统** 197
-  - 生成式 AI 201
-  - 强化学习 (RL) 201
-  - 监督学习 197
-  - 无监督学习 200
-- **mutate()** 65
-
-## N
-- **归一化** 165
-- **非数值 (NaN)** 68
-- **数值数据转换** 162, 163
-  - 分箱 166, 167
-  - 特征裁剪 169, 170
-  - 最小-最大缩放 165
-  - Z-score 缩放 163–165
-
 ## O
-- **对象** 28
-- **R 中的对象** 28, 29
-  - 数组 35
-  - 类 37, 38
-  - 数据框 42, 43
-  - 列表 41, 42
-  - 矩阵 34, 35
-  - 向量 29, 32
+
 - **独热编码** 172, 173
 - **有序编码** 172
 - **经济合作与发展组织 (OECD)** 105
 - **外连接** 95
 
 ## P
+
 - **填充** 121
 - **皮尔逊卡方检验** 186
 - **周期** 111
@@ -7454,21 +7304,23 @@ AUC (Area under the ROC curve) 218
   - 条件概率 184, 185
 - **概率论** 237
 - **编程基础** 237
-  - Git 238
-  - ML 实现 237
-  - Python 237
-  - R 237
+  - `Git` 238
+  - `ML` 实现 237
+  - `Python` 237
+  - `R` 237
   - 软件开发最佳实践 238
-  - SQL 237
+  - `SQL` 237
 - **比例，可视化** 144
   - 饼图 144–147
   - 堆积条形图 147, 148
 
 ## Q
+
 - **量词** 126
 - **分位数分箱** 168
 
 ## R
+
 - **R** 22
   - 作为计算器 24, 25
   - 最佳实践 51
@@ -7484,7 +7336,7 @@ AUC (Area under the ROC curve) 218
   - 向量 29
   - 工作目录 28
 - **极差** 182
-- **rbind()** 90
+- **`rbind()`** 90
 - **召回率** 218
 - **回归树** 229
 - **正则表达式** 123, 124
@@ -7492,123 +7344,75 @@ AUC (Area under the ROC curve) 218
   - 分组 125, 126
   - 要素 124
 
+## P（续）
 
+- 模式，检测 127–131
+- 模式，提取 127–131
 
+## R（续）
 
-
-# 索引
-
-## P
-
-模式，检测 127\-131
-
-模式，提取 127\-131
-
-## R
-
-强化学习 (RL) 201
-
-`reshape2` 包 82
-
-右连接 96
-
-均方根误差 (RMSE) 211
-
-均方根对数误差 (RMSLE) 211
-
-RStudio 界面 22, 23
-
-键盘快捷键 25, 26
+- 强化学习 (RL) 201
+- `reshape2` 包 82
+- 右连接 96
+- 均方根误差 (RMSE) 211
+- 均方根对数误差 (RMSLE) 211
+- RStudio 界面 22, 23
+- 键盘快捷键 25, 26
 
 ## S
 
-散点图 153\-155
-
-搜索引擎优化 (SEO) 115
-
-简单随机抽样 (SRS) 177
-
-分层抽样 178\-180
-
-不放回 178
-
-放回 177
-
-堆积条形图 147, 148
-
-标准差 183
-
-标准化 163
-
-统计假设检验 185\-188
-
-统计学 175, 237
-
-`str_c()` 函数 122
-
-`str_extract_all` 函数 130
-
-`str_extract` 函数 128
-
-`str_extract()` 函数 126
-
-`str_length()` 函数 118
-
-`str_pad()` 函数 121
-
-`str_replace_all()` 函数 119
-
-`str_sub()` 函数 123
-
-`str_trim()` 函数 119
-
-监督学习 197, 198
-
-分类模型 199, 200
-
-回归模型 198
+- 散点图 153–155
+- 搜索引擎优化 (SEO) 115
+- 简单随机抽样 (SRS) 177
+- 分层抽样 178–180
+  - 不放回 178
+  - 放回 177
+- 堆积条形图 147, 148
+- 标准差 183
+- 标准化 163
+- 统计假设检验 185–188
+- 统计学 175, 237
+- `str_c()` 函数 122
+- `str_extract_all` 函数 130
+- `str_extract` 函数 128
+- `str_extract()` 函数 126
+- `str_length()` 函数 118
+- `str_pad()` 函数 121
+- `str_replace_all()` 函数 119
+- `str_sub()` 函数 123
+- `str_trim()` 函数 119
+- 监督学习 197, 198
+  - 分类模型 199, 200
+  - 回归模型 198
 
 ## T
 
-时间 99
-
-时间序列
-
-可视化，使用折线图 156, 157
-
-事务 92
-
-t 检验 186
+- 时间 99
+- 时间序列
+  - 可视化，使用折线图 156, 157
+- 事务 92
+- t 检验 186
 
 ## U
 
-无监督学习 200
+- 无监督学习 200
 
 ## V
 
-验证集 210
-
-`var()` 函数 183
-
-方差 182, 183, 230
-
-向量 29
-
-字符向量 30
-
-逻辑向量 31
-
-数值向量 29, 30
+- 验证集 210
+- `var()` 函数 183
+- 方差 182, 183, 230
+- 向量 29
+  - 字符向量 30
+  - 逻辑向量 31
+  - 数值向量 29, 30
 
 ## W
 
-批发客户数据集 86
-
-簇内平方和 (WCSS) 232
+- 批发客户数据集 86
+- 簇内平方和 (WCSS) 232
 
 ## Z
 
-Z-score 标准化 163\-165
-
-z 检验 186
-
+- Z-score 标准化 163–165
+- z 检验 186

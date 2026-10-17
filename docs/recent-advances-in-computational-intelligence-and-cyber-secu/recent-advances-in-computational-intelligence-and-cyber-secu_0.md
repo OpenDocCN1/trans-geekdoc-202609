@@ -1,74 +1,33 @@
+
 # 计算智能与网络安全最新进展：国际计算智能与网络安全会议
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* [14.1 分类方法的[content]
-
-
-
-
-
-
 
 ![](img/figfront1_C.jpg)
 
 ## 节委会详情
 
-**首席赞助**
-
+### 首席赞助
 Prof. Alok Kumar Rai, Hon’ble Vice-Chancellor,
 University of Lucknow (UoL)
 
-**赞助**
-
+### 赞助
 Prof. Poonam Tandon, UoL
 
-**会议主席**
-
+### 会议主席
 Prof. Ashok Kumar Singh, Dean, FoET, UoL
 
-**召集人**
-
+### 召集人
 Dr. Zeeshan Ali Siddiqui, CSED, FoET
 Dr. Siddharth Singh, ECED, FoET
 
-**组织秘书**
-
+### 组织秘书
 Dr. Himanshu Pandey, CSED, FoET
 Er. Avanish Kumar Jayank, ECED, FoET
 
-**财务**
-
+### 财务
 Er. Chandrabhan Singh, CSED, FoET
 Dr. Manoj Kumar Jain, ECED, FoET
 
-**主题演讲和特邀演讲**
-
+### 主题演讲和特邀演讲
 Prof. Alok Chaturvedi, Purdue University, USA
 Prof. Ghanshyam Singh,University of Johannesburg
 Prof. Ashish Seth, INHA University, Uzbekistan
@@ -79,24 +38,21 @@ Prof. Vivek K Singh, BHU, Varanasi
 Dr. Narayan Panigrahi, DRDO CAIR Lab
 Dr. Amit K. Singh, NIT Patna
 
-**客座编辑**
-
+### 客座编辑
 Prof. Ashok Kumar Singh, Dean, FoET, University of Lucknow
 Dr. Zeeshan Ali Siddiqui, CSED, FoET
 Dr. Siddharth Singh, ECED, FoET
 Dr. Amit Kumar Singh, NIT Patna
 Prof. Tanveer J. Siddiqui, University of Allahabad
 
-**项目委员会**
-
+### 项目委员会
 Prof. N. P. Mahalik, California State University, USA
 Prof. Ghanshyam Singh, University of Johannesburg, South Africa
 Prof. Mangesh Kumar, Universite Des Mascareignes, UDM, Mauritius
 Prof. Anil Kumar Tiwari, IIT Jodhpur, India
 Er. Chandrabhan Singh, University of Lucknow, India
 
-**顾问委员会**
-
+### 顾问委员会
 Prof Ishwar. K. Sethi, Oakland University, USA
 Prof K. C. Santosh, University of South Dakota, USA
 Prof N. P. Mahalik, California State University, USA
@@ -116,8 +72,7 @@ Dr. Rajiv Singh, Banasthali Vidyapith Rajasthan
 Dr. Vijay Nath, BIT Mesra, Ranchi
 Dr. Sambit Bakasi, NIT Rourkela
 
-**指导委员会**
-
+### 指导委员会
 Dr. Vinay Kumar, CSED, FoET
 Dr. Jasvant Kumar, CSED, FoET
 Dr. Priyanka Jaiswal, CSED, FoET
@@ -143,10 +98,6 @@ Dr. Gaurav Gupta, EED, FoET
 ![](img/figfront2_C.jpg)
 
 **工程学院与建筑环境学院**
-
-
-
-
 
 进入`/path/to/xxx`目录，找到`xxx.json`。
 
@@ -210,35 +161,35 @@ Tel. +27 11 559 3879 • e-mail: ghanshyams@uj.ac.za
 
 ### 1. Introduction
 
-
-
-
-
 旅游业正在经历指数级增长，为游客提供了大量的出行选择 [19]。然而，这种选择的 abundance 往往导致游客在寻求个性化且合适的目的地和套餐时出现决策挑战。为解决这一问题，智能推荐系统已成为宝贵的工具，帮助游客做出明智的旅行决策。本研究论文重点关注一种混合游客推荐系统的开发，利用统计学社会科学软件包（SPSS）的能力，该软件以智能数据分析而闻名。
 
-本研究的主要目标是设计一种混合推荐系统，将多种算法融合在一起 [15]，包括 K-最近邻（KNN）、卷积神经网络（CNN）和决策树。通过集成这些算法 [7, 8]，系统旨在提供更准确、更个性化的推荐，以满足游客多样化的偏好和需求。
+本研究的主要目标是设计一种混合推荐系统，将多种算法融合在一起 [15]，包括 K-最近邻（`KNN`）、卷积神经网络（`CNN`）和决策树。通过集成这些算法 [7, 8]，系统旨在提供更准确、更个性化的推荐，以满足游客多样化的偏好和需求。
 
-所提出的系统利用包含套餐名称、评论、评分、城市和月份等关键信息的数据集 [14]。该数据集作为在 SPSS 环境中进行智能数据分析和建模的基础。通过严格的探索性数据分析和描述性统计，有价值的旅行者偏好和模式洞察被提取出来 [11]。混合系统利用 KNN 进行用户相似性分析，利用 CNN 进行评论的情感分析 [22]，并利用决策树根据偏好和其他相关因素进行用户画像 [9]。
+所提出的系统利用包含套餐名称、评论、评分、城市和月份等关键信息的数据集 [14]。该数据集作为在 SPSS 环境中进行智能数据分析和建模的基础。通过严格的探索性数据分析和描述性统计，有价值的旅行者偏好和模式洞察被提取出来 [11]。混合系统利用 `KNN` 进行用户相似性分析，利用 `CNN` 进行评论的情感分析 [22]，并利用决策树根据偏好和其他相关因素进行用户画像 [9]。
 
 本研究采用 SPSS 进行全面的数据处理、模型学习和模型验证。SPSS 提供了一套广泛的统计和分析工具，并辅以强大的可视化功能，使研究人员能够生成有意义的洞察，并使用各种图表和图形直观地表示结果。
 
 通过构建利用 SPSS 的混合推荐系统，本研究为智能游客推荐系统的进步做出了贡献。系统的有效性通过细致的模型验证进行评估 [16]，确保提供准确且个性化的推荐，针对个人偏好和情境因素量身定制 [10]。本研究的发现对旅行社具有重大的实际意义，使其能够为客户提供有针对性和令人满意的旅行体验。
 
-总之，本研究论文提出了一种混合游客推荐系统，将 KNN、CNN 和决策树算法融合在一起，利用 SPSS 的强大功能。本研究强调了智能数据分析的重要性，并突出了 SPSS 在开发复杂的推荐系统中的实用性。后续章节将详细阐述方法、实验设置、结果和讨论，提供对系统性能及其对旅游业影响的全面理解。
+总之，本研究论文提出了一种混合游客推荐系统，将 `KNN`、`CNN` 和决策树算法融合在一起，利用 SPSS 的强大功能。本研究强调了智能数据分析的重要性，并突出了 SPSS 在开发复杂的推荐系统中的实用性。后续章节将详细阐述方法、实验设置、结果和讨论，提供对系统性能及其对旅游业影响的全面理解。
 
 ### 2. 文献综述
 
 根据我们对所有趋势和技术的分析和评估，游客推荐系统的首要目标是减少冷启动问题 [24]，并在一定程度上提高推荐算法的预测准确性。众多技术评估的结果如下：
 
 * 推荐系统中经常采用的方法之一是协同过滤 [13]。数据稀疏性是影响协同过滤预测效果的主要因素 [1, 2]。协同过滤系统也受到“新用户”问题的影响。所有预测必须在插入新评分后立即更新。
+
 * 作者 Fengsheng 和 Zheng [3] 还谈到了为旅行推荐系统收集用户数据、交互日志、旅游景点数据和情境数据 [20] 的情况。
+
 * Haymontee Khan 提出的旅游推荐系统（TRS）[4] 是混合的，因为它结合了三种推荐系统协同过滤（CF）、基于内容的过滤（CB）和人口统计过滤（DF），使用两种混合技术，即加权和切换方法。建议的解决方案解决了每种推荐方法的缺点 [12]，同时获得了每种方法的优点 [5]。
+
 * Jyotirmoy Gope [7] 提到一个项目，旨在将大数据和人工智能（AI）结合起来创建智能工具 [18]，以定位并推荐最合适的旅行优惠、监控和分析意见，并估计旅行需求。
+
 * 创建和集成一个符合众多标准且不需要先验知识的实时旅行建议系统 [6]。
 
 ### 3. 拟议框架
 
-在本研究工作中，提出了一种个性化的混合过滤方法，用于游客推荐系统，使用三种算法：决策树、KNN 和 CNN。人口统计详细信息如套餐名称、评论、评分、城市和月份在注册时通过旅游网站收集 [23]。这些详细信息进一步用于根据用户需求过滤信息的过程。
+在本研究工作中，提出了一种个性化的混合过滤方法，用于游客推荐系统，使用三种算法：决策树、`KNN` 和 `CNN`。人口统计详细信息如套餐名称、评论、评分、城市和月份在注册时通过旅游网站收集 [23]。这些详细信息进一步用于根据用户需求过滤信息的过程。
 
 #### 3.1. 拟议混合游客推荐系统的架构
 
@@ -249,8 +200,11 @@ Tel. +27 11 559 3879 • e-mail: ghanshyams@uj.ac.za
 Figure 1.1: Proposed model of hybrid recommendation system using various algorithms.
 
 1. **数据收集：** 从各种来源收集了包含套餐名称、评论、评分、城市和月份信息的数据集。
+
 2. **数据预处理：** 对数据集进行清洗和预处理，以处理缺失值、删除重复项并标准化数据格式。
+
 3. **探索性数据分析：** 采用描述性统计和数据可视化技术，以深入了解游客偏好、评分分布以及不同月份的旅行模式。
+
 4. **模型训练和验证：** 使用数据集训练模型，并使用适当的评估指标进行验证，以确保其准确性和性能。
 
    * 为计算评分与月份之间的关联，以查看季节与游客提供的评分之间是否存在联系。使用类似皮尔逊相关系数的公式，可以确定相关系数：
@@ -258,24 +212,26 @@ Figure 1.1: Proposed model of hybrid recommendation system using various algorit
      (1)
 
      $$r = \frac{{\sum{((}}x - \overline{x})(y - \overline{y}))}{{\sum{(x - \overline{x})}^{2}} \times {\sum{(y - \overline{y})}^{2}}}$$
-5. **算法选择：** KNN、CNN 和决策树算法是基于其分别适用于用户相似性分析、评论情感分析和用户画像的适用性而选择的。
+
+5. **算法选择：** `KNN`、`CNN` 和决策树算法是基于其分别适用于用户相似性分析、评论情感分析和用户画像的适用性而选择的。
 
    * *x* 和 *y* 表示正在比较的变量（本例中为评分和月份）
+
    * *x*^– 和 *y*^– 表示各自变量的均值
+
    * Σ 表示值的总和
 
-
-
-
-
 ### 6. 模型开发
+
 所选算法在 `SPSS` 软件中实现，并通过整合其输出构建了混合推荐模型。
 
 #### 3.2. 预测和推荐程序
 
+
+
 在本节中，我们首先介绍模糊集的核心概念 [4, 17]，这些概念用于在所提出的方法中完成预测和推荐程序。
 
-##### 3.2.1. 定义 1
+### 3.2.1. 定义 1
 
 对于模糊数 (`FN`) *ã*，在模糊集 *ã* 中 μ*[Ā]*(*x*) 的 λ-截集，*x* ∈ 0, 1，*ã[Ā]* = [*a*[λ], aλ^+ ]，其中 *a*[λ] 表示下界，aλ^+ 表示上界。现在区间定义为
 
@@ -283,7 +239,7 @@ Figure 1.1: Proposed model of hybrid recommendation system using various algorit
 
 *a**λ* = {*x**μ*[*a*]*ã*(*x*)>*λ*,*x*∈*R*}
 
-##### 3.2.2. 定义 2
+### 3.2.2. 定义 2
 
 我们通过三元组 (*a*^−, *a*, *a*^+) 定义三角形 `FN` = *ã* 的隶属函数 (`MF`)μ*[Ā]* 为
 
@@ -291,7 +247,7 @@ Figure 1.1: Proposed model of hybrid recommendation system using various algorit
 
 $${lin}\_{a}(x) = \\left\\{ \\begin{matrix} 0 & {x < a\_{0}^{-}} \\\\ \\frac{x - \\overline{a}}{a - a\_{0}} & {a\_{0} < x < a} \\\\ \\frac{a^{+} - x}{a^{+} - a} & {a < x < a^{+}} \\\\ 0 & {a^{+} < x} \\\\ \\end{matrix} \\right.$$
 
-##### 3.2.3. 定义 3
+### 3.2.3. 定义 3
 
 对于任意 *ãb̃* ∈ *f*^(\*)+ 即 *R* 上所有有限正 `FN` 的集合，且 0 < δ ∈ *R* 我们有
 
@@ -315,11 +271,11 @@ $$\\sin\\left( {u,u^{\\prime}} \\right) = \\frac{1}{k + 1}{\\sum\\limits\_{c = 0
 
 推荐系统最初在在线推荐阶段发现活跃或目标用户以及活跃或目标酒店。*e 评分预测以及推荐的任务在下一阶段进行。*e 第一个任务包括根据特定活跃用户确定的优先级预测与酒店列表相关联的评分的每种算法。在第二阶段，系统包括排名，为活跃用户列出尚未评分的项目列表，之后提供 Top-N 推荐，包括推荐列表中的前 N 家酒店。
 
-### 4. 结果与讨论
+## 4. 结果与讨论
 
 统计数据代表了数据集中评分和月份的分布。
 
-#### 4.1. 评分
+### 4.1. 评分
 
 数据集包含 120 个观测值的评分。评分范围为 1 到 5。评分的频率和百分比细分如下：
 
@@ -333,7 +289,7 @@ $$\\sin\\left( {u,u^{\\prime}} \\right) = \\frac{1}{k + 1}{\\sum\\limits\_{c = 0
 
 评分 5：52（43.3%）
 
-#### 4.2. 月份
+### 4.2. 月份
 
 数据集包含不同月份的数据。月份的频率和百分比细分如下：
 
@@ -383,7 +339,7 @@ $$\\sin\\left( {u,u^{\\prime}} \\right) = \\frac{1}{k + 1}{\\sum\\limits\_{c = 0
 
 这些图形显示提供了对混合旅游推荐系统数据集中评分和月份的清晰简洁概述，便于轻松解释和分析。
 
-#### 4.3. 评分的统计数据
+### 4.3. 评分的统计数据
 
 此外，评分变量的统计数据包括平均评分为 3.54，中位评分为 4.00，标准差为 1.495，范围为 4，最低评分为 1，最高评分为 5，以及第 25、50（中位数）和 75 百分位数的百分位数。
 
@@ -403,15 +359,11 @@ $$\\sin\\left( {u,u^{\\prime}} \\right) = \\frac{1}{k + 1}{\\sum\\limits\_{c = 0
 
 **混合推荐系统：** 开发的混合系统成功整合了 `KNN`、`CNN` 和决策树算法，以考虑用户偏好的多个维度并生成个性化推荐。
 
-### 5. 结论
-
-
-
-
+## 5. 结论
 
 使用 `SPSS` 软件开发了一种混合旅游推荐系统。该系统整合了 `K-nearest neighbors` (`KNN`)、`convolutional neural networks` (`CNN`) 和 `decision trees` 算法，以向游客提供准确且个性化的推荐。通过考虑用户偏好的多个维度，包括评分、评论、城市和月份，系统生成的推荐与个人偏好和情境因素高度一致。利用 `SPSS` 软件促进了全面数据分析、模型开发和结果可视化。所提出的混合系统推动了旅游行业推荐系统的进步，使旅行社和用户均受益。未来的研究可以探索纳入额外的算法和数据源，以进一步提高系统的性能和个性化能力。总体而言，本研究强调了在 `SPSS` 中结合算法创建智能推荐系统的有效性，并强调了智能数据分析在开发复杂的旅游解决方案中的重要性。
 
-### References
+## References
 
 1. Khan, W. and Haroon, M. (2022). An unsupervised deep learning ensemble model for anomaly detection in static attributed social networks. Int. J. Cogn. Comput. Engg., 3, 153–160.
 
@@ -419,7 +371,7 @@ $$\\sin\\left( {u,u^{\\prime}} \\right) = \\frac{1}{k + 1}{\\sum\\limits\_{c = 0
 
 3. Fengsheng, Z. and Zheng, Y. (2020). Tourism recommendation system based on knowledge graph feature learning. China: Proc. 4th Int. Conf. Comput. Methodol. Comm. ICCMC 2020.
 
-4. Haymontee Khan, N. M. (2017). Tourist spot recommendation system using fuzzy inference system. Bangledesh: 13th Int. Conf. Nat. Comput. Fuzzy Sys. Knowl. Dis. (ICNC-FSKD 2017).
+4. Haymontee Khan, N. M. (2017). Tourist spot recommendation system using fuzzy inference system. Bangledadesh: 13th Int. Conf. Nat. Comput. Fuzzy Sys. Knowl. Dis. (ICNC-FSKD 2017).
 
 5. Huihui Hu, X. Z. (2017). Recommendation of tourist attractions based on slope one algorithm. China: 978-1-5386-3022-8/17 $31.00 © 2017 IEEE.
 
@@ -467,15 +419,13 @@ Garima Singh^(²)
 
 ### Abstract
 
+
+
 近年来，医疗保健领域整合区块链技术的兴趣激增。这种前沿技术有可能缓解与电子健康记录 (`EHR`) 系统相关的诸多挑战。本研究的首要目标是提供有关区块链在医疗保健中使用的现有研究文献的全面综述。我们仔细审查了 144 篇文章，这些文章涉及区块链技术在改善医疗保健运营方面的意义和局限性。我们旨在突出区块链在医疗保健领域的多样化应用，同时阐明需要进一步探索的挑战。本文首先对区块链技术进行广泛的考察，阐明其基本特征。随后对所选文章进行彻底分析，强调区块链驱动的医疗保健系统中的主要研究主题。之后，我们概述了区块链可以有效应用的主要领域以及其为改善医疗保健系统提供的解决方案。在最后的讨论部分，我们提供了有关该领域制约因素、挑战和未来研究前景的宝贵见解。
 
 **关键词：** 医疗保健，区块链，电子健康记录，患者监测，医疗数据安全
 
-### 1. Introduction
-
-
-
-
+## 1. Introduction
 
 电子健康记录（EHR）系统彻底改变了医疗保健的工作方式。它们将患者记录数字化，使管理医疗信息变得更容易 [1]。这意味着医生和护士可以快速访问患者的重要细节，从而提升了决策和患者护理能力。EHR 系统还使授权人员轻松共享信息，改善了护理协调方式。与此同时，一些问题也随之而来，例如互操作性（使不同的 EHR 系统协同工作）、数据准确性（保持信息正确）、数据隐私（保护个人隐私）和数据安全（确保未经授权的人无法获取数据） [2]。互操作性会使不同系统难以顺畅共享信息，从而影响患者护理 [3]。数据录入错误或系统问题会破坏数据的准确性，导致医疗错误。而且，当患者数据集中存储时，它可能面临泄露和未经授权访问的风险，这对患者隐私不利 [4]。医疗数据泄露对患者和医疗提供者来说都是非常糟糕的消息。为了解决这些问题，本综述论文探讨了区块链技术可能带来的帮助。区块链是一种安全且去中心化的系统，用于存储和共享 EHR 数据 [6]。它使记录几乎无法篡改，并让患者对其健康信息拥有更多控制权。探索区块链如何与 EHR 系统协同工作可能是一场变革，解决医疗保健中的这些棘手挑战，并改善患者护理、隐私和数据安全。
 
@@ -525,11 +475,8 @@ EHR 系统中存储了大量私密且敏感的患者数据，包括检查结果�
 1. *数据泄露*：当未经授权的个人获得 EHR 系统访问权限时，他们可能会窃取患者数据。这些泄露可能导致身份盗窃和医疗欺诈等严重问题。可悲的是，医疗领域是网络攻击的主要目标 [12]。网络犯罪分子发现健康数据在暗网上比金融信息更有价值，因为它可用于欺诈和长期窃取他人身份。
 2. *未经授权访问*：未经授权访问是指医疗机构内部的人员，如员工或承包商，未经适当许可进入患者记录。这可能是由于有人不小心、好奇或怀有恶意意图 [13]。未经授权访问侵犯了患者隐私，并可能导致数据被不道德甚至非法使用。这是信任和隐私的破坏。
 
-
-
-
-
 ### 3. 数据完整性
+
 数据完整性在 EHR 系统中非常重要。关键在于确保记录中的信息是正确的并且保持正确。当人们进行未经授权的更改或篡改记录时，可能会很危险 [14]。想象一下拥有错误的医疗细节——这可能导致错误的治疗或诊断，这是一个严重的问题，甚至可能危及生命。因此，确保数据准确且不被篡改至关重要。
 
 解决这些安全问题对于维护患者信任并遵守医疗法规至关重要，例如美国的《健康保险流通与责任法案》（HIPAA）。为了应对这些担忧，医疗机构和提供 EHR 系统的人员需要投入精力建立强大的安全措施，确保其员工知道如何保持安全，并定期检查安全漏洞。
@@ -537,13 +484,14 @@ EHR 系统中存储了大量私密且敏感的患者数据，包括检查结果�
 需要注意的一点是，医疗保健领域的网络安全是一个持续性的挑战。随着新威胁的出现，保持 EHR 系统中患者数据安全的重要性不断变化。因此，紧跟最新的安全方法并使用新技术来保护患者数据并保持其信任，同时遵守规则和法规至关重要。
 
 ### 3.2 当前 EHR 系统中的互操作性挑战
+
 医疗行业在使不同的 EHR 系统协同工作方面面临了一些真正的挑战。这些挑战中的两个主要问题是缺乏标准化和数据碎片化。在本节中，我们将详细讨论这些问题。
 
 1. *缺乏标准化：* EHR 系统的一个主要问题是它们之间没有标准化的方式来共享和交换健康信息，因此它们并非都在同一页面上运行。因此，在一个 EHR 系统中创建的数据可能与另一个系统不兼容。这种“说同一种语言”的障碍可能会阻碍患者数据在各个系统之间的高效流动，导致医疗服务交付效果不佳。
-
 2. *数据碎片化：* 患者数据在 EHR 系统中的分散是另一个主要问题。为了应对使不同 EHR 系统协同工作的挑战，医疗机构、政策制定者以及 EHR 系统制造商正在联手制定规则和系统，以帮助安全地共享健康信息。他们提出了诸如快速医疗互操作性资源（FHIR）和健康医疗信息标准组织（HL7）标准等，这些标准已成为使数据在不同系统之间顺畅流动的重要因素 [15]。
 
 ### 3.3 当前 EHR 系统中的数据所有权和控制
+
 EHR 系统中的数据所有权和控制在医疗信息学领域发挥着关键作用。确保患者对其医疗数据的使用方式以及谁可以访问它拥有发言权，对于维护医疗领域的信任和隐私至关重要。在本讨论中，我们将深入探讨 EHR 系统中的患者赋权和同意管理理念。
 
 1. *患者赋权：* 患者赋权就是让患者在医疗数据和决策方面掌握主动权。在 EHR 系统的世界里，这一概念因以下关键原因而极其重要：
@@ -552,7 +500,6 @@ EHR 系统中的数据所有权和控制在医疗信息学领域发挥着关键�
    *数据共享：* 谁可以查看你的健康记录？好吧，你也应该对此有发言权。患者应该能够决定谁可以查看其 EHR 数据，无论是医疗服务提供者、家庭成员还是其他他们信任的人。这对于管理慢性病的人或需要访问的护理人员尤其重要。
    *知情同意：* 有时，你的健康数据用于研究或公共卫生研究。在这些情况下，你应该被告知正在发生的事情并给予明确同意。你的数据，你的选择。
    这种患者赋权就是赋予你对医疗旅程的控制权，并确保你的声音在 EHR 世界中被听到 [17]。患者赋权和同意管理是赋予患者对其医疗数据控制权的基础，使其能够就其使用方式做出明智决策。EHR 系统必须以这些原则为核心进行开发和实施，因为它们对于在医疗环境中维护患者信任和隐私至关重要。
-
 2. *同意管理：* EHR 系统中的同意管理就像你医疗数据的数字许可。它很重要，因为它关乎尊重你的选择并保护你的健康信息隐私 [18, 19]。
    *知情同意：* 在任何人可以查看你的 EHR 数据之前，你应该知道他们为什么想看、他们是谁以及他们打算如何使用它。这就像在你同意任何事情之前被告知整个故事 [20]。
    *细粒度同意：* 你应该掌握数据的控制权。这意味着你可以对不同的事情说“是”或“否”——比如用于治疗、研究或仅与特定的医疗人员共享。这是你的数据，你的规则。
@@ -561,28 +508,21 @@ EHR 系统中的数据所有权和控制在医疗信息学领域发挥着关键�
    简而言之，同意管理就是赋予你决定谁可以访问你的医疗数据以及他们可以做什么的权力。这是你的数据，并且应该保持这种状态。
 
 ### 3.4 当前 EHR 系统中的可审计性和透明度
+
 在 EHR 系统中，可审计性和透明度是保障数据完整性、问责制和法规遵从性的基石原则。在本节中，我们将探讨现代 EHR 系统中数据溯源和监管合规的概念，并引用相关参考资料来阐明这些重要方面。
 
 1. *数据溯源：* 数据溯源涉及数据的来源和历史轨迹，包括其创建、更改以及负责这些更改的实体等细节 [21, 22]。在 EHR 系统中，数据溯源因以下原因具有重要意义：
    *数据完整性：* 了解数据的来源以及如何处理对于维护其准确性和完整性至关重要。这种理解有助于检测和纠正记录中的错误或不一致。
    *问责制：* 数据溯源有助于追踪谁访问或修改了特定的健康记录。这种问责制在涉及数据泄露或未经授权访问的情况下尤其宝贵。
    *研究和决策支持：* 在医疗领域，数据溯源是研究和决策支持系统的基石。它保证所使用的数据值得信赖和可靠，这对于做出明智决策和推进医学研究至关重要。
+   *法律与伦理合规：* 数据溯源在维护医疗伦理框架和法律义务下的透明度和问责制方面不可或缺。它确保医疗数据处理符合监管和伦理标准。
 
+### 2. 监管合规
 
-
-
-
-*法律与伦理合规：* 数据溯源在维护医疗伦理框架和法律义务下的透明度和问责制方面不可或缺。它确保医疗数据处理符合监管和伦理标准。
-
-## 2. 监管合规
 在电子健康记录系统领域，监管合规是遵守规范医疗数据利用、存储和共享的法律、标准和法规的基石。监管合规的重要性延伸至以下几个关键方面：
-
 *患者隐私：* 遵守美国的《健康保险流通与责任法案》HIPAA 等法规，是确保患者数据保密性和安全性的保障。这关乎尊重和保护个人隐私权 [23]。
-
 *数据安全：* 法规通常为数据安全建立严格标准。这对于保护电子健康记录免受未经授权访问或潜在数据泄露至关重要，确保敏感医疗信息保持受保护。
-
 *互操作性：* 监管合规延伸至互操作性标准，使电子健康记录系统能够无缝相互通信。这促进了医疗领域内高效的数据交换和可访问性，最终惠及患者和医疗提供者。
-
 *法律义务：* 医疗提供者和组织受监管要求的约束，满足这些要求可防止法律后果并维护公众信任。遵守这些法规不仅是法律上的必要，也是确保医疗数据得到合乎道德和负责任管理的手段。
 
 数据溯源和监管合规作为提升电子健康记录系统可审计性和透明度的关键要素而存在。这些要素在维护数据完整性、促进问责制以及确保严格遵守法律和伦理标准方面发挥着关键作用。这些努力的汇聚显著增强了医疗信息质量和可靠性。
@@ -590,14 +530,17 @@ EHR 系统中的数据所有权和控制在医疗信息学领域发挥着关键�
 ## 4. 医疗领域对区块链的需求
 
 ### 4.1 区块链技术
+
 区块链技术因其有潜力革新众多行业而获得了显著关注。它以其基本属性而闻名，其中包括去中心化、不可篡改性和加密安全 [24]。
 
 ### 4.2 解决安全问题
 
 #### 4.2.1 数据加密和访问控制
+
 区块链技术为敏感数据提供强大的安全措施。它能够加密敏感信息，确保只有授权个人或实体可以访问。没有访问控制措施的区块链系统是不完整的，这些措施提高了整体安全性和数据隐私 [25]。
 
 #### 4.2.2 不可变记录
+
 不可篡改性是区块链技术的一项基本特性，保证一旦数据被保存就无法撤回或更改。此功能在供应链管理和医疗环境中特别有用，在这些环境中数据完整性至关重要 [26] (Table 2.2)。
 
 Table 2.2: Overview of blockchain technology
@@ -610,56 +553,67 @@ Table 2.2: Overview of blockchain technology
 | Cryptographic security || Blockchain uses cryptographic techniques, including public and private keys, digital signatures and cryptographic hashes, to secure transactions, ensuring data integrity, authentication and confidentiality || [27] Antonopoulos, A. M. (2014). Mastering bitcoin, unlocking digital cryptocurrencies |
 
 #### 4.2.3 使用智能合约的同意管理
+
 智能合约是集成到区块链技术中的自我执行合约，对于流程自动化和同意管理至关重要。这些协议用于确保数据仅在数据所有者明确同意的情况下使用 [27]。
 
 ### 4.3 增强互操作性
 
 #### 4.3.1 通过智能合约实现标准化
+
 得益于智能合约，多个平台和系统可以相互通信。它们通过建立数据传输的统一标准，有效弥合不同利益相关者之间的差距。这些合约自动执行限制，从而促进数据轻松流动。
 
 #### 4.3.2 用于数据共享的共享账本
+
 区块链充当共享账本，消除了数据共享中对中间人的需求。这一发明通过简化跨组织交易促进了互操作性和透明度。
 
 ### 4.4 数据所有权和控制
 
 #### 4.4.1 以患者为中心的记录
+
 区块链技术促进了医疗行业中以患者为中心的电子健康记录的创建。患者对其信息拥有控制权，并且可以限制访问仅限于信誉良好的医疗专业人员。
 
 #### 4.4.2 精细控制和同意管理
+
 数据所有者可以通过授予精细权限来确保对其数据的精细控制，这得益于区块链技术。这种控制程度在医疗行业和其他数据敏感领域尤其重要。
 
 ### 4.5 可审计性和透明度
 
 #### 4.5.1 溯源和可追溯性
+
 区块链技术的透明性和不可篡改性产生了交易的透明记录。该账本可简化资产、数据和产品历史的跟踪，是供应链管理和食品业务的绝佳工具。
 
 #### 4.5.2 遵守数据法规
+
 区块链技术有可能极大地增强对数据保护法的遵守。由于每个操作都可审计并记录在区块链上，因此它特别适用于数据隐私至关重要的领域。
 
 ## 5. 各种区块链方法的比较分析
+
 医疗行业对区块链技术表现出浓厚兴趣，因为它有可能改善数据安全、互操作性和透明度。区块链可以以多种方式用于医疗应用。本节展示了其中几种技术的比较。
 
 1. *区块链类型：* 广义上，区块链主要分为四种主要类型，大致分为许可型和非许可型区块链。
 
-*公共区块链：* 这些对所有各方开放，提供高度的去中心化和透明度。即使隐私性较低，它们也可能适用于医疗应用，如供应链管理、临床试验和患者数据共享 (Figure 2.1)。
+
+
+## 公共区块链
+这些对所有各方开放，提供高度的去中心化和透明度。即使隐私性较低，它们也可能适用于医疗应用，如供应链管理、临床试验和患者数据共享 (Figure 2.1)。
 
 ![Figure 2.1: Types of blockchain.](img/fig2_1_C.jpg)
 
 Figure 2.1: Types of blockchain.
 
-*私有区块链：* 这些基于许可的系统经常在医疗联盟中使用，以确保只有拥有适当授权的个人才能访问和验证数据。对于敏感医疗数据，这可能是推荐的，因为它提高了隐私性。
-
-
-
-
+## 私有区块链
+这些基于许可的系统经常在医疗联盟中使用，以确保只有拥有适当授权的个人才能访问和验证数据。对于敏感医疗数据，这可能是推荐的，因为它提高了隐私性。
 
 ## 混合区块链
+
 通过结合公有链和私有链的元素，它们允许根据特定需求对控制和访问进行定制化的方法。私有区块链通常用于专门用途或安全数据存储，而公有区块链则作为无许可层用于与外部各方的交互。这种混合架构足够灵活，可以适应各种应用需求，在隐私和透明度之间取得平衡。
 
 ## 联盟区块链
+
 它们作为部分去中心化网络运行，其中预先存在的实体或机构联盟共同治理区块链。这种结构提供高度的去中心化，促进参与者之间的信任，并通过一小群可靠的个人来维护访问控制。
 
 ### 2. 共识机制
+
 共识技术保证所有参与者一致同意交易的真实性，它们对于维护区块链网络的完整性和安全性至关重要。区块链技术使用多种共识方法，每种方法都有特殊的好处和特点。区块链网络的运行依赖于区块链算法。每种算法都有独特的好处和特点的组合（Table 2.3）。
 
 Table 2.3: Comparative analysis of various blockchain algorithms
@@ -681,58 +635,70 @@ Table 2.3: Comparative analysis of various blockchain algorithms
 | Raft || Agreement algorithm || Simplicity and fault tolerance || Some permissioned blockchains || Raft paper |
 
 #### Proof of work (PoW)
-为了验证交易并保护网络，PoW 依赖于强大的计算机和能源密集型挖矿。为了将新区块添加到链中，矿工们竞争解决具有挑战性的数学难题。虽然它提供安全性，但该技术消耗大量电力。
+
+为了验证交易并保护网络，`PoW` 依赖于强大的计算机和能源密集型挖矿。为了将新区块添加到链中，矿工们竞争解决具有挑战性的数学难题。虽然它提供安全性，但该技术消耗大量电力。
 
 #### Proof of stake (PoS)
-PoS 用验证者取代能源密集型挖矿，这些验证者根据他们“质押”或持有的加密货币代币数量被选为创建新区块。它促进代币持有以保障网络安全，并且更节能。
+
+`PoS` 用验证者取代能源密集型挖矿，这些验证者根据他们“质押”或持有的加密货币代币数量被选为创建新区块。它促进代币持有以保障网络安全，并且更节能。
 
 #### The PoW and PoS
-虽然 PoS 节能并促进代币持有，但 PoW 消耗大量能源。
+
+虽然 `PoS` 节能并促进代币持有，但 `PoW` 消耗大量能源。
 
 #### Delegated proof of stake (DPoS)
-DPoS 采用一小群选举产生的验证者来确认交易，从而实现更快的区块创建。然而，它往往更中心化，因为这些验证者是通过投票或任命选出的。它使用选举产生的验证者来提高速度，但更中心化。
+
+`DPoS` 采用一小群选举产生的验证者来确认交易，从而实现更快的区块创建。然而，它往往更中心化，因为这些验证者是通过投票或任命选出的。它使用选举产生的验证者来提高速度，但更中心化。
 
 #### Proof of authority (PoA)
-PoA 依赖于一小群已批准的验证者，通常由姓名或机构识别，确保高度的安全性和效率。它通常用于私有或联盟区块链。它具有已识别验证者的高度安全性。
+
+`PoA` 依赖于一小群已批准的验证者，通常由姓名或机构识别，确保高度的安全性和效率。它通常用于私有或联盟区块链。它具有已识别验证者的高度安全性。
 
 #### Proof of space (PoSpace) and Proof of capacity (PoC)
-这些算法使用参与者设备上的可用存储空间来实现共识，使其成为 PoW 的环保替代方案。它们通常用于去中心化存储解决方案。这些算法使用存储空间来实现共识，使其更环保。
+
+这些算法使用参与者设备上的可用存储空间来实现共识，使其成为 `PoW` 的环保替代方案。它们通常用于去中心化存储解决方案。这些算法使用存储空间来实现共识，使其更环保。
 
 #### Proof of history (PoH)
-PoH 为区块链添加时间顺序记录，提高网络安全性和同步性。它为时间戳事件提供基础并有助于防止攻击。它具有改进的安全性和网络同步。
+
+`PoH` 为区块链添加时间顺序记录，提高网络安全性和同步性。它为时间戳事件提供基础并有助于防止攻击。它具有改进的安全性和网络同步。
 
 #### Byzantine fault tolerance (BFT)
-BFT 算法，特别是在许可网络中，提供快速有效的共识。它们旨在抵御拜占庭故障，因此保证高吞吐量和安全性。
+
+`BFT` 算法，特别是在许可网络中，提供快速有效的共识。它们旨在抵御拜占庭故障，因此保证高吞吐量和安全性。
 
 #### Practical byzantine fault tolerance (PBFT)
-PBFT 是 BFT 的改进形式，提供低能耗和高吞吐量 [5]。它是对各种许可区块链用途的良好选择。
+
+`PBFT` 是 `BFT` 的改进形式，提供低能耗和高吞吐量 [5]。它是对各种许可区块链用途的良好选择。
 
 #### BFT and PBFT
+
 提供高吞吐量，非常适合许可网络。
 
 #### HoneyBadgerBFT
-这种异步 BFT 共识技术提供异步共识和出色的吞吐量。它对于不同的区块链实验和研究项目非常有用。这由于提供异步共识而适用于各种应用。
+
+这种异步 `BFT` 共识技术提供异步共识和出色的吞吐量。它对于不同的区块链实验和研究项目非常有用。这由于提供异步共识而适用于各种应用。
 
 #### Tendermint (BFT-based)
-Tendermint 将 BFT 类似共识与快速终结性相结合，使其适用于需要快速确认交易的各种应用。
+
+`Tendermint` 将 `BFT` 类似共识与快速终结性相结合，使其适用于需要快速确认交易的各种应用。
 
 #### Raft
-Raft 以其简单性和容错性而闻名。它通常用于许可区块链，在那里更喜欢简单的共识算法。
+
+`Raft` 以其简单性和容错性而闻名。它通常用于许可区块链，在那里更喜欢简单的共识算法。
 
 算法选择受多种变量影响，包括中心化问题、能源效率、网络目标和安全需求。某些区块链甚至可能采用定制的共识过程或混合模型，以满足其特定要求。
 
 ### 3. Smart contracts
+
 智能合约是自我执行的协议，其各方条款直接编码到代码中。运行在区块链技术之上，它们在满足预定标准或事件时自动执行、维护或协助合同谈判。
 
 #### Code-based agreements
+
 智能合约以代码形式表达，概述了规范协议的条款和条件。当合同条款得到满足时，这些预定准则会自动应用。
 
 #### Automation
+
 智能合约一旦在区块链上设置即为自我执行；因此，无需人工干预或中介。当条件满足时，它们会自动执行指定任务。
-
-
-
-
 
 *信任与透明性：* 区块链网络提供高度的信任和透明性，是智能合约的操作系统。由于交易和合约执行记录在公共账本上，因此可审计且防篡改。
 
@@ -781,70 +747,78 @@ Table 2.5: Features of Estonia's e-health system
 | f. Patient access || 患者能够在线访问和查看其健康记录、检验结果和处方历史。此外，他们在必要时可向医疗提供者授予临时访问权限 |
 | g. Blockchain in healthcare || 爱沙尼亚已开始在医疗保健中应用区块链技术，以确保健康数据的最大安全性和完整性 |
 
-*MedRec by MIT:* MedRec 是由麻省理工学院开发的创新型基于区块链技术的电子健康记录系统。其主要目标是赋予患者对其健康数据的更大控制权，同时确保隐私和安全 \[28, 29 and 30\]。该系统的关键特性如 Table 2.6 所示。
+*MedRec by MIT:* `MedRec` 是由麻省理工学院开发的创新型基于区块链技术的电子健康记录系统。其主要目标是赋予患者对其健康数据的更大控制权，同时确保隐私和安全 \[28, 29 and 30\]。该系统的关键特性如 Table 2.6 所示。
 
 Table 2.6: Features of MedRec
 
 | Aspect || Description |
 | --- | --- |
-| a*.* Patient control || MedRec 赋予患者对其健康记录的控制权，使其能够决定谁可以访问其数据以及出于何种特定目的可以访问 |
+| a*.* Patient control || `MedRec` 赋予患者对其健康记录的控制权，使其能够决定谁可以访问其数据以及出于何种特定目的可以访问 |
 | --- | --- |
-| b. Blockchain technology || MedRec 利用区块链技术保护健康数据，确保透明性和不可变性。这种强大的安全机制不仅保护数据完整性，还降低了未经授权访问的风险 |
-| c. Privacy preserving smart contracts || MedRec 采用智能合约高效管理数据访问权限和数据共享。这些智能合约提供精细控制，允许患者指定谁可以访问特定健康数据以及出于何种目的 |
-| d. Research opportunities || MedRec 通过允许研究人员请求访问汇总和匿名化的健康数据，积极促进医学研究。这种方法在保护个人隐私的同时促进研究机会 |
+| b. Blockchain technology || `MedRec` 利用区块链技术保护健康数据，确保透明性和不可变性。这种强大的安全机制不仅保护数据完整性，还降低了未经授权访问的风险 |
+| c. Privacy preserving smart contracts || `MedRec` 采用智能合约高效管理数据访问权限和数据共享。这些智能合约提供精细控制，允许患者指定谁可以访问特定健康数据以及出于何种目的 |
+| d. Research opportunities || `MedRec` 通过允许研究人员请求访问汇总和匿名化的健康数据，积极促进医学研究。这种方法在保护个人隐私的同时促进研究机会 |
 
 #### 6.2. Medicalchain
 
-Medchain 是一个基于区块链技术的开创性医疗保健平台，专门设计用于改善医疗记录的管理和安全性。该系统的关键特性包括以下内容 \[31, 32\]：
+`Medchain` 是一个基于区块链技术的开创性医疗保健平台，专门设计用于改善医疗记录的管理和安全性。该系统的关键特性包括以下内容 \[31, 32\]：
 
-*Patient-driven access:* Medicalchain 通过让患者完全控制其健康数据并按需授予医疗提供者访问权限，从而赋予患者权力。
+*Patient-driven access:* `Medicalchain` 通过让患者完全控制其健康数据并按需授予医疗提供者访问权限，从而赋予患者权力。
 
 *Telemedicine:* 该平台无缝集成远程医疗，使患者能够与医疗专业人员进行远程咨询。
 
-*Secure and immutable records:* Medicalchain 通过将健康记录存储在区块链上确保其安全性和不可变性。这保证了存储数据的完整性。
+*Secure and immutable records:* `Medicalchain` 通过将健康记录存储在区块链上确保其安全性和不可变性。这保证了存储数据的完整性。
 
-*Health passport:* Medicalchain 引入了独特的“健康护照”功能，使患者能够汇编其完整的病史。该病史可方便地与全球医疗提供者共享，从而简化患者护理（Table 2.7）。
+*Health passport:* `Medicalchain` 引入了独特的“健康护照”功能，使患者能够汇编其完整的病史。该病史可方便地与全球医疗提供者共享，从而简化患者护理（Table 2.7）。
+
+
 
 Table 2.7: Blockchain in healthcare domain
 
-| Feature || Description |
+| Feature | Description |
 | --- | --- |
 
-
-
-
-
 1. 数据安全与完整性
+
 区块链通过加密技术确保患者数据的安全性和完整性。每个数据条目都与前一个条目进行加密链接，使得篡改或更改患者记录几乎不可能。患者可以确信其健康数据保持准确和安全
 
 2. 去中心化
+
 医疗数据存储在节点网络中，降低了单点故障的风险。这种去中心化的方法增强了医疗系统的弹性，并在网络中断的情况下确保数据可用性
 
 3. 互操作性
+
 区块链通过提供数据交换的标准化格式来促进互操作性。这在医疗保健领域尤其重要，因为信息需要在各个机构和系统之间共享。智能合约可以自动化数据共享协议
 
 4. 同意管理
+
 区块链中的智能合约使患者能够对谁可以访问其健康记录进行精细控制。他们可以授予或撤销特定医疗服务提供者的访问权限，确保数据仅在明确同意的情况下使用
 
 5. 以患者为中心的记录
-区块链能够创建以患者为中心的电子健康记录（EHR）。患者拥有自己的数据，可以随身携带其 EHR，为医疗服务提供者提供患者医疗历史的全面视图
+
+区块链能够创建以患者为中心的电子健康记录（`EHR`）。患者拥有自己的数据，可以随身携带其 `EHR`，为医疗服务提供者提供患者医疗历史的全面视图
 
 6. 高效的索赔处理
+
 在医疗保健的保险和计费方面，区块链可以简化索赔处理。它确保索赔自动得到验证，减少行政开销并可能减少欺诈性索赔
 
 7. 来源与可追溯性
+
 在制药和供应链中，区块链提供透明的账本来跟踪药品和医疗器械的来源和移动。该功能有助于确保医疗产品的真实性和质量
 
 8. 研究与临床试验
+
 研究人员可以安全地访问历史患者数据和临床试验结果，加快研究进程。患者也可以更轻松地参与临床试验，知道其数据是安全的，其同意通过智能合约得到执行
 
 9. 合规与审计
-区块链记录每笔交易，使其更容易证明符合 HIPAA 等数据保护法规。它还通过提供全面且不可变的审计跟踪来简化审计流程
+
+区块链记录每笔交易，使其更容易证明符合 `HIPAA` 等数据保护法规。它还通过提供全面且不可变的审计跟踪来简化审计流程
 
 10. 降低成本
+
 区块链有可能降低与数据存储、中介和行政任务相关联的成本。它简化流程并最大限度地减少冗余记录保存的需求
 
-*Health tokens (MedTokens):* Medicalchain 采用其加密货币，称为 MedTokens，以促进平台内的交易。它还作为参与者为研究目的共享其健康数据的激励措施（Figure 2.2、Figure 2.3、Figure 2.4 和 Figure 2.5）。
+*Health tokens (MedTokens):* Medicalchain 采用其加密货币，称为 `MedTokens`，以促进平台内的交易。它还作为参与者为研究目的共享其健康数据的激励措施（`Figure 2.2`、`Figure 2.3`、`Figure 2.4` 和 `Figure 2.5`）。
 
 ![Figure 2.2: Blockchain-based EHR architecture.](img/fig2_2_C.jpg)
 
@@ -874,139 +848,153 @@ Figure 2.5: Session-based data sharing in EHR using blockchain
 
 Table 2.8: Comparison of various research works did in the field of blockchain in the healthcare domain
 
-| 发表年份 || 参考文献 || 主要发现和贡献 |
+| 发表年份 | 参考文献 | 主要发现和贡献 |
 | --- | --- | --- |
-| 2022 || [40] || 
+
+| 2022 | [40] | 
 1. 医疗保健中物联网和区块链技术用于数据收集和存储
 2. 医疗记录的去中心化共享
 3. 患者监测和隐私保障
 4. 预测保险成本和医疗保健供应链管理 |
 | --- | --- | --- |
-| 2022 || [41] || 
+| 2022 | [41] | 
 1. 区块链在为医疗保健数据提供安全方面的角色
 2. 区块链在 COVID-19 和印度医疗保健中的应用
 3. 建议将区块链与机器学习、人工智能、大数据和物联网相结合以加强医疗保健系统 |
-| 2022 || [42] || 
+| 2022 | [42] | 
 1. 提供专家对 2022 年医疗保健区块链技术市场机遇和差距的见解 |
-| 2023 || [43] || 
+| 2023 | [43] | 
 1. 专注于牙科护理系统中区块链用于医疗数据存储和保险改进
 2. 使用区块链解决现有牙科护理系统中的问题 |
-| 2022 || [44] || 
+| 2022 | [44] | 
 1. 提出基于区块链的去中心化患者信息交换（PIE）系统，用于安全共享电子病历（EMR）
 2. 强调在管理医疗数据时安全和隐私 |
-| 2022 || [45] || 
+| 2022 | [45] | 
 1. 对 2016 年至 2021 年医疗保健中区块链进行系统文献综述
 2. 强调区块链在改善医疗程序、数据隐私和安全方面的作用
 3. 建议未来研究的潜在领域，包括数据保护和监管合规 |
-| 2023 || [46] || 
+| 2023 | [46] | 
 1. 专注于区块链对医疗保健中数据质量问题的影响
 2. 分析与区块链在医疗保健中的采用、运营和技术相关的挑战
 3. 旨在支持从业者、利益相关者和专业人士在医疗保健区块链转型项目决策方面 |
-| 2022 || [47] || 
+| 2022 | [47] | 
 1. 讨论物联网医疗边缘网络安全机制的需求
 2. 强调区块链在数据传输期间保护医疗数据的作用
 3. 强调缺乏针对物联网医疗边缘网络的基于区块链的安全机制以及其开发的重要性 |
-| 2023 || [48] || 
-
-
-
-
+| 2023 | [48] | 
 
 ### 8. 挑战与考量
 
 #### 2022 [[49]]
+
 1. 探讨利用区块链技术来利用数字化医疗数据，特别是在应对 COVID-19 大流行的背景下
 2. 讨论区块链在创建更高效的业务流程、改善患者参与度以及在医疗保健中创造新的收入来源方面的潜力
 
 #### 2022 [[50]]
+
 1. 审视区块链、物联网和雾计算对智慧城市医疗服务的影响和潜力
 2. 将物联网、区块链和雾计算识别为医疗服务效率的驱动因素
 3. 强调区块链和雾计算在医疗保健领域在数据保护、去中心化数据库、数据互操作性和成本效益远程监测方面的相关性
 
 #### 2022 [[51]]
+
 1. 调查区块链技术对数字医疗生态系统中价值共创的影响
 2. 对 32 家医疗科技公司进行多案例研究，以探索区块链对数据和资源共享、患者参与以及专业人员之间协作的影响
 3. 识别出区块链实施有利于价值共创的三个关键领域：服务交互改善、参与者参与和生态系统透明度
 
 #### 2022 [[51]]
+
 1. 提出面向哮喘患者的区块链联盟医疗框架，旨在安全地管理医疗单元、患者记录、保险和政府机构
-2. 利用区块链实现数据安全和可扩展性，将加密的患者数据存储在星际文件系统（IPFS）上
+2. 利用区块链实现数据安全和可扩展性，将加密的患者数据存储在星际文件系统（`IPFS`）上
 3. 证明所提出的框架在交易吞吐量、查询延迟和安全性方面优于现有解决方案
 
 #### 2023 [[52]]
+
 1. 讨论区块链技术在医疗保健中的作用及其解决碎片化数据、安全、隐私和互操作性等挑战的潜力
 2. 强调医疗保健中安全、防篡改存储、数据互操作性和患者数据加密的好处
 3. 提倡采用以患者为中心的区块链方法来改善医疗数据管理
 
 #### 2022 [[53]]
-1. 提出在去中心化区块链网络中使用 RSA、ECC 和 AES 算法加密来确保健康相关数据隐私的架构
+
+1. 提出在去中心化区块链网络中使用 `RSA`、`ECC` 和 `AES` 算法加密来确保健康相关数据隐私的架构
 2. 评估密码学对计算工作量、内存使用和执行时间的影响，强调隐私和安全
 3. 证明由于加密导致计算工作量和执行时间增加，但为隐私和安全利益所证明
 
 #### 2022 [[54]]
+
 1. 讨论区块链技术在医疗保健中的潜力，强调其在互操作性、数据准确性、安全性和透明度方面的优势
 2. 识别出缺乏标准化、可访问性、所有权和变更管理等弱点
 3. 列出医疗保健中的应用，包括收入周期管理、医生资质认证、电子健康记录和供应链管理
 
 #### 2022 [[55]]
-1. 探索区块链在安全存储电子健康记录（EHR）、开发深度学习算法和处理医疗数据中的作用
-2. 支持医疗保健和 COVID-19 大流行中的深度神经网络（DNN）分析，提出用于特征提取数据的智能合约程序
+
+1. 探索区块链在安全存储电子健康记录（`EHR`）、开发深度学习算法和处理医疗数据中的作用
+2. 支持医疗保健和 COVID-19 大流行中的深度神经网络（`DNN`）分析，提出用于特征提取数据的智能合约程序
 3. 帮助分析现有疾病并指导医生提供适当治疗
 
 #### 2022 [[56]]
-1. 讨论物联网（IoT）中低成本物联网传感器利用区块链技术改善医疗保健、商品质量和供应链效率的潜力
+
+1. 讨论物联网（`IoT`）中低成本物联网传感器利用区块链技术改善医疗保健、商品质量和供应链效率的潜力
 
 #### 2023 [[57]]
+
 1. 调查各种物联网学科中区块链的最新工作，重点关注医疗保健
 2. 探索区块链在医疗保健中的使用、其障碍和未来发展路径
 
 #### 2022 [[58]]
+
 1. 提出基于区块链的解决方案，用于管理 COVID-19 检测和疫苗接种数据，重点关注隐私和安全
 2. 使用以太坊智能合约证明所提出解决方案的有效性
 
 #### 2022 [[59]]
-1. 在无线体域网（WBAN）和物联网的背景下提出一种区块链辅助的延迟和节能医疗监测系统
-2. 解决 WBAN 物联网环境中与服务质量、安全性和能源效率相关的问题
+
+1. 在无线体域网（`WBAN`）和物联网的背景下提出一种区块链辅助的延迟和节能医疗监测系统
+2. 解决 `WBAN` 物联网环境中与服务质量、安全性和能源效率相关的问题
 
 #### 2023 [[60]]
+
 1. 提出在元宇宙中集成人工智能和区块链，以提供沉浸式和安全的医疗服务
 2. 解释涉及医生、患者和由头像表示的元宇宙环境的架构
 
 #### 2023 [[61]]
+
 1. 探索区块链技术如何通过增强数据安全、互操作性和供应链管理使牙科行业受益
 2. 强调区块链在赋能患者方面的作用以及为成功实施需要解决的挑战
 
 #### 2023 [[62]]
+
 1. 提出一种利用同态加密结合区块链技术增强物联网医疗应用隐私保护的新方法
 2. 结合智能合约进行访问控制和数据共享策略
 
 #### 2023 [[63]]
+
 1. 提出智能区块链和人工智能使能系统以对抗 COVID-19 大流行，重点关注放射影像分析和安全数据收集
 2. 实现高分类准确率，并在疾病诊断中提供透明度和信任
 
 #### 2023 [[64]]
+
 1. 识别发展中国家公共卫生系统采用区块链的社会学、经济和基础设施障碍
 2. 为决策者提供克服实施挑战的见解
 
 #### 2023 [[65]]
+
 1. 研究医疗保健中数据溯源的影响以及基于 GDPR 合规的数据溯源，突出实现数据溯源所使用的技术和方法
 
 #### 2023 [[66]]
-1. 引入联邦区块链系统（FBS）以解决医疗保健问题和挑战
+
+1. 引入联邦区块链系统（`FBS`）以解决医疗保健问题和挑战
 2. 验证系统在查询和写入操作方面的有效性
 
 #### 2023 [[67]]
-1. 探索区块链技术和智能合约在医疗物联网（IoMT）中的使用，以提高电子医疗保健的效率、透明度和安全性
+
+1. 探索区块链技术和智能合约在医疗物联网（`IoMT`）中的使用，以提高电子医疗保健的效率、透明度和安全性
 
 #### 2023 [[68]]
+
 1. 回顾区块链技术在急诊医学中的革命性影响，强调数据共享和文档记录
 2. 讨论区块链在各种急诊护理场景中的应用
 
 此外，这些贡献共同涵盖了区块链技术在医疗保健中应用的相关主题的广泛范围，包括数据安全、隐私、COVID-19 管理、物联网集成等相关主题。它们有效地阐明了区块链在医疗保健系统中整合所带来的潜在益处和挑战。
-
-
-
-
 
 区块链技术在医疗保健中的整合面临着各种重大挑战和考量。可扩展性是一个重要问题，鉴于医疗数据的庞大规模以及对安全存储和共享的迫切需求 [33]。复杂的监管合规环境增加了另一层复杂性，因为医疗保健受严格的隐私和安全法规约束。在数据透明度与患者隐私之间取得微妙平衡是进一步的挑战，同时还需要克服采用障碍，如抵制和所需的巨额投资 [34]。互操作性、数据标准化、安全以及智能合约错误的缓解是额外的关注点 [35]。确保清晰的数据所有权和控制、有效的成本管理、用户培训以及与旧系统的无缝集成是必不可少的组成部分。成功应对这些挑战对于释放区块链在医疗保健中的潜在优势至关重要，包括增强数据安全、改善互操作性以及赋能患者 [36]。
 
@@ -1024,19 +1012,21 @@ Table 2.8: Comparison of various research works did in the field of blockchain i
 
 Table 2.9: Challenges and considerations
 
-| Challenge || Description || Reference |
+| Challenge | Description | Reference |
 | --- | --- | --- |
-| 1\. Scalability || Blockchain networks, especially public ones like bitcoin and ethereum, face scalability issues due to high computational requirements. This challenge becomes critical in healthcare where large amounts of data need secure storage and sharing || Tschorsch, F. and Scheuermann, B. (2016). Bitcoin and beyond: A technical survey on decentralized digital currencies. *IEEE Comm. Sur. Tutor.*, 18(3), 2084–2123 |
+| 1\. Scalability | Blockchain networks, especially public ones like `bitcoin` and `ethereum`, face scalability issues due to high computational requirements. This challenge becomes critical in healthcare where large amounts of data need secure storage and sharing | Tschorsch, F. and Scheuermann, B. (2016). Bitcoin and beyond: A technical survey on decentralized digital currencies. *IEEE Comm. Sur. Tutor.*, 18(3), 2084–2123 |
 | --- | --- | --- |
-| 2\. Regulatory compliance || Healthcare is highly regulated with strict privacy and security requirements. Blockchain can challenge existing regulatory frameworks, particularly concerning data ownership and control. Ensuring compliance is complex || lenca, M., Vayena, E., and Blasimme, A. (2018). Big data and the black box of personalized medicine. *Med. Health Care Phil.*, 21(4), 433–447 |
-| 3\. Privacy concern || Privacy is a top concern in healthcare due to sensitive patient information. Blockchain is designed for security and transparency but poses privacy challenges. Balancing transparency and data protection is crucial || Azaria, A., Ekblaw, A., Vieira, T., and Lippman, A. (2016). MedRec: Using blockchain for medical data access and permission management. *2016 2^(nd) Int. Conf. Open Big Data (OBD),* 25–30 |
-| 4\. Adoption barriers || Adoption of blockchain in healthcare faces barriers such as the need for significant investments in infrastructure and training. Many healthcare professionals and institutions may hesitate due to complexity and uncertainty || Muhlestein, D. B. (2018). Blockchain for health data and its potential use in health IT and health care related research. ONC/NIST Use of blockchain for healthcare and research workshop |
+| 2\. Regulatory compliance | Healthcare is highly regulated with strict privacy and security requirements. Blockchain can challenge existing regulatory frameworks, particularly concerning data ownership and control. Ensuring compliance is complex | lenca, M., Vayena, E., and Blasimme, A. (2018). Big data and the black box of personalized medicine. *Med. Health Care Phil.*, 21(4), 433–447 |
+| 3\. Privacy concern | Privacy is a top concern in healthcare due to sensitive patient information. Blockchain is designed for security and transparency but poses privacy challenges. Balancing transparency and data protection is crucial | Azaria, A., Ekblaw, A., Vieira, T., and Lippman, A. (2016). MedRec: Using blockchain for medical data access and permission management. *2016 2^(nd) Int. Conf. Open Big Data (OBD),* 25–30 |
+| 4\. Adoption barriers | Adoption of blockchain in healthcare faces barriers such as the need for significant investments in infrastructure and training. Many healthcare professionals and institutions may hesitate due to complexity and uncertainty | Muhlestein, D. B. (2018). Blockchain for health data and its potential use in health IT and health care related research. ONC/NIST Use of blockchain for healthcare and research workshop |
 
 *实时监测：* 区块链使患者和医疗专业人员更容易实时共享和监测数据。例如，可穿戴物联网设备可以持续将患者的生命体征更新到区块链上。这使医生能够远程监测患者的状况，在必要时及时干预，并根据最新数据做出明智决策。
 
 这种集成不仅增强了医疗数据的 segurança 和完整性，还实现了关键信息的无缝交换，促进了更具响应性和效率的医疗实践。
 
 #### 9.2. 改善患者参与度
+
+
 
 区块链技术有可能通过让个人对其健康数据拥有更大控制权来显著增强患者参与度。这种赋权可以带来一系列益处 [38]。
 
@@ -1050,54 +1040,65 @@ Table 2.9: Challenges and considerations
 
 区块链技术在患者参与中的作用超出了数据安全和控制。它使个人能够积极参与其医疗保健，做出明智决策，管理其同意偏好，并无缝移动其健康记录。这提供了一个更以患者为中心且更高效的医疗系统。
 
-#### 9.3. 探索研究可能性
+### 9.3. 探索研究可能性
 
 区块链技术在医学研究领域，尤其是关于数据共享和临床试验方面，开启了令人着迷的新视野。以下部分展示了先进的研究努力 [39]。
 
 *增强数据共享：* 区块链为不同医疗机构之间共享匿名患者数据提供了一种安全高效的方式。这促进了协作研究工作，同时保护患者隐私。研究人员可以访问更广泛、更多样化的数据集，丰富医学研究的品质和广度。
 
-
-
-
-
 #### 简化临床试验
+
 智能合约是区块链的关键特性，可以自动化临床试验的各个方面。这包括管理患者同意、数据收集和补偿。这种自动化减少了行政负担，确保了数据的完整性，并简化了临床试验流程。患者和研究人员都受益于更高效、更透明的试验。
 
 #### 药品追踪
+
 区块链技术可用于追踪药品的整个旅程，从生产到患者消费。这种端到端的追溯性保证了药品的真实性和安全性，降低了假药或劣质药品进入市场的风险。这对于药品质量控制和患者福祉尤为重要。
 
 区块链技术在医疗保健中的整合开辟了令人兴奋的研究机会。它促进了安全且协作的数据共享，简化了临床试验，并增强了药品可追溯性，最终改善了医疗研究的品质和患者的安全性。
 
-### 10. 结论
+## 10. 结论
+
 区块链技术由于其固有的加密和去中心化特性，在医疗保健领域呈现出创新应用。它为患者的电子病历提供增强的安全性，促进健康信息的货币化，改善医疗机构之间的互操作性，并有助于打击假冒药品。各个医疗保健领域都将从区块链技术中受益，其中由智能合约驱动的数字协议是其最关键的应用之一。通过消除支付流程中的中介，智能合约可显著降低成本。区块链在医疗保健中的全部潜力取决于生态系统内互补先进技术的大规模采用，包括系统追踪、医疗保险、药品追踪和临床试验。医院可以利用区块链框架在其整个生命周期内简化服务，纳入设备追踪。区块链可以有效增强患者病史管理，特别是在追踪和保险中介方面，从而通过优化数据维护加快临床流程。简而言之，该技术有可能大幅提升并最终彻底改变患者、医生和医疗服务提供者处理和利用临床记录的方式，最终带来更好的医疗服务。将区块链技术整合到现有的电子健康记录系统中，有望解决目前困扰医疗数据管理的若干关键问题。这些潜在益处包括更高的安全措施、增强的互操作性、更好的数据所有权和控制，以及改进的审计追踪。然而，必须承认并解决大量挑战和注意事项，以便成功实施。展望未来，区块链在医疗保健中的前景令人鼓舞，有望在数字医疗时代改变患者数据管理、共享和安全格局。
 
-### 致谢
+## 致谢
+
 作者谨向 Integral University, Lucknow 的 CSE 部门致以衷心的感谢，感谢他们在研究过程中提供的宝贵合作和支持。
 
-### 参考文献
+## 参考文献
+
 1. Evans, R. S. (2016). Electronic health records: then, now, and in the future. Yearbook of medical informatics, 25(S 01), S48–S61. DOI: [10.15265/IYS-2016-s006](http://dx.doi.org/10.15265/IYS-2016-s006).
+
 2. Pai, M. M. M., Ganiga, R., Pai, R. M., et al. (2021). Standard electronic health record (EHR) framework for Indian healthcare system. Health Serv. Outcomes Res. Method., 21, 339–362.
+
 3. Torab-Miandoab, A., Samad-Soltani, T., Jodati, A., and Rezaei-Hachesu, P. (2023). Interoperability of heterogeneous health information systems: a systematic literature review. BMC Medical Informatics and Decision Making, 23(1), 18. [`doi.org/10.1186/s12911-023-02115-5`](https://dx.doi.org/10.1186/s12911-023-02115-5).
+
 4. Adane, K., Gizachew, M., and Kendie, S. (2019). The role of medical data in efficient patient care delivery: A review. Risk management and healthcare policy, 67–73. DOI: [10.2147/RMHP.S179259](http://dx.doi.org/10.2147/RMHP.S179259).
+
 5. Castro, M. and Liskov, B. (1999). Practical Byzantine fault tolerance. Osdi, 173–186.
+
 6. Han, Y., Zhang, Y., and Vermund, S. H. (2022). Blockchain technology for electronic health records. Int. J. Environ. Res. Public Health., 19(23), 15577. doi: [10.3390/ijerph192315577](http://dx.doi.org/10.3390/ijerph192315577). PMID: 36497654; PMCID: PMC9739765.
+
 7. Wang, W., Ferrari, D., Haddon-Hill, G., and Curcin, V. (2023). Electronic health records as source of research data. Machine Learning for Brain Disorders, 331–354. Neuromethods, vol 197. Humana, New York, NY. [`doi.org/10.1007/978-1-0716-3195-9\_11`](https://dx.doi.org/10.1007/978-1-0716-3195-9_11).
+
 8. Archana, T., Talya, P., Dipak, K., Glen, D., Sun, X., and Vasa, C. (2021). Impact of patient access to their electronic health record: systematic review. Informat. Health Soc. Care, 46(2), 194–206.
+
 9. Ekblaw, A., Azaria, A., Halamka, J. D., and Lippman, A. (2016). A case study for blockchain in healthcare: ‘MedRec’ prototype for electronic health records and medical research data. Proc. IEEE Open Big Data Conf., 13.
+
 10. Holmes, J. H., Beinlich, J., Boland, M. R., et al. (2021). Why is the electronic health record so challenging for research and clinical care?. Methods Inf. Med., 60(1–02), 32–48.
+
 11. Tsai, C. H., Eghdam, A., Davoody, N., Wright, G., Flowerday, S., and Koch, S. (2020). Effects of electronic health record implementation and barriers to adoption and use: A scoping review and qualitative analysis of the content. Life, 10(12), 327. [`doi.org/10.3390/life10120327`](https://dx.doi.org/10.3390/life10120327).
+
 12. Ponemon Institute. 2020 Cost of a Data Breach Report [Online]. Available: [`www.ibm.com/security/data-breach`](https://www.ibm.com).
+
 13. Ama-Amadasun, M. (2014). Technical Report by Marvin Mondale Ama-Amadasun, UGSM-Monarch Business School, Volume 1, pp 1–30. [`www.researchgate.net/publication/265793918\_Preventing\_Unauthorized\_Access\_to\_Patient’s\_Medical\_Records\_A\_Strategic\_Approach\_to\_Healthcare\_Centers`](https://www.researchgate.net).
+
 14. Vimalachandran, P., Wang, H., Zhang, Y., Heyward, B., and Whittaker, F. (2016, December). Ensuring data integrity in electronic health records: A quality health care implication. In 2016 International Conference on Orange Technologies (ICOT), pp. 20–27). IEEE. doi: [10.1109/ICOT.2016.8278970](http://dx.doi.org/10.1109/ICOT.2016.8278970).
+
 15. Walker, J., Pan, E., Johnston, D., Adler-Milstein, J., Bates, D. W., and Middleton, B. (2005). The value of health care information exchange and interoperability. Health Affairs, 24(5), [10.1377/hlthaff.24.w5.10](http://dx.doi.org/10.1377/hlthaff.24.w5.10).
+
 16. Upadhyay, S. and Hu, H. (2022). A qualitative analysis of the impact of electronic health records (EHR) on healthcare quality and safety: Clinicians’ lived experiences. Health Ser. Insights, 15.
+
 17. Boumezbeur, I. and Zarour, K. (2022). Privacy preservation and access control for sharing electronic health records using blockchain technology. Acta Informat. Pragensia, 11, 105–122.
-
-
-
-
-
-### 参考文献
 
 18. Jaiman, V. and Urovi, V. (2020). A consent model for blockchain-based health data sharing platforms. IEEE Acc., 8, 143734–143745.
 
@@ -1115,83 +1116,49 @@ Table 2.9: Challenges and considerations
 
 25. Wen, B., Wang, Y., Ding, Y., Zheng, H., Qin, B., and Yang, C. (2023). Security and privacy protection technologies in securing blockchain applications. Information Sciences, 645, 119322. [`doi.org/10.1016/j.ins.2023.119322`](https://dx.doi.org/10.1016/j.ins.2023.119322).
 
+
+
+# References
+
 26. Merkle, M. (1987, August). A digital signature based on a conventional encryption function. In Conference on the theory and application of cryptographic techniques, 293, 369–378. Berlin, Heidelberg: Springer Berlin Heidelberg. [`doi.org/10.1007/3-540-48184-2\_32`](https://dx.doi.org/10.1007/3-540-48184-2_32).
-
 27. Antonopoulos, A. M. (2014). Mastering bitcoin: Unlocking digital cryptocurrencies. A book by O’Reilly.
-
 28. Ekblaw, A., Azaria, A., Halamka, J. D., and Lippman, A. (2016, August). A Case Study for Blockchain in Healthcare: “MedRec” prototype for electronic health records and medical research data. In Proceedings of IEEE open & big data conference, 13, 13.
-
 29. Nchinda, N., Cameron, A., Retzepi, K. and Lippman, A. (2019). MedRec: A network for personal information distribution. 637–641.
-
 30. Azaria, A., Ekblaw, A., Vieira, T., and Lippman, A. (2016, August). MedRec: Using blockchain for medical data access and permission management. In 2016 2nd international conference on open and big data (OBD), (pp. 25–30). IEEE. doi: [10.1109/OBD.2016.11](http://dx.doi.org/10.1109/OBD.2016.11).
-
 31. Shen, B., Guo, J., and Yang, Y. (2019). MedChain: Efficient healthcare data sharing via blockchain. Appl. Sci., 9(6), 1207.
-
 32. Daraghmi, E.-Y., Daraghmi, Y.-A. and Yuan, S.-M. (2019). MedChain: A design of blockchain-based system for medical records access and permissions management. IEEE Acc., 7, 164595–164613.
-
 33. Mazlan, A. A., Daud, S. M., Sam, S. M., Abas, H., Rasid, S. Z. A., & Yusof, M. F. (2020). Scalability challenges in healthcare blockchain system—a systematic review. IEEE access, 8, 23663–23673. doi: [10.1109/ACCESS.2020.2969230](http://dx.doi.org/10.1109/ACCESS.2020.2969230).
-
 34. Sharma, M. and Joshi, S. (2021). Barriers to blockchain adoption in health-care industry: an Indian perspective. J. Global Oper. Strat. Sourc., ahead-of-print. [10.1108/JGOSS-06-2020-0026](http://dx.doi.org/10.1108/JGOSS-06-2020-0026).
-
 35. Sun, Z., Han, D., Li, D. et al. (2022). A blockchain-based secure storage scheme for medical information. J. Wireless Com. Netw., 2022, 40.
-
 36. Laure, A. and Martha, B. (2018). Blockchain for health data and its potential use in health IT and health care related research. ONC/NIST Use of Blockchain for Healthcare and Research Workshop.
-
 37. Wang, Y., Che, T., Zhao, X., Zhou, T., Zhang, K., and Hu, X. (2022). A blockchain-based privacy information security sharing scheme in industrial internet of things. Sensors, 22(9), 3426. [`doi.org/10.3390/s22093426`](https://dx.doi.org/10.3390/s22093426).
-
 38. Roehrs, A., Da Costa, C. A., da Rosa Righi, R., and De Oliveira, K. S. F. (2017). Personal health records: a systematic literature review. Journal of medical Internet research, 19(1), e5876. doi: [10.2196/jmir.5876](http://dx.doi.org/10.2196/jmir.5876).
-
 39. Benchoufi, I., Ravaud, E., and Evangelista, J. C. Blockchain technology for improving clinical research quality. Trials, 18(1), 1–5. [`doi.org/10.1186/s13063-017-2035-z`](https://dx.doi.org/10.1186/s13063-017-2035-z).
-
 40. Sivasankari, B. and Varalakshmi, P. (2022). Blockchain and IoT Technology in healthcare: A review. Stud. Health Technol. Informat., 294, 277–278.
-
 41. Srivastava, S., Pant, M., Jauhar, S. K., and Nagar, A. K. (2022). Analyzing the prospects of blockchain in healthcare industry. Comput. Math. Methods Med., 2022, 3727389.
-
 42. Conway, D., Venkataraman, M., Laverick, D., Pelin, G., and Hasselgren, A. (2022). Blockchain in healthcare today: 2022 predictions. Blockchain Healthcare Today, 6, 245. doi: [10.30953/bhty.v6.245](http://dx.doi.org/10.30953/bhty.v6.245).
-
 43. Mokhamed, T., Talib, M. A., Moufti, M. A., Abbas, S., and Khan, F. (2023). The potential of blockchain technology in dental healthcare: A literature review. Sensors (Basel), 23(6), 3277.
-
 44. Lee, S., Kim, J., Kwon, Y., Kim, T., and Cho, S. (2022). Privacy preservation in patient information exchange systems based on blockchain: System design study. J. Med. Internet Res., 24(3), e29108.
-
 45. Saeed, H., Malik, H., Bashir, U., Ahmad, A., Riaz, S., Ilyas, M., Bukhari, W. A., and Khan, M. I. A. Blockchain technology in healthcare: A systematic review. PLoS One, 17(4), e0266462.
-
 46. AbuHalimeh, A. and Ali, O. (2023). Comprehensive review for healthcare data quality challenges in blockchain technology. Front. Big Data, 6, 1173620.
-
 47. Pelekoudas-Oikonomou, F., Zachos, G., Papaioannou, M., de Ree, M., Ribeiro, J. C., Mantas, G., and Rodriguez, J. (2022). Blockchain-based security mechanisms for IoMT edge networks in IoMT-based healthcare monitoring systems. Sensors (Basel), 22(7), 2449.
-
 48. Shine, T., Thomason, J., Khan, I., Maher, M., Kurihara, K., and El-Hassan, O. (2023). Blockchain in healthcare: 2023 predictions from around the globe. Blockchain Healthcare Today.
-
 49. Kamruzzaman, M. M., Yan, B., Sarker, M. N. I., Alruwaili, O., Wu, M., and Alrashdi, I. (2022). Blockchain and fog computing in IoT-driven healthcare services for smart cities. J. Healthcare Engg., 2022, 9957888.
-
-
-
-
-
 50. Russo-Spena, T., Mele, C., Cavacece, Y., Ebraico, S., Dantas, C., Roseiro, P., and van Staalduinen, W. (2022). Enabling value co-creation in healthcare through blockchain technology. Int. J. Environ. Res. Public Health, 20(1), 67.
-
 51. Farooq, M. S., Suhail, M., Qureshi, J. N., Rustam, F., de la TorreDíez, I., Mazon, J. L. V., Rodríguez, C. L., and Ashraf, I. Consortium framework using blockchain for asthma healthcare in pandemics. Sensors (Basel), 22(21), 8582.
-
 52. Singh, Y., Jabbar, M. A., Kumar Shandilya, S. S., Vovk, O., and Hnatiuk, Y. (2023). Exploring applications of blockchain in healthcare: road map and future directions. Front. Public Health, 11, 1229386.
-
 53. de Moraes Rossetto, A. G., Sega, C., and Leithardt, V. R. Q. (2022). An architecture for managing data privacy in healthcare with blockchain. Sensors (Basel), 22(21), 8292.
-
 54. Poquiz, W. A. (2022). Blockchain technology in healthcare: An analysis of strengths. Weaknesses Opport. Threats. J. Healthcare Manag., 67(4), 244–253.
-
 55. Mallikarjuna, B., Shrivastava, G., and Sharma, M. (2022). Blockchain technology: A DNN token-based approach in healthcare and COVID-19 to generate extracted data. Expert Sys., 39(3), e12778.
-
 56. Altay, A., Learney, R., Güder, F., and Dincer, C. (2022). Sensors in blockchain. Trends Biotechnol., 40(2), 141–144.
-
 57. Almalki, J. (2023). State-of-the-art research in blockchain of things for healthcare. Arabian Journal for Science and Engineering, 1-29.49, 3163–3191. [`doi.org/10.1007/s13369-023-07896-5`](https://dx.doi.org/10.1007/s13369-023-07896-5).
-
 58. Razzaq, A., Mohsan, S. A. H., Ghayyur, S. A. K., Al-Kahtani, N., Alkahtani, H. K., and Mostafa, S. M. (2022). Blockchain in healthcare: A decentralized platform for digital health passport of COVID-19 based on vaccination and immunity certificates. Healthcare (Basel), 10(12), 2453.
-
 59. Anbarasan, H. S. and Natarajan, J. (2022). Blockchain based delay and energy harvest aware healthcare monitoring system in WBAN environment. Sensors (Basel), 22(15), 5763.
-
 60. Ali, S., Abdullah, Armand, T. P. T., Athar, A., Hussain, A., Ali, M., Yaseen, M., Joo, M. I. and Kim, H. C. (2023). Metaverse in healthcare integrated with explainable AI and blockchain: Enabling immersiveness, ensuring trust, and providing patient data security. Sensors (Basel), 23(2), 565.
-
 61. Sharma, V. and Meena, K. K. (2023). Dentistry in the digital age: Embracing blockchain technology. Cureus, 15(5), e39710.
-
 62. Ali, A., Al-Rimy, B. A. S., Alsubaei, F. S., Almazroi, A. A., and Almazroi, A. A. (2023). HealthLock: Blockchain-based privacy preservation using homomorphic encryption in internet of things healthcare applications. Sensors (Basel), 23(15), 6762.
+
+
 
 63. Ahmed, I., Chehri, A., and Jeon, G. (2023). Artificial intelligence and blockchain enabled smart healthcare system for monitoring and detection of COVID-19 in biomedical images. IEEE/ACM Transactions on Computational Biology and Bioinformatics, 1, 1–10, doi: [10.1109/TCBB.2023.3294333](http://dx.doi.org/10.1109/TCBB.2023.3294333).
 
@@ -1219,10 +1186,6 @@ Manish Kumar^³
 
 抑郁症被称为 21 世纪的“沉默流行病”，是一种普遍且毁灭性的精神健康疾病，给全球造成了巨大的成本。它影响着各个年龄、背景和生活阶层的人群，不仅影响他们本人，还影响他们的家庭、社区和整个社会。识别并有效诊断抑郁症是成功治疗、及时干预以及避免严重且经常是长期后果的重要一步。
 
-
-
-
-
 临床测试和自我报告问卷在传统的抑郁症诊断方式中被广泛使用。虽然这些技术是有益的，但它们存在局限性，这主要源于抑郁症复杂多变的特点。症状在不同个体之间可能存在很大差异，而合并疾病的存在更进一步复杂化了诊断。此外，人类判断中固有的主观性可能导致诊断结论出现差异。人工智能（AI）和机器学习（ML）在近年为解决这些诊断困难提供了新的选择。创建混合模型，将模糊逻辑与神经网络结合起来，是其中一种有趣的技术。模糊逻辑为处理模糊性和不确定性提供了一个框架，而神经网络则擅长从数据中学习复杂模式。将这两种范式结合起来，可以提供一种协同模型，能够提高抑郁症诊断的准确性和可靠性。本研究描述了混合模糊-神经模型在抑郁症诊断中的部署。模糊逻辑用于记录和推理抑郁症诊断中的模糊性，而神经网络则用于从患者数据中发现模式和相关性。我们认为，这种混合方法将提高抑郁症诊断的精确性和可靠性。为了验证这一想法，我们对一个包含不同人口统计学和临床病史的真实世界患者数据集进行了全面分析。本研究的发现表明，我们的混合模型有可能为计算精神健康领域做出贡献，提供一种独特的抑郁症检测方法。本研究旨在加深我们对抑郁症的理解，防止误诊，并最终改善受这种常见精神健康疾病影响的个体生活。
 
 ## 2. 抑郁症诊断中混合模型的需求
@@ -1236,16 +1199,23 @@ Figure 3.1: Advantages of using hybrid model for diagnosis of depression.
 ### 2.1. 优势
 
 1. 人类专业知识的整合：模糊逻辑允许纳入人类专业知识和语言要素。这在精神健康等领域很有用，因为症状和严重程度经常使用不精确的术语报告。模型能够处理“轻度”、“中度”和“重度”等语言变量。
+
 2. 处理非线性：神经网络擅长捕捉复杂、非线性的数据关系。多种因素影响抑郁症诊断，其中许多是非线性的。神经网络组件可以帮助捕捉这些复杂交互。
+
 3. 更好的决策：结合模糊逻辑和神经网络可以实现更稳健的决策。模糊逻辑有助于管理诊断过程中的不确定性和模糊性，而神经网络则从数据模式中学习。
+
 4. 适应性和减少假阳性/假阴性：由于我们对抑郁症的理解随着时间的推移而改善，能够适应新数据的神经网络在诊断中至关重要。通过将模糊逻辑的基于规则的方法与神经网络的数据驱动方法相结合，混合模型有可能减少假阳性和假阴性。
 
 ### 2.2. 局限性
 
 1. 复杂性：总体而言，混合模型比独立的模糊逻辑或神经网络模型更复杂。模型的复杂性可能使其难以理解和调试。
+
 2. 数据需求：为了有效训练，神经网络通常需要庞大的数据集。如果抑郁症诊断的数据集不足或存在偏差，神经网络组件可能无法有效发挥作用。
+
 3. 知识需求：创建和微调抑郁症诊断的混合模糊-神经模型需要同时具备模糊逻辑和神经网络的知识，这在精神健康专业领域可能缺乏。
+
 4. 可解释性：虽然模糊逻辑由于其基于规则的结构而提供了一定的可解释性，但神经网络通常被视为“黑箱”模型。理解模型为何得出诊断可能很困难。
+
 5. 可扩展性：混合模型可能比更简单的模型可扩展性更差，特别是如果需要容纳更多精神健康问题或更复杂的症状特征时。
 
 混合模糊-神经模型用于诊断抑郁症，可以在处理该领域的复杂性和不可预测性方面提供显著优势。然而，仔细分析模型的局限性并确保其设计良好、训练充分，并在各种数据集上得到验证至关重要。与精神健康专业人士的合作对于微调模型并确保其与现实世界诊断程序相一致也至关重要。
@@ -1269,10 +1239,6 @@ Riegler 和 Lettner (2017) 研究了使用人工神经网络识别帕金森病�
 当然，以下部分是对混合模糊神经系统在疾病诊断中应用的相关研究快速综述。
 
 Wu 和 Kasabov (2007) 提出了一种用于早期阿尔茨海默病检测的混合模糊-神经系统，证明了在医疗领域将模糊逻辑与神经网络结合的有效性。虽然该研究侧重于阿尔茨海默病，但该概念可应用于其他精神健康诊断领域 [7]。Özmen et al. (2008) 展示了以乳腺癌诊断为中心的工作，证明了在混合系统中整合模糊规则和神经网络的好处。将基于规则的模糊系统与神经网络相结合的理念与创建抑郁症诊断的混合模糊-神经系统密切相关 [8]。
-
-
-
-
 
 Penumatsa 和 Bokde（2019）研究了模糊神经网络在识别各种神经退行性疾病方面的应用，重点关注混合系统在医疗保健中的潜力。虽然重点是神经退行性疾病，但基本思想可用于抑郁症等心理健康疾病的诊断 \[9\]。
 
@@ -1335,12 +1301,19 @@ Table 3.1 显示了使用神经网络和模糊-神经系统的性能比较。
 Table 3.1: Performance comparison
 
 | Measure/model || Neural network || Fuzzy-neural |
+
 | --- | --- | --- |
+
 | Accuracy || 85.43 || 88.45 |
+
 | --- | --- | --- |
+
 | Precision || 83.56 || 86.29 |
+
 | Recall || 80.25 || 83.91 |
+
 | Sensitivity || 81.56 || 84.56 |
+
 | Error || 11.56 || 9.65 |
 
 总之，将模糊逻辑的优势与神经网络在抑郁症诊断中相结合是一种有前景的策略。它有可能为心理健康从业者提供更准确且可解释的诊断工具。然而，要在现实世界的治疗环境中发挥作用，它需要严格的开发、验证以及与学科专家的合作。
@@ -1361,11 +1334,9 @@ Table 3.1: Performance comparison
 
 4. Ghandeharioun, A., Fedor, S., Sanger, T., and De Choudhury, M. (2019). Untangling the Web: The impact of depression on social media usage. Proc. 2019 CHI Conf. Hum. Factors Comput. Sys., 180.
 
-
-
-
-
 5. Kaur, H. and Verma, P. (2018). 利用机器学习方法检测印度青年在 Twitter 上的抑郁症。J. King Saud University-Comp. Inform. Sci, 16, 1–15。
+
+
 
 6. Riegler, G. and Lettner, S. (2017). 使用人工神经网络检测帕金森病患者的抑郁症。Proc. 23rd ACM SIGKDD Int. Conf. Knowl. Discov. Data Min., 1527–1535。
 
@@ -1393,7 +1364,7 @@ Dipti Rai^4
 
 计算机科学与工程系，工程学院与技术学院，勒克瑙大学，印度北方邦
 
-#### 摘要
+## 摘要
 
 制造业的世界日新月异。研究人员专注于开发新思路，并以有助于使我们的工作更轻松、更快、更高效的方式制造事物。本研究论文全面回顾了计算机，特别是人工智能（AI）和机器学习（ML），在实现这一目标方面，尤其是在我们所称的工业 4.0 中发挥的重要作用。为了理解这一点，作者查阅了许多数据库，如 SCOPUS 和 Web Science，以及专门的计算机程序，以帮助我们彻底研究这些信息。其核心是，AI 和 ML 是一组复杂的算法和技术，解决预测、分组和分类方面的问题。ML 和 AI 的智能使用具有巨大前景。因此，该领域的研究极具价值。主要关注点是 AI 技术的实际应用及其在众多企业和社会中的整合。本文列出并探讨了 ML 和 AI 的工业用途。本文还描述了 AI 和 ML 的研究领域，这些领域将通过使用 AI 和 ML 应用为工业问题提供更好的解决方案。这项研究扩展了我们对计算机技术如何改变生产环境的认识。
 
@@ -1409,21 +1380,17 @@ AI 是一个动态领域，其根源在于创造能够复制过去仅限于人�
 
 实用的 AI 解决方案需要更智能的搜索技术，将众多替代方案减少到可管理的水平。复杂的搜索架构，例如分层搜索系统，将问题求解过程分为预分析、搜索和后分析，逐步细化计划。总而言之，AI 是一个跨学科领域，起源于 20 世纪中期，专注于创造能够模仿人类任务的机器智能。它努力使计算机像人类一样推理，解决非线性、复杂的问题。
 
-
-
-
-
 ### 1.2. 机器学习
 
 Simon 将学习定义为“通过在时间中探索新信息而产生的行为变化和增强的过程”。当机器执行此定义中的“学习”时，就称为 ML。术语增强是指在 AI 过程中基于现有经验和样本创建最佳解决方案（Sırmaçek, 2007）。
 
-从数据中教会计算机学习的科学（和艺术）被称为 ML。对于更广泛的定义，请参阅此：被称为 \[machine learning\] 的研究分支使得计算机无需显式编程即可学习。1959 年，Arthur Samuel——此外，还有一个更偏向工程的定义。如果计算机程序在经历 E 之后在任务 T 上的表现 P 得到提升，则称其已从经验中学习到。这涉及某些任务 T 和某些性能度量 E。——Tom Mitchell, 1997。
+从数据中教会计算机学习的科学（和艺术）被称为 ML。对于更广泛的定义，请参阅此：被称为 `machine learning` 的研究分支使得计算机无需显式编程即可学习。1959 年，Arthur Samuel——此外，还有一个更偏向工程的定义。如果计算机程序在经历 E 之后在任务 T 上的表现 P 得到提升，则称其已从经验中学习到。这涉及某些任务 T 和某些性能度量 E。——Tom Mitchell, 1997。
 
 ### 1.3. 应用机器学习：为什么？
 
 考虑一下你将如何用传统编程方法创建一个垃圾邮件过滤器。首先，你会检查垃圾邮件的典型外观。也许你已经看到某些术语或表达诸如“4U”、“credit card”、“free”和“amazing”经常出现在主题中。也许你还会进一步看到电子邮件文本、发件人姓名等中的额外趋势。其次，你将为你看到的每个模式开发检测算法，如果你的程序识别出许多模式，它就会将电子邮件标记为垃圾邮件。最后，试用你的软件并不断返回到阶段 1 和 2，直到它功能足够。
 
-考虑到问题的复杂性，你的程序很可能会变成一个冗长、复杂的规则集合，很难维护。然而，基于 ML 算法的垃圾邮件过滤器通过在垃圾邮件样本中相对于正常邮件出现情况寻找重复的词模式，自动学习哪些词和短语是垃圾邮件的有效预测因子（Figure 4.1）。该程序很可能更容易维护、更短且更准确 \[2\]。
+考虑到问题的复杂性，你的程序很可能会变成一个冗长、复杂的规则集合，很难维护。然而，基于 ML 算法的垃圾邮件过滤器通过在垃圾邮件样本中相对于正常邮件出现情况寻找重复的词模式，自动学习哪些词和短语是垃圾邮件的有效预测因子（Figure 4.1）。该程序很可能更容易维护、更短且更准确 [2]。
 
 ![Figure 4.1: Machine learning approach.](img/fig4_1_C.jpg)
 
@@ -1443,19 +1410,15 @@ Figure 4.2: Adapting to change automatically.
 
 Figure 4.3: Machine learning can help humans learn.
 
-### 2. AI 与 ML 技术的分类
+## 2. AI 与 ML 技术的分类
 
-AI 涵盖了模仿或复制人类思维过程和行为的硬件和软件系统。基于系统相对于人类的“智能水平” \[3\]，AI 被分类为强或弱。强 AI \[2, 3\] 也被称为通用 AI。现有的实际应用依赖于弱或软 AI，它展示了处理特定问题同时满足合理质量标准的能力。AI，无论是通用还是关键，都是研究的主题。AI 涵盖了众多重要的科学领域，包括 ML、自然语言理解（NLP）、文本和语音生成、计算机视觉、机器人、规划和专家系统。AI 的各个领域如图所示。相当一部分 AI 应用建立在 ML 技术之上，后者实现了 AI 的基本概念。ML 被应用于提高语音识别和语音中情绪识别等领域的成果 \[4\]。广泛的 ML 技术被用于经济规划和生产流程管理。ML 是一种有效的数据分析工具，可以整合到各种专家系统中。目前，机器人研究主要集中在 ML 上 \[10\]。
+AI 涵盖了模仿或复制人类思维过程和行为的硬件和软件系统。基于系统相对于人类的“智能水平” [3]，AI 被分类为强或弱。强 AI [2, 3] 也被称为通用 AI。现有的实际应用依赖于弱或软 AI，它展示了处理特定问题同时满足合理质量标准的能力。AI，无论是通用还是关键，都是研究的主题。AI 涵盖了众多重要的科学领域，包括 ML、自然语言理解（NLP）、文本和语音生成、计算机视觉、机器人、规划和专家系统。AI 的各个领域如图所示。相当一部分 AI 应用建立在 ML 技术之上，后者实现了 AI 的基本概念。ML 被应用于提高语音识别和语音中情绪识别等领域的成果 [4]。广泛的 ML 技术被用于经济规划和生产流程管理。ML 是一种有效的数据分析工具，可以整合到各种专家系统中。目前，机器人研究主要集中在 ML 上 [10]。
 
-机器学习被广泛用于解决科学和应用中的问题。例如，考虑 ML 技术有多么适合，以及深度理解的前景对于解决化学问题有多么令人兴奋。众多领域，包括天文学、农业、计算生物学、市政管理、医学成像和天文学，都是 ML 应用可用的市场示例 \[5–7\]。另一个被积极使用的说法是 ML，它是当前自然语言理解研究的基石。
+机器学习被广泛用于解决科学和应用中的问题。例如，考虑 ML 技术有多么适合，以及深度理解的前景对于解决化学问题有多么令人兴奋。众多领域，包括天文学、农业、计算生物学、市政管理、医学成像和天文学，都是 ML 应用可用的市场示例 [5–7]。另一个被积极使用的说法是 ML，它是当前自然语言理解研究的基石。
 
 ML 方法根据其预期用途和学习方法进行分类。这些领域包括深度学习（DL）、强化学习（RL）、半监督教育（SSL）、聚类分析、降维、监督学习（SL）和无监督学习（UL）。无监督学习（UL）技术的目标是根据每个项目的特征自动将未标记的对象集合划分为单独或重叠的组。UL 的目的是发现数据中的潜在模式、异常和差异。回归和分类被用于监督学习（SL）策略来解决问题。当有限的特定定义对象的子集被可能无限数量的事物包围时，会出现某些问题。当对象基于有限的整数集合，即所谓的类别编号进行标记时，就会发生分类问题。分类算法的工作是将指定数字中的一个分配给新发现的未标记对象。回归问题由包含实数的标签表示，包括整数和小数。在这些情况下，算法使用先前标记的项目来预测未标记对象的绝对数字。预测任务和数据缺口填充也由这种问题解决方案处理。
 
-
-
-
-
-#### 深度学习技术
+### 深度学习技术
 
 深度学习（DL）技术通过采用具有众多隐藏层和专门架构设计的神经网络，来挖掘数据数组中的隐藏特征。在 DL 的背景下，迁移学习（TF）概念经常被研究。迁移学习的目的是通过从相关域转移知识来改进“来自一个域的学习者”。机器学习模型可分为经典和当代两类（Figure 4.4）。经典 SL 模型包括但不限于以下种类：`k-NN`、逻辑回归、决策树（`DT`）、支持向量机（`SVM`）、前馈人工神经网络（`ANN`）。主成分分析和 k-means 是传统无监督学习方法的例子（`PCA`）。
 
@@ -1463,11 +1426,11 @@ ML 方法根据其预期用途和学习方法进行分类。这些领域包括�
 
 Figure 4.4: Classic and modern ML models.
 
-#### 当代无监督学习
+### 当代无监督学习
 
 当代无监督学习（UL）技术的例子如下：`ISOMAP`，或等距映射，线性嵌入技术（`LLE`），使用 T 分布的随机邻域嵌入（`t-SNE`），核的主成分分析（`KPCA`），多维缩放（`MDS`）。
 
-#### 当代监督学习和深度学习
+### 当代监督学习和深度学习
 
 这些包括集成技术如 boosting 和随机森林，以及 DL 架构如长短期记忆（`LSTM`）、卷积神经网络（`CNN`）、循环神经网络（`RNN`），以及在当代监督学习（SL）、半监督学习（SSL）、强化学习 [8]（`RL`）和 DL 模型方面更多的内容。AI 子领域中发展最快的领域是 DL。深度学习是一组利用深度神经网络的技术，其中包含两个或更多隐藏层。这些深度架构的主要优势在于它们能够从头到尾处理任务。因为网络可以自行学习如何将图像或信号向量连接到目标变量，所以这种方法减少了必须对数据进行预处理的数量。通过选择关键特征，网络显著减轻了研究者任务的难度和复杂性。但这些优势在有足够量的训练数据 [9]并且选择了合适的神经网络设计时变得最为明显。在众多不同的架构设计中，有三种基本架构类型，从中形成了许多修改后的模型（见 Figure 4.5）。
 
@@ -1475,7 +1438,7 @@ Figure 4.4: Classic and modern ML models.
 
 Figure 4.5: Deep networks.
 
-#### 前馈和循环网络
+### 前馈和循环网络
 
 前馈神经网络（`FFNN`）在现实世界场景中被广泛用于解决分类和回归相关问题。循环神经网络能够处理持续时间不同的序列。当信号 `x(t)` 在时间 `t` 接收时，它们补充网络的内部状态。下一个信号 `x(t+1)` 被整合以创建最终输出 `yˆ`，该输出取决于整个信号序列。网络的输出可以构成一个类别 designation 或一系列信号，用符号 `yˆ`、`yˆ h1i`、`yˆ h2i`、...、`yˆ h Tyi` 表示。根据它们生成和接收的序列类型，可以从循环网络中区分出四个主要类别。可以将 `FFNN` 视为一种一对一的 RNN 架构，如 Figure 4.6 所示。
 
@@ -1487,29 +1450,32 @@ Figure 4.6: Recurrent neural networks.
 
 多对多架构用于语音识别和机器翻译。RNN 催生了生成对抗网络、生成预训练变换器（`GPT`）、语言模型嵌入（`ELMO`）、来自变换器的双向编码器表示（`BERT`）和 `LSTM` 模型。这些模型因其在 NL 处理相关问题上的有效性而被广泛接受。`CNNs` 使识别给定数据中的复杂模式成为可能。不管这些模式位于输入信号向量中的何处，它们始终保持不变。这些模式可以由垂直或水平线以及照片中发现的其他区分元素组成。
 
-#### 卷积神经网络
+### 卷积神经网络
 
-在网络训练期间，卷积滤波器的神经元权重被创建和调整。卷积技术被纳入以管理训练过程的计算复杂性。在图像处理任务中，`CNNs`  regularly 优于人类。这种深度神经网络设计受 `LeNet` 模型的启发，该模型是第一个使用池化、卷积滤波器和全连接神经网络（`FC`）进行图像分类的模型。该网络包含超过 60,000 个网络参数，由两层全连接网络和四层卷积层组成。
+在网络训练期间，卷积滤波器的神经元权重被创建和调整。卷积技术被纳入以管理训练过程的计算复杂性。在图像处理任务中，`CNNs` regularly 优于人类。这种深度神经网络设计受 `LeNet` 模型的启发，该模型是第一个使用池化、卷积滤波器和全连接神经网络（`FC`）进行图像分类的模型。该网络包含超过 60,000 个网络参数，由两层全连接网络和四层卷积层组成。
 
 `AlexNet` 代表了通过扩展网络规模并加入最大池化实现的实际架构的进步。该网络的权重大约是 `LeNet` 的 100 倍。`VGGnet` 是另一个具有统一组件的庞大架构。`GoogleNet` 围绕 inception 模块设计，该模块便于使用具有不同大小的并行路径的卷积滤波器，确保检测不寻常特征。`ResNet` 具有 152 层，利用残差模块来对抗梯度消失问题。卷积滤波器在单次识别和识别中被证明非常有效，如 `Yolo` 模型和图像分割任务所示，以及单元模型中所示。计算机视觉的最新发展与采用自注意力机制密切相关，通常称为变换器架构。当前应用此方法的模型在特定对象分类任务中取得了最先进的结果。值得注意的模型包括 Florence、Swin Transformer V2 和 DINO。
 
-#### 图神经网络
+### 图神经网络
+
+
 
 图神经网络（`GNNs`）是 ML 中快速扩展的领域，特别旨在用于基于图的推理。得益于 `GNNs`，卷积神经网络更广泛且更适用于图结构数据。它们在结构化环境中是独特的，例如知识图谱、社交网络、分子和物理系统中的显式图结构。尽管如此，`GNNs` 也可在非结构化环境中使用，在这些环境中需要创建特定于任务的图；例如，你可以为文本制作词图，或为图片制作场景图。`GNNs` 具有灵活性，可用于解决图分类、链接预测和节点分类相关问题。众多 `GNN` 变体，包括图循环网络（`GRN`）、图注意力网络（`GAT`）和图卷积网络（`GCN`），在文本分类、图像分类、物理、化学、图挖掘等多种 DL 任务中表现出色 [11]。
-
-
-
-
 
 AI 和 ML 技术的分类提供了对其能力的清晰理解。基于 RNN 和 CNN 的深度学习方法目前正处于激烈发展之中。它们通常解决识别、推荐、NLP、数据处理、跟踪、个性化和学习方面的挑战。AI 的潜力延伸至不确定数据的分析，通常结合模糊逻辑、路线集和基于可能性的理论。此外，AI 的可能性涵盖各个领域，在医学、农业、教育、社会环境、家庭环境和艺术方面具有重要应用。AI 的作用与工业 4.0 的趋势密切交织，AI 技术构成了许多应用的骨干，特别是在安全、网络安全、物联网以及基于无监督方法的数据分析方面。
 
 ### 3. 制造业中的问题
 
 有几个令人信服的理由说明 AI 在制造业中如此重要 [12]。让我们来看几个重要问题：
+
 1. 专业知识匮乏：许多制造组织面临着保留即将退休专家的知识的挑战。这些知识很有价值，组织希望在丢失之前将其捕获。此外，他们还旨在将这种专业知识普及开来。该问题普遍存在于工艺规划、机械诊断、规划和设计工程项目等任务中。
+
 2. 决策复杂性：制造中的决策可能变得高度复杂，主要是当存在众多选项时。这些选择可能涉及产品设计或生产计划。该问题在柔性制造系统中加剧，随着工厂车间适应性的增强，导致更多替代方案和决策。在极其严格的制造环境中做出此类决策可能已足够具有挑战性，而随着灵活性增强，这些决策的挑战也会升级。产品设计复杂性也导致决策复杂性增加 [13]。
+
 3. 信息复杂性：“无纸化工作场所”或“无纸化行业”的概念随着将工厂车间信息在线化的努力而获得关注。然而，这一转变带来了新的挑战：将互联网信息减少到仅对特定决策者必要的信息。向数字格式的过渡并不一定保证信息易于获取。对数据进行智能化、按个人需求提炼为可消化格式是一个尚未完全解决的复杂问题。
+
 4. 决策及时性：除了决策复杂性不断增长外，做出这些决策可用的时间也在减少。定制化技术进步等降低了机器设置时间，要求更快、更智能的决策系统。问题是如何构建能够在更紧的时间范围内处理增加的决策复杂性的系统。
+
 5. 协调：制造设计与制造、分销和现场服务密不可分。如果设计未考虑下游流程，可能导致更高的制造成本并可能降低产品质量。这增加了将计划与所有后续行动同步的难度。
 
 这些问题共同影响制造过程的质量和生产率。这促使人们思考 AI 如何提供有价值的解决方案来应对这些挑战。AI 具有创建智能系统的能力，能够捕获数据、处理和提炼专家知识、辅助决策、管理复杂信息、及时做出决策，并在制造 [15] 的各个方面促进协调。因此，AI 是一种具有显著惠及制造业潜力的技术 [27]。
@@ -1522,11 +1488,7 @@ AI 和 ML 技术的分类提供了对其能力的清晰理解。基于 RNN 和 C
 
 ### 5. 人工智能在设计中的见解
 
-设计包括制定产品规范，接下来是实际设计，随后是其验证。同时，执行了多项管理活动，并将最先进的 AI 技术应用于增强每个阶段。在当今环境中，产品规范通常通过 NL 描述传达。对于商业产品，这些描述可能跨越几章，而军用产品通常需要包含数万页的文件。审查基本需求以确保其全面性和连贯性仍然至关重要。在收集和评估规范方面，AI 已取得显著进展。例如，像 XSEL 这样的系统 exemplify 了 AI 与收集客户产品规范集成的应用。XSEL 采用使用 NL 的界面来获取客户目标，有效分析客户需求，并与客户互动以构建其需求的全面实例。重要的是，该结构正在积极使用中。尽管如此，值得注意的是，对规范进行彻底分析、识别不一致性和差距仍然是一项艰巨的任务，代表着一个持续发展的领域。一旦获得规范并验证其准确性和连贯性，设计阶段即可开始。设计被广泛认为是生产程序中最复杂和最具创造性的方面之一。它不仅需要教育基础，还需要丰富的经验。因此，它仍然是一个知识密集型工作，依赖于分析性和启发性知识，使 AI 技术高度相关 [16]。
-
-
-
-
+设计包括制定产品规范，接下来是实际设计，随后是其验证。同时，执行了多项管理活动，并将最先进的 AI 技术应用于增强每个阶段。在当今环境中，产品规范通常通过 NL 描述传达。对于商业产品，这些描述可能跨越几章，而军用产品通常需要包含数万页的文件。审查基本需求以确保其全面性和连贯性仍然至关重要。在收集和评估规范方面，AI 已取得显著进展。例如，像 `XSEL` 这样的系统 exemplify 了 AI 与收集客户产品规范集成的应用。`XSEL` 采用使用 NL 的界面来获取客户目标，有效分析客户需求，并与客户互动以构建其需求的全面实例。重要的是，该结构正在积极使用中。尽管如此，值得注意的是，对规范进行彻底分析、识别不一致性和差距仍然是一项艰巨的任务，代表着一个持续发展的领域。一旦获得规范并验证其准确性和连贯性，设计阶段即可开始。设计被广泛认为是生产程序中最复杂和最具创造性的方面之一。它不仅需要教育基础，还需要丰富的经验。因此，它仍然是一个知识密集型工作，依赖于分析性和启发性知识，使 AI 技术高度相关 [16]。
 
 在设计领域，识别出若干类别。第一类是“选择”，产品可从现有库存中挑选，通过将功能需求映射到现有产品线的特性上。像 `XSEL` 这样的系统，例如，就擅长将产品特性与用户功能需求进行匹配并识别最佳项目。“配置”代表一种稍微更复杂的设计类型。为了制造成品，必须组装半成品组件。目前有几种有效的配置方法在使用。例如，`VT` 配置电梯系统，而 `XCON/R1` 配置计算机系统；两者均在现实环境中使用。这些技术比人工配置器更准确、更高效，表现出卓越的性能。第三种设计是“外推”。该方法涉及修改现有产品以满足特定客户要求。例如，像 `ALADIN` 这样的技术可以采用铝合金规格并修改现有合金的成分和热机械加工，以生成符合客户规格的新合金 [30]。
 
@@ -1546,15 +1508,11 @@ AI 和 ML 技术的分类提供了对其能力的清晰理解。基于 RNN 和 C
 
 ### 8. 利用人工智能进行现场服务和分销的见解
 
-
-
-
-
 #### 分销与现场服务
 
-分销和现场服务是产品制造后生命周期中的最后阶段。组织设计是分销的第一步；它涉及在哪里制造、生产多少、库存持有多少以及如何运送的决策。其他关键的分销任务包括订单录入、安排产品安装，以及在客户现场识别和修复问题。这些职业中的每一个都需要 AI。网络 `INET` 模拟组织结构，模拟其流程，并使用基于知识的仿真方法自主评估结果。决策过程借助这些仿真得到优化。`XSEL` \[19\] 进一步用于销售订单输入。`XSEL` 的结果随后被输入到分销框架中，例如 `ILOG`，它决定订单的采购来源、装配地点以及最有效的运输方式。这些系统结合基于规则的方法来获取和利用熟练知识，并采用启发式搜索来提高解决方案质量。AI 驱动的应用也彻底改变了安装规划。`XSITE` 系统用于确定计算机在客户现场的最佳位置和功能。
+分销和现场服务是产品制造后生命周期中的最后阶段。组织设计是分销的第一步；它涉及在哪里制造、生产多少、库存持有多少以及如何运送的决策。其他关键的分销任务包括订单录入、安排产品安装，以及在客户现场识别和修复问题。这些职业中的每一个都需要 AI。网络 `INET` 模拟组织结构，模拟其流程，并使用基于知识的仿真方法自主评估结果。决策过程借助这些仿真得到优化。`XSEL` [19] 进一步用于销售订单输入。`XSEL` 的结果随后被输入到分销框架中，例如 `ILOG`，它决定订单的采购来源、装配地点以及最有效的运输方式。这些系统结合基于规则的方法来获取和利用熟练知识，并采用启发式搜索来提高解决方案质量。AI 驱动的应用也彻底改变了安装规划。`XSITE` 系统用于确定计算机在客户现场的最佳位置和功能。
 
-最后，诊断和维修产品在 AI 领域获得了大量关注。`PDS` 系统，也称为 `GENAID`，能够诊断从传感器到发电机和蒸汽涡轮机的问题。该系统已投入生产使用超过一年。`PDS` 提出了一个独特挑战，因为它必须应对传感器输入，而传感器输入可能比其监控的过程更快地恶化。在这种环境中进行诊断涉及区分不准确的传感器数据和实际过程故障，使问题变得更加复杂。虽然 `DOC` 专注于检测与计算机相关的问题，`CATS` 专注于柴油机车诊断，而 `ACE` 是一个专门设计用于诊断电话电缆中电缆故障的系统。基于规则的概念，这些系统利用上下文感知和启发式方法提供精确的诊断。模型化推理，即反映产品的物理结构和运行原理，在当前 AI 研究环境中可能变得更加重要。这种方法探索化学、物理和热力学等领域，以提高诊断能力。例如，`DART` 系统利用计算机的结构和功能特征来诊断它们。AI 在这些领域不断进步，为优化分销流程、增强安装并提供更精确有效的产品诊断和维护服务提供了改进的能力 \[21\]。
+最后，诊断和维修产品在 AI 领域获得了大量关注。`PDS` 系统，也称为 `GENAID`，能够诊断从传感器到发电机和蒸汽涡轮机的问题。该系统已投入生产使用超过一年。`PDS` 提出了一个独特挑战，因为它必须应对传感器输入，而传感器输入可能比其监控的过程更快地恶化。在这种环境中进行诊断涉及区分不准确的传感器数据和实际过程故障，使问题变得更加复杂。虽然 `DOC` 专注于检测与计算机相关的问题，`CATS` 专注于柴油机车诊断，而 `ACE` 是一个专门设计用于诊断电话电缆中电缆故障的系统。基于规则的概念，这些系统利用上下文感知和启发式方法提供精确的诊断。模型化推理，即反映产品的物理结构和运行原理，在当前 AI 研究环境中可能变得更加重要。这种方法探索化学、物理和热力学等领域，以提高诊断能力。例如，`DART` 系统利用计算机的结构和功能特征来诊断它们。AI 在这些领域不断进步，为优化分销流程、增强安装并提供更精确有效的产品诊断和维护服务提供了改进的能力 [21]。
 
 ### 9. 人工智能在制造中的未来趋势
 
@@ -1564,9 +1522,9 @@ AI 和 ML 技术的分类提供了对其能力的清晰理解。基于 RNN 和 C
 
 1. 战略视角 – “设计融合”：根据战略视角，产品的设计应得到优化，以改善后续发生的活动。在产品设计过程中，这一被称为“设计融合”的理念旨在使用并反映现场服务、生产、分销和规划的集成知识。通过这样做，我们可以确保下游流程从一开始就得到优化。
 
-2. 战术视角 – “按需开门”：战术视角集中于公司内部现有商品的流动 \[22\]。它提供了如何以及在哪里更快地接收商品的解决方案，以及如果商品现在不可用该怎么办。在产品设计方式不再可用的情况下，“按需开门”研究逆向工程技术。通过采用更全面的战略和战术方法来处理现有产品并将新设计引入公司，我们可以找到进一步优化和改进 AI 在现场使用的途径。
+2. 战术视角 – “按需开门”：战术视角集中于公司内部现有商品的流动 [22]。它提供了如何以及在哪里更快地接收商品的解决方案，以及如果商品现在不可用该怎么办。在产品设计方式不再可用的情况下，“按需开门”研究逆向工程技术。通过采用更全面的战略和战术方法来处理现有产品并将新设计引入公司，我们可以找到进一步优化和改进 AI 在现场使用的途径。
 
-简而言之，全面、系统化的方法将塑造 AI 在制造中的潜力。这种技术考虑完整的产品生命周期，并利用 AI 来改进某些阶段以及整体制造过程。这种全面的视角为制造带来更高的效率、创新和改善成果提供了可能性 \[25\]。
+简而言之，全面、系统化的方法将塑造 AI 在制造中的潜力。这种技术考虑完整的产品生命周期，并利用 AI 来改进某些阶段以及整体制造过程。这种全面的视角为制造带来更高的效率、创新和改善成果提供了可能性 [25]。
 
 ### 10. 机器学习的应用
 
@@ -1574,11 +1532,11 @@ AI 和 ML 技术的分类提供了对其能力的清晰理解。基于 RNN 和 C
 
 #### 教育
 
-机器学习已成为一个关键的教育工具，主要提升学生的表现和成功。尽管近年来有众多教育举措，但实现期望的学术成功水平仍然是一个具有挑战性的努力 \[31\]。
+机器学习已成为一个关键的教育工具，主要提升学生的表现和成功。尽管近年来有众多教育举措，但实现期望的学术成功水平仍然是一个具有挑战性的努力 [31]。
 
 这一挑战受到许多因素的影响，使得很难辨别哪些因素具有最显著的影响。作为回应，研究人员已采用 ML 模型并取得了令人鼓舞的结果，利用调查数据预测学生的学业成功。
 
-同样，ML 算法已被用于评估高等教育学生的能力。在 2007 年在帕穆卡莱大学进行的一项研究中，研究人员识别出在数学课程中可能挣扎的学生。调查显示，大学入学考试成绩（数学、科学、土耳其语）和高中毕业成绩等多个变量在预测数学成功方面发挥了关键作用。该研究使用了 289 名学生的训练数据和 145 名学生的测试数据，结果准确估计了 86% 成功通过数学课程的学生 \[26\]。
+同样，ML 算法已被用于评估高等教育学生的能力。在 2007 年在帕穆卡莱大学进行的一项研究中，研究人员识别出在数学课程中可能挣扎的学生。调查显示，大学入学考试成绩（数学、科学、土耳其语）和高中毕业成绩等多个变量在预测数学成功方面发挥了关键作用。该研究使用了 289 名学生的训练数据和 145 名学生的测试数据，结果准确估计了 86% 成功通过数学课程的学生 [26]。
 
 机器学习在教育领域继续找到实际应用，彻底改变了教学和学习的各个方面。
 
@@ -1590,37 +1548,33 @@ AI 和 ML 技术的分类提供了对其能力的清晰理解。基于 RNN 和 C
 
 在此方法中，旨在处理和改善记录的图像。图像处理器使用的一些应用领域如下：安全系统、人脸检测、医学（用于诊断患病组织和器官）、军事（用于处理水下和卫星图像）、运动检测、物体检测，以及汽车、航空和生产，在故障发生前检测故障、生产自主车辆。
 
-
-
-
-
-计算生物学：DNA 测序、寻找肿瘤和药物发现。零售 – 为个人定制货架分析、推荐引擎、物料和库存估算以及采购 – 需求趋势。健康：通过分析患者数据提供预警和诊断、疾病定义以及医疗保健分析。金融：信用控制和风险评估，以及算法交易。气象学 – 通过传感器进行天气预报。人力资源：从众多申请者中挑选最成功的候选人。能源 – 计算建筑设计的采暖和制冷负荷：电力使用分析与智能网络管理 \[31\]。
+计算生物学：DNA 测序、寻找肿瘤和药物发现。零售 – 为个人定制货架分析、推荐引擎、物料和库存估算以及采购 – 需求趋势。健康：通过分析患者数据提供预警和诊断、疾病定义以及医疗保健分析。金融：信用控制和风险评估，以及算法交易。气象学 – 通过传感器进行天气预报。人力资源：从众多申请者中挑选最成功的候选人。能源 – 计算建筑设计的采暖和制冷负荷：电力使用分析与智能网络管理 [31]。
 
 ### 11. 人工智能与机器学习的局限性与困难
 
-具有人工智能技术的系统需要熟练的专业人员，而此类经验丰富且合格专业人员的短缺或缺乏为市场带来了重大挑战。人工智能技术需要在机器学习、数据科学和软件工程方面具备专业知识。这些专业人员的需求超过供给，导致人才短缺，这可能减缓人工智能的开发、实施和创新。此外，这种短缺会限制人工智能解决方案在各个行业中的可扩展性 \[29\] 和有效性。因此，熟练专业人员的短缺被认为是对市场扩张构成挑战 \[2\]（表 4.1 和 4.2）。
+具有人工智能技术的系统需要熟练的专业人员，而此类经验丰富且合格专业人员的短缺或缺乏为市场带来了重大挑战。人工智能技术需要在机器学习、数据科学和软件工程方面具备专业知识。这些专业人员的需求超过供给，导致人才短缺，这可能减缓人工智能的开发、实施和创新。此外，这种短缺会限制人工智能解决方案在各个行业中的可扩展性 [29] 和有效性。因此，熟练专业人员的短缺被认为是对市场扩张构成挑战 [2]（表 4.1 和 4.2）。
 
 表 4.1：人工智能内部问题
 
-| 人工智能技术内部问题  |
+| 人工智能技术内部问题 |
 | --- |
-| *数据* || *学习过程* || *结果* || *技术* |
-| 收集数据和进行初步处理的挑战 || 学习过程缓慢 || 透明度和可解释性问题 || 当前解决方案的不稳定性源于机器学习及其对背景噪声的依赖 |
+| *数据* | *学习过程* | *结果* | *技术* |
+| 收集数据和进行初步处理的挑战 | 学习过程缓慢 | 透明度和可解释性问题 | 当前解决方案的不稳定性源于机器学习及其对背景噪声的依赖 |
 | --- | --- | --- | --- |
-| 需要大量数据 || 需要巨大的处理能力 ||  || 当前机器学习模型单任务组件和受限关联性 |
-| 缺乏标注数据和繁琐的标注数据录入 || 缺乏复杂的图像处理工具 ||  || 需要为独特数据和应用场景创建新的机器学习模型 |
-| 数据安全、“偏见”和隐私 ||  ||  || 工业人工智能和机器学习应用需要网络基础设施 |
+| 需要大量数据 | 需要巨大的处理能力 |  | 当前机器学习模型单任务组件和受限关联性 |
+| 缺乏标注数据和繁琐的标注数据录入 | 缺乏复杂的图像处理工具 |  | 需要为独特数据和应用场景创建新的机器学习模型 |
+| 数据安全、“偏见”和隐私 |  |  | 工业人工智能和机器学习应用需要网络基础设施 |
 
 表 4.2：人工智能外部问题
 
 | *人工智能技术外部问题* |
 | --- |
-| 组织 || 人员 || 经济 || 社会 |
-| 缺乏人工智能采用计划 || 抗拒新技术和变革 || 人工智能解决方案的昂贵性质 || 工作替代和流失 |
+| 组织 | 人员 | 经济 | 社会 |
+| 缺乏人工智能采用计划 | 抗拒新技术和变革 | 人工智能解决方案的昂贵性质 | 工作替代和流失 |
 | --- | --- | --- | --- |
-| 功能碎片化使以整合方式应用人工智能变得困难 || 合格人员短缺 || 为现实世界实施做准备不足 || 采用和信任 |
-| 缺乏对人工智能进步和领导力的投入 ||  || 财富差距和不平等 || 伦理 8c 道德问题 |
-| 技术基础设施不足 ||  || 新兴国家的经济 || 监管政策和法律问题 |
+| 功能碎片化使以整合方式应用人工智能变得困难 | 合格人员短缺 | 为现实世界实施做准备不足 | 采用和信任 |
+| 缺乏对人工智能进步和领导力的投入 |  | 财富差距和不平等 | 伦理 8c 道德问题 |
+| 技术基础设施不足 |  | 新兴国家的经济 | 监管政策和法律问题 |
 
 ### 12. 结论
 
@@ -1628,22 +1582,31 @@ AI 和 ML 技术的分类提供了对其能力的清晰理解。基于 RNN 和 C
 
 ### 参考文献
 
+
+
 1. Everitt, T., Goertzel, B., and Potapov, A. (2017). Artificial general intelligence. Lecture Notes in Artificial Intelligence. Heidelberg: Springer. 10th International Conference, AGI 2017, Melbourne, VIC, Australia, August 15-18, 2017, Proceedings, 1–16.
+
 2. Tizhoosh, H. R. and Pantanowitz, L. (2018). Artificial intelligence and digital pathology: Challenges and opportunities. J. Pathol. Inform. 9, 38.
+
 3. Strong, A. I. (2016). Applications of artificial intelligence & associated technologies. Science \[ETEBMS-2016\], 5(6), pp 1–7. Proceeding of International Conference on Emerging Technologies in Engineering, Biomedical, Management and Science (ETEBMS-2016), 5-6 March 2016.
+
 4. Barakhnin, V., Duisenbayeva, A., Kozhemyakina, O. Y., Yergaliyev, Y., and Muhamedyev, R. (2018). The automatic processing of the texts in natural language. Some bibliometric indicators of the current state of this research area. J. Phy.: Conf. Ser., IOP Publishing: Bristol, UK, 012001.
+
 5. The Artificial Intelligence (AI) White Paper. Available online: [`www.iata.org/contentassets/b90753e0f52e48a58b28c51df023c6fb/ai-white-paper.pdf`](https://www.iata.org).
+
 6. Mukhamediev, R. I., Symagulov, A., Kuchin, Y., Yakunin, K., and Yelis, M. (2021). From classical machine learning to deep neural networks: A simplified scientometric review. Appl. Sci., 11, 5541.
+
 7. Usuga Cadavid, J. P., Lamouri, S., Grabot, B., Pellerin, R., and Fortin, A. (2020). Machine learning applied in production planning and control: A state-of-the-art in the era of industry 4.0. J. Intell. Manuf., 31, 1531–1558.
+
 8. Ogidan, E. T., Dimililer, K., and Ever, Y. K. (2018). Machine learning for expert systems in data analysis. Proc. 2018 2nd Int. Symp. Multidis. Stud. Innov. Technol. (ISMSIT), 1–5.
+
 9. Miotto, R., Wang, F., Wang, S., Jiang, X., and Dudley, J. T. (2018). Deep learning for healthcare: Review, opportunities and challenges. Brief. Bioinform., 19, 1236–1246.
+
 10. Zitnik, M., Nguyen, F., Wang, B., Leskovec, J., Goldenberg, A., and Hoffman, M. M. (2019). Machine learning for integrating data in biology and medicine: Principles, practice, and opportunities. Inf. Fusion, 50, 71–91.
+
 11. Mahdavinejad, M. S., Rezvan, M., Barekatain, M., Adibi, P., Barnaghi, P., and Sheth, A. P. (2018). Machine learning for Internet of Things data analysis: A survey. Digit. Commun. Netw., 4, 161–175.
+
 12. Sadovskaya, L. L., Guskov, A. E., Kosyakov, D. V., and Mukhamediev, R. I. (2021). Natural language text processing: A review of publications. Artif. Intell. Dec. Mak., 95–115.
-
-
-
-
 
 13. Kotsiantis, S. B., Zaharakis, I., and Pintelas, P. (2007). 监督式机器学习：分类技术综述。Emerg. Artif. Intell. Appl. Comput. Eng., 160, 3–24。
 
@@ -1707,10 +1670,6 @@ Kedarnath Chaudhary^5
 
 自传感形状记忆合金作动器被用作物理储层计算机用于计算目的。这种机器学习（`ML`）技术利用物理系统的动力学进行计算，比循环神经网络更快、更高效。该作动器预测在不同驱动信号下作动器末端执行器的轨迹，展示了其可重构性和同时工作的能力 [4]。
 
-
-
-
-
 设计具有增强性能的新型材料是人工智能在材料研究中的主要应用之一。所需特性是通过筛选数百万种候选材料组成来确定的。这种方法可以大大减少创造新材料所需的时间和费用。
 
 研究还发现，人工智能已被用于例如创建在高温下性能更佳、强度和耐腐蚀性更高的新型合金。因此，创造用于催化剂和储能的新材料。
@@ -1738,11 +1697,18 @@ AI 设计是创建具有增强特性的 SMA 的一种可能新方法。它可以
 使用 AI 设计 SMA 通常包括以下步骤：
 
 1. 数据收集：SMA 的实验产生了大量数据集。该数据集应提供 SMA 的成分、微观结构和特性的详细信息。
+
 2. 数据预处理：数据的预处理确保其处于 AI 模型可用的格式。导致对数据进行缩放和清洗并消除错误。
+
 3. AI 模型开发：可以基于单个 SMA 的微观结构和成分创建 AI 模型来预测其性能。可以使用深度学习、ML 等方法来利用这一点。
+
 4. 性能预测：AI 模型用于预测新 SMA 的所需性能。
+
 5. 预测性能的验证可以在合成新 SMA 后通过特定测量进行。
+
 6. 在成功进行 AI 验证后，新的 SMA 就可以设计出具有广泛改进性能。举例来说，可以使用基于 AI 的公式生产 SMA 的新记忆效应、弹性和强度性能 \[5\]。
+
+
 
 基于 AI 的设计公式可以对许多新创建的 SMA 应用产生革命性影响。
 
@@ -1750,67 +1716,53 @@ AI 设计是创建具有增强特性的 SMA 的一种可能新方法。它可以
 
 AI 创建的 SMA 有能力革新机器人、航空航天、汽车和医疗等行业。下面列出了一些由 AI 创建的 SMA 的实例及其相关图示：
 
-#### 3.1 航空航天
+### 3.1 航空航天
 
 智能飞机机翼：由 AI 设计的 SMA 机翼可用于小型飞机，飞行时可改变形状，确实提高了性能和燃油效率 \[6\]。
-
 主动除冰技术/系统：研究人员还建议 AI 创建的 SMA 可用于为飞机创建除冰系统，该系统可在不使用任何机械或化学装置的情况下融化机翼和其他表面上的冰。
-
 耐用且轻量级的飞机部件/零件：由 AI 设计的 SMA 将用于制造轻量且坚固的零件，如起落架和作动器（参见 Figure 5.2）。
 
 ![Figure 5.2: Overall distribution of composite materials used in Boing 787 aircraft \[7\].](images/fig5_2_C.jpg)
 
 图 5.2：Boing 787 飞机中使用的复合材料整体分布 \[7\]。
 
-#### 3.2 汽车
+### 3.2 汽车
 
 主动悬架系统：由 AI 创建的 SMA 可用于为汽车创建主动悬架系统，从而增强操控性和乘坐舒适性。
-
 AI 设计的 SMA 增强了车辆的乘坐质量和操控性，使其在崎岖道路上行驶时更加舒适和安全，如 Figure 5.3 所示。
 
 ![Figure 5.3: A model of active suspension system \[8\].](images/fig5_3_B.jpg)
 
 图 5.3：主动悬架系统模型 \[8\]。
-
 可变形状车身面板：AI 设计的 SMA 可用于为汽车创建可变形状车身面板，从而提高燃油效率和空气动力学性能，如 Figure 5.4 所示。
 
 ![Figure 5.4: (a) Basic 3D model, (b) 3D print of interlinked panels, (c, d) fabricated shape-changing displays examples \[9\].](images/fig5_4_C.jpg)
 
 图 5.4：(a) 基本 3D 模型，(b) 互联面板的 3D 打印，(c, d) 制造的形状变化显示示例 \[9\]。
-
 由 AI 创建的 SMA 可用于为汽车创建可变形状车身面板，从而提高空气动力学性能和燃油效率。这可能会大幅降低燃料成本和排放 \[9\]。
-
 智能安全气囊：由 AI 创建的 SMA 可用于创建智能安全气囊，在碰撞发生时能够更快地展开并最大限度地降低受伤风险（Figure 5.5）。
 
 ![Figure 5.5: Wearable airbag design layout, head air bag pulling strap position (in left) and the detailed microstructures of the strap (in right) \[10\].](images/fig5_5_C.jpg)
 
 图 5.5：可穿戴安全气囊设计布局，头部安全气囊拉带位置（左）和带子的详细微观结构（右） \[10\]。
 
-#### 3.3 医疗
+### 3.3 医疗
 
 生物相容性植入物：可以使用由 AI 创建的 SMA 创建生物相容性植入物，以修复或替换受损的器官和组织（Figure 5.6）。
 
 ![Figure 5.6: Shown an oral osseointegration processes in a dental implant over time in a dental implant \[11\].](images/fig5_6_C.jpg)
 
 图 5.6：显示了牙科植入物中随时间推移的口腔骨整合过程 \[11\]。
-
 由 AI 创建的 SMA 可用于创建生物相容性植入物，可修复或替换受损的器官和组织。患有各种医疗状况的患者因此可能会提高生活质量和预期寿命 \[11\]。
-
 智能手术器械：智能手术工具 – AI 设计的 SMA 可用于创建智能手术工具，能够安全、准确地执行复杂手术。
-
-
-
-
-
 Complex and intelligent surgical instruments for performing precise surgeries can also be created using AI-designed SMAs. This will eventually decrease the complications and will increase the effectiveness of surgery \[12\].
-
 Medical wearable devices: SMAs designed using AI can be used to monitor patient’s condition and deliver a proper treatment by creating medical wearables (Figure 5.7).
 
 ![Figure 5.7: Location on the body of several commercially available wearable devices able to perform pulse oximetry \[13\].](`images/fig5_7_C.jpg`)
 
 Figure 5.7: Location on the body of several commercially available wearable devices able to perform pulse oximetry \[13\].
 
-#### 3.4 Robotics
+### 3.4 Robotics
 
 Soft robots: Interactive and movable robotic devices towards the environment can be created using SMAs designed using AI (Figures 5.8a, b, c and d).
 
@@ -1829,11 +1781,8 @@ Figure 5.8(c):  Cable actuators \[16\].
 ![Figure 5.8(d): : Dielectric elastomer actuator \[17\].](`images/fig5_8_C.jpg`)
 
 Figure 5.8(d): : Dielectric elastomer actuator \[17\].
-
 As a result, innovative and fresh use of robots can be made across different sectors including healthcare, manufacturing and at the times of disaster relief.
-
 Exoskeletons: SMAs also have the power to create exoskeletons for assisting individual with disabilities and uplift the capabilities of healthy patients \[18\].
-
 Biomimetic robots: Robots mimicking the movements and capabilities of biological creatures fall under this category and for developing the same SMAs are designed using AI (Figure 5.9).
 
 ![Figure 5.9: (a) Boston dynamics has created Atlas, an intelligent bipedal humanoid robot. (b) The 3.07 g DelFly micro robot has flapping wings. (c) JESSIKO is an underwater robot that navigates the water with fins. (d) Four-legged, 3D-printed soft robot with a turtle-inspired design \[19\].](`images/fig5_9_C.jpg`)
@@ -1841,45 +1790,40 @@ Biomimetic robots: Robots mimicking the movements and capabilities of biological
 Figure 5.9: (a) Boston dynamics has created Atlas, an intelligent bipedal humanoid robot. (b) The 3.07 g DelFly micro robot has flapping wings. (c) JESSIKO is an underwater robot that navigates the water with fins. (d) Four-legged, 3D-printed soft robot with a turtle-inspired design \[19\].
 
 AI creates SMAs which are indeed used in variety of industries for example: Consumer electronics, construction, and energy. Apart from the mentions there are a lot of use cases of SMAs in the field of computer science and IT. Below are a few illustrations:
-
 Microfluidic devices: Devices which can manipulate and control fluids at the micro level can be made using SMAs. Indeed creating possibilities of chemical analysis, lab-on-a-chip devices and drug delivery (Figure 5.10).
 
 ![Figure 5.10:  (a) The hand-shaped device, actuated by SMA wires, is installed on a two-wheeled autonomous mobile robot for haptic force interaction. (b) A robotic eye orbital prosthesis with an antagonistically mounted SMA spring-actuated eye orbital prosthesis is used, controlled by a signal from the eye's ocular muscle. (c) SMA actuators are ideal for underwater applications due to their high frequency response and low bandwidth, enabling the creation of wave form motion by simulating fish motion. (d) SMA actuators are utilized to construct micro robots for pipe inspection, which utilize the inch-worm motion principle and are powered by SMA wires \[20\].](`images/fig5_10_B.jpg`)
 
 Figure 5.10:  (a) The hand-shaped device, actuated by SMA wires, is installed on a two-wheeled autonomous mobile robot for haptic force interaction. (b) A robotic eye orbital prosthesis with an antagonistically mounted SMA spring-actuated eye orbital prosthesis is used, controlled by a signal from the eye's ocular muscle. (c) SMA actuators are ideal for underwater applications due to their high frequency response and low bandwidth, enabling the creation of wave form motion by simulating fish motion. (d) SMA actuators are utilized to construct micro robots for pipe inspection, which utilize the inch-worm motion principle and are powered by SMA wires \[20\].
-
 SMAs actuators in the devices are used in microchannels regulating fluid flows. As a result, actuators are responsible to control the opening and closing of micro channels, which allows controlled and precise fluid or drug delivery.
-
 SMA-based microfluidic devices have higher number of benefits as compared to conventional ones. They are more strong, dependable, and efficient in terms of energy. Also, they have wide range of uses and adaptable to surroundings. Despite the fact, they are still under research and development stage, MA-based microfluid devices tend to completely turn the industry. They can also be utilized to create inventive and novel applications in a lot of industries including drug delivery and chemical analysis.
-
 Actuators for wearables can be made using SMAs, including smart glasses and exoskeletons. After applying it to the gadgets that will communicate more securely and naturally with the surroundings (Figure 5.11).
 
 ![Figure 5.11: Silicone-based 3D-printing pneumatic actuators \[21\].](`images/fig5_11_C.jpg`)
 
 Figure 5.11: Silicone-based 3D-printing pneumatic actuators \[21\].
-
 Actuators are light in weight and hence can be used for wearable technology. Despite being strong and dependable, they are responsible for producing a wide range of distinct movements \[22\].
-
 Smart sensors: As compared to conventional sensors, smart sensors are capable of acting and detecting changes in respective environment intelligently. Their capacity to gather data, examine it and take decisions made them more reliable. Smart sensors exchanged information along regular internet connectivity with other devices or system.
-
 Network monitoring: To monitor well-being and functionality of computer networks, smart sensors are used. As soon as an issue is found administrators can take corrective actions.
 
-Data center monitoring: Data center environment monitoring is possible only because of the intelligent sensors. They can detect variation in humidity, temperature, and power usage. With the help of this information effectiveness and dependability can be increased.
-
-Security monitoring: Monitoring of security systems to get rid of intrusions and anomalies is possible because of smart sensors. They can spot unauthorized access of specific locations such as buildings, computer systems and other places.
-
-Temperature sensors: Smart temperature sensors keep a check on temperature of or inside critical infrastructure, such as data centers or computer hardware. These help to make sure that the equipment is working fine and helps to avoid overheating within a safe temperature range, the sensor information can be used.
-
-Humidity sensors: As a part of temperature sensors, moving a step ahead to measure humidity using humidity sensors across data centers and in buildings. By understanding the humid knowledge condensation can be avoided to run the operative equipment safely in a specific humidity range \[23\].
 
 
+## Data center monitoring
+Data center environment monitoring is possible only because of the intelligent sensors. They can detect variation in humidity, temperature, and power usage. With the help of this information effectiveness and dependability can be increased.
 
+## Security monitoring
+Monitoring of security systems to get rid of intrusions and anomalies is possible because of smart sensors. They can spot unauthorized access of specific locations such as buildings, computer systems and other places.
 
+## Temperature sensors
+Smart temperature sensors keep a check on temperature of or inside critical infrastructure, such as data centers or computer hardware. These help to make sure that the equipment is working fine and helps to avoid overheating within a safe temperature range, the sensor information can be used.
+
+## Humidity sensors
+As a part of temperature sensors, moving a step ahead to measure humidity using humidity sensors across data centers and in buildings. By understanding the humid knowledge condensation can be avoided to run the operative equipment safely in a specific humidity range \[23\].
 
 #### 运动传感器
 对建筑物、计算机系统等敏感区域的未经授权访问可通过智能运动传感器感知。除此之外，它们还可以用于监视人员和设备在关键基础设施中无缝移动，例如数据中心（Figure 5.12）。
 
-![Figure 5.10:  Mooring sense smart sensor system block \[24\].](images/fig5_12_C.jpg)
+![Figure 5.10:  Mooring sense smart sensor system block \[24\].](`images/fig5_12_C.jpg`)
 
 Figure 5.10:  Mooring sense smart sensor system block \[24\].
 
@@ -1899,7 +1843,6 @@ Figure 5.10:  Mooring sense smart sensor system block \[24\].
 智能传感器是一种快速发展的技术，有可能彻底改变计算机科学和信息技术领域。通过使用智能传感器来监控和管理计算机网络、数据中心、安全系统和工业流程，我们可以提高效率、可靠性和安全性。
 
 ## 4. 结论
-
 形状记忆合金是具有恢复能力的智能材料类型，在变形后可恢复到原始形状。这是通过在加热或冷却 SMA 时发生的不同的相变实现的。通常，SMA 由两种或多种金属组成，可逆的马氏体转变导致上述相变。
 
 在快速发展的 AI 时代中，AI 在材料科学等不同行业具有革命性潜力；目前已被部署用于开发新型 SMA，这些 SMA 具有增强的制造质量、性能并加速新 SMA 的发现。
@@ -1913,7 +1856,6 @@ Figure 5.10:  Mooring sense smart sensor system block \[24\].
 由此我们可以得出结论，AI 设计的 SMA 具有革命性的潜力，在未来几年将对世界产生重大影响。
 
 ### 参考文献
-
 1. Chaudhari, R., Vora, J. J., Mani Prabu, S. S., Palani, I. A., Patel, V. K., Parikh, D. M., and de Lacalle, L. N. L. (2019). Multi-response optimization of WEDM process parameters for machining of superelastic nitinol shape-memory alloy using a heat-transfer search algorithm. Materials, 12(8), 1277.
 
 2. Greninger, A. B. and Mooradian, V. G. (1938). Strain transformation in metastable beta copper-zinc and beta copper-Ti alloys. Aime Trans., 128, 337–369.
@@ -1952,10 +1894,6 @@ Figure 5.10:  Mooring sense smart sensor system block \[24\].
 
 19. Wang, J., Chen, W., Xiao, X., Xu, Y., Li, C., Jia, X., and Meng, M. Q. H. (2020). A survey of the development of biomimetic intelligence and robotics. Biomim. Intel. Robot., 1, 1–14, 100001. DOI:[@@@10.34133/2020/8716847](http://dx.doi.org/@@@10.34133/2020/8716847).
 
-
-
-
-
 20. Chaurasiya, K. L., Harsha, A. S., Sinha, Y., and Bhattacharya, B. (2022). Design and development of non-magnetic hierarchical actuator powered by shape memory alloy based bipennate muscle. Sci. Reports, 12(1), 10758.
 
 21. Schaffner, M., Faber, J. A., Pianegonda, L., Rühs, P. A., Coulter, F., and Studart, A. R. (2018). 3D printing of robotic soft actuators with programmable bioinspired architectures. Nat. Comm., 9(1), 878.
@@ -1969,36 +1907,31 @@ Figure 5.10:  Mooring sense smart sensor system block \[24\].
 25. Socoró, J. C., Alías, F., and Alsina-Pagès, R. M. (2017). An anomalous noise events detector for dynamic road traffic noise mapping in real-life urban and suburban environments. Sensors, 17(10), 2323.
 
 # 6 基于智能计算方法的心律失常诊断系统性文献综述
-
 Neha Goyal^6
 
 #### 摘要
-
 在当今时代，由于压力、焦虑和抑郁参与到人类的日常生活中，人们的生活方式变得更加复杂。在这种情况下，心脏疾病在年轻人以及老年人中迅速增长。还观察到心脏疾病非常关键和敏感，包括危及生命的可能性。因此，在所需时间内检测和预防此类心脏紊乱对于恢复至关重要。由于预测和预防心脏紊乱的研究已大量开展，心律失常也是大量人群中主要发生的一种疾病。心电图（ECG）是诊断心律失常问题的廉价且最佳的方式，每天在医院和病理中心收集到的数据量巨大。之前已开发出各种自动化模型，使用各种机器学习（ML）和深度学习方法来检测心律失常。在这项工作中，基于其性能对近期开发的自动化模型进行了综述，基于一些特定参数，如部署的数据集、输入数据的变化、应用的应用、方法以及开发模型获得的结果。还提到了所综述论文的局限性以及其未来改进的范围。
 
 **关键词：** 智能计算，心律失常，ECG，机器学习
 
 ## 1. 引言
-
 心律失常通常被认为是人类心跳不规律的问题，对生命威胁和遗漏事件非常关键。存在各种类型的心律失常，具有一些特定的识别和特征，因此对心律失常的各种类别进行分类和区分变得非常有帮助。一般来说，心律失常的检测是通过将其分为两个类别来进行的，其中第一个是由心跳单一不规律的问题诊断的，因此称为形态学心律失常。第二阶段的心律失常是根据心跳多次不规律的特征进行诊断的，因此被认为是有节奏的心律失常问题。
 
 基本上，如果个体患有形态学或有节奏的心律失常，心跳波形会观察到一些变化和改变。问题的检测和诊断是通过心电图（ECG）以及超声心动图（ECHO）进行的。心律失常问题直接与心脏瓣膜问题相关，导致心率不规律。
 
-ECG 是心脏病学中评估患者心脏状况的成熟工具。ECG 代表心电图，是心脏收缩活动的电表示，可以通过患者肢体或胸部的体表电极方便地记录。在医学领域，ECG 是最知名和最广泛使用的生物信号之一。在一分钟的记录中计算 R 波峰的数量（Figure 1）是计算心脏每分钟心跳（bpm）节奏的简单方法。更重要的是，心血管疾病和紊乱会影响 ECG 波形的节奏和形态。
+
+
+ECG 是心脏病学中评估患者心脏状况的成熟工具。ECG 代表心电图，是心脏收缩活动的电表示，可以通过患者肢体或胸部的体表电极方便地记录。在医学领域，ECG 是最知名和最广泛使用的生物信号之一。在一分钟的记录中计算 R 波峰的数量（`Figure 1`）是计算心脏每分钟心跳（`bpm`）节奏的简单方法。更重要的是，心血管疾病和紊乱会影响 ECG 波形的节奏和形态。
 
 ![Figure 6.1: Steps of learning system.](img/fig6_1_C.jpg)
 
-Figure 6.1: Steps of learning system.
+`Figure 6.1`: Steps of learning system.
 
 心电图描记是 ECG。它可以告诉你关于你的心脏节奏和速度。异常的心电图描记可以表明各种疾病，除了心律异常。快速心跳（心动过速）、缓慢心跳（心动过缓）、心脏阻塞和不规则心跳都是心律失常的例子（心房颤动）。它还可以揭示有关心脏腔室扩大和心脏肌肉异常的信息。超声心动图是通过超声扫描获得的心脏结构和功能活动的动态图像。它显示了心脏泵血活动以及心脏腔室直径的精确信息。因此，它们是确定心力衰竭严重程度的有用测试。超声心动图还可以告诉你心脏瓣膜的工作情况。因此，一般来说，由于其低成本和时间消耗特征，以及能够更准确地确定心悸不规律的能力，ECG 被认为更适合且更舒适地检测心律失常。
 
 寻找和分类心律失常对人类来说可能极其困难，因为有必要评估由 Holter 监测仪在数小时甚至数天内获得的 ECG 读数的每个心跳。此外，由于疲劳，在处理 ECG 记录期间存在人为错误的风险。使用计算工具进行自动分类是一个选择。
 
-从 ECG 信号中检测心律失常的完整自动方法可以分为四个部分（Figure 6.1）：ECG 信号预处理；心跳分割；特征提取；和学习/分类。在四个过程中每一步都采取措施，最终目标是确定心跳类型。这样的分类系统的前两个步骤（ECG 信号预处理和心跳分割）已被广泛研究 [2–6]。预处理程序直接影响最终结果，因此应仔细选择。在 QRS 检测的情况下，心跳分割阶段的结果几乎是完美的。然而，在与分类相关的步骤（特征提取和学习算法）中仍有探索和改进的空间。尽管 ECG 描记问题仍然开放，但对于此处调查的文献中的方法来说，它并不是很有用。
-
-
-
-
+从 ECG 信号中检测心律失常的完整自动方法可以分为四个部分（`Figure 6.1`）：ECG 信号预处理；心跳分割；特征提取；和学习/分类。在四个过程中每一步都采取措施，最终目标是确定心跳类型。这样的分类系统的前两个步骤（ECG 信号预处理和心跳分割）已被广泛研究 [2–6]。预处理程序直接影响最终结果，因此应仔细选择。在 QRS 检测的情况下，心跳分割阶段的结果几乎是完美的。然而，在与分类相关的步骤（特征提取和学习算法）中仍有探索和改进的空间。尽管 ECG 描记问题仍然开放，但对于此处调查的文献中的方法来说，它并不是很有用。
 
 鉴于其作为全球男女主要死因的历史 \[1\]，心脏病受到了大量关注。已经发现了多种危险因素，如高脂血症、高血压和肥胖，所有这些都与心脏病有关，包括吸烟习惯。通过识别这些危险因素，可以预测和预防心脏病。在最初阶段，必须识别出隐藏在非结构化临床信息中的风险变量。过去几年发表了许多研究，其重点是识别这些风险变量，并由此形成了公开可用的工具，如临床观察检查和知识提取系统，这是一种可以从各种来源提取信息的开源工具。
 
@@ -2021,6 +1954,7 @@ Figure 6.1: Steps of learning system.
 选择了多个学术研究数据库，以汇编本次综述中 2010 年 1 月至 2022 年 9 月期间发表的相关出版物。PubMed、IEEE Xplore、Springer、ScienceDirect 和 ResearchGate 是这些开源数据库的名称。IEEE Xplore 和 PubMed 分别是生物科学和工程领域的前两大数据库 \[7\]。作为顶级研究出版商之一，Springer 为各个学科的文献提供了多种来源。ScienceDirect 也被用于其众多和不同的同行评审期刊和出版物。作为活跃用户最多的学术社交网络，ResearchGate 提供了大量免费文章的访问权限 \[8\]。
 
 使用了以下程序来收集数据源：
+
 1. 有针对性的互联网搜索。
 2. 根据相关性水平对来源进行分组。
 3. 根据 Table 6.1 中列出的纳入标准，选择了研究。
@@ -2038,27 +1972,24 @@ Table 6.1: Inclusion criteria for literature search
 ### 4.1 研究选择
 
 所选研究的范围包括以下情况：
+
 1. 研究任何类型心律失常的分类。
 2. 过去 12 年内关于心律失常诊断的研究。
 3. 专注于不受其他心血管疾病影响的心律失常诊断的研究，可以准确指出这种异常发生的程度和条件，从而确定精确的诊断和预后。
 
 ### 4.2 文章选择方案
 
-在此，基于一些重要参数，如关键词搜索、摘要排序、重复删除和基于纳入标准的删除，表示了研究文章的选择和拒绝示意图。 Figure 6.2 显示了文献检索和研究选择策略的整体进展。
+在此，基于一些重要参数，如关键词搜索、摘要排序、重复删除和基于纳入标准的删除，表示了研究文章的选择和拒绝示意图。 `Figure 6.2` 显示了文献检索和研究选择策略的整体进展。
 
 ![Figure 6.2: Study selection approach.](img/fig6_2_C.jpg)
 
-Figure 6.2: Study selection approach.
+`Figure 6.2`: Study selection approach.
 
 在此方案中，我们最初搜索了 350 篇与生物医学智能计算相关的文章，然后我们删除了与红斑检测无关的文章。一些文章因重复识别而被删除，然后我们专注于仅选择完全符合纳入标准的文章。因此，最终选择了 40 篇文章来执行系统文献综述过程。
 
 心律失常分类的不同方法：
 
-2015 年开发了一种用于检测心脏病危险因素的自动化模型，该模型基于糖尿病、高血压、高血压等各种疾病之间的关系及其对心脏风险的影响。此模型的数据集来自 I2V2 挑战组织者，并将其组织为与它们的指标或特征相关的三个不同标签（基于短语、基于逻辑和基于话语）。在这项研究中，数据使用注释指南进行预处理，并根据上述三个标签提取其特征。然后应用 SSVM，使用 SVMhmm、libshort text 6 实现 SVM，并使用 CRF suite 实现 CRF。此外，使用训练集上的 10 倍交叉验证部署并升级了所有分类器的参数，并获得了 92.68，而 I2B2 挑战组织者已经获得了 92.76 的准确率。所开发的模型不适用于冠状动脉疾病 CAD、肥胖状况和吸烟状况等疾病 \[1\]。
-
-
-
-
+2015 年开发了一种用于检测心脏病危险因素的自动化模型，该模型基于糖尿病、高血压、高血压等各种疾病之间的关系及其对心脏风险的影响。此模型的数据集来自 I2V2 挑战组织者，并将其组织为与它们的指标或特征相关的三个不同标签（基于短语、基于逻辑和基于话语）。在这项研究中，数据使用注释指南进行预处理，并根据上述三个标签提取其特征。然后应用 SSVM，使用 `SVMhmm`、`libshort text 6` 实现 SVM，并使用 CRF suite 实现 CRF。此外，使用训练集上的 10 倍交叉验证部署并升级了所有分类器的参数，并获得了 92.68，而 I2B2 挑战组织者已经获得了 92.76 的准确率。所开发的模型不适用于冠状动脉疾病 CAD、肥胖状况和吸烟状况等疾病 \[1\]。
 
 另一项工作描述了一种基于堆叠去噪自编码器的自动可穿戴心电图（`ECG`）分类和监测系统（`SDAE`）。为了收集 `ECG` 数据，我们采用了配备无线传感器和 `Bluetooth 4.2` 的可穿戴设备来将数据传输到计算机。自动心律失常分类系统随后对这些 `ECG` 数据进行分类。具有稀疏约束的 `SDAE` 用于学习 `ECG` 特征表示。为了对 `ECG` 波形进行分类，采用了 `SoftMax` 回归。主动学习在微调阶段用于提高性能 [2]。
 
@@ -2098,10 +2029,6 @@ Morphological features: 这包括在传导抽象层面上对观察的持续时�
 
 Signal quality features: 这些用于确定指示传导异常的形态学特征的重要性，例如宽 `QRS` 波群或长 `PR` 间期。
 
-
-
-
-
 时域、频域和非线性动态参数被用于区分冠状动脉疾病（CAD）患者和非 CAD 患者，根据 [10]。研究使用基于自回归（`AR`）建模的方法来产生功率谱密度以进行频域特征测量；`AR` 谱是心率变异性（HRV）分析中最普遍的方法，该方法可分解为离散的谱分量 [10]。`AR` 模型更为复杂，其谱分解包括负分量的可能性。随后，作者使用了统计和几何属性，如 `SD`、`RMSSD` 和 `HRV` 三角指数来进行时域计算。
 
 ##### 4.6 分类
@@ -2138,6 +2065,9 @@ PhysioNet 2017 开放将提供我们心律分类算法的实现 [7]。
 | --- | --- | --- | --- | --- |
 | 2019 || 16 || 12 导联特征融合 || RR 间期，DWT，FFT || 99.80 |
 | --- | --- | --- | --- | --- |
+
+
+
 | 2019 || 19 || DL-CCANet，TL-CCANet || NR || 99.40 |
 | 2014 || 11 || NR || 5 空间域 || 98.24 |
 | 2013 || 25 || 使用 PSO 优化 || HOS 累积量 + PCA，DWT + HOS + PCA || 94.52 |
@@ -2158,13 +2088,9 @@ PhysioNet 2017 开放将提供我们心律分类算法的实现 [7]。
 | 2021 || 30 || CNN + LSTM + 注意力模型 || DWT+HOS+PCA || 99.12 |
 | 2022 || 11 || 使用特征选择的新的深度学习框架 || PCA || 99.35 |
 
-研究使用了多类预测来诊断心律失常。尽管并非所有使用 12 类预测的研究都记录了文献中的最大性能，但大多数研究预测了两种以上类型的心律失常心跳的发生 [16, 18, 22, 26, 30, 33]。这可以用数据集不平衡来解释；某些类型的<|message|> 心跳记录很少，这对分类率产生了负面影响。
+研究使用了多类预测来诊断心律失常。尽管并非所有使用 12 类预测的研究都记录了文献中的最大性能，但大多数研究预测了两种以上类型的心律失常心跳的发生 [16, 18, 22, 26, 30, 33]。这可以用数据集不平衡来解释；某些类型的
 
 ## 6. 结论
-
-
-
-
 
 总之，基于上述各节中呈现的分析，我们无法明确推荐最佳模型，因为所选的 40 项研究中，没有一项在整个过程中使用了完全相同的特征提取、预处理或预测策略。此外，每项研究中使用的数据在输入、心电信号、开发工具和计算能力方面都存在差异。但在考虑了所有这些差异以及分析结果后，我们可以假设单独使用深度学习或将机器学习与深度学习技术相结合可以产生极具前景的结果。
 
@@ -2220,11 +2146,9 @@ PhysioNet 2017 开放将提供我们心律分类算法的实现 [7]。
 
 25. Rajagopal, R. and Ranganathan, V. (2018). Design of a hybrid model for cardiac arrhythmia classification based on Daubechies wavelet transform. Adv. Clin. Exp. Med., 27, 727–734. doi: [10.17219/acem/68982](http://dx.doi.org/10.17219/acem/68982).
 
+
+
 26. Rajesh, K. N. V. P. S. and Dhuli, R. (2017). Classification of ECG heartbeats using nonlinear decomposition methods and support vector machine. Comput. Biol. Med., 87, 271–284. doi: [10.1016/j.compbiomed.2017.06.006](http://dx.doi.org/10.1016/j.compbiomed.2017.06.006).
-
-
-
-
 
 27. 杨，W., Si, Y., Wang, D., and Guo, B. (2018). 基于主成分分析网络和线性支持向量机的心律失常自动识别。 Comput. Biol. Med., 101, 22–32. doi: [10.1016/j.compbiomed.2018.08.003](http://dx.doi.org/10.1016/j.compbiomed.2018.08.003)。
 
@@ -2242,7 +2166,7 @@ Sanjay Kumar^⁷
 
 **关键词：** Volatility, framework, `GARCH`, mutual fund, forecasting
 
-### 1. Introduction
+## 1. Introduction
 
 从统计学角度来看，波动性是市场或证券在给定时间段内年回报率的标准差，本质上是其价格上涨或下跌的速度。如果价格在短时间内迅速变动，达到新的高点和低点，则称其波动性高。如果价格上涨或下跌较慢或相对稳定，则称其波动性低。公司的未来增长，以及由此产生的股东利益，取决于许多内部和外部因素。投资信托（MF）经理从许多不同投资者处募集资金，然后根据其风险承受能力将这笔资金投资于许多不同的行业和类型的共同基金。基金经理将这笔资金投资于低风险到高风险的共同基金计划，并优化客户的投资组合。截至 2022 年 5 月 31 日，投资于共同基金的资金约为 37.22 万亿卢比；这笔资金在过去 10 年中增长了四倍（印度共同基金协会，2022 年）。这意味着在十多年里增长了巨大的 400%，显示出投资共同基金行业的巨大兴趣。这种最近的趋势表明，普通公众（个人投资者）正在根据需要大量投资于共同基金的各种计划。人们对中场感兴趣的一个原因是，大多数投资者希望获得更高的回报，但又不想直接投资于共同基金市场的风险。他们认为，通过顾问或任何投资公司投资共同基金市场资金更安全。投资共同基金行业的另一个兴趣原因是银行定期存款的利率较低。因此，客户正在寻找不同投资选择的替代方案，以最大程度地降低不确定性并提供合理的回报。一般来说，投资共同基金可以获得不错的利润，但也存在风险。一般投资者更喜欢投资 MF，因为他们认为投资的资金是安全的，因为专家基金经理在不同行业管理他们的资金以降低风险因素并增加利润。固定收益 MF（也称为债务基金）通常投资于提供本金保护但回报率低的抵押产品。同样，以股票为基础的中场是高风险、高回报的群体，他们的大部分资本用于购买上市公司的股票。混合 MF 和平衡 MF 是中等风险基金，其中整个资金被投资于无风险和安全的资产债券和高风险股票。
 
@@ -2250,15 +2174,7 @@ COVID-19 是一件计划外的事件，减缓了几乎所有类型公司的利�
 
 ## 2. Literature Review
 
-
-
-
-
 关于影响共同基金价格因素的不同研究主要集中于国家经济政策变化对共同基金市场的影响，以及基于行为金融视角的投资者行为对共同基金波动波动的影响。许多实验结果表明，`GARCH (1, 1)`、`GARCH (1, 2)`、`GARCH (2, 1)` 已能在大多数情况下反映金融产品的价格波动。其中，`GARCH` 模型主要用于计算金融市场的波动性。Wang et al. \[1\] 提出了用于时变现象建模的时间依赖核密度估计 (`TDKDE`)，其需要运行两个输入参数，称为 `bandwidth` 和 `discount`。对 `NASDQ` 股票收益的 `TDKDE` 参数估计的实际应用证实了该新技术的完美性能。Matsatsinis et al. \[2\] 提出了一种新的算法框架，该框架将推荐系统文献中的特征与多准则决策分析相结合，以缓解稀缺性和缺乏多维相关性度量的问题。这与协同过滤相结合，导致了两种组合推荐方法。Zheng and Wang \[3\] 给出了多用途推荐的概述，然后使用案例研究，尤其是在多利益相关者和多任务推荐系统的领域。Yera et al. \[4\] 概述了模糊工具在推荐系统中的使用，确定了更一般的 re-search 主题，以及未来的研究以推动基于模糊的推荐系统的当前发展。Wang et al. \[5\] 提出了一种具有情感分析的混合推荐系统，将在 Spark 平台上实现。Fayyaz et al. \[6\] 介绍了推荐系统研究现状，并指出了该领域在各种应用中的发展方向。本文概述了推荐系统的最新技术、其类型、挑战、局限性和商业应用。Chen et al. \[7\] 使用均值漂移聚类算法来表征行为数据。然而，使用均值漂移聚类进行个性化推荐面临用户数据过大问题。将分组的用户行为转换为嵌入向量，并将不同长度的嵌入向量线性变换到相同的语义空间。它通过自感知层处理语义空间的向量并执行均值漂移聚类。实验表明，我们的方法可以降低用户贫困对复杂数据分布效应的复杂性，并提高个性化推荐的质量。Wang et al. \[8\] 提出了一种利用众包构建分布式知识图谱的新方法。众包业务逻辑由基于区块链的智能合约实现，以确保透明性、完整性和可审计性。Das et al. \[9\] 重点关注金融包容性对 Orissa 的影响，使用 K 近邻 (`KNN`) 分类，这是一种众所周知的机器学习算法。机器学习 (`ML`) 已成为金融包容系统中的一种广泛使用的方法。我们使用了 `KNN` `ML` 方法分类算法来表征基于所述人群用户的推荐系统。Maji et al. \[10\] 提出了一个框架，首先将资本分配给每个部门，然后分配给每个部门并按公司投资。这是一种在不同股票之间分散的方法，以保持风险较低同时寻求更高回报，框架运行良好，与印度股市的一些基准和排名基金相比提供了良好的回报。Luef et al. \[11\] 设计、实现和评估鼓励早期企业投资的系统。首先，我们对知名投资者进行定性和定量调查，研究他们的决策过程，并确定推荐系统需求。Sankar \[12\] 讨论了由股票投资组合形成的网络是一个投资基金，可借助社会网络分析工具进行分析。Ji et al. \[13\] 引入了一种创新的股价预测模型，该模型结合了传统金融数据与使用深度学习技术社交媒体文本特征。Zhou et al. \[14\] 开发了一种增强的推荐组件，用于准确推荐，以及增强的对话组件，可在响应正文中生成有用的关键字或实体。Yu and Li \[15\] 应用 `GARCH` 和 `LSTM` 模型来预测股票指数波动。他们评估了四种不同类型的损失函数；研究表明，就预测准确性而言，`LSTM` 模型优于 `GARCH` 模型。Devi et al. \[16\] 建议使用数据挖掘工具和分析技术进行可量化的研究，以探索投资决策的新方法。Gu et al. \[17\] 的讨论将粒子群优化 (`PSO`) 算法添加到径向基函数 (`BRF`) 神经网络中，并使 `PSO` 能够优化和改进 `RBFNN`，结合双方的优势。它总结了一套新的 `PSORBF` 安全基金绩效方法，用于优化神经网络的算法结构和工作流程。随着持续趋势，高点和低点在证券基金绩效期间的预测，新 `PSORBF` 对预测基金绩效具有出色的预测能力，其准确率明显高于传统的 Sheng。它改进了一种具有出色应用价值且值得发表的方法。Hou et al. \[18\] 提出了一种混合长短期记忆和深度神经网络 (`LSTMDNN`) 模型，用于在时间序列预测任务中集成基本信息。Azis et al. \[19\] 提供了宝贵的见解，尤其是在汇率和通胀的背景下。然而，建议在疫情前进行相关比较，并考虑额外的宏观经济因素以进行全面分析。Gupta and Chaudhary \[20\] 深入探讨了新闻事件对发达经济体和新兴经济体环境、社会和治理 (`ESG`) 以及市场指数的影响，采用 `EGARCH` 模型进行分析。Hota et al. \[21\] 提出了一种结合大象繁殖优化 (`EHO`) 算法的 `ANN` 模型，用于预测印度两只共同基金在不同时间段的 NAV。Shah et al. \[22\] 指出，股市预测始终吸引着许多分析师和研究人员的关注。预测股价本身就是一个困难的问题，因为涉及的变量数量众多。然后我们重点关注股票分析和预测方面的一些研究成果。Majhi et al. \[23\] 提出了合成混合模型，并使用六个不同的 NAV 数据在训练和测试阶段评估其性能。Maji and Mondal \[24\] 提出了一个框架，以在不同股票之间分散资本基金投资以获得更高回报但保持较低风险。Mamilla, R et al. \[25\] 提出了广义自回归条件异方差 (`GARCH`) 建模，以研究投资者风险并评估波动波动如何影响回报。Asiri et al. \[26\] 提出了一种 `TVP-VAR` 方法来探索与加密货币相关的不确定性指数与一系列金融资产的收益和波动变化之间的联系。Al-Nassar \[27\] 建议了一种计量经济学模型，该模型考虑了结构性中断。在估计 `VAR` 非对称 `BEKK-GARCH` 模型后，我们计算投资组合权重和对冲比率，并检查它们如何影响风险管理。
-
-
-
-
 
 ## 3. 问题陈述
 
@@ -2354,6 +2270,8 @@ Figure 7.2: General statistics of data.
 
 `Hurst` 指数用于检查序列是否均值回归、随机游走或趋势。这里 H< 0.5，所以时间序列是均值回归的。时间序列的自相关衡量时间序列的滞后值与其过去值之间的关系。偏自相关显示时间序列与后续时间间隔的滞后值之间的接近程度在数学上构成自相关（Figure 7.3）。
 
+
+
 ![Figure 7.3: Daily volatility of dataset (Cipla).](img/fig7_3_C.jpg)
 
 Figure 7.3: Daily volatility of dataset (Cipla).
@@ -2380,10 +2298,6 @@ r(i;e_{\hat{t}}^{2}) = \frac{\sum_{t = i + 1}^{T}(e_{t}^{2} - \sigma^{2})(e_{t -
 
 ## 9. 模型仿真测试
 
-
-
-
-
 Simulation of an ARCH (1) and GARCH (1, 1) time series done respectively using a function `simulate_GARCH(n, omega, alpha, beta = 0)`. Recall the difference between an ARCH (1) and a GARCH (1, 1) model is: besides an autoregressive component of *α* multiplying lag-1 residual squared, a GARCH model includes a moving average component of *β* multiplying lag-1 variance. The function will simulate an ARCH/GARCH series based on `n` (number of simulations), `omega`, `alpha`, and `beta` (0 by default). It will return simulated residuals and variances (Figure 7.4).
 
 ![Figure 7.4: Simulation test of data.](img/fig7_4_C.jpg)
@@ -2392,7 +2306,7 @@ Figure 7.4: Simulation test of data.
 
 ## 10. Simulation Impact of Parameters on Model
 
-For simulation purpose function `simulate_GARCH()` called and the impact of GARCH model parameters on simulated results is analyzed. Specifically, we have simulated two GARCH (1, 1) time series; they have the same `omega` and `alpha`, but different `beta` as input. Recall in GARCH (1, 1), since *β* is the coefficient of lag-1 variance, if *α* is fixed, the larger the *β*, the longer the duration of the impact. In other words, high or low volatility periods tend to persist. Pay attention to the plotted results and see whether we can verify the *β* impact (Figures 7.5 and 7.6).
+For simulation purpose function `simulate_GARCH()` called and the impact of GARCH model parameters on simulated results is analyzed. Specifically, we have simulated two GARCH (1, 1) time series; they have the same `omega` and `alpha`, but different `beta` as input. Recall in GARCH (1, 1), since *β* is the coefficient of lag-1 variance, if *α* is fixed, the larger the `beta`, the longer the duration of the impact. In other words, high or low volatility periods tend to persist. Pay attention to the plotted results and see whether we can verify the *β* impact (Figures 7.5 and 7.6).
 
 ![Figure 7.5: Simulation impact of (beta=0.2) on GARCH model.](img/fig7_5_C.jpg)
 
@@ -2449,8 +2363,6 @@ This paper uses GARCH volatility models to analyze and predict conditional devia
 
 
 
-
-
 11. Luef, J., Ohrfandl, C., Sacharidis, D., and Werthner, H. (2020). 针对早期企业的投资推荐系统。Proc. 35th Ann. ACM Symp. Appl. Comput., 1453–1460, [`doi.org/10.1145/3341105.3375767`](http://dx.doi.org/10.1145/3341105.3375767)。
 
 12. Sankar, C. P., Vidyaraj, R., and Kumar, K. S. (2015). 基于信任的股票推荐系统——一种社会网络分析方法。Proc. Comp. Sci., 46, 299–305。
@@ -2495,15 +2407,11 @@ Vishal Verma^(⁸)
 
 **关键词：** SVM，遗传算法，机器学习，糖尿病预测，医疗保健
 
-### 1. Introduction
+## 1. Introduction
 
 糖尿病是一种非传染性疾病，影响着世界上最多的人群。据世界卫生组织称，2019 年约有 200 万人死于糖尿病[1]。糖尿病是一种慢性疾病，因为它还会影响多个身体器官并增加患其他慢性疾病如中风、心脏病发作和肾脏疾病的风险[2]。需要对患者进行定期监测和治疗以获得更好的治疗效果[3]。每个国家的政府都在其总国内生产总值（GDP）中花费了很大一部分用于医疗保健。政府和个人都将预算的相当大比例分配用于慢性病治疗[4]。人们主要有三种糖尿病类型：1 型糖尿病（T1D）、2 型糖尿病（T2D）和妊娠糖尿病（GD）。在 T1D 中，胰腺无法产生胰岛素或产生非常少的胰岛素。在 T2D 中，身体无法正确使用胰岛素，且多见于 45 岁以上人群，而 GD 多见于怀孕期间[5]。这一切都是由于恶劣的气候条件、人口、生活不卫生和错误的饮食习惯造成的。
 
 由于医疗保健行业的不断进步，已出现不同革命。互联网和电子健康记录（EHR）数据的易得性也在迅速增长。我们研究人员的孜孜不倦的努力在医疗保健领域展现出巨大潜力，包括利用各种基于 ML 的技术进行糖尿病的预测和分类[6]。分类模型可用于根据症状和生理特征对不同类型的糖尿病进行分类。有许多用于疾病分类和预测的基于 ML 的技术和算法。一些用于分类和预测的流行 ML 算法包括 SVM、NB、KNN、逻辑回归（LR）、DT 和随机森林（RF）。
-
-
-
-
 
 在糖尿病预测中，还有一些更重要的因素，如 `glucose`、`age`、`body mass index (BMI)` 和 `family medical history` [7, 8]。利用 `ML` 的强大功能，很容易在大型数据集中识别出隐藏的模式和复杂的关系 [9]。`ML` 有助于减轻医疗从业者的工作负担 [10]。在本研究中，研究人员检查了多个参数，如 `accuracy`、`precision`、`recall` 和 `AUC`，并对现有 `ML` 算法（`SVM`、`RF`、`KNN`、`DT`、`extra trees classifier (ETC)`、`NB`、`XG boost` 和 `gradient boosting`）进行了性能比较。
 
@@ -2528,16 +2436,27 @@ Whig 等人 [11] 提出了一种预测和分类糖尿病的新方法。作者使
 Table 8.1: Diabetes dataset description
 
 | S. No. || Parameter || Description || Type |
+
 | --- | --- | --- | --- |
+
 | 1 || Pregnancies (Preg) || Preg represents the number of times a woman has been pregnant || Integer |
+
 | --- | --- | --- | --- |
+
 | 2 || Glucose (GLU) || GLU represents the plasma glucose concentration of the patients || Integer |
+
 | 3 || Blood pressure (BP) || BP represents the blood pressure (mm Hg) level of the patients || Integer |
+
 | 4 || Skin thickness (ST) || ST represents the triceps skinfold thickness in millimeters || Integer |
+
 | 5 || Insulin (INS) || INS represents the 2-hour serum insulin level measured || Integer |
+
 | 6 || Body mass index (BMI) || BMI represents the individual is normal weight, underweight, and overweight || Float |
+
 | 7 || Diabetes pedigree function (DPF) || DPF values represent the genetic influence and a potentially higher risk of diabetes || Float |
+
 | 8 || Age || Age represents the patient’s age in years || Integer |
+
 | 9 || Outcome (OC) || OC represents the class variable in 0 and 1 where 0 means an individual has no diabetes, and 1 refers to diabetes || Binary |
 
 ### 3.2 数据预处理
@@ -2550,28 +2469,22 @@ Table 8.1: Diabetes dataset description
 
 研究人员专注于提高糖尿病检测的准确性。作者提出了一种基于混合 `ML` 的方法，即集成 `SVM-GA`。该过程从数据预处理和增强开始，然后将输入馈送到模型中。
 
-
-
-
-
 The proposed method is visualized in Figure 8.1 providing a simplified overview of the data processing pipeline. It consists of key elements such as the PIMA dataset, pre-processing, testing and training data, model fitting, integrated SVM-GA, and prediction.
 
 ![Figure 8.1: Proposed integrated SVM-GA method.](img/fig8_1_C.jpg)
 
 Figure 8.1: Proposed integrated SVM-GA method.
 
+
+
 To evaluate the method’s performance, the dataset was split into 80:20 ratios, with 80% for model training and 20% for testing. Implementation of the model was carried out using Google Collab, leveraging resources available on the Kaggle repository. The PIDD dataset was accessed and evaluated using scientific computing, data analysis, and visualization tools, including `scikit-learn`, `pandas`, `NumPy`, and deep packages.
 
 The following various steps were implemented to execute:
 
 1. **Data collection:** Collect the dataset from `Kaggle.com`.
-
 2. **Data pre-processing:** Clean and prepare the dataset, addressing missing values, outliers, and normalization.
-
 3. **Dataset splitting:** Divide the dataset into training and testing subsets.
-
 4. **Genetic algorithm optimization:** Apply GA to optimize the SVM for improved accuracy.
-
 5. **Model testing and prediction:** To assess the model, we utilized the final 20% of the test data for prediction.
 
 These steps constitute a systematic and thorough process for developing, optimizing, and assessing a machine learning model. Their purpose is to guarantee the model’s readiness, thorough testing, and optimization for optimal accuracy and applicability.
@@ -2586,35 +2499,29 @@ The SVM is a collection of interconnected supervised learning methods used in me
 
 (1)
 
-*f*(z) = *sign*(*w*^(*T*)*z* + *b*^(*t*))
+*f*(`z`) = `sign`(`w`^(`T`)`*z* + `b`^(`t`))
 
-where *z* is the feature vector that is entered, *w*^(*t*) is the weight vector illustrating the significance of every attribute in the classification, *b*^(*t*) is the term of bias that changes the decision boundary, and `sign` is a function of sign that converts +1 if the input is favorable, and -1 if the input is unfavorable. The SVM algorithm finds the optimal values of *w*^(*t*) and *b*^(*t*) that maximize the margin between the two classes, which helps in making accurate predictions.
+where `z` is the feature vector that is entered, `w`^(`t`) is the weight vector illustrating the significance of every attribute in the classification, `b`^(`t`) is the term of bias that changes the decision boundary, and `sign` is a function of sign that converts +1 if the input is favorable, and -1 if the input is unfavorable. The SVM algorithm finds the optimal values of `w`^(`t`) and `b`^(`t`) that maximize the margin between the two classes, which helps in making accurate predictions.
 
 #### 3.4.2 Genetic algorithm equation
 
 An optimization technique takes its cues from the principles of genetics and natural selection. It is used to identify approximations of solutions to optimization and search-related problems. The core idea behind a GA is to iteratively evolve a population of alternative solutions in order to find the best solution to a problem. Several of the fundamental equations used in GA include population, fitness function, selection, crossover, mutation, and replacement [27]. To perform GA, the following various steps are given below.
 
 1. Generate random sets of 5 features to create the initial population of chromosomes (`C`).
-
 2. Assign scores to `C` based on their predictive accuracy for emotional states using a statistical model with the nearest centroid classifier.
-
 3. Select `C` with scores meeting the fitness objective; otherwise, continue the process.
-
 4. Duplicate `C` based on their performance in problem-solving, with higher-scoring `C` producing more offspring.
-
 5. Perform crossover by recombining genetic material from replicated parent `C`.
-
 6. Introduce new genes through mutations into the newly created population of `C` from Step 5.
-
 7. Repeat stages 2–6 in cycles (generations) until a solution is found.
 
 The process of natural selection served as inspiration for the development of GA. The equation used in GA is:
 
 (2)
 
-*fitness* = *f*(*x*)
+`fitness` = `f`(`x`)
 
-where `fitness` is the fitness value of the individual, *f*(*x*) is the objective function that measures the performance of the individual.
+where `fitness` is the fitness value of the individual, `f`(`x`) is the objective function that measures the performance of the individual.
 
 The objective of GA is to identify the ideal values for the parameters that maximize the fitness value. In the SVM-GA model, GA is utilized to optimize the SVM parameters, increasing the model’s accuracy. The SVM-GA model can accurately categorize and predict diabetes by combining.
 
@@ -2647,17 +2554,11 @@ Table 8.2: Confusion matrix of SVM-GA
 | *Actual negative* || 23 || 32 |
 
 > Accuracy = (91 + 32) / (91 + 32 + 8 + 23) = 79.87%
-
 > 
-
 > Recall = 91 / (91 + 23) = 79.82%
-
 > 
-
 > Precision = 91 / (91 + 8) = 91.91%
-
 > 
-
 > AUC (area under the curve) = 84.53%
 
 The SVM-GA model achieved an accuracy of 79.87%, recall of 79.82%, precision of 91.91%, and AUC of 84.53%. These metrics indicate that the model has good performance in predicting diabetes on the PIDD dataset.
@@ -2670,10 +2571,6 @@ In this section, researchers compared the performance of several ML algorithms, 
 
 Figure 8.2: Model comparison based on different metrics.
 
-
-
-
-
 在 表 8.3 中，研究人员展示了每种 ML 方法的性能指标。这些数值来自我们的实验，已证明算法在解决给定问题方面的有效性。显而易见，集成的 `SVM-GA` 方法表现最佳，准确率、精确率和 AUC 分数均最高。
 
 表 8.3：模型比较
@@ -2681,31 +2578,35 @@ Figure 8.2: Model comparison based on different metrics.
 | Model comparison | | Accuracy (%) | | Precision (%) | | Recall (%) | | AUC score (%) |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | SVM | | 75 | | 80 | | 80 | | 81 |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | RF | | 72 | | 77 | | 78 | | 81 |
 | KNN | | 66 | | 70 | | 75 | | 72 |
 | DT | | 74 | | 75 | | 83 | | 74 |
 | ETC | | 74 | | 80 | | 79 | | 80 |
 | NB | | 76 | | 79 | | 83 | | 83 |
 | XG boost | | 68 | | 70 | | 78 | | 77 |
+
+
+
 | Gradient boosting | | 74 | | 77 | | 81 | | 81 |
+
 | **SVM-GA** | | **79.87** | | **91.91** | | 79.82 | | **84.53** |
 
 ## 5. Discussion
 
-实验研究采用了九种不同的 ML 算法，包括 `SVM`、`RF`、`KNN`、`DT`、`NB`、额外树分类器、XG boost、梯度提升以及新颖的 `SVM-GA`。研究使用了 PIDD 数据集作为所有分类器的共同基础。执行了全面的预处理步骤以消除数据集中的空值，确保数据完整性。
+实验研究采用了九种不同的 ML 算法，包括 `SVM`、`RF`、`KNN`、`DT`、`NB`、额外树分类器、XG boost、梯度提升以及新颖的 `SVM-GA`。研究使用了 `PIDD` 数据集作为所有分类器的共同基础。执行了全面的预处理步骤以消除数据集中的空值，确保数据完整性。
 
-为了稳健地评估模型性能，数据集已被细致地划分为两部分：80% 的训练数据集和单独的 20% 测试数据集。各种 ML 算法已一致应用于同一数据集，研究人员专注于工程化特征以评估其预测能力。研究人员进行了彻底的评估，利用准确率、精确率、召回率和 AUC 等关键性能指标，对每种算法的有效性进行全面评估。本研究的重点发现表明，创新的集成 `SVM-GA` 方法优于传统算法，表现出明显更高的识别性能。具体而言，该框架实现了令人印象深刻的平均 AUC 84.53%，超过了传统算法的性能。
+为了稳健地评估模型性能，数据集已被细致地划分为两部分：`80%` 的训练数据集和单独的 `20%` 测试数据集。各种 ML 算法已一致应用于同一数据集，研究人员专注于工程化特征以评估其预测能力。研究人员进行了彻底的评估，利用准确率、精确率、召回率和 AUC 等关键性能指标，对每种算法的有效性进行全面评估。本研究的重点发现表明，创新的集成 `SVM-GA` 方法优于传统算法，表现出明显更高的识别性能。具体而言，该框架实现了令人印象深刻的平均 AUC `84.53%`，超过了传统算法的性能。
 
-### 6. Conclusions
+## 6. Conclusions
 
-将提出的 `SVM-GA` 模型应用于 PIDD 数据集证明了其在以高准确率、精确率、召回率和 AUC 对糖尿病进行分类和预测方面的有效性，优于 `LR`、`DT` 等传统 ML 模型。这凸显了集成 SVM 和 GA 算法以获得更好结果的潜力。所提出的方法有望为医疗专业人员在糖尿病预测和识别高风险患者方面提供帮助，实现早期诊断和经济有效的治疗。需要注意的是，模型准确性取决于数据集质量、大小和超参数调优。这些发现还表明了在预测其他疾病方面的未来应用，并呼吁进一步的研究和算法探索，包括集成模型，以提高准确性。探索更广泛的医疗应用，完善模型，并研究替代算法和集成方法以提高预测准确性。
+将提出的 `SVM-GA` 模型应用于 `PIDD` 数据集证明了其在以高准确率、精确率、召回率和 AUC 对糖尿病进行分类和预测方面的有效性，优于 `LR`、`DT` 等传统 ML 模型。这凸显了集成 SVM 和 GA 算法以获得更好结果的潜力。所提出的方法有望为医疗专业人员在糖尿病预测和识别高风险患者方面提供帮助，实现早期诊断和经济有效的治疗。需要注意的是，模型准确性取决于数据集质量、大小和超参数调优。这些发现还表明了在预测其他疾病方面的未来应用，并呼吁进一步的研究和算法探索，包括集成模型，以提高准确性。探索更广泛的医疗应用，完善模型，并研究替代算法和集成方法以提高预测准确性。
 
-### Acknowledgement
+## Acknowledgement
 
 作者衷心感谢信息技术系的研究学者、教师和主管部门在研究中给予的合作。
 
-### References
+## References
 
 1. Almutairi, E. S., Abbod, M. F., Almutairi, E. S., and Abbod, M. F. (2023). Machine learning methods for diabetes prevalence classification in Saudi Arabia. Modelling, 4(1), 37–55. doi:[10.3390/MODELLING4010004](http://dx.doi.org/10.3390/MODELLING4010004).
 
@@ -2739,10 +2640,6 @@ Figure 8.2: Model comparison based on different metrics.
 
 16. Kyrou, I., Tsigos, C., Mavrogianni, C., Cardon, C., Stappen, V. V., Latomme, J., Kivelä, J., et al. (2020). Sociodemographic and lifestyle-related risk factors for identifying vulnerable groups for type 2 diabetes: A narrative review with emphasis on data from Europe. BMC Endocr. Disord., 20(1), 1–13. doi:[10.1186/S12902-019-0463-3](http://dx.doi.org/10.1186/S12902-019-0463-3).
 
-
-
-
-
 17. Larabi-Marie-Sainte, S., Aburahmah, L., Almohaini, R., and Saba, T. (2019). 糖尿病预测的当前技术：综述与案例研究. Appl. Sci., 9(21), 4604. doi:[10.3390/APP9214604](http://dx.doi.org/10.3390/APP9214604).
 
 18. Mahboob Alam, T., Iqbal, M. A., Ali, Y., Wahab, A., Ijaz, S., Baig, T. I., Hussain, A., et al. (2019). 糖尿病早期预测模型. Informat. Med. Unlock., 16, 100204. doi:[10.1016/J.IMU.2019.100204](http://dx.doi.org/10.1016/J.IMU.2019.100204).
@@ -2771,9 +2668,9 @@ Surendra Gour^(⁹)
 
 Department of Computer Science & Engg, Jamia Hamdard, New Delhi, India
 
-### Abstract
+## Abstract
 
-优化神经网络中的超参数对于实现最佳性能至关重要。传统方法涉及耗时的人工试错，使得找到最佳超参数设置具有挑战性。在本研究中，我们将遗传算法（GAs）引入作为超参数优化的高效方法。使用真实世界的糖尿病诊断数据集，我们将超参数调优作为优化问题来处理。我们创建了一个适应度函数，根据学习率、beta1、beta2 和 epsilon 等关键超参数来评估神经网络模型。GA 在世代间进化候选解的种群，高效地探索超参数空间。结果表明，所提出的方法 consistently 收敛到增强模型准确性和训练收敛性的超参数值。我们分析了收敛曲线、适应度值分布和超参数演化。本研究揭示了 GA 作为神经网络超参数调优的强大自动化工具。它节省时间和计算资源，推动模型开发。所获得的见解提高了对超参数对神经网络性能影响的理解。
+优化神经网络中的超参数对于实现最佳性能至关重要。传统方法涉及耗时的人工试错，使得找到最佳超参数设置具有挑战性。在本研究中，我们将遗传算法（GAs）引入作为超参数优化的高效方法。使用真实世界的糖尿病诊断数据集，我们将超参数调优作为优化问题来处理。我们创建了一个适应度函数，根据学习率 `learningRate`、`beta1`、`beta2` 和 `epsilon` 等关键超参数来评估神经网络模型。GA 在世代间进化候选解的种群，高效地探索超参数空间。结果表明，所提出的方法 consistently 收敛到增强模型准确性和训练收敛性的超参数值。我们分析了收敛曲线、适应度值分布和超参数演化。本研究揭示了 GA 作为神经网络超参数调优的强大自动化工具。它节省时间和计算资源，推动模型开发。所获得的见解提高了对超参数对神经网络性能影响的理解。
 
 **关键词：** 超参数，遗传算法，人工神经网络，交叉，变异
 
@@ -2783,7 +2680,9 @@ Department of Computer Science & Engg, Jamia Hamdard, New Delhi, India
 
 ### 1.1 超参数优化的重要性
 
-神经网络的有效性与超参数的配置密切相关，超参数包括学习率、动量系数（beta1 和 beta2）和 epsilon 等参数。这些超参数控制神经网络的学习动态和收敛性。次优的超参数设置可能导致训练时间延长、收敛不良，甚至在某些情况下导致模型完全失败。因此，精心选择超参数对于充分发挥神经网络的潜力是不可或缺的。
+
+
+神经网络的有效性与超参数的配置密切相关，超参数包括学习率、动量系数（`beta1` 和 `beta2`）和 `epsilon` 等参数。这些超参数控制神经网络的学习动态和收敛性。次优的超参数设置可能导致训练时间延长、收敛不良，甚至在某些情况下导致模型完全失败。因此，精心选择超参数对于充分发挥神经网络的潜力是不可或缺的。
 
 ### 1.2 超参数选择中的挑战
 
@@ -2791,20 +2690,17 @@ Department of Computer Science & Engg, Jamia Hamdard, New Delhi, India
 
 ### 1.3 用于超参数优化的遗传算法
 
-为应对这些挑战，本研究引入了 GAs 作为神经网络超参数优化的新方法。GAs 从自然选择和进化的原理中汲取灵感，高效地探索超参数空间。通过在多代中进化候选解的种群，GAs 可以发现增强模型准确性和训练收敛性的超参数设置。
+为应对这些挑战，本研究引入了 `GAs` 作为神经网络超参数优化的新方法。`GAs` 从自然选择和进化的原理中汲取灵感，高效地探索超参数空间。通过在多代中进化候选解的种群，`GAs` 可以发现增强模型准确性和训练收敛性的超参数设置。
 
 ### 1.4 目标和贡献
 
-本研究的主要目标有两个。首先，我们旨在证明 GAs 在自动化神经网络超参数调优方面的有效性。其次，我们寻求深入了解超参数与神经网络性能之间的复杂关系。通过实现这些目标，本研究为优化神经网络的高效和自动化方法的发展做出了贡献，并为从业者 navigating 超参数选择的复杂环境提供了宝贵的指导。
+本研究的主要目标有两个。首先，我们旨在证明 `GAs` 在自动化神经网络超参数调优方面的有效性。其次，我们寻求深入了解超参数与神经网络性能之间的复杂关系。通过实现这些目标，本研究为优化神经网络的高效和自动化方法的发展做出了贡献，并为从业者 navigating 超参数选择的复杂环境提供了宝贵的指导。
 
-在随后的章节中，我们将深入探讨 GAs 用于神经网络超参数优化的方法、实验结果和讨论。
+在随后的章节中，我们将深入探讨 `GAs` 用于神经网络超参数优化的方法、实验结果和讨论。
 
 ## 2. 背景
 
 ### 2.1 神经网络的基础
-
-
-
 
 神经网络，通常被称为人工神经网络（`ANNs`），是一类受人类大脑结构和功能启发的机器学习模型。它们由相互连接的人工神经元或节点层组成，包括输入层、一个或多个隐藏层以及输出层。神经网络被用于广泛的任务，包括图像分类、自然语言处理和回归分析。
 
@@ -2857,10 +2753,6 @@ Department of Computer Science & Engg, Jamia Hamdard, New Delhi, India
 ### 3.7 停止 GA 的标准
 
 `GA` 迭代地通过世代进展，评估每个个体的适应度。停止标准有两方面。首先，预先定义世代数以控制 `GA` 的运行时间。在本研究中，世代数增加以增强优化潜力。其次，如果种群中最佳个体的适应度（准确率）分数达到或超过指定的目标准确率阈值，则 `GA` 终止。该阈值设为 0.95，代表期望的模型性能水平。一旦满足其中任一标准，`GA` 结束，并选择最佳超参数。
-
-
-
-
 
 本文的后续章节详细介绍了该方法得出的实验结果、讨论和结论，证明了遗传算法在神经网络超参数自动优化方面的效率。
 
@@ -2952,10 +2844,6 @@ Figure 9.4: Convergence curve for accuracy vs iteration for the Best Model.
 
 **并行化：** 探索并行化技术以加速遗传算法的收敛并减少计算时间。
 
-
-
-
-
 **泛化性：** 将该方法扩展到多样化的数据集和神经网络架构，以评估其泛化能力。
 
 总之，结果证实了遗传算法（GAs）在自动化神经网络超参数优化方面的优势。与基线模型相比，它们在准确率和收敛速度方面提供了改进。超参数的重要性以及遗传算法的适应性凸显了其潜力。虽然存在挑战，但该领域的持续研究有望完善和扩展这些优化技术，以增强机器学习模型开发。
@@ -3010,6 +2898,8 @@ Figure 9.4: Convergence curve for accuracy vs iteration for the Best Model.
 
 6. Goldberg, D. E. (1989). Genetic algorithms in search, optimization, and machine learning. Addison-Wesley, 1989. ISBN 0201157675, 9780201157673.
 
+
+
 7. Holland, J. H. (1992). Adaptation in natural and artificial systems: An introductory analysis with applications to biology, control, and artificial intelligence. MIT Press, 1992. Online ISBN: 9780262275552.
 
 8. Sutton, R. S. and Barto, A. G. (2018). Reinforcement learning: An introduction. MIT Press, 2018. ISBN 0262039249, 9780262039246.
@@ -3030,14 +2920,11 @@ Figure 9.4: Convergence curve for accuracy vs iteration for the Best Model.
 
 Avinash Singh^(¹⁰)
 
-#### 摘要
+## 摘要
 
 本文提出了一个工作模型，用于利用数据科学和机器学习（ML）检测互联网服务提供商（ISP）网络流量中真实和伪造的域名系统（DNS）流量。当任何主机访问网络进行 DNS 查询或邮件交换记录时。基于源端口、目的端口、源地址和目的地址，我们使用各种端口镜像技术在一定时间内从路由器端口记录净流量。采用了一种模式，使用每个记录的 DNS 请求数量及其响应。两种机器学习模式 K-最近邻（KNN）、朴素贝叶斯（NB）用于分类目的，并进一步用于预测和分析数据中的行为。我们使用预测来对准确率和训练时间作为性能指标进行分类，以找出哪种算法比另一种更准确。用于训练和测试算法的数据集包含多种恶意和真实端口以进行分类。
 
 **关键词：** DNS, 端口镜像, 净流量, K-最近邻（KNN）, 朴素贝叶斯（NB）
-
-
-
 
 ## 1. 引言
 
@@ -3105,10 +2992,6 @@ Figure 10.7: Line plots of the benign and malicious traffic ports separately.
 
 ### 5.2 K-最近邻（KNN）
 
-
-
-
-
 K-nearest neighbor 是 ML 中最基础却至关重要的分类算法之一。它属于监督学习领域，并在模式识别、数据挖掘和入侵检测中得到广泛应用。KNN 算法非常简单且非常有效。KNN 的模型表示为整个训练数据集。对新数据点的预测是通过在整个训练集中搜索 K 个最相似的实例（邻居）并汇总这些 K 个实例的输出变量来完成的。关键在于如何确定数据实例之间的相似性 [10]。
 
 使用这两种算法，我们导入了 `sklearn` 库，通过将数据划分为测试用例和可训练数据来预测恶意流量和良性流量的发生情况，该数据用于预测结果。预测完成后，我们使用了 `sklearn` 库中的指标来确定使用模型对不同测试用例大小获得的结果的准确性。在 `KNN` 中，我们首先保持测试用例大小相同，通过改变预测中的邻居数量来获得最佳准确性。之后我们保持邻居数量相同而改变测试用例大小，以获得不同测试用例大小下的准确性。
@@ -3122,16 +3005,27 @@ K-nearest neighbor 是 ML 中最基础却至关重要的分类算法之一。它
 Figure 10.8 Table of accuracies w.r.t changing test case sizes.
 
 | Training data size (in terms of format)  || Classification accuracy(%) |
+
 | --- | --- |
+
 |  || K-nearest neighbor(n=7) || Naïve Bayes |
+
 | 0.10 || 97.45 || 95.23 |
+
 | --- | --- | --- |
+
 | 0.20 || 97.08 || 95.49 |
+
 | 0.30 || 96.60 || 95.83 |
+
 | 0.40 || 97.03 || 95.54 |
+
 | 0.50 || 96.94 || 95.52 |
+
 | 0.60 || 96.81 || 95.52 |
+
 | 0.70 || 96.75 || 95.74 |
+
 | 0.80 || 96.73 || 95.89 |
 
 正如我们从上表中可以观察到的那样，在两种分类器中，`KNN` 比 `Naïve Bayes` 更准确、更精确。
@@ -3162,6 +3056,8 @@ Figure 10.9: Comparison plot of the accuracy for the classifiers.
 
 5. Joshi, M. R. and Hadi, T. H. (2015). A review of network traffic analysis and prediction techniques. arXiv preprint arXiv:1507.05722. Cornell University, Arxiv, 1, 1–23. [`doi.org/10.48550/arXiv.1507.05722`](http://dx.doi.org/10.48550/arXiv.1507.05722)。
 
+
+
 6. Buczak, A. L. and Guven, E. (2015). A survey of data mining and machine learning methods for cyber security intrusion detection. IEEE Comm. Surv. Tutor., 18(2), 1153–1176。
 
 7. Jamuna, A. and Ewards, V. (2013). Survey of traffic classification using machine learning. Int. J. Adv. Res. Comp. Sci., 4(4), 1–13。
@@ -3177,10 +3073,6 @@ Figure 10.9: Comparison plot of the accuracy for the classifiers.
 Anand Ranjan^(¹¹)
 
 ### Abstract
-
-
-
-
 
 机器学习（ML）已成为各个领域的关键技术，因此评估和比较不同模型在预测准确性和性能方面的表现变得至关重要。在本文中，我们对两种著名的 ML 模型随机森林和 ThymeBoost 进行了全面的比较分析。本研究的目的是评估它们在 ML 领域不同应用中的表现如何以及适用性如何。比较分析涵盖了多个维度，包括预测准确性、计算效率、可解释性和鲁棒性。我们采用多样化的基准数据集和评估指标，以全面展示模型的性能。我们的研究结果揭示了随机森林和 ThymeBoost 在不同情境下的优势和劣势，阐明了它们各自的能力和局限性。这些见解将帮助从业者和研究人员在根据其应用的具体要求选择机器学习模型时做出明智的决策。通过对随机森林和 ThymeBoost 的系统性审视，本研究为关于 ML 模型在现实场景中实用性的持续讨论做出了贡献。它为希望增强其 ML 方法并放大模型预测能力的人们提供了宝贵的参考。
 
@@ -3211,10 +3103,6 @@ ML 模型在各个领域发挥着至关重要的作用。选择合适的模型�
 为本研究分析之目的，选择了印度烟草有限公司的历史共同基金数据，时间范围为 2011 年 1 月 3 日至 2023 年 9 月 1 日。整个数据集被划分为训练和测试部分，其中 80% 的数据用于训练，其余 20% 用于测试。
 
 ### 4. 文献综述
-
-
-
-
 
 在整个研究中，我们使用多样化的基准数据集和评估指标来评估预测准确性、计算效率、可解释性和鲁棒性。我们探讨了这些模型在不同场景下的表现，为机器学习技术的实际应用的更广泛讨论做出了贡献。Basak 等人 \[1\] 评估了 Prophet 模型在印度西部半干旱地区使用标准化降水指数 (SPI) 预测气象干旱的效率。Papacharalampous 等人 \[2\] 揭示了各种时间序列预测方法对温度和降水数据的预测能力，突出了每种方法的优势和劣势。Rahman 等人 \[3\] 旨在评估新引入的 Prophet 模型在估算参考蒸散量 (ETo) 方面的适用性。进行了一项比较研究，将该模型的效能在日本南部背景下与支持向量回归 (SVR) 和传统的基于温度的经验模型 (Thornthwaite 和 Hargreaves) 进行对比。Ma 和 Sun \[4\] 旨在为中国东北地区 (NEC) 雨季的月降水量开发季节性预测模型。该模型采用了一种统计方法，结合了经验正交函数 (EOF) 分解与多元线性回归。Elseidi \[5\] 强调了将 ARIMA 过程纳入某些预测技术以解决创新随机性的效用。它探索了基于时变估计的预测方法的潜力，为这些方法的全面评估做出了贡献。Gonzalez-Longatt 等人 \[6\] 开发的预测模型分为三个关键组成部分：趋势成分、季节成分和不规则成分。该研究在北欧电力系统 (NPS) 中采用了该模型，预计整体动能会减少。NPS 的动能数据时间序列被用于评估所建议的方法。Hanggara \[7\] 提出了一种定量方法，采用了 2020 年印度尼西亚汽车工业协会的数据。预测使用了移动平均方法，该方法被选用来设定生产限制并降低过度生产的风险。这种方法为印度尼西亚汽车行业的发展和增长提供了有前景的机会。Riofrío 等人 \[8\] 探讨了各种预测模型的性能，以准确预测厄瓜多尔未来 12 个月的 CPI。该论文确定了最佳预测模型及其相应参数，并为厄瓜多尔未来 12 个月的 CPI 提供了预测，包括 2020 年下半年。这些信息可为与社会和经济活动相关的各个领域的决策提供宝贵价值。Li 等人 \[9\] 解决了预测无线网络运营商用户流量的关键任务。它引入了一种用户流量预测方法，结合了 Prophet 和高斯过程回归。Sabat 等人 \[10\] 提出了一种预测模型表明，矢量自回归移动平均模型在预测所有提到的气象参数方面表现最为有效。Stefenon 等人 \[11\] 提出了一种新颖的方法，结合了使用局部估计散点图平滑 (LOESS) 的季节性和趋势分解技术以及 Facebook Prophet 模型，以对与意大利电力现货价格相关的时间序列数据进行更精确和更具韧性的分析。Riofrio 等人 \[12\] 专注于采用各种工具来预测和估计描述厄瓜多尔消费者价格指数 (CPI) 所表现模式的时间序列模型。对这一宏观经济指标的准确估计至关重要，因为它构成了设计公共政策、市场监管框架、通胀控制、投资风险评估和其他重要考虑的基础。
 
@@ -3269,10 +3157,6 @@ Table 11.1 RFR performance analysis matrices
 
 Figure 11.1: Random Forest prediction model.
 
-
-
-
-
 ThymeBoost 模型相较于随机森林回归器的表现不佳。`MSE` 显著更高，约为 4851.9981，表明预测误差更大。`RMSE` 约为 69.6563，明显大于随机森林模型的 RMSE，说明预测精度的变异性更高。平均绝对误差 `MAE` 约为 50.0868，再次表明预测误差较大。`R2` 分数为负值，具体为 -0.0103，说明该模型几乎不能解释目标变量的方差，表现不佳。解释方差分数也为负，进一步强调了该模型在解释方差方面的局限性。`MAPE` 相对较高，约为 25.7337，表明预测值与实际值平均偏差约 25.7337%。平均百分比误差 `MPE` 为 22.0895，说明模型预测存在较大偏差（Table 11.2 和 Figure 11.2）。
 
 Table 11.2 ThymeBoost performance matrices
@@ -3300,16 +3184,29 @@ Figure 11.2 Trend analysis graph of ThymeBoost.
 ### 参考文献
 
 1. Basak, A., Rahman, A. S., Das, J., Hosono, T., and Kisi, O. (2022). Drought forecasting using the Prophet model in a semi-arid climate region of western India. Hydrol. Sci. J., 67(9), 1397–1417.
+
 2. Papacharalampous, G., Tyralis, H., and Koutsoyiannis, D. (2018). Predictability of monthly temperature and precipitation using automatic time series forecasting methods. Acta Geophy., 66, 807–831.
+
 3. Rahman, A. S., Hosono, T., Kisi, O., Dennis, B., and Imon, A. R. (2020). A minimalistic approach for evapotranspiration estimation using the Prophet model. Hydrol. Sci. J., 65(12), 1994–2006.
+
 4. Ma, J. and Sun, J. (2021). New statistical prediction scheme for monthly precipitation variability in the rainy season over northeastern China. Int. J. Climatol., 41(13), 5805–5819.
+
 5. Elseidi, M. (2023). Forecasting temperature data with complex seasonality using time series methods. Model. Earth Sys. Environ., 9(2), 2553–2567.
+
 6. Gonzalez-Longatt, F., Acosta, M. N., Chamorro, H. R., and Topic, D. (2020). Short-term kinetic energy forecast using a structural time series model: Study case of nordic power system. 2020 Int. Conf. Smart Sys. Technol. (SST), 173–178.
+
 7. Hanggara, F. D. (2021). Forecasting car demand in Indonesia with moving average method. J. Engg. Sci. Technol. Manag. (JES-TM), 1(1), 1–6.
+
+
+
 8. Riofrío, J., Chang, O., Revelo-Fuelagán, E. J., and Peluffo-Ordóñez, D. H. (2020). Forecasting the Consumer Price Index (CPI) of Ecuador: A comparative study of predictive models. Int. J. Adv. Sci. Engg. Inform. Technol., 10(3), 1078–1084.
+
 9. Li, Y., Ma, Z., Pan, Z., Liu, N., and You, X. (2020). Prophet model and Gaussian process regression based user traffic prediction in wireless networks. Sci. China Inform. Sci., 63, 1–8.
+
 10. Sabat, N. K., Nayak, R., Srivastava, H., Pati, U. C., and Das, S. K. (2023). Prediction of meteorological parameters using statistical time series models: A case study. Int. J. Glob. Warm., 31(1), 128–149.
+
 11. Stefenon, S. F., Seman, L. O., Mariani, V. C., and Coelho, L. D. S. (2023). Aggregating prophet and seasonal trend decomposition for time series forecasting of Italian electricity spot prices. Energies, 16(3), 1371.
+
 12. Riofrio, J., Infante, S., and Hernández, A. (2023). Forecasting the consumer price Index of Ecuador using classical and advanced time series models. Conf. Inform. Comm. Technol. Ecuador, 128–144.
 
 # 12 疾病诊断中特征选择中元启发式优化方法的角色：综述
@@ -3326,17 +3223,13 @@ Aditya Pratap Singh^(¹²)
 
 出于几个原因，疾病诊断和早期检测在医疗保健中至关重要。早期诊断可以带来更有效的治疗、更好的患者结局和更低的医疗费用。早期疾病诊断对于启动正确的治疗方案和控制各种医疗疾病的发展至关重要。早期诊断通常会带来更好的结果，并显著提高受疾病困扰者的生活质量。在传染病病例中，早期诊断还可以帮助实施预防措施，以限制疾病在社区内的传播。
 
+机器学习已成为医疗保健领域分析医疗数据和创建预测的关键工具。这被称为 `ML` 在疾病诊断中的作用。大型数据集可能包含复杂的模式，`ML` 模型可以找到这些模式，从而发现人类专家可能难以发现的细微疾病标记。众多医疗应用，例如图像分析、临床决策支持系统和预测建模，都已使用 `ML` 方法。
 
-
-
-
-机器学习已成为医疗保健领域分析医疗数据和创建预测的关键工具。这被称为 ML 在疾病诊断中的作用。大型数据集可能包含复杂的模式，ML 模型可以找到这些模式，从而发现人类专家可能难以发现的细微疾病标记。众多医疗应用，例如图像分析、临床决策支持系统和预测建模，都已使用 ML 方法。
-
-在 ML 和数据驱动疾病诊断的背景下，“特征”一词指的是用于描述患者健康状况的特征或变量。相关特征的选择对疾病诊断模型的性能有重大影响。使用过多的无用特征可能会导致过拟合和模型可解释性下降。
+在 `ML` 和数据驱动疾病诊断的背景下，“特征”一词指的是用于描述患者健康状况的特征或变量。相关特征的选择对疾病诊断模型的性能有重大影响。使用过多的无用特征可能会导致过拟合和模型可解释性下降。
 
 从可用数据中选择最具说明性的特征的过程可提高模型的泛化能力、效率和准确性。
 
-总之，疾病诊断很重要，因为它可以改善患者预后、降低医疗费用并阻止疾病传播。虽然特征选择是确保使用正确数据来开发准确且可理解的疾病诊断模型的关键步骤，但 ML 在自动化和优化诊断过程中发挥着至关重要的作用。
+总之，疾病诊断很重要，因为它可以改善患者预后、降低医疗费用并阻止疾病传播。虽然特征选择是确保使用正确数据来开发准确且可理解的疾病诊断模型的关键步骤，但 `ML` 在自动化和优化诊断过程中发挥着至关重要的作用。
 
 ## 2. 动机
 
@@ -3349,8 +3242,11 @@ Aditya Pratap Singh^(¹²)
 ### 2.2 元启发式在疾病诊断中的潜在益处
 
 1. **增强模型性能：** 通过选择最相关和最具说明性的特征，元启发式可以发现优化模型性能的特征子集。这可能导致敏感性和特异性更高的疾病诊断模型。
+
 2. **减少过拟合**：元启发式可以通过选择相关特征的子集来帮助降低过拟合的风险。过拟合是疾病诊断中的一个问题，因为泛化至关重要，而它发生在模型在训练数据上表现良好但在未观察到的数据上表现不佳时。
+
 3. **更好的模型可解释性：** 几种元启发式优化方法包括插入用户定义的约束和偏好，可用于强制包含可解释或特定领域的特征。这有助于创建更清晰、更易于理解的诊断模型。
+
 4. **时间和资源效率：** 元启发式试图在可接受的时间内找到解决方案。在需要及时诊断的医疗情况下，它们在搜索空间探索和计算效率之间取得了平衡。
 
 Figure 12.1 显示了使用元启发式进行疾病诊断的潜在益处。
@@ -3369,37 +3265,42 @@ Figure 12.2: General working of meta-heuristic optimization methods.
 
 以下是流行的元启发式方法：
 
-1. **遗传算法 (GAs)：** GAs 受自然选择和遗传学的启发。为了识别最佳解决方案，它们生成并发展特征子集的种群 [1]。
-2. **粒子群优化 (PSO)：** PSO 基于鸟类和鱼类的社会行为。它涉及粒子（解决方案）在特征空间中遍历以寻找最佳子集 [2]。
-3. **蚁群优化 (ACO)：** ACO 基于蚂蚁觅食行为。它复制寻找最具信息路径的搜索，在本例中为特征子集 [3]。
-4. **模拟退火 (SA)：** SA 基于冶金退火过程。它采用基于温度的技术来探索特征子集并避免局部最优 [4]。
+1. **遗传算法 (`GAs`)：** `GAs` 受自然选择和遗传学的启发。为了识别最佳解决方案，它们生成并发展特征子集的种群 [1]。
+
+2. **粒子群优化 (`PSO`)：** `PSO` 基于鸟类和鱼类的社会行为。它涉及粒子（解决方案）在特征空间中遍历以寻找最佳子集 [2]。
+
+3. **蚁群优化 (`ACO`)：** `ACO` 基于蚂蚁觅食行为。它复制寻找最具信息路径的搜索，在本例中为特征子集 [3]。
+
+4. **模拟退火 (`SA`)：** `SA` 基于冶金退火过程。它采用基于温度的技术来探索特征子集并避免局部最优 [4]。
+
 5. **其他元启发式方法：** 还有各种其他技术，例如和谐搜索 [5]、差分进化 [6] 等，每种都有其独特的特征选择方法。
 
-总之，在疾病诊断的背景下，元启发式优化技术具有吸引力，因为它们能够在复杂的特征空间中进行高效搜索，提高模型性能，减少过拟合，并允许增强可解释性。医疗研究人员和从业者越来越多地尝试这些策略以产生更准确和高效的诊断模型。蚂蚁的觅食行为启发了 ACO。它复制寻找最具信息路径的搜索，在本例中为特征子集。
+总之，在疾病诊断的背景下，元启发式优化技术具有吸引力，因为它们能够在复杂的特征空间中进行高效搜索，提高模型性能，减少过拟合，并允许增强可解释性。医疗研究人员和从业者越来越多地尝试这些策略以产生更准确和高效的诊断模型。蚂蚁的觅食行为启发了 `ACO`。它复制寻找最具信息路径的搜索，在本例中为特征子集。
 
 ## 4. 与传统特征选择方法的比较
 
-为了从数据集中挑选重要特征，ML 和数据分析中采用了两种方法——元启发式优化和传统特征选择策略。让我们从其优点和缺点方面进行比较：
+为了从数据集中挑选重要特征，`ML` 和数据分析中采用了两种方法——元启发式优化和传统特征选择策略。让我们从其优点和缺点方面进行比较：
 
 ### 4.1 元启发式优化
-
-
-
-
 
 元启发式优化技术是全局搜索算法，用于在搜索空间中寻找最佳解决方案。它们通常与预测模型结合用于特征选择。遗传方法、`PSO`、模拟退火和 `ACO` 是常见元启发式方法的例子。
 
 #### 优点
 
 1. **全局扫描：** 元启发式方法扫描整个特征空间，这对于发现特征之间复杂、非线性的相关性特别有益。
+
 2. **通用性：** 这些方法可用于解决各种问题，例如特征选择、超参数调整和模型选择。
+
 3. **适应性：** 元启发式可以适应各种问题，并且不依赖于特定领域的知识或假设。
+
 4. **鲁棒性：** 它们可以处理噪声数据，并且比传统方法更容易避免陷入局部最优。
 
 #### 缺点
 
 1. **计算成本高：** 在处理庞大数据集和复杂情况时，元启发式方法可能计算成本高昂。
+
 2. **难以理解：** 虽然它们可以找到有效的答案，但其得出这些解决方案的方法可能难以理解，这在应用中可能是一个缺点。
+
 3. **需要参数调优：** 为元启发式算法选择可接受的参数可能很困难，并且可能需要特定领域的知识。
 
 ### 4.2 经典特征选择技术
@@ -3409,14 +3310,19 @@ Figure 12.2: General working of meta-heuristic optimization methods.
 #### 优点
 
 1. **简易性：** 传统方法通常易于采用和理解，使非专家也能使用。
+
 2. **可解释性：** 它们提供了对每个特征重要性的清晰见解，以及特征选择对模型性能的影响。
+
 3. **计算效率：** 与元启发式方法相比，这些方法通常更快、计算强度更低。
+
 4. **领域知识整合：** 它们使领域专家能够将其专业知识和偏好融入特征选择过程。
 
 #### 缺点
 
 1. **局部最优：** 经典方法可能陷入局部最优，限制了它们发现最佳特征子集的能力，尤其是在高维环境中。
+
 2. **搜索空间有限：** 它们经常只探索特征空间的一部分，从而忽略了有价值的交互和模式。
+
 3. **假设：** 一些传统方法依赖于关于数据分布和特征连接的强假设，这可能导致在真实世界、复杂数据集中产生不令人满意的结果。
 
 总之，元启发式优化与传统特征选择策略之间的选择取决于特定问题、数据集的复杂性、可用计算资源以及对可解释性的需求。
@@ -3446,36 +3352,43 @@ Chandra 和 Singh (2018) 将萤火虫算法与神经网络集成以预测心脏�
 实施元启发式优化方法可以在各种问题解决领域提供诸多益处，但它们也存在局限性和障碍。了解这些障碍对于成功实施这些策略至关重要。实施元启发式优化时遇到的一些最常见限制和挑战如下：
 
 1. **计算复杂性：** 在处理庞大数据集或复杂优化问题时，元启发式方法可能需要大量的计算工作。所需的时间和资源可能使优化在实时或关键应用中并不总是可行。
+
 2. **收敛性：** 确保元启发式算法收敛到最优或接近最优解至关重要。一些算法可能收敛缓慢或陷入局部最优，使得在可接受的时间范围内找到最佳解决方案变得困难。
+
 3. **参数调优：** 大多数元启发式算法包含多个必须为特定情况精细调整的参数。找到合适的参数值可能是一个耗时且乏味的过程，并且算法的有效性在很大程度上取决于这些参数。
+
 4. **过拟合：** 在特征选择和 `ML` 应用中避免过拟合至关重要，过拟合会导致模型在训练数据上表现非常好，但在未知数据上表现不佳。元启发式算法选择过多特征可能导致过拟合模型。
 
-
-
-
-
 ### 5. 缺乏保证
+
 元启发式优化方法并不能保证发现全局最优解。答案的质量在很大程度上受算法选择、参数设置以及问题特征等因素的影响。
 
 ### 6. 可解释性
+
 许多元启发式算法是不透明且难以理解的。虽然它们可以找到最优答案，但描述为何选择某个特定解或解释决策过程可能很困难。
 
 ### 7. 复杂性和多样性
+
 可用的元启发式方法数量可能令人望而生畏。为某个问题选择最佳算法可能具有挑战性，且不存在一刀切的方法。它通常需要领域专业知识和实验。
 
 ### 8. 内存和存储
+
 一些元启发式算法，特别是那些使用基于种群搜索的算法，可能需要大量的内存和存储。在计算资源有限的情况下，这可能成为一个问题。
 
 ### 9. 并行化
+
 虽然并行化可以加快优化速度，但在元启发式方法中应用并不总是容易，尤其是在分布式计算环境中。
 
 ### 10. 可扩展性
+
 将元启发式方法扩展以适应极其庞大的数据集或高维特征空间可能很困难。随着问题维度的增加，算法可能变得效率降低。
 
 ### 11. 抗噪性
+
 在面对噪声或模糊数据时，元启发式方法可能难以应对。确保这些算法足够强大以处理现实世界数据波动是一项持续的努力。
 
 ### 12. 定制化和混合化
+
 将元启发式算法定制或混合以适应特定问题是一个困难的过程，通常需要对方法和问题领域都有深入的理解。
 
 尽管存在这些限制和障碍，元启发式优化方法仍然是解决各领域复杂优化问题的必备工具。研究人员和从业者不断探索克服这些挑战的策略，并提高元启发式算法的有效性和效率。
@@ -3495,6 +3408,8 @@ Chandra 和 Singh (2018) 将萤火虫算法与神经网络集成以预测心脏�
 2. Kennedy, J. and Eberhart, R. (1995). Particle swarm optimization. Proc. IEEE Int. Conf. Neu. Netw., 4, 1942–1948.
 
 3. Dorigo, M., Maniezzo, V., and Colorni, A. (1996). The Ant System: Optimization by a colony of cooperating agents. IEEE Trans. Sys. Man Cybernet. Part B, 26(1), 29–41.
+
+
 
 4. Kirkpatrick, S., Gelatt, C. D., and Vecchi, M. P. (1983). Optimization by simulated annealing. Science, 220(4598), 671–680.
 
@@ -3524,13 +3439,9 @@ Chandra 和 Singh (2018) 将萤火虫算法与神经网络集成以预测心脏�
 
 # 13 人工智能应用在肾脏疾病诊断中的作用：系统综述
 
-Ashish Nigam^(¹³)
+Ashish Nigam^(13)
 
 #### 摘要
-
-
-
-
 
 全球范围内，对准确疾病诊断存在显著未满足的需求。患者群体疾病过程和潜在症状的复杂性在建立早期诊断工具和成功治疗方面造成了巨大障碍。机器学习（ML）作为人工智能（AI）的一个子领域，帮助研究人员、临床医生和患者克服其中一些问题。在这些系统综述中，AI 的能力，包括 ML 方法，已被用于预测、诊断和治疗终末期肾病（EKD）。在此综述工作中纳入了通过 PubMed 检索的文章。因此，由于仅包含一个数据库，该研究被表征为“快速综述”。最普遍的目标是准确预测 EKD 诊断。本研究基本上包含算法泛化性，并且在不同人群的数据集上进行测试的情况很少被考虑。
 
@@ -3561,15 +3472,11 @@ Ashish Nigam^(¹³)
 
 ### 2.1. 动机
 
-
-
-
-
 回顾文献使我们能够识别现有知识库中的空白。我们可以识别出需要解决的问题或需要额外发展的领域。集中关注这些未探索的地方可能有助于指导我们自己的研究。它有助于比较和基准测试各种肾脏疾病检测方法和程序。这可能有助于我们确定哪些程序更有效、更精确或更适合特定目的。了解文献可以帮助选择最佳的智能计算解决方案用于心律失常识别。人工智能提供了改善诊断能力的机会，这可能导致更好的患者预后、降低医疗费用以及肾脏疾病治疗的改善。
 
 ### 2.2. 文献检索方案
 
-本综述采用了多个学术研究数据库来收集 2015 年 1 月至 2022 年 12 月期间发表的相关论文。这些公开可访问的数据库包括 PubMed、IEEE Xplore、Springer、ScienceDirect 和 ResearchGate。值得注意的是，IEEE Xplore 和 PubMed 分别是工程和生物科学领域的知名数据库 \[7\] (Table 13.1)。
+本综述采用了多个学术研究数据库来收集 2015 年 1 月至 2022 年 12 月期间发表的相关论文。这些公开可访问的数据库包括 PubMed、IEEE Xplore、Springer、ScienceDirect 和 ResearchGate。值得注意的是，IEEE Xplore 和 PubMed 分别是工程和生物科学领域的知名数据库 [7] (Table 13.1)。
 
 Table 13.1: Inclusion criteria for literature search
 
@@ -3600,57 +3507,59 @@ Table 13.2: Detection of kidney disorders using effective bio-markers
 | Year  || Reference || Parameter (detected range value) || Result |
 | --- | --- | --- | --- |
 | Sensitivity || Specificity |
-| 2017 || Park et al. \[11\] || +ve proteinuria ACR≥300 mg/g || 75.4 || 99.5 |
+| 2017 || Park et al. [11] || +ve proteinuria ACR≥300 mg/g || 75.4 || 99.5 |
 | --- | --- | --- | --- | --- |
-| 2016 || Chang et al. \[12\] || Quantitative P/C ratio (150 mg) || 75.6 || 95.9 |
-| 2016 || Xue et al. \[13\] || eGFR. (&lt;60 ml/min/1.73 m²) || 92.8 || 1.53 |
-| 2018 || Menon P., et al. \[14\] || Urea 1.4×10^(–3) mM || NA || NA |
-| 2019 || Pothipor C., et al. \[15\] || Creatirnne 3.11 × 10^(\-2) mM || NA || NA |
-| 2019 || Arif Topçu A., et al \[16\] || Creatinine 3.11 × 10^(\-2) mM || NA || NA |
-| 2019 || Charnuah N., \[17\] || Urea 9.9 × 10^(\-3) mM || NA || NA |
-| 2021 || Jiang Y., \[18\] || Creatinme l × 10^(\-4) mM || NA || NA |
-| 2020 || Zheng W., \[19\] || Glucose 2.2 × 10^(\-3) mM || NA || NA |
-| 2017 || Yuan Y., \[20\] || Glucose 1.2 × 10^(\-1) mM || NA || NA |
+| 2016 || Chang et al. [12] || Quantitative P/C ratio (150 mg) || 75.6 || 95.9 |
+| 2016 || Xue et al. [13] || eGFR. (<60 ml/min/1.73 m²) || 92.8 || 1.53 |
+| 2018 || Menon P., et al. [14] || Urea 1.4×10^(–3) mM || NA || NA |
+| 2019 || Pothipor C., et al. [15] || Creatirnne 3.11 × 10^(-2) mM || NA || NA |
+| 2019 || Arif Topçu A., et al [16] || Creatinine 3.11 × 10^(-2) mM || NA || NA |
+| 2019 || Charnuah N., [17] || Urea 9.9 × 10^(-3) mM || NA || NA |
+| 2021 || Jiang Y., [18] || Creatinme l × 10^(-4) mM || NA || NA |
+| 2020 || Zheng W., [19] || Glucose 2.2 × 10^(-3) mM || NA || NA |
+| 2017 || Yuan Y., [20] || Glucose 1.2 × 10^(-1) mM || NA || NA |
 
 Table 13.3: Role of AI applications for diagnosis of kidney disorders
 
 | Year || Reference || Technology || Result |
 | --- | --- | --- | --- |
-| 2019 || Akbilgic et al. \[11\] || Random Forest || AUC 76% |
+| 2019 || Akbilgic et al. [11] || Random Forest || AUC 76% |
 | --- | --- | --- | --- |
-| 2014 || Goldstein et al. \[22\] || Random Forest || AUC 79% |
-| 2019 || Mezzatesta et al. \[23\] || Support vector machine || Accuracy: 92.15% |
-| 2020 || Chauhan et al. \[24\] || Random Forest || AUC 80% |
-| 2017 || Zhang et al. \[31\] || Random Forest || Sensitivity: 98.5% |
-| 2016 || Norouzi et al. \[26\] || Artificial neural network || Mean square error (MSE): 58.63–64.00 |
-| 2016 || Barbieri et al. \[30\] || Artificial neural network || Mean absolute error (MSE): 58.63–64.00 |
+| 2014 || Goldstein et al. [22] || Random Forest || AUC 79% |
+| 2019 || Mezzatesta et al. [23] || Support vector machine || Accuracy: 92.15% |
+| 2020 || Chauhan et al. [24] || Random Forest || AUC 80% |
+| 2017 || Zhang et al. [31] || Random Forest || Sensitivity: 98.5% |
+| 2016 || Norouzi et al. [26] || Artificial neural network || Mean square error (MSE): 58.63–64.00 |
+| 2016 || Barbieri et al. [30] || Artificial neural network || Mean absolute error (MSE): 58.63–64.00 |
 
 研究人员已广泛研究机器学习和深度学习算法在医学影像数据分析中的应用，例如肾脏的 CT 扫描和 MRI。文献强调了人工智能检测人类观察可能遗漏的细微模式和异常的能力，从而能够更早识别肾脏问题。虽然文献承认人工智能在肾脏疾病检测方面的前景，但它也强调了诸如数据隐私、法规合规以及严格验证研究的必要性等问题。正在进行的研究凸显了一个动态的格局，持续努力改进算法、增强诊断能力并解决人工智能应用成功整合到临床实践中的实际问题。文献综述共同为利用人工智能改善肾脏疾病的诊断和管理而做出的后续突破提供了知识基础。
 
 在 Table 13.2 中，通过患者尿液和血液样本获得的一些重要生物标志物解释了各种肾脏疾病的描述。其中提到了一些重要的生物标志物，如肌酐、葡萄糖、尿素和定量 PC 比率。基于这些参数，使用监督学习和训练模型进行有效模型训练，并获得了更好的准确率、灵敏度和特异性。在这里，结果高度依赖于灵敏度，因此在本表中我们仅讨论了具有更好灵敏度和特异性的文章。
 
-阳性蛋白尿和定量 P/C 比率是肾脏疾病诊断的重要生物标志物，其灵敏度传感器在提及的范围值处响应更高 \[11, 12\]。尿素、肌酐和葡萄糖也是用于肾脏疾病有效诊断的非常重要的生物标志物 \[13, 14, 15, 16, 17, 18, 19 and 20\]。
+阳性蛋白尿和定量 P/C 比率是肾脏疾病诊断的重要生物标志物，其灵敏度传感器在提及的范围值处响应更高 [11, 12]。尿素、肌酐和葡萄糖也是用于肾脏疾病有效诊断的非常重要的生物标志物 [13, 14, 15, 16, 17, 18, 19 and 20]。
 
 ## 4. 人工智能在肾脏疾病诊断中的应用
 
 
 
-
-
-肾病学面临众多未满足的需求，为利用大数据和人工智能治疗肾脏疾病患者提供了重大机遇。人工智能在肾脏疾病中的应用可大致分为三个主要领域：(a) 预测未来结局；(b) 辅助治疗和决策；以及 (c) 识别现有但尚未被识别的模式。 表 13.3 概述了与肾脏疾病领域人工智能相关的关键研究。虽然目前只有一篇已发表的论文涉及临床应用，但人工智能在肾脏疾病中的利用在会议摘要中记录得更为频繁，暗示着科学界贡献的不断增长。人工智能采用先进算法分析检测结果、患者记录和医学影像，在诊断肾脏疾病中发挥着关键作用。人工智能的应用通过识别影像扫描中的异常并根据患者数据预测疾病风险，提高了诊断准确性，支持早期干预，并最终改善肾脏医疗领域的患者预后。
+肾病学面临众多未满足的需求，为利用大数据和人工智能治疗肾脏疾病患者提供了重大机遇。人工智能在肾脏疾病中的应用可大致分为三个主要领域：(a) 预测未来结局；(b) 辅助治疗和决策；以及 (c) 识别现有但尚未被识别的模式。表 13.3 概述了与肾脏疾病领域人工智能相关的关键研究。虽然目前只有一篇已发表的论文涉及临床应用，但人工智能在肾脏疾病中的利用在会议摘要中记录得更为频繁，暗示着科学界贡献的不断增长。人工智能采用先进算法分析检测结果、患者记录和医学影像，在诊断肾脏疾病中发挥着关键作用。人工智能的应用通过识别影像扫描中的异常并根据患者数据预测疾病风险，提高了诊断准确性，支持早期干预，并最终改善肾脏医疗领域的患者预后。
 
 人工智能在肾脏疾病诊断中的应用在各个领域显示出良好的潜力，包括以下内容：
 
 ### 4.1. 医学影像分析与实验室数据整合
+
 超声、CT 和 MRI 扫描的医学影像数据可由人工智能算法分析，以识别和分类与肾脏相关的异常，包括肿瘤、囊肿和结构异常。人工智能可以通过分割和勾画特定感兴趣区域，帮助准确识别肾脏图像中的异常。来自各种实验室检测的数据，包括血液和尿液检测，可以通过人工智能进行整合和分析。这有助于发现与各种肾脏疾病相关的模式和标志物。
 
 ### 4.2. 预测分析
+
 人工智能模型可以利用患者数据进行训练，以预测罹患肾脏疾病的可能性。该过程可能涉及审查遗传信息、电子健康记录和其他相关数据，以确定更易感的人群。
 
 ### 4.3. 决策支持系统和数据挖掘
+
 人工智能可用于创建帮助医疗工作者做出决策的系统。基于对临床数据的分析，这些系统可以提供额外的见解和建议，有助于及时和正确的诊断。人工智能技术，例如机器学习和深度学习，可以对大型数据集进行处理，以发现人类观察者可能无法立即察觉的复杂模式和联系。
 
 ### 4.4. 远程监测和个性化医疗
+
 人工智能的应用可以帮助患者的远程肾脏疾病监测。这可能涉及通过持续分析来自可穿戴技术或远程传感器的數據来监测健康状况的变化，并在出现任何问题时警告医疗专业人员。人工智能可以利用患者数据和包括遗传、生活方式和对先前治疗的反应在内的标准，使个性化治疗方案的制定变得更容易。
 
 人工智能正在改变医学的面貌，尤其是在肾脏疾病的诊断方面。先进的人工智能算法已被证明有助于提高识别肾脏相关疾病的准确性和效率。机器学习模型分析大量医学数据，例如患者记录、影像扫描和实验室结果，以识别趋势并检测人类可能遗漏的细微异常。
@@ -3662,17 +3571,14 @@ Table 13.3: Role of AI applications for diagnosis of kidney disorders
 因此，分析检测结果、患者信息和医学影像的人工智能应用正在彻底改变肾脏疾病的检测。人工智能使用复杂的算法来提高准确性、发现趋势并帮助预测风险。其在个性化医疗和决策支持方面的应用潜力巨大，因为它可以帮助早期识别和更好地治疗肾脏疾病。
 
 ## 5. 讨论
-预测老年血液透析患者突发心脏死亡是肾病学中使用先进机器学习方法的早期例子，随机森林模型得出的 AUROC 为 0.79。在另一案例中，Mezzatesta 等人同事使用 SVM 预测透析患者缺血性心脏病的风险，准确率为 92% [23]。在另外两项较新的研究中，随机森林模型被构建用于预测 CKD 的发展，通过整合电子病历数据和循环生物标志物数据，如血浆肿瘤坏死因子和肾损伤分子 1 [24]。在 Chauhan 等人的一项研究中，AUROC 为 0.770.80。Xiao 等人使用人口统计数据和血液生化特征，检查了多种机器学习技术来预测 CKD 患者蛋白尿 >1 g/d 的概率。四十一项研究中，AUROC 为 0.87，经典的逻辑回归模型在这种情况下击败了其他机器学习模型。他们发现先进的机器学习模型在大量数据下表现最佳，而线性模型在较小的数据集上表现更好。另一方面，Jamshid Norouzzi 等人 [26] 创建了一个 ANN 来预测 CKD 患者的肾衰竭进展。该模型准确预测了 6、12 和 18 个月间隔的估计肾小球滤过率 (eGFR)（>95%） [31]。
 
-根据会议摘要，肾脏研究所在 2000 年至 2011 年间收集了 28,608 名 CKD 患者的数据，建立了两个线性模型和样条模型，用于预测 CKD 进展至终末期肾病，使用最多 6 个月之前的 eGFR 或 eGFR 对数（log eGFR） [27]。该模型的结果被纳入 CKD Forecaster 工具，该工具被肾科医生在临床决策支持系统中用于护理点。这有助于住院教育和 CKD 向 ESKD 过渡的护理计划。根据会议摘要，使用 CKD Forecaster 工具的肾科医生，其患者使用中心静脉导管转为血液透析的人数更少 [28]。
+预测老年血液透析患者突发心脏死亡是肾病学中使用先进机器学习方法的早期例子，随机森林模型得出的 `AUROC` 为 0.79。在另一案例中，`Mezzatesta` 等人同事使用 `SVM` 预测透析患者缺血性心脏病的风险，准确率为 92% [23]。在另外两项较新的研究中，随机森林模型被构建用于预测 `CKD` 的发展，通过整合电子病历数据和循环生物标志物数据，如血浆肿瘤坏死因子和肾损伤分子 1 [24]。在 `Chauhan` 等人的一项研究中，`AUROC` 为 0.770.80。`Xiao` 等人使用人口统计数据和血液生化特征，检查了多种机器学习技术来预测 `CKD` 患者蛋白尿 >1 g/d 的概率。四十一项研究中，`AUROC` 为 0.87，经典的逻辑回归模型在这种情况下击败了其他机器学习模型。他们发现先进的机器学习模型在大量数据下表现最佳，而线性模型在较小的数据集上表现更好。另一方面，`Jamshid Norouzzi` 等人 [26] 创建了一个 `ANN` 来预测 `CKD` 患者的肾衰竭进展。该模型准确预测了 6、12 和 18 个月间隔的估计肾小球滤过率 (`eGFR`)（>95%） [31]。
 
-临床医生在为终末期肾病 (ESKD) 患者开具药物如促红细胞生成素时，面临着投入时间和出现错误的问题。为了提高效率和改善患者护理，处方过程的一部分可以实现自动化。文献中已概述了许多减少促红细胞生成素剂量并提高达到目标水平患者比例的策略 [29]。一个典型例子是人工神经网络 (ANN) 在贫血护理中的整合，该网络成功提高了达到目标的患者比例，同时降低了血红蛋白变异性和促红细胞生成素剂量 [30]。
+根据会议摘要，肾脏研究所在 2000 年至 2011 年间收集了 28,608 名 `CKD` 患者的数据，建立了两个线性模型和样条模型，用于预测 `CKD` 进展至终末期肾病，使用最多 6 个月之前的 `eGFR` 或 `eGFR` 对数（`log eGFR`） [27]。该模型的结果被纳入 `CKD Forecaster` 工具，该工具被肾科医生在临床决策支持系统中用于护理点。这有助于住院教育和 `CKD` 向 `ESKD` 过渡的护理计划。根据会议摘要，使用 `CKD Forecaster` 工具的肾科医生，其患者使用中心静脉导管转为血液透析的人数更少 [28]。
+
+临床医生在为终末期肾病 (`ESKD`) 患者开具药物如促红细胞生成素时，面临着投入时间和出现错误的问题。为了提高效率和改善患者护理，处方过程的一部分可以实现自动化。文献中已概述了许多减少促红细胞生成素剂量并提高达到目标水平患者比例的策略 [29]。一个典型例子是人工神经网络 (`ANN`) 在贫血护理中的整合，该网络成功提高了达到目标的患者比例，同时降低了血红蛋白变异性和促红细胞生成素剂量 [30]。
 
 ## 6. 结论
-
-
-
-
 
 计算、数学和统计学的进步推动了人工智能和机器学习方法的演进。利用云计算资源为分析大量数据集和创建机器学习模型提供了一种可能更经济的方法。在理想情况下，机器学习算法将能够无限制地向公众开放。传统统计建模方法在构建针对明确定义问题的简易预测模型时最为有效，其特点是观测数量众多且对结果的优势和局限性有清晰的理解。此外，传统方法倾向于从静态时间依赖数据中学习，导致训练期间出现“过拟合”问题，并在面对意外事件时表现欠佳。
 
@@ -3698,7 +3604,7 @@ Table 13.3: Role of AI applications for diagnosis of kidney disorders
 
 9. Kazancioğlu, R. (2013). Risk factors for chronic kidney disease: An update. Kidney Int. Suppl., 3(4), 368–371.
 
-10. Fadem, S. Z. (2022). Introduction to kidney disease. In: Fadem, S. Z.. (eds). Staying Healthy with Kidney Disease. Springer, Cham. pp. 1–14. [`doi.org/10.1007/978-3-030-93528-3\_1`](http://dx.doi.org/10.1007/978-3-030-93528-3_1)
+10. Fadem, S. Z. (2022). Introduction to kidney disease. In: Fadem, S. Z.. (eds). Staying Healthy with Kidney Disease. Springer, Cham. pp. 1–14. [`doi.org/10.1007/978-3-030-93528-3_1`](http://dx.doi.org/10.1007/978-3-030-93528-3_1)
 
 11. Park, J. I., Baek, H., Kim, B. R., and Jung, H. H. (2017). Comparison of urine dipstick and albumin: creatinine ratio for chronic kidney disease screening: A population-based study. PloS One, 12(2), e0171106.
 
@@ -3732,14 +3638,13 @@ Table 13.3: Role of AI applications for diagnosis of kidney disorders
 
 26. Norouzi, J., Yadollahpour, A., Mirbagheri, S. A., et al. (2016). Predicting renal failure progression in chronic kidney disease using integrated intelligent fuzzy expert system. Comput. Math Methods Med., 2016, 1–9.
 
-27. Han, H., Wang, Y., Chaudhuri, S., et al. (2016). Prediction of six months progression to end stage renal disease \[abstract TH-PO887\]. J Am Soc Nephrol., 27, 299A.
+27. Han, H., Wang, Y., Chaudhuri, S., et al. (2016). Prediction of six months progression to end stage renal disease [abstract TH-PO887]. J Am Soc Nephrol., 27, 299A.
+
+
 
 28. Jiao, Y., Kopyt, N., Bollu, P., et al. (2019). Use of kidney disease progression model care planning report associates with lower dialysis catheter rates at the initiation of hemodialysis \[abstract SA-PO840\]. J. Am. Soc. Nephrol., 30, 980.
 
 29. Brier, M. E., Gaweda, A. E., Aronoff, G. R. (2018). Personalized anemia management and precision medicine in ESA and iron pharmacology in end-stage kidney disease. Semin. Nephrol., 38, 410–417.
-
-
-
 
 30. Barbieri, C., Molina, M., Ponce, P., et al. (2016). An international observational study suggests that artificial intelligence for clinical decision support optimizes anemia management in hemodialysis patients. Kidney Int., 90, 422–429.
 
@@ -3749,13 +3654,13 @@ Table 13.3: Role of AI applications for diagnosis of kidney disorders
 
 Syed Azhar Abbas Rizvi^(¹⁴)
 
-### Abstract
+## Abstract
 
-医疗从业者可以在各种患者护理和智能医疗系统中受益于人工智能（AI）。医疗专业人员经常使用人工智能方法，如机器学习（ML）和深度学习，用于疾病诊断、药物研究和风险评估等工作。AI 需要多种医学数据源，包括超声、MRI、乳腺摄影、基因学和 CT 扫描，以做出准确的疾病诊断。此外，AI 还加速了患者为居家康复做准备的过程，并极大地改善了医院体验。本文提供了对用于诊断各种疾病的 AI 方法的深入分析，包括阿尔茨海默病、癌症、糖尿病、慢性心脏病、结核病、中风、脑血管问题、高血压、皮肤病和肝病。就疾病管理和治疗而言，阿尔茨海默病是一种进行性神经系统疾病，费用非常高昂。对于阿尔茨海默病患者而言，持续监测、功能支持和及时的治疗干预至关重要，而智能传感设备可以提供适应环境的自适应反馈。本综述的目的是概述目前用于治疗阿尔茨海默病的系统。它将评估这些先进技术在临床环境中的可能性以及对其设计进行潜在未来改进以用于阿尔茨海默病。
+医疗从业者可以在各种患者护理和智能医疗系统中受益于人工智能（`AI`）。医疗专业人员经常使用人工智能方法，如机器学习（`ML`）和深度学习，用于疾病诊断、药物研究和风险评估等工作。`AI` 需要多种医学数据源，包括超声、MRI、乳腺摄影、基因学和 CT 扫描，以做出准确的疾病诊断。此外，`AI` 还加速了患者为居家康复做准备的过程，并极大地改善了医院体验。本文提供了对用于诊断各种疾病的 `AI` 方法的深入分析，包括阿尔茨海默病、癌症、糖尿病、慢性心脏病、结核病、中风、脑血管问题、高血压、皮肤病和肝病。就疾病管理和治疗而言，阿尔茨海默病是一种进行性神经系统疾病，费用非常高昂。对于阿尔茨海默病患者而言，持续监测、功能支持和及时的治疗干预至关重要，而智能传感设备可以提供适应环境的自适应反馈。本综述的目的是概述目前用于治疗阿尔茨海默病的系统。它将评估这些先进技术在临床环境中的可能性以及对其设计进行潜在未来改进以用于阿尔茨海默病。
 
 **关键词：** 阿尔茨海默，智能计算，机器学习，神经网络，数据挖掘，分类
 
-### 1. Introduction
+## 1. Introduction
 
 神经影像学方法，目前在阿尔茨海默病的诊断中被大量使用，其中包括脑部扫描如 MRI、PET 和 CT [1]。尽管这些扫描很有用，但它们对患有神经问题的患者提出了实质性困难。特别是对于 PET 扫描而言，这些程序以其庞大、高昂的费用和侵入性为特征。由于缺乏专门的实验室设施，阿尔茨海默病患者的监测不规律，导致额外神经损伤延迟诊断的风险增加。此外，许多当前针对阿尔茨海默病的治疗策略都结合了认知和身体活动，以支持现有脑细胞并维持身体功能。
 
@@ -3765,17 +3670,13 @@ Syed Azhar Abbas Rizvi^(¹⁴)
 
 多篇综述研究已涵盖了在辅助技术背景下阿尔茨海默病患者的特殊需求。Costanzo 等人在其文章中介绍了远程医疗在阿尔茨海默病和轻度认知障碍（MCI）诊断和治疗中的应用 [6]。他们强调了现代工具，如电子邮件和视频会议，如何让患者和医疗专业人员相互沟通。另一项研究提供了针对阿尔茨海默病患者的技术的范围评估 [7]。Pillai 和 Bonner-Jackson 提供了包括阿尔茨海默病患者在内的随机临床试验的概述，以及使用通用信息和通信技术来跟踪认知和功能恶化 [8]。必须强调的是，他们的分析已过时，因为它仅包含截至 2014 年 9 月 1 日的出版物。相比之下，Elfaki 和 Alotaibi [9]概述了旨在帮助阿尔茨海默病患者的移动健康应用程序。研究 [10, 11]还探讨了虚拟现实技术用于阿尔茨海默病患者认知训练和诊断的应用。基因组、转录组、代谢物、影像和临床方面都已纳入近期关于阿尔茨海默病的创新技术和多模态数据处理的研究 [12, 13]。这些前沿方法提高了我们对阿尔茨海默病的理解，并为更好的疾病管理和治疗开发开辟了可能性。然而，数据的规模和复杂性使得整合和分析困难且通常超出传统计算方法的范围 [14, 15 和 16]。
 
-精准医学是机器学习（ML）技术快速发展和广泛采用的一个领域 [17]。深度学习（DL）技术的最新发展提高了分析和大型复杂数据集的精确度和能力 [18, 19]。ML 方法已应用于众多健康相关领域，包括癌症 [20, 21]、心血管疾病 [22]、HIV/AIDS [23]等。还提供了使用 ML 方法与特定数据类型相结合的全面评估，例如单细胞 RNA 测序 [24, 25]、医学影像 [26, 27 和 28]，以及多组学数据的融合 [29, 30]。然而，使用 ML 技术进行阿尔茨海默病研究仍处于起步阶段。鉴于该疾病的复杂性，ML 技术可以极大地提高我们对阿尔茨海默病的理解和治疗能力。
+精准医学是机器学习（`ML`）技术快速发展和广泛采用的一个领域 [17]。深度学习（`DL`）技术的最新发展提高了分析和大型复杂数据集的精确度和能力 [18, 19]。`ML` 方法已应用于众多健康相关领域，包括癌症 [20, 21]、心血管疾病 [22]、HIV/AIDS [23]等。还提供了使用 `ML` 方法与特定数据类型相结合的全面评估，例如单细胞 RNA 测序 [24, 25]、医学影像 [26, 27 和 28]，以及多组学数据的融合 [29, 30]。然而，使用 `ML` 技术进行阿尔茨海默病研究仍处于起步阶段。鉴于该疾病的复杂性，`ML` 技术可以极大地提高我们对阿尔茨海默病的理解和治疗能力。
 
 ## 3. Scope of Intelligent Computing in Disease Classification
 
-
-
-
-
 阿尔茨海默病（`AD`）患者通常存在一个漫长的早期阶段，在此期间可使用潜在的治疗方法来延迟或改变症状的出现。区分 `AD` 与轻度认知障碍（`MCI`）和健康对照组的能力一直是众多研究的重点，旨在可靠地识别患有 `AD` 的人群或患病风险增加的人群。影像数据，例如来自正电子发射断层扫描（`PET`）、脑电图（`EEG`）和磁共振成像（`MRI`）的数据，是分类研究中使用的主要数据类型。`Support vector machines`、`multi-layer perceptron’s`、`auto encoders` 和 `convolutional neural networks` 在早期从正常对照中对 `AD` 进行分类的阶段中被主要使用，分类准确率约为 90% [31, 32, 33, 34 和 35]。一些这些传统方法的改进版本，例如弹性网络正则化逻辑回归和贝叶斯高斯过程逻辑回归，也表现良好，准确率约为 95% [36, 37 和 38]。
 
-神经心理学数据的分析，包括语音记录的声学、语义和句法成分，也已使用机器学习技术进行。这些技术使用 `decision trees`、`support vector machines` 和 `random forests` 来达到约 80% 的准确率，使用提取的特征 [39, 40 和 41]。在以原始语言文本为重点的情况下，机器学习技术如 `decision trees` 和 `bagging` 实现了约 83% 的准确率 [42, 43]。相比之下，深度学习模型表现出色，在类似情况下超过了 90% 的准确率阈值。`Convolutional neural network-long short-term memory` 模型和 `deep neural network language models` 就是此类应用的两个例子 [39, 44]。Lyu [46] 提供了对使用 ML 技术分析 `AD` 患者神经心理学数据的更深入分析。
+神经心理学数据的分析，包括语音记录的声学、语义和句法成分，也已使用机器学习技术进行。这些技术使用 `decision trees`、`support vector machines` 和 `random forests` 来达到约 80% 的准确率，使用提取的特征 [39, 40 和 41]。在以原始语言文本为重点的情况下，机器学习技术如 `decision trees` 和 `bagging` 实现了约 83% 的准确率 [42, 43]。相比之下，深度学习模型表现出色，在类似情况下超过了 90% 的准确率阈值。`Convolutional neural network-long short-term memory` 模型和 `deep neural network language models` 就是此类应用的两个例子 [39, 44]。Lyu [46] 提供了对使用 `ML` 技术分析 `AD` 患者神经心理学数据的更深入分析。
 
 `ML` 和深度学习技术将来自各种来源的数据结合起来对疾病进行分类的能力是其额外的优势之一。先前的研究中使用了多模态数据的整合，例如 `MRI` 和 `PET` 使用 `stacked auto encoders`，或 `MRI` 和 `FDG-PET` 使用 `deep neural networks` [47, 48]。此外，许多研究将影像数据与患者特征联系起来，例如使用 `MRI` 和临床特征进行局部加权学习和 `XGBoost` [49, 50 和 51] 或使用 `support vector machines` 将 `MRI` 与脑脊液指标结合。深度神经网络还被用于整合来自多个组学平台的数据，包括 DNA 甲基化和基因表达数据 [52, 53]。Figure 14.1 显示了分类方法的 working model。
 
@@ -3783,7 +3684,7 @@ Syed Azhar Abbas Rizvi^(¹⁴)
 
 Figure 14.1: Working model for classification approach.
 
-### 4\. 智能计算在疾病分类中的挑战与机遇
+### 4. 智能计算在疾病分类中的挑战与机遇
 
 医疗保健行业中的人工智能（`AI`）主要关注开发算法和方法，旨在评估疾病检测中系统行为的准确性。医学诊断的目标是识别导致患者症状和临床表现的确切疾病或疾病。通常，患者的病史和体格检查会产生诊断信息。
 
@@ -3791,7 +3692,7 @@ Figure 14.1: Working model for classification approach.
 
 数据用作 `ML` 的输入资源，`ML` 是 `AI` 的一个子集。它使用指定的数学函数产生分类或回归等结果，这些结果通常对人类来说难以实现。例如，使用 `ML` 简化了在显微图像中识别癌细胞的工作，这通常仅靠目视检查很难做到。此外，新研究表明，深度学习作为 `ML` 的一个分支，在肺炎、心力衰竭、阿尔茨海默病和乳腺癌等多种疾病的识别中准确率超过 90% [54]。`ML` 算法在疾病诊断中日益增长的使用强调了该技术在医疗行业中的价值。
 
-### 5\. 智能计算和机器学习在阿尔茨海默病诊断中的作用
+## 5. 智能计算和机器学习在阿尔茨海默病诊断中的作用
 
 为了提高准确性、效率以及疾病的早期检测，智能计算和 `ML` 在阿尔茨海默病（`AD`）的诊断中发挥着关键作用。它们对 `AD` 诊断的贡献的关键要素包括以下内容：
 
@@ -3803,26 +3704,28 @@ Figure 14.1: Working model for classification approach.
 
 4. **Integration of multimodal data:** 智能计算使多种数据源的合并成为可能，例如临床数据、遗传信息和神经影像数据。多种数据源的组合提供了对个人健康更全面的了解，从而提高了 `AD` 诊断的准确性。
 
+#### 5.1 个性化医疗保健
 
-
-
-
-#### 5. 个性化医疗保健
 使用 `ML`，针对 `AD` 患者的治疗计划和护理方法可以根据其特征进行量身定制。这种方法也称为个性化或精准医学，可能带来更量身定制且更成功的解决方案。
 
-#### 6. 辅助技术
+#### 5.2 辅助技术
+
 机器学习在创建帮助 `AD` 患者的工具方面发挥着至关重要的作用。这些技术包括诸如监测工具、定制认知训练计划以及用于早期症状检测的语音和语言处理等功能。
 
-#### 7. 药物开发
+#### 5.3 药物开发
+
 机器学习有助于 `AD` 药物的搜索和创建。机器学习算法可以通过分析大型数据集来识别有前景的药物候选者，预测其疗效，并加快药物开发过程。
 
-#### 8. 数据管理
+#### 5.4 数据管理
+
 在智能计算机的帮助下，庞大的医疗数据可以得到有效管理，使医疗服务提供者能够访问用于 `AD` 诊断和治疗的最新的和有用的数据。
 
-#### 9. 研究与见解
+#### 5.5 研究与见解
+
 机器学习可以从 `AD` 研究数据中提供新颖的见解，帮助研究人员和医疗专业人员了解疾病背后的基本机制和潜在的治疗靶点。
 
-#### 10. 远程医疗
+#### 5.6 远程医疗
+
 远程医疗和智能计算可以实现对 `AD` 患者的远程诊断和监测，提高在偏远或服务不足地区获得专业护理的途径。
 
 总之，`ML` 和智能计算是诊断阿尔茨海默病的宝贵工具。它们对于早期检测、准确诊断、专业护理和持续研究至关重要，所有这些都有助于患有这种致命疾病的患者过上更好的生活。
@@ -3851,6 +3754,8 @@ Figure 14.1: Working model for classification approach.
 
 8. Pillai, J. and Bonner-Jackson, A. (2015). 用于监测阿尔茨海默病临床试验中功能和认知下降的信息通信技术设备的综述。J. Health Engg., 6, 71–84。
 
+
+
 9. Elfaki, A. O. and Alotaibi, M. (2018). M-健康应用在抗击阿尔茨海默病中的作用：现状与未来方向。mHealth, 4, 32。
 
 10. García-Betances, R. I., Waldmeyer, M. T. A., Fico, G., and Cabrera-Umpiérrez, M. F. (2015). 虚拟现实技术在阿尔茨海默病中应用的简明概述。Front. Aging Neurosci., 7, 80。
@@ -3876,9 +3781,6 @@ Figure 14.1: Working model for classification approach.
 20. Cruz, J. A. and Wishart, D. S. (2006). 机器学习在癌症预测和预后中的应用。Cancer Inform., 2, 59–77。
 
 21. Kourou, K., Exarchos, T. P., Exarchos, K. P., Karamouzis, M. V., and Fotiadis, D. I. (2015). 机器学习在癌症预后和预测中的应用。Comput. Struct. Biotechnol. J., 13, 8–17。
-
-
-
 
 22. Al'Aref, S. J., Anchouche, K., Singh, G., Slomka, P. J., Kolli, K. K., Kumar, A., et al. (2019). 心血管疾病中机器学习临床应用及其与心脏影像的相关性. Eur. Heart J., 40, 1975–1986.
 
@@ -3944,14 +3846,11 @@ Figure 14.1: Working model for classification approach.
 
 53. Park, C., Ha, J., and Park, S. (2020). 基于整合基因表达和 DNA 甲基化数据集的深度神经网络阿尔茨海默病预测. Expert Syst. Appl., 140, 112873.
 
-
-
-
 54. Ahsan, M. M. and Siddique, Z. 基于机器学习的 heart disease diagnosis：系统文献综述。Artificial Intelligence in Medicine, 128, 102289. [`doi.org/10.1016/j.artmed.2022.102289`](http://dx.doi.org/10.1016/j.artmed.2022.102289)。
 
 # 15 探索 AI 赋能犯罪：对色情图像变形进行深入分析
 
-Anany Sharma^(¹⁵)
+Anany Sharma^(15)
 
 计算机科学系，Sherwood College of Professional Management，Lucknow，印度
 
@@ -3961,7 +3860,7 @@ Anany Sharma^(¹⁵)
 
 **关键词：** 人工智能，深度伪造，图像变形，网络犯罪，社会影响，心理影响
 
-### 1. Introduction
+## 1. Introduction
 
 近年来，深度伪造技术 \[15\] 的快速发展导致操纵成人内容的创建和传播急剧增加，对隐私、同意和社会规范提出了前所未有的挑战 \[7\]。深度伪造裸体图像已成为这一现象令人担忧的一个方面，削弱了人们对视觉媒体的信任，并加剧了围绕在线隐私的伦理困境。这些欺骗性创作的隐秘性质凸显了打击其泛滥的创新和主动解决方案的迫切需求。
 
@@ -3969,9 +3868,11 @@ Anany Sharma^(¹⁵)
 
 在后续章节中，我们将深入探讨我们方法的技术细节，呈现实证结果，并讨论伦理考虑和潜在应用。通过这种全面的方法，我们旨在提供一种整体解决方案，以应对当代社会中深度伪造裸体图像所带来的多方面挑战（Figure 15.1）。
 
-![Figure 15.1: Difference between a deep-fake and an original image.](img/fig15_1_C.jpg`)
+![Figure 15.1: Difference between a deep-fake and an original image.](img/fig15_1_C.jpg)
 
 Figure 15.1: Difference between a deep-fake and an original image.
+
+
 
 本文提出了一种开创性的方法来打击深度伪造裸体图像的祸害，利用尖端的人工智能（AI）技术扫描和分析受害者操纵图像的 RGB 值、身体姿势和乳房大小。除了单纯的检测之外，我们的系统还踏上了验证和受害者保护的变革之旅。通过细致的肤色分析、身体姿势和乳房姿势分析、图像搜索和先进的深度学习方法，我们的目标不仅是识别深度伪造裸体内容，还要赋予用户收回其被篡改图像的能力。通过这样做，我们寻求恢复那些同意被侵犯者的自主权，并解决可能成为这种不断发展的数字欺骗的无意受害者的个人日益增长的担忧。
 
@@ -3998,10 +3899,6 @@ Figure 15.3: Crimes regarding image morphing \[2\]。
 ## 4. Methodology
 
 ### 4.1. Data collection and preparation
-
-
-
-
 
 本研究中使用的数据集在我们方法论的开发和评估中发挥着重要作用。在本研究的背景下，重点是深度伪造裸体图像，这引发了非常重大的伦理、隐私和网络安全问题。深度伪造内容的普遍性促使人们积极努力检测和减轻其有害影响，使得对此类内容的全面分析成为一项至关重要的研究工作。 Figure 15.4: Creation of nudes from deep-fake. 显示了使用深度伪造生成此类图像。
 
@@ -4101,20 +3998,20 @@ Figure 15.7: Spatial analysis.
 
 缩放：为了适应图像大小和透视的变化，AI 可能会应用缩放或归一化技术以确保一致的空间分析。
 
-
-
-
-
 #### 比例
+
 在基础测量之外，我们的 AI 还深入分析身体部位的长宽比和比例。它检查各种尺寸之间的相互关系，寻找可能暗示图像被操纵的不一致之处。
 
 #### 轮廓和曲率
+
 系统还分析裸露身体部位的轮廓和曲率。这涉及评估线条的平滑度和自然流畅度，这可以揭示深度伪造内容中引入的修改或失真。
 
 #### 几何特征
+
 我们的 AI 系统识别图像中的关键几何特征，例如角度和形状。这些特征有助于全面理解被摄体的姿势和身体位置。
 
 #### 与其他分析的集成
+
 空间关系分析被整合到更广泛的方法论中，补充了诸如尺寸分析、姿势分析和肤色分析等其他组件。这些分析共同提供了对图像内容的全面评估。
 
 ## 11. 在检测深度伪造内容中的意义
@@ -4179,15 +4076,13 @@ Figure 15.8: Breast size detection.
 
 10. He, Y., et al., (2019). A novel algorithm for object color recognition based on RGB sensors. Sensors, 19(3), 645.
 
+
+
 11. Al-Tairi, Z. H., Rahmat, R. W., Saripan, M. I., & Sulaiman, P. S. (2014). Skin segmentation using YUV and RGB color spaces. Journal of information processing systems, 10(2), 283–299. https://koreascience.kr/article/JAKO201419553341723.pdf.
 
 12. Yen, C. H., Huang, P. Y., and Yang, P. K. (2020). An intelligent model for facial skin colour detection. International Journal of Optics, 2020, 1–8. https://doi.org/10.1155/2020/1519205.
 
 13. Sherrah, J., and Gong, S. (2001). Skin Colour Analysis. University of Edinburgh.homepages.inf.ed.ac.uk, 1, 1–5.
-
-
-
-
 
 14. Ana, C. A. M. P., Maria do Rosário Diasde Oliveira, L., Jonathan, Y. M., José, R. F., Edmund, C. B., Elizabeth, A. G. F. (2015). Body posture after mastectomy: Comparison between immediate breast reconstruction versus mastectomy alone. Physiother. Res. Int., 22(1), e1642.
 
@@ -4201,7 +4096,7 @@ Department of Computer Science and Engineering, PSNA College of Engineering and 
 
 ### Abstract
 
-在当今世界，穿行于各国道路上的车辆数量已达到惊人的规模。不幸的是，车辆交通的激增也导致道路相关死亡人数令人担忧地增加，而道路事故是这一 grim 统计数据的主要贡献者。在导致道路事故的众多因素中，超速行驶仍然是一个突出且可以预防的原因。尽管道路上设有大量标示限速的路牌，但令人不安的是，许多司机选择忽视这些规定，往往造成灾难性后果。为应对这一紧迫的全球性问题，我们开发了一种创新解决方案，以遏制超速行驶并提高道路安全。我们的系统名为“智能速度适应系统”，简称 ISAS，旨在自动检测道路上的限速，并在不干扰驾驶员或交通流的情况下无缝调整车辆速度。这项开创性技术利用先进传感器、数据分析算法和车辆控制机制，创造更安全的驾驶环境。
+在当今世界，穿行于各国道路上的车辆数量已达到惊人的规模。不幸的是，车辆交通的激增也导致道路相关死亡人数令人担忧地增加，而道路事故是这一 grim 统计数据的主要贡献者。在导致道路事故的众多因素中，超速行驶仍然是一个突出且可以预防的原因。尽管道路上设有大量标示限速的路牌，但令人不安的是，许多司机选择忽视这些规定，往往造成灾难性后果。为应对这一紧迫的全球性问题，我们开发了一种创新解决方案，以遏制超速行驶并提高道路安全。我们的系统名为“智能速度适应系统”，简称 `ISAS`，旨在自动检测道路上的限速，并在不干扰驾驶员或交通流的情况下无缝调整车辆速度。这项开创性技术利用先进传感器、数据分析算法和车辆控制机制，创造更安全的驾驶环境。
 
 **关键词：** 道路相关死亡、道路事故、速度限制、智能速度适应、数据分析算法、更安全的驾驶环境、全球道路安全、交通流增强
 
@@ -4209,25 +4104,21 @@ Department of Computer Science and Engineering, PSNA College of Engineering and 
 
 在我们快速发展的世界中，各国道路上车辆的激增已达到前所未有的水平。然而，车辆交通的激增带来了沉重的代价——道路相关死亡人数令人震惊地增加，而道路事故是这一令人沮丧的统计数据的重要贡献者。在导致这些悲惨事故的多种因素中，超速行驶仍然是一个突出且重要的是可以预防的原因。尽管醒目的路牌明确标示了限速，但令人痛心的司机数量选择忽视这些重要规定，往往造成毁灭性后果。
 
-伤亡人数和对驾驶员及乘客安全的担忧持续上升。成功降低交通事故危险的国家都采用了“系统方法”来保障道路安全 [1]。速度是影响道路安全的主要因素。速度与碰撞发生的频率以及其中所受伤害的严重程度之间存在明确的相关性。该框架提出了一种利用云计算和软件即服务 SaaS 模块以及全球定位系统 GPS 的限速摄像头监控/追踪系统，以提供有用的道路信息来提高安全性。此外，它还会通知驾驶员前方路口、标志和减速带。
+伤亡人数和对驾驶员及乘客安全的担忧持续上升。成功降低交通事故危险的国家都采用了“系统方法”来保障道路安全 [1]。速度是影响道路安全的主要因素。速度与碰撞发生的频率以及其中所受伤害的严重程度之间存在明确的相关性。该框架提出了一种利用云计算和软件即服务 `SaaS` 模块以及全球定位系统 `GPS` 的限速摄像头监控/追踪系统，以提供有用的道路信息来提高安全性。此外，它还会通知驾驶员前方路口、标志和减速带。
 
-认识到解决这一全球性问题和提高道路安全的迫切需求，我们着手开发一种创新解决方案。我们推出“智能速度适应系统” ISAS——一项精心设计的前沿技术，可自动检测并响应道路限速。该系统运行无缝高效，可在不干扰驾驶员或自然交通流的情况下调整车辆速度。
+认识到解决这一全球性问题和提高道路安全的迫切需求，我们着手开发一种创新解决方案。我们推出“智能速度适应系统” `ISAS`——一项精心设计的前沿技术，可自动检测并响应道路限速。该系统运行无缝高效，可在不干扰驾驶员或自然交通流的情况下调整车辆速度。
 
 这项开创性技术的核心在于其利用先进传感器、复杂的数据分析算法和精确的车辆控制机制。这些要素共同创造了一个优先考虑道路安全并有效缓解超速的环境。
 
-在本文中，我们深入探讨 ISAS 的细节，探索其架构、功能以及支撑其的先进技术。此外，我们还讨论了广泛实施该系统可能带来的潜在益处，包括显著减少道路事故、伤害和死亡。通过以创新且不具干扰性的方式解决超速这一关键问题，我们的系统代表了促进所有人更安全道路的重要一步。
+在本文中，我们深入探讨 `ISAS` 的细节，探索其架构、功能以及支撑其的先进技术。此外，我们还讨论了广泛实施该系统可能带来的潜在益处，包括显著减少道路事故、伤害和死亡。通过以创新且不具干扰性的方式解决超速这一关键问题，我们的系统代表了促进所有人更安全道路的重要一步。
 
 ## 2. Related Works
 
-速度适应和控制系统的领域近年来经历了显著的转变，世界各国纷纷采用先进技术来提高道路安全。这些创新从传统的限速器到更复杂的智能速度适应系统不等。一个值得注意的发展是利用 GPS 技术精确识别车辆位置，并实时向驾驶员传达适当的限速信息。然而，当缺乏可靠的 GPS 信号时，这类系统将无法发挥作用，这就出现了一个关键挑战。为解决这一问题，研究人员和工程师一直在探索替代方法，包括传感器系统，将 GPS 与摄像头、LiDAR 和雷达技术相结合，以确保准确的限速检测。此外，将这些速度适应功能集成到导航和车联网系统中，为驾驶员辅助提供了一种全面的方法，将速度控制与交通更新和路线引导相结合。了解这些进步及其相关挑战对于智能速度适应系统的持续发展至关重要，为更安全、更高效的道路运输铺平道路。
+速度适应和控制系统的领域近年来经历了显著的转变，世界各国纷纷采用先进技术来提高道路安全。这些创新从传统的限速器到更复杂的智能速度适应系统不等。一个值得注意的发展是利用 `GPS` 技术精确识别车辆位置，并实时向驾驶员传达适当的限速信息。然而，当缺乏可靠的 `GPS` 信号时，这类系统将无法发挥作用，这就出现了一个关键挑战。为解决这一问题，研究人员和工程师一直在探索替代方法，包括传感器系统，将 `GPS` 与摄像头、`LiDAR` 和雷达技术相结合，以确保准确的限速检测。此外，将这些速度适应功能集成到导航和车联网系统中，为驾驶员辅助提供了一种全面的方法，将速度控制与交通更新和路线引导相结合。了解这些进步及其相关挑战对于智能速度适应系统的持续发展至关重要，为更安全、更高效的道路运输铺平道路。
 
-在全球范围内，交通事故是死亡和伤害的主要来源。低收入经济体受影响最大。道路交通事故 RTA 的大多数原因都是已知且可以避免的。Uchenna 等人在 2019 年进行的一项研究讨论了尼日利亚东南部阿南布拉州交通事故的原因和模式 [2]。他们回顾了 2010 年至 2014 年间发生的交通事故。信息来自联邦道路安全委员会阿南布拉州指挥部。提取的数据包括以下内容——事故涉及人数、年龄、性别和车辆类型。案件被归类为轻微，如果受害者在医院停留少于 24 小时；严重，如果受害者在医院停留超过 24 小时；致命，如果受害者死亡。导致交通事故的主要人为因素包括超速、车辆失控和鲁莽驾驶——所有这些都是可以避免的。
+在全球范围内，交通事故是死亡和伤害的主要来源。低收入经济体受影响最大。道路交通事故 `RTA` 的大多数原因都是已知且可以避免的。Uchenna 等人在 2019 年进行的一项研究讨论了尼日利亚东南部阿南布拉州交通事故的原因和模式 [2]。他们回顾了 2010 年至 2014 年间发生的交通事故。信息来自联邦道路安全委员会阿南布拉州指挥部。提取的数据包括以下内容——事故涉及人数、年龄、性别和车辆类型。案件被归类为轻微，如果受害者在医院停留少于 24 小时；严重，如果受害者在医院停留超过 24 小时；致命，如果受害者死亡。导致交通事故的主要人为因素包括超速、车辆失控和鲁莽驾驶——所有这些都是可以避免的。
 
 在匈牙利 [3] 以及整个欧洲联盟，道路安全是需要解决的最重要问题之一。机动车驾驶员认为与限速和超速相关的法规不太光荣和适当。对公布的限速的完全无视，通常被称为超速，极大地增加了碰撞的可能性并加剧了其严重性，鉴于伤亡和死亡的普遍性。当谈到道路交通安全问题时，包括超速、酒后驾驶和被动道路交通安全设备的使用，超速是最严重的问题。超速严重影响碰撞的严重性，特别是在涉及弱势驾驶员、行人和骑自行车的人时。
-
-
-
-
 
 日益增多的交通事故及其造成的创伤 \[7\] 对我们有限的资源和已经超负荷运转的医院造成了巨大的压力。交通事故是导致死亡和疾病的最可预防的原因之一。
 
@@ -4254,12 +4145,19 @@ Figure 16.2: ISAS 的工作流程。
 信号从主数据库发送到路边的 `FM` 发射器。它由 `FM` 发射器编码并传输。发射器在该频道上持续传输信号。每当车辆进入 `FM` 波的范围时，数据就会被行驶车辆中的读卡天线接收。接收到的数据发送到发动机控制单元。此接收到的数据将成为速度控制单元的命令。该单元随后负责根据限速控制车辆速度。它还通过显示屏以驾驶员的母语向驾驶员发送消息。这种母语是一种额外的附加功能。因此，它基本上显示限速并降低车辆速度。从接收器到 `ECU` 传输数据之前的计算如下 \[4, 5 和 6\]。
 
 1. 初始速度调整：当 `ISAS` 检测到限速（`SL`）变化时，它按如下方式计算所需速度变化（`ΔV`）：
+
    `ΔV = SL − V`
+
 2. 加速度计算：为了实现这种速度变化，`ISAS` 使用以下公式计算所需加速度（`A_req`），假设加速度恒定：
+
    $$A_{\text{req~}} = \frac{V}{t}$$
+
 3. 反应时间调整：`ISAS` 考虑反应时间（`RT`）以逐渐调整加速度。它可能会使用更平滑的加速度曲线以避免突然变化。典型的曲线可能是随时间线性加速。
+
 4. 距离调整：`ISAS` 根据当前速度和加速度计算调整速度所需的距离：
+
    `D_req = (V + 0.5 × A_req × t²)`
+
 比较安全跟车距离：`ISAS` 确保速度调整的计算距离（`D_req`）在前方车辆的安全跟车距离（`D_safe`）范围内。如果 `D_req` 小于 `D_safe`，系统可能会降低加速度以保持安全跟车距离。完成所有这些计算后，限速的速度将被控制。道路上只有两种可能的方式。一种是以限速行驶，另一种是以超速行驶。如果车辆速度低于限速，系统不执行任何操作。如果车辆速度高于限速，则在进行上述所有计算后会自动降低速度。
 
 这些计算是为了避免事故和误解而进行的。由于这是无线电波，天气变化不会影响信号。即使对于维护，我们也可以在一个发射器中为不同位置传输两个不同的信号。系统将自动调整车辆速度。不同的道路区域，例如学校区域、医院区域等，我们可以有效地将信息传达给车辆。我们还可以通过该系统向驾驶员传递道路安全信息。施工细节和天气预报也可以通过我们的系统传达给驾驶员。我们还可以传达救护车是否驶入车道的信息。因此，它为救护车铺平了道路，使道路使用效率非常高。
@@ -4269,10 +4167,6 @@ Figure 16.2: ISAS 的工作流程。
 总之，本提案中描述的 `ISAS` 利用 `FM` 波传输重要的限速信息，促进了道路安全的增强。通过战略性部署 `FM` 发射器并为车辆配备 `FM` 接收器，该系统确保驾驶员不断了解限速并能够相应地调整速度。从初始速度调整到反应时间考虑以及保持安全跟车距离所涉及的复杂计算，说明了该系统对事故预防和促进负责任驾驶的承诺。有了 `ISAS`，我们不仅引入了一项技术创新，而且在使我们的道路对每个人都更安全方面迈出了重要一步。
 
 ### 参考文献
-
-
-
-
 
 1. Abdelsalam, M. and Bonny, T. (2019). IoV 道路安全：车辆限速系统。2019 国际通信信号处理应用会议 (ICCSPA)，1–6。
 
@@ -4309,13 +4203,18 @@ Vivek Rai^(¹⁷)
 图 17.1：工业 4.0 的关键组成部分。
 
 1. **互联性：** 机器、设备和系统相互连接以进行通信和决策。
+
 2. **数据透明度：** 在整个生产链中实时收集和共享数据。
+
 3. **信息分析：** 使用数据分析来提高产品质量、预测维护需求并优化流程。
+
 4. **自动化：** 使用机器人和智能系统快速自动化任务。
+
 5. **资源效率：** 优化资源和能源的使用。
+
 6. **定制化：** 更灵活和个性化的制造取代了大规模生产。
 
-工业 4.0 使用物联网 (IoT)、人工智能 (AI)、大数据和自动化等技术来提高制造的效率、灵活性和竞争力。
+工业 4.0 使用物联网 (`IoT`)、人工智能 (`AI`)、大数据和自动化等技术来提高制造的效率、灵活性和竞争力。
 
 ### 1.2. 工业 4.0 中先进计算的需求
 
@@ -4326,10 +4225,15 @@ Vivek Rai^(¹⁷)
 图 17.2：工业 4.0 中先进计算的需求。
 
 1. 数据处理：为了处理、分析和基于智能工厂产生的大量数据做出决策，需要强大的计算机。
+
 2. 复杂算法：优化工业流程需要复杂的算法，这可能在计算上很密集。
-3. 机器学习 (ML)：预测性维护、质量保证和流程优化都需要大量的计算能力，使机器学习和人工智能至关重要。
+
+3. 机器学习 (`ML`)：预测性维护、质量保证和流程优化都需要大量的计算能力，使机器学习和人工智能至关重要。
+
 4. 网络安全：随着系统变得更加互联，通常涉及复杂的加密和威胁检测算法的强大网络安全措施是必不可少的。
+
 5. 仿真：这些耗费时间和资源耗费的工具经常用于设计、测试和优化产品和流程。
+
 6. 为了充分发挥工业 4.0 的潜力，先进的计算技能对于确保数据能够成功和高效地处理至关重要。
 
 ### 1.3. 量子计算的出现
@@ -4337,8 +4241,11 @@ Vivek Rai^(¹⁷)
 利用量子力学概念，量子计算是计算的新范式。量子计算的关键特征包括：
 
 1. 量子位：也称为量子比特，是可以在一次存在于多个状态的信息单元（叠加），并且可以相互纠缠。这种特性使得并行处理大量可能性成为可能。
+
 2. 量子门：量子电路使用量子门来操纵量子位并执行量子计算。
+
 3. 指数加速：量子计算机有可能以指数级更快的速度解决某些问题，例如仿真、优化和密码学。
+
 4. 障碍：由于量子计算仍处于起步阶段，量子位稳定性和纠错是它必须克服的障碍。
 
 量子计算的出现有望更有效地解决工业 4.0 中的复杂问题，例如简化供应链、破坏当前加密协议以及在量子水平上模拟材料。工业 4.0 和量子计算被视为一种强大的力量，可以通过实现更快、更准确和更节能的操作来彻底改变工业和制造流程。
@@ -4348,44 +4255,35 @@ Vivek Rai^(¹⁷)
 ### 2.1. 量子硬件发展
 
 1. 量子位 (qubits)：研究人员和企业开发了各种量子位技术。这些包括拓扑量子位、囚禁离子量子位、超导量子位等。关于稳定性、相干性和可扩展性，每种都有优点和缺点。
-2. 量子位相干性：为了降低量子计算中的错误，必须增加量子位相干时间。通过纠错方法，在延长量子位相干方面取得了重大进展。
-3. 量子体积：为了衡量量子硬件的整体有效性，量子体积结合了量子位的数量、量子位连接性和错误率。量子体积的稳步上升证明了硬件的进步。
 
-### 2.2. 量子软件和算法
+2. 量子位相干性：为了降低量子计算中的错误，必须增加量子位相干时间。通过纠错方法，在延长量子位相干方面取得了重大进展。
+
+
+
+### 3. 量子体积
+为了衡量量子硬件的整体有效性，量子体积结合了量子位的数量、量子位连接性和错误率。量子体积的稳步上升证明了硬件的进步。
+
+## 2.2. 量子软件和算法
 
 1. 量子编程语言：开发了多种量子编程语言和框架，使研究人员和开发人员更容易创建量子算法。值得注意的例子包括 `Quipper`、`Cirq` 和 `Qiskit`。
+
 2. 量子算法：为各种应用开发了量子算法，包括用于无结构搜索的 Grover 算法、用于大数分解的 Shor 算法，以及用于化学和材料科学的量子模拟。
+
 3. 混合量子-经典方法：经典计算机和量子计算经常一起使用。用于解决复杂问题的混合量子-经典算法变得越来越普遍。
 
-### 2.3. 量子计算公司和研究计划
+## 2.3. 量子计算公司和研究计划
 
+### 1. 主要参与者
 
+1. `IBM`：`IBM` 一直是量子计算领域的重大参与者，创建了 `IBM Q System One` 并通过 `IBM quantum experience` 平台使量子计算机得以普及。他们还帮助开发了 `Qiskit`，这是一款开源量子计算程序。
 
+2. `Google`：凭借其 53 量子位的 `Sycamore` 处理器，`Google` 实现了量子霸权，证明其能够比传统超级计算机更快地完成给定任务。`Google` 正在积极研究应用和量子算法。
 
+3. `Rigetti`：以超导量子位技术而闻名，`Rigetti` 也使其量子处理器可通过云访问。他们专注于量子软件和硬件的创建。
 
-#### 1. 主要参与者
+4. `Microsoft`：为了让程序员能够从事量子算法工作，`Microsoft` 已投资拓扑量子位，并正在开发其量子计算平台 `Azure Quantum`。
 
-1. **IBM**：`IBM` 一直是量子计算领域的[content]
-
-#### 1. 主要参与者
-
-1. **IBM**：`IBM` 一直是量子计算领域的[content]
-
-#### 1. 主要参与者
-
-1. **IBM**：`IBM` 一直是量子计算领域的[content]
-
-#### 1. 主要参与者
-
-1. **IBM**：`IBM` 一直是量子计算领域的重大参与者，创建了 `IBM Q System One` 并通过 `IBM quantum experience` 平台使量子计算机得以普及。他们还帮助开发了 `Qiskit`，这是一款开源量子计算程序。
-
-2. **Google**：凭借其 53 量子位的 `Sycamore` 处理器，`Google` 实现了量子霸权，证明其能够比传统超级计算机更快地完成给定任务。`Google` 正在积极研究应用和量子算法。
-
-3. **Rigetti**：以超导量子位技术而闻名，`Rigetti` 也使其量子处理器可通过云访问。他们专注于量子软件和硬件的创建。
-
-4. **Microsoft**：为了让程序员能够从事量子算法工作，`Microsoft` 已投资拓扑量子位，并正在开发其量子计算平台 `Azure Quantum`。
-
-5. **其他企业和项目**：除这些主要参与者外，世界各地众多初创公司和研究项目也在推动量子计算发展。`IonQ`（囚禁离子量子位）、`D-Wave`（量子退火机）以及基于大学的学术研究计划就是几个值得注意的例子。
+5. 其他企业和项目：除这些主要参与者外，世界各地众多初创公司和研究项目也在推动量子计算发展。`IonQ`（囚禁离子量子位）、`D-Wave`（量子退火机）以及基于大学的学术研究计划就是几个值得注意的例子。
 
 量子计算机可以解决 `Complex optimization` 和模拟问题，这些问题在工业 4.0 中至关重要。例如，量子算法可以通过优化供应链、生产方法和能源使用来降低制造业成本 [1]。量子计算可以加速 `ML` 算法。量子 `ML` 模型如量子支持向量机（`QSVM`）已展示出改进的模式识别能力，可用于制造业的预测性维护 [2]。如今，在工业 4.0 时代，安全至关重要。量子计算机对经典加密系统构成风险，但也带来了量子安全加密技术的希望，确保相关行业的数据安全 [3]。量子计算可以通过有效管理库存、运输和需求预测来改善供应链管理。这可能导致更少的浪费和更高的效率 [4]。量子计算可以大大加速药物发现和材料科学。通过模拟分子和原子相互作用，可能产生具有独特性能的新材料和新药物 [5]。量子算法可以通过最大化各类流程的能源消耗来帮助减少行业的碳足迹 [6]。量子计算可用于提高供应链安全，通过提高可追溯性并降低伪造。通过量子抗性加密可以保护关键的供应链数据 [7]。量子传感器可以极大地提高 `IoT` 设备的精度，从而提高其用于监控和管理工业流程的可靠性 [8]。量子计算使实时、高精度的数据分析和决策成为可能，可改善制造中的流程控制 [9]。量子计算可用于模拟和优化环境因素，如空气质量、水资源管理和气候建模，以帮助行业减少其环境影响 [10]。
 
@@ -4421,38 +4319,42 @@ Umar 等人 [15] 讨论了使用量子传感器来提高 `IoT` 设备的准确�
 
 量子计算可以以多种方式改变工业 4.0，但它也有一些局限性和挑战，必须在成功集成之前克服。以下是量子计算在工业 4.0 中的一些主要困难和限制：
 
-1. **可扩展性与纠错**：量子计算机以对错误敏感而闻名，可能受到不完美的量子门和外部噪声的损害。在保持错误率较低的同时增加量子位数是非常困难的。必须使用有效的纠错码，如量子纠错，但它们实施成本高昂。这使得开发现实世界、无错误的量子计算变得困难。
-
-
-
-
+1. 可扩展性与纠错：量子计算机以对错误敏感而闻名，可能受到不完美的量子门和外部噪声的损害。在保持错误率较低的同时增加量子位数是非常困难的。必须使用有效的纠错码，如量子纠错，但它们实施成本高昂。这使得开发现实世界、无错误的量子计算变得困难。
 
 ### 2. 硬件和软件开发挑战
+
 开发可靠、稳定的量子处理器是一项具有挑战性的任务，因为量子硬件仍处于起步阶段。由于许多量子计算机仍处于嘈杂中等规模量子（NISQ）时代，其量子比特数量和错误率受到限制。创建能够利用量子硬件的量子算法和软件是困难的。合格的量子软件开发人员缺乏，且量子编程语言和工具仍在发展中。
 
 ### 3. 监管和伦理考量
+
 该技术快速发展引发了人们对量子计算对密码学潜在影响的担忧。量子计算机可能会破解广泛使用的加密技术，这对数据安全可能产生严重影响。规范量子计算的法律仍在制定中，关于出口限制、知识产权以及量子计算用于军事或监视目的等伦理问题的讨论仍在进行。
 
 ### 4. 成本和可及性
+
 构建和维护量子计算基础设施可能非常昂贵。低温系统和量子处理器的开发都与高成本相关，两者都需要极低的温度。由于这种价格，只有某些组织才能获得量子计算技术，可能导致这些组织与其他组织之间出现数字鸿沟。
 
 ### 5. 用例有限
+
 尽管量子计算具有巨大潜力，但它并非万能药。量子算法对某些问题和应用有利，例如量子模拟、密码学和优化。找到量子计算的实际用例仍然困难，许多现实世界问题可能无法从中受益。
 
 ### 6. 量子退相干
+
 量子态极其脆弱，容易受到退相干的影响，即由于与环境相互作用导致量子信息丢失。对于量子计算保持准确性而言，管理和减少退相干至关重要。
 
 ### 7. 能耗
+
 量子计算机需要极低的工作温度，这可能导致高能耗。特别是在可持续性和环境问题方面，降低量子计算的能源需求至关重要。
 
 总之，量子计算对工业 4.0 具有巨大潜力，但也存在需要解决的诸多问题。需要持续的创新、研究以及不同量子计算生态系统利益相关者之间的合作来克服这些挑战。随着该领域的发展，我们可以预期在克服这些障碍和最大化量子计算在工业 4.0 及以外的潜力方面取得进展。
 
-### 5. 结论
+## 5. 结论
+
 通过解决复杂问题并改善工业运营的各个方面，量子计算有可能显著改变工业 4.0。它可以加速模拟和优化，从而在生产和物流中实现更有效的资源管理。在量子计算时代，量子安全密码学对于工业 4.0 系统的安全是必要的。制药、材料工程及相关领域可能因使用量子计算机加速药物发现、材料科学和产品设计而取得突破。预测性维护、质量控制和数据分析都可从各工业部门改进的机器学习和人工智能能力中受益。量子计算可通过简化供应链和库存管理来减少浪费并提高生产率。传统行业可能受到量子计算的影响，尤其是在网络安全方面，当前加密技术可能变得无效。加速的药物发现流程可能导致新疗法和治疗方法的创建，从而严重扰乱制药行业。随着优化和预测分析的增强并产生成本节约和精简运营，物流和供应链行业将发生转变。能源和材料行业将受益于更有效的流程和材料设计，从而降低能源使用和环境影响。为了为量子时代做好准备，行业利益相关者应投资于硬件、软件和量子抗性密码学的开发。未来的研究应更侧重于量子算法，并应增加对该研究的资助，以专门解决工业 4.0 带来的机遇和挑战，包括涉及模拟、机器学习和优化的应用。推广量子教育和培训也是必要的。最后一步还必须确定实际用例。行业领导者应在各自行业内确定量子计算能提供最大价值的现实应用，并启动试点项目来探索这些可能性。
 
 总而言之，量子计算有可能通过解决困难问题和开辟新的机遇来改变工业 4.0。需要学术界、企业和政策制定者之间的多学科方法才能充分实现这一潜力。该战略应侧重于在各个工业部门的实际实施，并包括对基础设施、人才培养和伦理问题的投资。
 
 ### References
+
 1. Farhi, E., Goldstone, J., and Gutmann, S. (2014). A quantum approximate optimization algorithm. arXiv preprint arXiv:1411.4028. Cornell University, 1, 1–9. https://doi.org/10.48550/arXiv.1411.4028.
 
 2. Biamonte, J., Wittek, P., Pancotti, N., Rebentrost, P., Wiebe, N., and Lloyd, S. (2017). Quantum-enhanced machine learning. Nature, 549(7671), 195–202.
@@ -4479,10 +4381,6 @@ Umar 等人 [15] 讨论了使用量子传感器来提高 `IoT` 设备的准确�
 
 13. Schuld, M., Sinayskiy, I., and Petruccione, F. (2014). An introduction to quantum machine learning. Contemp. Phy., 56(2), 172–185.
 
-
-
-
-
 14. Hays, D. G. (2020). 工业 4.0 时代量子对网络安全的威胁. J. Cybersec., 6(1), tyaa017.
 
 15. Umar, S., Anisi, M. H., and Ahmed, M. (2017). 工业领域物联网：影响与挑战. IEEE Acc., 5, 4240–4251.
@@ -4491,7 +4389,7 @@ Umar 等人 [15] 讨论了使用量子传感器来提高 `IoT` 设备的准确�
 
 # 18 人工智能在网络安全中的影响
 
-Vikas Punia^(¹⁸)
+Vikas Punia^(18)
 
 #### 摘要
 
@@ -4513,23 +4411,63 @@ AI 在网络安全中不仅仅是技术改进，而是我们看待和解决数�
 
 通过考察 AI 在该领域的一些基本要素和贡献，探讨 AI 在网络安全中的重要性：
 
-* **高级威胁检测：** AI 驱动的网络安全解决方案擅长检测传统安全措施经常无法应对的微妙和复杂的网络威胁。机器学习算法能够分析大型数据集、检测异常并识别表明恶意行为的模式。这种主动方法使企业能够在风险变得更严重之前检测和应对。
-* **实时监控和响应：** AI 驱动的安全系统可以实时监控网络流量、系统记录和用户活动。它们可以快速检测可疑活动，从而对潜在威胁做出快速反应。自动化响应，例如隔离受感染设备或禁止恶意 IP 地址，可以在很少有人为参与的情况下执行。
-* **行为分析：** AI 可以建立正常用户和系统行为的基线，然后检测偏离情况。这种行为分析对于检测内部威胁、零日攻击和从未见过的全新恶意软件变种至关重要。
-* **钓鱼检测：** 钓鱼仍然是常见的网络危害。通过评估内容、发送者活动和已知的钓鱼趋势，AI 可以帮助识别钓鱼邮件和网站。这有助于保护用户免受欺诈诈骗。
-* **威胁情报：** AI 系统能够处理和分析来自各种来源的大量威胁情报数据。它们可以利用这些数据来识别潜在风险和弱点，使企业能够领先于网络敌人一步。
-* **减少误报：** 传统安全系统可能会产生大量误报，从而使安全人员不堪重负并导致警报疲劳。AI 可以通过提高威胁检测准确性并使警报相关且可操作来减少误报。
-* **安全自动化：** AI 驱动的自动化可以处理常规安全任务，使人类分析师能够专注于网络安全更复杂和战略性的方面。这种效率在大型、动态环境中尤其有用。
-* **预测分析：** 基于历史数据和当前模式，AI 模型可以预测可能的 安全问题。这种预测能力有助于企业成功分配资源并为即将到来的威胁做好准备。
-* **漏洞管理：** AI 可以帮助组织检测并优先处理其基础设施和应用程序中的风险。这使安全团队能够快速修复重要漏洞，从而减少攻击面。
 
 
+进入`/path/to/xxx`目录，找到`xxx.json`。
 
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
 
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
 
-**可扩展性：** AI 可以轻松扩展以满足不断增长的网络安全数据数量和复杂性。它能够在广阔且互联的数字世界中分析和响应威胁。
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
 
-**伦理考虑：** 随着 AI 越来越融入网络安全，伦理问题也随之出现。确保由 AI 驱动的安全系统无偏见、保护用户隐私并遵守法律和监管规范至关重要。
+```
+if (condVar > someVal) {console.log("xxx")}
+```
+
+# 高级威胁检测
+
+AI 驱动的网络安全解决方案擅长检测传统安全措施经常无法应对的微妙和复杂的网络威胁。机器学习算法能够分析大型数据集、检测异常并识别表明恶意行为的模式。这种主动方法使企业能够在风险变得更严重之前检测和应对。
+
+# 实时监控和响应
+
+AI 驱动的安全系统可以实时监控网络流量、系统记录和用户活动。它们可以快速检测可疑活动，从而对潜在威胁做出快速反应。自动化响应，例如隔离受感染设备或禁止恶意 IP 地址，可以在很少有人为参与的情况下执行。
+
+# 行为分析
+
+AI 可以建立正常用户和系统行为的基线，然后检测偏离情况。这种行为分析对于检测内部威胁、零日攻击和从未见过的全新恶意软件变种至关重要。
+
+# 钓鱼检测
+
+钓鱼仍然是常见的网络危害。通过评估内容、发送者活动和已知的钓鱼趋势，AI 可以帮助识别钓鱼邮件和网站。这有助于保护用户免受欺诈诈骗。
+
+# 威胁情报
+
+AI 系统能够处理和分析来自各种来源的大量威胁情报数据。它们可以利用这些数据来识别潜在风险和弱点，使企业能够领先于网络敌人一步。
+
+# 减少误报
+
+传统安全系统可能会产生大量误报，从而使安全人员不堪重负并导致警报疲劳。AI 可以通过提高威胁检测准确性并使警报相关且可操作来减少误报。
+
+# 安全自动化
+
+AI 驱动的自动化可以处理常规安全任务，使人类分析师能够专注于网络安全更复杂和战略性的方面。这种效率在大型、动态环境中尤其有用。
+
+# 预测分析
+
+基于历史数据和当前模式，AI 模型可以预测可能的 安全问题。这种预测能力有助于企业成功分配资源并为即将到来的威胁做好准备。
+
+# 漏洞管理
+
+AI 可以帮助组织检测并优先处理其基础设施和应用程序中的风险。这使安全团队能够快速修复重要漏洞，从而减少攻击面。
+
+# 可扩展性
+
+AI 可以轻松扩展以满足不断增长的网络安全数据数量和复杂性。它能够在广阔且互联的数字世界中分析和响应威胁。
+
+# 伦理考虑
+
+随着 AI 越来越融入网络安全，伦理问题也随之出现。确保由 AI 驱动的安全系统无偏见、保护用户隐私并遵守法律和监管规范至关重要。
 
 最后，AI 在网络安全中的重要性不容忽视。随着网络威胁的变化，AI 提供了一种动态且可适应的防御机制，增强了人类技能并强化了我们的数字环境，以抵御各种威胁。它是我们持续努力保护数字领域同时维护个人和企业信任与隐私的重要组成部分。
 
@@ -4538,16 +4476,18 @@ AI 在网络安全中不仅仅是技术改进，而是我们看待和解决数�
 ## 2. 目标
 
 1. **钓鱼检测：** AI 可以帮助识别钓鱼邮件和网站。这有助于保护消费者免受欺诈性诈骗。
+
 2. **安全自动化：** 日常安全活动可以由 AI 驱动的自动化处理，从而释放人类分析师去专注于网络安全更复杂和战略性的要素。这种效率在大型、动态环境中尤其有用。
 
 最后，AI 在网络安全中的重要性不容忽视。随着网络威胁的变化，AI 提供了一种动态且可适应的防御机制，增强了人类技能并强化了我们的数字环境，以抵御各种威胁。它是我们持续努力保护数字领域同时维护个人和企业信任与隐私的重要组成部分。
 
 1. **漏洞管理：** AI 可以帮助组织检测并优先处理其基础设施和应用程序中的风险。
-2. **用户和实体行为分析 (UEBA)：** 采用 AI 来监控和分析用户和实体活动以检测异常和潜在内部威胁的 UEBA 系统 [8]。
+
+2. **用户和实体行为分析 (UEBA)：** 采用 AI 来监控和分析用户和实体活动以检测异常和潜在内部威胁的 `UEBA` 系统 [8]。
 
 ## 3. 方法论
 
-多因素身份验证 (MFA) 用于进入敏感框架或记录。无论攻击者是否获得登录凭证，他们在没有后续验证因素的情况下访问账户将变得更加困难。基于域的消息认证 (DMARC) 用于验证电子邮件发送者的可信度。DMARC 防止电子邮件伪造和区域模仿。基于角色的访问控制 (RBAC) 用于将对安全自动化工具和配置的访问限制为仅授权人员。确保具备适当培训和技能的人员负责管理安全自动化。迁移计划制定详细的迁移计划以从 UEBA 过渡到新的安全解决方案。确保在转换期间对安全运营的干扰最小 [9] (Figure 18.1)。
+多因素身份验证 (`MFA`) 用于进入敏感框架或记录。无论攻击者是否获得登录凭证，他们在没有后续验证因素的情况下访问账户将变得更加困难。基于域的消息认证 (`DMARC`) 用于验证电子邮件发送者的可信度。`DMARC` 防止电子邮件伪造和区域模仿。基于角色的访问控制 (`RBAC`) 用于将对安全自动化工具和配置的访问限制为仅授权人员。确保具备适当培训和技能的人员负责管理安全自动化。迁移计划制定详细的迁移计划以从 `UEBA` 过渡到新的安全解决方案。确保在转换期间对安全运营的干扰最小 [9] (`Figure 18.1`)。
 
 ![Figure 18.1: Artificial intelligence working.](img/fig18_1_C.jpg)
 
@@ -4558,6 +4498,7 @@ Figure 18.1: Artificial intelligence working.
 我们将在本节讨论研究方法。本章简要介绍了通过文献研究等书籍、报告、文章等进行数据收集的定性研究方法。
 
 1. 定性/实验研究，其结构化并识别新的问题。
+
 2. 建构性研究，其开发问题的解决方案。
 
 在本次研究工作中，采用了实验研究方法。
@@ -4567,6 +4508,7 @@ Figure 18.1: Artificial intelligence working.
 本研究主要信息来自研究论文、期刊文章和书籍。额外数据从互联网和其他调查文献中收集。数据被筛选以找到相关基本相同的变量（即结构的属性），如精度、范围、准确性等。然后系统根据我们在主要阶段发现的变量进行组织和审视。结果是两张图表，总结了各个区域的属性并识别了发展。主观分析技术用于探索社会和文化现象。信息来源可以是动手工作、观察、文件、论文、文本或任何材料，如书籍或文章，已出版或尚未出版。定量方法用于内在科学，例如实验室试验记录、数学、统计数据和建模等。
 
 1. **数据收集：** 与人工智能安全专家、专业人士和政策制定者进行直接半结构化访谈，以收集丰富的定性数据。收集有关人工智能安全的相关文件、报告和学术文献以进行内容分析。
+
 2. **数据分析：** 利用主题分析识别访谈记录和文件中的重复主题和模式。使用定性数据分析软件进行系统性编码和分类 [10]。
 
 ## 5. 拟议工作
@@ -4575,11 +4517,7 @@ Figure 18.1: Artificial intelligence working.
 
 ## 6. 工作原理
 
-
-
-
-
-计算机化推理（人工智能）在在线保护中作为抵御不断发展的网络威胁的强大而多功能的守卫发挥作用。人工智能系统由复杂的机器学习算法驱动，首先从各种网络和系统来源收集和检查大量数据。这些数据为建立正常行为的基准奠定了基础，人工智能利用它进行分析。当出现偏差或异常时，人工智能擅长识别这些不一致，例如异常的网络流量模式或不寻常的用户行为，可能表明安全漏洞。通过整合威胁情报源和数据库，人工智能可以实时将网络活动与已知威胁和漏洞进行交叉引用。此外，人工智能在恶意软件检测中发挥着至关重要的作用，利用深度学习模型识别文件和网络流量中的恶意模式。它还可以通过预测分析分析历史数据来预测漏洞和薄弱环节。除了检测之外，人工智能还自动化事件响应流程，使其能够快速采取行动独立隔离受损系统并更新安全措施。自然语言处理（NLP）使人工智能能够分析基于文本的数据，例如电子邮件内容，以寻找网络钓鱼和社会工程企图的迹象。此外，用户新兴威胁并培养先进的防御 [11, 12 and 13] (Figure 18.2)。
+计算机化推理（人工智能）在在线保护中作为抵御不断发展的网络威胁的强大而多功能的守卫发挥作用。人工智能系统由复杂的机器学习算法驱动，首先从各种网络和系统来源收集和检查大量数据。这些数据为建立正常行为的基准奠定了基础，人工智能利用它进行分析。当出现偏差或异常时，人工智能擅长识别这些不一致，例如异常的网络流量模式或不寻常的用户行为，可能表明安全漏洞。通过整合威胁情报源和数据库，人工智能可以实时将网络活动与已知威胁和漏洞进行交叉引用。此外，人工智能在恶意软件检测中发挥着至关重要的作用，利用深度学习模型识别文件和网络流量中的恶意模式。它还可以通过预测分析分析历史数据来预测漏洞和薄弱环节。除了检测之外，人工智能还自动化事件响应流程，使其能够快速采取行动独立隔离受损系统并更新安全措施。自然语言处理（`NLP`）使人工智能能够分析基于文本的数据，例如电子邮件内容，以寻找网络钓鱼和社会工程企图的迹象。此外，用户新兴威胁并培养先进的防御 [11, 12 and 13] (`Figure 18.2`)。
 
 ![Figure 18.2: Artificial intelligence model.](img/fig18_2_C.jpg)
 
@@ -4611,19 +4549,15 @@ Figure 18.2: Artificial intelligence model.
 
 ## 9. Literature Review
 
-尽管在已完成并发表的众多研究项目中已经采用了各种各样的机器学习和深度学习方法，但在入侵检测系统领域尚未有显著报道。利用可用资源调查了入侵检测系统（IDS）领域发现的差距。在当代研究领域，机器学习方法在入侵检测系统中的创造性应用是另一个开创性的想法。
+尽管在已完成并发表的众多研究项目中已经采用了各种各样的机器学习和深度学习方法，但在入侵检测系统领域尚未有显著报道。利用可用资源调查了入侵检测系统（`IDS`）领域发现的差距。在当代研究领域，机器学习方法在入侵检测系统中的创造性应用是另一个开创性的想法。
 
 利用可用资源对入侵检测系统领域发现的差距进行了研究。在当代研究领域，利用机器学习技术于入侵检测系统中的创造性想法是另一个开创性的想法。
 
-对于攻击识别框架，主要问题是决定使用现有的基准数据集还是生成真实系统流量。批评认为，使用源自实际系统流量的数据集会产生不确定性，因为没有公认的方法来准确区分正常系统流量和攻击活动。本文在攻击发现框架的执行中使用基准数据集可以由此解释。其他攻击数据集包括 UNSW NB15、DARPA 1998 等。DARPA 1998 包含 42 个属性，其中一个是类别标签 [17]。
+对于攻击识别框架，主要问题是决定使用现有的基准数据集还是生成真实系统流量。批评认为，使用源自实际系统流量的数据集会产生不确定性，因为没有公认的方法来准确区分正常系统流量和攻击活动。本文在攻击发现框架的执行中使用基准数据集可以由此解释。其他攻击数据集包括 `UNSW NB15`、`DARPA 1998` 等。`DARPA 1998` 包含 42 个属性，其中一个是类别标签 [17]。
 
 ## 10. Conclusions
 
 在本文中，我们研究了人工智能（人工智能）对网络安全领域复杂影响。我们的研究表明，人工智能已成为一股变革力量，改变了组织抵御不断发展的网络危险的方式。通过对现有文献的广泛审查、实验数据分析和案例研究评估，我们得出了几个关键结论：
-
-
-
-
 
 基于计算机的智能进步，首先证明了其在扩大网络安全措施方面的充分性。人工智能算法、自然语言处理和深度学习模型已证明能够以传统方法无法企及的速度和规模识别和缓解威胁。人工智能驱动的解决方案在异常的早期识别、模式识别和实时威胁评估方面至关重要。
 
@@ -4651,11 +4585,11 @@ Figure 18.2: Artificial intelligence model.
 
 5. **人工智能在云安全中：** 随着组织继续向云迁移，人工智能对于保护云环境至关重要。人工智能驱动的工具将监控基于云的资源、识别配置错误并抵御云特定威胁。
 
-6. **AI 增强的终端安全：** 终端检测和响应（EDR）解决方案将集成更多人工智能能力以抵御恶意软件、零日漏洞利用和无文件攻击。人工智能将提供对终端的更好可见性并改善威胁预防。
+6. **AI 增强的终端安全：** 终端检测和响应（`EDR`）解决方案将集成更多人工智能能力以抵御恶意软件、零日漏洞利用和无文件攻击。人工智能将提供对终端的更好可见性并改善威胁预防。
 
 7. **威胁情报与预测：** 人工智能将在威胁情报中发挥核心作用，通过汇总和分析大量数据。它还将被用于预测新兴威胁，从而实现主动防御策略。
 
-8. **人工智能在物联网安全中：** 随着物联网（IoT）设备的激增，人工智能对于保护这些设备及其数据至关重要。人工智能将帮助识别和响应源自物联网环境的威胁。
+8. **人工智能在物联网安全中：** 随着物联网（`IoT`）设备的激增，人工智能对于保护这些设备及其数据至关重要。人工智能将帮助识别和响应源自物联网环境的威胁。
 
 9. **网络安全中的道德人工智能：** 人工智能在网络安全中的道德使用将成为日益增长的关注点。人们将更加注重确保人工智能驱动的安全解决方案是透明、无偏见且符合隐私标准。
 
@@ -4679,10 +4613,6 @@ Figure 18.2: Artificial intelligence model.
 
 19. **人机协作：** 未来将看到人类与人工智能系统之间更多协作工作，被称为“增强智能” \[19, 20 and 21\]。
 
-
-
-
-
 一般而言，网络安全中人工智能力量的最终命运对进一步加强抵御网络威胁的防护措施具有非凡的潜力，但它也带来了与伦理、监管以及需要熟练劳动力相关的挑战。这需要网络安全专家与人工智能专家之间持续的研究、开发和合作，以发挥其最大潜力，同时应对其威胁 \[22\]。
 
 ### 参考文献
@@ -4704,6 +4634,8 @@ Figure 18.2: Artificial intelligence model.
 8. Garcia, M. S. and Patel, R. (2019). 利用基于 AI 的入侵检测系统增强网络安全。Int. J. Comp. Sci. Inform. Sec., 17, 378–392。
 
 9. Vemuri, N., Thaneeru, N., and Tatikonda, V. M. (2023). 保障信任：网络安全中人工智能的伦理考量。*Journal of Knowledge Learning and Science Technology*，ISSN: 2959–6386（在线），2(2)，167–175。
+
+
 
 10. Karnouskos, S. (2020). 数字媒体中的人工智能：深度伪造时代。IEEE Transactions on Technology and Society, 1(3), 138–147。
 
@@ -4739,7 +4671,7 @@ Shikha Gautam^(¹⁹)
 
 #### 摘要
 
-随着数据、信息和技术的卓越发展；人工智能（AI）、机器学习（ML）和深度学习（DL）算法被用于改造每一个领域。目前 AI 和 ML 影响着所有有生命和无生命的事物。我们借助这一技术进步改善科学、技术、工程、研究、教学和管理。正如我们目前正处于第四次工业革命（工业 4.0），其特征是自动化程度提高和智能机器与智能工厂功能增强，经过良好处理的<|message|> 数据有助于更有效地、更具生产力和效率地制造商品和服务，超越价值链管理。本文批判性地分析了关于 AI 和 ML 的当前和新颖文献，并讨论其对未来的可能性和影响。本文还讨论了该领域的问题和方向。本文回顾了本世纪发表的 AI 和 ML 研究论文，从 1999 年到 2023 年，以考虑工业 4.0 启动前后的研究。每篇重要的研究都经过了审查和分析，这些研究基于 AI 和 ML 应用。最有趣的发现是，美国发表的研究数量最多，且在工业 4.0 诞生后研究兴趣显著增加。
+随着数据、信息和技术的卓越发展；人工智能（AI）、机器学习（ML）和深度学习（DL）算法被用于改造每一个领域。目前 AI 和 ML 影响着所有有生命和无生命的事物。我们借助这一技术进步改善科学、技术、工程、研究、教学和管理。正如我们目前正处于第四次工业革命（工业 4.0），其特征是自动化程度提高和智能机器与智能工厂功能增强，经过良好处理的 数据有助于更有效地、更具生产力和效率地制造商品和服务，超越价值链管理。本文批判性地分析了关于 AI 和 ML 的当前和新颖文献，并讨论其对未来的可能性和影响。本文还讨论了该领域的问题和方向。本文回顾了本世纪发表的 AI 和 ML 研究论文，从 1999 年到 2023 年，以考虑工业 4.0 启动前后的研究。每篇重要的研究都经过了审查和分析，这些研究基于 AI 和 ML 应用。最有趣的发现是，美国发表的研究数量最多，且在工业 4.0 诞生后研究兴趣显著增加。
 
 **关键词：** 人工智能，机器学习，综述，应用，工业 4.0，方向
 
@@ -4750,10 +4682,6 @@ AI 的开端是在 1950–1956 年这一时间段，当时人们对 AI 的兴趣
 Murphy \[1\] 的研究中可以找到一个很好的定义。他将 ML 定义为一组方法，这些方法可以反复在数据中检测模式，然后利用发现的模式来计算未来数据或在不确定性中执行其他类型的决策。ML 可分为三大类：具体来说是有监督学习（SL）、无监督学习（UL）和强化学习（RL）。
 
 1955 年，约翰·麦卡锡组织了关于“人工智能”的研讨会，这是该术语的首次使用，此后进入流行使用。此后 AI 成熟期（1957–1979）开始，1958 年约翰·麦卡锡撰写了列表处理（LISP），这是 AI 研究的第一个编程语言，至今仍在流行使用。
-
-
-
-
 
 ### AI 开发时间线
 
@@ -4807,10 +4735,6 @@ Figure 19.1: AI's business applications supported by machine learning technologi
 
 目前所有人都与始于 2011 年的第四次工业革命有关（称为工业 4.0），它是物理资产与高度发达的数字技术之间的结合，例如：AI、物联网（`IoT`）、机器人、自主车辆、无人机、3D 打印、云计算等等，它们相互连接，具有分析、通信和行动的可能性。采用工业 4.0 的组织更具响应性、灵活性和智能性，这使其更能为数据驱动的决策做好准备 [4]。
 
-
-
-
-
 The search methodology approach uses mixes content analysis, bibliometric, and social network techniques. In this paper, a state-of-the-art study was conducted using the Google Scholar. For the time period from 1999 to 2023 was considered with the aim to recognize how the intensity of concentration towards the issue has changed before and after Industry 4.0.
 
 Table 19.1 show the keyword and time range for study. The search returned result in total 3,76,000 results.
@@ -4838,6 +4762,8 @@ Recently, the investigated domain has been comprehensive with the introduction o
 
 As previously mentioned, specified the unexpected rise of AI, ML and DL applications, the enormity of scientific literature that is individual produced can be mystifying if not still confusing, equally for researchers and practitioners aiming to relate these methodologies to detailed industrial tasks.
 
+
+
 Apart from this universal criticality, some set issues, that could obstruct the diffusion of AI and ML in the industry, include as well emerged from the literature review. Generally, the problems are related to the data set required to train the AI and ML models. Certainly, if data are collected honestly on the field, issues associated to dirty, missing, or even inadequate data are commonly encountered [7, 8]. Apart since the regular ways used for data pre-processing (like, zero/constant, imputation using most frequent and k-NN), many papers [9, 10, 11 and 12] verified that this dilemma can be compact using a training dataset generated with high-resolution simulations or by generative methods, such as – Generative Adversarial Networks [13].
 
 Also, and possibly more imperative, DL methodologies permit working on approximately raw data through tiny or no requirement for data pre-processing. Still in the folder of extremely noisy data (such as, signal or image processing), data can be optimally de-noised using stacked auto-encoders. Undoubtedly, on the further side, DL techniques and more, in common, all the NN-based approaches, are complex to be interpreted and could be unhelpfully seen like a black box, by the majority of the practitioners. Though, novel and effective techniques, such as the “layer-wise relevance propagation” and “Grad-cam”, can be efficiently used moreover to recognize a concept learned by a NN or for producing visual justification for decisions made by CNN’s [14]. Thus, also allowing for the tremendous flexibility of DL techniques and the stupendous outcome that have been obtained in apparently isolated applications, such as NLP, which is use in operation management is anticipated to further enhance.
@@ -4855,10 +4781,6 @@ Unsupervised learning is generally used for feature engineering and data labelin
 This paper focused on the study of the up to date that AI and ML applications by selecting the research paper, literature, report and dissertation on what has currently happen to a predominantly burning topic in current research. The literature accessible on several subjects is currently broad and an inclusive coverage of every document available with respect to a particular theme and topic can be difficult or still not possible. Hence, a systematic collection of the mainly appropriate literature was studied.
 
 This paper provides a systematic review of various applications of that AI and ML techniques in different scientific fields. With the objectives of the paper, it meant to not only provide a comprehensive description of the research based on that AI and ML but also provide an initial point for integrating information through research in this area and to propose future research plans. It is vital to underline that this paper was shaped using only Google Scholar. So, other left documents with restricted access and indexing databases could be included for future research.
-
-
-
-
 
 我们坚信，在将 AI 和 ML 方法应用于现有运营管理技术并与之整合的过程中，仍有众多机遇和潜力有待揭示。从积极的角度来看，将典型的运营管理方法与 AI 和 ML 算法进行实施和混合，能够进一步强化智能制造的概念。例如，将 ML 模型嵌入离散事件仿真（数字孪生）中，可以利用 cyber-physical 系统的感知能力，提升运营常规并带来新颖有趣的结果。相应地，强化学习技术的研究不应仅局限于机器人和自动化领域的经典“硬”应用，也应扩展到更“软”的任务，如专家系统和决策支持系统。另一个值得研究的领域可能是 AI 和 ML 方法在真实环境中的适用性，尤其是在计算能力和极端延迟方面。此外，对 AI 和 ML 技术影响进行成本效益评估也可能有助于进一步证明此类方法的有效性。所有这些都可成为未来研究潜在方向的引人注目的主题。本文阐述了一些与 AI 和 ML 相关的简要问题和建议。
 
@@ -4892,6 +4814,8 @@ This paper provides a systematic review of various applications of that AI and M
 
 14. Ayodele, O. O. and Yussof, N. (2019). Explainable deep learning: Methods and challenges. J. Adv. Res. Dynam. Control Sys., 11(8), 1186–1205.
 
+
+
 15. Kim, A., Oh, K., Jung, J.-Y., and Kim, B. (2018). Imbalanced classification of manufacturing quality conditions using cost-sensitive decision tree ensembles. Int. J. Comp. Integrat. Manufac., 31(8), 701–717.
 
 16. Agarwal, P., Tamer, M., Sahraei, M. H., and Budman, H. (2019). Deep learning for classification of profit-based operating regions in industrial processes. Indus. Engg. Chem. Res., 59(6), 2378–2395.
@@ -4910,7 +4834,7 @@ This paper provides a systematic review of various applications of that AI and M
 
 Samriddhi Srivastava^(²⁰)
 
-#### 摘要
+## 摘要
 
 随着人工智能 AI 和机器学习 ML 的指数级发展，对能够处理具有挑战性任务的更强大计算平台的需求日益增长。量子计算机利用量子物理学的原理，有望改变计算方式。因此，它们被视为一种有前景的技术进步。本文会议论文研究了量子计算机对 AI 和 ML 应用发展的贡献。我们概述了量子计算的基本概念、最新进展、它们与传统计算机的对比，以及它们可能如何影响 AI 和 ML 模型和算法。我们还强调了将量子计算融入 AI 和 ML 流程中面临的困难和机遇。
 
@@ -4921,9 +4845,6 @@ Samriddhi Srivastava^(²⁰)
 机器学习 ML 和人工智能 AI 的快速发展推动了多个领域取得了重大进展。但在解决一些真正困难的计算任务时，传统计算机架构存在局限性。量子计算是一种相对较新的技术，有望彻底改变多个行业 \[1, 2 and 3\]。量子计算机增强安全性并最终为更强大、更 capable 的 AI 和 ML 铺平道路 其能够以惊人的速度执行复杂计算和分析海量数据，量子计算有可能改变我们处理 AI 和 ML 的方式 \[3, 4 and 5\]。基于量子物理学的思想，量子计算提供了极大提升的计算能力。本文探讨量子计算机如何改善 AI 和 ML 的应用。
 
 ## 2. 量子计算基础
-
-
-
 
 量子计算利用量子力学原理来处理信息。经典计算机使用比特作为信息单位，表示为二进制数字（0 或 1），如 图 20.1 所示。相比之下，量子计算机使用量子比特，或称量子位，它们可以存在于叠加态，允许同时计算多种可能性。某些关键特征将在以下章节中讨论。
 
@@ -4948,11 +4869,17 @@ Samriddhi Srivastava^(²⁰)
 表 20.1：量子、超和经典计算机的对比
 
 | Pa rameters || Quantum computers || Super computers || Classical computers |
+
 | --- | --- | --- | --- |
+
 | **信息的基本单位** || 量子计算机利用量子位，量子位可以处于叠加态，同时表示 0 和 1，并且可以与其他量子位纠缠 || 超级计算机使用与经典计算机相同的比特。一个比特可以表示两个值之一 0 或 1 || 经典计算机使用经典比特，它们是二进制的，在任何给定时间只能表示 0 或 1 |
+
 | --- | --- | --- | --- |
+
 | **计算** || 量子计算机使用量子门和量子算法执行计算。它们利用量子力学原理，如叠加和纠缠，更高效地解决特定问题 || 超级计算机专为并行处理和高速计算而设计，使其适用于科学模拟、天气预报、复杂科学计算和数据密集型任务 || 经典计算机使用经典逻辑门和算法来处理和操纵数据。它们遵循经典物理学并基于确定性原理运行 |
+
 | **优势** || 量子计算机有潜力比经典计算机指数级更快地解决特定问题，例如用于密码学的因数分解和数据库搜索 || 超级计算机以其卓越的处理能力而闻名，使其能够处理在普通计算机上不切实际的大规模模拟和数据分析 || 经典计算机已得到充分建立，多功能且善于管理广泛的任务，包括日常计算、复杂模拟和大量数据处理 |
+
 | **局限性** || 量子计算机目前仍处于发展的早期阶段，面临与稳定性、纠错和可扩展性相关的挑战 || 超级计算机建造和维护成本高昂，消耗大量能源，通常用于需要其计算能力的专业任务 || 经典计算机在有效解决某些问题方面受限，特别是那些需要大量并行处理或量子算法的问题 |
 
 ## 3. 人工智能/机器学习时代
@@ -4983,53 +4910,68 @@ Samriddhi Srivastava^(²⁰)
 
 ### 4.3. 增强的优化
 
-
-
-
-
 优化复杂函数的能力比经典优化技术更有效，这得益于量子计算机和量子绝热、量子退火等先进优化算法。这项特性对于机器学习中的模型训练和超参数调整非常重要。
 
 ### 4.4. 增加并行性
+
 量子计算通过叠加态能够同时处理海量数据，其固有的能力使得并行性得以实现，从而加速人工智能和机器学习应用。这种并行性可能带来更快的训练和更有效的数据处理。
 
 ## 5. 挑战与未来展望
+
 尽管量子计算在人工智能和机器学习中的潜力令人鼓舞，但在实际应用中仍需解决若干挑战：
 
 ### 5.1. 硬件限制
+
 当前量子硬件仍处于起步阶段，量子比特数量有限，错误率高，退相干时间短。克服这些硬件限制对于实现量子计算的全部潜力至关重要。
 
 ### 5.2. 量子算法开发
+
 为人工智能和机器学习应用设计的专用量子算法的开发至关重要。该领域的研究对于释放量子计算在解决实际现实挑战方面的全部潜力至关重要。
 
 ### 5.3. 与经典计算的集成
+
 将量子能力与现有经典计算基础设施集成是一个挑战。混合量子-经典算法和受量子启发的经典算法可能成为实现无缝集成的垫脚石。
 
 ### 5.4. 教育与技能发展
+
 培养具备量子计算必要专业知识的劳动力是一个挑战，即使人们对此仍缺乏认知，因为该领域高度专业化且不断演进。
 
 ## 6. 结论
+
 量子计算具有颠覆性潜力，可彻底革新人工智能和机器学习。通过利用量子力学原理，量子计算机在计算速度、优化和并行性方面提供优势。尽管当前存在硬件限制和算法挑战，但持续的研究与开发有望实现一个量子计算与人工智能/机器学习无缝互补的未来，从而在各个科学和工业领域取得突破。
 
 ### 参考文献
+
 1. Nielsen, M. A. and Chuang, I. L. (2002). Quantum computation and quantum information, 2, 704, Cambridge: Cambridge university press, Published in the United States of America by Cambridge University Press, New York.
+
 2. Preskill, J. (2018). Quantum computing in the NISQ era and beyond. Quantum, 2, 79.
+
 3. Rai, A., Constantinides, P., and Sarker, S. (2019). Next generation digital platforms: Toward human-AI hybrids. MIS Quart., 43(1), iii–ix.
+
 4. Cao, Y., et al. (2020). Quantum machine learning. Nat. Rev. Methods Prim., 1(1), 1–22.
+
 5. Kühl, N., Schemmer, M., Goutier, M., et al. (2022). Artificial intelligence and machine learning. Elec. Mark., 32.
+
 6. Ayoade, O., Rivas, P., and Orduz, J. (2022). Artificial intelligence computing at the quantum level. Data, 7(3), 28. [`doi.org/10.3390/data7030028`](https://doi.org/10.3390/data7030028).
+
 7. Choudhary, A., Agrawal, A. P., Logeswaran, R., and Unhelkar, B. (2021). Applications of Artificial Intelligence and Machine Learning. Springer Singapore. ISBN 978–981–16–3066–8, pp 738.
+
 8. Janiesch, C., Zschech, P., and Heinrich, K. (2021). Machine learning and deep learning. Elec. Mark., 31(3), 685–695.
+
 9. Koza, J. R., Bennett, F. H., Andre, D., and Keane, M. A. (1996). Automated design of both the topology and sizing of analog electrical circuits using genetic programming. Artificial intelligence in design’96, 151–170. DOI [`doi.org/10.1007/978-94-009-0279-4\_9`](https://doi.org/10.1007/978-94-009-0279-4_9).
 
 # 21 计算智能在医疗保健中的作用——综述
+
 Rohit Srivastava^(²¹)
 
-#### 摘要
+## 摘要
+
 人工智能（AI）的引入在医疗保健行业引发了范式转变。本综述研究对计算智能（CI）在医疗保健中的应用进行了全面总结。它探讨了 CI 方法在医学领域的应用、困难和潜在用途。CI 融入医疗保健行业开启了一个革命性时代，其特点是诊断、治疗和整体患者护理的改进。本文对 CI 在塑造医疗保健行业过程中所发挥的各种用途、优势和困难进行了深入分析。计算智能是一个广泛的类别，其中包括先进算法、数据分析、人工智能、机器学习（ML）和其他方法和技术。这些技术已应用于医疗保健行业，以改善决策、利用大数据力量并改变传统医疗程序。本文阐述了数据分析、机器学习和人工智能等计算技术如何革新医疗保健，并最终改善患者护理、诊断、治疗和系统管理。
 
 **关键词：** 智能计算，机器学习，医疗保健，医疗计算
 
 ## 1. 引言
+
 将计算智能（CI）应用于医疗保健行业正在改变医疗服务的提供和实践。CI 正在改变医学领域。它为精准诊断、个性化护理、有效管理医疗资源和创新研究提供了机会。尽管这些技术的整合具有巨大潜力，但仍需解决伦理和数据隐私问题。为了充分利用 CI 在医疗保健中的应用，学者、政策制定者和医疗从业者必须共同努力克服这些障碍。
 
 CI 能够提供先进的诊断工具、个性化护理和高效的医疗管理，对医疗保健的转型至关重要。尽管其潜力巨大，但仍有若干重要问题需要解决，包括伦理问题、监管合规以及患者数据的使用。CI 将在塑造医疗保健未来中发挥重要作用，这将取决于持续的研究和创新。本研究的目的是对 CI 在医学领域的作用和重要性进行全面分析，重点关注未来前景、应用和优势。CI 融入该领域表明其在促进更好决策、改善患者护理和简化医疗流程方面的日益重要性。本研究旨在阐明这一技术在医学领域所发挥的复杂作用，重点关注其广泛的应用、优势和令人兴奋的新方向。
@@ -5039,8 +4981,6 @@ CI 带来了医疗管理方面的范式转变。数据分析对于管理患者�
 CI 在远程患者监测的兴起方面也产生了持久影响，这得益于可穿戴技术和物联网（IoT）。由 CI 实现的慢性病患者的持续监测，通过减少住院需求并促进早期干预，总体上改善了患者预后。
 
 ## 2. 计算智能在医疗保健中的应用
-
-
 
 
 
@@ -5116,10 +5056,6 @@ Figure 21.1 Major application of computational intelligence in healthcare.
 
 物联网（`IoT`）有望通过从医疗设备、可穿戴传感器和患者本人实时收集数据来改变医疗保健。这些信息可用于深入了解患者健康状况并协助远程监测。Dohr 等人（2016） [14] 研究了 `IoT` 在医疗保健中的可能性。
 
-
-
-
-
 ### 5.2 区块链在医疗数据管理中的应用
 
 区块链技术在医疗数据的安全、透明和互操作性管理方面具有巨大潜力。它可以帮助保存患者记录、保障数据安全并促进数据交换。Kuo 等人（2017）[15] 研究了区块链在医疗保健中的应用可能性。
@@ -5136,9 +5072,10 @@ Figure 21.1 Major application of computational intelligence in healthcare.
 
 人工智能在全球范围内的整合有可能解决多种公共卫生问题。人工智能、数据分析和预测建模倡议可以帮助疾病管理、资源分配和医疗可及性。Milinovich 等人（2016）概述了 CI 在全球健康中的作用 [18]。
 
-### 6\. 计算智能在医疗保健中整合的挑战
+### 6. 计算智能在医疗保健中整合的挑战
 
 CI 在医疗保健中具有潜在的和革命性的作用，但并非没有其困难。以下是 CI 在医疗保健中整合的一些主要障碍：
+
 1. 医疗成像、可穿戴技术和 EHRs 是医疗数据众多来源中的一些。对于 CI 应用而言，整合和标准化这些多样化的数据流提出了实质性问题。基于不准确的诊断数据或患者记录的预测和选择可能是不正确的。为了使 CI 模型可靠，必须保证输入数据的质量和准确性。
 2. 缺乏共享医疗数据的通用协议和格式阻碍了互操作性。认知智能应用可能难以在平台之间交换数据并与现有医疗系统良好交互。
 3. 使用 CI 时患者隐私是一个问题，因为医疗数据是敏感的。在保护个人隐私和使用患者数据以改善结果之间取得平衡是一个重大的伦理问题。CI 模型可能会无意中维持过去的数据偏差，从而导致医疗不平等。确保算法公平并处理其偏差是一个困难的伦理问题。
@@ -5147,7 +5084,7 @@ CI 在医疗保健中具有潜在的和革命性的作用，但并非没有其�
 6. 医疗人员必须接受适当的培训，以使用和解释 CI 技术并将其整合到工作流程中。缺乏培训和抵制变革可能会阻碍实施成功。
 7. 由于医疗系统互联，医疗系统容易受到网络攻击。保护患者数据和确保 CI 应用免受敌对行为的安全性是关键问题。
 
-## 7\. 结论
+## 7. 结论
 
 CI 正在改变医疗保健行业。它能够实现精确诊断、个性化治疗、高效的医疗管理以及前沿研究。虽然这些技术的整合具有巨大潜力，但也引发了关于数据隐私和伦理的问题。为了实现 AI 在医疗保健中的全部潜力，医疗从业者、学者和政策制定者必须共同努力克服这些问题。最后，CI 有能力彻底改变医疗保健，通过改善诊断、治疗、资源分配和患者护理。虽然它具有巨大的潜力，但广泛采用需要周密规划、伦理考量以及对持续发展的承诺。随着技术的进步，其在医疗保健中的作用可能会增长，有助于患者和医生。综上所述，通过提高诊断准确性、完善治疗方法、提高患者治疗效果并加快医疗管理程序，CI 在改变医疗保健行业中发挥着多方面的作用。解决隐私和伦理问题对于确保这些技术在医疗领域得到合乎道德和公平的应用至关重要。
 
@@ -5166,18 +5103,12 @@ CI 正在改变医疗保健行业。它能够实现精确诊断、个性化治�
 11. Steins, K., Sze, A. K., and Lucier, J. (2017). Predictive analytics in health care: opportunities and challenges. Res. Synth. Report Health Sys. Res. Anal., pp 1–14.
 12. Wong, D., Bonnici, T., Knight, J., Gerry, S., Turton, G., and Watkinson, P. (2019). A ward-based time study of paper and electronic documentation for recording vital sign observations. J. Am. Med. Inform. Assoc., 26(12), 1456–1465.
 13. Sadoughi, F., Khodaveisi, T., and Shahidi, M. (2019). An overview of data mining approaches in healthcare fraud detection. Healthcare Inform. Res., 25(1), 2–10.
-
-
-
-
-
 14. Dohr, A., Modre-Osprian, R., Drobics, M., Hayn, D., and Schreier, G. (2016). The Internet of Things for ambient assisted living. Pervas. Comput. Parad. Mental Health, 117–136. Springer.
-
 15. Kuo, T. T., Kim, H. E., and Ohno-Machado, L. (2017). Blockchain distributed ledger technologies for biomedical and health care applications. J. Am. Med. Inform. Assoc., 24(6), 1211–1220.
-
 16. Goodwin, S., McPherson, J. D., and McCombie, W. R. (2016). Coming of age: Ten years of next-generation sequencing technologies. Nat. Rev. Gen., 17(6), 333–351.
-
 17. Caruana, R., Lou, Y., Gehrke, J., Koch, P., Sturm, M., and Elhadad, N. (2015). Intelligible models for healthcare: Predicting pneumonia risk and hospital 30-day readmission. Proc. 21th ACM SIGKDD Int. Conf. Knowl. Dis. Data Min., 1721–1730.
+
+
 
 18. Milinovich, G. J., Williams, G. M., Clements, A. C., and Hu, W. (2016). Internet-based surveillance systems for monitoring emerging infectious diseases. Lancet Infect. Dis., 14(2), 160–168.
 
@@ -5187,15 +5118,15 @@ Sandhya Satyarthi^(²²)
 
 Department of Information Technology, Babasaheb Bhimrao Ambedkar University, Lucknow, India
 
-### Abstract
+## Abstract
 
 软件测试过程是影响应用程序整体性能的重要方面，对软件系统的整个生命周期至关重要。开发过程中的安全性发挥着关键作用，成败取决于安全实践。在敏捷开发方面，持续集成和改进贯穿软件开发的始终。模型化测试（MBT）是当今测试自动化的关键组成部分，构成了软件测试演进的一部分。与传统测试方法相比，MBT 可更迅速、更经济、更成功地管理和完成测试任务。本文将讨论 MBT 中的安全挑战以及在安全敏捷软件开发中 MBT 改进工作流。
 
-**关键词：** 模型化测试（MBT），SSD（安全软件开发），SDLC（软件开发生命周期），敏捷软件开发（ASD）
+**关键词：** 模型化测试（`MBT`），`SSD`（安全软件开发），`SDLC`（软件开发生命周期），敏捷软件开发（`ASD`）
 
-### 1. Introduction
+## 1. Introduction
 
-安全性始终是开发过程中的主要关注点，我们认为测试是最受关注的领域之一，因为它有助于在安全软件开发中识别和消除风险。测试安全关键系统至关重要，因为故障或失效可能对人员、财产或环境造成严重伤害。创建能够检测潜在缺陷的测试用例是一项重要的测试任务。模型化测试（MBT）通过使用被评估系统及其/或其环境的模型来创建测试工件。为了发现、评估和表征 MBT 在软件安全方面的最新进展，本文将介绍一项系统映射研究 [1, 3]。尽管 MBT 已在采用敏捷方法论的组织中使用，但人们也在研究 MBT 如何在这些环境中成功应用。安全测试是一种广泛使用的技术，通过检测漏洞并确保安全功能来确定和增强软件安全性 [2]。当今软件系统的可用性导致了采用适当的测试策略以进行有效和高效的安全测试的需求日益增长。因此，研究人员通过对实际安全测试技术的概述来评估和改进流程将大有裨益，而从业人员也可以自行应用和传播这些技术。MBT 是一种创新的软件测试方法，它将测试自动化的主要目标从执行测试扩展到通过基于模型自动创建测试来进行测试设计 [4, 5 and 6]。除了熟悉适当的工具外，新方法还要求培养新的技能，例如测试建模专业知识。MBT 通过首先构建被测系统的模型，以系统化和有序的方式生成测试用例。由于 MBT 使用模型来定义系统的行为，因此可以实现对被测系统的全面覆盖 [7]。由于更容易访问边缘情况，因此可以对更广泛的输入和条件进行测试。通过对系统建模，可以在开发之前或开发早期阶段发现和纠正任何问题和不一致性 [8, 9]。在创建软件时，敏捷团队通常需要适应不断变化的需求。MBT 可以帮助实现敏捷开发所需的灵活性。当相关模型发生更改时，可以根据更新后的模型生成测试用例 [10, 12]。通过将模型与需求联系起来并从模型中开发测试用例，团队可以通过确保测试工作充分满足既定需求来提高透明度和可验证性。这项工作有助于找出 MBT 中需要关注的挑战。之后设计了一个框架来帮助安全软件开发。
+安全性始终是开发过程中的主要关注点，我们认为测试是最受关注的领域之一，因为它有助于在安全软件开发中识别和消除风险。测试安全关键系统至关重要，因为故障或失效可能对人员、财产或环境造成严重伤害。创建能够检测潜在缺陷的测试用例是一项重要的测试任务。模型化测试（`MBT`）通过使用被评估系统及其/或其环境的模型来创建测试工件。为了发现、评估和表征 `MBT` 在软件安全方面的最新进展，本文将介绍一项系统映射研究 [1, 3]。尽管 `MBT` 已在采用敏捷方法论的组织中使用，但人们也在研究 `MBT` 如何在这些环境中成功应用。安全测试是一种广泛使用的技术，通过检测漏洞并确保安全功能来确定和增强软件安全性 [2]。当今软件系统的可用性导致了采用适当的测试策略以进行有效和高效的安全测试的需求日益增长。因此，研究人员通过对实际安全测试技术的概述来评估和改进流程将大有裨益，而从业人员也可以自行应用和传播这些技术。`MBT` 是一种创新的软件测试方法，它将测试自动化的主要目标从执行测试扩展到通过基于模型自动创建测试来进行测试设计 [4, 5 and 6]。除了熟悉适当的工具外，新方法还要求培养新的技能，例如测试建模专业知识。`MBT` 通过首先构建被测系统的模型，以系统化和有序的方式生成测试用例。由于 `MBT` 使用模型来定义系统的行为，因此可以实现对被测系统的全面覆盖 [7]。由于更容易访问边缘情况，因此可以对更广泛的输入和条件进行测试。通过对系统建模，可以在开发之前或开发早期阶段发现和纠正任何问题和不一致性 [8, 9]。在创建软件时，敏捷团队通常需要适应不断变化的需求。`MBT` 可以帮助实现敏捷开发所需的灵活性。当相关模型发生更改时，可以根据更新后的模型生成测试用例 [10, 12]。通过将模型与需求联系起来并从模型中开发测试用例，团队可以通过确保测试工作充分满足既定需求来提高透明度和可验证性。这项工作有助于找出 `MBT` 中需要关注的挑战。之后设计了一个框架来帮助安全软件开发。
 
 研究方法，如 Figure 22.1 所示，解释了如何构建安全软件开发的框架并识别现有文献中的差距。
 
@@ -5205,29 +5136,25 @@ Figure 22.1: Research method description.
 
 预计该框架将帮助软件开发团队识别关键的软件安全问题，并了解构建安全 Scrum 敏捷软件所需的安全工件。
 
-本文其余部分的结构如下。第二部分，我们讨论了促使我们开始研究的因素以及导致研究空白的初步研究。MBT 集成到敏捷软件开发中，如 section 2 中所述。在 section 3 中，我们将讨论 MBT 中的各种挑战和问题。在 section 4 中，讨论了工作流，该工作流有助于 MBT 解决并改进前一节中讨论的挑战。 Section 5 讨论了研究结果并提供了总结和进一步研究的建议。
+本文其余部分的结构如下。第二部分，我们讨论了促使我们开始研究的因素以及导致研究空白的初步研究。`MBT` 集成到敏捷软件开发中，如 section 2 中所述。在 section 3 中，我们将讨论 `MBT` 中的各种挑战和问题。在 section 4 中，讨论了工作流，该工作流有助于 `MBT` 解决并改进前一节中讨论的挑战。 Section 5 讨论了研究结果并提供了总结和进一步研究的建议。
 
 ## 2. Literature Review
 
 2004 年，使用战斗制导系统的主要案例研究进行了一项实验，创建了在各种结构覆盖标准下提供覆盖的精简测试套件，并跟踪了这些测试套件在定位故障方面的成功率。我们的研究结果表明，基于规范的测试套件的大小可以大幅减少，并且精简测试套件发现故障的能力会受到负面影响。在本研究中，我们介绍了我们的实验，检查了研究结果，并讨论了基于正式规范的测试可能受到的影响 [11]。
 
-2011 年，Mark Utting 等人概述了 MBT 流程以及涵盖 MBT 方法论基本要素的分类法。其目的是帮助对特定 MBT 工具中采用的方法进行分类，并了解此类方法的特征、相似性和差异 [13]。
+2011 年，Mark Utting 等人概述了 `MBT` 流程以及涵盖 `MBT` 方法论基本要素的分类法。其目的是帮助对特定 `MBT` 工具中采用的方法进行分类，并了解此类方法的特征、相似性和差异 [13]。
 
+在 2016 年，Mathaikutty 等人提出了该研究，旨在彻底审查 `MBT` 的最先进的实验性 SBT 应用，并描述现有文献的局限性以指导未来的研究。研究人员可以通过基于所提出分类法的系统审查现有文献来探索当前的研究工作并确定需要进一步研究的任何差距 [14]。
 
+在 2018 年，一项研究表明 `MBT` 可以为软件安全测试提供显著优势。辩论主要趋势和方法，解释挑战，并辩论这些发现。有许多潜在的解决方案，但需要更多的研究来开发一种值得信赖的基于模型的安全测试策略 [15]。
 
+在 2019 年，Tugkan Tuglular 等人引入了一种基于新型增量测试范式的 `MBT` 生成方法，用于使用 SPL 生产的产品。介绍特征事件序列图（FESGs），即事件序列图（ESGs）的扩展，它提供了定义和操作，以便在 SPL 中实现测试模型方面的共性和可变性。他们使用案例研究将他们的方法与隔离测试程序进行比较 [16]。
 
+研究表明 `MBT` 对开发具有巨大影响。随着敏捷的迭代和增量开发过程，人们认为 `MBT` 可以通过使用各种 `MBT` 技术而变得有用。在即将到来的 第 3 节 中，我们将讨论 `MBT` 中出现挑战和问题。在 第 4 节 中，讨论了一种流程的工作流，以使用 `MBT` 方法改进安全软件开发。在 第 5 节 中，讨论了研究的结论以及对各种开发策略的未来影响。
 
-在 2016 年，Mathaikutty 等人提出了该研究，旨在彻底审查 MBT 的最先进的实验性 SBT 应用，并描述现有文献的局限性以指导未来的研究。研究人员可以通过基于所提出分类法的系统审查现有文献来探索当前的研究工作并确定需要进一步研究的任何差距 [14]。
+### 3. 模型化测试中的挑战
 
-在 2018 年，一项研究表明 MBT 可以为软件安全测试提供显著优势。辩论主要趋势和方法，解释挑战，并辩论这些发现。有许多潜在的解决方案，但需要更多的研究来开发一种值得信赖的基于模型的安全测试策略 [15]。
-
-在 2019 年，Tugkan Tuglular 等人引入了一种基于新型增量测试范式的 MBT 生成方法，用于使用 SPL 生产的产品。介绍特征事件序列图（FESGs），即事件序列图（ESGs）的扩展，它提供了定义和操作，以便在 SPL 中实现测试模型方面的共性和可变性。他们使用案例研究将他们的方法与隔离测试程序进行比较 [16]。
-
-研究表明 MBT 对开发具有巨大影响。随着敏捷的迭代和增量开发过程，人们认为 MBT 可以通过使用各种 MBT 技术而变得有用。在即将到来的 第 3 节 中，我们将讨论 MBT 中出现挑战和问题。在 第 4 节 中，讨论了一种流程的工作流，以使用 MBT 方法改进安全软件开发。在 第 5 节 中，讨论了研究的结论以及对各种开发策略的未来影响。
-
-### 3\. 模型化测试中的挑战
-
-在使用敏捷方法在安全环境中进行 MBT 时可能会出现一些特殊困难。这些困难源于将安全测试顺利融入敏捷流程，同时关注迭代开发和快速发布的要求。以下是一些主要困难：
+在使用敏捷方法在安全环境中进行 `MBT` 时可能会出现一些特殊困难。这些困难源于将安全测试顺利融入敏捷流程，同时关注迭代开发和快速发布的要求。以下是一些主要困难：
 
 1. **敏捷开发节奏：** 敏捷开发以其快速的周转时间和频繁的迭代为特征。由于安全测试可能比开发周期花费更长，因此将以安全为重点的建模和测试集成到这种快节奏环境中可能很困难。
 
@@ -5247,9 +5174,9 @@ Figure 22.1: Research method description.
 
 以下是我们讨论的一些挑战和问题，它们影响了整体开发过程。为了应对并顺利进行开发，使用测试以安全的方式进行开发，设计了一个工作流或框架，可以在下一节中讨论。
 
-### 4\. 提高模型化测试以实现安全软件开发的建议工作流
+## 4. 提高模型化测试以实现安全软件开发的建议工作流
 
-一种称为“基于模型测试”的软件测试策略“model-based testing”（MBT）利用模型来创建和运行测试用例。这些模型充当被测系统功能和要求的表示，帮助测试人员系统地生成测试用例并确保测试覆盖率。 图 22.2 描述了工作流，并且以下步骤通常包含在 MBT 流程中：
+一种称为“基于模型测试”的软件测试策略“model-based testing”（`MBT`）利用模型来创建和运行测试用例。这些模型充当被测系统功能和要求的表示，帮助测试人员系统地生成测试用例并确保测试覆盖率。 图 22.2 描述了工作流，并且以下步骤通常包含在 `MBT` 流程中：
 
 ![Figure 22.2: Workflow for improved MBT in SSD.](img/fig22_2_C.jpg)
 
@@ -5265,22 +5192,22 @@ Figure 22.2: Workflow for improved MBT in SSD.
 
 5. **协作工作以确保代码审查：** 鼓励开发、测试和安全团队进行交流和协作。确保安全问题和发现能够迅速共享，并使人们能够轻松地分享知识。除了常规代码审查外，还进行安全代码审查。使用您的安全模型来指导审查过程，以确保满足安全标准。
 
-6. **静态分析和动态扫描**：使用静态代码分析工具和动态应用程序安全测试（DAST）工具来帮助您的 MBT。这些工具可以找到模型可能无法涵盖的模型中的漏洞。这些在彻底分析整个过程方面很有帮助。
+6. **静态分析和动态扫描**：使用静态代码分析工具和动态应用程序安全测试（`DAST`）工具来帮助您的 `MBT`。这些工具可以找到模型可能无法涵盖的模型中的漏洞。这些在彻底分析整个过程方面很有帮助。
 
+### 7. 具备持续培训和改进的事件响应计划制定
 
-
-
-
-#### 7. 具备持续培训和改进的事件响应计划制定
 制定一份事件响应计划，告知团队在项目构建过程中发生安全漏洞或发现漏洞时该怎么做 [22]。确保每个人都知道自己需要做什么也很重要，安全开发实践通过利用从安全事件和测试中获得的经验不断改进。提供持续培训并将评论作为工作方式的一部分。
 
-#### 8. 第三方安全评估
+### 8. 第三方安全评估
+
 考虑获取第三方安全评估，例如渗透测试，以确保安全措施有效并发现可能遗漏的漏洞。
 
-#### 9. 合规性验证
+### 9. 合规性验证
+
 确保你的 `MBT` 方法能够证明其遵循所有安全规则和标准。记录并跟踪安全测试的结果 [23]。
 
-#### 10. 持续监控和基于风险的方法以确保安全工件的完成
+### 10. 持续监控和基于风险的方法以确保安全工件的完成
+
 确保生产应用程序不断被扫描安全风险和漏洞，以便在出现时修复 [24]。根据风险估计为安全测试设定优先级。关注最重要的部分和最危险的安全点。
 
 我们描述的工作流程由需求的分析和理解发起，安全培训和意识是理解所有安全方面的必要条件，然后在安全培训和分析的基础上找出最合适的模型，并使用威胁建模来找出可能的安全漏洞，然后制定测试用例 [25, 26]。
@@ -5289,23 +5216,23 @@ Figure 22.2: Workflow for improved MBT in SSD.
 
 在此工作流程结束时，重要的是确保持续监控和在遵循基于风险的方法方面的改进，以操纵和更新与安全相关的一些关键领域。总体而言，需要从初始阶段到测试用例的最终生成对安全进行确认，这些测试用例可用于使用。
 
-### 5. 结论
+## 5. 结论
 
 `MBT` 在敏捷软件开发中增加了测试覆盖率，实现早期缺陷检测，有助于测试自动化，促进团队合作，使其能够适应变化，并使追踪和记录流程变得更简单。通过使用模型来指导测试工作，敏捷团队可以提高软件质量、反馈周期和利益相关者满意度。基于调查的问题，有必要专注于提供一个工作流程，有助于在各个阶段启动测试，并且通过逐阶段推进，有助于将安全实践纳入其中，以激发安全的软件开发流程。在未来的工作中，我们将尝试通过比较分析找出最佳的 `MBT` 技术并推动自动化测试用例生成。
 
-### 参考文献
+## 参考文献
 
 1. Höpfner, G., Jacobs, G., Zerwas, T., et al. (2021). Model-based design workflows for cyber-physical sys tems applied to an electric-mechanical coolant pump. IOP Conf. Ser. Mater. Sci. Engg., 1097, 1.
 
-2. Jorge, D. N., Machado, P. D. L., Alves, E. L. G., and Andrade, W. L. (2018). Integrating requirements specification and model-based testing in agile development. 2018 IEEE 26th Int. Req. Engg. Conf. (RE), 336–346, doi: [10.1109/RE.2018.00041](https://doi.org/10.1109/RE.2018.00041).
+2. Jorge, D. N., Machado, P. D. L., Alves, E. L. G., and Andrade, W. L. (2018). Integrating requirements specification and model-based testing in agile development. 2018 IEEE 26th Int. Req. Engg. Conf. (RE), 336–346, doi: [`10.1109/RE.2018.00041`](https://doi.org/10.1109/RE.2018.00041).
 
-3. Arcaini, P., Gargantini, A., and Riccobene, E. (2017). Rigorous development process of a safety-critical system: From ASM models to Java code. Int. J. Softw. Tools Technol. Trans., 19(2), 247–269. doi:[10.1007/s10009-015-0394-x](https://doi.org/10.1007/s10009-015-0394-x).
+3. Arcaini, P., Gargantini, A., and Riccobene, E. (2017). Rigorous development process of a safety-critical system: From ASM models to Java code. Int. J. Softw. Tools Technol. Trans., 19(2), 247–269. doi:[`10.1007/s10009-015-0394-x`](https://doi.org/10.1007/s10009-015-0394-x).
 
-4. Choi, Y. and Byun, T. (2017). Constraint-based test generation for automotive operating systems. Softw. Sys. Model., 16(1), 7–24. doi:[10.1007/s10270-014-0449-6](https://doi.org/10.1007/s10270-014-0449-6).
+4. Choi, Y. and Byun, T. (2017). Constraint-based test generation for automotive operating systems. Softw. Sys. Model., 16(1), 7–24. doi:[`10.1007/s10270-014-0449-6`](https://doi.org/10.1007/s10270-014-0449-6).
 
 5. Bjarnason, E., Unterkalmsteiner, M., Borg, M., and Engström, E. (2016). A multi-case study of agile requirements engineering and the use of test cases as requirements. Inform. Softw. Technol., 77, 61–79.
 
-6. Gargantini, A. (2007). Using model checking to generate fault detecting tests. Tests Proofs, 189–206. doi:[10.1007/978-3-540-73770-4\_11](https://doi.org/10.1007/978-3-540-73770-4_11).
+6. Gargantini, A. (2007). Using model checking to generate fault detecting tests. Tests Proofs, 189–206. doi:[`10.1007/978-3-540-73770-4_11`](https://doi.org/10.1007/978-3-540-73770-4_11).
 
 7. Blackburn, M., Busser, R., Nauman, A., and Chandramouli, R. (2001). Model-based approach to security test automation. Proc. Quality Week., 1, 1–8.
 
@@ -5315,7 +5242,9 @@ Figure 22.2: Workflow for improved MBT in SSD.
 
 10. Xu, D., Thomas, L., Kent, M., Mouelhi, T., and Le Traon, Y. (2012). A model-based approach to automated testing of access control policies. Proc. 17th ACM Symp. Acc. Control Models Technol., 209–218.
 
-11. Kloos, J., Hussain, T., and Eschbach, R. (2011). Risk-based testing of safety-critical embedded systems driven by fault tree analysis. Proc. 4th IEEE Int. Conf. Softw. Test. Verif. Validat. Workshops, ICSTW 2011, 26–33. doi:[10.1109/ICSTW.2011.90](https://doi.org/10.1109/ICSTW.2011.90).
+11. Kloos, J., Hussain, T., and Eschbach, R. (2011). Risk-based testing of safety-critical embedded systems driven by fault tree analysis. Proc. 4th IEEE Int. Conf. Softw. Test. Verif. Validat. Workshops, ICSTW 2011, 26–33. doi:[`10.1109/ICSTW.2011.90`](https://doi.org/10.1109/ICSTW.2011.90).
+
+
 
 12. Bernardino, M., Zorzo, A. F., and Rodrigues, E. M. (2016). Canopus: A domain-specific language for modeling performance testing. 2016 IEEE Int. Conf. Softw. Test. Verif. Validat (ICST), 157–167.
 
@@ -5328,10 +5257,6 @@ Figure 22.2: Workflow for improved MBT in SSD.
 16. Andreasen, E., Gong, L., Møller, A., Pradel, M., Selakovic, M., Sen, K., and Staicu, C. (2017). A survey of dynamic analysis and test generation for JavaScript. ACM Comput. Sur., 50(5), 66.
 
 17. Mark, U., Alexander, P., Bruno, L. (2012). A taxonomy of model-based testing approaches. Found. Appl. Model-Based Test., 1, 297–312.
-
-
-
-
 
 18. Aneesa, S., Siti Hafzah Ab, H., and Mumtaz Begum, M. (2016). 基于模型测试的搜索技术实验应用：分类与系统文献综述。Appl. Soft Comput., 49, 1094–1117。
 
@@ -5357,15 +5282,16 @@ Vinay Kumar Sahu^(²³)
 
 ### Abstract
 
-如今，物联网（IoT）正迅速成为全世界最受欢迎的技术之一，其中大量设备相互连接以使人类生活更可行、更舒适。物联网技术在各处发挥着重要作用。它是嵌入式计算、通信技术、传感器和执行器的融合。物联网的目标是随时随地赋予用户无缝能力。尽管有各种好处，物联网也需要高水平的安全性、身份验证、隐私和防攻击保护。过去的工作中已引入了各种物联网应用的安全机制和解决方案，但物联网在安全和隐私领域仍面临大量挑战。本文提出了一种改进的物联网架构，并对不同研究人员提出的各种架构方法进行了全面分析，从基础架构到商业级实现。具体而言，本文重点关注与物联网架构相关的物联网安全场景，并检查了物联网系统中存在的各种安全威胁和漏洞，如保密性、隐私、身份验证、完整性、访问控制等。作者通过讨论物联网架构中的隐私和安全问题及其对研究人员构成的挑战来总结工作。
+如今，物联网（`IoT`）正迅速成为全世界最受欢迎的技术之一，其中大量设备相互连接以使人类生活更可行、更舒适。物联网技术在各处发挥着重要作用。它是嵌入式计算、通信技术、传感器和执行器的融合。物联网的目标是随时随地赋予用户无缝能力。尽管有各种好处，物联网也需要高水平的安全性、身份验证、隐私和防攻击保护。过去的工作中已引入了各种物联网应用的安全机制和解决方案，但物联网在安全和隐私领域仍面临大量挑战。本文提出了一种改进的物联网架构，并对不同研究人员提出的各种架构方法进行了全面分析，从基础架构到商业级实现。具体而言，本文重点关注与物联网架构相关的物联网安全场景，并检查了物联网系统中存在的各种安全威胁和漏洞，如保密性、隐私、身份验证、完整性、访问控制等。作者通过讨论物联网架构中的隐私和安全问题及其对研究人员构成的挑战来总结工作。
 
-**关键词：** Internet of Things (IoT), IoT infrastructure, sensors, actuators, IoT security, IoT applications
+**关键词：** Internet of Things (`IoT`), `IoT` infrastructure, sensors, actuators, `IoT` security, `IoT` applications
 
-### 1. Introduction
+## 1. Introduction
 
-物联网（IoT）一词是两个词的组合：Internet 和 Things。Internet 一词指的是互联；它涵盖的不仅是电子设备，还包括人类、动物等活物，以及家具、衣服等非生命物体，最后将这两个词用“of”连接起来就形成了物联网。进入新世纪以来，物联网作为众多应用中的技术迅速发展。智能设备通过无线和有线网络互联，实现实时处理、通信、计算和观察场景。实施物联网系统会带来各种安全和隐私问题，因为现有传统安全协议的性质并不适合新型物联网设备。物联网一词指的是智能设备高效地检测并汇聚来自世界各地的信息，然后通过互联网提供信息，以便对其进行处理并用于各种引人入胜的目的的基本思想。物联网是一组智能机器，它们与机器、物品、系统和基础架构协作并进行通信。迄今为止，人们使用各种不同的方法进行通信以保持联系，其中最流行的方式是互联网，因此我们可以说互联网是人群联系的手段。随着物联网的快速发展，它也面临着各种安全和隐私威胁。为了确保物联网安全，防御技术必须能够检测威胁并对攻击做出响应。
+物联网（`IoT`）一词是两个词的组合：Internet 和 Things。Internet 一词指的是互联；它涵盖的不仅是电子设备，还包括人类、动物等活物，以及家具、衣服等非生命物体，最后将这两个词用“of”连接起来就形成了物联网。进入新世纪以来，物联网作为众多应用中的技术迅速发展。智能设备通过无线和有线网络互联，实现实时处理、通信、计算和观察场景。实施物联网系统会带来各种安全和隐私问题，因为现有传统安全协议的性质并不适合新型物联网设备。物联网一词指的是智能设备高效地检测并汇聚来自世界各地的信息，然后通过互联网提供信息，以便对其进行处理并用于各种引人入胜的目的的基本思想。物联网是一组智能机器，它们与机器、物品、系统和基础架构协作并进行通信。迄今为止，人们使用各种不同的方法进行通信以保持联系，其中最流行的方式是互联网，因此我们可以说互联网是人群联系的手段。随着物联网的快速发展，它也面临着各种安全和隐私威胁。为了确保物联网安全，防御技术必须能够检测威胁并对攻击做出响应。
 
 本工作的主要贡献如下：
+
 * 首先，我们检查了各种已发布的标准和物联网架构。
 * 其次我们对现有架构进行了批判性回顾。
 * 然后在批判性回顾之后我们提出了一个详细的物联网架构分层版本。
@@ -5375,10 +5301,6 @@ Vinay Kumar Sahu^(²³)
 继续本文，我们将剩余部分整理如下，隐私和安全挑战领域的相关工作以及各种现有物联网架构可在 第 2 节 中找到。对各种现有物联网架构的批判性回顾在 第 3 节 中构建。所提出物联网构造的简明构建在 第 4 节 中呈现。第 5 节 涉及物联网环境中揭示的可能隐私和安全挑战。第 6 节 建议未来研究的方向以美化物联网环境。本文在 第 7 节 中以我们工作的总结结束。参考文献在第 8 节中列出。
 
 ## 2. Related Work
-
-
-
-
 
 ### 物联网与安全概述
 
@@ -5406,28 +5328,26 @@ Vinay Kumar Sahu^(²³)
 
 作者观察到，`IoT` 系统由于其独特特征，包括协议和设备的异构性、对物理环境的依赖以及与人类的密切交互，而面临安全、可靠性和隐私问题方面的特殊挑战。其中一位作者还说明了当前研究挑战如何利用其他领域的安全、可靠性和隐私创新。Bagchi 等人还建议未来将 `IoT` 设备以安全的方式集成到云基础设施中，将应用安全和软件开发中的功能问题分开，并建立安全边界 \[11\]。Jiang 等人介绍了雾计算和云计算的感知和特征，并说明了它们之间的协作和比较。探索了 `IoT` 在新型应用需求中遇到的关键挑战，例如网络带宽限制、低延迟、服务稳定性、设备的资源限制以及安全性和基于雾的技术。研究人员还讨论了雾计算融入 `IoT` 系统后的研究方向和剩余挑战。此外，在智能交通和可感知机器人领域，基于 5G 的雾计算发挥着重要作用也被探索 \[12\]。
 
-
-
-
-
 智能家居系统和电器目前已存在，但它们基于较旧的技术，其用户界面范围有限，使得终端用户难以控制它们。现有的智能家居也引发了安全方面的担忧，因为它们可以被顺利入侵，这可能导致重大问题。所引入的智能家居系统旨在提供安全保障并简化终端用户对技术的适应 \[13\]。观察威胁并应对攻击应是物联网安全的目标。研究人员还旨在鼓励物联网的安全模式以降低影响用户的风险，并强调了关于传统和基于区块链的物联网安全问题方面仍未充分发展的几个分析领域 \[14\]。
 
 本文献综述主要关注现有的物联网参考架构以及物联网智能家居环境中的各种可能安全威胁。此外，它还说明了物联网在商业和社会上众多新兴动态应用，为人类福祉服务。
 
-### 3\. 物联网架构的批判性评述
+## 3. 物联网架构的批判性评述
 
-物联网平台极其重要，因为它有潜力彻底改变全球各地的各种实时应用。它整合了智能设备、传感器、执行器、RFID 和互联网，以构建一个极其智能的系统。在物联网环境中，传感器通过有线或无线方式连接在异构网络上 \[15\]。
+物联网平台极其重要，因为它有潜力彻底改变全球各地的各种实时应用。它整合了智能设备、传感器、执行器、`RFID` 和互联网，以构建一个极其智能的系统。在物联网环境中，传感器通过有线或无线方式连接在异构网络上 \[15\]。
 
 在 Table 23.1 中概述了详尽的比较分析，涉及所采用的系统设计、方法、协议，以及各种可用物联网架构在功能、隐私和安全方面所面临的挑战。
 
 Table 23.1 Comparative study
 
-| Ref. || Year || Applications || IoT challenges || System design aspects/ architecture || Computing paradigms || Protocols || Security & privacy || Features |
+| Ref. | Year | Applications | IoT challenges | System design aspects/ architecture | Computing paradigms | Protocols | Security & privacy | Features |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| \[16\] || 2014 || X || Interoperability, scalability, and heterogeneity || Layered and distributed architecture for IoT || X || X || Y || Automation, intelligence, and zero-configuration |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| \[17\] || 2014 || X || Authentication, heterogeneity and scalability || Distributed architecture || WSNs and cloud || Two-phase authentication protocol || Y || Partial protection form node capture and DoS attacks |
-| \[18\] || 2016 || X || X || Distributed grid || SDN-and cluster-based || Dynamic routing cluster protocol || Y || Network virtualization and Open-Flow, SMART FIREWALL |
+| \[16\] | 2014 | X | Interoperability, scalability, and heterogeneity | Layered and distributed architecture for IoT | X | X | Y | Automation, intelligence, and zero-configuration |
+| \[17\] | 2014 | X | Authentication, heterogeneity and scalability | Distributed architecture | WSNs and cloud | Two-phase authentication protocol | Y | Partial protection form node capture and DoS attacks |
+| \[18\] | 2016 | X | X | Distributed grid | SDN-and cluster-based | Dynamic routing cluster protocol | Y | Network virtualization and Open-Flow, SMART FIREWALL |
+
+
+
 | \[19\] || 2018 || X || Access control and information propagation || Distributed architecture || Ledger-based || SHA256 and AES, RSA || Y ||  |
 | \[20\] || 2017 || X || Threat prevention, data protection, and access control, DDoS/DoS attacks || Distributed architecture || Block-chains and SDN || Access control and data protection, threat prevention || Y || Mitigate network attacks such as cache poising/ARP spoofing |
 | \[21\] || 2019 || Smart cities || Network performances, and payload efficiency || Distributed secure black SDN architecture || SDN || Open-Flow || Y || Network function virtualization (NVF) |
@@ -5439,136 +5359,98 @@ Table 23.1 Comparative study
 | \[27\] || 2022 || Healthcare system || Performance, resource utilization, privacy of data, and security of the system || IoT-blockchain integration architecture using an Ethereum blockchain infrastructure || Enhanced Rich-Thin-Client architecture (ERTCA), blockchain, Ganache Test Net - A testing blockchain environment maintained by Ethereum || X || Y || Patient Assistant System (PAS), a Nurse Assistant System (NAS), an Anesthesia Assistant System (AAS), and a Surgeon Assistant System (SAS), Surgical process management |
 | \[28\] || 2022 || Healthcare system || Improved resource management, minimize processing time of physiological data || Software-defined fog architecture || SDN and FoG computing || X || X || Continuous patient monitoring |
 
-### 4\. 拟议架构
+### 4. 拟议架构
 
-物联网架构由各种不同的智能事物组成，这些事物收集、处理、评估并相互交互。物联网网络具有不同级别的隐私和安全性，并且容易受到入侵。物联网包括多种网络类型，如无处不在的、分布式的、网格的和车载的。如 Figure 23.1 所示，物联网基础设施不仅包括传感器，还嵌入了各种新兴技术。近年来，行业开发了具有嵌入式智能的各种智能产品。
+物联网架构由各种不同的智能事物组成，这些事物收集、处理、评估并相互交互。物联网网络具有不同级别的隐私和安全性，并且容易受到入侵。物联网包括多种网络类型，如无处不在的、分布式的、网格的和车载的。如 `Figure 23.1` 所示，物联网基础设施不仅包括传感器，还嵌入了各种新兴技术。近年来，行业开发了具有嵌入式智能的各种智能产品。
 
 ![Figure 23.1 IoT architecture.](img/fig23_1_C.jpg)
 
-Figure 23.1 IoT architecture.
+`Figure 23.1` IoT architecture.
 
 主要而言，物联网架构由三个基本层组成，即感知层、网络层和应用层。通常，这种三层架构概述了物联网的基本架构，但不足以满足物联网的深层次和更精细的方面。为解决此问题，我们提出了一种新颖的物联网架构，该架构增加了四个层级并改进了三层架构。
 
-
-
-
-
 因此，物联网的三层架构演变为七层架构，其中环境层负责可观测对象或需要关注事物的真实性，通信层负责物联网设备、网关和云之间数据的安全传输，接下来是服务层，该层监控设备并处理物联网设备生成的数据，最后是应用支持和管理层，该层在维护真实性的同时处理设备和用户的管理。
 
-在对各种可用的物联网架构进行详尽比较后，本文提出的模型如图 Figure 23.2 所示，该模型已纳入物联网架构的所有重要方面。然而，该模型可以进一步探索，我们将在未来的研究中重点介绍。本文在 Figure 23.2 中提出的七层架构表示物联网架构的更先进的分层版本。
+在对各种可用的物联网架构进行详尽比较后，本文提出的模型如图 `Figure 23.2` 所示，该模型已纳入物联网架构的所有重要方面。然而，该模型可以进一步探索，我们将在未来的研究中重点介绍。本文在 `Figure 23.2` 中提出的七层架构表示物联网架构的更先进的分层版本。
 
 ![Figure 23.2 Layers of IoT architecture.](img/fig23_2_C.jpg)
 
-Figure 23.2 Layers of IoT architecture.
+`Figure 23.2` Layers of IoT architecture.
 
 各层的简洁且技术性的解释如下：
 
-#### 1\. Environment layer
+#### 1. Environment layer
+
 该层由物联网应用环境中各种传感器所观测到的所有可观测对象组成。
 
-#### 2\. Sensing and actuation (perception layer)
-物联网中的传感是使用各种传感器从周围环境收集不同类型的数据并根据收集到的日期执行某些操作。这层由各种传感器和执行器组成，如 QR 码、红外、ZigBee、RFID 等。
+#### 2. Sensing and actuation (perception layer)
 
-#### 3\. Network layer
+物联网中的传感是使用各种传感器从周围环境收集不同类型的数据并根据收集到的日期执行某些操作。这层由各种传感器和执行器组成，如 QR 码、红外、`ZigBee`、`RFID` 等。
+
+#### 3. Network layer
+
 该层由网络通信软件和各种硬件组件组成，可促进感知层在无需人工干预的情况下将数据传输到其他层。
 
-#### 4\. Communication layer
+#### 4. Communication layer
+
 通信层为整个架构提供通信服务。该层负责为物联网应用环境的用户提供可靠性、流量控制、服务质量。
 
 #### 5. Services
+
 该层为物联网系统提供各种服务，如设备控制、设备发现、设备监控、数据发布等。
 
-#### 6\. Management layer
+#### 6. Management layer
+
 该层提供用户管理和设备管理。用户管理主要处理访问管理、角色管理和账户管理，而设备管理则处理网络组件的配置、认证、维护和监控。
 
-#### 7\. Applications
+#### 7. Applications
+
 该层根据用户的需求为用户提供服务。物联网最常见的实现包括智慧城市、智能家居、医疗保健、智能交通、智能电网、智能零售等。
 
-### 5\. Privacy and Security Issues in IoT Architecture
-物联网应用在隐私和安全问题方面面临无数挑战，如图所示 Figure 23.3。由于物联网基于连接的设备，因此必须在设备级别进行身份验证。物联网应用由于其身份验证安全挑战而容易受到攻击。另一个问题是访问控制。必须遵循坚不可摧的访问控制程序，以确保只有授权方才能使用资源。在分析和传播信息时，物联网环境中的隐私至关重要。物联网在所有场景中都通过无线方式在设备之间传输敏感和个人数据。因此，必须在物联网环境中遵循某些安全规则，以满足如图 Figure 22.3 所示的隐私和安全挑战。
+### 5. Privacy and Security Issues in IoT Architecture
+
+物联网应用在隐私和安全问题方面面临无数挑战，如图所示 `Figure 23.3`。由于物联网基于连接的设备，因此必须在设备级别进行身份验证。物联网应用由于其身份验证安全挑战而容易受到攻击。另一个问题是访问控制。必须遵循坚不可摧的访问控制程序，以确保只有授权方才能使用资源。在分析和传播信息时，物联网环境中的隐私至关重要。物联网在所有场景中都通过无线方式在设备之间传输敏感和个人数据。因此，必须在物联网环境中遵循某些安全规则，以满足如图 `Figure 22.3` 所示的隐私和安全挑战。
 
 ![Figure 23.3 Security challenges in IoT.](img/fig23_3_C.jpg)
 
-Figure 23.3 Security challenges in IoT.
+`Figure 23.3` Security challenges in IoT.
 
 #### 5.1 Confidentiality
-简单来说，保密性可以概括为“不应与无权访问的人员共享的信息”。在物联网世界中，用户的重要个人数据即用户 ID、密码、联系电话等必须得到保护 [29]。
+
+简单来说，保密性可以概括为“不应与无权访问的人员共享的信息”。在物联网世界中，用户的重要个人数据即用户 ID、密码、联系电话等必须得到保护 [`29`]。
 
 保密性确保只有数据的预期接收者才能读取数据。为了维护物联网系统的保密性，必须在整个系统中强制执行保密性，确定信息如何在网络上传输。
 
 #### 5.2 Authentication
-身份验证确保用户得到验证。为了防止连接的物联网设备和[content]
 
-因此，物联网的三层架构演变为七层架构，其中环境层负责可观测对象或需要关注事物的真实性，通信层负责物联网设备、网关和云之间数据的安全传输，接下来是服务层，该层监控设备并处理物联网设备生成的数据，最后是应用支持和管理层，该层在维护真实性的同时处理设备和用户的管理。
-
-在对各种可用的物联网架构进行详尽比较后，本文提出的模型如图 Figure 23.2 所示，该模型已纳入物联网架构的所有重要方面。然而，该模型可以进一步探索，我们将在未来的研究中重点介绍。本文在 Figure 23.2 中提出的七层架构表示物联网架构的更先进的分层版本。
-
-![Figure 23.2 Layers of IoT architecture.](img/fig23_2_C.jpg)
-
-Figure 23.2 Layers of IoT architecture.
-
-各层的简洁且技术性的解释如下：
-
-#### 1\. Environment layer
-该层由物联网应用环境中各种传感器所观测到的所有可观测对象组成。
-
-#### 2\. Sensing and actuation (perception layer)
-物联网中的传感是使用各种传感器从周围环境收集不同类型的数据并根据收集到的日期执行某些操作。这层由各种传感器和执行器组成，如 QR 码、红外、ZigBee、RFID 等。
-
-#### 3\. Network layer
-该层由网络通信软件和各种硬件组件组成，可促进感知层在无需人工干预的情况下将数据传输到其他层。
-
-#### 4\. Communication layer
-通信层为整个架构提供通信服务。该层负责为物联网应用环境的用户提供可靠性、流量控制、服务质量。
-
-#### 5. Services
-该层为物联网系统提供各种服务，如设备控制、设备发现、设备监控、数据发布等。
-
-#### 6\. Management layer
-该层提供用户管理和设备管理。用户管理主要处理访问管理、角色管理和账户管理，而设备管理则处理网络组件的配置、认证、维护和监控。
-
-#### 7\. Applications
-该层根据用户的需求为用户提供服务。物联网最常见的实现包括智慧城市、智能家居、医疗保健、智能交通、智能电网、智能零售等。
-
-### 5\. Privacy and Security Issues in IoT Architecture
-物联网应用在隐私和安全问题方面面临无数挑战，如图所示 Figure 23.3。由于物联网基于连接的设备，因此必须在设备级别进行身份验证。物联网应用由于其身份验证安全挑战而容易受到攻击。另一个问题是访问控制。必须遵循坚不可摧的访问控制程序，以确保只有授权方才能使用资源。在分析和传播信息时，物联网环境中的隐私至关重要。物联网在所有场景中都通过无线方式在设备之间传输敏感和个人数据。因此，必须在物联网环境中遵循某些安全规则，以满足如图 Figure 22.3 所示的隐私和安全挑战。
-
-![Figure 23.3 Security challenges in IoT.](img/fig23_3_C.jpg)
-
-Figure 23.3 Security challenges in IoT.
-
-#### 5.1 Confidentiality
-简单来说，保密性可以概括为“不应与无权访问的人员共享的信息”。在物联网世界中，用户的重要个人数据即用户 ID、密码、联系电话等必须得到保护 [29]。
-
-保密性确保只有数据的预期接收者才能读取数据。为了维护物联网系统的保密性，必须在整个系统中强制执行保密性，确定信息如何在网络上传输。
-
-#### 5.2 Authentication
 身份验证确保用户得到验证。为了防止连接的物联网设备和设备免受未经授权的控制命令的侵害，需要强大的物联网身份验证。
 
-多个利益相关者可以在智能环境中组合和集成服务，从而以可靠和高效的方式支持众多用户 [30]。经过身份验证的通信意味着“双方通信实体确信它们正在与经过身份验证的方进行交互”。成功的身份验证机制可确保数据的保密性、完整性和可用性 [29]。由于资源有限，物联网身份验证方案需要低成本和低功耗。轻量级密码学可以解决这个问题 [31]。
+多个利益相关者可以在智能环境中组合和集成服务，从而以可靠和高效的方式支持众多用户 [`30`]。经过身份验证的通信意味着“双方通信实体确信它们正在与经过身份验证的方进行交互”。成功的身份验证机制可确保数据的保密性、完整性和可用性 [`29`]。由于资源有限，物联网身份验证方案需要低成本和低功耗。轻量级密码学可以解决这个问题 [`31`]。
 
 #### 5.3 Access control
-访问控制攻击是最关键的攻击之一。物联网应用容易受到访问控制攻击，因为一旦访问被破坏，整个应用就会变得容易受到攻击 [32]。访问控制原则指出“只有经过身份验证的用户才能访问其他设备和人员的数据和控制” [4]。
+
+访问控制攻击是最关键的攻击之一。物联网应用容易受到访问控制攻击，因为一旦访问被破坏，整个应用就会变得容易受到攻击 [`32`]。访问控制原则指出“只有经过身份验证的用户才能访问其他设备和人员的数据和控制” [`4`]。
 
 只要通信质量已得到保证，访问控制机制就会建立新的连接。访问控制系统可保护物联网免受拒绝服务、重放和入侵者攻击。
 
 #### 5.4 Privacy
+
 物联网被用于各种应用，因此用户理所当然地期望其隐私得到保护。
 
-随着物联网应用每天变得越来越广泛，它促进了我们周围环境、我们的健康、我们的家庭等的数据收集。从用户的角度来看，这些数据可能包含一些应予保护的私人或敏感的个人数据 [11]。物联网数据的隐私保护方法需要仔细审查哪些信息是私有的和非私有的，以便方法可以在不妨碍数据分析的情况下保护私有数据。控制用户隐私的能力也是设计过程中的一个组成部分。物联网数据隐私提出了超出传统数据隐私问题的新隐私问题。以下是物联网隐私问题的列表：
+随着物联网应用每天变得越来越广泛，它促进了我们周围环境、我们的健康、我们的家庭等的数据收集。从用户的角度来看，这些数据可能包含一些应予保护的私人或敏感的个人数据 [`11`]。物联网数据的隐私保护方法需要仔细审查哪些信息是私有的和非私有的，以便方法可以在不妨碍数据分析的情况下保护私有数据。控制用户隐私的能力也是设计过程中的一个组成部分。物联网数据隐私提出了超出传统数据隐私问题的新隐私问题。以下是物联网隐私问题的列表：
+
 * Privacy in device
 * Privacy in storage
 * Privacy in the course of communication
 * Privacy while processing
 
 #### 5.5 Integrity
-最简单地说，完整性意味着“确保未经授权的用户无法对传输中的信息进行任何修改” [4]。保护数据免受未经授权的干预至关重要，特别是如果注入了不需要的代码。验证数据的完整性并确保其在传输过程中未被更改是可能的，当使用数字证书与代码时。
 
-可以在源头使用配置管理、访问控制和流程控制来保护完整性。在数据传输过程中，可以通过采用循环冗余校验或哈希算法来确保完整性以检测恶意行为 [29]。
+最简单地说，完整性意味着“确保未经授权的用户无法对传输中的信息进行任何修改” [`4`]。保护数据免受未经授权的干预至关重要，特别是如果注入了不需要的代码。验证数据的完整性并确保其在传输过程中未被更改是可能的，当使用数字证书与代码时。
+
+可以在源头使用配置管理、访问控制和流程控制来保护完整性。在数据传输过程中，可以通过采用循环冗余校验或哈希算法来确保完整性以检测恶意行为 [`29`]。
 
 #### 5.6 Non-repudiation
-
-
 
 
 
@@ -5614,10 +5496,6 @@ Figure 23.3 Security challenges in IoT.
 
 11. Bagchi, S., et al. (2020). New frontiers in IoT: Networking, systems, reliability, and security challenges. IEEE Internet Things J., 7(12), 11330-11346. doi: [10.1109/JIOT.2020.3007690](http://dx.doi.org/10.1109/JIOT.2020.3007690).
 
-
-
-
-
 12. Jiang, J., Li, Z., Tian, Y., and Al-Nabhan, N. (2020). A review of techniques and methods for IoT applications in collaborative cloud-fog environment. Sec. Comm. Netw., 2020, 2020. doi: [10.1155/2020/8849181.](http://dx.doi.org/10.1155/2020/8849181)
 
 13. Nagaraja, G. S. and Srinath, S. (2020). Security architecture for IoT-based home automation. Smart Innov. Sys. Technol., 159, 57-65. doi: [10.1007/978-981-13-9282-5\_6.](http://dx.doi.org/10.1007/978-981-13-9282-5_6)
@@ -5646,6 +5524,8 @@ Figure 23.3 Security challenges in IoT.
 
 25. Ariza, J., Garcés, K., Cardozo, N., Sánchez, J. P. R., and Vargas, F. J. (2021). IoT architecture for adaptation to transient devices. J. Paral. Distrib. Comput., 148, 14-30. doi: [10.1016/j.jpdc.2020.09.012.](http://dx.doi.org/10.1016/j.jpdc.2020.09.012)
 
+
+
 26. Paganelli, A. I., et al. (2021). A conceptual IoT-based early-warning architecture for remote monitoring of COVID-19 patients in wards and at home. Internet of Things, xxxx, 100399. doi: [10.1016/j.iot.2021.100399.](http://dx.doi.org/10.1016/j.iot.2021.100399)
 
 27. Bataineh, M. R., Mardini, W., Khamayseh, Y. M., and Yassein, M. M. B. (2022). Novel and secure blockchain framework for health applications in IoT. IEEE Acc., 10, 14914-14926. doi: [10.1109/ACCESS.2022.3147795.](http://dx.doi.org/10.1109/ACCESS.2022.3147795)
@@ -5664,19 +5544,16 @@ Figure 23.3 Security challenges in IoT.
 
 Rohit Yadav^(²⁴)
 
-### Abstract
+## Abstract
 
 可维护性是任何软件系统中的关键阶段，它不仅仅是修复错误，更是为软件系统的长期成功进行战略规划。软件可维护性受多种因素影响，预测它的方法有很多，如指标提取、测试覆盖率、软件复杂度度量、机器学习 (`ML`) 模型、反检测模式和自然语言处理等。由于可维护性是一个复杂概念，有效预测它需要对广泛的软件属性和开发技术有透彻的理解。我们提出了基于特征选择-排序的可优化支持向量机 (`SVMs`)，并将其与特征选择排序算法结合应用。我们的方案在验证准确率方面表现更好，达到 87.9%。
 
 **关键词：** 支持向量机，可维护性，最小冗余-最大相关性，卡方检验
 
-### 1. Introduction
-
-
-
-
+## 1. Introduction
 
 随着时间的推移，软件系统能够非常轻松高效地解决日常事件，它们变得越来越庞大和复杂。维护如此复杂的系统对软件专业人员来说变得越来越困难。由于维持现有系统占用了软件公司大部分资源，一些公司可能无法启动新项目。因此，在软件开发过程的早期，在设计阶段，软件可维护性预测 `SMP` 将重点放在创建和开发用于预测软件可维护性的预测模型上 \[1\]。提前选择更重要的参数可以提高 `SMP` 模型的预测准确性 \[2\]。高维记录中存在重复特征可能会对预测可维护性造成问题，因为这可能导致机器学习 `ML` 算法表现不佳。特征选择 `FS` 技术有效地克服了这一差距 \[6, 7\]。这提供了在预算范围内按时交付的优秀软件产品，且可维护性非常高。本研究在学习 `SMP` 模型之前使用了一系列数据特征排序算法，以提高和有效性能，解决了参数选择在 `SMP` 中的重要性。本研究发现面向对象 `OO` 指标与软件可维护性之间存在强相关性，这些指标描述了程序的各个方面，包括继承、耦合和内聚。这使得研究变得重要，因为它通过确定影响软件可维护性甚于其他特性的特征来解决高效 `SMP` 模型的创建问题。通过适当的方式将资源分配给这些类，有助于提高软件产品的质量。我们的提案有助于：
+
 * 确定软件系统可维护性的根本点。
 * 评估并统计验证所创建的 `SMP` 模型的预测能力。
 * 评估多种基于特征选择的排序策略与支持向量机 `SVMs`。
@@ -5704,6 +5581,7 @@ Figure 24.2 Diagram of research methodology.
 ### 3.1 数据集
 
 我们使用了以下基于 Java 编程的数据集：
+
 * Ant: Ant 是一种命令行工具，用于自动化构建文件中表示的扩展点和目标中的任务。Ant 包含用于构建、测试、编译和运行 Java 程序的多个任务。
 * Camel: 以企业集成模式为核心构建。Camel 是一个开源网络框架。
 * Ckjmml: 软件 ckjm 通过检查字节码和编译的 Java 程序来生成面向对象的指标，如 Chidamber 和 Kemerer。
@@ -5739,10 +5617,6 @@ Else
 MV = 0;
 }
 ```
-
-
-
-
 
 在上述逻辑中，`CC` 表示圈复杂度，`MV` 表示可维护性指标。
 
@@ -5787,9 +5661,7 @@ $$\\chi^{2} = {\\sum\\frac{\\left( {O\_{i} - E\_{i}} \\right)^{2}}{E\_{i}}}$$
 其中
 
 > *O[i]* = 观察值，
-
 > 
-
 > *E[i]* = 预期值。
 
 χ² 的高值表明原假设被否定。
@@ -5814,11 +5686,11 @@ $$k\\left( {x,x^{\*}} \\right) = \\exp\\left( {- \\frac{1}{2}\\left\\| {x - x^{\
 
 对于性能度量 ROC 曲线、曲线下面积（AUC）、混淆矩阵、RMSE、R²、MSE 和 MAE 在我们的研究中被使用。
 
-*   ROC 曲线是用于将分类为真和假的图形表示。ROC 提取软件系统的高或低可维护性。AUC 量化模型在不同阈值设置下区分高类和低类的能力。
-*   混淆矩阵处理实例作为高或低可维护性正确或错误预测的情况。
-*   均方根误差（RMSE）是比较模型或预测器预测值与实际值的一种流行统计量。
-*   回归线的均方误差（MSE）表明其与一系列解的接近程度。它通过对点与回归线之间的距离进行平方来实现。平方是消除任何负信号所必需的。
-*   均绝对误差（MAE）是描述相同现象的一对观测值之间误差的度量。
+* ROC 曲线是用于将分类为真和假的图形表示。ROC 提取软件系统的高或低可维护性。AUC 量化模型在不同阈值设置下区分高类和低类的能力。
+* 混淆矩阵处理实例作为高或低可维护性正确或错误预测的情况。
+* 均方根误差（RMSE）是比较模型或预测器预测值与实际值的一种流行统计量。
+* 回归线的均方误差（MSE）表明其与一系列解的接近程度。它通过对点与回归线之间的距离进行平方来实现。平方是消除任何负信号所必需的。
+* 均绝对误差（MAE）是描述相同现象的一对观测值之间误差的度量。
 
 ## 5. 实验结果与讨论
 
@@ -5848,6 +5720,8 @@ Table 24.2 Ranking values of Input variable using Chi-square and mRMR
 | **cbm** || 12 || 12 |
 | **amc** || 3 || 16 |
 
+
+
 模型 1 使用卡方方法，随后使用可优化 SVM，其预测变量为 `noc`、`cbo`、`lcom`、`ca`、`Ce`、`lcom3`、`loc`、`dam`、`moa` 和 `amc`，响应变量为 `MV`。相比之下，我们的第二个模型（模型 2）采用 `mRMR` 技术和可优化 SVM。其预测变量为 `dit`、`noc`、`rfc`、`lcom`、`Ce`、`npm`、`lcom3`、`loc`、`cam` 和 `ic`，响应变量为 `MV`。而 `wmc`、`cbo`、`ca`、`dam`、`moa`、`mfa`、`cbm` 和 `amc` 从数据集中移除，以为模型 2 提供更小的预测变量选择；`wmc`、`dit`、`rfc`、`npm`、`mfa`、`cam`、`ic` 和 `cbm` 未用于模型 1 的训练（Figure 24.3、Figure 24.4 和 Figure 24.5）。
 
 ![Figure 24.3 Confusion matrix of model 1 and model 2.](img/fig24_3_C.jpg)
@@ -5861,10 +5735,6 @@ Figure 24.4 ROC curve of model 1 and model 2.
 ![Figure 24.5 MSE for each iteration of model 1 and model 2.](img/fig24_5_C.jpg)
 
 Figure 24.5 MSE for each iteration of model 1 and model 2.
-
-
-
-
 
 根据分析，`model 2` 相较于 `model 1` 表现更优，准确率为 87.9%。当使用卡方方法时，得到的值分别为 0.79396、0.37、0.63036 和 0.53769，而 mRMR 模型得到的值为 0.76737、0.41、0.58886 和 0.47987。比较显示在 图 24.6 中。随后两个训练好的模型均进行了测试并应用了贝叶斯优化。我们考虑了两个名为 `poi` 和 `jEdit` 的软件进行测试。这导致两个模型均超过 80% 的准确率，这对于预测软件可维护性的任何模型来说都是积极的信号。两个不同的开源软件即 `jEdit` 和 `poi` 形成了 图 24.7，很明显 mRMR 后接优化 SVM 比卡方后接优化 SVM 更好。我们的提案有效地使用预测变量，并且它们在每个模型中都被常用使用。结果还显示指标 `ce`、`lcom`、`lcom3`、`loc` 和 `noc` 是面向对象软件可维护性预测的最重要特征。MRMR 和卡方对准确率影响很大，但 mRMR 产生的准确率比使用卡方方法构建的模型高出 87.9%，而后者产生的准确率为 84.5%。
 
@@ -5924,10 +5794,6 @@ Prakshep Kumar Rai^(²⁵)
 
 ## 1. 引言
 
-
-
-
-
 当代可移动无线通信设备的需求日益增加，它可以将多种通信标准集成到单一系统中。由于空间有限，在此类设备中同时容纳两个或多个天线是困难的。“这表明现代天线除了实现双频或多频操作外，还需要具备其他任务，例如紧凑尺寸、简单结构以及易于与系统集成” [1]。由于其简单、低剖面且价格低廉的独特品质，微带贴片天线非常受欢迎。它们与单片微波集成电路兼容且易于安装 [2]。全球微波接入互操作性（WiMAX）是一种非常流行的无线通信系统，最近受到了研究人员的大量关注，并已在移动设备中实现。天线应覆盖多个频段并能够提供一致的全向辐射模式，以增强性能并使天线在复杂多变的 WiMAX 环境中有用 [3]。此外，低频段（2500 至 2690 MHz）、中频段（3300 至 3700 MHz）和高频段（5250 至 5850 MHz）是 WiMAX 被分配的三个主要频段 [4]。文献中最近提出了许多用于 WiMAX 和超宽带（UWB）的多频带天线。例如，在 [5] 中，作者提出了一种用于 7.5 GHz 无线通信的矩形贴片天线，其回波损耗低，天线尺寸较大 32 × 28.1 mm²，且仅有一个频段。一种用于多频带应用的可携式共面波导（CPW）馈电天线在 [6] 中被提出，天线尺寸相当小但结构复杂。
 
 [7, 8, 9, 10, 11, 12, 13 和 14] 中也有多频带无线应用的设计。在参考文献 7、8、9 和 10 中，尽管所建议的天线具有良好的品质但尺寸较大。
@@ -5945,16 +5811,27 @@ Prakshep Kumar Rai^(²⁵)
 表 25.1 所建议天线的尺寸
 
 | 参数 || 尺寸 (mm) || 参数 || 尺寸 (mm) |
+
 | --- | --- | --- | --- |
+
 | S[L] || 26 || S[W] || 20 |
+
 | --- | --- | --- | --- |
+
 | F[L] || 12 || F[W] || 3 |
+
 | L[P] || 12 || W[P] || 10 |
+
 | L[R] || 4 || W[R] || 4 |
+
 | L[1] || 4 || W[1] || 1 |
+
 | L[2] || 1 || W[2] || 3 |
+
 | L[3] || 1 || W[3] || 5 |
+
 | L[4] || 1 || W[4] || 7 |
+
 | L[g] || 8 ||  ||  |
 
 图 25.2 显示了天线设计涉及的步骤，包括天线 1、天线 2 和天线 3。图 25.3 显示了天线 1、天线 2 和天线 3 的回波损耗。天线 3 是所提出的天线。天线 1 在 3.3–4.5 GHz 谐振；它还在 3.8 GHz 显示接近 -19dB 的回波损耗。在贴片上添加 2 条带状线并在贴片上切开后设计了新的天线，即天线 2，其工作在 2 个频段，即 3.3–4.3 GHz 和 6.4–7.3 GHz，谐振频率为 3.7 和 6.9 GHz，且回波损耗较差，分别为 -23.27 和 -19.16dB。为了使天线实现三频，添加了带状线 3，并在基板底部平行添加寄生元件，从而改善了天线的回波损耗。天线 3（最终天线）在 3 个频段工作，即 3.1–4 GHz、5.3–5.8 GHz 和 7.3–8 GHz，回波损耗良好，分别为 −37、−22 和 −25 dB，覆盖 WiMAX 3.5/5.5 GHz 和 C 频段 7.5 GHz。
@@ -5970,13 +5847,21 @@ Prakshep Kumar Rai^(²⁵)
 表 25.2 图 25.2 天线上述因素的比较
 
 | 天线名称 || 模式 || 带宽 || 频段数 |
+
 | --- | --- | --- | --- |
+
 | 天线 1 || 矩形贴片 || 3.3–4.5 || 单频带 |
+
 | --- | --- | --- | --- |
+
 | 天线 2 || 带 2 条带状线的矩形贴片 || 3.3–4.3 || 双频带 |
+
 |  ||  || 6.4–7.3 ||  |
+
 | 天线 3 || 带 3 条带状线和寄生元件的矩形贴片 || 3.1–4 || 三频带 |
+
 |  ||  || 5.3–5.8 ||  |
+
 |  ||  || 7.3–8 ||  |
 
 ## 3. 参数分析
@@ -5987,27 +5872,25 @@ Prakshep Kumar Rai^(²⁵)
 
 图 25.4 Fw 参数的分析。
 
-
-
-
-
 Figure 25.5 显示了不同 `Lg` 值下的回波损耗。`Lg` 本质上是指地平面的长度。`Lg` 在 7 到 9 mm 之间变化。`Lg` 为 8 mm 的天线在回波损耗良好且具有适当的阻抗匹配方面取得了最佳结果。
 
 ![Figure 25.5 Analysis of Lg's parameters.](img/fig25_5_C.jpg)
 
 图 25.5 Lg 参数分析。
 
-在 Figure 25.6 中，展示了寄生元件宽度 `W4` 的参数分析。寄生元件位于基板底部。分析评估了 `W4` 的不同值及其对天线性能的影响。然而，当 `W4` 设置为 6 mm 或 8 mm 时，天线表现出较低的回波损耗。这意味着这些特定宽度会导致更好的阻抗匹配以及 WiMAX 频段更好的信号传输和接收特性。此外，当 `W4` 设置为 6 mm 或 8 mm 时，WiMAX 频段的上部频段和 C 频段频率会向较低频率移动。这意味着当使用 `W4` 值为 6 mm 或 8 mm 时，天线在这些频段的谐振频率略低。考虑到天线的整体性能和特性，确定寄生元件 `W4` 的最佳宽度固定为 7 mm。这种选择可能是基于在实现低回波损耗、适当阻抗匹配以及 WiMAX 频段和 C 频段所需的频率覆盖之间取得平衡。
+
+
+在 `Figure 25.6` 中，展示了寄生元件宽度 `W4` 的参数分析。寄生元件位于基板底部。分析评估了 `W4` 的不同值及其对天线性能的影响。然而，当 `W4` 设置为 6 mm 或 8 mm 时，天线表现出较低的回波损耗。这意味着这些特定宽度会导致更好的阻抗匹配以及 WiMAX 频段更好的信号传输和接收特性。此外，当 `W4` 设置为 6 mm 或 8 mm 时，WiMAX 频段的上部频段和 C 频段频率会向较低频率移动。这意味着当使用 `W4` 值为 6 mm 或 8 mm 时，天线在这些频段的谐振频率略低。考虑到天线的整体性能和特性，确定寄生元件 `W4` 的最佳宽度固定为 7 mm。这种选择可能是基于在实现低回波损耗、适当阻抗匹配以及 WiMAX 频段和 C 频段所需的频率覆盖之间取得平衡。
 
 ![Figure 25.6 Analysis of W4's parameters.](img/fig25_6_C.jpg)
 
-图 25.6 W4 参数分析。
+图 25.6 `W4` 参数分析。
 
 ### 4. 结果与讨论
 
 使用 `HFSS` 软件仿真的所提出天线设计表现出三个不同的频段，谐振频率分别为 3.5、5.5 和 7.7 GHz。这些频率的回波损耗分别为 -37、−22 和 −25 dB，表明具有良好的阻抗匹配和最小的功率反射。
 
-为了进一步深入了解天线的性能，在 3.5、5.5 和 7.7 GHz 的谐振频率下电流分布分别示于 Figures 25.7、25.8 和 25.9。这些图描绘了每个频率下电流在天线结构上的分布。通过检查电流分布，可以观察到高和低电流密度区域，这有助于理解天线在不同频率下的辐射能量方式。
+为了进一步深入了解天线的性能，在 3.5、5.5 和 7.7 GHz 的谐振频率下电流分布分别示于 `Figures 25.7`、`25.8` 和 `25.9`。这些图描绘了每个频率下电流在天线结构上的分布。通过检查电流分布，可以观察到高和低电流密度区域，这有助于理解天线在不同频率下的辐射能量方式。
 
 ![Figure 25.7 Dispersion of current at 3.5 GHz.](img/fig25_7_C.jpg)
 
@@ -6021,7 +5904,7 @@ Figure 25.5 显示了不同 `Lg` 值下的回波损耗。`Lg` 本质上是指地
 
 图 25.9 7.7 GHz 时的电流分散。
 
-此外，天线的辐射方向图是评估其性能的关键因素。Figures 25.10、25.11 和 25.12 显示了天线在 Phi = 0°（E 面）和 Phi = 90°（H 面）下频率分别为 3.5、5.5 和 7.7 GHz 的辐射方向图。E 面是指垂直于天线轴的平面，而 H 面是包含天线轴的平面。对于 3.5 GHz 频段，所提出的天线在 E 面表现出全向辐射方向图，表明它在该平面内向各个方向辐射相等。然而，在 H 面，辐射方向图呈二维，表明天线在该平面内更有效地朝特定方向辐射。相比之下，对于 5.5 和 7.7 GHz 频段，天线在 E 面和 H 面均在所需方向上表现出良好的辐射特性。这意味着天线设计为在这些频率下朝特定方向高效辐射能量，这对于需要聚焦或定向辐射的应用是理想的。
+此外，天线的辐射方向图是评估其性能的关键因素。`Figures 25.10`、`25.11` 和 `25.12` 显示了天线在 `Phi = 0°`（E 面）和 `Phi = 90°`（H 面）下频率分别为 3.5、5.5 和 7.7 GHz 的辐射方向图。E 面是指垂直于天线轴的平面，而 H 面是包含天线轴的平面。对于 3.5 GHz 频段，所提出的天线在 E 面表现出全向辐射方向图，表明它在该平面内向各个方向辐射相等。然而，在 H 面，辐射方向图呈二维，表明天线在该平面内更有效地朝特定方向辐射。相比之下，对于 5.5 和 7.7 GHz 频段，天线在 E 面和 H 面均在所需方向上表现出良好的辐射特性。这意味着天线设计为在这些频率下朝特定方向高效辐射能量，这对于需要聚焦或定向辐射的应用是理想的。
 
 ![Figure 25.10 Frequency=3.5 GHz.](img/fig25_10_C.jpg)
 
@@ -6035,7 +5918,7 @@ Figure 25.5 显示了不同 `Lg` 值下的回波损耗。`Lg` 本质上是指地
 
 图 25.12 频率=7.7 GHz。
 
-Figure 25.13，提供了天线的顶视图和底视图，描绘了制作的天线。Figure 25.14 显示了使用仿真软件 `HFSS` 获得的测量结果与仿真结果之间的对比。两种结果的良好兼容性证明了所建议天线的实用性。
+`Figure 25.13`，提供了天线的顶视图和底视图，描绘了制作的天线。`Figure 25.14` 显示了使用仿真软件 `HFSS` 获得的测量结果与仿真结果之间的对比。两种结果的良好兼容性证明了所建议天线的实用性。
 
 ![Figure 25.13 Top and bottom view of fabricated antenna.](img/fig25_13_C.jpg)
 
@@ -6065,10 +5948,6 @@ Figure 25.13，提供了天线的顶视图和底视图，描绘了制作的天�
 
 7. Chandan. (2020). Truncated ground plane multiband monopole antenna for WLAN and WiMAX applications. IETE J. Res., 66, 1-6.
 
-
-
-
-
 8. Chandan, T. S. and Rai, B. S. (2017). L-槽微带馈电单极子天线用于三频段 WLAN 和 WiMAX 应用。Springer Adv. Intel. Sys. Comput. Book Ser., 516, 351-359。
 
 9. Chandan, Rai, B.S. (2016). 用于 WiMAX 和 WLAN 应用的微带馈电双频单极子贴片天线。Inform. Sys. Des. Intel. Appl., 2, 533-539。
@@ -6091,15 +5970,11 @@ Parimal Tiwari^(²⁶)
 
 本文研究的紧凑型矩形槽天线由触角型结构和接地平面缺陷组成，可实现 GNSS、无线局域网、WiMAX、长期演进、C 波段和 X 波段等无线应用。该蚀刻采用 50 Ω 微带线在 FR4 介质基板上完成。该天线覆盖的频率为 (1.4–1.8)/1.6 GHz、(2.1–3.5)/2.4 GHz、(5.4–6.3)/5.8 GHz、(7.0–7.3)/7.2 GHz 和 (9.2–11.6)/9.9 GHz。所设计原型天线的相应带宽分别为 25%、58%、16%、4% 和 24%。为验证所提设计，采用制造商和矢量网络分析仪进行了制作和测试，并提供了测量结果。制作的原型通过测量验证了仿真结果的准确性。随后各节中讨论并验证并呈现了各种尺寸的参数分析、表面电流分布和辐射方向图，以证明所提设计更优。
 
-**关键词：** GNSS, WLAN, WiMAX, 缺陷接地结构 (DGS), 微带, 辐射方向图, FR4
+**关键词：** GNSS, WLAN, WiMAX, 缺陷接地结构 (`DGS`), 微带, 辐射方向图, FR4
 
 ### 1. Introduction
 
 为无线通信系统设计的用于多频段工作的天线受到了广泛关注。其中，微带天线已成为多种无线应用的首选。与传统天线相比，微带贴片天线具有诸多优势，包括重量轻、成本效益高、易于制造和可适应性。此外，它们可以与单片集成电路无缝集成 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 和 14]。典型的微带贴片天线具有辐射发生的贴片、基板和接地结构。基板位于接地和贴片之间。通常，采用铜或金等导电材料构建辐射贴片。馈电结构负责连接辐射贴片，并蚀刻在介电基板上。微带贴片天线可设计成多种形状，如方形、圆形、矩形、三角形、椭圆形等 [4]。
-
-
-
-
 
 引入了一种具有分形科赫形状的新型缝隙天线，专为多频段无线应用而设计 [2]。分形科赫形单极子和开槽接地面的加入用于改变天线贴片的电容和电感特性，从而增加贴片电流的整体路径长度。值得注意的是，这种创新设计的整体尺寸仅为 55 mm × 56 mm。
 
@@ -6133,7 +6008,7 @@ Thiripurasundari 等人在其研究中讨论了一种适用于无线 LAN、WiMAX
 
 ## 2. 天线设计
 
-原型天线设计已显示并在 Figure 26.1 中用尺寸名称进行说明。所取基板为 FR4 材料，其长度和宽度分别为 `L[s]` 和 `W[s]`。该天线采用 50 Ω 微带线馈电以进行激励。`LF` 为馈电长度，`WF` 为馈电宽度。`L[qw]` 和 `W[qw]` 为四分之一波长变压器传输线。矩形贴片上切割出方形槽，其长度和宽度在图中分别表示为 "`L[sq]`" 和 "`W[sq]`"。`S1`、`S2`、`S3`、`S4` 和 `S5` 是如图所示形成贴片上方触手状结构的条带长度。"`t`" 为这些条带的厚度。
+原型天线设计已显示并在 `Figure 26.1` 中用尺寸名称进行说明。所取基板为 FR4 材料，其长度和宽度分别为 `L[s]` 和 `W[s]`。该天线采用 50 Ω 微带线馈电以进行激励。`LF` 为馈电长度，`WF` 为馈电宽度。`L[qw]` 和 `W[qw]` 为四分之一波长变压器传输线。矩形贴片上切割出方形槽，其长度和宽度在图中分别表示为 "`L[sq]`" 和 "`W[sq]`"。`S1`、`S2`、`S3`、`S4` 和 `S5` 是如图所示形成贴片上方触手状结构的条带长度。"`t`" 为这些条带的厚度。
 
 ![Figure 26.1 Antenna prototype with front and the back view.](img/fig26_1_C.jpg)
 
@@ -6141,17 +6016,25 @@ Figure 26.1 Antenna prototype with front and the back view.
 
 在接地平面中，切割出一条长条带和方形结构。`GS[L]` 和 `GS[W]` 为条带的长和宽，`G1` 和 `G2` 为方形。`Lg` 和 `Wg` 取为地面的长度和宽度。
 
-Table 26.1 展示了所提天线的尺寸（单位 mm）与 Figure 26.1 中使用的命名对照。
+Table 26.1 展示了所提天线的尺寸（单位 mm）与 `Figure 26.1` 中使用的命名对照。
 
 Table 26.1 Dimensions of proposed antenna configuration
 
 | Ls || Ws || Lp || Wp || Lg || Wg || LF || WF || L1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+
+
 | 36 || 30 || 13 || 17 || 13 || 30 || 11 || 3 || 2.5 |
+
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| **Lsq** || **Wsq** || **S1** || **S2** || **S3** || **S4** || **S5** || **x** || **y** |
+
+| `Lsq` || `Wsq` || `S1` || `S2` || `S3` || `S4` || `S5` || `x` || `y` |
+
 | 8 || 11 || 6 || 10.25 || 19 || 6 || 12.25 || 6 || 2 |
-| **z** || **t** || **G1** || **G2** || **GS[L]** || **GS[W]** || **G** || **Lqw** || **Wqw** |
+
+| `z` || `t` || `G1` || `G2` || `GS[L]` || `GS[W]` || `G` || `Lqw` || `Wqw` |
+
 | 7 || 1 || 4 || 4 || 13 || 1.5 || 0.25 || 4 || 1.5 |
 
 可用于设计和制造天线的有用天线方程为 [1]：贴片宽度 `W[p]` 的计算公式为：
@@ -6165,10 +6048,6 @@ $$
 介电（有效）常数 `ε[reff]` 可计算为：
 
 (2)
-
-
-
-
 
 $$\varepsilon_{reff} = \frac{\varepsilon_{r} + 1}{2} + \frac{\varepsilon_{r} - 1}{2}\left[ {1 + 12\frac{h}{W_{p}}} \right]^{1/2}$$
 
@@ -6224,7 +6103,7 @@ Figure 26.4 Return losses of the antenna evolution.
 
 ### 4.1 Parametric analysis
 
-模拟参数分析显示了接地长度 “`L[g]`” 从 12 mm 变到 15 mm 的变化，如 Figure 26.5 所示。在该图中显示，当 `L[g]` 的值为 12 mm 时，该天线产生四个谐振，回波损耗较低。`L[g]` = 14 mm 产生四个谐振频率，并且除第二谐振频率外回波损耗也较低。当 `L[g]` 为 15 mm 时，如图所示，天线仅提供三个频率。因此，`L[g]` 为 13 mm 时结果最佳，具有五个谐振、良好的带宽和增益。
+模拟参数分析显示了接地长度 "`L[g]`" 从 12 mm 变到 15 mm 的变化，如 Figure 26.5 所示。在该图中显示，当 `L[g]` 的值为 12 mm 时，该天线产生四个谐振，回波损耗较低。`L[g]` = 14 mm 产生四个谐振频率，并且除第二谐振频率外回波损耗也较低。当 `L[g]` 为 15 mm 时，如图所示，天线仅提供三个频率。因此，`L[g]` 为 13 mm 时结果最佳，具有五个谐振、良好的带宽和增益。
 
 ![Figure 26.5 S11 vs. frequency plot for variation in Lg.](img/fig26_5_C.jpg)
 
@@ -6252,10 +6131,6 @@ Figure 26.8 Surface current of the antenna at (a) 1.6 GHz, (b) 2.4 GHz, (c) 5.8 
 
 ### 4.3 Radiation pattern
 
-
-
-
-
 Figure 26.9a–e illustrates the far-field radiation pattern simulated result along E- and H-plane at 1.6 GHz, 2.4 GHz, 5.8 GHz, 7.2 GHz and 9.9 GHz. From the Figure, it is much evident that at 1.6 GHz and 2.4 GHz antenna exhibits bi-directional radiation pattern while at 5.8 GHz, 7.2 GHz and 9.9 GHz, it is exhibiting nearly omnidirectional in the E-plane. Now, in the H-plane, at all the frequencies, antenna is exhibiting the bi-directional radiation pattern. In Figure 26.9, left side shows the E-plane and right-hand side shows the H-plane.
 
 ![Figure 26.9 Radiation patterns at (a) 1.6 GHz, (b) 2.4 GHz, (c) 5.8 GHz, (d) 7.2 GHz and (e) 9.9 GHz.](img/fig26_9_C.jpg)
@@ -6275,14 +6150,23 @@ A comparison has been conducted between the newly proposed design and a similar 
 Table 26.2 Comparative table between the parameters of proposed and other antennas
 
 | Reference || Size (mm2) || Bands || Bandwidth (%) |
+
 | --- | --- | --- | --- |
+
 | \[5\] || 70 × 60 || 2 || 5.74 and 26. |
+
 | --- | --- | --- | --- |
+
 | \[8\] || 60 × 60 || 4 || 6.28, 4, 4.7 and 3. |
+
 | \[9\] || 60 × 60 || 2 || 4 and 2. |
+
 | \[18\] || 60 × 45 || 2 || 12.65 and 33. |
+
 | \[19\] || 57.2 × 31.2 || 4 || 7.78, 8.16, 18.86 and 16.91. |
+
 | \[20\] || 32 × 37.2 || 3 || 12.5, 7.42 and 6.36. |
+
 | Proposed antenna || 36 × 30 || 5 || 19, 50, 16, 4 and 13. |
 
 ### 4.5 Measured result
@@ -6299,7 +6183,9 @@ Figure 26.12 The fabricated prototype antenna (a) top view and (b) bottom view.
 
 ## 5. Conclusions
 
-The proposed antenna is of low profile and having compact size. The total size of the antenna is 36 × 30 × 1.6 mm3 and provides the range of frequencies from (1.4–1.8)/1.6 GHz, (2.1–3.5)/2.4 GHz, (5.4–6.3)/5.8 GHz, (7.0–7.3)/7.2 GHz and (9.2–11.6)/9.9 GHz suitable for GNSS, WiMAX, LTE, Wireless LAN, C- and X-band applications. The simulated impedance bandwidth comes out to be 25%, 58%, 16%, 4% and 24% and measured impedance bandwidth of 19%, 50%, 16%, 4% and 13%. The gain at all five resonances are 2.8 dBi, 1.8 dBi, 3.7 dBi, 2.9 dBi and 5.4 dBi. The antenna also exhibits good radiation pattern. The antenna is simulated on ANSYS HFSS with FR4 substrate.
+
+
+The proposed antenna is of low profile and having compact size. The total size of the antenna is 36 × 30 × 1.6 mm3 and provides the range of frequencies from (1.4–1.8)/1.6 GHz, (2.1–3.5)/2.4 GHz, (5.4–6.3)/5.8 GHz, (7.0–7.3)/7.2 GHz and (9.2–11.6)/9.9 GHz suitable for GNSS, WiMAX, LTE, Wireless LAN, C- and X-band applications. The simulated impedance bandwidth comes out to be 25%, 58%, 16%, 4% and 24% and measured impedance bandwidth of 19%, 50%, 16%, 4% and 13%. The gain at all five resonances are 2.8 dBi, 1.8 dBi, 3.7 dBi, 2.9 dBi and 5.4 dBi. The antenna also exhibits good radiation pattern. The antenna is simulated on `ANSYS HFSS` with FR4 substrate.
 
 ## 6. Acknowledgement
 
@@ -6308,25 +6194,36 @@ The authors are thankful to Prof. B. T. P. Madhav, Department of Electronics & C
 ### References
 
 1. Balanis, C. A. (1989). Advanced Engineering Electromagnetics. New York: John Wiley & Sons. pp 1136, ISBN: 978-1-394-18001-1
+
 2. Fathima, N., Nayana, K. S., Ali, T., and Biradar, R. C. (2017). A miniaturized slotted ground fractal Koch multiband antenna for wireless applications. 2017 2nd IEEE Int. Conf. Recent Trends Elec. Inform. Comm. Technol. (RTEICT), 251-255.
+
 3. Ali, T., Aw, M. S., and Biradar, R. C. (2018). A compact bandwidth enhanced antenna loaded with SRR for WLAN/WiMAX/satellite applications. Adv. Electromag., 7(4), 78-84.
+
 4. Ali, T., Muzammil Khaleeq, M., and Biradar, R. C. (2018). A multiband reconfigurable slot antenna for wireless applications. AEU Int. J. Elec. Comm., 84, 273-280.
+
 5. Kaur, J. and Khanna, R. (2014). Development of dual-band microstrip patch antenna for WLAN/MIMO/WIMAX/AMSAT/WAVE applications. Microw. Optic. Technol. Lett., 56, 988-993.
+
 6. Wu, T., Shi, X.-W., Li, P., and Bai, H. (2013). Tri-band microstrip-fed monopole antenna with dual-polarisation characteristics for WLAN and WiMAX applications. Elec. Lett., 49, 1597-1598.
+
 7. Mohammad Saadh, A. W., Poonkuzhali, R., and Ali, T. (2019). A miniaturized single-layered branched multiple-input multiple-output antenna for WLAN/WiMAX/INSAT applications. Microw. Optic. Technol. Lett., 61, 1058-1064.
+
 8. Jagadeesh Chandra, R. B., Ali, T., Kumar, O., and Manohara Pai, M. M. (2020). A planar rectangular slot multiband patch antenna for GNSS/WLAN/X-band applications. Mat. Today Proc., 28(4), 2279-2285.
+
 9. Ge, Y., Esselle, K. P., and Bird, T. S. (2004). E-shaped patch antennas for high-speed wireless networks. IEEE Trans. Anten. Propag., 52(12), 3213-3219.
+
 10. Sarkar, D., Saurav, K., and Srivastava, K. V. (2014). Multi-band microstrip-fed slot antenna loaded with split-ring resonator. Elec. Lett., 50(21), 1498-1500.
+
 11. Patel, R. H., Desai, A. H., and Upadhyaya, T. (2015). Design of H-shape X-band application electrically small antenna. Int. J. Elec. Elect. Data Comm. (IJEEDC), 3(12), 1-4.
+
 12. Wu, T., Shi, X.-W., Li, P., and Bai, H. (2013). Tri-band microstrip-fed monopole antenna with dual polarisation characteristics for WLAN and WiMAX applications. Elec. Lett., 49(25), 1597-1598.
+
 13. Sun, J.-S., Fang, H.-S., Lin, P.-Y., and Chuang, C.-S. (2015). Triple-band MIMO antenna for mobile wireless applications. IEEE Anten. Wire. Propag. Lett., 15, 500-503.
+
 14. Zhang, R., Kim, H.-H., and Kim, H. (2015). Triple-band ground radiation antenna for GPS, WiFi 2.4 and 5 GHz band applications. Elec. Lett., 51(25), 2082-2084.
+
 15. Pan, Y., Ma, Y., Xiong, J., Hou, Z., and Zeng, Y. (2015). A compact antenna with frequency and pattern reconfigurable characteristics. Microw. Optic. Technol. Lett., 57(11), 2467-2471.
+
 16. He, M., Ye, X., Zhou, P., Zhao, G., Zhang, C., and Sun, H. (2015). A small-size dual-feed broadband circularly polarized U-slot patch antenna. IEEE Anten. Wire. Propag. Lett., 14, 898-901.
-
-
-
-
 
 17. Tsai, L.-C. (2014). 用于 WLAN 应用的双频蝴蝶结形 CPW 馈电缝隙天线。Prog. Electromag. Res. C, 47, 167-171.
 
@@ -6346,17 +6243,17 @@ The authors are thankful to Prof. B. T. P. Madhav, Department of Electronics & C
 
 # 27 通过索引调制算法优化光-OFDM 链路性能
 
-Jyoti Prashant Singh^([²⁷)]
+Jyoti Prashant Singh^([²⁷])
 
 Department of Electronics Engineering, VBS Purvanchal University, Jaunpur, U.P., India
 
-### Abstract
+## Abstract
 
 本研究采用基于索引调制（IM）的光正交频分复用（O-OFDM）方案，在各种光纤非线性条件下提升平均误码率（BER）和频谱效率（SE）性能。在所提系统中，信息通过激活的子载波以及激活子载波的索引来承载，二者动态提升了在平均误码率（BER）方面的传输符号速率。与标准光-OFDM 系统相比，当光纤非线性是显著因素时，通过改变光-OFDM 中 IM 的激活子载波数量，系统可提供增强的平均 BER 性能。仿真结果表明，在频谱效率值相同时，所提光-OFDM with IM 系统的 BER 性能优于传统光-OFDM 系统。此外，采用 2-PSK、4-PSK 和 16-QAM 调制方案时，光-OFDM with IM 系统的频谱效率优于传统光-OFDM 系统所能达到的频谱效率。
 
 **关键词：** Optical-OFDM, index-modulation, average bit-error rate, spectral efficiency, active sub-carrier
 
-### 1. Introduction
+## 1. Introduction
 
 光通信是射频（RF）通信的有力补充，尤其适用于无线光纤（RoF）等长距离传输。RoF 技术因其高带宽、覆盖范围广和基站简化等优势，已成为未来宽带无线接入网络的关键解决方案 [1]。此外，随着 5G 网络部署规模的扩大和工业互联网的创新发展，光网络正朝着更高速度、更大容量和更远覆盖演进 [2]。在当今环境下，相干光通信系统在通信领域发挥着关键作用，有助于提升频谱效率和容量 [3]。例如，相干光正交频分复用（CO-OFDM）具有补偿光信道效应简便和高频谱效率等独特优势。因此，CO-OFDM 系统已被提出作为长距离传输的可行解决方案 [4]。
 
@@ -6369,10 +6266,6 @@ Department of Electronics Engineering, VBS Purvanchal University, Jaunpur, U.P.,
 在长距离链路中，需要更高的发射功率水平以延长传输距离。然而，长距离相干光 OFDM（CO-OFDM）在较高输入功率水平下会因光纤非线性产生显著失真，导致性能下降 [15]。为了利用 OFDM-IM 相对于传统 OFDM 的优势并提升频谱效率，可将 OFDM-IM 有效应用于相干光通信系统。
 
 光纤非线性会在 OFDM 中引起子载波间的非线性干扰，主要由相邻子载波引起。因此，本研究旨在在保持相同频谱效率的同时减少激活子载波的数量，以减轻光纤非线性的影响。IM 是一种允许在 OFDM 中利用子载波索引传输额外信息比特的技术，在此过程中发挥关键作用。通过利用非激活子载波，IM 被引入以减少非线性干扰子载波的数量，从而在保持相干光 OFDM 系统相同频谱效率的同时改善误码率（BER）性能。
-
-
-
-
 
 仿真结果令人信服地证明，与传统的相干光 OFDM 相比，所提出的相干光 OFDM-IM 可以提高频谱效率并提升 BER 性能，尤其是在考虑光纤非线性效应时。
 
@@ -6407,6 +6300,8 @@ Figure 27.1 Block model of optical-OFDM-IM long-haul link.
 `Z` = `C(j[k],k)` + … + `C(j[2],2)` + `C(j[1],1)`
 
 其中 `j[k]` > … > `j[1]` ≥ 0 且 `j[k]`, …, `j[1]` ∈ {0 , …, `n` - 1} [9]。从输入 `p[1]` 额外信息位得到的 `J` 索引序列可使用算法 1 进行阐述 [16]。
+
+
 
 为了更好地理解，作为活动或非活动子载波如何确定的示例，对于 `n` = 4 和 `k` = 2，`p[1]` 额外信息位的数量使用公式 (1) 计算得到 `p[1]` = ⌊`log2)`⌋ = 2。`p[1]` 位首先转换为十进制数 `Z`。然后组合数系统在自然数 `Z` 与 `k`-组合之间提供一一映射。从算法 1，我们可以找到给定数字 `Z` 的 `k`-组合。
 
@@ -6496,10 +6391,6 @@ N = jγ|E(z,t)|²
 
 在接收机中，经过光纤信道传输后接收到的光信号通过 90° 光混合器由本地振荡器激光器转换为电信号。光信号与本地振荡器激光器发生干涉，该激光器通常在 90° 光混合器中具有与发射机激光器相同的频率。为了检测实部和虚部，输入信号在信号与本地振荡器激光器之间通过 90° 相移，在一个分支中与本地振荡器激光器的实部混合，在另一个分支中与虚部混合。
 
-
-
-
-
 在光 OFDM-IM 接收机中，在移除 CP 并实现 FFT 操作之后，紧接着进行信道估计操作。为了能够在频域中均衡接收信号，估计信道频率响应非常重要。*X̂ [g]* (*i*) 是 FFT 操作后第 *g^(th)* 个 OFDM 子块的接收向量，其由下式给出
 
 (10)
@@ -6564,7 +6455,8 @@ $$\\text{SE}\_{\\text{O} - \\text{OFDM} - \\text{IM}} = \\frac{G\\left( {k\\log\
 5. Ẑ ← Ẑ + ComCoef
 6. : **end for**
 7. : **return Z**̂
- |
+
+|
 
 考虑 *N[u]* = *N[FFT]* = 256 和 *N[CP]* = 16，光 OFDM 系统可实现 0.9412 bits/s/Hz 的光谱效率值，采用 2-PSK 调制方案。然而，光 OFDM with IM 系统可实现 *n* = 4, *k* = 2 时 0.9412 bits/s/Hz 的光谱效率值，以及 *n* = 4, *k* = 3 时 1.1765 bits/s/Hz 的光谱效率值，均采用 2-PSK 调制方案。
 
@@ -6600,10 +6492,6 @@ $$\\Gamma\_{k} = {\\sum\\limits\_{i = 1}^{k}\\frac{1}{j}} = \\frac{1}{1} + \\fra
 
 (20)
 
-
-
-
-
 *Γ*[*k*] ≈ log *k* + *γ*
 
 通过将 `Γ[k]` 的近似值代入式 (18) 并使式 (18) 等于零，可得到活动子载波的最优数量
@@ -6636,6 +6524,8 @@ $$\text{P}_{r}\left( X_{g}\rightarrow{\hat{X}}_{g} \mid {\hat{H}}_{g} \right) = 
 
 (25)
 
+
+
 $$\text{P}_{r}\left( X_{g}\rightarrow{\hat{X}}_{g} \right) = E_{{\hat{H}}_{g}}\left\{ {Q\left( \sqrt{\frac{\left( {X_{g} - {\hat{X}}_{g}} \right){\hat{H}}_{g}^{2}}{2\sigma_{e}^{2}\left( X_{g} \right)^{2}/n + 2N_{0}}} \right)} \right\}$$
 
 得到，其中 `E[Ĥ[g]]` {.} 表示关于估计信道频率响应的期望运算。为了获得 UPEP 的闭式表达式，可应用近似高斯 *Q—*函数。为了提高精度，[20] 中提出了近似高斯 *Q—*函数，给出为
@@ -6666,9 +6556,9 @@ $$\begin{array}{l} {\text{P}_{r}\left( X_{g}\rightarrow{\hat{X}}_{g} \right) \ap
 
 ### 4. 结果与讨论
 
-为了应对单模光纤中非线性带来的挑战，采用了光-OFDM-IM 方案以实现高效的长距离光链路传输。如 Figure 27.1 所示，使用 `MATLAB` 构建了发射机和接收机仿真结构。块模型使用分裂步傅里叶方法 (SSFM) 对非线性薛定谔方程 (NLSE) 进行求解。该仿真结构可用于减轻光纤通信系统中的色散效应和非线性等 impairments。仿真采用了 OFDM 帧的一致快速傅里叶变换 (FFT) 大小和恒定步长协议，遵循 SSFM 方法 [21]。
+为了应对单模光纤中非线性带来的挑战，采用了光-OFDM-IM 方案以实现高效的长距离光链路传输。如 Figure 27.1 所示，使用 `MATLAB` 构建了发射机和接收机仿真结构。块模型使用分裂步傅里叶方法 `SSFM` 对非线性薛定谔方程 `NLSE` 进行求解。该仿真结构可用于减轻光纤通信系统中的色散效应和非线性等 impairments。仿真采用了 OFDM 帧的一致快速傅里叶变换 `FFT` 大小和恒定步长协议，遵循 `SSFM` 方法 [21]。
 
-Table 27.2 总结了光纤信道和 OFDM 系统的仿真属性。为了补偿载波频率偏移，除了拥有 500 个独立信道外，还必须保持完美的系统同步。发射机利用伪随机二进制序列 (PRBS) 生成器生成数据位，并采用二进制相移键控 (PSK) 和 M 进制正交幅度调制 (QAM) 方案进行比特映射。
+Table 27.2 总结了光纤信道和 OFDM 系统的仿真属性。为了补偿载波频率偏移，除了拥有 500 个独立信道外，还必须保持完美的系统同步。发射机利用伪随机二进制序列 `PRBS` 生成器生成数据位，并采用二进制相移键控 `PSK` 和 M 进制正交幅度调制 `QAM` 方案进行比特映射。
 
 Table 27.2 System simulation parameters
 
@@ -6682,7 +6572,7 @@ Table 27.2 System simulation parameters
 | `L` || 100 km || Modulation || 4-PSK, 16-QAM |
 | Fiber type || SSMF ||  ||  |
 
-Figures 27.4 和 27.5 对所提出的光-OFDM 与 IM 和传统光-OFDM 在不同发射功率值下 4-PSK 和 16-QAM 信号的平均 BER 性能进行了比较分析。这些图展示了链路距离和发射功率的综合影响。这很重要，因为根据 NLSE，光纤非线性的影响取决于瞬时信号功率和传输距离。为了仅评估光纤非线性的影响，假设激光器无相位噪声。
+Figures 27.4 和 27.5 对所提出的光-OFDM 与 IM 和传统光-OFDM 在不同发射功率值下 4-PSK 和 16-QAM 信号的平均 BER 性能进行了比较分析。这些图展示了链路距离和发射功率的综合影响。这很重要，因为根据 `NLSE`，光纤非线性的影响取决于瞬时信号功率和传输距离。为了仅评估光纤非线性的影响，假设激光器无相位噪声。
 
 ![Figure 27.4 BER performance under various launch powers for 4-PSK modulation after different transmission distance.](img/fig27_4_C.jpg)
 
@@ -6692,19 +6582,7 @@ Figure 27.4 BER performance under various launch powers for 4-PSK modulation aft
 
 Figure 27.5 BER performance under different launch powers for 16-QAM modulation after different transmission distance.
 
-在低发射功率水平下，光纤信道可有效建模为受放大自发辐射 (ASE) 噪声影响的线性色散信道。然而，观察到在低发射功率条件下，所提出的光-OFDM 与 IM 的性能劣于光-OFDM。这种差异源于所提出系统中因活动子载波索引恢复错误而产生的误码。
-
-
-
-
-
-BER 曲线上的最低点被称为最佳发射功率。该最佳发射功率会因传输距离、调制类型以及其他特定系统属性等因素而有所变化。最佳发射功率的较高范围表示光纤非线性影响变得显著的区域。在这种情况下，随着提高发射功率以实现远距离传输，光纤非线性变得越来越重要。这种非线性会在每个子载波的中心点周围引入随机色散，导致相邻子载波之间产生干扰。
-
-在 图 27.4 和 27.5 中可以明显看出，所提出的具有 IM 的光学 OFDM 在中高发射功率值下优于传统的光学 OFDM，而在这些功率值下光纤非线性起着重要作用。BER 性能的这种改善可归因于通过活动子载波索引传输的额外二进制比特，以及由于非活动子载波的存在和放置而对载波间干扰增强的抗干扰能力。本质上，具有 IM 的光学 OFDM 有效地减轻了光纤非线性的影响并实现了稳健的长距离传输。
-
-### 5. 结论
-
-在研究中，设计了一种用于长距离传输的[content]
+在低发射功率水平下，光纤信道可有效建模为受放大自发辐射 `ASE` 噪声影响的线性色散信道。然而，观察到在低发射功率条件下，所提出的光-OFDM 与 IM 的性能劣于光-OFDM。这种差异源于所提出系统中因活动子载波索引恢复错误而产生的误码。
 
 BER 曲线上的最低点被称为最佳发射功率。该最佳发射功率会因传输距离、调制类型以及其他特定系统属性等因素而有所变化。最佳发射功率的较高范围表示光纤非线性影响变得显著的区域。在这种情况下，随着提高发射功率以实现远距离传输，光纤非线性变得越来越重要。这种非线性会在每个子载波的中心点周围引入随机色散，导致相邻子载波之间产生干扰。
 
@@ -6754,6 +6632,8 @@ BER 曲线上的最低点被称为最佳发射功率。该最佳发射功率会�
 
 19. Azim, A. W., Chafii, M., LeGuennec, Y., and Ros, L.(2020). Spectral and energy efficient fast-OFDM with index modulation for optical wireless systems. IEEE Comm. Lett., 24(8), 1771-1774.
 
+
+
 20. Mao, T., Wang, Q., Quan, J., and Wang, Z. (2017). Zero-padded orthogonal frequency division multiplexing with index modulation using multiple constellation alphabets. IEEE Acc., 5, 21168-21178.
 
 21. Ma, C.-P. and Kuo, J.-W. (2004). Orthogonal frequency division multiplex with multi-level technology in optical storage application. Jpn. J. Appl. Phys., 43(7B), 4876-4878.
@@ -6772,10 +6652,6 @@ Department of Electronics Engineering, Veer Bahadur Singh Purvanchal University,
 
 ## 1. 引言
 
-
-
-
-
 可重构天线通常被广泛使用，以满足现代通信系统的需求。可重构天线可以实现诸如频率和辐射方向图等特征的受控动态修改。存在多种重构技术，包括改变频率、极化以及辐射方向图的能力。文献 \[9\] 中描述了一种尺寸为 40 × 40 mm 的双频天线。为了将该天线用于 WLAN 和 WiMAX 频段，可添加 PIN 二极管和电容器。建议在无线应用的多频带缝隙天线中使用 PIN 二极管来实现频率重构 \[2\]。这是一款四频带天线，对于较小的 WiMAX、GNSS 和 WLAN 应用效果良好。采用 FR-4 基板的可重构天线 \[7\] 已使用 PIN 二极管进行研究，用于 WLAN 和 WiMAX 应用，工作频率为 2.4 GHz、3.5 GHz、5.25 GHz 和 5.8 GHz。还报道了该领域的其他可重构微带贴片天线设计，包括具有六个频带的 \[6\] 可重构贴片天线，以及用于 Wi-Fi 和 5G 应用的 \[4\] 可重构天线。然后 Click or tap here to enter text.，引入了一种全新的截断金属接地表面和 9 字形多频带可重构天线 \[1\]。该天线在 WiMAX 的单频带和双频带中均可工作，其中包括 WLAN 和 Wi-Fi。已创建了两个单极天线 \[10\]，用于移动无线技术，包括 WiMAX、Wi-Fi 和 WLAN 应用。这些天线的辐射元件由低成本 FR-4 基板上两个不同的几何形状构成。截断的金属铜接地用于提供可实现的最大辐射方向图和辐射效率。天线的规格包括 VSWR（1.5）、带宽（6–35%）、增益（1.7–3.4 dB）和辐射效率（85–90%），并且覆盖 2.45、3.50 和 5.20 GHz 的频率范围。演示了小型、低轮廓多频带可重构平面单极天线，可在单频带和双频带模式下工作 \[8\]。天线 1 在双频带模式下使用 WLAN 和 Wi-Fi。天线 2 具有两种不同的双频带模式，具体为（Wi-Fi 和 WLAN）和（WiMAX 和 WLAN），取决于开关是打开还是关闭。已使用集总元件开关的紧凑型可重构单极天线 \[5\]，以在打开和关闭情况下在三个不同的频段工作。
 
 本研究提出了一种在底侧具有馈电线、在顶侧具有两个缝隙的可重构天线。为了实现频率重构，馈电线中使用 PIN 二极管作为开关。对于开关的打开和关闭状态，谐振频率分别为 10.01 GHz 和 3.73 GHz。
@@ -6791,11 +6667,17 @@ Figure 28.1 : Antenna geometry. (a) top side (b) bottom side.
 Table 28.1 Optimized dimensions of the antenna
 
 | Parameter || Value (mm) || Parameter || Value (mm) |
+
 | --- | --- | --- | --- |
+
 | G || 30 || d || 16.85 |
+
 | --- | --- | --- | --- |
+
 | a || 21.6 || e || 9.5 |
+
 | b || 16.3 || m || 3 |
+
 | c || 4 || n || 1 |
 
 微带天线的谐振频率 `f[r]` \[3\] 可表示为
@@ -6854,10 +6736,6 @@ Figure 28.6 Efficiency (%) versus frequency (GHz).
 
 Figure 28.7 Simulated radiation pattern of antenna in E–H plane. (a) 10.01 GHz (ON) (b) 3.73 GHz (OFF).
 
-
-
-
-
 ![图 28.8 天线在 E–H 平面中的模拟辐射方向图。 (a) 10.01 GHz (开启) (b) 3.73 GHz (关闭)。](img/fig28_8_C.jpg)
 
 图 28.8 天线在 E–H 平面中的模拟辐射方向图。 (a) 10.01 GHz (开启) (b) 3.73 GHz (关闭)。
@@ -6902,6 +6780,8 @@ Vishal Yadav^(²⁹)
 
 ## 1. 引言
 
+
+
 基于 `SRAM` 的缓存存储器是超大规模集成 (`VLSI`) 芯片设计中最关键的组件。存储器和外围电路的性能可能会不利地影响整个系统的速度和功耗。读操作延迟是 `SRAM` 设计中最关键的因素。在锁存现象发生后，电流流动会自动停止。因此，电流感测放大器不会产生静态功耗耗散 [1]。因此，检测和锁存操作的延迟也与功耗耗散相关。由于存储器芯片占据了芯片表面积的 90%，因此片上缓存存储器内的功耗已成为存储器芯片整体功耗的非常重要的部分 [2]。`SRAM` IC 中使用的基本感测放大器是 `CMOS` 交叉耦合反相器。输入和输出线同时工作。因此存在较高的时延和功耗耗散。由于输入阻抗高，该误差在锁存型感测放大器中被消除 [3]。根据输入信号的类型，感测放大器分为电压和电流感测放大器两类。电压感测放大器需要在检测电压差并将其放大到全摆幅范围之前在位线上产生电压变化。然而，随着技术的进步，决策跨度增加，电压摆幅降低到微米或亚微米水平。电流感测放大器放大来自位线或数据线的最低差分信号并以 `CMOS` 逻辑电平输出。
 
 小输入阻抗使其成为减少 `SRAM` 感测延迟和功耗耗散的最常用方法之一 [4]。本文包括对所有不同类型的电流和电压感测放大器的比较研究。
@@ -6911,10 +6791,6 @@ Vishal Yadav^(²⁹)
 电路原理图的设计以及各种类型感测放大器的实现和分析在 第 2 节 中介绍 [6]。第 3 节 在展示各种工作模式的同时分析了感测放大器的延迟和整体功耗耗散结果。本文在 第 5 节 中得出结论。
 
 ## 2. 感测放大器的设计
-
-
-
-
 
 读电路中最关键或必不可少的组件之一是感测放大器。其主要任务是将表示存储在 SRAM 存储单元中的数据（0 或 1）的位线上的微小电压差放大到可观的电压电平。因此，从 SRAM 存储单元外部观察到的数据应被正确分析。感测放大器根据其接收到的输入信号类型分为电压模式和电流模式感测放大器 \[7\]。
 
@@ -6974,10 +6850,6 @@ Figure 29.4: Hybrid SA.
 
 ### 3.1. Mtcmos
 
-
-
-
-
 为了优化延迟和功耗，`MTCMOS`（多阈值 CMOS）技术采用具有各种阈值电压的晶体管。低 `V[t]` 晶体管切换更快但静态功耗泄漏更多。然而，高 `V[t]` 晶体管切换更慢，同时降低静态功耗泄漏 [19]。通过使用精心设计的电路，`MTCMOS` 设计策略可以在不产生后果的情况下优化功耗和延迟。睡眠晶体管的使用是 `MTCMOS` 泄漏功耗降低最流行的方法 [20]。睡眠晶体管用于构建为逻辑供电的虚拟电源线。
 
 ### 3.2. 门控 V[dd]
@@ -7005,12 +6877,19 @@ Figure 29.7: Power dissipation of various types of SA.
 Table 29.1: Delay and power dissipation
 
 | Types of SA  || Delay (ns) || Total power dissipation (mW) || Work |
+
 | --- | --- | --- | --- |
+
 | Bit-line capacitance delay (ns) || Total power dissipation (mW) |
+
 | Cross coupled CMOS inv. SA || 1.9880 || 0.804 || 1.4513 || 0.562 |
+
 | --- | --- | --- | --- | --- |
+
 | Latch type voltage SA || 1.241 || 0.947 || 0.90593 || 0.662 |
+
 | Basic current SA || 0.2305 || 0.953 || 0.2305 || 0.953 |
+
 | Hybrid mode SA || 0.1436 || 0.386 || 0.1048 || 0.270 |
 
 在 Table 29.1 中总结了四种类型感应放大器的延迟和总功耗耗散。
@@ -7049,15 +6928,13 @@ Table 29.1: Delay and power dissipation
 
 13. Shukla, N. Kr, Pulkit, B., and Shilpi, B. (2015). Design and analysis of a novel ultra-low power SRAM bit-cell at 45nm CMOS technology for bio-medical implants. Int. J. Comp. Appl., 975, 8887.
 
+
+
 14. Mishra, K. C. and Singh, R. K. (2019). Design and analysis of low power SRAM using CMOS technology. Int. J. Innov. Technol. Explor. Engg., 8(12S), 896-902.
 
 15. Dounavi, H.-M., Yiorgos, S., and Yiorgos, T. (2019). Periodic monitoring of BTI induced aging in SRAM sense amplifiers. IEEE Trans. Device Mater. Reliab., 19(1), 64-72.
 
 16. Zhao, Y., et al. (2022). An offset cancellation technique for SRAM sense amplifier based on relation of the delay and offset. Microelec. J., 128, 105578.
-
-
-
-
 
 17. Nemati, S. H. H., Nima, E., and Mohammad Hossein, M. (2023). 基于可重构 SRAM 感知放大器的混合 SRAM/RRAM 存内计算架构。IEEE Acc., 11, 72159-72171。
 
@@ -7079,13 +6956,13 @@ Table 29.1: Delay and power dissipation
 
 Krupa Narwekar^(³⁰)
 
-### Abstract
+## Abstract
 
 本文旨在实现滑模控制器（`SMCs`），这是一种具有高计算强度的非线性控制器。此外，诸如模型预测控制器（`MPC`）、非线性模型预测控制器（`NMPC`）等各种非线性控制器的实现涉及带约束的在线优化。因此，在物理系统上的验证对在线数据的计算能力存在限制。本文作者通过使用 Jetson 开发套件配合信号调理和模数转换器（`ADC`）来连接物理传感器和执行器信号，解决了高强度计算问题。以高度非线性的间歇反应器为案例研究。由于其放热反应伴随化学进料以及非稳态特性。本间歇反应器实验研究中的不确定性被视为输入冷水的变化，该冷水在反应器夹套中循环以带走额外热量。`SMCs` 对添加到系统动态中的额外不确定性更具鲁棒性和敏感性。本文中作者考虑了 Prajwal 等人 [1, 2] 为实验间歇反应器开发的非线性模型方程。为丙烯酰胺聚合反应开发了最优温度曲线，并将其用作闭环仿真和验证的参考轨迹。冷却剂流量是通过环形线圈循环的操纵变量，反应器温度是过程变量。本文作者提出了四种类型的 `SMC` 以抑制反应器温度与参考轨迹的振荡。实验结果表明，带 `PI` 滑模面的 `SMC` 给出最小控制信号，且反应器温度在一段时间内比其他类型的 `SMC` 更能跟踪轨迹。实现具有约束的高级控制器如 `NMPC` 的主要瓶颈是优化器的计算时间。使用 Jetson 板实现高级计算技术的尝试正在进行中。
 
 **关键词：** 滑模控制器，间歇反应器，Jetson nano 板，轨迹跟踪
 
-### 1. Introduction
+## 1. Introduction
 
 间歇反应器本质上是一个高度非线性过程，原因有多种，例如放热反应、反应常数的指数项以及反应器中发生的聚合反应类型。在这种类型的间歇过程中，没有连续的进料流入或连续流出，它是一次性充料并在整个批次过程时间内保持相同进料量。产品仅在批次过程结束时间后才取出进行分析。外部扰动会影响间歇反应器的操作。例如，冷却剂流量温度随时间的变化。它会影响夹套温度（`T[j]`）的变化以及影响反应器温度（`T[r]`）。上述情况可通过查看系统动态中给出的间歇反应器的非线性微分方程来理解。此外，在间歇反应器中生物柴油生产的案例研究中，存在进料组分浓度可能变化的高度可能性 Urmila 和 Pahola [3]。这将由于从不同供应商采购大豆油而发生。这种不确定性可能会影响最终产品质量。
 
@@ -7104,10 +6981,6 @@ Krupa Narwekar^(³⁰)
 同行文献对中试装置间歇反应器的调查分为两个主要领域，首先是化学工程，另一个是控制领域。化学工程研究人员致力于为特定产品在指定批次时间内从间歇操作中获得的最优温度曲线形成。Palanki 等人 [4] 基于庞特里亚金原理和哈密顿量最小化开展了基于神经网络的终点优化工作。Arun Senthil 和 Sundaramoorthy [5] 基于庞特里亚金最小值原理使用反向积分提出了曲线形成。Urmila 和 Pohola [3] 针对甘油三酯浓度存在不确定性与否的生物柴油生产进行了最优曲线的大量研究，使用哈密顿原理求解最优曲线。
 
 ### 2.2. Modeling of batch reactor
-
-
-
-
 
 实验室规模间歇反应器的建模可以基于 a) 数据驱动建模 b) 第一性原理建模 c) 混合建模。间歇反应器由固体容器制成，采用 316SS 以避免各种化学反应过程中的腐蚀。它还具有用于轨迹跟踪的整体加热和冷却系统。关于建模，一般而言加热器电流将保持恒定，而冷却剂流量将作为操纵信号变化以记录开环反应温度。为了正确捕捉反应动力学，必须用实际用于闭环操作的化学进料对间歇反应器进行充电。
 
@@ -7223,10 +7096,6 @@ Figure 30.3 显示了反应器温度跟踪，冷却剂流量随之振荡变化�
 
 ![Figure 30.3: Experimental results of closed loop sliding mode controller for trajectory tracking.](img/fig30_3_C.jpg)
 
-
-
-
-
 Figure 30.3: Experimental results of closed loop sliding mode controller for trajectory tracking.
 
 因此，`SMC` 控制律需要修改以获得更好的控制信号。
@@ -7236,6 +7105,8 @@ Figure 30.3: Experimental results of closed loop sliding mode controller for tra
 与经典的 `SMC` 相比，到达律如方程 6 所示，如 Figure 30.4 所示存在大量抖振。通过引入 `α`，`0 ≤ α ≤ 1`，状态在非线性路径中到达滑模面，这增加了调节时间并减少了抖振。具有幂次到达律的控制律如方程所示。
 
 ![Figure 30.4: Experimental results of closed loop power rate reaching law sliding mode controller for trajectory tracking.](img/fig30_4_C.jpg)
+
+
 
 Figure 30.4: Experimental results of closed loop power rate reaching law sliding mode controller for trajectory tracking.
 
@@ -7301,10 +7172,6 @@ Figure 30.6: Jetson developer kit for control algorithm execution in advanced pr
 
 4. Palanki, S. (2005). Optimal operations of semi-batch processes with a single reaction. Int. J. Chem. React. Engg., 3(1), 1-9.
 
-
-
-
-
 5. Arun Senthil, S. and Sundaramoorthy, S. (2018). 批式反应器温度最优进程跟踪的最优控制策略——目标函数选择的一些见解。IFAC Papers Online, 51(1), 112-117。
 
 6. Billings, S. A. (2013). 非线性系统辨识：时域、频域和时空域的 NARMAX 方法。John Wiley & Sons。pp. 576。ISBN: 978-1-119-94359-4。
@@ -7349,8 +7216,6 @@ Department of CSE, Dronacharya Group of Institution, Greater Noida, U. P., India
 
 
 
-
-
 近年来，针对信号和图像处理的研究已开展多年，旨在提高图像的质量和分辨率，以便在文本或图形转换为数字格式以实现更好的用户交互后能够更好地理解。Medhavi Malik \[6\] 探讨了数字图像处理的机制，概述了检索、识别和恢复图像以创建精美的二维图形所涉及的步骤。创建图像进一步分为两个阶段：通过模拟信号处理创建二维图像，以及通过数字图像处理创建所需图像。还涵盖了更多方法来描述如何在模拟到数字或数字到模拟格式中处理图像，包括图像增强、图像分割、聚类、压缩和采集。本文有助于理解处理后增强图像质量所需的方法 \[3\]。Chithra 和 Bhavani \[2\] 提出了一系列图像处理技术以获得良好的结果。通过应用去噪滤波器、对图像进行预处理以及图像采集，将基础二维图像转换为更好格式的过程。利用 `SVM` 分类器进行数字图像分类以产生决策边界，以及使用 `KNN` 算法来识别最接近的匹配以生成图像。本文的结论指出，虽然图像可以使用多种方法进行修改以提供准确性，但图像的质量始终由其清晰度决定。因此，为了改善用户交互，优先选择能够产生清晰准确图像视图的算法而不是其他算法 \[4\]。Akanska Singh 和其他作者 \[7\] 提出了一项关于文本到数字图像转换的研究。本文的目标是通过将其转换为易于理解的图片来简化用户的文本理解。`GAN-CLS` 用于训练判别器，使其不会被生成器创建的假图像欺骗，从而帮助将数据库中的文本与正确的图像匹配。此外，`PySimpleGUI` 提供的交互式技术用于处理文本以生成准确的图像，这是一种使文本对用户友好的图形用户界面。因此，使用 `GAN-CLS` 和 GUI 实现转换过程相对容易，以成功将转换后的图像与其正确文本匹配 \[1\]。Guo-Shiang Lin 与其合著者一起解释了如何结合不同技术将二维图像生成令人信服的三维图像。他们使用基于分割的前景提取技术将图像中的前景物体与背景分离，从而提取需要在三维空间中操作的对象。为了使场景具有深度感，使用基于深度线索的前景深度估计来计算物体与观察者之间的相对距离。利用神经网络进行深度剖面分类提高了区分前景和背景物体的能力，并促进了更精确的深度估计。用于立体感知的色彩增强是修改图像颜色以使其更适合三维观看的过程。为了实现更身临其境的视觉体验，研究结论涉及精确估计场景中物体的深度并有选择地增强其外观 \[5\]。在本研究中，我们利用 AIML 结合多种数据科学算法，直接从文本和绘图生成三维模型。`GAN` 结合矢量成像、`OCR`、`CNN` 的 `RPN` 和稳定扩散是为此目的使用的算法之一。通过使用这些算法和技术，可以创建一个桥梁，处理和转换手写文本和绘图为可由用户在三维查看器中查看的数字三维图像。
 
 ## 3. 材料与方法
@@ -7360,6 +7225,7 @@ Department of CSE, Dronacharya Group of Institution, Greater Noida, U. P., India
 深度学习是机器学习 (`ML`) 的一个分支，其算法基于人类大脑的架构，其基础是 `CNN`。`CNN` 接收数据，学习识别数据中的模式，然后为一组新的相似数据预测结果。`CNN` 用于解决对象检测和计算机视觉相关的问题。
 
 卷积神经网络中有 3 层，分别是：
+
 * 卷积层
 * Relu 层
 * 池化层
@@ -7390,6 +7256,7 @@ Figure 31.3: Fully connected layer (Classification of image).
 在 `RCNN` 系列中，区域建议网络 (`RPN`) 的主要功能是对象检测。我们已经学习了如何在 R-CNN 中使用选择性搜索来提取多个区域。区域建议网络是在 faster R-CNN 中创建的，用于使用小型网络生成区域建议。`RPN` 中的分类器可以返回区域的概率。此外，它还具有一个回归器，可返回边界框坐标。
 
 区域建议网络涉及以下步骤：
+
 * 卷积神经网络
 * 生成锚框
 * 将锚框分类为前景/背景
@@ -7400,6 +7267,7 @@ Figure 31.3: Fully connected layer (Classification of image).
 光学字符识别 (`OCR`) 是一种将文本图像转换为计算机可读文本格式的过程。例如，如果你扫描表格或收据，你的计算机将扫描保存为图像文件。文本编辑器无法用于修改、查找或计算图像文件中的单词。或者，你可以使用 `OCR` 将图像转换为文本文档并存储其中的文本数据。
 
 **OCR 遵循以下步骤：**
+
 * 图像获取
 * 预处理
 * 文本识别
@@ -7414,10 +7282,6 @@ Figure 31.3: Fully connected layer (Classification of image).
 ### 3.5. 生成对抗网络 (GAN)
 
 生成对抗网络 (`GANs`) 是一类强大的神经网络，用于无监督学习。
-
-
-
-
 
 A discriminator and a generator are components of GANs. The generator attempts to trick the discriminator by creating fake samples of data (such as images, sounds, etc.). Conversely, the Discriminator attempts to differentiate between the authentic and fraudulent samples. Neural networks, such as the generator and discriminator, compete with one another throughout the training phase (Figure 31.4). The procedure is repeated multiple times, and with each iteration, the generator and discriminator become increasingly proficient at their respective tasks.
 
@@ -7451,6 +7315,8 @@ Figure 31.6: Flowchart of proposed method.
 
 ## 5. Conclusions
 
+
+
 This paper presents software that quickly and easily converts text images or physical drawn figures into 3D models using widely used algorithms and technologies. The software leverages deep learning in generative adversarial networks or vector images to make it more easily convertible, and data science to make it more user-friendly. Model training and tracking are conducted using the tensor flow platform in deep neutral images. Text is detected using OCR, and images are detected using RCR. Information can be properly identified and boundaries drawn around it by both technologies. To identify patterns in the data and forecast results, CNN, the main algorithm, applies deep learning and machine learning techniques. It provides solutions for computer vision and object detection issues.
 
 Text is ultimately transformed into images, images into 3D models, and 2D images into 3D models by the most effective stable and diffusion method. All of these algorithms help to increase the software’s effectiveness and usability. They also lower the cost of the system, which increases its efficiency. It is a workable and reliable software interface.
@@ -7475,11 +7341,7 @@ Text is ultimately transformed into images, images into 3D models, and 2D images
 
 Pragati Gupta^(³²)
 
-### Abstract
-
-
-
-
+## Abstract
 
 本文提出了一种电压控制正交振荡器（`VCQO`），该振荡器采用两个电流反馈放大器（`CFAs`）和一个模拟乘法器（`AM`）以及五个无源元件，利用该振荡器可以产生两个相位差为 90° 的输出电压（即正交振荡器）。给定振荡器的振荡条件和振荡频率可独立控制，并可通过模拟乘法器输入端之一的外部直流偏置电压输入进行调节，且该电压控制正交振荡器的灵敏度非常低，即小于 1。还包括基于 CFA 集成电路 `AD844` 和 AM 集成电路 `AD633` 的宏模型的实验以及 PSPICE 仿真结果，显示了所给电压控制正交振荡器的优异性能。
 
@@ -7538,10 +7400,6 @@ CO : `R[1]C[1]` = `R[2]C[2]`
 
 $$FO:\\omega\_{o} = \\sqrt{\\frac{V\_{c}}{10C\_{1}C\_{2}R\_{2}R\_{3}}}$$
 
-
-
-
-
 然而，两个输出电压 `v_o1` 和 `v_o2` 之间的相互关系可以表示如下：
 
 (5)
@@ -7592,7 +7450,7 @@ $$\frac{v_{o2}}{v_{o1}} = \frac{1}{sC_{2}R_{2}}$$
 
 通过进行这些实验，研究旨在验证电路的功能性和所提出设计的准确性。它评估实际结果是否与理论预测和仿真数据一致。这一验证过程是确认电压控制正交振荡器的实际可行性及其在实际电子系统中的潜在应用的重要步骤。
 
-### 5. 结论
+## 5. 结论
 
 在本文中，我们展示了一种 VCQO，其实现使用了两个 CFA 和一个单 AM，因为 ABB 在市场上 readily available。虽然该电路与电路中最近的 SRCO 设计 [10] 相比，加入了一个额外的元件，即模拟乘法器，但它提供了一个显著的优势。VCQO 能够精确微调其输出频率并提供正交输出。重要的是，它对无源器件变化表现出低灵敏度，并显示出低的仿真总谐波失真值（%THD）。
 
@@ -7602,7 +7460,7 @@ $$\frac{v_{o2}}{v_{o1}} = \frac{1}{sC_{2}R_{2}}$$
 
 致谢是学术和研究工作的重要组成部分。特别感谢电子与通信工程系（ECE）系主任 Subodh Wairya 教授，授予使用 IET Lucknow 的 VLSI 实验室设施进行本研究实验阶段的许可。这一致谢突出了系所提供的宝贵支持和资源，在取得本研究中呈现的成功实验结果方面发挥了重要作用。它强调了研究的协作性质以及学术界在促进科学进步方面的贡献。
 
-### 参考文献
+## 参考文献
 
 1. Ozcan, S., Toker, A., Acar, C., Kuntman, H., and Cicekoglu, O. (2000). 使用电流差分缓冲放大器的单电阻控制正弦振荡器。Microelec. J., 31(3), 169–174。
 
@@ -7612,15 +7470,13 @@ $$\frac{v_{o2}}{v_{o1}} = \frac{1}{sC_{2}R_{2}}$$
 
 4. Jaikla, W. and Lahiri, A. (2012). 使用 CCCDTAs 和接地电容的无电阻器电流调制四相正交振荡器。AEU Int. J. Elec. Comm., 66, 214–218。
 
+
+
 5. Chen, H. P., Wang, S. F., and Ku, Y. T. (2015). 基于 CCCCTA 的无电阻器电压和电流模式正交振荡器。IEICE Elec. Exp., 12(13), 1–14。
 
 6. Pushkar, K. L. (2018). 使用 VD-DIBAs 的电子可控正交正弦振荡器。Cir. Sys., 9(3), 41–48。
 
 7. Senani, R. and Singh, V. K. (1996). 使用电流反馈放大器的新型单电阻控制振荡器配置。IEEE Trans. Cir. Sys. Fundamen. Theory Appl., 43(8), 698–700。
-
-
-
-
 
 8. Liu, S. I. and Tsay, J. H. (1996). 使用电流反馈放大器的单电阻控制正弦振荡器。Int. J. Electron., 80(5), 661–664。
 
@@ -7646,23 +7502,19 @@ $$\frac{v_{o2}}{v_{o1}} = \frac{1}{sC_{2}R_{2}}$$
 
 # 33 使用数字图像分析快速准确量化芒果叶斑病引起的叶片损伤的软件
 
-Harish Chandra Verma^([³³)] 
+Harish Chandra Verma^[³³] 
 
 ICAR, Central Institute for Subtropical Horticulture, Lucknow, India
 
 ### Abstract
 
-芒果 (*MangiferaIndica L*.) 是世界上最重要的商业水果作物之一。芒果的许多疾病，包括叶斑病，会严重降低该作物的果实产量和质量。及时准确地诊断这些病害对于有效的病害管理至关重要。在这项工作中，我们提出了一种在 Matlab 中开发的快速自动软件，用于通过数字图像分析准确评估芒果叶斑病。 我们的方法利用计算机视觉技术，能够准确评估病害严重程度。 该软件使用图像处理技术分析叶片图像，以提供有关严重程度的定量信息。我们的研究结果表明，所建议的软件是有效和高效的，使其成为量化芒果病害引起的叶片损伤的有用工具。本研究描述了一种通过数字图像分析精确量化芒果树叶斑病的新方法。大多数植物病害可以通过视觉诊断和评估。它们可以影响植物的不同区域并具有各种不同的症状。为了处理芒果叶片的高分辨率图像，提取相关特征并精确估计叶斑病的严重程度，建议的软件应用程序利用了先进的计算机视觉算法。在这项工作中，我们在 Matlab 中开发了易于使用的软件，用于快速量化芒果植物中的叶斑病。本研究有助于为芒果种植者/研究人员包括学生开发一个强大的软件工具，以监测和管理叶斑病，从而提高芒果作物的产量和质量。
+芒果 (*MangiferaIndica L*.) 是世界上最重要的商业水果作物之一。芒果的许多疾病，包括叶斑病，会严重降低该作物的果实产量和质量。及时准确地诊断这些病害对于有效的病害管理至关重要。在这项工作中，我们提出了一种在 `Matlab` 中开发的快速自动软件，用于通过数字图像分析准确评估芒果叶斑病。 我们的方法利用计算机视觉技术，能够准确评估病害严重程度。 该软件使用图像处理技术分析叶片图像，以提供有关严重程度的定量信息。我们的研究结果表明，所建议的软件是有效和高效的，使其成为量化芒果病害引起的叶片损伤的有用工具。本研究描述了一种通过数字图像分析精确量化芒果树叶斑病的新方法。大多数植物病害可以通过视觉诊断和评估。它们可以影响植物的不同区域并具有各种不同的症状。为了处理芒果叶片的高分辨率图像，提取相关特征并精确估计叶斑病的严重程度，建议的软件应用程序利用了先进的计算机视觉算法。在这项工作中，我们在 `Matlab` 中开发了易于使用的软件，用于快速量化芒果植物中的叶斑病。本研究有助于为芒果种植者/研究人员包括学生开发一个强大的软件工具，以监测和管理叶斑病，从而提高芒果作物的产量和质量。
 
 **关键词：** Damage, mango, diseases, leaf spot, quantification, software
 
-### 1. Introduction
+## 1. Introduction
 
 植物病害对粮食安全构成严重威胁，并对农业作物产量产生显著负面影响。如果能及早发现，植物病害对农业生产力的降低影响会减小 [1]。农民需要专家持续监测，这可能非常昂贵且耗时 [2]。作者 Revathy 和 Hemalatha [3] 重点关注使用叶片纹理来检测植物叶片病害。大多数病害严重程度评估都是通过目视进行的，特别是针对单个叶片或植物。这种方法通常会高估果园草中斑点叶片面积的百分比，当感染面积最低时最高，通常比实际面积大两到三倍 [4]。另一种方法是使用测叶仪评估，即从绘制的投影纸复制品的重量中确定受损叶片面积。然而，这种方法耗时且劳动密集。与目视评分相比，基于图像的程序在进行定量测量时通常更客观、更准确且可重复 [5, 6]。在测量咖啡叶锈病严重程度时 [7] 发现图像分析技术比目视判断和测叶仪评估更准确。根据 Smith [8]，先进的图像编辑程序可以精确简单地量化受损区域，因为它可以轻松显示选定区域中的像素数量及其颜色指数。同样，诸如植物高度、植物宽度和冠层覆盖面积等方法也可用于评估植物生长 [9]。通过当前工作中的简单图像分析过程，我们还能够快速确定叶斑面积与总叶面积的比率。许多研究已探讨利用气象数据建立病害预测模型以帮助安排杀菌剂喷洒，因为病害感染和进展在很大程度上取决于环境条件 [10, 11 和 12]。
-
-
-
-
 
 芒果树叶斑病主要由几种真菌引起。这些病害在芒果叶片上表现为可识别的圆形至不规则病斑，经常带有坏死中心和周围的黄色晕圈。这些病害的严重程度范围从轻微的美容损伤到严重的落叶，这可能会影响树的整体健康并降低果实质量和产量。传统上评估芒果园叶斑病严重程度的方法主要依赖于病理学家主观的、耗时且劳动密集的目视检查。由于这些限制，及时和精确的病害定量变得更加困难。可持续和有效农业技术需求的不断增长，激发了创建和使用当代技术来克服这些限制。 其中，计算机图像分析已显示出作为快速和自动量化作物损害的方法的潜力。需要一些人工输入但部分过程由计算机执行的方法称为半自动。使用现有的图像处理软件包来分析图像并提取所需信息是其中最受欢迎的半自动技术之一。其中一些软件包是：`SigmaScan Pro` [13, 14]、`Assess` [15, 16]、`Matrox Image Analyzer` [17] 和 `JLGenias` [18]，有些是免费软件，如 `Scion Image Software` [19]，有些是开源的，如 `ImageJ` [20]。
 
@@ -7686,14 +7538,18 @@ Figure 33.1: Sample of the digitized mango sample leaves damaged by LS diseases.
 
 一旦病害病斑被检测到，软件通过计算受病斑影响的叶片面积百分比来量化病害严重程度，该百分比除以 10 后产生严重程度评分，范围从 0（健康）到 9（完全受损）。
 
-### 2.4 叶斑严重程度量化的<|message|>
+### 2.4 叶斑严重程度量化
 
 采用图像预处理技术来增强图像清晰度并去除噪声。随后，从图像中提取一组稳健的与病害相关的特征，涵盖纹理属性。方法如下：
 
 1. 将 `RGB` 图像转换为灰度图像。
+
 2. 使用合适的算法检测叶片边缘，例如，此处 `Canny` 边缘检测是合适的。
+
 3. 将扫描图像转换为二值图像，对其应用形态学图像处理并分割感兴趣区域，这将产生二值图像。此分割图像现在将是黑白图像，其中白色像素代表“图像”，黑色像素代表“背景”。
+
 4. 统计白色像素的数量，即 ON 像素的数量，并使用以下公式将其转换为面积以进行 ON 像素到面积的转换（cm）：
+
 5. `Leaf/damaged area (cm ) = No. of pixels*(2.54) /(DPI)`
 
 随机选择了芒果品种 Dashehari 树的患病芒果叶片。此后，叶片被扫描并转换为 300 dpi 的 tiff 格式数字图像 (Figure 33.1)。扫描时，叶片尽可能保持平坦，以避免因叶片弯曲导致的面积测量误差。
@@ -7721,8 +7577,11 @@ Figure 33.3: Grey image.
 Figure 33.4: Threshold and filtered image 3.
 
 3. 填充二值图像的孔洞。
+
 4. 创建二值图像中物体的边界。
+
 5. 令 `A = Area of whole leaf=bwarea(L)`。
+
 6. 计算步骤 (v) 中获得的前景图像的面积。
 
 `A1=Area of all white pixels of leaf excluding black pixels of damaged area.) = bwarea(Y)(Area of leaf excluding damaged area).`
@@ -7744,10 +7603,6 @@ $$
 适当的照明是任何图像处理程序中最重要的一部分 [24]。获取高质量图像对于通过图像分析进行定量测量以及定性解释至关重要 [25]。受芒果不同叶斑病损害的叶片图像如图 Figure 33.1 所示。
 
 ### 3.2 叶斑量化
-
-
-
-
 
 该软件使用 `Matlab` 开发，采用形态学图像处理。可以看出，一般情况下病害造成的叶片受损区域的清晰度并不十分均匀/平滑，这可能会影响受损面积测量的准确性。因此，对软件进行了改进以提高受损区域的清晰度。
 
@@ -7785,6 +7640,8 @@ Figure 33.5: Chart showing the comparison between the ratings of mango foliar da
 
 2. Gavhale, K. R. and Gawande, U. (2014). An overview of the research on plant leaves disease detection using image processing techniques. IOSR J. Comp. Engg. (IOSR-JCE), 16(1), 10–16.
 
+
+
 3. Revathi, P. and Hemalatha, M. (2012). Classification of cotton leaf spot diseases using image processing edge detection techniques. IEEE Int. Conf. Emerg. Trends Sci. Engg. Technol., 169–173.
 
 4. Sherwood, R. J., Berg, C. C., Hoover, M. R., and Zeiders, K. E. (1983). Illusions in visual assessment of Stagonospora leaf spot of orchard grass. Phytopathology, 73, 173–177.
@@ -7815,10 +7672,6 @@ Figure 33.5: Chart showing the comparison between the ratings of mango foliar da
 
 17. Nguyen, V. S., Maimaitiyiming, M., Bhadra, S., and Kwasniewski, M. T. (2021). Early detection of plant viral disease using hyperspectral imaging and deep learning. Sensors, 21, 742.
 
-
-
-
-
 18. Martin, D. P. and Rybicki, E. P. (1988). 基于微型计算机的玉米花叶病毒在玉米 Zea mays 症状的定量分析。Phytopathology, 88, 422–427。
 
 19. Wijekoon, C. P., Goodwin, P. H., and Hsiang, T. (2008). 利用 Scion Image 软件通过数字图像分析定量植物叶片真菌感染。J. Microbiol. Methods, 74, 94–101。
@@ -7837,9 +7690,9 @@ Figure 33.5: Chart showing the comparison between the ratings of mango foliar da
 
 # 34 图像处理中优化方法的利用：系统综述
 
-Chhavi Bajpai^(³⁴)
+Chhavi Bajpai^(34)
 
-#### 摘要
+## 摘要
 
 优化方法的结合在图像处理领域取得了重大突破。本系统综述旨在全面研究和评估优化方法在图像处理中的应用，阐明其有效性并指出未来研究的有前景方向。我们的研究包括对所选研究的全面分析，以及对所使用的各种优化方法的见解，例如遗传算法、粒子群优化等。这些技术已广泛应用于图像增强、分割、特征提取和图像重建等图像处理应用中。我们在本综述中审视文献中的重要发现、趋势和模式，提供优化策略在图像处理中的优势和局限性的全面概述。我们还讨论了用于评估这些策略有效性的流行评估指标。本系统综述的发现凸显了优化在图像处理中的关键作用，增强了图像分析和修改的质量和效率。此外，我们还确定了当前研究的空白，强调了探索创新优化技术及其在新兴领域潜在应用的必要性。本文是图像处理研究人员、从业人员和决策者的重要资源，提供了对优化方法的最新进展及其对该不断发展领域的贡献的透彻理解。
 
@@ -7848,14 +7701,19 @@ Chhavi Bajpai^(³⁴)
 ## 1. 引言
 
 图像处理是计算机视觉、遥感、医学成像等领域的重要组成部分。它涉及操纵和分析数字照片以提取有用信息或改善视觉质量。所使用算法和方法的有效性对图像处理技术的成功至关重要。多年来，优化方法已成为解决图像处理难题的有用工具。这些优化方法寻求图像处理挑战的最佳解决方案，包括去噪、分割和特征提取。
+
 它们有可能提高图像分析和解释的准确性、速度和效率。将优化方法纳入图像处理已在多个领域产生创新应用，包括目标检测、医学诊断和自动驾驶汽车。
 
 ### 1.1. 研究图像处理中优化方法的理由
 
 对优化方法在图像处理中应用进行全面研究的理由有诸多：
+
 1. **图像处理算法性能增强：** 优化方法可以显著提高图像处理算法的性能。它们允许参数微调，从而在图像恢复、目标识别和图像分类等应用中获得更好的结果。
+
 2. **资源效率：** 优化的图像处理算法可以减少任务所需的计算资源，使其更适用于实时应用、移动设备和资源受限的环境。
+
 3. **跨学科影响：** 优化与图像处理的结合对计算机科学、工程、医学成像和遥感等多个科学学科具有极大兴趣。了解这一交叉点的最新进展对于跨学科合作和创新至关重要。
+
 4. **未来应用：** 由优化驱动的图像处理在自动导航、医疗保健和监控等未来应用中至关重要。为了跟上技术进步，有必要分析该领域的研究程度。
 
 ## 2. 研究目标和问题
@@ -7865,15 +7723,21 @@ Chhavi Bajpai^(³⁴)
 ### 2.1. 目标
 
 对现有文献中优化方法在图像处理中应用进行全面综述。
+
 评估不同优化策略在增强图像处理任务中的有效性。
+
 识别优化方法在各种图像处理领域应用中的趋势和模式。
+
 评估该领域研究的质量并识别任何差距或局限性。
 
 ### 2.2. 研究问题
 
 1. 通常采用哪些图像处理优化方法，以及用于哪些具体任务？
+
 2. 结合优化进行图像处理的各项研究的主要结果和影响是什么？
+
 3. 在医学成像、计算机视觉和遥感等不同图像处理领域应用优化方法是否存在模式或趋势？
+
 4. 当前图像处理优化研究的优势和局限性是什么，哪些领域值得进一步研究？
 
 本系统综述旨在通过解决这些目标和问题，提供优化方法在图像处理中应用的全面概述，帮助研究人员、从业人员和决策者了解该领域现状并指导未来研究方向。
@@ -7883,6 +7747,7 @@ Chhavi Bajpai^(³⁴)
 ### 3.1. 检索策略
 
 1. **数据库：** 为确保广泛覆盖，评估包括对 PubMed、IEEE Xplore、Scopus、Google Scholar 和 Web of Science 等学术数据库的全面检索。
+
 2. **关键词：** 我们采用了与优化、图像处理及其交叉相关的通用和关键词。关键词示例包括“优化技术”、“图像处理”、“遗传算法”、“粒子群优化”、“模拟退火”以及其他与感兴趣的优化方法相关的主题。
 
 ### 3.2. 纳入标准
@@ -7891,37 +7756,9 @@ Chhavi Bajpai^(³⁴)
 
 ### 3.3. 排除标准
 
-
-
-
-
 非英语语言出版物、全文不可获取的研究以及未在图像处理中使用优化方法的研究也被排除在外。
 
-### 4. 文献综述
-
-图像处理是计算机视觉以及许多科学和商业应用的核心组成部分，涉及操纵和分析数字图像以提取信息、增强视觉质量并做出数据驱动的选择 [1]。图像处理之所以重要，是因为其有潜力改善图像、分割感兴趣的项目、发现模式，并最终使机器能够“看到”并理解视觉信息，这是当前人工智能系统的核心特征 [2]。
-
-优化策略对于解决复杂的图像处理挑战至关重要。针对图像相关任务，已开发并扩展了许多优化算法：
-
-遗传算法（GAs）受自然选择和遗传原理启发，旨在跨世代进化并改进解决方案。它们已被用于改善图像 [3]。
-
-粒子群优化（PSO）是一种受自然启发的[content]
-
-非英语语言出版物、全文不可获取的研究以及未在图像处理中使用优化方法的研究也被排除在外。
-
-### 4. 文献综述
-
-图像处理是计算机视觉以及许多科学和商业应用的核心组成部分，涉及操纵和分析数字图像以提取信息、增强视觉质量并做出数据驱动的选择 [1]。图像处理之所以重要，是因为其有潜力改善图像、分割感兴趣的项目、发现模式，并最终使机器能够“看到”并理解视觉信息，这是当前人工智能系统的核心特征 [2]。
-
-优化策略对于解决复杂的图像处理挑战至关重要。针对图像相关任务，已开发并扩展了许多优化算法：
-
-遗传算法（GAs）受自然选择和遗传原理启发，旨在跨世代进化并改进解决方案。它们已被用于改善图像 [3]。
-
-粒子群优化（PSO）是一种受自然启发的[content]
-
-非英语语言出版物、全文不可获取的研究以及未在图像处理中使用优化方法的研究也被排除在外。
-
-### 4. 文献综述
+## 4. 文献综述
 
 图像处理是计算机视觉以及许多科学和商业应用的核心组成部分，涉及操纵和分析数字图像以提取信息、增强视觉质量并做出数据驱动的选择 [1]。图像处理之所以重要，是因为其有潜力改善图像、分割感兴趣的项目、发现模式，并最终使机器能够“看到”并理解视觉信息，这是当前人工智能系统的核心特征 [2]。
 
@@ -7933,34 +7770,45 @@ Chhavi Bajpai^(³⁴)
 
 模拟退火基于冶金退火过程，用于优化复杂函数。它已在图像处理中用于图像配准 [5]。
 
-#### 4.1. 优化在图像处理中的应用
+### 4.1. 优化在图像处理中的应用
 
 优化技术在图像处理中有广泛的应用，包括但不限于：
 
 1. **图像增强：** GAs 和 PSO 已被用于通过增强对比度、亮度和降噪来改善图像视觉质量 [6]。
+
 2. **图像去噪：** Chambolle 和 Pock (2011) [7] 使用总变分（TV）去噪与分裂布雷格曼方法，证明了在 USC-SIPI 图像数据库或伯克利分割数据集上实现了显著的降噪并保留了图像信息。
+
 3. **图像分割：** Boykov 和 Jolly, 2001 提供了基于图割的图像分割，采用优化来证明在医学图像或自然场景中使用伯克利分割数据集或医学图像分割数据集进行精确的对象分割 [8]。聚类算法和 PSO 用于医学图像和遥感数据，以将感兴趣的项目从背景中分离出来 [9]。
+
 4. **图像配准：** Rueckert 等人, 1999 报告了在医学成像数据集上，如 MRI 扫描，使用多分辨率优化技术进行 B 样条配准，以证明医学图像的精确对齐用于诊断和治疗计划 [10]。
+
 5. **图像超分辨率：** Dong 等人, 2016 提出了具有基于优化的损失函数的卷积神经网络（CNNs）用于超分辨率，在 Set5 数据集或 Urban100 数据集上，以提高图像分辨率和质量 [11]。
+
 6. **图像特征提取：** 在 ImageNet 数据集上，Krizhevsky、Sutskever 和 Hinton (2012) 采用 CNNs 进行特征提取。CNNs 在特征提取方面表现出色，用于对象识别，从而能够构建最先进的图像分类器 [12]。
+
 7. **特征提取：** 优化方法用于从图像中选择和提取进行对象识别和分类所需的重要特征 [13]。
 
 这些图像处理的优化应用突出了优化技术在各种学科中的重要性，所提及的来源提供了关于数据集、所用算法以及基于优化方法的结果的信息。
 
-#### 4.2. 评估指标
+### 4.2. 评估指标
 
 几种评估措施用于评估基于优化的图像处理算法的有效性，包括但不限于：
 
 1. **峰值信噪比（PSNR）：** PSNR 是一种衡量改进图像与原始图像质量比较的指标，常用于图像去噪 [14]。
+
 2. **结构相似性指数（SSI）：** SSI 计算原始图像与处理后图像之间的结构相似性，并用于图像降维和恢复 [14]。
+
 3. **Dice 系数：** Dice 系数通常用于图像分割，评估分割项目与真实值之间的重叠 [15]。
+
 4. **准确率、精确率和召回率：** 这些指标用于衡量算法在对象检测和分类等任务中准确检测和分类对象的有效性 [16]。
 
 这些评估标准对于评估基于优化的图像处理算法的性能并允许在它们之间进行比较至关重要。
 
-#### 4.3. 与图像处理中优化技术利用相关的关键发现
+### 4.3. 与图像处理中优化技术利用相关的关键发现
 
 1. **优化技术显著改善图像压缩：** 对文献的全面评估发现，图像压缩优化方法对压缩比和图像质量有显著影响。这一结论得到以下研究的支持：
+
+
 
 Smith, J. and Anderson, L. (2010) 介绍了使用 JPEG2000 和 GA 的图像压缩进展。Smith 和 Anderson 的研究表明，将遗传算法与 JPEG2000 图像压缩标准结合使用导致压缩比显著改善。与传统 JPEG 压缩技术相比，平均压缩比增加了约 30% [17]。
 
@@ -7970,15 +7818,14 @@ Wang, Q. et al. (2018) 引入了稀疏编码和粒子群优化用于图像压缩
 
 这些研究表明，包括遗传算法、基于小波的优化和粒子群优化在内的优化方法可以通过实现比以前方法更高的压缩比来改善图像压缩。这一发现突出了优化策略提高图像压缩技术并最小化存储需求的能力。
 
-2. **遗传算法增强图像去噪：** 对文献的彻底分析表明，GAs 在图像去噪中是成功的，导致显著的降噪和改善的图像质量。
+## 遗传算法增强图像去噪
 
-
-
-
+对文献的彻底分析表明，GAs 在图像去噪中是成功的，导致显著的降噪和改善的图像质量。
 
 Chen and Zhang, 2012 和 Kim et al., 2016 证明了遗传算法在图像去噪中的有效性。他们强调，使用具有自适应参数管理和多目标适应度函数的进化算法可以实现显著的噪声降低和增强的图像质量。这一重要发现凸显了遗传算法作为图像去噪应用的有用工具的潜力 [20, 21]。
 
-#### 分割精度借助粒子群优化（PSO）提升
+### 分割精度借助粒子群优化（PSO）提升
+
 根据 Gupta and Sharma, 2014 [22] 和 Tanaka and Nakamura, 2017 [23]，在图像分割中使用粒子群优化与标准分割方法相比平均提高了 10% 的准确率。这些研究展示了粒子群优化（PSO）如何与模糊 c 均值或水平集等方法结合时可提高图像分割精度。PSO 算法在提高图像分割过程的准确性和可靠性方面显示出巨大潜力。
 
 以下是一些在图像处理中使用优化的其他 notable 作品：
@@ -7992,11 +7839,8 @@ Chen and Zhang, 2012 和 Kim et al., 2016 证明了遗传算法在图像去噪�
 根据系统研究的发现，优化策略对图像处理的众多要素具有 considerable 且有利的影响。这种影响在图像压缩、去噪和分割中最为明显。GA、小波优化、PSO 以及其他优化方法的使用带来了更高的压缩比、降低的图像噪声和增强的分割精度。这些发现对图像处理具有许多重要意义：
 
 1. **图像质量改善：** 优化技术的使用有可能改善图像质量，使其更适合医学成像、遥感和计算机视觉等应用。
-
 2. **降低存储和带宽需求：** 通过优化方法，增强的图像压缩可以显著降低存储和传输带宽需求，这在资源有限或数据传输需求高的应用中尤为相关。
-
 3. **增强图像分析：** 使用 PSO 等技术提高图像分割精度可能导致对象检测、跟踪和分析等任务中更准确和可靠的结果，有助于从自动驾驶汽车到医学诊断的广泛领域。
-
 4. **实时应用**：对优化技术实时使用的更多研究可能有助于该领域。许多先前研究集中于离线或批处理，然而，在实时应用中优化图像处理任务方面仍有改进空间。
 
 ### 5.1. 现有文献中已识别的空白及未来研究方向
@@ -8004,11 +7848,8 @@ Chen and Zhang, 2012 和 Kim et al., 2016 证明了遗传算法在图像去噪�
 以下是在图像处理中应用优化方法的一些空白：
 
 1. **实时图像处理：** 关于优化技术在实时图像处理中应用的文献明显缺乏。未来研究应探讨这些方法如何在需要速度和效率的环境中应用，例如自动驾驶汽车和机器人。
-
 2. **混合方法：** 结合多种优化方法或将其与机器学习方法结合可能在图像处理任务中带来更大的收益。必须对这些混合技术进行研究。
-
 3. **泛化**：许多研究局限于特定类型的图像或数据集，限制了其泛化能力。未来研究的重点应放在建立优化策略在其他领域和数据集中的泛化能力。
-
 4. **人类感知：** 评估优化技术对人类对处理后图像感知的影响是一个需要进一步探索的主题。了解这些策略如何影响图像视觉质量和可解释性至关重要，尤其是在医学成像等领域。
 
 ### 5.2. 不同优化技术有效性的批判性分析
@@ -8025,139 +7866,39 @@ Chen and Zhang, 2012 和 Kim et al., 2016 证明了遗传算法在图像去噪�
 
 ### 参考文献
 
-
-
-
-
 1. Gonzalez, R. C. and Woods, R. E. (2008). 数字图像处理. Pearson, 330 Hudson Street, New York, NY 10013, ISBN 10: 1-292-22304-9, pp 1–1022。
-
 2. Szeliski, R. (2022). 计算机视觉：算法与应用. Springer Nature. 电子书, pp 812, ISBN 978-1-84882-935-0, DOI [`doi.org/10.1007/978-1-84882-935-0`](https://doi.org/)。
-
 3. Goldberg, D. E. and Holland, J. H. (1988). 遗传算法与机器学习. Mac. Learn., 3(2), 95–99。
-
 4. Eberhart, R. and Kennedy, J. (1995). 利用粒子群理论的一种新优化器. Proc. Sixth Int. Symp. Micro mac. Human Sci., 39–43。
-
 5. Kirkpatrick, S., Gelatt, C. D., and Vecchi, M. P. (1983). 模拟退火优化. Science, 220(4598), 671–680。
-
 6. Li, C. and Li, X. (2012). 基于粒子群优化的图像对比度增强方法. IEEE Trans. Evol. Comput., 16(6), 822–841。
-
 7. Chambolle, A. and Pock, T. (2011). 用于凸问题的首阶原对偶算法及其在成像中的应用. J. Math. Imag. Vis., 40(1), 120–145。
-
 8. Boykov, Y. and Jolly, M. P. (2001). 用于 N-D 图像中物体边界和区域分割的交互式图割. Int. Conf. Comp. Vis. (ICCV), 1, 105–112。
-
 9. Liu, C. and Fevens, T. (2009). 基于两步 PSO 算法的图像分割. 2009 Int. Conf. Comput. Intel. Sec., 374–378。
-
 10. Rueckert, D., Sonoda, L. I., Hayes, C., Hill, D. L. G., Leach, M. O., and Hawkes, D. J. (1999). 使用自由形变进行非刚性配准：应用于乳腺 MR 图像. IEEE Trans. Med. Imag., 18(8), 712–721。
-
 11. Dong, C., Loy, C. C., He, K., and Tang, X. (2016). 使用深度卷积网络的图像超分辨率. IEEE Trans. Pattern Anal. Mac. Intel., 38(2), 295–307。
-
 12. Krizhevsky, A., Sutskever, I., and Hinton, G. E. (2012). 使用深度卷积神经网络的 ImageNet 分类. Adv. Neural Inform. Proc. Sys. (NIPS), 1097–1105。
-
 13. Zhang, L. and Ma, B. (2012). 图像处理的特征提取：全面综述. Int. Symp. Distribut. Comput. Artif. Intel., 284–291。
-
 14. Wang, Z., Bovik, A. C., Sheikh, H. R., and Simoncelli, E. P. (2004). 图像质量评估：从误差可见性到结构相似性. IEEE Trans. Image Proc., 13(4), 600–612。
-
 15. Dice, L. R. (1945). 物种间生态关联量的度量. Ecology, 26(3), 297–302。
-
 16. Sokolova, M. and Lapalme, G. (2009). 分类任务性能度量的系统分析. Inform. Proc. Manag., 45(4), 427–437。
-
 17. Smith, J. and Anderson, L. (2010). 使用 JPEG2000 和遗传算法的图像压缩进展. Int. J. Image Proc., 12(3), 239–253。
-
 18. Johnson, R. and Lee, S. (2015). 图像压缩技术（含优化与不含优化）的比较分析. IEEE Trans. Image Proc., 24(11), 3966–3978。
-
 19. Wang, Q., et al. (2018). 利用稀疏编码和粒子群优化增强图像压缩. J. Visual Comm. Image Represen., 50, 206–214。
-
 20. Chen, Y. and Zhang, Q. (2012). 基于遗传算法的自适应参数控制图像去噪. Signal Proc., 92(12), 2933–2946。
-
 21. Kim, S., et al. (2016). 使用多目标适应度函数的遗传算法进行图像去噪. IEEE Trans. Image Proc., 25(5), 2345–2358。
-
 22. Gupta, A. and Sharma, P. (2014). 使用粒子群优化与模糊 C 均值的图像分割. Exp. Sys. Appl., 41(6), 2795–2806。
-
 23. Tanaka, H. and Nakamura, Y. (2017). 利用粒子群优化和水平集方法的医学图像分割新方法. Comput. Med. Imag. Graph., 58, 48–58。
-
 24. Lee, J., Lee, Y., and Kim, J. (2018). 一种用于极低光图像增强的生成对抗方法. IEEE Trans. Image Proc., 15(7), 1542–1552. [`doi.org/10.1049/ipr2.12124`](https://doi.org/)。
-
 25. Xu, Y. and Yin, W. (2013). 用于正则化多凸优化的块坐标下降法及其在非负张量分解和补全中的应用. SIAM J. Imag. Sci., 6(3), 1758–1789。
-
 26. Yang, J., Wright, J., Huang, T., and Ma, Y. (2008). 图像超分辨率作为原始图像块的稀疏表示. 2008 IEEE Conf. Comp. Vis. Pattern Recogn., 1–8。
-
 27. Li, S., Liu, C., and Chen, D. Z. (2018). 通过均值漂移模式的层次聚类进行图像分割. IEEE Trans. Image Proc., 1, 1–9。
-
 28. Zemouri, S., Dornaika, F., and Yoon, H. (2019). 遗传算法与神经网络用于脑肿瘤分割. Neural Proc. Lett., 1, 1–6。
-
 29. Wen-Sheng, C., Kexin, X., Rui, L., and Binbin, P. (2023), 对称非负矩阵分解：系统综述, Neurocomputing, 557, 126721, ISSN 0925-2312, [`doi.org/10.1016/j.neucom.2023.126721`](https://doi.org/10.1016/j.neucom.2023.126721)。
 
 ### 35 工业 5.0：医疗可持续发展的进展与经验教训
 
-Sandeep Kumar Verma^([³⁵)]
-
-信息技术系，巴巴萨海布·比姆拉奥·安贝德卡尔大学，勒克瑙，印度
-
-#### 摘要
-
-工业 4.0 是一场全球技术革命，极大地彻底改变了世界各地的行业，特别强调技术创新和自动化。可持续性和公平增长已成为医疗服务部门的关键目标。这些目标旨在降低成本、缓解环境问题并保护基础设施免受大流行病和气候变化等迫在眉睫的危险的影响。然而，当前的发展轨迹优先考虑技术改进和自动化，尤其是网络物理系统 (`CPS`)，经常以牺牲人为因素为代价。认识到需要更以人为本的策略，许多国家已开始转向工业 5.0，通常被称为“以人为本/以价值为导向的工业 4.0”。这一全球观点将重点转移到支持财富增长、提高产量和促进负责任消费，以期取得更好、更可持续的结果。利用智能 AI 驱动的智能设备，工业 5.0 旨在提供环保技术、可持续制造实践、有效的绿色管理、天气预报以及气候变化意识。工业 5.0 主要旨在提高生产率和效率，满足社会变革的期望，包括福祉，同时引领数字和环保解决方案的潮流。本文探讨了工业 4.0 和工业 5.0 对经济和社会发展的[content]
-
-1. Gonzalez, R. C. and Woods, R. E. (2008). 数字图像处理. Pearson, 330 Hudson Street, New York, NY 10013, ISBN 10: 1-292-22304-9, pp 1–1022。
-
-2. Szeliski, R. (2022). 计算机视觉：算法与应用. Springer Nature. 电子书, pp 812, ISBN 978-1-84882-935-0, DOI [`doi.org/10.1007/978-1-84882-935-0`](https://doi.org/)。
-
-3. Goldberg, D. E. and Holland, J. H. (1988). 遗传算法与机器学习. Mac. Learn., 3(2), 95–99。
-
-4. Eberhart, R. and Kennedy, J. (1995). 利用粒子群理论的一种新优化器. Proc. Sixth Int. Symp. Micro mac. Human Sci., 39–43。
-
-5. Kirkpatrick, S., Gelatt, C. D., and Vecchi, M. P. (1983). 模拟退火优化. Science, 220(4598), 671–680。
-
-6. Li, C. and Li, X. (2012). 基于粒子群优化的图像对比度增强方法. IEEE Trans. Evol. Comput., 16(6), 822–841。
-
-7. Chambolle, A. and Pock, T. (2011). 用于凸问题的首阶原对偶算法及其在成像中的应用. J. Math. Imag. Vis., 40(1), 120–145。
-
-8. Boykov, Y. and Jolly, M. P. (2001). 用于 N-D 图像中物体边界和区域分割的交互式图割. Int. Conf. Comp. Vis. (ICCV), 1, 105–112。
-
-9. Liu, C. and Fevens, T. (2009). 基于两步 PSO 算法的图像分割. 2009 Int. Conf. Comput. Intel. Sec., 374–378。
-
-10. Rueckert, D., Sonoda, L. I., Hayes, C., Hill, D. L. G., Leach, M. O., and Hawkes, D. J. (1999). 使用自由形变进行非刚性配准：应用于乳腺 MR 图像. IEEE Trans. Med. Imag., 18(8), 712–721。
-
-11. Dong, C., Loy, C. C., He, K., and Tang, X. (2016). 使用深度卷积网络的图像超分辨率. IEEE Trans. Pattern Anal. Mac. Intel., 38(2), 295–307。
-
-12. Krizhevsky, A., Sutskever, I., and Hinton, G. E. (2012). 使用深度卷积神经网络的 ImageNet 分类. Adv. Neural Inform. Proc. Sys. (NIPS), 1097–1105。
-
-13. Zhang, L. and Ma, B. (2012). 图像处理的特征提取：全面综述. Int. Symp. Distribut. Comput. Artif. Intel., 284–291。
-
-14. Wang, Z., Bovik, A. C., Sheikh, H. R., and Simoncelli, E. P. (2004). 图像质量评估：从误差可见性到结构相似性. IEEE Trans. Image Proc., 13(4), 600–612。
-
-15. Dice, L. R. (1945). 物种间生态关联量的度量. Ecology, 26(3), 297–302。
-
-16. Sokolova, M. and Lapalme, G. (2009). 分类任务性能度量的系统分析. Inform. Proc. Manag., 45(4), 427–437。
-
-17. Smith, J. and Anderson, L. (2010). 使用 JPEG2000 和遗传算法的图像压缩进展. Int. J. Image Proc., 12(3), 239–253。
-
-18. Johnson, R. and Lee, S. (2015). 图像压缩技术（含优化与不含优化）的比较分析. IEEE Trans. Image Proc., 24(11), 3966–3978。
-
-19. Wang, Q., et al. (2018). 利用稀疏编码和粒子群优化增强图像压缩. J. Visual Comm. Image Represen., 50, 206–214。
-
-20. Chen, Y. and Zhang, Q. (2012). 基于遗传算法的自适应参数控制图像去噪. Signal Proc., 92(12), 2933–2946。
-
-21. Kim, S., et al. (2016). 使用多目标适应度函数的遗传算法进行图像去噪. IEEE Trans. Image Proc., 25(5), 2345–2358。
-
-22. Gupta, A. and Sharma, P. (2014). 使用粒子群优化与模糊 C 均值的图像分割. Exp. Sys. Appl., 41(6), 2795–2806。
-
-23. Tanaka, H. and Nakamura, Y. (2017). 利用粒子群优化和水平集方法的医学图像分割新方法. Comput. Med. Imag. Graph., 58, 48–58。
-
-24. Lee, J., Lee, Y., and Kim, J. (2018). 一种用于极低光图像增强的生成对抗方法. IEEE Trans. Image Proc., 15(7), 1542–1552. [`doi.org/10.1049/ipr2.12124`](https://doi.org/)。
-
-25. Xu, Y. and Yin, W. (2013). 用于正则化多凸优化的块坐标下降法及其在非负张量分解和补全中的应用. SIAM J. Imag. Sci., 6(3), 1758–1789。
-
-26. Yang, J., Wright, J., Huang, T., and Ma, Y. (2008). 图像超分辨率作为原始图像块的稀疏表示. 2008 IEEE Conf. Comp. Vis. Pattern Recogn., 1–8。
-
-27. Li, S., Liu, C., and Chen, D. Z. (2018). 通过均值漂移模式的层次聚类进行图像分割. IEEE Trans. Image Proc., 1, 1–9。
-
-28. Zemouri, S., Dornaika, F., and Yoon, H. (2019). 遗传算法与神经网络用于脑肿瘤分割. Neural Proc. Lett., 1, 1–6。
-
-29. Wen-Sheng, C., Kexin, X., Rui, L., and Binbin, P. (2023), 对称非负矩阵分解：系统综述, Neurocomputing, 557, 126721, ISSN 0925-2312, [`doi.org/10.1016/j.neucom.2023.126721`](https://doi.org/10.1016/j.neucom.2023.126721)。
-
-### 35 工业 5.0：医疗可持续发展的进展与经验教训
-
-Sandeep Kumar Verma^([³⁵)]
+Sandeep Kumar Verma^([³⁵])
 
 信息技术系，巴巴萨海布·比姆拉奥·安贝德卡尔大学，勒克瑙，印度
 
@@ -8165,12 +7906,68 @@ Sandeep Kumar Verma^([³⁵)]
 
 工业 4.0 是一场全球技术革命，极大地彻底改变了世界各地的行业，特别强调技术创新和自动化。可持续性和公平增长已成为医疗服务部门的关键目标。这些目标旨在降低成本、缓解环境问题并保护基础设施免受大流行病和气候变化等迫在眉睫的危险的影响。然而，当前的发展轨迹优先考虑技术改进和自动化，尤其是网络物理系统 (`CPS`)，经常以牺牲人为因素为代价。认识到需要更以人为本的策略，许多国家已开始转向工业 5.0，通常被称为“以人为本/以价值为导向的工业 4.0”。这一全球观点将重点转移到支持财富增长、提高产量和促进负责任消费，以期取得更好、更可持续的结果。利用智能 AI 驱动的智能设备，工业 5.0 旨在提供环保技术、可持续制造实践、有效的绿色管理、天气预报以及气候变化意识。工业 5.0 主要旨在提高生产率和效率，满足社会变革的期望，包括福祉，同时引领数字和环保解决方案的潮流。本文探讨了工业 4.0 和工业 5.0 对经济和社会发展的
 
+1. Gonzalez, R. C. and Woods, R. E. (2008). 数字图像处理. Pearson, 330 Hudson Street, New York, NY 10013, ISBN 10: 1-292-22304-9, pp 1–1022。
+2. Szeliski, R. (2022). 计算机视觉：算法与应用. Springer Nature. 电子书, pp 812, ISBN 978-1-84882-935-0, DOI [`doi.org/10.1007/978-1-84882-935-0`](https://doi.org/)。
+3. Goldberg, D. E. and Holland, J. H. (1988). 遗传算法与机器学习. Mac. Learn., 3(2), 95–99。
+4. Eberhart, R. and Kennedy, J. (1995). 利用粒子群理论的一种新优化器. Proc. Sixth Int. Symp. Micro mac. Human Sci., 39–43。
+5. Kirkpatrick, S., Gelatt, C. D., and Vecchi, M. P. (1983). 模拟退火优化. Science, 220(4598), 671–680。
+6. Li, C. and Li, X. (2012). 基于粒子群优化的图像对比度增强方法. IEEE Trans. Evol. Comput., 16(6), 822–841。
+7. Chambolle, A. and Pock, T. (2011). 用于凸问题的首阶原对偶算法及其在成像中的应用. J. Math. Imag. Vis., 40(1), 120–145。
+8. Boykov, Y. and Jolly, M. P. (2001). 用于 N-D 图像中物体边界和区域分割的交互式图割. Int. Conf. Comp. Vis. (ICCV), 1, 105–112。
+9. Liu, C. and Fevens, T. (2009). 基于两步 PSO 算法的图像分割. 2009 Int. Conf. Comput. Intel. Sec., 374–378。
+10. Rueckert, D., Sonoda, L. I., Hayes, C., Hill, D. L. G., Leach, M. O., and Hawkes, D. J. (1999). 使用自由形变进行非刚性配准：应用于乳腺 MR 图像. IEEE Trans. Med. Imag., 18(8), 712–721。
+11. Dong, C., Loy, C. C., He, K., and Tang, X. (2016). 使用深度卷积网络的图像超分辨率. IEEE Trans. Pattern Anal. Mac. Intel., 38(2), 295–307。
+12. Krizhevsky, A., Sutskever, I., and Hinton, G. E. (2012). 使用深度卷积神经网络的 ImageNet 分类. Adv. Neural Inform. Proc. Sys. (NIPS), 1097–1105。
 
 
+
+13. Zhang, L. and Ma, B. (2012). 图像处理的特征提取：全面综述. Int. Symp. Distribut. Comput. Artif. Intel., 284–291。
+
+14. Wang, Z., Bovik, A. C., Sheikh, H. R., and Simoncelli, E. P. (2004). 图像质量评估：从误差可见性到结构相似性. IEEE Trans. Image Proc., 13(4), 600–612。
+
+15. Dice, L. R. (1945). 物种间生态关联量的度量. Ecology, 26(3), 297–302。
+
+16. Sokolova, M. and Lapalme, G. (2009). 分类任务性能度量的系统分析. Inform. Proc. Manag., 45(4), 427–437。
+
+17. Smith, J. and Anderson, L. (2010). 使用 JPEG2000 和遗传算法的图像压缩进展. Int. J. Image Proc., 12(3), 239–253。
+
+18. Johnson, R. and Lee, S. (2015). 图像压缩技术（含优化与不含优化）的比较分析. IEEE Trans. Image Proc., 24(11), 3966–3978。
+
+19. Wang, Q., et al. (2018). 利用稀疏编码和粒子群优化增强图像压缩. J. Visual Comm. Image Represen., 50, 206–214。
+
+20. Chen, Y. and Zhang, Q. (2012). 基于遗传算法的自适应参数控制图像去噪. Signal Proc., 92(12), 2933–2946。
+
+21. Kim, S., et al. (2016). 使用多目标适应度函数的遗传算法进行图像去噪. IEEE Trans. Image Proc., 25(5), 2345–2358。
+
+22. Gupta, A. and Sharma, P. (2014). 使用粒子群优化与模糊 C 均值的图像分割. Exp. Sys. Appl., 41(6), 2795–2806。
+
+23. Tanaka, H. and Nakamura, Y. (2017). 利用粒子群优化和水平集方法的医学图像分割新方法. Comput. Med. Imag. Graph., 58, 48–58。
+
+24. Lee, J., Lee, Y., and Kim, J. (2018). 一种用于极低光图像增强的生成对抗方法. IEEE Trans. Image Proc., 15(7), 1542–1552. [`doi.org/10.1049/ipr2.12124`](https://doi.org/)。
+
+25. Xu, Y. and Yin, W. (2013). 用于正则化多凸优化的块坐标下降法及其在非负张量分解和补全中的应用. SIAM J. Imag. Sci., 6(3), 1758–1789。
+
+26. Yang, J., Wright, J., Huang, T., and Ma, Y. (2008). 图像超分辨率作为原始图像块的稀疏表示. 2008 IEEE Conf. Comp. Vis. Pattern Recogn., 1–8。
+
+27. Li, S., Liu, C., and Chen, D. Z. (2018). 通过均值漂移模式的层次聚类进行图像分割. IEEE Trans. Image Proc., 1, 1–9。
+
+28. Zemouri, S., Dornaika, F., and Yoon, H. (2019). 遗传算法与神经网络用于脑肿瘤分割. Neural Proc. Lett., 1, 1–6。
+
+29. Wen-Sheng, C., Kexin, X., Rui, L., and Binbin, P. (2023), 对称非负矩阵分解：系统综述, Neurocomputing, 557, 126721, ISSN 0925-2312, [`doi.org/10.1016/j.neucom.2023.126721`](https://doi.org/10.1016/j.neucom.2023.126721)。
+
+### 35 工业 5.0：医疗可持续发展的进展与经验教训
+
+Sandeep Kumar Verma^([³⁵])
+
+信息技术系，巴巴萨海布·比姆拉奥·安贝德卡尔大学，勒克瑙，印度
+
+#### 摘要
+
+工业 4.0 是一场全球技术革命，极大地彻底改变了世界各地的行业，特别强调技术创新和自动化。可持续性和公平增长已成为医疗服务部门的关键目标。这些目标旨在降低成本、缓解环境问题并保护基础设施免受大流行病和气候变化等迫在眉睫的危险的影响。然而，当前的发展轨迹优先考虑技术改进和自动化，尤其是网络物理系统 (`CPS`)，经常以牺牲人为因素为代价。认识到需要更以人为本的策略，许多国家已开始转向工业 5.0，通常被称为“以人为本/以价值为导向的工业 4.0”。这一全球观点将重点转移到支持财富增长、提高产量和促进负责任消费，以期取得更好、更可持续的结果。利用智能 AI 驱动的智能设备，工业 5.0 旨在提供环保技术、可持续制造实践、有效的绿色管理、天气预报以及气候变化意识。工业 5.0 主要旨在提高生产率和效率，满足社会变革的期望，包括福祉，同时引领数字和环保解决方案的潮流。本文探讨了工业 4.0 和工业 5.0 对经济和社会发展的
 
 Industry 5.0 是最新的 IT 市场，是下一代负责任的产业、社会和治理机构的责任一代，开发利用科学技术同时兼顾生态福祉的模式，同时应对社会、经济和环境影响。Industry 5.0 的负责任核心价值鼓励人类、社会、公平和环境的繁荣。当前产业基于技术驱动力量，而未来的 Industry 5.0 推广以社会为导向的技术并产生价值。Industry 5.0 的社会经济影响也正被认可。Industry 5.0 的社会经济效应也正被承认。把重点放在伦理问题、环境发展和以人为本的创新上，是扩大经济并提供新的就业机会的又一步。这对于欠发达国家尤其如此，在那里 Industry 5.0 可能有助于弥合数字鸿沟并解决社会问题。主要目标是在“与工业 4.0 相关创新技术”发展的同时，产生经济、环境、社会、可持续和以人为本的方面。
 
-根据欧洲委员会的优先事项，需要总体消除的挑战和促进因素是复杂系统的一部分，该系统还包括组织和技术方面、政治和社会问题以及可持续性的三重底线 [1]。繁荣指的是在生活的各个方面蓬勃发展，包括经济、社会和个人福祉。收入、就业、教育、健康和整体幸福感的卓越水平是这个社会的特征。繁荣取决于许多因素，包括有效的法规、财务承诺以及促进公平和可持续资源配置的协作努力。一个富裕的社会具有较低的贫困率、更高的生产力和创造力水平、更强的社会凝聚力以及所有公民更高的生活水平 [2]。一种更现代的概念“Industry 5.0”将人类专业知识和创造力与 Industry 4.0 技术如自动化、物联网（IoT）和人工智能（AI）的优势相结合。人们被视为制造过程的基础，因为他们可以提供洞察力、适应性和情商。确保个人能够有效地参与工业过程的数字和物理组成部分；它还需要对教育、培训和再培训进行大量投资 [2]。Planet 和 Industry 5.0 是两个相关概念，强调可持续性和以人为本的创造力在工厂和生产部门的价值。Industry 5.0 旨在通过减少排放、浪费和能源消耗来减少生产的对环境的影响。制造业对环境有重大影响。
+根据欧洲委员会的优先事项，需要总体消除的挑战和促进因素是复杂系统的一部分，该系统还包括组织和技术方面、政治和社会问题以及可持续性的三重底线 [1]。繁荣指的是在生活的各个方面蓬勃发展，包括经济、社会和个人福祉。收入、就业、教育、健康和整体幸福感的卓越水平是这个社会的特征。繁荣取决于许多因素，包括有效的法规、财务承诺以及促进公平和可持续资源配置的协作努力。一个富裕的社会具有较低的贫困率、更高的生产力和创造力水平、更强的社会凝聚力以及所有公民更高的生活水平 [2]。一种更现代的概念“Industry 5.0”将人类专业知识和创造力与 Industry 4.0 技术如自动化、物联网（`IoT`）和人工智能（`AI`）的优势相结合。人们被视为制造过程的基础，因为他们可以提供洞察力、适应性和情商。确保个人能够有效地参与工业过程的数字和物理组成部分；它还需要对教育、培训和再培训进行大量投资 [2]。Planet 和 Industry 5.0 是两个相关概念，强调可持续性和以人为本的创造力在工厂和生产部门的价值。Industry 5.0 旨在通过减少排放、浪费和能源消耗来减少生产的对环境的影响。制造业对环境有重大影响。
 
 欧洲联盟绿色协议是欧洲委员会提出的主计划，旨在到 2050 年实现碳中和和可持续发展。它旨在将欧洲的经济和社会转变为更具韧性和竞争力的模式，使人类和地球都受益，如 图 35.1 所示。Industry 5.0 为欧洲绿色协议提供了宝贵的视角，因为它强调了创新、数字化以及制造业部门的人力技能的作用 [3]。绿色协议要求对能源、交通和建筑等行业进行脱碳，并部署氢能、可再生能源和循环经济实践等新技术。Industry 5.0 可以通过实现一个更智能、更灵活和更可持续的制造系统来支持这些目标，该系统整合数字技术、自动化和人类智慧。然而，为了确保向 Industry 5.0 和绿色协议的公正和包容性转型，投资教育、培训和社会保障以支持受转型影响的工人和社区至关重要 [4]。
 
@@ -8186,23 +7983,19 @@ Digital 指的是数字技术的结合，考虑到基于绿色革命的现有进
 
 ### 2. Industry Migration Along With Healthcare From 1.0 to 5.0
 
-
-
-
-
 18 世纪认识到工业 1.0 的兴起，其重点是蒸汽动力和煤炭作为主要燃料，将社会从农业革命转变为工业革命。19 世纪早期出现了工业 2.0，其主要能源是电网能源。其主要问题是其过度的电能消耗。工业 3.0 开始于二十世纪，其主要关注点是使用与电子电路、通信、自动化和 IT 相关的技术。工业 4.0 开始于 21 世纪，当时所有类型的工业都被转变为智能工业，并使用 IT 相关技术推广自动化，但即使在今天，数据在云端和传输过程中也不完全安全，这就是其主要缺点。工业 5.0 基于人类协作，这确保了对工业 4.0 的所有技术的利用，同时朝着以人为中心、可持续性和韧性方面改进。医疗保健与工业的历程在 Figure 35.2 中显示。
 
 ![Figure 35.2: Industry migration along with healthcare from 1.0 to 5.0.](img/fig35_2_C.jpg)
 
 Figure 35.2: Industry migration along with healthcare from 1.0 to 5.0.
 
-医疗保健 1.0 基于笔和纸，其治疗是基于事实的，由于缺乏数字技术，患者记录会随着时间推移而损坏，保持其安全是一个巨大的挑战。在医疗保健 2.0 时代，我们获得了数字医疗治疗，在很大程度上保持了记录的保密性、私密性、安全性和数据完整性。在医疗保健 3.0 中，使用电子健康记录（EHR），健康信息可以上传到云端、共享并完成。在医疗保健 4.0 中，使用先进技术提供智能医疗服务，而在医疗保健 5.0 中，在智能服务所用技术的帮助下，我们获得了个性化和互联的护理服务，这些服务以患者为中心。
+医疗保健 1.0 基于笔和纸，其治疗是基于事实的，由于缺乏数字技术，患者记录会随着时间推移而损坏，保持其安全是一个巨大的挑战。在医疗保健 2.0 时代，我们获得了数字医疗治疗，在很大程度上保持了记录的保密性、私密性、安全性和数据完整性。在医疗保健 3.0 中，使用电子健康记录（`EHR`），健康信息可以上传到云端、共享并完成。在医疗保健 4.0 中，使用先进技术提供智能医疗服务，而在医疗保健 5.0 中，在智能服务所用技术的帮助下，我们获得了个性化和互联的护理服务，这些服务以患者为中心。
 
 ### 3. 文献综述
 
-工业 5.0 超越了众所周知的“智能服务、可靠且无错误”格言，承诺将下一代引导向支持更智能、以人为主要因素、更可持续和更具韧性的产业的选择平衡。确保人类仍然是主导力量并有意且创造性地生活是绿色工业和数字迁移的主要目标，这些都包含在工业 5.0 和社会 5.0 中 [5]。一个全球性的框架概念工业 5.0 旨在解决第四次工业革命（工业 4.0）带来的问题，同时推进以人为本、环保和负责任的社会实践 [6]。为了发展循环经济原则，最大化资源利用、减少浪费、提高能源效率，同时促进新的商业机会和经济增长，该概念使用了机器语言（ML）、大数据、AI、IoT 和区块链等先进技术 [7]。
+工业 5.0 超越了众所周知的“智能服务、可靠且无错误”格言，承诺将下一代引导向支持更智能、以人为主要因素、更可持续和更具韧性的产业的选择平衡。确保人类仍然是主导力量并有意且创造性地生活是绿色工业和数字迁移的主要目标，这些都包含在工业 5.0 和社会 5.0 中 [5]。一个全球性的框架概念工业 5.0 旨在解决第四次工业革命（工业 4.0）带来的问题，同时推进以人为本、环保和负责任的社会实践 [6]。为了发展循环经济原则，最大化资源利用、减少浪费、提高能源效率，同时促进新的商业机会和经济增长，该概念使用了机器语言（`ML`）、大数据、`AI`、`IoT` 和区块链等先进技术 [7]。
 
-循环经济（CE）支持先进的社会经济范式并满足可持续发展的要求，同时考虑到经济、社会和环境方面 [8]。CE、生物多样性恢复、到 2030 年至少减少 55% 的排放，以及到 2050 年成为第一个环保国家，是欧洲绿色协议可持续增长的基石。欧洲委员会（EC）遵守联合国的 2030 可持续发展计划 [9]。可持续发展目标（SDG）在以下章节中简要讨论。
+循环经济（`CE`）支持先进的社会经济范式并满足可持续发展的要求，同时考虑到经济、社会和环境方面 [8]。`CE`、生物多样性恢复、到 2030 年至少减少 55% 的排放，以及到 2050 年成为第一个环保国家，是欧洲绿色协议可持续增长的基石。欧洲委员会（`EC`）遵守联合国的 2030 可持续发展计划 [9]。可持续发展目标（`SDG`）在以下章节中简要讨论。
 
 #### 3.1. SDG1 消除贫困
 
@@ -8258,11 +8051,7 @@ Figure 35.2: Industry migration along with healthcare from 1.0 to 5.0.
 
 #### 3.14. SDG14 -水下生命
 
-
-
-
-
-This goal addresses issues such as marine pollution, overfishing, and ocean acidification, which can have significant effects on marine ecosystems and the livelihoods of persons who depend on them.
+This goal addresses issues such as marine pollution, overfishing, and ocean acidification, which can have significant effects on marine ecosystems and the livelihood of persons who depend on them.
 
 #### 3.15. SDG15 - Life on land
 
@@ -8270,9 +8059,11 @@ The goal is to combat land degradation, halt biodiversity damage, and encourage 
 
 #### 3.16. SDG16 - Strong institutions and peace justice
 
+
+
 The goal is to reduce violence, combat corruption, promote the rule of law, and guarantee equal rights to justice and human rights for all people, including vulnerable groups such as women, children, and refugees.
 
-#### 3.17. SDG17 - Partnership for the goals
+### 3.17. SDG17 - Partnership for the goals
 
 The goal is to promote effective partnerships between governments, the remote sector, public society, and other investors to achieve the SDGs. This goal addresses the need for collaboration and partnership to achieve SDGs, as no single entity can achieve them alone.
 
@@ -8320,10 +8111,6 @@ Industry 5.0 is an advanced industrial revolution that is already in a growing p
 
 ### Acknowledgement
 
-
-
-
-
 作者谨此感谢信息技术系的学生、工作人员和主管在研究中给予的合作。
 
 ### 参考文献
@@ -8339,6 +8126,8 @@ Industry 5.0 is an advanced industrial revolution that is already in a growing p
 5. Nahavandi, S. (2019). Industry 5.0—以人为本的解决方案。Sustainability, 11(16), 4371.
 
 6. Industry 5.0: human, sustainable, resilient - Interlake Mecalux。[`www.interlakemecalux.com/blog/industry-5-0`](https://www.interlakemecalux) (访问日期 2023 年 5 月 01 日)。
+
+
 
 7. Cheah, C. G., Chia, W. Y., Lai, S. F., Chew, K. W., Chia, S. R., and Show, P. L. (2022). 基于工业 4.0 的固体废物管理创新设计：机械与数字循环经济。Environ. Res., 213, 113619.
 
@@ -8358,7 +8147,7 @@ Industry 5.0 is an advanced industrial revolution that is already in a growing p
 
 Rohit Sharma^(³⁶)
 
-#### 摘要
+## 摘要
 
 在当今技术时代，生物医学成像技术在诊断关键疾病方面观察到快速变化和增长。腹部疾病在各年龄段人群中普遍存在。其中一种非常常见的疾病——胆囊结石，也可通过超声、CT 扫描（腹部）和内镜超声等多种医学影像方法进行诊断，这些方法被临床医生非常有效地使用。智能计算方法已被证明对于快速准确的疾病诊断非常有帮助和有效，与医疗专家通过人工诊断方法相比，这对于在最短时间内以更高准确性准确诊断疾病非常有帮助。在本综述中，我们讨论了用于检测和分类胆囊结石的几种智能计算方法的性能。
 
@@ -8391,10 +8180,6 @@ Rohit Sharma^(³⁶)
 从 表 36.1 中，符合纳入标准参数的文章被引用以供进一步分析，否则不被考虑纳入我们的分析。在本研究中，我们提出了一项系统文献综述，并讨论了之前研究的益处、所用技术和局限性，并指出了未来工作中需要开展的研究空白。
 
 ### 2.1. 数据提取方法
-
-
-
-
 
 在本节中，我们将讨论在此文献综述和分析中考虑的各种研究文章的选择。它可以被视为 Table 36.1 的图形表示，但它包含了本次评审过程的整体文献检索策略。
 
@@ -8431,11 +8216,6 @@ Table 36.2: Role of intelligent computing in diagnosis of gallstones
 | [13] || 2019 || `MobileNetV2` || Cholelithiasis CT images from The Third Hospital of Shandong Province, China || Accuracy 91% |
 | --- | --- | --- | --- | --- |
 | [14] || 2021 || `ResNet50` || 1039 Endoscopic ultrasound (`EUS`) Images || Accuracy 91.6% |
-
-
-
-
-
 | \[15\] || 2019 || Yolov3-arch 神经网络 || 223846 超声和 CT 图像 || 精确率（颗粒状胆结石）92.7% 精确率（泥沙样胆结石）80.3% |
 | \[16\] || 2021 || 基于 CNN 的视觉传感技术 || 镜检和十二指肠镜图像 || 精确率 94.56% 召回率 96.56%， |
 | \[17\] || 2023 || 基于深度神经网络（DNN）的分类模型 || 10,692 张来自巴格达 Al-Amal 中心和胃肠病中心的超声图像 || 精确率 98.35 % |
@@ -8480,6 +8260,8 @@ Table 36.2: Role of intelligent computing in diagnosis of gallstones
 
 13. Pang, S., Wang, S., Rodríguez-Patón, A., Li, P., and Wang, X. (2019). 基于轻量级卷积神经网络的移动 Android 终端人工智能诊断系统用于胆结石。PLOS One, 14(9), e0221720。
 
+
+
 14. Jang, S. Ill, et al. (2021). 基于深度学习分析的内镜超声-人工智能诊断胆囊息肉样病变的诊断性能。J. Gastroenterol. Hepatol., 36(12), 3548–3555。
 
 15. Pang, S., Ding, T., Qiao, S., Meng, F., Wang, S., Li, P., et al. (2019). 一种用于 CT 图像识别胆结石和分类胆结石的新型 YOLOv3-arch 模型。PLoS One, 14(6), e0217647。
@@ -8498,10 +8280,6 @@ Table 36.2: Role of intelligent computing in diagnosis of gallstones
 
 22. Jeong, Y., Kim, J. H., Chae, H. D., et al. (2020). 基于超声的诊断新生物胆囊息肉的深度学习决策支持系统：初步结果。Sci. Rep., 10, 7700。
 
-
-
-
-
 23. Yin, Y., Yakar, D., Slangen, J. J. G., Hoogwater, F. J. H., Kwee, T. C., and de Haas, R. J. (2023). The value of deep learning in gallbladder lesion characterization. Diagnostics (Basel), 13(4), 704.
 
 24. Gupta, P., et al. (2023). Deep-learning enabled ultrasound-based detection of gallbladder cancer in northern India: a prospective diagnostic study. Lancet Reg. Health-Southeast Asia, 4 (2023): 704.
@@ -8510,7 +8288,7 @@ Table 36.2: Role of intelligent computing in diagnosis of gallstones
 
 # 37 面部表情识别智能技术的综述
 
-Pratibha Sharma^([³⁷)]
+Pratibha Sharma^[37)]
 
 #### 摘要
 
@@ -8593,13 +8371,10 @@ FER 研究一直备受关注。已提出了多种机器学习 ML 方法，例如
 
     Figure 37.8: Samples of CASMEII dataset.
 
-
-
-
-
 Figure 37.8: Samples of CASMEII dataset.
 
 #### 3. `CAS(ME)²` dataset [11].
+
 `CAS(ME)²` 数据集包含 303 个表情样本，其中 250 个为宏观表情，53 个为微表情。利用超过 600 个诱发的面部运动生成了表情样本，并以起始、峰值和结束帧进行编码。 Figure 37.9 展示了来自 `CAS(ME)²` 数据集的若干样本。
 
 ![Figure 37.9: Samples of CAS(ME)² dataset.](img/fig37_9_C.jpg)
@@ -8607,6 +8382,7 @@ Figure 37.8: Samples of CASMEII dataset.
 Figure 37.9: Samples of CAS(ME)² dataset.
 
 #### 4. `SAMM` dataset [12].
+
 该数据集中记录了 32 名来自 13 个不同种族群体、年龄在 19–57 岁之间的受试者的微面部运动，包括 16 名女性和 17 名男性参与者。 Figure 37.10 显示了 `SAMM` 数据集的几个样本。
 
 ![Figure 37.10: Samples of SAMM dataset.](img/fig37_10_B.jpg)
@@ -8614,6 +8390,7 @@ Figure 37.9: Samples of CAS(ME)² dataset.
 Figure 37.10: Samples of SAMM dataset.
 
 #### 5. `SMIC` dataset [13].
+
 该数据集由 16 名个体的 164 个微表情视频片段组成。它允许对微表情自动评估算法进行详尽测试，而此前任何其他数据库都无法实现。 Figure 37.11 显示了 `SMIC` 数据集的几个样本。
 
 ![Figure 37.11: Samples of SMIC dataset.](img/fig37_11_C.jpg)
@@ -8625,6 +8402,7 @@ Figure 37.11: Samples of SMIC dataset.
 本节展示 3D 表情识别数据集。
 
 #### 1. `BU3DFE` dataset [14].
+
 该数据集由 100 名受试者组成，其中 56% 为女性，44% 为男性。 Figure 37.12 展示了来自 `BU3DFE` 数据集的若干样本。
 
 ![Figure 37.12: Samples of BU3DFE dataset.](img/fig37_12_C.jpg)
@@ -8632,6 +8410,7 @@ Figure 37.11: Samples of SMIC dataset.
 Figure 37.12: Samples of BU3DFE dataset.
 
 #### 2. `Bosphorus` dataset [15].
+
 该数据集中有 105 人，具有不同的姿势、表情和遮挡情况。大多数参与者年龄在 25 至 35 岁之间，其中有 60 名男性和 45 名女性。 Figure 37.9 显示了 `Bosphorus` 数据集的少量样本。 Figure 37.13 显示了 `Bosphorus` 数据集的几个样本。
 
 ![Figure 37.13: Samples of Bosphorus dataset.](img/fig37_13_C.jpg)
@@ -8672,8 +8451,6 @@ Figure 37.13: Samples of Bosphorus dataset.
 
 
 
-
-
 目前已有多种方法可以快速表示面部肌肉运动特征，包括几何分析。然而，由于情感的细微性，该学科中的准确识别仍然是一个挑战。为了解决这一问题，Buhari 等人，\[36\] 提出了一种基于几何原理的革命性不可见情感增强技术。该算法还包含一个参数，用于调整放大程度以获得最佳效果。利用基于地标的面部图谱，对所提出的架构进行了评估。
 
 尽管已经开发出各种有效的无监督域适应方法，但它们无法解决无监督方法的难题。为了解决这种困难的情况，Zhu 等人，\[37\] 提出了一种独特无监督域适应方法。
@@ -8688,7 +8465,7 @@ Fu 等人，\[39\] 提出了一种用于 3D 面部表情识别的独特方法，
 
 ## 4. 结论
 
-本研究的主要目标是提供 FER 最新进展的简要描述。在此，FER 技术已分为三类：基础、微表情和 3D FER 技术。为此提供了简要的文献综述。此外，我们还提供了与每个类别相关的<|message|> 数据集的简要描述，以便读者了解现有文献以及数据集。该综述可以扩展到 ML、深度学习、迁移学习和其他学习技术。
+本研究的主要目标是提供 FER 最新进展的简要描述。在此，FER 技术已分为三类：基础、微表情和 3D FER 技术。为此提供了简要的文献综述。此外，我们还提供了与每个类别相关的 数据集的简要描述，以便读者了解现有文献以及数据集。该综述可以扩展到 ML、深度学习、迁移学习和其他学习技术。
 
 ### 参考文献
 
@@ -8733,9 +8510,6 @@ Fu 等人，\[39\] 提出了一种用于 3D 面部表情识别的独特方法，
 20. Zhou, L., Fan, X., Tjahjadi, T., and Das Choudhury, S. (2022). Discriminative attention-augmented feature learning for facial expression recognition in the wild. Neural Comput. Appl., 34(2), 925–936.
 
 21. Zhu, X., He, Z., Zhao, L., Dai, Z., and Yang, Q. (2022). A cascade attention based facial expression rec-ognition network by Fusing multi-scale spatio-temporal features. Sensors, 22(4), 1350.
-
-
-
 
 22. Ruan, D., Mo, R., Yan, Y., Chen, S., Xue, J. H., and Wang, H. (2022). 面部表情识别的自适应深度扰动解耦学习. Int. J. Comp. Vis., 1–23.
 
@@ -8793,20 +8567,19 @@ Taushif Anwar^(³⁸)
 
 为应对云计算相关的环境挑战，绿色云计算采用各种策略和技术来减少能源消耗、碳排放和浪费 [3]。这些包括虚拟化、节能硬件、可再生能源、云资源管理和废物管理与处置。
 
+
+
 虚拟化是一种方法，使单个物理服务器上运行多个虚拟机，从而减少处理特定工作负载所需的物理服务器数量。这导致碳足迹减小和能源消耗降低。绿色云计算还涉及使用节能硬件，如服务器、存储设备和网络设备，其功耗更低、发热量更小 [2, 4]。
 
 实现环保云计算的另一种策略是利用太阳能、风能或水力发电等可再生能源为数据中心供电。这种方法旨在减少与传统能源来源相关的碳排放。
 
 云资源管理是指高效利用云计算资源，如存储和计算能力，以最大限度地减少低效并降低能源使用。环保云计算还包括电子设备的适当回收和处置，有助于减少 IT 行业产生的电子废物 [5]。
 
-
-
-
 近期，由于在各种项目和活动中过度使用能源，特别是在技术和药物生产领域，不可持续性的重要性有所增加。许多企业现在倾向于对其环境影响承担责任，从而开发了众多旨在减少具体影响的分析程序和策略 \[4\]。绿色云计算的概念在解决物质依赖和特定环境问题方面发挥着至关重要的作用。在促进可持续发展的背景下，云用户可以采用两种方法：提高云系统的整体效率以及利用清洁能源资源。
 
 本质上，绿色云计算是一项重要的努力，旨在最大限度地减少云计算对环境的影响，并在 IT 行业中促进可持续发展。通过采用节能策略和利用尖端技术，云服务提供商和用户可以有效减少碳排放，并在构建更可持续的未来中发挥重要作用。
 
-### 2\. 文献综述
+## 2. 文献综述
 
 Deepika Saxena 等人 \[4\] 提出了一种新方法，以解决在环保云环境中工作负载的安全和可持续管理问题。他们提出了一种方法，该方法采用双相黑洞优化（DPBHO）进化优化算法，一种新开发的技术，来精确估计神经网络驱动系统中的资源利用率。此外，他们还提出了一种基于 DPBHO 的多目标策略，用于虚拟机的实时分配和管理。该方法考虑了云用户和服务提供商的需求，以提供最佳解决方案。
 
@@ -8826,7 +8599,7 @@ Archana Patil 等人 \[10\] 提出了一项关于绿色云计算及其各种特�
 
 Figure 38.1: Methodology used for green cloud computing.
 
-### 3\. 绿色云计算所用方法
+## 3. 绿色云计算所用方法
 
 绿色云计算是指在云计算中使用节能和环保的电子产品和实践 \[7\]。以下方法可用于实施绿色云计算：
 
@@ -8846,21 +8619,20 @@ Figure 38.1: Methodology used for green cloud computing.
 
 通过实施这些方法，组织可以减少云计算的物质后果，同时从云计算提供的成本节约和提高效率中受益。综上所述，这些努力为绿色云计算中的挑战和机遇提供了宝贵的见解，提出了多种技术和策略，以在保持其性能和效率的同时最大限度地减少云计算对环境的影响。
 
-### 4\. 绿色云计算方法
-
-
-
-
+## 4. 绿色云计算方法
 
 绿色云计算是一个新兴领域，旨在减少云计算对环境的影响，同时保持云服务的性能和可靠性。近年来，关于绿色云计算的重大研究集中在各个方面，包括能源效率、资源管理、数据中心设计和战略规划 [9, 12]。
 
-#### 能源效率
+### 能源效率
+
 能源效率是绿色云计算研究中的一个关键领域。众多研究集中于通过各种技术提高云数据中心的能源效率，例如服务器整合、动态功率和频率缩放以及任务调度。例如，Beloglazov 等人 [13] 提出了一种系统分配算法，该算法动态调整活动服务器的数量及其工作负载分配，从而实现显著的节能。
 
-#### 资源管理
+### 资源管理
+
 资源管理是绿色云计算中的另一个重要研究领域。这涉及优化云资源，例如计算能力、存储和网络带宽。几项研究提出了优化资源分配的方法，包括虚拟机迁移、工作负载平衡和容量管理。例如，Ahmad 等人 [14] 引入了一种主动资源分配框架，可改善虚拟机的部署并降低能耗。
 
-#### 数据中心设计
+### 数据中心设计
+
 数据中心设计也是绿色云计算研究的重点。各种研究提出了增强能源效率并减少环境影响的数据中心创新设计。例如，例如，Shojafar 等人 [15] 提出了一种基于策略的管理云资源的方法，该方法考虑了云服务的环境影响。这种方法使云提供商能够分配资源以最大限度地减少环境影响，同时满足服务水平协议。
 
 ## 5. 绿色数据中心的益处
@@ -8899,10 +8671,6 @@ Figure 38.2: Benefits of green data centers.
 
 绿色云计算面临两个主要挑战，与国际法规以及各国法规的差异有关，这些挑战侧重于云安全问题。一些国家有严格的环境限制，而其他国家要么缺乏法规，要么难以执行。另一个需要考虑的问题是绿色云计算的财务负担，最终转嫁给用户并导致服务成本升高。此外，采用可再生能源带来了非技术挑战。可再生能源固有的不可预测性给云计算公司带来障碍，并扰乱了传统云运营规划方法。一些云提供商通过在可获得可再生能源的地区建设数据中心来解决这一问题 [19]。
 
-
-
-
-
 近年来，绿色计算的流行度显著溢出，主要驱动因素是对温室气体排放对气候变化和全球变暖的破坏性影响的认识不断提高 \[21\]。经济因素，例如 IT 的电力需求上升和能源成本增加，也促成了绿色 IT 的重要性。绿色 IT 计划应侧重于提供高效服务并实施切实可行的节能解决方案，强调效率而非仅仅减少未来的消耗。尽管当前研究已解决了绿色计算中的一些问题，但在其他领域仍需进一步探索。
 
 绿色云计算是绿色技术中日益增长的趋势，旨在为全球各地的人们提供数据和服务 \[21\]。专家们已使用各种指标来评估云计算数据中心的效率，认识到其作为解决环境问题的一种具有成本效益的方法。
@@ -8929,25 +8697,38 @@ Figure 38.2: Benefits of green data centers.
 ### References
 
 1. Park, J., Han, K., and Lee, B. (2023). Green cloud? An empirical analysis of cloud computing and energy efficiency. Manag. Sci., 69(3), 1639–1664.
+
 2. Mansour, R. F., Alhumyani, H., Abdel Khalek, S., Saeed, R. A., and Gupta, D. (2023). Design of cultural emperor penguin optimizer for energy-efficient resource scheduling in green cloud computing environment. Clus. Comput., 26(1), 575–586.
+
 3. Bharany, S., Badotra, S., Sharma, S., Rani, S., Alazab, M., Jhaveri, R. H., and Thippa Reddy, G. (2022). Energy efficient fault tolerance techniques in green cloud computing: A systematic survey and taxonomy. Sustain. Energy Technol. Assess., 53, 102613.
+
 4. Saxena, D., Singh, A. K., Lee, C.-N., and Rajkumar, B. (2023). A sustainable and secure load management model for green cloud data centres. Scient. Reports, 13(1), 491.
+
 5. Sharma, P. K., Kumar, N., and Park, J. H. (2020). Blockchain technology toward green IoT: Opportunities and challenges. IEEE Netw., 34(4), 263–269.
+
 6. Ojo, A. O., Raman, M., and Downe, A. G. (2019). Toward green computing practices: A Malaysian study of green belief and attitude among Information Technology professionals. J. Clean. Prod., 224, 246–255.
+
 7. Al-Fatlawi, A. A. and Al-Barazanchi, I. (2023). A novel approach for new architecture for green data centre. Bull. Elec. Engg. Inform., 12(1), 411–417.
+
 8. Mandal, R., Mondal, M. K., Banerjee, S., Srivastava, G., Alnumay, W., Ghosh, U., and Biswas, U. (2023). MECpVmS: an SLA aware energy-efficient virtual machine selection policy for green cloud computing. Clus. Comput., 26(1), 651–665.
+
 9. Masdari, M. and Zangakani, M. (2020). Green cloud computing using proactive virtual machine placement: challenges and issues. J. Grid Comput., 18(4), 727–759.
+
 10. Patil, A. and Dr Patil, R. (2019). An analysis report on green cloud computing current trends and future research challenges. Proc. Int. Conf. Sustain. Comput. Sci. Technol. Manag. (SUSCOM), 1–8. Amity University Rajasthan, Jaipur-India.
+
 11. Anwar, T. and Uma, V. (2020). A study and analysis of issues and attacks related to recommender system. Converg. ICT Smart Dev. Emerg. Appl., 137–157.
+
+
+
 12. Chanti, S., Anwar, T., Chithralekha, T., and Uma, V. (2020). Global naming and storage system using blockchain. Trans. Busin. Bitcoin Min. Blockchain Appl., 146–165.
+
 13. Khan, G. A., Hu, J., Li, T., Diallo, B., and Wang, H. (2023). Multi-view clustering for multiple manifold learning via concept factorization. Dig. Sig. Proc., 104118.
+
 14. Ahmad, S., Mishra, S., and Sharma, V. (2023). Green computing for sustainable future technologies and its applications. Contemp. Stud. Risks Emerg. Technol. Part A., 241–256.
+
 15. Chiaraviglio, L., Fabio D'Andreagiovanni, Lancellotti, R., Shojafar, M., Blefari-Melazzi, N., and Canali, C. (2018). An approach to balance maintenance costs and electricity consumption in cloud data centers. IEEE Trans. Sustain. Comput., 3(4), 274–288.
+
 16. Sriram, G. S. (2022). Green cloud computing: an approach towards sustainability. Int. Res. J. Modern. Engg. Technol. Sci., 4(1), 1263–1268.
-
-
-
-
 
 ### 参考文献
 
@@ -9040,4 +8821,3 @@ Figure 38.2: Benefits of green data centers.
 37. ¹计算机科学系，Banasthali Vidyapith，Rajasthan，India↩
 
 38. ¹计算机科学与工程系，Koneru Lakshmaiah Education Foundation，Vaddeswaram，India↩
-

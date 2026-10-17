@@ -1,18 +1,11 @@
+
 # 超越高效 Go：第二部分 - 追求高质量代码
 
-
-
 ![](img/image_rsrc60U.jpg)
-
 
 ## 第二部分 - 追求高质量代码
 
 ### Corey Scott
-
-
-
-
-
 
 致我的孩子们 S & O：
 
@@ -40,50 +33,70 @@ Corey 是一位热情的程序员，自从父亲带回第一台全新的 Apple I
 - Binbin T.
 - Tony W.
 
-
-
-
-
-
-
 ### 代码
 
 ## Go 中的函数式编程
+
 ### 一等函数与高阶函数
+
 ### 递归
+
 ### 柯里与偏函数
+
 ### 不变性
+
 ## 函数趣
+
 ### 理解匿名函数与闭包
+
 ### 基于函数的模式
+
 ## 实现 Future（期货）
+
 ### 用 Go Way 实现 Future
+
 ### 关于 Future 的注意事项
 
 ## 有趣的结构体技巧
+
 ### 空结构体
+
 ### 匿名结构体
+
 ### `noCopy`
 
 ## 总结
+
 ## 问题
 
 # 第 9 章
+
 ## Go 的元编程
+
 ### 引言
+
 ### 代码
+
 ### 与 API 集成
+
 ### API 集成示例
+
 ### 使用 Go 协调其他程序
+
 ## 实战代码生成
+
 ### 简要介绍
+
 ### 代码生成示例
+
 ### 关于代码生成的最后思考
 
 ## 总结
+
 ## 问题
 
 ## 后记
+
 ## 作者的其他作品
 
 # 前言
@@ -123,6 +136,7 @@ Corey 是一位热情的程序员，自从父亲带回第一台全新的 Apple I
 ![](img/image60V)
 
 ## 探索软件设计原则
+
 ### 引言
 
 编程的方法和程序员的数量一样多。然而，每种语言的创建都带有意识形态和偏好，Go 也不例外。虽然编写面向对象或函数式的程序是可能的，但我们将进行探索。关键在于意识到这些思想并务实地应用它们。本章将有三条主线贯穿始终：
@@ -150,9 +164,6 @@ Corey 是一位热情的程序员，自从父亲带回第一台全新的 Apple I
 对我来说，这是优先级。代码必须运行，否则它没有提供价值。理想情况下，它应该是整洁的——例如良好重构、可读且可维护的——但如果不是，我们也可以生存。至于速度，大多数代码不需要完全优化，我们应该只在需要优化的代码上花费时间。
 
 我在本章中包含了对高效 Go 最相关的原则。还有许多其他原则。你应该寻求寻找并理解尽可能多的软件设计原则。你会发现某些原则适用于几乎所有语言；你会发现某些原则会让 Go 更好，某些更糟。你甚至会发现某些原则之间存在冲突。这里介绍的原则将为你的旅程一个良好的开始。
-
-
-
 
 有时这种理念被称为“Unix 哲学”，它规定程序应该只执行一个任务，并且易于组合，这样多个组件就可以很容易地组合在一起来解决更重要的问题。
 
@@ -220,9 +231,6 @@ type IDer interface {
 让我们考虑一个稍微不同且可能常见的场景：我们并不需要提取的代码，而是发现它的原始功能并不是我们所需要的。为了完成我们的新功能，我们需要扩展提取代码的能力以实现这种变化。结果是提取的共享代码在用户体验和实现上都比原始的更复杂。此外，任何要求我们向提取的代码添加更多复杂性的后续需求只会恶化这个问题。相反，如果我们刻意复制相似的代码，整个代码库的耦合就会减少，而且每个副本都会更加直观并能够独立进化。
 
 我并不是想暗示我们不应该遵循 `DRY` 原则，而是说我们在应用它时应该是务实的。平衡 `DRY` 和 `KISS` 原则的一种合理方法是考虑使用共享逻辑的包之间的关系。如果它们密切相关，那么对一个的更改通常会被另一个需要，因此逻辑共享允许我们更容易维护，而耦合则带来了价值。
-
-
-
 
 - 谁将拥有这段共享逻辑？逻辑是属于它目前所在的包或模块，还是通用到可以提取到它自己的包中？如果它属于当前所属的包，那么将此功能添加到该包的公共 API 中会对整个包产生什么影响？如果逻辑是通用的，那么这个新包应该属于哪里？它应该是现有包之一的子包，还是处于同一层级？这里一个常见的错误是将这些逻辑直接丢进一个 `commons` 或 `utils` 包中；请不要这样做。关于此点的更详细讨论，请跳转到第 5 章的“少量的拷贝 vs. 少量的依赖”。
 
@@ -301,6 +309,8 @@ func Send(conn net.Conn, data interface{}) error {
 
 在这种实现中，将输入转换为字节的转换仅适用于基本类型，并且在某些情况下可能会产生与我们想要不同的结果。我们可以改进这种方法，通过引入可选委托允许数据使用可选委托，并将原始实现作为回退：
 
+
+
 ```go
 func Send(conn net.Conn, data interface{}) error {
 	// 使用可选委托转换为字节
@@ -319,9 +329,9 @@ type ByteEncoder interface {
 }
 ```
 
-通过这种方法，我们没有通过要求所有数据实现 `ByteEncoder` 来降低 `Send` 函数的可用性。相反，我们让用户自行决定。
+通过这种方法，我们没有通过要求所有数据实现`ByteEncoder`来降低`Send`函数的可用性。相反，我们让用户自行决定。
 
-我们在标准库中可以看到这种可选委托的更多示例，包括允许自定义序列化和反序列化的 `encoding/json` 包，以及 `sql/driver` 包如何转换数据。
+我们在标准库中可以看到这种可选委托的更多示例，包括允许自定义序列化和反序列化的`encoding/json`包，以及`sql/driver`包如何转换数据。
 
 ## 优选组合而非继承 (Favor composition over inheritance)
 
@@ -361,12 +371,9 @@ type Duck struct {
 }
 ```
 
-你会注意到 `Fly()` 方法不再需要了，就像在继承中不再需要它一样。
+你会注意到`Fly()`方法不再需要了，就像在继承中不再需要它一样。
 
-
-
-
-继承的第二个目标是定义一组应该以相同方式交互的对象类型。这通常表现为抽象方法或“实现”（implements）定义，定义了我们希望对象遵守的约定。在典型的 Go 风格中，我们可以实现这一点，但要求的正式程度较低。我们仍然定义一个接口来列出我们预期的交互；然而，为了确保我们的 `struct` 实现了接口，我们必须将接口组合到 `struct` 中，或者添加类似这样的编译测试：
+继承的第二个目标是定义一组应该以相同方式交互的对象类型。这通常表现为抽象方法或“实现”（implements）定义，定义了我们希望对象遵守的约定。在典型的 Go 风格中，我们可以实现这一点，但要求的正式程度较低。我们仍然定义一个接口来列出我们预期的交互；然而，为了确保我们的`struct`实现了接口，我们必须将接口组合到`struct`中，或者添加类似这样的编译测试：
 
 ```go
 // 使用编译器来确保 Duck 是一个 talker
@@ -392,8 +399,11 @@ return "Quack!"
 在本节的开始，我向你承诺过，在某些方面，使用组合比继承更好。这些方法包括：
 
 - 组合允许有多个“父母”——在单继承中，你只能从一个父类派生。通过组合，这种关系可以是我们需要的任何样子。
-- 组合通常更自然——当我们利用组合时，组件之间的交互是显式且清晰的。当我们使用继承时，存在更多的间接性和魔法。例如，使用继承，当用户调用我们 `struct` 上的方法时，它可以实现在我们的 `struct` 中，也可以实现在它的某个父类中。
+
+- 组合通常更自然——当我们利用组合时，组件之间的交互是显式且清晰的。当我们使用继承时，存在更多的间接性和魔法。例如，使用继承，当用户调用我们`struct`上的方法时，它可以实现在我们的`struct`中，也可以实现在它的某个父类中。
+
 - 组合对变化的阻力更小——组合更容易应对需求的变化。任何更改往往更局部化，而且当对象松耦合时，散弹式手术（shotgun surgery）的可能性会显著降低。
+
 - 组合更具动态——组合发生在运行时，这意味着它可以动态地响应条件，包括用户输入或运行时配置。
 
 正如你所看到的，由于 Go 不支持继承，我们并没有更糟。如果你担心如何在没有“四人”面向对象设计模式的情况下生存，不用担心。我们将在本章的后面查看一些最常见的模式。
@@ -406,7 +416,7 @@ Go 的主要目标是相同的，但实现方式不同。让我们分别检查�
 
 ## 接受接口
 
-接受接口的意图是减少摩擦并增加函数的可用性。考虑以下一个需要 `struct` 作为输入的示例：
+接受接口的意图是减少摩擦并增加函数的可用性。考虑以下一个需要`struct`作为输入的示例：
 
 ```go
 func SendEmail(user *User, subject, message string) error {
@@ -422,7 +432,7 @@ EmailAddress string
 }
 ```
 
-要使用此函数，用户必须先构建输入的 `struct`。这导致了额外的努力，并可能为垃圾器带来更多工作，因为该对象在函数调用后可能会被丢弃。相反，通过接受接口，我们不再需要用户创建一个新对象来调用函数。他们可以自由地传递任何满足接口的对象。将此思想应用到我们的示例中，如下：
+要使用此函数，用户必须先构建输入的`struct`。这导致了额外的努力，并可能为垃圾器带来更多工作，因为该对象在函数调用后可能会被丢弃。相反，通过接受接口，我们不再需要用户创建一个新对象来调用函数。他们可以自由地传递任何满足接口的对象。将此思想应用到我们的示例中，如下：
 
 ```go
 func SendEmail(recipient Recipient, subject, message string) error {
@@ -483,7 +493,7 @@ assert.NoError(t, resultErr)
 
 ## 返回结构体
 
-从许多角度来看，返回接口和返回相同接口的对象是等等的。在以下示例中，两个函数都返回实现了 `UserDAO` 接口的对象：
+从许多角度来看，返回接口和返回相同接口的对象是等等的。在以下示例中，两个函数都返回实现了`UserDAO`接口的对象：
 
 ```go
 type UserDAO interface {
@@ -506,11 +516,7 @@ return &UserDAOImpl{}
 
 由于两个返回变量都满足相同的接口，因此可以以相同的方式使用它们，如下例所示。
 
-
-
-
-
-首先，减轻我们的工作量。当我们返回一个 `struct` 时，我们不需要花费时间来定义和维护接口，并保持其与底层实现的同步。此外，我们不会受到提供该接口 mock（模拟）实现的诱惑。在此包中定义一个 mock 实现，以便你应用 `DRY` 原则并在其他包中复用接口和 mock，是一个错误的做法。如果我们这样做，我们就会在测试文件之外留出测试代码——这不仅很混乱，而且可能被意外地用于生产环境。这些内容本应该是自动生成的，因此创建和维护多个实例的成本是微乎其微。
+首先，减轻我们的工作量。当我们返回一个`struct`时，我们不需要花费时间来定义和维护接口，并保持其与底层实现的同步。此外，我们不会受到提供该接口 mock（模拟）实现的诱惑。在此包中定义一个 mock 实现，以便你应用`DRY`原则并在其他包中复用接口和 mock，是一个错误的做法。如果我们这样做，我们就会在测试文件之外留出测试代码——这不仅很混乱，而且可能被意外地用于生产环境。这些内容本应该是自动生成的，因此创建和维护多个实例的成本是微乎其微。
 
 其次，如果我们提供一个接口，我们就会阻碍用户正确地从我们的代码中解耦。如果用户采用我们的接口而不是定义自己的接口，那么封装泄露的概率就会增加。这意味着我们的接口泄漏到了使用它的代码之外，从而增加了整体耦合性。此外，当用户定义自己的接口和抽象时，他们可以将接口精简到仅满足他们的需求。这可以简洁地记录他们的需求，并且任何测试和 mock 都能与我们的代码实现适当的解耦。
 
@@ -520,24 +526,28 @@ return &UserDAOImpl{}
 
 当我第一次写这本书的这一部分时，标题是“单一责任原则”，直到后来被正确指出，我将单一责任原则扩展到了罗伯特·马丁（Robert C. Martin）最初的意图之外。因此，一个新原则诞生了：单一原则。
 
-鉴于单一原则 (`SP`) 的灵感源于单一责任原则 (`SRP`)，我们应该首先快速查看 `SRP`。
+鉴于单一原则 (`SP`) 的灵感源于单一责任原则 (`SRP`)，我们应该首先快速查看`SRP`。
 
 单一责任原则由 Robert C. Martin 在 2005 年提出，它规定：
 
 > 一个类应该只有一个改变的理由
+
 > —Robert C. Martin
 
-虽然 Martin 使用了 `class`（类）一词，但这个原则可以并且应该扩展到所有的软件组件，这意味着它适用于我们的函数、`structs`、`packages` 和模块。
+虽然 Martin 使用了`class`（类）一词，但这个原则可以并且应该扩展到所有的软件组件，这意味着它适用于我们的函数、`structs`、`packages`和模块。
 
-然而，单一原则包含了 `SRP`，并将“单一性”这一方面进一步推得更远，以促进专注且离散的组件。
+然而，单一原则包含了`SRP`，并将“单一性”这一方面进一步推得更远，以促进专注且离散的组件。
 
 > 所有组件都应该是专注且离散的
+
 > —单一原则
 
-`SP` 的底层目标是保持我们的软件架构的简单。`SP` 鼓励我们设计软件组件、函数、`structs`、`packages` 和模块，使得每个组件具有：
+`SP`的底层目标是保持我们的软件架构的简单。`SP`鼓励我们设计软件组件、函数、`structs`、`packages`和模块，使得每个组件具有：
 
 ● 单一目的
+
 ● 单一责任
+
 ● 单一层级的抽象
 
 当我们的软件架构变得简单时，它本质上更容易被理解；我们组合和复用组件的能力增强了，我们的代码也更容易测试。
@@ -551,17 +561,21 @@ return &UserDAOImpl{}
 当一个组件具有单一目的时，它是：
 
 ● **更容易理解**——为了同时理解意图和实现，我们只需要阅读该组件的代码。没有干扰，没有无关的内容。
+
 ● **更容易测试**——通过限制组件的目的，我们也收窄了使用场景。以此此类，我们剩下的测试场景也更少。
+
 ● **更有可能被复用**——这可能违背直觉；然而，通过将我们的代码分解为服务于更窄目的的小块，我们可以发现逻辑复用的区域。
 
 那么，我们如何确保组件具有单一目的呢？我们可以应用一种我称之为“注释测试”的方法。注释测试包含两个步骤：
 
 1. 为组件编写一条单行的注释，完整描述该组件。
-2. 检查你编写的注释中是否有 `and`、`or`、`all`、`various` 或 `several` 等词汇。这些词都暗示了你有多个目的。此外，如果很难在一条注释中描述整个范围，那么它可能太宽泛了。
+
+2. 检查你编写的注释中是否有`and`、`or`、`all`、`various`或`several`等词汇。这些词都暗示了你有多个目的。此外，如果很难在一条注释中描述整个范围，那么它可能太宽泛了。
 
 在这个结构体图上尝试一下：
 
 ![](img/image_rsrc60W.jpg)
+
 图 4.1—用户管理端点结构体
 
 你可能写了类似这样的注释：
@@ -570,26 +584,28 @@ return &UserDAOImpl{}
 // UserManagementEndpoints provides HTTP handlers for all User management
 ```
 
-从这条注释可以看出，我们的 `struct` 显然不仅于一个目的。我们可以通过将其分解为每个端点一个 `struct` 来修复此问题。然而，这样做时我们还应该考虑单一原则的下一个方面：责任。
+从这条注释可以看出，我们的`struct`显然不仅于一个目的。我们可以通过将其分解为每个端点一个`struct`来修复此问题。然而，这样做时我们还应该考虑单一原则的下一个方面：责任。
 
 ## 单一责任 (A single responsibility)
 
-单一责任的目标是 Robert C. Martin 定义的 `SRP` 的精髓所在。2014 年，Martin 发表了一份对 `SRP` 的说明，重点关注“改变的理由”部分，他在其中概述了焦点应该放在人身上。通过此，他断言只有一个人（或一组相关人员）应该能够影响单一组件。
+单一责任的目标是 Robert C. Martin 定义的`SRP`的精髓所在。2014 年，Martin 发表了一份对`SRP`的说明，重点关注“改变的理由”部分，他在其中概述了焦点应该放在人身上。通过此，他断言只有一个人（或一组相关人员）应该能够影响单一组件。
 
-让我们回到之前的例子。你可能还记得我们将单体 `struct` 分解为每个 HTTP 端点一个 `struct`。这个改变使我们能够通过“单一目的”测试。但当我们更深入地观察 `struct` 的私有方法时，会发生什么？我们的 `struct` 图实际上是这样的：
+让我们回到之前的例子。你可能还记得我们将单体`struct`分解为每个 HTTP 端点一个`struct`。这个改变使我们能够通过“单一目的”测试。但当我们更深入地观察`struct`的私有方法时，会发生什么？我们的`struct`图实际上是这样的：
 
 ![](img/image_rsrc60X.jpg)
+
 图 4.2—创建用户处理器
 
-如你所见，我们正在处理多项责任，包括从 HTTP 请求中提取 `User`、验证提供的 `User` 以及保存 `User`。这三项责任中的每一项都是相互独立的。因此，如果负责定义 HTTP 请求格式的人决定做出更改，那么它不应该要求我们更改验证或保存用户的方式。
+如你所见，我们正在处理多项责任，包括从 HTTP 请求中提取`User`、验证提供的`User`以及保存`User`。这三项责任中的每一项都是相互独立的。因此，如果负责定义 HTTP 请求格式的人决定做出更改，那么它不应该要求我们更改验证或保存用户的方式。
 
 数据库结构的变化也是如此的。此类更改不应该要求对请求或验证进行更改。
 
 在小型项目中，“负责的人”可能只是你。。但这并不是放弃这一目标的合理理由。该系统的任何扩展或维护都将从坚持“单一责任”的理想中获益。
 
-这种方法的另一个吸引人的益处是降低了复杂性。如果我们遵循这一目标并将 `struct` 分解为独立的责任，测试和维护每个组件就会变得更简单。以此此类，我们减少了 Bug 出现的概率。如果我们这样分解我们的 `struct`：
+这种方法的另一个吸引人的益处是降低了复杂性。如果我们遵循这一目标并将`struct`分解为独立的责任，测试和维护每个组件就会变得更简单。以此此类，我们减少了 Bug 出现的概率。如果我们这样分解我们的`struct`：
 
 ![](img/image_rsrc60Y.jpg)
+
 图 4.3—分解后的创建用户处理器
 
 现在每个组件都有一项责任。每个组件都可以进行隔离测试，使得测试更小、更简单。此外，由于测试验证并强制了组件之间的约定，我们可以确保组件之间的交互是正确的。
@@ -600,21 +616,21 @@ return &UserDAOImpl{}
 
 在应用单一原则时，我们鼓励分解问题，使每个组件服务于单一目的并包含单一层级的抽象。实现这种单一层级的抽象比我们单一目的单一责任的目标更难直觉。
 
-我们可以通过回到 CreateUserHandler 例子来深入探讨这一点。之前我们有三个结构体；这些是：
+我们可以通过回到`CreateUserHandler`例子来深入探讨这一点。之前我们有三个结构体；这些是：
 
-● UserValidator—该结构体负责验证提供的 User 是否正确且完整。
-● UserDAO—该结构体负责将 User 保存到数据库中。
-● CreateUserHandler—它负责提取请求细节以协调请求。这包括从 HTTP 请求中提取 User、通过调用 UserValidator 验证请求，最后调用 UserDAO 保存 User。
+● `UserValidator`—该结构体负责验证提供的`User`是否正确且完整。
 
+● `UserDAO`—该结构体负责将`User`保存到数据库中。
 
+● `CreateUserHandler`—它负责提取请求细节以协调请求。这包括从 HTTP 请求中提取`User`、通过调用`UserValidator`验证请求，最后调用`UserDAO`保存`User`。
 
+正如你在读完上一个描述后可能猜测的那样，我们的`CreateUserHandler`存在一个问题。虽然它的目标单一——即协调请求——但它感知了过多的实现层次。它不仅处理 HTTP 请求和响应，还管理业务逻辑，并感知了数据库。我们可以通过调整抽象来纠正这个问题，使我们的描述呈现为：“此结构体执行 [功能]，然后委托给 [依赖项]”。将此应用于我们的示例，我们得到如下：
 
+● `CreateUserHandler`——从 HTTP 请求中提取`User`，然后委托给`UserManager`
 
-正如你在读完上一个描述后可能猜测的那样，我们的 `CreateUserHandler` 存在一个问题。虽然它的目标单一——即协调请求——但它感知了过多的实现层次。它不仅处理 HTTP 请求和响应，还管理业务逻辑，并感知了数据库。我们可以通过调整抽象来纠正这个问题，使我们的描述呈现为：“此结构体执行 [功能]，然后委托给 [依赖项]”。将此应用于我们的示例，我们得到如下：
+● `UserManager`——验证提供的`User`，然后委托给`UserDAO`
 
-● `CreateUserHandler`——从 HTTP 请求中提取 `User`，然后委托给 `UserManager`
-● `UserManager`——验证提供的 `User`，然后委托给 `UserDAO`
-● `UserDAO`——将提供的 `User` 保存到数据库
+● `UserDAO`——将提供的`User`保存到数据库
 
 当我们画出这组新的组件时，可以看到依赖关系金字塔已经变成了像下面这样的瀑布结构：
 
@@ -645,13 +661,15 @@ type CityModel interface {
 }
 ```
 
-乍看之下，这个接口看起来是合理的，很容易想象其实现是一个单一结构体。这样的结构体甚至可能符合单一职责原则。毕竟，`Save()` 和 `Update()` 可能会共享某些逻辑，两个 `Load()` 函数也是如此。
+乍看之下，这个接口看起来是合理的，很容易想象其实现是一个单一结构体。这样的结构体甚至可能符合单一职责原则。毕竟，`Save()`和`Update()`可能会共享某些逻辑，两个`Load()`函数也是如此。
 
 然而，这个接口被认为是“胖接口”，因为用户不太可能需要所有、甚至是大部分这些方法。事实上，该接口的用户通常每个人只使用其中一个方法。如果用户采用这个接口，他们会给自己带来额外的复杂性和工作。代码的阅读者将被迫浪费宝的时间去弄清楚哪些方法被使用了，哪些没有使用。
 
 此外，每当此接口被模拟（mock）或存桩（stub）时，都需要编写或生成更多代码来创建从未被调用的方法。
 
-让我们扩展一下示例。以下代码展示了 HTTP 处理程序如何使用 `CityModel` 通过 ID 加载并返回城市：
+让我们扩展一下示例。以下代码展示了 HTTP 处理程序如何使用`CityModel`通过 ID 加载并返回城市：
+
+
 
 ```go
 type LoadCityByIDEndpoint struct {
@@ -723,13 +741,10 @@ func (l *LoadCityByIDEndpoint) ServeHTTP(resp http.ResponseWriter, req *http.Req
 
 依赖倒转原则（DIP）是 Robert C. Martin 推广的我们将检查的三个原则，它规定：
 
-高层模块不应该依赖低层模块。
-
-两者都应该依赖抽象。
-
-抽象不应该依赖于细节。
-
-细节应该依赖抽象。
+- 高层模块不应该依赖低层模块。
+- 两者都应该依赖抽象。
+- 抽象不应该依赖于细节。
+- 细节应该依赖抽象。
 
 –Robert C. Martin
 
@@ -744,9 +759,6 @@ func (l *LoadCityByIDEndpoint) ServeHTTP(resp http.ResponseWriter, req *http.Req
 ![](img/image_rsrc612.jpg)
 
 图 4.7——工人依赖交通工具
-
-
-
 
 与其采取指令性和具体的规定，我反转了视角，采取了许可性和抽象的方式。通过这种许可，我成功地将“开始工作”这一行为与“如何执行”解耦了。这种松耦合不仅使我们能够独立测试每个组件，还为我们提供了一个非常清晰的扩展点。例如，我们现在可以添加任意数量的新 `Transport` 实现，而无需更改我们的 `Worker` 实现并避免向其引入 Bug 的风险。
 
@@ -840,11 +852,7 @@ func GetCache() *Cache {
 
 ### 在 Go 中有什么不同？
 
-
-
-
-
-# 单例模式 (Singleton)
+## 单例模式（Singleton）
 
 单例模式的传统面向对象实现使用私有或静态构造函数来强制单例构造，这正是该模式的意图。如你所知，Go 并不具备这些特性。因此，我们有两个选择：一个是使用一个简单的实现（如上文所示），并信任自己能够“正确”地与该对象交互。或者，我们可以通过一个更复杂的实现来强制这种严格性。在这样的实现中，我们必须：
 
@@ -854,13 +862,13 @@ func GetCache() *Cache {
 
 要查看这个更严格的版本，请参阅：[`github.com/corsc/Beyond-Effective-Go/tree/master/Chapter04/02_design_patterns/01_singleton/02_strict/`](https://github.com/corsc/Beyond-Effective-Go/tree/master/Chapter04/02_design_patterns/01_singleton/02_strict/)
 
-# 工厂方法模式 (The factory method pattern)
+# 工厂方法模式（The factory method pattern）
 
 工厂方法的目的是为创建对象提供一个灵活、可扩展且易于维护的框架。该模式通过定义一个函数，该函数负责从一组相关对象中创建对象的实例来实现这一点。通过将创建逻辑集中在单个函数中，工厂方法模式简化了对象的创建，并使得代码随时间推移更容易管理和维护。这种方法消除了代码重复、复杂性，以及当对象组在多个地方使用时经常出现的 bug 根源。
 
 识别何时应用此模式的最佳方法是寻找对象创建与条件语句集合的组合，例如 `switch` 语句或一系列 `if` 条件。
 
-## 使用方法 (Usage)
+## 使用方法（Usage）
 
 在接下来的示例中，我们可以看到一个条件创建对象的示例：
 
@@ -890,7 +898,7 @@ func SingSolo(favorite string) {
 
 如果我们对其中任何一个问题的回答是“是”，那么我们就应该应用工厂方法。
 
-## 实现 (Implementation)
+## 实现（Implementation）
 
 此模式的实现相当直接。我们必须将对象创建逻辑提取到一个独立的函数中，该函数只负责该职责。让我们开始一个新示例，增加比之前多一点复杂性。我们将定义一个名为 `DocumentFormat` 的抽象，它有两个方法：`Header()` 和 `Bold()`，如下：
 
@@ -920,7 +928,7 @@ func NewDocumentFormat(format string) DocumentFormat {
 
 你可以在示例代码中找到完整实现：[`github.com/corsc/Beyond-Effective-Go/tree/master/Chapter04/02_design_patterns/02_factory_method/02_example/`](https://github.com/corsc/Beyond-Effective-Go/tree/master/Chapter04/02_design_patterns/02_factory_method/02_example/)
 
-## Go 有何不同 (What is different in Go?)
+## Go 有何不同（What is different in Go?）
 
 单例模式的传统面向对象实现使用私有或静态构造函数来强制单例构造，这正是该模式的意图。如你所知，Go 并不具备这些特性。因此，我们有两个选择：一个是使用一个简单的实现（如上文所示），并信任自己能够“正确”地与该对象交互。或者，我们可以通过一个更复杂的实现来强制这种严格性。在这样的实现中，我们必须：
 
@@ -932,11 +940,11 @@ func NewDocumentFormat(format string) DocumentFormat {
 
 观察者模式的传统面向对象实现中，事件从主题到观察者的通知是通过函数调用完成的。在 Go 中可以用同样的方式实现该模式；然而，存在一个缺点。如果任何观察者在处理通知时速度缓慢，将抑制发送给其他观察者的通知。
 
-# 观察者模式 (The observer pattern)
+# 观察者模式（The observer pattern）
 
 观察者模式的目的是定义对象间的一种依赖关系，当一个对象的状态发生变化时，所有依赖它的对象都会收到通知并自动更新。
 
-## 使用方法 (Usage)
+## 使用方法（Usage）
 
 在接下来的示例中，我们可以看到一个条件创建对象的示例：
 
@@ -949,9 +957,11 @@ func NewDocumentFormat(format string) DocumentFormat {
 
 如果我们对其中任何一个问题的回答是“是”，那么我们就应该应用工厂方法。
 
-## 实现 (Implementation)
+## 实现（Implementation）
 
-此模式的实现相当直接。我们必须将对象创建逻辑提取到一个独立的函数中，该函数只负责该职责。让我们开始一个新示例，增加比之前多一点复杂性。我们将定义一个名为 `DocumentFormat` 的抽象，它有两个方法：`Header()` 和 `Bold()`，如下：
+
+
+此模式的实现相当直接。我们必须将对象创建逻辑提取到一个独立的函数中，该函数只负责该职责。让我们开始一个新示例，增加比之前多一点复杂性。我们将定义一个名为`DocumentFormat`的抽象，它有两个方法：`Header()`和`Bold()`，如下：
 
 ```go
 type DocumentFormat interface {
@@ -966,37 +976,31 @@ type DocumentFormat interface {
 
 （此处省略重复代码块）
 
-就是这样。只要我们确保所有的创建都是通过 `NewDocumentFormat()` 函数完成的，我们的代码将与 `DocumentFormat` 接口的实现完全解耦。
+就是这样。只要我们确保所有的创建都是通过`NewDocumentFormat()`函数完成的，我们的代码将与`DocumentFormat`接口的实现完全解耦。
 
 ## Go 有何不同 (What is different in Go?)
 
 观察者模式的传统面向对象实现中，事件从主题到观察者的通知是通过函数调用完成的。在 Go 中可以用同样的方式实现该模式；然而，存在一个缺点。如果任何观察者在处理通知时速度缓慢，将抑制发送给其他观察者的通知。
 
-# 适配器模式 (The adapter pattern)
-
-
-
-
+## 适配器模式 (The adapter pattern)
 
 适配器模式旨在将结构体的 API 从一种形式转换为另一种形式。其目标是允许在原本不兼容的地方使用该对象。
 
 该模式由三部分组成：
 
-●目标接口（Target interface）——这是我们想要使用的接口。
-
-●被适配器对象（Adaptee object）——我们想要与目标接口配合使用的结构体，但它没有实现该接口。
-
-●适配器（Adapter）——这是一个封装了被适配器并使其符合目标接口的结构体。
+- 目标接口（Target interface）——这是我们想要使用的接口。
+- 被适配器对象（Adaptee object）——我们想要与目标接口配合使用的结构体，但它没有实现该接口。
+- 适配器（Adapter）——这是一个封装了被适配器并使其符合目标接口的结构体。
 
 ### 使用
 
-在处理遗留组件和第三方组件时，如果无法对目标接口进行修改或不建议修改，这种模式就非常有用。在这些情况下，你通常拥有提供你所需功能的组件，但格式不符合你的需求，而且你无法对它们进行重构。这种方法的另一个好处是为用户提供更灵活或更方便的用户体验（UX）。一个很好的例子是标准库中 `http.Handler` 和 `http.HandlerFunc` 之间的关系。
+在处理遗留组件和第三方组件时，如果无法对目标接口进行修改或不建议修改，这种模式就非常有用。在这些情况下，你通常拥有提供你所需功能的组件，但格式不符合你的需求，而且你无法对它们进行重构。这种方法的另一个好处是为用户提供更灵活或更方便的用户体验（UX）。一个很好的例子是标准库中`http.Handler`和`http.HandlerFunc`之间的关系。
 
 ### 实现
 
 在我们的示例中，我们将探讨在两个不同的日志器之间进行迁移的情况。
 
-首先，这是我们的 `OldLogger` 接口以及一个需要它的函数：
+首先，这是我们的`OldLogger`接口以及一个需要它的函数：
 
 ```go
 type OldLogger interface {
@@ -1008,7 +1012,7 @@ func LegacyFunction(logger OldLogger) {
 }
 ```
 
-现在，将 `OldLogger` 的实现与我们的 `NewLogger` 进行比较：
+现在，将`OldLogger`的实现与我们的`NewLogger`进行比较：
 
 ```go
 type NewLogger interface {
@@ -1016,7 +1020,7 @@ type NewLogger interface {
 }
 ```
 
-你可以看到我们的 `NewLogger` 有不同的签名。为了让我们能够使用 `LegacyFunction()`，我们定义了一个适配器来封装 `NewLogger` 并如下实现 `OldLogger` 接口：
+你可以看到我们的`NewLogger`有不同的签名。为了让我们能够使用`LegacyFunction()`，我们定义了一个适配器来封装`NewLogger`并如下实现`OldLogger`接口：
 
 ```go
 type oldLoggerAdapter struct {
@@ -1030,19 +1034,19 @@ func (o *oldLoggerAdapter) Error(message string, args ...interface{}) {
 }
 ```
 
-现在，我们就可以使用适配后的 `NewLogger` 来运行 `LegacyFunction()`。上面的示例是该模式的一个常规、传统的用例；在下一节中，我们将看到如何以非常规的方式使用这种模式来解决一个特定的 Go 问题。
+现在，我们就可以使用适配后的`NewLogger`来运行`LegacyFunction()`。上面的示例是该模式的一个常规、传统的用例；在下一节中，我们将看到如何以非常规的方式使用这种模式来解决一个特定的 Go 问题。
 
-在 Go 中有什么不同？
+### 在 Go 中有什么不同？
 
 适配器模式在 Go 中的实现与其他语言的实现非常相似。然而，我们可以利用 Go 对匿名嵌入（anonymous embedding）的支持来节省大量工作。
 
-查看下面的图，其中我们有一个 `User` 结构和一个 `UserForLogin` 接口：
+查看下面的图，其中我们有一个`User`结构和一个`UserForLogin`接口：
 
 ![](img/image_rsrc615.jpg)
 
-图 4.10—User 结构体和 UserForLogin 接口的差异
+图 4.10—`User`结构体和`UserForLogin`接口的差异
 
-你会注意到 `User` 结构体缺少 `Token()` 方法。通过匿名嵌入，我们可以非常廉价地创建一个适配器。代码只有：
+你会注意到`User`结构体缺少`Token()`方法。通过匿名嵌入，我们可以非常廉价地创建一个适配器。代码只有：
 
 ```go
 type UserLoginAdapter struct {
@@ -1055,13 +1059,13 @@ func (u *UserLoginAdapter) Token() string {
 }
 ```
 
-这种方法也可以用于覆盖现有的方法。现在，看下面的图，我们有两个包，`version1` 和 `version2`：
+这种方法也可以用于覆盖现有的方法。现在，看下面的图，我们有两个包，`version1`和`version2`：
 
 ![](img/image_rsrc616.jpg)
 
-图 4.11—具有相同 HostConfig 接口的多个包
+图 4.11—具有相同`HostConfig`接口的多个包
 
-如你所见，两个包都包含一个名为 `HostConfig` 的相同接口。尽管接口是相同的，但如果我们尝试使用 `Application`，它将会失败：
+如你所见，两个包都包含一个名为`HostConfig`的相同接口。尽管接口是相同的，但如果我们尝试使用`Application`，它将会失败：
 
 ```go
 type Application struct {
@@ -1070,11 +1074,9 @@ type Application struct {
 }
 ```
 
-
-
 作为程序员，我们认为美好的一天就是盯着自己喜爱的代码编辑器，疯狂地敲击键盘。如果我告诉你，可以让这些日子变得更加愉快呢？这就是代码 UX（code UX）大显用场。代码用户体验（code UX）衡量的是代码的易用性或用户友好程度。让我们来深入探讨。首先，什么是代码？
 
-# 什么是代码？
+## 什么是代码？
 
 代码是我们程序员用来与计算机以及彼此进行通信的语言。像任何语言一样，它有语法、语义和约定。就像自然语言一样，虽然有必要的组成部分，但在风格自我表达上也有很大的自由度。
 
@@ -1082,7 +1084,7 @@ type Application struct {
 
 重要的是，作为作者，你的代码对你来说是很清晰的；真正的问题是，团队中的其他人是否觉得它有意义？即使是那个上周才加入的实习生？
 
-增加我们问题的是是代码不是静态的；它随着时间的推移而演变。因此，被理解只是第一步。我们的代码必须易于导航。它必须是可扩展、可调试且可靠的。
+增加我们问题的是代码不是静态的；它随着时间的推移而演变。因此，被理解只是第一步。我们的代码必须易于导航。它必须是可扩展、可调试且可靠的。
 
 在本章中，我们将研究代码可用性的三个关键方面：清晰性、一致性和可预测性。
 
@@ -1090,7 +1092,7 @@ type Application struct {
 
 编写具有良好 UX 的代码是编码中最具挑战性的方面之一，但在本章之后，我们将完全有能力与各种水平的程序员进行交流。
 
-# 实现清晰性
+## 实现清晰性
 
 代码清晰性可以被看作一段代码被阅读和理解的容易程度。但让我们追求更高的目标。我们应该追求被快速且直观地理解。
 
@@ -1098,11 +1100,11 @@ type Application struct {
 
 本节将讨论一系列我们可以实现以达到最低可读水平的想法。我对你的挑战是，以这些想法为基础，并利用你的经验来实现更多目标。
 
-在阅读别人的代码时，注意理解一段代码需要多长时间。考虑他们可以做哪些改变来让你读起来更容易。如果这段代码在你的控制之下，考虑进行并提交这些更改，以便所有人都能受益。有时，你的团队对清晰性和可读性的观点可能与你不同，但那种争论总是是有益的。
+在阅读别人的代码时，注意理解一段代码需要多长时间。考虑他们可以做哪些改变来让你读起来更容易。如果这段代码在你的控制之下，考虑进行并提交这些更改，以便所有人都能受益。有时，你的团队对清晰性和可读性的观点可能与你不同，但那种争论总是有益的。
 
 快速看一眼以下代码，看看它是否有逻辑：
 
-```
+```go
 func do(o O) error {
     if e := v(o); e == nil {
         if r, e := c(o); e == nil {
@@ -1115,11 +1117,12 @@ func do(o O) error {
     return nil
 }
 ```
+
 （注：代码块的原始文本是片段化/不完整的；我根据提供的片段保留了其结构逻辑。）
 
-# 格式化
+## 格式化
 
-意乎不用说，代码的格式化方式影响了阅读的难易程度。如果你想确保你的代码遵循标准实践，而无需花费几个小时进行手动调整，可以使用像 `gofmt` 这样的工具。我使用的脚本：
+意乎不用说，代码的格式化方式影响了阅读的难易程度。如果你想确保你的代码遵循标准实践，而无需花费几个小时进行手动调整，可以使用像`gofmt`这样的工具。我使用的脚本：
 
 ```bash
 #!/bin/bash
@@ -1137,7 +1140,7 @@ DIRS=$(find $PKG_DIR -type f -name '*.go' -not -path '*//*')
 gofmt -w -s $DIRS
 ```
 
-# 空格
+## 空格
 
 空白，也称为负空间或空白，是设计中的一个概念，在元素之间刻意留出空间。这些空间的目标是让观察者的眼睛休息，在视觉上分离不同的元素，并将注意力引到不同的位置。
 
@@ -1183,73 +1186,65 @@ func handlerWhitespace(resp http.ResponseWriter, req *http.Request) {
     createReq := &userCreationRequest{}
     err = json.Unmarshal(payload, createReq)
     if err != nil {
+        resp.WriteHeader(http.StatusBadRequest)
+        return
+    }
 
+    err = doCreateUser(createReq)
+    if err != nil {
+        resp.WriteHeader(http.StatusInternalServerError)
+        return
+    }
 
-
-
-```go
-resp.WriteHeader(http.StatusBadRequest)
-
-return
-
-}
-
-err = doCreateUser(createReq)
-
-if err != nil {
-
-    resp.WriteHeader(http.StatusInternalServerError)
-
-    return
-}
-
-_, _ = resp.Write([]byte("okay"))
-
+    _, _ = resp.Write([]byte("okay"))
 }
 ```
 
 在第二个版本中，我们在逻辑代码组之间引入了空白（本质上是段落分隔符）。现在当我们只读取每个块的第一或两行代码时，我们得到：
 
-● 读取请求体。
-● 将请求反序列化为对象。
-● 调用创建用户函数。
-● 输出结果。
+- 读取请求体。
+- 将请求反序列化为对象。
+- 调用创建用户函数。
+- 输出结果。
 
-这些段落分隔符允许我们在不处理每一行代码的情况下理解代码。空白可以提高代码可读性的另一个常见地方是 `select` 和 `switch` 语句。对比以下示例：
+这些段落分隔符允许我们在不处理每一行代码的情况下理解代码。空白可以提高代码可读性的另一个常见地方是`select`和`switch`语句。对比以下示例：
 
 ```go
 func speak(animal string) {
-switch string {
-case "dog":
-fmt.Print("Woof!")
-fmt.Print("Woof!")
-case "cat":
-fmt.Print("Meow")
-case "mouse":
-fmt.Print("Squeak")
-fmt.Print("Squeak")
-default:
-fmt.Print("???")
-}
+    switch string {
+    case "dog":
+        fmt.Print("Woof!")
+        fmt.Print("Woof!")
+    case "cat":
+        fmt.Print("Meow")
+    case "mouse":
+        fmt.Print("Squeak")
+        fmt.Print("Squeak")
+    default:
+        fmt.Print("???")
+    }
 }
 ```
 
-对于许多读者来说，很难快速识别一个 `case` 语句在哪里结束，另一个从哪里开始。现在对比一下这个：
+对于许多读者来说，很难快速识别一个`case`语句在哪里结束，另一个从哪里开始。现在对比一下这个：
 
 ```go
 func speakWhitespace(animal string) {
-switch string {
-case "dog":
-fmt.Print("Woof!")
-fmt.Print("Woof!")
-case "cat":
-fmt.Print("Meow")
-case "mouse":
-fmt.Print("Squeak!")
-fmt.Print("Squeak")
-default:
-fmt.Print("???")
-}
+    switch string {
+    case "dog":
+        fmt.Print("Woof!")
+        fmt.Print("Woof!")
+
+    case "cat":
+        fmt.Print("Meow")
+
+    case "mouse":
+        fmt.Print("Squeak!")
+        fmt.Print("Squeak")
+
+    default:
+        fmt.Print("???")
+    }
 }
 ```
 
@@ -1259,37 +1254,39 @@ fmt.Print("???")
 
 ```go
 func doCreateUser(req *createUser) error {
-err := validate(req)
-if err != nil {
-return err
-}
-err = saveToDB(req)
-if err != nil {
-return err
-}
-return nil
+    err := validate(req)
+    if err != nil {
+        return err
+    }
+
+    err = saveToDB(req)
+    if err != nil {
+        return err
+    }
+
+    return nil
 }
 ```
 
 在这个示例中，我们错误地将抛出错误的代码与检测并处理这些错误的代码分开了。这种分离破坏了代码的逻辑分组，并迫使我们在脑中进行这种分组。在这个例子和我们最初那个没有空白的示例中，我们都增加了读者的负担，迫使他们阅读并理解每一行。这是他们不需要付出的心理成本。
 
-## 名字取什么好？
+### 名字取什么好？
 
-名字是决定代码用户体验（UX）的关键因素。一个好的名字应该是信息丰富的、直观的、有意义的且而易见的。相反，糟糕的名字具有误导性且分散注意力，并让读者付出比不必要的更多的精力。
+名字是决定代码用户体验（UX）的关键因素。一个好的名字应该是信息丰富的、直观的、有意义的且显而易见的。相反，糟糕的名字具有误导性且分散注意力，并让读者付出比不必要的更多的精力。
 
-许多程序员直觉上就知道变量、方法或结构体的名称何时需要改进。这时他们开始添加注释。下当你觉得需要添加注释来解释某些内容时，尝试寻找一个可以消除注释需求的名称。
+许多程序员直觉上就知道变量、方法或结构体的名称何时需要改进。这时他们开始添加注释。当你觉得需要添加注释来解释某些内容时，尝试寻找一个可以消除注释需求的名称。
 
 优秀名字的本质要素是：
 
-● 它们应该是有意义的。
-● 它们应该是简洁的。
-● 它们应该是一致的。
-● 它们应该感知上下文。
-● 它们不需要是独一无的。
+- 它们应该是有意义的。
+- 它们应该是简洁的。
+- 它们应该是一致的。
+- 它们应该感知上下文。
+- 它们不需要是独一无二的。
 
 让我们进一步探讨这些点。
 
-### 名字应该有意义
+#### 名字应该有意义
 
 变量和结构体的名称应该描述它们是什么。方法和函数的名称应该描述它们做什么。让我们来看一些结构体：
 
@@ -1304,7 +1301,7 @@ type create { }
 type userRequest { }
 ```
 
-第一个示例 `cur` 是糟糕的，因为它是缩写。第二个示例 `create` 是一个改进，但仍然是一个动词。最后一个示例 `userRequest` 好得多，因为它是一个名词。
+第一个示例`cur`是糟糕的，因为它是缩写。第二个示例`create`是一个改进，但仍然是一个动词。最后一个示例`userRequest`好得多，因为它是一个名词。
 
 让我们来看一些函数：
 
@@ -1319,7 +1316,7 @@ func getDecision()
 func getUserRequest()
 ```
 
-第一个示例 `get()` 是糟糕的，因为它没有给我们提供任何上下文。第二个示例 `getDecision()` 更好，但仍然需要更多上下文。最后一个示例 `getUserRequest()` 好得多，因为它清晰地描述了它的功能。
+第一个示例`get()`是糟糕的，因为它没有给我们提供任何上下文。第二个示例`getDecision()`更好，但仍然需要更多上下文。最后一个示例`getUserRequest()`好得多，因为它清晰地描述了它的功能。
 
 现在来看一些变量：
 
@@ -1334,15 +1331,17 @@ var order int
 var customerID int
 ```
 
+
+
+## 命名应该简洁
+
 第一个示例 `o` 是糟糕的，因为它是缩写。第二个示例 `order` 是一个改进，但仍然是一个动词。最后一个示例 `customerID` 好得多，因为它是一个名词。
 
 ### 名字应该是简洁的
 
-这一点可能与前一点看起来相矛盾，因为 `o` 比 `order` 简洁得多。用更好的表达方式来说，名字在不损害可读性的情况下应该尽可能简洁。这种对简洁的偏好应该扩展到与变量名中添加类型信息的决策上。例如，拥有一个变量 `userList`是可以接受的（假设它是一个切片或数组），但 `users` 更好因为它更简洁。相反，如果我们在代码的同一区域内有一个用户映射和一个用户切片，将它们命名为 `userMap` 和 `userList` 可以确保它们不会被混淆。
+这一点可能与前一点看起来相矛盾，因为 `o` 比 `order` 简洁得多。用更好的表达方式来说，名字在不损害可读性的情况下应该尽可能简洁。这种对简洁的偏好应该扩展到与变量名中添加类型信息的决策上。例如，拥有一个变量 `userList` 是可以接受的（假设它是一个切片或数组），但 `users` 更好，因为它更简洁。相反，如果我们在代码的同一区域内有一个用户映射和一个用户切片，将它们命名为 `userMap` 和 `userList` 可以确保它们不会被混淆。
 
-
-
-
+## 保持一致性
 
 当命名保持一致时，代码读起来会感到自然得多。考虑 `Get()`、`Fetch()` 和 `Retrieve()` 这几个函数名：这些函数的结果可能是完全相同的。选择一致的名称可以确保其他程序员能够快速发现、理解并使用这些函数。同样，代码库、包或 `struct` 内部的变量命名也应该保持高度一致。这在变量通过多层函数进行传递时尤为重要；如果变量的作用没有改变或作用范围没有发生显著变化，那么在调用栈中更改变量名会显著增加代码的心理负担。
 
@@ -1352,40 +1351,40 @@ var customerID int
 - 行业规范
 - 编程规范
 
-## 一致性的方面
-
 ### 团队风格
-当一段代码与团队规范不一致时，它会给读者带来突兀的体验，甚至可能导致团队成员不愿维护它。一个典型的例子就是遗留代码。遗留代码通常被视为此类代码，是因为它们是由一组不同的程序员使用不同的规范开发的。程序员通常希望避免这类代码，而不的阅读体验正是原因之一。因此，我们应该努力编写让团队成员感到自然的代码。这并不意味着我们永远不要对团队规范进行更改；当改进可行时，你会发现说服团队往往能消除新规范带来的不适感。
+
+当一段代码与团队规范不一致时，它会给读者带来突兀的体验，甚至可能导致团队成员不愿维护它。一个典型的例子就是遗留代码。遗留代码通常被视为此类代码，是因为它们是由一组不同的程序员使用不同的规范开发的。程序员通常希望避免这类代码，而不好的阅读体验正是原因之一。因此，我们应该努力编写让团队成员感到自然的代码。这并不意味着我们永远不要对团队规范进行更改；当改进可行时，你会发现说服团队往往能消除新规范带来的不适感。
 
 ### 行业规范
-其次，我们应该与行业规范保持一致。当新成员从公司其他部门或你的直接竞争对手处加入时，他们应该能够理解你的代码，而无需学习“本地语言”。例如，如果你从事运输行业，拥有名为 `passengers`（乘客）、`drivers`（司机）和 `destinations`（目的地）的对象很容易理解的。
+
+其次，我们应该与行业规范保持一致。当新成员从公司其他部门或你的直接竞争对手处加入时，他们应该能够理解你的代码，而无需学习“本地语言”。例如，如果你从事运输行业，拥有名为 `passengers`（乘客）、`drivers`（司机）和 `destinations`（目的地）的对象很容易理解。
 
 ### 编程规范
+
 最后，我们应该意识到编程规范。程序员通常具有良好的软件工程、计算机科学甚至数学背景。`singleton`、`factory`、`vectors`、`tuples` 甚至像 `DTO` 或 `DAO` 这样的缩写都是广泛理解的，应该优于发明新术语。
 
 ## 命名应该感知上下文
 
-学习 Go 一段时间后后，很快 linter 或代码审查就会抱怨你选择的名称存在“冗余重复”（stutters）。这通常意味着 `struct` 或 `function` 的名称包含了包名。这看起来可能很烦人或死板，但它确实是一个问题，而这个问题就是“上下文感知”。
+学习 Go 一段时间后，很快 linter 或代码审查就会抱怨你选择的名称存在“冗余重复”（stutters）。这通常意味着 `struct` 或 `function` 的名称包含了包名。这看起来可能很烦人或死板，但它确实是一个问题，而这个问题就是“上下文感知”。
 
-假设我们在 `user` 包中有一个管理用户的 `struct`，对这种 struct 的直觉命名应该是 `UserManager`。然而，当这个 struct 在其他包中使用时，读起来就会变成 `user.UserManager`。如你所示，`user` 部分被重复了，产生了冗余，并且没有必要。我们必须记住，因为类型是以这种形式编写的，包名提供了额外的上下文，使我们使用更短的名称。
+假设我们在 `user` 包中有一个管理用户的 `struct`，对这种 `struct` 的直觉命名应该是 `UserManager`。然而，当这个 `struct` 在其他包中使用时，读起来就会变成 `user.UserManager`。如你所示，`user` 部分被重复了，产生了冗余，并且没有必要。我们必须记住，因为类型是以这种形式编写的，包名提供了额外的上下文，使我们使用更短的名称。
 
 这种上下文感知不应局限于公共类型名称；同样的概念也可以并应该用于私有元素，甚至是内部命名。考虑以下 `struct` 中的成员变量命名：
 
 ```go
 type Address struct {
-
-AddressStreet string
-AddressTown string
-AddressState string
-AddressCountry string
+	AddressStreet  string
+	AddressTown    string
+	AddressState   string
+	AddressCountry string
 }
 ```
 
-希望这个例子对你来说很荒唐，但这里的点在于意识到，更长的名称会给读者增加负担而不是清晰度，我们可以利用上下文来优化它们。即使是是将字段从 `User.UserID` 改为 `User.ID` 这样的微小变化也能改进代码。
+希望这个例子对你来说很荒唐，但这里的点在于意识到，更长的名称会给读者增加负担而不是清晰度，我们可以利用上下文来优化它们。即使是将字段从 `User.UserID` 改为 `User.ID` 这样的微小变化也能改进代码。
 
 ## 命名不需要具有原创性
 
-你经常会在整个代码库中使用了相同的概念和模式。像 `Client`、`Storage` 和 `Config` 这样不原创且乏味的名称是非常棒的。如果这些名称是准确的，它们一致的使用确保了清晰度，并释放了大脑去担心其他事情。
+你经常会在整个代码库中使用相同的概念和模式。像 `Client`、`Storage` 和 `Config` 这样不原创且乏味的名称是非常棒的。如果这些名称是准确的，它们一致的使用确保了清晰度，并释放了大脑去担心其他事情。
 
 这一点在 Go 的错误命名上比任何时候都更加真实。让我更直接地说明这一点，因为我实在太在意它了：尽可能，所有的错误都应该命名为 `err`。这是简洁、一致且完全不原创的。对于 Gophers 来说，阅读并立即理解它也是自然的。这一立场只有一个例外：当这样做会导致变量遮蔽（shadowing）。正如我们在后续章节中看到的，这会引入混乱和高度的错误风险。
 
@@ -1397,71 +1396,66 @@ AddressCountry string
 
 ```go
 func validateItems(items []item) error {
-
-if len(items) <= maxItems {
-	return nil
-} else {
-	return errors.New("too many items")
-}
+	if len(items) <= maxItems {
+		return nil
+	} else {
+		return errors.New("too many items")
+	}
 }
 ```
 
-这段代码是有效的且按预期工作，但当我们扩展它以添加更多检查时会发生什么？我们必须在向 if 块中添加更多逻辑和缩进，或进行大规模的重构之间做出选择。
+这段代码是有效的且按预期工作，但当我们扩展它以添加更多检查时会发生什么？我们必须在向 `if` 块中添加更多逻辑和缩进，或进行大规模的重构之间做出选择。
 
 相反，我们可以使用早期返回策略并反转条件逻辑，以便在我们一遇到错误时立即返回。应用到我们的示例中，我们得到：
 
 ```go
 func validateItemsUpdated(items []item) error {
+	if len(items) > maxItems {
+		return errors.New("too many items")
+	}
 
-if len(items) > maxItems {
-	return errors.New("too many items")
-}
-return nil
+	return nil
 }
 ```
 
-这里有几点需要注意；首先，我们丢弃了一个代码块。我们的代码缩进减少了，这使其更容易阅读。其次，针对特定问题的错误处理就在产生它的条件的旁边；这防止了阅读代码时来回跳跃。最后，如果我们需要添加更多条件，可以在不增加重构或缩进的情况下添加新的 if 块。
+这里有几点需要注意；首先，我们丢弃了一个代码块。我们的代码缩进减少了，这使其更容易阅读。其次，针对特定问题的错误处理就在产生它的条件的旁边；这防止了阅读代码时来回跳跃。最后，如果我们需要添加更多条件，可以在不增加重构或缩进的情况下添加新的 `if` 块。
 
 因此，阅读函数变得更加直观，因为代码是“直头的”。问题被立即处理，阅读函数的其余部分时可以抛之脑后。函数的快乐路径执行了整个函数的长度。这进一步提高了我们心理映射函数不同部分的能力。
 
 采用这种风格后，我们的函数通常呈现出“验证、处理、返回”的模式。这种模式的通用性提高了我们扫描函数的能力。
 
-## 切换到扩展 switch
+## 切换到扩展 `switch`
 
-早期返回模式对于验证和错误处理非常有效，但并不是所有情况的最优选择。在有多个有效值的情况下，一系列 if 语句可能会非常冗长且难以阅读。同样，一个包含多个 else if 块的单个 if/else 块读起来并不好：
+早期返回模式对于验证和错误处理非常有效，但并不是所有情况的最优选择。在有多个有效值的情况下，一系列 `if` 语句可能会非常冗长且难以阅读。同样，一个包含多个 `else if` 块的单个 `if/else` 块读起来并不好：
 
 ```go
 func getCupSize(milliliters int) string {
-
-if milliliters <= 300 {
-return "small"
-} else if milliliters <= 500 {
-return "medium"
-} else if milliliters <= 650 {
-return "large"
-} else {
-return "bucket"
-}
-
+	if milliliters <= 300 {
+		return "small"
+	} else if milliliters <= 500 {
+		return "medium"
+	} else if milliliters <= 650 {
+		return "large"
+	} else {
+		return "bucket"
+	}
 }
 ```
 
-我们可以通过切换 switch 语句改进代码的可读性：
+我们可以通过切换 `switch` 语句改进代码的可读性：
 
 ```go
 func getCupSizeImproved(milliliters int) string {
-
-switch {
-case milliliters <= 300:
-return "small"
-case milliliters <= 500:
-return "medium"
-case milliliters <= 650:
-return "large"
-default:
-return "bucket"
-}
-
+	switch {
+	case milliliters <= 300:
+		return "small"
+	case milliliters <= 500:
+		return "medium"
+	case milliliters <= 650:
+		return "large"
+	default:
+		return "bucket"
+	}
 }
 ```
 
@@ -1473,25 +1467,18 @@ return "bucket"
 
 ```go
 func performTask() error {
+	resultCh := make(chan error)
+	err := doWork(resultCh)
 
-resultCh := make(chan error)
-err := doWork(resultCh)
-if err != nil {
-return err
-}
-}
-```
+	if err != nil {
+		return err
+	}
 
+	for err := range resultCh {
+		handleError(err)
+	}
 
-
-
-
-```go
-for err := range resultCh {
-    handleError(err)
-}
-
-return err
+	return err
 }
 ```
 
@@ -1505,10 +1492,10 @@ return err
 
 ```go
 jane := &Person{
-    "Jane",
-    "jane@example.com",
-    22,
-    65,
+	"Jane",
+	"jane@example.com",
+	22,
+	65,
 }
 ```
 
@@ -1518,10 +1505,10 @@ jane := &Person{
 
 到目前，Gophers 最常犯的错误是将属于其他语言的模式引入到 Go 中。在很多情况下，这些是很好的主意，但它们没有得到语言良好的支持，或者有更地道（idiomatic）的方式来实现相同的目标。这些错误的常见例子包括：
 
--   对单例模式的严格应用
--   过度的形式化
--   在错误的地方使用接口
--   过度使用函数式编程风格
+- 对单例模式的严格应用
+- 过度的形式化
+- 在错误的地方使用接口
+- 过度使用函数式编程风格
 
 让我们深入探讨这些问题。
 
@@ -1530,39 +1517,37 @@ jane := &Person{
 ```go
 var pool = &ObjectPoolSingleton{}
 
-type Encoder struct {}
+type Encoder struct{}
 
 func (e *Encoder) Encode() ([]byte, error) {
-    object := pool.Get()
-    result, resultErr := json.Marshal(object)
-    pool.Put(object)
-    return result, resultErr
+	object := pool.Get()
+	result, resultErr := json.Marshal(object)
+	pool.Put(object)
+
+	return result, resultErr
 }
 ```
 
-除了我们之前强调的单例模式问题外，主要的要问题是这段代码不便于测试。为了解决这个问题，我们应该切换到依赖注入：
+除了我们之前强调的单例模式问题外，主要的问题是这段代码不便于测试。为了解决这个问题，我们应该切换到依赖注入：
 
 ```go
 type ObjectPool interface {
-    Get() interface{}
-    Put(interface{})
+	Get() interface{}
+	Put(interface{})
 }
 
 type Encoder struct {
-    pool ObjectPool
+	pool ObjectPool
 }
 
 func (e *Encoder) Encode() ([]byte, error) {
-    object := e.pool.Get()
-    result, resultErr := json.Marshal(object)
-    e.pool.Put(object)
-    return result, resultErr
+	object := e.pool.Get()
+	result, resultErr := json.Marshal(object)
+	e.pool.Put(object)
+
+	return result, resultErr
 }
 ```
-
-
-
-
 
 这些仅仅是由于误用其他语言中的优秀思想（而这些思想并不符合常规 Go 代码）导致的许多错误之一。请在你的代码中留意其他情况。
 
@@ -1572,31 +1557,34 @@ func (e *Encoder) Encode() ([]byte, error) {
 
 ```go
 func ProcessOrder(o Order) error {
-    // validate order
-    err := v(o)
-    if err != nil {
-        return err
-    }
-    // charge customer
-    r, err := c(o)
-    if err != nil {
-        return err
-    }
-    // send receipt
-    err = s(o, r)
-    if err != nil {
-        return err
-    }
-    // inform the warehouse
-    return i(o)
+	// validate order
+	err := v(o)
+	if err != nil {
+		return err
+	}
+
+	// charge customer
+	r, err := c(o)
+	if err != nil {
+		return err
+	}
+
+	// send receipt
+	err = s(o, r)
+	if err != nil {
+		return err
+	}
+
+	// inform the warehouse
+	return i(o)
 }
 ```
 
 在这个例子中，注释是在弥补糟糕的函数命名。如果我们删除注释并将函数名更改为匹配注释，那么代码读起来将一样容易。事实上，随着时间的推移，代码会变得更好，因为函数名比注释更有可能被阅读和维护。这引出了过时的注释。过时的注释比没有注释糟糕，因为它们增加了阅读代码的负担并引入了混淆。
 
-此外，注释应该关注它们的受众，而受众的定义取决于代码的层级。在我们上一个例子中，受众是负责拥有和/或维护该函数代码的程序员。通过重构，我们可以消除对注释的需求，受众仍然能够理解代码。在某些情况下情况并非如此——特别是当代码与外部或未知受众共享时（例如库），或者当代码的目的复杂到受众可能无法理解时（例如复杂的数学或计算机科学实现）。在这些情况下，我们应该包含注释，但要确保它们准确、简洁并易于目标受众理解。为其他维护者添加注释的另一个合理理由是由于不寻常的实现决策，或者不显而易见的功能性或业务需求。
+此外，注释应该关注它们的受众，而受众的定义取决于代码的层级。在我们上一个例子中，受众是负责拥有和/或维护该函数代码的程序员。通过重构，我们可以消除对注释的需求，受众仍然能够理解代码。在某些情况下并非如此——特别是当代码与外部或未知受众共享时（例如库），或者当代码的目的复杂到受众可能无法理解时（例如复杂的数学或计算机科学实现）。在这些情况下，我们应该包含注释，但要确保它们准确、简洁并易于目标受众理解。为其他维护者添加注释的另一个合理理由是由于不寻常的实现决策，或者不显而易见的功能性或业务需求。
 
-回到示例中的 `ProcessOrder()` 函数，我们应该意识到我们的注释对函数的用户来说是没用的。我们不能期望他们通过阅读实现来实现理解我们函数的目的或功能。外部用户是完全不同的受众，因此需要不同类型的注释。
+回到示例中的 `ProcessOrder()` 函数，我们应该意识到我们的注释对函数的用户来说是没用的。我们不能期望他们通过阅读实现来理解我们函数的目的或功能。外部用户是完全不同的受众，因此需要不同类型的注释。
 
 虽然这些用户仍然会欣赏简洁的注释，但他们希望在不阅读实现的情况下知道从函数预期什么。例如，像这样的注释没有任何价值：
 
@@ -1613,7 +1601,7 @@ func ProcessOrder(o Order) error
 func ProcessOrder(o Order) error
 ```
 
-这可能有很多内容要读，但它设定了清晰的预期。此外，它刻意地没有详细说明它将如何执行任务。这非常重要。函数的很少很少知道函数是如何执行工作的，只需要知道它执行了即可。检查你以用户为中心的注释的快速且简单的方法是使用以下命令运行 `godoc` 工具：
+这可能有很多内容要读，但它设定了清晰的预期。此外，它刻意地没有详细说明它将如何执行任务。这非常重要。函数的用户很少知道函数是如何执行工作的，只需要知道它执行了即可。检查你以用户为中心的注释的快速且简单的方法是使用以下命令运行 `godoc` 工具：
 
 ```bash
 $ godoc -http 0.0.0.0:6060
@@ -1627,7 +1615,7 @@ $ godoc -http 0.0.0.0:6060
 
 在开始学习 Go 时，错误绝对是我犯过错的地方之一，我花了很长时间才意识到这一点。根据我在其他语言方面的经验，我认为错误是只有在事情出现问题时才会发生的事情，即在异常情况下。但 Go 的错误不是异常（exceptions）。
 
-异常是程序控制流的一部分，通常用于退出、恐慌（panic）或其他停止正在进行的操作并放弃。另一方面，错误是一个返回值，表示我们未能执行预定任务。这可能源于异常情况、程序员错误或预期结果。想象一个对用户输入进行验证的函数；用户未能输入有效值是预料之中的。同样，想象未能从数据库中加载特定记录；这不太可能是导致 panic 或退出整个程序的原因，但通常是正常行为。
+异常是程序控制流的一部分，通常用于退出、恐慌（panic）或其他停止正在进行的操作并放弃。另一方面，错误是一个返回值，表示我们未能执行预定任务。这可能源于异常情况、程序员错误或预期结果。想象一个对用户输入进行验证的函数；用户未能输入有效值是预料之中的。同样，想象未能从数据库中加载特定记录；这不太可能是导致 `panic` 或退出整个程序的原因，但通常是正常行为。
 
 由于 Go 错误只是返回值，它们并不一定控制程序的流向。根据错误的类型、内容和上下文，由函数的调用者来决定错误是否会影响程序流。
 
@@ -1636,20 +1624,21 @@ $ godoc -http 0.0.0.0:6060
 ```go
 // Extract version from ID in the format xx-yyyy
 func ExtractVersionFromID(id string) int {
-    if id == "" {
-        return -1 // bad input
-    }
-    chunks := strings.Split(id, "-")
-    if len(chunks) < 1 {
-        return -2 // invalid format
-    }
-    version, err := strconv.Atoi(chunks[1])
-    if err != nil {
-        return -3 // failed to parse version number
-    }
-    return version
-}
+	if id == "" {
+		return -1 // bad input
+	}
+
+	chunks := strings.Split(id, "-")
+	if len(chunks) < 1 {
+		return -2 // invalid format
+	}
 ```
+
+
+
+`version, err := strconv.Atoi(chunks[1])`
+
+如果 `err != nil`，则返回 `-3`（表示无法解析版本号），否则返回 `version`。
 
 这个示例的用户体验（UX）非常糟糕；该函数的用户将需要非常熟悉实现细节，或者需要阅读某些关于返回值含义的详尽文档。在 Go 中，对该功能的更合适实现是：
 
@@ -1665,19 +1654,22 @@ func ExtractVersionFromID(id string) (int, error) {
     if id == "" {
         return 0, ErrBadInput
     }
+
     chunks := strings.Split(id, "-")
     if len(chunks) < 1 {
         return 0, ErrInvalidFormat
     }
+
     version, err := strconv.Atoi(chunks[1])
     if err != nil {
         return 0, ErrParseFailed
     }
+
     return version, nil
 }
 ```
 
-现在，调用者可以地地函数何时发生了错误，然后他们可以决定是否需要担心错误类型。此外，错误类型从该包的 `godoc` 中清晰易见，无需深入代码。
+现在，调用者可以清楚地知道函数何时发生了错误，然后他们可以决定是否需要担心错误类型。此外，错误类型从该包的 `godoc` 中清晰易见，无需深入代码。
 
 ### 命名错误
 
@@ -1693,14 +1685,10 @@ var (
 )
 ```
 
-
-
-
-
 ```go
 func loadUser(ID string) (*User, error) {
-	// implementation removed
-	return nil, errors.New("not implemented")
+    // implementation removed
+    return nil, errors.New("not implemented")
 }
 ```
 
@@ -1708,23 +1696,24 @@ func loadUser(ID string) (*User, error) {
 
 ```go
 func Handler(resp http.ResponseWriter, req *http.Request) {
-	userID := req.Form.Get("userID")
-	user, err := loadUser(userID)
-	if err != nil {
-		switch err {
-		case ErrBadID:
-			resp.WriteHeader(http.StatusUnprocessableEntity)
-		case ErrNotAuthorized:
-			resp.WriteHeader(http.StatusUnauthorized)
-		case ErrNotFound:
-			resp.WriteHeader(http.StatusNotFound)
-		default:
-			resp.WriteHeader(http.StatusInternalServerError)
-		}
-		return
-	}
-	encoder := json.NewEncoder(resp)
-	_ = encoder.Encode(user)
+    userID := req.Form.Get("userID")
+    user, err := loadUser(userID)
+    if err != nil {
+        switch err {
+        case ErrBadID:
+            resp.WriteHeader(http.StatusUnprocessableEntity)
+        case ErrNotAuthorized:
+            resp.WriteHeader(http.StatusUnauthorized)
+        case ErrNotFound:
+            resp.WriteHeader(http.StatusNotFound)
+        default:
+            resp.WriteHeader(http.StatusInternalServerError)
+        }
+        return
+    }
+
+    encoder := json.NewEncoder(resp)
+    _ = encoder.Encode(user)
 }
 ```
 
@@ -1736,11 +1725,11 @@ func Handler(resp http.ResponseWriter, req *http.Request) {
 
 在我们的示例中，我们使用了公开的命名变量，并讨论了这如何使错误成为 API 契约的一部分及其成本。我们没有讨论私有的命名错误。作为一种风格选择，使用私有命名错误可以带来以下好处：
 
-* 代码的可读性可能会提高，因为变量名比等长的 `errors.New()` 调用更短。
-* 它可能会提高代码性能，因为我们创建的对象更少。
-* 维护成本不会增加（像公开命名错误那样），因为它们不是 API 契约的一部分。
+- 代码的可读性可能会提高，因为变量名比等长的 `errors.New()` 调用更短。
+- 它可能会提高代码性能，因为我们创建的对象更少。
+- 维护成本不会增加（像公开命名错误那样），因为它们不是 API 契约的一部分。
 
-反对使用命名错误的常见论点是它们是固定的，因此无法向调用者提供关于当前情况的额外或上下文信息。这正是包装错误（wrapped errors）大显身的地方。
+反对使用命名错误的常见论点是它们是固定的，因此无法向调用者提供关于当前情况的额外或上下文信息。这正是包装错误（wrapped errors）大显身手的地方。
 
 ### 包装错误
 
@@ -1748,21 +1737,21 @@ func Handler(resp http.ResponseWriter, req *http.Request) {
 
 ```go
 type BadRequestError struct {
-	field string
+    field string
 }
 
 func (b *BadRequestError) Error() string {
-	return b.field + " was missing or invalid"
+    return b.field + " was missing or invalid"
 }
 
 func Usage(err error) {
-	if err != nil {
-		if _, ok := err.(*BadRequestError); ok {
-			// bad request
-			return
-		}
-		// other errors
-	}
+    if err != nil {
+        if _, ok := err.(*BadRequestError); ok {
+            // bad request
+            return
+        }
+        // other errors
+    }
 }
 ```
 
@@ -1772,8 +1761,8 @@ func Usage(err error) {
 
 ```go
 var (
-	ErrBadID      = errors.New("ID supplied is empty or the wrong format")
-	ErrNotFound = errors.New("user not found")
+    ErrBadID      = errors.New("ID supplied is empty or the wrong format")
+    ErrNotFound = errors.New("user not found")
 )
 ```
 
@@ -1781,15 +1770,17 @@ var (
 
 ```go
 func loadUser(ID string) (*User, error) {
-	userID, err := strconv.Atoi(ID)
-	if err != nil {
-		return nil, fmt.Errorf("%w - %s", ErrBadID, err)
-	}
-	user, err := loadFromDB(userID)
-	if err != nil {
-		return nil, fmt.Errorf("%w - userID: %d", ErrNotFound, userID)
-	}
-	return user, err
+    userID, err := strconv.Atoi(ID)
+    if err != nil {
+        return nil, fmt.Errorf("%w - %s", ErrBadID, err)
+    }
+
+    user, err := loadFromDB(userID)
+    if err != nil {
+        return nil, fmt.Errorf("%w - userID: %d", ErrNotFound, userID)
+    }
+
+    return user, err
 }
 ```
 
@@ -1799,21 +1790,22 @@ func loadUser(ID string) (*User, error) {
 
 ```go
 func Handler(resp http.ResponseWriter, req *http.Request) {
-	userID := req.Form.Get("userID")
-	user, err := loadUser(userID)
-	if err != nil {
-		switch {
-		case errors.Is(err, ErrBadID):
-			resp.WriteHeader(http.StatusUnprocessableEntity)
-		case errors.Is(err, ErrNotFound):
-			resp.WriteHeader(http.StatusNotFound)
-		default:
-			resp.WriteHeader(http.StatusInternalServerError)
-		}
-		return
-	}
-	encoder := json.NewEncoder(resp)
-	_ = encoder.Encode(user)
+    userID := req.Form.Get("userID")
+    user, err := loadUser(userID)
+    if err != nil {
+        switch {
+        case errors.Is(err, ErrBadID):
+            resp.WriteHeader(http.StatusUnprocessableEntity)
+        case errors.Is(err, ErrNotFound):
+            resp.WriteHeader(http.StatusNotFound)
+        default:
+            resp.WriteHeader(http.StatusInternalServerError)
+        }
+        return
+    }
+
+    encoder := json.NewEncoder(resp)
+    _ = encoder.Encode(user)
 }
 ```
 
@@ -1831,15 +1823,13 @@ func Handler(resp http.ResponseWriter, req *http.Request) {
 
 如果你发现自己在考虑使用全局变量（例如 `init()` 函数）或通过命名函数变量进行猴子补丁，请不要这样做。在大多数情况下，它们都是错误的解决方案，原因如下。请看以下函数签名：
 
-```go evenfunc LoadUser(ctx context.Context, ID int) (*User, error)
+```go
+func LoadUser(ctx context.Context, ID int) (*User, error)
 ```
 
 这个函数乍看看起来还可以，但请问自己一个问题：我们从哪里加载用户？假设这个函数是从数据库加载用户。是哪个数据库？数据库池是如何初始化的？我们如何确保在调用此函数之前它已经初始化了？
 
-
-
-
-所有这些问题都围绕着同一个核心问题：我们的函数依赖于全局状态，而这种依赖对于函数的使用者来说并不是显而易见的。由于这种关系是不透明的，用户在使用函数之前，必须破坏函数的封装，并意识到且满足任何先决条件。在我们的示例中，解决方案很简单：一旦我们意识到函数具有状态，就可以将函数转换为结构体方法，并将数据库连接池作为成员数据包含其中。这样做可以确保池与函数之间的关系是而易见且可预测的。请注意，我并不是建议将每个访问数据库的方法都添加到一个巨大的结构体中，或者要求每个访问数据库的结构体都必须有自己的数据库池。我们仍然应该为应用程序初始化一个池，并将其注入到这些对象中。
+所有这些问题都围绕着同一个核心问题：我们的函数依赖于全局状态，而这种依赖对于函数的使用者来说并不是显而易见的。由于这种关系是不透明的，用户在使用函数之前，必须破坏函数的封装，并意识到且满足任何先决条件。在我们的示例中，解决方案很简单：一旦我们意识到函数具有状态，就可以将函数转换为结构体方法，并将数据库连接池作为成员数据包含其中。这样做可以确保池与函数之间的关系是显而易见且可预测的。请注意，我并不是建议将每个访问数据库的方法都添加到一个巨大的结构体中，或者要求每个访问数据库的结构体都必须有自己的数据库池。我们仍然应该为应用程序初始化一个池，并将其注入到这些对象中。
 
 不透明依赖并不是使用这种全局状态引起的唯一问题；它还是数据竞态的常见来源。当我们尝试为这些函数编写单元测试时，这一点表现得尤为明显。如果我们回顾之前的示例，这次考虑完整的实现代码：
 
@@ -1847,13 +1837,13 @@ func Handler(resp http.ResponseWriter, req *http.Request) {
 var db *sql.DB
 
 func LoadUser(ctx context.Context, ID int) (*User, error) {
-	row := db.QueryRowContext(ctx, "SELECT name FROM users WHERE id = ?", ID)
-	out := &User{}
-	err := row.Scan(out.Name)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
+    row := db.QueryRowContext(ctx, "SELECT name FROM users WHERE id = ?", ID)
+    out := &User{}
+    err := row.Scan(out.Name)
+    if err != nil {
+        return nil, err
+    }
+    return out, nil
 }
 ```
 
@@ -1867,40 +1857,39 @@ func LoadUser(ctx context.Context, ID int) (*User, error) {
 
 ```go
 const (
-	North Direction = "north"
-	East  Direction = "east"
-	South Direction = "south"
-	West  Direction = "west"
+    North Direction = "north"
+    East  Direction = "east"
+    South Direction = "south"
+    West  Direction = "west"
 )
 
 type Direction string
 ```
 
-我们的实现使用了常量而不是全局变量，所以我们还没有违反任何规则，但看看当我们为 `Direction` 类型添加 JSON 反序列化化时会发生什么：
+我们的实现使用了常量而不是全局变量，所以我们还没有违反任何规则，但看看当我们为 `Direction` 类型添加 JSON 反序列化时会发生什么：
 
 ```go
 var allDirections = map[Direction]struct{}{
-	North: {}, East: {}, South: {}, West: {},
+    North: {}, East: {}, South: {}, West: {},
 }
 
 func (d *Direction) UnmarshalJSON(bytes []byte) error {
-	var directionString string
-	err := json.Unmarshal(bytes, &directionString)
-	if err != nil {
-		return err
-	}
-	direction := Direction(directionString)
-	_, found := allDirections[direction]
-	if !found {
-		return fmt.Errorf("invalid direction: '%s'", direction)
-	}
-	*d = direction
-	return nil
+    var directionString string
+    err := json.Unmarshal(bytes, &directionString)
+    if err != nil {
+        return err
+    }
+
+    direction := Direction(directionString)
+    _, found := allDirections[direction]
+    if !found {
+        return fmt.Errorf("invalid direction: '%s'", direction)
+    }
+
+    *d = direction
+    return nil
 }
 ```
-
-
-
 
 关于一致性，我能为你提供的最佳论据是这样的：想象一个种满了 1000 种不同植物的花园。如果园丁随心所欲地到处种植物，那么对于任何访问花园的人来说，花一段时间才能找到某种特定的植物。现在考虑同一个花园，但园丁按类型对植物进行分组，然后按字母顺序对组内的植物排序。现在，寻找特定的植物将变得非常容易。然而，这个花园可能不再具有吸引力，园丁也会觉得自己的自我表达被忽视了。我理想的花园，就像我理想的代码库一样，是一致性与表达之间的适当平衡。它具有高度的一致性、某种程度的可预测性，因此具有高水平的可用性——但它又不会限制到禁止任何自我表达。
 
@@ -1908,7 +1897,7 @@ func (d *Direction) UnmarshalJSON(bytes []byte) error {
 
 一致性的第一个、可能也是最重要的方面是代码风格。遗憾的是，这也是程序员认同为自我表达或通常代表其程序员身份的代码部分。其他语言中许多长期的争论，例如制表（tabs）与空格、花括号的位置、或蛇形命名法（snake-case）与驼峰命名法（camel-case），在 Go 中并不存在，因为我们对这些有明确定义的规范。在此基础上，我们还应该分层团队规范；不遵守这些规范只会给团队增加紧张感和认知复杂度。但即使有所有这些要遵循的规范，仍然有大量的空间进行个人表达。以 Go 的错误处理格式为例：以下示例中哪一个是正确的？
 
-```
+```go
 // example 1
 if err := doTask(); err != nil {
     return err
@@ -1921,15 +1910,16 @@ if err != nil {
 }
 ```
 
+
+
 这个问题没有明确的标准答案。如果团队没有明确决定某种风格，你可以随心使用任何适合你的风格。
 
-通往风格一致性道路上的第一也是最简单的一步是使用 `gofmt`。在提交代码进行代码审查之前，我们应该对所有代码运行 `gofmt -s`。通过这样做，所有代码都将具有可预测的基础级风格一致性。
+通往风格一致性道路上的第一也是最简单的一步是使用`gofmt`。在提交代码进行代码审查之前，我们应该对所有代码运行`gofmt -s`。通过这样做，所有代码都将具有可预测的基础级风格一致性。
 
 下一步是学习公认的行业标准；对于 Go 社区来说，就是以下两个页面：
 
-●[Effective Go](https://go.dev/doc/effective_go)
-
-●[Go Code Review Comments](https://go.dev/wiki/CodeReviewComments)
+- [Effective Go](https://go.dev/doc/effective_go)
+- [Go Code Review Comments](https://go.dev/wiki/CodeReviewComments)
 
 与许多涉及 Go 的事物一样，这些文档中挤满了大量的信息、知识和经验宝库——以至于我建议每六个月重读一遍这些文档。随着你对 Go 经验的增加，这些文档中概述的知识和原理将变得更加清晰。
 
@@ -1937,12 +1927,10 @@ if err != nil {
 
 团队的风格选择与上述两个页面相悖是完全可以接受且正常的。常见的例子包括：
 
-●使用测试断言库代替 `if` 块。
-
-●使用 `Ch` 后缀命名通道（channels）。
-
-●使用单字符作为变量名。
-●使用 `if err := doSomething; err != nil` 而不是将其拆分为两行。
+- 使用测试断言库代替`if`块。
+- 使用`Ch`后缀命名通道（channels）。
+- 使用单字符作为变量名。
+- 使用`if err := doSomething; err != nil`而不是将其拆分为两行。
 
 你可以在本章源代码中找到这些决策的对比示例：
 
@@ -1950,7 +1938,7 @@ if err != nil {
 
 对于这些问题的任何一方都可以给出合理的论点，但关键在于一致性。一致的风格确保了阅读代码时的感觉直观且自然。一致性并不意味着我们从不改变风格或尝试不同的方法。这绝对是我强烈鼓励的。如果你发现了一种新的、更好的方法，下一个任务就是说服并帮助你的团队采用这种新风格。
 
-一旦你和你的团队决定了一种风格，你就应该寻找寻找工具来支持它。采用 `gofmt` 和 `goimports` 应该是标准做法，因为它们来自 Go 项目。但我们可以更进一步。像 `golangci-lint` `https://golangci-lint.run/` 这样的工具是高度可配置的，可以用于识别并有时自动修复风格问题，减轻程序员和审查者的工作量。
+一旦你和你的团队决定了一种风格，你就应该寻找寻找工具来支持它。采用`gofmt`和`goimports`应该是标准做法，因为它们来自 Go 项目。但我们可以更进一步。像`golangci-lint` `https://golangci-lint.run/`这样的工具是高度可配置的，可以用于识别并有时自动修复风格问题，减轻程序员和审查者的工作量。
 
 ## 构建一致的包
 
@@ -1958,38 +1946,35 @@ Go 包（packages）是 Go 的另一个部分，看起来简单且熟悉，但�
 
 ### 包的大小和范围
 
-包应该按功能或模块组织，而不是按编程目的。因此，我们不应该有任何名为 `util`、`dto`、`errors` 或 `constants` 的包——但我们稍后回到这一点。
+包应该按功能或模块组织，而不是按编程目的。因此，我们不应该有任何名为`util`、`dto`、`errors`或`constants`的包——但我们稍后回到这一点。
 
-Go 包没有最大或最小大小限制，但它们应该恰好足够完成其任务。确定包大小的一个简单试金石法是编写包文档。如果你不熟悉，包级文档写在包中某一个文件的顶部，通常在一个名为 `doc.go` 的文件中，格式为“Package xxx …….”。如果你能用一句话就充分地传达该包的作用和范围，那么这个包的大小就是合适的。如果你需要写多个句子，或者一个句子包含多个“和（and）”，那么这个包可能太大了。此外，如果你发现自己在多个包中编写相似的句子，你可能过早地拆分了包。
+Go 包没有最大或最小大小限制，但它们应该恰好足够完成其任务。确定包大小的一个简单试金石法是编写包文档。如果你不熟悉，包级文档写在包中某一个文件的顶部，通常在一个名为`doc.go`的文件中，格式为“Package xxx …….”。如果你能用一句话就充分地传达该包的作用和范围，那么这个包的大小就是合适的。如果你需要写多个句子，或者一个句子包含多个“和（and）”，那么这个包可能太大了。此外，如果你发现自己在多个包中编写相似的句子，你可能过早地拆分了包。
 
 通常当我们讨论解耦（decoupling）时，指的是对象级解耦。然而，包级解耦与对象级解耦同样重要。衡量包耦合程度的一个极佳标杆是导入的来自同一项目的包的数量；较少数量（三个或少）表示低耦合。
 
-本章的代码包含一个名为 `depgraph.sh` 的脚本，你可以使用它来生成依赖图，并快速识别包之间的过度耦合。让我们来看一个例子。下图显示了一个虚拟转账模块（transfer module）的传统面向对象结构：
+本章的代码包含一个名为`depgraph.sh`的脚本，你可以使用它来生成依赖图，并快速识别包之间的过度耦合。让我们来看一个例子。下图显示了一个虚拟转账模块（transfer module）的传统面向对象结构：
 
-￼![](img/image_rsrc618.jpg)​
+![](img/image_rsrc618.jpg)
 
 图 5.1—Transfer 模块的传统依赖图
 
-
-
-
 正如你所见，我们已经将结构体及其实现分离开。所有的数据传输对象（请求和响应对象）都在一个独立的包中。结果是我们的传输实现与验证包之间存在链接（耦合）。现在，从 Go 的角度来看，这其中有许多错误。
 
-首先，我们的传输模块涉及了太多的包。最先且最容易丢弃的包是 `transfer_impl` 包。我们通过删除 `Transfer` 接口并将 `Transfer` 结构体移动到 `transfer` 包来实现这一点。得益于 Go 对隐式接口的支持，`transfer` 包不需要通过接口来定义“这是我提供的”。如果另一个包想要使用并模拟（mock）我们的 `Transfer` 结构体，它可以定义自己的接口和模拟实现。
+首先，我们的传输模块涉及了太多的包。最先且最容易丢弃的包是`transfer_impl`包。我们通过删除`Transfer`接口并将`Transfer`结构体移动到`transfer`包来实现这一点。得益于 Go 对隐式接口的支持，`transfer`包不需要通过接口来定义“这是我提供的”。如果另一个包想要使用并模拟（mock）我们的`Transfer`结构体，它可以定义自己的接口和模拟实现。
 
 此外，任何此类接口都应该遵循接口隔离原则，并仅指定它们需要的方法。通过这种方式，接口的角度就从“这是我提供的”变成了“这是我需要的”。
 
-我们需要处理的下一个问题是 `dto` 包。这并不是我们应该在这里使用的模式。这其中有许多原因，但我将提供最重要的两点。首先是清晰性。因为我们使用 `dto.TransferRequest` 这种形式来引用类型，泛义名称 `dto` 并没有告诉我们任何信息。我们错过了让代码表达该结构体属于哪个包、以及如何以及何时使用的机会。在将此结构体移动到 `transfer` 包之后，所有权变得显而易见，我们甚至可以将名称缩短为 `transfer.Request`，从而减少了我们的输入量和心理负担。
+我们需要处理的下一个问题是`dto`包。这并不是我们应该在这里使用的模式。这其中有许多原因，但我将提供最重要的两点。首先是清晰性。因为我们使用`dto.TransferRequest`这种形式来引用类型，泛义名称`dto`并没有告诉我们任何信息。我们错过了让代码表达该结构体属于哪个包、以及如何以及何时使用的机会。在将此结构体移动到`transfer`包之后，所有权变得显而易见，我们甚至可以将名称缩短为`transfer.Request`，从而减少了我们的输入量和心理负担。
 
 第二个避免使用通用、共享包的原因是解耦。当我们有一个共享包时，很快，我们应用程序的大部分代码都会依赖于该包。这不仅让我们的依赖图变成了一大堆乱乱的“湿意大利面”，而且变得无法清楚地判断哪些包是由于使用了共享类型而耦合的。
 
-最后两项变化我们可以一起引入，因为它们具有相同的目的。在传统样式中，我们有一个 `Request` 结构体，并且我们的传输实现结构体与 `Validator` 接口之间存在依赖链接。我们可以将这两者都替换为局部接口——同样，将接口改为“这是我需要的”视角。我们的 `transfer.Request` 接口定义了数据访问方法（getters），概述了我们所需的数据；作为接口比作为结构体更好，因为它允许用户复用他们的对象，而不是强制他们构建新对象来调用我们。最后，我们重新定义 `Validator` 接口，将其缩减为仅包含在此传输包使用的方法。
+最后两项变化我们可以一起引入，因为它们具有相同的目的。在传统样式中，我们有一个`Request`结构体，并且我们的传输实现结构体与`Validator`接口之间存在依赖链接。我们可以将这两者都替换为局部接口——同样，将接口改为“这是我需要的”视角。我们的`transfer.Request`接口定义了数据访问方法（getters），概述了我们所需的数据；作为接口比作为结构体更好，因为它允许用户复用他们的对象，而不是强制他们构建新对象来调用我们。最后，我们重新定义`Validator`接口，将其缩减为仅包含在此传输包使用的方法。
 
 在完成所有更改后，我们更新后的依赖图如下：
 
 ![](img/image_rsrc619.jpg)
 
-图 5.2—`Transfer` 模块改进后的依赖图
+图 5.2—`Transfer`模块改进后的依赖图
 
 最初，我们的“简单”传输模块涉及了四个包和六个对象。为了完全理解这个功能，我们必须在所有这些包之间来回跳转。有了这个新结构，与我们的传输模块相关的所有都在一个地方；甚至可以在一个文件中。我们的包现在是完全解耦且自成一体的。
 
@@ -2007,9 +1992,9 @@ Go 包没有最大或最小大小限制，但它们应该恰好足够完成其�
 package utils
 ```
 
-在写下这一行后，我们开始向文件中填充各种功能。毕竟，这些功能才是我们获得报酬的原因。在匆忙中，我们忘记了此包的任何使用将以 `utils.DoSomething()` 的形式存在。通过选择一个泛义名称，我们错过了让我们的包名具有信息量且实用的黄金机会。此外，由于我们没有为选择包名投入足够的精力，我们错过了利用包名来定义包的范围和意图的机会。
+在写下这一行后，我们开始向文件中填充各种功能。毕竟，这些功能才是我们获得报酬的原因。在匆忙中，我们忘记了此包的任何使用将以`utils.DoSomething()`的形式存在。通过选择一个泛义名称，我们错过了让我们的包名具有信息量且实用的黄金机会。此外，由于我们没有为选择包名投入足够的精力，我们错过了利用包名来定义包的范围和意图的机会。
 
-关于包名如何使用的最后一点要点涉及命名冲突。假设你有一个名为 `errors` 的包。抛开我们已经强调的关于泛义命名包的问题不谈，这里的问题是该包名与标准库中的一个包相同。由于由于，当你编写 `errors.New("something failed")` 时，Go 工具将无法为你自动解析导入。这似乎是一个微不足道的问题，但它会降低项目进度。
+关于包名如何使用的最后一点要点涉及命名冲突。假设你有一个名为`errors`的包。抛开我们已经强调的关于泛义命名包的问题不谈，这里的问题是该包名与标准库中的一个包相同。由于由于，当你编写`errors.New("something failed")`时，Go 工具将无法为你自动解析导入。这似乎是一个微不足道的问题，但它会降低项目进度。
 
 ### 文件组织
 
@@ -2023,8 +2008,6 @@ Go 文件中的代码应该如何组织这一点出奇地缺乏文档说明。�
 6. 私有结构体方法和私有函数
 7. 输入接口和私有类型
 
-
-
 对于私有方法和函数，它们是实现细节，只有当我们需要重构它们时才需要阅读。最后是关于输入接口：虽然它们是公共 API 的一部分，但它们被放置在底部，并处理得更像实现细节。这里有两种考虑：对于用户来说，只有当用户决定使用公共方法或函数时，输入接口才有意义，而那时他们可以轻松找到这些接口，因为它们位于一个可预测的位置。对于代码维护者来说，它们是实现细节，在处理其他代码时，不需要将它们的具体细节记在心中。
 
 这里需要考虑的最后一点是，作为程序员，我们经常受到时间限制。因此，阅读代码的最后一行几乎在不可能和低效之间徘徊。希望我们的顶层公共函数相对较短——例如，少于 40 行——并且在需要时具有一定的抽象性。考虑以下方法：
@@ -2035,7 +2018,6 @@ func (o *OrderManager) Process(order Order) error {
     if err != nil {
         return err
     }
-
     receiptNo := o.chargeCustomer(order)
     o.sendReceipt(order, receiptNo)
     o.informWarehouse(order)
@@ -2055,17 +2037,17 @@ func (o *OrderManager) Process(order Order) error {
 
 每个功能一个文件是一个指导性理想，而不是规则。我们应该避免不必要地添加新文件，特别是那些“其他文件”，例如仅为常量或错误创建的文件。常量和错误应该定义在它们使用的地方附近，除非它们在整个包中都被使用。
 
-一个明显的例外是 `doc.go` 文件：如果我们正在编写包文档——对于大多数包来说我们都应该这样做——那么按照惯例，这些文档应该放在 `doc.go` 中。
+一个明显的例外是`doc.go`文件：如果我们正在编写包文档——对于大多数包来说我们都应该这样做——那么按照惯例，这些文档应该放在`doc.go`中。
 
 ## 我需要函数还是方法？
 
 这看起来可能是一个奇怪的问题，但令人惊讶的是，许多程序员在 Go 的这方面都很困扰。根据他们之前使用的编程语言，程序员往往会倾向于其中一种。由于 Go 不会强迫我们采用特定的解决方案，我们必须采用一种让我们免于麻烦的风格。
 
-我的第一个风格规范是：函数应该是无状态的。是的，将函数与全局变量结合起来是可能的，但那是制造麻烦的根源。如果一个函数需要状态，我们应该将其转换为方法。这确保了方法和它所依赖的状态在 `struct` 中逻辑上组合在一起。
+我的第一个风格规范是：函数应该是无状态的。是的，将函数与全局变量结合起来是可能的，但那是制造麻烦的根源。如果一个函数需要状态，我们应该将其转换为方法。这确保了方法和它所依赖的状态在`struct`中逻辑上组合在一起。
 
-我的第二个风格规范是：分组的方法并不要求是有状态的。不，这并不矛盾第一个规范。向 `struct` 添加方法也是为了将方法在逻辑上分组在一起。这种分组允许作者表达出这些方法是相关的，并且应该作为一个组来处理。
+我的第二个风格规范是：分组的方法并不要求是有状态的。不，这并不矛盾第一个规范。向`struct`添加方法也是为了将方法在逻辑上分组在一起。这种分组允许作者表达出这些方法是相关的，并且应该作为一个组来处理。
 
-我的最后一个风格规范是：始终考虑用户。如果你提供的功能很可能为了测试而进行依赖注入或 mock（模拟），那么以结构体和方法的形式提供它会更好。虽然 mock/替换函数是可能的，但对于来自面向对象背景的程序员来说，这有些笨拙且陌生。考虑标准库中的 `time.Now()` 函数。提供此功能最简单的方法是作为函数，但有时我们想要 mock 或桩这个函数，以便在测试中获得可预测的时间。这本作为方法提供，但那样为了获取时间，每个人都得写 `time.Time{}.Now()`，这很笨拙。通过考虑用户，我们得出结论：几乎总是，用户想要访问时间而不在乎 mock。我们针对最常见的用例进行优化。
+我的最后一个风格规范是：始终考虑用户。如果你提供的功能很可能为了测试而进行依赖注入或 mock（模拟），那么以结构体和方法的形式提供它会更好。虽然 mock/替换函数是可能的，但对于来自面向对象背景的程序员来说，这有些笨拙且陌生。考虑标准库中的`time.Now()`函数。提供此功能最简单的方法是作为函数，但有时我们想要 mock 或桩这个函数，以便在测试中获得可预测的时间。这本作为方法提供，但那样为了获取时间，每个人都得写`time.Time{}.Now()`，这很笨拙。通过考虑用户，我们得出结论：几乎总是，用户想要访问时间而不在乎 mock。我们针对最常见的用例进行优化。
 
 ## 我们的函数和方法应该有多长？
 
@@ -2098,9 +2080,6 @@ func (o *OrderManager) Process(order Order) error {
 
 考虑参数是什么。它们是传入函数的数据，我们用它们来执行某些操作。因此，传入的参数越多，我们执行的操作就越复杂。同样的逻辑也适用于返回值。这种复杂性为维护者和用户都带来了心理负担。它通常也表明我们存在单一职责的问题。
 
-
-
-
 关于参数数量的最后一个也是最容易考虑的因素是代码的易读性。函数的参数越多，其函数签名就越可能超出屏幕或超过团队设置的任何行长度限制并被换行。这两种情况都会让快速扫描函数变得变得困难得多。
 
 ### 参数的作用范围
@@ -2109,9 +2088,7 @@ func (o *OrderManager) Process(order Order) error {
 
 ```go
 func SendEmail(server string, auth smtp.Auth, from string, to string, subject string, message string, attachments []os.File) error {
-
 // implementation removed
-
 }
 ```
 
@@ -2119,17 +2096,17 @@ func SendEmail(server string, auth smtp.Auth, from string, to string, subject st
 
 在考虑参数的作用范围时，我们应该问自己的问题是：
 
-● 数据在对象初始化时是已知的吗？如果是，这就是初始化作用域（init-scoped）数据。
-● 数据是否设置一次后就再或很少更改？如果是，这就是初始化作用域数据。
-● 我们在每次调用此方法时都需要传入这个参数吗？如果不是，这就是初始化作用域数据。
-● 数据是否在每个请求中可能不同？如果是，这就是请求作用域（request-scoped）数据。
-● 数据是否与请求相关或受请求影响？如果是，这就是请求作用域数据。
+- 数据在对象初始化时是已知的吗？如果是，这就是初始化作用域（init-scoped）数据。
+- 数据是否设置一次后就再或很少更改？如果是，这就是初始化作用域数据。
+- 我们在每次调用此方法时都需要传入这个参数吗？如果不是，这就是初始化作用域数据。
+- 数据是否在每个请求中可能不同？如果是，这就是请求作用域（request-scoped）数据。
+- 数据是否与请求相关或受请求影响？如果是，这就是请求作用域数据。
 
 初始化作用域的数据应该在对象构造期间作为公共成员数据或构造函数参数提供。如果数据需要更改但不是请求作用域的，可以通过访问公共成员数据或通过设置函数（setter function）来更改。只需注意数据竞态（data races）。
 
 另一方面，请求作用域的数据应该是单个方法的参数。
 
-在我们的示例中，`server` 和 `auth` 参数是初始化作用域的，因此它们是提升为构造函数或公共成员数据的理想人选，如下：
+在我们的示例中，`server`和`auth`参数是初始化作用域的，因此它们是提升为构造函数或公共成员数据的理想人选，如下：
 
 ```go
 type Sender struct {
@@ -2138,15 +2115,16 @@ type Sender struct {
 }
 
 func (s Sender) Send(from string, to string, subject string, message string, attachments []os.File) error {
-
 // implementation removed
 return nil
 }
 ```
 
+
+
 随着参数列表的缩短，我们函数的用户体验（UX）无疑得到了改善；读取函数签名变得更容易，该函数的用户需要处理的参数也更少了。然而，我们的函数仍然很长且难以处理。别担心，还有更多的改进。
 
-### 参数的分组
+## 参数的分组
 
 当我们努力改进函数的用户体验时，应该考虑的下一个问题是参数分组。在 Go 中，参数分组有两种形式。第一种是传统的面向对象方法，根据逻辑目的对参数进行分组。
 
@@ -2154,9 +2132,8 @@ return nil
 
 ```go
 func (s Sender) Send(from string, to string, email Email) error {
-
-// implementation removed
-return nil
+    // implementation removed
+    return nil
 }
 ```
 
@@ -2170,11 +2147,11 @@ type Email struct {
 
 随着参数列表的缩短，我们函数的用户体验无疑得到了改善；读取函数签名变得更容易，该函数的用户需要处理的参数也更少了。然而，我们的函数仍然很长且难以处理。别担心，还有更多的改进。
 
-### 参数的顺序
+## 参数的顺序
 
 你是否想过，当使用 `Context` 时，它为什么总是第一个参数？为什么当一个函数返回 `error` 时，它总是最后一个值？这些都是约定，但这些约定的动机是用户体验。
 
-布尔参数是邪恶的
+### 布尔参数是邪恶的
 
 布尔输入参数是阴险的，因为添加它们非常简单，但代价非常高。考虑以下代码片段：
 
@@ -2182,16 +2159,11 @@ type Email struct {
 result := user.CheckGender(true)
 ```
 
-
-
-
 ```go
 newQty, exists, err := addToOrderQuantity(orderID, productCode, additionalQty)
-
 if err != nil {
     return err
 }
-
 if !exists {
     return fmt.Errorf("failed to load order with id %s", orderID)
 }
@@ -2303,9 +2275,6 @@ func newUserManager(cfg Config, pwdEncoder PasswordEncoder, storage Storage, now
 
 在这个示例中，我们只将两个变量减少为了一个，这是一个小小的胜利。然而，大多数应用程序的配置比这多得多。此外，配置在应用程序的生命周期内往往增加，这使得配置注入随着时间的推移变得更有价值。
 
-
-
-
 最后，让我们回到之前关于使用配置注入模式来管理配置和单例的观点。如果你像我一样，倾向于大量使用依赖注入，并且反感使用全局变量。在这种情况下，你会发现许多构造函数都承担了注入跨功能关注点的负担。不久之后，大多数构造函数都将 `logger` 和 `instrumentation clients` 作为参数。考虑到“参数越少越好”的底层理念，这两个或多个参数就成了用户体验（UX）的负担。因此，我建议将 `logger` 和 `instrumentation client` 实例这些跨功能关注点移动到与配置相同的 `struct` 内部。这样可以使这些客户端离开参数列表，并为 `logger` 和 `instrumentation` 实例提供一种代理单例的实现。我知道这违背了“配置注入”的名称，我可能应该想个更好的名字，但从 UX 的角度来看，我觉得它非常有说服力。
 
 ## 变得可预测
@@ -2328,19 +2297,19 @@ func newUserManager(cfg Config, pwdEncoder PasswordEncoder, storage Storage, now
 
 根据你如何组织代码库，这些目标可能是基于功能的（如 `user module` 或 `order module`），也可能是基于软件分层的（如 `API` 或 `storage layer`）。以下是对 `internal` 包的快速回顾。`internal` 包路径下的包只能被以下内容导入：
 
-*   该 `internal` 包下的其他包
-*   `internal` 包直接上层的包
-*   与 `internal` 包同一层的包
+- 该 `internal` 包下的其他包
+- `internal` 包直接上层的包
+- 与 `internal` 包同一层的包
 
 让我们用一个例子来演示如何使用 `internal` 来创建模块。考虑以下结构：
 
-![](img/image_rsrc61A.jpg)​
+![](img/image_rsrc61A.jpg)
 
 图 5.3—示例应用结构
 
 该结构显示了一个名为 `MyStore` 的虚拟在线商店。该项目是一个 HTTP REST 服务，`main` 函数位于 `cmd` 包下。
 
-`api`、`config`、`orders` 和 `storage` 包都在 `internal` 包下。`cmd` 包可以导入 `api`、`config`、`orders` 和 `storage` 包，因为它们是与 `cmd` 拥有相同父包 `internal` 包的子包。然而，`cmd` 包不能导入 `httputil` 包。通过在 `api` 包下添加另一个 `internal` 包并将 `httputil` 包放在该 `internal` 包下，我们创建了一个 `API` 。`sqlgen` 包也是如此；它是 `storage module` 的一部分。
+`api`、`config`、`orders` 和 `storage` 包都在 `internal` 包下。`cmd` 包可以导入 `api`、`config`、`orders` 和 `storage` 包，因为它们是与 `cmd` 拥有相同父包 `internal` 包的子包。然而，`cmd` 包不能导入 `httputil` 包。通过在 `api` 包下添加另一个 `internal` 包并将 `httputil` 包放在该 `internal` 包下，我们创建了一个 `API`。`sqlgen` 包也是如此；它是 `storage module` 的一部分。
 
 通过这种方式将代码拆分为模块，我们可以在模块之间拥有清晰的边界或篱笆，同时允许自己将功能提取到简洁、逻辑的容器中，从而避免了将这些功能公开时会引入的成本。
 
@@ -2386,17 +2355,12 @@ type OrderManager struct {
 }
 
 type Storage interface {
+    LoadByID(int) (*Order, error)
+    Save(*Order) error
+}
 ```
 
 
-
-
-
-```go
-LoadByID(int) (*Order, error)
-
-Save(*Order) error
-```
 
 在这种新方法中，接口定义的关系是抽象的，不会泄露任何实现细节。因此，`Storage` 的实现可以在不影响此代码的情况下进行重构，而且对此代码的任何测试都不需要知道 `Storage` 如何工作。
 
@@ -2470,10 +2434,6 @@ func NewStatsDClient(host string, options ...Option) *StatsClient
 ```
 应用程序 80% 的 CPU 时间通常在 20% 的代码中消耗。
 ```
-
-
-
-
 
 是的，我在这里是在开玩笑，但令人惊讶的是，大多数时间里，只有极小部分代码在运行。任何花费在测量以识别这段热点代码路径并对其进行优化的时间，即使只是一点点，都会带来显著的回报。为了给出一个更具体的例子，假设你有两个端点：一个允许用户上传日报，另一个用于执行登录。将上传速度从 10 秒改进到 7 秒听起来比将登录从 100 毫秒缩短到 80 毫秒是一个巨大的胜利。然而，日报 API 很少被使用，而登录接口全天都在被使用。因此，通过降低它的成本，我们是在减少整个系统的负载，从而提高了系统的整体容量。
 
@@ -2561,9 +2521,6 @@ func NewStatsDClient(host string, options ...Option) *StatsClient
 
 ### 我们应该测试多少？
 
-
-
-
 我们应该只进行足够的测试，不多不少。虽然我们希望通过编写测试来提高工作效率，但编写和维护测试是有成本的。如果我们的测试过多，那么测试的成本可能会超过它们带来的价值。
 
 经理们经常促我给出一个最小测试覆盖率数字；当他们催促时，我会告诉非生成代码的每个包覆盖率为 70%。这样做有两个原因：
@@ -2605,7 +2562,12 @@ func GetUserAPI(resp http.ResponseWriter, req *http.Request) {
 func (a *Account) Transfer(amount int, recipient string) error
 ```
 
-在不看实现的情况下，我们可以定义定义预期行为：
+
+
+
+## 单元测试与行为定义
+
+在不看实现的情况下，我们可以定义预期行为：
 
 - 当我们尝试传输负数金额时，我们应该收到错误。
 - 当我们尝试向不存在的账户转账时，我们应该收到错误。
@@ -2613,22 +2575,27 @@ func (a *Account) Transfer(amount int, recipient string) error
 - 当 API 返回意外或乱码的响应时，我们应该收到错误。
 - 当我们发送有效请求且 API 工作正常时，我们不应该收到错误。
 
-对于这些每种行为，我们应该至少有一个单元测试。通过这样做，我们确保了所有预期的行为都存在，并为后世记录了这些行为。
+对于这些行为中的每一种，我们应该至少有一个单元测试。通过这样做，我们确保了所有预期的行为都存在，并为后世记录了这些行为。
 
-回到我们对“单元”的定义，如果与外部 API 交互所需的所有存在存在单个结构体中，我们的单元测试将只涉及这一个结构体，但如果我们的实现是这样呢？
+回到我们对“单元”的定义，如果与外部 API 交互所需的所有依赖都存在于单个结构体中，我们的单元测试将只涉及这一个结构体。但如果我们的实现是这样呢？
 
 ![](img/image_rsrc61C.jpg)
+
 图 6.1—示例 Bank 包结构
 
-如果我们将单元定义为结构体，我们就必须分别测试 `Account`、`requestEncoder` 和 `requestDecoder`。这是没有必要的，会浪费时间和精力的。看我们之前列出的预期行为；并没有提到请求编码或解码。这并不是因为它们不关重要；而是因为它们是更广泛行为中的一小部分。在承认这三个结构体没有彼此就不存在，并且它们必须协作来实现我们的目标之后，我们应该将它们视为单个单元。
+如果我们将单元定义为结构体，就必须分别测试`Account`、`requestEncoder`和`requestDecoder`。这是没有必要的，会浪费时间和精力。看我们之前列出的预期行为；并没有提到请求编码或解码。这并不是因为它们不重要，而是因为它们是更广泛行为中的一小部分。在承认这三个结构体没有彼此就不存在，并且它们必须协作来实现我们的目标之后，我们应该将它们视为单个单元。
 
-通过对单元的定义，我们可以看到单元测试的优点和缺点。单元测试的主要优点和缺点是它们的范围小。因为范围小，所以测试很容易编写和理解。这些单元测试将会在小范围内记录并强制执行者的意图。此外，这些测试执行速度很快，所以我们可以不断运行它们。相反，测试的范围小也是一个缺点，因为它只确认了单元的行为，而不是系统的行为（或特性）。对于这一点，我们需要从系统的视角来看。
+通过对单元的定义，我们可以看到单元测试的优点和缺点。单元测试的主要优点和缺点是它们的范围小。因为范围小，所以测试很容易编写和理解。这些单元测试将会在小范围内记录并强制执行者的意图。此外，这些测试执行速度很快，所以我们可以不断运行它们。
 
-### 用户验收测试
+相反，测试的范围小也是一个缺点，因为它只确认了单元的行为，而不是系统的行为（或特性）。对于这一点，我们需要从系统的视角来看。
+
+## 用户验收测试
 
 用户验收测试侧重于确认系统按照用户预期的方式运行，并且独立于其外部依赖。单元测试和 UAT 之间的主要区别在于测试的范围。在单元测试中，我们关注代码的单个单元，可能会引入 mock 或 stub 来将该单元与其他单元隔离开。对于 UAT，我们正在测试大部分（或全部）代码库。
 
-我对 UAT 的定义可能与你不同。对于可能造成的困惑深表歉意。这些测试的性质和目标符合组件测试的定义，因为范围太大，且测试是从系统外部进行的（即从用户的角度来看）。这些测试也不属于集成测试，因为我们刻意地与集成点解耦，并独立于这些依赖进行测试。我选择称之为用户验收测试，是因为它们旨在确保在依赖项预期行为（好或坏）的情况下，系统符合用户的预期。
+我对 UAT 的定义可能与你不同。对于可能造成的困惑深表歉意。这些测试的性质和目标符合组件测试的定义，因为范围太大，且测试是从系统外部进行的（即从用户的角度来看）。这些测试也不属于集成测试，因为我们刻意地与集成点解耦，并独立于这些依赖进行测试。
+
+我选择称之为用户验收测试，是因为它们旨在确保在依赖项预期行为（好或坏）的情况下，系统符合用户的预期。
 
 测试范围和隔离仍然是 UAT 的关键考虑因素。记住，我们是在隔离状态测试系统，所以我们的测试不应该依赖任何外部系统。我应该说明，我的意思不是这些测试必须 mock 数据库、文件系统、缓存或任何可以预期在开发环境或 CI 构建节点上存在的资源，而是指任何第三方系统。你可以 mock 数据库和缓存，但这通常有极低的成本效益比。
 
@@ -2641,11 +2608,11 @@ UAT 场景应该从系统用户的角度构建，并且对实现细节的感知�
 
 如你所见，这些场景中唯一的实现细节就是数据库的存在。我们可以重构这些场景以消除这种感知，但它并没有带给我们任何价值。
 
+就目前的写法而言，我们的场景有些通用。我们可以收紧这些场景以匹配我们的 API 契约，并包含诸如预期响应码等方面。这样做可以更彻底地强制并记录我们的 API 契约。
 
+然而，请不要做得太极端，不要强制执行每一个细节的响应；这样做会使测试变得脆弱，且维护起来更加麻烦。场景的严谨性与脆弱性之间的平衡会根据项目和个人偏好而异。尝试找到你可以接受的最小严格性，然后在发现 bug 或缺陷，或者当错误的风险和成本变得重大时，再增加严格性。
 
-就目前的写法而言，我们的场景有些通用。我们可以收紧这些场景以匹配我们的 API 契约，并包含诸如预期响应码等方面。这样做可以更彻底地强制并记录我们的 API 契约。然而，请不要做得太极端，不要强制执行每一个细节的响应；这样做会使测试变得脆弱，且维护起来更加麻烦。场景的严谨性与脆弱性之间的平衡会根据项目和个人偏好而异。尝试找到你你可以接受的最小严格性，然后在发现 bug 或缺陷，或者当错误的风险和成本变得重大时，再增加严格性。
-
-在考虑 UAT（用户验收测试）的覆盖率时，我们不能从代码行的角度来衡量，而应该从功能的角度衡量。某些功能比其他功能更重要，因此应该进行更全面的测试。某些功能比其他更复杂或更容易出现 bug，因此需要更多的场景来确保它们按预期工作。某些功能涉及的依赖比其他功能更多，因此会有更多的失败方式，从而需要更多的场景。
+在考虑 UAT（用户验收测试）的覆盖率时，我们不能从代码行的角度来衡量，而应该从功能的角度衡量。某些功能比其他功能更重要，因此应该进行更全面的测试。某些功能比其他功能更复杂或更容易出现 bug，因此需要更多的场景来确保它们按预期工作。某些功能涉及的依赖比其他功能更多，因此会有更多的失败方式，从而需要更多的场景。
 
 ## UAT 的优点与缺点
 
@@ -2655,19 +2622,22 @@ UAT 独立于外部系统运行，这既是优点也是缺点。优点是因为�
 
 然而，UAT 的主要缺点是测试的范围。由于范围很广，当出现问题时，定位根本原因可能非常耗时。对于这种缺点没有完美的应对方法。通常，我们能做的只是尽可能通过 UAT 发现问题，然后使用调试器来定位问题。
 
-### 端到端测试 (End-to-end tests)
+### 端到端测试（End-to-end tests）
 
 端到端测试（E2E tests）本质上是针对外部系统的 UAT，其目标是验证应用程序是否按预期工作。在构建 E2E 测试时，我们关注的是用户预期的行为。相比于单元测试，E2E 测试通常具有更高的构建和维护成本，因为它们依赖于外部依赖。
 
 E2E 测试的缺点在于它们依赖于外部依赖。由于它们可能由于与代码无关的原因而失败，因此其信噪比很差。此外，由于它们依赖于外部依赖，其构建和维护成本非常高。
 
-E2E 测试的优点是它们可以了系统在生产环境中的表现。当外部系统未符合预期时，我们应该在 UAT 中通过模拟响应来处理问题。通过这种方式，我们可以确保系统能够处理这些意外行为并做出可预测的响应。
+E2E 测试的优点是它们可以了解系统在生产环境中的表现。当外部系统未符合预期时，我们应该在 UAT 中通过模拟响应来处理问题。通过这种方式，我们可以确保系统能够处理这些意外行为并做出可预测的响应。
 
-### 测试金字塔 (The test pyramid)
+### 测试金字塔（The test pyramid）
 
-在定义了不同测试类型及其优缺点之后，我们可以回到最初的问题：测试多少？这并不是在单元测试和 UAT 之间做选择，而是关于比例。我们总是受到时间限制，因此必须尽可能有效地利用时间。测试金字塔是由 Mike Cohn 引入并在 Martin Fowler 等人讨论的一种视觉模型。这是我的测试金字塔版本：
+在定义了不同测试类型及其优缺点之后，我们可以回到最初的问题：测试多少？这并不是在单元测试和 UAT 之间做选择，而是关于比例。我们总是受到时间限制，因此必须尽可能有效地利用时间。
+
+测试金字塔是由 Mike Cohn 引入并在 Martin Fowler 等人讨论的一种视觉模型。这是我的测试金字塔版本：
 
 ![](img/image_rsrc61.jpg)
+
 图 6.2—测试金字塔
 
 正如上图所示，我建议将大部分（70%）的测试精力放在单元测试上。这是因为单元测试最易理解、运行成本最低。单元测试支持我们的核心任务。
@@ -2676,50 +2646,63 @@ E2E 测试的优点是它们可以了系统在生产环境中的表现。当外�
 
 将剩余的 2% 精力分配给 E2E 测试可能令你惊讶，但这些测试依赖外部依赖。根据我的经验，足够的单元测试就能解决大多数问题。
 
-关于测试金字塔要记住的一点是它是一个记忆法。虽然我给出了具体的数字（70%、28% 和 2%），但实际的比例取决于你的应用程序、团队和部署环境。在没有 E2E 测试的情况下，应用程序也可以是成功的；我见过很多这样的例子。如果你没有任何测试并想要开始，请从单元测试开始。当你熟悉了测试后，添加一些 UAT 将变得容易得多，并进一步增强对应用程序的信心。
+关于测试金字塔要记住的一点是，它是一个记忆法。虽然我给出了具体的数字（70%、28% 和 2%），但实际的比例取决于你的应用程序、团队和部署环境。
+
+在没有 E2E 测试的情况下，应用程序也可以是成功的；我见过很多这样的例子。如果你没有任何测试并想要开始，请从单元测试开始。当你熟悉了测试后，添加一些 UAT 将变得容易得多，并进一步增强对应用程序的信心。
 
 ## 我们应该测试什么？
 
 在决定了是否测试之后，选择测试什么是最影响决策的。我指的不是在单元测试和 UAT 之间做选择，而是测试的入口点。考虑以下结构体：
 
 ![](img/image_rsrc61E.jpg)
-图 6.3—OrderManager 结构体
 
-你会注意到这个结构体有四个方法，一个公开，三个私有。公开方法是其他部分交互的 API 或入口点，而三个私有方法是实现细节。如果我们的目标是测试隔离和编写最小、简单的测试，我们可以单独测试这四个方法。除了对 `Process()` 的测试外，我们所有的测试范围都很小且易于理解。这听起来很棒，不是吗？
+图 6.3—`OrderManager` 结构体
 
+你会注意到这个结构体有四个方法，一个公开，三个私有。公开方法是其他部分交互的 API 或入口点，而三个私有方法是实现细节。如果我们的目标是测试隔离和编写最小、简单的测试，我们可以单独测试这四个方法。除了对`Process()`的测试外，我们所有的测试范围都很小且易于理解。这听起来很棒，不是吗？
 
+思考一下当我们想要进行更改时会发生什么。当我们决定提供多种支付选项时会发生什么？至少，针对`chargeCustomer()`（特定于信用卡支付选项）的测试需要进行巨大的更改，甚至可能被废弃。然而，如果我们所有的测试都是针对`Process()`方法编写的，那么当我们进行这些更改时，只有少数（最好是没有任何）现有测试会损坏。
 
-思考一下当我们想要进行更改时会发生什么。当我们决定提供多种支付选项时会发生什么？至少，针对 `chargeCustomer()`（特定于信用卡支付选项）的测试需要进行巨大的更改，甚至可能被废弃。然而，如果我们所有的测试都是针对 `Process()` 方法编写的，那么当我们进行这些更改时，只有少数（最好是没有任何）现有测试会损坏。
+测试失败通常有两个原因。第一种是回归。发现并防止这种回归是测试的主要目的之一。第二种情况发生在测试的实现与被测试代码的实现过度耦合时。这种形式的测试损坏表明测试本身存在问题，而不是代码。
 
-测试失败通常有两个原因。第一种是**回归**。发现并防止这种回归是测试的主要目的之一。第二种情况发生在测试的实现与被测试代码的实现过度耦合时。这种形式的测试损坏表明测试本身存在问题，而不是代码。在这种情况下，问题在于我们对单元测试中“单元”的选择。`chargeCustomer()` 的存在是一个实现细节，而不是一种行为。正因为它是一个实现细节，所以具有极大的变化可能性。任何依赖于当前实现的测试都可能在重构期间崩溃，从而对这种更改产生阻力。结果就是我们可能会不愿重构代码，从而导致技术债。或者如果我们确实执行了重构，这些测试与实现紧密耦合的事实也导致我们在维护测试上花费了额外的工作。
+在这种情况下，问题在于我们对单元测试中“单元”的选择。`chargeCustomer()`的存在是一个实现细节，而不是一种行为。正因为它是一个实现细节，所以具有极大的变化可能性。任何依赖于当前实现的测试都可能在重构期间崩溃，从而对这种更改产生阻力。
 
-为了避免这些问题，我们将单元视为处理订单的对象或对象，并从其入口点对单元进行测试。通过这种方法，我们的测试更加稳定，并且较少反映当前的实现。在这个示例中，单元是整个 `OrderManager` 结构体，入口点是 `Process()` 方法。此外，由于 `Process()` 是该单元与其他单元之间的 API 契约，它自然地具有对更改的抗性。
+结果就是我们可能会不愿重构代码，从而导致技术债。或者如果我们确实执行了重构，这些测试与实现紧密耦合的事实也导致我们在维护测试上花费了额外的工作。
 
-如果你熟悉 TDD 或 BDD 思想，你会发现这里有一些相似之处；我们正试图在不与实现细节任何耦合的情况下验证代码的行为。这种对行为的关注和对实现细节的规避将确保我们的测试对重构具有韧性，从而保持低成本。这通过一些示例可以得到最好的证明。让我们假设 `OrderManager` 的 `validate()` 方法如下：
+为了避免这些问题，我们将单元视为处理订单的对象或对象，并从其入口点对单元进行测试。通过这种方法，我们的测试更加稳定，并且较少反映当前的实现。
+
+在这个示例中，单元是整个`OrderManager`结构体，入口点是`Process()`方法。此外，由于`Process()`是该单元与其他单元之间的 API 契约，它自然地具有对更改的抗性。
+
+如果你熟悉 TDD 或 BDD 思想，你会发现这里有一些相似之处；我们正试图在不与实现细节任何耦合的情况下验证代码的行为。这种对行为的关注和对实现细节的规避将确保我们的测试对重构具有韧性，从而保持低成本。
+
+这通过一些示例可以得到最好的证明。让我们假设`OrderManager`的`validate()`方法如下：
 
 ```go
 func (o *OrderManager) validate(order Order) error {
-    if order.CustomerName == "" {
-        return errors.New("customer name cannot be empty")
-    }
-    if order.ShippingAddress == "" {
-        return errors.New("shipping address cannot be empty")
-    }
-    return nil
+	if order.CustomerName == "" {
+		return errors.New("customer name cannot be empty")
+	}
+
+	if order.ShippingAddress == "" {
+		return errors.New("shipping address cannot be empty")
+	}
+
+	return nil
 }
 ```
 
+鉴于我在本章的大部分时间都在试图说服你进行测试，并讨论编写测试的最佳方案，现在断言有些东西是我们不应该编写测试的，这可能看起来奇怪。但事实确实如此。
 
+以下是我们系统中不应该（或不建议）直接测试的方面：
 
-鉴于我在本章的大部分时间都在试图说服你进行测试，并讨论编写测试的最佳方案，现在断言有些东西是我们是不应该编写测试的，这可能看起来奇怪。但事实确实如此。以下是我们系统中不应该（或不建议）直接测试的方面：
+1. **非 API 方法和函数**：任何不直接被代码其他部分调用的方法或函数都不应该被直接测试。它们是实现细节，并且可能会发生变化。我们将通过对代码单元入口点的测试来间接地测试这些代码。然而，在这一点上不需要过于教条。如果你有一个特别复杂的函数想要对其进行隔离测试，那么直接对该函数应用测试是高效的。
 
-1. **非 API 方法和函数**：任何不直接被代码其他部分调调用的方法或函数都不应该被直接测试。它们是实现细节，并且可能会发生变化。我们将通过对代码单元入口点的测试来间接地测试这些代码。然而，在这一点上不需要过于教条。如果你有一个特别复杂的函数想要对其进行隔离测试，那么直接对该函数应用测试是高效的。
+2. **任何简单到我们不会出错的程序**：为我们不可能出错的代码编写测试是浪费精力。偶尔，我们可能不得不编写测试来满足某些任意的单元测试覆盖率要求，但如果可以，我们应该节省时间。
 
-2. **任何简单到我们不会出错的程序**：为我们不可能出错的代码编写测试是浪费精力。偶尔，我们可能不得不编写测试来为了满足某些任意的单元测试覆盖率要求，但如果可以，我们应该节省时间。
+3. **别人的代码**：与上一点类似，为我们不拥有的代码编写并维护测试会浪费时间。我们应该信任他人提供的库和模块。如果出现我们不信任并需要测试的情况，最好让对方提交一个包含测试的拉取请求（pull request）。
 
-3. **别人的代码**：与一点类似，为我们不拥有的代码编写并维护测试会浪费时间。我们应该信任他人提供的库和模块。如果出现我们不信任并需要测试的情况，最好让对方提交一个包含测试的拉取请求（pull request）。这一点有一个例外：在处理未知或未文档的代码时，编写测试来探索和确认行为是有帮助的。尽管如此，这些测试是我们希望不提交到项目中，或者在大多数时候跳过运行的测试。
+   这一点有一个例外：在处理未知或未文档化的代码时，编写测试来探索和确认行为是有帮助的。尽管如此，这些测试是我们希望不提交到项目中，或者在大多数时候跳过运行的测试。
 
-4. **生成的代码**：延续一点，当我们使用第三方工具生成代码时，我们应该将结果视为“别人的代码”。代码生成工具的所有者负责确保他们生成的代码按预期工作；而我们不是。是的，也可以生成测试来测试生成的代码，但大多数情况下，这会浪费精力和努力。
+4. **生成的代码**：延续上一点，当我们使用第三方工具生成代码时，我们应该将结果视为“别人的代码”。代码生成工具的所有者负责确保他们生成的代码按预期工作；而我们不是。是的，也可以生成测试来测试生成的代码，但大多数情况下，这会浪费精力和努力。
 
 希望在整个本节中，你已经看到了生产力和价值的底层逻辑。这里介绍的关于测试的什么、为什么、何时以及如何做，都是为了构建一种局面：我们花费最少的精力来编写和维护测试，但仍从这种努力中获得最大的价值。
 
@@ -2727,29 +2710,29 @@ func (o *OrderManager) validate(order Order) error {
 
 作为经验丰富的 Gopher，你熟悉表驱动测试（table-driven tests, TDT）；它们是编写 Go 测试最高效的方法，大多数情况下都应该使用。原因包括：
 
-* 它们显著减少了同一单元不同测试之间的重复。
-* 它们使得在现有单元测试中添加更多测试场景变得非常容易。
-* 它们的组织非常整洁。
-* 生成的测试输出进行了整洁且实用的分组。
+- 它们显著减少了同一单元不同测试之间的重复。
+- 它们使得在现有单元测试中添加更多测试场景变得非常容易。
+- 它们的组织非常整洁。
+- 生成的测试输出进行了整洁且实用的分组。
 
 本节将通过一个示例来探索如何充分利用 TDT。首先，让我们介绍将要测试的代码：
 
 ```go
 type OrderManager struct {
-    bank   Bank
-    sender ReceiptSender
+	bank   Bank
+	sender ReceiptSender
 }
 
 func (o *OrderManager) Process(ctx context.Context, order Order) (receiptNo string, err error) {
-    // implementation details removed
+	// implementation details removed
 }
 
 type Bank interface {
-    Charge(ctx context.Context, customerName string, amount int64) (string, error)
+	Charge(ctx context.Context, customerName string, amount int64) (string, error)
 }
 
 type ReceiptSender interface {
-    SendReceipt(ctx context.Context, customerEmail string, amount int64, receiptNo string) error
+	SendReceipt(ctx context.Context, customerEmail string, amount int64, receiptNo string) error
 }
 ```
 
@@ -2757,17 +2740,18 @@ type ReceiptSender interface {
 
 ```go
 func TestOrderManager_Process(t *testing.T) {
-    scenarios := []struct {
-        scenarioDesc    string
-        inputOrder      Order
-        configureMockBank   func(Bank)
-        configureMockSender func(ReceiptSender)
-        expectedReceiptNo   string
-        expectErr        bool
-    }{
-        // scenarios
-    }
-    // implementation removed
+	scenarios := []struct {
+		scenarioDesc        string
+		inputOrder          Order
+		configureMockBank   func(Bank)
+		configureMockSender func(ReceiptSender)
+		expectedReceiptNo   string
+		expectErr           bool
+	}{
+		// scenarios
+	}
+
+	// implementation removed
 }
 ```
 
@@ -2777,44 +2761,50 @@ func TestOrderManager_Process(t *testing.T) {
 
 ```go
 func TestOrderManager_Process(t *testing.T) {
-    scenarios := []struct {
-        scenarioDesc    string
-        inputOrder      Order
-        configureMockBank   func(Bank)
-        configureMockSender func(ReceiptSender)
-        expectedReceiptNo   string
-        expectErr        bool
-    }{
-        // scenarios
-    }
-    // implementation removed
+	scenarios := []struct {
+		scenarioDesc        string
+		inputOrder          Order
+		configureMockBank   func(Bank)
+		configureMockSender func(ReceiptSender)
+		expectedReceiptNo   string
+		expectErr           bool
+	}{
+		// scenarios
+	}
+
+	// implementation removed
 }
 ```
-
-
-
 
 ```go
 for _, s := range scenarios {
 	scenario := s
+
 	t.Run(scenario.scenarioDesc, func(t *testing.T) {
 		// inputs
 		ctx, cancel := context.WithTimeout(context.Background(), 1*time.Second)
 		defer cancel()
+
 		// mocks
 		mockBank := &MockBank{}
 		scenario.configureMockBank(mockBank)
+
 		mockReceiptSender := &MockReceiptSender{}
 		scenario.configureMockSender(mockReceiptSender)
+
 		// call object under test
 		orderManager := NewOrderManager(mockBank, mockReceiptSender)
 		result, resultErr := orderManager.Process(ctx, scenario.inputOrder)
+
 		// validation
 		require.Equal(t, scenario.expectAnErr, resultErr != nil, "expected error: %t err was: %s", scenario.expectAnErr, resultErr)
 		assert.Equal(t, scenario.expectedReceiptNo, result, "expected receipt no")
 	})
 }
 ```
+
+
+
 
 正如你所见，我们正在通过 `for` 循环遍历场景来完成 TDT（测试驱动测试）风格。在 `for` 语句之后的一行，我们创建了测试场景的副本，这样在使用 `scenario` 对象时就不会出现任何数据竞态/并发问题。在下一行，我们正使用 `t.Run()` 将所有场景作为独立的子测试运行。当使用子测试时，我们必须注意并发和对象复用。任何在子测试作用域之外定义的变量都将被所有子测试使用，这可能会影响测试。同样，如果我们使用 `t.Parallel()` 并并发运行子测试，所有的测试都可能同时运行，如果我们不留心，这也可能产生影响。你还会注意到，我们利用 `scenario` 中的 `scenarioDesc` 字段来为子测试提供有用的名称。
 
@@ -2829,7 +2819,7 @@ for _, s := range scenarios {
 
 这里有两个值得注意的技巧我想向你强调一下。首先，在使用 `context` 时，我们显式地设置了超时而不是使用 `context.Background()`，以确保我们的测试能够结束——要么如预期般结束，要么通过上下文超时结束。如果我们的代码存在依赖或并发问题，这将为我们节省一些时间。
 
-第二个技巧是我们验证结果的方式。我们在检查 `result` 之前先检查 `resultErr`。这可能感觉是反直的；但这个顺序非常重要。当测试失败时，它们通常会返回一个我们未预到的错误。当这种情况发生时，其他输出值的意义可能不大了，而 `expectedReceiptNo` 值与 `result` 值（两者将不匹配）之间的比较会给测试输出增加大量噪声。
+第二个技巧是我们验证结果的方式。我们在检查 `result` 之前先检查 `resultErr`。这可能感觉是反直觉的；但这个顺序非常重要。当测试失败时，它们通常会返回一个我们未预到的错误。当这种情况发生时，其他输出值的意义可能不大了，而 `expectedReceiptNo` 值与 `result` 值（两者将不匹配）之间的比较会给测试输出增加大量噪声。
 
 我们还使用了 `require.Equal()`，它在断言失败时会调用 `t.FailNow()`。这会立即停止测试的执行，确保测试输出简洁且易于使用。
 
@@ -2851,35 +2841,35 @@ for _, s := range scenarios {
 
 ```go
 scenarios := []struct {
-	scenarioDesc        string
-	inputOrder          Order
-	configureMockBank   func(bank *MockBank)
-	configureMockSender func(sender *MockReceiptSender)
-	expectedReceiptNo   string
-	expectAnErr         bool
+    scenarioDesc        string
+    inputOrder          Order
+    configureMockBank   func(bank *MockBank)
+    configureMockSender func(sender *MockReceiptSender)
+    expectedReceiptNo   string
+    expectAnErr         bool
 }{
-	{
-		scenarioDesc: "Happy path",
-		inputOrder: Order{
-			CustomerName: "Oscar",
-			CustomerEmail: "me@example.com",
-			Amount:        123,
-		},
-		configureMockBank: func(bank *MockBank) {
-			bank.On("Charge", mock.Anything, mock.Anything, mock.Anything).Return("ABC-123", nil)
-		},
-		configureMockSender: func(sender *MockReceiptSender) {
-			sender.On("SendReceipt", mock.Anything, mock.Anything, mock.Anything, mock.Anything).Return(nil)
-		},
-		expectedReceiptNo: "ABC-123",
-		expectAnErr:       false,
-	},
+    {
+        scenarioDesc: "Happy path",
+        inputOrder: Order{
+            CustomerName: "Oscar",
+            CustomerEmail: "me@example.com",
+            Amount:        123,
+        },
+        configureMockBank: func(bank *MockBank) {
+            bank.On("Charge", mock.Anything, mock.Anything, mock.Anything).Return("ABC-123", nil)
+        },
+        configureMockSender: func(sender *MockReceiptSender) {
+            sender.On("SendReceipt", mock.Anything, mock.Anything, mock.Anything, mock.Anything).Return(nil)
+        },
+        expectedReceiptNo: "ABC-123",
+        expectAnErr:       false,
+    },
 }
 ```
 
 希望上面的示例中没有什么让你惊讶的，但我想引起你注意几点。我们通过字段名填充所有字段。这确保了我们的场景始终易于阅读，并且即使我们增加了更多字段，它也能正常工作。
 
-你还会注意到，我们没有验证 mock 的输入以及它们被调用的次数。这在你看来可能很奇怪甚至是错误的，但这是一个有意的、强烈建议的选择。如果我们验证了这些内容，我们的测试将与当前实现产生强耦合，从而更有可能因为重构而崩溃。这种破坏风险会反过来激励我们避免重构，并增加测试的维护成本。这些都是没有益益的。在某些时刻，测试传递给 mock 的精确参数是至关重要的——例如当这些参数是我们正在测试单元的可观测副作用时。在某些时刻，验证 mock 被调用的次数也是至关重要的——例如调用与客户账户相关的 mock 时。但在大多数情况下，耦合和维护成本大于任何验证带来的收益。这正是早期想法的另一个体现：只测试足够的内容以保持信心，只有在以后证明有必要时才进一步测试。
+你还会注意到，我们没有验证 mock 的输入以及它们被调用的次数。这在你看来可能很奇怪甚至是错误的，但这是一个有意的、强烈建议的选择。如果我们验证了这些内容，我们的测试将与当前实现产生强耦合，从而更有可能因为重构而崩溃。这种破坏风险会反过来激励我们避免重构，并增加测试的维护成本。这些都是没有益处的。在某些时刻，测试传递给 mock 的精确参数是至关重要的——例如当这些参数是我们正在测试单元的可观测副作用时。在某些时刻，验证 mock 被调用的次数也是至关重要的——例如调用与客户账户相关的 mock 时。但在大多数情况下，耦合和维护成本大于任何验证带来的收益。这正是早期想法的另一个体现：只测试足够的内容以保持信心，只有在以后证明有必要时才进一步测试。
 
 ## 不同输入类型的影响是什么？
 
@@ -2887,12 +2877,7 @@ scenarios := []struct {
 
 1. 不同输入值不影响可观测结果——在这种情况下，我们不需要在测试场景中包含输入。定义并复用一组请求参数就足够。
 2. 不同输入值会改变单元的行为——在这种情况下，我们应该为每种行为类型添加额外的快乐路径测试。
-
-
-
-
-
-# 1. 某些输入值可能会导致错误
+3. 某些输入值可能会导致错误。
 
 这些错误输入属于用户错误。用户可能犯的错误类型非常多，为每种错误都添加一个场景将工作量巨大。为了减轻这种负担，最好只为用户可能犯的错误添加场景，并尽可能对错误类型进行分类，相应地创建场景。
 
@@ -2932,7 +2917,7 @@ scenarios := []struct {
 
 我们已经讨论过错误的输入值可能会导致错误，并且我们应该为它们构建异常路径场景，但这并不是我们的单元产生错误的唯一方式。我们的依赖项失败也是可能的。在构建针对依赖问题的测试场景时，务必记住，依赖项通常会有许多可能的返回值，我们不需要测试所有的返回值。
 
-我们还应该记住，我们测试的并不是依赖项或其实现，而是我们如何响应依赖项的不同类型响应。例如，我们的 `Bank` 依赖项的 `Charge()` 函数可能会因为信用卡号无效、资金不足或超时而返回错误。然而，如果我们不以不同的方式处理这些错误，那么额外的场景就是浪费费力。按照一般经验法则，我们应该为每个依赖项至少准备一个异常路径场景。在示例中，我们有两个依赖项和两个匹配场景。以下是这些场景之一：
+我们还应该记住，我们测试的并不是依赖项或其实现，而是我们如何响应依赖项的不同类型响应。例如，我们的 `Bank` 依赖项的 `Charge()` 函数可能会因为信用卡号无效、资金不足或超时而返回错误。然而，如果我们不以不同的方式处理这些错误，那么额外的场景就是浪费精力。按照一般经验法则，我们应该为每个依赖项至少准备一个异常路径场景。在示例中，我们有两个依赖项和两个匹配场景。以下是这些场景之一：
 
 ```go
 scenarios := []struct {
@@ -2966,32 +2951,32 @@ scenarios := []struct {
 
 ## Mock（模拟对象）、Stub（桩根对象）和 Recorder（记录器）
 
-Mocks、stubs 和测试记录器是可以在可以在测试期间注入到单元中的不同工具。我们使用它们来替换依赖项，并确保它们的行为是可预测的。它们还记录了我们的代码如何与依赖项交互。
+Mocks、stubs 和测试记录器是可以在测试期间注入到单元中的不同工具。我们使用它们来替换依赖项，并确保它们的行为是可预测的。它们还记录了我们的代码如何与依赖项交互。
 
 本节将检查这些每一个测试工具，讨论一些更有效地使用它们的技巧，并提到一些需要避免的陷阱。首先，让我们从适用于 mocks、stubs 和测试记录器的技巧开始：
 
 ### 技巧 #1：边界
+
 我们测试的是单元而不仅仅是单个对象。因此，我们不需要 mock 每一个依赖项，只需要那些不属于单元的依赖项。典型的单元边界是包（package）或模块（module）。我们应该很少 mock 同一个包内部的对象。
 
 ### 技巧 #2：测试隔离
-测试的构建方式必须确保它们不会相互影响。否则，它们将是不可的。如果我们的代码使用了全局或外部状态，将此状态替换为注入的 mock 将确保测试的独立性。这一提示不意味着我们必须 mock 每一个外部依赖项。例如，数据库可以被 mock，但这可能非常麻烦，因此你可能会发现让测试写入数据库更高效，但要编写得它们互不影响。
+
+测试的构建方式必须确保它们不会相互影响。否则，它们将是不可靠的。如果我们的代码使用了全局或外部状态，将此状态替换为注入的 mock 将确保测试的独立性。这一提示不意味着我们必须 mock 每一个外部依赖项。例如，数据库可以被 mock，但这可能非常麻烦，因此你可能会发现让测试写入数据库更高效，但要编写得它们互不影响。
 
 ### 技巧 #3：位置
+
 Mocks 是测试代码，应该始终位于 `_test.go` 文件中。推崇 DRY（不要重复自己）原则的人经常将一个模块的 mock 发布供其他模块使用。我理解这种意图，但这引入了本不需要的风险和耦合。这些 mock 可能会在生产执行期间被意外使用，这可能是灾难性的。
 
 ### 技巧 #4：交互
+
 使用 mocks 时，我们必须记住我们测试的不是依赖项，而是我们的代码如何与依赖项交互并响应它。通过不测试依赖项的所有可能响应，而是设计测试仅包含重要用例和不同的结果，我们可以节省一些精力。同样，虽然我们可以配置 mock 来测试我们发送给 mock 的参数，但这通常是不必要的，因为这些是我们不太可能犯的错误。当我们的被测单元在将输入传递给依赖项之前没有修改它们时，情况尤为如此。
 
 ## Mock 和 Mockery 工具
-
-
-
 
 虽然可以编写自己的 mock 实现，但我并不建议这样做。使用 mock 最有效的方法是采用一个包含生成 mock 能力的 mock 库。个人而言，我使用 [https://vektra.github.io/mockery/]。`Mockery` 是一个根据接口生成 mock 的命令行工具。要使用 `Mockery`，我们可以创建一个配置文件，或者像下面这样使用 `go generate` 配置来装饰我们的接口：
 
 ```go
 //go:generate mockery --name=Bank
-
 type Bank interface {
     Charge(ctx context.Context, customerName string, amount int64) (string, error)
 }
@@ -3009,7 +2994,7 @@ bank.On("Charge", mock.Anything, mock.Anything, mock.Anything).Return("ABC-123",
 
 这条命令告诉我们的 mock：“当调用 `Charge()` 方法并传入三个任意值的参数时，返回一个值为 `ABC-123` 的 `receiptNo` 和一个 `nil` 错误”。
 
-这种方法适用于大多数情况，但它有一个缺点：无论 mock 被调用多少次，它都会返回相同的结果；这引出了第二种方法。我们可以配置 mock 根据其被调的时间或方式做出不同的反应。考虑以下代码：
+这种方法适用于大多数情况，但它有一个缺点：无论 mock 被调用多少次，它都会返回相同的结果；这引出了第二种方法。我们可以配置 mock 根据其被调用的时间或方式做出不同的反应。考虑以下代码：
 
 ```go
 bank.On("Charge", mock.Anything, "John", mock.Anything).Return("", errors.New("insufficient funds"))
@@ -3023,11 +3008,13 @@ bank.On("Charge", mock.Anything, mock.Anything, mock.Anything).Return("", errors
 bank.On("Charge", mock.Anything, mock.Anything, mock.Anything).Return("ABC-123", nil)
 ```
 
-在这个示例中，mock 在第一次运行时返回错误，但在第二次尝试时成功。这对于模拟瞬态错误非常有用。这种方法也可以为不同的调用返回不同的成功值。
 
-### 使用 Run 方法
 
-Mockery 的最后一种最不常用的用法是 `Run(func())` 方法。这种版本适用于那些会修改输入变量的方法，当我们需要验证输入的一部分而不必指定整个对象，或者需要根据函数而不是静态结果来控制 mock 的输出值时。对于这个示例，我们正在使用不同的接口和 mock，如下所示：
+在这个示例中，`mock` 在第一次运行时返回错误，但在第二次尝试时成功。这对于模拟瞬态错误非常有用。这种方法也可以为不同的调用返回不同的成功值。
+
+## 使用 `Run` 方法
+
+`Mockery` 的最后一种最不常用的用法是 `Run(func())` 方法。这种版本适用于那些会修改输入变量的方法，当我们需要验证输入的一部分而不必指定整个对象，或者需要根据函数而不是静态结果来控制 `mock` 的输出值时。对于这个示例，我们正在使用不同的接口和 `mock`，如下所示：
 
 ```go
 // 我们正在进行 mock 的接口
@@ -3035,7 +3022,7 @@ type ReceiptDecorator interface {
     Decorate(receipt *Receipt) error
 }
 
-// 使用 Run(func()) 样式配置 ReceiptDecorator 的 mock  
+// 使用 Run(func()) 样式配置 ReceiptDecorator 的 mock
 decorator.On("Decorate", mock.Anything).
     Run(func(args mock.Arguments) {
         receipt, ok := args.Get(0).(*Receipt)
@@ -3044,11 +3031,11 @@ decorator.On("Decorate", mock.Anything).
     }).Return(nil)
 ```
 
-在示例中，我们定义了一个匿名函数并将其提供 `Run()` 方法。在函数内部，我们访问用于调用 mock 的参数，然后修改该对象，假设是为了实现与实际依赖项相似的结果。如之前讨论的，这种方法提供了许多不同的测试选项；它甚至可以用于为并发代码测试添加信号（即写入通道），或引入 panic 来测试 panic 恢复。尽管它很有灵活性，但我建议少用它，因为生成的测试会稍微复杂一些，而且创建和维护也需要更多工作。
+在示例中，我们定义了一个匿名函数并将其提供 `Run()` 方法。在函数内部，我们访问用于调用 `mock` 的参数，然后修改该对象，假设是为了实现与实际依赖项相似的结果。如之前讨论的，这种方法提供了许多不同的测试选项；它甚至可以用于为并发代码测试添加信号（即写入通道），或引入 `panic` 来测试 `panic` 恢复。尽管它很有灵活性，但我建议少用它，因为生成的测试会稍微复杂一些，而且创建和维护也需要更多工作。
 
-### 存桩 (Stubs)
+## 存桩 (Stubs)
 
-Stub 与 mock 的不同之处在于它们更简单，并且完全关注于返回固定值或简单值。如果我们重新查看之前的示例，这次为我们的 `Bank` 接口创建一个 stub 实现，它看起来会像这样：
+`Stub` 与 `mock` 的不同之处在于它们更简单，并且完全关注于返回固定值或简单值。如果我们重新查看之前的示例，这次为我们的 `Bank` 接口创建一个 `stub` 实现，它看起来会像这样：
 
 ```go
 type StubErrorBank struct {}
@@ -3058,7 +3045,7 @@ func (s *StubErrorBank) Charge(ctx context.Context, customerName string, amount 
 }
 ```
 
-上面的示例是最直接的 stub 实现，因为结果是固定的。有时，需要更多。对于这些情况，我们可以进一步扩展并使用成员变量来提供这样的简单值：
+上面的示例是最直接的 `stub` 实现，因为结果是固定的。有时，需要更多。对于这些情况，我们可以进一步扩展并使用成员变量来提供这样的简单值：
 
 ```go
 type StubErrorBank struct {
@@ -3071,11 +3058,11 @@ func (s *StubErrorBank) Charge(ctx context.Context, customerName string, amount 
 }
 ```
 
-第二种方法更灵活，但要求我们为每个测试用例配置输出。在处理 stub 时，我通常先使用固定响应样式，只有在需要时我会将 stub 升级为这两种风格的组合。这样一来，stub 在未配置时会返回默认值，但在必要时允许配置。一如既常，底层的目标是用最少的麻烦来实现我的目标。
+第二种方法更灵活，但要求我们为每个测试用例配置输出。在处理 `stub` 时，我通常先使用固定响应样式，只有在需要时我会将 `stub` 升级为这两种风格的组合。这样一来，`stub` 在未配置时会返回默认值，但在必要时允许配置。一如既常，底层的目标是用最少的麻烦来实现我的目标。
 
-### 快速 Mock 和 Stub
+## 快速 Mock 和 Stub
 
-还有另一种快速生成 mock 和 stub 的方法，使用了一个不为人知的语言特性：将接口嵌入结构体中。假设你有一个如下的接口：
+还有另一种快速生成 `mock` 和 `stub` 的方法，使用了一个不为人知的语言特性：将接口嵌入结构体中。假设你有一个如下的接口：
 
 ```go
 type Crud interface {
@@ -3097,7 +3084,7 @@ func (m *MockSave) Save(u *User) error {
 }
 ```
 
-这种方法对于我们只需要简单或硬编码响应的 stub 效果良好，但我们可以更进一步，使用委托（delegation）创建一个简单的 mock。首先，我们在结构体中添加一个闭包作为成员变量，然后让被测试的方法将所有调用委托给它。结果如下：
+这种方法对于我们只需要简单或硬编码响应的 `stub` 效果良好，但我们可以更进一步，使用委托（delegation）创建一个简单的 `mock`。首先，我们在结构体中添加一个闭包作为成员变量，然后让被测试的方法将所有调用委托给它。结果如下：
 
 ```go
 type MockSave struct {
@@ -3112,9 +3099,9 @@ func (m *MockSave) Save(u *User) error {
 
 通过上述实现，对于每个 `MockSave` 实例，我们必须为 `OnSave` 提供一个闭包来执行我们需要的操作。
 
-### 测试记录器 (Test Recorders)
+## 测试记录器 (Test Recorders)
 
-我们将检查的最后一个测试工具是测试记录器。Stub 关注的是返回简单值，而测试记录器完全关注观察或记录提供给依赖项的输入。测试记录器对于日志记录器和仪表客户端等模拟是非常理想的：即我们发送给依赖项的数据很重要且没有输出。假设我们有一个所示的 `Logger` 接口：
+我们将检查的最后一个测试工具是测试记录器。`Stub` 关注的是返回简单值，而测试记录器完全关注观察或记录提供给依赖项的输入。测试记录器对于日志记录器和仪表客户端等模拟是非常理想的：即我们发送给依赖项的数据很重要且没有输出。假设我们有一个所示的 `Logger` 接口：
 
 ```go
 type Logger interface {
@@ -3122,7 +3109,7 @@ type Logger interface {
 }
 ```
 
-如你所见，没有返回值；关于此接口的任何测试将关注对依赖的使用。我们可以为此类测试使用 mock，但预计我们在代码中会多次调用 `Logger`。因此，基于 mock 的测试需要大量的配置，更不用说这将使测试与当前实现紧密耦合。相反，我们可以这样构建测试记录器：
+如你所见，没有返回值；关于此接口的任何测试将关注对依赖的使用。我们可以为此类测试使用 `mock`，但预计我们在代码中会多次调用 `Logger`。因此，基于 `mock` 的测试需要大量的配置，更不用说这将使测试与当前实现紧密耦合。相反，我们可以这样构建测试记录器：
 
 ```go
 type LogRecorder struct {
@@ -3138,9 +3125,7 @@ func (r *LogRecorder) AssertContains(t *testing.T, contains interface{}, msgAndA
 }
 ```
 
-
-
-正如你所见，我们对 `Logger` 接口的实现将所有用法记录在一个 slice 中。一旦完成这一步，我们就可以应用所需的任何验证。在这个示例中，我们使用 `AssertContains()` 方法来扫描所有记录的日志行，以查找提供的值。这种宽容的断言是测试与实现解耦的另一个例子，可以使测试变得不再脆弱。
+正如你所见，我们对 `Logger` 接口的实现将所有用法记录在一个 `slice` 中。一旦完成这一步，我们就可以应用所需的任何验证。在这个示例中，我们使用 `AssertContains()` 方法来扫描所有记录的日志行，以查找提供的值。这种宽容的断言是测试与实现解耦的另一个例子，可以使测试变得不再脆弱。
 
 ## 测试的 UX 与质量
 
@@ -3153,7 +3138,7 @@ func (r *LogRecorder) AssertContains(t *testing.T, contains interface{}, msgAndA
 当代码具有一致的布局和格式时，读者可以高效地进行导航。这种导航的便利性使读者能够快速找到他们寻找的内容，并忽略细节（直到需要它们为止）。对我们来说的是，编写一致的测试非常容易。几乎所有的测试都可以拆解为以下五个步骤的流程：
 
 1. 定义输入
-2. 配置依赖项（例如 mocks、填充数据库等）
+2. 配置依赖项（例如 `mocks`、填充数据库等）
 3. 构建并调用被测试的单元
 4. 定义预期
 5. 验证输出
@@ -3178,14 +3163,17 @@ for _, s := range scenarios {
         // inputs
         ctx, cancel := context.WithTimeout(context.Background(), 1*time.Second)
         defer cancel()
+
         // mocks
         mockBank := &MockBank{}
         scenario.configureMockBank(mockBank)
         mockReceiptSender := &MockReceiptSender{}
         scenario.configureMockSender(mockReceiptSender)
+
         // call object under test
         orderManager := NewOrderManager(mockBank, mockReceiptSender)
         result, resultErr := orderManager.Process(ctx, scenario.inputOrder)
+
         // validation
         require.Equal(t, scenario.expectAnErr, resultErr != nil)
         assert.Equal(t, scenario.expectedReceiptNo, result)
@@ -3197,7 +3185,7 @@ for _, s := range scenarios {
 
 ### 提高测试的可读性
 
-测试的可读性除了其正确性之外，可能是其第二个最重要的特征。因此，在实现一致性后，我们的目标应该是减少读者所需要的心理负担。对我来说，这归结为三点：简单性、使用断言库以及避免魔数（magic constants）的歧义性。
+测试的可读性除了其正确性之外，可能是其第二个最重要的特征。因此，在实现一致性后，我们的目标应该是减少读者所需要的心理负担。对我来说，这归结为三点：简单性、使用断言库以及避免魔数（`magic constants`）的歧义性。
 
 #### 使用断言库
 
@@ -3240,11 +3228,11 @@ assert.Equal(t, name, result.Name)
 
 ## 减少重复
 
-从本质上讲，测试包含了大量的重复。切换到 TDT 测试减少了之前概述的五个测试步骤带来的重复。然而，这仍然留下了三种重复原因：依赖项、mocks 和测试输入。
+从本质上讲，测试包含了大量的重复。切换到 TDT 测试减少了之前概述的五个测试步骤带来的重复。然而，这仍然留下了三种重复原因：依赖项、`mocks` 和测试输入。
 
 ### 依赖引起的重复
 
-假设我们有一些代码在实现中使用了 Redis，并且我们决定不想在测试中 mock Redis。因此，该代码的每个测试都需要一个到 Redis 的连接。我们应该将这种通用逻辑提取到一个方便函数中，就像我们在生产代码中这样做一样。这样的方便函数看起来如下：
+假设我们有一些代码在实现中使用了 Redis，并且我们决定不想在测试中 `mock` Redis。因此，该代码的每个测试都需要一个到 Redis 的连接。我们应该将这种通用逻辑提取到一个方便函数中，就像我们在生产代码中这样做一样。这样的方便函数看起来如下：
 
 ```go
 func getRedisConn(t *testing.T, ctx context.Context, host string) redis.Conn {
@@ -3260,7 +3248,7 @@ func getRedisConn(t *testing.T, ctx context.Context, host string) redis.Conn {
 
 ### mocks 引起的重复
 
-在使用 TDT 测试和 mocks 时，我们不可避免不同场景的 mocks 配置中存在大量的重复。这在 mocks 的正常路径（happy path）执行中为如此。在本章一直使用的示例中，我们的正常路径场景如下：
+在使用 TDT 测试和 `mocks` 时，我们不可避免不同场景的 `mocks` 配置中存在大量的重复。这在 `mocks` 的正常路径（`happy path`）执行中为如此。在本章一直使用的示例中，我们的正常路径场景如下：
 
 ```go
 {
@@ -3276,9 +3264,6 @@ func getRedisConn(t *testing.T, ctx context.Context, host string) redis.Conn {
 },
 ```
 
-
-
-
 ```go
 configureMockSender: func(sender *MockReceiptSender) {
     sender.On("SendReceipt", mock.Anything, mock.Anything, mock.Anything, mock.Anything).Return(nil)
@@ -3288,7 +3273,7 @@ expectAnErr: false,
 },
 ```
 
-`configureMockBank` 和 `configureMockSender` 闭包被配置为从我们的 mock 返回正常路径（happy path）的结果。这种正常路径配置会在许多其他场景中重复出现。因此，我们可以通过将这些闭包提取为如下辅助函数来大幅减少这种重复：
+`configureMockBank` 和 `configureMockSender` 闭包被配置为从我们的 `mock` 返回正常路径（`happy path`）的结果。这种正常路径配置会在许多其他场景中重复出现。因此，我们可以通过将这些闭包提取为如下辅助函数来大幅减少这种重复：
 
 ```go
 func happyPathBankCharge(bank *MockBank) {
@@ -3316,6 +3301,8 @@ func happyPathReceiptSend(sender *MockReceiptSender) {
     expectAnErr:         false,
 }
 ```
+
+
 
 你还会注意到，用命名良好的函数替换 mock 配置闭包使得测试场景变得更易于扫描。虽然将所有闭包替换为具名函数同样可以提高测试场景的可读性，但并不值得投入额外的精力。另一方面，减少重复带来的价值是完全值得投入的。
 
@@ -3430,10 +3417,6 @@ func TestTypicalImplementation(t *testing.T) {
 }
 ```
 
-
-
-
-
 在这个示例中，我们确保当 `Charge()` 失败并尝试发送收据时，测试会以报错的方式失败。虽然这似乎与我们“使测试在重构时具有健壮性”的目标背道而驰，但并非如此，因为该配置确保了我们所需的行为。
 
 # 你可能不知道的测试技巧
@@ -3489,8 +3472,6 @@ $ go test -timeout=3s ./...
 
 `count` 标志会导致 `go test` 按指定的次数执行测试。该命令的基本格式为：
 
-
-
 ```bash
 $ go test -count=3 ./...
 ```
@@ -3520,9 +3501,6 @@ func TestImproved(t *testing.T) {
 ```
 
 在 context 上设置超时可以确保当测试运行时间超过预期时，测试会超时失败。这种设置测试超时的方法比 `timeout` 标志更具活性且感知上下文，特别是因为我们不需要记住使用 `go test` 标志，而且设置可以在单个测试级别进行相应配置。
-
-
-
 
 超时、延迟预算和重试尝试是我们在测试期间经常想要更改的配置类型，以便触发特定的错误条件，并通常能提高测试速度。当然，我们可以将这些配置提升为构造函数中的参数，但这是没有必要的；相反，将这些配置移动到私有构造函数中允许我们的测试注入这些配置，同时保持外部 UX 接口的整洁。这里是一个简单的示例：
 
@@ -3584,9 +3562,7 @@ func (r *ReceiptSender) Send(to string, order Order) error {
 type sendMail func(addr string, a smtp.Auth, from string, to []string, msg []byte) error
 ```
 
-这一步并不是必要的，但它确实清理了代码。（等一下，提供的文本在此点之后似乎重复重复或变得混乱了，但我将根据提供的输入继续处理剩余的逻辑）。
-
-（注意：提供的源文本在末尾包含大量的重复和混乱句子。我已经根据输入中提供的剩余逻辑块对格式进行了处理。）
+这一步并不是必要的，但它确实清理了代码。
 
 ```go
 type ReceiptSender struct {
@@ -3608,28 +3584,40 @@ type OrderManager struct {
 type MockReceiptSender struct{}
 ```
 
-
-
 你会注意到流式 API（fluent API）的使用没有改变，而且我们提取的函数签名与我们的自定义类型 `historySearchFunc` 匹配。现在我们定义一个类型为 `historySearchFunc` 的成员变量，并将对流式 API 的调用替换为该成员变量的使用，如下：
 
 ```go
 type Search struct {
-	esClient *elastic.Client
-	historySearch historySearchFunc
-}
-
-func (s *Search) Do(ctx context.Context, customerName string) ([]*Order, error) {
-	termQuery := elastic.NewTermQuery("customer", customerName)
-	results, err := s.historySearch(ctx, s.esClient, termQuery)
-	if err != nil {
-		return nil, err
-	}
-	if results.Hits.TotalHits == 0 {
-		return nil, errors.New("no results")
-	}
-	return s.unmarshalResults(results)
+    esClient *elastic.Client
+    historySearch historySearchFunc
 }
 ```
+
+
+
+`func (s *Search) Do(ctx context.Context, customerName string) ([]*Order, error) {`
+
+```
+termQuery := elastic.NewTermQuery("customer", customerName)
+
+results, err := s.historySearch(ctx, s.esClient, termQuery)
+
+if err != nil {
+
+    return nil, err
+
+}
+
+if results.Hits.TotalHits == 0 {
+
+    return nil, errors.New("no results")
+
+}
+
+return s.unmarshalResults(results)
+```
+
+`}`
 
 生产代码重构完成后，我们现在可以通过对成员变量进行桩（stub）来来测试。为了实现这一点，我们定义 `historySearchFunc` 的实现，返回我们需要执行 `Do()` 方法其余部分所需的值。此测试的完整实现可以在本章节源码获取：`https://github.com/corsc/Beyond-Effective-Go/blob/master/Chapter06/07_patterns_tricks/05_fluent_api/02_second_iteration/example_test.go`。
 
@@ -3643,11 +3631,17 @@ func (s *Search) Do(ctx context.Context, customerName string) ([]*Order, error) 
 
 ```go
 func TestTypicalMistake(t *testing.T) {
-	objectUnderTest := &ConcurrentObject{}
-	go objectUnderTest.DoWork()
-	<-time.After(1 * time.Second)
-	expected := 1234
-	assert.Equal(t, expected, expected)
+
+    objectUnderTest := &ConcurrentObject{}
+
+    go objectUnderTest.DoWork()
+
+    <-time.After(1 * time.Second)
+
+    expected := 1234
+
+    assert.Equal(t, expected, expected)
+
 }
 ```
 
@@ -3655,9 +3649,13 @@ func TestTypicalMistake(t *testing.T) {
 
 ```go
 func NewConsumer() *Consumer {
-	return &Consumer{
-		orderDropped: func(order *Order) {},
-	}
+
+    return &Consumer{
+
+        orderDropped: func(order *Order) {},
+
+    }
+
 }
 ```
 
@@ -3665,13 +3663,21 @@ func NewConsumer() *Consumer {
 
 ```go
 func (c *Consumer) Consume(ordersCh chan *Order) {
-	for order := range ordersCh {
-		if !c.isValid(order) {
-			c.orderDropped(order)
-			continue
-		}
-		c.process(order)
-	}
+
+    for order := range ordersCh {
+
+        if !c.isValid(order) {
+
+            c.orderDropped(order)
+
+            continue
+
+        }
+
+        c.process(order)
+
+    }
+
 }
 ```
 
@@ -3679,10 +3685,15 @@ func (c *Consumer) Consume(ordersCh chan *Order) {
 
 ```go
 resultCh := make(chan *Order, 1)
+
 consumer := &Consumer{
-	orderDropped: func(order *Order) {
-		resultCh <- order
-	},
+
+    orderDropped: func(order *Order) {
+
+        resultCh <- order
+
+    },
+
 }
 ```
 
@@ -3690,7 +3701,9 @@ consumer := &Consumer{
 
 ```go
 ordersCh := make(chan *Order, 1)
+
 ordersCh <- newInvalidOrder()
+
 go consumer.Consume(ordersCh)
 ```
 
@@ -3698,10 +3711,15 @@ go consumer.Consume(ordersCh)
 
 ```go
 select {
+
 case <-resultCh:
-	assert.True(t, true, "happy path")
+
+    assert.True(t, true, "happy path")
+
 case <-time.After(1 * time.Second):
-	assert.Fail(t, "test timed out")
+
+    assert.Fail(t, "test timed out")
+
 }
 ```
 
@@ -3718,9 +3736,6 @@ case <-time.After(1 * time.Second):
 ### 使用测试锁存
 
 测试锁存非常有效，因为它们允许我们在后台操作完成时发送信号。这就是我们在上面使用的模式，它避免了对任意长度睡眠的需求。
-
-
-
 
 关于测试锁存（test latches）的最后一点是，它们非常擅长为依赖系统环境或当前状态的代码增加预测性。例如，你可能有代码调用了 `time.Now()`，而为这类代码编写测试通常很麻烦，因为 `time.Now()` 总是返回不同的结果。然而，如果我们把生产代码中所有对 `time.Now()` 的调用替换为一个在生产代码中调用 `time.Now()` 但测试期间可以切换的锁存，我们现在就拥有了高度预测性的测试。
 
@@ -3742,8 +3757,11 @@ case <-time.After(1 * time.Second):
 
 ```go
 func TestBadExample(t *testing.T) {
+
     resultErr := DoSomething(context.Background(), "ABC-123")
+
     assert.NoError(t, resultErr)
+
 }
 ```
 
@@ -3755,15 +3773,25 @@ func TestBadExample(t *testing.T) {
 
 ```go
 func TestServer(t *testing.T) {
+
     server := &Server{}
+
     go server.Do()
+
     for {
+
         if server.IsDone() {
+
             assert.True(t, true, "test passed")
+
             return
+
         }
+
         time.Sleep(10 * time.Millisecond)
+
     }
+
 }
 ```
 
@@ -3771,16 +3799,27 @@ func TestServer(t *testing.T) {
 
 ```go
 func TestServerImproved(t *testing.T) {
+
     server := &Server{}
+
     go server.Do()
+
     for attempt := 0; attempt < 5; attempt++ {
+
         if server.IsDone() {
+
             assert.True(t, true, "test passed")
+
             return
+
         }
+
         time.Sleep(10 * time.Millisecond)
+
     }
+
     assert.Fail(t, "test failed after maximum attempts")
+
 }
 ```
 
@@ -3792,9 +3831,13 @@ func TestServerImproved(t *testing.T) {
 
 ```go
 func BenchmarkDoSomething(b *testing.B) {
+
     for i := 0; i < b.N; i++ {
+
         DoSomething()
+
     }
+
 }
 ```
 
@@ -3802,11 +3845,17 @@ func BenchmarkDoSomething(b *testing.B) {
 
 ```go
 func BenchmarkDoSomethingParallel(b *testing.B) {
+
     b.RunParallel(func(pb *testing.PB) {
+
         for pb.Next() {
+
             DoSomething()
+
         }
+
     })
+
 }
 ```
 
@@ -3826,7 +3875,9 @@ var _ Interface = &Object{}
 
 ```go
 func TestMyObject_implements(t *testing.T) {
+
     assert.Implements(t, (*Interface)(nil), &Object{})
+
 }
 ```
 
@@ -3836,11 +3887,7 @@ func TestMyObject_implements(t *testing.T) {
 
 假设 bug 报告不准确或不够具体无法编写测试。在这种情况下，次优方案是检查我们认为可能出现问题的代码，然后假设可能导致报告问题的潜在失败情况。这些假设随后可以通过测试来证明或证伪。
 
-
-
-
-
-这种修复 Bug 的方法还有一个非常有价值的特性。在修复 之后，我们应该检查 bug 的存在对于我们的代码编写和测试方式说明了什么。例如，bug 可能会突出一个我们本应该进行测试的特定场景。同样，bug 可能会突出一个特定的用法错误或假设，我们本应该在被测单元中考虑到它们。这些见解可以并且应该被整合到我们未来的方法中。
+这种修复 Bug 的方法还有一个非常有价值的特性。在修复之后，我们应该检查 bug 的存在对于我们的代码编写和测试方式说明了什么。例如，bug 可能会突出一个我们本应该进行测试的特定场景。同样，bug 可能会突出一个特定的用法错误或假设，我们本应该在被测单元中考虑到它们。这些见解可以并且应该被整合到我们未来的方法中。
 
 ## 跳过测试
 
@@ -3854,19 +3901,33 @@ func TestMyObject_implements(t *testing.T) {
 var mysqlAvailable bool
 
 func init() {
+
     db, err := sql.Open("mysql", "root@0.0.0.0/test")
+
     if err != nil {
+
         mysqlAvailable = false
+
         return
+
     }
+
     ctx, cancel := context.WithTimeout(context.Background(), 1*time.Second)
+
     defer cancel()
+
     err = db.PingContext(ctx)
+
     if err != nil {
+
         mysqlAvailable = false
+
         return
+
     }
+
     mysqlAvailable = true
+
 }
 ```
 
@@ -3874,10 +3935,15 @@ func init() {
 
 ```go
 func TestSkipWithInit(t *testing.T) {
+
     if !mysqlAvailable {
+
         t.Skip("test skipped as MySQL is not available")
+
     }
+
     // rest of the test
+
 }
 ```
 
@@ -3889,10 +3955,15 @@ func TestSkipWithInit(t *testing.T) {
 
 ```go
 func TestSkipWithEnvVar(t *testing.T) {
+
     if os.Getenv("MYSQL_HOST") == "" {
+
         t.Skip("test skipped as MYSQL_HOST is not set")
+
     }
+
     // rest of the test
+
 }
 ```
 
@@ -3902,16 +3973,23 @@ func TestSkipWithEnvVar(t *testing.T) {
 
 ```go
 func TestExampleUAT(t *testing.T) {
+
     if os.Getenv("RUN_UAT") == "" {
+
         t.Skip("UAT skipped")
+
     }
+
     // rest of the test
+
 }
 ```
 
+
+
 通过这段代码，我们可以默认关闭所有可能运行缓慢的 UAT。我发现这种方法特别有用。它允许我在活跃开发期间运行所有单元测试，然后仅在我专门处理 UAT 时、在提交合并请求之前以及在 CI 服务器上才运行 UAT。
 
-### 方法 3：检查已安装的应用
+## 方法 3：检查已安装的应用
 
 在最后一种方法中，我们检查本地系统是否安装了某个应用程序，然后跳过在该应用程序不存在就会失败的测试。首先，让我们来看执行检查的辅助函数：
 
@@ -3924,7 +4002,7 @@ func mySQLIsInstalled() bool {
 }
 ```
 
-在这个示例中，我们执行检查并返回一个布尔值；我们也可以像第一种方法那样，在 `init()` 函数中应用相同的检查。使用辅助函数：
+在这个示例中，我们执行检查并返回一个布尔值；我们也可以像第一种方法那样，在`init()`函数中应用相同的检查。使用辅助函数：
 
 ```go
 func TestSkipWithHelper(t *testing.T) {
@@ -3955,7 +4033,7 @@ func (o *OrderRepository) LoadByID(ctx context.Context, id int) (Order, error) {
 }
 ```
 
-如你所示，我们的 `OrderRepository` 使用了全局变量。为了在不移除全局变量本身的情况下移除对全局的依赖，我们应该将所有对全局访问替换为成员变量。我们可以通过构造函数注入全局变量，并在对调用者进行最小更改的情况下实现目标，如下：
+如你所示，我们的`OrderRepository`使用了全局变量。为了在不移除全局变量本身的情况下移除对全局的依赖，我们应该将所有对全局访问替换为成员变量。我们可以通过构造函数注入全局变量，并在对调用者进行最小更改的情况下实现目标，如下：
 
 ```go
 var db *sql.DB
@@ -4002,11 +4080,7 @@ func (c *Client) WaitForMessage(data chan *Message) (*Message, error) {
 }
 ```
 
-
-
-
-
-我们将超时时间硬编码为三秒，在生产环境中，我们对这个实现非常满意。然而，如果我们想构建一个异常路径（sad path）测试来测试超时行为，让测试花费三秒钟将是非常令人恼恼且没有必要的。针对这种情况的自然反应是添加一个参数或配置，但这会损害代码的用户体验（UX）。当该值本不应该是可配置的时，情况尤为如此。
+我们将超时时间硬编码为三秒，在生产环境中，我们对这个实现非常满意。然而，如果我们想构建一个异常路径（sad path）测试来测试超时行为，让测试花费三秒钟将是非常令人恼火且没有必要的。针对这种情况的自然反应是添加一个参数或配置，但这会损害代码的用户体验（UX）。当该值本不应该是可配置的时，情况尤为如此。
 
 为了尽量降低此问题的成本，我们可以引入一个构造函数和成员变量，避免添加这样的参数：
 
@@ -4060,15 +4134,15 @@ func doSomething() error {
 
 ### 导致抽象泄漏的参数
 
-这个问题更多是一个软件架构问题，而不是其他问题。有时，URL 或数据库 DSN 会被传递到业务逻辑代码中，其动机是作者希望在测试期间切换这些外部依赖。这里的底层问题实际上不是测试，而是架构。`URL` 或 `DSN` 的存在表明我们的业务逻辑具有本应该被封装和依赖注入的依赖。
+这个问题更多是一个软件架构问题，而不是其他问题。有时，URL 或数据库 DSN 会被传递到业务逻辑代码中，其动机是作者希望在测试期间切换这些外部依赖。这里的底层问题实际上不是测试，而是架构。`URL`或`DSN`的存在表明我们的业务逻辑具有本应该被封装和依赖注入的依赖。
 
-遗憾的是，这里的解决方案是大量的重构。我们需要将对外部依赖的访问提取到单独的对象（或包），然后为这些依赖注入 mock（模拟对象）。当我们测试提取出的代码时，`URL` 和 `DSN` 是逻辑配置，因此是完全合理的。
+遗憾的是，这里的解决方案是大量的重构。我们需要将对外部依赖的访问提取到单独的对象（或包），然后为这些依赖注入 mock（模拟对象）。当我们测试提取出的代码时，`URL`和`DSN`是逻辑配置，因此是完全合理的。
 
 ### 在生产环境代码中发布 mock
 
-如你所知，任何存在于 `_test.go` 文件中的代码都是包私有的。因此，在减少重复的愿望面前，有些人会将他们的 mock 放在普通的 go 文件中。请不要这样做。发布 mock 会引入测试代码被用于生产环境的风险。是的，这种风险微乎其微，但这种错误的潜在成本可能是巨大的。如果我们的生产系统意外使用了 mock 版本，它看起来看起来在运行，实际上并没有。想象一下，如果我们不小心使用 mock 代码而不是真实代码给客户扣信用卡或跟踪销售库存；这种错误的成本将是惊人的。
+如你所知，任何存在于`_test.go`文件中的代码都是包私有的。因此，在减少重复的愿望面前，有些人会将他们的 mock 放在普通的 go 文件中。请不要这样做。发布 mock 会引入测试代码被用于生产环境的风险。是的，这种风险微乎其微，但这种错误的潜在成本可能是巨大的。如果我们的生产系统意外使用了 mock 版本，它看起来在运行，实际上并没有。想象一下，如果我们不小心使用 mock 代码而不是真实代码给客户扣信用卡或跟踪销售库存；这种错误的成本将是惊人的。
 
-同样重要的是，我们应该定义描述代码**需要**什么的接口，而不是**提供了**什么。因此，接口通常定义在它们使用的包中，并且很少被导入。在这些接口被其他包使用的情况下，仍然不需要将 mock 发布到生产代码中；相反，我们可以添加另一个 `go generate` 行来再次调用 `Mockery`，如下：
+同样重要的是，我们应该定义描述代码**需要**什么的接口，而不是**提供了**什么。因此，接口通常定义在它们使用的包中，并且很少被导入。在这些接口被其他包使用的情况下，仍然不需要将 mock 发布到生产代码中；相反，我们可以添加另一个`go generate`行来再次调用`Mockery`，如下：
 
 ```go
 //go:generate mockery --name=Bank --case underscore --testonly --inpackage
@@ -4083,7 +4157,7 @@ type Bank interface {
 
 ### 过高的测试覆盖率
 
-程序员和经理都热爱指标。有时，由于对指标的热爱，拥有 100%的测试覆盖率变成了一个目标。我们必须抵制这种诱惑。我们必须记住，我们测试的是行为而不是实现。
+程序员和经理都热爱指标。有时，由于对指标的热爱，拥有 100% 的测试覆盖率变成了一个目标。我们必须抵制这种诱惑。我们必须记住，我们测试的是行为而不是实现。
 
 我们还必须记住，每个测试都有编写、运行和维护的成本，这些成本应该相对于它们带来的价值来衡量。具有一定的经验后，实现我们设定的 $\ge 70\%$ 测试覆盖率的目标只需要极少的努力。然而，为了达到 100% 覆盖率所需的努力（以额外测试和重构的形式）是巨大的，而且投资回报率非常糟糕。考虑以下简单函数：
 
@@ -4102,6 +4176,8 @@ func UserAsJSON(name, address string, age int) ([]byte, error) {
 }
 ```
 
+
+
 即使只有最直接的快乐路径（happy path）测试，我们也立即获得了 80% 的覆盖率。现在问问自己，我们如何写一个异常路径（sad path）测试？我们如何让 `json.Marshal()` 失败？为了回答这个问题，我们需要了解内部实现。我们可以将对 `json.Marshal()` 的调用重构为全局变量，然后对其进行猴子补丁。或者，我们可以将此函数重构为方法，并将对 `json.Marshal()` 的调用变为成员变量来实现相同的效果。然而，这里更好的问题是，我们为什么要这样做呢？简单来说，这里的成本远大于收益。
 
 ### 先让它运行，再让整洁，然后，也许让它快速
@@ -4111,9 +4187,6 @@ func UserAsJSON(name, address string, age int) ([]byte, error) {
 一旦我们有了可以工作的解决方案（通过测试证明），我们应该通过重构来解决软件设计或代码 UX 问题。
 
 在解决任何设计和 UX 问题之后，然后且只有那时我们才考虑是否需要担心性能。
-
-
-
 
 这是我们的测试应该关注行为而非实现的另一个原因。如果我们的测试与实现耦合得太紧密，那么当实现发生变化时，测试将需要重构——这会引入风险和更多工作，反过来可能让我们不愿于进行重构。
 
@@ -4209,10 +4282,6 @@ Corey.
 
 我并不是建议记录所有层面的每一个决策；恰恰相反。像代码一样，文档应该保持在最小限度，以实现我们的目标。
 
-
-
-
-
 确定何时需要更多文档的一种简单方法，是记录下被提出的问题，并问自己：这个问题有多大可能被别人问到？如果可能性很大，就用文档来回答这个问题。花时间编写和维护文档会让你看起来非常专业，并有助于培养向他人解释和证明你决策的能力。
 
 编写文档还有另一种可以为我们节省大量时间的方法：前期规划。无论你是使用 `RFC` 文档还是其他软件规划文档，在编写任何代码之前对重大问题进行思考的这种行为都能使我们做出最佳决策。这对于涉及系统和软件架构的决策尤为如此。这样的文档应该论证你提议工作的必要性，并包含与跨功能需求相关的决策，例如插桩、安全性、可用性、可扩展性和数据隐私。这些因素往往被忽视，并会给我们的代码增加混乱或复杂性。
@@ -4276,9 +4345,6 @@ pr
 
 使用自动化测试
 
-
-
-
 我们拥有的第一个且最有价值的工具是自动化测试。正如我们之前看到的，我们使用测试来确保代码的行为符合我们的预期。因此，它们对于我们可能进行的任何添加或重构都是安全网。然而，测试也可以作为一种发现和探索代码的高效方式。假设你刚接触一个新项目：你可能会花时间阅读每一行代码，以建立一个关于应用程序功能的心理模型，或者你也可以写一些测试。测试允许你高效地形成并证明对代码的假设。它们构建代码库理解的最快方法。同样的过程也可以用于高效地调试报告的 bug。与其阅读代码并希望找到错误，不如构建一个能够证明该 bug 并帮助定位它的测试（或多个测试），这样要高效得多。
 
 # 制定计划，但仅保持足够
@@ -4323,34 +4389,30 @@ pr
 #!/bin/bash
 set -o errexit
 set -o pipefail
-
 # 确保源目录的格式一致。
 DIR=${1%...}
 PKG_DIR=${DIR%/}/
-
 # 导入忽略文件的正则并赋值给 COVERAGE_EXCLUDE。
 source ~/Applications/go-exclusions
-
 # 计算基础包的 go 路径。
 BASE_PKG=$(go list)
 BASE_PKG=${BASE_PKG%/}/
-
 # 计算单元测试覆盖率并突出显示任何低于 70% 的包。
-
 #
-
-# 我们在这里使用的设置是：
 ```
 
 
 
+# 我们在这里使用的设置是：
 
+```
 - `-a` = 请求工具计算覆盖率，将其输出到终端，并在之后进行清理。
 - `-i $COVERAGE_EXCLUDE` = 根据提供的正则表达式从覆盖率中排除某些路径。
 - `-m 70` = 将最小覆盖率值设置为 70%。任何低于此数字的包将用红色高亮。
-- `-prefix $BASE_PKG` = 从所有包名的开头修剪 `BASE_PKG` 值。这使得输出更易于读。
+- `-prefix $BASE_PKG` = 从所有包名的开头修剪`BASE_PKG`值。这使得输出更易于读。
 - `$PKG_DIR` = 指定计算覆盖率的基目录。
 - `${@:2}` = 将调用此脚本时使用的任何额外标志传递给工具调用。
+```
 
 ```
 package-coverage -a -i $COVERAGE_EXCLUDE -m 70 -prefix $BASE_PKG ${@:2} $PKG_DIR
@@ -4364,20 +4426,17 @@ package-coverage -a -i $COVERAGE_EXCLUDE -m 70 -prefix $BASE_PKG ${@:2} $PKG_DIR
 set -e
 
 # 确保我们指定了目录
-
 if [ "$1" == "" ]; then
   echo "No input file. Usage: pcov-html ./your-package-dir/"
   exit 1
 fi
 
 # 清理输入
-
 DIR=${1%...}
 PKG_DIR=${DIR%/}/
 PKG_DIR=./${DIR#./}
 
 # 计算测试覆盖率并打开 HTML 结果
-
 go test $PKG_DIR -coverprofile=$PKG_DIR/coverage.out ${@:1}
 go tool cover -html=$PKG_DIR/coverage.out
 rm $PKG_DIR/coverage.out
@@ -4391,17 +4450,16 @@ rm $PKG_DIR/coverage.out
 #!/bin/bash
 
 # 确保我们指定了目录
-
 if [ "$1" == "" ]; then
   echo "No input file. Usage: gtest ./your-package-dir/"
   exit 1
 fi
 
-#  go test 但排除任何 vendor 代码
+# go test 但排除任何 vendor 代码
 go test -race $(go list $1 | grep -v /vendor)
 ```
 
-如果你使用控制台运行测试，可能会考虑编写另一个不带 race 标志的类似脚本，以减少输入并避免竞态检测的性能消耗。
+如果你使用控制台运行测试，可能会考虑编写另一个不带`race`标志的类似脚本，以减少输入并避免竞态检测的性能消耗。
 
 ### 格式化代码和导入
 
@@ -4445,11 +4503,11 @@ gofmt -w -s -l $DIRS
 goimports -w -l $DIRS
 ```
 
-如你所示，此脚本使用了 `gofmt` 和 `goimports`；如果你更喜欢使用其他工具进行格式化和导入，可以进行替换。
+如你所示，此脚本使用了`gofmt`和`goimports`；如果你更喜欢使用其他工具进行格式化和导入，可以进行替换。
 
 ### 生成/重新生成代码
 
-生成代码可能很简单，但我喜欢之后调用一次格式化程序，以确保一切整洁且一致。此外，将 `go generate` 的调用移动到脚本可以减少错误，且输入速度更快：
+生成代码可能很简单，但我喜欢之后调用一次格式化程序，以确保一切整洁且一致。此外，将`go generate`的调用移动到脚本可以减少错误，且输入速度更快：
 
 ```bash
 #!/bin/bash
@@ -4480,6 +4538,7 @@ else
   # 格式化代码（调用化脚本）。
   goclean $1
 fi
+
 exit
 ```
 
@@ -4495,7 +4554,6 @@ set -o pipefail
 
 # 注意：此脚本应在项目/服务的基目录中运行
 # 需要的工具：go get github.com/kisiel/godepgraph, brew install graphviz
-
 # 输入：允许你输入想要生成图表的子目录，而不是整个包
 prefix="./"
 PKG=${1#prefix}
@@ -4594,17 +4652,15 @@ for d in $dirsToCheck; do
         exit -1
       else
         echo -e "$coverageResult"
+      fi
     fi
   else
     echo "自上次运行以来代码没有更改，跳过后续检查"
   fi
 done
+```
 
-
-
-
-
-你会注意到此脚本调用了我们介绍过的其他脚本以及 `golint`，这是我们之前没有提到过的。此脚本包含在本章的源代码中，并且与其他脚本类似。它调用了我们之前提到的 `golanglint-ci` 工具。
+你会注意到此脚本调用了我们介绍过的其他脚本以及`golint`，这是我们之前没有提到过的。此脚本包含在本章的源代码中，并且与其他脚本类似。它调用了我们之前提到的`golanglint-ci`工具。
 
 在这一节中我们讨论了六种不同的脚本，但你可能会发现更多经常执行的任务，如果将它们封装成脚本将获益匪浅。这可能包含多个步骤的任务、带有多个命令行参数的程序，或任何你无法可靠且快速触发的内容。关键是要留心观察，然后花时间来构建和维护这些脚本。你不喜欢编写脚本，或者你正尝试完成的任务具有相当复杂的逻辑（例如解析 JSON 或下载文件），那么就编写 Go 程序。在 Go 程序内部执行其他应用程序不像脚本那样简单，但操作起来非常直观。
 
@@ -4612,11 +4668,11 @@ done
 
 正如厨师花费精力和精力掌握刀具一样，程序员必须花费精力和精力掌握我们最基础的工具——我们的 IDE。
 
-就像没有所谓的“最好的刀”，或者没有一把刀可以适用于所有厨师在所有情况下一样，同样也没有一个 IDE 适用于所有程序员在所有情况下。对你来说，最好的 IDE 是那个能让你最高效地实现当前目标的 IDE。目前，我使用 JetBrains 的 `Goland` (`https://www.jetbrains.com/go/`)。在这一节中，我将强调 `Goland` 中显著提高效率的功能，以及一些帮助我保持高效的命令、插件和快捷键。如果你不用 `Goland`，我鼓励你不要跳过这一节，并不是我想说服你，而是因为你的 IDE 可能有类似的功能、插件或选项可以利用来提高效率。
+就像没有所谓的“最好的刀”，或者没有一把刀可以适用于所有厨师在所有情况下一样，同样也没有一个 IDE 适用于所有程序员在所有情况下。对你来说，最好的 IDE 是那个能让你最高效地实现当前目标的 IDE。目前，我使用 JetBrains 的`Goland`（`https://www.jetbrains.com/go/`）。在这一节中，我将强调`Goland`中显著提高效率的功能，以及一些帮助我保持高效的命令、插件和快捷键。如果你不用`Goland`，我鼓励你不要跳过这一节，并不是我想说服你，而是因为你的 IDE 可能有类似的功能、插件或选项可以利用来提高效率。
 
 ## 有用的功能
 
-虽然 `Goland` 有很多功能，但我想强调三个对效率至关重要的功能。它们是：
+虽然`Goland`有很多功能，但我想强调三个对效率至关重要的功能。它们是：
 
 1. 上下文操作（Context actions）
 2. 测试运行器（The test runner）
@@ -4624,43 +4680,43 @@ done
 
 ### 上下文操作
 
-上下文操作与自动补全非常相似，因为它会根据光标的位置和周围的代码提供不同的操作。例如，当光标位于我们正在初始 `struct` 内部时，我们会看到如下上下文操作弹出窗：
+上下文操作与自动补全非常相似，因为它会根据光标的位置和周围的代码提供不同的操作。例如，当光标位于我们正在初始`struct`内部时，我们会看到如下上下文操作弹出窗：
 
 ![](img/image_rsrc61G.jpg)
 
 图 7.1—上下文操作弹出窗
 
-如你所见，我们提供了填充 `struct` 字段的选项。选择此选项将我们：
+如你所见，我们提供了填充`struct`字段的选项。选择此选项将我们：
 
 ![](img/image_rsrc61H.jpg)
 
 图 7.2—填充所有字段的上下文操作结果
 
-IDE 根据类型添加了所有字段名称和默认零值，从而为我们填充 `struct` 提供了一种非常高效的方法。正如你所预期的，上下文菜单除了填充 `struct` 之外，还有许多其他功能；例如，当代码中存在错误或 lint 问题时，上下文菜单会为我们：
+IDE 根据类型添加了所有字段名称和默认零值，从而为我们填充`struct`提供了一种非常高效的方法。正如你所预期的，上下文菜单除了填充`struct`之外，还有许多其他功能；例如，当代码中存在错误或 lint 问题时，上下文菜单会为我们：
 
 ![](img/image_rsrc61J.jpg)
 
 图 7.3—问题上下文操作弹出窗
 
-从此菜单中，我们可以应用快速修复（quick fixes）来解决问题。将此功能与“下一个高亮错误”的快捷键（在我的 Mac 上是 `F2`）结合使用，我们可以快速找到并修复当前文件的任何问题。
+从此菜单中，我们可以应用快速修复（quick fixes）来解决问题。将此功能与“下一个高亮错误”的快捷键（在我的 Mac 上是`F2`）结合使用，我们可以快速找到并修复当前文件的任何问题。
 
 还有许多其他上下文操作，设计目的是为了让编码变得更容易、更快；我鼓励你进一步探索。
 
 ### 测试运行器
 
-无论你是否使用测试驱动开发，你可能都会花费大量时间运行和等待测试。因此，我们必须能够快速方便地触发测试，并让它们运行越快越好。在 `Goland` 中，当我们第一次触发测试运行器（通过快捷键或菜单）时，我们会看到以下对话框：
+无论你是否使用测试驱动开发，你可能都会花费大量时间运行和等待测试。因此，我们必须能够快速方便地触发测试，并让它们运行越快越好。在`Goland`中，当我们第一次触发测试运行器（通过快捷键或菜单）时，我们会看到以下对话框：
 
 ![](img/image_rsrc61K.jpg)
 
 图 7.4—运行对话框
 
-从该对话框中，我们在左侧选择 `Go Test`，然后会看到以下对话框：
+从该对话框中，我们在左侧选择`Go Test`，然后会看到以下对话框：
 
 ![](img/image_rsrc61M.jpg)
 
 图 7.5—运行测试对话框
 
-我们将根据项目和偏好配置各种设置，然后点击 `Run`。在第一次配置之后，我们就可以运行测试而无需看到这个对话框了。你可能还会注意到我配置了一个外部工具（External tool）。该工具正在调用我们之前介绍的代码格式化脚本。这样，在运行测试之前，我们的代码会被格式化，导入也会自动修复。以下是外部工具的配置：
+我们将根据项目和偏好配置各种设置，然后点击`Run`。在第一次配置之后，我们就可以运行测试而无需看到这个对话框了。你可能还会注意到我配置了一个外部工具（External tool）。该工具正在调用我们之前介绍的代码格式化脚本。这样，在运行测试之前，我们的代码会被格式化，导入也会自动修复。以下是外部工具的配置：
 
 ![](img/image_rsrc61N.jpg)
 
@@ -4672,26 +4728,26 @@ IDE 根据类型添加了所有字段名称和默认零值，从而为我们填�
 
 ### Live 模板
 
-我们要查看的最后一个功能是 Live 模板。这是一项显著的效率提升，因为可以显著减少我们需要的打字量，从而提高我们的一致性并减少错误。它们允许我们配置额外的代码补全选项。例如，如果我们想在代码中添加 `for/range` 循环，通过 Live Templates，我们可以输入 `forr`，然后看到如下上下文菜单：
+我们要查看的最后一个功能是 Live 模板。这是一项显著的效率提升，因为可以显著减少我们需要的打字量，从而提高我们的一致性并减少错误。它们允许我们配置额外的代码补全选项。例如，如果我们想在代码中添加`for/range`循环，通过 Live Templates，我们可以输入`forr`，然后看到如下上下文菜单：
 
 ![](img/image_rsrc61P.jpg)
 
 图 7.7—forr 模板菜单
 
-在此菜单中，我们按下 `tab`，然后就会出现：
+在此菜单中，我们按下`tab`，然后就会出现：
 
 ![](img/image_rsrc61R.jpg)
 
 图 7.8—For-range 模板
 
-通过这个，我们可以快速填充语句的内容。`Goland` 内置了一些实用的模板，你也可以定义自己的。例如，我最常用的模板之一 `cctx` 会展开为：
+通过这个，我们可以快速填充语句的内容。`Goland`内置了一些实用的模板，你也可以定义自己的。例如，我最常用的模板之一`cctx`会展开为：
 
 ```go
 ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 defer cancel()
 ```
 
-注意：上述示例中 `$` 包围的单词是变量。为了防止忘记 `Mockery` 的 `go:generate` 命令的精确格式，名为 `mockery` 的模板会展开为：
+注意：上述示例中`$`包围的单词是变量。为了防止忘记`Mockery`的`go:generate`命令的精确格式，名为`mockery`的模板会展开为：
 
 ```go
 //go:generate mockery --name=$INTERFACE$ --case underscore
@@ -4699,7 +4755,9 @@ defer cancel()
 
 如果你不熟悉使用 Mockery 生成 mock，第 9 章有非常好的介绍。
 
-我发现测试代码中存在大量的重复（以及一致性）。我最常用且价值的 Live 模板 `td` 会生成表格驱动测试骨架：
+我发现测试代码中存在大量的重复（以及一致性）。我最常用且价值的 Live 模板`td`会生成表格驱动测试骨架：
+
+
 
 ```go
 scenarios := []struct {
@@ -4738,10 +4796,6 @@ for _, s := range scenarios {
 
 我在本章的源代码中包含了更多此类模板，你还可以创建更多符合你编码风格并提高你效率的模板。
 
-
-
-
-
 继续关注如何更快速、更一致且更少错误地编写代码，学习和利用快捷键命令可以显著提高我们的整体工作效率。是的，我再次试图节省把手从键盘移动到鼠标上花费的几秒钟时间，但你可能会惊讶于自己全一天中执行这个动作的频率有多高——结果就是通过使用键盘代替鼠标，你可以节省出多少时间。以下是 10 个你可能不知道但会发现非常有用的 Goland 快捷键。我还包含了每个快捷键的默认 MacOS 键盘快捷键以及简短说明。
 
 1. **打开文件 (Command: ⇧⌘O)**——打开文件对话框。此对话框允许你从与输入内容匹配的文件列表中进行选择。此外，如果你后面加上一个冒号和一个数字，它将跳转到文件中该行号，这在与代码检查（linter）或测试结果结合时非常有用。
@@ -4771,9 +4825,6 @@ for _, s := range scenarios {
 10. **查找操作 (Command: ⇧⌘A)**——对于许多命令，没有分配键盘快捷键；当然，我们可以分配自己的。在此期间，或者如果我们忘记了快捷键，可以使用这个命令。此命令打开一个对话框，我们可以从那里搜索、查找并触发其他操作。此命令对于触发如解决冲突或拆分屏幕等低频率操作非常方便。
 
 就像之前关于功能的章节一样，可用的命令比这里讨论的要得多。我强烈鼓励你偶尔查看手册，配置你自己的自定义快捷键，甚至研究一下它们。
-
-
-
 
 ```bash
 git checkout $1
@@ -4870,9 +4921,6 @@ alias gut='git '
 
 本章介绍的许多技术从微观角度看似乎是额外的工作，确实如此。但从宏观角度来看，花时间学习新知识并寻找或构建更有效的方法来实现目标是无价的投资，将多次回报你的精力和精力。
 
-
-
-
 所有代码示例的完整版本以及相关材料可以在 [`github.com/corsc/Beyond-Effective-Go/tree/master/Chapter08`](https://github.com/corsc/Beyond-Effective-Go/tree/master/Chapter08) 找到。
 
 ## Go 中的函数式编程
@@ -4882,7 +4930,9 @@ alias gut='git '
 函数式编程（FP）是一种基于三个核心思想的编程风格：
 
 *   数学函数或纯函数
+
 *   不可变性
+
 *   无隐式状态
 
 第一个核心思想是数学函数或纯函数。在底层，数学将函数定义为输入与输出之间的关系或映射。在数学中，如果给定相同的输入，无论调用多少次，输出都是相同的，且函数没有副作用（例如，它不会改变任何非局部变量或通过引用传递的任何输入），该函数就被认为是纯函数。
@@ -4918,8 +4968,11 @@ func TimeRemaining(when, now time.Time) time.Duration {
 我们将检查的概念有：
 
 *   一等函数和高阶函数
+
 *   递归
+
 *   柯里化和部分函数
+
 *   不可变性
 
 ## 一等函数和高阶函数
@@ -5007,9 +5060,6 @@ func ExampleMultiply_ShortForm() {
 func ExampleMultiply_LongForm() {
 ```
 
-
-
-
 ```go
 multiply5 := Multiply(5)
 
@@ -5021,6 +5071,8 @@ fmt.Println(result)
 
 }
 ```
+
+
 
 但我们为什么要这样做呢？这是一个非常棒的问题，考虑到我们通常关注易于读的代码，而且虽然我们的柯里化函数很巧妙但更加复杂。柯里化函数的威力在于它们的灵活性。我们的 `Multiply()` 对于两个参数来说是完美的，但当我们有三个参数时会发生什么？如果是参数切片呢？在所有这些场景下，柯里化函数都可以保持不变。
 
@@ -5064,16 +5116,13 @@ func ToLower(in map[string]string) {
 
 那么不可变性有什么好处呢？当变量是不可变的时，你的代码具有以下优势：
 
--   **幂等性**——无论你何时或频繁地调用函数，函数调的结果都是相同的。
--   **可缓存性**——当函数是幂等的，它们很容易缓存。
--   **模块化**——当代码没有状态且是一系列函数时，我们可以将这些函数组合在一起来实现更大的目标。
--   **并行化**——当函数是独立且无状态时，它们很容易并行化。
--   **并发性**——因为函数是幂等的且变量是不可变的，所有与并发代码相关的不便（如竞态条件和死锁）都是可能的。因此，互斥锁（mutex）和信号量等结构是不必要的。
+- **幂等性**——无论你何时或频繁地调用函数，函数调的结果都是相同的。
+- **可缓存性**——当函数是幂等的，它们很容易缓存。
+- **模块化**——当代码没有状态且是一系列函数时，我们可以将这些函数组合在一起来实现更大的目标。
+- **并行化**——当函数是独立且无状态时，它们很容易并行化。
+- **并发性**——因为函数是幂等的且变量是不可变的，所有与并发代码相关的不便（如竞态条件和死锁）都是可能的。因此，互斥锁（mutex）和信号量等结构是不必要的。
 
-正如我们看到的，虽然 Go 不是函数式语言，但我们可以通过一些限制来采用函数式风格。强制引用透明性（特别是在集合方面）的弱点是一个风险源，但并不是完全采用的阻碍。尾递归调用优化的缺失是许多开源开发者面临的更实质的问题。（注：提示词中提供的剩余文本包含重复或破碎的短语，已根据指令进行了精简以保持核心含义）。
-
-
-
+正如我们看到的，虽然 Go 不是函数式语言，但我们可以通过一些限制来采用函数式风格。强制引用透明性（特别是在集合方面）的弱点是一个风险源，但并不是完全采用的阻碍。尾递归调用优化的缺失是许多开源开发者面临的更实质的问题。
 
 你可以看到，总值每次调用时都会更新，并且当前总和在请求之间保持不变。我们也可以使用全局变量来维护调用之间的状态以实现相同的结果。然而，这将导致其他代码或该闭包的实例访问该变量的可能性。通过我们的闭包，数据是完全隔离的，并免受任何意外访问的保护。
 
@@ -5083,11 +5132,11 @@ func ToLower(in map[string]string) {
 
 在本节中，我们将介绍可以使用 Go 实现的五种令人兴奋的模式。它们是：
 
--   替换抽象方法
--   实现中间件
--   函数式选项（Functional options）
--   装饰函数以满足接口
--   链式调用
+- 替换抽象方法
+- 实现中间件
+- 函数式选项（Functional options）
+- 装饰函数以满足接口
+- 链式调用
 
 虽然这些并不是传统软件设计模式意义上的模式，但它们是对我们 Go 程序中经常出现的许多需求的通用解决方案。
 
@@ -5163,8 +5212,6 @@ func ListUsersHandler(resp http.ResponseWriter, req *http.Request) {
 }
 ```
 
-等待，查看提供的文本中中间件示例的逻辑，似乎存在重复/片段。让我们提炼核心逻辑：
-
 我们可以提取跟踪代码并创建一个函数，该函数创建闭包来执行跟踪并调用提供的 HTTP 处理器。将此模式应用到我们的示例后，我们得到了：
 
 ```go
@@ -5182,7 +5229,6 @@ func ListUsersHandler(resp http.ResponseWriter, req *http.Request) {
     log.Printf("Time taken: %s", time.Since(start))
 }
 ```
-*(注：原文中关于中间件示例的部分包含了一些重复；我已根据指令保留了核心逻辑).*
 
 ### 函数式选项（Functional options）
 
@@ -5228,8 +5274,6 @@ func Port(port int) Option {
 ```
 
 这个函数有两个方面值得注意。第一个是我们创建了一个包含了我们传递给它的配置的闭包。第二个是，尽管 `Port()` 函数是一个公共函数，但它正在访问并设置私有成员变量 `port`。通过这个函数，我们为包的用户提供了对私有成员变量的受控访问，这比将成员变量公开要安全且整洁得多。
-
-
 
 通过这种模式，我们现在可以根据需要添加任意数量选项，以支持不同用户的需求，而不会损害易用性或向用户提供不必要的实现细节访问权限。
 
@@ -5296,7 +5340,7 @@ http.ListenAndServe(":8080", nil)
 
 ### 函数链
 
-我们检查的最后一个模式是函数链。我们使用通道（channels）通过一系列转换传递数据。这是从简单函数组合复杂逻辑的一种强大方式。（注：输入文本在此处包含重复/混乱的部分；我已根据提供的代码上下文重构了逻辑流）。
+我们检查的最后一个模式是函数链。我们使用通道（channels）通过一系列转换传递数据。这是从简单函数组合复杂逻辑的一种强大方式。
 
 在这个示例中，因为函数 `SayHelloHandler()` 和 `Handler` 的 `ServeHTTP()` 方法签名相同，实现仅仅调用了函数并传递了提供的参数。如果签名不同，我们就需要添加一些数据转换。这里是我们装饰了函数的 `http.Handler` 实现：
 
@@ -5318,11 +5362,11 @@ http.ListenAndServe(":8080", nil)
 
 ### 实现 Future（期）
 
-在编程中，Future（期）是一种软件构建技术，函数返回一个对象作为实际结果的代理，而不是结果本身。该代理提供了对最终将可用值的访问。
 
 
+在编程中，`Future`（期）是一种软件构建技术，函数返回一个对象作为实际结果的代理，而不是结果本身。该代理提供了对最终将可用值的访问。
 
-Future（未来）通常用于计算结果非常耗时且我们希望实现某种程度的并行场景。那么，我们如何在 Go 中实现这种模式呢？首先，我们需要借用在本节之前关于闭包（closures）的工作并创建一个闭包。这一次，我们的闭包将包含一个互斥锁（mutex）和结果值，如下：
+`Future`（未来）通常用于计算结果非常耗时且我们希望实现某种程度的并行场景。那么，我们如何在 Go 中实现这种模式呢？首先，我们需要借用在本节之前关于闭包（closures）的工作并创建一个闭包。这一次，我们的闭包将包含一个互斥锁（`mutex`）和结果值，如下：
 
 ```go
 func doWorkFuture(in int64) func() int64 {
@@ -5414,48 +5458,6 @@ func Example() {
 
 在这个示例中，我们实现 future 的方式与函数式语言的方式非常相似，但用更符合 Go 风格的方式这样做呢？
 
-## 以 Go 的方式实现 future
-
-在我们之前的实现中，我们使用了一个包含结果值和同步原语（即 `mutex`）的闭包，用于信号值何时可以读取。然而，在 Go 中，我们有一种可以将这些概念整合到一个单一、易于使用的包中的工具：你猜对了——通道（channels）。要用通道实现 future 模式，我们首先从一个缓冲区大小为 1 的缓冲通道开始，如下：
-
-```go
-func doWorkFuture(in int64) <-chan int64 {
-    result := make(chan int64, 1)
-    // 启动 goroutine 异步计算/获取值
-    go doTimeConsumingWork(result, in)
-    return result
-}
-
-func doTimeConsumingWork(result chan<- int64, in int64) {
-    // 执行一些耗时的操作
-    <-time.After(1 * time.Second)
-    // 分配计算/获取的结果
-    result <- 1000 + in
-}
-```
-
-通道既提供了传递和存储数据的能力，又提供了同步功能。由于我们创建的闭包与执行耗时操作的 goroutine 之间共享了 `mutex` 和 `result` 值，现在我们使用通道来简化。现在来看 future 代码的使用：
-
-```go
-func Example() {
-    futureA := doWorkFuture(123)
-    futureB := doWorkFuture(456)
-    // 其他代码
-    valueA := <-futureA
-    valueB := <-futureB
-    // 输出: Receive future value: 1123
-    // Receive future value: 1456
-    fmt.Printf("Receive future value: %d\n", valueA)
-    fmt.Printf("Receive future value: %d\n", valueB)
-}
-```
-
-从我们的使用代码中得出的结论是：我们的 `doWorkFuture()` 将立即返回，但计算将并发进行。如果我们立即读取 future 的值，那么我们的代码就会阻塞，代码将变成同步的，使用 future 也就失去了意义。
-
-在这个示例中，我们实现 future 的方式与函数式语言的方式非常相似，但用更符合 Go 风格的方式这样做呢？
-
-
-
 还可以使用通道（channels）和空结构体（empty struct）来实现信号量。在这种情况下，使用空结构体的原因有两个：首先，空结构体的成本很低；其次，是为了表达无关性。这看起来可能很奇怪，但在信号量中，通道的类型和值是无关的；只有数据的数量很重要。你可以在本系列第一本书的源码（在同一个 Git 仓库中）中的 `Chapter02/04_semaphores/01_limit_pending/` 目录下找到使用通道实现信号量的示例。
 
 在向代码中添加信号通道时，我们可以利用这些相同的概念。假设你有一个工作池，并希望能够信号工作线程退出。我们创建工作线程的代码可能如下：
@@ -5545,14 +5547,11 @@ welcomeTemplate, err := template.New("welcome").Parse(welcomeSource)
 
 这种结构与我们生成的 HTML 页面紧密耦合的，因此在任何其他地方使用它都是一个糟糕的选择。
 
-
-
-
 本章将涵盖以下主题：
 
--   与 API 集成
--   使用 Go 协调其他程序
--   实战中的代码生成
+- 与 API 集成
+- 使用 Go 协调其他程序
+- 实战中的代码生成
 
 ### 代码
 
@@ -5566,9 +5565,9 @@ welcomeTemplate, err := template.New("welcome").Parse(welcomeSource)
 
 像 Google Cloud Platform (GCP)、Amazon AWS、Datadog、Slack、GitHub 和 PagerDuty 等服务都提供了 API，允许你实现与通过点击操作（click-ops）时相同的结果。虽然我们不想也不需要自动化与这些服务的所有交互，但我们有很多机会从中获益。在以下三个典型场景下，我们经常会发现这样做是有益的：
 
-1.  对于我们经常执行的任务（例如，每天一次或更多）。
-2.  对于我们预计将执行一段时间的繁琐或复杂任务。
-3.  对于将两个或多个系统结合起来为我们带来额外益处的情况。
+1. 对于我们经常执行的任务（例如，每天一次或更多）。
+2. 对于我们预计将执行一段时间的繁琐或复杂任务。
+3. 对于将两个或多个系统结合起来为我们带来额外益处的情况。
 
 让我们简要查看这些场景，并识别一些示例和可能的集成方式。
 
@@ -5602,11 +5601,13 @@ welcomeTemplate, err := template.New("welcome").Parse(welcomeSource)
 
 图 9.1—API 集成应用程序结构
 
+
+
 现在我们大致知道要去哪里，让我们检查解决方案的关键、异常和有趣的部分。
 
 ## 调用 PagerDuty API
 
-在启动项目时，我通常先处理未知或不熟悉的组件，因为这种不熟悉是风险的主要来源。如果没有不熟悉的组件，我会从最关键的部分开始。在我们的示例中，它们是同一个。我们首先需要确定如何调用 API：特别是我们需要使用什么种身份验证以及可能还需要哪些请求头。为了实现这一点，我们查阅了 [`developer.pagerduty.com/docs/`](https://developer.pagerduty.com/docs/) 的文档。从文档中，我们需要注册身份验证令牌，并在所有请求中包含 Authentication、Accept 和 Content-Type 请求头。深入搜索文档，我们发现了获取用户信息的端点 `https://api.pagerduty.com/users/{id}`，并发现我们需要特别请求在响应中包含联系方式。将这一切整合在一起，我们可以这样构建请求：
+在启动项目时，我通常先处理未知或不熟悉的组件，因为这种不熟悉是风险的主要来源。如果没有不熟悉的组件，我会从最关键的部分开始。在我们的示例中，它们是同一个。我们首先需要确定如何调用 API：特别是我们需要使用什么种身份验证以及可能还需要哪些请求头。为了实现这一点，我们查阅了 [`developer.pagerduty.com/docs/`](https://developer.pagerduty.com/docs/) 的文档。从文档中，我们需要注册身份验证令牌，并在所有请求中包含 `Authentication`、`Accept` 和 `Content-Type` 请求头。深入搜索文档，我们发现了获取用户信息的端点 `https://api.pagerduty.com/users/{id}`，并发现我们需要特别请求在响应中包含联系方式。将这一切整合在一起，我们可以这样构建请求：
 
 ```go
 func (u *UsersAPI) buildRequest(ctx context.Context) (*http.Request, error) {
@@ -5617,9 +5618,6 @@ func (u *UsersAPI) buildRequest(ctx context.Context) (*http.Request, error) {
 	return req, err
 }
 ```
-
-
-
 
 ```go
 if err != nil {
@@ -5740,9 +5738,6 @@ func (p *Printer) outputLine(user *User) {
 }
 ```
 
-
-
-
 上述代码显示我们的 `Printf()` 格式具有诸如 `%-40s` 这样的值。这种格式表示我们正在使用字符串值（`s` 部分），我们想要将该值填充到至少 40 个字符宽，而 `-` 符号表示填充应该在值的末尾。如果我们的值超过了 40 个字符，它将超出我们试图创建的列宽并导致输出看起来错乱，但在该限制之外，这种方法是构建整洁终端输出的一种快速且简单的方法。
 
 ## 总结
@@ -5758,8 +5753,11 @@ func (p *Printer) outputLine(user *User) {
 对于我们的示例，我们将通过仅对我们更改的包运行单元测试，来缩短在提交评审之前验证代码更改的时间。是的，这存在一些风险，其他包可能受到更改的影响；然而，如果我们的代码是松耦合且封装良好的，此类事件将很少发生。此外，CI 过程将运行所有测试，因此我们只会在提交期间面临构建失败的风险，而不会伤害用户。我们应用程序的步骤如下：
 
 1. 调用源码管理器（即 `Git`）来确定我们修改了哪些文件。
+
 2. 构建修改过的包（目录）列表。
+
 3. 过滤掉我们不想测试的目录，例如 vendored 代码。
+
 4. 对所有修改过的包运行 `go test`。
 
 首先，我们需要一些代码来获取修改文件的列表。我们将通过使用 `exec` 包调用 `Git` 并捕获输出来实现：
@@ -5838,9 +5836,6 @@ func (c *Coordinator) runTests(ctx context.Context, baseDir string, pkgs []strin
 
 代码生成演示
 
-
-
-
 代码生成是快速创建和维护大量代码最有效的方法。生成的代码应该是高质量、可预测的，并且维护成本极低。它并非完美无缺；我们不能用它来解决所有问题，但一旦掌握，它将成为你技能集中非常有价值的一部分。在本节中，我们将简要介绍 Go 的代码生成支持，然后通过介绍 Go 标准库中你可能从未见过的部分，自己构建一个简单的代码生成器。
 
 ## 概要介绍
@@ -5856,21 +5851,23 @@ LoadByID(ctx context.Context, userID int64) (*User, error)
 }
 ```
 
-在上面的示例中，你会注意到注释开头与 `go:generate` 部分之间没有空格。这种空格的缺失告诉 Go 工具链这是一个用于工具的注释，而不是给人类看的。`go:generate` 表示这是一个生成注释，第一个参数 `mockery` 指明 Go generate 调用的代码生成工具，注释的其余部分是该工具的配置。在这种情况下，我们要求 Mockery (https://github.com/vektra/mockery) 为我们的接口生成测试 mock。注释不需要紧挨着接口，但这是一个良好的习惯。有了注释，我们现在可以使用以下命令使用 Go 生成代码：
+
+
+在上面的示例中，你会注意到注释开头与`go:generate`部分之间没有空格。这种空格的缺失告诉 Go 工具链这是一个用于工具的注释，而不是给人类看的。`go:generate`表示这是一个生成注释，第一个参数`mockery`指明 Go generate 调用的代码生成工具，注释的其余部分是该工具的配置。在这种情况下，我们要求 Mockery (https://github.com/vektra/mockery) 为我们的接口生成测试 mock。注释不需要紧挨着接口，但这是一个良好的习惯。有了注释，我们现在可以使用以下命令使用 Go 生成代码：
 
 ```bash
 $ go generate ./…
 ```
 
-此命令的格式会让你感到熟悉，因为它与 `go test` 以及其他 Go 工具的格式相同。
+此命令的格式会让你感到熟悉，因为它与`go test`以及其他 Go 工具的格式相同。
 
 在深入研究代码生成之前，我们应该注意，Go 官方文档指出，所有生成的代码都应该存储在我们的源代码仓库中。这确保了构建的可重复性，并让用户更容易获取和使用我们的代码，因为他们不需要担心去获取和使用生成器。
 
-### 代码生成示例
+## 代码生成示例
 
-让我们通过一个示例来探索代码生成的思想。之前，我们提到了 Mockery，这是一个从接口生成测试 mock 的工具。让我们为我们的示例做一些类似的事情：我们将从接口生成测试存根（test stubs）。为了实现这一点，我们首先需要能够像 Go 一样“看到”代码。为此，我们将深入研究 Go 的抽象语法树（AST）。此后，我们将使用 Go 的 `text/template` 包来生成代码。
+让我们通过一个示例来探索代码生成的思想。之前，我们提到了 Mockery，这是一个从接口生成测试 mock 的工具。让我们为我们的示例做一些类似的事情：我们将从接口生成测试存根（test stubs）。为了实现这一点，我们首先需要能够像 Go 一样“看到”代码。为此，我们将深入研究 Go 的抽象语法树（AST）。此后，我们将使用 Go 的`text/template`包来生成代码。
 
-### Go 的 AST
+## Go 的 AST
 
 Go 的抽象语法树（AST）是代码语法的树状表示。起初处理 AST 可能会非常令人生畏，因为使用 AST 建立的代码模型与我们程序员脑海中的代码模型可能非常不同。我恐怕没有什么魔术可以帮助克服这种困难，只能说：缓慢探索，假装直到成功（fake it until you make it）。随着你花更多时间玩 AST 及其相关工具，它会开始变得更有意义。一个快速且容易的入门方法是使用在线 Go AST 查看器，如 https://shogo82148.github.io/ast-viewer/。无论如何，回到我们的示例。让我们首先定义将作为 stub 生成器输入的接口：
 
@@ -5881,7 +5878,7 @@ LoadByID(ctx context.Context, userID int64) (*User, error)
 }
 ```
 
-我们的 `UserLoader` 接口没有任何意外或不寻之处。让我们看看如何使用 AST 工具像计算机一样看到代码。首先，我们需要解析代码：
+我们的`UserLoader`接口没有任何意外或不寻之处。让我们看看如何使用 AST 工具像计算机一样看到代码。首先，我们需要解析代码：
 
 ```go
 fs := token.NewFileSet()
@@ -5893,13 +5890,13 @@ if err != nil {
 }
 ```
 
-成功解析代码后，我们得到了一个包含代码细节的 `*ast.File`。将我们的示例文件放入 AST 查看器后，结果如下：
+成功解析代码后，我们得到了一个包含代码细节的`*ast.File`。将我们的示例文件放入 AST 查看器后，结果如下：
 
 ![](img/image_r)
 
 图 9.2—AST 可视化
 
-在图中，你可以看到我们的 `*ast.File` 对象。`File` 下的第一个对象是 `*ast.Ident`，代表代码中的标识符。解析器找到的第一个 `Ident` 是包定义。随后解析器将我们的代码拆分为声明列表、注释和其他部分。对于我们来说，感兴趣的是声明列表，为了找到所有的接口，我们将遍历声明列表并跳过任何非通用声明（`GenDecl`），如下：
+在图中，你可以看到我们的`*ast.File`对象。`File`下的第一个对象是`*ast.Ident`，代表代码中的标识符。解析器找到的第一个`Ident`是包定义。随后解析器将我们的代码拆分为声明列表、注释和其他部分。对于我们来说，感兴趣的是声明列表，为了找到所有的接口，我们将遍历声明列表并跳过任何非通用声明（`GenDecl`），如下：
 
 ```go
 // 遍历顶层声明
@@ -5972,7 +5969,7 @@ for _, method := range interfaceDefinition.Methods.List {
 }
 ```
 
-你会在上面的代码中注意到我们正在使用 `parseFieldList()` 提取方法的参数和结果。以下是其实现：
+你会在上面的代码中注意到我们正在使用`parseFieldList()`提取方法的参数和结果。以下是其实现：
 
 ```go
 func parseFieldList(fieldList *ast.FieldList) []*Param {
@@ -6001,7 +5998,7 @@ func parseFieldList(fieldList *ast.FieldList) []*Param {
 }
 ```
 
-该方法的实现遵循与之前相同的模式，遍历列表并过滤掉我们感兴趣的部分。上述代码中唯一令人惊讶的方面可能是对 `param.Names` 的第二次循环。这是因为 Go 语法允许在类型重复时跳过参数和输出中的类型定义——例如，如下代码：`func add(x, y int) int`——因此当 `parseFieldList()` 提取出类型后，它需要遍历具有该类型的所有参数名称。为了完成整个蓝图，我们需要查看的最后一个函数是：
+该方法的实现遵循与之前相同的模式，遍历列表并过滤掉我们感兴趣的部分。上述代码中唯一令人惊讶的方面可能是对`param.Names`的第二次循环。这是因为 Go 语法允许在类型重复时跳过参数和输出中的类型定义——例如，如下代码：`func add(x, y int) int`——因此当`parseFieldList()`提取出类型后，它需要遍历具有该类型的所有参数名称。为了完成整个蓝图，我们需要查看的最后一个函数是：
 
 ```go
 func extractParamType(param ast.Expr) string {
@@ -6020,9 +6017,6 @@ func extractParamType(param ast.Expr) string {
 }
 ```
 
-
-
-
 ```go
 fmt.Printf("missing handler for type: %t", concreteType)
 
@@ -6033,15 +6027,15 @@ return ""
 }
 ```
 
-这段代码从对象中提取类型定义并将其转换回字符串。在处理 `AST` 时，我们最终会得到大量像这样的代码——类型切换语句（type switch statements）以及一些递归。由于这些内容以及所有这些不熟悉的类型，为 `AST` 对象构建一个清晰的心理模型可能具有挑战性。最好的方法是慢下来，从上到下逐层处理，并在遇到 `AST` 类型时对其研究。
+这段代码从对象中提取类型定义并将其转换回字符串。在处理`AST`时，我们最终会得到大量像这样的代码——类型切换语句（type switch statements）以及一些递归。由于这些内容以及所有这些不熟悉的类型，为`AST`对象构建一个清晰的心理模型可能具有挑战性。最好的方法是慢下来，从上到下逐层处理，并在遇到`AST`类型时对其研究。
 
-在完成所有处理后，我们已经把 AST` 版本的代码转换了一组更直观的结构体，我们可以将其传递给模板用于代码生成，我们将使用 Go 的 `text/template` 包。
+在完成所有处理后，我们已经把 AST`版本的代码转换了一组更直观的结构体，我们可以将其传递给模板用于代码生成，我们将使用 Go 的`text/template`包。
 
-### Go 的 text/template 包
+## Go 的 text/template 包
 
-`text/template` 包及其兄弟包 `html/template` 提供了一种极其便利的方式来生成生成数据驱动的内容。这些包的功能包括格式化、执行流控制、子模板，以及定义自定义格式化和内容生成函数。
+`text/template`包及其兄弟包`html/template`提供了一种极其便利的方式来生成生成数据驱动的内容。这些包的功能包括格式化、执行流控制、子模板，以及定义自定义格式化和内容生成函数。
 
-以下是 `text/template` 代码的一个简单示例：
+以下是`text/template`代码的一个简单示例：
 
 ```go
 func SimpleTemplate() (string, error) {
@@ -6063,13 +6057,13 @@ func SimpleTemplate() (string, error) {
 }
 ```
 
-在这个示例中，你可以看到我们把模板定义为一个字符串，并添加了一些大括号 `{{ }}` 来指示我们插入数据的地方。这些括号也用于所有的其他模板逻辑。你还会注意到我们解析了模板然后使用了它；一个实用的性能改进方法是解析一次模板，并在不同的输入数据和目标写入器上复用它。代码中值得注意的最后一个特性是，我们可以将数据传递到模板执行中，然后通过点运算符来解引用数据。在这个示例中，我们使用了一个 map 来存储数据，但也可以使用结构体。使用结构体通常更有用，因为我们可以使用相同的解引用方法遍历结构体层级，例如：`{{ .User.Name }}` 将带给我们 `User` 对象的 `Name` 字段。
+在这个示例中，你可以看到我们把模板定义为一个字符串，并添加了一些大括号`{{ }}`来指示我们插入数据的地方。这些括号也用于所有的其他模板逻辑。你还会注意到我们解析了模板然后使用了它；一个实用的性能改进方法是解析一次模板，并在不同的输入数据和目标写入器上复用它。代码中值得注意的最后一个特性是，我们可以将数据传递到模板执行中，然后通过点运算符来解引用数据。在这个示例中，我们使用了一个 map 来存储数据，但也可以使用结构体。使用结构体通常更有用，因为我们可以使用相同的解引用方法遍历结构体层级，例如：`{{ .User.Name }}`将带给我们`User`对象的`Name`字段。
 
-如果你想学习 `text/template` 包的所有细节，我鼓励你查看该包的文档：[`pkg.go.dev/text/template`](https://pkg.go.dev/text/template)。我将不会在这里介绍所有的功能或复制该文档，而是在下一节中向你展示如何使用它，并突出那些令人兴奋的。
+如果你想学习`text/template`包的所有细节，我鼓励你查看该包的文档：[`pkg.go.dev/text/template`](https://pkg.go.dev/text/template)。我将不会在这里介绍所有的功能或复制该文档，而是在下一节中向你展示如何使用它，并突出那些令人兴奋的。
 
-### 整合一切
+## 整合一切
 
-让我们回到我们的测试存根生成器（test stub generator）项目。在使用 `text/template` 生成代码时，我发现最好的方法是从手动编写我想生成的代码开始并将其转换为一个测试。主要原因是模板可能会变得复杂且难以阅读。此外，先手动编写代码可以确保生成的代码具有质量。
+让我们回到我们的测试存根生成器（test stub generator）项目。在使用`text/template`生成代码时，我发现最好的方法是从手动编写我想生成的代码开始并将其转换为一个测试。主要原因是模板可能会变得复杂且难以阅读。此外，先手动编写代码可以确保生成的代码具有质量。
 
 首先，让我们定义接口：
 
@@ -6079,7 +6073,7 @@ type Loader interface {
 }
 ```
 
-现在，我们使用 `StubGenerator` 来生成存根代码。测试看起来如下：
+现在，我们使用`StubGenerator`来生成存根代码。测试看起来如下：
 
 ```go
 func TestStubGenerator(t *testing.T) {
@@ -6091,7 +6085,7 @@ func TestStubGenerator(t *testing.T) {
 }
 ```
 
-其中 `expectedResult` 是：
+其中`expectedResult`是：
 
 ```go
 var expectedResult = `
@@ -6119,7 +6113,7 @@ func (s *{{ .InterfaceName }}) LoadByID(ctx context.Context, userID string) (str
 `
 ```
 
-现在，我们使用 `text/template` 引擎实现 `Generate` 方法：
+现在，我们使用`text/template`引擎实现`Generate`方法：
 
 ```go
 func (s *StubGenerator) Generate(filename string) (string, error) {
@@ -6141,10 +6135,6 @@ func (s *StubGenerator) Generate(filename string) (string, error) {
 }
 ```
 
-
-
-
-
 ```go
 type Stub{{ .Interface.Name }} struct {}
 
@@ -6154,7 +6144,7 @@ func (s *Stub{{ .Interface.Name }}) LoadByID(ctx context.Context, userID int64) 
 }
 ```
 
-现在我们需要遍历源接口的所有方法，并将它们添加到输出中。我们使用 `{{ range }}` 运算符来实现这一点，如下所示：
+现在我们需要遍历源接口的所有方法，并将它们添加到输出中。我们使用`{{ range }}`运算符来实现这一点，如下所示：
 
 ```go
 var stubTemplate = `
@@ -6173,11 +6163,13 @@ func (s *Stub{{ $.Interface.Name }}) LoadByID(ctx context.Context, userID int64)
 `
 ```
 
-在这个版本的模板中，我们做了两个显著的变化。首先，我们添加了 `{{ range .Interface.Methods -}}`。这导致模板引擎遍历 `data.Interface.Methods` 变量。为了平衡这个循环，我们在模板末尾添加了 `{{ end -}}`；该片段标记了我们为每个方法输出的模板块的结束。另一个显著变化在该片段中添加了美元符号：`func (s *Stub{{ $.Interface.Name }})`。使用美元符号是必不可的，因为在循环内部，点符号（`.`）的作用范围会从顶层数据变量更改为循环迭代项。当我们需要访问循环项之外的数据时，需要使用 `$`。
+在这个版本的模板中，我们做了两个显著的变化。首先，我们添加了`{{ range .Interface.Methods -}}`。这导致模板引擎遍历`data.Interface.Methods`变量。为了平衡这个循环，我们在模板末尾添加了`{{ end -}}`；该片段标记了我们为每个方法输出的模板块的结束。另一个显著变化在该片段中添加了美元符号：`func (s *Stub{{ $.Interface.Name }})`。使用美元符号是必不可的，因为在循环内部，点符号（`.`）的作用范围会从顶层数据变量更改为循环迭代项。当我们需要访问循环项之外的数据时，需要使用`$`。
 
 你可能还会注意到，我们在某些大括号旁边添加了一些减号运算符（`-`）。这些符号告诉模板引擎移除此大括号与下一个代码元素之间的所有空白字符。这些操作通常是不必要的，但对于允许我们更具读性地格式化模板并实现预期的输出非常有用。
 
 我们将处理的下部分代码是方法参数。我们将引入另一个循环来完成，但这次我们将使用不同的格式。以下是更新后的模板：
+
+
 
 ```go
 var stubTemplate = `
@@ -6218,13 +6210,9 @@ func (s *StubUserLoader) LoadByID(
 }
 ```
 
-这段代码看起来并不完美，但它确实帮助我们避免了一个棘手的问题：我们需要在所有变量之间添加逗号，但最后一个变量之后不需要。现在，让我们引入一些模板函数，以便以更好的方式处理这些逗号。模板库允许我们使用一些内置函数，如 `len`、`print`、`html` 和 `js`，它还允许我们定义自己的自定义函数。在这种情况下，……
+这段代码看起来并不完美，但它确实帮助我们避免了一个棘手的问题：我们需要在所有变量之间添加逗号，但最后一个变量之后不需要。现在，让我们引入一些模板函数，以便以更好的方式处理这些逗号。模板库允许我们使用一些内置函数，如`len`、`print`、`html`和`js`，它还允许我们定义自己的自定义函数。在这种情况下，……
 
-
-
-
-
-当你将代码生成作为解决方案时，请记住这些代码仍然需要人类阅读；因此，它们应该保持一致且整洁的格式，并应清晰地标记为已生成，以免人们产生编辑它们的冲动。为了实现这一点，可以在文件顶部使用显眼的 `// @generated` 注释，或者以一种独特但一致的方式命名文件。我使用 `z_\[file name\].go`，我没有在其他任何地方看到过这种格式，而且它还能确保生成的文件始终位于任何文件列表的底部。请同时记住，Go 社区关于生成代码的指南指出，生成的代码应该提交到源代码控制管理系统中，且这些文件的生成应该是偶然的，而不应是构建流水线的一部分。这两个操作都能确保代码和应用程序对所有利益相关者来说都是可预测且一致的。
+当你将代码生成作为解决方案时，请记住这些代码仍然需要人类阅读；因此，它们应该保持一致且整洁的格式，并应清晰地标记为已生成，以免人们产生编辑它们的冲动。为了实现这一点，可以在文件顶部使用显眼的`// @generated`注释，或者以一种独特但一致的方式命名文件。我使用`z_[file name].go`，我没有在其他任何地方看到过这种格式，而且它还能确保生成的文件始终位于任何文件列表的底部。请同时记住，Go 社区关于生成代码的指南指出，生成的代码应该提交到源代码控制管理系统中，且这些文件的生成应该是偶然的，而不应是构建流水线的一部分。这两个操作都能确保代码和应用程序对所有利益相关者来说都是可预测且一致的。
 
 ## 总结
 
@@ -6241,15 +6229,18 @@ func (s *StubUserLoader) LoadByID(
 
 如果我们可以将自动化与其他开发者和团队共享，这些影响将会倍增。此外，这些数字还没有考虑到由于缺乏自动化导致错误或不一致而造成的任何损失。
 
-元编程的另一个有力的理由是，通过集成多个服务和数据源，我们可以获得许多益处。例如，如果我们维护了用户到团队以及团队到所属资源的 LDAP 映射，我们就可以这些数据来配置我们所有的服务，如 `GitHub`、`GitLab`、`Jira`、`PagerDuty`、`Datadog` 等。这样做可以节省大量的手动工作并提高我们整体系统的安全性。另一个非常有价值的数据源是日历，例如 `Google Calendar`。日历包含了人们必须维护的丰富信息；将我们的工具与它们集成使得这种维护变得更有价值。
+元编程的另一个有力的理由是，通过集成多个服务和数据源，我们可以获得许多益处。例如，如果我们维护了用户到团队以及团队到所属资源的 LDAP 映射，我们就可以这些数据来配置我们所有的服务，如`GitHub`、`GitLab`、`Jira`、`PagerDuty`、`Datadog`等。这样做可以节省大量的手动工作并提高我们整体系统的安全性。另一个非常有价值的数据源是日历，例如`Google Calendar`。日历包含了人们必须维护的丰富信息；将我们的工具与它们集成使得这种维护变得更有价值。
 
 就像铁匠在制作更复杂的东西之前可能会先给自己做一个锤子或一把钳子一样，我们这些程序员也可以这样做。Go 是调用 API 和其他应用程序并将它们编织在一起以创建可预测且高效产物的完美语言。最重要的是，我们拥有技能和熟悉度来轻松、快速地完成任务。
 
 ## 问题
 
 1. 为什么 SaaS 和 PaaS 提供会提供开发者 API？
+
 2. 是否有实用的方法整合你经常使用的两个或多个 SaaS 或 PaaS 工具以提高效率？
+
 3. 在学习了代码生成后，你是否注意到代码库中有通过复制/粘贴完成其实可以通过代码生成的地方？
+
 4. 我们应该测试生成的代码吗？
 
 ## 后记
@@ -6271,11 +6262,17 @@ func (s *StubUserLoader) LoadByID(
 第一部分侧重于实现高性能代码。你将学习应该关注应用程序或代码的哪些方面，以及何时关注。你将有一套工具、软件模式和配方可以使用让你的生活更简单。阅读后，你将：
 
 - 理解并发（Concurrency）与并行（Parallelism）之间的区别。
+
 - 识别并避免死锁、饥饿、活锁和数据竞态等并发问题。
+
 - 理解各种并发交互模式，并能够应用最适合当前问题的模式。
+
 - 深入研究 Go 的并发原语，并能够熟练地应用它们同时也避免它们的许多陷阱。
+
 - 使用 Go 的分析器、执行追踪和基准测试工具诊断并发和性能问题。
+
 - 识别代码何时需要优化、优化什么以及如何优化。
+
 - 拥有一个并发和性能模式目录，可以快速将其应用到项目中。
 
 ## Go 依赖注入实战
@@ -6297,4 +6294,3 @@ func (s *StubUserLoader) LoadByID(
 ## 文章与其他内容的链接
 
 在 [www.coreyscott.dev](http://www.coreyscott.dev) 查找更多内容、书籍链接和资源。
-

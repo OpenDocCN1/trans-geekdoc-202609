@@ -1,8 +1,5 @@
+
 # 机器学习的数学：解答手册
-
-
-
-
 
 ## 线性代数
 
@@ -33,6 +30,7 @@ a\star b=ab+a+b+1-1=(a+1)(b+1)-1\neq -1
 接下来，我们验证群公理：
 
 - **结合律：** 对于所有 \(a,b,c\in\mathbb{R}\setminus\{-1\}\)：
+
 \[
 \begin{aligned}
 (a\star b)\star c&=(ab+a+b)\star c\\
@@ -45,21 +43,26 @@ a\star b=ab+a+b+1-1=(a+1)(b+1)-1\neq -1
 \]
 
 - **交换律：**
+
 \[
 \forall a,b\in\mathbb{R}\setminus\{-1\}:\quad a\star b=ab+a+b=ba+b+a=b\star a.
 \]
 
 - **单位元：** \(n=0\) 是单位元，因为
+
 \[
 \forall a\in\mathbb{R}\setminus\{-1\}:\quad a\star 0=a=0\star a.
 \]
 
 - **逆元：** 我们需要找到 \(\bar{a}\)，使得 \(a\star\bar{a}=0=\bar{a}\star a\)。
+
 \[
 \bar{a}\star a=0\iff \bar{a}a+a+\bar{a}=0
 \iff \bar{a}(a+1)=-a
 \]
+
 因为 \(a\neq -1\)，
+
 \[
 \bar{a}=-\frac{a}{a+1}=-1+\frac{1}{a+1}\neq -1\in\mathbb{R}\setminus\{-1\}.
 \]
@@ -104,41 +107,52 @@ a\star b=ab+a+b+1-1=(a+1)(b+1)-1\neq -1
 **a.** 我们验证群公理均被满足：
 
 - **封闭性：** 设 \(\bar{a},\bar{b}\in\mathbb{Z}_n\)。我们有：
+
 \[
 \bar{a}\oplus\bar{b}=\overline{a+b}
 =(a+b)\bmod n
 \]
+
 根据同余类的定义，且由于 \([(a+b)\bmod n]\in\{0,\ldots,n-1\}\)，可得 \(\bar{a}\oplus\bar{b}\in\mathbb{Z}_n\)。因此，\(\mathbb{Z}_n\) 在 \(\oplus\) 下封闭。
 
 - **结合律：** 设 \(\bar{c}\in\mathbb{Z}_n\)。我们有：
+
 \[
 (\bar{a}\oplus\bar{b})\oplus\bar{c}
 =(\overline{a+b})\oplus\bar{c}
 =\overline{(a+b)+c}
 =\overline{a+(b+c)}
 \]
+
 \[
 =\bar{a}\oplus\overline{(b+c)}
 =\bar{a}\oplus(\bar{b}\oplus\bar{c})
 \]
+
 因此 \(\oplus\) 满足结合律。
 
 - **单位元：** 我们有
+
 \[
 \bar{a}\oplus\bar{0}=\overline{a+0}=\bar{a}=\bar{0}\oplus\bar{a}
 \]
+
 所以 \(\bar{0}\) 是关于 \(\oplus\) 的单位元。
 
 - **逆元：** 我们有
+
 \[
 \bar{a}\oplus\overline{(-a)}=\overline{a-a}=\bar{0}=\overline{(-a)}\oplus\bar{a}
 \]
+
 并且我们知道 \(\overline{(-a)}\) 等于 \(\overline{(-a)\bmod n}\)，它属于 \(\mathbb{Z}_n\)，从而是 \(\bar{a}\) 的逆元。
 
 - **交换律：** 最后，\((\mathbb{Z}_n,\oplus)\) 的交换律可由 \((\mathbb{Z},+)\) 的交换律推出，因为我们有
+
 \[
 \bar{a}\oplus\bar{b}=\overline{a+b}=\overline{b+a}=\bar{b}\oplus\bar{a},
 \]
+
 这表明 \((\mathbb{Z}_n,\oplus)\) 是阿贝尔群。
 
 **b.** 让我们计算 \(\mathbb{Z}_5\setminus\{\bar{0}\}\) 在 \(\otimes\) 下的乘法表：
@@ -207,11 +221,14 @@ au\equiv1\pmod n,
 我们将 \(\cdot\) 定义为标准矩阵乘法。\((\mathcal{G},\cdot)\) 是群吗？如果是，它是阿贝尔群吗？请说明理由。
 
 - **封闭性：** 设 \(a,b,c,x,y,z\in\mathbb{R}\)，并定义 \(\mathcal{G}\) 中的 \(A\) 和 \(B\) 为
+
 \[
 A=\begin{bmatrix}1&x&z\\0&1&y\\0&0&1\end{bmatrix},\quad
 B=\begin{bmatrix}1&a&c\\0&1&b\\0&0&1\end{bmatrix}.
 \]
+
 那么，
+
 \[
 A\cdot B=
 \begin{bmatrix}1&x&z\\0&1&y\\0&0&1\end{bmatrix}
@@ -219,13 +236,17 @@ A\cdot B=
 =
 \begin{bmatrix}1&a+x&c+xb+z\\0&1&b+y\\0&0&1\end{bmatrix}.
 \]
+
 由于 \(a+x\)、\(b+y\) 和 \(c+xb+z\) 都在 \(\mathbb{R}\) 中，所以 \(A\cdot B\in\mathcal{G}\)。因此，\(\mathcal{G}\) 在矩阵乘法下封闭。
 
 - **结合律：** 设 \(\alpha,\beta,\gamma\in\mathbb{R}\)，并定义 \(C\in\mathcal{G}\) 为
+
 \[
 C=\begin{bmatrix}1&\alpha&\gamma\\0&1&\beta\\0&0&1\end{bmatrix}.
 \]
+
 则有
+
 \[
 (A\cdot B)\cdot C=
 \begin{bmatrix}1&a+x&c+xb+z\\0&1&b+y\\0&0&1\end{bmatrix}
@@ -236,8 +257,6 @@ C=\begin{bmatrix}1&\alpha&\gamma\\0&1&\beta\\0&0&1\end{bmatrix}.
 0&1&\beta+b+y\\
 0&0&1
 \end{bmatrix}.
-```
-
 
 
 
@@ -1273,7 +1292,7 @@ b. 我们有 π ∘ (id_V − π) = π − π² = 0_V，其中 0_V 表示零自�
 
 (id_V − π)(x) = x − π(x) = x,
 
-这意味着 x 是自身在 id_V − π 下的像。因此，x ∈ Im(id_V − π)。换言之，ker(π) ⊆ Im(id_V − π)，从而 ker(π) = Im(id_V − π)。
+这意味着 x 是自身在 id_V − π 下的像。因此，x ∈ Im(id_V − π)。换句话说，ker(π) ⊆ Im(id_V − π)，从而 ker(π) = Im(id_V − π)。
 
 类似地，我们有
 

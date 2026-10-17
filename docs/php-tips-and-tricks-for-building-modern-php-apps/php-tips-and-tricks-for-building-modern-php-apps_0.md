@@ -1,105 +1,65 @@
+
 # 现代 PHP 应用构建技巧与秘籍
-
-
 
 ![](img/image_rsrcAJ6.jpg)
 
+## 介绍
 
-
-
-
-
-
-# 介绍
-
-本书包含了如何使用 `PHP` 编写 Web 应用程序的经过的步骤和策略。你将通过功能性代码的形式学习 `PHP` 的独特特征，这些代码你可以在 `PHP` 编辑器中用于练习。我确保你将学习到创建如内容管理系统（CMS）等 Web 应用程序所需的所有基础和高级代码。
+本书包含了如何使用 `PHP` 编写 Web 应用程序的步骤和策略。你将通过功能性代码的形式学习 `PHP` 的独特特征，这些代码你可以在 `PHP` 编辑器中用于练习。我确保你将学习到创建如内容管理系统（CMS）等 Web 应用程序所需的所有基础和高级代码。
 
 `MySQL` 是 `PHP` 的不可或缺的一部分，我专门用了一个章节来介绍 `MySQL` 的不同语句，你可以使用这些语句来操作数据库。没有 `MySQL`，`PHP` 就是空虚，因为每个 Web 应用程序都需要数据库来处理用户信息并将其存储以供以后使用。
 
 `PHP` 并不老；我们可以将它的起源追溯到 1994 年，当时 Rasmus Lerdorf 编写了第一个版本。在最初的阶段，它是基于 `C` 语言构建的，目的是替换他在个人主页上使用的 `Perl` 代码段。它一直在演变；然而，直到 1995 年，他才发布了该语言的第一个正式公开版本。此时，`PHP` 被称为个人主页工具（Personal Homepage Tools）。
 
-`JavaScript` 必然于 1996 年作为客户端语言发布。`PHP` 在当时作为服务器端语言发布，充分说明了当时互联网工具的巨大增长。1998 年，`PHP` 接收了由 Andi Gutmans 和 Zeev Suraski 发布的第三版本。新版本有了一个独特的名称 `Hypertext Preprocessor`（超文本预处理器）。这个版本让 `PHP` 赢得了巨大的人气。`PHP` 第 4 版本于 2000 年推出，被称为 `Zend Engine`。这个版本将 `PHP` 提升到了以前所未过的水平。它消除了 `PHP` 的某些缺陷并使其成为更完整的语言。`PHP` 第 5 版本于 2004 年发布，具有新功能，如改进的面向对象编程和更好的性能。`PHP 7` 于 2014 年和 2015 年发布。它进一步更新了 `PHP`，以适应更高水平的 Web 开发。
+`JavaScript` 于 1996 年作为客户端语言发布。`PHP` 在当时作为服务器端语言发布，充分说明了当时互联网工具的巨大增长。1998 年，`PHP` 接收了由 Andi Gutmans 和 Zeev Suraski 发布的第三版本。新版本有了一个独特的名称 `Hypertext Preprocessor`（超文本预处理器）。这个版本让 `PHP` 赢得了巨大的人气。`PHP` 第 4 版本于 2000 年推出，被称为 `Zend Engine`。这个版本将 `PHP` 提升到了以前所未有的水平。它消除了 `PHP` 的某些缺陷并使其成为更完整的语言。`PHP` 第 5 版本于 2004 年发布，具有新功能，如改进的面向对象编程和更好的性能。`PHP 7` 于 2014 年和 2015 年发布。它进一步更新了 `PHP`，以适应更高水平的 Web 开发。
 
 当世界知道 Mark Zuckerberg 使用它创建了世界著名的应用程序 Facebook 时，`PHP` 声名大噪。当 Mark 在 2003 年从哈佛退学时，他采用了这种语言来创建该应用，而 Facebook 应用的后端仍在使用这种语言。Facebook 自此以后开发了名为 `Hack` 的自己的语言，但它是 `PHP` 的一个版本。
 
 本书包含了实用的步骤，帮助你理解 Web 应用程序服务器端发生了什么。它将帮助你了解 `PHP` 和 `MySQL` 的细节，这两者在创建 Web 应用程序时通常是并行的。为了方便读者阅读，我将这一章分为 11 章。书的每一章都处理一个独特的话。我建议你在阅读本书时下载并安装一个 `PHP` 编辑器或打开一个在线 `PHP` 编辑器进行练习。你可以使用书中的示例代码，并理解它们在放入编辑器后是如何运行的。我希望你的这段阅读之旅是奇妙的，你将成为一个知识渊博的人。
 
-# 第 1 章：PHP 的安装
+## 第 1 章：PHP 的安装
 
-书的第一章重点介绍在你的计算机上安装 `PHP`。这是一个复杂的过程。你应该多读几来理解如何操作。这个过程在 `Linux` 和 `Mac OS` 上的难度不会像在 Windows 操作系统那么大。我按照步骤解释了该主题。第一章是在你的操作系统上安装 Web 服务器，市场上有很多 Web 服务器可用。你可以随心选择。在书中，我选择解释史上最流行的 Web 服务器，即 `Apache`。`Apache` 是一个出色的 Web 服务器，它与 `PHP` 配对并增强其性能。当你下载它后，你需要验证 `Apache`。下一步是安装过程。你会发现它的解释清晰且全面。安装过程完成后，你可以打开 `Apache` 并启动操作。关于 Web 服务器的最后一步是 `Apache` 的配置。
+书的第一章重点介绍在你的计算机上安装 `PHP`。这是一个复杂的过程。你应该多读几遍来理解如何操作。这个过程在 `Linux` 和 `Mac OS` 上的难度不会像在 Windows 操作系统那么大。我按照步骤解释了该主题。
 
-# 第 2 章：PHP 基础
+第一章是在你的操作系统上安装 Web 服务器，市场上有很多 Web 服务器可用。你可以随心选择。在书中，我选择解释史上最流行的 Web 服务器，即 `Apache`。`Apache` 是一个出色的 Web 服务器，它与 `PHP` 配对并增强其性能。当你下载它后，你需要验证 `Apache`。下一步是安装过程。你会发现它的解释清晰且全面。安装过程完成后，你可以打开 `Apache` 并启动操作。关于 Web 服务器的最后一步是 `Apache` 的配置。
 
-本章的后半部分专注于在你的计算机上安装 PHP。作为一种服务器端语言，它的安装有点复杂，而且是个硬骨头。然而，通过遵循正确的步骤，你可以顺风完成。这将一帆顺利。当你获得 `PHP` 后，你必须验证它。接下来是你的服务器的配置。书的第二章专注于 `PHP` 的基础。我将解释你应该如何创建 HTML 页面，因为它是 `PHP` 的重要组成部分。你需要将 PHP 代码嵌入到你创建的 HTML 文档中，当你尝试显示它时，它将会在页面可见。所有的代码将保持隐藏；但 HTML 代码将显示。
+## 第 2 章：PHP 基础
 
-# 第 3 章：变量与字符串
+本章的后半部分专注于在你的计算机上安装 `PHP`。作为一种服务器端语言，它的安装有点复杂，而且是个硬骨头。然而，通过遵循正确的步骤，你可以顺利完成。当你获得 `PHP` 后，你必须验证它。接下来是你的服务器的配置。
 
-下一章包含了关于 PHP 变量、PHP 字符串等的宝贵信息。你将学习如何使用 PHP 变量来存储信息并在以后使用。书的第三章专注于创建你构建应用程序时需要的 PHP 脚本。在许多编程语言中流行的语句之一是条件语句。条件语句可以通过关键字 `if` 来识别。当代码中有多个一个条件时，`if` 语句就会发挥作用，让 Web 应用程序读取它们。如果第一个条件为真，代码就不会继续移动而是直接在那里结束。如果第一个条件结果为假，代码将跳转到下一个条件并运行它。当有 `else-if` 语句且第一个条件结果为假时，第三个条件就会发挥作用。
+书的第二章专注于 `PHP` 的基础。我将解释你应该如何创建 HTML 页面，因为它是 `PHP` 的重要组成部分。你需要将 PHP 代码嵌入到你创建的 HTML 文档中，当你尝试显示它时，它将会在页面可见。所有的代码将保持隐藏；但 HTML 代码将显示。
 
-# 第 4 章：循环
+## 第 3 章：变量与字符串
 
-该章随后进入嵌套 if 语句，即在一个语句内部包含两个或多个 if 语句。接下来是 PHP 循环。它们是 PHP 最有趣的特性。你可以在代码中插入循环，使任务变得简单并在某种程度上自动化。PHP 中有三种循环。第一个将是……（此处原文不完整，按原意翻译）。
+下一章包含了关于 PHP 变量、PHP 字符串等的宝贵信息。你将学习如何使用 PHP 变量来存储信息并在以后使用。书的第三章专注于创建你构建应用程序时需要的 PHP 脚本。
 
-# 第 5 章：高级功能
+在许多编程语言中流行的语句之一是条件语句。条件语句可以通过关键字 `if` 来识别。当代码中有多个条件时，`if` 语句就会发挥作用，让 Web 应用程序读取它们。如果第一个条件为真，代码就不会继续移动，而是直接在那里结束。如果第一个条件结果为假，代码将跳转到下一个条件并运行它。当有 `else-if` 语句且第一个条件结果为假时，第三个条件就会发挥作用。
 
-该章随后进入嵌套 if 语句，即在一个语句内部包含两个或多个 if 语句。接下来是 PHP 循环。它们是 PHP 最有趣的特性。你可以在代码中插入循环，使任务变得简单并在某种程度上自动化。PHP 中有三种循环。第一个将是……（此处原文不完整，按原意翻译）。
+## 第 4 章：循环
 
-*(注：由于提供的原文中第 4 章和第 5 章的内容存在重复和缺失，以上翻译遵循了“不要漏掉任何行”且“不要重复输出原文”的原则，对提供的文本片段进行了对应翻译。)*
+该章随后进入嵌套 `if` 语句，即在一个语句内部包含两个或多个 `if` 语句。接下来是 PHP 循环。它们是 PHP 最有趣的特性。你可以在代码中插入循环，使任务变得简单并在某种程度上自动化。PHP 中有三种循环。第一个将是……（此处原文未完）。
 
-**重新根据提供的完整文本块翻译如下：**
+## 第 5 章：高级功能
 
-`PHP` 并不老；我们可以将它的起源追溯到 1994 年，当时 Rasmus Lerdorf 编写了第一个版本。在最初的阶段，它是基于 `C` 语言构建的，目的是替换他在个人主页上使用的 `Perl` 代码段。它一直在演变；然而，直到 1995 年，他才发布了该语言的第一个正式公开版本。此时，`PHP` 被称为个人主页工具（Personal Homepage Tools）。
+该章随后进入嵌套 `if` 语句，即在一个语句内部包含两个或多个 `if` 语句。接下来是 PHP 循环。它们是 PHP 最有趣的特性。你可以在代码中插入循环，使任务变得简单并在某种程度上自动化。PHP 中有三种循环。第一个将是……（此处原文未完）。
 
-`JavaScript` 必然于 1996 年作为客户端语言发布。`PHP` 在当时作为服务器端语言发布，充分说明了当时互联网工具的巨大增长。1998 年，`PHP` 接收了由 Andi Gutmans 和 Zeev Suraski 发布的第三版本。新版本有了一个独特的名称 `Hypertext Preprocessor`（超文本预处理器）。这个版本让 `PHP` 赢得了巨大的人气。`PHP` 第 4 版本于 2000 年推出，被称为 `Zend Engine`。这个版本将 `PHP` 提升到了以前所未有的水平。它消除了 `PHP` 的某些缺陷并使其成为更完整的语言。`PHP` 第 5 版本于 2004 年发布，具有新功能，如改进的面向对象编程和更好的性能。`PHP 7` 于 2014 年和 2015 年发布。它进一步更新了 `PHP`，以适应更高水平的 Web 开发。
-
-当世界知道 Mark Zuckerberg 使用它创建了世界著名的应用程序 Facebook 时，`PHP` 声名大噪。当 Mark 在 2003 年从哈佛退学时，他采用了这种语言来创建该应用，而 Facebook 应用的后端仍在使用这种语言。Facebook 自此以后开发了名为 `Hack` 的自己的语言，但它是 `PHP` 的一个版本。
-
-*(由于用户提供的文本中第 4 章和第 5 章存在严重的逻辑重复和粘贴错误，我将严格按照你提供的文本内容进行逐行翻译：)*
-
-[content]
-# 第 4 章：循环
-
-该章随后进入嵌套 if 语句，即在一个语句内部包含两个或多个 if 语句。接下来是 PHP 循环。它们是 PHP 最有趣的特性。你可以在代码中插入循环，使任务变得简单并在某种程度上自动化。PHP 中有三种循环。第一个将是……（此处原文未完）。
-
-# 第 5 章：高级功能
-
-（由于原文此处与第 4 章内容重复，此处翻译为：）
-该章随后进入嵌套 if 语句，即在一个语句内部包含两个或多个 if 语句。接下来是 PHP 循环。它们是 PHP 最有趣的特性。你可以在代码中插入循环，使任务变得简单并在某种程度上自动化。PHP 中有三种循环。第一个将是……（此处原文未完）。
-
-*(注：由于提供的源文本本身存在大量重复，以上翻译已完全忠实于你提供的文本结构)*。
-[/content]
-
-**纠正：考虑到你提供的文本中第 4 章和第 5 章的内容是完全重复的，以下是基于你提供的原始文本的完整翻译结果：**
-
-[content]
-# 第 4 章：循环
-
-该章随后进入嵌套 if 语句，即在一个语句内部包含两个或多个 if 语句。接下来是 PHP 循环。它们是 PHP 最有趣的特性。你可以在代码中插入循环，使任务变得简单并在某种程度上自动化。PHP 中有三种循环。第一个将是……
-
-# 第 5 章：高级功能
-
-该章随后进入嵌套 if 语句，即在一个语句内部包含两个或多个 if 语句。接下来是 PHP 循环。它们是 PHP 最有趣的特性。你可以在代码中插入循环，使任务变得简单并在某种程度上自动化。PHP 中有三种循环。第一个将是……
-
-
-
-
-# 第一章：安装 PHP
+## 第一章：安装 PHP
 
 本章将引导你完成在你的计算机系统上安装 PHP 的过程。如果你是 Linux 或 Mac 用户，你已经通过公司在你的计算机系统中安装了 PHP。然而，有时它没有处于激活模式，但你可以轻松地开启它。在 Windows 操作系统上安装 PHP 是真正的任务。Windows 电脑上没有预装 `PHP`。当你安装好之后，你需要配置 Web 服务器来处理 `PHP` 代码。
 
-## 安装 Web 服务器
+### 安装 Web 服务器
 
-安装 PHP 的第一步是在你的计算机系统上安装一个 Web 服务器。你必须下载并安装 `Apache`。如果你使用的是托管或公司网站，并且将文件放在他人的服务器上，那么你完全不需要安装 Web 服务器。你可以使用 `Apache` 的 `httpd`，因为大多数情况下它是免费提供的，而且互联网上广受欢迎的 Web 服务器之一。
+安装 PHP 的第一步是在你的计算机系统上安装一个 Web 服务器。你必须下载并安装 `Apache`。如果你使用的是托管或公司网站，并且将文件放在他人的服务器上，那么你完全不需要安装 Web 服务器。你可以使用 `Apache` 的 `httpd`，因为大多数情况下它是免费提供的，而且是互联网上广受欢迎的 Web 服务器之一。
 
-还有许多其他 Web 服务器可供。微软提供了 `Internet Information Services (IIS)`，它还包含一个带有 `Visual Studio` 开发应用的开发 Web 服务器。另一个名为 `nginx` 的工具也可以用它来满足你的开发需求。`Apache` 非常流行；这就是为什么我在本章将单独介绍 `Apache`。
+还有许多其他 Web 服务器可供选择。微软提供了 `Internet Information Services (IIS)`，它还包含一个带有 `Visual Studio` 开发应用的开发 Web 服务器。另一个名为 `nginx` 的工具也可以用来满足你的开发需求。`Apache` 非常流行；这就是为什么我在本章将单独介绍 `Apache`。
 
-Windows 操作系统没有预装 `Apache`。你必须自己安装。你可以运行测试来检查计算机系统上是否安装了 Web 服务器。打开你的浏览器，在地址栏输入 `[`localhost`](http://localhost)`。如果 浏览器已安装并运行正常，你将看到一个网页。可能会显示一个 `Apache` 欢迎界面并带有一些文本。如果你的系统中没有安装 Web 服务器，页面将显示“无法连接”的字样。
+Windows 操作系统没有预装 `Apache`。你必须自己安装。你可以运行测试来检查计算机系统上是否安装了 Web 服务器。打开你的浏览器，在地址栏输入 `http://localhost`。如果浏览器已安装并运行正常，你将看到一个网页。可能会显示一个 `Apache` 欢迎界面并带有一些文本。如果你的系统中没有安装 Web 服务器，页面将显示“无法连接”的字样。
 
 ### Apache
 
-`Apache` 是一种开源 Web 服务器，你可以从网上免费下载。有三个版本可供下载：`Apache 2.0`、`Apache 2.2` 和 `Apache 2.4`。所有版本都得到了良好的支持并定期升级。`PHP` 软件倾向于这些版本上运行。
+`Apache` 是一种开源 Web 服务器，你可以从网上免费下载。有三个版本可供下载：`Apache 2.0`、`Apache 2.2` 和 `Apache 2.4`。所有版本都得到了良好的支持并定期升级。`PHP` 软件倾向于在这些版本上运行。
 
-你可以从其官方网站下载 `Apache`。你也可以下载源代码并在你的操作系统上进行编译。你可以使用已经编译并处于准备就绪状态的二进制文件复制到当前位置。访问 `[`httpd.apache.org`](http://httpd.apache.org)` 并向下滚动到你想要在操作系统上安装的版本。Windows 二进制文件通常带有一个安装程序，可以安装、配置并启动 `Apache`。当你点击 `Win32 Binary MSI Installer` 时，一个安装文件将下载到你的操作系统中。
+你可以从其官方网站下载 `Apache`。你也可以下载源代码并在你的操作系统上进行编译。你可以使用已经编译并处于准备就绪状态的二进制文件复制到当前位置。访问 `httpd.apache.org` 并向下滚动到你想要在操作系统上安装的版本。Windows 二进制文件通常带有一个安装程序，可以安装、配置并启动 `Apache`。当你点击 `Win32 Binary MSI Installer` 时，一个安装文件将下载到你的操作系统中。
 
 ### 文件验证
 
@@ -111,10 +71,10 @@ Windows 操作系统没有预装 `Apache`。你必须自己安装。你可以运
 
 - 文件名通常为 `apache_`，后面跟着其版本号，称为 `win32-x86-no_ssl.msi`。右键点击该文件并选择`以管理员身份运行`。这将启动安装向导。电脑屏幕上会弹出一个欢迎界面。
 - 现在点击`Next`（下一步）。屏幕上将显示许可协议。
-- 现在选择`I Accept`（我接受）`License Agreement`（许可协议）。现在点击`Next`。如果不接受条款，将无法安装此软件。将显示一个带有 `Apache` 信息的屏幕。
+- 现在选择 `I Accept`（我接受）`License Agreement`（许可协议）。现在点击`Next`。如果不接受条款，将无法安装此软件。将显示一个带有 `Apache` 信息的屏幕。
 - 现在点击`Next`，你将看到一个显示 `Apache` 信息的屏幕。
 - 系统会要求你输入必须的信息。你首先需要输入的是 `Domain Name`（域名）。你应该输入像 `qas.com` 这样的域名。如果你是为了测试安装 `Apache` 并且想从安装了它的机器上访问它，可以输入 `localhost`。
-- 下一个信息是关于 `Server Name`（服务器名称）。在安装 `Apache` 的过程中，你应该输入服务器名称，例如 `[www.localhost.com](http://www.localhost.com)`。如果你是为了测试安装 `Apache` 并且想从安装了它的机器上访问它，可以输入 `localhost`。
+- 下一个信息是关于 `Server Name`（服务器名称）。在安装 `Apache` 的过程中，你应该输入服务器名称，例如 `www.localhost.com`。如果你是为了测试安装 `Apache` 并且想从安装了它的机器上访问它，可以输入 `localhost`。
 - 现在是时候输入电子邮件地址了，以便接收有关你 Web 服务器的邮件消息。
 - 在这一步中，你必须选择让 `Apache` 作为服务运行，还是在你需要手动使用它时启动 `Apache`。
 - 安装类型屏幕将显示在电脑屏幕上。
@@ -123,79 +83,80 @@ Windows 操作系统没有预装 `Apache`。你必须自己安装。你可以运
 - 直到这时，你可以在继续安装之前返回并更改已输入的信息。当安装过程完成后，会弹出一个窗口，告诉你向导已完成安装过程。
 - 现在点击`Finish`（完成）以结束安装过程并退出安装向导。
 
+## 启动 Apache
 
+安装 `Apache` 后，你可能想要启动它。向导可能已经启动了它。但是，当你更改配置设置时，应当在这些新设置生效之前重启 `Apache`。无论如何，`Apache` 已经准备好就绪。
 
+你可以找到 `Apache` 的某些菜单项，用于停止或启动它。你可以点击 `Start`，进入 `Programs`，然后打开 `Apache HTTP Server` 来进入此菜单。现在，点击 `Control Apache Server` 查看菜单包含哪些功能。
 
+你在菜单上看到的第一个选项是 `Start`。当 `Apache` 未在运行时，此选项将启动 `Apache`。如果你在 `Apache` 已经在运行时点击此项，你将看到一条错误信息，提示 `Apache` 已经启动。菜单中的第二个选项是 `Stop`。你可以用它来停止 `Apache`。另一个选项允许你在 `Apache` 已经运行时对其进行 `Restart`（重启）。
 
-# 启动 Apache
+你可以通过一系列命令从 `Apache` 中获取大量信息。你可以通过进入 `Command Prompt` 窗口获取信息。要到达那里，点击 `Start`，然后点击 `Accessories`，再进入 `Command Prompt`。现在切换到安装 `Apache` 的 `bin` 目录。
 
-安装 Apache 后，你可能想要启动它。向导可能已经启动了它。但是，当你更改配置设置时，应当在这些新设置生效之前重启 Apache。无论如何，Apache 已经准备好就绪。
+如果你想找出计算机上安装的是哪个版本的 `Apache`，你应当在命令提示符窗口输入以下命令：
 
-你可以找到 Apache 的某些菜单项，用于停止或启动它。你可以点击 `Start`，进入 `Programs`，然后打开 `Apache HTTP Server` 来进入此菜单。现在，点击 `Control Apache Server` 查看菜单包含哪些功能。
-
-你在菜单上看到的第一个选项是 `Start`。当 Apache 未在运行时，此选项将启动 Apache。如果你在 Apache 已经在运行时点击此项，你将看到一条错误信息，提示 Apache 已经启动。菜单中的第二个选项是 `Stop`。你可以用它来停止 Apache。另一个选项允许你在 Apache 已经运行时对其进行 `Restart`（重启）。
-
-你可以通过一系列命令从 Apache 中获取大量信息。你可以通过进入 `Command Prompt` 窗口获取信息。要到达那里，点击 `Start`，然后点击 `Accessories`，再进入 `Command Prompt`。现在切换到安装 Apache 的 `bin` 目录。
-
-如果你想找出计算机上安装的是哪个版本的 Apache，你应当在命令提示符窗口输入以下命令：
-```
+```bash
 apache –v
 ```
-如果你想找出编译到 Apache 中的模块，你应该输入以下命令：
-```
+
+如果你想找出编译到 `Apache` 中的模块，你应该输入以下命令：
+
+```bash
 apache –1
 ```
-你也可以通过以下命令启动或停止 Apache：
-```
+
+你也可以通过以下命令启动或停止 `Apache`：
+
+```bash
 apache -k start
 apache –k stop
 ```
+
 你可以通过输入以下命令查看可用的选项：
-```
+
+```bash
 apache -h
 ```
 
-# Apache 配置
+## Apache 配置
 
-当 Apache 启动时，它会开始从一个特定的配置文件读取信息。如果 Apache 无法读取配置文件，它将无法启动。Apache 的行为取决于指令。你可以通过编辑配置文件并然后重启 Apache 来更改 Apache 的行为，使其读取新的指令。
+当 `Apache` 启动时，它会开始从一个特定的配置文件读取信息。如果 `Apache` 无法读取配置文件，它将无法启动。`Apache` 的行为取决于指令。你可以通过编辑配置文件并然后重启 `Apache` 来更改 `Apache` 的行为，使其读取新的指令。
 
-如果你选择安装 PHP，你需要配置 Apache 以识别 PHP 程序。Apache 会在名为 `Document Root` 的目录及其子目录下查找特定的网页文件。你可以继续更改 `Document Root` 的位置。
+如果你选择安装 `PHP`，你需要配置 `Apache` 以识别 PHP 程序。`Apache` 会在名为 `Document Root` 的目录及其子目录下查找特定的网页文件。你可以继续更改 `Document Root` 的位置。
 
-# 安装 PHP
+## 安装 PHP
 
-安装 PHP 的第一步是检查操作系统是否已经安装了 PHP。你可以搜索硬盘来查找任何 PHP 文件。如果你使用的是 Windows 操作系统，可以使用 `Find` 功能来定位 PHP。点击 `Start` 然后按 `Find`。如果你在计算机系统上找不到 PHP 文件，则系统尚未安装 PHP。你的系统中可能存在 PHP 文件，但它们不需要安装在系统上。也可能你计算机上安装的 PHP 版本不是最新的。
+安装 PHP 的第一步是检查操作系统是否已经安装了 PHP。你可以搜索硬盘来查找任何 PHP 文件。如果你使用的是 Windows 操作系统，可以使用 `Find` 功能来定位 PHP。点击 `Start`，然后按 `Find`。如果你在计算机系统上找不到 PHP 文件，则系统尚未安装 PHP。你的系统中可能存在 PHP 文件，但它们不需要安装在系统上。也可能你计算机上安装的 PHP 版本不是最新的。
 
-## 获取 PHP
+### 获取 PHP
 
-你可以从互联网下载 PHP。确保你正在下载的版本是最新版。只有当你必须维护或修改网站的现有代码时，才应该选择安装旧版本的 PHP。你用某一个 PHP 版本编写的代码在另一个版本的 PHP 上运行可能可能需要进行修改。
+你可以从互联网下载 PHP。确保你正在下载的版本是最新版。只有当你必须维护或修改网站的现有代码时，才应该选择安装旧版本的 PHP。你用某一个 PHP 版本编写的代码在另一个版本的 PHP 上运行可能需要进行修改。
 
-你可以访问 [www.php.net](http://www.php.net) 下载适用于所有类型操作系统的 PHP。还提供用于编译你操作系统的源代码供下载。在 Mac 和 Linux 上，源代码的编译和安装更加简单。正如前面提到的，你可以下载二进制文件来简化 Windows 的安装过程。
+你可以访问 `www.php.net` 下载适用于所有类型操作系统的 PHP。还提供用于编译你操作系统的源代码供下载。在 Mac 和 Linux 上，源代码的编译和安装更加简单。正如前面提到的，你可以下载二进制文件来简化 Windows 的安装过程。
 
 官方网站提供了 Windows 版本的 zip 压缩包。
 
 
 
-
-
--   通过开始菜单进入 Apache HTTPD Server 文件夹打开 `httpd.conf`。点击 `Configure Apache Server`，然后选择 `Edit Configuration`。如果你在开始菜单中没有找到 `Edit Configuration`，可以在硬盘上找到 `httpd.conf`。你可以在安装 Apache 的目录下找到它。使用记事本（Notepad）等文本编辑器打开该文件。
-
--   现在是时候激活 PHP 模块了。在文件中查找 `LoadModule` 语句部分，然后找到以下此行：
+- 通过开始菜单进入 Apache HTTPD Server 文件夹打开 `httpd.conf`。点击 `Configure Apache Server`，然后选择 `Edit Configuration`。如果你在开始菜单中没有找到 `Edit Configuration`，可以在硬盘上找到 `httpd.conf`。你可以在安装 Apache 的目录下找到它。使用记事本（Notepad）等文本编辑器打开该文件。
+- 现在是时候激活 PHP 模块了。在文件中查找 `LoadModule` 语句部分，然后找到以下此行：
 
 ```apache
 #LoadModule php5_module “c:/php/php5apache2_2.dll.”
 ```
-如果你想激活该模块，可以删除行开头的 `#`。模块名称可能会根据你所使用的 PHP 版本和 Apache 版本而不同。
 
--   你需要告诉 Apache 哪些文件是 PHP 程序，哪些不是。找到描述 `AddType` 的部分。该部分可能包含来自其他软件的一行或多个 `AddType` 行。PHP 的行如下：
+如果你想激活该模块，可以删除行开头的 `#`。模块名称可能会根据你所使用的 PHP 版本和 Apache 版本而不同。
+- 你需要告诉 Apache 哪些文件是 PHP 程序，哪些不是。找到描述 `AddType` 的部分。该部分可能包含来自其他软件的一行或多个 `AddType` 行。PHP 的行如下：
 
 ```apache
 AddType application/x-httpd-php .php
 ```
-找到该行。如果你发现该行开头有井号（#），请将其删除。如果没有该行，你可以将其添加到 `AddType` 语句列表中。
 
--   在较新版本的 Windows 中，你可以通过点击开始菜单“程序”，然后是“Apache HTTPD Server”，最后点击 `Control Apache Server` 来启动 Apache 服务。现在选择 `Start` 或 `Restart`。
+找到该行。如果你发现该行开头有井号（`#`），请将其删除。如果没有该行，你可以将其添加到 `AddType` 语句列表中。
+- 在较新版本的 Windows 中，你可以通过点击开始菜单“程序”，然后是“Apache HTTPD Server”，最后点击 `Control Apache Server` 来启动 Apache 服务。现在选择 `Start` 或 `Restart`。
 
 ## PHP 配置
+
 PHP 使用名为 `php.ini` 的文件的不同设置来控制其行为。PHP 在启动时会查找 `php.ini` 并使用其设置。除非进行更改，否则 `php.ini` 的默认位置是以下位置之一。如果尚未安装 `php.ini` 文件，你现在必须安装。你可以寻找带有默认设置的 `php.ini-dist` 文件。该文件包含在 PHP 分包中。你可以将该文件复制到适当的位置（如上述默认位置），并将文件重命名为 `php.ini`。
 
 如果你安装了如 `PHP 4.3` 等版本的 PHP，可以为 `PHP 5` 或 `6` 创建备份。然后查看当前正在使用的设置。要配置 PHP，请打开并编辑 `php.ini` 文件。然后更改你需要修改的设置。
@@ -205,24 +166,23 @@ PHP 使用名为 `php.ini` 的文件的不同设置来控制其行为。PHP 在�
 ```ini
 cgi.force_redirect = 0
 ```
+
 如果你正在使用 `PHP 5` 或更高版本，你需要设置本地时区。现在保存 `php.ini` 文件并重启你的 Web 服务器。
 
 # 第二章：PHP 基础
+
 PHP 是一种用于 Web 的脚本语言。它具有广泛的功能，可以帮助你完成开发动态 Web 应用所需的任务。本章将带你了解编写 PHP 脚本的基础知识，例如适用于不同 PHP 语句的规则。你可以将这些规则视为普通的标点符号规则。
 
 PHP 软件的工作方式就像 Web 服务器。当你在浏览器的地址栏中输入 `URL` 时，你会向 Web 服务器发送一条消息，告诉它发送一个 HTML 文件。Web 服务器将通过发送你请求的文件来响应。浏览器将读取该 HTML 文件并显示网页。
 
 当安装 PHP 时，Web 服务器通常配置为期望文件扩展名包含某些 PHP 语句。扩展名通常为 `.phtml` 或 `.php`。当 Web 服务器接收到带有指定扩展名的文件请求时，它将按原处理 HTML 语句。PHP 语句不是浏览器的一部分，因此 PHP 代码对用户是隐藏的。
 
-创建 HTML 页面超文本标记语言也是一种 Web 语言。当你在 浏览器（如 Google Chrome、Firefox 和 Safari）中打开网页时，浏览器会下载该页面，你看到的就是 HTML 页面。HTML 就像文档，与你在文字处理器中创建的文档非常相似。查看和编辑文档需要像 MS Word 这样的程序，因为 MS Processor 只能读取该格式。在 HTML 的情况下，Web 浏览器就是读取并显示用 HTML 创建的的程序。与文字处理器不同，你不能通过浏览器创建 HTML 文档。你必须借助编辑器来创建 HTML 文档。编辑器可以是简单的如记事本，也可以复杂的如 Microsoft Visual Studio。我们必须理解 HTML，因为我们需要这种语言来嵌入 PHP 并在浏览器中运行。所有的 HTML 文档都应该以 `<!DOCTYPE html>` 开头。
-
-
-
-
+创建 HTML 页面超文本标记语言也是一种 Web 语言。当你在浏览器（如 Google Chrome、Firefox 和 Safari）中打开网页时，浏览器会下载该页面，你看到的就是 HTML 页面。HTML 就像文档，与你在文字处理器中创建的文档非常相似。查看和编辑文档需要像 MS Word 这样的程序，因为 MS Processor 只能读取该格式。在 HTML 的情况下，Web 浏览器就是读取并显示用 HTML 创建的程序。与文字处理器不同，你不能通过浏览器创建 HTML 文档。你必须借助编辑器来创建 HTML 文档。编辑器可以是简单的如记事本，也可以复杂的如 Microsoft Visual Studio。我们必须理解 HTML，因为我们需要这种语言来嵌入 PHP 并在浏览器中运行。所有的 HTML 文档都应该以 `<!DOCTYPE html>` 开头。
 
 ## 这就是你如何插入三级标题
 
 ### 分析 PHP 脚本
+
 PHP 在用于网页时，作为一种嵌入式脚本语言而广为人知。这意味着你必须在 HTML 代码中以嵌入式的形式使用它。你必须使用 HTML 标签来编写 PHP 语言。这个过程与其他 HTML 文档相同。你可以像创建和编辑其他 HTML 页面一样，创建并编辑包含 PHP 的不同网页。
 
 PHP 语言语句通常包含在特定的 PHP 标签中。PHP 脚本可以放置在文档的任何位置。脚本以 `<?php` 开始，以 `?>` 结束。
@@ -287,7 +247,7 @@ main.php
 </html>
 ```
 
-如果你熟悉 Python，你可能知道 Python 是区分大小大小的。这意味着在 Python 中，`class` 和 `CLASS` 两个单词是大小敏感的。让我们看看 PHP 如何处理各种大小写情况。
+如果你熟悉 Python，你可能知道 Python 是区分大小写的。这意味着在 Python 中，`class` 和 `CLASS` 两个单词是大小敏感的。让我们看看 PHP 如何处理各种大小写情况。
 
 ```html
 <html>
@@ -359,12 +319,15 @@ My coat is <br>
 ```
 
 PHP Notice: Undefined variable: COLOR in `/home/cg/root/3268398/main.php` on line 9
+
 PHP Notice: Undefined variable: coLOR in `/home/cg/root/3268398/main.php` on line 10
 
 ### PHP 代码
+
 PHP 代码应当对人类和 PHP 软件可读。当你为 Web 应用程序编写脚本时，你编写的脚本应该是易于维护的。你可以创建并以一种易于理解的方式编写。PHP 语句应该以单行编写并以分号结束。
 
 ### PHP 变量
+
 通常，PHP 变量以 `$` 符号开头，后面跟着变量名。`echo` 用于显示输出。查看以下示例以了解如何在屏幕上显示。
 
 ```html
@@ -382,6 +345,7 @@ echo "PHP is " . $txt . ".";
 ```
 
 ### 字符串
+
 PHP 字符串是字符的形式。这些是数字、字母和标点。当字符串作为变量时，你告诉 PHP 它何时开始以及何时结束。使用双引号或单引号都有相同的结果。
 
 ```html
@@ -399,6 +363,7 @@ echo $string;
 ```
 
 ### 字符串连接
+
 你可以通过被称为连接的连接来连接字符串。
 
 ```html
@@ -418,6 +383,7 @@ echo $stringall;
 ```
 
 ### Heredoc
+
 PHP 提供了一种名为 heredoc 的功能，你可以用它来创建跨行的长字符串。Heredoc 允许你告诉 PHP 应该从哪里开始结束。`ENDSTRING` 可以包含你需要的任何内容。通过将 `ENDSTRING` 放在开头和结尾，你会封装想要存储在变量 `$varname` 中的文本。当 PHP 处理 heredoc 时，它会读取 `ENDSTRING` 并知道开始测试。
 
 ```html
@@ -438,11 +404,8 @@ echo $herevariable;
 ```
 
 ### 数组
+
 数组被认为是复杂的变量。特定的数组倾向于在一个变量名中存储一组值。这对于存储相关值非常有用。你可以存储关于某种花卉的颜色、品种和成本的信息。你可以处理、修改并访问这些信息。
-
-
-
-
 
 # 第三章：创建 PHP 脚本
 
@@ -452,7 +415,7 @@ PHP 脚本通常指的是具有特定扩展名的文件中的系列指令，这�
 
 PHP 中的条件是 PHP 测试或评估的表达式，用以验证条件是否为真或假。PHP 条件通常以复杂语句的形式使用，用于检查填充有简单语句的块是否可以执行。你必须比较不同的值来设置条件。
 
-### if 语句
+### `if` 语句
 
 当其中一个条件为真时，`if` 语句将执行代码。`if` 语句的第一部分（你将在示例中看到的）是 `if` 部分。如果条件为真，则执行该语句块。当它们被执行时，脚本将通过遵循条件语句跳转到下一条指令。如果条件语句拥有 `else-if` 或 `else` 部分，脚本将跳过它们。如果条件为假，则不执行该语句块。脚本将跳到下一条指令，该指令将是 `else-if`、`else`，或者 `if` 条件语句之后的任何其他后续指令。
 
@@ -538,6 +501,8 @@ This is Excellent! Your grade is A
 ```
 
 现在我将更改分数让第二个代码块工作。这是示例：
+
+
 
 ```html
 <html>
@@ -675,7 +640,7 @@ You are doomed! Your grade is F
 </html>
 ```
 
-### 嵌套 if
+### 嵌套 `if`
 
 你可以将一个 `if` 条件语句放在另一个 `if` 语句内部。这个过程被称为嵌套。假设你必须联系住在明尼苏达州的客户。你计划向他们的 ID 发送电子邮件，然后向那些没有地址的人发送信。你可以通过以下方法识别客户群。
 
@@ -691,7 +656,7 @@ if ($thecustState == "ID") {
 }
 ```
 
-### Switch 语句
+### `Switch` 语句
 
 `switch` 语句旨在测试 `$variablename` 的值。脚本移动到 `case` 部分并执行语句，直到遇到 `break` 语句或 `switch` 结束。你可以使用 `switch` 语句来执行特定的代码。
 
@@ -746,227 +711,356 @@ for($a=1;$a<=12;$a++) {
 ?>
 ```
 
+- 在开始时，你可以设置一个条件。
+- 然后在每个单独循环的顶部测试该条件。
+- 如果条件为真，循环将重复执行。如果条件为假，循环将停止。
 
+### `While` 循环
 
-
-
-* 在开始时，你可以设置一个条件。
-* 然后在每个单独循环的顶部测试该条件。
-* 如果条件为真，循环将重复执行。如果条件为假，循环将停止。
-
-### While 循环
-
-这是一个 while 循环，它将整齐地显示蔬菜的名称。
+这是一个 `while` 循环，它将整齐地显示蔬菜的名称。
 
 ```html
-<html> <head> <title>This is PHP</title> </head> <body> <?php 
-$vegetables = array ( "pumpkin", "carrot", "radish", "beet", "tomato", "potato"); 
-$testvariable = "no"; 
-$k = 0; 
-while ( $testvariable != "yes" ) { 
-    if ($vegetables[$k] == "tomato" ) { 
-        $testvariable = "yes"; 
-        echo "Now we have a tomato.\\n"; 
-    } else { 
-        echo "$vegetables[$k] is not a tomato\\n"; 
-    } 
-    $k++; 
-} 
-?> </body>
+<html>
+<head>
+<title>This is PHP</title>
+</head>
+<body>
+<?php
+$vegetables = array ( "pumpkin", "carrot", "radish", "beet", "tomato", "potato");
+$testvariable = "no";
+$k = 0;
+while ( $testvariable != "yes" ) {
+    if ($vegetables[$k] == "tomato" ) {
+        $testvariable = "yes";
+        echo "Now we have a tomato.\\n";
+    } else {
+        echo "$vegetables[$k] is not a tomato\\n";
+    }
+    $k++;
+}
+?>
+</body>
 </html>
 ```
 
 `$php main.php`
 
 ```html
-<html> <head> <title>This is PHP</title> </head> <body> pumpkin is not a tomato carrot is not a tomato radish is not a tomato beet is not a tomato Now we have a tomato. </body> </html>
+<html>
+<head>
+<title>This is PHP</title>
+</head>
+<body>
+pumpkin is not a tomato carrot is not a tomato radish is not a tomato beet is not a tomato Now we have a tomato.
+</body>
+</html>
 ```
 
 在接下来的示例中，我将改变蔬菜并观察循环是如何工作的。
 
 ```html
-<html> <head> <title>This is PHP</title> </head> <body> <?php 
-$vegetables = array ( "pumpkin", "carrot", "radish", "beet", "tomato", "potato"); 
-$testvariable = "no"; 
-$k = 0; 
-while ( $testvariable != "yes" ) { 
-    if ($vegetables[$k] == "potato" ) { 
-        $testvariable = "yes"; 
-        echo "Now we have a potato.\\n"; 
-    } else { 
-        echo "$vegetables[$k] is not a potato\\n"; 
-    } 
-    $k++; 
-} 
-?> </body>
+<html>
+<head>
+<title>This is PHP</title>
+</head>
+<body>
+<?php
+$vegetables = array ( "pumpkin", "carrot", "radish", "beet", "tomato", "potato");
+$testvariable = "no";
+$k = 0;
+while ( $testvariable != "yes" ) {
+    if ($vegetables[$k] == "potato" ) {
+        $testvariable = "yes";
+        echo "Now we have a potato.\\n";
+    } else {
+        echo "$vegetables[$k] is not a potato\\n";
+    }
+    $k++;
+}
+?>
+</body>
 </html>
 ```
 
 `$php main.php`
 
 ```html
-<html> <head> <title>This is PHP</title> </head> <body> pumpkin is not a potato carrot is not a potato radish is not a potato beet is not a potato tomato is not a potato Now we have a potato. </body> </html>
+<html>
+<head>
+<title>This is PHP</title>
+</head>
+<body>
+pumpkin is not a potato carrot is not a potato radish is not a potato beet is not a potato tomato is not a potato Now we have a potato.
+</body>
+</html>
 ```
 
-### Do...while 循环
+### `Do...while` 循环
 
-do…while 循环倾向于在开始时循环一次特定的代码块，只要条件为真，它就会持续重复。它会执行一次代码，检查条件，然后只要条件为真就会重复循环。许多程序员将 `do...while` 循环和 `while` 循环放在同一个地方，然而，`do...while` 循环在循环底部测试一组条件。如果条件为真，循环就开始重复执行。如果条件为假，`do...while` 循环就会停止工作。
+`do…while` 循环倾向于在开始时循环一次特定的代码块，只要条件为真，它就会持续重复。它会执行一次代码，检查条件，然后只要条件为真就会重复循环。许多程序员将 `do...while` 循环和 `while` 循环放在同一个地方，然而，`do...while` 循环在循环底部测试一组条件。如果条件为真，循环就开始重复执行。如果条件为假，`do...while` 循环就会停止工作。
 
 ```html
-<html> <head> <title>This is PHP</title> </head> <body> <?php 
-$vegetables = array ( "pumpkin", "carrot", "radish", "beet", "tomato", "potato"); 
-$testvariable = "no"; 
-$k = 0; 
-do { 
-    if ($vegetables[$k] == "beet" ) { 
-        $testvariable = "yes"; 
-        echo "Now we have a beet.\\n"; 
-    } else { 
-        echo "$vegetables[$k] is not a potato\\n"; 
-    } 
-    $k++; 
-} while ($testvariable != "yes"); 
-?> </body>
+<html>
+<head>
+<title>This is PHP</title>
+</head>
+<body>
+<?php
+$vegetables = array ( "pumpkin", "carrot", "radish", "beet", "tomato", "potato");
+$testvariable = "no";
+$k = 0;
+do {
+    if ($vegetables[$k] == "beet" ) {
+        $testvariable = "yes";
+        echo "Now we have a beet.\\n";
+    } else {
+        echo "$vegetables[$k] is not a potato\\n";
+    }
+    $k++;
+} while ($testvariable != "yes");
+?>
+</body>
 </html>
 ```
 
 `$php main.php`
 
 ```html
-<html> <head> <title>This is PHP</title> </head> <body> pumpkin is not a potato carrot is not a potato radish is not a potato Now we have a beet. </body> </html>
+<html>
+<head>
+<title>This is PHP</title>
+</head>
+<body>
+pumpkin is not a potato carrot is not a potato radish is not a potato Now we have a beet.
+</body>
+</html>
 ```
 
 在下段代码中，我将 beet 改为 potato。让我们看看代码的结果。
 
 ```html
-<html> <head> <title>This is PHP</title> </head> <body> <?php 
-$vegetables = array ( "pumpkin", "carrot", "radish", "beet", "tomato", "potato"); 
-$testvariable = "no"; 
-$k = 0; 
-do { 
-    if ($vegetables[$k] == "potato" ) { 
-        $testvariable = "yes"; 
-        echo "Now we have a potato.\\n"; 
-    } else { 
-        echo "$vegetables[$k] is not a potato\\n"; 
-    } 
-    $k++; 
-} while ($testvariable != "yes"); 
-?> </body>
+<html>
+<head>
+<title>This is PHP</title>
+</head>
+<body>
+<?php
+$vegetables = array ( "pumpkin", "carrot", "radish", "beet", "tomato", "potato");
+$testvariable = "no";
+$k = 0;
+do {
+    if ($vegetables[$k] == "potato" ) {
+        $testvariable = "yes";
+        echo "Now we have a potato.\\n";
+    } else {
+        echo "$vegetables[$k] is not a potato\\n";
+    }
+    $k++;
+} while ($testvariable != "yes");
+?>
+</body>
 </html>
 ```
 
 `$php main.php`
 
 ```html
-<html> <head> <title>This is PHP</title> </head> <body> pumpkin is not a potato carrot is not a potato radish is not a potato tomato is not a potato we have a potato. </body> </html>
+<html>
+<head>
+<title>This is PHP</title>
+</head>
+<body>
+pumpkin is not a potato carrot is not a potato radish is not a potato tomato is not a potato we have a potato.
+</body>
+</html>
 ```
 
 如果你仔细观察上面的代码，你会发现 `while` 循环和 `do...while` 循环的输出是相同的。它们的区别在于，在 `while` 循环中条件在代码顶部检查，而在 `do...while` 循环中通常在代码底部检查。如果我们从一开始就将 `testvariable` 的值设置为 ‘yes’，那么代码块永远不会运行。
 
 ```html
-<html> <head> <title>This is PHP</title> </head> <body> <?php 
-$vegetables = array ( "pumpkin", "carrot", "radish", "beet", "tomato", "potato"); 
-$testvariable = "yes"; 
-$k = 0; 
-do { 
-    if ($vegetables[$k] == "potato" ) { 
-        $testvariable = "yes"; 
-        echo "Now we have a potato.\\n"; 
-    } else { 
-        echo "$vegetables[$k] is not a potato\\n"; 
-    } 
-    $k++; 
-} while ($testvariable != "yes"); 
-?> </body>
+<html>
+<head>
+<title>This is PHP</title>
+</head>
+<body>
+<?php
+$vegetables = array ( "pumpkin", "carrot", "radish", "beet", "tomato", "potato");
+$testvariable = "yes";
+$k = 0;
+do {
+    if ($vegetables[$k] == "potato" ) {
+        $testvariable = "yes";
+        echo "Now we have a potato.\\n";
+    } else {
+        echo "$vegetables[$k] is not a potato\\n";
+    }
+    $k++;
+} while ($testvariable != "yes");
+?>
+</body>
 </html>
 ```
 
 `$php main.php`
 
 ```html
-<html> <head> <title>This is PHP</title> </head> <body> pumpkin is not a potato </body> </html>
+<html>
+<head>
+<title>This is PHP</title>
+</head>
+<body>
+pumpkin is not a potato
+</body>
+</html>
 ```
 
 ### 无限循环
 
 你可以设置无限循环。它们会永远运行。无限循环是无意创建的。无限循环会持续下去。无限循环被用于……无限循环的名称是……在代码顶部的循环。
 
+
+
 ```html
-<html> <head> <title>This is PHP</title> </head> <body> <?php 
-$vegetables = array ( "pumpkin", "carrot", "radish", "beet", "tomato", "potato"); 
-$testvariable = "no"; 
-$k = 0; 
-while ( $testvariable != "yes" ) { 
-    if ($vegetables[$k] == "tomato" ) { 
-        $testvariable = "yes"; 
-        echo "Now we have a tomato.\\n"; 
-    } else { 
-        echo "$vegetables[$k] is not a tomato\\n"; 
-    } 
-    $k++; 
-} 
-?> </body>
+<html>
+<head>
+    <title>This is PHP</title>
+</head>
+<body>
+<?php
+$vegetables = array(
+    "pumpkin",
+    "carrot",
+    "radish",
+    "beet",
+    "tomato",
+    "potato"
+);
+$testvariable = "no";
+$k = 0;
+
+while ($testvariable != "yes") {
+    if ($vegetables[$k] == "tomato") {
+        $testvariable = "yes";
+        echo "Now we have a tomato.\\n";
+    } else {
+        echo "$vegetables[$k] is not a tomato\\n";
+    }
+    $k++;
+}
+?>
+</body>
 </html>
 ```
 
-### Break 语句
+### `break` 语句
 
-Break 语句可以帮助你跳出循环。Break 语句更多用于 switch 语句。Break 语句在某一点停止了。
+`break` 语句可以帮助你跳出循环。`break` 语句更多用于 `switch` 语句。`break` 语句在某一点停止了。
 
 ```html
-<html> <head> <title>This is PHP</title> </head> <body> <?php 
-$thecounter = 0; 
-while ( $thecounter < 15 ) { 
-    $thecounter++; 
-    if ($thecounter == 13 ) { 
-        echo "break\\n"; 
-        break; 
-    } 
-    echo "This is the last line in the loop:$thecounter\\n"; 
-} 
-?> </body>
+<html>
+<head>
+    <title>This is PHP</title>
+</head>
+<body>
+<?php
+$thecounter = 0;
+
+while ($thecounter < 15) {
+    $thecounter++;
+
+    if ($thecounter == 13) {
+        echo "break\\n";
+        break;
+    }
+
+    echo "This is the last line in the loop:$thecounter\\n";
+}
+?>
+</body>
 </html>
 ```
 
 `$php main.php`
 
 ```html
-<html> <head> <title>This is PHP</title> </head> <body> This is the last line in the loop: counter=1 This is the last line in the loop: counter=2 This is the last line in the loop: counter=3 This is the last line in the loop: counter=4 This is the last line in the loop: counter=5 This is the last line in the loop: counter=6 This is the last line in the loop: counter=7 This is the last line in the loop: counter=8 This is the last line in the loop: counter=9 This is the last line in the loop: counter=10 This is the last line in the loop: counter=11 This is the last line in the loop: counter=12 This is the last line in the loop: counter=13 break This is the last line in the loop: counter=14 </body>
+<html>
+<head>
+    <title>This is PHP</title>
+</head>
+<body>
+    This is the last line in the loop: counter=1
+    This is the last line in the loop: counter=2
+    This is the last line in the loop: counter=3
+    This is the last line in the loop: counter=4
+    This is the last line in the loop: counter=5
+    This is the last line in the loop: counter=6
+    This is the last line in the loop: counter=7
+    This is the last line in the loop: counter=8
+    This is the last line in the loop: counter=9
+    This is the last line in the loop: counter=10
+    This is the last line in the loop: counter=11
+    This is the last line in the loop: counter=12
+    This is the last line in the loop: counter=13
+    break
+    This is the last line in the loop: counter=14
+</body>
 </</html>
 ```
 
-### Continue 语句
+### `continue` 语句
 
-Continue 语句可以跳过。Continue 语句将继续循环。
+`continue` 语句可以跳过。`continue` 语句将继续循环。
 
 ```html
-<html> <head> <title>This is PHP</title> </head> <body> <?php 
-$thecounter = 0; 
-while ( $thecounter < 12 ) { 
-    $thecounter++; 
-    if ($thecounter == 10 ) { 
-        echo "this will continue the loop\\n"; 
-        continue; 
-    } 
-    echo "This is the last line in the loop:counter=$thecounter\\n"; 
-} 
-?> </body>
+<html>
+<head>
+    <title>This is PHP</title>
+</head>
+<body>
+<?php
+$thecounter = 0;
+
+while ($thecounter < 12) {
+    $thecounter++;
+
+    if ($thecounter == 10) {
+        echo "this will continue the loop\\n";
+        continue;
+    }
+
+    echo "This is the last line in the loop:counter=$thecounter\\n";
+}
+?>
+</body>
 </html>
 ```
 
 `$php main.php`
 
 ```html
-<html> <head> <title>This is PHP</title> </head> <body> This is the last line in the loop: counter=1 This is the last line in the loop: counter=2 This is the last line in the loop: counter=3 This is the last line in the loop: counter=4 This is the last line in the loop: counter=5 This is the last line in the loop: counter=6 This is the last line in the loop: counter=7 This is the last line in the loop: counter=8 This is the last line in the loop: counter=9 this will continue the loop This is the last line in the loop: counter=11 This is the last line in the loop: counter=12 break </body>
+<html>
+<head>
+    <title>This is PHP</title>
+</head>
+<body>
+    This is the last line in the loop: counter=1
+    This is the last line in the loop: counter=2
+    This is the last line in the loop: counter=3
+    This is the last line in the loop: counter=4
+    This is the last line in the loop: counter=5
+    This is the last line in the loop: counter=6
+    This is the last line in the loop: counter=7
+    This is the last line in the loop: counter=8
+    This is the last line in the loop: counter=9
+    this will continue the loop
+    This is the last line in the loop: counter=11
+    This is the last line in the loop: counter=12
+    break
+</body>
 </</html>
 ```
 
 如果你担心无限循环，可以在代码中插入 `break` 语句。
-
-
-
-
 
 # 第四章：高级 PHP
 
@@ -977,15 +1071,16 @@ while ( $thecounter < 12 ) {
 在接下来的示例中，我将创建一个 PHP 函数示例。函数中的大括号标记了函数的开始和结束。当你需要调用函数时，只需简单编写它的名称即可。
 
 ```html
-<<html>
+<html>
 <head>
     <title>This is PHP function</title>
 </head>
 <body>
 <?php
-function greetings() { 
-    echo "Good morning! Hope you are fine!"; 
+function greetings() {
+    echo "Good morning! Hope you are fine!";
 }
+
 greetings(); // 这就是调用函数的方式
 ?>
 </body>
@@ -997,7 +1092,7 @@ $php main.php
 ```
 
 ```html
-<html
+<html>
 <head>
     <title>This is PHP function</title>
 </head>
@@ -1010,18 +1105,19 @@ $php main.php
 看另一个示例。
 
 ```html
-<html
+<html>
 <head>
     <title>This is PHP function</title>
 </head>
 <body>
 <?php
-function format_your_name() { 
-    global $formatted_name; 
-    $your_first_name = "Chris"; 
-    $your_last_name = "Angel"; 
-    $formatted_name = $your_last_name. "," .$your_first_name; 
+function format_your_name() {
+    global $formatted_name;
+    $your_first_name = "Chris";
+    $your_last_name = "Angel";
+    $formatted_name = $your_last_name . "," . $your_first_name;
 }
+
 format_your_name();
 echo "$formatted_name";
 ?>
@@ -1034,7 +1130,7 @@ $php main.php
 ```
 
 ```html
-<html
+<html>
 <head>
     <title>This is PHP function</title>
 </head>
@@ -1051,15 +1147,16 @@ $php main.php
 你可以通过参数向函数传递信息。参数的作用就像变量一样。它们指定在函数名称后面的括号内。你可以向函数中添加任意数量的变量。
 
 ```html
-<html
+<html>
 <head>
     <title>This is PHP function</title>
 </head>
 <body>
 <?php
-function greetings($name) { 
-    echo "$name, welcome to the bachelor's club.<br>"; 
+function greetings($name) {
+    echo "$name, welcome to the bachelor's club.<br>";
 }
+
 greetings("John");
 greetings("Sylvia");
 greetings("Sim");
@@ -1075,7 +1172,7 @@ $php main.php
 ```
 
 ```html
-<html
+<html>
 <head>
     <title>This is PHP function</title>
 </head>
@@ -1092,20 +1189,21 @@ $php main.php
 你还可以通过添加更多参数来扩展脚本。在下一个示例中，我将在脚本中添加两个参数。
 
 ```html
-<html
+<html>
 <head>
     <title>This is PHP function</title>
 </head>
 <body>
 <?php
-function greetings($name, $year) { 
-    echo "$name, welcome to the adult's club. I suppose you are born in $year <br>"; 
+function greetings($name, $year) {
+    echo "$name, welcome to the adult's club. I suppose you are born in $year <br>";
 }
-greetings("John" , "1999");
-greetings("Sylvia" , "1988");
-greetings("Sim" , "1995");
-greetings("Kai Jim" , "2001");
-greetings("Ben" , "2002");
+
+greetings("John", "1999");
+greetings("Sylvia", "1988");
+greetings("Sim", "1995");
+greetings("Kai Jim", "2001");
+greetings("Ben", "2002");
 ?>
 </body>
 </html>
@@ -1116,7 +1214,7 @@ $php main.php
 ```
 
 ```html
-<html
+<html>
 <head>
     <title>This is PHP function</title>
 </head>
@@ -1135,19 +1233,20 @@ $php main.php
 你可以为参数使用默认值，这样如果你留空参数部分仍然可以调用函数。
 
 ```html
-<html
+<html>
 <head>
     <title>This is PHP function</title>
 </head>
 <body>
 <?php
-function greetings($name = "Tom", $year = 1996) { 
+function greetings($name = "Tom", $year = 1996) {
     echo "$name, welcome to the adult's club. I suppose you are born in $year <br>";
 }
-greetings("John" , "1999");
-greetings("Sylvia" , "1988");
+
+greetings("John", "1999");
+greetings("Sylvia", "1988");
 greetings();
-greetings("Kai Jim" , "2001");
+greetings("Kai Jim", "2001");
 greetings();
 ?>
 </body>
@@ -1159,7 +1258,7 @@ $php main.php
 ```
 
 ```html
-<html
+<html>
 <head>
     <title>This is PHP function</title>
 </head>
@@ -1178,16 +1277,17 @@ $php main.php
 如果你想让函数返回值，必须在代码中插入 `return` 语句。
 
 ```html
-<html
+<html>
 <head>
     <title>This is PHP function</title>
 </head>
 <body>
 <?php
-function sumup(int $a, int $b) { 
-    $c = $a + $b; 
+function sumup(int $a, int $b) {
+    $c = $a + $b;
     return $c;
 }
+
 echo "45 + 10 = " . sumup(45, 10) . "<br>";
 echo "57 + 13 = " . sumup(57, 13) . "<br>";
 echo "29 + 41 = " . sumup(29, 41);
@@ -1201,7 +1301,7 @@ $php main.php
 ```
 
 ```html
-<html
+<html>
 <head>
     <title>This is PHP function</title>
 </head>
@@ -1218,20 +1318,21 @@ $php main.php
 函数对你需要传递的值非常敏感。如果你发送的值不够，函数将检测到缺失的值。当你执行代码时会看到警告消息。
 
 ```html
-<html
+<html>
 <head>
     <title>This is PHP function</title>
 </head>
 <body>
 <?php
-function greetings($name , $year) { 
-    echo "$name, welcome to the adult's club. I suppose you are born in $year <br>"; 
+function greetings($name, $year) {
+    echo "$name, welcome to the adult's club. I suppose you are born in $year <br>";
 }
-greetings("John" , 1999);
-greetings( "Sim", 1988);
-greetings("Drake" , 2000);
-greetings("Kai Jim" , 2001);
-greetings( 2002);
+
+greetings("John", 1999);
+greetings("Sim", 1988);
+greetings("Drake", 2000);
+greetings("Kai Jim", 2001);
+greetings(2002);
 ?>
 </body>
 </html>
@@ -1242,7 +1343,7 @@ $php main.php
 ```
 
 ```html
-<html
+<html>
 <head>
     <title>This is PHP function</title>
 </head>
@@ -1251,18 +1352,16 @@ $php main.php
     Sim, welcome to the adult's club. I suppose you are born in 1988 <br>
     Drake, welcome to the adult's club. I suppose you are born in 2000 <br>
     Kai Jim, welcome to the adult's club. I suppose you are born in 2001 <br>
-     PHP Fatal error: Uncaught ArgumentCountError: Too few arguments to function greetings(), 1 passed in /home/cg/root/1842013/main.php on line 15 and exactly 2 expected in /home/cg/root/1842013/main.php:7 Stack trace: #0 /home/cg/root/1842013/main.php(15): greetings(2002) #1 {main} thrown in /home/cg/root/1842013/main.php on line 7
+    PHP Fatal error: Uncaught ArgumentCountError: Too few arguments to function greetings(), 1 passed in /home/cg/root/1842013/main.php on line 15 and exactly 2 expected in /home/cg/root/1842013/main.php on line 7 Stack trace: #0 /home/cg/root/1842013/main.php(15): greetings(2002) #1 {main} thrown in /home/cg/root/1842013/main.php on line 7
 </body>
 </html>
 ```
 
 你可以看到缺失参数触发的错误。
 
-
-
-
-
 # 第五章：面向对象编程
+
+
 
 面向对象编程（OOP）是一种围绕类和对象的特殊编程方法。它是目前 PHP 最流行的用法之一。PHP5 的发布是作为面向对象编程的改进版本。它具有更快的速度和更改进的功能。面向对象编程，缩写为 OOP，并不是关于使用不同的语法，而是关于为你提供一种不同的分析问题并刻画其解决方案的方法。在 OOP 中，脚本被视为一组不同的对象，这些对象代表了脚本必须解决的问题元素。如果脚本是关于一个二手车交易场的，那么对象可以是客户和汽车。OOP 带来了新的概念和术语。
 
@@ -1275,7 +1374,7 @@ PHP 代码中的类充当用于创建对象的模板。类通常定义了特定�
 你也可以写像下面这样的语句：
 
 ```html
-<html
+<html>
 <head>
 <title>这是一个 PHP 函数示例</title>
 </head>
@@ -1301,7 +1400,7 @@ class Vegetables {
 在类中，变量被标记为属性（properties），而函数被称为方法（methods）。没有对象，类一无是处。你可以自由地从一个类中创建大量的对象。每个对象都包含该类中定义的某些属性和方法，但是它们的属性值是不同的。`new` 关键字用于创建类的对象。然后是 `Vegetables` 类的实例。
 
 ```html
-<<html>
+<html>
 <head>
 <title>这是一个 PHP 函数示例</title>
 </head>
@@ -1330,6 +1429,7 @@ echo $beet->get_name();
 </body>
 </html>
 ```
+
 `$php main.php`
 
 ```html
@@ -1386,6 +1486,7 @@ echo "Color: " . $beet->get_color();
 </body>
 </html>
 ```
+
 `$php main.php`
 
 ```html
@@ -1406,7 +1507,9 @@ PotatoColor: Red<br>Beet<br>Color: Blue
 你为每个属性需要一个关键字，以决定如何访问它们：
 
 - `public` 关键字：可以在类外部的另一个类或脚本中访问。
+
 - `private` 关键字：无法从类的外部访问属性。
+
 - `protected` 关键字：可以在类内部或其子类中访问。
 
 ## 构造函数 (Constructor Function)
@@ -1438,6 +1541,7 @@ echo $potato->get_name();
 </body>
 </html>
 ```
+
 `$php main.php`
 
 ```html
@@ -1525,6 +1629,7 @@ echo $turnip->get_shape();
 </body>
 </html>
 ```
+
 `$php main.php`
 
 ```html
@@ -1583,6 +1688,7 @@ $beet = new Vegetables("Beet", "Red");
 </body>
 </html>
 ```
+
 `$php main.php`
 
 ```html
@@ -1594,6 +1700,7 @@ $beet = new Vegetables("Beet", "Red");
 </body>
 </html>
 ```
+
 The vegetable is Beet and the color is Red. The vegetable is Potato and the color is Brown.
 
 ## PHP 访问修饰符 (PHP Access Modifiers)
@@ -1601,7 +1708,9 @@ The vegetable is Beet and the color is Red. The vegetable is Potato and the colo
 PHP 属性和方法通常有访问修饰符来控制它们如何被访问。通常有三种修饰符：`public`、`protected` 和 `private`。
 
 - `public` 修饰符：可以在任何地方访问。
+
 - `protected` 修饰符：可以在类内部以及派生自类中访问。
+
 - `private` 修饰符：只能在类内部访问。
 
 在这个例子中，我为上述属性添加了三种不同的访问修饰符。如果你设置 name 属性将会成功。但是如果你设置 weight 或 color 属性将会报错。
@@ -1626,7 +1735,9 @@ $beet->weight = '50'; // 将触发 ERROR
 </body>
 </html>
 ```
+
 PHP Fatal error: Uncaught Error: Cannot access protected property Vegetable::$vcolor in /home/cg/root/27113/main.php:15
+
 Stack trace: #0 {main} thrown in /home/cg/root/27113/main.php on 15
 
 ## 继承 (Inheritance)
@@ -1664,6 +1775,7 @@ $beet->intro();
 </body>
 </html>
 ```
+
 `$php main.php`
 
 ```html
@@ -1678,6 +1790,8 @@ The vegetable is Beet and its color is purplish red.
 ```
 
 由于 `Beet` 派自 `Vegetable` 类，它可以使用主类中的 `vname` 和 `vcolor` 属性以及其他方法。它也有自己的名为 `message` 的方法。在下一个例子中，我将主类的函数从 `public` 为 `protected`。你将在编辑器屏幕上看到一个致命错误。
+
+
 
 ```html
 <html>
@@ -1710,6 +1824,7 @@ $beet->intro();
 </body>
 </html>
 ```
+
 `$php main.php`
 
 ```html
@@ -1760,7 +1875,7 @@ $beet->intro();
 </html>
 ```
 
-## 重写继承 (Overriding Inheritance)
+## 重写继承（Overriding Inheritance）
 
 如果在子类中重新定义继承的方法，就可以进行重写。在下面的例子中，我将重写它们。
 
@@ -1800,6 +1915,7 @@ $beet->intro();
 </body>
 </html>
 ```
+
 `$php main.php`
 
 ```html
@@ -1851,9 +1967,14 @@ $beet->intro();
 </body>
 </html>
 ```
-`$php main.php` PHP Fatal error: Class Beet may not inherit from final class (Vegetable) in /home/cg/root/271113/main.php on line 30
 
-## 抽象类 (Abstract Class)
+`$php main.php`
+
+```text
+PHP Fatal error: Class Beet may not inherit from final class (Vegetable) in /home/cg/root/271113/main.php on line 30
+```
+
+## 抽象类（Abstract Class）
 
 当你继承抽象类时，子类方法应当以相同的名称和限制较少的修饰符定义。如果抽象方法定义为 `protected`，则子类方法需要定义为 `public` 或 `protected`。所需参数的数量和类型应当相同。
 
@@ -1913,7 +2034,7 @@ $tomato->intro();
 </html>
 ```
 
-## 抽象类示例 (Abstract Class Examples)
+## 抽象类示例（Abstract Class Examples）
 
 ```html
 <html>
@@ -1946,22 +2067,22 @@ echo $class->prefixName("Jane Snow");
 </body>
 </html>
 ```
+
 `$php main.php`
 
+```text
 Mister. John Snow
-Mrs. Jane Snow
 
+Mrs. Jane Snow
 ```
 
+```text
 The vegetable is Beet and its color is purplish red
 The vegetable is Onion and white
 The vegetable is Pumpkin and green
 The vegetable is Radish and red
 The vegetable is Tomato and red
-
-
-
-
+```
 
 # 第六章：PHP 表单与文件处理
 
@@ -1981,9 +2102,6 @@ PHP 超全局变量如 `$_POST` 和 `$_GET` 通常用于收集表单数据。本
 </html>
 ```
 
-
-
-
 当用户填写表单并点击提交按钮时，数据将传递到一个名为 `Wewelcomeyou.php` 的 PHP 文件进行处理。表单通过 `HTTP POST` 方法发送。如果你想显示提交的数据，可以简单地 `echo` 这些变量。如果你使用 `$GET` 方法发送表单，它对所有人可见。所有的名称和值都将显示在 URL 中。它还对你想要发送的信息大小有限制。变量将显示在 URL 中，因此无法在该页面上创建书签。你也可以使用 `POST` 方法创建表单，但问题是在此方法中，信息将对其他人可见。
 
 在下一个代码示例中，你将看到新的变量，它们将帮助你为所有必填字段添加错误消息。对于每个 `$_POST` 变量都会有一个 `if-else` 语句。它将检查 `$_POST` 变量是否为空，如果不为空，你会看到封装在不同错误变量中的错误消息。它通过 `test_input()` 函数发送用户输入。
@@ -1998,47 +2116,65 @@ PHP 超全局变量如 `$_POST` 和 `$_GET` 通常用于收集表单数据。本
     // 你应该定义变量并将它们置为空
     $pnameErr = $pemailErr = $pgenderErr = $pwebsiteErr = "";
     $pname = $pemail = $pgender = $pcomment = "";
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (empty($_POST["name"])) {
             $pnameErr = "你需要姓名";
         } else {
             $pname = test_input($_POST["name"]);
         }
+
         if (empty($_POST["email"])) {
             $pemailErr = "你需要邮箱";
         } else {
             $pemail = test_input($_POST["email"]);
         }
+
         if (empty($_POST["website"])) {
             $pwebsiteErr = "";
         } else {
             $pwebsite = test_input($_POST["website"]);
         }
+
         if (empty($_POST["comment"])) {
             $pcomment = "";
         } else {
             $pcomment = test_input($_POST["comment"]);
         }
+
         if (empty($_POST["gender"])) {
-            $pgenderErr = "你需要性别";
-        }
- else {
-            $pgender = test_input($_POST["gender"]);
-        }
-    }
+```
+
+
+
+$pgenderErr = "你需要性别";
+
+} else {
+
+$pgender = test_input($_POST["gender"]);
+
+}
+
+}
+
 ?>
+
 </body>
+
 </html>
+
 ```
 
 ## PHP 文件处理
-异常处理是程序员认为软件开发中最困难的部分。程序错误、网络故障和数据库故障为程序员带来了许多严重问题。开发者应该在编写阶段检测故障，添加检查，并调用相应的函数来管理它们。异常帮助你在无需编写 `if` 语句的情况下编写强大的程序。
+
+异常处理是程序员认为软件开发中最困难的部分。程序错误、网络故障和数据库故障为程序员带来了许多严重问题。开发者应该在编写阶段检测故障，添加检查，并调用相应的函数来管理它们。异常帮助你在无需编写`if`语句的情况下编写强大的程序。
 
 PHP 日期有很多类型。添加到 Web 应用程序中最基本的方法是 PHP `date()` 函数。该函数的格式参数指定了如何格式化日期和时间。查看用于日期的字符：
-- `d` 字符代表每月 01 到 31。
-- `m` 字符代表每年 01 到 12。
-- `Y` 参数代表四位数的年份。
-- `l` 代表星期。
+
+- `d`字符代表每月 01 到 31。
+- `m`字符代表每年 01 到 12。
+- `Y`参数代表四位数的年份。
+- `l`代表星期。
 
 ```html
 <html>
@@ -2059,6 +2195,7 @@ PHP 日期有很多类型。添加到 Web 应用程序中最基本的方法是 P
 ```php
 main.php
 ```
+
 ```html
 <html>
 <head>
@@ -2105,8 +2242,9 @@ main.php
 ```php
 main.php
 ```
+
 ```html
-<html
+<html>
 <head>
     <title>这是 PHP</title>
 </head>
@@ -2122,8 +2260,9 @@ main.php
 ```
 
 ### 更多示例
+
 ```html
-<html
+<html>
 <head>
     <title>这是 PHP</title>
 </head>
@@ -2143,8 +2282,9 @@ main.php
 ```php
 main.php
 ```
+
 ```html
-<html
+<html>
 <head>
     <title>这是 PHP</title>
 </head>
@@ -2155,10 +2295,11 @@ main.php
 ```
 
 ### 包含因素
-为了在页面中包含底部文件，你应该使用 `include` 语句。
+
+为了在页面中包含底部文件，你应该使用`include`语句。
 
 ```html
-<html
+<html>
 <head>
     <title>这是 PHP</title>
 </head>
@@ -2167,9 +2308,6 @@ main.php
 </body>
 </html>
 ```
-
-
-
 
 # 第七章：MySQL 基础
 
@@ -2185,7 +2323,7 @@ MySQL 包含一个 MySQL 服务器、一组辅助管理 MySQL 数据库的实用
 
 ### SQL SELECT
 
-第一行是 `SQL select` 语句。我有一个目前存在于数据库中的演示数据库。你数据库中的表如下所示。
+第一行是`SQL select`语句。我有一个目前存在于数据库中的演示数据库。你数据库中的表如下所示。
 
 | CustomerID | CustomerName | ContactNumber | SecretCode | Country |
 | --- | --- | --- | --- | --- |
@@ -2204,7 +2342,7 @@ MySQL 包含一个 MySQL 服务器、一组辅助管理 MySQL 数据库的实用
 SELECT * FROM Members;
 ```
 
-在该语句中，`Members` 是上述表的名字。其余部分属于 `SQL`。如果使用得当，`Select` 语句非常有趣。你可以用它来显示表中不同的列。例如，假设你在一家拥有上述数据库的机构工作。你的老板要求你打印成员列表及其原籍国，而忽略数据库的其他部分。你可以使用以下语句在几秒钟内完成。
+在该语句中，`Members`是上述表的名字。其余部分属于`SQL`。如果使用得当，`Select`语句非常有趣。你可以用它来显示表中不同的列。例如，假设你在一家拥有上述数据库的机构工作。你的老板要求你打印成员列表及其原籍国，而忽略数据库的其他部分。你可以使用以下语句在几秒钟内完成。
 
 ```sql
 SELECT CustomerName, Country FROM Members;
@@ -2223,7 +2361,7 @@ SELECT CustomerName, Country FROM Members;
 
 ### DISTINCT 语句
 
-`SELECT DISTINCT` 语句通常用于仅返回唯一值。有时，某一列包含重复值，而你只想列出唯一的值。在这种情况下，你可以选择 `SELECT DISTINCT` 语句。当我们使用简单的 `SELECT` 语句显示表时，它会显示列中的所有值，而不区分重复条。`DISTINCT` 语句仅显示列中的唯一值。演示表如下。
+`SELECT DISTINCT`语句通常用于仅返回唯一值。有时，某一列包含重复值，而你只想列出唯一的值。在这种情况下，你可以选择`SELECT DISTINCT`语句。当我们使用简单的`SELECT`语句显示表时，它会显示列中的所有值，而不区分重复条。`DISTINCT`语句仅显示列中的唯一值。演示表如下。
 
 ```sql
 SELECT DISTINCT Country FROM Members;
@@ -2243,7 +2381,7 @@ United States 重复了，但这里只显示了一个条目。
 
 ### WHERE 子
 
-这个特定的语句从你提到的特定位置选择成员。在对数据库应用 `SQL` 语句之前，让我们复习数据库中的表。
+这个特定的语句从你提到的特定位置选择成员。在对数据库应用`SQL`语句之前，让我们复习数据库中的表。
 
 | CustomerID | CustomerName | ContactNumber | SecretCode | Country |
 | --- | --- | --- | --- | --- |
@@ -2271,7 +2409,7 @@ SELECT * FROM Members WHERE Country='United States';
 | 9 | Tom Dick | 45980999 | 4 | United States |
 | 10 | Dane harry | 47889933 | 0 | United States |
 
-看另一个 `WHERE` 语句的示例。
+看另一个`WHERE`语句的示例。
 
 ```sql
 SELECT * FROM Members WHERE CustomerID=1; WHERE CustomerID=2; WHERE CustomerID=3; WHERE CustomerID=4; WHERE CustomerID=5; WHERE CustomerID=6; WHERE CustomerID=7;
@@ -2287,13 +2425,9 @@ SELECT * FROM Members WHERE CustomerID=1; WHERE CustomerID=2; WHERE CustomerID=3
 | 6 | Tracy Drupal | 23897609 | 8 | France |
 | 7 | Emilia Tim | 45890093 | 3 | Italy |
 
-
-
-
-
 ### AND 语句
 
-以下语句将选择 `Members` 表中国家为美国或 `SecretCode` 为 7 的所有字段。在执行语句之前，我会对数据库表进行一些更改并将其显示。
+以下语句将选择`Members`表中国家为美国或`SecretCode`为 7 的所有字段。在执行语句之前，我会对数据库表进行一些更改并将其显示。
 
 | CustomerID | CustomerName | ContactNumber | SecretCode | Country |
 | :--- | :--- | :--- | :--- | :--- |
@@ -2309,8 +2443,9 @@ SELECT * FROM Members WHERE CustomerID=1; WHERE CustomerID=2; WHERE CustomerID=3
 | 10. | Dane harry | 47889933 | 0 | United States |
 
 以下是该语句：
-```
-SELECT * FROM Members WHERE Members= ‘United States’ AND SecretCode=7;
+
+```sql
+SELECT * FROM Members WHERE Members= 'United States' AND SecretCode=7;
 ```
 
 | CustomerID | CustomerName | ContactNumber | SecretCode | Country |
@@ -2324,10 +2459,14 @@ SELECT * FROM Members WHERE Members= ‘United States’ AND SecretCode=7;
 | 9. | Tom Dick | 45980999 | 4 | United States |
 | 10. | Dane harry | 47889933 | 0 | United States |
 
-还有另一个神奇的语句被称为 `OR` 语句。它允许你在从数据库中检索数据时进行选择。
+还有另一个神奇的语句被称为`OR`语句。它允许你在从数据库中检索数据时进行选择。
+
+```sql
+SELECT * FROM Members WHERE Country= 'United States' OR SecretCode= 7;
 ```
-SELECT * FROM Members WHERE Country= ‘United States’ OR SecretCode= 7;
-```
+
+
+
 
 | CustomerID | CustomerName | ContactNumber | SecretCode | Country |
 | :--- | :--- | :--- | :--- | :--- |
@@ -2341,7 +2480,8 @@ SELECT * FROM Members WHERE Country= ‘United States’ OR SecretCode= 7;
 | 10. | Dane harry | 47889933 | 0 | United States |
 
 再看另一个例子：
-```
+
+```sql
 SELECT * FROM Members WHERE Members= ‘United States’ OR CustomerID = 2;
 ```
 
@@ -2354,7 +2494,8 @@ SELECT * FROM Members WHERE Members= ‘United States’ OR CustomerID = 2;
 | 10. | Dane harry | 47889933 | 0 | United States |
 
 如果你想留下一个条目并检索所有其他条目，可以在脚本中使用 `NOT` 语句。
-```
+
+```sql
 SELECT * FROM Members WHERE NOT Country= ‘Sweden’;
 ```
 
@@ -2370,7 +2511,7 @@ SELECT * FROM Members WHERE NOT Country= ‘Sweden’;
 | 9. | Tom Dick | 45980999 | 4 | United States |
 | 10. | Dane harry | 47889933 | 0 | United States |
 
-## 结合 `AND`, `OR` 和 `NOT`
+## 结合 `AND`、`OR` 和 `NOT`
 
 你可以组合这三个语句使工作更加精确。以下语句将选择 `Members` 表中国家为美国且名为 `Emilia` 的不同字段。表如下：
 
@@ -2388,7 +2529,8 @@ SELECT * FROM Members WHERE NOT Country= ‘Sweden’;
 | 10. | Harry Styles | 47889933 | 0 | United States |
 
 让我们写这个 SQL 语句：
-```
+
+```sql
 SELECT * FROM Members WHERE Members= ‘United States’ AND (CustomerName=‘Emilia Jackson’ OR CustomerName=‘Harry Styles’);
 ```
 
@@ -2416,7 +2558,7 @@ SELECT * FROM Members WHERE Members= ‘United States’ AND (CustomerName=‘Em
 | 9. | Emilia Jackson | 45980999 | 4 | United States |
 | 10. | Harry Styles | 47889933 | 0 | United States |
 
-```
+```sql
 SELECT * FROM Members WHERE NOT Country= ‘Sweden’ AND NOT Country= ‘United Kingdom’
 ```
 
@@ -2447,9 +2589,6 @@ SELECT * FROM Members WHERE NOT Country= ‘Sweden’ AND NOT Country= ‘United
 | 8. | Tyson Jackson | 34980900 | 7 | Sweden |
 | 9. | Emilia Jackson | 45980999 | 4 | United States |
 | 10. | Harry Styles | 47889933 | 0 | United States |
-
-
-
 
 这是你必须输入的语句。
 
@@ -2509,6 +2648,7 @@ SELECT * FROM Members ORDER BY CustomerName, Country;
 ```
 
 ### 插入语句 (Insert Into Statements)
+
 通过此语句，你可以随地更新数据库。我们在数据库中有一个表格，我们将对其进行相应的更新。让我们来看看表格。
 
 | CustomerID | CustomerName | ContactNumber | SecretCode | Country |
@@ -2527,6 +2667,10 @@ SELECT * FROM Members ORDER BY CustomerName, Country;
 ```sql
 INSERT INTO Members (CustomerName, SecretCode) VALUES ('Haddy','45');
 ```
+
+
+
+
 
 | CustomerID | CustomerName | ContactNumber | SecretCode | Country |
 | :--- | :--- | :--- | :--- | :--- |
@@ -2563,9 +2707,6 @@ INSERT INTO Members (CustomerName, SecretCode) VALUES ('Sylvia','9');
 ```sql
 INSERT INTO Members (CustomerName, SecretCode) VALUES ('Tane','5');
 ```
-
-
-
 
 | CustomerID | CustomerName | ContactNumber | SecretCode | Country |
 | :--- | :--- | :--- | :--- | :--- |
@@ -2719,10 +2860,6 @@ DELETE FROM Members WHERE Country = ‘United Kingdom.’
 | 8 | Marlow | 34980900 | 7 | 瑞典 |
 | 9 | Emilia Jackson | 45980999 | 4 | 美国 |
 
-
-
-
-
 | CustomerID | CustomerName | ContactNumber | SecretCode | Country |
 | :--- | :--- | :--- | :--- | :--- |
 | 10. | Harry Styles | 47889933 | 0 | 美国本土 |
@@ -2766,6 +2903,9 @@ SELECT TOP 6 * FROM Members;
 ```sql
 SELECT * FROM Members LIMIT 8;
 ```
+
+
+
 
 | CustomerID | CustomerName | ContactNumber | SecretCode | Country |
 | :--- | :--- | :--- | :--- | :--- |
@@ -2836,10 +2976,6 @@ SELECT * FROM Members WHERE Country LIKE '%es%';
 SELECT * FROM Members WHERE Country LIKE '%om%';
 ```
 
-
-
-
-
 ## 字符列表通配符
 
 在以下语句中，你可以列出特定国家的第一个字母来显示记录。以下是操作方法。
@@ -2878,7 +3014,7 @@ SELECT * FROM Members WHERE Country LIKE '[isu]%';
 | 11. | Marlow | 45789809 | 7 | United States |
 | 12 | Sylvia | 15769091 | 9 | United States |
 
-让我们将表格恢复到原始状态，然后尝试只显示以 ‘u’ 开头的国家。以下是该表格。
+让我们将表格恢复到原始状态，然后尝试只显示以 'u' 开头的国家。以下是该表格。
 
 | CustomerID | CustomerName | ContactNumber | SecretCode | Country |
 | :--- | :--- | :--- | :--- | :--- |
@@ -2975,50 +3111,44 @@ SELECT * FROM Members WHERE Country NOT IN ('Germany', 'Sweden', 'France');
 | 7. | Emilia Tim | 45890093 | 3 | Italy |
 | 8. | Marlow | 34980900 | 7 | Sweden |
 | 9. | Emilia Jackson | 45980999 | 4 | United States |
-
 | 10. | Harry Styles | 47889933 | 0 | United States |
 
 ```sql
 SELECT INTO
 ```
 
-
-
-
-
 | 10. | Harry Styles | 47889933 | 0 | 美国 | |
 | 11. | Marlow | 45789809 | 7 | 美国 | |
 | 12 | Sylvia | 15769091 | 9 | 美国 | |
 
 以下是语句：
+
 ```sql
 SELECT * INTO MembersBackup2020 FROM Members;
 ```
 
+
+
 | 客户 ID | 客户名称 | 联系电话 | 密钥代码 | 国家 |
 | :--- | :--- | :--- | :--- | :--- |
-| 1. | Fanny | 55779034 | 007 | 美国 | |
+| 1. | Fanny | 55779034 | 007 | 美国 |
 | 2. | Marlow | 34568988 | 7 | 英国 |
 | 3. | Marlow | 34578899 | 7 | 爱尔兰 |
 | 4. | Victoria Ann | 23768800 | 66 | 德国 |
-| 5. | Marlow | 45327899 | 7 | 美国 | |
-| 6. | Marlow | 23897609 | 7 | 法国 | |
-| 7. | Emilia Tim | 45890093 | 3 | 意大利 | |
-| 8. | Marlow | 34980900 | 7 | 瑞典 | |
-| 9. | Emilia Jackson | 45980999 | 4 | 美国 | |
-| 10. | Harry Styles | 47889933 | 0 | 美国 | |
-| 11. | Marlow | 45789809 | 7 | 美国 | |
-| 12 | Sylvia | 15769091 | 9 | 美国 | |
-
-
-
-
+| 5. | Marlow | 45327899 | 7 | 美国 |
+| 6. | Marlow | 23897609 | 7 | 法国 |
+| 7. | Emilia Tim | 45890093 | 3 | 意大利 |
+| 8. | Marlow | 34980900 | 7 | 瑞典 |
+| 9. | Emilia Jackson | 45980999 | 4 | 美国 |
+| 10. | Harry Styles | 47889933 | 0 | 美国 |
+| 11. | Marlow | 45789809 | 7 | 美国 |
+| 12 | Sylvia | 15769091 | 9 | 美国 |
 
 # 第八章：使用 PHP 构建 Web 应用
 
-在之前的章节中，你已经学习了如何使用 PHP 进行编程。你已经学会了如何创建程序、设置条件判断、创建循环等等。所有这些知识都赋予了你构建在 Web 上运行良好的的 PHP 程序的能力。然而，你可以让它们变得更好、更易用。
+在之前的章节中，你已经学习了如何使用 PHP 进行编程。你已经学会了如何创建程序、设置条件判断、创建循环等等。所有这些知识都赋予了你构建在 Web 上运行良好的 PHP 程序的能力。然而，你可以让它们变得更好、更易用。
 
-随着程序复杂性的增加，你会发现大量的 `require_once()` 和 `includes` 函数。每当你想要创建一个新文件或在公共函数中实现某些功能时，你可以在程序中添加一个 `require_once`。如果你引导访问者访问类似于 `[`www.example.com/login.php`](http://www.example.com/login.php)` 的 URL，你可以使用 `auto_prepend_file` 在运行的 `login.php` 代码之前引入一个辅助文件。这个辅助文件有能力启动会话（session）、提供多个可以在程序内部使用的函数，或者加载多个文件。`auto_prepend_file` 选项是 `php.ini` 文件的不可或缺的一部分，但在 Apache 配置中通过 `php_value` 指令设置它也是很常见的。
+随着程序复杂性的增加，你会发现大量的 `require_once()` 和 `includes` 函数。每当你想要创建一个新文件或在公共函数中实现某些功能时，你可以在程序中添加一个 `require_once`。如果你引导访问者访问类似于 `www.example.com/login.php` 的 URL，你可以使用 `auto_prepend_file` 在运行的 `login.php` 代码之前引入一个辅助文件。这个辅助文件有能力启动会话（session）、提供多个可以在程序内部使用的函数，或者加载多个文件。`auto_prepend_file` 选项是 `php.ini` 文件的不可或缺的一部分，但在 Apache 配置中通过 `php_value` 指令设置它也是很常见的。
 
 ## 预包含文件 (Prepend File)
 
@@ -3070,7 +3200,7 @@ php_value auto_prepend_file "prepend.php"
 </html>
 ```
 
-将文件保存为 `session.php` 并存放在文档根目录。你现在可以打开 浏览器并输入 `[`localhost/session.php`](http://localhost/session.php)`。你现在可以最小化浏览器，并在文本编辑器中创建一个新文件。现在在新文件中放置以下代码：
+将文件保存为 `session.php` 并存放在文档根目录。你现在可以打开浏览器并输入 `localhost/session.php`。你现在可以最小化浏览器，并在文本编辑器中创建一个新文件。现在在新文件中放置以下代码：
 
 ```php
 <?php session_start(); ?>
@@ -3101,6 +3231,7 @@ $user = new User;
         // 带有参数的抽象方法
         abstract function prefixName($name);
     }
+
     class ChildClass extends ParentClass {
         public function prefixName($vname, $theseparator = ".", $vgreet = "My dear ") {
             if ($vname == "John Snow") {
@@ -3113,6 +3244,7 @@ $user = new User;
             return "{$vgreet}{$theseparator}{$vname}";
         }
     }
+
     $class = new ChildClass;
     echo $class->prefixName("John Snow");
     echo "<br>";
@@ -3178,6 +3310,7 @@ $user = new User;
         var $vusername;
         var $vpassword;
         var $vtable;
+
         public function dis_public() { }
         public function dis_admin() { }
         public function vwrite() { }
@@ -3213,7 +3346,7 @@ public function vconnect() {
 
 这个预包含文件有能力启动会话，提供多个可以在程序内部使用的函数，或者加载多个文件。`auto_prepend_file` 选项是 `php.ini` 文件的不可或缺的一部分，但在 Apache 配置中通过 `php_value` 指令设置它也是很常见的。
 
- 预包含文件 (Prepend File)
+## 预包含文件 (Prepend File)
 
 本节将解释，如果你打算使用会话，那么在所有将使用会话的页面上都必须调用 `session_start()` 函数。如果你希望在多个 PHP 程序中跟踪会话，这可能会非常困难。你可以使用自动预包含文件（auto-prepend-file）来调用 `session_start`。
 
@@ -3263,17 +3396,19 @@ php_value auto_prepend_file "prepend.php"
 </html>
 ```
 
-将文件保存为 `session.php` 并存放在文档根目录。你现在可以打开 浏览器并输入 `[`localhost/session.php`](http://localhost/session.php)`。你现在可以最小化浏览器，并在文本编辑器中创建一个新文件。现在在新文件中放置以下代码：
+将文件保存为 `session.php` 并存放在文档根目录。你现在可以打开浏览器并输入 `localhost/session.php`。你现在可以最小化浏览器，并在文本编辑器中创建一个新文件。现在在新文件中放置以下代码：
 
 ```php
 <?php session_start(); ?>
 ```
 
-你可以将此文件保存为 `prepend.php` 并存放在文档根目录。在浏览器中，你可以重新加载 `session.php` 文件以查看你之前创建的内容。如果你在浏览器中看到空白页面或某种错误，这意味着预包含文件不存在。检查拼写以验证你是否书写正确。如果你看到的页面显示“Session has not started”，很可能是 Apache 没有检测到 `auto_prepend_file` 指令。如果你已将 `.htaccess` 文件放置在文档根目录，你必须确保 Apache 已读取了它。继续阅读或咨询主机提供商查看是否允许使用 `.htaccess`。某些 Web 服务器配置没有空间存放 `.htaccess`。你可以通过将 `AllowOverride` 改为 `All` 来修改 Apache 配置。
+
+
+你可以将此文件保存为`prepend.php`并存放在文档根目录。在浏览器中，你可以重新加载`session.php`文件以查看你之前创建的内容。如果你在浏览器中看到空白页面或某种错误，这意味着预包含文件不存在。检查拼写以验证你是否书写正确。如果你看到的页面显示“Session has not started”，很可能是 Apache 没有检测到`auto_prepend_file`指令。如果你已将`.htaccess`文件放置在文档根目录，你必须确保 Apache 已读取了它。继续阅读或咨询主机提供商查看是否允许使用`.htaccess`。某些 Web 服务器配置没有空间存放`.htaccess`。你可以通过将`AllowOverride`改为`All`来修改 Apache 配置。
 
 ## 为了提高效率的类
 
-你可以使用类来让你的应用程序更高效。你可以创建一个类来定义用户。此后，你可以继续为该类添加函数（称为方法），用于用户可能在 Web 上执行的简单操作，例如更新密码。在没有类的情况下，你可能会得到散落在程序的多个函数。这会让代码变得复杂并看起来一团糟。此外，编写程序将花费更长时间。如果你不使用类编写程序，将必须添加很多函数来正常运行程序。例如，如果你想用类编写不同的管理程序，你必须包含 `setEmail`、`changePassword` 等许多不同函数。现在你必须将该代码与另一个代码合并以添加不同的角色。你可以不添加类而编写这些程序，它们将像程序一样共享相同的名称。名称示例是 `Permission`。当你想要合并它们时，你不会对名称产生任何困惑，因为 `Permission` 不与其他函数冲突，因为 `Permission` 是用户类不可或缺的一部分。你可以通过 `new` 关键字以特定的面向对象的方式（称为实例化）调用它创建一个用户。如果用户类被标记为 `User`，你需要如下实例化：
+你可以使用类来让你的应用程序更高效。你可以创建一个类来定义用户。此后，你可以继续为该类添加函数（称为方法），用于用户可能在 Web 上执行的简单操作，例如更新密码。在没有类的情况下，你可能会得到散落在程序的多个函数。这会让代码变得复杂并看起来一团糟。此外，编写程序将花费更长时间。如果你不使用类编写程序，将必须添加很多函数来正常运行程序。例如，如果你想用类编写不同的管理程序，你必须包含`setEmail`、`changePassword`等许多不同函数。现在你必须将该代码与另一个代码合并以添加不同的角色。你可以不添加类而编写这些程序，它们将像程序一样共享相同的名称。名称示例是`Permission`。当你想要合并它们时，你不会对名称产生任何困惑，因为`Permission`不与其他函数冲突，因为`Permission`是用户类不可或缺的一部分。你可以通过`new`关键字以特定的面向对象的方式（称为实例化）调用它创建一个用户。如果用户类被标记为`User`，你需要如下实例化：
 
 ```php
 $user = new User;
@@ -3294,6 +3429,7 @@ $user = new User;
         // 带有参数的抽象方法
         abstract function prefixName($name);
     }
+
     class ChildClass extends ParentClass {
         public function prefixName($vname, $theseparator = ".", $vgreet = "My dear ") {
             if ($vname == "John Snow") {
@@ -3306,6 +3442,7 @@ $user = new User;
             return "{$vgreet}{$theseparator}{$vname}";
         }
     }
+
     $class = new ChildClass;
     echo $class->prefixName("John Snow");
     echo "<br>";
@@ -3313,7 +3450,7 @@ $user = new User;
     ?>
 ```
 
-如果你分析示例，可以理解 `<body>` 标签之后 PHP 开始并在脚本结束。示例中，`<?php` 表示嵌入到 HTML 中的 PHP 代码开始。`?>` 标记脚本的结束。你会注意到此示例通过 `echo` 输出。
+如果你分析示例，可以理解`<body>`标签之后 PHP 开始并在脚本结束。示例中，`<?php`表示嵌入到 HTML 中的 PHP 代码开始。`?>`标记脚本的结束。你会注意到此示例通过`echo`输出。
 
 ## App
 
@@ -3361,7 +3498,7 @@ $user = new User;
 
 ### 类创建
 
-过程的第一步是构建 PHP 类并将其保存到 `classCMS.php` 文件中。查看如何在 PHP 编辑器中创建类：
+过程的第一步是构建 PHP 类并将其保存到`classCMS.php`文件中。查看如何在 PHP 编辑器中创建类：
 
 ```html
 <html>
@@ -3375,6 +3512,7 @@ $user = new User;
         var $vusername;
         var $vpassword;
         var $vtable;
+
         public function dis_public() { }
         public function dis_admin() { }
         public function vwrite() { }
@@ -3386,93 +3524,97 @@ $user = new User;
 </html>
 ```
 
-[注：由于用户在翻译过程中发现原文中存在大量重复的段落和代码，已根据“不要重复输出原文”的原则对译文进行了去重和整合，确保逻辑通顺。]
-
-
-
-
-
 # 第九章：PHP 在现代应用开发中的性
 
-PHP 被认为是全球范围内受欢迎的编程语言之一。得益于 `Drupal` 和 `WordPress` 等内容管理系统（CMS）的巨大流行，大多数顶级网站都在使用它。借助 `Laravel` 和 `Symfony` 等流行框架，PHP 在开发 Web 应用方面需求巨大。基于 JavaScript 的 `Node.js` 曾挑战 PHP 的地位。然而，它并没有动摇 PHP 长期以来占据的统治地位。仍有大量的程序员在使用 PHP。尽管 PHP 是最面向对象且高效的语言之一，但在开发创新型和现代化应用时，它经常被忽视。开发者和决策者之间最常见的共识是，它在构建许多网站使用的 CMS 软件应用构建者中非常流行。它倾向于在基于 CMS 的电子商务商店和网络门户等通用编程项目中表现出色。PHP 仍然是全球一些最流行、最成功的科技公司的核心，例如 `Blablacar`、`Facebook` 和 `Slack`。Slack 对于需要管理数百名员工远程团队的企业来说非常受欢迎。越来越多的企业选择使用 PHP 为其初创公司构建现代应用。PHP 每天都在变得更好，为企业和开发者提供了许多优势。尽管存在刻板印象，它是可以与 `WebSocket` 工作的；但它也有自己的局限性。如果你有一个希望尽快推向市场的业务，你可以选择 PHP。当你与大量企业竞争时，你发布想法的速度至关重要。为了保持竞争领先地位，快速启动是一个好主意。快速启动将帮助你发现以前可能没有考虑过的独特业务模式。如果业务构想要求你创建一个 Web 应用，PHP 可以是一个完美的选择。你可以使用流行的 PHP 框架 `Laravel` 和 `Symfony` 以非常快的方式创建 Web 应用。你可以从这样一个事实中推断出 PHP 的流行程度：大约 81% 的网站使用 PHP 作为服务器端的脚本语言。PHP 在现代应用开发中日益增长的流行程度是因为某些经过证明的益处。
+PHP 被认为是全球范围内受欢迎的编程语言之一。得益于`Drupal`和`WordPress`等内容管理系统（CMS）的巨大流行，大多数顶级网站都在使用它。借助`Laravel`和`Symfony`等流行框架，PHP 在开发 Web 应用方面需求巨大。基于 JavaScript 的`Node.js`曾挑战 PHP 的地位。然而，它并没有动摇 PHP 长期以来占据的统治地位。仍有大量的程序员在使用 PHP。尽管 PHP 是最面向对象且高效的语言之一，但在开发创新型和现代化应用时，它经常被忽视。开发者和决策者之间最常见的共识是，它在构建许多网站使用的 CMS 软件应用构建者中非常流行。它倾向于在基于 CMS 的电子商务商店和网络门户等通用编程项目中表现出色。PHP 仍然是全球一些最流行、最成功的科技公司的核心，例如`Blablacar`、`Facebook`和`Slack`。Slack 对于需要管理数百名员工远程团队的企业来说非常受欢迎。越来越多的企业选择使用 PHP 为其初创公司构建现代应用。PHP 每天都在变得更好，为企业和开发者提供了许多优势。尽管存在刻板印象，它是可以与`WebSocket`工作的；但它也有自己的局限性。如果你有一个希望尽快推向市场的业务，你可以选择 PHP。当你与大量企业竞争时，你发布想法的速度至关重要。为了保持竞争领先地位，快速启动是一个好主意。快速启动将帮助你发现以前可能没有考虑过的独特业务模式。如果业务构想要求你创建一个 Web 应用，PHP 可以是一个完美的选择。你可以使用流行的 PHP 框架`Laravel`和`Symfony`以非常快的方式创建 Web 应用。你可以从这样一个事实中推断出 PHP 的流行程度：大约 81% 的网站使用 PHP 作为服务器端的脚本语言。PHP 在现代应用开发中日益增长的流行程度是因为某些经过证明的益处。
 
 ## 内置特性
-与许多其他编程语言不同，PHP 最初是专为 Web 应用开发设计的。因此，设计者从一开始就向它中塞满了许多构建不同类型的网站和 Web 应用所需的特殊内置功能。你可以使用 PHP 中的内置功能（如 `functions` 和 `classes`）来执行各种 Web 开发操作和任务。在编写程序时，你可以在代码的任何点调用 `classes` 和 `functions` 来执行特定任务。这使得 PHP 构建应用变得既简单又有趣。PHP 支持多种操作系统，如 `Mac OSX`、`Windows` 和 `UNIX`。用 PHP 编写的 Web 应用运行在所有主要平台上。你还可以将 PHP 部署在 `IIS`、`Netscape`、`Apache`、`Personal Web server` 和 `iPlanet server` 上。因此，你可以构建 PHP 网站和应用，而不必担心其托管选项和部署。
+
+与许多其他编程语言不同，PHP 最初是专为 Web 应用开发设计的。因此，设计者从一开始就向它中塞满了许多构建不同类型的网站和 Web 应用所需的特殊内置功能。你可以使用 PHP 中的内置功能（如`functions`和`classes`）来执行各种 Web 开发操作和任务。在编写程序时，你可以在代码的任何点调用`classes`和`functions`来执行特定任务。这使得 PHP 构建应用变得既简单又有趣。PHP 支持多种操作系统，如`Mac OSX`、`Windows`和`UNIX`。用 PHP 编写的 Web 应用运行在所有主要平台上。你还可以将 PHP 部署在`IIS`、`Netscape`、`Apache`、`Personal Web server`和`iPlanet server`上。因此，你可以构建 PHP 网站和应用，而不必担心其托管选项和部署。
 
 ## 灵活性
-PHP 是一种高度灵活的语言，基于 `C++` 和 `C` 等流行编程语言设计。你可以轻松地阅读、理解并使用这种服务器端编程语言的语法，而无需任何额外的精力和时间。你还有多种方式编写和使用 PHP 代码。你可以像我们在书中所有代码中所做将其嵌入 `HTML` 代码中，也可以将代码与 Web 框架结合。你还可以通过命令行界面执行它。
+
+PHP 是一种高度灵活的语言，基于`C++`和`C`等流行编程语言设计。你可以轻松地阅读、理解并使用这种服务器端编程语言的语法，而无需任何额外的精力和时间。你还有多种方式编写和使用 PHP 代码。你可以像我们在书中所有代码中所做将其嵌入`HTML`代码中，也可以将代码与 Web 框架结合。你还可以通过命令行界面执行它。
 
 ## 流行数据库
-现在的大多数 Web 应用都考虑高效快速地访问和交付大量数据。大企业总是希望在后端环境中使用高级数据库。PHP 支持许多广泛使用的数据库，如 `SQLite`、`MySQL` 和 `Frontbase` 等。这就是你如何满足不同业务客户的需求。如果我们分析 PHP，我们可以发现，通过使用大量的开源库和框架，我们可以大幅缩短编码时间。根据手头项目的需求，你可以从不同的 PHP 框架中选择，如 `Codelgniter`、`CakePHP` 等许多框架。这些框架使编码变得简单快速。通过使用 `Requests`、`Mink`、`Ratchet` 和 `Faker` 等常用 PHP 库，你不需要编写冗长的脚本和复杂的代码。PHP 以开源许可发布；因此，你可以在不花费任何许可费用的情况下使用所有组件。
+
+现在的大多数 Web 应用都考虑高效快速地访问和交付大量数据。大企业总是希望在后端环境中使用高级数据库。PHP 支持许多广泛使用的数据库，如`SQLite`、`MySQL`和`Frontbase`等。这就是你如何满足不同业务客户的需求。如果我们分析 PHP，我们可以发现，通过使用大量的开源库和框架，我们可以大幅缩短编码时间。根据手头项目的需求，你可以从不同的 PHP 框架中选择，如`Codelgniter`、`CakePHP`等许多框架。这些框架使编码变得简单快速。通过使用`Requests`、`Mink`、`Ratchet`和`Faker`等常用 PHP 库，你不需要编写冗长的脚本和复杂的代码。PHP 以开源许可发布；因此，你可以在不花费任何许可费用的情况下使用所有组件。
 
 ## PHP 的益处
+
 Hypertext Preprocessor（超文本预处理器）或 PHP 开发改变了过去 Web 开发的方式。对于 PHP 软件开发已成为开发动态且精确网站的最敏捷、最先进的系统这一点，是不容疑的。PHP 可以满足大型企业的需求。集成到网站中的功能必须是流畅的。无疑，这是构建者喜欢为客户定制大型网站的最青睐的方面。这是因为使用 PHP 有许多优势。`Laravel` PHP 的内部开发正由于一个出色的身份验证系统而增长。通过使用它，应用身份验证变得简洁。
 
 ### 简单 API
-`Laravel` Hypertext Preprocessor 提供了一个流畅的平台，通过云服务或本地服务向不同人员发送应用内电子邮件。它还支持通过 `Slack` 等动态通道推送通知。在专业开发整合公司的帮助下，互联网应用程序在移动时是完全安全的。
+
+`Laravel` Hypertext Preprocessor 提供了一个流畅的平台，通过云服务或本地服务向不同人员发送应用内电子邮件。它还支持通过`Slack`等动态通道推送通知。在专业开发整合公司的帮助下，互联网应用程序在移动时是完全安全的。
 
 ## 优化
-许多 B2C Web 应用不仅应该非常易用，而且还应该更容易被客户发现。互联网上的电子商务商店只有在拥有顶尖搜索引擎优化（SEO）服务的情况下才能生存。如果你想让你的 Web 应用在网上排名更高，你必须向它填充最相关的关键词以便在最流行的搜索引擎中排名。在开发阶段，你应该考虑这些事实。搜索引擎爬虫喜欢整洁的 `HTML`，因为更容易阅读。创建简洁的代码是 PHP 创建的理由之一。以 `Wikipedia` 为例，它每天吸引海流量。它是用 PHP 语言构建的。一些专家认为，在很大程度上，每个吸引流量的文本类网站都是用 PHP 编写。
+
+许多 B2C Web 应用不仅应该非常易用，而且还应该更容易被客户发现。互联网上的电子商务商店只有在拥有顶尖搜索引擎优化（SEO）服务的情况下才能生存。如果你想让你的 Web 应用在网上排名更高，你必须向它填充最相关的关键词以便在最流行的搜索引擎中排名。在开发阶段，你应该考虑这些事实。搜索引擎爬虫喜欢整洁的`HTML`，因为更容易阅读。创建简洁的代码是 PHP 创建的理由之一。以`Wikipedia`为例，它每天吸引海流量。它是用 PHP 语言构建的。一些专家认为，在很大程度上，每个吸引流量的文本类网站都是用 PHP 编写。
 
 ## 应用稳定性
-PHP 在过去的二十年里表现良好，事实证明是一个稳定的解决方案。`Laravel` 和 `Symfony` 已用于现代应用开发多年。它们随着时间的推移趋于成熟，并消除了曾经困扰这种语言的大多数缺陷。尽管如此，随着技术趋势的改变，这些框架仍在不断改进。
+
+PHP 在过去的二十年里表现良好，事实证明是一个稳定的解决方案。`Laravel`和`Symfony`已用于现代应用开发多年。它们随着时间的推移趋于成熟，并消除了曾经困扰这种语言的大多数缺陷。尽管如此，随着技术趋势的改变，这些框架仍在不断改进。
 
 ## 维护
+
 与其他编程语言不同，PHP 对代码的可读性和维护性的重视很少。PHP 框架倾向通过支持模型-视图-控制器（MVC）架构来简化应用的开发和维护。开发者可以利用该架构将 PHP 拆分为视图、模型和控制器。
-
-
-
-
 
 # 第十章：PHP 应用开发技巧
 
-PHP 在过去几年中在速度和性能方面有了显著提高。它的运行速度变得惊人。它为编写方法和返回类型引入了类型提示，并对语言进行了润色，使其更具一致性。有许多辅助方法可以在你编写更少代码的同时实现更多功能。如果你已经决定从现在开始使用 PHP 来构建网站和应用，你应该迁移到 `PHP 7`。PHP 非常流行，一些大公司已选择它来构建网站和应用，例如 Tumblr、维基百科、Facebook、TED 和国家地理。是的，Facebook 是运行在 PHP 之上的。开发者们喜欢这种语言，因为它的文档非常出色。社区规模庞大，这意味着如果你在过程中遇到任何问题，你可以随时获得支持。PHP 高度可靠、成熟且稳定。PHP 团队在发布可能会破坏旧功能的新功能时非常谨慎。此外，他们还为发布制定了专业的路线图。
+PHP 在过去几年中在速度和性能方面有了显著提高。它的运行速度变得惊人。它为编写方法和返回类型引入了类型提示，并对语言进行了润色，使其更具一致性。有许多辅助方法可以在你编写更少代码的同时实现更多功能。如果你已经决定从现在开始使用 PHP 来构建网站和应用，你应该迁移到`PHP 7`。PHP 非常流行，一些大公司已选择它来构建网站和应用，例如 Tumblr、维基百科、Facebook、TED 和国家地理。是的，Facebook 是运行在 PHP 之上的。开发者们喜欢这种语言，因为它的文档非常出色。社区规模庞大，这意味着如果你在过程中遇到任何问题，你可以随时获得支持。PHP 高度可靠、成熟且稳定。PHP 团队在发布可能会破坏旧功能的新功能时非常谨慎。此外，他们还为发布制定了专业的路线图。
 
-PHP 的绝大部分声誉归功于 `PHP 框架`。该领域有两个巨头，在开发者中一直处于势不相让的。两者都非常优秀，并且可以为你提高效率。然而，Laravel 被认为更受欢迎。
+PHP 的绝大部分声誉归功于`PHP 框架`。该领域有两个巨头，在开发者中一直处于势不相让的。两者都非常优秀，并且可以为你提高效率。然而，Laravel 被认为更受欢迎。
 
 ## Laravel
 
-`Laravel` 框架由 Raylor Otwell 创建，被定义为 Web 工匠的最佳选择。它自 2011 年以来一直存在着。Laravel 最棒的一点是它的学习曲线非常平。如果你是一个传统的 PHP 开发者，你会发现用起来非常顺手。你还可以将其与队列、`Laravel mix` 和缓存集成。它的主要特性包括用户管理、登录、用户注册、通知和身份验证系统。这些特性允许你在构建应用程序时加快进度。`collections` 辅助方法允许你将数据转化为优雅的形式。
+`Laravel`框架由 Raylor Otwell 创建，被定义为 Web 工匠的最佳选择。它自 2011 年以来一直存在着。Laravel 最棒的一点是它的学习曲线非常平。如果你是一个传统的 PHP 开发者，你会发现用起来非常顺手。你还可以将其与队列、`Laravel mix`和缓存集成。它的主要特性包括用户管理、登录、用户注册、通知和身份验证系统。这些特性允许你在构建应用程序时加快进度。`collections`辅助方法允许你将数据转化为优雅的形式。
 
 ## PHP 技巧
 
 ### 服务端语言
+
 语言通常被设计得非常复杂，以便网站受到恶意攻击的风险降到最低。然而，PHP 通过简化服务端代码彻底改变了这一领域。由于其开源特性，PHP 已经建立了一个不断增长的 Web 开发者社区，将其塑造了现在的模样。由于这些开发者的头脑风暴，函数列表是无尽的，而能够简化你编码过程的框架也远不止预期。
 
 ### 错误报告功能
+
 首要的是 PHP 的错误报告功能。在开始使用 PHP 开发新项目之前，你应该开启 PHP 的错误报告功能。即使是专业开发者也对此深信不疑。那么，接下来会发生什么？在整个生产过程中，你将看到许多有用的错误信息，而不是每次出现问题时看到空白屏幕。它将帮助你在扫描代码时处理错误。总的来说，它会让编码过程变得高效且快速。在脚本开头包含以下功能，错误报告功能将自动开启。这将节省你在检测错误时扫描成千上万行代码的痛苦之源。
 
 ```
 display_errors = on
 ```
 
+
+
 ### 代码草图
+
 与你用 PHP 构建的所有程序一样，最终目标是为代码创建一个可用的界面。在深入开发 Web 应用程序之前，你应该对代码和数据结构画一个草图。在着手之前，你可能需要对自己希望看到的界面有一个清晰的想法。
 
 ### 保持更新
+
 PHP 被认为是一种广泛使用的语言。它每天都会接收新的更新。如果你想在这场竞争中保持领先，你应该让自己熟悉这些更新。
 
 ### 词汇
+
 在阅读此书时，你会遇到许多如 `constants`（常量）、`functions`（函数）、`classes`（类）和 `interfaces`（接口）之类的术语。这些术语构成了 PHP 的主体。还有其他术语如 `variables`（变量）、`inheritance`（继承）、`methods`（方法）和 `properties`（属性）。理解这些术语是制作网站的关键。你可以查看官方网站 `php.net` 手册来扩展你的词汇并深入理解。
 
 ### OOP（面向对象编程）
+
 如果你还没有进入面向对象编程的世界，你就处于了不利位置。你最终会迅速落后。正如你在书中之前的章节中学到的，OOP 围绕着 `classes`（类）或 `objects`（对象）展开，将不同的事物结合在一起。它们消除了对代码的需求。对象是集成了不同函数的类，并允许开发者反复使用它们。
 
 ### 注释
+
 许多初级开发者认为他们不应该浪费时间写注释。然而，事实是，这是你应该尽早养成的习惯。作为一名开发者，你在写注释时应该像写代码一样专注。每条注释都是你的参考，让你知道自己写了什么。这些注释倾向于解释你的程序或应用程序将采取的方向。但是，给代码添加注释并不意味着让它变得混乱。只需写几个简短的笔记让代码具有可读性即可。另一种方法是对文件中复杂的部分编写文档，以便你可以解读某些极其复杂的细节。当你更改代码时，不要忘记更改注释。
 
 ### PHP 框架
+
 PHP 框架的设计旨在帮助开发者。如果你是一个理想的程序员，你可能需要几周或几个月的时间才能从零创建一个 Web 应用程序。大部分时间将被消耗在重复代码的生产上，这是无聊的。如果你愿意投入精力，应该去尝试。否则，请使用框架，如 `Laravel`，我已经在书中解释过了。框架还确保了你的数据库和应用程序之间的连接。
 
-
-
-
-
-# 结论
+## 结论
 
 既然你已经读到了这本书的最后，我希望你已经学习了许多关于 `PHP` 脚本语言基础的知识。我在书中为你提供了实用的代码、说明和深入的解释，以便你利用它们来理解脚本，并可以通过编辑它们来创建独特的脚本。如果你能应用书中学到的课程，你将在短时间内成为一名熟练的用户。
 
-除了旨在通过登录界面猜测你密码的暴力攻击外，24 小时不不停地工作以利用网站 `PHP` 代码中漏洞的机器人（bots），被认为是针对你网站漏洞的攻击常见的攻击形式。你必须不断考虑 `PHP` 编码中的漏洞，以便消除它们并让你的 `PHP` 代码更加强大。
+除了旨在通过登录界面猜测你密码的暴力攻击外，24 小时不停地工作以利用网站 `PHP` 代码中漏洞的机器人（bots），被认为是针对你网站漏洞的攻击常见的攻击形式。你必须不断考虑 `PHP` 编码中的漏洞，以便消除它们并让你的 `PHP` 代码更加强大。
 
 ## 远程代码执行 (RCE)
 
@@ -3513,4 +3655,3 @@ SQL 注入允许黑客访问网站数据。黑客可以在数据库中创建新�
 - `https://www.w3schools.com/php/sql_update.asp`
 - `https://www.w3schools.com/php/sql_delete.asp`
 - `https://www.w3schools.com/php/sql_join.asp`
-

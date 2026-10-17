@@ -1,29 +1,9 @@
+
 # R 机器学习实用指南 (2021 更新版)
 
+## 指南
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 指南
-
-1. [开始阅读]
-
-
-
+1. [开始阅读](#开始阅读)
 
 R 是一种开源编程语言和免费环境，主要用于统计计算和图形图形。你可以在[官方网站](https://www.r-project.org/)上找到关于 R 的信息。在 Google 等网站上使用关键词 `R` 以及其他特定主题词进行搜索，可以从网站、博客文章、教程、文档等处找到更多信息。
 
@@ -31,7 +11,7 @@ R 是一种开源编程语言和免费环境，主要用于统计计算和图形
 
 在 R 环境中（R 提示符为 `>`）时，你可以通过调用 `quit()` 函数或其简写 `q()` 退出。当系统询问你是否要保存工作空间时，如果你回复 `y`（是），那么你在当前 R 会话期间产生的所有变量都将保存到名为 `.Rdata` 的文件中，位于当前工作目录下。如果你以后在同一目录下启动 R，这些变量及其名称将被自动加载。
 
-R 中的函数在不同的包（packages）之间共享。最基础的包如“base”、“utils”、“graphics” 和 “stats”在启动时会自动导入，它们包含了一些最常用的函数。然而，还有许多实用的函数需要用户下载并导入一些额外的包。这可以通过 RStudio 的图形用户界面轻松完成。例如，为了下载包含有用 SVM 函数的包“e1071”，你可以点击“Packages（包）” -> “Install Packages（安装包）”并输入所需的包名。从同一个菜单中，你可以导入所需的包。同样的操作也可以通过命令 `install.packages("e1071")` 和 `library("e1071")` 分别来下载和导入包“e1071”。最后，通过 `library()` 命令可以显示所有已安装的包集合。
+R 中的函数在不同的包（packages）之间共享。最基础的包如 `base`、`utils`、`graphics` 和 `stats` 在启动时会自动导入，它们包含了一些最常用的函数。然而，还有许多实用的函数需要用户下载并导入一些额外的包。这可以通过 RStudio 的图形用户界面轻松完成。例如，为了下载包含有用 SVM 函数的包 `e1071`，你可以点击“Packages（包）” -> “Install Packages（安装包）”并输入所需的包名。从同一个菜单中，你可以导入所需的包。同样的操作也可以通过命令 `install.packages("e1071")` 和 `library("e1071")` 分别来下载和导入包 `e1071`。最后，通过 `library()` 命令可以显示所有已安装的包集合。
 
 若要检查你当前的工作目录，可以输入：
 
@@ -181,216 +161,6 @@ ls()
 rm(list=ls())
 ```
 
-## 1.2 向量 (Vectors)
-
-向量是相似类型的集合。下面显示了关于向量的一些操作。创建一个向量：`a <- c(1, 2, 3, 4, 5)`，另一个向量 `b <- c(10, 20, 30, 40, 50)`。向量 `a` 的索引可以通过 `a[1]` 来访问。向量的元素。
-
-例如 `getwd()` 是一个通过调用不带参数的函数 `getwd()` 来求值的表达式。`42` 也是如此：
-
-```
-42
-```
-
-```
-## [1] 42
-```
-
-对于以下也是如此：
-
-```
-(100 * 2 - 12 ^ 2) / 7 * 5 + 2
-```
-
-```
-## [1] 42
-```
-
-还有一些预定义的常量，如 `pi` 或 `e`：
-
-```
-sin(pi/2)
-```
-
-```
-## [1] 1
-```
-
-要查找特定函数的文档，你可以输入 `?sum` 或 `help(sum)`。要搜索函数，可以使用 `help.search("sin")` 函数来提供帮助。对于某些函数，可以通过输入表达式 `example(plot)` 查看使用示例。注释以 `#` 开头，而给变量赋值时可以使用 `<-` 或 `=`。例如：
-
-```
-a <- 42
-b <- (42 + a) / 2
-print(a)
-```
-
-```
-## [1] 42
-```
-
-```
-print(b)
-```
-
-```
-## [1] 42
-```
-
-使用 `ls()` 可以检查当前会话中存在的所有变量。
-
-```
-ls()
-```
-
-```
-## [1] "a" "accuracy" "b" "centers" "clustering" "col" "control" "ctrl" "d"
-```
-
-要删除当前会话中的所有变量，可以使用：
-
-```
-rm(list=ls())
-```
-
-## 1.2 向量 (Vectors)
-
-向量是相似类型的集合。下面显示了关于向量的一些操作。创建一个向量：`a <- c(1, 2, 3, 4, 5)`，另一个向量 `b <- c(10, 20, 30, 40, 50)`。向量 `a` 的索引可以通过 `a[1]` 来访问。向量的元素。
-
-例如 `getwd()` 是一个通过调用不带参数的函数 `getwd()` 来求值的表达式。`42` 也是如此：
-
-```
-42
-```
-
-```
-## [1] 42
-```
-
-对于以下也是如此：
-
-```
-(100 * 2 - 12 ^ 2) / 7 * 5 + 2
-```
-
-```
-## [1] 42
-```
-
-还有一些预定义的常量，如 `pi` 或 `e`：
-
-```
-sin(pi/2)
-```
-
-```
-## [1] 1
-```
-
-要查找特定函数的文档，你可以输入 `?sum` 或 `help(sum)`。要搜索函数，可以使用 `help.search("sin")` 函数来提供帮助。对于某些函数，可以通过输入表达式 `example(plot)` 查看使用示例。注释以 `#` 开头，而给变量赋值时可以使用 `<-` 或 `=`。例如：
-
-```
-a <- 42
-b <- (42 + a) / 2
-print(a)
-```
-
-```
-## [1] 42
-```
-
-```
-print(b)
-```
-
-```
-## [1] 42
-```
-
-使用 `ls()` 可以检查当前会话中存在的所有变量。
-
-```
-ls()
-```
-
-```
-## [1] "a" "accuracy" "b" "centers" "clustering" "col" "control" "ctrl" "d"
-```
-
-要删除当前会话中的所有变量，可以使用：
-
-```
-rm(list=ls())
-```
-
-## 1.2 向量 (Vectors)
-
-向量是相似类型的集合。下面显示了关于向量的一些操作。创建一个向量：`a <- c(1, 2, 3, 4, 5)`，另一个向量 `b <- c(10, 20, 30, 40, 50)`。向量 `a` 的索引可以通过 `a[1]` 来访问。向量的元素。
-
-例如 `getwd()` 是一个通过调用不带参数的函数 `getwd()` 来求值的表达式。`42` 也是如此：
-
-```
-42
-```
-
-```
-## [1] 42
-```
-
-对于以下也是如此：
-
-```
-(100 * 2 - 12 ^ 2) / 7 * 5 + 2
-```
-
-```
-## [1] 42
-```
-
-还有一些预定义的常量，如 `pi` 或 `e`：
-
-```
-sin(pi/2)
-```
-
-```
-## [1] 1
-```
-
-要查找特定函数的文档，你可以输入 `?sum` 或 `help(sum)`。要搜索函数，可以使用 `help.search("sin")` 函数来提供帮助。对于某些函数，可以通过输入表达式 `example(plot)` 查看使用示例。注释以 `#` 开头，而给变量赋值时可以使用 `<-` 或 `=`。例如：
-
-```
-a <- 42
-b <- (42 + a) / 2
-print(a)
-```
-
-```
-## [1] 42
-```
-
-```
-print(b)
-```
-
-```
-## [1] 42
-```
-
-使用 `ls()` 可以检查当前会话中存在的所有变量。
-
-```
-ls()
-```
-
-```
-## [1] "a" "accuracy" "b" "centers" "clustering" "col" "control" "ctrl" "d"
-```
-
-要删除当前会话中的所有变量，可以使用：
-
-```
-rm(list=ls())
-```
-
 ## 1.3 矩阵 (Matrices)
 
 要创建矩阵使用 `matrix()` 函数：
@@ -451,9 +221,6 @@ args(matrix)
 matrix(1:9, byrow =TRUE)
 ```
 
-
-
-
 ```
 ##      [,1] [,2] [,3]
 ## [1,]  164  184  105
@@ -486,36 +253,7 @@ data <- read.csv(file = "data/inflammation-01.csv", header = FALSE, stringsAsFac
 dir()
 ```
 
-```
-##  [1] "_site.yml"                    "ar.html"                     
-##  [3] "ar.pdf"                       "ar.Rmd"                      
-##  [5] "breast-cancer-wisconsin.data" "cfs.html"                    
-##  [7] "cfs.Rmd"                      "classification.html"         
-##  [9] "classification.Rmd"           "clustering.html"             
-## [11] "clustering.Rmd"               "CNAME"                       
-## [13] "data"                         "data-eng.html"               
-##  [15] "data-eng.Rmd"                 "dbscan_files"                
-##  [17] "dbscan.html"                  "dbscan.pdf"                  
-##  [19] "dbscan.Rmd"                   "docs"                        
-##  [21] "dt_files"                     "dt.html"                     
-##  [23] "dt.pdf"                       "dt.Rmd"                      
-##  [25] "finder.html"                  "finder.Rmd"                  
-##  [27] "footer.html"                  "footer.tex"                  
-##  [29] "head.tex"                     "hierarchical_files"          
-##  [31] "hierarchical.html"            "hierarchical.pdf"            
-##  [33] "hierarchical.Rmd"             "index.html"                  
-##  [35] "index.Rmd"                    "intro.Rmd"                   
-##  [37] "kmeans.pdf"                   "kmeans.Rmd"                  
-##  [39] "knn.Rmd"                      "ml-tutorials.Rproj"          
-##  [41] "nb.pdf"                       "nb.Rmd"                      
-##  [43] "nn.Rmd"                       "other.Rmd"                   
-##  [45] "outlier.pdf"                  "outlier.Rmd"                 
-##  [47] "pca.Rmd"                      "r.Rmd"                       
-##  [49] "README.md"                    "render.sh"                   
-##  [51] "retail.data.gz"               "rfe.Rmd"                     
-##  [53] "site_libs"                    "style.css"                   
-##  [55] "uc.Rmd"                       "wrapper.Rmd"
-```
+
 
 `dir` 函数返回文件系统的文件和目录。参数 `header=FALSE` 告诉 `read.csv` 函数没有表头行来为列命名。此外，参数 `stringsAsFactors=TRUE` 允许将包含字符串值的列作为因子（factors）进行处理。
 
@@ -549,7 +287,7 @@ head(data)
 ## 20 0  0  2  1  0  2  4  2  2  6  10   7   9  13   8  8  15  10
 ```
 
-其他可以使用使用的函数：
+其他可以使用的函数：
 
 ```
 # 变量类型
@@ -611,105 +349,134 @@ str(data)
 ```
 
 # 数据框的统计摘要
+
+```
 summary(data)
 ```
 
-
-
-
-
 ```
-## V1          V2             V3              V4             V5      
-## 最小值   :0   最小值   :0.00   最小值   :0.000   最小值   :0.00   最小值   :1.000 
-## 第一四分位数:0   第一四分位数:0.00   第一四分位数:1.000   第一四分位数:1.00   第一四分位数:1.000 
-## 中位数     :0   中位数 :0.00   中位数 :1.000   中位数 :2.00   中位数 :2.000 
-## 平均值     :0   平均值   :0.45   平均值   :1.117   平均值   :1.75   平均值   :2.433 
-## 第三四分位数:0   第三四分位数:1.00   第三四分位数:2.000   第三四分位数:3.00   第三四分位数:3.000 
-## 最大值     :0   最大值   :1.00   最大值   :2.000   最大值   :3.00   最大值   :4.000 
+##       V1             V2              V3              V4             V5       
+##  最小值   :0   最小值   :0.00   最小值   :0.000   最小值   :0.00   最小值   :1.000 
+##  第一四分位数:0   第一四分位数:0.00   第一四分位数:1.000   第一四分位数:1.00   第一四分位数:1.000 
+##  中位数     :0   中位数 :0.00   中位数 :1.000   中位数 :2.00   中位数 :2.000 
+##  平均值     :0   平均值   :0.45   平均值   :1.117   平均值   :1.75   平均值   :2.433 
+##  第三四分位数:0   第三四分位数:1.00   第三四分位数:2.000   第三四分位数:3.00   第三四分位数:3.000 
+##  最大值     :0   最大值   :1.00   最大值   :2.000   最大值   :3.00   最大值   :4.000 
 ##        V6             V7            V8              V9       
-## 最小值   :1.00   最小值   :1.0   最小值   :1.000   最小值   :2.000  
-## 第一四分位数:2.00   第一四分位数:2.0   第一四分位数:2.000   第一四分位数:4.000  
-## 中位数     :3.00   中位数 :4.0   中位数 :4.000   中位数 :5.000  
-## 平均值     :3.15   平均值   :3.8   平均值   :3.883   平均值   :5.233  
-## 第三四分位数:4.00   第三四分位数:5.0   第三四分位数:5.250   第三四分位数:7.000  
-## 最大值     :5.00   最大值   :6.0   最大值   :7.000   最大值   :8.000  
+##  最小值   :1.00   最小值   :1.0   最小值   :1.000   最小值   :2.000  
+##  第一四分位数:2.00   第一四分位数:2.0   第一四分位数:2.000   第一四分位数:4.000  
+##  中位数     :3.00   中位数 :4.0   中位数 :4.000   中位数 :5.000  
+##  平均值     :3.15   平均值   :3.8   平均值   :3.883   平均值   :5.233  
+##  第三四分位数:4.00   第三四分位数:5.0   第三四分位数:5.250   第三四分位数:7.000  
+##  最大值     :5.00   最大值   :6.0   最大值   :7.000   最大值   :8.000  
 ##       V10             V11             V12             V13       
-## 最小值   :2.000   最小值   : 2.00   最小值   : 2.00   最小值   : 3.00  
-## 第一四分位数:3.750   第一四分位数: 4.00   第一四分位数:3.75   第一四分位数:5.00  
-## 中位数     :6.000   中位数 : 6.00   中位数 : 5.50   中位数 : 9.50  
-## 平均值     :5.517   平均值   : 5.95   平均值   : 5.90   平均值   : 8.35  
-## 第三四分位数:7.000   第三四分位数:9.00   第三四分位数:8.00   第三四分位数:11.00  
-## 最大值     :9.000   最大值   :10.00   最大值   :11.00   最大值   :12.00  
+##  最小值   :2.000   最小值   : 2.00   最小值   : 2.00   最小值   : 3.00  
+##  第一四分位数:3.750   第一四分位数: 4.00   第一四分位数:3.75   第一四分位数:5.00  
+##  中位数     :6.000   中位数 : 6.00   中位数 : 5.50   中位数 : 9.50  
+##  平均值     :5.517   平均值   : 5.95   平均值   : 5.90   平均值   : 8.35  
+##  第三四分位数:7.000   第三四分位数:9.00   第三四分位数:8.00   第三四分位数:11.00  
+##  最大值     :9.000   最大值   :10.00   最大值   :11.00   最大值   :12.00  
 ##       V14              V15              V16            V17        
-## 最小值   : 3.000   最小值   : 3.000   最小值   : 3.0   最小值   : 4.000  
-## 第一四分位数:5.000   第一四分位数:5.000   第一四分位数:6.0   第一四分位数:6.750  
-## 中位数     :8.000   中位数 : 8.000   中位数 :10.0   中位数 : 8.500  
-## 平均值     :7.733   平均值   : 8.367   平均值   : 9.5   平均值   : 9.583  
-## 第三四分位数:10.000   第三四分位数:12.00   第三四分位数:13.0   第三四分位数:13.00  
-## 最大值     :13.000   最大值   :14.00   最大值   :15.00   最大值   :16.00  
+##  最小值   : 3.000   最小值   : 3.000   最小值   : 3.0   最小值   : 4.000  
+##  第一四分位数:5.000   第一四分位数:5.000   第一四分位数:6.0   第一四分位数:6.750  
+##  中位数     :8.000   中位数 : 8.000   中位数 :10.0   中位数 : 8.500  
+##  平均值     :7.733   平均值   : 8.367   平均值   : 9.5   平均值   : 9.583  
+##  第三四分位数:10.000   第三四分位数:12.00   第三四分位数:13.0   第三四分位数:13.00  
+##  最大值     :13.000   最大值   :14.00   最大值   :15.00   最大值   :16.00  
 ##       V18             V19             V20             V21       
-## 最小值   : 5.00   最小值   : 5.00   最小值   : 5.00   最小值   : 5.00  
-## 第一四分位数:7.75   第一四分位数:8.00   第一四分位数:8.75   第一四分位数:9.00  
-## 中位数     :11.00   中位数 :11.50   中位数 :13.00   中位数 :14.00  
-## 平均值     :10.63   平均值   :11.57   平均值   :12.35   平均值   :13.25  
-## 第三四分位数:13.00   第三四分位数:15.00   第三四分位数:16.00   第三四分位数:16.25  
-## 最大值     :17.00   最大值   :18.00   最大值   :19.00   最大值   :20.00  
+##  最小值   : 5.00   最小值   : 5.00   最小值   : 5.00   最小值   : 5.00  
+##  第一四分位数:7.75   第一四分位数:8.00   第一四分位数:8.75   第一四分位数:9.00  
+##  中位数     :11.00   中位数 :11.50   中位数 :13.00   中位数 :14.00  
+##  平均值     :10.63   平均值   :11.57   平均值   :12.35   平均值   :13.25  
+##  第三四分位数:13.00   第三四分位数:15.00   第三四分位数:16.00   第三四分位数:16.25  
+##  最大值     :17.00   最大值   :18.00   最大值   :19.00   最大值   :20.00  
 ##       V22             V23             V24             V25      
-## 最小值   : 4.00   最小值   : 4.00   最小值   : 4.00   最小值   : 4.00  
-## 第一四分位数:8.00   第一四分位数:7.75   第一四分位数:6.75   第一四分位数:7.00  
-## 中位数     :13.00   中位数 :11.00   中位数 :10.00   中位数 :10.50  
-## 平均值     :11.97   平均值   :11.03   平均值   :10.17   平均值   :10.00  
-## 第三四分位数:15.25   第三四分位数:15.00   第三四分位数:13.25   第三四分位数:13.00  
-## 最大值     :19.00   最大值   :18.00   最大值   :17.00   最大值   :16.00  
+##  最小值   : 4.00   最小值   : 4.00   最小值   : 4.00   最小值   : 4.00  
+##  第一四分位数:8.00   第一四分位数:7.75   第一四分位数:6.75   第一四分位数:7.00  
+##  中位数     :13.00   中位数 :11.00   中位数 :10.00   中位数 :10.50  
+##  平均值     :11.97   平均值   :11.03   平均值   :10.17   平均值   :10.00  
+##  第三四分位数:15.25   第三四分位数:15.00   第三四分位数:13.25   第三四分位数:13.00  
+##  最大值     :19.00   最大值   :18.00   最大值   :17.00   最大值   :16.00  
 ##       V26             V27             V28             V29        
-## 最小值   : 3.000   最小值   : 3.00   最小值   : 3.00   最小值   : 3.000  
-## 第一四分位数:5.75   第一四分位数:7.00   第一四分位数:5.00   第一四分位数:5.00  
-## 中位数     :9.000   中位数 :10.00   中位数 : 7.00   中位数 : 7.00  
-## 平均值     :8.667   平均值   :9.15   平均值   : 7.25   平均值   : 7.333  
-## 第三四分位数:12.00   第三四分位数:12.00   第三四分位数:9.00   第三四分位数:10.00  
-## 最大值     :15.000   最大值   :14.00   最大值   :13.00   最大值   :12.00  
-##       V30              V31              V32            V33       
-## 最小值   : 2.000   最小值   : 2.000   最小值   : 2.00   最小值   : 2.00  
-## 第一四分位数:3.000   第一四分位数:4.000   第一四分位数:4.00   第一四分位数:4.00  
-## 中位数     :6.000   中位数 : 6.00   中位数 : 5.00   中位数 : 5.00  
-## 平均值     :5.583   平均值   : 6.067   平均值   : 5.95   平均值   : 5.117  
-## 第三四分位数:10.000   第三四分位数:8.000   第三四分位数:6.00   第三四分位数:6.00  
-## 最大值     :11.000   最大值   :10.00   最大值   :9.00   最大值   :8.000  
-##       V34           V35           V36             V37             V38    
-## 最小值   : 1.0   最小值   : 1.0   最小值   : 1.000   最小值   : 1.000   最小值   : 1.0 
-## 第一四分位数:2.0   第一四分位数:2.0   第一四分位数:2.000   第一四分位数:2.000   第一四分位数:2.0 
-## 中位数     :4.0   中位数 :3.0   中位数 :4.000   中位数 :2.000   中位数 :1.0 
-## 平均值     :3.6   平均值   : 3.3   平均值   : 3.567   平均值   : 2.483   平均值   : 1.5 
-## 第三四分位数:5.0   第三四分位数:5.0   第三四分位数:5.000   第三四分位数:4.000   第三四分位数:3.0 
-## 最大值     :7.0   最大值   :6.0   最大值   :5.000   最大值   :4.000   最大值   :3.0 
-##       V39             V40        
-## 最小值   :0.000   最小值   :0.000  
-## 第一四分位数:0.000   第一四分位数:0.000  
-## 中位数     :1.000   中位数 :1.000  
-## 平均值     :1.133   平均值   :0.566  
-## 第三四分位数:2.000   第三四分位数:1.000  
-## 最大值     :2.000   最大值   :1.000
+##  最小值   : 3.000   最小值   : 3.00   最小值   : 3.00   最小值   : 3.000  
+##  第一四分位数:5.75   第一四分位数:7.00   第一四分位数:5.00   第一四分位数:5.00  
 ```
+
+
+
+## 中位数：9.000 | 中位数：10.00 | 中位数：7.00 | 中位数：7.00
+
+## 平均值：8.667 | 平均值：9.15 | 平均值：7.25 | 平均值：7.333
+
+## 第三四分位数：12.00 | 第三四分位数：12.00 | 第三四分位数：9.00 | 第三四分位数：10.00
+
+## 最大值：15.000 | 最大值：14.00 | 最大值：13.00 | 最大值：12.00
+
+## V30 | V31 | V32 | V33
+
+## 最小值：2.000 | 最小值：2.000 | 最小值：2.00 | 最小值：2.00
+
+## 第一四分位数：3.000 | 第一四分位数：4.000 | 第一四分位数：4.00 | 第一四分位数：4.00
+
+## 中位数：6.000 | 中位数：6.00 | 中位数：5.00 | 中位数：5.00
+
+## 平均值：5.583 | 平均值：6.067 | 平均值：5.95 | 平均值：5.117
+
+## 第三四分位数：10.000 | 第三四分位数：8.000 | 第三四分位数：6.00 | 第三四分位数：6.00
+
+## 最大值：11.000 | 最大值：10.00 | 最大值：9.00 | 最大值：8.000
+
+## V34 | V35 | V36 | V37 | V38
+
+## 最小值：1.0 | 最小值：1.0 | 最小值：1.000 | 最小值：1.000 | 最小值：1.0
+
+## 第一四分位数：2.0 | 第一四分位数：2.0 | 第一四分位数：2.000 | 第一四分位数：2.000 | 第一四分位数：2.0
+
+## 中位数：4.0 | 中位数：3.0 | 中位数：4.000 | 中位数：2.000 | 中位数：1.0
+
+## 平均值：3.6 | 平均值：3.3 | 平均值：3.567 | 平均值：2.483 | 平均值：1.5
+
+## 第三四分位数：5.0 | 第三四分位数：5.0 | 第三四分位数：5.000 | 第三四分位数：4.000 | 第三四分位数：3.0
+
+## 最大值：7.0 | 最大值：6.0 | 最大值：5.000 | 最大值：4.000 | 最大值：3.0
+
+## V39 | V40
+
+## 最小值：0.000 | 最小值：0.000
+
+## 第一四分位数：0.000 | 第一四分位数：0.000
+
+## 中位数：1.000 | 中位数：1.000
+
+## 平均值：1.133 | 平均值：0.566
+
+## 第三四分位数：2.000 | 第三四分位数：1.000
+
+## 最大值：2.000 | 最大值：1.000
 
 还有不同的方法可以从数据框（data frame）中选择切片数据：
 
 ### 数据中的第一个值
-```
+
+```r
 data[1, ]
 ```
 
 ### 数据中的中间值
-```
+
+```r
 data[30, 20]
 ```
 
 ### 四行前十列
-```
+
+```r
 data[1:4, 1:10]
 ```
 
 ### 不一定从开始
-```
+
+```r
 data[5:10, 1:10]
 ```
 
@@ -720,6 +487,7 @@ data[5:10, 1:10]
 d1 <- data[5, ]
 class(d1)
 ```
+
 ```
 [1] "data.frame"
 ```
@@ -729,6 +497,7 @@ class(d1)
 d2 <- data[, 16]
 class(d2)
 ```
+
 ```
 [1] "integer"
 ```
@@ -737,11 +506,12 @@ class(d2)
 d3 <- data[, 16, drop=FALSE]
 class(d3)
 ```
+
 ```
 [1] "data.frame"
 ```
 
-还可以调用其他函数 `min`、`max`、`mean`、`sd` 和 `median` 来感兴趣的统计值：
+还可以调用其他函数 `min`、`max`、`mean`、`sd` 和 `median` 来获取感兴趣的统计值：
 
 ```r
 # 第一行，所有列
@@ -750,6 +520,7 @@ patient_1 <- data[1, ]
 # 患者 1 的最大炎症值
 max(patient_1)
 ```
+
 ```
 [1] 18
 ```
@@ -758,6 +529,7 @@ max(patient_1)
 # 患者 2 的最大炎症值
 max(data[2, ])
 ```
+
 ```
 [1] 18
 ```
@@ -766,6 +538,7 @@ max(data[2, ])
 # 第 7 天的最小炎症值
 min(data[, 7])
 ```
+
 ```
 [1] 1
 ```
@@ -774,6 +547,7 @@ min(data[, 7])
 # 第 7 天的平均炎症值
 mean(data[, 7])
 ```
+
 ```
 [1] 3.8
 ```
@@ -782,6 +556,7 @@ mean(data[, 7])
 # 第 7 天的中位数炎症值
 median(data[, 7])
 ```
+
 ```
 [1] 4
 ```
@@ -790,15 +565,17 @@ median(data[, 7])
 # 第 7 天炎症的标准差
 sd(data[, 7])
 ```
+
 ```
 [1] 1.725187
 ```
 
-为了进行更复杂的计算，例如`所有患者的最大炎症值，或者每天的平均值？`，我们需要按行或按列应用 `max` 或 `mean` 函数。幸运的是，有一个 `apply` 函数，它可以将函数应用于每一个“边际”（margins）上，1 代表行，2 代表列：
+为了进行更复杂的计算，例如“所有患者的最大炎症值，或者每天的平均值？”，我们需要按行或按列应用 `max` 或 `mean` 函数。幸运的是，有一个 `apply` 函数，它可以将函数应用于每一个“边际”（margins）上，1 代表行，2 代表列：
 
 ```r
 args(apply) # args 返回 NULL 是因为它只是打印信息，但每个函数必须返回某些内容！
 ```
+
 ```
 ## function (X, MARGIN, FUN, ...) 
 ## NULL
@@ -808,10 +585,6 @@ args(apply) # args 返回 NULL 是因为它只是打印信息，但每个函数�
 max_patient_inflammation <- apply(data, 1, max)
 max_patient_inflammation
 ```
-
-
-
-
 
 ```
 ## [1] 18 18 19 17 17 18 17 20 17 18 18 18 17 16 17 18 19 19 17 19 19 16 17
@@ -824,7 +597,7 @@ avg_day_inflammation <- apply(data, 2, mean)
 avg_day_inflammation
 ```
 
-```r
+```
 ##         V1         V2         V3         V4         V5         V6 
 ##  0.0000000  0.4500000  1.1166667  1.7500000  2.4333333  3.1500000 
 ##         V7         V8         V9        V10        V11        V12 
@@ -840,9 +613,8 @@ avg_day_inflammation
 ##        V37        V38        V39        V40 
 ##  2.4833333  1.5000000  1.1333333  0.5666667
 ```
-##
 
-现在我们来画一些图
+## 现在我们来画一些图
 
 ```r
 plot(avg_day_inflammation)
@@ -986,10 +758,10 @@ sign(-3)
 
 你可以使用逻辑运算符做决策：
 
-- 等 (`==`)
-- 大于等于 (`>=`)
-- 小于等于 (`<=`)
-- 不等于 (`!=`)
+- 等（`==`）
+- 大于等于（`>=`）
+- 小于等于（`<=`）
+- 不等于（`!=`）
 
 我们还可以组合测试。与符号 `&` 表示逻辑“与”；竖线 `|` 表示逻辑“或”。
 
@@ -1056,8 +828,7 @@ iris$Sepal.Length
 
 
 
-
-## [1] 5.1 4.9 4.7 4.6 5.0 5.4 4.6 5.0 4.4 4.9 5.4 4.8 4.8 4.3 5.8 5.7 5.4
+## 5.1 4.9 4.7 4.6 5.0 5.4 4.6 5.0 4.4 4.9 5.4 4.8 4.8 4.3 5.8 5.7 5.4
 ## [18] 5.1 5.7 5.1 5.4 5.1 4.6 5.1 4.8 5.0 5.0 5.2 5.2 4.7 4.8 5.4 5.2 5.5
 ## [35] 4.9 5.0 5.5 4.9 4.4 5.1 5.0 4.5 4.4 5.0 5.1 4.8 5.1 4.6 5.3 5.0 7.0
 ## [52] 6.4 6.9 5.5 6.5 5.7 6.3 4.9 6.6 5.2 5.0 5.9 6.0 6.1 5.6 6.7 5.6 5.8
@@ -1067,7 +838,7 @@ iris$Sepal.Length
 ## [120] 6.0 6.9 5.6 7.7 6.3 6.7 7.2 6.2 6.1 6.4 7.2 7.4 7.9 6.4 6.3 6.1 7.7
 ## [137] 6.3 6.4 6.0 6.9 6.7 6.9 5.8 6.8 6.7 6.7 6.3 6.5 6.2 5.9
 
-并运行标准统计统计：
+并运行标准统计：
 
 ```r
 mean(iris$Sepal.Length)
@@ -1132,39 +903,39 @@ sort(iris$Sepal.Length)
 ```
 
 ```
-## [1] 4.3 4.4 4.4 4.4 4.5 4.6 4.6 4.6 4.7 4.7 4.8 4.8 4.8 4.9 [18] 4.9 4.9 4.9 4.9 5.0 5.0 5.0 5.0 5.0 5.0 5.0 5.1 [35] 5.1 5.1 5.1 5.1 5.1 5.2 5.2 5.2 5.3 5.4 5.4 5.4 5.4 5.4 [52] 5.4 5.5 5.5 5.5 5.5 5.5 5.6 5.6 5.6 5.6 5.7 5.7 [69] 5.7 5.7 5.7 5.7 5.8 5.8 5.8 5.8 5.9 5.9 5.9 6.0 [86] 6.0 6.0 6.0 6.0 6.1 6.1 6.1 6.1 6.2 6.2 6.2 6.3 6.3 [103] 6.3 6.3 6.3 6.3 6.3 6.4 [120] 6.3 6.3 6.3 6.3 6.3 6.4 [137] 6.3 6.4 6.0 6.9 6.7 6.9 5.8 6.8 6.7 6.7 6.3 6.5 6.2 5.9
+## [1] 4.3 4.4 4.4 4.4 4.5 4.6 4.6 4.6 4.7 4.7 4.8 4.8 4.8 4.9 [18] 4.9 4.9 4.9 4.9 5.0 5.0 5.0 5.0 5.0 5.0 5.0 5.1 [35] 5.1 5.1 5.1 5.1 5.1 5.2 5.2 5.2 5.3 5.4 5.4 5.4 5.4 5.4 [52] 5.4 5.5 5.5 5.5 5.5 5.5 5.6 5.6 5.6 5.6 5.7 5.7 [69] 5.7 5.7 5.7 5.7 5.8 5.8 5.8 5.8 5.9 5.9 5.9 6.0 [86] 6.0 6.0 6.0 6.0 6.1 6.1 6.1 6.1 6.2 6.2 6.2 6.3 6.3 [103] 6.3 6.3 6.3 6.3 6.3 6.3 6.3 6.4 [120] 6.3 6.3 6.3 6.3 6.3 6.4 [137] 6.3 6.4 6.0 6.9 6.7 6.9 5.8 6.8 6.7 6.7 6.3 6.5 6.2 5.9
 ```
 
 ## 第 2 章 机器学习简介
 
-## 2.1 定义
+### 2.1 定义
 
 **机器学习**（ML）是人工智能（AI）的一个子集，它利用统计技术让计算机在没有显式编程的情况下“学习”。机器学习通常与**数据挖掘**（从大型数据集中发现模式的过程）、**模式识别**、**统计推断**以及机器学习本身相关（目标是提高性能）。
 
-## 2.2 主要与任务
+### 2.2 主要任务
 
 机器学习任务通常分为两大类，取决于是否存在“教师”：
 
--   **监督学习**：系统获得示例和期望输出，学习器必须产生一种输入到类别的映射。这通常以监督的方式处理。垃圾邮件过滤是分类的一个，输入是消息，类别是“垃圾邮件”和“非垃圾邮件”。
--   **回归**：也是一种监督问题，输出是连续而非离散的。
--   **无监督学习**：对一组输入进行分组。与分类不同，分组不是预先知的，这通常是一个无监督任务。**降维**通过将输入映射到低维空间来简化。
--   **关联规则学习**（或依赖建模）：搜索输入之间的关系。例如，超市可能会收集购物习惯。通过关联规则学习，超市可以确定哪些产品经常被购买。
+- **监督学习**：系统获得示例和期望输出，学习器必须产生一种输入到类别的映射。这通常以监督的方式处理。垃圾邮件过滤是分类的一个例子，输入是消息，类别是“垃圾邮件”和“非垃圾邮件”。
+- **回归**：也是一种监督问题，输出是连续而非离散的。
+- **无监督学习**：对一组输入进行分组。与分类不同，分组不是预先知道的，这通常是一个无监督任务。**降维**通过将输入映射到低维空间来简化。
+- **关联规则学习**（或依赖建模）：搜索输入之间的关系。例如，超市可能会收集购物习惯。通过关联规则学习，超市可以确定哪些产品经常被购买。
 
 ### 2.3 机器学习生存指南
 
 现在你面对一个问题，你将用什么方法来处理？
 
-首先，你必须根据你拥有的（或给予）的数据和机器学习算法来理解这个问题。问题是正式定义的还是非正式定义的？还是两者都有？需要哪些假设？如果不使用机器学习如何解决？解决问题的动机是什么？
+首先，你必须根据你拥有的（或给予的）数据和机器学习算法来理解这个问题。问题是正式定义的还是非正式定义的？还是两者都有？需要哪些假设？如果不使用机器学习如何解决？解决问题的动机是什么？
 
 下一步是准备数据以供你喜欢的机器学习算法使用，因为数据通常不符合你的格式或存在其他问题。你应该考虑：
+
 1. 哪些数据可用
 2. 是否存在缺失
 3. 哪些数据需要删除（例如，如果我们想预测学生期末的平均 GPA，那么学生 ID 没有任何预测价值）
-4. 进行组织、清洗和采样，以及 5. 根据领域知识转换为其他值（例如，图像像素值转换为平均图像强度或对称性）。
+4. 进行组织、清洗和采样，以及
+5. 根据领域知识转换为其他值（例如，图像像素值转换为平均图像强度或对称性）。
 
-
-
-最后，重要的是将上述所有步骤都记录在在线或离线记笔记本中，以便发布给利益相关者并供未来使用：问题是什么、你得出的解决方案是什么、结果如何、你的方法是否有任何局限性以及最终结论。
+最后，重要的是将上述所有步骤都记录在在线或离线笔记本中，以便发布给利益相关者并供未来使用：问题是什么、你得出的解决方案是什么、结果如何、你的方法是否有任何局限性以及最终结论。
 
 总结一下主要步骤为：
 
@@ -1176,16 +947,16 @@ sort(iris$Sepal.Length)
 
 如果有人想要更正式定义的流程来处理数据问题，有 CRISP-DM 和 OSEMN。[CRISP-DM](https://en.wikipedia.org/wiki/Cross-industry_standard_process_for_data_mining)（查看下方的图^(1)）的步骤为：
 
-* **业务理解**：从业务角度理解项目目标和需求，然后将这些知识转换为数据挖掘问题定义，以及旨在实现目标的初步计划。
-* **数据理解**：从初始数据收集开始，并进行后续活动以：
-    * 熟悉数据，
-    * 识别数据质量问题，
-    * 发现数据的初步洞察，或
-    * 检测有趣的子集以形成隐藏信息的假设。
-* **数据准备**：此阶段处理从原始数据构建最终数据集。
-* **建模**：应用各种建模技术并将参数校准至最优值。
-* **评估**：在最终部署之前对模型进行彻底评估。
-* **部署**：部署可以有许多形式，从生成的报告到可重复的数据挖掘过程。当然，我们应该提到，模型的创建通常不是项目的终点。
+- **业务理解**：从业务角度理解项目目标和需求，然后将这些知识转换为数据挖掘问题定义，以及旨在实现目标的初步计划。
+- **数据理解**：从初始数据收集开始，并进行后续活动以：
+  - 熟悉数据，
+  - 识别数据质量问题，
+  - 发现数据的初步洞察，或
+  - 检测有趣的子集以形成隐藏信息的假设。
+- **数据准备**：此阶段处理从原始数据构建最终数据集。
+- **建模**：应用各种建模技术并将参数校准至最优值。
+- **评估**：在最终部署之前对模型进行彻底评估。
+- **部署**：部署可以有许多形式，从生成的报告到可重复的数据挖掘过程。当然，我们应该提到，模型的创建通常不是项目的终点。
 
 ![CRISP-DM diagram](img/chapter2----CRISP-DM_Process_Diagram.png)
 
@@ -1193,11 +964,11 @@ CRISP-DM 图表
 
 [OSEMN](http://www.dataists.com/2010/09/a-taxonomy-of-data-science/)的步骤为：
 
-* 获取 (Obtain)
-* 清洗 (Scrub)
-* 探索 (Explore)
-* 模型 (Models)
-* 解释 (Interpret)
+- 获取 (Obtain)
+- 清洗 (Scrub)
+- 探索 (Explore)
+- 模型 (Models)
+- 解释 (Interpret)
 
 # 第二部分 - 分类
 
@@ -1213,35 +984,34 @@ CRISP-DM 图表
 
 我们可以使用 `rpart` 库在 R 中构建决策树：
 
-```
+```r
 library(rpart)
 ```
 
 此外，我们将使用 `rpart.plot` 库来绘制生成的树：
 
-```
+```r
 library(rpart.plot)
 ```
 
 构建一个新树需要执行 `rpart` 命令：
 
-```
-model <- rpart(Target ~ ., method = "class", data = ..., minsplit = ..., minbucke\
-t = ..., cp = ...)
+```r
+model <- rpart(Target ~ ., method = "class", data = ..., minsplit = ..., minbucket = ..., cp = ...)
 ```
 
 我们可以使用 `plot(model)` 和 `text(model, use.n = TRUE)` 来绘制树，或者使用以下命令：
 
-```
+```r
 rpart.plot(model, extra = 104, nn = TRUE)
 ```
 
 为了检查 `rpart` 的参数，我们可以运行 `rpart`。此外，如果执行 `rpart.control`，我们还可以检查：
 
-* `minsplit`: 节点中进行分裂所需的最小实例数
-* `minbucket`: 每个叶子节点允许的最小实例数
-* `maxdepth`: 树的最大深度
-* `cp`: 控制分裂复杂性的参数，其设置直观（值越大，对树进行剪枝的可能性就越高）
+- `minsplit`: 节点中进行分裂所需的最小实例数
+- `minbucket`: 每个叶子节点允许的最小实例数
+- `maxdepth`: 树的最大深度
+- `cp`: 控制分裂复杂性的参数，其设置直观（值越大，对树进行剪枝的可能性就越高）
 
 ### 3.2 分裂标准与决策树构建
 
@@ -1273,9 +1043,11 @@ c) 使用 Gini 指数构建完整的决策树，并绘制该树。
 
 首先，我们读取数据并导入所需的库：
 
-```
+```r
 weather = read.csv("weather.txt", stringsAsFactors = TRUE)
+
 library(rpart)
+
 library(rpart.plot)
 ```
 
@@ -1283,7 +1055,7 @@ library(rpart.plot)
 
 为了查看变量 `Outlook` 的分裂情况，我们执行以下命令：
 
-```
+```r
 model = rpart(Play ~ Outlook, method = "class", data = weather, minsplit = 2)
 ```
 
@@ -1315,22 +1087,25 @@ $GINI(Outlook) = (6/14) \cdot 0.444 + (8/14) \cdot 0.219 = 0.315$
 
 我们可以使用 R 来进行这些计算。对于 `Outlook`：
 
-```
+```r
 absfreq = table(weather[, c(1, 4)])
+
 freq = prop.table(absfreq, 1)
+
 freqSum = rowSums(prop.table(absfreq))
 ```
 
 我们计算 Sunny 和 Rainy 的 Gini：
 
-```
+```r
 GINI_Sunny = 1 - freq["Sunny", "No"]² - freq["Sunny", "Yes"]²
+
 GINI_Rainy = 1 - freq["Rainy", "No"]² - freq["Rainy", "Yes"]²
 ```
 
 `Outlook` 的总 Gini 计算为：
 
-```
+```r
 GINI_Outlook = freqSum["Sunny"] * GINI_Sunny + freqSum["Rainy"] * GINI_Rainy
 ```
 
@@ -1338,42 +1113,48 @@ GINI_Outlook = freqSum["Sunny"] * GINI_Sunny + freqSum["Rainy"] * GINI_Rainy
 
 我们使用以下公式计算 Outlook 的信息增益：
 
-
-
-
-
 ![Entropy(All) = - Freq(No) \cdot log2(Freq(No)) - Freq(Yes) \cdot log2(Freq(Yes))](img/leanpub_equation_8.png)![\\begin{multline\*} Entropy(Sunny) =\\\\ - Freq(No|Sunny) \cdot log2(Freq(No|Sunny)) - Freq(Yes|Sunny) \cdot log2(Freq(Yes|Sunny)) \\end{multline\*}](img/leanpub_equation_9.png)![\\begin{multline\*} Entropy(Rainy) =\\\\ - Freq(No|Rainy) \cdot log2(Freq(No|Rainy)) - Freq(Yes|Rainy) \cdot log2(Freq(Yes|Rainy)) \\end{multline\*}](img/leanpub_equation_10.png)![\\begin{multline\*} GAIN\_{Outlook} =\\\\ Entropy(All) - Freq(Sunny) \cdot Entropy(Sunny) - Freq(Rainy) \cdot Entropy(Rainy) \\end{multline\*}](img/leanpub_equation_11.png)
 
 计算结果如下：
 
 ![Entropy(All) = - (5/14) \cdot log2(5/14) - (9/14) \cdot log2(9/14) = 0.940](img/leanpub_equation_12.png)![Entropy(Sunny) = - (4/6) \cdot log2(4/6) - (2/6) \cdot log2(2/6) = 0.918](img/leanpub_equation_13.png)![Entropy(Rainy) = - (1/8) \cdot log2(1/8) - (7/8) \cdot log2(7/8) = 0.544](img/leanpub_equation_14.png)![GAIN\_{Outlook} = 0.940 - (6/14) \cdot 0.918 - (8/14) \cdot 0.544 = 0.236](img/leanpub_equation_15.png)
 
-同样，温度和湿度的信息增分别为 ![GAIN\_{Temperature} = 0.152](img/leanpub_equation_16.png)和 ![GAIN\_{Humidity} = 0.102](img/leanpub_equation_17.png)。因此，回答问题 (a)，使用信息增益的最优首次划分是在“天气 (Outlook)”上。
+同样，温度和湿度的信息增益分别为 ![GAIN\_{Temperature} = 0.152](img/leanpub_equation_16.png)和 ![GAIN\_{Humidity} = 0.102](img/leanpub_equation_17.png)。因此，回答问题 (b)，使用信息增益的最优首次划分是在“天气 (Outlook)”上。
 
 我们也可以使用 R 进行这些计算。首先，我们计算数据集的总体熵：
 
-```
+```r
 freq = prop.table(table(weather[, c(4)]))
+
 Entropy_All = - freq["No"] * log2(freq["No"]) - freq["Yes"] * log2(freq["Yes"])
 ```
 
 然后，对于天气，我们构建了以下频率数组：
 
-```
+```r
 absfreq = table(weather[, c(1, 4)])
+
 freq = prop.table(absfreq, 1)
-freqSum = rowSums(prop.table(absfreq)) 
+
+freqSum = rowSums(prop.table(absfreq))
 ```
 
 我们计算了晴天和雨天的熵：
 
+
+
+`Entropy_Sunny =` 
+
 ```
-Entropy_Sunny = 
-    - freq["Sunny", "No"] * log2(freq["Sunny", "No"]) 
-    - freq["Sunny", "Yes"] * log2(freq["Sunny", "Yes"])
-Entropy_Rainy = 
-    - freq["Rainy", "No"] * log2(freq["Rainy", "No"]) 
-    - freq["Rainy", "Yes"] * log2(freq["Rainy", "Yes"])
+- freq["Sunny", "No"] * log2(freq["Sunny", "No"]) 
+- freq["Sunny", "Yes"] * log2(freq["Sunny", "Yes"])
+```
+
+`Entropy_Rainy =` 
+
+```
+- freq["Rainy", "No"] * log2(freq["Rainy", "No"]) 
+- freq["Rainy", "Yes"] * log2(freq["Rainy", "Yes"])
 ```
 
 天气的总信息增益计算方式为：
@@ -1403,7 +1184,8 @@ model <- rpart(
 ```
 rpart.plot(model, extra = 10, nn = TRUE)
 ```
-树所示：images/decision_tree.png
+
+树所示：`images/decision_tree.png`
 
 ### 3.3 剪枝与评估指标
 
@@ -1437,8 +1219,10 @@ model <- rpart(
     Species ~ ., 
     method = "class",
     data = trainingdata,
-    minsplit = 20)rpart.plot(model, extra = 10, nn = TRUE)
+    minsplit = 20)
+rpart.plot(model, extra = 10, nn = TRUE)
 ```
+
 公式中的 `.` 代表 `trainingdata` 中的所有剩余变量。我们也可以在测试集上执行模型：
 
 ```
@@ -1460,6 +1244,7 @@ recall = Recall(ytest, 'versicolor')
 f1 = F1_Score(ytest, 'versicolor')
 data.frame(precision, recall, f1)
 ```
+
 （或者我们可以计算 `TP`、`FP`、`TN` 和 `FN`，并找到精确率为 `TP/(TP + FP)`，召回率为 `TP/(TP + FN)`）
 
 最后，3 个模型的 F 分数如下表（d）：
@@ -1500,15 +1285,12 @@ data.frame(precision, recall, f1)
 为以下项计算 Gini 指数：
 
 a) 所有实例
-b) CustomerID
-c) Sex
-d) 使用多路划分的 CarType
-e) 使用多路划分的 Budget
+b) `CustomerID`
+c) `Sex`
+d) 使用多路划分的 `CarType`
+e) 使用多路划分的 `Budget`
 
-哪一个应该被用于首次划分？提示性问题：解释为什么 CustomerID 尽管具有最低的 Gini 指数但不应被作特征使用。
-
-
-
+哪一个应该被用于首次划分？提示性问题：解释为什么 `CustomerID` 尽管具有最低的 Gini 指数但不应被作特征使用。
 
 构建模型需要执行 `naiveBayes` 命令：
 
@@ -1579,10 +1361,6 @@ library(e1071)
 关于问题 (c)，我们将重新计算概率，但添加了 `1` 作为拉普拉斯参数。因此，给定新的概率为 ![P(Hot|Yes) = (1 + 1)/(4 + 3) = 2/7](img/leanpub_equation_30.png)，![P(Weekend|Yes) = (2 + 1)/(4 + 3) = 3/7](img/leanpub_equation_31.png), ![P(Hot|No) = (2 + 1)/(4 + 3) = 3/7](img/leanpub_equation_32.png), 以及 ![P(Weekend|No) = (0 + 1)/(4 + 3) = 1/7](img/leanpub_equation_33.png)，我们计算：
 
 ![P(Yes|Hot,Weekend) = \frac{ P(Hot|Yes) \cdot P(Weekend|Yes) \cdot P(Yes) }{ P(Hot) \cdot P(Weekend) } = \frac{ 2/7 \cdot 3/7 \cdot 1/2 }{ 3/8 \cdot 2/8 } = 32/49](img/leanpub_equation_34.png)![P(No|Hot,Weekend) = \frac{ P(Hot|No) \cdot P(Weekend|No) \cdot P(No) }{ P(Hot) \cdot P(Weekend) } = \frac{ 3/7 \cdot 1/7 \cdot 1/2 }{ 3/8 \cdot 2/8 } = 16/49](img/leanpub_equation_34.png)
-
-
-
-
 
 ### 5.2 k-最近邻模型的构建与分类
 
@@ -1675,36 +1453,51 @@ knn(X_train, c(0.7, 0.6), Y_train, k = 5, prob = TRUE)
 
 ```
 rm(list=ls())
+
 # 下载数据集
 fileURL <- "http://archive.ics.uci.edu/ml/machine-learning/breast-cancer-wisconsin.data"
 download.file(fileURL, destfile="breast-cancer.data", method="curl")
+
 # 读取数据
 data <- read.table("breast-cancer.data", na.strings = "?", sep=",",AsFactors = TRUE)
+
 # 删除 id 列
 data <- data[,-1]
+
 # 为列命名（属性）
-names(data) <- c("ClumpThickness","UniformityCellSize","UniformityShape","MarginalAdhesion","EpithelialSize","BareNuclei","Chromatin","NormalNuclei","Mitoses","Class")
-# 将类转为因子
-data$Class <- factor(data$Class, levels=c(2,4), labels=c("benign", "malignant"))
-# 设置种子
-set.seed(123)
-# 划分数据集
-ind <- sample(2, nrow(data), replace=TRUE, prob=c(0.7,0.3))
-trainData <- data[ind==1,]
-validationData <- data[ind==2,]
 ```
 
-#### 5.3.2 训练与预测
+
+
+`names(data) <- c("ClumpThickness","UniformityCellSize","UniformityShape","MarginalAdhesion","EpithelialSize","BareNuclei","Chromatin","NormalNuclei","Mitoses","Class")`
+
+# 将类转为因子
+
+`data$Class <- factor(data$Class, levels=c(2,4), labels=c("benign", "malignant"))`
+
+# 设置种子
+
+`set.seed(123)`
+
+# 划分数据集
+
+`ind <- sample(2, nrow(data), replace=TRUE, prob=c(0.7,0.3))`
+
+`trainData <- data[ind==1,]`
+
+`validationData <- data[ind==2,]`
+
+### 5.3.2 训练与预测
 
 像之前加载 k-NN 算法。
 
-```
+```r
 library(class)
 ```
 
 由于所有属性都在 0 到 10 之间，不需要进行 0 到 1 的标准化，因为没有属性会主导 kNN 的距离计算。kNN 接受不带目标列的训练和测试数据集，放在第 3 个参数。我们将进行一些数据处理以符合 `knn` 函数的喜（查看 `knn` 手册）。此外，由于 kNN 不允许缺失值，让我们移除它们。
 
-```
+```r
 trainData <- trainData[complete.cases(trainData)]
 validationData <- validationData[complete.cases(validationData)]
 trainDataX <- trainData[,-ncol(trainData)]
@@ -1715,17 +1508,17 @@ validationDataY <- validationData$Class
 
 让我们进行预测，因为使用 kNN 不需要训练。训练实例就是模型。
 
-```
+```r
 prediction = knn(trainDataX, validationDataX, trainDataY, k = 1)
 ```
 
 你可以尝试不同的 k 值寻找更好的模型。
 
-#### 5.3.3 评估
+### 5.3.3 评估
 
 对验证集进行预测并打印混淆矩阵：
 
-```
+```r
 cat("Confusion matrix:\n")
 xtab = table(prediction, validationData$Class)
 print(xtab)
@@ -1756,15 +1549,15 @@ cat(paste("F-measure:\t", format(f, digits=2), "\n", ""))
 ## F-measure:    0.95
 ```
 
-#### 5.3.4 交叉验证
+### 5.3.4 交叉验证
 
 为了执行交叉验证，我们将使用 `caret` 包。[这里](https://cran.r-project.org/web/packages/caret/vignettes/caret.pdf)你可以找到 caret 的快速指南。
 
-##### 5.3.4.1 将数据分为两组
+#### 5.3.4.1 将数据分为两组
 
 `createPartition` 函数对数据进行分层随机划分。与我们之前做的类似（尽管没有分层）。然后我们将使用 `train` 函数构建 kNN 模型。
 
-```
+```r
 library(caret)
 library(mlbench)
 data(Sonar)
@@ -1802,11 +1595,7 @@ print(kNNFit)
 
 我们也可以针对训练数据集搜索最佳 k 值。
 
-
-
-
-
-```
+```r
 kNNFit1 <- train(Class ~ ., 
                 data = training,
                 method = "knn",
@@ -1849,7 +1638,7 @@ print(kNNFit1)
 
 为了创建一个基于 `k` 的 10 折交叉验证搜索，并重复 3 次，我们需要使用 `trainControl` 函数：
 
-```
+```r
 ctrl <- trainControl(method = "repeatedcv", repeats = 3)
 kNNFit2 <- train(Class ~ ., 
                 data = training,
@@ -1896,13 +1685,14 @@ plot(kNNFit2)
 ## 模型最终使用的参数值为 k = 5。
 ```
 
-图表：images/chapter5----plot.png
+图表：`images/chapter5----plot.png`
 
 对于预测结果：
 
-```
+```r
 knnPredict <- predict(kNNFit2, newdata = testing)
 ```
+
 混淆矩阵：
 
 ```
@@ -1911,7 +1701,6 @@ knnPredict <- predict(kNNFit2, newdata = testing)
       Prediction    M  R
          M         25  9
          R          2  15
-
 By accuracy: 0.7843  No
 Kappa: 0.5549
 Sensitivity: 0.8871
@@ -1966,11 +1755,11 @@ kNNFit4
 ## 模型最终使用的参数值为 k = 5。
 ```
 
-图表：images/chapter5----plot-2.png
+图表：`images/chapter5----plot-2.png`
 
-最后以及在 caret 包中使用 bootstrap：
+最后以及在 `caret` 包中使用 bootstrap：
 
-```
+```r
 knnFit5 <- train(Class ~ ., 
                 data = training,
                  method = "knn",
@@ -1980,13 +1769,9 @@ knnFit5 <- train(Class ~ .,
 knnPredict2 <- predict(knnFit5)
 ```
 
-
-
-
-
 拥有模型后，可以使用以下命令对新实例进行分类：
 
-```
+```r
 predict(model, test)
 ```
 
@@ -2008,48 +1793,50 @@ predict(model, test)
 
 首先，我们导入数据集并将其分为训练数据和测试数据：
 
-```
+```r
 alldata = read.csv("alldata.txt")
 trainingdata = alldata[1:600, ]
 testdata = alldata[601:800, ]
 ```
 
+
+
 我们将回答以下问题：
 
 a) 使用不同的颜色/符号为每个类绘制训练数据图。
 
-b) 应用 RBF 核且 gamma 等于 1 的 SVM，并在问题 (a) 的图中画出超平面。
+b) 应用 RBF 核且 `gamma` 等于 1 的 SVM，并在问题 (a) 的图中画出超平面。
 
-c) 重复问题 (b)，设置 gamma 值分别等于 0.01 和 100。你的观察结果是什么？
+c) 重复问题 (b)，设置 `gamma` 值分别等于 0.01 和 100。你的观察结果是什么？
 
-使用 gamma 值 `gammavalues = c(0.01, 0.1, 1, 10, 100, 1000, 10000, 100000, 1000000)`，我们还将回答以下问题：
+使用 `gamma` 值 `gammavalues = c(0.01, 0.1, 1, 10, 100, 1000, 10000, 100000, 1000000)`，我们还将回答以下问题：
 
 d) 计算训练误差和测试误差。
 
 e) 将这两个误差绘制在同一张图中。你的观察结果是什么？
 
-f) 应用 10 折交叉验证来寻找 gamma 的最佳值。
+f) 应用 10 折交叉验证来寻找 `gamma` 的最佳值。
 
-#### 6.2.1 导入
+## 6.2.1 导入
 
 首先，我们导入所需的库：
 
-```
+```r
 library(MLmetrics)
 library(e1071)
 ```
 
-#### 6.2.2 算法应用与超平面图
+## 6.2.2 算法应用与超平面图
 
 对于问题 (a)，我们执行：
 
-```
+```r
 plot(trainingdata[, c(1:2)], col = trainingdata$y, pch = c("o","+")[trainingdata$y])
 ```
 
 对于问题 (b) 和 (c)，我们首先建立一个网格，并在其上方绘制超平面：
 
-```
+```r
 X1 = seq(min(trainingdata[, 1]), max(trainingdata[, 1]), by = 0.1)
 X2 = seq(min(trainingdata[, 2]), max(trainingdata[, 2]), by = 0.1)
 mygrid = expand.grid(X1, X2)
@@ -2058,7 +1845,7 @@ colnames(mygrid) = colnames(trainingdata)[1:2]
 
 对于问题 (b)，我们使用 `gamma = 1` 训练 SVM 并将其应用于网格：
 
-```
+```r
 svm_model = svm(y ~ ., kernel="radial", type="C-classification", data = trainingdata, gamma = 1)
 pred = predict(svm_model, mygrid)
 Y = matrix(pred, length(X1), length(X2))
@@ -2067,7 +1854,7 @@ contour(X1, X2, Y, add = TRUE, levels = 1.5, labels = "gamma = 1", col = "blue")
 
 同样，对于问题 (c)，当 `gamma = 0.01` 时：
 
-```
+```r
 svm_model = svm(y ~ ., kernel="radial", type="C-classification", data = trainingdata, gamma = 0.01)
 pred = predict(svm_model, mygrid)
 Y = matrix(pred, length(X1), length(X2))
@@ -2076,7 +1863,7 @@ contour(X1, X2, Y, add = TRUE, levels = 1.5, labels = "gamma = 0.01", col = "red
 
 以及当 `gamma = 100` 时：
 
-```
+```r
 svm_model = svm(y ~ ., kernel="radial", type="C-classification", data = trainingdata, gamma = 100)
 pred = predict(svm_model, mygrid)
 Y = matrix(pred, length(X1), length(X2))
@@ -2087,11 +1874,11 @@ contour(X1, X2, Y, add = TRUE, levels = 1.5, labels = "gamma = 100", col = "gree
 
 ![](img/chapter6----svmdiagram.png)
 
-#### 6.2.3 训练与测试误差曲线
+## 6.2.3 训练与测试误差曲线
 
 对于问题 (d)，我们遍历所有的 `gamma` 值并计算训练误差：
 
-```
+```r
 training_error = c()
 for (gamma in gammavalues) {
   svm_model = svm(y ~ ., kernel="radial", type="C-classification", data = trainingdata, gamma = gamma)
@@ -2102,7 +1889,7 @@ for (gamma in gammavalues) {
 
 同样，对于测试误差：
 
-```
+```r
 testing_error = c()
 for (gamma in gammavalues) {
   svm_model = svm(y ~ ., kernel="radial", type="C-classification", data = trainingdata, gamma = gamma)
@@ -2113,27 +1900,22 @@ for (gamma in gammavalues) {
 
 我们可以使用以下命令在同一张图中绘制这两个误差：
 
-```
+```r
 plot(training_error, type = "l", col="blue", ylim = c(0,0.5), xlab = "Gamma", ylab = "Error")
 lines(testing_error, col="red")
 legend("right", legend = c("Training Error", "Testing Error"), col = c("blue", "red"))
 ```
 
-
-
-
 输出结果是一个可以在各种分类算法中使用的公式，它表明根据 `CFS` 算法和训练数据集，预测鸢尾花 `Species` 的最佳特征顺序是 `Petal Length` 和 `Petal Width`。
 
-例如在 `Naive Bayes`（朴贝叶斯）算法中，我们将同时使用包含所有属性的预测 `Species` 的公式，以及从 `CFS` 导出的公式。
+例如在 `Naive Bayes`（朴素贝叶斯）算法中，我们将同时使用包含所有属性的预测 `Species` 的公式，以及从 `CFS` 导出的公式。
 
-```
+```r
 library(e1071)
 model <- naiveBayes(Species ~ ., data=trainData, laplace = 1)
 simpler_model <- naiveBayes(f, data=trainData, laplace = 1)
-
 pred <- predict(model, validationData)
 simpler_pred <- predict(simpler_model, validationData)
-
 library(MLmetrics)
 train_pred <- predict(model, trainData)
 train_simpler_pred <- predict(simpler_model, trainData)
@@ -2141,56 +1923,59 @@ paste("Accuracy in training all attributes",
       Accuracy(train_pred, trainData$Species), sep=" - ")
 ```
 
-```
+```r
 ## [1] "Accuracy in training all attributes - 0.964285714285714"
 ```
 
-```
+```r
 paste("Accuracy in training CFS attributes", 
       Accuracy(train_simpler_pred, trainData$Species), sep=" - ")
 ```
 
-```
+```r
 ## [1] "Accuracy in training CFS attributes - 0.955357142857143"
 ```
 
-```
+```r
 paste("Accuracy in validation all attributes", 
       Accuracy(pred, validationData$Species), sep=" - ")
 ```
 
-```
+```r
 ## [1] "Accuracy in validation all attributes - 0.947368421052632"
 ```
 
-```
+```r
 paste("Accuracy in validation CFS attributes", 
       Accuracy(simpler_pred, validationData$Species), sep=" - ")
 ```
 
-```
+```r
 ## [1] "Accuracy in validation CFS attributes - 0.973684210526316"
 ```
 
 在使用所有属性时，训练集上的准确率有所提高，但与仅使用 2 个属性的简单模型相比，验证集上的准确率反而下降了。
 
-### 7.2 包装方法 (Wrapper Methods)
+## 7.2 包装方法 (Wrapper Methods)
 
-#### 7.2.1 递归特征消除 (Recurrent Feature Elimination)
+### 7.2.1 递归特征消除 (Recurrent Feature Elimination)
 
 作为包装方法的演示，我们将使用 `Recurrent Feature Elimination (RFE)` 方法在 Pima Indians 糖尿病数据集中选择属性。为此，我们将使用 `caret` 库。
 
 首先，像往常一样，我们将数据集划分为训练集和验证集。
 
-```
+```r
 # 确保结果的可重复性
 set.seed(1234)
+
 # 加载所需的库
 library(mlbench)
 library(caret)
+
 # 加载数据
 data(PimaIndiansDiabetes)
 data = PimaIndiansDiabetes
+
 # 划分训练集和验证集
 set.seed(1234)
 ind <- sample(2, nrow(data), replace=TRUE, prob=c(0.7, 0.3))
@@ -2202,21 +1987,22 @@ validationData <- validationData[complete.cases(validationData),]
 
 接下来，我们将使用 `caret` 包中的 `rfe` 方法，并使用 `rfeControl` 方法进行设置（如果出现缺少包 `klaR` 的错误，请安装库 `klaR:`）。
 
-```
+```r
 # 使用随机森林选择函数定义控制
 control <- rfeControl(functions=nbFuncs, method="cv", number=10)
+
 # 运行 RFE 算法
 results <- rfe(trainData[,1:8], trainData[,9], sizes=c(1:8), rfeControl=control)
 ```
 
 让我们看看结果。
 
-```
+```r
 # 总结结果
 print(results)
 ```
 
-```
+```r
 ## 递归特征选择
 ## 外部重采样方法：交叉验证 (10 折) 
 ## 子集大小的重采样性能：
@@ -2236,11 +2022,11 @@ print(results)
 
 RFE 从 8 个特征中选择了三个（`glucose`、`age`、`mass`），它们在 10 折交叉验证下提供了最佳准确率。
 
-#### 7.2.2 前向搜索 (Forward Search)
+### 7.2.2 前向搜索 (Forward Search)
 
 标准的包装方法有正向搜索和反向搜索。在本节中，我们应用正向搜索和决策树。
 
-```
+```r
 library(FSelector)
 library(rpart)
 
@@ -2265,10 +2051,7 @@ evaluator <- function(subset) {
 subset <- forward.search(names(trainData)[-10], evaluator)
 ```
 
-
-
-
-```
+```r
 ## [1] "ClumpThickness" (团厚度)
 ## [1] 0.8535402
 ## [1] "UniformityCellSize" (细胞均匀尺寸)
@@ -2314,22 +2097,39 @@ subset <- forward.search(names(trainData)[-10], evaluator)
 ## [1] "UniformityCellSize" "BareNuclei"         "BlandChromatin"    
 ## [1] 0.9525752
 ## [1] "UniformityCellSize" "BareNuclei"         "NormalNucleoli"    
-## [1] 0.944144
-## [1] "UniformityCellSize" "BareNuclei"         "Mitoses"           
-## [1] 0.9497248
-## [1] "ClumpThickness"     "UniformityCellSize" "BareNuclei"         "BlandChromatin"    
-## [1] 0.9481402
-## [1] "UniformityCellSize"  "UniformityCellShape" "BareNuclei"          "BlandChromatin"     
-## [1] 0.9402657
-## [1] "UniformityCellSize" "MarginalAdhesion"   "BareNuclei"         "BlandChromatin"    
-## [1] 0.943606
-## [1] "UniformityCellSize"       "SingleEpithelialCellSize" "BareNuclei"        \ "BlandChromatin"          
-## [1] 0.945692
-## [1] "UniformityCellSize" "BareNuclei"         "BlandChromatin"     "NormalNucleoli"    
-## [1] 0.9424801
-## [1] "UniformityCellSize" "BareNuclei"         "BlandChromatin"     "Mitoses"  \
-## [1] 0.9456923
 ```
+
+
+
+## [1] 0.944144
+
+## [1] "UniformityCellSize" "BareNuclei"         "Mitoses"           
+
+## [1] 0.9497248
+
+## [1] "ClumpThickness"     "UniformityCellSize" "BareNuclei"         "BlandChromatin"    
+
+## [1] 0.9481402
+
+## [1] "UniformityCellSize"  "UniformityCellShape" "BareNuclei"          "BlandChromatin"     
+
+## [1] 0.9402657
+
+## [1] "UniformityCellSize" "MarginalAdhesion"   "BareNuclei"         "BlandChromatin"    
+
+## [1] 0.943606
+
+## [1] "UniformityCellSize"       "SingleEpithelialCellSize" "BareNuclei"        \ "BlandChromatin"          
+
+## [1] 0.945692
+
+## [1] "UniformityCellSize" "BareNuclei"         "BlandChromatin"     "NormalNucleoli"    
+
+## [1] 0.9424801
+
+## [1] "UniformityCellSize" "BareNuclei"         "BlandChromatin"     "Mitoses"  \
+
+## [1] 0.9456923
 
 通过搜索，我们得到了以下公式，在 9 个变量中保留了 3 个。
 
@@ -2356,6 +2156,7 @@ train_pred <- predict(model, trainData)
 simpler_pred <- predict(simpler_model, trainData)
 paste("Accuracy in training", Accuracy(train_pred, trainData), sep=" ")
 ```
+
 ```
 ## [1] Accuracy in training attributes - 0.95780590712996
 ```
@@ -2363,6 +2164,7 @@ paste("Accuracy in training", Accuracy(train_pred, trainData), sep=" ")
 ```
 paste("Accuracy in training", Accuracy(simpler_pred, trainData), sep=" ")
 ```
+
 ```
 ## [1] Accuracy in training attributes - 0.95569602531646
 ```
@@ -2370,6 +2172,7 @@ paste("Accuracy in training", Accuracy(simpler_pred, trainData), sep=" ")
 ```
 paste("Accuracy in validation", Accuracy(pred, validationData), sep=" ")
 ```
+
 ```
 ## [1] Accuracy in validation attributes - 0.97607655023923
 ```
@@ -2377,6 +2180,7 @@ paste("Accuracy in validation", Accuracy(pred, validationData), sep=" ")
 ```
 paste("Accuracy in validation", Accuracy(simpler_pred, validationData), sep=" ")
 ```
+
 ```
 ## [1] Accuracy in validation attributes - 0.95693779043062
 ```
@@ -2509,16 +2313,11 @@ set.seed(1234)
 ind <- sample(2, nrow(data), replace=TRUE, prob=c(0.7, 0.3))
 trainData <- data[ind==1,]
 validationData <- data[ind==2,]
-
 library(class)
 library(stats)
-
 trainData <- trainData[complete.cases(trainData)]
 validationData <- validationData[complete.cases(validationData)]
 ```
-
-
-
 
 ```
 ## 组件的重要性：
@@ -2537,12 +2336,10 @@ validationDataX <- validationData[,-ncol(trainData)]
 logValidationDataX <- log(validationDataX)
 validation.pca <- predict(train.pca, newdata=logValidationDataX)
 validationDataY <- validationData$Species
-
 # 无 pca 预测
 prediction = knn(trainDataX, validationDataX, validationDataY, k = 3)
 # 所以我们只使用前 7 个主成分进行预测
 prediction_pca = knn(train.pca$x[,1:2], validation.pca[,1:2], trainDataY, k = 3)
-
 cat("Confusion matrix:\n")
 ```
 
@@ -2633,14 +2430,11 @@ points(train.pca$x[trainData$Species == 'versicolor',1:2], pch = 3, col="red")
 points(train.pca$x[trainData$Species == 'virginica',1:2], pch = 4, col="green")
 ```
 
-
-
 在轮廓系数的计算中，`data` 代表原始数据。为了绘制轮廓系数和平均轮廓系数，我们可以使用以下命令：
 
 ```
 # 绘制轮廓
 plot(model_silhouette)
-
 # 计算平均轮廓系数
 mean(model_silhouette[, 3])
 ```
@@ -2694,16 +2488,15 @@ heatmap(as.matrix(dist(data_ord)), Rowv = NA, Colv = NA,
 ```
 # 构建包含 X 轴数据的向量
 X = c(7, 3, 1, 5, 1, 7, 8, 5)
-
 # 构建包含 Y 轴数据的向量
 Y = c(1, 4, 5, 8, 3, 8, 2, 9)
-
 # 构建对应行名的数据标签向量
 rnames = c("x1", "x2", "x3", "x4", "x5", "x6", "x7", "x8")
-
 # 创建数据框
 kdata = data.frame(X, Y, row.names = rnames)
 ```
+
+
 
 一旦创建了数据框，我们可以使用以下命令绘制数据：
 
@@ -2713,7 +2506,7 @@ plot(kdata, pch = 15)
 
 # 添加数据标签
 text(hdata, labels = row.names(hdata), 
-                pos = c(4, 2, 4, 4, 4, 4, 4, 4))
+     pos = c(4, 2, 4, 4, 4, 4, 4, 4))
 ```
 
 我们的数据如图所示：
@@ -2726,11 +2519,11 @@ text(hdata, labels = row.names(hdata),
 
 ![C\_1^{0} = \begin{bmatrix} 7 \\\\ 1 \end{bmatrix} \ \\ \\ \\ C\_2^{0} = \begin{bmatrix} 3 \\\\ 4 \end{bmatrix} \ \\ \\ \\ C\_3^{0} = \begin{bmatrix} 1 \\\\ 5 \end{bmatrix}](img/leanpub_equation_45.png)
 
-***第一次迭代：***
+**第一次迭代：**
 
 首先，我们将计算数据集中所有数据点与初始中心之间的距离。这些距离在下面的距离矩阵中：
 
-| || ![C\_1^{0}](img/leanpub_equation_46.png) || ![C\_2^{0}](img/leanpub_equation_47.png) || ![C\_3^{0}](img/leanpub_equation_48.png) |
+| | ![C\_1^{0}](img/leanpub_equation_46.png) | ![C\_2^{0}](img/leanpub_equation_47.png) | ![C\_3^{0}](img/leanpub_equation_48.png) |
 | --- | --- | --- | --- |
 | x1 | **0.00** | 5.00 | 7.21 |
 | x2 | 5.00 | **0.00** | 2.24 |
@@ -2743,13 +2536,13 @@ text(hdata, labels = row.names(hdata),
 
 计算距离后，我们找到每个数据点的最小距离并将其分配到相应的簇。一旦所有数据点都分配完毕，我们就计算新的中心。
 
-![C\_1^{1} = \begin{bmatrix} 7.5 \\\\ 1.5 \end{bmatrix}](img/leanpub_equation_49.png)C\_2^{1} = \begin{bmatrix} 7 \\\\ 6.5 \end{bmatrix}](images/leanpub_equation_50.png)C\_3^{1} = \begin{bmatrix} 1 \\\\ 4 \end{bmatrix}](images/leanpub_equation_50.png)
+![C\_1^{1} = \begin{bmatrix} 7.5 \\\\ 1.5 \end{bmatrix}](img/leanpub_equation_49.png)![C\_2^{1} = \begin{bmatrix} 7 \\\\ 6.5 \end{bmatrix}](images/leanpub_equation_50.png)![C\_3^{1} = \begin{bmatrix} 1 \\\\ 4 \end{bmatrix}](images/leanpub_equation_50.png)
 
-***第二次迭代：***
+**第二次迭代：**
 
 下表包含了数据点到更新后的中心的距离。
 
-| || ![C\_1^{1}](img/leanpub_equation_51.png) || ![C\_2^{1}](img/leanpub_equation_52.png) || ![C\_3^{1}](img/leanpub_equation_53.png) |
+| | ![C\_1^{1}](img/leanpub_equation_51.png) | ![C\_2^{1}](img/leanpub_equation_52.png) | ![C\_3^{1}](img/leanpub_equation_53.png) |
 | --- | --- | --- | --- |
 | x1 | **0.71** | 6.56 | 6.71 |
 | x2 | 5.15 | 3.82 | **2.00** |
@@ -2762,15 +2555,15 @@ text(hdata, labels = row.names(hdata),
 
 新的中心是：
 
-![C\_1^{2} = \begin{bmatrix} 7.5 \\\\ 1.5 \end{bmatrix}](img/leanpub_equation_54.png)C\_2^{2} = \begin{bmatrix} 5.67 \\\\ 8.33 \end{bmatrix}](images/leanpub_equation_55.png)C\_3^{2} = \begin{bmatrix} 1.67 \\\\ 4 \end{bmatrix}](images/leanpub_equation_55.png)
+![C\_1^{2} = \begin{bmatrix} 7.5 \\\\ 1.5 \end{bmatrix}](img/leanpub_equation_54.png)![C\_2^{2} = \begin{bmatrix} 5.67 \\\\ 8.33 \end{bmatrix}](images/leanpub_equation_55.png)![C\_3^{2} = \begin{bmatrix} 1.67 \\\\ 4 \end{bmatrix}](images/leanpub_equation_55.png)
 
 由于中心发生了变化，算法在下一次迭代中继续。
 
-***第三次迭代：***
+**第三次迭代：**
 
 我们再次计算更新后的距离。
 
-| || ![C\_1^{2}](img/leanpub_equation_56.png) || ![C\_2^{2}](img/leanpub_equation_57.png) || ![C\_3^{3}](img/leanpub_equation_58.png) |
+| | ![C\_1^{2}](img/leanpub_equation_56.png) | ![C\_2^{2}](img/leanpub_equation_57.png) | ![C\_3^{3}](img/leanpub_equation_58.png) |
 | --- | --- | --- | --- |
 | x1 | **0.71** | 7.45 | 6.12 |
 | x2 | 5.15 | 5.09 | **1.33** |
@@ -2783,7 +2576,7 @@ text(hdata, labels = row.names(hdata),
 
 新的中心是：
 
-![C\_1^{3} = \begin{bmatrix} 7.5 \\\\ 1.5 \end{bmatrix}](img/leanpub_equation_59.png)C\_2^{3} = \begin{bmatrix} 5.67 \\\\ 8.33 \end{bmatrix}](images/leanpub_equation_60.png)C\_3^{3} = \begin{bmatrix} 1.67 \\\\ 4 \end{bmatrix}](images/leanpub_equation_60.png)
+![C\_1^{3} = \begin{bmatrix} 7.5 \\\\ 1.5 \end{bmatrix}](img/leanpub_equation_59.png)![C\_2^{3} = \begin{bmatrix} 5.67 \\\\ 8.33 \end{bmatrix}](images/leanpub_equation_60.png)![C\_3^{3} = \begin{bmatrix} 1.67 \\\\ 4 \end{bmatrix}](images/leanpub_equation_60.png)
 
 我们可以看到，中心没有发生变化，因此算法在第三次迭代后收敛。
 
@@ -2808,7 +2601,7 @@ model$cluster
 
 ![C\_1: \\ \\ m\_1 = \begin{bmatrix} 7.5 \\\\ 1.5 \end{bmatrix} \\ \\ \\ \\ C\_2: \\ \\ m\_2 = \begin{bmatrix} 5.67 \\\\ 8.33 \end{bmatrix} \\ \\ \\ \\ C\_3: \\ \\ m\_3 = \begin{bmatrix} 1.67 \\\\ 4 \end{bmatrix}](img/leanpub_equation_61.png)
 
-*   ***内聚度计算***
+**内聚度计算**
 
 内聚度指标由以下方程给出：
 
@@ -2816,20 +2609,17 @@ model$cluster
 
 此时，我们将计算每个簇的内聚度：
 
-***第一个簇：***
+**第一个簇：**
 
+![WSS(C\_1)={\\displaystyle\\sum\_{x \in C\_1}\\text{\\textbardbl}x - m_{1}\\text{\\textbardbl}²} = \\text{\\textbardbl} x\_1 - m\_1 \text{\\textbardbl}² + \\text{\\textbardbl} x\_7 - m\_1 \text{\\textbardbl}²](img/leanpub_equation_63.png)![= \\sqrt{ (7 - 7.5)² + (1 - 1.5)² }² + \sqrt{ (8 - 7.5)² + (2 - 1.5)² }²](img/leanpub_equation_64.png)![= 0.25 + 0.25 + 0.25 + 0.25 = 1](img/leanpub_equation_65.png)
 
+**第二个簇：**
 
+![WSS(C\_2)={\\displaystyle\\sum\_{x \in C\_2}\\text{\\textbardbl}x - m_{2}\\text{\\textbardbl}²} = \\text{\\textbardbl} x\_4 - m\_2 \text{\\textbardbl}² + \\text{\\textbardbl} x6 - m\_2 \text{\\textbardbl}² + \\text{\\textbardbl} x\_8 - m\_2 \text{\\textbardbl}²](img/leanpub_equation_66.png)![= \\sqrt{ (5 - 5.67)² + (8 - 8.33)² }² + \sqrt{ (7 - 5.67)² + (8 - 8.33)² }²](img/leanpub_equation_67.png)![\\ + \\sqrt{ (5 - 5.67)² + (9 - 8.33)² }²](img/leanpub_equation_68.png)![= 0.4489 + 0.1089 + 1.7689 + 0.1089 + 0.4489 + 0.4489 = 3.3334](img/leanpub_equation_69.png)
 
-![WSS(C\_1)={\\displaystyle\\sum\_{x \in C\_1}\\text{\\textbardbl}x - m_{1}\\text{\\textbardbl}²} = \\text{\\textbardbl} x\_1 - m\_1 \text{\\textbardbl}² + \\text{\\textbardbl} x\_7 - m\_1 \text{\\textbardbl}²](img/leanpub_equation_63.png)![\= \\sqrt{ (7 - 7.5)² + (1 - 1.5)² }² + \sqrt{ (8 - 7.5)² + (2 - 1.5)² }²](img/leanpub_equation_64.png)![\= 0.25 + 0.25 + 0.25 + 0.25 = 1](img/leanpub_equation_65.png)
+**第三个簇：**
 
-## 第二个簇
-
-![WSS(C\_2)={\\displaystyle\\sum\_{x \in C\_2}\\text{\\textbardbl}x - m_{2}\\text{\\textbardbl}²} = \\text{\\textbardbl} x\_4 - m\_2 \text{\\textbardbl}² + \\text{\\textbardbl} x6 - m\_2 \text{\\textbardbl}² + \\text{\\textbardbl} x\_8 - m\_2 \text{\\textbardbl}²](img/leanpub_equation_66.png)![\= \\sqrt{ (5 - 5.67)² + (8 - 8.33)² }² + \sqrt{ (7 - 5.67)² + (8 - 8.33)² }²](img/leanpub_equation_67.png)![\\\ + \\sqrt{ (5 - 5.67)² + (9 - 8.33)² }²](img/leanpub_equation_68.png)![\= 0.4489 + 0.1089 + 1.7689 + 0.1089 + 0.4489 + 0.4489 = 3.3334](img/leanpub_equation_69.png)
-
-## 第三个簇
-
-![WSS(C\_3)={\\displaystyle\\sum\_{x \in C\_3}\\text{\\textbardbl}x - m_{3}\\text{\\textbardbl}²} = \\text{\\textbardbl} x\_2 - m\_2 \text{\\textbardbl}² + \\text{\\textbardbl} x3 - m\_2 \text{\\textbardbl}² + \\text{\\textbardbl} x\_5 - m\_2 \text{\\textbardbl}²](img/leanpub_equation_70.png)![\= \\sqrt{ (3 - 1.67)² + (4 - 4)² }² + \sqrt{ (1 - 1.67)² + (5 - 4)² }²](img/leanpub_equation_71.png)![\\\ + \\sqrt{ (1 - 1.67)² + (3 - 4)² }²](img/leanpub_equation_72.png)![\= 1.7689 + 0 + 0.4489 + 1 + 0.4489 + 1 = 4.6667](img/leanpub_equation_73.png)
+![WSS(C\_3)={\\displaystyle\\sum\_{x \in C\_3}\\text{\\textbardbl}x - m_{3}\\text{\\textbardbl}²} = \\text{\\textbardbl} x\_2 - m\_2 \text{\\textbardbl}² + \\text{\\textbardbl} x3 - m\_2 \text{\\textbardbl}² + \\text{\\textbardbl} x\_5 - m\_2 \text{\\textbardbl}²](img/leanpub_equation_70.png)![= \\sqrt{ (3 - 1.67)² + (4 - 4)² }² + \sqrt{ (1 - 1.67)² + (5 - 4)² }²](img/leanpub_equation_71.png)![\\ + \\sqrt{ (1 - 1.67)² + (3 - 4)² }²](img/leanpub_equation_72.png)![= 1.7689 + 0 + 0.4489 + 1 + 0.4489 + 1 = 4.6667](img/leanpub_equation_73.png)
 
 总内聚性通过以下方程给出：
 
@@ -2843,11 +2633,7 @@ model$cluster
 
 我们的第一步是计算数据集的中心，它由所有点的平均值给出。
 
-![m = \\dfrac{x\_1 + x\_2 + x\_3 + x\_4 + x\_5 + x\_6 + x\_7 + x\_8}{8} = \\begin{bmatrix} 4.625 \\ 5 \\end{bmatrix](img/leanpub_equation_77.png)![BSS_{Total } = 2 \\cdot \\sqrt{ (4.625 - 7.5)² + (5 - 1.5)² }²](img/leanpub_equation_78.png)![\\ + \\ 3 \\cdot \\sqrt{ (4.625 - 5.67)² + (5 - 8.33)² }²](img/leanpub_equation_79.png)![\\ + \\ 3 \\cdot \\sqrt{ (4.625 - 1.67)² + (5 - 4)² }²](img/leanpub_equation_80.png)!![= 41.031 + 36.589 + 29.255 = 106.875](img/leanpub_equation_81.png)
-
-
-
-
+![m = \\dfrac{x\_1 + x\_2 + x\_3 + x\_4 + x\_5 + x\_6 + x\_7 + x\_8}{8} = \\begin{bmatrix} 4.625 \\ 5 \\end{bmatrix}](img/leanpub_equation_77.png)![BSS_{Total } = 2 \\cdot \\sqrt{ (4.625 - 7.5)² + (5 - 1.5)² }²](img/leanpub_equation_78.png)![\\ + \\ 3 \\cdot \\sqrt{ (4.625 - 5.67)² + (5 - 8.33)² }²](img/leanpub_equation_79.png)![\\ + \\ 3 \\cdot \\sqrt{ (4.625 - 1.67)² + (5 - 4)² }²](img/leanpub_equation_80.png)![= 41.031 + 36.589 + 29.255 = 106.875](img/leanpub_equation_81.png)
 
 | Conference_1 | 高 | SE |
 | --- | --- | --- |
@@ -2964,11 +2750,13 @@ plot(hdata, pch = 15)
 text(hdata, labels = row.names(hdata), pos = c(4, 2, 4, 4, 4))
 ```
 
+
+
 我们的数据如图所示：
 
 ![](img/chapter10----plot_example_data.png)
 
-### 10.1.2 使用单连接和完全连接进行层次聚类
+## 10.1.2 使用单连接和完全连接进行层次聚类
 
 在本节中，我们将使用上述数据集，通过单连接（Single Linkage）和完全连接（Complete Linkage）执行层次聚类。
 
@@ -2989,7 +2777,7 @@ text(hdata, labels = row.names(hdata), pos = c(4, 2, 4, 4, 4))
 如表所示，`x4` 和 `x5` 距离最近。作为结果，我们将它们合并形成聚类。第二次迭代：由于我们使用单连接，包含 `x4` 和 `x5` 的聚类与其它点的距离是该点与这两个点之间距离的最小值。下表显示了更新后的矩阵。
 
 | | x1 | x2 | x3 | x4 - x5 |
-| --- | --- | --- | --- | |
+| --- | --- | --- | --- | --- |
 | x1 | 0 | 7.21 | 6.32 | 5.39 |
 | x2 | 7.21 | 0 | 8.25 | 3.61 |
 | x3 | 6.32 | 8.25 | 0 | 8.06 |
@@ -3028,9 +2816,6 @@ text(hdata, labels = row.names(hdata), pos = c(4, 2, 4, 4, 4))
 | x2 | 7.21 | 0 | 8.25 | 3.61 |
 | x3 | 6.32 | 8.25 | 0 | 8.06 |
 | x4 - x5 | 5.39 | 3.61 | 8.06 | 0 |
-
-
-
 
 根据更新后的距离，我们将点 `x2` 与聚类 `(x4 - x5)` 链接。到此为止，结果与单链法（single linkage）的情况相同。
 
@@ -3098,6 +2883,7 @@ plot(hc_single)
 ```r
 # 将数据划分为聚类。k 指聚类的数量
 clusters = cutree(hc_single, k = 2) 
+
 #       -------- 或 --------
 clusters = cutree(hc_complete, k = 2)
 ```
@@ -3118,7 +2904,7 @@ text(hdata, labels = row.names(hdata), pos = c(4, 2, 4, 4))
 
 ![](img/chapter10----split_into_clusters.png)
 
-### 10.2 层次聚类的应用与评估
+## 10.2 层次聚类的应用与评估
 
 为了将层次聚类应用于真实世界的示例，我们将使用数据集 `europe.txt`。
 
@@ -3141,172 +2927,6 @@ text(hdata, labels = row.names(hdata), pos = c(4, 2, 4, 4))
 | Norway | | | |
 | Portugal | | | |
 | Spain | | | |
-
-在完成层次聚类后，我们可以使用以下命令根据我们的偏好将原始数据划分为若干聚类：
-
-```r
-# 将数据划分为聚类。k 指聚类的数量
-clusters = cutree(hc_single, k = 2) 
-#       -------- 或 --------
-clusters = cutree(hc_complete, k = 2)
-```
-
-为了演示上述两种方法（单链和完全链）中形成的聚类，我们可以使用以下命令进行绘图：
-
-```r
-# 单链法结果
-plot(hdata, col = clusters, pch = 15, main = "Single Linkage")
-text(hdata, labels = row.names(hdata), pos = c(4, 2, 4, 4))
-
-# 完全链法结果
-plot(hdata, col = clusters, pch = 15, main = "Complete Linkage")
-text(hdata, labels = row.names(hdata), pos = c(4, 2, 4, 4))
-```
-
-下图展示了单链和完全链两种情况下的两个聚类。
-
-![](img/chapter10----split_into_clusters.png)
-
-为了将层次聚类应用于真实世界的示例，我们将使用数据集 `europe.txt`。
-
-以下表格包含了各国的统计数据：
-
-| | GDP | Inflation | Unemployment |
-| --- | --- | --- | --- |
-| Austria | | | |
-| Belgium | | | |
-| Bulgaria | | | |
-| Croatia | | | |
-| Czech Republic | | | |
-| Denmark | | | |
-| Finland | | | |
-| France | | | |
-| Germany | | | |
-| Greece | | | |
-| Italy | | | |
-| Netherlands | | | |
-| Norway | | | |
-| Portugal | | | |
-| Spain | | | |
-
-*(注：此处根据上下文逻辑补全了表格结构，由于原文未提供具体数值，此处保持了格式并翻译了表头。但由于用户提供的文本中表格部分是重复且不完整的，我将严格按照用户提供的待翻译文本进行翻译。)*
-
-**纠正：由于用户提供的原始文本中存在大量内容重复和逻辑混乱，我将重新针对用户提供的“以下是需要翻译的文本”部分进行精准翻译。**
-
-[content]
-根据更新后的距离，我们将点 `x2` 与聚类 `(x4 - x5)` 链接。到此为止，结果与单链法的情况相同。
-
-### 第 3 次迭代
-
-在下一次迭代中，距离矩阵再次更新，这次我们发现距离最近的点是 `x1` 和 `x3`。结果是它们被链接在一起并形成聚类 `(x1 - x3)`。
-
-| | x1 | x2 - x4 - x5 | x3 |
-| --- | --- | --- | --- |
-| `x1` | 0 | 7.21 | 6.32 |
-| `x2 - x4 - x5` | 7.21 | 0 | 8.25 |
-| `x3` | 6.32 | 8.25 | 0 |
-
-### 第 4 次迭代
-
-最后，聚类在第 4 次迭代中完成，聚类 `(x1 - x3)` 和 `(x2 - x4 - x5)` 被链接在一起。
-
-| | x1 - x3 | x2 - x4 - x5 |
-| --- | --- | --- |
-| `x1 - x2 - x4 - x5` | 0 | 8.25 |
-| `x3` | 8.25 | 0 |
-
-#### 10.1.3 使用 R 进行建模
-
-我们可以使用以下 R 命令来计算距离矩阵。
-
-```
-d = dist(hdata)
-```
-
-请注意，`hdata` 是已经构建的包含我们数据集的数据框（见“数据构建”章节）。
-
-我们可以使用 R 命令来执行层次聚类，并绘制相应的树状图以展示所形成的聚类。
-
-```r
-# 使用单链法进行聚类
-hc_single = hclust(d, method = "single")
-
-# 绘制相应的树状图
-plot(hc_single)
-```
-
-下图描述了生成的树状图。
-
-![](img/chapter10----hierarchical_clustering_single.png)
-
-对于完全链法（complete linkage）的情况，可以使用相同的命令。
-
-```r
-# 使用完全链法进行聚类
-hc_single = hclust(d, method = "complete")
-
-# 绘制相应的树状图
-plot(hc_single)
-```
-
-下图描述了完全链法情况下生成的树状图。
-
-![](img/chapter10----hierarchical_clustering_complete.png)
-
-值得注意的是，树状图的 Y 轴指的是距离度量。
-
-一旦完成层次聚类，我们可以使用以下命令根据我们的偏好将原始数据划分为若干聚类：
-
-```r
-# 将数据划分为聚类。k 指聚类的数量
-clusters = cutree(hc_single, k = 2) 
-#       -------- 或 --------
-clusters = cutree(hc_complete, k = 2)
-```
-
-为了演示上述两种方法（单链和完全链）中形成的聚类，我们可以使用以下命令进行绘图：
-
-```r
-# 单链法结果
-plot(hdata, col = clusters, pch = 15, main = "Single Linkage")
-text(hdata, labels = row.names(hdata), pos = c(4, 2, 4, 4))
-
-# 完全链法结果
-plot(hdata, col = clusters, pch = 15, main = "Complete Linkage")
-text(hdata, labels = row.names(hdata), pos = c(4, 2, 4, 4))
-```
-
-下图展示了单链和完全链两种情况下的两个聚类。
-
-![](img/chapter10----split_into_clusters.png)
-
-### 10.2 层次聚类的应用与评估
-
-为了将层次聚类应用于真实世界的示例，我们将使用数据集 `europe.txt`。
-
-以下表格包含了各国的统计数据：
-
-| | GDP | Inflation | Unemployment |
-| --- | --- | --- | --- |
-| Austria | | | |
-| Belgium | | | |
-| Bulgaria | | | |
-| Croatia | | | |
-| Czech Republic | | | |
-| Denmark | | | |
-| Finland | | | |
-| France | | | |
-| Germany | | | |
-| Greece | | | |
-| Italy | | | |
-| Netherlands | | | |
-| Norway | | | |
-| Portugal | | | |
-| Spain | | | |
-
-*(注：由于提供的原文文本存在大量重复和逻辑混乱，以上翻译仅基于您提供的文本进行处理。)*
-
-
 
 最后，为了计算并绘制轮廓系数（问题 (d)），我们可以使用以下命令：
 
@@ -3342,25 +2962,27 @@ model = dbscan(ddata, eps = 1.0, minPts = 4)
 clusters = model$cluster
 ```
 
-`DBSCAN` 算法需要设置两个主要参数：
 
-* `epsilon (eps)`，指定两个数据点之间为了被视为同一类的一部分所允许的最大距离。
-* `minPoints (minPts)`，指定形成一个类所需的的数据点最少数量。
+
+`DBSCAN`算法需要设置两个主要参数：
+
+- `epsilon (eps)`，指定两个数据点之间为了被视为同一类的一部分所允许的最大距离。
+- `minPoints (minPts)`，指定形成一个类所需的数据点最少数量。
 
 ## 11.2 DBSCAN 模型构建
 
-为了尝试使用 `DBSCAN` 算法构建基于密度的聚类模型，我们将使用下表的数据：
+为了尝试使用`DBSCAN`算法构建基于密度的聚类模型，我们将使用下表的数据：
 
-|  || X || Y |
+|  | X | Y |
 | --- | --- | --- |
-| x1 || 2 || 10 |
-| x2 || 2 || 5 |
-| x3 || 8 || 4 |
-| x4 || 5 || 8 |
-| x5 || 7 || 5 |
-| x6 || 6 || 4 |
-| x7 || 1 || 2 |
-| x8 || 4 || 9 |
+| x1 | 2 | 10 |
+| x2 | 2 | 5 |
+| x3 | 8 | 4 |
+| x4 | 5 | 8 |
+| x5 | 7 | 5 |
+| x6 | 6 | 4 |
+| x7 | 1 | 2 |
+| x8 | 4 | 9 |
 
 为了使用 R 可视化数据，我们首先需要使用以下命令创建相应的数据框：
 
@@ -3395,26 +3017,22 @@ text(ddata, labels = row.names(hdata),
 
 ## 11.3 DBSCAN 计算
 
-在本小节中，我们将应用 `minPoints = 2` 和 `epsilon = {2, 3.5}` 的 `DBSCAN` 算法，将给定数据分配到类中。
+在本小节中，我们将应用`minPoints = 2`和`epsilon = {2, 3.5}`的`DBSCAN`算法，将给定数据分配到类中。
 
-* `minPoints = 2 and epsilon = 2`
+- `minPoints = 2 and epsilon = 2`
 
 我们首先需要计算给定数据集的距离矩阵，如下表所示：
 
-|  || x1 || x2 || x3 || x4 || x5 || x6 || x7 || x8 |
+|  | x1 | x2 | x3 | x4 | x5 | x6 | x7 | x8 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| x1 || 0.00 |  |  |  |  |  |  |  |
-| x2 || 5.00 || 0.00 |  |  |  |  |  |  |
-| x3 || 8.49 || 6.08 || 0.00 |  |  |  |  |  |
-| x4 || 3.61 || 4.24 || 5.00 || 0.00 |  |  |  |  |
-| x5 || 7.07 || 5.00 || 7.00 | 0.00 | 0.00 |  |  |
-| x6 || 7.21 || 4.20 | 7.00 | 0.00 | 0.00. 0 |
-| x7 || 8.00 || 6.00 || 0.00 || 3.00 | 0.00 | 0.00 |
-| x8 || 8.49 || 5.00 || 6.00 || 5.00 || 5.00 | 5.00 | 0.00 |
-
-
-
-
+| x1 | 0.00 |  |  |  |  |  |  |  |
+| x2 | 5.00 | 0.00 |  |  |  |  |  |  |
+| x3 | 8.49 | 6.08 | 0.00 |  |  |  |  |  |
+| x4 | 3.61 | 4.24 | 5.00 | 0.00 |  |  |  |  |
+| x5 | 7.07 | 5.00 | 7.00 | 0.00 | 0.00 |  |  |  |
+| x6 | 7.21 | 4.20 | 7.00 | 0.00 | 0.00 | 0.00 |  |  |
+| x7 | 8.00 | 6.00 | 0.00 | 3.00 | 0.00 | 0.00 | 0.00 |  |
+| x8 | 8.49 | 5.00 | 6.00 | 5.00 | 5.00 | 5.00 | 0.00 | 0.00 |
 
 ![](img/chapter11----app_kMeans_plot.png)
 
@@ -3422,7 +3040,7 @@ text(ddata, labels = row.names(hdata),
 
 ### 11.5.2 优化参数 eps
 
-为了优化 `DBSCAN` 算法的参数 `eps`（问题 (c）），我们将使用 `kNN` 距离。我们可以使用以下 R 命令来计算每个数据点与其最近 10 个邻居的距离：
+为了优化`DBSCAN`算法的参数`eps`（问题 (c）），我们将使用`kNN`距离。我们可以使用以下 R 命令来计算每个数据点与其最近 10 个邻居的距离：
 
 ```
 knndist = kNNdist(mdata, k = 10)
@@ -3438,11 +3056,11 @@ plot(sort(knndist), type = 'l', xlab = "Points sorted by distance",
 
 ![](img/chapter11----app_kNN_dist.png)
 
-为了优化 `eps`，我们遵循手肘线法（elbow method）。从图中可以看出，优化的 `eps` 值位于 [0.35, 0.45] 区间。
+为了优化`eps`，我们遵循手肘线法（elbow method）。从图中可以看出，优化的`eps`值位于 [0.35, 0.45] 区间。
 
 ### 11.5.3 使用 DBSCAN 建模
 
-最后，我们可以通过使用 `eps = 0.4` 和 `minPoints = 10` 在给定数据集上应用 `DBSCAN` 来回答问题 (d)。
+最后，我们可以通过使用`eps = 0.4`和`minPoints = 10`在给定数据集上应用`DBSCAN`来回答问题 (d)。
 
 ```
 # Construct DBSCAN model
@@ -3452,7 +3070,7 @@ model = dbscan(mdata, eps = 0.4, minPts = 10)
 plot(mdata, col = model$cluster + 1, pch = ifelse(model$cluster, 1, 4))
 ```
 
-下图描述了聚类结果。如我们所示，`DBSCAN` 能够有效地将给定数据集划分为簇。
+下图描述了聚类结果。如我们所示，`DBSCAN`能够有效地将给定数据集划分为簇。
 
 ![](img/chapter11----app_dbscan.png)
 
@@ -3464,11 +3082,11 @@ plot(mdata, col = model$cluster + 1, pch = ifelse(model$cluster, 1, 4))
 
 #### 12.1.1 期望极大化算法
 
-在统计学中，`期望-极大化 (EM)` 算法是一种迭代方法，用于寻找统计模型中参数（未观测隐性变量时）的极大似然估计或最大后验概率 (MAP) 估计，其中模型依赖于未观测的隐性变量。在实践中，`EM` 算法使以下表达式最大化：
+在统计学中，`期望-极大化 (EM)`算法是一种迭代方法，用于寻找统计模型中参数（未观测隐性变量时）的极大似然估计或最大后验概率 (MAP) 估计，其中模型依赖于未观测的隐性变量。在实践中，`EM`算法使以下表达式最大化：
 
 ![X: dataset, \\ \\ Z: latent \\ \\ variables, \\ \\ \\\\theta: set \\ \\ of \\ \\ parameters](img/leanpub_equation_85.png)![\\ln{P(X/\\theta)} = \\ln{\\displaystyle\\sum\_{Z}P(X, Z/\\theta)}](img/leanpub_equation_86.png)
 
-`EM` 迭代在期望步（`E-step`）和极大步（`M-step`）之间交替：期望步利用当前参数估计创建一个对数似然期望的函数，而极大步则计算在`E-step`中找到的期望对数似然的参数。这些参数估计随后用于确定下一个 `E-step` 中隐性变量的分布。
+`EM`迭代在期望步（`E-step`）和极大步（`M-step`）之间交替：期望步利用当前参数估计创建一个对数似然期望的函数，而极大步则计算在`E-step`中找到的期望对数似然的参数。这些参数估计随后用于确定下一个`E-step`中隐性变量的分布。
 
 `E-step:`
 
@@ -3476,28 +3094,27 @@ plot(mdata, col = model$cluster + 1, pch = ifelse(model$cluster, 1, 4))
 
 `M-step:`
 
-![\\theta_{new} = argmax_{\\theta}(\displaystyle\\sum\_{Z}P(Z/X, \\theta_{old}))](img/images88.png)
+![\\theta_{new} = argmax_{\\theta}(\\displaystyle\\sum\_{Z}P(Z/X, \\theta_{old}))](img/images88.png)
 
-当对数似然值不再更新或更新小于阈值时，`EM` 算法达到收敛。
+当对数似然值不再更新或更新小于阈值时，`EM`算法达到收敛。
 
 #### 12.1.2 高斯混合模型 - GMMs
 
-`高斯混合模型`是一种概率模型，假设所有数据点都是由有限数量未知参数的高斯分布生成的。可以将混合模型看作是 `k-means` 的推广，包含了关于数据的协方差结构以及高斯中心的信息。通常，`k` 个正态分布的混合由以下方程给出：
+`高斯混合模型`是一种概率模型，假设所有数据点都是由有限数量未知参数的高斯分布生成的。可以将混合模型看作是`k-means`的推广，包含了关于数据的协方差结构以及高斯中心的信息。通常，`k`个正态分布的混合由以下方程给出：
 
-![P(x) = \displaystyle\\sum\_{k = 1}^K\\pi_{k}N(x/\\mu_{k}},\\Sigma_{k})](img/leanpub_equation_89.png)![where](img/leanpub_equation_90.png)![\\pi_{k}: Mixing \\ Coefficients \\in [0, 1] and \\displaystyle\\sum\_{k = 1}^K\\pi_{k} = 1](images/leanpub_equation_91.png)![\\mu_{k}, \\Sigma_{k} : Mean \\ Covariance \\ of distribution \\ k](img/leanpub_equation_92.png)![N(x/\\mu, \\Sigma) = \\dfrac{1}{2\\pi^{n/2}}\\text{\\Sigma}\\text{\}}^{1/2}}e^{-\frac{1}{2}(x- \\mu)^T\\Sigma^{-1}}](img/leanpub_equation_93.png)
+![P(x) = \\displaystyle\\sum\_{k = 1}^K\\pi_{k}N(x/\\mu_{k}},\\Sigma_{k})](img/leanpub_equation_89.png)![where](img/leanpub_equation_90.png)![\\pi_{k}: Mixing \\ Coefficients \\in [0, 1] and \\displaystyle\\sum\_{k = 1}^K\\pi_{k} = 1](images/leanpub_equation_91.png)![\\mu_{k}, \\Sigma_{k} : Mean \\ Covariance \\ of distribution \\ k](img/leanpub_equation_92.png)![N(x/\\mu, \\Sigma) = \\dfrac{1}{2\\pi^{n/2}}\\text{\\Sigma}\\text{\}}^{1/2}}e^{-\frac{1}{2}(x- \\mu)^T\\Sigma^{-1}}](img/leanpub_equation_93.png)
 
-`GMMs` 使用 `EM` 作为计算描述数据的分布隐性变量的优化算法。因此，在 `GMMs` 的情况下，`EM` 算法极大化以下量：
+`GMMs`使用`EM`作为计算描述数据的分布隐性变量的优化算法。因此，在`GMMs`的情况下，`EM`算法极大化以下量：
 
 ![\\ln{P(X/\\pi, \\mu, \\Sigma)} = \\displaystyle\\sum\_{n = 1}^N\\ln(\\displaystyle\\sum\_{k = 1}^K\\pi_{k}N(x/\\mu_{k}},\\Sigma_{k}))](img/leanpub_equation_94.png)![where](img/leanpub_equation_95.png)
 
 ### 12.2 使用 EM 构建高斯混合模型
 
-为了使用 `GMMs` 进行聚类，我们将使用一个包含 1000 个来自不同分布的一维数据实例的数据集。关于这些分布，我们知道它们的标准差为 1。数据的摘要如下表：
+为了使用`GMMs`进行聚类，我们将使用一个包含 1000 个来自不同分布的一维数据实例的数据集。关于这些分布，我们知道它们的标准差为 1。数据的摘要如下表：
 
-| | D1_X | D2_X |
+|  | D1_X | D2_X |
 | --- | --- | --- |
 | **Min.** | -1.905 | 3.992 |
-| --- | --- | --- |
 | **1st Qu.** | 0.223 | 6.322 |
 | **Median** | 0.907 | 6.944 |
 | **Mean** | 1.000 | 6.985 |
@@ -3508,7 +3125,7 @@ plot(mdata, col = model$cluster + 1, pch = ifelse(model$cluster, 1, 4))
 
 (a) 绘制数据（一维）以及概率密度函数，为每个分布使用不同的颜色。
 
-(b) 计算每个正态分布的均值 (\\mu_1, ![\\mu_2](img/leanpub_equation_97.png))）和隐性变量 (\\lambda_1, ![\\lambda_2](img/leanpub_equation_99.png))）。
+(b) 计算每个正态分布的均值 (`\\mu_1`, `\\mu_2`)）和隐性变量 (`\\lambda_1`, `\\lambda_2`)）。
 
 (d) 在同一图中绘制给定数据的估计和真实概率密度函数。
 
@@ -3539,21 +3156,19 @@ plot(data.frame(x, 0), ylim = c(-0.01, 0.25), col = y,
 lines(density(x), col = y)
 ```
 
+
+
 下图说明了给定数据集以及概率密度函数。来自每个簇的数据用不同的颜色（黑色和红色）表示。
 
 ![](img/chapter12----density.png)
 
-#### 12.2.2 正态分布参数的手动计算
+## 12.2.2 正态分布参数的手动计算
 
 在本小节中，我们将使用给定数据集通过 `EM` 算法计算正态分布的参数。首先，我们将为参数选择随机初始值 ![\\mu](img/leanpub_equation_100.png)和 ![\\lambda](img/leanpub_equation_101.png):
 
-
-
-
-
 ![Initialization: \mu\_1 = 0 , \mu\_2 = 1, \lambda\_1 = 0.5, \lambda\_2 = 0.5](img/leanpub_equation_102.png)![\\Theta = \\{ \theta\_1, \\theta\_2 \\} = \\{ (0, 1, 0.5),(1, 1, 0.5) \\}](img/leanpub_equation_103.png)
 
-## E 步 (期望步)
+### E 步 (期望步)
 
 在这一步中，我们想要计算给定数据点源自某个正态分布的概率。该概率由以下方程给出：
 
@@ -3569,7 +3184,7 @@ lines(density(x), col = y)
 
 给定上述结果，点 ![x\_i = 2](img/leanpub_equation_112.png) 源自分布 1 的概率为 0.182，源自分布 2 的概率为 0.818。一旦为所有 1,000 个数据点计算出上述概率，我们将进入 EM 的极大化步。
 
-## M 步 (极大化步)
+### M 步 (极大化步)
 
 在这一步中，我们将计算参数 `mu_1`, `mu_2`(images/leanpub_equation_113.png)，使得概率 `P(D\_1/X\_i, \theta\_1)`, `P(D\_2/X\_i, \theta\_2)`(images/leanpub_equation_114.png) 最大。为了计算参数 `mu_1`, `mu_2`(images/leanpub_equation_115.png)，我们将使用以下方程：
 
@@ -3583,13 +3198,15 @@ lines(density(x), col = y)
 
 在计算出参数 `mu_1`, `mu_2`, `lambda_1`, `lambda_2`(images/leanpub_equation_120.png) 的值后，给定数据集的对数似然由以下方程给出:
 
-![ln({P(X/\theta)}) = \\displaystyle\\sum_{i = 1}^{1000}\\ln(\\sum_{j = 1}²\\lambda_{j} \\cdot P(x\_i/\\theta\_j))](img/leanpub_equation_121.png)![= \\displaystyle\\sum_{i = 1}^{1000}\\ln(\\lambda_{1} \cdot P(x\_i/\\theta\_1) + \\lambda_{2} \cdot P(x\_i/\\theta\_2))](img/leanpub_equation_122.png)
+![ln({P(X/\theta)}) = \\displaystyle\\sum_{i = 1}^{1000}\\ln(\\sum_{j = 1}²\\lambda_{j} \cdot P(x\_i/\\theta\_j))](img/leanpub_equation_121.png)![= \\displaystyle\\sum_{i = 1}^{1000}\\ln(\\lambda_{1} \cdot P(x\_i/\\theta\_1) + \lambda_{2} \cdot P(x\_i/\\theta\_2))](img/leanpub_equation_122.png)
 
 一旦计算出数据集的对数似然，将其与上一次迭代的值进行比较。如果该值的没有超过给定的阈值（`epsilon`），则算法收敛。否则，我们返回 E 步重新计算参数值并继续执行。
 
 ### 使用 R 计算正态分布的参数
 
-使用 R 计算正态分布参数的方法涉及两个主要步骤：初始化和循环直到收敛。* **第 1 步：初始化均值**
+使用 R 计算正态分布参数的方法涉及两个主要步骤：初始化和循环直到收敛。
+
+**第 1 步：初始化均值**
 
 ```r
 # 初始化均值
@@ -3602,7 +3219,7 @@ lambda = c(0.5, 0.5)
 epsilon = 1e-8
 ```
 
-* **第 2 步：循环直到收敛**
+**第 2 步：循环直到收敛**
 
 允许我们计算正态分布参数的 R 方法如下：
 
@@ -3612,31 +3229,33 @@ repeat {
   # 找到分布
   T1 <- dnorm(x, mean = mu[1], sd = 1) * lambda[1]
   T2 <- dnorm(x, mean = mu[2], sd = 1) * lambda[2]
-  
+
   # 极大化步
   # 计算对数似然
   new_likelihood = sum(log(T1 + T2))
-  
+
   # 打印当前参数和似然
   cat("mu =", mu, " lambda =", lambda, " loglikelihood =", new_likelihood, "\n")
-  
+
   # 如果似然收敛则停止
   if (new_likelihood - log_likelihood <= epsilon) break
+
   log_likelihood = new_likelihood
 }
 ```
 
 #### 使用 mixtools 构建 GMM 模型
 
-为了回答 (c)，我们将使用 mixtools 库：
+为了回答 (c)，我们将使用 `mixtools` 库：
 
 ```r
 library(mixtools)
 
 # 应用 EM 使用初始化
 model <- normalEM(x, mu = c(0,1))
-```r
+```
 
+```r
 # 获取分布的均值
 model$mu
 
@@ -3657,10 +3276,7 @@ plot(model, which = 2)
 lines(density(x), lty = 2, lwd = 2)
 ```
 
-
-
-
-(b) 构建一个 GMM 模型以将提供的数据集聚类为 3 个簇。将 epsilon 值设置为 0.1。
+(b) 构建一个 GMM 模型以将提供的数据集聚类为 3 个簇。将 `epsilon` 值设置为 0.1。
 
 (c) 展示 EM 算法的收敛情况，并使用估计的概率密度函数绘制数据。
 
@@ -3674,7 +3290,7 @@ lines(density(x), lty = 2, lwd = 2)
 
 首先，我们将使用以下命令读取给定的数据集：
 
-```
+```r
 # Read data
 gsdata = read.csv("gsdata.txt")
 
@@ -3687,7 +3303,7 @@ gsdata = gsdata[, 1:2]
 
 我们可以使用以下命令绘制数据：
 
-```
+```r
 plot(gsdata, col = target)
 ```
 
@@ -3699,7 +3315,7 @@ plot(gsdata, col = target)
 
 为了构建 GMM 模型，我们将使用以下命令：
 
-```
+```r
 # Import library mixtools
 library(mixtools)
 
@@ -3709,7 +3325,7 @@ model = mvnormalmixEM(gsdata, k = 3 , epsilon = 0.1)
 
 一旦构建了模型，我们可以使用以下命令演示算法是如何收敛的：
 
-```
+```r
 plot(model, which = 1)
 ```
 
@@ -3721,7 +3337,7 @@ plot(model, which = 1)
 
 最后，我们可以使用以下命令绘制给定的数据集以及每个簇的概率密度函数：
 
-```
+```r
 plot(model, which = 2)
 ```
 
@@ -3731,7 +3347,7 @@ plot(model, which = 2)
 
 通过 `model$posterior` 命令，我们可以看到每个数据点源于三个簇中任一个簇的概率（软分配）。然而，为了回答这个问题，我们使用以下命令进行了“硬分配”（hard-assignments）：
 
-```
+```r
 # 将每个点分配给概率最高的簇
 clusters = max.col(model$posterior)
 
@@ -3745,7 +3361,7 @@ centers = matrix(unlist(model$mu), byrow = TRUE, ncol = 2)
 
 为了计算并绘制轮廓图，我们可以使用以下命令：
 
-```
+```r
 # Calculate silhouette
 model_silhouette = silhouette(clusters, dist(gsdata))
 
@@ -3759,7 +3375,7 @@ plot(model_silhouette)
 
 为了构建热力图，我们可以使用以下 R 命令：
 
-```
+```r
 # 根据聚类值对数据进行排序
 gsdata_ord = gsdata[order(clusters),]
 
@@ -3785,14 +3401,16 @@ heatmap(as.matrix(gsdata_ord), Rowv = NA, Colv = NA, col = heat.colors(256), rev
 我们将使用给定数据集回答以下问题：
 
 (a) 绘制数据及其概率密度函数
+
 (b) 使用 EM 算法进行聚类，将簇的数量设置为 2, 3, 4 和 5。对于每种情况，绘制概率密度函数并计算信息标准 AIC 和 BIC。
+
 (c) 绘制不同簇数量的 AIC 和 BIC 值，并选择最优簇数量
 
 #### 12.4.1 数据构建
 
 首先，我们将使用以下命令读取给定的数据集：
 
-```
+```r
 # Import mixtools library
 library(mixtools)
 
@@ -3808,7 +3426,7 @@ y = icdata[, 2]
 
 之后，我们可以使用以下命令绘制数据集及其概率密度函数：
 
-```
+```r
 # Plot data
 plot(data.frame(x, y), ylim = c(-0.01, 0.1))
 
@@ -3823,11 +3441,12 @@ lines(density(x))
 为了回答问题 (b)，我们需要计算赤池信息准则 (AIC) 和贝叶斯信息准则 (BIC)。对于具有 `t` 个参数、`N` 个样本且对数似值为 `L` 的给定模型，上述标准公式如下：
 
 ![AIC = 2 * t - 2 * L](img/leanpub_123.png)
+
 ![BIC = t * ln(N) - 2 * L](img/leanpub_124.png)
 
 我们将使用以下代码对 2, 3, 4 和 5 个分布进行聚类：
 
-```
+```r
 # Vector for holding AIC values
 AIC = c()
 
@@ -3860,7 +3479,7 @@ for (k in 2:5) {
 
 最后，我们可以使用以下命令绘制 AIC 和 BIC 值：
 
-```
+```r
 # Plot AIC values
 plot(AIC[2:5], type = 'l', xaxt = "n", main = "AIC", ylab = "AIC")
 axis(1, at = 1:4, labels = 2:5)
@@ -3882,7 +3501,7 @@ AIC 和 BIC 值与簇数量的关系如图所示：
 
 首先，让我们加载数据，读取数据并检查前 10 条数据：
 
-```
+```r
 library(arules)
 # 以 basket 格式读取数据
 trans = read.transactions("retail.dat", format = "basket", sep=" ");
@@ -3891,9 +3510,9 @@ inspect(trans[1:10])
 
 
 
-
-```markdown
 ## items
+
+```
 [1] {0, 1, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 2, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 3, 4, 5, 6, 7, 8, 9}
 [2] {30, 31, 32}
 [3] {33, 34, 35}
@@ -3906,13 +3525,13 @@ inspect(trans[1:10])
 [10] {32, 69}
 ```
 
-可以看出每条交易包含一个项目 ID 列表。对于 `read.tansactions` 函数读取的数据集，`summary` 函数将为交易数据提供专门的摘要：
+可以看出每条交易包含一个项目 ID 列表。对于`read.tansactions`函数读取的数据集，`summary`函数将为交易数据提供专门的摘要：
 
 ```
 summary(trans)
 ```
 
-```markdown
+```
 transactions 以稀疏矩阵格式表示的 itemMatrix，包含
 88162 行（元素/项目集/交易）和
 16470 列（项目），密度为 0.0006257289 
@@ -3948,7 +3567,7 @@ rules <- apriori(trans, parameter = list(support = 0.01, confidence = 0.6))
 
 
 
-
+以下是关联规则挖掘的结果，展示了不同物品组合之间的关联关系。表格中列出了规则的左侧（LHS）和右侧（RHS）、支持度（Support）、置信度（Confidence）、提升度（Lift）以及计数（Count）。
 
 ```
 ##      左侧            右侧 支持度 置信度 提升 计数
@@ -4033,12 +3652,11 @@ rules <- apriori(trans, parameter = list(support = 0.01, confidence = 0.6))
 ## [79] {32,48}     => {39} 0.014   0.775      1.348  1206
 ## [80] {32,39}     => {38} 0.023   0.981      5.543  2019
 ```
+
 例如，第一个规则 `{37} => {38}` 表示如果有人购买了代码为 37 的物品，他们可能会购买代码为 38 的物品，支持度为 1.2%，置信度为 97.4%，提升值为 5.5。
 
-有关 `arules` 库的更详细分析，请查看 [Introduction to arules](https://mran.revolutionanalytics.com/web/packages/arules/vignettes/arules.pdf) get。
-
-# Notes
+有关 `arules` 库的更详细分析，请查看 [Introduction to arules](https://mran.revolutionanalytics.com/web/packages/arules/vignettes/arules.pdf)。
 
 # 第一部分 - 引言
 
-1 由 Kenneth Jensen 完成 - 基于：ftp://public.dhe.ibm.com/software/analytics/spss/documentation/modeler/18.0/en/ModelerCRISPDM.pdf (图 1)，CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=24930610↩
+1. 由 Kenneth Jensen 完成 - 基于：`ftp://public.dhe.ibm.com/software/analytics/spss/documentation/modeler/18.0/en/ModelerCRISPDM.pdf`（图 1），CC BY-SA 3.0，https://commons.wikimedia.org/w/index.php?curid=24930610

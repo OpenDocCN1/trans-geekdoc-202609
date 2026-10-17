@@ -1,101 +1,33 @@
+
 # 增强网络防御的大数据与边缘智能：原理与研究（未来计算中的边缘 AI）
-
-
-
-
 
 ![](img/aeaf5e4a1e1020ca53a1da35e316de95_0_0.png)
 
-
-
-
-
 ![](img/aeaf5e4a1e1020ca53a1da35e316de95_0_1.png)
 
-
-互联网和移动技术增长带来的一个不幸结果是应对网络犯罪所面临的挑战。本书介绍并解释了边缘人工智能（EdgeAI）的最新趋势和技术，旨在帮助网络安全专家设计稳健的网络防御系统（CDS），包括基于主机和基于网络的入侵检测系统以及数字取证智能分析。本书讨论了边缘 AI 与大数据的融合，并对近期的网络威胁及其应对措施进行了详细的回顾。它提供了计算智能技术和自动推理模型，能够对网络安全大数据进行快速训练和及时处理，此外还提供了与网络安全相关的其他基础信息。此外，本书简介绍了现代网络安全威胁，并探索了边缘 AI 应对这些威胁的优势，同时也探索了基于检测类型和方法的各种网络防御机制（CDM）。还讨论了通过边缘 AI 进行网络防御的特定挑战性领域，例如改进数字取证智能、网络基础设施的主动和自适应防御以及生物启发的 CDM。本书旨在作为网络和网络安全领域学者和学生的参考书，特别是关于入侵检测系统、智能电网、边缘 AI 以及生物启发网络防御原则等主题。书中讨论的前沿边缘 AI 技术也将适用于网络安全工程师在增强网络防御系统方面的工作。
+互联网和移动技术增长带来的一个不幸结果是应对网络犯罪所面临的挑战。本书介绍并解释了边缘人工智能（`EdgeAI`）的最新趋势和技术，旨在帮助网络安全专家设计稳健的网络防御系统（`CDS`），包括基于主机和基于网络的入侵检测系统以及数字取证智能分析。本书讨论了边缘 AI 与大数据的融合，并对近期的网络威胁及其应对措施进行了详细的回顾。它提供了计算智能技术和自动推理模型，能够对网络安全大数据进行快速训练和及时处理，此外还提供了与网络安全相关的其他基础信息。此外，本书简介绍了现代网络安全威胁，并探索了边缘 AI 应对这些威胁的优势，同时也探索了基于检测类型和方法的各种网络防御机制（`CDM`）。还讨论了通过边缘 AI 进行网络防御的特定挑战性领域，例如改进数字取证智能、网络基础设施的主动和自适应防御以及生物启发的 `CDM`。本书旨在作为网络和网络安全领域学者和学生的参考书，特别是关于入侵检测系统、智能电网、边缘 AI 以及生物启发网络防御原则等主题。书中讨论的前沿边缘 AI 技术也将适用于网络安全工程师在增强网络防御系统方面的工作。
 
 Ranjit Panigahi 是锡姆曼尼帕大学（Sikkim Manipal University）计算机应用系的助理教授。他积极参与许多会议，并担任 Springer Nature 和 Inderscience 出版国际期刊的评审委员会成员。他的研究兴趣是机器学习、模式识别和无线传感器网络。
 
-Victor Hugo, De Albuquerque（IEEE 高级成员）于2006年在巴西塞亚拉州联邦技术教育中心获得机械电子工程学士学位；2007年在巴西塞亚拉联邦大学（UFC）获得电信工程学硕士学位；2010年在巴西帕拉伊巴联邦大学获得机械工程学博士学位。他目前是 UFC 电信信息工程系的教授兼资深研究员。他的研究兴趣包括图像数据科学、物联网（IoT）、机器学习/深度学习、模式识别、自动化与控制以及机器人技术。
+Victor Hugo, De Albuquerque（IEEE 高级成员）于2006年在巴西塞亚拉州联邦技术教育中心获得机械电子工程学士学位；2007年在巴西塞亚拉联邦大学（UFC）获得电信工程学硕士学位；2010年在巴西帕拉伊巴联邦大学获得机械工程学博士学位。他目前是 UFC 电信信息工程系的教授兼资深研究员。他的研究兴趣包括图像数据科学、物联网（`IoT`）、机器学习/深度学习、模式识别、自动化与控制以及机器人技术。
 
-**Akash Kumar Bhoi 博士**拥有 B. Tech、M.Tech 和 Ph.D. 学位，入选2022年和2023年单年度影响力全球前2%科学家（由斯坦福大学 John P.A. Ioannis 编译，Elsevier BV 出版）。他是 MSME DYAM 注册企业 eSupport for Research 以及 YouTube 频道的创始人。他目前担任锡姆曼尼帕大学研究处兼任研究员。他此前在意大利比萨国家研究委员会下属信息科学与技术研究所（ISTI-CRN）的无线网络（WN）研究实验室工作过三年。他曾在澳大利亚墨尔本维多利亚大学可持续工业与宜居城市研究所（ISIL）获得为期一年的“兼研究员”荣誉。他曾担任锡姆曼尼帕技术学院（SMU）“研究与出版伦理（RPE）”的博士课程协调员；曾担任锡姆曼尼帕技术学院助理教授（SG）约10年。他拥有170多篇研究论文，包括30本在 Scopus 注册的著作，H指数为30，引用次数超过3500次。他正与 Springer Nature、Elsevier 和 Routledge & CRC Press 编写多本书。他还担任 Springer Nature、Wiley 和 Inderscience 等期刊特刊的客座编辑。
-
-**Hareesha K.S.** 是曼帕技术学院（MAHE）计算机应用系的教授。他曾获得澳大利亚国家科学基金会和联邦联盟的奖金奖，近期因其研究和学术方面的贡献被入选 AICTE-UKIERI 技术领导力发展计划。他的研究兴趣是改进机器学习算法和理解能力、数字图像处理中智能软计算模型的设计以及数据挖掘。他还致力于医疗手术规划的虚拟现实和增强现实研究。
-
-**Parvathaneni Srinivasan 博士**是印度安得拉普拉什邦阿马拉瓦蒂 Amrita 计算学院（Amrita Vidyetha）计算机科学与工程系的副教授。拥有巴西塞亚拉联邦大学电信信息工程系的博士后基金金。他在2011年从维斯阿哈帕南 JNTU 计算机科学学士学位；2013年从维斯阿哈帕南 GITAM 大学获得计算机科学硕士学位。他在自动分割、可解释 AI 和医学成像方面拥有丰富知识，并为 Elsevier、IGI Global、CRC Press 等出版机构提供了大量贡献。他在 Scopus 和 Web of Science 中有大量期刊论文。他致力于机器学习、软计算、边缘人工智能（EdgeAI）在医疗科学中的应用。
-
-
-
-
-
-![](img/aeaf5e4a1e1020ca53a1da35e316de95_0_1.png)
-
-
-互联网和移动技术增长带来的一个不幸结果是应对网络犯罪所面临的挑战。本书介绍并解释了边缘人工智能（EdgeAI）的最新趋势和技术，旨在帮助网络安全专家设计稳健的网络防御系统（CDS），包括基于主机和基于网络的入侵检测系统以及数字取证智能分析。本书讨论了边缘 AI 与大数据的融合，并对近期的网络威胁及其应对措施进行了详细的回顾。它提供了计算智能技术和自动推理模型，能够对网络安全大数据进行快速训练和及时处理，此外还提供了与网络安全相关的其他基础信息。此外，本书简介绍了现代网络安全威胁，并探索了边缘 AI 应对这些威胁的优势，同时也探索了基于检测类型和方法的各种网络防御机制（CDM）。还讨论了通过边缘 AI 进行网络防御的特定挑战性领域，例如改进数字取证智能、网络基础设施的主动和自适应防御以及生物启发的 CDM。本书旨在作为网络和网络安全领域学者和学生的参考书，特别是关于入侵检测系统、智能电网、边缘 AI 以及生物启发网络防御原则等主题。书中讨论的前沿边缘 AI 技术也将适用于网络安全工程师在增强网络防御系统方面的工作。
-
-Ranjit Panigahi 是锡姆曼尼帕大学（Sikkim Manipal University）计算机应用系的助理教授。他积极参与许多会议，并担任 Springer Nature 和 Inderscience 出版国际期刊的评审委员会成员。他的研究兴趣是机器学习、模式识别和无线传感器网络。
-
-Victor Hugo, De Albuquerque（IEEE 高级成员）于2006年在巴西塞亚拉州联邦技术教育中心获得机械电子工程学士学位；2007年在巴西塞亚拉联邦大学（UFC）获得电信工程学硕士学位；2010年在巴西帕拉伊巴联邦大学获得机械工程学博士学位。他目前是 UFC 电信信息工程系的教授兼资深研究员。他的研究兴趣包括图像数据科学、物联网（IoT）、机器学习/深度学习、模式识别、自动化与控制以及机器人技术。
-
-**Akash Kumar Bhoi 博士**拥有 B. Tech、M.Tech 和 Ph.D. 学位，入选2022年和2023年单年度影响力全球前2%科学家（由斯坦福大学 John P.A. Ioannis 编译，Elsevier BV 出版）。他是 MSME DYAM 注册企业 eSupport for Research 以及 YouTube 频道的创始人。他目前担任锡姆曼尼帕大学研究处兼任研究员。他此前在意大利比萨国家研究委员会下属信息科学与技术研究所（ISTI-CRN）的无线网络（WN）研究实验室工作过三年。他曾在澳大利亚墨尔本维多利亚大学可持续工业与宜居城市研究所（ISIL）获得为期一年的“兼研究员”荣誉。他曾担任锡姆曼尼帕技术学院（SMU）“研究与出版伦理（RPE）”的博士课程协调员；曾担任锡姆曼尼帕技术学院助理教授（SG）约10年。他拥有170多篇研究论文，包括30本在 Scopus 注册的著作，H指数为30，引用次数超过3500次。他正与 Springer Nature、Elsevier 和 Routledge & CRC Press 编写多本书。他还担任 Springer Nature、Wiley 和 Inderscience 等期刊特刊的客座编辑。
+**Akash Kumar Bhoi 博士**拥有 B. Tech、M.Tech 和 Ph.D. 学位，入选2022年和2023年单年度影响力全球前2%科学家（由斯坦福大学 John P.A. Ioannis 编译，Elsevier BV 出版）。他是 MSME DYAM 注册企业 eSupport for Research 以及 YouTube 频道的创始人。他目前担任锡姆曼尼帕大学研究处兼任研究员。他此前在意大利比萨国家研究委员会下属信息科学与技术研究所（ISTI-CRN）的无线网络（`WN`）研究实验室工作过三年。他曾在澳大利亚墨尔本维多利亚大学可持续工业与宜居城市研究所（ISIL）获得为期一年的“兼研究员”荣誉。他曾担任锡姆曼尼帕技术学院（SMU）“研究与出版伦理（RPE）”的博士课程协调员；曾担任锡姆曼尼帕技术学院助理教授（SG）约10年。他拥有170多篇研究论文，包括30本在 Scopus 注册的著作，H指数为30，引用次数超过3500次。他正与 Springer Nature、Elsevier 和 Routledge & CRC Press 编写多本书。他还担任 Springer Nature、Wiley 和 Inderscience 等期刊特刊的客座编辑。
 
 **Hareesha K.S.** 是曼帕技术学院（MAHE）计算机应用系的教授。他曾获得澳大利亚国家科学基金会和联邦联盟的奖金奖，近期因其研究和学术方面的贡献被入选 AICTE-UKIERI 技术领导力发展计划。他的研究兴趣是改进机器学习算法和理解能力、数字图像处理中智能软计算模型的设计以及数据挖掘。他还致力于医疗手术规划的虚拟现实和增强现实研究。
 
-**Parvathaneni Srinivasan 博士**是印度安得拉普拉什邦阿马拉瓦蒂 Amrita 计算学院（Amrita Vidyetha）计算机科学与工程系的副教授。拥有巴西塞亚拉联邦大学电信信息工程系的博士后基金金。他在2011年从维斯阿哈帕南 JNTU 获得计算机科学学士学位；2013年从维斯阿哈帕南 GITAM 大学获得计算机科学硕士学位。他在自动分割、可解释 AI 和医学成像方面拥有丰富知识，并为 Elsevier、IGI Global、CRC Press 等出版机构提供了大量贡献。他在 Scopus 和 Web of Science 中有大量期刊论文。他致力于机器学习、软计算、边缘人工智能（EdgeAI）在医疗科学中的应用。
-
-
-
-
+**Parvathaneni Srinivasan 博士**是印度安得拉普拉什邦阿马拉瓦蒂 Amrita 计算学院（Amrita Vidyetha）计算机科学与工程系的副教授。拥有巴西塞亚拉联邦大学电信信息工程系的博士后基金金。他在2011年从维斯阿哈帕南 JNTU 计算机科学学士学位；2013年从维斯阿哈帕南 GITAM 大学获得计算机科学硕士学位。他在自动分割、可解释 AI 和医学成像方面拥有丰富知识，并为 Elsevier、IGI Global、CRC Press 等出版机构提供了大量贡献。他在 Scopus 和 Web of Science 中有大量期刊论文。他致力于机器学习、软计算、边缘人工智能（`EdgeAI`）在医疗科学中的应用。
 
 ![](img/aeaf5e4a1e1020ca53a1da35e316de95_0_1.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 by KnowledgeWorks Global Ltd.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## 前言
 
 欢迎来到《增强网络防御的大数据与边缘智能：原理与研究》的世界。在技术飞速发展的时代，我们对互联网和移动技术的依赖重塑了我们的生活和工作方式。然而，这种进步也伴随着一系列挑战，特别是在网络安全领域。网络威胁（包括黑客攻击和入侵）的兴起已全球安全专家持续关注的问题。
 
-本书探索了边缘AI原理的前沿领域，探讨了其在设计稳健防御系统（CDS）中的应用。“增强网络防御的大数据与边缘智能”介绍了最新的趋势和技术，为网络安全专家提供了关于网络威胁动态格局和先进防御机制的宝贵见解。
+本书探索了边缘AI原理的前沿领域，探讨了其在设计稳健防御系统（`CDS`）中的应用。“增强网络防御的大数据与边缘智能”介绍了最新的趋势和技术，为网络安全专家提供了关于网络威胁动态格局和先进防御机制的宝贵见解。
 
-本书从第1章开始探讨不断演变的威胁格局带来的挑战，该章节探讨了IoT系统的漏洞以及可持续计算的评估。随后的章节穿过了复杂的网络威胁与应对措施交织的网络，揭示了人工智能、物联网和边缘AI在增强网络安全方面的力量。第2章关注钓鱼攻击这一重大威胁，并介绍了一种用于网络安全的基于人工智能的入侵检测系统（XGBoost）算法。第3章深入探讨了数字智能领域，强调了传统方法的局限性，并提出了集成边缘AI技术以实现实时分析、主动事件响应和改进决策。第4章探索了人工智能的融合，阐明了这些技术如何有助于运营效率、可持续性以及以公民为中心的服务的。第5章应对了基于IoT的环境中日益增长的问题，提出了一种使用联邦学习增强入侵检测的新方法。该研究强调了可扩展性、隐私性和对不同IoT设备的适应性。第6章应对了在高度类别不平衡网络中识别恶意活动的挑战。所提出的整合树构建（CTC）算法显示出卓越的威胁检测准确性，使其成为网络安全领域价值的工具。第7章以一项旨在保护互联IoT设备和网络的全面研究结束了整个探索。
+本书从第1章开始探讨不断演变的威胁格局带来的挑战，该章节探讨了`IoT`系统的漏洞以及可持续计算的评估。随后的章节穿过了复杂的网络威胁与应对措施交织的网络，揭示了人工智能、物联网和边缘AI在增强网络安全方面的力量。第2章关注钓鱼攻击这一重大威胁，并介绍了一种用于网络安全的基于人工智能的入侵检测系统（`XGBoost`）算法。第3章深入探讨了数字智能领域，强调了传统方法的局限性，并提出了集成边缘AI技术以实现实时分析、主动事件响应和改进决策。第4章探索了人工智能的融合，阐明了这些技术如何有助于运营效率、可持续性以及以公民为中心的服务的。第5章应对了基于`IoT`的环境中日益增长的问题，提出了一种使用联邦学习增强入侵检测的新方法。该研究强调了可扩展性、隐私性和对不同`IoT`设备的适应性。第6章应对了在高度类别不平衡网络中识别恶意活动的挑战。所提出的整合树构建（`CTC`）算法显示出卓越的威胁检测准确性，使其成为网络安全领域价值的工具。第7章以一项旨在保护互联`IoT`设备和网络的全面研究结束了整个探索。
 
 当我们穿过本书的每一页时，读者将对不断演变的网络威胁以及利用大数据和边缘智能增强网络防御的创新方法产生深刻的理解。这些原理和研究的合集旨在赋能网络安全专家、研究人员和爱好者，在瞬息万变的网络战争格局中保持领先。
 
@@ -104,18 +36,23 @@ by KnowledgeWorks Global Ltd.
 ## 编者简介
 
 Ranjit Panigrahi 博士
+
 助理教授，计算机应用系，Sikkim Manipal Institute of Technology, Sikkim Manipal University, Majitar, Sikkim 737136, India
 
 Victor Hugo C. de Albuquerque 教授
+
 教授兼高级研究员，电信信息工程系 (DETI)，电电工程研究生课程 (PPGETI)， Federal University of Ceará (UFC), Brazil
 
 Akash Kumar Bhoi 博士
+
 研究处，Sikkim Manipal University, Gangtok 737102, Sikkim, India
 
 Hareesha K.S. 博士
+
 数据科学与计算机应用系，Manipal Institute of Technology, Manipal Academy of Higher Education, India
 
 Parvathaneni Naga Srinivasu 博士
+
 Amrita School of Computing, Amrita Vishwa Vidypeetham, Amaravati 522503, Andhra Pradesh, India.
 
 电信信息工程系，Federal University of Ceará, Fortaleza 60455-970, Brazil.
@@ -128,85 +65,34 @@ Delshi Howalya Devi R., Chithra G. K., Sharmila S., Rajesh P. K., 和 Niveditha 
 
 ## 1.1 引言
 
-目前，可以通过全球连接的各种设备访问互联网 [1–8]。考虑到互联网对世界的改变是如此巨大，很难想象没有它的生活。这些物品具有独特的识别性，能够在没有人类帮助的情况下感知、行动和通信。互联网与云计算、嵌入式传感器、无线传感器网络（WSNs）、中间件和射频识别（RFID）等革命性技术相结合，构建了从货物到智能物（“IoT”）的历程。这导致了该术目的出现，它指的是一组单独标识的连接无线设备网络，它们可以共享数据并进行组织 [9–14]。物联网（IoT）连接了离线和在线世界，使得监控和管理变得更加简单。IoT服务对人们的生活产生了巨大影响。
+目前，可以通过全球连接的各种设备访问互联网 [1–8]。考虑到互联网对世界的改变是如此巨大，很难想象没有它的生活。这些物品具有独特的识别性，能够在没有人类帮助的情况下感知、行动和通信。互联网与云计算、嵌入式传感器、无线传感器网络（`WSNs`）、中间件和射频识别（`RFID`）等革命性技术相结合，构建了从货物到智能物（“`IoT`”）的历程。这导致了该术目的出现，它指的是一组单独标识的连接无线设备网络，它们可以共享数据并进行组织 [9–14]。物联网（`IoT`）连接了离线和在线世界，使得监控和管理变得更加简单。`IoT`服务对人们的生活产生了巨大影响。
 
-IoT帮助是以人为中心的解决方案之一，使残能够能够独立生活并参与社会。此外，IoT解决方案有助于家庭康复中的物理治疗。在这方面，自闭症小组通过让自闭症儿童识别人脸情感来支持社交。IoT创新也减少了风险情况 [15–20]。例如，通过使用自动采矿设备让工人远离危险，IoT提高了危险环境的安全性和效率。在这方面，接近传感器和点传感器也很有价值。用于危险作业的IoT传感器。温度、危险气体和烟雾的IoT传感器在与系统结合使用时，可以防止环境灾难。此外，这些传感器可以监测水体中的化学泄漏。IoT对自然资源的影响已在许多机构发布的案例研究中得到阐明。
-
-
-
-
+`IoT`帮助是以人为中心的解决方案之一，使残能够能够独立生活并参与社会。此外，`IoT`解决方案有助于家庭康复中的物理治疗。在这方面，自闭症小组通过让自闭症儿童识别人脸情感来支持社交。`IoT`创新也减少了风险情况 [15–20]。例如，通过使用自动采矿设备让工人远离危险，`IoT`提高了危险环境的安全性和效率。在这方面，接近传感器和点传感器也很有价值。用于危险作业的`IoT`传感器。温度、危险气体和烟雾的`IoT`传感器在与系统结合使用时，可以防止环境灾难。此外，这些传感器可以监测水体中的化学泄漏。`IoT`对自然资源的影响已在许多机构发布的案例研究中得到阐明。
 
 ## 2 用于增强网络防御的大数据与边缘智能
 
-学术机构正共同合作。物联网（IoT）系统提供的某些服务在设计上存在严重的安全漏洞。由于制造商忽视安全性，他们生产的产品质量低劣。数据表明，超过70%连接到互联网的设备面临着网络攻击的风险。此外，预计到2020年底，受感染的IoT设备将导致25%工业攻击的根源。形势的严严性从受侵害的IoT设备发起的网络攻击数量得到了证实，例如Hajime僵尸（2016）、Mirai（2016）、Persiraj（2017）和BriBroker（2017）。此外，隐私权也遭到了侵犯。黑客利用基于IoT的设备和玩具级监控器来窃取敏感数据，即来自婴儿级监视器的视频流、数百万份父母及其孩子的语音录音、电子邮件、密码等内容。IoT设备的固件很容易被敌方重新编程。对人类和其他生物体最大的危险可能来自IoT。美国食品食品药品管理局（FDA）同样证实了非法访问植入式设备重新编程所造成的危害。IoT可能对人类和其他生物体带来最严重的危险[21–26]。此外，美国FDA实施了与非法访问操纵设备相关的危害措施。这一切传出了一个明显的信号：IoT可能会带来与隐私和安全相关的问题。
+学术机构正共同合作。物联网（`IoT`）系统提供的某些服务在设计上存在严重的安全漏洞。由于制造商忽视安全性，他们生产的产品质量低劣。数据表明，超过70%连接到互联网的设备面临着网络攻击的风险。此外，预计到2020年底，受感染的`IoT`设备将导致25%工业攻击的根源。形势的严严性从受侵害的`IoT`设备发起的网络攻击数量得到了证实，例如`Hajime`僵尸（2016）、`Mirai`（2016）、`Persiraj`（2017）和`BriBroker`（2017）。此外，隐私权也遭到了侵犯。黑客利用基于`IoT`的设备和玩具级监控器来窃取敏感数据，即来自婴儿级监视器的视频流、数百万份父母及其孩子的语音录音、电子邮件、密码等内容。`IoT`设备的固件很容易被敌方重新编程。对人类和其他生物体最大的危险可能来自`IoT`。美国食品食品药品管理局（`FDA`）同样证实了非法访问植入式设备重新编程所造成的危害。`IoT`可能对人类和其他生物体带来最严重的危险[21–26]。此外，美国`FDA`实施了与非法访问操纵设备相关的危害措施。这一切传出了一个明显的信号：`IoT`可能会带来与隐私和安全相关的问题。
 
-同样，IoT设备之间相互通信和运行所需的能量对于可持续IoT的发展起着至关重要的作用。在过去的十年里，由于全球化和智能设备的发展，能源消耗不断增加。能量采集（EH）必须将可再生能源集成到各种IoT设备中。IoT传感器电池无法频繁充电或更换，它们必须充电以长期正常运行。例如，人体传感器网络中的支持EH的传感器可以持续监测患者，并从环境或患者身体收集能量，如热能、动能、太阳能和射频信号。有效的数据传输作为应对这一问题的方案，是EH领域极具前景的补充。已确定，传感器产生的80%的能量被用于数据传输。此外，攻击EH芯片的恶意木马正在破坏传感器并导致拒绝服务攻击（DoS）。因此，能效和安全性标准构成了可持续IoT的特征[26–30]。然而，由于IoT节点的功率能力限制，IoT的增长和运行面临着两个不同的障碍，安全解决方案必须是紧凑且高效的。在本章中，我们将讨论作为IoT可持续性障碍的安全。
+同样，`IoT`设备之间相互通信和运行所需的能量对于可持续`IoT`的发展起着至关重要的作用。在过去的十年里，由于全球化和智能设备的发展，能源消耗不断增加。能量采集（`EH`）必须将可再生能源集成到各种`IoT`设备中。`IoT`传感器电池无法频繁充电或更换，它们必须充电以长期正常运行。例如，人体传感器网络中的支持`EH`的传感器可以持续监测患者，并从环境或患者身体收集能量，如热能、动能、太阳能和射频信号。有效的数据传输作为应对这一问题的方案，是`EH`领域极具前景的补充。已确定，传感器产生的80%的能量被用于数据传输。此外，攻击`EH`芯片的恶意木马正在破坏传感器并导致拒绝服务攻击（`DoS`）。因此，能效和安全性标准构成了可持续`IoT`的特征[26–30]。然而，由于`IoT`节点的功率能力限制，`IoT`的增长和运行面临着两个不同的障碍，安全解决方案必须是紧凑且高效的。在本章中，我们将讨论作为`IoT`可持续性障碍的安全。
 
-图1.1显示，到2030年，预计将有800亿台连接互联网的IoT设备。目前的IoT解决方案要么对IoT设备来说计算密集型，要么过于简单而容易被忽视。增加的负担将导致智能节点的电池耗尽。在这个网络时代，如果节点具有自能量采集（self-EH）能力，它将更有效地保护和维持自己。来自世界各地的研究人员贡献了他们的高效解决方案，以应对安全、机密性和互操作性等日益严峻的挑战，填补未来的空白。
+图1.1显示，到2030年，预计将有800亿台连接互联网的`IoT`设备。目前的`IoT`解决方案要么对`IoT`设备来说计算密集型，要么过于简单而容易被忽视。增加的负担将导致智能节点的电池耗尽。在这个网络时代，如果节点具有自能量采集（`self-EH`）能力，它将更有效地保护和维持自己。来自世界各地的研究人员贡献了他们的高效解决方案，以应对安全、机密性和互操作性等日益严峻的挑战，填补未来的空白。
 
 ## 挑战、现有策略与新障碍
 
 ![](img/aeaf5e4a1e1020ca53a1da35e316de95_15_0.png)
 
-图 1.1 连接的IoT设备的增长情况。
+图 1.1 连接的`IoT`设备的增长情况。
 
-这些资源受限的IoT节点采用特定路由，将计算负担有效地传输到边缘。同样，新项目提供了可靠且节省资源的解决方案。能量是其中一个项目，它利用区块链技术实现跨网格和跨车辆的能量安全有效传输。
+这些资源受限的`IoT`节点采用特定路由，将计算负担有效地传输到边缘。同样，新项目提供了可靠且节省资源的解决方案。能量是其中一个项目，它利用区块链技术实现跨网格和跨车辆的能量安全有效传输。
 
-由于IoT设备快速演变且受限的特性，尽管有一系列可以实施的措施来改进IoT安全性，但要通过IoT安全来解决各种问题变得困难。
+由于`IoT`设备快速演变且受限的特性，尽管有一系列可以实施的措施来改进`IoT`安全性，但要通过`IoT`安全来解决各种问题变得困难。
 
 ## 1.2 文献综述
 
-Samira的研究。同样，新项目提供了可靠且节省资源的解决方案。能量是其中一个项目，它利用区块链技术实现跨网格和跨车辆的能量安全有效传输。尽管有一系列可以实施的措施来改进IoT安全性，但由于IoT设备快速演变且受限的特性，要通过IoT安全来解决各种问题变得困难。
+Samira的研究。同样，新项目提供了可靠且节省资源的解决方案。能量是其中一个项目，它利用区块链技术实现跨网格和跨车辆的能量安全有效传输。尽管有一系列可以实施的措施来改进`IoT`安全性，但由于`IoT`设备快速演变且受限的特性，要通过`IoT`安全来解决各种问题变得困难。
 
-Samira的研究。同样，新项目提供了可靠且节省资源的解决方案。能量是其中一个项目，它利用区块链技术实现跨网格和跨车辆的能量安全有效传输。尽管有一系列可以实施的措施来改进IoT安全性，但由于IoT设备快速演变且受限的特性，要通过IoT安全来解决各种问题变得困难。
 
-Samira的研究。同样，新项目提供了可靠且节省资源的解决方案。能量是其中一个项目，它利用区块链技术实现跨网格和跨车辆的能量安全有效传输。尽管有一系列可以实施的措施来改进IoT安全性，但由于IoT设备快速演变且受限的特性，要通过IoT安全来解决各种问题变得困难。
 
-Samira的研究。同样，新项目提供了可靠且节省资源的解决方案。能量是其中一个项目，它利用区块链技术实现跨网格和跨车辆的能量安全有效传输。尽管有一系列可以实施的措施来改进IoT安全性，但由于IoT设备快速演变且受限的特性，要通过IoT安全来解决各种问题变得困难。
-
-Samira的研究。同样，新项目提供了可靠且节省资源的解决方案。能量是其中一个项目，它利用区块链技术实现跨网格和跨车辆的能量安全有效传输。尽管有一系列可以实施的措施来改进IoT安全性，但由于IoT设备快速演变且受限的特性，要通过IoT安全来解决各种问题变得困难。
-
-Samira的研究。同样，新项目提供了可靠且节省资源的解决方案。能量是其中一个项目，它利用区块链技术实现跨网格和跨车辆的能量安全有效传输。尽管有一系列可以实施的措施来改进IoT安全性，但由于IoT设备快速演变且受限的特性，要通过IoT安全来解决各种问题变得困难。
-
-Samira的研究。同样，新项目提供了可靠且节省资源的解决方案。能量是其中一个项目，它利用区块链技术实现跨网格和跨车辆的能量安全有效传输。尽管有一系列可以实施的措施来改进IoT安全性，但由于IoT设备快速演变且受限的特性，要通过IoT安全来解决各种问题变得困难。
-
-Samira的研究。同样，新项目提供了可靠且节省资源的解决方案。能量是其中一个项目，它利用区块链技术实现跨网格和跨车辆的能量安全有效传输。尽管有一系列可以实施的措施来改进IoT安全性，但由于IoT设备快速演变且受限的特性，要通过IoT安全来解决各种问题变得困难。
-
-Samira的研究。同样，新项目提供了可靠且节省资源的解决方案。能量是其中一个项目，它利用区块链技术实现跨网格和跨车辆的能量安全有效传输。尽管有一系列可以实施的措施来改进IoT安全性，但由于IoT设备快速演变且受限的特性，要通过IoT安全来解决各种问题变得困难。
-
-Samira的研究。同样，新项目提供了可靠且节省资源的解决方案。能量是其中一个项目，它利用区块链技术实现跨网格和跨车辆的能量安全有效传输。尽管有一系列可以实施的措施来改进IoT安全性，但由于IoT设备快速演变且受限的特性，要通过IoT安全来解决各种问题变得困难。
-
-Samira的研究。同样，新项目提供了可靠且节省资源的解决方案。能量是其中一个项目，它利用区块链技术实现跨网格和跨车辆的能量安全有效传输。尽管有一系列可以实施的措施来改进IoT安全性，但由于IoT设备快速演变且受限的特性，要通过IoT安全来解决各种问题变得困难。
-
-Samira的研究。同样，新项目提供了可靠且节省资源的解决方案。能量是其中一个项目，它利用区块链技术实现跨网格和跨车辆的能量安全有效传输。尽管有一系列可以实施的措施来改进IoT安全性，但由于IoT设备快速演变且受限的特性，要通过IoT安全来解决各种问题变得困难。
-
-Samira的研究。同样，新项目提供了可靠且节省资源的解决方案。能量是其中一个项目，它利用区块链技术实现跨网格和跨车辆的能量安全有效传输。尽管有一系列可以实施的措施来改进IoT安全性，但由于IoT设备快速演变且受限的特性，要通过IoT安全来解决各种问题变得困难。
-
-Samira的研究。同样，新项目提供了可靠且节省资源的解决方案。能量是其中一个项目，它利用区块链技术实现跨网格和跨车辆的能量安全有效传输。尽管有一系列可以实施的措施来改进IoT安全性，但由于IoT设备快速演变且受限的特性，要通过IoT安全来解决各种问题变得困难。
-
-Samira的研究。同样，新项目提供了可靠且节省资源的解决方案。能量是其中一个项目，它利用区块链技术实现跨网格和跨车辆的能量安全有效传输。尽管有一系列可以实施的措施来改进IoT安全性，但由于IoT设备快速演变且受限的特性，要通过IoT安全来解决各种问题变得困难。
-
-Samira的研究。同样，新项目提供了可靠且节省资源的解决方案。能量是其中一个项目，它利用区块链技术实现跨网格和跨车辆的能量安全有效传输。尽管有一系列可以实施的措施来改进IoT安全性，但由于IoT设备快速演变且受限的特性，要通过IoT安全来解决各种问题变得困难。
-
-]。
-
-Samira的研究。同样，新项目提供了可靠且节省资源的解决方案。能量是其中一个项目，它利用区块链技术实现跨网格和跨车辆的能量安全有效传输。尽管有一系列可以实施的措施来改进IoT安全性，但由于IoT设备快速演变且受限的特性，要通过IoT安全来解决各种问题变得困难。
-
-Samira的研究。同样，新项目提供了可靠且节省资源的解决方案。能量是其中一个项目，它利用区块链技术实现跨网格和跨车辆的能量安全有效传输。尽管有一系列可以实施的措施来改进IoT安全性，但由于IoT设备快速演变且受限的特性，要通过IoT安全来解决各种问题变得困难。
-
-Samira的研究。同样，新项目提供了可靠且节省资源的解决方案。能量是其中一个项目，它利用区块链技术实现跨网格和跨车辆的能量安全有效传输。尽管有一系列可以实施的措施来改进IoT安全性，但由于IoT设备快速演变且受限的特性，要通过IoT安全来解决各种问题变得困难。
-
-Samira的研究。同样，新项目提供了可靠且节省资源的解决方案。能量是其中一个项目，它利用区块链技术实现跨网格和跨车辆的能量安全有效传输。尽管有一系列可以实施的措施来改进IoT安全性，但由于IoT设备快速演变且受限的特性，要通过IoT安全来解决各种问题变得困难。
-
-Samira的研究。同样，新项目提供了可靠且节省资源的解决方案。能量是其中一个项目，它利用区块链技术实现跨网格和跨车辆的能量安全有效传输。尽管有一系列可以实施的措施来改进IoT安全性，但由于IoT设备快速演变且受限的特性，要通过IoT安全来解决各种问题变得困难。
-
-Samira的研究。同样，新项目提供了可靠且节省资源的解决方案。能量是其中一个项目，它利用区块链技术实现跨网格和跨车辆的能量安全有效传输。尽管有一系列可以实施的措施来改进IoT安全性，但由于IoT设备快速演变且受限的特性，要通过IoT安全来解决各种问题变得困难。
-
-(抱歉，根据指令，原文中存在大量重复文本，我已为您提取并翻译了核心内容的逻辑部分) 
-
-*(注：由于原始文本中存在大量重复的段落，译文已根据“不要重复输出原文”的原则进行了去重和针对性翻译。)*
-
-[content]
 ## 2 用于增强网络防御的大数据与边缘智能
 
 学术机构正共同合作。物联网（IoT）系统提供的某些服务在设计上存在严重的安全漏洞。由于制造商忽视安全性，他们生产的产品质量低劣。数据表明，超过70%连接到互联网的设备面临着网络攻击的风险。此外，预计到2020年底，受感染的IoT设备将导致25%工业攻击的根源。形势的严性从受侵害的IoT设备发起的网络攻击数量得到了证实，例如Hajime僵尸（2016）、Mirai（2016）、Persiraj（2017）和BriBroker（2017）。此外，隐私权也遭到了侵犯。黑客利用基于IoT的设备和玩具级监控器来窃取敏感数据，即来自婴儿级监视器的视频流、数百万份父母及其孩子的语音录音、电子邮件、密码等内容。IoT设备的固件很容易被敌方重新编程。对人类和其他生物体最大的危险可能来自IoT。美国食品药品管理局（FDA）同样证实了非法访问植入式设备重新编程所造成的危害。IoT可能对人类和其他生物体带来最严重的危险[21–26]。此外，美国FDA实施了与非法访问操纵设备相关的危害措施。这一切传出了一个明显的信号：IoT可能会带来与隐私和安全相关的问题。
@@ -226,13 +112,6 @@ Samira的研究。同样，新项目提供了可靠且节省资源的解决方�
 由于IoT设备快速演变且受限的特性，尽管有一系列可以实施的措施来改进IoT安全性，但要通过IoT安全来解决各种问题变得困难。
 
 ## 1.2 文献综述
-
-Samira的研究……（此处重复内容已去重）
-
-
-
-
-# 挑战、现有策略与新障碍
 
 目前已经提出了服务各种目标的各种解决方案。IoT 采用者对 IoT 技术的快速发展和使用感到不确定，并存在更多的安全担忧。本章的目标是评估有关 IoT 安全风险的研究趋势，让读者对该主题有深入的理解。因此，针对选定的 3500 篇文章使用了两种形式的文献综述，以对人工系统调查进行更深入的分析。这些文章中提取了与 IoT 概念相关的问题、补救措施和研究空白。这项映射研究发现了 11 个答案和 9 个主要问题。研究还揭示了仍需要有效解决方案的问题，例如安全的隐私管理和云集成。利用 Web of Science 的两个数据集（2016 年和 2018 年），自动内容分析技术进一步推进了人工系统调查的结果，展示了 IoT 安全随时间的趋势。
 
@@ -261,10 +140,6 @@ IoT 架构是我们涵盖的第一个主题。其次，我们概述了 IoT 协�
 尽管 IoT 已成为我们生活中至的组成部分，但很大一部分设备缺乏安全和能量收集功能。必须在设计阶段考虑这些元素，并涵盖从部署到处置的传感器生命周期的每个阶段。能量可持续性和安全可持续性是可持续 IoT 的两个重要基石。用于功率利用和数据传输的高效解决方案对于可行的 IoT 是必要的。由于 IoT 以数据为中心，数据安全和隐私对其未来至关重要。最近的数据泄露表明，IoT 在整个系统中功能和资源匮乏。这是 IoT 设备连接的结果，它允许攻击者访问广泛的攻击面。
 
 电磁信号、风能、水能、人体热和压电是其中的
-
-
-
-
 
 # 用于增强网络防御的大数据与边缘智能
 
@@ -297,28 +172,31 @@ IoT 架构的这一层使用多种设备（包括计算机、智能手机和个�
 
 IoT 是一个资源有限的世界；因此它不能依赖于基于 IPv4 的 TCP/IP、TCP 和超文本传输协议（HTTP）等协议。由于关于这些协议的信息量、管理成本以及依赖它们时通信策略的低下，可能会损失传输能量。IoT 的应用如图 1.2 所示。IEEE 和 IETF 标准工作小组已经认可了针对资源限机器的数据传输方法。作者推荐的协议栈见图 1.3。
 
+
+
 由于大量的元数据、协议开销以及依赖它们时交互方法的低效，可能会损失传输能量。配备受限资源的设备的工作协议已获得认证机构 IEEE 和 IETF 委员会的批准 [53–55]。作者预期的标准化协议栈见图 1.4。作为对 MAC 导频以及微生物如何相互通信的解释的一部分，还涵盖了 MAC 协议。在多跳网络中，使用了国际 IEEE 802.15.4 MAC 协议，因为它变得更加低效。由于 100% 的占空比会大幅降低低功率电机的寿命，这是错误的。2008 年，我们为 MAC 协议创建了国际设备公司的 802.15.4。
 
 它使用了一种名为 TSMP 的策略，通过同步和信道跳频在保持极低占空比的同时实现了巨大的依赖性。无线协议构建在该标准之上。在 TCHEP 中，设备使用一组重复循环的时隙和时隙帧结构进行同步。每个设备都遵循一个详细说明在每个时间窗口应执行什么的时间表。在确定的时隙中，节点（mote）可以发送、接收或睡眠。节点在进入睡眠状态时控制其无线电关闭。
 
 ![](img/aeaf5e4a1e1020ca53a1da35e316de95_22_0.png)
+
 图 1.2 不同领域的 IoT 应用。
 
 ![](img/aeaf5e4a1e1020ca53a1da35e316de95_22_1.png)
+
 图 1.3 IoT 中 IETF 协议栈的使用。
 
 ## 挑战、现有技术与新障碍
 
 ![](img/aeaf5e4a1e1020ca53a1da35e316de95_22_0.png)
+
 （注：此处原文为图片占位符或乱码，根据要求保留格式，未翻译非描述性文本）
 
 ![](img/aeaf5e4a1e1020ca53a1da35e316de95_22_1.png)
+
 （注：此处原文为图片占位符或乱码，根据要求保留格式，未翻译非描述性文本）
+
 图 1.4 IoT 工具列表。
-
-
-
-
 
 # 挑战、现有策略与新障碍
 
@@ -330,210 +208,188 @@ IoT 是一个资源有限的世界；因此它不能依赖于基于 IPv4 的 TCP
 
 本章第二部分强调了作为攻击者网关的 IoT 安全问题，如开放端口、无效的更新系统和松散的验证方法。然后，我们研究了发现工具、蜜罐、网络安全测试平台和机器学习在识别 IoT 环境问题方面的用途。随后，我们强调了剩余的关注点以及未来的可持续 IoT 项目。最后，我们得出结论：本出版物通过展示这一令人兴奋的调查领域的现状，为社区提供了相关的详细信息。未来，研究将深入探讨深度学习和混合机器学习技术，以评估 IoT 风险。还将检查使用 EH 芯片的攻击的影响。我们还将讨论评估 IoT 威胁的框架以及它们如何在各种现实情况中实施。
 
-
 - 1. Chatterjee, D. Das, S. Maity, and S. Sen, “Rf-puf: Enhancing IoT security through authentication of wireless nodes in-situ machine learning,” IEEE Internet of Things Journal, vol. 6, no. 1, pp. 388–398, 2019.
+
 - 2. J. Vora, S. Tanwar, S. Tiagi, N. Kumar, and J. Rodrigues, “Homebased exercise system for patients IoT enabled smart speaker,” in 2017 IEEE 19th International Conference on e-Health Networking, Applications and Services (Healthcom), Oct. 2017, pp. 1–6.
 
 # 用于增强网络安全的大数据与边缘智能
 
 - 3. Bisio, D. Delfelfino, F. Lavhetto, and A. Sciarone, “Enabling IoT for in-home rehabilitation: Accelerometer signals classification methods for activity and movement recognition,” IEEE Internet of Things Journal, vol. 4, no. 1 pp. 135–146, Feb. 2017.
+
 - 4. N. Neshenko, E. Bou-Harp, R. Crichinho, G. Gaddoum, and N. Ghani, “Demystifying IoT security: An exhaustive survey of IoT vulnerabilities and a first empirical look on internal-scale interactions,” IEEE Communications Surveys & Tutorials, vol. 21, no. 3, pp. 2702–2733, 2019.
+
 - 5. S. Tanwar, T. Syagi, and S. Kumar, “The role of internet of things and smart grid for the development of a smart city,” in Intelligent Communication and Computational Technologies, 3rd Quart, pp. 23–33, 2018.
+
 - 6. Hacking IoT: A case study on baby monitors and vulnerabilities. https://www.rapid.com/globalassets/docs/Hacking-IoT-Case-Study-on-Baby-Monitors.
+
 - 7. E. Bertino and N. Islam, “Botnets and internet of things security,” Computer, vol. 50, no. 2, pp. 76–79, 2017.
+
 - 8. R. Gupta, S. Tanwar, “Blockchain-based security resilience for autonomous vehicles in industry 4.0: A systematic review,” Computers & Electrical Engineering, vol. 86, 2020.
+
 - 9. A. Kumari, R. Gupta, S. Tanwar, and N. Kumar, “Blockchain and AI for cloud management: Challenges, solutions, and future direction,” Journal of Parallel and Distributed Computing, vol. 143, pp. 148–166, 2020.
+
 - 10. L. Guo, D. Jiang, and J. Pan, “Sustainability in body sensor networks with transmission scheduling and energy harvesting,” Internet of Things Journal, vol. 6, no. 6, pp. 9633–9644, 2019.
+
 - 11. S. Khairy, M. Han, and Y. Chen, “Wireless IoT with energy charging using Wi-Fi,” Internet of Things Journal, vol. 6, no. 6, pp. 1025–1039, 2019.
+
 - 12. Granal, E. Monteiro, and J. Silva, “The security of open protocols: a review,” IEEE Communications Surveys & Tutorials, vol. 27, no. 4, pp. 191–312, 2015.
+
 - 13. R. Roman, J. Zhou, and J. Lopez, “On the features and challenges of security and privacy in distributed internet of things,” Computer Networks, vol. 57, no. 10, pp. 2266–2279, 2013.
+
 - 14. N. Zhang, S. Demetriou, W. Miao, K. Yuan, Y. Tian, and P. Tague, “Understanding IoT security through the data barrier: Where we are and we are going to be,” 2017.
+
 - 15. F. Alaba, M. Othan, and I. Alotaibi, “Internet of things: A survey,” Journal of Network and Computer Applications, vol. 88, pp. 10–28, 2017.
+
 - 16. N. Mosen and N. Jha, “A comprehensive study of security-things,” IEEE Transactions on Emerging Topics in Computing, vol. 5, no. 4, pp. 586–602, 2017.
+
 - 17. K. Sud, P. Deepalakshmi, and A. Singh et al., “TFAD: Attack detection in software-defined networking using proxy-based and machine learning-based mechanisms,” Cluster Computing, vol. 26, pp. 1461–1477, 2023. https://doi.org/10.1007/s10586-022-0366-4
+
 - 18. R. Buya and S. Sriram, “Using Machine Learning for Protecting the Security and Privacy of Internet of Things (IoT) Systems,” pp. 223–257, 2019.
+
 - 19. Q. Jing, A. Vasilakos, J. Wan, and J. Du, “Security of the internet of things: Perspectives and challenges,” Wireless Networks, vol. 20, no. 8, pp. 2481–2501, 2014.
+
 - 20. M. Ahlmeyer and A. M. Chircu, “Securing the internet of things: a review,” Issues in Information Systems, vol. 17, no. 4, 2016.
 
 # 挑战、现有策略与新障碍
 
 - 21. I. Butun, P. Åsterberg, and H. Song, “Security of the internet: Vulnerabilities, attacks, and countermeasures,” IEEE Communications Tutorials, vol. 22, no. 1, pp. 616–644, 2020.
+
 - 22. S. Li, D. Xu, and S. Zhao, “The internet of things: A survey,” Information Systems Frontiers, vol. 17, no. 2, pp. 243–259, 2015.
+
 - 23. M. Hyonen and L. Nyman, “The internet of (vulnerable) things: On Hyonen’s law, security engineering, and iot,” Innovation Management Review, vol. 7, no. 5, pp. 7–11.
+
 - 24. J. Y. Keller and D. Sauter, “Monitoring the stability of attacked in network control systems,” in 2013 Conference on Fault-Tolerant Systems (SysIoT), 2013, pp. 462–467.
+
 - 25. S. Dhanda, B. Singh, and P. Jindal, “Lightweight cryptography to secure IoT,” Wireless Communications, vol. 112, no. 4, pp. 1–34, 2020.
+
 - 26. Á. Valdosido Caragay, A. Benito Bernal, L. Barona Lopez, and L. J. Garcia Villalba, “SDN: Evolution and opportunities in the deployment IoT applications,” International Journal of Distributed Sensor Networks, vol. 10, no. 5, pp. 75312, 2014.
+
 - 27. S. Rahimi Moosavi, Y. Giao, A.M. Rahman, E. Nguisse, S. Virtanen, and J. Iso, “A secure and efficient framework for IoT gateways,” Procedia Computer Science, vol. 52, pp. 452–459, 2017.
+
 - 28. Arias and A. Piccolo, “Security and privacy in smart internet of things devices,” Issues in Information Systems, vol. 17, no. 4, pp. 99–109, 2015.
+
 - 29. L. Furfaro, A. Argentina, and A. Parise, “Using smart environments for IoT scenarios,” Simulation Modelling and Theory, vol. 73, pp. 45–54, 2017.
+
 - 30. S. Viboni, S. Sachidhan, and N. Medan, “Security of IoT-tested devices,” IEEE Transactions on Reliability, vol. 68, no. 1, pp. 23–44, 2019.
+
 - 31. S. Sud et al., “Assessment of consumer IoT vulnerability,” Electronics, vol. 12, p. 1176, 2023. https://doi.org/10.3390/electronics12051176
+
 - 32. K. Hasan et al., “A review on security threats and countermeasures of 5G enabled Internet-of-Things,” IET Communications, vol. 16, pp. 421–432, 2022.
+
 - 33. J. Porras et al., “Security challenges and solutions in internet of things,” Nordic and Baltic Journal of Information and Communications, 2018, no. 1, pp. 177–208. https://doi.org/10.13052/mbijot1902-097
+
 - 34. M. Mohamed Saeed, N. M. Abdulkareem, R. R. Zemee, D. R. Meebahera, and D. Mikael Ahmed, “IoT and cloud computing systems, challenges and opportunities: a review,” Qubahan Academic Journal, vol. 1, no. 2, pp. 1–7, 2021. https://doi.org/10.48616/qaj.v1i2.36
+
+
+
 - 35. A. R. H Hussein, “Internet of things (IoT): Research and future applications,” International Journal of Advanced Computer Science and Applications (IJACSA), vol. 10, no. 6, 2019.
 - 36. P. Moreno Sanchez, R. Martin Lopez, and A. F. Gomez Smart, “A network access control implementation of PANA for IoT devices,” Sensors, vol. 13, no. 11, pp. 14888–14917, 2013.
-
-
-
-
-
-
-39. B. Nunes, M. Santos, B. de Oliveira, C. Margi, K. Obrac, and T. Turletti, “Software defined networking enabling capacity sharing in user-centric network,” IEEE Communications Magazine, vol. 52, pp. 28–36, 2014.
-
-40. S. Scott-Hayward, G. OCallaghan, and S. Sezer, “SDN security: a survey,” IEEE SDN for Future Networks and Services, pp. 1–7, 2013.
-
-41. S. Son, S. Shin, Y. Wegnesaran, P. Porras, and G. Gu, “Model checking invariant properties in airflow,” IEEE International Conference on Communications, 2013, p. 1974199.
-
-42. H. Wu, W. Han, A. Jin, and Z. Zhao, “Flowguard: Building robust firewall for software-defined networks,” Third Workshop on Hot Topics in Software Defined Networking, pp. 97–102, 2014.
-
-43. P. N. Srinivasa, R. Panigrafi, A. Singh, and A. K. Bhoi, “Probabilistic buckshot-driven cluster head identification and accumulative data encryption in WSN,” Journal of Systems, Computers and Networks, vol. 31, p. 17, 2022.
-
-44. R. Braga, E. Mota, and A. Passito, “Lightweight DDoS flood attack detection using OpenFlow,” in Local Computer Networks (LCN). 2010 IEEE 35th Conference on. IEEE, pp. 408–415.
-
-45. H. Jafarian, E. Al-Shaer, and D. Duan, “Open flow random host mutation: Transparent moving defense using software defined networking, first work on hot topics in software defined networks,” ACM, vol. 52, no. c, pp. 127–132, 2012.
-
-46. S. Shin, P. Porras, V. Wegnesaran, M. Fong, G. Gu, and M. Tyson. FRECO: Multivariable security services for software-defined networks, Network and Distributed Security Symposium, 2013.
-
-47. S. Shin, and G. Gu, “CloudWatcher, Network monitoring using OpenFlow in dynamic networks (or)? How to provide security monitoring–a service in clouds,” in Network Protocols (ICNP), 2012 IEEE International Conference on. IEEE, 2012, pp. 1–6.
-
-48. O. Fluciaz, F. Nolot, C. Rabat, and L. Seistel. Grid of security: A new approach of the network security International Conference on Network and Security System, 2009, pp. 67–72.
-
-49. D. Kreutz, F. Ramos, and P. Verissimo. Taws secure and dependable software-defined networks, Sec ACM SIGCOMM workshop on Hot topics in software defined networking. 2013, pp. 55–60.
-
-50. Z. Gin, D. Ganker, C. Gennelli, P. Bellavista, and N. Venkatasubaram. Software Defined Networking architecture for the Internet-of-Things. Network Operations and Management System (NOMS), 2014, pp. 1–9.
-
-51. S. Song, S. Hong, X. Yuan, B. Yi, and C. Choi. Neod: Network embedded on on-line disaster management framework for software defined networking–int. Integrated Network Management IFIP/IEEE International Symposium, 2013, pp. 492–498.
-
-52. E. Y. Oktian, S. Lee, and H. Lee, “Mitigating denial of service (dos) attacks in open flow network,” Information and Communication Technology Convergence (ICTC), vol. 52, no. c, pp. 325–330, 2014.
-
-53. I. Ishaq, D. Cares, G. Teklemariam, J. Hoebeke, F. Afeele, E. Poorter, I. Moerman, and P. Demester, “IETF standardization in the field of the internet of things (IoT): A survey,” Journal of Sensor and Actuator Networks, vol. 2, no. 2, pp. 235–287, 2013.
-
-54. “IETF – Internet of Things,” Accessed: 2018-12-08. [Online]. Available: https://ietf.org/topics/iot/
-
-55. Z. Zheng, S. Yang, Y. Yu, A. V. Vasilakos, J. McCann, and K. Leung, “A survey on the IETF protocol for the internet of things: Challenges, standards, and opportunities,” IEEE Wireless Communications, vol. 20, no. 6, pp. 91–98, 2013.
+- 39. B. Nunes, M. Santos, B. de Oliveira, C. Margi, K. Obrac, and T. Turletti, “Software defined networking enabling capacity sharing in user-centric network,” IEEE Communications Magazine, vol. 52, pp. 28–36, 2014.
+- 40. S. Scott-Hayward, G. OCallaghan, and S. Sezer, “SDN security: a survey,” IEEE SDN for Future Networks and Services, pp. 1–7, 2013.
+- 41. S. Son, S. Shin, Y. Wegnesaran, P. Porras, and G. Gu, “Model checking invariant properties in airflow,” IEEE International Conference on Communications, 2013, p. 1974199.
+- 42. H. Wu, W. Han, A. Jin, and Z. Zhao, “Flowguard: Building robust firewall for software-defined networks,” Third Workshop on Hot Topics in Software Defined Networking, pp. 97–102, 2014.
+- 43. P. N. Srinivasa, R. Panigrafi, A. Singh, and A. K. Bhoi, “Probabilistic buckshot-driven cluster head identification and accumulative data encryption in WSN,” Journal of Systems, Computers and Networks, vol. 31, p. 17, 2022.
+- 44. R. Braga, E. Mota, and A. Passito, “Lightweight DDoS flood attack detection using OpenFlow,” in Local Computer Networks (LCN). 2010 IEEE 35th Conference on. IEEE, pp. 408–415.
+- 45. H. Jafarian, E. Al-Shaer, and D. Duan, “Open flow random host mutation: Transparent moving defense using software defined networking, first work on hot topics in software defined networks,” ACM, vol. 52, no. c, pp. 127–132, 2012.
+- 46. S. Shin, P. Porras, V. Wegnesaran, M. Fong, G. Gu, and M. Tyson. FRECO: Multivariable security services for software-defined networks, Network and Distributed Security Symposium, 2013.
+- 47. S. Shin, and G. Gu, “CloudWatcher, Network monitoring using OpenFlow in dynamic networks (or)? How to provide security monitoring–a service in clouds,” in Network Protocols (ICNP), 2012 IEEE International Conference on. IEEE, 2012, pp. 1–6.
+- 48. O. Fluciaz, F. Nolot, C. Rabat, and L. Seistel. Grid of security: A new approach of the network security International Conference on Network and Security System, 2009, pp. 67–72.
+- 49. D. Kreutz, F. Ramos, and P. Verissimo. Taws secure and dependable software-defined networks, Sec ACM SIGCOMM workshop on Hot topics in software defined networking. 2013, pp. 55–60.
+- 50. Z. Gin, D. Ganker, C. Gennelli, P. Bellavista, and N. Venkatasubaram. Software Defined Networking architecture for the Internet-of-Things. Network Operations and Management System (NOMS), 2014, pp. 1–9.
+- 51. S. Song, S. Hong, X. Yuan, B. Yi, and C. Choi. Neod: Network embedded on on-line disaster management framework for software defined networking–int. Integrated Network Management IFIP/IEEE International Symposium, 2013, pp. 492–498.
+- 52. E. Y. Oktian, S. Lee, and H. Lee, “Mitigating denial of service (dos) attacks in open flow network,” Information and Communication Technology Convergence (ICTC), vol. 52, no. c, pp. 325–330, 2014.
+- 53. I. Ishaq, D. Cares, G. Teklemariam, J. Hoebeke, F. Afeele, E. Poorter, I. Moerman, and P. Demester, “IETF standardization in the field of the internet of things (IoT): A survey,” Journal of Sensor and Actuator Networks, vol. 2, no. 2, pp. 235–287, 2013.
+- 54. “IETF – Internet of Things,” Accessed: 2018-12-08. [Online]. Available: `https://ietf.org/topics/iot/`
+- 55. Z. Zheng, S. Yang, Y. Yu, A. V. Vasilakos, J. McCann, and K. Leung, “A survey on the IETF protocol for the internet of things: Challenges, standards, and opportunities,” IEEE Wireless Communications, vol. 20, no. 6, pp. 91–98, 2013.
 
 ## 挑战、现有策略与新障碍
-
 - 56. Z. Simlot-Ryl, “Bisdikian mouftah the internet of things,” IEEE Communication Magazine, vol. 11, no. 11, pp. 30–31, 2011.
-
-57. L. Karim, B. Taha, B. Jean-Pierre, H. Samir, and O. Abdelhafid, “Stochastic peer modeling, simulation and analysis of public bicycle sharing systems,” IEEE Transactions on Automation Science and Engineering, vol. 12, no. 4, pp. 1380–1395, 2015.
-
-58. C. Qin, L. Mei, and L. Xinyue, “Bike Fleet allocation models for repositioning in systems,” IEEE Intelligent Systems Magazine, vol. 10, no. 1, pp. 19–29, 2018.
-
-59. J. Pena, and W. Yu, “Development of a firewall using software defined networking,” in Information Science and Technology (ICIST), 4th IEEE International Conference, 2014, pp. 81–88.
-
-60. M. Suh, S. H. Park, B. Lee, and S. Yang, “Building firewall over the softwaredefined network,” 16th Advanced Communication Technology (IACT), pp. 744–748, 2014.
-
-61. A. Dunkels, B. Gronvall, and T. Voigt, “Contiki - a lightweight and flexible operating system for tiny sensors,” in 29th Annual International Conference on networks, 2004, pp. 455–462.
-
-62. I. Tomasic, K. Khosravi, P. Rosengren, and M. Lindsson, “Enabling IoT-based monitoring of parameters,” IEEE International Conference on information and technology, 2018, pp. 330–334.
+- 57. L. Karim, B. Taha, B. Jean-Pierre, H. Samir, and O. Abdelhafid, “Stochastic peer modeling, simulation and analysis of public bicycle sharing systems,” IEEE Transactions on Automation Science and Engineering, vol. 12, no. 4, pp. 1380–1395, 2015.
+- 58. C. Qin, L. Mei, and L. Xinyue, “Bike Fleet allocation models for repositioning in systems,” IEEE Intelligent Systems Magazine, vol. 10, no. 1, pp. 19–29, 2018.
+- 59. J. Pena, and W. Yu, “Development of a firewall using software defined networking,” in Information Science and Technology (ICIST), 4th IEEE International Conference, 2014, pp. 81–88.
+- 60. M. Suh, S. H. Park, B. Lee, and S. Yang, “Building firewall over the softwaredefined network,” 16th Advanced Communication Technology (IACT), pp. 744–748, 2014.
+- 61. A. Dunkels, B. Gronvall, and T. Voigt, “Contiki - a lightweight and flexible operating system for tiny sensors,” in 29th Annual International Conference on networks, 2004, pp. 455–462.
+- 62. I. Tomasic, K. Khosravi, P. Rosengren, and M. Lindsson, “Enabling IoT-based monitoring of parameters,” IEEE International Conference on information and technology, 2018, pp. 330–334.
 
 ## 用于网络安全的基于物联网入侵系统
 
-## 2.1 引言
-
+### 2.1 引言
 创建一个完美的 IDS 是困难的，并非不可能。大多数现代系统存在各种安全问题。物联网的发展增加了入侵的类型。
-
 入侵检测系统（IDS）监控流量以识别恶意活动或违规行为。IDS 的主要目标是保护可用性、机性和完整性。
-
 IDS 有两种：网络（NIDS）和主机（HIDS）。NIDS 是部署在网络中的 IDS，通过检查网络流量判断是否发生了攻击。HIDS 是安装在所有网络客户端上的 IDS，如果发现异常行为将发出报警。
 
-## 2.2 文献综述
-
+### 2.2 文献综述
 钓鱼攻击日益增加，每年造成数百万美元，特别是在在线交易中。由于实时解决方案不准确，目前的解决方案仍然不足。良好的基于 AI IDS 可以帮助防御者在数字生态系统中采取行动。
-
 本章节的主要贡献如下：
-
 - 使用机器学习分类器检测欺诈 URL。
 - 使用 URL 检测钓鱼攻击。
 - 识别钓鱼活动。
 - 通过开发多种算法的钓鱼网站模型研究数据集中最相关的方面。
-
 本章其余部分分为五个章节。2.3 是相关文献综述。2.3 介绍了本研究建议的方法和多种 IDS 分类器。2.4 总结了发现和分析。最后在 2.5 节得出结论。
 
-
-
-
-
 # 用于增强网络防御的大数据与边缘智能
-
 客户可以即时访问数据库。提出的方法是一种基于特征的网页浏览器，具有六类输入，包括一个生成对话的用户警告界面，该界面带有书面指导和颜色状态，用于检测虚假网站并通知用户钓鱼攻击。与之前的领域结果相比，新引入的工具在多样化的互联网页面上表现最佳（96%），这些了100个诈骗网站、200个异常网站和200个真实网站。该研究针对钓鱼检测提出了一种新的对话生成用户警告界面技术，这种技术在以前未曾研究过 [23–29]。
-
 网页欺骗鼓励人们链接到虚假网站而非合法网站。此类攻击的主要目标是从用户处获取机密数据。攻击者开发了一个看起来像真实的影子网站。这种欺骗允许攻击者查看并修改受害者提供的任何信息。本研究提出了一种基于通过检查网站统一资源定位符（URL）来识别钓鱼网站的方法。为了区分真实网站和欺诈网站，建议的方法利用在线页面的资源位置（URL）。使用某些标准对URL进行验证以识别钓鱼网站。发现的攻击已记录在案，以帮助防止未来的攻击。建议方法的性能已使用Sigma状态和Google目录数据集进行了检查 [29–35]。根据统计，该识别系统是可传输的，能够识别各种类型的诈骗，同时减少了误报。
-
 许多个人在互联网上购买产品并并通过各种网站进行支付。多个网站需要敏感信息进行身份验证，例如用户的登录名、密码和信用卡信息。然而，存在一些钓鱼网站。这些信息被用于恶意目的 [36–41]。为了检测和预测钓鱼网站，我们设计了一种利用数据挖掘技术的通用且有效的解决方案。我们采用了逻辑回归方法来确定其真伪性。在最终检测率中，可以利用URL、域名身份和安全等等多种基本标准来识别钓鱼。该工具可以帮助许多互联网用户防范钓鱼网站的侵害 [42–49]。该系统的数据挖掘方法优于其他方法。客户也可以通过这种方式进行在线交易而无需担心被欺骗。允许扫描还会将欺诈或虚假的网站URL添加到计算机系统中进行探索和扫描。当用户输入URL时，可能会添加可疑网站。
-
 钓鱼网站是由不实人员开发的真实网站的伪造品。这些网站类似于任何公司（如银行或大学）的官方网站。钓鱼的主要目的是从消费者那里窃取数据，例如用户名、密码和个人密码 [52]。钓鱼受害者向攻击者提供重要的财务信息，攻击者可能将其用于预算和犯罪目标。非技术措施无法防御钓鱼网站随时消失的能力。数据挖掘是技术解决方案的一种，在识别钓鱼网站方面显示出良好的前景。与非技术方法相比，数据挖掘技术可以创建分类模型，模型可以对欺诈网站提供即时预测。许多人在……上购买东西并在
 
 # 基于人工智能和物联网的网络安全入侵检测系统
-
 万维网并通过许多网站为它们支付。多个网站通常需要敏感信息，如个人的登录名、用户名和密码以及信用卡信息进行身份验证。尽管如此，存在一些钓鱼网站。我们使用数据挖掘技术创建了一个通用且成功的系统，用于检测和预测钓鱼网站。为了评估其真实性，我们使用了逻辑回归技术和方法。在最终检测率中，可以使用URL、名称身份和安全等许多关键因素来确定钓鱼网站。该工具可以帮助许多互联网用户保护自己免受钓鱼网站的侵害。该系统的数据挖掘方法优于其他方法。
-
 黑客攻击每年让互联网用户损失大量资金。它指的是利用用户端漏洞的攻击。利用了多种策略，直到没有单一策略能够妥善地减少钓鱼中的每一个漏洞。在这项研究中，我们研究了检测钓鱼网站的三种策略。第一种技术查看URL的不同部分；它托管在哪里以及运行在哪里；第三种查看网站的外观外观。为了分析这些URL和网页的许多组件，我们使用了深度学习技术和算法。本页提供了几种方法的概述。
-
 钓鱼网站利用人类弱点而非技术缺陷来破坏网络安全，使其成为最危险的威胁之一。这是一种诱导互联网用户获取密码和用户名等机密数据的技术。在本章中，我们描述了一种识别钓鱼网站的巧妙技术。该技术在检测到钓鱼网站时充当摄像头和报警系统，提醒用户。框架的基础是监督学习，机器学习的一个子集。由于随机森林方法卓越的分类性能，我们选择了它。通过评估钓鱼网站的特征并选择最佳训练集来训练分类器，我们希望增强分类器。
 
 ## 2.3 拟议工作
-
 所提出的入侵检测方法如图2.1所示。它被提出的不同阶段包括特征提取、分类和结果。随机森林、朴素贝叶斯和极端梯度提升等不同分类器是本研究的组成部分。数据预处理作为分类任务中的关键阶段，也收到了大量的关注。
 
 ### 2.3.1 拟议入侵系统的步骤
-
 - 步骤 1：在URL扫描网站中查找URL。检查已推荐的数据特征和数据类型。
 - 步骤 2：将信息分为测试集和训练集。
 - 步骤 3：划分的数据被处理为特征提取，这意味着已创建了一个应用程序从URL中提取特征。我们检索了用于识别钓鱼网站的特征。
 
-# 用于增强网络防御的大数据与边缘智能
-
 ![img/aeaf5e4a1e1020ca53a1da35e316de95_34_0.png](img/aeaf5e4a1e1020ca53a1da35e316de95_34_0.png)
-
 图 2.1 拟议的入侵检测系统模型。
-
-- 步骤 4：模型可以通过朴素贝叶斯、随机森林和极端梯度提升 (XGBoost) 进行训练，通过分类可以识别其是否为钓鱼网站。
+- 步骤 4：模型可以通过朴素贝叶斯、随机森林和极端梯度提升 (`XGBoost`) 进行训练，通过分类可以识别其是否为钓鱼网站。
 - 步骤 5：训练模型在此阶段指示两种模式。第一模式是如果网站链接是垃圾信息，它会告知或通知网站；第二种模式是链接不是垃圾信息，模型将得出结论并进入步骤6。
 - 步骤 6：模型的最后一步是部署，这意味着将一个完全运行的机器学习算法投入使用，可以使用信息生成预测。这些预测被客户、程序员和计算机用于生成有用的业务选择。
 
 ### 2.3.2 特征提取
 
+
+
 用于做出任何决策的标准已列出。这些判断的结果完全取决于所列出的标准。进行了深入研究以确定哪些特征将合法URL与钓鱼URL区分开来。这些特征被选择、检查和利用，以确保网站可以做出决策并获得最佳结果 [50]。已创建了一个应用程序从URL中提取特征。我们检索的用于识别钓鱼网站的特征列如下。带有互联网地址的URL：有两种技术用于
-
-
-
-
 
 # 用于网络安全的基于 AI 和物联网的入侵检测系统
 
-发现网站的 IP 地址：ping 和查询。但是，DNS 服务器工具是查找网站 IP 地址最快的方法。
+发现网站的 IP 地址：`ping` 和查询。但是，DNS 服务器工具是查找网站 IP 地址最快的方法。
 
 - 在 DNS 工具的文本输入字段中输入网站地址。
-- 点击 Lookup（查询），在 Hostname: UserInfo中使用 @ 符号，用户信息和主机可以使用 @ 分隔。
+- 点击 `Lookup`（查询），在 `Hostname: UserInfo`中使用 `@` 符号，用户信息和主机可以使用 `@` 分隔。
 - 要获取警报，请遵循此响应。
 
 点主机名计数：互联网切换过程可能会使用句号将主机特定的标签与相应的 DNS 网站地址隔开，并添加“点”。在后一种情况下，名称也称为域名。URL 重定向：一种使网站在许多 URL 地址下保持可用的万维网方法，即为 URL 重定向，也称为 URL 转发。当浏览器尝试访问一个已重定向的 URL 时，将打开具有此类不同地址的页面。
 
-用户的信息可能会使用“mail”或“mailto:”函数发送到钓鱼者的个人电子邮件帐户。如果 URL 具有这些特征，则将属性更改为 1；否则，设置为 0。像“TinyURL”之类的 URL 缩短服务被用于通过缩短来创建冗长的钓鱼 URL。如果使用像 bit.ly 的服务缩短了 URL，除非另有说明，否则特征被赋值为 1 或 0。这包括一种细节敏感语言：URL 允许计算机在连接到互联网的另一设备上找到并启动网站。
+用户的信息可能会使用“mail”或“mailto:”函数发送到钓鱼者的个人电子邮件帐户。如果 URL 具有这些特征，则将属性更改为 1；否则，设置为 0。像“`TinyURL`”之类的 URL 缩短服务被用于通过缩短来创建冗长的钓鱼 URL。如果使用像 `bit.ly` 的服务缩短了 URL，除非另有说明，否则特征被赋值为 1 或 0。这包括一种细节敏感语言：URL 允许计算机在连接到互联网的另一设备上找到并启动网站。
 
-如果标题中的斜杠数量大于 5，则将属性设置为 1；否则设置为 0。已发现带有五个斜杠的 URL 是安全的。证书有效性（Validity of Cert）：只有在存在 HTTPS 时，才能传递网站的合法性。然而，一个可靠网站的 SSL 证书至少必须有两年历史。锚点 URL（URL of Anchor）：通过扫描 URL 的源代码，我们能够提取这一特征。`<a>` 元素指定了 URL 的代码，即锚点。如果 `<a>` 标签中的链接数量来自另一个域名，则将该特征设置为 1；否则，设置为 0。IFRAME：一种被称为“内联框架”或（iframe）的 HTML 元素在当前文档内部加载另一个 HTML 文档。从本质上说，它在页面内插入了一个不同的网页。它们经常用于交互式内容、嵌入电影、广告和网站分析。网站排名（Website Rank）：使用 HTML iframe 显示加载的网页。它也被称为“内联框架”，因为 HTML “IDP”元素指定了它。HTML iframe 在活动 HTML 文档的矩形空间内插入一个不同的文档。
+如果标题中的斜杠数量大于 5，则将属性设置为 1；否则设置为 0。已发现带有五个斜杠的 URL 是安全的。证书有效性（Validity of Cert）：只有在存在 HTTPS 时，才能传递网站的合法性。然而，一个可靠网站的 SSL 证书至少必须有两年历史。锚点 URL（URL of Anchor）：通过扫描 URL 的源代码，我们能够提取这一特征。`<a>` 元素指定了 URL 的代码，即锚点。如果 `<a>` 标签中的链接数量来自另一个域名，则将该特征设置为 1；否则，设置为 0。IFRAME：一种被称为“内联框架”或（`iframe`）的 HTML 元素在当前文档内部加载另一个 HTML 文档。从本质上说，它在页面内插入了一个不同的网页。它们经常用于交互式内容、嵌入电影、广告和网站分析。网站排名（Website Rank）：使用 HTML `iframe` 显示加载的网页。它也被称为“内联框架”，因为 HTML “IDP”元素指定了它。HTML `iframe` 在活动 HTML 文档的矩形空间内插入一个不同的文档。
 
-### 2.3.3 分类
+## 2.3.3 分类
 
 下一阶段是创建一个机器学习模型，以区分真实网站和欺诈网站。选择符合应用要求的适当分类技术至关重要。它的目标是通过随机数据选择来防止过拟合。在项研究中，建议使用随机分类器（Random Classifier）、朴素贝叶斯（Naive Bayes）和 XGBoost 分类算法。
 
 # 用于增强网络防御的大数据与边缘智能
 
-#### 2.3.3.1 随机森林
+### 2.3.3.1 随机森林
 
 随机森林的目标是将由高方差、低偏差决策树组成的树转换为具有低方差和低偏差的模型。它是一种广为人知的监督机器学习方法。它可以解决机器学习中的分类和回归问题。它基于协作学习的概念，协作学习是合并不同分类器以解决复杂问题并提高模型性能的方法。“随机森林”分类器“包含许多基于所讨论集合中各种子集的决策树，并选择平均值来增强与该数据集相关的预测准确性。”随机森林并不依赖于单一的决策树，而是从所有树中进行预测，并根据投影的整体投票预测最终结果。
 
-##### 2.3.3.1.1 随机森林假设
+#### 2.3.3.1.1 随机森林假设
 
 由于随机森林包含多个树来投影数据集的类别，某些树可能会预测正确输出，而另一些树可能不会。但即使只有其中一棵单独的树加入，它们也能正确预测结果。因此，构建更好的随机森林分类器的两个前提条件如下：
 
 - 集合特征变量应具有某些真实值，以便算法可以预测树的结果而非猜测。
 - 每棵树的预测需要具有极低的相关性。
 
-##### 2.3.3.1.2 随机森林步骤
+#### 2.3.3.1.2 随机森林步骤
 
 **步骤 1**：从初始集中随机选取 K 个数据点。
 **步骤 2**：为定义的数据子集构建决策树模型。
@@ -541,11 +397,11 @@ IDS 有两种：网络（NIDS）和主机（HIDS）。NIDS 是部署在网络中
 **步骤 4**：反转步骤 1 和 2。
 **步骤 5**：确定每棵决策树对新数据点的预测，然后将收集的数据分配给获得票数最多的类别。
 
-#### 2.3.3.2 朴素贝叶斯
+### 2.3.3.2 朴素贝叶斯
 
 朴素贝叶斯的目标是在给定训练数据的情况下最大化后验概率，以便为新数据制定决策规则。用于分类问题的贝叶斯定理是朴素贝叶斯技术（一种受控学习方法）的基础。通过大型训练集，文本分类是最频繁的使用领域。今天最简单且最强大的分类方法之一是朴素贝叶斯分类。它有助于开发能够进行精确预测的快速机器学习模型。它使用概率分类器根据对象发生的概率来创建预测。简单的贝叶斯技术经常被用于文章分类、情感分析和垃圾清理。该分类器被命名为朴素贝叶斯，是因为它认为一个特征的存在与其他特征的存在无关，这被称为“朴素（naive）”。例如，如果根据外表、形状和味道对水果进行分类，那么一种红色的、球形的、带有垂涎欲滴的水果被称为它。因此，每个特征本身都有助于将其归类为苹果。它之所以被称为贝叶斯，是因为它基于贝叶斯定理。
 
-#### 2.3.3.2 朴素贝叶斯步骤
+### 2.3.3.2 朴素贝叶斯步骤
 
 假设我们有一个气候数组和目标变量“玩（Play）”。根据这些信息，我们必须根据天气状况决定是否预测某一天。
 
@@ -555,21 +411,17 @@ IDS 有两种：网络（NIDS）和主机（HIDS）。NIDS 是部署在网络中
 - 计算给定特征的似然并创建似然表。
 - 使用贝叶斯定理计算后验概率。
 
-#### 2.3.3.3 XGBoost
+### 2.3.3.3 XGBoost
 
-XGBoost 使用 `reg:squarederror` 损失函数进行数值预测。“reg:squarederror”：用于回归建模的损失函数。XGBoost 缩写为 XGBoost。它是一种快速高效的梯度提升树程序。提升是一种集成学习过程，通过整合额外的解决方案来修复模型的缺陷。模型被连续引入直到无法进一步改进为止。在添加新模型时，它采用梯度下降策略来最小化损失。这种方法用于快速计算和内存。这种方法的设计是为了最大限度地利用用于训练模型的资源。使用 XGBoost 的两个基本理由包括点击率预测、推荐系统和 Kaggle 竞赛等。此外，它非常灵活，可以通过微调许多模型参数来优化性能 [51]。
+XGBoost 使用 `reg:squarederror` 损失函数进行数值预测。“`reg:squarederror`”：用于回归建模的损失函数。XGBoost 缩写为 XGBoost。它是一种快速高效的梯度提升树程序。提升是一种集成学习过程，通过整合额外的解决方案来修复模型的缺陷。模型被连续引入直到无法进一步改进为止。在添加新模型时，它采用梯度下降策略来最小化损失。这种方法用于快速计算和内存。这种方法的设计是为了最大限度地利用用于训练模型的资源。使用 XGBoost 的两个基本理由包括点击率预测、推荐系统和 Kaggle 竞赛等。此外，它非常灵活，可以通过微调许多模型参数来优化性能 [51]。
 
-##### 2.3.3.3.1 特性
+#### 2.3.3.3.1 特性
 
 XGBoost 是一种流行的梯度提升实现。让我们来看一些使 XGBoost 如此具有吸引力的特性。XGBoost 中的正则化允许用户通过对每棵树的偏和权重施加 L1/L2 惩罚来控制过度拟合。这种功能在许多其他提升系统中是缺失的。XGBoost 通过分位数草图方法处理稀疏数据集。该方法在处理特征矩阵中的非零元素的同时，保持与随机梯度下降等算法相同的计算成本。XGBoost 提供了用于并行学习的块结构。它可以在多核设备或集群上扩展。它还具有缓存感知能力，这在训练大型数据集模型时有助于内存使用。
 
-
-
-
-
 # 用于增强网络防御的大数据与边缘智能
 
-##### 2.3.3.3.2 XGBoost 的使用与优势
+#### 2.3.3.3.2 XGBoost 的使用与优势
 
 XGBoost 额外提供了一种用于并行学习的块架构。它便于在多核设备或集群上进行扩展。它还采用了缓存感知技术，这在使用大型数据集训练模型时有助于内存使用。最后，在计算阶段，XGBoost 通过利用磁盘数据结构而非内存数据，提供了核外处理能力。
 
@@ -640,10 +492,6 @@ XGBoost，通常被称为 XGB，是一种基于决策树的机器学习技术。
 | RF | 95.83 | 95.63 | 96.04 | 95.46 | 95.75 |
 | XGBoost | 96.98 | 96.79 | 97.17 | 96.68 | 96.92 |
 
-
-
-
-
 ## 用于增强网络防御的大数据与边缘智能
 
 ![](img/aeaf5e4a1e1020ca53a1da35e316de95_42_0.png)
@@ -651,6 +499,7 @@ XGBoost，通常被称为 XGB，是一种基于决策树的机器学习技术。
 图 2.3 XGBoost 的工作流。
 
 ### 表 2.2
+
 NB、RF 和 XGBoost 的分析
 
 | 真阳性 (TRUE POSITIVE) | 假阳性 (FALSE POSITIVE) |
@@ -733,7 +582,9 @@ FPR = False Positive / (True Negative + False Positive)
 
 ## 2.5 结论
 
-随着互联网使用的增加，安全问题随之而来。由于系统的安全漏洞，恶意软件可能会破坏系统功能和数据机密性。为了识别和报告攻击，创建了 IDS。攻击必须先被发现才能被防止。在这方面，IDS 设计用于识别攻击流量，并构建了 IDS 数据集来模拟攻击类型。本研究首次整合了所有关于使用 AI 算法检测钓鱼网站的研究结果。所提出的钓鱼研究采用了分类范式，其中假设钓鱼网站根据许多特征和华丽变量自动将网站归类到特定范围的合法范围内。因为不受监管的网站比以往任何时候都多。钓鱼随时间演变，因为虚假网站经常被访问且不会永久存在。使用集成算法 XGBoost 和定义特征，利用网站 URL 检测钓鱼预计将以稳健且高效的方式，通过合适的偏差-方差平衡产生高精确的结果。根据前述模型的陈述，XGBoost 分类器具有最佳模型性能。
+
+
+随着互联网使用的增加，安全问题随之而来。由于系统的安全漏洞，恶意软件可能会破坏系统功能和数据机密性。为了识别和报告攻击，创建了 `IDS`。攻击必须先被发现才能被防止。在这方面，`IDS` 设计用于识别攻击流量，并构建了 `IDS` 数据集来模拟攻击类型。本研究首次整合了所有关于使用 `AI` 算法检测钓鱼网站的研究结果。所提出的钓鱼研究采用了分类范式，其中假设钓鱼网站根据许多特征和华丽变量自动将网站归类到特定范围的合法范围内。因为不受监管的网站比以往任何时候都多。钓鱼随时间演变，因为虚假网站经常被访问且不会永久存在。使用集成算法 `XGBoost` 和定义特征，利用网站 `URL` 检测钓鱼预计将以稳健且高效的方式，通过合适的偏差-方差平衡产生高精确的结果。根据前述模型的陈述，`XGBoost` 分类器具有最佳模型性能。
 
 ## 参考文献
 
@@ -753,10 +604,6 @@ FPR = False Positive / (True Negative + False Positive)
 - 14. A. K. Jones and R. S. Sielken, "Computer intrusion detection a survey," International Journal of Computer Detection.
 - 15. A. K. Jones and R. S. Sielken, "Computer intrusion detection a survey," International Journal of Computer Detection.
 - 16. A. K. Jones and R. S. Sielken, "Computer intrusion detection a survey," International Journal of Computer Detection.
-
-
-
-
 
 # 用于网络安全的基于 AI-IoT 的入侵检测系统
 
@@ -792,7 +639,7 @@ FPR = False Positive / (True Negative + False Positive)
 51. K. Alarfaj, P. Guleria and P. Srinivasa, “用于心血管疾病预测的 Xai 框架”, Electronics, vol. 11, no. 24, 2022, p. 4086. https://doi.org/10.3390/electronics12244086
 52. E. Molah and A. Subasi, “使用随机森林分类器的智能钓鱼网站检测”, In 2017 年电气与计算技术国际会议 (ICECTA), As Rahimah, 阿联酋, 2017, pp. 1–5, doi: 10.1109/ICECTA.2017.825
 
-# 3 利用边缘 AI 技术进行实时威胁检测与隐私保护的数字取证智能
+# 利用边缘 AI 技术进行实时威胁检测与隐私保护的数字取证智能
 
 Niveditha S., Shreyanth S., Delshi Howalya Devi R., Sarveshwaran R., 和 Rajesh P.
 
@@ -800,23 +647,19 @@ Niveditha S., Shreyanth S., Delshi Howalya Devi R., Sarveshwaran R., 和 Rajesh 
 
 网络攻击带来的问题在范围和复杂性上不断增加，推动了数字取证领域新方法和技术的发展。随着我们现代世界的互联和分析高度依赖数字基础设施，数字生态系统的安全性变得至关重要。遗憾的是，该系统很容易受到各种网络犯罪，例如数据泄露、网络入侵和复杂的恶意软件攻击。传统的数字取证依赖于人工分析和耗时技术，无法应对快速变化的威胁格局。
 
-
-
-
-
 # 用于增强网络防御的大数据与边缘智能
 
-本章探讨了边缘人工智能（EdgeAI）技术通过解决该领域的新挑战来转型数字取证的潜力。这些关注点包括数字证据的指数级增长、网络攻击日益复杂的复杂性、对实时事件响应的性，以及对隐私权和数据保护的维护。利用 EdgeAI 的力量，主动预测能力可以加强数字取证调查，使调查人员能够领先于黑客。
+本章探讨了边缘人工智能 `EdgeAI` 技术通过解决该领域的新挑战来转型数字取证的潜力。这些关注点包括数字证据的指数级增长、网络攻击日益复杂的复杂性、对实时事件响应的性，以及对隐私权和数据保护的维护。利用 `EdgeAI` 的力量，主动预测能力可以加强数字取证调查，使调查人员能够领先于黑客。
 
-本章研究了 EdgeAI 设备，例如移动取证工具、便携式数字取证工作站（PDFWs）、可穿戴设备、无人机、物联网（IoT）设备分析、车辆取证工具和人脸识别系统。它还探讨了 EdgeAI 如何用于证据的收集与保存、事件响应、调查以及威胁情报与检测。此外，它还涵盖了主动威胁检测、预防、隐私和数据保护问题，以及通过 EdgeAI 增强机器学习（ML）和深度学习（DL）进行预测性数字取证调查（DFI）的能力。文中还提供了多个领域的（事件响应、网络犯罪检测、数据泄露分析、知识产权（IP）保护、移动及社交媒体取证、执法与商业调查）案例研究和应用。
+本章研究了 `EdgeAI` 设备，例如移动取证工具、便携式数字取证工作站 `PDFWs`、可穿戴设备、无人机、物联网 `IoT` 设备分析、车辆取证工具和人脸识别系统。它还探讨了 `EdgeAI` 如何用于证据的收集与保存、事件响应、调查以及威胁情报与检测。此外，它还涵盖了主动威胁检测、预防、隐私和数据保护问题，以及通过 `EdgeAI` 增强机器学习 `ML` 和深度学习 `DL` 进行预测性数字取证调查 `DFI` 的能力。文中还提供了多个领域的 `事件响应、网络犯罪检测、数据泄露分析、知识产权 IP 保护、移动及社交媒体取证、执法与商业调查` 案例研究和应用。
 
-我们首先从数字取证的定义开始，接着是其演变、传统方法论和局限性。随后介绍了正在改变 DFI 的 EdgeAI 设备。讨论转向了 EdgeAI 在 DFI 中的各个方面，例如证据的收集与保护全、事件响应与调查、威胁情报与检测、主动威胁检测、预防、隐私和数据保护考量，以及对 ML 和 DL 的赋能。文中提供了不同领域的案例研究和应用，以证明 EdgeAI 在 DFI 中的实际效用。本章以对 EdgeAI 方法论的结果和效益进行评估、在 DFI 中采用 EdgeAI 的困难，以及该领域的未来改进作为结束。
+我们首先从数字取证的定义开始，接着是其演变、传统方法论和局限性。随后介绍了正在改变 `DFI` 的 `EdgeAI` 设备。讨论转向了 `EdgeAI` 在 `DFI` 中的各个方面，例如证据的收集与保护全、事件响应与调查、威胁情报与检测、主动威胁检测、预防、隐私和数据保护考量，以及对 `ML` 和 `DL` 的赋能。文中提供了不同领域的案例研究和应用，以证明 `EdgeAI` 在 `DFI` 中的实际效用。本章以对 `EdgeAI` 方法论的结果和效益进行评估、在 `DFI` 中采用 `EdgeAI` 的困难，以及该领域的未来改进作为结束。
 
 ## 3.2 文献综述
 
-DFI 在网络犯罪的检测、分析和预防中至关重要。然而，随着威胁格局的演变和数字系统变得日益复杂，传统的取证程序面临着巨大的障碍。为了解决这些问题，学术界研究了结合边缘计算和人工智能的 EdgeAI 方法，以改进 DFI。本文献综述回顾了该主题的现有研究和贡献。
+`DFI` 在网络犯罪的检测、分析和预防中至关重要。然而，随着威胁格局的演变和数字系统变得日益复杂，传统的取证程序面临着巨大的障碍。为了解决这些问题，学术界研究了结合边缘计算和人工智能的 `EdgeAI` 方法，以改进 `DFI`。本文献综述回顾了该主题的现有研究和贡献。
 
-Prakash 等人 [4] 探讨了基于云和边缘计算的云取证中的挑战和开放性问题。他们强调了高效数据分析方法对于处理云系统中产生的海量数据的重要性。Adams 和 Varol [5] 强调了在数字过程中集成人工智能（AI）方法以进行主动威胁检测和事件响应的必要性。
+Prakash 等人 [4] 探讨了基于云和边缘计算的云取证中的挑战和开放性问题。他们强调了高效数据分析方法对于处理云系统中产生的海量数据的重要性。Adams 和 Varol [5] 强调了在数字过程中集成人工智能 `AI` 方法以进行主动威胁检测和事件响应的必要性。
 
 Damshens 等人 [6] 研究了在云计算系统中执行取证调查的困难性。他们强调了在共享和分散的云系统中收集和维护数字证据的挑战。
 
@@ -830,9 +673,11 @@ Mellars [10] 探讨了数字取证中对手机的研究，强调了由于移动�
 
 Greyling [12] 涉及取证 DNA 实验室的自动化，提出了提高 DNA 分析效率和准确性的概念和标准。该研究强调了自动化在处理取证调查中看到的海量 DNA 证据时的重要性。
 
-Katsini 等人 [13] 引入了用于在车联网（IoV）环境下辅助数字取证准备规划的框架 ForePlan。该研究强调了在物联网场景下收集和分析数字证据时，主动规划和准备的重要性。
+Katsini 等人 [13] 引入了用于在车联网 `IoV` 环境下辅助数字取证准备规划的框架 ForePlan。该研究强调了在物联网场景下收集和分析数字证据时，主动规划和准备的重要性。
 
-Karie 等人 [14] 以及 Iqbal 和 Alharbi [15] 调查了使用 ML 算法的数字取证中的自动化。这项研究突显了 ML 算法在自动化重复过程和加速数字证据分析方面的力量。
+Karie 等人 [14] 以及 Iqbal 和 Alharbi [15] 调查了使用 `ML` 算法的数字取证中的自动化。这项研究突显了 `ML` 算法在自动化重复过程和加速数字证据分析方面的力量。
+
+
 
 Stallard 和 Levitt [16] 开创了数字取证科学的自动化分析，强调了通过语义完整性来验证数字证据的质量和可靠性。Dijkstra 和 Sherman [17] 创建了 FROST，这是一种用于 OpenStack 云架构的数字取证工具，能够快速有效的云研究。
 
@@ -861,7 +706,6 @@ Sharma 等人 [19] 检查了云计算系统中数据安全的困难。该研究�
 数字取证的逐步发展可归因于技术的飞速增长。在数字取证发展的早期阶段，该领域关注计算机系统和各种存储设备的仔细检查和审查。考虑到智能手机、平板电脑和各种数字设备的广泛采用，调查领域发生了显著扩张，涵盖了移动取证领域。
 
 此外，云计算、移动设备和物联网的普及，以及社交媒体平台的普遍使用，为数字取证领域引入了新的复杂性 [22]。在代的
-
 
 在科学探索的格局下，研究人员日益面临着一项严峻的任务，即跨越复杂且多维的领域，以获取并审查分散在远程位置或在线平台上的数据。这需要一种复杂且细致的信息检索与分析方法，因为调查人员正在努力应对技术进步与不断扩张的数字领域之间相互作用所带来的挑战。云计算的出现和社交媒体平台的广泛使用，迫使了专门为数字取证和社会取证领域定制的新型方法和工具的问生。
 
@@ -900,18 +744,13 @@ DFI 在一系列包含几个关键步骤的事件中运行。初始阶段是识�
 随着技术在数字取证领域带来新问题，在各种应用中使用 AI 和 ML 算法是主要问题之一。由于这些技术可以生成和处理海量数据，调查人员很难定位和解释重要数据。在这些挑战中我们面临：
 
 - 云取证：随着云计算变得越来越流行，数字取证面临新障碍。由于云环境使用分布式存储、虚拟化和共享资源，识别和保护数字证据非常困难。为了处理云设置的困难，必须对取证程序进行调整和改进。
-
 - 对抗取证：随着多媒体内容的日益普及，对能够检测篡改和修改的取证工具的需求日益增加。当对手试图阻取消证调查时，对抗攻击为多媒体取证带来了巨大障碍。开发能够抵抗攻击的强大技术至关重要。
-
 - 隐私与合法性：为了确保证据的法证性并保护个人隐私权，数字取证调查人员必须在法律和伦理约束内行动。跟最新技术、工具和程序对于有效开展 DFI 工作至关重要。
-
 - 新兴技术：随着 AI、区块链和 IoT 的快速发展，引入了新的复杂性。智能家居设备、可穿设备和工业传感器产生了海量数据。IoT 设备分析师使用来自连接设备的各种数据。
 
--
+保存在易失性内存中的，有时被称为现场取证（live forensics）。易失性内存存储了设备关闭时会被删除的重要数据。为了最大化易失数据作为证据的价值，调查人员必须开发实时捕获和分析程序。网络犯罪分子使用各种匿名和混淆技术。为了绕过这些匿名保护，调查人员必须保持领先。总体而言，数字取证是一个随时间推移发生巨大变化的动态领域。它在适应技术变化的同时，涉及收集、分析和展示数字证据。针对移动取证、云取证、社交媒体取证和现场取证的专门技术补充了传统方法。
 
 ## 用于增强网络防御的大数据与边缘智能
-
-保存在易失性内存中的，有时被称为现场取证（live forensics）。易失性内存存储了设备关闭时会被删除的重要数据。为了最大化易失数据作为证据的价值，调查人员必须开发实时捕获和分析程序。网络犯罪分子使用各种匿名和混淆技术。为了绕过这些匿名保护，调查人员必须保持领先。总体而言，数字取证是一个随时间推移发生巨大变化的动态领域。它在适应技术变化的同时，涉及收集、分析和展示数字证据。针对移动取证、云取证、社交媒体取证和现场取证的专门技术补充了传统方法。
 
 ## 3.4 边缘AI 设备革新数字取证智能
 
@@ -925,12 +764,10 @@ DFI 在一系列包含几个关键步骤的事件中运行。初始阶段是识�
 
 在数字领域，针对边缘AI设备的移动取证至关重要。这些工具旨在提取和分析使用边缘AI技术的移动设备的数据，包括智能手机、平板电脑、可穿戴设备和 IoT 设备。苹果 iPhone 和三星 Galaxy 系列等智能手机属于此类，iPad 和 Galaxy Tab 等平板电脑、Apple Watch 和 Fitbit 等可穿戴设备，以及 Amazon Echo 和 Google Home 等 IoT 设备也是如此。
 
-
-
-
 # 推进数字取证智能化
 
 ### 表 3.1
+
 各取证类别下涉及的工具与设备
 
 | 取证类别 | 工具与设备 |
@@ -968,8 +805,11 @@ PDFWs 的功能不仅限于数据提取和处理。此外，它们还提供了�
 这种实时分析提高了调查的进和准确性，使法证专家能够快速识别关键证据。此外，这些可穿戴设备包含生物识别认证等高级功能，允许在安全访问关键信息的同时防止非意的操纵。结果是，DFI 变得更加精简、主动和敏捷，使调查人员能够领先于新兴的网络威胁。可穿戴设备与边缘 AI 技术的集成代表了数字取证领域的一个里程碑，在为调查人员提供无与伦比的力量的同时保护了证据的完整性和真实性。
 
 # 推进数字取证智能化
+
 ## 可穿戴传感器
+
 ## 芯片神经形态边缘计算
+
 ## 系统/应用
 
 ![](img/aeaf5e4a1e1020ca53a1da35e316de95_59_0.png)
@@ -1002,15 +842,13 @@ IoT 设备分析仪结合边缘 AI（Edge-EdgeAI）技术已成为 DFI 领域不
 
 嵌入边缘 AI 设备中的人脸识别系统已成为 DFI 领域的关键关工具，改变了调查人员研究和识别犯罪活动人员的方式。这些现代技术使用 AI 算法快速、可靠地匹配来自各种来源（如监控视频或从社交媒体网站获取的照片）的特征 [33]。
 
-
-
-
-
 # 推进数字取证智能
 
 使用 EdgeAI 技术的人脸识别系统可以在本地处理数据，最大限度地减少对大规模网络连接的需求并降低延迟。这种去中心化的技术确保了实时分析，并让法证专业人员能够快速识别犯罪分子。此外，具备人脸识别能力的 EdgeAI 设备提供了更高的隐私性和安全性，因为敏感数据存储在设备上，降低了未经授权访问或泄露的风险。
 
 将人脸识别系统整合到 EdgeAI 设备中，已被证明在解决复杂案件、加速调查和维护公共安全方面具有益。这些设备具有快速处理和分析海量数据的能力，已成为数字取证智能（DFI）领域中无价的资产，允许调查人员在保持最高隐私和准确性标准的同时快速识别并捕获罪犯。
+
+
 
 因此，EdgeAI 设备在 DFI 中的集成开启了效率、便携性和精准度的新纪元。从可穿戴设备到人脸识别系统，都是提供实时分析、安全数据处理和更好调查技能的先进设备示例。EdgeAI 设备凭借在边缘执行复杂任务的能力，已成为重要工具，使调查人员能够在保持最高隐私和法证完整性标准的同时，在不断变化的数字犯罪格局中保持领先。
 
@@ -1028,11 +866,11 @@ EdgeAI 方法在改进 DFI 领域的证据收集和保存流程方面起着至�
 
 图 3.5 自动驾驶车辆模型。
 
-数字证据在网络边缘被收集并更接近其源头，减少了被操纵或更改的可能性。SHA256 和 MD5 等哈希算法用于为数字证据生成唯一的哈希值，这些值作为数字指纹来验证其真实性。这些哈希值被安全地保存并在随后进行比较，以检测未经授权的更改。
+数字证据在网络边缘被收集并更接近其源头，减少了被操纵或更改的可能性。`SHA256` 和 `MD5` 等哈希算法用于为数字证据生成唯一的哈希值，这些值作为数字指纹来验证其真实性。这些哈希值被安全地保存并在随后进行比较，以检测未经授权的更改。
 
 确保真实性的另一个组件是数字签名。每份数字证据都使用密码学程序建立数字签名，为其来源和完整性提供可验证的证明。这些签名被安全地存储，任何篡改它们的尝试都能被轻易发现。
 
-此外，传输层安全协议（TLS）和安全外壳（SSH）等安全通信协议用于在边缘设备之间创建加密通道，保护数据的机密完整性。这保护了数字证据免受未经授权的访问或拦截。
+此外，传输层安全协议（`TLS`）和安全外壳（`SSH`）等安全通信协议用于在边缘设备之间创建加密通道，保护数据的机密完整性。这保护了数字证据免受未经授权的访问或拦截。
 
 区块链技术可以用于网络边缘，以提高数字证据的可信度。区块链通过使用分布式账本实现了证据记录的透明性和不可变性，使得未经授权的调整几乎无法被察觉。
 
@@ -1044,7 +882,7 @@ EdgeAI 方法在改进 DFI 领域的证据收集和保存流程方面起着至�
 
 冗余性、可扩展性和容错性都是云存储等分布式存储系统的优势。将数字证据分散在多个站点，极大地减少减少了由于硬件问题或物理损坏导致的数据丢失的风险。此外，分布式存储系统允许从多个地方无缝访问证据，从而进行联合分析和调查。
 
-加密技术对于确保所存储信息的机密性至关重要。加密将数字证据转换为不可读的格式，防止非法访问。高级加密方法，如 AES（高级加密标准），可以在多个层级使用。加密密钥被安全地持有和管理，为证据增加了额外的安全保障。
+加密技术对于确保所存储信息的机密性至关重要。加密将数字证据转换为不可读的格式，防止非法访问。高级加密方法，如 `AES`（高级加密标准），可以在多个层级使用。加密密钥被安全地持有和管理，为证据增加了额外的安全保障。
 
 此外，EdgeAI 技术的引入提升了证据存储的安全性。利用网络边缘的计算资源，可以在更接近数据源的地方进行加密解密操作。EdgeAI 方法还提供实时加密解密，在动态且快速变化环境中提供安全的证据保存。
 
@@ -1059,31 +897,27 @@ EdgeAI 方法在改进 DFI 领域的证据收集和保存流程方面起着至�
 - 身份验证与验证：在数据处理多个设备的 EdgeAI 环境中，提供身份验证和验证程序至关重要。这确保了监管链是透明的。
 - 可采纳性与合规性：在 EdgeAI 情况下，监管链考虑必须遵守法律法规限制。遵守适当的流程和记录提高了证据在司法诉讼中的可采纳性。
 
-
-
-
-
 # 推进数字取证智能
 
 处理海量数据并对其进行仔细审查，以识别可能预示着迫临危险的复杂模式。
 
-Microsoft Defender for Office 365 是尖端平台的典型示例，它为用户提供了宝贵的自动化调查和响应能力 [35]。在自动化调查过程中，它会系统地收集与受调查电子邮件以及该电子邮件相关的实体（如文件、URL 和接收者）。随着额外且关联的警报被激活，调查范围可能会扩大。在自动化查询期间及之后，可以随时查阅细节和结果。结果可能包括可以实施的拟议措施，以有效应对和缓解已检测到的任何威胁。
+`Microsoft Defender for Office 365` 是尖端平台的典型示例，它为用户提供了宝贵的自动化调查和响应能力 [35]。在自动化调查过程中，它会系统地收集与受调查电子邮件以及该电子邮件相关的实体（如文件、URL 和接收者）。随着额外且关联的警报被激活，调查范围可能会扩大。在自动化查询期间及之后，可以随时查阅细节和结果。结果可能包括可以实施的拟议措施，以有效应对和缓解已检测到的任何威胁。
 
 ## 3.6.2 用于实时事件响应的智能代理
 
 致力于即时事件响应的情报人员是 EdgeAI 驱动事件响应与调查框架内的另一个关键要素。这些代理经过精心设计，在组织复杂网络和接口的实时监控与分析领域提供了无与拟的能力。通过利用复杂的算法并采用边缘 ML 方法，它们能够充分识别潜在威胁，并及时为安全团队提供实时警报 [36]。
 
-Check Point 事件响应代表了一个提供 24 小时、全年 365 天事件处理服务的平台。在收到知名机构的召唤后，Check Point 会迅速行动，部署其专业知识以有效遏制迫临的危险，减轻其影响，并确保企业的业务连续性。该平台提供了有关最佳实践的全面文档和指南，以增强操作流程、优化响应时间并确保符合合规和报告义务。
+`Check Point` 事件响应代表了一个提供 24 小时、全年 365 天事件处理服务的平台。在收到知名机构的召唤后，Check Point 会迅速行动，部署其专业知识以有效遏制迫临的危险，减轻其影响，并确保企业的业务连续性。该平台提供了有关最佳实践的全面文档和指南，以增强操作流程、优化响应时间并确保符合合规和报告义务。
 
 ## 3.6.3 自动化数字证据提取与案件重建
 
 EdgeAI 驱动的事件响应与调查中的自动化数字证据提取和案件信息是核心要素。这些系统经过精心设计，旨在简化从组织的复杂网络和系统中提取数字证据和案件信息的复杂程序。通过利用复杂的算法并采用边缘 ML 方法，它们能够充分识别相关信息并以自动方式无缝提取。
 
-Forensic Notes 代表了一个平台，其 AI 驱动工具经过精心设计以增强调查过程 [37]。上述工具包括包含一系列问答的全面案件摘要、检察官进行的详尽评估、辩方的深度分析，以及将录音转录为英文的贵能力。该平台还针对数字取证与事件响应 (DFIR) 以及涵盖各种司法辖区的法律事务领域提供专业的 AI 驱动建议。
+`Forensic Notes` 代表了一个平台，其 AI 驱动工具经过精心设计以增强调查过程 [37]。上述工具包括包含一系列问答的全面案件摘要、检察官进行的详尽评估、辩方的深度分析，以及将录音转录为英文的贵能力。该平台还针对数字取证与事件响应 (`DFIR`) 以及涵盖各种司法辖区的法律事务领域提供专业的 AI 驱动建议。
 
 ## 3.7 EdgeAI 增强的威胁情报与检测
 
-本节重点在于 EdgeAI 技术如何在数字取证智能 (DFI) 背景下改进情报和检测。通过在网络边缘使用边缘计算和 AI 算法，实现了对网络流量、系统行为和用户操作的实时监控和分析。EdgeAI 的分布式特性提供了快速识别风险的能力，允许企业快速响应并防止网络灾难 [38]。威胁情报的整合通过允许数据与新的入侵指标进行关联，提升了检测能力。本节强调了 EdgeAI 在增强威胁情报和检测方面的关键作用，为企业提供了主动保护其数字生态系统的工具。
+本节重点在于 EdgeAI 技术如何在数字取证智能 (`DFI`) 背景下改进情报和检测。通过在网络边缘使用边缘计算和 AI 算法，实现了对网络流量、系统行为和用户操作的实时监控和分析。EdgeAI 的分布式特性提供了快速识别风险的能力，允许企业快速响应并防止网络灾难 [38]。威胁情报的整合通过允许数据与新的入侵指标进行关联，提升了检测能力。本节强调了 EdgeAI 在增强威胁情报和检测方面的关键作用，为企业提供了主动保护其数字生态系统的工具。
 
 ### 3.7.1 网络流量与系统行为的实时监控与分析
 
@@ -1097,17 +931,13 @@ EdgeAI 允许在 DFI 背景下于网络边缘部署智能代理和算法 [39]。
 
 ### 3.7.2 基于 EdgeAI 的异常检测
 
-异常检测在 DFI 中至关重要因为它因为它识别可疑行为和潜在的网络威胁。使用 EdgeAI 算法进行异常检测可以提高网络边缘的实时威胁检测。我们将探讨 EdgeAI 如何通过网络边缘的支持向量机 (SVMs)、随机森林和深度学习 (DL) 模型等 ML 技术支持高效且主动的异常检测 [40]。EdgeAI 的分布式计算能力允许对海量数据流进行实时处理和分析，缩短响应时间并提高数字取证的整体有效性。
+异常检测在 DFI 中至关重要因为它因为它识别可疑行为和潜在的网络威胁。使用 EdgeAI 算法进行异常检测可以提高网络边缘的实时威胁检测。我们将探讨 EdgeAI 如何通过网络边缘的支持向量机 (`SVMs`)、`随机森林`和深度学习 (`DL`) 模型等 ML 技术支持高效且主动的异常检测 [40]。EdgeAI 的分布式计算能力允许对海量数据流进行实时处理和分析，缩短响应时间并提高数字取证的整体有效性。
 
-例如，考虑单类 SVM 算法。使用单类 SVM 进行异常检测的目标是区分给定数据集中的正常实例和异常实例。目标是找到一个紧密围绕正常实例的超平面。权重 $w$ 和偏置 $b$ 定义了该超平面。
-
-
-
-
+例如，考虑单类 SVM 算法。使用单类 SVM 进行异常检测的目标是区分给定数据集中的正常实例和异常实例。目标是找到一个紧密围绕正常实例的超平面。权重 `$w$` 和偏置 `$b$` 定义了该超平面。
 
 # 大数据与边缘智能增强网络防御
 
-p(x) 是根据高斯分布的实例 x 的概率密度。
+`p(x)` 是根据高斯分布的实例 x 的概率密度。
 
 边缘人工智能（EdgeAI）实现了对网络流量、系统记录和用户行为的持续监控，能够识别偏离预期行为的偏差。这些异常可能预示着网络攻击、未经授权的访问或内部威胁。EdgeAI 与异常检测算法的结合允许对这些异常进行快速识别和分类，从而实现快速事件响应和缓解。
 
@@ -1118,9 +948,7 @@ p(x) 是根据高斯分布的实例 x 的概率密度。
 协作和信息交换对于提高 DFI 和检测能力至关重要。在采用 EdgeAI 技术时，协作方法变得更加重要，它允许企业汇总资源、经验和威胁情报，以更有效、更早地检测网络威胁 [41]。本节探讨了协作威胁检测和信息共享如何帮助推进 DFI。它还强调了在采用 EdgeAI 技术以提高检测技能时，协作方法和信息共享的重要性。
 
 - 协作工作的检测网络：协作式 EdgeAI 网络通过连接网络边缘的节点构建，每个节点都具有 EdgeAI 能力。这些节点实时监控网络流量、系统日志和其他相关数据源。这些网络通过采用分布式 ML 算法作为联邦学习，在维护数据隐私的同时进行协作模型训练。通过整合来自多个数据源的知识和见解，这种协作策略提升了检测技能。
-
 - 威胁情报交换平台：威胁情报平台使得企业、政府机构和安全提供商共享关键信息变得更加容易。用于损害指示器（IOCs）、攻击模式和其他威胁情报数据的交换。通过将 EdgeAI 技术整合到这些平台，可以在网络边缘完成威胁情报数据的实时分析和关联，从而快速识别新兴风险并及时传输警报。
-
 - 数据融合与关联技术：协作威胁检测需要对来自多个源的各种数据流进行融合和关联。先进数字取证智能 EdgeAI 方法通过在网络边缘处理和分析这些数据流，提供了近实时的融合和关联。组织通过合并来自众多传感器、日志和网络节点的数据，获得了对可能风险的整体视角，提供了更准确的检测和预警能力。
 
 支持 EdgeAI 的协作威胁检测和信息共享构建了一个更健壮、更有韧性的 DFI 环境。组织通过汇总资源、专业知识和威胁情报，可以提高检测技能，更有效地响应网络威胁，并主动对抗新兴攻击。
@@ -1151,21 +979,17 @@ p(x) 是根据高斯分布的实例 x 的概率密度。
 
 加密技术增强了另一层安全性，它将数据转换为不可读格式，确保只有授权方可以访问和理解数据 [44]。通过在 EdgeAI 框架内采用加密方法可以安全地传输和存储敏感数据，降低数据泄露风险。这改进了数字取证过程的隐私性和完整性，让调查人员确信数据是安全的。
 
-给定包含敏感属性的数据集 D，数据匿名化（k-匿名化）的目标是确保每个人的记录与其他 k-1 条记录不可区分，同时对数据进行加密。
+给定包含敏感属性的数据集 `D`，数据匿名化（k-匿名化）的目标是确保每个人的记录与其他 k-1 条记录不可区分，同时对数据进行加密。
 
-令 D = (x₁,₂, ..., x_n) 表示具有属性的数据集。将 QID 定义为 D 中的准标识符（可能识别个人的属性）。k-匿名化的目标函数表示为 (3.5)：
+令 `D = (x₁,₂, ..., x_n)` 表示具有属性的数据集。将 `QID` 定义为 `D` 中的准标识符（可能识别个人的属性）。k-匿名化的目标函数表示为 (3.5)：
 
 ```
 min f(D) = |D| - k
 ```
 
-其中 |D| 表示数据集 D 的大小，k 是期望的匿名水平。目标是在实现 k 匿名化的条件下最小化 D 中唯一记录的数量。
+其中 `|D|` 表示数据集 `D` 的大小，`k` 是期望的匿名水平。目标是在实现 k 匿名化的条件下最小化 `D` 中唯一记录的数量。
 
-
-
-
-
-通过将 k-匿名性与加密相结合，其目标是在最小化数据集中记录唯一性（$f(D)$）的同时，通过加密确保数据的机密性。这种集成方法既实现了隐私保护又实现了数据保护。
+通过将 k-匿名性与加密相结合，其目标是在最小化数据集中记录唯一性（`f(D)`）的同时，通过加密确保数据的机密性。这种集成方法既实现了隐私保护又实现了数据保护。
 
 EdgeAI 范式将数据匿名化与加密技术相结合，为数字取证调查中的敏感数据提供了实时保护。组织可以通过网络边缘部署这些策略，在数据效用与隐私保护之间取得平衡。这种方法允许调查人员在不危及相关人员机密性的情况下研究数据，从而在数字取证调查（DFI）领域实现隐私保护。
 
@@ -1175,9 +999,9 @@ EdgeAI 范式将数据匿名化与加密技术相结合，为数字取证调查�
 
 访问控制机制涵盖了广泛的安全程序，旨在防止未经授权的访问敏感数据和资源。组织可以通过建立访问方法来执行身份验证、授权和问责制，确保只有授权人员才能访问和操纵数字证据。这有助于维护证据的完整性和可采性，对于法律诉程序和维持对数字取证过程的信任至关重要。
 
-在 EdgeAI 赋能的 DFI 世界中，访问控制技术对于保护数据和符合相关标准至关重要。数据保护法（如《通用数据保护条例》GDPR）对个人信息的收集、存储和处理施加了严格的限制。遵守这些标准对于保护个人隐私权以及避免法律和声誉损害至关重要。
+在 EdgeAI 赋能的 DFI 世界中，访问控制技术对于保护数据和符合相关标准至关重要。数据保护法（如《通用数据保护条例》`GDPR`）对个人信息的收集、存储和处理施加了严格的限制。遵守这些标准对于保护个人隐私权以及避免法律和声誉损害至关重要。
 
-访问控制系统的构建应考虑隐私，确保只有授权人员才能访问敏感数据。为了确保个人数据在存储和传输过程中的机密性，可以使用加密、令牌化和去假名化等技术。此外，可以使用基于角色的访问控制（RBAC）和基于属性的访问控制（ABAC）等技术，根据用户角色和数据敏感性实施细粒度的访问限制。
+访问控制系统的构建应考虑隐私，确保只有授权人员才能访问敏感数据。为了确保个人数据在存储和传输过程中的机密性，可以使用加密、令牌化和去假名化等技术。此外，可以使用基于角色的访问控制（`RBAC`）和基于属性的访问控制（`ABAC`）等技术，根据用户角色和数据敏感性实施细粒度的访问限制。
 
 组织通过遵守数据保护立法并采用严格的访问控制方法，可以证明其对保护隐私和履行法律要求的承诺。这不仅保护了个人权利，还增强了数字取证调查的整体信誉。
 
@@ -1185,13 +1009,13 @@ EdgeAI 范式将数据匿名化与加密技术相结合，为数字取证调查�
 
 ## 3.9 EdgeAI 赋能的机器学习与深度学习用于预测性数字取证智能
 
-ML（机器学习）和 DL（深度学习）算法已进化为强大的 DFI 工具，能够实现预测分析和主动威胁识别。这些算法在与 EdgeAI 方法结合时扩展了能力，使得能够在网络边缘进行实时分析和决策。本节探讨了如何利用 EdgeAI 为预测性 DFI 的 ML 和 DL 提供动力支持。
+`ML`（机器学习）和 `DL`（深度学习）算法已进化为强大的 DFI 工具，能够实现预测分析和主动威胁识别。这些算法在与 EdgeAI 方法结合时扩展了能力，使得能够在网络边缘进行实时分析和决策。本节探讨了如何利用 EdgeAI 为预测性 DFI 的 ML 和 DL 提供动力支持。
 
 ### 3.9.1 基于机器学习的 EdgeAI 赋能实时预测分析
 
 实时预测性分析是 DFI 的重要组成部分，因为它允许企业快速识别并响应新风险。可以使用 EdgeAI 方法在网络边缘部署 ML 算法，从而实现快速的分析和决策（图 3.7）。本节研究了在 DFI 背景下，用于边缘支持实时预测分析的算法方法和最优模型。
 
-SVM（支持向量机）是一种用于实时预测分析的流行技术。SVM 是一种监督性 ML 技术，用于对各种格式的数据进行分类和异常识别。由于其处理高维数据和应对挑战性分类任务的能力，它非常适合 DFI 应用。通过利用 EdgeAI 技术在网络边缘应用 SVM，可以对可能的威胁进行实时预测和分类。
+`SVM`（支持向量机）是一种用于实时预测分析的流行技术。SVM 是一种监督性 ML 技术，用于对各种格式的数据进行分类和异常识别。由于其处理高维数据和应对挑战性分类任务的能力，它非常适合 DFI 应用。通过利用 EdgeAI 技术在网络边缘应用 SVM，可以对可能的威胁进行实时预测和分类。
 
 ![](img/aeaf5e4a1e1020ca53a1da35e316de95_73_0.png)
 
@@ -1199,33 +1023,33 @@ SVM（支持向量机）是一种用于实时预测分析的流行技术。SVM �
 
 ## 大数据与边缘智能增强网络防御
 
-随机森林是另一种用于实时预测分析的重要算法。随机森林是一种集成系统，通过结合多个决策树来做出准确预测。EdgeAI 的计算能力允许在网络边缘部署随机森林模型，以对数据流进行实时分析。
+
+
+随机森林是另一种用于实时预测分析的重要算法。随机森林是一种集成系统，通过结合多个决策树来做出准确预测。`EdgeAI` 的计算能力允许在网络边缘部署随机森林模型，以对数据流进行实时分析。
 
 在逻辑回归中，我们的目标是映射到概率。逻辑回归特别抵抗过拟合，并能够处理高维数据集。逻辑回归的假设函数通常被定义为：
 
 $h(x) = \frac{1}{1+e^{-w^T x}}$
 
-
-
-
-
 # 增强网络防御的大数据与边缘智能
 
-数字取证领域。通过边缘AI，可以将深度学习（DL）模型部署到网络边缘，从而在更接近数据采集源的地方实时分析和决策。
+数字取证领域。通过边缘AI，可以将深度学习（`DL`）模型部署到网络边缘，从而在更接近数据采集源的地方实时分析和决策。
 
-卷积神经网络（CNN）非常适合评估和从视觉及空间数据中提取特征，使其在取证中的图像和视频分析等应用中非常有用。它们可以识别数字媒体中的物体、人脸、文本和其他视觉上的重要方面，协助识别关键证据。另一方面，循环神经网络（RNN）非常适合评估序列和时间数据，使其适用于分析用户行为、网络连接和通信模式等任务中。
+卷积神经网络（`CNN`）非常适合评估和从视觉及空间数据中提取特征，使其在取证中的图像和视频分析等应用中非常有用。它们可以识别数字媒体中的物体、人脸、文本和其他视觉上的重要方面，协助识别关键证据。另一方面，循环神经网络（`RNN`）非常适合评估序列和时间数据，使其适用于分析用户行为、网络连接和通信模式等任务中。
 
-让我们考虑一个具有多层的深度学习架构，每层由神经元组成。我们将关注最后一层中的单个神经元，标记为神经元 $j$。我们希望使用目标函数（如均方误差 MSE）来最小化预测输出（ŷ）与真实输出（y）之间的差异。
+让我们考虑一个具有多层的深度学习架构，每层由神经元组成。我们将关注最后一层中的单个神经元，标记为神经元 $j$。我们希望使用目标函数（如均方误差 `MSE`）来最小化预测输出（`ŷ`）与真实输出（`y`）之间的差异。
 
 在正向传播中，输入：$x = [x_1, x_2, ..., x_j]$（输入特征）
+
 神经元 $j$ 的加权和 (3.14)：
 
 ```
 $z_j = w_j \cdot x + b_j$$
 ```
 
-其中 $w_j$ 是权重向量，$b$ 是偏置项。
-激活函数（ReLU）(3.15)：
+其中 `$w_j$` 是权重向量，`$b$` 是偏置项。
+
+激活函数（`ReLU`）(3.15)：
 
 ```
 $a_j = \max(0, z_j) = \max(0, w_j \cdot x + b_j)$
@@ -1237,20 +1061,21 @@ $a_j = \max(0, z_j) = \max(0, w_j \cdot x + b_j)$
 $(\hat{y}) : \hat{y} = a_j$$
 ```
 
-对于目标函数，MSE 为 (3.17)：
+对于目标函数，`MSE` 为 (3.17)：
 
 ```
 $E = \frac{1}{2} * (\hat{y} - y)^2$
 ```
 
-其中 $\hat{y}$ 是预测输出，$y$ 是真实输出。
+其中 `$\hat{y}$` 是预测输出，`$y$` 是真实输出。
+
 对于反向传播，让我们计算目标函数 (3.18) 相对于输出层的梯度：
 
 ```
 $\frac{\partial E}{\partial \hat{y}} = \hat{y} - y$
 ```
 
-按如下计算 ReLU 激活函数 (3.19) 的梯度：
+按如下计算 `ReLU` 激活函数 (3.19) 的梯度：
 
 ```
 $$\frac{\partial a_j}{\partial z_j} = 1 \text{ if } z_j > 0, 0 \text{ otherwise}$$$
@@ -1274,7 +1099,7 @@ $$\frac{\partial E}{\partial w_j} = \frac{\partial E}{\partial \hat{y}_j} * \fra
 $w_{j(new)} = w_j - \eta^* \frac{\partial E}{\partial w_j} \quad (3.22)$
 ```
 
-其中 $\eta$ 是学习率。
+其中 `$\eta$` 是学习率。
 
 然后，偏置被更新 (3.23)：
 
@@ -1282,21 +1107,18 @@ $w_{j(new)} = w_j - \eta^* \frac{\partial E}{\partial w_j} \quad (3.22)$
 $b_{j(new)} = b_j - \eta^* \frac{\partial E}{\partial b_j} \quad (3.23)$
 ```
 
-这种反向传播算法迭代地调整神经网络的权重和偏置，以最小化目标函数（MSE）并提高预测的准确性。通过根据链式法则计算的梯度来更新权重和偏置，模型学习如何更好地捕捉输入数据中的复杂模式。
+这种反向传播算法迭代地调整神经网络的权重和偏置，以最小化目标函数（`MSE`）并提高预测的准确性。通过根据链式法则计算的梯度来更新权重和偏置，模型学习如何更好地捕捉输入数据中的复杂模式。
 
 边缘AI 使深度学习模型能够实时处理和评估数据，极大降低了与数据传输到集中处理中心相关的延迟。这有助于调查人员更快地发现并响应网络威胁，增强事件响应能力。
 
 此外，深度学习模型的敏捷性和灵活性使其非常适合应对新兴的网络威胁。从以往数据中学习的深度学习模型能够识别新颖模式并相应地调整其预测。这一特征对于识别以前未知的攻击路径和新威胁至关重要。
 
-# 3.9.3 针对未来威胁的预测建模
+## 3.9.3 针对未来威胁的预测建模
 
-组织面临在不断变化的网络威胁格局中预测和缓解风险的持续任务。预测建模技术在数字取证情报（DFI）中变得日益重要，以应对这一困难。这些模型与边缘AI方法相结合，使企业能够主动识别并响应新危险。本节深入探讨了这些技术的使用。
-
-
-
-
+组织面临在不断变化的网络威胁格局中预测和缓解风险的持续任务。预测建模技术在数字取证情报（`DFI`）中变得日益重要，以应对这一困难。这些模型与边缘AI方法相结合，使企业能够主动识别并响应新危险。本节深入探讨了这些技术的使用。
 
 # 应急响应与调查
+
 1. 数字证据的收集与保护。
 2. 系统日志、网络流量和元数据的分析。
 3. 已删除文件和人工物的恢复。
@@ -1304,6 +1126,7 @@ $b_{j(new)} = b_j - \eta^* \frac{\partial E}{\partial b_j} \quad (3.23)$
 5. 数字事件和时间轴的重构。
 
 # 数据与安全泄露分析
+
 1. 数据泄露和未经授权访问事件的调查。
 2. 受损系统和漏洞切入点的辨别。
 3. 系统漏洞分析与补丁管理。
@@ -1313,6 +1136,7 @@ $b_{j(new)} = b_j - \eta^* \frac{\partial E}{\partial b_j} \quad (3.23)$
 # 应用
 
 # 移动设备与社交媒体取证
+
 1. 移动设备数据的提取与分析。
 2. 已删除消息和图片的恢复。
 3. 在线活动和社交媒体资料的追踪。
@@ -1320,6 +1144,7 @@ $b_{j(new)} = b_j - \eta^* \frac{\partial E}{\partial b_j} \quad (3.23)$
 5. 识别与网络暴力或骚扰相关的数字证据。
 
 # 知识产权与商业秘密保护
+
 1. 针对知识产权盗取和工业间谍活动的数字伪造品分析。
 2. 检测对网络的未经授权访问。
 3. 检查数据传输和文件共享活动。
@@ -1327,6 +1152,7 @@ $b_{j(new)} = b_j - \eta^* \frac{\partial E}{\partial b_j} \quad (3.23)$
 5. 数字水印与防篡检测技术。
 
 # 网络犯罪与欺诈检测
+
 1. 网络犯罪犯的识别与追踪。
 2. 金融交易和数字支付的分析。
 3. 在线欺诈、钓鱼和身份盗用的检测。
@@ -1339,49 +1165,45 @@ $b_{j(new)} = b_j - \eta^* \frac{\partial E}{\partial b_j} \quad (3.23)$
 
 ### 3.10.1 应急响应与调查
 
-在数字取证智能（DFI）的背景下，应急响应与调查是指针对网络安全事件或疑似数字犯罪，对数字证据进行管理和评估的方法化过程。它涉及各种子主题和行动，旨在有效高效地处理并减少此类事件的发生。
+在数字取证智能（`DFI`）的背景下，应急响应与调查是指针对网络安全事件或疑似数字犯罪，对数字证据进行管理和评估的方法化过程。它涉及各种子主题和行动，旨在有效高效地处理并减少此类事件的发生。
 
 数字证据的收集与保护是其中一个环节，重点在于从计算机系统、网络和存储设备等多个源发现并保护相关数据。这涉及收集系统日志、网络流量和元数据，以获取事件的全面状况。另一个是数字取证分析，包括在文件、数据库和应用程序数据中寻找犯罪活动或非法访问的指示。这可能涉及检索丢失的文件、解释加密数据以及发现入侵者的痕迹。
 
 应急响应与调查的另一个关键是时间轴重构。它涉及将事件期间发生的事件和活动序列组合起来，揭示关于攻击者战术、策略和意图的重要信息。为了清晰地描述事件是如何发展的，这种方法侧重于比较时间戳、评估系统日志并创建人类行为链。
 
-此外，应急响应与调查还包括危险软件检测以及入侵检测。为了识别攻击者的工具和战术，分析恶意软件样本，检查系统漏洞并发现失陷指标（IOCs）。它还包括识别和追踪与事件相关的 IP 地址、域名和其他网络人工物。
+此外，应急响应与调查还包括危险软件检测以及入侵检测。为了识别攻击者的工具和战术，分析恶意软件样本，检查系统漏洞并发现失陷指标（`IOCs`）。它还包括识别和追踪与事件相关的 IP 地址、域名和其他网络人工物。
 
-为了保护数字证据的完整性并实现事件的成功解决，DFI 中的应急响应与调查需要一种结合技术能力、取证分析和严密文档记录的跨学科策略。
+为了保护数字证据的完整性并实现事件的成功解决，`DFI` 中的应急响应与调查需要一种结合技术能力、取证分析和严密文档记录的跨学科策略。
 
 ### 3.10.2 网络犯罪与欺诈检测
 
-网络犯罪和欺诈检测是 DFI 可以提供帮助的两个主要领域。数字取证技术和手段用于调查和预防许多类型的网络犯罪和欺诈。这种意义上的数字取证是指通过对数字数据进行收集、分析和解释，以便识别和追踪犯罪分子，恢复其策略，并为法律程序收集证据。
+网络犯罪和欺诈检测是 `DFI` 可以提供帮助的两个主要领域。数字取证技术和手段用于调查和预防许多类型的网络犯罪和欺诈。这种意义上的数字取证是指通过对数字数据进行收集、分析和解释，以便识别和追踪犯罪分子，恢复其策略，并为法律程序收集证据。
 
-通过评估 IP 地址、邮件头和与非法活动相关的信息等数字足迹，DFI 辅助于识别和追踪犯罪分子。它涉及检查金融交易、数字支付和在线交互，以发现欺诈检测的模式，并识别金融犯罪的可能来源。数字取证专家可以通过研究系统日志、网络流量和恶意软件人工物，检测出非法访问、钓鱼尝试或身份盗用的指示。
+通过评估 IP 地址、邮件头和与非法活动相关的信息等数字足迹，`DFI` 辅助于识别和追踪犯罪分子。它涉及检查金融交易、数字支付和在线交互，以发现欺诈检测的模式，并识别金融犯罪的可能来源。数字取证专家可以通过研究系统日志、网络流量和恶意软件人工物，检测出非法访问、钓鱼尝试或身份盗用的指示。
 
-此外，DFI 允许调查人员重现数字事件和时间范围，帮助他们理解导致网络犯罪或欺诈的事件链。这涉及恢复已删除的文件、调查系统缺陷，以及对恶意软件或勒索软件攻击进行取证调查。这些调查结果不仅有助于识别作案者，还有助于升级网络安全程序以防止未来的攻击。
+此外，`DFI` 允许调查人员重现数字事件和时间范围，帮助他们理解导致网络犯罪或欺诈的事件链。这涉及恢复已删除的文件、调查系统缺陷，以及对恶意软件或勒索软件攻击进行取证调查。这些调查结果不仅有助于识别作案者，还有助于升级网络安全程序以防止未来的攻击。
 
 # 大数据与边缘智能增强网络防御
 
-DFI 也用于在泄露事件期间检查受损系统并对被盗取或泄露的数据进行分析。通过对网络流量、系统日志和其他相关人工物的彻底分析，数字取证专家可以识别网络犯罪分子获取未经授权访问的入口点和技术。这些信息对于缓解进一步风险、改进安全措施以及确保对作案者采取适当法律行动至关重要。
+`DFI` 也用于在泄露事件期间检查受损系统并对被盗取或泄露的数据进行分析。通过对网络流量、系统日志和其他相关人工物的彻底分析，数字取证专家可以识别网络犯罪分子获取未经授权访问的入口点和技术。这些信息对于缓解进一步风险、改进安全措施以及确保对作案者采取适当法律行动至关重要。
 
 ### 3.10.3 数据泄露与安全泄露分析
 
-在 DFI 的背景下，数据泄露和安全泄露分析包括对计算机系统或网络内部未经授权访问或数据泄露情况的调查和评估。其目标是确定泄露的来源、范围和影响，同时为法律目的收集关键证据。这一程序还包括检测受损系统、寻找攻击切入点、调查系统漏洞以及检查网络流量的证据。
+在 `DFI` 的背景下，数据泄露和安全泄露分析包括对计算机系统或网络内部未经授权访问或数据泄露情况的调查和评估。其目标是确定泄露的来源、范围和影响，同时为法律目的收集关键证据。这一程序还包括检测受损系统、寻找攻击切入点、调查系统漏洞以及检查网络流量的证据。
 
 为了确定泄露的来源和范围，数字取证分析师使用多种技术，包括日志文件分析、系统配置检查以及内存和磁盘取证。他们利用先进的工具和程序重现事件链，检索被盗或丢失的数据，并分析泄露造成的总损害。分析结果有助于企业加强安全程序、修复漏洞并对罪犯者采取必要的法律行动。
 
 ### 3.10.4 知识产权与商业秘密保护
 
-在 DFI 的背景下，知识产权与商业秘密保护是指使用取证技术和手段保护宝贵的 IP 和商业秘密免受未经授权的访问、盗取或滥用。数字取证人员在检测预防知识产权盗取和工业间谍活动方面至关重要。他们使用多种技术检测数字足迹，追踪对敏感信息的非法访问并评估数据和文件共享活动。
+在 `DFI` 的背景下，知识产权与商业秘密保护是指使用取证技术和手段保护宝贵的 IP 和商业秘密免受未经授权的访问、盗取或滥用。数字取证人员在检测预防知识产权盗取和工业间谍活动方面至关重要。他们使用多种技术检测数字足迹，追踪对敏感信息的非法访问并评估数据和文件共享活动。
 
-他们通过评估元数据、系统日志和网络流量等数字证据，重现导致可能的泄露或盗取的事件链。恢复丢失或加密的知识产权也是 DFI 的一部分。
+他们通过评估元数据、系统日志和网络流量等数字证据，重现导致可能的泄露或盗取的事件链。恢复丢失或加密的知识产权也是 `DFI` 的一部分。
 
-为了确保 IP 的完整性，该行业的专家可以使用数字水印和防篡技术。总体而言，DFI 在知识产权和商业秘密保护中的目的是检测、分析并减少对价值资产的风险，帮助公司保护其激励、敏感信息和竞争优势。
+为了确保 IP 的完整性，该行业的专家可以使用数字水印和防篡技术。总体而言，`DFI` 在知识产权和商业秘密保护中的目的是检测、分析并减少对价值资产的风险，帮助公司保护其激励、敏感信息和竞争优势。
 
 ### 3.10.5 移动设备与社交媒体取证
 
-社交媒体和移动取证是 DFI 的一个子集，侧重于通过移动设备和社交媒体获取、分析和解释数字证据。
-
-
-
-
+社交媒体和移动取证是 `DFI` 的一个子集，侧重于通过移动设备和社交媒体获取、分析和解释数字证据。
 
 ## 推进数字取证智能
 
@@ -1393,23 +1215,23 @@ DFI 也用于在泄露事件期间检查受损系统并对被盗取或泄露的�
 
 ## 执法部门中的 EdgeAI
 
-EdgeAI 技术与执法部门的结合改变了数字取证智能（DFI），实现了实时威胁识别和主动调查。本案例研究重点关注 EdgeAI 在执法中的应用，展示了其在提高能力方面的用处。该机构面临着发现的数字证据复杂性和数量日益增加的问题（图 3.10）。传统的数字取证方法无法跟上这种快速的速度。为了解决这些问题，该机构开发了一个利用网络计算和机器学习方法的 EdgeAI 平台。通过在网络边缘安装支持 EdgeAI 的设备，调查人员获得了实时处理数据的能力，大幅缩短了数字证据检查的时间。例如，SVM 和 DL 模型被训练用于检测异常、分类数字遗迹并寻找犯罪活动模式。
+`EdgeAI` 技术与执法部门的结合改变了数字取证智能（`DFI`），实现了实时威胁识别和主动调查。本案例研究重点关注 `EdgeAI` 在执法中的应用，展示了其在提高能力方面的用处。该机构面临着发现的数字证据复杂性和数量日益增加的问题（图 3.10）。传统的数字取证方法无法跟上这种快速的速度。为了解决这些问题，该机构开发了一个利用网络计算和机器学习方法的 `EdgeAI` 平台。通过在网络边缘安装支持 `EdgeAI` 的设备，调查人员获得了实时处理数据的能力，大幅缩短了数字证据检查的时间。例如，`SVM` 和 `DL` 模型被训练用于检测异常、分类数字遗迹并寻找犯罪活动模式。
 
-EdgeAI 实现的一项重大成就是 EdgeAI 设备能够持续监控网络流量和用户行为，禁用可疑交易。当观察到意外模式时，会产生警报。EdgeAI 的实时能力使调查人员能够实时操作、收集证据并快速识别犯罪分子。这种主动的方法结合 EdgeAI 的能力，使该机构能够瓦解重大破坏。此外，EdgeAI 的隐私保护能力对于维护完整性至关重要。由于系统是分布式的，敏感数据保留在本地，降低了未经授权访问的风险，并保护了参与人员的隐私。
+`EdgeAI` 实现的一项重大成就是 `EdgeAI` 设备能够持续监控网络流量和用户行为，禁用可疑交易。当观察到意外模式时，会产生警报。`EdgeAI` 的实时能力使调查人员能够实时操作、收集证据并快速识别犯罪分子。这种主动的方法结合 `EdgeAI` 的能力，使该机构能够瓦解重大破坏。此外，`EdgeAI` 的隐私保护能力对于维护完整性至关重要。由于系统是分布式的，敏感数据保留在本地，降低了未经授权访问的风险，并保护了参与人员的隐私。
 
 ## 企业和网络安全调查中的 EdgeAI
 
-EdgeAI 方法在企业和网络安全调查中被证明是游戏规则的改变者，能够实现实时分析、快速事件响应和有效的证据收集。本案例研究探讨了 EdgeAI 如何帮助数字取证调查人员。XYZ 公司是一家拥有广泛数字基础设施的全球性公司（图 3.11），它使用 EdgeAI 技术破坏关键系统。该公司有意识地利用边缘计算能力，在其网络架构的重要位置部署智能智能体和机器学习算法，以限制潜在危害。
+`EdgeAI` 方法在企业和网络安全调查中被证明是游戏规则的改变者，能够实现实时分析、快速事件响应和有效的证据收集。本案例研究探讨了 `EdgeAI` 如何帮助数字取证调查人员。`XYZ` 公司是一家拥有广泛数字基础设施的全球性公司（图 3.11），它使用 `EdgeAI` 技术破坏关键系统。该公司有意识地利用边缘计算能力，在其网络架构的重要位置部署智能智能体和机器学习算法，以限制潜在危害。
 
-该机构受益于在网络边缘处理和分析数据时延迟的降低和响应能力的提高。支持 EdgeAI 的系统会在攻击进行时检测可疑活动。深度神经网络和其他机器学习算法会评估模式以对危险行为进行分类。EdgeAI 系统会通知事件响应，启动立即响应以遏制威胁并保护关键资产。同时，EdgeAI 系统会收集并存储与事件相关的数字证据。边缘计算的分布式特性意味着证据安全地存储在网络边缘，保护了完整性。网络日志、系统快照和审计记录等数字遗迹被方便地记录和存储，以备未来分析。
+该机构受益于在网络边缘处理和分析数据时延迟的降低和响应能力的提高。支持 `EdgeAI` 的系统会在攻击进行时检测可疑活动。深度神经网络和其他机器学习算法会评估模式以对危险行为进行分类。`EdgeAI` 系统会通知事件响应，启动立即响应以遏制威胁并保护关键资产。同时，`EdgeAI` 系统会收集并存储与事件相关的数字证据。边缘计算的分布式特性意味着证据安全地存储在网络边缘，保护了完整性。网络日志、系统快照和审计记录等数字遗迹被方便地记录和存储，以备未来分析。
 
-EdgeAI 还有助于事后分析。DL 和高级分析揭示了隐藏的关系并确定了攻击的根源。这种洞察使组织能够加强防御、更新安全措施并主动修复漏洞。在企业和网络安全调查中使用 EdgeAI 技术加速了调查过程并提升了响应能力。实时分析与主动威胁检测的结合使调查人员能够快速识别并减少风险。支持 EdgeAI 的技术在高效收集证据的同时，也保护了数字证据在法庭程序中的可证性。
+`EdgeAI` 还有助于事后分析。`DL` 和高级分析揭示了隐藏的关系并确定了攻击的根源。这种洞察使组织能够加强防御、更新安全措施并主动修复漏洞。在企业和网络安全调查中使用 `EdgeAI` 技术加速了调查过程并提升了响应能力。实时分析与主动威胁检测的结合使调查人员能够快速识别并减少风险。支持 `EdgeAI` 的技术在高效收集证据的同时，也保护了数字证据在法庭程序中的可证性。
 
 ## 取证智能中 EdgeAI 智能的结果与益处
 
-在 DFI 中实施 EdgeAI 方法产生了显著的结果和益处，提高了调查的有效性和效率。对比分析结果（（表 3.3）显示，在 DFI 中使用 EdgeAI 方法时，响应时间显著减少。与平均响应时间为 500 毫秒的方法相比，EdgeAI 技术将响应时间大幅缩短至 50 毫秒。这种提升归功于 EdgeAI 的分布式设计，它允许在源头进行数据处理和分析，减少了延迟并提高了决策效率。
+在 `DFI` 中实施 `EdgeAI` 方法产生了显著的结果和益处，提高了调查的有效性和效率。对比分析结果（（表 3.3）显示，在 `DFI` 中使用 `EdgeAI` 方法时，响应时间显著减少。与平均响应时间为 500 毫秒的方法相比，`EdgeAI` 技术将响应时间大幅缩短至 50 毫秒。这种提升归功于 `EdgeAI` 的分布式设计，它允许在源头进行数据处理和分析，减少了延迟并提高了决策效率。
 
-此外，准确率对比（图 3.12）显示使用 EdgeAI 方法显著提高了准确率。
+此外，准确率对比（图 3.12）显示使用 `EdgeAI` 方法显著提高了准确率。
 
 ### 表 3.3：传统方法与 EdgeAI 方法的关键取证指标对比
 
@@ -1419,81 +1241,82 @@ EdgeAI 还有助于事后分析。DL 和高级分析揭示了隐藏的关系并�
 | 准确率 | 82 | 94.5 |
 | 隐私保护率 (%) | 60 | 95 |
 
-传统策略实现了 82% 的准确率；然而，引入 EdgeAI 算法实现了惊人的 94.5% 准确率。部署在网络边缘的复杂 ML 和 DL 算法能够更精确的异常检测和模式识别，这归功于准确率的提升。
+传统策略实现了 82% 的准确率；然而，引入 `EdgeAI` 算法实现了惊人的 94.5% 准确率。部署在网络边缘的复杂 `ML` 和 `DL` 算法能够更精确的异常检测和模式识别，这归功于准确率的提升。
 
-此外，当使用 EdgeAI 技术时，隐私保护率显著提高。虽然传统策略的隐私保护率为 60%，但使用 EdgeAI 方法通过分布式数据处理和加密系统实现了敏感信息的安全管理和保护，保护了数字取证调查期间的用户隐私。
+此外，当使用 `EdgeAI` 技术时，隐私保护率显著提高。虽然传统策略的隐私保护率为 60%，但使用 `EdgeAI` 方法通过分布式数据处理和加密系统实现了敏感信息的安全管理和保护，保护了数字取证调查期间的用户隐私。
 
 ### 3.1.1 可扩展性和响应能力的提高
 
-在提高可扩展性和响应能力方面，在 DFI 中引入 EdgeAI 方法取得了令人鼓舞的结果。通过在网络边缘采用分布式计算和实时分析，组织可以处理海量数据并降低取证操作的延迟。
+在提高可扩展性和响应能力方面，在 `DFI` 中引入 `EdgeAI` 方法取得了令人鼓舞的结果。通过在网络边缘采用分布式计算和实时分析，组织可以处理海量数据并降低取证操作的延迟。
 
 ![](img/aeaf5e4a1e1020ca53a1da35e316de95_86_0.png)
 
 图 3.12 关键取证指标的柱状图对比。
-
-
-
-
 
 # 推进数字取证智能
 
 ## 表 3.4：可扩展性结果
 
 | 场景 | 传统方法 | EdgeAI 方法 |
-|---|---|--|
+|---|---|---|
 | 数据量 | 1TB | 1TB |
 | 处理时间 | 12 小时 | 3 小时 |
 | 扩展性比例 | N/A | 提升 4 倍 |
 
-表 3.4 显示了部署 EdgeAI 方法带来的可扩展性增益。在数据量为 1 TB 的情况下，传统方法需要 12 小时处理数据，而 EdgeAI 解决方案仅需 3 小时。这代表了使用 EdgeAI 时处理时间的大幅缩短。
+表 3.4 显示了部署 `EdgeAI` 方法带来的可扩展性增益。在数据量为 1 TB 的情况下，传统方法需要 12 小时处理数据，而 `EdgeAI` 解决方案仅需 3 小时。这代表了使用 `EdgeAI` 时处理时间的大幅缩短。
 
-表 3.5 显示了通过 EdgeAI 方法所实现的响应能力提升。在事件检测场景中，旧方法需要 1 小时来识别问题，而 EdgeAI 方法仅需 10 分钟。此外，事件响应时间从 24 小时缩短到 1 小时，说明了在网络边缘进行实时分析的用途。此外，调查周期从五天缩短到二天，使得数字取证检查更加高效。
+表 3.5 显示了通过 `EdgeAI` 方法所实现的响应能力提升。在事件检测场景中，旧方法需要 1 小时来识别问题，而 `EdgeAI` 方法仅需 10 分钟。此外，事件响应时间从 24 小时缩短到 1 小时，说明了在网络边缘进行实时分析的用途。此外，调查周期从五天缩短到二天，使得数字取证检查更加高效。
 
 ## 3.11.2 缩短网络事件的响应时间
 
-通过多项对比标准取证方法论与支持 EdgeAI 的技术的研究，评估了 EdgeAI 对缩短反应时间的影响。测试包括对多种网络攻击场景建模、测量使用不同方法检测和响应这些事件所需的时间，以及每个阶段的处理时间。
+通过多项对比标准取证方法论与支持 `EdgeAI` 的技术的研究，评估了 `EdgeAI` 对缩短反应时间的影响。测试包括对多种网络攻击场景建模、测量使用不同方法检测和响应这些事件所需的时间，以及每个阶段的处理时间。
 
-表 3.6 展示了传统取证、支持 EdgeAI 的取证与响应时间之间的对比，以及使用 EdgeAI 技术处理各种真实案例事件时取得的平均响应时间。传统取证的响应时间以小时为单位测量，而支持 EdgeAI 的取证响应时间以分钟为单位测量。结果清楚地表明，采用支持 EdgeAI 的取证后时间缩短了 66.7%。例如，在
+表 3.6 展示了传统取证、支持 `EdgeAI` 的取证与响应时间之间的对比，以及使用 `EdgeAI` 技术处理各种真实案例事件时取得的平均响应时间。传统取证的响应时间以小时为单位测量，而支持 `EdgeAI` 的取证响应时间以分钟为单位测量。结果清楚地表明，采用支持 `EdgeAI` 的取证后时间缩短了 66.7%。例如，在
 
 在一个真实的钓鱼攻击事件中，响应时间从 24 小时缩短到 8 分钟。
 
 ## 表 3.5：响应能力结果
 
 | 场景 | 传统方法 | EdgeAI 方法 |
-|---|---|--|
+|---|---|---|
 | 事件检测时间 | 1 小时 | 10 分钟 |
 | 响应时间 | 24 小时 | 1 小时 |
 | 调查时间 | 5 天 | 2 天 |
 
-## 大数据与边缘智能增强网络防御
+# 大数据与边缘智能增强网络防御
 
 ## 表 3.6：响应时间对比 – 传统取证 vs. 支持 EdgeAI 的取证
 
 | 场景 | 传统取证（小时） | 支持 EdgeAI 的取证（分钟） | 平均响应时间缩短 |
-|---|---|---|--|
+|---|---|---|---|
 | 钓鱼攻击 | 24 | 8 | 66.7% |
+
+
+
 | 勒索软件事件 | 48 | 18 | 62.5% |
+
 | 网络入侵 | 36 | 12 | 66.7% |
+
 | 数据泄露 | 72 | 25 | 65.3% |
 
 这种大幅的缩短允许调查人员迅速分析并对网络事件采取行动，最大限度地减少威胁造成的潜在损害。表 3.7 对比了使用传统和支持 EdgeAI 的方法论在数字取证过程各个阶段的持续时间。处理时间以毫秒为单位测量，强调了利用 EdgeAI 所实现的效率优势。组织可以通过缩短每个层级的处理时间来加速整个调查过程，从而实现更事件响应和网络威胁缓解。
 
-## 3.11.3 提高数字取证调查的效率和有效性
+### 3.11.3 提高数字取证调查的效率和有效性
 
 表 3.8 的结果显示，许多重要参数有了显著改进。在异常检测方面，EdgeAI 技术实现了 92% 的检测率，比旧方法改进了 17%。同样，在恶意行为者的分类中，EdgeAI 方法的表现比传统方法优出 15%，准确率达到 95%。
 
 EdgeAI 方法在模式识别方面也表现优异，成功率达 90%，而标准方法为 70%，代表了 20% 的显著提升。此外，EdgeAI 技术的预测分析能力产生了卓越的结果，准确率达到 85%，比旧方法高出 25%。
 
-## 表 3.7：处理时间对比（毫秒）
+### 表 3.7：处理时间对比（毫秒）
 
 | 方法论 | 传统方法 | EdgeAI 方法 |
-|---|---|--|
+|---|---|---|
 | 数据采集 | 500 | 100 |
 | 数据分析 | 800 | 200 |
 | 证据收集 | 700 | 150 |
 | 事件调查 | 1,200 | 300 |
 
-## 表 3.8：数字取证调查效率与有效性的提升结果
+### 表 3.8：数字取证调查效率与有效性的提升结果
 
 | 指标 | 传统方法 | EdgeAI 方法 | 改进情况 |
 |---|---|---|---|
@@ -1511,7 +1334,7 @@ EdgeAI 方法在模式识别方面也表现优异，成功率达 90%，而标准
 
 ## 大数据与边缘智能增强网络防御
 
-## 表 3.9：支持 EdgeAI 的取证性能指标
+### 表 3.9：支持 EdgeAI 的取证性能指标
 
 | 指标 | 传统方法 | EdgeAI 方法 | 改进情况 |
 |---|---|---|---|
@@ -1529,7 +1352,7 @@ EdgeAI 方法在模式识别方面也表现优异，成功率达 90%，而标准
 
 实时。由于高检测率，事件响应和缓解被缩短，减少了网络事件对企业的影响。
 
-## 3.12 克服数字取证智能中 EdgeAI 的挑战
+### 3.12 克服数字取证智能中 EdgeAI 的挑战
 
 EdgeAI 在 DFI 中的应用面临许多需要解决的问题才能成功。最困难的挑战之一是应对边缘设备有限的计算能力（图 3.15），其处理能力通常低于中心化服务器。优化算法并开发利用可用资源的策略至关重要。
 
@@ -1541,11 +1364,7 @@ EdgeAI 在 DFI 中的应用面临许多需要解决的问题才能成功。最�
 
 ![](img/aeaf5e4a1e1020ca53a1da3516de95_91.png)
 
-
-
-
-
-## 3.13 EdgeAI 技术的数字取证智能未来发展
+### 3.13 EdgeAI 技术的数字取证智能未来发展
 
 EdgeAI 技术的进步推动着数字取证智能（DFI）领域的发展。这些结合了边缘计算与人工智能的技术为进一步提升数字取证能力提供了广阔的前。预计该领域将出现几项进一步的发展：
 
@@ -1557,7 +1376,7 @@ EdgeAI 技术的进步推动着数字取证智能（DFI）领域的发展。这�
 
 随着 EdgeAI 的成熟和演进，它在面对不断变化的网络威胁时，为转型 DFI 的效率、有效性和规模展现了巨大潜力。
 
-## 3.14 结论
+### 3.14 结论
 
 本章的研究证明了在 DFI 中利用 EdgeAI 显著贡献和具体效益。得于边缘计算和人工智能算法的能力，实时威胁识别、主动事件响应和预测分析已成为可能。实施 EdgeAI 系统的优势证明了其在应对网络灾难时具有更好的扩展性、反应性和响应速度。研究结果强调了在 DFI 中采用 EdgeAI 技术的显著用途。在检测和分类各种形式的网络威胁时，94.5% 的高准确率证明了所用 ML 模型的稳定效率。91.2% 的模型精确率证明了其在最大化减少假正率的同时正确识别有害活动的能力。此外，88.8% 的召回率显示了模型在检测大量恶意行为的同时避免假阴性的能力。89.5% 的 F1 分通过平衡精确率和召回率提供了模型性能的整体评估。研究结果还证明了 EdgeAI 方法在快速识别和标记可能的网络威胁方面的有效性。检测率的提高意味着对事件的响应时间缩短，从而实现了更快的事件响应和缓解。研究还强调了集成 EdgeAI 后增加了扩展性和反应性，提升了数字取证调查的整体效率和效能。反馈和 EdgeAI 方法已在执法机构和其他 DFI 领域成功实施，实现了实时威胁识别、主动调查和犯罪团的重构。这种主动方法结合 EdgeAI 能力，使机构能够领先于攻击者，降低风险并减少网络灾难的影响。研究结果不仅为采用 EdgeAI 的重要性提供了有用的见解，还强调了其在加强网络安全防御和保护数字环境方面的潜力。
 
@@ -1583,21 +1402,15 @@ EdgeAI 技术的进步推动着数字取证智能（DFI）领域的发展。这�
 18. K. Mohsin, “法科学中的真实智能，” Journal of Forensic Research, Artificial Intelligence in Forensic Science, In Fore Res, 4, no. 1, January 2023, pp. 172–173. 可在 SSRN:3910244 或 http://doi.org/10.2139/ssrn.3910244
 19. G. Fortino, W. Russo, C. Caviglio, M. Virol and M. Zhu, “机会性信息物理服务：未来物联网的新范式，” 2018 IEEE 第4 届世界技术论坛 (WF-IoT), Singapore, 2018, pp. 488–492. https://doi.org/10.1109/WF-IoT.2018.8355174
 
-
-
-
-
 # 推进数字取证智能化
 
 21. W. Z. Khan, E. Ahmed, S. Hakak, I. Yaqoob and A. Ahmed, “Edge computing: a survey,” Future Generation Computer Systems, vol. 97, 2019年8月, pp. 219–235. https://doi.org/10.1016/j.futuresys.2019.02.050
-
 22. Y. Ai, M. Peng and K. Zhang, “Edge computing technologies for internet of things: A primer,” Digital Computer Systems and Networks, vol. 4, no. 2, 2018年4月, pp. 77–88. https://doi.org/10.1016/j.dican.2017.07.001
-
 23. S. Biggs and S. Vidal, “Cloud computing: The impact on digital forensic investigations,” 2009 International Conference on Internet Technology and Secured Transactions (ICIST), London, UK, 2009, pp. 1–6. https://doi.org/10.1109/ICIST.2009.5402561
-
 24. N. H. Ab Rahman, W. B. Glisson, Y. Yang and K.-K. Rao, “Forensic-by-design framework for cloud-physical systems,” IEEE Cloud Computing, vol. 3, no. 1, 2016年1-2月, pp. 50–59. https://doi.org/10.1109/MCC.2016.35
-
 25. I. Yaqoob, I. A. T. Hashem, A. Ahmed, S. M. A. Kazmi and C. S. Hong, “Internet of things forensics: Recent advances, taxonomy, requirements, and challenges,” Future Generation Computer Systems, vol. 92, 2019年3月, pp. 265–275. https://doi.org/10.1016/j.futurecs.2019.08.058
+
+
 
 26. F. Amato, G. Cozzolino, V. Moscato and F. Moscato, “Analysis digital forensics through a semantic-based methodology and NLP techniques,” Future Generation Computer Systems, vol. 98, 2019年9月, pp. 297–307. https://doi.org/10.1016/j.futurecs.2019.02.040
 
@@ -1649,23 +1462,19 @@ Delshi Howalsya R., Thananalap P., Asis J., Shreyanth S., and Shoba R.
 
 ## 4.1 引言
 
-数据分析正日益使用边缘和雾计算，这为延迟敏感型应用增加了价值。通过深度学习、机器学习和流数据分析，EdgeAI 作为一种通过边缘设备实现分布式智能的新跨学科技术诞生了 [1–5]。
+数据分析正日益使用边缘和雾计算，这为延迟敏感型应用增加了价值。通过深度学习、机器学习和流数据分析，`EdgeAI` 作为一种通过边缘设备实现分布式智能的新跨学科技术诞生了 [1–5]。
 
-被称为物联网（简称 IoT）的概念实现了人与技术设备之间的连接。智慧城市需要对该概念进行集成和管理的解决方案，包括智能家居、智能业务、智能自动驾驶汽车和智能交通 [6–9]。
+被称为物联网（简称 `IoT`）的概念实现了人与技术设备之间的连接。智慧城市需要对该概念进行集成和管理的解决方案，包括智能家居、智能业务、智能自动驾驶汽车和智能交通 [6–9]。
 
 为了利用城市化带来的机会，许多国家已经创建了将他们的城镇转变为智慧城市的项目。
 
-
-
-
-
 # 86 用于增强网络防御的大数据与边缘智能
 
-智能城市为市民提供了新服务，这同时也提升了运营效率和环境可持续性。由于互联网与数十亿边缘设备的连接，产生了数万字节的数据 [22–25]。以应用程序所需的速度发现这些海量数据中的价值是关键。一种全新的跨学科技术——**边缘人工智能（EdgeAI）**利用边缘设备实现分布式智能。它是流式数据分析、机器学习和深度学习向边缘处理演进的产物。区块链（BC）技术近年来不断演进，以解决信任问题 [26–28]。区块链通过建立真理源头，消除了点对点（P2P）交易中对可信中间人的需求。
+智能城市为市民提供了新服务，这同时也提升了运营效率和环境可持续性。由于互联网与数十亿边缘设备的连接，产生了数万字节的数据 [22–25]。以应用程序所需的速度发现这些海量数据中的价值是关键。一种全新的跨学科技术——**边缘人工智能（`EdgeAI`）**利用边缘设备实现分布式智能。它是流式数据分析、机器学习和深度学习向边缘处理演进的产物。区块链（`BC`）技术近年来不断演进，以解决信任问题 [26–28]。区块链通过建立真理源头，消除了点对点（`P2P`）交易中对可信中间人的需求。
 
 ### 4.1.1 贡献
 
-本章的目标是通过展示 EdgeAI 和区块链（BC）的最新研究，在智能城市的两个关键领域——智能出行和智能能源中，创建智能且安全的边缘应用和网络。本章主要介绍了 EdgeAI 在各种智能应用中的应用综述，例如智能建筑中的优化能源管理、绿色能源管理和智能城市的能源效率，以及智能出行应用，如智能交通系统中的交通监控与管理。以下是本章的主要贡献：
+本章的目标是通过展示 `EdgeAI` 和区块链（`BC`）的最新研究，在智能城市的两个关键领域——智能出行和智能能源中，创建智能且安全的边缘应用和网络。本章主要介绍了 `EdgeAI` 在各种智能应用中的应用综述，例如智能建筑中的优化能源管理、绿色能源管理和智能城市的能源效率，以及智能出行应用，如智能交通系统中的交通监控与管理。以下是本章的主要贡献：
 
 - 它回顾了用于可持续城市的人工智能。
 - 它概述了区块链在智能城市开发中的应用。
@@ -1675,11 +1484,11 @@ Delshi Howalsya R., Thananalap P., Asis J., Shreyanth S., and Shoba R.
 
 ## 4.2 文献综述
 
-作者对人工智能对可持续发展的影响提出了评估，考虑到该技术的存在及其对多个社会领域日益扩大的影响，这种评估是必要的。在这里，我们检查了关于人工智能积极或负面影响的公共数据——即2030年可持续发展议程中列出的 16 个目标和 17 个目标的实现情况。人工智能可以支持可持续发展目标（SDGs）中 12 个目标的实现；然而，可能有 58 个目标受到阻碍。值得注意的是，人工智能创造了提高生产和效率的新技术，但它可能导致国家之间更大的不平等，阻碍2030年议程的实现。必须制定适当的立法和法规以适应人工智能的快速增长 [29–31]。或者，用于可持续智能城市的边缘人工智能与区块链将最终导致基于人工智能的技术缺乏问责制、透明度、安全性和伦理规范，这可能对人工智能的进步和长期使用产生危害。此外，缺乏对人工智能中长期影响的研究。因此，解决环绕人工智能使用的全球性论述，并为基于人工智能的技术建立监管层面的理解和监督至关重要。
+作者对人工智能对可持续发展的影响提出了评估，考虑到该技术的存在及其对多个社会领域日益扩大的影响，这种评估是必要的。在这里，我们检查了关于人工智能积极或负面影响的公共数据——即2030年可持续发展议程中列出的 16 个目标和 17 个目标的实现情况。人工智能可以支持可持续发展目标（`SDGs`）中 12 个目标的实现；然而，可能有 58 个目标受到阻碍。值得注意的是，人工智能创造了提高生产和效率的新技术，但它可能导致国家之间更大的不平等，阻碍2030年议程的实现。必须制定适当的立法和法规以适应人工智能的快速增长 [29–31]。或者，用于可持续智能城市的边缘人工智能与区块链将最终导致基于人工智能的技术缺乏问责制、透明度、安全性和伦理规范，这可能对人工智能的进步和长期使用产生危害。此外，缺乏对人工智能中长期影响的研究。因此，解决环绕人工智能使用的全球性论述，并为基于人工智能的技术建立监管层面的理解和监督至关重要。
 
-本章在不同地区的主要目标是各国开发智能城市原则的重点。在这些城市中，需要各种信息通信技术 [32–40]。在开发和实施智能城市时，必须考虑某些因素。智能城市构想的执行由于维度的复杂性、技术的使用及其整合而带来了风险。这些危害可能会导致机密性和安全问题，如果得不到适当的识别和处理，将影响智能城市的运行。本章检查了参数设定、智能城市评估技术、现有技术，以及与智能城市部署相关的技术和非技术风险因素。讨论了用于风险评估的方法以及任何潜在的改进。文献研究结果表明，并非所有智能城镇都采用了智能城市的所有属性。物联（IoI）、人工智能和区块链被认为是智能城市应用中最频繁使用的三项技术。该研究还为智能城市规划、实施和管理领域的未来研究提供了建议 [41]。
+本章在不同地区的主要目标是各国开发智能城市原则的重点。在这些城市中，需要各种信息通信技术 [32–40]。在开发和实施智能城市时，必须考虑某些因素。智能城市构想的执行由于维度的复杂性、技术的使用及其整合而带来了风险。这些危害可能会导致机密性和安全问题，如果得不到适当的识别和处理，将影响智能城市的运行。本章检查了参数设定、智能城市评估技术、现有技术，以及与智能城市部署相关的技术和非技术风险因素。讨论了用于风险评估的方法以及任何潜在的改进。文献研究结果表明，并非所有智能城镇都采用了智能城市的所有属性。物联（`IoI`）、人工智能和区块链被认为是智能城市应用中最频繁使用的三项技术。该研究还为智能城市规划、实施和管理领域的未来研究提供了建议 [41]。
 
-作者认为，通过碳信用未来可以减少地球上的生态退化和碳排放。从2021年开始，市场允许的碳抵消将成为严重问题，这些额度将用于允许个人交易的系统 [42–47]。然而，需要一个类似的温室气体额度交换来实现碳中和。碳额度的测量还需要政策、策略和技术的进步。本研究利用区块链技术计算碳排放权，以增加交易的可信度 [48–50]。联合国可持续发展目标（UN-SDGs）17个目标之一使用区块链来验证碳排放权。它还引入了关键的应用。通过在移动环境中使用大数据和机器学习，我们可以防止异常碳排放。为了解决这些问题，本研究提出了基于比特币的碳排放许可系统，该系统利用治理分析框架和区块链主引擎 [51–54]。
+作者认为，通过碳信用未来可以减少地球上的生态退化和碳排放。从2021年开始，市场允许的碳抵消将成为严重问题，这些额度将用于允许个人交易的系统 [42–47]。然而，需要一个类似的温室气体额度交换来实现碳中和。碳额度的测量还需要政策、策略和技术的进步。本研究利用区块链技术计算碳排放权，以增加交易的可信度 [48–50]。联合国可持续发展目标（`UN-SDGs`）17个目标之一使用区块链来验证碳排放权。它还引入了关键的应用。通过在移动环境中使用大数据和机器学习，我们可以防止异常碳排放。为了解决这些问题，本研究提出了基于比特币的碳排放许可系统，该系统利用治理分析框架和区块链主引擎 [51–54]。
 
 “智能城市”一词指的是对临时城市环境中持续存在问题的广泛应对，该主题现在已成为从业者和学术人员的重要研究课题。但城市如何变得“智能”是一个开放的话题。大多数人认为，城市“智能化”背后的主要动力之一是信息技术的使用。因此，需要框架和流程来指导、操作和评估实施方法以及相关技术的效果 [55]。
 
@@ -1689,17 +1498,13 @@ Delshi Howalsya R., Thananalap P., Asis J., Shreyanth S., and Shoba R.
 
 区块链与机器学习在物联网应用中的基础集成如图4.1所示。人工智能被自动驾驶人工智能、物联网、自动化和区块链等先进技术广泛应用于。对于最全面的数据收集和分析，人工智能和物联网具有优势。在自动化工业等领域，使用智能机器人替代人类
 
-
-
-
-
 # 用于可持续智能城市的边缘侧人工智能与区块链技术
 
 ![](img/aeaf5e4a1e1020ca53a1da35e316de95_101_0.png)
 
 **图 4.1** 用于物联网应用的 AI 和区块链。
 
-Mohandas 等人的研究强调了医学科学。由于智能技术的快速发展，物联网（IoT）、区块链（BC）和人工智能（AI）已成为最受欢迎的技术，为各行业激发了新的研究灵感。
+Mohandas 等人的研究强调了医学科学。由于智能技术的快速发展，物联网（`IoT`）、区块链（`BC`）和人工智能（`AI`）已成为最受欢迎的技术，为各行业激发了新的研究灵感。
 
 ## 4.3 用于可持续城市的人工智能
 
@@ -1708,7 +1513,10 @@ Mohandas 等人的研究强调了医学科学。由于智能技术的快速发�
 ## 用于增强网络防御的大数据与边缘智能
 
 ### 表格 4.1
+
 智能算法如何帮助智能城市的示例
+
+
 
 | 智能城市维度 | 示例 |
 | --- | --- |
@@ -1744,10 +1552,6 @@ Mohandas 等人的研究强调了医学科学。由于智能技术的快速发�
 ![](img/aeaf5e4a1e1020ca53a1da35e316de95_104_0.png)
 
 图 4.3 作为智能城市集成器的区块链基础设施。
-
-
-
-
 
 # 用于可持续智慧城市的边缘 AI 区块
 
@@ -1803,10 +1607,6 @@ Mohandas 等人的研究强调了医学科学。由于智能技术的快速发�
 
 可解释 AI、有效性和 AI 信任是用于分类这些问题的。数据共享是第一类，数据资源在设备之间传输并提供多种通信形式。第二类是隐私安全的，数据采集安全地从一个设备发送到另一个设备，并且每次交易都通过加密哈希进行数字签名。
 
-
-
-
-
 # 98 用于增强网络防御的大数据与智能
 
 供应链网络、政府程序、安全投票、众筹、交易处理和知识产权。因此，区块链（BC）技术被广泛采用，为用户提供透明的交易和信息。如果区块链开发者能够找到包含人工智能（AI）的方法，其可能性是无限的。
@@ -1835,39 +1635,68 @@ Mohandas 等人的研究强调了医学科学。由于智能技术的快速发�
 - 11. Kagermann, H., Lukas, W., Wahlster, W. (2021). 4.0: Mit dem Internet der Dinge auf der Revolution, https://www.dfki.de/fleeadmin/user_pdf/DFKI/Media/News_Media/Presse/Presse-Highlights/vidnach01a3d4-Internet-Dinge.de
 - 12. Kar, U., Dash, R. (2018). The future of healthcare and in a world of artificial intelligence. Intelligence in Biomedical Engineering & Technology, https://www.researchgate.net/publication/32916347_Application_of_Artificial_Intelligence_in_Healthcare_Past_Present_Future, 8.2018.
 - 13. Kitch, R. (2015). Making sense of smart city: Addressing present shortcomings. Cambridge University of Regions, Economy and Society, 8, pp. 131–136.
+
+
+
+## 参考文献
+
 - 14. Klein, C., Faber G. From Smart Cities to Opportunities and Challenges from an Industrial Perspective. In International Conference on Next Generation Wired/Wireless Networking, Berlin-Berlin, pp. 260.
+
 - 15. Kominos, N. (2002). Intelligent Cities: Innovation, Knowledge and Digital.
+
 - 16. Lombardi, P., Giardino, S., Farou, H., Yosef, W. (2019). Modelling the smart city. European Journal of Social Science, 25(2), pp. 137–149. https://www.researchgate.net/publication/33194748_Smart_Cities_of_and_Initiatives, 31.2020.
+
 - 17. McCarthy, J., Smith, M., Rochester, N., Shannon, C. (1985). A proposal for the Dartmouth project on artificial intelligence. Magazine, 27(4), p. 12. https://doi.org/10.1109/AMI.v27
+
 - 18. Mitchell, M. (2007). Intelligent cities. Journal of Knowledge Society, 8, pp. 31. https://pdfs.mcsethol.org/6/88dc9e25c37ec5f84.
+
 - 19. Minh, V., Kuvugoglu, K., Siter, D., Bellemare, M., Ostrovski, G., Petersen, S., Beattie, C., Sadik, A., Antoun, I. (2015). Human level control through deep learning. Nature, 518, p.529.
+
 - 20. Naseula, C., Demit, D. (2015). Testing adaptation in nonprofit systems. Management and Practice, 7(1), p.32.
+
 - 21. Naseula, C., Mic, S. (2018). Using blockchain as a platform for smart cities. Data-Technology; doi: 10.9730/jet/2018/9/43.
+
 - 22. Krishna, T., Perez, S., Ahmed, S., Srinivasan, P. (2022). Software-driven framework for mobile healthcare applications. Intelligent Decision Technologies, 17, pp. 377–393.
+
 - 23. Pilkington, M. (2016). Blockchain Technology: Principles and Applications. In X. Olleros, M., Zhegu (eds.), Handbook on Digital Transformations, Smart cities: Quality of life, productivity, and the growth of human capital.
+
 - 24. Shapiro, J. (2006). Smart cities. Review of Economics and Statistics, 88(2), pp. 324–335.
+
 - 25. Skouby, K., Windekilde, I. (2014). How AI can contribute to smart home and smart cities. Proceedings of 25th ITS Regional Conference, Brussels, Belgium.
+
 - 26. Washburn, D., Sindhu, U., Balaorous, S., Hines, R., Nelson, L. (10). Helping CIOs “Smart Cities”: Defining the Smart City, Its Drivers, and the Role of the CIO. Forrester Research, Inc., Cambridge, MA. http://public.dhe.com/partnerword/smb/smarterplanet/forr_help_cius_smart_indices.pdf
+
 - 27. Konstantinidis, I., Siamos, G., Timpleacic, C., Zvercas, P., Decker, S. (2018). Blockchain for Business Applications: A Systematic Review. Information Systems, pp. 384–399.
+
 - 28. Chen, P., Peña-Mora, F. (2018). Blockchain for cities–A systematic literature review. IEEE Access, 66, pp. 7678–7689.
+
 - 29. Silva, B.N., Khan, M., Jung, C., Seo, J., Muhamad, D., Han, J., Yoo, Y., Han, K. (2018). Urban planning and smart city decision management by real-time data processing using data analytics. Sensors, 18, p94.
+
 - 30. Elsaghemer Mohamed, S., AlShafan, K.A. (2021). Intelligent traffic management system based on the Internet of Things (IoT). Journal of Advanced Transportation, 2021, p.403753.
+
 - 31. Lund, H., Østergaard, P., Connolly, D., Matthias, B.V. (2017). Smart energy and smart city energies. Energy, 17, pp. 556–565.
+
 - 32. Paniori-Quizardo, M.A., Santa, J., Martínez, A., Martínez, V., Skarmata, A.F. (2019). Smart IoT platform based on cloud and edge computing. Biosystems Engineering, 177, pp. 4–17.
+
 - 33. Panori, A., Kaderci, C., Cominnos, N., Fehneller, K., Reid, A., Mora, L. (2021). Smart systems of innovation for smart places: Challenges in deploying digital platforms for cloud and data-intelligence. Land Use Policy, 111, p104631.
+
 - 34. Aluman, A., Sharma, S.K., Ejaz, W. (2019). Emerging edge computing technologies for IoT devices. IEEE Network, 33, pp. 140–147.
+
 - 35. Deng, S., Hang, F., Wang, Y., Yin, J., Zomaya, A. (2020). Edge intelligence: The confluence of edge computing and artificial intelligence. IEEE Internet of Things Journal, 7, pp.7457–7469.
+
 - 36. Shi, Y., Yang, K., Jiang, T., Zhang, J., Ltaef, K. (2020). Communication-efficient EdgeAI: Algorithms and systems. IEEE Communications Surveys, 22, pp.2167–2191.
+
 - 37. Zhou, Z., Chen, X., Li, E., Zheng, L., Luo, K., Zhang, J. (2019). Edge intelligence: Paving the last mile of artificial intelligence with edge computing. Proceedings of the IEEE, 107, pp. 1738–1762.
+
 - 38. TPU–Run Inference at the GoogleCloud. https://cloud.google.com/
+
 - 39. Morán, A., Casas, V., Galan-Prado, F., Fraser, C.F., Radakrishnan, D., Safafi, S., Rosselló, L.J. (2021). Hardware-optimized reasoning system for edge intelligence. Cognitive Computation, 15(1), pp. 1–9.
+
 - 40. Pokhrel, R.S., Choi, J., Asuquo, P., Ogah, C.P.A. (2020). Federated learning with blockchain for autonomous vehicles: Analysis and design challenges. IEEE Transactions on Communications, 68, pp.4734–4746.
+
 - 41. Lei, A., Crouchshank, H., Cao, Y., Asuquo, P., Ogah, C.P.A. (2017). Blockchain-based dynamic key management for heterogeneous intelligent transportation systems. IEEE Internet of Things Journal, 4, pp. 1832–1843.
+
 - 42. Shi, W., Cao, J., Zhang, Q., Li, Y., Xu, L. (2016). Edge computing: Vision and challenges. IEEE Internet of Things Journal, 3, pp. 637–646.
-
-
-
-
 
 # 面可持续智慧城市的边缘端人工智能与区块链
 
@@ -1908,17 +1737,22 @@ Mohandas 等人的研究强调了医学科学。由于智能技术的快速发�
 # 102 用于增强网络防御的大数据与边缘智能
 
 - 60. Dagger, G.G. et al. (2018). Ancile: 一种基于区块链技术的电子健康记录访问控制与互操作性隐私保护框架。Sustainable Cities and Society 39(1).
+
 - 61. 用于市政智慧城市协作服务的基于智能合约的安全架构 [已展示公式] (2023)。Journal of Systems Architecture, 13.
+
+
+
 - 62. Soomro, S., Miraz, M.H., Prashant, A., Abdullah, M. 人工智能支持的物联网：智慧城市的交通缓解。Proceedings of the Smart Cities Symposium 2018, Bahrain, 22–23 April 2018.
+
 - 63. Fernandez-Carames, T., Fraga, M. (2021). 区块链在建筑中的作用。Journal of Legal Affairs, 13.
+
 - 64. Alli, A. et al. (2019). 智慧城市安全：综合综述。IEEE Access, 7.
+
 - 65. Bibri, S. et al. (2017). 智慧城市：未来。Sustainable Cities and Society, 31.
+
 - 66. Chen, H. et al. (2019). 物联网的智能安全。Pervasive and Mobile Computing, 59.
+
 - 67. Dorri, A. et al. (2019). 轻量级安全协议。Journal of Parallel and Distributed Computing, 134.
-
-
-
-
 
 # 增强基于 IoT 的脆弱环境中的入侵检测
 
@@ -1994,13 +1828,7 @@ Mohandas 等人的研究强调了医学科学。由于智能技术的快速发�
 
 为了为入侵检测数据集选择相关的 IoT 数据源和传感器，我们考虑了脆弱环境中的各种 IoT 设备，并识别出包含价值数据的设备。选择标准涉及设备角色、功能和数据类型，以确保数据集的多样性和代表性。我们描述了用于从 IoT 设备检索数据的方法，这些可能包括应用程序编程接口 (API)、数据流或直接传感器读数。
 
-
-
-
-
-#增强基于 IoT 的脆弱环境中的入侵检测
-
-## 5.5.2 数据预处理与特征工程
+### 5.5.2 数据预处理与特征工程
 
 对收集的 IoT 数据应用预处理步骤，以确保其质量并适用于入侵检测。我们讨论了数据清洗技术、异常值检测和数据归一化，以消除噪声和不一致性。我们还详述了特征工程方法论，将原始数据转换为具有丰富信息的特征，以增强入侵检测模型的性能。此外，我们探索了减少数据维度以及处理来自不同 IoT 设备数据异构性的技术。这包括针对联邦学习设置的特征选择方法和数据转换方法。
 
@@ -2026,35 +1854,44 @@ Mohandas 等人的研究强调了医学科学。由于智能技术的快速发�
 # 数据预处理
 
 ### 1. 数据收集与原始数据集：
+
 通过监控工业物联网环境内的网络流量收集原始数据。这涉及捕获网络包，数据包包含有关源和目的 IP 地址、端口号、协议和负载数据的信息。
 
 ### 2. 数据清洗与格式化：
+
 - 原始数据包含噪声、缺失值和冗余信息。
 - 去除重复包和记录以确保数据完整性。
 - 通过填补或删除信息不完整的实例来处理缺失值。
 - 标准化数据格式以消除不一致性。
 
 ### 3. 特征提取：
+
 特征提取将原始包数据转换为适用于机器学习算法的格式。它涉及以下：
+
 - 计算统计特征，如包大小的平均值、中位数、标准差以及到达间隔时间。
 - 提取基于时间的特征，包括时间戳和会话时长。
 - 生成基于频率的特征，如包计数、协议分布和端口利用率。
 
 ### 4. 数据标记：
+
 每个实例都将被标记以识别其类别，例如正常行为、特定攻击类型（例如分布式拒绝服务攻击、中间人攻击 [MITM]）或漏洞（例如弱密码）。适当的标记对于监督学习至关重要。
 
 # 特征选择
 
 ### 1. 降维：
+
 高维特征空间会导致计算效率低下和过拟合。应用主成分分析 (PCA) 或 t 分布随机邻域嵌入 (t-SNE) 等技术在减少维度的同时保留有效信息。
 
 ### 2. 特征重要性：
+
 使用随机森林 (RF)、梯度提升或类似模型来评估特征重要性。这有助于识别哪些特征对模型的预测能力贡献最大。
 
 ### 3. 相关性分析：
+
 高相关性的特征可能会引入冗余。相关性分析识别并消除冗余特征，提高模型效率。
 
 ### 4. 领域专家整合：
+
 领域专家审查所选特征，以确保它们与基于 IoT 的脆弱环境的特征一致。这一步骤确保了所选特征从实践角度来看是有意义的。
 
 #增强基于 IoT 的脆弱环境中的入侵检测
@@ -2067,13 +1904,13 @@ Mohandas 等人的研究强调了医学科学。由于智能技术的快速发�
 
 在本小节中，我们介绍了用于评估入侵检测模型有效性的性能指标。这些指标包括真正率 (TPR)、假阳性率 (FPR)、准确率、精确率、召回率、F1 分以及接收器工作特征曲线下面积 (AUC-ROC)。我们解释了每个指标在评估模型准确且高效检测入侵能力方面的意义。
 
-## 5.6.2 评估方法论描述
+### 5.6.2 评估方法论描述
 
 在这里，我们提供了评估方法的概述，以评估我们的 FL-ID 系统的性能。我们解释了实验设置，包括参与的 IoT 设备数量、联邦学习持续的时间以及设备与中央服务器之间的通信频率。
 
 我们讨论了每个联邦学习回合中收集的指标以及确定收敛的停止标准。我们还针对评估过程中的任何潜在偏差或局限性提出了缓解这些偏的策略。
 
-## 5.6.3 用于比较的基准模型
+### 5.6.3 用于比较的基准模型
 
 在本小节中，我们介绍了用于与我们的 FL-ID 系统进行性能比较的基准模型。这些基准模型可能支持向量机 (SVM)、决策树 (DT) 或集成学习方法 (RF)。
 
@@ -2107,14 +1944,10 @@ Mohandas 等人的研究强调了医学科学。由于智能技术的快速发�
 
 准确率：测试集中所有实例中被正确分类实例的百分比。
 
-
-
-
-[content]
-
 # 增强基于 IoT 的脆弱环境中的入侵检测
 
 ## 表 5.1
+
 入侵检测分类器的性能指标对比
 
 | 指标 | FL-ID | SVM | DT | RF | NB | k-NN |
@@ -2126,8 +1959,11 @@ Mohandas 等人的研究强调了医学科学。由于智能技术的快速发�
 | AUC-ROC | 0.95 | 0.92 | 0.88 | 0.93 | 0.88 | 0.90 |
 
 精准率：在所有分类为正类的实例中，真正例（被正确检测到的入侵）的百分比。图 5.3 表示了不同分类器的准确率得分。
+
 召回率：在所有正实例中，真正例（被正确检测到的入侵）的百分比。
+
 F1 分数：精准率和召回率的调和平均数，提供了模型性能的平衡衡量。
+
 AUC-ROC：接收者工作曲线下的面积，衡量了模型区分正例和负例实例的能力。
 
 ![](img/aeaf5e4a1e1020ca53a1da35e316de95_125_0.png)
@@ -2203,9 +2039,13 @@ RF 在召回率方面表现出具有竞争力的性能，使其适用于识别�
 我们使用以下指标来评估模型：
 
 - 准确率：所有实例中正确分类实例的百分比。
-- 精准率：在所有分类为正类（预测攻击）的实例中，真正例（正确检测到的攻击）的百分比。
+
+
+
+精准率：在所有分类为正类（预测攻击）的实例中，真正例（正确检测到的攻击）的百分比。
 
 ## 表 5.2
+
 不同攻击类型的入侵检测分类器性能对比
 
 | 攻击名称 | FL-ID | SVM | RF | k-NN |
@@ -2227,27 +2067,24 @@ RF 在召回率方面表现出具有竞争力的性能，使其适用于识别�
 | 正常 | 0.98 | 0.97 | 0.96 | 0.95 |
 
 召回率：在所有实际正例（真实攻击）中，真正例（正确检测到的攻击）的百分比。
+
 F1 分数：精准率和召回率的调和平均数，提供了模型性能的平衡衡量。
+
 AUC-ROC：接收者工作曲线下的面积，衡量了模型区分正例和负例实例的能力。
-
-[/content]
-
-
-
 
 # 增强基于物联网的脆弱环境中的入侵检测
 
-F1 分数：FL-ID 在不同攻击类型和正常类别中均一致实现了高 F1 分数，表明其在精确率和召回率之间取得了平衡权衡。
+F1 分数：`FL-ID` 在不同攻击类型和正常类别中均一致实现了高 F1 分数，表明其在精确率和召回率之间取得了平衡权衡。
 
-AUC-ROC：FL-ID 在大多数攻击类型下表现出优异的 AUC-ROC 分数，证明了其有效区分正负样本的能力。
+AUC-ROC：`FL-ID` 在大多数攻击类型下表现出优异的 AUC-ROC 分数，证明了其有效区分正负样本的能力。
 
 # 洞察
 
-FL-ID 模型在各种攻击类型和正常类别中显示出强大的泛化性能。这凸显了联邦学习在增强基于物联网的脆弱环境入侵检测方面的有效性。FL-ID 的卓越性能使其能够在维护数据隐私的同时利用来自多种 IoT 设备的知识，从而提高不同攻击类的入侵检测能力。
+`FL-ID` 模型在各种攻击类型和正常类别中显示出强大的泛化性能。这凸显了联邦学习在增强基于物联网的脆弱环境入侵检测方面的有效性。`FL-ID` 的卓越性能使其能够在维护数据隐私的同时利用来自多种 IoT 设备的知识，从而提高不同攻击类的入侵检测能力。
 
-RF 和 k-NN 在若干攻击类型中也表现出具有竞争力的性能，使其适用于识别大多数实例至关重要的场景，即使是以一些误报为代价。
+`RF` 和 `k-NN` 在若干攻击类型中也表现出具有竞争力的性能，使其适用于识别大多数实例至关重要的场景，即使是以一些误报为代价。
 
-对于正常实例的高准确性和性能证明了 FL-ID 在识别网络流量方面的有效性，这对于可靠的入侵检测至关重要。性能比较结果表明，联邦学习（FL-ID）在基于物联网的脆弱环境的入侵检测方面优于传统架构。它在保护数据隐私的同时利用分布式设备知识的能力，有助于其卓越性能和真实世界的部署潜力。然而，对更大、更多化的数据集进行进一步评估，并解决与通信效率和模型更新相关的挑战，对于成功的真实世界部署至关重要。
+对于正常实例的高准确性和性能证明了 `FL-ID` 在识别网络流量方面的有效性，这对于可靠的入侵检测至关重要。性能比较结果表明，联邦学习（`FL-ID`）在基于物联网的脆弱环境的入侵检测方面优于传统架构。它在保护数据隐私的同时利用分布式设备知识的能力，有助于其卓越性能和真实世界的部署潜力。然而，对更大、更多化的数据集进行进一步评估，并解决与通信效率和模型更新相关的挑战，对于成功的真实世界部署至关重要。
 
 ## 5.8 安全与隐私考虑
 
@@ -2273,7 +2110,7 @@ RF 和 k-NN 在若干攻击类型中也表现出具有竞争力的性能，使�
 
 ### 5.9.1 对抗攻击下的联邦学习模型评估
 
-在本节中，我们评估了 FL-ID 模型应对 IoT 环境中常见的各种对抗攻击的鲁棒性。我们考虑了规避攻击、投毒攻击和数据操纵攻击，并评估了模型在这些场景下的性能。我们展示了评估结果，包括攻击成功率以及对模型准确性和检测能力的影响。我们讨论了识别出的漏洞，并提出了防御机制以增强模型对对抗行为的抵抗力。
+在本节中，我们评估了 `FL-ID` 模型应对 IoT 环境中常见的各种对抗攻击的鲁棒性。我们考虑了规避攻击、投毒攻击和数据操纵攻击，并评估了模型在这些场景下的性能。我们展示了评估结果，包括攻击成功率以及对模型准确性和检测能力的影响。我们讨论了识别出的漏洞，并提出了防御机制以增强模型对对抗行为的抵抗力。
 
 ### 5.9.2 模型对动态 IoT 环境的适应研究
 
@@ -2283,7 +2120,7 @@ RF 和 k-NN 在若干攻击类型中也表现出具有竞争力的性能，使�
 
 ### 5.9.3 模型局限性与可能的改进讨论
 
-在本节中，我们讨论了 FL-ID 模型的局限性和潜在改进领域。我们针对模型可能遇到挑战的场景，例如特定设备类型的数据稀缺或由于通信限制导致模型不收敛。
+在本节中，我们讨论了 `FL-ID` 模型的局限性和潜在改进领域。我们针对模型可能遇到挑战的场景，例如特定设备类型的数据稀缺或由于通信限制导致模型不收敛。
 
 我们提出了模型优化技术，例如联邦迁移学习，以增强模型在资源受限的 IoT 设备上的性能。此外，我们讨论了模型准确性、通信效率和隐私保护之间的权衡，以及模型超参数如何影响这些权衡。通过解决安全和隐私考虑、评估联邦学习模型的鲁棒性和适应性并讨论可能的改进，我们确保了所提的入侵检测系统在真实的基于物联网的脆弱环境中具有韧性和有效。此外，我们为加强 IoT 应用背景下联邦学习的整体安全和隐私提供了见解。
 
@@ -2291,7 +2128,7 @@ RF 和 k-NN 在若干攻击类型中也表现出具有竞争力的性能，使�
 
 ### 5.10.1 在 IoT 环境中部署联邦学习的实际考虑
 
-在本节中，我们讨论了在真实 IoT 环境中部署 FL-ID 系统的实际考虑。我们解决了在资源受限的 IoT 设备中实现联邦学习的问题，包括模型更新、通信协议和数据同步。
+在本节中，我们讨论了在真实 IoT 环境中部署 `FL-ID` 系统的实际考虑。我们解决了在资源受限的 IoT 设备中实现联邦学习的问题，包括模型更新、通信协议和数据同步。
 
 我们探索了联邦学习对设备电池寿命、内存使用和处理能力的影响，并提出了优化技术以确保高效可持续的运行。我们还讨论了通信开销及其对网络带宽和延迟的影响，并提出了最小化数据传输需求的策略。
 
@@ -2299,17 +2136,13 @@ RF 和 k-NN 在若干攻击类型中也表现出具有竞争力的性能，使�
 
 ### 5.10.2 部署过程中面临的挑战与局限性
 
-在本节中，我们识别了在 IoT 环境中部署 FL-ID 系统过程中面临的挑战和局限性。我们讨论了可能的
-
-
-
-与隐私考量、数据安全和模型聚合漏洞相关的问题。我们应对了处理来自不同 IoT 设备的异构数据中的挑战，以及对领域适应技术以确保模型在各种 IoT 环境中泛化能力的需求。此外，我们讨论了将联邦学习过程扩展到大量设备的困难性，并提出了在此类场景下维护通信效率和模型收敛的方法。
+在本节中，我们识别了在 IoT 环境中部署 `FL-ID` 系统过程中面临的挑战和局限性。我们讨论了可能的与隐私考量、数据安全和模型聚合漏洞相关的问题。我们应对了处理来自不同 IoT 设备的异构数据中的挑战，以及对领域适应技术以确保模型在各种 IoT 环境中泛化能力的需求。此外，我们讨论了将联邦学习过程扩展到大量设备的困难性，并提出了在此类场景下维护通信效率和模型收敛的方法。
 
 此外，我们还识别了与模型更新和版本控制相关的潜在问题，特别是在处理多种设备类型和固件版本时。我们讨论了在保持后兼容性的同时确保平滑更新的技术。
 
 ### 5.10.3 成功实施案例研究与教训
 
-在本小节中，我们展示了 FL-ID 系统在 IoT 环境中成功实施的案例研究。我们重点介绍了部署该系统的应用和行业，展示了通过联邦学习实现的收益和改进。
+在本小节中，我们展示了 `FL-ID` 系统在 IoT 环境中成功实施的案例研究。我们重点介绍了部署该系统的应用和行业，展示了通过联邦学习实现的收益和改进。
 
 我们讨论了每次部署过程中面临的挑战以及克服这些挑战所采用的策略。这些案例研究为联邦学习在保护基于 IoT 的脆弱环境方面的实用性和有效性提供了宝贵的见解。
 
@@ -2338,32 +2171,48 @@ RF 和 k-NN 在若干攻击类型中也表现出具有竞争力的性能，使�
 ## 参考文献
 
 - 1. Abadi, M., Chu., Goodfellow, I., McMahan, B., Mironov, I., Talwar, K., & Zhang, L. (2016). Deep learning with differential privacy. Proceedings of the 2016 ACM SIGSAC Conference on Computer and Communications Security, 308–318.
+
 - 2. Bonawitz, K., Ivanov, V., Kreuter, B., Marcione, A., McMahan, H. B., Patel, S., ... & Waldo, J. (2019). Towards federated learning at scale: System design. arXiv preprint arXiv:1902.01046.
 
 # 用于增强网络防御的大数据与边缘智能
 
 - 3. Li
+
 - 4. Yang, Q., Liu, Y., Chen, T., & Tong, Y. (2019). Federated learning: Concept and applications. ACM Transactions on Intelligent Systems and Technology (TIST), 10(2), 12.
+
 - 5. Mcahan, B., Moore, E., Ramage, D., Danson, S., & Arcas, B. A. (2017). Communication-efficient learning of deep networks from decentralized data. Proceedings of the 20th International Conference on Artificial Intelligence and Statistics, 1273–1282.
+
 - 6. Chen, Z., Xu, Zhang, K., & Yu, S. (2020). A survey of federated learning: From model to system. arXivXiv:2019.07857.
+
 - 7. Zhao, Y., Chen, M., Jin, S., & Hu, Y. (2021). Federated learning: Challenges and directions. IEEE Internet of Things Journal, 8(3), 1748–1757.
+
 - 8. Bagdasaryan, E., Veit, A., Hu, Y., Estrin, D., & Shmatikov, V. (2020). How to back federated learning. Proceedings of the 8th International Conference on Learning (ICLR).
+
 - 9. Fallah, Y., Shi, X., & Hariri, S. (2019). Adversarial machine learning in detection systems: A survey. Computers & Security, 83, 279–300.
+
 - 10. Bhagoj, A. N., Cullina, D., & Mitt, P. (2018). Poisoning attacks against machine learning models. Proceedings of the 35th International Conference on Machine Learning, 289–298.
+
 - 11. Praveen, S., Hasan Ali, M., Budhi, D., Prakash, R., & Thirugan, T. (2023). IoT-enabled analytics in industry 4.0 smart manufacturing. International Journal of Pattern Recognition and Intelligence, 37
+
 - 12. Praveen, S., Harwar, M., Prakash, C., Malliga, L., & Chandrav Gandhi, G. (2023). Secure federated learning for continuous monitoring in wireless network. Wireless Networks, 1–27.
+
 - 13. Jain, I. V., Sai Kumar, D., Lathi, B., Bhanu Anil, A., & Mahadev, A. (2022). A network monitoring model based on neural networks for unbiased network activity. 2022 62th International Conference on Electronics, Communication and Aerospace Technology (ICECA), pp.693–697.
+
 - 14. Srinath, A., Praveen, S. P., Bharav Ramudu, G., & Swapna, D. (2023). G-secured data management for cyber threats using artificial intelligence. 2023 5th International Conference on Smart Systems and Innovative Technology (ICSSIT), pp.1267–1274.
+
 - 15. Roman, S., et al. (2013). On the features and challenges of security and privacy in distributed Internet of things. Computer Networks, 10, 2266–2279.
+
 - 16. Li, H., et al. (2020). Federated learning in mobile edge networks: a comprehensive survey. IEEE Surveys & Tutorials, 22(3), 2031–2063.
+
 - 17. Hussain, F. K., et al. (2019). Review of machine learning in wireless sensor network: deployment models, challenges and open research issues. IEEE Access, pp.6557–65615.
+
 - 18. Hassan, M. M., et al. (2020). Machine learning for IoT security: a survey. IEEE Internet of Things Journal, 22(3), 1686–1721.
+
 - 19. Fernandes, S. R. L., et al. (2016). Security challenges in the IP-based internet of things. IEEE Wireless Communications, 30, 92–100.
+
+
+
 - 20. Sirisha, U., Praveen, S. P., Srinivasa, P. N., Barsocchi, P., & Bhoi, A. K. (2022). Statistical analysis of design aspects of YOLO-based deep learning models for object detection aspects. International Journal of Intelligent Systems, 16(1), 126.
-
-
-
-
 
 # 增强基于物联网的脆弱环境中的入侵检测
 
@@ -2421,10 +2270,6 @@ RF 和 k-NN 在若干攻击类型中也表现出具有竞争力的性能，使�
 
 增强基于物联网环境的入侵检测是一个快速发展的领域。尽管机器学习和深度学习提供了显著的进展，但资源限制、隐私和扩展性等挑战仍然存在。未来的研究应聚焦于开发更稳健、高效且去中心化的检测机制，以适应物联网安全的动态格局。
 
-
-
-
-
 ## 有效入侵检测
 
 数量远多于其他（恶意活动）。这种不平衡的存在导致分类和检测模型倾向于多数类产生偏见，从而导致误报数量的增加。高类别的分布不平衡问题在开发入侵检测系统（IDS）的背景下带来了挑战。具体而言，它涉及选择合适的分类模型以有效检测威胁的决策过程。分类模型是 IDS 检测引擎的核心组件，其效能显著影响系统的整体性能。一个优雅的 IDS 是指能够部署了能够在恶劣条件下敏锐识别威胁的分类模型。为了使 IDS 具有健壮性，其分类模型应该擅长以最高的准确率检测并识别威胁，并具有高真阳性率（TP Rate）。重要的是，它必须在训练数据集高度不平衡的情况下实现这一目标。在准确性和类别平衡之间取得平衡的能力是设计良好的 IDS 的标志。
@@ -2441,8 +2286,9 @@ RF 和 k-NN 在若干攻击类型中也表现出具有竞争力的性能，使�
 
 IDS 采用了多种技术，包括用于特定攻击决策的贝叶斯网络（随特征和攻击类别的扩展而快速增长 [23]）、朴素贝叶斯分类器（通过 HTTP 流量特征选择和分类提高检测率 [24–26]）、用于朴素贝叶斯分类器特征子的多目标优化方法 [25]，以及在威胁检测中实现高准确率的传统网络 [27, 28]。这些方法提供了不同程度的有效性和适用性，但其性能取决于数据集特征、特征选择和扩展性，因此在实际入侵检测场景中需要仔细的评估。
 
-各种形式的神经网络已应用于协作 IDS。例如，Zhang 等 [29] 利用神经网络在计算环境中识别泛洪攻击，测试了五种神经网络类型，包括反传播（BP）、感知机、感知机反传播混合（PBH）、径基函数和模糊 ARTMAP。结果显示了 BP 和 PBH 在检测中的优越性，具有较低的均方误差（MSE）。此外，用户行为建模 [30] 结合了神经网络和专家系统用于入侵检测，神经网络作为可疑记录的初步过滤器，随后由专家系统进行详细分析。这些系统在使用最新数据集的实际 IDS 环境中表现良好。P2P Bot 检测将自适应多层前馈神经网络与决策树相结合 [31]，使用分类回归树进行特征选择以执行检测过程。结果利用稳健的反传播学习算法展示了卓越的检测准确率，达到 99.08%，误报率（FP）为 0.75%。一种进化模型预测了神经遗传方法作为入侵检测的预警 [32]，在模拟数据集上预测成功，准确率达到 95%，但必须使用真实入侵数据集验证该模型的有效性。此外，一种基于基函数（RBF）的神经网络被提用于入侵检测，并在 DARPA 数据集的 13 个实例和 700 个随机实例上进行了测试，产生了极低的均方误差（MSE） 0.00638。该模型声称具有相似的准确率，在 41 个特征下达到 99.48%，在 13 个特征下达到 99.41%。最后，反传播神经网络（BPNN）由于其简单性（减少隐藏层并调节用于拓扑配置的权重值）被广泛应用于入侵检测 [26, 33, 34]。Kim 等人将 PCA 作为特征选择方法与 BPNN 结合，并在 1000 个实例上进行了测试，主要针对正常和 DoS 攻击实例。然而，他们方法的局限性在于仅考虑了 DoS 攻击实例，这可能会限制其在包含多种攻击类型的高类别不平衡数据集中的性能。
 
+
+各种形式的神经网络已应用于协作 IDS。例如，Zhang 等 [29] 利用神经网络在计算环境中识别泛洪攻击，测试了五种神经网络类型，包括反传播（BP）、感知机、感知机反传播混合（PBH）、径基函数和模糊 ARTMAP。结果显示了 BP 和 PBH 在检测中的优越性，具有较低的均方误差（MSE）。此外，用户行为建模 [30] 结合了神经网络和专家系统用于入侵检测，神经网络作为可疑记录的初步过滤器，随后由专家系统进行详细分析。这些系统在使用最新数据集的实际 IDS 环境中表现良好。P2P Bot 检测将自适应多层前馈神经网络与决策树相结合 [31]，使用分类回归树进行特征选择以执行检测过程。结果利用稳健的反传播学习算法展示了卓越的检测准确率，达到 99.08%，误报率（FP）为 0.75%。一种进化模型预测了神经遗传方法作为入侵检测的预警 [32]，在模拟数据集上预测成功，准确率达到 95%，但必须使用真实入侵数据集验证该模型的有效性。此外，一种基于基函数（RBF）的神经网络被提用于入侵检测，并在 DARPA 数据集的 13 个实例和 700 个随机实例上进行了测试，产生了极低的均方误差（MSE） 0.00638。该模型声称具有相似的准确率，在 41 个特征下达到 99.48%，在 13 个特征下达到 99.41%。最后，反传播神经网络（BPNN）由于其简单性（减少隐藏层并调节用于拓扑配置的权重值）被广泛应用于入侵检测 [26, 33, 34]。Kim 等人将 PCA 作为特征选择方法与 BPNN 结合，并在 1000 个实例上进行了测试，主要针对正常和 DoS 攻击实例。然而，他们方法的局限性在于仅考虑了 DoS 攻击实例，这可能会限制其在包含多种攻击类型的高类别不平衡数据集中的性能。
 
 实例，通过 BP神经网络（BPNNs）检测 DoS 攻击实现了 93.95% 的准确率 [33]。另一种方法采用了二分类和多分类神经模糊推理系统（NFIS），实现了 89.43% 到 91.14% 的检测率以及极低的误报率 [35]。决策树因其时间复杂度高效且检测准确率高被广泛采用 [36, 37]。例如，基于 Snort 的使用决策树分类的 IDS 通过估计 Snort 优先级，成功地以 99% 的准确率识别了威胁 [37]。研究还引入了混合方法，例如基于 C4.5 的多层混合 IDS 决策树分类结合多层感知器（MCP）分类器，其展示了令人印象深刻的 99.50% 检测率和 0.03% 的低误报率 [38]。NeuroC4.5 是一种基于神经网络的决策树，对 DoS 攻击的检测率达到了 94.55% [39]。Hamed 等人开发的模型中，递归特征注意力（RFA）特征选择有助于提高检测性能 [40]。此外，Sidique 等人提出了一种使用 XGBoost 针对高速数据网络的并行机器学习技术，实现了卓越的 99.60% 检测率和 99.65% 的准确率，且误报率极低 [41]。隐藏马尔可夫模型（HMMs）虽有应用，但在建模标注之间的长距离依赖方面表现不佳 [30, 42]。其他基于规则的机制和监督模型（包括逻辑回归、深度信念和 k 近邻模型）也做出了贡献，每种方法根据特定领域和约束都有自身的优势和局限性 [43, 44]。
 
@@ -2452,40 +2298,51 @@ IDS 采用了多种技术，包括用于特定攻击决策的贝叶斯网络（�
 
 ### 6.3.1 数据预处理
 
-在 IDS 训练和测试的数据准备阶段，我们使用了加拿大网络安全研究所提供的 CICIDS2017 [45, 46] 数据集。该数据集非常有价值，因为它包含了最极端和最常见的网络攻击数据。然而，由于其规模巨大（包含 2,830,743 个实例和 85 个特征），它对 IDS 成了潜在的瓶颈。为了解决这一挑战，我们决定选择更易于管理的特征数量，同时保持训练和测试的合理规模。在特征选择和采样之前，关键步骤是移除数据集中的重复实例，以防止样本选择过程中的任何偏差。我们通过采用 Weka 的无监督 `RemoveDuplicates` 过滤器实现了这一点。随后，对剩余的唯一实例进行特征选择和后续采样程序。
+在 IDS 训练和测试的数据准备阶段，我们使用了加拿大网络安全研究所提供的 `CICIDS2017` [45, 46] 数据集。该数据集非常有价值，因为它包含了最极端和最常见的网络攻击数据。然而，由于其规模巨大（包含 2,830,743 个实例和 85 个特征），它对 IDS 成了潜在的瓶颈。为了解决这一挑战，我们决定选择更易于管理的特征数量，同时保持训练和测试的合理规模。在特征选择和采样之前，关键步骤是移除数据集中的重复实例，以防止样本选择过程中的任何偏差。我们通过采用 `Weka` 的无监督 `RemoveDuplicates` 过滤器实现了这一点。随后，对剩余的唯一实例进行特征选择和后续采样程序。
 
 ![](img/aeaf5e4a1e1020ca53a1da35e316de95_145_0.png)
 
 **图 6.1** 提出的用于检测威胁的 IDS。
 
-### 6.3.1.1 无限特征选择 (IFS)
+#### 6.3.1.1 无限特征选择 (IFS)
 
-在入侵检测领域，无限特征选择（IFS）算法 [47] 提供了一种强大的特征选择方法。与其他特征选择方法不同，IFS 分两个不同的步骤运行。首先，它独立对数据集中的每个特征进行排名，对其相关性进行无监督评估。然后，它采用稳健的交叉验证策略选择性能最佳的前 m 个特征。IFS 与其他方法相比之处在于其包容性——每个特征都对每个特征权重的评估做出贡献。该方法通过从整个特征集构建亲性图来实现，其中特征之间的关系被表示为连接它们的路径。通过考虑所有特征的集体影响，IFS 增强了 IDS 的准确性和效率，最终使其能够以更高的精度和有效性识别并缓解潜在威胁。
+在入侵检测领域，无限特征选择（`IFS`）算法 [47] 提供了一种强大的特征选择方法。与其他特征选择方法不同，`IFS` 分两个不同的步骤运行。首先，它独立对数据集中的每个特征进行排名，对其相关性进行无监督评估。然后，它采用稳健的交叉验证策略选择性能最佳的前 m 个特征。`IFS` 与其他方法相比之处在于其包容性——每个特征都对每个特征权重的评估做出贡献。该方法通过从整个特征集构建亲性图来实现，其中特征之间的关系被表示为连接它们的路径。通过考虑所有特征的集体影响，`IFS` 增强了 IDS 的准确性和效率，最终使其能够以更高的精度和有效性识别并缓解潜在威胁。
 
-### 6.3.1.2 生成训练数据和测试数据
+#### 6.3.1.2 生成训练数据和测试数据
 
-在仔细选择所需特征后，连接了从数据集中提取训练和测试数据的过程。为了确保对威胁检测准确率进行公平评估，我们采取了刻意的方法，使训练集（T₁）和测试集（T₂）的交集故意为空（T₁ ∩ T₂ = ∅）。这是通过实现两种不同的基于过滤器的技术实现的：蓄水采样（Reservoir sampling）和 SRF，两者均用于随机选择训练和测试数据。值得注意的是，蓄水采样的特点在于数据流中的每个实例被包含在蓄水中的概率均等。这种机制在处理大规模数据集时特别具有优势，因为内存限制使得加载整个数据集变得切实际。这一选择的动机是出于高效生成训练样本的需求。因此，使用蓄水采样随机生成的数据具有以下独特特征
+在仔细选择所需特征后，连接了从数据集中提取训练和测试数据的过程。为了确保对威胁检测准确率进行公平评估，我们采取了刻意的方法，使训练集（`T₁`）和测试集（`T₂`）的交集故意为空（`T₁ ∩ T₂ = ∅`）。这是通过实现两种不同的基于过滤器的技术实现的：蓄水采样（`Reservoir sampling`）和 `SRF`，两者均用于随机选择训练和测试数据。值得注意的是，蓄水采样的特点在于数据流中的每个实例被包含在蓄水中的概率均等。这种机制在处理大规模数据集时特别具有优势，因为内存限制使得加载整个数据集变得切实际。这一选择的动机是出于高效生成训练样本的需求。因此，使用蓄水采样随机生成的数据具有以下独特特征
 
-同样，测试数据已生成为 10 组具有相似实例数量和随机攻击比例的不同集合。测试实例使用 Weka 中提供的 SRF 过滤器同质生成。排除训练实例后的数据集通过该过滤器生成测试用例。测试用例包含具有相似数量但类别平衡不同的实例。这为评估我们的 IDS 创造了一个无偏的环境。测试数据总共考虑了 3586 个实例，并分为 10 个等份作为测试用例。
+同样，测试数据已生成为 10 组具有相似实例数量和随机攻击比例的不同集合。测试实例使用 `Weka` 中提供的 `SRF` 过滤器同质生成。排除训练实例后的数据集通过该过滤器生成测试用例。测试用例包含具有相似数量但类别平衡不同的实例。这为评估我们的 IDS 创造了一个无偏的环境。测试数据总共考虑了 3586 个实例，并分为 10 个等份作为测试用例。
 
 #### 表 6.1 蓄水采样生成的训练数据集特征
 
 | 特征 | 描述 |
+
 |---|---|
-| 数据集名称 | CICIDS2017 |
+
+| 数据集名称 | `CICIDS2017` |
+
 | 类别类型 | 多分类 (Multi Class) |
+
 | 生成的训练实例数量 | 7166 |
+
 | 不同类别数量 | 15 |
+
 | 少数类 | 类标签 | BENIGN |
+
 | | 实例 | 1658 |
+
 | | 占总实例百分比 | 23.13% |
+
 | 多数类 | 类标签 | HEARTBLEED |
+
 | | 实例 | 7 |
+
 | | 占总实例百分比 | 0.09% |
 
 ### 6.3.2 训练 IDS 模型
 
-IDS 模型通过 Ibarguren 等人 [11] 提出的 CTC 算法进行了强化。CTC 采用了一种创新的重采样方法 [12]，该方法利用了“覆盖率”（coverage）概念。覆盖率代表了训练样本中任何类别在具有不同类别分布的子样本中应存在的最小实例百分比。该方法采用动态策略来确定最佳样本数量。这种确定基于多种标准，包括数据集的类别分布、所使用的子样本类型以及期望的覆盖值。与依赖固定数量子样本的传统方法不同，所选参数是可调整的。值得注意的是，在训练数据存在显著类别不平衡的情况下，会生成更多的子样本以保持一致的覆盖率。这种方法的独特性使其使其非常适用于我们的 IDS 场景，确保了在面对训练数据中显著的类别不平衡时具有稳健的性能。
+IDS 模型通过 Ibarguren 等人 [11] 提出的 `CTC` 算法进行了强化。`CTC` 采用了一种创新的重采样方法 [12]，该方法利用了“覆盖率”（coverage）概念。覆盖率代表了训练样本中任何类别在具有不同类别分布的子样本中应存在的最小实例百分比。该方法采用动态策略来确定最佳样本数量。这种确定基于多种标准，包括数据集的类别分布、所使用的子样本类型以及期望的覆盖值。与依赖固定数量子样本的传统方法不同，所选参数是可调整的。值得注意的是，在训练数据存在显著类别不平衡的情况下，会生成更多的子样本以保持一致的覆盖率。这种方法的独特性使其使其非常适用于我们的 IDS 场景，确保了在面对训练数据中显著的类别不平衡时具有稳健的性能。
 
 ## 6.4 结果与讨论
 
@@ -2494,25 +2351,38 @@ IDS 引擎通过 10 个测试用例进行了验证。评估结果通过表 6.2-1
 #### 表 6.2 测试用例 #1 的检测器分类性能
 
 | 攻击组/正常 | 攻击/正常 | TPR | FPR | PPV | ROC |
+
 |---|---|---|---|---|---|
+
 | BENIGN | BENIGN | 0.94 | 0 | 0 | 1 |
+
 | PATOR | SSH | 1 | 0.003 | 0.947 | 0.999 |
+
 | | FTP | 1 | 0.003 | 0.958 | 0.999 |
+
 | HEARTBLEED | HEARTBLEED | 0 | 0 | 0 | 1 |
+
 | DOS | SLOWLORIS | 0.941 | 0 | 1 | 0.971 |
+
 | | SLOWHTPTTEST | 1 | 0 | 0 | 1 |
+
 | | HULK | 1 | 0.003 | 0.981 | 0.999 |
+
 | | GOLDENEYE | 1 | 0.006 | 0.939 | 0.998 |
+
 | INFILTRATION | INFILTRATE | 1 | 0 | 0 | 1 |
+
 | WEB ATTACK | BRUTE FORCE | 1 | 0.006 | 0.846 | 1 |
+
 | | XSS | 1 | 0.003 | 0.9 | 1 |
+
 | | SQL IN | 0 | 0 | 0 | 0.5 |
+
 | PORTSCAN | PORTSCAN | 0.955 | 0 | 1 | 0.995 |
+
 | DDOS | DDOS | 1 | 0 | 1 | 1 |
+
 | BOT | BOT | 1 | 0.003 | 0.929 | 1 |
-
-
-
 
 # 用于增强网络防御的大数据与智能
 
@@ -2531,21 +2401,37 @@ IDS 引擎通过 10 个测试用例进行了验证。评估结果通过表 6.2-1
 ## 有效入侵检测
 
 | 攻击 | 检测为 | a | b | c | d | e | f | g | h | i | j | k | l | m | n |
+
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 良性 (BENIGN) | | a | 8 | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 0 |
+
+| 良性 (BENIGN) | | a | 8 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 0 |
+
 | SSH (PATATOR) | | b | 0 | 8 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
 | FTP (PATATOR) | | c | 0 | 0 | 2 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
 | HEARTBLEED | | d | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
 | DOS (SLOWORIS) | | e | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
+
 | DOS (SLOWHTTPTEST) | | f | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
 | DOS (HULK) | | g | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 5 | 3 | 0 | 0 | 0 | 0 | 0 |
+
 | DOS (GOLDENEYE) | | h | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 | 0 | 0 |
+
 | 渗透 (INFILTRATION) | | i | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 |
+
 | 攻击 (WEB ATTACK) (BF) | | j | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |
+
 | 攻击 (WEB ATTACK) (XSS) | | k | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 9 | 0 |
+
 | 攻击 (WEB ATTACK) (SQL INJ) | | l | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |
+
 | 端口扫描 (PORTSCAN) | | m | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 4 | 2 |
+
 | DDOS | | n | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 4 |
+
 | 机器人 (BOT) | | o | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 13 |
 
 **图 6.4** 测试用例 #1 的混淆矩阵。
@@ -2553,20 +2439,35 @@ IDS 引擎通过 10 个测试用例进行了验证。评估结果通过表 6.2-1
 **表 6.3** 测试用例 #2 的攻击性能
 
 | 攻击组/良性 | 攻击/良性 | TPR | FPR | PPV | ROC |
+
 |---|---|---|---|---|---|
+
 | 良性 (BENIGN) | 良性 (BENIGN) | 0.88 | 0 | 1 | 0.97 |
+
 | PATATOR | SSH | 1 | 0 | 1 | 1 |
+
 | | FTP | 1 | 0 | 1 | 1 |
+
 | | HEARTBLEED | 1 | 0 | 1 | 1 |
+
 | | SLOWORIS | 1 | 0.003 | 0.98 | 1 |
+
 | | SLOWHTTPTEST | 1 | 0.013 | 0.96 | 1 |
+
 | | HULK | 1 | 0 | 1 | 1 |
+
 | | GOLDENEY | 1 | 0 | 1 | 1 |
+
 | | INFILTRATION | 1 | 0.003 | 0.917 | 1 |
+
 | | XSS | 1 | 0 | 1 | 1 |
+
 | | SQL INJ | 0 | 0 | 0.5 | 0 |
+
 | | PORTSCAN | 1 | 0.006 | 0.957 | 1 |
+
 | | DDOS | 1 | 0.006 | 0.992 | 1 |
+
 | | BOT | 1 | 0.003 | 0.929 | 1 |
 
 ![](img/aeaf5e4a1e1020ca53a1da35e316de95_148_0.png)
@@ -2578,21 +2479,39 @@ IDS 引擎通过 10 个测试用例进行了验证。评估结果通过表 6.2-1
 **图 6.6** 测试用例 #2 的预测图。
 
 | 攻击 | 检测为 | a | b | c | d | e | f | g | h | i | j | k | l | m | n | o |
+
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+
 | 良性 (BENIGN) | | a | 7 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2 |
+
 | SSH (PATATOR) | | b | 0 | 8 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
 | FTP (PATATOR) | | c | 0 | 0 | 9 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
 | HEARTBLEED | | d | 0 | 0 | 0 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
 | DOS (SLOWORIS) | | e | 0 | 0 | 0 | 0 | 5 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
 | DOS (SLOWHTTPTEST) | | f | 0 | 0 | 0 | 0 | 0 | 6 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
 | DOS (HULK) | | g | 0 | 0 | 0 | 0 | 0 | 0 | 7 | 0 | 0 | 0 | 0 | 0 |
+
 | DOS (GOLDENEY) | | h | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 8 | 0 | 0 | 0 | 0 |
+
 | 渗透 (INFILTRATION) | | i | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 9 | 0 | 0 | 0 |
+
 | 攻击 (WEB ATTACK) (BF) | | j | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 11 | 0 | 0 |
+
+
+
 | 攻击 (WEB ATTACK) (XSS) | | k | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 10 | 0 | 0 |
+
 | 攻击 (WEB ATTACK) (SQL INJ) | | l | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |
+
 | 端口扫描 (PORTSCAN) | | m | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 14 | 0 |
+
 | DDOS | | n | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 40 |
+
 | 机器人 (BOT) | | o | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 43 |
 
 **图 6.7** 测试用例 #2 的混淆矩阵。
@@ -2662,10 +2581,6 @@ IDS 引擎通过 10 个测试用例进行了验证。评估结果通过表 6.2-1
 | | PORTSCAN | PORTSCAN | 0.977 | 0 | 1 | 0.999 |
 | | DDOS | DDOS | 1 | 0.003 | 0.976 | 0.998 |
 | | BOT | BOT | 1 | 0.006 | 0.857 | 1 |
-
-
-
-
 
 # 有效入侵检测
 
@@ -2759,8 +2674,7 @@ IDS 引擎通过 10 个测试用例进行了验证。评估结果通过表 6.2-1
 | | XSS | | 0.011 | 0.667 | 1 |
 | | SQL INJ | | |
  | | |
- | 
-) | 端口扫描 (PORTSCAN) | | 1 | 0 | |
+ ) | 端口扫描 (PORTSCAN) | | 1 | 0 | |
 | DDOS | DDOS | | 0.006 | 0.952 | 0.997 |
 | 僵尸网络 (BOT) | BOT | | | 1 | |
 
@@ -2777,19 +2691,35 @@ IDS 引擎通过 10 个测试用例进行了验证。评估结果通过表 6.2-1
 | 攻击类型 | 检测为 | a | b | c | d | e | f | g | h | i | j | k | l | m | n | o |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 正常 (BENIGN) | a | 7 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 2 | | | | |
+
+
+
 | SSH (PATATOR) | b | 0 | 1 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | | | | |
+
 | FTP (PATATOR) | c | 0 | 0 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | | | | |
+
 | HEARTBLEED | d | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | | | | | |
+
 | DOS (SLOWLORIS) | e | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 6 | 2 | 0 | | | |
+
 | DOS (SLOWHTTPTEST) | f | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 5 | 0 | 0 | | | |
+
 | DOS (HULK) | g | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 5 | 1 | 0 | 0 | | | |
+
 | DOS (GOLDENYE) | h | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | | | |
+
 | 渗透 (INFILTRATION) | i | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | | |
+
 | Web 攻击 (BF) | j | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 8 | 1 | 1 | 0 |
+
 | Web 攻击 (XSS) | k | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 9 | 1 | 0 |
+
 | Web 攻击 (SQL INJ) | l | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 9 | 1 |
+
 | 端口扫描 (PORTSCAN) | m | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 4 | 5 | 0 |
+
 | DDOS | n | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 46 | 0 |
+
 | 僵尸网络 (BOT) | o | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 52 |
 
 **图 6.19** 检测器为测试 #6 生成的混淆矩阵。
@@ -2805,7 +2735,7 @@ IDS 引擎通过 10 个测试用例进行了验证。评估结果通过表 6.2-1
 | DOS | SLOWHTTPTEST | | 0 | | 1 |
 | | HULK | | 0.933 | 0 | | 1 |
 | | | | | | | | | | | 1 |
-| 渗透 (INFILTRATION) | 渗透 (INFILTRATION) | | 1 | 0 | | | | |  |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |    | |            |   | |
+| 渗透 (INFILTRATION) | 渗透 (INFILTRATION) | | 1 | 0 | | | | |  |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |    | |            |   | |
 | Web 攻击 | 暴力破解 (BRUTE FORCE) | | 0.003 | 0.97 | | | | | |
 | | XSS | | 0.003 | 0.89 | | |
 | | SQL INJ | | | | |
@@ -2836,10 +2766,6 @@ IDS 引擎通过 10 个测试用例进行了验证。评估结果通过表 6.2-1
 | 僵尸网络 (BOT) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 32 |
 
 **图 6.22** 检测器为测试用例 #7 生成的混淆矩阵。
-
-
-
-
 
 # 用于增强网络防御的大数据与边缘智能
 
@@ -2872,6 +2798,7 @@ IDS 引擎通过 10 个测试用例进行了验证。评估结果通过表 6.2-1
 图 6.25 检测器为测试用例 #8 生成的混淆矩阵。
 
 ### 表 6.10
+
 测试用例 #9 检测器按攻击分类的性能
 
 | 攻击组/正常 | 攻击/正常 | TPR | FPR | PPV | ROC |
@@ -2938,7 +2865,11 @@ IDS 引擎通过 10 个测试用例进行了验证。评估结果通过表 6.2-1
 | | XSS | | 1 | 0.089 | 1 |
 | | SQL INJ | | 1 | 0 | 1 | |
 | 端口扫描 (PORTSCAN) | PORTSCAN | 0.955 | 0.006 | 0.955 | 0.992 |
+
+
+
 | DDOS | DDOS | 1 | 0.006 | 0.952 | 0.997 |
+
 | 机器人 (BOT) | BOT | | 0 | 1 | 1 | |
 
 ![](img/aeaf5e4a1e1020ca53a1da35e316de95_160_0.png)
@@ -2973,7 +2904,7 @@ IDS 引擎通过 10 个测试用例进行了验证。评估结果通过表 6.2-1
 ### 表 6.12 测试用例性能
 
 | 测试用集 | 实例数量 | 准确率 | 分类率 | 均方误差 | IPR | PPV | ROC |
-|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|
 | 测试用例 #01 | 359 | 97.493 | 2.507 | 0.043 | 0.056 | 0.975 | 0.993 |
 | 测试用例 #02 | 359 | 96.939 | 3.064 | 0.0048 | 0.0582 | 0.969 | 0.995 |
 | 测试用例 #03 | 359 | 97.215 | 2.785 | 0.0044 | 0.0567 | 0.972 | 0.994 |
@@ -2993,17 +2924,13 @@ IDS 引擎通过 10 个测试用例进行了验证。评估结果通过表 6.2-1
 | 2.507 | 3.041 | 2.785 | 2.507 | 1.398 | 2.785 | 2.234 | 1.486 | 3.027 | 3.631 | 2.829 |
 | 97.493 | 96.959 | 97.215 | 97.493 | 98.602 | 97.215 | 97.7654 | 95.214 | 96.927 | 96.368 | 97.121 |
 
-+   - 分类率
+- 分类率
 
 6.32 提议的引擎的准确率和分类率。
 
 # 6.33 提议的引擎的真阳性率、精确率、假阳性率和均方误差。
 
-提出了一种 IDS 引擎以应对高不平衡的分类问题。这里考虑的数据集是 CICIDS2017，这是一个最新的数据集，包含一个名为正常的实例和 14 类其他类的实例。挑战在于为这个包含超过 28 万个实例和 85 个特征（且存在于高类别不平衡）的数据集设计 IDS 框架。为了应对这个问题，首先通过一种名为无限潜在特征选择的概率潜图图排序方法对特征进行排序，然后选择所需的特征进行样本生成。采样通过蓄水采样技术进行，该技术将数据集视为数据流，确保每个实例被选中的概率相等。
-
-
-
-
+提出了一种 IDS 引擎以应对高不平衡的分类问题。这里考虑的数据集是 CICIDS2017，这是一个最新的数据集，包含一个名为正常的实例和 14 类其他类的实例。挑战在于为这个包含超过 28 万个实例和 85 个特征且存在于高类别不平衡的数据集设计 IDS 框架。为了应对这个问题，首先通过一种名为无限潜在特征选择的概率潜图图排序方法对特征进行排序，然后选择所需的特征进行样本生成。采样通过蓄水采样技术进行，该技术将数据集视为数据流，确保每个实例被选中的概率相等。
 
 ## 有效入侵检测
 
@@ -3035,11 +2962,19 @@ IDS 引擎通过 10 个测试用例进行了验证。评估结果通过表 6.2-1
 - 19. S. Mukammala, G. Janoski, and A. Sung, "Intrusion detection using neural networks and support machines," in Proceedings of the 2002 International Conference on Neural Networks, IJCNN (No. 02370), pp. 1702–1707. doi: 10.1109/IJCNN.2002.10074
 - 20. T. Ambwani, "Multi support vector machine implementation for intrusion detection," in Proceedings of the International Conference on Neural Networks, vol. 2003, pp. 2300–2305. doi: 10.1109/IJCNN.2003.12377
 - 21. A. Mewada, P. Gedam, S. Khan, and U. M. Reddy, "Network intrusion detection using multiclass support vector machine," International Journal of Computer and Communication Technology, pp. 262–265, 2010. doi: 10.47893/IJCT.2010.1054
+
+
+
 - 22. W. Zhang, S. Teng, H. Hu, D. Xu, and L. Li, "Fuzzy-multi-class support vector machines for cooperative network intrusion detection," in 20th IEEE International Conference on Cognitive Informatics (CCI'10), 2010, pp. 811–818. doi: 10.1109/COGNIF.2010.5599082
+
 - 23. K. Krugel, D. Tu, W. Robertson, and F. Valeur, "Bayesian event classification for intrusion detection," in 19th Annual Computer Security Applications Conference, 2003, pp. 14–23. doi: 10.1109/CSAC.2003.125430
+
 - 24. K. M. Sudar, P. Deepak, and A. Singh al. TFAD: TCP flooding in software-defined networking using proxy-based and machine learning mechanisms. Cluster Computing, vol. 26, pp. 1461–1477, 2023. doi: 10.1007/s10586-022-0366-4
+
 - 25. G. Kumar and K. Kumar, "Design of an evolutionary approach for intrusion detection," The Scientific World Journal, 2013, pp. 1–14. doi: 10.1155/2013/996185
+
 - 26. E. Hodo, et al., "Analysis of IoT networks using neural network intrusion system,”2016 International Symposium on Networks, Computers and Communications (ISCNN), May 2016, pp. 1–6. doi: 10.1109/ISCNN.2016.77440
+
 - 27. E. Hodo, X. Bellekens, E. Iorky, C. Tachtis, and R. Atkinson, "Machine learning approach for detection of nonTor traffic,” in Proceedings of 12th International Conference on Availability, Reliability and Security, Aug. 2017, pp. 1–6. doi: 10.1109/309854.31068
 
 ## 有效入侵检测
@@ -3047,24 +2982,34 @@ IDS 引擎通过 10 个测试用例进行了验证。评估结果通过表 6.2-1
 153
 
 - 29. Z. Zhang. "HIDE: A Hierarchical Network Intrusion Detection Using Statistical Preprocessing and Neural Network Classification." Proceedings of the 2001 IEEE Workshop on Information Assurance and Security, United States Military Academy, NY, pp. 5–6, June 2001, [Online]. Available: https://ieeexplore.ieee.org/document/107195
+
 - 30. X. D. Hoang, J. Hu, and P. Bertok, "A-based anomaly detection using multiple engines and fuzzy logic," Journal of Network and Computer Applications, vol. 32, no. 6, pp. 1219–1228, 2009. doi: 10.1016/j.jnca.2009.05004
+
 - 31. M. Alahuman, L. Zhang, and M. Hossain, "A P2P-network detection using decision tree and adaptive multilayer networks," Neural Computing and Applications, vol. 29, no. 11, pp. 991–1004, 2018.
+
 - 32. S. P. Praveen, S. Srinivasi, and S. Ahmed, "Combining CNNs and Bi-STMs for enhanced network detection: A deep learning," 2023 33rd International Conference on Computing and Information Technology (ICCIT), Riyadh, Saudi Arabia, 2023, pp. 261–268. doi: 10.1109/ICCIT581832
+
 - 33. Z. Chang and C. Manikopoulos, "Detection of denial-of-service attacks through cross-correlation," in 2004 IEEE/SARNO Symposium on Advances in Wireless Communications, pp. 67–70. doi: 10.1109/SARNO.2004.13082
+
 - 34. D. S. Kim, T. Nguyen, and J. Park, "An optimized intrusion detection system using PCA and KNN," in 6th Asia-Pacific Symposium on Information and Telecommunication Technologies, 2005, pp. 356–359. doi: 10.1109/ASIPTT.2005.23684
+
 - 35. A. Noosi, M. Kahani, and R. Mosefi, "Network intrusion detection based on classification," in 2006 International Conference on Computing & Information, June 2006, pp. 1–5. doi: 10.1109/ICCI2006.527608
+
 - 36. N. Ben Amor, S. Benfer, and Z. Elouadi, "Naive Bayes Decision Trees in Intrusion Detection," in Proceedings of the 2004 ACM Symposium on applied computing, Mar. 2004, pp. 420–424. doi: 10.1145/967900.967989
+
 - 37. A. Amar, "A decision tree classifier for intrusion detection priority tagging," Journal of Computer and Communications, vol. 03, no. 04, pp. 52–58, 2015. doi: 10.4236/jcc.2015.34006
+
 - 38. A. Akoyl, M. Habiceyizoglu, and B. Karlik, "Detection of multilayer hybrid classifier with variant features for intrusion detection system," IEEE Transactions on Information and Systems, Vol. 99, no. 7, pp. 1810–1821, 2016. doi: 10.1189/TIS2015.EDP73
+
 - 39. S. Sindhu, G. Sethula, S. Subashani, P. Riyadh, and A. Khan, "An active rule based for network detection using Neuro4.5," in 2006 IEEE India Conference, 2006, pp. 1–5. doi: 10.1109/INDCON.2006.3022
+
 - 40. T. Hamed, R. Raza, and S. Kramer, "Network intrusion system with recursive feature addition and high binary techniques," Computers and Security, vol. 73, pp. 137–155, Mar. 2018. doi: 10.1016/j.cose.2017.10.11
+
 - 41. K. Siddique, A. Akhtar, H. Lee, M. Kim, and Y. Kim, "Toward bulk synchronous algorithm-based machine learning techniques for anomaly detection in high-speed big data," Networks (Basel), vol. 9, no. 9, pp. 197, 2017. doi: 10.3390/sn9090907
+
 - 42. D. Lee, D. Kim and J. Jung, "Multi-stage intrusion detection system using hidden Markov model algorithm," in 2008 International Conference on Information Science and Security (ICISS) 2008, pp. 72–77. doi: 10.1109/ICISS.2008.22
+
 - 43. M. S. Mok, S. Y. Sohn, and Y. H. Lu, "Random effects logistic regression model for anomaly detection," Expert Systems with Applications, vol. 37, no. 10, pp. 7162–7166, Oct. 2010. doi: 10.1016/j.eswa.2010.04.017
-
-
-
-
 
 44. M. A. Salama, H. F. Eid, R. A. Ramadan, A. Darwish, and A. E. Hassanien, “混合智能入侵检测方案,”2011, pp. 293–303. doi: 10.1007/
 978-3-642-20505-7_26
@@ -3078,6 +3023,7 @@ IDS 引擎通过 10 个测试用例进行了验证。评估结果通过表 6.2-1
 10.1109/ICCV.2015.478
 
 # 7 物联网入侵检测系统
+
 基于人工智能、深度学习和机器学习方法的的系统性研究
 
 Joseph Bamidele Awotunde, Abdulrauf Olarenwaju Babatunde, Rasheed Gbenga Jimoh, and Dayo Reuben
@@ -3122,22 +3068,21 @@ DOI: 10.12101/9781003215523-7
 
 由于多种原因，物联网系统比传统计算系统更容易受到安全违规的影响 [27, 28]。首先，物联网系统在设备、平台、通信方法和协议方面具有极大的多样性。其次，物联网系统由并非旨在用于在线的“物”组成，例如连接物理系统的控制设备。但由于人类和设备具有移动性，物联网系统中没有明确的边界；它们始终在变化。由于物联网设备的能量有限，通常在物联网设备上实施复杂的安全工具和方法是困难的 [29]。
 
+# 用于增强网络防御的大数据与边缘智能
 
 
 
- # 用于增强网络防御的大数据与边缘智能
+例如，在2016年，一个可能是记录中最大的 `IoT` 僵尸网络威胁了 Brian Krebs 的安全，证明了 `IoT` 设备极受到攻击的脆弱性 [30]。`Mirai` 使用 62 种常用用户凭据获取了数字视频录制机、家庭路由器和网络摄像的访问，而这些设备的防护措施通常比其他 `IoT` 设备更弱。在同一个月，频繁出现的僵尸网络 `OVH` 创下了 1.1 Tb 的最大记录分布式拒绝服务（`DDoS`）攻击纪录，这可能是由于默认和薄弱的安全配置导致的。文献 [32] 中的作者强调了，由于协议实现中的缺陷，攻破 `IoT` 设备变得非常容易。预计基于 `IoT` 的设备泛增将增加这些网络遭受安全和隐私泄露的脆弱性文献 [33] 的作者注意到，使用易于获取的 `IoT` 设备、传感器构建的 `IoT` 网络存在许多漏洞。其中一个可以测量温度和湿度等环境因素的智能浇水系统就是一个例子。作者开发了一个使用 `Arduino Uno` 上的执行器模块的 Web 端系统，该系统通过软件启用的接入点（`SoAP`）暴露在欺骗攻击之下。
 
-例如，在2016年，一个可能是记录中最大的 IoT 僵尸网络威胁了 Brian Krebs 的安全，证明了 IoT 设备极受到攻击的脆弱性 [30]。Mirai 使用 62 种常用用户凭据获取了数字视频录制机、家庭路由器和网络摄像的访问，而这些设备的防护措施通常比其他 IoT 设备更弱。在同一个月，频繁出现的僵尸网络 OVH 创下了 1.1 Tb 的最大记录分布式拒绝服务（DDoS）攻击纪录，这可能是由于默认和薄弱的安全配置导致的。文献 [32] 中的作者强调了，由于协议实现中的缺陷，攻破 IoT 设备变得非常容易。预计基于 IoT 的设备泛增将增加这些网络遭受安全和隐私泄露的脆弱性文献 [33] 的作者注意到，使用易于获取的 IoT 设备、传感器构建的 IoT 网络存在许多漏洞。其中一个可以测量温度和湿度等环境因素的智能浇水系统就是一个例子。作者开发了一个使用 Arduino Uno 上的执行器模块的 Web 端系统，该系统通过软件启用的接入点（SoAP）暴露在欺骗攻击之下。
+由于 `IoT` 设备的计算能力有限，`SOAP` 看起来比具有相同安全标识符（`SSI`）的真实接入点（`AP`）信号更。因此，黑客使网络中的所有 `IoT` 设备连接到它，使得中间人攻击（`MiTM`）和窃听能够破坏所有网络交易。这些攻击示例威胁了在 `IoT` 网络中实施 `IDS` 以识别 `IoT` 漏洞的方案。将现实环境与物联网智能集成以促进交互是基于 `IoT` 概念的核心。因此，`IoT` 生态系统依赖并连接到各种异构环境。这是因为，每个连接的环境都可能对 `IoT` 系统构成网络威胁 [34, 35]。基于 `IoT` 的系统环境容易受到物理世界和虚拟世界的威胁。图 7.1 显示了可能被利用的 `IoT` 环境多个威胁因素。
 
-由于 IoT 设备的计算能力有限，SOAP 看起来比具有相同安全标识符（SSI）的真实接入点（AP）信号更。因此，黑客使网络中的所有 IoT 设备连接到它，使得中间人攻击（MiTM）和窃听能够破坏所有网络交易。这些攻击示例威胁了在 IoT 网络中实施 IDS 以识别 IoT 漏洞的方案。将现实环境与物联网智能集成以促进交互是基于 IoT 概念的核心。因此，IoT 生态系统依赖并连接到各种异构环境。这是因为，每个连接的环境都可能对 IoT 系统构成网络威胁 [34, 35]。基于 IoT 的系统环境容易受到物理世界和虚拟世界的威胁。图 7.1 显示了可能被利用的 IoT 环境多个威胁因素。
+# 物联网入侵检测系统
 
 ## 7.2.1 用户界面和应用程序中的物联网攻击、漏洞与威胁
 
-物联网通过设备互连带来了许多益处，但也引入了各种安全挑战。IoT 设备用户界面和应用层中的攻击、漏洞和威胁可能带来重大风险。其中包括以下内容：
+物联网通过设备互连带来了许多益处，但也引入了各种安全挑战。`IoT` 设备用户界面和应用层中的攻击、漏洞和威胁可能带来重大风险。其中包括以下内容：
 
-- 拒绝服务（DoS）和分布式 DDoS 攻击：攻击者可以使用请求洪淹没 IoT 设备或其应用程序，导致其无法响应或发生故障。在 DoS 攻击中，单一源（一台计算机或少数几个系统）试图通过向目标服务器、网络或服务发送过量流量来使其瘫痪 [36]。这种流量洪水消耗了目标的资源，使其无法响应用户的合法请求。另一方面，DDoS 攻击同时处理多个源（也包括一个受侵害的设备网络）。
-
-# 物联网入侵检测系统
+- 拒绝服务（`DoS`）和分布式 `DDoS` 攻击：攻击者可以使用请求洪淹没 `IoT` 设备或其应用程序，导致其无法响应或发生故障。在 `DoS` 攻击中，单一源（一台计算机或少数几个系统）试图通过向目标服务器、网络或服务发送过量流量来使其瘫痪 [36]。这种流量洪水消耗了目标的资源，使其无法响应用户的合法请求。另一方面，`DDoS` 攻击同时处理多个源（也包括一个受侵害的设备网络）。
 
 ![](img/aeaf5e4a1e1020ca53a1da35e316de95_171_0.png)
 
@@ -3149,43 +3094,37 @@ DOI: 10.12101/9781003215523-7
 | **无线技术** | - 针对无线技术的攻击 |
 | **虚拟化技术** | - 针对虚拟化技术的攻击 |
 | **数据完整性** | - 针对数据完整性的攻击 |
-| **应用** | - CSRF / - XSS / - SQL 注入 |
+| **应用** | - `CSRF` / - `XSS` / - `SQL` 注入 |
 | **隐私** | - 针对隐私的攻击 |
-| **通用威胁** | - DoS/DDoS / - 蓝牙盗取(Bluesnarfing)/ 蓝牙劫持(Bluejackacking) / - 窃听 / - 恶意软件 |
-| **机密性威胁** | - 未授权访问 / - DoS 攻击 / - 隐私 |
+| **通用威胁** | - `DoS/DDoS` / - 蓝牙盗取(Bluesnarfing)/ 蓝牙劫持(Bluejackacking) / - 窃听 / - 恶意软件 |
+| **机密性威胁** | - 未授权访问 / - `DoS` 攻击 / - 隐私 |
 | **其他** | - 位置跟踪 / - 物理攻击 / - 针对固件的攻击 - 设备克隆/模式捕获 / - 安全密钥窃 |
 
-这些攻击放大了流量体积，使其难以缓解 [37]。IoT 设备经常使用蓝牙技术进行连接，这使得它们容易受到蓝牙攻击 [38]。
+这些攻击放大了流量体积，使其难以缓解 [37]。`IoT` 设备经常使用蓝牙技术进行连接，这使得它们容易受到蓝牙攻击 [38]。
 
-**蓝牙盗取（Bluesnarfing)/蓝牙劫持（Bluejackacking）：** 蓝牙盗取和蓝牙劫持是两种不同的攻击，通常与 IoT 设备相关 [39]。蓝牙盗取是一种网络攻击，通过这种攻击可以未经授权地访问信息，例如联系人、电子邮件、日历甚至控制功能 [40]。IoT 设备中不安全的身份验证或默认凭据可以被攻击者利用获取系统访问，允许他们提取敏感信息 [41]。
+**蓝牙盗取（Bluesnarfing)/蓝牙劫持（Bluejackacking）：** 蓝牙盗取和蓝牙劫持是两种不同的攻击，通常与 `IoT` 设备相关 [39]。蓝牙盗取是一种网络攻击，通过这种攻击可以未经授权地访问信息，例如联系人、电子邮件、日历甚至控制功能 [40]。`IoT` 设备中不安全的身份验证或默认凭据可以被攻击者利用获取系统访问，允许他们提取敏感信息 [41]。
 
 蓝牙劫持是一种比严重的网络攻击更具骚扰性的活动 [42]。它涉及向范围内的支持蓝牙的设备发送未经请求的消息。这些消息通常是无害的，旨在让设备主感到惊讶或恼。它依赖于这样一个事实：某些蓝牙设备可以在没有任何配对或许可的情况下接收消息。
 
-**窃听：** 基于 IoT 的系统中的窃听是指对 IoT 网络内设备之间通信的未经授权截获 [44]。这种拦截可以通过多种方式发生，例如监控无线传输或通过网络连接访问数据。窃听在 IoT 系统中带来了巨大的风险，因为它可能导致敏感信息、个人数据、身份凭据或控制机制的暴露 [45]。如果 IoT 设备之间或设备与服务器之间传输的数据没有经过正确的加密，就会容易被截获。攻击者可以轻易拦截并读取这些数据 [46]。某些 IoT 设备可能使用过时或不安全的网络协议，使得攻击者更容易拦截数据包 [47]。
+**窃听：** 基于 `IoT` 的系统中的窃听是指对 `IoT` 网络内设备之间通信的未经授权截获 [44]。这种拦截可以通过多种方式发生，例如监控无线传输或通过网络连接访问数据。窃听在 `IoT` 系统中带来了巨大的风险，因为它可能导致敏感信息、个人数据、身份凭据或控制机制的暴露 [45]。如果 `IoT` 设备之间或设备与服务器之间传输的数据没有经过正确的加密，就会容易被截获。攻击者可以轻易拦截并读取这些数据 [46]。某些 `IoT` 设备可能使用过时或不安全的网络协议，使得攻击者更容易拦截数据包 [47]。
 
-**恶意软件：** IoT 系统中的恶意软件代表了严重威胁，利用互连设备中的漏洞传播并执行恶意活动 [48]。这些恶意软件可以通过各种方式渗透 IoT 设备，包括未修补的软件、薄弱的身份验证或不安全的网络连接。一旦嵌入 IoT 设备，恶意软件就会破坏其功能、创建用于大规模攻击的僵尸或为访问连接的网络提供非法访问。此外，保护 IoT 系统免受恶意软件侵害需要实施稳健的安全措施，例如定期的固件更新、网络分、强身份验证机制、IDS 以及基于行为的异常检测，以检测和防止恶意软件感染，维护 IoT 生态系统的完整性和安全性 [50, 51]。
-
-
-
-
-
-## 物联网入侵检测系统
+**恶意软件：** `IoT` 系统中的恶意软件代表了严重威胁，利用互连设备中的漏洞传播并执行恶意活动 [48]。这些恶意软件可以通过各种方式渗透 `IoT` 设备，包括未修补的软件、薄弱的身份验证或不安全的网络连接。一旦嵌入 `IoT` 设备，恶意软件就会破坏其功能、创建用于大规模攻击的僵尸或为访问连接的网络提供非法访问。此外，保护 `IoT` 系统免受恶意软件侵害需要实施稳健的安全措施，例如定期的固件更新、网络分、强身份验证机制、`IDS` 以及基于行为的异常检测，以检测和防止恶意软件感染，维护 `IoT` 生态系统的完整性和安全性 [50, 51]。
 
 ## 7.2.2 网络服务中的物联网攻击、漏洞与威胁
 
-物联网（IoT）带来了技术的重大进步，将各种设备连接到互联网，以增强功能性和便利性。然而，这种互互互性也为网络服务内部留了许多漏洞和潜在威胁。以下是网络服务中常见的物联网攻击、漏洞和威胁：
+物联网（`IoT`）带来了技术的重大进步，将各种设备连接到互联网，以增强功能性和便利性。然而，这种互互互性也为网络服务内部留了许多漏洞和潜在威胁。以下是网络服务中常见的物联网攻击、漏洞和威胁：
 
-- **针对网络服务的攻击**：基于物联网的系统中，针对网络服务的攻击涉及利用互连基础设施中的漏洞，以破坏、损害或使这些网络提供的服务变得不可用 [34]。此类攻击可能表现为 DDoS 攻击，即大量流量会淹没 IoT 设备或服务，导致合法用户无法访问 [35]。 此外，攻击者可能利用协议漏洞、零日漏洞和中间人攻击（MitM）策略来中断 IoT 设备与服务之间的通信，导致服务中断、未经授权的访问或数据操纵 [52]。通过利用这些漏洞，恶意行为者旨在破坏物联网生态系统中网络服务的功能和完整性，对整个系统的运行和数据安全构成重大风险 [53]。
+- **针对网络服务的攻击**：基于物联网的系统中，针对网络服务的攻击涉及利用互连基础设施中的漏洞，以破坏、损害或使这些网络提供的服务变得不可用 [34]。此类攻击可能表现为 `DDoS` 攻击，即大量流量会淹没 `IoT` 设备或服务，导致合法用户无法访问 [35]。此外，攻击者可能利用协议漏洞、零日漏洞和中间人攻击（`MitM`）策略来中断 `IoT` 设备与服务之间的通信，导致服务中断、未经授权的访问或数据操纵 [52]。通过利用这些漏洞，恶意行为者旨在破坏物联网生态系统中网络服务的功能和完整性，对整个系统的运行和数据安全构成重大风险 [53]。
 
-- **针对网络服务的攻击**：基于物联网的系统中，针对网络服务的攻击涉及对互连基础设施中漏洞的针对性利用，旨在破坏或损害这些网络提供的服务 [54]。攻击者可能采用 DDoS 攻击等策略，用过量的流量淹没网络以压垮 IoT 设备或使其无法被合法用户。或者，他们可能利用通信协议中的漏洞、注入恶意代码或劫持设备，以中断 IoT 设备与服务之间的数据流 [55]。这些攻击可能导致服务中断，对整个物联网生态系统的功能、可靠性和带来风险 [55]。
+- **针对网络服务的攻击**：基于物联网的系统中，针对网络服务的攻击涉及对互连基础设施中漏洞的针对性利用，旨在破坏或损害这些网络提供的服务 [54]。攻击者可能采用 `DDoS` 攻击等策略，用过量的流量淹没网络以压垮 `IoT` 设备或使其无法被合法用户。或者，他们可能利用通信协议中的漏洞、注入恶意代码或劫持设备，以中断 `IoT` 设备与服务之间的数据流 [55]。这些攻击可能导致服务中断，对整个物联网生态系统的功能、可靠性和带来风险 [55]。
 
-- **互联网攻击**：基于物联网的系统中，互联网攻击涉及利用面向互联网的设备或基础设施中的漏洞，旨在损害或破坏其功能 [56]。攻击者通常针对 IoT 设备固件、Web 接口或云服务的漏洞，利用这些入口来获取未经授权的访问、执行远程代码或植入恶意软件。此类攻击包括通过被攻破的 IoT 设备协调的 DDoS 攻击，用压倒性的流量淹没服务器并中断互联网服务 [56]。此外，攻击者还可以渗透进 IoT 系统以窃取敏感数据、操纵设备功能或创建进一步的恶意活动，对互连物联网网络的安全、隐私和可靠性构成重大风险 [57]。
+- **互联网攻击**：基于物联网的系统中，互联网攻击涉及利用面向互联网的设备或基础设施中的漏洞，旨在损害或破坏其功能 [56]。攻击者通常针对 `IoT` 设备固件、Web 接口或云服务的漏洞，利用这些入口来获取未经授权的访问、执行远程代码或植入恶意软件。此类攻击包括通过被攻破的 `IoT` 设备协调的 `DDoS` 攻击，用压倒性的流量淹没服务器并中断互联网服务 [56]。此外，攻击者还可以渗透进 `IoT` 系统以窃取敏感数据、操纵设备功能或创建进一步的恶意活动，对互连物联网网络的安全、隐私和可靠性构成重大风险 [57]。
 
-## 用于增强网络防御的大数据与边缘智能
+### 用于增强网络防御的大数据与边缘智能
 
 - **路由攻击**：基于物联网的系统中，路由攻击涉及操纵或破坏互连设备之间数据的路由路径，损害通信的完整性和安全性 [54]。攻击者利用路由协议中的漏洞重定向或拦截数据流量，导致未经授权的访问、数据泄露或服务中断。这些攻击可能包括路由投毒（向网络中注入虚假路由信息以将流量重定向到恶意目的地）或洞点（sinkhole，即合法流量被攻击者重定向到受攻击的节点）。通过篡改路由路径，攻击者可以窃听敏感信息、更改数据或导致网络拥塞，对物联网网络的机密性、可用性和可靠性构成重大风险 [58]。
 
-## 2.2.3 传感器中的物联网攻击、漏洞与威胁
+## 7.2.3 传感器中的物联网攻击、漏洞与威胁
 
 - **位置跟踪**：针对物联网系统中传感器位置跟踪的攻击旨在损害这些传感器传输或接收的位置数据的准确性、机密性或完整性 [59]。此类攻击可能包括伪造技术，向系统注入虚假位置信息，导致误导性或错误的定位数据。信号干扰或干扰会破坏位置数据的接收，导致位置数据不准确或完全丢失 [60]。此外，窃听敏感位置信息会带来隐私风险。通过操纵或阻塞位置跟踪信号，攻击者可以欺骗系统，损害基于位置服务的可靠性，或获取位置数据的未经授权访问，对基于物联网的位置跟踪系统的安全和功能构成重大威胁 [61]。
 
@@ -3197,29 +3136,25 @@ DOI: 10.12101/9781003215523-7
 
 - **密钥安全**：物联网系统中传感器密钥的安全涉及用于保护通信和数据完整性的加密密钥的未经授权获取或损害 [68]。攻击者可能采用各种方法，例如利用传感器的漏洞、拦截交换协议或执行信道攻击来提取或获取这些密钥 [68]。一旦获取，被盗的密钥允许攻击者解密加密数据、伪造身份、篡改通信或访问物联网网络中的敏感信息 [69]。安全密钥被盗对物联网生态系统的机密性、完整性和整体态势构成严重威胁，可能导致数据泄露、未经授权的访问以及对关键服务或设备的操纵。
 
-
-
-
-
-# 164 用于增强网络防御的大数据与边缘智能
+# 用于增强网络防御的大数据与边缘智能
 
 在共享环境中的数据管理面临风险，因为云服务提供商可能会出于各种目的收集并分析用户数据，可能导致敏感信息暴露于监控或未经授权的使用 [69]。这些隐私挑战强调了实施稳健的加密、严格的访问控制、定期安全审计以及全面的隐私政策的重要性，以降低风险并保护云服务中的用户数据 [35]。
 
-**跨站请求伪造 (CSRF)：** 这在云服务中构成了重大威胁，它利用了网站对用户浏览器的信任 [70]。攻击者可以通过诱导用户在已登录状态下点击链接或访问由攻击者控制的网站，从而向云服务构造恶意请求；此时用户的会话 cookie 或凭据可能被利用，在用户不知情的情况下执行未经授权的操作 [70]。在云服务的语境下，这可能导致各种不利结果，例如修改或删除关键数据、更改设置、启动金融交易，甚至破坏整个云账户 [71]。为了缓解 CSRF 威胁，实施 CSRF 令牌、安全编码实践、验证和检查请求，以及定期教育用户潜在风险，是增强云服务安全性的关键步骤 [71]。
+**跨站请求伪造 (`CSRF`)：** 这在云服务中构成了重大威胁，它利用了网站对用户浏览器的信任 [70]。攻击者可以通过诱导用户在已登录状态下点击链接或访问由攻击者控制的网站，从而向云服务构造恶意请求；此时用户的会话 cookie 或凭据可能被利用，在用户不知情的情况下执行未经授权的操作 [70]。在云服务的语境下，这可能导致各种不利结果，例如修改或删除关键数据、更改设置、启动金融交易，甚至破坏整个云账户 [71]。为了缓解 `CSRF` 威胁，实施 `CSRF` 令牌、安全编码实践、验证和检查请求，以及定期教育用户潜在风险，是增强云服务安全性的关键步骤 [71]。
 
-**跨站脚本 (XSS)：** 这对云服务构成了重大威胁，通过利用 Web 应用程序的漏洞向其他受信网站注入恶意脚本 [72]。在云服务的语境下，XSS 攻击可以损害用户会话、敏感信息（如身份验证令牌或 cookie），并允许攻击者访问、操纵或提取存储在云端的数据 [73]。通过在 Web 应用程序中注入恶意代码，攻击者可以在用户的浏览器中执行脚本，可能导致用户凭据被盗、会话劫持、网页篡改或投送进一步的恶意软件 [73]。缓解云服务中的 XSS 威胁涉及稳健的输入验证、输出编码、采用如内容安全策略 (CSP) 等安全机制，以及定期的安全评估和更新，以防范潜在漏洞并保持云基础设施的安全 [74]。
+**跨站脚本 (`XSS`)：** 这对云服务构成了重大威胁，通过利用 Web 应用程序的漏洞向其他受信网站注入恶意脚本 [72]。在云服务的语境下，`XSS` 攻击可以损害用户会话、敏感信息（如身份验证令牌或 cookie），并允许攻击者访问、操纵或提取存储在云端的数据 [73]。通过在 Web 应用程序中注入恶意代码，攻击者可以在用户的浏览器中执行脚本，可能导致用户凭据被盗、会话劫持、网页篡改或投送进一步的恶意软件 [73]。缓解云服务中的 `XSS` 威胁涉及稳健的输入验证、输出编码、采用如内容安全策略 (`CSP`) 等安全机制，以及定期的安全评估和更新，以防范潜在漏洞并保持云基础设施的安全 [74]。
 
-**SQL 注入：** 这是云服务中的一种严重威胁，它利用 Web 应用程序数据库查询的漏洞来操纵 SQL 代码 [75]。攻击者可以通过输入字段、cookie 或用户输入注入恶意 SQL 命令，可能获得对云数据库的未经授权访问，或执行命令来检索、修改或删除敏感数据 [75]。在云环境中，SQL 注入构成了巨大的风险，允许攻击者破坏整个数据库、访问机密信息并提升权限以获得对云基础设施的控制。防止云服务 SQL 注入威胁的措施包括使用参数化查询、输入验证、严格的访问控制、采用 Web 应用防火墙、定期更新软件以及采用安全最佳实践，以减轻漏洞并加固云基础设施抵御此类攻击 [76]。
+**SQL 注入：** 这是云服务中的一种严重威胁，它利用 Web 应用程序数据库查询的漏洞来操纵 `SQL` 代码 [75]。攻击者可以通过输入字段、cookie 或用户输入注入恶意 `SQL` 命令，可能获得对云数据库的未经授权访问，或执行命令来检索、修改或删除敏感数据 [75]。在云环境中，`SQL` 注入构成了巨大的风险，允许攻击者破坏整个数据库、访问机密信息并提升权限以获得对云基础设施的控制。防止云服务 `SQL` 注入威胁的措施包括使用参数化查询、输入验证、严格的访问控制、采用 Web 应用防火墙、定期更新软件以及采用安全最佳实践，以减轻漏洞并加固云基础设施抵御此类攻击 [76]。
 
 # 物联网入侵检测系统
 
 针对数据完整性的攻击：针对云端数据完整性的攻击通过篡改或更改存储的信息构成了巨大风险，损害了其准确性和可靠性 [77]。恶意者可能尝试通过未经授权的修改、删除或插入数据，来操纵存储在云端信息的完整性 [77]。此类攻击可以通过多种途径发生，包括云基础设施的漏洞、对凭据的非法访问，或利用恶意软件攻击传输中或静态的数据。云服务中数据完整性受损的可能是严重的，导致信息误导、财务损失、法律影响以及用户和客户信任的崩溃 [78]。保护云端数据完整性涉及实施稳健的加密、访问控制、定期的完整性检查并维护严格的安全规范，以防止未经授权的更改并维护存储数据的可信度。
 
-针对虚拟化技术的攻击：针对云服务虚拟化技术的攻击利用虚拟机程序（hypervisor）或虚拟化层的漏洞，旨在破坏虚拟机（VM）之间的隔离，或获得对底层基础设施的未经授权访问 [79]。恶意者可能尝试各种技术，如虚拟机逃逸（VM escape），即跳出虚拟机的限制以访问虚拟机程序以及后续的其他虚拟机，导致潜在的数据窃取或操纵 [79, 80]。其他攻击包括资源耗尽（攻击者使虚拟化层过载以中断服务可用性）或拒绝服务（DoS）攻击。此外，虚拟机程序的漏洞或配置错误可能允许权限提升或对虚拟化环境的控制 [80]。保护云服务中的虚拟化技术需要定期更新和补丁、严格的访问控制、职责分离、实施 IDS 以及采用沙箱和隔离等安全措施，以缓解这些潜在威胁并确保云基础设施的完整性和安全性 [80]。
+针对虚拟化技术的攻击：针对云服务虚拟化技术的攻击利用虚拟机程序（`hypervisor`）或虚拟化层的漏洞，旨在破坏虚拟机（`VM`）之间的隔离，或获得对底层基础设施的未经授权访问 [79]。恶意者可能尝试各种技术，如虚拟机逃逸（`VM escape`），即跳出虚拟机的限制以访问虚拟机程序以及后续的其他虚拟机，导致潜在的数据窃取或操纵 [79, 80]。其他攻击包括资源耗尽（攻击者使虚拟化层过载以中断服务可用性）或拒绝服务（`DoS`）攻击。此外，虚拟机程序的漏洞或配置错误可能允许权限提升或对虚拟化环境的控制 [80]。保护云服务中的虚拟化技术需要定期更新和补丁、严格的访问控制、职责分离、实施 `IDS` 以及采用沙箱和隔离等安全措施，以缓解这些潜在威胁并确保云基础设施的完整性和安全性 [80]。
 
-## 2.2.5 其他物联网系统中的攻击、漏洞与威胁
+## 7.2.5 其他物联网系统中的攻击、漏洞与威胁
 
-机密性威胁：由于互联设备之间广泛的数据交换且通常缺乏稳健的安全机制，物联网系统中的机密性威胁无处不在 [81]。这些威胁源于物联网生态系统中的漏洞，如弱身份验证机制、加密协议不完善以及数据保护不足。攻击者利用这些弱点监听物联网设备之间的通信，拦截跨网络传输的敏感数据，或未经授权访问存储在设备内或与其交互的云基础设施中的机密信息 [81]。物联网系统机密性的受损可能导致对个人或敏感数据的未经授权访问，引发隐私泄露、# 用于增强网络防御的身份窃用、非法监控或对关键系统的操纵 [68]。保护物联网系统需要实施加密、身份验证协议、定期安全更新和端到端保护措施，以保护整个物联网生态系统的机密性（从设备通信通道到数据存储及云服务），从而防止威胁 [68]。
+机密性威胁：由于互联设备之间广泛的数据交换且通常缺乏稳健的安全机制，物联网系统中的机密性威胁无处不在 [81]。这些威胁源于物联网生态系统中的漏洞，如弱身份验证机制、加密协议不完善以及数据保护不足。攻击者利用这些弱点监听物联网设备之间的通信，拦截跨网络传输的敏感数据，或未经授权访问存储在设备内或与其交互的云基础设施中的机密信息 [81]。物联网系统机密性的受损可能导致对个人或敏感数据的未经授权访问，引发隐私泄露、身份窃用、非法监控或对关键系统的操纵 [68]。保护物联网系统需要实施加密、身份验证协议、定期安全更新和端到端保护措施，以保护整个物联网生态系统的机密性（从设备通信通道到数据存储及云服务），从而防止威胁 [68]。
 
 **未经授权访问：** 物联网系统中的未经授权访问是一个关键安全问题，其特征是恶意者利用各种漏洞进入互联设备或网络 [82]。这些漏洞通常包括默认或弱凭据、身份验证机制不足、未打补丁的软件或未加密的通信通道。当攻击者成功破解物联网系统时，他们可以操纵设备功能、窃取敏感数据、干扰操作，甚至通过破坏物联网网络中的多个设备来发动更大攻击 [83]。未经授权访问不仅损害了数据的机密性和完整性，还对用户隐私和系统功能构成了巨大风险。为了缓解物联网系统中的未经授权访问，稳健的身份验证方法、定期安全更新、强加密方法和网络分段是加固设备安全和防止潜在破解的必要措施 [83]。
 
@@ -3227,20 +3162,19 @@ DOI: 10.12101/9781003215523-7
 
 ## 7.3 人工智能驱动的物联网系统网络入侵检测
 
-人工智能模型在增强物联网系统中的网络入侵检测（NID）方面发挥着至关作用，物联网系统由在网络上共享数据和通信的互联设备组成 [68]。AI驱动的 IDS 利用机器学习算法检测并响应这些网络中的异常、威胁和可疑活动。这些系统可以实时分析物联网设备产生的海量数据，能够识别可能指示安全违规的异常模式或行为 [86]。
-
-
-
-
+人工智能模型在增强物联网系统中的网络入侵检测（`NID`）方面发挥着至关作用，物联网系统由在网络上共享数据和通信的互联设备组成 [68]。`AI`驱动的 `IDS` 利用机器学习算法检测并响应这些网络中的异常、威胁和可疑活动。这些系统可以实时分析物联网设备产生的海量数据，能够识别可能指示安全违规的异常模式或行为 [86]。
 
 # 物联网入侵检测系统
 
-一种方法涉及监督学习算法，其中 AI 模型在包含正常和恶意网络流量模式的标记数据集上进行训练。通过这种方式，AI 学习识别与各种类型网络威胁相关的模式，使其能够实时识别并标记可疑活动。此外，还采用了无监督学习技术，在不需要预定义标签的情况下检测网络流量中的异常。这些算法可以识别偏离正常行为的情况，预示着潜在的入侵或安全违规 [87]。
+一种方法涉及监督学习算法，其中 `AI` 模型在包含正常和恶意网络流量模式的标记数据集上进行训练。通过这种方式，`AI` 学习识别与各种类型网络威胁相关的模式，使其能够实时识别并标记可疑活动。此外，还采用了无监督学习技术，在不需要预定义标签的情况下检测网络流量中的异常。这些算法可以识别偏离正常行为的情况，预示着潜在的入侵或安全违规 [87]。
+
+
 
 基于 AI 的 IDS 随着时间的推移不断适应并提高其检测能力 [72]。它们可以通过从新数据中学习并调整算法来识别新兴威胁，从而演进其检测机制，增强物联网系统的整体安全态势。此外，AI 能够通过隔离受影响设备或阻塞可疑网络流量快速响应安全事件，最大限度地减少潜在网络攻击对物联网网络的影响 [56]。用于物联网系统的 AI 驱动 NID 采用监督和无监督 ML 算法来分析网络流量并识别安全威胁或异常。这些系统持续学习和适应，提高了其实时检测和响应新兴威胁的能力，巩固了互联物联网设备的安全基础设施 [35]。物联网系统中的基于 AI 的 NID 如表 7.2 所示。
 
 ## 表 7.2
-## 物联网系统中的基于 AI 的 NID
+
+### 物联网系统中的基于 AI 的 NID
 
 | 作者 | 模型 | 数据集 | 贡献 | 缺点 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -3248,14 +3182,15 @@ DOI: 10.12101/9781003215523-7
 | [87] | SVM, DT, LR, KNN, RF, GBoost, XGBoost, LibSVM | 自欺骗攻击、中间人攻击 (MitM) 和数据注入 | 提出的 AI 模型在检测 NIDS 方面实现了 100% 的准确率 – 大多数连接的医疗设备存在关键漏洞 – 为 IoMT 网络中的入侵检测提出了三种深度学习模型 | 未考虑基于物联网的隐私问题 |
 
 ## 表 7.2（续）
-## 物联网系统中的基于 AI 的 NID
+
+### 物联网系统中的基于 AI 的 NID
 
 | 作者 | 模型 | 数据集 | 结果 | 贡献 | 缺点 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | [88] | XAI-IDS | | 准确率为 96% | 通过手动过滤建立白名单 - 使用 AI 测量特征参数 | 论文侧重于提出使用可解释的基于 AI 进行网络流量入侵检测 |
 | [89] | RF | NSL-KDD | - A2SDIoT 有效检测物联网网络中的入侵 - A2SDIoT 提高了了网络对恶意节点的免疫力 | 一种用于入侵检测系统的新人工智能 - 将无监督机器学习与软件定义网络 (SDN) 范式相结合 | 使用的数据集用于 SDN |
 
-## 7.4 物联网系统中的机器学习支持型网络入侵检测
+### 7.4 物联网系统中的机器学习支持型网络入侵检测
 
 基于 ML 的模型对于增强物联网系统中的 NID 具有巨大前景。在此背景下，ML 算法被用于分析物联网设备产生的海数据，旨在区分正常网络行为和潜在安全威胁 [56]。基于 ML 的 IDS 使用监督、无监督和半监督学习等各种技术来检测物联网网络中的异常和恶意活动 [47]。
 
@@ -3268,7 +3203,8 @@ DOI: 10.12101/9781003215523-7
 已针对物联网系统提出了基于 ML 的 NIDS。这些 IDS 旨在使用 ML 算法检测并分类物联网网络中的攻击。一种方法是自监督入侵检测 (SSID) 框架，它实现了一种完全在线且无需人工干预或离线学习的 IDS [90]。另一种方法使用基于深度学习 (DL) 的模型，利用网络流和生物识别检测物联网系统中的入侵 [91]。此外，还使用 ML 算法如 K近邻 (KNN)、支持向量机 (SVM) 和人工神经网络 (ANN) 开发了智能 IDS，用于识别和分类物联网网络数据包中的恶意行为 [92]。这些方法证明了基于 ML 模型在实现物联网系统网络入侵检测方面的潜力。物联网系统中的基于机器学习的 NID 如表 7.3 所示。
 
 ## 表 7.3
-## 物联网系统中的基于 ML 的 NIDS
+
+### 物联网系统中的基于 ML 的 NIDS
 
 | 作者 | 模型 | 数据集 | 结果 | 贡献 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -3276,26 +3212,23 @@ DOI: 10.12101/9781003215523-7
 | [92] | KNN, SVN 和 ANN | IoT23 | 智能 IDS 是良好的二分类和多分类分类器 - 可以将零日攻击分类为恶意行为 | - 提出了一种用于物联网攻击检测的智能 IDS - 研究了三种 ML 分类器算法用于分类。（续） |
 
 ## 表 7.3（续）
-## 物联网系统中的基于 ML 的 NID
+
+### 物联网系统中的基于 ML 的 NID
 
 | 作者 | 模型 | 数据集 | 结果 | 贡献 |
 | :--- | :--- | :--- | :--- | :--- |
 | [93] | 1D CNN | NF-ToN-IoTT, NF-BoTIoT, NF-CICIDS2018, NF-UNSW-NB15, NF-UQ-NIDS, CIC phường2, 网络入侵, MQTT-IoTIDS2020, CIC-ToIoT | - 提出了用于物联网环境异常检测的 1D CNN 模型 - 成功识别了 20 种攻击，准确率为 93.75% | 基于 1D CNN 的模型 - 使用迁移学习降低分类复杂度。 |
-| [94] | PSO + BA + RF | WUSTL-IIOT-2021 | - 提出的模型优于其他 ML 和多目标算法 - 带有 BA 分类器的  最佳 | 提出了使用 PSO 和 BA 的入侵检测模型 - 使用 RF 分类器对恶意行为进行分类 |
+| [94] | PSO + BA + RF | WUSTL-IIOT-2021 | - 提出的模型优于其他 ML 和多目标算法 - 带有 BA 分类器的 最佳 | 提出了使用 PSO 和 BA 的入侵检测模型 - 使用 RF 分类器对恶意行为进行分类 |
 | [95] | B-Stacking | CICIDS2017 和 NSL-KDD | 准确高于现有模型 | 为物联网网络提出了轻量级入侵检测模型 - 使用机器学习有效检测网络攻击和异常 |
 | [96] | 基于 ML | Cyber-Trust 测试平台 | - 总体准确率为 98.35% - 误报警率为 0.98% | 论文探索了使用网络分析和机器学习进行物联网安全 - 提出的解决方案可检测篡改和可疑交易 |
 | [97] | 基于 ML | KDD99, NSL 和 Kyoto | - 决策树算法实现了 99% 的准确率 | 开发了入侵检测系统 (IDS) - 使用机器学习进行特征选择和分类（续） |
-
-
-
-
 
 # 物联网入侵检测系统
 
 ## 表 7.3（续）
 
 | 作者 | 模型 | 数据集 | 结果 | 贡献 |
-|---|---|---|---|--|
+|---|---|---|---|---|
 | [98] | 逻辑回归、贝叶斯和决策树 (DT) | CICIDS2017 | RF的准确率达到99.67%，优于其他技术 <br>-- 特征选择的线性SVM方法在二分类和多分类场景下的平均准确率分别为88.19%和85.56%，优于其他技术 | --增加了对物联网设备的安全关注 |
 | [99] | LR、DT、SVM 和 LDA | UNSW-NB15 | DT 的准确率最高，达到95% | -- 数据过采样对机器学习模型的影响 |
 | [100] | 贝叶斯网络、随机森林、神经网络以及两种深度学习算法 (RNN, LSTM) | KDD cup 99 | RF 的准确率更高 | 在 KDD 99 数据集上对不同算法进行测试和评估 |
@@ -3309,7 +3242,7 @@ DOI: 10.12101/9781003215523-7
 
 ## 表 7.3（续）
 
-## 物联网系统中的基于机器学习的入侵检测系统 (NIDs)
+### 物联网系统中的基于机器学习的入侵检测系统 (NIDs)
 
 | 作者 | 模型 | 数据集 | 结果 | 贡献 |
 | --- | --- | --- | --- | --- |
@@ -3318,7 +3251,7 @@ DOI: 10.12101/9781003215523-7
 | [108] | RF, KNN 和 NB | UNSW-NB15 | 使用10%的过滤时，RF 和 KNN 分类器实现了99%的准确率，无注入攻击时准确率达到100% | 分析不同机器学习算法在识别物联网网络异常和攻击方面的性能 |
 | [109] | RF | NSL-KDD 和 KDDCUP99 | 模型以99.9%的准确率检测到入侵 | 提升 IDS 的精密度和安全性 |
 
-## 7.5 物联网系统中的深度学习型网络入侵检测
+### 7.5 物联网系统中的深度学习型网络入侵检测
 
 基于深度学习的模型作为机器学习的子集，已成为增强物联网系统入侵检测 (NID) 的强大技术，特别是多层神经网络，能够从复杂数据集中自动提取复杂的模式和特征 [110, 111]。在物联网安全的背景下，卷积神经网络 (CNNs)、循环神经网络 (RNNs) 和深度自动编码器等技术被用于稳健的入侵检测 [111]。
 
@@ -3330,7 +3263,7 @@ CNN 擅长通过提取特征的分层次表示来分析数据（如网络流量�
 
 基于深度学习的模型结合特征选择对于精炼物联网系统至关重要。特征选择技术如 L1 正则化、递归特征消除或信息增益有助于从大量的物联网流量数据中识别出具判别性的特征 [122]。当与 CNN 或 RNN 等深度模型集成时，这些选择的特征作为输入，增强了深度模型的性能和效率，有助于更准确地识别网络威胁。
 
-## 7.6 未来方向
+### 7.6 未来方向
 
 物联网背景下入侵检测系统的未来方向正在快速演变，特别是随着人工智能、深度学习和机器学习方法的整合。该领域有一些潜在的未来方向和进展：
 
@@ -3344,15 +3277,11 @@ CNN 擅长通过提取特征的分层次表示来分析数据（如网络流量�
 - 对抗机器学习防御：针对专门设计用于欺骗基于人工智能 IDS 的对抗攻击开发防御机制是一个关键领域。研究重点是提高模型对此类攻击的鲁棒性。
 - 互操作性与标准化：随着物联网设备和协议的多样化，建立物联网生态系统安全通用标准和互操作性框架的努力正日益增长。
 
-
-
-
-
 # 物联网入侵检测系统 175
 
 随着技术的进步和新威胁的出现，物联网入侵检测系统（IoT IDS）的演可能会沿着这些路线继续，旨在提供更智能、自适应且安全的解决方案来保护物联网生态系统。
 
-## 7.7 结论
+### 7.7 结论
 
 物联网设备的日益使用使得对健壮安全解决方案的需求，特别是入侵检测方面。基于机器学习（ML）和深度学习（DL）的技术对于物联网安全至关重要。本章调查了用于物联网网络和系统的入侵检测的 AI、ML 和 DL 技术，讨论了物联网架构、漏洞和协议级攻击。它还回顾了物联网安全方法论的研究。其目的是为研究人员提供关于安全挑战和潜在解决方案的全面见解。本研究探索了基于 AI、ML 和 DL 的入侵检测系统（NIDS），重点关注分类方案和方法论。它强调了使用 AI、ML 和 DL 方法提高检测准确性并降低误报率（FAR）。深度学习方法（如自动编码器 AE 和深层神经网络 DNN）具有优越的性能，但需要大量的计算资源。解决这些挑战对于实时 NIDS 性能至关重要，因为它们可以独立学习特征并改进模型拟合。本章显示，85% 的方法是使用过时数据集进行测试的，限制了它们在实时环境中的性能。为了提高检测准确性，基于 AI、ML 和 DL 的 NIDS 应使用更新的数据集，如 WUST-IoT-2021、CIC-IoT-2022 和 CIC-IoT-2023。本章强调了改进低频攻击性能和降低复杂性的研究空白。未来的研究应侧重于设计用于入侵检测的轻量级、高效的 DL NIDS。
 
@@ -3361,45 +3290,80 @@ CNN 擅长通过提取特征的分层次表示来分析数据（如网络流量�
 - 1. AbdulRaheem, M., Oladido, I.D., Imoze, A. Machine learning learned and zeeking DDoS attacks in software. Int. j. inf. tecn. 16, 1627–1643 (2024). https://doi.org/10.1007/s41870-023-01469-3.
 - 2. Abdulraheem, M., Adeniyi, E. A., Awotonde, J. B., Imoze, A. L., Jokowi, R. G., Oladipo, I. D., & Falola, P. B. (2024). Artificial Intelligence of Medical Things for Medical Information Systems Privacy and Security. In Handbook of Security and Privacy of AI-Enabled Healthcare Systems and Internet of Medical Things (pp. 63–96). Boca Raton, FL: CRC Press.
 - 3. Ahmed, Z., Shahid, K., Wai S., Abdullah, J., & Ahmed, F. (2021). Network intrusion detection system: a systematic study of machine learning and deep learning approaches. Transactions on Emerging Telecommunications Technologies, 3(1), e4150.
-- 4. Jyotshna, V. R. P. V., Prasad, R., & Prasad, K. M. (2011). A review of anomaly intrusion detection systems. International Journal of Computer Applications, 28(7), 26–35.
-- 5. Xu, H., Sun, Z., Cao, Y., & Bilal, H. (2023). A data-driven approach for intrusion and anomaly detection using automated machine learning for the Internet of Things. Soft Computing, 27(19), 14469–14481.
-- 6. Uddin, R., Kumar, S. A., & Chamola, V. (2024). Denial of security attacks in edge computing layers: Taxonomy, vulnerabilities, threats and solution. Ad Hoc Networks, 152, 103322.
-- 7. Haroon, M., Misra, D. K., Husain, M., Tripathi, M. M., & Khan, A. (2023). Security Issues in the Internet of Things for the Development of Smart Cities. In Cybersecurity and the Age of the Next-Generation Information Revolution (pp. 123–137). Pennsylvania: IGL Global.
-- 8. Awotunde, J. B., Imoize, L. A., Jimoh, R. G., Adeniyi, E. A., Abdulraheem, M., Oladipo, I. D., & Fala, P. B. (2024). AIOT Enabling Real-Time Monitoring of Healthcare Systems: Security and Privacy Considerations. Handbook of Security Systems and Privacy of AI-Enabled Healthcare Systems and Internet of Medical Things, 97–133.
-- 9. Nazir, A., He, J., Zhu, N., Wajah, A., Ma, X., Ullah, F., ... & Pathan, M. S. (2023). Advancing IoT security: A systematic review of machine learning approaches for the detection of IoT bots. Journal of Saudi University-Computer and Information Systems, 1–32, 101820.
-- 10. Odeh, A., & Abu Tale. (2023). Ensemble-based deep learning models for enhancing intrusion detection. Applied Sciences, 13(21), 1185.
-- 11. Prasad, R., & Rohokale, V. (2020). Cybersecurity: The Lifeline of Information and Communication Technology. Springer: International Publishing.
-- 12. Lew, J., Shah, D., Cattell, S., Zhang, M., Sandhupata, A., ... Aamodt, T. (2019). Analyzing machine learning workflows using detailed GPU. In 2019 IEEE international symposium on performance analysis of systems and software (ISFAS) (pp. 151–152).
-- 13. Najabadi, M. M., Villanueva, R., Khofagar, T., Siya, N., Wald, R., & Muhem, E. (2015). Deep learning algorithms and challenges in big data analytics. Journal of Big Data, 2(1), 1–22.
-- 14. Dong, B., & Wang, X. (2016). Comparison deep learning to traditional methods for intrusion detection. In 2016 IEEE international conference on communication and networks (ICCS) (pp. 581–585).
-- 15. Awotunde, J. B., Boloroso, S., Imoize, A., Odunuga, J., Lee, C., & Do, D. (2023). An ensemble-based model for intrusion detection in industrial internet of networks. Applied Sciences, 13(4), 2474.
-- 16. Vasilomanidis, K., Karapayush, S., Mühlacker, M., & Fischer, F. (2015). Taxonomy and survey of collaborative intrusion detection. ACM Surveys (CSUR), 47(4), 1–33.
-- 17. Buczak, A., & Guven, E. (2015). A survey of data mining and machine learning methods for security. IEEE Communications & Tutorials, 18(2), 1153–1176.
-- 18. Thomas, R., & Pavithran, D. (2018). A survey of intrusion detection models based on NSL-KDD dataset. Fifth ICT information trends (ITT) (pp. 286–291).
-- 19. Benhelia, E., Welsh, T., & Hamouda, W. (2018). A critical review of practices and challenges in IoT: Toward unbiased and resilient systems. IEEE Communications & Tutorials, 20(4), 3496–3509.
-- 20. Mishra, P., Varadarajan, T., Tupakala, U., & Phi, E. (2018). A detailed investigation and analysis of machine learning techniques for intrusion detection. IEEE Communications & Tutorials, 21(1), 668–728.
-- 21. Liu, H., & Lang, B. (2019). Machine learning and deep learning methods for intrusion detection systems: A survey. Applied Sciences, 9(20), 4396.
-- 22. Kraisat, A., Gondal, I., Vample, P., & Kamruzzaman, J. (2019). Survey of intrusion detection systems: Techniques, datasets and challenges. Cybersecurity, 2(20), 1–22.
-- 23. Da Costa, K. A., Papa, P. J., Lisbon, C. O., Munoz, R., & Albuquerque, V. H. C. (2019). Internet of Things: A survey on machine learning-based intrusion detection. Computer Networks, 151, 147–157.
-- 24. Chaabouni, Mosbah, M., Zemmari, A., Auvignac, C., & Faruki, P. (2019). Network intrusion detection for IoT security based on learning techniques. IEEE Communications & Tutorials, 21(3), 2671–2710.
-- 25. Lawal, M., Shaikh, R. A., & Hassan, S. R. (2020). Security analysis of network anomalies mitigations in iot networks. IEEE Access, 8, 43355–43374.
-- 26. Ashraf, J., Moustafa, N., Khursid, H., Debie, E., Haider, W., & Wahab, A. (2020). A review of intrusion detection systems using machine and deep learning in internet of things: Challenges and future directions. Electronics, 9(7), 1177.
-- 27. Ayo, E. F., Awotunde, J. B., Forunoso, S. O., Ajagun, M. O., & Ajabe, S. A. (2023). A genomic-based KNN model for flux botnet detection. Egyptian Journal of Informatics, 24(2), 313–325.
-- 28. Awotunde, J. B., Ayo, F. E., Panigari, R., Garg, A., Bhoi, A. K., & Barsoschi, P. (2023). A multi-level random forest-based intrusion detection using fuzzy inference system for internet of things networks. International Journal of Computational Intelligence Systems, 16(1), 31.
-- 29. Awotunde, J. B., Oguns, Y. J., Amuda, K. A., Adeleke, T., Olagunju, K., & Ajabe, S. A. (2023). Cyber-Physical Systems: Analysis, Opportunities, Challenges, and Future Prospects. Blockchain for Cyber-Physical Systems, 21–46.
-- 30. Kolias, C., Kambourakis, G., Voas, J. (2017). DDoS in the IoT: Mirai and other bots. Computer, 50(7), 80–84.
-- 31. Al-Garadi, M., Mohamed, A., Al-Ali, A., Xu, X., & Gucci, M. (2020). A survey of machine and deep learning methods for internet of things (IoT) security. IEEE Communications & Tutorials, 22(3), 1446–1685.
-- 32. Notra, S., Siddiki, M., Ghorakheli, H. (2014). An experimental study of security and privacy risks with household appliances. In 2014 IEEE conference on communications and network security (pp. 79–84).
-- 33. Kolias, C., Stavrou, A., Voas, J., Jovanova, I., Kuhn, R. (2016). Learning internet-of-things security “hands-on”. Security & Privacy, 14(1), 37–46.
-- 34. Kamini, K., Duwol, V., & Langat, K. (2019). Security concerns in IoT-based smart grid. International Journal of Critical Infrastructure Protection, 25, 36–49.
-- 35. Awotunde, J. B., Jimi, R. G., Forunoso, S. O., Adeniyi, E. A., Abidion, K. M., & Banjo, O. O. (2021). Privacy and security concerns in IoT-based Healthcare Systems. In The Fusion of Things, Artificial Intelligence, and Cloud Computing in Health Care (pp. 105–134).
-- 36. Abdulheem, R., Awotunde, J. B., Chakrabarty, C., Adeniyi, E. A., Oladipo, I. D., & Bhoi, A. K. (2023). Security and Privacy Concerns in Smart Healthcare System. In Implementation of Smart Healthcare Systems Using AI, IoT, and Blockchain (pp. 243–273).
-- 37. Kumar, S., & Ablawat, P. (2023). Security and Privacy Concerns in Smart Healthcare. In Security Implementation of Medical Things (pp. 137–175).
-- 38. Awotunde, J. B., Misra, S., & Sham, Q. T. (2022, November). A Secure Framework for Internet of Medical Things Security Based Using Lightweight Cryptography Enabled Blockchain. International Conference on Future Date and Security Engineering (pp. 258–272).
 
 
 
+# 参考文献
 
+4. Jyotshna, V. R. P. V., Prasad, R., & Prasad, K. M. (2011). A review of anomaly intrusion detection systems. International Journal of Computer Applications, 28(7), 26–35.
+
+5. Xu, H., Sun, Z., Cao, Y., & Bilal, H. (2023). A data-driven approach for intrusion and anomaly detection using automated machine learning for the Internet of Things. Soft Computing, 27(19), 14469–14481.
+
+6. Uddin, R., Kumar, S. A., & Chamola, V. (2024). Denial of security attacks in edge computing layers: Taxonomy, vulnerabilities, threats and solution. Ad Hoc Networks, 152, 103322.
+
+7. Haroon, M., Misra, D. K., Husain, M., Tripathi, M. M., & Khan, A. (2023). Security Issues in the Internet of Things for the Development of Smart Cities. In Cybersecurity and the Age of the Next-Generation Information Revolution (pp. 123–137). Pennsylvania: IGL Global.
+
+8. Awotunde, J. B., Imoize, L. A., Jimoh, R. G., Adeniyi, E. A., Abdulraheem, M., Oladipo, I. D., & Fala, P. B. (2024). AIOT Enabling Real-Time Monitoring of Healthcare Systems: Security and Privacy Considerations. Handbook of Security Systems and Privacy of AI-Enabled Healthcare Systems and Internet of Medical Things, 97–133.
+
+9. Nazir, A., He, J., Zhu, N., Wajah, A., Ma, X., Ullah, F., ... & Pathan, M. S. (2023). Advancing IoT security: A systematic review of machine learning approaches for the detection of IoT bots. Journal of Saudi University-Computer and Information Systems, 1–32, 101820.
+
+10. Odeh, A., & Abu Tale. (2023). Ensemble-based deep learning models for enhancing intrusion detection. Applied Sciences, 13(21), 1185.
+
+11. Prasad, R., & Rohokale, V. (2020). Cybersecurity: The Lifeline of Information and Communication Technology. Springer: International Publishing.
+
+12. Lew, J., Shah, D., Cattell, S., Zhang, M., Sandhupata, A., ... Aamodt, T. (2019). Analyzing machine learning workflows using detailed GPU. In 2019 IEEE international symposium on performance analysis of systems and software (ISFAS) (pp. 151–152).
+
+13. Najabadi, M. M., Villanueva, R., Khofagar, T., Siya, N., Wald, R., & Muhem, E. (2015). Deep learning algorithms and challenges in big data analytics. Journal of Big Data, 2(1), 1–22.
+
+14. Dong, B., & Wang, X. (2016). Comparison deep learning to traditional methods for intrusion detection. In 2016 IEEE international conference on communication and networks (ICCS) (pp. 581–585).
+
+15. Awotunde, J. B., Boloroso, S., Imoize, A., Odunuga, J., Lee, C., & Do, D. (2023). An ensemble-based model for intrusion detection in industrial internet of networks. Applied Sciences, 13(4), 2474.
+
+16. Vasilomanidis, K., Karapayush, S., Mühlacker, M., & Fischer, F. (2015). Taxonomy and survey of collaborative intrusion detection. ACM Surveys (CSUR), 47(4), 1–33.
+
+17. Buczak, A., & Guven, E. (2015). A survey of data mining and machine learning methods for security. IEEE Communications & Tutorials, 18(2), 1153–1176.
+
+18. Thomas, R., & Pavithran, D. (2018). A survey of intrusion detection models based on NSL-KDD dataset. Fifth ICT information trends (ITT) (pp. 286–291).
+
+19. Benhelia, E., Welsh, T., & Hamouda, W. (2018). A critical review of practices and challenges in IoT: Toward unbiased and resilient systems. IEEE Communications & Tutorials, 20(4), 3496–3509.
+
+20. Mishra, P., Varadarajan, T., Tupakala, U., & Phi, E. (2018). A detailed investigation and analysis of machine learning techniques for intrusion detection. IEEE Communications & Tutorials, 21(1), 668–728.
+
+21. Liu, H., & Lang, B. (2019). Machine learning and deep learning methods for intrusion detection systems: A survey. Applied Sciences, 9(20), 4396.
+
+22. Kraisat, A., Gondal, I., Vample, P., & Kamruzzaman, J. (2019). Survey of intrusion detection systems: Techniques, datasets and challenges. Cybersecurity, 2(20), 1–22.
+
+23. Da Costa, K. A., Papa, P. J., Lisbon, C. O., Munoz, R., & Albuquerque, V. H. C. (2019). Internet of Things: A survey on machine learning-based intrusion detection. Computer Networks, 151, 147–157.
+
+24. Chaabouni, Mosbah, M., Zemmari, A., Auvignac, C., & Faruki, P. (2019). Network intrusion detection for IoT security based on learning techniques. IEEE Communications & Tutorials, 21(3), 2671–2710.
+
+25. Lawal, M., Shaikh, R. A., & Hassan, S. R. (2020). Security analysis of network anomalies mitigations in iot networks. IEEE Access, 8, 43355–43374.
+
+26. Ashraf, J., Moustafa, N., Khursid, H., Debie, E., Haider, W., & Wahab, A. (2020). A review of intrusion detection systems using machine and deep learning in internet of things: Challenges and future directions. Electronics, 9(7), 1177.
+
+27. Ayo, E. F., Awotunde, J. B., Forunoso, S. O., Ajagun, M. O., & Ajabe, S. A. (2023). A genomic-based KNN model for flux botnet detection. Egyptian Journal of Informatics, 24(2), 313–325.
+
+28. Awotunde, J. B., Ayo, F. E., Panigari, R., Garg, A., Bhoi, A. K., & Barsoschi, P. (2023). A multi-level random forest-based intrusion detection using fuzzy inference system for internet of things networks. International Journal of Computational Intelligence Systems, 16(1), 31.
+
+29. Awotunde, J. B., Oguns, Y. J., Amuda, K. A., Adeleke, T., Olagunju, K., & Ajabe, S. A. (2023). Cyber-Physical Systems: Analysis, Opportunities, Challenges, and Future Prospects. Blockchain for Cyber-Physical Systems, 21–46.
+
+30. Kolias, C., Kambourakis, G., Voas, J. (2017). DDoS in the IoT: Mirai and other bots. Computer, 50(7), 80–84.
+
+31. Al-Garadi, M., Mohamed, A., Al-Ali, A., Xu, X., & Gucci, M. (2020). A survey of machine and deep learning methods for internet of things (IoT) security. IEEE Communications & Tutorials, 22(3), 1446–1685.
+
+32. Notra, S., Siddiki, M., Ghorakheli, H. (2014). An experimental study of security and privacy risks with household appliances. In 2014 IEEE conference on communications and network security (pp. 79–84).
+
+33. Kolias, C., Stavrou, A., Voas, J., Jovanova, I., Kuhn, R. (2016). Learning internet-of-things security “hands-on”. Security & Privacy, 14(1), 37–46.
+
+34. Kamini, K., Duwol, V., & Langat, K. (2019). Security concerns in IoT-based smart grid. International Journal of Critical Infrastructure Protection, 25, 36–49.
+
+35. Awotunde, J. B., Jimi, R. G., Forunoso, S. O., Adeniyi, E. A., Abidion, K. M., & Banjo, O. O. (2021). Privacy and security concerns in IoT-based Healthcare Systems. In The Fusion of Things, Artificial Intelligence, and Cloud Computing in Health Care (pp. 105–134).
+
+36. Abdulheem, R., Awotunde, J. B., Chakrabarty, C., Adeniyi, E. A., Oladipo, I. D., & Bhoi, A. K. (2023). Security and Privacy Concerns in Smart Healthcare System. In Implementation of Smart Healthcare Systems Using AI, IoT, and Blockchain (pp. 243–273).
+
+37. Kumar, S., & Ablawat, P. (2023). Security and Privacy Concerns in Smart Healthcare. In Security Implementation of Medical Things (pp. 137–175).
+
+38. Awotunde, J. B., Misra, S., & Sham, Q. T. (2022, November). A Secure Framework for Internet of Medical Things Security Based Using Lightweight Cryptography Enabled Blockchain. International Conference on Future Date and Security Engineering (pp. 258–272).
 
 39. Lonzetta, A. M., Cope, Campbell, J., Mohd, B. J., & Hayajneh, T. (2018). 物联网中蓝牙技术的安全漏洞。Journal of Sensor and Actuator Networks, 7(3), 28.
 
@@ -3416,6 +3380,8 @@ CNN 擅长通过提取特征的分层次表示来分析数据（如网络流量�
 45. Ogoni, M. M., Okeyo, G., & Wakula, J. M. (2020). 物联网隐私与安全调查。Computer Science Review, 38, 100312.
 
 46. Sardar, R., & Anees, T. (2021). 物物网：安全挑战与机制。IEEE Access, 9, 31695–31711.
+
+
 
 47. Louis, K., & Zulkine, M. (2020). 物联网短距离无线技术的攻击与防御。IEEE Access, 8, 88992–88993.
 
@@ -3507,10 +3473,6 @@ CNN 擅长通过提取特征的分层次表示来分析数据（如网络流量�
 
 90. Ravi, V., Pham, T. D., & Alazab, M. (2023). 基于深度学习的医疗物联网（IoMT）入侵检测系统。IEEE Internet of Things Magazine, 6(2), 50–54.
 
-
-
-
-
 # 物联网入侵检测
 
 93. Vishwakarma, M., & Kewssani, N. (2023). 一基于迁移学习的物联网入侵检测系统。Research Square.
@@ -3557,6 +3519,8 @@ CNN 擅长通过提取特征的分层次表示来分析数据（如网络流量�
 
 113. Adewole, K., Salah-Ibrahim, T., Imoize, A., Oladipo, D., Abdulheem, M., Awotunde, J. B., & Aro, T. (2022). 网络检测的数据流与批量学习的实证分析。Electronics, 11(19), 310.
 
+
+
 114. Jimoh, R., Imoize, A., Ojo, S., Akanbi, M. B., Faruk, N. (2022). 带有布谷搜索的用于广域网入侵检测的增强深度神经网络。在第 52 届教育与发展信息技术 (ITED) (pp. 1–5)。
 
 115. Awotunde, J. B., Abidun, K. M., Adeniyi, E., Forunkso, S., & Jimi, R. (2021). 基于深度学习的安全 IoT 系统入侵检测技术。在信息学与智能应用国际会议 (pp. 50–62)。
@@ -3587,15 +3551,12 @@ CNN 擅长通过提取特征的分层次表示来分析数据（如网络流量�
 
 128. Al-Dunainwi, Y., Al-Kaseem, B. R., & Al-Raweshidy, H. S. (2023). SDN 环境下用于 DDoS 检测的优化人工智能模型。IEEE Access.
 
-
-
-
-
 ![](img/aeaf5e4a1e1020ca53a1da35e316de95_196_0.png)
 
 # 索引
 
 ## A
+
 - 准确率，29, 31, 74, 78–79, 112–114, 117–118, 149
 - 激活，64
 - 执行器，158
@@ -3634,6 +3595,7 @@ CNN 擅长通过提取特征的分层次表示来分析数据（如网络流量�
 - Azure，5
 
 ## B
+
 - 生物学的，173
 - 生物识别，169
 - 生物传感器，4
@@ -3656,6 +3618,7 @@ CNN 擅长通过提取特征的分层次表示来分析数据（如网络流量�
 - 生物识别的，88
 
 ## C
+
 - CICIDS，132, 134, 170–171
 - 分类，20–24, 26, 32, 42, 61, 76–78, 128–162
 - 克隆，163
@@ -3682,6 +3645,7 @@ CNN 擅长通过提取特征的分层次表示来分析数据（如网络流量�
 - 网络威胁，2
 
 ## D
+
 - DAGs（有向无环图），12
 - DARPA，131
 - 数据集，19, 24–25, 27, 29, 31, 55, 59–62
@@ -3697,6 +3661,7 @@ CNN 擅长通过提取特征的分层次表示来分析数据（如网络流量�
 - Dijkstra，39
 
 ## E
+
 - 窃听，160, 162, 158, 160, 162
 - EdgeAI，37–38, 44, 49, 51–52, 54–71
 - EDRs，45
@@ -3706,6 +3671,7 @@ CNN 擅长通过提取特征的分层次表示来分析数据（如网络流量�
 - 可解释的，97, 174
 
 ## F
+
 - Facebook，71
 - FCC，131
 - FDA，2
@@ -3723,6 +3689,7 @@ CNN 擅长通过提取特征的分层次表示来分析数据（如网络流量�
 - FTP，135, 139–141, 143–145, 148
 
 ## G
+
 - 高斯，55–56, 67
 - Gboost，167
 - ged，59
@@ -3734,6 +3701,7 @@ CNN 擅长通过提取特征的分层次表示来分析数据（如网络流量�
 - 梯度，21–22, 25, 29, 62–66, 110
 
 ## H
+
 - HEARTED，134–137, 139–141, 143–145, 147–148
 - 劫持，161
 - HMM，67
@@ -3743,6 +3711,7 @@ CNN 擅长通过提取特征的分层次表示来分析数据（如网络流量�
 - HVAC，157
 
 ## I
+
 - ICMP，118
 - ICS，171
 - IDP，23
@@ -3755,17 +3724,21 @@ CNN 擅长通过提取特征的分层次表示来分析数据（如网络流量�
 - ISD，28, 68
 
 ## J
+
 - 干扰，162
 
 ## K
+
 - KSCVR，130
 
 ## L
+
 - 层，8, 64, 93, 131, 172
 - LDA，171
 - LibSVM，167
 
 ## M
+
 - MAC，9
 - 恶意的，20
 - 恶意软件，2, 18–19, 21, 27, 57, 127–130, 159–164, 166–170, 173
@@ -3775,19 +3748,23 @@ CNN 擅长通过提取特征的分层次表示来分析数据（如网络流量�
 - MQTT，170
 
 ## N
+
 - NIDS，19, 156–157, 170
 - NSKDD，187
 
 ## O
+
 - OpenStack，39
 
 ## P
+
 - PCA，110, 131
 - PDF，38, 44, 46
 - PII，58
 - PORTSCAN，135, 137, 139–141, 143–145, 147–148
 
 ## R
+
 - 勒索软件，76, 118
 - 比例，31, 75
 - RBAC，60
@@ -3806,6 +3783,7 @@ CNN 擅长通过提取特征的分层次表示来分析数据（如网络流量�
 - RSA，59
 
 ## T
+
 - Tableau，44–45
 - TCHP，9
 - TCP，9, 118
@@ -3814,6 +3792,7 @@ CNN 擅长通过提取特征的分层次表示来分析数据（如网络流量�
 - Twitter，71
 
 ## U
+
 - UAVs，44, 47
 - 无处不在，5, 40
 - UCI，172
@@ -3823,9 +3802,11 @@ CNN 擅长通过提取特征的分层次表示来分析数据（如网络流量�
 - URLs，19–23, 59
 
 ## V
+
 - Vuzix，45
 
 ## S
+
 - SDGs，86–88
 - SDLC，6
 - SDN，168
@@ -3846,7 +3827,9 @@ CNN 擅长通过提取特征的分层次表示来分析数据（如网络流量�
 - SVM，55, 61, 67, 113–114, 117–118, 129–130, 167, 169, 172
 - SVMs，55, 71, 111–112, 130
 - SVN，169
+
 ## W
+
 - acryCry，127
 - XAI，168
 - XO，30

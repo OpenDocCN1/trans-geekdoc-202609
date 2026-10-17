@@ -1,97 +1,19 @@
-# 机器学习与数据分析特征工程 (Chapman & Hall／CRC 数据挖掘与知识发现系列)
 
-
-
-
-
-
-
-
-![](img/f9b50d48a9ba5d6b2e7f6b9761812434_0_0.png)
-
-
-
+# 机器学习与数据分析特征工程 (Chapman & Hall/CRC 数据挖掘与知识发现系列)
 
 系列编辑：Vipin Kumar
-
-
 
 编者
 董国柱 (Guozhu Dong) 与 刘欢 (Huan Liu)
 
-![](img/f9b50d48a9ba5d6b2e7f6b9761812434_3_0.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
 致我的家人，特别是宝贝 Hazel [G. D.]
-
 致我的家人 [H. L.]
-
 致所有贡献的作者 [G. D. & H. L.]
 
-![](img/f9b50d48a9ba5d6b2e7f6b9761812434_6_0.png)
-
-
 序言 xv
-
 贡献者 xvii
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## II 通用特征工程
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # 索引 . . . . . . . . . . . . . . . . . . . . . . 395
 
@@ -109,97 +31,53 @@
 
 熟悉书中涵盖的概念和技术，将提高人们对机器学习和大数据分析的理解和专业知识。本书可以作为数据分析师、大数据科学家、数据预处理人员、项目经理、项目开发者、预测模型建模师、研究人员、研究生和高年本科生的参考。本书可以作为特征工程课程的主要教材，并作为机器学习、数据挖掘和大数据分析课程的补充材料。
 
-我们对本书各章节的贡献作者表示深切的谢意；没有他们的专业知识和无私付出，本书将无法完成。感谢 Randi Cohen 和 Veronica Rodriguez，他们在这项工作的出版方面提供了指导和帮助。我们感谢韩家伟、裴健、Nicholas Skapura、吴新涛和张军杰，他们亲切地建议了领域专家作为潜在作者等，此外还感谢 Vineeth Rakes Mohan，他对书的部分内容提供了有用的反馈。
+我们对本书各章节的贡献作者表示深切的谢意；没有他们的专业知识和无私付出，本书将无法完成。感谢 `Randi Cohen` 和 `Veronica Rodriguez`，他们在这项工作的出版方面提供了指导和帮助。我们感谢`韩家伟`、`裴健`、`Nicholas Skapura`、`吴新涛`和`张军杰`，他们亲切地建议了领域专家作为潜在作者等，此外还感谢 `Vineeth Rakes Mohan`，他对书的部分内容提供了有用的反馈。
 
 东国卓 (Guozhu Dong)
 
-# Contributors
+# 贡献者
 
-Guozhu Dong
-Wright State University
-
-Huan Liu
-Arizona State University
-
-Jian Lu
-Nanjing University of Posts and Telecommunications
-
-Shang Wang
-Arizona State University
-
-Yao Ma
-Michigan State University
-
-Sanjaya Wijeratne
-Wright State University
-
-Qiaozhu Mei
-University of Illinois at-Champaign
-Urbana-Champaign, Illinois
-
-Xin Xia
-Monash University
-
-Filippo Menczer
-Indiana University
-
-Feng Xu
-Nanjing University
-
-Jyrki Nummela
-University of Tampere
-
-Yuan Yao
-Nanjing University
-
-Wait and I (此处为 original text)
-
-Amit Seth
-Wright State University
-
-Amir Hossein Yazdavar
-Wright State University
-
-Jilang Tang
-Michigan State University
-
-ChengXiang Zhai
-University of Illinois at-Champaign
-Urbana-Champaign, Illinois
-
-Krishnaprasad Thirunarayan
-Wright State University
-
-Peng Zhang
-Sichuan University
-
-Guozhu Dong
-Wright State University
+- `Guozhu Dong` - `Wright State University`
+- `Huan Liu` - `Arizona State University`
+- `Jian Lu` - `Nanjing University of Posts and Telecommunications`
+- `Shang Wang` - `Arizona State University`
+- `Yao Ma` - `Michigan State University`
+- `Sanjaya Wijeratne` - `Wright State University`
+- `Qiaozhu Mei` - `University of Illinois at-Champaign`, `Urbana-Champaign, Illinois`
+- `Xin Xia` - `Monash University`
+- `Filippo Menczer` - `Indiana University`
+- `Feng Xu` - `Nanjing University`
+- `Jyrki Nummela` - `University of Tampere`
+- `Yuan Yao` - `Nanjing University`
+- `Wait and I` (此处为 original text)
+- `Amit Seth` - `Wright State University`
+- `Amir Hossein Yazdavar` - `Wright State University`
+- `Jilang Tang` - `Michigan State University`
+- `ChengXiang Zhai` - `University of Illinois at-Champaign`, `Urbana-Champaign, Illinois`
+- `Krishnaprasad Thirunarayan` - `Wright State University`
+- `Peng Zhang` - `Sichuan University`
+- `Guozhu Dong` - `Wright State University`
 
 (注：由于原文中作者列表存在重复和格式错乱，译文按要求保留了结构并翻译内容)
 
-Randi Cohen
-Veronica Rodriguez
-Jian Pei (裴健)
-Nicholas Skapura
-Xintao Wu (吴新涛)
-Junjie Zhang (张军杰)
-Vineeth Rakes Mohan
-
+- `Randi Cohen`
+- `Veronica Rodriguez`
+- `Jian Pei` (裴健)
+- `Nicholas Skapura`
+- `Xintao Wu` (吴新涛)
+- `Junjie Zhang` (张军杰)
+- `Vineeth Rakes Mohan`
 
 # 基础知识与概述
 
-Guozhu Dong
-Wright State University, Dayton, Ohio
-
-Huan Liu
-Arizona State University, Phoenix, Arizona
-
+`Guozhu Dong` - `Wright State University, Dayton, Ohio`
+`Huan Liu` - `Arizona State University, Phoenix, Arizona`
 
 > 归根，有些机器学习项目成功了，有些则失败了。是什么导致了差异？最重要的因素是所使用的特征。
-特征工程是关键。
-
-Pedro Dominingos, 2012 [2]。
+>
+> 特征工程是关键。
+>
+> `Pedro Dominingos`, 2012 [2]。
 
 本章首先提供了关于特征、特征工程和数据分析任务的基本基础知识。然后对本书进行了概述。最后，为书中其他章节未涵盖的特征工程主题提供了提示。
 
@@ -209,13 +87,7 @@ Pedro Dominingos, 2012 [2]。
 
 在机器学习、数据挖掘和数据分析中，*特征*（feature）是用于描述单个数据对象某方面的属性或变量。
 
-
-
-
-
-## 机器学习与数据分析中的特征工程
-
-示例特征包括学生的年龄和肤色，学生的专业和平均学点（GPA）。
+示例特征包括学生的年龄和肤色，学生的专业和平均学点（`GPA`）。
 
 具有信息量的特征是数据分析的基础。它们对于描述底层对象，以及对于区分和表征不同的（显式或隐式）对象组非常有用。它们对于产生准确且易解释的预测模型以及在各种数据分析任务中获得良好结果也关重要。“特征（Feature）”、“变量（variable）和属性（attribute）”通常作为同义词使用。
 
@@ -223,17 +95,15 @@ Pedro Dominingos, 2012 [2]。
 
 特征分为若干类型，包括分类特征、序数特征和数值特征。由于其领域的结构差异，不同类型的特征需要不同的分析。
 
-- * 分类特征（categorical feature）的取域是离散值的集合。例如，颜色是一种分类特征，其取域为{黑、蓝、棕、绿、红、白、黄}。
+- * **分类特征**（categorical feature）的取域是离散值的集合。例如，颜色是一种分类特征，其取域为{黑、蓝、棕、绿、红、白、黄}。
+- * **序数特征**（ordinal feature）的取域是有序值的集合。学位特征是一种序数特征，其取域为{学士、硕士、博士}且这三个值的顺序如下：学士 < 硕士 < 博士。
+- * **数值特征**（numerical feature）的取域是数值集合。数值特征也被称为定量特征或连续特征。例如，年龄特征是一个数值特征，其取域是0到150之间的整数集合。
 
-- * 序数特征（ordinal feature）的取域是有序值的集合。学位特征是一种序数特征，其取域为{学士、硕士、博士}且这三个值的顺序如下：学士 < 硕士 < 博士。
+每对数值值之间存在小于（由 `<` 表示）的关系，例如 `3 < 4`。这种关系以及数值值之间隐含的接近性在机器学习和数据分析中被利用。
 
-- * 数值特征（numerical feature）的取域是数值集合。数值特征也被称为定量特征或连续特征。例如，年龄特征是一个数值特征，其取域是0到150之间的整数集合。
+- * 如果满足以下条件，则该数值特征是**比例标度特征**（ratio-scaled feature）：当 `u = 2 * v` 时，值 `u` 对于该特征的某种意义（例如温暖度或长度）上是值 `v` 的两倍。
 
-每对数值值之间存在小于（由 < 表示）的关系，例如 3 < 4。这种关系以及数值值之间隐含的接近性在机器学习和数据分析中被利用。
-
-- * 如果满足以下条件，则该数值特征是比例标度特征（ratio-scaled feature）：当 $u = 2 * v$ 时，值 $u$ 对于该特征的某种意义（例如温暖度或长度）上是值 $v$ 的两倍。
-
-在许多应用中，分类特征被表示为数值值。在这种情况下需要小心，因为数值值隐含的顺序通常是没有意义的。在 R 语言包中，分类变量被视为因子（factors）。通常使用“独热编码（one-hot encoding）”来转换此类特征。
+在许多应用中，分类特征被表示为数值值。在这种情况下需要小心，因为数值值隐含的顺序通常是没有意义的。在 `R` 语言包中，分类变量被视为因子（factors）。通常使用“`独热编码`”（one-hot encoding）来转换此类特征。
 
 特征的有用性最终通过该特征为当前数据分析任务带来的改进来衡量。例如，
 
@@ -245,17 +115,12 @@ Pedro Dominingos, 2012 [2]。
 
 本书对特征工程使用了非常通用的定义。它包含了特征转换、特征生成、特征提取、特征选择、通用自动特征工程方法论以及特征工程应用等主题。我们在下面要说明这些概念。
 
-- (1) 特征转换（Feature transformation）是指从现有特征构建新特征；这通常通过数学映射实现。
-
-- (2) 特征生成（Feature generation）是指生成通常不是通过特征转换的结果的新特征。例如，假设不将图像中的像素视为整体，而是为图像生成新特征。此外，说从模式中定义的特征是被生成的是有合理的。许多特定领域定义特征的方法也属于特征生成的范畴。有时特征提取一词也用于特征生成。
-
-- (3) 特征选择（Feature selection）是指从非常大的特征池中选择一小组特征。特征规模的缩小使得某些算法在计算上变得可行。特征选择还可能提高这些算法结果的质量。
-
-- (4) 特征分析与评估（Feature analysis and evaluation）是关于评估特征和特征集有用性的概念、方法和标准。这通常作为特征选择的一部分。
-
-- (5) 通用自动特征工程方法论（General automatic feature engineering methodology）关于自动生成大量特征并从生成的特征中选择有效子集的通用方法。
-
-- (6) 特征工程应用（Feature engineering applications）涉及特征工程，但重点是解决特定背景下的其他分析任务。示例包括分析 Twitter 数据以提高灾害响应和救援工作的质量。
+- (1) **特征转换**（Feature transformation）是指从现有特征构建新特征；这通常通过数学映射实现。
+- (2) **特征生成**（Feature generation）是指生成通常不是通过特征转换的结果的新特征。例如，假设不将图像中的像素视为整体，而是为图像生成新特征。此外，说从模式中定义的特征是被生成的是有合理的。许多特定领域定义特征的方法也属于特征生成的范畴。有时特征提取一词也用于特征生成。
+- (3) **特征选择**（Feature selection）是指从非常大的特征池中选择一小组特征。特征规模的缩小使得某些算法在计算上变得可行。特征选择还可能提高这些算法结果的质量。
+- (4) **特征分析与评估**（Feature analysis and evaluation）是关于评估特征和特征集有用性的概念、方法和标准。这通常作为特征选择的一部分。
+- (5) **通用自动特征工程方法论**（General automatic feature engineering methodology）关于自动生成大量特征并从生成的特征中选择有效子集的通用方法。
+- (6) **特征工程应用**（Feature engineering applications）涉及特征工程，但重点是解决特定背景下的其他分析任务。示例包括分析 `Twitter` 数据以提高灾害响应和救援工作的质量。
 
 ### 1.1.3 机器学习与数据分析任务
 
@@ -263,13 +128,13 @@ Pedro Dominingos, 2012 [2]。
 
 ## 机器学习与数据分析中的特征工程
 
-回归与分类相似，由于 $y$ 是数值属性而不是类别标签。
+回归与分类相似，由于 `y` 是数值属性而不是类别标签。
 
-聚类（Clustering）是将数据集 $D$ 划分为若干子集（簇）的任务，使得簇内的对象彼此高度相似，而不同簇之间的对象彼此高度不同。相似性通常使用距离函数来衡量，但也存在其他方法。聚类也被称为分割（segmentation）和概念发现（concept discovery）。
+**聚类**（Clustering）是将数据集 `D` 划分为若干子集（簇）的任务，使得簇内的对象彼此高度相似，而不同簇之间的对象彼此高度不同。相似性通常使用距离函数来衡量，但也存在其他方法。聚类也被称为分割（segmentation）和概念发现（concept discovery）。
 
-异常检测（Outlier detection，也称为异常检测）是识别不符合给定数据集中大多数对象所显示的预期模式的任务。
+**异常检测**（Outlier detection，也称为异常检测）是识别不符合给定数据集中大多数对象所显示的预期模式的任务。
 
-模式挖掘（Pattern mining）是识别在某种意义上有意义模式的任务。模式可以被视为一组可以评估为真假的单个对象。模式挖掘过程可以应用于单个数据集，在这种情况下人们想要挖掘频繁模式；也可以应用于多个数据集（例如类），在这种情况下人们想要挖掘区分一个数据集与其他数据集的模式。
+**模式挖掘**（Pattern mining）是识别在某种意义上有意义模式的任务。模式可以被视为一组可以评估为真假的单个对象。模式挖掘过程可以应用于单个数据集，在这种情况下人们想要挖掘频繁模式；也可以应用于多个数据集（例如类），在这种情况下人们想要挖掘区分一个数据集与其他数据集的模式。
 
 ## 1.2 章节概述
 
@@ -283,17 +148,13 @@ Pedro Dominingos, 2012 [2]。
 
 大多数视觉计算任务涉及从原始视觉数据（图像或视频）中提取特征进行预测、回归或决策。第3章介绍了图像特征表示的层次，从手工特征开始。经典特征由专家设计，基于任务特定的先验知识。它们易于解释并表征图像的颜色、纹理和形状等基本方面。下一级特征是潜在特征表示。这些特征表示特征空间中的任务特定结构，如稀疏性、降维相关性、低秩等。
 
-时间序列是分析中常见的重要数据类型。第4章提供了时间序列表示和方法的概述。首先介绍了全局欧氏距离和 DTW 等弹性距离量。它讨论了三类特征，即提供局部形状特征的子序列、捕捉顺序结构的全局特征以及捕捉区分属性区间特征。它还讨论了影响为给定任务选择最有用方法的因素。
+时间序列是分析中常见的重要数据类型。第4章提供了时间序列表示和方法的概述。首先介绍了全局欧氏距离和 `DTW` 等弹性距离量。它讨论了三类特征，即提供局部形状特征的子序列、捕捉顺序结构的全局特征以及捕捉区分属性区间特征。它还讨论了影响为给定任务选择最有用方法的因素。
 
 第5章提供了流式数据特征工程概述，重点是流式特征的构建和选择。它首先总结了典型的流设置及其对应的正式定义。然后回顾了包括线性是非线性方法在内的自动特征构建算法。接下来概述了不同流设置特征选择算法。最后讨论了关于数据流特征工程的一些问题和可能的研究方向。
 
 序列数据出现在许多应用中，包括生物信息学、音乐、文学、医疗和安全。第6章讨论了序列数据的基本概念。它讨论了三大序列特征，即传统的基于模式的序列特征、通用模式特征以及不涉及模式使用的序列特征。它介绍了几种作为模式序列特征的模式类型方法，并提供了模式类型以及挖掘此类方法的概述。它还考虑了选择模式的重要因素。
 
 图和网络数据对于各种图分析任务至关重要，如社交网络分析、蛋白质-蛋白质相互作用分析和
-
-
-
-
 
 # 6 机器学习与数据分析中的特征工程
 
@@ -307,33 +168,37 @@ Pedro Dominingos, 2012 [2]。
 
 深度学习模型近年来因图像分类、语音识别和自然语言处理任务中的巨大成功而日益流行。深度学习的巨大成功主要源于深度网络的特殊结构，这些结构能够学习非线性特征，以促进手头任务。本质上，现有深度学习算法的力量可以作为强大的特征学习/提取工具，即通过深度学习算法提取的潜在特征就是学习到的新表示。第 11 章回顾了各种经典和流行的深度学习算法，并解释了它们如何用于特征表示学习。它还讨论了如何将它们用于层次化和解耦表示学习，以及如何应用于各个领域。
 
-越来越多的证据表明，Twitter 等社交平台正在吸纳越来越多的被称为“社交机器人”的自主实体，这些机器人由软件控制，通过生成内容并与其他账户建立交互。第 12 章考虑了社交媒体背景下社交机器人检测的特征工程。它描述了检测的设置，并介绍了各种类型的特征，其中一些特征是社交媒体特有的，包括它们的定义、选择以及对机器人检测的无效性。它还描述了一个名为 Botometer 的系统，该系统分析了数千条描述账户及其邻居的推文信息，并讨论了使用提取特征构建机器人检测分类器的实验。
+越来越多的证据表明，`Twitter` 等社交平台正在吸纳越来越多的被称为“社交机器人”的自主实体，这些机器人由软件控制，通过生成内容并与其他账户建立交互。第 12 章考虑了社交媒体背景下社交机器人检测的特征工程。它描述了检测的设置，并介绍了各种类型的特征，其中一些特征是社交媒体特有的，包括它们的定义、选择以及对机器人检测的无效性。它还描述了一个名为 `Botometer` 的系统，该系统分析了数千条描述账户及其邻居的推文信息，并讨论了使用提取特征构建机器人检测分类器的实验。
 
 第 13 章考虑了用于软件架构的特征工程和工程。它展示了如何设计领域特定特征并自动完成三个软件工程任务：(1) 检测缺陷软件模块，(2) 识别并创建移动应用发布，(3) 预测谁将离开软件团队。例如，从多样化的软件特征集中提取特征集，并将其用于构建预测模型。该章还讨论了最新进展及其潜力。
 
-第 14 章介绍了了基于 Twitter 的应用的特征工程研究。它讨论了如何从 Twitter 应用程序接口 (API) 下载 Twitter 数据，以及下载的推文中可用的数据类型。然后，它讨论了各种文本、图像和视频相关的特征，以及可以提取的网络特征。接下来，讨论了不同特征类型的用途，并分析了为什么某些特征在推文中常见的短文本消息背景下表现良好。随后，它介绍了真实的 Twitter 应用。最后，该章通过讨论 Twitris（一个已经商业化的实时语义分析平台）及其 Twitter 特征的使用进行了总结。
+第 14 章介绍了了基于 `Twitter` 的应用的特征工程研究。它讨论了如何从 `Twitter` 应用程序接口 (`API`) 下载 `Twitter` 数据，以及下载的推文中可用的数据类型。然后，它讨论了各种文本、图像和视频相关的特征，以及可以提取的网络特征。接下来，讨论了不同特征类型的用途，并分析了为什么某些特征在推文中常见的短文本消息背景下表现良好。随后，它介绍了真实的 `Twitter` 应用。最后，该章通过讨论 `Twitris`（一个已经商业化的实时语义分析平台）及其 `Twitter` 特征的使用进行了总结。
 
 ## 1.3 本书之外的内容
 
 没有任何一本书能涵盖特征工程的所有丰富主题。本节提供了书中未涵盖的主题指引，包括语音特征、音乐特征、日志数据特征、基于迁移学习的特征工程、数值特征离散化、机器学习中的特征工程以及关于特征工程的早期论文和书籍。由于特征工程领域的广泛性，本章并不完整。
 
-### 1.3.1 特特定数据类型的特征工程
+### 1.3.1 特定数据类型的特征工程
 
-许多语音特征的研究（例如 [11, 22]）是语音识别的一部分。文献 [28] 给出了语音识别的声学特征；这些特征包括音高、声道截面面积、梅频谱系数、基于 Teager 能量算子的特征、这些特征的强度以及语速。
+许多语音特征的研究（例如 [11, 22]）是语音识别的一部分。文献 [28] 给出了语音识别的声学特征；这些特征包括音高、声道截面面积、梅频谱系数、基于 `Teager` 能量算子的特征、这些特征的强度以及语速。
+
+
+
+# 音乐数据挖掘和分析
 
 音乐数据挖掘和分析吸引了大量关注 [13, 29]，其包括流派分类、情绪检测 [25]、仪器检测以及音乐识别。在一段音乐中，人们可能对不同部分之间的情绪感兴趣 [12]，以及寻找重复模式 [8]。数据是复杂的，因为它包含了声学部分（音高、强度等）、乐谱以及文本部分（歌词）。音乐数据可以被视为大型序列，尽管序列算法很大且元素之间存在显著关联，并且需要考虑声学、乐谱和歌词部分的并发处理问题。音乐数据与语音也是相关的。
 
 关于时间序列分析的第 4 章和序列特征工程的第 6 章与音乐数据相关。
 
+# 分析执行代码
+
 分析执行代码是一个重要问题。多种静态特征用于 [23]，即 DLL 相关特征、系统调用字符串/序列特征。DLL 相关特征包括二进制代码中的 DLL、DLL 函数调用以及每个 DLL 函数使用的系统调用数量，这些特征被用于 [27] 中的恶意分类，网络行为特征被用于 [18]。文献 [5] 对恶意分类进行了综述。
+
+# 执行和网络日志
 
 另一种具有独特特征的数据类型是执行和网络日志。网络入侵数据例如 1999 Cup 数据集 [10]。该 Cup 数据包含从典型局域网 (LAN) 采集的原始 TCP dump 数据。文献 [9] 讨论了该数据集的特征生成选择；它考虑了四类特征，即基本特征（例如来自包头而不检查载荷的特征）、内容特征、基于时间的流量特征和基于主机的流量特征。
 
-
-
-
-
-### 1.3.2 非特定数据主题的特征工程
+## 1.3.2 非特定数据主题的特征工程
 
 迁移学习可以用于从另一个数据集为新数据集寻找有效特征，尽管该领域的算法最初是为分类和聚类等分析任务设计的。迁移学习还可以帮助避免昂贵的数据标注工作。迁移学习还能学习如共享决策树的相似结构 [3]。综述请参阅 [19]。
 
@@ -379,11 +244,7 @@ Pedro Dominingos, 2012 [2]。
 - [29] Claus Weih, Dietmar Jannach, and Guenter Rudolph. *音乐数据分析：基础与应用*. CRC Press, 2011.
 - [30] Ian H Witten, Eibe Frank, and Mark Hall. *数据挖掘：实用机器学习工具与技术*. Morgan Kaufmann, 2016.
 
-
-
-
-
-## 2.1 引言
+# 2.1 引言
 
 文本数据广泛指的是各种自然语言数据，包括书面语和口语。近年来，在线数据经历了爆炸式增长，例如网页、新闻文章、科学文献、电子邮件、企业文档以及博客、论坛帖子、产品评论和推文等社交媒体。文本数据包含了关于世界的丰富知识，包括人类的观点和偏好。正因如此，挖掘和分析海量文本（“大数据”）能够支持我们在所有应用领域的任务并优化决策。
 
@@ -395,7 +256,7 @@ Pedro Dominingos, 2012 [2]。
 
 由于此类技术可能被应用于任何主题和任何自然语言的文本数据。
 
-## 2.2 文本表示概述
+# 2.2 文本表示概述
 
 文本数据的特征工程问题与文本表示问题密切相关，因为从原始数据中提取的特征集本质上充当了从特定视角对原始数据的表示。文本表示是几乎所有文本应用的基础，包括搜索、推荐、文本分类、聚类和文本预测 [51]。自该领域诞生以来，信息检索（IR）社区一直在研究文本表示。在信息检索中，一个核心问题是确定我们应该确定哪些信息，以有效地匹配查询和文档。更具体地说，通过统计方法选择合适的术语最初由 Luhn [39] 提出的，他利用文档中的频率来选择术语（这种想法是选择既不频繁也不稀有的）。这为自动索引奠定了基础，使用户能够根据查询匹配文档。信息检索社区基于各种特征广泛研究了文本表示，如词袋表示、短语索引 [14]，以及语义索引 [13]，以及用于分配值的重要特征，TF-IDF 权重和文档长度 [15]。由于对稳健性的强调，搜索引擎开发的技术通常是浅层的，但在许多其他文本应用中通常是足够且稳健的。
 
@@ -405,18 +266,11 @@ Pedro Dominingos, 2012 [2]。
 
 这三类技术可以相互结合，形成文本数据的丰富特征表示。下面我们将按照特征表示复杂的顺序系统地讨论所有这些技术。
 
-## 2.3 字符串文本
+# 2.3 字符串文本
 
 文本数据最基本、最通用的表示是将文本表示为字节序列。这种表示是计算机存储系统“看到”文本数据的方式——从根本上说，磁盘上的文档是字节有序序列。这种表示的通用性使得能够存储和处理任何自然语言的所有文本数据。然而，这种通用性是以意义为代价的。
 
-如果文本是用英文写的，这些单个字节可能足够表示文中出现的单个字符——这
-
-
-
-
-## 文本数据的特征工程
-
-通常被称为 ASCII 编码文本。这种针对主要为英语文本字符的特殊字节编码与 UTF-8 编码标准兼容；任何 ASCII 编码的文本文档都是有效的 UTF-8 编码文档（但这种关系是单向的）。UTF-8 编码文本支持比 ASCII 广得多的字符范围¹，并且不断更新以能够表示地球上几乎每种书面语言的文本。它通过用变长度字节序列表示单个字符来实现这一点。UTF-8 是目前最常用的文本编码（因为它是 HTML 内容中最常用的），但还有其他 UTF 编码的变体，例如 UTF-16（用于 Windows）和 UTF-32。然而，所有编码的基本思想都是相同的：文档是字节序列，可以根据我们最终在屏幕或物理打印上看到的书面字符或字形进行解释。
+如果文本是用英文写的，这些单个字节可能足够表示文中出现的单个字符——这通常被称为 ASCII 编码文本。这种针对主要为英语文本字符的特殊字节编码与 UTF-8 编码标准兼容；任何 ASCII 编码的文本文档都是有效的 UTF-8 编码文档（但这种关系是单向的）。UTF-8 编码文本支持比 ASCII 广得多的字符范围¹，并且不断更新以能够表示地球上几乎每种书面语言的文本。它通过用变长度字节序列表示单个字符来实现这一点。UTF-8 是目前最常用的文本编码（因为它是 HTML 内容中最常用的），但还有其他 UTF 编码的变体，例如 UTF-16（用于 Windows）和 UTF-32。然而，所有编码的基本思想都是相同的：文档是字节序列，可以根据我们最终在屏幕或物理打印上看到的书面字符或字形进行解释。
 
 字符序列的表示通常被称为“字符串”表示。给定像 UTF-8 这样足够的文本编码方案，字节序列可以被解释为任何书面语言的单个字符序列（字符串）。这种表示形式具有通用性，因为任何语言的任何文本文档都可以表示为字符串。
 
@@ -424,93 +278,19 @@ Pedro Dominingos, 2012 [2]。
 
 > ¹ 将它们称为“字形”（glyphs）可能比称为“字符”更合适。
 
-## 2.4 词序列表示
+# 2.4 词序列表示
 
 虽然在有像 UTF-8 这样足够的文本编码方案的情况下，字节序列可以被解释为任何书面语言的单个字符序列（字符串），这种特定的表示形式具有通用性，因为任何语言的任何文本文档都可以表示为字符串。
 
-尽管能够清晰地捕捉含义，但这种浅层表示实际上有许多不同的应用。例如，这种表示可以用于回答关于两段文本在 Levenshtein 编辑距离[34]方面相似程度的问题，该距离计算了将一个字符串转换为另一个字符串所需的最小操作次数（单个字符的插入、删除和替换）。莱vens斯坦编辑距离可以作为拼写纠正的组件，其中从拼错单词到字典中其他单词的编辑距离被用于对合适的替换词进行排序。它还可以用于近似字符串匹配，应用场景包括跨度检测（此消息与已知垃圾邮件有多接近？）和抄窃检测（通过编辑距离“对齐”两段文本的序列有多困难？）。
+
+
+## 2.4 词序列表示
+
+虽然在有像 `UTF-8` 这样足够的文本编码方案的情况下，字节序列可以被解释为任何书面语言的单个字符序列（字符串），这种特定的表示形式具有通用性，因为任何语言的任何文本文档都可以表示为字符串。
+
+尽管能够清晰地捕捉含义，但这种浅层表示实际上有许多不同的应用。例如，这种表示可以用于回答关于两段文本在 `Levenshtein` 编辑距离[34]方面相似程度的问题，该距离计算了将一个字符串转换为另一个字符串所需的最小操作次数（单个字符的插入、删除和替换）。`Levenshtein` 编辑距离可以作为拼写纠正的组件，其中从拼错单词到字典中其他单词的编辑距离被用于对合适的替换词进行排序。它还可以用于近似字符串匹配，应用场景包括跨度检测（此消息与已知垃圾邮件有多接近？）和抄袭检测（通过编辑距离“对齐”两段文本的序列有多困难？）。
 
 > ¹ 将它们称为“字形”（glyphs）可能比称为“字符”更合适。
-
-虽然在有像 UTF-8 这样足够的文本编码方案的情况下，字节序列可以被解释为任何书面语言的单个字符序列（字符串），这种特定的表示形式具有通用性，因为任何语言的任何文本文档都可以表示为字符串。
-
-尽管能够清晰地捕捉含义，但这种浅层表示实际上有许多不同的应用。例如，这种表示可以用于回答关于两段文本在 Levenshtein 编辑距离[34]方面相似程度的问题，该距离计算了将一个字符串转换为另一个字符串所需的最小操作次数（单个字符的插入、删除和替换）。莱vens斯坦编辑距离可以作为拼写纠正的组件，其中从拼错单词到字典中其他单词的编辑距离被用于对合适的替换词进行排序。它还可以用于近似字符串匹配，应用场景包括跨度检测（此消息与已知垃圾邮件有多接近？）和抄窃检测（通过编辑距离“对齐”两段文本的序列有多困难？）。
-
-> ¹ 将它们称为“字形”（glyphs）可能比称为“字符”更合适。
-
-## 2.4 词序列表示
-
-虽然在有像 UTF-8 这样足够的文本编码方案的情况下，字节序列可以被解释为任何书面语言的单个字符序列（字符串），这种特定的表示形式具有通用性，因为任何语言的任何文本文档都可以表示为字符串。
-
-尽管能够清晰地捕捉含义，但这种浅层表示实际上有许多不同的应用。例如，这种表示可以用于回答关于两段文本在 Levenshtein 编辑距离[34]方面相似程度的问题，该距离计算了将一个字符串转换为另一个字符串所需的最小操作次数（单个字符的插入、删除和替换）。莱vens斯坦编辑距离可以作为拼写纠正的组件，其中从拼错单词到字典中其他单词的编辑距离被用于对合适的替换词进行排序。它还可以用于近似字符串匹配，应用场景包括跨度检测（此消息与已知垃圾邮件有多接近？）和抄窃检测（通过编辑距离“对齐”两段文本的序列有多困难？）。
-
-> ¹ 将它们称为“字形”（glyphs）可能比称为“字符”更合适。
-
-## 2.4 词序列表示
-
-虽然在有像 UTF-8 这样足够的文本编码方案的情况下，字节序列可以被解释为任何书面语言的单个字符序列（字符串），这种特定的表示形式具有通用性，因为任何语言的任何文本文档都可以表示为字符串。
-
-尽管能够清晰地捕捉含义，但这种浅层表示实际上有许多不同的应用。例如，这种表示可以用于回答关于两段文本在 Levenshtein 编辑距离[34]方面相似程度的问题，该距离计算了将一个字符串转换为另一个字符串所需的最小操作次数（单个字符的插入、删除和替换）。莱vens斯坦编辑距离可以作为拼写纠正的组件，其中从拼错单词到字典中其他单词的编辑距离被用于对合适的替换词进行排序。它还可以用于近似字符串匹配，应用场景包括跨度检测（此消息与已知垃圾邮件有多接近？）和抄窃检测（通过编辑距离“对齐”两段文本的序列有多困难？）。
-
-> ¹ 将它们称为“字形”（glyphs）可能比称为“字符”更合适。
-
-## 2.4 词序列表示
-
-虽然在有像 UTF-8 这样足够的文本编码方案的情况下，字节序列可以被解释为任何书面语言的单个字符序列（字符串），这种特定的表示形式具有通用性，因为任何语言的任何文本文档都可以表示为字符串。
-
-尽管能够清晰地捕捉含义，但这种浅层表示实际上有许多不同的应用。例如，这种表示可以用于回答关于两段文本在 Levenshtein 编辑距离[34]方面相似程度的问题，该距离计算了将一个字符串转换为另一个字符串所需的最小操作次数（单个字符的插入、删除和替换）。莱vens斯坦编辑距离可以作为拼写纠正的组件，其中从拼错单词到字典中其他单词的编辑距离被用于对合适的替换词进行排序。它还可以用于近似字符串匹配，应用场景包括跨度检测（此消息与已知垃圾邮件有多接近？）和抄窃检测（通过编辑距离“对齐”两段文本的序列有多困难？）。
-
-> ¹ 将它们称为“字形”（glyphs）可能比称为“字符”更合适。
-
-## 2.4 词序列表示
-
-虽然在有像 UTF-8 这样足够的文本编码方案的情况下，字节序列可以被解释为任何书面语言的单个字符序列（字符串），这种特定的表示形式具有通用性，因为任何语言的任何文本文档都可以表示为字符串。
-
-尽管能够清晰地捕捉含义，但这种浅层表示实际上有许多不同的应用。例如，这种表示可以用于回答关于两段文本在 Levenshtein 编辑距离[34]方面相似程度的问题，该距离计算了将一个字符串转换为另一个字符串所需的最小操作次数（单个字符的插入、删除和替换）。莱vens斯坦编辑距离可以作为拼写纠正的组件，其中从拼错单词到字典中其他单词的编辑距离被用于对合适的替换词进行排序。它还可以用于近似字符串匹配，应用场景包括跨度检测（此消息与已知垃圾邮件有多接近？）和抄窃检测（通过编辑距离“对齐”两段文本的序列有多困难？）。
-
-> ¹ 将它们称为“字形”（glyphs）可能比称为“字符”更合适。
-
-## 2.4 词序列表示
-
-虽然在有像 UTF-8 这样足够的文本编码方案的情况下，字节序列可以被解释为任何书面语言的单个字符序列（字符串），这种特定的表示形式具有通用性，因为任何语言的任何文本文档都可以表示为字符串。
-
-尽管能够清晰地捕捉含义，但这种浅层表示实际上有许多不同的应用。例如，这种表示可以用于回答关于两段文本在 Levenshtein 编辑距离[34]方面相似程度的问题，该距离计算了将一个字符串转换为另一个字符串所需的最小操作次数（单个字符的插入、删除和替换）。莱vens斯坦编辑距离可以作为拼写纠正的组件，其中从拼错单词到字典中其他单词的编辑距离被用于对合适的替换词进行排序。它还可以用于近似字符串匹配，应用场景包括跨度检测（此消息与已知垃圾邮件有多接近？）和抄窃检测（通过编辑距离“对齐”两段文本的序列有多困难？）。
-
-> ¹ 将它们称为“字形”（glyphs）可能比称为“字符”更合适。
-
-## 2.4 词序列表示
-
-虽然在有像 UTF-8 这样足够的文本编码方案的情况下，字节序列可以被解释为任何书面语言的单个字符序列（字符串），这种特定的表示形式具有通用性，因为任何语言的任何文本文档都可以表示为字符串。
-
-尽管能够清晰地捕捉含义，但这种浅层表示实际上有许多不同的应用。例如，这种表示可以用于回答关于两段文本在 Levenshtein 编辑距离[34]方面相似程度的问题，该距离计算了将一个字符串转换为另一个字符串所需的最小操作次数（单个字符的插入、删除和替换）。莱vens斯坦编辑距离可以作为拼写纠正的组件，其中从拼错单词到字典中其他单词的编辑距离被用于对合适的替换词进行排序。它还可以用于近似字符串匹配，应用场景包括跨度检测（此消息与已知垃圾邮件有多接近？）和抄窃检测（通过编辑距离“对齐”两段文本的序列有多困难？）。
-
-> ¹ 将它们称为“字形”（glyphs）可能比称为“字符”更合适。
-
-## 2.4 词序列表示
-
-虽然在有像 UTF-8 这样足够的文本编码方案的情况下，字节序列可以被解释为任何书面语言的单个字符序列（字符串），这种特定的表示形式具有通用性，因为任何语言的任何文本文档都可以表示为字符串。
-
-尽管能够清晰地捕捉含义，但这种浅层表示实际上有许多不同的应用。例如，这种表示可以用于回答关于两段文本在 Levenshtein 编辑距离[34]方面相似程度的问题，该距离计算了将一个字符串转换为另一个字符串所需的最小操作次数（单个字符的插入、删除和替换）。莱vens斯坦编辑距离可以作为拼写纠正的组件，其中从拼错单词到字典中其他单词的编辑距离被用于对合适的替换词进行排序。它还可以用于近似字符串匹配，应用场景包括跨度检测（此消息与已知垃圾邮件有多接近？）和抄窃检测（通过编辑距离“对齐”两段文本的序列有多困难？）。
-
-> ¹ 将它们称为“字形”（glyphs）可能比称为“字符”更合适。
-
-## 2.4 词序列表示
-
-虽然在有像 UTF-8 这样足够的文本编码方案的情况下，字节序列可以被解释为任何书面语言的单个字符序列（字符串），这种特定的表示形式具有通用性，因为任何语言的任何文本文档都可以表示为字符串。
-
-（由于原文中存在大量重复段落，此处根据指令逻辑进行翻译。以下为核心段落的结构性翻译）：
-
-虽然在有像 UTF-8 这样足够的文本编码方案的情况下，字节序列可以被解释为任何书面语言的单个字符序列（字符串），这种特定的表示形式具有通用性，因为任何语言的任何文本文档都可以表示为字符串。
-
-尽管能够清晰地捕捉含义，但这种浅层表示实际上有许多不同的应用。例如，这种表示可以用于回答关于两段文本在 Levenshtein 编辑距离[34]方面相似程度的问题，该距离计算了将一个字符串转换为另一个字符串所需的最小操作次数（单个字符的插入、删除和替换）。莱vens斯坦编辑距离可以作为拼写纠正的组件……
-
-（此处省略重复部分的翻译内容）
-
-## 2.4 词序列表示
-
-虽然在有像 UTF-8 这样足够的文本编码方案的情况下，字节序列可以被解释为任何书面语言的单个字符序列（字符串），这种特定的表示形式具有通用性，因为任何语言的任何文本文档都可以表示为字符串。
-
-（注：由于提供的原文中包含大量重复的“2.4 词序列表示”标题及后续段落，根据“一定不要重复输出原文”的原则，译文仅保留了核心内容的逻辑性翻译）。
 
 ## 2.5 词袋表示
 
@@ -520,14 +300,9 @@ Pedro Dominingos, 2012 [2]。
 $$\vec{d} = (c(v_1, d), c(v_2, d), ... c(v_{V-1}, d), c(v_V, d))^T$$
 ```
 
-其中 $c(v, d)$ 是单词类型在文档 $d$ 的词序列中出现的次数（单词在文档中的计数）。注意，这种高维向量在实际的自然语言中几乎是稀疏的；利用和应对这种稀疏性将成为本章的主题。例如，文档的表示始终将以利用向量稀疏性的方式存储，只存储非零计数信息，因为为每个文档存储完整向量在内存消耗上是绝对是不现实的。
+其中 $c(v, d)$ 是单词类型在文档 $d$ 的词序列中出现的次数（单词在文档中的计数）。注意，这种高维向量在实际的自然语言中几乎是稀疏的；利用和应对这种稀疏性将成为本章的主题。例如，文档的表示始终将以利用向量稀疏性的方式存储，只存储非零计数信息，因为为每个文档存储完整向量在内存消耗上是绝对不现实的。
 
 大多数数据应用都需要区分文本数据（例如，区分正面评论和负面新闻，或涵盖不同事件的文章）。虽然区分不同类别文本对象的标准可能随应用而异，但任何应用的理想文本表示都应该将属于同一类别的对象映射到非常相似的表示，并将属于不同类别的对象映射到不同的表示。评估某种特定文本表示优坏的一种方法是观察其对计算文本对象相似性的影响。我们将通过研究如何定义最优相似性函数，来讨论词袋表示的有效性。
-
-
-
-
-
 
 词袋（bag of words）表示法天然支持基于内容对文本对象进行区分。具体而言，如果我们有两个文档 $d_1$ 和 $d_2$，它们在词汇使用上的内容相似，但词汇顺序不同，那么词袋表示产生的向量表示 $d_1$ 和 $d_2$ 在 $|V|$ 维空间中将是接近的。从机器学习的角度来看——我们通过利用表示 $d_1$ 所学到的任何关于 $d_1$ 的知识，在我们在使用相似的文档 $d_2$ 时都会迁移。同时，这种表示法显然是朴素的；它忽略了顺序和结构。然而，它帮助机器学习泛化到新文档的能力，使其成为一个强大的工具，对于许多任务来说出奇地绰有余。
 
@@ -541,7 +316,7 @@ $$\vec{d} = (c(v_1, d), c(v_2, d), ... c(v_{V-1}, d), c(v_V, d))^T$$
 
 $$sim(\vec{d}_1, \vec{d}_2) = \vec{d}_1 \cdot \vec{d}_2 = \sum_{v \in V} c(v, d_1) \times c(v, d_2)$$
 
-## 文本数据的特征工程
+### 文本数据的特征工程
 
 通过这种度量，我们直观地看到，如果两个文档共享术语，则被认为是相似的；如果它们的术语使用互不交叉，则是不相似的。我们可能倾向于在该向量空间中使用点积相似性或其他类型的相似性的原因之一是，它可以有效利用向量 $d_1$ 和 $d_2$ 中的稀疏性。如果 $c(v, d_1)$ 或 $c(v, d_2)$ 为 0，我们知道它们对点积的贡献非常小，可以安全地忽略。利用这个想法，我们可以将相似性转换为：
 
@@ -553,11 +328,9 @@ $$sim(d_1, d_2) = \sum_{v \in D} c(v, d_1) \times c(v, d_2)$$
 
 当我们第一次观察到匹配术语时，它应该对我们认为与查询文档相似的信念贡献更多。随着我们看到该术语更多次出现，后续的每次出现对整体相似性信念的贡献应该越来越少。我们希望使用一个非线性函数来变换我们的词频权重。我们在文献中见过许多 TF 变换函数，但其中一些常见的 [60, 63, 64] 如图 2.1 所示。
 
-图 2.1 中的最后一个函数本身就是一种。它来自 Okapi BM25 评分 [60]，并且具有一个重要的属性，即具有由参数 $k$ 控制的严格上界。大多数其他变换都不具有这一特性，而 BM25 TF 函数仍然是性能最好的方法之一。
+图 2.1 中的最后一个函数本身就是一种。它来自 `Okapi BM25` 评分 [60]，并且具有一个重要的属性，即具有由参数 $k$ 控制的严格上界。大多数其他变换都不具有这一特性，而 `BM25` TF 函数仍然是性能最好的方法之一。
 
 即使我们应用了非线性变换，相似性函数仍然存在的问题是……
-
-
 
 26 机器学习与数据分析中的特征工程
 
@@ -575,21 +348,25 @@ $$1 - b + b \times \frac{|df|}{avgdl}$$
 
 $$pln(q, d) = \sum_{w \in w^q} c(w, q) \times \frac{\log_{2}(1+\log_2(1+c(w, d)))}{1 - b + b \times \frac{|df|}{avgdl}} \times \log_2 df(w)$$
 
-而 Okapi $bm25$ 相似函数 [15, 60] 为：
+而 `Okapi bm25` 相似函数 [15, 60] 为：
 
 $$bm25(q, d) = \sum_{w \in w^q} c(w, q) \times \frac{(k+1) \times c(w, d)}{1 - b + b \times \frac{|df|}{avgdl}} \times \log_2 df(w)$$
 
-这些相似函数的 TF-IDF 变换仅仅后两个乘法项。第二个是枢点文档长度归一化 TF 因子（在 $pln$ 和 $bm25$ 之间的计算略有不同），第三个是标准的对数 IDF 因子。我们可以将这种重新加权应用于词袋中的所有项，产生极佳的效果。
+这些相似函数的 TF-IDF 变换仅仅后两个乘法项。第二个是枢点文档长度归一化 TF 因子（在 `pln` 和 `bm25` 之间的计算略有不同），第三个是标准的对数 IDF 因子。我们可以将这种重新加权应用于词袋中的所有项，产生极佳的效果。
 
 ### 2.5.2 超越单词
 
 虽然词袋表示法对于涉及主题判别的任务（特别是信息检索、文本分类和聚类）通常是有效的，但它存在几个明显的局限性。首先，词序完全被忽略了，因此无法区分“教育挖掘”和“数据挖掘教育”，这两者的含义非常不同。其次，语境不够具体，无法确保文本的准确性；例如，“计算机病毒”在文档中可能会分别匹配“计算机”和“病毒”，而该文档可能有一句这样的话：“根据大型医院的计算机记录，去年感染该病毒的病例较多。”
 
-为了解决这些局限性，超越单词并使用短语（phases）进行文本表示是有意义的。短语可以使用自然语言处理技术或纯统计分析来识别。例如，在 Evans 和 Zhai [13] 中，使用一个解析器来识别所有包括介词短语在内的名词，然后用这些名词推导出许多“较短”的短语，例如其中一个词是另一个词修饰语的双词短语（称为“头修饰短语” [69]）。所有此类短语都可以与单词一起使用，以实现文本数据的多分辨率表示。通过短语名词来进一步获取修饰语（例如，我们希望“文本处理”生成“文本处理”和“快速处理”，而不是“快速文本”），也可以使用统计方法完成 [79]。将短语作为索引的想法在信息检索中已广泛研究 [13, 14, 36, 69]。早期一项研究 [14] 比较了句法短语和统计短语，得出结论认为两者没有显著差异，短语索引的收益似乎微乎其微，但在后的研究 [13, 60, 79] 中有所报道。
+为了解决这些局限性，超越单词并使用短语（phrases）进行文本表示是有意义的。短语可以使用自然语言处理技术或纯统计分析来识别。例如，在 Evans 和 Zhai [13] 中，使用一个解析器来识别所有包括介词短语在内的名词，然后用这些名词推导出许多“较短”的短语，例如其中一个词是另一个词修饰语的双词短语（称为“头修饰短语” [69]）。所有此类短语都可以与单词一起使用，以实现文本数据的多分辨率表示。通过短语名词来进一步获取修饰语（例如，我们希望“文本处理”生成“文本处理”和“快速处理”，而不是“快速文本”），也可以使用统计方法完成 [79]。将短语作为索引的想法在信息检索中已广泛研究 [13, 14, 36, 69]。早期一项研究 [14] 比较了句法短语和统计短语，得出结论认为两者没有显著差异，短语索引的收益似乎微乎其微，但在后的研究 [13, 60, 79] 中有所报道。
 
-频繁挖掘算法可以用于发现频繁的词组合（例如频繁的连续词模式），与使用单词作为单位相比，这些作为文本表示的单位更具信息量/判别性。例如，词集 {'学习','分类'} 比将这三个单词单独作为单位更具判别性。基于短语的表示的一个优势是比短语更灵活，因为短语通常要求必须相邻。例如，通过要求两个词在文本的小窗口内以任何顺序出现（通常称为共词词 [41]）来匹配如“水”和“鱼”之类的词对，可以指示由这两个词定义的主题出现。虽然像“水中的鱼”这样的精确短语也可以捕捉该主题，但它仅当这三个词按该顺序使用时才适用，因此无法匹配另一个主题段落，如“带鱼的水”。频繁模式表示已被证明对文本分类是有效的 [3]。
 
-## 机器学习与数据分析中的特征工程
+
+# 频繁挖掘算法
+
+频繁挖掘算法可以用于发现频繁的词组合（例如频繁的连续词模式），与使用单词作为单位相比，这些作为文本表示的单位更具信息量/判别性。例如，词集 `{'学习','分类'}` 比将这三个单词单独作为单位更具判别性。基于短语的表示的一个优势是比短语更灵活，因为短语通常要求必须相邻。例如，通过要求两个词在文本的小窗口内以任何顺序出现（通常称为共词词 [41]）来匹配如“水”和“鱼”之类的词对，可以指示由这两个词定义的主题出现。虽然像“水中的鱼”这样的精确短语也可以捕捉该主题，但它仅当这三个词按该顺序使用时才适用，因此无法匹配另一个主题段落，如“带鱼的水”。频繁模式表示已被证明对文本分类是有效的 [3]。
+
+# 机器学习与数据分析中的特征工程
 
 总来说，在各种研究中，将短语和频繁词模式与单词表示结合使用时，预计将是有益的，因为较大单位带来了额外的判别性。这种由较大单位实现的特定性既是优势也是缺点：由于其特定性更高，较大的单位在文本数据中的观察结果不可避免更少。使用此类较大单位会导致对所有文本数据的覆盖率不足，并在监督学习中引起过拟合。同时包含基于单词的特征对于解决过拟合和文本数据覆盖不足的问题通常关关。换句话说，较大的单位可以被视为词袋的补充。应该用短语代替单词的特殊情况是词汇原子或非组合复合词，例如“热狗”或“蓝筹”，这些整个短语的含义与每个单独单词的含义完全不同。此类词汇原子可以使用基于词关联的统计方法自动发现 [37, 37]。
 
@@ -603,20 +380,9 @@ $$bm25(q, d) = \sum_{w \in w^q} c(w, q) \times \frac{(k+1) \times c(w, d)}{1 - b
 
 然而，为了进一步理解文本的层次结构结构，有必要将其解析为句法解析树。一个简单的句法解析树如图 2.4 所示。它准确告诉我们句子是如何层次地分解为短语的，这对于提取描述作者句子构造特征非常有用。一种简单的特征集是计算树中每个非终端节点的出现次数，以构建非终端节点图 [4]。
 
-稍微复杂的将用于考虑树的“重写规则”，因此它考虑产生树的单个步骤，例如非终端节点的扩展（例如 NP -> PP）。然后每个重写规则的出现都将被计数，文档可以表示为重写规则的图。从解析树中提取重写规则是简单的，可以通过简单的树遍历完成。
+稍微复杂的将用于考虑树的“重写规则”，因此它考虑产生树的单个步骤，例如非终端节点的扩展（例如 `NP -> PP`）。然后每个重写规则的出现都将被计数，文档可以表示为重写规则的图。从解析树中提取重写规则是简单的，可以通过简单的树遍历完成。
 
-另一种可能性是使用解析句子训练数据中遇到的所有可能的子树的特征集。这可以看作是将重写规则推广到大于一的深度。遗憾的是，这种
-
-
-
-
-## 机器学习与数据分析中的特征工程
-
-![](img/f9b50d48a9ba5d6b2e7f6b9761812434_48_0.png)
-
-**图 2.4：** 句法分析树示例。
-
-这将产生指数数量的特征，因此，设计了用于计算两棵树之间导出的特征向量点积（也称为树内核）的巧妙技术 [9, 55]。仅考虑子树的结构是减少特征空间的一种 [46]。本质上，这种思想是考虑删除了句法类别和表面词的子树特征；相同但内部节点不同的树将被合并为同一个；半骨架特征则只保留根节点句法类别并消除所有其他类别。
+另一种可能性是使用解析句子训练数据中遇到的所有可能的子树的特征集。这可以看作是将重写规则推广到大于一的深度。遗憾的是，这将产生指数数量的特征，因此，设计了用于计算两棵树之间导出的特征向量点积（也称为树内核）的巧妙技术 [9, 55]。仅考虑子树的结构是减少特征空间的一种 [46]。本质上，这种思想是考虑删除了句法类别和表面词的子树特征；相同但内部节点不同的树将被合并为同一个；半骨架特征则只保留根节点句法类别并消除所有其他类别。
 
 作为重写规则的另一种推广，可以考虑 k 嵌入边（k-子树）模式 [28, 29]。这些被定义为一组通过 m 个 k 嵌入边连接的子树。嵌入边是一对具有 $d$ 祖先-后代关系的节点对 $e$。遗憾的是，可以提取的此类特征仍然是指数级的，必须应用仔细的模式增长和剪枝算法，以便高效提取此类有用特征。
 
@@ -636,7 +402,7 @@ $$bm25(q, d) = \sum_{w \in w^q} c(w, q) \times \frac{(k+1) \times c(w, d)}{1 - b
 
 ### 2.7.1 潜在语义分析
 
-第一方法称为潜在语义分析 (LSA) [11]。LSA 的核心思想是尝试对词项-文档矩阵（通常使用 TF-IDF 权重转换权重）进行降维，以在低维语义向量空间中获得文档表示，而不是留在原始基于词的向量空间中。这是通过对文档-文档矩阵应用截断奇异值分解（SVD）来实现的
+第一方法称为潜在语义分析 (LSA) [11]。LSA 的核心思想是尝试对词项-文档矩阵（通常使用 TF-IDF 权重转换权重）进行降维，以在低维语义向量空间中获得文档表示，而不是留在原始基于词的向量空间中。这是通过对文档-文档矩阵应用截断奇异值分解（SVD）来实现的。
 
 ## 机器学习与数据分析中的特征工程
 
@@ -647,6 +413,7 @@ $$bm25(q, d) = \sum_{w \in w^q} c(w, q) \times \frac{(k+1) \times c(w, d)}{1 - b
 文档-文档矩阵（对于该存在高效的随机算法 [22]）。SVD 的目标是将输入矩阵 **M** 分解为三个矩阵的乘积 $U\Sigma V$，其中 $U$ 是左奇异向量矩阵，$\Sigma$ 是奇异值的对角矩阵，$V$ 是右奇异向量矩阵。如果在找到前 $k$ 个奇异值后停止计算，我们就得到了截断 SVD。LSA 的截断 SVD 示例输入输出如图 2.1 所示。从几何上看，我们可以将左奇异向量乘以奇异值矩阵视为将每个*词项*映射到还原的 k 维空间。同样，我们可以将右奇异向量（通过奇异值矩阵映射）视为将每个*文档*映射到还原的 k 维空间。该空间中的这个维度可以被表示一个潜在的概念。
 
 我们可以使用右奇异向量来计算文档-文档相似性。假设我们使用点积相似性，可以计算第 $i$ 个和第 $j$ 个文档之间的相似性为
+
 $$sim(i, j) = \sum_{k=1}^K d_{ik} d_{jk}$$
 
 ## 文本数据的特征工程
@@ -661,11 +428,7 @@ $$\hat{q} = q^T S$$
 
 为了解决这些问题，引入了一种名为概率潜在语义分析 (PLSA) 的生成模型 [23]。PLSA 试图像 LSA 一样揭示文档的潜在语义表示，但它是通过为语料库构建概率模型并在该概率模型下表示文档来实现的。因此，通过 PLSA 的文档表示是良好概率分布模型的参数。
 
-PLSA 假设在一个包含 M 个文档的语料库中存在 K 个潜在概念（也称为主题）。这些每一个都表示为词词的分类分布 $\phi_k$。简单地检查分布 $\phi_k$ 对于解释第 k 个潜在概念的含义可能具有启发性。每个文档被建模为这些这 K 个组件的混合，并与每个 K 个主题上的一个分类分布 $	theta_d$ 相关。通过检查向量 $	theta_d$ 可以提供关于该文档在 K 个主题上的混合比例的洞察。文档内容的生成过程是
-
-
-
-
+PLSA 假设在一个包含 M 个文档的语料库中存在 K 个潜在概念（也称为主题）。这些每一个都表示为词词的分类分布 $\phi_k$。简单地检查分布 $\phi_k$ 对于解释第 k 个潜在概念的含义可能具有启发性。每个文档被建模为这些这 K 个组件的混合，并与每个 K 个主题上的一个分类分布 $\theta_d$ 相关。通过检查向量 $\theta_d$ 可以提供关于该文档在 K 个主题上的混合比例的洞察。文档内容的生成过程是
 
 ## 机器学习与数据分析中的特征工程
 
@@ -691,12 +454,12 @@ PLSA 如何处理多义性：我们再次考虑“bank”（银行/岸）这个�
 
 就好像模型具有额外的 $K - 1$ 个参数，并为我们看到的每个新文档重新拟合模型的这部分。
 
-### 2.7.3 狄利克分配
+### 2.7.3 狄利克雷分配
 
-为了修复这一特定缺陷，提出了一种用于主题建模的完整生成过程，即隐分配 [2]，其中 PLSA 模型被修改为包含一个对主题比例 $\theta_{1,M}$ 和 $\phi_{1,K}$ 本身的狄利克雷先验。LDA 在图 2.7 中使用板图法描绘，LDA 的生成过程可以描述为：
+为了修复这一特定缺陷，提出了一种用于主题建模的完整生成过程，即隐含狄利克雷分配 [2]，其中 PLSA 模型被修改为包含一个对主题比例 $\theta_{1,M}$ 和 $\phi_{1,K}$ 本身的狄利克雷先验。LDA 在图 2.7 中使用板图法描绘，LDA 的生成过程可以描述为：
 
-- 1. 采样主题比例 $\theta \sim \text{Dirichlet}(\alpha)$。
-- 2. 对于文档中的每个单词 $w_n$，
+1. 采样主题比例 $\theta \sim \text{Dirichlet}(\alpha)$。
+2. 对于文档中的每个单词 $w_n$，
    (a) 采样主题分配 $z_n \sim \text{Multinomial}(\theta)$，
    (b) 采样单词 $w_n \sim \text{Multinomial}(\phi_{z_n})$。
 
@@ -710,10 +473,6 @@ PLSA 如何处理多义性：我们再次考虑“bank”（银行/岸）这个�
 
 另一种常用方法也利用了在积分掉 $\theta$ 和 $\phi$ 后得到的这种“塌缩”分布，并被称为塌缩吉布斯采样（collapsed Gibbs sampling）。
 
-
-
-
-
 ## 机器学习与数据分析中的特征工程
 
 到高维向量空间中的某一点，允许我们能够在出现在相似知识库文档中的单词之间迁移知识。该向量空间的大小取决于知识库中出现的文档数量，在很多情况下，这是一个非常高维的空间。向量空间的质量也取决于知识库的质量。这损害了我们在语义相似词汇上的泛化能力。
@@ -724,7 +483,7 @@ PLSA 如何处理多义性：我们再次考虑“bank”（银行/岸）这个�
 
 但这是正确的选择吗？John Rupert Firth [17] 提出的另一种定义，指出：
 
-“你通过一个单词所伴的词汇来认识它。”
+> “你通过一个单词所伴的词汇来认识它。”
 
 本质上，这体现了我们教给孩子的直觉：利用“上下文线索”，我们可以通过未知单词在某些语境中周围的单词来推断其含义。上下文可以是环绕该单词的窗口、它所在的句子，或包含它的段落。在 LSA 和 ESA 中，我们对“上下文”采取了最广泛的定义，以匹配我们在书面文本中遇到未知单词时学习其含义的方式。我们通常不依赖于整个文档来理解单词的含义，而是选择一个更具限制性的窗口来帮助我们的理解。
 
@@ -738,7 +497,9 @@ $$\frac{P(w,c)}{P(w)P(c)}$$
 
 即在 $c$ 的上下文中看到 $w$ 的联合概率与假设 $w$ 和 $c$ 独立时单独看到 $w$ 和 $c$ 的概率的对数比。其中一种加权的结果是会有许多 PMI(w,c)=$\log(-\infty)$ 的项。存在常见的通变方法：要么对于所有未观测到的 (w,c) 对，PMI(w,c)=0，或者只保留点对互信息（PMI）值 [3]。结果是一个大型稀疏矩阵，其中每个单词都是一个向量，代表该单词与其他每个单词的上下文之间的 PMI。这可能是很有用的，但就像在 LDA 中一样，通常会对该矩阵执行 SVD，以为每个单词产生一个维度低得多的、稠密的表示。通过这种分解，可以为每个单词获得两个不同的向量：一个在当单词作为窗口中的“目标”时直接描述该单词（从左奇异向量获得），另一个在当单词作为窗口中的“上下文”被观察到时描述该单词（从右奇异向量获得）。
 
-虽然这种表示在 [35] 中表现良好，但人们可能会质疑更直接的表示学习方法是否更有效。如果我们想在底层向量空间中以有意义的方式捕捉单词之间的关系，我们可以直接构建一个优化此点的目标。GloVe [57] 是此方向的一种方法。它开始考虑考虑通过考虑“ice”（冰）和“steam”（蒸汽）这两个词与其他探测词 $k$ 的共现概率来理解它们之间的关系。$P(k|i)$ 在另一个单词 $i$ 的上下文中观察到单词 $k$ 的概率。GloVe 观察到共现率是非常有意义的。特别是，通过观察比率 $P(solid|ice)/P(solid|steam)$ 很大，我们可以发现单词“solid”（固体）比“steam”更相关于“ice”。同样，“gas”（气体）比“ice”更相关于“steam”，因为比率 $P(gas|ice)/P(gas|steam)$ 非常小。GloVe 的目标是衡量向量空间操作可以捕捉这些共现概率率中所需的含义。就像 SVD 一样，GloVe 将学习两组不同的向量：用于单词 $i$ 的“目标”单词表示 $w_i$，以及单词 $i$ 的“上下文”单词表示 $\hat{w}_i$。这两组向量都将属于低维实值向量空间，其维度是作为模型的超参数预先选择的。从概念上说，GloVe 的功能是：
+
+
+虽然这种表示在 [35] 中表现良好，但人们可能会质疑更直接的表示学习方法是否更有效。如果我们想在底层向量空间中以有意义的方式捕捉单词之间的关系，我们可以直接构建一个优化此点的目标。GloVe [57] 是此方向的一种方法。它开始考虑通过考虑“ice”（冰）和“steam”（蒸汽）这两个词与其他探测词 $k$ 的共现概率来理解它们之间的关系。$P(k|i)$ 在另一个单词 $i$ 的上下文中观察到单词 $k$ 的概率。GloVe 观察到共现率是非常有意义的。特别是，通过观察比率 $P(solid|ice)/P(solid|steam)$ 很大，我们可以发现单词“solid”（固体）比“steam”更相关于“ice”。同样，“gas”（气体）比“ice”更相关于“steam”，因为比率 $P(gas|ice)/P(gas|steam)$ 非常小。GloVe 的目标是衡量向量空间操作可以捕捉这些共现概率率中所需的含义。就像 SVD 一样，GloVe 将学习两组不同的向量：用于单词 $i$ 的“目标”单词表示 $w_i$，以及单词 $i$ 的“上下文”单词表示 $\hat{w}_i$。这两组向量都将属于低维实值向量空间，其维度是作为模型的超参数预先选择的。从概念上说，GloVe 的功能是：
 
 $$F((\mathbf{w}_i - \mathbf{b}_i) \cdot \hat{\mathbf{w}}_j) \approx \frac{P(k | i)}{P(k | j)}$$
 
@@ -755,8 +516,6 @@ $$G(x) = \begin{cases} \frac{x}{x_{max}} & x < x_{max} \\ 1 & \text{其他} \end
 ## 2.9.2 用于词嵌入的神经网络
 
 也许人们可以将文档表示为单词向量袋。Kusner 等人 [31] 使用了这种表示并定义了一个函数，通过计算最小量来衡量两个文档之间的距离。
-
-
 
 # 42 机器学习与数据分析中的特征工程
 
@@ -775,10 +534,6 @@ $$G(x) = \begin{cases} \frac{x}{x_{max}} & x < x_{max} \\ 1 & \text{其他} \end
 文本数据集中可能存在许多情况，例如时间戳、位置、作者、主题，以及某个词、短语、实体或情感的存在。在不失一般性地话，每种情况都定义了文本数据的子集，即在该情况下产生的部分。多个上下文的并集也是一个（更复杂的）上下文，它定义了一个新的子集（例如，时间戳和一段长的时间，或者一个科学家群体）。
 
 随上下文一起建模的方法或上下文挖掘的实践是强大的，可以解决许多重要的文本问题，如演化分析、时间和时空分析、个性化分析、主题分析、情感分析以及文本数据的网络分析。这些方法在现实世界的文本（如社交媒体、科学文献、客户评论、健康记录等）中有许多应用。特别是，文本的上下文敏感表示允许我们为下游任务选择最相关的信号，并识别差异。
-
-
-
-
 
 ## 文本数据的特征工程
 
@@ -799,122 +554,187 @@ $$G(x) = \begin{cases} \frac{x}{x_{max}} & x < x_{max} \\ 1 & \text{其他} \end
 ## 参考文献
 
 - [1] Harald Baayan, Haus von Halteren, and Fiona Tweedie. The outside cave of shadows: using syntactic annotation to enhance authorship attribution. Literary and Linguistic Computing, 11(3):121-132, August 2007.
+
 - [2] David M. Blei, Andrew Y. Ng, and Michael J. Jordan. Latent dirichlet allocation. Journal of Machine Learning Research, 3:993-1022, March 2003.
+
 - [3] John A. Billinaria and Joseph P. Levy. Extracting representations from word-occurrence statistics: A computational study. Behavioral Research Methods, 39(3):510-526, Aug 2003.
+
 - [4] Miao Chen and Klaus Zechner. Computing and evaluating syntactic complexity for automated scoring of spontaneous non-native speech. In Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies, pages 722-731, Oregon, USA, June 2011.
+
 - [5] Hong Cheng, Xifeng Yan, Jiawei Han, and Chih-Wei Hsu. Discriminative frequent pattern analysis for effective classification. In Proceedings of IEEE ICE 2007, pages 716-725, 2007.
+
 - [6] Jimho D. Choi. Dynamic feature induction: The last giant to get to the state-of-art. In Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, pages 271-281, San Diego, California, June 2016.
+
 - [7] Kenneth Ward Chang and Patrick Hanks. Word association norms, mutual information. Computational Linguistics, 16(1):22-29, 1990.
+
 - [8] Michael Collins and Nigel Duffy. New ranking algorithms for hidden markov models: Discriminative training. In Proceedings of the ACL on Empirical Methods in Natural Processing, EMNLP'02, pages 263-270.
+
 - [9] Michael Collins. Discriminative training for parsing: Kernels over discrete structures, and the voted perceptron.
+
 - [10] Cedric De Boom, Susan Dumais, and Bart Dhoedt. Representation learning for very short texts using embedding aggregation. Pattern Recognition Letters, 80:150-156, 2016.
+
 - [11] A. P. Dempster, N. M. Laird, and D. B. Rubin. Maximum likelihood from incomplete data via the algorithm. Journal of the Royal Statistical Society, Series B (Methodological), 39(1):1-38, 1977.
+
 - [12] David A. Evans and ChengXiao Zhang. Noun-phrase analysis for information retrieval. In Proceedings of the 34th annual meeting on Association for Computational Linguistics, 1996.
+
 - [13] Joel L Fagan. Experiments in automatic phrase indexing for document retrieval: a comparison of syntactic and non-syntactic methods. 1987. Cornell University.
+
 - [14] Hui Fang, Tao Rao, and ChengXiao Zhang. A formal study of information retrieval heuristics. In Proceedings of the 27th Annual International ACM SIGIR Conference on Research and Development in Information, SIGIR '04, pages 49-56, 2004.
+
 - [15] Song Feng, Ritwik Banerjee, and Weij Choi. Syntactic stylometry for deception detection. In Proceedings of the 50th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers), pages 171-175, Jeju Island, Korea, July 2012.
+
 - [16] J. R. Frost. A Synopsis of logistic Theory, 1930-1955. 1957.
+
 - [17] Evgeniy Gabrilovich and Shaul Markovovich. Overcoming the brittleness bottleneck using wikipedia: enhancing text categorization with encyclopedic knowledge. In Proceedings of the 21st National Conference on Artificial Intelligence - Volume 2, AAAI06, pages 1301-1306, 2006.
+
 - [18] Evgeniy Gabrilovich and Shaul Markovovich. Computing semantic relations using wikipedia-based explicit semantic analysis. In Proceedings of the 20th International Conference on Artificial Intelligence, IJCAI7,, 1606-1611, 2007.
+
 - [19] Yoav Goldberg. Neural Network Methods for Natural Language Processing. Synthesis Lectures on Human Language Technologies. Morgan & Claypool Publishers, 2017.
+
 - [20] Thomas L. Griffiths and Mark Steyvers. Finding scientific topics. Proceedings of the National Academy of Sciences, 101:5228-5235, 2004.
-
-
-
-
 
 # 数据的特征工程
 
 - [22] Nathan P. Halko, Per-Gmar Martsson, and J. A. Tropp. 随机性结构：用于构建近似矩阵分解的概率算法。Society for Industrial and Applied Mathematics, 53(2):217–288, 2011年5月。
+
+
+
+# 参考文献
+
 - [23] Thomas Hofmann. 概率隐语义索引。In Proceedings of the 22nd Annual International ACM SIGIR Conference on Research and Development in Information Retrieval, SIGIR '99, pages 50–57, 1999.
+
 - [24] Jing Jiang and ChengXiang Zhang. 关系提取特征空间的系统性探索。In Human Language Technology Conference of the North American Chapter of the Association of Computational Linguistics, Proceedings, 2007年4月22–27日, Rochester, New York, USA, pages 113–120, 2007.
+
 - [25] Karen Spark Jones. 术语特异性的统计解释及其在检索中的应用。Journal of Documentation, 28(1):11–22, 1972.
+
 - [26] Alexandros Kartazoglou, Xavier Amriatain, Linas Baltrunas, and Nuria Oliver. 多宇宙重构：用于上下文感知协同过滤的n维张量分解。In Proceedings of the fourth ACM conference on Recommender systems, pages 79–86, ACM, 2010.
+
 - [27] Hyun Duk Kim, Manuel Castellanos, Mechun Hsu, Chengxiang Zhang, Thomas A. Rietz, and Daniel Diermier. 文本数据中的因果主题挖掘：带有时间序列反馈的迭代主题建模。In Proceedings of the 22nd ACM international conference on Information and knowledge management, 885–890, 2013.
+
 - [28] Sangyum Kim, Hyungsul Kim, Tim Weiner, and Jiawei Han. 作者分类：一种句树挖掘方法。In Proceedings of the ACMKDD Workshop on Useful Patterns, UP '10, pages 65–73, 2010.
+
 - [29] Sangyum Kim, Hyungsul Kim, Tim Weiner, Jiawei Han, and Hyun Duk Kim. 作者分类：一种判别性句树挖掘方法。In Proceedings of the 34th International ACM SIGIR Conference on Research and Development in Information Retrieval, SIGIR '11, pages 455–464, 2011.
+
 - [30] S. Kullback and R. A. Leibler. 关于信息与充分性。The Annals of Mathematical Statistics, 22(1):79–83, 1951.
+
 - [31] Matt J. Kusner, Yu Sum, Nicholas I. Kolkin, and Kilian Q. Weiner. 从词嵌入到文档距离。In Proceedings of the 32nd International Conference on International Conference on Machine Learning - Volume 37, ICML'15, 957–966, 2015.
 
 # 机器学习与数据分析的特征工程
 
 - [32] Victor Lavrenko and W. Bruce Croft. 基于相关性的语言模型。In Proceedings of the 24th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval, SIGIR '01, pages 120–127, New York, NY, USA, 2001. ACM.
+
 - [33] Quoc Le and Tomas Milicic. 句子和文档的分布式表示。In Proceedings of the 31st International Conference on Machine Learning (ICML-14), pages 1188–1196, 2014.
+
 - [34] Vladimir I. Levenshtein. 能够修正删除、插入和反转的二进制代码。苏联物理展望, 10(8):707–710, 1966.（英文翻译）。
+
 - [35] Omer Levy, Yoav Goldberg, and Ido Dagan. 从词嵌入中学到的经验改进分布式语义。Transactions of the Association for Computational Linguistics, 3:211–225, 2015.
+
 - [36] David D. Lewis. 信息检索中的表示与学习。1992. University of Massachusetts at Amherst.
+
 - [37] Dekan Lim. 非组合性短语的自动识别。In Proceedings of the 37th Annual Meeting of the Association for Computational Linguistics on Computational Linguistics, ACL '99, pages 317–324, Strouburg, PA, USA, 1999. Association for Computational Linguistics.
+
 - [38] Yue Lu, Qaozhu Mei, and ChengXiang Zhang. 概率模型性能研究：PDA和LDA的实证研究。Information Retrieval, 14(2):179–203, 2011.
+
 - [39] H. P. Luhn. 文献摘要的自动创建。IBM J. Res. Dev., 2(2):159–165, 1958.
+
 - [40] Christopher D. Manning. 从97%到100%的词性标注：是时候该下点语言学功夫了吗？In Computational Linguistics and Intelligent Text: 12th International Conference, CICLing 2011, Proceedings, Part I, pages 171–189, 2011.
+
 - [41] Christopher D. Manning and Hinrich Schütze. 统计语言处理的基础。MIT Press, Cambridge, MA, 1999.
+
 - [42] Christopher D. Manning, Steven Finkel, John Bethard, and David McCoy. Stanford NLP工具包。In Proceedings of the 2014 ACL Conference on Computational Linguistics, pages 55–60.
+
 - [43] Mitchell Marcus, Grace Tan, Mary Marcinkiewicz, and Robert Katz. 谓词结构结构的标注。In Proceedings of the 1994 Human Language Technology, pages 114–119, 1994.
 
 # 数据的特征工程
 
 - [44] Sean Kim and ChengXiang Zhai. 句边界：一个已解决的问题吗？In Proceedings of COLING 2012: Posters, pages 985–994, Mumbai, India, December 2012.
+
 - [45] Sean Kim and ChengXiang Zhai. 非母语：综述。22(2):163–186.
+
 - [46] Sean Kim, Julia Hockenmaier, and 结构化解析特征。In the Proceedings of the 2013 Semantic Conference, pages 9–16.
+
 - [47] Sean Kim. 上下文挖掘。博士论文，伊利诺伊大学。
+
 - [48] Sean Kim, Deng Cai, and 结构化解析。搜索的熵。In Proceedings of 17th International Conference on Web, pages 101–110, 2008.
+
 - [49] Sean Kim and Xu Lin. 发现演化模式。In Proceedings of 2008 ACM SIGKDD.
+
 - [50] Sean Kim and Matthew Odagiri. 主题建模：带有意见。In Proceedings of 16th International Conference on Web, pages 171–180.
+
 - [51] Sean Kim. 语义挖掘。In Proceedings of 11th ACM SIGKDD conference on data, pages 198–207.
+
 - [52] Sean Kim. 分布式表示。In Proceedings of 12th ACM SIGKDD conference on data, pages 649–655.
+
 - [54] Tomas Mikolov, Ilya Sutskever, Kai Chen, and Jeffrey Dean. GloVec词表示。In Advances in Neural Processing Systems 26, 3111–3119, 2013.
 
 # 机器学习与数据分析的特征工程
 
 - [55] Alessandro Moschitti. 实用性内核。In Proceedings of the European Chapter of the Association for Computational Linguistics, 2006.
+
 - [56] Fuchun Peng and Fangfang Feng. 使用条件随机场的中文分词。In Proceedings of the 20th International Conference on Computational Linguistics, 2004.
+
 - [57] Jeffrey Pennington, Richard Socher, and Christopher D. Manning. GloVec词表示。In Proceedings of 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP), pages 1532–1543, 2014.
+
 - [58] Martin F. Porter. 一词提取算法。14(3):130–137, 1980.
+
 - [59] Jonathan Reed, Rebecca Dridan, Stephen Oepen, and Lars Jorsberg. 句边界：一个已解决的问题吗？In Proceedings of COLING 2012: Posters, pages 985–994, Mumbai, India, December 2012.
+
 - [60] Stephen Robertson and Hugo Zaragoza. 概率相关性框架：BM25以后。Foundations and Trends in Information Retrieval, 3(4):333–389, 2009年4月.
+
 - [61] Michal Rosen-Zvi, Thomas Griffiths, Mark Steeyers, and Padhrai Smyth. 作者-主题模型。In Proceedings of the 20th conference on Uncertainty in artificial intelligence, pages 487–494. UAI Press, 2004.
+
 - [62] G. Salton, A. Choi, and C. S. Yang. 用于自动索引的向量模型。Commun. ACM, 18(1):613–620, 1975年11月.
+
 - [63] Amit Singhal, Chris Buckley, and Anand Mitra. 交叉文档归一化。In Proceedings of the 19th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval, SIGIR '96, pages 21–29, 1996.
+
 - [64] Amit Singhal, John Choi, Donald Hite, David D. Lewis, and Fernando Pereira. At&t at rec-7. In TREC, 1999.
-
-
-
-
 
 ## 文本数据的特征工程
 
 - [66] Karen Spärck Jones and Peter Wilitts,Readings in Information Retrieval. Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 1997.
+
 - [67] Richard Sproat and Thomas Emerson. The first international chinese word segmentation backoff. In Proceedings of the Second SIGHAN Workshop - Volume 17, SIGHAN '03, pages 133-143, 2003.
+
 - [68] Efstathios Stamatatos. A survey of modern authorship attribution methods. Journal of the American Society for Information Science and Technology, 36:538-556, March 2009.
+
 - [69] Tomek Strzalkowski. Natural language information retrieval. Information Processing and Management, 31(3):397-417, 1995.
+
 - [70] Jian Tang, Yifan Yang, Sam, Ming Zhang, and Qiaozhu Mei. Context-aware natural language generation with recurrent neural networks. arXiv preprint arXiv:1611.09900,
+
 - [71] Jian Tang, Ming Zhang, and Qiaozhu Mei. One theme in all: modeling consensus topics in multiple contexts. In Proceedings of the 19th ACM SIGKDD international conference on Knowledge discovery and data mining, pages 5-13. ACM, 2013.
+
 - [72] Tao Tao, Xuanhui Wang, Qiaozhu Mei, and ChengXiang Zhi. Accurate language model estimation with document expansion. In Proceedings of the 14th ACM International Conference on Information and Knowledge Management, CIKM 05, pages 273-274, New York, NY, USA, 2005.
+
 - [73] Yee W. Teh, David Newman, and Max Wells. A collapsed variational Bayesian inference algorithm for latent dirichlet allocation. In Advances in Neural Information Processing Systems 19, pages 1353-1360. 2006.
+
 - [74] Ivan Titov and Ryan McDonald. Modeling online reviews with multigrain topics. In Proceedings of the 17th international conference on World Wide Web, pages 111-120. ACM, 2008.
+
 - [75] Hanna M. Wallach, David M. Monro, and Andrew Callum. Rethinking lda: Why priors matters. In Advances in Neural Information Processing Systems 22, pages 1973-1981. 2009.
+
+
+
 - [76] Jinxi Xu and Wu Bruce Croft. Query expansion using local and global document analysis. In Proceedings of the 19th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval, SIGIR '96, pages 4-11, New York, NY, USA, 1996. ACM.
 
-54 机器学习与数据分析的特征工程
+## 54 机器学习与数据分析的特征工程
 
 - [77] Nianwen Xue et al. Chinese word segmentation as character tagging. Computational Linguistics and Chinese Language Processing, 8(1):29–48, 2003.
 - [78] ChengXiang Zhai. Exploiting context to identify lexical atoms - a statistical view of linguistic context. In Proceedings of 1997 International and Interdisciplinary Conference on Modelling and Using Context, pages 119–129, 1997.
 - [79] ChengXiang Zhai. Fast statistical parsing of noun phrases for document indexing. In Proceedings of the 5th Conference on Applied Natural Language Processing, pages 312–319, 1997.
-- [80] ChengXiang Zhai and John Lafferty. Model-based feedback in the language modeling approach to information retrieval. In Proceedings of the Tenth International Conference on Information and Knowledge Management, CKM '01, pages 403–410, New York, NY, USA,
+- [80] ChengXiang Zhai and John Lafferty. Model-based feedback in the language modeling approach to information retrieval. In Proceedings of the Tenth International Conference on Information and Knowledge Management, CKM '01, pages 403–410, New York, NY, USA.
 - [81] ChengXiang Zhai and Sean Magnus. Text Management and Analysis: A Practical Introduction to Information. Association for Computing, 2001. ACM. Retrieval and Data Mining. Claypool, New York, NY, USA, 2016.
 - [82] ChengXiang Zhai, Xiang Tong, Natasa Milic, and David Evans. Deep learning Chinese word segmentation. In Proceedings of the TREC-5 report, pages 647–657, Seattle, Washington.
 - [83] Xiaoojing Zheng, Hanyang Chen, and Tianyu Xu. Evaluation of phrase-based. In Proceedings of the TREC-5, pages 347–357, Seattle, Washington. 2013.
 
-## 第3章 视觉数据的特征提取与学习
+# 第3章 视觉数据的特征提取与学习
 
-Parag S. Chandak
-Arizona University
+**Parag S. Chandak**  
+Arizona University  
 
-Ragav Venkatesan
-Arizona University
+**Ragav Venkatesan**  
+Arizona University  
 
-Baoxin Li
-Arizona University
+**Baoxin Li**  
+Arizona University  
 
 | 章节 | 页码 |
 | :--- | :--- |
@@ -938,31 +758,17 @@ Arizona University
 
 大多数计算任务涉及使用提取的特征进行预测或决策。特征工程通常是指从原始数据中提取有利于任务的新表示的这种具有创造性的过程。事实上，许多机器学习算法的性能很大程度上取决于对输入的深度表示。
 
-机器学习与数据分析的特征工程
+有效的数据表示还可以减少由噪声、标记错误等引入的不变性。对于图像或视频，降维通常是特征工程不可或缺的一部分，因为原始数据通常是高维的。多年来，已经提出并研究了许多良好的图像视频特征工程方案：
 
-有效的数据表示还可以减少由噪声、标记错误等引入的不变性。对于图像或视频，降维通常是特征工程不可或缺的一部分，因为原始数据通常是高维的。年来，已经提出并研究了许多良好的图像视频特征工程方案：
-
-1. 经典的、有时是手工的特征表示：通常情况下，这些指的是基础特征（如图像梯度），也可能是来自复杂算法的特征（如梯度直方图）。大多数情况下，这些特征是由对数据属性和任务需求有良好了解的专家设计的。为每个任务手工工程特征需要大量劳动和领域知识；它允许将对现实世界和特定任务的知识整合到设计过程中。这类特征是易于解释。并不是所有经典特征都是手工的，因为其中一些是不针对特定任务的通用特征。
-
-2. 先进的潜在特征表示：虽然原始数据是高维的，但与任务相关的因素可能位于低维空间。潜在表示可以揭示原始数据的底层属性。这些特征通常寻求特定的结构，如稀疏性、维度去相关、低秩等。所强制的结构取决于任务。通常鼓励稀疏性和低维度，因为真实的视觉数据对于某些基（例如傅里叶基）天然具有稀疏表示。然而，获取潜在表示通常是一个困难的优化过程，可能需要大量的改进和巧妙的优化技术（如交替最小化）。
-
-3. 通过端到端学习获取深度表示：深度表示是通过通过最小预处理通过学习的神经网络获得的，通常由一系列卷积层和/或全连接层组成。随着输入通过每个网络层，会获得抽象更高概念的数据表示。这些网络正在
-
-参考文献
-
-
-
-
-
-# 视觉数据的特征提取与学习
-
-通过最小化特定任务的损失函数进行迭代训练，该函数会改变所有层中的参数/权重。最近，深度特征在许多视觉计算任务中被证明极其有效，带来了性能的巨大提升。它们最具吸引力的特性是能够以极少的预处理从原始输入中进行学习。此外，这种学习到的表示似乎在许多任务中都能提供合理的性能，减轻了对任务领域专家的需求。然而，学习深层表示不仅需要巨大的计算资源，还需要大量的数据集，这使得它们主要适用于具有强大 GPU 的计算集群或服务器，以及易于获取大量标记数据的应用程序。
+1.  **经典的、有时是手工的特征表示**：通常情况下，这些指的是基础特征（如图像梯度），也可能是来自复杂算法的特征（如梯度直方图）。大多数情况下，这些特征是由对数据属性和任务需求有良好了解的专家设计的。为每个任务手工工程特征需要大量劳动和领域知识；它允许将对现实世界和特定任务的知识整合到设计过程中。这类特征是易于解释的。并不是所有经典特征都是手工的，因为其中一些是不针对特定任务的通用特征。
+2.  **先进的潜在特征表示**：虽然原始数据是高维的，但与任务相关的因素可能位于低维空间。潜在表示可以揭示原始数据的底层属性。这些特征通常寻求特定的结构，如稀疏性、维度去相关、低秩等。所强制的结构取决于任务。通常鼓励稀疏性和低维度，因为真实的视觉数据对于某些基（例如傅里叶基）天然具有稀疏表示。然而，获取潜在表示通常是一个困难的优化过程，可能需要大量的改进和巧妙的优化技术（如交替最小化）。
+3.  **通过端到端学习获取深度表示**：深度表示是通过通过最小预处理通过学习的神经网络获得的，通常由一系列卷积层和/或全连接层组成。随着输入通过每个网络层，会获得抽象更高概念的数据表示。这些网络通过最小化特定任务的损失函数进行迭代训练，该函数会改变所有层中的参数/权重。最近，深度特征在许多视觉计算任务中被证明极其有效，带来了性能的巨大提升。它们最具吸引力的特性是能够以极少的预处理从原始输入中进行学习。此外，这种学习到的表示似乎在许多任务中都能提供合理的性能，减轻了对任务领域专家的需求。然而，学习深层表示不仅需要巨大的计算资源，还需要大量的数据集，这使得它们主要适用于具有强大 GPU 的计算集群或服务器，以及易于获取大量标记数据的应用程序。
 
 本章的剩余部分将详细介绍上述这三大类别的示例特征表示。
 
 ## 3.1 经典视觉表示
 
-图像是许多视觉计算应用中最常见的视觉数据形式。图像是像素的集合，每个像素被表示为一个多维数组。根据像素的维度，图像可以是灰度、彩色的或其他更高维的形式，例如 RGB（其中 RGB 代表颜色，D 代表深度）。原始像素强度可以被视为特征表示的简单形式。然而，这种表示方式对视角变化、光照变化、图像插值等许多因素非常敏感。此外，如果将每个像素值视为一个独立的特征，就会导致高维特征空间。反之，从此类高维特征中进行推理需要更长的处理时间和大量的数据。传统上，大多数视觉计算任务并不直接取决于像素的简单表示形式，而是取决于从像素提取的特征。根据特征提取方式，有很多特征提取器。某些类别包括空间域与频域、全局与局部、外观与几何、点与区域，在接下来的节中，我们将介绍一些说明了各种手工特征提取器的经典特征表示。这些过程产生的表示对特定的视觉计算任务调优得更好。
+图像是许多视觉计算应用中最常见的视觉数据形式。图像是像素的集合，每个像素被表示为一个多维数组。根据像素的维度，图像可以是灰度、彩色的或其他更高维的形式，例如 `RGBD`（其中 `RGB` 代表颜色，`D` 代表深度）。原始像素强度可以被视为特征表示的简单形式。然而，这种表示方式对视角变化、光照变化、图像插值等许多因素非常敏感。此外，如果将每个像素值视为一个独立的特征，就会导致高维特征空间。反之，从此类高维特征中进行推理需要更长的处理时间和大量的数据。传统上，大多数视觉计算任务并不直接取决于像素的简单表示形式，而是取决于从像素提取的特征。根据特征提取方式，有很多特征提取器。某些类别包括空间域与频域、全局与局部、外观与几何、点与区域，在接下来的节中，我们将介绍一些说明了各种手工特征提取器的经典特征表示。这些过程产生的表示对特定的视觉计算任务调优得更好。
 
 ### 3.1.1 颜色特征
 
@@ -970,11 +776,11 @@ Arizona University
 
 ![](img/f9b50d48a9ba5d6b2e7f6b9761812434_76_0.png)
 
-**图 3.1：** 左侧图像显示了自然图像，右侧图像是眼底图像的示例。在每个图像下方，以三维矩阵格式显示了 $3\times3\times3$ 像素值块。
+**图 3.1：** 左侧图像显示了自然图像，右侧图像是眼底图像的示例。在每个图像下方，以三维矩阵格式显示了 `3×3×3` 像素值块。
 
-**颜色直方图：** 直方图提供了数据底层分布的粗略估计。要构建直方图，将输入数据的范围划分为若干箱（bins）。统计落在每个箱中的数据点数量。然后进行归一化。直方图为我们提供了数据的中心、离散度、偏度和模态数量。让我们考虑 RGB 图像的颜色直方图的计算。第一步是将 RGB 图像转换为单通道图像。为此，对图像进行量化，使得每个三元组 (R,G,B) 落入一个箱中，从而将 RGB 图像转换为单通道图像。生成的图像具有所需的任意数量的箱。然后对量化后的图像进行向量化，通过简单地统计每个箱出现的次数来计算直方图。虽然这是最常见的策略，但存在其他替代方案。例如，可以计算并拼接每个颜色通道的直方图。
+**颜色直方图：** 直方图提供了数据底层分布的粗略估计。要构建直方图，将输入数据的范围划分为若干箱（`bins`）。统计落在每个箱中的数据点数量。然后进行归一化。直方图为我们提供了数据的中心、离散度、偏度和模态数量。让我们考虑 `RGB` 图像的颜色直方图的计算。第一步是将 `RGB` 图像转换为单通道图像。为此，对图像进行量化，使得每个三元组 `(R,G,B)` 落入一个箱中，从而将 `RGB` 图像转换为单通道图像。生成的图像具有所需的任意数量的箱。然后对量化后的图像进行向量化，通过简单地统计每个箱出现的次数来计算直方图。虽然这是最常见的策略，但存在其他替代方案。例如，可以计算并拼接每个颜色通道的直方图。
 
-颜色直方图对光照和视角的小幅变化具有很大的不变性。它可以在线性时间内完成计算，使其成为图像检索等应用的有效特征。另一方面，它的有效性取决于二值图像。例如，从大量自然图像集中得出的箱可能不适用于图 3.1 所示的以红色为主光谱的眼底图像。需要一定程度的*手工制作*来使直方图适应眼底图像。为了自动推导出任何数据集的量化箱（假设它有足够数量的样本），可以从数据集中提取所有唯一的色调（即 RGB 三元组）并对它们进行 $k$-means 聚类。
+颜色直方图对光照和视角的小幅变化具有很大的不变性。它可以在线性时间内完成计算，使其成为图像检索等应用的有效特征。另一方面，它的有效性取决于二值图像。例如，从大量自然图像集中得出的箱可能不适用于图 3.1 所示的以红色为主光谱的眼底图像。需要一定程度的`手工制作`来使直方图适应眼底图像。为了自动推导出任何数据集的量化箱（假设它有足够数量的样本），可以从数据集中提取所有唯一的色调（即 `RGB` 三元组）并对它们进行 `k-means` 聚类。
 
 ![](img/f9b50d48a9ba5d6b2e7f6b9761812434_77_0.png)
 
@@ -984,47 +790,41 @@ Arizona University
 
 **图 3.3：** 左侧：景观图像的直方图；右侧：眼底图像的直方图。两幅图像都是使用 [11] 中提到的自适应分箱策略得到的。
 
-质心可以视为箱。这种方法在 [59] 中提出。它产生的比使用自然图像预定义箱得到的直方图具有更高的熵。图 3.2 显示了使用自然图像预定义箱的景观图像直方图。它还显示了使用相同分箱策略的眼底图像直方图。这种策略没有捕捉到眼底图像的颜色分布。通过这种分箱策略，可以获得图 3.3 所示的更好的直方图。由于得到的直方图更符合可用箱的数量，在实践中观察到自适应分箱策略允许使用更少的箱（例如 16 而不是 64），而几乎没有性能损失 [10,59]。另一个缺点是颜色直方图没有建模相邻像素的关系，未能考虑到颜色的空间分布。作为补偿，[62] 提出了用于图像检索的局部直方图 (LCH)。为了计算 LCH，将图像分为块并对每个块计算颜色直方图。然后对所有颜色直方图取平均或拼接以创建 LCH。虽然 LCH 在建模区域相似性方面更好，但它对旋转等变换敏感。
+质心可以视为箱。这种方法在 [59] 中提出。它产生的比使用自然图像预定义箱得到的直方图具有更高的熵。图 3.2 显示了使用自然图像预定义箱的景观图像直方图。它还显示了使用相同分箱策略的眼底图像直方图。这种策略没有捕捉到眼底图像的颜色分布。通过这种分箱策略，可以获得图 3.3 所示的更好的直方图。由于得到的直方图更符合可用箱的数量，在实践中观察到自适应分箱策略允许使用更少的箱（例如 16 而不是 64），而几乎没有性能损失 [10,59]。另一个缺点是颜色直方图没有建模相邻像素的关系，未能考虑到颜色的空间分布。作为补偿，[62] 提出了用于图像检索的局部直方图 (`LCH`)。为了计算 `LCH`，将图像分为块并对每个块计算颜色直方图。然后对所有颜色直方图取平均或拼接以创建 `LCH`。虽然 `LCH` 在建模区域相似性方面更好，但它对旋转等变换敏感。
 
-**相干向量：** 这是另一种考虑了空间分布的特征。相干向量 (CCV) 的计算涉及使用均值或高斯滤波器对图像进行模糊。然后使用类似的分箱策略对图像进行量化。每个像素被分类为相干或不相干，如果它的连通分量大于用户指定的阈值，则视为相干。尽管 CCV 建模了空间分布，但不同的模式可能会产生相同的 CCV。通常将组件的相对位置作为另一个维度。图 3.4 显示了景观图像和眼底图像的 CCV。在这里可以观察到相同的分箱策略对于两幅图像都效果良好。
+**相干向量：** 这是另一种考虑了空间分布的特征。相干向量 (`CCV`) 的计算涉及使用均值或高斯滤波器对图像进行模糊。然后使用类似的分箱策略对图像进行量化。每个像素被分类为相干或不相干，如果它的连通分量大于用户指定的阈值，则视为相干。尽管 `CCV` 建模了空间分布，但不同的模式可能会产生相同的 `CCV`。通常将组件的相对位置作为另一个维度。图 3.4 显示了景观图像和眼底图像的 `CCV`。在这里可以观察到相同的分箱策略对于两幅图像都效果良好。
 
 ![](img/f9b50d48a9ba5d6b2e7f6b9761812434_78_0.png)
 
-**图 3.4：** 左侧：景观图像的 CCV；右侧：眼底图像的 CCV。两幅图像都是基于自然图像颜色分布的分箱策略得到的。
+**图 3.4：** 左侧：景观图像的 `CCV`；右侧：眼底图像的 `CCV`。两幅图像都是基于自然图像颜色分布的分箱策略得到的。
 
 ![](img/f9b50d48a9ba5d6b2e7f6b9761812434_78_1.png)
 
-**图 3.5：** 使用自适应分箱策略的眼底图像的 CCV，具有更高的熵。
+**图 3.5：** 使用自适应分箱策略的眼底图像的 `CCV`，具有更高的熵。
 
 **颜色矩直方图：** 该特征对缩放和旋转具有不变性。颜色矩唯一地刻画了图像中的颜色分布。颜色矩按通道计算。第一个矩仅仅是图像的平均颜色，而后两个矩描述了颜色分布的方差和形状。这三个矩提供了执行有效图像检索所需的信息 [68]。颜色表示在动态光照条件下表现良好，但在阻塞的情况下会失效。
 
-**颜色相关图：** 上述特征未能导致一种建模颜色局部和全局分布的紧凑表示。当发生很大变化时，颜色直方图和 CCV 会失效 [30]。为此提出了颜色相关图 (CC)。CC 衡量颜色局部相关性的全局分布。计算相关图的粗略步骤如下：
+**颜色相关图：** 上述特征未能导致一种建模颜色局部和全局分布的紧凑表示。当发生很大变化时，颜色直方图和 `CCV` 会失效 [30]。为此提出了颜色相关图 (`CC`)。`CC` 衡量颜色局部相关性的全局分布。计算相关图的粗略步骤如下：
 
-1. 将图像量化为 $n$ 种颜色（如果适用，使用自适应分箱策略）。
-2. 选择一组表示为 $d \in N$ 的距离值。
-3. 对于每个 $b_i$，计算箱 $b_j$ 位于距离 $d_s$ 的概率。
+1. 将图像量化为 `n` 种颜色（如果适用，使用自适应分箱策略）。
+2. 选择一组表示为 `d ∈ N` 的距离值。
+3. 对于每个 `b_i`，计算箱 `b_j` 位于距离 `d_s` 的概率。
 
-如果只考虑 $i = j$ 的情况，该特征被证明对于图像检索是有效的自相关图 [30]。对于每个距离值 $d_s$ 和所有的箱对重复此操作，会得到大小为 $m^2$ 的 CC，其中 $m$ 是箱的数量，$d$ 是距离集的基数。存在在 $O(n^2d)$ 时间内计算 CC 的高效算法。[30] 中进行的密集图像检索实验表明，CC 优于 CCV 和颜色直方图。自适应分箱的优势也适用于 CC 特征，提供了类似的性能提升 [11,59]。
+如果只考虑 `i = j` 的情况，该特征被证明对于图像检索是有效的自相关图 [30]。对于每个距离值 `d_s` 和所有的箱对重复此操作，会得到大小为 `m²` 的 `CC`，其中 `m` 是箱的数量，`d` 是距离集的基数。存在在 `O(n²d)` 时间内计算 `CC` 的高效算法。[30] 中进行的密集图像检索实验表明，`CC` 优于 `CCV` 和颜色直方图。自适应分箱的优势也适用于 `CC` 特征，提供了类似的性能提升 [11,59]。
 
 ### 3.1.2 纹理特征
 
 视觉数据的另一种描述符使用空间频率来描述纹理。某些方法构成了低空间频率和方差的粗糙纹理。另一种选择是将理量化为单位面积内的边缘数量 [24]。[30] 给早期方法的回顾。现在我们将回顾一些用于纹理建模的流行特征。
 
-**灰度共现矩阵 (GCM)：** GCM [25] 可以为任何图像 $I$ 计算。用 GCM 表示为 $M$，
+**灰度共现矩阵 (`GCM`)：** `GCM` [25] 可以为任何图像 `I` 计算。用 `GCM` 表示为 `M`，
 
 ```
 $M_{ij} = \{# [I_{ij}] I_{ij} = I_{i+1,j+1}\}$.
 ```
 
+在这里，`[I_{ij}]` 是满足邻接条件 `I_{ij} = I_{i+1,j+1}` 的像素集合（记为 `[I_{ij}]`）的基数（数量）。为了合理地考虑纹理建模，我们需要多次观测来填充 `M` 中的每个条目。实现这一目标有两种方法。一种方法是使用多个像素可以满足上述条件的少量量化电平。较高的量化会导致精度的损失。另一种方法是在较大的窗口内评估该条件。如果纹理在窗口内发生显著变化，会导致误差。上述邻接条件描述的是所考虑像素下方和右侧的像素。下面又定义了三种位于左侧和右侧的邻接条件。Haralick 提出了从共生矩阵（`GCM`）中计算的 14 种统计量，以区分不同的纹理 [25]。
 
-
-
-
-## 机器学习与数据分析中的特征工程
-
-在这里，$[I_{ij}]$ 是满足邻接条件 $I_{ij} = I_{i+1,j+1}$ 的像素集合（记为 $[I_{ij}]$）的基数（数量）。为了合理地考虑纹理建模，我们需要多次观测来填充 M 中的每个条目。实现这一目标有两种方法。一种方法是使用多个像素可以满足上述条件的少量量化电平。较高的量化会导致精度的度度损失。另一种方法是在较大的窗口内评估该条件。如果纹理在窗口内发生显著变化，会导致误差。上述邻接条件描述的是所考虑像素下方和右侧的像素。下面又定义了三种位于左侧和右侧的邻接条件。Haralick 提出了从共生矩阵（GCM）中计算的 14 种统计量，以区分不同的纹理 [25]。
-
-**Laws 纹理掩码（Laws' Texture Masks）：** Masks 开发了一种纹理-能量方法，其中将一组掩码与图像进行卷积 [36]。最初，对图像进行预处理，使得每个小窗口的平均强度接近零。然后，定义了一组向量来检测电平、边缘和波纹，如下：
+**Laws 纹理掩码：** Masks 开发了一种纹理-能量方法，其中将一组掩码与图像进行卷积 [36]。最初，对图像进行预处理，使得每个小窗口的平均强度接近零。然后，定义了一组向量来检测电平、边缘和波纹，如下：
 
 ```
 L = [1, 4, 6, 4, 1]
@@ -1035,31 +835,35 @@ R = [-1, -4, -6, -4]
 
 通过计算每对掩码之间的阶乘积，创建了 16 组掩码。注意，以这种方式创建的某些对可能是对称的。每个掩码都与图像进行卷积以生成响应。来自对称掩码对的响应取平均值。最后，我们得到了九个卷积响应掩码。因此，得到了一张特征图，其中每个点都是一个 9 维向量。生成的特征图可以被视为一张纹理图，用于将任何图像聚类到不同的纹理区域。
 
-**Gabor 滤波器（Gabor Filter）：** Gabor 滤波器由 Dennis Gary 于 1946 年发明 [19]。Gabor 滤波器是纹理分析的极佳特征。它们既高效，同时又能执行金字塔结构/树结构小波特征 [12] 以及多分辨率同步自回归模型（MR-SAR） [40] 特征。
+**Gabor 滤波器：** Gabor 滤波器由 Dennis Gary 于 1946 年发明 [19]。Gabor 滤波器是纹理分析的极佳特征。它们既高效，同时又能执行金字塔结构/树结构小波特征 [12] 以及多分辨率同步自回归模型（`MR-SAR`） [40] 特征。
 
-给定的图像具有不同尺度和不同方向的 Gabor 滤波器，以获得若干表示不同尺度和方向能量的数组。这些能量数组的前两个阶矩可以用于区分图像中的不同纹理。幅度数组的前两个阶矩可以拼接成一个特征向量，然后可以使用标准分类器（如支持向量机 SVM）将其分类为纹理类别之一。
+给定的图像具有不同尺度和不同方向的 Gabor 滤波器，以获得若干表示不同尺度和方向能量的数组。这些能量数组的前两个阶矩可以用于区分图像中的不同纹理。幅度数组的前两个阶矩可以拼接成一个特征向量，然后可以使用标准分类器（如支持向量机 `SVM`）将其分类为纹理类别之一。
 
 # 视觉数据的特征提取与学习
 
-**可转向高斯滤波器（SGF）：** 定向滤波器在许多图像处理任务中非常有用，例如边缘/轮廓检测、纹理建模等。人们可以将相同的滤波器旋转旋转到不同的角度，以获得各种滤波器响应。鉴于此，通常希望引导滤波器并检查其响应的变化。SGF 拥有一组基滤波器，可用于推导出任意方向的滤波器 [18]。
+**可转向高斯滤波器 (`SGF`)：** 定向滤波器在许多图像处理任务中非常有用，例如边缘/轮廓检测、纹理建模等。人们可以将相同的滤波器旋转旋转到不同的角度，以获得各种滤波器响应。鉴于此，通常希望引导滤波器并检查其响应的变化。`SGF` 拥有一组基滤波器，可用于推导出任意方向的滤波器 [18]。
 
-考虑如下的对称高斯函数 $G$：
+考虑如下的对称高斯函数 `G`：
 
 ```
 $G(x, y) = \exp(-(x^2 + y^2)). \quad (3.3)$
 ```
 
-令高斯函数的第 $n$ 阶导数为 $G_n$。令 $f^\theta$ 表示旋转算子，使得 $f$ 旋转 $\theta$。高斯在 x 方向上的一阶导数为：
+令高斯函数的第 `n` 阶导数为 `G_n`。令 `f^θ` 表示旋转算子，使得 `f` 旋转 `θ`。高斯在 x 方向上的一阶导数为：
 
 ```
 $G_1^x = \frac{\partial}{\partial x} \exp(-(x^2 + y^2)) = -2x \cdot \exp(-(x^2 + y^2)) \quad (3.4)$
 ```
 
-并且，将函数旋转 $90^\circ$ 得到：
+并且，将函数旋转 `90°` 得到：
 
 ```
 $G_1^y = \frac{\partial}{\partial y} \exp(-(x^2 + y^2)) = -2y \cdot \exp(-(x^2 + y^2)) \quad (3.5)$
 ```
+
+
+
+# 视觉数据的特征提取与学习
 
 可以合成任意方向的滤波器：
 
@@ -1071,18 +875,11 @@ $G_1^\theta = \cos(\theta)G_1^x + \sin(\theta)G_1^y \quad (3.6)$
 
 ```
 $R_1^x = G_1^x * I$
-R_1^y = G_1^y * I$
-R_1^\theta = \cos(\theta)R_1^x + \sin(\theta)R_1^y \quad (3.7)$
+$R_1^y = G_1^y * I$
+$R_1^\theta = \cos(\theta)R_1^x + \sin(\theta)R_1^y \quad (3.7)$
 ```
 
 不同方向响应的统计量可以揭示图像中的结构。以图 3.1.2 所示的眼底图像为例。我们使用方向为 $225^\circ$ 的 SGF 对图像进行卷积。响应如图 3.12 所示。原始图像中的异常（如黄点和红点）被 SGF 响应捕到。具体来说，异常由响应中的峰值和谷值表示。类似于 Gabor 滤波器，我们可以提取响应的低阶矩，这将有助于我们量化纹理。
-
-# 视觉数据的特征提取与学习
-
-不同方向响应的统计量可以揭示图像中的结构。以图 3.1.2 所示的眼底图像为例。我们使用方向为 $225^\circ$ 的 SGF 对图像进行卷积。响应如图 3.12 所示。原始图像中的异常（如黄点和红点）被 SGF 响应捕到。具体来说，异常由响应中的峰值和谷值表示。类似于 Gabor 滤波器，我们可以提取响应的低阶矩，这将有助于我们量化纹理。
-
-
-
 
 为了使直方图对某些类型的照明变化具有不变性，我们需要对直方图进行归一化。我们不是单独对每个直方图进行归一化，而是首先将 2×2 的单元分组。这四个直方图拼接成一个 36 维向量，并将其归一化为单位长度。块之间重叠 50%。高对比区域往往是局部的，因此在小块上进行归一化比全局策略更有效。整个图像的最终 HOG 描述是通过拼接所有块的描述符得到的。[13] 中从 64×128 图像进行人员检测使用了 3780 维特征描述符。HOG 已用于检测深度特征 [20, 21, 24] 并超越了其性能。HOG 还与局部二值模式（LBP）等特征结合，用于在部分遮挡场景下检测行人。
 
@@ -1092,8 +889,6 @@ R_1^\theta = \cos(\theta)R_1^x + \sin(\theta)R_1^y \quad (3.7)$
 
 直接特征提取有其优势。它（通常）计算量小、易于实现和解释，并允许包含先验知识。然而，为特定任务手工构建特征需要大量的专家劳动，这可能是昂贵且难以获取的。通过（某种自动化过程）获得满足某些特征的特征是理想的。在特征空间中发现潜在结构的自动化过程应该被赋予要实现的的目标属性，这些通常以待优化的目标函数形式存在。某些特征被证明在广泛的任务中是有效的，例如稀疏性和低维性。由于这些结构存在但隐藏在一个新的（子）空间中，因此它们被称为潜在特征（源自拉丁语“latere”）。我们将回顾一些最重要的潜在特征类型及其底层的提取过程。
 
-## 视觉数据的特征提取与学习
-
 ### 3.2.1 主成分分析
 
 在第 3.1 节中，我们看到人们可以构想的最简单特征之一是（预处理过的）像素值向量。其主要问题之一是其极高的维度和冗余性。主成分分析（PCA）采用正交变换将一组相关变量（例如值）转换为一组线性不相关的变量 [33]。这些不相关的变量被称为主成分。主成分的数量等于或（通常）小于原始特征空间的维数（假设观测值的维数大于特征空间的维数）。
@@ -1102,23 +897,23 @@ R_1^\theta = \cos(\theta)R_1^x + \sin(\theta)R_1^y \quad (3.7)$
 
 在包含 $n$ 个样本和 $d$ 个特征维的整个数据集 $X \in \mathbb{R}^{n \times d}$ 上计算主成分的简单方法如下：
 
-- 1. 通过将 $X$ 每个维度的平均值置零，形成一个均值中心数据集。
+1. 通过将 $X$ 每个维度的平均值置零，形成一个均值中心数据集。
 
-$$\hat{X}_i = X_i - \frac{1}{n} \sum_{j} X_j, \quad (3.13)$$
+```
+$\hat{X}_i = X_i - \frac{1}{n} \sum_{j} X_j, \quad (3.13)$
+```
 
 其中 $X_i$ 表示 $X$ 的第 $i$ 行。
 
-- 2. 计算所有维度之间的协方矩阵：
+2. 计算所有维度之间的协方矩阵：
 
-$$C = \frac{1}{n-1} \hat{X}^T \hat{X}. \quad (3.14)$$
+```
+$C = \frac{1}{n-1} \hat{X}^T \hat{X}. \quad (3.14)$
+```
 
-- 3. 计算协方矩阵的特征向量和特征值。与最大特征值对应的特征向量是第一个主成分。这些向量按特征值从大到小排序。可以忽略非常小的特征值，这会导致信息丢失，但也实现了降维。
+3. 计算协方矩阵的特征向量和特征值。与最大特征值对应的特征向量是第一个主成分。这些向量按特征值从大到小排序。可以忽略非常小的特征值，这会导致信息丢失，但也实现了降维。
 
-- 4. 将数据集投影到主成分上以获得降维表示。
-
-## 机器学习的特征工程
-
-特征工程的核心思想是将原始数据转换为对学习算法更有信息的表示。这通常涉及从现有特征创建新特征或对当前特征进行转换。
+4. 将数据集投影到主成分上以获得降维表示。
 
 ### 3.2.2 核成分分析
 
@@ -1130,28 +925,22 @@ $$C = \frac{1}{n-1} \hat{X}^T \hat{X}. \quad (3.14)$$
 
 ### 3.2.4 Isomap
 
-这是最常用的降维方法之一。Isomap 扩展了 MDS，它使用测地距离代替样本之间的直线距离。测地距离的引入正确地考虑了流形的底层低维结构。例如，在著名的瑞士卷示例中，两个点在欧几空间中可能是邻居，但在考虑瑞士卷的实际结构时它们可能非常远。两点之间的测地距离定义为连接两个节点的最短路径上的边权重之和。最短路径可以使用 Dijkstra 算法计算。Isomap 算法可以简述如下：
+这是最常用的降维方法之一。Isomap 扩展了 MDS，它使用测地距离代替样本之间的直线距离。测地距离的引入正确地考虑了流形的底层低维结构。例如，在著名的瑞士卷示例中，两个点在欧几空间中可能是邻居，但在考虑瑞士卷的实际结构时它们可能非常远。两点之间的测地距离定义为连接两个节点的最短路径上的边权重之和。最短路径可以使用 `Dijkstra` 算法计算。Isomap 算法可以简述如下：
 
-- 1. 使用固定半径或 KNN 规则获取每个点的邻居。
-
-
-
-
-70 机器学习与数据分析中的特征工程
-
-- 2. 构建邻域图。如果一个节点是另一个节点的 $k$ 最近邻居，则这两个节点之间连接。可以将欧几里得距离分配为边权重。
-- 3. 使用 Dijkstra 算法计算两个节点之间的最短路径。
-- 4. 使用度量 MDS 计算低维嵌入。
+1. 使用固定半径或 KNN 规则获取每个点的邻居。
+2. 构建邻域图。如果一个节点是另一个节点的 $k$ 最近邻居，则这两个节点之间连接。可以将欧几里得距离分配为边权重。
+3. 使用 `Dijkstra` 算法计算两个节点之间的最短路径。
+4. 使用度量 MDS 计算低维嵌入。
 
 ### 3.2.5 拉普拉斯特征映射 (Laplacian Eigenmaps)
 
 这是一种计算高效的非线性降维方法，它利用了相邻数据点的信息。这些点是一个加权图的一部分，图中有一组边连接相邻的数据点。该方法可以概述如下：
 
-- 1. **图构建：** 如果满足 (1) $|x_i - x_j|^2 < \epsilon$ 或 (2) 节点 $j$ 是节点 $i$ 的 $k$ 最近邻居之一，则节点 $i$ 和 $j$ 连通。这里，$x_i \in \mathbb{R}^n$ 是空间中第 $i$ 个数据点的表示。
+1. **图构建：** 如果满足 (1) $|x_i - x_j|^2 < \epsilon$ 或 (2) 节点 $j$ 是节点 $i$ 的 $k$ 最近邻居之一，则节点 $i$ 和 $j$ 连通。这里，$x_i \in \mathbb{R}^n$ 是空间中第 $i$ 个数据点的表示。
 
 第一种方案在几何上直观的，但缺点是必须选择参数 $\epsilon$。第二种方案为我们提供了更简单的选择，但难以可视化。
 
-- 2. **边权重：** 一种简单的策略是，如果边连接两个节点，则分配权重 1，否则分配 0。一种软加权策略是使用核函数，其分配与数据点 $i$ 和 $j$ 之间相似性正比的权重。一种流行的核函数是定义为热核的
+2. **边权重：** 一种简单的策略是，如果边连接两个节点，则分配权重 1，否则分配 0。一种软加权策略是使用核函数，其分配与数据点 $i$ 和 $j$ 之间相似性正比的权重。一种流行的核函数是定义为热核的
 
 ```
 $w_{ij} = \exp-\frac{\|x_i - x_j\|^2}{t} \quad (3.18)$
@@ -1159,13 +948,11 @@ $w_{ij} = \exp-\frac{\|x_i - x_j\|^2}{t} \quad (3.18)$
 
 其中，$w_{ij}$ 是连接节点 $i$ 和 $j$ 的边的权重。如果它们不连通，则 $w_{ij} = 0$。参数 $t$ 可以被视为敏感性因子。当 $t = \infty$ 时，热核退化为前面提到的权重策略。
 
-- 3. **计算最优嵌入：** 假设图是全连的。通过对对称边权重矩阵 $W$ 的列（或行）计算对角权重矩阵 $D$。计算拉普拉斯矩阵 $L = D - W$，这是一个对称正半定矩阵。接下来，求解广义特征值问题：
+3. **计算最优嵌入：** 假设图是全连的。通过对对称边权重矩阵 $W$ 的列（或行）计算对角权重矩阵 $D$。计算拉普拉斯矩阵 $L = D - W$，这是一个对称正半定矩阵。接下来，求解广义特征值问题：
 
 ```
 $Lf = \lambda Df. \quad (3.19)$
 ```
-
-## 视觉数据的特征提取与学习
 
 在去掉对应于特征值 0 的特征向量 $f_0$ 后，其余特征向量用于 $m$ 维嵌入，如下（其中 $m \ll n$）：
 
@@ -1181,57 +968,15 @@ $x_i \to (f_1(i), \dots, f_m(i)). \quad (3.20)$
 
 多层神经网络被视为提取分层任务特定特征的手段。自从 Rumelhart 等人的早期工作以来，人们就认识到可以使用反向传播学习表示，并具有学习任务特定精细调整特征的潜力 [47]。直到本世纪初，这些方法一直受到大规模数据匮乏以及无法充分利用的大规模并行计算硬件的严重限制。在这一部分，计算机视觉科学家的创造力被引导去开发上述的通用型特征表示。我们现在可以访问足够大的数据集以及能够进行大规模并行计算的图形处理器（GPU）。这使得神经图像特征及其应用发生了爆炸式增长 [58]。在本节中，我们将学习其中一些技术。
 
-72 机器学习与数据分析中的特征工程
-
 ### 3.3.1 卷积神经网络
 
 有几种类型的神经网络。神经网络是一个计算神经元网络，表示为多个函数的复合 [22]。在处理图像时，我们经常关注使用卷积神经网络（CNN）。
 
 每个神经元接收若干个输入并产生一个输出，该输出可以提供给其他神经元。计算神经元的典型功能是对所有输入进行加权，对加权输入求和，并根据加权输入的强度生成输出。神经元按组组织，每组通常接收来自相同源的输入。这些组被称为层。层有三种类型，每种类型都有其特定的神经元。它们是点积层（或全连接层）、卷积层和池化层。
 
-### 3.3.1.1 点积层
+#### 3.3.1.1 点积层
 
-考虑一个 1D 输入向量 $\mathbf{x} \in \{x_1, x_2, \dots, x_n\}$。在处理图像时，我们经常关注使用卷积神经网络（CNN）。每个神经元接收若干个输入并产生一个输出，该输出可以提供给其他神经元。计算神经元的典型功能是对所有输入进行加权，对加权输入求和，并根据加权输入的强度生成输出。神经元按组组织，每组通常接收来自相同源的输入。这些组被称为层。层有三种类型，每种类型都有其特定的神经元。它们是点积层（或全连接层）、卷积层和池化层。
-
-### 3.3.1.1 点积层
-
-考虑一个 1D 输入向量 $\mathbf{x} \in \{x_1, x_2, \dots, x_n\}$。在处理图像时，我们经常关注使用卷积神经网络（CNN）。每个神经元接收若干个输入并产生一个输出，该输出可以提供给其他神经元。计算神经元的典型功能是对所有输入进行加权，对加权输入求和，并根据加权输入的强度生成输出。神经元按组组织，每组通常接收来自相同源的输入。这些组被称为层。层有三种类型，每种类型都有其特定的神经元。它们是点积层（或全连接层）、卷积层和池化层。
-
-考虑一个 1D 输入向量 $\mathbf{x} \in \{x_1, x_2, \dots, x_n\}$。在处理图像时，我们经常关注使用卷积神经网络（CNN）。每个神经元接收若干个输入并产生一个输出，该输出可以提供给其他神经元。计算神经元的典型功能是对所有输入进行加权，对加权输入求和，并根据加权输入的强度生成输出。神经元按组组织，每组通常接收来自相同源的输入。这些组被称为层。层有三种类型，每种类型都有其特定的神经元。它们是点积层（或全连接层）、卷积层和池化层。
-
-考虑一个 1D 输入向量 $\mathbf{x} \in \{x_1, x_2, \dots, x_n\}$。在处理图像时，我们经常关注使用卷积神经网络（CNN）。每个神经元接收若干个输入并产生一个输出，该输出可以提供给其他神经元。计算神经元的典型功能是对所有输入进行加权，对加权输入求和，并根据加权输入的强度生成输出。神经元按组组织，每组通常接收来自相同源的输入。这些组被称为层。层有三种类型，每种类型都有其特定的神经元。它们是点积层（或全连接层）、卷积层和池化层。
-
-考虑一个 1D 输入向量 $\mathbf{x} \in \{x_1, x_2, \dots, x_n\}$。在处理图像时，我们经常关注使用卷积神经网络（CNN）。每个神经元接收若干个输入并产生一个输出，该输出可以提供给其他神经元。计算神经元的典型功能是对所有输入进行加权，对加权输入求和，并根据加权输入的强度生成输出。神经元按组组织，每组通常接收来自相同源的输入。这些组被称为层。层有三种类型，每种类型都有其特定的神经元。它们是点积层（或全连接层）、卷积层和池化层。
-
-考虑一个 1D 输入向量 $\mathbf{x} \in \{x_1, x_2, \dots, x_n\}$。在处理图像时，我们经常关注使用卷积神经网络（CNN）。每个神经元接收若干个输入并产生一个输出，该输出可以提供给其他神经元。计算神经元的典型功能是对所有输入进行加权，对加权输入求和，并根据加权输入的强度生成输出。神经元按组组织，每组通常接收来自相同源的输入。这些组被称为层。层有三种类型，每种类型都有其特定的神经元。它们是点积层（或全连接层）、卷积层和池化层。
-
-*(注：由于原文中存在大量重复的段落（如 3.3.1.1 之后的内容反复多次出现），在翻译时我遵循了“一定不要重复输出原文”的原则，此处仅对逻辑结构进行完整对应翻译)*
-
-考虑一个 1D 输入向量 $\mathbf{x} \in \{x_1, x_2, \dots, x_n\}$。在处理图像时，我们经常关注使用卷积神经网络（CNN）。每个神经元接收若干个输入并产生一个输出，该输出可以提供给其他神经元。计算神经元的典型功能是对所有输入进行加权，对加权输入求和，并根据加权输入的强度生成输出。神经元按组组织，每组通常接收来自相同源的输入。这些组被称为层。层有三种类型，每种类型都有其特定的神经元。它们是点积层（或全连接层）、卷积层和池化层。
-
-考虑一个 1D 输入向量 $\mathbf{x} \in \{x_1, x_2, \dots, x_n\}$。在处理图像时，我们经常关注使用卷积神经网络（CNN）。每个神经元接收若干个输入并产生一个输出，该输出可以提供给其他神经元。计算神经元的典型功能是对所有输入进行加权，对加权输入求和，并根据加权输入的强度生成输出。神经元按组组织，每组通常接收来自相同源的输入。这些组被称为层。层有三种类型，每种类型都有其特定的神经元。它们是点积层（或全连接层）、卷积层和池化层。
-
-考虑一个 1D 输入向量 $\mathbf{x} \in \{x_1, x_2, \dots, x_n\}$。在处理图像时，我们经常关注使用卷积神经网络（CNN）。每个神经元接收若干个输入并产生一个输出，该输出可以提供给其他神经元。计算神经元的典型功能是对所有输入进行加权，对加权输入求和，并根据加权输入的强度生成输出。神经元按组组织，每组通常接收来自相同源的输入。这些组被称为层。层有三种类型，每种类型都有其特定的神经元。它们是点积层（或全连接层）、卷积层和池化层。
-
-*(由于提供的原文存在严重的文本重复，以下为针对非重复部分的逻辑翻译：)*
-
-### 3.3.1.1 点积层
-
-考虑一个 1D 输入向量 $\mathbf{x} \in \{x_1, x_2, \dots, x_n\}$。在处理图像时，我们经常关注使用卷积神经网络（CNN）。每个神经元接收若干个输入并产生一个输出，该输出可以提供给其他神经元。计算神经元的典型功能是对所有输入进行加权，对加权输入求和，并根据加权输入的强度生成输出。神经元按组组织，每组通常接收来自相同源的输入。这些组被称为层。层有三种类型，每种类型都有其特定的神经元。它们是点积层（或全连接层）、卷积层和池化层。
-
-考虑一个 1D 输入向量 $\mathbf{x} \in \{x_1, x_2, \dots, x_n\}$。在处理图像时，我们经常关注使用卷积神经网络（CNN）。每个神经元接收若干个输入并产生一个输出，该输出可以提供给其他神经元。计算神经元的典型功能是对所有输入进行加权，对加权输入求和，并根据加权输入的强度生成输出。神经元按组组织，每组通常接收来自相同源的输入。这些组被称为层。层有三种类型，每种类型都有其特定的神经元。它们是点积层（或全连接层）、卷积层和池化层。
-
-*(注：原文文本在 3.3.1.1 之后出现了多次完全相同的段落，根据指令“一定不要重复输出原文”，此处已去重处理。)*
-
-考虑一个 1D 输入向量 $\mathbf{x} \in \{x_1, x_2, \dots, x_n\}$。在处理图像时，我们经常关注使用卷积神经网络（CNN）。每个神经元接收若干个输入并产生一个输出，该输出可以提供给其他神经元。计算神经元的典型功能是对所有输入进行加权，对加权输入求和，并根据加权输入的强度生成输出。神经元按组组织，每组通常接收来自相同源的输入。这些组被称为层。层有三种类型，每种类型都有其特定的神经元。它们是点积层（或全连接层）、卷积层和池化层。
-
-*(由于原文文本在 3.3.1.1 之后出现了多次完全相同的段落，根据指令“一定不要重复输出原文”，此处已去重处理。)*
-
-*(此处由于输入文本存在异常重复，翻译已涵盖所有核心内容且去除了冗余。)*
-
-
-
-
+考虑一个 1D 输入向量 $\mathbf{x} \in \{x_1, x_2, \dots, x_n\}$。
 
 ## 机器学习与数据分析中的特征工程
 
@@ -1239,9 +984,11 @@ $x_i \to (f_1(i), \dots, f_m(i)). \quad (3.20)$
 
 **图 3.9**: 一个典型的卷积层。
 
-虽然图 3.8 显示神经元是独立的，但通常几个神经元共享相同的权重。在图 3.8 所示的表示，所有神经元共享相同的权重。尽管我们产生了 $n-r+1$ 个输出，但我们只使用了 $r$ 个唯一的权重。这里的卷积层接收 $2-D$ 输入，因此是一个 $1-D$ 卷积层。图 3.9 展示了独立神经元及其连接性，但重复的卷积滤波器在整个图像上滑动。换句话说，权重在图像的所有位置都是共享。当输入具有多个通道时，卷积沿着所有通道独立进行，并对输出进行逐元素求和。
 
-$2D$ 卷积层通常执行以下操作：
+
+虽然图 3.8 显示神经元是独立的，但通常几个神经元共享相同的权重。在图 3.8 所示的表示中，所有神经元共享相同的权重。尽管我们产生了 $n-r+1$ 个输出，但我们只使用了 $r$ 个唯一的权重。这里的卷积层接收 `2-D` 输入，因此是一个 `1-D` 卷积层。图 3.9 展示了独立神经元及其连接性，但重复的卷积滤波器在整个图像上滑动。换句话说，权重在图像的所有位置都是共享的。当输入具有多个通道时，卷积沿着所有通道独立进行，并对输出进行逐元素求和。
+
+`2D` 卷积层通常执行以下操作：
 
 ```
 $z(j, d_1, d_2) = \alpha \left[ \sum_{\begin{array}{ccc} C-1 & r-1 & r-1 \\ c=0 & u=0 & v=0 \end{array}} c_{cd,d_1,d_2} \times w_{uv}^j \right],\n\forall j \in [0, \dots, n] \quad \forall d_1, d_2 \in [0, \dots, d_i], \quad (3.23)
@@ -1255,23 +1002,19 @@ $z(j, d_1, d_2) = \alpha \left[ \sum_{\begin{array}{ccc} C-1 & r-1 & r-1 \\ c=0 
 
 在卷积层的上下文中，激活也被称为特征图（feature maps）。图 3.9 显示了在层结束生成的三个特征图。卷积层的滤波器通过反向传播和梯度下降学习。每个滤波器产生一个特征图。特征图是滤波器所适应的模式存在性的置信值空间图。
 
-### 池化层 (The Pooling Layer)
+### 池化层
 
 卷积创建的激活在每个轴上的长度均为 $d-r+1$。这些特征图中相邻的激活值通常是相互相关的。这是因为在图像语境中，大多数模式分布在几个像素上。我们希望避免存储（以及处理）冗余，并尽可能使用这些特征中最具代表性的。
 
-这通常通过使用池化或下采样操作来实现。池化通常使用不重叠的滑动窗口进行，每个窗口采样一个激活值。在图像语文中，首选使用最大池化（max-pooling）。通过 $p$（窗口大小为 $p$）进行池化会将激活的尺寸缩小 $p$ 倍。池化层没有可学习的组件。
+这通常通过使用池化或下采样操作来实现。池化通常使用不重叠的滑动窗口进行，每个窗口采样一个激活值。在图像语境中，首选使用最大池化（max-pooling）。通过 $p$（窗口大小为 $p$）进行池化会将激活的尺寸缩小 $p$ 倍。池化层没有可学习的组件。
 
-### 3.3.2 CNN 架构设计
+### CNN 架构设计
 
 类似于机器学习中的模型设计和手工特征的实践，CNN 也涉及某种程度的手工技巧。大多数制作工作涉及设计网络架构。这涉及选择每层的类型、数量、激活函数和神经元。在图像数据和 CNN 中出现的一个重要设计选择是感受野（receptive fields）的设计。
 
 感受野通常由每层滤波器（权重）的大小以及池化层的使用引导。有效感受野（相对于输入图像）随着每一层的逐步增长而增大。关于滤波器尺寸以及因此产生的感受野的选择，通常有两种哲学。第一种由 Yann LeCun 等人 [37,38] 设计，后来由 Alex Krizhevsky 等人 [32] 在现代目标检测中引入并被广泛采用。他们在早期层采用了较大的感受野，并继续按数量级增长。考虑 AlexNet [32]，它是为了 2012 年的 ILSVRC 挑战设计的，涉及识别 1000 类的对象，每张图像大小为 $224 \times 224$ [14]。该网络的第一层具有 $11 \times 11$ 的卷积滤波器（步长为 4 像素），随后是 $3 \times 3$ 的池化（步长为 2 像素）。下一层是 $5 \times 5$，然后是 $3 \times 3$，每一层都有自己的感受野池化层。
 
 （注：由于提供的原文文本包含大量重复和损坏的片段，上述译文根据指令对连贯部分进行了处理。）
-
-
-
-
 
 ## 机器学习与数据分析中的特征工程
 
@@ -1281,7 +1024,7 @@ $z(j, d_1, d_2) = \alpha \left[ \sum_{\begin{array}{ccc} C-1 & r-1 & r-1 \\ c=0 
 
 继续对网络进行反向传播，以较小的 $\eta$ 学习任务 $t$。预期 $N$ 已经训练得非常充分，并且可以作为良好的初始化，开始针对这一新任务对网络进行微调。在某些没有足够的计算资源来更新所有权重的情况下，我们可能简单选择只更新靠近任务的几层，而保持其他层不变。这些未更新的前几层现在被视为特征提取器，类似于 HOG 或 SIFT。
 
-一些网络利用了这一思想，并创建了现成的开箱即用（off-the-shelfable）网络，这些网络专门设计用于作为前馈特征提取器。流行的现用网络包括 DECAF [15] 和 Over Feat [9]。特别是 Over Feat [9] Over-feat，它被广泛应用于各种任务，从 CT 扫描中的肺结节检测 [57] 到拥挤场景中的人物检测 [52]。虽然这在某种程度上被证明有效并在实践中得到了应用，但并非完美解决方案，某些问题仍未解决。一个特别的问题是数据集的泛化性 [60]。在本文中，作者展示了当使用在视觉物体分类上训练并针对医学成像任务进行微调的网络时，在 $T$ 上学习的网络可能不是 $t$ 的良好初始化器。
+一些网络利用了这一思想，并创建了现成的开箱即用（off-the-shelfable）网络，这些网络专门设计用于作为前馈特征提取器。流行的现用网络包括 DECAF [15] 和 Over Feat [9]。特别是 Over Feat [9]，它被广泛应用于各种任务，从 CT 扫描中的肺结节检测 [57] 到拥挤场景中的人物检测 [52]。虽然这在某种程度上被证明有效并在实践中得到了应用，但并非完美解决方案，某些问题仍未解决。一个特别的问题是数据集的泛化性 [60]。在本文中，作者展示了当使用在视觉物体分类上训练并针对医学成像任务进行微调的网络时，在 $T$ 上学习的网络可能不是 $t$ 的良好初始化器。
 
 使用现成网络作为特征提取器 $N$ 的这种哲学的另一个担忧是，其大小预计也与 $N$ 相同。在某些情况下，我们可能会错过不同架构的网络。利用预训练网络学习不同网络的一种策略是蒸馏思想 [2, 28]。蒸馏的思想在使用带有温度的 Softmax（temperature-raised softmax），定义为：
 
@@ -1289,9 +1032,9 @@ $z(j, d_1, d_2) = \alpha \left[ \sum_{\begin{array}{ccc} C-1 & r-1 & r-1 \\ c=0 
 $$\left[ \begin{array}{c} P(y=1|x) \ \vdots \ P(y=c|x) \end{array} \right] = \frac{1}{\sum_{p=1}} \left[ \begin{array}{c} e^{\omega^p N'(x)} \ \vdots \ e^{\omega^c N'(x)} \end{array} \right] \quad (3.27)
 ```
 
-# 视觉数据的特征提取与学习
+## 视觉数据的特征提取与学习
 
-这种对于 $\Gamma > 1$ 的温度升高 softmax（$\Gamma = 1$ 仅仅是方程 3.24 中描述的 softmax）提供了一个更软的目标，其在标签之间分布更平滑。它通过均衡分布降低了最可能标签的概率，并为第二、第三可能的标签提供了奖励。通过使用这种“暗知识”（dark knowledge）来创建误差 $e$（除了上述讨论的预测误差外），可以在 $n$ 的训练过程中将知识从 $N$ 转移。这可以用于学习不同类型的网络。学习者可以通过这种指导来浅化或加深 [61] 网络。使用小数据集学习神经网络是极度不稳定的。这也可以扩展到学习 $N$ 的所有层，以匹配 $N$ 中特定层的激活值。我们有一组预定义的探测器集 $B$，它是层对元组 $(N, n)$ 的集合。整个网络的代代价为：
+这种对于 $\Gamma > 1$ 的温度升高 softmax（$\Gamma = 1$ 仅仅是方程 3.24 中描述的 softmax）提供了一个更软的目标，其在标签之间分布更平滑。它通过均衡分布降低了最可能标签的概率，并为第二、第三可能的标签提供了奖励。通过使用这种“暗知识”（dark knowledge）来创建误差 $e$（除了上述讨论的预测误差外），可以在 $n$ 的训练过程中将知识从 $N$ 转移。这可以用于学习不同类型的网络。学习者可以通过这种指导来浅化或加深 [61] 网络。使用小数据集学习神经网络是极度不稳定的。这也可以扩展到学习 $N$ 的所有层，以匹配 $N$ 中特定层的激活值。我们有一组预定义的探测器集 $B$，它是层对元组 $(N, n)$ 的集合。整个网络的代价为：
 
 ```
 $$e = \alpha_r + \beta_r \sum_{(l,j) \in B} \Psi(l,j) + \gamma_r \Psi(n,m),$ (3.28)
@@ -1305,7 +1048,7 @@ $$\Psi(l,j) = \frac{1}{a} \sum_{i=0}^{a} (N(l,i) - n(j,i))^2$ (3.29)
 
 是探测误差函数。这也用于学习新的网络集合，例如将递归神经网络展开为前向深度网络 [0]。
 
-## 3.3.4 总结与结论
+## 总结与结论
 
 在本章中，我们探索了特征表示的层级结构，从经典的手工特征开始。这些特征由人类专家设计，易于解释，并捕捉图像的基本方面，如颜色、纹理和形状。层级中的下一级是潜在特征表示，它们在特征空间中发现任务特定的结构，如稀疏性、相关性和低秩。然而，要发现这些结构需要计算开销巨大的复杂优化程序。虽然这些特征具有重要性且在近期取得了巨大成功，但计算机视觉现在已转向从数据中学习特征，即使用靠近输入层的 CNN 学习新的特征表示。利用这一观察，创建了许多现成网络，它们被广泛用作替代 HOG 风格的、任务特定的特征提取器，如本章所讨论。
 
@@ -1331,13 +1074,6 @@ $$\Psi(l,j) = \frac{1}{a} \sum_{i=0}^{a} (N(l,i) - n(j,i))^2$ (3.29)
 - [18] William T Freeman, 可旋滤波的设计与使用。IEEE Trans. on Pattern Analysis and Machine Intelligence, 13(9):891–906, 1991.
 - [19] Dennis Gabor, 通信理论：第一部分：信息的分析。Journal of the Institution of Electrical Engineers-Part III: Radio and Communication Engineering, 93(26):429–441, 1946.
 - [20] Ross Girshick, Fast r-cnn。IEEE Intl. Conf. on Computer Vision (ICCV), pages 1440–1448, 2015.
-
-
-
-
-
-82 机器学习与数据分析中的特征工程
-
 - [21] Ross Girshick, Jeff Donahue, Trevor Darrell, 和 Jitendra Malik. 用于目标检测和语义分割的丰富特征层次结构。在IEEE计算机视觉与模式识别会议 (CVPR)论文集，580–587页，2014。
 - [22] Ian Goodfellow, Yoshua Bengio, 和 Aaron Courville. 深度学习。MIT出版出版社，2016。http://www.deeplearningbook.org。
 - [23] Gregory Finniri, Alex Holub, 和 Pietro Perona. Caltech-256 物体类别数据集，2007。
@@ -1352,9 +1088,6 @@ $$\Psi(l,j) = \frac{1}{a} \sum_{i=0}^{a} (N(l,i) - n(j,i))^2$ (3.29)
 - [32] Alex Krizhevsky, Ilya Sutskever, 和 Geoffrey Hinton. 使用深度卷积神经网络进行图像分类。在神经信息处理系统进展 (NIPS)，997–1105页，2012。
 - [33] Joseph B Kruskal. 通过优化对非度量假设的拟合优度进行多维缩放。心理测量学, 29(1):1–27, 1964。
 - [34] Joseph B Kruskal. 非度量多维缩放：一种数值化方法。心理测量学, 29(2):115–129, 1964。
-
-## 视觉数据的特征提取与学习
-
 - [35] Harold W Kuhn. 用于分配问题的匈牙利算法。海军研究物流 (NRL), 2(1-2):83-97, 1955。
 - [36] Kenneth I Laws. 纹理图像分割。技术报告，加州大学洛杉矶分校，图像处理研究所，1980。
 - [37] Yann LeCun, Bernard E Boser, John S Denker, Denise Henderson, Richard E Howard, Wayne E Hubbard, 和 Lawrence D Jack. 使用反向传播网络进行手写识别。在神经信息处理系统进展 (NIPS)，396-404页，1990。
@@ -1364,38 +1097,60 @@ $$\Psi(l,j) = \frac{1}{a} \sum_{i=0}^{a} (N(l,i) - n(j,i))^2$ (3.29)
 - [41] Jonathan Long, Evan Shelhamman, 和 Trevor Darrell. 用于语义分割的全卷积网络。在IEEE计算机视觉与模式识别会议 (CVPR)论文集，3431-3440页，2015。
 - [42] David Lowe. 基于尺度不变特征的目标识别。在IEEE视觉会议 (ICCV)，卷2,1150-1157,1999。
 - [43] Karl Pearson. 空间中点拟合直线与平面。哲学杂志, 2(11):559-572。
-- [44] Joseph Redmond, Santosh Divyala, Ross Girshick, 和 Ali Farhari. 看一眼：实时目标检测。在IEEE计算机视觉与模式识别会议 (CVPR)论文集，779-788页，2016。
+
+
+
+- [44] Joseph Redmond, Santosh Divyala, Ross Girshick, 和 Ali Farhari. 看一眼：实时目标检测。在 IEEE 计算机视觉与模式识别会议 (CVPR) 论文集，779-788页，2016。
+
 - [45] Shaoqing Ren, Kaiming He, Ross Girshick, 和 Jian Sun. Faster CNN：走向区域建议网络。在神经信息处理系统进展 (NIPS)，91-99页，2015。
 
-## 机器学习与数据分析中的特征工程
+# 机器学习与数据分析中的特征工程
 
 - [46] Adriana Romero, Nicolas Ballas, Samira Ebraimi Kahou, Antoine Chas, Carlos Gatta, 和 Joshua Bengio. Fitnets：深度网络的提示。arXiv预印本 arXiv:1412.6550，2014。
+
 - [47] David Rumelhart, Geoffrey E Hinton, 和 Ronald Williams. 通过误差传播学习内部表示。技术报告，圣地亚哥，认知科学，1985。
+
 - [48] Bernhard Schölkopf, Alexander Smola, 和 Klaus-Robert Müller. 作为核问题的非线性成分分析。神经计算, 10(5):1299–1319, 1998。
+
 - [49] Pierre Sermanet, David Eigen, Xiang Zhang, Michael Mathieu, Rob Fergus, 和 Yann LeCun. Feat：使用卷积网络的集成定位与检测。arXiv预印本 arXiv:1312.6229，2013。
+
 - [50] Karen Simony 和 Andrew Zisserman. 用于大规模图像识别的深度卷积神经网络。arXiv预印本 arXiv:1409.1556，2014。
+
 - [51] Rupesh Kumar Srivastava, Klaus Geoff, 和 Jürgen Schmidhuber. 高速公路网络。arXiv预印本 arXiv:1505.00387，2015。
-- [52] Russell Stewart, Mykhlo Andruluka, 和 Andrew Y. Ng. 拥挤场景中的端到端检测。在IEEE计算机视觉与模式识别会议 (CVPR)，2016年6月。
-- [53] Christian Szegedy, Sergey Ioffe, Vincent Vanhoucke, 和 Alexander A Alemi. Inception-v4, inception-net 和残差连接的影响。在AAAI人工智能会议，4278–4284页，2017。
-- [54] Christian Szegedy, Wei Lin, Yanqing Jia, Pierre Sermanet, Scott Reed, Dragomir Andrei, Dumitru Er, Vincent Vanhoucke, 和 Andrew Robinovich. 卷积的深层化。在IEEE计算机视觉与模式识别会议 (CVPR)论文集，1–9页，2013。
-- [55] Christian Szegedy, Vincent Vanhoucke, Sergey Ioffe, John Shlens, 和 Zijij Wojna. 重新思考计算机视觉的 Inception 架构。在IEEE计算机视觉与模式识别会议 (CVPR)论文集，2818–2826页，2016。
+
+- [52] Russell Stewart, Mykhlo Andruluka, 和 Andrew Y. Ng. 拥挤场景中的端到端检测。在 IEEE 计算机视觉与模式识别会议 (CVPR)，2016年6月。
+
+- [53] Christian Szegedy, Sergey Ioffe, Vincent Vanhoucke, 和 Alexander A Alemi. Inception-v4, inception-net 和残差连接的影响。在 AAAI 人工智能会议，4278–4284页，2017。
+
+- [54] Christian Szegedy, Wei Lin, Yanqing Jia, Pierre Sermanet, Scott Reed, Dragomir Andrei, Dumitru Er, Vincent Vanhoucke, 和 Andrew Robinovich. 卷积的深层化。在 IEEE 计算机视觉与模式识别会议 (CVPR) 论文集，1–9页，2013。
+
+- [55] Christian Szegedy, Vincent Vanhoucke, Sergey Ioffe, John Shlens, 和 Zijij Wojna. 重新思考计算机视觉的 Inception 架构。在 IEEE 计算机视觉与模式识别会议 (CVPR) 论文集，2818–2826页，2016。
+
 - [56] Matthew Turk 和 Alex Pentland. 用于识别的特征脸。认知神经科学期刊, 3(1):71–86, 1991。
-- [57] Bram van Ginneken, Arnaud AA Setio, John Jacobs, 和 Francesco Clampi. 用于计算机层扫描中肺结检测的成品卷积神经网络特征。在IEEE第12次生物医学成像国际会议 (ISBI)，286–289页。IEEE，2015。
+
+- [57] Bram van Ginneken, Arnaud AA Setio, John Jacobs, 和 Francesco Clampi. 用于计算机层扫描中肺结检测的成品卷积神经网络特征。在 IEEE 第12次生物医学成像国际会议 (ISBI)，286–289页。IEEE，2015。
+
 - [58] R. Venkatesan 和 B. Li. 视觉计算中的卷积神经网络：简明指南。数据驱动工程，Taylor & Francis Group，2017。
-- [59] Ragav Venkatesan, Parag Chandrasekhar, Baoxin Li, 和 Helen K Li. 基于颜色相关图特征的多类实例学习的糖尿病视网膜图像分类。在医学工程工程 (EMBC)，2012 IEEE国际会议，1462–1465页。
-- [60] Ragav Venkatesan 和 Baoxin Li. 神经特征的通用性。在IEEE图像会议，2016。
+
+- [59] Ragav Venkatesan, Parag Chandrasekhar, Baoxin Li, 和 Helen K Li. 基于颜色相关图特征的多类实例学习的糖尿病视网膜图像分类。在医学工程工程 (EMBC)，2012 IEEE 国际会议，1462–1465页。
+
+- [60] Ragav Venkatesan 和 Baoxin Li. 神经特征的通用性。在 IEEE 图像会议，2016。
+
 - [61] Ragav Wang. 深入探索网络，2016，arXiv:1604.0822[cs.LG]。
-- [62] Shengjiang Wang. 基于颜色直方图的鲁棒CHBR方法，阿尔伯塔大学计算机科学系技术报告TR01-03。
+
+- [62] Shengjiang Wang. 基于颜色直方图的鲁棒 CHBR 方法，阿尔伯塔大学计算机科学系技术报告 TR01-03。
+
 - [63] Xiang-Yang Wang, Jun-Feng Wu, 和 Hong-Yang Yang. 基于局部特征颜色直方图的鲁棒图像检索。多媒体工具与应用，49(2):325–345, 2010。
-- [64] Xiaoyun Wang, Tony X Han, 和 Shicheng Yang. 带有部分遮挡的人体HOG-LBP检测器。在IEEE国际视觉会议 (ICCV)论文集，32–39页。IEEE，2009。
-- [65] Xiaoyun Wang, Ming Wang, Shengzhu Zhu, 和 Yanjing Lin. 用于通用目标检测的区域。在IEEE国际视觉会议 (ICCV)论文集，17–24页，2013。
-- [66] John Wright, Yi Ma, Julien Maitre, Guillermo Sapiro, Thomas S Huang, 和 Shicheng Yang. 视觉与模式识别的稀疏表示。IEEE论文, 98(6):1031–1044, 2010。
-- [67] Jianxu Wu 和 Jin M Relig. Centrist：用于场景分类的视觉描述符。IEEE模式分析与机器智能，33(8):1489–1501, 2011。
-- [68] Hui Yu, Mingjing Li, Hong-Jiang Zhang, 和 Jufu Feng. 用于内容图像检索的颜色纹理矩。在IEEE图像处理会议，卷3，929–932页。IEEE，2002。
 
+- [64] Xiaoyun Wang, Tony X Han, 和 Shicheng Yang. 带有部分遮挡的人体 HOG-LBP 检测器。在 IEEE 国际视觉会议 (ICCV) 论文集，32–39页。IEEE，2009。
 
+- [65] Xiaoyun Wang, Ming Wang, Shengzhu Zhu, 和 Yanjing Lin. 用于通用目标检测的区域。在 IEEE 国际视觉会议 (ICCV) 论文集，17–24页，2013。
 
+- [66] John Wright, Yi Ma, Julien Maitre, Guillermo Sapiro, Thomas S Huang, 和 Shicheng Yang. 视觉与模式识别的稀疏表示。IEEE 论文, 98(6):1031–1044, 2010。
 
+- [67] Jianxu Wu 和 Jin M Relig. Centrist：用于场景分类的视觉描述符。IEEE 模式分析与机器智能，33(8):1489–1501, 2011。
+
+- [68] Hui Yu, Mingjing Li, Hong-Jiang Zhang, 和 Jufu Feng. 用于内容图像检索的颜色纹理矩。在 IEEE 图像处理会议，卷3，929–932页。IEEE，2002。
 
 ![](img/f9b50d48a9ba5d6b2e7f6b9761812434_104_0.png)
 
@@ -1404,7 +1159,9 @@ $$\Psi(l,j) = \frac{1}{a} \sum_{i=0}^{a} (N(l,i) - n(j,i))^2$ (3.29)
 ## 基于特征的时间序列分析
 
 **Ben D. Fulcher**
+
 莫纳什大学认知与临床神经科学学院，墨尔本，维多利亚州，澳大利亚。
+
 悉尼大学物理学学院，新南威尔士州，澳大利亚。
 
 - 4.1 引言 ................................................................................ 87
@@ -1422,7 +1179,7 @@ $$\Psi(l,j) = \frac{1}{a} \sum_{i=0}^{a} (N(l,i) - n(j,i))^2$ (3.29)
 - 4.5 结合时间序列表示 ........................................ 106
 - 4.6 基于特征的预测 ....................................... 108
 - 4.7 总结与展望 ........................................ 110
-参考文献 ................................................................................ 110
+- 参考文献 ................................................................................ 110
 
 ## 4.1 引言
 
@@ -1452,10 +1209,6 @@ $$\Psi(l,j) = \frac{1}{a} \sum_{i=0}^{a} (N(l,i) - n(j,i))^2$ (3.29)
 
 时间序列分析文献的跨学科反映了涉及时间序列的各种问题类。*时间序列建模*可能是最具标志性的问题类。统计模型可以提供
 
-
-
-
-
 ## 基于特征的时间序列分析
 
 ![](img/f9b50d48a9ba5d6b2e7f6b9761812434_109_0.png)
@@ -1484,15 +1237,13 @@ $$\Psi(l,j) = \frac{1}{a} \sum_{i=0}^{a} (N(l,i) - n(j,i))^2$ (3.29)
 
 ### A 时间域差异
 
+
+
 ### B 基于特征的差异
 
 ![](img/f9b50d48a9ba5d6b2e7f6b9761812434_112_0.png)
 
-**图 4.5：时间序列对的时间域差异和基于特征的差异。两个序列 x1 和 x2 之间的差异可以在时间域内计算为简单的欧氏距离 `|x1-x2|`。这是基于数值来判断两个序列是否相似。另一种相似性度量涉及从每个时间序列计算一组可解释的特征（例如分布属性、相关性属性等），然后计算这些特征之间的差异 `|f1-f2|`。这是基于全局属性来判断两个序列是否相似。**
-
-
-
-
+**图 4.5：时间序列对的时间域差异和基于特征的差异。两个序列 `x1` 和 `x2` 之间的差异可以在时间域内计算为简单的欧氏距离 `|x1-x2|`。这是基于数值来判断两个序列是否相似。另一种相似性度量涉及从每个时间序列计算一组可解释的特征（例如分布属性、相关性属性等），然后计算这些特征之间的差异 `|f1-f2|`。这是基于全局属性来判断两个序列是否相似。**
 
 # 基于特征的时间序列分析
 
@@ -1510,19 +1261,19 @@ $$\Psi(l,j) = \frac{1}{a} \sum_{i=0}^{a} (N(l,i) - n(j,i))^2$ (3.29)
 
 $$s_N^2 = \frac{1}{N-1} \sum_{i=1}^{N}(x_i - \bar{x})^2 \quad (4.1)$$
 
-对于时间序列 $x$
+对于时间序列 `x`
 
-平稳时间序列产生于整个记录过程中具有固定且恒定参数的系统（或不随记录过程变化的参数概率分布）。平稳性度量捕捉了随时间变化的依赖关系。简单的 StatAv 指标提供了均值平稳性的衡量 [63]：
+平稳时间序列产生于整个记录过程中具有固定且恒定参数的系统（或不随记录过程变化的参数概率分布）。平稳性度量捕捉了随时间变化的依赖关系。简单的 `StatAv` 指标提供了均值平稳性的衡量 [63]：
 
 $$\text{StatAv}(\tau) = \frac{\text{std}(\{x_t, x_{t+2w}, \dots, x_{t+(m-1)w+mw}\})}{\text{std}(x)} \ (4.2)$$
 
-其中标准差是跨时间序列的 $m$ 个不重叠窗口取的，每个窗口长度为 $w$。长度为 $w$ 的窗口内均值变化大于整个时间序列的时间序列，在该时间尺度上具有较高的 StatAv 值，而窗口变化较小的时间序列值较低。
+其中标准差是跨时间序列的 `m` 个不重叠窗口取的，每个窗口长度为 `w`。长度为 `w` 的窗口内均值变化大于整个时间序列的时间序列，在该时间尺度上具有较高的 `StatAv` 值，而窗口变化较小的时间序列值较低。
 
 自相关测量由给定滞后间隔的时间序列之间的相关性。以下提供了一个估计：
 
 $$C(\tau) = \frac{1}{\sigma_x^2(N-\tau)} \sum_{t=1}^{N-\tau} (x_t - \bar{x})(x_{t+\tau} - \bar{x}), \quad (4.3)$$
 
-在时间滞后处，对于方差为 $\sigma_x^2$均值为 $\bar{x}$的时间序列。也可以计算非线性泛化，例如互信息 [36, 40]。除了特定时间滞后的自相关值外，特征旨在量化自相关函数的结构，例如其过零的最早滞后。
+在时间滞后处，对于方差为 $\sigma_x^2$、均值为 $\bar{x}$ 的时间序列。也可以计算非线性泛化，例如互信息 [36, 40]。除了特定时间滞后的自相关值外，特征旨在量化自相关函数的结构，例如其过零的最早滞后。
 
 （离散时间）傅里叶变换允许序列表示为分量的线性组合，每个分量由下式给出：
 
@@ -1532,11 +1283,7 @@ $$\hat{x}_k = \frac{1}{N} \sum_{n=1}^{N} x_n e^{-i2\pi kn/N}, \quad (4.4)$$
 
 鉴于线性方程组只能产生指数级（增长）或衰减（阻尼）振荡解，线性时间序列中的不规则行为可能归于系统的随机驱动。另一种解释是确定性非线性方程可以产生不规则（混沌）动力学，可以使用基于物理的非时间序列分析方法进行量化 [40]。
 
-熵度量源于信息论，已用于量化时间序列的可预测性，具体示例包括近似熵 (ApEn) [63]、样本熵 (SampEn) [65] 和排列熵 (PernEn) [10]。例如，ApEn(m, r) 被定义为数据序列模式（长度为 $m$）彼此接近（在阈值 $r$ 内）且在下一个样本 $m+1$ 处保持接近的对数似然。无结构的时间序列具有高 ApEn，可以与规则的确定性序列区分开来，后者相似序列保持相似的概率较高。
-
-
-
-
+熵度量源于信息论，已用于量化时间序列的可预测性，具体示例包括近似熵 (`ApEn`) [63]、样本熵 (`SampEn`) [65] 和排列熵 (`PernEn`) [10]。例如，`ApEn(m, r)` 被定义为数据序列模式（长度为 `m`）彼此接近（在阈值 `r` 内）且在下一个样本 `m+1` 处保持接近的对数似然。无结构的时间序列具有高 `ApEn`，可以与规则的确定性序列区分开来，后者相似序列保持相似的概率较高。
 
 ## 基于特征的的时间序列分析
 
@@ -1550,38 +1297,37 @@ $$\hat{x}_k = \frac{1}{N} \sum_{n=1}^{N} x_n e^{-i2\pi kn/N}, \quad (4.4)$$
 
 ![](img/f9b50d48a9ba5d6b2e7f6b9761812434_118_0.png)
 
-**图 4.6：时间序列数据集的大规模特征提取。** 在此示例中我们展示了如何将时间序列数据集（左）转换为时间 $\times$ 特征矩阵。每个特征都捕捉了每个时间序列的不同可解释属性，生成的特征矩阵可用于实现一系列分析任务，包括可视化数据集中的低维结构 [29] 或为时间序列分类学习判别性特征 [27]。计算特征以及执行一系列分析和可视化的代码位于 `hectsa` 软件包 [28] 中。
+**图 4.6：时间序列数据集的大规模特征提取。** 在此示例中我们展示了如何将时间序列数据集（左）转换为时间 × 特征矩阵。每个特征都捕捉了每个时间序列的不同可解释属性，生成的特征矩阵可用于实现一系列分析任务，包括可视化数据集中的低维结构 [29] 或为时间序列分类学习判别性特征 [27]。计算特征以及执行一系列分析和可视化的代码位于 `hectsa` 软件包 [28] 中。
 
-- *语境化 (Contextualize)*：使用基于特征的时间序列表示来寻找相似的时间序列簇（例如，对时间序列数据集进行结构化），或搜索与给定目标相似的时间序列数据类型（例如，对具有与真实数据相似的生成时间序列进行建模）。
-- 从跨学科关系的角度对时间序列分析*算法进行语境化*：利用大量时间序列上的时间序列分析行为来寻找相似的分析方法簇（例如，组织跨学科文献），或搜索与给定目标相似的方法类型（例如，自动连接不同学科开发的特征）。
-- *自动选择* 有用的时间序列基于特征的表示：针对分类或回归等监督学习任务，在全面的特征集上进行搜索。
+- **语境化 (Contextualize)**：使用基于特征的时间序列表示来寻找相似的时间序列簇（例如，对时间序列数据集进行结构化），或搜索与给定目标相似的时间序列数据类型（例如，对具有与真实数据相似的生成时间序列进行建模）。
+
+- 从跨学科关系的角度对时间序列分析**算法进行语境化**：利用大量时间序列上的时间序列分析行为来寻找相似的分析方法簇（例如，组织跨学科文献），或搜索与给定目标相似的方法类型（例如，自动连接不同学科开发的特征）。
+
+- **自动选择** 有用的时间序列基于特征的表示：针对分类或回归等监督学习任务，在全面的特征集上进行搜索。
 
 在分析特定数据集时，这种具有高度比较性的方法允许系统地学习时间序列的基于特征的表示，利用大量方法的经验行为对其针对当前问题进行量身定制（如图 4.6 示意图所示）。这一过程可以指导数据分析师完成选择和解释相关分析方法的任务。高度比较方法在监督和无监督时间序列分析问题中的应用包括：使用大量的时间序列数据挖掘数据集对序列分类 [27]；区分帕金森症患者的音频录制 [29]；自动检索和组织先天性心脏患者心率序列的相关特征文献 [29]；标记语音的情感内容 [29]；区分地震与爆炸 [29]；将数据库投影到低维特征空间以识别与大小相关的状态的差异 [29]；估计自仿时间序列的尺度指数、Logistic Map 时间序列的李普诺夫指数以及添加到周期时间序列中的噪声方差 [29]；根据心电图特征决定在分娩期间进行干预 [20]；通过运动速度动力学区分线虫基因型以及追踪其运动 [28]；以及从麻醉小鼠的 MRI 数据确定功能连接 [68]。在这些不同的领域中，高度比较的方法具有以下特点：(i) 它根据时间序列数据集上的性能系统且无偏地选择特征；(ii) 所选特征有助于提供每个时间序列数据集的可解释性见解；(iii) 还从意想不到的文献中选择特征（引起对新特征的关注），(iv) 分类器通常使用经济或信号处理领域开发的的新特征组合；(v) 分类器的精度与先进方法相当；(vi) 时间序列数据挖掘应用简洁、低维的基于特征的表示。
 
-基于 MATLAB 的计算框架，用于评估精炼后的 7700 多个可解释时间序列特征，以及一组用于将结果应用于时间序列分类任务的计算和分析函数，例如软件实现 hctsa，位于 github.com/benchmark/hctsa。该工作还配有一个用于设计时间序列分析数据和方法的交互网站 [25]。在较小规模上，hctsa 相关的基于 Python 的包 tsfresh 实现了数百个特征，并提供了围绕数据应用中开发的单变量相关性特征选择方法 [18]。
+基于 MATLAB 的计算框架，用于评估精炼后的 7700 多个可解释时间序列特征，以及一组用于将结果应用于时间序列分类任务的计算和分析函数，例如软件实现 `hctsa`，位于 `github.com/benchmark/hctsa`。该工作还配有一个用于设计时间序列分析数据和方法的交互网站 [25]。在较小规模上，`hctsa` 相关的基于 Python 的包 `tsfresh` 实现了数百个特征，并提供了围绕数据应用中开发的单变量相关性特征选择方法 [18]。
 
-上述用于选择时间序列全局特征的比较方法，限于已经开发和构思的特征，即没有为给定数据集设计完全新类型特征的范围。时间序列的自动特征构建，例如基于遗传编程 (GP) 的 Autofeed（使用可解释变换的组合，如傅里叶变换、非线性
-
-
-（变换和窗口化）在适应特定语境以生成信息丰富的特征方面具有强大的能力 [34]。然而，在 $Y$ 中自动生成的特征可能更难解释，因为它们没有将数据与时间序列分析文献中可解释的领域联系起来。
+上述用于选择时间序列全局特征的比较方法，限于已经开发和构思的特征，即没有为给定数据集设计完全新类型特征的范围。时间序列的自动特征构建，例如基于遗传编程 (GP) 的 `Autofeed`（使用可解释变换的组合，如傅里叶变换、非线性变换和窗口化）在适应特定语境以生成信息丰富的特征方面具有强大的能力 [34]。然而，在 `Y` 中自动生成的特征可能更难解释，因为它们没有将数据与时间序列分析文献中可解释的领域联系起来。
 
 ## 4.4 子序列特征
 
-上一节概述了如何将时间序列从一组顺序测量值转换为特征向量，该向量捕捉了时间序列的可解释全局动力学属性。然而，对于某些分类问题，时间序列属性可能仅在特定的时间间隔内存在差异。当我们提到从长度为 $n$ 的时间序列 $x$ 中提取长度为 $l$ 的子序列 $s$ 时，记 $s=(x_k, x_{k+1}, ..., x_{k+l-1})$，其中 $1 \leq k \leq m-l+1，$l \leq Y$。量化子序列并从中提取有意义且可解释特征的不同方法取决于应用场景，并在本节中进行了总结。
+上一节概述了如何将时间序列从一组顺序测量值转换为特征向量，该向量捕捉了时间序列的可解释全局动力学属性。然而，对于某些分类问题，时间序列属性可能仅在特定的时间间隔内存在差异。当我们提到从长度为 `n` 的时间序列 `x` 中提取长度为 `l` 的子序列 `s` 时，记 `s=(x_k, x_{k+1}, ..., x_{k+l-1})`，其中 `1 ≤ k ≤ m-l+1`，`l ≤ Y`。量化子序列并从中提取有意义且可解释特征的不同方法取决于应用场景，并在本节中进行了总结。
 
 ### 4.4.1 间隙特征
 
 如图 4.7 所示，某些时间序列分类问题可能涉及限制在特定判别时间间隔内的序列属性类别差异。间隙分类器试图学习判别子序列的类别以及代表不同类别的特征，这些可以通过在许多子序列上组合简单特征来学习，并通过对对特征和时间间隔进行搜索来构建分类器 [21,66]。
 
-D 等人 [21] 使用了三种特征来捕捉时间序列子序列的属性（对于间隔 $l \leq x \leq q$），以适应可解释性和计算效率：平均值 $\frac{1}{q-l+1}\sum_{i=l}^q x_i$、标准差和斜率（来自对区间 [21] 内的最小二法回归线的斜率）。这些属性的差异在图 4.7 中以视觉形式显示。通过这种方式，每个时间序列子序列都由这三个特征的值表示，并使用熵增分裂准则在间隔值上学习阈值（并通过取能最大化类别间间距的切分来打破平局）。在对间隔进行随机采样并累积决策树后，使用运行时间序列森林分类器通过所有单个决策树的多数投票对每个序列进行分类。为了获得可解释的理解，计算了每个特征对每个时间点分类器性能的贡献（根据给定时间点的熵增而言），
+D 等人 [21] 使用了三种特征来捕捉时间序列子序列的属性（对于间隔 `l ≤ x ≤ q`），以适应可解释性和计算效率：平均值 $\frac{1}{q-l+1}\sum_{i=l}^q x_i$、标准差和斜率（来自对区间 [21] 内的最小二法回归线的斜率）。这些属性的差异在图 4.7 中以视觉形式显示。通过这种方式，每个时间序列子序列都由这三个特征的值表示，并使用熵增分裂准则在间隔值上学习阈值（并通过取能最大化类别间间距的切分来打破平局）。在对间隔进行随机采样并累积决策树后，使用运行时间序列森林分类器通过所有单个决策树的多数投票对每个序列进行分类。为了获得可解释的理解，计算了每个特征对每个时间点分类器性能的贡献（根据给定时间点的熵增而言），
 
 ![](img/f9b50d48a9ba5d6b2e7f6b9761812434_121_0.png)
 
 **图 4.7：判别间隙特征。** 在时间序列的子序列中计算简单特征可以识别可解释的差异并区分标记的时间序列类别。在此示例中显示了两个类别的代表性样本，并突出了它们在趋势趋势、方差和平均值不同的时间段。量化这些特征以及它们最具区别的特定时间间隔，提供了关于两个类别如何以及何时产生差异的可解释理解，并产生了一条曲线，表明三个简单特征中的哪一个在每个时间点对分类贡献最大。例如，对于类别之间离散程度不同的时间，标准差特征将具有高时间重要性；当两个序列之间位置存在差异时，平均值将具有重要性。这些信息可以用于理解哪些时间序列属性驱动了每个时间点的成功分类。最近的工作使用了时间特征协方差矩阵来捕捉用于分类的子序列属性 [22]。
 
-### 4.4.2 形状子 (Shapelets)
+### 4.4.2 形状子
 
-时间序列的另一种表示方法是基于单个子序列。在时间序列分类背景下，对类别差异具有高度预测价值的子序列被称为形状子 [57, 81]，它们提供了关于对于给定问题重要测量的序列模式（或形状）类型的可解释信息。形状子发现问题可以表述为确定子序列 $s$，通过其与形状子的距离 $d(s, x)$ 最好地区分不同的时间序列类别。时间序列 $x$ 与长度为 $l$ 的子序列 $s$ 之间的距离可以定义为子序列跨越时间序列进行平移时的最小欧几里得距离。
+时间序列的另一种表示方法是基于单个子序列。在时间序列分类背景下，对类别差异具有高度预测价值的子序列被称为形状子 [57, 81]，它们提供了关于对于给定问题重要测量的序列模式（或形状）类型的可解释信息。形状子发现问题可以表述为确定子序列 `s`，通过其与形状子的距离 `d(s, x)` 最好地区分不同的时间序列类别。时间序列 `x` 与长度为 `l` 的子序列 `s` 之间的距离可以定义为子序列跨越时间序列进行平移时的最小欧几里得距离。
 
 ```
 $d(s,x) = \min d(s,x_{k,...,k+l})$
@@ -1591,28 +1337,25 @@ $d(s,x) = \min d(s,x_{k,...,k+l})$
 
 | 类别 1 | 类别 2 |
 |---|---|
-| 低距离, $d(s,x)$ | 较高距离, $d(s,x)$ |
+| 低距离, `d(s,x)` | 较高距离, `d(s,x)` |
 
 ![](img/f9b50d48a9ba5d6b2e7f6b9761812434_122_0.png)
 
-**图 4.8** 时间序列 $x$ 与子序列模式或*形状子* $s(x)$ 之间的距离，这可以作为时间序列分类的基础。距离 $d(s,x)$ 定义为跨越子序列的最小欧几里得距离。在这个示例中，候选形状子更接近类别 1 的时间序列（捕捉了时间序列末端峰值的形状），但距离类别 2 更远，后者具有不同的峰值。绘制了类别 1（圆圈）和类别 2（正方形）的示例时间序列，以较大的圆圈/正方形所示了两个绘制示例的 $d(s,x)$。形状子是一种可解释的子序列，可用于量化和理解时间序列类别之间差异的子模式。
+**图 4.8** 时间序列 `x` 与子序列模式或*形状子* `s(x)` 之间的距离，这可以作为时间序列分类的基础。距离 `d(s,x)` 定义为跨越子序列的最小欧几里得距离。在这个示例中，候选形状子更接近类别 1 的时间序列（捕捉了时间序列末端峰值的形状），但距离类别 2 更远，后者具有不同的峰值。绘制了类别 1（圆圈）和类别 2（正方形）的示例时间序列，以较大的圆圈/正方形所示了两个绘制示例的 `d(s,x)`。形状子是一种可解释的子序列，可用于量化和理解时间序列类别之间差异的子模式。
 
 (i) 提供直接可解释的、区分时间类别的子序列模式；(ii) 允许基于学习到的形状子集对新数据进行高效分类；(iii) 忽略时间序列中不提供类别信息的形状。
 
-在 Geerts [31] 的早期工作中，基于子序列中的模式学习了可解释的分类规则。在数据集中从时间序列提取子序列时，Geerts 注意在所有可能的子序列空间中确定最佳子序列是困难的；相反，从每个类别随机选择实例的子序列缩小了搜索空间。Ye 和 Keogh [81] 重新讨论了这个问题，他们引入了一个算法框架，在所有可能的候选序列中进行搜索。他们将分类问题表述为发现对类别标签具有信息的序列，并将子子定义为子序列 [81]。判别性使用信息论进行量化，使用单一阈值计算最大化类别间信息增，或在多分类问题中使用多个切分。该框架已广泛应用并扩展，例如整合多个形状子（作为形状子的线性组合），以及使用遗传算法改进子序列 [70]，并定义在给定类别中频繁出现的判别模式 [70]。Lines 等人 [50] 实现了一种独立于任何决策树分类系统的形状子，该系统可以将给定的时间序列转换为特征表示，其中 $k$ 个特征是到 $k$ 个形状子的距离。这种基于形状子距离的数据表示随后被输入分类算法（如随机森林或支持向量机）[50]。
+在 Geerts [31] 的早期工作中，基于子序列中的模式学习了可解释的分类规则。在数据集中从时间序列提取子序列时，Geerts 注意在所有可能的子序列空间中确定最佳子序列是困难的；相反，从每个类别随机选择实例的子序列缩小了搜索空间。Ye 和 Keogh [81] 重新讨论了这个问题，他们引入了一个算法框架，在所有可能的候选序列中进行搜索。他们将分类问题表述为发现对类别标签具有信息的序列，并将子子定义为子序列 [81]。判别性使用信息论进行量化，使用单一阈值计算最大化类别间信息增，或在多分类问题中使用多个切分。该框架已广泛应用并扩展，例如整合多个形状子（作为形状子的线性组合），以及使用遗传算法改进子序列 [70]，并定义在给定类别中频繁出现的判别模式 [70]。Lines 等人 [50] 实现了一种独立于任何决策树分类系统的形状子，该系统可以将给定的时间序列转换为特征表示，其中 `k` 个特征是到 `k` 个形状子的距离。这种基于形状子距离的数据表示随后被输入分类算法（如随机森林或支持向量机）[50]。
 
 ### 4.4.3 模式字典
 
 虽然形状子可以捕捉子序列与时间序列的匹配程度（适用于较短的、基于模式的时间序列），但它们无法捕捉子序列在扩展序列记录中出现了几次。例如，考虑两种在频率记录上存在差异的时间序列，如图 4.9 所示。在这种情况下，类别 1 有许多上升和下降模式的出现（使用圆圈标记），而类别 2 则具有特征性的震荡模式。学习这些判别模式，并根据每个模式在记录中的频率来描述每个类别，提供了关于时间序列类别之间判别子序列频率的有用信息。这种表示对于捕捉刻板的基元很重要，例如秀线虫不同品系中的特征模式 [8]。类似于文本的词袋表示（该方法通过特定单词频率的相似性判断两个文档的相似性），时间序列模式字典方法通过子序列模式频率的相似性来判断时间序列对的相似性。
 
-
-
-
 ![](img/f9b50d48a9ba5d6b2e7f6b9761812434_124_0.png)
 
 **图 4.9：** 通过短基元（motifs）的频率捕捉两类时间序列之间的差异。在这个理想化的示例中，每一类的特征基元都用圆圈标出；这些这些基元的出现频率可以作为分类的依据。
 
-这种基本方法的变体已被用于解决一系列问题。Lin 等人 [49] 提出的基于直方图的模式包（bag of patterns）方法通过短模式的出现频率来表示时间，这些频率是对时间序列进行离散化 SAX 变换 [48] 后求和得到的。Schäfter [67] 分析了每个窗口中时间序列的符号表示（基于符号傅里叶近似），并使用跨所有滑动窗口的整体直方图来表示整个时间序列。Baydogan 等人 [12] 计算了时间序列子序列中的均值、斜率和方差特征（Deng 等人 [21]），以及子序列的起始和结束点，随后将所有分类后的序列组合成直方图形成代码本，以表示并分配每个时间序列。
+这种基本方法的变体已被用于解决一系列问题。Lin 等人 [49] 提出的基于直方图的模式包（bag of patterns）方法通过短模式的出现频率来表示时间，这些频率是对时间序列进行离散化 `SAX` 变换 [48] 后求和得到的。Schäfter [67] 分析了每个窗口中时间序列的符号表示（基于符号傅里叶近似），并使用跨所有滑动窗口的整体直方图来表示整个时间序列。Baydogan 等人 [12] 计算了时间序列子序列中的均值、斜率和方差特征（Deng 等人 [21]），以及子序列的起始和结束点，随后将所有分类后的序列组合成直方图形成代码本，以表示并分配每个时间序列。
 
 ## 4.5 结合时间序列表示
 
@@ -1622,6 +1365,10 @@ $d(s,x) = \min d(s,x_{k,...,k+l})$
 
 使用算法压缩每个时间序列，并根据柯尔莫哥夫复杂度（Kolmogorov complexity）定义时间序列的相似性。其他混合方法将基于特征的表示与传统的时域相似性度量相结合。例如，Batista 等人 [11] 使用了全局特征“复杂度”CE，该特征仅需通过连接时间序列中点的外延伸线条长度来度量：
 
+
+
+## 公式
+
 ```
 CE = \sqrt{\sum_{i=1}^{N-1}(x_{i+1}-x_i)^2}, \quad (4.11)
 ```
@@ -1630,210 +1377,154 @@ CE = \sqrt{\sum_{i=1}^{N-1}(x_{i+1}-x_i)^2}, \quad (4.11)
 
 通过比较大量的时间序列表示，研究人员已开始更多地刻画哪些表示更适合特定类型的问题。虽然传统上研究人员的角色是选择并解释提供最有趣特征的表示以回答向数据提出的科学问题，但 Bagnell 等人 [8] 最近的一项很有前景的研究结合了基于四种时间序列表示的 34 个分类器：(i) 十一个域的表示（基于不同的弹性距离度量），(ii) 八个功率谱分类器，(iii) 八个基于自相关的分类器，以及 (iv) 八个形状子（shapelet）分类器，集成在一个名为基于变换的集成平坦集合（Flat Collective of Transformation-based Ensembles，或 Flat-COTE）的简单集成中。随后是 HIVE-COTE（基于变换的集成分层投票集合）[52]，它从五个领域产生单一概率预测：(i) 时域，(ii) 基于区间特征的时间序列森林，(iii) 形状子，(iv) 基于字典的 SFA 符号，以及 (v) 随机区间光谱特征。我们已经看到，全局时间序列特征的大集合可以自动为特定的时间序列问题选择信息丰富的特征 [18, 27–29]。继续这一方向，我们最终可能比较大量的表示。
 
-
-
-
-
 ## 参考文献
 
 - [1] M. Adya, F. Coloppy, J.S. Armstrong, and M. Kennedy. 基于规则的预测时间序列特征的自动识别。Int. J. Forecasting, 17(2):143-157, 2001.
-
 - [2] Ralph G. Andrejakjak, Klaus Lehnertz, Florian Mormann, Christoph Rieke, Peter David, and Christian E. Elger. 脑电活动时间序列中非线性确定性和有限维结构的指标：对区域边界和脑状态的影响。Phys. Rev. E, 64(6):061906, 2001.
-
 - [3] J. Scott Armstrong, Aaron Adya, and Fred Colopp. 《基于规则的预测：在时间序列外推中使用判断》，pages 259-282. Springer US, Boston, 2001.
-
 - [4] Sofiane B-B. and Monica B. 用于非参数时间序列预测的高斯过程。Comput. Stat. Data Anal., 47(4):705-712, 2004.
-
 - [5] Anthony Bagnal, Aaron Bostrom, James Large, and Jason Lines. 时间序列分类的模拟数据实验第一部分：默认设置下的准确性。arXiv: 1703.09480, 2017.
-
 - [6] Anthony Bagnal, Luke Davis, Jason Lines. 用于时间序列分类的基于变换集成。In Proceedings of the 2012 SIAM International Conference on Data Mining, pages 307-318. SIAM, 2012.
-
 - [7] Anthony Bagnal, Jason Lines, Aaron Bostrom, James Large, and Emanuel Keogh. 大时间序列分类锦赛：近期算法进展的综述与实验评估。Data Min. Know. Disc., 31(3):606-660, 2017.
-
 - [8] Anthony Bagnal, Jason Lines, Jon Hills, and Aaron Bostrom. 使用 cote 进行时间序列分类：基于变换的集成集。IEEE Trans. Know. Data Eng., 27(9):2522-2535, 2015.
-
 - [9] B.R. Bakshi and G. Stephanopoulos. 过程趋势的表示——IV. 用于诊断和监督控制的运行数据实时模式感。Comput. & Chem. Eng., 18(4):303-332, 1994.
-
 - [10] Christoph Bandt and Bernd Pompepe. 排序熵：一种自然的时间序列复杂度度量。Phys. Rev. Lett., 88(17):174102, 2002.
-
 - [11] G.E.A.P.A. Batista, E.J. Keogh, O.M. Tataw, and V.M.A. De Souza. Cid：一种用于时间序列的高效复杂度不变距离。Data Min. Know. Discov., 28(3):634-669, 2014.
 
 # 基于特征的时间序列分析
 
 - [12] M.G. Badogan, G. Runger, and E. Tup. 用于分类时间序列的特征袋框架。IEEE Trans. Pattern Anal. Machine Intell., 35(11):2796-2802, 2013.
-
 - [13] D. Berndt and James Clifford, 使用动态时间规整寻找时间序列中的模式。In KDD Workshop, volume 10, pages 359-370, Seattle, WA, USA, 1994.
-
 - [14] G.E. Box, G.M. Jenkins, G.C. Reinsel, and G.M. Ljung. 《时间序列分析：预测与控制》。John Wiley & Sons, 2015.
-
 - [15] Andre E. X. Brown, Eviatar I. Ymini, Laura J. Grundy, Tadas Jucikas, and William Schafer. 行为动机字典揭示了影响线虫的基因簇。Proc. Nat. Acad. Sci. Sci., 110(2):791-796, 2013.
-
 - [16] C. Chatfield, 时间序列预测。CRC Press, 2000.
-
 - [17] Bill Chiu, Aeron Keogh, and Stefano Leonardi. 时间序列模式的概率性发现。In Proceedings of the Ninth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, pages 493-498. ACM, 2003.
-
 - [18] Maximilian Christ, Andreas W. Kempa-Lehr, and Michael Feindt. 用于工业大数据应用的分布式与并行时间序列特征提取。arXiv, 1610.07717, 2016.
-
 - [19] Fred Colby and J. Scott Armstrong. 基于规则的预测：结合时间序列外推的专家系统方法的开发与验证。Manag. Sci., 38(10):1394-1414, 1992.
-
 - [20] A.M. De Silva and P.H.W. Long. 用于时间序列预测的语法特征生成。Springer, 2015.
-
 - [21] H. Deng, G. Runger, E. Tup, and M. Vladimir. 用于分类和特征提取的时间序列森林。Informat. Sci., 23:142-153, 2013.
-
 - [22] Hanna Erzerger and Karl Klebekio. 使用特征协方矩阵的时间序列分类。Know. Inf., 26(12):3026–3037, 2014.
-
 - [23] Philippe Estalos, Mudumbai Ramanathan, and Yannis Manolopoulos. 时间序列数据库中的快速子序列匹配。ACM Surveys (CS), 45(1).
-
 - [24] Christos Falstos and Carlos Agon. 时间序列数据挖掘。In SIGMOD '94 Proceedings of the 1994 ACM SIGMOD International Conference on Data Management, volume 23, pages 419-429.
-
 - [25] B. D. Fulcher and N. S. Jones. http://www.comp.org/timeseries/, 2017.
-
 - [26] B.D. Fuller, A.E. Georgieva, C.W. Redman. 第34th Ann. Int. EMBC, pages 3135–3138, 2012.
-
 - [27] B.D. Fuller and N.S. Jones. 基于特征的时间序列分类。IEEE Trans. Know. Data Eng., 26(12):3026–3037, 2014.
-
 - [28] B.D. Fuller and N.S. Jones. hctsa: 用于自动时间序列表型化的计算框架。Cell Systems, 2017.
-
 - [29] B.D. Fuller, M.A. Little, and N.S. Jones. 时间序列分析：时间序列的实证结构与方法。Rog. Soc. Interface, 10(8):4, 2014.
-
 - [30] Quentin Geismann, Luis Garcia Rodriguez, Esteban. Beckwith, Alice S. French, Adrian R. Jamas, and Giorgio F. Gilestre. Eroscopes: 用于高吞量分析的开放平台。bioRviz, 2017.
-
 - [31] Pierre Geerts. 用于时间序列分类的模式提取。In Luc Deadt and Arno Siebes, Principles of Data Mining and Knowledge Discovery, volume 2168 of Lecture Notes in Computer Science, pages 115–127. Springer Berlin | Heidelberg, 2001.
-
 - [32] A. Graps. 小波入门。IEEE Comput. Sci. Eng., 2(2):50–61, 1995.
-
 - [33] Nihal Fatima Güler, Elif Derya Übeli, and Inan Güler. 使用李雅普夫指数的神经网络进行分类。Expert. Appl., 29(3):506–514, 2005.
-
 - [34] D.Y. Harvey and N.M. Todd. 遗传编程数值序列自动特征设计。IEEE Trans. Evolut. Comput., 19(4):474–489, 2015.
-
 - [35] R.J. Hyndman and G. Anastasopoulos. 《预测：原理与实践》。Texts, 2014.
-
 - [36] Jaeseung Jeong, John C. Gore, and Bradley S Peterson. 阿尔海默症患者EEG的互信息分析。Clin. Neurophysiol., 112(5):827–833, 2005.
-
 - [37] Everette S.G. Jr. 指数平滑：技术现状——第二部分。Int. J. Forecasting, 22(4):637–666, 2006.
-
 - [38] Y. Kang, R.J. Hyndman, and K. Smith-Miles. 使用时间序列实例空间的可视化算法。Int. J. Forecasting, 33(2):345–358, 2017.
-
 - [39] Jan W. Keltehardt, Eva Koscieliev-Bunde, Henio H. Reg., Solomon Havlin, and Armin Bunde. 使用趋势波动分析检测长程相关性。Physics A, 95(3-4):441-454, 2001.
-
 - [40] Holger Keogh and Thomas Schreiber. 《非线性时间序列分析》，volume 7. Cambridge university press, 2004.
-
 - [41] R.J. Kate. 使用动态时间规整距离作为改进序列分类的特征。Data Min. Knowl. Disc., 30(2):283-312, 2006.
-
 - [42] Lars Keogh, Martin Hahnmann, and Wolfgang Lehner. 特征驱动的时间序列生成。In 29th GI-Workshop on Foundations of Databases, 2003.
-
 - [43] E. Keogh and S. Kasety. 时间序列基准的必要性：综述与实证演示。Data Min. Knowl. Disc., 7:349-371, 2003.
-
 - [44] E. Keogh, J. Lin, and W. Truppel. 时间序列序列的聚类没有意义：对未来和研究的影响。In Third IEEE International Conference on Data Mining (ICDM), pages 115-122, 2003.
-
 - [45] E. Keogh, S. Lonardi, and C.A. R. 面向无参数数据挖掘。In Proceedings of the 10th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, pages 206-215, New York, NY, USA, 2004.
-
 - [46] Eamon Keogh, Li Wei, Xiapeng Xi, Sang-Hee Lee, and Michal Vlachos. 支持旋转不变表示和距离测量的形状精确索引。In Proceedings of the 32nd International Conference on Very Large Databases, pages 882-893. VLDB Endowment, 2006.
-
 - [47] T. W. Liao. 时间序列数据聚类：综述。Pattern Recogn., 38(11):1857-1875, 2004.
-
 - [48] J. Lin, E. Keogh, L. Wei, and S. Lonardi. SAX：一种新型的时间序列符号表示。Data Min. Knowl. Disc., 15(2):107-144, 2007.
-
 - [49] J. Lin, R. Khade, and Y. Lin. 使用模式袋表示的时间序列旋转不变相似性。J. Int. Informat. Syst., 39(2):287-315, 2012.
-
 - [50] J. Lines, L. Davis, J. Hills, and A. Bagnall. 用于时间序列分类的形状子变换。In Proceedings of the 18th International Conference on Knowledge Discovery in Data Mining (ACM SIGKDD), 2012.
 
+# 机器学习与数据分析中的特征工程
+
+- [51] Jason Lines and Anthony Bagnagl. 基于弹性距离度量集成的时间序列分类。*Data Min. Knowl. Disc.*, 29(3):565–592, 2015.
+- [52] Jason Lines, Sarah Taylor, and Anthony Bagnagl. HIVE-COTE: 用于时间序列分类的基于变换的集成层次化投票集合。在*2016 IEEE 16th International Conference on Data Mining (ICDM)*,1041–1046. IEEE, 2016.
+- [53] J.T. Lizier. JID: 用于研究复杂系统动力学的信息论工具包。*Front. Robot. AI*, 1:1085, 2014.
+- [54] A.W. Kempa-Liehr M. Christ, B.D. Fulcher. 时间序列分类之外：从时间序列及其他信号中回归外生变量。（准备中），2017.
+- [55] A. McGovern, D.H. Rosenthal, R.A. Brown, and K.K. Droegemeier. 识别预测多维时间序列模式：在极端天气中的应用。*Data Min. Knowl. Disc.*, 22(1):232–258, 2011.
+- [56] F. Mchen. 基于 DWT 和 DFT 的数据挖掘时间序列特征提取。技术报告，马尔堡大学，2003年。
+- [57] Abdullah Muen, Eamonn bi, and Neal Yong. Logical-semanticweb: 用于时间序列分类的表达性原语。在第17届 ACM SIGKDD 知识发现与数据挖掘国际会议论文集*,1154–1162。ACM, 2011.
+- [58] Alex Nanopoulos, Rob Alcock, and Yannis Manopoulos. *Information Processing and Technology*, 基于特征的时间序列数据分类，第49–61页。Nova Publishers Inc., Connack, 2001.
+- [59] S. M. Paras, A. Kumar, and M. Chandra. 用于天气预报的特征神经网络。*Int. J. Comput. Intelligence*, 4(3), 2009.
 
 
 
+# 参考文献
 
-机器学习与数据分析中的特征工程
-
-[51] Jason Lines and Anthony Bagnagl. 基于弹性距离度量集成的时间序列分类。*Data Min. Knowl. Disc.*, 29(3):565–592, 2015.
-
-[52] Jason Lines, Sarah Taylor, and Anthony Bagnagl. HIVE-COTE: 用于时间序列分类的基于变换的集成层次化投票集合。在*2016 IEEE 16th International Conference on Data Mining (ICDM)*,1041–1046. IEEE, 2016.
-
-[53] J.T. Lizier. JID: 用于研究复杂系统动力学的信息论工具包。*Front. Robot. AI*, 1:1085, 2014.
-
-[54] A.W. Kempa-Liehr M. Christ, B.D. Fulcher. 时间序列分类之外：从时间序列及其他信号中回归外生变量。（准备中），2017.
-
-[55] A. McGovern, D.H. Rosenthal, R.A. Brown, and K.K. Droegemeier. 识别预测多维时间序列模式：在极端天气中的应用。*Data Min. Knowl. Disc.*, 22(1):232–258, 2011.
-
-[56] F. Mchen. 基于 DWT 和 DFT 的数据挖掘时间序列特征提取。技术报告，马尔堡大学，2003年。
-
-[57] Abdullah Muen, Eamonn bi, and Neal Yong. Logical-semanticweb: 用于时间序列分类的表达性原语。在第17届 ACM SIGKDD 知识发现与数据挖掘国际会议论文集*,1154–1162。ACM, 2011.
-
-[58] Alex Nanopoulos, Rob Alcock, and Yannis Manopoulos. *Information Processing and Technology*, 基于特征的时间序列数据分类，第49–61页。Nova Publishers Inc., Connack, 2001.
-
-[59] S. M. Paras, A. Kumar, and M. Chandra. 用于天气预报的特征神经网络。*Int. J. Comput. Intelligence*, 4(3), 2009.
-
-[60] Pranav Patel, Eamonn Keegan, Jessica Lin, and Stefano Lonardi. 大规模时间序列数据库中的模式挖掘。在*2002. 2002 IEEE International Conference on Data Mining*,370–377。IEEE, 2002.
+[60] Pranav Patel, Eamonn Keegan, Jessica Lin, and Stefano Lonardi. 大规模时间序列数据库中的模式挖掘。在 *2002 IEEE International Conference on Data Mining*, 370–377。IEEE, 2002.
 
 [61] C. K. Peng, S. V. Buldey, A. L. Goldberger, S. Havlin, R. N. Mantega, M. Simons, and H. E. Stanley. DNA 序列的统计特性。*Physica A*, 221(1-3):180–192, 1995.
 
 [62] S. M. Pincus. 作为系统复杂度度量的近似熵。*Proc. Nat. Acad. Sci. USA*, 88(6):2297–2301, 1991.
 
-## 基于特征的时间序列分析
+# 基于特征的时间序列分析
 
 - [63] S.M. Pincus, T.R. Cummins, and G.G. Haddad. 正常和流产性 SIDS 婴儿的心率控制。Am. J. Physiology—Regul., Int., Comp. Physiol., 264(3):R638–646, 1993.
-- [64] C. A. Ratanamahatana and E. Keogh. 使用学习约束提高时间序列分类的准确性。在SIAM Int'l Conf. Data Mining,11– 22, 2004.
+
+- [64] C. A. Ratanamahatana and E. Keogh. 使用学习约束提高时间序列分类的准确性。在 SIAM Int'l Conf. Data Mining, 11–22, 2004.
+
 - [65] J. S. Richman and J. R. Moorman. 使用近似熵和样本熵的生理时间序列分析。Am. J. Physiol. Heart Circ. Physiol., 278(6):H239–2049, 2000.
+
 - [66] J.J. Rodriguez, C. Alonso, and H. Bostr. 增强基于区字面量。Intell. Data Anal., 5(3):245–262, 2001.
+
 - [67] P. Schäfer. BOSS 用于噪声存在下的时间序列分类。Data Min. Knowl. Discov., 29(6):1505–1530, 2015.
+
 - [68] S.S. Sethi, B. Zerbi, N. Wenderth, A. Fornito, and B.D. Fletcher. 结构连接拓扑与小鼠大脑区域 BOLD 信号动力学。Chaos, 27(4):047005, 2017.
+
 - [69] Abdullah Subasi and M. Ismail Goroy. 使用 PCA, ICA, LDA 和支持向量机的 EEG 信号分类。Expert Syst. Appl., 37(12):8569–866, 2010.
-- [70] H. Sugimura and K. Matsumoto. 基于特征提取的时间序列数据分类系统。在IEEE International Conference on Systems, Man, and Cybernetics (SMC),1340–1345. IEEE, 2011.
+
+- [70] H. Sugimura and K. Matsumoto. 基于特征提取的时间序列数据分类系统。在 IEEE International Conference on Systems, Man, and Cybernetics (SMC), 1340–1345. IEEE, 2011.
+
 - [71] Floris Takens. 湍流中奇异吸引子的检测。Lect. Notes Math., 898:366–381, 1991.
+
 - [72] J. Timmer, C. Gantert, and J. Honkerkamp. 趋势时间序列特征。Biol. Cybern., 70(1):75–80, 1993.
+
 - [73] X. Wang, K. Smith, and R. Hydman. 基于特征的时间序列聚类。Data Min. Knowl. Disc., 13:335–364, 2006.
-- [74] X. Wang, A. Wirth, and L. Wang. 基于结构的统计特征和多元时间序列聚类。在IEEE Int'l Conf. Data Mining,351–360. IEEE Computer Society, 2007.
+
+- [74] X. Wang, A. Wirth, and L. Wang. 基于结构的统计特征和多元时间序列聚类。在 IEEE Int'l Conf. Data Mining, 351–360. IEEE Computer Society, 2007.
+
 - [75] Xiaoyue Wang, Abdullah Meen, Hui Ding, Goce Tracejevski, Peter Scheuermann, and Eamon. 预测多维时间序列模式：在极端天气中的应用。*Data Min. Knowl. Disc.*, 22(1):232–258, 2011.
 
-# 第5章
+# 第5章 数据流特征工程
 
-# 数据流特征工程
-
-Yao Ma
+**Yao Ma**  
 密歇根州大学
 
-Jiliang Tang
+**Jiliang Tang**  
 密歇根州大学
 
-Charu Aggarwal
+**Charu Aggarwal**  
 IBM 研究
 
 - 5.1 引言 ................................................................................ 118
 - 5.2 流式设置 ........................................................................................ 119
 - 5.3 流式特征构建的线性方法 ............................................ 121
-- 5.3.1 数据流的主成分分析 ....................................................... 121
-- 5.3.2 数据流的线性判别分析 ............................................ 123
+  - 5.3.1 数据流的主成分分析 ....................................................... 121
+  - 5.3.2 数据流的线性判别分析 ............................................ 123
 - 5.4 流式特征构建的非线性方法 ................................................. 125
-- 5.4.1 数据流的局部嵌入 ....................................................... 126
-- 5.4.2 数据流的核学习 ............................................................ 126
-- 5.4.3 数据流的神经网络 ............................................................ 128
-- 5.4.4 讨论 ............................................................................................ 132
+  - 5.4.1 数据流的局部嵌入 ....................................................... 126
+  - 5.4.2 数据流的核学习 ............................................................ 126
+  - 5.4.3 数据流的神经网络 ............................................................ 128
+  - 5.4.4 讨论 ............................................................................................ 132
 - 5.5 带有流式特征的数据流选择 ...................... 132
-- 5.5.1 接入算法 ....................................................................... 133
-- 5.5.2 Alpha-感知算法 ................................................................ 133
-- 5.5.3 在线流式特征选择算法 ................................ 134
-- 5.5.4 社交媒体中的无监督流式特征选择 ................................ 135
-媒体 ................................................................................................ 135
+  - 5.5.1 接入算法 ....................................................................... 133
+  - 5.5.2 Alpha-感知算法 ................................................................ 133
+  - 5.5.3 在线流式特征选择算法 ................................ 134
+  - 5.5.4 社交媒体中的无监督流式特征选择 ................................ 135
 - 5.6 带有流式实例的数据流选择 ....................................... 136
-- 5.6.1 在线特征选择 ....................................................................... 136
-- 5.6.2 数据流的无监督特征选择 ................................... 136
+  - 5.6.1 在线特征选择 ....................................................................... 136
+  - 5.6.2 数据流的无监督特征选择 ................................... 136
 - 5.7 讨论与挑战 ........................................................................ 136
 
-
-
-
-机器学习与数据分析中的特征工程
+# 机器学习与数据分析中的特征工程
 
 ## 5.1 引言
 
-众所周知，机器学习算法的性能在很大程度上取决于输入数据的特征表示 [4]。一组良好的特征可以提供巨大的灵活性，使我们能够选择快速且简单的模型。然而，数据的原始表示通常并不利于学习 [13]。特征工程是指通过发现数据数据中的隐藏模式，从现有特征中生成新特征的过程 [65]。其目的是丰富当前的特征集并提高学习算法的预测能力。因此，特征工程在机器学习的实践成功中起着至关重要的作用：“归结底，有些机器学习项目成功了，有些则失败了。最重要的因素无疑是使用的特征 [3]。”
+众所周知，机器学习算法的性能在很大程度上取决于输入数据的特征表示 [4]。一组良好的特征可以提供巨大的灵活性，使我们能够选择快速且简单的模型。然而，数据的原始表示通常并不利于学习 [13]。特征工程是指通过发现数据中的隐藏模式，从现有特征中生成新特征的过程 [65]。其目的是丰富当前的特征集并提高学习算法的预测能力。因此，特征工程在机器学习的实践成功中起着至关重要的作用：“归结底，有些机器学习项目成功了，有些则失败了。最重要的因素无疑是使用的特征 [3]。”
 
 一个典型的特征工程流程建议如下 [65]：
 
-- 特征构建（Feature construction）：其目标是从数据中的原始特征中提取特征。它可以是手动的——通过数据分析或考虑领域知识来提取特征；也可以是自动的——对对特征进行聚合、组合或转换来提取特征。这一步可能会导致特征总数的快速增长。
-
-- 特征选择（Feature selection）：由于特征数量巨大，学习算法可能会因为维度灾难而溢出，导致性能下降。特征选择旨在根据某些相关性标准选择一小部分最相关的特征。事实证明，特征选择可以帮助提高性能、降低计算成本，并提高模型的可解释性 [32]。
-
-- 模型评估（Model evaluation）：这通过选择所选的特征，在未见过的数据上估计模型性能。
+- **特征构建**：其目标是从数据中的原始特征中提取特征。它可以是手动的——通过数据分析或考虑领域知识来提取特征；也可以是自动的——对特征进行聚合、组合或转换来提取特征。这一步可能会导致特征总数的快速增长。
+- **特征选择**：由于特征数量巨大，学习算法可能会因为维度灾难而溢出，导致性能下降。特征选择旨在根据某些相关性标准选择一小部分最相关的特征。事实证明，特征选择可以帮助提高性能、降低计算成本，并提高模型的可解释性 [32]。
+- **模型评估**：这通过选择所选的特征，在未见过的数据上估计模型性能。
 
 特征构建步骤将生成一组特征，特征选择将选出最相关的子集，而模型评估阶段将根据所选特征评估模型性能，结果可以返回到特征构建步骤进行特征工程的下一次迭代 [65]。
 
@@ -1846,31 +1537,28 @@ IBM 研究
 这些巨大的挑战促使了大量针对数据流特征工程的工作。因此，在本章中，我们提供了特征工程的概述。在特征工程的典型步骤中，有关于流数据的综述和书籍 [1, 18, 52-54]，以及特征构建和选择方法的概述。因此，在本章中，我们关注特征工程的特征构建和选择步骤。特征构建可以是手动或自动的。手动特征构建依赖于数据分析或领域知识，通常是针对特定数据、属性或领域的。另一方面，自动特征构建特别是特征转换是通用的，可以应用于多个领域和应用。因此，对于特征构建，我们致力于自动特征构建，特别是特征转换。本书章的其余章节结构如下：
 
 - 在第 2 节中，我们总结了典型的流设置及其对应的正式定义。
-
 - 在第 3 节中，我们回顾了自动特征构建算法，包括线性非线性方法。
-
 - 在第 4 节中，我们给出了不同流设置下的特征选择算法概述。
-
 - 在第 5 节中，我们讨论了数据流特征工程的一些开放问题和可能的研究方向。
 
 ## 5.2 流设置
 
-我们在图 5.1 中总结了数据流特征工程的三种场景 [16, 22, 44, 49, 60]。在某些应用中，特征相对稳定而实例不断添加。例如，在垃圾邮件检测中，字典中的术语（或特征）是稳定的，但电子邮件是快速生成的。对于这些应用，我们使用特征集是固定的而实例是流式的，如图 5.1(a) 所示 $\mathcal{F} = \{f_1, \dots, f_m\}$ 为 $m$ 个特征的集合。我们使用 $X_t = \{x_1, x_2, \dots, x_T\}$ 作为时间 $t$ 时的 $T$ 个实例集，并使用矩阵 $X_t \in \mathbb{R}^{m \times T}$ 来表示 $X_t$。该设置下的特征工程允许在 $t$ 时从 $\mathcal{F}$ 构建特征 $\mathcal{F}_t$，并 (2) 使用新实例 $x_t$ 重构 $\mathcal{F}_{t+1}$。
+我们在图 5.1 中总结了数据流特征工程的三种场景 [16, 22, 44, 49, 60]。在某些应用中，特征相对稳定而实例不断添加。例如，在垃圾邮件检测中，字典中的术语（或特征）是稳定的，但电子邮件是快速生成的。对于这些应用，我们使用特征集是固定的而实例是流式的，如图 5.1(a) 所示。令 $\mathcal{F} = \{f_1, \dots, f_m\}$ 为 $m$ 个特征的集合。我们使用 $X_t = \{x_1, x_2, \dots, x_T\}$ 作为时间 $t$ 时的 $T$ 个实例集，并使用矩阵 $X_t \in \mathbb{R}^{m \times T}$ 来表示 $X_t$。该设置下的特征工程允许在 $t$ 时从 $\mathcal{F}$ 构建特征 $\mathcal{F}_t$，并 (2) 使用新实例 $x_t$ 重构 $\mathcal{F}_{t+1}$。
 
-在某些应用中，实例相对稳定但创建了新特征。例如，在生物信息学中，基因集是固定的，但不断观察到新的基因表达。有必要研究基因集固定而特征是流式的，如图 5.1(a) 所示 $\mathcal{F}^t = \{f_1, \dots, f_t\}$ 为时间 $t$ 时的特征集。我们使用 $X^t = \{x_1, x_2, \dots, x_n\}$ 表示 $n$ 个实例，$X^t \in \mathbb{R}^{n \times T}$ 表示 $X^t$。该设置下的特征工程允许在 $t$ 时通过 $\mathcal{F}^t$ 构建 $\mathcal{S}^t$，并 (2) 重构 $\mathcal{S}^{t+1}$。
+在某些应用中，实例相对稳定但创建了新特征。例如，在生物信息学中，基因集是固定的，但不断观察到新的基因表达。有必要研究基因集固定而特征是流式的，如图 5.1(b) 所示。令 $\mathcal{F}^t = \{f_1, \dots, f_t\}$ 为时间 $t$ 时的特征集。我们使用 $X^t = \{x_1, x_2, \dots, x_n\}$ 表示 $n$ 个实例，$X^t \in \mathbb{R}^{n \times T}$ 表示 $X^t$。该设置下的特征工程允许在 $t$ 时通过 $\mathcal{F}^t$ 构建 $\mathcal{S}^t$，并 (2) 重构 $\mathcal{S}^{t+1}$。
 
 在其他应用中，实例和特征都在不断更新。例如，Flickr 每天上传数百万张图片并生成新的标签（特征）；Twitter 每天产生数百条推文并不断产生大量的俚语（单词）。令 $\mathcal{F}^t = \{f_1, \dots, f_t\}$ 为时间 $t$ 时的特征集。我们使用 $X_t = \{x_1, x_2, \dots, x_n\}$ 作为时间 $t$ 时的 $n$ 个实例集，并使用矩阵 $X_t \in \mathbb{R}^{n \times T}$ 来表示 $X_t$。流式特征特征工程旨在在 $t$ 时通过 $\mathcal{F}^t$ 构建 $\mathcal{S}^t$。
 
-流式实例和特征可以自然地分为两个部分——一部分是流式实例，另一部分是流式
+流式实例和特征可以自然地分为两个部分——一部分是流式实例，另一部分是流式特征。
 
 **图 5.1：流工程设置。**
 
-| (a) 实例 | (b) 流式特征 | (c) 流式实例和特征 |
+| (a) 流式实例 | (b) 流式特征 | (c) 流式实例和特征 |
 | :--- | :--- | :--- |
 | $x_1$ | $f_m$ | $f_1 f_2 f_3 \dots f_n$ |
 | $x_2$ | | |
 | $x_3$ | | |
-| $x_1$ | $f_1 f_2 f_3 \dots f_n$ | | |
+| $x_1$ | $f_1 f_2 f_3 \dots f_n$ | |
 | $x_2$ | | |
 | $x_3$ | | |
 | $x_i$ | | |
@@ -1881,17 +1569,11 @@ IBM 研究
 
 ## 5.3 流特征构建的线性方法
 
-线性方法利用线性投影或函数将原始特征转换为新特征。由于其高效性，有很多关于线性提取方法的文献，例如主成分分析 (PCA)、线性判别分析 (LDA)、最大边缘准则 (MMC) [31] 和正交质心算法 [24]。许多努力将这些传统的线性方法扩展到数据流。在下面的节中，我们将以 PCA 和 LDA 为例，给出数据流线性提取方法的概述。
+线性方法利用线性投影或函数将原始特征转换为新特征。由于其高效性，有很多关于线性提取方法的文献，例如主成分分析 (`PCA`)、线性判别分析 (`LDA`)、最大边缘准则 (`MMC`) [31] 和正交质心算法 [24]。许多努力将这些传统的线性方法扩展到数据流。在下面的节中，我们将以 `PCA` 和 `LDA` 为例，给出数据流线性提取方法的概述。
 
 ### 5.3.1 数据流的主成分分析
 
-主成分分析 (PCA) 旨在最大化保留数据方差，已广泛应用于许多现实应用，如降维、信号去噪和相关性分析 [14,59]。可以使用多种方法描述 PCA，以下的方法在流设置下特别受青 [6]。对于 $X = \{x_1, x_2, \dots, x_n\}$，$x_i \in \mathbb{R}^T$，其目标是找到 $Y = \{y_1, y_2, \dots, y_n\}$，$y_i \in \mathbb{R}^k$，这可以最小化
-
-
-
-## 122 机器学习与数据分析中的特征工程
-
-重构误差定义为
+主成分分析 (`PCA`) 旨在最大化保留数据方差，已广泛应用于许多现实应用，如降维、信号去噪和相关性分析 [14,59]。可以使用多种方法描述 `PCA`，以下的方法在流设置下特别受青睐 [6]。对于 $X = \{x_1, x_2, \dots, x_n\}$，$x_i \in \mathbb{R}^T$，其目标是找到 $Y = \{y_1, y_2, \dots, y_n\}$，$y_i \in \mathbb{R}^k$，这可以最小化重构误差，定义为：
 
 ```
 min_{y_i \in \mathcal{O}_K} \min \sum_{i=1}^n ||\mathbf{x}_i - \mathbf{W}y_i||_2^2 \quad (5.1)
@@ -1903,47 +1585,53 @@ min_{y_i \in \mathcal{O}_K} \min \sum_{i=1}^n ||\mathbf{x}_i - \mathbf{W}y_i||_2
 $O_{T,K} = \mathbf{W} \in \mathbb{R}^{T \times K} [\mathbf{y} \in \mathbb{R}^K, ||\mathbf{W}y||_2 = ||\mathbf{y}||_2]. \ (5.2)$
 ```
 
-很容易证明 $\mathbf{W}$ 的最优解跨 $X$ 的前 $K$ 个左奇异向量，且 $\mathbf{Y} = \mathbf{W}^T X$。我们使用 $OPT_K$ 表示最优解对应的目标函数值。最优的 $W$ 可以通过 $XX^T$ 计算，这通常需要 $O(n^2)$ 的时间和 $O(T^2)$ 的空间 [27]。此外，它需要对矩阵 $X$ 进行多次遍历，这在流式环境下是不可接受的。当引入新的数据实例时，重新计算也是不理想的。因此，研究者为了使 PCA 适应流式环境做了大量努力。根据所采用的技术，我们将算法分为几大类：随机投影、遗憾最小化、随机优化和矩阵草图方法。
+很容易证明 $\mathbf{W}$ 的最优解跨 $X$ 的前 $K$ 个左奇异向量，且 $\mathbf{Y} = \mathbf{W}^T X$。我们使用 $OPT_K$ 表示最优解对应的目标函数值。最优的 $\mathbf{W}$ 可以通过 $XX^T$ 计算，这通常需要 $O(n^2)$ 的时间和 $O(T^2)$ 的空间 [27]。此外，它需要对矩阵 $X$ 进行多次遍历，这在流式环境下是不可接受的。当引入新的数据实例时，重新计算也是不理想的。因此，研究者为了使 `PCA` 适应流式环境做了大量努力。根据所采用的技术，我们将算法分为几大类：随机投影、遗憾最小化、随机优化和矩阵草图方法。
 
-**随机投影：** 这些方法从数据 [49] 中随机且独立地生成矩阵 $S \in \mathbb{R}^{T \times t}$ [11]，并令 $y_i = \mathbf{S}^T x_i$。如 [25] 所示，$S$ 可以表现出 Johnson-Lindenstrauss 质——近似保持所有向量 $x_i$ 之间的长度和距离。然后，对于 $\theta(K)$ 有常数概率：
+**随机投影：** 这些方法从数据 [49] 中随机且独立地生成矩阵 $\mathbf{S} \in \mathbb{R}^{T \times t}$ [11]，并令 $y_i = \mathbf{S}^T x_i$。如 [25] 所示，$\mathbf{S}$ 可以表现出 Johnson-Lindenstrauss 性质——近似保持所有向量 $x_i$ 之间的长度和距离。然后，对于 $\theta(K)$ 有常数概率：
 
 ```
 min_{i=1}^n ||\mathbf{x}_i - \mathbf{W}y_i||_2^2 \le (1 + \epsilon)OPT_K. \quad (5.3)$
 ```
 
-在这里，导致最小重构误差的解为 $\mathbf{W} = \mathbf{XY}^+$。对于新的数据实例，由于 $\mathbf{Y}^+$ 是 $\mathbf{Y}$ 的 Moore-Penrose 逆或伪逆，我们需要更新 $S$ 的一列 [11]，这对于流式环境是高效的。然而，如 [6] 注意到的，通过随机投影得到的 $\mathbf{W}$ 不是最优的，并非由于 Johnson-Lindenstrauss 质，数据变换后可能存在噪声。
+在这里，导致最小重构误差的解为 $\mathbf{W} = \mathbf{XY}^+$。对于新的数据实例，由于 $\mathbf{Y}^+$ 是 $\mathbf{Y}$ 的 Moore-Penrose 逆或伪逆，我们需要更新 $\mathbf{S}$ 的一列 [11]，这对于流式环境是高效的。然而，如 [6] 注意到的，通过随机投影得到的 $\mathbf{W}$ 不是最优的，并非由于 Johnson-Lindenstrauss 性质，数据变换后可能存在噪声。
 
-**遗憾最小化：** 在 [4, 5] 中，研究了遗憾最小化方法以帮助流式环境下的 PCA。在时间 $t$，接收数据实例 $x_t$ 之前，算法生成秩为 $K$ 的投影矩阵 $P_t \in \mathbb{R}^{T \times T}$；$P_t$ 是一个满足 $\mathbf{P}_t^2 = \mathbf{P}_t$ 的方阵。然后，这些算法确保 $\sum_{i} ||\mathbf{x}_i - \mathbf{P}_t\mathbf{x}_i||_2^2$ 在无遗憾的情况下收敛到 $OPT_k$。项 $\sum_{i} ||\mathbf{x}_i - \mathbf{P}_t\mathbf{x}_i||_2^2$ 可以重写为：
+
+
+# 遗憾最小化
+
+在 [4, 5] 中，研究了遗憾最小化方法以帮助流式环境下的 PCA。在时间 $t$，接收数据实例 $x_t$ 之前，算法生成秩为 $K$ 的投影矩阵 $P_t \in \mathbb{R}^{T \times T}$；$P_t$ 是一个满足 $\mathbf{P}_t^2 = \mathbf{P}_t$ 的方阵。然后，这些算法确保 $\sum_{i} ||\mathbf{x}_i - \mathbf{P}_t\mathbf{x}_i||_2^2$ 在无遗憾的情况下收敛到 $OPT_k$。项 $\sum_{i} ||\mathbf{x}_i - \mathbf{P}_t\mathbf{x}_i||_2^2$ 可以重写为：
 
 ```
-sum_{i} ||\mathbf{x}_i - \mathbf{P}_t\mathbf{x}_i||_2^2 = \sum_{i} ||(\mathbf{I}-\mathbf{P})\mathbf{x}_i||_2^2 = Tr((\mathbf{I}-\mathbf{P})^T \sum_{i} \mathbf{x}_i\mathbf{x}_i^T) \quad (5.4)$
+sum_{i} ||\mathbf{x}_i - \mathbf{P}_t\mathbf{x}_i||_2^2 = \sum_{i} ||(\mathbf{I}-\mathbf{P})\mathbf{x}_i||_2^2 = Tr((\mathbf{I}-\mathbf{P})^T \sum_{i} \mathbf{x}_i\mathbf{x}_i^T) \quad (5.4)
 ```
 
 $(\mathbf{I}-\mathbf{P})^2 = \mathbf{I}-\mathbf{P}$ 是投影矩阵。因此，我们可以将损失解释为投影矩阵 $\mathbf{P}$ 和协方差 $C = \sum_i x_i x_i^T$ 的线性函数。遗憾最小化是为了获得一种算法，其在试验 $t=1,\dots,T$ 中的累积损失接近在看到所有 $T$ 个实例后事后性的最佳秩 $K$ 投影矩阵的累积损失。算法累积损失与最佳离线分类器之间的最大差异即为（最坏情况）遗憾。在 [58] 中，遗憾界与维度 $T$ 是对数关系。该算法在动机上使用了量子相对熵，并基于矩阵指数梯度 (MEG) [55]。它执行了矩阵版本的乘法更新，并投影到约束上，其中投影是关于量子相对熵的。在 [43] 中，我们提出了分别基于梯度下降 (GD) 和矩阵指数梯度 (MEG) 的算法，并提供了紧凑的上界。
 
-**随机优化：** 基于随机优化的算法假设数据独立同分布 [16, 40]，且分布是未知的。因此，通过获得 $XX^T$，我们可以有效地学习跨 $X$ 的前 $K$ 个奇异向量，使得 $U_*$ 存在。遗憾最小化是为了获得一种算法，其在试验 $t=1,\dots,T$ 中的累积损失接近在看到所有 $T$ 个实例后事后性的最佳秩 $K$ 投影矩阵的累积损失。
+# 随机优化
 
-**矩阵草图：** 矩阵草图图的的算法是针对针对 $X$ 的多次矩阵矩阵，这在流式环境下是不可接受的。当引入新的数据实例时，重新计算也是不理想的。因此，研究者为了使 PCA 适应流式环境做了大量努力。根据所采用的技术，我们将算法分为几大类：随机投影、遗憾最小化、随机优化和矩阵草图方法。
+基于随机优化的算法假设数据独立同分布 [16, 40]，且分布是未知的。因此，通过获得 $XX^T$，我们可以有效地学习跨 $X$ 的前 $K$ 个奇异向量，使得 $U_*$ 存在。遗憾最小化是为了获得一种算法，其在试验 $t=1,\dots,T$ 中的累积损失接近在看到所有 $T$ 个实例后事后性的最佳秩 $K$ 投影矩阵的累积损失。
 
-**随机投影：** 这些方法从数据 [49] 中随机且独立地生成矩阵 $S \in \mathbb{R}^{T \times t}$ [11]，并令 $y_i = \mathbf{S}^T x_i$。如 [25] 所示，$S$ 可以表现出 Johnson-Lindenstrauss 质——近似保持所有向量 $x_i$ 之间的长度和距离。然后，对于 $\theta(K)$ 有常数概率：
+# 矩阵草图
+
+矩阵草图算法是针对 $X$ 的多次矩阵运算，这在流式环境下是不可接受的。当引入新的数据实例时，重新计算也是不理想的。因此，研究者为了使 PCA 适应流式环境做了大量努力。根据所采用的技术，我们将算法分为几大类：随机投影、遗憾最小化、随机优化和矩阵草图方法。
+
+# 随机投影
+
+这些方法从数据 [49] 中随机且独立地生成矩阵 $S \in \mathbb{R}^{T \times t}$ [11]，并令 $y_i = \mathbf{S}^T x_i$。如 [25] 所示，$S$ 可以表现出 Johnson-Lindenstrauss 质——近似保持所有向量 $x_i$ 之间的长度和距离。然后，对于 $\theta(K)$ 有常数概率：
 
 ```
-min_{i=1}^n ||\mathbf{x}_i - \mathbf{W}y_i||_2^2 \le (1 + \epsilon)OPT_K. \quad (5.3)$
+min_{i=1}^n ||\mathbf{x}_i - \mathbf{W}y_i||_2^2 \le (1 + \epsilon)OPT_K. \quad (5.3)
 ```
 
-
-
-
-
-## 数据流的特征工程
+# 数据流的特征工程
 
 ICLDA 等于总散度矩阵的秩。因此，它的维度通常很高，这导致了巨大的计算复杂和内存需求。同时，当添加新实例时，许多项需要更新。因此，空间复杂度随之增加。在 LDA [62] 中，LDA 被证明是一个多元回归框架，并给出了最小二乘解。LS-ILDA [36] 是其流式实现。
 
-## 5.4 用于流式特征构建的非线性方法
+# 5.4 用于流式特征构建的非线性方法
 
 非线性方法通过对原始特征应用非线性变换来提取新特征。非线性方法能够捕捉数据之间复杂的模式，随着大数据时代数据复杂性的增加，它们正吸引着越来越多的关注。在接下来的节中，我们将回顾包括核学习和深度神经网络在内的代表性非线性方法。
 
-### 5.4.1 数据流的局部嵌入
+## 5.4.1 数据流的局部嵌入
 
 LLE 算法 [46] 由三个主要步骤组成：
 
@@ -1951,135 +1639,152 @@ LLE 算法 [46] 由三个主要步骤组成：
 
 - 最优权重 $\{W_{ij} : j \in N_i, i = 1, \dots, n\}$ 通过求解以下优化问题获得：
 
-$\min_{i=1}^n ||\mathbf{x}_i - \sum_{j \in N_i} W_{ij} \mathbf{x}_j||_2^2, \quad s.t., \quad \sum_{j \in N_i} W_{ij} = 1. \quad (5.6)$
+```
+\min_{i=1}^n ||\mathbf{x}_i - \sum_{j \in N_i} W_{ij} \mathbf{x}_j||_2^2, \quad s.t., \quad \sum_{j \in N_i} W_{ij} = 1. \quad (5.6)
+```
 
 令 $y_i \in \mathbb{R}^K$ 为 $x_i$ 的新特征表示。新表示旨在尽可能保留原始空间的几何属性。为了最小化
 
-$\min_{i=1}^n ||\mathbf{y}_i - \sum_{j \in N_i} W_{ij} \mathbf{y}_j||_2^2, \quad s.t., \quad \sum_{i=1}^n \mathbf{y}_i = 0, \quad \sum_{i=1}^n \mathbf{y}_i \mathbf{y}_i^T = I \quad (5.7)$
+```
+\min_{i=1}^n ||\mathbf{y}_i - \sum_{j \in N_i} W_{ij} \mathbf{y}_j||_2^2, \quad s.t., \quad \sum_{i=1}^n \mathbf{y}_i = 0, \quad \sum_{i=1}^n \mathbf{y}_i \mathbf{y}_i^T = I \quad (5.7)
+```
 
 我们添加 $\sum_{i=1}^{n} y_i = 0$ 以确保新表示是中心化的，并添加 $\sum_{i=1}^{n} y_i y_i^T = I$ 以确保新表示具有单位协方差。
 
-为了在这些约束下找到矩阵 $Y = [y_1, \dots, y_n]$，根据矩阵 $W$ 构造一个新的稀疏且半正定的矩阵 $M$：M = (I - W)^T(I - W)$。LLE 计算 $M$ 最小的 $K+1$ 个特征向量，它们对应 $K+1$ 个最小特征值。排除掉特征值为零的向量以得到最终的嵌入 $Y$。关于 LLE 的全面综述可见 [9]。
+为了在这些约束下找到矩阵 $Y = [y_1, \dots, y_n]$，根据矩阵 $W$ 构造一个新的稀疏且半正定的矩阵 $M$：$M = (I - W)^T(I - W)$。LLE 计算 $M$ 最小的 $K+1$ 个特征向量，它们对应 $K+1$ 个最小特征值。排除掉特征值为零的向量以得到最终的嵌入 $Y$。关于 LLE 的全面综述可见 [9]。
 
 然而，LLE 无法处理新数据，这使得在流式设置下完整运行 LLE 变得异常昂贵。有一些尝试扩展 LLE 以处理数据流。在 [50] 中，首先计算 $x_{n+1}$ 的近邻。然后计算从邻居重构 $x_{n+1}$ 的线性权重 $W_{n+1}$。新输出 $Y_{n+1}$ 定义为
 
-$Y_{n+1} = \sum W_{(n+1)j} y_j. (5.8)$
+```
+Y_{n+1} = \sum W_{(n+1)j} y_j. (5.8)
+```
 
 在 [5] 中，$Y_{n+1}$ 和 $X_{n+1}$ 分别是 $x_{n+1}$ 的新表示。由于流形是局部线性的，因此假设它们之间存在线性关系是合理的，可以确定为 $Y_{n+1} = ZX_{n+1}$，其中 $Z$ 是变换矩阵，$Z = Y_{n+1}X_{n+1}^{-1}$。因为 $x_{n+1}$ 位于 $x_{n+1}$ 的邻域内且 LLE 保留了局部结构，新的投影可以计算为 $y_{n+1} = ZX_{n+1}$。许多其他方法通过引入多元回归来学习变换矩阵 $Z$。
 
 在 [29] 中，作者们提出了 LLE 的增量版本 (ILLE)。对于属于新实例近邻或包含新实例作为其近邻的实例，重新计算权重，并使用这些权重计算新矩阵 $M_{new}$。为了避免病态特征问题，他们假设新矩阵 $M_{new}$ 的特征值与代价矩阵 $M$ 相同。新坐标通过求解 $K \times K$ 最小问题获得：
 
-$\min (Y_{new}M_{new}Y_{new}^T - diag(\lambda_1, \dots, \lambda_K)) (5.9)$
+```
+\min (Y_{new}M_{new}Y_{new}^T - diag(\lambda_1, \dots, \lambda_K)) (5.9)
+```
 
 其中 $\lambda_i$ 是代价矩阵 $M$。
 
-### 5.4.2 用于数据流的核学习
+## 5.4.2 用于数据流的核学习
 
-核方法是最流行的变换方法之一。它们通常被整合到不同的算法中以提高性能，例如用于分类的 SVM [51]、核 PCA [39] 和核 K-means [12]。核方法的基本思想是将非线性可的数据转换为线性可特征空间，通过调整核参数来确保特征空间的判别性。接下来我们将回顾具有流式策略的 SVM。软间隔 SVM 的公式如下：
+核方法是最流行的变换方法之一。它们通常被整合到不同的算法中以提高性能，例如用于分类的 SVM [51]、核 PCA [39] 和核 K-means [12]。核方法的基本思想是将非线性可分的数据转换为线性可分特征空间，通过调整核参数来确保特征空间的判别性。接下来我们将回顾具有流式策略的 SVM。软间隔 SVM 的公式如下：
 
-$\min \frac{1}{2} \mathbf{w}^T\mathbf{w} + C \sum_{i=1}^{n} \epsilon_i$
-
-$s.t. \quad y_i(\mathbf{w}^T\mathbf{x}_i + b) \le 1 - \epsilon_i, i=1, \dots, n$
-$\epsilon_i \ge 0, i=1, \dots, n$
+```
+\min \frac{1}{2} \mathbf{w}^T\mathbf{w} + C \sum_{i=1}^{n} \epsilon_i
+s.t. \quad y_i(\mathbf{w}^T\mathbf{x}_i + b) \le 1 - \epsilon_i, i=1, \dots, n
+\epsilon_i \ge 0, i=1, \dots, n
+```
 
 其中 $\mathbf{x}_i$ 是第 $i$ 个训练实例，其对应标签为 $y_i \in \{-1, 1\}$。$C$ 是控制允许错误的参数。最优分离函数简化为训练数据核的线性组合：系数 $\alpha_i$ 通过在约束下最小化以下目标获得 [56]：
 
-$\min_{\alpha \ge 0} F = \sum_{i,j} \alpha_i \alpha_j Q_{ij}$
+```
+\min_{\alpha \ge 0} F = \sum_{i,j} \alpha_i \alpha_j Q_{ij}
+```
 
 其中 $Q_{ij} = y_i y_j k(\mathbf{x}_i, \mathbf{x}_j)$。令 $g_i = y_i f(x_i) - 1$，这将训练数据分为三类——位于边界上的支持向量集合 $S$（$y_i f(x_i) = 1$）、超出边界的支持向量集合 $E$（必然被误分类），以及边界内的剩余（被忽略的）向量集合 $F$。
 
 最早将 SVM 适应数据流的方法之一提出在 [54] 中。虽然将新数据实例与之前的支持向量结合，但支持向量无法捕获所有数据，只能捕获决策。为了缓解这个问题，[47] 中的作者通过添加常数 $L$ 在旧支持向量上产生误差：
 
-$\min_{\alpha \ge 0} \frac{1}{2} \mathbf{w}^T\mathbf{w} + C (\sum_{i \in N} \epsilon_i + L \sum_{i \in S} \epsilon_i)$
+```
+\min_{\alpha \ge 0} \frac{1}{2} \mathbf{w}^T\mathbf{w} + C (\sum_{i \in N} \epsilon_i + L \sum_{i \in S} \epsilon_i)
+```
 
 其中 $L = \frac{\# instances}{\# support vectors}$ 表示每个支持向量代表整体的一个常数因子。在 [7] 中提出的算法是最早的之一，它可以提供精确解。它在添加一个训练用例后更新问题。关于该方法的更多细节见 [7]。在 [30] 中，一种精确增量 SVM 中内存组织和算术操作的优方案基于敏感性向量的间隔类型更新。所提出的算法由两个部分组成：原型 (LP) 和学习支持向量 (LSV)。LP 用于表示原始数据并连续使原型适应数据概念，它们是原生原型（代表），用于表示训练样本的局部近邻。LSV 在 LP 的帮助下学习支持向量。LP 和 LSV 之间的桥梁是让学习的数据变得“昂贵”。
 
-### 5.4.3 用于数据流的神经网络
+## 5.4.3 用于数据流的神经网络
 
 深度网络在许多领域（如图像识别、自然语言处理和社会网络分析）被证明是强大的。它们最初并不是为数据流设计的。大多数此类网络使用随机梯度下降 (SGD) 来训练模型。接下来我们将简要回顾代表性的神经网络，即自动编码器 [21] 和受限玻尔兹机 [42, 48]。
 
-**自动编码器**。自动编码器是一种前馈神经网络。它接收输入 $x$ 并尝试将其编码为表示 $h(x)$，以便从 $h(x)$ 重建输入。自动编码器的输出是输入本身。当 $h(x)$ 的维度小于输入维度时，自动编码器是欠完全的。完全自动编码器试图让输入通过“瓶颈”并将其压缩为低维表示，从而良好重建输入。图 2 显示了一个有一个隐藏层的自动编码器。它由两个部分组成：1) 编码器将输入 $x$ 编码为表示 $h(x)$；2) 解码器将表示 $h(x)$ 解码为 $hat$，后者应该接近输入 $x$。自动编码器是全连接的：$W$ 是输入层和隐藏层之间的矩阵，而 $W$ 是隐藏层和输出层之间的矩阵。更清楚地说，层之间的关系为：
+### 自动编码器
 
-$h(x) = f(Wx + b)$;
-$x-hat = f(W^T h(x) + \hat{b})$;
+自动编码器是一种前馈神经网络。它接收输入 $x$ 并尝试将其编码为表示 $h(x)$，以便从 $h(x)$ 重建输入。自动编码器的输出是输入本身。当 $h(x)$ 的维度小于输入维度时，自动编码器是欠完全的。完全自动编码器试图让输入通过“瓶颈”并将其压缩为低维表示，从而良好重建输入。图 2 显示了一个有一个隐藏层的自动编码器。它由两个部分组成：1) 编码器将输入 $x$ 编码为表示 $h(x)$；2) 解码器将表示 $h(x)$ 解码为 $\hat{x}$，后者应该接近输入 $x$。自动编码器是全连接的：$W$ 是输入层和隐藏层之间的矩阵，而 $W'$ 是隐藏层和输出层之间的矩阵。更清楚地说，层之间的关系为：
+
+```
+h(x) = f(Wx + b);
+\hat{x} = f(W'^T h(x) + \hat{b});
+```
 
 其中 $b$ 和 $\hat{b}$ 分别是偏置，函数 $f$ 是非线性激活函数如 sigmoid。
 
 为了训练自动编码器，可以使用不同的损失函数。例如，对于实值输入，可以使用平方误差：
 
-$L(x, x-hat) = \frac{1}{2}||x - x-hat||^2$；
+```
+L(x, \hat{x}) = \frac{1}{2}||x - \hat{x}||^2
+```
 
 对于二进制输入，可以使用交叉熵误差：
 
-$L(x, x-hat) = -\sum_k x_k \log(\hat{x}_k) + (1 - x_k) \log(1 - \hat{x}_k)$。
+```
+L(x, \hat{x}) = -\sum_k x_k \log(\hat{x}_k) + (1 - x_k) \log(1 - \hat{x}_k)
+```
 
-
-
-
-
-# 数据流的特征工程
-
-![](img/f9b50d48a9ba5d6b2e7f6b9761812434_147_0.png)
-
-**图 5.2：** 具有隐藏层的自动编码器。
+![图 5.2：具有隐藏层的自动编码器。](img/f9b50d48a9ba5d6b2e7f6b9761812434_147_0.png)
 
 通常采用随机梯度下降（SGD）和反向传播（BP）来更新参数。令 $\theta$ 表示模型中的所有参数，包括连接矩阵 $\mathbf{W}, \mathbf{W}'$ 和偏置项 $\mathbf{b}, \mathbf{c}$。对于每一步，更新规则可以表示为：
 
 ```
-$\theta \leftarrow \theta - \eta \cdot \frac{\partial L(\mathbf{x}, \hat{\mathbf{x}})}{\partial \theta}$ (5.17)
+\theta \leftarrow \theta - \eta \cdot \frac{\partial L(\mathbf{x}, \hat{\mathbf{x}})}{\partial \theta} \quad (5.17)
 ```
 
-其中 $\eta$ 是学习率。受限玻尔兹曼机（RBM）是一种有一个输入层（可见层）和一个隐藏层的神经网络。训练后，RBM 可以将输入 $\mathbf{x}$ 映射到学习到的特征 $\mathbf{h}$。这种具有一个可见层和一个隐藏层的受限玻尔兹曼机，两层均由二进制单元组成。受限玻尔兹曼机在层与层之间全全连接的，层内部没有连接。两层通过连接矩阵 $\mathbf{W}$ 连接。
+其中 $\eta$ 是学习率。
+
+### 受限玻尔兹曼机
+
+受限玻尔兹曼机（RBM）是一种有一个输入层（可见层）和一个隐藏层的神经网络。训练后，RBM 可以将输入 $\mathbf{x}$ 映射到学习到的特征 $\mathbf{h}$。这种具有一个可见层和一个隐藏层的受限玻尔兹曼机，两层均由二进制单元组成。受限玻尔兹曼机在层与层之间全连接，层内部没有连接。两层通过连接矩阵 $\mathbf{W}$ 连接。
 
 $\mathbf{x}$ 和 $\mathbf{h}$ 的联合分布可以建模为：
 
 ```
-$p(\mathbf{x}, \mathbf{h}) = \frac{\exp(-E(\mathbf{x}, \mathbf{h}))}{Z}$ (5.18)
+p(\mathbf{x}, \mathbf{h}) = \frac{\exp(-E(\mathbf{x}, \mathbf{h}))}{Z} \quad (5.18)
 ```
 
 其中 $E(\mathbf{x}, \mathbf{h})$ 是能量函数：
 
 ```
-$E(\mathbf{x}, \mathbf{h}) = -\mathbf{h}^T \mathbf{W} \mathbf{x} - \mathbf{c}^T \mathbf{h}$ (5.19)
+E(\mathbf{x}, \mathbf{h}) = -\mathbf{h}^T \mathbf{W} \mathbf{x} - \mathbf{c}^T \mathbf{h} \quad (5.19)
 ```
 
-![](img/f9b50d48a9ba5d6b2e7f6b9761812434_148_0.png)
+![图片](img/f9b50d48a9ba5d6b2e7f6b9761812434_148_0.png)
 
 并且 $Z$ 是归一化因子，类比物理系统被称为*配分函数*。
 
 ```
-$Z = \sum_{\mathbf{x,h}} \exp(-E(\mathbf{x,h})).$
+Z = \sum_{\mathbf{x,h}} \exp(-E(\mathbf{x,h})).
 ```
 
 那么，在训练集中观测到 $\mathbf{x}^{(i)}$ 的概率为：
 
 ```
-$p(\mathbf{x}^{(i)}) = \sum_{h} p(\mathbf{x}^{(i)}, \mathbf{h}) = \sum_{h} \frac{\exp(-E(\mathbf{x}^{(i)}, \mathbf{h}))}{Z}.$
+p(\mathbf{x}^{(i)}) = \sum_{h} p(\mathbf{x}^{(i)}, \mathbf{h}) = \sum_{h} \frac{\exp(-E(\mathbf{x}^{(i)}, \mathbf{h}))}{Z}.
 ```
 
-我们将问题建模为极大似然然问题。我们需要最大化观测到训练集 $\prod p(\mathbf{v}^{(i)})$ 的概率。与其直接最大化它，不如等价地最小化负对数似然 $-\sum \log p(\mathbf{v}^{(i)})$。
+我们将问题建模为极大似然问题。我们需要最大化观测到训练集 $\prod p(\mathbf{v}^{(i)})$ 的概率。与其直接最大化它，不如等价地最小化负对数似然 $-\sum \log p(\mathbf{v}^{(i)})$。
 
 采用随机梯度下降（SGD）来更新参数。令 $\theta$ 表示参数，包括连接矩阵 $\mathbf{W}$ 以及偏置项 $\mathbf{b}$ 和 $\mathbf{c}$。每一步的更新规则为：
 
 ```
-$$\theta \leftarrow \theta - \eta \cdot \frac{\partial \log p(\mathbf{v}^{(i)})}{\partial \theta}.$
+\theta \leftarrow \theta - \eta \cdot \frac{\partial \log p(\mathbf{v}^{(i)})}{\partial \theta}.
 ```
-
-# 数据流的特征工程
 
 所以，如果我们能计算 (5.22) 中的导数，学习过程就可以平滑执行。
 
 从 (5.21) 和 (5.20) 出发，我们可以将导数写为 $E$：
 
 ```
-$$\frac{\partial}{\partial\theta} p(\mathbf{x}^{(t)}) = -\frac{\partial}{\partial\theta} \log \sum_{\mathbf{h}} \exp(-E(\mathbf{x}^{(t)}, \mathbf{h})) + \frac{\partial}{\partial\theta} \log \sum_{\mathbf{x}} \exp(-E(\mathbf{x}, \mathbf{h}))$$
-= + \frac{1}{\sum_{\mathbf{h}} \exp(-E(\mathbf{x}^{(t)}, \mathbf{h}))} \sum_{\mathbf{h}} \exp(-E(\mathbf{x}^{(t)}, \mathbf{h})) \frac{\partial E(\mathbf{x}^{(t)}, \mathbf{h})}{\partial\theta} - \sum_{\mathbf{x}} \exp(-E(\mathbf{x}, \mathbf{h})) \frac{\partial E(\mathbf{x}, \mathbf{h})}{\partial\theta}$$
-= \mathbb{E}_{\mathbf{h}} [\frac{\partial E(\mathbf{x}^{(t)}, \mathbf{h})}{\partial\theta}] - \mathbb{E}_{\mathbf{x}} [\frac{\partial E(\mathbf{x}, \mathbf{h})}{\partial\theta}] (5.23)
+\frac{\partial}{\partial\theta} p(\mathbf{x}^{(t)}) = -\frac{\partial}{\partial\theta} \log \sum_{\mathbf{h}} \exp(-E(\mathbf{x}^{(t)}, \mathbf{h})) + \frac{\partial}{\partial\theta} \log \sum_{\mathbf{x}} \exp(-E(\mathbf{x}, \mathbf{h}))
+= + \frac{1}{\sum_{\mathbf{h}} \exp(-E(\mathbf{x}^{(t)}, \mathbf{h}))} \sum_{\mathbf{h}} \exp(-E(\mathbf{x}^{(t)}, \mathbf{h})) \frac{\partial E(\mathbf{x}^{(t)}, \mathbf{h})}{\partial\theta} - \sum_{\mathbf{x}} \exp(-E(\mathbf{x}, \mathbf{h})) \frac{\partial E(\mathbf{x}, \mathbf{h})}{\partial\theta}
+= \mathbb{E}_{\mathbf{h}} [\frac{\partial E(\mathbf{x}^{(t)}, \mathbf{h})}{\partial\theta}] - \mathbb{E}_{\mathbf{x}} [\frac{\partial E(\mathbf{x}, \mathbf{h})}{\partial\theta}] \quad (5.23)
 ```
 
-在 (5.23) 中，第一个期望是针对 $\mathbf{h}$ 的，第二个期望是针对 $\mathbf{x}$ 和 $\mathbf{h}$ 的。注意，在给定 $\mathbf{x}$ 和 $\mathbf{h}$ 的情况下计算 $\frac{\partial E}{\partial\theta}$ 是行的，但计算第二个期望是不可行的，因为我们必须对 $\mathbf{x}$ 和 $\mathbf{h}$ 进行指数求和。我们必须近似这一项以便高效执行 SGD。
 
-采用吉布斯采样（Gibbs Sampling）来估计期望值。对于 $k$ 步，从训练样本 $\mathbf{x}^{(i)}$ 开始：
+
+在 (5.23) 中，第一个期望是针对 $\mathbf{h}$ 的，第二个期望是针对 $\mathbf{x}$ 和 $\mathbf{h}$ 的。注意，在给定 $\mathbf{x}$ 和 $\mathbf{h}$ 的情况下计算 $\frac{\partial E}{\partial\theta}$ 是可行的，但计算第二个期望是不可行的，因为我们必须对 $\mathbf{x}$ 和 $\mathbf{h}$ 进行指数求和。我们必须近似这一项以便高效执行 SGD。
+
+采用吉布斯采样来估计期望值。对于 $k$ 步，从训练样本 $\mathbf{x}^{(i)}$ 开始：
 
 ```
 $$\mathbf{h}^{(1)} \sim p(\mathbf{h}|\mathbf{x}^{(i)})$$
@@ -2101,21 +1806,18 @@ $$p(\mathbf{x}) = \prod_{j} p(h_j|\mathbf{x}); (5.26)
 ```
 $$p(\mathbf{h}|\mathbf{x}) = \frac{p(\mathbf{x}, \mathbf{h})}{\sum p(\mathbf{x}, \mathbf{h})} \dots$$
 ```
+
 （注：此处原文未显示完整，已根据上下文逻辑处理）
 
 由于原文提供的文本在某些公式处存在截断或重复，译文已基于逻辑进行了对齐，并保持了格式。
 
-
-
-
-
 ## 机器学习与数据分析中的特征工程
 
-...假阳性。当特征被添加到模型时，财富会增加；当特征未被选中时，财富会减少。p值是特征系数实际上为零时被判断为非零的概率。它是基于 $\Delta$-对数似然等同于t统计量的这一事实计算的。Alpha投资（Alpha-investing）是通过自适应调整阈值来选择特征，例如，当添加新特征时，人们“投资”增加财富，提高阈值，并允许错误包含特征的概率略微增加。每个特征经过测试并发现是不显著的时，财富被“消耗”，从而降低阈值以保证虚假特征的数量不超过目标比例。
+...假阳性。当特征被添加到模型时，财富会增加；当特征未被选中时，财富会减少。p值是特征系数实际上为零时被判断为非零的概率。它是基于 $\Delta$-对数似然等同于t统计量的这一事实计算的。Alpha投资是通过自适应调整阈值来选择特征，例如，当添加新特征时，人们“投资”增加财富，提高阈值，并允许错误包含特征的概率略微增加。每个特征经过测试并发现是不显著的时，财富被“消耗”，从而降低阈值以保证虚假特征的数量不超过目标比例。
 
 ## 5.5.3 在线流式特征选择算法
 
-对于嫁接算法（grafting algorithm），我们需要预先知道所有特征以确定 $\alpha$ 的值。对于Alpha投资算法，我们需要关于特征空间结构的一些先验知识，以启发式地控制候选特征的选择；然而，在流式设置下很难获取此类信息。提出了一种在线特征选择算法（OSFS）来解决这些具有挑战性的问题 [6]。
+对于嫁接算法，我们需要预先知道所有特征以确定 $\alpha$ 的值。对于Alpha投资算法，我们需要关于特征空间结构的一些先验知识，以启发式地控制候选特征的选择；然而，在流式设置下很难获取此类信息。提出了一种在线特征选择算法（OSFS）来解决这些具有挑战性的问题 [6]。
 
 我们可以将整个集合分为四个基本子集：(1) 无关特征，(2) 冗余特征，(3) 相关但不冗余的特征，以及(4) 强相关特征。最优特征选择算法应该选择非冗余且强相关的特征。对于流特征，很难找到所有强相关且非冗余特征——使用两阶段方案进行在线相关性和冗余分析——OSFS的框架如下：
 
@@ -2133,49 +1835,14 @@ $$p(\mathbf{h}|\mathbf{x}) = \frac{p(\mathbf{x}, \mathbf{h})}{\sum p(\mathbf{x},
 
 ## 5.5.4 社交媒体中的无监督流式特征选择
 
-现有的流式特征选择算法利用标签信息来引导特征选择过程。然而，标注是非常耗时且费力的；但很容易聚集大量的无标签数据。提出了一种USFS算法来处理社交媒体中的大规模无标签数据 [33]。USFS利用链接信息等外部数据源来实现无监督特征选择。USFS通过链接成员随机块（link membership stochastic block）[17] 发现隐藏因子。利用因子矩阵 $\Pi \in \mathbb{R}^{n \times k}$，USFS将这些作为特征选择的约束。在给定的时间戳 $t$，令 $\mathbf{X}^{(t)}$ 和 $\mathbf{W}^{(t)}$ 分别表示相应的特征矩阵和特征系数。USFS构建一个图 $\mathcal{G}$ 来表示特征相似性，$A$ 表示其邻接矩阵；$\mathbf{L}^{(t)}$ 是 $\mathbf{X}^{(t)}$ 对应的拉普拉斯矩阵。我们随后使用以下公式在时间步 $t$ 实现特征选择：
+现有的流式特征选择算法利用标签信息来引导特征选择过程。然而，标注是非常耗时且费力的；但很容易聚集大量的无标签数据。提出了一种USFS算法来处理社交媒体中的大规模无标签数据 [33]。USFS利用链接信息等外部数据源来实现无监督特征选择。USFS通过链接成员随机块 [17] 发现隐藏因子。利用因子矩阵 $\Pi \in \mathbb{R}^{n \times k}$，USFS将这些作为特征选择的约束。在给定的时间戳 $t$，令 $\mathbf{X}^{(t)}$ 和 $\mathbf{W}^{(t)}$ 分别表示相应的特征矩阵和特征系数。USFS构建一个图 $\mathcal{G}$ 来表示特征相似性，$A$ 表示其邻接矩阵；$\mathbf{L}^{(t)}$ 是 $\mathbf{X}^{(t)}$ 对应的拉普拉斯矩阵。我们随后使用以下公式在时间步 $t$ 实现特征选择：
 
+```
 $$\frac{1}{2w^{(t)}}|\mathbf{X}^{(t)}\mathbf{W}^{(t)} - \Pi||_2^2 + \alpha \sum_{i=1}^k ||\mathbf{Y}^{(t)}_i||_1^2 + \frac{1}{2}|\mathbf{W}^{(t)}||_2^2 + \frac{1}{2}|(\mathbf{X}^{(t)}\mathbf{W}^{(t)})(\mathbf{L}^{(t)})^T||_2^2,$$
 (5.31)
+```
 
-其中 $\alpha$ 控制稀疏性，$\gamma$ 平衡不同来源的贡献。在给定的时间戳 $t$，令 $\mathbf{X}^{(t)}$ 和 $\mathbf{W}^{(t)}$ 分别表示相应的特征矩阵和特征系数。USFS构建一个图 $\mathcal{G}$ 来表示特征相似性，$A$ 表示其邻接矩阵；$\mathbf{L}^{(t)}$ 是 $\mathbf{X}^{(t)}$ 对应的拉普拉斯矩阵。我们随后使用以下公式在时间步 $t$ 实现特征选择：
-
-$$\frac{1}{2w^{(t)}}|\mathbf{X}^{(t)}\mathbf{W}^{(t)} - \Pi||_2^2 + \alpha \sum_{i=1}^k ||\mathbf{Y}^{(t)}_i||_1^2 + \frac{1}{2}|\mathbf{W}^{(t)}||_2^2 + \frac{1}{2}|(\mathbf{X}^{(t)}\mathbf{W}^{(t)})(\mathbf{L}^{(t)})^T||_2^2,$$
-(5.31)
-
-其中 $\alpha$ 控制稀疏性，$\gamma$ 平衡不同来源的贡献。在给定的时间戳 $t$，令 $\mathbf{X}^{(t)}$ 和 $\mathbf{W}^{(t)}$ 分别表示相应的特征矩阵和特征系数。USFS构建一个图 $\mathcal{G}$ 来表示特征相似性，$A$ 表示其邻接矩阵；$\mathbf{L}^{(t)}$ 是 $\mathbf{X}^{(t)}$ 对应的拉普拉斯矩阵。我们随后使用以下公式在时间步 $t$ 实现特征选择：
-
-$$\frac{1}{2w^{(t)}}|\mathbf{X}^{(t)}\mathbf{W}^{(t)} - \Pi||_2^2 + \alpha \sum_{i=1}^k ||\mathbf{Y}^{(t)}_i||_1^2 + \frac{1}{2}|\mathbf{W}^{(t)}||_2^2 + \frac{1}{2}|(\mathbf{X}^{(t)}\mathbf{W}^{(t)})(\mathbf{L}^{(t)})^T||_2^2,$$
-(5.31)
-
-其中 $\alpha$ 控制稀疏性，$\gamma$ 平衡不同来源的贡献。在给定的时间戳 $t$，令 $\mathbf{X}^{(t)}$ 和 $\mathbf{W}^{(t)}$ 分别表示相应的特征矩阵和特征系数。USFS构建一个图 $\mathcal{G}$ 来表示特征相似性，$A$ 表示其邻接矩阵；$\mathbf{L}^{(t)}$ 是 $\mathbf{X}^{(t)}$ 对应的拉普拉斯矩阵。我们随后使用以下公式在时间步 $t$ 实现特征选择：
-
-$$\frac{1}{2w^{(t)}}|\mathbf{X}^{(t)}\mathbf{W}^{(t)} - \Pi||_2^2 + \alpha \sum_{i=1}^k ||\mathbf{Y}^{(t)}_i||_1^2 + \frac{1}{2}|\mathbf{W}^{(t)}||_2^2 + \frac{1}{2}|(\mathbf{X}^{(t)}\mathbf{W}^{(t)})(\mathbf{L}^{(t)})^T||_2^2,$$
-(5.31)
-
-其中 $\alpha$ 控制稀疏性，$\gamma$ 平衡不同来源的贡献。在给定的时间戳 $t$，令 $\mathbf{X}^{(t)}$ 和 $\mathbf{W}^{(t)}$ 分别表示相应的特征矩阵和特征系数。USFS构建一个图 $\mathcal{G}$ 来表示特征相似性，$A$ 表示其邻接矩阵；$\mathbf{L}^{(t)}$ 是 $\mathbf{X}^{(t)}$ 对应的拉普拉斯矩阵。我们随后使用以下公式在时间步 $t$ 实现特征选择：
-
-$$\frac{1}{2w^{(t)}}|\mathbf{X}^{(t)}\mathbf{W}^{(t)} - \Pi||_2^2 + \alpha \sum_{i=1}^k ||\mathbf{Y}^{(t)}_i||_1^2 + \frac{1}{2}|\mathbf{W}^{(t)}||_2^2 + \frac{1}{2}|(\mathbf{X}^{(t)}\mathbf{W}^{(t)})(\mathbf{L}^{(t)})^T||_2^2,$$
-(5.31)
-
-其中 $\alpha$ 控制稀疏性，$\gamma$ 平衡不同来源的贡献。在给定的时间戳 $t$，令 $\mathbf{X}^{(t)}$ 和 $\mathbf{W}^{(t)}$ 分别表示相应的特征矩阵和特征系数。USFS构建一个图 $\mathcal{G}$ 来表示特征相似性，$A$ 表示其邻接矩阵；$\mathbf{L}^{(t)}$ 是 $\mathbf{X}^{(t)}$ 对应的拉普拉斯矩阵。我们随后使用以下公式在时间步 $t$ 实现特征选择：
-
-$$\frac{1}{2w^{(t)}}|\mathbf{X}^{(t)}\mathbf{W}^{(t)} - \Pi||_2^2 + \alpha \sum_{i=1}^k ||\mathbf{Y}^{(t)}_i||_1^2 + \frac{1}{2}|\mathbf{W}^{(t)}||_2^2 + \frac{1}{2}|(\mathbf{X}^{(t)}\mathbf{W}^{(t)})(\mathbf{L}^{(t)})^T||_2^2,$$
-(5.31)
-
-其中 $\alpha$ 控制稀疏性，$\gamma$ 平衡不同来源的贡献。在给定的时间戳 $t$，令 $\mathbf{X}^{(t)}$ 和 $\mathbf{W}^{(t)}$ 分别表示相应的特征矩阵和特征系数。USFS构建一个图 $\mathcal{G}$ 来表示特征相似性，$A$ 表示其邻接矩阵；$\mathbf{L}^{(t)}$ 是 $\mathbf{X}^{(t)}$ 对应的拉普拉斯矩阵。我们随后使用以下公式在时间步 $t$ 实现特征选择：
-
-$$\frac{1}{2w^{(t)}}|\mathbf{X}^{(t)}\mathbf{W}^{(t)} - \Pi||_2^2 + \alpha \sum_{i=1}^k ||\mathbf{Y}^{(t)}_i||_1^2 + \frac{1}{2}|\mathbf{W}^{(t)}||_2^2 + \frac{1}{2}|(\mathbf{X}^{(t)}\mathbf{W}^{(t)})(\mathbf{L}^{(t)})^T||_2^2,$$
-(5.31)
-
-其中 $\alpha$ 控制稀疏性，$\gamma$ 平衡不同来源的贡献。在给定的时间戳 $t$，令 $\mathbf{X}^{(t)}$ 和 $\mathbf{W}^{(t)}$ 分别表示相应的特征矩阵和特征系数。USFS构建一个图 $\mathcal{G}$ 来表示特征相似性，$A$ 表示其邻接矩阵；$\mathbf{L}^{(t)}$ 是 $\mathbf{X}^{(t)}$ 对应的拉普拉斯矩阵。我们随后使用以下公式在时间步 $t$ 实现特征选择：
-
-$$\frac{1}{2w^{(t)}}|\mathbf{X}^{(t)}\mathbf{W}^{(t)} - \Pi||_2^2 + \alpha \sum_{i=1}^k ||\mathbf{Y}^{(t)}_i||_1^2 + \frac{1}{2}|\mathbf{W}^{(t)}||_2^2 + \frac{1}{2}|(\mathbf{X}^{(t)}\mathbf{W}^{(t)})(\mathbf{L}^{(t)})^T||_2^2,$$
-(5.31)
-
-其中 $\alpha$ 控制稀疏性，$\gamma$ 平衡不同来源的贡献。在给定的时间戳 $t$，令 $\mathbf{X}^{(t)}$ 和 $\mathbf{W}^{(t)}$ 分别表示相应的特征矩阵和特征系数。USFS构建一个图 $\mathcal{G}$ 来表示特征相似性，$A$ 表示其邻接矩阵；$\mathbf{L}^{(t)}$ 是 $\mathbf{X}^{(t)}$ 对应的拉普拉斯矩阵。我们随后使用以下公式在时间步 $t$ 实现特征选择：
-
-$\alpha$ 控制稀疏性，$\gamma$ 平衡不同来源的贡献。在给定的时间戳 $t$，包含新特征将被移除。否则包含新特征将是 (5.31)。
+其中 $\alpha$ 控制稀疏性，$\gamma$ 平衡不同来源的贡献。
 
 # 数据流特征工程
 
@@ -2183,32 +1850,18 @@ $\alpha$ 控制稀疏性，$\gamma$ 平衡不同来源的贡献。在给定的�
 
 在本节中，我们回顾了特征集非固定的流实例特征选择。
 
-## 机器学习与数据分析中的特征工程
-
-最优特征选择算法应该选择非冗余且强相关的特征。对于流特征，很难找到所有强相关且非冗余特征——使用两阶段方案进行在线相关性和冗余分析——OSFS的框架如下：
-
-- 初始化 $BCF = 0$。
-- 添加新特征 $f_i$。
-- 在线相关性分析：
-  > 如果 $f_i$ 与类别标签无关，则忽略 $f_i$。
-  $BCF = BCF \cup f_i$
-- 在线冗余分析。
-- 重复直到满足停止标准。
-
-在在线相关性分析阶段，OSFS将强弱相关的特征加入最佳候选特征（BCFs）。如果新特征无关，则将其丢弃；否则，将其加入BCFs中。
-
-在在线冗余分析阶段，OSFS动态地从选集中消除冗余特征。对于BCFs中的每个特征 $f_i$，如果BCFs中存在一个子集，使得 $f_i$ 与类别标签存在条件依赖，则将 $f_i$ 从BCFs中消除。提高效率的一种方法是将此阶段进一步分为两类分析——内部冗余分析和外部冗余分析。在内部冗余分析中，OSFS重新检查新加入BCFs的特征；而在外部冗余分析中，只有当我们停止添加新特征时才重新检查BCFs的每个特征。
-
 ### 5.6.1 在线特征选择
 
 对于大多数特征提取和选择算法，我们通常需要预定义要提取和选择的特征数量。然而，通常不知道最优特征数量是多少。大量的特征会增加包含噪声、冗余和无关特征的风险，从而损害学习性能。另一方面，包含过少的特征也不好，这可能不足以捕捉数据的复杂性。在实践中，我们通常采用启发式方法对特征进行网格搜索，并选择分类或聚类性能最好的数量。
 
 ### 5.6.2 数据流无监督特征选择
 
-现有的流式特征选择算法利用标签信息来引导特征选择过程。然而，标注是非常耗时且费力的；但很容易聚集大量的无标签数据。提出了一种USFS算法来处理社交媒体中的大规模无标签数据 [33]。USFS利用链接信息等外部数据源来实现无监督特征选择。USFS通过链接成员随机块（link membership stochastic block）[17] 发现隐藏因子。利用因子矩阵 $\Pi \in \mathbb{R}^{n \times k}$，USFS将这些作为特征选择的约束。在给定的时间戳 $t$，令 $\mathbf{X}^{(t)}$ 和 $\mathbf{W}^{(t)}$ 分别表示相应的特征矩阵和特征系数。USFS构建一个图 $\mathcal{G}$ 来表示特征相似性，$A$ 表示其邻接矩阵；$\mathbf{L}^{(t)}$ 是 $\mathbf{X}^{(t)}$ 对应的拉普拉斯矩阵。我们随后使用以下公式在时间步 $t$ 实现特征选择：
+现有的流式特征选择算法利用标签信息来引导特征选择过程。然而，标注是非常耗时且费力的；但很容易聚集大量的无标签数据。提出了一种USFS算法来处理社交媒体中的大规模无标签数据 [33]。USFS利用链接信息等外部数据源来实现无监督特征选择。USFS通过链接成员随机块 [17] 发现隐藏因子。利用因子矩阵 $\Pi \in \mathbb{R}^{n \times k}$，USFS将这些作为特征选择的约束。在给定的时间戳 $t$，令 $\mathbf{X}^{(t)}$ 和 $\mathbf{W}^{(t)}$ 分别表示相应的特征矩阵和特征系数。USFS构建一个图 $\mathcal{G}$ 来表示特征相似性，$A$ 表示其邻接矩阵；$\mathbf{L}^{(t)}$ 是 $\mathbf{X}^{(t)}$ 对应的拉普拉斯矩阵。我们随后使用以下公式在时间步 $t$ 实现特征选择：
 
+```
 $$\frac{1}{2w^{(t)}}|\mathbf{X}^{(t)}\mathbf{W}^{(t)} - \Pi||_2^2 + \alpha \sum_{i=1}^k ||\mathbf{Y}^{(t)}_i||_1^2 + \frac{1}{2}|\mathbf{W}^{(t)}||_2^2 + \frac{1}{2}|(\mathbf{X}^{(t)}\mathbf{W}^{(t)})(\mathbf{L}^{(t)})^T||_2^2,$$
 (5.31)
+```
 
 其中 $\alpha$ 控制稀疏性，$\gamma$ 平衡不同来源的贡献。
 
@@ -2222,15 +1875,13 @@ $$\frac{1}{2w^{(t)}}|\mathbf{X}^{(t)}\mathbf{W}^{(t)} - \Pi||_2^2 + \alpha \sum_
 
 ### 5.7.2 特征数量
 
+
+
 对于大多数特征提取和选择算法，我们通常需要预定义要提取和选择的特征数量。然而，通常不知道最优特征数量是多少。大量的特征会增加包含一些噪声、冗余和无关特征的风险，从而损害学习性能。另一方面，包含过少的特征也不好，这可能不足以捕捉数据的复杂性。
 
 ### 5.7.3 异构流数据
 
-除了数量和速度，大数据的另一个特征是多样性，例如 Flickr 中的图像通常与标签和文本描述相关，而生物信息学的最新进展揭示了某些RNA相关的非编码 RNA 物种。因此，现实数据与多个流相关。一方面，异构数据流挑战了大多数为同质数据设计的传统特征工程算法。另一方面，多个数据源的可用性使得解决同质数据无法解决的问题成为可能。
-
-
-
-
+除了数量和速度，大数据的另一个特征是多样性，例如 Flickr 中的图像通常与标签和文本描述相关，而生物信息学的最新进展揭示了某些 RNA 相关的非编码 RNA 物种。因此，现实数据与多个流相关。一方面，异构数据流挑战了大多数为同质数据设计的传统特征工程算法。另一方面，多个数据源的可用性使得解决同质数据无法解决的问题成为可能。
 
 # 致谢
 
@@ -2238,294 +1889,104 @@ $$\frac{1}{2w^{(t)}}|\mathbf{X}^{(t)}\mathbf{W}^{(t)} - \Pi||_2^2 + \alpha \sum_
 
 ## 参考文献
 
-- [1] Charu C Aggarwal. 数据流：模型与算法, 第 31 . Springer Science & Business Media, 2007.
-
-- [2] Raman Arora, Andy Cutter, and Nati Srebro. 带有截断均方误差（capped msq）的 pca 随机优化.发表于 Advances in Neural Information Processing Systems, 1815–1823, 2013.
-
-- [3] Akshay Balsubramani, Sanjay Dasgupta, and Yoav Freund. 增量式 pca 的快速收敛.发表于 Advances in Neural Information Processing Systems, 3174–3182, 2013.
-
+- [1] Charu C Aggarwal. 数据流：模型与算法, 第 31 卷. Springer Science & Business Media, 2007.
+- [2] Raman Arora, Andy Cutter, and Nati Srebro. 带有截断均方误差的 PCA 随机优化. 发表于 Advances in Neural Information Processing Systems, 1815–1823, 2013.
+- [3] Akshay Balsubramani, Sanjay Dasgupta, and Yoav Freund. 增量式 PCA 的快速收敛. 发表于 Advances in Neural Information Processing Systems, 3174–3182, 2013.
 - [4] Yoshua Bengio, Aaron Courville, and Pascal Vincent. 表征学习：综述与新视角. IEEE Transactions on Pattern Analysis and Machine Intelligence, 35(8):1798–1828, 2013.
-
-- [5] Yoshua Bengio, Jean-Francois Pacient, Olivier Delalau, Nicolas L Roux, and Marie Onimet. leau, isomap, midsmaps 和谱聚类的样本外扩展.发表于 Advances in Neural Information Processing Systems, 177–184, 2004. 
-
-- [6] Christos Bostostidis, Dan Garber, Zoharin Karin, and Edo Liberty. 在线主成分分析.发表于 Proceedings of the Twenty-Sixth Annual ACM-SIAM Symposium on Discrete Algorithms, pages 887–901. Society for Industrial and Applied Mathematics, 2015.
-
-- [7] Gert Cenberg and Tomoso Poggio. 增量与增量支持向量机学习.发表于 Advances in Neural Information Processing Systems, pages 409–415, 2001.
-
-- [8] Shiyu Chang, Yang Zhang, Jihang Tang, Dawei Yin, Yi Chang, Mark A Hasegawa-Johnson, and Thomas S Huang. 流式网络中的正负标记学习.发表于 Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, pages 755–764. 2016.
-
-# 数据流特征工程
-
+- [5] Yoshua Bengio, Jean-Francois Pacient, Olivier Delalau, Nicolas L Roux, and Marie Onimet. LLE, Isomap, MDSmaps 和谱聚类的样本外扩展. 发表于 Advances in Neural Information Processing Systems, 177–184, 2004.
+- [6] Christos Boutsidis, Dan Garber, Zohar Karnin, and Edo Liberty. 在线主成分分析. 发表于 Proceedings of the Twenty-Sixth Annual ACM-SIAM Symposium on Discrete Algorithms, pages 887–901. Society for Industrial and Applied Mathematics, 2015.
+- [7] Gert Lanckriet and Tomaso Poggio. 增量与增量支持向量机学习. 发表于 Advances in Neural Information Processing Systems, pages 409–415, 2001.
+- [8] Shiyu Chang, Yang Zhang, Jihang Tang, Dawei Yin, Yi Chang, Mark A Hasegawa-Johnson, and Thomas S Huang. 流式网络中的正负标记学习. 发表于 Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, pages 755–764. 2016.
 - [9] Jing Chen and Yang Liu. 局部线性嵌入：综述. Artificial Intelligence Mining, 36(1):29–48, 2011.
-
-- [10] Delin Chun, Li-Zhi Liao, Michael Kwok-Po Ng, and Xiaoyan Wang. 增量式判别分析：快速算法与对比. IEEE Transactions on Neural Networks and Learning Systems, 26(11):2716–2735, 2015.
-
-- [11] Kenneth L Clarkson and David Woodruff. 流式模型中的数值代数.发表于 Proceedings of the Forty-First Annual ACM Symposium on Theory of Computing, pages 205–214. ACM, 2009.
-
-- [12] Inderjit S Dhillon, Yujiang Guan, and Brian Kulis. 卷积 k-means：谱聚类与归一化切.发表于 Proceedings of the Tenth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, pages 551–556. ACM, 2004.
-
+- [10] Delin Chu, Li-Zhi Liao, Michael Kwok-Po Ng, and Xiaoyan Wang. 增量式判别分析：快速算法与对比. IEEE Transactions on Neural Networks and Learning Systems, 26(11):2716–2735, 2015.
+- [11] Kenneth L Clarkson and David Woodruff. 流式模型中的数值代数. 发表于 Proceedings of the Forty-First Annual ACM Symposium on Theory of Computing, pages 205–214. ACM, 2009.
+- [12] Inderjit S Dhillon, Yuqiang Guan, and Brian Kulis. 加权核 K-means：谱聚类与归一化割. 发表于 Proceedings of the Tenth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, pages 551–556. ACM, 2004.
 - [13] Pedro Domingos. 关于机器学习需要了解的几点. Communications of the ACM, 55(10):78–87, 2012.
-
-- [14] George H Duntman. 主成分分析. 第 69 . Sage, 1989.
-
-- [15] Wei Fan and Albert B. 数据挖掘：现状与对未来的展望. ACM SIGKDD Explorations Newsletter, 14(2):1–5, 2013.
-
-- [16] Jiayshi Feng, Huan Xu, and Shicheng Yan. 通过随机优化优实现在线鲁棒 pca.发表于 Advances in Neural Information Processing Systems, pages 404–412, 2013.
-
-- [17] Wenjie Fu, Le Song, and Eric P Xing. 适用于演化网络的动态混合成员块模型.发表于 Proceedings of the 26th Annual International Conference on Machine Learning, pages 329–336. ACM, 2009.
-
-- [18] Lukasz Golub and M Tamer Oszu. 数据流管理问题. ACM Mining Record, 32(2):1–5, 2003.
-
+- [14] George H Dunteman. 主成分分析. 第 69 卷. Sage, 1989.
+- [15] Wei Fan and Albert Bifet. 数据挖掘：现状与对未来的展望. ACM SIGKDD Explorations Newsletter, 14(2):1–5, 2013.
+- [16] Jiashi Feng, Huan Xu, and Shie Mannor. 通过随机优化实现在线鲁棒 PCA. 发表于 Advances in Neural Information Processing Systems, pages 404–412, 2013.
+- [17] Wenjie Fu, Le Song, and Eric P Xing. 适用于演化网络的动态混合成员块模型. 发表于 Proceedings of the 26th Annual International Conference on Machine Learning, pages 329–336. ACM, 2009.
+- [18] Lukasz Golab and M Tamer Ozsu. 数据流管理问题. ACM SIGMOD Record, 32(2):1–5, 2003.
 - [19] Ian Goodfellow, Yoshua Bengio, and Aaron Courville. 深度学习. MIT Press, 2016. http://www.deeplearningbook.org.
-
-- [20] Isabelle Guillon and André Elisseff. 特征提取简介. Feature Extraction, pages 1–25, 2006.
-
-- [21] Geoffrey E Hinton and Richard S Zenel. 自动编码器、最小描述长度与亥姆霍兹自由能.发表于 Advances in Neural Information Processing Systems, pages 3–10, 1994.
-
-- [22] Kazuyuki Hirooka, Ken-ichi Hidai, Masashi Hamahira, Hiroshi Mizoguchi, Tanaka Mishima, and Shuji Yoshizawa. 线性判别分析的连续学习：Sanger型型算法.发表于 Pattern Recognition, Proceedings. 15th International Conference on, volume 2, pages 664–667. IEEE, 2000.
-
-- [23] Hao Huang, Shinjiao Yao, and Shiva Prasad Kasiviswanathan. 数据流上的无监督特征选择.发表于 Proceedings of the 24th ACM International Conference on Information and Knowledge Management, pages 1031–1040, ACM, 2015.
-
-- [24] Moongo Geoh, Haesun Park, and Ben Rosen. 基于质心和最小二法的降维以高效处理文本数据.发表于 Proceedings of the 2001 SIAM International Conference on Data Mining, pages 1–13. SIAM, 2001.
-
-- [25] William B Johnson and Martin Lindenstrauss. 映射到希尔伯空间的扩展.发表于 Contemporary Mathematics, 26(18):177–206, 1994.
-
-- [26] Zohar Karin and Edo Liberty. 使用局部线性嵌入的面脸检测.发表于 Computer Vision, 105(2):277–28, 2007.
-
-- [27] Samuel Kaddour and Martin D. 在线式 pca.发表于 Machine Recognition, 43(1):298–30, 2007.
-
-- [28] Shiyu Chang, Yang Zhang. 增量式谱聚类.发表于 Proceedings of the 19th ACM SIGKDD Conference, pages 581–588, 2013.
-
-- [29] Gert Cenberg and Tomoso Poggio. 增量式支持向量机学习.发表于 Journal of Machine Learning, 16(111):1029–1040, 2015.
-
-- [30] Shannagethakumar Muthrnan et al. 数据流：算法与应用. Foundations and Trends in Theoretical Science, 1(2):117–226 2005.
-
-- [31] Vinod Nair and Geoffrey Hinton. 激活线性单元改进受限玻尔兹机器.发表于 Proceedings of the 27th International Conference on Machine Learning (ICML-10), pages 807–814, 2010.
-
-- [32] Jiazhou Nie, Wojciech Lotkowski, and Manfred K Warm. 具有最优正则性的在线 pca. Journal of Machine Learning Research, 17(17):49, 2016.
-
+- [20] Isabelle Guyon and André Elisseeff. 特征提取简介. Feature Extraction, pages 1–25, 2006.
+- [21] Geoffrey E Hinton and Richard S Zemel. 自动编码器、最小描述长度与亥姆霍兹自由能. 发表于 Advances in Neural Information Processing Systems, pages 3–10, 1994.
+- [22] Kazuyuki Hiraoka, Ken-ichi Hidai, Masashi Hamahira, Hiroshi Mizoguchi, Tanaka Mishima, and Shuji Yoshizawa. 线性判别分析的连续学习：Sanger 型算法. 发表于 Pattern Recognition, Proceedings. 15th International Conference on, volume 2, pages 664–667. IEEE, 2000.
+- [23] Hao Huang, Shinjae Yoo, and Shiva Prasad Kasiviswanathan. 数据流上的无监督特征选择. 发表于 Proceedings of the 24th ACM International Conference on Information and Knowledge Management, pages 1031–1040, ACM, 2015.
+- [24] Mongi Geoh, Haesun Park, and Ben Rosen. 基于质心和最小二乘法的降维以高效处理文本数据. 发表于 Proceedings of the 2001 SIAM International Conference on Data Mining, pages 1–13. SIAM, 2001.
+- [25] William B Johnson and Martin Lindenstrauss. 映射到希尔伯特空间的扩展. 发表于 Contemporary Mathematics, 26(18):177–206, 1994.
+- [26] Zohar Karnin and Edo Liberty. 使用局部线性嵌入的人脸检测. 发表于 Computer Vision, 105(2):277–288, 2007.
+- [27] Samuel Kaski and Martin D. 在线式 PCA. 发表于 Machine Learning, 43(1):298–307, 2007.
+- [28] Shiyu Chang, Yang Zhang. 增量式谱聚类. 发表于 Proceedings of the 19th ACM SIGKDD Conference, pages 581–588, 2013.
+- [29] Gert Lanckriet and Tomaso Poggio. 增量式支持向量机学习. 发表于 Journal of Machine Learning, 16(111):1029–1040, 2015.
+- [30] Shanmugavelayutham Muthukrishnan et al. 数据流：算法与应用. Foundations and Trends in Theoretical Computer Science, 1(2):117–226, 2005.
+- [31] Vinod Nair and Geoffrey Hinton. 修正线性单元改进受限玻尔兹曼机. 发表于 Proceedings of the 27th International Conference on Machine Learning (ICML-10), pages 807–814, 2010.
+- [32] Jiazhou Nie, Wojciech Kotlowski, and Manfred K Warmuth. 具有最优正则性的在线 PCA. Journal of Machine Learning Research, 17(17):49, 2016.
 - [33] Simon Perkins, Kevin Lacker, and James Theiler. Grafting：基于函数空间梯度下降的快速特征选择. Journal of Machine Learning Research, 3(Mar):1333–1356, 2003.
-
-- [34] Simon Perkins and James Theiler. 使用嫁接技术的在线特征选择.发表于 Proceedings of the 20th International Conference on Machine Learning (ICML-03), pages 592–599, 2003.
-
+- [34] Simon Perkins and James Theiler. 使用嫁接技术的在线特征选择. 发表于 Proceedings of the 20th International Conference on Machine Learning (ICML-03), pages 592–599, 2003.
 - [35] Sam T Roweis and Lawrence K Saul. 基于局部线性嵌入的非线性降维. Science, 290(5500):2323–2326, 2000.
 
-# 特征工程（注：由于原文文本中存在标题重复和编号混乱，译文已根据逻辑进行了对齐和整理）
 
-- [9] Jing Chen and Yang Liu. 局部线性嵌入：综述. Artificial Intelligence Mining, 36(1):29–48, 2011.
 
-- [10] Delin Chun, Li-Zhi Liao, Michael Kwok-Po Ng, and Xiaoyan Wang. 增量式判别分析：快速算法与对比. IEEE Transactions on Neural Networks and Learning Systems, 26(11):2716–2735, 2015.
-
-- [11] Kenneth L Clarkson and David Woodruff. 流式模型中的数值代数.发表于 Proceedings of the Forty-First Annual ACM Symposium on Theory of Computing, pages 205–214. ACM, 2009.
-
-- [12] Inderjit S Dhillon, Yujiang Guan, and Brian Kulis. 卷积 k-means：谱聚类与归一化切.发表于 Proceedings of the Tenth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, pages 551–556. ACM, 2004.
-
-- [13] Pedro Domingos. 关于机器学习需要了解的几点. Communications of the ACM, 55(10):78–87, 2012.
-
-- [14] George H Duntman. 主成分分析. 第 69 . Sage, 1989.
-
-- [15] Wei Fan and Albert B. 数据挖掘：现状与对未来的展望. ACM SIGKDD Explorations Newsletter, 14(2):1–5, 2013.
-
-- [16] Jiayshi Feng, Huan Xu, and Shicheng Yan. 通过随机优化优实现在线鲁棒 pca.发表于 Advances in Neural Information Processing Systems, pages 404–412, 2013.
-
-- [17] Wenjie Fu, Le Song, and Eric P Xing. 适用于演化网络的动态混合成员块模型.发表于 Proceedings of the 26th Annual International Conference on Machine Learning, pages 329–336. ACM, 2009.
-
-- [18] Lukasz Golub and M Tamer Oszu. 数据流管理问题. ACM Mining Record, 32(2):1–5, 2003.
-
-- [19] Ian Goodfellow, Yoshua Bengio, and Aaron Courville. 深度学习. MIT Press, 2016. http://www.deeplearningbook.org.
-
-- [20] Isabelle Guillon and André Elisseff. 特征提取简介. Feature Extraction, pages 1–25, 2006.
-
-- [21] Geoffrey E Hinton and Richard S Zenel. 自动编码器、最小描述长度与亥姆霍兹自由能.发表于 Advances in Neural Information Processing Systems, pages 3–10, 1994.
-
-- [22] Kazuyuki Hirooka, Ken-ichi Hidai, Masashi Hamahira, Hiroshi Mizoguchi, Tanaka Mishima, and Shuji Yoshizawa. 线性判别分析的连续学习：Sanger型算法.发表于 Pattern Recognition, Proceedings. 15th International Conference on, volume 2, pages 664–667. IEEE, 2000.
-
-- [23] Hao Huang, Shinjiao Yao, and Shiva Prasad Kasiviswanathan. 数据流上的无监督特征选择.发表于 Proceedings of the 24th ACM International Conference on Information and Knowledge Management, pages 1031–1040, ACM, 2015.
-
-- [24] Moongo Geoh, Haesun Park, and Ben Rosen. 基于质心和最小二法的降维以高效处理文本数据.发表于 Proceedings of the 2001 SIAM International Conference on Data Mining, pages 1–13. SIAM, 2001.
-
-- [25] William B Johnson and Martin Lindenstrauss. 映射到希尔伯空间的扩展.发表于 Contemporary Mathematics, 26(18):177–206, 1994.
-
-- [26] Zohar Karin and Edo Liberty. 使用局部线性嵌入的面脸检测.发表于 Computer Vision, 105(2):277–28, 2007.
-
-- [27] Samuel Kaddour and Martin D. 在线式 pca.发表于 Machine Learning, 43(1):298–30, 2007.
-
-- [28] Shiyu Chang, Yang Zhang. 增量式谱聚类.发表于 Proceedings of the 19th ACM SIGKDD Conference, pages 581–588, 2013.
-
-- [29] Gert Cenberg and Tomoso Poggio. 增量式支持向量机学习.发表于 Journal of Machine Learning, 16(111):1029–1040, 2015.
-
-- [30] Shannagethakumar Muthrnan et al. 数据流：算法与应用. Foundations and Trends in Theoretical Science, 1(2):117–226, 2005.
-
-- [31] Vinod Nair and Geoffrey Hinton. 激活线性单元改进受限玻尔兹机器.发表于 Proceedings of the 27th International Conference on Machine Learning (ICML-10), pages 807–814, 2010.
-
-- [42] Jiazhou Nie, Wojciech Lotkowski, and Manfred K Warm. 具有最优正则性的在线 pca. Journal of Machine Learning Research, 17(17):49, 2016.
-
-- [43] Simon Perkins, Kevin Lacker, and James Theiler. Grafting：基于函数空间梯度下降的快速特征选择. Journal of Machine Learning Research, 3(Mar):1333–1356, 2003.
-
-- [44] Simon Perkins and James Theiler. 使用嫁接技术的在线特征选择.发表于 Proceedings of the 20th International Conference on Machine Learning (ICML-03), pages 592–599, 2003.
-
-- [45] Sam T Roweis and Lawrence K Saul. 基于局部线性嵌入的非线性降维. Science, 290(5500):2323–2326, 2000.
-
-
-
-
-机器学习与数据分析中的特征工程
-
-+ [47] Stefan Ruping. 支持向量机的增量学习. In Data Mining, 2001, ICDM 2001, Proceedings IEEE International Conference on, pages 641–642. IEEE, 2001.
-
-+ [48] Ruslan Salakhutdinov, Andrey Mnih, and Geoffrey Hinton. 用于协同过滤的受限玻尔兹曼机. In Proceedings of the 24th International Conference on Machine learning, pages 791–798. ACM, 2007.
-
-+ [49] Tamas Sarlos. 通过随机投影改进大矩阵算法. In Foundations of Computer Science, 2006. 47th Annual IEEE Symposium on, pages 143–152. IEEE, 2006.
-
-+ [50] Lawrence K Saul and Sam T Roweis. 全局思考，局部适应：低维形的无监督学习. Journal of Machine Learning Research, 4(Jun):119–155, 2003.
-
-+ [51] Bernhard Schölkopf and Alexander J Smola. 核学习：支持向量正则化、优化及超越. MIT press, 2002.
-
-+ [52] Jonathan A Silva, Elaine R Faria, Rodrigo C Barros, Eduardo R Hruscha, Andre P De Carvalho, and Joao Gama. 数据流聚类. ACM Computing Surveys (CSUR), 46(1):13, 2013.
-
-+ [53] Sören Sunberg, Gunnar Räätisch, Christian Schäfer, and Bernhard Schölkopf. 大规模多核学习. Journal of Machine Learning Research, 7(Jul):1531–1556, 2006.
-
-+ [54] Nadeem Ahmed Syed, Syed Huan, Liu Kah, and Kay Sung. 支持向量机的增量学习. 1999.
-
-+ [55] Koji Tanda, Gunnar Räätisch, and Manfred K Warmuth. 用于在线学习和Bregman 投影的矩阵指数梯度更新. Journal of Machine Learning Research, 6(Jun):995–1018, 2005.
-
-+ [56] Vladimir Vapnik. 统计学习理论本质. Springer science & business media, 2013.
-
-+ [57] Jiale Wang, Peilin Zhao, Steven CH Hoi, and Rong Jin. 在线特征选择及其应用. IEEE Transactions on Knowledge and Data Engineering, 26(3):699–710, 2004.
-
-+ [58] Manfred K Warmuth and Duma Kuzmin. 遗憾界与维度呈对数的随机在线 PCA 算法. Journal of Machine Learning Research, 9(Oct):2287–2320, 2008.
-
-+ [59] Svante Told, Kim Ebensen, and Joao Geladi. 主成分分析. Chemometrics and Intelligent Laboratory Systems, 2(1-3):37–52, 1987.
-
-数据流的特征工程
-
-+ [60] Xindong Wu, Kui Yu, Hao Wang, and Wei Ding. 在线流特征选择. In Proceedings of the 27th International Conference on Machine Learning (ICML-10), pages 1159–1166, 2010.
-
-+ [61] Jian Yang and Jing-yu Yang. 为什么 LDA 可以在 PCA 变换空间进行? Pattern Recognition, 36(2):563–566, 2003.
-
-+ [62] Jieping Ye. 最小二乘线性判别分析. In Proceedings of the 24th International Conference on Machine Learning, pages 1087–1093. ACM, 2007.
-
-+ [63] Jieping Ye, Qi Li, Hu Xiong, Haesun Park, Ravi Jan. 大规模多核学习. of Machine Learning Research, 1531–1556, 2006.
-
-+ [64] Nadeem Ahmed Syed, Syed Huan, Liu Kah, and Kay Sung. 支持向量机的增量学习. 1999. 2(33699–710, 2004.
-
-+ [65] Koji Tanda, Gunnar Räätisch, and Manfred K Warmuth. 用于在线学习和Bregman 投影的矩阵指数梯度更新. 22005.
-
-+ [66] Vladimir Vapnik. 统计学习理论本质. Springer science & business media, 2013.
-
-+ [57] Jiale Wang, Peilin Zhao, Steven CH Hoi, and Rong Jin. 在线特征选择及其应用. IEEE Transactions on Knowledge and Data Engineering, 26(3):699–710, 2004.
-
-+ [58] Manfred K Warmuth and Duma Kuzmin. 遗憾界与维度呈对数的随机在线 PCA 算法. Journal of Machine Learning Research, 9(Oct):2287–2320, 2008.
-
-+ [59] Svante Told, Kim Ebensen, and Joao Geladi. 主成分分析. Chemometrics and Intelligent Laboratory Systems, 2(1-3):37–52, 1987.
-
-+ [60] Xindong Wu, Kui Yu, Hao Wang, and Wei Ding. 在线流特征选择. In Proceedings of the 27th International Conference on Machine Learning (ICML-10), pages 1159–1166, 2010.
-
-+ [61] Jian Yang and Jing-yu Yang. 为什么 LDA 可以在 PCA 变换空间进行? Pattern Recognition, 36(2):563–566, 2003.
-
-+ [62] Jieping Ye. 最小二乘线性判别分析. In Proceedings of the 24th International Conference on Machine Learning, pages 1087–1093. ACM, 2007.
-
-+ [63] Jieping Ye, Qi Li, Hu Xiong, Haesun Park, Ravi Jan. 大规模多核学习. Journal of Machine Learning Research, 7(Jul):1531–1556, 2006.
-
-+ [64] Nadeem Ahmed Syed, Syed Huan, Liu Kah, and Kay Sung. 支持向量机的增量学习. 1999.
-
-+ [65] Koji Tanda, Gunnar Räätisch, and Manfred K Warmuth. 用于在线学习和Bregman 投影的矩阵指数梯度更新. Journal of Machine Learning Research, 6(Jun):995–1018, 2005.
-
-+ [66] Vladimir Vapnik. 统计学习理论本质. Springer science & business media, 2013.
-
-+ [57] Jiale Wang, Peilin Zhao, Steven CH Hoi, and Rong Jin. 在线特征选择及其应用. IEEE Transactions on Knowledge and Data Engineering, 26(3):699–710, 2004.
-
-+ [58] Manfred K Warmuth and Duma Kuzmin. 遗憾界与维度呈对数的随机在线 PCA 算法. Journal of Machine Learning Research, 9(Oct):2287–2320, 2008.
-
-+ [59] Svante Told, Kim Ebensen, and Joao Geladi. 主成分分析. Chemometrics and Intelligent Laboratory Systems, 2(1-3):37–52, 1987.
-
-数据流的特征工程
-
-- [60] Xindong Wu, Kui Yu, Hao Wang, and Wei Ding. 在线流特征选择. In Proceedings of the 27th International Conference on Machine Learning (ICML-10), pages 1159–1166, 2010.
-
-- [61] Jian Yang and Jing-yu Yang. 为什么 LDA 可以在 PCA 变换空间进行? Pattern Recognition, 36(2):563–566, 2003.
-
-- [62] Jieping Ye. 最小二乘线性判别分析. In Proceedings of the 24th International Conference on Machine Learning, pages 1087–1093. ACM, 2007.
-
-- [63] Jieping Ye, Qi Li, Hu Xiong, Haesun Park, Ravi Jan. 大规模多核学习. Journal of Machine Learning Research, 7(Jul):1531–1556, 2006.
-
-- [64] Nadeem Ahmed Syed, Syed Huan, Liu Kah, and Kay Sung. 支持向量机的增量学习. 1999.
-
-- [65] Koji Tanda, Gunnar Räätisch, and Manfred K Warmuth. 用于在线学习和Bregman 投影的矩阵指数梯度更新. Journal of Machine Learning Research, 6(Jun):995–1018, 2005.
-
-- [66] Vladimir Vapnik. 统计学习理论本质. Springer science & business media, 2013.
-
-- [57] Jiale Wang, Peilin Zhao, Steven CH Hoi, and Rong Jin. 在线特征选择及其应用. IEEE Transactions on Knowledge and Data Engineering, 26(3):699–710, 2004.
-
-- [58] Manfred K Warmuth and Duma Kuzmin. 遗憾界与维度呈对数的随机在线 PCA 算法. Journal of Machine Learning Research, 9(Oct):2287–2320, 2008.
-
-- [59] Svante Told, Kim Ebensen, and Joao Geladi. 主成分分析. Chemometrics and Intelligent Laboratory Systems, 2(1-3):37–52, 1987.
-
-数据流的特征工程
-
-- [60] Xindong Wu, Kui Yu, Hao Wang, and Wei Ding. 在线流特征选择. In Proceedings of the 27th International Conference on Machine Learning (ICML-10), pages 1159–1166, 2010.
-
-- [61] Jian Yang and Jing-yu Yang. 为什么 LDA 可以在 PCA 变换空间进行? Pattern Recognition, 36(2):563–566, 2003.
-
-- [62] Jieping Ye. 最小二乘线性判别分析. In Proceedings of the 24th International Conference on Machine Learning, pages 1087–1093. ACM, 2007.
-
-- [63] Jieping Ye, Qi Li, Hu Xiong, Haesun Park, Ravi Jan. 大规模多核学习. Journal of Machine Learning Research, 7(Jul):1531–1556, 2006.
-
-- [64] Nadeem Ahmed Syed, Syed Huan, Liu Kah, and Kay Sung. 支持向量机的增量学习. 1999.
-
-- [65] Koji Tanda, Gunnar Räätisch, and Manfred K Warmuth. 用于在线学习和Bregman 投影的矩阵指数梯度更新. Journal of Machine Learning Research, 6(Jun):995–1018, 2005.
-
-- [66] Vladimir Vapnik. 统计学习理论本质. Springer science & business media, 2013.
-
-- [57] Jiale Wang, Peilin Zhao, Steven CH Hoi, and Rong Jin. 在线特征选择及其应用. IEEE Transactions on Knowledge and Data Engineering, 26(3):699–710, 2004.
-
-- [58] Manfred K Warmuth and Duma Kuzmin. 遗憾界与维度呈对数的随机在线 PCA 算法. Journal of Machine Learning Research, 9(Oct):2287–2320, 2008.
-
-- [59] Svante Told, Kim Ebensen, and Joao Geladi. 主成分分析. Chemometrics and Intelligent Laboratory Systems, 2(1-3):37–52, 1987.
-
-数据流的特征工程
-
-- [60] Xindong Wu, Kui Yu, Hao Wang, and Wei Ding. 在线流特征选择. In Proceedings of the 27th International Conference on Machine Learning (ICML-10), pages 1159–1166, 2010.
-
-- [61] Jian Yang and Jing-yu Yang. 为什么 LDA 可以在 PCA 变换空间进行? Pattern Recognition, 36(2):563–566, 2003.
-
-- [62] Jieping Ye. 最小二乘线性判别分析. In Proceedings of the 24th International Conference on Machine Learning, pages 1087–1093. ACM, 2007.
-
-- [63] Jieping Ye, Qi Li, Hu Xiong, Haesun Park, Ravi Jan. 大规模多核学习. Journal of Machine Learning Research, 7(Jul):1531–1556, 2006.
-
-- [64] Nadeem Ahmed Syed, Syed Huan, Liu Kah, and Kay Sung. 支持向量机的增量学习. 1999.
-
-- [65] Koji Tanda, Gunnar Räätisch, and Manfred K Warmuth. 用于在线学习和Bregman 投影的矩阵指数梯度更新. Journal of Machine Learning Research, 6(Jun):995–1018, 2005.
-
-- [66] Vladimir Vapnik. 统计学习理论本质. Springer science & business media, 2013.
-
-- [57] Jiale Wang, Peilin Zhao, Steven CH Hoi, and Rong Jin. 在线特征选择及其应用. IEEE Transactions on Knowledge and Data Engineering, 26(3):699–710, 2004.
-
-- [58] Manfred K Warmuth and Duma Kuzmin. 遗憾界与维度呈对数的随机在线 PCA 算法. Journal of Machine Learning Research, 9(Oct):2287–2320, 2008.
-
-- [59] Svante Told, Kim Ebensen, and Joao Geladi. 主成分分析. Chemometrics and Intelligent Laboratory Systems, 2(1-3):37–52, 1987.
-
-数据流的特征工程
-
-- [60] Xindong Wu, Kui Yu, Hao Wang, and Wei Ding. 在线流特征选择. In Proceedings of the 27th International Conference on Machine Learning (ICML-10), pages 1159–1166, 2010.
-
-- [61] Jian Yang and Jing-yu Yang. 为什么 LDA 可以在 PCA 变换空间进行? Pattern Recognition, 36(2):563–566, 2003.
-
-- [62] Jieping Ye. 最小二乘线性判别分析. In Proceedings of the 24th International Conference on Machine Learning, pages 1087–1093. ACM, 2007.
-
-- [63] Jieping Ye, Qi Li, Hu Xiong, Haesun Park, Ravi Jan. 大规模多核学习. Journal of Machine Learning Research, 7(Jul):1531–1556, 2006.
-
-- [64] Nadeem Ahmed Syed, Syed Huan, Liu Kah, and Kay Sung. 支持向量机的增量学习. 1999.
-
-- [65] Koji Tanda, Gunnar Räätisch, and Manfred K Warmuth. 用于在线学习和Bregman 投影的矩阵指数梯度更新. Journal of Machine Learning Research, 6(Jun):995–1018, 2005.
-
-- [66] Vladimir Vapnik. 统计学习理论本质. Springer science & business media, 2013.
+## 机器学习与数据分析中的特征工程
+
+- [28] Shiyu Chang, Yang Zhang. 增量式谱聚类. 发表于 *Proceedings of the 19th ACM SIGKDD Conference*, pages 581–588, 2013.
+- [29] Gert Cenberg and Tomoso Poggio. 增量式支持向量机学习. 发表于 *Journal of Machine Learning*, 16(111):1029–1040, 2015.
+- [30] Shannagethakumar Muthrnan et al. 数据流：算法与应用. *Foundations and Trends in Theoretical Science*, 1(2):117–226, 2005.
+- [31] Vinod Nair and Geoffrey Hinton. 激活线性单元改进受限玻尔兹机器. 发表于 *Proceedings of the 27th International Conference on Machine Learning (ICML-10)*, pages 807–814, 2010.
+- [42] Jiazhou Nie, Wojciech Lotkowski, and Manfred K Warm. 具有最优正则性的在线 pca. *Journal of Machine Learning Research*, 17(17):49, 2016.
+- [43] Simon Perkins, Kevin Lacker, and James Theiler. Grafting：基于函数空间梯度下降的快速特征选择. *Journal of Machine Learning Research*, 3(Mar):1333–1356, 2003.
+- [44] Simon Perkins and James Theiler. 使用嫁接技术的在线特征选择. 发表于 *Proceedings of the 20th International Conference on Machine Learning (ICML-03)*, pages 592–599, 2003.
+- [45] Sam T Roweis and Lawrence K Saul. 基于局部线性嵌入的非线性降维. *Science*, 290(5500):2323–2326, 2000.
+- [47] Stefan Ruping. 支持向量机的增量学习. In *Data Mining, 2001, ICDM 2001, Proceedings IEEE International Conference on*, pages 641–642. IEEE, 2001.
+- [48] Ruslan Salakhutdinov, Andrey Mnih, and Geoffrey Hinton. 用于协同过滤的受限玻尔兹曼机. In *Proceedings of the 24th International Conference on Machine learning*, pages 791–798. ACM, 2007.
+- [49] Tamas Sarlos. 通过随机投影改进大矩阵算法. In *Foundations of Computer Science, 2006. 47th Annual IEEE Symposium on*, pages 143–152. IEEE, 2006.
+- [50] Lawrence K Saul and Sam T Roweis. 全局思考，局部适应：低维形的无监督学习. *Journal of Machine Learning Research*, 4(Jun):119–155, 2003.
+- [51] Bernhard Schölkopf and Alexander J Smola. 核学习：支持向量正则化、优化及超越. MIT press, 2002.
+- [52] Jonathan A Silva, Elaine R Faria, Rodrigo C Barros, Eduardo R Hruscha, Andre P De Carvalho, and Joao Gama. 数据流聚类. *ACM Computing Surveys (CSUR)*, 46(1):13, 2013.
+- [53] Sören Sunberg, Gunnar Räätisch, Christian Schäfer, and Bernhard Schölkopf. 大规模多核学习. *Journal of Machine Learning Research*, 7(Jul):1531–1556, 2006.
+- [54] Nadeem Ahmed Syed, Syed Huan, Liu Kah, and Kay Sung. 支持向量机的增量学习. 1999.
+- [55] Koji Tanda, Gunnar Räätisch, and Manfred K Warmuth. 用于在线学习和 Bregman 投影的矩阵指数梯度更新. *Journal of Machine Learning Research*, 6(Jun):995–1018, 2005.
+- [56] Vladimir Vapnik. 统计学习理论本质. Springer science & business media, 2013.
+- [57] Jiale Wang, Peilin Zhao, Steven CH Hoi, and Rong Jin. 在线特征选择及其应用. *IEEE Transactions on Knowledge and Data Engineering*, 26(3):699–710, 2004.
+- [58] Manfred K Warmuth and Duma Kuzmin. 遗憾界与维度呈对数的随机在线 PCA 算法. *Journal of Machine Learning Research*, 9(Oct):2287–2320, 2008.
+- [59] Svante Told, Kim Ebensen, and Joao Geladi. 主成分分析. *Chemometrics and Intelligent Laboratory Systems*, 2(1-3):37–52, 1987.
 
 ## 数据流的特征工程
 
-## 6.1 引言。
+- [60] Xindong Wu, Kui Yu, Hao Wang, and Wei Ding. 在线流特征选择. In *Proceedings of the 27th International Conference on Machine Learning (ICML-10)*, pages 1159–1166, 2010.
+- [61] Jian Yang and Jing-yu Yang. 为什么 LDA 可以在 PCA 变换空间进行? *Pattern Recognition*, 36(2):563–566, 2003.
+- [62] Jieping Ye. 最小二乘线性判别分析. In *Proceedings of the 24th International Conference on Machine Learning*, pages 1087–1093. ACM, 2007.
+- [63] Jieping Ye, Qi Li, Hu Xiong, Haesun Park, Ravi Jan. 大规模多核学习. *Journal of Machine Learning Research*, 7(Jul):1531–1556, 2006.
+- [64] Nadeem Ahmed Syed, Syed Huan, Liu Kah, and Kay Sung. 支持向量机的增量学习. 1999.
+- [65] Koji Tanda, Gunnar Räätisch, and Manfred K Warmuth. 用于在线学习和 Bregman 投影的矩阵指数梯度更新. *Journal of Machine Learning Research*, 6(Jun):995–1018, 2005.
+- [66] Vladimir Vapnik. 统计学习理论本质. Springer science & business media, 2013.
 
-序列数据在人们的日常生活中无处不在，并经常用于数据分析。图6.1 给生物医学、音乐、文学和医疗等类型的例子。我们现在使用几个其他例子来说说明数据分析感兴趣的内容。
+
+
+- [62] Jieping Ye. 最小二乘线性判别分析. In Proceedings of the 24th International Conference on Machine Learning, pages 1087–1093. ACM, 2007.
+- [63] Jieping Ye, Qi Li, Hu Xiong, Haesun Park, Ravi Jan. 大规模多核学习. Journal of Machine Learning Research, 7(Jul):1531–1556, 2006.
+- [64] Nadeem Ahmed Syed, Syed Huan, Liu Kah, and Kay Sung. 支持向量机的增量学习. 1999.
+- [65] Koji Tanda, Gunnar Räätisch, and Manfred K Warmuth. 用于在线学习和Bregman 投影的矩阵指数梯度更新. Journal of Machine Learning Research, 6(Jun):995–1018, 2005.
+- [66] Vladimir Vapnik. 统计学习理论本质. Springer science & business media, 2013.
+- [57] Jiale Wang, Peilin Zhao, Steven CH Hoi, and Rong Jin. 在线特征选择及其应用. IEEE Transactions on Knowledge and Data Engineering, 26(3):699–710, 2004.
+- [58] Manfred K Warmuth and Duma Kuzmin. 遗憾界与维度呈对数的随机在线 PCA 算法. Journal of Machine Learning Research, 9(Oct):2287–2320, 2008.
+- [59] Svante Told, Kim Ebensen, and Joao Geladi. 主成分分析. Chemometrics and Intelligent Laboratory Systems, 2(1-3):37–52, 1987.
+
+## 数据流的特征工程
+
+- [60] Xindong Wu, Kui Yu, Hao Wang, and Wei Ding. 在线流特征选择. In Proceedings of the 27th International Conference on Machine Learning (ICML-10), pages 1159–1166, 2010.
+- [61] Jian Yang and Jing-yu Yang. 为什么 LDA 可以在 PCA 变换空间进行? Pattern Recognition, 36(2):563–566, 2003.
+- [62] Jieping Ye. 最小二乘线性判别分析. In Proceedings of the 24th International Conference on Machine Learning, pages 1087–1093. ACM, 2007.
+- [63] Jieping Ye, Qi Li, Hu Xiong, Haesun Park, Ravi Jan. 大规模多核学习. Journal of Machine Learning Research, 7(Jul):1531–1556, 2006.
+- [64] Nadeem Ahmed Syed, Syed Huan, Liu Kah, and Kay Sung. 支持向量机的增量学习. 1999.
+- [65] Koji Tanda, Gunnar Räätisch, and Manfred K Warmuth. 用于在线学习和Bregman 投影的矩阵指数梯度更新. Journal of Machine Learning Research, 6(Jun):995–1018, 2005.
+- [66] Vladimir Vapnik. 统计学习理论本质. Springer science & business media, 2013.
+
+# 序列的特征生成与特征工程
+
+## 6.1 引言
+
+序列数据在人们的日常生活中无处不在，并经常用于数据分析。图 6.1 给出生物医学、音乐、文学和医疗等类型的例子。我们现在使用几个其他例子来说明数据分析感兴趣的内容。
 
 - 大型计算机公司致力于确定哪些事件组合会导致计算机崩溃。这可以通过检查崩溃前的日志来实现。
 - 日志数据对于网络安全和优化优化。
@@ -2559,12 +2020,6 @@ $$\frac{1}{2w^{(t)}}|\mathbf{X}^{(t)}\mathbf{W}^{(t)} - \Pi||_2^2 + \alpha \sum_
 
 ## 6.9 结语
 
-
-
-
-
-# 序列的特征生成与特征工程
-
 lgctatctctacagttacgcgaggggctgtacaacatacagcgtgccaa
 
 (a) 大肠菌启动子基因序列
@@ -2581,13 +2036,13 @@ lgctatctctacagttacgcgaggggctgtacaacatacagcgtgccaa
 
 (d) 脑电图 (EEG) 记录
 
-### ### 图 6.1：序列数据示例。
+### 图 6.1：序列数据示例
 
 由于序列数据具有独特的特性和重要性，序列数据的挖掘吸引了许多研究者的关注（例如参见 [8,32]），并产生了一系列与其他类型数据相当不同的结果。
 
 在本章中，我们首先讨论了序列数据的基础，然后介绍了三类主要的序列特征：传统的基于模式的序列特征、通用基于模式的特征以及未由模式定义的序列特征。我们还讨论了将序列模式作为序列特征的几种方法。我们介绍了序列模式类型的概述，并对如何挖掘这些模式进行了讨论。最后，我们考虑了选择模式作为特征的重要因素。
 
-模式在生物学数据分析中通常被称为**基元（motif）**（例如参见 [2]）。通常，模式匹配、模式发现以及用于不同领域间知识迁移的模式利用，是通过序列对齐完成的（例如参见 [9]）。然而，一些研究显式地将基元和模式作为特征（例如 [10,18,23]）。
+模式在生物学数据分析中通常被称为`基元（motif）`（例如参见 [2]）。通常，模式匹配、模式发现以及用于不同领域间知识迁移的模式利用，是通过序列对齐完成的（例如参见 [9]）。然而，一些研究显式地将基元和模式作为特征（例如 [10,18,23]）。
 
 ## 6.2 序列数据与序列模式基础
 
@@ -2598,100 +2053,30 @@ lgctatctctacagttacgcgaggggctgtacaacatacagcgtgccaa
 以下是典型的序列数据类型列表。
 
 - **符号（普通）序列：** 每个元素都只是一个项目。符号序列的示例包括 DNA/蛋白质序列，其中每个元素代表一个核苷酸或氨基酸，且每个元素都是字符字符串。还存在更复杂的符号序列。
-
 - **时间序列：** 每个元素都是与时间戳关联的数值。时间序列的示例包括脑电图记录、股票交易所价格历史以及给定位置的轨迹历史。
-
-- **事件序列：** 每个元素都是代表事件的符号。然而，与符号序列不同，事件序列中的每个元素都与时间戳或代表事件开始和结束的时间间隔关联。示例包括系统日志，其中每个元素代表系统在特定时间或时间间隔内发生的事件，以及轨迹数据，其中每个元素都是与时间戳关联的地理位置。
-
-在各种类型的序列数据中，符号序列是最基本的。许多其他序列类型可以通过预处理转换为符号序列。例如，数值序列可以使用各种起始技术映射到符号序列。在本章中，我们关注于
-
-# 序列的特征生成与特征工程 149
-
-可以使用各种起始技术映射到符号序列。在本章中，我们关注于
-
-我们现在转向基础概念。令 $\Sigma$ 为字母表的有限集。以下是典型的序列数据类型列表。
-
-- **符号（普通）序列：** 每个元素都只是一个项目。符号序列的示例包括 DNA/蛋白质序列，其中每个元素代表一个核苷酸或氨基酸，且每个元素都是字符字符串。还存在更复杂的符号序列。
-
-- **时间序列：** 每个元素都是与时间戳关联的数值。时间序列的示例包括脑电图记录、股票交易所价格历史以及给定位置的轨迹历史。
-
-- **事件序列：** 每个元素都是代表事件的符号。然而，与符号序列不同，事件序列中的每个元素都与时间戳或代表事件开始和结束的时间间隔关联。示例包括系统日志，其中每个元素代表系统在特定时间或时间间隔内发生的事件，以及轨迹数据，其中每个元素都是与时间戳关联的地理位置。
-
-在各种类型的序列数据中，符号序列是最基本的。许多其他序列类型可以通过预处理转换为符号序列。例如，数值序列可以使用各种起始技术映射到符号序列。在本章中，我们关注于
-
-其中序列中的每个元素都与某些属性关联（例如时间戳或位置）。应用程序序列字母表中的元素可以以某种方式结构化。例如，一个音乐序列可以被认为比另一个大，因为后者的音高更高。
-
-我们现在转向基础概念。令 $\Sigma$ 为字母表的有限集。以下是典型的序列数据类型。
-
-- **符号（普通）序列：** 每个元素都只是一个项目。符号序列的示例包括 DNA/蛋白质序列，其中每个元素代表一个核苷酸或氨基酸，且每个元素都是字符字符串。还存在更复杂的符号序列。
-
-- **时间序列：** 每个元素都是与时间戳关联的数值。时间序列的示例包括脑电图记录、股票交易所价格历史以及给定位置的轨迹历史。
-
-- **事件序列：** 每个元素都是代表事件的符号。然而，与符号序列不同，事件序列中的每个元素都与时间戳或代表事件开始和结束的时间间隔关联。示例包括系统日志，其中每个元素代表系统在特定时间或时间间隔内发生的事件，以及轨迹数据，其中每个元素都是与时间戳关联的地理位置。
-
-在各种类型的序列数据中，符号序列是最基本的。许多其他序列类型可以通过预处理转换为符号序列。例如，数值序列可以使用各种起始技术映射到符号序列。在本章中，我们关注于
-
-其中序列中的每个元素都与某些属性关联（例如时间戳或位置）。应用程序序列字母表中的元素可以以某种方式结构化。例如，一个音乐序列可以被认为比另一个大，因为后者的音高更高。
-
-在图 6.1 中，我们有由 DNA（用字符表示）、音乐谱和数值组成的序列。在最简单的情况下，序列仅由一个接一个元素组成。其他情况更为复杂：我们有一个序列（文本）组成的序列（单词）；我们有一个由项目（代表音高和持续时间的音符集合）组成的序列；我们有一个序列，其中每个元素（一个数值）都与时间戳关联。序列甚至可以是图（代表 Facebook 用户网络的快照）。在某些情况下，序列中的每个元素都与某些属性关联（例如时间戳或位置）。应用程序序列字母表中的元素可以以某种方式结构化。例如，一个音乐序列可以被认为比另一个大，因为后者的音高更高。在本章中，我们首先讨论了序列数据的基础，然后介绍了三类主要的序列特征：传统的基于模式的序列特征、通用基于模式的特征以及未由模式定义的序列特征。我们还讨论了将序列模式作为序列特征的几种方法。我们介绍了序列模式类型的概述，并对如何挖掘这些模式进行了讨论。最后，我们考虑了选择模式作为特征的重要因素。
-
-模式在生物学数据分析中通常被称为**基元（motif）**（例如参见 [2]）。通常，模式匹配、模式发现以及用于不同领域间知识迁移的模式利用，是通过序列对齐完成的（例如参见 [9]）。然而，一些研究显式地将基元和模式作为特征（例如 [10,18,23]）。
-
-## 6.2 序列数据与序列模式基础
-
-广而言之，序列是某个给定字母表上元素的有序列表。通常假设序列内的元素具有相同的数据类型。用于构建序列的数据类型非常丰富。以下是影响序列类型复杂性的因素：底层字母表的结构（例如，字母表上是否存在全序，或者元素是简单的还是复杂的）、底层字母表的基数大小，以及对序列长度的限制（如果有）。
-
-在图 6.1 中，我们有由 DNA（用字符表示）、音乐谱和数值组成的序列。在最简单的情况下，序列仅由一个接一个元素组成。其他情况更为复杂：我们有一个序列（文本）组成的序列（单词）；我们有一个由项目（代表音高和持续时间的音符集合）组成的序列；我们有一个序列，其中每个元素（一个数值）都与时间戳关联。序列甚至可以是图（代表 Facebook 用户网络的快照）。在某些情况下，序列中的每个元素都与某些属性关联（例如时间戳或位置）。应用程序序列字母表中的元素可以以某种方式结构化。例如，一个音乐序列可以被认为比另一个大，因为后者的音高更高。
-
-以下是典型的序列数据类型列表。
-
-- **符号（普通）序列：** 每个元素都只是一个项目。符号序列的示例包括 DNA/蛋白质序列，其中每个元素代表一个核苷酸或氨基酸，且每个元素都是字符字符串。还存在更复杂的符号序列。
-
-- **时间序列：** 每个元素都是与时间戳关联的数值。时间序列的示例包括脑电图记录、股票交易所价格历史以及给定位置的轨迹历史。
-
 - **事件序列：** 每个元素都是代表事件的符号。然而，与符号序列不同，事件序列中的每个元素都与时间戳或代表事件开始和结束的时间间隔关联。示例包括系统日志，其中每个元素代表系统在特定时间或时间间隔内发生的事件，以及轨迹数据，其中每个元素都是与时间戳关联的地理位置。
 
 在各种类型的序列数据中，符号序列是最基本的。许多其他序列类型可以通过预处理转换为符号序列。例如，数值序列可以使用各种起始技术映射到符号序列。在本章中，我们关注于
 
 ## 6.3 在序列特征中使用模式的方法
 
-在各种类型的序列数据中，符号序列是最基本的。许多其他序列类型可以通过预处理转换为符号序列。例如，数值序列可以使用各种起始技术映射到符号序列。在本章中，我们关注于
-
-我们现在转向基础概念。令 $\Sigma$ 为字母表的有限集。以下是典型的序列数据类型。
-
-- **符号（普通）序列：** 每个元素都只是一个项目。符号序列的示例包括 DNA/蛋白质序列，其中每个元素代表一个核苷酸或氨基酸，且每个元素都是字符字符串。还存在更复杂的符号序列。
-
-- **时间序列：** 每个元素都是与时间戳关联的数值。时间序列的示例包括脑电图记录、股票交易所价格历史以及给定位置的轨迹历史。
-
-- **事件序列：** 每个元素都是代表事件的符号。然而，与符号序列不同，事件序列中的每个元素都与时间戳或代表事件开始和结束的时间间隔关联。示例包括系统日志，其中每个元素代表系统在特定时间或时间间隔内发生的事件，以及轨迹数据，其中每个元素都是与时间戳关联的地理位置。
-
-其中序列中的每个元素都与某些属性关联（例如时间戳或位置）。应用程序序列字母表中的元素可以以某种方式结构化。例如，一个音乐序列可以被认为比另一个大，因为后者的音高更高。
-
-# 机器学习与数据分析特征工程
-
-150 机器学习与数据分析特征工程
-
 ## 6.4 传统的基于模式的序列特征
 
-我们描述了一些常用的基于模式的序列特征，使用图 6.1(a) 中的 DNA 序列 $S$ 来说明。我们注意，本节中的模式都是根据底层字母表通过位置关系定义的简单模式；它们不是模式挖掘的结果。
+我们描述了一些常用的基于模式的序列特征，使用图 6.1(a) 中的 DNA 序列 `S` 来说明。我们注意，本节中的模式都是根据底层字母表通过位置关系定义的简单模式；它们不是模式挖掘的结果。
 
 **单元素特征：** 这些特征是由单个序列元素作为模式定义的。这些模式可以以 6.3 节中讨论的不同方式组合形成特征。
 
-例如，每个示例和每个位置都可以是一个位置特定的特征。对于对于 $\{a, c, g, t\}$ 上长度为 57 的 DNA 序列（如图 6.1(a）所示），共有 $57 \times 4$ 个位置特定的
+例如，每个示例和每个位置都可以是一个位置特定的特征。对于对于 `{a, c, g, t}` 上长度为 57 的 DNA 序列（如图 6.1(a）所示），共有 `57 × 4` 个位置特定的特征（例如，`(t, 1)`）。如果我们将 57 个位置划分为 1...19、20...38 和 39...57 这 3 个区间，那么每个元素与区间的组合都可以作为一个特定区间的特征，总共有 `4*3` 种特定特征。总共有 4 种累积特征，字母表中的每个元素各对应一个。对于给定的序列，每个特征的值通常是该元素在序列中出现的总次数。
+
+**k-gram 特征：** k-gram 特征是字母表上一个长度为 `k` 的序列，其中 `k` 是一个正整数。k-gram 可用于位置特定、区间特定或累积特征。对于序列图 6.1(a)，3-gram 'atc' 对于 `S` 的值为 3（因为它在 `S` 中出现了 3 次），它被用作一种累积特征。在 DNA 分析中，由于 3-gram 与蛋白质之间存在紧密关系，经常使用 3-gram。
+
+**k-间隔对 (k-gapped pairs)：** k-间隔对是两个序列 `e` 和 `e'`，在与序列匹配时考虑它们具有长度为 `k` 的间隔。同样，k-间隔对特征可以是位置特定的、区间特定的等。当用作累积特征时，k-间隔对的值是 `S` 中的 k-间隔出现频率，定义为：
+
+```
+F(e', k) = |{i | S_i = e, S_{i+k+1} = e', 1 ≤ i ≤ |S|-k-1}| / |S|-k-1
+```
 
 
-
-
-
-# 序列的特征生成与特征工程
-
-特征（例如，`(t, 1)`）。如果我们将 57 个位置划分为 1...19、20...38 和 39...57 这 3 个区间，那么每个元素与区间的组合都可以作为一个特定区间的特征，总共有 4*3 种特定特征。总共有 4 种累积特征，字母表中的每个元素各对应一个。对于给定的序列，每个特征的值通常是该元素在序列中出现的总次数。
-
-**k-gram 特征：** k-gram 特征是字母表上一个长度为 $k$ 的序列，其中 $k$ 是一个正整数。k-gram 可用于位置特定、区间特定或累积特征。对于序列图 6.1(a)，3-gram 'atc' 对于 $S$ 的值为 3（因为它在 $S$ 中出现了 3 次），它被用作一种累积特征。在 DNA 分析中，由于 3-gram 与蛋白质之间存在紧密关系，经常使用 3-gram。
-
-**k-间隔对 (k-gapped pairs)：** k-间隔对是两个序列 $e$ 和 $e'$，在与序列匹配时考虑它们具有长度为 $k$ 的间隔。同样，k-间隔对特征可以是位置特定的、区间特定的等。当用作累积特征时，k-间隔对的值是 $S$ 中的 k-间隔出现频率，定义为：
-
-$$F(e', k) = |\{i \mid S_i = e, S_{i+k+1} = e', 1 \leq i \leq |S|-k-1\}| / |S|-k-1$$
 
 对于 $F(e', k)$，分子是 $S$ 中以 k-间隔模式匹配的 $e$ 和 $e'$ 的次数。请注意，当 $k = 0$ 时，k-间隔对是一个可能的 2-匹配。对于序列图 6.1(a)，$F(tc, 1) = 50/56$，$F(tc, 2) = 25/56$。
 
@@ -2757,10 +2142,6 @@ $$Sup_D(S) = \frac{|{S' \in D \mid S \subseteq S'\}|}{|D|}$$
 
 *注：由于原文提供的示例表格内容存在逻辑错位或重复，此处译文严格遵循 Markdown 格式进行翻译，以确保结构与原文完全对齐。*
 
-
-
-
-
 # 序列的特征生成与特征工程 155
 
 分别从 $D_x$ 和 $D_y$ 中，设定 minSup = 0.5。从表 6.4 中，我们观察到 $<ca>$ 不是 $D_x$ 中的闭收序列模式。
@@ -2771,9 +2152,9 @@ $$Sup_D(S) = \frac{|{S' \in D \mid S \subseteq S'\}|}{|D|}$$
 
 显然，闭项序列模式是匹配相同序列集的一组频繁模式的简洁表示。由于所有闭项模式的数量远少于频繁模式的数量，因此闭项模式作为生成特征的初始模式池是更好的选择。
 
-目前已经提出了几种算法来挖掘闭项序列模式，例如 BIDE [217]、TSP [25] 和 CloSpan [33]。在这些方法中，BIDE 是具有代表性的；它是 PrefixSpan 用于闭项序列模式挖掘的扩展。
+目前已经提出了几种算法来挖掘闭项序列模式，例如 `BIDE` [217]、`TSP` [25] 和 `CloSpan` [33]。在这些方法中，`BIDE` 是具有代表性的；它是 `PrefixSpan` 用于闭项序列模式挖掘的扩展。
 
-BIDE 使用双向扩展闭检查方案来提高计算效率。具体而言，这有助于避免搜索许多非闭项序列模式。对于序列模式 $S$，如果存在一个序列 $S'=\{s_i...s_je\}$（其中 $e$ 是 $S$ 字母表中的一个元素）使得 Sup($S'$)=Sup($S$) 且它是 $S$ 的正向扩展序列；另一方面，如果存在一个序列模式 $S''=\{es_i...s_j\}$ 或 $S'''=\{s_i...s_je\}$ 使得 Sup($S''$)=Sup($S$)，$S'''$ 是 $S$ 的反向扩展序列，则 $S$ 是是非闭项的。闭检查所需的信息可以通过 PrefixSpan 从投影数据库获取。挖掘闭项序列模式而非频繁模式，不仅可以大幅减少模式数量，还能减少挖掘时间 [27]。
+`BIDE` 使用双向扩展闭检查方案来提高计算效率。具体而言，这有助于避免搜索许多非闭项序列模式。对于序列模式 $S$，如果存在一个序列 $S'=\{s_i...s_je\}$（其中 $e$ 是 $S$ 字母表中的一个元素）使得 Sup($S'$)=Sup($S$) 且它是 $S$ 的正向扩展序列；另一方面，如果存在一个序列模式 $S''=\{es_i...s_j\}$ 或 $S'''=\{s_i...s_je\}$ 使得 Sup($S''$)=Sup($S$)，$S'''$ 是 $S$ 的反向扩展序列，则 $S$ 是是非闭项的。闭检查所需的信息可以通过 `PrefixSpan` 从投影数据库获取。挖掘闭项序列模式而非频繁模式，不仅可以大幅减少模式数量，还能减少挖掘时间 [27]。
 
 ### 6.5.3 序列模式的间隙约束
 
@@ -2827,10 +2208,6 @@ $$Sup(S, P, \gamma) = \frac{count(S, P, \gamma)}{N_{P,\gamma}^S}$$
 
 **示例 4** 对于序列 $S=acde$，假设间隙约束 $\gamma=[2,3]$，最小支持度阈值为 $\alpha=0.2$。对于模式 $P=ac$，在 $S$ 中有两个实例 $1 < 5$ 和 $4 < 8$。对于任何长度为2的模式，$S$ 中关于 $\gamma$ 的所有实例 $m$ 集合为 $<1, 4, <1, 5, <2, 5, <2, 6, <3, 6, <4, 8>，$N_{P,\gamma}^S = 9$。那么，$Sup(S, P, \gamma) = 2/9 \geq \alpha$。因此，$P$ 是关于 $\gamma$ 的周期序列模式。周期序列模式的完整集合包括 $<a > (2/8), <b > (2/8), <c > (3/8), <ac > (2/9), <cc > (2/9)$。
 
-
-
-
-
 ## 表 6.7: 在 D 中发现的序列模式区分
 
 | 模式 D | Supp$_{D$}(P)$ | Supp$_{D'}(P)$ | 模式 P | Supp$_{D$}(P)$ | Supp$_{D'}(P)$ |
@@ -2874,13 +2251,15 @@ $$Sup(S, P, \gamma) = \frac{count(S, P, \gamma)}{N_{P,\gamma}^S}$$
 
 ## 6.7 未由模式定义的序列特征
 
+
+
 除了模式定义的特征外，还有未由模式定义的特征。给定序列，此类特征可以代表完整序列的各种属性、不同位置的里程碑，或各种间隔的特征。其中一些源自原始序列，无法通过这种方式推导出。我们将在下面使用一些示例进行说明。
 
 以不同国家的股票指数历史为例。可以将经济和政治事件作为特征添加。感兴趣的事件示例包括经济衰退（具有开始和结束时间）、政变或其他种政治动荡。通过这些事件，可以分析它们对股价的影响。
 
 对于数值序列和时间序列，可以使用回归系数（跨越整个历史或固定间隔）和间隔平均值等特征。
 
-另一个例子，我们考虑长 DNA 序列。序列内部可能有许多具有意义的位置，例如序列第 97 位是 $G_0$ 的起始位，第 905 位是 $G_{25}$ 的起始位。在对这类序列进行分析时，这些位点的知识有助于发现模式并识别其他位点。
+另一个例子，我们考虑长 DNA 序列。序列内部可能有许多具有意义的位置，例如序列第 97 位是 `$G_0$` 的起始位，第 905 位是 `$G_{25}$` 的起始位。在对这类序列进行分析时，这些位点的知识有助于发现模式并识别其他位点。
 
 除了事件外，标签（例如指示特定 DNA 序列中的某位置是医学重要基因的起始位）也可以作为序列的特征。我们还可以包括指示窗口内模式计数（例如 GC）达到峰值的位置特征。
 
@@ -2888,22 +2267,15 @@ $$Sup(S, P, \gamma) = \frac{count(S, P, \gamma)}{N_{P,\gamma}^S}$$
 
 主要的序列数据库包括以下三个。
 
-(a) Entrez 全局查询跨数据库系统（Global Query Cross-Database System）$^1$ 是一个联邦搜索引擎。它通过单一查询和用户界面同时访问多个数据库。Entrez 可以高效检索序列、结构和参考文献。Entrez 系统可以提供基因和蛋白质序列以及染色体图的视图。可以通过脚注处的链接访问蛋白质数据库.$2$。
+(a) **Entrez 全局查询跨数据库系统** 是一个联邦搜索引擎。它通过单一查询和用户界面同时访问多个数据库。Entrez 可以高效检索序列、结构和参考文献。Entrez 系统可以提供基因和蛋白质序列以及染色体图的视图。可以通过脚注处的链接访问蛋白质数据库。
 
-+   $^1https://www.ncbl.nlm.nih.gov/sites/query
++   `https://www.ncbl.nlm.nih.gov/sites/query`
++   `https://www.ncbi.nlm.nih.gov/protein/`
++   `https://www.ebi.ac.uk/ena`
 
-+   $^2https://www.ncbi.nlm.nih.gov/protein/
+(b) **ENA (European Nucleotide Archive)** 是欧洲核苷酸档案库，由欧洲生物信息学研究所（EBI）维护。它是世界核苷酸测序信息的记录，涵盖了原始测序数据、序列组装信息和功能注释。
 
-+   $^3https://www.ebi.ac.uk/ena
-
-
-
-
-
-# 序列特征生成与特征工程 163
-
-世界核苷酸测序信息的记录，涵盖了原始测序数据、序列组装信息和功能注释。
-(c) Genbank^4 是所有可用 DNA 序列的注释集合，由美国国立卫生研究所（NIH）管理。
+(c) **Genbank** 是所有可用 DNA 序列的注释集合，由美国国立卫生研究所（NIH）管理。
 
 ## 6.9 结语
 
@@ -2945,8 +2317,6 @@ $$Sup(S, P, \gamma) = \frac{count(S, P, \gamma)}{N_{P,\gamma}^S}$$
 
 - [17] Heikki Mannila and Christopher Meek. 全局偏序. In Proceedings of the Sixth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, Boston, MA, pages 161–168, 2000.
 
-# 序列特征生成与特征工程
-
 - [18] John C Oberauer, Lewis C Cantley, and Michael B Yaffe. Scanuit2.0: 蛋白质组组细胞相互作用预测. Nucleic Acids Research, 31(13):3635-3641, 2004.
 
 - [19] Jian Pei, Jiawei Han, and Armin Afafar. 频繁增长. In Proceedings of the 17th International Conference on Data Engineering, pages 215–224, 2001.
@@ -2969,8 +2339,6 @@ $$Sup(S, P, \gamma) = \frac{count(S, P, \gamma)}{N_{P,\gamma}^S}$$
 
 - [28] Wentao Wang, Lei Duan, Jyrki Nummenmaa, and Changjie Tang. 密度感知序列模式挖掘. In Proceedings of the 10th International Conference on Data Mining and Applications, pages 57–70, 2014.
 
-# 机器学习与数据分析特征工程
-
 - [29] Xianning Wang, Lei Duan, Guozhu Dong, Zhonghua Yu, and Changjie Tang. 频繁序列模式挖掘. In Proceedings of the 19th International Conference on Database Systems for Advanced Applications, pages 372–387, 2014.
 
 - [30] Xinhuan Wang, Zhenquan Zhou, Yu He, and Abdullah N. Arslan. 使用通配符从基因组挖掘. Computers in Biology and Medicine, 43(3):481–492, 2013.
@@ -2989,24 +2357,24 @@ $$Sup(S, P, \gamma) = \frac{count(S, P, \gamma)}{N_{P,\gamma}^S}$$
 
 - [37] Mingzhua Zhang, Ben Kao, David W. Cheung, and Kevin Y. Yip. 从序列中挖掘带间隙要求的周期模式. ACM Transactions on Knowledge Discovery from Data, 1(2):7, 2007.
 
-
-
-
-
 ## 第7章
 
 ## 图与网络的特征生成
 
 **姚远 (Yuan Yao)**
+
 中国南京大学新型软件技术关键实验室
 
 **通航航 (Hanghang Tong)**
+
 美国亚利桑那州立大学计算、信息与决策系统工程学院
 
 **徐峰 (Feng Xu)**
+
 中国南京大学新型软件技术关键实验室
 
 **陆健 (Jian Lu)**
+
 中国南京大学新型软件技术关键实验室
 
 - 7.1 引言 ................................................................................ 168
@@ -3024,8 +2392,6 @@ $$Sup(S, P, \gamma) = \frac{count(S, P, \gamma)}{N_{P,\gamma}^S}$$
 - 参考文献 ................................................................... 184
 - 7.6 术语表 ...................................................... 188
 
-机器学习与数据分析特征工程
-
 ## 7.1 引言
 
 在本章中，我们关注图和网络的特征生成问题。生成的特征对于各种图分析任务至关重要，包括节点分类、链接预测、聚类和异常检测等。
@@ -3033,12 +2399,12 @@ $$Sup(S, P, \gamma) = \frac{count(S, P, \gamma)}{N_{P,\gamma}^S}$$
 我们将本章的结构安排如下：
 
 - 首先讨论特征类型。根据特征计算的范围，现有特征可以分为邻域级特征（即可以从节点的邻域中计算出的特征）和全局级特征（例如，图的直径和密度，其计算需要对图的全局认知）。
-
 - 接下来，我们描述了现有的特征生成方法，并将其分为特征学习方法。对于特征提取方法，关键在于手动定义函数，通过这些函数来计算相应的特征。相比之下，特征学习方法旨在自动学习图节点的特征。
-
 - 最后，我们展示了几个应用来说说明特征的用途。具体而言，我们讨论了多标签分类（预测节点可能的标签）、链接预测（预测图中缺失的链接）、异常检测（寻找离群节点）以及可视化的应用。
 
 ## 7.2 特征类型
+
+
 
 在本节中，我们简要描述了特征类型。如上所述，已有针对邻域级和全局级特征的全面研究工作。全局级特征刻画了图的整体属性。例如，观察到图直径较小 [3] 并随着时间的推移而缩小 [15]，图的主特征值被证明作为脆弱性衡量标准具有丰富信息 [32]，整体度相关性已被证明是图任务的指标 [40] 等。
 
@@ -3048,9 +2414,9 @@ $$Sup(S, P, \gamma) = \frac{count(S, P, \gamma)}{N_{P,\gamma}^S}$$
 
 ² 也称为图嵌入、网络嵌入或网络表示方法。
 
-图与网络的特征生成 169
+## 图与网络的特征生成
 
-- 常见特征直接基于每个节点的邻域计算（邻域也称为诱导图 egonet，它包含了节点、其邻居以及这些节点诱导子图中的任何边）。例如，常见特征包括有向图的入度、出度和总度，以及诱导诱导图中的三角形数量、诱导图的主特征值、诱导图内边缘的边数、进入和离开诱导图的边数等。
+- 常见特征直接基于每个节点的邻域计算（邻域也称为诱导图 `egonet`，它包含了节点、其邻居以及这些节点诱导子图中的任何边）。例如，常见特征包括有向图的入度、出度和总度，以及诱导诱导图中的三角形数量、诱导图的主特征值、诱导图内边缘的边数、进入和离开诱导图的边数等。
 
 - 与常见特征相反，递归特征被定义为在节点邻居的特征值上计算的任何聚合值。例如，一个节点邻居的平均（或总和）度是一个典型的递归特征。事实证明，递归特征在网络内及跨网络的分类和身份识别任务的各种图挖掘中都是有效的 [12]。
 
@@ -3062,7 +2428,7 @@ $$Sup(S, P, \gamma) = \frac{count(S, P, \gamma)}{N_{P,\gamma}^S}$$
 
 对于特征提取方法，关键在于根据我们可以从节点及其邻居计算哪些特征来手动定义函数。例如，给定一个节点及其邻域，示例特征包括邻居数量、三角形数量、邻域中的边数、由邻域构建的邻接矩阵的主特征值、具有特定度的邻居数量。因此，我们通常需要为特定的预测定义一组较小的特征集。例如，在定义异常检测任务的特征时，定义那些在异常节点违反时最符合规律的特征 [2]；另一个例子是节点对的拓扑特征（例如共同邻居的数量）被提取并用于以提升预测性能。在定义特征时，我们还需要考虑特征的计算扩展性（这在提取阶段至关重要）。
 
-对于特征学习方法，目标是自动学习图节点的特征。其后的基本假设是，相同语境（例如邻域）中的节点在学习特征方面往往相互相似。因此，语境的定义是关键。170 机器学习与数据分析特征工程
+对于特征学习方法，目标是自动学习图节点的特征。其后的基本假设是，相同语境（例如邻域）中的节点在学习特征方面往往相互相似。因此，语境的定义是关键。
 
 | 符号 | 描述 |
 | :--- | :--- |
@@ -3083,7 +2449,7 @@ $$Sup(S, P, \gamma) = \frac{count(S, P, \gamma)}{N_{P,\gamma}^S}$$
 
 在这里，我们将现有的图嵌入方法分为三类：神经网络模型、基于分解的模型和基于正则化的模型。
 
-(A) 神经网络模型。最近，一些研究人员建议将 word2vec [19,20] 应用于图中的节点嵌入/特征³ [11,25,30]。现有方法的基本假设是 word2vec 中的跳字模型：给定图 $G(V,E)$ 中的节点 u 及其邻居 $N(u)$，目标是最大化
+**(A) 神经网络模型。** 最近，一些研究人员建议将 `word2vec` [19,20] 应用于图中的节点嵌入/特征³ [11,25,30]。现有方法的基本假设是 `word2vec` 中的跳字模型：给定图 $G(V,E)$ 中的节点 $u$ 及其邻居 $N(u)$，目标是最大化
 
 ```
 $$\sum_{u \in N(u)} Pr(N(u))f(u) \qquad (7.1)$$
@@ -3093,17 +2459,13 @@ $f(u)$ 是节点 $u$ 的嵌入。上面的方程基本上意味着邻域由中�
 
 ³ 我们在本章中交替使用“嵌入”和“特征”。
 
-
-
-
-
 ## 图形与网络的特征生成
 
 游生成 $v_{71} \rightarrow v_{24} \rightarrow v_{63} \rightarrow v_{1} \rightarrow v_{17} \rightarrow v_{80} \rightarrow v_{92} \rightarrow v_{72} \rightarrow v_{3} \rightarrow v_{12} \rightarrow v_{73} \rightarrow v_{57} \rightarrow v_{91} \rightarrow v_{69} \rightarrow v_{10} \rightarrow v_{94} \rightarrow v_{73} \rightarrow v_{94} \rightarrow v_{65} \rightarrow v_{12} \rightarrow v_{41} \rightarrow v_{75} \rightarrow v_{14} \rightarrow v_{6} \rightarrow v_{1} \rightarrow v_{13} \rightarrow v_{81}$
 
 ![](img/f9b50d48a9ba5d6b2e7f6b9761812434_189_0.png)
 
-嵌入 (word2vec)
+嵌入 (`word2vec`)
 
 ![](img/f9b50d48a9ba5d6b2e7f6b9761812434_189_1.png)
 
@@ -3124,27 +2486,27 @@ $Pr(v|f(u)) = \frac{\exp(g(v) \cdot f(u))}{\sum_{v'} \exp(g(v') \cdot f(u))} \qu
 
 这里，$\cdot$ 是内积，$f$ 是中心节点的嵌入函数，$g$ 是邻居节点的嵌入函数。$f$ 和 $g$ 都是需要学习的，它们可以将节点映射到其特征上。对于大型图，上述方程的分母计算开销很大。因此，通常使用负采样技术来近似它。
 
-等式 (7.1) 是 DeepWalk [25] 和 node2vec [11] 的优化框架。剩余的问题是定义给定节点的上下文。具体来说，DeepWalk 从每个节点生成多个随机游走；通过将一次游走视为句子，它将游走中给定节点的邻居定义为上下文。与 DeepWalk（深度优先遍历）不同，node2vec 生成广度优先遍历和深度。这些方法的概述如图 7.1 所示。从图中可以看出，这些方法首先从输入图中生成游走，根据游走定义上下文，并应用 word2vec (skip-gram) 模型学习每个节点的嵌入。最后，这些特征可以用于不同的预测任务，包括节点分类、链接预测和聚类。根据该图，DeepWalk 和 node2vec 的关键区别在于第一步，即游走生成。
+等式 (7.1) 是 `DeepWalk` [25] 和 `node2vec` [11] 的优化框架。剩余的问题是定义给定节点的上下文。具体来说，`DeepWalk` 从每个节点生成多个随机游走；通过将一次游走视为句子，它将游走中给定节点的邻居定义为上下文。与 `DeepWalk`（深度优先遍历）不同，`node2vec` 生成广度优先遍历和深度。这些方法的概述如图 7.1 所示。从图中可以看出，这些方法首先从输入图中生成游走，根据游走定义上下文，并应用 `word2vec` (skip-gram) 模型学习每个节点的嵌入。最后，这些特征可以用于不同的预测任务，包括节点分类、链接预测和聚类。根据该图，`DeepWalk` 和 `node2vec` 的关键区别在于第一步，即游走生成。
 
-接下来，尽管没有明确说明，LINE [30] 也遵循上述等式 (7.1) 中的框架。基于节点嵌入，LINE（二阶邻近性）的优化可以写为：
+接下来，尽管没有明确说明，`LINE` [30] 也遵循上述等式 (7.1) 中的框架。基于节点嵌入，`LINE`（二阶邻近性）的优化可以写为：
 
 ```
 $$\min - \sum_{(u,v) \in E} s_{ij} \cdot \log \sum_{v' \in V} \frac{\exp(g(v'))}{\exp(g(u))} \quad (7.4)$$
 ```
 
-其中 $s_{ij}$ 是边权重。该权重也与 DeepWalk 和 node2vec 不同。
+其中 $s_{ij}$ 是边权重。该权重也与 `DeepWalk` 和 `node2vec` 不同。
 
-还有使用 node2vec 模型之外的神经网络的方法。例如，DNGR [7] 使用了堆叠自动编码器。DNGR 首先生成一个随机冲浪模型来捕捉图结构信息。基于随机冲浪的结果，DNGR 生成概率共现矩阵，并计算 PPMI 指标 [16]。然后应用堆叠去噪自动编码器来学习节点嵌入。与 DeepWalk 和 node2vec 不同，DNGR 使用随机冲浪代替随机采样，并使用堆叠自动编码器（基于 PPMI 指标）代替 node2vec 模型。
+还有使用 `node2vec` 模型之外的神经网络的方法。例如，`DNGR` [7] 使用了堆叠自动编码器。`DNGR` 首先生成一个随机冲浪模型来捕捉图结构信息。基于随机冲浪的结果，`DNGR` 生成概率共现矩阵，并计算 `PPMI` 指标 [16]。然后应用堆叠去噪自动编码器来学习节点嵌入。与 `DeepWalk` 和 `node2vec` 不同，`DNGR` 使用随机冲浪代替随机采样，并使用堆叠自动编码器（基于 `PPMI` 指标）代替 `node2vec` 模型。
 
-**因子模型。** 除了神经网络方法外，一些研究人员建议使用矩阵分解进行图嵌入任务 [1, 6, 33, 38]。基本思想是构建节点-上下文矩阵，并使用矩阵的低秩近似作为嵌入。在 21 世纪 20 年代，图嵌入与降维有关。这些方法关注相似性约。这背后的共同逻辑是相似的节点在嵌入空间中彼此距离。典型的示例包括拉普拉斯特征映射 [4] 和集合线性嵌入 (CLE) [29]。
+**(B) 基于分解的模型。** 除了神经网络方法外，一些研究人员建议使用矩阵分解进行图嵌入任务 [1, 6, 33, 38]。基本思想是构建节点-上下文矩阵，并使用矩阵的低秩近似作为嵌入。在 21 世纪 20 年代，图嵌入与降维有关。这些方法关注相似性约。这背后的共同逻辑是相似的节点在嵌入空间中彼此距离。典型的示例包括拉普拉斯特征映射 [4] 和集合线性嵌入 (`CLE`) [29]。
 
-最近，人们提出了几种构建节点-上下文矩阵的方法类型。首先，不同于 DeepWalk 和 node2vec 的采样程序，一些研究人员建议通过矩阵乘法直接构建节点-上下文矩阵 [33, 38]。例如，Yang 等人 [38] 计算：
+最近，人们提出了几种构建节点-上下文矩阵的方法类型。首先，不同于 `DeepWalk` 和 `node2vec` 的采样程序，一些研究人员建议通过矩阵乘法直接构建节点-上下文矩阵 [33, 38]。例如，Yang 等人 [38] 计算：
 
 ```
 $S = (A + A^T)/2 \quad (7.5)$
 ```
 
-并对 S 矩阵进行矩阵分解。这里 $A$ 是图 $(G, E)$ 的归一化相邻矩阵，$S$ 包含了节点之间所有可能的 2 跳游走。作者提到矩阵可以通过更多跳数传播，他们选择两跳是因为效率考虑。第二种构建节点上下文矩阵的方法是通过邻近性计算 [24, 36]。例如，Wang 等人 [36] 遵循 LINE [30] 的邻近性定义并计算节点上下文矩阵：
+并对 $S$ 矩阵进行矩阵分解。这里 $A$ 是图 $(G, E)$ 的归一化相邻矩阵，$S$ 包含了节点之间所有可能的 2 跳游走。作者提到矩阵可以通过更多跳数传播，他们选择两跳是因为效率考虑。第二种构建节点上下文矩阵的方法是通过邻近性计算 [24, 36]。例如，Wang 等人 [36] 遵循 `LINE` [30] 的邻近性定义并计算节点上下文矩阵：
 
 ```
 $S = S^{(1)} + \eta S^{(2)} \quad (7.6)$
@@ -3152,27 +2514,27 @@ $S = S^{(1)} + \eta S^{(2)} \quad (7.6)$
 
 ![](img/f9b50d48a9ba5d6b2e7f6b9761812434_191_0.png)
 
-**图 7.2:** 基于分解方法的插图（GraRep）。
+**图 7.2:** 基于分解方法的插图（`GraRep`）。
 
-其中一阶邻近性 $S^{(1)} = A$，二阶邻近性 $S^{(2)}(i,j) = \cos(A(i), A(j))$，$eta$ 是一个参数。这里 $A(i)$ 表示 $A$ 的第 $i$ 行，$cos$ 表示余弦相似度。换句话说，二阶邻近性假设共享许多连接的节点彼此靠近。第三种矩阵构建方法基于 PMI（互信息）[6, 16]。PMI 矩阵定义为：
+其中一阶邻近性 $S^{(1)} = A$，二阶邻近性 $S^{(2)}(i,j) = \cos(A(i), A(j))$，$\eta$ 是一个参数。这里 $A(i)$ 表示 $A$ 的第 $i$ 行，$\cos$ 表示余弦相似度。换句话说，二阶邻近性假设共享许多连接的节点彼此靠近。第三种矩阵构建方法基于 `PMI`（互信息）[6, 16]。`PMI` 矩阵定义为：
 
 $PMI(i,j) = \log\frac{\#(i,j) \cdot |D|}{\#(i)\#(j)} \quad (7.7)$
 
-其中 $\#(i,j)$ 是节点 $i$ 和 $j$ 在同一上下文中出现的次数，$\#(i)$ 和 $\#(j)$ 是 $i$ 和 $j$ 出现的次数，$|D| = \sum \#(i,j)$。PMI 矩阵来源于 node2vec 和矩阵分解之间的等价 [16]。接下来，我们描述基于分解的方法，并讨论它们与神经网络方法的区别。之后，GraRep [6] 是一种典型的基于分解的图嵌入方法。如图 7.2 所示，它通过转移矩阵（即相邻矩阵）计算节点之间的所有路径。接下来，遵循 Levy 和 Goldberg [16]，对于每个 $k$ 值，GraRep 在从优化公式得到的矩阵上应用 SVD。最后，GraRep 连接所有 $k$ 值的嵌入。我们在图中显示特定的 $k$ 值。
+其中 $\#(i,j)$ 是节点 $i$ 和 $j$ 在同一上下文中出现的次数，$\#(i)$ 和 $\#(j)$ 是 $i$ 和 $j$ 出现的次数，$|D| = \sum \#(i,j)$。`PMI` 矩阵来源于 `node2vec` 和矩阵分解之间的等价 [16]。接下来，我们描述基于分解的方法，并讨论它们与神经网络方法的区别。之后，`GraRep` [6] 是一种典型的基于分解的图嵌入方法。如图 7.2 所示，它通过转移矩阵（即相邻矩阵）计算节点之间的所有路径。接下来，遵循 Levy 和 Goldberg [16]，对于每个 $k$ 值，`GraRep` 在从优化公式得到的矩阵上应用 `SVD`。最后，`GraRep` 连接所有 $k$ 值的嵌入。我们在图中显示特定的 $k$ 值。
 
-比较图 7.2 和图 7.1，GraRep 与神经网络方法（即 DeepWalk 和 node2vec）的区别在于以下三个方面：第一，DeepWalk 和 node2vec 中的游走可以被视为对可能路径的采样，而 GraRep 直接计算所有可能路径的转移概率。GraRep 覆盖了更多路径，对于大型图可能会导致效率问题。第二，DeepWalk 和 node2vec 直接在等式 (7.1) 上优化，而 GraRep 选择对派生矩阵采用 SVD（通过令导数为零）来寻找近似解。第三，DeepWalk 和 node2vec 为节点计算唯一的嵌入，而 GraRep 产生多个嵌入并返回它们的拼接。
+比较图 7.2 和图 7.1，`GraRep` 与神经网络方法（即 `DeepWalk` 和 `node2vec`）的区别在于以下三个方面：第一，`DeepWalk` 和 `node2vec` 中的游走可以被视为对可能路径的采样，而 `GraRep` 直接计算所有可能路径的转移概率。`GraRep` 覆盖了更多路径，对于大型图可能会导致效率问题。第二，`DeepWalk` 和 `node2vec` 直接在等式 (7.1) 上优化，而 `GraRep` 选择对派生矩阵采用 `SVD`（通过令导数为零）来寻找近似解。第三，`DeepWalk` 和 `node2vec` 为节点计算唯一的嵌入，而 `GraRep` 产生多个嵌入并返回它们的拼接。
 
 ## (C) 神经网络与基于分解的模型之间的联系
 
 具体而言，我们将展示带负采样的 skip-gram 模型之间的等价性 [10,38]。
 
-从 word2vec，我们得到 SGNS 的以下优化公式：
+从 `word2vec`，我们得到 `SGNS` 的以下优化公式：
 
 ```
 $l = \sum_{v \in V} \sum_{c \in V_c} \#(v,c)\log\sigma(v\cdot c) + k \cdot \sum_{c \in \mathbb{E}_{N \sim P_D}} \log\sigma(-v\cdot c) \quad (7.8)$
 ```
 
-其中 $v$ 是中心节点，$c$ 是上下文节点节D$ 包含所有节点-上下文对，$v(c)$ 是 $v$ 的嵌入，$\sigma(x) = \frac{1}{1+\exp(-x)}$，$c$ 是负样本，$k$ 是负样本的数量，$P_D$ 是负采样分布 $P_D(c) = \frac{\#(c)}{\|D|}$。注意在上述方程中，每个节点有两个角色：中心节点和上下文节点。
+其中 $v$ 是中心节点，$c$ 是上下文节点，$D$ 包含所有节点-上下文对，$v(c)$ 是 $v$ 的嵌入，$\sigma(x) = \frac{1}{1+\exp(-x)}$，$c$ 是负样本，$k$ 是负样本的数量，$P_D$ 是负采样分布 $P_D(c) = \frac{\#(c)}{\|D|}$。注意在上述方程中，每个节点有两个角色：中心节点和上下文节点。
 
 然后，将 $P_D$ 代入上述方程，当 $\#(v) = \sum_{c \in V_c} \#(v,c)$ 时，我们有：
 
@@ -3188,16 +2550,13 @@ $l = \sum_{v \in V} \sum_{c \in V_c} \#(v,c)\log\sigma(v\cdot c) + k \frac{\#(v)
 
 最后，令 $x = \log x$ 并解 $\frac{\partial}{\partial x} = 0$，我们得到：
 
-这里，$\log$ 是节点对 $(v,c)$ 著名的知的点互信息 (PMI)。word2vec 和矩阵分解之间的这种等价性在现有工作中被广泛使用。
-
-
-
+这里，$\log$ 是节点对 $(v,c)$ 著名的知的点互信息 (`PMI`)。`word2vec` 和矩阵分解之间的这种等价性在现有工作中被广泛使用。
 
 # 图与网络的特征生成
 
-在图嵌入过程中，包含了标签（labels）等内容，但在实践中，word2vec 和矩阵分解在特定任务中的表现可能有所不同。
+在图嵌入过程中，包含了标签（labels）等内容，但在实践中，`word2vec` 和矩阵分解在特定任务中的表现可能有所不同。
 
-**D) 基于正则化的模型。** 除了这两种类型的方法外，基于正则化的方法也得到了研究 [13,14]。通常，基于正则化的方法直接约束相同语境下的节点彼此靠近，例如：
+**(D) 基于正则化的模型。** 除了这两种类型的方法外，基于正则化的方法也得到了研究 [13,14]。通常，基于正则化的方法直接约束相同语境下的节点彼此靠近，例如：
 
 ```
 $$\sum_{(i,j) \in E} s_{ij} \left\| \frac{\mathbf{u}_i}{d_i} - \frac{\mathbf{u}_j}{d_j} \right\|^2 \quad (7.12)
@@ -3206,12 +2565,12 @@ $$\sum_{(i,j) \in E} s_{ij} \left\| \frac{\mathbf{u}_i}{d_i} - \frac{\mathbf{u}_
 其中 $s_{ij}$ 是两个节点之间的权重/相似性，$\mathbf{u}_i$ ($\mathbf{u}_j$) 是节点 $i$ ($j$) 的嵌入，$d_i$ ($d_j$) 是节点 $i$ ($j$) 的度。从上述方程可以看出，如果两个节点具有更高的相似性，最小化问题将强制相应的嵌入保持更近。注意，尽管我们在上面的方程中对链接 $E$ 进行求和，但我们实际上可以构建这种相似性来替代 $E$。此外，7.12) 可以重写为以下最小化问题：
 
 ```
-$max \text{Tr}(\mathbf{U}^T L \mathbf{U}) \quad (7.13)$
+$max \text{Tr}(\mathbf{U}^T L \mathbf{U}) \quad (7.13)
 ```
 
 其中 $L = D^{-0.5}SD^{-0.5}$，$D$ 是对角矩阵，其对角线元素为 $S$ 每行的和。
 
-在实践中，基于正则化的方法通常与其他类型的方法结合。例如，AANE [13] 结合了基于正则化的方法（用于捕捉图结构），SDNE [34] 将自动编码器与正则化结合以学习节点嵌入。具体而言，SDNE 将每个节点的邻居向量输入自动编码器，将隐藏状态作为嵌入，并进一步约束连接节点的嵌入彼此靠近。
+在实践中，基于正则化的方法通常与其他类型的方法结合。例如，`AANE` [13] 结合了基于正则化的方法（用于捕捉图结构），`SDNE` [34] 将自动编码器与正则化结合以学习节点嵌入。具体而言，`SDNE` 将每个节点的邻居向量输入自动编码器，将隐藏状态作为嵌入，并进一步约束连接节点的嵌入彼此靠近。
 
 ### 7.3.2 扩展
 
@@ -3219,17 +2578,17 @@ $max \text{Tr}(\mathbf{U}^T L \mathbf{U}) \quad (7.13)$
 
 **(A) 社区结构。** 大多数图嵌入的基础模型关注节点之间的两对关系/相似性，而社区结构是图的一个重要特征。此外，研究人员建议在可用此类信息时将社区结构整合进来。
 
-MIX [36] 采用了基于分解的方法，同时旨在保持图的社区结构。它对节点相似性矩阵和社区指示矩阵进行联合分解，并进一步添加了一个优化项以最大化模块度（modularity）[23]。
+`MIX` [36] 采用了基于分解的方法，同时旨在保持图的社区结构。它对节点相似性矩阵和社区指示矩阵进行联合分解，并进一步添加了一个优化项以最大化模块度（modularity）[23]。
 
 ![](img/f9b50d48a9ba5d6b2e7f6b9761812434_194_0.png)
 
-**图 7.3：** GENE [9] 的说明。
+**图 7.3：** `GENE` [9] 的说明。
 
-与 M-NMF 不同，GENE [9] 采用了神经网络模型。GENE 基于从其邻居生成嵌入。word2vec 从邻居生成嵌入，而 GENE 则从邻居和组嵌入生成。word2vec 和 GENE 之间的区别如图 7.3 所示。我们可以看到，在生成中心节点的嵌入时引入了组嵌入，且组嵌入与属于该组的嵌入相关。
+与 `M-NMF` 不同，`GENE` [9] 采用了神经网络模型。`GENE` 基于从其邻居生成嵌入。`word2vec` 从邻居生成嵌入，而 `GENE` 则从邻居和组嵌入生成。`word2vec` 和 `GENE` 之间的区别如图 7.3 所示。我们可以看到，在生成中心节点的嵌入时引入了组嵌入，且组嵌入与属于该组的嵌入相关。
 
-**节点属性。** 在某些情况下，图中的节点可能带有某些属性（例如颜色和描述）。因此，通过综合考虑图结构和节点属性来学习节点嵌入成为一个重要问题。
+**(B) 节点属性。** 在某些情况下，图中的节点可能带有某些属性（例如颜色和描述）。因此，通过综合考虑图结构和节点属性来学习节点嵌入成为一个重要问题。
 
-Yang 等人 [38] 提出了 TADW，使用节点上相关的文本信息。通过对矩阵 $T$ 中的文本特征进行编码（每列表示对应节点的文本特征），TADW 旨在优化以下目标：
+Yang 等人 [38] 提出了 `TADW`，使用节点上相关的文本信息。通过对矩阵 $T$ 中的文本特征进行编码（每列表示对应节点的文本特征），`TADW` 旨在优化以下目标：
 
 ```
 $$\min ||S - UV||_F^2$
@@ -3241,15 +2600,17 @@ $$\min ||S - UV||_F^2$
 $$\min ||S - UV||_F^2$
 ```
 
-在这两种情况下，我们忽略了正则化项。我们可以看到，TADW 遵循归纳矩阵完成 [22] 来包含节点属性。嵌入结果包含在 $U$ 和 $V$（或 $VT$）中。
+在这两种情况下，我们忽略了正则化项。我们可以看到，`TADW` 遵循归纳矩阵完成 [22] 来包含节点属性。嵌入结果包含在 $U$ 和 $V$（或 $VT$）中。
 
-最近，Huang 等人 [13] 提出了 AANE 来学习带有节点属性的节点嵌入。根据方程 (7.12) 中的基于正则化的方法，他们对学习到的嵌入增加了以下约束：
+最近，Huang 等人 [13] 提出了 `AANE` 来学习带有节点属性的节点嵌入。根据方程 (7.12) 中的基于正则化的方法，他们对学习到的嵌入增加了以下约束：
 
 ```
 $$\min ||S - UU^T||_F^2$
 ```
 
-其中 S 是从属性中计算出的节点间相似性矩阵，$U$ 包含节点嵌入。随后，在 AANE 的基础上，他们进一步构建了一个监督学习问题，并使用训练数据中的节点标签（例如类别）产生测试数据中的标签 [14]。基本思想是将标签信息表述为正则化项。
+其中 $S$ 是从属性中计算出的节点间相似性矩阵，$U$ 包含节点嵌入。随后，在 `AANE` 的基础上，他们进一步构建了一个监督学习问题，并使用训练数据中的节点标签（例如类别）产生测试数据中的标签 [14]。基本思想是将标签信息表述为正则化项。
+
+
 
 **(C) 有向图。** 某些现有工作关注有向图，因为节点 $i$ 到节点 $j$ 的接近性不同于节点 $j$ 到有向图的接近性。为此，HOPE [24] 提出分解矩阵：
 
@@ -3266,87 +2627,6 @@ $$\min ||S - UV||_F^2$
 
 （注：原文后续存在大量重复和 OCR 错误，译文已根据逻辑清理进行处理。）
 
-
-
-图与网络的特征生成 179
-
-![](img/f9b50d48a9ba5d6b2e7f6b9761812434_197_0.png)
-
-**图 7.5：** 异质网络的图示。节点-标签关系（标签作为监督信息）。特别的是，PTE 将节点（同质图中的节点）、社区和标签处理为广义异质图中的三类节点。
-
-与 PTE 不同，Chang 等人 [8] 考虑了每个节点可能具有不同类型属性的异质图（heterogeneous graph）。基本思想是使用神经网络获取不同属性的特征，然后通过线性变换将特征映射到同一个空间中。Dong 等人 [10] 在异质图上定义了元路径（metapaths），并以类似于 DeepWalk 的方式学习嵌入。
-
-**(F) 监督方法。** 最后，网络嵌入方法有两个分支。第一个分支旨在学习可以用于不同任务的通用特征。相比之下，第二个分支是为特定任务设计的，可以利用任务提供的监督信息来学习嵌入。我们将第二个分支称为监督方法。
-
-在文献中，几种方法可以被视为监督或半监督方法 [29, 39]。例如，PTE [29] 在学习嵌入时将已知标签作为属性引入，并使用这些嵌入来预测未知标签。MMDW [33] 将 SVM 中的最大边际（max-margin）思想引入到基于分解的模型中。MMDW 可以被视为一种监督方法，因为它优化了最大边际分类器和网络嵌入公式。
-
-### 7.3.3 总结
-
-总体而言，我们在表 7.2 中总结了现有的自动特征学习的图嵌入方法。根据该表我们可以得出几点观察。首先，图嵌入是近年来的热门话题，已经提出了许多方法。实际上，图嵌入可以追溯到更早的，当时嵌入学习主要与维度
-
-# 机器学习与数据分析的特征工程
-
-| 方法 | 年份 | 方法类型 | 扩展 |
-|---|---|---|---|
-| DeepWalk [25] | 2014 | 神经网络方法 | 无 |
-| GraRep [6] | 2015 | 基于分解的方法 | 无 |
-| LINE [30] | 2015 | 神经网络方法 | 无 |
-| PTE [29] | 2015 | 神经网络方法 | 异质图，监督方法 |
-| TADW [18] | 2015 | 基于分解的方法 | 节点属性 |
-| HNE [5] | 2015 | 神经网络方法 | 异质图 |
-| node2vec [11] | 2016 | 神经网络方法 | 无 |
-| DNGR [7] | 2016 | 神经网络 + | 社区结构 |
-| SDNE [34] | 2016 | 基于正则化的方法 | |
-| HOPE [24] | 2016 | 基于分解的方法 | 有向图 |
-| GENE [9] | 2016 | 神经网络方法 | 监督方法 |
-| MMDW [33] | 2017 | 基于分解的方法 | 节点属性 |
-| AANE [13] | 2017 | 基于正则化的 + 基于分解的方法 | |
-| APP [42] | 2017 | 神经网络方法 | 有向图 |
-| M-NNMF [36] | 2017 | 基于分解的方法 | 社区结构 |
-| LANE [14] | 2017 | 神经网络方法 | 节点属性，监督方法 |
-| metapathvec [10] | 2017 | 神经网络方法 | 异质图 |
-| SNE [41] | 2017 | 神经网络方法 | 符号图 |
-| SINE [35] | 2017 | 神经网络方法 | 符号图 |
-
-在文献中，有几种方法可以被视为监督或半监督方法 [29, 39]。例如，PTE [29] 在学习嵌入时将已知标签作为属性引入，并使用这些嵌入来预测未知标签。MMDW [33] 将 SVM 中的最大边际思想引入到基于分解的模型中。MMDW 可以被视为一种监督方法，因为它优化了最大边际分类器和网络嵌入公式。
-
-### 7.3.3 总结
-
-总体而言，我们在表 7.2 中总结了现有的自动特征学习的图嵌入方法。根据该表得出得出几点观察。首先，图嵌入是近年来的热门话题，已经提出了许多方法。实际上，图嵌入可以追溯到更早的，当时嵌入学习主要与维度
-
-# 机器学习与数据分析的特征工程
-
-| 方法 | 年份 | 方法类型 | 扩展 |
-|---|---|---|---|
-| DeepWalk [25] | 2014 | 神经网络方法 | 无 |
-| GraRep [6] | 2015 | 基于分解的方法 | 无 |
-| LINE [30] | 2015 | 神经网络方法 | 无 |
-| PTE [29] | 2015 | 神经网络方法 | 异质图，监督方法 |
-| TADW [18] | 2015 | 基于分解的方法 | 节点属性 |
-| HNE [5] | 2015 | 神经网络方法 | 异质图 |
-| node2vec [11] | 2016 | 神经网络方法 | 无 |
-| DNGR [7] | 2016 | 神经网络 + | 社区结构 |
-| SDNE [34] | 2016 | 基于正则化的方法 | |
-| HOPE [24] | 2016 | 基于分解的方法 | 有向图 |
-| GENE [9] | 2016 | 神经网络方法 | 监督方法 |
-| MMDW [33] | 2017 | 基于分解的方法 | 节点属性 |
-| AANE [13] | 2017 | 基于正则化的 + 基于分解的方法 | |
-| APP [42] | 2017 | 神经网络方法 | 有向图 |
-| M-NNMF [36] | 2017 | 基于分解的方法 | 社区结构 |
-| LANE [14] | 2017 | 神经网络方法 | 节点属性，监督方法 |
-| metapathvec [10] | 2017 | 神经网络方法 | 异质图 |
-| SNE [41] | 2017 | 神经网络方法 | 符号图 |
-| SINE [35] | 2017 | 神经网络方法 | 符号图 |
-
-在文献中，有几种方法可以被视为监督或半监督方法 [29, 39]。例如，PTE [29] 在学习嵌入时将已知标签作为属性引入，并使用这些嵌入来预测未知标签。MMDW [33] 将 SVM 中的最大边际思想引入到基于分解的模型中。MMDW 可以被视为一种监督方法，因为它优化了最大边际分类器和网络嵌入公式。
-
-### 7.3.3 总结
-
-总体而言，我们在表 7.2 中总结了现有的自动特征学习的图嵌入方法。根据该表得出几点观察。首先，图嵌入是近年来的热门话题，已经提出了许多方法。实际上，图嵌入可以追溯到更早的，当时嵌入学习主要与维度
-
-[/content]
-
-[content]
 图与网络的特征生成 179
 
 ![](img/f9b50d48a9ba5d6b2e7f6b9761812434_197_0.png)
@@ -3387,128 +2667,35 @@ $$\min ||S - UV||_F^2$
 | SNE [41] | 2017 | 神经网络方法 | 符号图 |
 | SINE [35] | 2017 | 神经网络方法 | 符号图 |
 
-在文献中，有几种方法可以被视为监督或半监督方法 [29, 39]。例如，PTE [29] 在学习嵌入时将已知标签作为属性引入，并使用这些嵌入来预测未知标签。MMDW [33] 将 SVM 中的最大边际思想引入到基于分解的模型中。MMDW 可以被视为一种监督方法，因为它优化了最大边际分类器和网络嵌入公式。
 
-### 7.3.3 总结
 
-总体而言，我们在表 7.2 中总结了现有的自动特征学习的图嵌入方法。根据该表我们可以得出几点观察。首先，图嵌入是近年来的热门话题，已经提出了许多方法。实际上，图嵌入可以追溯到更早的，当时嵌入学习主要与维度
-
-[/content]
-
-[content]
-图与网络的特征生成 179
-
-![](img/f9b50d48a9ba5d6b2e7f6b9761812434_197_0.png)
-
-**图 7.5：** 异质网络的图示。节点-标签关系（标签作为监督信息）。特别的是，PTE 将节点（同质图中的节点）、社区和标签处理为广义异质图中的三类节点。
-
-与 PTE 不同，Chang 等人 [8] 考虑了每个节点可能具有不同类型属性的异质图。基本思想是使用神经网络获取不同属性的特征，然后通过线性变换将特征映射到同一个空间中。Dong 等人 [10] 在异质图上定义了元路径（metapaths），并以类似于 DeepWalk 的方式学习嵌入。
-
-**(F) 监督方法。** 最后，网络嵌入方法有两个分支。第一个分支旨在学习可以用于不同任务的通用特征。相比之下，第二个分支是为特定任务设计的，可以利用任务提供的监督信息来学习嵌入。我们将第二个分支称为监督方法。
-
-在文献中，有几种方法可以被视为监督或半监督方法 [29, 39]。例如，PTE [29] 在学习嵌入时将已知标签作为属性引入，并使用这些嵌入来预测未知标签。MMDW [33] 将 SVM 中的最大边际（max-margin）思想引入到基于分解的模型中。MMDW 可以被视为一种监督方法，因为它优化了最大边际分类器和网络嵌入公式。
-
-### 7.3.3 总结
-
-总体而言，我们在表 7.2 中总结了现有的自动特征学习的图嵌入方法。根据该表我们可以得出几点观察。首先，图嵌入是近年来的热门话题，已经提出了许多方法。实际上，图嵌入可以追溯到更早的，当时嵌入学习主要与维度
-
-# 机器学习与数据分析的特征工程
-
-| 方法 | 年份 | 方法类型 | 扩展 |
-|---|---|---|---|
-| DeepWalk [25] | 2014 | 神经网络方法 | 无 |
-| GraRep [6] | 2015 | 基于分解的方法 | 无 |
-| LINE [30] | 2015 | 神经网络方法 | 无 |
-| PTE [29] | 2015 | 神经网络方法 | 异质图，监督方法 |
-| TADW [18] | 2015 | 基于分解的方法 | 节点属性 |
-| HNE [5] | 2015 | 神经网络方法 | 异质图 |
-| node2vec [11] | 2016 | 神经网络方法 | 无 |
-| DNGR [7] | 2016 | 神经网络 + | 社区结构 |
-| SDNE [34] | 2016 | 基于正则化的方法 | |
-| HOPE [24] | 2016 | 基于分解的方法 | 有向图 |
-| GENE [9] | 2016 | 神经网络方法 | 监督方法 |
-| MMDW [33] | 2017 | 基于分解的方法 | 节点属性 |
-| AANE [13] | 2017 | 基于正则化的 + 基于分解的方法 | |
-| APP [42] | 2017 | 神经网络方法 | 有向图 |
 | M-NNMF [36] | 2017 | 基于分解的方法 | 社区结构 |
 | LANE [14] | 2017 | 神经网络方法 | 节点属性，监督方法 |
 | metapathvec [10] | 2017 | 神经网络方法 | 异质图 |
 | SNE [41] | 2017 | 神经网络方法 | 符号图 |
 | SINE [35] | 2017 | 神经网络方法 | 符号图 |
 
-在文献中，有几种方法可以被视为监督或半监督方法 [29, 39]。例如，PTE [29] 在学习嵌入时将已知标签作为属性引入，并使用这些嵌入来预测未知标签。MMDW [33] 将 SVM 中的最大边际思想引入到基于分解的模型中。MMDW 可以被视为一种监督方法，因为它优化了最大边际分类器和网络嵌入公式。
+在文献中，有几种方法可以被视为监督或半监督方法 [29, 39]。例如，`PTE` [29] 在学习嵌入时将已知标签作为属性引入，并使用这些嵌入来预测未知标签。`MMDW` [33] 将 SVM 中的最大边际思想引入到基于分解的模型中。`MMDW` 可以被视为一种监督方法，因为它优化了最大边际分类器和网络嵌入公式。
 
 ### 7.3.3 总结
 
 总体而言，我们在表 7.2 中总结了现有的自动特征学习的图嵌入方法。根据该表我们可以得出几点观察。首先，图嵌入是近年来的热门话题，已经提出了许多方法。实际上，图嵌入可以追溯到更早的，当时嵌入学习主要与维度
-
-[/content]
-
-[content]
-图与网络的特征生成 179
-
-![](img/f9b50d48a9ba5d6b2e7f6b9761812434_197_0.png)
-
-**图 7.5：** 异质网络的图示。节点-标签关系（标签作为监督信息）。特别的是，PTE 将节点（同质图中的节点）、社区和标签处理为广义异质图中的三类节点。
-
-与 PTE 不同，Chang 等人 [8] 考虑了每个节点可能具有不同类型属性的异质图。基本思想是使用神经网络获取不同属性的特征，然后通过线性变换将特征映射到同一个空间中。Dong 等人 [10] 在异质图上定义了元路径（metapaths），并以类似于 DeepWalk 的方式学习嵌入。
-
-**(F) 监督方法。** 最后，网络嵌入方法有两个分支。第一个分支旨在学习可以用于不同任务的通用特征。相比之下，第二个分支是为特定任务设计的，可以利用任务提供的监督信息来学习嵌入。我们将第二个分支称为监督方法。
-
-在文献中，有几种方法可以被视为监督或半监督方法 [29, 39]。例如，PTE [29] 在学习嵌入时将已知标签作为属性引入，并使用这些嵌入来预测未知标签。MMDW [33] 将 SVM 中的最大边际（max-margin）思想引入到基于分解的模型中。MMDW 可以被视为一种监督方法，因为它优化了最大边际分类器和网络嵌入公式。
-
-### 7.3.3 总结
-
-总体而言，我们在表 7.2 中总结了现有的自动特征学习的图嵌入方法。根据该表我们可以得出几点观察。首先，图嵌入是近年来的热门话题，已经提出了许多方法。实际上，图嵌入可以追溯到更早的，当时嵌入学习主要与维度
-
-# 机器学习与数据分析的特征工程
-
-| 方法 | 年份 | 方法类型 | 扩展 |
-|---|---|---|---|
-| DeepWalk [25] | 2014 | 神经网络方法 | 无 |
-| GraRep [6] | 2015 | 基于分解的方法 | 无 |
-| LINE [30] | 2015 | 神经网络方法 | 无 |
-| PTE [29] | 2015 | 神经网络方法 | 异质图，监督方法 |
-| TADW [18] | 2015 | 基于分解的方法 | 节点属性 |
-| HNE [5] | 2015 | 神经网络方法 | 异质图 |
-| node2vec [11] | 2016 | 神经网络方法 | 无 |
-| DNGR [7] | 2016 | 神经网络 + | 社区结构 |
-| SDNE [34] | 2016 | 基于正则化的方法 | |
-| HOPE [24] | 2016 | 基于分解的方法 | 有向图 |
-| GENE [9] | 2016 | 神经网络方法 | 监督方法 |
-| MMDW [33] | 2017 | 基于分解的方法 | 节点属性 |
-| AANE [13] | 2017 | 基于正则化的 + 基于分解的方法 | |
-| APP [42] | 2017 | 神经网络方法 | 有向图 |
-| M-NNMF [36] | 2017 | 基于分解的方法 | 社区结构 |
-| LANE [14] | 2017 | 神经网络方法 | 节点属性，监督方法 |
-| metapathvec [10] | 2017 | 神经网络方法 | 异质图 |
-| SNE [41] | 2017 | 神经网络方法 | 符号图 |
-| SINE [35] | 2017 | 神经网络方法 | 符号图 |
-
-在文献中，有几种方法可以被视为监督或半监督方法 [29, 39]。例如，PTE [29] 在学习嵌入时将已知标签作为属性引入，并使用这些嵌入来预测未知标签。MMDW [33] 将 SVM 中的最大边际思想引入到基于分解的模型中。MMDW 可以被视为一种监督方法，因为它优化了最大边际分类器和网络嵌入公式。
-
-### 7.3.3 总结
-
-总体而言，我们在表 7.2 中总结了现有的自动特征学习的图嵌入方法。根据该表我们可以得出几点观察。首先，图嵌入是近年来的热门话题，已经提出了许多方法。实际上，图嵌入可以追溯到更早的，当时嵌入学习主要与维度
-
-
-
-
 
 # 图与网络的特征生成
 
 ![](img/f9b50d48a9ba5d6b2e7f6b9761812434_201_0.png)
 
 (a) DeepWalk
+
 (b) LINE
 
 **图 7.7:** 可视化示例。
 
-结果来自 Citeseer 数据集的引用网络（包含 3,312 位作者和 4,732 次引用）。六种颜色分别对应“agents”（蓝色）、“AI”（红色）、“DB”（黑色）、“IR”（紫色）、“ML”（卡其色）和“HCF”（绿色）。从图中观察到，DeepWalk 和 LINE 的可视化结果都是意义的，因为相同颜色的节点分布得更近。例如，代表 AI 出版的红色节点分别聚集在两幅图的左部分和右部分。
+结果来自 Citeseer 数据集的引用网络（包含 3,312 位作者和 4,732 次引用）。六种颜色分别对应“agents”（蓝色）、“AI”（红色）、“DB”（黑色）、“IR”（紫色）、“ML”（卡其色）和“HCF”（绿色）。从图中观察到，`DeepWalk` 和 `LINE` 的可视化结果都是意义的，因为相同颜色的节点分布得更近。例如，代表 AI 出版的红色节点分别聚集在两幅图的左部分和右部分。
 
 ## 7.5 结论与未来方向
 
-在本章中，我们讨论了图和网络的现有工作以及特征生成方法。我们首先讨论了两种类型的特征（邻域级和全局级）。全局级特征反映了图/网络的整体属性，而邻域级特征则刻画了节点的局部邻域。对于邻域级特征，我们将其分为两类：基于节点自我中心图（egonet）计算的常用特征，以及基于节点邻居之间特征值计算的递归特征。
+在本章中，我们讨论了图和网络的现有工作以及特征生成方法。我们首先讨论了两种类型的特征（邻域级和全局级）。全局级特征反映了图/网络的整体属性，而邻域级特征则刻画了节点的局部邻域。对于邻域级特征，我们将其分为两类：基于节点自我中心图（`egonet`）计算的常用特征，以及基于节点邻居之间特征值计算的递归特征。
 
 接下来，我们将图特征生成方法分为特征提取方法和特征学习方法。对于特征提取方法，关键在于定义特征函数。对于特征学习方法（即图嵌入），我们系统地回顾了近期进展。特征学习方法的基本思想是基于“处于相同上下文的节点往往相互相似”的假设，自动为图节点学习特征。特别是，我们引入了三种基本的图嵌入模型（神经网络方法、基于分解的方法和基于正则化的方法），并总结了文献中研究的扩展方法（基于基本模型）。这些扩展包括：是否保留社区结构、是否引入节点属性、是否使用监督学习，以及针对若干种特殊类型的图（即有向图、符号图和异构图）。
 
@@ -3520,7 +2707,7 @@ $$\min ||S - UV||_F^2$
 
 - [1] Amr Ahmed, Mary McGlhon, Shravan Naranamurthy, Vanja Josovski, and Alexander Smola. Distributed large-scale natural graph factorization. In Proceedings of the 22nd International Conference on Wide World Web (WWW), pages 37–48. ACM, 2013.
 - [2] Lekan Akoglu, Christos Faloutsos. Oddball: Spotting anomalies in weighted graphs. Advances in Knowledge Discovery and Data Mining, pages 410–420, 2010.
-- [3] Albert-László Barabási, Réka Albert, and Hawoong Jeong. Diameter of the world-wide web. Nature, 401(9):130–131, 1999. # 图与网络的特征生成
+- [3] Albert-László Barabási, Réka Albert, and Hawoong Jeong. Diameter of the world-wide web. Nature, 401(9):130–131, 1999.
 - [4] Mikhail Bielkin and Partha Nayogi. Laplacian eigenmaps and spectral techniques for embedding and clustering. In Advances in Neural Processing Systems (NIPS), pages 585–591, 2002.
 - [5] Smriti Bhagat, Graham Cormode, and s Muthukrishnan. Node classification in social networks. In Social Data Analytics, pages 115–118, 2011.
 - [6] Shaheng Chao, Wei Lu, and Qiongkai Xu. Grepare: Learning graph representations with global structural information. In Proceedings of the 24th ACM International Conference on Information and Knowledge Management (CIKM), pages 891–900, 2015.
@@ -3530,7 +2717,7 @@ $$\min ||S - UV||_F^2$
 - [10] Mingdong Ou, Peng Cui, Jian Fei, Wei Zhang, and Wenwu Zhu. Asymmetric transitivity preserving graph embedding. In Proceedings of the 22nd ACM SIGKDD International Conference on Data Discovery and Data Mining (KDD), pages 1105–1114. ACM, 2016.
 - [11] Aditya Grover, J Lesovec. node2vec: Scalable representation. In Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD), pages 135–144, 2017.
 - [12] Keith Henderson, Brian Gallagher, Lei Li, and Xu. Densification laws and possible. In Proceedings of the Eleventh ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD), pages 177–187, 2005.
-- [13] Xiao Wang, Jindong Li, and Xu. Accelerated network embedding. In Proceedings of the 10th ACM Conference on Web Search and Data (SDM), 2017. # 机器学习与数据分析的特征工程
+- [13] Xiao Wang, Jindong Li, and Xu. Accelerated network embedding. In Proceedings of the 10th ACM Conference on Web Search and Data (SDM), 2017.
 - [14] Mingdong Ou, Peng Cui, Jian Fei, Wei Zhang, and Wenwu Zhu. Asymmetric transitivity preserving graph embedding. In Proceedings of the 22nd ACM SIGKDD International Conference on Data Discovery and Data Mining (KDD), pages 1105–1114. ACM, 2016.
 - [15] Bryan Perozzi, Rami Al-Rfou, and Steven Skiena. Deepwalk: Online learning of social representations. In Proceedings of the 20th ACM
 - [16] Omer Levy and Yao Goldberg. Neural word embedding as implicit factorization. In Advances in Neural Processing Systems (NIPS), pages 2177–2185, 2014.
@@ -3542,62 +2729,62 @@ $$\min ||S - UV||_F^2$
 - [22] Nagarajan Nataraman and Inderit S Dhillon. Inductive matrix completion for predicting gene-disease associations. Bioinformatics, 30(12):i60–i68, 2014.
 - [23] Mark EJ Newman. Modularity and community structure in networks. Proceedings of the National Academy of Sciences, 103(23):8577–8582, 2006.
 - [24] Mingdong Ou, Peng Cui, Jian Fei, Wei Zhang, and Wenwu Zhu. Asymmetric transitivity preserving graph embedding. In Proceedings of the 22nd ACM SIGKDD International Conference on Data Discovery and Data Mining (KDD), pages 1105–1114. ACM, 2016.
-- [25] Bryan Perozzi, Rami Al-Rfou, and Steven Skiena. Deepwalk: Online learning of social representations. In Proceedings of the 20th ACM
+- [25] Bryan Perozzi, Rami Al-Rfou, and Steven Skiena. Deepwalk: Online learning of social representations. In Proceedings of the 20th ACM SIGKDD 知识发现与数据挖掘国际会议 (KDD)，第 701–710 页。ACM, 2014。
+- [26] Sam Roweis and Lawrence K Saul. 局部线性嵌入的非线性降维。Science, 290(5500):2323–2326, 2000。
+- [27] Elisa Schaeffer. 图聚类。Computer Science Review, 1(1):27–64, 2004。
+- [28] Blake Shaw and Tony Jebara. 结构保持嵌入。第 26 届国际机器学习年度会议 (ICML) 论文集，第 937–944 页。ACM, 2009。
+- [29] Jian Tang, Meng Qu, and Qiaozhi Mei. PTE: 基于大规模异构文本网络的预测性文本嵌入。第 21 届 ACM SIGKDD 知识发现与数据挖掘国际会议 (KDD) 论文集，第 1165–1174 页。ACM, 2015。
+- [30] Jian Tang, Meng Qu, Mingzhi Wang, Ming Zhang, Jun Yan, and Qiazhu Mei. 线尺度信息网络嵌入。第 24 届万网国际会议 (WWW) 论文集，第 1067–1078 页。ACM, 2015。
+- [31] Lei Tang and Huan Liu. 利用社交媒体网络进行分类。Data Mining and Knowledge, 23(3):447–478, 2011。
+- [32] Hanghang Hong, B. Aditya Prakash, Charalampos Tsourakalakis, Tina Eliassi-Rad, Christos Faloutos, and Duen Horng Chau. 大图的脆弱性。IEEE 国际数据挖掘会议 (ICDM) 论文集，第 1091–1096 页。IEEE, 2010。
+- [33] Chunmao Tao, Weichen Zhang, Zhiyuan Liu, and Maosong Sun. Margin DeepWalk: 网络表示的判别性学习。第 25 届国际人工智能联合会议 (IJCAI) 论文集，第 3889–3895 页，2016。
+- [34] Daixin Wang, Peng Cui, and Wenwu Zhu. 结构深度网络嵌入。第 22 届 ACM SIGKDD 知识发现与数据挖掘国际会议 (KDD) 论文集，第 1225–1234 页。ACM, 2016。
+- [35] Suhang Wang, Jiliang Tang, Char Aggrawal, Yi Chang, and Huan Liu. 社交媒体中的符号网络嵌入。SDM, 2017。
+- [36] Xiao Wang, Peng Cui, Jian Wang, Jian Pei, Wenwu Zhu, and Shqiang Yang. 社区保持网络嵌入。第 30 届 AAAI 人工智能会议 (AAAI) 论文集，第 203–209 页，2017。
+- Pinar Yanadarag and SVN Vishwanathan. 深度图核。第 21 届 ACM SIGKDD 知识发现与数据挖掘国际会议 (KDD) 论文集，第 1365–1374 页。ACM, 2015。
 
 
 
+# 参考文献
 
-图与网络的特征生成 187
+- Cheng Yang, Ziyuan Liu, Deli Zhao, Maosong Sun, and Edward Y. Chang. 富文本信息的网络表示学习。第 24 届国际人工智能联合会议 (IJCAI) 论文集，第 2111–2117 页，2015。
 
-SIGKDD 知识发现与数据挖掘国际会议 (KDD)，第 701–710 页。ACM, 2014。
+- Zilin Yang, William Cohen, and Ruslan Salakhudinov. 重新审视图嵌入的半监督学习。第 33 届机器学习会议论文集。
 
--   [26] Sam Roweis and Lawrence K Saul. 局部线性嵌入的非线性降维。Science, 290(5500):2323–2326, 2000。
--   [27] Elisa Schaeffer. 图聚类。Computer Science Review, 1(1):27–64, 2007。
--   [28] Blake Shaw and Tony Jebara. 结构保持嵌入。第 26 届国际机器学习年度会议 (ICML) 论文集，第 937–944 页。ACM, 2009。
--   [29] Jian Tang, Meng Qu, and Qiaozhi Mei. PTE: 基于大规模异构文本网络的预测性文本嵌入。第 21 届 ACM SIGKDD 知识发现与数据挖掘国际会议 (KDD) 论文集，第 1165–1174 页。ACM, 2015。
--   [30] Jian Tang, Meng Qu, Mingzhi Wang, Ming Zhang, Jun Yan, and Qiazhu Mei. 线尺度信息网络嵌入。第 24 届万网国际会议 (WWW) 论文集，第 1067–1078 页。ACM, 2015。
--   [31] Lei Tang and Huan Liu. 利用社交媒体网络进行分类。Data Mining and Knowledge, 23(3):447–478, 2011。
--   [32] Hanghang Hong, B. Aditya Prakash, Charalampos Tsourakalakis, Tina Eliassi-Rad, Christos Faloutos, and Duen Horng Chau. 大图的脆弱性。IEEE 国际数据挖掘会议 (ICDM) 论文集，第 1091–1096 页。IEEE, 2010。
--   [33] Chunmao Tao, Weichen Zhang, Zhiyuan Liu, and Maosong Sun. Margin DeepWalk: 网络表示的判别性学习。第 25 届国际人工智能联合会议 (IJCAI) 论文集，第 3889–3895 页，2016。
--   [34] Daixin Wang, Peng Cui, and Wenwu Zhu. 结构深度网络嵌入。第 22 届 ACM SIGKDD 知识发现与数据挖掘国际会议 (KDD) 论文集，第 1225–1234 页。ACM, 2016。
--   [35] Suhang Wang, Jiliang Tang, Char Aggrawal, Yi Chang, and Huan Liu. 社交媒体中的符号网络嵌入。SDM, 2017。
--   [36] Xiao Wang, Peng Cui, Jian Wang, Jian Pei, Wenwu Zhu, and Shqiang Yang. 社区保持网络嵌入。第 30 届 AAAI 人工智能会议 (AAAI) 论文集，第 203–209 页，2017。
--   Pinar Yanadarag and SVN Vishwanathan. 深度图核。第 21 届 ACM SIGKDD 知识发现与数据挖掘国际会议 (KDD) 论文集，第 1365–1374 页。ACM, 2015。
--   Cheng Yang, Ziyuan Liu, Deli Zhao, Maosong Sun, and Edward Y. Chang. 富文本信息的网络表示学习。第 24 届国际人工智能联合会议 (IJCAI) 论文集，第 2111–2117 页，2015。
--   Zilin Yang, William Cohen, and Ruslan Salakhudinov. 重新审视图嵌入的半监督学习。第 33 届机器学习会议论文集。
--   Zilin Yang, William Cohen, and Ruslan Salakhudinov. 社交网络中的链接嵌入。SocInfo, 84–97, 2011。
--   Yuan Yao, Zifeng Zhou, Luxin Han, Feng Xu, and Jian Li. 符号网络嵌入。太平洋知识发现与数据挖掘会议 (PAKDD), 183–195, 2017。
--   Chang Zhou, Yong Liu, Xiaofei Liu, Zhongqi Liu, and Jun Gao. 非对称邻性的可扩展图嵌入。第 30 届 AAAI 人工智能会议 (AAAI) 论文集，第 2942–2948 页，2017。
+- Zilin Yang, William Cohen, and Ruslan Salakhudinov. 社交网络中的链接嵌入。SocInfo, 84–97, 2011。
+
+- Yuan Yao, Zifeng Zhou, Luxin Han, Feng Xu, and Jian Li. 符号网络嵌入。太平洋知识发现与数据挖掘会议 (PAKDD), 183–195, 2017。
+
+- Chang Zhou, Yong Liu, Xiaofei Liu, Zhongqi Liu, and Jun Gao. 非对称邻性的可扩展图嵌入。第 30 届 AAAI 人工智能会议 (AAAI) 论文集，第 2942–2948 页，2017。
 
 ## 7.6 术语
 
-**图嵌入:** 学习节点的嵌入/特征。
+**图嵌入**：学习节点的嵌入/特征。
 
-## 第二部分
-
-## 通用特征工程技术
+# 第二部分：通用特征工程技术
 
 ![](img/f9b50d48a9ba5d6b2e7f6b976182434_208_0)
 
-## 第 8 章 特征选择与评估
+# 第 8 章 特征选择与评估
 
 李云
+
 南京邮电大学计算机科学学院，江苏大数据安全与智能处理关键实验室，南京。
 
 - 8.1 引言 .......................................................................................... 191
 - 8.2 特征选择框架 ................................................................................ 192
-- 8.2.1 基于搜索的特征选择 ....................................................................... 193
-- 8.2.2 基于相关性的特征选择 ................................................................................ 194
+  - 8.2.1 基于搜索的特征选择 ....................................................................... 193
+  - 8.2.2 基于相关性的特征选择 ................................................................................ 194
 - 8.3 特征选择的前沿课题 ........................................................................ 196
-- 8.3.1 稳定特征选择 .......................................................................... 197
-- 8.3.2 基于稀疏性的特征选择 ................................................................................ 199
-- 8.3.3 多源特征选择 ................................................................... 200
-- 8.3.4 分布式特征选择 .................................................................... 203
-- 8.3.5 多视图特征选择 ...................................................................................... 204
-- 8.3.6 多标签特征选择 ................................................................... 205
-- 8.3.7 在线特征选择 ......................................................................................... 206
-- 8.3.8 隐私保护特征选择 ..................................................................... 208
-- 8.3.9 对抗性特征选择 ................................................................................... 210
+  - 8.3.1 稳定特征选择 .......................................................................... 197
+  - 8.3.2 基于稀疏性的特征选择 ................................................................................ 199
+  - 8.3.3 多源特征选择 ................................................................... 200
+  - 8.3.4 分布式特征选择 .................................................................... 203
+  - 8.3.5 多视图特征选择 ...................................................................................... 204
+  - 8.3.6 多标签特征选择 ................................................................... 205
+  - 8.3.7 在线特征选择 ......................................................................................... 206
+  - 8.3.8 隐私保护特征选择 ..................................................................... 208
+  - 8.3.9 对抗性特征选择 ................................................................................... 210
 - 8.4 未来工作与结论 ................................................................................ 211
 - 参考文献 ................................................................................................ 213
 
@@ -3605,13 +2792,9 @@ SIGKDD 知识发现与数据挖掘国际会议 (KDD)，第 701–710 页。ACM, 
 
 特征选择是机器学习和数据挖掘中的一项重要任务。它是一种重要且常用的降维技术，通过移除数据中无关和冗余的信息来实现。特征选择的研究可以追溯到 20 世纪 60 年代。Hughes 使用通用参数模型研究了贝叶斯分类器的准确率随特征数量的变化。从以来，特征选择研究一直是一个具有挑战性的领域，并且一些
 
-
-
-
-
 ## 特征选择与评估 193
 
-**表 8.1:** 当前特征选择研究的最新主题总结
+**表 8.1**：当前特征选择研究的最新主题总结
 
 | 主题 |
 | :--- |
@@ -3627,30 +2810,31 @@ SIGKDD 知识发现与数据挖掘国际会议 (KDD)，第 701–710 页。ACM, 
 
 ![](img/f9b50d48a9ba5d6b2e7f6b9761812434_211_0.png)
 
-**图 8.1:** 基于搜索的特征选择。
+**图 8.1**：基于搜索的特征选择。
 
 根据这两个框架简单介绍现有算法，展示特征选择在每个框架中是如何工作的，以及它们的优缺点。
 
-### ### 8.2.1 基于搜索的特征选择框架
+### 8.2.1 基于搜索的特征选择框架
 
 对于基于搜索的框架，典型的特征选择过程由三个基本步骤组成（如图 1 所示），即子集生成、子集评估和停止准则。子集生成旨在生成候选子集。根据评估标准对每个候选子集进行评估并与上一个进行比较。如果新生成的子集比上一个更好，它将成为最新的子集。重复基于搜索特征选择的前两个步骤直到满足给定的停止准则。
 
-图 1 表明基于搜索的特征选择包含两个关键因素：评估标准和搜索策略。根据评估标准，将特征选择算法分为过滤（filter）、包装（wrapper）、
+图 1 表明基于搜索的特征选择包含两个关键因素：评估标准和搜索策略。根据评估标准，将特征选择算法分为过滤（`filter`）、包装（`wrapper`）、
 
 ## 机器学习与数据分析中的特征工程
 
-**表 8.2: 基于搜索的特征选择算法分析**
+**表 8.2：基于搜索的特征选择算法分析**
+
 | 模型 | 优点 | 缺点 |
 | :--- | :--- | :--- |
-| 过滤 (Filter) | 快速、可扩展、独立于分类器 | 忽略与分类器的交互 |
-| 包装 (Wrapper) | 简单、与分类器交互 | 模型特征依赖性、过拟合风险、依赖分类器的选择、计算密集 |
-| 混合（嵌入）Hybrid (Embedded) | 与分类器交互、复杂度比包装低、模型特征依赖性 | 依赖分类器的选择 |
+| 过滤 (`Filter`) | 快速、可扩展、独立于分类器 | 忽略与分类器的交互 |
+| 包装 (`Wrapper`) | 简单、与分类器交互 | 模型特征依赖性、过拟合风险、依赖分类器的选择、计算密集 |
+| 混合（嵌入）`Hybrid (Embedded)` | 与分类器交互、复杂度比包装低、模型特征依赖性 | 依赖分类器的选择 |
 
 和混合（嵌入）模型。过滤模型下的特征选择算法依赖数据的通用特性，并在不涉及任何学习算法的情况下评估特征。包装器利用一个独立测量的预定义学习见解对子集进行评估。一种典型的混合算法同时利用度量和学习算法来评估子集。过滤、包装和混合模型的优缺点总结在表 2 中。另一方面，基于搜索的方法分为完全、顺序和随机模型。完全搜索评估所有特征，并根据评估标准保证最优结果。顺序搜索倾向于一次为上一个子集添加或删除特征。随机搜索从随机选择的子集开始，并在后续搜索过程中注入随机性。一些早期的研究在 [43] 中根据评估标准和搜索策略进行了分类。
 
 如今，随着数据高维出现，过滤模型比以往任何时候都受到关注。过滤模型下的特征选择算法分析数据的通用特性并在不涉及学习算法的情况下评估特征，因此大多数算法对特定的学习器模型没有偏差。此外，过滤模型具有直接的搜索策略和特征评估，因此其结构始终简单。简单结构的优点显而易见：首先，它容易设计且易于其他研究人员理解。其次，它通常非常快 [88]，并且通常适用于高维数据。
 
-### ### 8.2.2 基于相关性的特征选择框架
+### 8.2.2 基于相关性的特征选择框架
 
 除了基于搜索的特征选择，另一个重要的特征选择框架是基于特征与类别之间的相关性分析。基于相关性的框架考虑特征-特征相关性和特征-类相关性。通常，特征之间的相关性
 
@@ -3658,33 +2842,33 @@ SIGKDD 知识发现与数据挖掘国际会议 (KDD)，第 701–710 页。ACM, 
 
 被称为特征冗余，而特征-类相关性被视为特征相关。那么整个特征集可以分为四个基本子集：(1) 无关特征、(2) 冗余特征、(3) 弱相关非冗余特征和(4) 强相关特征。最优特征选择算法应该选择非冗余且强相关的特征，如图 2 所示。相关性和冗余的经典介绍如下。设 $F = \{f_1, \dots, f_d\}$ 为全标签集，$C$ 为全类标签，$P$ 为概率分布，$f_j$ 为一个特征，$S_j = P - f_j$。
 
-定义 1（无关性）给定一个类 $C$，如果
+**定义 1（无关性）**：给定一个类 $C$，如果
 
-$P(C|f_j) \neq P(C|S_j). (8.1)$
+$P(C|f_j) \neq P(C|S_j). \tag{8.1}$
 
 则特征 $f_j$ 是强无关的。
 
-定义 2（弱相关）给定一个类 $C$，如果
+**定义 2（弱相关）**：给定一个类 $C$，如果
 
 $P(C|f_j) = P(C|S_j), \quad \text{且}$
 
-$\forall S_j^c \subseteq S_j, \quad \text{使得 } P(C|f_j^c) \neq P(C|S_j). (8.2)$
+$\forall S_j^c \subseteq S_j, \quad \text{使得 } P(C|f_j^c) \neq P(C|S_j). \tag{8.2}$
 
 则特征 $f_j$ 是弱相关的。
 
-定义 3（无关性）给定一个类 $C$，如果
+**定义 3（无关性）**：给定一个类 $C$，如果
 
-$\forall S_j \subseteq S_j, \quad P(C|f_j) = P(C|S_j). (8.3)$
+$\forall S_j \subseteq S_j, \quad P(C|f_j) = P(C|S_j). \tag{8.3}$
 
 则特征 $f_j$ 是无关的。
 
-定义 4（冗余性）设 $F$ 为当前子集。如果特征 $f_j$ 是弱相关的且在 $F$ 内部有一个马尔可夫毯 $M_j$，则称 $M_j$ 是 $f_j$ 的马尔可夫毯，当且仅
+**定义 4（冗余性）**：设 $F$ 为当前子集。如果特征 $f_j$ 是弱相关的且在 $F$ 内部有一个马尔可夫毯 $M_j$，则称 $M_j$ 是 $f_j$ 的马尔可夫毯，当且仅
 
-$P(F - \{f_j\}, C|f_j) = P(F - \{f_j\}, C|M_j). (8.4)$
+$P(F - \{f_j\}, C|f_j) = P(F - \{f_j\}, C|M_j). \tag{8.4}$
 
 则特征 $f_j$ 是冗余的。
 
-基于相关性的特征选择框架如图 3 所示，包含两个步骤：相关性分析确定特征子集，冗余分析从相关中消除冗余特征以产生最终子集。该框架优于基于搜索的框架，因为它避免了子集搜索并提供了一种高效有效的方法。该框架下著名的特征选择算法有 mRMR [52]、Mitra 的 [48]、CFS [27] 和 FCBF [79,80]。
+基于相关性的特征选择框架如图 3 所示，包含两个步骤：相关性分析确定特征子集，冗余分析从相关中消除冗余特征以产生最终子集。该框架优于基于搜索的框架，因为它避免了子集搜索并提供了一种高效有效的方法。该框架下著名的特征选择算法有 `mRMR` [52]、Mitra 的 [48]、`CFS` [27] 和 `FCBF` [79,80]。
 
 在 8.2 节中，我们简要总结了特征选择的研究。关于特征选择的基础知识和上述算法的更多细节，请参考 [14,24,25,45,85]。在后续章节，我们将关注特征选择的最新进展以及新提出的挑战。
 
@@ -3693,24 +2877,20 @@ $P(F - \{f_j\}, C|f_j) = P(F - \{f_j\}, C|M_j). (8.4)$
 | 强相关 | 弱相关非冗余 | 弱相关冗余 | 无关 |
 | :--- | :--- | :--- | :--- |
 
-**图 8.2:** 基于相关性的特征选择的最优子集。
+**图 8.2**：基于相关性的特征选择的最优子集。
 
 | 原始集 | 相关性分析 | 相关子集 | 冗余分析 | 选定子集 |
 | :--- | :--- | :--- | :--- | :--- |
 
-**图 8.3:** 基于相关性的特征选择。
+**图 8.3**：基于相关性的特征选择。
 
-### ### 8.3 特征选择的高级主题
+### 8.3 特征选择的高级主题
 
 现在数据高维化带来了机遇和挑战。应对挑战的有效计算范式变得越来越重要。此外，随着范式的出现，出现了许多新的特征选择主题，例如高维小样本（HDSS）、大数据挖掘、多标签学习、隐私保护以及流式数据挖掘的特征选择。我们将在本节中综述这些新的进行中的主题和相应的解决方案。
 
-### ### 8.3.1 稳定特征选择
+### 8.3.1 稳定特征选择
 
 问题：各种特征选择算法旨在提高分类准确率的同时降低维度。此外，另一个关于特征选择稳定性的重要问题最近引起了广泛关注 [28,46,55]。当特征选择被用于识别解释某些现象的关键标记时，稳定性非常重要。例如，在微阵列分析中，生物学家对寻找解释机制的少量特征（基因或蛋白质）感兴趣
-
-
-
-
 
 # 特征选择与评估
 
@@ -3718,19 +2898,19 @@ $P(F - \{f_j\}, C|f_j) = P(F - \{f_j\}, C|M_j). (8.4)$
 
 考虑到应用中稳定性的重要性，研究者已经提出了若干特征选择算法，例如集成方法 [1, 41, 55, 69]、集成加权 [28, 78] 和特征分组 [46, 77] 等。关于稳定特征选择的详尽综述可以在 [29] 中找到。我们详细介绍这些解决方案如下：
 
-**解决方案 1**: 集成方法。特征选择技术使用了一种类似于分类集成学习的思路：首先，产生不同的特征选择器；在最后阶段，聚合这些选择器的输出并作为最终的（集成）结果返回。特征选择器的变异可以通过多种方法实现；例如选择不同的特征选择技术、实例级扰动（例如通过删除）、特征级扰动（例如通过添加噪声）、特征选择器的随机性、贝叶斯模型平均或这些技术的组合。聚合不同的特征选择结果可以通过加权投票来实现（例如在推导出共识排名的情况下），或者通过导出共识特征子集来实现 [55]。
+**解决方案 1：集成方法**。特征选择技术使用了一种类似于分类集成学习的思路：首先，产生不同的特征选择器；在最后阶段，聚合这些选择器的输出并作为最终的（集成）结果返回。特征选择器的变异可以通过多种方法实现；例如选择不同的特征选择技术、实例级扰动（例如通过删除）、特征级扰动（例如通过添加噪声）、特征选择器的随机性、贝叶斯模型平均或这些技术的组合。聚合不同的特征选择结果可以通过加权投票来实现（例如在推导出共识排名的情况下），或者通过导出共识特征子集来实现 [55]。
 
 在本文中，我们以集成特征加权为例，框架如图 4 所示。基于自助的策略用于在原始训练集 $D$ 的 $m$ 个自助子集上训练基础特征选择器。集成特征加权结果通过对基础特征选择器的输出 $w_{D_i}$ ($i = 1, \dots, m$) 取平均来实现。关于集成特征加权稳定性的理论分析和结果见我们的工作 [42, 43]。
 
-**解决方案 2**: 样本加权。该解决方案的主要思想是为每个采样集分配不同的权重，权重取决于样本对相关性估计的影响。然后它提供一个加权训练集来训练特征选择方法。该解决方案的关键在于如何确定样本对相关性的影响。这种影响通过样本对特征相关性的视图或局部分布（local profile）来衡量。局部分布背后的基本思想是：包含大多数实例的中心区域在决定聚合特征权重时，显然比包含少数离群点的边缘区域更重要。遵循重要性思想，中心区域较高程度应被分配较低的实例权重，从而减少训练数据变化下特征加权的方差。如果一个样本表现出与其他样本显著不同的局部分布，那么它在训练数据中的存在或缺失将极大影响特征选择结果的稳定性，因为远端的局部分布将与其他样本以不同的权重。在 [28,78] 中，基于假设边界衡量了给定样本的特征相关性局部分布；然后提出了一种基于边界的样本加权算法，根据其局部分布的远近程度为每个样本分配权重。在 [28,78] 中，对于样本 $x_i$，其假设边界始终由 $x_i$、与其同类标签的最近邻以及类别标签之间的距离决定。假设边界的直观解释是衡量 $x_i$ 中在被误分类前可以被噪声破坏的特征比例（即在分类错误之前 $x_i$ 在特征空间中可以“移动”多少）[12]。当然，可以使用其他方法计算样本的局部分布，且这是一项持续的研究。
+**解决方案 2：样本加权**。该解决方案的主要思想是为每个采样集分配不同的权重，权重取决于样本对相关性估计的影响。然后它提供一个加权训练集来训练特征选择方法。该解决方案的关键在于如何确定样本对相关性的影响。这种影响通过样本对特征相关性的视图或局部分布（`local profile`）来衡量。局部分布背后的基本思想是：包含大多数实例的中心区域在决定聚合特征权重时，显然比包含少数离群点的边缘区域更重要。遵循重要性思想，中心区域较高程度应被分配较低的实例权重，从而减少训练数据变化下特征加权的方差。如果一个样本表现出与其他样本显著不同的局部分布，那么它在训练数据中的存在或缺失将极大影响特征选择结果的稳定性，因为远端的局部分布将与其他样本以不同的权重。在 [28,78] 中，基于假设边界衡量了给定样本的特征相关性局部分布；然后提出了一种基于边界的样本加权算法，根据其局部分布的远近程度为每个样本分配权重。在 [28,78] 中，对于样本 $x_i$，其假设边界始终由 $x_i$、与其同类标签的最近邻以及类别标签之间的距离决定。假设边界的直观解释是衡量 $x_i$ 中在被误分类前可以被噪声破坏的特征比例（即在分类错误之前 $x_i$ 在特征空间中可以“移动”多少）[12]。当然，可以使用其他方法计算样本的局部分布，且这是一项持续的研究。
 
-解决方案 3: 特征分组。这源于一个关键观察：高维数据中通常存在内在特征组（或相关特征组），且特征组是训练样本的变体。那么，通过确定特征组来寻找稳定特征是自然而然的。通常我们可以通过特征组的共识来近似内在特征组，并在共识特征组描述的转换特征空间中进行特征选择。通常，可以采用（集成）聚类算法来识别共识特征组。[77] 提出了 DRAG 方法，用于基于核密度估计来识别稠密特征组，并将每个密集组中的特征视为一个连贯的整体进行特征选择。 [46] 中引入了另一种基于集成思想的特征分组方法，它在识别共识特征组方面有两个基本步骤。
+**解决方案 3：特征分组**。这源于一个关键观察：高维数据中通常存在内在特征组（或相关特征组），且特征组是训练样本的变体。那么，通过确定特征组来寻找稳定特征是自然而然的。通常我们可以通过特征组的共识来近似内在特征组，并在共识特征组描述的转换特征空间中进行特征选择。通常，可以采用（集成）聚类算法来识别共识特征组。[77] 提出了 `DRAG` 方法，用于基于核密度估计来识别稠密特征组，并将每个密集组中的特征视为一个连贯的整体进行特征选择。[46] 中引入了另一种基于集成思想的特征分组方法，它在识别共识特征组方面有两个基本步骤。
 
 步骤 1. 创建特征分组结果的集成。
 
 步骤 2. 将集成聚合为单一的共识特征组集。
 
-在步骤 1 中，DGF（密集组寻找器）算法被视为识别特征组的基础算法，并应用于从给定训练集中生成的若干自助训练集。该步的结果是特征分组的集成。在步骤 2 中，将给定的特征分组集成聚合为最终的共识组集。通过这种方式，聚合策略通过利用基于实例的集成聚类和基于聚类的集成聚类的优势获得了更好的结果。
+在步骤 1 中，`DGF`（密集组寻找器）算法被视为识别特征组的基础算法，并应用于从给定训练集中生成的若干自助训练集。该步的结果是特征分组的集成。在步骤 2 中，将给定的特征分组集成聚合为最终的共识组集。通过这种方式，聚合策略通过利用基于实例的集成聚类和基于聚类的集成聚类的优势获得了更好的结果。
 
 讨论：对于上述介绍的解决方案，解决方案 1 和 2 利用标签信息进行有监督稳定特征选择。解决方案 3 不依赖标签信息，它属于无监督学习。稳定特征选择的一个未来工作是结合有监督方法与无监督方法以获得半监督特征方法。我们还观察到集成是提高特征选择稳定性的广泛采用的想法，如解决方案 1 和 3 所示。然而，解决方案 1 和 3 中使用的集成是借自于基于聚类的集成。未来应该提出针对稳定特征选择的具体策略。最后，对于所有上述特征选择解决方案；验证主要取决于实验，对特征稳定性的洞察尚未被完全探索。尽管我们在 [43] 中对稳定特征加权做了一些相当理论的工作，但特征排名和特征子集选择的稳定性尚未研究。因此，特征选择的理论分析需要更多关注。
 
@@ -3741,19 +2921,17 @@ $P(F - \{f_j\}, C|f_j) = P(F - \{f_j\}, C|M_j). (8.4)$
 | 数据集 D | 自助集 2 | 特征加权 | $W_{\Omega_2}$ | 聚合 | $W_c$ |
 | | 自助集 m | 特征加权 | $W_{\Omega_3}$ |
 
-图 8.4：集成特征加权。
+**图 8.4**：集成特征加权。
 
 ## 8.3.2 基于稀疏性的特征选择
 
-问题：对于 HDSS 数据，维度极高而样本量很小。基于稀疏性的特征选择是从 HDSS 数据中选择特征的有效工具。基于稀疏性的特征选择的思路是实施稀疏性分析以选择判别特征。LI 范数（即 Lasso），绝对收缩和选择算子（64）被有效实现，使得学习模型既稀疏又可解释。带 LI 范数的特征选择在 [50] 中被充分利用。
+问题：对于 HDSS 数据，维度极高而样本量很小。基于稀疏性的特征选择是从 HDSS 数据中选择特征的有效工具。基于稀疏性的特征选择的思路是实施稀疏性分析以选择判别特征。`L1` 范数（即 `Lasso`），绝对收缩和选择算子（64）被有效实现，使得学习模型既稀疏又可解释。带 `L1` 范数的特征选择在 [50] 中被充分利用。
 
-解决方案 1：为了解决 Lasso 的缺陷并由于结构化信息（如组）的重要性，最近提出了一种广义稀疏定义以引入先验知识或结构约束来寻找合适的线性特征 [34]。组 Lasso [81] 和弹性网络 [91]，树引导组 Lasso [36] 均属于结构化稀疏范数的设置。学习具有结构化特征的线性分类器 w = {$w_1, \dots, w_d$} 的一种非常流行且成功的方法是最小化正则化经验损失。对于给定的
-
-
-
-
+解决方案 1：为了解决 `Lasso` 的缺陷并由于结构化信息（如组）的重要性，最近提出了一种广义稀疏定义以引入先验知识或结构约束来寻找合适的线性特征 [34]。组 `Lasso` [81] 和弹性网络 [91]，树引导组 `Lasso` [36] 均属于结构化稀疏范数的设置。学习具有结构化特征的线性分类器 $w = \{w_1, \dots, w_d\}$ 的一种非常流行且成功的方法是最小化正则化经验损失。对于给定的
 
 ## 机器学习与数据分析中的特征工程
+
+
 
 对于数据集 $D=\{x_i, y_i\}_{i=1}^n$，我们通过最小化以下带有正则化项的经验损失来选择预测器 $\mathbf{w}$：
 
@@ -3782,9 +2960,7 @@ $\min_{w} \sum_{i=1}^n L(\mathbf{w}^T x_i, y_i) + \gamma \mathcal{R}(w, U) \quad
 **解决方案 1：** [85] 中引入的一种多源特征选择框架如图 8.5 所示，其中异构知识通常通过转换操作通过样本间的相似性来表示，并应用谱特征选择算法。该框架可以总结如下：
 
 - (1) 知识转换。采用转换算子提取每个知识源的样本相似性矩阵的局部规范。
-
 - (2) 知识整合。将多个局部样本相似性矩阵线性组合以获得全局相似性矩阵。
-
 - (3) 特征选择。在得到的全局相似性矩阵上执行谱特征选择算法。
 
 注意，不同的知识源需要不同的转换操作。例如，如果给定特征间的相似性，则可以构建特征方差矩阵，并通过马拉诺比距离计算两对样本相似性 [8]。
@@ -3794,15 +2970,13 @@ $\min_{w} \sum_{i=1}^n L(\mathbf{w}^T x_i, y_i) + \gamma \mathcal{R}(w, U) \quad
 ## 机器学习与数据分析中的特征工程
 
 | 知识转换 | | |
+| --- | --- | --- |
 | 外部 | 内部 |
-| --- | --- |
 | 知识 | 知识 |
-
 | 特征排序 | | |
 | 内部知识 | 特征 | 排名列表 |
 | --- | --- | --- |
 | 1 2 | 1 | 排名相关性标准 |
-
 | 排名聚合 | | |
 | 排名列表 | 最终排名列表 | |
 | --- | --- | --- |
@@ -3813,9 +2987,7 @@ $\min_{w} \sum_{i=1}^n L(\mathbf{w}^T x_i, y_i) + \gamma \mathcal{R}(w, U) \quad
 通过结合来自不同知识源的局部特征选择结果来解决这一局限性。KOFS 由下文描述的三个部分组成，并如图 6 所示。
 
 - (1) 知识转换。将不同类型的人类知识或外部知识转换为特征选择算法可以使用的特定类型内部知识。
-
 - (2) 特征排序。根据内部知识和某些给定的标准对特征进行排序。对于多个知识，我们可以获得多个特征排序结果。
-
 - (3) 排名聚合。合并多个特征排序结果以生成最终排名。
 
 讨论：多源特征选择旨在利用各种知识源来推进 HDSSS 问题的特征选择研究。多源特征选择的关键问题是知识转换。我们应该将来自不同源的异构知识转换为特征选择方法可以利用的样本或特征知识。然后，知识转换取决于知识源和特征选择算法。另一方面，用于特征选择的知识源的用性应该被讨论。
@@ -3824,16 +2996,13 @@ $\min_{w} \sum_{i=1}^n L(\mathbf{w}^T x_i, y_i) + \gamma \mathcal{R}(w, U) \quad
 
 给定包含大量样本和特征的大规模数据集，特征选择算法的可扩展性变得极其重要。然而，大多数现有特征选择算法是针对 GB 级以下的数据提出的。为了提高大规模数据集特征选择的可扩展性，特征选择以分布式方式进行。[11] 所示，任何符合统计查询模型的都可以基于数据划分进行并行计算。研究还表明，当数据量足够大时，基于数据划分的并行化可以带来线性加速。当数据位于中央数据库时，我们如何实现分布式特征选择？
 
-解决方案：对于中央数据库，使用了高效的分布式编程模型和协议，如 MPI [59] 和 Google 的 Map-Reduce [15]。这些方法有助于在高性能集群或网格上实现分布式特征选择。通常，特征选择可以并行化为四个步骤：(1) 将特征选择过程分解为样本上的和的形式；(2) 将数据划分并存储在节点上；计算局部特征选择结果；(3) 通过整合局部结果计算最终特征选择结果。
+解决方案：对于中央数据库，使用了高效的分布式编程模型和协议，如 `MPI` [59] 和 Google 的 `Map-Reduce` [15]。这些方法有助于在高性能集群或网格上实现分布式特征选择。通常，特征选择可以并行化为四个步骤：(1) 将特征选择过程分解为样本上的和的形式；(2) 将数据划分并存储在节点上；计算局部特征选择结果；(3) 通过整合局部结果计算最终特征选择结果。
 
-例如，[88] 描述了在 MPI 上并行化谱特征选择。[87] 提出了一种新型大规模特征选择算法。该算法通过评估特征解释数据差的能力来选择特征。该算法以分布式形式读取数据，并在对称多处理和大规模处理模式下执行并行选择。该算法已开发为 SAS 高性能分析。
+例如，[88] 描述了在 `MPI` 上并行化谱特征选择。[87] 提出了一种新型大规模特征选择算法。该算法通过评估特征解释数据差的能力来选择特征。该算法以分布式形式读取数据，并在对称多处理和大规模处理模式下执行并行选择。该算法已开发为 `SAS` 高性能分析。
 
 问题 2：另一方面，数据并不位于中央存储库中，而是分布在网络大量的节点上。下一代点对点（P2P）网络提供了一个示例。现有的特征选择算法无法在这种场景下直接执行。对此类网络的数据分析将需要开发另一种能够在大规模分布式环境中工作的分布式特征选择算法。
 
 解决方案：[13] 介绍了 P2P 网络上的分布式特征选择算法。所提出的 P2P 特征选择算法（PACS）包含了三个流行的特征选择标准：分类增、吉尼指数和熵测量。作为第一步，在不进行任何数据中心化的 P2P 网络中评估这些指标。然后算法
-
-
-
 
 204 机器学习与数据分析中的特征工程
 
@@ -3845,7 +3014,7 @@ $\min_{w} \sum_{i=1}^n L(\mathbf{w}^T x_i, y_i) + \gamma \mathcal{R}(w, U) \quad
 
 问题：在大数据时代，我们可以轻松地从不同的来源获取信息。例如，在医学场景中，每个受试者都有医学检查的记录，包括临床、影像、免疫和认知测量。这些测量来自多个来源，每个测量都是受试者的一个视图（view）。以有效的方式结合所有这些测量进行多视图学习是理想的。然而，某些测量是无关的、嘈杂的甚至是冲突的，这对于多视图学习不利。为了解决这个问题，应该将特征选择整合到多视图学习过程中。
 
-解决方案：[9] 中总结了多视图特征选择的三种策略：(1) 在输入空间中拼接所有视图的特征，然后采用传统的特征选择方法；(2) 将多个视图转换为张量，直接在张量积空间中执行特征选择；(3) 利用原始数据与其在张量积空间中的重构之间的关系，高效地进行特征选择。方法 (1) 和 (2) 忽略了原始多视图特征的内在属性以及原始数据与重构之间的隐藏关系。张量积空间中的特征选择问题在 [58] 中被建模为一个整数规划问题。然而，这种方法限于两个视图之间的交互，难以扩展到多个视图，因为它直接在张量积中选择特征会导致维度灾难。文献 [63] 研究了无监督设置下的多视图特征选择。考虑到 [9] 中视图之间的潜在交互，使用张量来组织多视图特征，[9] 研究了基于 SVM-RFE [26] 和张量技术的多视图特征选择问题。
+解决方案：[9] 中总结了多视图特征选择的三种策略：(1) 在输入空间中拼接所有视图的特征，然后采用传统的特征选择方法；(2) 将多个视图转换为张量，直接在张量积空间中执行特征选择；(3) 利用原始数据与其在张量积空间中的重构之间的关系，高效地进行特征选择。方法 (1) 和 (2) 忽略了原始多视图特征的内在属性以及原始数据与重构之间的隐藏关系。张量积空间中的特征选择问题在 [58] 中被建模为一个整数规划问题。然而，这种方法限于两个视图之间的交互，难以扩展到多个视图，因为它直接在张量积中选择特征会导致维度灾难。文献 [63] 研究了无监督设置下的多视图特征选择。考虑到 [9] 中视图之间的潜在交互，使用张量来组织多视图特征，[9] 研究了基于 `SVM-RFE` [26] 和张量技术的多视图特征选择问题。
 
 ## 特征选择与评估
 
@@ -3857,15 +3026,12 @@ $\min_{w} \sum_{i=1}^n L(\mathbf{w}^T x_i, y_i) + \gamma \mathcal{R}(w, U) \quad
 
 解决方案：在多标签数据集上实现特征选择的最简单方法是基于转换，即将多标签数据集转换为单标签数据集，并使用传统的特征选择方法。有许多策略可以将多标签数据集转换为单标签数据集，例如：
 
-- (1) 简单转换。其核心思想是通过某些标签选择将多标签数据集转换为单标签数据集，例如选择数据集中出现频率最高的标签（select-max）、频率最低的标签（select-min）、随机标签（select-random），或简单丢弃每个多标签示例（select-ignore）。
-
+- (1) 简单转换。其核心思想是通过某些标签选择将多标签数据集转换为单标签数据集，例如选择数据集中出现频率最高的标签（`select-max`）、频率最低的标签（`select-min`）、随机标签（`select-random`），或简单丢弃每个多标签示例（`select-ignore`）。
 - (2) 拷贝转换。这种转换拷贝每个多标签实例 B 次，其中 B 是与该实例关联的标签数量。每个拷贝的实例从原始的 B 标签集中被分配一个不同的单标签。拷贝转换的微小改进是加权拷贝，它为每个实例分配一个权重。
-
 - (3) 标签集转换（Label Powerset）。标签集（LP）将多标签数据集中存在的每种标签子集视为一个标签。
-
 - (4) 二值相关性转换（Binary Relevance）。二值相关性（BR）为原始数据集中的每个标签创建一个二值训练集。除了上述经典转换外，[10] 提出了一种基于熵的新转换，当实例根据某个概率分配给某个标签时使用。在数据转换步骤之后，可以使用许多单标签特征选择技术。例如增益 [54]、$\chi^2$ 统计量 [35] 和正交中心特征选择（OCFS）[73]。
 
-解决方案 2：基于转换的多标签特征选择方法通常存在未考虑标签之间相关性的缺陷。此外，当标签较少时，不平衡的单标签数据集可能会导致样本稀疏和类别分布不均。因此，提出直接处理标签数据的特征选择算法是理想的。目前大多数方法都是已知单标签特征选择算法的改进。例如，在 [38] 中，著名的 FCFB 相关性过滤算法 [79] 通过图模型扩展到处理多标签数据。另一个示例在 [51]，其中设计了用于图分类的多标签特征选择方法 ZMC。它基于评估准则来估计图特征与多个标签之间的依赖关系。然后通过使用多个标签剪枝搜索空间来高效搜索子图特征。此外，[23] 还描述了一种多标签特征选择方法，基于相关性正则化标签排序 [17]。在我们最近的工作 [74] 中，采用了图模型来捕捉标签相关性，并提出了基于图论的多标签特征选择算法。
+解决方案 2：基于转换的多标签特征选择方法通常存在未考虑标签之间相关性的缺陷。此外，当标签较少时，不平衡的单标签数据集可能会导致样本稀疏和类别分布不均。因此，提出直接处理标签数据的特征选择算法是理想的。目前大多数方法都是已知单标签特征选择算法的改进。例如，在 [38] 中，著名的 `FCFB` 相关性过滤算法 [79] 通过图模型扩展到处理多标签数据。另一个示例在 [51]，其中设计了用于图分类的多标签特征选择方法 `ZMC`。它基于评估准则来估计图特征与多个标签之间的依赖关系。然后通过使用多个标签剪枝搜索空间来高效搜索子图特征。此外，[23] 还描述了一种多标签特征选择方法，基于相关性正则化标签排序 [17]。在我们最近的工作 [74] 中，采用了图模型来捕捉标签相关性，并提出了基于图论的多标签特征选择算法。
 
 讨论：目前大多数多标签特征选择方法都是传统单标签特征选择方法的扩展。未来的研究方向是设计能够直接处理多标签数据而无需任何转换，并充分考虑标签之间关系的特征选择方法。
 
@@ -3874,10 +3040,6 @@ $\min_{w} \sum_{i=1}^n L(\mathbf{w}^T x_i, y_i) + \gamma \mathcal{R}(w, U) \quad
 问题：上述所有特征选择方法都假设所有特征都是预先知的。另一个有趣的场景是候选特征顺序呈现给分类器。在这种情况下，候选特征是动态生成的，特征的大小是未知。这种针对流特征的特征选择被称为在线特征选择。在线特征选择在许多应用中具有重要意义。例如，Twitter 每天产生超过 2.5 亿条推文，并且会产生新的缩写词（特征）。当我们开始为推文选择特征时，无法等待所有特征都生成，因此使用在线特征选择可能更好。
 
 解决方案：到目前，一些在线特征选择方法已经提
-
-
-
-
 
 # 特征选择与评估
 
@@ -3890,7 +3052,7 @@ $\min_{w} \sum_{i=1}^n L(\mathbf{w}^T x_i, y_i) + \gamma \mathcal{R}(w, U) \quad
 
 注意，不同的算法对步骤 2 和 3 可能有不同的实现方式，某些在线特征选择算法仅实现步骤 2。第 8.2 节引入的相关性模型始终用于在线特征选择，用于计算新特征的相关性和冗余性，这将决定新特征的纳入或剔除决策。
 
-通用的在线特征选择通常假设特征是逐个到达；然而，在图像分析和邮件过滤等实际应用中，特征可能会成组到达。在线特征选择应该考虑组信息。[67] 中提出了一种新颖的选择方法来解决在线组特征选择问题。该方法包含两个阶段：在线组内选择和组间选择。在组内选择中，使用谱分析在每组特征到达时选择具有判别性的特征。在组间选择中，采用 Lasso 方法选择全局特征子集。这种双阶段过程持续进行直到没有更多特征被选择或满足某些条件。
+通用的在线特征选择通常假设特征是逐个到达；然而，在图像分析和邮件过滤等实际应用中，特征可能会成组到达。在线特征选择应该考虑组信息。[67] 中提出了一种新颖的选择方法来解决在线组特征选择问题。该方法包含两个阶段：在线组内选择和组间选择。在组内选择中，使用谱分析在每组特征到达时选择具有判别性的特征。在组间选择中，采用 `Lasso` 方法选择全局特征子集。这种双阶段过程持续进行直到没有更多特征被选择或满足某些条件。
 
 问题 2：另一方面，我们遇到了另一种场景，即训练实例是按顺序到达的，且在选择过程中所有特征都是可用的。这种场景下的在线特征选择旨在以在线学习的方式选择少量且固定数量的特征。
 
@@ -3898,7 +3060,7 @@ $\min_{w} \sum_{i=1}^n L(\mathbf{w}^T x_i, y_i) + \gamma \mathcal{R}(w, U) \quad
 
 解决方案：[83] 引入了一种新的稀疏梯形流数据算法（STSD），它结合了在线学习和在线特征选择，能够学习具有无限实例和特征的梯形数据流。具体而言，当带有新特征的新训练实例到达时，分类器通过遵循在线学习中使用的被动攻击（passive-aggressive）更新规则更新现有特征，并根据结构风险最小化原则更新新特征。还利用投影截断技术引入了特征稀疏性。第一个挑战是使用扩展的特征空间更新分类器。更新策略是从新特征中学习。第二个挑战是构建一种特征选择方法以实现稀疏但高效的模型，即一种策略。
 
-更新策略：在每一轮中，当接收到训练实例时，分类器会立即预测该实例并使用某些损失函数（如 hinge）计算预测时损失。为了让分类器从新特征中学习，分类器的权重向量分为两部分：一部分代表原始特征空间的投影，另一部分表示当前轮中有但上轮中没有的特征。如果预测正确，则不更新。将约束优化问题表化为更新策略的解。一方面，约束问题迫使分类器预测正确；另一方面，约束问题强制特征空间的投影尽可能接近上一轮获得的权重向量，目的是继承信息并使新特征的权重尽可能小，以最小化结构风险并避免过拟合。
+更新策略：在每一轮中，当接收到训练实例时，分类器会立即预测该实例并使用某些损失函数（如 `hinge`）计算预测时损失。为了让分类器从新特征中学习，分类器的权重向量分为两部分：一部分代表原始特征空间的投影，另一部分表示当前轮中有但上轮中没有的特征。如果预测正确，则不更新。将约束优化问题表化为更新策略的解。一方面，约束问题迫使分类器预测正确；另一方面，约束问题强制特征空间的投影尽可能接近上一轮获得的权重向量，目的是继承信息并使新特征的权重尽可能小，以最小化结构风险并避免过拟合。
 
 稀疏策略：该算法通过引入控制特征比例的参数使用截断技术。此外，算法通过将权重向量投影到 $L_1$ 负载引入了投影步骤，因为单一的截断步骤效果并不理想。
 
@@ -3913,6 +3075,7 @@ $\min_{w} \sum_{i=1}^n L(\mathbf{w}^T x_i, y_i) + \gamma \mathcal{R}(w, U) \quad
 假设我们有一个训练集 $D = \{x_i, y_i\}_{i=1}^n$，每个特征关联的隐私度为 $\{\omega_i\}_{i=1}^n$。我们的目标是找到一个子集 $f = \{f_1, \dots, f_t\}$，并使分类器 $k(f)$ 使得分类误差 $k(k(x_i)) - y_i$ 最小，其中 $k(x)$ 表示使用集合 $f$ 中特征的样本 $x$。形式上，我们需要最小化：
 
 $$\min_{f} \sum_{i=1}^n (k(k(x_i)) - y_i)^2 \quad (8.6)$$
+
 s. t. $\sum_{j \in f} \omega_j \le A$，
 
 其中 A 是隐私度的阈值。
@@ -3921,47 +3084,57 @@ s. t. $\sum_{j \in f} \omega_j \le A$，
 
 问题 2：上述隐私特征选择关注特征隐私，并产生一个总隐私度小于阈值的最优特征子集。仍然存在另一种关注样本隐私的隐私特征选择。
 
-
-
-
 210 机器学习与数据分析中的特征工程
 
 解决方案：此类隐私保护的广泛使用的隐私模型是差分隐私，见定义 5 [16]。
+
 定义 5. 随机机制 $A$ 对于所有差异最多一个元素的输出集合 $D$ 和 $D'$，以及对于所有输出 $S_u \subseteq \text{Range}(A)$，均提供 $\varepsilon$-差分隐私：
 
 $Pr[A(D) \in S_u] \le \exp(\varepsilon) \times Pr[A(D') \in S_u].$ (8.7)
 
 则算法 $A$ 被认为满足差分隐私。概率 $Pr$ 是基于 $A$ 的随机硬币取值的，$\text{Range}(A)$ 表示 $A$ 的输出范围。隐私参数 $\varepsilon$ 用于衡量泄露程度。差分隐私意味着，已知数据集中某一条数据的攻击者，可以通过观察算法的输出，获得关于该条目的更多额外信息。
 
-基于上述隐私模型，我们在最近的工作 [44, 75] 中提出了两种隐私保护选择算法。这些算法分别基于输出扰动和目标扰动。输出扰动是在特征选择结果中添加噪声，其噪声密度取决于特征选择算法的敏感性。在论文 [75] 中，还给出了基于本地且使用逻辑损失函数的特征选择的敏感性足以满足 $\varepsilon$-差分隐私。目标扰动旨在对特征选择的评估结果引入扰动，[44] 中也介绍了相应的基于本地学习的隐私保护选择以及相关的差分隐私证明。
 
-讨论：诚然，除了基于本地的特征选择外，我们还可以对其他传统选择算法实施隐私保护约束 [6]。一些工作关注于输出为特征权重的特征选择算法。另一方面，为输出为特征排名或特征子集的特征选择算法添加隐私保护也是一个很有趣的议题。
+
+## 基于隐私模型的特征选择算法
+
+基于上述隐私模型，我们在最近的工作 [44, 75] 中提出了两种隐私保护选择算法。这些算法分别基于输出扰动和目标扰动。输出扰动是在特征选择结果中添加噪声，其噪声密度取决于特征选择算法的敏感性。在论文 [75] 中，还给出了基于本地且使用逻辑损失函数的特征选择的敏感性足以满足 `$\varepsilon$-差分隐私`。目标扰动旨在对特征选择的评估结果引入扰动，[44] 中也介绍了相应的基于本地学习的隐私保护选择以及相关的差分隐私证明。
+
+### 讨论
+
+诚然，除了基于本地的特征选择外，我们还可以对其他传统选择算法实施隐私保护约束 [6]。一些工作关注于输出为特征权重的特征选择算法。另一方面，为输出为特征排名或特征子集的特征选择算法添加隐私保护也是一个很有趣的议题。
 
 ## 8.3.9 对抗性特征选择
 
 模式识别和机器学习技术已越来越多应用于信息安全领域，例如垃圾邮件、入侵和恶意软件检测。因此，我们需要分析机器学习本身的安全性 [5]。相反，对抗性机器学习是指设计能够抵抗复杂攻击的机器学习算法，并对攻击者的能力和局限性进行研究 [31]。这些复杂攻击包括避免检测、使良性输入被分类为攻击输入、发起针对性或定向性攻击，或搜索分类器以寻找算法中的盲点。
 
-问题：在之前的分类和聚类工作 [6] 中，一些作者考虑了对抗性特征选择。
+### 问题
 
-特征选择与评估
+在之前的分类和聚类工作 [6] 中，一些作者考虑了对抗性特征选择。
+
+### 特征选择与评估
 
 事实上，对于对抗性任务，特征选择可以为攻击者逃避分类系统并将攻击样本误分类为正常样本打开大门 [39]。
 
-解决方案：目前的对抗性特征选择工作关注两个问题：攻击和防御。为了探索某些特征选择算法在攻击下的脆弱性，[72] 解释了当训练数据被智能攻击者投毒时，特征选择是否有益甚至可能适得其反。它还提供了一个框架，用于研究流行的特征选择方法（包括 Lasso、岭回归和弹性网络）对于精心设计的攻击的鲁棒性。[82] 中讨论的另一个问题是，分析当攻击者的目标是规避检测时，特征选择结果对测试时分类器准确率的影响。这种对抗性特征选择评估标准的基本思想是选择一个不仅能最大化分类器泛化能力，还能提高其抗攻击安全性的特征子集。标准中包含两个术语：泛化能力和安全性。分类子集的泛化能力可以使用不同的指标进行估计，例如规避检测所需的平均最小修改次数。
+### 解决方案
 
-讨论：机器学习系统中引入了许多攻击 [5]。目前，对抗性特征选择仅考虑了部分特定攻击。因此，迫切需要分析许多经典特征选择在不同攻击下的脆弱性，并设计出针对这些攻击的鲁棒特征选择算法。
+目前的对抗性特征选择工作关注两个问题：攻击和防御。为了探索某些特征选择算法在攻击下的脆弱性，[72] 解释了当训练数据被智能攻击者投毒时，特征选择是否有益甚至可能适得其反。它还提供了一个框架，用于研究流行的特征选择方法（包括 Lasso、岭回归和弹性网络）对于精心设计的攻击的鲁棒性。[82] 中讨论的另一个问题是，分析当攻击者的目标是规避检测时，特征选择结果对测试时分类器准确率的影响。这种对抗性特征选择评估标准的基本思想是选择一个不仅能最大化分类器泛化能力，还能提高其抗攻击安全性的特征子集。标准中包含两个术语：泛化能力和安全性。分类子集的泛化能力可以使用不同的指标进行估计，例如规避检测所需的平均最小修改次数。
+
+### 讨论
+
+机器学习系统中引入了许多攻击 [5]。目前，对抗性特征选择仅考虑了部分特定攻击。因此，迫切需要分析许多经典特征选择在不同攻击下的脆弱性，并设计出针对这些攻击的鲁棒特征选择算法。
 
 ## 8.4 未来工作与结论
 
 在本节中，我们讨论了特征选择的一些未来工作。
-首先，某些特征选择的目标是选择最优特征子集。然而，某些特征选择算法的输出是特征排名（权重）。我们需要根据排名结果确定子集。如果已知重要特征的数量，这种确定非常容易；我们只需要从排名中逐个选择特征，直到特征数量满足我们的要求。遗憾的是，在没有任何先验知识的情况下，重要特征的数量是未。从特征排名到特征子集的转换仍然特征选择研究中的一个待解决问题。
 
-其次，特征选择的研究紧密跟随机器学习的发展。当任何新的机器学习范式出现时，相应的特征选择主题也将被研究。例如，如果
+首先，某些特征选择的目标是选择最优特征子集。然而，某些特征选择算法的输出是特征排名（权重）。我们需要根据排名结果确定子集。如果已知重要特征的数量，这种确定非常容易；我们只需要从排名中逐个选择特征，直到特征数量满足我们的要求。遗憾的是，在没有任何先验知识的情况下，重要特征的数量是未知的。从特征排名到特征子集的转换仍然是特征选择研究中的一个待解决问题。
 
-212 机器学习与数据分析中的特征工程
+其次，特征选择的研究紧密跟随机器学习的发展。当任何新的机器学习范式出现时，相应的特征选择主题也将被研究。例如，如果对抗机器学习是当前的热点，那么对抗选择很快就会被研究。另一方面，如果结合机器学习范式来解决特殊问题，特征选择主题的结合也是一个有趣的话题。例如，我们可以研究在线特征选择和多标签特征选择的结合，以处理具有多标签的流数据。
 
-**表 8.3:** 各主题中当前算法属性总结
+最后，传统的特征选择算法关注分类或聚类性能，但特征选择的一些属性值得更多关注，例如可扩展性、稳定性和安全性，特别是在大数据时代。我们在**表 8.3**中总结了每个主题对应当前算法的属性，Y 表示当前算法具有该属性。
 
+```
 | | 可扩展性 | 稳定性 | 安全性 |
 |---|---|---|---|
 | 主题 1: 稳定特征选择 | | Y | |
@@ -3973,17 +3146,13 @@ $Pr[A(D) \in S_u] \le \exp(\varepsilon) \times Pr[A(D') \in S_u].$ (8.7)
 | 主题 7: 隐私保护特征选择 | | | Y |
 | 主题 8: 对抗性特征选择 | | | Y |
 | 主题 9: 在线特征选择 | Y | | |
+```
 
-对抗机器学习是当前的热点，那么对抗选择很快就会研究。另一方面，如果结合机器学习范式来解决特殊问题，特征选择主题的结合也是一个有趣的话。例如，我们可以研究在线特征选择和多标签特征选择的结合，以处理具有多标签的流数据。
+从这里我们可以观察到大多数算法都有一个特点：改进当前的特征选择算法以获取其他特质是一个令人兴奋的研究方向。
 
-最后，传统的特征选择算法关注分类或聚类性能，但特征选择的一些属性值得更多关注，例如可扩展性、稳定性和，特别是在大数据时代。我们在表 8.3 中总结了每个主题对应当前算法的属性，Y 表示当前算法具有该属性。从这里我们可以观察到大多数算法都有一个特点：改进当前的特征选择算法以获取其他特质是一个兴奋的研究方向。
+由于深度学习在特征生成方面吸引了更多关注，我们也想讨论设计手工特征表示的可靠性。给定大量数据，深度学习算法倾向于通过一系列非线性变换为当前任务学习良好的抽象表示 [30]。随着深度学习的兴起，似乎不需要任何特征选择就可以进行高级机器学习。然而，在数据点数量不够大的情况下，深度学习应该与固定数量的实例以更好的学习，因为特征选择等同于指数级增加实例数量。因此，深度学习处理 HDSSS 数据将面临挑战。此外，我们给出另一个例子来描述深度学习与特征选择之间的关系。在异构多模态融合中，每个独立模态由单个特征组表征，然后这些模态被发送到多模态神经网络的不同分支，产生经过多次非线性变换的精炼特征表示。
 
-由于深度学习在特征生成方面吸引了更多关注，我们也想讨论设计手工特征表示的可靠性。给定大量数据，深度学习算法倾向于通过一系列非线性变换为当前任务学习良好的抽象表示 [30]。随着深度学习的兴起，似乎不需要任何特征选择就可以进行高级机器学习。然而，在数据点数量不够大的情况下，深度学习应该与固定数量的实例以以更好的学习，因为特征选择等同于指数级增加实例数量。因此，深度学习处理 HDSSS 数据将面临挑战。此外，我们给出另一个例子来描述深度学习与特征选择之间的关系。在异构多模态融合中，每个独立模态由单个特征组表征，然后这些模态被发送到多模态神经网络的不同分支，产生经过多次非线性变换的精炼特征表示。
-
-
-
-
-## 特征选择与评估
+### 特征选择与评估
 
 基于给定的原始模态。当所有特征都通过多模态深度神经网络转换后，从每个分支顶层提取的精炼特征输出被拼接成一个新的特征向量。然后，采用特征选择算法为该拼接产生一个最优权重向量。根据该权重，挑选出与当前任务最相关的特征组。另一方面，特征选择也是知识发现的重要工具，其本身就具有价值。在这种情况下，我们的目标是选择关键特征作为预处理的工具，因此我们更倾向于使用特征选择而非深度学习，并保持原始特征的可解释性。例如，在微阵列分析中，生物学家感兴趣的是寻找少数特征（基因或蛋白质），来解释驱动微阵列样本不同行为的机制。通常使用特征选择算法来选择基因或蛋白质子集，而深度学习并不适用。
 
@@ -4021,132 +3190,204 @@ $Pr[A(D) \in S_u] \le \exp(\varepsilon) \times Pr[A(D') \in S_u].$ (8.7)
 - [28] Y. Han and L. Yu. A variance reduction framework for stable feature selection. In Proceedings of the International Conference on Data Mining, pages 206–215, 2010.
 - [29] Z. Y. He and W. C. Yu. Stable feature selection for biomarker discovery. Computational Biology and Chemistry, 34:215–225, 2013.
 - [30] G. E. Hinton and R. Salakhutdinov. Reducing the dimensionality of data with neural networks. Science, 313:504–507, 2006.
-- [31] L. Huang, A. D. Joseph, B. Nelson, I. P. Rubinstein, and J. D. Tygar. Adversarial machine learning. In Proceedings of 4th ACM Workshop on Artificial Intelligence and Security, pages 43–58, 2011.
-- [32] F. G. Hughes. On the accuracy of statistical pattern recognizers. IEEE Transactions on Information Theory, 14:55–66, 1968.
-- [33] I. Inza, P. Larranaga, R. Blanco, and A. J. Cerrolaza. Filter wrapper gene selection in DNA microarray domains. Artificial Intelligence in Medicine, 31:91–103.
-- [34] R. Jenatton, G. Obzovinski, and F. Bach. Structured sparse principal component analysis. In Proceedings of International Conference on Artificial Intelligence and Statistics, 2010.
-- [35] G. V. Kass. An exploratory technique for investigating large quantities of data. Applied Statistics, pages 119–127, 1980.
-- [36] S. Kim and E. P. Tree-grouped group lasso for multi-task regression with structured sparsity. In Proceedings of the 27th International Conference on Machine Learning, 2010.
-- [37] R. Kohavi and G.H. John. Wrappers for feature selection. Artificial Intelligence, 97:273–324, 1996.
-- [38] G. Lastra, Oscar Luacces, Jose R. Quevedo, and Antonio Bahomonde. Graphical feature selection for multilabel classification tasks. In Proceedings of the 10th International Conference on Advances in Intelligent Data Analysis, pages 281–305, 2011.
-- [39] B. Li and Y. Vorobicheikh. Feature cross-selection in adversarial classification. In Proceedings of Advances in Neural Information Processing Systems, pages 2087–2095, 2014.
-- [40] J. D. Li, K. W. Cheng, S. H. Wang, F. Morstatt, R. P. Trevino, J. L. Tang, and H. Liu. Feature selection: A data perspective. arXiv:1601.07996, 3:1–73, 2016.
-- [41] Y. Li, S. Y. Gao, and S. C. Chen. Ensemble feature weighting based on local learning and diversity. In AAAI Conference on Artificial Intelligence, pages 1019–1025, 2012.
-- [42] Y. Li, S. S. Huang, S. C. Chen, and J. Si. Stable l2-regularized ensemble feature weighting. In Proceedings of the 11th International Workshop on Multiple Classifier Systems, pages 167–178, 2013.
 
 
 
+## 参考文献
+
+- [31] L. Huang, A. D. Joseph, B. Nelson, I. P. Rubinstein, and J. D. Tygar. Adversarial machine learning. In *Proceedings of 4th ACM Workshop on Artificial Intelligence and Security*, pages 43–58, 2011.
+
+- [32] F. G. Hughes. On the accuracy of statistical pattern recognizers. *IEEE Transactions on Information Theory*, 14:55–66, 1968.
+
+- [33] I. Inza, P. Larranaga, R. Blanco, and A. J. Cerrolaza. Filter wrapper gene selection in DNA microarray domains. *Artificial Intelligence in Medicine*, 31:91–103.
+
+- [34] R. Jenatton, G. Obzovinski, and F. Bach. Structured sparse principal component analysis. In *Proceedings of International Conference on Artificial Intelligence and Statistics*, 2010.
+
+- [35] G. V. Kass. An exploratory technique for investigating large quantities of data. *Applied Statistics*, pages 119–127, 1980.
+
+- [36] S. Kim and E. P. Tree-grouped group lasso for multi-task regression with structured sparsity. In *Proceedings of the 27th International Conference on Machine Learning*, 2010.
+
+- [37] R. Kohavi and G.H. John. Wrappers for feature selection. *Artificial Intelligence*, 97:273–324, 1996.
+
+- [38] G. Lastra, Oscar Luacces, Jose R. Quevedo, and Antonio Bahomonde. Graphical feature selection for multilabel classification tasks. In *Proceedings of the 10th International Conference on Advances in Intelligent Data Analysis*, pages 281–305, 2011.
+
+- [39] B. Li and Y. Vorobicheikh. Feature cross-selection in adversarial classification. In *Proceedings of Advances in Neural Information Processing Systems*, pages 2087–2095, 2014.
+
+- [40] J. D. Li, K. W. Cheng, S. H. Wang, F. Morstatt, R. P. Trevino, J. L. Tang, and H. Liu. Feature selection: A data perspective. *arXiv:1601.07996*, 3:1–73, 2016.
+
+- [41] Y. Li, S. Y. Gao, and S. C. Chen. Ensemble feature weighting based on local learning and diversity. In *AAAI Conference on Artificial Intelligence*, pages 1019–1025, 2012.
+
+- [42] Y. Li, S. S. Huang, S. C. Chen, and J. Si. Stable l2-regularized ensemble feature weighting. In *Proceedings of the 11th International Workshop on Multiple Classifier Systems*, pages 167–178, 2013.
+
+### 特征选择与评估
+
+- [43] Y. Li, J. Si, G. J. Zhou, S. S. Huang, and S. C. Chen. Frel: 一稳定的特征选择算法。 *IEEE Transaction on Neural Networks and Learning Systems*, 26:1388–1402, 2015.
+
+- [44] Yun Li, Jun Yang, and Wei Ji. 基于本地学习的隐私保护特征权重。 *Neurocomputing*, 174:1107–1115, 2016.
+
+- [45] H. Li and L. Yu. 面向分类与聚类的特征选择算法集成。 *IEEE Transactions on Knowledge and Data Engineering*, 17:494–502, 2005.
+
+- [46] S. Loscalzo, L. Yu, and C. Ding. 共识组稳定特征选择。 *Proceedings of ACM SIGKDD Conference on Knowledge and Data Mining*, 567–575, 2009.
+
+- [47] A. J. Miller. 回归变量子集的选择。 *Journal of the Royal Statistical Society*, 147:389–425, 1984.
+
+- [48] P. Mitra, C. Murphy, and S. K. Pal. 利用相似性的无监督特征选择。 *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 24:301–312, 2002.
+
+- [49] Sérgio Moro, Paulo Cortez, and Paulita Rita. 银行业商业智能：基于文本挖掘和狄利雷分配的2002到2013年文献分析。 *Expert Systems with Applications*, 42:1314–1324, 2015.
+
+- [50] A. Y. Ng. 特征选择、l1 与 l2 正化以及旋转不变性。 *Proceedings of International Conference on Machine Learning*, pages 78–85, 2004.
+
+- [51] X. N. Kong and P. S. Yu. GMLC: 一种图分类的多标签特征选择框架。 *Knowledge Information Systems*, 31:2881–305, 2012.
+
+- [52] H. C. Peng, F. H. Long, and C. Ding. 基于互信息的特征选择：最大依赖性、最大相关性和冗余性标准。 *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 27:1226–1238, 2005.
+
+- [53] S. Perkins and J. Thiler. 基于嫁接的在线特征选择。 *Proceedings of International Conference on Machine Learning*, pages 592–599, 2003.
+
+- [54] J. R. Quinlan. 决策树的归归。 *Machine Learning*, 1:81–106, 1986.
+
+- [55] Y. Saecs, T. Abeel, and Y. Van De Peer. 鲁棒特征选择集成特征选择技术。 *Proceedings of the 25th European Conference on Machine Learning and Knowledge Discovery in Databases*, pages 313–325, Baniff, Canada, 2008.
+
+### 机器学习与数据分析的特征工程
+
+- [56] Debarka Sengupta, Sanghamitra Bandyopadhyay, and Debajyoti Sinha. 在线特征选择的评分方案：无需重新训练的模拟模型性能。 *IEEE Transaction on Neural Networks and Learning Systems*, 28:405–414, 2017.
+
+- [57] D. Singh, P. G. Febbo, and K. Ross. 临床前列腺癌行为的基因表达相关。 *Cancer Cell*, 2:203–209, 2002.
+
+- [58] A. Smalter, J. Huan, and G. Lushington. 张量积特征空间中的特征选择。 *Proceedings of the 2009 International Conference on Data Mining*, pages 1004–1009, 2009.
+
+- [59] M. Snir, S. Otto, H. Lederman, D. Walker, and J. Dongarra. MPI: 完全参考。 *MIT Press Cambridge*, 1 edition, 1995.
+
+- [60] A. Strehl and J. Ghosh. 聚类集成：一种结合多个划分的知识重用框架。 *Journal of Machine Learning*, 3:583–617, 2002.
+
+- [61] Y. J. Sun, S. Todorovic, and S. Goodisson. 高维数据分析的本地特征选择。 *IEEE Transactions on Pattern Analysis and Intelligence*, 32:1–18, 2010.
+
+- [62] J. L. Tang, S. Aleelyani, and H. Liu. 分类特征选择：综述。 数据分类：算法与应用。编辑：Charu Aggarwal, *CRC Press*, 2014.
+
+- [63] J. L. Tang, X. Hu, J. Gao, and Huan Liu. 社交媒体多视图数据的无监督特征选择。 *Proceedings of the 2013 SIAM Conference on Data Mining*, 2013.
+
+- [64] R. Tibshirani. Lasso 的回归收缩与选择。 *Journal of the Royal Statistical Society: Series B (Statistical Methodology)*, 58:267–288, 1996.
+
+- [65] J. Wang and J. P. Ye. 多数据多任务学习的安全筛选。 *Proceedings of 32nd International Conference on Machine Learning*, 2015.
+
+- [66] J. Wang, P. Zhao, S. Hoi, and R. Jin. 在线特征选择及其应用。 *IEEE Transactions on Knowledge and Data Engineering*, 1–14, 2013.
+
+- [67] J. Wang, Q. Gu, Y. Cheng, and M. Wang. 在线组特征选择。 *Proceedings of International Joint Conference on Artificial Intelligence*.
+
+- [68] J. Wang, J. Y. Zhou, J. Liu, and P. Wang. 稀疏回归的安全筛选。 *Proceedings of Advances in Neural Information Systems*, 1053–1061, 2014.
+
+### 特征选择与评估
+
+- [69] A. Woznica, P. Nguyen, and A. Kalousis. 鲁棒特征的模型挖掘。 *Proceedings of ACM SIGKDD Conference on Knowledge Discovery and Data Mining*, 913–921, 2012.
+
+- [70] X. Wu, K. Yu, H. Wang, and W. Ding. 在线流式特征选择。 *Proceedings of International Conference on Machine Learning*, 1159–1160, 2014.
+
+- [71] Xindong Wu, Xingquan Zhu, Gong-Q Wu, and Wei Ding. 大数据挖掘。 *IEEE Transactions on Knowledge and Data Engineering*, 26:97–104, 2014.
+
+- [72] H. Xiao, B. Biggio, G. Brown, F. Eckert, and F. Roli. 特征选择能防御训练中毒吗？ *Proceedings of 32th International Conference on Machine Learning*, 2015.
+
+- [73] J. Yan, N. Liu, B. Shan, Q. Cheng, W. Fan, and W. Ma. OFCS：文本分类的最优特征选择。 *Proceedings of 28th Annual SIGIR Conference on Research and Development in Information Retrieval*, pages 122–129, 2005.
+
+- [74] Peng Yan and Yun Li. 基于图的多标签特征选择。 *European Conference on Machine Learning*, pages 540–555, 2016.
+
+- [75] J. Yang and Y. Li. 差分隐私特征选择。 *Proceedings of International Joint Conference on Neural Networks*, pages 4182–4189, 2014.
+
+- [76] K. Yu, X. D. Wu, W. Ding, and J. Pei. 大数据的扩展且准确在线特征选择。 *Proceedings of IEEE Conference on Data Mining*, pages 660–669, 2014.
+
+- [77] L. Yu, C. Ding, and S. Loscalzo. 通过稠密组的稳定特征选择。 *Proceedings of ACM SIGKDD Conference on Knowledge Discovery and Data Mining*, pages 803–811, 2008.
+
+- [78] L. Yu, Y. Han, and M. E. Berens. 通过样本权重从微阵数据中稳定基因。 *IEEE/ACM Transactions on Computational Biology and Bioinformatics*, 9:202–272, 2012.
+
+- [79] L. Yu and H. Liu. 高维特征选择：一种基于相关的过滤方案。 *Proceedings of International Conference on Machine Learning*, pages 856–863, 2003.
+
+- [80] L. Yu and H. Liu. 通过相关性和冗余性进行高效特征选择。 *Journal of Machine Learning Research*, 5:1205–1224, 2004.
+
+### 机器学习与数据分析的特征工程
+
+- [81] M. Yuan and Y. Lin. 分组变量回归的模型选择与估计。 *Journal of the Royal Statistical Society: Series B (Statistical Methodology)*, 68:49–67, 2006.
+
+- [82] F. Zhang, P. K. Chan, B. Biggio, D. S. Yeung, and F. Roli. 针对规避攻击的对抗特征选择。 *IEEE Transactions on Cybersecurity*, 2015.
+
+- [83] Qin Zhang, Peng Zhang, Guodong Long, Wei Ding, Chengqi Zhang, and Xindong Wu. 迈微型数据流。 *Proceedings of International Conference on Data Mining*, pages 1111–1116, 2015.
+
+- [84] Lei Zhao, Qinhua Hu, and Wenwen Wang. 使用多模态深度神经网络和稀疏组 lasso 的异构特征选择。 *IEEE Transactions on Multimedia*, 17:1936–1948, 2015.
+
+- [85] Z. Zhao. 用于超高维数据的光谱特征选择。 博士论文，亚利桑州大学，2010.
+
+- [86] Z. Zhao, J. X. Wang, S. Sharma, N. Agarwal, H. Liu, and Y. Chang. 识别生物相关基因的整合方法。 *Proceedings of SIAM International Conference on Data Mining*, 2010.
+
+- [87] Z. Zhao, R. W. Zhang, J. Cox, D. Dulling, and W. Sarle. 大规模并行特征选择：一种基于方差保持的方法。 *Machine Learning*, 92:195–220, 2013.
 
 
-# 特征选择与评估
 
-- [43] Y. Li, J. Si, G. J. Zhou, S. S. Huang, and S. C. Chen. Frel: 一稳定的特征选择算法。IEEE Transaction on Neural Networks and Learning Systems, 26:1388–1402, 2015.
-- [44] Yun Li, Jun Yang, and Wei Ji. 基于本地学习的隐私保护特征权重。Neurocomputing, 174:1107–1115, 2016.
-- [45] H. Li and L. Yu. 面向分类与聚类的特征选择算法集成。IEEE Transactions on Knowledge and Data Engineering, 17:494–502, 2005.
-- [46] S. Loscalzo, L. Yu, and C. Ding. 共识组稳定特征选择。Proceedings of ACM SIGKDD Conference on Knowledge and Data Mining, 567–575, 2009.
-- [47] A. J. Miller. 回归变量子集的选择。Journal of the Royal Statistical Society, 147:389–425, 1984.
-- [48] P. Mitra, C. Murphy, and S. K. Pal. 利用相似性的无监督特征选择。IEEE Transactions on Pattern Analysis and Machine Intelligence, 24:301–312, 2002.
-- [49] Sérgio Moro, Paulo Cortez, and Paulita Rita. 银行业商业智能：基于文本挖掘和狄利雷分配的2002到2013年文献分析。Expert Systems with Applications, 42:1314–1324, 2015.
-- [50] A. Y. Ng. 特征选择、l1 与 l2 正化以及旋转不变性。Proceedings of International Conference on Machine Learning, pages 78–85, 2004.
-- [51] X. N. Kong and P. S. Yu. GMLC: 一种图分类的多标签特征选择框架。Knowledge Information Systems, 31:2881–305, 2012.
-- [52] H. C. Peng, F. H. Long, and C. Ding. 基于互信息的特征选择：最大依赖性、最大相关性和冗余性标准。IEEE Transactions on Pattern Analysis and Machine Intelligence, 27:1226–1238, 2005.
-- [53] S. Perkins and J. Thiler. 基于嫁接的在线特征选择。Proceedings of International Conference on Machine Learning, pages 592–599, 2003.
-- [54] J. R. Quinlan. 决策树的归归。Machine Learning, 1:81–106, 1986.
-- [55] Y. Saecs, T. Abeel, and Y. Van De Peer. 鲁棒特征选择集成特征选择技术。Proceedings of the 25th European Conference on Machine Learning and Knowledge Discovery in Databases, pages 313–325, Baniff, Canada, 2008.
-
-# 机器学习与数据分析的特征工程
-
-- [56] Debarka Sengupta, Sanghamitra Bandyopadhyay, and Debajyoti Sinha. 在线特征选择的评分方案：无需重新训练的模拟模型性能。IEEE Transaction on Neural Networks and Learning Systems, 28:405–414, 2017.
-- [57] D. Singh, P. G. Febbo, and K. Ross. 临床前列腺癌行为的基因表达相关。Cancer Cell, 2:203–209, 2002.
-- [58] A. Smalter, J. Huan, and G. Lushington. 张量积特征空间中的特征选择。Proceedings of the 2009 International Conference on Data Mining, pages 1004–1009, 2009.
-- [59] M. Snir, S. Otto, H. Lederman, D. Walker, and J. Dongarra. MPI: 完全参考。MIT Press Cambridge, 1 edition, 1995.
-- [60] A. Strehl and J. Ghosh. 聚类集成：一种结合多个划分的知识重用框架。Journal of Machine Learning, 3:583–617, 2002.
-- [61] Y. J. Sun, S. Todorovic, and S. Goodisson. 高维数据分析的本地特征选择。IEEE Transactions on Pattern Analysis and Intelligence, 32:1–18, 2010.
-- [62] J. L. Tang, S. Aleelyani, and H. Liu. 分类特征选择：综述。数据分类：算法与应用。编辑：Charu Aggarwal, CRC Press, 2014.
-- [63] J. L. Tang, X. Hu, J. Gao, and Huan Liu. 社交媒体多视图数据的无监督特征选择。Proceedings of the 2013 SIAM Conference on Data Mining, 2013.
-- [64] R. Tibshirani. Lasso 的回归收缩与选择。Journal of the Royal Statistical Society: Series B (Statistical Methodology), 58:267–288, 1996.
-- [65] J. Wang and J. P. Ye. 多数据多任务学习的安全筛选。Proceedings of 32nd International Conference on Machine Learning, 2015.
-- [66] J. Wang, P. Zhao, S. Hoi, and R. Jin. 在线特征选择及其应用。IEEE Transactions on Knowledge and Data Engineering, 1–14, 2013.
-- [67] J. Wang, Q. Gu, Y. Cheng, and M. Wang. 在线组特征选择。Proceedings of International Joint Conference on Artificial Intelligence.
-- [68] J. Wang, J. Y. Zhou, J. Liu, and P. Wang. 稀疏回归的安全筛选。Proceedings of Advances in Neural Information Systems, 1053–1061, 2014.
-
-# 特征选择与评估
-
-- [69] A. Woznica, P. Nguyen, and A. Kalousis. 鲁棒特征的模型挖掘。Proceedings of ACM SIGKDD Conference on Knowledge Discovery and Data Mining, 913–921, 2012.
-- [70] X. Wu, K. Yu, H. Wang, and W. Ding. 在线流式特征选择。Proceedings of International Conference on Machine Learning, 1159–1160, 2014.
-- [71] Xindong Wu, Xingquan Zhu, Gong-Q Wu, and Wei Ding. 大数据挖掘。IEEE Transactions on Knowledge and Data Engineering, 26:97–104, 2014.
-- [72] H. Xiao, B. Biggio, G. Brown, F. Eckert, and F. Roli. 特征选择能防御训练中毒吗？Proceedings of 32th International Conference on Machine Learning, 2015.
-- [73] J. Yan, N. Liu, B. Shan, Q. Cheng, W. Fan, and W. Ma. OFCS：文本分类的最优特征选择。Proceedings of 28th Annual SIGIR Conference on Research and Development in Information Retrieval, pages 122–129, 2005.
-- [74] Peng Yan and Yun Li. 基于图的多标签特征选择。European Conference on Machine Learning, pages 540–555, 2016.
-- [75] J. Yang and Y. Li. 差分隐私特征选择。Proceedings of International Joint Conference on Neural Networks, pages 4182–4189, 2014.
-- [76] K. Yu, X. D. Wu, W. Ding, and J. Pei. 大数据的扩展且准确在线特征选择。Proceedings of IEEE Conference on Data Mining, pages 660–669, 2014.
-- [77] L. Yu, C. Ding, and S. Loscalzo. 通过稠密组的稳定特征选择。Proceedings of ACM SIGKDD Conference on Knowledge Discovery and Data Mining, pages 803–811, 2008.
-- [78] L. Yu, Y. Han, and M. E. Berens. 通过样本权重从微阵数据中稳定基因。IEEE/ACM Transactions on Computational Biology and Bioinformatics, 9:202–272, 2012.
-- [79] L. Yu and H. Liu. 高维特征选择：一种基于相关的过滤方案。Proceedings of International Conference on Machine Learning, pages 856–863, 2003.
-- [80] L. Yu and H. Liu. 通过相关性和冗余性进行高效特征选择。Journal of Machine Learning Research, 5:1205–1224, 2004.
-
-# 机器学习与数据分析的特征工程
-
-- [81] M. Yuan and Y. Lin. 分组变量回归的模型选择与估计。Journal of the Royal Statistical Society: Series B (Statistical Methodology), 68:49–67, 2006.
-- [82] F. Zhang, P. K. Chan, B. Biggio, D. S. Yeung, and F. Roli. 针对规避攻击的对抗特征选择。IEEE Transactions on Cybersecurity, 2015.
-- [83] Qin Zhang, Peng Zhang, Guodong Long, Wei Ding, Chengqi Zhang, and Xindong Wu. 迈微型数据流。Proceedings of International Conference on Data Mining, pages 1111–1116, 2015.
-- [84] Lei Zhao, Qinhua Hu, and Wenwen Wang. 使用多模态深度神经网络和稀疏组 lasso 的异构特征选择。IEEE Transactions on Multimedia, 17:1936–1948, 2015.
-- [85] Z. Zhao. 用于超高维数据的光谱特征选择。博士论文，亚利桑州大学，2010.
-- [86] Z. Zhao, J. X. Wang, S. Sharma, N. Agarwal, H. Liu, and Y. Chang. 识别生物相关基因的整合方法。Proceedings of SIAM International Conference on Data Mining, 2010.
-- [87] Z. Zhao, R. W. Zhang, J. Cox, D. Dulling, and W. Sarle. 大规模并行特征选择：一种基于方差保持的方法。Machine Learning, 92:195–220, 2013.
 - [88] Z. A. Zhao and H. Liu. 数据挖掘的光谱特征选择：从标签和无标签学习。Taylor and Francis Group, 2012.
+
 - [89] D. Zhou, J. Huang, and Tao Li. 有向图上的标签和无标签数据学习。Proceedings of International Conference on Machine Learning, pages 1036–1043, 2005.
+
 - [90] Qifeng Zhou, Hao Zhao, and Tao Li. 使用随机森林的成本敏感特征选择：选择低成本信息子集。Knowledge-Based Systems, 95:1–11, 2016.
+
 - [91] H. Zou and T. Hastie. 通过弹性网进行正则化和变量选择。Journal of the Royal Statistical Society: Series B (Statistical Methodology), 67:301–320, 2005.
-
-
-
-
 
 # 第9章
 
 ## 监督学习中的基于转换的特征工程：自动化策略
 
 Udayan Khurana
+
 IBM Research
 
 * 9.1 引言 ........................................................................................................... 222
+
 * 9.1.1 执行特征工程面临的挑战 .................................................... 224
+
 * 9.2 术语与问题定义 ................................................................................ 225
+
 * 9.3 一些简单的方法 ................................................................................................... 226
+
 * 9.4 特征变换的层级探索 ................................................................ 227
+
 * 9.4.1 变换图 ............................................................................ 228
+
 * 9.4.2 变换图探索 ....................................................................... 229
+
 * 9.5 学习最优遍历策略 ................................................................... 231
+
 * 9.5.1 通过强化学习进行特征探索 ............................................... 233
+
 * 9.6 在无需模型训练的情况下寻找有效特征 ...................................................... 235
+
 * 9.6.1 学习预测有用的变换 ............................................................... 239
+
 * 9.7 杂类 ....................................................................................................................... 239
+
 * 9.7.1 其他相关工作 ............................................................................................... 239
+
 * 9.7.2 研究机会 ...................................................................................... 240
+
 * 9.7.3 资源 ................................................................................................... 240
+
 * 致谢 ................................................................................................................ 241
+
 * 参考文献 ............................................................................................................................ 241
 
 预测建模的过程需要大量的特征工程。它通常涉及对给定特征空间进行转换，通常使用数学函数，目标是减少给定目标的建模误差。然而，执行有效的特征工程并没有一个定义良好的依据。它涉及领域知识、直觉，最重要的是一个漫长的试错过程。监督这一过程中涉及的人类注意力会显著影响模型生成的成本。此外，当呈现的数据没有经过良好的描述和标记时，有效的手动特征工程将成为一项更难以负担的任务。在本章中，我们将讨论在监督学习的背景下，如何使用转换函数通过算法来解决特征工程问题。
 
 ## 9.1 引言
 
-特征表示对于监督学习算法的有效性起着重要作用。例如，图9.1展示了属于二分类数据集的点的两种不同表示。在左侧，对应两个类别的实例似乎沿着直线交替聚类出现。对于大多数机器学习算法来说，在这种表示中很难画出一个区分这两个类别的分类器。然而，如果将特征替换为它的*正弦值*（sine），如右侧图像所示，它使得两个类别变得容易分离。特征工程就是改变预测模型特征表示的*任务*或*过程*，以便更好地拟合训练算法。*正弦函数*是一种用于执行特征工程的*转换方法*（transformation）。
+特征表示对于监督学习算法的有效性起着重要作用。例如，图9.1展示了属于二分类数据集的点的两种不同表示。在左侧，对应两个类别的实例似乎沿着直线交替聚类出现。对于大多数机器学习算法来说，在这种表示中很难画出一个区分这两个类别的分类器。然而，如果将特征替换为它的`正弦值`（`sine`），如右侧图像所示，它使得两个类别变得容易分离。特征工程就是改变预测模型特征表示的`任务`或`过程`，以便更好地拟合训练算法。`正弦函数`是一种用于执行特征工程的`转换方法`（`transformation`）。
 
 ![](img/f9b50d48a9ba5d6b2e7f6b9761812434_240_0.png)
 
 **图 9.1**: 特征两种表示方法的说明。
 
-考虑根据患者的高度、体重、腰围、臀部、年龄、性别等特征监测其心脏疾病的问题。虽然给特征是分类个人风险的重要信号，但对于这些基础特征，实际上更有效的方法（如 BMI（身体质量指数）和腰臀比）更有用。为了推导出 BMI，使用了两种转换——*除法*和*平方*。使用多个函数并从多个基础特征组合新特征是非常常见的。另一个例子是图9.2中预测高单车租赁数量。给定的特征导致了弱的预测模型。然而，添加几个派生特征显著减少了建模误差。新特征是使用著名的数学函数（如*对数、倒数*）以及统计转换（如 *zscore*）得出的。通常，某些领域特定的函数在推导有意义的特征也被证明是特别用的。例如，空间聚合和时间窗口在数据中被大量使用。时空聚合可以在天气中看到。特征工程（FE）的自动化并非易事，使其自动化变得困难。数据集尚未提供特征的自动化功能。
+考虑根据患者的高度、体重、腰围、臀部、年龄、性别等特征监测其心脏疾病的问题。虽然给特征是分类个人风险的重要信号，但对于这些基础特征，实际上更有效的方法（如 `BMI`（身体质量指数）和腰臀比）更有用。为了推导出 `BMI`，使用了两种转换——`除法`和`平方`。使用多个函数并从多个基础特征组合新特征是非常常见的。另一个例子是图9.2中预测高单车租赁数量。给定的特征导致了弱的预测模型。然而，添加几个派生特征显著减少了建模误差。新特征是使用著名的数学函数（如`对数`、`倒数`）以及统计转换（如 `zscore`）得出的。通常，某些领域特定的函数在推导有意义的特征也被证明是特别用的。例如，空间聚合和时间窗口在数据中被大量使用。时空聚合可以在天气中看到。特征工程（`FE`）的自动化并非易事，使其自动化变得困难。数据集尚未提供特征的自动化功能。
 
 监督学习中的特征工程自动化
 
-某些领域特定的函数在推导有意义的特征也被证明是特别用的。例如，空间聚合和时间窗口在数据中被大量使用。时空聚合可以在天气中看到。特征工程（FE）的自动化并非易事，使其自动化变得困难。数据集尚未提供特征的自动化功能。
+某些领域特定的函数在推导有意义的特征也被证明是特别用的。例如，空间聚合和时间窗口在数据中被大量使用。时空聚合可以在天气中看到。特征工程（`FE`）的自动化并非易事，使其自动化变得困难。数据集尚未提供特征的自动化功能。
 
 ## 9.1.1 执行特征工程面临的挑战
 
-在实践中，特征工程是由数据科学家利用直觉、感性和领域知识协调的。同时，它还涉及对演变的持续观察和关联。例如，扫一眼单车租赁数据集，数据科学家可能会考虑到季节（星期几）。这些洞察是得益于过去的经验或学术知识。人类认为需求与工作安排以及天气等具有相关性是自然的。这是数据科学家的集体努力。现在，所有建议的模式并不都是正确或实用的。数据科学家会认为相应的特征是有用的，而特征工程就是试错的例子。由于这个过程的结果，特征工程非常耗时，并且容易产生偏差并内生地依赖人类决策，它俗称为一种“艺术科学”。特征工程的自动化在计算上具有挑战性，在决策方面也是如此。可以组合并递归应用于由之前的转换生成的特征的可能转换数量巨大。为了确认一个新特征是否提供了价值，需要在包含该特征后对新模型进行训练和验证。这是一个昂贵的步骤，对于每个新构建的特征来执行该操作是不可行的。在之前讨论的示例中，我们见证了函数的多样性以及函数可能的组合，以产生最有用的特征。海量的候选项使得在实践中尝试所有选项是徒劳的。考虑一个仅有 n=10 个基础特征的场景；如果允许转换应用到深度 d=5，则选项总数为 $f^d$，大于一百万次选择。如果这些选择都通过训练和测试进行评估，即使对于很小的数据集也需要极其的时间。最后，特征工程涉及复杂的决策，这些决策基于
+在实践中，特征工程是由数据科学家利用直觉、感性和领域知识协调的。同时，它还涉及对演变的持续观察和关联。例如，扫一眼单车租赁数据集，数据科学家可能会考虑到季节（星期几）。这些洞察是得益于过去的经验或学术知识。人类认为需求与工作安排以及天气等具有相关性是自然的。这是数据科学家的集体努力。现在，所有建议的模式并不都是正确或实用的。数据科学家会认为相应的特征是有用的，而特征工程就是试错的例子。由于这个过程的结果，特征工程非常耗时，并且容易产生偏差并内生地依赖人类决策，它俗称为一种“艺术科学”。特征工程的自动化在计算上具有挑战性，在决策方面也是如此。可以组合并递归应用于由之前的转换生成的特征的可能转换数量巨大。为了确认一个新特征是否提供了价值，需要在包含该特征后对新模型进行训练和验证。这是一个昂贵的步骤，对于每个新构建的特征来执行该操作是不可行的。在之前讨论的示例中，我们见证了函数的多样性以及函数可能的组合，以产生最有用的特征。海量的候选项使得在实践中尝试所有选项是徒劳的。考虑一个仅有 `n=10` 个基础特征的场景；如果允许转换应用到深度 `d=5`，则选项总数为 `$f^d$`，大于一百万次选择。如果这些选择都通过训练和测试进行评估，即使对于很小的数据集也需要极其的时间。最后，特征工程涉及复杂的决策，这些决策基于
 
 ³ Kaggle 单车共享: https://www.kaggle.com/c/bike-sharing-demand
 
@@ -4162,10 +3403,6 @@ IBM Research
 
 **图 9.2:** 使用随机森林回归的 Kaggle 单车租赁数据集，添加新特征使得相对绝对误差（Relative Absolute Error）从 0.61 降至 0.20。
 
-
-
-
-
 ## 监督学习中的特征工程自动化
 
 特征工程受许多因素影响。有些是根据给定数据集的性能、甚至基于以往经验对变换进行优先级排序；有些是为了探索不同的变换，或者利用那些在当前数据集上表现良好的变换组合，等等。要阐述作为此类决策基础的理念或规则集并非易事。编写程序来执行相同任务也同样并非易事。
@@ -4174,33 +3411,37 @@ IBM Research
 
 ## 9.2 术语与问题定义
 
-我们给出一个预测建模任务，它由 (1) 一组特征 $F = \{f_1, f_2, \dots, f_m\}$；(2) 一个目标向量 $y$ 组成。$y$ 的性质——类别型——决定了这是一个分类问题还是回归问题。考虑一个在给定 $y$ 场景下适算法 $L$，以及一个性能衡量标准 $m$。我们使用 $A_y^L(F, y)$ 来表示通过性能衡量 $m$，使用算法 $L$ 在给定数据上构建的模型性能。$L$ 的一个示例是分类的逻辑回归，$m$ 的一个示例是平均分。
+我们给出一个预测建模任务，它由 (1) 一组特征 `$F = \{f_1, f_2, \dots, f_m\}$`；(2) 一个目标向量 `$y$` 组成。`$y$` 的性质——类别型——决定了这是一个分类问题还是回归问题。考虑一个在给定 `$y$` 场景下适算法 `$L$`，以及一个性能衡量标准 `$m$`。我们使用 `$A_y^L(F, y)$` 来表示通过性能衡量 `$m$`，使用算法 `$L$` 在给定数据上构建的模型性能。`$L$` 的一个示例是分类的逻辑回归，`$m$` 的一个示例是平均分。
 
-现在考虑我们可以调用的 $k$ 个变换函数 $\mathcal{T} = \{t_1, t_2, \dots, t_k\}$。一元变换的应用，其中 $f_{in} \in \mathbb{R}^n$ 是具有相同维特征。类似的表示法扩展到二元和 $k$ 元变换。变换的变体用大写字母表示，如 $T_1, T_2, \dots, T_k$。这些变换应用于由单个特征组成的集合 $F$。它们象征着变换函数在每个输入 $f \in F$ 上的语法，使得 $t(f)$ 是一个有效且合法的值。例如，如 $F_a = T(F)$，$F_a$ 包含了从原始特征 $F$ 生成的所有新特征。例如，应用于特征集合的变换为 $f_a = \log(f_i), \forall f_i \in F$。这扩展到作用于 $k$ 个输入特征的 $k$ 元函数。直接或递归从 $F$ 导出的整个（开）特征集表示为 $\mathcal{F}_T$。
+现在考虑我们可以调用的 `$k$` 个变换函数 `$\mathcal{T} = \{t_1, t_2, \dots, t_k\}$`。一元变换的应用，其中 `$f_{in} \in \mathbb{R}^n$` 是具有相同维特征。类似的表示法扩展到二元和 `$k$` 元变换。变换的变体用大写字母表示，如 `$T_1, T_2, \dots, T_k$`。这些变换应用于由单个特征组成的集合 `$F$`。它们象征着变换函数在每个输入 `$f \in F$` 上的语法，使得 `$t(f)$` 是一个有效且合法的值。例如，如 `$F_a = T(F)$`，`$F_a$` 包含了从原始特征 `$F$` 生成的所有新特征。例如，应用于特征集合的变换为 `$f_a = \log(f_i), \forall f_i \in F$`。这扩展到作用于 `$k$` 个输入特征的 `$k$` 元函数。直接或递归从 `$F$` 导出的整个（开）特征集表示为 `$\mathcal{F}_T$`。
 
-$A$——两个特征的运算符——与相同目标 $y$ 相关的是两个特征集的并集，$F_a = F_1 \cup F_2$，并保留行顺序。注意，在特征集合 $T(F)$ 上指定的所有操作都可以等效地写入相应数据集 $D = (F, y)$，其中 $T(D)$ 意味着操作应用于相应的特征集。同样，对于二元操作，如 $D_* = D_1 + D_2$，意味着目标在操作数和结果之间是通用的。特征集合上的变换会增加特征；另一方面，*特征选择*会移除特征。
+`$A$`——两个特征的运算符——与相同目标 `$y$` 相关的是两个特征集的并集，`$F_a = F_1 \cup F_2$`，并保留行顺序。注意，在特征集合 `$T(F)$` 上指定的所有操作都可以等效地写入相应数据集 `$D = (F, y)$`，其中 `$T(D)$` 意味着操作应用于相应的特征集。同样，对于二元操作，如 `$D_* = D_1 + D_2$`，意味着目标在操作数和结果之间是通用的。特征集合上的变换会增加特征；另一方面，`特征选择`会移除特征。
 
-特征工程的目标描述如下：给定特征集合 $F$、目标 $y$ 以及变换集合 $\mathcal{T}$，找到特征集合 $F^* = F_1 \cup F_2$，其中 $F_1 \subseteq F$（原始）且 $F_2 \subseteq \mathcal{T}$（派生），以使算法 $L$ 和衡量标准 $m$ 的准确率最大化。
+特征工程的目标描述如下：给定特征集合 `$F$`、目标 `$y$` 以及变换集合 `$\mathcal{T}$`，找到特征集合 `$F^* = F_1 \cup F_2$`，其中 `$F_1 \subseteq F$`（原始）且 `$F_2 \subseteq \mathcal{T}$`（派生），以使算法 `$L$` 和衡量标准 `$m$` 的准确率最大化。
 
-$$F^* = \arg\max A(F_1 \cup F_2, y)$$
+```
+F^* = \arg\max A(F_1 \cup F_2, y)
+```
 
 ## 9.3 简单方法
 
-构建新特征的方法之一是简单地对给定数据应用变换，这导致了对给定数据的特征应用（此处原文逻辑略有重复，按原意翻译）。$A$——两个特征的运算符——与相同目标 $y$ 相关的是两个特征集的并集，$F_a = F_1 \cup F_2$，并保留行顺序。注意，在特征集合 $T(F)$ 上指定的所有操作都可以等效地写入相应数据集 $D = (F, y)$，其中 $T(D)$ 意味着操作应用于相应的特征集。同样，对于二元操作，如 $D_* = D_1 + D_2$，意味着目标在操作数和结果之间是通用的。特征集合上的变换会增加特征；另一方面，*特征选择*会移除特征。
+构建新特征的方法之一是简单地对给定数据应用变换，这导致了对给定数据的特征应用（此处原文逻辑略有重复，按原意翻译）。`$A$`——两个特征的运算符——与相同目标 `$y$` 相关的是两个特征集的并集，`$F_a = F_1 \cup F_2$`，并保留行顺序。注意，在特征集合 `$T(F)$` 上指定的所有操作都可以等效地写入相应数据集 `$D = (F, y)$`，其中 `$T(D)$` 意味着操作应用于相应的特征集。同样，对于二元操作，如 `$D_* = D_1 + D_2$`，意味着目标在操作数和结果之间是通用的。特征集合上的变换会增加特征；另一方面，`特征选择`会移除特征。
 
-特征工程的目标描述如下：给定特征集合 $F$、目标 $y$ 以及变换集合 $\mathcal{T}$，找到特征集合 $F^* = F_1 \cup F_2$，其中 $F_1 \subseteq F$（原始）且 $F_2 \subseteq \mathcal{T}$（派生），以使算法 $L$ 和衡量标准 $m$ 的准确率最大化。
+特征工程的目标描述如下：给定特征集合 `$F$`、目标 `$y$` 以及变换集合 `$\mathcal{T}$`，找到特征集合 `$F^* = F_1 \cup F_2$`，其中 `$F_1 \subseteq F$`（原始）且 `$F_2 \subseteq \mathcal{T}$`（派生），以使算法 `$L$` 和衡量标准 `$m$` 的准确率最大化。
 
 （注：由于原文文本在9.3节之后出现了大量逻辑重复和乱码式表达，以下翻译严格遵循了原文的结构和内容，以确保不漏译或不误译。）
 
 [此处由于原文存在大量重复段，翻译逻辑如下：]
 
-...它们象征着变换函数在每个输入 $f \in F$ 上的语法，使得 $t(f)$ 是一个有效且合法的值。例如，如 $F_a = T(F)$，$F_a$ 包含了从原始特征 $F$ 生成的所有新特征。例如，应用于特征集合的变换为 $f_a = \log(f_i), \forall f_i \in F$。这扩展到作用于 $k$ 个输入特征的 $k$ 元函数。直接或递归从 $F$ 导出的整个（开）特征集表示为 $\mathcal{F}_T$。
+...它们象征着变换函数在每个输入 `$f \in F$` 上的语法，使得 `$t(f)$` 是一个有效且合法的值。例如，如 `$F_a = T(F)$`，`$F_a$` 包含了从原始特征 `$F$` 生成的所有新特征。例如，应用于特征集合的变换为 `$f_a = \log(f_i), \forall f_i \in F$`。这扩展到作用于 `$k$` 个输入特征的 `$k$` 元函数。直接或递归从 `$F$` 导出的整个（开）特征集表示为 `$\mathcal{F}_T$`。
 
-$A$——两个特征的运算符——与相同目标 $y$ 相关的是两个特征集的并集，$F_a = F_1 \cup F_2$，并保留行顺序。注意，在特征集合 $T(F)$ 上指定的所有操作都可以等效地写入相应数据集 $D = (F, y)$，其中 $T(D)$ 意味着操作应用于相应的特征集。同样，对于二元操作，如 $D_* = D_1 + D_2$，意味着目标在操作数和结果之间是通用的。特征集合上的变换会增加特征；另一方面，*特征选择*会移除特征。
+`$A$`——两个特征的运算符——与相同目标 `$y$` 相关的是两个特征集的并集，`$F_a = F_1 \cup F_2$`，并保留行顺序。注意，在特征集合 `$T(F)$` 上指定的所有操作都可以等效地写入相应数据集 `$D = (F, y)$`，其中 `$T(D)$` 意味着操作应用于相应的特征集。同样，对于二元操作，如 `$D_* = D_1 + D_2$`，意味着目标在操作数和结果之间是通用的。特征集合上的变换会增加特征；另一方面，`特征选择`会移除特征。
 
-特征工程的目标描述如下：给定特征集合 $F$、目标 $y$ 以及变换集合 $\mathcal{T}$，找到特征集合 $F^* = F_1 \cup F_2$，其中 $F_1 \subseteq F$（原始）且 $F_2 \subseteq \mathcal{T}$（派生），以使算法 $L$ 和衡量标准 $m$ 的准确率最大化。
+特征工程的目标描述如下：给定特征集合 `$F$`、目标 `$y$` 以及变换集合 `$\mathcal{T}$`，找到特征集合 `$F^* = F_1 \cup F_2$`，其中 `$F_1 \subseteq F$`（原始）且 `$F_2 \subseteq \mathcal{T}$`（派生），以使算法 `$L$` 和衡量标准 `$m$` 的准确率最大化。
 
-$$F^* = \arg\max A(F_1 \cup F_2, y)$$
+```
+F^* = \arg\max A(F_1 \cup F_2, y)
+```
 
 ## 9.3 简单方法
 
@@ -4214,88 +3455,91 @@ $$F^* = \arg\max A(F_1 \cup F_2, y)$$
 
 ...（后续定义部分）
 
-
-
-
 # 监督学习中的自动化特征工程
 
 ![](img/f9b50d48a9ba5d6b2e7f6b9761812434_247_0.png)
 
-**图 9.4:** 变换图示例，这是一个有向无环图。起始节点 $D_0$ 对应于给定的数据集。分级节点为圆形，节点为矩形。在这里我们可以看到三种变换：log、sum 和 square，以及一个特征选择算子 $FS_1$。
+**图 9.4:** 变换图示例，这是一个有向无环图。起始节点 `$D_0$` 对应于给定的数据集。分级节点为圆形，节点为矩形。在这里我们可以看到三种变换：`log`、`sum` 和 `square`，以及一个特征选择算子 `FS_1`。
 
-$(x^{h+1}-x^{h+2})$ sum 节点。可以看到，对于一个高度受限且变换数量适中的树，跨整个树的准确率验证在组合上是巨大的。因此，我们采用*性能引导的探索*策略，仅探索图中最可能包含所需的极小子集，从而避免其他节点。该算法在预算限制下运行。
+`$(x^{h+1}-x^{h+2})$` `sum` 节点。可以看到，对于一个高度受限且变换数量适中的树，跨整个树的准确率验证在组合上是巨大的。因此，我们采用`性能引导的探索`策略，仅探索图中最可能包含所需的极小子集，从而避免其他节点。该算法在预算限制下运行。
 
-## 9.4. 变换探索
+## 9.4 变换探索
 
 由于变换图规模巨大，穷举式探索并不是一个可行方案。例如，在 20 个变换且高度为 5 时，完整图包含约 320 万个节点；穷举搜索意味着许多训练和测试迭代。另一方面，本工作的重点是找到一种在有限预算内最大化预期收益的策略。
 
-算法 2 概述了一种探索方法论。在每一步中，使用来自每个可能移动的估计奖励 $R(G_i, n_i)$ 来对变换图给定状态 $G_t, t \in [0, B_{max}]$ 的可用选项进行排序，其中 $B_{max}$ 是分配的总步数。为了简单起见，我们处理任何随时间单调增加的量。注意，该算法允许通过函数 $R(\dots)$ 的定义接入不同的探索策略。
+算法 2 概述了一种探索方法论。在每一步中，使用来自每个可能移动的估计奖励 `$R(G_i, n_i)$` 来对变换图给定状态 `$G_t, t \in [0, B_{max}]$` 的可用选项进行排序，其中 `$B_{max}$` 是分配的总步数。为了简单起见，我们处理任何随时间单调增加的量。注意，该算法允许通过函数 `$R(\dots)$` 的定义接入不同的探索策略。
 
 机器学习与数据分析中的特征工程
 
 ### 算法 2 通用变换探索
 
-```
+
+
+# 算法描述
+
 **Input:** 数据集 $D_0$, $B_{max}$
-1: 使用根节点 $D_0$ 初始化 $G_0$
-2: **while** $i < B_{max}$ **do**
-3: $N \leftarrow d(G_i)$
-4: $ratio \leftarrow B_{max}$
-5: $n^*, t^* \leftarrow \argmax_{n,t} R(G_i, t, ratio)$
-6: $G_i \leftarrow$ 将 $t^*$ 应用于 $G_i$ 中的 $n^*$
-7: $i \leftarrow i + 1$
+1. 使用根节点 $D_0$ 初始化 $G_0$
+2. **while** $i < B_{max}$ **do**
+3. $N \leftarrow d(G_i)$
+4. $ratio \leftarrow B_{max}$
+5. $n^*, t^* \leftarrow \argmax_{n,t} R(G_i, t, ratio)$
+6. $G_i \leftarrow$ 将 $t^*$ 应用于 $G_i$ 中的 $n^*$
+7. $i \leftarrow i + 1$
 **Output:** $\argmax_D (G_i)$
-```
+
+---
+
+# 探索策略设计的影响因素
 
 以下是设计探索策略时影响因素（一个或多个四个参数的属性）的非穷举列表：
 
-- 节点 $n$ 的准确率：与其他节点相比，节点 $n'$ 进一步探索的准确率越高。
-- 变换：$t$ 直到 $G_i$ 的平均或最大准确率提升。
-- $t$ 在根节点到 $n$ 路径中已使用的次数。高或非零的次数会降低在 $n$ 上应用 $t$ 的合理性。
-- 节点 $n$ 的准确率增益（来自父节点）以及 $n$ 父节点的准确率增益。这测试了 $n$ 的累计收益是否为近期。
-- 深度：值被认为是变换序列相对复杂性的标志。
-- 直到 $G_i$ 为止的耗尽比例。
-- $n$ 中特征数量与原始数据集的比例：这表明 $n$ 与原始数据集相比有多臃肿。
-- 该变换是否为特征选择器（减少特征数量）？
-- 数据集是否包含 (a) 数值特征，或 (b) 日期特征，或 (c) 字符串特征？
+- **节点 $n$ 的准确率**：与其他节点相比，节点 $n'$ 进一步探索的准确率越高。
+- **变换**：$t$ 直到 $G_i$ 的平均或最大准确率提升。
+- **$t$ 在根节点到 $n$ 路径中已使用的次数**：高或非零的次数会降低在 $n$ 上应用 $t$ 的合理性。
+- **节点 $n$ 的准确率增益（来自父节点）以及 $n$ 父节点的准确率增益**：这测试了 $n$ 的累计收益是否为近期。
+- **深度**：值被认为是变换序列相对复杂性的标志。
+- **直到 $G_i$ 为止的耗尽比例**。
+- **$n$ 中特征数量与原始数据集的比例**：这表明 $n$ 与原始数据集相比有多臃肿。
+- **该变换是否为特征选择器（减少特征数量）？**
+- **数据集是否包含 (a) 数值特征，或 (b) 日期特征，或 (c) 字符串特征？**
 
-探索策略本质上等于奖励函数 $R(\dots)$的设计。Cognito [14] 的一些手工图遍历描述如下。在*深度优先*策略中，重点是从准确率最高的节点开始进一步探索，直到观察到饱和或准确率下降。它最适用于在某种有限预算内巩固已发现的解决方案。
+探索策略本质上等于奖励函数 $R(\dots)$ 的设计。Cognito [14] 的一些手工图遍历描述如下。在**深度优先**策略中，重点是从准确率最高的节点开始进一步探索，直到观察到饱和或准确率下降。它最适用于在某种有限预算内巩固已发现的解决方案。
 
-然而，它可能会陷入图的局部深度区域，而不探索更简单的选择。换句话说，它缺乏探索维度，这种策略可能需要长时间才能偶然发现高奖励的简单变换。广度优先策略主要关注探索变换图分级部分探索较少的子树。其他因素是次要影响，如变换性能、父节点的准确性和子节点的预期准确率。这种策略有利于发现（单个或短序列）高收益变换。全局策略是由大量变换、深度优先和广度优先策略混合得出的。它的工作原理是首先探索宽度，然后根据初始阶段对有前景的深度进行更集探索。图 9.5 展示了针对 OpenAI_618 数据集 ($B_{max}=2, h_{max}=5$) 的广度优先、深度优先和一种基于 RL 的策略（第 9.5 节），为了视觉清晰禁用了节点。通常，很难手动编码所有能够捕捉不同情况意图的规则——对于不同的奖励值、不同变换的平均性能及其对给定数据集的组合等。在下一节中，我们将讨论如何实证地优化策略。
+然而，它可能会陷入图的局部深度区域，而不探索更简单的选择。换句话说，它缺乏探索维度，这种策略可能需要长时间才能偶然发现高奖励的简单变换。**广度优先**策略主要关注探索变换图分级部分探索较少的子树。其他因素是次要影响，如变换性能、父节点的准确性和子节点的预期准确率。这种策略有利于发现（单个或短序列）高收益变换。**全局策略**是由大量变换、深度优先和广度优先策略混合得出的。它的工作原理是首先探索宽度，然后根据初始阶段对有前景的深度进行更集中探索。
+
+图 9.5 展示了针对 OpenAI_618 数据集 ($B_{max}=2, h_{max}=5$) 的广度优先、深度优先和一种基于 RL 的策略（第 9.5 节），为了视觉清晰禁用了节点。通常，很难手动编码所有能够捕捉不同情况意图的规则——对于不同的奖励值、不同变换的平均性能及其对给定数据集的组合等。在下一节中，我们将讨论如何实证地优化策略。
+
+---
 
 ## 9.5 学习最优遍历策略
 
 在上一节中，我们讨论了一种基于性能的特征工程探索算法。它是基于对之前讨论的变换策略的分级结构（有向无环图）的探索。我们不再依赖“人类专家”，而是依靠经验观察来改进策略。在本节中，我们描述了一种无需手动规则即可改进探索的方法。考虑一个强化学习智能体，它持续监控每个应用的变换（称为）对给定状态的影响以及产生的奖励。这里的强化目标是优化给定数据集的最终或累计奖励 ($A^* - A(G_i)$)。
 
-机器学习与数据分析中的特征工程
+### 图 9.5：针对数据集的不同探索策略
 
-![](img/f9b50d48a9ba5d6b2e7f6b9761812434_250_0.png)
+数据集：https://www.openml.org/d/6166。在 $B_{max}=20$ 迭代限制内，RL 和 DF 都找到了 0.58 ($1-Rel.Abs.Error$) 的最佳性能，而 BF 仅找到 0.54。RL 消耗了 11 次迭代，而 DF 消耗了 20 次迭代。
 
-(a) 广度优先探索。
+| 策略 | 图示 |
+| :--- | :--- |
+| (a) 广度优先探索 | ![](img/f9b50d48a9ba5d6b2e7f6b9761812434_250_0.png) |
+| (b) 深度优先探索 | ![](img/f9b50d48a9ba5d6b2e7f6b9761812434_250_1.png) |
+| (c) 基于 RL 的探索 | ![](img/f9b50d48a9ba5d6b2e7f6b9761812434_250_2.png) |
 
-![](img/f9b50d48a9ba5d6b2e7f6b9761812434_250_1.png)
-
-(b) 深度优先探索。
-
-![](img/f9b50d48a9ba5d6b2e7f6b9761812434_250_2.png)
-
-(c) 基于 RL 的探索。
-
-**图 9.5:** 针对数据集：https://www.openml.org/d/6166 的不同探索策略。在 $B_{max}=20$ 迭代限制内，RL 和 DF 都找到了 0.58 ($1-Rel.Abs.Error$) 的最佳性能，而 DF 仅找到 0.54。RL 消耗了 11 次迭代，而 DF 消耗了 20 次迭代。
-
-
-
-
+---
 
 ## 监督学习中的特征工程自动化
 
-考虑对每个采取的动作给予奖励以衡量智能体的行为，这与监督学习范式不同，在后者中，我们给定真值（ground truth）来训练系统。在这里，我们专门讨论了 Khurana 等人 [13] 所的带有函数近似方法的 Q 学习的特定实例。Q 学习是强化学习的一种，在缺乏环境显式模型的情况下非常有用，在这种情况下，模型意味着学习算法的行为。对于大量的状态（回想，小深度图中的节点数），学习状态-动作转换是不可行的，因此适用于近似函数。这种使用其他机器学习技术辅助机器学习的工作被称为“学习”或*元学习*（meta-learning）。
+考虑对每个采取的动作给予奖励以衡量智能体的行为，这与监督学习范式不同，在后者中，我们给定真值来训练系统。在这里，我们专门讨论了 Khurana 等人 [13] 所提出的带有函数近似方法的 Q 学习的特定实例。Q 学习是强化学习的一种，在缺乏环境显式模型的情况下非常有用，在这种情况下，模型意味着学习算法的行为。对于大量的状态（回想，小深度图中的节点数），学习状态-动作转换是不可行的，因此适用于近似函数。这种使用其他机器学习技术辅助机器学习的工作被称为“学习”或**元学习**（meta-learning）。
 
 ### 9.5.1 通过强化学习进行特征探索
 
-将图过程考虑为*马尔可夫决策过程*（MDP），在步骤 $i$ 处包含两个部分的组合：(a) 节点添加后的转换图 $G_i$（$G_0$ 包含给定数据集的根节点，$G_i$ 包含节点）；(b) 步骤 $i$ 处的剩余预算 $b_i = \frac{B_{max}}{i}$。整个状态集为 $S$。另一方面，动作 $i$ 是一个现有树节点和一个应用于其上的转换对，即 $\langlen, t\rangle$，其中 $n \in B(G_i)$，$t \in T$ 且 $\tilde{n} \in G_i(V, n') = i$。整个动作集为 $C$。策略 $S \rightarrow C$ 决定了在给定状态下采取哪个动作。注意后文解释的动作值函数（探索策略）。
+将图过程考虑为**马尔可夫决策过程**（MDP），在步骤 $i$ 处包含两个部分的组合：
+(a) 节点添加后的转换图 $G_i$（$G_0$ 包含给定数据集的根节点，$G_i$ 包含节点）；
+(b) 步骤 $i$ 处的剩余预算 $b_i = \frac{B_{max}}{i}$。
 
-上述公式唯一地标识了每个状态。将“剩余预算”作为 MDP 状态中的一个因素，有助于给定数据集在运行时探索与利用（exploration versus exploitation）之间的权衡。这种运行时探索权衡与强化学习训练中选择动作以平衡奖励并防止陷入局部最优的权衡并不相同。
+整个状态集为 $S$。另一方面，动作 $i$ 是一个现有树节点和一个应用于其上的转换对，即 $\langle n, t \rangle$，其中 $n \in B(G_i)$，$t \in T$ 且 $\tilde{n} \in G_i(V, n') = i$。整个动作集为 $C$。策略 $S \rightarrow C$ 决定了在给定状态下采取哪个动作。注意后文解释的动作值函数（探索策略）。
+
+上述公式唯一地标识了每个状态。将“剩余预算”作为 MDP 状态中的一个因素，有助于给定数据集在运行时探索与利用之间的权衡。这种运行时探索权衡与强化学习训练中选择动作以平衡奖励并防止陷入局部最优的权衡并不相同。
 
 在步骤 $i$ 处，动作的发生产生了一个新节点 $n_i$，从而产生了一个训练和测试模型的新数据集，获取其准确率 $A(n_i)$。对于每个步骤，我们分配一个标量奖励：
 
@@ -4311,13 +3555,13 @@ $R(s_i) = \sum_{j=0}^{\infty} \gamma^j r_{i+j}$
 
 其中 $\gamma \in [0, 1)$ 是折扣因子，它优先考虑早期奖励。
 
-我们使用带有函数近似方法的 Q 学习 [28] 来学习动作值 Q 函数。对于每个状态 $s \in S$ 和动作 $c \in C$，关于策略 II 的 Q 函数定义为：
+我们使用带有函数近似方法的 Q 学习 [28] 来学习动作值 Q 函数。对于每个状态 $s \in S$ 和动作 $c \in C$，关于策略 $\Pi$ 的 Q 函数定义为：
 
 ```
-$Q(s,c) = r(s,c) + \gamma R^{II}(\delta(s,c))$
+$Q(s,c) = r(s,c) + \gamma R^{\Pi}(\delta(s,c))$
 ```
 
-其中 $\delta : s \in C \rightarrow S$ 是一个假设的转换函数，$R^{II}(s)$ 是跟随状态 $s$ 之后的累积奖励。最优策略通过以下方式实现：
+其中 $\delta : s \in C \rightarrow S$ 是一个假设的转换函数，$R^{\Pi}(s)$ 是跟随状态 $s$ 之后的累积奖励。最优策略通过以下方式实现：
 
 ```
 $\pi^*(s) = \arg_c Q(s,c),$ (9.2)
@@ -4347,11 +3591,9 @@ $Q(s,c) = w \cdot f(s)$ (9.5)
 
 这使得权重的学习更快。重要的是，在这种情况下，$Q$ 函数仍然不独立于动作 $c$，因为 $f(s)$ 的因素之一就是动作。
 
+---
 
-
-
-
-# 监督学习中的特征工程自动化
+# 监督学习中的特征工程自动化（续）
 
 $c_1(x)$ 和 $c_2(x)$ 对应特征 $f$。离散分布也存在一个对应的表达式。
 
@@ -4369,17 +3611,23 @@ $$\omega_{KL}^{L}(c_1, c_2) = \int_{-\infty}^{\infty}(c_1(x) - c_2(x)) \log \fra
 
 Narsian 等人 [20] 训练了一组多层感知器（MLP），每个变换 $\in \mathcal{T}$ 对应一个。对于每个特征-目标对，一个 MLP 学习其相应变换对指定预测任务的影响。它将这一知识泛化到所有训练示例中。一个训练实例包含特征 PDF 的另一种表示作为输入；输出是一个二值值——该变换是否对模型准确性的提升有所用。有数十万个训练示例。
 
-用于变换 MLP 分类器的训练样本是在多个分类数据集上生成的。对于每个数据集，考虑每个数值型特征 $f$，并使用学习算法 $\mathcal{L}$ 训练模型。对于每个 MLP，将相应的变换 $t$ 应用于 $f$，并使用 $f$ 和 $t(f)$ 训练一个新模型。如果变换带来的改进超过了某个阈值，即 $A_L(\{f, t(f)\}) - A_L(\{f, y\}) > \phi$，则认为 $R_f$ 是一个*正向*训练示例；否则为*负向**训练示例。
+用于变换 MLP 分类器的训练样本是在多个分类数据集上生成的。对于每个数据集，考虑每个数值型特征 $f$，并使用学习算法 $\mathcal{L}$ 训练模型。对于每个 MLP，将相应的变换 $t$ 应用于 $f$，并使用 $f$ 和 $t(f)$ 训练一个新模型。如果变换带来的改进超过了某个阈值，即 $A_L(\{f, t(f)\}) - A_L(\{f, y\}) > \phi$，则认为 $R_f$ 是一个**正向**训练示例；否则为**负向**训练示例。
 
-# 监督学习中的特征工程自动化
+---
 
-对于 $k$ 类问题，当对每个分位数数据草图使用 $b$ 个桶时，$R_t$ 是一个大小为 $k \times b$ 的向量。对于具有 $h$ 个单元的单隐藏层 MLP，计算变换 $t$ 对于 $f$ 是否为有用变换的概率
+# 监督学习中的特征工程自动化（续）
 
+对于 $k$ 类问题，当对每个分位数数据草图使用 $b$ 个桶时，$R_t$ 是一个大小为 $k \times b$ 的向量。对于具有 $h$ 个单元的单隐藏层 MLP，计算变换 $t$ 对于 $f$ 是否为有用变换的概率：
+
+```
 > $|P_t \text{ is useful}(f); P_t \text{ is not useful}(f)| = \sigma_2(\mathbf{b}^{(2)} + \mathbf{W}^{(2)})(\sigma_1(\mathbf{b}^{(1)} + \mathbf{W}^{(1)}(Q^{(1)}; \dots; Q^{(k)}))));$ (9.12)
+```
 
-在这里，$\mathbf{W}^{(1)}$ 和 $\mathbf{W}^{(2)}$ 是权重矩阵，$\mathbf{b}^{(1)}$ 和 $\mathbf{b}^{(2)}$ 是偏置向量。$\sigma_1$ 和 $\sigma_2$ 分别是 softmax 和线性线性函数。使用随机梯度下降来训练变换 MLP。可以使用正则化和丢弃（dropout）[24] 防止过拟合。
+在这里，$\mathbf{W}^{(1)}$ 和 $\mathbf{W}^{(2)}$ 是权重矩阵，$\mathbf{b}^{(1)}$ 和 $\mathbf{b}^{(2)}$ 是偏置向量。$\sigma_1$ 和 $\sigma_2$ 分别是 softmax 和线性函数。使用随机梯度下降来训练变换 MLP。可以使用正则化和丢弃（dropout）[24] 防止过拟合。
 
 在运行时，当出现新数据集时，计算 QSA 并在 MLP 上进行评分的计算开销很大。与训练时间很长的基于评估的技术相比，基于预测的技术可以为数据科学家提供快速的见解。此外，它们的结果可以为任何基于探索的技术提供初始偏差，以便进行快速搜索。该技术报告的收益通常优于扩展-缩减式的特征工程 [20]，但少于调优良好的变换图谱探索系统。
+
+---
 
 ## 9.7 杂项
 
@@ -4387,29 +3635,33 @@ Narsian 等人 [20] 训练了一组多层感知器（MLP），每个变换 $\in 
 
 本章介绍的技术代表了预测模型中自动化特征工程的前沿水平。还有另一层有价值的工作，对于研究该课题的研究人员和学生来说也可能感兴趣。我们在本节中总结了一些相关工作。
 
-FICUS [18] 在可能特征空间上进行搜索，通过应用“构造函数”（例如，将原始特征插入变换组合中）来构建它们。FICUS 寻找更好特征的搜索受基于决策树中信息增益的启发式度量或其他性能的替代指标的引导。FICUS 比许多较新的方法 [1, 8, 19] 更通用。
+**FICUS** [18] 在可能特征空间上进行搜索，通过应用“构造函数”（例如，将原始特征插入变换组合中）来构建它们。FICUS 寻找更好特征的搜索受基于决策树中信息增益的启发式度量或其他性能的替代指标的引导。FICUS 比许多较新的方法 [1, 8, 19] 更通用。
 
-Fan 等人 [4] 提出了 FCTree，它使用决策树通过原始和构造特征作为分割点（节点）来划分数据。与 FICUS [18] 类似，FCTree 使用基于树的信息理论标准来引导搜索，而非真实的预测。FCTree 能够生成单个特征，但无法变换，即它搜索的空间比我们的方法要小。FEADIS [3] 依赖于随机生成和特征选择的结合。它贪婪地添加特征，因此需要大量的评估。
+**Fan 等人** [4] 提出了 **FCTree**，它使用决策树通过原始和构造特征作为分割点（节点）来划分数据。与 FICUS [18] 类似，FCTree 使用基于树的信息理论标准来引导搜索，而非真实的预测。FCTree 能够生成单个特征，但无法变换，即它搜索的空间比我们的方法要小。
 
-机器学习方法执行了某种程度的特征工程。关于该主题的最新综述可以在参考文献 [25] 中找到。降维方法如主成分分析（PCA）及其非线性变体（核 PCA）[6] 将输入数据集映射到特征较少的低维空间。此类方法被称为嵌入方法 [25]。核方法 [22] 如支持向量机（SVM）是一类使用核函数隐式将输入映射到高维空间的算法。
+**FEADIS** [3] 依赖于随机生成和特征选择的结合。它贪婪地添加特征，因此需要大量的评估。
+
+机器学习方法执行了某种程度的特征工程。关于该主题的最新综述可以在参考文献 [25] 中找到。降维方法如**主成分分析**（PCA）及其非线性变体（核 PCA）[6] 将输入数据集映射到特征较少的低维空间。此类方法被称为嵌入方法 [25]。**核方法** [22] 如**支持向量机**（SVM）是一类使用核函数隐式将输入映射到高维空间的算法。
 
 ### 9.7.2 研究机会
 
-一个有趣的方向是将问题视为超参数优化 [23]。每个变换选项对应一个超参数，并搜索产生性能最佳改进的超参数设置。例如，在 [23] 中使用遗传算法为给定数据确定合适的变换。类似，在自动机器学习流水线配置（例如，特征选择和模型）的背景下，[5] 中的工作采用贝叶斯优化来确定合适的流水线。虽然 [23] 中的方法限于确定单个变换且不搜索变换序列，但黑盒优化策略 [17]尚未应用于创建基于组合的新颖特征。一个改进的肥领域是将不同的特征工程方法结合。例如，使用基于预测的技术为基于探索的技术提供快速见解，可以提高整个过程的效率 [12]。将第 9.6 节中提出的分析和解决方案从单个特征扩展到多个特征并形成联合概率分析是有价值的。
+一个有趣的方向是将问题视为**超参数优化** [23]。每个变换选项对应一个超参数，并搜索产生性能最佳改进的超参数设置。例如，在 [23] 中使用遗传算法为给定数据确定合适的变换。类似地，在自动机器学习流水线配置（例如，特征选择和模型）的背景下，[5] 中的工作采用贝叶斯优化来确定合适的流水线。虽然 [23] 中的方法限于确定单个变换且不搜索变换序列，但**黑盒优化策略** [17] 尚未应用于创建基于组合的新颖特征。一个改进的领域是将不同的特征工程方法结合。例如，使用基于预测的技术为基于探索的技术提供快速见解，可以提高整个过程的效率 [12]。将第 9.6 节中提出的分析和解决方案从单个特征扩展到多个特征并形成联合概率分析是有价值的。
 
 ### 9.7.3 资源
 
-请参考 GitHub 上的章节在线附录 https://github.com/uk2911/FEChapterExtended。它包含了本章描述的自动化特征工程工具的资源。包含各种真实数据集的演示，包括视频和 Jupyter 笔记本。它还包含了高效实现你自己的特征工程程序的提示。
+请参考 GitHub 上的章节在线附录：https://github.com/uk2911/FEChapterExtended。它包含了本章描述的自动化特征工程工具的资源。包含各种真实数据集的演示，包括视频和 Jupyter 笔记本。它还包含了高效实现你自己的特征工程程序的提示。
 
+---
 
+# 监督学习中特征工程的自动化
 
-
-
-监督学习中特征工程的自动化
+---
 
 ## 感谢
 
 感谢 Horst Samulowitz、Fatemeh Nargesian、Elias Khalil、Deepak Turaga 和 Tejaswini Pedipati，他们对本章描述的不同问题开展了联合研究。感谢 Biplav Srivastava 在本章撰写过程中提供的有益讨论。
+
+---
 
 ## 参考文献
 
@@ -4421,6 +3673,9 @@ Fan 等人 [4] 提出了 FCTree，它使用决策树通过原始和构造特征�
 - [6] Imola K Fodor. 降维技术综述，2002.
 - [7] Isabelle Guoy 和 André Elisseeeff. 变量与特征选择介绍。*Journal of Machine Learning Research, 3*(Mar):1157–1182, 2003.
 - [8] Y-Yuh Duh 和 Dennis Kotlin. 学习算法属性的生成。*AAAI*, 1996.
+
+
+
 - [9] Marina Ivanova 和 Robert S Sloan. 强化学习与函数近似。收于 *FLAIR Conference*, pages 455–460, 2005.
 - [10] James Max Kanter 和 Kalyan Veeramachananeni. 深度特征合成：迈向数据科学自动化。*IEEE Data Science and Advanced Analytics*, pages 1–10, 2015.
 - [11] Gilad Katz, Eui Ch, Richard Shin, and Dawn Song. ExploreKit:自动特征生成与选择。收于 IEEE ICDM, pages 979-984, 2016.
@@ -4487,17 +3742,17 @@ Fan 等人 [4] 提出了 FCTree，它使用决策树通过原始和构造特征�
 
 ## 10.1 引言
 
-频繁模式是高频出现的特征值组合，可以代表实例之间有趣的关系。例如，可能会发现牛奶和面包在商店中经常出现，因此 {牛奶，面包} 是一个频繁模式。频繁模式挖掘是数据挖掘中的一个经典问题。
+频繁模式是高频出现的特征值组合，可以代表实例之间有趣的关系。例如，可能会发现牛奶和面包在商店中经常出现，因此 `{牛奶，面包}` 是一个频繁模式。频繁模式挖掘是数据挖掘中的一个经典问题。
 
 生成特征的直觉是，模式组合比单个特征更具判别性 [11][19][4]。虽然探索可能的组合在计算上是不可行的，但基于模式的方法为减少组合搜索并生成具有预测能力的特征提供了解决方案。
 
-除了模式的判别能力外，它们还具有很高的解释性。通过类似于主成分分析（PCA）和其他核方法，模式的可解释性使用户能够推理数据挖掘系统（例如分类器）为何产生某些结果，特别是当结果违反预期时。
+除了模式的判别能力外，它们还具有很高的解释性。通过类似于主成分分析（`PCA`）和其他核方法，模式的可解释性使用户能够推理数据挖掘系统（例如分类器）为何产生某些结果，特别是当结果违反预期时。
 
 特征生成通常包括三个步骤：
 
-- 模式选择：解决如何从数据集中生成模式的问题。
+- 模式生成：解决如何从数据集中生成模式的问题。
 - 模式选择：选择高质量的模式。
-- 特征生成：根据模式构建新的特征空间。在新的模式空间中，每个实例通常被映射到一个 $m$ 维向量，其中 $m$ 是模式的数量。
+- 特征生成：根据模式构建新的特征空间。在新的模式空间中，每个实例通常被映射到一个 `$m$` 维向量，其中 `$m$` 是模式的数量。
 
 ## 10.2 准备知识
 
@@ -4528,23 +3783,15 @@ Fan 等人 [4] 提出了 FCTree，它使用决策树通过原始和构造特征�
 - 10.7.4 与堆叠技术的连接 ................................... 269
 - 10.8 基于模式的特征生成用于聚类....................................... 269
 - 10.8.1 模式空间中的聚类 .......................... 269
-- 10.8.2 子空间聚类 ........................................ 270
-- 10.9 结论 ................................................... 271
-
-- 参考文献 ................................................. 272
 
 
 
+# 基于模式的特征生成
 
-
-## 基于模式的特征生成
-
-247
-
-# 表 10.1：合成事务数据
+## 表 10.1：合成事务数据
 
 | TID | 项目 |
-|---|---|---|
+|---|---|
 | $T_1$ | a, b, c, d |
 | $T_2$ | a, c, e |
 | $T_3$ | b, c, d |
@@ -4557,50 +3804,46 @@ Fan 等人 [4] 提出了 FCTree，它使用决策树通过原始和构造特征�
 
 ### 10.2.1 数据与模式
 
-频繁模式通常应用于事务数据，这假设在给定领域内有一个通用的项目集。令 $I = \{I_1, I_2, \dots, I_m\}$ 为所有项目的集合。一个事务 $T$ 是 $I$ 的一个非空子集（每个事务可能也关联于一个唯一的事务标识符 $tid$），而数据集 $T = \{T_1, T_2, \dots, T_n\}$ 是事务的集合。
+频繁模式通常应用于事务数据，这假设在给定领域内有一个通用的项目集。令 $I = \{I_1, I_2, \dots, I_m\}$ 为所有项目的集合。一个事务 $T$ 是 $I$ 的一个非空子集（每个事务可能也关联于一个唯一的事务标识符 `tid`），而数据集 $\mathcal{T} = \{T_1, T_2, \dots, T_n\}$ 是事务的集合。
 
-一个模式 $p$ 也是 $I$ 的一个非空子集。模式的长度由项目的数量定义。如果一个模式 $p$ 的长度为 $l$，则有时被称为 $l$- 模式。一个事务 $T$ 匹配（或满足）模式 $p \subseteq T$。
+一个模式 $p$ 也是 $I$ 的一个非空子集。模式的长度由项目的数量定义。如果一个模式 $p$ 的长度为 $l$，则有时被称为 $l$-模式。一个事务 $T$ 匹配（或满足）模式 $p \subseteq T$。
 
-数据集 $T$ 中模式的匹配表示为 $mds(p,T)$，它是 $T$ 的一个子集，其中所有事务都匹配子集 $p$，其形式化定义为 $mds(p,T) = \{T \in T \mid T \text{ 匹配 } p\}$。
+数据集 $\mathcal{T}$ 中模式的匹配表示为 `mds(p,T)`，它是 $\mathcal{T}$ 的一个子集，其中所有事务都匹配子集 $p$，其形式化定义为 `mds(p,T) = {T ∈ T | T 匹配 p}`。
 
-模式在数据集 $T$ 中的支持度表示为 $support(p,T)$，它等于 $mds(p,T)$ 的事务在 $T$ 中占的比例，其形式化定义为 $support(p,T) = \frac{|mds(p,T)|}{|T|}$。如果一个模式 $p$ 的支持度大于或等于用户指定的阈值 $minSupp$，则称该模式为频繁模式。
+模式在数据集 $\mathcal{T}$ 中的支持度表示为 `support(p,T)`，它等于 `mds(p,T)` 的事务在 $\mathcal{T}$ 中占的比例，其形式化定义为 `support(p,T) = |mds(p,T)| / |T|`。如果一个模式 $p$ 的支持度大于或等于用户指定的阈值 `minSupp`，则称该模式为频繁模式。
 
-表 10.2.1 描述了一个包含五个事务（$T_1, T_2, T_3, T_4$ 和 $T_5$）的合成事务数据集。第一列显示每个事务的 ID，表 10.2.1 的第二列显示项目。从上述数据集中最小支持度 $minSupp=0.6$ 挖掘出的频繁模式如下。每个模式在其匹配数据集中至少包含三个事务。例如，模式 $p_4 = \{a, c\}$ 被 $T_1, T_2$ 和 $T_5$ 匹配，其支持度为 $3/5=0.6$。
+表 10.2.1 描述了一个包含五个事务（$T_1, T_2, T_3, T_4$ 和 $T_5$）的合成事务数据集。第一列显示每个事务的 ID，表 10.2.1 的第二列显示项目。从上述数据集中最小支持度 `minSupp=0.6` 挖掘出的频繁模式如下。每个模式在其匹配数据集中至少包含三个事务。例如，模式 $p_4 = \{a, c\}$ 被 $T_1, T_2$ 和 $T_5$ 匹配，其支持度为 $3/5=0.6$。
 
-248 机器学习与数据分析的特征工程
-
-# ** 表 10.2：阈值 minSupp = 0.6 下的频繁模式集**
+### 表 10.2：阈值 minSupp = 0.6 下的频繁模式集
 
 | 模式 | 项目 | 匹配数据集 | 支持度 |
 |---|---|---|---|
-| $p_1$ | | $T_1, T_2, T_4, T_5$ | 0.8 |
+| $p_1$ | a | $T_1, T_2, T_4, T_5$ | 0.8 |
 | $p_2$ | b | $T_1, T_3, T_5$ | 0.6 |
 | $p_3$ | c | $T_1, T_2, T_3, T_5$ | 0.8 |
 | $p_4$ | a, c | $T_1, T_2, T_5$ | 0.6 |
 | $p_5$ | b, c | $T_1, T_3, T_5$ | 0.6 |
 
-## 10.2.2 非事务数据的模式
+### 10.2.2 非事务数据的模式
 
-### 向量数据的模式
+#### 向量数据的模式
 
-当数据是非事务性时，模式的定义可以以类似的方式扩展。向量/元组数据通常用于挖掘任务。对于向量数据，存在预定义的特征/属性集合 $\{F_1, F_2, \dots, F_m\}$，每个特征 $F_i$ 关联于一个领域 $dom(F_i)$，该领域可以是数值型的（连续的）或名名的（离散的）。表 10.3 给出了向量/元组数据的示例。该数据集由三个特征 $F_1, F_2$ 和 $F_3$ 组成（TID 有助于识别实例，但不在特征集中），其中特征是名名的，有些是数值的。具体而言，$dom(F_1)=\{a,b,c\}$，$dom(F_2)=\{yes,no\}$ 且 $dom(F_3)=[1,100]$。
+当数据是非事务性时，模式的定义可以以类似的方式扩展。向量/元组数据通常用于挖掘任务。对于向量数据，存在预定义的特征/属性集合 $\{F_1, F_2, \dots, F_m\}$，每个特征 $F_i$ 关联于一个领域 `dom(F_i)`，该领域可以是数值型的（连续的）或名名的（离散的）。表 10.3 给出了向量/元组数据的示例。该数据集由三个特征 $F_1, F_2$ 和 $F_3$ 组成（TID 有助于识别实例，但不在特征集中），其中特征是名名的，有些是数值的。具体而言，`dom(F_1)={a,b,c}`，`dom(F_2)={yes,no}` 且 `dom(F_3)=[1,100]`。
 
 表 10.3 所示的数据集到相应事务数据集转换如表 10.4 所示。对于 $F_3$ 使用等宽离散化，宽度设置为 5。
 
-在向量/元组数据的情况下，模式是特征-值对的合取（例如，$\{F_1 = a \wedge F_3 \in [5, 10]\}$）。
+在向量/元组数据的情况下，模式是特征-值对的合取（例如，`{F_1 = a ∧ F_3 ∈ [5, 10]}`）。
 
-## 基于模式的特征生成
-
-表 10.3：合成向量数据
-
-表 10.4：对应的事务数据
+#### 表 10.3：合成向量数据
 
 | TID | $F_1$ | $F_2$ | $F_3$ |
 |---|---|---|---|
 | $T_1$ | a | yes | 1 |
 | $T_2$ | b | no | 3 |
 | $T_3$ | a | yes | 5 |
-| $T_4$ | e | yes | 9 |
+| $T_4$ | c | yes | 9 |
+
+#### 表 10.4：对应的事务数据
 
 | TID | 项目 |
 |---|---|
@@ -4609,11 +3852,11 @@ Fan 等人 [4] 提出了 FCTree，它使用决策树通过原始和构造特征�
 | $T_3$ | $F_1=a, F_2=yes, F_3 \in [5,10]$ |
 | $T_4$ | $F_1=c, F_2=yes, F_3 \in [5,10]$ |
 
-### 序列数据的模式
+#### 序列数据的模式
 
 在序列数据中，还有一个通用的项目集 $\mathcal{I} = \{I_1, I_2, \dots, I_m\}$。**序列**是项目的有序列表。一个**子序列** $(s_1, s_2, \dots, s_k)$ 是序列 $b$ 的子序列，如果存在整数 $1 \le i_1 < i_2 < \dots < i_k \le n$ 使得 $s_j = b_{i_j}$。
 
-表 10.5：合成序列数据
+#### 表 10.5：合成序列数据
 
 | SID | 项目 |
 |---|---|
@@ -4622,19 +3865,17 @@ Fan 等人 [4] 提出了 FCTree，它使用决策树通过原始和构造特征�
 | $S_3$ | $(ab)(cd)$ |
 | $S_4$ | $(cd)(dg)$ |
 
-### 图数据的模式
+#### 图数据的模式
 
 图 $G$ 可以表示为 $(V, E, \alpha)$，$V$ 是顶点集，$E$ 是边集，$\alpha$ 是标记函数。图 $G'$ 是 $G$ 的子图，如果存在映射 $f: V' \to V$ 使得对于每个边 $(u, v) \in E'$。
 
-## 机器学习与特征工程
-
-###对比模式
+### 对比模式
 
 频繁模式是以无监督的方式挖掘的，但从监督的角度自然扩展这一概念。假设数据集 $\mathcal{T}$ 被划分为类 $C_1, C_2, \dots, C_k$，目标是寻找在类之间有显著差异的模式。
 
-模式 $p$ 的增长率是 $p$ 在 $T_i$ 中的支持度相对于 $p$ 在 $T_j$ 中的支持度的比例，$Ratio(p, T_i, T_j) = support(p, T_i)/support(p, T_j)$。模式 $p$ 的支持度差是 $p$ 在 $T_i$ 中的支持度与 $p$ 在 $T_j$ 中的支持度的差值，$Delta(p, T_i, T_j) = support(p, T_i) - support(p, T_j)$。如果选定的度（增长率或支持度差）大于或等于用户指定的阈值，则该模式被称为对比模式或判别模式。
+模式 $p$ 的增长率是 $p$ 在 $T_i$ 中的支持度相对于 $p$ 在 $T_j$ 中的支持度的比例，`Ratio(p, T_i, T_j) = support(p, T_i) / support(p, T_j)`。模式 $p$ 的支持度差是 $p$ 在 $T_i$ 中的支持度与 $p$ 在 $T_j$ 中的支持度的差值，`Delta(p, T_i, T_j) = support(p, T_i) - support(p, T_j)`。如果选定的度（增长率或支持度差）大于或等于用户指定的阈值，则该模式被称为对比模式或判别模式。
 
-表 10.6：用于对比模式的示例数据集 $\mathcal{T}$
+#### 表 10.6：用于对比模式的示例数据集 $\mathcal{T}$
 
 | TID | $F_1$ | $F_2$ | $F_3$ | 类 |
 |---|---|---|---|---|
@@ -4643,15 +3884,11 @@ Fan 等人 [4] 提出了 FCTree，它使用决策树通过原始和构造特征�
 | $T_3$ | false | false | 5 | 0 |
 | $T_4$ | false | true | 3 | 1 |
 
-以表 10.6 中的数据集 $\mathcal{T}$ 为例。考虑两个模式 $p = \{F_1, F_3\}$ 和 $q = \{F_2\}$（false）。$p$ 和 $q$ 的匹配集分别为 $mid(p,q) = \{T_1, T_2\}$,msd(p,q) = \{T_1, T_3\}$，相应的支持度分别为 $support(p,T) = 2$ 和 $support(q,T) = 0.5$。假设根据类标签将数据集分为 $T_q = \{T_1, T_2, T_4\}$ 和 $T_2 = \{T_3\}$，任务是寻找 $p, q$ 的对比模式。那么 $p, q$ 的增长率分别为 $GrRatio(p, T_1, T_2) = \frac{2}{0} = +\infty$，以及 $GrRatio(q, T_1, T_2) = \frac{1}{1} = 1$。如果 $minRatio$ 设置为大于 1，则模式 $p$ 被称为 $T_1$ 的对比模式，而 $q$ 则。
-
-
-
-
+以表 10.6 中的数据集 $\mathcal{T}$ 为例。考虑两个模式 $p = \{F_1, F_3\}$ 和 $q = \{F_2\}$（false）。$p$ 和 $q$ 的匹配集分别为 `mid(p,q) = {T_1, T_2}`, `msd(p,q) = {T_1, T_3}`，相应的支持度分别为 `support(p,T) = 2` 和 `support(q,T) = 0.5`。假设根据类标签将数据集分为 $T_1 = \{T_1, T_2, T_4\}$ 和 $T_2 = \{T_3\}$，任务是寻找 $p, q$ 的对比模式。那么 $p, q$ 的增长率分别为 `GrRatio(p, T_1, T_2) = 2 / 0 = +∞`，以及 `GrRatio(q, T_1, T_2) = 1 / 1 = 1`。如果 `minRatio` 设置为大于 1，则模式 $p$ 被称为 $T_1$ 的对比模式，而 $q$ 则不是。
 
 ## 10.3 基于模式的生成的框架
 
-基于模式生成的框架遵循三个步骤：1) 模式挖掘，2) 模式选择和3) 特征生成。如图10.1所示，首先从数据集中挖掘出模式集 $Q$。然后将 $Q$ 裁剪为一个代表性模式集 $P$，其中移除了不重要和冗余的模式。最后，使用剩余的模式构建一个新的特征空间，并将原始数据集映射到模式特征空间。基于模式构建的新特征空间被称为*模式空间*（pattern space）。
+基于模式生成的框架遵循三个步骤：1) 模式挖掘，2) 模式选择和 3) 特征生成。如图 10.1 所示，首先从数据集中挖掘出模式集 $Q$。然后将 $Q$ 裁剪为一个代表性模式集 $P$，其中移除了不重要和冗余的模式。最后，使用剩余的模式构建一个新的特征空间，并将原始数据集映射到模式特征空间。基于模式构建的新特征空间被称为*模式空间*（pattern space）。
 
 ![](img/f9b50d48a9ba5d6b2e7f6b9761812434_269_0.png)
 
@@ -4665,40 +3902,20 @@ Fan 等人 [4] 提出了 FCTree，它使用决策树通过原始和构造特征�
 
 模式挖掘是第一步，其输入和输出描述如下：
 
-- **输入：** $\mathcal{T} = \{t_1, t_2, \dots, t_n\}, minSupp,$ （可选）$minRatio$
-- **输出：** $Q = \{q_1, q_2, \dots, q_n\}$
+- **输入：** $\mathcal{T} = \{t_1, t_2, \dots, t_n\}, \text{minSupp},$ （可选）`minRatio`
+- **输出：** $Q = \{q_1, q_2, \dots, q_l\}$
 
-$\mathcal{T} = \{t_1, t_2, \dots, t_n\}$ 是给定数据集，常见类型包括：1) 事务数据，2) 向量数据，3) 序列数据和4) 图数据。事务数据和图数据通常以相同的方式处理，因为它们是相互转换的。
+$\mathcal{T} = \{t_1, t_2, \dots, t_n\}$ 是给定数据集，常见类型包括：1) 事务数据，2) 向量数据，3) 序列数据和 4) 图数据。事务数据和图数据通常以相同的方式处理，因为它们是相互转换的。
 
-| 实例 | $F_1$ | $F_2$ | ... | $F_d$ |
-|---|---|---|---|---|
-| $x_1$ | $v_{11}$ | $v_{12}$ | ... | $v_{1d}$ |
-| $x_2$ | $v_{21}$ | $v_{22}$ | ... | ... |
-| ... | ... | ... | ... | ... |
-| $x_n$ | $v_{n1}$ | $v_{n2}$ | ... | $v_{nd}$ |
+`minSupp` 是最小阈值。它用于描述模式在数据集中被称为频繁的程度。尽管它是模式挖掘算法唯一的必需参数，但在不同的领域，也可以从其他角度（如信息增益）衡量模式的质量。通常会避免过小的 `minSupp` 以防信息丢失。
 
-1. 模式挖掘：$Q = \{q_1, q_2, \dots, q_l\}$
-
-3. 模式生成：$P = \{p_1, p_2, \dots, p_m\}$
-
-| | $F_{p_1}$ | $F_{p_2}$ | ... | $F_{p_m}$ |
-|---|---|---|---|---|
-| $x'_1$ | $\phi_1(x_1)$ | $\phi_2(x_1)$ | ... | $\phi_m(x_1)$ |
-| $x'_2$ | $\phi_1(x_2)$ | $\phi_2(x_2)$ | ... | $\phi_m(x_2)$ |
-| ... | ... | ... | ... | ... |
-| $x'_n$ | $\phi_1(x_n)$ | $\phi_2(x_n)$ | ... | $\phi_m(x_n)$ |
-
-**图 10.2：** 基于模式生成的框架。
-
-$minSupp$ 是最小阈值。它用于描述模式在数据集中被称为频繁的程度。尽管它是模式挖掘算法唯一的必需参数，但在不同的领域，也可以从其他角度（如信息增益）衡量模式的质量。通常会避免过小的 $minSupp$ 以防信息丢失。
-
-$minRatio$ 在对比模式挖掘（contrast pattern mining）时需要。它用于描述一个模式在子集中被认为是显著的，而在数据集其余部分不重要的程度。对比模式更广泛用于分类，因为它们捕捉了特征与类标签之间的关系。$minRatio$ 的选择与 $minSupp$ 类似，通常使用较小的值。
+`minRatio` 在对比模式挖掘（contrast pattern mining）时需要。它用于描述一个模式在子集中被认为是显著的，而在数据集其余部分不重要的程度。对比模式更广泛用于分类，因为它们捕捉了特征与类标签之间的关系。`minRatio` 的选择与 `minSupp` 类似，通常使用较小的值。
 
 $Q = \{q_1, q_2, \dots, q_l\}$ 是挖掘过程的输出，是一个包含 $l$ 个模式的集合。
 
 ### 10.3.2 模式选择
 
-由于 $minSupp$ 和 $minRatio$ 通常设置为较小值，模式集的大小非常大，某些模式是噪声甚至甚至是无用的。
+由于 `minSupp` 和 `minRatio` 通常设置为较小值，模式集的大小非常大，某些模式是噪声甚至甚至是无用的。
 
 这引发了裁剪模式集并为给定任务选择代表性模式的问题。输入和输出为：
 
@@ -4716,13 +3933,13 @@ $Q = \{q_1, q_2, \dots, q_l\}$ 是挖掘过程的输出，是一个包含 $l$ �
 
 映射函数 $\phi(x)$ 将原始特征空间中的实例映射到模式 $p_i$ 的值空间。
 
+## 10.4 模式挖掘算法
 
+### 10.4.1 基于 Apriori 的算法
 
+Apriori 算法利用 Apriori 性质：一个频繁模式的所有非空子集也必须是频繁的。它通过迭代方式挖掘频繁模式：首先找出所有长度为 1 的频繁模式，然后利用它们生成长度为 2 的候选模式，再剪枝得到频繁模式，以此类推，直到无法生成更长的频繁模式。
 
-
-# 基于模式的特征生成
-
-寻找长度为 $(c-1)$ 的频繁模式，并移除支持度小于 $minSupp$ 的候选模式。
+寻找长度为 $(c-1)$ 的频繁模式，并移除支持度小于 `minSupp` 的候选模式。
 
 Apriori 的主要缺点是它在每次迭代中都需要扫描整个数据集。人们已经提出了许多变体 [25]，以从哈希技术 [43]、采样技术 [50] 和分布式挖掘 [2] 等角度提高其效率。
 
@@ -4730,20 +3947,20 @@ Apriori 的主要缺点是它在每次迭代中都需要扫描整个数据集。
 
 对于图数据，典型的基于 Apriori 的技术 [32] [35] [51] 从较小的图开始发现图模式，并通过迭代增加 1 个大小扩展到更大的图。
 
-# FP-growth
+### 10.4.2 FP-growth
 
 频繁模式增长（FP-growth）[29] 首先将数据集压缩为频繁树（FP-tree），然后直接从树中生成模式。与 Apriori 在每次生成 $l$ 模式时重复扫描整个数据集并生成大量候选模式不同，FP-growth 只扫描数据集两次，且不产生非频繁的候选模式。
 
-给定数据集 $T$ 和最小支持度阈值 $minSupp$，FP-growth 如算法 4 所示。
+给定数据集 $\mathcal{T}$ 和最小支持度阈值 `minSupp`，FP-growth 如算法 4 所示。
 
 ```
 Algorithm 4 FP-growth algorithm
-1: procedure FP-GROWTH($T, minSupp)
+1: procedure FP-GROWTH(T, minSupp)
 2: 扫描数据集按频率降序对所有长度为 1 的模式排序。
-3: 构建一个 FP-tree。从一个标记为“null”且计数为 0 的根节点开始。然后再次扫描数据集。对于每条事务，创建一个包含 l 模式顺序中所有条目的的路径。如果树中的路径 $P$ 和分支 $B$ 共享共同前缀，则使用 $P$ 的剩余后缀创建一个新分支，并将其链接到 $B$ 的最后一个节点作为其子节点。
-4: $P = {}.
-5: 从 FP-tree 中生成模式。从前缀为 {} 的根节点开始，递归地处理节点如下：将给定的前缀与正在处理的节点拼接形成新模式并将其添加到 $P$ 中，然后将新模式作为新前缀传递给其关联计数满足阈值 $minSupp$ 的子节点。
-6: 返回 $P$。
+3: 构建一个 FP-tree。从一个标记为“null”且计数为 0 的根节点开始。然后再次扫描数据集。对于每条事务，创建一个包含 l 模式顺序中所有条目的的路径。如果树中的路径 P 和分支 B 共享共同前缀，则使用 P 的剩余后缀创建一个新分支，并将其链接到 B 的最后一个节点作为其子节点。
+4: P = {}.
+5: 从 FP-tree 中生成模式。从前缀为 {} 的根节点开始，递归地处理节点如下：将给定的前缀与正在处理的节点拼接形成新模式并将其添加到 P 中，然后将新模式作为新前缀传递给其关联计数满足阈值 minSupp 的子节点。
+6: 返回 P。
 ```
 
 [29] 中的实验表明，FP-growth 是高效且可扩展的，通常比 Apriori 快一个数量级。已经提出了几种变体来改进 FP-growth，感兴趣的读者可以参考 [25]。
@@ -4752,48 +3969,49 @@ FreeSpan [27] 及其扩展 PrefixSpan [28] 是用于序列数据的类 FP-Growth
 
 对于图数据，基于模式增长的算法通过在所有可能的位置增量添加新边来维护频繁图。gSpan [60] 通过执行深度搜索并使用最右扩展技术来避免生成重复。
 
-# Eclat
+### 10.4.3 Eclat
 
-Apriori 和 FP-growth 都是从水平格式 {tid : item} 的数据集中挖掘模式，其中 tid 是事务标识符。相应地，数据集可以转换为垂直数据格式 {item: set}。Elat [63] 从垂直数据集中挖掘模式。
+Apriori 和 FP-growth 都是从水平格式 `{tid : item}` 的数据集中挖掘模式，其中 `tid` 是事务标识符。相应地，数据集可以转换为垂直数据格式 `{item: set}`。Eclat [63] 从垂直数据集中挖掘模式。
 
-首先，将原始数据集转换为垂直形式。类似于 Apriori，它利用 Apriori 原理从 $l$ 模式重复生成 $(l-1)$ 模式，并在无法找到模式时终止。Eclat 无法重复扫描原始数据集。然而，如果可以保留 tid 集，那么 Eclat 面临的挑战与 Apriori 相同。事实证明，Eclat 适用于包含稠密和长模式的数据集 [26]。
+首先，将原始数据集转换为垂直形式。类似于 Apriori，它利用 Apriori 原理从 $l$ 模式重复生成 $(l+1)$ 模式，并在无法找到模式时终止。Eclat 无需重复扫描原始数据集。然而，如果可以保留 tid 集，那么 Eclat 面临的挑战与 Apriori 相同。事实证明，Eclat 适用于包含稠密和长模式的数据集 [26]。
 
 SPAD [62] 和 SPAM [5] 将水平序列数据集转换为垂直格式，并基于 Apriori 属性挖掘频繁序列模式。
 
-# 1.4.2 对比模式挖掘
+### 10.4.4 对比模式挖掘
 
 在此阶段，选择增长率作为阈值参数来寻找对比模式。其他阈值（如支持度差值）的使用也遵循类似的方法。
 
-# 间接对比模式挖掘
+#### 间接对比模式挖掘
 
-对比模式挖掘的一种直观方法是首先挖掘频繁模式，然后选择符合增长率阈值的模式。该框架如算法 5 所示。输入包括频繁模式集 FP、最小增长率 minRatio、正样本数据集 Tp 和负样本数据集 Tc。该过程首先计算每个模式的增长率，并移除率小于 minRatio 的模式。[11] [13] [14] [15] [39] [41] 中提出的方法都属于这种二步框架。二步挖掘的主要问题是其效率。
 
-**算法 5**
-1: 过程 INDIRECT_CONTRASTMINING(FP, minRatio, T_p, T_n)
-2: CP = { }
-3: 遍历 FP 中的每个 p
-4:   ratio = support(p, T_n)
-5:   if ratio >= minRatio 则
-6:     CP = CP ∪ {p}
-7: 返回 CP
 
 # 对比模式挖掘
 
-直接挖掘在不产生大量候选模式的情况下发现对比模式，因此比间接挖掘更高效。[17] 中的工作通过操作闭模式集合和生成器来挖掘对比模式（作者称为涌现模式）。[7] 中提出的方法使用类似于 Apriori 的算法生成对比模式。在剪枝时，它剪掉不符合对比标准的模式（使用了支持度差）。在对比项可能随时间插入或删除的场景下，重复挖掘算法是非常耗时的。[38] 中的工作也是如此。
+对比模式挖掘的一种直观方法是首先挖掘频繁模式，然后选择符合增长率阈值的模式。该框架如算法 5 所示。输入包括频繁模式集 `FP`、最小增长率 `minRatio`、正样本数据集 `Tp` 和负样本数据集 `Tc`。该过程首先计算每个模式的增长率，并移除率小于 `minRatio` 的模式。[11] [13] [14] [15] [39] [41] 中提出的方法都属于这种二步框架。二步挖掘的主要问题是其效率。
 
+## 算法 5
 
+```
+过程 INDIRECT_CONTRASTMINING(FP, minRatio, T_p, T_n)
+CP = { }
+遍历 FP 中的每个 p
+  ratio = support(p, T_n)
+  if ratio >= minRatio 则
+    CP = CP ∪ {p}
+返回 CP
+```
 
-
+直接挖掘在不产生大量候选模式的情况下发现对比模式，因此比间接挖掘更高效。[17] 中的工作通过操作闭模式集合和生成器来挖掘对比模式（作者称为涌现模式）。[7] 中提出的方法使用类似于 `Apriori` 的算法生成对比模式。在剪枝时，它剪掉不符合对比标准的模式（使用了支持度差）。在对比项可能随时间插入或删除的场景下，重复挖掘算法是非常耗时的。[38] 中的工作也是如此。
 
 ## 基于冗余性的技术
 
-在 [58] 中提出了一种冗余性感知方法。模式冗余性的质量测量基于模式集在数据上的覆盖率。该方法最大化了模式的覆盖率（或最小化了未被任何模式覆盖的事务数量）。同样，在 [52] 中提出的 KRIMP 是另一种基于冗余性的方法，它应用最小描述长度原理（MDLP）来寻找最优模式集，以覆盖数据集并集集并减少模式的冗余性。这些方法的精确优化是 NP-hard 的，因此使用启发式算法来近似最优解。这两种方法都避免了相似模式排名靠近且剪枝结果缺乏多样性的问题。这些技术的一个缺点是它们分别考虑了显著性（例如支持度）和冗余性，因此模式的显著性可能较低。
+在 [58] 中提出了一种冗余性感知方法。模式冗余性的质量测量基于模式集在数据上的覆盖率。该方法最大化了模式的覆盖率（或最小化了未被任何模式覆盖的事务数量）。同样，在 [52] 中提出的 `KRIMP` 是另一种基于冗余性的方法，它应用最小描述长度原理（`MDLP`）来寻找最优模式集，以覆盖数据集并减少模式的冗余性。这些方法的精确优化是 `NP-hard` 的，因此使用启发式算法来近似最优解。这两种方法都避免了相似模式排名靠近且剪枝结果缺乏多样性的问题。这些技术的一个缺点是它们分别考虑了显著性（例如支持度）和冗余性，因此模式的显著性可能较低。
 
 ## 基于概率模型的技术
 
-在 [53] 中，频繁模式有助于构建马尔可夫随机场（MRF）的图形模型。在构建 MRF 的过程中，如果一个模式不能为当前模型引入显著的依赖关系，则会被剪枝。
+在 [53] 中，频繁模式有助于构建马尔可夫随机场（`MRF`）的图形模型。在构建 `MRF` 的过程中，如果一个模式不能为当前模型引入显著的依赖关系，则会被剪枝。
 
-使用概率模型的优势包括：（例如，1）使用现有算法（Chow-Liu 树 [13]）进行快速推理，以及2）非常好的表示能力。虽然模式挖掘对于高维和时间序列数据仍然面临，但概率模型可以优于传统技术。然而，概率模型通常缺乏解释性并假设先验分布的存在。目前的研究重点是使用挖掘的模式来构建概率模型，而这些模式仍然使用经典算法进行挖掘。
+使用概率模型的优势包括：（例如，1）使用现有算法（`Chow-Liu` 树 [13]）进行快速推理，以及 2）非常好的表示能力。虽然模式挖掘对于高维和时间序列数据仍然面临，但概率模型可以优于传统技术。然而，概率模型通常缺乏解释性并假设先验分布的存在。目前的研究重点是使用挖掘的模式来构建概率模型，而这些模式仍然使用经典算法进行挖掘。
 
 ## 10.5.2 处理中剪枝
 
@@ -4805,26 +4023,31 @@ SPAD [62] 和 SPAM [5] 将水平序列数据集转换为垂直格式，并基于
 
 ## 基于贝叶斯理论的技术
 
-在 [22] 中提出了一种面向分类的技术 KRSNB。该方法没有无限增长的空间，而是预定义了一个模式以及该空间上的先验分布。这是一个局部最优模式提取的过程，且每个局部最优都是一个模式。然后，这些模式被用作分类规则。
+在 [22] 中提出了一种面向分类的技术 `KRSNB`。该方法没有无限增长的空间，而是预定义了一个模式以及该空间上的先验分布。这是一个局部最优模式提取的过程，且每个局部最优都是一个模式。然后，这些模式被用作分类规则。
 
 该方法的优势包括：
-1) 它是一种无参数方法。
-2) 结果分类器与最先进的基于模式的分类器相比具有竞争性的性能。
-3) 它的新颖之处在于预定义模式，这与传统的模式挖掘方法不同。
-4) 它可以直接应用于数值数据，而不需要离散化过程。
+
+1. 它是一种无参数方法。
+2. 结果分类器与最先进的基于模式的分类器相比具有竞争性的性能。
+3. 它的新颖之处在于预定义模式，这与传统的模式挖掘方法不同。
+4. 它可以直接应用于数值数据，而不需要离散化过程。
 
 然而，它经常面临以下问题：
-1) 优化是启发式的，不能保证找到使分类性能最大化的模式。
-2) 性能严重依赖于预定义的模式空间。
 
-## 基于最小描述长度 (MDL)的技术
+1. 优化是启发式的，不能保证找到使分类性能最大化的模式。
+2. 性能严重依赖于预定义的模式空间。
 
-KRIMP [52] 早期引入，也可以归类为这类技术。SLIM [47] 是一种基于 MDL 的方法，直接应用于数据，而不是使用现有的模式集。这是 KRIMP 和 SLIM 的主要区别。使用分支定界启发式优化来总结模式空间，以挖掘良好的模式。
+## 基于最小描述长度 (MDL) 的技术
 
-SLIM 的主要优势是：
-1) 它不需要使用其他技术挖掘模式集即可应用于数据，非常高效。
-2) 它是无参数的。
-3) 它保证了数据的良好覆盖。同时，SLIM 在大数据集上计算开销很大，可能会生成质量较的模式。
+`KRIMP` [52] 早期引入，也可以归类为这类技术。`SLIM` [47] 是一种基于 `MDL` 的方法，直接应用于数据，而不是使用现有的模式集。这是 `KRIMP` 和 `SLIM` 的主要区别。使用分支定界启发式优化来总结模式空间，以挖掘良好的模式。
+
+`SLIM` 的主要优势是：
+
+1. 它不需要使用其他技术挖掘模式集即可应用于数据，非常高效。
+2. 它是无参数的。
+3. 它保证了数据的良好覆盖。
+
+同时，`SLIM` 在大数据集上计算开销很大，可能会生成质量较低的模式。
 
 ## 10.6 基于模式的特征生成
 
@@ -4832,71 +4055,76 @@ SLIM 的主要优势是：
 
 ### 10.6.1 无监督映射函数
 
-### 二进制映射函数
+#### 二进制映射函数
 
-图 10.3 给出了使用模式生成新特征的示例。原始数据包含三个特征：*性别*、*年龄*和*类别*，模式集包含两个模式 $p_1, p_2$。因此，新特征空间由对应 $p_1, p_2$ 的两个特征组成。对于实例 $x$，如果匹配 $p_i$，则模式空间中对应向量的值为 1，否则为 0。第一个实例匹配 $p_1$但不匹配 $p_2$，因此新实例为 $(1,0)=0$。同样，实例 2 匹配 $p_2$ 但不匹配 $p_1$，因此新实例为 $(0,1)=1$。
+图 10.3 给出了使用模式生成新特征的示例。原始数据包含三个特征：*性别*、*年龄*和*类别*，模式集包含两个模式 $p_1, p_2$。因此，新特征空间由对应 $p_1, p_2$ 的两个特征组成。对于实例 $x$，如果匹配 $p_i$，则模式空间中对应向量的值为 1，否则为 0。第一个实例匹配 $p_1$ 但不匹配 $p_2$，因此新实例为 $(1,0)$。同样，实例 2 匹配 $p_2$ 但不匹配 $p_1$，因此新实例为 $(0,1)$。
 
 | | 性别 | 年龄 | 类别 |
 |---|---|---|---|
 | 1 | 男性 | 20 | 1 |
 | 2 | 女性 | 22 | 3 |
+
 | | | p1 | p2 |
+|---|---|---|---|
 | | | 0 | 1 |
 
-$p_1=(性别=男性, 年龄\ge 18)$
-$p_2=(类别=3)$
+$p_1=(\text{性别=男性}, \text{年龄}\ge 18)$
+
+$p_2=(\text{类别=3})$
 
 **图 10.3:** 使用二进制映射函数构建模式空间。
 
-在上述示例中，映射函数是一个简单的二进制函数。形式上，给定数据集 $X=\{x_1, x_2, \dots, x_n\}$ 和模式集 $P=\{p_1, p_2, \dots, p_m\}$,映射函数定义为 $\Phi(x)=(\phi_1(x), \phi_2(x), \dots, \phi_m(x))$，其中：
+在上述示例中，映射函数是一个简单的二进制函数。形式上，给定数据集 $X=\{x_1, x_2, \dots, x_n\}$ 和模式集 $P=\{p_1, p_2, \dots, p_m\}$，映射函数定义为 $\Phi(x)=(\phi_1(x), \phi_2(x), \dots, \phi_m(x))$，其中：
+
 ```
 \phi_i(x) = \begin{cases} 1, & \text{如果 } x \text{ 匹配 } p_i \\ 0, & \text{否则}. \end{cases}
 ```
 
-二进制映射函数是基于模式特征生成中最广泛使用的映射函数。PatClass [11] 和 DMine [12] 使用二进制映射函数计算向量数据模式空间中的值。[61] 中的工作使用二进制映射函数进行序列分类。[21] 中的研究使用二进制映射将一组图转换为向量。
+二进制映射函数是基于模式特征生成中最广泛使用的映射函数。`PatClass` [11] 和 `DMine` [12] 使用二进制映射函数计算向量数据模式空间中的值。[61] 中的工作使用二进制映射函数进行序列分类。[21] 中的研究使用二进制映射将一组图转换为向量。
 
-### 基于频率的映射函数
+#### 基于频率的映射函数
 
 二进制映射函数将所有情况视为同等重要的特征，这在很多情况下并不成立。给定用户指定的评分函数，模式要么质量良好，要么质量差，将这些指标作为模式空间中的特征值是自然的。支持度或频率可以作为模式质量的指标。基于频率的映射函数定义为 $\Phi(x)=\phi_1(x), \phi_2(x), \dots, \phi_m(x)$，其中：
+
 ```
 \phi_i(x) = \begin{cases} support(p_i), & \text{如果 } x \text{ 匹配 } p_i \\ 0, & \text{否则}, \end{cases}
 ```
 
 ### 10.6.2 有监督映射函数
 
-### 基于置信度的映射函数
+#### 基于置信度的映射函数
 
 使用对比来构建新的特征空间时，可以评估模式以及频繁出现在类别标签 $c$ 子集中的对比 $p$ 的质量，模式的置信度为：
+
 ```
 confidence(p) = \begin{cases} support(p, T_c) / support(p, \mathcal{T}) \end{cases}
 ```
+
 其中 $\mathcal{T}$ 是包含 $\mathcal{T}$ 中所有类别 $c$ 实例的子集。使用置信度的映射函数定义为 $\Phi(x)=(\phi_1(x), \phi_2(x), \dots, \phi_m(x))$，其中：
+
 ```
 \phi_i(x) = \begin{cases} confidence(p_i), & \text{如果 } x \text{ 匹配 } p_i \\ 0, & \text{否则}, \end{cases}
 ```
 
-### 基于增长率的映射函数
+#### 基于增长率的映射函数
 
 与对比类似，增长率是模式预测能力的另一个指标。使用增长率的映射函数定义为 $\Phi(x)=(\phi_1(x), \phi_2(x), \dots, \phi_m(x))$，其中：
+
 ```
 \phi_i(x) = \begin{cases} GrRatio(p_i), & \text{如果 } x \text{ 匹配 } p_i \\ 0, & \text{否则}, \end{cases}
 ```
 
+增长率 $GrRatio(p_i)$ 的定义可以在第 10.2.2 节找到。同样，也可以使用支持增（`support delta`）作为增长率的替代方案，例如 [30] 中的工作使用支持增来衡量模式特征的区分能力。
 
+#### 基于卡方方法的映射函数
 
+与类别标签 $c$ 相关的对比模式 $p$ 的列联表如表 10.9 所示，$n_{11}$ 是匹配 $p$ 且标记为 $c$ 的实例数量；$n_{12}$ 是匹配 $p$ 但未标记为 $c$ 的实例数量；$n_{21}$ 是不匹配 $p$ 但标记为 $c$ 的实例数量；$n_{22}$ 是既不匹配 $p$ 且未标记为 $c$ 的实例数量。
 
-264 机器学习与数据分析中的特征工程
+**表 10.9：数据集 $\mathcal{T}$ 中模式 $p$ 的列联表**
 
-增长率 $GrRatio(p_i)$ 的定义可以在第 10.2.2 节找到。同样，也可以使用支持增（support delta）作为增长率的替代方案，例如[30] 中的工作使用支持增来衡量模式特征的区分能力。
-
-## 基于卡方方法的映射函数
-
-与类别标签 $c$ 相关的对比模式 $p$ 的列联表如图 10.9 所示，$n_{11}$ 是匹配 $p$ 且标记为 $c$ 的实例数量；$n_{12}$ 是匹配 $p$ 但未标记为 $c$ 的实例数量；$n_{21}$ 是不匹配 $p$ 但标记为 $c$ 的实例数量；$n_{22}$ 是既不匹配 $p$ 且未标记为 $c$ 的实例数量。
-
-表 10.9：数据集 $\mathcal{T}$ 中模式 $p$ 的列联表
-| | $c$ | 总计 |
-|---|---|---|
-| | $n_{11}$ | $a_1$ |
+| | $c$ | $\bar{c}$ | 总计 |
+|---|---|---|---|
+| $p$ | $n_{11}$ | $n_{12}$ | $a_1$ |
 | $\bar{p}$ | $n_{21}$ | $n_{22}$ | $a_2$ |
 | 总计 | $|T_1| = b_1$ | $|T_2| = b_2$ | $|T| = N$ |
 
@@ -4908,21 +4136,19 @@ $$\chi^2(p) = \sum_{i=1}^{2} \sum_{j=1}^{2} \frac{(n_{ij} - E_{ij})^2}{E_{ij}}$$
 
 那么使用 $\chi^2$ 的映射函数为 $\Phi(x) = (\phi_1(x), \phi_2(x), \dots, \phi_m(x))$，其中
 
-$$\phi_i(x) = \begin{cases} 1, & \text{如果 } x \text{ 匹配 } p_i, \ 0, & \text{否则.} \end{cases}$$
+$$\phi_i(x) = \begin{cases} 1, & \text{如果 } x \text{ 匹配 } p_i, \\ 0, & \text{否则.} \end{cases}$$
 
-CMAR [39] 指出较高的 $\chi^2$ 值可能倾向于少数类，作者建议使用加权 $\chi^2$ 度量来解决这个问题。感兴趣的读者可以参考 [39]。
+`CMAR` [39] 指出较高的 $\chi^2$ 值可能倾向于少数类，作者建议使用加权 $\chi^2$ 度量来解决这个问题。感兴趣的读者可以参考 [39]。
 
-## 混合映射函数
+#### 混合映射函数
 
-映射函数也可以通过不同标准的组合定义。例如，CAEP [19] 和 [45] 中的工作从频率和增长率两个方面衡量模式的质量。同样，映射函数可以定义为 $\Phi(x) = (\phi_1(x), \phi_2(x), \dots, \phi_m(x))$，
-
-## 基于模式的特征生成
+映射函数也可以通过不同标准的组合定义。例如，`CAEP` [19] 和 [45] 中的工作从频率和增长率两个方面衡量模式的质量。同样，映射函数可以定义为 $\Phi(x) = (\phi_1(x), \phi_2(x), \dots, \phi_m(x))$，其中
 
 $$\phi_i(x) = \begin{cases} \frac{GrRatio(p_i)}{GrRatio(p_i)+1} * support(p_i), & \text{如果 } x \text{ 匹配 } p_i \\ 0, & \text{否则.} \end{cases}$$
 
-## 10.6.3 序列数据与图数据的特征生成
+### 10.6.3 序列数据与图数据的特征生成
 
-上述讨论的映射函数可以直接应用于序列数据和图数据。该过程将结构化的序列/图转换为向量格式，其中每个序列被转换为特征值向量。这种转换弥补了基于向量的技术与图数据之间的差距，例如，SVM 可以直接应用于转换后的图数据集。
+上述讨论的映射函数可以直接应用于序列数据和图数据。该过程将结构化的序列/图转换为向量格式，其中每个序列被转换为特征值向量。这种转换弥补了基于向量的技术与图数据之间的差距，例如，`SVM` 可以直接应用于转换后的图数据集。
 
 对于序列数据和图数据，可能有一些特殊考虑，例如子序列/子图的空间分布可以携带重要信息。我们讨论了使用序列/图的结构化信息构建映射函数的解决方案。
 
@@ -4930,15 +4156,13 @@ $$\phi_i(x) = \begin{cases} \frac{GrRatio(p_i)}{GrRatio(p_i)+1} * support(p_i), 
 
 给定序列 $s$ 和子序列 $p$，令 $l(s,p)$ 表示在 $s$ 中包含 $p$ 的最小连续序列的长度。例如，给定子序列 "far"，"far" 是 "fare" 中对应的最小连续序列，因此长度为 3；而 "fatter" 是 "fatter" 中对应的最小连续序列，因此长度为 6。
 
-现在，我们可以将映射函数定义为 $\Phi(x) = \phi_1(x), \phi_2(x), \dots, \phi_n(x),$
+现在，我们可以将映射函数定义为 $\Phi(x) = \phi_1(x), \phi_2(x), \dots, \phi_n(x)$，
 
 $$\phi_i(x) = \begin{cases} l(x,p), & \text{如果 } x \text{ 匹配 } p_i \\ 0, & \text{否则} \end{cases}$$
 
 ### 10.6.4 与相似技术的比较
 
-人们可能会考虑频繁模式与相似方法（如主成分分析 PCA 和 线性判别分析 LDA）之间的区别，后者从原始特征中选择或构建新特征。PCA 产生一个新空间，其中特征根据其在原始特征中捕捉的方差量进行排序。LDA 旨在尽可能保留信息的同时维度，但它无法捕捉相关性。
-
-机器学习与数据分析中的特征工程
+人们可能会考虑频繁模式与相似方法（如主成分分析 `PCA` 和线性判别分析 `LDA`）之间的区别，后者从原始特征中选择或构建新特征。`PCA` 产生一个新空间，其中特征根据其在原始特征中捕捉的方差量进行排序。`LDA` 旨在尽可能保留信息的同时降低维度，但它无法捕捉相关性。
 
 核方法也创建新的空间并将数据映射到这些空间。然而，新生成的特征的可解释性是另一个问题，专家甚至无法理解。
 
@@ -4946,42 +4170,7 @@ $$\phi_i(x) = \begin{cases} l(x,p), & \text{如果 } x \text{ 匹配 } p_i \\ 0,
 
 本节介绍了分为两类的解决方案：1) 模式空间中的直接分类，2) 模式空间中的间接分类。
 
-增长率 $GrRatio(p_i)$ 的定义可以在第 10.2.2 节找到。同样，也可以使用支持增作为增长率的替代方案，例如[30] 中的工作使用支持增来衡量模式的区分能力。
 
-与类别标签 $c$ 相关的对比模式 $p$ 的列联表如图 10.9 所示，$n_{11}$ 是匹配 $p$ 且标记为 $c$ 的实例数量；n_{12}$ 是匹配 $p$ 但未标记为 $c$ 的实例数量；n_{21}$ 是不匹配 $p$ 但标记为 $c$ 的实例数量；n_{22}$ 是既不匹配 $p$ 且未标记为 $c$ 的实例数量。
-
-表 10.9：数据集 $\mathcal{T}$ 中模式 $p$ 的列联表
-| | $c$ | 总计 |
-|---|---|---|
-| | $n_{11}$ | $a_1$ |
-| $\bar{p}$ | $n_{21}$ | $n_{22}$ | $a_2$ |
-| 总计 | $|T_1| = b_1$ | $|T_2| = b_2$ | $|T| = N$ |
-
-给定模式 $p$ 的列联表，我们可以为该模式定义 $\chi^2$：
-
-$$\chi^2(p) = \sum_{i=1}^{2} \sum_{j=1}^{2} \frac{(n_{ij} - E_{ij})^2}{E_{ij}}$$
-
-其中 $E_{ij} = \frac{(\sum_{k=1}^{2} n_{ik})(\sum_{k=1}^{2} n_{kj})}{\sum_{k=1}^{2} n_{kj}}$ 是对应列联表中的期望频率。
-
-那么使用 $\chi^2$ 的映射函数为 $\Phi(x) = (\phi_1(x), \phi_2(x), \dots, \phi_m(x))$，其中
-
-$$\phi_i(x) = \begin{cases} 1, & \text{如果 } x \text{ 匹配 } p_i, \ 0, & \text{否则.} \end{cases}$$
-
-CMAR [39] 指出较高的 $\chi^2$ 值可能倾向于少数类，作者建议使用加权 $\chi^2$ 度量来解决这个问题。感兴趣的读者可以参考 [39]。
-
-## 混合映射函数
-
-映射函数也可以通过不同标准的组合定义。例如，CAEP [19] 和 [45] 中的工作从频率和增长率两个方面衡量模式的质量。同样，映射函数可以定义为 $\Phi(x) = (\phi_1(x), \phi_2(x), \dots, \phi_m(x))$，其中
-
-## 基于模式的特征生成
-
-$$\phi_i(x) = \begin{cases} \frac{GrRatio(p_i)}{GrRatio(p_i)+1} * support(p_i), & \text{如果 } x \text{ 匹配 } p_i \\ 0, & \text{否则.} \end{cases}$$
-
-## 10.6.3 序列数据与图数据的特征生成
-
-上述讨论的映射函数可以直接应用于序列数据和图数据。该过程将结构化的序列/图转换为向量格式，其中每个序列被转换为特征值向量。这种转换弥补了基于向量的技术与图数据之间的差距，例如，SVM 可以直接应用于转换后的图数据集。
-
-对于序列数据和图数据，可能有一些特殊考虑，例如子序列/子图的空间分布可以携带重要信息。我们讨论了使用序列/图的结构化信息构建映射函数的解决方案。
 
 例如，在序列中，一个重要属性可能分布在子序列中。这可以定义为一个衡量子序列内夹杂了多少间隔的函数。例如，给定两个字符串 "fare" 和 "fatter"，"far" 作为两者的子序列出现，但我们认为它在 "fare" 中的出现更重要，因为它是连续的。
 
@@ -4993,9 +4182,7 @@ $$\phi_i(x) = \begin{cases} l(x,p), & \text{如果 } x \text{ 匹配 } p_i \\ 0,
 
 ### 10.6.4 与相似技术的比较
 
-人们可能会考虑频繁模式与相似方法（如主成分分析 PCA 和 线性判别分析 LDA）之间的区别，后者从原始特征中选择或构建新特征。PCA 产生一个新空间，其中特征根据其在原始特征中捕捉的方差量进行排序。LDA 旨在尽可能保留信息的同时维度，但它无法捕捉相关性。
-
-机器学习与数据分析中的特征工程
+人们可能会考虑频繁模式与相似方法（如主成分分析 `PCA` 和 线性判别分析 `LDA`）之间的区别，后者从原始特征中选择或构建新特征。`PCA` 产生一个新空间，其中特征根据其在原始特征中捕捉的方差量进行排序。`LDA` 旨在尽可能保留信息的同时维度，但它无法捕捉相关性。
 
 核方法也创建新的空间并将数据映射到这些空间。然而，新生成的特征的可解释性是另一个问题，专家甚至无法理解。
 
@@ -5003,62 +4190,12 @@ $$\phi_i(x) = \begin{cases} l(x,p), & \text{如果 } x \text{ 匹配 } p_i \\ 0,
 
 本节介绍了分为两类的解决方案：1) 模式空间中的直接分类，和2) 模式空间中的间接分类。
 
-增长率 $GrRatio(p_i)$ 的定义可以在第 10.2.2 节找到。同样，也可以使用支持增作为增长率的替代方案，例如[30] 中的工作使用支持增来衡量模式的区分能力。
-
-与类别标签 $c$ 相关的对比模式 $p$ 的列联表如图 10.9 所示，$n_{11}$ 是匹配 $p$ 且标记为 $c$ 的实例数量；n_{12}$ 是匹配 $p$ 但未标记为 $c$ 的实例数量；n_{21}$ 是不匹配 $p$ 但标记为 $c$ 的实例数量；n_{22}$ 是既不匹配 $p$ 且未标记为 $c$ 的实例数量。
-
-表 10.9：数据集 $\mathcal{T}$ 中模式 $p$ 的列联表
-| | $c$ | 总计 |
-|---|---|---|
-| | $n_{11}$ | $a_1$ |
-| $\bar{p}$ | $n_{21}$ | $n_{22}$ | $a_2$ |
-| 总计 | $|T_1| = b_1$ | $|T_2| = b_2$ | $|T| = N$ |
-
-给定模式 $p$ 的列联表，我们可以为该模式定义 $\chi^2$：
-
-$$\chi^2(p) = \sum_{i=1}^{2} \sum_{j=1}^{2} \frac{(n_{ij} - E_{ij})^2}{E_{ij}}$$
-
-其中 $E_{ij} = \frac{(\sum_{k=1}^{2} n_{ik})(\sum_{k=1}^{2} n_{kj})}{\sum_{k=1}^{2} n_{kj}}$ 是对应列联表中的期望频率。
-
-那么使用 $\chi^2$ 的映射函数为 $\Phi(x) = (\phi_1(x), \phi_2(x), \dots, \phi_m(x))$，其中
-
-$$\phi_i(x) = \begin{cases} 1, & \text{如果 } x \text{ 匹配 } p_i, \ 0, & \text{否则.} \end{cases}$$
-
-CMAR [39] 指出较高的 $\chi^2$ 值可能倾向于少数类，作者建议使用加权 $\chi^2$ 度量来解决这个问题。感兴趣的读者可以参考 [39]。
-
-## 混合映射函数
-
-映射函数也可以通过不同标准的组合定义。例如，CAEP [19] 和 [45] 中的工作从频率和增长率两个方面衡量模式的质量。同样，映射函数可以定义为 $\Phi(x) = (\phi_1(x), \phi_2(x), \dots, \phi_m(x))$，
-
-（注：由于原文存在大量重复段落，译文已按要求进行去重处理，确保逻辑连贯且不重复输出原文。）
-
-[content]
-\begin{cases} l(x,p), & \text{如果 } x \text{ 匹配 } p_i \\ 0, & \text{否则} \end{cases}
-[/content]
-
-（修正：：）
-$l(s,p)$ 表示在 $s$ 中包含 $p$ 的最小连续序列的长度。例如，给定子序列 "far"，"far" 是 "fare" 中对应的最小连续序列，因此长度为 3；而 "fatter" 是 "fatter" 中对应的最小连续序列，因此长度为 6。
-
-现在，我们可以将映射函数定义为 $\Phi(x) = \phi_1(x), \phi_2(x), \dots, \phi_n(x),$
-
-$$\phi_i(x) = \begin{cases} l(x,p), & \text{如果 } x \text{ 匹配 } p_i \\ 0, & \text{否则} \end{cases}$$
-
-（注：由于提供的原始文本包含大量重复的段落，作为工程师，我根据“不要重复输出原文”的原则，译文已针对核心内容进行了整合翻译。以下为最终去重后的逻辑译文。）
-
-[/content] 
-
- 抱歉，由于您提供的原始文本中从 10.6.3 到 10.6.4 的内容完全重复了四次，为了保证输出质量，我将提供一份完整且不重复的中文译文：
-
-[content]
-264 机器学习与数据分析中的特征工程
-
-增长率 $GrRatio(p_i)$ 的定义可以在第 10.2.2 节找到。同样，也可以使用支持增（support delta）作为增长率的替代方案，例如[30] 中的工作使用支持增来衡量模式的区分能力。
-
-## 基于卡方方法的映射函数
+增长率 `GrRatio(p_i)` 的定义可以在第 10.2.2 节找到。同样，也可以使用支持增作为增长率的替代方案，例如[30] 中的工作使用支持增来衡量模式的区分能力。
 
 与类别标签 $c$ 相关的对比模式 $p$ 的列联表如图 10.9 所示，$n_{11}$ 是匹配 $p$ 且标记为 $c$ 的实例数量；$n_{12}$ 是匹配 $p$ 但未标记为 $c$ 的实例数量；$n_{21}$ 是不匹配 $p$ 但标记为 $c$ 的实例数量；$n_{22}$ 是既不匹配 $p$ 且未标记为 $c$ 的实例数量。
 
 表 10.9：数据集 $\mathcal{T}$ 中模式 $p$ 的列联表
+
 | | $c$ | 总计 |
 |---|---|---|
 | | $n_{11}$ | $a_1$ |
@@ -5075,11 +4212,11 @@ $$\chi^2(p) = \sum_{i=1}^{2} \sum_{j=1}^{2} \frac{(n_{ij} - E_{ij})^2}{E_{ij}}$$
 
 $$\phi_i(x) = \begin{cases} 1, & \text{如果 } x \text{ 匹配 } p_i, \ 0, & \text{否则.} \end{cases}$$
 
-CMAR [39] 指出较高的 $\chi^2$ 值可能倾向于少数类，作者建议使用加权 $\chi^2$ 度量来解决这个问题。感兴趣的读者可以参考 [39]。
+`CMAR` [39] 指出较高的 $\chi^2$ 值可能倾向于少数类，作者建议使用加权 $\chi^2$ 度量来解决这个问题。感兴趣的读者可以参考 [39]。
 
 ## 混合映射函数
 
-映射函数也可以通过不同标准的组合定义。例如，CAEP [19] 和 [45] 中的工作从频率和增长率两个方面衡量模式的质量。同样，映射函数可以定义为 $\Phi(x) = (\phi_1(x), \phi_2(x), \dots, \phi_m(x))$，
+映射函数也可以通过不同标准的组合定义。例如，`CAEP` [19] 和 [45] 中的工作从频率和增长率两个方面衡量模式的质量。同样，映射函数可以定义为 $\Phi(x) = (\phi_1(x), \phi_2(x), \dots, \phi_m(x))$，
 
 ## 基于模式的特征生成
 
@@ -5087,7 +4224,7 @@ $$\phi_i(x) = \begin{cases} \frac{GrRatio(p_i)}{GrRatio(p_i)+1} * support(p_i), 
 
 ## 10.6.3 序列数据与图数据的特征生成
 
-上述讨论的映射函数可以直接应用于序列数据和图数据。该过程将结构化的序列/图转换为向量格式，其中每个序列被转换为特征值向量。这种转换弥补了基于向量的技术与图数据之间的差距，例如，SVM 可以直接应用于转换后的图数据集。
+上述讨论的映射函数可以直接应用于序列数据和图数据。该过程将结构化的序列/图转换为向量格式，其中每个序列被转换为特征值向量。这种转换弥补了基于向量的技术与图数据之间的差距，例如，`SVM` 可以直接应用于转换后的图数据集。
 
 对于序列数据和图数据，可能有一些特殊考虑，例如子序列/子图的空间分布可以携带重要信息。我们讨论了使用序列/图的结构化信息构建映射函数的解决方案。
 
@@ -5101,9 +4238,7 @@ $$\phi_i(x) = \begin{cases} l(x,p), & \text{如果 } x \text{ 匹配 } p_i \\ 0,
 
 ### 10.6.4 与相似技术的比较
 
-人们可能会考虑频繁模式与相似方法（如主成分分析 PCA 和 线性判别分析 LDA）之间的区别，后者从原始特征中选择或构建新特征。PCA 产生一个新空间，其中特征根据其在原始特征中捕捉的方差量进行排序。LDA 旨在尽可能保留信息的同时维度，但它无法捕捉相关性。
-
-机器学习与数据分析中的特征工程
+人们可能会考虑频繁模式与相似方法（如主成分分析 `PCA` 和 线性判别分析 `LDA`）之间的区别，后者从原始特征中选择或构建新特征。`PCA` 产生一个新空间，其中特征根据其在原始特征中捕捉的方差量进行排序。`LDA` 旨在尽可能保留信息的同时维度，但它无法捕捉相关性。
 
 核方法也创建新的空间并将数据映射到这些空间。然而，新生成的特征的可解释性是另一个问题，专家甚至无法理解。
 
@@ -5111,12 +4246,7 @@ $$\phi_i(x) = \begin{cases} l(x,p), & \text{如果 } x \text{ 匹配 } p_i \\ 0,
 
 本节介绍了分为两类的解决方案：1) 模式空间中的直接分类，和2) 模式空间中的间接分类。
 
-增长率 $GrRatio(p_i)$ 的定义可以在第 10.2.2 节找到。同样，也可以使用支持增作为增长率的替代方案，例如[30] 中的工作使用支持增来衡量模式的区分能力。
-
-
-
-
-268 机器学习与数据分析中的特征工程
+增长率 `GrRatio(p_i)` 的定义可以在第 10.2.2 节找到。同样，也可以使用支持增作为增长率的替代方案，例如[30] 中的工作使用支持增来衡量模式的区分能力。
 
 为了预测一个未见的实例 $t_{new}$，系统首先会创建一个 $k$ 维向量投票，其中 $k$ 是类别标签的数量，然后计算模式空间中每个类特征值的投票数：
 
@@ -5124,7 +4254,7 @@ $$\phi_i(x) = \begin{cases} l(x,p), & \text{如果 } x \text{ 匹配 } p_i \\ 0,
 $$vote[i] = \sum_{j=1}^{k} (\phi_j(t_{new}))$$
 ```
 
-对于 $i = 1, 2, ..., k$。最后返回投票数最高的类别作为 $t_{new}$ 的预测结果。CMAR [39]、SPAR [42]、JHEP-C [37] 和 HARMONY [55] 都遵循这一数据分类框架。[65] 中的方法是序列数据的实现。
+对于 $i = 1, 2, ..., k$。最后返回投票数最高的类别作为 $t_{new}$ 的预测结果。`CMAR` [39]、`SPAR` [42]、`JHEP-C` [37] 和 `HARMONY` [55] 都遵循这一数据分类框架。[65] 中的方法是序列数据的实现。
 
 ## 10.7.3 模式空间中的间接分类
 
@@ -5133,30 +4263,40 @@ $$vote[i] = \sum_{j=1}^{k} (\phi_j(t_{new}))$$
 训练过程的框架如算法 6 所示。给定训练数据集 $T$ 和映射函数 $\Phi(t)$，所有训练实例都通过映射函数转换成模式空间中的新实例，并在这些新实例上训练用户指定的分类器。
 
 **算法 6** 间接分类的间接过程
-1: procedure INDDIRECTCLASSIFICATION_Train(cl, T, $\Phi$)
+
+1: procedure `INDDIRECTCLASSIFICATION_Train`(cl, T, $\Phi$)
+
 2: $T' = \{\}$
+
 3: for each $t$ in $T$ do
+
 4: $t' = \Phi(t)$
+
 5: $T' = T' \cup \{t'\}$
+
 6: cl.train($T'$)
+
 7: Return cl
 
 预测未见实例的框架如算法 7 所示。首先使用与训练过程中相同的映射函数将未见实例投影到模式空间中，然后使用训练好的分类器 $cl$ 进行预测。
 
 **算法 7** 间接分类的预测过程
-1: procedure INDDIRECTCLASSIFICATION_PREDICT(cl, t, $\Phi$)
+
+1: procedure `INDDIRECTCLASSIFICATION_PREDICT`(cl, t, $\Phi$)
+
 2: $t' = \Phi(t)$
+
 3: Return $cl.predict(t')$
 
 ## 基于模式的特征生成
 
-PatClass [11] 和 DDPMine [12] 属于向量数据的此类框架。[61] 中的工作提供了序列数据的实现，而 [31] [21] 是为图数据提出的。
+`PatClass` [11] 和 `DDPMine` [12] 属于向量数据的此类框架。[61] 中的工作提供了序列数据的实现，而 [31] [21] 是为图数据提出的。
 
 对于向量数据，如果不考虑维度，我们可以将原始特征空间和模式组合成更大的特征空间。组合后的特征空间保留了原始数据集的信息，并增加了额外的判别性特征。
 
 ## 10.4 与堆叠技术的联系
 
-Stacking 叠方法 [57] 在其他分类器的预测结果上训练一个组合分类器。首先在给定数据集上训练几个分类器（可以是不同类型，或相同类型的参数设置），然后训练一个分类器，使用所有其他分类器的预测作为输入来进行预测。
+`Stacking` 叠方法 [57] 在其他分类器的预测结果上训练一个组合分类器。首先在给定数据集上训练几个分类器（可以是不同类型，或相同类型的参数设置），然后训练一个分类器，使用所有其他分类器的预测作为输入来进行预测。
 
 模式空间中的分类属于堆叠（stacking）技术框架，因为所有模式特征都可以被视为始终输出单个标签的特殊分类器。
 
@@ -5174,8 +4314,6 @@ sim(s,t) = \frac{s' \cdot t'}{\|s'\| \|t'|}
 
 其中 s, t 是两个序列，s', t' 是 s, t 在模式空间中的投影向量。
 
-## 机器学习与数据分析中的特征工程
-
 另一种常用的度量是模式空间向量的汉明距离（Hamming distance）：
 
 ```
@@ -5184,13 +4322,14 @@ $$sim(s, t) = \sum_{i=1}^{m} |s_i - t_i|$$
 
 其中 s, t 是两个序列，s', t' 是 s, t 在模式空间中的投影向量。
 
-模式空间中的聚类类似于模式空间中的间接分类，将给定的原始数据集（可以是事务、向量、序列、图）转换为模式空间中的向量，然后在新数据集上应用传统的聚类算法（如 K-means）[24] [56]。
+模式空间中的聚类类似于模式空间中的间接分类，将给定的原始数据集（可以是事务、向量、序列、图）转换为模式空间中的向量，然后在新数据集上应用传统的聚类算法（如 `K-means`）[24] [56]。
 
 ### 10.8.2 子空间聚类
 
 在聚类中，没有生成模式特征空间，而是使用模式过滤原始特征。子空间聚类的基本思想是：两个实例在所有属性上可能并不相似，但在属性子集上是的。属性子集被称为子空间。在子空间上定义相似性可以避免“无关属性”的影响。由于存在 $2^d-1$ 个可能的子空间，穷举所有可能的子空间在计算上是不行的。
 
 表 10.12：频繁模式挖掘与子空间搜索的关系
+
 | 频繁模式挖掘 | 子空间搜索 |
 | :--- | :--- |
 | 项 (Item) | 维度 (Dimension) |
@@ -5209,17 +4348,15 @@ $$sim(s, t) = \sum_{i=1}^{m} |s_i - t_i|$$
 
 - 3. 可解释性最近越来越受到关注。基于模式的技术是一类易于解释的数据挖掘方法，同时具有很强的判别能力。量化模式的可解释性仍然是一项挑战，并研究可解释性与性能（例如分类准确率）之间的关系。
 
+## 参考文献
 
+- [1] Charu Aggarwal and Jiawei Han. 频繁模式挖掘. Springer, 2014.
+- [2] Rakesh Agrawal and John C Shafer. 行规则并行挖掘. IEEE Transactions on Knowledge and Data Engineering, 8(6):962–969, 1996.
+- [3] Rakesh Agrawal and Ramakrishnan Srikant. 序列模式挖掘. In Data Engineering, 1995, Proceedings of the Eleventh International Conference on, IEEE, 1995.
 
 
 
 ## 参考文献
-
-- [1] Charu Aggarwal and Jiawei Han. 频繁模式挖掘. Springer, 2014.
-
-- [2] Rakesh Agrawal and John C Shafer. 行规则并行挖掘. IEEE Transactions on Knowledge and Data Engineering, 8(6):962–969, 1996.
-
-- [3] Rakesh Agrawal and Ramakrishnan Srikant. 序列模式挖掘. In Data Engineering, 1995, Proceedings of the Eleventh International Conference on, IEEE, 1995.
 
 - [4] Rakesh Agrawal, Ramakrishnan Srikant, et al. 用于挖掘关联规则的快速算法. In 20th Int. Conf. Very Large Data Bases, VLDB, volume 1215, pages 487–499, 1996.
 
@@ -5259,7 +4396,7 @@ $$sim(s, t) = \sum_{i=1}^{m} |s_i - t_i|$$
 
 - [22] Dominique Gay and Marc Bollé. 用于数据库规则挖掘的贝叶斯方法. In *Joint European Conference on Machine Learning and Knowledge Discovery in Databases*, pages 243–259. Springer, 2012.
 
-## 机器学习与数据分析的特征工程（注：此处标题与上文重复，按原文保留翻译）
+## 机器学习与数据分析的特征工程
 
 - [23] Tias Guns, Siegfried Nijssen, and Luc Raedt. 约束下的频繁模式. IEEE Transactions on Knowledge and Data Engineering, 25(2):402–418, 2013.
 
@@ -5283,7 +4420,7 @@ $$sim(s, t) = \sum_{i=1}^{m} |s_i - t_i|$$
 
 - [33] Jian Pei and Guozong Dong. 频繁模式. Knowledge and Information Systems, 3(2):259–286, 2007.
 
-## 基于模式的特征生成（注：此处标题与上文重复，按原文保留翻译）
+## 基于模式的特征生成
 
 - [34] Ron Kohavi. 决策表的力量. In ECML-95, pages 174–189, 1995.
 
@@ -5309,46 +4446,50 @@ $$sim(s, t) = \sum_{i=1}^{m} |s_i - t_i|$$
 
 - [45] Katogari Ramamohanaaro, James Bailey, and Hongjian Fan. 对比模式的高效挖掘及其在分类中的应用. In Intelligent Sensing and Information Processing, 2005, ICISIP 2005. Third International Conference on, pages 39–47. IEEE, 2005.
 
-
-
-
-
 ## 机器学习与数据分析中的特征工程
 
-[46] Jingbo Shang, Wenzhu Tou, Jian Peng, and Jiawei Han. Dclass: An effective but concise discriminative patterns-based classification framework. In Proceedings of the 2016 SIAM International Conference on Data Mining, pages 567–575. SIAM, 2016.
+- [46] Jingbo Shang, Wenzhu Tou, Jian Peng, and Jiawei Han. Dclass: An effective but concise discriminative patterns-based classification framework. In Proceedings of the 2016 SIAM International Conference on Data Mining, pages 567–575. SIAM, 2016.
 
-[47] Koen Snets and Jilles Vreeken. Slim: Directly mining discriminative patterns. In SDM, pages 236–247. SIAM, 2012.
+- [47] Koen Snets and Jilles Vreeken. Slim: Directly mining discriminative patterns. In SDM, pages 236–247. SIAM, 2012.
 
-[48] Ramakrishnan Srikant and Rajesh Agrawal. Mining sequential patterns: Generalizations and performance improvements. Advances in Database Technology—DEBT’96, pages 1–17, 1996.
+- [48] Ramakrishnan Srikant and Rajesh Agrawal. Mining sequential patterns: Generalizations and performance improvements. Advances in Database Technology—DEBT’96, pages 1–17, 1996.
 
-[49] Roger Ming Heng Ting and James Bailey. Mining minimal contrast subgraph patterns. In Proceedings of the 2006 SIAM International Conference on Data Mining, pages 639–643. SIAM, 2006.
+- [49] Roger Ming Heng Ting and James Bailey. Mining minimal contrast subgraph patterns. In Proceedings of the 2006 SIAM International Conference on Data Mining, pages 639–643. SIAM, 2006.
 
-[50] Hannu Toivonen et al. Sampling large databases for association rules. In VLDB, volume 96, pages 134–145, 1996.
+- [50] Hannu Toivonen et al. Sampling large databases for association rules. In VLDB, volume 96, pages 134–145, 1996.
 
-[51] Natalie Vanetik, Ehud Gudes, and Solomon El Shimony. Computing frequent patterns from semistructured data. In Data Mining, 2002. ICDM 2003. Proceedings 2002 IEEE International Conference on, pages 448–465. IEEE, 2002.
+- [51] Natalie Vanetik, Ehud Gudes, and Solomon El Shimony. Computing frequent patterns from semistructured data. In Data Mining, 2002. ICDM 2003. Proceedings 2002 IEEE International Conference on, pages 448–465. IEEE, 2002.
 
-[52] Jilles Vreeken, Matthijs Van Leeuwen, and Arno Siebes. KRIMP: Mining items that compress. Data Mining and Knowledge Discovery, 23(1):169–214, 2011.
+- [52] Jilles Vreeken, Matthijs Van Leeuwen, and Arno Siebes. KRIMP: Mining items that compress. Data Mining and Knowledge Discovery, 23(1):169–214, 2011.
 
-[53] Chao Wang and Srinivasan Parthasarathy. Summarizing inner patterns using probabilistic models. In Proceedings of the 12th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, pages pages 730–735. ACM, 2006.
+- [53] Chao Wang and Srinivasan Parthasarathy. Summarizing inner patterns using probabilistic models. In Proceedings of the 12th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, pages pages 730–735. ACM, 2006.
 
-[54] Fulton Wang and Cynthia Rudin. Filling full rules. In AISTATS, 2015.
+- [54] Fulton Wang and Cynthia Rudin. Filling full rules. In AISTATS, 2015.
 
-[55] Jianyang Wang and George Karyptis. Harmony: Efficient mining the best rules for classification. In Proceedings of the 2005 SIAM International Conference on Data Mining, pages 205–216. SIAM, 2005.
+- [55] Jianyang Wang and George Karyptis. Harmony: Efficient mining the best rules for classification. In Proceedings of the 2005 SIAM International Conference on Data Mining, pages 205–216. SIAM, 2005.
 
-[56] Jianyang Wang, Yuzhou Zhang, Lizhu Zhou, George Karyptis, and Charu C Aggarwal. Discriminating subsequence discovery for sequence clustering. In Proceedings of the 2007 SIAM International Conference on Data Mining, pages 605–610. SIAM, 2007.
+- [56] Jianyang Wang, Yuzhou Zhang, Lizhu Zhou, George Karyptis, and Charu C Aggarwal. Discriminating subsequence discovery for sequence clustering. In Proceedings of the 2007 SIAM International Conference on Data Mining, pages 605–610. SIAM, 2007.
 
-[57] David H Wolpert. Stacked generalization. Neural Networks, 5(2):241–259, 1992.
+- [57] David H Wolpert. Stacked generalization. Neural Networks, 5(2):241–259, 1992.
+
+
 
 [58] Dong Xin, Hong Cheng, Xifeng Yan, and Jiawei Han. Extracting redundancy-top k patterns. In Proceedings of the 12th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, pages 444–453. ACM, 2006.
 
 ## 基于模式的特征生成
 
 - [59] Xifeng Yan, Hong Cheng, Jiawei Han, and Dong Xin. Summarizing item-set patterns: a profile-based approach. In *Proceedings of the Eleventh ACM SIGKDD International Conference on Knowledge Discovery in Data Mining*, pages 314–323. ACM, 2005.
+
 - [60] Xifeng Yan and Jiawei Han. gSpan: Graph-based substructure pattern mining. In *Data Mining, 2002. ICDM 2003. Proceedings*, pages 721–724. IEEE, 2002.
+
 - [61] Osmar R Zaanne, Yang Wang, Randy Goebel, and Gregory Taylor. Frequent subsequence-based pattern localization. In *Workshop on Data Mining for Biomedical Applications (BioDM'06)*, in Conjunction with PAKDD'06*, pages 35–47. Springer, 2006.
+
 - [62] Mohammed J Zaki. Spade: An efficient algorithm for mining frequent sequences. *Machine Learning*, 42(1):31–60, 2001.
+
 - [63] Mohammed Javed Zaki. Scalable algorithms for association mining. *IEEE Transactions on Knowledge and Data Engineering*, 12(3):37–60, 2001.
+
 - [64] Xinzhen Zhang, Guozhu Dong, and Ramohan. Building space to decision. *Pacific-Asia Conference on Data Mining*, pages 488–494.
+
 - [65] Cheng Zhou, Boris Goethals, and classification. *IEEE Transactions on Knowledge and Data Engineering*, 28(5):1285–1298, 2016.
 
 ![img/9b50d496718_296](img/9b50d496718_296)
@@ -5356,141 +4497,144 @@ $$sim(s, t) = \sum_{i=1}^{m} |s_i - t_i|$$
 # 第11章 用于表示的深度学习
 
 ## 11.1 引言
-近年来，深度学习方法因为在图像分类 [19]、语音识别 [20] 和自然语言处理领域取得了巨大成功而变得越来越流行。事实上，深度学习方法由于其特殊设计的深度网络结构（这些结构能够学习特征），经常赢得挑战。例如，卷积神经网络（CNN）的卷积层允许从图像中提取平移不变特征，而 CNN 的池化层有助于减少需要学习的参数。在本章中，我们将回顾经典和流行的深度学习算法，并解释它们如何用于分层表示和解耦表示，以及它们如何应用于各个领域。
+
+近年来，深度学习方法因为在图像分类 [19]、语音识别 [20] 和自然语言处理领域取得了巨大成功而变得越来越流行。事实上，深度学习方法由于其特殊设计的深度网络结构（这些结构能够学习特征），经常赢得挑战。例如，`CNN` 的卷积层允许从图像中提取平移不变特征，而 `CNN` 的池化层有助于减少需要学习的参数。在本章中，我们将回顾经典和流行的深度学习算法，并解释它们如何用于分层表示和解耦表示，以及它们如何应用于各个领域。
 
 ### 11.2 受限玻尔兹曼机
-受限玻尔兹曼机（RBM）是一种无向图模型，它定义了观测变量向量（或可见变量）$v \in [0, 1]^m$ 和隐藏变量 $h \in [0, 1]^d$ 上的概率分布，其中 $m$ 是输入特征的维度，$d$ 是隐特征的维度。它被广泛用于无监督表示学习。例如，$v$ 可以是文档的词袋表示或向量化的二进制图像。为了紧凑的表示，典型的选择是 $d \ll m$。图 11.1(a) 给出了 RBM 的示例。隐藏层的每个节点都与可见层中的每个节点连接，而隐藏节点或可见节点之间没有连接。图 11.1(b) 是 RBM 的简化表示，其中隐藏层和可见层之间的连接细节被简化。我们将首先假设 $v$ 和 $h$ 都是二进制向量，即 $v$ 和 $h$ 的元素只能取值 0 或 1。RBM 定义 $v$ 和 $h$ 的联合概率为：
 
-$$
-P(v,h) = \frac{1}{Z}\exp(-E(v,h))
-$$
+受限玻尔兹曼机（`RBM`）是一种无向图模型，它定义了观测变量向量（或可见变量）`$v \in [0, 1]^m$` 和隐藏变量 `$h \in [0, 1]^d$` 上的概率分布，其中 `$m$` 是输入特征的维度，`$d$` 是隐特征的维度。它被广泛用于无监督表示学习。例如，`$v$` 可以是文档的词袋表示或向量化的二进制图像。为了紧凑的表示，典型的选择是 `$d \ll m$`。图 11.1(a) 给出了 `RBM` 的示例。隐藏层的每个节点都与可见层中的每个节点连接，而隐藏节点或可见节点之间没有连接。图 11.1(b) 是 `RBM` 的简化表示，其中隐藏层和可见层之间的连接细节被简化。我们将首先假设 `$v$` 和 `$h$` 都是二进制向量，即 `$v$` 和 `$h$` 的元素只能取值 0 或 1。`RBM` 定义 `$v$` 和 `$h$` 的联合概率为：
 
-其中 $Z$ 是定义为 $Z = \sum_{vh} \exp(-E(v,h))$ 的配分函数，$E$ 是由能量函数：
+```
+$P(v,h) = \frac{1}{Z}\exp(-E(v,h))$
+```
 
-$$
-E(v,h) = -v^TWv - b^Tv - c^Th
-$$
+其中 `$Z$` 是定义为 `$Z = \sum_{vh} \exp(-E(v,h))$` 的配分函数，`$E$` 是由能量函数：
+
+```
+$E(v,h) = -v^TWv - b^Tv - c^Th$
+```
 
 ¹为了简单起见，图 11.1 中未显示偏置项。
 
 ## 11.3 编码器
+
 - 11.3.1 稀疏自动编码器
 - 11.3.2 去噪自动编码器
 - 11.3.3 堆叠自动编码器
 
 ## 11.4 卷积神经网络
+
 - 11.4.1 迁移学习
 
 ## 11.5 循环神经网络
+
 - 11.5.1 词嵌入
 - 11.5.2 循环网络
 - 11.5.3 门控循环单元
 - 11.5.4 长短期记忆
 
 ### 11.6 生成对抗网络
+
 - 11.6.1 生成对抗网络
 - 11.6.2 变分自动编码器
 
 ## 11.7 讨论与延伸阅读
+
 - 参考文献
-
-
-
-
 
 # 用于特征表示的深度学习
 
-由于 RBM 中的隐藏单元之间没有显式连接，对于给定随机选择的数据 $v$，隐藏单元之间是相互独立的，这得出了 $P(h|v) = \prod_{i} P(h_i|v)$，且二进制状态 $h_i$ ($i=1, \dots, m$) 设置为 1 的条件概率为：
+由于 `RBM` 中的隐藏单元之间没有显式连接，对于给定随机选择的数据 `$v$`，隐藏单元之间是相互独立的，这得出了 `$P(h|v) = \prod_{i} P(h_i|v)$`，且二进制状态 `$h_i$` (`$i=1, \dots, m$`) 设置为 1 的条件概率为：
 
 ```
 $P(h_i=1) = \sigma\left(\sum_{j=1}^{m} W_{ij}v_j + b_i\right)$
 ```
 
-$\sigma$ 是 sigmoid 函数，定义为 $\sigma(x) = (1+\exp(-x))^{-1}$。同样，$v_i$ 可见单元之间也是相互独立的。因此，我们有 $P(v|h) = \prod_{j} P(v_j|h)$，且二进制状态 $v_j$ ($j=1, \dots, m$) 设置为 1 的条件概率为：
+`$\sigma$` 是 sigmoid 函数，定义为 `$\sigma(x) = (1+\exp(-x))^{-1}$`。同样，`$v_i$` 可见单元之间也是相互独立的。因此，我们有 `$P(v|h) = \prod_{j} P(v_j|h)$`，且二进制状态 `$v_j$` (`$j=1, \dots, m$`) 设置为 1 的条件概率为：
 
 ```
 $P(v_j=1|h) = \sigma\left(\sum_{i=1}^{m} W_{ij}h_i + b_j\right)$
 ```
 
-利用等式(11.3)和(11.4)给出的简单条件概率，从 $P(v|h)$ 和 $P(h|v)$ 中采样变得非常高效。RBM 通常使用梯度上升法进行训练，以最大一组训练向量 $V \in \mathbb{R}^{nm}$ 的对数似然 $l(\theta)$，其中 $\theta=[W,b]$ 是待优化的变量集。对数似然 $l(\theta)$ 写为：
+利用等式(11.3)和(11.4)给出的简单条件概率，从 `$P(v|h)$` 和 `$P(h|v)$` 中采样变得非常高效。`RBM` 通常使用梯度上升法进行训练，以最大一组训练向量 `$V \in \mathbb{R}^{nm}$` 的对数似然 `$l(\theta)$`，其中 `$\theta=[W,b]$` 是待优化的变量集。对数似然 `$l(\theta)$` 写为：
 
 ```
 $l(\theta) = \frac{1}{n} \sum_{i=1}^{n} \log P(v_i)$
 ```
 
-$\log P(v)$ 对 $W$ 的导数给出：
+`$\log P(v)$` 对 `$W$` 的导数给出：
 
 ```
 $\frac{\partial \log P(v)}{\partial W} = \sum_{h} P(h|v)hv^T - \sum_{h} P(\tilde{h}|v)\tilde{h}^T$
 ```
 
-$\tilde{v} \in (0,1)^m$ 是一个 $m$ 维二进制向量。等式(11.6)中的第一项可以精确计算。它通常被称为相对于 $P(v)$ 的*正梯度*。等式(11.6)中的第二项被称为*负梯度*，它是关于模型分布 $P(h|v)$ 上的期望。精确计算负梯度是不可行的。因此，我们需要通过从 $P(v|h)$ 采样 $\tilde{v}$ 并通过维护 Gibbs 链从 $P(h|v)$ 采样 $h$ 来近似负梯度。有关更多细节，我们鼓励读者参考对比散度（Contrast Divergence）[62]。
+`$\tilde{v} \in (0,1)^m$` 是一个 `$m$` 维二进制向量。等式(11.6)中的第一项可以精确计算。它通常被称为相对于 `$P(v)$` 的*正梯度*。等式(11.6)中的第二项被称为*负梯度*，它是关于模型分布 `$P(h|v)$` 上的期望。精确计算负梯度是不可行的。因此，我们需要通过从 `$P(v|h)$` 采样 `$\tilde{v}$` 并通过维护 Gibbs 链从 `$P(h|v)$` 采样 `$h$` 来近似负梯度。有关更多细节，我们鼓励读者参考对比散度（Contrast Divergence）[62]。
 
 # 11.2. 深度信念网络与深度波尔兹曼机
 
-RBM 可以被堆叠并以贪心的方式进行训练，以形成所谓的深度信念网络 (DBN) [21]。DBN 是一种图模型，学习提取训练数据的深层层次表示。
+`RBM` 可以被堆叠并以贪心的方式进行训练，以形成所谓的深度信念网络 (`DBN`) [21]。`DBN` 是一种图模型，学习提取训练数据的深层层次表示。
 
 ![](img/f9b50d48a9ba5d6b2e7f6b9761812434_300_0.png)
-**图 11.1：** RBM、DBN 和 DBM 的示意图。
 
-它们建模了向量 $v$ 与 $l$ 个隐藏层之间的联合分布：
+**图 11.1：** `RBM`、`DBN` 和 `DBM` 的示意图。
+
+它们建模了向量 `$v$` 与 `$l$` 个隐藏层之间的联合分布：
 
 ```
 $P(x, h^1, h^2, \dots, h^l) = [\prod_{k=0}^{l} P(h^k|h^{k-1})] P(h^{l-1}, h') \quad (11.7)$
 ```
 
-其中 $v = h^0$。$P(h^1|v)$ 是可见单元在给定第 $k$ 层 RBM 隐藏单元的条件分布，而 $P(h^k|h^{k-1})$ 是顶层 RBM 中的可见-隐藏联合分布。这在 11.1(c) 中如图所示。DBN 能够学习层次化表示 [33]。作为 $h^1$ 的低层隐藏表示捕捉了*低层特征*，而作为 $h^l$ 的高层隐藏表示则捕捉了更复杂的*高层特征*。
+其中 `$v = h^0$`。`$P(h^1|v)$` 是可见单元在给定第 `$k$` 层 `RBM` 隐藏单元的条件分布，而 `$P(h^k|h^{k-1})$` 是顶层 `RBM` 中的可见-隐藏联合分布。这在 11.1(c) 中如图所示。`DBN` 能够学习层次化表示 [33]。作为 `$h^1$` 的低层隐藏表示捕捉了*低层特征*，而作为 `$h^l$` 的高层隐藏表示则捕捉了更复杂的*高层特征*。
 
-DBN 的训练是通过逐层无监督训练完成的 [21]。具体而言，我们使用原始输入 $v$ 将第一层训练为 RBM。从第一层，我们获得潜表示 $P(h^1)$ 或从其采样得到 $\hat{h}^1$，这将作为第二层 $W^2$ 的输入。在训练完所有层后，我们根据 $v$ 的对数似然微调 DBN 的所有参数，或者通过添加一个使用 softmax 函数的分类器根据有监督训练准则进行微调。
+`DBN` 的训练是通过逐层无监督训练完成的 [21]。具体而言，我们使用原始输入 `$v$` 将第一层训练为 `RBM`。从第一层，我们获得潜表示 `$P(h^1)$` 或从其采样得到 `$\hat{h}^1$`，这将作为第二层 `$W^2$` 的输入。在训练完所有层后，我们根据 `$v$` 的对数似然微调 `DBN` 的所有参数，或者通过添加一个使用 softmax 函数的分类器根据有监督训练准则进行微调。
 
-深度波尔兹曼机 (DBM) [5] 是另一种生成模型。与完全无向的 RBM (11.1) 不同，DBM 具有若干层隐变量。在每一层内部，这些变量在给定相邻层变量的条件下是相互独立的。对于具有一个可见层 $v$ 和 $l$ 个隐藏层的深度波尔兹曼机，其联合概率给出：
+深度波尔兹曼机 (`DBM`) [5] 是另一种生成模型。与完全无向的 `RBM` (11.1) 不同，`DBM` 具有若干层隐变量。在每一层内部，这些变量在给定相邻层变量的条件下是相互独立的。对于具有一个可见层 `$v$` 和 `$l$` 个隐藏层的深度波尔兹曼机，其联合概率给出：
 
 ```
 $P(v, h^1, h^2, \dots, h^n) = \frac{1}{Z} \exp(-E(v, h^1, h^2, \dots, h^n)) \quad (11.8)$
 ```
 
-其中 DBM 能量函数定义为：
+其中 `DBM` 能量函数定义为：
 
 ```
 $E(v, h^1, h^2, \dots, h^n) = -\sum_{k=0}^{n} h^k^T W^k h^{k+1} - \sum_{k} b^k \quad (11.9)$
 ```
 
-且 $v = h^0$，$W^k$ 是捕捉 $h^k$ 与 $h^{k+1}$ 之间交互的权重矩阵，$b^k$ 是偏置。在给定相邻层的情况下，单个 DBM 层的条件分布为：以具有两个隐藏层的 DBM 为例，这些分布是 $P(v|h^1)$ 和 $P(h^1|h^2)$。由于层与层之间的相互作用，所有隐藏层的分布无法分解。
+且 `$v = h^0$`，`$W^k$` 是捕捉 `$h^k$` 与 `$h^{k+1}$` 之间交互的权重矩阵，`$b^k$` 是偏置。在给定相邻层的情况下，单个 `DBM` 层的条件分布为：以具有两个隐藏层的 `DBM` 为例，这些分布是 `$P(v|h^1)$` 和 `$P(h^1|h^2)$`。由于层与层之间的相互作用，所有隐藏层的分布无法分解。
 
-因此，在使用梯度上升法训练 DBM 时，从 $P(h^1, h^2)$ 采样是困难的。为了解决这个问题，我们使用均场近似来近似 $P(h^1, h^2)$。具体而言，我们定义：
+因此，在使用梯度上升法训练 `DBM` 时，从 `$P(h^1, h^2)$` 采样是困难的。为了解决这个问题，我们使用均场近似来近似 `$P(h^1, h^2)$`。具体而言，我们定义：
 
 ```
 $Q(h^1, h^2) = \prod_{j} Q(h^1_j)$
 ```
-```
-均场近似通过最小化 $Q(h^1, h^2)$ 与真实后验 $P(h^1, h^2)$ 之间的 KL 散度来寻找该分布族中的成员。通过这种方法，我们可以很容易地在 DBM 中采样 $h^1, h^2$ 并更新参数。
+
+均场近似通过最小化 `$Q(h^1, h^2)$` 与真实后验 `$P(h^1, h^2)$` 之间的 KL 散度来寻找该分布族中的成员。通过这种方法，我们可以很容易地在 `DBM` 中采样 `$h^1, h^2$` 并更新参数。
 
 # 11.2.2. 针对实值的 RBM
 
-在许多实际应用（如图像和音频），高斯 RBM (GBBM) 是处理实值的常用方法，它假设可见单元是高斯分布。在这种假设下，DBM 通过等式(11.1) 定义了 $v$ 的联合概率：
+在许多实际应用（如图像和音频），高斯 `RBM` (`GBBM`) 是处理实值的常用方法，它假设可见单元是高斯分布。在这种假设下，`DBM` 通过等式(11.1) 定义了 `$v$` 的联合概率：
 
 ```
 $E(v, h) = \frac{1}{2}(v-\beta)^T(v-\beta) - h^T v$
 ```
 
-其中 $\beta \in \mathbb{R}^m$ 是 $v$ 的精度（均），$\odot$ 是哈达玛运算。。对于可见单元的条件分布 $P(v|h)$ 给出：
+其中 `$\beta \in \mathbb{R}^m$` 是 `$v$` 的精度（均），`$\odot$` 是哈达玛运算。对于可见单元的条件分布 `$P(v|h)$` 给出：
 
 ```
 $P(v|h) = \prod_{i} P(v_i|h)$
 ```
+
 ```
 $P(v_i|h) = \mathcal{N}(v_i | \sum_{j=1}^{m} W_{ij}h_j + b_i)$
 ```
+
+
 
 其中 $W_{ij}$ 是权重，$b_i$ 是偏置。
 
 # 11.3 自动编码器
 
 自动编码器 (AE) 是一种用于学习良好的潜表示的神经网络 [4]。通常，自动编码器由两部分组成：即编码器 $f(\cdot)$ 和解码器 $g(\cdot)$。这种示意如图 11.2(a) 所示。编码器将输入 $\mathbf{x} \in \mathbb{R}^m$ 映射到潜表示 $\mathbf{h} = f(\mathbf{x})$且 $f(\cdot)$ 是一个单层神经网络，$f(\mathbf{x}) = \sigma(\mathbf{W}^T\mathbf{x} + \mathbf{b})$，其中 $\mathbf{W}$ 和 $\mathbf{b}$ 是编码器的权重和偏置，$\sigma(\cdot)$ 是非线性函数，如 sigmoid 和 tanh。解码器将潜表示 $\mathbf{h}$ 映射为重构 $\hat{\mathbf{x}} \in \mathbb{R}^m$，即 $\hat{\mathbf{x}} = g(\mathbf{h})$且 $g(\cdot) = \sigma(\mathbf{W}'^T\mathbf{h} + \mathbf{b}')$。
-
-
-
-
 
 ## 用于特征表示的深度学习
 
@@ -5538,10 +4682,6 @@ $KL(\rho|\rho_j)$ 是一个凸函数，在 $\rho_j=\rho$ 时取极值。因此�
 - 盐点噪声 (SP)，其中 $x$ 的元素被置为其可能的最大值（通常为 1）
 重构数据 $\hat{x}$ 被用于自动编码器。
 
-
-
-
-
 ## 特征表示的深度学习
 
 图像。在卷积神经网络（ConvNet）中，特征检测器被称为滤波器（filter）或核（kernel），获得的特征被称为特征图（feature map）。图 11.5 给了一个卷积操作的示例，输入为 5x5 矩阵，核为 3x3 矩阵。3x3 核在 5x5 矩阵上从左到右、从上到滑动，生成右侧所示的特征图。卷积通过核与输入特征图的子块（sub-patch）相乘然后求和来实现。例如，图中给出了 5x5 矩阵中灰色子块与核的计算。
@@ -5550,7 +4690,7 @@ $KL(\rho|\rho_j)$ 是一个凸函数，在 $\rho_j=\rho$ 时取极值。因此�
 
 > 图 11.5：卷积的插图。
 
-卷积层（Conv layer）中有三个参数，即*深度（depth）、*步长（stride）和*零填充（zero-padding）。*深度*对应于我们想要使用的滤波器数量。卷积层可以有许多滤波器，每个滤波器都学习识别输入中不同的内容。例如，如果第一个卷积层接收原始输入数据，那么沿深度维度的神经元会在存在定向边缘或色块时被激活。在图 11.4 所示的简单网络中，第一层卷积和第二层卷积的深度分别为 4 和 6。*步长*指定了我们在输入图上滑动滤波器时跳过多少个像素。当步长为 1 时，我们每次移动滤波器一个像素，如图 11.5 所示。当步长为 2 时，我们在滑动滤波器时每次跳过 2 个像素。这将产生空间上较小的输出。我们可以在输入的边界周围填充零，这被称为*零填充*。该尺寸是一个超参数。零填充的特征是它允许我们控制输出卷的的尺寸。假设输入为 $W \times H \times K$，其中 $W$ 和 $H$ 是特征图的宽度和高度，$K$ 是特征图的数量。例如，对于具有 RGB 通道的彩色图像，我们有 $K=3$。设卷积层的感受野大小（滤波器尺寸）为 $F$，滤波器数量、应用它们的步长为 $S$，边界使用的零填充量为 $P$；那么卷积后的输出值为 $W = (W - F + 2P)/S + 1$ 和 $H = (H - F + 2P)/S + 1$。例如，对于 $7 \times 7$ 的输入和步长为 1、填充为 0 的 $4 \times 3 \times 3$ 滤波器，我们得到 $5 \times 5 \times 4$ 的输出。
+卷积层（Conv layer）中有三个参数，即`depth`（深度）、`stride`（步长）和`zero-padding`（零填充）。`depth`对应于我们想要使用的滤波器数量。卷积层可以有许多滤波器，每个滤波器都学习识别输入中不同的内容。例如，如果第一个卷积层接收原始输入数据，那么沿深度维度的神经元会在存在定向边缘或色块时被激活。在图 11.4 所示的简单网络中，第一层卷积和第二层卷积的深度分别为 4 和 6。`stride`指定了我们在输入图上滑动滤波器时跳过多少个像素。当步长为 1 时，我们每次移动滤波器一个像素，如图 11.5 所示。当步长为 2 时，我们在滑动滤波器时每次跳过 2 个像素。这将产生空间上较小的输出。我们可以在输入的边界周围填充零，这被称为`zero-padding`。该尺寸是一个超参数。零填充的特征是它允许我们控制输出卷的的尺寸。假设输入为 $W \times H \times K$，其中 $W$ 和 $H$ 是特征图的宽度和高度，$K$ 是特征图的数量。例如，对于具有 RGB 通道的彩色图像，我们有 $K=3$。设卷积层的感受野大小（滤波器尺寸）为 $F$，滤波器数量、应用它们的步长为 $S$，边界使用的零填充量为 $P$；那么卷积后的输出值为 $W = (W - F + 2P)/S + 1$ 和 $H = (H - F + 2P)/S + 1$。例如，对于 $7 \times 7$ 的输入和步长为 1、填充为 0 的 $4 \times 3 \times 3$ 滤波器，我们得到 $5 \times 5 \times 4$ 的输出。
 
 使用滤波器的卷积是一种线性操作。在卷积层中获得特征图后，将在这些特征图上应用非线性激活函数以学习非线性特征。修正线性单元（ReLU）是卷积网络中最广泛使用的激活函数，已被证明能缓解梯度消失问题。整流器定义为 $f(x) = max(0,x)$。
 
@@ -5560,7 +4700,7 @@ $KL(\rho|\rho_j)$ 是一个凸函数，在 $\rho_j=\rho$ 时取极值。因此�
 
 **图 11.6**：最大池化操作的插图。
 
-**池化层：**池化层通常周期性地插入 CNN 中连续的卷积层之间。它们的目标是逐渐缩小表示的空间尺寸，这有助于减少网络中的参数和计算量，并控制过拟合。池化层独立地作用于输入中的每个激活图，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的激活激活图上操作，使用使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。池化层在输入中的每个激活图上操作，并使用所选函数缩放其维度。
+**池化层：**池化层通常周期性地插入 CNN 中连续的卷积层之间。它们的目标是逐渐缩小表示的空间尺寸，这有助于减少网络中的参数和计算量，并控制过拟合。池化层独立地作用于输入中的每个激活图，并使用所选函数缩放其维度。
 
 *(注：由于原文文本中存在大量重复的句子和断句，译文已根据逻辑进行了平滑处理，以确保通顺。)*
 
@@ -5576,15 +4716,11 @@ $KL(\rho|\rho_j)$ 是一个凸函数，在 $\rho_j=\rho$ 时取极值。因此�
 
 （此处由于原文存在大量重复和乱码，翻译保留了核心逻辑结构）
 
-
-
-
-
 ## 用于特征表示的深度学习
 
 负采样，等式 (11.21) 近似为
 
-```python
+```
 $$\log \sigma(\mathbf{u}_{w_T}^\top \mathbf{v}_{w_t}) + \frac{1}{K} \sum_{i=1}^{K} \log \sigma(-\mathbf{u}_{w_i}^\top \mathbf{v}_{w_T}) \quad (11.22)$$
 ```
 
@@ -5592,13 +4728,13 @@ $$\log \sigma(\mathbf{u}_{w_T}^\top \mathbf{v}_{w_t}) + \frac{1}{K} \sum_{i=1}^{
 
 词袋模型（CBOW）不是使用中心词来预测上下文（句子中周围的词），而是根据上下文来预测当前词。更精确地说，CBOW 将每个当前词作为带有连续投影层的对线性分类器的输入，并预测当前词前后范围内的词 [39]。CBOW 的目标函数是最大化对数似然
 
-```python
+```
 $$\frac{1}{T} \sum_{t=1}^{T} \log P(w_t|w_{t-c}, \dots, w_{t-1}, w_{t+1}, \dots, w_{t+c}) \quad (11.23)$$
 ```
 
 且 $P(w_t|w_{t-c}, \dots, w_{t-1}, w_{t+1}, \dots, w_{t+c})$ 定义为
 
-```python
+```
 $$P(w_t|w_{t-c}, \dots, w_{t-1}, w_{t+1}, \dots, w_{t+c}) = \frac{\exp(\mathbf{u}_{w_t}^\top \mathbf{\hat{v}}_t)}{\sum_{w \in W} \exp(\mathbf{u}_{w}^\top \mathbf{\hat{v}}_t)} \quad (11.24)$$
 ```
 
@@ -5606,13 +4742,15 @@ $$P(w_t|w_{t-c}, \dots, w_{t-1}, w_{t+1}, \dots, w_{t+c}) = \frac{\exp(\mathbf{u
 
 skip-gram 等方法在类比任务上可能更好，但它们没有充分利用语料库的统计信息，因为它们是在独立的局部窗口上训练的，而不是全局共现计数。基于这一观察，GloVe [40] 使用了一种特定的加权最小二乘模型，在全局词-词共现计数上训练，从而有效地利用了统计信息。GloVe 的目标函数给出为
 
-```python
+```
 $$\min_{i,j} \sum f(X_{ij})(\mathbf{w}_i^\top \mathbf{v}_j - \log X_{ij})^2 \quad (11.25)$$
 ```
 
+
+
 其中 $X_{ij}$ 表示 $j$ 在 $i$ 上下文中出现的次数。$\mathbf{w}_i \in \mathbb{R}^d$ 是 $w_i$ 的词表示，$\mathbf{v}_j$ 是独立的上下文向量，$f(\cdot)$ 是权重函数。
 
-词嵌入可以捕捉词的语法和语义。例如，发现 vec(king)-man = vec(queen)，这说明 Skip-gram 学习的词表示编码了词的语义。词嵌入也可以通过对文档中出现的词的向量取平均值，作为文档的向量表示。
+词嵌入可以捕捉词的语法和语义。例如，发现 `vec(king) - man = vec(queen)`，这说明 `Skip-gram` 学习的词表示编码了词的语义。词嵌入也可以通过对文档中出现的词的向量取平均值，作为文档的向量表示。
 
 ## 294 机器学习与数据分析中的特征工程
 
@@ -5628,7 +4766,7 @@ $$\min_{i,j} \sum f(X_{ij})(\mathbf{w}_i^\top \mathbf{v}_j - \log X_{ij})^2 \qua
 
 循环网络（RNN）是一个强大的概念，允许在神经网络架构中使用循环来对句子和视频等序列数据进行建模。循环网络接受序列输入并产生输出序列。这类模型对于序列到序列（sequence-to-sequence）学习特别有用。
 
-图 11.7 给出了 RNN 架构的插图。图的左侧显示了一个折叠的 RNN，它有一个自循环，即在给定输入 **x** 的情况下，隐藏状态 **h** 用于更新自身。为了展示 RNN 如何工作，我们把 RNN 展开为一个序列，如图 11.7 的右侧所示。RNN 接受序列 **x_1, x_2, \dots, x_t** 作为输入，在每个步骤 **t**，**x_t** 是一个 *d* 维向量。例如，如果输入是一个句子，那么句子的每个词 **w_t** 都使用 Skip-gram 等嵌入方法表示为向量 **x_t**。在每个时间步 **t**，上一个步骤的输出 **h_{t-1}** 和当前输入 **x_t** 被用于更新隐藏状态 **h_t**，如下：
+图 11.7 给出了 RNN 架构的插图。图的左侧显示了一个折叠的 RNN，它有一个自循环，即在给定输入 **x** 的情况下，隐藏状态 **h** 用于更新自身。为了展示 RNN 如何工作，我们把 RNN 展开为一个序列，如图 11.7 的右侧所示。RNN 接受序列 **x_1, x_2, \dots, x_t** 作为输入，在每个步骤 **t**，**x_t** 是一个 *d* 维向量。例如，如果输入是一个句子，那么句子的每个词 **w_t** 都使用 `Skip-gram` 等嵌入方法表示为向量 **x_t**。在每个时间步 **t**，上一个步骤的输出 **h_{t-1}** 和当前输入 **x_t** 被用于更新隐藏状态 **h_t**，如下：
 
 ```python
 h_t = W_{hh}h_{t-1} + W_{xh}x_t
@@ -5646,37 +4784,39 @@ h_t = W_{hh}h_{t-1} + W_{xh}x_t
 
 ```python
 z_t = \sigma(W_z x_t + U_z h_{t-1} + b_z)
+
 r_t = \sigma(W_r x_t + U_r h_{t-1} + b_r)
+
 \tilde{h}_t = \tanh(W_h x_t + U_h (r_t \odot h_{t-1}) + b_h)
+
 h_t = (1 - z_t) \odot h_{t-1} + z_t \odot \tilde{h}_t
 ```
 
-其中 $z_t$ 是更新门，$r_t$ 是重置门，$\tilde{h}_t$ 是候选隐藏状态。W_z, W_r, W_h$ 和 $U_z, U_r, U_h$ 是权重，$b_z, b_r, b_h$ 是偏置。
+其中 $z_t$ 是更新门，$r_t$ 是重置门，$\tilde{h}_t$ 是候选隐藏状态。$W_z, W_r, W_h$ 和 $U_z, U_r, U_h$ 是权重，$b_z, b_r, b_h$ 是偏置。
 
 ### 11.5.4 长期记忆
 
-LSTM 模型的主要思想是记忆单元 $\mathbf{c}_t$，它记录了到 $t$ 为止观测到的历史。$\mathbf{c}_t$ 是两个部分的和：(1) 经过 sigmoid 门 $\mathbf{f}_t$ 调节的记忆单元 $\mathbf{c}_{t-1}$ 以及 (2) 经过另一个 sigmoid 门 $\mathbf{i}_t$ 调节的 $\mathbf{g}_t$。sigmoid 门 $\mathbf{f}_t$ 用于选择性地忘记之前的记忆，而 $\mathbf{i}_t$ 用于选择性地接受当前输入。$\mathbf{i}_t$ 是控制输出的门。LSTM 的更新规则为：
+LSTM 模型的主要思想是记忆单元 $\mathbf{c}_t$，它记录了到 $t$ 为止观测到的历史。$\mathbf{c}_t$ 是两个部分的和：(1) 经过 sigmoid 门 $\mathbf{f}_t$ 调节的记忆单元 $\mathbf{c}_{t-1}$ 以及 (2) 经过另一个 sigmoid 门 $\mathbf{i}_t$ 调节的 $\mathbf{g}_t$。sigmoid 门 $\mathbf{f}_t$ 用于选择性地忘记之前的记忆，而 $\mathbf{i}_t$ 用于选择性地接受当前输入。$\mathbf{o}_t$ 是控制输出的门。LSTM 的更新规则为：
 
 ```python
-$$i_t = \sigma(W_i x_t + U_i h_{t-1} + b_i)$$
-$$f_t = \sigma(W_f x_t + U_f h_{t-1} + b_f)$$
-$$o_t = \sigma(W_o x_t + U_o h_{t-1} + b_o)$$
-$$g_t = \tanh(W_g x_t + U_g h_{t-1} + b_g)$$
-$$c_t = f_t \odot c_{t-1} + i_t \odot g_t$$
-$$h_t = o_t \odot \sigma(c_t)$$
+i_t = \sigma(W_i x_t + U_i h_{t-1} + b_i)
+
+f_t = \sigma(W_f x_t + U_f h_{t-1} + b_f)
+
+o_t = \sigma(W_o x_t + U_o h_{t-1} + b_o)
+
+g_t = \tanh(W_g x_t + U_g h_{t-1} + b_g)
+
+c_t = f_t \odot c_{t-1} + i_t \odot g_t
+
+h_t = o_t \odot \sigma(c_t)
 ```
 
-其中 $i_t$ 是输入门，$f_t$ 是遗忘门，$o_t$ 是输出门，$g_t$ 是新的记忆单元，$\sigma(\cdot)$ 表示 sigmoid 函数，$\odot$ 表示哈玛积。LSTM 在时间步 $t$ 处单元的插图如图 11.8(b) 所示。
+其中 $i_t$ 是输入门，$f_t$ 是遗忘门，$o_t$ 是输出门，$g_t$ 是新的记忆单元，$\sigma(\cdot)$ 表示 sigmoid 函数，$\odot$ 表示哈达玛积。LSTM 在时间步 $t$ 处单元的插图如图 11.8(b) 所示。
 
 ## 11.6 生成对抗网络与变分自编码器
 
 在本节中，我们将介绍两种最近提出的非常深的生成模型，即生成对抗网络和变分自编码器。
-
-
-
-
-
-## 用于特征表示的深度学习
 
 ### 11.6.1 生成对抗网络
 
@@ -5686,13 +4826,13 @@ $$h_t = o_t \odot \sigma(c_t)$$
 
 生成对抗网络（GAN）[16] 是最流行的生成深度模型之一。GAN 的核心是在判别器 D 和生成器 G 之间进行极小-极大值博弈，即对抗训练。判别器试图区分样本来自真实世界还是由生成器生成，而生成器则试图生成能够欺骗判别器的样本。图 11.9 给出了 GAN 框架的示意图。GAN 取从先验分布 $p(z)$ 中采样的噪声 $z$ 作为输入，并将噪声映射到数据空间 $G(z;\theta)$。先验分布 $p(z)$ 的选择可以是均匀分布或高斯分布。我们还定义了第二个多层感知器 $D(x;\theta_d)$，它输出一个标量。$D(x)$ 代表 $x$ 来自真实世界数据而非生成数据的概率。D 的训练是为了最大化为训练示例和来自 G 的样本分配正确标签的概率。我们同时训练 D 和 G，以遵循具有值 $V(D,G)$ 的双玩家极小-极大值博弈。
 
-```
+```python
 min max V(D,G)
 ```
 
 GAN 的训练可以通过更新 G 和 D 的参数，使用极小-极大随机梯度下降来完成。在无监督的情况下训练完模型后，我们可以将判别器视为特征提取器：D 的前几层从 $x$（即真实数据）中提取特征。然后我们可以移除最后几层，此时 D 的输出就是提取出的特征。从这个意义上说，我们将 GAN 视为无监督学习算法，尽管 GAN 的主要目的是学习 $p(x)$。
 
-GAN 是一个通用的对抗训练框架，通过设计不同的生成器、判别器和损失函数，可以用于各种领域 [6,65,74]。例如，InfoGAN [6] 通过将噪声分为两部分来学习解耦表示，即解耦代码 $c$ 和不可压缩噪声 $z$，使得解耦代码 $c$ 可以控制生成图像的身份和光照等属性。SeqGAN [74] 将数据生成器建模为强化学习中的策略，并将 GAN 扩展到文本生成。
+GAN 是一个通用的对抗训练框架，通过设计不同的生成器、判别器和损失函数，可以用于各种领域 [6,65,74]。例如，`InfoGAN` [6] 通过将噪声分为两部分来学习解耦表示，即解耦代码 $c$ 和不可压缩噪声 $z$，使得解耦代码 $c$ 可以控制生成图像的身份和光照等属性。`SeqGAN` [74] 将数据生成器建模为强化学习中的策略，并将 GAN 扩展到文本生成。
 
 ### 11.6.2 变分自动编码器
 
@@ -5700,29 +4840,27 @@ GAN 是一个通用的对抗训练框架，通过设计不同的生成器、判�
 
 图 11.10：VAE 框架的示意图。
 
-变分自动编码器（VAE）[30] 是用于无监督表示学习的流行生成模型。它可以完全通过基于梯度的方法进行训练。通常，VAE 包含一个标准自动编码器（通过最小化重构误差将输入编码到隐空间）以及对隐空间进行贝叶斯正则化（强制隐藏代码的后验分布匹配先验分布）。图 11.10 展示了 VAE 如何从模型中生成样本，VAE 首先从先验分布 $p(z)$ 中抽取一个样本。最后，通过可微生成器 $g(z)$ 从 $z$ 采样得到 $x$。同样，$x$ 从分布 $p_\phi(z|x) = p_\theta(z|x)$ 中采样。在训练期间，使用近似推理（即编码器 $q_\phi(z|x)$）来获取 $z$，而 $p_\theta(x|z)$ 被视为解码器网络。变分自动编码器的核心思想是通过最大化下界 $L(\theta;\phi)$ 来进行训练的；
+变分自动编码器（VAE）[30] 是用于无监督表示学习的流行生成模型。它可以完全通过基于梯度的方法进行训练。通常，VAE 包含一个标准自动编码器（通过最小化重构误差将输入编码到隐空间）以及对隐空间进行贝叶斯正则化（强制隐藏代码的后验分布匹配先验分布）。图 11.10 展示了 VAE 如何从模型中生成样本，VAE 首先从先验分布 $p(z)$ 中抽取一个样本。最后，通过可微生成器 $g(z)$ 从 $z$ 采样得到 $x$。同样，$x$ 从分布 $p_\phi(z|x) = p_\theta(z|x)$ 中采样。在训练期间，使用近似推理（即编码器 $q_\phi(z|x)$）来获取 $z$，而 $p_\theta(x|z)$ 被视为解码器网络。变分自动编码器的核心思想是通过最大化下界 $L(\theta;\phi)$ 来进行训练的：
 
-```
+```python
 $L(\theta; \phi) = -D_{KL}(q_{\phi}(z|x)||p(z)) + E_{q_{\phi}(z|x)}[\log p_{\theta}(x|z)] \le \log p_{\theta}(x|x)$
 ```
 
-其中 $D_{KL}(q_{\phi}(z|x)||p(z))$ 是 KL 散度，用于衡量两个分布 $q_{\phi}(z|x)$ 和 $p(z)$ 的相似性。变分自动编码器的核心思想是通过最大化下界 $L(\theta;\phi)$ 来进行训练的；
+其中 $D_{KL}(q_{\phi}(z|x)||p(z))$ 是 KL 散度，用于衡量两个分布 $q_{\phi}(z|x)$ 和 $p(z)$ 的相似性。变分自动编码器的核心思想是通过最大化下界 $L(\theta;\phi)$ 来进行训练的：
 
-```
+```python
 $L(\theta; \phi) = -D_{KL}(q_{\phi}(z|x)||p(z)) + E_{q_{\phi}(z|x)}[\log p_{\theta}(x|z)] \le \log p_{\theta}(x|x)$
 ```
+
+
 
 其中 $D_{KL}(q_{\phi}(z|x)||p(z))$ 是 KL 散度，用于衡量两个分布 $q_{\phi}(z|x)$ 和 $p(z)$ 的相似性。
-
-
-
-
 
 ## 用于特征表示的深度学习
 
 ## 结合深度学习模型
 
-我们已经介绍了多种深度学习模型，它们可以应用于不同的领域。例如，LSTM 主要用于处理文本等序列化数据，而 CNN 在图像方面非常强大。在实际工作中，我们需要处理与不同领域相关的任务，这是非常常见的。在这种情况下，我们可以结合不同的深度学习模型来提出一个适用于当前任务的新框架。例如，对于一个给定文本查询的信息检索任务，我们需要检索与查询匹配的图像。我们需要使用 LSTM 或 Word2Vec 来学习捕获查询语义的表示。同时，我们需要使用 CNN 来学习描述图像的特征。然后，我们可以使用 LSTM 和 CNN，使得匹配查询的表示相似性最大化，而不匹配查询的表示相似性最小。另一个例子是视频动作识别，我们需要对视频的动作进行分类。由于视频是由帧组成的，且帧与帧之间存在依赖关系，视频本质上是序列性的，LSTM 非常适合此类数据。然而，LSTM 不擅长提取图像。因此，我们需要使用 CNN 从视频的每一帧中提取特征，然后将这些特征用于 LSTM 以学习视频的表示 [68]。同样，对于图像描述，我们可以使用 CNN 提取特征，并使用 LSTM 根据图像特征生成描述 [71]。我们只是列举了几个例子，还有许多其他例子。总来说，我们可以将深度学习作为特征提取工具，从特定领域提取特征。然后我们可以为我们想要研究的问题定义损失函数和深度学习算法。需要注意的是，当我们将不同的模型结合在一起时，它们是端到端训练的。也就是说，我们并不单独训练这些模型，而是将新模型视为一个统一模型。这通常比单独训练每个模型然后组合它们具有更好的性能。
+我们已经介绍了多种深度学习模型，它们可以应用于不同的领域。例如，`LSTM` 主要用于处理文本等序列化数据，而 `CNN` 在图像方面非常强大。在实际工作中，我们需要处理与不同领域相关的任务，这是非常常见的。在这种情况下，我们可以结合不同的深度学习模型来提出一个适用于当前任务的新框架。例如，对于一个给定文本查询的信息检索任务，我们需要检索与查询匹配的图像。我们需要使用 `LSTM` 或 `Word2Vec` 来学习捕获查询语义的表示。同时，我们需要使用 `CNN` 来学习描述图像的特征。然后，我们可以使用 `LSTM` 和 `CNN`，使得匹配查询的表示相似性最大化，而不匹配查询的表示相似性最小。另一个例子是视频动作识别，我们需要对视频的动作进行分类。由于视频是由帧组成的，且帧与帧之间存在依赖关系，视频本质上是序列性的，`LSTM` 非常适合此类数据。然而，`LSTM` 不擅长提取图像。因此，我们需要使用 `CNN` 从视频的每一帧中提取特征，然后将这些特征用于 `LSTM` 以学习视频的表示 [68]。同样，对于图像描述，我们可以使用 `CNN` 提取特征，并使用 `LSTM` 根据图像特征生成描述 [71]。我们只是列举了几个例子，还有许多其他例子。总来说，我们可以将深度学习作为特征提取工具，从特定领域提取特征。然后我们可以为我们想要研究的问题定义损失函数和深度学习算法。需要注意的是，当我们将不同的模型结合在一起时，它们是端到端训练的。也就是说，我们并不单独训练这些模型，而是将新模型视为一个统一模型。这通常比单独训练每个模型然后组合它们具有更好的性能。
 
 ## 参考文献
 
@@ -5767,10 +4905,6 @@ $L(\theta; \phi) = -D_{KL}(q_{\phi}(z|x)||p(z)) + E_{q_{\phi}(z|x)}[\log p_{\the
 - [39] Tomas Mikolov, Kai Chen, Greg Corrado, and Jeffrey Dean. Efficient estimation of word representations in vector space. arXiv preprint arXiv:1301.3781, 2013.
 - [40] Tomas Mikolov, Martin Karafáti, Lukáš Burget, Jan Carnocky, and Sanjeev Khdanpur. Recurrent neural network based language model. In INTERSPEECH, pages 1045–1048, 2010.
 - [41] Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg S Corrado, and Jeffrey Dean. Distributed representations of words and phrases and their compositionality. In NIPS, pages 3111–3119, 2013.
-
-
-
-
 
 ## 用于特征表示的深度学习
 
@@ -5846,10 +4980,6 @@ $L(\theta; \phi) = -D_{KL}(q_{\phi}(z|x)||p(z)) + E_{q_{\phi}(z|x)}[\log p_{\the
 
 - [75] Shengjia Zhao, Jiaming Song, and Stefano Ermon. 从深度生成模型中学习特征。在 ICML, pages 4091–4099, 2017.
 
-
-
-
-
 ## 12.1 引言
 
 社交媒体平台连接了数百万个人并允许信息传播。社交媒体的属性使其成为通信的理想工具，然而，具有恶意意图的实体有强烈的动机滥用社交网络来获取利润或权力，通过提高自己的知名度、操纵在线讨论以及针对特定群体进行攻击 [22, 29, 74]。
@@ -5902,25 +5032,19 @@ $L(\theta; \phi) = -D_{KL}(q_{\phi}(z|x)||p(z)) + E_{q_{\phi}(z|x)}[\log p_{\the
 
 此外，我们限制了来自给定账户的最新活动。这是 Twitter API 严格速率限制的结果；Botometer 的每次评估都需要调用每个端点。
 
-
-
-
-
-316 机器学习与数据分析中的特征工程
-
 通过 Twitter API 收集的关于目标用户的公共数据和元数据被提炼为 1,150 个特征。这些特征大致分为：朋友、推文内容与情感、网络模式以及活动时间序列。我们展示了每类中各个特征的详细信息。
 
-## 12.3.1.1 基于用户的特征
+### 12.3.1.1 基于用户的特征
 
-与其他分析 Twitter 用户及其行为的系统一样，我们利用了从元数据中提取的用户元数据特征 [29, 60]。我们首先统计了用户 *screen_name*（用户名）和 *user_name*（显示）的长度和数字个数（两者在 Twitter 上可能不同）。用户还可以提供关于自己的文本 *description*（描述）；我们也考虑了这种描述的长度，以及在推文中观察到的唯一描述数量，这种最简单的形式也能为分类提供信号。
+与其他分析 Twitter 用户及其行为的系统一样，我们利用了从元数据中提取的用户元数据特征 [29, 60]。我们首先统计了用户 `screen_name`（用户名）和 `user_name`（显示）的长度和数字个数（两者在 Twitter 上可能不同）。用户还可以提供关于自己的文本 `description`（描述）；我们也考虑了这种描述的长度，以及在推文中观察到的唯一描述数量，这种最简单的形式也能为分类提供信号。
 
-用户活动和连接性特征包括 *friends*（朋友）和 *followers*（粉丝）的数量，以及默认活动类型，如 *tweet*（推文）、*retweet*（转发）、*mention*（提及）和 *reply*（回复）。我们考虑了每种类型的推文总数以及它们的时间变化率。关于这些社交关系和推文类型的进一步讨论将在下一节中。
+用户活动和连接性特征包括 `friends`（朋友）和 `followers`（粉丝）的数量，以及默认活动类型，如 `tweet`（推文）、`retweet`（转发）、`mention`（提及）和 `reply`（回复）。我们考虑了每种类型的推文总数以及它们的时间变化率。关于这些社交关系和推文类型的进一步讨论将在下一节中。
 
-当账户创建后，在更改之前，个人资料字段（如个人资料）使用默认值，直到每个字段被使用；在此期间我们使用二值特征来表示账户是否具有这些 *default properties*（默认属性*我们我们还提取了关于 *account age*（账号年龄）和 *time-zone*（时区）的特征。该类别的完整特征列表请见表 1。
+当账户创建后，在更改之前，个人资料字段（如个人资料）使用默认值，直到每个字段被使用；在此期间我们使用二值特征来表示账户是否具有这些 `default properties`（默认属性）。我们还提取了关于 `account age`（账号年龄）和 `time-zone`（时区）的特征。该类别的完整特征列表请见表 1。
 
-## 12.3.1.2 朋友特征
+### 12.3.1.2 朋友特征
 
-Twitter 鼓励通过关注其他账户来建立社交连接。用户可以关注任何公开资料，且这种关系不需要是对称的。我们考虑了粉丝关系的益处：如果 A 关注 B，那么 B 就是 A 的朋友。在这种设定下，用户通过转发广播所有推文来传播内容。推文可以通过提及特定的用户来指向一个或多个特定用户。通过链接类型对用户进行分组，我们为每个组单独提取了 *friend-features*（朋友特征）。
+Twitter 鼓励通过关注其他账户来建立社交连接。用户可以关注任何公开资料，且这种关系不需要是对称的。我们考虑了粉丝关系的益处：如果 A 关注 B，那么 B 就是 A 的朋友。在这种设定下，用户通过转发广播所有推文来传播内容。推文可以通过提及特定的用户来指向一个或多个特定用户。通过链接类型对用户进行分组，我们为每个组单独提取了 `friend-features`（朋友特征）。
 
 然后提取组内账户的元数据分组分布。我们考虑了朋友、粉丝和推文数量的分布，个人资料长度、账号年龄以及时区偏移的分布。对于每个分布，我们计算了平均值、最小值和中位数，以及偏度、峰度和熵。我们还考虑了组内代表的唯一语言数量以及语言使用的熵。还包含了具有默认个人资料信息的用户百分比。该类别中的所有特征都列在表 2.1 中。
 
@@ -5981,13 +5105,13 @@ Twitter 鼓励通过关注其他账户来建立社交连接。用户可以关注
 | 具有默认图片的比例 |
 | 分布类型。计算并使用以下统计作为单个特征：最小值、最大值、中位数、平均值、偏度、峰度和熵。 |
 
-## 12.3.1.3 网络特征
+### 12.3.1.3 网络特征
 
 网络结构可以包含用于表征通信类型的信息。网络特征在机器人检测背景下已被利用 [72]。我们的系统构建了三种网络：**retweet**（转发）、**mention**（提及）和 **hashtag**（标签）。转发和提及网络被表示为用户为节点、推文为链接的有向网络。链接方向对应转发或提及。
 
 标签是 (#) 符号的前缀，在 Twitter 中用作主题标识符。标签共同网络是以标签为节点的权重无向网络。当两个标签出现在同一条推文中时，它们被连接起来，权重取决于出现的频率。考虑到数据的局部性，我们利用了量化局部交互的简单网络特征。这些指标计算成本最低。我们考虑的最直接的特征是节点和边数量，以及网络的密度。我们还包含了从局部聚类系数（入/出强度）中提取的特征。仅包含对称链接的转发和提及网络子图也被考虑并用于特征提取。该类别的完整特征列表见表 2.3。
 
-## 12.3.1.4 内容与语言特征
+### 12.3.1.4 内容与语言特征
 
 推文的内容和语言分析已广泛 [13,21,22,51,58,64]。我们简单的内容特征来自词数和文本熵。
 
@@ -6004,10 +5128,6 @@ Twitter 鼓励通过关注其他账户来建立社交连接。用户可以关注
 - 词性（POS）标签。有九种标签：动词、名词、形容词、情态动词、限定词、感叹词、副词、疑问词和代词。
 - 其他内容通过应用词性（POS）标记技术提取，该技术可以识别不同类型的自然语言。我们考虑了九种标签：动词、名词、形容词、情态动词、限定词、感叹词、副词、疑问词和代词。POS 标签出现的分布被用于提取特征，以反映不同语言风格的使用 [15]。
 
-
-
-
-
 ## 机器学习与数据分析中的特征工程
 
 此处不包含表情符号，尽管近期探索社交媒体中表情符号流行程度的研究 [3,59] 表明包含它是可能的。
@@ -6016,17 +5136,17 @@ Twitter 鼓励通过关注其他账户来建立社交连接。用户可以关注
 
 我们注意到，内容特征和情感特征都是特定语言的，并且是在英语推文语料库上训练的。通过使用不包含这两个类别的训练模型，可以进行语言无关的评估。
 
-## 12.3.1. 时间特征
+### 12.3.1. 时间特征
 
 时间特征被证明在分析内容产生与消费、在线活动识别以及在线讨论的演变方面是有帮助的 [16, 30, 35, 79]。基础特征表明了账户活跃的频率；人类的独特之处在于每天不会发数百条推文。这些特征列在用户类中。更复杂的时间特征是通过连续推文、转发推文和提及（mentions）之间时间间隔的分布提取的。表 12.6 列出了该类中的特征。
 
-## 12.3.2. 特征工程的方向
+### 12.3.2. 特征工程的方向
 
 随着 Twitter 引入新功能以及使用模式随时间演变，人们可能会考虑创建新特征来利用这些额外行为。例如，Twitter 最近引入了引用推文（quoted tweets），这本质上是带有用户提供的额外评论的转发。
 
 现代机器学习技术也可以从现有数据中提取复杂的特征。深度学习和词嵌入是极具前景的技术，可以利用它们提取关于网络结构 [39,69] 以及语言和情感 [25,37,57] 的特征。该领域的研究可能会产生不仅能捕捉基本统计数据，还能捕捉文本表达的语义的特征 [42,81]。当然，这些更复杂的分析计算成本必须与对快速分类结果的渴望之间进行权衡。我们将在第 12.4 节更详细地讨论使用深度学习近期技术的影响。
 
-## 12.3.3 特征分析
+### 12.3.3 特征分析
 
 利用来自可用数据和元数据各个领域的广泛量信号，我们想要量化特征之间的交互。通过检查特征之间的两两相关性，我们注意到某些特征是相关的，因此在社交机器人检测的背景下可能是冗余的。
 
@@ -6101,17 +5221,15 @@ Twitter 鼓励通过关注其他账户来建立社交连接。用户可以关注
 
 ## 12.3.4 特征选择
 
-通过来自可用数据和元数据多个领域的广泛信号，我们想要量化特征之间的交互。我们构建了一个流水线，通过特征子集评估模型。该流水线使用了 scikit-learn [67] 提供的现成算法。我们的模型是在两个数据集上训练的：Lee 等人 [50] 的蜜罐数据集和手动标注的数据 [78]。我们使用了随机森林、逻辑回归和决策树的曲线下面积（AUC）。
+通过来自可用数据和元数据多个领域的广泛信号，我们想要量化特征之间的交互。我们构建了一个流水线，通过特征子集评估模型。该流水线使用了 `scikit-learn` [67] 提供的现成算法。我们的模型是在两个数据集上训练的：Lee 等人 [50] 的蜜罐数据集和手动标注的数据 [78]。我们使用了随机森林、逻辑回归和决策树的曲线下面积（AUC）。
 
-## 12.3.1 特征类别
+### 12.3.1 特征类别
 
 为了比较特征类型的判别能力，我们独立针对每个类别训练了模型。图 12.3 显示了使用不同方法的性能。我们在元数据方面取得了最佳性能。内容特征也是有效的。两者的 AUC 均超过 0.9。其他特征类的 AUC 超过 0.8。除了在考虑所有特征时提供了最佳准确率外，在限制于单个类别时，随机森林模型的结果不亚于其他方法。
 
-
-
-
-
+```
 ![](img/f9b50d48a9ba5d6b2e7f6b9761812434_343_0.png)
+```
 
 **图 12.4:** 使用前 N 个特征训练的模型，通过 AUC 给出的分类器准确率，按不同特征选择方法进行排序。
 
@@ -6145,9 +5263,6 @@ Twitter 鼓励通过关注其他账户来建立社交连接。用户可以关注
 - [8] Luca Aiello, Martina Deplano, Riccardo Schifanella, and Giancarlo Ruffo. Identifying correlated bots in Twitter. In Proc. of the ACM Intl. Conf. on Computer Supported Cooperative Work & Social Computing, pages 839–851. ACM, 2015.
 - [9] Recent advances in DNN technologies allow persona generation [9, 52] and and conversation models for social bots [53, 75].
 - [10] Generative adversarial nets can be used to simultaneously learn generative models for social bots and how to trick detection systems [38, 71].
-
-
-
 
 ## 用于社交机器人检测的特征工程
 
@@ -6251,9 +5366,6 @@ Twitter 鼓励通过关注其他账户来建立社交连接。用户可以关注
 
 [68] Hanchuan Peng, Fuhui Long, and Chris Ding. 基于互信息最小依赖、最大相关性和最小冗余准则的特征选择。IEEE Transactions on Pattern Analysis and Machine Intelligence, 27(8):1226–1238, 2005.
 
-
-
-
 ### 社交机器人检测的特征工程
 
 [69] Bryan Perazzi, Rami Al-Rfou, and Steven Skiena. Deepwalk: 社交表示的在线学习. 在 *Proc. of the Intl. Conf. on Knowledge Discovery and Data Mining*, pages 701–710. ACM, 2014.
@@ -6329,10 +5441,6 @@ Twitter 鼓励通过关注其他账户来建立社交连接。用户可以关注
 
 本章旨在对软件分析中的特征生成和工程进行介绍，并展示如何提取特定的领域特征并应用于三个工程场景，即缺陷预测、崩溃发布预测和开发者流失预测。这三个案例研究分别从软件制品中提取了不同类型的特征。
 
-
-
-
-
 # 软件分析的特征生成与工程 337
 
 并基于这些特征构建预测模型。在这三个案例研究中使用的某些特征是相关的，而另一些特征是特定的。
@@ -6364,7 +5472,9 @@ Jurecko 和 Madeyski 提出了 20 种代码特征来预测缺陷特征 [23]。�
 
 - 1. 方法缺乏内聚性 (LCOM)：Henderson-Sellers [20] 提出的另一种 LCOM 指标，即：
 
-$$LOCM3 = \frac{\sum_{j=1}^{m} m(A_j) - m}{m} (13.1)$$
+```
+LOCM3 = \frac{\sum_{j=1}^{m} m(A_j) - m}{m} (13.1)
+```
 
 在上述方程中，$m$ 是类中的方法数，$a$ 是类中的属性数，$m(A)$ 是访问属性 $A$ 的方法数。
 
@@ -6412,10 +5522,6 @@ $$LOCM3 = \frac{\sum_{j=1}^{m} m(A_j) - m}{m} (13.1)$$
 ### 13.2.1.2 过程特征
 
 可以为源代码文件提取各种过程特征，通常它们可以被分为三类：开发者行为、变更熵和提交历史 [45]。
-
-
-
-
 
 开发者行为：由于源代码文件是由不同的开发者创建/修订的，从开发者行为中提取的特征可能用于预测存在缺陷的文件。先前的研究已经提出了许多开发者行为特征 [4, 7, 37, 43, 45]；这些特征包括：
 
@@ -6470,11 +5576,6 @@ Yang 等人比较了预测模型在即时缺陷预测中的性能，发现 ELAR 
 
 移动应用程序的质量对其用户体验、评分和整体成功有重要影响。与传统应用程序相比，移动应用往往有更多的发布。在许多情况下，移动开发者可能会发布质量差的版本，例如导致应用崩溃的版本 [61]。崩溃发布可能会导致用户卸载应用，并可能给出负评，从而影响应用的收入。因此，及早识别崩溃发布（例如在发布日期之前）可以帮助移动应用开发者警示。
 
-
-
-
-[content]
-
 # 表 13.4：用于识别崩溃发布的特征
 
 | 维度 | 名称 | 定义 |
@@ -6496,7 +5597,7 @@ Yang 等人比较了预测模型在即时缺陷预测中的性能，发现 ELAR 
 | | NFC | 修复 bug 的提交次数 |
 | | Fuzzy_score | 提交日志的模糊集评分 |
 | | NB_score | 提交日志的朴素贝叶斯评分 |
-|get | NBM_score | 提交日志的多项朴素贝叶斯评分 |
+| | NBM_score | 提交日志的多项朴素贝叶斯评分 |
 | | DMN_score | 提交日志的判别原生多项贝叶斯评分 |
 | | COMP_score | 提交日志的补原生贝叶斯评分 |
 
@@ -6512,7 +5613,7 @@ Yang 等人比较了预测模型在即时缺陷预测中的性能，发现 ELAR 
 
 直观上，如果发布发布期间更改了许多源文件，它可能更难以理解，并且需要更多工作来检查所有更改的位置。在预测文献中，先前的研究发现，涉及的子系统数量可能是缺陷的指标 [37]，而且发布中的更改越分散，就越容易包含故障。因此，子系统的数量被用作特征的代理。在同一层级包含许多修改的发布更有可能是崩溃发布。表 13.4 显示了构成扩散维度的五个特征。
 
-顶部目录名称和底部目录名称作为子系统名称来衡量 Top_NS 和 Bottom_NS。例如，如果 src/app/token/main.java 中的文件string了更改，则其顶部目录名称是 "src"，底部目录名称是 "java"。对于第 $i^{th}$ 次发布，顶部和底部目录名称集分别表示为 Top$_i$ 和 Bottom$_i$。对于连续两次发布（$i^{th}$ 和 $(i+1)^{th}$），Top_NS=$|Top_i \cap Top_{i+1}|$，Bottom_NS=$|Bottom_i \cap Bottom_{i+1}|$。
+顶部目录名称和底部目录名称作为子系统名称来衡量 Top_NS 和 Bottom_NS。例如，如果 `src/app/token/main.java` 中的文件string了更改，则其顶部目录名称是 "src"，底部目录名称是 "java"。对于第 $i^{th}$ 次发布，顶部和底部目录名称集分别表示为 Top$_i$ 和 Bottom$_i$。对于连续两次发布（$i^{th}$ 和 $(i+1)^{th}$），Top_NS=$|Top_i \cap Top_{i+1}|$，Bottom_NS=$|Bottom_i \cap Bottom_{i+1}|$。
 
 熵旨在衡量更改在不同文件或代码行之间的分布。高熵文件更有可能是崩溃发布，因此开发者需要检查跨文件的大量分散更改。研究人员提出了两种熵，即文件熵和变动熵 [19]。熵的计算公式为 $H(P) = -\sum_{k=1}^n p_k \log p_k$，其中 $n$ 是发布中文件的数量，$p_k \ge 0$ 是文件 $k$ 的概率，且 $p_k$ 满足 $\sum_{k=1}^n p_k=1$。为了计算文件熵，$p_k$ 的计算为当前发布与上一次发布之间包含文件 $k$ 更改的提交比例。为了计算变动熵，$p_k$ 的计算为当前发布与上一次发布之间包含文件 $k$ 更改的代码行数比例。
 
@@ -6522,7 +5623,7 @@ Yang 等人比较了预测模型在即时缺陷预测中的性能，发现 ELAR 
 
 ## 13.3.6 文本维度
 
-在发布应用程序期间，可能会许多提交。为了给文本评分，我们使用了 5 种分类器：模糊集 [67]朴素贝叶斯 [33]多项朴素贝叶斯 [33]判别原生多项贝叶斯 [56]以及补原生贝叶斯 [47]。与检测预测类似，可以使用各种预测模型预测崩溃发布。我们使用四种不同的算法构建，即朴素贝叶斯、决策树、kNN 和随机森林。它们发现朴素贝叶斯的性能最好，对应的 F1 和 AUC 分为 0.30 和 0.64。考虑到崩溃发布只占少数，准确预测它们是一个困难的问题。
+在发布应用程序期间，可能会许多提交。为了给文本评分，我们使用了 5 种分类器：模糊集 [67]、朴素贝叶斯 [33]、多项朴素贝叶斯 [33]、判别原生多项贝叶斯 [56] 以及补原生贝叶斯 [47]。与检测预测类似，可以使用各种预测模型预测崩溃发布。我们使用四种不同的算法构建，即朴素贝叶斯、决策树、kNN 和随机森林。它们发现朴素贝叶斯的性能最好，对应的 F1 和 AUC 分为 0.30 和 0.64。考虑到崩溃发布只占少数，准确预测它们是一个困难的问题。
 
 ## 13.4 从挖掘月报预测开发者流失的特征
 
@@ -6540,9 +5641,6 @@ Yang 等人比较了预测模型在即时缺陷预测中的性能，发现 ELAR 
 | 项目名称 | P1 | P2 |
 | 任务 | 1. 修复 UI 上的 bug，2. 实现 5 个新功能（ID XXX） | 为模型编写单元测试 |
 | 工作工时 | 168 | 128 |
-
-
-
 
 # 软件分析中的特征生成与工程
 
@@ -6591,10 +5689,6 @@ Yang 等人比较了预测模型在即时缺陷预测中的性能，发现 ELAR 
 ## 13.5 总结
 
 在本章中，我们展示了三个案例，说明了如何从软件构制品中生成特征。生成的特征可以作为机器学习引擎（例如分类）的输入，以实现某些软件任务的自动化。我们希望本章能激励更多的研究人员和开发者挖掘软件构制品以生成更多特征。
-
-
-
-
 
 ## 软件分析中的特征生成与工程
 
@@ -6649,10 +5743,7 @@ Yang 等人比较了预测模型在即时缺陷预测中的性能，发现 ELAR 
 -   [55] Harold Valdez Garcia and Emad Shihab. In Proceedings of the 11th Working Conference on Mining Software Repositories, pages 72–81. ACM, 2014.
 -   [56] Song Wang, Taiyue Liu, and Lin Tan. In Proceedings of the 38th International Conference on Software Engineering, pages 297–308. ACM, 2016.
 
-
-
-
-软件分析中的特征生成与工程 357
+# 软件分析中的特征生成与工程 357
 
 [57] Aja Whittaker. 导致 IT 员工离开的原因。Management Review, 88(9):8, 1999.
 
@@ -6710,76 +5801,9 @@ Wright 州立大学知识中心，俄亥俄州，代尔顿，美国
 
 # 用于机器学习和数据分析的特征工程
 
-在 76% 的使用社交媒体的人口中，Twitter 已成为一个重要信息来源。近年来，社交媒体网站在在线用户中变得极其流行。皮研究中心 2016 年的调查显示，69% 的美国人口访问社交网络网站。
+在 76% 的使用社交媒体的人口中，Twitter 已成为一个重要信息来源。
 
-# 用于机器学习和数据分析的特征工程
-
-在 76% 的使用社交媒体的人口中，Twitter 已成为一个重要信息来源。近年来，社交媒体网站在在线用户中变得极其流行。皮研究中心 2016 年的调查显示，69% 的美国人口访问社交网络网站。
-
-# 用于机器学习和数据分析的特征工程
-
-在 76% 的使用社交媒体的人口中，Twitter 已成为一个重要信息来源。近年来，社交媒体网站在在线用户中变得极其流行。皮研究中心 2016 年的调查显示，69% 的美国人口访问社交网络网站。
-
-# 用于机器学习和数据分析的特征工程
-
-在 76% 的使用社交媒体的人口中，Twitter 已成为一个重要信息来源。近年来，社交媒体网站在在线用户中变得极其流行。皮研究中心 2016 年的调查显示，69% 的美国人口访问社交网络网站。
-
-# 用于机器学习和数据分析的特征工程
-
-在 76% 的使用社交媒体的人口中，Twitter 已成为一个重要信息来源。近年来，社交媒体网站在在线用户中变得极其流行。皮研究中心 2016 年的调查显示，69% 的美国人口访问社交网络网站。
-
-# 用于机器学习和数据分析的特征工程
-
-在 76% 的使用社交媒体的人口中，Twitter 已成为一个重要信息来源。近年来，社交媒体网站在在线用户中变得极其流行。皮研究中心 2016 年的调查显示，69% 的美国人口访问社交网络网站。
-
-# 用于机器学习和数据分析的特征工程
-
-在 76% 的使用社交媒体的人口中，Twitter 已成为一个重要信息来源。近年来，社交媒体网站在在线用户中变得极其流行。皮研究中心 2016 年的调查显示，69% 的美国人口访问社交网络网站。
-
-# 用于机器学习和数据分析的特征工程
-
-在 76% 的使用社交媒体的人口中，Twitter 已成为一个重要信息来源。近年来，社交媒体网站在在线用户中变得极其流行。皮研究中心 2016 年的调查显示，69% 的美国人口访问社交网络网站。
-
-# 用于机器学习和数据分析的特征工程
-
-在 76% 的使用社交媒体的人口中，Twitter 已成为一个重要信息来源。近年来，社交媒体网站在在线用户中变得极其流行。皮研究中心 2016 年的调查显示，69% 的美国人口访问社交网络网站。
-
-# 用于机器学习和数据分析的特征工程
-
-在 76% 的使用社交媒体的人口中，Twitter 已成为一个重要信息来源。近年来，社交媒体网站在在线用户中变得极其流行。皮研究中心 2016 年的调查显示，69% 的美国人口访问社交网络网站。
-
-# 用于机器学习和数据分析的特征工程
-
-在 76% 的使用社交媒体的人口中，Twitter 已成为一个重要信息来源。近年来，社交媒体网站在在线用户中变得极其流行。皮研究中心 2016 年的调查显示，69% 的美国人口访问社交网络网站。
-
-# 用于机器学习和数据分析的特征工程
-
-在 76% 的使用社交媒体的人口中，Twitter 已成为一个重要信息来源。近年来，社交媒体网站在在线用户中变得极其流行。皮研究中心 2016 年的调查显示，69% 的美国人口访问社交网络网站。
-
-# 用于机器学习和数据分析的特征工程
-
-在 76% 的使用社交媒体的人口中，Twitter 已成为一个重要信息来源。近年来，社交媒体网站在在线用户中变得极其流行。皮研究中心 2016 年的调查显示，69% 的美国人口访问社交网络网站。
-
-# 用于机器学习和数据分析的特征工程
-
-在 76% 的使用社交媒体的人口中，Twitter 已成为一个重要信息来源。近年来，社交媒体网站在在线用户中变得极其流行。皮研究中心 2016 年的调查显示，69% 的美国人口访问社交网络网站。
-
-# 用于机器学习和数据分析的特征工程
-
-在 76% 的使用社交媒体的人口中，Twitter 已成为一个重要信息来源。近年来，社交媒体网站在在线用户中变得极其流行。皮研究中心 2016 年的调查显示，69% 的美国人口访问社交网络网站。
-
-# 用于机器学习和数据分析的特征工程
-
-在 76% 的使用社交媒体的人口中，Twitter 已成为一个重要信息来源。近年来，社交媒体网站在在线用户中变得极其流行。皮研究中心 2016 年的调查显示，69% 的美国人口访问社交网络网站。
-
-# 用于机器学习和数据分析的特征工程
-
-在 76% 的使用社交媒体的人口中，Twitter 已成为一个重要信息来源。近年来，社交媒体网站在在线用户中变得极其流行。皮研究中心 2016 年的调查显示，69% 的美国人口访问社交网络网站。
-
-
-
-
-## 14.2.1 推文文本相关数据
+### 14.2.1 推文文本相关数据
 
 本节讨论了 Twitter JSON 对象中可用的文本数据。下面讨论了基于 Twitter 的应用程序中常用的与推文文本对应的数据字段，并指出了使用这些字段的应用程序。
 
@@ -6793,21 +5817,21 @@ Wright 州立大学知识中心，俄亥俄州，代尔顿，美国
 - 8. **in_reply_to_screen_name**: 如果当前推文是对另一条推文的回复，则该字段持有回复目标用户的用户名（screen name）。该字段有助于构建用户互动网络以寻找有影响力的用户 [62]。
 - 9. **place**: 该字段将携带与推文相关的地点信息。用户从预定义的地点列表中选择一个地点附在推文中。该字段并不一定代表推文源自地点。
 
-## 14.2 Twitter 用户相关数据
+### 14.2.2 Twitter 用户相关数据
 
 本节讨论了 Twitter JSON 对象中与用户所创作的推文对应的数据。
 
 - 1. **description**: 该字段记录了用户提供的 Twitter 个人资料描述。通常，用户使用其 Twitter 个人资料描述来提供自己的简短介绍。分类 Twitter 资料的应用程序使用从该字段中提取的内容 [4, 62, 90]。
 - 2. **screen_name**: 该字段持有用户的用户名。用户名（或 Twitter handle）是 Twitter 用户选择的在 Twitter 上识别其自身的唯一名称。该名称以 @ 符号开头，最多可达 15 个字符。*screen_name* 用于唯一标识 Twitter 用户。
 - 3. **name**: 该字段持有 Twitter 用户的名称。该字段可以作为指代用户的标签，但许多不同用户可能共享同一个**name**；此字段不应被用作引用用户的唯一方式。
-- 4. **location**: 该字段持有 Twitter 用户提供的位置。Twitter 用户可以为其位置输入任何值；该字段不会携带 Twitter 用户的有效物理位置。例如，无效的物理位置包括“全球”、“某人的心心”、“在荒无人野”和“这里”。然而，在可能的情况下，预测 Twitter 用户位置的 Twitter 应用程序在尝试获取用户有意义的位置时，会利用该字段中指定的文本 [71]。
+- 4. **location**: 该字段持有 Twitter 用户提供的位置。Twitter 用户可以为其位置输入任何值；该字段不会携带 Twitter 用户的有效物理位置。例如，无效的物理位置包括“全球”、“某人的心心”、“在荒无人野”和“这里”。然而，在可能的情况下，预测 Twitter 用户位置的 Twitter 应用程程序在尝试获取用户有意义的位置时，会利用该字段中指定的文本 [71]。
 - 5. **geo_enabled**: 该字段记录用户是否决定在推文中分享其推文源发地点的地理坐标。
 - 6. **profile_image_url**: 该字段记录给定 Twitter 个人资料中使用的头像图像 URL。
 - 7. **profile_banner_url**: 该字段记录给定 Twitter 个人资料中使用的横幅图像 URL。
 - 8. **followers_count**: 该字段指示给定 Twitter 用户拥有的粉丝数量。
 - 9. **friends_count**: 该字段指示给定 Twitter 用户拥有的好友数量。
 
-## 14.2.3 其他元数据
+### 14.2.3 其他元数据
 
 本节讨论了 Twitter JSON 对象中对应于发布推文的用户的元数据。
 
@@ -6827,15 +5851,7 @@ Wright 州立大学知识中心，俄亥俄州，代尔顿，美国
 
 - 1. n-grams：单词 n-gram 定义为文本片段中连续出现的 n 个单词序列。流行的 n-gram 包括包含一个单词的单词和包含两个单词的双词双词。例如，如果我们考虑推文“I am feeling happy today”，从推文文本中提取的所有单词包含单词 {I, am, feeling, happy, today}，而从同一条推文中提取的所有双词包括 {I am, am feeling, feeling happy, happy today}。分析文本特征的基于 Twitter 的应用程序（包括用于情感分析 [14,28]、情绪分析 [79] 和资料分类 [65] 的应用程序）显示，当使用 Twitter 数据作为训练数据时，单词表现最好 [11]，而在用于训练的长较文本（如产品评论）中，双词特征优于单词 [77]。
 
-- 2. 词性 (PoS) 标记：在语言学中，词性 (PoS) 根据单词在语言中的用法，被定义为具有相似属性或功能的单词类别。词性标记被广泛用于许多自然语言处理应用程序，包括
-
-
-
-
-
-## 机器学习与数据分析中的特征工程
-
-语言解析和语义消歧 [36]。例如，如果我们考虑文本“I'm feeling happy today”（我今天心情很好），词性标记器（PoS tagger）会将单词“I”分类为人称代词（I/PRP），将“'m分类为非第三人称单数现在时动词（VBP），将“feeling”分类为动词、名词或现在分词（feeling/VG），将“happy”分类为形容词（happy/JJ），并将“today”分类为单数或不可数名词（today/NN）。词性标记广泛应用于基于 Twitter 的情感和情绪分析，并已被证明能提高基于词块（word-n）特征的情感分析模型的性能 [1,78]。之前的研究表明，在良好文本语料库上训练的自然语言处理（NLP）工具由于语言变异可能适用于社交媒体文本 [67,84]。因此，专门针对社交媒体的词性（PoS）标记软件已用于 Twitter 应用中 [32]。
+- 2. 词性 (PoS) 标记：在语言学中，词性 (PoS) 根据单词在语言中的用法，被定义为具有相似属性或功能的单词类别。词性标记被广泛用于许多自然语言处理应用程序，包括语言解析和语义消歧 [36]。例如，如果我们考虑文本“I'm feeling happy today”（我今天心情很好），词性标记器（PoS tagger）会将单词“I”分类为人称代词（I/PRP），将“'m”分类为非第三人称单数现在时动词（VBP），将“feeling”分类为动词、名词或现在分词（feeling/VG），将“happy”分类为形容词（happy/JJ），并将“today”分类为单数或不可数名词（today/NN）。词性标记广泛应用于基于 Twitter 的情感和情绪分析，并已被证明能提高基于词块（word-n）特征的情感分析模型的性能 [1,78]。之前的研究表明，在良好文本语料库上训练的自然语言处理（NLP）工具由于语言变异可能适用于社交媒体文本 [67,84]。因此，专门针对社交媒体的词性（PoS）标记软件已用于 Twitter 应用中 [32]。
 
 - 3. **命名实体：** 命名实体是指人、地点或组织等通过专名识别的真实对象。命名实体可以作为传统应用程序的特征，也可以作为基于 Twitter 应用的特征，例如特定实体提取 [14]。命名实体通常从推文文本 [14]、个人描述 [62] 和用户位置 [71] 中提取。与从推文中提取词性标记类似，由于 Twitter 上使用的语言具有非正式性，从推文中提取命名实体也需要专门设计的 [24,67]。例如，由于 Twitter 实施了 140 个字符的限制，Twitter 用户倾向于在推文中使用缩写和非常规的名称短版本（例如“Obama”和“OBMA”）来指代“Barack Obama”。因此，许多用于命名实体提取任务的特征（如单词首字母大写和标点符号）在 Twitter 环境下不起作用。这导致了 Twitter 专用命名实体识别工具的建立 [67]。文化实体是命名实体的特殊形式，指文化制品，如音乐专辑、电影和书名，这些在 Twitter 对话中也很常见 [49]。这些对于目标为音乐艺术家、电影或书籍爱好者的 Twitter 应用也可能起重要作用。
 
@@ -6849,13 +5865,13 @@ Wright 州立大学知识中心，俄亥俄州，代尔顿，美国
 
 - 8. **用户提及（User Mentions）：** 用户提及是在推文中对用户名的提及，它以特殊字符 @ 开头，后跟 Twitter 用户的用户名（即 @username）。Twitter 上的用户提及是为了指代另一个 Twitter 用户，而在语法化文本中使用真实姓名。用户提及经常用作社交媒体文本分析应用中的二值特征（即推文中 @username 的存在或不存在，或情感链接到资源）。社交网络分析应用使用用户提及来构建用户网络 [62]。
 
-- 统一资源定位器（或简称 URL）是一个唯一地址，用于在计算机网络（例如万维网）上定位资源（例如  ）。
+- 9. **统一资源定位器（或简称 URL）**：是一个唯一地址，用于在计算机网络（例如万维网）上定位资源（例如  ）。
 
-- **重复字母和标点符号：** Twitter 用户经常使用重复字母来强调某个单词。例如，“loooooved”表达了积极的情感。这些风格和标点符号在良好的文本中很少见。
+- 10. **重复字母和标点符号：** Twitter 用户经常使用重复字母来强调某个单词。例如，“loooooved”表达了积极的情感。这些风格和标点符号在良好的文本中很少见。
 
 ## 基于 Twitter 应用的特征工程
 
-### 1.3.2 图像和视频特征
+### 14.3.2 图像和视频特征
 
 本节讨论了从 Twitter 个人资料中提取的图像和视频特征。Twitter 用户可以通过三种方式上传图像，即：(i) 上传图像作为头像，(ii) 上传封面图像，以及 (iii) 将视频上传到 Twitter。
 
@@ -6863,7 +5879,7 @@ Wright 州立大学知识中心，俄亥俄州，代尔顿，美国
 
 - **视频标题和视频评论中的文本：** Twitter 用户还会随推文发布视频，这些视频可以为任务提供额外信息。例如，过去关于黑派成员识别的研究表明，从 YouTube 视频标题和评论中提取的文本特征可以作为特征 [4, 82]。
 
-### 1.3.3 Twitter 元数据相关特征
+### 14.3.3 Twitter 元数据相关特征
 
 本节讨论了可以从与推文相关的各种元数据中提取的特征。Twitter 元数据提供了有用信息，解释与推文相关的不同事件，如推文时间、推文源地和推文语言。下面，我们讨论了基于 Twitter 应用中常用的元数据相关特征。
 
@@ -6873,11 +5889,7 @@ Wright 州立大学知识中心，俄亥俄州，代尔顿，美国
 
 - 3. **推文语言：** Twitter 还提供了机器检测的推文语言。在收集给定语言的推文时，这可以是信息过滤的有用特征。这对于基于 Twitter 的人口统计学研究也有帮助。
 
-
-
-
-
-## 14.3.4 网络特征
+### 14.3.4 网络特征
 
 本节讨论了可以从各种 Twitter 网络中提取的特征。我们将基于网络的特征定义为从 Twitter 用户网络及其相关元数据中提取的特征。网络（图）是一组由边（弧）连接的节点（顶点）的集合，其中节点之间的连接代表了它们之间的关系。例如，一个简单的基于 Twitter 的网络可以是某个用户在 Twitter 上的朋友图，其中用户由图中的节点表示，用户之间的友谊则用边表示。Twitter 中主要有两种类型的网络，即用户交互网络和关注者-关注者网络 [39]。Twitter 用户之间不同类型的关系会生成网络，因此，可以根据网络生成的关系产生不同类型的特征。
 
@@ -6911,10 +5923,6 @@ Basuriya 等人在任务中使用四种分类模型：朴素贝叶斯 (NB)、逻
 
 - 2. 语料库中特定意图类别的稀疏性导致了数据不平衡（例如，[63] 显示了“提供”意图的表达
 
-
-
-
-
 # 基于 Twitter 的应用特征工程 373
 
 在 2012 年飓风桑迪事件期间，这些人仅占具有“请求”意图者的一小部分（比例为 1:7）。
@@ -6935,7 +5943,7 @@ Basuriya 等人在任务中使用四种分类模型：朴素贝叶斯 (NB)、逻
 
 - 3. 混合：在混合模式中，结合了自上而下和自下而上的特征。例如，为了研究灾害期间资源与需求之间的依赖关系，Bhatt 等人 [6] 利用了推文中的位置提及和其他有关资源的其他信息来更好地促进灾救。Anaraman 等人 [5] 使用位置名称（地理位置）帮助提取城市事件的时空邻近性，例如由于事故导致的交通拥堵和道路关闭。先进的社交媒体数据处理系统（如 Twitis [71]）支持对社交媒体上的事件进行实时监控的时空-主题分析。分析三元组的第一项是每个事件的空间上下文，允许用户根据其所在位置过滤这些事件。
 
-## 14.4.3 从推文中提取位置
+### 14.4.3 从推文中提取位置
 
 Twitter 中的位置提取或识别问题是一个重要问题，其关注点可以是 Twitter 用户也可以是推文的源地。知道 Twitter 用户的位置在许多应用中是有益的。例如，Carmen 等人 [27] 从推文中提取位置用于监控应用。广泛的应用还使用了从推文中提取的位置信息，例如选举 [14]、用户的宗教虔诚 [15]、跨地理区域的药物滥用分析 [19]、政府决策对药物合法化的影响 [40]，甚至是跨文化差异 [23]。上述所有研究和用例都使用粗粒度位置（如国家、州或社区级别），而不是街道或建筑。与危机相关的应用对细粒度位置信息有迫切需求。Twitter 上有四种类型的位置信息：
 
@@ -6943,10 +5951,6 @@ Twitter 中的位置提取或识别问题是一个重要问题，其关注点可
 - 2. Twitter 用户可以在推文中分享推文源地（经纬度）。此信息可以从 Twitter JSON 对象的 `coordinates` 字段检索。
 - 3. Twitter 用户可以从预定义的地点列表中选择一个位置/地点并附在推文中。这些信息由地点名称和地点边界框组成，可以从 Twitter JSON 对象的 `place` 字段检索。
 - 4. Twitter 用户可以在推文中包含位置名称。无法保证从推文文本提取的地点名称就是 Twitter 用户的源地，但以前的研究表明，地点名称 [38] 和从推文文本中提取的语言线索可以用于改进 Twitter 用户位置预测。
-
-
-
-
 
 ## 376 机器学习与数据分析中的特征工程
 
@@ -6962,19 +5966,15 @@ Twitter [71] 是一种实时社交媒体监控工具，它通过上述的推文�
 
 因此，已经开发了针对社交媒体的特定 NLP 方法用于命名实体识别（NER）和词性标记（PoS），后者通常用于 NER 以提高后者的性能 [7, 31, 67]。NER 的其他技术还包括短语挖掘或非短语提取以及 n 匹配 [31, 44, 46]。诸如 [46] 中的方法预定义了一个感兴趣区域的名称列表，以提高地点提取过程的准确性。此外，如 [35] 中的方法设计了半监督方法，使用束搜索（beam-search）和结构化感知器来提取名称并将其与其相应的广场语料库链接。最先进的方法如 [1] 中的方法使用统计语言模型从名称中提取地点，并将其链接到开放地图映射器中。[8] 中讨论的方法通过避免使用推文中不可靠的句法和拼写特征，实现了 81% 的 F 分数。
 
-## 14.4.4 研究抑郁症用户的心理健康状况
+### 14.4.4 研究抑郁症用户的心理健康状况
 
 随着社交媒体的兴起，数百万人经常在 Twitter 等社交媒体平台上表达他们的情绪、感受以及与心理健康问题的日常挣扎。与观察性队列调查不同，通过问卷和自述进行的情绪研究为捕捉与思维模式相关的情绪和日常活动提供了一种新方法。因此，通过社交媒体视角研究情绪和心理健康状况已取得了进展。
-
-
-
-
 
 # 基于 Twitter 的应用程序特征工程
 
 通过部分监督对用户推文进行主题建模（例如，利用种子聚类），被命名为时空半监督主题建模（ssToT），用于监测抑郁症症状。他们的实验结果显示，Twitter 上自述抑郁症的用户与非抑郁用户在讨论主题偏好和词汇使用模式上存在显著差异。他们的模型在捕捉一段时间内每个用户的抑郁情况方面表现出良好的的结果，准确率达到 68%，精确率达到 72% [90]。
 
-## 14.4. Twitter 上的情感与情绪分析
+### 14.4.5 Twitter 上的情感与情绪分析
 
 识别人们对特定主题、背景或交互的态度，并分析主观体验，推动了情感分析的研究 [14, 28, 78, 79]。人们已经开发了许多观点模型和工具，以收集人们对产品、人物、主题、产品属性（例如：功能的显示屏：大尺寸可以是功能的正面特征）和方面（例如：功能以及该属性可以取值的范围，如 [屏幕，大，小]）的观点。然而，我们讨论的是关于观点挖掘和情绪分析的近期研究。
 
@@ -6993,8 +5993,6 @@ Twitter [71] 是一种实时社交媒体监控工具，它通过上述的推文�
 
 时空主题数据分析支持 (i) 从 Twitter 收集与事件相关的用户生成推文，以及相关的新闻、媒体和维基百科内容；(ii) 处理收集的推文以提取与事件相关的描述符（如键值和实体），以学习事件上下文；(iii) 使用交互式地图展示数据和可视化。STT 使用算法和二值化、命名实体、标签、用户提及和 URL 处理推文中提取的文本特征，以识别与事件相关的关键短语和实体（数千个）。文本特征进一步使用事件特定的机器学习分类器进行处理，以链接与事件无关数据，并将其与 DBedia 知识库进行语义链接。STT 维度还使用 Twitter 元数据特征，如从推文中提取的坐标和个人描述来识别推文的位置（空间处理）。它还使用推文创建
 
-
-
 ## 机器学习与数据分析中的特征工程
 
 通过分析用户选择的时间段内生成的推文，以支持时间查询。
@@ -7005,7 +6003,10 @@ Twitter [71] 是一种实时社交媒体监控工具，它通过上述的推文�
 
 图 14.2 展示了 Twitris 的几个方面，该工具被用于分析与抑郁相关的推文。项目 (1) 显示了管理不同分析方法的控制面板。项目 (2) 显示了如何选择日期范围（天、周、月）、关键词和人口密度来缩小分析范围。项目 (3) 显示了抑郁数据的中心性视图，根据推文中所表达的情绪对国家、州和城市等不同粒度进行颜色编码。项目 (4) 显示了县的数据，按情感进行颜色编码。项目 (5) 显示了 2014 年 10 月 6 日洛杉矶抑郁相关推文的总数以及当天最热门的话题（以及人均 GDP、失业率）。项目 (6) 显示了 2014 年 10 月 6 日加州洛杉矶抑郁相关推文的样本。项目 (7) 显示了 2014 年 9 月 29 日至 2014 年 10 月 5 日收集的抑郁相关推文的六种（愤怒、恐惧、快乐、厌恶、惊讶）情绪分析。项目 (8) 显示了 2014 年 9 月 29 日至 2014 年 10 月 5 日抑郁相关转发的情感分析。项目 (9) 显示了基于 2014 年 10 月 6 日实时推文分析的热趋势。项目 (10) 显示了与抑郁相关的热门话题，不限于特定地区。项目 (11) 显示了某段时间内的推文量（天、周、月），项目 (12) 显示了从推文中提取的抑郁相关新闻。
 
+```
 ![](img/f950d48a9ba5d6b2e7f6b976181234_401.png)
+```
+
 图 14.2 使用 Twitter 进行数据处理与可视化
 
 ## 14.6 结论
@@ -7030,10 +6031,6 @@ Twitter [71] 是一种实时社交媒体监控工具，它通过上述的推文�
 - [10] Meeyong Cha, Hamed Haddadi, Fabricio Benvenuto, and P Krishna Gummadi. 衡量 Twitter 用户影响力：百万粉丝的谬误。第四届国际 AAAI 网络与社交媒体会议 (ICWSM)，10(10-17:30).
 - [11] Lu Chen. 挖掘用户生成内容中的主观体验。2016.
 - [12] Lu Chen, Justin Martins, Derek Cheng, and Amit Sheeth. 聚类以从评论中同时提取方面和特征。在2016 年计算语言协会北美分会（NAACL）人类语言技术会议上，789–799.
-
-
-
-
 
 ## 机器学习与数据分析中的特征工程
 
@@ -7115,11 +6112,7 @@ Twitter [71] 是一种实时社交媒体监控工具，它通过上述的推文�
 
 - [53] Misu Park. Twitter 上抑郁与非抑郁用户的感知差异。在第 7 届国际 AAAI 网页与社交媒体会议 (ICWSM) 上，卷 9，第 217–226 页，2013.
 
-
-
-
-
-390 用于机器学习和数据分析的特征工程
+## 机器学习和数据分析的特征工程
 
 -   [58] Sujan Perera, Pablo Mendez, Amit Sheth, Krishnaprasasad Thirumayan, Adarch Alex, Christopher Heid, and Greg Mott. 临床文档中的隐式实体识别。在第四届词法与计算语义联合会议(*SEM*)论文集中，第228–238页，2015年。
 
@@ -7141,7 +6134,7 @@ Twitter [71] 是一种实时社交媒体监控工具，它通过上述的推文�
 
 -   [67] Alan Ritter, Sam Clark, Erenzioni, et al. 推文中的命名实体识别：一项实验研究。在自然语言处理实证方法会议集中，第1524–1534页。ACL, 2011。
 
-基于Twitter的应用的特征工程
+## 基于Twitter的应用的特征工程
 
 -   [68] Shigeyuki Sakaki, Yasnide Miura, Xiaojun Ma, Keigo Hattori, and Tomoko Ohkuma. 使用文本与图像处理结合分析的Twitter用户处理。V&L Net, 2014:54, 2014。
 
@@ -7165,7 +6158,7 @@ Twitter [71] 是一种实时社交媒体监控工具，它通过上述的推文�
 
 -   [78] Wenbo Wang, Lu Chen, Ming Tan, Shaojun Wang, and Amit P Sheth. 发现自杀笔记中的细粒度情感。生物医学信息，5(Suppl)1:37。
 
-机器学习和数据分析的特征工程
+## 机器学习和数据分析的特征工程
 
 -   [79] Wenbo Wang, Lu Chen, Krishnaprasad Thirunarayan, and Amit P Sheth. 利用“大数据”进行情感识别。在隐私、安全、信任 (PASSAT)，2012年。
 
@@ -7187,7 +6180,7 @@ Twitter [71] 是一种实时社交媒体监控工具，它通过上述的推文�
 
 -   [88] Shaomi Wu, Jake M Hoffman, Winter A Mason, and Duncan J Watts. 推特上谁对谁说了什么。在第20届世界维网国际会议，第705–714页。ACM, 2011年。
 
-基于Twitter的应用的特征工程
+## 基于Twitter的应用的特征工程
 
 -   [89] Amir Hossein Yazdavar, Hussein S Al-Olimat, Tanvi Banerjee, Krishnprasad Thirumarayan, and Amit Sheth. 分析推特中的临床抑郁症状。第23届NIMH健康服务研究会议 [MHSR]：利用科学加强公共健康影响，2016年。
 
@@ -7195,11 +6188,9 @@ Twitter [71] 是一种实时社交媒体监控工具，它通过上述的推文�
 
 -   [91] Shaozhi Ye and Shlyhtsun Felix Wu. 衡量推特上的信息传播和社交影响力。第2届社交信息学国际会议 (SocInfo)，10:216-231, 2010年。
 
-
-
-
-
+```
 ![](img/f9b50d48a9ba5d6b2e7f6b9761812434_412_0.png)
+```
 
 # 索引
 
@@ -7483,77 +6474,74 @@ Twitter [71] 是一种实时社交媒体监控工具，它通过上述的推文�
 - 推特 ID, 364
 - 推特文本, 362
 
-
-
-
-双元语法, 365
-文化实体, 366
-抑郁, 377
-灾害协调, 372
-emoji, 367
-情绪, 367
-情感分析, 380
-收藏数, 362
-粉丝, 370
-地理坐标, 369
-标签, 362, 367
-图像和视频特征, 368
-图像标签, 369
-隐性实体, 369
-JSON, 361
-语言, 309
-元数据特征, 369
-n-gram, 365
-命名实体, 366
-网络特征, 370
-意见挖掘, 379
-词性, 365
-标点, 368
-引用推文, 362
-回复, 370
-回复数, 363
-REST API, 361
-转推, 362, 370
-转推数, 362
-被转推状态, 362
-Streaming API, 361
-文本特征, 365
-推文 ID, 364
-推文文本, 362
-Twitris, 381
-Twitter API, 360
-Twitter 地点提取, 375
-Twitter 个人资料分类, 371
-Twitter 情感提取, 379
-单字, 365
-URL, 362, 368
-用户位置, 363
-用户个人资料描述, 363
-用户显示名称, 363
-用户名, 362, 363, 367
-视频, 309
-twitter, 312
-Twitter API, 360
-Twitter 地点提取, 375
-Twitter 个人资料分类, 371
-Twitter 情感提取, 379
-单字, 365
-URL, 362, 368
-用户位置, 363
-用户元数据, 316
-用户个人资料描述, 363
-用户显示名称, 363
-用户名, 362, 363, 367
-UTF-8 编码, 19
-变分自动编码器, 298
-向量数据, 248
-视频, 369
-可视化, 182
-小波变换, 96
-权重共享, 74
-词嵌入, 291
-CBOW, 293
-GloVe, 292
-Skip-gram, 292
-词嵌入, 38, 40
-word2Vec, 40
+- 双元语法, 365
+- 文化实体, 366
+- 抑郁, 377
+- 灾害协调, 372
+- emoji, 367
+- 情绪, 367
+- 情感分析, 380
+- 收藏数, 362
+- 粉丝, 370
+- 地理坐标, 369
+- 标签, 362, 367
+- 图像和视频特征, 368
+- 图像标签, 369
+- 隐性实体, 369
+- JSON, 361
+- 语言, 309
+- 元数据特征, 369
+- n-gram, 365
+- 命名实体, 366
+- 网络特征, 370
+- 意见挖掘, 379
+- 词性, 365
+- 标点, 368
+- 引用推文, 362
+- 回复, 370
+- 回复数, 363
+- REST API, 361
+- 转推, 362, 370
+- 转推数, 362
+- 被转推状态, 362
+- Streaming API, 361
+- 文本特征, 365
+- 推文 ID, 364
+- 推文文本, 362
+- Twitris, 381
+- Twitter API, 360
+- Twitter 地点提取, 375
+- Twitter 个人资料分类, 371
+- Twitter 情感提取, 379
+- 单字, 365
+- URL, 362, 368
+- 用户位置, 363
+- 用户个人资料描述, 363
+- 用户显示名称, 363
+- 用户名, 362, 363, 367
+- 视频, 309
+- twitter, 312
+- Twitter API, 360
+- Twitter 地点提取, 375
+- Twitter 个人资料分类, 371
+- Twitter 情感提取, 379
+- 单字, 365
+- URL, 362, 368
+- 用户位置, 363
+- 用户元数据, 316
+- 用户个人资料描述, 363
+- 用户显示名称, 363
+- 用户名, 362, 363, 367
+- UTF-8 编码, 19
+- 变分自动编码器, 298
+- 向量数据, 248
+- 视频, 369
+- 可视化, 182
+- 小波变换, 96
+- 权重共享, 74
+- 词嵌入, 291
+- CBOW, 293
+- GloVe, 292
+- Skip-gram, 292
+- 词嵌入, 38, 40
+- word2Vec, 40

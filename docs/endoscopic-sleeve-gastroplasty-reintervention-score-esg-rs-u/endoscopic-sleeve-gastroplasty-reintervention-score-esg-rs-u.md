@@ -1,21 +1,5 @@
+
 # 基于监督机器学习的内镜下袖状胃成形术再干预评分 (ESG-RS)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ![](img/7cba93ff56616bb855b7727edcaa3846_0_0.png)
 
@@ -32,7 +16,6 @@
 ## 结果
 
 **选择了 11 个变量，5 个影响再干预风险的关键因素：**
-
 - 前胃部手术史
 - 术前 AC（抗酸/质抑制剂）使用
 - 女性
@@ -49,23 +32,21 @@ ESG-RS 有助于临床医生进行术前风险分层，并帮助识别再干预�
 
 ![](img/7cba93ff56616bb855b7727edcaa3846_1_1.png)
 
-
 Hassam Ali, 等 2023
 
 图片致谢，Freepik.com: geotatah, Mehuwish
 
-
 Hassam Ali¹, Pratik Patel², Talia Farrukh Malik³, Rahul Pamarthy¹, Babu P. Mohan MD MS⁴, Ravishankar Assokkummar MBBS MRCP⁵, Grand Lopez-Nava MD PhD⁶, Douglas G. Adler MD⁷
-
 - ¹ 美国北卡罗来纳州格林维尔，东部卡罗来纳大学/布罗迪医学院，内科，27834
 - ² 美国纽约州波特杰斐逊港，马瑟瑟医院/霍夫斯特拉大学医学院，胃肠病科，11777
--  ³ 美国伊利诺伊州北芝加哥，罗莎林德·富兰克林医学科学大学芝加哥医学院，内科，60064
--  四 美国犹他州盐湖城，犹他大学医学院，胃肠病与肝脏科
--  五 新加坡，新加坡总医院，杜克国家医院，胃肠病科
--  六 西班牙马德里，马德里·桑奇纳罗大学立医院，减重内镜中心主任
--  七 美国科罗拉多州丹佛，Centura Health，波特·阿德文斯特医院，先进治疗性内镜中心主任
+- ³ 美国伊利诺伊州北芝加哥，罗莎林德·富兰克林医学科学大学芝加哥医学院，内科，60064
+- ⁴ 美国犹他州盐湖城，犹他大学医学院，胃肠病与肝脏科
+- ⁵ 新加坡，新加坡总医院，杜克国家医院，胃肠病科
+- ⁶ 西班牙马德里，马德里·桑奇纳罗大学立医院，减重内镜中心主任
+- ⁷ 美国科罗拉多州丹佛，Centura Health，波特·阿德文斯特医院，先进治疗性内镜中心主任
 
 通讯作者：
+
 Douglas G. Adler: dougraham2001@gmail.com: 美国科罗拉多州丹佛，Centura Health，波特·阿德文斯特医院，先进治疗性内镜中心主任。
 
 所有作者电子邮箱：
@@ -88,16 +69,19 @@ Douglas G. Adler: dougraham001@gmail.com
 
 # 作者贡献：
 
-Hassam Ali: 概念化、方法论、软件、数据整理、验证、初稿撰写、文章最终批准。Pratik Patel: 数据整理、初稿撰写、文章最终批准。Talia F. Malik: 可视化、调查、初稿撰写、文章最终批准。Rahul Pamarthty: 可视化、调查、初稿撰写、文章最终批准。Babu P. Mohan: 编辑、管理、监督。Douglas G. Adler: 编辑、管理、监督。# 利益冲突/披露：
+Hassam Ali: 概念化、方法论、软件、数据整理、验证、初稿撰写、文章最终批准。Pratik Patel: 数据整理、初稿撰写、文章最终批准。Talia F. Malik: 可视化、调查、初稿撰写、文章最终批准。Rahul Pamarthty: 可视化、调查、初稿撰写、文章最终批准。Babu P. Mohan: 编辑、管理、监督。Douglas G. Adler: 编辑、管理、监督。
 
-作者证明他们与任何利益利益组织没有关联。# 伦理声明：
+# 利益冲突/披露：
+
+作者证明他们与任何利益利益组织没有关联。
+
+# 伦理声明：
 
 本研究不需要伦理委员会审查，因为 MBSAQIP 数据库是开放的。
 
 患者知情同意：
 
 MBSAQIP 数据库不识别患者。因此，不需要同意。
-
 
 ## 摘要
 
@@ -117,11 +101,9 @@ LASSO 选择了 11 个变量。影响再干预风险的五个关键因素是：�
 
 ESG-RS 有助于临床医生进行术前风险分层，并帮助识别再干预风险较高的患者，从而实现更好的决策和患者管理。
 
-
 # 引言
 
 内镜胃管形成术 (ESG) 是一种微创手术，用于对饮食和生活方式改变无反应的患者减肥。它由 Dayyeh 等于 2013 年首次引入。以来，ESG 经历了快速增长，由于其更短的手术时间和相当的事件发生率，相比传统的减重手术（如腹镜胃管切除术）具有某些优势。ESG 涉及使用全层内镜缝合装置缩小胃容量。在 12 个月后，ESG 导致总体重减轻和超重减轻分别为 16% 和 60%。之前的比较显示，SG 后的并发症风险相当，且在减轻方面具有非劣势性。最近关于 ESG 和 LSG 的数据显示，两者相当，但 30 天内入院和再干预的比例更高。由于 ESG 是项新技术，医疗人员可能因为不熟悉过程而降低干预阈值，导致再干预率高于 SG。虽然 SG 再干预相关的因素此前已探讨，但 ESG 再干预相关的因素尚未被研究。
-
 
 ## 材料与方法：
 
@@ -145,8 +127,6 @@ ESG-RS 有助于临床医生进行术前风险分层，并帮助识别再干预�
 
 ESGRS 是使用监督学习选择的变量生成的，显示没有校准偏差且性能良好 (AUC >0.7)。我们的结果表明，通过五个术前预测因子可以预测30 天再次干预的个体化风险：前道手术史、术前 AC 使用、女性性别、ASA 评分 >=2 和高血压。我们提供了一种有助于的方法来确定 ESG 后再次干预的个体化风险，据我们所知，这是首项此类研究。
 
-
-
 大小（优势值比）在无显著性时最小（补充文件 2）。此外，将它们排除在生成 ESGRS 的最终模型之外并未改变其预测能力（补充文件 2）。
 
 虽然与镜下胃切除术和 Roux-en-Y 胃绕道术相比，ESG 的副作用特征较良好，但对于高 ESGRS 分数的患者，应考虑进行更密切的监测。[23, 24] 我们研究中与再次干预风险增加相关的变量，此前已被确定为术后并发症的风险因素。[25, 26, 27, 28, 29] 基于这些变量，使用评分系统在 ESG 之前对患者进行分层和教育，有助于预测并从而防止未来的并发症，包括再次干预。
@@ -165,6 +145,11 @@ ESGRS 是使用监督学习选择的变量生成的，显示没有校准偏差�
 - 10. ASMBS, 2022. MBSQIP participants use data files (PUF). [online] American College of Surgeons. Available at: https://www.facs.org/quality-programs/accreditation-and-verification
 - 11. Gudur AR, Geng C, Hallowell P, et al. Impact of proceduralist specialty on outcomes following endoscopic sleeve gastroplasty. Obes Surg. 2022;32(11):3714-3721.
 - 12. Abu Dayeh BK, Bazerachi F, Vargas EJ, et al. Endoscopic sleeve gastroplasty for treatment of class 1 and 2.
+
+
+
+### 参考文献
+
 - 13. Bazerachi F, Abu Dayeh BK, Neto MG, Boskoski I. Limitations in gastroplasty derived from surgery. Gastroenterosc. 97.
 - 14. Steyerberg EW, Vergoue Y. Towards better clinical prediction: seven steps for development and validation. Eur Heart J. 2014;35(29):1925-1931.
 - 15. Yuan L, Shen L, Ji M. New score to predict intensive care unit admission for pancreatitis 48 hours after.
@@ -183,9 +168,7 @@ ESGRS 是使用监督学习选择的变量生成的，显示没有校准偏差�
 - 28. Sanni A, Perez S, Medbery R, et al. Postoperative complications in bariatric surgery using age and BMI stratification: a study using ACS-NSQIP data. Surg Endosc. 2014;28(12):3302-3309.
 - 29. Kellogg TA, Swan T, Leslie DA, Buchwald H, Ikramuddin S. Patterns of readmission and reoperation within 90 days after Roux-en-Y gastric bypass. Surg Obes Relat Dis. 2009;5(4):416-423.
 
-
-
-
+### 表1：基线特征
 
 | 变量 | N (%) |
 |--- |--- |
@@ -225,7 +208,7 @@ ESGRS 是使用监督学习选择的变量生成的，显示没有校准偏差�
 | 术后30天内再次入院 | 164 (4.6%) |
 | 再次入院后的再次干预（并发症背景） | 69 (42.1%) |
 
-表2：预测内镜下袖形成的胃术后30天再次干预的 lasso 模型保留的预测因子惩罚回归系数
+### 表2：预测内镜下袖形成的胃术后30天再次干预的 lasso 模型保留的预测因子惩罚回归系数
 
 | 预测因子 | 使用 lasso 回归得到的模型 (N = 3583) |
 |---|---|
@@ -259,4 +242,3 @@ ESGRS 是使用监督学习选择的变量生成的，显示没有校准偏差�
 | 术前血清肌酐 (mg/dL)，中位数 (IQR) | 0.79 (0.7, 0.9) |
 | 术前糖化血红蛋白 (%)，中位数 (IQR) | 5.6 (5.3, 6) |
 | ASA 分级 >= 2 | 1848 (51.6%) |
-

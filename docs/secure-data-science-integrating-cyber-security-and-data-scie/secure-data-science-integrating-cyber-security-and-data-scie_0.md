@@ -1,23 +1,5 @@
+
 # 安全数据科学：网络安全与数据科学的融合
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## 献词
 
@@ -37,30 +19,42 @@
 
 利用统计推理和机器学习管理和分析海量数据，催生了一个称为*数据科学*的领域。也就是说，数据科学将大数据管理与统计学和机器学习相结合。数据科学技术已应用于医疗保健、金融、市场营销和网络安全等许多领域。另一方面，数据科学技术可能遭到恶意进程的攻击。也就是说，虽然数据科学可用于解决内部威胁检测等网络安全问题，但数据科学技术本身必须是安全的。这催生了一个称为*安全数据科学*的领域。本书将重点关注安全数据科学的各个方面。特别是，本书将讨论安全数据科学的基础技术（如数据科学和网络安全），以及数据科学在网络安全中的应用、数据科学的安全防护，以及安全数据科学中的一些新兴方向（包括数据隐私）。
 
-
-
 ## 书籍系列概述
 
 我们为 CRC Press 编写了两套关于数据管理/数据挖掘和数据安全的丛书。第一套丛书包含十本书。
 
 - **Book #1** (*Data Management Systems: Evolution and Interoperation*) 侧重于数据管理的通用方面，同时也涉及互操作性和迁移。
+
 - **Book #2** (*Data Mining: Technologies, Techniques, Tools, and Trends*) 探讨了数据挖掘。它实质上详细阐述了 Book #1 的 Chapter 9。
+
 - **Book #3** (*Web Data Management and Electronic Commerce*) 探讨了 Web 数据库技术，并将电子商务作为一个应用领域进行了讨论。它实质上详细阐述了 Book #1 的 Chapter 10。
+
 - **Book #4** (*Managing and Mining Multimedia Databases*) 同时涉及多媒体数据库管理和多媒体数据挖掘。它详细阐述了 Book #1 的 Chapter 6（多媒体数据库管理）和 Book #2 的 Chapter 11（多媒体数据挖掘）。
+
 - **Book #5** (XML, Databases and the Semantic Web) 描述了与数据管理相关的 XML 技术。它详细阐述了 Book #3 的 Chapter 11。
+
 - **Book #6** (*Web Data Mining Technologies and Their Applications in Business Intelligence and Counter-Terrorism*) 详细阐述了 Book #3 的 Chapter 9。
+
 - **Book #7** (*Database and Applications Security: Integrating Information Security and Data Management*) 考察了前几本书中讨论的各项技术的安全性。它侧重于数据库和应用安全领域的技术发展。它实质上是信息安全与数据库技术的融合。
+
 - **Book #8** (*Building Trustworthy Semantic Webs*) 将安全性应用于语义 Web 技术，并详细阐述了 Book #7 的 Chapter 25。
+
 - **Book #9** (*Secure Semantic Service-Oriented Systems*) 是 Book #8 的 Chapter 16 的详细阐述。
+
 - **Book #10** (*Building and Securing the Cloud*) 是 Book #9 的 Chapters 5 和 25 的详细阐述。
 
 我们的第二套丛书包含六本书。
 
 - **Book #1** 关于 *Design and Implementation of Data Mining Tools*。
+
 - **Book #2** 关于 *Design and Implementation of Data Mining Tools for Malware Detection*。
+
 - **Book #3** 关于 *Secure Data Provenance and Inference Control with Semantic Web*。
+
 - **Book #4** 关于 *Analyzing and Securing Social Media*。
+
 - **Book #5** 关于 *Big Data Analytics with Applications in Insider Threat Detection*。
+
 - **Book #6**（即本书）关于 *Secure Data Science: Integrating Cyber Security and Data Science*。
 
 对于这一系列，我们将与学生合作的实践成果转化为书籍。我们文本之间的关系将在本书的 Appendix 中进行说明。
@@ -72,8 +66,11 @@
 本书分为四部分，每部分描述与数据科学和网络安全相关的技术的某个方面。
 
 - **Part I** 由四章组成，将描述安全数据科学的支撑技术，包括数据安全与隐私、用于网络安全的数据挖掘、云计算和语义 Web 以及大数据安全与隐私。这些支撑技术为安全数据科学提供了背景信息。
+
 - **Part II** 由四章组成，详细概述了我们为网络安全开发的数据科学技术。特别是，将讨论用于恶意软件分析的可扩展数据科学技术和用于内部威胁检测的流分析。
+
 - **Part III** 由五章组成，将讨论增强安全性和隐私的数据科学，包括针对数据科学的攻击、对抗性机器学习以及隐私感知的基于策略的数据管理。我们还将讨论我们的工作如何应用于特定应用，即 COVID-19 大流行。
+
 - **Part IV** 讨论访问控制与数据科学，由五章组成。它描述了安全云查询处理、基于策略的信息共享、基于语义 Web 的社交媒体数据访问控制框架、基于语义 Web 的大数据推理控制器。我们还将讨论我们的一些工作如何应用于诸如智能交通系统之类的应用。
 
 ## 数据、信息与知识
@@ -87,14 +84,14 @@
 对我们而言：
 
 - **Data** 通常是一些值，如数字、整数和字符串。
+
 - **Information** 是在 data 关联了某种含义或语义时获得的，例如“John's salary is 20K”。
+
 - **Knowledge** 是通过阅读和学习获得的，结果是理解 data 和 information 并采取行动。也就是说，当某人脑海中关于 data 和 information 的不确定性被消除时，data 和 information 就转化为了 knowledge。
 
 应注意，很难给出 data、information 和 knowledge 的严格定义。有时我们也会交替使用这些术语。本书 Appendix 中讨论的数据管理框架有助于阐明其中一些差异。为了与我们之前书籍中的术语保持一致，我们还将区分 database systems 和 database management systems。**Database management system** 是管理包含持久数据的数据库的组件。**Database system** 由数据库和数据库管理系统两部分组成。
 
 ## 结束语
-
-
 
 本书旨在探讨数据科学在网络安全中的应用，以及如何保护数据科学技术本身。我们将讨论安全数据科学的各种概念、技术、问题和挑战。此外，我们还介绍了几个由达拉斯德克萨斯大学设计和开发的安全数据科学实验系统。我们将本书中的部分材料以及各章列出的大量参考文献，用于达拉斯德克萨斯大学研究生课程“大数据分析”以及“大数据安全与隐私”。
 
@@ -105,21 +102,37 @@
 我们感谢达拉斯德克萨斯大学 Erik Jonsson 工程与计算机科学学院的管理层给予我们开展研究的机会。我们还要感谢项目协调员 Rhonda Walls 女士对章节进行的校对和编辑。没有她的辛勤工作，这本书就不可能完成。我们感谢许多支持我们工作或与我们合作的人。
 
 *   来自陆军研究办公室的 **Dr. Cliff Wang**，感谢他为我们在对抗机器学习方面的研究提供资助。
+
 *   来自国家科学基金会的 **Dr. Victor Piotrowski**，感谢他为我们在可靠云计算和大数据安全与隐私方面的能力建设工作提供资助。
+
 *   来自空军科学研究办公室的 **Dr. Robert Herklotz**（已退休），感谢他为我们在内部威胁检测以及几个实验系统方面的研究提供资助。
+
 *   曾任职于美国国家航空航天局的 **Dr. Ashok Agrawal**，感谢他为我们在流数据挖掘方面的研究提供资助。
+
 *   伊利诺伊大学香槟分校的 **Prof. Jiawei Han** 及其团队，以及 IBM Research 的 **Dr. Charu Agrawal**，感谢他们与我们在流数据挖掘方面的合作。
+
 *   **Prof. Elisa Bertino**（普渡大学）、**Prof. Maribel Fernandez**（伦敦大学国王学院）、**Prof. Elena Ferrari** 和 **Prof. Barbara Carminati**（均来自意大利因苏布里亚大学），感谢他们与我们在访问控制方面的合作。
+
 *   以下人员因其技术贡献致谢：
+
     *   **Dr. Mehedy Masud**，感谢他对 第 6 章、第 7 章 和 第 8 章 的贡献；
+
     *   **Dr. Pallabi Parveen**，感谢她对 第 9 章 的贡献（Parveen 博士学位论文的一部分）；
+
     *   **Dr. Yan Zhou** 和 **Dr. Bowie Xi**，感谢他们对 第 10 章 的贡献；
+
     *   **Dr. Yan Zhou**，感谢她对 第 11 章 的贡献；
+
     *   **Dr. Li Liu**，感谢她对 第 12 章 的贡献（Liu 博士学位论文的一部分）；
+
     *   **Dr. Elisa Bertino**、**Dr. Maribel Fernandez** 和 **Dr. Jonathan Bakdash**，感谢他们对 第 13 章 的贡献；
+
     *   **Dr. Farhan Husain** 和 **Dr. Arindam Khaled**，感谢他们对 第 15 章 的贡献（Husain 博士学位论文的一部分）；
+
     *   **Dr. Tyrone Cadenhead**、**Dr. Vaibhav Khadilkar** 和 **Dr. Jyothsna Rachapalli**，感谢他们对 第 16 章 的贡献；
+
     *   **Dr. Raymond Heatherly**、**Dr. Barbara Carminati** 和 **Dr. Elena Ferrari**，感谢他们对 第 17 章 的贡献（Heatherly 博士学位论文的一部分）；
+
     *   **Dr. Tyrone Cadenhead**，感谢他对 第 18 章 的贡献（Cadenhead 博士学位论文的一部分）。
 
 ## 版权许可
@@ -140,6 +153,8 @@ Mohammad M. Masud, Tahseen M. Al-Khateeb, Kevin, W. Hamlen, Jing Gao, Latifur Kh
 
 P. Parveen, J. Evans, B. Thuraisingham, K. W. Hamlen and L. Khan, *Insider Threat Detection Using Stream Mining and Graph Mining*, © 2011 IEEE. Reprinted, with permission, from *2011 IEEE Third International Conference on Privacy, Security, Risk and Trust and 2011 IEEE Third International Conference on Social Computing*, 2011, pp. 1102–1110, doi: [10.1109/PASSAT/SocialCom.2011.211](http://doi.org/10.1109/PASSAT/SocialCom.2011.211)
 
+
+
 P. Parveen, N. McDaniel, V. S. Hariharan, B. Thuraisingham and L. Khan, *Unsupervised Ensemble Based Learning for Insider Threat Detection*, © 2012 IEEE. Reprinted, with permission, from the Proceedings of *2012 International Conference on Privacy, Security, Risk and Trust and 2012 International Conference on Social Computing*, 2012, pp. 718–727, doi: [10.1109/SocialCom-PASSAT.2012.106](http://doi.org/10.1109).
 
 Pallabi Parveen, Nathan McDaniel, Zackary Weger, Jonathan Evans, Bhavani, M. Thuraisingham, Kevin, W. Hamlen, Latifur Khan, *Evolving Insider Threat Detection Stream Mining*, Republished with permission of World Scientific Publishing Co., Inc. *International Journal on Artificial Intelligence Tools* Vol. 22, No. 5 (2013) 1360013 (24 pages). © 2013; permission conveyed through Copyright Clearance Center, Inc.
@@ -157,9 +172,6 @@ Y. Zhou, M. Kantarcioglu and B. Thuraisingham, *Sparse Bayesian Adversarial Lear
 Li Liu, M. Kantarcioglu and B. Thuraisingham, *Privacy Preserving Decision Tree Mining from Perturbed Data*, © 2009 IEEE. Reprinted, with permission, from *42nd Hawaii International Conference on System Sciences*, 2009, pp. 1–10, doi: [10.1109/HICSS.2009.353](http://doi.org/10.1109/HICSS.2009.353).
 
 # 第 13 章：面向隐私感知的量化自我数据管理框架
-
-
-
 
 ## 按章节划分的参考文献
 
@@ -205,10 +217,6 @@ DOI: [10.1201/9781003081845-1](https://doi.org/10.1201/9781003081845-1)
 
 ## 1.1 概述
 
-
-
-
-
 ### 大规模数据的收集、存储、处理、分析和保留导致了严重的安全和隐私问题
 
 各种法规正在被提议以处理大数据，从而保护个人隐私不被侵犯。例如，即使从数据中移除了个人身份信息，当数据与其他数据结合时，个人仍可能被识别出来。虽然收集海量数据引发了安全和隐私担忧，但大数据分析在网络安全领域的应用却呈爆发式增长。例如，组织可以将身份管理、入侵检测和恶意软件分析等活动外包给云端。问题是，大数据分析和数据科学技术的发展如何用于解决安全问题？此外，如何确保这些技术是安全的，并能适应对抗性攻击？在回答这些问题之前，我们需要先问一个问题：“什么是数据科学？”根据 [www.oracle.com](http://www.oracle.com) 的定义，“数据科学结合了统计学、科学方法和数据分析等多个领域，从数据中提取价值。”由于数据科学包含许多领域，它常与大数据分析和机器学习交替使用。因此，除非另有说明，我们将交替使用数据科学、机器学习、大数据管理和分析这些术语。它们都涉及使用各种技术（包括统计推理、模式识别和学习）从海量数据中提取有用的信息。
@@ -216,6 +224,8 @@ DOI: [10.1201/9781003081845-1](https://doi.org/10.1201/9781003081845-1)
 在过去二十年中，数据科学技术已被广泛用于网络安全应用。这些应用包括入侵检测、内部威胁检测和恶意软件分析。虽然数据科学技术在网络安全中有许多应用，但也会导致隐私泄露。这是因为现在可以使用各种机器学习工具快速分析海量数据，并提取可能高度敏感或私密的信息。此外，数据科学技术本身也可能遭受网络攻击。因此，我们可能无法信任数据科学/机器学习产生的结果。本书描述了这两个方面。也就是说，它首先描述了数据科学在网络安全中的各种应用。它将描述数据科学的应用，包括流数据分析和新颖类检测，用于内部威胁检测等网络安全应用。接下来，它将讨论安全和增强隐私的数据科学技术。它将讨论对抗性机器学习等领域的趋势，这些趋势在开发机器学习技术时考虑了攻击者的行为。它还将讨论如何将增强隐私的技术纳入数据科学。此外，它还提供了数据科学和大数据管理访问控制的概述。也就是说，它描述了各种策略执行技术，用于控制对海量数据的访问。它还将讨论安全数据科学在可靠信息共享、云数据管理和社交媒体中的一些应用。读者将了解以下内容：(i) 数据科学的安全和隐私问题。(ii) 数据科学技术如何应用于网络安全问题。(iii) 考虑攻击者行为的机器学习技术修改方法。(iv) 大数据分析的增强隐私技术。(v) 安全技术（如访问控制）在数据科学应用中的应用，如保护社交媒体和以云为中心的可靠信息共享。
 
 本章详述了本书的组织结构。本章的组织结构如下。大数据分析、数据科学和机器学习等概念将在 1.2 节 中讨论。安全数据科学的支撑技术将在 1.3 节 中讨论。用于网络安全问题的数据科学技术将在 1.4 节 中讨论。安全和增强隐私的数据科学，如针对数据科学技术的攻击以及确保数据科学技术的隐私，将在 1.5 节 中讨论。访问控制与数据科学将在 1.6 节 中讨论。本书的组织结构将在 1.7 节 中给出。我们将在 1.8 节 中以有用的资源结束本章。应注意，1.3 节 至 1.6 节 的内容将在本书的 第一部分 至 第四部分 中详细阐述。图 1.1 说明了本章涵盖的内容。
+
+
 
 ![图 1.1 本章讨论的概念。](img/fig1_1.jpg)
 
@@ -229,11 +239,7 @@ DOI: [10.1201/9781003081845-1](https://doi.org/10.1201/9781003081845-1)
 
 数据科学家聚合、处理、分析和可视化大数据，以获得有用的见解。BLS 预测，在 2012-2022 年期间，计算机程序员和统计学家都将拥有较高的就业增长。据 IBM 报道，2020 年约有 270 万个数据科学职位空缺 [\[IBM\]](#ch01.xhtml#ref1_1)。随着数据科学家的角色和职责日益明确，对数据科学专家的需求正在上升。目前，毫无疑问，数据科学技能的培养与高企的行业需求不成比例。因此，将数据科学的研究、开发和教育工作纳入计算机科学主流至关重要。无论行业、学术界还是政府，每个组织都在收集数据。组织希望分析这些数据以获得竞争优势。因此，对包括精通 BDMA 技术在内的数据科学家的需求每年都在以数倍增长。
 
-
-
-
-
-### 1.2 大数据安全与隐私
+### 1.2.1 大数据安全与隐私
 
 虽然大数据管理与分析（BDMA）在过去五年中取得了显著进展，正演变为数据科学，但大数据安全与隐私（BDSP）正成为一项关键需求。随着“量化自我”（QS）运动的近期兴起，可穿戴设备和智能手机应用收集的个人数据正被分析，以指导用户改善健康或个人生活习惯。这些数据还通过基于云的服务与其他服务提供商（如零售商）共享，为用户提供潜在利益（如健康产品信息）。但这种数据收集和共享往往在用户不知情的情况下进行，带来了个人数据可能被用于不当目的的严重危险。如果数据收集者能够将财务和健康相关数据与推文、Facebook 活动及购买模式聚合，隐私侵犯很容易失控。此外，必须存储海量收集数据的访问权限。然而，针对 QS 应用的隐私保护或数据访问控制，现有的工具和技术寥寥无几。
 
@@ -277,10 +283,6 @@ DOI: [10.1201/9781003081845-1](https://doi.org/10.1201/9781003081845-1)
 
 图 1.5 安全与隐私增强的数据科学。
 
-
-
-
-
 ## 1.6 访问控制与数据科学
 
 数据科学系统（如大数据管理系统）必须是安全的。也就是说，必须根据策略控制对数据的访问。我们将要研究的策略植根于访问控制策略。这些策略不仅控制对数据的访问，还可用于控制数据共享以及控制未经授权的推理。
@@ -318,9 +320,6 @@ DOI: [10.1201/9781003081845-1](https://doi.org/10.1201/9781003081845-1)
 本章介绍了本书。我们首先简要概述了安全数据科学，然后讨论了大数据分析、数据科学和机器学习等概念。接下来，我们讨论了网络安全数据科学。随后讨论了安全和隐私增强数据科学。然后给出了访问控制和数据科学的讨论。本书的主要贡献之一是描述数据科学和网络安全如何相互支持，以开发安全和私密的系统。我们还在全书中提供了大量参考文献。
 
 近年来出现了几个新的数据科学、云计算和大数据会议。其中包括 IEEE 计算机学会云计算会议（与服务计算会议同期举办）以及 CloudCom。此外，IEEE 计算机学会还发起了大数据会议。此外，传统的数据库管理、数据挖掘和机器学习会议已聚焦于大数据分析，而网络安全会议现在主要关注网络安全与数据科学/机器学习的融合。还有专门针对数据科学的会议（例如 IEEE/ACM 联合会议）。
-
-
-
 
 我们坚信，计算的未来在于云计算，数据的未来在于数据科学。云计算和数据科学将在众多领域得到应用，以提供可扩展的数据分析解决方案。结合机器学习，它们不仅将提供可扩展的数据分析解决方案，还将提供能够从经验中学习并进行预测的技术。挑战在于如何将各种服务和组件整合在一起，构建可扩展且安全的数据科学与机器学习系统。此外，在确保个人隐私的前提下安全管理海量数据的系统，将成为未来几十年我们面临的主要挑战之一。
 
@@ -362,10 +361,6 @@ DOI: [10.1201/9781003081845-4](https://doi.org/10.1201/9781003081845-4)
 
 ## 2.2 安全策略
 
-
-
-
-
 ### 本节的组织结构如下。
 
 在第 2.2.1 节中，我们将提供访问控制策略的概述。管理策略将在第 2.2.2 节中讨论。识别和认证中的问题将在第 2.2.3 节中讨论。数据库管理系统的审计将在第 2.2.4 节中讨论。作为安全对象的视图将在第 2.2.5 节中讨论。图 2.2 说明了本节讨论的各种自主安全策略组件。
@@ -376,41 +371,43 @@ DOI: [10.1201/9781003081845-4](https://doi.org/10.1201/9781003081845-4)
 
 ## 2.2.1 访问控制策略
 
+
+
 访问控制策略最初是针对操作系统进行研究的。这里的关键点在于：能否授予进程对文件的访问权限？访问可以是读访问或写访问。写访问可能包括修改、追加或删除的权限。这些原则被移植到了诸如 `INGRES` 和 `System R` 之类的数据库系统中。从那时起，各种形式的访问控制策略已被研究。其中值得注意的有基于角色的访问控制策略，目前已在多个商业系统中实现。请注意，访问控制策略也包括强制策略。图 2.3 说明了各种类型的访问控制策略。
 
 ![图 2.3 访问控制安全策略。](img/fig2_3.jpg)
 
 图 2.3 访问控制安全策略。
 
-### 2.2.1.1 基于授权的访问控制策略
+## 2.2.1.1 基于授权的访问控制策略
 
-许多访问控制策略基于授权策略。其本质含义是：用户根据授权规则被授予对数据的访问权限。在本节中，我们将讨论各种类型的授权规则。请注意，Ferrari 和 Thuraisingham 编写的书籍章节 \[FERR2000\] 中提供了关于授权策略的详细讨论。
+许多访问控制策略基于授权策略。其本质含义是：用户根据授权规则被授予对数据的访问权限。在本节中，我们将讨论各种类型的授权规则。请注意，Ferrari 和 Thuraisingham 编写的书籍章节 [FERR2000] 中提供了关于授权策略的详细讨论。
 
-#### 2.2.1.1.1 正向授权
+### 2.2.1.1.1 正向授权
 
 早期系统关注的是现在所谓的正向授权规则。在此规则下，用户 John 被授予对关系 `EMP` 的访问权限，或用户 Jane 被授予对关系 `DEPT` 的访问权限。这些是针对关系的访问控制规则。也可以授予对其他实体（如属性和元组）的访问权限。例如，John 拥有关系 `EMP` 中属性 `salary` 的读访问权限和属性 `name` 的 `write`（写）访问权限。写访问可能包括追加、修改或删除访问。
 
-#### 2.2.1.1.2 负向授权
+### 2.2.1.1.2 负向授权
 
 问题是：如果未指定 John 对某对象的访问权限，这是否意味着 John 没有访问该对象的权限？在某些系统中，任何未指定的授权规则均隐含视为负向授权；而在其他系统中，负向授权则被显式指定。例如，我们可以强制执行诸如“John 无权访问关系 `EMP`”或“Jane 无权访问关系 `DEPT`”之类的规则。
 
-#### 2.2.1.1.3 冲突解决
+### 2.2.1.1.3 冲突解决
 
 当存在相互冲突的规则时，如何解决冲突？例如，我们可能有一条规则授予 John 对关系 `EMP` 的读访问权限。然而，我们也可能有一条规则不授予 John 对 `EMP` 中 `salary` 属性的读访问权限。这就是一个冲突。通常系统会强制执行最小权限规则，在这种情况下，John 可以访问 `EMP`，但 `salary` 的值除外。
 
-#### 2.2.1.1.4 强授权和弱授权
+### 2.2.1.1.4 强授权和弱授权
 
 系统还会强制执行强授权和弱授权。在强授权的情况下，无论是否存在冲突，规则均生效。在弱授权的情况下，若存在冲突，则规则不生效。例如，如果授予 John 访问 `EMP` 的权限是一条强授权规则，而不授予 John 访问 `salary` 属性的规则是一条弱授权规则，则存在冲突。这意味着强授权将生效。
 
-#### 2.2.1.1.5 授权规则的传播
+### 2.2.1.1.5 授权规则的传播
 
 这里的问题是规则如何传播？例如，如果 John 拥有对关系 `EMP` 的读访问权限，这是否自动意味着 John 拥有对 `EMP` 中每个元素的读访问权限？通常情况是这样，除非我们有一条禁止授权规则自动传播的规则。如果我们有一条禁止授权规则自动传播的规则，则必须显式强制执行指定 John 可访问对象的授权规则。
 
-#### 2.2.1.1.6 特殊规则
+### 2.2.1.1.6 特殊规则
 
 在我们关于强制策略的工作中，我们广泛探讨了基于内容和上下文的约束的实施。请注意，安全约束本质上就是安全规则。基于内容和上下文的规则是指根据数据的内容或显示数据的上下文来授予访问权限的规则。此类规则也可用于自主安全。例如，在基于内容的约束情况下，John 仅拥有 `DEPT D100` 中元组的读访问权限。在基于上下文或关联的约束情况下，John 无权同时读取姓名和薪水；但是，他可以单独访问姓名和薪水。在基于事件的约束情况下，选举结束后，John 拥有对关系 `EMP` 中所有元素的访问权限。
 
-#### 2.2.1.1.7 规则的一致性和完整性
+### 2.2.1.1.7 规则的一致性和完整性
 
 此处的挑战之一是确保约束的一致性和完整性。也就是说，如果约束或规则不一致，我们是否拥有解决冲突的冲突解决规则？如何确保实体（如属性、关系、元素等）均在用户的访问控制规则中得到指定？其本质含义是：规则是否完整？如果不完整，对于某特定用户或用户类别既未指定正向授权也未指定负向授权的实体，我们做何假设？
 
@@ -420,19 +417,15 @@ DOI: [10.1201/9781003081845-4](https://doi.org/10.1201/9781003081845-4)
 
 图 2.4 授权规则。
 
-### 2.2.1.2 基于角色的访问控制
+## 2.2.1.2 基于角色的访问控制
 
-基于角色的访问控制已成为最流行的访问控制方法之一（参见 \[SAND1996\]）。该方法已在包括 `Trusted Oracle` 在内的商业系统中实现。其核心思想是根据用户的角色和职能授予访问权限。
+基于角色的访问控制已成为最流行的访问控制方法之一（参见 [SAND1996]）。该方法已在包括 `Trusted Oracle` 在内的商业系统中实现。其核心思想是根据用户的角色和职能授予访问权限。
 
 基于角色的访问控制（也称为 `RBAC`）背后的基本思想如下。用户根据其角色需要访问数据。例如，总裁可能有权访问有关其副总裁和董事会成员的信息，而首席财务官可能有权访问财务信息以及向其汇报工作的人员的信息。总监可能有权访问其部门工作人员的信息，而人力资源总监将掌握公司员工的个人数据。从本质上讲，基于角色的访问控制是一种授权策略，它取决于用户角色以及随角色而来的活动。
 
-
-
-
-
 #### 关于角色层级的各种研究工作
 
-文献中讨论了关于角色层级的各种研究工作。还有一个名为**SACMAT**（访问控制模型与技术研讨会）的会议系列，它是从基于角色的访问控制研究工作演变而来的。例如，访问是如何传播的？一个角色能否包含另一个角色？请考虑图 2.5 中所示的角色层级。这意味着如果我们授予层级中某个节点的访问权限，该访问权限是否会向上传播？也就是说，如果部门经理拥有对特定项目信息的访问权限，该访问权限是否会传播给父节点（即总监节点）？如果组长拥有其组内员工信息的访问权限，该访问权限是否会在角色层级中传播给作为父节点的部门经理？子节点会发生什么情况？也就是说，访问权限是否会向下传播？例如，如果部门经理拥有对特定信息的访问权限，那么他的下属是否也拥有对该信息的访问权限？是否存在下属拥有部门经理所没有的数据访问权限的情况？如果一名员工必须向两位主管汇报，一位是他的部门经理，另一位是他的项目经理，会发生什么？当部门经理参与一个项目，必须向同样为他工作的项目组长汇报时，会发生什么？
+文献中讨论了关于角色层级的各种研究工作。还有一个名为 `SACMAT`（访问控制模型与技术研讨会）的会议系列，它是从基于角色的访问控制研究工作演变而来的。例如，访问是如何传播的？一个角色能否包含另一个角色？请考虑图 2.5 中所示的角色层级。这意味着如果我们授予层级中某个节点的访问权限，该访问权限是否会向上传播？也就是说，如果部门经理拥有对特定项目信息的访问权限，该访问权限是否会传播给父节点（即总监节点）？如果组长拥有其组内员工信息的访问权限，该访问权限是否会在角色层级中传播给作为父节点的部门经理？子节点会发生什么情况？也就是说，访问权限是否会向下传播？例如，如果部门经理拥有对特定信息的访问权限，那么他的下属是否也拥有对该信息的访问权限？是否存在下属拥有部门经理所没有的数据访问权限的情况？如果一名员工必须向两位主管汇报，一位是他的部门经理，另一位是他的项目经理，会发生什么？当部门经理参与一个项目，必须向同样为他工作的项目组长汇报时，会发生什么？
 
 ![Figure 2.5 Role hierarchy.](img/fig2_5.jpg)
 
@@ -442,17 +435,17 @@ DOI: [10.1201/9781003081845-4](https://doi.org/10.1201/9781003081845-4)
 
 ## 2.2.1.3 使用控制
 
-最近，Sandhu 等人开发了另一种类访问控制模型，即使用控制模型，他称之为**UCON**（参见例如 [PARK2004] 中报道的工作）。**UCON** 模型试图将一些额外特性纳入基于角色的访问控制，包括属性可变性和义务。
+最近，Sandhu 等人开发了另一种类访问控制模型，即使用控制模型，他称之为 `UCON`（参见例如 [PARK2004] 中报道的工作）。`UCON` 模型试图将一些额外特性纳入基于角色的访问控制，包括属性可变性和义务。
 
 ## 2.2.1.4 基于属性的访问控制
 
-由于角色在不同组织中并不统一，因此认为基于角色的访问控制不足以满足基于 Web 的系统需求。大致在同一时期，Web 服务、面向服务的架构和基于云的系统变得流行并被广泛使用。因此，为这种环境开发了一种基于声明的访问控制模型。该模型即基于属性的访问控制。在此模型中，用户对自己提出某些声明。然后，这些声明由想要授予用户资源访问权限的组织进行验证。如果用户的声明有效，则检查策略以确定此类用户是否有权访问资源。在过去十年中，基于属性的访问控制变得极其流行 **NIST**。
+由于角色在不同组织中并不统一，因此认为基于角色的访问控制不足以满足基于 Web 的系统需求。大致在同一时期，Web 服务、面向服务的架构和基于云的系统变得流行并被广泛使用。因此，为这种环境开发了一种基于声明的访问控制模型。该模型即基于属性的访问控制。在此模型中，用户对自己提出某些声明。然后，这些声明由想要授予用户资源访问权限的组织进行验证。如果用户的声明有效，则检查策略以确定此类用户是否有权访问资源。在过去十年中，基于属性的访问控制变得极其流行 `NIST`。
 
 ## 2.2.2 管理策略
 
 访问控制策略规定特定用户对数据拥有的访问权限，而管理策略规定谁来管理数据。管理职责包括保持数据最新、确保数据更新时元数据也随之更新，以及确保从故障中恢复及相关活动。
 
-通常，数据库管理员（**DBA**）负责更新元数据、索引和访问方法，并确保访问控制规则得到正确实施。系统安全官（**SSO**）也可能发挥作用。也就是说，**DBA** 和 **SSO** 可能会分担职责。安全相关问题可能由 **SSO** 负责，而数据相关问题可能由 **DBA** 负责。其他正在考虑的管理策略包括指派看管人。通常，所有者控制其创建的数据，并可在数据的整个生命周期内对其进行管理。在某些情况下，所有者可能无法管理数据，此时他们可指派看管人（即保管人）。
+通常，数据库管理员（`DBA`）负责更新元数据、索引和访问方法，并确保访问控制规则得到正确实施。系统安全官（`SSO`）也可能发挥作用。也就是说，`DBA` 和 `SSO` 可能会分担职责。安全相关问题可能由 `SSO` 负责，而数据相关问题可能由 `DBA` 负责。其他正在考虑的管理策略包括指派看管人。通常，所有者控制其创建的数据，并可在数据的整个生命周期内对其进行管理。在某些情况下，所有者可能无法管理数据，此时他们可指派看管人（即保管人）。
 
 在分布式环境中，尤其是 Web 环境中，管理策略变得更加复杂。例如，在 Web 环境中，分发文档可能涉及多方，包括所有者、发布者和请求数据的用户。数据归谁所有？是所有者还是发布者？一旦数据离开所有者并到达发布者，发布者是否接管数据控制权？随着我们从关系数据库环境迁移到分布式环境，甚至可能是 Web 环境，有许多有趣的问题需要解答。这些还包括管理版权问题、数据质量、数据溯源和治理。近期会议上发表了许多关于管理策略的有趣论文。图 2.6 说明了各种管理策略。
 
@@ -475,10 +468,6 @@ DOI: [10.1201/9781003081845-4](https://doi.org/10.1201/9781003081845-4)
 审计会创建审计跟踪，审计数据可存储在数据库中。该数据库可被挖掘以检测任何异常模式或行为。在利用数据挖掘进行审计和入侵检测方面已有大量工作。随着 Web 上电子商务交易的增多，审计跟踪分析显得尤为重要。组织应具备进行分析的能力，以确定信用卡欺诈和身份盗窃等问题。
 
 ## 2.2.5 用于安全的视图
-
-
-
-
 
 ### 视图作为安全机制
 
@@ -568,14 +557,13 @@ And DEPT.Name is not Security
 
 其他功能也会受到安全约束的影响。让我们考虑事务管理。Bertino 等人开发了用于事务管理中完整性约束处理的算法（参见 BERT1989）。我们已经研究了他们的技术，用于事务管理期间的强制安全约束处理。这些技术可以改编用于自主安全约束。其思想是确保在事务执行期间不违反约束。
 
-
-
-
 可以对元数据强制执行约束。例如，可以授予和撤销用户对元数据关系的访问权限。元数据的自主安全约束的处理方式与数据的处理方式相同。其他数据库功能包括存储管理。存储管理中的问题包括开发适当的访问方法和索引策略。需要考察安全约束对存储管理功能的影响。也就是说，能否根据约束对关系进行分区，并以一种可以高效访问关系的方式存储它们？我们需要为数据库系统开发安全索引技术。关于地理空间信息系统安全索引的一些工作见于 [ATLU2004]。对数据库进行审计是为了确定是否发生了任何安全违规。此外，视图已被用于出于安全目的授予个人访问权限。我们需要针对审计和视图管理的高效技术。
 
 在本节中，我们已经考察了安全对某些数据库功能的影响，包括查询管理、事务处理、元数据管理和存储管理。我们还需要研究安全对其他功能的影响，例如完整性约束处理和容错计算。图 2.11 说明了安全对数据库功能的影响。应当注意，本节中的一些讨论已扩展至大数据管理。详情见 [THUR2017]。
 
 ![图 2.11 安全对数据库功能的影响。](img/fig2_11.jpg)
+
+
 
 图 2.11 安全对数据库功能的影响。
 
@@ -624,8 +612,6 @@ And DEPT.Name is not Security
 *   [PARK2004] J. Park, R. Sandhu, The UCON Usage Control Model, ACM Transactions on Information and Systems Security, Volume 7, #1, 2004, 128–174.
 
 *   [SAND1996] R. Sandhu, E. Coyne, H. Feinstein, C. Youman, Role-based Access Control Models, IEEE Computer, Volume 29, #2, 1996, 38–47.
-
-
 
 *   [SQL3] [美国国家标准协会](https://datacadamia.com/data/type/relation/sql/ansi) [`datacadamia.com`](https://datacadamia.com)
 
@@ -677,8 +663,6 @@ DOI: [10.1201/9781003081845-5](https://doi.org/10.1201/9781003081845-5)
 
 在讨论数据挖掘技术之前，我们先概述一些数据挖掘任务（也称为数据挖掘结果）。然后我们将讨论这些技术。一般来说，数据挖掘任务可分为两类：预测性和描述性。预测性任务本质上预测某个项目是否属于某个类。描述性任务总体上从示例中提取模式。最突出的预测性任务之一是分类。在某些情况下，其他任务（如异常检测）可归结为预测性任务，即判断特定情况是否为异常。描述性任务总体上包括建立关联和形成聚类。因此，分类、异常检测、建立关联和形成聚类也被认为是数据挖掘任务。
 
-
-
 接下来，数据挖掘技术可以是预测性的、描述性的，或者两者兼具。例如，神经网络既可以执行分类，也可以执行聚类。分类技术包括决策树、SVM 以及基于记忆的推理。关联规则挖掘（ARM）技术通常用于建立关联。分析链接的链接分析也可以在链接之间建立关联并预测新链接。聚类技术包括 K 均值聚类。数据挖掘任务（即数据挖掘的结果）的概览如图 3.2 所示。技术（例如神经网络、支持向量机）在图 3.2 中进行了说明。第 3.2.2 节至第 3.2.6 节讨论了我们在工作中使用的一些数据挖掘技术。关于我们数据挖掘技术（图 3.3）的更多细节，请参阅我们之前的著作（例如 \AWAD2009, MASU2011, [THUR2017\]）。
 
 ![图 3.2 数据挖掘任务。](img/fig3_2.jpg)
@@ -719,15 +703,15 @@ SVM 是一种学习系统，它在高维特征空间中使用线性函数的假�
 
 图 3.7 导致最大边界的 SVM 分离面。(a) 无限数量的分离面 (b) 具有最大边界的分离面。
 
-只有最靠近超平面的那些点才给出假设/分类器的表示（图 3.8(a)）。这些最重要的数据点作为支持向量。它们的值也可用于给出关于假设/分类器可靠性的独立边界 \[BART1999\]。图 3.8(a) 显示了两个类及其边界，即边界。支持向量用实心对象表示，而空心对象是非支持向量。请注意，边界仅受支持向量影响，即如果我们移除或添加空心对象，边界不会改变。同时，实心对象的任何变化，无论是添加还是移除对象，都可能改变边界。图 3.8(b) 显示了在边界区域添加对象的影响。正如我们所见，添加或移除远离边界的对象（例如数据点 1 或 -2）不会改变边界。然而，添加和/或移除靠近边界的对象（例如数据点 2 和/或 -1）已创建了新的边界。
+
+
+只有最靠近超平面的那些点才给出假设/分类器的表示（图 3.8(a)）。这些最重要的数据点作为支持向量。它们的值也可用于给出关于假设/分类器可靠性的独立边界 [BART1999]。图 3.8(a) 显示了两个类及其边界，即边界。支持向量用实心对象表示，而空心对象是非支持向量。请注意，边界仅受支持向量影响，即如果我们移除或添加空心对象，边界不会改变。同时，实心对象的任何变化，无论是添加还是移除对象，都可能改变边界。图 3.8(b) 显示了在边界区域添加对象的影响。正如我们所见，添加或移除远离边界的对象（例如数据点 1 或 -2）不会改变边界。然而，添加和/或移除靠近边界的对象（例如数据点 2 和/或 -1）已创建了新的边界。
 
 ![图 3.8 (a) 支持向量和非支持向量的值。(b) 添加新数据点对边界的影响。](img/fig3_8.jpg)
 
 图 3.8 (a) 支持向量和非支持向量的值。(b) 添加新数据点对边界的影响。
 
 ### 3.2.4 马尔可夫模型
-
-
 
 #### 一些用于网页浏览的近期高级预测方法
 
@@ -776,8 +760,6 @@ SVM 是一种学习系统，它在高维特征空间中使用线性函数的假�
 
 ## 3.2.7 多类问题
 
-
-
 ### 大多数分类技术解决二分类问题
 
 大多数分类技术解决二分类问题。通过累积二分类器来推广解决多分类问题。这种推广有两种基本方案，即一对一和一对多。为避免冗余，我们将仅针对 SVM 展示这种推广。
@@ -818,9 +800,6 @@ SVM 是一种学习系统，它在高维特征空间中使用线性函数的假�
 
 #### 3.3.1.3 信用卡欺诈与身份盗窃
 
-
-
-
 #### 3.3.1.4 对关键基础设施的攻击
 
 对关键基础设施的攻击可能会使一个国家及其经济瘫痪。基础设施攻击包括攻击电信线路、电网、燃气管道、水库、水和食物供应以及其他对国家运行至关重要的基本实体。对关键基础设施的攻击可能由恶意软件引起，也可能通过炸弹等物理手段实施。例如，攻击者可以攻击运行电信系统的软件，从而关闭所有电信线路。同样，运行电网的软件也可能遭到攻击。基础设施还可能受到飓风和地震等自然灾害的攻击。我们这里的主要关注点是通过恶意攻击对基础设施发起的攻击。虽然在开发此类攻击的解决方案方面已取得一些进展，但仍有大量工作有待完成。我们正在探索的方向之一是研究使用数据挖掘来检测此类基础设施攻击。
@@ -847,80 +826,48 @@ SVM 是一种学习系统，它在高维特征空间中使用线性函数的假�
 
 入侵检测和垃圾邮件过滤等学习任务面临对抗性攻击。对抗性利用给现有的学习范式带来了额外的挑战。在当前数据和未来数据共享相同属性这一假设下（这对传统方法至关重要），无法实现学习模型对未来数据的泛化。在存在活跃对抗者的情况下，用于学习系统训练的数据不太可能代表该系统将要观察到的未来数据。这种差异不仅仅是简单的随机噪声，大多数学习算法在设计时已经考虑到了这一点。通常使这些学习算法失效的是有针对性的攻击，它们旨在通过伪装原本会被检测到的恶意数据，使学习系统失去功能。因此，学习算法必须自我调整以应对对抗性攻击。这被称为对抗性机器学习。在本书的 第三部分 中，我们将讨论此类对抗性机器学习技术。
 
-
-
-
-
 ## 3.4 总结与展望
 
 在本章中，我们首先概述了各种数据挖掘任务和技术，然后讨论了我们在工作中使用的一些技术。这些包括 `ANN`、`SVM`、决策树和 `ARM`。我们利用这些技术的组合，结合文献中的其他技术以及我们自己的技术，开发了用于超大型数据库的数据分析技术。其中一些技术在第二部分、第三部分和第四部分中得到应用（例如决策树、`SVM`）。
 
 已经设计和开发了大量数据挖掘技术，其中许多正被用于商业工具中。其中几种技术是基本分类、聚类和关联规则挖掘技术的变体。今天面临的主要挑战之一是确定适用于各种应用的适当技术。我们仍然需要更多的基准测试和性能研究。此外，这些技术应减少误报和漏报。
 
-接下来，我们提供了用于网络安全应用的数据挖掘概述。特别是，我们讨论了对计算机和网络的威胁，并描述了数据挖掘在检测此类威胁和攻击方面的应用。最后，我们讨论了针对数据挖掘的安全和隐私攻击，例如，我们讨论了针对数据挖掘技术的攻击以及我们如何调整它们以应对威胁。我们还讨论了因数据挖掘而产生的隐私问题，并讨论了诸如隐私感知数据挖掘之类的解决方案。
+接下来，我们提供了用于网络安全应用的数据挖掘概述。特别是，我们讨论了对计算机和网络的威胁，并描述了数据挖掘在检测此类威胁和攻击方面的应用。最后，我们讨论了针对数据挖掘的安全和隐私攻击，例如，我们讨论了针对数据挖掘技术的攻击以及我们如何调整它们以应对威胁。我们还讨论了因数据挖掘而产生的隐私问题，并�论了诸如隐私感知数据挖掘之类的解决方案。
 
 数据挖掘、网络安全和隐私是一个非常活跃的研究领域。包括链接分析和关联规则挖掘在内的各种数据挖掘技术正被探索用于检测异常模式。由于数据挖掘，用户现在可以进行各种关联分析。此外，在过去的十年里，正在收集海量数据。我们需要大数据分析技术来检测潜在的安全违规。这也引发了隐私担忧。更多关于隐私的细节可参阅 THUR2002。最近，对抗性数据挖掘/机器学习受到了极大关注。本书的大部分内容基于与网络安全和隐私相关的数据挖掘/机器学习。
 
 ## 参考文献
 
+
+
 *   [AGRA1993] R. Agrawal, T. Imielinski, A. Swami, Mining Association Rules between Sets of Items in Large Database, *Proceedings of the ACM SIGMOD Conference on Management of Data*, Washington, DC, May 1993, pp. 207–216.
-
 *   [AGRA1994] R. Agrawal, R. Srikant, Fast Algorithms for Mining Association Rules in Large Database, *Proceedings of the 20th International Conference on Very Large Data Bases*, San Francisco, CA, 1994, pp. 487–499.
-
 *   [AGRA2000] R. Agrawal, R. Srikant, Privacy-Preserving Data Mining, *ACMSIGMOD Conference*, Volume 29, #2, 2000, pp. 439–450.
-
 *   [AWAD2009] M. Awad, L. Khan, B. Thuraisingham, L. Wang, Design and Implementation of Data Mining Tools, CRC Press, 2009.
-
 *   [BART1999] P. Bartlett, J. Shawe-Taylor, Generalization Performance of Support Vector Machines and Other Pattern Classifiers, Advances in Kernel Methods – Support Vector Learning, MIT Press, 1999, pp. 43–53.
-
 *   [BOLZ2005] F. Bolz, K. Dudonis, D. Schulz, The Counterterrorism Handbook: Tactics, Procedures, and Techniques, 3rd ed. (Practical Aspects of Criminal & Forensic Investigations), CRC Press, 2005.
-
 *   [CHAN1999] P. Chan, W. Fan, A. Prodromids, S. Stolfo, Distributed Data Mining in Credit Card Fraud Detection, IEEE Intelligent Systems, Volume 14, #6, 1999, pp. 67–74.
-
 *   [CRIS2000] N. Cristianini, J. Shawe-Taylor, Introduction to Support Vector Machines, 1st ed., Cambridge University Press, 2000, pp. 93–122.
-
 *   [HAN2000] J. Han, M. Kamber, J. Pei, Data Mining: Concepts and Techniques, Morgan Kaufmann, 2000.
-
 *   [HOUT1995] M. Houtsma, A. Swanu, Set-Oriented Mining of Association Rules in Relational Databases, *Proceedings of the Eleventh International Conference on Data Engineering*, Washington, DC, 1995, pp. 25–33.
-
 *   [LI2007] C. Li, L. Khan, M. Bhavani, M.H. Thuraisingham, S. Chen, F. Qiu, Geospatial Data Mining for National Security: Land Cover Classification and Semantic Grouping, *Proceedings of ISI*, New Brunswick, NJ, 2007.
-
 *   [LIU1999] B. Liu, W. Hsu, Y. Ma, Association Rules with Multiple Minimum Supports, *Proceedings of the Fifth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining*, San Diego, CA, 1999, pp. 337–341.
-
 *   [LIU2009] L. Liu, M. Kantarcioglu, B.M. Thuraisingham, Privacy Preserving Decision Tree Mining from Perturbed Data, HICSS, 2009, pp. 1–10.
-
 *   [MASU2011] M. Masud, L. Khan, B. Thuraisingham, Data Mining Tools for Malware Detection, CRC Press, 2011.
-
 *   [MITC1997] T.M. Mitchell, Machine Learning, McGraw Hill, 1997.
-
 *   [MOBA2001] B. Mobasher, H. Dai, T. Luo, M. Nakagawa, Effective Personalization Based on Association Rule Discovery from Web Usage Data, *Proceedings of the ACM Workshop on Web Information and Data Management (WIDM01)*, 2001, pp. 9–15.
-
-
-
-
-*   \[PIRO1996\] P. Pirolli, J. Pitkow, R. Rao, Silk from a Sow's Ear: Extracting Usable Structures from the Web, *Proceedings of 1996 Conference on Human Factors in Computing Systems (CHI-96)*, Vancouver, British Columbia, Canada, 1996, pp. 118–125.
-
-*   \[THUR1998\] B. Thuraisingham, Data Mining: Technologies, Techniques, Tools and Trends, CRC Press, 1998.
-
-*   \[THUR2002\] B. Thuraisingham, Data Mining, National Security, Privacy and Civil Liberties, SIGKDD Explorations, New York, NY, Volume 4, #2, December 2002.
-
-*   \[THUR2003\] B. Thuraisingham, Web Data Mining Technologies and Their Applications in Business Intelligence and Counter-terrorism, CRC Press, 2003.
-
-*   \[THUR2004\] B. Thuraisingham, Managing Threats to Web Databases and Cyber Systems, Issues, Solutions and Challenges, Kluwer (Editors: and V. Kumar, J. Srivastava, Al. Lazarevic), 2004.
-
-*   \[THUR2005\] B. Thuraisingham, Database and Applications Security, CRC Press, 2005.
-
-*   \[THUR2016\] B. Thuraisingham, S. Abrol, R. Heatherly, M. Kantarcioglu, V. Khadilkar, L. Khan, Analyzing and Securing Social Networks, CRC Press, 2016.
-
-*   \[THUR2017\] B. Thuraisingham, P. Praveen, M. M. Masud, L. Khan, Big Data Analytics with Applications in Insider Threat Detection, CRC Press, 2017.
-
-*   \[VAPN1995\] V.N. Vapnik, The Nature of Statistical Learning Theory, Springer, 1995.
-
-*   \[VAPN1998\] V.N. Vapnik, Statistical Learning Theory, Wiley, 1998.
-
-*   \[VAPN1999\] V.N. Vapnik, The Nature of Statistical Learning Theory, Springer-Verlag, 1999.
-
-*   \[YANG2001\] Q. Yang, H. Zhang, T. Li, Mining Web Logs for Prediction Models in WWW Caching and Prefetching, *The 7th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining KDD*, ACM, San Francisco, CA, August 26–29, 2001, pp. 473–478.
+*   [PIRO1996] P. Pirolli, J. Pitkow, R. Rao, Silk from a Sow's Ear: Extracting Usable Structures from the Web, *Proceedings of 1996 Conference on Human Factors in Computing Systems (CHI-96)*, Vancouver, British Columbia, Canada, 1996, pp. 118–125.
+*   [THUR1998] B. Thuraisingham, Data Mining: Technologies, Techniques, Tools and Trends, CRC Press, 1998.
+*   [THUR2002] B. Thuraisingham, Data Mining, National Security, Privacy and Civil Liberties, SIGKDD Explorations, New York, NY, Volume 4, #2, December 2002.
+*   [THUR2003] B. Thuraisingham, Web Data Mining Technologies and Their Applications in Business Intelligence and Counter-terrorism, CRC Press, 2003.
+*   [THUR2004] B. Thuraisingham, Managing Threats to Web Databases and Cyber Systems, Issues, Solutions and Challenges, Kluwer (Editors: and V. Kumar, J. Srivastava, Al. Lazarevic), 2004.
+*   [THUR2005] B. Thuraisingham, Database and Applications Security, CRC Press, 2005.
+*   [THUR2016] B. Thuraisingham, S. Abrol, R. Heatherly, M. Kantarcioglu, V. Khadilkar, L. Khan, Analyzing and Securing Social Networks, CRC Press, 2016.
+*   [THUR2017] B. Thuraisingham, P. Praveen, M. M. Masud, L. Khan, Big Data Analytics with Applications in Insider Threat Detection, CRC Press, 2017.
+*   [VAPN1995] V.N. Vapnik, The Nature of Statistical Learning Theory, Springer, 1995.
+*   [VAPN1998] V.N. Vapnik, Statistical Learning Theory, Wiley, 1998.
+*   [VAPN1999] V.N. Vapnik, The Nature of Statistical Learning Theory, Springer-Verlag, 1999.
+*   [YANG2001] Q. Yang, H. Zhang, T. Li, Mining Web Logs for Prediction Models in WWW Caching and Prefetching, *The 7th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining KDD*, ACM, San Francisco, CA, August 26–29, 2001, pp. 473–478.
 
 # 4 大数据、云、语义 Web 和社交网络技术
 
@@ -930,15 +877,15 @@ DOI: [10.1201/9781003081845-6](https://doi.org/10.1201/9781003081845-6)
 
 第 2 章和第 3 章讨论了数据安全和隐私、用于网络安全的数据挖掘以及针对数据挖掘的攻击等概念。这些支撑技术是本书讨论概念的基础技术之一。例如，第 II 部分描述了用于网络安全的数据科学，而第 III 部分描述了安全和隐私感知的数据科学。除了数据安全和隐私以及数据挖掘和安全之外，大数据技术、云和语义 Web 也是我们在安全数据科学工作中利用的一些基础技术。本章讨论这些基础技术。
 
-十多年来，涌现出许多大数据管理和分析系统。此外，各种云服务提供商也实施了大数据解决方案。另外，大数据系统的基础设施/平台也已开发完成。大数据系统中值得注意的包括 MongoDB、Google 的 BigQuery 和 Apache HIVE。大数据解决方案由包括 Amazon、IBM、Google 和 Microsoft 在内的云提供商开发。此外，还基于 Apache 的 Hadoop、Spark 和 Storm 等产品开发了基础设施/平台。
+十多年来，涌现出许多大数据管理和分析系统。此外，各种云服务提供商也实施了大数据解决方案。另外，大数据系统的基础设施/平台也已开发完成。大数据系统中值得注意的包括 `MongoDB`、`Google` 的 `BigQuery` 和 `Apache HIVE`。大数据解决方案由包括 `Amazon`、`IBM`、`Google` 和 `Microsoft` 在内的云提供商开发。此外，还基于 `Apache` 的 `Hadoop`、`Spark` 和 `Storm` 等产品开发了基础设施/平台。
 
 选择要讨论的产品是一项艰巨的任务。这是因为几乎每个数据库供应商以及云计算供应商连同分析工具供应商现在都在将其产品作为大数据解决方案进行推销。当我们将所有供应商提供的产品结合起来，并包括开源产品时，则有数百种产品可供讨论。因此，我们选择了最熟悉的产品，通过在我们讲授的课程中讨论这些产品和/或在实验中使用它们。换句话说，我们仅选择了最熟悉并在工作中研究过的服务提供商、产品和框架。描述所有的服务提供商、产品和框架超出了本书的范围。此外，我们在本书中不为任何产品背书。
 
-我们利用云平台管理和分析大型数据集。我们将在全书中看到，云计算是管理大型数据集的核心。云计算已成为面向服务计算的强大计算范式。许多计算服务正被外包给云。此类基于云的服务可用于托管各种网络安全应用，如内部威胁检测和身份管理。Google 现已推出 MapReduce 框架，用于在通用硬件上处理大量数据。Apache 的 Hadoop 分布式文件系统 (HDFS) 正成为云计算的优越软件组件，并与 MapReduce 等集成部件相结合 \[DEAN2004, GHEM2003, HDFS\]。HP 的 Open Cirrus Testbed 等云正在利用 HDFS。这反过来又导致了许多拥有海量数据需要共享和管理的社交网络站点的出现。例如，我们可能想要对多年的股票市场数据进行统计分析以揭示模式，或基于数年的天气和相关数据构建可靠的天气模型。为了处理分布在许多站点（即节点）上的此类海量数据，需要可扩展的硬件和软件组件。云计算模型应运而生，旨在应对 Web 连接设备的爆炸式增长，并处理海量数据。其特征是大规模可扩展性和新的互联网驱动经济。
+我们利用云平台管理和分析大型数据集。我们将在全书中看到，云计算是管理大型数据集的核心。云计算已成为面向服务计算的强大计算范式。许多计算服务正被外包给云。此类基于云的服务可用于托管各种网络安全应用，如内部威胁检测和身份管理。`Google` 现已推出 `MapReduce` 框架，用于在通用硬件上处理大量数据。`Apache` 的 `Hadoop` 分布式文件系统 (`HDFS`) 正成为云计算的优越软件组件，并与 `MapReduce` 等集成部件相结合 [DEAN2004, GHEM2003, HDFS]。`HP` 的 `Open Cirrus Testbed` 等云正在利用 `HDFS`。这反过来又导致了许多拥有海量数据需要共享和管理的社交网络站点的出现。例如，我们可能想要对多年的股票市场数据进行统计分析以揭示模式，或基于数年的天气和相关数据构建可靠的天气模型。为了处理分布在许多站点（即节点）上的此类海量数据，需要可扩展的硬件和软件组件。云计算模型应运而生，旨在应对 Web 连接设备的爆炸式增长，并处理海量数据。其特征是大规模可扩展性和新的互联网驱动经济。
 
 另一个用于各种应用的概念是语义 Web 的概念。语义 Web 本质上是一组用于生成机器可理解网页的技术的集合。这些技术也可用于表示任何类型的数据，包括大数据的模式和恶意软件数据。我们基于语义 Web 技术表示的数据进行了一些分析和安全调查。特别是，我们使用语义 Web 技术表示社交网络，随后应用我们的分析技术提取有用的关系。我们还研究了使用语义 Web 技术表示的社交网络的安全性和隐私。
 
-本章的组织结构如下。第 4.2 节讨论大数据管理和分析工具。第 4.3 节讨论云计算概念。第 4.4 节讨论语义 Web 概念。第 4.4 节讨论分析和保护社交网络。第 4.6 节结束本章。图 4.1 说明了本章讨论的概念。本章讨论的工具和技术的更多细节见于 \[THUR2007\], \[THUR2013\], 和 \[THUR2017\]。
+本章的组织结构如下。第 4.2 节讨论大数据管理和分析工具。第 4.3 节讨论云计算概念。第 4.4 节讨论语义 Web 概念。第 4.4 节讨论分析和保护社交网络。第 4.6 节结束本章。图 4.1 说明了本章讨论的概念。本章讨论的工具和技术的更多细节见于 [THUR2007], [THUR2013], 和 [THUR2017]。
 
 ![图 4.1 大数据、云计算和语义 Web 技术。](img/fig4_1.jpg)
 
@@ -946,18 +893,15 @@ DOI: [10.1201/9781003081845-6](https://doi.org/10.1201/9781003081845-6)
 
 ## 4.2 大数据管理和分析工具及技术
 
-我们讨论各类大数据管理和分析工具，包括基础设施工具和大数据管理及分析工具。所讨论的工具如图 4.2 所示 \[THUS2010\]。
+我们讨论各类大数据管理和分析工具，包括基础设施工具和大数据管理及分析工具。所讨论的工具如图 4.2 所示 [THUS2010]。
 
 ![图 4.2 大数据工具。](img/fig4_2.jpg)
 
-
-
-
-# 4.2 大数据工具
+## 4.2 大数据工具
 
 ### 4.2.1 托管大数据系统的基础设施工具
 
-在本节中，我们将讨论托管各种大数据系统的各种基础设施产品。它们包括：Apache 的 `Hadoop`、`Spark`、`Storm`、`Flink` 和 `Kafka` 以及 `MapReduce` 编程模型 [WHIT2015]。这些基础设施工具也可以被视为云计算工具。
+在本节中，我们将讨论托管各种大数据系统的各种基础设施产品。它们包括：`Apache` 的 `Hadoop`、`Spark`、`Storm`、`Flink` 和 `Kafka` 以及 `MapReduce` 编程模型 [WHIT2015]。这些基础设施工具也可以被视为云计算工具。
 
 #### 4.2.1.1 Apache Hadoop
 
@@ -969,7 +913,7 @@ DOI: [10.1201/9781003081845-6](https://doi.org/10.1201/9781003081845-6)
 
 #### 4.2.1.3 Apache Spark
 
-`Apache Spark` 是一个用于处理海量数据的开源分布式计算框架。应用程序员通过一个接口使用 `Spark`，该接口包含一个称为弹性分布式数据集（`RDD`）的数据结构。`Spark` 的开发旨在克服 `MapReduce` 编程模型的局限性。`Spark` 的 `RDD` 数据结构提供了对分布式共享内存的支持。得益于内存处理能力，`Spark` 提供了良好的性能。`Spark` [SPAR] 与各种基于 NoSQL 的大数据系统（如 `Cassandra`）以及 Amazon 的云平台具有接口。`Spark` 通过 `Spark SQL` 支持 SQL 功能。
+`Apache Spark` 是一个用于处理海量数据的开源分布式计算框架。应用程序员通过一个接口使用 `Spark`，该接口包含一个称为弹性分布式数据集（`RDD`）的数据结构。`Spark` 的开发旨在克服 `MapReduce` 编程模型的局限性。`Spark` 的 `RDD` 数据结构提供了对分布式共享内存的支持。得益于内存处理能力，`Spark` 提供了良好的性能。`Spark` [SPAR] 与各种基于 NoSQL 的大数据系统（如 `Cassandra`）以及 `Amazon` 的云平台具有接口。`Spark` 通过 `Spark SQL` 支持 SQL 功能。
 
 #### 4.2.1.4 Apache Pig
 
@@ -977,79 +921,73 @@ DOI: [10.1201/9781003081845-6](https://doi.org/10.1201/9781003081845-6)
 
 #### 4.2.1.5 Apache Storm
 
+
+
+# Apache Storm
+
 `Apache Storm` 是一个用于处理海量数据的开源分布式实时计算系统。`Storm` 本质上是一个用于处理流式数据和实时分析的实时框架。它可以与 `HDFS` 集成。它提供可扩展性、可靠性和容错性等特性。`Storm` 的最新版本支持流式 SQL、预测建模以及与 `Kafka` 等系统的集成。总之，`Storm` 用于实时处理，而 `Hadoop` 用于批处理。更多关于 `Storm` 的详情见 [STOR]。
 
-#### 4.2.1.6 Apache Flink
+## 4.2.1.6 Apache Flink
 
 `Flink` 是一个开源的可扩展流处理框架。正如 [FLIN] 所述，`Flink` 具有以下特性：“(i) 即使在数据乱序或迟到的情况下也能提供准确的结果；(ii) 有状态且容错，能在保持精确一次应用状态的同时无缝从故障中恢复；(iii) 在大规模下表现优异，可在数千个节点上运行，具有极佳的吞吐量和延迟特性。” `Flink` 本质上是一个用 `Scala` 和 `Java` 实现的分布式数据流引擎。它以并行和流水线模式执行程序。它支持 `Java`、`Python` 和 `SQL` 编程环境。虽然它没有自己的数据存储，但它与 `HDFS`、`Kafka` 和 `Cassandra` 等系统集成。
 
-#### 4.2.1.7 Apache Kafka
+## 4.2.1.7 Apache Kafka
 
 `Kafka` 最初由 `LinkedIn` 开发，随后作为一个开源 Apache 项目进一步开发。它也是用 `Scala` 和 `Java` 实现的，是一个分布式流处理系统。它具有高度可扩展性，能处理海量流式数据。其存储层基于发布/订阅消息队列架构。其设计本质上基于分布式事务日志。事务日志用于数据库系统中，以从事务故障中恢复。更多关于 `Kafka` 的详情见 [KAFK]。
 
-### 4.2.2 大数据管理与分析工具
+# 4.2.2 大数据管理与分析工具
 
 在本节中，我们将讨论各种大数据管理与分析（`BDMA`）系统和工具。我们首先提供基于 SQL 的大数据系统。它们是 `Apache Hive` 和 `Google BigQuery`。然后我们一般性地讨论 NoSQL（非 SQL）数据库。随后讨论示例 NoSQL 系统，如 `Google BigTable`、`HBase`、`MongoDB`、`Cassandra`、`CouchDB` 和 `Oracle NoSQL Database`。随后将讨论两个用于大数据的数据挖掘/机器学习系统，它们是 `Weka` 和 `Apache Mahout`。
 
-#### 4.2.2.1 Apache Hive
+## 4.2.2.1 Apache Hive
 
 `Apache Hive` 是一个建立在 `Hadoop`/`MapReduce` 平台之上的开源类 SQL 数据库/数据仓库。它最初由 `Facebook` 开发，用于存储与 `Facebook` 数据相关的信息。然而，后来它成为一个开源项目和 Apache 的商标。`Hive` 管理超大型数据集，并在 `Hadoop`/`MapReduce` 存储模型之上运行。它提供一种类 SQL 查询语言，称为 `HiveQL`。也就是说，`Hive` 支持类 SQL 查询。然而，由于 `Hadoop` 是用 `Java` 实现的，查询也用 `Java` 实现。这样，就不需要低级 `Java` API 来实现查询。`Hive` 引擎本质上将 SQL 查询转换为 `MapReduce` 作业，然后由 `Hadoop` 执行。更多关于 `Apache Hive` 的详情见 [HIVE]。
 
-#### 4.2.2.2 Google BigQuery
+## 4.2.2.2 Google BigQuery
 
 `BigQuery` 本质上是一个管理 PB 级数据的数据仓库。它运行在 `Google` 的基础设施上，能极快地处理 SQL 查询或进行分析。例如，TB 级数据可在几秒内访问，而 PB 级数据可在几分钟内访问。`BigQuery` 数据存储在不同类型的表中：原生表存储 `BigQuery` 数据，视图存储虚拟表，外部表存储外部数据。`BigQuery` 可以通过多种方式访问，如命令行工具、RESTful 接口或 Web 用户界面，以及客户端库（例如 `Java`、`.NET`、`Python`）。更多关于 `BigQuery` 的详情见 [BIGQ]。
 
-#### 4.2.2.3 NoSQL 数据库
-
-
-
-
-##### NoSQL 数据库
+## 4.2.2.3 NoSQL 数据库
 
 NoSQL 数据库是一个统称，本质上指非关系型数据库设计或面向 Web 的可扩展性。它被称为非关系型高性能数据库。NoSQL 数据库的数据模型可能包括图、文档结构和键值对。可以认为，20 世纪 60 年代开发的数据库（如 IBM 的 IMS）以及基于网状数据模型的数据库属于 NoSQL 数据库。然而，20 世纪 90 年代开发的其他面向对象数据模型为 21 世纪 2000 年代 NoSQL 数据库的发展铺平了道路。NoSQL 数据库与旧式的层次型、网状型和对象型数据库的不同之处在于，NoSQL 数据库在设计时就考虑到了 Web 环境。也就是说，目标是在 Web 上快速访问海量数据。
 
 最流行的 NoSQL 数据库模型是键值对。虽然关系型数据库由一组关系组成，其中每个关系包含一组属性，这些属性被标记并包含在模式中。NoSQL 数据库拥有包含两列的表：键和值。键可以是任何内容，例如人名或股票指数。然而，值可以是属性的集合，例如股票名称、股票价值以及其他信息，如是否购买该股票，如果购买，推荐的数量是多少。因此，无需执行多次连接即可检索与某只股票相关的所有信息。本节将讨论一些流行的 NoSQL 数据库（例如 MongoDB 和 HBase）。关于 NoSQL 数据库的详细讨论，请参阅 `[NOSQ]`。更多细节也见于 `[CATT2011]`。
 
-#### 4.2.2.4 Google BigTable
+## 4.2.2.4 Google BigTable
 
 BigTable 是运行在 Google 文件系统 (GFS) 之上的早期 NoSQL 数据库之一。它现在作为云端服务提供。BigTable 将行键、列和时间戳映射在一起，形成一个字节数组。也就是说，它本质上是一个基于键值对模型的 NoSQL 数据库。它被设计用于处理 PB 级数据。当数据量过大时，它会使用压缩算法。BigTable 中的每个表都有许多维度，并可能被划分为所谓的“片”以配合 GFS 工作。BigTable 被许多应用程序使用，包括 Google 的 YouTube、Google Maps、Google Earth 和 Gmail。关于 BigTable 的更多细节见于 `[BIGT]`。
 
-#### 4.2.2.5 Apache HBase
+## 4.2.2.5 Apache HBase
 
-HBase 是一个开源的非关系型分布式数据库，是为 Hadoop/MapReduce 平台开发的第一个表。也就是说，HBase 是一个基于面向列的键值数据存储模型的 NoSQL 数据库。它用 Java 实现。查询作为 MapReduce 作业执行。它在一定程度上类似于 Google 的 BigTable，并对内存存储使用压缩。HBase 具有可扩展性，可处理数十亿行和数百万列。它还集成了不同格式的多数据存储，并便于稀疏数据的存储。关于 HBase 的更多细节见于 `[HBAS]`。
+HBase 是一个开源的非关系型分布式数据库，是为 Hadoop/MapReduce 平台开发的第一个表。也就是说，HBase 是一个基于面向列的键值数据存储模型的 NoSQL 数据库。它用 `Java` 实现。查询作为 `MapReduce` 作业执行。它在一定程度上类似于 Google 的 BigTable，并对内存存储使用压缩。HBase 具有可扩展性，可处理数十亿行和数百万列。它还集成了不同格式的多数据存储，并便于稀疏数据的存储。关于 HBase 的更多细节见于 `[HBAS]`。
 
-#### 4.2.2.6 MongoDB
+## 4.2.2.6 MongoDB
 
-MongoDB 是一种 NoSQL 数据库。它是一个跨平台的开源分布式数据库。它被用于存储和管理文档。也就是说，它主要是一个面向文档的数据库。文档以类 JSON 格式存储 `[CROC2006]`。它支持字段查询和范围查询，以及基于正则表达式的搜索。它支持数据复制和负载均衡，后者通过水平扩展实现。数据的批处理以及聚合操作可通过 MapReduce 进行。MongoDB 的更多细节见于 `[MONG]` 和 `[CHOD2010]`。
+MongoDB 是一种 NoSQL 数据库。它是一个跨平台的开源分布式数据库。它被用于存储和管理文档。也就是说，它主要是一个面向文档的数据库。文档以类 JSON 格式存储 `[CROC2006]`。它支持字段查询和范围查询，以及基于正则表达式的搜索。它支持数据复制和负载均衡，后者通过水平扩展实现。数据的批处理以及聚合操作可通过 `MapReduce` 进行。MongoDB 的更多细节见于 `[MONG]` 和 `[CHOD2010]`。
 
-#### 4.2.2.7 Apache Cassandra
+## 4.2.2.7 Apache Cassandra
 
-Cassandra 是一种 NoSQL 分布式数据库 `[HEWI2010]`。它最初在 Facebook 开发，用于支持 Facebook 应用程序，随后成为 Apache 基金会的开源软件项目。其设计初衷是消除单点故障。它支持跨越多数据中心的集群。集群中的所有节点执行相同的功能。因此，实际上不存在单点故障。它支持复制，具有高度可扩展性。它还具备容错能力，并与 Hadoop 集成，支持 MapReduce。Cassandra 支持的查询语言是 Cassandra 查询语言 (CQL)，这是 SQL 的一种替代方案。也可以通过 Java、C++ 和 Python 等程序访问。Cassandra 的更多细节见于 `[CASS]`。
+Cassandra 是一种 NoSQL 分布式数据库 `[HEWI2010]`。它最初在 Facebook 开发，用于支持 Facebook 应用程序，随后成为 Apache 基金会的开源软件项目。其设计初衷是消除单点故障。它支持跨越多数据中心的集群。集群中的所有节点执行相同的功能。因此，实际上不存在单点故障。它支持复制，具有高度可扩展性。它还具备容错能力，并与 Hadoop 集成，支持 `MapReduce`。Cassandra 支持的查询语言是 Cassandra 查询语言 (CQL)，这是 SQL 的一种替代方案。也可以通过 `Java`、`C++` 和 `Python` 等程序访问。Cassandra 的更多细节见于 `[CASS]`。
 
-#### 4.2.2.8 Apache CouchDB
+## 4.2.2.8 Apache CouchDB
 
 正如 `[COUC]` 所述，CouchDB 通过实现 Couch 复制协议来访问数据。该协议已被从集群到 Web 再到移动电话的众多平台实现。它是一个 NoSQL 数据库，用一种名为 Erlang 的并发语言实现。它使用 JavaScript 对象表示法 (JSON) 存储数据，并使用 JavaScript 作为查询语言。关于 CouchDB 的更多细节见于 `[COUC]` 和 `[ANDE2010]`。
 
-#### 4.2.2.9 Oracle NoSQL 数据库
+## 4.2.2.9 Oracle NoSQL 数据库
 
-Oracle 是主要的关系型数据库供应商之一，自 20 世纪 70 年代末以来一直销售关系型数据库产品。他们在 20 世纪 90 年代提供了对象关系型数据库产品，最近推出了 NoSQL 数据库。该 NoSQL 数据库基于键值对模型。每行有一个唯一键，并具有一个任意长度的值，由应用程序解释。Oracle NoSQL 数据库是一个无共享系统，分布在集群中所谓的多个分片上。数据在分片内的存储节点间复制以保证可用性。数据可通过 Java、C、Python 编写的程序以及 RESTful Web 服务访问。关于 Oracle NoSQL 数据库的更多细节见于 `[ORAC]`。
+Oracle 是主要的关系型数据库供应商之一，自 20 世纪 70 年代末以来一直销售关系型数据库产品。他们在 20 世纪 90 年代提供了对象关系型数据库产品，最近推出了 NoSQL 数据库。该 NoSQL 数据库基于键值对模型。每行有一个唯一键，并具有一个任意长度的值，由应用程序解释。Oracle NoSQL 数据库是一个无共享系统，分布在集群中所谓的多个分片上。数据在分片内的存储节点间复制以保证可用性。数据可通过 `Java`、`C`、`Python` 编写的程序以及 RESTful Web 服务访问。关于 Oracle NoSQL 数据库的更多细节见于 `[ORAC]`。
 
-#### 4.2.2.10 Weka
+## 4.2.2.10 Weka
 
 Weka 是一个开源软件产品，实现了一系列数据挖掘技术，从关联规则挖掘到分类再到聚类。它由新西兰的怀卡托大学设计、开发和维护。Weka 3 是 Weka 的一个版本，可对大数据集进行操作。虽然早期版本的 Weka 需要将整个数据集加载到内存中以执行分类等操作，但大数据版本执行增量加载和分类。Weka 3 还支持带有 Map 和 Reduce 任务的分布式数据挖掘。它还为 Hadoop 和 Spark 提供了封装器。关于 Weka 的更多细节见于 `[WEKA]`。
 
-#### 4.2.2.11 Apache Mahout
+## 4.2.2.11 Apache Mahout
 
-Apache Mahout 提供了一个环境，用于实现一系列机器学习系统。这些系统具有可扩展性，并构建在 Hadoop 之上。机器学习算法包括分类和聚类。机器学习算法的指令被转换为 MapReduce 作业并在 Hadoop 上执行。Mahout 提供 Java 库，用于实现机器学习算法中涉及的数学和统计技术。目标是让机器学习算法在超大数据集上运行。总之，正如 `[MAHO]` 所述，Mahout 提供以下三大功能：“(i) 一个简单且可扩展的编程环境和框架，用于构建可扩展算法；(ii) 适用于 Scala + Apache Spark、H2O 和 Apache Flink 的各种预制算法；(iii) Samsara，一个具有类 R 语法的向量数学实验环境，可大规模运行。” 关于 Mahout 的更多细节见于 `[MAHO]`。
+Apache Mahout 提供了一个环境，用于实现一系列机器学习系统。这些系统具有可扩展性，并构建在 Hadoop 之上。机器学习算法包括分类和聚类。机器学习算法的指令被转换为 `MapReduce` 作业并在 Hadoop 上执行。Mahout 提供 `Java` 库，用于实现机器学习算法中涉及的数学和统计技术。目标是让机器学习算法在超大数据集上运行。总之，正如 `[MAHO]` 所述，Mahout 提供以下三大功能：“(i) 一个简单且可扩展的编程环境和框架，用于构建可扩展算法；(ii) 适用于 Scala + Apache Spark、H2O 和 Apache Flink 的各种预制算法；(iii) Samsara，一个具有类 R 语法的向量数学实验环境，可大规模运行。” 关于 Mahout 的更多细节见于 `[MAHO]`。
 
-## 4.3 云计算
+# 4.3 云计算
 
-### 4.3.1 云计算模型
-
-
-
-
-### 4.3.1 云部署与服务模型
+## 4.3.1 云部署与服务模型
 
 正如[[CLOUD]](#ch04.xhtml#ref4_21)所述，云计算以服务的形式提供计算，而在传统计算中，计算是以产品的形式提供的。因此，用户根据按需付费模型为服务付费。云提供的服务可能包括硬件服务、系统服务、数据服务和存储服务。云用户无需知道软件和数据位于何处；也就是说，云提供的软件和数据服务对用户是透明的。NIST 将云计算定义为[[NIST]](#ch04.xhtml#ref4_51)：
 
@@ -1057,7 +995,7 @@ Apache Mahout 提供了一个环境，用于实现一系列机器学习系统。
 
 云模型由多种部署模型和服务模型组成。下文将描述这些模型。
 
-#### 4.3.1.1 云部署模型
+### 4.3.1.1 云部署模型
 
 云计算有多种部署模型。这些包括公有云、社区云、混合云和私有云。在公有云中，服务提供商通常通过万维网（WWW）提供可供公众访问的服务。此类云可能提供免费服务或按需付费服务。在社区云中，一组组织聚在一起开发云。这些组织可能有共同目标，以提供安全性和容错性等特性。成本由这些组织分担。此外，云可能由这些组织托管，也可能由第三方托管。私有云是专门为某个组织开发的云基础设施。这可以由该组织托管，也可以由第三方托管。混合云由公有云和私有云的组合构成。这样，在混合云中，组织可将私有云用于高度敏感的服务，而将公有云用于不太敏感的服务，并利用万维网（WWW）提供的优势。Kantarcioglu 及其同事指出，混合云是未来的部署模型[[KHAD2012a]](#ch04.xhtml#ref4_41)。图 4.3 展示了云部署模型。
 
@@ -1065,7 +1003,7 @@ Apache Mahout 提供了一个环境，用于实现一系列机器学习系统。
 
 图 4.3 云部署模型。
 
-#### 4.3.1.2 服务模型
+### 4.3.1.2 服务模型
 
 如前所述，云计算提供多种服务。这些包括基础设施即服务（IaaS）、平台即服务（PaaS）、软件即服务（SaaS）和数据即服务（DaaS）。在 IaaS 中，云为公众或组织提供一组硬件和网络供使用。用户安装操作系统和软件来运行应用程序。用户将根据其用于计算的资源利用情况进行计费。在 PaaS 中，云提供商将向用户提供系统软件，如操作系统和执行环境。用户将在云提供的硬件和软件基础设施上加载并运行应用程序。在 SaaS 中，云提供商将为用户提供应用程序以供运行。这些应用程序可能是计费应用、税务计算应用和销售工具。云用户通过云客户端访问这些应用程序。在 DaaS 的情况下，云向云用户提供数据。数据可能存储在由云用户访问的数据中心中。请注意，虽然 DaaS 过去用于表示桌面即服务，但最近它更多地表示数据即服务。图 4.4 展示了服务模型。
 
@@ -1073,7 +1011,7 @@ Apache Mahout 提供了一个环境，用于实现一系列机器学习系统。
 
 图 4.4 云服务模型。
 
-### 4.3.2 虚拟化
+## 4.3.2 虚拟化
 
 虚拟化本质上意味着创建虚拟而非实际的事物。它可以是硬件、软件、内存和数据。关于计算领域的虚拟化概念已存在数十年。早在 20 世纪 60 年代，虚拟内存的概念就已被引入。这种虚拟内存给应用程序一种错觉，即拥有连续的工作内存。开发了映射机制，将虚拟内存映射到实际物理内存。
 
@@ -1087,7 +1025,7 @@ Apache Mahout 提供了一个环境，用于实现一系列机器学习系统。
 
 如前所述，云计算的核心在于管理程序或虚拟机监视器的概念。硬件虚拟化技术允许多个操作系统（称为客户机）在宿主计算机上并发运行。这些多个操作系统共享虚拟化的硬件资源。管理程序并非新术语；它最早用于 20 世纪 60 年代中期的 IBM 360/65 机器中。管理程序有不同类型；在一种类型中，管理程序运行在宿主硬件上并管理客户操作系统。流行的虚拟机 VMware 和 XEN 都基于此模型。在另一种模型中，管理程序运行在传统操作系统环境中。虚拟机也被整合到嵌入式系统和移动电话中。嵌入式管理程序具有实时处理能力。虚拟化的一些细节见[[VIRT]](#ch04.xhtml#ref4_70)。
 
-### 4.3.3 云存储与数据管理
+## 4.3.3 云存储与数据管理
 
 在云存储模型中，服务提供商在数据中心为客户存储海量数据。需要存储空间的人将从作为托管公司的服务提供商处租用存储。数据的实际位置对用户透明。呈现给用户的是虚拟化存储；存储管理器将虚拟存储与实际存储映射，并为客户管理数据资源。单个对象（例如客户的整个视频数据库）可能存储在多个位置。每个位置可能存储多个客户的对象。图 4.6 展示了云存储管理。
 
@@ -1097,16 +1035,11 @@ Apache Mahout 提供了一个环境，用于实现一系列机器学习系统。
 
 虚拟化云存储有许多优势。用户无需购买昂贵的存储设备。数据可放置在云中的任何位置。维护工作（如备份和恢复）由云提供。目标是让用户能快速访问云。然而，由于数据所有者无法完全控制其数据，因此在云中存储数据存在严重的安全顾虑。
 
-
-
-
-#### 云数据库与语义 Web 技术
-
-#### 云数据库管理
+### 云数据库管理
 
 运行在云端的数据库称为云数据库管理器。利用云数据库管理器有多种方式。
 
-**第一种模型**：用户需购买*虚拟机镜像*以在云端运行数据库，数据库随后在虚拟机上运行。
+**第一种模型**：用户需购买`虚拟机镜像`以在云端运行数据库，数据库随后在虚拟机上运行。
 
 **第二种模型**：数据库即服务模型；服务提供商维护数据库。用户使用数据库服务并为服务付费。例如 Amazon 关系型数据库服务（Amazon RDS），这是一种 SQL 数据库服务，具有 MySQL 接口 [AMAZ]。
 
@@ -1118,13 +1051,15 @@ Apache Mahout 提供了一个环境，用于实现一系列机器学习系统。
 
 图 4.7 云数据管理
 
-### 4.3.4 云平台
+## 4.3.4 云平台
 
 本节讨论云服务提供商如何支持大数据管理，重点介绍 Amazon DynamoDB、Microsoft Cosmos DB，以及 IBM 和 Google 的云端大数据解决方案。
 
-#### 4.3.4.1 Amazon Web Services DynamoDB
+### 4.3.4.1 Amazon Web Services DynamoDB
 
 `DynamoDB`是属于 Amazon Web Services (AWS)产品组合的 NoSQL 数据库。它同时支持文档模型和键值存储模型。高性能和高吞吐量是`DynamoDB`的目标。在存储方面，`DynamoDB`可根据应用需求动态扩展和收缩。它还拥有一个名为`Amazon DynamoDB Accelerator` (DAX)的内存缓存，可为每秒百万级请求提供毫秒级响应。更多详情请参阅 [DYNA]。
+
+
 
 #### 4.3.4.2 Microsoft Azure Cosmos DB
 
@@ -1137,6 +1072,7 @@ Apache Mahout 提供了一个环境，用于实现一系列机器学习系统。
 #### 4.3.4.3 IBM 云端大数据解决方案
 
 IBM 是云计算领域的领导者，包括云端大数据管理。它开发了一种利用硬件和软件集合的架构，可托管多种大数据系统。IBM 提供数据库即服务，并支持数据管理和数据分析。例如：
+
 - `Cloudant`是一个 NoSQL 数据层。
 - `dashDB`系统是一个基于云的数据分析系统，用于执行分析。
 - `ElephantSQL`是在云端运行的开源数据库。
@@ -1159,60 +1095,51 @@ IBM 是云计算领域的领导者，包括云端大数据管理。它开发了�
 
 图 4.8 展示了语义 Web 的分层技术栈。这是由 Tim Berners-Lee 开发的栈。语义 Web 本质上由多层组成，每层利用前一层的技术。最底层是协议层，通常不包含在语义技术讨论中。下一层是 XML 层。XML 是一种文档表示语言。虽然 XML 足以指定语法，但难以用 XML 指定“文档 D 的创建者是 John”这类语义。因此，W3C 开发了使用 XML 语法的 RDF。语义 Web 社区进一步提出了用 OWL (Web 本体语言) 等语言指定本体的规范。注意 OWL 解决了 RDF 的不足。为了推理各种策略，语义 Web 社区提出了 SWRL (语义 Web 规则语言) 等 Web 规则语言。下面将描述构成语义 Web 的各种技术。
 
-
-
-
 ![Figure 4.8 Technology stack for the semantic web.](img/fig4_8.jpg)
 
 图 4.8 语义网技术栈。
 
-### 4.4.1 语义网技术栈
+### 4.4.2 语义网技术栈
 
-#### 4.4.1.1 XML
+#### 4.4.2.1 XML
 
 由于 HTML（超文本标记语言）的局限性和 SGML（标准通用标记语言）的复杂性，XML 变得必要。XML 是由 W3C 制定的一种可扩展标记语言，旨在使结构化文档在互联网上的交换更加容易。XML 的一个重要方面曾经是文档类型定义（DTD），它在正式模型中定义了每个文本元素的角色。XML Schema 现在已成为指定数据结构的关键。XML Schema 本身也是 XML 文档 [BRAY1997]。
 
-#### 4.4.1.2 RDF
+#### 4.4.2.2 RDF
 
 RDF 是语义网上描述资源的标准。它提供了一个通用框架来表达这些信息，以便它们可以在应用程序之间交换而不丢失含义。RDF 基于使用 Web 标识符（称为统一资源标识符，或 URI）来标识事物的思想，并通过简单的属性和属性值来描述资源 [KLYN2004]。
 
 RDF 具有形式语义，这为推理 RDF 图的含义提供了可靠的基础。这种推理通常称为蕴含。蕴含规则规定了可以从显式信息中推断出哪些隐式信息。通常，不假设 RDF 查询中包含关于任何资源的完整信息。查询语言应意识到这一点，并能容忍不完整或相互矛盾的信息。类的概念及对类的操作通过 RDF Schema 的概念在 RDF 中规定 [ANTO2008]。
 
-#### 4.4.1.3 SPARQL
+#### 4.4.2.3 SPARQL
 
 SPARQL（简单协议和 RDF 查询语言）[PRUD2006] 是一种强大的查询语言。它是一项关键的语义网技术，并由 W3C 的 RDF 数据访问工作组标准化。SPARQL 语法类似于 SQL，但它的优势在于能够使查询跨越多个不同的数据源，这些数据源由异构和半结构化数据组成。SPARQL 基于图模式匹配 [PRUD2006]。
 
-#### 4.4.1.4 OWL
+#### 4.4.2.4 OWL
 
 Web 本体语言（OWL）[MCGU2004] 是一种本体语言，其表达能力和推理能力比 RDF 和 RDF Schema（RDF-S）更强。它具有额外的词汇以及形式语义。OWL 有三种表达能力逐渐增强的子语言：OWL Lite、OWL DL 和 OWL Full。这些子语言是为特定的实现者和用户社区设计的。OWL 中的形式语义基于描述逻辑（DL），后者是一阶逻辑的一个可判定片段。
 
-#### 4.4.1.5 描述逻辑
+#### 4.4.2.5 描述逻辑
 
 描述逻辑（DL）是一系列知识表示（KR）形式化方法，用于表示应用领域的知识 [BAAD2003]。它将领域的概念（即其术语）定义为称为类的对象集合，并使用这些概念来指定领域中出现的对象和个体的属性。描述逻辑的特点是具有一组构造器，允许从原子概念和角色构建复杂的概念和角色。
 
-#### 4.4.1.6 SWRL
+#### 4.4.2.6 SWRL
 
 语义网规则语言（SWRL）将 OWL 公理集扩展为包含类 Horn 规则，并将类 Horn 规则扩展为可与 OWL 知识库相结合 [HORR2004]。提议的规则采用前件（主体）和后件（头部）之间蕴含的形式。其预期含义可理解为：每当前件中指定的条件成立时，后件中指定的条件也必须成立。前件（主体）和后件（头部）均由零个或多个原子组成。空前件被视为显然为真（即被每种解释满足），因此后件也必须被每种解释满足。空后件被视为显然为假（即不被任何解释满足），因此前件不得被任何解释满足。多个原子被视为合取，头部和主体均可包含此类原子的合取。请注意，具有合取后件的规则可以很容易地通过 Lloyd-Topor 变换转换为多条每条具有原子后件的规则。
 
-### 4.4.2 语义网与安全
+### 4.4.3 语义网与安全
 
 我们首先概述语义网的安全问题，然后讨论 XML 安全、RDF 安全和安全信息集成的一些细节，这些都是安全语义网的组成部分。随着对这些各种问题研究的深入，我们希望能制定出适当的标准来保障语义网的安全。安全不能孤立考虑。安全贯穿所有层。
 
-例如，考虑最底层。需要安全的 TCP/IP、安全套接字和安全的 HTTP。现在这些各种底层协议都有了安全协议。需要端到端安全。也就是说，不能仅在不受信的通信层上构建安全的 TCP/IP；我们需要网络安全。下一层是 XML 和 XML Schema。需要安全的 XML。也就是说，必须控制对文档各部分的访问，以进行读取、浏览和修改。目前已有关于保护 XML 和 XML Schema 的研究。下一步是保护 RDF。现在有了 RDF，我们不仅需要安全的 XML，还需要对解释和语义的安全保护。例如，在某些上下文中，文档的部分内容可能是*非密的*，而在其他某些上下文中，该文档可能是*密级的*。
+例如，考虑最底层。需要安全的 TCP/IP、安全套接字和安全的 HTTP。现在这些各种底层协议都有了安全协议。需要端到端安全。也就是说，不能仅在不受信的通信层上构建安全的 TCP/IP；我们需要网络安全。下一层是 XML 和 XML Schema。需要安全的 XML。也就是说，必须控制对文档各部分的访问，以进行读取、浏览和修改。目前已有关于保护 XML 和 XML Schema 的研究。下一步是保护 RDF。现在有了 RDF，我们不仅需要安全的 XML，还需要对解释和语义的安全保护。例如，在某些上下文中，文档的部分内容可能是`非密的`，而在其他某些上下文中，该文档可能是`密级的`。
 
-一旦 XML 和 RDF 得到保护，下一步就是检查本体和互操作的安全性。也就是说，本体可能附有安全级别。本体的某些部分可能是*机密的*，而其他部分可能是*非密的*。挑战在于如何利用这些本体进行安全信息集成？研究人员已经在数据库安全互操作性方面做了一些工作。我们需要重新审视这项研究，然后确定还需要做什么，以便 Web 上的信息能够被安全地管理、集成和交换。逻辑、证明和信任位于语义网的最高层。也就是说，我们如何信任 Web 给我们的信息？接下来我们将讨论 XML、RDF、本体和规则的各种安全问题。
+一旦 XML 和 RDF 得到保护，下一步就是检查本体和互操作的安全性。也就是说，本体可能附有安全级别。本体的某些部分可能是`机密的`，而其他部分可能是`非密的`。挑战在于如何利用这些本体进行安全信息集成？研究人员已经在数据库安全互操作性方面做了一些工作。我们需要重新审视这项研究，然后确定还需要做什么，以便 Web 上的信息能够被安全地管理、集成和交换。逻辑、证明和信任位于语义网的最高层。也就是说，我们如何信任 Web 给我们的信息？接下来我们将讨论 XML、RDF、本体和规则的各种安全问题。
 
-#### 4.4.2.1 XML 安全
-
-
-
-
-
-## 4.4.2 XML、RDF 和本体安全
+#### 4.4.3.1 XML 安全
 
 已有多项关于 XML 安全的研究工作被报道（参见例如 [BERT2002]）。我们简要讨论一些关键点。主要挑战在于：是授予对所有 XML 文档的访问权限，还是仅授予对文档部分内容的访问权限。Bertino 等人开发了用于 XML 的授权模型。他们专注于访问控制策略以及传播策略。他们还考虑了推送和拉取架构。他们使用 XML 来指定策略。策略规范包含有关哪些用户可以访问文档的哪些部分的信息。在 [BERT2002] 中，提出了访问控制算法以及计算结果视图的算法。此外，还讨论了保护 XML 文档的架构。在 [BERT2004] 和 [BHAT2004] 中，作者进一步阐述了如何在 Web 上发布 XML 文档。其思路是：所有者发布文档，主体请求访问文档，而不受信任的发布者向主体提供其被授权查看的文档视图。W3C 正在制定 XML 安全标准。XML 安全项目专注于提供 XML 安全标准的实现。重点在于 XML 签名语法与处理、XML 加密语法与处理以及 XML 密钥管理。虽然标准侧重于近期可实现的内容，但保护 XML 文档仍需要大量研究（另见 [SHE2009]）。
 
-#### 4.4.2.2 RDF 安全
+#### 4.4.3.2 RDF 安全
 
 RDF 是语义 Web 的基础。虽然 XML 在提供机器可理解文档方面存在局限，但 RDF 克服了这一局限。因此，RDF 为互操作性以及搜索和编目提供了更好的支持。它还描述文档的内容以及文档中各实体之间的关系。虽然 XML 提供语法和符号，但 RDF 通过以标准化方式提供语义信息来补充这一点 [ANTO2008]。
 
@@ -1222,23 +1149,19 @@ RDF 中更高级的概念包括容器模型和关于陈述的陈述。容器模�
 
 现在，要使语义 Web 安全，我们需要确保 RDF 文档是安全的。这将涉及从语法角度保护 XML。然而，对于 RDF，我们还需要确保在语义层面保持安全。问题包括资源、属性和陈述概念的安全含义。即：如何确保访问控制？如何保护关于陈述的陈述和属性？如何在更细的粒度上提供访问控制？容器模型的安全属性是什么？如何保护包、列表和替代？我们能否用 RDF 指定安全策略？如何解决策略的语义不一致性？关于陈述的陈述有什么安全含义？如何保护 RDF 模式？这些都是困难的问题，我们需要开始研究以提供答案。XML 安全只是开始。保护 RDF 要困难得多（另见 [CARM2004]）。
 
-#### 4.4.2.3 安全与本体
+#### 4.4.3.3 安全与本体
 
 本体本质上是各种概念的表示，旨在避免歧义。已经开发了大量本体。这些本体已被代理用于理解网页并执行数据库集成等操作。此外，本体可以用 RDF 或特殊语言（如 Web 本体语言 `OWL`）表示。现在，本体必须是安全的。即，必须控制对本体的访问。这意味着不同用户可能访问本体的不同部分。另一方面，本体可用于指定安全策略，就像 XML 和 RDF 被用于指定策略一样。即，我们将描述如何保护本体，以及如何使用本体来指定各种策略。
 
-#### 4.4.2.4 安全查询与规则处理
+#### 4.4.3.4 安全查询与规则处理
 
 安全 RDF 层之上的层是安全查询与规则处理层。虽然 RDF 可用于指定安全策略（参见例如 [CARM2004]），但 W3C 开发的 Web 规则语言在指定复杂策略方面更强大。此外，还开发了用于处理和推理规则的推理引擎（例如马里兰大学开发的 Pellet 引擎）。可以将我们开发的数据库推理控制器的思想（参见 [THUR1993]）与 Web 规则处理相结合，为语义 Web 开发推理或隐私控制器。查询处理模块负责访问语义 Web 上异构的数据和信息源。研究人员正在研究将 Web 查询处理技术与语义 Web 技术相结合的方法，以定位、查询和集成异构的数据和信息源。
 
-### 4.4.3 基于语义 Web 技术的云计算框架
+### 4.4.4 基于语义 Web 技术的云计算框架
 
 在本节中，我们将介绍一个云计算框架，我们已在恶意软件检测以及社交媒体应用的系统实现中使用了该框架，其中一些应用在本书中有所讨论。特别地，我们将讨论我们用于 RDF 集成和溯源数据集成的框架。
 
-#### 4.4.3.1 RDF 集成
-
-
-
-
+#### 4.4.4.1 RDF 集成
 
 ##### 基于 RDF 的云应用策略引擎
 
@@ -1262,9 +1185,11 @@ RDF 中更高级的概念包括容器模型和关于陈述的陈述。容器模�
 
 在 [[PAPA2012]](#ch04.xhtml#ref4_54) 中，作者提出了 `H2RDF`，这是一个完全分布式的 RDF 存储，结合了 `MapReduce` 处理框架和 `NoSQL` 分布式数据存储。其系统具有独特特性，能够在虚拟无限数量的三元组上高效处理简单和多连接 `SPARQL` 查询。这些特性包括：根据查询选择性执行连接以减少处理的连接算法，以及在集中式和分布式（基于 `MapReduce`）连接执行之间自适应选择以实现快速查询响应。他们声称其系统能高效回答简单连接和复杂多变量查询，并能使用由九个工作节点组成的小型集群扩展至三十亿三元组。
 
+
+
 在 [[KHAD2012b]](#ch04.xhtml#ref4_42) 中，作者设计了一个 `Jena-HBase` 框架。其基于 `HBase` 的三元组存储可与 `Jena` 框架配合使用。`Jena-HBase` 为最终用户提供了一个可扩展的存储和查询解决方案，支持 RDF 规范的所有特性。更多 `HBase` 详情可参见 [`HBASE`] 和 [[GEOR2011]](#ch04.xhtml#ref4_28)。
 
-#### 4.4.3.2 来源集成
+### 4.4.3.2 来源集成
 
 虽然我们针对社交网络应用在云中实现可靠信息共享的方法足够通用，适用于包括网络安全数据在内的任何类型数据，但我们以来源数据为例进行了说明。我们将讨论在来源数据集成工作中考察的各种方法。更多工作详情可参见 [[THUR2014]](#ch04.xhtml#ref4_66)。
 
@@ -1283,10 +1208,6 @@ RDF 中更高级的概念包括容器模型和关于陈述的陈述。容器模�
 ### 4.5.1 社交网络简介
 
 在线社交网络（`OSNs`）在互联网上获得了极大普及，成为一个重要的研究课题，吸引了来自不同领域的众多专业人士。自 `Facebook`、`Twitter` 和 `LinkedIn` 等 `OSNs` 网站出现以来，`OSNs` 持续影响并改变着我们生活的方方面面。从政治到商业营销，从名人到新闻制造者，每个人都沉迷于这一现象。`Facebook` 用于与朋友联系并分享各种个人和专业数据以及照片和视频；`LinkedIn` 完全是一个专业网络，用于与同事建立联系。`Google+` 类似于 `Facebook`，而 `Twitter` 是一项免费的社交网络和微博服务，允许用户发送和阅读称为推文的消息。推文是显示在作者个人资料页面上并分发给作者订阅者（称为 `followers`）的约 140 字符的文本帖子。每个网络都有其自身的优势，这些网络主要通过广告盈利，因为它们提供的服务在很大程度上是免费的，除非当然有人想在 `LinkedIn` 等网络中获得高级服务。
-
-
-
-
 
 我们在社交媒体分析方面的大量工作都集中在分析推文上。特别是，我们分析推文以检测可疑人员以及进行情感分析。此外，我们开发的许多实验系统都侧重于使用语义 Web 技术表示的社交媒体数据。我们的工作还考察了 Facebook，研究人们发布的信息，并确定是否可以提取用户的敏感属性。我们还在社交网络访问控制的工作中使用了基于语义 Web 的社交网络表示。我们将讨论社交媒体分析应用，然后讨论安全和隐私问题。第 IV 部分将讨论我们开发的一个用于分析和保护基于语义 Web 的社交媒体系统的系统。图 4.9 展示了社交媒体分析、安全和隐私的各个方面。关键点将在第 4.6.2 节至第 4.6.4 节中详细阐述。更多详情请参阅 [THUR2016]。
 
@@ -1354,10 +1275,6 @@ Web 挖掘技术在 SNA 中有天然的应用。这是因为 WWW 可以被视为
 
 由于数据挖掘，用户可以访问社交网络中各成员的信息并提取敏感信息。这可能包括个人可能希望保密的财务数据、健康数据和旅行数据。可以提取的其他敏感信息包括政治倾向和性别偏好，以及饮酒和吸烟习惯。在我们之前的工作中，我们考察了由于数据挖掘和分析导致的社交媒体数据中发生的各种隐私侵犯。我们应用了各种数据分析技术，并展示了如何推断私人信息 [ABRO2016]。
 
-
-
-
-
 安全的另一个方面是机密性。也就是说，必须控制对社交媒体中敏感信息的访问。用户应该有选项仅授予特定朋友访问权限。此外，人们可能会更信任某些朋友。我们已经研究了使用语义 Web 技术表示的社交网络的访问控制。我们还开发了实验系统，包括社交网络中的推理控制以及基于云的可靠信息共享。
 
 ## 4.6 总结与展望
@@ -1412,73 +1329,113 @@ Web 挖掘技术在 SNA 中有天然的应用。这是因为 WWW 可以被视为
 
 *   `[CHOD2010]` K. Chodorow, M. Dirolf, MongoDB: The Definitive Guide, O'Reilly Media, 2010.
 
-*   `[CLOUD]` What is Cloud Computing? `https://aws.amazon.com/what-is-cloud-computing/`。
-
-*   `[COSM]` Microsoft Azure Cosmos, `https://azure.microsoft.com/en-us/blog/a-technical-overview-of-azure-cosmos-db/`。
-
-*   `[COUC]` CouchDB, `http://couchdb.apache.org/`。
-
-*   `[CROC2006]` D. Crockford, The Application/JSON Media Type for Javascript Object Notation (JSON), 2006. `https://datatracker.ietf.org/doc/html/rfc4627`。
-
-*   `[DEAN2004]` J. Dean, S. Ghemawat, MapReduce: Simplified Data Processing on Large Clusters, `http://research.google.com/archive/mapreduce.html`。
-
-*   `[DYNA]` DynamoDB, `https://aws.amazon.com/dynamodb/`。
-
-*   `[FLIN]` Flink, `https://flink.apache.org/`。
-
-*   `[GEOR2011]` L. George, HBase: The Definitive Guide, O'Reilly Media, 2011.
-
-*   `[GHEM2003]` S. Ghemawat, H. Gobioff, S.-T. Leung, The Google File System, ACM SIGOPS Operating Systems Review, Volume 37, #5, 2003, 29–43.
-
-*   `[GOOG]` Google, `https://cloud.google.com/solutions/big-data/`。
-
-*   `[HBASE]` HBase, `https://hbase.apache.org/`。
 
 
+* `[CLOUD]` What is Cloud Computing? `https://aws.amazon.com/what-is-cloud-computing/`。
 
+* `[COSM]` Microsoft Azure Cosmos, `https://azure.microsoft.com/en-us/blog/a-technical-overview-of-azure-cosmos-db/`。
 
-*   \[HEWI2010\] E. Hewitt, *Cassandra: The Definitive Guide*, O'Reilly Media, 2010.
-*   \[HDFS\] Apache Hadoop, <http://hadoop.apache.org/>.
-*   \[HIVE\] Apache HIVE, <https://hive.apache.org/>.
-*   \[HORR2004\] I. Horrocks, P.F. Patel-Schneider, H. Boley, S. Tabet, B. Grosof, M. Dean, *SWRL: A Semantic Web Rule Language Combining OWL and RuleML*, W3C Member submission, 2004. <https://www.w3.org/Submission/SWRL/> - W3C Member Submission 21.
-*   \[HUAN2011\] J. Huang, D.J. Abadi, K. Ren, *Scalable SPARQL Querying of Large RDF Graphs*, *Proceedings of the VLDB Endowment*, Volume 4, #11, 2011.
-*   \[HUSA2009\] M.F. Husain, P. Doshi, L. Khan, B. Thuraisingham, *Storage and Retrieval of Large RDF Graph Using Hadoop and MapReduce*, Cloud Computing, LNCS 5931, Springer-Verlag, 2009, pp. 680–686.
-*   \[IBM\] IBM, <https://www-01.ibm.com/software/data/bigdata/>.
-*   \[IKED2011\] R. Ikeda, H. Park, J. Widom, *Provenance for Generalized Map and Reduce Workflows*, Stanford InfoLab, 2011. <http://ilpubs.stanford.edu:8090/985/>.
-*   \[KAFK\] Kafka, <http://kafka.apache.org/>.
-*   \[KHAD2012a\] V. Khadilkar, K.Y. Octay, M. Kantarcioglu, S. Mehrotra, *Secure Data Processing over Hybrid Clouds*, IEEE Data Engineering Bulletin, Volume 35, #4, 2012, 46–54.
-*   \[KHAD2012b\] V. Khadilkar, M. Kantarcioglu, P. Castagna, B. Thuraisingham, *Jena-HBase: A Distributed, Scalable and Efficient RDF Triple Store*, 2012, technical report: <http://www.utdallas.edu/~vvk072000/Research/Jena-HBase-Ext/tech-report.Pdf>.
-*   \[KHAN2002\] L. Khan, F. Luo. *Ontology Construction for Information Selection*. ICTAI, 2002, pp. 122–127.
-*   \[KHAN2004\] L. Khan, D. McLeod, E.H. Hovy, *Retrieval Effectiveness of an Ontology-Based Model for Information Selection*. VLDB J, Volume 13, #1, 2004, 71–85.
-*   \[KLYN2004\] G. Klyne, J.J. Carroll, B. McBride, *Resource Description Framework (RDF): Concepts and Abstract Syntax*, W3C Recommendation 10, 2004. <https://www.w3.org/TR/rdf-concepts/>.
-*   \[LEE2001\] T.B. Lee, J. Hendler, O. Lasilla, *The Semantic Web*, Scientific American, Volume 284, #5, May 2001, 34–43.
-*   \[MAHO\] Mahout, <http://mahout.apache.org/>.
-*   \[MAPR\] MapReduce, <https://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html>.
-*   \[MCGU2004\] D.L. McGuinness, F. Van Harmelen, *OWL Web Ontology Language Overview*, W3C Recommendation, 2004. <https://www.w3.org/TR/owl-features/>.
-*   \[MONG\] MongoDB, <https://www.mongodb.com/>.
-*   \[NIST\] Definition of Cloud Computing, National Institute of Standards and Technology, <http://csrc.nist.gov/publications/nistpubs/800-145/SP800-145.pdf>.
-*   \[NOSQ\] NoSQL, <http://nosql-database.org/>.
-*   \[ORAC\] Oracle, <https://www.oracle.com/big-data/index.html>.
-*   \[PAPA2012\] N. Papailiou, I. Konstantinou, D. Tsoumakos, N. Koziris, *H2RDF: Adaptive Query Processing on RDF Data in the Cloud*, *Proceedings of the 21st International Conference Companion on World Wide Web*, Lyon, France, 2012, 397–400.
-*   \[PARK2011\] H. Park, R. Ikeda, J. Widom, *Ramp: A System for Capturing and Tracing Provenance in MapReduce Workflows*, VLDB Endowment, Volume 4, #12, 2011, 1351–1354.
-*   \[PART2011\] J. Partyka, P. Parveen, L. Khan, B.M. Thuraisingham, S. Shekhar, *Enhanced Geographically Typed Semantic Schema Matching*, Journal of Web Semantics, Volume 9, #1, 2011, 52–70.
-*   \[PIG\] Apache Pig, <https://pig.apache.org/>.
-*   \[PRUD2006\] E. Prud'hommeaux, A. Seaborne, *SPARQL Query Language for RDF*, W3C Working Draft, 2006. <https://www.w3.org/2001/sw/DataAccess/rq23>.
-*   \[SHE2009\] W. She, I.L. Yen, B. Thuraisingham, E. Bertino, *The SCIFC Model for Information Flow Control in Web Service Composition*, *IEEE International Conference on Web Services (ICWS) 2009*, Los Angeles, CA, 2009, 1–8.
-*   \[SPAR\] Apache Spark, <http://spark.apache.org/>.
-*   \[STOR\] Apache Storm, <http://storm.apache.org/>.
-*   \[SUN2010\] J. Sun, Q. Jin, *Scalable RDF Store Based on HBase and MapReduce*, *Proceedings 3rd International Conference on Advanced Computer Theory and Engineering, Chengdu, China*, Volume 1, 2010, 633–636.
-*   \[THUR1993\] B. Thuraisingham, W. Ford, M. Collins, J. O'Keeffe, *Design and Implementation of a Database Inference Controller*, Data and Knowledge Engineering Journal, Volume 11, #3, 1993, 271–297.
-*   \[THUR2007\] B. Thuraisingham, *Building Trustworthy Semantic Webs*, CRC Press, 2007.
-*   \[THUR2013\] B. Thuraisingham, *Developing and Securing the Cloud*, CRC Press, 2013.
-*   \[THUR2014\] B. Thuraisingham, *Secure Data Provenance and Inference Control with Semantic Web*, CRC Press, 2014.
-*   \[THUR2016\] A. Satyen, B. Thuraisingham, S. Abrol, R. Heatherly, M. Kantarcioglu, V. Khadikar, L. Khan, *Analyzing and Securing Social Networks*, CRC Press, 2016.
-*   \[THUR2017\] B. Thuraisingham, P. Praveen, M.M. Masud, L. Khan, *Big Data Analytics with Applications in Insider Threat Detection*, CRC Press, 2017.
-*   \[THUS2010\] A. Thusoo, J.S. Sarma, N. Jain, Z. Shao, P. Chakka, N. Zhang, S. Antony, H. Liu, R. Murthy, *Hive – A Petabyte Scale Data Warehouse Using Hadoop*, *Proceedings Data Engineering (ICDE), 2010 IEEE 26th International Conference on Data Engineering (ICDE)*, Los Angeles, CA, 2010.
-*   \[VIRT\] Virtualization and Cloud Management, <http://www.vmware.com/solutions/virtualization-management/index.html>.
-*   \[W3C\] World Wide Web Consortium, <http://www.w3c.org>.
-*   \[WEKA\] Weka, <http://www.cs.waikato.ac.nz/ml/weka/bigdata.html>.
-*   \[WHIT2015\] T. White, *Hadoop: The Definitive Guide: Storage and Analysis at Internet Scale*, O'Reilly Media, Inc., 2015.
+* `[COUC]` CouchDB, `http://couchdb.apache.org/`。
+
+* `[CROC2006]` D. Crockford, The Application/JSON Media Type for Javascript Object Notation (JSON), 2006. `https://datatracker.ietf.org/doc/html/rfc4627`。
+
+* `[DEAN2004]` J. Dean, S. Ghemawat, MapReduce: Simplified Data Processing on Large Clusters, `http://research.google.com/archive/mapreduce.html`。
+
+* `[DYNA]` DynamoDB, `https://aws.amazon.com/dynamodb/`。
+
+* `[FLIN]` Flink, `https://flink.apache.org/`。
+
+* `[GEOR2011]` L. George, HBase: The Definitive Guide, O'Reilly Media, 2011.
+
+* `[GHEM2003]` S. Ghemawat, H. Gobioff, S.-T. Leung, The Google File System, ACM SIGOPS Operating Systems Review, Volume 37, #5, 2003, 29–43.
+
+* `[GOOG]` Google, `https://cloud.google.com/solutions/big-data/`。
+
+* `[HBASE]` HBase, `https://hbase.apache.org/`。
+
+* `[HEWI2010]` E. Hewitt, *Cassandra: The Definitive Guide*, O'Reilly Media, 2010.
+
+* `[HDFS]` Apache Hadoop, `http://hadoop.apache.org/`。
+
+* `[HIVE]` Apache HIVE, `https://hive.apache.org/`。
+
+* `[HORR2004]` I. Horrocks, P.F. Patel-Schneider, H. Boley, S. Tabet, B. Grosof, M. Dean, *SWRL: A Semantic Web Rule Language Combining OWL and RuleML*, W3C Member submission, 2004. `https://www.w3.org/Submission/SWRL/` - W3C Member Submission 21.
+
+* `[HUAN2011]` J. Huang, D.J. Abadi, K. Ren, *Scalable SPARQL Querying of Large RDF Graphs*, *Proceedings of the VLDB Endowment*, Volume 4, #11, 2011.
+
+* `[HUSA2009]` M.F. Husain, P. Doshi, L. Khan, B. Thuraisingham, *Storage and Retrieval of Large RDF Graph Using Hadoop and MapReduce*, Cloud Computing, LNCS 5931, Springer-Verlag, 2009, pp. 680–686.
+
+* `[IBM]` IBM, `https://www-01.ibm.com/software/data/bigdata/`。
+
+* `[IKED2011]` R. Ikeda, H. Park, J. Widom, *Provenance for Generalized Map and Reduce Workflows*, Stanford InfoLab, 2011. `http://ilpubs.stanford.edu:8090/985/`。
+
+* `[KAFK]` Kafka, `http://kafka.apache.org/`。
+
+* `[KHAD2012a]` V. Khadilkar, K.Y. Octay, M. Kantarcioglu, S. Mehrotra, *Secure Data Processing over Hybrid Clouds*, IEEE Data Engineering Bulletin, Volume 35, #4, 2012, 46–54.
+
+* `[KHAD2012b]` V. Khadilkar, M. Kantarcioglu, P. Castagna, B. Thuraisingham, *Jena-HBase: A Distributed, Scalable and Efficient RDF Triple Store*, 2012, technical report: `http://www.utdallas.edu/~vvk072000/Research/Jena-HBase-Ext/tech-report.Pdf`。
+
+* `[KHAN2002]` L. Khan, F. Luo. *Ontology Construction for Information Selection*. ICTAI, 2002, pp. 122–127.
+
+* `[KHAN2004]` L. Khan, D. McLeod, E.H. Hovy, *Retrieval Effectiveness of an Ontology-Based Model for Information Selection*. VLDB J, Volume 13, #1, 2004, 71–85.
+
+* `[KLYN2004]` G. Klyne, J.J. Carroll, B. McBride, *Resource Description Framework (RDF): Concepts and Abstract Syntax*, W3C Recommendation 10, 2004. `https://www.w3.org/TR/rdf-concepts/`。
+
+* `[LEE2001]` T.B. Lee, J. Hendler, O. Lasilla, *The Semantic Web*, Scientific American, Volume 284, #5, May 2001, 34–43.
+
+* `[MAHO]` Mahout, `http://mahout.apache.org/`。
+
+* `[MAPR]` MapReduce, `https://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html`。
+
+* `[MCGU2004]` D.L. McGuinness, F. Van Harmelen, *OWL Web Ontology Language Overview*, W3C Recommendation, 2004. `https://www.w3.org/TR/owl-features/`。
+
+* `[MONG]` MongoDB, `https://www.mongodb.com/`。
+
+* `[NIST]` Definition of Cloud Computing, National Institute of Standards and Technology, `http://csrc.nist.gov/publications/nistpubs/800-145/SP800-145.pdf`。
+
+* `[NOSQ]` NoSQL, `http://nosql-database.org/`。
+
+* `[ORAC]` Oracle, `https://www.oracle.com/big-data/index.html`。
+
+* `[PAPA2012]` N. Papailiou, I. Konstantinou, D. Tsoumakos, N. Koziris, *H2RDF: Adaptive Query Processing on RDF Data in the Cloud*, *Proceedings of the 21st International Conference Companion on World Wide Web*, Lyon, France, 2012, 397–400.
+
+* `[PARK2011]` H. Park, R. Ikeda, J. Widom, *Ramp: A System for Capturing and Tracing Provenance in MapReduce Workflows*, VLDB Endowment, Volume 4, #12, 2011, 1351–1354.
+
+* `[PART2011]` J. Partyka, P. Parveen, L. Khan, B.M. Thuraisingham, S. Shekhar, *Enhanced Geographically Typed Semantic Schema Matching*, Journal of Web Semantics, Volume 9, #1, 2011, 52–70.
+
+* `[PIG]` Apache Pig, `https://pig.apache.org/`。
+
+* `[PRUD2006]` E. Prud'hommeaux, A. Seaborne, *SPARQL Query Language for RDF*, W3C Working Draft, 2006. `https://www.w3.org/2001/sw/DataAccess/rq23`。
+
+* `[SHE2009]` W. She, I.L. Yen, B. Thuraisingham, E. Bertino, *The SCIFC Model for Information Flow Control in Web Service Composition*, *IEEE International Conference on Web Services (ICWS) 2009*, Los Angeles, CA, 2009, 1–8.
+
+* `[SPAR]` Apache Spark, `http://spark.apache.org/`。
+
+* `[STOR]` Apache Storm, `http://storm.apache.org/`。
+
+* `[SUN2010]` J. Sun, Q. Jin, *Scalable RDF Store Based on HBase and MapReduce*, *Proceedings 3rd International Conference on Advanced Computer Theory and Engineering, Chengdu, China*, Volume 1, 2010, 633–636.
+
+* `[THUR1993]` B. Thuraisingham, W. Ford, M. Collins, J. O'Keeffe, *Design and Implementation of a Database Inference Controller*, Data and Knowledge Engineering Journal, Volume 11, #3, 1993, 271–297.
+
+* `[THUR2007]` B. Thuraisingham, *Building Trustworthy Semantic Webs*, CRC Press, 2007.
+
+* `[THUR2013]` B. Thuraisingham, *Developing and Securing the Cloud*, CRC Press, 2013.
+
+* `[THUR2014]` B. Thuraisingham, *Secure Data Provenance and Inference Control with Semantic Web*, CRC Press, 2014.
+
+* `[THUR2016]` A. Satyen, B. Thuraisingham, S. Abrol, R. Heatherly, M. Kantarcioglu, V. Khadikar, L. Khan, *Analyzing and Securing Social Networks*, CRC Press, 2016.
+
+* `[THUR2017]` B. Thuraisingham, P. Praveen, M.M. Masud, L. Khan, *Big Data Analytics with Applications in Insider Threat Detection*, CRC Press, 2017.
+
+* `[THUS2010]` A. Thusoo, J.S. Sarma, N. Jain, Z. Shao, P. Chakka, N. Zhang, S. Antony, H. Liu, R. Murthy, *Hive – A Petabyte Scale Data Warehouse Using Hadoop*, *Proceedings Data Engineering (ICDE), 2010 IEEE 26th International Conference on Data Engineering (ICDE)*, Los Angeles, CA, 2010.
+
+* `[VIRT]` Virtualization and Cloud Management, `http://www.vmware.com/solutions/virtualization-management/index.html`。
+
+* `[W3C]` World Wide Web Consortium, `http://www.w3c.org`。
+
+* `[WEKA]` Weka, `http://www.cs.waikato.ac.nz/ml/weka/bigdata.html`。
+
+* `[WHIT2015]` T. White, *Hadoop: The Definitive Guide: Storage and Analysis at Internet Scale*, O'Reilly Media, Inc., 2015.
 
 # 5 大数据分析、安全与隐私
 
@@ -1486,16 +1443,13 @@ DOI: [10.1201/9781003081845-7](https://doi.org/10.1201/9781003081845-7)
 
 ## 5.1 简介
 
-
-
-
 ### 大数据安全与隐私中的问题
 
 虽然第 2 章、第 3 章和第 4 章讨论了一些用于整合数据科学与网络安全的基础技术，但本章描述了构成本书基础的大数据安全与隐私（BDSP）挑战。特别是，我们总结了由美国国家科学基金会资助的大数据安全与隐私研讨会的讨论内容，该研讨会于 2014 年 9 月 16 日至 17 日在德克萨斯州达拉斯举行。我们的目标是建立一个 BDSP 社区，以探索具有挑战性的研究问题。我们还在华盛顿特区举行的国家隐私研究战略会议上展示了研讨会成果，以确定这些主题在研究和教育方面的方向。
 
 最近，已经举办了一些关于 BDSP 的研讨会和专题讨论会。例如包括 ACM CCS 大数据安全研讨会、ACM SACMAT 以及 IEEE 大数据会议专题讨论会。这些研讨会和专题讨论会受到了不同研究社区的影响。例如，ACM CCS 研讨会系列侧重于面向安全应用的大数据，而 IEEE 大数据会议则侧重于云安全问题。此外，这些研讨会和专题讨论会主要只解决围绕 BDSP 的有限技术问题。例如，ACM CCS 研讨会似乎并未涉及涉及法规的隐私问题，或由数据分析导致的安全违规。
 
-为了解决上述局限性，我们于 2014 年 9 月 16 日至 17 日在德克萨斯州达拉斯组织了一场关于 BDSP 的研讨会，由美国国家科学基金会（NSF）资助 [NSF]。该研讨会的参与者由高性能计算、系统、数据管理与分析、网络安全、网络科学、医疗保健和社会科学等领域的跨学科研究人员组成，他们齐聚一堂，共同确定了 BDSP 的战略方向。NSF 在网络安全和大数据方面都进行了大量投资。因此，这两个领域共同合作以确定大数据安全的方向至关重要。我们根据研讨会结果向国家隐私研究战略 [NPRS] 提交了报告。我们还在 NITRD（网络与信息技术研究与开发）隐私研讨会 [NITRD] 上进行了汇报。本文档是描述 BDSP 问题、研讨会汇报及研讨会讨论的研讨会报告。我们希望这一努力有助于建立 BDSP 社区。
+为了解决上述局限性，我们于 2014 年 9 月 16 日至 17 日在德克萨斯州达拉斯组织了一场关于 BDSP 的研讨会，由美国国家科学基金会（NSF）资助 `[NSF]`。该研讨会的参与者由高性能计算、系统、数据管理与分析、网络安全、网络科学、医疗保健和社会科学等领域的跨学科研究人员组成，他们齐聚一堂，共同确定了 BDSP 的战略方向。NSF 在网络安全和大数据方面都进行了大量投资。因此，这两个领域共同合作以确定大数据安全的方向至关重要。我们根据研讨会结果向国家隐私研究战略 `[NPRS]` 提交了报告。我们还在 NITRD（网络与信息技术研究与开发）隐私研讨会 `[NITRD]` 上进行了汇报。本文档是描述 BDSP 问题、研讨会汇报及研讨会讨论的研讨会报告。我们希望这一努力有助于建立 BDSP 社区。
 
 本章的组织结构如下。第 5.2 节描述了围绕 BDSP 的问题。第 5.3 节讨论了研究挑战。图 5.1 展示了本章讨论的主题。
 
@@ -1509,21 +1463,23 @@ DOI: [10.1201/9781003081845-7](https://doi.org/10.1201/9781003081845-7)
 
 本节描述了提交给研讨会参与者以激发讨论的 BDSP 问题。这些问题既包括大数据的安全与隐私，也包括用于网络安全的大数据管理与分析。虽然大数据植根于许多技术，但数据库管理是其核心。因此，在本节中，我们将讨论数据管理是如何演变的，然后重点关注 BDSP 问题。
 
+
+
 在过去的四十年里，数据库系统技术取得了长足进步，从基于网络模型和层次模型的遗留系统发展到关系数据库和对象数据库系统。现在可以通过 Web 访问数据库系统，数据管理服务已作为 Web 服务实现。由于基于 Web 的服务、非结构化数据管理、社交媒体和移动计算的爆发式增长，待处理的数据量在短短二十年内就从 TB 级增加到了 PB 级和 ZB 级。如此大量的复杂数据被称为*大数据*。大数据不仅必须得到高效管理，还必须经过分析以提取有用的信息，从而改善业务并造福社会。这被称为大数据分析。
 
 大量数据的存储、管理和分析也会导致安全和隐私违规。出于各种原因（包括法规遵从性），数据通常必须保留。保留的数据可能包含敏感信息，从而侵犯用户隐私。此外，操作此类大数据（例如组合不同类型的数据集）可能导致安全和隐私违规。例如，虽然原始数据移除了个人身份信息，但衍生数据可能包含私密和敏感信息。例如，关于一个人的原始数据可能与该人的地址相结合，这可能足以识别出该人。
 
-不同的社区都在应对大数据挑战。例如，系统社区正在开发大数据海量存储技术。网络社区正在开发管理超大规模网络数据的解决方案。数据社区正在开发高效管理和分析大规模数据集的解决方案。大数据研发正在学术界、工业界和政府研究实验室中进行。然而，对于大数据的安全和隐私考虑关注甚少。安全横跨系统、数据和网络等多个领域。我们需要多个社区共同合作，开发 BDSP 解决方案。
+不同的社区都在应对大数据挑战。例如，系统社区正在开发大数据海量存储技术。网络社区正在开发管理超大规模网络数据的解决方案。数据社区正在开发高效管理和分析大规模数据集的解决方案。大数据研发正在学术界、工业界和政府研究实验室中进行。然而，对于大数据的安全和隐私考虑关注甚少。安全横跨系统、数据和网络等多个领域。我们需要多个社区共同合作，开发 `BDSP` 解决方案。
 
-本节描述了 BDSP 中的一些问题。第 5.2.2 节提供了大数据管理与分析的概述。第 5.2.3 节给出了研讨会上讨论的安全和隐私问题。我们关于建立社区的目标在第 5.1 节中讨论。
+本节描述了 `BDSP` 中的一些问题。第 5.2.2 节提供了大数据管理与分析的概述。第 5.2.3 节给出了研讨会上讨论的安全和隐私问题。我们关于建立社区的目标在第 5.1 节中讨论。
 
-### 5.2.2 大数据管理与分析
+## 5.2.2 大数据管理与分析
 
 大数据管理与分析研究正在沿三个方向进行。它们如下：
 
-1.  构建用于大数据存储的基础设施和高性能计算技术；
-2.  数据管理技术，如整合多数据源（包括大数据和小数据）以及大数据的索引和查询；以及
-3.  操作和分析大数据以提取信息的数据分析技术。
+1. 构建用于大数据存储的基础设施和高性能计算技术；
+2. 数据管理技术，如整合多数据源（包括大数据和小数据）以及大数据的索引和查询；以及
+3. 操作和分析大数据以提取信息的数据分析技术。
 
 我们将简要回顾各领域取得的进展。在构建基础设施方面，正在开发 `Hadoop`、`MapReduce` 和 `Storm` 等技术，用于在云中管理大量数据。此外，主存数据管理技术已取得进步，可在主存中管理数 TB 的数据。而且，`Hive`、`Cassandra` 等系统以及 `NoSQL` 数据库已被开发用于管理 PB 级数据。
 
@@ -1531,12 +1487,9 @@ DOI: [10.1201/9781003081845-7](https://doi.org/10.1201/9781003081845-7)
 
 在数据分析方面，各种数据挖掘算法正在基于 `Hadoop` 和 `MapReduce` 的基础设施上实现。此外，正在探索数据缩减技术，将海量数据缩减为可管理的块，同时仍保持数据的语义。
 
-
-
-
 总之，大数据管理与分析技术包括扩展当前的数据管理与挖掘技术以处理海量数据，以及开发新方法，其中包括用于维护和分析大型网络数据的图数据管理与挖掘技术。
 
-### 5.2.3 安全与隐私
+## 5.2.3 安全与隐私
 
 海量数据的收集、存储、处理和保留引发了严重的安全与隐私考量。各种法规正被提出以应对大数据，确保个人隐私不被侵犯。例如，即使从数据中移除了个人身份信息，当数据与其他数据结合时，个人仍可能被识别。这实质上是数据安全研究人员在过去四十年里一直在探索的推理与聚合问题。随着大数据的管理，由于现在存在来自不同来源且与各种个人相关的数据，这一问题变得更加严重。
 
@@ -1560,13 +1513,11 @@ DOI: [10.1201/9781003081845-7](https://doi.org/10.1201/9781003081845-7)
 
 本节总结了 NSF 研讨会上关于 `BDSP` 的讨论。研讨会包括主题演讲、参会者汇报和工作组讨论。我们组织了两个工作组：一个由 Elisa Bertino 博士领导的 `BDSP` 工作组，另一个由 Murat Kantarcioglu 博士领导的大数据分析用于网络安全工作组。虽然研讨会的主要焦点是大数据管理与分析引发的隐私问题，但我们也就将大数据管理分析技术应用于网络安全进行了富有启发性的讨论。因此，本节提供了两个工作组讨论的总结。
 
-本节的组织结构如下。第 5.3.2 节 讨论 `BDSP` 背后的理念。第 5.3.3 节 讨论隐私增强技术。第 5.3.4 节 讨论大数据隐私框架。第 5.3.5 节 讨论大数据隐私的研究挑战与跨学科方法。第 5.3.6 节 概述用于网络安全的大数据管理与分析技术。第 5.3.7 节 讨论针对大数据/数据科学的攻击。
+本节的组织结构如下。第 5.3.2 节讨论 `BDSP` 背后的理念。第 5.3.3 节讨论隐私增强技术。第 5.3.4 节讨论大数据隐私框架。第 5.3.5 节讨论大数据隐私的研究挑战与跨学科方法。第 5.3.6 节概述用于网络安全的大数据管理与分析技术。第 5.3.7 节讨论针对大数据/数据科学的攻击。
 
 ### 5.3.2 大数据安全与隐私理念
 
 正如 Bertino [BERT2014] 所讨论的，技术进步和新颖应用（如传感器、网络物理系统、智能移动设备、云系统、数据分析和社交网络）使得捕获并快速处理分析海量数据成为可能，从中可提取对安全相关任务至关重要的信息。在网络安全领域，此类任务包括用户认证、访问控制、异常检测、用户监控和内部威胁防护 [BERT2012]。通过分析和整合互联网和 Web 上收集的数据，可以识别个人之间的联系和关系，这反过来可能有助于国土保护。通过收集和挖掘用户出行和疾病爆发的相关数据，可以预测疾病在地理区域内的传播。这些只是几个例子；当然还有许多其他领域，数据技术可在增强安全方面发挥重要作用。
-
-
 
 然而，数据在安全任务中的使用引发了重大的隐私担忧 [THUR2002]。收集的数据即使通过移除姓名或社会安全号码等标识符进行了匿名化处理，一旦与其他数据关联，也可能导致重新识别出与特定数据项相关的个人。此外，由于政府机构等组织通常需要在安全任务上协作，数据集会在不同组织间交换，导致这些数据集可被许多不同方获取。除了数据分析的用途外，认证和访问控制等安全任务可能需要用户的详细信息。一个例子是多因素认证，除密码或证书外，可能还需要用户生物特征。最近提出的持续认证技术将用户认证扩展为包含击键动力学等信息，以持续验证用户身份。另一个例子是基于位置的访问控制 [DAMI2007]，它要求用户向访问控制系统提供其当前位置信息。因此，访问控制系统可能会随时间收集详细的用户移动信息。如果这些信息被滥用或窃取，会导致隐私泄露。
 
@@ -1586,8 +1537,6 @@ DOI: [10.1201/9781003081845-7](https://doi.org/10.1201/9781003081845-7)
 
 ### 5.3.4 数据隐私多目标优化框架
 
-
-
 尽管已有尝试提出能够应对多种不同场景的隐私解决方案/定义，但我们认为，不存在适用于所有情况的“放之四海而皆准”的数据隐私解决方案。相反，需要针对不同的应用领域量身定制多个维度，以实现切实可行的解决方案。
 
 首先，不同领域需要不同的数据效用定义。例如，如果我们想要构建隐私保护分类模型，`0/1 loss` 可能是一个很好的效用度量。另一方面，对于隐私保护记录链接，`F1 score` 可能是更好的选择。
@@ -1599,9 +1548,7 @@ DOI: [10.1201/9781003081845-7](https://doi.org/10.1201/9781003081845-7)
 鉴于这三个维度，可以设想一个多目标框架，其中不同维度可被赋予不同的重视程度：
 
 *   **在风险和成本约束下最大化效用**：这适用于限制特定隐私风险至关重要的场景。
-
 *   **在效用和成本约束下最小化隐私风险**：在某些场景中（例如医疗护理），可能不允许效用显著下降。在此设定下，协议的参数值（例如差分隐私中的 `ε`）的选择方式是：在满足效用约束的前提下，尽最大努力保障隐私。请注意，在某些场景中，可能不存在能够同时满足所有约束的参数设置。
-
 *   **在效用和风险约束下最小化成本**：在某些情况下（例如密码学协议），您可能希望找到能够以最低成本满足所有效用和风险约束的协议参数设置。
 
 为了更好地说明这些维度，请考虑文献 `[INAN2012]` 中解决的隐私保护记录匹配问题。针对该问题的现有解决方案通常遵循两种方法：数据清洗技术和密码学技术。文献 `[INAN2012]` 提出了一种结合这两种方法的混合技术。该方法使用户能够在隐私、准确性和成本之间进行权衡。这类似于本章讨论的多目标优化框架。这些多目标优化是通过在清洗后的数据上运行阻塞阶段来实现的，该阶段以隐私保护的方式过滤掉不满足匹配条件的记录对。通过披露更多信息（例如差分隐私数据统计），与密码学技术相比，所提出的方法产生的成本显著降低。另一方面，即使在隐私要求很高的情况下，与数据清洗技术相比，它产生的匹配结果也显著更准确。使用不同的隐私参数值可实现不同的成本、风险和效用结果。
@@ -1615,27 +1562,21 @@ DOI: [10.1201/9781003081845-7](https://doi.org/10.1201/9781003081845-7)
 *   **数据机密性**：存在若干数据机密性技术和机制，最著名的是访问控制系统和加密技术。这两种技术均已被广泛研究。然而，对于大数据的访问控制系统，我们需要以下方面的方法：
 
     *   **合并大量访问控制策略**：在许多情况下，大数据意味着整合来自多个来源的数据；这些数据可能关联各自的访问控制策略（称为“粘性策略”），且即使数据与其他数据集成，这些策略也必须得到执行。因此，需要整合策略并解决冲突。
-
     *   **自动管理大数据的授权，特别是授予权限**：如果需要细粒度访问控制，在大型数据集上进行手动管理是不可行的。我们需要能够自动授予授权的技术，这可能基于用户数字身份、配置和上下文，以及数据内容和元数据。
-
     *   **在异构多媒体数据上执行访问控制策略**：基于内容的访问控制是一种重要的访问控制类型，根据数据内容授予或拒绝授权。在处理对安全至关重要的视频监控应用时，基于内容的访问控制至关重要。就隐私而言，此类视频必须受到保护。支持基于内容的访问控制需要理解受保护数据的内容，而在处理多媒体大数据源时，这极具挑战性。
-
     *   **在大数据存储中执行访问控制策略**：一些最新的大数据系统允许用户使用 `Java` 等编程语言提交任意作业。例如，在 `Hadoop` 中，用户可以提交用 `Java` 编写的任意 `MapReduce` 作业。这给为不同用户高效执行细粒度访问控制带来了重大挑战。尽管已有一些现有工作 `KHAN2014, ULUS2014` 尝试将访问控制策略注入提交的作业中，但仍需更多研究，探讨如何在新开发的大数据存储中高效执行此类策略。
-
     *   **自动设计、演进和管理访问控制策略**：在数据源、用户、应用程序以及数据使用持续变化的动态环境中，自动设计和演进策略的能力至关重要，这能确保数据随时可用，同时保障数据机密性。用于管理策略的环境和工具也至关重要。
 
 *   **隐私保护数据关联技术**：大数据产生的一个主要问题是，在关联多个（大）数据集时，可以提取出意想不到的信息。需要调查的相关问题和研究方向包括：
 
     *   **控制提取内容的技术，并检查提取的内容是否可以被使用和/或共享**。
-
     *   **同时支持个人隐私和群体隐私**：在群体隐私的情况下，理解从数据中提取了什么很重要，因为这可能导致歧视。此外，在处理安全与隐私问题时，理解个人隐私与集体安全之间的权衡也很重要。
-
-
-
 
 #### 高效且可扩展的隐私增强技术
 
 多年来已开发出多种此类技术，包括 `oblivious RAM`、`security multi-party computation`、`multi-input encryption`、`homomorphic encryption`。然而，它们尚不适用于大规模数据集的实际应用。我们需要对这些技术进行工程化改造，例如利用 `parallelization` 来微调其实现，并可能将其与其他技术（如 `differential privacy`，正如 [SCAN2007] 中描述的记录链接协议所示）相结合。另一种可能的方法是先使用匿名化/清洗后的数据，然后根据具体情况获取特定的非匿名化数据。
+
+
 
 #### 数据隐私政策的可用性
 
@@ -1656,8 +1597,11 @@ DOI: [10.1201/9781003081845-7](https://doi.org/10.1201/9781003081845-7)
 #### 风险模型
 
 可识别出大数据与风险的不同关系类型：
+
 (a) 大数据可能增加隐私风险；
+
 (b) 大数据可在许多领域降低风险（如国家安全）。
+
 开发这两类风险的模型至关重要，以确定合适的权衡和隐私增强技术。
 
 ### 数据所有权
@@ -1674,7 +1618,7 @@ DOI: [10.1201/9781003081845-7](https://doi.org/10.1201/9781003081845-7)
 
 #### 数据获取
 
-我们需要机制和工具防止设备获取关于其他个体的数据（使用 Google Glass 等设备时相关）；例如，能否设计机制自动阻止设备在特定地点录制/获取数据（或通知用户周围有录制设备）。我们还需要技术，让每个被记录主体对数据用途有发言权。
+我们需要机制和工具防止设备获取关于其他个体的数据（使用 `Google Glass` 等设备时相关）；例如，能否设计机制自动阻止设备在特定地点录制/获取数据（或通知用户周围有录制设备）。我们还需要技术，让每个被记录主体对数据用途有发言权。
 
 #### 数据共享
 
@@ -1703,10 +1647,6 @@ DOI: [10.1201/9781003081845-7](https://doi.org/10.1201/9781003081845-7)
 #### 用于预防网络攻击的 BDMA
 
 关于 BDMA 工具如何用于预防攻击，有大量讨论。涌现的一个想法是：能利用捕获的溯源信息轻松追踪敏感数据的 BDMA 系统，可能在过多敏感信息泄露前检测到攻击。基于此观察，构建溯源感知的 BDMA 系统将成为网络攻击预防的需求。此外，网络安全 BDMA 工具可潜在地挖掘有用的攻击者信息，如其动机、技术能力、作案手法等，以预防未来攻击。
-
-
-
-
 
 #### 用于数字取证的 BDMA
 
@@ -1749,29 +1689,16 @@ BDMA 技术可通过组合或关联不同的数据源用于数字取证。出现
 *   [KUZU2013] M. Kuzu, M. Kantarcioglu, A. Inan, E. Bertino, E. Durham, B. Malin, Efficient Privacy-Aware Record Integration, *Proceedings of Joint 2013 EDBT/ICDT Conferences, EDBT’13*, ACM, Genoa, Italy, March 18–22, 2013.
 *   [LIND2000] Y. Lindell, B. Pinkas, Privacy Preserving Data Mining, *Advances in Cryptology*, Springer-Verlag, August 20–24, 2000.
 *   [LIU2014] D. Liu, E. Bertino, X. Yi, Privacy of Outsourced K-Means Clustering, *Proceedings of the 9th ACM Symposium on Information, Computer and Communication Security*, Kyoto (Japan), June 4–6, 2014.
-
-
-
-
-*   [\[NIST1\]](#ch05.xhtml#Cref5_12) [`bigdatawg.nist.gov/`](https://bigdatawg.nist.gov).
-
-*   [\[NIST2\]](#ch05.xhtml#Cref5_13) [`www.nist.gov/itl/applied-cybersecurity/nice`](https://www.nist.gov).
-
-*   [\[NITRD\]](#ch05.xhtml#Cref5_14) [`csi.utdallas.edu/events/NSF/NPRS%20Workshop%20Presentation.pdf`](http://csi.utdallas.edu).
-
-*   [\[NPRS\]](#ch05.xhtml#Cref5_15) [`www.nitrd.gov/cybersecurity/nprsrfi102014/BigData-SP.pdf`](https://www.nitrd.gov).
-
-*   [\[NSF\]](#ch05.xhtml#Cref5_16) [`csi.utdallas.edu/events/NSF/NSF%20workshop%202014.htm`](http://csi.utdallas.edu).
-
-*   \[SCAN2007\] M. Scannapieco, I. Figotin, E. Bertino, A. Elmagarmid, Privacy Preserving Schema and Data Matching, *Proceedings of 2007 ACM SIGMOD International Conference on Management of Data, Beijing, China*, 2007, pp. 653–664.
-
-*   \[THUR2002\] B. Thuraisingham, Data Mining, National Security, Privacy and Civil Liberties, SIGKDD Explorations, Volume 4, #2, 2002, 1–5.
-
-*   \[ULUS2014\] H. Ulusoy, M. Kantarcioglu, E. Pattuk, K. Hamlen, Vigiles: Fine-Grained Access Control for MapReduce Systems, *2014 IEEE International Congress on Big Data (BigData Congress)* Anchorage, Alaska, USA, 2014, pp. 40–47.
-
-*   \[VAID2006\] J. Vaidya, Y. Zhu, C. Clifton, Privacy Preserving Data Mining, Advances in Information Security 19, Springer, 2006, pp. 1–121.
-
-*   \[WANG2014\] H.X. Wang, K. Nayak, C. Liu, E. Shi, E. Stefanov, Y. Huang, Oblivious Data Structures, IACR Cryptology ePrint Archive, 2014, 185.
+*   [NIST1] [`bigdatawg.nist.gov/`](https://bigdatawg.nist.gov).
+*   [NIST2] [`www.nist.gov/itl/applied-cybersecurity/nice`](https://www.nist.gov).
+*   [NITRD] [`csi.utdallas.edu/events/NSF/NPRS%20Workshop%20Presentation.pdf`](http://csi.utdallas.edu).
+*   [NPRS] [`www.nitrd.gov/cybersecurity/nprsrfi102014/BigData-SP.pdf`](https://www.nitrd.gov).
+*   [NSF] [`csi.utdallas.edu/events/NSF/NSF%20workshop%202014.htm`](http://csi.utdallas.edu).
+*   [SCAN2007] M. Scannapieco, I. Figotin, E. Bertino, A. Elmagarmid, Privacy Preserving Schema and Data Matching, *Proceedings of 2007 ACM SIGMOD International Conference on Management of Data, Beijing, China*, 2007, pp. 653–664.
+*   [THUR2002] B. Thuraisingham, Data Mining, National Security, Privacy and Civil Liberties, SIGKDD Explorations, Volume 4, #2, 2002, 1–5.
+*   [ULUS2014] H. Ulusoy, M. Kantarcioglu, E. Pattuk, K. Hamlen, Vigiles: Fine-Grained Access Control for MapReduce Systems, *2014 IEEE International Congress on Big Data (BigData Congress)* Anchorage, Alaska, USA, 2014, pp. 40–47.
+*   [VAID2006] J. Vaidya, Y. Zhu, C. Clifton, Privacy Preserving Data Mining, Advances in Information Security 19, Springer, 2006, pp. 1–121.
+*   [WANG2014] H.X. Wang, K. Nayak, C. Liu, E. Shi, E. Stefanov, Y. Huang, Oblivious Data Structures, IACR Cryptology ePrint Archive, 2014, 185.
 
 ## 第一部分 结语
 
@@ -1789,9 +1716,9 @@ DOI: [10.1201/9781003081845-10](https://doi.org/10.1201/9781003081845-10)
 
 第二部分包含四个章节，描述了面向网络安全的数据科学。特别是，数据科学技术（如数据挖掘、流分析和云计算）被应用于网络安全应用，如恶意软件分析和内部威胁检测。
 
-第 6 章讨论了用于检测恶意可执行文件的数据挖掘/数据科学技术。第 7 章描述了用于恶意软件检测的流分析，并展示了如何利用这种方法检测新型恶意软件类别。第 8 章讨论了如何利用大数据技术（如云计算）提升第 5 章和第 6 章中讨论的技术的性能。第 8 章讨论了如何基于监督学习和无监督学习应用数据科学技术进行内部威胁检测。关于大数据技术的可扩展性也进行了讨论。
 
-# 6 面向恶意可执行文件的数据科学
+
+# 第 6 章 面向恶意可执行文件的数据科学
 
 DOI: [10.1201/9781003081845-11](https://doi.org/10.1201/9781003081845-11)
 
@@ -1802,8 +1729,6 @@ DOI: [10.1201/9781003081845-11](https://doi.org/10.1201/9781003081845-11)
 防病毒社区检测恶意代码的一种流行技术是“特征检测”。该技术将可执行文件与称为 `signature` 的唯一标志性字符串或字节模式进行匹配，后者用作特定恶意代码的标识符。尽管特征检测技术被广泛使用，但它们对 `zero-day` 攻击（新恶意代码）、`polymorphic` 攻击（同一二进制文件的不同加密）或 `metamorphic` 攻击（实现相同功能的不同代码）无效。因此，迫切需要快速、自动化且高效的检测技术，且这些技术能抵御上述攻击。因此，开发了许多自动化系统 [GOLB2004, KOLT2004, NEWM2002, NEWS2005]。
 
 在本章中，我们描述了我们新颖的 `hybrid feature retrieval` (HFR) 模型，该模型可以高效地检测恶意可执行文件 [MASU2007a, MASU2007b]。接下来，我们描述了我们用于检测恶意可执行文件的数据挖掘工具。它利用基于 `n`-gram 分析的特征提取技术。我们首先讨论如何从可执行文件中提取二进制 `n`-gram 特征，然后展示如何使用信息增益选择最佳特征。我们还讨论了与 `n`-gram 提取和选择相关的内存和可扩展性问题，以及我们如何解决它。然后我们描述了如何提取汇编特征和动态链接库 (DLL) 调用特征。最后，我们描述了如何结合这三种特征，并使用这些特征训练分类器。
-
-
 
 ### 实验与评估详解
 
@@ -1836,8 +1761,6 @@ DOI: [10.1201/9781003081845-11](https://doi.org/10.1201/9781003081845-11)
 我们的研究贡献如下。首先，我们提出并实现了 HFR（混合特征检索）模型，结合了上述三种特征。其次，我们应用一种新颖的想法，利用二进制 `n-gram` 特征提取汇编指令特征，并通过 AFR 算法实现。第三，我们提出并实现了一个可扩展的解决方案，用于解决一般的 `n-gram` 特征提取和选择问题。我们的解决方案在有限内存下工作良好，并通过应用高效强大的数据结构和算法显著减少了运行时间。因此，它可扩展到大量可执行文件集合（数千量级），即使在有限的主内存和处理器速度下。最后，我们将结果与 [KOLT2004] 的结果进行比较，后者仅使用二进制 `n-gram` 特征，并表明我们的方法获得了更好的准确性。我们还报告了我们方法与 [KOLT2004] 方法的性能/成本权衡。必须指出的是，我们的主要贡献是一种高效的特征提取技术，而非分类技术。我们通过实证证明，无论使用何种分类器（如 SVM/决策树），利用我们算法提取的组合特征集（即 HFS）均优于其他单独特征集（如二进制 `n-gram`）。
 
 ### 6.2.2 相关工作
-
-
 
 近年来，检测恶意可执行文件方面已投入大量精力。自动化检测过程主要有两种主流技术：行为分析和基于内容的分析。行为分析法主要用于检测移动恶意代码。该技术用于分析网络流量特征，如源/目的端口、IP 地址、各种数据包级/流级统计信息，以及应用级特征，如电子邮件附件类型、附件大小等。行为分析法的示例包括社交网络分析 [GOLB2004, NEWM2002] 和统计分析 [SCHU2001a]。[MASU2007a] 提出了一种基于数据挖掘的行为分析法来检测电子邮件蠕虫。[GARG2006] 结合机器学习应用特征提取技术进行 `masquerade detection`。他们从基于 GUI 系统的用户行为中提取特征，如鼠标速度、每会话点击次数等。然后将问题建模为二分类问题，并使用 SVM 进行训练和测试。我们的方法是基于内容的，而非行为分析。
 
@@ -1877,43 +1800,47 @@ DOI: [10.1201/9781003081845-11](https://doi.org/10.1201/9781003081845-11)
 
 ![](img/inline6_1.jpg)
 
+基本特征收集过程如下运行。首先，我们将 `n-gram` 列表 `L` 初始化为空。然后我们通过滑动 `n`-字节窗口扫描每个十六进制转储文件。每个这样的 `n`-字节序列就是一个 `n-gram`。每个 `n-gram` `g` 关联两个值：`p[1]` 和 `n[1]`，分别表示包含 `g` 的正实例（即恶意可执行文件）和负实例（即良性可执行文件）的总数。如果在 `L` 中未找到 `g`，则将 `g` 添加到 `L`，并根据需要更新 `p[1]` 和 `n[1]`。如果 `g` 已在 `L` 中，则仅更新 `p[1]` 和 `n[1]`。当所有十六进制转储文件扫描完毕时，`L` 包含数据集中所有唯一的 `n-gram` 及其在正负实例中的频率。这种基本方法存在几个实现问题。首先，`n-gram` 的总数可能非常大。例如，我们在第二个数据集中 10-gram 的总数是 2 亿。可能无法将它们全部存储在计算机主内存中。为解决此问题，我们将 `n-gram` 存储在磁盘文件 `F` 中。其次，如果 `L` 未排序，则每个扫描到的 `n-gram` 都需要线性搜索来测试它是否已在 `L` 中。如果 `N` 是数据集中 `n-gram` 的总数，则收集所有 `n-gram` 的时间将是 `O(N²)`，当 `N` = 2 亿时，这是不切实际的时间量。
 
+为了解决第二个问题，我们使用一种称为 Adelson Velsky Landis (AVL) 树 [GOOD2006] 的数据结构在内存中存储 `n-gram`。AVL 树是一种高度平衡的二叉搜索树。该树具有这样一个性质：任意节点的左子树和右子树高度的绝对差值至多为 1。如果在插入或删除期间违反此性质，则执行平衡操作，树恢复其高度平衡性质。保证插入和删除在对数时间内执行。因此，为了在内存中插入一个 `n-gram`，我们现在只需要 `O(log₂(N))` 次搜索。因此，总运行时间减少到 `O(N log₂(N))`，当 `N` 多达 2 亿时，总体运行时间大约快 500 万倍。我们的特征收集算法 `extract feature` 实现了这两个解决方案。它在 算法 6.1 中进行了说明。
 
-基本特征收集过程如下运行。首先，我们将 *n*\-gram 列表 *L* 初始化为空。然后我们通过滑动 *n*\-字节窗口扫描每个十六进制转储文件。每个这样的 *n*\-字节序列就是一个 *n*\-gram。每个 *n*\-gram *g* 关联两个值：*p*[1] 和 *n*[1]，分别表示包含 *g* 的正实例（即恶意可执行文件）和负实例（即良性可执行文件）的总数。如果在 *L* 中未找到 *g*，则将 *g* 添加到 *L*，并根据需要更新 *p*[1] 和 *n*[1]。如果 *g* 已在 *L* 中，则仅更新 *p*[1] 和 *n*[1]。当所有十六进制转储文件扫描完毕时，*L* 包含数据集中所有唯一的 *n*\-gram 及其在正负实例中的频率。这种基本方法存在几个实现问题。首先，*n*\-gram 的总数可能非常大。例如，我们在第二个数据集中 10-gram 的总数是 2 亿。可能无法将它们全部存储在计算机主内存中。为解决此问题，我们将 *n*\-gram 存储在磁盘文件 *F* 中。其次，如果 *L* 未排序，则每个扫描到的 *n*\-gram 都需要线性搜索来测试它是否已在 *L* 中。如果 *N* 是数据集中 *n*\-gram 的总数，则收集所有 *n*\-gram 的时间将是 *O*(*N*²)，当 *N* = 2 亿时，这是不切实际的时间量。
+算法描述：第 3 行的 `for` 循环针对训练集中的每个十六进制转储文件运行。第 4 行的内层 `while` 循环收集一个文件的所有 `n-gram`，如果不在 AVL 树中则将其添加进去。第 8 行执行测试，查看树大小是否超过了内存限制（阈值）。如果超过且 `F` 为空，则将树的内容保存到 `F` 中（第 9 行）。如果 `F` 不为空，则将树的内容与 `F` 合并（第 10 行）。最后，我们从树中删除所有节点（第 12 行）。
 
-为了解决第二个问题，我们使用一种称为 Adelson Velsky Landis (AVL) 树 [GOOD2006] 的数据结构在内存中存储 *n*\-gram。AVL 树是一种高度平衡的二叉搜索树。该树具有这样一个性质：任意节点的左子树和右子树高度的绝对差值至多为 1。如果在插入或删除期间违反此性质，则执行平衡操作，树恢复其高度平衡性质。保证插入和删除在对数时间内执行。因此，为了在内存中插入一个 *n*\-gram，我们现在只需要 *O*(log[2] (*N*)) 次搜索。因此，总运行时间减少到 *O*(*N*log[2] (*N*))，当 *N* 多达 2 亿时，总体运行时间大约快 500 万倍。我们的特征收集算法 `extract feature` 实现了这两个解决方案。它在 算法 6.1 中进行了说明。
-
-算法描述：第 3 行的 `for` 循环针对训练集中的每个十六进制转储文件运行。第 4 行的内层 `while` 循环收集一个文件的所有 *n*\-gram，如果不在 AVL 树中则将其添加进去。第 8 行执行测试，查看树大小是否超过了内存限制（阈值）。如果超过且 *F* 为空，则将树的内容保存到 *F* 中（第 9 行）。如果 *F* 不为空，则将树的内容与 *F* 合并（第 10 行）。最后，我们从树中删除所有节点（第 12 行）。
-
-时间复杂度：*T* = 时间 (*n*\-gram 读取和插入树) + 时间 (与磁盘合并) = *O*(*B*log[2]*K*) + *O*(*N*)，其中 *B* 是以字节为单位的训练数据总大小，*K* 是树的最大节点数（即阈值），*N* 是收集的 *n*\-gram 总数。空间复杂度：*O*(*K*)，其中 *K* 定义如上。
+时间复杂度：`T` = 时间 (`n-gram` 读取和插入树) + 时间 (与磁盘合并) = `O(B log₂ K)` + `O(N)`，其中 `B` 是以字节为单位的训练数据总大小，`K` 是树的最大节点数（即阈值），`N` 是收集的 `n-gram` 总数。空间复杂度：`O(K)`，其中 `K` 定义如上。
 
 #### 6.3.1.3 特征选择
 
 如果提取的特征总数非常大，由于几个原因，可能无法将它们全部用于训练。首先，内存需求可能不切实际。其次，训练可能太慢。第三，分类器可能会因大量特征而感到困惑，因为其中大多数将是嘈杂的、冗余的或无关的。因此，我们要选择一个小的、相关的和有用的特征子集。我们选择信息增益 (IG) 作为选择标准，因为它是文献中用于选择最佳特征的最佳标准之一。
 
-IG 可以定义为属性（即特征）在对训练数据进行分类时有效性的度量 [MITC1997]。如果我们基于该属性的值分割训练数据，则 IG 给出分割后熵的预期减少量。一个属性能减少训练数据中熵越多，该属性在对数据分类方面就越好。属性 *A* 在实例集合 *I* 上的 IG 由公式 (6.1) 给出：
+IG 可以定义为属性（即特征）在对训练数据进行分类时有效性的度量 [MITC1997]。如果我们基于该属性的值分割训练数据，则 IG 给出分割后熵的预期减少量。一个属性能减少训练数据中熵越多，该属性在对数据分类方面就越好。属性 `A` 在实例集合 `I` 上的 IG 由公式 (6.1) 给出：
 
-$$Gain(I,A) \equiv Entropy(I) - \sum_{V \in values(A)}{\frac{p_{v} + n_{v}}{p + n}Entropy(I_{v})} \tag{6.1}$$
+```
+Gain(I,A) ≡ Entropy(I) - ∑_{V ∈ values(A)} (p_v + n_v)/(p + n) Entropy(I_v)  (6.1)
+```
 
-其中 *values*(*A*) 是属性 *A* 所有可能值的集合；*I*[*v*] 是 *I* 的子集，其中所有实例的 *A* 值均为 *v*；*p* 是 *I* 中正实例的总数；*n* 是 *I* 中负实例的总数；*p*[*v*] 是 *I*[*v*] 中正实例的总数；*n*[*v*] 是 *I*[*v*] 中负实例的总数。
-
-在我们的案例中，每个属性只有两个可能的值，即 *v* ∈ {0, 1}。如果属性 *A*（即一个 *n*\-gram）存在于实例 *X* 中，则 *X*[*A*] = 1，否则为 0。*I* 的熵使用以下公式 (6.2) 计算：
-
-$$Entropy(I) = - \frac{p}{p + n}\log_{2}\left( \frac{p}{p + n} \right) - \frac{n}{p + n}\log_{2}\left( \frac{n}{p + n} \right) \tag{6.2}$$
-
-其中 *I*、*p* 和 *n* 定义如上。将 (6.2) 代入 (6.1) 并令 *t* = *n* + *p*，我们得到
-
-$$Gain(I,A) \equiv - \frac{p}{t}\log_{2}\left( \frac{p}{t} \right) - \frac{n}{t}\log_{2}\left( \frac{n}{t} \right) - \sum_{v \in \{ 0,1\}}{\frac{t_{v}}{t}\left( - \frac{p_{v}}{t_{v}}\log_{2}\left( \frac{p_{v}}{t_{v}} \right) - \frac{n_{v}}{t_{v}}\log_{2}\left( \frac{n_{v}}{t_{v}} \right) \right)} \tag{6.3}$$
-
-现在，下一个问题是根据 IG 选择最佳的 *S* 个特征（即 *n*\-gram）。一种简单的方法是按 IG 非递增顺序对 *n*\-gram 排序并选择前 *S* 个，这需要 *O*(*N*log[2]*N*) 时间和 *O*(*N*) 主内存。但使用 `heap` 可以更高效地完成此选择，它需要 *O*(*N*log[2]*S*) 时间和 *O*(*S*) 主内存。对于 *S* = 500 和 *N* = 2 亿，此方法快 3 倍以上，且所需主内存减少 40 万倍。`heap` 是一种平衡二叉树，具有这样一个性质：任何子树的根包含该子树中的最小（最大）元素。我们使用 `min-heap`，其根始终具有最小值。算法 6.2 概述了特征选择算法。首先，`heap` 初始化为空。然后从磁盘读取 *n*\-gram（及其频率）（第 2 行）并插入 `heap`（第 5 行），直到 `heap` 大小变为 *S*。`heap` 大小变为 *S* 后，我们将下一个 *n*\-gram *g* 的 IG 与根的 IG 进行比较。如果 IG(*root*) >= IG(*g*)，则丢弃 *g*（第 6 行），因为 `root` 具有最小 IG。否则，用 *g* 替换 `root`（第 7 行）。最后，恢复 `heap` 性质（第 9 行）。当磁盘中没有更多 *n*\-gram 时，过程终止。终止后，我们在 `heap` 中拥有最佳的 *S* 个 *n*\-gram。
-
-插入和恢复仅需 *O*(log2) 时间。因此，所需总时间为 *O*(*N*log[2]*S*)，仅需 *O*(*S*) 主内存。我们将使用 IG 准则选出的最佳 *S* 个二进制特征表示为二进制特征集 (BFS)。
-
-#### 6.3.1.4 汇编 *n*\-Gram 特征
+其中 `values(A)` 是属性 `A` 所有可能值的集合；`I[v]` 是 `I` 的子集，其中所有实例的 `A` 值均为 `v`；`p` 是 `I` 中正实例的总数；`n` 是 `I` 中负实例的总数；`p[v]` 是 `I[v]` 中正实例的总数；`n[v]` 是 `I[v]` 中负实例的总数。
 
 
 
-在这种情况下，粒度级别为汇编指令。首先，我们使用名为 `PEDisassem` 的反汇编工具 [Windows P.E.] 反汇编所有二进制文件。它用于反汇编 Windows 可移植可执行 (P.E.) 文件。除了生成带有操作码和地址信息的汇编指令外，`PEDisassem` 还提供有用信息，如所用资源列表（例如光标）、调用的 DLL 函数列表、导出函数列表、代码块内的字符串列表等。为了提取汇编 *n*-gram 特征，我们采用类似于二进制 *n*-gram 特征提取的方法。首先，我们收集所有可能的 *n*-gram，即 *n* 条连续汇编指令的序列，并根据 IG 选择其中最好的 *S* 个。从今以后，我们将这一选定的特征集称为汇编特征集 (AFS)。我们面临的困难与二进制 *n*-gram 提取中的相同，例如内存受限和运行速度慢，并以相同的方式解决它们。示例 II 说明了汇编 *n*-gram 特征。
+在我们的案例中，每个属性只有两个可能的值，即 `v` ∈ {0, 1}。如果属性 `A`（即一个 `n`-gram）存在于实例 `X` 中，则 `X[A]` = 1，否则为 0。`I` 的熵使用以下公式 (6.2) 计算：
+
+```
+Entropy(I) = - p/(p + n) * log2(p/(p + n)) - n/(p + n) * log2(n/(p + n))  (6.2)
+```
+
+其中 `I`、`p` 和 `n` 定义如上。将 (6.2) 代入 (6.1) 并令 `t` = `n` + `p`，我们得到
+
+```
+Gain(I,A) ≡ - p/t * log2(p/t) - n/t * log2(n/t) - Σ(v∈{0,1}) [ t_v/t * ( - p_v/t_v * log2(p_v/t_v) - n_v/t_v * log2(n_v/t_v) ) ]  (6.3)
+```
+
+现在，下一个问题是根据 IG 选择最佳的 `S` 个特征（即 `n`-gram）。一种简单的方法是按 IG 非递增顺序对 `n`-gram 排序并选择前 `S` 个，这需要 `O(N log2 N)` 时间和 `O(N)` 主内存。但使用 `heap` 可以更高效地完成此选择，它需要 `O(N log2 S)` 时间和 `O(S)` 主内存。对于 `S` = 500 和 `N` = 2 亿，此方法快 3 倍以上，且所需主内存减少 40 万倍。`heap` 是一种平衡二叉树，具有这样一个性质：任何子树的根包含该子树中的最小（最大）元素。我们使用 `min-heap`，其根始终具有最小值。算法 6.2 概述了特征选择算法。首先，`heap` 初始化为空。然后从磁盘读取 `n`-gram（及其频率）（第 2 行）并插入 `heap`（第 5 行），直到 `heap` 大小变为 `S`。`heap` 大小变为 `S` 后，我们将下一个 `n`-gram `g` 的 IG 与根的 IG 进行比较。如果 `IG(root)` >= `IG(g)`，则丢弃 `g`（第 6 行），因为 `root` 具有最小 IG。否则，用 `g` 替换 `root`（第 7 行）。最后，恢复 `heap` 性质（第 9 行）。当磁盘中没有更多 `n`-gram 时，过程终止。终止后，我们在 `heap` 中拥有最佳的 `S` 个 `n`-gram。
+
+插入和恢复仅需 `O(log2)` 时间。因此，所需总时间为 `O(N log2 S)`，仅需 `O(S)` 主内存。我们将使用 IG 准则选出的最佳 `S` 个二进制特征表示为二进制特征集 (BFS)。
+
+#### 6.3.1.4 汇编 `n`-Gram 特征
+
+在这种情况下，粒度级别为汇编指令。首先，我们使用名为 `PEDisassem` 的反汇编工具 [Windows P.E.] 反汇编所有二进制文件。它用于反汇编 Windows 可移植可执行 (P.E.) 文件。除了生成带有操作码和地址信息的汇编指令外，`PEDisassem` 还提供有用信息，如所用资源列表（例如光标）、调用的 DLL 函数列表、导出函数列表、代码块内的字符串列表等。为了提取汇编 `n`-gram 特征，我们采用类似于二进制 `n`-gram 特征提取的方法。首先，我们收集所有可能的 `n`-gram，即 `n` 条连续汇编指令的序列，并根据 IG 选择其中最好的 `S` 个。从今以后，我们将这一选定的特征集称为汇编特征集 (AFS)。我们面临的困难与二进制 `n`-gram 提取中的相同，例如内存受限和运行速度慢，并以相同的方式解决它们。示例 II 说明了汇编 `n`-gram 特征。
 
 ![](img/inline6_2.jpg)
 
@@ -1921,7 +1848,7 @@ $$Gain(I,A) \equiv - \frac{p}{t}\log_{2}\left( \frac{p}{t} \right) - \frac{n}{t}
 
 #### 6.3.1.5 DLL 函数调用特征
 
-此处粒度级别为 DLL 函数调用。DLL 函数调用的 *n*-gram 是可执行文件中 *n* 个 DLL 函数调用的序列（两次连续调用之间可能夹杂其他指令）。我们从反汇编文件的头部提取程序所进行的 DLL 函数调用信息。这在图 6.2 中有所说明。在我们的实验中，我们仅使用 DLL 调用的 1-gram，因为高阶 gram 的性能较差。我们枚举每个良性和恶意可执行文件所使用的所有 DLL 函数名称，并利用信息增益选择其中最好的 *S* 个。我们将这一特征集称为 *DLL 调用特征集* (DFS)。
+此处粒度级别为 DLL 函数调用。DLL 函数调用的 `n`-gram 是可执行文件中 `n` 个 DLL 函数调用的序列（两次连续调用之间可能夹杂其他指令）。我们从反汇编文件的头部提取程序所进行的 DLL 函数调用信息。这在图 6.2 中有所说明。在我们的实验中，我们仅使用 DLL 调用的 1-gram，因为高阶 gram 的性能较差。我们枚举每个良性和恶意可执行文件所使用的所有 DLL 函数名称，并利用信息增益选择其中最好的 `S` 个。我们将这一特征集称为 *DLL 调用特征集* (DFS)。
 
 ### 6.3.2 混合特征检索模型的细节
 
@@ -1929,7 +1856,7 @@ HFR 模型提取并组合三种不同类型的特征。HFR 由不同的阶段和
 
 #### 6.3.2.1 模型描述
 
-HFR 模型包含两个阶段：训练阶段和测试阶段。训练阶段如 图 6.5(a) 所示，测试阶段如图 6.5(b) 所示。在训练阶段，我们使用本章解释的方法提取二进制 *n*-gram 特征 (BFS) 和 DLL 调用特征 (DFS)。然后我们应用 AFR 算法（稍后将解释）来检索代表所选二进制 *n*-gram 特征的派生汇编特征 (DAF)。这三种特征简称为 HFS 并组合在一起。请注意，DAF 与汇编 *n*-gram 特征（即 AFS）是不同的。
+HFR 模型包含两个阶段：训练阶段和测试阶段。训练阶段如图 6.5(a) 所示，测试阶段如图 6.5(b) 所示。在训练阶段，我们使用本章解释的方法提取二进制 `n`-gram 特征 (BFS) 和 DLL 调用特征 (DFS)。然后我们应用 AFR 算法（稍后将解释）来检索代表所选二进制 `n`-gram 特征的派生汇编特征 (DAF)。这三种特征简称为 HFS 并组合在一起。请注意，DAF 与汇编 `n`-gram 特征（即 AFS）是不同的。
 
 ![图 6.5 混合特征检索模型：(a) 训练阶段，(b) 测试阶段。](img/fig6_5.jpg)
 
@@ -1939,23 +1866,21 @@ HFR 模型包含两个阶段：训练阶段和测试阶段。训练阶段如 图
 
 #### 6.3.2.2 汇编特征检索 (AFR) 算法
 
-AFR 算法用于提取对应于二进制 *n*-gram 特征的汇编指令序列（即 DAF）。其主要思想是获取给定二进制 *n*-gram 特征的完整汇编指令序列。使用 DAF 的基本原理如下。二进制 *n*-gram 可能仅代表部分信息，例如一条或多条汇编指令的部分内容，或代码块内的字符串。我们应用 AFR 算法来获取对应于该部分信息的完整指令或指令序列（即 DAF）。因此，DAF 代表了更完整的信息，这在区分恶意和良性可执行文件时应更有用。然而，二进制 *n*-gram 仍然是必需的，因为它们还包含其他信息，如字符串数据或程序头部的重要字节。AFR 算法包含几个步骤。在第一步中，应用 `线性地址匹配` 技术，具体如下。利用十六进制转储文件中 *n*-gram 的偏移地址，在相应的汇编程序文件中同一偏移处查找指令。根据偏移值，可能出现以下三种情况之一：
+AFR 算法用于提取对应于二进制 `n`-gram 特征的汇编指令序列（即 DAF）。其主要思想是获取给定二进制 `n`-gram 特征的完整汇编指令序列。使用 DAF 的基本原理如下。二进制 `n`-gram 可能仅代表部分信息，例如一条或多条汇编指令的部分内容，或代码块内的字符串。我们应用 AFR 算法来获取对应于该部分信息的完整指令或指令序列（即 DAF）。因此，DAF 代表了更完整的信息，这在区分恶意和良性可执行文件时应更有用。然而，二进制 `n`-gram 仍然是必需的，因为它们还包含其他信息，如字符串数据或程序头部的重要字节。AFR 算法包含几个步骤。在第一步中，应用 `线性地址匹配` 技术，具体如下。利用十六进制转储文件中 `n`-gram 的偏移地址，在相应的汇编程序文件中同一偏移处查找指令。根据偏移值，可能出现以下三种情况之一：
 
-1.  偏移位于程序入口点之前，因此该 *n*-gram 没有对应的汇编代码。我们将此地址称为 *入口点前地址* (ABEP)。
+1.  偏移位于程序入口点之前，因此该 `n`-gram 没有对应的汇编代码。我们将此地址称为 *入口点前地址* (ABEP)。
 
 2.  该偏移处有数据但无代码。我们将此地址称为 DATA。
 
-3.  该偏移处有代码。我们将此地址称为 CODE。如果该偏移位于一条指令的中间，则我们取该完整指令及从该指令起 *n* 字节范围内的连续指令。
+3.  该偏移处有代码。我们将此地址称为 CODE。如果该偏移位于一条指令的中间，则我们取该完整指令及从该指令起 `n` 字节范围内的连续指令。
 
-在第二步中，从所有 CODE 实例中选择最佳的 CODE 实例。我们应用一种启发式方法来寻找最佳序列，称为 *最具区分度指令序列* (MDIS) 启发式。根据该启发式，我们选择具有最高 IG 的指令序列。AFR 算法如 算法 6.3 所示。
+在第二步中，从所有 CODE 实例中选择最佳的 CODE 实例。我们应用一种启发式方法来寻找最佳序列，称为 *最具区分度指令序列* (MDIS) 启发式。根据该启发式，我们选择具有最高 IG 的指令序列。AFR 算法如算法 6.3 所示。
 
-算法描述：第 1 行初始化将包含汇编序列的列表。第 2 行的 `for` 循环针对每个十六进制转储文件运行。扫描每个十六进制转储文件并提取 *n*-gram（第 4-5 行）。如果这些 *n*-gram 中的任何一个在 BFS 中（第 6-7 行），则我们从相应的汇编程序文件中对应地址处读取指令序列（第 8-10 行）。该序列被添加到相应的列表中（第 12 行）。通过这种方式，我们收集了 BFS 中每个 *n*-gram 对应的所有序列。在第 II 阶段，我们使用 IG 从每个 *n*-gram 列表中选择最佳序列（第 18-21 行）。最后，我们返回最佳序列，即 DAF。
+算法描述：第 1 行初始化将包含汇编序列的列表。第 2 行的 `for` 循环针对每个十六进制转储文件运行。扫描每个十六进制转储文件并提取 `n`-gram（第 4-5 行）。如果这些 `n`-gram 中的任何一个在 BFS 中（第 6-7 行），则我们从相应的汇编程序文件中对应地址处读取指令序列（第 8-10 行）。该序列被添加到相应的列表中（第 12 行）。通过这种方式，我们收集了 BFS 中每个 `n`-gram 对应的所有序列。在第 II 阶段，我们使用 IG 从每个 `n`-gram 列表中选择最佳序列（第 18-21 行）。最后，我们返回最佳序列，即 DAF。
 
-该算法的时间复杂度为 *O*(*nB*log[2]*S*)，其中 *B* 为训练集总大小（以*字节*为单位），*S* 为选定的二进制 *n*-gram 总数，*n* 为每个 *n*-gram 的大小（以*字节*为单位）。空间复杂度为 *O*(*SC*)，其中 *S* 定义如上，*C* 为每个二进制 *n*-gram 找到的汇编序列的平均数量。所有三种算法的运行时间和内存需求见 第 6.4 节。
+该算法的时间复杂度为 `O(nB log2 S)`，其中 `B` 为训练集总大小（以*字节*为单位），`S` 为选定的二进制 `n`-gram 总数，`n` 为每个 `n`-gram 的大小（以*字节*为单位）。空间复杂度为 `O(SC)`，其中 `S` 定义如上，`C` 为每个二进制 `n`-gram 找到的汇编序列的平均数量。所有三种算法的运行时间和内存需求见第 6.4 节。
 
 #### 6.3.2.3 特征向量计算与分类
-
-
 
 特征集（如 `HFS`、`BFS`）中的每个特征均为二元特征，即其值为 1 或 0。若某实例（即可执行文件）包含该特征，则其值为 1；否则为 0。针对每个训练（或测试）实例，我们计算一个特征向量，该向量是由相应特征集的特征值组成的位向量。例如，若要计算特定实例 `I` 对应 `BFS` 的特征向量 `V[BFS]`，则对 `BFS` 中的每个特征 `f` 在 `I` 中进行搜索。若在 `I` 中找到 `f`，则将 `V[BFS][f]`（即对应 `f` 的位）置为 1；否则置为 0。通过这种方式，我们设置/重置特征向量中的每一位。这些特征向量供分类器用于训练/测试。
 
@@ -1993,8 +1918,6 @@ AFR 算法用于提取对应于二进制 *n*-gram 特征的汇编指令序列（
 
 ##### 6.4.4.1.1 Dataset1
 
-
-
 此处混合模型的最佳准确率出现在 `n` = 6 时，为 97.4%，且在所有特征集中最高。平均而言，HFS 的准确率比 BFS 高 1.68%，比 AFS 高 11.36%。AFS 的准确率始终最低。导致这种表现不佳的一个可能原因是 AFS 仅考虑可执行文件的 CODE 部分。因此，AFS 会遗漏 ABEP 或 DATA 部分所携带的任何区分模式，导致提取的特征性能较差。此外，当 `n` >= 10 时，AFS 的准确率大幅下降。这是因为较长的指令序列在任一类可执行文件（恶意/良性）中都较为罕见，所以这些序列的区分能力较弱。另一方面，BFS 考虑了可执行文件的所有部分，从而实现了更高的准确率。最后，HFS 同时考虑了 DLL 调用、BFS 和 DAF。因此，HFS 的性能优于 BFS。
 
 ##### 6.4.4.1.2 数据集 2
@@ -2003,19 +1926,21 @@ AFR 算法用于提取对应于二进制 *n*-gram 特征的汇编指令序列（
 
 ##### 6.4.4.1.3 统计显著性检验
 
-我们还对 HFS 和 BFS 的准确率进行了成对双尾 `t` 检验，以测试它们准确率之间的差异是否具有统计显著性。基于上述原因，我们将 1-gram 的准确率排除在该检验之外。`t` 检验的结果总结在 表 6.2 中。表中所示的 `t` 值是根据准确率计算得出的 `t` 值。自由度为 (5 + 5 ‒ 2)，因为每组有五个观测值，且共有两组（即 HFS 和 BFS）。*Probability*（概率）表示拒绝原假设（即 HFS 和 BFS 准确率无差异）的概率，而 `p` 值表示接受原假设的概率。对于数据集 1，该概率为 99.65%，对于数据集 2，则为 100.0%。因此，我们得出结论：HFS 的平均准确率显著高于 BFS。
 
-表 6.2 比较 HFS 和 BFS 的成对双尾 `t` 检验结果
+
+我们还对 HFS 和 BFS 的准确率进行了成对双尾 `t` 检验，以测试它们准确率之间的差异是否具有统计显著性。基于上述原因，我们将 1-gram 的准确率排除在该检验之外。`t` 检验的结果总结在表 6.2 中。表中所示的 `t` 值是根据准确率计算得出的 `t` 值。自由度为 (5 + 5 ‒ 2)，因为每组有五个观测值，且共有两组（即 HFS 和 BFS）。Probability（概率）表示拒绝原假设（即 HFS 和 BFS 准确率无差异）的概率，而 `p` 值表示接受原假设的概率。对于数据集 1，该概率为 99.65%，对于数据集 2，则为 100.0%。因此，我们得出结论：HFS 的平均准确率显著高于 BFS。
+
+### 表 6.2 比较 HFS 和 BFS 的成对双尾 `t` 检验结果
 
 ```
 ![](img/inline6_4.jpg)
 ```
 
-##### 6.4.4.1.4 DLL 调用特征
+### 6.4.4.1.4 DLL 调用特征
 
 此处我们报告 DLL 函数调用特征（DFS）的准确率。1-gram 准确率为：数据集 1 92.8%，数据集 2 91.9%。高阶 gram 的准确率均低于 75%，故不再报告。这种表现不佳的可能原因是不存在能够将可执行文件识别为恶意或良性的区分性调用序列。
 
-#### 6.4.4.2 ROC 曲线
+### 6.4.4.2 ROC 曲线
 
 ROC 曲线绘制的是分类器的真正例率与假正例率的关系。图 6.6 展示了基于 SVM 测试的数据集 1 在 `n` = 6 时和数据集 2 在 `n` = 4 时的 ROC 曲线。除 `n` = 1 时 AFS 表现优于 BFS 外，其他 `n` 值的 ROC 曲线趋势相似。从曲线中明显可以看出，HFS 始终占优（即曲线下面积更大），且在数据集 2 中优势更明显。表 6.3 报告了各特征集 ROC 曲线下的面积（AUC）。AUC 值越高，表明分类器正确预测的概率越大。表 6.3 显示 HFS 的 AUC 最高，且在数据集 2 中（相对于其他两者）有所提升。这也支持了我们的假设：在良性可执行文件更频繁出现的更可能的现实场景中，我们的模型将表现更好。
 
@@ -2023,27 +1948,27 @@ ROC 曲线绘制的是分类器的真正例率与假正例率的关系。图 6.6
 
 图 6.6 不同特征集在数据集 1（左）和数据集 2（右）中的 ROC 曲线。
 
-表 6.3 不同特征集上的 ROC 曲线下面积
+### 表 6.3 不同特征集上的 ROC 曲线下面积
 
 ```
 ![](img/inline6_5.jpg)
 ```
 
-#### 6.4.4.3 假正例与假负例
+### 6.4.4.3 假正例与假负例
 
 表 6.4 报告了基于 SVM 输出的各特征集的假正例率和假负例率（百分比）。最后一行报告了平均值。同样，我们在平均值计算中排除了 1-gram 的数值。此处可见，在数据集 1 中，HFS 的平均假正例率为 4.9%，为最低。在数据集 2 中，该比率甚至更低（3.2%）。假正例率是误报率的度量。因此，我们的模型具有最低的误报率。我们还观察到，随着良性样本数量的增加，该比率会下降。这是因为分类器对良性可执行文件更加“熟悉”，将其误分类为恶意的情况减少了。我们认为，包含更大比例良性可执行文件的大规模训练集最终会将假正例率降至接近零。如表 6.4 所示，HFS 的假负例率也是最低的。
 
-表 6.4 不同特征集上的假正例和假负例率
+### 表 6.4 不同特征集上的假正例和假负例率
 
 ```
 ![](img/inline6_6.jpg)
 ```
 
-#### 6.4.4.4 运行时间
+### 6.4.4.4 运行时间
 
-我们在 表 6.5 中比较了不同类型特征（HFS、BFS、AFS）在不同 `n` 值下的运行时间（特征提取、训练、测试）。HFS 和 AFS 的特征提取时间包含反汇编时间，数据集 1 总计 465 秒，数据集 2 总计 865 秒。训练时间是特征提取时间、特征向量计算时间和 SVM 训练时间之和。测试时间是反汇编时间（BFS 除外）、特征向量计算时间和 SVM 分类时间之和。基于 Boosted J48 的训练和测试时间具有几乎相似的特征，故不再报告。表 6.5 还以 HFS 相对于 BFS 所需时间比率的形式报告了成本因子。
+我们在表 6.5 中比较了不同类型特征（HFS、BFS、AFS）在不同 `n` 值下的运行时间（特征提取、训练、测试）。HFS 和 AFS 的特征提取时间包含反汇编时间，数据集 1 总计 465 秒，数据集 2 总计 865 秒。训练时间是特征提取时间、特征向量计算时间和 SVM 训练时间之和。测试时间是反汇编时间（BFS 除外）、特征向量计算时间和 SVM 分类时间之和。基于 Boosted J48 的训练和测试时间具有几乎相似的特征，故不再报告。表 6.5 还以 HFS 相对于 BFS 所需时间比率的形式报告了成本因子。
 
-表 6.5 运行时间（单位：秒）
+### 表 6.5 运行时间（单位：秒）
 
 ```
 ![](img/inline6_7.jpg)
@@ -2055,24 +1980,21 @@ ROC 曲线绘制的是分类器的真正例率与假正例率的关系。图 6.6
 
 ³ 平均训练/测试时间（不含 1-gram 和 2-gram）
 
-*cost factor*（成本因子）列展示了这一比较。平均特征提取时间是通过排除 1-gram 和 2-gram 计算得出的，因为这些 gram 不太可能用于实际应用。表中的粗体单元格是我们特别关注的。从表中可以看出，在数据集 1 上，HFS 的训练和测试运行时间分别是 BFS 的 1.17 倍和 4.87 倍。在数据集 2 上，这两个数字分别为 1.08 倍和 4.5 倍。HFS 的平均吞吐率为 0.6 MB/s（两个数据集均如此），可视为接近实时的性能。
-
-
-
+Cost factor（成本因子）列展示了这一比较。平均特征提取时间是通过排除 1-gram 和 2-gram 计算得出的，因为这些 gram 不太可能用于实际应用。表中的粗体单元格是我们特别关注的。从表中可以看出，在数据集 1 上，HFS 的训练和测试运行时间分别是 BFS 的 1.17 倍和 4.87 倍。在数据集 2 上，这两个数字分别为 1.08 倍和 4.5 倍。HFS 的平均吞吐率为 0.6 MB/s（两个数据集均如此），可视为接近实时的性能。
 
 最后，我们在表 6.6 中总结了成本/性能的权衡。Performance Improvement 列报告了 `HFS` 相对于 `BFS` 的准确率提升。成本因素显示在接下来的两列中。如果我们从测试时间中去除反汇编时间（考虑到反汇编是在离线完成的），那么两个数据集的测试成本因子都会降至 1.0。从表 6.6 可以明显看出，数据集 2 的性能/成本权衡优于数据集 1。同样，我们可以推断我们的模型在更大、更真实的数据集中可能表现更好。我们系统的主要瓶颈是反汇编成本。测试成本因子较高，是因为这里较大比例的时间消耗在反汇编上。我们相信，通过优化反汇编器，并考虑到反汇编可以离线进行，该因子可能会大幅降低。
 
-表 6.6 HFS 和 BFS 之间的性能/成本权衡
+### 表 6.6 HFS 和 BFS 之间的性能/成本权衡
 
 | ![](img/inline6_8.jpg) |
 
 | --- |
 
-#### 6.4.4.5 使用 Boosted J48 进行训练和测试
+### 6.4.4.5 使用 Boosted J48 进行训练和测试
 
 我们还使用该分类器进行训练和测试，并在表 6.7 中报告了不同特征和不同 `n` 值下的分类准确率。表 6.7 的倒数第二行（`Avg`）是 2-gram 到 `x`-gram 准确率的平均值。同样，为了保持一致性，我们将 1-gram 排除在平均值之外。我们还在表 6.6 的最后一行包含了 `SVM` 的平均准确率（来自表 6.1 的最后一行），以便于比较。我们想指出关于此比较的一些重要观察结果。首先，`SVM` 和 Boosted `J48` 的平均准确率几乎相同，相差在 0.4% 以内（针对 `HFS`）。这两个分类器没有明显的赢家。因此，我们可以为我们的模型使用其中任意一个分类器。其次，`HFS` 的准确率在所有三者中再次是最好的。此外，`HFS` 在数据集 1 和数据集 2 上的准确率分别比 `BFS` 高出 1.84% 和 3.6%。这一结果也证明了我们的主张：无论使用哪种分类器，`HFS` 都比 `BFS` 更好的特征集。
 
-表 6.7 Boosted J48 在不同特征集上的分类准确率（%）
+### 表 6.7 Boosted J48 在不同特征集上的分类准确率（%）
 
 | ![](img/inline6_9.jpg) |
 
@@ -2080,9 +2002,9 @@ ROC 曲线绘制的是分类器的真正例率与假正例率的关系。图 6.6
 
 ### 6.4.5 示例运行
 
-这里我们演示 `AFR` 算法的一个示例运行。该算法扫描每个十六进制转储文件，滑动一个 `n` 字节的窗口，并将 `n`-gram 与二进制特征集（`BFS`）进行核对。如果找到匹配项，则我们在汇编程序文件中收集相应的（相同偏移地址）汇编指令序列。通过这种方式，我们收集 `BFS` 中所有特征可能的指令序列。随后，我们使用信息增益选择最佳序列。表 6.8 显示了针对 `n`-gram“00005068”收集汇编序列及其 `IG` 值的一个示例。注意，该 `n`-gram 共有 90 次出现（在所有十六进制转储文件中）。为简洁起见，我们仅展示了其中 5 个。表 6.8 中操作码的**加粗部分**代表该 `n`-gram。根据*最具区分度指令序列*（`MDIS`）启发式规则，我们发现序列 #29 获得了最高的信息增益，被选为该 `n`-gram 的 `DAF`。通过这种方式，我们为每个二进制 `n`-gram 选择一个 `DAF`，并返回所有 `DAF`。
+这里我们演示 `AFR` 算法的一个示例运行。该算法扫描每个十六进制转储文件，滑动一个 `n` 字节的窗口，并将 `n`-gram 与二进制特征集（`BFS`）进行核对。如果找到匹配项，则我们在汇编程序文件中收集相应的（相同偏移地址）汇编指令序列。通过这种方式，我们收集 `BFS` 中所有特征可能的指令序列。随后，我们使用信息增益选择最佳序列。表 6.8 显示了针对 `n`-gram“00005068”收集汇编序列及其 `IG` 值的一个示例。注意，该 `n`-gram 共有 90 次出现（在所有十六进制转储文件中）。为简洁起见，我们仅展示了其中 5 个。表 6.8 中操作码的加粗部分代表该 `n`-gram。根据最具区分度指令序列（`MDIS`）启发式规则，我们发现序列 #29 获得了最高的信息增益，被选为该 `n`-gram 的 `DAF`。通过这种方式，我们为每个二进制 `n`-gram 选择一个 `DAF`，并返回所有 `DAF`。
 
-表 6.8 二进制 4-gram“00005068”的汇编代码序列
+### 表 6.8 二进制 4-gram“00005068”的汇编代码序列
 
 | ![](img/inline6_10.jpg) |
 
@@ -2090,7 +2012,7 @@ ROC 曲线绘制的是分类器的真正例率与假正例率的关系。图 6.6
 
 接下来，我们在表 6.9 中总结了我们算法的时间和空间复杂度。`B` 是训练集的总大小（以 `bytes` 为单位），`C` 是每个二进制 `n`-gram 找到的汇编序列的平均数量，`K` 是 `AVL` 树的最大节点数（即阈值），`N` 是收集到的 `n`-gram 总数，`n` 是每个 `n`-gram 的大小（以 `bytes` 为单位），`S` 是选定的 `n`-gram 总数。最坏情况假设：`B` > `N` 且 `SC` > `K`
 
-表 6.9 不同算法的时间和空间复杂度
+### 表 6.9 不同算法的时间和空间复杂度
 
 | ![](img/inline6_11.jpg) |
 
@@ -2116,9 +2038,6 @@ ROC 曲线绘制的是分类器的真正例率与假正例率的关系。图 6.6
 
 我们还描述了在两个不同数据集上对我们的方法和其他几种基线技术进行的实验。我们比较了每种基线技术的分类准确率和运行时间。我们证明了我们的方法在分类准确率上优于其他基线技术，且没有主要的性能下降。我们还分析了不同分类技术和不同数据集上的结果变化，并解释了这些变化。总体而言，我们的方法优于其他基线，不仅因为更高的分类准确率，还因为其可扩展性和效率。
 
-
-
-
 ## 未来工作与参考文献
 
 ### 未来工作
@@ -2127,29 +2046,52 @@ ROC 曲线绘制的是分类器的真正例率与假正例率的关系。图 6.6
 
 我们还希望通过应用云计算/大数据框架进行特征提取和选择任务，来增强我们方法的可扩展性。这样特征提取和分类将更具可扩展性。云计算为获取更多 CPU 算力和大得多的磁盘空间提供了一种廉价替代方案，可用于大幅加快特征提取和选择过程。此外，我们也有兴趣从可执行文件中提取行为特征，以克服多态恶意软件进行二进制混淆所带来的问题。
 
-## 参考文献
+### 参考文献
 
 *   **[BOSE2003]** B.E. Boser, I.M. Guyon, V.N. Vapnik, A Training Algorithm for Optimal Margin Classifiers (Editor: and D. Haussler), 5th Annual ACM Workshop on COLT, ACM Press, 1992, pp. 144–152.
+
 *   **[CYGN1999]** GNU Binutils Cygwin. <http://sourceware.cygnus.com/cygwin>.
+
 *   **[FREU1996]** Y. Freund, R. Schapire, Experiments with a New Boosting Algorithm, *Proceedings of the Thirteenth International Conference on Machine Learning*, Morgan Kaufmann, San Francisco, CA, 1996, 148–156.
+
 *   **[GARG2006]** A. Garg, R. Rahalkar, S. Upadhyaya, K. Kwiat, Profiling Users in GUI Based Systems for Masquerade Detection, *Proceedings of the 7th IEEE Information Assurance Workshop* (IAWorkshop 2006), West Point, NY, 2006, 48–54.
+
 *   **[GOLB2004]** J. Golbeck, J. Hendler, Reputation Network Analysis for Email Filtering. CEAS, 2004.
+
 *   **[GOOD2006]** M.T. Goodrich, R. Tamassia, Data Structures and Algorithms in Java, 4th ed., 2006, John Wiley & Sons, Inc.
+
 *   **[KIM2004]** H.A. Kim, B. Karp, Autograph: Toward Automated, Distributed Worm Signature Detection, *Proceedings of the 13th Usenix Security Symposium* (Security 2004), San Diego, CA, 2004, 271–286.
+
 *   **[KOLT2004]** J.Z. Kolter, M.A. Maloof, Learning to Detect Malicious Executables in the Wild, *Proceedings of the Tenth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining*, 470–478.
+
 *   **[LAKH2005]** A. Lakhotia, E.U. Kumar, M. Venable, A Method for Detecting Obfuscated Calls in Malicious Binaries, IEEE Transactions on Software Engineering, Volume 31, # 11, 2005, 955–968.
+
 *   **[LIBSVM]** (n.d.). A Library for Support Vector Machine. Retrieved June 1, 2006 from <http://www.csie.ntu.edu.tw/~cjlin/libsvm/>.
+
 *   **[MASU2007a]** M.M. Masud, L. Khan, B. Thuraisingham, Feature-Based Techniques for Auto-Detection of Novel Email Worms, *Proceedings of the Eleventh Pacific-Asia Conference on Knowledge Discovery and Data Mining* (PAKDD’07), LNAI 4426, Nanjing, China, 2007, 205–216.
+
 *   **[MASU2007b]** M.M. Masud, L. Khan, B. Thuraisingham, A Hybrid Model to Detect Malicious Executables, *Proceedings of the IEEE International Conference on Communication* (ICC’07), Glasgow, Scotland, 2007, 1443–1448.
+
 *   **[MASU2011]** M.M. Masud, L. Khan, B. Thuraisingham, Data Mining Tools for Malware Detection, CRC Press, 2011.
+
 *   **[MITC1997]** T. Mitchell, Machine Learning, McGraw Hill, 1997.
+
 *   **[NEWM2002]** M.E.J. Newman, S. Forrest, J. Balthrop, Email Networks and the Spread of Computer Viruses, Physical Review, Volume 66, # 3, 2002, 035101.
+
+
+
 *   **[NEWS2005]** J. Newsome, B. Karp, D. Song, Polygraph: Automatically Generating Signatures for Polymorphic Worms, *Proceedings of the IEEE Symposium on Security and Privacy*, Oakland, CA, 2005, 226–241.
+
 *   **[SCHU2001a]** M. Schultz, E. Eskin, E. Zadok, MEF Malicious Email Filter, a UNIX Mail Filter That Detects Malicious Windows Executables, *Proceedings of the USENIX Annual Technical Conference – FREENIX Track*, Boston, MA, 2001, 245–252.
+
 *   **[SCHU2001b]** M. Schultz, E. Eskin, E. Zadok, S. Stolfo, Data Mining Methods for Detection of New Malicious Executables, *Proceedings of the IEEE Symposium on Security and Privacy*, Oakland, CA, 2001, 178–184.
+
 *   **[SING2003]** S. Singh, C. Estan, G. Varghese, S. Savage, The EarlyBird System for Real-time Detection of Unknown Worms. Technical report – cs2003-0761, UCSD.
+
 *   **[Windows P.E.]** Windows P.E. Disassembler. (n.d.). Retrieved June 5, 2006 from <http://www.geocities.com/~sangcho/inde6.html>.
+
 *   **[VX-Heavens]** (n.d.). Retrieved May 6, 2006 from <http://vx.netlux.org/>.
+
 *   **[WEKA]** (n.d.). Retrieved August 1, 2006 from <http://www.cs.waikato.ac.nz/ml/weka/>.
 
 # 7 用于恶意软件检测的流分析
@@ -2161,10 +2103,6 @@ DOI: [10.1201/9781003081845-12](https://doi.org/10.1201/9781003081845-12)
 对于数据挖掘/数据科学界而言，挖掘/分析不断增长的流式数据是一大挑战。流数据分类存在三个主要问题。首先，存储并使用所有历史数据进行训练是不切实际的，因为这将需要无限的存储空间和运行时间。其次，数据中可能存在概念漂移，即数据的潜在概念可能随时间变化。第三，新类别可能在流中演变出现。文献中有许多现有解决方案解决前两个问题，例如单模型增量学习算法 [CHEN2008, HULT2001, YANG2005] 和集成分类器 [KOLT2005, MASU2008a, WANG2003]。然而，大多数现有技术无法检测流中的新类别。另一方面，我们的方法能同时处理概念漂移并检测新类别。
 
 传统分类器只能正确分类那些它们已接受过训练的类别的实例。当新类别出现在流中时，属于该类别的所有实例都会被错误分类，直到该新类别被专家人工识别，并利用该类别的标记实例训练出新模型为止。我们的方法通过在传统分类器中融入新类别检测器来解决这一问题，从而无需人工干预即可识别新类别的出现。所提出的新类别检测技术可使各领域的许多应用受益，例如网络入侵检测和信用卡欺诈检测。例如，在入侵检测问题中，当发生一种新型入侵时，我们不仅要能检测出这是一次入侵，还要能识别出这是一种新型入侵。有了入侵类型信息，人工专家就能更深入地分析入侵、寻找补救措施、提前设置警报，并使系统更加安全。
-
-
-
-
 
 ### 流分析用于新颖类别检测
 
@@ -2199,10 +2137,6 @@ DOI: [10.1201/9781003081845-12](https://doi.org/10.1201/9781003081845-12)
 我们有几项贡献。首先，我们提供了对新颖类别特征的详细理解，并提出了一种新技术，该技术可以在数据流存在概念漂移的情况下检测新颖类别。其次，我们建立了一个框架，用于将新颖类别检测机制融入传统分类器中。最后，我们将该技术应用于合成和真实世界数据，获得了比最先进的流分类算法好得多的结果。
 
 ### 7.2.2 相关工作
-
-
-
-
 
 我们的工作与流分类和新颖性检测均有关联。流数据分类领域已有大量研究。主要有两种方法：单模型分类和集成分类。已有一些单模型技术被提出以适应概念漂移 [CHEN2008, HULT2001, YANG2005]。然而，我们的技术采用的是集成方法。已有多种用于流数据挖掘的集成技术被提出 [KOLT2005, MASU2008a, WANG2003]。这些集成方法更新当前概念仅需简单操作，且被发现能稳健地处理概念漂移。尽管这些技术能高效处理概念漂移，但它们均无法检测数据流中的新颖类别。相比之下，我们的技术不仅能处理概念漂移，还能检测数据流中的新颖类别。在此意义上，我们的技术也与新颖性检测技术相关。
 
@@ -2242,10 +2176,6 @@ DOI: [10.1201/9781003081845-12](https://doi.org/10.1201/9781003081845-12)
 
 **属性 7.1：** *一个数据点应当更接近其自身类别的数据点（内聚性），并远离其他类别的数据点（分离性）*。
 
-
-
-
-
 我们的主要假设是：属于类别 `c` 的实例由底层生成模型 `Θ[c]` 生成，且每个类别中的实例是独立同分布的。基于这一假设，我们可以合理地论证：彼此接近的实例应当由同一模型生成，即属于同一类别。我们现在通过 图 7.4 展示使用决策树进行新颖类别检测的基本思想。我们引入 `已用空间` 的概念来表示被任意实例占据的特征空间，引入 `未用空间` 来表示未被实例占据的特征空间。
 
 ![图 7.4 (a) 决策树和 (b) 对应的特征空间划分。FS(X) 表示由叶节点 X 定义的特征空间。阴影区域显示每个分区的已用空间。(c) 一个新颖类别（用 x 表示）到达未用空间。](img/fig7_4.jpg)
@@ -2270,9 +2200,18 @@ DOI: [10.1201/9781003081845-12](https://doi.org/10.1201/9781003081845-12)
 
 ##### 7.3.2.1.2 存储聚类摘要信息
 
-对于每个聚类，我们在内存中存储以下摘要信息：(i) `权重`，`w`：定义为聚类中点的总数。(ii) `质心`，`ζ`。(iii) `半径`，`R`：定义为质心与属于该聚类的数据点之间的最大距离。(iv) `平均距离`，`μ[d]`：每个点到聚类质心的平均距离。聚类 `H[i]` 的聚类摘要今后将被称为“伪点” `ψ[i]`。因此，`w(ψ[i])` 表示伪点 `ψ[i]` 的权重。计算完聚类摘要后，丢弃原始数据。令 `ψ[j]` 为分类器 `L[j]` 在内存中存储的所有伪点的集合。
 
-#### 7.3.2.2 异常值检测与过滤
+
+对于每个聚类，我们在内存中存储以下摘要信息：
+
+- (i) `权重`，`w`：定义为聚类中点的总数。
+- (ii) `质心`，`ζ`。
+- (iii) `半径`，`R`：定义为质心与属于该聚类的数据点之间的最大距离。
+- (iv) `平均距离`，`μ[d]`：每个点到聚类质心的平均距离。
+
+聚类 `H[i]` 的聚类摘要今后将被称为“伪点” `ψ[i]`。因此，`w(ψ[i])` 表示伪点 `ψ[i]` 的权重。计算完聚类摘要后，丢弃原始数据。令 `ψ[j]` 为分类器 `L[j]` 在内存中存储的所有伪点的集合。
+
+### 7.3.2.2 异常值检测与过滤
 
 每个伪点 `ψ[i]` 对应特征空间中的一个超球体，其中心为 `ζ(ψ[i])`，半径为 `R(ψ[i])`。因此，伪点“记忆”了已用空间。我们用伪点 `ψ[i]` 的“区域”或 `RE(ψ[i])` 表示其覆盖的特征空间部分。因此，所有伪点覆盖区域的并集即为所有已用空间的并集，这为分类器 `L[j]` 形成了一个决策边界 `B(L[j]) = ∪ ψ[i]∈ψ[j] RE(ψ[i])`。现在，我们可以定义异常值了。
 
@@ -2280,9 +2219,13 @@ DOI: [10.1201/9781003081845-12](https://doi.org/10.1201/9781003081845-12)
 
 换句话说，位于分类器 `L[j]` 的决策边界 `B(L[j])` 之外的任意点 `x` 均为该分类器的 `R 异常值`。对于 K-NN，通过针对所有伪点测试 `x` 来全局检测 `R 异常值`。对于决策树，`x` 仅针对其所属叶节点存储的伪点进行测试。
 
-##### 7.3.2.2.1 过滤
+#### 7.3.2.2.1 过滤
 
-根据 定义 7.3，测试实例可能因以下一个或多个原因被错误地视为 `R 异常值`：(i) 测试实例属于现有类别，但它是噪声。(ii) 发生了概念漂移，导致现有类别的决策边界发生了偏移。(iii) 决策树使用的训练数据不足。因此，预测的决策边界与实际边界不符。
+根据 定义 7.3，测试实例可能因以下一个或多个原因被错误地视为 `R 异常值`：
+
+- (i) 测试实例属于现有类别，但它是噪声。
+- (ii) 发生了概念漂移，导致现有类别的决策边界发生了偏移。
+- (iii) 决策树使用的训练数据不足。因此，预测的决策边界与实际边界不符。
 
 由于这些原因，需要对异常值进行过滤，以确保属于现有类别的异常值不会被最终判定为新类别实例。过滤过程如下：如果一个测试实例对集成中的 `所有` 分类器都是 `R 异常值`，则将其视为过滤后的异常值。所有其他 `R 异常值` 均被过滤掉。
 
@@ -2290,14 +2233,11 @@ DOI: [10.1201/9781003081845-12](https://doi.org/10.1201/9781003081845-12)
 
 直观上，成为 `F 异常值` 是属于新类别的必要条件。因为，假设实例 `x` 不是集成中某个分类器 `L[i]` 的 `R 异常值`。则 `x` 必定在决策边界 `B(L[i])` 内部。因此，它违反了性质 7.1（分离性），不可能属于新类别。虽然成为 `F 异常值` 是必要条件，但并不充分，因为它不保证性质 7.1（内聚性）。因此，我们进入下一步，验证 `F 异常值` 是否同时满足内聚性和分离性。
 
-#### 7.3.2.3 检测新颖类别
+### 7.3.2.3 检测新颖类别
 
 我们对 `F 异常值` 执行若干计算以检测新类别的到来。首先讨论这些计算的一般概念，随后描述如何高效地执行这些计算。对于每个 `F 异常值`，我们按如下方式定义 `λ[c]`-邻域（定义 7.4）：
 
 **定义 7.4：(λ[c]-邻域)** *F 异常值 x 的 `λ[c]`-邻域是属于类别 c 的 x 的 N 个最近邻的集合。*
-
-
-
 
 此处 `N` 为用户定义的参数。为简洁起见，我们将 `Foutlier x` 的 `λ[c]`\-邻域记为 `λc`。因此，`Foutlier x` 的 `λ+` 是距离异常值 `x` 最近的 `N` 个类别 `c[+]` 的实例的集合。类似地，`λo` 指距离 `x` 最近的 `N` 个 `Foutliers` 的集合。这在 图 7.5 中有所说明，其中 `Foutliers` 显示为黑点，类别 `c[+]` 和类别 `c[−]` 的实例用相应的符号显示。`Foutlier x` 的 `λ+` 是属于类别 `c[+]` 且距离 `x` 最近的 `N` (= 3) 个实例的集合（圆圈内），以此类推。
 
@@ -2317,21 +2257,27 @@ N - NSC(x) = \frac{b_{\min}(x) - a(x)}{\max(b_{\min}(x),a(x))} (7.1)
 
 需要注意的是，`N` 的值越大，我们判断新类别是否到达的置信度就越高。然而，如果 `N` 过大，当对应数据块中属于新类别的实例总数 ≤ `N` 时，我们也可能无法检测到新类别。我们通过实验找到了 `N` 的最优值，这在 第 7.4 节 中有所解释。
 
-##### 7.3.2.3.1 计算新类别实例的集合
+#### 7.3.2.3.1 计算新类别实例的集合
 
-一旦检测到新类别的存在，下一步就是找出这些实例，并将其与现有类别数据分离。根据*必要且充分条件*，如果满足以下三个条件，则一组 `Foutlier` 实例属于一个新类别：(i) 该组中的所有 `Foutliers` 均具有正 `N`\-NSC，(ii) 该组中的所有 `Foutliers` 在该组内具有（注：原文此处似有省略，推测指“在该组内具有最近邻”或类似含义），以及 (iii) 该组的基数 ≥ `N`。设 `G` 为这样一个集合。注意，寻找精确集合 `G` 计算代价高昂，因此我们采用一种近似方法。设 `G'` 为所有具有正 `N`\-NSC 的 `Foutliers` 的集合。如果 |`G'`| ≥ `N`，则 `G'` 是 `G` 的一个近似。`G'` 中的某些数据点可能实际上并非新类别实例，反之亦然。然而，在我们的实验中，发现该近似效果良好。
+一旦检测到新类别的存在，下一步就是找出这些实例，并将其与现有类别数据分离。根据*必要且充分条件*，如果满足以下三个条件，则一组 `Foutlier` 实例属于一个新类别：
 
-##### 7.3.2.3.2 加速计算
+- (i) 该组中的所有 `Foutliers` 均具有正 `N`\-NSC，
+- (ii) 该组中的所有 `Foutliers` 在该组内具有（注：原文此处似有省略，推测指“在该组内具有最近邻”或类似含义），
+- (iii) 该组的基数 ≥ `N`。
+
+设 `G` 为这样一个集合。注意，寻找精确集合 `G` 计算代价高昂，因此我们采用一种近似方法。设 `G'` 为所有具有正 `N`\-NSC 的 `Foutliers` 的集合。如果 |`G'`| ≥ `N`，则 `G'` 是 `G` 的一个近似。`G'` 中的某些数据点可能实际上并非新类别实例，反之亦然。然而，在我们的实验中，发现该近似效果良好。
+
+#### 7.3.2.3.2 加速计算
 
 为每个 `Foutlier` 实例 `x` 计算 `N`\-NSC 需要 `Foutliers` 数量的平方时间。为了加快计算，我们还使用 `K`\-means 聚类从 `Foutliers` 创建 `K[O]` 个伪点，并在伪点上进行计算（称为 `Fpseudopoint`s），其中 `K[O]` = (`N[O]`/`S`)∗`K`。此处 `S` 为数据块大小，`N[O]` 为 `Foutliers` 的数量。因此，计算所有 `Fpseudopoints` 的 `N`\-NSC 的时间复杂度为 `O(K[O]*(K[O] + K))`，这是常数级的，因为 `K[O]` 和 `K` 均与输入规模无关。注意，`Fpseudopoint` 的 `N`\-NSC 实际上是该 `Fpseudopoint` 中每个 `Foutlier` 的 `N`\-NSC 的近似平均值。通过使用这种近似，虽然我们获得了速度，但也损失了一些精度。然而，正如实验结果所示，只要保留足够数量的伪点，这种精度下降可以忽略不计。新类别检测过程总结在 算法 7.2 中（DetectNovelClass）。
 
 只要每个新类别遵循性质 7.1 且至少包含 `N` 个实例，该算法就能并发检测一个或多个新类别（即在同一数据块中）。即使类别分布倾斜，这也成立。然而，如果多个此类新类别同时出现，我们的算法将识别出属于这些类别的实例为新类别，而不对不同的新类别实例施加任何区分（即将它们简单视为“新类别”）。但一旦这些实例被标记并用于训练分类器，我们的模型就会学会这种区分。
 
-##### 7.3.2.3.3 时间复杂度
+#### 7.3.2.3.3 时间复杂度
 
 算法 7.1 的第 1–3 行需要 `O(KSL)` 时间，其中 `S` 为数据块大小。第 4 行（聚类）需要 `O(KS)` 时间，最后的 for 循环（5–10）需要 时间。因此，算法 7.1 的总体时间复杂度为 = `O(K*(S + SL + KL))`。假设 `S` >> `KL`，复杂度变为 `O(KS)`，这在 `S` 上是线性的。因此，MineClass 算法（算法 7.1）的总体时间复杂度（每个数据块）为 `O(KS + fc + ft)`，其中 `fc` 为对 `n` 个实例进行分类所需的时间，`ft` 为用 `n` 个训练实例训练分类器所需的时间。
 
-##### 7.3.2.3.4 演化类别标签对集成分类的影响
+#### 7.3.2.3.4 演化类别标签对集成分类的影响
 
 读者可能已经意识到，数据流中新类别的到达会导致集成中的分类器拥有不同的类别标签集合。例如，假设集成中较旧（较早）的分类器 `L[i]` 是用类别 `c[0]` 和 `c[1]` 训练的，而较新（较晚）的分类器 `L[j]` 是用类别 `c[1]` 和 `c[2]` 训练的，其中 `c[2]` 是在 `L[i]` 训练完成后出现的新类别。这会对投票决策产生负面影响，因为较旧的分类器会将 `c[2]` 的实例误分类。因此，我们不是计算每个分类器的票数，而是按如下方式选择性地计算它们的票数：如果较新的分类器 `L[j]` 将测试实例 `x` 分类为类别 `c`，但较旧的分类器 `L[i]` 的模型中没有类别标签 `c`，则如果 `x` 被发现是 `L[i]` 的异常值，将忽略 `L[i]` 的投票。当最旧的分类器 `L[i]` 是用某个类别 `c'` 训练的，但没有任何较新的分类器是用该类别训练时，会出现相反的情况。这意味着类别 `c'` 已过时，在这种情况下，我们将 `L[i]` 从集成中移除。通过这种方式，我们确保较旧的分类器在投票过程中影响较小。如果类别 `c'` 稍后在数据流中重新出现，它将再次被自动检测为新类别。
 
@@ -2340,13 +2286,6 @@ N - NSC(x) = \frac{b_{\min}(x) - a(x)}{\max(b_{\min}(x),a(x))} (7.1)
 ### 7.4.1 数据集
 
 #### 7.4.1.1 仅含概念漂移的合成数据
-
-
-
-
-# 7.4.1 数据集描述
-
-## 7.4.1.1 仅包含概念漂移的合成数据
 
 SynC 仅模拟概念漂移，不包含新类别。这样做是为了表明概念漂移不会在我们的方法中错误地触发新类别检测。SynC 数据通过移动超平面生成。超平面的方程如下：
 
@@ -2377,10 +2316,12 @@ SynC 仅模拟概念漂移，不包含新类别。这样做是为了表明概念
 ### 7.4.2 实验设置
 
 我们使用 Java 实现算法。决策树代码改编自 Weka 机器学习开源存储库（`http://www.cs.waikato.ac.nz/ml/weka/`）。实验在配备 2GB 内存和 3GHz 双核 CPU 的 Intel P-IV 机器上运行。除非另有说明，参数设置如下：
-(i) `K`（每个数据块的伪点数）= 50，
-(ii) `N` = 50，
-(iii) `M`（集成大小）= 6，
-(iv) 数据块大小 = 合成数据集 1,000，真实数据集 4,000。
+
+- (i) `K`（每个数据块的伪点数）= 50，
+- (ii) `N` = 50，
+- (iii) `M`（集成大小）= 6，
+- (iv) 数据块大小 = 合成数据集 1,000，真实数据集 4,000。
+
 这些参数值经过调优以达到整体满意的性能。
 
 #### 7.4.2.1 基线方法
@@ -2388,9 +2329,11 @@ SynC 仅模拟概念漂移，不包含新类别。这样做是为了表明概念
 据我们所知，没有方法能同时对数据流进行分类和检测新类别。因此，我们将 MineClass 与两种基线技术的组合进行比较：`OLINDDA` [SPIN2007] 和加权分类器集成（`WCE`）[WANG2003]，前者作为新类别检测器，后者执行分类。对于每个数据块，我们首先使用在线新颖性与漂移检测算法（`OLINDDA`）检测新类别实例。数据块中所有其他实例假定属于现有类别，使用 `WCE` 进行分类。我们选择 `OLINDDA` 作为新颖性检测器，因为它是最近提出的算法，据 [SPIN2007] 显示，它在数据流新颖性检测技术中表现优于其他方法。
 
 然而，`OLINDDA` 假设只有一个“正常”类别，所有其他类别都是“新颖”的。因此，它不能直接应用于多类新颖性检测问题，在该问题中，任意类别组合都可视为“现有”类别。我们提出两种替代方案。第一，我们为每个类别构建并行的 `OLINDDA` 模型，它们同时演化。每当新类别实例出现，我们就为该类别创建一个新的 `OLINDDA` 模型。如果**所有现有类别模型**都将测试实例识别为新颖，则该实例被判定为新颖。我们将这种基线方法称为 `WCE-OLINDDA_PARALLEL`。第二，我们最初用所有可用类别构建一个 `OLINDDA` 模型。每当发现新类别，该类别就被吸收进现有的 `OLINDDA` 模型。因此，整个流过程中仅维护一个“正常”模型。这称为 `WCE-OLINDDA_SINGLE`。在所有实验中，这两种技术的集成大小和数据块大小保持相同。此外，`WCE` 和 `MC` 使用相同的基学习器。`OLINDDA` 的参数设置为：
-(i) 每簇数据点数（`N[excl]`）= 15，
-(ii) 更新现有模型所需的最少正常实例数 = 100，
-(iii) 构建初始模型所需的最少实例数 = 30。
+
+- (i) 每簇数据点数（`N[excl]`）= 15，
+- (ii) 更新现有模型所需的最少正常实例数 = 100，
+- (iii) 构建初始模型所需的最少实例数 = 30。
+
 这些参数根据 [SPIN2007] 中的默认值或通过试错选择，以获得整体满意的性能。此后我们将使用缩写：`MC` 代表 MineClass，`W-OP` 代表 `WCE-OLINDDA_PARALLEL`，`W-OS` 代表 `WCE-OLINDDA_SINGLE`。
 
 ### 7.4.3 性能研究
@@ -2398,18 +2341,18 @@ SynC 仅模拟概念漂移，不包含新类别。这样做是为了表明概念
 #### 7.4.3.1 评估方法
 
 我们使用以下性能指标进行评估：
-`M[new]` = 被误分类为现有类别的新类别实例百分比，
-`F[new]` = 被错误识别为新类别的现有类别实例百分比，
-`ERR` = 总误分类错误率（%）（包含 `M[new]` 和 `F[new]`）。
+
+- `M[new]` = 被误分类为现有类别的新类别实例百分比，
+- `F[new]` = 被错误识别为新类别的现有类别实例百分比，
+- `ERR` = 总误分类错误率（%）（包含 `M[new]` 和 `F[new]`）。
+
 我们用前 `M` 个数据块在每种方法中建立初始模型。从第 `M + 1` 个数据块开始，我们先评估每种方法在该数据块上的性能，然后用该数据块更新现有模型。每种方法在每个数据块上的性能指标被保存并平均，以产生汇总结果。
 
 #### 7.4.3.2 结果
 
+### 7.4.3.2 错误率分析
 
 
-
-
-## 7.4.3.2 错误率分析
 
 图 7.6(a)–(d) 展示了各方法在不同数据集上，决策树分类器在数据流某一时间点前的错误率（ERR）。K 近邻（K-NN）分类器也呈现出类似的结果。例如，当 `X` 轴 = 100 时，`Y` 值显示了各方法从数据流开始到第 100 个数据块的平均 ERR。此时，对于 KDD 数据集（图 7.6(c)），MC、W-OP 和 W-OS 的 ERR 分别为 1.7%、11.6% 和 8.7%。每个数据集中新类别的到达，在每个图表顶部边框对应数据块处用叉号（x）标记。例如，在 SynCN 数据集上（图 7.6(a)），W-OP 和 W-OS 漏掉了大部分新类别实例，导致它们的曲线在相应数据块处出现尖峰（如第 12、24、37 个数据块等）。W-OS 几乎漏掉了 99% 的新类别实例。在 KDD 和 Forest Cover 数据集中，新类别出现的数据块处，W-OP 和 W-OS 也观察到类似的尖峰。例如，在 KDD 数据集的第 9–14 个数据块之间出现了许多新类别，其中大部分都被 W-OP 和 W-OS 漏掉了。注意，SynC 数据集没有新类别。MC 正确检测了大部分这些新类别。因此，MC 在所有数据集上均优于 W-OP 和 W-OS。
 
@@ -2442,9 +2385,6 @@ SynC 仅模拟概念漂移，不包含新类别。这样做是为了表明概念
 | --- |
 
 ## 7.5 安全应用与恶意软件检测
-
-
-
 
 所提出的新颖类别检测技术将在多个安全应用中发挥作用。首先，它可用于检测网络流量中的新型攻击。如果网络流量中出现了一种全新的攻击类型，现有的入侵检测技术可能无法识别。相反，如果网络流量中发生了一种全新的攻击，我们的方法应将其检测为“新颖类别”并发出警报。这将提示系统分析师隔离并分析这些未知事件的特征，并进行相应标记。分类模型也将利用这些新类别实例进行更新。若未来发生同类入侵，分类模型将能将其识别为已知入侵。其次，我们的方法也可用于检测新型恶意软件。现有的恶意软件检测技术可能无法识别全新的恶意软件，但我们的方法应能将新恶意软件检测为新颖类别、将其隔离并发出警报。被隔离的二进制文件稍后将由人工专家进行分析和表征。通过这种方式，所提出的新颖类别检测技术可有效应用于网络安全领域。
 
@@ -2484,8 +2424,6 @@ SynC 仅模拟概念漂移，不包含新类别。这样做是为了表明概念
 
 *   [YANG2002] Y. Yang, J. Zhang, J. Carbonell, C. Jin, Topic-Conditioned Novelty Detection, *Proceedings ACM SIGKDD, Edmonton, Alberta*, 2002, pp. 688–693.
 
-
-
 *   [YEUN2002] D.Y. Yeung, C. Chow. Parzen-Window Network Intrusion Detectors, *Proceedings of International Conference on Pattern Recognition, Quebec City, QC, Canada*, 2002, pp. 385–388.
 
 # 8 基于云的恶意软件检测数据科学
@@ -2508,7 +2446,11 @@ DOI: [10.1201/9781003081845-13](https://doi.org/10.1201/9781003081845-13)
 
 ### 8.2.1 作为数据流分类问题的恶意软件检测
 
-使用数据挖掘进行恶意软件检测的问题 [KOLT2004, MASU2008a, SCHU2001] 涉及将每个可执行文件分类为*良性*或*恶意*。大多数过去的工作将该问题视为静态数据分类问题，即使用固定的训练数据训练分类模型。然而，恶意软件演变和创新的不断加快的速度不太适合静态训练。持续演变的恶意软件检测最好视为*数据流*分类问题。在此范式中，数据流是一个可执行文件序列，其中每个数据点是一个可执行文件。该流是*无限长度*的。它还观察到*概念漂移*，因为攻击者不断开发新技术以逃避检测，从而改变恶意代码的特征。同样，良性可执行文件的特征也随着编译器和操作系统的演变而变化。
+
+
+# 使用数据挖掘进行恶意软件检测的问题
+
+使用数据挖掘进行恶意软件检测的问题 [KOLT2004, MASU2008a, SCHU2001] 涉及将每个可执行文件分类为`良性`或`恶意`。大多数过去的工作将该问题视为静态数据分类问题，即使用固定的训练数据训练分类模型。然而，恶意软件演变和创新的不断加快的速度不太适合静态训练。持续演变的恶意软件检测最好视为*数据流*分类问题。在此范式中，数据流是一个可执行文件序列，其中每个数据点是一个可执行文件。该流是*无限长度*的。它还观察到*概念漂移*，因为攻击者不断开发新技术以逃避检测，从而改变恶意代码的特征。同样，良性可执行文件的特征也随着编译器和操作系统的演变而变化。
 
 数据流分类是数据挖掘社区的一个主要活跃研究领域，需要克服至少三个挑战：首先，在无限长度、概念漂移的流中存储和维护潜在的无界历史数据用于训练是不可行的 [ZHAN2009]。其次，分类模型必须持续适应以应对概念漂移。第三，如果数据流中数据点没有预定义的特征空间，则随着流的演变，必须选择并提取具有高区分能力的新特征，我们称之为*特征演化*。
 
@@ -2520,12 +2462,9 @@ DOI: [10.1201/9781003081845-13](https://doi.org/10.1201/9781003081845-13)
 
 我们的方法将数据流划分为大小相等的块。块的大小选择为使每个块中的所有数据都能放入主内存。每个块在标记后，用于训练分类器。每当一个新的数据块被标记时，集成按如下方式更新。我们取最近标记的 `r` 个连续数据块，将这 `r` 个块划分为 `v` 个分区，并用每个分区训练一个分类器。因此，使用 `r` 个连续块训练了 `v` 个分类器。然后，我们从新训练的 `v` 个分类器和现有的 `Kv` 个分类器中，根据准确率选择最好的 `Kv` 个分类器来更新集成。因此，集成中分类器的总数保持不变。因此，我们的方法由划分数量 `v`、块数量 `r` 和集成大小 `K` 这三个参数决定。
 
-
-
-
 我们的方法并不假设流中出现的新数据点会立即被标记。相反，它会推迟集成更新过程，直到最新数据块中数据点的标签变得可用。在此期间，新的未标记数据继续使用当前集成进行分类。因此，该方法非常适合那些分类错误会促使专家用户或其他来源提供修正标签的应用场景。例如，考虑在线信用卡欺诈检测问题。当一笔新的信用卡交易发生时，其类别（`fraud` 或 `authentic`）会使用当前集成进行预测。假设一笔欺诈交易被误分类为 `authentic`。当客户收到银行对账单时，他会识别出该错误并向机构报告。通过这种方式，数据点的实际标签被获取，集成也随之相应更新。
 
-### 8.2.2 用于恶意软件检测的云计算
+## 8.2.2 用于恶意软件检测的云计算
 
 如果数据点的特征空间不是固定的，分类问题的一个子问题就是提取和选择描述每个数据点的特征。与先前的工作（例如 KOLT2004）一样，我们使用二进制 `n`-gram 作为恶意软件检测的特征。然而，由于可能的 `n`-gram 总数大得令人望而却步，我们审慎地选择具有最大判别力的 `n`-gram。这一选择过程是持续进行的；随着流的推进，会出现较新的 `n`-gram 来主导较旧的 `n`-gram。这些较新的 `n`-gram 会在我们的模型中替换旧的 `n`-gram，以识别特定时期的最佳特征。
 
@@ -2533,7 +2472,7 @@ DOI: [10.1201/9781003081845-13](https://doi.org/10.1201/9781003081845-13)
 
 因此，我们设计并开发了一种可扩展的特征选择和提取解决方案，该方案利用云计算框架 [DEAN2008]。我们表明，取决于集群节点的可用性，特征提取和选择的运行时间可以缩短 `m` 倍，其中 `m` 是云集群中的节点数。这些节点是使用廉价商用硬件的机器。因此，该解决方案也具有成本效益，因为不需要高端计算机器。
 
-### 8.2.3 我们的贡献
+## 8.2.3 我们的贡献
 
 因此，我们的贡献可以总结如下。我们设计并开发了一种广义的多分区、多数据块集成技术，与现有的单分区、单数据块集成方法相比，显著降低了预期分类误差。理论分析证明了该方法的有效性。随后，我们将恶意软件检测问题表述为数据流分类问题，并指出了传统恶意代码检测技术相对于我们的数据挖掘方法的缺陷。
 
@@ -2546,10 +2485,6 @@ DOI: [10.1201/9781003081845-13](https://doi.org/10.1201/9781003081845-13)
 基于数据挖掘的方法分析可执行文件的内容，如果在可执行文件中发现（或未发现）特定的特征组合，则将其分类为恶意软件。这些恶意软件检测器首先经过训练，以便它们能够泛化恶意和良性可执行文件之间的区别，从而检测未来的恶意软件实例。训练过程涉及使用这些特征进行特征提取和模型构建。基于数据挖掘的恶意软件检测器主要在特征提取方式和用于构建模型的机器学习技术上有所不同。这些技术的性能在很大程度上取决于所提取特征的质量。
 
 在 SCHU2001 报告的工作中，作者从 Windows PE 可执行文件的头部提取 DLL（动态链接库）调用信息（使用 `GNU binutils`）和字符串（使用 `GNU strings`），以及从可执行文件内容中提取 2 字节序列。DLL 调用、字符串和字节被用作特征来训练模型。模型使用两种不同的机器学习技术进行训练，即 RIPPER [COHE1996] 和朴素贝叶斯（NB）[MICH1994]，以比较它们的相对性能。在 KOLT2004 中，作者从可执行文件中提取二进制 `n`-gram 特征，并将其应用于不同的分类方法，如 `k`-近邻（KNN）[AHA1991]、NB、支持向量机（SVM）[BOSE1992]、决策树 [QUIN2003] 和 Boosting [FREU1996]。Boosting 与各种其他学习算法结合使用以获得改进的模型（例如，Boosting 决策树）。我们之前关于基于数据挖掘的恶意软件检测的工作 MASU2008a 从可执行文件中提取二进制 `n`-gram，从反汇编的可执行文件中提取汇编指令序列，并从程序头中提取 DLL 调用信息。该工作中使用的分类模型包括 SVM、决策树、NB、Boosting 决策树和 Boosting NB。
-
-
-
-
 
 ### Hamsa 和 Polygraph
 
@@ -2601,9 +2536,6 @@ Hamsa 和 Polygraph [LI2006, NEWS2005] 应用一种简单的数据挖掘形式�
 
 我们的*扩展、多分区、多块* (EMPC) 集成学习方法维护一个集成 `A` = {`A1`, `A2`, …, `AKv`}，包含最近的、最好的 `Kv` 个分类器。每当一个新数据块 `Dn` 到达时，它使用集成 `A` 测试该数据块。一旦块 `Dn` 被标记，集成就会更新。分类过程使用简单多数投票。
 
-
-
-
 集成构建更新过程如图 8.2 所示，并在算法 8.1 中总结。算法第 1-3 行计算集合 `A` 中每个分类器 `Ai` 在数据块 `Dn` 上的误差，其中 `Dn` 是最近被标记的数据块。令 `D` 为最近被标记的 `r` 个数据块的数据，包括 `Dn`。第 5 行将 `D` 随机划分为 `v` 个大小相等的部分 {`d`1, …,}，使得所有部分具有大致相同的类分布。第 6-9 行训练一批新的 `v` 个分类器，其中每个分类器 `An` 使用数据集 `D` − `dj` 进行训练。通过在其对应的测试数据上测试每个分类器 `An` ∈ `An` 来计算其误差。最后，第 10 行根据第 2 行和第 8 行计算出的每个分类器的误差，从 `An` ∪ `A` 中的 `Kv` + `v` 个分类器中选择最好的 `Kv` 个分类器。请注意，第 `n` 批 `v` 个分类器的任何子集都可能被选中纳入新的集成。
 
 ![图 8.2 集成构建。](img/fig8_2.jpg)
@@ -2624,29 +2556,6 @@ Hamsa 和 Polygraph [LI2006, NEWS2005] 应用一种简单的数据挖掘形式�
 
 ### 8.4.4 Hadoop/MapReduce 框架
 
-我们使用开源的 Hadoop [APAC2010] MapReduce 框架来实现实验。在此，我们提供 Hadoop MapReduce 特征提取和选择算法的一些算法细节。MapReduce 框架中的 `Map` 函数接受一个键值对作为输入，并为每个输入产生一个中间键值对列表。
-
-```
-Map: (MKey × MVal) → (RKey × RVal)*
-```
-
-所有 `Map` 任务由集群中的每个节点并行处理，节点间不共享数据。Hadoop 通过将共享公共中间键 `k` ∈ `RKey` 的每组中间值 `V` ⊆ `RVal` 分组，来汇总 `Map` 任务的输出。生成的汇总对 (`k`, `V`) 随后被流式传输到 `Reduce` 节点。因此，Hadoop MapReduce 框架中的每个 reducer 都会接收一个包含多个 (`k`, `V`) 对的列表，由 Hadoop 以迭代方式一次发出一个。因此 `Reduce` 可以理解为具有以下签名的函数：
-
-```
-Reduce: (RKey × RVal*)* → Val
-```
-
-陪域 `Val` 是 MapReduce 周期最终结果的类型。
-
-在我们的框架中，`Map` 键 (`MKey`) 是二进制文件标识符（例如文件名），`Map` 值 (`MVal`) 是以字节形式存储的文件内容。`Reduce` 键 (`RKey`) 是 `n`-gram 特征，其对应的值 (`RVal`) 是发现这些特征的文件实例的类标签。算法 8.2 展示了 `Map` 节点用于将前者映射为后者的特征提取过程。算法 8.3 的第 5-10 行统计 `Map` 报告的类标签，以获得每个 `n`-gram 的正负实例计数。这些构成了第 11 行计算每个 `n`-gram 信息增益的基础。第 12-16 行使用最小堆数据结构 `h` 根据信息增益过滤掉除最佳 `S` 个特征之外的所有特征。最终遇到的最佳 `S` 个特征由第 18-20 行返回。
-
-Hadoop 系统中的 `q` 个 reducer 因此总共产生 `qS` 个候选特征及其信息增益。这些被流式传输到第二个 reducer，该 reducer 仅实现算法 8.3 的后半部分以选择最佳的 `S` 个特征。
-
-## 8.5 恶意代码检测
-
-### 8.5.1 概述
-
-
 
 
 # 恶意软件检测与特征提取
@@ -2657,7 +2566,7 @@ Hadoop 系统中的 `q` 个 reducer 因此总共产生 `qS` 个候选特征及�
 
 使用 *n*-gram 分析进行特征提取涉及从给定数据集（训练集）中提取所有可能的 *n*-gram，并从中选择最佳的 *n*-gram。每个这样的 *n*-gram 都是一个特征。也就是说，*n*-gram 是一个 *n* 字节的序列。在提取 *n*-gram 之前，我们通过将二进制可执行文件转换为十六进制转储文件来对其进行预处理。这里的粒度级别为一个字节。我们应用 UNIX `hexdump` 实用程序将二进制可执行文件转换为文本文件（十六进制转储文件），其中包含对应于二进制文件每个字节的十六进制数字。执行此过程是为了确保二进制可执行文件的安全和便捷移植。在非分布式框架中，特征提取过程包含两个阶段：特征提取和特征选择，稍后将进行描述。本章介绍了这种传统技术的云计算变体。
 
-### 8.5.2 非分布式特征提取与选择
+## 8.5.2 非分布式特征提取与选择
 
 在非分布式设置中，特征提取按如下方式进行。通过在十六进制转储文件的内容上滑动一个 *n* 字节的窗口来扫描每个文件。窗口中出现的每个 *n* 字节序列都是一个 *n*-gram。对于每个 *n*-gram *g*，我们统计包含 *g* 的文件实例总数 *tg*，以及其中属于正类（即恶意可执行文件）的总数 *pg* ≤ *tg*。
 
@@ -2669,7 +2578,7 @@ Hadoop 系统中的 `q` 个 reducer 因此总共产生 `qS` 个候选特征及�
 
 我们在文献 [MASU2011] 中表明，当考虑新特征时，将它们的信息增益与堆根进行比较。如果新特征的增益大于根的增益，则丢弃根并将新特征插入堆中。否则丢弃新特征，继续特征选择。
 
-### 8.5.3 分布式特征提取与选择
+## 8.5.3 分布式特征提取与选择
 
 上述非分布式特征提取和选择方法存在几个缺点。
 
@@ -2688,9 +2597,6 @@ Hadoop 系统中的 `q` 个 reducer 因此总共产生 `qS` 个候选特征及�
 ![图 8.3 分布式特征提取与选择](img/fig8_3.jpg)
 
 图 8.3 分布式特征提取与选择
-
-
-
 
 例如，假设节点 1 在一个正实例（即恶意训练文件）中观察到 *n*-gram `abc`，而节点 2 在一个负实例（即良性实例）中观察到它。这在图 8.3 中分别用节点 1 和节点 2 下的 `abc`、+ 和 `abc`、− 表示。当 *n*-gram 合并时，包含相同 *n*-gram 的实例的标签会被聚合。因此，`abc` 的聚合对为 `abc`、+−。合并后的 *n*-gram 被分发到 *q* 个 Reducer（由 HDFS 根据系统可用性选择 *q*）。每个 Reducer 首先统计聚合标签以获得正计数和总计数。以 *n*-gram `abc` 为例，我们得到的统计结果为 `pabc` = 1 和 `tabc` = 2。Reducer 利用这些统计结果从提供给该节点的 *n*-gram 子集中选择最佳的 *S* 个 *n*-gram（图 8.3，步骤 5）。这可以通过大小为 *S* 的最小堆高效完成；该过程需要 *O*(*W* log *S*) 时间，其中 *W* 是提供给每个 Reducer 的 *n*-gram 总数。相比之下，非分布式版本需要 *O*(*W* log *W*) 时间。因此，从 *q* 个 Reducer 节点，我们获得 *qS* 个 *n*-gram。从中，我们通过运行另一轮 MapReduce 再次选择最佳的 *S* 个，其中 Map 阶段不执行任何操作，而 Reduce 阶段仅使用一个节点执行特征选择（图 8.3，步骤 6）。特征集中的每个特征都是二元的；如果在给定实例（即可执行文件）中存在，其值为 1，否则为 0。对于每个训练或测试实例，我们计算特征向量，其位由相应特征集的特征值组成。这些特征向量被分类器用于训练和测试。
 
@@ -2730,9 +2636,6 @@ Hadoop 系统中的 `q` 个 reducer 因此总共产生 `qS` 个候选特征及�
 
 *   **AWE**：这是使用准确率加权分类器集成 [WANG2003] 实现的 SPC 方法。它构建一个包含 *K* 个模型的集成，其中每个模型都从一个数据块训练而来。集成更新如下。设 `Cn` 为在最近训练块上构建的分类器。从现有的 *K* 个模型和最新模型 `Cn` 中，根据它们在最近训练块上的误差选择最佳的 *K* 个模型。选择基于加权投票，其中每个模型的权重与其在最近训练块上的误差成反比。
 
-
-
-
 ### 8.6.3 Hadoop 分布式系统搭建
 
 我们实验所用的分布式系统由一个包含十个节点的集群组成。每个节点具有相同的硬件配置：Intel Pentium IV 2.8 GHz 处理器、4GB 主内存和 640GB 硬盘空间。软件环境包括 Ubuntu 9.10 操作系统、Hadoop-0.20.1 分布式计算平台、JDK 1.6 Java 开发平台以及 100MB 局域网链路。
@@ -2743,6 +2646,8 @@ Hadoop 系统中的 `q` 个 reducer 因此总共产生 `qS` 个候选特征及�
 
 文献 [MASU2011] 中报告的实证结果证实了我们的分析，即多划分、多块方法的表现应优于单块、单划分方法。直观上，基于多个块训练的分类器应比基于单个块训练的分类器具有更高的预测准确性，因为其拥有更大的训练数据。此外，如果通过多划分训练数据来训练多个分类器，所得分类器集成的预测准确性应高于基于相同训练数据训练的单个分类器，这是由于集成相对于单一分类器具有错误降低的能力。另外，EMPC 的准确性优势可归结为我们的工作与 AWE 之间的两个重要差异。首先，当 AWE 在集成更新过程中移除一个分类器时，来自相应块的所有信息都会被遗忘；但在 EMPC 中，来自较早块的一个或多个分类器可能会保留下来。因此，EMPC 的集成更新倾向于保留比 AWE 更多的信息，从而形成更好的集成。其次，AWE 至少需要 `Kv` 个数据块，而 EMPC 至少需要 `K + r − 1` 个数据块即可获得 `Kv` 个分类器。因此，AWE 倾向于在集成中保留比 EMPC 古老得多的分类器，导致一些过时的分类器可能对分类准确性产生负面影响。
 
+
+
 然而，更高的准确性伴随着运行时间的增加成本。理论上，EMPC 最多比 AWE（其在准确性方面最接近的竞争对手）慢 `rv` 倍。这在实证评估中也显而易见，评估显示 EMPC 的运行时间在 AWE 的五倍以内（当 `r` = 2 且 `v` = 5 时）。不过，可以采用一些优化来降低运行时成本。首先，可以轻松实现每个划分训练的并行化，将训练时间减少 `v` 倍。其次，集成中每个模型的分类也可以并行完成，从而将分类时间减少 `Kv` 倍。因此，训练和分类的并行化应至少将运行时间减少 `v` 倍，使其接近 AWE 的运行时间。或者，如果无法并行化，可以降低参数 `v` 和 `r`，以降低运行时成本为代价牺牲预测准确性。在这种情况下，可以通过使用不同的 `v` 和 `r` 值评估流的前几个块，并选择最合适的值，来获得运行时间和预测准确性之间的理想平衡。
 
 ## 8.8 总结与展望
@@ -2752,12 +2657,6 @@ Hadoop 系统中的 `q` 个 reducer 因此总共产生 `qS` 个候选特征及�
 EMPC 采用广义的多划分、多块集成学习。理论和实证评估均表明，与现有的单划分、单块集成方法相比，该技术显著降低了预期分类误差。此外，我们展示了 EMPC 可以基于 MapReduce [DEAN2008] 优雅地在云计算框架中实现。结果是一个低成本、可扩展的流分类框架，具有高分类准确性和低运行时开销。
 
 至少有两个针对我们技术的扩展为未来工作提供了有前景的方向。首先，我们当前的特征选择过程仅关注基于信息增益作为选择标准的最佳 `S` 个特征。通过利用近期关于监督降维技术 [RISH2008, SAJA2005] 的工作来改进特征选择，分类准确性有望进一步提高。其次，通过利用云计算架构中可用的额外并行性，可以提高我们方法的运行时性能。例如，集成的分类器可以在 MapReduce 框架中作为 Mapper 并行运行，Reducer 则聚合结果进行投票。同样，下一轮集成的候选分类器也可以并行训练和评估。以这种方式重新构思系统的集成组件，可能会显著缩短处理时间，从而有机会投入更多处理时间用于分类以提高准确性。其他大数据平台（如 Storm 和 Spark）也需要被探索以托管我们的算法。最后，虽然用于分析收集的恶意软件数据量可能巨大，但我们需要探索使用 NoSQL 数据库系统（如 CouchDB）来存储、管理和查询数据。
-
-## 参考文献
-
-
-
-
 
 ## 参考文献
 
@@ -2823,28 +2722,17 @@ EMPC 采用广义的多划分、多块集成学习。理论和实证评估均表
 
 *   **[RISH2008]** I. Rish, G. Grabarnik, G.A. Cecchi, G.G. Pereira, Closed-Form Supervised Dimensionality Reduction with Generalized Linear Models, *Proceedings of International Conference on Machine Learning (ICML 2008)*, Helsinki, Finland, 2008, 832–839.
 
+
+
 *   **[SAJA2005]** Sajama, A. Orlitsky, Supervised Dimensionality Reduction Using Mixture Models, *Proceedings of the 22nd ACM International Conference on Machine Learning (ICML)*, ACM, Bonn, Germany, 2005, 768–775.
-
 *   **[SCHO2005]** M. Scholz, R. Klinkenberg, An Ensemble Classifier for Drifting Concepts, *Proceedings of the 2nd International Workshop on Knowledge Discovery in Data Streams (IWKDDS)*, Springer, Porto, Portugal, 2005, 53–64.
-
-
-
-
-
 *   [SCHU2001] M.G. Schultz, E. Eskin, E. Zadok, S.J. Stolfo, 用于检测新恶意可执行文件的数据挖掘方法，*IEEE 安全与隐私研讨会论文集 (S&P)*，IEEE，加利福尼亚州奥克兰，2001，38–49。
-
 *   [STEW2003] J. Stewart，Sinit P2P 特洛伊木马分析，2003，[www.secureworks.com/research/threats/sinit](http://www.secureworks.com)
-
 *   [TUME1996] K. Tumer，J. Ghosh，集成分类器中的错误相关性与错误减少，连接科学，第 8 卷，第 3 期，1996，385–404。
-
 *   [VX2010] Vx Heavens，VX Heavens，2010，[vx.netlux.org](http://vx.netlux.org)
-
 *   [WANG2003] H. Wang，W. Fan，P.S. Yu，J. Han，使用集成分类器挖掘概念漂移数据流，*第 9 届 ACM 国际知识发现与数据挖掘会议论文集 (KDD)*，ACM，华盛顿特区，2003，226–235。
-
 *   [YANG2005] Y. Yang，X. Wu，X. Zhu，为数据流结合主动与被动预测，*第 11 届 ACM 国际知识发现与数据挖掘会议论文集 (KDD)*，ACM，伊利诺伊州芝加哥，2005，710–715。
-
 *   [ZHAN2009] P. Zhang，X. Zhu，L. Guo，利用有标签和无标签训练样本挖掘数据流，*第 9 届 IEEE 国际数据挖掘会议论文集 (ICDM)*，ACM，伊利诺伊州芝加哥，2009，627–636。
-
 *   [ZHAO2009] W. Zhao，H. Ma，Q. He，基于 MapReduce 的并行 *K*-means 聚类，*第 1 届国际云计算会议论文集 (CloudCom)*，IEEE，中国北京，2009，674–679。
 
 # 9 用于内部威胁检测的流分析
@@ -2853,16 +2741,13 @@ DOI：[10.1201/9781003081845-14](https://doi.org/10.1201/9781003081845-14)
 
 ## 9.1 介绍
 
-恶意内部人员或许是许多或大多数组织信息保障面临的最强大威胁 [BRAC2004，HAMP1999，MATZ2004，SALE2011]。解决内部威胁检测问题的一种传统方法是监督学习，它从训练数据构建数据分类模型。不幸的是，监督学习方法的训练过程往往耗时且昂贵，且通常需要大量平衡良好的训练数据才能有效。在我们的实验中，我们观察到该问题的现实数据集中，不到 3% 的数据与内部威胁（少数类）相关；超过 97% 的数据与非威胁（多数类）相关。因此，从这种不平衡数据训练的传统支持向量机 (SVM) [CHAN2011，MANE2002] 在测试数据集上可能表现不佳。
+恶意内部人员或许是许多或大多数组织信息保障面临的最强大威胁 [BRAC2004，HAMP1999，MATZ2004，SALE2011]。解决内部威胁检测问题的一种传统方法是监督学习，它从训练数据构建数据分类模型。不幸的是，监督学习方法的训练过程往往耗时且昂贵，且通常需要大量平衡良好的训练数据才能有效。在我们的实验中，我们观察到该问题的现实数据集中，不到 3% 的数据与内部威胁（少数类）相关；超过 97% 的数据与非威胁（多数类）相关。因此，从这种不平衡数据训练的传统支持向量机 (`SVM`) [CHAN2011，MANE2002] 在测试数据集上可能表现不佳。
 
-单类 SVM (OCSVM) [MANE2002] 通过构建仅考虑正常数据（即非威胁数据）的模型来解决稀有类别问题。在测试阶段，测试数据根据与模型的几何偏差被分类为正常或异常。然而，该方法仅适用于有界长度的静态数据流。相比之下，与内部威胁相关的数据通常是连续的，且威胁模式随时间演变。换句话说，数据是无界长度的流 [CANG2006]。因此，有效的分类模型必须具有自适应性（即能够应对不断演变的概念），并且必须高效，以便从大量不断演变的数据中构建模型。与内部威胁检测和分类相关的数据通常是连续的。在这些系统中，普通用户和内部威胁的模式可能会逐渐演变。新手程序员可以随着时间的推移发展技能成为专家程序员。内部威胁可以改变其行为，使其更接近合法用户进程。无论哪种情况，当直接相互比较时，这些发展两端的模式看起来可能截然不同。在我们的方法中，这些自然变化不会被视为异常。相反，我们将它们归类为自然概念漂移。传统的静态监督和无监督方法在这些情况下会产生不必要的误报，因为它们无法在系统中出现时处理这些情况。这些传统方法遇到高误报率。学习模型必须擅长应对不断演变的概念，并能高效地从大量数据构建模型，以快速检测真实威胁。基于这些原因，内部威胁问题可以被概念化为一个适用于连续数据流的流挖掘问题。无论使用监督还是无监督学习算法，所选方法都必须高度自适应，才能在这些条件下正确处理概念漂移。增量学习和基于集成的学习 [ALKH2012a，ALKH2012b，KANG2011，MASU2008，MASU2009，MASU2010a，MASU2010b，MASU2011a，MASU2011b，MASU2011c，MASU2011d，MASU2013] 是克服这一障碍的两种自适应方法。由 *K* 个模型组成的集成，通过集体投票决定最终分类，可以减少测试集的假阴性 (FN) 和假阳性 (FP)。随着新模型的创建和旧模型的更新以变得更精确，准确度最低的模型会被丢弃，以始终保持恰好 *K* 个当前模型的集成。监督学习的一种替代方法是无监督学习，它可以有效地应用于纯未标记数据——即没有数据点被明确标识为异常或非异常的数据。基于图的异常检测 (GBAD) 是无监督学习的一种重要形式 [COOK2000，COOK2007，EBER2007]，但传统上仅限于静态、有限长度的数据集。这限制了其在内部威胁相关流中的应用，后者往往具有无界长度且威胁模式随时间演变。因此，将 GBAD 应用于内部威胁问题要求所用模型具有自适应性和高效性。增加这些特性允许从大量不断演变的数据中构建有效模型。
+单类 `SVM` (`OCSVM`) [MANE2002] 通过构建仅考虑正常数据（即非威胁数据）的模型来解决稀有类别问题。在测试阶段，测试数据根据与模型的几何偏差被分类为正常或异常。然而，该方法仅适用于有界长度的静态数据流。相比之下，与内部威胁相关的数据通常是连续的，且威胁模式随时间演变。换句话说，数据是无界长度的流 [CANG2006]。因此，有效的分类模型必须具有自适应性（即能够应对不断演变的概念），并且必须高效，以便从大量不断演变的数据中构建模型。与内部威胁检测和分类相关的数据通常是连续的。在这些系统中，普通用户和内部威胁的模式可能会逐渐演变。新手程序员可以随着时间的推移发展技能成为专家程序员。内部威胁可以改变其行为，使其更接近合法用户进程。无论哪种情况，当直接相互比较时，这些发展两端的模式看起来可能截然不同。在我们的方法中，这些自然变化不会被视为异常。相反，我们将它们归类为自然概念漂移。传统的静态监督和无监督方法在这些情况下会产生不必要的误报，因为它们无法在系统中出现时处理这些情况。这些传统方法遇到高误报率。学习模型必须擅长应对不断演变的概念，并能高效地从大量数据构建模型，以快速检测真实威胁。基于这些原因，内部威胁问题可以被概念化为一个适用于连续数据流的流挖掘问题。无论使用监督还是无监督学习算法，所选方法都必须高度自适应，才能在这些条件下正确处理概念漂移。增量学习和基于集成的学习 [ALKH2012a，ALKH2012b，KANG2011，MASU2008，MASU2009，MASU2010a，MASU2010b，MASU2011a，MASU2011b，MASU2011c，MASU2011d，MASU2013] 是克服这一障碍的两种自适应方法。由 `K` 个模型组成的集成，通过集体投票决定最终分类，可以减少测试集的假阴性 (`FN`) 和假阳性 (`FP`)。随着新模型的创建和旧模型的更新以变得更精确，准确度最低的模型会被丢弃，以始终保持恰好 `K` 个当前模型的集成。监督学习的一种替代方法是无监督学习，它可以有效地应用于纯未标记数据——即没有数据点被明确标识为异常或非异常的数据。基于图的异常检测 (`GBAD`) 是无监督学习的一种重要形式 [COOK2000，COOK2007，EBER2007]，但传统上仅限于静态、有限长度的数据集。这限制了其在内部威胁相关流中的应用，后者往往具有无界长度且威胁模式随时间演变。因此，将 `GBAD` 应用于内部威胁问题要求所用模型具有自适应性和高效性。增加这些特性允许从大量不断演变的数据中构建有效模型。
 
-我们将内部威胁检测视为一个流挖掘问题，并提出了两种方法（监督和无监督学习），用于高效检测流数据中的异常 [PARV2013]。为了应对概念演变，我们的监督方法维护一个不断演变的多个 OCSVM 模型集成 [PARV2011a]。我们的无监督方法将多个 GBAD 模型结合在一个分类器集成中 [PARV2006，PARV2011b]。在两种情况下，集成更新过程的设计都是为了随着流的演变保持集成的时效性。这种演变能力提高了分类器在合法和非法代理行为随时间变化时对概念漂移的生存能力。在实验中，我们使用记录大型基于 Unix 的多用户系统系统调用数据的测试数据 [QUMR2013]。
+我们将内部威胁检测视为一个流挖掘问题，并提出了两种方法（监督和无监督学习），用于高效检测流数据中的异常 [PARV2013]。为了应对概念演变，我们的监督方法维护一个不断演变的多个 `OCSVM` 模型集成 [PARV2011a]。我们的无监督方法将多个 `GBAD` 模型结合在一个分类器集成中 [PARV2006，PARV2011b]。在两种情况下，集成更新过程的设计都是为了随着流的演变保持集成的时效性。这种演变能力提高了分类器在合法和非法代理行为随时间变化时对概念漂移的生存能力。在实验中，我们使用记录大型基于 Unix 的多用户系统系统调用数据的测试数据 [QUMR2013]。
 
-
-
-
-上述方法可能不太适用于序列数据 [PARV2012a, PARV2012b]。对于序列数据，我们的方法维护一个由多个无监督基于流的序列学习（USSL）模型组成的集成 [PARV2012a]。在学习过程中，我们将用户操作或命令中的重复序列模式存储在一个称为量化字典的模型中。特别是，由于在流中频繁出现而具有较高权重的较长模式会被纳入字典。在这种情况下，集成是`K`个量化字典类型模型的集合。当新数据到达或被收集时，我们会从这个新数据集生成一个新的量化字典模型。我们将采用所有模型的多数投票来发现该新数据集中的异常模式序列。如果新字典在集成中表现优于其他模型，我们将更新集成，并从集成中丢弃最不准确的模型。因此，随着流的演变，集成始终保持模型的时效性，在合法和非法行为随时间演变的情况下保持较高的检测准确率。我们的测试数据由不同经验水平的多个用户的实时记录命令序列以及一个概念漂移框架组成，以进一步展示该方法的实用性。
+上述方法可能不太适用于序列数据 [PARV2012a, PARV2012b]。对于序列数据，我们的方法维护一个由多个无监督基于流的序列学习 (`USSL`) 模型组成的集成 [PARV2012a]。在学习过程中，我们将用户操作或命令中的重复序列模式存储在一个称为量化字典的模型中。特别是，由于在流中频繁出现而具有较高权重的较长模式会被纳入字典。在这种情况下，集成是 `K` 个量化字典类型模型的集合。当新数据到达或被收集时，我们会从这个新数据集生成一个新的量化字典模型。我们将采用所有模型的多数投票来发现该新数据集中的异常模式序列。如果新字典在集成中表现优于其他模型，我们将更新集成，并从集成中丢弃最不准确的模型。因此，随着流的演变，集成始终保持模型的时效性，在合法和非法行为随时间演变的情况下保持较高的检测准确率。我们的测试数据由不同经验水平的多个用户的实时记录命令序列以及一个概念漂移框架组成，以进一步展示该方法的实用性。
 
 本章描述了我们利用流数据挖掘进行内部威胁检测的方法，适用于非序列和序列数据。在第 9.2 节中，我们提供了内部威胁和流挖掘的综述。我们还讨论了大数据/数据科学技术的可扩展性问题。非序列流数据的内部威胁在第 9.3 节中讨论。序列流数据的内部威胁在第 9.4 节中讨论（图 9.1）。第 9.5 节总结了本章。更详细的讨论见 [THUR2017]。
 
@@ -2876,15 +2761,13 @@ DOI：[10.1201/9781003081845-14](https://doi.org/10.1201/9781003081845-14)
 
 内部威胁检测工作应用了来自入侵检测和外部威胁检测的思想 [MAXI2003, SCHO2001, SCHU2002, WANG2003]。有监督学习方法收集包含正常和异常行为记录的系统调用跟踪日志 [FORR1996, GAO2004, HOFM1998, NGUY2003]，从收集的数据中提取 `n`-gram 特征，并使用提取的特征训练分类器。文本分类方法将每个系统调用视为词袋模型中的一个词 [LIAO2002]。系统调用的各种属性，包括参数、对象路径、返回值和错误状态，已在各种有监督学习方法中被作为特征利用 [KRUG2003, TAND2003]。
 
-混合高阶马尔可夫链模型通过基于用户命令序列识别特定用户的`签名行为`来检测异常 [JU2001]。概率异常检测（PAD）算法 [STOL2005] 是一种用于异常检测的通用算法（在 Windows 环境中），它假设异常或噪声在训练数据中是罕见事件。伪装检测被一些人争论。多种检测方法被应用于 70 个用户的“截断” UNIX Shell 命令数据集 [SCHO2001]。命令是使用 UNIX acct 审计机制收集的。对于每个用户，在一段时间内收集了若干命令。检测方法由多步马尔可夫模型和贝叶斯与马尔可夫方法的组合进行监督。有人认为该数据集不适合伪装检测任务 [MAXI2003]。有人指出，不同用户的数据收集周期差异很大（从几天到几个月不等）。此外，命令并非按输入顺序记录。相反，当应用程序终止审计机制时，它们被合并了。这导致了对严格序列数据进行可能错误分析的不幸后果。因此，在本提议的工作中，我们未考虑该数据集。这些方法与我们的有监督方法不同，因为这些学习方法本质上是静态的，不会从不断演变的流中学习。换句话说，数据的流特性未被进一步探索。因此，静态学习性能可能会随时间下降。另一方面，我们的有监督方法将从不断演变的数据流中学习。我们提出的工作基于有监督学习，通过从不断演变的流中学习，能够很好地处理动态数据或流数据。在异常检测中，使用了一类 SVM 算法 [STOL2005]。OCSVM 通过在正常数据上训练建立模型，然后根据与该正常训练数据的几何偏差将测试数据分类为良性或异常。对于伪装检测，一类 SVM 训练与二类训练同样有效 [STOL2005]。已针对使用二进制特征和基于频率特征的 SVM 进行了研究。具有二进制特征的一类 SVM 算法表现最好。
+混合高阶马尔可夫链模型通过基于用户命令序列识别特定用户的 `签名行为` 来检测异常 [JU2001]。概率异常检测 (`PAD`) 算法 [STOL2005] 是一种用于异常检测的通用算法（在 Windows 环境中），它假设异常或噪声在训练数据中是罕见事件。伪装检测被一些人争论。多种检测方法被应用于 70 个用户的“截断” UNIX Shell 命令数据集 [SCHO2001]。命令是使用 UNIX acct 审计机制收集的。对于每个用户，在一段时间内收集了若干命令。检测方法由多步马尔可夫模型和贝叶斯与马尔可夫方法的组合进行监督。有人认为该数据集不适合伪装检测任务 [MAXI2003]。有人指出，不同用户的数据收集周期差异很大（从几天到几个月不等）。此外，命令并非按输入顺序记录。相反，当应用程序终止审计机制时，它们被合并了。这导致了对严格序列数据进行可能错误分析的不幸后果。因此，在本提议的工作中，我们未考虑该数据集。这些方法与我们的有监督方法不同，因为这些学习方法本质上是静态的，不会从不断演变的流中学习。换句话说，数据的流特性未被进一步探索。因此，静态学习性能可能会随时间下降。另一方面，我们的有监督方法将从不断演变的数据流中学习。我们提出的工作基于有监督学习，通过从不断演变的流中学习，能够很好地处理动态数据或流数据。在异常检测中，使用了一类 `SVM` 算法 [STOL2005]。`OCSVM` 通过在正常数据上训练建立模型，然后根据与该正常训练数据的几何偏差将测试数据分类为良性或异常。对于伪装检测，一类 `SVM` 训练与二类训练同样有效 [STOL2005]。已针对使用二进制特征和基于频率特征的 `SVM` 进行了研究。具有二进制特征的一类 `SVM` 算法表现最好。
 
-递归挖掘已被提出用于发现频繁模式 [SZYM2004]。在模式被唯一符号编码并用这种新编码重写所有序列后，一类 SVM 分类器被用于伪装检测。据我们所知，没有工作将这种 OCSVM 扩展到流领域。尽管我们的方法依赖于 OCSVM，但它已扩展到流领域，以便能够应对变化 [PARV2011b, PARV2013]。据我们所知，也有工作探索了用于内部威胁检测的无监督学习，但仅限于静态流 [ESKI2002, LIU2005]。基于静态图的异常检测（GBAD）方法 COOK2000, COOK2007, EBER2007, [YAN2002] 将威胁和非威胁数据表示为图，并应用无监督学习来检测异常。`最小描述长度`（MDL）方法已被应用于 GBAD，用于电子邮件、手机通信、业务流程和网络犯罪数据集 [KOWA2008, STAN1996]。我们的工作建立在 GBAD 和 MDL 之上，以支持动态、不断演变的流 [PARV2011a, PARV2013]。
+递归挖掘已被提出用于发现频繁模式 [SZYM2004]。在模式被唯一符号编码并用这种新编码重写所有序列后，一类 `SVM` 分类器被用于伪装检测。据我们所知，没有工作将这种 `OCSVM` 扩展到流领域。尽管我们的方法依赖于 `OCSVM`，但它已扩展到流领域，以便能够应对变化 [PARV2011b, PARV2013]。据我们所知，也有工作探索了用于内部威胁检测的无监督学习，但仅限于静态流 [ESKI2002, LIU2005]。基于静态图的异常检测 (`GBAD`) 方法 COOK2000, COOK2007, EBER2007, [YAN2002] 将威胁和非威胁数据表示为图，并应用无监督学习来检测异常。`最小描述长度`（`MDL`）方法已被应用于 `GBAD`，用于电子邮件、手机通信、业务流程和网络犯罪数据集 [KOWA2008, STAN1996]。我们的工作建立在 `GBAD` 和 `MDL` 之上，以支持动态、不断演变的流 [PARV2011a, PARV2013]。
 
 流挖掘是数据挖掘研究中一个相对较新的类别，适用于连续数据流 [FAN2004]。在这样的设置中，有监督和无监督学习都必须具有自适应性，以应对特征随时间变化的数据。主要有两种自适应方法：`增量学习` [DAVI1998, DOMI2001] 和 `基于集成的学习` [FAN2004, MASU2010a, MASU2011a]。以往的工作表明，基于集成的方法更为有效，从而激发了我们的方法。
 
-
-
-集成学习过去曾被用于增强正/负分类的有效性 [MASU2008, MASU2011a]。通过维护一个由 `K` 个模型组成的集成，这些模型共同对最终分类进行投票，可以减少测试集的 `false negatives`（假阴性，FN）和 `false positives`（假阳性，FP）。随着更好的模型被创建，较差的模型会被丢弃，以维持一个规模恰好为 `K` 的集成。这有助于集成随数据流不断变化的特性而演进，并使分类任务保持可处理。上述相关工作的比较总结在表 9.1 中。更完整的综述请参阅 [SALE2008]。
+集成学习过去曾被用于增强正/负分类的有效性 [MASU2008, MASU2011a]。通过维护一个由 `K` 个模型组成的集成，这些模型共同对最终分类进行投票，可以减少测试集的 `false negatives`（假阴性，`FN`）和 `false positives`（假阳性，`FP`）。随着更好的模型被创建，较差的模型会被丢弃，以维持一个规模恰好为 `K` 的集成。这有助于集成随数据流不断变化的特性而演进，并使分类任务保持可处理。上述相关工作的比较总结在表 9.1 中。更完整的综述请参阅 [SALE2008]。
 
 #### 表 9.1 针对非序列数据的各种方法的能力与侧重点
 
@@ -2896,21 +2779,21 @@ DOI：[10.1201/9781003081845-14](https://doi.org/10.1201/9781003081845-14)
 
 Schonlau 等人 [SCHO2001] 将多种检测方法应用于 70 个用户的“截断” UNIX shell 命令数据集。命令是使用 UNIX acct 审计机制收集的。在一段时间内，为每个用户收集了一定数量的命令。检测方法基于多步马尔可夫模型以及贝叶斯和马尔可夫方法的组合，属于监督式。Maxion 等人 [MAXI2003] 认为 Schonlau 数据集不适合伪装检测任务，并使用 Calgary 数据集创建了一个新数据集，应用了静态监督模型。
 
-这些方法与我们的工作在以下方面有所不同。这些学习方法本质上是静态的，不会在不断演进的数据流上学习。换句话说，数据的流特性未被进一步探索。因此，静态学习器的性能可能会随时间下降。另一方面，我们的方法将从不断演进的数据流中学习。我们证明了我们的方法是无监督的，且与监督模型（增量式）同样有效。研究人员已探索用于内部威胁检测的 `unsupervised learning`（无监督学习）[LIU2005]。然而，该学习算法本质上是静态的。虽然我们的方法是无监督的，但它同时从随时间演进的数据流中学习，并将更多数据用于无监督学习。在异常检测中，使用了一类支持向量机（SVM）算法（OCSVM）。OCSVM 通过在正常数据上训练建立模型，然后根据与正常训练数据的几何偏差，将测试数据分类为良性或异常。Wang 等人 [WANG2003] 表明，对于伪装检测，一类 SVM 训练与二类训练同样有效。作者研究了使用二进制特征和基于频率特征的 SVM。具有二进制特征的一类 SVM 算法表现最佳。为了寻找频繁模式，Szymanski 等人 [SZYM2004] 提出了递归挖掘，用唯一符号对模式进行编码，并使用这种新编码重写序列。他们使用一类 SVM 分类器进行伪装检测。这些学习方法本质上是静态的，不会在不断演进的数据流上学习。
+这些方法与我们的工作在以下方面有所不同。这些学习方法本质上是静态的，不会在不断演进的数据流上学习。换句话说，数据的流特性未被进一步探索。因此，静态学习器的性能可能会随时间下降。另一方面，我们的方法将从不断演进的数据流中学习。我们证明了我们的方法是无监督的，且与监督模型（增量式）同样有效。研究人员已探索用于内部威胁检测的 `unsupervised learning`（无监督学习）[LIU2005]。然而，该学习算法本质上是静态的。虽然我们的方法是无监督的，但它同时从随时间演进的数据流中学习，并将更多数据用于无监督学习。在异常检测中，使用了一类支持向量机（`SVM`）算法（`OCSVM`）。`OCSVM` 通过在正常数据上训练建立模型，然后根据与正常训练数据的几何偏差，将测试数据分类为良性或异常。Wang 等人 [WANG2003] 表明，对于伪装检测，一类 `SVM` 训练与二类训练同样有效。作者研究了使用二进制特征和基于频率特征的 `SVM`。具有二进制特征的一类 `SVM` 算法表现最佳。为了寻找频繁模式，Szymanski 等人 [SZYM2004] 提出了递归挖掘，用唯一符号对模式进行编码，并使用这种新编码重写序列。他们使用一类 `SVM` 分类器进行伪装检测。这些学习方法本质上是静态的，不会在不断演进的数据流上学习。
 
 ### 9.2.2 流挖掘
 
-流挖掘是一个新的数据挖掘领域，其中数据是连续的 [ALKH2012a, MASU2010b, MASU2011a, MASU2011b, MASU2011c, MASU2013]。此外，数据的特性可能会随时间变化（概念漂移）。在此，监督和无监督学习需要具有自适应性以应对变化。开发自适应学习有两种方式。一种是增量学习，另一种是基于集成的学习。增量学习用于用户行为预测 [DOMI2001]，但不用于异常检测。Davidson 等人 [DAVI1998] 引入了增量概率行为建模（IPAM），基于从训练数据估计的单步命令转移概率。随着新命令的到来，概率不断更新，并通过指数衰减方案的使用进行修正。然而，该算法并非为异常检测设计。因此，据我们所知，几乎没有其他研究者的工作在流挖掘领域处理内部威胁检测。这是利用流挖掘检测内部威胁的首次尝试 [PARV2011a, PARV2011b, PARV2012b]。
+流挖掘是一个新的数据挖掘领域，其中数据是连续的 [ALKH2012a, MASU2010b, MASU2011a, MASU2011b, MASU2011c, MASU2013]。此外，数据的特性可能会随时间变化（概念漂移）。在此，监督和无监督学习需要具有自适应性以应对变化。开发自适应学习有两种方式。一种是增量学习，另一种是基于集成的学习。增量学习用于用户行为预测 [DOMI2001]，但不用于异常检测。Davidson 等人 [DAVI1998] 引入了增量概率行为建模 (`IPAM`)，基于从训练数据估计的单步命令转移概率。随着新命令的到来，概率不断更新，并通过指数衰减方案的使用进行修正。然而，该算法并非为异常检测设计。因此，据我们所知，几乎没有其他研究者的工作在流挖掘领域处理内部威胁检测。这是利用流挖掘检测内部威胁的首次尝试 [PARV2011a, PARV2011b, PARV2012b]。
 
 最近，无监督学习已被应用于在数据流中检测内部威胁 [PARV2011b, PARV2013]。该工作不考虑用于威胁检测的序列数据。回顾一下，序列数据在内部威胁场景中非常常见。相反，它将数据视为图/向量，寻找规范模式，并应用基于集成的技术来应对变化。另一方面，在我们提出的方法中，我们考虑用户命令序列进行异常检测，并为正常模式构建量化字典。
 
-用户重复的日常或每周活动可能构成用户画像。例如，用户频繁的命令序列可能代表该用户的规范模式。由于单遍算法的要求，在无界长度的动态数据流上寻找规范模式具有挑战性。为此，通过利用压缩/量化字典来建模常见行为序列，采用了一种无监督学习方法。这种无监督方法需要在单次遍历中识别正常用户行为 [CHUA2011, PARV2012a, PARV2012b]。这些重复序列的一个主要挑战是其长度的可变性。为了解决这个问题，我们生成一个字典，其中将包含收集到的数据流中存在的任何可能的规范模式组合。此外，我们结合了流挖掘的力量来应对渐变。我们进行了实验，并表明我们的 USSL 方法在概念漂移和异常检测的背景下效果良好。
-
-我们的工作 [PARV2012a, PARV2012b] 与 [CHUA2011] 的工作在以下方面有所不同。首先，[CHUA2011] 中的工作侧重于字典构建以生成正常画像。换句话说，他们的工作并未解决我们关注的内部威胁问题。其次，[CHUA2011] 未考虑基于集成的技术；我们的工作利用基于集成的技术与无监督学习（即良性序列字典）相结合。最后，当用户数量增长时，字典构建将成为瓶颈。[CHUA2011] 的工作未考虑可扩展性问题；在我们的案例中，我们使用 MapReduce 框架解决可扩展性问题。
+用户重复的日常或每周活动可能构成用户画像。例如，用户频繁的命令序列可能代表该用户的规范模式。由于单遍算法的要求，在无界长度的动态数据流上寻找规范模式具有挑战性。为此，通过利用压缩/量化字典来建模常见行为序列，采用了一种无监督学习方法。这种无监督方法需要在单次遍历中识别正常用户行为 [CHUA2011, PARV2012a, PARV2012b]。这些重复序列的一个主要挑战是其长度的可变性。为了解决这个问题，我们生成一个字典，其中将包含收集到的数据流中存在的任何可能的规范模式组合。此外，我们结合了流挖掘的力量来应对渐变。我们进行了实验，并表明我们的 `USSL` 方法在概念漂移和异常检测的背景下效果良好。
 
 
 
-在 [PARV2012a] 中，采用了一种增量方法。未采用基于集成的技术，但文献表明，对于流挖掘，基于集成的技术比增量类技术更有效 [FAN2004, MASU2010a, MASU2011a]。因此，我们的方法侧重于基于集成的技术 [PARV2012b]。我们参考 表 9.2，其中列出了相关方法是无监督还是有监督，以及它们是否关注概念漂移、检测内部威胁以及来自流挖掘的序列数据。挖掘复杂应用的某些方面见 [EAGL2006]。
+我们的工作 [PARV2012a, PARV2012b] 与 [CHUA2011] 的工作在以下方面有所不同。首先，[CHUA2011] 中的工作侧重于字典构建以生成正常画像。换句话说，他们的工作并未解决我们关注的内部威胁问题。其次，[CHUA2011] 未考虑基于集成的技术；我们的工作利用基于集成的技术与无监督学习（即良性序列字典）相结合。最后，当用户数量增长时，字典构建将成为瓶颈。[CHUA2011] 的工作未考虑可扩展性问题；在我们的案例中，我们使用 `MapReduce` 框架解决可扩展性问题。
+
+在 [PARV2012a] 中，采用了一种增量方法。未采用基于集成的技术，但文献表明，对于流挖掘，基于集成的技术比增量类技术更有效 [FAN2004, MASU2010a, MASU2011a]。因此，我们的方法侧重于基于集成的技术 [PARV2012b]。我们参考表 9.2，其中列出了相关方法是无监督还是有监督，以及它们是否关注概念漂移、检测内部威胁以及来自流挖掘的序列数据。挖掘复杂应用的某些方面见 [EAGL2006]。
 
 #### 表 9.2 针对序列数据的各种方法的能力与关注点
 
@@ -2922,88 +2805,85 @@ Schonlau 等人 [SCHO2001] 将多种检测方法应用于 70 个用户的“截�
 
 流数据以高速度和大规模持续到来 [ALKH2012b]。这符合大数据的特征。“大数据”是指其规模、多样性和复杂性需要新的架构、技术、算法和分析来进行管理，并从中提取价值和隐藏知识的数据。因此，大数据研究人员正在寻找工具，以便及时且可扩展地管理、分析、汇总、可视化并从收集的数据中发现知识。
 
-关于大数据管理，有许多技术可用于在廉价商用硬件组成的网格上实现大规模可扩展的数据处理，例如以下技术。Google 文件系统 [CHAN2006, DEAN2008] 是一种可扩展的分布式文件系统，它利用商用硬件集群来促进数据密集型应用。该系统具有容错性，由于使用商用硬件，机器故障属于正常现象。为了应对故障，数据将复制到多个节点。如果一个节点发生故障，系统将利用存有复制数据的另一个节点。
+关于大数据管理，有许多技术可用于在廉价商用硬件组成的网格上实现大规模可扩展的数据处理，例如以下技术。`Google 文件系统` [CHAN2006, DEAN2008] 是一种可扩展的分布式文件系统，它利用商用硬件集群来促进数据密集型应用。该系统具有容错性，由于使用商用硬件，机器故障属于正常现象。为了应对故障，数据将复制到多个节点。如果一个节点发生故障，系统将利用存有复制数据的另一个节点。
 
-MapReduce [CHAN2006, DEAN2008] 是一种支持以并行方式处理数据密集型应用的编程模型。MapReduce 范式支持 map 和 reduce 函数。Map 生成一组中间键值对，然后 reduce 函数合并结果并进行归纳。事实上，正如 [CHAN2006] 和 [DEAN2008] 所示，map/reduce 范式可以解决许多现实世界的问题。
+`MapReduce` [CHAN2006, DEAN2008] 是一种支持以并行方式处理数据密集型应用的编程模型。`MapReduce` 范式支持 `map` 和 `reduce` 函数。`map` 生成一组中间键值对，然后 `reduce` 函数合并结果并进行归纳。事实上，正如 [CHAN2006] 和 [DEAN2008] 所示，`map/reduce` 范式可以解决许多现实世界的问题。
 
-Hadoop [ABOU2009, BU2010, XU2010] 是一个开源的 Apache 项目，支持 Google 文件系统和 MapReduce 范式。Hadoop 广泛用于结合 MapReduce 解决可扩展性问题。例如，针对海量语义 Web 数据集，Husain 等人 [HUSA2009, HUSA2010, HUSA2011] 表明 Hadoop 可用于提供可扩展的查询。此外，MapReduce 技术已被 BioMANTA 项目 [DING2005] 和 SHARD 利用（另见 [BIOM] 和 [SHAR]）。
+`Hadoop` [ABOU2009, BU2010, XU2010] 是一个开源的 Apache 项目，支持 `Google 文件系统` 和 `MapReduce` 范式。`Hadoop` 广泛用于结合 `MapReduce` 解决可扩展性问题。例如，针对海量语义 Web 数据集，Husain 等人 [HUSA2009, HUSA2010, HUSA2011] 表明 `Hadoop` 可用于提供可扩展的查询。此外，`MapReduce` 技术已被 `BioMANTA` 项目 [DING2005] 和 `SHARD` 利用（另见 [BIOM] 和 [SHAR]）。
 
-Amazon 开发了 Dynamo [DECA2007]，一种分布式键值存储。Dynamo 不支持 Hadoop 所支持的主从架构。Dynamo 中的节点通过 gossip 网络通信。为了实现高可用性和性能，Dynamo 通过牺牲强一致性来支持一种称为最终一致性的模型。在最终一致性中，更新将异步传播到集群中的节点，并为每次更新生成一个新版本的数据。
+Amazon 开发了 `Dynamo` [DECA2007]，一种分布式键值存储。`Dynamo` 不支持 `Hadoop` 所支持的主从架构。`Dynamo` 中的节点通过 gossip 网络通信。为了实现高可用性和性能，`Dynamo` 通过牺牲强一致性来支持一种称为最终一致性的模型。在最终一致性中，更新将异步传播到集群中的节点，并为每次更新生成一个新版本的数据。
 
-Google 开发了 BigTable CHAN2006, [CHAN2008]，一种面向列的数据存储系统。BigTable 利用 Google 文件系统和 Chubby [BURR2006]（一种分布式锁服务）。BigTable 是一种基于行键、列名和时间戳的分布式多维稀疏映射。
+Google 开发了 `BigTable` [CHAN2006, CHAN2008]，一种面向列的数据存储系统。`BigTable` 利用 `Google 文件系统` 和 `Chubby` [BURR2006]（一种分布式锁服务）。`BigTable` 是一种基于行键、列名和时间戳的分布式多维稀疏映射。
 
-研究人员 [ABOU2009] 利用了 MapReduce 和关系数据库技术的组合力量。关于大数据分析，有少量相关工作。例如，一方面，一些研究人员专注于通用分析工具以解决可扩展性问题；另一方面，其他研究人员专注于特定的分析问题。
+研究人员 [ABOU2009] 利用了 `MapReduce` 和关系数据库技术的组合力量。关于大数据分析，有少量相关工作。例如，一方面，一些研究人员专注于通用分析工具以解决可扩展性问题；另一方面，其他研究人员专注于特定的分析问题。
 
-关于工具，Mahout 是一个开源大数据分析工具，支持大数据的分类、聚类和推荐系统 [OWEN2011]。在 [CHU2006] 中，研究人员定制了知名机器学习算法，以利用多核机器和 MapReduce 编程范式。MapReduce 已被广泛用于挖掘 PB 级数据 [MORE2008]。
+关于工具，`Mahout` 是一个开源大数据分析工具，支持大数据的分类、聚类和推荐系统 [OWEN2011]。在 [CHU2006] 中，研究人员定制了知名机器学习算法，以利用多核机器和 `MapReduce` 编程范式。`MapReduce` 已被广泛用于挖掘 PB 级数据 [MORE2008]。
 
-关于具体问题，Al-Khateeb 等人 [ALKH2012b] 和 Haque 等人 [HAQU2013a, HAQU2013b] 提出了利用 MapReduce 和 Hadoop 框架在演化流上进行可扩展分类的方法。有一些关于结合 MapReduce 进行并行 Boosting 的研究工作。Palit 等人 [PALI2012] 提出了两种并行 Boosting 算法：ADABOOST.PL 和 LOGITBOOST.PL。
+关于具体问题，Al-Khateeb 等人 [ALKH2012b] 和 Haque 等人 [HAQU2013a, HAQU2013b] 提出了利用 `MapReduce` 和 `Hadoop` 框架在演化流上进行可扩展分类的方法。有一些关于结合 `MapReduce` 进行并行 Boosting 的研究工作。Palit 等人 [PALI2012] 提出了两种并行 Boosting 算法：`ADABOOST.PL` 和 `LOGITBOOST.PL`。
 
-对于序列数据，量化字典构建耗时较长。可扩展性是此处的瓶颈。我们利用分布式计算来解决这一问题。有两种方法可以实现这一目标。第一种是利用昂贵硬件的共享内存架构并行计算。后一种方法是利用商用硬件的无共享架构分布式计算。在我们的案例中，我们采用后一种选择。这里，我们使用基于 MapReduce 的框架，通过 Hadoop 分布式文件系统 (HDFS) 来促进量化。我们提出了多种算法来量化字典。对于每种算法，我们讨论其优缺点，并在大型数据集上报告性能结果。
+对于序列数据，量化字典构建耗时较长。可扩展性是此处的瓶颈。我们利用分布式计算来解决这一问题。有两种方法可以实现这一目标。第一种是利用昂贵硬件的共享内存架构并行计算。后一种方法是利用商用硬件的无共享架构分布式计算。在我们的案例中，我们采用后一种选择。这里，我们使用基于 `MapReduce` 的框架，通过 `Hadoop` 分布式文件系统 (`HDFS`) 来促进量化。我们提出了多种算法来量化字典。对于每种算法，我们讨论其优缺点，并在大型数据集上报告性能结果。
 
 ## 9.3 基于集成的内部威胁检测
 
 ### 9.3.1 集成学习
 
-集成分类过程如 图 9.2 所示。我们首先使用 OCSVM（有监督方法）或 GBAD（无监督方法）从单个数据块构建模型 [PARV2011a, PARV2011b, PARV2013]。在 GBAD 的情况下，在数据块中识别出 `规范子结构`，每个子结构表示为一个子图。为了识别异常，将测试子结构与集成中的每个模型进行比较。模型将根据测试子结构与模型的规范子结构差异程度，将其分类为异常。一旦所有模型投出票数，将应用加权多数投票做出最终分类决策。集成演化的安排旨在始终保持恰好 `K` 个模型。随着每个新数据块的到来，从新数据块创建第 `K` + 1 个模型，并从这 `K` + 1 个模型中丢弃一个牺牲模型。
+集成分类过程如图 9.2 所示。我们首先使用 `OCSVM`（有监督方法）或 `GBAD`（无监督方法）从单个数据块构建模型 [PARV2011a, PARV2011b, PARV2013]。在 `GBAD` 的情况下，在数据块中识别出`规范子结构`，每个子结构表示为一个子图。为了识别异常，将测试子结构与集成中的每个模型进行比较。模型将根据测试子结构与模型的规范子结构差异程度，将其分类为异常。一旦所有模型投出票数，将应用加权多数投票做出最终分类决策。集成演化的安排旨在始终保持恰好 `K` 个模型。随着每个新数据块的到来，从新数据块创建第 `K` + 1 个模型，并从这 `K` + 1 个模型中丢弃一个牺牲模型。
 
 ![图 9.2 集成分类。](img/fig9_2.jpg)
 
 图 9.2 集成分类。
 
-选择牺牲模型有多种方式。一种方法是在最近的数据块上计算 `K` + 1 个模型中每个模型的预测误差，并丢弃预测效果最差的模型。这要求最近数据块的 `真实标签` 立即可用，以便准确测量预测误差。如果真实标签不可用，我们则依赖多数投票；与多数决定一致性最低的模型将被丢弃。这将产生一个由最符合当前概念的 `K` 个模型组成的集成。
+选择牺牲模型有多种方式。一种方法是在最近的数据块上计算 `K` + 1 个模型中每个模型的预测误差，并丢弃预测效果最差的模型。这要求最近数据块的`真实标签`立即可用，以便准确测量预测误差。如果真实标签不可用，我们则依赖多数投票；与多数决定一致性最低的模型将被丢弃。这将产生一个由最符合当前概念的 `K` 个模型组成的集成。
 
 ### 9.3.2 面向无监督学习的集成
 
-
-
-
 # 9.3.2 无监督分类和基于集成的更新
 
-算法 9.1 总结了无监督分类和基于集成的更新算法。第 3-4 行从最近的数据块构建一个新模型并暂时将其添加到集成中。接下来，第 5-13 行将集成中的每个模型应用于测试图 *t*，以检测可能的异常。我们对每个模型使用三种 GBAD 变体（P、MDL 和 MPS），本节将讨论每一种。最后，第 14-30 行通过丢弃与加权多数意见分歧最大的模型来更新集成。如果多个模型具有最多的分歧，则任意丢弃一个表现最差的模型。请注意，未使用真实标签。然而，模型的多数投票充当了所谓的“真实标签”。加权多数意见在第 15 行使用以下公式计算：
+算法 9.1 总结了无监督分类和基于集成的更新算法。第 3-4 行从最近的数据块构建一个新模型并暂时将其添加到集成中。接下来，第 5-13 行将集成中的每个模型应用于测试图 *t*，以检测可能的异常。我们对每个模型使用三种 `GBAD` 变体（P、MDL 和 MPS），本节将讨论每一种。最后，第 14-30 行通过丢弃与加权多数意见分歧最大的模型来更新集成。如果多个模型具有最多的分歧，则任意丢弃一个表现最差的模型。请注意，未使用真实标签。然而，模型的多数投票充当了所谓的“真实标签”。加权多数意见在第 15 行使用以下公式计算：
 
 ```
 WA(E,a) = \frac{\sum_{\{ i|M_{i} \in E,a \in A_{M_{i}}\}}\lambda^{\ell - i}}{\sum_{\{ i|M_{i} \in E\}}\lambda^{\ell - i}}
 ```
+
 (9.1)
 
-其中 *M[i]* ∈ *E* 是集成 *E* 中从数据块 *i* 训练得到的模型，*AM[i]* 是模型 *M[i]* 报告的异常集合，*λ* ∈ \[0, 1\] 是一个常数*衰减因子* \[CHEN2009\]，而 *ℓ* 是最近数据块的索引。因此，模型 *M[i]* 的投票获得权重 *λ*[−*i*]，最近构建的模型获得权重 *λ*[0] = 1，从前一个数据块训练的模型获得权重 *λ*[1]（如果它仍存在于集成中），以此类推。当 *λ* < 1 时，这会使最近模型的投票权重高于潜在过时模型的投票权重。然后在第 15 行将加权平均值 *WA*(*E, a*) 四舍五入到最接近的整数（0 或 1），以获得加权多数投票。例如，在图 9.2 中，模型 *M*[1]、 *M*[3] 和 *M*[7] 对输入样本 *x* 分别投出正票、正票和负票。如果 *ℓ* = 7 是最近的数据块，则这些投票的权重分别为 *λ*[6]、 *λ*[4] 和 1。因此加权平均值为 *WA*(*E, x*) = (*λ*[6] + *λ*[4])*/*(*λ*[6] + *λ*[4] + 1)。如果 *λ* ≤ 0.86，在这种情况下负面多数意见获胜；然而，如果 *λ* ≥ 0.87，较新模型的投票将超过两个较旧的异议意见，结果为正分类。因此，参数 *λ* 可被调整以平衡大量旧信息与少量新信息的重要性。我们的方法利用 GBAD 先前迭代的结果来识别后续数据块中的异常。也就是说，在之前的 GBAD 迭代中发现的规范子结构可能会在每个模型中持续存在。这使得每个模型能够考虑自模型引入集成以来的所有数据，而不仅仅是当前数据块的数据。当数据流发生概念漂移时，这可能是一个显著优势，因为集成可以识别在整个数据流或大量数据块中具有规范性的模式，但这些模式在当前数据块中可能不存在。因此，即使恶意行为不频繁，内部人员仍可被检测到。
+其中 *M[i]* ∈ *E* 是集成 *E* 中从数据块 *i* 训练得到的模型，*AM[i]* 是模型 *M[i]* 报告的异常集合，*λ* ∈ \[0, 1\] 是一个常数`衰减因子` [CHEN2009]，而 *ℓ* 是最近数据块的索引。因此，模型 *M[i]* 的投票获得权重 *λ*[−*i*]，最近构建的模型获得权重 *λ*[0] = 1，从前一个数据块训练的模型获得权重 *λ*[1]（如果它仍存在于集成中），以此类推。当 *λ* < 1 时，这会使最近模型的投票权重高于潜在过时模型的投票权重。然后在第 15 行将加权平均值 *WA*(*E, a*) 四舍五入到最接近的整数（0 或 1），以获得加权多数投票。例如，在图 9.2 中，模型 *M*[1]、 *M*[3] 和 *M*[7] 对输入样本 *x* 分别投出正票、正票和负票。如果 *ℓ* = 7 是最近的数据块，则这些投票的权重分别为 *λ*[6]、 *λ*[4] 和 1。因此加权平均值为 *WA*(*E, x*) = (*λ*[6] + *λ*[4])*/*(*λ*[6] + *λ*[4] + 1)。如果 *λ* ≤ 0.86，在这种情况下负面多数意见获胜；然而，如果 *λ* ≥ 0.87，较新模型的投票将超过两个较旧的异议意见，结果为正分类。因此，参数 *λ* 可被调整以平衡大量旧信息与少量新信息的重要性。我们的方法利用 `GBAD` 先前迭代的结果来识别后续数据块中的异常。也就是说，在之前的 `GBAD` 迭代中发现的规范子结构可能会在每个模型中持续存在。这使得每个模型能够考虑自模型引入集成以来的所有数据，而不仅仅是当前数据块的数据。当数据流发生概念漂移时，这可能是一个显著优势，因为集成可以识别在整个数据流或大量数据块中具有规范性的模式，但这些模式在当前数据块中可能不存在。因此，即使恶意行为不频繁，内部人员仍可被检测到。
 
 ### 9.3.3 用于监督学习的集成
 
-算法 9.2 展示了我们监督算法的基本构建模块。在这里，我们首先介绍如何更新模型。算法 9.2 的输入如下：*D*[*u*] 是最近标记的数据块（最近的训练数据块），*A* 是集成。第 3-4 行计算每个模型在 *D*[*u*] 上的预测误差。第 6 行使用 OCSVM 在 *D*[*u*] 上构建一个新模型。第 7 行产生 *K* + 1 个模型。第 8 行丢弃预测误差最大的模型，保留 *K* 个最佳模型。算法 9.3 侧重于集成测试。集成 *A* 和最新的未标记实例数据块 *D*[*u*] 将作为输入。第 3 行使用最新的未标记数据块执行特征提取和选择。第 4-9 行将获取从 *D*[*u*] 提取的每个特征并进行异常预测。第 6-7 行使用每个模型预测特定特征的异常状态。最后，第 9 行基于结果的多数投票预测异常。
+算法 9.2 展示了我们监督算法的基本构建模块。在这里，我们首先介绍如何更新模型。算法 9.2 的输入如下：*D*[*u*] 是最近标记的数据块（最近的训练数据块），*A* 是集成。第 3-4 行计算每个模型在 *D*[*u*] 上的预测误差。第 6 行使用 `OCSVM` 在 *D*[*u*] 上构建一个新模型。第 7 行产生 *K* + 1 个模型。第 8 行丢弃预测误差最大的模型，保留 *K* 个最佳模型。算法 9.3 侧重于集成测试。集成 *A* 和最新的未标记实例数据块 *D*[*u*] 将作为输入。第 3 行使用最新的未标记数据块执行特征提取和选择。第 4-9 行将获取从 *D*[*u*] 提取的每个特征并进行异常预测。第 6-7 行使用每个模型预测特定特征的异常状态。最后，第 9 行基于结果的多数投票预测异常。
 
-我们的集成方法利用 OCSVM 先前迭代的结果来识别后续数据块中的异常。这允许考虑的不仅仅是当前正在分析的数据。之前 OCSVM 迭代中发现的模型也会被分析，而不仅仅是当前数据集块的模型。集成以这种方式处理执行，因为在之前数据块中识别出的模式可能在整个数据流或大量数据块中具有规范性，但在当前执行数据块中不具有规范性。因此，即使恶意行为不频繁，内部人员也将被检测到。重要的是要注意，我们始终保持集成大小固定。因此，在最近数据块上表现最差的过时模型将被新模型取代。
+我们的集成方法利用 `OCSVM` 先前迭代的结果来识别后续数据块中的异常。这允许考虑的不仅仅是当前正在分析的数据。之前 `OCSVM` 迭代中发现的模型也会被分析，而不仅仅是当前数据集块的模型。集成以这种方式处理执行，因为在之前数据块中识别出的模式可能在整个数据流或大量数据块中具有规范性，但在当前执行数据块中不具有规范性。因此，即使恶意行为不频繁，内部人员也将被检测到。重要的是要注意，我们始终保持集成大小固定。因此，在最近数据块上表现最差的过时模型将被新模型取代。
 
 重要的是要注意，集成的大小随时间保持固定。表现不佳的过时模型将被更适合当前概念的、表现更好的新模型所取代。即使数据流中的总数据量可能是无界的，这也能使每一轮分类保持可处理。
 
-在一个数据块中，使用单类支持向量机 (OCSVM) \[MANE2002\] 构建模型。OCSVM 方法首先将训练数据映射到高维特征空间（通过核函数）。接下来，算法迭代地寻找能最好地将训练数据与原点分开的最大间隔超平面。OCSVM 可被视为常规的二类 SVM。这里第一类包含所有训练数据，第二类是原点。因此，超平面（或线性决策边界）对应于分类规则：
+在一个数据块中，使用单类支持向量机 (`OCSVM`) [MANE2002] 构建模型。`OCSVM` 方法首先将训练数据映射到高维特征空间（通过核函数）。接下来，算法迭代地寻找能最好地将训练数据与原点分开的最大间隔超平面。`OCSVM` 可被视为常规的二类 SVM。这里第一类包含所有训练数据，第二类是原点。因此，超平面（或线性决策边界）对应于分类规则：
 
 ```
 f(x) = w · x + b
 ```
+
 (9.2)
 
-其中 *w* 是法向量，*b* 是偏置项。OCSVM 求解一个优化问题以找到具有最大几何间隔的规则。该分类规则将用于为测试样本 *x* 分配标签。如果 *f* (*x*) *<* 0，我们将 *x* 标记为异常，否则标记为正常。实际上，超平面到原点的距离最大化与被超平面与原点分隔的区域所包含的训练数据点数量之间存在权衡。
+其中 *w* 是法向量，*b* 是偏置项。`OCSVM` 求解一个优化问题以找到具有最大几何间隔的规则。该分类规则将用于为测试样本 *x* 分配标签。如果 *f* (*x*) *<* 0，我们将 *x* 标记为异常，否则标记为正常。实际上，超平面到原点的距离最大化与被超平面与原点分隔的区域所包含的训练数据点数量之间存在权衡。
 
 ### 9.3.4 无监督学习
 
-算法 9.3 使用三种基于图的异常检测 (GBAD) \[COOK2000, COOK2007, EBER2007, YAN2002\] 变体，利用每个模型推断潜在异常。GBAD 是一种基于图的方法，通过搜索三个因素来发现数据中的异常：顶点和边的修改、插入和删除。每个唯一因素运行自己的算法，该算法寻找一个规范子结构，并尝试找到与发现的规范子结构相似但不完全相同的子结构。规范子结构是指顶点和边的重复子图，当其合并为单个顶点时，能最大程度地压缩整个图。图 9.3 中的矩形标识了所描绘图的一个规范子结构示例。
+算法 9.3 使用三种基于图的异常检测 (`GBAD`) [COOK2000, COOK2007, EBER2007, YAN2002] 变体，利用每个模型推断潜在异常。`GBAD` 是一种基于图的方法，通过搜索三个因素来发现数据中的异常：顶点和边的修改、插入和删除。每个唯一因素运行自己的算法，该算法寻找一个规范子结构，并尝试找到与发现的规范子结构相似但不完全相同的子结构。规范子结构是指顶点和边的重复子图，当其合并为单个顶点时，能最大程度地压缩整个图。图 9.3 中的矩形标识了所描绘图的一个规范子结构示例。
 
 ![图 9.3 具有规范子结构（框出）和异常（阴影）的图。](img/fig9_3.jpg)
 
 图 9.3 具有规范子结构（框出）和异常（阴影）的图。
 
-我们的实现使用 SUBDUE \[KETK2005\] 来寻找规范子结构。最佳规范子结构可以被描述为具有最小描述长度 (MDL) 的子结构：
+我们的实现使用 `SUBDUE` [KETK2005] 来寻找规范子结构。最佳规范子结构可以被描述为具有最小描述长度 (`MDL`) 的子结构：
 
 ```
 L(S,G) = DL(G|S) + DL(S)
 ```
+
 (9.3)
 
-其中 *G* 是整个图，*S* 是被分析的子结构，*DL*(*G* □ *S*) 是 *G* 被 *S* 压缩后的描述长度，而 *DL*(*S*) 是被分析的子结构的描述长度。描述长度 *DL*(*G*) 是描述图 *G* 所需的最小比特数 \[EBER2011\]。
-
-
-
+其中 *G* 是整个图，*S* 是被分析的子结构，*DL*(*G* □ *S*) 是 *G* 被 *S* 压缩后的描述长度，而 *DL*(*S*) 是被分析的子结构的描述长度。描述长度 *DL*(*G*) 是描述图 *G* 所需的最小比特数 [EBER2011]。
 
 #### 内部威胁检测
 
@@ -3055,7 +2935,7 @@ $$\rho(x) = \frac{1}{\sigma\sqrt{2\pi}}\exp\left( {- \frac{(x - \mu)^{2}}{2\sigm
 
 #### 9.4.1.1 增量学习
 
-维护单个字典 [PARV2012a]。当从一个块中学习到规范序列模式时，它将被简单地添加到字典中。为寻找规范模式，我们将利用无监督基于流的序列学习（`USSL`）。增量学习分类过程如 图 9.5 所示。首先，从新块中提取模式，随后将这些模式与来自前几个块的旧量化字典合并。最后，对新的合并字典进行量化（图 9.6）。
+维护单个字典 [PARV2012a]。当从一个块中学习到规范序列模式时，它将被简单地添加到字典中。为寻找规范模式，我们将利用无监督基于流的序列学习（`USSL`）。增量学习分类过程如图 9.5 所示。首先，从新块中提取模式，随后将这些模式与来自前几个块的旧量化字典合并。最后，对新的合并字典进行量化（图 9.6）。
 
 ![图 9.5 使用增量学习的无监督流序列学习。](img/fig9_5.jpg)
 
@@ -3063,11 +2943,11 @@ $$\rho(x) = \frac{1}{\sigma\sqrt{2\pi}}\exp\left( {- \frac{(x - \mu)^{2}}{2\sigm
 
 ![图 9.6 增量学习框图。](img/fig9_6.jpg)
 
-图 9.6 增量学习框图。
 
-#### 9.4.1.2 集成学习
 
-维护多个字典 [PARV2012b]。在集成中，我们维护 `K` 个模型。对于每个模型，我们维护单个字典。我们的集成方法使用一组不断演进的 `K` 个模型对数据进行分类。集成分类过程如 图 9.7 所示。回顾一下，我们使用无监督基于流的序列学习（`USSL`）从单个块训练模型。`USSL` 识别块中的规范模式并将其存储在量化字典中。文献 [MASU2008, MASU2010a, MASU2011a] 表明，基于集成的学习比增量学习更有效。在此，我们将重点关注基于集成的学习。为识别异常，测试点将与集成中的每个模型进行比较。
+## 9.4.1.2 集成学习
+
+维护多个字典 [PARV2012b]。在集成中，我们维护 `K` 个模型。对于每个模型，我们维护单个字典。我们的集成方法使用一组不断演进的 `K` 个模型对数据进行分类。集成分类过程如图 9.7 所示。回顾一下，我们使用无监督基于流的序列学习（`USSL`）从单个块训练模型。`USSL` 识别块中的规范模式并将其存储在量化字典中。文献 [MASU2008, MASU2010a, MASU2011a] 表明，基于集成的学习比增量学习更有效。在此，我们将重点关注基于集成的学习。为识别异常，测试点将与集成中的每个模型进行比较。
 
 ![图 9.7 基于集成的无监督流序列学习。](img/fig9_7.jpg)
 
@@ -3077,9 +2957,7 @@ $$\rho(x) = \frac{1}{\sigma\sqrt{2\pi}}\exp\left( {- \frac{(x - \mu)^{2}}{2\sigm
 
 #### 9.4.1.3 模型更新
 
-
-
-我们始终维护一个固定大小的模型集合（此处为 *K* 个）。因此，当处理新数据块时，集合中已有 *K* 个模型，而第 *K* + 1 个模型将由当前数据块创建。我们需要通过用这个新模型替换一个受害模型来更新集合。受害模型的选择可以通过多种方式进行。一种方法是计算每个模型在最近数据块上相对于多数投票的预测误差。此处，我们假设最近数据块上的 `ground truth`（真实标签）不可用。如果真实标签可用，我们可以利用该知识进行训练。新模型将替换集合中产生最大预测误差的现有模型。
+我们始终维护一个固定大小的模型集合（此处为 `K` 个）。因此，当处理新数据块时，集合中已有 `K` 个模型，而第 `K + 1` 个模型将由当前数据块创建。我们需要通过用这个新模型替换一个受害模型来更新集合。受害模型的选择可以通过多种方式进行。一种方法是计算每个模型在最近数据块上相对于多数投票的预测误差。此处，我们假设最近数据块上的 `ground truth`（真实标签）不可用。如果真实标签可用，我们可以利用该知识进行训练。新模型将替换集合中产生最大预测误差的现有模型。
 
 ### 9.4.2 无监督基于流的序列学习 (USSL)
 
@@ -3115,9 +2993,6 @@ $$w_i = \frac{f_i}{\sum_{i = 1}^{n}f_i} \tag{9.6}$$
 
 #### 9.4.2.2 构建量化字典
 
-
-
-
 一旦我们有了 LZW 字典，就会保留最长且最频繁的模式，并丢弃所有被其包含的子模式。算法 9.5 逐步展示了如何从 LZW 字典生成量化字典。该算法的输入如下：包含一组模式 `P` 及其关联权重 `W` 的 LZW 字典 `D`。第 5 行选取一个模式（例如 `li`）。第 7-9 行查找所有编辑距离为 1 的最近模式。第 13-16 行保留权重乘以长度乘积最高的模式，并丢弃其他模式。我们重复这些步骤（第 5-16 行），直到找到最长、最频繁的模式（`lift`）。之后，我们从一个完全不同的模式（`co`）开始，重复这些步骤，直到探索完字典中的所有模式。最终，我们得到一个更紧凑的字典，其中将包含许多有意义且有用的序列。我们称该字典为量化字典。图 9.9 演示了如何从 LZW 字典生成量化字典。一旦我们识别出不同的模式 `lift`、`come` 等，任何与所有这些模式偏离 `X`% （在我们的实现中 ≥ 30%）的模式都将被视为异常。这里，我们将使用编辑距离来识别偏差。
 
 ### 9.4.3 异常检测
@@ -3134,47 +3009,31 @@ $$w_i = \frac{f_i}{\sum_{i = 1}^{n}f_i} \tag{9.6}$$
 
 接下来我们讨论序列数据的内部威胁。与内部威胁检测相关的序列数据本质上是基于流的。序列数据可能随时间收集，甚至长达数年。在这种情况下，我们假设连续数据流将被转换为若干数据块。例如，每个数据块可能代表一周，并包含该时间段内到达的序列数据。关于序列数据，我们提出了一个框架，利用无监督学习（USSL）通过基于流的序列学习，从连续的用户动作或命令中发现模式序列。我们有效地将多个 USSL 模型集成在一个分类器集成中，以利用基于集成的流挖掘和序列挖掘的力量。关于可扩展性问题，我们利用大数据技术。具体而言，可扩展性是构建用于量化字典的良性模式序列时的一个问题。为此，我们利用基于 MapReduce 的框架，并展示了我们工作的有效性。
 
-我们计划在以下方向扩展这项工作。对于无监督学习，我们假设没有可用的真实标签。事实上，随着时间的推移，可能会以反馈的形式获得一些真实标签。一旦以无监督方式创建了模型，我们希望根据用户反馈更新模型。目前，一旦模型创建完成，它就保持不变。当真实标签随时间变得可用时，我们将立即基于此反馈完善所有模型（另见 \[MASU2010a\]、\[MASU2010b\] 和 \[MASU2010c\]）。此外，当我们更新模型时，可能会发生串通攻击 \[WANG2009, ZHAO2005\]。在这种情况下，`K` 个模型中的一组模型将在一段时间内不被替换。每次选择受害者时，这些串通模型都将存活下来。回顾一下，“串通”是指两个或多个模型之间达成的协议，即它们将始终在预测上达成一致。具体而言，如果我们有 `K` = 3 个模型，两个模型可能保持秘密协议，它们的预测将相同并被用作真实标签。因此，两个串通/隐秘的模型将始终存活，永远不会在模型更新中成为受害者。回顾一下，学习是无监督的，少数服从多数的投票将被视为真实标签。因此，我们将无法捕捉到内部攻击。我们的目标是识别串通攻击。为此，在模型的受害者选择过程中，我们将考虑模型随时间推移的一致性。如果模型的一致性持续很长时间并存活下来，我们将从中选择受害者。
+我们计划在以下方向扩展这项工作。对于无监督学习，我们假设没有可用的真实标签。事实上，随着时间的推移，可能会以反馈的形式获得一些真实标签。一旦以无监督方式创建了模型，我们希望根据用户反馈更新模型。目前，一旦模型创建完成，它就保持不变。当真实标签随时间变得可用时，我们将立即基于此反馈完善所有模型（另见 [MASU2010a]、[MASU2010b] 和 [MASU2010c]）。此外，当我们更新模型时，可能会发生串通攻击 [WANG2009, ZHAO2005]。在这种情况下，`K` 个模型中的一组模型将在一段时间内不被替换。每次选择受害者时，这些串通模型都将存活下来。回顾一下，“串通”是指两个或多个模型之间达成的协议，即它们将始终在预测上达成一致。具体而言，如果我们有 `K` = 3 个模型，两个模型可能保持秘密协议，它们的预测将相同并被用作真实标签。因此，两个串通/隐秘的模型将始终存活，永远不会在模型更新中成为受害者。回顾一下，学习是无监督的，少数服从多数的投票将被视为真实标签。因此，我们将无法捕捉到内部攻击。我们的目标是识别串通攻击。为此，在模型的受害者选择过程中，我们将考虑模型随时间推移的一致性。如果模型的一致性持续很长时间并存活下来，我们将从中选择受害者。
 
 ## 参考文献
 
-*   \[ABOU2009\] A. Abouzeid, K. Bajda-Pawlikowski, D.J. Abadi, A. Rasin, A. Silberschatz, HadoopDB: An Architectural Hybrid of Mapreduce and DBMS Technologies for Analytical Workloads, PVLDB, Volume 2, # 1, 2009, 922–933.
+*   [ABOU2009] A. Abouzeid, K. Bajda-Pawlikowski, D.J. Abadi, A. Rasin, A. Silberschatz, HadoopDB: An Architectural Hybrid of Mapreduce and DBMS Technologies for Analytical Workloads, PVLDB, Volume 2, # 1, 2009, 922–933.
+*   [ALKH2012a] T. Al-Khateeb, M.M. Masud, L. Khan, C.C. Aggarwal, J. Han, B.M. Thuraisingham, Stream Classification with Recurring and Novel Class Detection Using Class-Based Ensemble, IEEE International Conference on Data Mining (ICDM), 2012, pp. 31–40.
+*   [ALKH2012b] T. Al-Khateeb, M.M. Masud, L. Khan, B.M. Thuraisingham, Cloud Guided-Stream Classification Using Class-Based Ensemble, IEEE CLOUD, 2012, pp. 694–701.
+*   [BARO2006] M. Baron, A. Tartakovsky, 一般连续时间模型中变点检测方案的渐近最优性，*序贯分析*，第 25 卷，第 3 期，2006 年，257–296 页。
+*   [BIOM] <http://www.itee.uq.edu.au/eresearch/projects/biomanta>
+*   [BORG2011] E.N. Borges, M.G. de Carvalho, R. Galante, M.A. Gon¸es, A.H.F. Laender, 一种基于无监督启发式的文献元数据去重方法，*信息处理与管理*，第 47 卷，第 5 期，2011 年，706–718 页。
+*   [BRAC2004] R.C. Brackney, R.H. Anderson, 编，*理解内部威胁*。兰德公司，2004 年 3 月。
+*   [BU2010] Y. Bu, B. Howe, M. Balazinska, M. Ernst, Haloop：大规模集群上的高效迭代数据处理。*PVLDB*，第 3 卷，第 1 期，2010 年，285–296 页。
+*   [BURR2006] M. Burrows, 面向松耦合分布式系统的 Chubby 锁服务，*OSDI'06：第 7 届操作系统设计与实现研讨会论文集*，2006 年，335–350 页。
+*   [CANG2006] J.W. Cangussu, M. Baron, 系统测试过程中变点的自动识别，*COMPSAC (1)*，2006 年，377–384 页。
+*   [CHAN2006] F. Chang, J. Dean, S. Ghemawat, W.C. Hsieh, D.A. Wallach, M. Burrows, T. Chandra, R. Fikes Gruber. Bigtable：面向结构化数据的分布式存储系统（获最佳论文奖），*OSDI*，2006 年，205–218 页。
+*   [CHAN2008] F. Chang, J. Dean, S. Ghemawat, W.C. Hsieh, D.A. Wallach, M. Burrows, T. Chandra, A. Fikes, R.E. Gruber, Bigtable：面向结构化数据的分布式存储系统，*ACM 计算机系统汇刊*，第 26 卷，第 2 期，2008 年。
+*   [CHAN2011] C.-C. Chang, C.-J. Lin, LIBSVM：支持向量机库，*ACM 智能系统与技术汇刊*，2011 年，2: 27: 1–27:27 页。软件可在 <http://www.csie.ntu.edu.tw/cjlin/libsvm> 获取
+*   [CHEN2009] L. Chen, S. Zhang, L. Tu, 一种基于衰减因子的数据流频繁项挖掘算法，*IEEE 国际计算机软件与应用会议论文集 (COMPSAC)*，2009 年，172–177 页。
+*   [CHU2006] C.T. Chu, S.K. Kim, Y.A. Lin, Y. Yu, G.R. Bradski, A.Y. Ng, K. Olukotun, 多核机器学习的 Map-Reduce，*NIPS*，MIT Press（编辑：B. Schöpf, J.C. Platt, T. Hoffman），2006 年，281–288 页。
+*   [CHUA2011] S.-L. Chua, S. Marsland, H.W. Guesgen, 利用压缩和编辑距离进行数据流模式的无监督学习。*IJCAI*，2011 年，1231–1236 页。
+*   [COOK2000] D.J. Cook, L.B. Holder, 基于图的数据挖掘。*IEEE 智能系统*，第 15 卷，第 2 期，2000 年，32–41 页。
 
-*   \[ALKH2012a\] T. Al-Khateeb, M.M. Masud, L. Khan, C.C. Aggarwal, J. Han, B.M. Thuraisingham, Stream Classification with Recurring and Novel Class Detection Using Class-Based Ensemble, IEEE International Conference on Data Mining (ICDM), 2012, pp. 31–40.
-
-*   \[ALKH2012b\] T. Al-Khateeb, M.M. Masud, L. Khan, B.M. Thuraisingham, Cloud Guided-Stream Classification Using Class-Based Ensemble, IEEE CLOUD, 2012, pp. 694–701.
 
 
-
-
-
-*   **[BARO2006]** M. Baron, A. Tartakovsky, 一般连续时间模型中变点检测方案的渐近最优性，*序贯分析*，第 25 卷，第 3 期，2006 年，257–296 页。
-
-*   **BIOM** <http://www.itee.uq.edu.au/eresearch/projects/biomanta>
-
-*   **[BORG2011]** E.N. Borges, M.G. de Carvalho, R. Galante, M.A. Gon¸es, A.H.F. Laender, 一种基于无监督启发式的文献元数据去重方法，*信息处理与管理*，第 47 卷，第 5 期，2011 年，706–718 页。
-
-*   **[BRAC2004]** R.C. Brackney, R.H. Anderson, 编，*理解内部威胁*。兰德公司，2004 年 3 月。
-
-*   **[BU2010]** Y. Bu, B. Howe, M. Balazinska, M. Ernst, Haloop：大规模集群上的高效迭代数据处理。*PVLDB*，第 3 卷，第 1 期，2010 年，285–296 页。
-
-*   **[BURR2006]** M. Burrows, 面向松耦合分布式系统的 Chubby 锁服务，*OSDI'06：第 7 届操作系统设计与实现研讨会论文集*，2006 年，335–350 页。
-
-*   **[CANG2006]** J.W. Cangussu, M. Baron, 系统测试过程中变点的自动识别，*COMPSAC (1)*，2006 年，377–384 页。
-
-*   **[CHAN2006]** F. Chang, J. Dean, S. Ghemawat, W.C. Hsieh, D.A. Wallach, M. Burrows, T. Chandra, R. Fikes Gruber. Bigtable：面向结构化数据的分布式存储系统（获最佳论文奖），*OSDI*，2006 年，205–218 页。
-
-*   **[CHAN2008]** F. Chang, J. Dean, S. Ghemawat, W.C. Hsieh, D.A. Wallach, M. Burrows, T. Chandra, A. Fikes, R.E. Gruber, Bigtable：面向结构化数据的分布式存储系统，*ACM 计算机系统汇刊*，第 26 卷，第 2 期，2008 年。
-
-*   **[CHAN2011]** C.-C. Chang, C.-J. Lin, LIBSVM：支持向量机库，*ACM 智能系统与技术汇刊*，2011 年，2: 27: 1–27:27 页。软件可在 <http://www.csie.ntu.edu.tw/cjlin/libsvm> 获取
-
-*   **[CHEN2009]** L. Chen, S. Zhang, L. Tu, 一种基于衰减因子的数据流频繁项挖掘算法，*IEEE 国际计算机软件与应用会议论文集 (COMPSAC)*，2009 年，172–177 页。
-
-*   **[CHU2006]** C.T. Chu, S.K. Kim, Y.A. Lin, Y. Yu, G.R. Bradski, A.Y. Ng, K. Olukotun, 多核机器学习的 Map-Reduce，*NIPS*，MIT Press（编辑：B. Schöpf, J.C. Platt, T. Hoffman），2006 年，281–288 页。
-
-*   **[CHUA2011]** S.-L. Chua, S. Marsland, H.W. Guesgen, 利用压缩和编辑距离进行数据流模式的无监督学习。*IJCAI*，2011 年，1231–1236 页。
-
-*   **[COOK2000]** D.J. Cook, L.B. Holder, 基于图的数据挖掘。*IEEE 智能系统*，第 15 卷，第 2 期，2000 年，32–41 页。
+## 参考文献
 
 *   **[COOK2007]** D.J. Cook, L.B. Holder, 编，*图数据挖掘*，John Wiley & Sons, Inc, 2007 年。
 
@@ -3221,12 +3080,6 @@ $$w_i = \frac{f_i}{\sum_{i = 1}^{n}f_i} \tag{9.6}$$
 *   **[JU2001]** W.-H. Ju, Y. Vardi, 用于计算机入侵检测的混合高阶马尔可夫链模型，*计算与图形统计杂志*，2001 年 6 月。
 
 *   **[KANG2011]** U. Kang, C.E. Tsourakakis, C. Faloutsos, Pegasus：Peta 级图挖掘，*知识与信息系统*，第 27 卷，第 2 期，2011 年，303–325 页。
-
-
-
-
-
-## 参考文献
 
 *   **[KETK2005]** N.S. Ketkar, L.B. Holder, D.J. Cook, *Subdue: 基于压缩的图数据频繁模式发现*, *ACM KDD 开源数据挖掘研讨会论文集*, 2005.
 
@@ -3294,43 +3147,30 @@ $$w_i = \frac{f_i}{\sum_{i = 1}^{n}f_i} \tag{9.6}$$
 
 *   **[SALE2008]** M.B. Salem, S. Herkshkop, S.J. Stolfo, *内部攻击检测研究综述*, *内部攻击与网络安全*, Volume 39, 2008, 69–90.
 
-
-
-
 *   **[SALE2011]** M.B. Salem, S.J. Stolfo, Modeling User Search Behavior for Masquerade Detection, *Proceedings of Recent Advances in Intrusion Detection (RAID)*, 2011.
 
 *   **[SCHO2001]** M. Schonlau, W. DuMouchel, W.-H. Ju, A. F. Karr, M. Theus, Y. Vardi, Computer Intrusion: Detecting Masquerades, Statistical Science, Volume 16, # 1, 2001, 1–17.
 
 *   **[SCHU2002]** E.E. Schultz, A Framework for Understanding and Predicting Insider Attacks, Computers and Security, Volume 21, # 6, 2002, 526–531.
 
+
+
+## 参考文献
+
 *   **[SEKE2013]** S.E. Seker, K. Al-Naami, L. Khan, Author Attribution on Streaming Data, *2013 IEEE 14th International Conference on Information Reuse and Integration (IRI)*, 2013, pp. 497–503.
-
 *   **[SHAR]** [`www.cloudera.com/blog/2010/03/how-raytheon-esearchers-are-using-hadoop-to-build-a-scalable-distributed-triple-store`](http://www.cloudera.com)
-
 *   **[STAN1996]** S. Staniford-Chen, S. Cheung, R. Crawford, M. Dilger, J. Frank, J. Hoagland, K. Levitt, C. Wee, R. Yip, D. Zerkle, GrIDS – A Graph Based Intrusion Detection System for Large Networks, *Proceedings of 19th National Information Systems Security Conference*, 1996, pp. 361–370.
-
 *   **[STOL2005]** S.J. Stolfo, F. Apap, E. Eskin, K. Heller, S. Hershkop, A. Honig, K. Svore, A Comparative Evaluation of Two Algorithms for Windows Registry Anomaly Detection, Journal of Computer Security, Volume 13, # 4 (issn 0926-227), July 2005, 659–693.
-
 *   **[SZYM2004]** B.K. Szymanski, Y. Zhang, Recursive Data Mining for Masquerade Detection and Author Identification, 13th Annual IEEE Information Assurance Workshop. IEEE Computer Society Press, 2004.
-
 *   **[TAND2003]** G. Tandon, P. Chan, Learning Rules from System Call Arguments and Sequences for Anomaly Detection, *Proceedings of ICDM Workshop on Data Mining for Computer Security (DMSEC)*, 2003, pp. 20–29.
-
 *   **[THUR2017]** B. Thuraisingham, et al., Big Data Analytics with Applications in Insider Threat Detection, CRC Press, 2017.
-
 *   **[VLAD1966]** L. Vladimir, Binary Codes Capable of Correcting Deletions, Insertions and Reversals. Soviet Physics Doklady, Volume 10, # 8, 1966, 707–710.
-
 *   **[WANG2003]** H. Wang, W. Fan, P.S. Yu, J. Han, Mining Concept-Drifting Data Streams Using Ensemble Classifiers, *Proceedings of SIGKDD*, Washington, DC, USA, 2003, pp. 226–235.
-
 *   **[WANG2009]** X. Wang, L. Qian, H. Jiang, Tolerant Majority-Colluding Attacks for Secure Localization in Wireless Sensor Networks, *5th International Conference on Wireless Communications, Networking and Mobile Computing, 2009. WiCom '09*, 2009, pp. 1–5.
-
 *   **[XU2010]** Y. Xu, P. Kostamaa, L. Gao, Integrating Hadoop and Parallel DBMs, *Proceedings of the 2010 International Conference on Management of Data*, SIGMOD '10, ACM, New York, NY, USA, 2010, pp. 969–974.
-
 *   **[YAN2002]** X. Yan, J. Han, gSpan: Graph-based Substructure Pattern Mining, *Proceedings of International Conference on Data Mining (ICDM)*, 2002, pp. 721–724.
-
 *   **[ZHAO2005]** H. Zhao, M. Wu, J. Wang, K. Liu, Forensic Analysis of Nonlinear Collusion Attacks for Multimedia Fingerprinting, IEEE Transactions on Image Processing, Volume 14, # 5, 2005, 646–661.
-
 *   **[ZIV1977]** J. Ziv, A. Lempel, A Universal Algorithm for Sequential Data Compression, IEEE Transactions on Information Theory, Volume 23, # 3, 1977, 337–343.
-
 *   **[ZLIO2011]** I. Zliobaite, A. Bifet, G. Holmes, B. Pfahringer, Moa Concept Drift Active Learning Strategies for Streaming Data, Journal of Machine Learning Research - Proceedings Track, Volume 17, 2011, 48–55.
 
 ## 第二部分 结语
@@ -3339,15 +3179,15 @@ DOI: [10.1201/9781003081845-15](https://doi.org/10.1201/9781003081845-15)
 
 第二部分 共包含四章，介绍了用于网络安全应用的数据科学技术。特别是，重点讨论了强调大数据在恶意软件分析和内部威胁检测中的应用的流数据分析技术。
 
-我们在 第 6 章 中讨论了用于恶意软件检测的数据挖掘。特别是，介绍了我们的架构、相关工作和我们的方法。我们还讨论了用于恶意软件检测的数据挖掘工具。特别是，讨论了使用 `n` 元分析进行特征提取和混合特征检索模型。我们还讨论了我们的实验和数据集。
+我们在 **第 6 章** 中讨论了用于恶意软件检测的数据挖掘。特别是，介绍了我们的架构、相关工作和我们的方法。我们还讨论了用于恶意软件检测的数据挖掘工具。特别是，讨论了使用 `n` 元分析进行特征提取和混合特征检索模型。我们还讨论了我们的实验和数据集。
 
-在 第 7 章 中，我们讨论了什么是流分析（我们也称之为流挖掘），并讨论了一种用于检测恶意软件的方法。我们描述了用于检测新类别（恶意软件）的算法和系统架构。我们讨论了新类别检测过程中的三个主要部分，分别是：(i) 在训练期间保存 `used` 空间的清单，(ii) 异常值检测和过滤，以及 (iii) 计算异常值之间的内聚性并将异常值与训练数据分离。我们还展示了如何通过使用聚类进行原始数据缩减使该技术变得高效。最后，我们在多个合成和真实数据集上评估了我们提出的方法，并报告了四个数据集上的结果。
+在 **第 7 章** 中，我们讨论了什么是流分析（我们也称之为流挖掘），并讨论了一种用于检测恶意软件的方法。我们描述了用于检测新类别（恶意软件）的算法和系统架构。我们讨论了新类别检测过程中的三个主要部分，分别是：(i) 在训练期间保存 `used` 空间的清单，(ii) 异常值检测和过滤，以及 (iii) 计算异常值之间的内聚性并将异常值与训练数据分离。我们还展示了如何通过使用聚类进行原始数据缩减使该技术变得高效。最后，我们在多个合成和真实数据集上评估了我们提出的方法，并报告了四个数据集上的结果。
 
-在 第 8 章 中，我们讨论了云计算如何用于为恶意软件检测提供可扩展性。特别是，我们描述了利用云计算进行恶意软件检测的特征提取和选择技术。我们还讨论了数据收集、实验设置、评估技术和获得的结果。
+在 **第 8 章** 中，我们讨论了云计算如何用于为恶意软件检测提供可扩展性。特别是，我们描述了利用云计算进行恶意软件检测的特征提取和选择技术。我们还讨论了数据收集、实验设置、评估技术和获得的结果。
 
-在 第 9 章 中，我们描述了我们利用流数据挖掘进行内部威胁检测的方法，适用于非序列和序列数据。我们提供了内部威胁和流挖掘的综述。我们还讨论了大数据/数据科学技术的可扩展性问题。
+在 **第 9 章** 中，我们描述了我们利用流数据挖掘进行内部威胁检测的方法，适用于非序列和序列数据。我们提供了内部威胁和流挖掘的综述。我们还讨论了大数据/数据科学技术的可扩展性问题。
 
-既然我们已经讨论了用于网络安全应用的数据科学技术的各个方面，在 第三部分 中，我们将介绍各种安全和隐私增强的数据科学技术。特别是，我们将讨论如何处理针对数据科学技术的恶意攻击。此外，我们还将讨论如何利用数据科学技术增强隐私。
+既然我们已经讨论了用于网络安全应用的数据科学技术的各个方面，在 **第三部分** 中，我们将介绍各种安全和隐私增强的数据科学技术。特别是，我们将讨论如何处理针对数据科学技术的恶意攻击。此外，我们还将讨论如何利用数据科学技术增强隐私。
 
 # 第三部分 安全和隐私增强的数据科学
 
@@ -3357,7 +3197,7 @@ DOI: [10.1201/9781003081845-17](https://doi.org/10.1201/9781003081845-17)
 
 第三部分 共包含五章，将讨论安全和隐私增强的数据科学。特别是，讨论了针对数据科学技术的攻击以及数据科学技术可能导致的隐私泄露。
 
-第 10 章 讨论了针对数据科学系统的攻击，并描述了我们针对对抗性机器学习（总体而言）和支持向量机学习（特别是）的方法。第 11 章 描述了对抗性相关向量机学习。第 12 章 讨论了以决策树为例的隐私增强数据科学。第 13 章 讨论了我们关于面向量化自我应用的隐私感知策略数据管理框架的工作。最后在 第 14 章 中，我们讨论了如何将我们的工作应用于特定应用，即 COVID-19 大流行。
+**第 10 章** 讨论了针对数据科学系统的攻击，并描述了我们针对对抗性机器学习（总体而言）和支持向量机学习（特别是）的方法。**第 11 章** 描述了对抗性相关向量机学习。**第 12 章** 讨论了以决策树为例的隐私增强数据科学。**第 13 章** 讨论了我们关于面向量化自我应用的隐私感知策略数据管理框架的工作。最后在 **第 14 章** 中，我们讨论了如何将我们的工作应用于特定应用，即 COVID-19 大流行。
 
 # 10 对抗性支持向量机学习
 
@@ -3365,14 +3205,11 @@ DOI: [10.1201/9781003081845-18](https://doi.org/10.1201/9781003081845-18)
 
 ## 10.1 导言
 
-
-
-
 ### 安全增强型数据科学：对抗性 SVM 学习
 
 在本章中，我们开始讨论安全增强型数据科学。特别是，我们将讨论数据科学技术如何适应以应对网络攻击。我们将重点关注的具体数据科学技术是 `SVM`（支持向量机）。
 
-正如 第 3 章 所述，入侵检测和垃圾邮件过滤等学习任务面临对抗性攻击。对抗性利用给现有的学习范式带来了额外的挑战。在当前数据和未来数据共享相同属性这一假设下（这对传统方法至关重要），无法实现学习模型对未来数据的泛化。在存在主动对抗者的情况下，用于学习系统训练的数据不太可能代表系统将来会观察到的未来数据。这种差异不仅仅是简单的随机噪声，大多数学习算法在设计时已经考虑到了这一点。通常导致这些学习算法失效的是有针对性的攻击，旨在通过伪装原本会被检测到的恶意数据，使学习系统失去作用。现有的学习算法无法轻易调整以应对这类攻击，因为在攻击会在多大程度上影响样本空间的结构方面存在极大的不确定性。尽管在训练时给定了恶意数据的样本量和分布，我们仍需要对恶意数据会发生多大变化做出合理的推测，因为复杂的攻击者会迅速适应以逃避检测。需要将能够预言对手为突破系统会走多远的攻击模型纳入学习算法，以构建鲁棒的决策面。在本章中，我们提出了两种攻击模型，它们涵盖了*广泛的攻击范围*，并根据对手的动机进行了定制。每种攻击模型都对对手已知的信息做出了简单且现实的假设。随后，推导出了针对这些攻击模型的最优 `SVM` 学习策略。更多细节请参阅 [ZHOU2012]。
+正如 **第 3 章** 所述，入侵检测和垃圾邮件过滤等学习任务面临对抗性攻击。对抗性利用给现有的学习范式带来了额外的挑战。在当前数据和未来数据共享相同属性这一假设下（这对传统方法至关重要），无法实现学习模型对未来数据的泛化。在存在主动对抗者的情况下，用于学习系统训练的数据不太可能代表系统将来会观察到的未来数据。这种差异不仅仅是简单的随机噪声，大多数学习算法在设计时已经考虑到了这一点。通常导致这些学习算法失效的是有针对性的攻击，旨在通过伪装原本会被检测到的恶意数据，使学习系统失去作用。现有的学习算法无法轻易调整以应对这类攻击，因为在攻击会在多大程度上影响样本空间的结构方面存在极大的不确定性。尽管在训练时给定了恶意数据的样本量和分布，我们仍需要对恶意数据会发生多大变化做出合理的推测，因为复杂的攻击者会迅速适应以逃避检测。需要将能够预言对手为突破系统会走多远的攻击模型纳入学习算法，以构建鲁棒的决策面。在本章中，我们提出了两种攻击模型，它们涵盖了*广泛的攻击范围*，并根据对手的动机进行了定制。每种攻击模型都对对手已知的信息做出了简单且现实的假设。随后，推导出了针对这些攻击模型的最优 `SVM` 学习策略。更多细节请参阅 [ZHOU2012]。
 
 一些早期工作为对抗性学习中的问题奠定了重要的理论基础 [DALVI2004, KEAR1993, LOWD2005b]。然而，早期工作通常做出强假设，例如拥有无限的计算资源，以及双方都完全了解对方。有些提出的攻击模型可能不允许对任意特征集进行更改 [LOWD2005b]。在安全应用中，一些现有研究主要探索在特定应用领域中击败学习算法的实用方法 [LOWD2005a, PERD2006, WITT2004]。同时，各种学习策略被提出以修复学习算法中特定于应用的弱点 [LI2006, NEWS2005, WANG2006]，但结果却为未来的攻击打开了新的大门 [FOGL2006, PERD2006]。关于恶意软件攻击的对抗性机器学习的最新综述见 [MAIO2019]。主要挑战依然在于攻击者不断利用学习系统未知的弱点。无论学习系统的设计看起来多么完善，总存在它无法检测到的“盲点”，随着双方技术实力的发展，威胁不断升级。威胁通常分为两类，一类旨在将恶意内容混过基于学习的检测机制，另一类试图通过提高假阳性和假阴性率来破坏学习系统的可信度 [BARR2006]。两者之间的灰色地带鲜有研究。在本工作中，我们不再局限于处理特定于应用的攻击和解决学习算法的特定弱点。
 
@@ -3382,7 +3219,7 @@ DOI: [10.1201/9781003081845-18](https://doi.org/10.1201/9781003081845-18)
 *   我们推导了针对对手的最优支持向量机学习模型，该对手的攻击策略是在通用且合理的假设下定义的。
 *   我们研究了在两种不同的攻击模型中，不同参数值下所得最优解的性能如何变化。实证结果表明，我们提出的对抗性 `SVM` 学习算法对各种程度的攻击都相当鲁棒。
 
-本章其余部分组织如下。第 10.2 节 介绍对抗性学习领域的相关工作。第 10.3 节 描述我们的方法。第 10.4 节 定义问题，第 10.5 节 描述对抗性 `SVM` 模型。第 10.6 节 展示人工数据集和真实数据集上的实验结果。第 10.7 节 总结我们的工作并展望未来方向。图 10.1 说明了本章的概念。
+本章其余部分组织如下。**第 10.2 节** 介绍对抗性学习领域的相关工作。**第 10.3 节** 描述我们的方法。**第 10.4 节** 定义问题，**第 10.5 节** 描述对抗性 `SVM` 模型。**第 10.6 节** 展示人工数据集和真实数据集上的实验结果。**第 10.7 节** 总结我们的工作并展望未来方向。图 10.1 说明了本章的概念。
 
 ![图 10.1 对抗性支持向量机学习。](img/fig10_1.jpg)
 
@@ -3396,26 +3233,23 @@ Dalvi 等人 [DALVI2004] 为存在最优对手的学习问题提出了一个博�
 
 Lowd 和 Meek [LOWD2005b] 指出假设对手完全了解分类器是不现实的。相反，他们建议对手可以通过向分类器发送查询来确认任意实例的成员资格。他们还假设对手拥有样本空间上的对抗性成本函数，该函数将样本映射为成本值。这一假设本质上意味着对手需要了解整个特征空间才能发起最优攻击。他们提出了一种对抗性分类器逆向工程（`ACRE`）算法，用于学习给定学习算法的漏洞。
 
-
-
-
 ### 对抗学习模型
 
 对抗学习问题通常被建模为两个对手之间博弈的游戏。Brückner 和 Scheffer 将对抗预测问题建模为 Stackelberg 博弈 [BRUC2011]。为保证最优性，该模型假设对手行为理性。然而，它并不要求存在唯一均衡。Kantarcioglu 等人 [KANT2011] 将该问题视为序贯 Stackelberg 博弈。他们假设双方玩家都知道彼此的收益函数。他们使用模拟退火算法和遗传算法来搜索纳什均衡。随后，该均衡被用于选择能带来良好均衡性能的最优属性集。提出了采用纳什策略的改进模型 [BRUC2009, LIU2010]。
 
 其他博弈论模型采用零和极大极小策略。Globerson 和 Roweis [GLOB2006] 考虑了测试时某些特征可能缺失的问题。这与对抗学习相关，因为对手可能会简单地删除恶意数据中权重较高的特征，以增加其逃避检测的机会。他们开发了一个博弈论框架，在该框架中构建的分类器在最坏情况下是最优的。他们的思路是防止对任何单一特征分配过大的权重。他们使用支持向量机模型，当最多可删除 *K* 个特征时，该模型能最优地最小化合页损失。El Ghaoui 等人 [GHAO2003] 将极大极小模型应用于由超矩形界定的训练数据。他们的模型最小化给定区间内数据的最坏情况损失。针对处理分类时噪声的其他鲁棒学习算法也被提出 [DEKE2008, DEKE2010, LANC2002, TEO2007]。
 
-我们的工作在几个方面与现有工作不同。首先，我们不对任一方玩家已知的信息做强假设。其次，我们将广域攻击和定向攻击均纳入 SVM 学习框架中进行考量。最后，我们研究了极大极小解在广泛参数范围内面对攻击时的鲁棒性。
+我们的工作在几个方面与现有工作不同。首先，我们不对任一方玩家已知的信息做强假设。其次，我们将广域攻击和定向攻击均纳入 `SVM` 学习框架中进行考量。最后，我们研究了极大极小解在广泛参数范围内面对攻击时的鲁棒性。
 
 ## 10.3 我们的方法
 
-虽然我们方法的细节将在本章后面讨论，但本节将提供我们方法的概述。我们方法背后的思想是：对手试图尽可能多地了解我们所使用的数据以及模型。基于对手所学到的知识，它将试图挫败我们的模型，使自己不被捕获。因此，采用 SVM 方法时，对手试图将尽可能多的实例推向“良性”类别。这样，我们的模型就会将一些恶意实例视为良性实例。为了对抗对手的这种行为，我们尝试移动 SVM 分界线。我们在考虑多种因素后这样做，详见 10.3 节 和 10.4 节。此外，移动分界线的方式取决于我们所考虑的攻击模型。当我们移动分界线时，一些伪装成良性实例的恶意实例将显露为恶性实例。
+虽然我们方法的细节将在本章后面讨论，但本节将提供我们方法的概述。我们方法背后的思想是：对手试图尽可能多地了解我们所使用的数据以及模型。基于对手所学到的知识，它将试图挫败我们的模型，使自己不被捕获。因此，采用 `SVM` 方法时，对手试图将尽可能多的实例推向“良性”类别。这样，我们的模型就会将一些恶意实例视为良性实例。为了对抗对手的这种行为，我们尝试移动 `SVM` 分界线。我们在考虑多种因素后这样做，详见 **第 10.3 节** 和 **第 10.4 节**。此外，移动分界线的方式取决于我们所考虑的攻击模型。当我们移动分界线时，一些伪装成良性实例的恶意实例将显露为恶性实例。
 
 ![图 10.2 (a) 恶意实例伪装成良性实例。(b) 通过移动分界线，捕获了更多恶意实例。](img/fig10_2.jpg)
 
 图 10.2 (a) 恶意实例伪装成良性实例。(b) 通过移动分界线，捕获了更多恶意实例。
 
-在后续章节中，我们将介绍攻击模型以及基于 SVM 的学习模型的关键点。更多细节请见 [ZHOU2012]。我们讨论两种攻击模型：自由范围攻击模型和受限攻击模型。在自由范围攻击模型中，对手可以将恶意数据移动到特征空间中的任意位置。在受限攻击模型中，对手只能将恶意数据移动得更接近目标点。
+在后续章节中，我们将介绍攻击模型以及基于 `SVM` 的学习模型的关键点。更多细节请见 [ZHOU2012]。我们讨论两种攻击模型：自由范围攻击模型和受限攻击模型。在自由范围攻击模型中，对手可以将恶意数据移动到特征空间中的任意位置。在受限攻击模型中，对手只能将恶意数据移动得更接近目标点。
 
 ## 10.4 问题与攻击
 
@@ -3427,7 +3261,9 @@ Lowd 和 Meek [LOWD2005b] 指出假设对手完全了解分类器是不现实的
 {(x[i], y[i]) ∈ (X, Y)}[i = 1]^(n), where x[i] is the i^(th) sample and y[i] ∈ {−1, 1} is its label, X ⊆ ℝ^(d)
 ```
 
-是一个 *d* 维特征空间，*n* 是样本总数。我们考虑一个对抗学习问题，其中对手修改恶意数据以逃避检测，从而达到其预谋目标。对手有自由仅通过向 `x[i] | y[i] = 1` 添加非零位移向量 *δi*，沿任意方向移动恶意数据（*y[i] = 1*）。也就是说，目标是学习一个假设 *H*，使其能抵御通过添加非零位移向量 *δ* 来修改恶意数据的对抗攻击。例如，在垃圾邮件过滤中，对手可能向垃圾邮件添加正常词汇以击败垃圾邮件过滤器。另一方面，对手将无法修改合法邮件。
+
+
+是一个 `d` 维特征空间，`n` 是样本总数。我们考虑一个对抗学习问题，其中对手修改恶意数据以逃避检测，从而达到其预谋目标。对手有自由仅通过向 `x[i] | y[i] = 1` 添加非零位移向量 `δi`，沿任意方向移动恶意数据（`y[i] = 1`）。也就是说，目标是学习一个假设 `H`，使其能抵御通过添加非零位移向量 `δ` 来修改恶意数据的对抗攻击。例如，在垃圾邮件过滤中，对手可能向垃圾邮件添加正常词汇以击败垃圾邮件过滤器。另一方面，对手将无法修改合法邮件。
 
 我们不对对手对学习系统的了解做具体假设。相反，我们仅假设修改恶意数据存在权衡或成本。例如，对手常采用的一种实用策略是，在特征空间中将恶意数据移动到尽可能接近良性数据频繁出现的位置。然而，对手只能在不完全丧失恶意数据效用的前提下修改其位置。如果对手在特征空间中将数据点移离其自身类别太远，可能不得不牺牲原始数据点的大量恶意效用。例如，在信用卡欺诈检测问题中，攻击者可能选择用被盗信用卡消费“合适”的金额来模仿合法购买。这样做会让攻击者损失一些潜在利润。
 
@@ -3437,13 +3273,11 @@ Lowd 和 Meek [LOWD2005b] 指出假设对手完全了解分类器是不现实的
 
 #### 10.4.2.1 自由范围攻击
 
-
-
 在此模型中，对手可将恶意数据移动到域中的任意位置。对手所需的唯一知识是每个特征的有效取值范围。
 
 设 `x[j]^(max)` 和 `x[j]^(min)` 分别为数据点 `x[i]` 的第 `j` 个特征——`x[ij]`——所能取得的最大值和最小值。就所有实际目的而言，我们假设 `x[j]^(max)` 和 `x[j]^(min)` 都是有界的。例如，对于高斯分布，它们可设为 0.01 和 0.99 分位数。由此产生的范围将覆盖大多数数据点并丢弃少数极端值。攻击随后被限制为以下形式：
 
-`Cf − x[ij]) ≤ δ[ij] ≤ Cf − x[ij]), ∀j ∈ [1, d]`，
+`Cf − x[ij]) ≤ δ[ij] ≤ Cf − x[ij]), ∀j ∈ [1, d]`
 
 其中 `C[f] ∈ [0,1]` 控制攻击的激进程度。`C[f] = 0` 表示无攻击，而 `C[f] = 1` 对应允许数据移动范围最宽的最激进攻击。更正式地，自由范围攻击模型可定义如下：
 
@@ -3469,11 +3303,11 @@ s.t. ξ_i ≥ 0
 
 其中
 
-`|δ[ij]| ≤ |x[ij]^(t) − x[ij]|, ∀ j ∈ d`。
+`|δ[ij]| ≤ |x[ij]^(t) − x[ij]|, ∀ j ∈ d`
 
 此外，我们对属性 `j` 的位移量设定上界如下：
 
-`0 ≤ (x_ij^t - x_ij) δ_ij ≤ (1 - C_δ |x_ij^t - x_ij| / (|x_ij| + |x_ij^t|)) (x_ij^t - x_ij)²,`
+`0 ≤ (x_ij^t - x_ij) δ_ij ≤ (1 - C_δ |x_ij^t - x_ij| / (|x_ij| + |x_ij^t|)) (x_ij^t - x_ij)²`
 
 其中 `C[δ] ∈ [0, 1]` 为常数，建模因移动 `δ[ij]` 导致的恶意效用损失。此攻击模型基于 `x[ij]` 与 `x[ij]^(t)` 彼此相距多远，规定了对手可将 `x[ij]` 向 `x[ij]^(t)` 推多远。
 
@@ -3485,7 +3319,7 @@ s.t. ξ_i ≥ 0
 
 如图 10.3(a)所示，此攻击模型对良好分离的数据效果极佳。当两类数据均靠近分离边界时（如图 10.3(b) 所示），略微改变属性值即足以将数据推过边界。请注意，两图中的 `X` 和 `Y` 轴均为特征（如图 10.2 所示）。此外，图 10.3(a) 中 `X` 和 `Y` 轴范围为 −0.2 至 0.2，而图 10.3(a) 中 `X` 轴范围为 −0.25 至 0.25，`Y` 轴范围为 −0.3 至 0.3（详见 [ZHOU2012]）。在这种情况下，即使 `C[δ]` 设为 1，上述模型的攻击与所需相比仍过于激进。我们虽可允许 `C[δ] > 1` 以进一步降低攻击激进度，但为求简洁和更直接的控制，我们改为直接对 `|x[ij]^(t) − x[ij]|` 应用折扣因子 `C[ξ]` 以建模攻击的严重程度：
 
-`0 ≤ (x_ij^t - x_ij) δ_ij ≤ C_ξ (1 - |x_ij^t - x_ij| / (|x_ij| + |x_ij^t|)) (x_ij^t - x_ij)²,`
+`0 ≤ (x_ij^t - x_ij) δ_ij ≤ C_ξ (1 - |x_ij^t - x_ij| / (|x_ij| + |x_ij^t|)) (x_ij^t - x_ij)²`
 
 其中 `C[ξ] ∈ [0, 1]`。较大的 `C[ξ]` 产生更大量的数据移动，较小的 `C[ξ]` 设定更窄的数据移动限制。结合这两种情况，*受限攻击*模型如下：
 
@@ -3496,9 +3330,6 @@ s.t. ξ_i ≥ 0
 图 10.3 (a) 数据良好分离。 (b) 数据杂乱地分布在分离边界附近。 数据良好分离和数据杂乱地分布在分离边界附近。
 
 更正式地，受限攻击模型可定义如下：
-
-
-
 
 ## 10.5 对抗性 SVM 学习
 
@@ -3602,45 +3433,68 @@ s.t.    (x_i^t - x_i) ∘ δ_i ≺ C_ξ (1 - C_δ |x_i^t - x_i| / (|x_i| + |x_i^
         (x_i^t - x_i) ∘ δ_i ≻ 0
 ```
 
-
-
-
 我们将双线性问题归约为关于 `u[i]` ∈ ℝ^(`d`)、`v[i]` ∈ ℝ^(`d`) 的以下非对称对偶问题，其中 `d` 是特征空间的维度。
 
 $$
+
 \begin{array}{l}
+
 g_{i} = \max -\sum_{j}{e_{ij}u_{ij}} \\
+
 g_{i} = \min \sum_{j}{e_{ij}u_{ij}} \\
+
 s.t.\quad (- u_{i} + v_{i}) \circ (x_{i}^{t} - x_{i}) = \frac{1}{2}({1 + y_{i}})w \\
+
 \quad u_{i} \succ 0 \\
+
 \quad v_{i} \succ 0
+
 \end{array}
+
 $$
 
 SVM 风险最小化问题可重写如下：
 
 $$
+
 \underset{}{\begin{array}{l}
+
 \underset{w,b,t_{i},u_{i},v_{i}}{\text{arg min}}\quad\frac{1}{2}\left\| w \right\|^{2}+C\sum_{i}\left\lfloor 1-y_{i}\cdot\left( w\cdot x_{i}+b \right)+t_{i} \right\rfloor_{+} \\
+
 s.t.\quad t_{i}\geq\sum_{j}e_{ij}u_{ij} \\
+
 \quad\left. (-u_{i}+v_{i} \right)\circ\left. (x_{i}^{t}-x_{i} \right)=\frac{1}{2}{(1+y_{i})}w \\
+
 \quad u_{i} \succ 0 \\
+
 \quad v_{i} \succ 0
+
 \end{array}}
+
 $$
 
 在消除合页损失的非可微性后，我们可以将问题重写如下：
 
 $$
+
 \begin{array}{l}
+
 \underset{w,b,\xi_{i},t_{i},u_{i},v_{i}}{\text{arg min}}\quad\frac{1}{2}\left\| w \right\|^{2} + C\sum_{i}\xi_{i} \\
+
 s.t.\quad\xi_{i} \geq 0 \\
+
 \quad\xi_{i} \geq 1 - y_{i} \cdot \left( {w \cdot x_{i} + b} \right) + t_{i} \\
+
 \quad t_{i} \geq \sum_{j}{e_{ij}u_{ij}} \\
+
 \quad\left( {- u_{i} + v_{i}} \right) \circ \left( {x_{i}^{t} - x_{i}} \right) = \frac{1}{2}{({1 + y_{i}})}w \\
+
 \quad u_{i} \succ 0 \\
+
 \quad v_{i} \succ 0
+
 \end{array}
+
 $$
 
 ## 10.6 实验
@@ -3657,9 +3511,11 @@ $$
 
 ### 10.6.2 人工数据集实验
 
+
+
 我们从具有指定均值和协方差矩阵的二元正态分布生成两个人工数据集。第一个数据集中的数据分离良好。第二个数据集包含靠近分离边界更杂乱的数据。所有结果均在 100 次随机运行中取平均。
 
-#### 10.6.2.1 数据点分离良好
+### 10.6.2.1 数据点分离良好
 
 图 10.4 通过将 `f[attack]` 设为 0（原始分布）、0.3、0.5、0.7 和 1.0，展示了不同失真级别应用于恶意数据时的数据分布。可以观察到，随着 `f[attack]` 的增加，恶意数据点更激进地向良性数据移动。
 
@@ -3671,10 +3527,10 @@ $$
 
 表 10.1 列出了具有自由范围攻击模型的 AD-SVM 算法、标准 SVM 算法和单类 SVM 算法的预测准确率。当假设合理的对抗性（`C[f]` ∈ [0.1, 0.5]）时，AD-SVM 明显优于 SVM 和单类 SVM。当存在轻微攻击或根本没有攻击时，具有更激进自由范围假设（`C[f]` ∈ [0.5, 0.9]）的 AD-SVM 遭受巨大性能损失，这正如我们从这种悲观模型中所预期的。
 
-[表 10.1 图 10.4(a)–(e) 所示数据分布下*自由范围* AD-SVM、SVM 和单类 SVM 的准确率。随着学习模型假设更激进的攻击，`C[f]` 增加](#ch10.xhtml#Ttable10_1)
+### 表 10.1 图 10.4(a)–(e) 所示数据分布下*自由范围* AD-SVM、SVM 和单类 SVM 的准确率。随着学习模型假设更激进的攻击，`C[f]` 增加
 
 | | | `f[attack]` = 0 | `f[attack]` = 0.3 | `f[attack]` = 0.5 | `f[attack]` = 0.7 | `f[attack]` = 1.0 |
-| --- | --- | --- | --- | --- | --- | --- |
+|---|---|---|---|---|---|---|
 | | `C[f]` = 0.1 | 1.000 | **1.000** | **0.887** | **0.512** | 0.500 |
 | | `C[f]` = 0.3 | 1.000 | **1.000** | **0.997** | **0.641** | 0.500 |
 | AD-SVM | `C[f]` = 0.5 | 0.996 | 0.996 | **0.996** | **0.930** | 0.500 |
@@ -3685,77 +3541,43 @@ $$
 
 与自由范围攻击模型相比，受限攻击模型在整个学习和攻击参数范围内的表现要一致得多。这里 `C[δ]` 反映了我们 AD-SVM 学习算法中攻击的激进程度。表 10.2 展示了随着 `C[δ]` 从不那么激进（`C[δ]` = 0.9）降至非常激进（`C[δ]` = 0.1）时的分类结果。显然，当学习模型中对攻击的假设与真实攻击相匹配时，对角线上的结果最为令人印象深刻。我们 AD-SVM 在其余实验中的结果也大多优于 SVM 和单类 SVM。这放宽了寻找最佳 `C[δ]` 的要求。无论选择何种 `C[δ]` 值，我们的模型都能提供可靠的性能。
 
-
-
-
-
 ### 表 10.2 图 10.4(a)–(e) 所示数据分布下，*受限* AD-SVM、SVM 和单类 SVM 的准确率。*C*[*δ*] 随着学习模型假设更激进的攻击而减小
 
-| | | *f*[*attack*] = 0 | *f*[*attack*] = 0.3 | *f*[*attack*] = 0.5 | *f*[*attack*] = 0.7 | *f*[*attack*] = 1.0 |
+| | | `f[attack]` = 0 | `f[attack]` = 0.3 | `f[attack]` = 0.5 | `f[attack]` = 0.7 | `f[attack]` = 1.0 |
 |---|---|---|---|---|---|---|
-| | *C*[*δ*] = 0.9 | 1.000 | **1.000** | **0.856** | **0.505** | 0.500 |
-| AD-SVM | *C*[*δ*] = 0.7 | 1.000 | **1.000** | **0.975** | **0.567** | 0.500 |
-| (*C*[*ξ*] = 1) | *C*[*δ*] = 0.5 | 1.000 | **1.000** | **0.999** | **0.758** | 0.500 |
-| | *C*[*δ*] = 0.3 | 0.994 | 0.994 | **0.994** | **0.954** | 0.500 |
-| | *C*[*δ*] = 0.1 | 0.878 | 0.876 | **0.878** | **0.878** | 0.500 |
+| | `C[δ]` = 0.9 | 1.000 | **1.000** | **0.856** | **0.505** | 0.500 |
+| AD-SVM | `C[δ]` = 0.7 | 1.000 | **1.000** | **0.975** | **0.567** | 0.500 |
+| (`C[ξ]` = 1) | `C[δ]` = 0.5 | 1.000 | **1.000** | **0.999** | **0.758** | 0.500 |
+| | `C[δ]` = 0.3 | 0.994 | 0.994 | **0.994** | **0.954** | 0.500 |
+| | `C[δ]` = 0.1 | 0.878 | 0.876 | **0.878** | **0.878** | 0.500 |
 | SVM | | 1.000 | 0.998 | 0.748 | 0.501 | 0.500 |
 | 单类 SVM | | 1.000 | 0.873 | 0.500 | 0.500 | 0.500 |
 
-#### 10.6.2.2 聚集在分离边界附近的数据
+### 10.6.2.2 聚集在分离边界附近的数据
 
 图 10.5 说明了在不同攻击级别下，我们的第二个人工数据集的分布。恶意数据点只需很少的修改即可被推过边界。我们再次考虑自由范围和受限攻击模型。可以得出类似的结论：受限 AD-SVM 比自由范围 AD-SVM 更稳健；总体而言，AD-SVM 应对轻微对抗攻击的能力比标准 SVM 和单类 SVM 模型强得多。
 
 ![图 10.5 (a) *f*[*attack*] 为 0。(b) *f*[*attack*] 为 0.3。(c) *f*[*attack*] 为 0.5。(d) *f*[*attack*] 为 0.7。(e) *f*[*attack*] 为 1.0。攻击后 *第二个* 数据集的数据分布。*f*[*attack*] 从 0（无）变化到 1.0（最激进）。普通“+”标记原始正样本数据点，带中心黑方块的“+”标记修改后的正样本数据点，“◦”代表负样本数据。](images/fig10_5.jpg)
 
-[图 10.5 (a) *f*[*attack*] 为 0。(b) *f*[*attack*] 为 0.3。(c) *f*[*attack*] 为 0.5。(d) *f*[*attack*] 为 0.7。(e) *f*[*attack*] 为 1.0。攻击后 *第二个* 数据集的数据分布。*f*[*attack*] 从 0（无）变化到 1.0（最激进）。普通“+”标记原始正样本数据点，带中心黑方块的“+”标记修改后的正样本数据点，“◦”代表负样本数据。](#ch10.xhtml#Ffig10_5)
+[图 10.5 (a) `f[attack]` 为 0。(b) `f[attack]` 为 0.3。(c) `f[attack]` 为 0.5。(d) `f[attack]` 为 0.7。(e) `f[attack]` 为 1.0。攻击后 *第二个* 数据集的数据分布。`f[attack]` 从 0（无）变化到 1.0（最激进）。普通“+”标记原始正样本数据点，带中心黑方块的“+”标记修改后的正样本数据点，“◦”代表负样本数据。](#ch10.xhtml#Ffig10_5)
 
-以下是图 10.5 中的坐标轴信息。图 10.5(a) *X* 轴范围从 −0.2 到 0.3，而 *Y* 轴范围从 −0.25 到 0.25。图 10.5(b) *X* 轴范围从 −0.4 到 0.3，而 *Y* 轴范围从 −0.2 到 0.25。图 10.5(c) *X* 轴范围从 −0.4 到 0.3，而 *Y* 轴范围从 −0.25 到 0.2。图 10.5(d) *X* 轴范围从 −0.4 到 0.3，而 *Y* 轴范围从 −0.25 到 0.25。图 10.5(e) *X* 轴和 *Y* 轴范围均从 −0.4 到 0.3（详情见 [ZHOU2012]）。
+以下是图 10.5 中的坐标轴信息。图 10.5(a) `X` 轴范围从 −0.2 到 0.3，而 `Y` 轴范围从 −0.25 到 0.25。图 10.5(b) `X` 轴范围从 −0.4 到 0.3，而 `Y` 轴范围从 −0.2 到 0.25。图 10.5(c) `X` 轴范围从 −0.4 到 0.3，而 `Y` 轴范围从 −0.25 到 0.2。图 10.5(d) `X` 轴范围从 −0.4 到 0.3，而 `Y` 轴范围从 −0.25 到 0.25。图 10.5(e) `X` 轴和 `Y` 轴范围均从 −0.4 到 0.3（详情见 [ZHOU2012]）。
 
-表 10.3 列出了我们的 AD-SVM 算法在第二个数据集上采用自由范围攻击模型的预测准确率。标准 SVM 算法和单类 SVM 算法的结果也一并列出。在许多情况下，自由范围模型过于悲观，这掩盖了其对最严重攻击的抵抗力。对于受限攻击模型，由于两个类别最初就没有很好地分开，因此使用 *C**ξ* 来反映 AD-SVM 中攻击的激进程度。较大的 *C*[*ξ*] 表示更激进，而较小的 *C*[*ξ*] 假设攻击较温和。表 10.4 展示了随着 *C*[*ξ*] 从不那么激进 (*C*[*ξ*] = 0.1) 增加到非常激进 (*C*[*ξ*] = 0.9) 的分类结果。
+表 10.3 列出了我们的 AD-SVM 算法在第二个数据集上采用自由范围攻击模型的预测准确率。标准 SVM 算法和单类 SVM 算法的结果也一并列出。在许多情况下，自由范围模型过于悲观，这掩盖了其对最严重攻击的抵抗力。对于受限攻击模型，由于两个类别最初就没有很好地分开，因此使用 `C[ξ]` 来反映 AD-SVM 中攻击的激进程度。较大的 `C[ξ]` 表示更激进，而较小的 `C[ξ]` 假设攻击较温和。表 10.4 展示了随着 `C[ξ]` 从不那么激进 (`C[ξ]` = 0.1) 增加到非常激进 (`C[ξ]` = 0.9) 的分类结果。
 
 ### 表 10.3 图 10.5(a)–(e) 所示数据分布下，*自由范围* AD-SVM、SVM 和单类 SVM 的准确率。*C*[*f*] 随着学习模型假设更激进的攻击而增加
 
-| | | *f*[*attack*] = 0 | *f*[*attack*] = 0.3 | *f*[*attack*] = 0.5 | *f*[*attack*] = 0.7 | *f*[*attack*] = 1.0 |
+| | | `f[attack]` = 0 | `f[attack]` = 0.3 | `f[attack]` = 0.5 | `f[attack]` = 0.7 | `f[attack]` = 1.0 |
 |---|---|---|---|---|---|---|
-| | *C*[*f*] = 0.1 | 0.928 | **0.884** | **0.771** | **0.609** | 0.500 |
-| | *C*[*f*] = 0.3 | 0.859 | 0.848 | **0.807** | **0.687** | 0.500 |
-| AD-SVM | *C*[*f*] = 0.5 | 0.654 | 0.649 | 0.658 | **0.638** | 0.500 |
-| | *C*[*f*] = 0.7 | 0.500 | 0.500 | 0.500 | 0.500 | 0.500 |
-| | *C*[*f*] = 0.9 | 0.500 | 0.500 | 0.500 | 0.500 | 0.500 |
+| | `C[f]` = 0.1 | 0.928 | **0.884** | **0.771** | **0.609** | 0.500 |
+| | `C[f]` = 0.3 | 0.859 | 0.848 | **0.807** | **0.687** | 0.500 |
+| AD-SVM | `C[f]` = 0.5 | 0.654 | 0.649 | 0.658 | **0.638** | 0.500 |
+| | `C[f]` = 0.7 | 0.500 | 0.500 | 0.500 | 0.500 | 0.500 |
+| | `C[f]` = 0.9 | 0.500 | 0.500 | 0.500 | 0.500 | 0.500 |
 | SVM | | 0.932 | 0.859 | 0.715 | 0.575 | 0.500 |
 | 单类 SVM | | 0.936 | 0.758 | 0.611 | 0.527 | 0.500 |
 
 ### 表 10.4 图 10.5(a)–(e) 所示数据分布下，*受限* AD-SVM、SVM 和单类 SVM 的准确率。*C*[*ξ*] 随着学习模型假设更激进的攻击而增加
-
-| | | *f*[*attack*] = 0 | *f*[*attack*] = 0.3 | *f*[*attack*] = 0.5 | *f*[*attack*] = 0.7 | *f*[*attack*] = 1.0 |
-|---|---|---|---|---|---|---|
-| | *C*[*ξ*] = 0.9 | 0.932 | **0.860** | **0.719** | **0.575** | 0.500 |
-| AD-SVM | *C*[*ξ*] = 0.7 | 0.930 | **0.858** | **0.717** | **0.576** | 0.500 |
-| (*C*[*δ*] = 1) | *C*[*ξ*] = 0.5 | **0.935** | **0.860** | **0.721** | **0.578** | 0.500 |
-| | *C*[*ξ*] = 0.3 | 0.931 | 0.855 | **0.718** | **0.577** | 0.500 |
-| | *C*[*ξ*] = 0.1 | 0.933 | **0.858** | **0.718** | **0.575** | 0.500 |
-| SVM | | 0.930 | 0.856 | 0.714 | 0.574 | 0.500 |
-| 单类 SVM | | 0.933 | 0.772 | 0.605 | 0.525 | 0.500 |
-
-受限 AD-SVM 模型仍设法提高了预测准确率，优于 SVM 和单类 SVM，尽管改进幅度不那么显著。这是可以理解的，因为该数据集的生成旨在使恶意数据和良性数据更难区分，无论是否存在攻击。在没有攻击的情况下，模型不会遭受性能损失。
-
-### 10.6.3 真实数据集实验
-
-我们还在两个真实数据集上测试了我们的 AD-SVM 模型：来自 UCI 数据仓库 [[UCI2012]](#ch10.xhtml#ref10_24) 的 *spam base*（垃圾邮件基础数据集），以及来自 LibSVM 网站 [[LIBS2012]](#ch10.xhtml#ref10_16) 的 *web spam*（网页垃圾邮件数据集）。
-
-在 *spam base* 数据集中，垃圾邮件概念包括广告、快速致富骗局、连锁信等。垃圾邮件收集自邮局管理员和已归档垃圾邮件的个人。非垃圾邮件收集自归档的工作和个人邮件 [UCI2012]。该数据集包含 4,601 个总实例，其中 39.4% 为垃圾邮件。共有 57 个属性和一个类标签。我们将数据集分成相等的两半，一半 *Tr* 用于训练，另一半 *Ts* 仅用于测试。学习模型由从 *Tr* 中随机选取的 10% 样本构建。结果取 10 次随机运行的平均值。
-
-我们从 LibSVM 网站 [LIBS2012] 获取了第二个数据集。根据该网站介绍，*web spam* 数据是帕斯卡大规模学习挑战赛中使用的子集。所有正样本均保留在数据集中，而负样本则是从知名网站开始随机遍历互联网创建的。他们将连续的 *n* 字节视为一个词，并使用词频作为特征值，将每个实例归一化为单位长度。我们使用他们的单元数据集，其中特征数量为 254。实例总数为 350,000。我们再次将数据集分成相等的两半用于训练和测试。我们使用训练集中 2% 的样本来构建学习模型，并报告 10 次随机运行的平均结果。
-
-
-
-
-
-#### 表 10.5 和 10.6：Spam Base 数据集结果
-
-表 10.5 和 表 10.6 展示了 *spam base* 数据集上的结果。AD-SVM 在自由范围和约束攻击模型下均在此数据集上取得了可靠的改进。约束学习模型仅使用 `C[δ]`。除最悲观情况外，在无攻击时 AD-SVM 无性能损失；而在有攻击时，其分类准确率远优于 SVM 和单类 SVM。
-
-##### 表 10.5：AD-SVM、SVM 和单类 SVM 在 *spam base* 数据集上的准确率（攻击加剧时）。学习模型使用*自由范围*攻击。`C[f]` 随攻击变激进而增加
 
 | | | `f[attack]` = 0 | `f[attack]` = 0.3 | `f[attack]` = 0.5 | `f[attack]` = 0.7 | `f[attack]` = 1.0 |
 |---|---|---|---|---|---|---|
@@ -3767,7 +3589,33 @@ $$
 | SVM | | 0.930 | 0.856 | 0.714 | 0.574 | 0.500 |
 | 单类 SVM | | 0.933 | 0.772 | 0.605 | 0.525 | 0.500 |
 
-##### 表 10.6：AD-SVM 和 SVM 在 *spam base* 数据集上的准确率（攻击加剧时）。学习模型使用*约束*攻击模型。`C[δ]` 随攻击变激进而减小
+受限 AD-SVM 模型仍设法提高了预测准确率，优于 SVM 和单类 SVM，尽管改进幅度不那么显著。这是可以理解的，因为该数据集的生成旨在使恶意数据和良性数据更难区分，无论是否存在攻击。在没有攻击的情况下，模型不会遭受性能损失。
+
+### 10.6.3 真实数据集实验
+
+我们还在两个真实数据集上测试了我们的 AD-SVM 模型：来自 UCI 数据仓库 [[UCI2012]](#ch10.xhtml#ref10_24) 的 *spam base*（垃圾邮件基础数据集），以及来自 LibSVM 网站 [[LIBS2012]](#ch10.xhtml#ref10_16) 的 *web spam*（网页垃圾邮件数据集）。
+
+在 *spam base* 数据集中，垃圾邮件概念包括广告、快速致富骗局、连锁信等。垃圾邮件收集自邮局管理员和已归档垃圾邮件的个人。非垃圾邮件收集自归档的工作和个人邮件 [UCI2012]。该数据集包含 4,601 个总实例，其中 39.4% 为垃圾邮件。共有 57 个属性和一个类标签。我们将数据集分成相等的两半，一半 `Tr` 用于训练，另一半 `Ts` 仅用于测试。学习模型由从 `Tr` 中随机选取的 10% 样本构建。结果取 10 次随机运行的平均值。
+
+我们从 LibSVM 网站 [LIBS2012] 获取了第二个数据集。根据该网站介绍，*web spam* 数据是帕斯卡大规模学习挑战赛中使用的子集。所有正样本均保留在数据集中，而负样本则是从知名网站开始随机遍历互联网创建的。他们将连续的 `n` 字节视为一个词，并使用词频作为特征值，将每个实例归一化为单位长度。我们使用他们的单元数据集，其中特征数量为 254。实例总数为 350,000。我们再次将数据集分成相等的两半用于训练和测试。我们使用训练集中 2% 的样本来构建学习模型，并报告 10 次随机运行的平均结果。
+
+#### 表 10.5 和 10.6：Spam Base 数据集结果
+
+表 10.5 和 表 10.6 展示了 *spam base* 数据集上的结果。AD-SVM 在自由范围和约束攻击模型下均在此数据集上取得了可靠的改进。约束学习模型仅使用 `C[δ]`。除最悲观情况外，在无攻击时 AD-SVM 无性能损失；而在有攻击时，其分类准确率远优于 SVM 和单类 SVM。
+
+### 表 10.5：AD-SVM、SVM 和单类 SVM 在 *spam base* 数据集上的准确率（攻击加剧时）。学习模型使用*自由范围*攻击。`C[f]` 随攻击变激进而增加
+
+| | | `f[attack]` = 0 | `f[attack]` = 0.3 | `f[attack]` = 0.5 | `f[attack]` = 0.7 | `f[attack]` = 1.0 |
+|---|---|---|---|---|---|---|
+| | `C[ξ]` = 0.9 | 0.932 | **0.860** | **0.719** | **0.575** | 0.500 |
+| AD-SVM | `C[ξ]` = 0.7 | 0.930 | **0.858** | **0.717** | **0.576** | 0.500 |
+| (`C[δ]` = 1) | `C[ξ]` = 0.5 | **0.935** | **0.860** | **0.721** | **0.578** | 0.500 |
+| | `C[ξ]` = 0.3 | 0.931 | 0.855 | **0.718** | **0.577** | 0.500 |
+| | `C[ξ]` = 0.1 | 0.933 | **0.858** | **0.718** | **0.575** | 0.500 |
+| SVM | | 0.930 | 0.856 | 0.714 | 0.574 | 0.500 |
+| 单类 SVM | | 0.933 | 0.772 | 0.605 | 0.525 | 0.500 |
+
+### 表 10.6：AD-SVM 和 SVM 在 *spam base* 数据集上的准确率（攻击加剧时）。学习模型使用*约束*攻击模型。`C[δ]` 随攻击变激进而减小
 
 | | | `f[attack]` = 0 | `f[attack]` = 0.3 | `f[attack]` = 0.5 | `f[attack]` = 0.7 | `f[attack]` = 1.0 |
 |---|---|---|---|---|---|---|
@@ -3781,9 +3629,11 @@ $$
 
 #### 表 10.7 和 10.8：Web Spam 数据集结果
 
-表 10.7 和 表 10.8 说明了 *web spam* 数据集上的结果。与数据分离良好的 *spam base* 数据集不同，*web spam* 数据更像第二个人工数据集。AD-SVM 模型表现出与第二个人工数据集相似的分类性能。无攻击时自由范围模型过于悲观，而约束模型持续优于 SVM 和单类 SVM，且重要的是在无攻击时无损失。我们在学习模型中仅使用 `C[ξ]`。在约束攻击模型中使用 `C[ξ]` 还是 `C[δ]`，可通过初始数据的交叉验证决定。下一节将更详细地讨论模型参数。
 
-##### 表 10.7：AD-SVM、SVM 和单类 SVM 在 *web spam* 数据集上的准确率（攻击加剧时）。学习模型使用*自由范围*攻击模型。`C[f]` 随攻击变激进而增加
+
+表 10.7 和 表 10.8 说明了 `web spam` 数据集上的结果。与数据分离良好的 `spam base` 数据集不同，`web spam` 数据更像第二个人工数据集。AD-SVM 模型表现出与第二个人工数据集相似的分类性能。无攻击时自由范围模型过于悲观，而约束模型持续优于 SVM 和单类 SVM，且重要的是在无攻击时无损失。我们在学习模型中仅使用 `C[ξ]`。在约束攻击模型中使用 `C[ξ]` 还是 `C[δ]`，可通过初始数据的交叉验证决定。下一节将更详细地讨论模型参数。
+
+##### 表 10.7：AD-SVM、SVM 和单类 SVM 在 `web spam` 数据集上的准确率（攻击加剧时）。学习模型使用*自由范围*攻击模型。`C[f]` 随攻击变激进而增加
 
 | | | `f[attack]` = 0 | `f[attack]` = 0.3 | `f[attack]` = 0.5 | `f[attack]` = 0.7 | `f[attack]` = 1.0 |
 |---|---|---|---|---|---|---|
@@ -3795,7 +3645,7 @@ $$
 | SVM | | 0.874 | 0.769 | 0.644 | 0.534 | 0.427 |
 | 单类 SVM | | 0.685 | 0.438 | 0.405 | 0.399 | 0.399 |
 
-##### 表 10.8：AD-SVM、SVM 和单类 SVM 在 *web spam* 数据集上的准确率（攻击加剧时）。学习模型使用*约束*攻击模型。`C[ξ]` 随攻击变激进而增加
+##### 表 10.8：AD-SVM、SVM 和单类 SVM 在 `web spam` 数据集上的准确率（攻击加剧时）。学习模型使用*约束*攻击模型。`C[ξ]` 随攻击变激进而增加
 
 | | | `f[attack]` = 0 | `f[attack]` = 0.3 | `f[attack]` = 0.5 | `f[attack]` = 0.7 | `f[attack]` = 1.0 |
 |---|---|---|---|---|---|---|
@@ -3814,10 +3664,6 @@ $$
 作为一般准则，`C[f]`、`C[δ]` 或 `C[ξ]` 的基线须选为针对领域专家建议的攻击参数效果良好。可通过各种攻击场景的交叉验证来实现。在此基础上，我们逐步增加 `C[f]` 或 `C[ξ]`，或减小 `C[δ]`。`C[f]`、`C[δ]` 或 `C[ξ]` 的最佳值出现在性能恶化之前。还需注意，只需设置 `C[ξ]` 和 `C[δ]` 之一而将另一者固定为 1 即可。此外，`C[f]`、`C[δ]` 和 `C[ξ]` 不必是标量参数。在许多应用中，显然某些属性可变而其他属性不可变。`C[f]`、`C[δ]`/`C[ξ]` 参数向量将有助于强制执行这些额外规则。
 
 ## 10.7 总结与展望
-
-
-
-
 
 ### 对抗学习与鲁棒 SVM 模型
 
@@ -3867,13 +3713,7 @@ $$
 *   **[TEO2007]** C.H. Teo, A. Globerson, S.T. Roweis, A.J. Smola, *Convex Learning with Invariances*，第 20 届国际神经信息处理系统会议论文集 (NIPS)，温哥华，加拿大，2007，第 1489–1496 页。
 *   **[UCI2012]** UCI Machine Learning Repository，2012，<https://archive.ics.uci.edu/ml/index.php>。
 *   **[WANG2006]** K. Wang, J.J. Parekh, S.J. Stolfo, *Anagram: A Content Anomaly Detector Resistant to Mimicry Attack*，入侵检测最新进展，第 9 届国际研讨会，汉堡，德国，2006，第 226–248 页。
-
-
-
-
-
-*   **[WITT2004]** G.L. Wittel, S.F. Wu, On Attacking Statistical Spam Filters, *Proceedings of the First Conference on Email and Anti-spam (CEAS)*, *Mountain View, California, USA*, 2004.
-
+*   **[WITT2004]** G.L. Wittel, S.F. Wu, On Attacking Statistical Spam Filters, *Proceedings of the First Conference on Email and Anti-spam (CEAS)*, *Mountain View, California, USA*, 2004。
 *   **[ZHOU2012]** Y. Zhou, M. Kantarcioglu, B.M. Thuraisingham, B. Xi, Adversarial Support Vector Machine Learning, KDD, 2012, 1059–1067.
 
 # 11 基于相关向量机集成的对抗学习
@@ -3883,6 +3723,8 @@ DOI: [10.1201/9781003081845-19](https://doi.org/10.1201/9781003081845-19)
 ## 11.1 简介
 
 正如第 10 章所述，许多学习任务（如垃圾邮件过滤和信用卡欺诈检测）面临着试图逃避检测的主动对手。对于涉及主动对手的学习问题，建模对手的攻击策略并开发鲁棒的学习模型以缓解攻击至关重要。对抗学习的大量研究在问题定义中考虑的约束类型上各不相同。无约束对手的假设是不切实际的，因为对数据及其类别成员资格的任意修改可能导致高达 100% 的最坏情况错误率 [AUER1998, KEAR1993]。因此，大多数近期研究聚焦于有约束的对手。
+
+
 
 在有约束对手的假设下，主要研究成果可进一步划分为博弈论解决方案和非博弈论解决方案。对于实践者而言，困难在于为手头的问题选择最合适的方法。在博弈论框架下开发的解决方案几乎总是假设一个理性博弈。此外，假设每个参与者都拥有关于对手的一定知识量。同样，非博弈论方法通常对对手的知识、损坏数据的分布以及可用计算资源做出假设。在实践中，对手很少是最优的，且他们拥有的知识和资源难以评估。对于分类问题，常见的假设是数据独立同分布。当存在主动对手修改数据以影响预测时，这一假设极易被违反。当数据以不可预测的方式持续被修改时，训练数据永远不足以诱导出一个准确的分类器。积极的一面是，在训练时我们可以探索特征空间，找到对手在特征空间中移动数据以影响分类器的最有效方向。一旦找到这样的方向，我们就可以通过应对这些潜在移动来改进分类器。
 
@@ -3906,9 +3748,6 @@ DOI: [10.1201/9781003081845-19](https://doi.org/10.1201/9781003081845-19)
 ## 11.2 相关工作
 
 关于恶意噪声率和学习准确性的界限，有若干理论结论。Kearns 和 Li [KEAR1993] 证明了样本中可容忍的恶意错误率的理论上界。他们假设对手可以生成性质未知且不可预测的恶意错误。Bshouty 等人 [BSHO1999] 引入了一种 PAC 学习模型的变体，用于在存在恶意噪声的情况下进行学习。他们证明了当样本噪声率为 `η` 时，没有任何学习算法能以低于 `2η` 的准确度学习非平凡概念类。Auer 和 Cesa-Bianchi [AUER1998] 提出了一种用于处理损坏数据的在线学习模型。他们扩展了“闭包算法”，并证明了学习任意交换闭合概念类的最坏情况错误界。Lowed 和 Meek [LOWD2005] 提出了一种寻找具有最小对抗成本实例的算法。他们将该算法称为对抗分类器逆向工程（ACRE）算法。对抗学习问题已在博弈论框架内得到广泛研究。Dalvi 等人 [DALVI2004] 将学习问题视为两个成本敏感对手之间的博弈。对手总是采取最优策略。给定一个成本函数，他们的算法预测使条件效用最大化的类别。Kantarcioglu 等人 [KANT2011] 提出了一种模拟退火和遗传算法，用于搜索纳什均衡以选择最优属性集。他们假设双方都知道对方的收益函数。关于如何博弈纳什策略的改进类似工作也已被提出 [BRÜC2009, LIU2010]。Brückner 和 Scheffer [BRÜC2011] 通过假设对手总是理性行事，提出了一种最优博弈。他们的算法不要求唯一均衡。
-
-
-
 
 在略有不同的研究途径中，人们提出了稳健学习技术来处理分类时噪声 [DEKE2008, DEKE2010, LANC2002, TEO2007]。Globerson 和 Roweis [GLOB2006] 研究了分类时特征删除问题。他们提出了一种 SVM 算法，在预定义约束下构建最优分类器。El Ghaoui 等人 [GHAO2003] 提出了一种针对由超矩形界定的训练数据的极大极小策略。他们将给定区间内数据的最坏情况损失最小化。
 
@@ -3948,7 +3787,7 @@ p(w | α) = ∏_{i=0}^N N(w_i | 0, α_i^{-1})
 
 ### 11.4.1 我们的方法
 
-RVM 训练过程迭代更新权重向量 *w* 和超参数向量 *α*。设想在每次迭代中，对手都有机会修改训练数据，特别是正类（恶意）训练数据，使其能够跨越当前迭代推断出的决策边界。对手修改数据的最佳策略是什么？如果对手可以自由地向有利于自己的方向移动每个数据点，他会遵循使正类实例被错误分类的可能性增加最大的方向。在讨论搜索该方向的技术之前，我们先讨论核及其输入尺度参数。
+RVM 训练过程迭代更新权重向量 `w` 和超参数向量 `α`。设想在每次迭代中，对手都有机会修改训练数据，特别是正类（恶意）训练数据，使其能够跨越当前迭代推断出的决策边界。对手修改数据的最佳策略是什么？如果对手可以自由地向有利于自己的方向移动每个数据点，他会遵循使正类实例被错误分类的可能性增加最大的方向。在讨论搜索该方向的技术之前，我们先讨论核及其输入尺度参数。
 
 ### 11.4.2 核参数向量
 
@@ -3987,7 +3826,7 @@ K(x_i, x_j) = exp(-∑_{k=1}^d η_k · (x_ik - x_jk)²)
 
 我们通过引入单独的核参数来建模对抗性数据破坏。学习是通过核参数拟合针对最坏情况攻击进行的。假设对手仅在 RVM 训练期间对伪装正类数据感兴趣，我们搜索一个核参数向量 *η*，使其对正类训练实例产生最有效的攻击。（这是一个合理的假设，因为对手通常更难影响负类（合法）数据。）
 
-给定 *w* 和 *α*，我们沿着使所有正类实例的后验分布 *p*(*y* |) 对数似然 ℒ[+] 降低的方向更新 *η*（该分布由公式 (11.1) 给出）。对公式 (11.1) 两边取对数，得到：
+给定 `w` 和 `α`，我们沿着使所有正类实例的后验分布 *p*(*y* |) 对数似然 ℒ[+] 降低的方向更新 `η`（该分布由公式 (11.1) 给出）。对公式 (11.1) 两边取对数，得到：
 
 ```
 log(p(t | w)) = ∑_{i=1}^N [y_i log(σ_i) + (1 - y_i)(1 - log(σ_i))]  (11.2)
@@ -4000,9 +3839,6 @@ log(p(t | w)) = ∑_{i=1}^N [y_i log(σ_i) + (1 - y_i)(1 - log(σ_i))]  (11.2)
 ```
 
 公式 (11.2) 给出的 ℒ 关于 *η*[*k*] 的梯度为：
-
-
-
 
 ### 11.4.4 训练问题
 
@@ -4080,16 +3916,18 @@ xᵢⱼ⁺ = xᵢⱼ⁺ + f[attack] · (xᵢⱼ⁻ - xᵢⱼ⁺) + ε    (11.6)
 **表 11.1** `AD-RVM`、`RVM`、`SVM` 和 `1-CLASS SVM` 在合成数据上的分类错误率。最佳结果已加粗。
 
 | | `f`[attack] |
+
 |---|---|---|---|---|---|
+
 | | 0.1 | 0.3 | 0.5 | 0.7 | 0.9 |
+
 | `AD-RVM` | **0.0025** | **0.0175** | **0.1435** | **0.3205** | **0.4500** |
+
 | `RVM` | 0.0100 | 0.0810 | 0.2542 | 0.4305 | 0.5000 |
+
 | `SVM` | 0.0105 | 0.0705 | 0.2500 | 0.4355 | 0.4910 |
+
 | `1-class SVM` | 0.0059 | 0.1310 | 0.5000 | 0.5000 | 0.5000 |
-
-
-
-
 
 ### 11.5.3 真实数据集上的实验
 
@@ -4108,6 +3946,8 @@ xᵢⱼ⁺ = xᵢⱼ⁺ + f[attack] · (xᵢⱼ⁻ - xᵢⱼ⁺) + ε    (11.6)
 图 11.5 `ρ` (rho) 值的影响。较小的 `ρ` 值对负类成员资格具有更高的固有偏见。
 
 我们还测试了训练数据不干净的情况。同样，AD-RVM 对对抗性攻击显然更具鲁棒性，尽管其优势变得不那么明显。由于篇幅限制，我们在此不报告结果。
+
+
 
 图 11.6 说明了从损坏的训练数据集中学到的决策边界。图 11.6(a) 显示了决策边界如何被迫在测试数据上 `f[attack]` = 0.1 时大幅向负侧移动。`ρ` 值设置为 0.67。如图 11.6(b) 所示，`ρ` = 0.76 时学到的决策边界稍好一些。这个实验提醒我们设定 `ρ` 值下界的重要性。当 `ρ` 值太小时，输出中出现假阳性的可能性会更大。在实践中，我们建议 `ρ` 值不大于 0.5。然而，在对抗性攻击可能非常激进的任何领域，较小的 `ρ` 值更受青睐。
 
@@ -4135,7 +3975,7 @@ xᵢⱼ⁺ = xᵢⱼ⁺ + f[attack] · (xᵢⱼ⁻ - xᵢⱼ⁺) + ε    (11.6)
 | SVM | 0.3641 | 0.3751 | 0.3793 | 0.4149 | 0.4079 |
 | 1-class SVM | **0.3127** | **0.3147** | **0.3248** | 0.3555 | 0.4011 |
 
-`web spam` 数据集是来自 LibSVM 网站的单元版本。每个示例有 254 个特征。我们进一步将特征数量减少到 50 个。实例总数为 350,000。我们用一半进行训练，另一半进行测试。我们随机选择训练集中 2% 的样本来构建学习模型。结果取 10 次随机运行的平均值，如 表 11.3 所示。可以观察到，对抗性 RVM 明显优于其他三个模型。
+`web spam` 数据集是来自 LibSVM 网站的单元版本。每个示例有 254 个特征。我们进一步将特征数量减少到 50 个。实例总数为 350,000。我们用一半进行训练，另一半进行测试。我们随机选择训练集中 2% 的样本来构建学习模型。结果取 10 次随机运行的平均值，如表 11.3 所示。可以观察到，对抗性 RVM 明显优于其他三个模型。
 
 表 11.3 AD-RVM、RVM、SVM 和 1-CLASS SVM 在 web spam 数据集上的分类错误。最佳结果已加粗
 
@@ -4148,10 +3988,6 @@ xᵢⱼ⁺ = xᵢⱼ⁺ + f[attack] · (xᵢⱼ⁻ - xᵢⱼ⁺) + ε    (11.6)
 | One-class SVM | 0.3155 | 0.5625 | 0.5945 | 0.6009 | 0.5997 |
 
 ## 11.6 总结与展望
-
-
-
-
 
 ### 数据挖掘任务与对抗学习
 
@@ -4213,10 +4049,6 @@ DOI: [10.1201/9781003081845-20](https://doi.org/10.1201/9781003081845-20)
 
 早期的扰动和随机化方法包含一个重构原始数据分布的步骤。该领域较新的研究采用不同的数据扭曲方法或修改数据挖掘技术，使其更适合扰动场景。采用加密工具构建数据挖掘模型的安全多方计算方法面临着高昂的通信和计算成本，尤其是在参与计算的参与方数量较大时。
 
-
-
-
-
 ### 保护隐私的决策树分类
 
 在本章中，我们重点关注在隐私保护数据挖掘中广泛使用的扰动方法。它与之前的几种技术不同之处在于，我们直接从扰动数据构建数据挖掘模型，而不试图将通用数据分布重构作为中间步骤。在我们的解决方案中，我们修改数据挖掘算法，使其能直接用于扰动数据。换句话说，我们直接从扰动训练数据集构建原始数据集的分类器。
@@ -4231,7 +4063,9 @@ DOI: [10.1201/9781003081845-20](https://doi.org/10.1201/9781003081845-20)
 
 不同于 [AGRA2000] 中最初的噪声加法方法，已提出许多独特的扰动方法。一个重要类别是乘法扰动方法。从数据几何属性的角度来看，用随机噪声矩阵乘以原始数据值相当于旋转原始数据矩阵，因此也称为基于旋转的扰动。在 [CHEN2005] 中，作者给出了“旋转不变分类器”的可靠证明，表明某些数据挖掘工具可直接应用于基于旋转扰动的数据。在后来的工作 [LIU2006] 中，Liu 等人提出了乘法随机投影，提供了更强的隐私保护。还有一些其他有趣的技术，如基于凝聚的方法 [AGRA2000]、矩阵分解 [XU2006] 等。正如 [LIU2007] 所指出的，这些近期关于基于扰动方法的研究工作直接将数据挖掘技术应用于扰动数据，跳过了重构步骤。选择合适的数据挖掘技术取决于引入噪声的方法。据我们所知，只有少数工作专注于映射或修改数据挖掘技术以满足扰动数据的需求。
 
-另一种方法使用密码学工具构建数据挖掘模型。例如，在 [LIND2000] 中，目标是在训练集分布在两方之间的情况下安全地构建 `ID3` 决策树。利用密码学技术给出了不同的解决方案来解决不同的数据挖掘问题（例如 [CLIF2002, KANT2004, VAID2003])。这种方法将隐私保护数据挖掘视为安全多方计算的一个特例，不仅旨在保护个人隐私，还试图防止除最终结果外的任何信息泄露。但当参与方数量变大时，通信和计算成本会呈指数级增长。
+
+
+另一种方法使用密码学工具构建数据挖掘模型。例如，在 [LIND2000] 中，目标是在训练集分布在两方之间的情况下安全地构建 `ID3` 决策树。利用密码学技术给出了不同的解决方案来解决不同的数据挖掘问题（例如 [CLIF2002, KANT2004, VAID2003]）。这种方法将隐私保护数据挖掘视为安全多方计算的一个特例，不仅旨在保护个人隐私，还试图防止除最终结果外的任何信息泄露。但当参与方数量变大时，通信和计算成本会呈指数级增长。
 
 我们的方法是一种修改后的 `C4.5` 决策树算法 [QUIN1993]，并采用噪声加法方法。我们的方法适用于许多参与方希望执行数据挖掘，但每方仅拥有少量数据的场景。为了获得全局数据挖掘模式，各方必须共享其数据，但每方都有其隐私和安全顾虑。我们的方法正是针对这种情况的解决方案。在我们的方法中，每方根据预设随机噪声的分布扰动其数据，并将扰动后的数据发送给数据挖掘者。数据挖掘者收集各方的扰动数据集，并知晓用于扰动数据的分布。基于这些信息，数据挖掘者构建一个分类器，并将该分类器返回给每个参与方。然后每方可使用此分类器对其数据进行分类。在这种情况下，每方仅知晓自己的数据和分类器，而不知晓其他方的任何数据。数据挖掘者仅能访问扰动数据和噪声数据的分布。这样，隐私得以保护，且每方的通信和计算成本被最小化。
 
@@ -4267,16 +4101,13 @@ fB = 2 fA,
 
 ## 12.4 决策树构建概述
 
-
-
-
 ### 我们提出了一种修改后的 C4.5 决策树分类器，它从扰动数据构建决策树，并可用于对原始数据和扰动数据进行分类。
 
-这种方法背后的思想如下：当我们考虑属性的分裂点时，也会考虑噪声数据集的偏差。每当我们试图寻找最佳属性、最佳分裂点并划分训练数据时，都会计算偏差。C4.5 算法是 ID3 算法的扩展，由 Quinlan 在 [QUIN1993] 中提出。经过多年的改进，C4.5 算法已成为处理数值连续属性的最佳算法之一 [QUIN1996]。它能找到最佳分裂属性以及数值连续属性的最佳分裂点。
+这种方法背后的思想如下：当我们考虑属性的分裂点时，也会考虑噪声数据集的偏差。每当我们试图寻找最佳属性、最佳分裂点并划分训练数据时，都会计算偏差。`C4.5` 算法是 `ID3` 算法的扩展，由 Quinlan 在 [QUIN1993] 中提出。经过多年的改进，`C4.5` 算法已成为处理数值连续属性的最佳算法之一 [QUIN1996]。它能找到最佳分裂属性以及数值连续属性的最佳分裂点。
 
 ### 12.4.1 分裂准则
 
-分裂准则在构建决策树时至关重要。它决定使用哪个属性进行分裂，对于数值连续属性，还决定使用哪个值进行分裂。它决定了决策树是否高效，并极大地影响分类准确率。ID3 使用信息增益作为分裂准则。C4.5 算法使用信息增益率，在检查属性时会考虑分支数量。信息增益和增益率的公式如下：
+分裂准则在构建决策树时至关重要。它决定使用哪个属性进行分裂，对于数值连续属性，还决定使用哪个值进行分裂。它决定了决策树是否高效，并极大地影响分类准确率。`ID3` 使用信息增益作为分裂准则。`C4.5` 算法使用信息增益率，在检查属性时会考虑分支数量。信息增益和增益率的公式如下：
 
 ```
 Info(S) = - Σ_{j=1}^{k} (freq(C_j, S) / |S|) × log₂(freq(C_j, S) / |S|)  (12.3)
@@ -4304,11 +4135,11 @@ gainRatio(Test_A) = gain(Test_A) / splitInfo(Test_A)  (12.7)
 
 #### 二元分裂法
 
-C4.5 算法也旨在处理数值属性。C4.5 算法不使用固定范围，而是在可能的分裂点中搜索以找到最佳分裂点。假设数值属性 `A_i` 按升序具有值 `{x_1, x_2, …, x_m}`。C4.5 将实例划分为两组 `S_1` 和 `S_2`，其中 `S_1` 包含不超过 `x_j` 的值，`S_2` 包含大于 `x_j` 的值。对于每个划分，C4.5 计算增益率并选择使增益率最大化的划分。
+`C4.5` 算法也旨在处理数值属性。`C4.5` 算法不使用固定范围，而是在可能的分裂点中搜索以找到最佳分裂点。假设数值属性 `A_i` 按升序具有值 `{x_1, x_2, …, x_m}`。`C4.5` 将实例划分为两组 `S_1` 和 `S_2`，其中 `S_1` 包含不超过 `x_j` 的值，`S_2` 包含大于 `x_j` 的值。对于每个划分，`C4.5` 计算增益率并选择使增益率最大化的划分。
 
 ### 12.4.3 停止准则
 
-停止准则决定何时停止决策树的生长。在 C4.5 算法中，当满足以下两个准则之一时，树停止生长。一是节点上的所有实例具有相同的类别标签 `C_i`；我们称该节点为纯节点。二是节点上的实例数量小于或等于预设的阈值；我们称该数量为节点的最小实例数。我们在隐私保护决策树 C4.5 (`PPDTC4.5`) 中也使用相同的停止准则。
+停止准则决定何时停止决策树的生长。在 `C4.5` 算法中，当满足以下两个准则之一时，树停止生长。一是节点上的所有实例具有相同的类别标签 `C_i`；我们称该节点为纯节点。二是节点上的实例数量小于或等于预设的阈值；我们称该数量为节点的最小实例数。我们在隐私保护决策树 `C4.5` (`PPDTC4.5`) 中也使用相同的停止准则。
 
 ## 12.5 基于扰动数据的朴素贝叶斯分类器构建
 
@@ -4346,7 +4177,7 @@ S² = (1/(n - 1)) · Σ_{t=1}^{n} (w_ij^t - w̄_ij)²
 
 的期望值为 `σ_ij² + σ_R²`，我们可以利用 `S²` 和已知的 `σ_R²` 来估计 `σ_ij²`（即用 `S² − σ_R²` 来估计 `σ_ij²`）。
 
-因此，只要我们不改变类别标签，就可以直接从扰动数据构建朴素贝叶斯分类器。更进一步说，由于使用扰动数据和原始数据进行参数估计具有相同的期望值，我们在两种情况下都应该能获得相似的分类准确率。为验证上述直觉，我们使用 WEKA 机器学习工具包 [WITT2005] 中的朴素贝叶斯分类器进行了一些实验。
+因此，只要我们不改变类别标签，就可以直接从扰动数据构建朴素贝叶斯分类器。更进一步说，由于使用扰动数据和原始数据进行参数估计具有相同的期望值，我们在两种情况下都应该能获得相似的分类准确率。为验证上述直觉，我们使用 `WEKA` 机器学习工具包 [WITT2005] 中的朴素贝叶斯分类器进行了一些实验。
 
 使用包含所有六个数值连续属性的相同数据集，我们从原始数据集构建朴素贝叶斯分类器，获得 79.7% 的分类准确率。类似地，如果直接从扰动训练数据集构建朴素贝叶斯分类器并在扰动测试集上测试，可获得 78% 的分类准确率。正如预期的那样，这两个分类准确率值非常接近。
 
@@ -4355,8 +4186,6 @@ S² = (1/(n - 1)) · Σ_{t=1}^{n} (w_ij^t - w̄_ij)²
 ### 12.6.1 动机
 
 在本节中，我们将描述如何从扰动训练数据集构建决策树分类器。我们将展示阈值法和随机路径选择法这两种不同的构建分类器的方式。阈值算法对原始数据集的分类提供了相当不错的准确率。随机路径选择算法使用概率作为权重，为属性寻找良好的分裂点。然而，正如我们将看到的，随机选择路径来划分训练数据集并不能构建一个良好的决策树分类器。
-
-
 
 我们将随机路径选择算法纳入其中，主要是为了比较目的，同时也为未来的工作提供一些方向，即构建决策树分类器来对扰动数据集进行分类。我们认为，通过对随机变量 `R` 的紧界进行适当改进，可以提高随机路径选择算法的性能。
 
@@ -4394,9 +4223,9 @@ splitThreshold(w_j, t) = { S_1, if p_{S_1}(w_j | t) > threshold; S_2, if p_{S_1}
 
 请注意，条件 `pS1 > threshold` 等价于条件 `pS2 ≤ (1 − threshold)`，反之亦然。例如，条件 `pS1(wj|t) > 0.2` 等价于条件 `pS2(wj|t) ≤ 0.8`。伪代码如 Algorithm 12.1 所示。
 
-使用阈值方法看似是一种简单的方法，但设置能够导致成功分类器的适当阈值并非易事。根据定义，`pS1` 是给定分裂点 `t` 和 `w[j]` 时 `w[j]` 属于 `S[1]` 的概率。当给定分裂点 `t` 和扰动实例 `w[j]` 时，唯一的不确定性就是随机噪声 `R`。换句话说，阈值的选择与随机噪声的分布有关。在我们的实验中，我们对随机噪声均使用了均匀分布和高斯分布。这两种分布的阈值不同。对于高斯分布，当阈值设置为 0.30 时，分类器给出较高的准确率；对于均匀分布，当阈值设置为 0.50 时，分类器给出较高的准确率。实验结果将在下一节讨论。
+使用阈值方法看似是一种简单的方法，但设置能够导致成功分类器的适当阈值并非易事。根据定义，`pS1` 是给定分裂点 `t` 和扰动实例 `w[j]` 时 `w[j]` 属于 `S[1]` 的概率。当给定分裂点 `t` 和扰动实例 `w[j]` 时，唯一的不确定性就是随机噪声 `R`。换句话说，阈值的选择与随机噪声的分布有关。在我们的实验中，我们对随机噪声均使用了均匀分布和高斯分布。这两种分布的阈值不同。对于高斯分布，当阈值设置为 0.30 时，分类器给出较高的准确率；对于均匀分布，当阈值设置为 0.50 时，分类器给出较高的准确率。实验结果将在下一节讨论。
 
-决定阈值的另一个好方法是保持其灵活性，就像 C4.5 算法为数值连续属性寻找最佳分裂点 `t` 那样。这将带来良好的结果，但会增加计算成本。
+决定阈值的另一个好方法是保持其灵活性，就像 `C4.5` 算法为数值连续属性寻找最佳分裂点 `t` 那样。这将带来良好的结果，但会增加计算成本。
 
 ### 12.6.4 对原始实例进行分类
 
@@ -4439,12 +4268,13 @@ splitInfo'(Test_A) = - Σ_{i=1}^n ( |w(S_i, S)| / |S| ) × log_2( |w(S_i, S)| / 
 
 现在，我们可以将上述修改后的定义插入原始测试中，以选择分裂点和属性。
 
+```
+gain'(Test_A) = Info(S) - Info'_S(Test_A)(S)  (12.21)
+```
 
-
-
-$$gain'(Test_A) = Info(S) - Info'_S(Test_A)(S) \tag{12.21}$$
-
-$$gainRatio'(Test_A) = \frac{gain'(Test_A)}{splitInfo'(Test_A)} \tag{12.22}$$
+```
+gainRatio'(Test_A) = gain'(Test_A) / splitInfo'(Test_A)  (12.22)
+```
 
 现在，我们可以使用公式 (12.22) 来选择一个分裂点和一个属性。请注意，`C4.5` 中使用的原始公式与我们的公式之间的主要区别在于，我们在公式中使用了属于某个分区的概率作为权重。这种修改背后的基本原理如下：如果我们清晰地写出原始公式，可以看到存在一个隐含的指示函数，它根据实例属于集合 `S[1]` 还是集合 `S[2]` 来分配 0 或 1。由于我们无法确定某个实例是在 `S[1]` 中还是在 `S[2]` 中，因此我们使用属于 `S[1]` 或 `S[2]` 的概率作为权重。
 
@@ -4452,21 +4282,25 @@ $$gainRatio'(Test_A) = \frac{gain'(Test_A)}{splitInfo'(Test_A)} \tag{12.22}$$
 
 该方法是在找到分裂点和属性后，将训练数据分成两部分的一种替代方式。同样，在我们的实现中，我们基于 `p[S1]` (`w[j]`) 和 `p[S2]` (`w[j]`) 的值使用随机分割。
 
-$$splitRandom(w_j, t) = \begin{cases} S_1, & \text{with prob. } p_{S_1}(w_j) \\ S_2, & \text{with prob. } p_{S_2}(w_j) \end{cases} \tag{12.23}$$
+```
+splitRandom(w_j, t) = { S_1, with prob. p_{S_1}(w_j); S_2, with prob. p_{S_2}(w_j) } (12.23)
+```
 
 伪代码如 算法 12.3 所示。
 
 ### 12.6.7 使用随机路径选择对扰动实例进行分类
 
-对于扰动数据集 `W` 中的每个测试实例 `w[j]`，以及构建的树中每个选定的分裂点，我们计算 `p[S1]` (`w[j]`) |t) = `p[1]`。接下来，我们以概率 `p1` 将实例放置在该节点的左子节点，以概率 1 − `p[1]` 放置在右子节点。我们继续这一过程，直到到达叶节点。伪代码如 算法 12.4 所示。
+
+
+对于扰动数据集 `W` 中的每个测试实例 `w[j]`，以及构建的树中每个选定的分裂点，我们计算 `p[S1]` (`w[j]`) |t) = `p[1]`。接下来，我们以概率 `p1` 将实例放置在该节点的左子节点，以概率 1 − `p[1]` 放置在右子节点。我们继续这一过程，直到到达叶节点。伪代码如算法 12.4 所示。
 
 ## 12.7 实验结果
 
 ### 12.7.1 我们的方法
 
-在我们的实验中，我们使用从 1994 年人口普查数据库中提取的数据（“人口普查收入”或“收入”），该数据可从加利福尼亚大学欧文分校 (UCI) 机器学习数据库存储库 1 下载。该数据集有 14 个属性，6 个连续属性和 8 个离散属性。它总共有 48,842 个实例，分为训练数据 32,561 个实例和测试数据 16,281 个实例。这些数据用于预测收入是否超过每年 50K。我们选择这个数据集是为了与基于重构的技术进行公平比较，因为这些技术需要相对较大的数据集。由于在本章中我们专注于数值连续属性，因此我们在数据集中仅保留了六个数值连续属性。此外，为了提高效率，我们从训练数据集中随机选择了 10,000 个实例，并保留了测试数据集中的所有实例。
+在我们的实验中，我们使用从 1994 年人口普查数据库中提取的数据（“人口普查收入”或“收入”），该数据可从加利福尼亚大学欧文分校 (UCI) 机器学习数据库存储库下载。该数据集有 14 个属性，6 个连续属性和 8 个离散属性。它总共有 48,842 个实例，分为训练数据 32,561 个实例和测试数据 16,281 个实例。这些数据用于预测收入是否超过每年 50K。我们选择这个数据集是为了与基于重构的技术进行公平比较，因为这些技术需要相对较大的数据集。由于在本章中我们专注于数值连续属性，因此我们在数据集中仅保留了六个数值连续属性。此外，为了提高效率，我们从训练数据集中随机选择了 10,000 个实例，并保留了测试数据集中的所有实例。
 
-我们使用 [AGRA2000] 中提出的噪声添加框架，并向每个属性添加高斯和均匀随机噪声。当使用高斯随机噪声时，我们知道方差 `σ²` 会显著影响结果。我们使用了四组具有不同方差值的高斯分布噪声数据。为了量化添加到实际数据中的相对噪声量，我们使用了信噪比 (SNR)，即实际数据的方差 `.3` 与噪声数据方差 `σ²` 之比 [KARG2003]。我们还使用 第 12.2 节 中提到的隐私度量来量化隐私损失。表 12.1 显示了五个扰动数据集及其 SNR 值和隐私度量。在我们的实验中，我们仅使用一组由均匀噪声扰动的数据集，显示为数据 5。从表 12.1 可以看出，当 SNR 值较高时，噪声数据的方差 `σ²` 较低，因此扰动数据保留的隐私较少。均匀分布噪声由给定的数据范围生成。我们可以计算均匀噪声数据中每个属性的 SNR，在我们的实验数据集中，六个属性的 SNR 值分别为 1.3、2.7、1.2、53.6、1.9 和 1.1。
+我们使用 [AGRA2000] 中提出的噪声添加框架，并向每个属性添加高斯和均匀随机噪声。当使用高斯随机噪声时，我们知道方差 `σ²` 会显著影响结果。我们使用了四组具有不同方差值的高斯分布噪声数据。为了量化添加到实际数据中的相对噪声量，我们使用了信噪比 (SNR)，即实际数据的方差与噪声数据方差 `σ²` 之比 [KARG2003]。我们还使用第 12.2 节中提到的隐私度量来量化隐私损失。表 12.1 显示了五个扰动数据集及其 SNR 值和隐私度量。在我们的实验中，我们仅使用一组由均匀噪声扰动的数据集，显示为数据 5。从表 12.1 可以看出，当 SNR 值较高时，噪声数据的方差 `σ²` 较低，因此扰动数据保留的隐私较少。均匀分布噪声由给定的数据范围生成。我们可以计算均匀噪声数据中每个属性的 SNR，在我们的实验数据集中，六个属性的 SNR 值分别为 1.3、2.7、1.2、53.6、1.9 和 1.1。
 
 表 12.1 不同数据集的隐私度量
 
@@ -4480,7 +4314,7 @@ $$splitRandom(w_j, t) = \begin{cases} S_1, & \text{with prob. } p_{S_1}(w_j) \\ 
 
 首先请注意，本地数据挖掘是指每个参与者挖掘自己的数据。全局数据挖掘是指参与者共享数据并挖掘以获得全局模式。正如我们之前提到的，我们的方法适用于多方参与全局数据挖掘而不泄露其隐私的场景。分布在各方之间的数据集可以是水平分区或垂直分区。水平分区数据意味着实例分布在各方之间，垂直分区数据意味着属性分布在各方之间。实验结果表明，对于这两种类型的分区，本地数据挖掘的结果都不如从全局数据挖掘获得的结果准确。这支持了从全局共享数据中提取信息效果更好的事实。
 
-我们使用上一小节描述的具有六个属性的数据集。我们随机选择实例形成不同大小的小数据集，记为第 1 组、第 2 组到第 10 组。我们在这些数据集上应用标准 `C4.5` 分类器，准确率数字如 表 12.2 所示。显然，当实例数量增加时，`C4.5` 决策树算法的性能更好。
+我们使用上一小节描述的具有六个属性的数据集。我们随机选择实例形成不同大小的小数据集，记为第 1 组、第 2 组到第 10 组。我们在这些数据集上应用标准 `C4.5` 分类器，准确率数字如表 12.2 所示。显然，当实例数量增加时，`C4.5` 决策树算法的性能更好。
 
 表 12.2 水平分区数据上的 C4.5 决策树分类器准确率
 
@@ -4492,7 +4326,7 @@ $$splitRandom(w_j, t) = \begin{cases} S_1, & \text{with prob. } p_{S_1}(w_j) \\ 
 | 50 实例 | 74.63 | 72.37 | 74.23 | 76.27 | 77.73 |
 | 100 实例 | 78.77 | 75.4 | 78.13 | 76.2 | 77.77 |
 
-类似地，我们从“收入”数据集中移除了一些属性，然后在新数据集上应用标准 `C4.5` 决策树分类器，分类结果的准确率如 表 12.3 所示。我们可以看到，当属性数量增加时，`C4.5` 决策树算法的性能更好。
+类似地，我们从“收入”数据集中移除了一些属性，然后在新数据集上应用标准 `C4.5` 决策树分类器，分类结果的准确率如表 12.3 所示。我们可以看到，当属性数量增加时，`C4.5` 决策树算法的性能更好。
 
 表 12.3 垂直分区数据上的 C4.5 决策树分类器准确率
 
@@ -4503,10 +4337,6 @@ $$splitRandom(w_j, t) = \begin{cases} S_1, & \text{with prob. } p_{S_1}(w_j) \\ 
 
 ### 12.7.3 基于重构的方法结果
 
-
-
-
-
 #### 对比实验：原始数据分布重构方法
 
 为进行对比，我们报告了使用原始数据分布重构方法获得的数据挖掘结果。我们将两种著名的重构技术应用于扰动数据集。
@@ -4514,11 +4344,12 @@ $$splitRandom(w_j, t) = \begin{cases} S_1, & \text{with prob. } p_{S_1}(w_j) \\ 
 第一种技术是 Agrawal 等人提出的基于贝叶斯推断估计（BE）的方法 [AGRA2000]。第二种技术是 Kargupta 等人提出的基于主成分分析（PCA）的方法 [KARG2003]。算法细节请参考原始文献。我们在五个数据集上应用了这两种技术：首先重构原始分布，然后利用该估计分布构建数据挖掘模型。
 
 我们执行了三种不同的测试来比较数据挖掘准确率：
+
 1. 在重构的测试数据上测试分类器；
 2. 在原始测试数据上测试分类器；
 3. 在扰动测试数据上测试分类器。
 
-数据挖掘模型的预测准确率如 表 12.5 和 表 12.6 所示。作为对比，表 12.4 显示了直接从扰动数据集获得的数据挖掘准确率。
+数据挖掘模型的预测准确率如表 12.5 和表 12.6 所示。作为对比，表 12.4 显示了直接从扰动数据集获得的数据挖掘准确率。
 
 #### 表 12.4 直接在 10k 扰动训练数据集上应用数据挖掘技术的准确率
 
@@ -4570,7 +4401,7 @@ $$splitRandom(w_j, t) = \begin{cases} S_1, & \text{with prob. } p_{S_1}(w_j) \\ 
 
 使用前文描述的数据集，我们进行了不同的实验。在原始训练数据集上应用 WEKA [WITT2005] C4.5 算法构建决策树，并对原始测试数据集进行分类，可获得 83.40% 的准确率。表 12.4 显示了直接在扰动数据集上应用数据挖掘工具的准确率。表 12.7 显示了我们提出的 PPDTC4.5 算法的数据挖掘准确率。
 
-我们可以看到，当在这五个数据集上使用我们提出的 PPDTC4.5 阈值方法构建决策树并在原始数据集上分类时：Data 1 和 Data 2 的准确率高于在扰动数据上分类的准确率；Data 5 相当；Data 3 和 Data 4 较低。原因在于信噪比（SNR）值在此起关键作用。表 12.1 显示了具有不同 SNR 值的扰动数据集。当 SNR 小于 1.0 时，意味着噪声数据的方差 `σ²` 大于实际数据的方差 `σ²`。换句话说，Data 3 和 Data 4 引入了更多噪声。我们的算法在 SNR 值大于 1.0 时取得良好结果。当阈值方法构建的决策树分类器不适合对扰动数据集进行分类时，是因为我们的算法估计分裂点并划分训练数据，就像原始数据那样。
+我们可以看到，当在这五个数据集上使用我们提出的 PPDTC4.5 阈值方法构建决策树并在原始数据集上分类时：Data 1 和 Data 2 的准确率高于在扰动数据上分类的准确率；Data 5 相当；Data 3 和 Data 4 较低。原因在于信噪比（SNR）值在此起关键作用。表 12.1 显示了具有不同 SNR 值的扰动数据集。当 SNR 小于 1.0 时，意味着噪声数据的方差 `σ²` 大于实际数据的方差。换句话说，Data 3 和 Data 4 引入了更多噪声。我们的算法在 SNR 值大于 1.0 时取得良好结果。当阈值方法构建的决策树分类器不适合对扰动数据集进行分类时，是因为我们的算法估计分裂点并划分训练数据，就像原始数据那样。
 
 #### 表 12.7 提出的 PPDTC4.5 数据挖掘准确率
 
@@ -4587,10 +4418,6 @@ $$splitRandom(w_j, t) = \begin{cases} S_1, & \text{with prob. } p_{S_1}(w_j) \\ 
 为了构建对扰动数据进行分类的分类器，我们使用概率作为权重寻找最佳分裂点，并使用随机路径选择来划分训练数据，但目前分类器准确率与直接应用 WEKA C4.5 算法相比并未显著提高。原因在于在划分训练数据集和对测试数据集分类时，随机路径选择方法不能很好地约束随机噪声 `R`。未来，我们希望找到一种更好的方法来约束 `R` 值，以构建更适合对扰动数据进行分类的分类器。
 
 正如我们在实验结果中所见，与直接将数据挖掘技术应用于扰动数据集获得的结果相比，我们提出的 PPDTC4.5 分类器可能无法获得非常令人振奋的高准确率。但与基于重构的方法相比，我们的方法取得了非常好的结果。我们想表达的观点是：避免求解困难的分布问题，而是将数据挖掘函数映射为构建隐私保护数据挖掘方法。这是一个有前景的方向。此外，我们的实验结果还表明，当有海量数据集可用时，白噪声不再能阻止数据挖掘工具提取模式。因此，当数据集足够大时，直接挖掘扰动数据集也是一种好的方法。
-
-
-
-
 
 #### PPDTC4.5 阈值方法
 
@@ -4619,6 +4446,9 @@ Figure 12.3 PPDTC4.5 分类器在 32K 高斯扰动训练数据和 16k 原始测�
 ## 参考文献
 
 *   [AGGA2004] C.C. Aggarwal, P.S. Yu, A Condensation Approach to Privacy Preserving Data Mining, EDBT, Crete, Greece, 2004.
+
+
+
 *   [AGRA2000] R. Agrawal, R. Srikant, Privacy-Preserving Data Mining, SIGMOD Conference, 2000, pp. 439–450.
 *   [AGRA2001] D. Agrawal, C.C. Aggarwal, On the Design and Quantification of Privacy Preserving Data Mining Algorithms, PODS, ACM, 2001.
 *   [CHEN2005] K. Chen, L. Liu, Privacy Preserving Data Classification with Rotation Perturbation, ICDM, 2005, pp. 589–592.
@@ -4633,25 +4463,14 @@ Figure 12.3 PPDTC4.5 分类器在 32K 高斯扰动训练数据和 16k 原始测�
 *   [LIU2009] Li Liu, M. Kantarcioglu, B.M. Thuraisingham, Privacy Preserving Decision Tree Mining from Perturbed Data, HICSS, 2009, pp. 1–10.
 *   [MITC1997] T.M. Mitchell, Machine Learning, Mcgraw-Hill, 1997.
 *   [QUIN1993] J.R. Quinlan, C4.5: Programs for Machine Learning, Morgan Kaufmann, 1993.
-
-
-
-
-*   \[QUIN1996\] J.R. Quinlan. Improved Use of Continuous Attributes in c4.5. Journal of Artificial Intelligence Research (JAIR), Volume 4, 1996, 77–90.
-
-*   \[RIZV2002\] S. Rizvi, J.R. Haritsa. Maintaining Data Privacy in Association Rule Mining. *Proceedings of Very Large Data Bases* (VLDB) Conference, Morgan Kaufmann, 2002, pp. 682–693.
-
-*   \[THUR1998\] B. Thuraisingham, Data Mining: Technologies, Techniques, Tools and Trends, CRC Press, 1998.
-
-*   \[THUR2002\] B. Thuraisingham, Data Mining, National Security, Privacy and Civil Liberties, SIGKDD Explorations, Volume 4, #2, December 2002.
-
-*   \[THUR2005\] B.M. Thuraisingham, Privacy Constraint Processing in a Privacy-enhanced Database Management System, Data Knowledge in Engineering, Volume 55, # 2, 2005, 159–188.
-
-*   \[VAID2003\] J. Vaidya, C. Clifton, Privacy-Preserving K-Means Clustering over Vertically Partitioned Data, KDD'03: Proceedings of the Ninth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, 2003, pp. 206–215.
-
-*   \[WITT2005\] I.H. Witten, E. Frank, Data Mining: Practical Machine Learning Tools and Techniques, Morgan Kaufmann, 2nd edition, 2005.
-
-*   \[XU2006\] S. Xu, J. Zhang, D. Han, J. Wang, Singular value decomposition based data distortion strategy for privacy protection, Knowledge and Information Systems, Volume 10, # 3, 2006, 383–397.
+*   [QUIN1996] J.R. Quinlan. Improved Use of Continuous Attributes in c4.5. Journal of Artificial Intelligence Research (JAIR), Volume 4, 1996, 77–90.
+*   [RIZV2002] S. Rizvi, J.R. Haritsa. Maintaining Data Privacy in Association Rule Mining. *Proceedings of Very Large Data Bases* (VLDB) Conference, Morgan Kaufmann, 2002, pp. 682–693.
+*   [THUR1998] B. Thuraisingham, Data Mining: Technologies, Techniques, Tools and Trends, CRC Press, 1998.
+*   [THUR2002] B. Thuraisingham, Data Mining, National Security, Privacy and Civil Liberties, SIGKDD Explorations, Volume 4, #2, December 2002.
+*   [THUR2005] B.M. Thuraisingham, Privacy Constraint Processing in a Privacy-enhanced Database Management System, Data Knowledge in Engineering, Volume 55, # 2, 2005, 159–188.
+*   [VAID2003] J. Vaidya, C. Clifton, Privacy-Preserving K-Means Clustering over Vertically Partitioned Data, KDD'03: Proceedings of the Ninth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, 2003, pp. 206–215.
+*   [WITT2005] I.H. Witten, E. Frank, Data Mining: Practical Machine Learning Tools and Techniques, Morgan Kaufmann, 2nd edition, 2005.
+*   [XU2006] S. Xu, J. Zhang, D. Han, J. Wang, Singular value decomposition based data distortion strategy for privacy protection, Knowledge and Information Systems, Volume 10, # 3, 2006, 383–397.
 
 # 13 面向隐私感知量化自我数据管理框架
 
@@ -4661,9 +4480,9 @@ DOI: [10.1201/9781003081845-21](https://doi.org/10.1201/9781003081845-21)
 
 虽然第一部分讨论了安全数据科学的基础技术，第二部分讨论了面向网络安全的数据科学，但第三部分侧重于安全且隐私感知的数据科学。具体而言，虽然第 10 章和第 11 章讨论了针对数据科学技术的攻击，但第 12 章侧重于隐私保护数据科学。在本章（即第 13 章）中，我们将讨论如何强制执行策略，以构建一个面向量化自我应用的隐私感知框架。这项工作直接源于大数据安全与隐私研讨会关于隐私增强型大数据管理与分析的建议。特别是，我们关注在移动设备上收集的海量信息的隐私保护。
 
-智能手机等移动设备已成为拥有数十亿用户的普及计算平台。智能手机应用下载量稳步上升，其中包括大量用于监测个人数据的应用，如健康、饮食摄入、运动和睡眠模式等。随着*量化自我*（*QS*）运动的最近兴起，可穿戴设备和智能手机应用收集的个人数据正被分析，以指导用户改善其健康或个人生活习惯。这些数据还通过基于云的服务与其他服务提供商（如零售商）共享，为用户带来潜在利益（如健康产品信息）。但此类数据收集和共享往往在用户不知情的情况下进行，存在个人数据可能被用于不当目的的严重风险。例如，监测血糖水平的设备收集的数据可能被保险公司用来拒绝为用户甚至用户的血亲提供承保。如果数据收集者能够将财务和健康相关数据与推文、Facebook 活动及购买模式聚合，此类隐私侵犯很容易失控。这可能导致针对数据收集者的诉讼，并给个人带来心理和生理上的痛苦。为了应对这些日益严峻的挑战，我们迫切需要用于 QS 应用隐私保护的工具和技术。
+智能手机等移动设备已成为拥有数十亿用户的普及计算平台。智能手机应用下载量稳步上升，其中包括大量用于监测个人数据的应用，如健康、饮食摄入、运动和睡眠模式等。随着`量化自我`（`QS`）运动的最近兴起，可穿戴设备和智能手机应用收集的个人数据正被分析，以指导用户改善其健康或个人生活习惯。这些数据还通过基于云的服务与其他服务提供商（如零售商）共享，为用户带来潜在利益（如健康产品信息）。但此类数据收集和共享往往在用户不知情的情况下进行，存在个人数据可能被用于不当目的的严重风险。例如，监测血糖水平的设备收集的数据可能被保险公司用来拒绝为用户甚至用户的血亲提供承保。如果数据收集者能够将财务和健康相关数据与推文、Facebook 活动及购买模式聚合，此类隐私侵犯很容易失控。这可能导致针对数据收集者的诉讼，并给个人带来心理和生理上的痛苦。为了应对这些日益严峻的挑战，我们迫切需要用于 QS 应用隐私保护的工具和技术。
 
-我们的工作受第 13.2 节中讨论的示例和场景驱动，旨在解决该问题。具体而言，我们的目标是开发新型移动和基于云的数据存储架构，并结合创新的加密协议、访问控制技术、隐私增强技术、信息泄露分析和可用性分析，以安全地存储、处理和共享隐私敏感的 QS 数据，而不侵犯个人隐私。特别是，我们的目标是开发一个隐私感知的 QS 数据管理框架，控制 QS 数据的整个生命周期，并包含以下组件：(i) 隐私感知数据收集，(ii) 隐私感知数据存储与访问，以及 (iii) 隐私感知数据分析/挖掘与共享。本章的组织结构如下：第 13.2 节描述我们的方法。第 13.3 节描述框架的高层设计；第 13.4 节讨论新颖的方向，如信息共享的行为方面、形式化框架的开发方面，以及我们将此类框架应用于其他应用（如智能交通系统）的工作。第 13.5 节总结本章。图 13.1 展示了本章讨论的这些概念。更多详情请见\[THUR2018\]。
+我们的工作受第 13.2 节中讨论的示例和场景驱动，旨在解决该问题。具体而言，我们的目标是开发新型移动和基于云的数据存储架构，并结合创新的加密协议、访问控制技术、隐私增强技术、信息泄露分析和可用性分析，以安全地存储、处理和共享隐私敏感的 QS 数据，而不侵犯个人隐私。特别是，我们的目标是开发一个隐私感知的 QS 数据管理框架，控制 QS 数据的整个生命周期，并包含以下组件：(i) 隐私感知数据收集，(ii) 隐私感知数据存储与访问，以及 (iii) 隐私感知数据分析/挖掘与共享。本章的组织结构如下：第 13.2 节描述我们的方法。第 13.3 节描述框架的高层设计；第 13.4 节讨论新颖的方向，如信息共享的行为方面、形式化框架的开发方面，以及我们将此类框架应用于其他应用（如智能交通系统）的工作。第 13.5 节总结本章。图 13.1 展示了本章讨论的这些概念。更多详情请见[THUR2018]。
 
 ![Figure 13.1 Concepts discussed in this chapter.](img/fig13_1.jpg)
 
@@ -4674,10 +4493,6 @@ DOI: [10.1201/9781003081845-21](https://doi.org/10.1201/9781003081845-21)
 ### 13.2.1 动机场景
 
 海量数据正被收集、存储和分析，用于各种商业和营销目的。虽然此类数据分析对许多应用至关重要，但也可能侵犯个人隐私。本章描述了设计隐私感知数据管理框架以收集、存储和分析数据所涉及的问题。我们还讨论了数据共享的行为方面，以及基于重写规则、涵盖隐私感知数据管理框架的形式化框架方面。
-
-
-
-
 
 为了解环境因素（如空气污染）和生活方式因素（如睡眠质量）对儿童哮喘发作的影响，美国国家卫生研究院（NIH）最近启动了“利用集成传感器监测系统的儿科研究（PRISMS）”计划。该计划的目标是“解决与集成监测系统数据集相关的重大数据科学和工具开发挑战，以推动我们对儿童哮喘环境决定因素理解的重要进展”[NIH2015]。作为该研究的一部分，预计监测设备将佩戴在儿童身上以收集其生活方式数据（如身体活动、血氧水平），并将这些生活方式数据集与环境（如儿童住所附近的空气污染）和医疗（如因哮喘发作住院的次数）数据集相结合，以更好地理解和预测哮喘发作。该 NIH 计划要求研究人员具备“确保数据安全并维护个人身份信息机密性的专业能力”，因为家长在参与此类研究前需要获得关于其孩子隐私的有力保障。同样，收集的关于员工的 QS 数据（如睡眠质量、活动数据）可用于预测员工压力水平并改善员工福祉，前提是采取了保护隐私的适当措施。根据普华永道（PwC）最近的一项调查，只有“超过一半的员工会考虑佩戴雇主提供的智能手表，如果他们的数据被用于改善工作时长、压力水平和工作地点等方面。”好消息是，根据调查，“如果数据被匿名化并在汇总层面共享，而不是个性化的，人们也更愿意接受这一想法。”这些例子展示了收集和共享 QS 数据以改善医疗结果和员工生产力的潜力，但前提是必须保护个人隐私。因此，我们需要一个框架来强制执行由用户隐私需求指导的适当隐私感知策略，以确定收集、存储和共享哪些数据，由谁、何时、何地、为何以及如何进行，同时还需要工具和技术来高效地执行这些策略，并从 QS 数据中获取尽可能多的效用。
 
@@ -4693,9 +4508,6 @@ DOI: [10.1201/9781003081845-21](https://doi.org/10.1201/9781003081845-21)
 
 `Data Storage and Access Layer` 还将处理数据生命周期的管理。在某些情况下，数据可能不再需要以细粒度形式保存。例如，存储 20 年前的每日体重数据可能是不必要的；相反，存储和挖掘月均体重数据可能足以支持各种医疗应用。在其他情况下，为了保护隐私，数据可能必须被删除（例如，删除和/或生成虚假位置数据以隐藏用户参加过抗议活动的事实）。此类数据删除策略将由存储层自动管理，并将使用定量信息流分析来分析此类删除的潜在隐私影响（例如，仅删除敏感信息可能会产生一些推理侧信道）。由于人们经常更换或丢失移动设备，我们设想存储在移动设备上的信息将使用另一家云服务提供商持续备份。因此，如果移动设备丢失，可以使用加密备份副本设置新的移动设备。当然，云服务提供商需要确保存储的加密数据可靠可访问 [KIRK2010]。
 
-
-
-
 架构的另一个关键组件是一组安全且隐私感知的机制，用于挖掘和共享收集的数据（即数据分析/挖掘与共享层）。我们设想此类数据共享和挖掘将利用云中运行的服务来进行。根据不同场景，部分数据可原样发送（例如，用于医疗诊断的心率数据），部分数据将在清洗后发送（例如，基于随机响应的技术 [ERLI2014] 以隐藏用户的真实响应），部分数据将以加密格式发送，从而按需支持精确数据挖掘结果的分布式计算。为提供此类能力，我们需要开发新方法，将基于云的分布式数据挖掘、安全多方计算技术与移动设备端的数据清洗、随机响应、高效流预处理和本地数据缓存相结合。我们框架中的主要假设是移动设备是可信的。除此之外，若研究表明有不同需求，我们的架构可轻松修改。本项目的一大贡献将在于理解如何在保护隐私的前提下，最佳地整合运行在设备端和云端的不同组件。
 
 ### 13.2.3 相关工作
@@ -4704,22 +4516,21 @@ DOI: [10.1201/9781003081845-21](https://doi.org/10.1201/9781003081845-21)
 
 #### 13.2.3.1 访问控制策略、隐私与可用性
 
+
+
 先前关于访问控制策略的工作未解决个人数据持续收集的问题。唯一专注于移动设备收集的个人数据的先前工作是 FENCE 系统（即“动态数据流环境中的持续访问控制强制”）[NEHM2013]，由本项目负责人及合作者提出。然而，FENCE 不将上下文信息与策略关联，因此无法自动选择要与特定数据关联的策略。先前关于移动操作系统安全性的工作侧重于限制应用程序访问敏感数据和资源，但缺乏根据细粒度上下文强制执行这些限制的高效技术，而这些上下文能区分位置紧邻的子区域 [CONT2011]。此外，这些工作大多侧重于开发不按应用程序限制权限且仅在系统范围内有效的策略系统 [KUSH2011]。而且，现有的策略系统并未涵盖应用程序访问用户数据和设备资源的所有可能方式。最后，现有的基于位置的策略系统仅提供单一机制（如专用硬件或定位设备）来检测位置 [CONT2011, KIRK2010, KUMA2009]。在大多数情况下，此类系统假设上下文已给定，而未提供或评估移动设备的上下文检测方法 [CONT2011, GUPT2012]。
 
 与隐私和访问相关的策略规则设定是一个在计算机科学和人机交互的多个领域均被研究的课题，包括系统访问控制、组织隐私策略 [ANTO2007] 以及在线社交网络的策略管理 [CHEE2012]。这些领域的研究考察了用户对策略的理解，以及如何以用户易于理解的方式呈现隐私信息。总体而言，用户对任何类型的策略理解都不甚透彻 [STRA2008, VU2007]，且极少愿意投入时间和精力去尝试理解它们。用户是否会从互联网供应商处购买产品，受供应商提供的个人数据感知安全性影响 [FLAV2006]。同理，允许个人数据更广泛地共享，预期将取决于对这种共享将按预期进行且未经授权的访问将被阻止的信任。社会学和理论文献强调了对上下文的感知对数据流适当性的重要性，正如我们设计中设想的那样 [NISS2009]。
 
 研究人员致力于开发隐私和安全的替代机制，以降低用户的认知负荷，同时使其能够做出知情决策。在策略编写方面，已有证据证明基于模板的方法有效 [JOHN2010a, JOHN2010b]。此类方法通过提供模板（由策略专家和领域专家开发），将整体任务分解为由相关策略要素组成的子任务，从而降低了策略编写者的认知负荷。降低认知负荷也是 Privacy Bird 工具背后的理念，该工具旨在提供信号（红、黄、绿小鸟），指示网站策略在用户向网站输入信息前是否与用户指定的偏好一致 [CRAN2006]。实验室和众包研究表明，当提供汇总风险评分时，用户倾向于做出风险较低的应用选择决策，特别是当该信息以与应用相关的安全程度形式传达时 [CHEN2014, GATE2014]。
 
-#### 13.2.3.2 个人数据存储
+### 13.2.3.2 个人数据存储
 
 近期已有努力管理智能手机收集的个人数据。最著名的努力之一是 OpenPDS 项目，该项目为移动平台提供了个人数据存储的开源实现 [MONT2014]。同样，Mydex 等公司 [MYDE2014] 提供基于云的个人数据存储。最近，Apple 发布了名为 Health 的应用 [APPL2014]，以支持在移动设备上存储健康和健身数据。据我们了解，此类系统并未以安全方式将移动设备与云存储集成，以支持广泛的数据访问和/或查询功能，且基于云服务提供商可信的假设工作。安全处理存储在云中的 QS 数据的一种方式是：在将数据移至云端前对其加密，并对加密的 QS 数据执行安全分析。尽管研究界在开发允许对加密数据进行某些计算的加密方法方面取得了显著进展，例如可搜索加密技术（如 [CURM2011, GOH2003, STEF2014]）、保序加密（如 [BOLD2009]）、全同态加密（如 [GENT2009]）以及实用的混淆 RAM 技术（如 [STEF2012, STEF2013]）——但针对 QS 数据存储场景的通用且具成本效益的解决方案尚未出现。在本项目中，我们将在 QS 数据云备份的背景下，最大程度利用现有的加密进展。特别是，我们将重点关注如何最佳利用移动设备存储和设备端的潜在数据处理，以实现高效的隐私保护 QS 数据处理。
 
-#### 13.2.3.3 量化自我数据挖掘
+### 13.2.3.3 量化自我数据挖掘
 
-
-
-
-#### 13.2.3.4 差分隐私与隐私保护数据挖掘
+### 13.2.3.4 差分隐私与隐私保护数据挖掘
 
 最近，已经开发了许多差分隐私数据挖掘工具，范围涵盖从通用的差分隐私统计估计框架（如 `[DWOR09]`）到机器学习算法，如差分隐私支持向量机（如 `[CHAU11]`）。尽管这些发展非常有趣，但它们并不直接适用于我们的情况，因为它们假设数据已经收集在由管理员控制的数据库中。另一方面，最近基于随机响应的差分隐私数据收集技术 `[ERLI2014]` 是相关的，但尚不清楚如何利用此类随机响应思想来挖掘 QS 数据。作为该项目的一部分，我们将扩展结合分布式加密协议（如 `[DWOR2006]`）的噪声添加技术，以产生差分隐私数据挖掘结果，并利用云基础设施通过将部分工作委托给基于云的服务来扩展至数百万个体。我们在隐私保护分布式数据挖掘方面的工作已经探索了如何利用加密技术从不同参与方挖掘数据（如 `[KANT04]`）。许多现有的隐私保护分布式数据挖掘协议隐含地假设参与方的数量很少。将这些协议扩展到潜在的数百万移动设备仍然是一个重要的挑战。我们需要通过将点对点加密协议与基于秘密分享技术的安全外包计算相结合，来应对这些挑战。
 
@@ -4729,11 +4540,9 @@ DOI: [10.1201/9781003081845-21](https://doi.org/10.1201/9781003081845-21)
 
 用户通常在公共和私人场所以及各种不同情境下携带和使用他们的智能手机和其他个人设备，其中一些情境涉及隐私敏感。例如，用户很可能认为身处医院或医生办公室属于个人敏感信息。因此，我们必须允许用户指定策略，限制在哪些情境下可以收集哪些数据。这些策略允许个人针对其自身个人数据的收集指定他/她自己的个人隐私策略。策略必须与数据紧密耦合，因为策略可能会随时间变化，并且出于问责原因，跟踪数据收集时所依据的策略非常重要。此外，在许多情境下，用户并不孤单；因此，某些设备的使用可能必须被阻止或控制，因为这些设备可能会记录关于其他用户的信息，从而侵犯他们的隐私。而且，企业和其他组织可能禁止其员工和访客携带或使用带摄像头的设备进入工作场所，包括智能手机，即使员工可能需要随时携带设备（例如，员工使用其设备存储与其健康相关的信息）。此外，对于揭示敏感设施位置甚至布局的聚合数据和个人数据（如美国境外军事基地内的健身数据 `[SLY2018]`），需要默认隐私策略。因此，我们需要细粒度的基于情境的访问控制策略，通过这些策略可以阻止设备内的某些设备或资源获取数据。我们将这些策略称为 `context-based device resource usage policies`（基于情境的设备资源使用策略）。支持这两类策略执行的一个基本要求是支持情境信息获取。此外，需要分析此类收集决策以解决潜在的隐私影响（例如，不收集图像可能会泄露用户身处敏感位置）。为了应对上述挑战，我们需要设计一个隐私感知数据收集系统。我们的高层设计由以下四个组件组成：
 
-1.  **用于指定基于情境的数据收集策略和基于情境的设备资源使用策略的策略语言**：此类语言的一个关键要素是用于指定情境的构造。正如 Nissembaum `[NISS09]` 所讨论的，信息处理的适当性最好通过披露的情境语境来判断。尽管她的工作并未涉及个人数据的具体案例，但我们认为她的思想很好地映射到了我们的 QS 数据概念上。我们的基于情境的策略语言概念及相应的执行引擎，是我们将这一思想引入系统的方法。我们需要支持三种不同类型的情境：位置、时间和情况。情况是指特定应用的情境，例如用户当前正在从事的任务。对于所有情境类型，我们将允许用户将符号名称与特定情境关联。例如，考虑一家位于某城市特定街道的医院。该医院可以用多种方式表示，例如使用地理坐标或邮政地址。然而，用户将其简略名称与该医院关联会更容易。我们的策略语言将支持用于指定情境的不同构造，还支持复杂情境的指定，通过它可以组合不同类型的情境，并将结合社交约束，即附近其他用户的缺席和/或在场会影响数据收集过程 `[KIRK2011]`；一个例子是指定只有在无其他人在场时，才能在给定位置获取图像的策略。
+#### 1. 用于指定基于情境的数据收集策略和基于情境的设备资源使用策略的策略语言
 
-
-
-
+此类语言的一个关键要素是用于指定情境的构造。正如 Nissembaum `[NISS09]` 所讨论的，信息处理的适当性最好通过披露的情境语境来判断。尽管她的工作并未涉及个人数据的具体案例，但我们认为她的思想很好地映射到了我们的 QS 数据概念上。我们的基于情境的策略语言概念及相应的执行引擎，是我们将这一思想引入系统的方法。我们需要支持三种不同类型的情境：位置、时间和情况。情况是指特定应用的情境，例如用户当前正在从事的任务。对于所有情境类型，我们将允许用户将符号名称与特定情境关联。例如，考虑一家位于某城市特定街道的医院。该医院可以用多种方式表示，例如使用地理坐标或邮政地址。然而，用户将其简略名称与该医院关联会更容易。我们的策略语言将支持用于指定情境的不同构造，还支持复杂情境的指定，通过它可以组合不同类型的情境，并将结合社交约束，即附近其他用户的缺席和/或在场会影响数据收集过程 `[KIRK2011]`；一个例子是指定只有在无其他人在场时，才能在给定位置获取图像的策略。
 
 #### 2. 一个用于根据我们的策略语言制定策略的策略编写工具
 
@@ -4753,15 +4562,15 @@ DOI: [10.1201/9781003081845-21](https://doi.org/10.1201/9781003081845-21)
 
 我们需要开发一种策略语言，作为著名的 XACML 标准 [XACM2005] 的扩展。
 
-### 2. 策略编写工具
+#### 2. 策略编写工具
 
 我们需要调整或开发一个用户友好的工具，支持用我们的语言表达的策略规范。一种可能性是使用具有高层信息表示的对话代理 [PARI2012]。该工具需要支持基于用户反馈和策略覆盖的策略分析和演进。该工具还需要支持策略集成，支持合并不同的策略（例如，关于在办公室工作时可以捕获什么数据的企业策略，以及用户定义的个人策略），并包含用于策略冲突解决的简单机制和默认设置。
 
-### 3. 位置和在场检测机制
+#### 3. 位置和在场检测机制
 
 我们需要为智能手机等设备设计位置检测机制。
 
-### 4. 策略执行引擎
+#### 4. 策略执行引擎
 
 我们需要设计引擎来应用策略。引擎设计中的一个重要挑战是确保策略不被（可能的）恶意用户绕过，在企业策略的情况下，是指不想遵守策略的用户，或者是目标收集用户私人数据的恶意软件。为了应对此类挑战，我们需要集成和扩展可信平台管理 (TPM) 技术、容器化技术，以及最初为保护数据免受内部威胁而开发的应用程序剖析技术 [HUSS2015]。
 
@@ -4770,9 +4579,6 @@ DOI: [10.1201/9781003081845-21](https://doi.org/10.1201/9781003081845-21)
 在从不同传感器（如健康监测仪）、设备（如 Narrative Clip 生活记录仪）和移动源（如移动设备用户发送的推文和短信）收集 QS 数据后，我们需要存储这些数据以进行挖掘和分析，从而提取有趣的模式。在某些情况下（例如，将位置数据与空气质量数据相关联以了解长期哮喘趋势），根据策略存储所有捕获的数据可能具有长期价值。存储此类收集的数据带来了有趣的研究挑战。首先，目前正成为所有捕获数据中心的智能手机可能无法在设备上存储所有数据。为了解决智能手机的存储限制，可以利用云存储。许多移动设备支持自动云备份和存储机制。例如，iPhone 自带基于 iCloud 的默认数据备份支持。不幸的是，正如近期事件所示 [DUKE2014]，以明文格式存储在云中的隐私敏感数据可能容易受到攻击。在将此类数据移至云端之前对其进行加密可以防止其中一些攻击，但直接的数据加密会导致许多查询执行和数据检索挑战。查询加密数据的最新进展可被利用，以实现安全的云数据存储，同时允许选择性地检索数据，但仍存在需要解决的重要挑战，以满足各种 QS 应用的需求。现有技术如范围查询（例如 [SHI2007]）、关键词搜索（例如 [CURM2011, GOH2003, STEF2014]）、基于属性的加密（例如 [WANG2010]）和全同态加密（例如 [GENT2009]），不能直接支持诸如“查找在纽约市拍摄的、画面中有吉姆的照片”这样的查询。在利用智能手机能力的同时，改进和优化现有的加密数据查询技术，仍然是一个重要的研究方向。正如我们稍后将讨论的，我们计划通过从 QS 数据中提取重要特征，然后修改现有的可搜索加密技术以适应这些提取的特征，来应对这些挑战。
 
 另一个重要需求是支持为用户提供有价值服务的移动应用。考虑一个访问运动数据以自动提取睡眠模式并将其与体重信息相关联，从而了解体重对睡眠模式影响的应用。为了支持此类应用，我们可能只想提供晚上的运动传感器数据，隐藏白天的活动模式。提供对收集的 QS 数据的细粒度访问，将是在保护隐私的同时允许有用的 QS 应用的第一步。考虑到可能结合不同类型的 QS 数据以提供增值服务的潜在应用数量众多，使用户能够为每个应用定义访问控制策略成为一项挑战。理解用户对易用机制的需求至关重要；否则，用户最终将不会使用细粒度的访问控制策略。
-
-
-
 
 #### 隐私感知的数据存储与访问系统
 
@@ -4792,12 +4598,11 @@ DOI: [10.1201/9781003081845-21](https://doi.org/10.1201/9781003081845-21)
 
 由于最终用户必须通过界面来定义策略、设置数据管理选项，并为自己的目的使用数据，因此界面的设计必须符合人类的认知能力。至关重要的是，用户需要理解应用/推荐器给出的推荐和建议。我们需要利用我们在处理组织隐私策略的理解和用户隐私偏好的规范 [PROC2007]，以及对 Android 应用请求权限的理解 [GATE2014] 方面的知识和经验，来设计和评估界面，使其对于参与 QS 数据生命周期不同阶段的不同类型用户来说，都易于使用且直观。
 
-
-
-
 #### 4. QS 数据删除/清洗支持
 
-正如我们之前讨论的，出于隐私和效率原因，我们可能希望删除或清洗部分数据。评估数据删除或清洗的效率影响很简单，但评估其对隐私的影响更具挑战性。*William Weld 重识别* [SWEE2002] 就是一个惊人的例子，仅将记录清洗至（出生日期、性别、邮政编码）并不能防止该事件。一种富有成效的方法是研究特定清洗手段针对特定对手的有效性 [HEAT2013]。但我们认为，通过定量信息流分析可以实现更强的隐私保证。其思路是将删除/清洗机制视为一个信息论信道，该信道接收原始数据并输出清洗后的数据。该信道的泄露量量化了清洗手段针对任意对手的有效性。正如 13.2.2 节 所讨论的，一个挑战是存在*许多*泄露度量，具体取决于操作场景，哪个最合适可能不同。因此，专注于*最小容量* 很有吸引力，根据 [ALVI2012] 的奇迹定理，它是所有场景下泄露的上界。最小容量也相对容易计算；例如，在确定性信道的情况下，它只需计算可行信道输出的数量。以（出生日期、性别、邮政编码）信道为例，可行输出的数量可粗略估计为约 2.4 亿。（大约有 40,000 个邮政编码，每个邮政编码的平均人口约为 8000 人，即每种性别约 4000 人。由于有 36,500 个可能的出生日期，我们可以假设某一邮政编码内每种性别的 4000 人大多拥有不同的出生日期，从而得到 40,000 × 2 × 3000 = 2.4 亿个可行输出。）因此，如果秘密是一个均匀分布的美国人，该信道会使其被正确猜测的脆弱性增加 2.4 亿倍，导致后验脆弱性为 240/320 = 0.75，表明这种清洗完全不充分。我们随后需要开发具有较小最小容量的清洗机制，从而能够精确陈述它们提供的隐私保护。一个挑战是秘密之间可能存在*相关性*。[ALVI2014] 给出了任意相关性存在下的一些泄露界限，但我们需要进一步探索这一点。关于数据清洗的更多细节见 [RACH2013, RACH2014a, RACH2014b]。
+
+
+正如我们之前讨论的，出于隐私和效率原因，我们可能希望删除或清洗部分数据。评估数据删除或清洗的效率影响很简单，但评估其对隐私的影响更具挑战性。`William Weld 重识别` [SWEE2002] 就是一个惊人的例子，仅将记录清洗至（出生日期、性别、邮政编码）并不能防止该事件。一种富有成效的方法是研究特定清洗手段针对特定对手的有效性 [HEAT2013]。但我们认为，通过定量信息流分析可以实现更强的隐私保证。其思路是将删除/清洗机制视为一个信息论信道，该信道接收原始数据并输出清洗后的数据。该信道的泄露量量化了清洗手段针对任意对手的有效性。正如 13.2.2 节 所讨论的，一个挑战是存在*许多*泄露度量，具体取决于操作场景，哪个最合适可能不同。因此，专注于*最小容量* 很有吸引力，根据 [ALVI2012] 的奇迹定理，它是所有场景下泄露的上界。最小容量也相对容易计算；例如，在确定性信道的情况下，它只需计算可行信道输出的数量。以（出生日期、性别、邮政编码）信道为例，可行输出的数量可粗略估计为约 2.4 亿。（大约有 40,000 个邮政编码，每个邮政编码的平均人口约为 8000 人，即每种性别约 4000 人。由于有 36,500 个可能的出生日期，我们可以假设某一邮政编码内每种性别的 4000 人大多拥有不同的出生日期，从而得到 40,000 × 2 × 3000 = 2.4 亿个可行输出。）因此，如果秘密是一个均匀分布的美国人，该信道会使其被正确猜测的脆弱性增加 2.4 亿倍，导致后验脆弱性为 240/320 = 0.75，表明这种清洗完全不充分。我们随后需要开发具有较小最小容量的清洗机制，从而能够精确陈述它们提供的隐私保护。一个挑战是秘密之间可能存在*相关性*。[ALVI2014] 给出了任意相关性存在下的一些泄露界限，但我们需要进一步探索这一点。关于数据清洗的更多细节见 [RACH2013, RACH2014a, RACH2014b]。
 
 ![图 13.3 存储架构。](img/fig13_3.jpg)
 
@@ -4813,10 +4618,6 @@ DOI: [10.1201/9781003081845-21](https://doi.org/10.1201/9781003081845-21)
 
 最后，正如本章前几节所示，为了使数据共享方案实现其为个人用户强制执行个性化隐私策略的目标，界面需要设计为满足用户需求并做到“用户友好”。为了让用户允许数据共享，他们必须相信其数据将按照其意愿受到保护，且不会面临泄露和攻击的风险。此外，用户必须能够理解策略管理选项，以便了解他们的选择及其可能的后果。由于这些选项涉及可收集的数据及其收集场景，以及谁将被允许访问其数据，用户进行策略指定必然是一个复杂的过程。因此，用户定义其策略和设置数据管理选项所需的界面交互应尽可能简单直接，并允许个性化。并非所有用户都希望对其个人信息进行详细控制，因此界面需要支持不同粒度级别的决策，并提供大多数用户可接受的智能默认设置。智能默认设置至关重要，因为大多数用户不会更改隐私/安全设置（例如，>90% 的 Google 账户未启用双因素认证 [SULL18]）。
 
-
-
-
-
 我们的数据共享高层设计由多个组件组成。第一个组件包含一个个人访问控制系统，支持对个人数据的访问控制策略进行规范和强制执行，以及不同策略的演进与合并，范围涵盖从基于事件的共享到个人为研究捐赠数据。访问控制系统还将包含一个创作工具。第二个组件是一个能够处理已清洗数据的数据挖掘系统。一个重要问题是评估从匿名数据集衍生出的数据挖掘模型的质量。更重要的是，必须确定是否以及如何利用每个用户的非匿名个人数据来优化基于大规模人群构建的数据挖掘模型，或者由这种公共数据挖掘系统获得的预测能否与本地数据挖掘系统获得的推荐相结合（即基于特定用户数据的本地数据挖掘系统）。目标是基于多用户的清洗数据创建全局数据挖掘模型，然后为每个特定用户个性化这些模型。
 
 我们需要构建一个框架，在该框架中，来自不同来源的 QS 数据流将在本地进行分析。利用移动设备的计算能力，将计算个人的重要统计数据以及数据挖掘模型。此外，根据需要，将使用前面讨论的加密查询机制来检索云中存档的数据，以改进本地模型和统计数据。随后，这些模型和统计数据将根据用户注册的策略和事件进行共享。我们还需要开发基于云的安全分布式数据挖掘技术，以允许个人安全地捐赠和/或出售数据以满足各种数据挖掘需求。根据数据共享策略，将自动提交给数据挖掘模型的数据将被自动提取。在某些场景中，数据还将利用来自对等节点的信息进行聚合（即来自附近朋友的信息）。在某些情况下，在与基于云的服务共享之前，信息将通过添加噪声进行清洗（例如，利用基于随机响应的差分隐私技术 [ERLI2014]）。这些本地计算的信息将使用秘密分享技术 [CRAM2000, CRAM2003] 与位于公共云上的多台服务器共享，并使用 Tor [DING2004] 等服务，使得将数据关联回特定个人变得更加困难。一旦数据通过秘密分享机制发送到多台服务器，服务器之间将执行基于秘密分享的安全协议，以构建人口层面的数据挖掘模型。为了扩展到大量用户，我们计划结合有效采样和随机响应技术，并结合基于秘密分享的安全多方计算思想。例如，我们可能希望结合特定子人群（例如，患有高血压的 65 岁以上人群）的用户数据来构建线性回归模型。如果用户 `i` 使用其数据向量 `x[i]` 参与系统，其中 1 ≤ `i` ≤ `n`，我们可以将数据挖掘过程写为线性回归函数 `f` 的安全多方评估：`f(I[C(x[1])].x[1], I[C(x[2])].x[2], …, I[C(x[n])].x[n])`，其中 `I[C(x[i])]` 是描述用户数据选择条件的指示函数。首先，既然这是一个数据挖掘模型，为了具有统计显著性，我们可能不需要获取所有样本。给定选择条件 `C`，我们可以估计满足条件 `C` 的用户数量 `t`，如果 `t` ≫ `s`，其中 `s` 是统计显著性所需的样本数量，那么我们可以以概率 `s/t` 从匹配该条件的用户群体中进行子采样，以减少在 SMC 阶段秘密分享的数据量。当然，在进行采样时，我们可能会泄露哪些用户匹配条件 `C`。为了防止这种情况，我们也可能希望从不满足条件 `C` 的用户中进行采样。采样率可以调整以平衡个人隐私保护与效率。一旦在此采样步骤后选定用户数据，可以使用噪声添加技术或与多台服务器的秘密分享技术将数据发送到基于云的基于秘密分享的 SMC 框架。在某些情况下，这些构建的模型将被发送回用户，以便在本地进行定制，从而提高其对用户的效用。
@@ -4827,27 +4628,23 @@ DOI: [10.1201/9781003081845-21](https://doi.org/10.1201/9781003081845-21)
 
 该系统将包含一个基于 XACML 标准扩展/定制的策略语言，用于策略规范；一个能够合并和演进访问控制策略的策略创作工具；以及一个策略执行引擎。此外，我们还将探索定量方法来分析和量化共享 QS 数据的风险，并根据现有风险自动调整策略。在我们过去的工作 [BENS2014] 中，我们在共享大型数据集的背景下探讨了基于风险的数据共享问题。我们需要将人类受试者实验中捕捉到的风险接受行为整合到定量模型中，以更好地解释现实生活中的行为。我们需要探索如何在 XACML 扩展的基础上构建基于事件的共享策略。此外，数据也必须是可信的 [LIM2012]。
 
-
-
-
-
-## 2. 一种基于流数据和云端加密数据构建模型及本地统计的本地数据分析框架
+### 13.3.4 一种基于流数据和云端加密数据构建模型及本地统计的本地数据分析框架
 
 我们需要探索如何利用现有的流挖掘技术 [MAS2008, MAS2013] 来维护不同数据挖掘任务的本地统计和数据摘要。然而，当前的流学习算法 [MASU2010] 可能无法直接用于隐私感知或加密数据的场景。训练集的微小变化可能会影响所学模型的质量和性能。为此，我们将探索维护基本统计的方法，例如多流之间的相关性。根据需要，一些较旧的模型和统计将被加密备份到云端。在某些情况下，这些学习到的模型和统计将被结合起来，基于近似来回答重要问题。此类近似通常利用滑动窗口或采样方法。例如，要回答个体的睡眠质量如何受其体重影响的问题，将选择性地利用存储在云端的关于睡眠模式和体重数据的先前模型来计算此类相关性。
 
-## 3. 一种能够在清洗后数据上工作的全局推荐系统
+### 13.3.5 一种能够在清洗后数据上工作的全局推荐系统
 
 我们需要开发一个能够基于数据值范围而非精确值工作的推荐系统。此外，将探索随机响应等噪声添加技术，以便在共享数据前添加噪声。我们需要遵循测试匿名数据上学习到的分类器质量时所用的相同测试方法，测试基于清洗数据构建的推荐系统的相对有效性。
 
-## 4. 基于云的隐私感知分布式数据挖掘协议，用于构建人口层面的数据挖掘模型
+### 13.3.6 基于云的隐私感知分布式数据挖掘协议，用于构建人口层面的数据挖掘模型
 
 除了前面讨论的噪声添加/清洗技术，我们还需要构建分布式数据挖掘技术，这些技术除最终数据挖掘模型外不泄露任何关于个人的信息。最初，我们将探索每个用户是否可以将其数据推送到云端的几个非串通、半诚实的服务器。例如，为了促进一项试图寻找规律锻炼、用户位置和空气污染对哮喘发作影响的科学研究，本地数据挖掘模型可以自动创建关于每周锻炼次数的统计数据，并结合用户的人口统计信息、哮喘发作记录（假设用户保留电子日记）和位置信息。这些统计数据将被分成秘密份额 [DESM1992, CRAM2003] 并发送到不同的服务器。稍后，将利用基于秘密分享的分布式数据挖掘技术，将现有的本地污染信息数据安全地链接到用户的位置数据。构建此类应用将面临独特的挑战：如何最好地汇总本地数据，以便在云端最好地利用并扩展基于秘密分享的协议以支持大量用户。此外，我们可能需要探索如何利用额外的外部数据源在本地提高全局分布式数据挖掘协议的效率。例如，每个移动设备可能从互联网下载本地污染数据并在本地进行链接（再次使用类似 Tor 的系统以防止链接到个人）。这将减少公共云中所需的加密协议执行量。
 
-## 5. 一种能够为特定用户优化全局推荐系统的定制系统
+### 13.3.7 一种能够为特定用户优化全局推荐系统的定制系统
 
 我们需要基于多重混合模型 [LEE2013] 研究一种方法，通过该方法我们将结合基于单个用户非清洗数据构建的本地推荐器获得的推荐，以及全局推荐系统获得的推荐，从而为特定用户获得定制化推荐。重要的是要注意，本地推荐系统将基于非常小的数据集获得，且非常精确，因为它未经过清洗。而全局推荐系统将基于非常大的数据集，由于潜在的数据清洗，其精确度较低。将进行广泛的实验分析以评估这种两步法的准确性。
 
-## 6. 一种人因分析，旨在确定专家和普通用户感知的 QS 数据共享相关的风险和收益
+### 13.3.8 一种人因分析，旨在确定专家和普通用户感知的 QS 数据共享相关的风险和收益
 
 将采用一对一访谈和在线调查方法进行此类分析。政策专家将受邀进行一对一的半结构化访谈，并被询问关于 QS 数据存储可能涉及的风险和收益的看法。将从访谈数据中识别不同类别的风险和收益及其感知重要性。将通过 MTurk 招募典型用户回答问卷，以确定他们是否区分专家所识别的相同类别，并以相似方式感知其相对重要性。在两项研究中，用户都将被询问他们对 QS 数据存储的信任程度，并将风险和收益的类别作为不同信任水平的函数进行分析。如果典型用户感知到的风险和收益与专家用户识别的不同，将设计并测试教育用户了解这些风险和收益的方法，通过比较教育前后用户的反应来验证。我们还需要将关于用户偏好的发现与定义充分同意数据收集或处理的法律原则进行比较，并找出确保用户决策构成法律上有效限制的方法。为了实现 QS 数据共享隐私策略的个性化，应识别设置隐私策略的不同选项。我们需要向政策专家和典型用户询问他们希望隐私规范界面适应哪些选择。根据这些信息，我们将在实验室环境下以大学生计算机用户为对象，或在 MTurk 上以更广泛的计算机用户为对象，通过受控实验评估已识别的设计特性。许多用户因高信息处理需求而不愿进行详细规范，因此我们将开发大多数用户可接受的智能默认设置，并评估呈现预设选项的方式，这些选项允许相对简单的策略设置，但粒度比单独指定每个因素更粗。我们需要将实验结果纳入一个或多个可能界面的设计中，并对其进行可用性评估。
 
@@ -4856,9 +4653,6 @@ DOI: [10.1201/9781003081845-21](https://doi.org/10.1201/9781003081845-21)
 第 13.3 节描述了我们针对数据收集、数据存储、数据共享和数据分析的隐私感知数据管理框架的高层设计。为了开发一个有用的框架，我们需要考虑一些额外方面，例如 (i) 用户设备的安全性，(ii) 框架的形式化，(iii) 行为方面，以及 (iv) 物联网 等新型应用，以便我们能够证明一致性和完整性等属性。我们将在本节讨论这些额外方面。
 
 ### 13.4.1 用户设备的安全性
-
-
-
 
 为了维护隐私，用户设备必须长期保持安全。通过告知用户随时间发现的设备漏洞，可以减轻数据生命周期（收集、存储和分析）中的隐私风险。更重要的是，该框架可以帮助用户更新他们的智能手机，特别是物联网设备。近一半的用户从不更新物联网设备 [ROUF2016]。此外，如果用户正在使用不再接收更新的（易受攻击的）设备，可以通知他们。
 
@@ -4888,6 +4682,8 @@ DOI: [10.1201/9781003081845-21](https://doi.org/10.1201/9781003081845-21)
 
 ## 参考文献
 
+
+
 *   [ADOM2005] G. Adomavicius, A. Tuzhilin, Toward the Next Generation of Recommender Systems: A Survey of the State-of-the-Art and Possible Extensions, IEEE Transactions on Knowledge and Data Engineering, Volume 17, # 6, 2005, 734–749.
 
 *   [ALVI2012] M.S. Alvim, K. Chatzikokolakis, C. Palamidessi, G. Smith, Measuring Information Leakage using Generalized Gain Functions, *Proceedings of CSF 2012: 25th IEEE Computer Security Foundations Symposium*, Cambridge, MA, June 2012, pp. 265–279.
@@ -4910,88 +4706,83 @@ DOI: [10.1201/9781003081845-21](https://doi.org/10.1201/9781003081845-21)
 
 *   [CHEN2014] J. Chen, C.S. Gates, R.W. Proctor, N. Li, Framing of Summary Risk/Safety Information and App Selection. *Proceedings of the 2014 Annual Meeting of the Human Factors and Ergonomics Society*, Santa Monica, CA, HFES, 2014.
 
+*   [CONT2011] M. Conti, V.T.N. Nguyen, B. Crispo, Crepe: 面向 Android 的上下文相关策略执行, *第 13 届信息安全国际会议论文集, ISC ’10*, 柏林, 海德堡, Springer-Verlag, 2011, pp. 331–345.
 
+*   [CRAM2000] R. Cramer, I. Damgård, U. Maurer, 基于任意线性秘密分享方案的通用安全多方计算. *第 19 届密码理论与应用国际会议论文集 (EUROCRYPT'00)*, B. Preneel (编). Springer-Verlag, 柏林, 海德堡, 2000, pp. 316–334.
 
+*   [CRAM2003] R. Cramer, S. Fehr, Y. Ishai, E. Kushilevitz, 环上的高效多方计算. *密码学进展—EUROCRYPT 2003*, Springer Berlin Heidelberg, 2003, pp. 596–613.
 
-*   **[CONT2011]** M. Conti, V.T.N. Nguyen, B. Crispo, Crepe: 面向 Android 的上下文相关策略执行, *第 13 届信息安全国际会议论文集, ISC ’10*, 柏林, 海德堡, Springer-Verlag, 2011, pp. 331–345.
+*   [CRAN2006] L.F. Cranor, P. Guduru, M. Arjula, 隐私代理的用户界面, ACM 计算机-人类交互汇刊, 第 13 卷, 2006, 135–178.
 
-*   **[CRAM2000]** R. Cramer, I. Damgård, U. Maurer, 基于任意线性秘密分享方案的通用安全多方计算. *第 19 届密码理论与应用国际会议论文集 (EUROCRYPT'00)*, B. Preneel (编). Springer-Verlag, 柏林, 海德堡, 2000, pp. 316–334.
+*   [CURM2011] R. Curtmola, J. Garay, S. Kamara, R. Ostrovsky, 可搜索对称加密：改进的定义与高效构造, 计算机安全期刊, 第 19 卷, # 5, 2011, 895–934.
 
-*   **[CRAM2003]** R. Cramer, S. Fehr, Y. Ishai, E. Kushilevitz, 环上的高效多方计算. *密码学进展—EUROCRYPT 2003*, Springer Berlin Heidelberg, 2003, pp. 596–613.
+*   [DESM1992] Y. Desmedt, Y. Frankel, 任意有限阿贝尔群上的完美同态零知识阈值方案, SIAM 离散数学期刊, 第 7 卷, # 4, 1994, 667–679.
 
-*   **[CRAN2006]** L.F. Cranor, P. Guduru, M. Arjula, 隐私代理的用户界面, ACM 计算机-人类交互汇刊, 第 13 卷, 2006, 135–178.
+*   [DING2004] R. Dingledine, N. Mathewson, P. Syverson. Tor: 第二代洋葱路由器, *第 13 届 USENIX 安全研讨会*, 圣地亚哥, CA, 2004, pp. 303–320.
 
-*   **[CURM2011]** R. Curtmola, J. Garay, S. Kamara, R. Ostrovsky, 可搜索对称加密：改进的定义与高效构造, 计算机安全期刊, 第 19 卷, # 5, 2011, 895–934.
+*   [DUKE2014] A. Duke, 关于名人裸照黑客丑闻需知的五件事, CNN, 2014 年 10 月.
 
-*   **[DESM1992]** Y. Desmedt, Y. Frankel, 任意有限阿贝尔群上的完美同态零知识阈值方案, SIAM 离散数学期刊, 第 7 卷, # 4, 1994, 667–679.
+*   [DWOR2006] C. Dwork, K. Kenthapadi, F. McSherry, I. Mironov, M. Naor, 我们的数据, 我们自己：通过分布式噪声生成实现隐私保护, *第 24 届密码理论与应用国际年会论文集 (EUROCRYPT'06)*, S. Vaudenay (编), Springer-Verlag, 柏林, 海德堡, 2006, pp. 486–503, DOI= [10.1007/11761679_29](http://doi.org/10.1007/11761679_29) [`dx.doi.org/10.1007/11761679_29`](http://dx.doi.org/10.1007/11761679_29)
 
-*   **[DING2004]** R. Dingledine, N. Mathewson, P. Syverson. Tor: 第二代洋葱路由器, *第 13 届 USENIX 安全研讨会*, 圣地亚哥, CA, 2004, pp. 303–320.
+*   [DWOR2009] C. Dwork, J. Lei, 差分隐私与稳健统计, *第 41 届 ACM 计算理论年会论文集 (STOC ’09)*, ACM, 纽约, NY, 美国, 2009, pp. 371–380.
 
-*   **[DUKE2014]** A. Duke, 关于名人裸照黑客丑闻需知的五件事, CNN, 2014 年 10 月.
+*   [EAGL2006] N. Eagle, A. Pentland, 现实挖掘：感知复杂社会系统, 个性化与泛在计算, 第 10 卷, # 4, 2006, 255–268.
 
-*   **[DWOR2006]** C. Dwork, K. Kenthapadi, F. McSherry, I. Mironov, M. Naor, 我们的数据, 我们自己：通过分布式噪声生成实现隐私保护, *第 24 届密码理论与应用国际年会论文集 (EUROCRYPT'06)*, S. Vaudenay (编), Springer-Verlag, 柏林, 海德堡, 2006, pp. 486–503, DOI= [10.1007/11761679_29](http://doi.org/10.1007/11761679_29) [`dx.doi.org/10.1007/11761679_29`](http://dx.doi.org/10.1007/11761679_29)
+*   [EAGL2009] N. Eagle, A.S. Pentland, 本征行为：识别常规中的结构, 行为生态学与社会生物学, 第 63 卷, # 7, 2009.
 
-*   **[DWOR2009]** C. Dwork, J. Lei, 差分隐私与稳健统计, *第 41 届 ACM 计算理论年会论文集 (STOC ’09)*, ACM, 纽约, NY, 美国, 2009, pp. 371–380.
+*   [ERLI2014] Ú. Erlingsson, V. Pihur, A. Korolova, RAPPOR：随机聚合隐私保护序数响应, *CCS*, 2014, pp. 1054–1067.
 
-*   **[EAGL2006]** N. Eagle, A. Pentland, 现实挖掘：感知复杂社会系统, 个性化与泛在计算, 第 10 卷, # 4, 2006, 255–268.
+*   [FERN2016] M. Fernandez, M. Kantarcioglu, B. Thuraisingham, 面向物联网的安全数据收集与管理框架, *ACSAC 会议研讨会论文集 (ICSS)*, 洛杉矶, CA, 2016 年 12 月.
 
-*   **[EAGL2009]** N. Eagle, A.S. Pentland, 本征行为：识别常规中的结构, 行为生态学与社会生物学, 第 63 卷, # 7, 2009.
+*   [FLAV2006] C. Flavián, M. Guinalíu, 消费者信任, 感知安全性与隐私策略, 工业管理与数据系统, 第 106 卷, #5, 2006, 601–620.
 
-*   **[ERLI2014]** Ú. Erlingsson, V. Pihur, A. Korolova, RAPPOR：随机聚合隐私保护序数响应, *CCS*, 2014, pp. 1054–1067.
+*   [GATE2014] C.S. Gates, N. Li, H. Peng, B.P. Sarma, Y. Qi, R. Potharaju, C. Nita-Rotaru, I. Molloy, 为移动应用生成汇总风险评分, IEEE 可靠安全计算汇刊, 第 11 卷, #3, 2014, 238–251.
 
-*   **[FERN2016]** M. Fernandez, M. Kantarcioglu, B. Thuraisingham, 面向物联网的安全数据收集与管理框架, *ACSAC 会议研讨会论文集 (ICSS)*, 洛杉矶, CA, 2016 年 12 月.
+*   [GENT2009] C. Gentry, 一种全同态加密方案, 博士论文, 斯坦福大学, 2009, [crypto.stanford.edu/craig](http://crypto.stanford.edu)
 
-*   **[FLAV2006]** C. Flavián, M. Guinalíu, 消费者信任, 感知安全性与隐私策略, 工业管理与数据系统, 第 106 卷, #5, 2006, 601–620.
+*   [GOH2003] E.J. Goh, 安全索引, 密码学电子印刷档案, 报告 2003/216, 2003.
 
-*   **[GATE2014]** C.S. Gates, N. Li, H. Peng, B.P. Sarma, Y. Qi, R. Potharaju, C. Nita-Rotaru, I. Molloy, 为移动应用生成汇总风险评分, IEEE 可靠安全计算汇刊, 第 11 卷, #3, 2014, 238–251.
+*   [GUPT2012] A. Gupta, M. Miettinen, N. Asokan, M. Nagy, 基于上下文分析的移动设备直观安全策略配置, *IEEE 社交计算国际会议, SOCIALCOM-PASSAT ’12*, 华盛顿特区, 美国, IEEE, pp. 471–480.
 
-*   **[GENT2009]** C. Gentry, 一种全同态加密方案, 博士论文, 斯坦福大学, 2009, [crypto.stanford.edu/craig](http://crypto.stanford.edu)
+*   [HEAT2013] R. Heatherly, M. Kantarcioglu, B.M. Thuraisingham, 防止社交网络上的私人信息推理攻击, IEEE 知识与数据工程汇刊, 第 25 卷, 2013, 1849.
 
-*   **[GOH2003]** E.J. Goh, 安全索引, 密码学电子印刷档案, 报告 2003/216, 2003.
+*   [HERL2004] J.L. Herlocker, J.A. Konstan, L.G. Terveen, J.T. Riedl, 评估协同过滤推荐系统, ACM 信息系统汇刊 (TOIS), 第 22 卷, # 1, 2004, 5–53.
 
-*   **[GUPT2012]** A. Gupta, M. Miettinen, N. Asokan, M. Nagy, 基于上下文分析的移动设备直观安全策略配置, *IEEE 社交计算国际会议, SOCIALCOM-PASSAT ’12*, 华盛顿特区, 美国, IEEE, pp. 471–480.
+*   [HSIE2013] C.K. Hsieh, H. Tangmunarunkit, F. Alquaddoomi, J. Jenkins, J. Kang, C. Ketcham, B. Longstaff, J. Selsky, B. Dawson, D. Swendeman, D. Estrin, N. Ramanathan, Lifestreams：用于从日常生活中识别重要模式的模块化理解工具集, *第 11 届 ACM 嵌入式网络传感系统会议论文集 (SenSys ’13)*, ACM, 纽约, NY, 美国.
 
-*   **[HEAT2013]** R. Heatherly, M. Kantarcioglu, B.M. Thuraisingham, 防止社交网络上的私人信息推理攻击, IEEE 知识与数据工程汇刊, 第 25 卷, 2013, 1849.
+*   [HUSS2015] S.R. Hussain, A. Sallam, E. Bertino, DetAnom 通过检查内部人员的数据库事务来检测异常, CODASPY, 圣安东尼奥, TX, 2015, pp. 25–35.
 
-*   **[HERL2004]** J.L. Herlocker, J.A. Konstan, L.G. Terveen, J.T. Riedl, 评估协同过滤推荐系统, ACM 信息系统汇刊 (TOIS), 第 22 卷, # 1, 2004, 5–53.
+*   [JOHN2010a] M. Johnson, J. Karat, C.M. Karat, J. Grueneberg, 优化用于安全与隐私策略的策略创作框架, *可用隐私与安全研讨会 (SOUPS)*,, 雷德蒙德, WA, 2010.
 
-*   **[HSIE2013]** C.K. Hsieh, H. Tangmunarunkit, F. Alquaddoomi, J. Jenkins, J. Kang, C. Ketcham, B. Longstaff, J. Selsky, B. Dawson, D. Swendeman, D. Estrin, N. Ramanathan, Lifestreams：用于从日常生活中识别重要模式的模块化理解工具集, *第 11 届 ACM 嵌入式网络传感系统会议论文集 (SenSys ’13)*, ACM, 纽约, NY, 美国.
+*   [JOHN2010b] M. Johnson, J. Karat, C.M. Karat, J. Grueneberg, 策略模板创作的实证研究, ACITA, 雷德蒙德, WA, 10, 2010, pp. 1–9.
 
-*   **[HUSS2015]** S.R. Hussain, A. Sallam, E. Bertino, DetAnom 通过检查内部人员的数据库事务来检测异常, CODASPY, 圣安东尼奥, TX, 2015, pp. 25–35.
-
-*   **[JOHN2010a]** M. Johnson, J. Karat, C.M. Karat, J. Grueneberg, 优化用于安全与隐私策略的策略创作框架, *可用隐私与安全研讨会 (SOUPS)*,, 雷德蒙德, WA, 2010.
-
-*   **[JOHN2010b]** M. Johnson, J. Karat, C.M. Karat, J. Grueneberg, 策略模板创作的实证研究, ACITA, 雷德蒙德, WA, 10, 2010, pp. 1–9.
-
-*   **[KANT2004]** M. Kantarcioglu, C. Clifton, 水平分区数据上关联规则的隐私保护分布式挖掘, IEEE TKDE, 第 16 卷, # 9, 2004, 1026–1037.
+*   [KANT2004] M. Kantarcioglu, C. Clifton, 水平分区数据上关联规则的隐私保护分布式挖掘, IEEE TKDE, 第 16 卷, # 9, 2004, 1026–1037.
 
 *   M. S. Kirkpatrick, E. Bertino, 为移动 RBAC 系统强制执行空间约束, *第 15 届 ACM 访问控制模型与技术研讨会论文集, ser. SACMAT ’10*, 纽约, NY, 美国: ACM, 2010, pp. 99–108.
 
-*   **[KIRK2011]** M.S. Kirkpatrick, M.L. Damiani, E. Bertino, Prox-RBAC：一种基于邻近性的空间感知 RBAC, *第 19 届 ACM SIGSPATIAL 地理信息系统进展国际研讨会论文集, ACM-GIS 2011*, 2011 年 11 月 1-4 日, 芝加哥, IL, 美国, pp. 339–348.
+*   [KIRK2011] M.S. Kirkpatrick, M.L. Damiani, E. Bertino, Prox-RBAC：一种基于邻近性的空间感知 RBAC, *第 19 届 ACM SIGSPATIAL 地理信息系统进展国际研讨会论文集, ACM-GIS 2011*, 2011 年 11 月 1-4 日, 芝加哥, IL, 美国, pp. 339–348.
 
-*   **[KUMA2009]** S. Kumar, M.A. Qadeer, A. Gupta, 基于 Android 的位置服务, *第 3 届 IEEE 互联网多媒体服务架构与应用国际会议论文集, ser. IMSAA ’09*, 2009, pp. 335–339.
+*   [KUMA2009] S. Kumar, M.A. Qadeer, A. Gupta, 基于 Android 的位置服务, *第 3 届 IEEE 互联网多媒体服务架构与应用国际会议论文集, ser. IMSAA ’09*, 2009, pp. 335–339.
 
-*   **[KUSH2011]** A. Kushwaha, V. Kushwaha, 基于 Android 移动操作系统的位置服务. 工程与技术进展国际期刊, 2011, pp. 11–20.
+*   [KUSH2011] A. Kushwaha, V. Kushwaha, 基于 Android 移动操作系统的位置服务. 工程与技术进展国际期刊, 2011, pp. 11–20.
 
-*   **[LANE2011]** N. D. Lane, M. Mohammod, M. Lin, X. Yang, H. Lu, S. Ali, A. Doryab, E. Berke, T. Choudhury, A.T. Campbell, Bewell：一款用于监测、建模和促进健康的智能手机应用, 第 5 届 ICST 泛在计算医疗技术国际会议, 都柏林, 爱尔兰, 2011.
+*   [LANE2011] N. D. Lane, M. Mohammod, M. Lin, X. Yang, H. Lu, S. Ali, A. Doryab, E. Berke, T. Choudhury, A.T. Campbell, Bewell：一款用于监测、建模和促进健康的智能手机应用, 第 5 届 ICST 泛在计算医疗技术国际会议, 都柏林, 爱尔兰, 2011.
 
-*   **[LEE2013]** J. D. Lee, R. Gilad-Bachrach, R. Caruana, 利用多重样本学习混合模型, NIPS, 2013, 324–332.
+*   [LEE2013] J. D. Lee, R. Gilad-Bachrach, R. Caruana, 利用多重样本学习混合模型, NIPS, 2013, 324–332.
 
-*   **[LIKA2011]** R. LiKamWa, Y. Liu, N.D. Lane, L. Zhong, 你的智能手机能推断你的情绪吗. PhoneSense 研讨会, 西雅图, WA, 2011 年 11 月.
+*   [LIKA2011] R. LiKamWa, Y. Liu, N.D. Lane, L. Zhong, 你的智能手机能推断你的情绪吗. PhoneSense 研讨会, 西雅图, WA, 2011 年 11 月.
 
-*   **[LIM2012]** H.-S. Lim, G. Ghinita, E. Bertino, M. Kantarcioglu, 传感器网络中数据可信度高保障的博弈论方法, *IEEE ICDE*, 华盛顿特区, 2012, pp. 1192–1203.
+*   [LIM2012] H.-S. Lim, G. Ghinita, E. Bertino, M. Kantarcioglu, 传感器网络中数据可信度高保障的博弈论方法, *IEEE ICDE*, 华盛顿特区, 2012, pp. 1192–1203.
+
+*   [MASU2008] M. Masud, J. Gao, L. Khan, J. Han, B. Thuraisingham, A Practical Approach to Classify Evolving Data Streams: Training with Limited Amount of Labeled Data, *IEEE ICDM*, Pisa, Italy, 2008, pp. 929–934.
+
+*   [MASU2010] M. Masud, Q. Chen, L. Khan, C. Aggarwal, J. Gao, J. Han, B. Thuraisingham. Addressing concept-evolution in concept-drifting data streams, IEEE ICDM, 2010, pp. 929–934.
+
+*   [MASU2013] M. Masud, Q. Chen, L. Khan, C. Aggarwal, J. Gao, H. Han, A. Srivastava, N.C. Oza. Classification and Adaptive Novel Class Detection of Feature-Evolving Data Streams, IEEE Transactions on Knowledge and Data Engineering, Volume 25, 2013.
+
+*   [MIDI2014] D. Midi, O. Oluwatimi, B. Shebaro, E. Bertino. Demo Overview: Privacy-Enhancing Features of IdentiDroid. *ACM Conference on Computer and Communications Security*, 2014, pp. 1481–1483.
 
 
-
-
-
-*   **[MASU2008]** M. Masud, J. Gao, L. Khan, J. Han, B. Thuraisingham, A Practical Approach to Classify Evolving Data Streams: Training with Limited Amount of Labeled Data, *IEEE ICDM*, Pisa, Italy, 2008, pp. 929–934.
-
-*   **[MASU2010]** M. Masud, Q. Chen, L. Khan, C. Aggarwal, J. Gao, J. Han, B. Thuraisingham. Addressing concept-evolution in concept-drifting data streams, IEEE ICDM, 2010, pp. 929–934.
-
-*   **[MASU2013]** M. Masud, Q. Chen, L. Khan, C. Aggarwal, J. Gao, H. Han, A. Srivastava, N.C. Oza. Classification and Adaptive Novel Class Detection of Feature-Evolving Data Streams, IEEE Transactions on Knowledge and Data Engineering, Volume 25, 2013.
-
-*   **[MIDI2014]** D. Midi, O. Oluwatimi, B. Shebaro, E. Bertino. Demo Overview: Privacy-Enhancing Features of IdentiDroid. *ACM Conference on Computer and Communications Security*, 2014, pp. 1481–1483.
 
 *   **[MONT2014]** Y. A. de Montjoye, E. Shmueli, S.S. Wang, A.S. Pentland, openPDS: Protecting the Privacy of Metadata through SafeAnswers, PLoS ONE, Volume 9, # 7, e98790.
 
@@ -5055,10 +4846,6 @@ DOI: [10.1201/9781003081845-22](https://doi.org/10.1201/9781003081845-22)
 
 虽然前两章讨论了更通用应用的安全和隐私问题，但本章侧重于一个特定应用，即一般医疗保健，特别是 COVID-19 大流行。在许多方面，我们将 COVID-19 大流行相关的安全和隐私问题与 9/11 恐怖袭击和反恐怖主义进行了类比。在 2000 年代初期，我们的工作侧重于将数据挖掘应用于反恐怖主义以及可能发生的隐私侵犯 [THUR2002a, THUR2003]。在本章中，我们探讨针对 COVID-19 大流行的此类问题。主要原因之一是，虽然恐怖主义在 2000 年代初期是最重要的公共安全关注点之一，但 COVID-19 大流行是 2020 年代初期最重要的公共安全关注点。
 
-
-
-
-
 ### COVID-19 大流行：数据科学、隐私与公民自由
 
 COVID-19 大流行是自西班牙流感（据推测起源于堪萨斯州）以来一个世纪中最严重的一次。自那时起，世界经历了许多战争，包括第二次世界大战等，其他大流行如 SARS 和猪流感，恐怖袭击如美国的 9/11 和英国的 7/7，以及卡特里娜和玛丽亚等飓风。但从未有过像现在这样，因 COVID-19 导致整个世界都陷入恐惧之中。这是一场噩梦，令一个世纪以来发生在我们身上的一切其他事情都相形见绌。我们不敢外出，生怕感染病毒并因此丧命，然而日夜宅家又让我们坐立不安、抑郁和/或焦虑。
@@ -5089,13 +4876,13 @@ COVID-19 大流行是自西班牙流感（据推测起源于堪萨斯州）以�
 
 在过去十年中，数据挖掘结合统计学和大数据已演变为数据科学。同时，机器学习作为一个领域迅猛发展，导致 AI 获得极大关注。我们将交替使用数据科学和机器学习这两个术语，而 AI 超越机器学习，还包括规划和推理等。
 
-
-
-
-
 ### 流行病学与传染病中的数据科学
 
-数据是流行病学和传染病研究的核心。数据不仅用于检测和预防传染病的传播，还用于寻找治疗方法和疫苗来治疗并可能预防这些疾病。目前正在收集 COVID-19 感染者的数据，包括个人的个人、工作和旅行详情，他们与他人的接触和关联，以及他们的社交活动。所收集的数据可以使用各种数据科学技术进行分析，以提取有价值的信息，从而检测疾病传播并加以预防。
+
+
+# 数据是流行病学和传染病研究的核心
+
+数据不仅用于检测和预防传染病的传播，还用于寻找治疗方法和疫苗来治疗并可能预防这些疾病。目前正在收集 COVID-19 感染者的数据，包括个人的个人、工作和旅行详情，他们与他人的接触和关联，以及他们的社交活动。所收集的数据可以使用各种数据科学技术进行分析，以提取有价值的信息，从而检测疾病传播并加以预防。
 
 例如，为接触者追踪目的构建的图可以使用链路分析技术进行分析，以确定可能因现有感染而染上 COVID-19 的人员。聚类技术可用于从收集的数据中确定潜在 COVID-19 病例的聚类。决策树可用于对个体进行分类，例如某县特定种族来源的个体更易感染 COVID-19。我们希望此类数据科学技术可用于识别无症状感染者，他们可能是病毒的潜在传播者。例如，如果无症状感染者病毒检测呈阳性，则可以研究这些人的行为模式和基因构成，以了解他们无症状的原因。利用这些信息，可以对其他无症状人员进行病毒检测，并警告他们的接触者。
 
@@ -5118,10 +4905,6 @@ COVID-19 大流行是自西班牙流感（据推测起源于堪萨斯州）以�
 下一步是检查数据科学活动的各个方面，包括隐私感知的基于策略的数据生命周期过程，并探索区块链技术如何安全地应用于这些活动中涉及的各种分布式事务。此外，还需要探索供应链中的智能合约，包括数据供应链以及金融交易的执行。最后，需要进一步探索区块链在网络安全中的应用，包括勒索软件和对抗性机器学习等领域。我们相信，区块链是将数据科学与网络安全整合在一起的粘合剂。
 
 ## 14.5 重访数据隐私的多目标框架
-
-
-
-
 
 ### 多目标隐私框架回顾
 
@@ -5147,10 +4930,6 @@ COVID-19 大流行是自西班牙流感（据推测起源于堪萨斯州）以�
 *   **数据发布**：鉴于隐私影响，或许我们应该放弃发布数据的想法，而是要求数据使用者利用受控环境（可能位于云中）来使用数据。这样将更容易控制数据的正确使用。一个问题在于大学中使用的研究数据以及基于数据研究的可重复性。
 *   **隐私对数据质量的影响**：近期研究表明，人们尤其是在社交网络中会撒谎，因为他们不确定自己的隐私是否得到保护。这导致数据质量下降，进而影响基于这些数据的决策和策略。此外，2020 年和 2021 年发布了大量关于 COVID-19 的假新闻。因此，我们需要技术将实际有用的数据与虚假数据区分开来。
 *   **风险模型**：可以识别大数据与风险的不同关系类型：(a) 大数据可能增加隐私风险；(b) 大数据可能在许多领域降低风险（例如国家安全）。开发这两类风险的模型对于识别合适的权衡和隐私增强技术至关重要。
-
-
-
-
 
 ### 数据所有权
 
@@ -5203,21 +4982,17 @@ COVID-19 大流行是自西班牙流感（据推测起源于堪萨斯州）以�
 美国公民自由联盟（`ACLU`）发布了关于平衡接触者追踪与隐私的优秀文章（COVID，APPL）。这些文章讨论了苹果、谷歌等智能手机公司利用蓝牙技术进行接触者追踪的提案。`ACLU` 还强烈支持基于策略的数据收集和分析。例如，文章指出：
 
 > 将隐私保护嵌入设计的技术原则是一类重要的保护措施。仍然需要严格的政策（<https://www.justsecurity.org/69444/how-to-think-about-the-right-to-privacy-and-using-location-data-to-fight-covid-19/>）来防止越权和滥用。这些政策至少应包括以下内容：
-
-*   **自愿性**：只要可能，检测呈阳性的人必须同意应用程序进行的任何数据共享。决定使用追踪应用应是自愿且非强制的。安装、使用或报告不得作为返回工作或上学的前提条件。
-*   **用途限制**：数据不应用于公共卫生以外的目的——不用于广告，特别是不用于任何惩罚性或执法目的。
-*   **最小化**：必须制定政策，确保仅收集必要信息，并禁止与公共卫生工作之外的任何人共享数据。
-*   **数据销毁**：技术以及相关政策和程序都应确保在不再需要保留数据时将其删除。
-*   **透明度**：如果政府获取任何数据，必须完全透明地说明获取了什么数据、从何处获取以及如何使用这些数据。
-
-
-
-
+>
+> *   **自愿性**：只要可能，检测呈阳性的人必须同意应用程序进行的任何数据共享。决定使用追踪应用应是自愿且非强制的。安装、使用或报告不得作为返回工作或上学的前提条件。
+> *   **用途限制**：数据不应用于公共卫生以外的目的——不用于广告，特别是不用于任何惩罚性或执法目的。
+> *   **最小化**：必须制定政策，确保仅收集必要信息，并禁止与公共卫生工作之外的任何人共享数据。
+> *   **数据销毁**：技术以及相关政策和程序都应确保在不再需要保留数据时将其删除。
+> *   **透明度**：如果政府获取任何数据，必须完全透明地说明获取了什么数据、从何处获取以及如何使用这些数据。
 > *   **不得任务蔓延**：必须制定政策，确保追踪工作不会在抗击 COVID-19 的努力结束后继续存在。
 >
 > 这些政策至少必须到位，以确保任何追踪应用程序都将有效，并符合公民自由和人权。
 
-虽然隐私倡导者仍然担心隐私侵犯，但他们也理解需要进行数据收集和分析以挽救生命。然而，当我们将 ACLU 现在的立场与他们 2002 年的立场进行比较时，我们看到了变化。这部分归因于我们现在对政策感知的数据收集和分析了解得更多。当时的担忧是，我们不想以牺牲隐私为代价获得虚假的安全感。此外，当时某些人即使与恐怖主义毫无关联，也被政府拘留。然而，大流行病截然不同。即使一个人看起来非常健康，也可能有必要对其进行检测，因为他/她可能是无症状感染者。因此，与反恐调查相比，人们似乎对 COVID-19 的检测和接触者追踪表现出更大的包容度。
+虽然隐私倡导者仍然担心隐私侵犯，但他们也理解需要进行数据收集和分析以挽救生命。然而，当我们将 `ACLU` 现在的立场与他们 2002 年的立场进行比较时，我们看到了变化。这部分归因于我们现在对政策感知的数据收集和分析了解得更多。当时的担忧是，我们不想以牺牲隐私为代价获得虚假的安全感。此外，当时某些人即使与恐怖主义毫无关联，也被政府拘留。然而，大流行病截然不同。即使一个人看起来非常健康，也可能有必要对其进行检测，因为他/她可能是无症状感染者。因此，与反恐调查相比，人们似乎对 COVID-19 的检测和接触者追踪表现出更大的包容度。
 
 除了隐私倡导者，还有一些人拒绝戴口罩、拒绝停止去酒吧，他们声称自己的公民自由受到了侵犯。尽管回在 2002 年，当普通大众在机场排队接受更广泛的检查时，并没有提出那么多担忧。这可能是因为我们能在电视上看到可怕的恐怖袭击。至于 COVID-19，我们看到了医院里发生的情况，但出于某种原因，人们似乎不那么担心，因为他们可能认为这不会发生在自己身上。我相信持续的教育是解决这一问题的关键。必须每天警告人们，不采取预防措施不仅可能导致他们自己死亡，还可能感染他人，包括他们死亡概率高得多的年迈亲属。戴口罩或面罩会带来一些不便，但为了挽救人类，做出小小的牺牲（甚至巨大的牺牲）是值得的。政治不应干预人类生命，2001 年和 2002 年不应，当然今天更不应。
 
@@ -5226,6 +5001,8 @@ COVID-19 大流行是自西班牙流感（据推测起源于堪萨斯州）以�
 前几节的讨论表明，无论我们讨论的是国家安全还是大流行病，核心都在于平衡安全与安保（例如，挽救生命、保护个人免受恐怖袭击）与隐私与公民自由。如果我们能同时拥有安全、安保、隐私和公民自由，那该多好？但我们知道这是不可能的。为了安全，我们需要牺牲公民自由的某些方面。问题在于牺牲多少？这就是我们的挑战。
 
 有人会争辩说，如果我们没有所有数据进行分析并向流行病学家和医生提供建议，以便 COVID-19 患者获得适当的医疗护理，我们就面临大规模伤亡的严重危险。那些认为公民自由至上的人会争辩说，如果数据被用于勒索个人、拒绝提供医保等坏目的，我们就不是一个文明社会。此外，他们还认为，数据落入坏人之手也可能导致谋杀和强奸等敌对行为。也就是说，了解个人的行踪会给凶手和强奸犯提供绝佳的作案机会。最终，我们需要权衡取舍。在某些时期，我们必须专注于安全（例如，大流行加剧）；在其他一些时期，隐私应得到更多考虑（例如，病例寥寥无几时）。
+
+
 
 现在有一个名为“AI for Good”[UN]的全球倡议，联合国也在推广这一倡议。该倡议关注 AI 造福人类的所有益处。但最近，我们写了一篇文章“在网络安全攻击和隐私侵犯中，AI 能否造福？”[THUR2020b]。例如，我们论证了如果 AI 技术受到攻击会发生什么？我们还讨论了 AI 的隐私影响。那篇文章的重点是儿童权利和预防虐待儿童。我们需要结合 COVID-19 来审视这一倡议。我们需要 ACLU 和联合国等组织共同努力，应对我们面临的挑战，即如何平衡安全与安保与隐私和公民自由？
 
@@ -5240,49 +5017,26 @@ COVID-19 大流行是自西班牙流感（据推测起源于堪萨斯州）以�
 ## 参考文献
 
 *   [AGRA2000] R. Agrawal, R. Srikant, Privacy-Preserving Data Mining, *Proceedings of the ACM SIGMOD Conference*, Dallas, TX, May 2000.
-
 *   [APPL] Apple and Google Announced a Coronavirus Tracking System. How Worried Should We Be? [`www.aclu.org/news/privacy-technology/apple-and-google-announced-a-coronavirus-tracking-system-how-worried-should-we-be/`](https://www.aclu.org)
-
 *   [COVID] A COVID-19 Balancing Act: Public Health and Privacy (EP. 97), [`www.aclu.org/podcast/covid-19-balancing-act-public-health-and-privacy-ep-97`](https://www.aclu.org)
-
 *   [INAN2012] A. Inan, M. Kantarcioglu, G. Ghinita, E. Bertino, A Hybrid Approach to Private Record Matching, IEEE Transactions on Dependable Secure Computing (TDSC), Volume 9, # 5, 2012, 684–698.
-
 *   [KHAN2014] L. Khan, K. Hamlen, M. Kantarcioglu, Silver Lining: Enforcing Secure Information Flow at the Cloud Edge, Ic2e, 2014, 37–46.
-
 *   [LIU2009] L. Liu, M. Kantarcioglu, B.M. Thuraisingham, Privacy Preserving Decision Tree Mining from Perturbed Data, HICSS, 2009: 1–10.
-
-
-
-
-*   **[SCAN2007]** M. Scannapieco, I. Figotin, E. Bertino, A. Elmagarmid, “Privacy Preserving Schema and Data Matching, *Proceedings of 2007 ACM SIGMOD International Conference on Management of Data, Beijing China*, 653–664.
-
-*   **[THUR1998]** B. Thuraisingham, Data Mining: Technologies, Techniques, Tools and Trends, CRC Press, 1998.
-
-*   **[THUR2002a]** B. Thuraisingham, Data Mining, National Security, Privacy and Civil Liberties, SIGKDD Explorations, Volume 4, # 2, 2002, 1–5.
-
-*   **[THUR2002b]** B. Thuraisingham, Data Mining for Counter-Terrorism, Presented at the White House Office of Science and Technology Policy, Washington DC, February 2002.
-
-*   **[THUR2002c]** B. Thuraisingham, Data Mining for Counter-Terrorism, Presented at the Database Program panel at Stanford University, Palo Alto, March 2002.
-
-*   **[THUR2002d]** B. Thuraisingham, Data Mining for Counter-Terrorism, Panel at the IFIP 113 Conference on Data and Applications Security, University of Cambridge, England, July 2002.
-
-*   **[THUR2002e]** B. Thuraisingham, Data Mining for Counter-Terrorism, Presented at the United Nations, September 2002 (also at the White House Office of Technology and Policy, 2002).
-
-*   **[THUR2003]** B. Thuraisingham, Web Data Mining with Applications to Counter-terrorism and Business Intelligence, CRC Press, 2003.
-
-*   **[THUR2005]** B. Thuraisingham, Privacy-Preserving Data Mining: Development and Directions, Journal of Database Management, Volume 16, # 1, 2005, 75–87.
-
-*   **[THUR2015]** B. Thuraisingham, Keeping Better Tabs on Suspicious Persons (NY Times Opinion Column), January 13, 2015. [`www.nytimes.com/roomfordebate/2015/01/12/when-known-jihadists-come-home/keeping-better-tabs-on-suspicious-persons`](https://www.nytimes.com)
-
-*   **[THUR2018]** B. M. Thuraisingham, M. Kantarcioglu, E. Bertino, J. Z. Bakdash, M. Fernández, Towards a Privacy-Aware Quantified Self Data Management Framework, SACMAT, Indianapolis, Indiana, 2018, 173–184.
-
-*   **[THUR2020a]** B. Thuraisingham, Data Science, COVID-19, Privacy and Civil Liberties, *Proceedings IEEE BigCyber*, December 2020.
-
-*   **[THUR2020b]** B. Thuraisingham, Can AI be for Good in the Midst of Cyber Attacks and Privacy Violations? A Position Paper, ACM CODASPY, 2020, 1–4.
-
-*   **[ULUS2014]** H. Ulusoy, M. Kantarcioglu, E. Pattuk, K. W. Hamlen, Vigiles: Fine-Grained Access Control for MapReduce Systems, 2014 *IEEE International Congress on Big Data (BigData Congress)*, Anchorage, Alaska, pp. 40–47
-
-*   **[UN]** United Nations, AI for Good, [`aiforgood.itu.int/`](https://aiforgood.itu.int)
+*   [SCAN2007] M. Scannapieco, I. Figotin, E. Bertino, A. Elmagarmid, “Privacy Preserving Schema and Data Matching, *Proceedings of 2007 ACM SIGMOD International Conference on Management of Data, Beijing China*, 653–664.
+*   [THUR1998] B. Thuraisingham, Data Mining: Technologies, Techniques, Tools and Trends, CRC Press, 1998.
+*   [THUR2002a] B. Thuraisingham, Data Mining, National Security, Privacy and Civil Liberties, SIGKDD Explorations, Volume 4, # 2, 2002, 1–5.
+*   [THUR2002b] B. Thuraisingham, Data Mining for Counter-Terrorism, Presented at the White House Office of Science and Technology Policy, Washington DC, February 2002.
+*   [THUR2002c] B. Thuraisingham, Data Mining for Counter-Terrorism, Presented at the Database Program panel at Stanford University, Palo Alto, March 2002.
+*   [THUR2002d] B. Thuraisingham, Data Mining for Counter-Terrorism, Panel at the IFIP 113 Conference on Data and Applications Security, University of Cambridge, England, July 2002.
+*   [THUR2002e] B. Thuraisingham, Data Mining for Counter-Terrorism, Presented at the United Nations, September 2002 (also at the White House Office of Technology and Policy, 2002).
+*   [THUR2003] B. Thuraisingham, Web Data Mining with Applications to Counter-terrorism and Business Intelligence, CRC Press, 2003.
+*   [THUR2005] B. Thuraisingham, Privacy-Preserving Data Mining: Development and Directions, Journal of Database Management, Volume 16, # 1, 2005, 75–87.
+*   [THUR2015] B. Thuraisingham, Keeping Better Tabs on Suspicious Persons (NY Times Opinion Column), January 13, 2015. [`www.nytimes.com/roomfordebate/2015/01/12/when-known-jihadists-come-home/keeping-better-tabs-on-suspicious-persons`](https://www.nytimes.com)
+*   [THUR2018] B. M. Thuraisingham, M. Kantarcioglu, E. Bertino, J. Z. Bakdash, M. Fernández, Towards a Privacy-Aware Quantified Self Data Management Framework, SACMAT, Indianapolis, Indiana, 2018, 173–184.
+*   [THUR2020a] B. Thuraisingham, Data Science, COVID-19, Privacy and Civil Liberties, *Proceedings IEEE BigCyber*, December 2020.
+*   [THUR2020b] B. Thuraisingham, Can AI be for Good in the Midst of Cyber Attacks and Privacy Violations? A Position Paper, ACM CODASPY, 2020, 1–4.
+*   [ULUS2014] H. Ulusoy, M. Kantarcioglu, E. Pattuk, K. W. Hamlen, Vigiles: Fine-Grained Access Control for MapReduce Systems, 2014 *IEEE International Congress on Big Data (BigData Congress)*, Anchorage, Alaska, pp. 40–47
+*   [UN] United Nations, AI for Good, [`aiforgood.itu.int/`](https://aiforgood.itu.int)
 
 ## 第三部分 结语
 
@@ -5312,14 +5066,11 @@ DOI: [10.1201/9781003081845-26](https://doi.org/10.1201/9781003081845-26)
 
 正如第 4 章所述，云计算是信息技术和数据处理领域的一个新兴范式。企业利用云计算服务外包数据维护，这可以带来显著的经济效益。企业在“云”中远程存储和访问数据。随着云计算的普及，服务提供商面临着日益增长的挑战。他们必须在提供高效信息检索的同时维护海量异构数据。因此，云计算解决方案的关键重点是可扩展性和查询效率。换句话说，云计算是大数据管理和分析的关键技术。
 
-
-
-
 此外，正如第 4 章所述，语义 Web 技术正在开发中，旨以标准化方式呈现数据，使得数据既能被人类也能被机器检索和理解。历史上，网页是以纯 HTML（超文本标记语言）文件发布的，这些文件不适合推理。相反，机器将这些 HTML 文件视为一袋关键词。研究人员正在开发已标准化的语义 Web 技术，以解决此类缺陷。最著名的标准是`Resource Description Framework (RDF)` [W3b]、`SPARQL Protocol and RDF Query Language` [W3c]（`SPARQL`）。`RDF`是存储和表示数据的标准，而`SPARQL`是从`RDF`存储中检索数据的查询语言。`RDF`被广泛用于表示社交网络。云计算系统可以利用这些语义 Web 技术的力量来表示和管理社交网络，从而使这些网络的用户具备为数据密集型应用高效存储和检索数据的能力。
 
 语义 Web 技术对于维护云中的数据可能特别有用。基于语义 Web 的社交网络提供了以标准化方式指定和查询异构数据的能力。此外，使用`Web Ontology Language (OWL)`，本体、不同的模式、类、数据类型和关系可以被指定，而无需牺牲标准的`RDF/SPARQL`接口。反之，云计算解决方案可能对基于语义 Web 的大数据社区（如社交网络社区）大有裨益。语义 Web 数据集正呈指数级增长。在 Web 领域，可扩展性至关重要。然而，高速响应时间在 Web 社区中也至关重要。我们相信云计算范式提供了一种能够同时实现这两个目标的解决方案。
 
-现有的商业工具和技术在云计算环境下扩展性不佳。研究人员最近才开始关注这些问题。他们正在提议从头构建系统。在[WANG2010]中，研究人员为一种新的分布式数据库[COMP]提出了一种索引方案，该数据库可用作云系统。当涉及到诸如`RDF`之类的语义 Web 数据时，我们面临着类似的挑战。随着存储变得更便宜，以及存储和检索大量数据的需求，开发处理数十亿`RDF`三元组（需要 TB 级磁盘空间）的系统不再是遥不可及的前景。研究人员已经在处理数十亿三元组[NEWM2008, ROHL2007]。竞赛正在组织中，以鼓励研究人员构建高效的存储库[CHAL]。目前，语义 Web 技术只有少数几个框架（例如`RDF-3X` [NEUM2008]、`Jena` [CARR2004]、`Sesame` [OPEN]和`BigOWLIM` [KIRY2005])，并且这些框架对于大型`RDF`图存在局限性。因此，存储大量`RDF`三元组并高效查询它们是一个具有挑战性且重要的问题。
+现有的商业工具和技术在云计算环境下扩展性不佳。研究人员最近才开始关注这些问题。他们正在提议从头构建系统。在[WANG2010]中，研究人员为一种新的分布式数据库[COMP]提出了一种索引方案，该数据库可用作云系统。当涉及到诸如`RDF`之类的语义 Web 数据时，我们面临着类似的挑战。随着存储变得更便宜，以及存储和检索大量数据的需求，开发处理数十亿`RDF`三元组（需要 TB 级磁盘空间）的系统不再是遥不可及的前景。研究人员已经在处理数十亿三元组[NEWM2008, ROHL2007]。竞赛正在组织中，以鼓励研究人员构建高效的存储库[CHAL]。目前，语义 Web 技术只有少数几个框架（例如`RDF-3X` [NEUM2008]、`Jena` [CARR2004]、`Sesame` [OPEN]和`BigOWLIM` [KIRY2005]），并且这些框架对于大型`RDF`图存在局限性。因此，存储大量`RDF`三元组并高效查询它们是一个具有挑战性且重要的问题。
 
 在本章中，我们讨论了一种基于访问控制的安全查询处理系统，该系统运行在云中并管理大量`RDF`三元组。这些`RDF`三元组可用于表示大数据应用，如社交网络，正如我们在之前的书中所讨论的[THUR2015]。我们在`JENA`之上开发了一个`SPARQL`查询优化器，用于查询处理引擎。我们在`SPARQL`查询优化器之上开发了两种访问控制模型，以控制对数据的访问。一种基于基于令牌的访问控制机制，另一种基于`XACML`（可扩展访问控制标记语言）访问控制框架[XACM]。也就是说，我们本质上讨论的是针对大数据系统的访问控制模型。
 
@@ -5331,14 +5082,13 @@ DOI: [10.1201/9781003081845-26](https://doi.org/10.1201/9781003081845-26)
 
 ## 15.2 我们的方法
 
+
+
 可以构建一个分布式系统，以克服当前语义 Web 框架的可扩展性和性能问题。数据库正在被分布式部署，以提供此类可扩展的解决方案。然而，迄今为止，还没有用于存储和管理`RDF`数据的分布式存储库。研究人员只是最近才开始探索必须解决的问题和技术解决方案，以构建这样一个分布式系统。一条有前景的研究路线涉及利用现成的分布式数据库系统或关系数据库。此类数据库系统可以使用关系模式来存储`RDF`数据。`SPARQL`查询可以通过首先将其转换为`SQL`来回答[CHEB2007, CHON2005, CYGA2005]。最优关系模式正在为此目的被探究[ABAD2007]。此类系统的主要缺点是它们针对关系数据进行了优化。它们可能无法针对`RDF`数据表现良好，特别是因为`RDF`数据是三元组集合[W3a]（一个有序的三元组，分别称为主语、谓语和宾语），这些三元组形成大型有向图。在`SPARQL`查询中，任意数量的三元组模式（TP）[W3e]可以在单个变量[W3d]上连接，这使得关系数据库查询计划变得复杂。由于这些系统针对关系数据模式和事务性数据库用法进行了优化，性能和可扩展性将仍然是一个具有挑战性的问题。
 
 然而，另一种方法是从头构建一个用于`RDF`的分布式系统。在这里，将有机会设计和优化一个专门针对`RDF`数据的系统。在这种方法中，研究人员将是在重复造轮子。我们没有从空白开始，而是构建了一个利用云计算平台的通用分布式存储系统解决方案。然后，我们专门定制了系统和模式，以满足语义 Web 数据的需求。最后，我们使用这种存储设施构建了一个语义 Web 存储库。
 
-
-
-
-### 基于 Hadoop 的 RDF 存储与查询处理
+## 基于 Hadoop 的 RDF 存储与查询处理
 
 Hadoop [HADOa] 是一种分布式文件系统，文件可通过复制进行保存。它是构建存储系统的理想选择。Hadoop 具有高容错性和极高的可靠性。此外，它还包含 MapReduce [DEAN2004] 编程模型的实现，这是一种适合大规模数据并行处理的函数式编程模型。通过将数据划分为若干独立的数据块，MapReduce 进程针对这些数据块运行，从而简化了并行化。而且，MapReduce 编程模型有助于简化连接多个三元组模式的任务。
 
@@ -5371,9 +5121,6 @@ Google 将 MapReduce 用于网页索引、数据存储和社交网络 [CHAN2006]
 在语义网领域，利用 MapReduce 技术的工作并不多。我们发现了两个相关项目：BioMANTA [ITEE] 项目和可扩展、高性能、稳健和分布式 (SHARD) [CLOU]。BioMANTA 提出了对 RDF 分子 [DING2005] 的扩展，并实现了一个基于 MapReduce 的分子存储 [NEWM2008]。他们使用 MapReduce 来回答查询。他们最多查询了四百万三元组。我们的工作有以下不同之处：首先，我们查询了十亿级三元组。其次，我们设计了一种存储模式，专门针对提高 RDF 数据的查询执行性能。我们根据三元组的谓词和对象的类型，将 RDF 三元组存储在文件中。最后，我们还有一种算法，用于确定查询处理计划，其成本由给定 SPARQL 查询中变量总数的对数上界约束。通过使用该算法，我们可以确定作业的输入文件及其运行顺序。据我们所知，我们是首批提出一种在 HDFS 中使用平面文件存储 RDF 数据的存储模式，以及一种用于回答 SPARQL 查询的 MapReduce 作业确定算法的人。
 
 SHARD 是一个使用 Hadoop Cloudera 发行版的 RDF 三元组存储。该项目展示了初步结果，证明了 Hadoop 提高 RDF 数据集可扩展性的能力。然而，SHARD 仅以三元组存储模式存储数据。它目前不进行查询规划或重排序，且其查询处理器不会最小化 Hadoop 作业的数量。针对语义网存储库的研究已相当深入，特别强调查询效率和可扩展性。事实上，此类存储库太多，无法逐一公平评估和讨论。因此，我们关注那些开源或可下载、且在语义网和数据库社区获得良好声誉的语义网存储库。
-
-
-
 
 在 [ABAD2009b] 和 [ABAD2007] 中，研究人员报告了一种用于 RDF 数据存储和检索的垂直分区 DBMS。他们的解决方案是一种模式，为每个谓词使用一张两列的表。然后，他们的模式在列式关系数据库（如 CStore [STON2005] 或 MonetDB [BONC06]）之上实现。他们观察到，与传统的关系数据库模式相比，他们的方案提升了性能。我们在 MapReduce 框架内的基于谓词的分区中利用了这项技术。然而，在垂直分区研究中，仅使用了小型数据库（<1 亿）。有几篇论文 [SIDI2008, MCGL2009, WEIS2008] 表明，随着数据集规模的增加，垂直分区的性能会大幅下降。
 
@@ -5411,10 +5158,6 @@ Hexastore [WEIS08] 和 BitMat [ATRE2008] 是针对 RDF 索引优化的主内存�
 
 ### 15.4.3 谓词分割
 
-
-
-# 15.4.3 使用谓词进行分割
-
 在第一步中，我们根据谓词对数据进行划分。这种划分能立即让我们缩减任何不包含变量谓词的 SPARQL 查询的搜索空间。对于此类查询，我们只需为每个谓词选取一个文件，并仅在这些文件上运行查询。为求简化，我们使用谓词命名文件，例如，所有包含谓词 `p1:pred` 的三元组都存入名为 `p1-pred` 的文件中。然而，如果三元组模式 [W3e] 中存在变量谓词，且我们无法确定对象的类型，则必须考虑所有文件。如果我们能确定对象的类型，则考虑所有包含该类型对象的文件。我们将在 第 15.5 节 中进一步讨论这一点。在真实的 RDF 数据集中，不同谓词的数量通常不大 [STOC2008]。不过，也存在拥有许多谓词的数据集。在这种情况下，我们的系统性能不会变化，因为我们只选择与 SPARQL 查询中指定的谓词相关的文件。
 
 ### 15.4.4 使用对象的显式类型信息进行分割
@@ -5443,37 +5186,32 @@ MapReduce 框架是我们云计算工作的核心。在本节中，我们将讨�
 
 在确定作业之前，我们选择需要输入到作业中的文件。我们在此查询处理步骤中应用一些查询重写能力。我们获取用户提交的查询并遍历三元组模式。我们可能会遇到以下情况：
 
-1.  在一个三元组模式中，如果谓词是变量，我们选择所有文件作为作业的输入，并终止遍历。
 
-2.  如果谓词是 `rdf:type` 且对象是具体的，我们选择具有该特定类型的类型文件。例如，对于 LUBM 查询 9（清单 1），我们可以选择文件 `type_Student` 作为输入集的一部分。然而，这引出了一个有趣的场景。在我们的数据集中，实际上不存在名为 `type_Student` 的文件，因为 Student 类在本体树中不是叶子节点。在这种情况下，我们参考 LUBM 本体 [LEHI] 来确定正确的输入文件集。我们添加文件 `type_GraduateStudent`、`type_UndergraduateStudent` 和 `type_ResearchAssistant`，因为 GraduateStudent、UndergraduateStudent 和 ResearchAssistant 是以 Student 为根节点的子树的叶子节点。
 
-3.  如果谓词是 `rdf:type` 且对象是变量，那么如果该变量的类型由另一个三元组模式定义，我们选择具有该特定类型的类型文件。否则，我们选择所有类型文件。
+1. 在一个三元组模式中，如果谓词是变量，我们选择所有文件作为作业的输入，并终止遍历。
 
-4.  如果谓词不是 `rdf:type` 且对象是变量，那么我们需要确定该对象的类型是否由查询中的另一个三元组模式指定。在这种情况下，我们可以重写查询并消除一些连接。例如，在 LUBM 查询 9（清单 1）中，Y 的类型被指定为 Faculty，Z 的类型被指定为 Course，这些变量被用作最后三个三元组模式中的对象。如果我们选择文件 `advisor_Lecturer`、`advisor_PostDoc`、`advisor_FullProfessor`、`advisor_AssociateProfessor`、`advisor_AssistantProfessor` 和 `advisor_VisitingProfessor` 作为输入集的一部分，则第 2 行的三元组模式变得不必要。同样，如果选择文件 `takesCourse_Course` 和 `takesCourse_GraduateCourse`，则第 3 行的三元组模式变得不必要。因此，我们得到清单 2 所示的重写查询。然而，如果未指定对象的类型，则我们选择该谓词的所有文件。
+2. 如果谓词是 `rdf:type` 且对象是具体的，我们选择具有该特定类型的类型文件。例如，对于 LUBM 查询 9（清单 1），我们可以选择文件 `type_Student` 作为输入集的一部分。然而，这引出了一个有趣的场景。在我们的数据集中，实际上不存在名为 `type_Student` 的文件，因为 Student 类在本体树中不是叶子节点。在这种情况下，我们参考 LUBM 本体 [LEHI] 来确定正确的输入文件集。我们添加文件 `type_GraduateStudent`、`type_UndergraduateStudent` 和 `type_ResearchAssistant`，因为 GraduateStudent、UndergraduateStudent 和 ResearchAssistant 是以 Student 为根节点的子树的叶子节点。
 
-5.  如果谓词不是 `rdf:type` 且对象是具体的，那么我们选择该谓词的所有文件。
+3. 如果谓词是 `rdf:type` 且对象是变量，那么如果该变量的类型由另一个三元组模式定义，我们选择具有该特定类型的类型文件。否则，我们选择所有类型文件。
 
-**清单 1：LUBM 查询 9**
+4. 如果谓词不是 `rdf:type` 且对象是变量，那么我们需要确定该对象的类型是否由查询中的另一个三元组模式指定。在这种情况下，我们可以重写查询并消除一些连接。例如，在 LUBM 查询 9（清单 1）中，Y 的类型被指定为 Faculty，Z 的类型被指定为 Course，这些变量被用作最后三个三元组模式中的对象。如果我们选择文件 `advisor_Lecturer`、`advisor_PostDoc`、`advisor_FullProfessor`、`advisor_AssociateProfessor`、`advisor_AssistantProfessor` 和 `advisor_VisitingProfessor` 作为输入集的一部分，则第 2 行的三元组模式变得不必要。同样，如果选择文件 `takesCourse_Course` 和 `takesCourse_GraduateCourse`，则第 3 行的三元组模式变得不必要。因此，我们得到清单 2 所示的重写查询。然而，如果未指定对象的类型，则我们选择该谓词的所有文件。
+
+5. 如果谓词不是 `rdf:type` 且对象是具体的，那么我们选择该谓词的所有文件。
+
+### 清单 1：LUBM 查询 9
 
 ```
 SELECT ?X ?Y ?Z WHERE {
-```
-
-
-
-
-#### LUBM 查询 9 重写
-
-```
 ?X rdf:type ub:Student.
 ?Y rdf:type ub:Faculty.
 ?Z rdf:type ub:Course.
 ?X ub:advisor ?Y.
 ?Y ub:teacherOf ?Z.
 ?X ub:takesCourse ?Z
+}
 ```
 
-**清单 2：重写后的 LUBM 查询 9**
+### 清单 2：重写后的 LUBM 查询 9
 
 ```
 SELECT ?X ?Y ?Z WHERE {
@@ -5484,31 +5222,37 @@ SELECT ?X ?Y ?Z WHERE {
 }
 ```
 
-### 15.5.3 查询处理的成本估算
+## 15.5.3 查询处理的成本估算
 
 我们运行 Hadoop 作业来回答 SPARQL 查询。在本节中，我们将讨论如何估算作业的成本。但在此之前，我们先引入一些稍后将用到的定义：
 
 **定义 15.1：三元组模式 (TP)**
+
 三元组模式是 SPARQL 查询 `WHERE` 子句中出现的主语、谓语和宾语的有序集合。主语、谓语和宾语可以是变量（未绑定）或具体值（已绑定）。
 
 **定义 15.2：三元组模式连接 (TPJ)**
+
 三元组模式连接是两个 TP 在一个变量上的连接。
 
 **定义 15.3：MapReduce 连接 (MRJ)**
+
 MapReduce 连接是两个或多个三元组模式在一个变量上的连接。
 
 **定义 15.4：作业 (JB)**
+
 作业 `JB` 是一个 Hadoop 作业，其中完成一个或多个 MRJ。`JB` 具有一组输入文件和一组输出文件。
 
 **定义 15.5：冲突 MapReduce 连接 (CMRJ)**
+
 冲突 MapReduce 连接是指在不同变量上共享一个三元组模式的一对 MRJ。
 
 **定义 15.6：非冲突 MapReduce 连接 (NCMRJ)**
+
 非冲突 MapReduce 连接是指不共享任何三元组模式，或者共享一个三元组模式且 MRJ 在同一变量上进行的一对 MRJ。
 
 一个例子将更好地说明这些术语。在**清单 3**中，我们展示了 LUBM 查询 12。第 2、3、4 和 5 行各有一个三元组模式。第 2 行和第 4 行的 TP 在变量 `?X` 上的连接是一个 `MRJ`。如果我们做两个 MRJ，一个是第 2 行和第 4 行的 TP 在变量 `?X` 上的连接，另一个是第 4 行和第 5 行的 TP 在变量 `?Y` 上的连接，将会存在一个 `CMRJ`，因为第 4 行的 TP (`?X ub:worksFor ?Y`) 参与了在两个不同变量 `?X` 和 `?Y` 上的两个 MRJ。这种连接被称为 `CMRJ`，因为在一个 Hadoop 作业中，一个 TP 的多个变量不能同时作为键，而 MRJ 是在键上执行的。一个 `NCMRJ` 的例子是：第 2 行和第 4 行的三元组模式在变量 `?X` 上的一个 MRJ，以及第 3 行和第 5 行的三元组模式在变量 `?Y` 上的另一个 MRJ。这两个 MRJ 可以组成一个 `JB`。
 
-**清单 3：LUBM 查询 12**
+### 清单 3：LUBM 查询 12
 
 ```
 SELECT ?X WHERE {
@@ -5519,20 +5263,26 @@ SELECT ?X WHERE {
 }
 ```
 
-#### 15.5.3.1 理想模型
+### 15.5.3.1 理想模型
 
 为了回答一个 SPARQL 查询，我们可能需要不止一个作业。因此，在理想场景下，处理查询的成本估算需要对回答该查询所需的每个作业进行单独的成本估算。一个作业包含三个主要任务：读取、排序和写入。我们根据这三个任务来估算作业的成本。对于每个任务，为其处理的每个三元组模式分配一个单位成本。在当前模型中，我们假设读取和写入的成本相同。
 
 $$
+
 Cost = \left( \sum_{i = 1}^{n - 1} (MI_i + MO_i + RI_i + RO_i) \right) + MI_n + MO_n + RI_n \tag{15.1}
+
 $$
 
 $$
+
 = \left( \sum_{i = 1}^{n - 1} Job_i \right) + MI_n + MO_n + RI_n \tag{15.2}
+
 $$
 
 $$
+
 Job[i] = MI[i] + MO[i] + RO[i] + RI[i] \quad (if \ i < n) \tag{15.3}
+
 $$
 
 其中
@@ -5544,19 +5294,19 @@ $$
 
 公式 (15.1) 是处理查询的总成本。它是每个作业单独成本的求和，加上最后一个作业的 Map 阶段成本。我们不考虑最后一个作业 Reduce 输出的成本，因为对于任何查询计划该成本都相同，因为该输出是最终结果，对于给定的查询和数据集是固定的。一个作业本质上是在文件数据上执行 MapReduce 任务。公式 (15.2) 显示了 MapReduce 任务划分为子任务。因此，为了估算每个作业的成本，我们将结合每个子任务的估算成本。
 
-##### 15.5.3.1.1 Map 输入 (MI) 阶段
+#### 15.5.3.1.1 Map 输入 (MI) 阶段
 
 该阶段从 HDFS 中存储的选定输入文件读取三元组模式。因此，我们可以将 MI 阶段的成本估算为每个选定文件中三元组总数的总和。
 
-##### 15.5.3.1.2 Map 输出 (MO) 阶段
+#### 15.5.3.1.2 Map 输出 (MO) 阶段
 
 MO 阶段的估算取决于正在处理的查询类型。如果查询没有绑定变量（例如 `[?X ub:worksFor ?Y]`），则 Map 阶段的输出等于输入。所有三元组模式都被转换为键值对并作为输出。因此，对于此类查询，MO 成本将与 MI 成本相同。但是，如果查询涉及绑定变量（例如 `[?Y ub:subOrganizationOf <http://www.U0.edu>]`），则在生成键值对之前，可以应用绑定组件选择性估算。三元组模式的估算结果将占 Map 输出阶段的成本。选定的三元组被写入本地磁盘。
 
-##### 15.5.3.1.3 Reduce 输入 (RI) 阶段
+#### 15.5.3.1.3 Reduce 输入 (RI) 阶段
 
 在此阶段，来自 Map 输出阶段的三元组通过 HTTP 读取，然后根据其键值进行排序。排序后，具有相同键的三元组被分组在一起。因此，RI 阶段的成本估算等于 MO 阶段。RI 中排序的键值对数量等于 MO 阶段生成的键值对数量。
 
-##### 15.5.3.1.4 Reduce 输出 (RO) 阶段
+#### 15.5.3.1.4 Reduce 输出 (RO) 阶段
 
 RO 阶段处理执行连接。因此，我们可以在此阶段使用连接三元组模式选择性汇总统计来估算其输出大小。稍后，我们将详细讨论我们框架所需的连接三元组模式选择性汇总统计。
 
@@ -5564,10 +5314,7 @@ RO 阶段处理执行连接。因此，我们可以在此阶段使用连接三�
 
 公式 (15.3) 显示了一个非常重要的假设。它说明了中间作业的总成本，当 `i < n` 时，将 RO 阶段的成本包含在作业总成本的计算中。
 
-#### 15.5.3.2 启发式模型
-
-
-
+### 15.5.3.2 启发式模型
 
 在本节中，我们将展示理想模型在实践中既不实用也不具成本效益。有几个问题使得理想模型在实际应用中吸引力降低。
 
@@ -5594,7 +5341,7 @@ RO 阶段处理执行连接。因此，我们可以在此阶段使用连接三�
 
 为了进一步研究，我们进行了一个实验，使用了清单 4 中所示的查询。在这里，TP 2 和 TP 3 在 `?Z` 上的连接选择率最高。因此，使用选择率因子选择连接的查询计划生成算法会选择此连接作为第一个作业。由于其他 TP 1 和 TP 4 分别与 TP 2 或 TP 3 共享变量，它们无法参与任何其他连接，而且它们彼此不共享任何变量，因此该作业中唯一可能执行的连接是 TP 2 和 TP 3 在 `?X` 上的连接。完成此连接后，剩下的两个连接分别是 TP 1 与第一个作业的连接输出在变量 `?X` 上的连接，以及 TP 4 与第一个作业的连接输出在变量 `?Y` 上的连接。我们发现第一个连接的选择率大于后者。因此，第二个作业将执行此连接，TP 4 又将不参与。在第三个也是最后一个作业中，第二个作业的连接输出将与 TP 4 在 `?Y` 上连接。这是使用连接选择率估算生成的计划。但最小作业计划是一个两作业计划：第一个作业连接 TP 1 和 TP 2 在 `?X` 上，以及 TP 3 和 TP 4 在 `?Y` 上。第二个也是最后一个作业将第一个作业的两个连接输出在 `?Z` 上连接。我们发现的查询运行时间见 [HUSA2011a]。
 
-**清单 4：实验查询**
+### 清单 4：实验查询
 
 ```
 ?S1 ub:advisor ?X .
@@ -5607,13 +5354,13 @@ RO 阶段处理执行连接。因此，我们可以在此阶段使用连接三�
 
 由于这些原因，我们不再追求理想模型。我们遵循实用模型，即生成一个具有最少可能作业数的查询计划。然而，在生成最小作业计划时，每当我们需要在一个作业中从多个连接中选择一个考虑时，我们不随机选择，而是使用摘要连接统计信息。这在 15.5.6 节 中描述。更多带有图表的实验结果细节见 [HUSA2011a]。
 
-### 15.5.4 查询计划生成
+## 15.5.4 查询计划生成
 
 在本节中，首先我们定义查询计划生成问题，并证明为理想模型和实用模型生成最佳（即成本最低）查询计划在计算上都是昂贵的。然后，我们将提出一种启发式方法和一种贪婪方法，以生成生成最佳计划的近似解。
 
 **运行示例。** 我们将在本节中使用以下查询作为运行示例：
 
-**清单 5：运行示例**
+### 清单 5：运行示例
 
 ```
 SELECT ?V, ?X, ?Y, ?Z WHERE {
@@ -5627,15 +5374,15 @@ SELECT ?V, ?X, ?Y, ?Z WHERE {
 
 为简化符号，我们将仅通过该模式中的变量来引用 TP。例如，第一个 TP (`?X rdf:type ub:GraduateStudent`) 将简单地表示为 `X`。此外，在简化版本中，整个查询将表示为：{`X`、`Y`、`Z`、`XZ`、`XY`}。
 
-
-
-#### 15.5.4.1 Bestplan 的计算复杂度
+### 15.5.4.1 Bestplan 的计算复杂度
 
 可以证明，生成最小代价查询计划在计算上是昂贵的，因为搜索空间呈指数级增长。首先，我们对问题进行建模，然后展示其复杂性。
 
-#### 15.5.4.2 问题建模
+### 15.5.4.2 问题建模
 
 我们将 Bestplan 建模为一个搜索问题。设 `G = (V, E)` 为一个加权有向图，其中每个顶点 `v[i] ∈ V` 表示三元组模式的一种状态，每条边 `e[i] ∈ (v[i[1]], v[i[2]]) ∈ E` 表示一个从状态 `v[i[1]]` 转移到状态 `v[i[2]]` 的作业。`v[0]` 是初始状态，此时尚未执行任何连接，即给定的查询。此外，`v[goal]` 是目标状态，表示所有连接均已执行完毕的三元组模式状态。该问题在于寻找从 `v[0]` 到 `v[goal]` 的最短加权路径。
+
+
 
 例如，在我们的运行示例查询中，初始状态 `v[0] = {X, Y, Z, XY, XZ}`，目标状态 `v[goal] = ∅`，即不再有剩余的三元组模式。假设第一个作业执行 `join(X, XY, XZ)`。那么，生成的三元组模式（新状态）将为 `v[1] = {Y, Z, YZ}`，作业 1 将由边 `(v[0], v[1])` 表示。边 `(v[0], v[1])` 的权重即为 `job[1]` 的代价 `= cost(job[1])`，其中 cost 为给定的代价函数。图 15.4 展示了示例查询的部分图。
 
@@ -5672,8 +5419,6 @@ J = { 0                    若 N = 0
 ```
 
 ### 15.5.5 利用摘要统计信息打破平局
-
-
 
 ### 15.5.6 MapReduce Join 执行
 
@@ -5717,9 +5462,6 @@ SELECT ?X, ?Y, ?Z WHERE {
 
 #### 15.6.1.2 基准框架
 
-
-
-
 #### 15.6.1.3 硬件
 
 我们拥有一个 10 节点的 Hadoop 集群，用于我们的框架。每个节点的配置如下：奔腾 IV 2.80 GHz 处理器、4 GB 内存和 640 GB 磁盘空间。我们在一台配置强劲的单机上运行 Jena、RDF-3X 和 BigOWLIM 框架，该机器配备 2.80 GHz 四核处理器、8 GB 内存和 1 TB 磁盘空间。
@@ -5758,10 +5500,9 @@ SELECT ?X, ?Y, ?Z WHERE {
 
 还应注意，我们的 `RDF-3X` 和 `HadoopRDF` 查询均使用冷运行进行测试。这意味着执行前清除了主内存和文件系统缓存。然而，对于 `BigOWLIM`，我们被迫执行热运行。这是因为将数据库加载到 `BigOWLIM` 需要大量时间。因此，在冷运行下我们将轻松胜过 `BigOWLIM`。所以，我们实际上是将 `BigOWLIM` 的热运行与 `HadoopRDF` 的冷运行进行对比。这给 `BigOWLIM` 带来了巨大优势，但在大数据集上，`HadoopRDF` 仍产生了好得多的结果。这表明 `HadoopRDF` 比 `BigOWLIM` 具有更好的可扩展性，并为大数据集提供更高效的查询。
 
-
-
-
 我们执行的最后测试是深度可扩展性测试。为此，我们针对八种不同的数据集大小重复执行了相同的查询，最大规模达到 66 亿。
+
+
 
 在实验中我们发现，`Query 1` 很简单，仅需一次连接，因此在所有查询中它的耗时最少。`Query 2` 是三元组模式数量最多的两个查询之一。尽管它的三元组模式数量是 `Query 1` 的三倍，但由于我们的存储模式，其响应时间并非 `Query 1` 的三倍。`Query 4` 比 `Query 2` 少一个三元组模式，但它需要推理。因为我们即时确定推理关系，所以在我们的框架中，需要推理的查询耗时更长。`Queries 9 and 12` 也需要推理。详情见 [HUSA2011a]。
 
@@ -5777,7 +5518,7 @@ SELECT ?X, ?Y, ?Z WHERE {
 
 **定义 15.15：** **访问令牌元组 (ATT)** 形式为 ⟨`AccessToken`、`Element`、`ElementType`、`ElementName`⟩，其中 `Element` 可以是 `Subject`、`Object` 或 `Predicate`，`ElementType` 可描述为 `URI`、`DataType`、`Literal`、`Model` 或 `BlankNode`。`Model` 用于访问主体模型，将在本节后面解释。
 
-例如，在 图 15.5 的本体/知识库中，`David` 是一个主体，⟨1、`Subject`、`URI`、`David`⟩ 是一个 `ATT`。持有 `AT` 1 的任何代理均可检索 `David` 的所有文件信息（受限于管辖 `David` 相关联的 `URI`、字面量等对象访问的任何其他安全限制）。在描述 `ATT` 时，我们将 `ElementName` 留空 (\_)。
+例如，在图 15.5 的本体/知识库中，`David` 是一个主体，⟨1、`Subject`、`URI`、`David`⟩ 是一个 `ATT`。持有 `AT` 1 的任何代理均可检索 `David` 的所有文件信息（受限于管辖 `David` 相关联的 `URI`、字面量等对象访问的任何其他安全限制）。在描述 `ATT` 时，我们将 `ElementName` 留空 (\_)。
 
 ![Figure 15.5 Knowledge base.](img/fig15_5.jpg)
 
@@ -5795,7 +5536,7 @@ SELECT ?X, ?Y, ?Z WHERE {
 
         为简洁起见，我们省略了其余各访问级别不同主体和对象变体的描述。
 
-3.  **谓词和对象**：此访问级别允许主体提取满足特定谓词和对象的主体名称。例如，通过 `ATT` ⟨1、`Predicate`、`hasVitamins`、`_`⟩ 和 ⟨1、`Object`、`URI`、`E`⟩，持有 `AT` 1 的代理可查看拥有维生素 `E` 的主体名称（如食物）。更一般地，若 `X[1]` 和 `X[2]` 分别是描述某 `AT` 的 `Predicate` 和 `Object` 三元组生成的三元组集合，则持有该 `AT` 的代理可查看三元组集合 `X1 ∩ X2`。此例的图示见 图 15.6。
+3.  **谓词和对象**：此访问级别允许主体提取满足特定谓词和对象的主体名称。例如，通过 `ATT` ⟨1、`Predicate`、`hasVitamins`、`_`⟩ 和 ⟨1、`Object`、`URI`、`E`⟩，持有 `AT` 1 的代理可查看拥有维生素 `E` 的主体名称（如食物）。更一般地，若 `X[1]` 和 `X[2]` 分别是描述某 `AT` 的 `Predicate` 和 `Object` 三元组生成的三元组集合，则持有该 `AT` 的代理可查看三元组集合 `X1 ∩ X2`。此例的图示见图 15.6。
 
 4.  **主体访问**：凭此访问级别，代理可跨所有文件读取主体信息。这是限制较少的访问级别之一。主体可以是 `DataType` 或 `BlankNode`。
 
@@ -5816,9 +5557,6 @@ SELECT ?X, ?Y, ?Z WHERE {
 当系统管理员决定向代理的 `AT` 列表添加 `AT` 时，`AT` 和时间戳首先存入临时变量。在提交变更前，系统必须首先检测新 `AT` 列表中潜在的冲突。
 
 #### 15.7.2.1 代理 AT 的最终输出
-
-
-
 
 每个 AT 允许访问一组三元组。我们将此集合称为 AT 的 `result set`（结果集）。代理可访问的三元组集合是该代理 AT 列表中所有 AT 的结果集的并集。形式上，如果 `Y[1], Y[2], …, Y[n]` 分别是代理 AT 列表中 `AT[1], AT[2], …, AT[n]` 的结果集，则该代理可访问集合 `Y[1] ∪ Y[2] ∪ … ∪ Y[n]` 中的三元组。
 
@@ -5862,10 +5600,6 @@ SELECT ?X, ?Y, ?Z WHERE {
 
 *   [ATRE2008] M. Atre, J. Srinivasan, J. A. Hendler, BitMat: A Main-Memory Bit Matrix of RDF Triples for Conjunctive Triple Pattern Queries, *Proceedings of International Semantic Web Conference*, Karlsruhe, Germany, 2008.
 
-
-
-
-
 ## 参考文献
 
 *   **[BONC2006]** P. Boncz, T. Grust, M. van Keulen, S. Manegold, J. Rittinger, J. Teubner, MonetDB/XQuery: 由关系引擎驱动的快速 XQuery 处理器，*ACM SIGMOD 国际数据管理会议论文集*，伊利诺伊州芝加哥，2006，第 479–490 页。
@@ -5885,6 +5619,8 @@ SELECT ?X, ?Y, ?Z WHERE {
 *   **[CLOU]** Cloudera 大学，<http://www.cloudera.com/blog/2010/03/how-raytheon-researchers-are-using-hadoop-to-build-a-scalable-distributed-triple-store>。
 
 *   **[COMP]** 新加坡国立大学计算学院，<http://www.comp.nus.edu.sg/~epic/>。
+
+
 
 *   **[CYGA2005]** R. Cyganiak, SPARQL 的关系代数，技术报告 HPL-2005-170，2005。
 
@@ -5940,10 +5676,6 @@ SELECT ?X, ?Y, ?Z WHERE {
 
 *   **[ROHL2007]** K. Rohloff, M. Dean, I. Emmons, D. Ryder, J. Sumner, 大规模数据存储三元组存储技术评估，*OTM 面向有意义的互联网系统联合国际会议论文集*，葡萄牙维拉莫拉，2007。
 
-
-
-
-
 # 16 基于访问控制的云端可信信息共享
 
 DOI: [10.1201/9781003081845-27](https://doi.org/10.1201/9781003081845-27)
@@ -5955,9 +5687,6 @@ DOI: [10.1201/9781003081845-27](https://doi.org/10.1201/9781003081845-27)
 云计算范式能够安全高效地共享大量数据。此外，`云计算`的出现以及向 `SaaS` 范式的持续转变，使得云端作为服务的 `AIS` 需求日益增长。为满足联盟组织以云为中心的 `AIS` 需求，迫切需要开发一个在云端运行的 `AIS` 框架。
 
 尽管近年来已开发出许多基于策略的信息共享 `AIS` 工具 [[AWAD2010]](#ch16.xhtml#ref16_5)、[[FINI2009]](#ch16.xhtml#ref16_25)、[[THUR2008]](#ch16.xhtml#ref16_57)、[[RAO2008]](#ch16.xhtml#ref16_48)（这些工具基于控制对数据的访问），但据我们所知，这些工具均不在云端和大数据环境中运行，因此无法提供支持大量用户（如涉及包含文本、图像和视频的海量数据的社交媒体用户）所需的可扩展性。我们开发的用于支持基于云的 `AIS` 的原型系统，应用了以云为中心的查询引擎（例如第 15 章讨论的 `SPARQL` 查询优化器 Chapter 15），利用基于令牌的策略引擎或强制执行用 `XACML` 表达的策略的引擎 [[THUR2010]](#ch16.xhtml#ref16_58)、[[THUR2011]](#ch16.xhtml#ref16_59)，在关系数据库和语义 Web 数据库中查询大量数据。虽然这比之前的工作有了显著改进（并让我们深入了解了基于云的解决方案的实现），但仍存在一些局限性。首先，基于 `XACML` 的策略规范表达能力不足，无法支持医疗和国防等 `AIS` 应用所需的许多复杂策略。其次，为满足关键任务的可扩展性和效率要求，策略引擎需要在云端运行。例如，虽然第 15 章 Chapter 15 讨论的策略引擎托管在云端，但它们并未充分利用云提供的所有特性。
-
-
-
 
 ### 系统设计与实现概述
 
@@ -5985,8 +5714,6 @@ CAISS++ 将成为信息共享的突破性技术，因为它采用了一种新颖
 
 ### 16.2.2 CAISS 设计
 
-
-
 # 16.2.2 开发 CAISS 的增强措施
 
 我们正在增强为 AFOSR 开发的工具，包括 (i) 面向语义 Web 数据的安全云查询处理，以及 (ii) 基于语义 Web 的策略引擎，以开发 CAISS。我们工具的详细信息见 第 16.4 节（相关工作部分）。在本节中，我们将讨论为开发 CAISS 而对工具进行的增强。
@@ -5995,15 +5722,17 @@ CAISS++ 将成为信息共享的突破性技术，因为它采用了一种新颖
 
 #### 16.2.2.1 增强的策略引擎
 
+
+
 我们当前的策略引擎存在一个局限性，即它不在云环境中运行。因此，我们将把 RDF 策略引擎移植到云环境中，并将其与用于云中联合查询处理的 SPARQL 查询引擎集成。我们的策略引擎将受益于 Hadoop MapReduce 框架提供的可扩展性和分布式平台，以回答大型分布式 RDF 三元组存储（数十亿 RDF 三元组）上的 SPARQL 查询。使用 RDF 作为数据模型的原因如下：(1) RDF 使我们能够实现由各机构/组织分别编目的看似不同的信息源之间的数据互操作性。(2) 使用 RDF 允许参与机构创建以数据为中心的应用程序，利用现已可用的集成数据。(3) 由于 RDF 生成数据不需要显式模式，因此可以轻松适应不断变化的用户需求。策略引擎的灵活性基于其接受高层策略，并将其作为查询规则在数据的有向 RDF 图表示上执行。虽然我们之前的工作侧重于溯源数据和访问控制策略，但我们的 CAISS 原型将足够灵活，能够处理用 RDF 表示的数据，并将包含信息共享策略。我们策略引擎的优势在于它可以处理任何可使用 RDF 和 Horn 逻辑规则表示的策略类型。
 
 我们策略引擎的第二个局限性是它目前仅针对某些类型的策略，如保密性、隐私和编辑策略。我们需要将信息共享策略纳入策略引擎。然而，我们已为基于激励的 AIS 以及云中的 AIS 原型进行了仿真研究。我们定义了许多信息共享策略，例如“美国向英国提供信息，前提是英国不与印度共享该信息。”我们用 RDF 指定此类策略，并将其纳入由增强后的策略引擎处理。
 
-#### 16.2.2.2 增强的 SPARQL 查询处理器
+### 16.2.2.2 增强的 SPARQL 查询处理器
 
 虽然我们有一个工具可在 Hadoop 上对大型 RDF 图执行 SPARQL 查询，但仍需支持路径查询（即提供 RDF 图中路径答案的 SPARQL 查询）。RDF 三元组可视为从主语到宾语的弧，谓语用于标记该弧。SPARQL 查询的答案基于可达性（即源节点和目标节点之间的路径）。沿路径弧标签的连接可视为属于路径查询答案集的一个词。词中的每个项由 RDF 图中某个三元组的谓语标签贡献。我们设计了一种算法，以在分布式 RDF 图中确定作为答案集的候选三元组。首先，RDF 文档被转换为基于谓语标签拆分的 N-triple 文件。词中的一项可能对应某个谓语文件。其次，我们通过在分布式 RDF 图中追踪适当的路径来形成该词。我们使用 MapReduce 作业来构建该词并获取作为有序集的候选 RDF 三元组。最后，我们返回所有有序 RDF 三元组集作为相应 SPARQL 查询的答案。
 
-#### 16.2.2.3 集成框架
+### 16.2.2.3 集成框架
 
 图 16.2 提供了 CAISS 架构的概览。将以云为中心的 RDF 策略引擎与增强的 SPARQL 查询处理器集成必须解决以下问题。首先，我们需要确保基于 RDF 的策略可以存储在查询处理器使用的现有存储模式中。其次，我们需要确保增强的查询处理器能够高效地评估底层 RDF 存储上的策略（即路径查询）。最后，我们需要对 CAISS 进行性能评估，以验证其是否满足各参与机构的性能要求。图 16.3 说明了 CAISS 的操作概念。在此，多个机构将在单个云中共享数据。增强的策略引擎和以云为中心的 SPARQL 查询处理器将强制执行信息共享策略。这个概念验证系统将推动 CAISS++ 的详细设计和实现。
 
@@ -6020,9 +5749,6 @@ CAISS++ 将成为信息共享的突破性技术，因为它采用了一种新颖
 ### 16.2.3 CAISS 的局限性
 
 我们已经考察了替代方案并进行了 CAISS++ 的初步设计。基于从 CAISS 原型和 CAISS++ 初步设计中吸取的教训，我们将在第二阶段进行 CAISS++ 的详细设计，并随后实现 CAISS++ 的操作原型。在本节中，我们将讨论 CAISS 的局限性。
-
-
-
 
 1. **策略引擎**：CAISS 使用基于 RDF 的策略引擎，其表达能力有限。RDF 的目的是为描述资源提供结构（或框架）。OWL 构建在 RDF 之上，专为需要处理信息内容而非仅向人类用户呈现信息的应用程序设计。OWL 通过提供描述属性和类的额外词汇以及形式语义，比 RDF 具有更强的机器可解释性。OWL 有三种表达能力递增的子语言：OWL Lite、OWL DL 和 OWL Full，可根据应用需求自由选择合适的子语言。在 CAISS++ 中，我们计划使用比 RDF 表达能力强得多的 OWL，通过特定于组织的领域本体以及系统级的上层本体来建模安全策略。（注：CAISS++ 将复用组织现有的领域本体，或在不存在时促进新领域本体的创建。此外，我们还必须设计集中式 CAISS++ 组件将使用的上层本体。）此外，CAISS++ 将利用分布式推理算法，借助本体来强制执行安全策略。
 
@@ -6054,16 +5780,13 @@ Figure 16.5 展示了两个机构通过集中式 CAISS++ 进行交互。集中�
 
 Figure 16.5 Centralized CAISS++.
 
+上层本体以及捕获参与机构需求的领域本体的设计是一个重要的研究领域，也是本体工程问题的重点。本体将使用基于*描述逻辑*的合适的 `OWL` 方言来创建。描述逻辑通常是一阶逻辑的可判定片段，并将成为提供可靠形式语义的基础。在用本体表示知识后，推理将使用现有的优化推理算法来完成。查询回答将利用推理算法来构思并回答智能查询。用 `OWL` 编码策略将确保它们以可证明正确的方式得到执行。稍后我们将介绍德克萨斯大学达拉斯分校的一个正在进行的研究项目，该项目专注于利用相同的底层技术，提供一个以可证明正确的方式强制执行策略的通用框架。这项工作可用于 `CAISS++` 中安全策略的建模和执行。实例数据可以在几种可用的数据存储格式之间进行选择。`QE` 接收来自参与机构的查询，解析查询并确定计算是否需要使用 `DR`。如果查询简单且不需要使用推理器，查询引擎将直接在共享知识库上执行查询。一旦计算出查询结果，结果将返回给查询机构。然而，如果查询复杂且需要对给定数据进行推理，查询引擎将使用分布式推理器计算推理，然后将结果返回给查询机构。分布式 `DL` 推理器与传统 `DL` 推理器的区别在于其能够使用 `MapReduce` 框架对云数据存储执行推理。在第一阶段 `CAISS++` 的初步设计期间，我们将利用现有基准（如 `LUBM` [GUO2005]）对可用的分布式推理器进行彻底调查。此次调查的目标是确定我们是否可以使用现有推理器之一，或者是否需要构建我们自己的分布式推理器。在图 16.5 中，一个机构被描绘为由 Web 浏览器、小程序和 `HTML` 组成的栈。机构使用 Web 浏览器将查询发送给 `CAISS++`，由查询处理器进行处理。
 
-
-
-上层本体以及捕获参与机构需求的领域本体的设计是一个重要的研究领域，也是本体工程问题的重点。本体将使用基于*描述逻辑*的合适的`OWL`方言来创建。描述逻辑通常是一阶逻辑的可判定片段，并将成为提供可靠形式语义的基础。在用本体表示知识后，推理将使用现有的优化推理算法来完成。查询回答将利用推理算法来构思并回答智能查询。用`OWL`编码策略将确保它们以可证明正确的方式得到执行。稍后我们将介绍德克萨斯大学达拉斯分校的一个正在进行的研究项目，该项目专注于利用相同的底层技术，提供一个以可证明正确的方式强制执行策略的通用框架。这项工作可用于`CAISS++`中安全策略的建模和执行。实例数据可以在几种可用的数据存储格式之间进行选择。`QE`接收来自参与机构的查询，解析查询并确定计算是否需要使用`DR`。如果查询简单且不需要使用推理器，查询引擎将直接在共享知识库上执行查询。一旦计算出查询结果，结果将返回给查询机构。然而，如果查询复杂且需要对给定数据进行推理，查询引擎将使用分布式推理器计算推理，然后将结果返回给查询机构。分布式`DL`推理器与传统`DL`推理器的区别在于其能够使用`MapReduce`框架对云数据存储执行推理。在第一阶段`CAISS++`的初步设计期间，我们将利用现有基准（如`LUBM` [GUO2005]）对可用的分布式推理器进行彻底调查。此次调查的目标是确定我们是否可以使用现有推理器之一，或者是否需要构建我们自己的分布式推理器。在图 16.5 中，一个机构被描绘为由 Web 浏览器、小程序和`HTML`组成的栈。机构使用 Web 浏览器将查询发送给`CAISS++`，由查询处理器进行处理。
-
-集中式`CAISS++`与`CAISS`的主要区别如下：(1) `CAISS`将使用`RDF`编码安全策略，而集中式`CAISS++`将使用一种合适的`OWL`子语言，它比`RDF`更具表现力，因此能更好地捕获安全策略。(2) `CAISS`中的`SPARQL`查询处理器将支持有限的`SPARQL`表现力子集，即仅支持基本图模式（`BGP`），而集中式`CAISS++`中的`SPARQL`查询处理器将被设计为支持`SPARQL`的最大表现力。(3) `CAISS`中使用的`Hadoop`存储架构仅支持在初始化步骤期间插入数据。然而，当需要更新数据时，整个`RDF`图将被删除，并插入一个新数据集来替代。另一方面，集中式`CAISS++`除了支持上述功能外，还向用户开放了`Hadoop HDFS`的仅追加功能。此功能允许用户将新信息追加到他们之前上传到系统的数据中。
+集中式 `CAISS++` 与 `CAISS` 的主要区别如下：(1) `CAISS` 将使用 `RDF` 编码安全策略，而集中式 `CAISS++` 将使用一种合适的 `OWL` 子语言，它比 `RDF` 更具表现力，因此能更好地捕获安全策略。(2) `CAISS` 中的 `SPARQL` 查询处理器将支持有限的 `SPARQL` 表现力子集，即仅支持基本图模式（`BGP`），而集中式 `CAISS++` 中的 `SPARQL` 查询处理器将被设计为支持 `SPARQL` 的最大表现力。(3) `CAISS` 中使用的 `Hadoop` 存储架构仅支持在初始化步骤期间插入数据。然而，当需要更新数据时，整个 `RDF` 图将被删除，并插入一个新数据集来替代。另一方面，集中式 `CAISS++` 除了支持上述功能外，还向用户开放了 `Hadoop HDFS` 的仅追加功能。此功能允许用户将新信息追加到他们之前上传到系统的数据中。
 
 #### 16.2.4.2 去中心化 CAISS++
 
-图 16.6 展示了两个机构与去中心化`CAISS++`的交互。去中心化`CAISS++`由两部分组成，即全局`CAISS++`和本地`CAISS++`。全局`CAISS++`由共享云存储组成，参与机构用它仅存储各自的领域本体，而非实例数据，这与集中式`CAISS++`不同。请注意，各组织的领域本体将是敏感的，因此，`CAISS++`将利用其自身的领域本体来保护参与机构免于访问其他领域本体。当来自某机构的用户查询`CAISS++`数据存储时，全局`CAISS++`分两步处理查询。第一步，它执行检查以验证用户是否被授权执行查询中指定的操作。如果第一步的结果验证用户为授权用户，则继续进行查询处理的第二步。在第二步中，全局`CAISS++`将实际查询联合分发给参与机构。查询随后由参与机构的本地`CAISS++`处理。计算结果随即返回给全局`CAISS++`，后者聚合最终结果并将其返回给用户。查询处理的第二步可能涉及查询拆分，如果回答一个查询所需的数据跨越多个域。在这种情况下，来自多个机构（其本地`CAISS++`）的子查询结果将需要合并以进行进一步的查询处理。一旦结果合并并计算出最终结果，结果将返回给查询机构的用户。该图展示了带有两组栈的机构，其中一组对应本地`CAISS++`，另一组由 Web 浏览器、小程序和`HTML`组成，供机构用于查询全局`CAISS++`。表 16.1 显示了集中式`CAISS++`方法的优缺点，而表 16.2 显示了去中心化`CAISS++`方法的优缺点。
+图 16.6 展示了两个机构与去中心化 `CAISS++` 的交互。去中心化 `CAISS++` 由两部分组成，即全局 `CAISS++` 和本地 `CAISS++`。全局 `CAISS++` 由共享云存储组成，参与机构用它仅存储各自的领域本体，而非实例数据，这与集中式 `CAISS++` 不同。请注意，各组织的领域本体将是敏感的，因此，`CAISS++` 将利用其自身的领域本体来保护参与机构免于访问其他领域本体。当来自某机构的用户查询 `CAISS++` 数据存储时，全局 `CAISS++` 分两步处理查询。第一步，它执行检查以验证用户是否被授权执行查询中指定的操作。如果第一步的结果验证用户为授权用户，则继续进行查询处理的第二步。在第二步中，全局 `CAISS++` 将实际查询联合分发给参与机构。查询随后由参与机构的本地 `CAISS++` 处理。计算结果随即返回给全局 `CAISS++`，后者聚合最终结果并将其返回给用户。查询处理的第二步可能涉及查询拆分，如果回答一个查询所需的数据跨越多个域。在这种情况下，来自多个机构（其本地 `CAISS++`）的子查询结果将需要合并以进行进一步的查询处理。一旦结果合并并计算出最终结果，结果将返回给查询机构的用户。该图展示了带有两组栈的机构，其中一组对应本地 `CAISS++`，另一组由 Web 浏览器、小程序和 `HTML` 组成，供机构用于查询全局 `CAISS++`。表 16.1 显示了集中式 `CAISS++` 方法的优缺点，而表 16.2 显示了去中心化 `CAISS++` 方法的优缺点。
 
 ![图 16.6 去中心化 CAISS++.](img/fig16_6.jpg)
 
@@ -6088,7 +5811,7 @@ Figure 16.5 Centralized CAISS++.
 
 #### 16.2.4.3 混合 CAISS++
 
-图 16.7 展示了混合`CAISS++`的概览，它利用了集中式`CAISS++`和去中心化`CAISS++`的优势。混合`CAISS++`架构如图 16.8 所示。这是一种灵活的设计替代方案，因为参与机构的用户可以自由选择集中式`CAISS++`或去中心化`CAISS++`。混合`CAISS++`由全局`CAISS++`和位于每个参与机构的一组本地`CAISS++`组成。全局`CAISS++`由共享云存储组成，参与机构用它来存储他们希望与其他机构共享的数据。
+图 16.7 展示了混合 `CAISS++` 的概览，它利用了集中式 `CAISS++` 和去中心化 `CAISS++` 的优势。混合 `CAISS++` 架构如图 16.8 所示。这是一种灵活的设计替代方案，因为参与机构的用户可以自由选择集中式 `CAISS++` 或去中心化 `CAISS++`。混合 `CAISS++` 由全局 `CAISS++` 和位于每个参与机构的一组本地 `CAISS++` 组成。全局 `CAISS++` 由共享云存储组成，参与机构用它来存储他们希望与其他机构共享的数据。
 
 ![图 16.7 混合 CAISS++ 概览.](img/fig16_7.jpg)
 
@@ -6098,33 +5821,30 @@ Figure 16.5 Centralized CAISS++.
 
 图 16.8 混合 CAISS++ 架构.
 
+### 混合 CAISS++
 
+某机构的本地 `CAISS++` 用于接收并处理针对位于该机构的实例数据的联邦查询。参与组是由来自多个机构、希望相互共享信息的用户组成的群体。组成员将就采用集中式还是分散式方法达成共识。如果需要，其他用户稍后也可以加入该组。混合 `CAISS++` 将设计为同时支持一组参与组。此外，一个用户可以同时属于多个参与组。我们描述几个用例场景来说明其操作。
 
+1.  第一种情况对应这样一种场景：一组希望安全地相互共享信息的用户选择了集中式方法。假设机构 1 的用户想与机构 2 的用户共享信息，反之亦然，那么这两个机构都将包含领域本体和实例数据的知识库存储在全局 `CAISS++` 所在的共享云存储上。集中式 `CAISS++` 方法通过让参与机构就使用中央云存储达成相互信任来工作。随后，信息共享按集中式 `CAISS++` 的方式进行。
 
-# 混合 CAISS++
+2.  第二种情况对应这样一种场景：一组用户选择了分散式方法。例如，机构 3、4 和 5 希望相互共享信息，并共同选择分散式方法。这三个机构都将各自的领域本体存储在中央云存储中，且该信息仅对该组成员可访问。后续的信息共享过程按前文所述的分散式 `CAISS++` 方法进行。
 
-某机构的本地 CAISS++ 用于接收并处理针对位于该机构的实例数据的联邦查询。参与组是由来自多个机构、希望相互共享信息的用户组成的群体。组成员将就采用集中式还是分散式方法达成共识。如果需要，其他用户稍后也可以加入该组。混合 CAISS++ 将设计为同时支持一组参与组。此外，一个用户可以同时属于多个参与组。我们描述几个用例场景来说明其操作。
-
-1.  第一种情况对应这样一种场景：一组希望安全地相互共享信息的用户选择了集中式方法。假设机构 1 的用户想与机构 2 的用户共享信息，反之亦然，那么这两个机构都将包含领域本体和实例数据的知识库存储在全局 CAISS++ 所在的共享云存储上。集中式 CAISS++ 方法通过让参与机构就使用中央云存储达成相互信任来工作。随后，信息共享按集中式 CAISS++ 的方式进行。
-
-2.  第二种情况对应这样一种场景：一组用户选择了分散式方法。例如，机构 3、4 和 5 希望相互共享信息，并共同选择分散式方法。这三个机构都将各自的领域本体存储在中央云存储中，且该信息仅对该组成员可访问。后续的信息共享过程按前文所述的分散式 CAISS++ 方法进行。
-
-3.  第三种情况对应这样一种场景：某机构的用户属于多个参与组，其中一些组选择集中式共享方法，另一些选择分散式方法。由于该用户属于一个使用集中式方法共享的组，他/她需要将数据传送到中央云存储，以使其数据可供该组使用。此外，由于该用户也属于一个使用分散式方法共享的组，他/她需要借助位于其机构的本地 CAISS++ 来响应联邦查询。
+3.  第三种情况对应这样一种场景：某机构的用户属于多个参与组，其中一些组选择集中式共享方法，另一些选择分散式方法。由于该用户属于一个使用集中式方法共享的组，他/她需要将数据传送到中央云存储，以使其数据可供该组使用。此外，由于该用户也属于一个使用分散式方法共享的组，他/她需要借助位于其机构的本地 `CAISS++` 来响应联邦查询。
 
 表 16.3 显示了不同方法之间的权衡，这将使用户能够根据其应用需求选择合适的 AIS 方法。接下来，我们将描述利用 Hadoop 存储来自各机构知识库的云存储机制的细节，然后讨论在云存储上进行分布式 SPARQL 查询处理的细节。
 
 表 16.3 基于功能 Hadoop 存储架构的三种方法比较
 
-| 功能 | | 集中式 CAISS++ | 分散式 CAISS++ | 混合 CAISS++ |
-| --- | --- | --- | --- | --- |
-| 无数据重复 | | X | ✓ | ✓ |
-| 灵活性 | | X | X | ✓ |
-| 可扩展性 | | X | ✓ | ✓ |
-| 效率 | | ✓ | ✓ | ✓ |
-| 简单性 – 无需查询重写 | | ✓ | X | X |
-| 受信的中心化云数据存储 | | ✓ | X | X |
+| 功能 | 集中式 CAISS++ | 分散式 CAISS++ | 混合 CAISS++ |
+| --- | --- | --- | --- |
+| 无数据重复 | X | ✓ | ✓ |
+| 灵活性 | X | X | ✓ |
+| 可扩展性 | X | ✓ | ✓ |
+| 效率 | ✓ | ✓ | ✓ |
+| 简单性 – 无需查询重写 | ✓ | X | X |
+| 受信的中心化云数据存储 | ✓ | X | X |
 
-在 图 16.9 中，我们展示了基于 Hadoop 的 RDF 存储与检索框架的架构概览。我们使用 `Store`（存储）的概念，为存储在底层 HDFS 中的 RDF 图提供数据加载和查询功能。一个存储代表单个 RDF 数据集，因此可以包含多个 RDF 图，每个图拥有自己独立的布局。随后，对 RDF 图的所有操作都隐式转换为对底层布局的操作，包括以下内容：
+在图 16.9 中，我们展示了基于 Hadoop 的 RDF 存储与检索框架的架构概览。我们使用 `Store`（存储）的概念，为存储在底层 HDFS 中的 RDF 图提供数据加载和查询功能。一个存储代表单个 RDF 数据集，因此可以包含多个 RDF 图，每个图拥有自己独立的布局。随后，对 RDF 图的所有操作都隐式转换为对底层布局的操作，包括以下内容：
 
 *   **布局格式化器**：该模块执行格式化布局的功能，即删除 RDF 图中的所有三元组，同时保留用于存储该图的目录结构。
 *   **加载器**：该模块执行将三元组加载到布局中的操作。
@@ -6133,6 +5853,8 @@ Figure 16.5 Centralized CAISS++.
 *   **配置**：该模块维护配置信息，例如组成存储的每个 RDF 图的图名。
 
 ![图 16.9 CAISS++ 使用的 Hadoop 存储架构。](img/fig16_9.jpg)
+
+
 
 图 16.9 CAISS++ 使用的 Hadoop 存储架构。
 
@@ -6151,9 +5873,6 @@ Figure 16.5 Centralized CAISS++.
 图 16.10 垂直分区布局。
 
 #### 16.2.4.6 混合布局
-
-
-
 
 图 16.11 展示了混合布局的存储模式。该布局是垂直分区布局的扩展，因为除了为 RDF 图中的每个唯一谓词创建单独的文件外，它还创建了一个单独的三元组文件，包含采用 `SPO`（主语、谓语、宾语）格式的所有三元组。拥有此类文件的优势在于，它能直接提供属于特定主语或宾语的所有三元组。回想一下，在垂直分区布局中，此类搜索操作需要扫描多个文件。由于增加了三元组文件，该布局的存储空间效率不如垂直分区布局。然而，使用该布局可以更高效地执行查找属于特定主语或宾语的所有三元组的 `SPARQL` 查询。
 
@@ -6187,21 +5906,19 @@ Figure 16.5 Centralized CAISS++.
 
 #### 16.2.5.2 面向大数据应用的扩展
 
-
-
 在第 17 章中，我们将讨论一个用于社交媒体数据的访问控制框架。我们可以将该工作与本章讨论的工作（即第 16 章）相结合，并基于大数据开发面向社交媒体的 AIS 方法。我们可以针对利用大数据管理和分析的社交媒体应用，改编本章讨论的几种设计变体。首先，网络成员可能希望共享数据。因此，他们可以实施信息共享策略，每个成员拥有自己的数据存储。在第二种设计中，成员可以使用共享空间或云来存储数据和策略，并安全地共享数据。
 
 成员也可能属于多个社交网络。也就是说，一个人可能属于多个网络，也可能只属于一个网络。在这种情况下，成员可以与其网络中的成员共享更多数据，而与另一个网络的成员仅共享有限数据。此外，不同网络可能使用异构技术进行表示。因此，必须解决异构表示问题。也可以为多个网络开发逻辑表示，并建立到各个网络的映射。随着时间的推移，多个社交网络中的用户数量可能会快速增长，他们在网络中存储和共享的数据量可能巨大。因此，必须探索我们在第 5 章以及第 I 部分和第 II 部分其他章节中讨论的几种大数据技术，以用于多个社交网络之间的 AIS。
 
 ## 16.3 实现细节
 
-我们已经为`CAISS`和`CAISS++`实现了一系列系统。我们提供这些实现的概述。
+我们已经为 `CAISS` 和 `CAISS++` 实现了一系列系统。我们提供这些实现的概述。
 
 ### 16.3.1 原型实现
 
 #### 16.3.1.1 云中的安全数据存储与检索
 
-我们构建了一个基于 Web 的应用程序，该程序将现有的云计算技术（如`Hadoop`——一个开源分布式文件系统，以及构建在`Hadoop`之上的`Hive`数据仓库基础设施）与基于`XACML`策略的安全机制相结合，允许协作组织安全地存储和检索大量数据 HUSA2011, THUR2010, [UTD1]。图 16.13 展示了我们系统的架构。我们使用`Hive`层和`Hadoop`提供的服务，包括构成`Hadoop`存储层并允许跨节点集群存储数据块的`Hadoop 分布式文件系统(HDFS)`层。我们实现的层包括 Web 应用层、`ZQL`解析器层、`XACML`策略层和查询重写层。Web 应用层是我们系统提供给用户访问云基础设施的唯一接口。`ZQL`解析器[ZQL]层接受用户提交的任何查询作为输入，如果查询解析成功则继续进行`XACML`策略评估，否则向用户返回错误消息。`XACML`策略层用于构建（`XACML`策略构建器）和评估（`XACML`策略评估）`XACML`策略。基本查询重写层重写用户输入的`SQL`查询。`Hive`层用于管理存储在底层`Hadoop HDFS`中的关系数据[THUS2009]。此外，我们还设计并实现了混合云中的安全存储和查询处理[KHAD2011]。
+我们构建了一个基于 Web 的应用程序，该程序将现有的云计算技术（如 `Hadoop`——一个开源分布式文件系统，以及构建在 `Hadoop` 之上的 `Hive` 数据仓库基础设施）与基于 `XACML` 策略的安全机制相结合，允许协作组织安全地存储和检索大量数据 HUSA2011, THUR2010, [UTD1]。图 16.13 展示了我们系统的架构。我们使用 `Hive` 层和 `Hadoop` 提供的服务，包括构成 `Hadoop` 存储层并允许跨节点集群存储数据块的 `Hadoop 分布式文件系统 (HDFS)` 层。我们实现的层包括 Web 应用层、`ZQL` 解析器层、`XACML` 策略层和查询重写层。Web 应用层是我们系统提供给用户访问云基础设施的唯一接口。`ZQL` 解析器 [ZQL] 层接受用户提交的任何查询作为输入，如果查询解析成功则继续进行 `XACML` 策略评估，否则向用户返回错误消息。`XACML` 策略层用于构建（`XACML` 策略构建器）和评估（`XACML` 策略评估）`XACML` 策略。基本查询重写层重写用户输入的 `SQL` 查询。`Hive` 层用于管理存储在底层 `Hadoop HDFS` 中的关系数据 [THUS2009]。此外，我们还设计并实现了混合云中的安全存储和查询处理 [KHAD2011]。
 
 ![图 16.13 基于 Hive 的可靠云查询处理。](img/fig16_13.jpg)
 
@@ -6209,7 +5926,7 @@ Figure 16.5 Centralized CAISS++.
 
 #### 16.3.1.2 云上的安全 SPARQL 查询处理
 
-我们开发了一个框架，用于查询存储在`Hadoop`上的`RDF`数据，如图 16.14 所示。我们在各个阶段使用`Pellet`推理器进行推理。我们利用`pellet`库结合`Hadoop`的`MapReduce`功能进行实时查询推理。我们的`RDF`查询处理由两个主要步骤组成：(i)预处理和(ii)查询优化与执行。
+我们开发了一个框架，用于查询存储在 `Hadoop` 上的 `RDF` 数据，如图 16.14 所示。我们在各个阶段使用 `Pellet` 推理器进行推理。我们利用 `pellet` 库结合 `Hadoop` 的 `MapReduce` 功能进行实时查询推理。我们的 `RDF` 查询处理由两个主要步骤组成：(i) 预处理和 (ii) 查询优化与执行。
 
 ![图 16.14 基于 SPARQL 的可靠云查询处理。](img/fig16_14.jpg)
 
@@ -6217,24 +5934,21 @@ Figure 16.5 Centralized CAISS++.
 
 #### 16.3.1.3 预处理
 
-为了在`RDF`数据上执行`SPARQL`查询，我们执行了数据预处理步骤，并将预处理后的数据存储在`HDFS`中。编写了一个单独的`MapReduce`任务来执行`RDF/XML`数据到`N-Triples`的转换以及前缀生成。我们的存储策略基于谓词分割[HUSA2011]。
+为了在 `RDF` 数据上执行 `SPARQL` 查询，我们执行了数据预处理步骤，并将预处理后的数据存储在 `HDFS` 中。编写了一个单独的 `MapReduce` 任务来执行 `RDF/XML` 数据到 `N-Triples` 的转换以及前缀生成。我们的存储策略基于谓词分割 [HUSA2011]。
 
 #### 16.3.1.4 查询执行与优化
 
-我们为`Hadoop`开发了一个`SPARQL`查询执行和优化模块。由于我们的存储策略基于谓词分割，首先，我们检查查询中存在的谓词。其次，我们检查与谓词匹配的输入文件子集。第三，`SPARQL`查询通常包含许多连接操作，并且不可能在单个`MapReduce`作业中执行所有这些连接。因此，我们开发了一种算法来决定每种查询所需的作业数量。作为优化的一部分，我们应用了贪婪策略和基于成本的优化来减少查询处理时间。我们还开发了一个基于`XACML`的集中式策略引擎，该引擎将在云上执行联邦`RDF`查询处理。强制执行策略的细节见[HAML2010a, HUSA2011, KHAL2010]。
+我们为 `Hadoop` 开发了一个 `SPARQL` 查询执行和优化模块。由于我们的存储策略基于谓词分割，首先，我们检查查询中存在的谓词。其次，我们检查与谓词匹配的输入文件子集。第三，`SPARQL` 查询通常包含许多连接操作，并且不可能在单个 `MapReduce` 作业中执行所有这些连接。因此，我们开发了一种算法来决定每种查询所需的作业数量。作为优化的一部分，我们应用了贪婪策略和基于成本的优化来减少查询处理时间。我们还开发了一个基于 `XACML` 的集中式策略引擎，该引擎将在云上执行联邦 `RDF` 查询处理。强制执行策略的细节见 [HAML2010a, HUSA2011, KHAL2010]。
 
 #### 16.3.1.5 RDF 策略引擎
 
-在我们之前的工作[CADE2011a]中，我们开发了一个策略引擎，用于处理针对`RDF`数据的基于`RDF`的访问控制策略。策略引擎的设计考虑了以下特性：可扩展性、效率和互操作性。该框架(图 16.15)可用于执行各种策略，包括访问控制策略和编辑策略。它也可用作测试平台，用于评估针对`RDF`数据的不同策略集并以图形方式查看结果。我们的框架提供了一个接口，接受高级策略并将其转换为所需格式。它接受用户的输入查询，并返回经过用户定义的策略约束集修剪后的响应。该架构采用模块化方法构建，因此非常灵活，大多数模块都可以扩展或被另一个应用模块替换。例如，实现自主访问控制(`DAC`)的策略模块可以完全被`RBAC`模块替换，或者我们可以决定基于广义编辑模型强制执行所有约束。值得注意的是，我们的策略引擎还处理用`OWL`和`SWRL`指定的基于角色的访问控制策略[CADE2010]。此外，它还处理用`OWL`指定的某些推理控制策略，例如基于关联的策略（拒绝访问实体集合）和逻辑策略（`A`蕴含`B`，如果拒绝访问`B`，则也应拒绝访问`A`）[CADE2010, CADE2011b, CARM2009]。我们策略引擎的这一能力将在我们的`CAISS++`设计和实现中发挥作用，其中信息跨多个云共享。
+在我们之前的工作 [CADE2011a] 中，我们开发了一个策略引擎，用于处理针对 `RDF` 数据的基于 `RDF` 的访问控制策略。策略引擎的设计考虑了以下特性：可扩展性、效率和互操作性。该框架 (图 16.15) 可用于执行各种策略，包括访问控制策略和编辑策略。它也可用作测试平台，用于评估针对 `RDF` 数据的不同策略集并以图形方式查看结果。我们的框架提供了一个接口，接受高级策略并将其转换为所需格式。它接受用户的输入查询，并返回经过用户定义的策略约束集修剪后的响应。该架构采用模块化方法构建，因此非常灵活，大多数模块都可以扩展或被另一个应用模块替换。例如，实现自主访问控制 (`DAC`) 的策略模块可以完全被 `RBAC` 模块替换，或者我们可以决定基于广义编辑模型强制执行所有约束。值得注意的是，我们的策略引擎还处理用 `OWL` 和 `SWRL` 指定的基于角色的访问控制策略 [CADE2010]。此外，它还处理用 `OWL` 指定的某些推理控制策略，例如基于关联的策略（拒绝访问实体集合）和逻辑策略（`A` 蕴含 `B`，如果拒绝访问 `B`，则也应拒绝访问 `A`）[CADE2010, CADE2011b, CARM2009]。我们策略引擎的这一能力将在我们的 `CAISS++` 设计和实现中发挥作用，其中信息跨多个云共享。
 
 ![图 16.15 RDF 策略引擎。](img/fig16_15.jpg)
 
 图 16.15 RDF 策略引擎。
 
 #### 16.3.1.6 可靠信息共享原型
-
-
-
 
 ### 16.3.2 其他实现
 
@@ -6262,13 +5976,11 @@ Figure 16.5 Centralized CAISS++.
 
 ##### 16.3.3.1.1 用户界面层
 
+
+
 为了实现与我们框架的一对一交互，在策略层之上构建了一个基于 Web 的用户界面。丰富客户端和开源 Web 技术简化了用户、网页以及底层策略和数据层之间的交互。这种集成具有许多优势。策略框架在分布式环境中运行，具有更广泛的地理分布；因此，机构和用户具有移动性。Web 界面要求用户创建账户（也是一种注册）并选择唯一的凭证，这些凭证随后将被用户用于向策略框架标识自己。基于表单的身份验证模式以及质询-响应测试将合法用户与机器人（可能伪装成普通用户）区分开来。合法用户将看到一个查询屏幕，允许他们在通过身份验证后编写 `SPARQL` 查询。注意，`SPARQL` [PRUD2006] 是一种用于 `RDF` 的查询语言，用于从三元组存储中检索数据。`SPARQL` 查询经过验证后被发送到我们的策略引擎层，后者返回一个结果 `RDF` 图，然后在网页上显示。
 
-
-
-
-
-###### 用户注册
+### 用户注册
 
 用户注册为用户提供了使用 Web 注册表单向系统注册的机会。注册表单采集用户的姓名、密码以及关于用户的其他元数据。元数据可以是用户所属的机构，或用于将用户凭证映射到用户将执行的角色的数据。下面的 RDF 图显示了用户配置文件的内容。RDF 图中的最后一个三元组包含一个可解引用的 URI，指向另一个 RDF 图，后者包含用户被允许查询的实际资源的可解引用 URI 列表。
 
@@ -6284,30 +5996,31 @@ pol:organization <http://policy.org/agency/pol#Agency1>
 pol:resourcelist <http://example/users/resources/user1>.
 ```
 
-###### 机构注册
+### 机构注册
 
 机构注册由一系列网页组成，每个网页都是前一个页面的子页面。该流程始于机构注册描述自身的信息。首先，机构注册关于自身的重要元数据。这些元数据是一个 RDF 文档，可用于向另一机构介绍一家机构，因此应当是自描述的。这些元数据中的一些示例三元组可以断言机构的名称、地址、行业、隶属关系等。其次，机构记录其资源。资源拥有一个唯一的 URI，该 URI 是一个可解引用的 URI，指向包含该机构敏感和非敏感数据的 RDF 文档；这些信息通常存储在关系数据库中，但现已迁移到云端。第三，机构为其资源定义策略。机构可在策略引擎层支持的各种策略中进行选择。策略示例包括访问控制、编辑、信息共享等。第四，机构描述策略的各种策略规则。请注意，机构可能使用访问控制来保护其资源；然而，机构可能需要针对特定策略选择制定多条规则。例如，一条访问控制规则可能指定正向授权，而另一条规则可能针对同一资源指定负向授权。最后，机构指定查询。将策略规则编写为数据存储之上的视图（即 SPARQL 查询）是一种非常流行的技术。机构可在其策略规则配置文档中指定查询是物化的还是非物化的。物化查询可加快策略执行速度，而非物化查询则可实时刷新结果集。
 
-##### 16.3.3.1.2 策略引擎
+### 16.3.3.1.2 策略引擎
 
 **策略引擎层**首先针对存储的数据资源（可以是传统数据，也可以是溯源元数据）评估用户查询。数据资源由统一资源标识符 (URI) 表征，该标识符连接到数据存储层中的实际 RDF 图。策略层使用工厂对象来创建底层策略。工厂通过一致的接口暴露策略，从而使我们能够轻松扩展策略引擎以支持未来的其他类型策略。我们目前支持访问控制、编辑和信息共享策略。为支持传统策略，我们使用 SPARQL 查询来定义资源之上的视图，其中视图可与正向和负向授权或子图替换过程中的目标相关联。一个重要的元数据是溯源，它记录了数据项的历史。然而，溯源采用有向无环图 (DAG) 结构，因此需要其自己的策略 (BRAU2008, DING2005)。因此，我们支持将正则表达式 SPARQL 查询用于访问控制策略 [CADE2011a] 以及编辑策略 [CADE2011b]。我们还实现了针对数据和溯源的信息共享策略，允许合作机构基于相互协议共享信息 CADE2012b。
 
-敏捷环境促使策略设计人员不断微调或扩展其策略，以快速适应不断变化的条件，从而确保数据集成和组合不违反数据机密性，尤其是在关键时刻需要快速行动时（例如在情报工作中）。为满足这一需求，我们的策略引擎层支持多种策略引擎，而云端支持多种策略配置文档。
+敏捷环境促使策略设计人员不断微调或扩展其策略，以快速适应不断变化的条件，从而确保数据集成和组合不违反数据机密性，尤其是在关键时刻需要快速行动时（例如在情报工作中）。为满足这一需求，我们的策略引擎层支持多种策略引擎，而云端支持多种策略配置文件。
 
 策略引擎以用户凭证和一个可解引用的 URI 作为输入；它随后在将新的 RDF 图（或模型）返回给用户界面层之前，评估策略的底层逻辑。可解引用的 URI 指向一个配置文档，该文档本身包含指向机构资源策略以及数据层中机构资源的其他可解引用 URI。机构资源是一个包含一个或多个分级级别三元组的 RDF 文档；例如，如果包含情报信息，整个 RDF 文档将被标记为敏感，或者某些三元组子集可能包含实际情报信息。因此，机构需要不止一种类型的策略来实现对其资源的细粒度控制。因此，策略由一个接口定义，该接口允许实现每种策略的逻辑。策略引擎在将新的 RDF 图（或模型）返回给用户界面层之前，评估策略的底层逻辑。通过将其策略迁移到云端，机构克服了先前策略定义数量上的限制。以下小节总结了各种策略类型。在以下小节中，我们将讨论策略引擎层的细节。该层包含多种策略类型，例如访问控制、编辑和信息共享等。我们还将通过依次讨论这些策略类型，论证灵活策略引擎的必要性。
 
-###### 访问控制策略引擎
+#### 访问控制策略引擎
 
 访问控制策略授权一组**用户**在**环境**中对一组**资源**执行一组**操作**。除非通过一条或多条访问控制策略授权，否则用户无法访问系统的任何资源。有不同种类的访问控制策略，可归纳为三大主要类别 SAMA2001。这些策略通过它们对**用户**、**操作**和**对象**集合施加的约束而有所不同（访问控制模型通常将**资源**称为**对象**）。这三类是：(1) RBAC，基于角色限制访问；(2) 自主访问控制 (DAC)，基于用户身份控制访问；(3) 强制访问控制 (MAC)，基于中央权威机构确定的强制性法规控制访问。
 
-
-
-
 基于 RBAC 的策略常用于简化策略映射的管理，这是三类访问控制策略的共同特征。策略的创建和可管理性对于实现对共享资源更细粒度的访问控制至关重要。我们采用的约定是：权限是一个唯一的（`action`，`resource`）对。给定 `n` 个资源、`m` 个用户以及仅包含两个动作（读、写）的动作集，我们最多有 `2 × n` 个可能的权限。这产生了 `m × (2 × n) = c[1]n` 个映射。RBAC 的一个进一步改进是：从可能的 `r` 个角色集合中，至少存在一个角色被分配了两个或更多用户。因此，我们有 `r × (2 × n) = c[2]n` 个映射，并且我们假设 `c[2] ≤ c[1]`。然而，即使有这种简化，在动态敏捷的社区中，为实现更细粒度的访问控制所需的策略数量可能依然难以处理。我们以云为中心的策略框架通过赋予机构支持和扩展其访问控制策略的能力，以满足其不断增长的安全需求，从而解决了这一问题。
 
-*   **编辑策略引擎**：编辑策略在向用户发布文档前识别并移除其中的敏感信息。与限制访问的访问控制策略不同，编辑策略通过确保在向用户查询提供最终 RDF 图（称为编辑后的图）之前移除（或模糊处理）敏感或专有信息，从而鼓励信息共享。编辑策略依赖转换操作来规避任何识别性或敏感信息。目前支持的编辑策略引擎依赖一种基于图文法方法的图转换技术（见文献 [[EHRI2006]](#ch16.xhtml#ref16_24)、[ROZE2007]）。基本上，将编辑策略应用于有向标记的 RDF 图包含两个步骤：(i) 在原始 RDF 图中识别我们要保护的资源（或子图）。这可以通过图查询（即配备正则表达式的查询）完成。(ii) 以图转换规则的形式将编辑策略应用于此已识别资源。文献 [CADE2011b] 中使用了这种图转换的一种实现来编辑溯源图。
+#### 编辑策略引擎
 
-*   **信息共享策略引擎**：信息共享策略允许机构确定其资源与其他机构资源共享或组合的上下文。信息共享策略引擎包含处理同时请求两个或更多 RDF 图信息的查询的逻辑。我们使用以下 SPARQL 查询进行说明。
+编辑策略在向用户发布文档前识别并移除其中的敏感信息。与限制访问的访问控制策略不同，编辑策略通过确保在向用户查询提供最终 RDF 图（称为编辑后的图）之前移除（或模糊处理）敏感或专有信息，从而鼓励信息共享。编辑策略依赖转换操作来规避任何识别性或敏感信息。目前支持的编辑策略引擎依赖一种基于图文法方法的图转换技术（见文献 [[EHRI2006]](#ch16.xhtml#ref16_24)、[ROZE2007]）。基本上，将编辑策略应用于有向标记的 RDF 图包含两个步骤：(i) 在原始 RDF 图中识别我们要保护的资源（或子图）。这可以通过图查询（即配备正则表达式的查询）完成。(ii) 以图转换规则的形式将编辑策略应用于此已识别资源。文献 [CADE2011b] 中使用了这种图转换的一种实现来编辑溯源图。
+
+#### 信息共享策略引擎
+
+信息共享策略允许机构确定其资源与其他机构资源共享或组合的上下文。信息共享策略引擎包含处理同时请求两个或更多 RDF 图信息的查询的逻辑。我们使用以下 SPARQL 查询进行说明。
 
 ```
 SELECT →B FROM NAMED uri1 FROM NAMED uri2 WHERE P
@@ -6338,7 +6051,9 @@ pol:type "combined1".
 1.  `combined1`：`∀r1∈Agency1, ∀r2∈Agency2, use r1∪r2`。该策略声明机构 1 以资源并集的方式与机构 2 共享其所有资源。
 2.  `combined2`：设 `r1[1], r1[2], …, r1[n] ∈ Agency1` 使用 `r1[1] ∪ r2, r1[2] ∩ r2, ∀r2∈Agency2`。该策略提供更细粒度的控制。
 
-*   **溯源策略引擎**：有时在定义策略时需要考虑 RDF 图中三元组之间的关系。迄今讨论的三种策略类型无法解决敏感信息隐含在 RDF 图各种路径中的情况。本节将探讨其他策略引擎。重点将放在定义针对溯源图上访问控制和编辑策略执行的策略引擎上。我们将基于文献 [CADE2011a]（讨论溯源的访问控制策略语言）和 [CADE2012b]（讨论如何对溯源执行编辑）来构建这些策略引擎的逻辑。我们将首先给出一个溯源图示例及其中可能存在的溯源信息类型。然后，将简要介绍在溯源图上执行策略背后的一些理论定义。
+#### 溯源策略引擎
+
+有时在定义策略时需要考虑 RDF 图中三元组之间的关系。迄今讨论的三种策略类型无法解决敏感信息隐含在 RDF 图各种路径中的情况。本节将探讨其他策略引擎。重点将放在定义针对溯源图上访问控制和编辑策略执行的策略引擎上。我们将基于文献 [CADE2011a]（讨论溯源的访问控制策略语言）和 [CADE2012b]（讨论如何对溯源执行编辑）来构建这些策略引擎的逻辑。我们将首先给出一个溯源图示例及其中可能存在的溯源信息类型。然后，将简要介绍在溯源图上执行策略背后的一些理论定义。
 
 图 16.18 使用 RDF 表示展示了一个情报示例作为溯源图，概述了文档通过位于某不友好领土（或构成潜在威胁的另一机构）的服务器的流向。该文档被给了一位记者。该溯源图的内容可用于评估文档来源服务器（即示例图中的进程）的可信度。该示例溯源图还展示了实际溯源的基本骨架，实际溯源通常带有指示上下文信息（如时间和位置）的 RDF 三元组注释。注意谓词（即弧）使用 OPM 抽象谓词标签（见文献 [[MORE2010]](#ch16.xhtml#ref16_44)），且最终报告可追溯至一名 CIA 特工。
 
@@ -6348,14 +6063,11 @@ pol:type "combined1".
 
 图 16.18 中嵌入的信息代表一个有向 RDF 图。图 16.18 中的溯源路径定义如下：
 
-
-
-
-###### 定义 3：溯源路径
+##### 定义 3：溯源路径
 
 给定一个溯源图，溯源路径 `(s p o)` 是一条路径 $s\overset{p}{\rightarrow}o$，它使用正则表达式在溯源词汇表 `V` 上定义。
 
-###### 定义 4：正则表达式
+##### 定义 4：正则表达式
 
 设 $\Sigma$ 为 `V` 中术语的字母表，则正则表达式集合 `RE(\Sigma)` 通过归纳定义如下：
 
@@ -6371,7 +6083,7 @@ pol:type "combined1".
 
 扩展了正则表达式的 SPARQL 查询 [[HARR2010]](#ch16.xhtml#ref16_31) 可以按如下方式定义图 16.18 中溯源图的资源（或子图）：
 
-###### 示例 16.1：溯源路径查询
+##### 示例 16.1：溯源路径查询
 
 ```
 Select ?x
@@ -6380,7 +6092,9 @@ Select ?x
 
 该查询将返回作为变量 `x` 绑定的位置，可用于定位原始报告泄露（及泄漏）的源头。这也可用于提醒策略设计人员为其各自机构的报告和服务器添加适当的策略。
 
-*   **策略序列**：在机构资源上执行策略的结果是一个策略序列。特别地，受保护资源可能会使用多个策略引擎和策略类型的服务。每种策略类型都会生成其输入 RDF 图的一个新子图。重要的是要注意，策略的效果直接取决于它接收作为输入的 RDF 图，而且该效果可能不同于该策略最初预期要达到的效果。序列将原始输入图通过一系列转换，直到最终的 RDF 图被返回给用户。请注意，策略规则（作为 SPARQL 查询实现）返回特定 RDF 三元组集合的成功与否，取决于该规则在策略序列中应用时所处的转换步骤。我们使用以下 SPARQL 查询进行说明：
+#### 策略序列
+
+在机构资源上执行策略的结果是一个策略序列。特别地，受保护资源可能会使用多个策略引擎和策略类型的服务。每种策略类型都会生成其输入 RDF 图的一个新子图。重要的是要注意，策略的效果直接取决于它接收作为输入的 RDF 图，而且该效果可能不同于该策略最初预期要达到的效果。序列将原始输入图通过一系列转换，直到最终的 RDF 图被返回给用户。请注意，策略规则（作为 SPARQL 查询实现）返回特定 RDF 三元组集合的成功与否，取决于该规则在策略序列中应用时所处的转换步骤。我们使用以下 SPARQL 查询进行说明：
 
 ```
 CONSTRUCT G WHERE P
@@ -6398,19 +6112,25 @@ foaf:projectHomepage <http://www.agency1.gov/>
 
 框架中的策略优先级功能帮助机构确定其策略的顺序。在用户界面层，机构配置其策略的顺序。然后策略序列被存储在一个 RDF 序列文件中（使用 RDF 规范的 `rdf:seq` 特性）。当查询被评估时，策略框架将按预期顺序依次调用每个策略。
 
-*   **规则序列**：以类似的方式，一个策略可以使用一组规则来实现。例如，为了完全编辑共享资源，机构可能需要一个单独的规则来编辑 RDF 图中的每个敏感三元组。当输入图中的一个三元组（或一组三元组）满足某些指定标准时，每个规则就会被触发。请注意，每个规则都会转换共享资源的当前状态。因此，规则的每一种排序都会影响最终图（也称为编辑后的图）。
+#### 规则序列
 
-##### 16.3.3.1.3 数据层
+以类似的方式，一个策略可以使用一组规则来实现。例如，为了完全编辑共享资源，机构可能需要一个单独的规则来编辑 RDF 图中的每个敏感三元组。当输入图中的一个三元组（或一组三元组）满足某些指定标准时，每个规则就会被触发。请注意，每个规则都会转换共享资源的当前状态。因此，规则的每一种排序都会影响最终图（也称为编辑后的图）。
+
+### 16.3.3.1.3 数据层
 
 在数据层有一个连接工厂，它充当创建连接对象的外观。这些连接对象向策略设计人员暴露与公共方法相同的属性（功能上）。这使得策略设计人员更容易专注于策略引擎设计。策略设计人员调用 `RDF Policy Factory`，它返回一个 `RDF model object`。这个 `RDF model object` 由一个连接存储支持，该存储可以是本地连接、关系数据库连接或云连接。在注册过程中，会给机构一个机会来决定它想在哪里存储其资源和配置文档。建议将较小的配置文档存储在本地磁盘上（或本地数据库中），以便快速访问它们。本地连接还消耗较低的带宽，提供实时访问，并支持部署前的开发。然而，机构可能决定将它们存储在私有云中（或远程数据库服务器上），以利用那里的额外保护。
 
 连接工厂还使机构能够将其资源存储在任何云基础设施中。例如，机构的资源可能位于私有云、社区云或公有云上。私有云部署提供更多控制权，因为机构可以托管自己的云。社区云为特定社区的专属访问而配置，从而服务于合作机构的共同利益。公有云向公众开放，因此由于失去对上传到公有云的数据的控制，更容易受到更多漏洞的影响。机构可以选择使用混合连接，并同时采用多种部署模型（例如混合云模型）。
 
-#### 16.3.3.2 我们的策略引擎框架的特性
+### 16.3.3.2 我们的策略引擎框架的特性
 
 在以下小节中，我们介绍我们策略引擎框架的一些新颖特性。
 
-##### 16.3.3.2.1 策略互惠性
+#### 16.3.3.2.1 策略互惠性
+
+
+
+# 策略互惠性
 
 策略互惠性使机构能够在了解其他机构、其资源或策略规范的情况下指定策略。这通过注册过程成为可能，在注册过程中，机构提供关于其自身、其资源及相关策略的元数据。以下讨论提供了策略互惠性的场景。
 
@@ -6426,20 +6146,22 @@ foaf:projectHomepage <http://www.agency1.gov/>
 
     该策略提供了更细粒度的控制，并定义了组合算子 $\odot \in \{\cap, \cup\}$。
 
-*   **条件策略**：策略互惠性的一个结果是允许使用条件共享策略。例如，如果 `Agency2` 不将 `Agency1` 的资源共享给 `Agency3`，则 `Agency1` 与 `Agency2` 共享其资源。我们提供以下示例信息共享策略：
+## 条件策略
+
+策略互惠性的一个结果是允许使用条件共享策略。例如，如果 `Agency2` 不将 `Agency1` 的资源共享给 `Agency3`，则 `Agency1` 与 `Agency2` 共享其资源。我们提供以下示例信息共享策略：
 
 1.  $\forall r_1 \in Agency1, \forall r_2 \in Agency2, Agency1 \text{ 定义 } r_1 \cap r_2$。如果 $\forall r_3 \in Agency3$，则
+
     *   `Agency2` 未定义形式为 $r_1 \cap r_3$ 的任何共享策略，
     *   或 `Agency2` 未定义形式为 $r_1 \subseteq r_2 \odot r_3$ 的任何共享策略，其中 $\odot \in \{\cup, \cap\}$。
 
-*   **策略对称性**：策略互惠性的另一个结果是在策略共享中具有对称性。例如，如果 `Agency2` 也使用相同的组合算子 $\odot` 与 `Agency1` 共享其资源，则 `Agency1` 使用组合算子 $\odot` 与 `Agency2` 共享其资源。我们提供以下示例信息共享策略：
+## 策略对称性
 
-
-
+策略互惠性的另一个结果是在策略共享中具有对称性。例如，如果 `Agency2` 也使用相同的组合算子 $\odot` 与 `Agency1` 共享其资源，则 `Agency1` 使用组合算子 $\odot` 与 `Agency2` 共享其资源。我们提供以下示例信息共享策略：
 
 1. ∀`r1`∈ `Agency1`, ∀`r2`∈ `Agency2`, `Agency1` uses `r1`∪ `r2` if `Agency2` also uses `r2` ∪ `r1`.
 
-##### 16.3.3.2.2 开发和扩展策略
+# 16.3.3.2.2 开发和扩展策略
 
 为了在信息环境中实现机动自由，并交付信息力量以确保任务成功，机构应能够快速开发策略并根据需要部署它们。接下来我们将讨论机构在策略开发期间和之后可用的功能。
 
@@ -6453,13 +6175,13 @@ foaf:projectHomepage <http://www.agency1.gov/>
 
 *   **部署模型：** `Agency1` 可以利用不同的部署模型。例如，私有云、混合云、社区云或公有云。连接管理器允许机构根据不同的风险因素和保护数据机密性的目标，从连接类型列表中进行选择。
 
-##### 16.3.3.2.3 资源理由证明
+# 16.3.3.2.3 资源理由证明
 
 溯源提供了关于信息为何被操纵的解释，以及对信息操纵源头的追踪。这在机构之间建立了信任，从而促进了为共同目标建立伙伴关系。
 
 `Agency1` 向 `Agency2` 请求资源 `R2` 的理由证明。当前的商业访问控制策略主要旨在保护单个数据项，而当前的编辑策略旨在编辑文本和图像。我们的策略引擎允许代理定义针对溯源的策略；因此，`Agency2` 可以向 `Agency1` 提供溯源，但通过使用访问控制或编辑策略来保护它。
 
-##### 16.3.3.2.4 策略规范与执行
+# 16.3.3.2.4 策略规范与执行
 
 我们的架构设计支持策略的高层规范，从而将业务层与特定的策略实现分离开来。
 
@@ -6467,66 +6189,61 @@ foaf:projectHomepage <http://www.agency1.gov/>
 
 通过使用形式化词汇（特别是 `OWL` 的一个子语言）扩展 `RDF`，策略可以使用比 `RDF` 更具表现力的语言来指定。`OWL` 具有基于描述逻辑的形式语义，描述逻辑是一阶逻辑的一个可判定片段。因此，通过支持这种适配器模式，我们的框架扩展为能够处理用 `OWL` 指定的语义策略，并且高层策略可以使用现有的或自定义构建的转换器转换为合适的 `OWL` 子语言。
 
-## 16.4 相关工作
+# 16.4 相关工作
 
-### 16.4.1 研究工作
+## 16.4.1 研究工作
 
 虽然有一些相关工作，但没有任何一项为云中的 `AIS` 提供了解决方案，也没有进行过此类正式的策略分析。
 
-#### 16.4.1.1 云中的安全数据存储与检索
+### 16.4.1.1 云中的安全数据存储与检索
 
 云安全最近受到关注 [TALB09]。一些在基础设施层面实施的工作已有报道 [OMAL09]。此类开发工作是保护云基础设施安全的重要一步，但仅处于起步阶段。我们系统的目标是在 `Hadoop` [UTD1] 提供的安全性之上增加另一层安全性。一旦 `Hadoop` 提供的安全性变得健壮，只会增强我们系统的有效性。亚马逊和微软也为其云计算产品进行了类似的工作 [AMAZ2016, MARS2010]。然而，这些工作属于公共领域，而我们的系统是为私有云基础设施设计的。这一区别因素使我们的基础设施比公共基础设施更“受信”，在公共基础设施中数据必须以加密格式存储。
 
-#### 16.4.1.2 SPARQL 查询处理器
+### 16.4.1.2 SPARQL 查询处理器
 
 关于 `SPARQL` 查询处理的报道工作寥寥无几。这些包括 `BioMANTA` [BIOM] 和 `SHARD` [SHAR2011]。`BioMANTA` 提出了对 `RDF` 分子 [DING05] 的扩展，并实现了一个基于 `MapReduce` 的分子存储 [NEWM2008]。它们使用 `MapReduce` 来回答查询。它们最多查询了 400 万个三元组。我们的工作有以下不同之处：首先，我们查询了 10 亿个三元组。其次，我们设计了一种存储模式，专门用于提高 `RDF` 数据的查询执行性能。据我们所知，我们是第一个提出使用 `HDFS` 中的平面文件作为 `RDF` 数据存储模式，并提出 `MapReduce` 作业确定算法来回答 `SPARQL` 查询的。`SHARD`（可扩展、高性能、稳健和分布式）是一个使用 `Hadoop` Cloudera 发行版的 `RDF` 三元组存储。该项目展示了初步结果，证明了 `Hadoop` 提高 `RDF` 数据集可扩展性的能力。然而，`SHARD` 仅将数据存储在三元组存储模式中。它不进行查询规划或重排序，其查询处理器不会最小化 `Hadoop` 作业的数量。没有任何工作纳入安全策略。
 
-#### 16.4.1.3 基于 RDF 的策略引擎
-
-
+### 16.4.1.3 基于 RDF 的策略引擎
 
 存在致力于研究在 RDF 存储上强制执行策略的先前研究。其中包括 [CARM2004] 的工作，该工作使用 RDF 进行策略规范和执行。此外，策略通常用 RDF 编写。在 [JAIN2006] 中，作者提出了一种用于 RDF 的访问控制模型。他们的模型基于 RDF 数据语义，并结合了 RDF 和 RDF Schema (RDFS) 蕴含。此处，保护在资源级别提供，这为他们的框架增加了粒度。其他强制执行 RDF/OWL 策略的框架包括 KAGA2002, [USZO2004]。[USZO2004] 描述了 KAoS，这是一个使用 OWL 的策略和域服务框架，既用于表示策略也用于表示域。[KAGA2002] 引入了 Rei，这是一个灵活且允许陈述不同种类策略的策略框架。Rei 的扩展最近已被提出 [KHAN2010]。策略规范语言允许用户基于 RDF、DAML+OIL 和 OWL 中的领域特定本体开发声明式策略。[REDD2005] 的作者还引入了一个原型 RAP，用于实现具有集成维护能力和访问控制的 RDF 存储。然而，这些框架并未解决 RDF 存储变得非常大的情况，或策略无法随数据扩展的情况。在一个由 IARPA 资助的项目下，我们开发了用于超大规模 RDF 图处理的技术 [UTD2]。
 
-#### 16.4.1.4 Hadoop 存储架构
+### 16.4.1.4 Hadoop 存储架构
 
 针对 RDF 数据的大规模分布式存储和检索技术引起了极大的关注。Castagna 等人 [CAST2009] 的工作展示了 RDF 数据并行处理框架的理论设计。这项工作主张使用具有不同粒度级别的数据分发模型，如三元组级别、图级别和数据集级别。针对这种分布式模型的查询随后被划分为一组子查询，分发到包含分布式数据的机器上。所有子查询的结果随后将被合并，以向用户应用程序返回完整结果。研究界存在该理论概念的多种实现。这些工作包括 Choi 等人 [CHOI2009] 和 Abraham 等人 [ABRA2010] 的工作。一种单独的用于存储和检索 RDF 数据的技术利用了对等系统 [ABER2004, CAI2004, HART2007, VALL2006]。然而，此类系统存在一些缺点，因为对等系统需要拥有超级节点来存储关于 RDF 数据在节点间分发的信息。另一个缺点是需要将 SPARQL 查询联合分发到网络中的每个节点。
 
-#### 16.4.1.5 分布式推理
+### 16.4.1.5 分布式推理
 
 InteGrail 系统使用分布式推理，其愿景是塑造未来的欧洲铁路组织 [INTE2009]。在 [URBA2009] 中，作者展示了基于 MapReduce 的可扩展 RDFS 推理实现，该实现可在两小时内从真实数据集推断出 300 亿个三元组，分别产生 123,000 三元组/秒的输入吞吐量和 327 万三元组/秒的输出吞吐量。他们展示了一些在 MapReduce 中编码 RDFS 规则集的非平凡优化，并使用多个真实数据集在包含 64 个计算节点的集群上评估了其实现的可扩展性。
 
-#### 16.4.1.6 访问控制和策略本体建模
+### 16.4.1.6 访问控制和策略本体建模
 
 已有一些尝试使用语义 Web 技术来建模访问控制和策略模型。在 [CIRI2007] 中，作者展示了如何使用 OWL 和描述逻辑来构建访问控制系统。他们开发了一个高层 OWL-DL 本体来表达基于角色的访问控制系统的要素，并构建了一个领域特定本体来捕获示例场景的特征。最后，他们将这两个产物结合起来，以考虑策略定义和访问控制决策中的属性。在 [REUL2010] 中，作者首先展示了一个基于 DOGMA 的安全策略本体，DOGMA 是一个形式化的本体工程框架。该本体涵盖了安全策略的核心要素（即条件、动作、资源），并可轻松扩展以表示特定的安全策略，如访问控制策略。在 [ANDE2009] 中，作者提出了一种本体驱动的方法，用于信息系统的多级访问控制和溯源。
 
-### 16.4.2 商业发展
+## 16.4.2 商业发展
 
-#### 16.4.2.1 RDF 处理引擎
+### 16.4.2.1 RDF 处理引擎
 
 研究和商业 RDF 处理引擎包括 HP 实验室的 Jena、BigOWLIM 和 RDF-3X。尽管这些工具中的一些存储模式和查询处理机制是专有的，但它们都基于某种类型的 RDF 数据索引策略。然而，只有极少数工具使用以云为中心的架构来处理 RDF 数据，而且这些工具无法扩展到非常大数量的三元组。相比之下，CAISS++ 中的查询处理器将构建为一个行星级的 RDF 处理引擎，支持所有 SPARQL 算子，并将为 SPARQL 查询提供优化的执行策略，可扩展到数十亿个三元组。
 
-#### 16.4.2.2 基于语义 Web 的安全策略引擎
+### 16.4.2.2 基于语义 Web 的安全策略引擎
 
-正如 第 16.2 节 所述，目前关于基于语义 Web 的策略规范和执行的工作，并未解决针对海量数据和大量用户的策略生成和执行问题。**云：** 据我们所知，不存在针对以云为中心的 AIS 的重大商业竞争。由于我们采用了模块化方法来创建工具，我们可以单独迭代优化每个组件（策略引擎、存储架构和查询处理器）。由于我们采取了基于组件的方法，我们将能够适应我们使用的平台的变化（例如 Hadoop、RDF、OWL 和 SPARQL），而无需依赖特定平台的特定功能。
+正如第 16.2 节所述，目前关于基于语义 Web 的策略规范和执行的工作，并未解决针对海量数据和大量用户的策略生成和执行问题。**云：** 据我们所知，不存在针对以云为中心的 AIS 的重大商业竞争。由于我们采用了模块化方法来创建工具，我们可以单独迭代优化每个组件（策略引擎、存储架构和查询处理器）。由于我们采取了基于组件的方法，我们将能够适应我们使用的平台的变化（例如 Hadoop、RDF、OWL 和 SPARQL），而无需依赖特定平台的特定功能。
 
-## 16.5 总结与展望
+# 16.5 总结与展望
 
 本章描述了我们对一个称为 CAISS 的基于云的信息共享系统的设计和实现。CAISS 利用了我们开发的几项技术以及开源工具。我们还描述了一个理想的基于云的 AIS 系统 CAISS++ 的设计。我们讨论了一系列 CAISS、CAISS+ 和一个演示系统的实现。
 
 我们开发了 CAISS 和 CAISS++ 的概念验证原型。在 CAISS 的实现中，我们在云中利用了我们的 SPARQL 查询处理器，策略以 XACML 和 RDF 两种形式指定。我们的策略包括访问控制策略以及信息共享策略。在 CAISS++ 的实现中，我们用 OWL 指定策略，在云中开发了策略引擎，并将其与 SPARQL 数据引擎集成。这些系统在 [CADE2012a] 和 [CADE2012b] 中进行了讨论。
 
-
-
-
-### CAISS++：一种基于云的 AIS 框架
+## CAISS++：一种基于云的 AIS 框架
 
 CAISS++ 是首个在云端运行的 AIS 框架。如前所述，其理念是让每个组织将其数据和信息共享策略存储在云中。信息将根据这些策略进行共享。我们描述了一个利用语义 Web 技术的基于云的信息共享框架。我们的框架由一个策略引擎组成，用于为信息共享目的推理策略；还有一个安全数据引擎，用于在云中存储和查询数据。我们还通过示例策略描述了系统的操作。我们的框架具有灵活性，因此可以添加额外的数据源和云。此外，通过为策略引擎使用 RDF，我们可以添加更复杂的信息共享策略。这是我们系统的主要优势之一。未来的方向包括指定和推理更复杂的策略，以及在真实环境中测试我们的系统。
 
-### 未来工作
+## 未来工作
 
 未来，我们将继续通过实现更复杂的策略以及实现分布式版本 CAISS++ 来增强我们的原型。我们还将对策略的执行进行正式分析。最后，我们将研究多个社交网络用户之间的 AIS，并探索在实现中使用 Spark、Storm 和 CouchDB 等技术。
 
-## 参考文献
+# 参考文献
 
 *   **[ABER2004]** K. Aberer, P. Cudr´e-Mauroux, M. Hauswirth, T. Van Pelt, *GridVine: Building Internet-Scale Semantic Overlay Networks*, Proceedings of International Semantic Web Conference, Hiroshima, Japan, 2004.
 
@@ -6541,6 +6258,10 @@ CAISS++ 是首个在云端运行的 AIS 框架。如前所述，其理念是让�
 *   **[BIOM]** Biomanta [`www.itee.uq.edu.au/eresearch/projects/biomanta`](http://www.itee.uq.edu.au)
 
 *   **[BRAU2008]** U. Braun, A. Shinnar, M. Seltzer, *Securing Provenance*, Proceedings of the 3rd Conference on Hot Topics in Security, 2008, USENIX Association, pp. 4.
+
+
+
+## 参考文献
 
 *   **[CARM2009]** B. Carminati, E. Ferrari, R. Heatherly, M. Kantarcioglu, B. M. Thuraisingham, *A Semantic Web Based Framework for Social Network Access Control*, SACMAT 2009, 14th ACM Symposium on Access Control Models and Technologies, Stresa, Italy, 2009, pp. 177–186.
 
@@ -6581,12 +6302,6 @@ CAISS++ 是首个在云端运行的 AIS 框架。如前所述，其理念是让�
 *   **[GUO2005]** Y. Guo, Z. Pan, J. Hefflin, *LUBM: A Benchmark for OWL Knowledge Base Systems*, Web Semantics, Volume 3(2,5), 2005, 158–182.
 
 *   **[Haml2006a]** K. Hamlen, G. Morrisett, F. Schneider, *Computability Classes for Enforcement Mechanisms*, ACM Transactions on Programming Languages and Systems, Volume 28, # 1, 2006, 175–205.
-
-
-
-
-
-## 参考文献
 
 *   **[Haml06b]** K. Hamlen, G. Morrisett, F. Schneider, Certified In-Lined Reference Monitoring [on.NET](http://on.NET), *ACM 编程语言与安全分析研讨会论文集*, 加拿大渥太华, 2006, pp. 7–16.
 
@@ -6640,7 +6355,9 @@ CAISS++ 是首个在云端运行的 AIS 框架。如前所述，其理念是让�
 
 *   **[SAMA2001]** P. Samarati, S. de. Vimercati, 访问控制: 策略、模型与机制, 安全分析与设计基础, 2001, 137–196.
 
-*   **[SHAR2011]** SHARD, [`blog.cloudera.com/blog/2010/03/how-raytheon-researchers-are-using-hadoop-to-build-a-scalable-distributed-triple-store/`](http://blog.cloudera.com).
+
+
+*   **[SHAR2011]** SHARD, [`blog.cloudera.com/blog/2010/03/how-raytheon-researchers-are-using-hadoop-to-build-a-scalable-distributed-triple-store/`](http://blog.cloudera.com/blog/2010/03/how-raytheon-researchers-are-using-hadoop-to-build-a-scalable-distributed-triple-store/).
 
 *   **[SRID2010]** M. Sridhar, K. Hamlen, 内联参考监视器的模型检测, *第 11 届验证、模型检测与抽象解释国际会议论文集*, 西班牙马德里, 2010, pp. 312–327.
 
@@ -6660,15 +6377,13 @@ CAISS++ 是首个在云端运行的 AIS 框架。如前所述，其理念是让�
 
 *   **[USZO2004]** A. Uszok, J. Bradshaw, M. Johnson, R. Jeffers, A. Tate, J. Dalton, S. Aitken, 面向语义 Web 服务的 KAoS 策略管理, *IEEE 智能系统*, 2004, 32–41.
 
-*   **[UTD1]** UTD 安全云存储库, [`cs.utdallas.edu/secure-cloud-repository/`](http://cs.utdallas.edu).
+*   **[UTD1]** UTD 安全云存储库, [`cs.utdallas.edu/secure-cloud-repository/`](http://cs.utdallas.edu/secure-cloud-repository/).
 
+*   **[UTD2]** UTD 语义 Web 存储库，[`cs.utdallas.edu/semanticweb/`](http://cs.utdallas.edu/semanticweb/)。
 
+*   **[VALL2006]** E. Valle，A. Turati，A. Ghioni，AGE：一个促进基于 RDF 互操作性的分布式基础设施。*分布式应用与可互操作系统会议论文集 (DAIS)*，意大利博洛尼亚，2006 年。
 
-
-
-*   \[UTD2\] UTD 语义 Web 存储库，[`cs.utdallas.edu/semanticweb/`](http://cs.utdallas.edu/semanticweb/)。
-*   \[VALL2006\] E. Valle，A. Turati，A. Ghioni，AGE：一个促进基于 RDF 互操作性的分布式基础设施。*分布式应用与可互操作系统会议论文集 (DAIS)*，意大利博洛尼亚，2006 年。
-*   \[ZQL\] Zql：一个 Java SQL 解析器。[`zql.sourceforge.net/`](http://zql.sourceforge.net)。
+*   **[ZQL]** Zql：一个 Java SQL 解析器。[`zql.sourceforge.net/`](http://zql.sourceforge.net)。
 
 # 17 面向社交网络数据管理的访问控制
 
@@ -6678,24 +6393,21 @@ DOI：[10.1201/9781003081845-28](https://doi.org/10.1201/9781003081845-28)
 
 在第 IV 部分的章节中，我们展示了利用社交网络内的数据来改进局部分类和关系分类方法的途径。虽然流行病学和反恐领域普遍被认为是这些任务的重要应用领域，但一个主要的新兴领域是通过与社交网络提供商合作，将这些数据用于市场营销。这种用法引发了这些社交网络许多用户的隐私担忧。在此，我们提供了一个框架，赋予用户对其在社交网络内信息的访问拥有更大的控制权。通过利用语义 Web 技术，我们能够提出非常细粒度的控制，以管理从用户照片到谁能向未成年儿童发送消息或视频的一切内容。
 
-在线社交网络（OSN）是允许人们发布关于自己的详细信息，并通过链接连接到网络其他成员的平台。最近，OSN 的流行度显著增加。例如，Facebook 现在声称拥有近 30 亿活跃用户（[`www.businessofapps.com/data/facebook-statistics/`](https://www.businessofapps.com)）。包含个人特定信息的 OSN 的存在既创造了有趣的机会，也带来了挑战。例如，社交网络数据可用于向合适的客户营销产品。同时，安全和隐私担忧在实践中可能会阻碍此类工作 \[BERT2007\]。改进 OSN 访问控制系统似乎是解决与在线社交网络相关的现有安全和隐私问题的第一步。然而，大多数当前的 OSN 实现非常基础的访问控制系统，仅仅是让用户通过将特定项目标记为公开、私有或仅直接联系人可访问，来决定哪些个人信息可被其他成员访问。为了提供更多灵活性，一些在线社交网络强制执行这些设置的变体，但原则是相同的。例如，除了基本设置外，Bebo（[`bebo.com`](http://bebo.com)）、Facebook（[`facebook.com`](http://facebook.com)）和 Multiply（[`multiply.com`](http://multiply.com)）支持“选定的朋友”选项；Last.fm（[`last.fm`](http://last.fm)）支持“邻居”选项（即具有相似音乐偏好和品味的用户集合）；Facebook、Friendster 和 Orkut（[`www.orkut.com`](http://www.orkut.com)）支持“朋友的朋友”选项；Xing（[`xing.com`](http://xing.com)）支持“联系人的联系人”（二度联系人）、“三度”和“四度联系人”选项。重要的是要注意，所有这些方法都具有易于实现的优势，但它们缺乏灵活性。事实上，可用的保护设置不允许用户轻松指定其访问控制需求，因为它们要么过于严格，要么过于宽松。此外，现有解决方案是特定于平台的，难以针对各种不同的在线社交网络实施。
+在线社交网络（OSN）是允许人们发布关于自己的详细信息，并通过链接连接到网络其他成员的平台。最近，OSN 的流行度显著增加。例如，Facebook 现在声称拥有近 30 亿活跃用户（[`www.businessofapps.com/data/facebook-statistics/`](https://www.businessofapps.com)）。包含个人特定信息的 OSN 的存在既创造了有趣的机会，也带来了挑战。例如，社交网络数据可用于向合适的客户营销产品。同时，安全和隐私担忧在实践中可能会阻碍此类工作 [BERT2007]。改进 OSN 访问控制系统似乎是解决与在线社交网络相关的现有安全和隐私问题的第一步。然而，大多数当前的 OSN 实现非常基础的访问控制系统，仅仅是让用户通过将特定项目标记为公开、私有或仅直接联系人可访问，来决定哪些个人信息可被其他成员访问。为了提供更多灵活性，一些在线社交网络强制执行这些设置的变体，但原则是相同的。例如，除了基本设置外，Bebo（[`bebo.com`](http://bebo.com)）、Facebook（[`facebook.com`](http://facebook.com)）和 Multiply（[`multiply.com`](http://multiply.com)）支持“选定的朋友”选项；Last.fm（[`last.fm`](http://last.fm)）支持“邻居”选项（即具有相似音乐偏好和品味的用户集合）；Facebook、Friendster 和 Orkut（[`www.orkut.com`](http://www.orkut.com)）支持“朋友的朋友”选项；Xing（[`xing.com`](http://xing.com)）支持“联系人的联系人”（二度联系人）、“三度”和“四度联系人”选项。重要的是要注意，所有这些方法都具有易于实现的优势，但它们缺乏灵活性。事实上，可用的保护设置不允许用户轻松指定其访问控制需求，因为它们要么过于严格，要么过于宽松。此外，现有解决方案是特定于平台的，难以针对各种不同的在线社交网络实施。
 
-为了解决其中一些局限性，我们提出了一种基于语义 Web 技术的可扩展、细粒度 OSN 访问控制模型。我们的主要思想是利用本体对社交网络相关信息进行编码。具体而言，我们建议使用语义 Web 本体对 OSN 的以下五个重要方面进行建模：（1）用户档案，（2）用户之间的关系（例如，Bob 是 Alice 的密友），（3）资源（例如，在线相册），（4）用户与资源之间的关系（例如，Bob 是相册的所有者），以及（5）动作（例如，在某人的墙上发布消息）。通过构建这样的本体，我们对社交网络知识库（`SNKB`）进行建模。使用本体对 OSN 数据建模的主要优势在于，许多不同社交网络概念之间的关系可以使用`OWL`自然地表示。此外，通过推理，可以自动完成关于此类关系的许多推断。我们的访问控制执行机制随后通过利用这些知识来实现。具体而言，思路是将安全策略定义为规则（见第 17.4 节），其前件陈述`SNKB`上的条件，后件指定授权动作。特别是，我们建议利用本体对安全策略隐含的授权进行编码，从而获得`SAKB`。因此，安全策略必须被转换为规则，其前件和后件在本体上表达。为了实现这一目标，我们使用语义 Web 规则语言（`SWRL`）\[HORR2004\]。因此，访问控制策略可以通过简单地查询授权（即`SAKB`）来执行。该查询可以通过实例检查操作由本体推理器直接轻松实现，或者如果本体以`RDF`序列化，则可以通过`SPARQL`查询执行。在本章中，我们重点关注如何利用语义 Web 技术对这种细粒度社交网络访问控制系统进行建模。我们还假设由社交网络管理者托管的集中式参考监视器将执行所需的策略。由于我们提出的方法依赖于可扩展的本体，它可以通过修改我们`SNKB`中的本体轻松适应各种在线社交网络。此外，正如我们稍后在本章中详细讨论的那样，语义 Web 工具允许我们定义比当前 OSN 提供的更细粒度的访问控制策略。
+为了解决其中一些局限性，我们提出了一种基于语义 Web 技术的可扩展、细粒度 OSN 访问控制模型。我们的主要思想是利用本体对社交网络相关信息进行编码。具体而言，我们建议使用语义 Web 本体对 OSN 的以下五个重要方面进行建模：（1）用户档案，（2）用户之间的关系（例如，Bob 是 Alice 的密友），（3）资源（例如，在线相册），（4）用户与资源之间的关系（例如，Bob 是相册的所有者），以及（5）动作（例如，在某人的墙上发布消息）。通过构建这样的本体，我们对社交网络知识库（`SNKB`）进行建模。使用本体对 OSN 数据建模的主要优势在于，许多不同社交网络概念之间的关系可以使用 `OWL` 自然地表示。此外，通过推理，可以自动完成关于此类关系的许多推断。我们的访问控制执行机制随后通过利用这些知识来实现。具体而言，思路是将安全策略定义为规则（见第 17.4 节），其前件陈述 `SNKB` 上的条件，后件指定授权动作。特别是，我们建议利用本体对安全策略隐含的授权进行编码，从而获得 `SAKB`。因此，安全策略必须被转换为规则，其前件和后件在本体上表达。为了实现这一目标，我们使用语义 Web 规则语言（`SWRL`）[HORR2004]。因此，访问控制策略可以通过简单地查询授权（即 `SAKB`）来执行。该查询可以通过实例检查操作由本体推理器直接轻松实现，或者如果本体以 `RDF` 序列化，则可以通过 `SPARQL` 查询执行。在本章中，我们重点关注如何利用语义 Web 技术对这种细粒度社交网络访问控制系统进行建模。我们还假设由社交网络管理者托管的集中式参考监视器将执行所需的策略。由于我们提出的方法依赖于可扩展的本体，它可以通过修改我们 `SNKB` 中的本体轻松适应各种在线社交网络。此外，正如我们稍后在本章中详细讨论的那样，语义 Web 工具允许我们定义比当前 OSN 提供的更细粒度的访问控制策略。
 
-本章组织如下。在第 17.2 节中，我们简要讨论了与在线社交网络相关的当前安全和隐私研究。在第 17.3 节中，我们讨论如何使用语义 Web 技术对社交网络进行建模。在第 17.4 节中，我们介绍了我们框架中支持的安全策略的高层概览。除了访问控制策略外，我们还陈述了过滤策略，允许用户（或其监护人之一）自定义其访问的内容。我们还引入了管理策略，规定谁有权指定访问控制和过滤策略。在第 17.5 节中，我们介绍授权本体和安全策略的`SWRL`规则编码。在第 17.6 节中，我们讨论安全策略如何执行。我们设计的实现问题在第 17.7 节中讨论。在第 17.8 节中，我们描述我们的架构，也称为我们的框架。在第 17.9 节中，我们讨论我们用语义 Web-based 访问控制进行社交网络实验的实验。大数据和云技术的可扩展性在第 17.10 节中讨论。第 17.11 节总结本章。图 17.1 说明了本章的概念。我们的研究受\[FINI2008\]中报告的工作影响。
+本章组织如下。在第 17.2 节中，我们简要讨论了与在线社交网络相关的当前安全和隐私研究。在第 17.3 节中，我们讨论如何使用语义 Web 技术对社交网络进行建模。在第 17.4 节中，我们介绍了我们框架中支持的安全策略的高层概览。除了访问控制策略外，我们还陈述了过滤策略，允许用户（或其监护人之一）自定义其访问的内容。我们还引入了管理策略，规定谁有权指定访问控制和过滤策略。在第 17.5 节中，我们介绍授权本体和安全策略的 `SWRL` 规则编码。在第 17.6 节中，我们讨论安全策略如何执行。我们设计的实现问题在第 17.7 节中讨论。在第 17.8 节中，我们描述我们的架构，也称为我们的框架。在第 17.9 节中，我们讨论我们用语义 Web-based 访问控制进行社交网络实验的实验。大数据和云技术的可扩展性在第 17.10 节中讨论。第 17.11 节总结本章。图 17.1 说明了本章的概念。我们的研究受 [FINI2008] 中报告的工作影响。
 
 ![图 17.1 社交网络的访问控制。](img/fig17_1.jpg)
-
-
-
 
 ## 17.2 相关工作
 
 过去关于 OSN 安全的研究主要集中在隐私保护技术上，旨在允许在不损害 OSN 成员隐私的前提下对社交网络数据进行统计分析（关于该主题的讨论请参见 [CARM2008, CARM2009a, CARM2009b, CARM2011]）。相比之下，OSN 的访问控制是一个相对较新的研究领域。据我们所知，针对在线社交网络的访问控制机制，仅有 [KRUK2006]、[ALI2007] 和 [CARM2009b] 等提案。D-FOAF 系统 [KRUK2006] 主要是一种基于 Friend of a Friend (FOAF) 即“朋友的朋友”本体的社交网络分布式身份管理系统，其中访问权限和信任委托管理作为额外服务提供。在 D-FOAF 中，关系与信任级别相关联，该级别表示参与给定关系的用户之间存在的 `friendship`（友谊/好友关系）程度。尽管 [KRUK2006] 仅讨论了对应于 FOAF 词汇表 [BRIC2007] 中 `foaf:knows` RDF 属性所建模的通用关系，但另一篇 D-FOAF 相关论文 [CHOI20I0] 也考虑了多种关系类型的情况。就访问权限而言，它们通过连接请求者与资源所有者的路径的最小信任级别和最大长度来表示授权用户。在 [ALI2007] 中，作者采用了一种多级安全方法，其中信任是确定用户和资源安全级别的唯一参数。在 [CARM2009a] 中，提出了一种半去中心化的自主访问控制模型及相关的执行机制，用于 OSN 中的受控信息共享。该模型允许为在线资源指定访问规则，其中授权用户通过网络中节点间存在的关系类型、深度和信任级别来表示。
 
-与现有方法相比，我们利用语义 Web 技术来表示用户、资源和动作之间更丰富的关系形式。例如，我们能够表示利用关系层级的访问控制规则，并通过使用 OWL 推理工具，可以推断出“密友”也是“朋友”，因此任何“朋友”可访问的内容，“密友”也可访问。此外，通过修改底层的 SNKB，我们提出的解决方案可轻松适应截然不同的在线社交网络。关于所提框架与 [CARM2009b] 中访问控制机制差异的进一步讨论，请参见 第 17.4 节。
+与现有方法相比，我们利用语义 Web 技术来表示用户、资源和动作之间更丰富的关系形式。例如，我们能够表示利用关系层级的访问控制规则，并通过使用 `OWL` 推理工具，可以推断出“密友”也是“朋友”，因此任何“朋友”可访问的内容，“密友”也可访问。此外，通过修改底层的 `SNKB`，我们提出的解决方案可轻松适应截然不同的在线社交网络。关于所提框架与 [CARM2009b] 中访问控制机制差异的进一步讨论，请参见 第 17.4 节。
 
-语义 Web 技术最近已被用于为不同于 OSN 的领域开发各种策略和访问控制语言。例如，在 [TONT2003] 中，作者比较了用于分布式基于代理系统的各种策略语言，这些语言定义了授权和义务策略。在 [FINI2008] 中，OWL 被用于表达基于角色的访问控制策略。在 [YAGU2005] 中，作者提出了一种语义访问控制模型，该模型将授权和访问控制管理职责分离，为具有异构安全需求的分布式动态系统提供解决方案。这些先前的工作均未涉及与在线社交网络相关的访问控制问题。在现有工作中，[ELAH2008] 与我们的提案最为相似。与 [ELAH2008] 相比，我们提供了一个丰富得多的 OWL 本体，用于建模在线社交网络的各个方面。此外，我们提出了依赖于各用户间信任关系的授权、管理和过滤策略。
+语义 Web 技术最近已被用于为不同于 OSN 的领域开发各种策略和访问控制语言。例如，在 [TONT2003] 中，作者比较了用于分布式基于代理系统的各种策略语言，这些语言定义了授权和义务策略。在 [FINI2008] 中，`OWL` 被用于表达基于角色的访问控制策略。在 [YAGU2005] 中，作者提出了一种语义访问控制模型，该模型将授权和访问控制管理职责分离，为具有异构安全需求的分布式动态系统提供解决方案。这些先前的工作均未涉及与在线社交网络相关的访问控制问题。在现有工作中，[ELAH2008] 与我们的提案最为相似。与 [ELAH2008] 相比，我们提供了一个丰富得多的 `OWL` 本体，用于建模在线社交网络的各个方面。此外，我们提出了依赖于各用户间信任关系的授权、管理和过滤策略。
 
 ## 17.3 利用语义 Web 技术建模社交网络
 
@@ -6707,7 +6419,7 @@ DOI：[10.1201/9781003081845-28](https://doi.org/10.1201/9781003081845-28)
 
 ### 17.3.2 建模个人信息
 
-Facebook 等 OSN 上提供的部分个人信息可通过 Friend-of-a-Friend (FOAF) 本体 [BRIC2007] 进行建模。FOAF 是一种基于 OWL 的格式，用于表示个人信息和个人的社交网络。FOAF 提供了各种类和属性来描述社交网络数据，如基本个人信息、在线账户、项目、群组、文档和图像。然而，这些基本机制不足以捕获所有可用信息。例如，没有 FOAF 构造来捕获 `lookingFor` 的含义（例如，John Smith 正在寻找友谊）。得益于 RDF/OWL 语言的可扩展性，这很容易解决。例如，考虑以下使用以 RDF/OWL 语言编写的新 Facebook 本体来捕获 Facebook Profile Id 为 999999 的个人相关信息的案例。在该示例中，我们假设“fb”本体具有一个名为 `lookingFor` 的属性来捕获所需信息。
+Facebook 等 OSN 上提供的部分个人信息可通过 Friend-of-a-Friend (FOAF) 本体 [BRIC2007] 进行建模。FOAF 是一种基于 `OWL` 的格式，用于表示个人信息和个人的社交网络。FOAF 提供了各种类和属性来描述社交网络数据，如基本个人信息、在线账户、项目、群组、文档和图像。然而，这些基本机制不足以捕获所有可用信息。例如，没有 FOAF 构造来捕获 `lookingFor` 的含义（例如，John Smith 正在寻找友谊）。得益于 RDF/OWL 语言的可扩展性，这很容易解决。例如，考虑以下使用以 RDF/OWL 语言编写的新 Facebook 本体来捕获 Facebook Profile Id 为 999999 的个人相关信息的案例。在该示例中，我们假设“fb”本体具有一个名为 `lookingFor` 的属性来捕获所需信息。
 
 ```
 @prefix rdf: <http://www.w3.org/1599/02/22-rdf-syntax-ns>.
@@ -6723,41 +6435,39 @@ fb:lookingFor "Friendship".
 
 ### 17.3.3 建模人际关系
 
+目前，在线社交网络不支持对关系进行细粒度的定义。例如，Facebook 允许你指定是否与某位好友共同就读或共事，但无法表达这真正意味着什么，即关系的强度。正是这种细粒度结构是我们希望捕获的。Mika [MIKA2007] 提出了一种基于再化的模型来捕获关系强度。相反，为了遵循 W3C 规范 [WWW1999]，我们采用 n 元关系模式，而非使用简单的陈述再化，后者违反了该规范 [WWW2006]。如果我们违反规范，关系将通过一系列四条 RDF 语句来建模，以创建关系的标识符。不幸的是，结果将导致 `SWRL` 无法理解这些关系。我们认为，使用规范推荐的模式并保留使用 `SWRL` 对关系进行推理的能力是最佳解决方案。
 
-
-目前，在线社交网络不支持对关系进行细粒度的定义。例如，Facebook 允许你指定是否与某位好友共同就读或共事，但无法表达这真正意味着什么，即关系的强度。正是这种细粒度结构是我们希望捕获的。Mika \[MIKA2007\] 提出了一种基于再化的模型来捕获关系强度。相反，为了遵循 W3C 规范 \[WWW1999\]，我们采用 n 元关系模式，而非使用简单的陈述再化，后者违反了该规范 \[WWW2006\]。如果我们违反规范，关系将通过一系列四条 RDF 语句来建模，以创建关系的标识符。不幸的是，结果将导致 SWRL 无法理解这些关系。我们认为，使用规范推荐的模式并保留使用 SWRL 对关系进行推理的能力是最佳解决方案。
-
-基于前述原因，我们选择使用 n 元关系模式来建模人际关系。为了遵循 n 元关系规范 \[WWW2006\]，我们定义了一个 `FriendshipRelation` 类，该类拥有表示友谊总体强度的子类。根类 `FriendshipRelation` 暗示一种非特定的友谊，而三个子类 `Family`（家人）、`CloseFriend`（密友）和 `DistantFriend`（泛友）则给出了人与人之间亲疏程度的指示。`CloseFriend` 子类还有一个进一步的扩展：`BestFriend`（挚友）。
+基于前述原因，我们选择使用 n 元关系模式来建模人际关系。为了遵循 n 元关系规范 [WWW2006]，我们定义了一个 `FriendshipRelation` 类，该类拥有表示友谊总体强度的子类。根类 `FriendshipRelation` 暗示一种非特定的友谊，而三个子类 `Family`（家人）、`CloseFriend`（密友）和 `DistantFriend`（泛友）则给出了人与人之间亲疏程度的指示。`CloseFriend` 子类还有一个进一步的扩展：`BestFriend`（挚友）。
 
 这种基本结构使我们能够轻松模仿 Facebook 现有的关系类型结构。然而，正如之前提到的，这些关系类型没有预定义的含义。为了开始量化关系分配的含义，每个 `FriendshipRelation` 实例都有一个数据属性 `TrustValue`。这代表发起者对好友的信任程度。
 
 举个例子，假设某个个体（如 John Smith）与一位同事（如 Jane Doe）定义了一种关系。这将创建一个 `FriendshipRelation` 类的实例，带有 `TrustValue` 数据属性，代表发起者与其好友之间的信任程度。该实例还有一个对象属性，将其链接到好友的实例。然后，该 `FriendshipRelation` 类的实例通过 `Friendship` 对象属性关联回 John Smith。
 
-重要的是要注意，社交网络中的任何（单向）关系都是 `FriendshipRelation` 类的单个实例。因此，为了建模社交网络关系标准的双向性质，我们需要该类的两个实例。然而，如果 B 是 A 的朋友，则 A 是 B 的朋友这一简单的逻辑推理无法由 SWRL 实现，因为这将意味着创建一个新的 Friendship 类实例。不幸的是，这超出了 SWRL 的能力范围。因此，这必须由 SWRL 框架外部的外部应用程序来处理。同样重要的是要注意，关系的 `TrustValue` 属性是一个在社交网络的 OWL/SWRL 组件外部自动计算的值。该值用于在网络中进一步执行各种推理任务。在最基本的层面上，即 `TrustValue` 是基于友谊类型的静态数字时，这是一个微不足道的组件。我们假设计算 `TrustValue` 将会使用更复杂的公式，这可能超出了 SWRL 内置数学运算符的范围。
 
-我们在间接关系方面遇到了类似的困难。要定义一个推断出的关系，我们再次需要创建一个新的 `FriendshipRelation` 实例。然而，我们可以像前面详述的维护关系对称性那样，以类似的方式创建这些间接关系。间接关系的唯一区别在于，我们不创建 `FriendshipRelation` 类的实例，而是创建一个单独的类 `InferredRelation` 的实例，该类没有详细的子类，但在其他方面与 FriendshipRelation 基类相同。
 
-### 17.3.4 资源建模
+重要的是要注意，社交网络中的任何（单向）关系都是 `FriendshipRelation` 类的单个实例。因此，为了建模社交网络关系标准的双向性质，我们需要该类的两个实例。然而，如果 B 是 A 的朋友，则 A 是 B 的朋友这一简单的逻辑推理无法由 SWRL 实现，因为这将意味着创建一个新的 `Friendship` 类实例。不幸的是，这超出了 SWRL 的能力范围。因此，这必须由 SWRL 框架外部的外部应用程序来处理。同样重要的是要注意，关系的 `TrustValue` 属性是一个在社交网络的 OWL/SWRL 组件外部自动计算的值。该值用于在网络中进一步执行各种推理任务。在最基本的层面上，即 `TrustValue` 是基于友谊类型的静态数字时，这是一个微不足道的组件。我们假设计算 `TrustValue` 将会使用更复杂的公式，这可能超出了 SWRL 内置数学运算符的范围。
 
-典型的 OSN 提供一些资源，如“相册”或“墙”，用于在个体间共享信息。显然，RDF/OWL 可用于捕获相册由照片组成且每张照片可能包含多人的事实。在我们的框架中，我们将资源建模为一个类，从通用的 `Resource` 类开始。作为其子类，我们可以有例如 `PhotoAlbum`、`Photo` 和 `Message`。这些类各自拥有特定的、独特的属性和关系。例如，`PhotoAlbum` 拥有名称和描述作为数据属性，并拥有一个名为 `containsPhoto` 的对象属性，将其链接到 `Photo` 的实例。这些实例拥有名称、标题以及文件存储位置的路径。Message 拥有发送者、接收者、主题、消息内容和时间戳。我们还可以创建一个 Message 的子类 `WallMessage`（留言板消息），它与 Message 类似，拥有相同的数据属性，但具有额外的限制，例如 `WallMessage` 只能发送给单个个体。
+我们在间接关系方面遇到了类似的困难。要定义一个推断出的关系，我们再次需要创建一个新的 `FriendshipRelation` 实例。然而，我们可以像前面详述的维护关系对称性那样，以类似的方式创建这些间接关系。间接关系的唯一区别在于，我们不创建 `FriendshipRelation` 类的实例，而是创建一个单独的类 `InferredRelation` 的实例，该类没有详细的子类，但在其他方面与 `FriendshipRelation` 基类相同。
 
-### 17.3.5 用户/资源关系建模
+## 17.3.4 资源建模
+
+典型的 OSN 提供一些资源，如“相册”或“墙”，用于在个体间共享信息。显然，RDF/OWL 可用于捕获相册由照片组成且每张照片可能包含多人的事实。在我们的框架中，我们将资源建模为一个类，从通用的 `Resource` 类开始。作为其子类，我们可以有例如 `PhotoAlbum`、`Photo` 和 `Message`。这些类各自拥有特定的、独特的属性和关系。例如，`PhotoAlbum` 拥有名称和描述作为数据属性，并拥有一个名为 `containsPhoto` 的对象属性，将其链接到 `Photo` 的实例。这些实例拥有名称、标题以及文件存储位置的路径。`Message` 拥有发送者、接收者、主题、消息内容和时间戳。我们还可以创建一个 `Message` 的子类 `WallMessage`（留言板消息），它与 `Message` 类似，拥有相同的数据属性，但具有额外的限制，例如 `WallMessage` 只能发送给单个个体。
+
+## 17.3.5 用户/资源关系建模
 
 当前的应用程序（如 Facebook）假设用户与资源之间的唯一关系是所有权。然而，从访问控制的角度来看，这是不够的。让我们考虑一个例子，一张照片同时包含 John Smith 和 Jane Doe。Jane 拍摄了照片并将其发布在社交网络上。传统上，Jane 将是该资源的唯一管理员。由于照片包含 John 的图像（我们称 John 被标记在照片中），在我们的模型中，John 可能对哪些个体可以查看该照片拥有一定的决定权。
 
 为了建模类似相册的内容，我们可以使用两个类。第一个是简单的 `Photo` 类，仅拥有可选的照片名称和标题，以及指向文件存储位置的必需路径。照片随后通过链接与每个被列为在照片中的人关联。`PhotoAlbum` 拥有名称和描述。`PhotoAlbum` 和 `Photo` 通过 `containsPhoto` 关系链接。个人所有者——上传照片的人——由 `ownsAlbum` 关系指示。同样，我们可以表示用户与资源之间的其他关系。
 
-### 17.3.6 动作建模
+## 17.3.6 动作建模
 
-在社交网络中，动作是用户参与的基础。根据所提出的表示方法，动作被定义为关联用户、资源和动作的对象属性。此外，我们通过子属性来建模动作的层级结构。以三个通用动作为例：`Read`、`Write`、`Delete`。我们定义了一个层级结构，其中 `Delete` 是 `Write` 的子类型，而 `Write` 本身又是 `Read` 的子类型。在非层级模型中，如果 John Smith 能够读取、写入和删除一张照片，则我们需要三个授权来表示此属性。然而，由于我们定义了层级结构，仅凭 <“John Smith,” Delete, Photo1> 这一个授权，John Smith 就拥有了所有三种权限。
+在社交网络中，动作是用户参与的基础。根据所提出的表示方法，动作被定义为关联用户、资源和动作的对象属性。此外，我们通过子属性来建模动作的层级结构。以三个通用动作为例：`Read`、`Write`、`Delete`。我们定义了一个层级结构，其中 `Delete` 是 `Write` 的子类型，而 `Write` 本身又是 `Read` 的子类型。在非层级模型中，如果 John Smith 能够读取、写入和删除一张照片，则我们需要三个授权来表示此属性。然而，由于我们定义了层级结构，仅凭 `<"John Smith," Delete, Photo1>` 这一个授权，John Smith 就拥有了所有三种权限。
 
-我们还可以扩展传统的访问限制，以利用社交网络的扩展功能。例如，动作 `Post` 可以被定义为 Write 的子类型。假设我们定义动作 `Write` 表示个体可以向另一个个体发送私信，而动作 `Post` 表示个体可以向另一个人的墙发布消息，以便其任何好友都能看到。那么，授予用户 `Post` 动作将允许他们查看好友的墙、发送私信并在其墙上书写，但无法删除任何内容。
+我们还可以扩展传统的访问限制，以利用社交网络的扩展功能。例如，动作 `Post` 可以被定义为 `Write` 的子类型。假设我们定义动作 `Write` 表示个体可以向另一个个体发送私信，而动作 `Post` 表示个体可以向另一个人的墙发布消息，以便其任何好友都能看到。那么，授予用户 `Post` 动作将允许他们查看好友的墙、发送私信并在其墙上书写，但无法删除任何内容。
 
 ## 17.4 面向 OSN 的安全策略
 
 ### 17.4.1 运行示例
-
-
 
 在本章的其余部分，我们将使用图 17.2 所示的小型网络来说明我们的访问控制机制。我们的运行示例有四个个体：Alice、Bob、Charlie 和 David。Alice、Bob 和 Charlie 形成一个小圈子，他们之间通过不同强度的友谊连接。David 仅通过默认的 `Friendship` 类型与 Bob 是朋友。还有一个由 Alice 上传的 `PhotoAlbum`，其中包含一张 Charlie 的照片。
 
@@ -6774,8 +6484,6 @@ fb:lookingFor "Friendship".
 ### 17.4.3 过滤策略
 
 在 OSN 中，用户可以发布内容非常异构的信息，范围从家庭照片到成人导向内容。从这个意义上说，OSN 中出现的访问控制问题类似于我们在 Web 中遇到的问题，即不适当信息的可用性可能对某些用户（例如年轻人）有害。为了保护用户免受不适当或不想要的内容侵害，我们引入了*过滤策略*，通过它可以指定当给定用户浏览社交网络页面时，哪些数据必须被过滤掉。通过过滤策略，例如可以规定：从用户 Alice 获取的 OSN 页面中，必须移除所有非由 Alice 的直接朋友发布的视频。与访问控制策略类似，过滤策略被定义为基于表示 17.3 节 中引入概念的本体的规则（参见 17.5 节）。这意味着在过滤策略的情况下也可以进行策略传播。过滤策略的另一个相关方面与指定策略的用户（即授予者）有关。确实，在我们的框架中，过滤策略可以通过两种不同的方式指定。根据第一种方式，过滤策略由用户指定，以声明她不想访问哪些信息，即从她获取的 OSN 页面中必须过滤掉哪些数据。因此，在这种情况下，授予者和策略适用的用户（即目标用户）是同一个。这些策略陈述了用户关于想要访问的内容的偏好，因此被称为*过滤偏好*。然而，我们也支持目标用户和授予者不同的过滤策略的指定。这种过滤策略使授予者能够指定目标用户获取的 SN 页面必须如何被过滤。通过这些过滤策略，授予者可以*监督*目标用户可以访问的内容。在这种情况下，我们将过滤策略称为*受监督过滤策略*。这在像 OSN 这样的开放环境中代表了一个极其有用的功能。例如，父母可以指定一个受监督过滤策略，声明她的孩子不得访问那些未被父母自己信任的用户发布的视频。稍后将更清楚地看到，语义技术极大地促进了此类策略的指定。
-
-
 
 值得注意的是，过滤偏好和监管过滤策略都无法仅通过支持否定访问控制策略（即避免访问资源的策略）来强制执行。这是因为访问控制策略和过滤策略具有完全不同的语义。实际上，访问控制策略由资源所有者指定，用于声明谁被授权或拒绝访问其资源。而过滤策略由监管者为目标用户指定，或由目标用户自己指定，用于规定当她获取 OSN 页面时资源应如何被过滤掉。请注意，根据所提议的语义，即使目标用户被授权访问该资源（即满足资源所有者指定的访问控制策略），这种过滤也会发生。
 
@@ -6799,9 +6507,6 @@ fb:lookingFor "Friendship".
 
 #### 17.5.2.1 访问控制授权
 
-
-
-
 第一种授权是由访问控制策略蕴含的。一般来说，访问控制授权可以建模为一个三元组（`u`，`p`，`o`），表明主体 `u` 拥有在对象 `o` 上执行权限 `p` 的权利。因此，在某种程度上，访问控制授权表示 `u` 和 `o` 之间的一种关系 `p`，意味着 `u` 可以在 `o` 上行使 `p`。因此，我们决定将权限 `p` 的访问控制授权编码为一个 OWL 对象属性的实例，该属性命名为 `p`，定义在被授权人和被授权资源之间。为了对所有可能的访问控制授权建模，我们必须为 OSN 中支持的每个动作引入一个不同的对象属性（参见第 17.3 节）。值得注意的是，通过妥善定义编码访问控制授权的对象属性，我们可以根据动作间定义的分类自动传播授权。
 
 让我们以动作 `Post` 为例，假设它已被定义为动作 `Write` 的子类。在访问控制方面，如果向用户授权了发帖权限，则也授权了写入权限。在所提框架中，只要对象属性 `Post` 被定义为对象属性 `Write` 的子属性，访问控制授权就可以自动推断出来。我们要注意，这种层级可能不同于传统的访问控制系统。当我们使用 SWRL 时，为超类定义的任何内容也将为其子类定义。然而，反之则不然。因此，当我们允许某个体 `Write` 时，并不会自动赋予其 `Post` 权限。
@@ -6814,6 +6519,8 @@ fb:lookingFor "Friendship".
 
 #### 17.5.2.3 管理员授权
 
+
+
 管理员授权是由管理员策略蕴含的授权，回顾一下，其目的是授权用户指定访问控制或过滤策略。因此，管理员策略蕴含两类授权：指定访问控制策略的授权，我们简称为 `管理员授权`；以及指定过滤策略的授权，即 `管理员禁止`。一般来说，管理员授权可以表示为一个三元组（`u`，`p`，`o`），表明用户 `u` 被授权为对象 `o` 上的权限 `p` 指定访问控制策略。因此，与授权和禁止类似，管理员授权也可以表示为 `Person` 和 `Resource` 类之间的一个对象属性。根据这种建模，我们可以定义对象属性 `AdminRead`，其实例表明给定用户被授权表达授予特定对象读取权限的访问控制策略。考虑实例 `<Bob,URI1>:`AdminRead`，它表明 Bob 被授权指定授予 URI1 对象读取权限的访问控制策略。
 
 与访问控制授权类似，只需定义子属性，即可指定管理员授权如何传播。让我们声明前面提到的属性 `AdminRead`，并进一步创建属性 `AdminWrite` 和 `AdminAll`。我们声明 `AdminAll` 为 `AdminWrite` 和 `AdminRead` 两者的子属性。考虑我们的运行示例，Alice 拥有一张照片。假设这授予了她该照片的 `AdminAll` 授权。如果 Alice 试图允许 Bob 读取该照片，而该动作仅限拥有 `AdminRead` 属性的个体执行，则通过 `AdminAll` 属性即可允许此操作。
@@ -6822,12 +6529,9 @@ fb:lookingFor "Friendship".
 
 假设，我们有一个通用的 `Prohibition` 类，带有子类 `PRead` 和 `PView`。然后我们为它们各自创建另一个子类 `PAll`。假设我们有两个个体，John 和 Jane，John 是 Jane 的父亲。在这种情况下，John 应被允许过滤其女儿能观看的视频。即，我们有一个禁止（“John”，“Jane”，Video，`PAll`）。现在，对于任何视频和任何权限，John 都可以禁止他希望禁止的内容。
 
-### 17.5.3 安全规则
+## 17.5.3 安全规则
 
 所提框架将每个安全策略转换为一条 SWRL 安全规则，其中前件编码策略中指定的条件（例如，表示主体和对象规范的条件），而后件编码蕴含的授权或禁止。特别地，由于我们将安全规则建模为 SWRL 规则，SWRL 规则体陈述了针对 SNKB 的策略条件，即第 17.3 节中引入的本体上的条件，而 SWRL 规则头蕴含 SAKB 的新实例，即第 17.3 节中引入的本体的实例。因此，SWRL 安全规范的制定严格受限于 OSN 为建模 SN 和 SA 知识库所支持的本体。这意味着无法提供通用 SWRL 规则的形式化，因为这些规则会因所考虑的本体而异。相反，在本节中，我们旨在展示一些基于我们框架中采用的本体定义的有意义的 SWRL 安全规则示例。
-
-
-
 
 我们首先考虑管理员策略，该策略规定对象的所有者有权为该对象指定访问控制策略。根据前几节介绍的本体定义的相应 SWRL 规则如下：
 
@@ -6847,7 +6551,7 @@ Photo(?targetObject) ∧ photoOf(?grantor, ?targetObject) ⇒ AdminRead(?grantor
 
 表 17.1 展示了一些 SWRL 安全规则的示例。第一条安全规则编码了一条过滤策略，规定 Bob 的孩子不能访问视频。一旦对该规则进行求值，就会为 Bob 的每个孩子和视频资源创建一个禁止实例。相反，第二条安全规则对应 Bob 陈述的一条访问控制策略，将对其照片的读取访问限制为仅限其直接朋友，而第三条规则编码了一条访问控制策略，规定 Alice 被标记的照片可以被她的直接朋友访问。最后，第四条规则规定如果一个人拥有一张照片，那么他们朋友的朋友（一种间接关系）可以查看该照片。
 
-#### 表 17.1 SWRL 安全规则示例
+### 表 17.1 SWRL 安全规则示例
 
 | # | SWRL 规则 |
 |---|---|
@@ -6884,8 +6588,6 @@ New_SWRL[1]: AdminRead(Bob, ?targetObject) ^ Owns(Bob, ?targetObject) ^ Photo(?t
 
 如果管理员请求提交的是过滤策略，为了决定授予者是否有权指定该策略，需要在 `Prohibitions` 类（即过滤策略要求禁止的动作对应的子类）中进行搜索，寻找一个实例，其 `Grantor` 属性等于授予者，`Controlled` 和 `TargetObject` 属性分别等于提交的 SWRL 规则头部指定的受控者和 `TargetObject`。在这种情况下，我们也可以采用基于 SWRL 重写的方法。
 
-
-
 假设框架接收到以下管理员请求：`{Bob, SWRL[2]}`，其中 `SWRL[2]` 如下：
 
 `SWRL[2] : Video(?targetObject) ^ ParentOf(Bob,?controlled) ⇒ PRead(?controlled,?targetObject)`
@@ -6914,10 +6616,11 @@ New_SWRL[1]: AdminRead(Bob, ?targetObject) ^ Owns(Bob, ?targetObject) ^ Photo(?t
 
 ## 17.8 框架架构
 
-
-
-
 ### 社交网络访问控制框架
+
+
+
+# 社交网络访问控制框架
 
 在我们提出的框架中，我们计划在现有的在线社交网络应用之上构建多个层。我们计划使用基于 Java 的开源语义 Web 应用开发框架 `JENA` ([`jena.sourceforge.net/`](http://jena.sourceforge.net)) 来实现我们的原型，因为它为实现本章讨论的思想提供了一个易于使用的编程环境。在这里，我们将独立描述这些层中的每一个，以及在我们框架中选择特定技术背后的动机。虽然我们使用 Facebook 的具体实例作为利用底层语义层的总体应用，但任何社交网络应用都可以修改为使用我们在此描述的设计。图 17.3 描述了我们的框架。策略和数据以 RDF 三元组的形式存储。参考监视器控制对数据的访问。它将执行诸如查询重写之类的功能。框架中的一些关键点将在随后的段落中讨论。接下来，我们将讨论框架的组件。
 
@@ -6925,7 +6628,7 @@ New_SWRL[1]: AdminRead(Bob, ?targetObject) ^ Owns(Bob, ?targetObject) ^ Photo(?t
 
 图 17.3 社交网络访问控制框架。
 
-### RDF 数据存储
+## RDF 数据存储
 
 我们假设使用通用的 RDF 三元组存储来保存底层数据。在这种表示中，关于实体的所有事实都被记录为 `<主语, 谓语, 宾语>` 形式的三元组。因此，假设我们有一个名为 John Smith 的个体，被分配了唯一标识符 999999，这将给我们一个元组 `<999999, foaf:Name, "John Smith">`。
 
@@ -6933,13 +6636,13 @@ New_SWRL[1]: AdminRead(Bob, ?targetObject) ^ Owns(Bob, ?targetObject) ^ Photo(?t
 
 我们在此指出，RDF 数据存储与关系数据库的不同之处在于，没有数据库方法来确保整个本体上的约束得到维护，例如确保定义的 `Person` 有一个名称。该事实的数据库表示与“该人住在阿尔伯克基”这一非必要陈述没有区别。然而，我们计划使用 `OWL-DL` 语句来定义这些约束，然后允许 RDF/OWL 引擎强制执行这些约束，稍后将对此进行描述。
 
-### 推理器
+## 推理器
 
 任何支持 `SWRL` 规则的推理器都可以用来执行本章中描述的推理。然而，我们选择了 `SweetRules` ([`ebiquity.umbc.edu/project/html/id/60/SweetRules`](https://ebiquity.umbc.edu))，因为它能与 `JENA` 接口对接，并拥有基于规则的推理引擎。这意味着我们可以同时使用前向链接和后向链接来提高推理效率，以强制执行我们的访问控制策略。前向链接是一种推理方法，引擎从提供的数据开始，查看已建立的推理规则，试图推导出更多信息。这可以在系统需要大规模推断权限时使用，例如当资源首次添加时。
 
 此时，将会有一次性大量地将授权添加到允许的用户列表中。然而，稍后，在添加其他朋友后，检查用户是否有权访问有限数量的资源可以通过后向链接完成。基本上，在后向链接中，我们从期望的目标开始（例如，目标是推断“John 是否有权查看相册 A”），并检查它是否被显式陈述，或者是否可以通过其他规则以递归方式推断出来。显然，这将允许在不重新检查所有其他个体的情况下，推断出关于某个个体（例如 John）的结果。在 [MIKA2007] 中，Mika 提出了一个名为 `Flink` 的基本通用社交网络，基于使用类似于我们提出的框架的语义数据存储，但使用了几种不同的具体语义技术。然而，他确实指出，他们的实现使用后向和前向链接，可以高效地扩展到数百万个元组，这为我们提出的方案的可行性提供了证据。
 
-### RDF/OWL 引擎
+## RDF/OWL 引擎
 
 对于 RDF/OWL 接口，我们选择使用 `JENA API`。我们用它来在应用程序和底层数据存储之间转换数据。`JENA` 有几个重要特性被考虑用于其使用。首先，它与 `SweetRules` 兼容。其次，它支持 `OWL-DL` 推理，我们可以用它来验证数据是否与本体上的 `OWL` 限制一致。`OWL` 限制是简单的基数和域/范围约束，例如每个人必须有一个名称，并且必须至少属于一个网络。为了强制执行这些约束，我们计划让应用层传递关于个体的待输入语句，直到收集完所有语句。然后我们让 `JENA` 将这些语句插入数据库，并检查新模型的一致性。如果有任何约束被违反，则将此信息传回社交网络应用，并让它从用户那里收集所需信息。
 
@@ -6947,14 +6650,11 @@ New_SWRL[1]: AdminRead(Bob, ?targetObject) ^ Owns(Bob, ?targetObject) ^ Photo(?t
 
 我们使用基于 Java 的开源语义 Web 应用开发框架 `JENA` ([`jena.sourceforge.net/`](http://jena.sourceforge.net)) 实现我们的原型，因为它为实现本章讨论的思想提供了一个易于使用的编程环境，并且通常是一个被当前大多数语义产品支持的框架。虽然我们使用 Facebook 的具体实例作为利用底层语义层的总体应用，但任何社交网络应用都有可能被修改为使用我们在此描述的设计。如前所述，我们系统的主要组件是 RDF 数据存储、推理器和 RDF/OWL 引擎。
 
-## 17.9 实验
+# 17.9 实验
 
-### 17.9.1 数据生成
+## 17.9.1 数据生成
 
 当我们开始实施时，很明显我们需要能够在大型数据集上衡量我们实现的性能。因为 Facebook 的规模（在我们开始实施时）约为 3 亿用户，我们将 3.5 亿确立为数据集中所需的节点数量，以确保我们的实现能够扩展以匹配 Facebook 将达到的数字（目前接近 30 亿 ([`www.businessofapps.com/data/facebook-statistics/`](https://www.businessofapps.com))）。不幸的是，没有可公开获取的此规模数据集供我们使用。相反，我们生成了自己的数据集。
-
-
-
 
 我们创建了一个数据生成器，用于生成 *n* 个节点。我们首先创建了一组 50 个节点，并生成了 50 条边，这些边随机分布在图中的 50 个节点上。然后我们选择一个至少有一个朋友的随机节点 *n*[*i*]，并执行 Dijkstra 算法以确定子图是否连通。如果子图不连通，则有 *j* 个节点无法从 *n*[*i*] 到达。我们随后选择 0 < *r*[*i*] ≤ *j* 作为要创建的新边的数量。对于每条边，我们从包含 *n*[*i*] 的连通子图中随机选择一个节点，并从断开连接的子图部分中选择一个目标节点。只要存在断开连接的子图部分，我们就继续生成边。通过这种方式执行子图连接，我们能够生成类社交网络图，同时保持随机性，而无需手工挑选哪些边之间会有链接。
 
@@ -6976,17 +6676,18 @@ New_SWRL[1]: AdminRead(Bob, ?targetObject) ^ Owns(Bob, ?targetObject) ^ Photo(?t
 
 这里有几点需要注意。首先，虽然我们的均匀分布可能不能反映 Facebook 等社交网站照片的真实概率模型，但包含拥有照片利益的大群体代表了此类网站更困难的推理问题。其次，我们不限制照片中被标记的人仅为照片所有者的朋友。因为此功能存在于当前的在线社交网络中，我们需要支持这种类型的标记。这种能力可以支持婚礼等活动的照片，拍照者可能只认识照片中一部分人，但查看照片的人可以提供关于其他被拍摄者的更多细节。我们还要指出，我们的方法生成的图中，每个人的平均好友数为 102 个用户（Facebook 平均好友数为 338 [`www.onaverage.co.uk/other-averages/average-number-of-facebook-friends`](https://www.onaverage.co.uk/other-averages/average-number-of-facebook-friends)）。
 
-*   **Event Generation**：我们接下来生成了一系列事件，这些事件将被处理以检查使用基于语义 Web 的推理器进行社交网络访问控制的效果。我们将社交网络中可执行的完整动作集（如游戏、发帖、更改状态等）浓缩为最能影响推理器能力的动作：添加好友、访问现有资源、创建新资源和更改权限。创建用户、添加好友或创建新资源时，我们按前述方式执行任务。然而，在访问现有资源时，随机选择的用户尝试访问随机选择的资源。
+### Event Generation
 
-*   **Experiments**：我们对推理器进行了两次独立实现。我们的第一个实现依赖于 SweetRules 推理引擎。我们尝试对整个数据集执行推理。以这种方式执行推理将初始模型加载到内存中花费了 17 小时，然后每个特定推理请求需要几秒钟。然而，我们注意到当我们的模型需要更新（通过新资源、好友或安全策略变更）时，这些变更未反映在我们的内存模型中。这导致后续推理变得越来越不正确。
+我们接下来生成了一系列事件，这些事件将被处理以检查使用基于语义 Web 的推理器进行社交网络访问控制的效果。我们将社交网络中可执行的完整动作集（如游戏、发帖、更改状态等）浓缩为最能影响推理器能力的动作：添加好友、访问现有资源、创建新资源和更改权限。创建用户、添加好友或创建新资源时，我们按前述方式执行任务。然而，在访问现有资源时，随机选择的用户尝试访问随机选择的资源。
+
+### Experiments
+
+我们对推理器进行了两次独立实现。我们的第一个实现依赖于 SweetRules 推理引擎。我们尝试对整个数据集执行推理。以这种方式执行推理将初始模型加载到内存中花费了 17 小时，然后每个特定推理请求需要几秒钟。然而，我们注意到当我们的模型需要更新（通过新资源、好友或安全策略变更）时，这些变更未反映在我们的内存模型中。这导致后续推理变得越来越不正确。
 
 因此，我们使用 Pellet 实现了一个推理解决方案，Pellet 已成为一个非常流行的推理器。最初，我们只是将使用的推理器更改为 Pellet。然而，在使用 Pellet 的初始加载步骤中，我们收到了内存溢出错误，无法继续进行推理阶段。我们随后决定需要为社交网络实施某种分区方案。一种简单的分区方法会导致某些友谊链接跨越分区。这些跨分区边会导致以下两种情况之一：
 
-1.  **Reconstructing partitions**：假设分区 *P*[*i*] 有一个用户 *u*[*a*] 和 *n* 个朋友 *u*[1], …, *u*[*n*]，他们分别存储在分区 *P*[1], … *P*[*n*] 中。请记住，我们可以从 *Friends* 数据存储中确定 *u*[*a*] 的朋友是谁。然而，如果没有额外的索引，此能力无法帮助我们确定他们的朋友具体在哪个分区中。我们必须投入大量资源来重组特定分区，以便有效地推断访问权限。
-
+1.  **Reconstructing partitions**：假设分区 *P*[*i*] 有一个用户 *u*[*a*] 和 *n* 个朋友 *u*[1], …, *u*[*n*]，他们分别存储在分区 *P*[1], … *P*[*n*] 中。请记住，我们可以从 `Friends` 数据存储中确定 *u*[*a*] 的朋友是谁。然而，如果没有额外的索引，此能力无法帮助我们确定他们的朋友具体在哪个分区中。我们必须投入大量资源来重组特定分区，以便有效地推断访问权限。
 2.  **Ignoring links**：另一种选择是简单地忽略通向另一个分区的任何友谊链接。这显然不是一个可行的选项，因为它显然会导致太多无效的访问请求。
-
-
 
 我们随后意识到，对于任何单个访问请求，只有那些其安全策略和好友关系对确定请求成败至关重要的用户群体才相关：（1）资源所有者，（2）发起访问请求的人，以及（3）资源中被标记的那些人。因此，我们采用了一种修正的分区方案。对于任何访问请求，我们生成一个临时表，仅包含上述三个群体的成员、涉及这些人的所有链接、请求者以及所有这些人的安全策略。
 
@@ -7010,9 +6711,11 @@ New_SWRL[1]: AdminRead(Bob, ?targetObject) ^ Owns(Bob, ?targetObject) ^ Photo(?t
 
 图 17.4 按好友数量划分的推理平均时间。
 
-## 17.10 利用大数据和云技术实现可扩展性
+# 17.10 利用大数据和云技术实现可扩展性
 
 我们使用语义 Web 来表示和推理用于访问控制的社交媒体数据，我们的策略和数据使用语义 Web 技术指定。社交媒体数据库规模庞大，支持数十亿用户。因此，我们需要可扩展的技术来表示和推理关于安全性和隐私的数据。我们现在拥有大数据管理技术，包括 `MongoDB`、`Google's Big Query` 和 `Apache HIVE` 等系统。大数据解决方案正由 `Amazon`、`IBM`、`Google` 和 `Microsoft` 等云提供商开发。此外，基于 `Apache Hadoop`、`Spark` 和 `Storm` 等产品的基础设施/平台也在开发中。还有基础设施管理工具以及大数据管理工具。
+
+## 基础设施管理工具
 
 基础设施管理工具包括以下内容：
 
@@ -7021,10 +6724,16 @@ New_SWRL[1]: AdminRead(Bob, ?targetObject) ^ Owns(Bob, ?targetObject) ^ Photo(?t
 *   **Apache Spark**：`Apache Spark` 是一个用于处理海量数据的开源分布式计算框架。应用程序员通过一个包含称为 `Resilient Distributed Dataset (RDD)` 数据结构的接口来使用 `Spark`。`Spark` 的开发是为了克服 `MapReduce` 编程模型的局限性。
 *   **Apache Storm**：`Apache Storm` 是一个用于处理海量数据的开源分布式实时计算系统。`Storm` 本质上是一个用于处理流数据和实时分析的实时框架。它可以与 `HDFS` 集成。
 
+## 大数据管理工具
+
 大数据管理工具包括以下内容：
 
 *   **Apache Hive**：`Apache Hive` 是一个建立在 `Hadoop/MapReduce` 平台之上的开源类 SQL 数据库/数据仓库。它最初由 `Facebook` 开发，用于存储与 `Facebook` 数据相关的信息。后来它成为一个开源项目和 `Apache` 的商标。
+
+
+
 *   **Google Big Query**：`Big Query` 本质上是一个管理 PB 级数据的数据仓库。它运行在 `Google` 的基础设施上，可以极快地处理 SQL 查询或进行分析。
+
 *   **NoSQL 数据库**：`NoSQL database` 本质上是指非关系型数据库设计或面向 Web 的可扩展性的通用术语。它被称为非关系型高性能数据库。`NoSQL` 数据库的数据模型可能包括图、文档结构和键值对。一些流行的 `NoSQL` 数据库包括 `MongoDB` 和 `HBase`。
 
 图 17.5 展示了我们可扩展安全社交媒体系统的架构。在这里，大数据管理工具托管在基础设施工具之上。大数据管理工具增强了推理引擎。这些推理引擎本质上实现了各种机器学习算法，包括深度学习算法以及聚类算法。这些算法将检查策略、了解数据，然后提取模式并进行预测。如果模式和预测不是用户被授权查看的内容，则不会提供给用户。更多详情见[[THUR2020]](#ch17.xhtml#ref17_14)。
@@ -7034,8 +6743,6 @@ New_SWRL[1]: AdminRead(Bob, ?targetObject) ^ Owns(Bob, ?targetObject) ^ Photo(?t
 图 17.5 可扩展安全社交媒体系统。
 
 ## 17.11 总结与展望
-
-
 
 在本章中，我们提出了一种基于语义 Web 工具的可扩展细粒度在线社交网络访问控制模型。此外，我们提出了使用 `OWL` 和 `SWRL` 建模的授权、管理和过滤策略。支持该模型的框架架构也已呈现。我们还描述了基于语义 Web 工具的可扩展细粒度在线社交网络访问控制模型的实现。特别是，我们讨论了使用 `OWL` 和 `SWRL` 建模的授权、管理和过滤策略的实现。也就是说，我们讨论了 第 19 章 中描述的框架的一个版本的实现，并展示了使用该方案评估访问控制所需时间长度的实验结果。进一步的工作可在确定一组最小访问策略方面开展，以便在评估访问请求时使用，从而进一步提高这些请求的效率。
 
@@ -7087,9 +6794,6 @@ DOI: [10.1201/9781003081845-29](https://doi.org/10.1201/9781003081845-29)
 
 ## 18.1 简介
 
-
-
-
 ### 使用语义 Web 技术进行推理控制
 
 推理是从前提形成结论的过程。如果用户从收到的合法响应中得出未经授权的结论，则该过程是有害的。这个问题被称为推理问题。推理控制器是防止用户得出未经授权结论的设备。我们过去曾广泛研究推理问题。具体而言，我们定义了各种类型的推理策略，并开发了处理某些类型推理策略的推理控制器 [THUR1993]。
@@ -7132,14 +6836,13 @@ DOI: [10.1201/9781003081845-29](https://doi.org/10.1201/9781003081845-29)
 
 
 
-
 推理引擎是推理控制器的核心。该引擎能够使用特定推理器支持的多种推理策略。由于存在许多推理器的实现，我们的推理控制器提供了额外的灵活性特性，使我们可以为每个推理任务从任意推理工具中进行选择。我们可以提高推理控制器的效率，因为每种推理策略（或策略组合）都可以在单独的处理器上执行。推理引擎通常使用具有推理能力的软件程序，可对某些数据表示进行推理，例如关系数据模型或 RDF 图模型表示。
 
-#### 18.2.1.4 数据控制器
+### 18.2.1.4 数据控制器
 
 数据控制器是一套存储和管理数据访问的软件程序。数据可以以任何格式存储，例如存储在关系数据库中、XML 文件中或 RDF 存储中。如果策略允许请求用户访问数据项，控制器将接受来自策略管理器（或推理引擎层）的信息请求。然后该层在存储的数据上执行请求，并将结果返回给策略层（或推理引擎层），在那里根据一组策略重新评估。
 
-#### 18.2.1.5 来源控制器
+### 18.2.1.5 来源控制器
 
 来源控制器用于存储和管理与数据控制器中存在的数据项相关的来源信息。如果我们选择来源的图表示，来源控制器将以逻辑图结构的形式，按任何适当的数据表示格式存储信息。该控制器还记录与存储在数据控制器中的数据项相关的正在进行的活动。该控制器以图查询作为输入，并在来源信息上对其进行评估。该查询评估将一个子图返回给推理控制器层，在那里使用一组策略对其重新检查。
 
@@ -7149,7 +6852,7 @@ DOI: [10.1201/9781003081845-29](https://doi.org/10.1201/9781003081845-29)
 
 查询修改技术过去曾用于处理自主安全和视图 [STON1975]。该技术在 [DWYE1987] 中被扩展以包含强制安全。在我们的查询处理器设计中，推理引擎使用此技术根据安全约束、先前发布的响应和现实世界信息来修改查询。当提出修改后的查询时，生成的响应将不违反安全性。
 
-考虑 第 18.2 节 中讨论的推理控制器架构。推理引擎可以访问知识库，其中包括安全约束、先前发布的响应和现实世界信息。从概念上讲，可以将数据库视为知识库的一部分。我们通过示例说明查询修改技术。该技术的实际实现可以采用 [GALL1978] 中针对演绎查询处理给出的任何建议。
+考虑第 18.2 节中讨论的推理控制器架构。推理引擎可以访问知识库，其中包括安全约束、先前发布的响应和现实世界信息。从概念上讲，可以将数据库视为知识库的一部分。我们通过示例说明查询修改技术。该技术的实际实现可以采用 [GALL1978] 中针对演绎查询处理给出的任何建议。
 
 我们已经对应用查询修改来处理安全策略（也称为约束）进行了广泛研究，以确定用户是否可以推导出任何未经授权的推理 [THUR1993]。然后，我们的推理控制器将对数据进行清理并将结果提供给用户。我们之前的大部分工作都是在关系数据库之上构建推理控制器。在目前的工作中，我们为语义网数据开发了推理控制器。
 
@@ -7178,26 +6881,43 @@ DOI: [10.1201/9781003081845-29](https://doi.org/10.1201/9781003081845-29)
 **输出** 是生成的查询。
 
 *   安全约束/访问控制规则/安全策略
+
     *   **简单约束：** `John 无法访问关系 EMP 的属性 Salary`
+
     *   **基于内容的约束：** `如果关系 MISS 包含关于中东任务的信息，则 John 无法访问 MISS`
+
     *   **基于关联的约束：** `船的位置和任务放在一起不能被 John 访问；单独来看每个属性都可以被 John 访问`
+
     *   **发布约束：** `在 X 发布后，Y 不能被 John 访问`
+
     *   **聚合约束：** `十个或更多元组放在一起不能被 John 访问`
+
     *   **动态约束：** `任务结束后，关于该任务的信息可以被 John 访问`
 
 *   医疗保健的安全约束
+
     *   **简单约束：** `只有医生可以访问病历`
+
     *   **基于内容的约束：** `如果患者患有艾滋病，则该信息是私密的`
+
     *   **基于关联的约束：** `姓名和病历放在一起是私密的`
+
     *   **发布约束：** `病历发布后，姓名不能发布`
+
     *   **聚合约束：** `患者集合是私密的，单独来看是公开的`
+
     *   **动态约束：** `患者去世后，关于他的信息变为公开`
 
 *   查询修改算法
+
     *   **输入：** `查询`，`访问控制规则`
+
     *   **输出：** `修改后的查询`
+
     *   **算法：**
+
         *   给定查询 `Q`，检查所有与该查询相关的访问控制规则
+
         *   向查询引入一个 Where 子句，否定访问控制规则中相关属性的访问权限
 
 ### 18.3.3 SPARQL 查询修改
@@ -7205,8 +6925,6 @@ DOI: [10.1201/9781003081845-29](https://doi.org/10.1201/9781003081845-29)
 RDF 越来越多地用于存储关于某个领域的断言形式的信息。这包括机密和公开信息。`SPARQL` 已被选为从 RDF 图中提取数据的查询语言。由于在查询过程中会访问机密数据，我们需要过滤 `SPARQL` 查询，以便根据某些保密策略仅发布授权信息。我们的目标是重写 `SPARQL` 查询，使返回的结果符合保密策略。
 
 在数据库领域，已有大量工作将查询修改技术应用于 `SQL` 查询语言。这些传统方法使用重写过程来修改 `WHERE` 子句，以便根据策略集中的某些约束添加额外限制。最近，[OULM2012] 中的工作描述了一种基于 `RDF`/`SPARQL` 的查询修改技术。然而，他们的技术处理的是隐私，并未将推理控制纳入考量。我们的重点将是将类似的查询修改技术应用于 `SPARQL` 查询。
-
-
 
 我们设计安全机制来控制 SPARQL 查询的评估，以防止机密溯源信息的泄露。我们的方法是通过添加在三元组模式上求值的过滤器和/或属性函数来修改 SPARQL 查询中的图模式。这些方法返回的答案可能与用户最初的查询意图不同。在这种情况下，可能需要决定采取适当的行动。我们提出了两种可遵循的方法。第一种方法根据初始查询检查查询的有效性，并通知用户无法保证查询的有效性。第二种方法考虑到关于查询结果有效性的反馈可能会导致用户得出不良推断。
 
@@ -7247,20 +6965,35 @@ FILTER (?age > 18)
 表 18.1 正则路径表达式
 
 | Uri | 一个 URI 或前缀名。长度为一的路径。 |
+
 | --- | --- |
+
 | `^elt` | 反向路径（对象到主语）。 |
+
 | `(elt)` | 分组路径 elt，括号控制优先级。 |
+
 | `elt1/elt2` | `elt1` 后跟 `elt2` 的序列路径 |
+
 | `elt1 ^ elt2` | `elt1 ^ elt2` 的简写，即 elt1 后跟反向 elt2。 |
+
 | `elt1 \| elt2` | `elt1` 或 `elt2` 的替代路径（尝试所有可能性） |
+
 | `elt*` | 零个或多个 `elt` 出现的路径。 |
+
 | `elt+` | 一个或多个 `elt` 出现的路径。 |
+
 | `elt?` | 零个或一个 `elt` 的路径。 |
+
 | `elt{n,m}` | `elt` 出现次数在 n 和 m 之间的路径。 |
+
 | `elt{n}` | 恰好 n 次 elt 出现。固定长度路径。 |
+
 | `elt{n,}` | n 个或更多 `elt` 出现。 |
+
 | `elt{,n}` | `elt` 出现次数在 0 和 n 之间。 |
+
 | `!uri` | 匹配非 uri 属性的路径（否定属性集） |
+
 | `!(uri1 \| ... \| uriN)` | 匹配非 uri1...uriN 中任意属性的路径（否定属性集） |
 
 #### 18.3.4.3 属性路径查询
@@ -7280,8 +7013,11 @@ FILTER (?age > 18)
 SPARQL 查询修改的概述如下：
 
 1.  遍历图模式。
+
 2.  识别图模式中每个三元组 `t` 的 `sub(t)`、`obj(t)`、`pred(t)`。
+
 3.  如果 `sub(t)`、`obj(t)` 或 `pred(t)` 是机密的，则隔离 `t` 或对其进行转换。
+
 4.  创建一个包含修改后图模式的新查询。
 
 #### 18.3.4.5 SPARQL 查询 BGP 的图转换
@@ -7291,8 +7027,11 @@ SPARQL 基于图模式匹配，SPARQL 查询 `BGP` 是一个图模式（即一�
 **定义 18.1：** *（图模式）SPARQL 图模式表达式递归定义如下*：
 
 1.  三元组模式是一个图模式。
+
 2.  如果 `P1` 和 `P2` 是图模式，则表达式 (`P1 AND P2`)、(`P1 OPT P2`)、(`P1 UNION P2`) 是图模式。
+
 3.  如果 `P` 是一个图模式，`R` 是一个内置 SPARQL 条件，则表达式 (`P FILTER R`) 是一个图模式。
+
 4.  如果 `P` 是一个图模式，`V` 是一个变量集合，`X ∈ U ∪ V`，则 (`X GRAPH P`) 是一个图模式。
 
 在 SPARQL 查询重写过程中，`BGP` 将被一个更新的图模式替换。图转换规则将原始 `BGP` 作为其 `LHS`（左侧），并指定另一个模式作为 `RHS`（右侧）。
@@ -7316,8 +7055,6 @@ SPARQL 基于图模式匹配，SPARQL 查询 `BGP` 是一个图模式（即一�
 此模式将仅返回患者记录的前一个版本，而不包含任何记录版本具有通往手术路径的条目。
 
 #### 18.3.4.6 匹配模式/应用模式
-
-
 
 在 `[ORAC12]` 中，数据访问约束使用两种图模式来描述：匹配模式和应用模式。匹配模式确定要强制执行的访问限制类型，并将一个或多个变量绑定到用户查询中访问的相应数据实例。
 
@@ -7343,13 +7080,15 @@ SPARQL 基于图模式匹配，SPARQL 查询 `BGP` 是一个图模式（即一�
 
 ## 18.4 推理控制器实现的方法
 
-我们实现推理控制器的方法如 `图 18.4` 所示。传统上，我们使用访问控制策略和基于清理的策略等策略来保护数据。然而，当前强制执行这些策略的机制无法作用于以有向图形式呈现的数据 `[BRAU2008]`。此外，用户可以通过对溯源图执行频繁查询，从返回的结果中推断出敏感信息。我们特别关注从前提形成的任何结论，其中该结论的形成未经任何控制或处理前提或结论来源信息的个人或组织的明示或事先批准。我们也将从前提形成这些结论的过程称为推理。当推断出的信息是用户未获授权查看的内容时，我们称之为推理问题的一个实例。该问题始终存在于同时包含公共和私有信息的系统中。推断出的知识可能依赖于从知识库获得的数据，也可能依赖于用户拥有的先验知识以及从知识库获得的信息 `[THUR1993]`。
+我们实现推理控制器的方法如图 18.4 所示。传统上，我们使用访问控制策略和基于清理的策略等策略来保护数据。然而，当前强制执行这些策略的机制无法作用于以有向图形式呈现的数据 `[BRAU2008]`。此外，用户可以通过对溯源图执行频繁查询，从返回的结果中推断出敏感信息。我们特别关注从前提形成的任何结论，其中该结论的形成未经任何控制或处理前提或结论来源信息的个人或组织的明示或事先批准。我们也将从前提形成这些结论的过程称为推理。当推断出的信息是用户未获授权查看的内容时，我们称之为推理问题的一个实例。该问题始终存在于同时包含公共和私有信息的系统中。推断出的知识可能依赖于从知识库获得的数据，也可能依赖于用户拥有的先验知识以及从知识库获得的信息 `[THUR1993]`。
 
 ![图 18.4 实现推理控制器。](img/fig18_4.jpg)
 
 图 18.4 实现推理控制器。
 
 仅从知识库获得的推断知识可用于揭示知识库中有什么和没有什么。例如，如果用户询问与患者 X 光检查相关的信息，任何响应都可能表明该患者是否做过 X 光检查。一般来说，对查询的肯定回答揭示了知识库中的内容，而否定回答可能有多种解释。例如，用户可能将否定回答解读为答案不在知识库中，或者解读为答案在知识库中，但知识库选择不向查询揭示正确答案。这两种解释也可能取决于知识库使用封闭世界假设还是开放世界假设 `[REIT1977]`。通常，开放世界假设表示数据不完整，或者数据可能在系统的其他地方，不限于特定文件或位置。在封闭世界假设中，数据是完整的，对查询的否定回答通常表示数据不在知识库中。我们假设开放世界假设；特别是，用户不应能准确区分被推理控制器隐藏的事实的存在，与可在别处获得的事实的不存在。
+
+
 
 我们的主要重点是对呈现为 RDF 图的社交媒体数据进行分类和保护。然而，我们推理控制器的初始实现是针对溯源数据的，溯源数据存在于包括社交媒体数据在内的众多领域中。我们的推理控制器可针对社交媒体数据进行调整，因为我们的社交网络表示为 RDF 图。语义 Web 通过使用形式语义扩展了 RDF 图模型，使其具备推理能力。正是这种推理服务被我们用来支持推理控制器的推理策略。此外，我们还展示了如何执行新的查询修改技术，以在溯源图上强制执行安全策略，这可以扩展到 `第 19 章` 和 `第 20 章` 中讨论的社交媒体图。
 
@@ -7360,9 +7099,6 @@ SPARQL 基于图模式匹配，SPARQL 查询 `BGP` 是一个图模式（即一�
 本章这一节的组织结构如下。在 `第 18.5.1 节` 中，我们提供示例以激发读者兴趣。在 `第 18.5.2 节` 中，我们讨论推理问题的方法。溯源中的推理在 `第 18.5.4 节` 中讨论。我们在 `第 18.5.4 节` 中提供用例。规则处理在 `第 18.5.5 节` 中讨论。
 
 ### 18.5.1 示例
-
-
-
 
 #### 推理规则
 
@@ -7377,6 +7113,7 @@ SPARQL 基于图模式匹配，SPARQL 查询 `BGP` 是一个图模式（即一�
 考虑以下两条规则：
 
 1. `(med:HeartSurgery opm:wasControlledBy ?X) → (X rdf:type med:Surgeon)`
+
 2. `(med:Results_n_1 opm:Used med:Doc_n_6) ^ (med:Results_n_1 opm:wasControlledBy ?X) → (X rdf:type med:Surgeon)`
 
 如果我们的知识库包含以下三元组：
@@ -7399,6 +7136,7 @@ SPARQL 基于图模式匹配，SPARQL 查询 `BGP` 是一个图模式（即一�
 考虑以下规则：
 
 1. `(med:HeartSurgery opm:wasControlledBy ?X) → (X rdf:type med:Surgeon)`
+
 2. `(med:Results_n_1 opm:Used med:Doc_n_6) ∧ (med:Results_n_1 opm:wasControlledBy ?X) → (X rdf:type med:Surgeon)`
 
 如果我们想满足规则 1，推理器会得出结论 `med:HeartSurgery opm:wasControlledBy ?X`。给定陈述：
@@ -7481,9 +7219,6 @@ SPARQL 基于图模式匹配，SPARQL 查询 `BGP` 是一个图模式（即一�
 
 *   **数据库设计阶段处理推理**：这种方法被认为相对静态。它主要取决于模式设计和完整性约束。也有人指出，针对每个用户的查询不断更改数据库模式并不方便。
 
-
-
-
 *   **处理查询处理过程中的推理**：大部分研究主要集中在查询修改上，主要是因为查询是动态的。
 
 ### 18.5.3 来源中的推理
@@ -7534,8 +7269,6 @@ SPARQL 基于图模式匹配，SPARQL 查询 `BGP` 是一个图模式（即一�
 
 #### 18.5.4.5 用例：作弊的独裁者
 
-
-
 某些情报活动似乎会查看感兴趣人物的大学成绩单等信息，并以此推断其能力和品格。据传（这可能只是个传闻）“萨达姆·侯赛因”几十年前曾在澳大利亚的一所大学就读。该校的成绩单被获取并纳入其个人档案。该档案影响了重要的政治和军事活动。显而易见，为了宣传目的，这些成绩单已被篡改。分析人员想知道人工和自动化手段分别做出了哪些推断，推断出了什么信息，以及这些如何改变萨达姆的档案和潜在行动。无法追踪这条信息路径，导致许多观点存疑。这当然只是信息可能被故意伪造或掩盖、且由此得出的结论至关重要的世界中的一个小例子。信息的来源及其下游影响至关重要，特别是在重新评估来源和信息质量时。*结论*：推断的轨迹可能跨越数十年，且该轨迹可能具有关键的战略价值。此外，推断是人工和自动化活动的结合，会影响下游结论。
 
 在该用例中，我们展示了通过使用从网络获取的实际属性标注生成工作流中的实体，可以验证医生的资质，并将查询用户指向适当的 URL。这些 URL 可以是我们溯源图中关于实体标注的一部分，但它们主要用于指向验证医生资质的实际来源。
@@ -7564,6 +7297,8 @@ SPARQL 基于图模式匹配，SPARQL 查询 `BGP` 是一个图模式（即一�
 
 ### 18.6.1 架构
 
+
+
 图 18.5 展示了溯源推理控制器的实现。该推理控制器采用模块化方法构建，因此非常灵活，大多数模块均可由另一个应用模块扩展或替换。例如，应用用户可以替换处理高级策略解析为低级策略对象的策略解析器模块。这种替换将允许应用用户继续使用其业务策略，而独立于我们的溯源推理控制器软件实现。本质上，我们遵循了“即插即用”方法来实现推理控制器。我们在实现中尽可能使用了开源产品。
 
 ![图 18.5 实现架构。](img/fig18_5.jpg)
@@ -7572,28 +7307,25 @@ SPARQL 基于图模式匹配，SPARQL 查询 `BGP` 是一个图模式（即一�
 
 我们实现中使用的产品包括 `Jena` 和 `Pellet`。我们的策略和数据用 `RDF` 表示。`Jena` 用于管理 `RDF` 数据。我们的推理器基于 `Pellet`。即，我们的推理控制器利用 `Pellet` 对策略和数据进行推理。我们利用 `Pellet` 构建了额外的推理策略。当用户用 `SPARQL` 提出查询时，推理控制器将检查策略，根据策略重写查询，查询 `Jena` `RDF` 存储，并检索用户被授权查看的数据。在接下来的几节中，我们将基于医疗应用举例说明我们的推理控制器如何工作。
 
-### 18.6.2 医疗领域的溯源
+## 18.6.2 医疗领域的溯源
 
 医疗领域将溯源视为其运营的关键组成部分。溯源可用于促进组织间及医疗团队成员间的沟通与协调。它可用于提供治疗过程执行的综合视图，分析分布式医疗服务的性能，并对系统进行审计以评估：对于给定患者，是否做出了正确的决策并遵循了正确的程序 [KIFO06]。
 
-
-
-
-#### 18.6.2.1 填充溯源知识库
+### 18.6.2.1 填充溯源知识库
 
 溯源知识库通过一组生成器进行更新。其中有后台生成器，负责提取通常可在线获取的背景信息。还有一个工作流生成器，用于生成实际的溯源信息。工作流生成器产生的合成溯源数据在网上是不可用的。正是这些溯源数据包含我们必须保护的子集。我们通过提取与医疗领域相关的信息来填充溯源存储。医疗领域在两方面具有适用性。首先，该领域实际记录溯源信息；其次，该领域的数据部分可在线获取 [KIFO2006]。
 
-#### 18.6.2.2 生成并填充知识库
+### 18.6.2.2 生成并填充知识库
 
-我们创建一组种子，包含名、姓、州和城市。每个种子用于创建一个查询，该查询针对 [`www.yellowpages.com/`](http://www.yellowpages.com) 或 [`www.whitepages.com/`](http://www.whitepages.com) 网站发起。这些网站可通过搜索词定位企业和个人。为了从这些网站提取信息，我们使用了网络爬虫服务。网络爬虫是一种计算机程序，它以有条不紊、自动化的方式或有序的方式浏览万维网。网络爬虫有时被称为自动索引器、机器人、蚂蚁、收割器、网络蜘蛛、网络机器人或网络刮取器。这些爬虫是遵循万维网链接结构并在访问的网页上执行某些任务的计算机程序。
+我们创建一组种子，包含名、姓、州和城市。每个种子用于创建一个查询，该查询针对 [`www.yellowpages.com/`](http://www.yellowpages.com) 或 [`www.whitepages.com/`](http://www.whitepages.com) 网站发起。这些网站可通过搜索词定位企业和个人。为了从这些网站提取信息，我们使用了网络爬虫服务。网络爬虫是一种计算机程序，它以有条不紊、自动化的方式或有序的方式浏览万维网。网络爬虫有时被称为自动索引器、机器人、蚂蚁、收割机、网络蜘蛛、网络机器人或网络刮取器。这些爬虫是遵循万维网链接结构并在访问的网页上执行某些任务的计算机程序。
 
 爬取匹配我们初始查询种子的页面后，我们以适当的格式将结果存储在文本文件中。由于此过程开销较大，我们在离线状态下构建所有网络爬取程序，并在实验阶段的测试周期中将文本文件内容加载到内存中。第一次爬取收集我们假设的患者列表。我们利用患者的邮政编码创建查询，以搜索医院、医生及其专业。这些搜索的结果也存储在具有预定格式的文本文件中。这些预定格式的文本文件使我们能够为人员、医院、医生和护士等实体构建带有属性的对象类。
 
-#### 18.6.2.3 生成工作流
+### 18.6.2.3 生成工作流
 
 对于我们玩具知识库中的每位患者，我们启动更新该患者记录的工作流。记录的溯源信息是我们在系统中假设的唯一机密数据。其目的是让查询用户有机会推断与记录相关的患者疾病、药物或检查。溯源数据比传统数据库更有趣，因为控制器不仅要预测涉及用户先验知识的推理，还要预测与溯源数据对象之间因果关系相关的推理。
 
-#### 18.6.2.4 工作流的属性
+### 18.6.2.4 工作流的属性
 
 我们观察到所生成工作流的几个属性：
 
@@ -7609,22 +7341,19 @@ SPARQL 基于图模式匹配，SPARQL 查询 `BGP` 是一个图模式（即一�
 
 *   工作流图 `G` 包含私有信息，即对患者记录执行的活动的溯源信息。这是我们的推理控制器所保护的信息。我们用于保护该信息的主要方法是语义网推理器中可用的推理服务以及作用于 `G` 的策略提供的。
 
-### 18.6.3 策略管理
+## 18.6.3 策略管理
 
 我们在设计中讨论了策略管理的几个方面。本节将重述部分信息。
 
-#### 18.6.3.1 策略界面
+### 18.6.3.1 策略界面
 
-策略界面为用户提供选项，以加载策略并针对溯源图数据库执行。用户可选择执行任何类型的策略，例如默认策略（访问控制、编辑、DL 规则或编码为 SWRL 规则的策略）或其他策略类型。默认策略附带一组解析器，可将其转换为内部策略表示。只要提供合适的解析器将每种策略类型转换为内部表示，新策略类型即兼容。内部表示可以是任何作用于 RDF 图的技术，例如 `SPARQL query`、`DL` 或 `SRWL rule`。策略界面包含两个面板。左侧面板显示已加载但未生效的策略列表，右侧面板显示已加载且生效的策略列表。策略界面如 图 18.6 所示。
+策略界面为用户提供选项，以加载策略并针对溯源图数据库执行。用户可选择执行任何类型的策略，例如默认策略（访问控制、编辑、DL 规则或编码为 SWRL 规则的策略）或其他策略类型。默认策略附带一组解析器，可将其转换为内部策略表示。只要提供合适的解析器将每种策略类型转换为内部表示，新策略类型即兼容。内部表示可以是任何作用于 RDF 图的技术，例如 `SPARQL query`、`DL` 或 `SRWL rule`。策略界面包含两个面板。左侧面板显示已加载但未生效的策略列表，右侧面板显示已加载且生效的策略列表。策略界面如图 18.6 所示。
 
 ![图 18.6 策略界面。](img/fig18_6.jpg)
 
 图 18.6 策略界面。
 
-#### 18.6.3.2 解析过程
-
-
-
+### 18.6.3.2 解析过程
 
 高级策略必须转换为合适的格式和表示，以便由溯源推理控制器处理。这通常涉及将高级策略解析为低级表示。我们的设计使用了一种可扩展语言来表达策略。该语言已成功用于编写访问控制策略 [MOSE2005, NI2009]。我们的策略以 XML 文档形式编写，驻留在磁盘上，直到被请求时才加载 [BRAY2000]。XML 还具备编写规则的功能 [GROS2003, GOVE2005, HORR2004]。此外，RDF 和 OWL 可以用 XML 语法表示 [BECH24, HORR04]。我们选择 XML 语言，使我们能够接受任何高级策略规范及其关联的解析器，将其映射为低级策略格式。高级应用用户也因我们使用 XML 语言而受益，因为 XML 是一种广泛使用的开放标准，许多数据交换格式都基于 XML。
 
@@ -7634,15 +7363,15 @@ SPARQL 基于图模式匹配，SPARQL 查询 `BGP` 是一个图模式（即一�
 
 图 18.7 解析过程
 
-#### 18.6.3.3 高级策略转换
+### 18.6.3.3 高级策略转换
 
 本节讨论如何将正确解析的高级策略转换为内部低级策略。我们首先讨论两个推理组装器：`SWRL` 规则组装器和描述逻辑规则组装器。然后，我们讨论两个策略组装器，分别转换访问控制和编辑高级策略。
 
-#### 18.6.3.4 SWRL 规则组装器
+### 18.6.3.4 SWRL 规则组装器
 
 该模块将高级 XML 文件映射为一组 `SWRL` 规则。`SWRL` 规则包含头部和主体。主体用于编码必须满足的条件，随后头部编码的信息才会应用于溯源知识库。
 
-#### 18.6.3.5 SWRL 策略转换示例
+### 18.6.3.5 SWRL 策略转换示例
 
 以下策略规定：如果医生拥有（或正在诊治）一名患者，则该医生也可以读取该患者的记录。
 
@@ -7672,7 +7401,7 @@ Doctor(?x) \land Patient(?y) \land patientHasDoctor(?y,?x) \land hasRecord(?r) \
 \end{array}
 $$
 
-#### 18.6.3.6 描述逻辑规则组装器
+### 18.6.3.6 描述逻辑规则组装器
 
 该模块将高级 XML 文件映射为一组 `OWL` 限制。`OWL` 属性用于创建限制，进而限制属于某个类的个体。这些限制可分为三大类：
 
@@ -7694,7 +7423,7 @@ $$
 
 `HappyPhysician ⊑ ∀hasPatients.(∃hasCoverage.Insurer)`
 
-#### 18.6.3.7 基数限制
+### 18.6.3.7 基数限制
 
 `OWL` 基数限制描述这样一类个体：它们与其他个体或数据类型值具有至少（`≥`）、至多（`≤`）或恰好指定数量的关系。设 `P` 为一个属性，则：
 
@@ -7702,33 +7431,39 @@ $$
 2.  最大基数限制指定个体可以参与的 `P` 关系的最大数量。
 3.  基数限制指定个体必须参与的 `P` 关系的确切数量。
 
-#### 18.6.3.8 hasValue 限制
+### 18.6.3.8 hasValue 限制
 
 `hasValue` 限制描述这样一组个体：它们沿指定属性与特定个体至少存在一种关系。`hasValue` 限制用符号 `∈` 表示。示例：`hasCountryOfOrigin ∈ Italy`（其中 `Italy` 是一个个体）。这描述了沿 `hasCountryOfOrigin` 属性与特定个体 `Italy` 至少存在一种关系的个体集合（匿名类）。
 
-#### 18.6.3.9 支持的限制
+### 18.6.3.9 支持的限制
 
 我们当前支持以下 `OWL` 限制：
 
 1.  **SomeValuesFromRestriction**
+
     `SomeValuesFrom` 限制是存在限制，描述这样一组个体：它们与属于特定类的个体至少存在一种特定类型的关系。
 
 2.  **AllValuesFromRestriction**
+
     `AllValuesFromRestriction` 是全称限制，将给定属性的填充项约束为特定类。
 
 3.  **MinCardinalityRestriction**
+
     `MinCardinalityRestriction` 是基数限制，指定个体就给定属性必须参与的最小关系数量。最小基数限制的符号为“大于或等于”（`≥`）。
 
 4.  **MaxCardinalityRestriction**
+
     `MaxCardinalityRestriction` 是基数限制，指定个体就给定属性可以参与的最大关系数量。最大基数限制的符号为“小于或等于”（`≤`）。
 
 5.  **DataRange**
+
     这是一个内置属性，将一个属性（或 `rdf:Property` 类的某个实例）链接到类描述或数据范围。`rdfs:range` 公理断言该属性的值必须属于类描述的类外延，或属于指定数据范围内的数据值。
 
 6.  **Domain**
+
     这是一个内置属性，将一个属性（或 `rdf:Property` 类的某个实例）链接到类描述。`rdfs:domain` 公理断言此类属性陈述的主语必须属于所指示类描述的类外延。
 
-##### 18.6.3.9.1 DL 策略转换示例
+#### 18.6.3.9.1 DL 策略转换示例
 
 以下策略规定：由外科医生控制的任何过程都是敏感过程。
 
@@ -7737,60 +7472,41 @@ $$
   <policy ID="1">
     <description>...some description....</description>
     <rule>
-```
-
-
-
-
-<restriction>AllValuesFromRestriction</restriction>
-
-<property>opm:WasControlledBy</property>
-
-<class>provac:Surgeon</class>
-
-<label>provac:SensitiveProcess</label>
-
-</rule>
-
-</policy>
-
+      <restriction>AllValuesFromRestriction</restriction>
+      <property>opm:WasControlledBy</property>
+      <class>provac:Surgeon</class>
+      <label>provac:SensitiveProcess</label>
+    </rule>
+  </policy>
 </policies>
+```
 
 该策略在内部转换为
 
 ∀`WasControlledBy`.`Surgeon` ⊑ `SensitiveProcess`。
 
-#### 18.6.3.10 访问控制策略组装器
+### 18.6.3.10 访问控制策略组装器
 
 该模块将高层访问控制 XML 策略文件映射为低层访问控制策略。
 
-#### 18.6.3.11 访问控制策略转换示例
+### 18.6.3.11 访问控制策略转换示例
 
 以下策略规定：如果 `Doc_2` 是由一个受外科医生控制的过程生成的，则任何用户都有权访问 `Doc_2`。
 
+```xml
 <policies>
-
 <policy ID="1" >
-
 <description>description</description>
-
 <target>
-
 <subject>anyuser</subject>
-
 <record>provac:Doc_2</record>
-
 <restriction>Doc.WasGeneratedBy == opm:Process</restriction>
-
 <restriction>process.WasControlledBy == provac:Surgeon</restriction>
-
 </target>
-
 <effect>NecessaryPermit</effect>
-
 </policy>
-
 </policies>
+```
 
 该策略可转换为一个查询，用于检索该策略允许用户查看的 provenance 图部分。相应的 SPARQL 查询如下：
 
@@ -7802,65 +7518,49 @@ med:Doc1_2 gleen:OnPath("([opm:WasGeneratedBy]/[opm:WasControlledBy])" ?x
 }
 ```
 
-#### 18.6.3.12 编辑策略组装器
+### 18.6.3.12 编辑策略组装器
 
 该模块将高层 XML 编辑策略文件映射为低层编辑策略。
 
-#### 18.6.3.13 编辑策略转换示例
+### 18.6.3.13 编辑策略转换示例
 
 以下策略规定：如果存在一条路径，该路径从 `Doc_4` 开始，且 `Doc_4` 源自一个工件，而该工件是由一个受医师控制的过程生成的，则我们应从包含该路径的 provenance 子图中编辑（删除）这条路径。
 
-</policies>
-
+```xml
+<policies>
 <policy ID="1">
-
 <description>description</description>
-
 <lhs>
-
 <chain>
-
 <start> provac:Doc_4</start>
-
 <path>
-
 [opm:WasDerivedFrom]+ artifact AND artifact [opm:WasGeneratedBy] process AND
-
 process [opm:WasControlledBy] physician
-
 </path>
-
 </lhs>
-
 <rhs>_:A1</rhs>
-
 <condition>
-
 <application>null</application>
-
 <attribute>null</attribute>
-
 </condition>
-
 <pre>null</pre>
-
 <post>(provac:HeartSurgery_1,opm:Used, _:A1)</post>
-
 </embedding>
-
 </policy>
-
 </policies>
+```
 
 该策略将在 provenance 图上进行求值，替换任何以标记为 `Doc_4` 的节点开始、并通过 `WasGeneratedBy` 链接连接到一个过程、随后通过 `WasControlledBy` 链接连接到一个标记为 physician（或类型为 physician）的终止节点的路径。每条此类路径将被替换为一个空白标签 `_:A1`，且 `_:A1` 将通过一个标记为 `opm:Used` 的链接，连接到原 provenance 图中标记为 `provac:HearthSurgery_1` 的某个节点。
 
-### 18.6.4 解释服务层
+## 18.6.4 解释服务层
 
 一个理想的特性是推理器推导出新知识，并解释它是如何推导出该新知识的。Pellet 推理器可以通过提供证明推理所需的最小事实集或其他知识来解释其推理。对于 Pellet 计算出的任何推理，我们利用 Pellet 推理服务来解释该推理为何成立。解释本身是一组 OWL 公理，它们共同证明或支持相关推理。一条推理可能有许多（甚至无限多个）解释；Pellet 通过启发式方法尝试提供一个较好的解释。
 
+
+
 我们的 provenance 推理控制器（详见 [THUR2014]）随后可提供关于知识库分类的信息。例如，我们可能关心为什么一组 RDF 三元组被分类为敏感，或者为什么一个概念被视为敏感。这些问题的答案留给解释服务层。该层建立在 Pellet 解释服务之上，并显示用于推导出被另一个类包含的概念的那组公理。
 
-解释服务层使用 pellet 服务，为每个敏感的 provenance 片段提供理由（也称为依据）。解释服务层可向应用设计师提供反馈。解释使用低层描述显示，可能会揭示内部分类工作原理的细节。这可能是系统的一个缺点，因为应用用户可能不理解描述逻辑或 OWL。尽管如此，该服务提供了一个期望的特性，即应用设计师可以查看其策略是如何被低层推理服务解释的。例如，由于高层描述逻辑规则的应用方式可能与作者意图不同，策略设计师现在有机会调整高层策略以获得期望的结果。解释服务层如 图 18.8 所示。
+解释服务层使用 `pellet` 服务，为每个敏感的 provenance 片段提供理由（也称为依据）。解释服务层可向应用设计师提供反馈。解释使用低层描述显示，可能会揭示内部分类工作原理的细节。这可能是系统的一个缺点，因为应用用户可能不理解描述逻辑或 OWL。尽管如此，该服务提供了一个期望的特性，即应用设计师可以查看其策略是如何被低层推理服务解释的。例如，由于高层描述逻辑规则的应用方式可能与作者意图不同，策略设计师现在有机会调整高层策略以获得期望的结果。解释服务层如图 18.8 所示。
 
 ![图 18.8 解释服务层。](img/fig18_8.jpg)
 
@@ -7875,10 +7575,6 @@ process [opm:WasControlledBy] physician
 我们使用当前网页上实际存在的真实信息，以便演示推理控制器相对于查询代理的先验知识集的有效性。我们确定美国的一个城市和州。针对该城市，我们选定一组邮政编码。信息从黄页、白页等免费网站下载。我们爬取这些网站，通过设置常用名和姓的种子列表，提取各个个体的姓名、地址、电话号码、年龄、性别、亲属等信息。这使我们能够为玩具医院中的每个患者捕获相似的属性值。对于医院，我们仅选择患者邮政编码范围内的医院。每家医院都有名称、地址和电话号码。由于许多医院不公开其员工姓名，我们在相同邮政编码范围内搜索医生及其专业。这很正常，因为大多数专家都隶属于其执业地附近的特定医院。一些保险公司网站确实提供医生名单及其隶属关系，但许多此类网站需要登录 ID，或每次访问都需要不同的验证码。鉴于这些障碍，我们只能接受对实际医院情况不那么准确的描绘。此外，由于我们的系统是用户驱动的，自动化和效率成为更高优先级。这并不妨碍客户使用自己的数据填充知识库。以这种方式生成数据比使用完全合成的数据使系统更真实。查询用户可以将系统的响应与可访问的背景信息结合起来进行推理。然后查询用户可以发出新查询，以验证他们对知识库中数据的猜测。
 
 ### 18.7.2 后台生成器模块
-
-
-
-
 
 #### 18.7.2.1 患者生成器
 
@@ -7933,23 +7629,23 @@ http://www.yellowpages.com/findaperson?fap_terms%5Bfirst%5D="fname"
 
 图 18.17 医生属性。
 
-#### 18.7.3 杂项生成器
+### 18.7.3 杂项生成器
 
 该模块使用 `www.webMD.com` 来确定疾病、药物、检查和治疗之间的关系。因此，这使我们能够将这些实体之间的语义关联添加到我们的知识库中。由于这些关系是任何用户也可获取的背景信息，我们构建了规则，在披露溯源信息时将这些语义关系纳入考量。
 
-#### 18.7.4 工作流生成器
+### 18.7.4 工作流生成器
 
 我们构建了一组标准工作流，这些工作流取自现有程序（例如 `mercyhealthcom`）。由于这些程序免费可用，我们构建规则以保护生成的工作流中的某些敏感组件。此外，这些工作流中实体之间的关系可以是显式的，也可以是隐式的。因此，我们的推理控制器利用策略和推理规则的混合来保护这些工作流中的信息。
 
-#### 18.7.5 标注工作流
+### 18.7.5 标注工作流
 
 我们使用背景生成器产生的数据来标注我们的工作流。因此，患者属性之间的关联是从 `www.yellowpages.com` 和 `www.whitepages.com` 收集的。同样，医院和医生的属性实际上是从 `www.yellowpages.com` 和 `www.ratemd.com` 收集的。
 
-#### 18.7.6 生成工作流
+### 18.7.6 生成工作流
 
 如前所述，在我们的玩具医院示例中，为每位患者发起更新患者记录的工作流。记录的溯源是我们在系统中假设的唯一机密数据。其目的是给查询用户一个机会，去猜测与记录相关的患者疾病、药物或检查。溯源带来的挑战比传统数据更大。控制器不仅要预测涉及用户先验知识的推理，还要考虑数据项之间因果关系以及溯源实体相关的推理（算法 18.2）。
 
-#### 18.7.7 数据库中的不完整信息
+### 18.7.7 数据库中的不完整信息
 
 我们从各种网页生成数据，每个网页为知识库贡献了一部分。这代表了我们的知识库包含部分或不完整信息的一个典型案例。
 
@@ -7960,10 +7656,6 @@ http://www.yellowpages.com/findaperson?fap_terms%5Bfirst%5D="fname"
 ## 18.8 用例：医疗示例
 
 在本节中，我们提供溯源查询的示例。这些查询可用于识别策略的资源或识别用户查询的答案。
-
-
-
-
 
 图 18.18 中的溯源图展示了一个工作流，该工作流更新了一位在医院经历三个医疗阶段的患者的虚构记录。在第一阶段，医生对患者进行了检查。检查期间，医生查阅了患者记录中的病史 `med:Doc1_1`，并执行了记录患者笔记的任务。检查结束时，医生更新了患者记录，生成了一个更新版本 `med:Doc1_2`。在第二阶段，应医生要求，患者返回进行随访。在此次就诊中，医生查阅患者记录以回顾病史，随后对患者进行了一系列检查。此次就诊结束时，医生再次更新患者记录，生成了更新版本 `med:Doc1_3`。在第三阶段，患者返回接受心脏手术。此手术由患者主治医师下令，由住院医师实施。手术开始前，主治医师和外科医生均对患者记录进行了仔细审查。手术过程中，外科医生执行了记录心脏手术各阶段结果的任务。手术结束时，外科医生更新了患者记录，生成了更新版本 `med:Doc1_4`。
 
@@ -8063,9 +7755,6 @@ http://www.yellowpages.com/findaperson?fap_terms%5Bfirst%5D="fname"
 
 社交媒体数据以及高度链接的数据均可表示为 RDF 图。因此，前几节提出的思想适用于此类社交图。安全策略也可表示为 RDF 或 SWRL 等语言。这些策略包括访问控制策略和信息共享策略。例如，如果一个人透露了其宗教信仰，则其政治倾向会被推断出来。因此，如果一个人想保持其政治倾向私密，则不应在其社交媒体网站上发布其宗教信仰。
 
-
-
-
 我们可以在第 15 章中描述的访问控制架构之上构建推理控制器。图 18.19 展示了这样一个推理控制器。推理引擎本质上是控制访问并通过推理处理未授权访问的策略引擎。社交媒体数据表示为 RDF 图，而策略和知识可以使用 SWRL、RDF 和 OWL 的组合来指定。当用户发起查询（例如使用 SPARQL）时，策略引擎会检查知识库（可能包含溯源数据、策略）并修改查询。修改后的查询针对基于 RDF 的社交媒体数据库执行。前几节中的大部分讨论以及推理控制器的实现均适用于基于 RDF 的社交媒体数据。
 
 ![图 18.19 下一代推理控制器。](img/fig18_19.jpg)
@@ -8080,94 +7769,67 @@ http://www.yellowpages.com/findaperson?fap_terms%5Bfirst%5D="fname"
 
 ## 18.11 总结与展望
 
-在本章中，我们首先描述了一个基于语义网溯源图运行的推理控制器的设计，该控制器保护重要的溯源信息免受未授权用户的访问。由于第 19 章和第 20 章中讨论的社交网络也由语义网技术表示，我们开发的技术适用于此类社交媒体数据。关于构建推理控制器以保护数据机密性的早期工作在 20 世纪 80 年代末和 90 年代初有所描述；然而，这些工作主要集中在多级安全数据库领域，且支持的推理能力有限。通过使用语义网技术，我们目前的工作在更复杂的推理和策略表示技术方面较先前的工作有了实质性改进。我们使用 RDF 作为数据模型，因为它支持具有不同数据模式的多数据库的互操作性。此外，我们用语义网规则和约束来表达策略和规则，并使用语义网软件工具对数据项及其之间的关系进行分类。
 
-接下来，我们讨论了通过查询修改进行推理控制。查询修改也称为查询重写。在这种方法中，推理控制器接受用户查询，并根据策略修改查询，向查询返回清洗后的结果。我们提供了关于关系数据查询修改的背景信息，以及修改 SPARQL 查询的各个方面。虽然从关系查询转向 SPARQL 查询是迈向下一代推理控制器处理推理的第一步，但我们的最终目标是使用采用机器学习方法的复杂基于逻辑的推理器来处理查询。这样我们就能处理比本书讨论的更多推理策略。如前所述，随着推理策略变得更加复杂，我们需要牢记查询处理技术的可扩展性。也就是说，虽然数据管理系统应仅发布授权的响应，但用户将要求满足性能需求。因此，开发可扩展的推理控制器是我们的主要目标之一。
+
+# 推理控制器设计与实现综述
+
+## 概述
+
+在本章中，我们首先描述了一个基于语义网溯源图运行的推理控制器的设计，该控制器保护重要的溯源信息免受未授权用户的访问。由于第 19 章和第 20 章中讨论的社交网络也由语义网技术表示，我们开发的技术适用于此类社交媒体数据。关于构建推理控制器以保护数据机密性的早期工作在 20 世纪 80 年代末和 90 年代初有所描述；然而，这些工作主要集中在多级安全数据库领域，且支持的推理能力有限。通过使用语义网技术，我们目前的工作在更复杂的推理和策略表示技术方面较先前的工作有了实质性改进。我们使用 `RDF` 作为数据模型，因为它支持具有不同数据模式的多数据库的互操作性。此外，我们用语义网规则和约束来表达策略和规则，并使用语义网软件工具对数据项及其之间的关系进行分类。
+
+## 查询修改与推理控制
+
+接下来，我们讨论了通过查询修改进行推理控制。查询修改也称为查询重写。在这种方法中，推理控制器接受用户查询，并根据策略修改查询，向查询返回清洗后的结果。我们提供了关于关系数据查询修改的背景信息，以及修改 `SPARQL` 查询的各个方面。虽然从关系查询转向 `SPARQL` 查询是迈向下一代推理控制器处理推理的第一步，但我们的最终目标是使用采用机器学习方法的复杂基于逻辑的推理器来处理查询。这样我们就能处理比本书讨论的更多推理策略。如前所述，随着推理策略变得更加复杂，我们需要牢记查询处理技术的可扩展性。也就是说，虽然数据管理系统应仅发布授权的响应，但用户将要求满足性能需求。因此，开发可扩展的推理控制器是我们的主要目标之一。
+
+## 推理控制器实现
 
 在本章中，我们描述了用于数据溯源的推理控制器的实现。推理控制器采用模块化方法构建，因此非常灵活，大多数模块均可由另一个应用模块扩展或替换。例如，应用用户可以替换处理高级策略解析为低级策略对象的策略解析器模块。这种替换将允许应用用户继续使用其业务策略，而独立于我们的溯源推理控制器软件实现。本质上，我们在实现推理控制器时遵循了“即插即用”方法。我们在实现中尽可能多地使用了开源产品。我们为溯源数据推理控制实现的技术可应用于使用语义网技术表示的社交媒体数据。
 
-这种实现是针对下一代推理控制器的首创。我们已从 20 世纪 80 年代和 90 年代的关系数据库方法迁移到基于语义网的方法。语义网技术的推理能力使这种方法更加强大。我们的下一步是将此推理控制器适配为用 RDF 表示的知识图谱和社交图谱。我们还在研究使用机器学习技术的更强大推理策略。此外，我们需要考虑溯源数据未授权泄露的风险。另外，我们可以将推理策略建模为博弈，其中参与者是推理控制器和系统用户（也可能是对手）。也就是说，双方进行博弈，每方的目标都是获胜。本质上，推理控制器会试图防止任何未授权信息落入对手手中，而对手将试图从系统中提取尽可能多的信息。
+## 未来展望
+
+这种实现是针对下一代推理控制器的首创。我们已从 20 世纪 80 年代和 90 年代的关系数据库方法迁移到基于语义网的方法。语义网技术的推理能力使这种方法更加强大。我们的下一步是将此推理控制器适配为用 `RDF` 表示的知识图谱和社交图谱。我们还在研究使用机器学习技术的更强大推理策略。此外，我们需要考虑溯源数据未授权泄露的风险。另外，我们可以将推理策略建模为博弈，其中参与者是推理控制器和系统用户（也可能是对手）。也就是说，双方进行博弈，每方的目标都是获胜。本质上，推理控制器会试图防止任何未授权信息落入对手手中，而对手将试图从系统中提取尽可能多的信息。
 
 ## 参考文献
 
-*   [BECH2004] S. Bechhofer, F. Van Harmelen, J. Hendler, I. Horrocks, D. McGuinness, P. Patel-Schneider, L. Stein, OWL Web Ontology Language Reference, W3C recommendation, 10, 2004.
-
-*   [BIZE2003] C. Bizer, D2R MAP–A Database to RDF Mapping Language, Proceedings of the Twelfth International World Wide Web Conference-Posters, WWW, Budapest, Hungary, 2003.
-
-*   [BRAU2008] U. Braun, A. Shinnar, M. Seltzer, Securing Provenance, *Proceedings of the 3rd Conference on Hot topics in Security*, USENIX Association, San Jose, CA, 2008, pp. 1–5.
-
-
-
-
-## 参考文献
-
+*   **[BECH2004]** S. Bechhofer, F. Van Harmelen, J. Hendler, I. Horrocks, D. McGuinness, P. Patel-Schneider, L. Stein, *OWL Web Ontology Language Reference*, W3C recommendation, 10, 2004.
+*   **[BIZE2003]** C. Bizer, *D2R MAP–A Database to RDF Mapping Language*, Proceedings of the Twelfth International World Wide Web Conference-Posters, WWW, Budapest, Hungary, 2003.
+*   **[BRAU2008]** U. Braun, A. Shinnar, M. Seltzer, *Securing Provenance*, *Proceedings of the 3rd Conference on Hot topics in Security*, USENIX Association, San Jose, CA, 2008, pp. 1–5.
 *   **[BRAY2000]** T. Bray, J. Paoli, C. Sperberg-McQueen, E. Maler, F. Yergeau, *可扩展标记语言 (XML) 1.0*, 审阅版 W3C 推荐标准, 6, 2000.
-
 *   **[CARR2004]** J. Carroll, I. Dickinson, C. Dollin, D. Reynolds, A. Seaborne, K. Wilkinson, *Jena: 实现语义 Web 推荐标准*, *第 13 届国际万维网会议替代轨道论文及海报论文集*, 2004.
-
 *   **[CHAN1998]** L.W. Chang, I.S. Moskowitz, *节约型降级与决策树在推理问题中的应用*, *1998 年新安全范式研讨会论文集*, 1988.
-
 *   **[DETW2008]** L. Detwiler, D. Suciu, J. Brinkley, *SPARQL 中的正则路径: 查询 NCI 词典*, *AMIA 年度研讨会论文集*, 美国医学信息学协会, 2008.
-
 *   **[DWYE1987]** P. Dwyer, G.D. Jelatis, B.M. Thuraisingham, *数据库管理系统中的多级安全*, *计算机与安全*, 第 6 卷, 第 3 期, 1987, 252–260.
-
 *   **[EHRI1991]** H. Ehrig, M. Korff, M. Lowe, *基于双重与单重推出的图文法代数方法教程介绍*, *图文法及其在计算机科学中的应用*, H. Erhig, H.-J. Kreowski, and G. Rozenberg (编), Springer-Verlag, 柏林, 1991.
-
 *   **[EHRI2006]** H. Ehrig, *代数图变换基础*, Springer-Verlag, 纽约, 2006.
-
 *   **[FENS2020]** D. Fensel, U. Şimşek, K. Angele, E. Huaman, E., Kärle, O. Panasiuk, L. Toma, J. Umbrich, A. Wahler, *知识图谱*, Springer, 2020.
-
 *   **[FIKE2002]** R. Fikes, P. Hayes, I. Horrocks, *DQL–面向语义 Web 的查询语言*, 知识系统实验室, 报告 DR-05, 斯坦福大学, 2002.
-
 *   **[GALL1978]** H. Gallaire, J. Minker (编), *逻辑与数据库*, 逻辑与数据库研讨会 数据库理论进展, Plenum Press, 纽约, 1978.
-
 *   **[GOVE2005]** G. Governatori, *用 RuleML 表示商业合同*, *国际合作信息系统期刊*, 14, 2005.
-
 *   **[GROS2003]** B. Grosof, T. Poon, *SweetDeal: 使用 XML 规则、本体和过程描述表示带有异常的代理合同*, *第 12 届国际万维网会议论文集*, 2003.
-
 *   **[HORR2004]** I. Horrocks, P. Patel-Schneider, H. Boley, S. Tabet, B. Grosof, M. Dean, *SWRL: 一种结合 OWL 和 RuleML 的语义 Web 规则语言*, W3C 成员提交, 21, 2004.
-
 *   **[KARV2002]** G. Karvounarakis, S. Alexaki, V. Christophides, D. Plexousakis, M. Scholl, *RQL: 一种面向 RDF 的声明式查询语言*, ACM WWW, 2002, 592–603.
-
 *   **[KIFO2006]** T. Kifor, L. Varga, J. Vazquez-Salceda, S. Alvarez, S. Willmott, S. Miles, L. Moreau, *代理中介医疗系统中的溯源*, *IEEE 智能系统*, 第 21 卷, 第 6 期, 2006.
-
 *   **[KNUB2004]** H. Knublauch, R. Fergerson, N. Noy, M. Musen, *Protege OWL 插件: 面向语义 Web 应用的开放开发环境*, ISWC, 2004.
-
 *   **[MCGU2003]** D.L. McGuinness, P.P. Da Silva, *推理 Web: 面向问答的可移植与可共享解释*, *美国人工智能协会春季研讨会论文集: 面向问答的新方向*, 斯坦福大学, 斯坦福, CA, 2003.
-
 *   **[MCGU2004]** D. McGuinness, P. Pinheiro da Silva, *解释来自语义 Web 的答案: 推理 Web 方法*, *Web 语义学: 万维网上的科学、服务与代理* 2004, 第 1 卷, 第 4 期.
-
 *   **[MOSE2005]** T. Moses, *et al* *可扩展访问控制标记语言 (XACML) 版本 2.0*, Oasis 标准, 2005.
-
 *   **[NI2009]** Q. Ni, S. Xu, E. Bertino, R. Sandhu, and W. Han, *面向通用溯源模型的访问控制语言*, *安全数据管理*, LC NS 5766, 68–88, Springer Verlag, 柏林海德堡, 2009.
-
 *   **[OPEN]** [`openprovenance.org/`](http://openprovenance.org/)
-
 *   **[ORAC2012]** *RDF 数据的细粒度访问控制*, 可在 [`docs.oracle.com/cd/E11882_01/appdev.112/e25609.pdf`](http://docs.oracle.com) 获取 (2012).
-
 *   **[OULM2012]** S. Oulmakhzoune, N. Cuppens-Boulahia, F. Cuppens, Stephane Morucci: *通过 SPARQL 查询重写强制执行隐私策略偏好*, ARES, 335–342, 2012.
-
 *   **[PRUD2006]** E. Prud’hommeaux, A. Seaborne, *et al*, *面向 RDF 的 SPARQL 查询语言*, 工作草案, W3C 推荐标准, 20, 2006.
-
 *   **[REIT1977]** R. Reiter, *论封闭世界数据库*, *逻辑与数据库*, H. Gallaire and J. Minker, Plenum Press, 纽约, 1977.
-
 *   **[ROZE1997]** G. Rozenberg and H. Ehrig, *图文法与图变换计算手册*, 第 1 卷, 世界科学出版社, 新加坡, 1997.
-
 *   **[SIRI2007]** E. Sirin, B. Parsia, B. Grau, A. Kalyanpur, and Y. Katz, *Pellet: 一种实用的 OWL-DL 推理器*, *Web 语义学: 万维网上的科学、服务与代理*, 第 5 卷, 第 2 期, 2007, pp. 51–53.
-
 *   **[STON1975]** M. Stonebraker, *通过查询修改实现完整性约束和视图*, SIGMOD 会议, 1975.
-
 *   **[THUR1987]** B. M. Thuraisingham, *增强推理引擎的关系数据库管理系统中的安全检查*, *计算机与安全*, 6(6), 479–492, 1987.
-
 *   **[THUR1990]** B. Thuraisingham, *推理问题的递归论特性*, 计算机安全基础研讨会论文, Franconia, NH, 1990 年 6 月 (亦为 MITRE 报告, 1990 年 6 月).
-
 *   **[THUR1991]** B. M. Thuraisingham, *利用概念结构处理推理问题*, DBSec, Shepherdstown, West Virginia, 333–362, 1991.
-
 *   **[THUR1993]** B. Thuraisingham, W. Ford, M. Collins, J. O'Keeffe, *数据库推理控制器的设计与实现*, *数据与知识工程*, 第 11 卷, 第 3 期, 1993, 271–297.
-
 *   **[THUR2014]** B. Thuraisingham, T. Cadenhead, M. Kantarcioglu, V. Khadilkar, *面向语义 Web 的安全数据溯源与推理控制*, CRC Press, Boca Raton, FL.
-
 *   **[THUR2020]** B. Thuraisingham, *网络安全遇上大知识: 迈向安全的 HACE 定理*, IEEE ICKG, 2020.
+
+---
 
 # 19 面向安全数据科学的新兴应用: 交通互联网系统
 
@@ -8175,23 +7837,19 @@ DOI: [10.1201/9781003081845-30](https://doi.org/10.1201/9781003081845-30)
 
 ## 19.1 简介
 
-由于物联网 (IoT) 系统包含异构组件而不断发展，导致网络空间复杂性日益增加，例如不同类型的网络（如固定有线网络、移动蜂窝网络和移动自组网）、多样化的计算系统（如传感器、嵌入式系统、智能手机和智能设备）以及多层软件（如应用程序、中间件、操作系统 [OS] 和虚拟机监视器），由此产生了大量安全漏洞，因为任何设备、网络或生成的数据都可能遭到攻击。对手将越来越多地转向物联网网络空间，并将以所有基于网络的基础设施为目标，包括能源、交通、金融和医疗基础设施。因此，在如此复杂的环境中，为物联网提供管理网络冲突和防御网络攻击的网络安全解决方案是一项重大挑战。
-
-
-
-
+由于物联网 (`IoT`) 系统包含异构组件而不断发展，导致网络空间复杂性日益增加，例如不同类型的网络（如固定有线网络、移动蜂窝网络和移动自组网）、多样化的计算系统（如传感器、嵌入式系统、智能手机和智能设备）以及多层软件（如应用程序、中间件、操作系统 [`OS`] 和虚拟机监视器），由此产生了大量安全漏洞，因为任何设备、网络或生成的数据都可能遭到攻击。对手将越来越多地转向物联网网络空间，并将以所有基于网络的基础设施为目标，包括能源、交通、金融和医疗基础设施。因此，在如此复杂的环境中，为物联网提供管理网络冲突和防御网络攻击的网络安全解决方案是一项重大挑战。
 
 ### 物联网系统的网络防御框架
 
 迫切需要基于分层架构，为物联网系统设计和开发一套网络防御框架。其目标是：(i) 开发技术，以在面对攻击时保障网络（有线和无线）、硬件、软件、系统以及数据源的安全；(ii) 开发用于检测攻击的分析解决方案。然而，开发这样一个集成框架，需要解决物联网系统的众多安全问题，包括访问控制、针对物联网系统网络攻击的对抗性机器学习，以及保护特殊类型的物联网系统，如交通系统互联网。
 
-虽然安全性是物联网系统的一个主要方面，但隐私也应是一个关键考量。物联网系统收集海量数据，包括医疗数据、金融数据，以及驾驶模式等其他数据，并利用复杂的机器学习（ML）技术对这些数据进行分析以造福社会。然而，机器学习技术可能会发现极其敏感和私密的模式。因此，我们需要为物联网系统开发隐私感知机器学习技术。
+虽然安全性是物联网系统的一个主要方面，但隐私也应是一个关键考量。物联网系统收集海量数据，包括医疗数据、金融数据，以及驾驶模式等其他数据，并利用复杂的机器学习 (`ML`) 技术对这些数据进行分析以造福社会。然而，机器学习技术可能会发现极其敏感和私密的模式。因此，我们需要为物联网系统开发隐私感知机器学习技术。
 
-在本章中，我们重点关注一类物联网系统，即交易系统互联网（注：原文为 Internet of Transactions Systems，结合上下文应为 Transportation Systems，译为交通系统互联网）。近年来，自动驾驶汽车（AVs，Autonomous Vehicles）呈爆发式增长。企业正在大力投资自动驾驶汽车。自动驾驶汽车利用各类传感器（如摄像头、GPS、惯性测量单元 [IMU]、激光雷达 [LiDAR]、毫米波雷达 [RADAR] 和超声波传感器）来感知环境。尽管自动驾驶汽车蕴含巨大潜力，并能给交通行业带来改进，但安全和隐私问题提出了亟待解决的新挑战。传感器易受恶意篡改（例如，IMU 易受声波干扰，GPS 接收机易受欺骗信号干扰）。车辆在根据传感器信号采取行动前，应验证其真实性 [QUIN2020]。
+在本章中，我们重点关注一类物联网系统，即交易系统互联网（注：原文为 Internet of Transactions Systems，结合上下文应为 Transportation Systems，译为交通系统互联网）。近年来，自动驾驶汽车 (`AVs`，`Autonomous Vehicles`) 呈爆发式增长。企业正在大力投资自动驾驶汽车。自动驾驶汽车利用各类传感器（如摄像头、`GPS`、惯性测量单元 [`IMU`]、激光雷达 [`LiDAR`]、毫米波雷达 [`RADAR`] 和超声波传感器）来感知环境。尽管自动驾驶汽车蕴含巨大潜力，并能给交通行业带来改进，但安全和隐私问题提出了亟待解决的新挑战。传感器易受恶意篡改（例如，`IMU` 易受声波干扰，`GPS` 接收机易受欺骗信号干扰）。车辆在根据传感器信号采取行动前，应验证其真实性 [QUIN2020]。
 
 由自动驾驶汽车集合组成的物联网系统被称为交通系统互联网。交通系统互联网会遭受攻击（像任何网络物理系统一样）。此类系统（包括自动驾驶汽车和未来的无人驾驶汽车）正在采集流式数据。随着交通系统电气化，它们需要节能。此类系统的安全威胁可能造成巨大损害，包括事故、人员伤亡，以及因能源管理系统遭受攻击而被困在荒凉的高速公路上。
 
-数据科学/机器学习技术正被应用于分析自动驾驶汽车的数据，一大挑战是如何将流分析/学习技术应用于交通数据。例如，如何将机器学习技术应用于源自自动驾驶汽车的海量传感器数据？[MASO2011]。交通系统互联网也将高度依赖数据科学/人工智能（AI）/机器学习技术，用于各种应用，包括最优路线规划、无人驾驶等。对手将学习我们使用的机器学习模型，并试图破坏我们的模型 [ZHOU2012]。最后，虽然交通系统互联网收集了海量数据，但必须保护个人隐私。我们设想，大部分数据共享和分析将通过运行在云端并与交通系统互联网集成的服务来进行 [THUR2020]。
+数据科学/机器学习技术正被应用于分析自动驾驶汽车的数据，一大挑战是如何将流分析/学习技术应用于交通数据。例如，如何将机器学习技术应用于源自自动驾驶汽车的海量传感器数据？[MASO2011]。交通系统互联网也将高度依赖数据科学/人工智能 (`AI`)/机器学习技术，用于各种应用，包括最优路线规划、无人驾驶等。对手将学习我们使用的机器学习模型，并试图破坏我们的模型 [ZHOU2012]。最后，虽然交通系统互联网收集了海量数据，但必须保护个人隐私。我们设想，大部分数据共享和分析将通过运行在云端并与交通系统互联网集成的服务来进行 [THUR2020]。
 
 本章探讨如何将人工智能、安全和云集成，以开发智能交通系统互联网。我们首先在第 19.2 节中讨论网络安全与 AI 的集成。第 19.3 节讨论交通系统互联网的安全与隐私。在第 19.4 节中，我们讨论基于 AI 和云的交通系统互联网。第 19.5 节讨论总结和未来方向。图 19.1 展示了本章讨论的概念。
 
@@ -8203,7 +7861,9 @@ DOI: [10.1201/9781003081845-30](https://doi.org/10.1201/9781003081845-30)
 
 第二部分和第三部分已阐述网络安全与 AI 集成的主题。在本节中，我们将回顾关键点。网络安全与 AI 的集成有三个方面。一是将 AI 应用于网络安全，二是将网络安全应用于 AI，三是检测由 AI 引起的隐私攻击。将 AI 应用于网络安全的研究始于 1990 年代中期。其思路是应用机器学习技术检测未经授权的入侵。2000 年代，该研究扩展至恶意软件分析和内部威胁检测 [THUR2017]。海量攻击数据正在被收集。必须分析这些数据，以便检测恶意攻击。此外，我们还需要预测恶意软件可能如何变异，从而预防攻击 [HAML2009]。此外，还在分析流式数据以检测恶意内部人员。
 
-第二个领域是保障 AI 技术的安全。这一领域如今被称为对抗性机器学习，在过去十年中变得非常突出。我们生活的方方面面（从医疗到自动驾驶汽车）越来越依赖机器学习技术。这些机器学习技术可能遭受攻击，导致灾难性后果。因此，我们需要研究攻击类型并改进机器学习技术。例如，在我们的工作中，我们研究了支持向量机（SVM），并改进 SVM 技术以检测部分攻击。对手会了解我们的模型并调整其行为。我们的对抗性支持向量机技术能够学习对手的行为并自我调整，从而检测攻击。随着时间的推移，这演变成了对手与我们之间的博弈。
+
+
+第二个领域是保障 AI 技术的安全。这一领域如今被称为对抗性机器学习，在过去十年中变得非常突出。我们生活的方方面面（从医疗到自动驾驶汽车）越来越依赖机器学习技术。这些机器学习技术可能遭受攻击，导致灾难性后果。因此，我们需要研究攻击类型并改进机器学习技术。例如，在我们的工作中，我们研究了支持向量机（`SVM`），并改进 `SVM` 技术以检测部分攻击。对手会了解我们的模型并调整其行为。我们的对抗性支持向量机技术能够学习对手的行为并自我调整，从而检测攻击。随着时间的推移，这演变成了对手与我们之间的博弈。
 
 第三个方面是机器学习技术可能导致的隐私泄露。例如，现在可以整合海量数据并进行分析，获取个人的各种属性。这可能导致个人隐私受损。已经开发了许多隐私感知机器学习（数据挖掘）技术 [LIU2008]。挑战在于如何实施适当的策略，以便我们能够进行策略感知的数据收集、存储、集成、分析和共享 [THUR2018]。图 19.2 说明了网络安全与 AI 集成的各个方面。
 
@@ -8213,17 +7873,13 @@ DOI: [10.1201/9781003081845-30](https://doi.org/10.1201/9781003081845-30)
 
 ## 19.3 交通系统互联网的安全与隐私
 
-针对交通系统互联网安全与隐私的一种方法，是利用基于物理的异常检测（PBAD）算法为地面和空中自动驾驶汽车构建参考监视器 [QUIN2020]。该算法包含三部分：(i) 离线构建自动驾驶汽车物理不变量的模型，(ii) 实现在线工具以监控预期行为与观测行为从而检测异常，(iii) 如果执行过程存在显著残差差异，则发出警报。这些技术已同时应用于地面和空中自动驾驶汽车。稍后我们将提供更多步骤细节。
+针对交通系统互联网安全与隐私的一种方法，是利用基于物理的异常检测（`PBAD`）算法为地面和空中自动驾驶汽车构建参考监视器 [QUIN2020]。该算法包含三部分：(i) 离线构建自动驾驶汽车物理不变量的模型，(ii) 实现在线工具以监控预期行为与观测行为从而检测异常，(iii) 如果执行过程存在显著残差差异，则发出警报。这些技术已同时应用于地面和空中自动驾驶汽车。稍后我们将提供更多步骤细节。
 
+(i) **离线预处理**：使用一种广为人知的航空器和地面车辆非线性模型来计算 `AV` 的不变量。航空器使用 `x`、`y` 和 `z` 轴上的加速度计、陀螺仪和磁力计传感器数据。地面车辆使用车辆位置和转向角。
 
+(ii) **在线阶段**：使用扩展卡尔曼滤波器 (`EKF`) 通过从噪声传感器输入中估计未知参数来预测 `AV` 的物理行为。该算法分为两个部分，在将估计值与传感器数据进行比较之前，分别对其进行预测和修正。
 
-
-
-(i) **离线预处理**：使用一种广为人知的航空器和地面车辆非线性模型来计算 AV 的不变量。航空器使用 `x`、`y` 和 `z` 轴上的加速度计、陀螺仪和磁力计传感器数据。地面车辆使用车辆位置和转向角。
-
-(ii) **在线阶段**：使用扩展卡尔曼滤波器 (EKF) 通过从噪声传感器输入中估计未知参数来预测 AV 的物理行为。该算法分为两个部分，在将估计值与传感器数据进行比较之前，分别对其进行预测和修正。
-
-(iii) **异常检测**：随后使用 CUSUM（累积和控制图）算法来检测持续性攻击。如果残差差值大于预定义阈值，则触发警报。图 19.3 展示了我们的流程。
+(iii) **异常检测**：随后使用 `CUSUM`（累积和控制图）算法来检测持续性攻击。如果残差差值大于预定义阈值，则触发警报。图 19.3 展示了我们的流程。
 
 ![图 19.3 隐私感知的基于策略的交通物联网系统。](img/fig19_3.jpg)
 
@@ -8239,26 +7895,23 @@ DOI: [10.1201/9781003081845-30](https://doi.org/10.1201/9781003081845-30)
 
 *   **在异构多媒体数据上强制执行访问控制策略**：基于内容的访问控制是一种重要的访问控制类型，根据数据内容授予或拒绝授权。在处理对安全至关重要的视频监控应用时，基于内容的访问控制至关重要。就隐私而言，此类视频必须受到保护。支持基于内容的访问控制需要理解受保护数据的内容，而在处理多媒体大数据源时，这极具挑战性。
 
-*   **在大数据存储中强制执行访问控制策略**：一些最新的大数据系统允许用户使用 `Java` 等编程语言提交任意作业。例如，在 `Hadoop` 中，用户可以提交用 `Java` 编写的任意 MapReduce 作业。这给为不同用户高效强制执行细粒度访问控制带来了重大挑战。尽管已有一些现有工作 [KHAN2014, ULUS2014] 尝试将访问控制策略注入提交的作业中，但仍需进一步研究如何在新开发的大数据存储中高效强制执行此类策略。
+*   **在大数据存储中强制执行访问控制策略**：一些最新的大数据系统允许用户使用 `Java` 等编程语言提交任意作业。例如，在 `Hadoop` 中，用户可以提交用 `Java` 编写的任意 `MapReduce` 作业。这给为不同用户高效强制执行细粒度访问控制带来了重大挑战。尽管已有一些现有工作 [KHAN2014, ULUS2014] 尝试将访问控制策略注入提交的作业中，但仍需进一步研究如何在新开发的大数据存储中高效强制执行此类策略。
 
 *   **自动设计、演进和管理访问控制策略**：在处理数据源、用户、应用程序以及数据使用持续变化的动态环境时，自动设计和演进策略的能力至关重要，这能确保数据随时可用，同时保证数据机密性。用于管理策略的环境和工具也至关重要。
 
 ## 19.4 面向云端交通物联网系统的 AI 与安全
 
-我们设想，从 AV 收集的大量数据将被发送到云端进行进一步处理，包括执行分析。也就是说，包括攻击数据在内的海量数据可在云端使用各种 ML 技术进行分析。因此，云端本身必须是安全的，特别是当它必须执行安全关键操作时。
+我们设想，从 `AV` 收集的大量数据将被发送到云端进行进一步处理，包括执行分析。也就是说，包括攻击数据在内的海量数据可在云端使用各种 `ML` 技术进行分析。因此，云端本身必须是安全的，特别是当它必须执行安全关键操作时。
 
-我们设计并开发了一种用于安全云端的分层架构 [HAML2010]。最底层是 VNM（虚拟网络监视器）。然后是 VMM 层（虚拟机监视器），执行虚拟机内省。再上层是基于 `Hadoop/MapReduce` 等技术的云存储层。数据可能被加密，这意味着查询和分析将不得不在加密数据上进行。在此层之上是用于查询云数据的查询层。最后是应用层，在我们的示例中，应用程序是支持交通物联网系统的那些。图 19.4 展示了我们的方法。
+我们设计并开发了一种用于安全云端的分层架构 [HAML2010]。最底层是 `VNM`（虚拟网络监视器）。然后是 `VMM` 层（虚拟机监视器），执行虚拟机内省。再上层是基于 `Hadoop/MapReduce` 等技术的云存储层。数据可能被加密，这意味着查询和分析将不得不在加密数据上进行。在此层之上是用于查询云数据的查询层。最后是应用层，在我们的示例中，应用程序是支持交通物联网系统的那些。图 19.4 展示了我们的方法。
 
 ![图 19.4 用于安全交通物联网系统的云。](img/fig19_4.jpg)
 
 图 19.4 用于安全交通物联网系统的云。
 
-数据科学/ML 技术正被应用于分析数据，一项挑战是将流分析/学习技术应用于交通数据。主要问题是理解复杂交通数据的本质，并调整流分析技术，将其应用于正在收集的海量异构传感器数据上。此类数据通常以数据流形式产生。因此，需要研究许多基于流的机器学习技术 [LI2019]。此外，还需研究为物联网系统开发的基于深度学习的技术 [QIU2020]。
+数据科学/`ML` 技术正被应用于分析数据，一项挑战是将流分析/学习技术应用于交通数据。主要问题是理解复杂交通数据的本质，并调整流分析技术，将其应用于正在收集的海量异构传感器数据上。此类数据通常以数据流形式产生。因此，需要研究许多基于流的机器学习技术 [LI2019]。此外，还需研究为物联网系统开发的基于深度学习的技术 [QIU2020]。
 
-交通物联网系统将严重依赖数据科学/AI/ML 技术用于各种应用，包括最优路线规划、无人驾驶等。对手将学习车辆使用的模型，以及了解用于训练模型的数据。对手将试图破坏车辆的学习过程。因此，学习算法必须适应以挫败对手的行为。最终，这变成了对手与车辆机器学习算法之间的博弈 [ZHOU2012]。
-
-
-
+交通物联网系统将严重依赖数据科学/AI/`ML` 技术用于各种应用，包括最优路线规划、无人驾驶等。对手将学习车辆使用的模型，以及了解用于训练模型的数据。对手将试图破坏车辆的学习过程。因此，学习算法必须适应以挫败对手的行为。最终，这变成了对手与车辆机器学习算法之间的博弈 [ZHOU2012]。
 
 ## 19.5 总结与展望
 
@@ -8272,17 +7925,17 @@ DOI: [10.1201/9781003081845-30](https://doi.org/10.1201/9781003081845-30)
 
 *   **[AYOA2018]** G. Ayoade, V. Karande, L. Khan, K.W. Hamlen, 使用区块链和可信执行环境的去中心化物联网数据管理，*信息重用与集成会议论文集，犹他州盐湖城*，2018，第 15–22 页。
 
-*   **[HAML2010]** K.W. Hamlen, M. Kantarcioglu, L. Khan, B.M. Thuraisingham, 云计算的安全问题，IJISP，第 4 卷，第 2 期，2010，36–48。
+*   **[HAML2010]** K.W. Hamlen, M. Kantarcioglu, L. Khan, B.M. Thuraisingham, 云计算的安全问题，`IJISP`，第 4 卷，第 2 期，2010，36–48。
 
 *   **[HAML2009]** K.W. Hamlen, V. Mohan, M.M. Masud, L. Khan, B.M. Thuraisingham, 利用杀毒软件接口，计算机标准与接口，第 31 卷，第 6 期，2009，1182–1189。
 
 *   **[KHAN2014]** L. Khan, K. Hamlen, M. Kantarcioglu, Silver Lining：在云边缘强制执行安全信息流，*2014 IEEE 国际云工程会议论文集，美国马萨诸塞州波士顿*，2014。
 
-*   **[LI2019]** Y. Li, Y. Gao, G. Ayoade, H. Tao, L. Khan, B.M. Thuraisingham, 面向异构特征空间的网络威胁数据多流分类，2019。万维网会议论文集，WWW 2019，美国加利福尼亚州旧金山。
+*   **[LI2019]** Y. Li, Y. Gao, G. Ayoade, H. Tao, L. Khan, B.M. Thuraisingham, 面向异构特征空间的网络威胁数据多流分类，2019。万维网会议论文集，`WWW 2019`，美国加利福尼亚州旧金山。
 
 *   **[LIU2008]** L. Liu, M. Kantarcioglu, B.M. Thuraisingham, 基于扰动的隐私保护数据挖掘在现实世界数据中的适用性，数据与知识工程，第 65 卷，第 1 期，2008，5–21。
 
-*   **[MASO2011]** M. Masood, L. Khan, B. Thuraisingham, 恶意软件检测中的数据挖掘应用，CRC Press，2011。
+*   **[MASO2011]** M. Masood, L. Khan, B. Thuraisingham, 恶意软件检测中的数据挖掘应用，`CRC Press`，2011。
 
 *   **[QIU2020]** H. Qiu, Q. Zheng, G. Memmi, J. Lu, M. Qiu, B.M. Thuraisingham, 物联网中基于深度残差学习的增强 JPEG 压缩，被 *IEEE Transactions on Industrial Informatics* 接受，第 17 卷，第 3 期，2020，第 2124–2133 页。
 
@@ -8292,9 +7945,9 @@ DOI: [10.1201/9781003081845-30](https://doi.org/10.1201/9781003081845-30)
 
 *   **[THUR2020]** B.M. Thuraisingham, SecAI：面向交通运输物联网和基础设施应用的网络安全与人工智能融合，克莱姆森大学连接多模态交通中心，*年会*，2020 年 10 月。
 
-*   **[THUR2018]** B.M. Thuraisingham, M. Kantarcioglu, E. Bertino, J.Z. Bakdash, M. Fernández, 面向隐私感知的量化自我数据管理框架，第 23 届 ACM 访问控制模型与技术研讨会论文集，SACMAT 2018，美国印第安纳州印第安纳波利斯，2018 年 6 月。
+*   **[THUR2018]** B.M. Thuraisingham, M. Kantarcioglu, E. Bertino, J.Z. Bakdash, M. Fernández, 面向隐私感知的量化自我数据管理框架，第 23 届 ACM 访问控制模型与技术研讨会论文集，`SACMAT 2018`，美国印第安纳州印第安纳波利斯，2018 年 6 月。
 
-*   **[THUR2017]** B.M. Thuraisingham, P. Pallabi, M. Masud, L. Khan, 面向内部威胁检测应用的大数据分析，CRC Press，2017。
+*   **[THUR2017]** B.M. Thuraisingham, P. Pallabi, M. Masud, L. Khan, 面向内部威胁检测应用的大数据分析，`CRC Press`，2017。
 
 *   **[ULUS2014]** H. Ulusoy, M. Kantarcioglu, E. Pattuk, K. W. Hamlen, Vigiles：MapReduce 系统的细粒度访问控制，*2014 IEEE 国际大数据大会 (BigData Congress)，美国阿拉斯加州安克雷奇*，2014，第 40–47 页。
 
@@ -8306,13 +7959,11 @@ DOI：[10.1201/9781003081845-31](https://doi.org/10.1201/9781003081845-31)
 
 第四部分包含五章，描述了访问控制和数据科学。特别是，我们讨论了我们开发的一些实验系统。
 
+在基于访问控制的安全云查询处理（第 15 章）中，我们讨论了大数据系统的访问控制模型。未来的方向包括改进查询优化，以及利用 `Hadoop/MapReduce` 框架来提升性能。我们还需要研究改进的索引技术以增强性能。在以云为中心的可靠信息共享（第 16 章）中，我们讨论了如何在云中安全地共享信息。我们需要通过实现更复杂的策略以及实现分布式版本 `CAISS++` 来增强系统。我们还需要对策略的执行进行形式化分析。
 
+在社交媒体系统的访问控制（第 17 章）中，我们讨论了使用语义 Web 技术表示的社交媒体系统的访问控制模型。我们打算通过支持灵活的管理员策略来扩展这项工作。在我们的框架中，根据所支持的本体，社交网络的资源可能与不同的用户相关联。为了实施访问控制，框架必须决定如何将指定的访问控制策略组合在一起。因此，框架的一个首要重要扩展将是支持多种策略集成策略。在大数据系统的推理控制（第 18 章）中，我们讨论了大数据系统推理控制器的设计与实现。我们的下一步是将推理控制器适配为基于 `RDF` 表示的知识图谱和社交图谱。我们还在研究利用机器学习技术的更强大的推理策略。
 
-在基于访问控制的安全云查询处理（第 15 章）中，我们讨论了大数据系统的访问控制模型。未来的方向包括改进查询优化，以及利用 Hadoop/MapReduce 框架来提升性能。我们还需要研究改进的索引技术以增强性能。在以云为中心的可靠信息共享（第 16 章）中，我们讨论了如何在云中安全地共享信息。我们需要通过实现更复杂的策略以及实现分布式版本 CAISS++ 来增强系统。我们还需要对策略的执行进行形式化分析。
-
-在社交媒体系统的访问控制（第 17 章）中，我们讨论了使用语义 Web 技术表示的社交媒体系统的访问控制模型。我们打算通过支持灵活的管理员策略来扩展这项工作。在我们的框架中，根据所支持的本体，社交网络的资源可能与不同的用户相关联。为了实施访问控制，框架必须决定如何将指定的访问控制策略组合在一起。因此，框架的一个首要重要扩展将是支持多种策略集成策略。在大数据系统的推理控制（第 18 章）中，我们讨论了大数据系统推理控制器的设计与实现。我们的下一步是将推理控制器适配为基于 RDF 表示的知识图谱和社交图谱。我们还在研究利用机器学习技术的更强大的推理策略。
-
-最后，在第 19 章中，我们讨论了基于云的交通互联网系统的 AI 与安全。特别是，我们讨论了交通互联网系统关于自动驾驶汽车（AV）的特性，并描述了此类系统的安全与隐私问题。我们还展示了如何将 AI 与安全集成到此类系统中。也讨论了基于云的交通互联网系统。最后，我们讨论了如何将 AI、安全与云与交通互联网系统集成。我们仅触及了保障交通互联网系统安全的表面。我们必须了解各种类型的轨迹/攻击路径，并开发机器学习技术来检测和防范攻击。我们还必须研究如何应对针对开发智能交通互联网系统所需的机器学习技术的攻击。最后，我们需要确定要发送哪些类型的数据到安全云以进行分析。
+最后，在第 19 章中，我们讨论了基于云的交通互联网系统的 AI 与安全。特别是，我们讨论了交通互联网系统关于自动驾驶汽车（`AV`）的特性，并描述了此类系统的安全与隐私问题。我们还展示了如何将 AI 与安全集成到此类系统中。也讨论了基于云的交通互联网系统。最后，我们讨论了如何将 AI、安全与云与交通互联网系统集成。我们仅触及了保障交通互联网系统安全的表面。我们必须了解各种类型的轨迹/攻击路径，并开发机器学习技术来检测和防范攻击。我们还必须研究如何应对针对开发智能交通互联网系统所需的机器学习技术的攻击。最后，我们需要确定要发送哪些类型的数据到安全云以进行分析。
 
 # 20 总结与展望
 
@@ -8332,23 +7983,23 @@ DOI: [10.1201/9781003081845-32](https://doi.org/10.1201/9781003081845-32)
 
 图 20.1 BDMA 和 BDSP 的分层框架。
 
-本书分为四个部分。第 I 部分描述了支撑技术，包含第 2 章、第 3 章、第 4 章和第 5 章。第 2 章概述了数据库系统中的自主安全策略。我们从讨论访问控制策略开始，包括授权策略和基于角色的访问控制。然后，我们讨论了管理策略。我们简要讨论了标识和认证。我们还讨论了审计问题以及用于安全的视图。接下来，我们讨论了策略实施。策略实施的主要问题是策略规范、策略实现和策略可视化。我们讨论了用于指定策略的 SQL 扩展，并提供了查询修改的概述。在第 3 章中，我们首先概述了各种数据挖掘任务和技术，然后讨论了用于安全应用的数据挖掘。第 4 章介绍了云和语义 Web 技术的概念。我们首先讨论了云计算的概念，包括虚拟化的各个方面。我们还讨论了云的各种服务模型和部署模型，并简要概述了存储管理和数据管理等云功能。接下来，我们讨论了语义 Web 技术，包括 XML、RDF、本体和 OWL。随后讨论了语义 Web 的安全问题。最后，我们讨论了基于语义 Web 技术的云计算框架。第 5 章讨论了大数据安全与隐私的挑战与方向。
-
-
-
-
+本书分为四个部分。第 I 部分描述了支撑技术，包含第 2 章、第 3 章、第 4 章和第 5 章。第 2 章概述了数据库系统中的自主安全策略。我们从讨论访问控制策略开始，包括授权策略和基于角色的访问控制。然后，我们讨论了管理策略。我们简要讨论了标识和认证。我们还讨论了审计问题以及用于安全的视图。接下来，我们讨论了策略实施。策略实施的主要问题是策略规范、策略实现和策略可视化。我们讨论了用于指定策略的 `SQL` 扩展，并提供了查询修改的概述。在第 3 章中，我们首先概述了各种数据挖掘任务和技术，然后讨论了用于安全应用的数据挖掘。第 4 章介绍了云和语义 Web 技术的概念。我们首先讨论了云计算的概念，包括虚拟化的各个方面。我们还讨论了云的各种服务模型和部署模型，并简要概述了存储管理和数据管理等云功能。接下来，我们讨论了语义 Web 技术，包括 `XML`、`RDF`、本体和 `OWL`。随后讨论了语义 Web 的安全问题。最后，我们讨论了基于语义 Web 技术的云计算框架。第 5 章讨论了大数据安全与隐私的挑战与方向。
 
 ### 第二部分
 
-第二部分包含四个第 6 章、第 7 章、第 8 章和第 9 章，重点关注网络安全的数据科学。在第 6 章中，我们讨论了基于数据挖掘的恶意代码检测模型的设计与实现。我们的技术从可执行文件中提取三个不同层级的特征，即二进制层级、汇编层级和 API 函数调用层级。这些特征随后经历特征选择阶段，以减少特征集中的噪声和冗余，并生成一个规模可控的特征集。然后利用这些特征集为每个训练数据构建特征向量。接着，使用训练数据训练一个分类模型。该分类模型对未来实例（即可执行文件）进行分类，以检测它们是良性还是恶意。我们展示了如何高效地从训练数据中提取特征。我们还展示了如何通过磁盘访问实现可扩展性。我们解释了特征提取和特征选择的算法。最后，我们展示了如何组合特征集并构建特征向量。我们应用了不同的机器学习技术，如 SVM、J48 和 Adaboost 来构建分类模型。
 
-### 第三部分
 
-第三部分包含五个第 10 章、第 11 章、第 12 章、第 13 章和第 14 章，讨论了安全和隐私感知的数据科学。在第 10 章中，我们讨论了对抗性支持向量机学习。我们考虑了两种攻击模型：一种是允许任意数据损坏的自由攻击模型，另一种是预期合理对手在惩罚机制下会设计的更现实攻击的受限攻击模型。随后，我们针对这两种攻击模型开发了最优的 SVM 学习策略。学习算法在假设对手通过修改数据来最大化损失的前提下，最小化合页损失。实验在人工和真实数据集上均已进行。在第 11 章中，我们讨论了对抗性相关向量机学习。具体而言，我们提出了一种稀疏贝叶斯对抗学习模型。该算法通过最小化训练集中正实例的对数似然，设置单独的核参数来对特征空间中的对抗攻击进行建模。在这种设置下训练的学习模型对包括极具侵略性的攻击在内的各类攻击更具鲁棒性。在第 12 章中，我们讨论了隐私感知数据挖掘。具体而言，我们描述了一种修改后的 C4.5 决策树分类器，该分类器适用于隐私保护数据挖掘。该分类器基于扰动数据集构建，且该模型可用于以高准确率对原始数据进行分类。在多方参与全局数据挖掘而不泄露隐私的场景下，与基于密码学的方法相比，我们的算法降低了通信和计算成本。我们的算法基于扰动方案，但跳过了重构原始数据分布的步骤。我们的技术在减少计算时间的同时增强了隐私保护。在第 13 章中，我们讨论了一个面向量化自我应用的隐私感知策略数据管理框架。具体而言，我们描述了一个通用框架，用户不仅可以指定其数据如何被管理，还可以限制来自其连接设备的数据收集，以及对该数据的存储和分析。更确切地说，我们讨论了使用数据收集策略来管控来自各种设备的数据传输，并结合策略确保数据一旦传输完毕，即以安全和隐私保护的方式进行存储和共享。换句话说，我们讨论了一个用于安全数据收集、存储和管理的框架，其逻辑基础支持策略属性的验证。在第 14 章中，我们提出了一个能够处理海量 RDF 数据的框架，可用于表示社交网络等大数据系统。由于我们的框架基于 Hadoop（一个分布式且高度容错的系统），它自动继承了这两个特性。该框架具有高度可扩展性。我们还在查询处理框架之上基于访问控制开发了安全模型。
+# 第二部分
 
-### 第四部分
+第二部分包含四个第 6 章、第 7 章、第 8 章和第 9 章，重点关注网络安全的数据科学。在第 6 章中，我们讨论了基于数据挖掘的恶意代码检测模型的设计与实现。我们的技术从可执行文件中提取三个不同层级的特征，即二进制层级、汇编层级和 API 函数调用层级。这些特征随后经历特征选择阶段，以减少特征集中的噪声和冗余，并生成一个规模可控的特征集。然后利用这些特征集为每个训练数据构建特征向量。接着，使用训练数据训练一个分类模型。该分类模型对未来实例（即可执行文件）进行分类，以检测它们是良性还是恶意。我们展示了如何高效地从训练数据中提取特征。我们还展示了如何通过磁盘访问实现可扩展性。我们解释了特征提取和特征选择的算法。最后，我们展示了如何组合特征集并构建特征向量。我们应用了不同的机器学习技术，如 `SVM`、`J48` 和 `Adaboost` 来构建分类模型。
 
-第四部分包含五个第 15 章、第 16 章、第 17 章、第 18 章和第 19 章，讨论了访问控制和数据科学，包括我们开发的经验性系统。在第 15 章中，我们描述了一个基于云的可靠信息共享系统 CAISS 的设计与实现。CAISS 利用了我们开发的若干技术以及开源工具。我们还描述了一个理想的基于云的可靠信息共享系统 CAISS++的设计。我们讨论了 CAISS、CAISS+和一个演示系统的一系列实现。在第 16 章中，我们讨论了基于语义 Web 工具的可扩展细粒度在线社交网络访问控制模型的设计与实现。此外，我们提出了使用 OWL 和 SWRL 建模的授权、管理和过滤策略。支持该模型的框架架构也已呈现。我们还描述了基于语义 Web 工具的可扩展细粒度在线社交网络访问控制模型的实现。具体而言，我们讨论了使用 OWL 和 SWRL 建模的授权、管理和过滤策略的实现。在第 17 章中，我们描述了数据溯源推理控制器的实现。推理控制器采用模块化方法构建，因此非常灵活，大多数模块均可由另一个应用模块扩展或替换。例如，应用用户可以替换处理高层策略解析为低层策略对象的策略解析器模块。这种替换将允许应用用户继续使用其业务策略，而独立于我们的溯源推理控制器软件实现。本质上，我们遵循了一种“即插即用”的方法来实现推理控制器。我们在实现中尽可能多地使用了开源产品。我们为溯源数据推理控制实现的技术可应用于各类大数据系统。
+# 第三部分
+
+第三部分包含五个第 10 章、第 11 章、第 12 章、第 13 章和第 14 章，讨论了安全和隐私感知的数据科学。在第 10 章中，我们讨论了对抗性支持向量机学习。我们考虑了两种攻击模型：一种是允许任意数据损坏的自由攻击模型，另一种是预期合理对手在惩罚机制下会设计的更现实攻击的受限攻击模型。随后，我们针对这两种攻击模型开发了最优的 `SVM` 学习策略。学习算法在假设对手通过修改数据来最大化损失的前提下，最小化合页损失。实验在人工和真实数据集上均已进行。在第 11 章中，我们讨论了对抗性相关向量机学习。具体而言，我们提出了一种稀疏贝叶斯对抗学习模型。该算法通过最小化训练集中正实例的对数似然，设置单独的核参数来对特征空间中的对抗攻击进行建模。在这种设置下训练的学习模型对包括极具侵略性的攻击在内的各类攻击更具鲁棒性。在第 12 章中，我们讨论了隐私感知数据挖掘。具体而言，我们描述了一种修改后的 `C4.5` 决策树分类器，该分类器适用于隐私保护数据挖掘。该分类器基于扰动数据集构建，且该模型可用于以高准确率对原始数据进行分类。在多方参与全局数据挖掘而不泄露隐私的场景下，与基于密码学的方法相比，我们的算法降低了通信和计算成本。我们的算法基于扰动方案，但跳过了重构原始数据分布的步骤。我们的技术在减少计算时间的同时增强了隐私保护。在第 13 章中，我们讨论了一个面向量化自我应用的隐私感知策略数据管理框架。具体而言，我们描述了一个通用框架，用户不仅可以指定其数据如何被管理，还可以限制来自其连接设备的数据收集，以及对该数据的存储和分析。更确切地说，我们讨论了使用数据收集策略来管控来自各种设备的数据传输，并结合策略确保数据一旦传输完毕，即以安全和隐私保护的方式进行存储和共享。换句话说，我们讨论了一个用于安全数据收集、存储和管理的框架，其逻辑基础支持策略属性的验证。在第 14 章中，我们提出了一个能够处理海量 `RDF` 数据的框架，可用于表示社交网络等大数据系统。由于我们的框架基于 `Hadoop`（一个分布式且高度容错的系统），它自动继承了这两个特性。该框架具有高度可扩展性。我们还在查询处理框架之上基于访问控制开发了安全模型。
+
+# 第四部分
+
+第四部分包含五个第 15 章、第 16 章、第 17 章、第 18 章和第 19 章，讨论了访问控制和数据科学，包括我们开发的经验性系统。在第 15 章中，我们描述了一个基于云的可靠信息共享系统 `CAISS` 的设计与实现。`CAISS` 利用了我们开发的若干技术以及开源工具。我们还描述了一个理想的基于云的可靠信息共享系统 `CAISS++` 的设计。我们讨论了 `CAISS`、`CAISS+` 和一个演示系统的一系列实现。在第 16 章中，我们讨论了基于语义 Web 工具的可扩展细粒度在线社交网络访问控制模型的设计与实现。此外，我们提出了使用 `OWL` 和 `SWRL` 建模的授权、管理和过滤策略。支持该模型的框架架构也已呈现。我们还描述了基于语义 Web 工具的可扩展细粒度在线社交网络访问控制模型的实现。具体而言，我们讨论了使用 `OWL` 和 `SWRL` 建模的授权、管理和过滤策略的实现。在第 17 章中，我们描述了数据溯源推理控制器的实现。推理控制器采用模块化方法构建，因此非常灵活，大多数模块均可由另一个应用模块扩展或替换。例如，应用用户可以替换处理高层策略解析为低层策略对象的策略解析器模块。这种替换将允许应用用户继续使用其业务策略，而独立于我们的溯源推理控制器软件实现。本质上，我们遵循了一种“即插即用”的方法来实现推理控制器。我们在实现中尽可能多地使用了开源产品。我们为溯源数据推理控制实现的技术可应用于各类大数据系统。
 
 本书的附录为数据管理提供了宏观图景，并讨论了我们所撰写的所有书籍如何融为一体。
 
@@ -8359,10 +8010,6 @@ DOI: [10.1201/9781003081845-32](https://doi.org/10.1201/9781003081845-32)
 ![图 20.2 安全数据科学的方向与挑战。](img/fig20_2.jpg)
 
 图 20.2 安全数据科学的方向与挑战。
-
-
-
-
 
 ### 未来工作方向
 
@@ -8378,7 +8025,7 @@ DOI: [10.1201/9781003081845-32](https://doi.org/10.1201/9781003081845-32)
 
 ##### 基于云的恶意软件检测（第 8 章）
 
-我们提出两个方向。首先，我们当前的特征选择过程仅基于信息增益作为选择标准，关注最佳的 `S` 个特征。通过改进特征选择的监督降维技术研究，分类准确率有望进一步提高。其次，通过利用云计算架构中可用的额外并行性，可改进我们方法的运行时性能。例如，集成的分类器可作为 MapReduce 框架中的 Mapper 并行运行，Reducer 聚合结果进行投票。同样，下一个集成的候选分类器可并行训练和评估。
+我们提出两个方向。首先，我们当前的特征选择过程仅基于信息增益作为选择标准，关注最佳的 `S` 个特征。通过改进特征选择的监督降维技术研究，分类准确率有望进一步提高。其次，通过利用云计算架构中可用的额外并行性，可改进我们方法的运行时性能。例如，集成的分类器可作为 `MapReduce` 框架中的 `Mapper` 并行运行，`Reducer` 聚合结果进行投票。同样，下一个集成的候选分类器可并行训练和评估。
 
 ##### 内部威胁检测的流分析（第 9 章）
 
@@ -8408,15 +8055,11 @@ DOI: [10.1201/9781003081845-32](https://doi.org/10.1201/9781003081845-32)
 
 ##### 基于访问控制的安全云查询处理（第 15 章）
 
-我们讨论了大数据系统的访问控制模型。未来的方向包括改进查询优化，以及更好地利用 Hadoop/MapReduce 框架以提高性能。我们还需要研究改进的索引技术。
+我们讨论了大数据系统的访问控制模型。未来的方向包括改进查询优化，以及更好地利用 `Hadoop`/`MapReduce` 框架以提高性能。我们还需要研究改进的索引技术。
 
 ##### 以云为中心的可靠信息共享（第 16 章）
 
 我们讨论了如何在云中安全地共享信息。我们需要通过实现更复杂的策略以及实现分布式版本 `CAISS++` 来增强系统。我们还需要对策略的执行进行形式化分析。
-
-
-
-
 
 ## 20.4 我们何去何从？
 
@@ -8438,18 +8081,6 @@ DOI: [10.1201/9781003081845-32](https://doi.org/10.1201/9781003081845-32)
 
 我们将数据管理系统定义为管理数据、从数据中提取有意义信息并利用所提取信息的系统。因此，数据管理系统包括数据库系统、数据仓库和数据挖掘系统。数据可以是结构化数据，如关系数据库中的数据；也可以是非结构化数据，如文本、语音、图像和视频。过去曾有大量讨论以区分数据、信息和知识。我们不试图澄清这些术语。就我们的目的而言，数据可以只是比特和字节，也可以向用户传达某些有意义的信息。然而，我们将区分数据库系统和数据库管理系统。数据库管理系统是管理包含持久数据的数据库的组件。数据库系统由数据库和数据库管理系统两部分组成。
 
-
-
-
-
-### 附录 A：数据管理系统
-
-数据管理系统演进与互操作的一个关键组成部分是异构数据库系统的互操作性。关于数据库系统间互操作性的研究工作自 20 世纪 70 年代末以来就已有报道。然而，直到最近我们才看到异构数据库系统在商业开发方面的进展。主要数据库系统供应商现在正在提供其产品与其他系统之间的互操作性。此外，许多数据库系统供应商正朝着一种称为**客户端-服务器架构**的架构迁移，这种架构促进了分布式数据管理能力。除了不同数据库系统和客户端-服务器环境之间的互操作性工作外，研究工作还致力于处理自治和联邦环境。
-
-值得注意的是，自 1997 年我们出版第一本书以来的 24 年里，技术已经发生了演变。随着万维网的出现，数据的重要性开始被认识到。在过去的 24 年里，越来越大量的数据被收集、存储、处理和分析。虽然当时的挑战是管理 PB 级数据库，这被称为“大规模数据问题”，但现在已经演变为 ZB 级甚至 EB 级数据库，这被称为“大数据问题”。此外，虽然机器学习技术过去用于处理所谓的“玩具问题”，但现在用于处理“现实世界问题”。这是由于硬件的巨大进步、对数据理解的深入以及更复杂的学习技术，特别是在所谓的“深度学习”领域。因此，只要组织（商业、学术、政府）收集和分析数据，大数据分析就会长期存在。这也意味着我们必须确保在数据生命周期的所有阶段都强制执行安全和隐私策略。我们在本书中解决了其中一些挑战。
-
-本附录的组织结构如下。由于数据库系统是数据管理系统的关键组成部分，我们首先提供数据库系统发展的概述。这些发展在 A.2 节中讨论。然后我们在 A.3 节中提供数据管理系统的愿景。我们的数据管理系统框架在 A.4 节中讨论。请注意，数据挖掘、数据仓库以及 Web 数据管理是该框架的组成部分。基于我们框架并通过特定实例化构建信息系统的内容在 A.5 节中讨论。应注意，A.2 节至 A.5 节摘自我们的第一本书，并在我们随后的每本书中复制。我们为 CRC Press 撰写的各文本之间的关系在 A.6 节中讨论。A.7 节总结了本附录。
-
 ## A.2 数据库系统的发展
 
 图 A.1 概述了数据库系统技术的发展。虽然 20 世纪 60 年代的早期工作集中在基于网状和层次数据模型开发产品，但数据库系统的大部分发展发生在 Codd 发表描述关系模型的开创性论文[CODD1970]之后（另见[DATE1990]）。20 世纪 70 年代初开展了关系数据库系统的研究和开发工作，并在整个 70 年代开发了多个原型。值得注意的工作包括 IBM（国际商业机器公司）的 `System R` 和加州大学伯克利分校的 `INGRES`。20 世纪 80 年代，许多关系数据库系统产品投入市场（其中著名的有 Oracle 公司、Sybase 公司、Informix 公司、INGRES 公司、IBM、数字设备公司和惠普公司的产品）。20 世纪 90 年代，其他供应商的产品也相继出现（例如微软公司）。事实上，迄今为止已有大量关系数据库系统产品上市。然而，Codd 指出，许多作为关系系统销售的系统并非真正的关系系统（参见例如 DATE1990 中的讨论）。随后，他讨论了一个系统要被认定为关系数据库系统必须满足的各种标准。虽然早期工作关注数据模型、范式理论、查询处理和优化策略、查询语言、访问策略和索引等问题，但后来重点转向支持多用户环境。特别是开发了并发控制和恢复技术。也提供了对事务处理的支持。
@@ -8460,27 +8091,25 @@ DOI: [10.1201/9781003081845-32](https://doi.org/10.1201/9781003081845-32)
 
 关系数据库系统和事务管理的研究在 20 世纪 70 年代中期后继之以分布式数据库系统的研究。20 世纪 70 年代末也开始了多项分布式数据库系统原型开发工作。其中值得注意的包括 IBM 的 `System R*`、霍尼韦尔公司的 `DDTS`（分布式数据库测试平台系统）、CCA（美国计算机公司）的 `SDD-I` 和 `Multibase`，以及 SDC（系统开发公司）的 `Mermaid`。此外，许多这类系统（例如 `DDTS`、`Multibase`、`Mermaid`）在异构环境中运行。20 世纪 90 年代初，几家数据库系统供应商（如 Oracle 公司、Sybase 公司、Informix 公司）为其系统提供了数据分发能力。大多数分布式关系数据库系统产品基于**客户端-服务器架构**。其理念是让供应商 A 的客户端与供应商 B 的服务器数据库系统通信。换句话说，**客户端-服务器计算范式**促进了异构计算环境。关系和非关系商业数据库系统之间的互操作性也是可能的。数据库系统社区也参与了标准化工作。标准化工作中值得注意的包括 ANSI/SPARC 三级模式架构、数据字典系统的 `IRDS`（信息资源字典系统）标准、关系查询语言 `SQL`（结构化查询语言）以及用于远程数据库访问的 `RDA`（远程数据库访问）协议。
 
-数据库技术的另一个重大发展是面向对象数据库管理系统的出现。20 世纪 80 年代中期开始了此类系统的主动开发工作，现在已有商业产品可用（其中著名的包括 Object Design 公司、Ontos 公司、Gemstone Systems 公司、Versant Object Technology 公司的产品）。人们认为，多媒体、办公信息系统、CAD/CAM、过程控制和软件工程等新一代应用有不同的需求。此类应用利用复杂的数据结构。同时也希望编程语言与数据模型之间有更紧密的集成。面向对象数据库系统满足了这些新一代应用的大部分需求[CATT1991]。
 
 
+数据库技术的另一个重大发展是面向对象数据库管理系统的出现。20 世纪 80 年代中期开始了此类系统的主动开发工作，现在已有商业产品可用（其中著名的包括 Object Design 公司、Ontos 公司、Gemstone Systems 公司、Versant Object Technology 公司的产品）。人们认为，多媒体、办公信息系统、CAD/CAM、过程控制和软件工程等新一代应用有不同的需求。此类应用利用复杂的数据结构。同时也希望编程语言与数据模型之间有更紧密的集成。面向对象数据库系统满足了这些新一代应用的大部分需求 [CATT1991]。
 
-
-
-### 数据库系统发展概况
+## 数据库系统发展概况
 
 根据 1990 年美国国家科学基金会（NSF）研讨会发布的 Lagunita 报告（参见 [SILB90] 和 [KIM90]），关系数据库系统、事务处理以及分布式（关系）数据库系统被列为成熟技术。此外，厂商正在推销面向对象数据库系统，并演示不同数据库系统之间的互操作性。报告指出，随着应用日益复杂，需要更复杂的数据库系统。而且，由于许多组织现在使用数据库系统，在许多情况下类型各异，因此需要集成这些数据库系统。尽管相关工作已开始，商业产品也已上市，但仍有若干问题有待解决。因此，20 世纪 90 年代初数据库系统研究者面临的挑战主要集中在两个领域：下一代数据库系统和异构数据库系统。
 
-### 下一代数据库系统
+## 下一代数据库系统
 
 下一代数据库系统包括面向对象数据库系统、函数式数据库系统、用于增强数据库系统功能性能的特殊并行架构、高性能数据库系统、实时数据库系统、科学数据库系统、时态数据库系统、处理不完整和不确定信息的数据库系统以及智能数据库系统（有时也称为逻辑或演绎数据库系统）。理想情况下，数据库系统应提供高性能事务处理支持、建模复杂应用、表示新型数据并进行智能推理。虽然 20 世纪 80 年代末和 90 年代初取得了显著进展，但在开发出这样的数据库系统之前仍有大量工作要做。
 
-### 异构数据库系统
+## 异构数据库系统
 
 过去十年间，异构数据库系统受到了相当大的关注 [MARC1990]。主要问题包括处理不同的数据模型、不同的查询处理策略、不同的事务处理算法和不同的查询语言。是否应为整个系统提供统一视图，还是各个系统的用户维护自己对整个系统的视图？这些问题尚未得到令人满意的解答。人们预想，异构数据库管理系统的完整解决方案还需一代人的时间。在研究致力于寻找此类解决方案的同时，也应开展工作以处理有限形式的异构性，以满足客户需求。另一种受到关注的数据库系统是联邦数据库系统。注意，有人将异构数据库系统和联邦数据库系统这两个术语交替使用。虽然异构数据库系统可以是联邦的一部分，但联邦也可以包含同构数据库系统。
 
 Web 用户的爆发式增长以及界面技术的发展，给数据管理研究者带来了更多挑战。NSF 于 1995 年赞助了第二次研讨会，确定了多项新兴技术，这些技术在我们步入 21 世纪时显得至关重要 [WIDO1996]。这些技术包括数字图书馆、超大型数据库管理、数据管理问题、多媒体数据库、数据仓库、数据挖掘、协作计算环境的数据管理以及安全与隐私。20 世纪 90 年代另一项重大发展是对象-关系系统的开发。此类系统结合了面向对象数据库系统和关系数据库系统的优势。此外，许多公司现在专注于将其数据管理产品与 Web 技术集成。最后，许多组织越来越需要将部分遗留数据库和应用迁移到更新的架构和系统，如客户端-服务器架构和关系数据库系统。我们认为，数据管理系统的发展没有止境。随着新技术的开发，数据管理研究和开发将迎来新机遇。
 
-数据管理技术的全貌如 图 A.2 所示。如图所示，传统技术包括数据库设计、事务处理和基准测试。然后是基于数据模型的数据库系统，如关系型和面向对象型。数据库系统可能依赖于其提供的特性，如安全性和实时性。这些数据库系统可能是关系型或面向对象型。还有基于多站点或多处理器的数据库系统，如分布式和异构数据库系统、并行系统以及正在迁移的系统。最后是新兴技术，如数据仓库与挖掘、协作和 Web。任何关于数据管理系统的综合性文本都应涵盖所有这些技术。我们选择了一些相关技术并将其置于一个框架中。该框架在 A.5 节 中描述。
+数据管理技术的全貌如图 A.2 所示。如图所示，传统技术包括数据库设计、事务处理和基准测试。然后是基于数据模型的数据库系统，如关系型和面向对象型。数据库系统可能依赖于其提供的特性，如安全性和实时性。这些数据库系统可能是关系型或面向对象型。还有基于多站点或多处理器的数据库系统，如分布式和异构数据库系统、并行系统以及正在迁移的系统。最后是新兴技术，如数据仓库与挖掘、协作和 Web。任何关于数据管理系统的综合性文本都应涵盖所有这些技术。我们选择了一些相关技术并将其置于一个框架中。该框架在 A.5 节中描述。
 
 ![图 A.2 数据管理系统综合视图](img/appendixa_2.jpg)
 
@@ -8488,7 +8117,7 @@ Web 用户的爆发式增长以及界面技术的发展，给数据管理研究�
 
 ## A.3 现状、愿景与问题
 
-数据管理系统已取得显著进展。然而，正如 图 A.3 所示，许多技术仍是独立的。例如，多媒体系统尚未与数据仓库和挖掘技术成功集成。最终目标是集成多种技术，使准确的数据和信息能在适当时刻产生，并及时分发给用户。我们对数据和信息管理的愿景如 图 A.4 所示。
+数据管理系统已取得显著进展。然而，正如图 A.3 所示，许多技术仍是独立的。例如，多媒体系统尚未与数据仓库和挖掘技术成功集成。最终目标是集成多种技术，使准确的数据和信息能在适当时刻产生，并及时分发给用户。我们对数据和信息管理的愿景如图 A.4 所示。
 
 ![图 A.3 独立系统](img/appendixa_3.jpg)
 
@@ -8503,10 +8132,6 @@ Web 用户的爆发式增长以及界面技术的发展，给数据管理研究�
 ## A.4 数据管理系统框架
 
 对于可演化、可互操作的数据管理系统的成功开发，异构数据库系统集成是主要组成部分。然而，还有其他技术必须相互成功集成，以开发高效访问和共享数据以及从数据中提取信息的技术。为促进数据管理系统的开发，以满足医疗、金融、制造和军事等各个领域应用的需求，我们提出了一个框架，可视为数据管理系统的参考模型。必须集成该框架中的各个组件，以开发支持各种应用的数据管理系统。
-
-
-
-
 
 ### 数据管理系统框架
 
@@ -8524,7 +8149,7 @@ Web 用户的爆发式增长以及界面技术的发展，给数据管理研究�
 
 Figure A.5 Data management systems framework.
 
-构成数据管理系统框架的技术可被视为数据管理领域的一些核心技术。然而，利用数据管理技术（如医疗、金融或军事等）的许多应用需要安全性、完整性、实时处理、容错和高性能计算等特性。我们在 图 A.6 中对此进行了说明，该图给出了一个将数据管理技术与特性及应用相关联的三维视图。例如，可以为医疗应用开发安全的分布式数据库管理系统，或为金融应用开发容错的多媒体数据库管理系统。
+构成数据管理系统框架的技术可被视为数据管理领域的一些核心技术。然而，利用数据管理技术（如医疗、金融或军事等）的许多应用需要安全性、完整性、实时处理、容错和高性能计算等特性。我们在图 A.6 中对此进行了说明，该图给出了一个将数据管理技术与特性及应用相关联的三维视图。例如，可以为医疗应用开发安全的分布式数据库管理系统，或为金融应用开发容错的多媒体数据库管理系统。
 
 ![Figure A.6 A Three-dimensional view of data management.](img/appendixa_6.jpg)
 
@@ -8540,7 +8165,7 @@ Figure A.6 A Three-dimensional view of data management.
 
 我们许多人在许多场合都听说过“信息系统”这一术语。这些系统有时与数据管理系统混用。在我们的术语体系中，信息系统比数据管理系统广泛得多，但它们确实包含数据管理系统。事实上，信息系统框架不仅包含数据管理系统层，还包含支撑技术层和应用技术层。即，信息系统涵盖各类计算系统。它可被视为可用于各种应用的成品。即，硬件处于频谱的最低端，而应用处于最高端。
 
-我们可以结合 图 A.5 的技术来构建信息系统。例如，在应用技术层面，可能需要协作和可视化技术，以便分析师协同执行某些任务。在数据管理层面，可能同时需要多媒体和分布式数据库技术。在支撑层面，可能需要大容量存储以及一些分布式处理能力。这种专用框架如 图 A.7 所示。另一个例子是互操作性专用框架。可能需要一些可视化技术来显示来自异构数据库的集成信息。在数据管理层面，我们有异构数据库系统技术。在支撑技术层面，可使用分布式对象管理技术来封装异构数据库。这种专用框架如 图 A.8 所示。
+我们可以结合图 A.5 的技术来构建信息系统。例如，在应用技术层面，可能需要协作和可视化技术，以便分析师协同执行某些任务。在数据管理层面，可能同时需要多媒体和分布式数据库技术。在支撑层面，可能需要大容量存储以及一些分布式处理能力。这种专用框架如图 A.7 所示。另一个例子是互操作性专用框架。可能需要一些可视化技术来显示来自异构数据库的集成信息。在数据管理层面，我们有异构数据库系统技术。在支撑技术层面，可使用分布式对象管理技术来封装异构数据库。这种专用框架如图 A.8 所示。
 
 ![Figure A.7 Framework for multimedia data management for collaboration.](img/appendixa_7.jpg)
 
@@ -8550,17 +8175,13 @@ Figure A.7 Framework for multimedia data management for collaboration.
 
 Figure A.8 Framework for heterogeneous database interoperability.
 
-最后，让我们通过一个具体例子来说明上述概念。假设一组医生/外科医生想要一个系统，以便他们协作并就各种患者做出决策。这可能是一个医疗视频会议应用。即，在最高层，该应用是医疗应用，更具体地说是医疗视频会议应用。在应用技术层面，需要包括协作和电视会议在内的多种技术。这些应用技术将使用分布式数据库系统和多媒体数据库系统等数据管理技术。即，可能需要支持音频和视频等多媒体数据。数据管理技术反过来又依赖于分布式处理和网络等底层技术。我们在 图 A.9 中对此进行了说明。
+最后，让我们通过一个具体例子来说明上述概念。假设一组医生/外科医生想要一个系统，以便他们协作并就各种患者做出决策。这可能是一个医疗视频会议应用。即，在最高层，该应用是医疗应用，更具体地说是医疗视频会议应用。在应用技术层面，需要包括协作和电视会议在内的多种技术。这些应用技术将使用分布式数据库系统和多媒体数据库系统等数据管理技术。即，可能需要支持音频和视频等多媒体数据。数据管理技术反过来又依赖于分布式处理和网络等底层技术。我们在图 A.9 中对此进行了说明。
 
 ![Figure A.9 Specific example.](img/appendixa_9.jpg)
 
 Figure A.9 Specific example.
 
 总之，信息系统不仅包含数据管理系统，还包含协同计算系统等应用层系统，以及分布式对象管理系统等支撑层系统。
-
-
-
-
 
 ## A.6 文本之间的关系
 
@@ -8576,13 +8197,13 @@ Figure A.9 Specific example.
 *   *Building Trustworthy Semantic Web* [THUR2007]
 *   *Secure Semantic Service-Oriented Systems* [THUR2010]
 
-这些丛书中的最后一本，题为 *Developing and Securing the Cloud* [THUR2014]，是从我们之前的著作 *Secure Semantic Service-Oriented Systems* 演变而来的。所有这些书籍都源于我们在本附录中阐述的框架，并涵盖了框架的不同部分。这些文本之间的联系如 图 A.12 所示。
+这些丛书中的最后一本，题为 *Developing and Securing the Cloud* [THUR2014]，是从我们之前的著作 *Secure Semantic Service-Oriented Systems* 演变而来的。所有这些书籍都源于我们在本附录中阐述的框架，并涵盖了框架的不同部分。这些文本之间的联系如图 A.12 所示。
 
 ![图 A.12 文本之间的关系——系列 I。](img/appendixa_12.jpg)
 
 图 A.12 文本之间的关系——系列 I。
 
-我们在第二套丛书中出版了六本书。第一本题为 *Design and Implementation of Data Mining Tools* [AWAD2009]，第二本题为 *Data Mining Tools for Malware Detection* [MASU2011]。我们的著作 *Secure Data Provenance and Inference Control with Semantic Web* [THUR2015] 是该系列的第三本。我们的著作 *Analyzing and Securing Social Networks* 是该系列的第四本 [THUR2016]。我们之前的著作 *Big Data Analytics with Applications in Insider Threat Detection* 是该系列的第五本 [THUR2017]。我们当前的著作 *Secure Data Science: Integrating Cyber Security and Data Science* 是该系列的第六本 [THUR2021]。这些书籍之间以及与我们之前著作的关系如 图 A.13 所示。
+我们在第二套丛书中出版了六本书。第一本题为 *Design and Implementation of Data Mining Tools* [AWAD2009]，第二本题为 *Data Mining Tools for Malware Detection* [MASU2011]。我们的著作 *Secure Data Provenance and Inference Control with Semantic Web* [THUR2015] 是该系列的第三本。我们的著作 *Analyzing and Securing Social Networks* 是该系列的第四本 [THUR2016]。我们之前的著作 *Big Data Analytics with Applications in Insider Threat Detection* 是该系列的第五本 [THUR2017]。我们当前的著作 *Secure Data Science: Integrating Cyber Security and Data Science* 是该系列的第六本 [THUR2021]。这些书籍之间以及与我们之前著作的关系如图 A.13 所示。
 
 ![图 A.13 文本之间的关系——系列 II。](img/appendixa_13.jpg)
 
@@ -8603,39 +8224,52 @@ Figure A.9 Specific example.
 *   [KIM1990] W. Kim (Ed.), *Directions for Future Database Research & Development*, ACM SIGMOD Record, Volume 19, #4, 1990, 4–5.
 *   [MARC1990] S.T. March (Ed.), *Special Issue on Heterogeneous Database Systems*, ACM Computing Surveys, 1990, Volume 22, #3.
 *   [MASU2011] M. Masud, B. Thuraisingham, L. Khan, *Data Mining Tools for Malware Detection*, CRC Press, Boca Raton, FL, 2011.
+
+
+
+# 参考文献
+
 *   [SILB1990] A. Silberschatz, M. Stonebrakerm, J.D. Ullman (Eds), *Database systems: Achievements and Opportunities*, The “Lagunita” Report of the NSF Invitational Workshop on the Future of Database Systems Research, February 22–23, Palo Alto, CA (TR-90-22), Department of Computer Sciences, University of Texas at Austin, Austin, TX (also in ACM SIGMOD Record, December 1990, 1990).
+
 *   [THUR1997] B. Thuraisingham, *Data Management Systems: Evolution and Interoperation*, CRC Press, Boca Raton, FL, 1997.
+
 *   [THUR1998] B. Thuraisingham, *Data Mining: Technologies, Techniques, Tools and Trends*, CRC Press, Boca Raton, FL, 1998.
+
 *   [THUR2000] B. Thuraisingham, *Web Data Management and Electronic Commerce*, CRC Press, Boca Raton, FL, 2000.
+
 *   [THUR2001] B. Thuraisingham, *Managing and Mining Multimedia Databases for the Electronic Enterprise*, CRC Press, Boca Raton, FL, 2001.
+
 *   [THUR2002] B. Thuraisingham, *XML, Databases and The Semantic Web*, CRC Press, Boca Raton, FL, 2002.
+
 *   [THUR2003] B. Thuraisingham, *Web Data Mining Applications in Business Intelligence and Counter-terrorism*, CRC Press, Boca Raton, FL, 2003.
+
 *   [THUR2005] B. Thuraisingham, *Database and Applications Security: Integrating Data Management and Information Security*, CRC Press, Boca Raton, FL, 2005.
 
+*   [THUR2007] B. Thuraisingham, *Building Trustworthy Semantic Webs*, CRC Press, Boca Raton, FL, 2007.
 
+*   [THUR2010] B. Thuraisingham, *Secure Semantic Service-Oriented Systems*, CRC Press, Boca Raton, FL, 2010.
 
+*   [THUR2014] B. Thuraisingham, *Developing and Securing the Cloud*, CRC Press, Boca Raton, FL, 2013.
 
+*   [THUR2015] B. Thuraisingham, T. Cadenhead, M. Kantarcioglu, V. Khadilkar, *Secure Data Provenance and Inference Control with Semantic Web*, CRC Press, Boca Raton, FL, 2014.
 
-## 参考文献
+*   [THUR2016] B. Thuraisingham, S. Abrol, R. Heatherly, M. Kantarcioglu, V. Khadilkar, L. Khan, *Analyzing and Securing Social Networks*, CRC Press, 2016.
 
-*   **[THUR2007]** B. Thuraisingham, *Building Trustworthy Semantic Webs*, CRC Press, Boca Raton, FL, 2007.
-*   **[THUR2010]** B. Thuraisingham, *Secure Semantic Service-Oriented Systems*, CRC Press, Boca Raton, FL, 2010.
-*   **[THUR2014]** B. Thuraisingham, *Developing and Securing the Cloud*, CRC Press, Boca Raton, FL, 2013.
-*   **[THUR2015]** B. Thuraisingham, T. Cadenhead, M. Kantarcioglu, V. Khadilkar, *Secure Data Provenance and Inference Control with Semantic Web*, CRC Press, Boca Raton, FL, 2014.
-*   **[THUR2016]** B. Thuraisingham, S. Abrol, R. Heatherly, M. Kantarcioglu, V. Khadilkar, L. Khan, *Analyzing and Securing Social Networks*, CRC Press, 2016.
-*   **[THUR2017]** B. Thuraisingham, P. Praveen, M. Masud, L. Khan, *Big Data Analytics with Applications in Insider Threat Detection*, CRC Press, Boca Raton, FL, 2017.
-*   **[THUR2021]** B. Thuraisingham, M. Kantarcioglu, L. Khan, *Secure Data Science: Integrating Cyber Security and Data Science*, CRC Press, Boca Raton, FL, 2021.
-*   **[WIDO1996]** J. Widom, Ed., *Proceedings of the Database Systems Workshop*, Report published by the National Science Foundation, 1995 (also in *ACM SIGMOD Record*, March 1996, Vol 25 (1), Database Research: Achievements and Opportunities into the 21st Century.
+*   [THUR2017] B. Thuraisingham, P. Praveen, M. Masud, L. Khan, *Big Data Analytics with Applications in Insider Threat Detection*, CRC Press, Boca Raton, FL, 2017.
+
+*   [THUR2021] B. Thuraisingham, M. Kantarcioglu, L. Khan, *Secure Data Science: Integrating Cyber Security and Data Science*, CRC Press, Boca Raton, FL, 2021.
+
+*   [WIDO1996] J. Widom, Ed., *Proceedings of the Database Systems Workshop*, Report published by the National Science Foundation, 1995 (also in *ACM SIGMOD Record*, March 1996, Vol 25 (1), Database Research: Achievements and Opportunities into the 21st Century.
 
 # 索引
 
 ## A
 
 *   **ABAC** (基于属性的访问控制模型), 290
-*   **访问控制**, 6, *6*
+*   **访问控制**, 6, 6
     *   框架, 344–345
 *   **访问控制授权**, 340
-*   **访问控制策略**, 16–20, *17*. *另请参阅* 安全策略
+*   **访问控制策略**, 16–20, 17. *另请参阅* 安全策略
     *   组装器, 377
     *   基于属性的访问控制, 20
     *   基于授权的, 17–18
@@ -8667,7 +8301,7 @@ Figure A.9 Specific example.
     *   定义, 342
     *   评估, 343–344
 *   **AdminAll** 属性, 341
-*   **管理策略**, 20, *21*. *另请参阅* 安全策略
+*   **管理策略**, 20, 21. *另请参阅* 安全策略
 *   **AdminRead** 属性, 340–341
 *   **对抗攻击模型**, 179–182
     *   自由攻击, 179–180
@@ -8677,10 +8311,10 @@ Figure A.9 Specific example.
 *   **对抗机器学习**, 5, 77
 *   **对抗相关向量机**
     *   算法, 201–202
-    *   人工数据集, 202–205, **204**, *204*, *206*
+    *   人工数据集, 202–205, 204, 204, 206
     *   真实数据集, 205–206
-    *   垃圾邮件库, 205, **207**
-    *   网页垃圾邮件, 205, **207**
+    *   垃圾邮件库, 205, 207
+    *   网页垃圾邮件, 205, 207
 *   **对抗支持向量机学习**, 175–193
     *   靠近分离边界的杂乱数据, 186–188
     *   数据点, 186
@@ -8688,8 +8322,8 @@ Figure A.9 Specific example.
     *   对比自由攻击模型, 182–184
     *   攻击模型中的参数, 192–193
     *   对比受限攻击模型, 184–185
-    *   垃圾邮件库, 190–191, **191**
-    *   网页垃圾邮件, 190–191, **192**
+    *   垃圾邮件库, 190–191, 191
+    *   网页垃圾邮件, 190–191, 192
 *   **聚合问题**, 366
 *   **AllValuesFromRestriction**, 376
 *   **Amazon DynamoDB Accelerator**, 52
@@ -8705,8 +8339,8 @@ Figure A.9 Specific example.
 *   **应用模式**, 362–363
 *   **曲线下面积 (AUC)**, 101
 *   **人工智能 (AI)**, 在交通物联网中, 394–395, 397–398
-*   **人工神经网络 (ANN)**, 29, 31–32, *32*
-*   **汇编代码序列**, **104**
+*   **人工神经网络 (ANN)**, 29, 31–32, 32
+*   **汇编代码序列**, 104
 *   **装配特征检索 (AFR)**, 88, 96–97
 *   **装配特征集 (AFS)**, 94
 *   **装配 n-gram 特征**, 94–95
@@ -8717,7 +8351,7 @@ Figure A.9 Specific example.
 *   **基于属性的访问控制**, 20
 *   **Auer, P.**, 196
 *   **认证**, 20–21
-*   **授权规则**, *18*
+*   **授权规则**, 18
 *   **基于授权的访问控制策略**, 17–18
 *   **授权**, 339–341
     *   访问控制, 340
@@ -8743,16 +8377,11 @@ Figure A.9 Specific example.
 *   **良性可执行文件**, 127
 *   **Bertino, Elisa**, 70
 *   **BestK**, 138, 139
-*   **大数据**, *68*
+*   **大数据**, 68
     *   面向大数据的访问控制策略, 255–256
 
-
-
-
-
-# 索引
-
 ## D
+
 *   **defined**, 2
 *   **insider threat detection and**, 150–151
 *   **big data analytics**, 2–3, 3
@@ -8789,274 +8418,44 @@ Figure A.9 Specific example.
 *   **byte**, 91
 
 ## C
+
 *   **C4.5 algorithm**, 98, 211–212
 *   **CAISS (Cloud-centric Assured Information Sharing System)**, 290
-*   **design**, 297–298
-*   **design philosophy**, 296–297
-*   **enhanced policy engine**, 298
-*   **enhanced SPARQL query processor**, 298–299
-*   **Hadoop storage architecture**, 300
-*   **integration framework**, 299–300
-*   **limitations**, 300
-*   **operation**, 299
-*   **policy engine**, 300
-*   **prototype overview**, 299
-*   **SPARQL query processor**, 300
-*   **system design**, 296–310
+    *   design, 297–298
+    *   design philosophy, 296–297
+    *   enhanced policy engine, 298
+    *   enhanced SPARQL query processor, 298–299
+    *   Hadoop storage architecture, 300
+    *   integration framework, 299–300
+    *   limitations, 300
+    *   operation, 299
+    *   policy engine, 300
+    *   prototype overview, 299
+    *   SPARQL query processor, 300
+    *   system design, 296–310
 *   **CAISS++**, 300
-*   **architecture**, 314–322, 315
-*   **access control policy engine**, 317–318
-*   **data layer**, 321–322
-*   **information sharing policy engine**, 318–319
-*   **policy engines**, 317
-*   **policy sequence**, 321
-*   **provenance policy engines**, 319–321
-*   **redaction policy engine**, 318
-*   **rule sequence**, 321
-*   **user interface layer**, 316
-*   **user registration**, 316
-*   **assured information sharing prototypes**, 313
-*   **centralized**, 301–303
-*   **configuration view**, 315
-*   **decentralized**, 301–303
-*   **design**, 300–301
-*   **distributed processing of SPARQL**, 308–309
-*   **formal policy analysis**, 309–310
-*   **framework integration**, 309
-*   **hybrid**, 304–307
-*   **hybrid layout**, 308
-*   **implementation of**, 314–324
-*   **naming conventions**, 307
-*   **policy engine framework**, 322–324
-*   **conditional policies**, 322
-*   **deployment models**, 323
-*   **develop and scale policies**, 322
-*   **justification of resources**, 323
-*   **location independence**, 323
-*   **policy development**, 323
-*   **policy reciprocity**, 322
-*   **policy specification and enforcement**, 323–324
-*   **policy symmetry**, 322
-*   **rapid elasticity**, 323
-*   **sequencing effects**, 323
-*   **policy specification and enforcement**, 309
-*   **pre-processing**, 312
-*   **query execution and optimization**, 312
-*   **RDF policy engine**, 312–313, 313
-*   **scenario**, 301
-*   **secure data storage and retrieval in the cloud**, 310–311
-*   **SPARQL query processor**, 311
-*   **vertically partitioned layout**, 307–308
-*   **Calgary dataset**, 148
-*   **cardinality restrictions**, 376
-*   **Cassandra**, 48, 69, 70
-*   **Cassandra Query Language (CQL)**, 48
-*   **Center for Education and Research in Information Assurance and Security (CERIAS)**, 239
-*   **centralized CAISS++**, 301–303, 304. *See also* CAISS++
-*   **centroid**, 115
-*   **Cesa-Bianchi, N.**, 196
-*   **cheating dictator**, 369–370. *See also* provenance
-*   **Chubby**, 151
-*   **civil liberties**, 256–257
-*   **data mining**, 250–251
-*   **overview**, 249–250
-*   **versus safety and security**, 257
-*   **classification**, 30, 61
-*   **close friend**, 333
-*   **CloseFriend subclass**, 334
-*   **closure algorithm**, 196
-*   **cloud computing**, 43–44, 49–53
-*   **cloud data management**, 51–52, 52
-*   **cloud storage**, 51, 51–52
-*   **for malware detection**, 129
-*   **models**, 49–50
-*   **deployment models**, 49, 49
-*   **service models**, 49–50, 50
-*   **platforms**, 52–53
-*   **Amazon Web Services' DynamoDB**, 52
-*   **Google**, 53
-*   **IBM**, 52–53
-*   **Microsoft Azure's Cosmos DB**, 52
-*   **secure data storage and retrieval**, 324
-*   **semantic web**, 57–59
-*   **virtualization**, 50–51, 51
-*   **cloud data**, 3
-*   **cloud data management**, 51–52, 52
-*   **cloud query processing system**, 267–291
-*   **approach**, 268–270
-*   **architecture**, 272–274
-*   **access control models**, 274
-*   **data generation and storage**, 273
-*   **file generation**, 273
-*   **operational**, 272
-*   **predication split**, 273
-*   **split using explicit type information of object**, 273
-*   **split using implicit type information of object**, 274
-*   **system**, 272
-*   **baseline frameworks**, 285
-*   **datasets**, 284
-*   **hardware**, 285
-
-
-
-
-
-# 索引
-
-## H
-*   **基于 Hive 的**, *311*
-
-## M
-*   **MapReduce 框架**, 274–284
-    *   通过汇总统计打破平局, 282–283
-    *   查询处理的成本估算, 275–279
-    *   输入文件选择, 274–275
-    *   连接执行, 283–284
-    *   查询计划生成, 279–282
-    *   概述, 267–268
-    *   安全扩展, 287–291
-        *   访问令牌分配, 289
-        *   冲突, 289–290
-        *   基于令牌的访问控制模型, 287–288
-        *   基于 XACML 的访问控制, 290–291
-    *   软件, 285
-
-## C
-*   **Cloudant**, 53
-*   **基于云的恶意软件检测**, 127–141
-    *   基线方法, 数据集, 139
-    *   用于恶意软件检测的云计算, 129
-    *   数据流分类问题, 127–129
-    *   数据集, 138–139
-        *   僵尸网络, 138
-        *   合成, 138
-    *   分布式特征提取/选择, 136–138
-    *   经验误差减少, 133
-    *   集成构建与更新, 132
-    *   误差减少分析, 132–133
-    *   Hadoop 分布式系统搭建, 139
-    *   Hadoop MapReduce 框架, 133–134
-    *   恶意代码检测, 134–138
-    *   恶意软件, 数据集, 138–139
-    *   非分布式特征提取/选择, 136
-    *   时间复杂度, 133
-*   **聚类**, 30, 61, 115
-*   **协作数据挖掘, 隐私保护**, 72
-*   **协作推荐, 挖掘**, 232
-*   **兴趣社区**, 60
-*   **完全消除**, 280
-*   **概念漂移**
-    *   数据流, 127–128, *157*
-    *   多态恶意软件, 135
-    *   合成数据集, 138
-*   **机密性**, 255–256
-*   **冲突解决**, 17
-*   **冲突 MapReduce 连接 (CMRJ)**, 276
-*   **约束**
-    *   实现, 386–388
-    *   用于约束的查询修改, 387–388
-*   **接触者追踪**, 252
-*   **Cosmos DB**, 52
-*   **查询处理的成本估算**, 275–279
-    *   启发式模型, 278–279
-    *   理想模型, 276–277
-    *   查询计划生成, 279–282
-*   **CouchDB**, 48, 314
-*   **COVID-19 大流行**
-    *   访问控制策略与, 255–256
-    *   检测与预测, 251–252
-    *   概述, 249–250
-*   **爬虫**, 372
-*   **信用卡欺诈**, 38, 128
-*   **信用卡交易**, 128
-*   **CStore**, 271
-*   **累积和 (CUSUM)**, 395
-*   **网络安全**
-    *   用于网络安全的数据挖掘, 39, *40*
-    *   用于网络安全的数据科学, 4, *5*
-    *   在智能交通系统中, 394–395
-    *   威胁, 37–39
-        *   对关键基础设施的攻击, 38–39
-        *   信用卡欺诈, 38
-        *   网络恐怖主义, 37–38
-        *   外部威胁, 37–38
-        *   身份盗窃, 38
-        *   内部威胁, 37–38
-        *   恶意入侵, 38
-        *   威胁类型, 38
-*   **网络恐怖主义**, 37–38
-
-## D
-*   **Dalvi, N.**, 176, 196
-*   **数据获取**, 76, 255
-*   **数据收集, 隐私影响**, 252
-*   **数据收集层**, 229
-*   **数据机密性**, 73–76
-*   **数据控制者**, 357
-*   **数据关联, 隐私保护**, 74
-*   **数据层**, 321–322
-*   **数据生命周期框架**, 255
-*   **数据管理系统**
-    *   综合视图, *415*
-    *   发展, 412–414
-    *   框架, 416–417, *417*
-        *   从...构建信息系统, 417–419
-        *   用于异构数据库互操作性, *419*
-        *   用于协作的多媒体数据管理, *419*
-    *   问题, 414–416
-    *   面向对象, 413
-    *   概述, 411–412
-    *   出版物, 419–423
-    *   独立系统, *415*
-    *   状态, 414–416
-    *   三维视图, *418*
-    *   愿景, 414–416, *415*
-*   **数据匹配, 隐私保护**, 72
-*   **数据挖掘**, 29–41
-    *   对抗性, 5, 77
-    *   公民自由与, 250–251
-    *   协作式, 72
-    *   用于网络安全, 39, *40*
-    *   本地与全局, 220
-    *   国家安全与, 250–251
-    *   概述, 29–30
-    *   隐私与, 250–251
-    *   隐私增强, 39–41, *40*
-    *   隐私保护, *210*, 232
-    *   安全与, *30*
-    *   用于社交网络, 61
-    *   任务, *31*
-    *   技术, 30–37, *31*
-        *   人工神经网络 (ANN), 31–32
-        *   决策树, 36
-        *   马尔可夫模型, 34–35
-        *   多类问题, 36–37
-        *   支持向量机 (SVM), 32–34
-    *   工具设计, 91–98
-        *   混合特征检索 (HFR) 模型, 95–98
-        *   *n*-gram 特征提取, 91–95
-*   **数据所有权**, 75, 254
-*   **数据隐私**, 25–26
-    *   数据安全与, 16
-    *   多目标框架, 252–255
-    *   策略, 75, 254
-*   **数据发布**, 75, 254
-*   **数据质量, 隐私含义**, 75
-*   **数据范围**, 376
-*   **数据科学**, 2–3, *3*
-    *   访问控制与, *6*, 6
-    *   挑战, *406*
-    *   基于云的, 127–141
-    *   用于 COVID-19 检测与预测, 251–252
-    *   用于网络安全, 4, *5*
-    *   定义, 1
-    *   方向, *406*, 406–408
-    *   用于内部威胁检测, 145–164
-    *   用于恶意可执行文件, 87–106
-    *   概述, 1–2
-    *   隐私感知量化自我数据管理框架, 227–243
-
-
+    *   architecture, 314–322, 315
+    *   access control policy engine, 317–318
+    *   data layer, 321–322
+    *   information sharing policy engine, 318–319
+    *   policy engines, 317
+    *   policy sequence, 321
+    *   provenance policy engines, 319–321
+    *   redaction policy engine, 318
+    *   rule sequence, 321
+    *   user interface layer, 316
+    *   user registration, 316
+    *   assured information sharing prototypes, 313
+    *   centralized, 301–303
+    *   configuration view, 315
+    *   decentralized, 301–303
+    *   design, 300–301
+    *   distributed processing of SPARQL, 308–309
+    *   formal policy analysis, 309–310
+    *   framework integration, 309
+    *   hybrid, 304–307
+    *   hybrid layout, 308
+    *   implementation of, 314–324
 
 
 
@@ -9064,131 +8463,365 @@ Figure A.9 Specific example.
 
 ## A
 
-*   隐私保护决策树，209–225
-*   安全与隐私增强，4–5，5
-*   流分析，109–125
-*   数据科学与人工智能 (DS/AI)，249–250
-*   数据安全
-*   数据隐私与，16
-*   概述，15–16
-*   策略执行，22–25
-*   数据库函数，24–25
-*   自主安全，24–25
-*   查询修改，23–24
-*   安全 SQL 扩展，23
-*   安全策略，16–22
-*   访问控制策略，16–20
-*   管理策略，20
-*   数据库系统审计，21
-*   标识与认证，20–21
-*   视图，21–22
-*   数据服务货币化，75，254
-*   数据共享，76，255
-*   数据流
-*   分类，127–129
-*   无限长度，127，130–131
-*   数据库管理员 (DBA)，20
-*   数据库
-*   数据库系统审计，21
-*   函数，24–25
-*   自主安全与，24–25
-*   安全对...的影响，26
-*   ...中的不完整信息，384
-*   虚拟化，50
-*   数据集
-*   僵尸网络，138
-*   恶意软件，138–139
-*   合成，138
-*   去中心化 CAISS++，303。*另请参阅* CAISS++
-*   优缺点，304
-*   决策树，29，36，87，88，98，212
-*   构建，211–212
-*   连续属性离散化，212
-*   分裂准则，212
-*   自由度，100
-*   派生装配特征 (DAFs)，87，88，96
-*   描述逻辑，302
-*   描述逻辑 (DL)，55
-*   描述逻辑规则组装器，375–376
-*   自主访问控制 (DAC)，317
-*   自主安全，24–25
-*   自主安全策略，16
-*   分布式特征提取与选择，136–138，137
-*   分布式推理器 (DR)，301–303，325
-*   域，377
-*   域限制，367
-*   动态链接库 (DLL)，88，90
-*   调用特征，100
-*   函数调用特征，95
-*   Dynamo，151
-*   DynamoDB，52
+*   **隐私保护决策树**，209–225
+*   **安全与隐私增强**，4–5，5
+*   **流分析**，109–125
+*   **数据科学与人工智能 (DS/AI)**，249–250
+*   **数据安全**
+*   **数据隐私与**，16
+*   **概述**，15–16
+*   **策略执行**，22–25
+*   **数据库函数**，24–25
+*   **自主安全**，24–25
+*   **查询修改**，23–24
+*   **安全 SQL 扩展**，23
+*   **安全策略**，16–22
+*   **访问控制策略**，16–20
+*   **管理策略**，20
+*   **数据库系统审计**，21
+*   **标识与认证**，20–21
+*   **视图**，21–22
+*   **数据服务货币化**，75，254
+*   **数据共享**，76，255
+*   **数据流**
+*   **分类**，127–129
+*   **无限长度**，127，130–131
+*   **数据库管理员 (DBA)**，20
+*   **数据库**
+*   **数据库系统审计**，21
+*   **函数**，24–25
+*   **自主安全与**，24–25
+*   **安全对...的影响**，26
+*   **...中的不完整信息**，384
+*   **虚拟化**，50
+*   **数据集**
+*   **僵尸网络**，138
+*   **恶意软件**，138–139
+*   **合成**，138
+*   **去中心化 CAISS++**，303。*另请参阅* CAISS++
+*   **优缺点**，304
+*   **决策树**，29，36，87，88，98，212
+*   **构建**，211–212
+*   **连续属性离散化**，212
+*   **分裂准则**，212
+*   **自由度**，100
+*   **派生装配特征 (DAFs)**，87，88，96
+*   **描述逻辑**，302
+*   **描述逻辑 (DL)**，55
+*   **描述逻辑规则组装器**，375–376
+*   **自主访问控制 (DAC)**，317
+*   **自主安全**，24–25
+*   **自主安全策略**，16
+*   **分布式特征提取与选择**，136–138，137
+*   **分布式推理器 (DR)**，301–303，325
+*   **域**，377
+*   **域限制**，367
+*   **动态链接库 (DLL)**，88，90
+*   **调用特征**，100
+*   **函数调用特征**，95
+*   **Dynamo**，151
+*   **DynamoDB**，52
+
+## C
+
+*   **Calgary dataset**，148
+*   **cardinality restrictions**，376
+*   **Cassandra**，48，69，70
+*   **Cassandra Query Language (CQL)**，48
+*   **Center for Education and Research in Information Assurance and Security (CERIAS)**，239
+*   **centralized CAISS++**，301–303，304。*See also* CAISS++
+*   **centroid**，115
+*   **Cesa-Bianchi, N.**，196
+*   **cheating dictator**，369–370。*See also* provenance
+*   **Chubby**，151
+*   **civil liberties**，256–257
+*   **data mining**，250–251
+*   **overview**，249–250
+*   **versus safety and security**，257
+*   **classification**，30，61
+*   **close friend**，333
+*   **CloseFriend subclass**，334
+*   **closure algorithm**，196
+*   **cloud computing**，43–44，49–53
+*   **cloud data management**，51–52，52
+*   **cloud storage**，51，51–52
+*   **for malware detection**，129
+*   **models**，49–50
+*   **deployment models**，49，49
+*   **service models**，49–50，50
+*   **platforms**，52–53
+*   **Amazon Web Services' DynamoDB**，52
+*   **Google**，53
+*   **IBM**，52–53
+*   **Microsoft Azure's Cosmos DB**，52
+*   **secure data storage and retrieval**，324
+*   **semantic web**，57–59
+*   **virtualization**，50–51，51
+*   **cloud data**，3
+*   **cloud data management**，51–52，52
+*   **cloud query processing system**，267–291
+*   **approach**，268–270
+*   **architecture**，272–274
+*   **access control models**，274
+*   **data generation and storage**，273
+*   **file generation**，273
+*   **operational**，272
+*   **predication split**，273
+*   **split using explicit type information of object**，273
+*   **split using implicit type information of object**，274
+*   **system**，272
+*   **baseline frameworks**，285
+*   **datasets**，284
+*   **hardware**，285
+*   **Cloudant**，53
+*   **基于云的恶意软件检测**，127–141
+    *   **基线方法**，数据集，139
+    *   **用于恶意软件检测的云计算**，129
+    *   **数据流分类问题**，127–129
+    *   **数据集**，138–139
+        *   **僵尸网络**，138
+        *   **合成**，138
+    *   **分布式特征提取/选择**，136–138
+    *   **经验误差减少**，133
+    *   **集成构建与更新**，132
+    *   **误差减少分析**，132–133
+    *   **Hadoop 分布式系统搭建**，139
+    *   **Hadoop MapReduce 框架**，133–134
+    *   **恶意代码检测**，134–138
+    *   **恶意软件**，数据集，138–139
+    *   **非分布式特征提取/选择**，136
+    *   **时间复杂度**，133
+*   **聚类**，30，61，115
+*   **协作数据挖掘，隐私保护**，72
+*   **协作推荐，挖掘**，232
+*   **兴趣社区**，60
+*   **完全消除**，280
+*   **概念漂移**
+    *   **数据流**，127–128，*157*
+    *   **多态恶意软件**，135
+    *   **合成数据集**，138
+*   **机密性**，255–256
+*   **冲突解决**，17
+*   **冲突 MapReduce 连接 (CMRJ)**，276
+*   **约束**
+    *   **实现**，386–388
+    *   **用于约束的查询修改**，387–388
+*   **接触者追踪**，252
+*   **Cosmos DB**，52
+*   **查询处理的成本估算**，275–279
+    *   **启发式模型**，278–279
+    *   **理想模型**，276–277
+    *   **查询计划生成**，279–282
+*   **CouchDB**，48，314
+*   **COVID-19 大流行**
+    *   **访问控制策略与**，255–256
+    *   **检测与预测**，251–252
+    *   **概述**，249–250
+*   **爬虫**，372
+*   **信用卡欺诈**，38，128
+*   **信用卡交易**，128
+*   **CStore**，271
+*   **累积和 (CUSUM)**，395
+*   **网络安全**
+    *   **用于网络安全的数据挖掘**，39，*40*
+    *   **用于网络安全的数据科学**，4，*5*
+    *   **在智能交通系统中**，394–395
+    *   **威胁**，37–39
+        *   **对关键基础设施的攻击**，38–39
+        *   **信用卡欺诈**，38
+        *   **网络恐怖主义**，37–38
+        *   **外部威胁**，37–38
+        *   **身份盗窃**，38
+        *   **内部威胁**，37–38
+        *   **恶意入侵**，38
+        *   **威胁类型**，38
+*   **网络恐怖主义**，37–38
+
+## D
+
+*   **Dalvi, N.**，176，196
+*   **数据获取**，76，255
+*   **数据收集，隐私影响**，252
+*   **数据收集层**，229
+*   **数据机密性**，73–76
+*   **数据控制者**，357
+*   **数据关联，隐私保护**，74
+*   **数据层**，321–322
+*   **数据生命周期框架**，255
+*   **数据管理系统**
+    *   **综合视图**，*415*
+    *   **发展**，412–414
+    *   **框架**，416–417，*417*
+        *   **从...构建信息系统**，417–419
+        *   **用于异构数据库互操作性**，*419*
+        *   **用于协作的多媒体数据管理**，*419*
+    *   **问题**，414–416
+    *   **面向对象**，413
+    *   **概述**，411–412
+    *   **出版物**，419–423
+    *   **独立系统**，*415*
+    *   **状态**，414–416
+    *   **三维视图**，*418*
+    *   **愿景**，414–416，*415*
+*   **数据匹配，隐私保护**，72
+*   **数据挖掘**，29–41
+    *   **对抗性**，5，77
+    *   **公民自由与**，250–251
+    *   **协作式**，72
+    *   **用于网络安全**，39，*40*
+    *   **本地与全局**，220
+    *   **国家安全与**，250–251
+    *   **概述**，29–30
+    *   **隐私与**，250–251
+    *   **隐私增强**，39–41，*40*
+    *   **隐私保护**，*210*，232
+    *   **安全与**，*30*
+    *   **用于社交网络**，61
+    *   **任务**，*31*
+    *   **技术**，30–37，*31*
+        *   **人工神经网络 (ANN)**，31–32
+        *   **决策树**，36
+        *   **马尔可夫模型**，34–35
+        *   **多类问题**，36–37
+        *   **支持向量机 (SVM)**，32–34
+    *   **工具设计**，91–98
+        *   **混合特征检索 (HFR) 模型**，95–98
+        *   ***n*-gram 特征提取**，91–95
+*   **数据所有权**，75，254
+*   **数据隐私**，25–26
+    *   **数据安全与**，16
+    *   **多目标框架**，252–255
+    *   **策略**，75，254
+*   **数据发布**，75，254
+*   **数据质量，隐私含义**，75
+*   **数据范围**，376
+*   **数据科学**，2–3，*3*
+    *   **访问控制与**，*6*，6
+    *   **挑战**，*406*
+    *   **基于云的**，127–141
+    *   **用于 COVID-19 检测与预测**，251–252
+    *   **用于网络安全**，4，*5*
+    *   **定义**，1
+    *   **方向**，*406*，406–408
+    *   **用于内部威胁检测**，145–164
+    *   **用于恶意可执行文件**，87–106
+    *   **概述**，1–2
+    *   **隐私感知量化自我数据管理框架**，227–243
 
 ## E
 
-*   早期消除启发式，281
-*   EarlyBird，89
-*   E-count，280
-*   El Ghaoui, L.，197
-*   ElephantSQL，53
-*   经验误差减少，133
-*   集成
-*   分类，152
-*   构建，132
-*   监督学习，153–155
-*   无监督学习，152–153
-*   更新，132，133
-*   集成学习，157–159
-*   基于集成的学习，148，151–152
-*   熵，93
-*   误差减少分析，132–133
-*   欧几里得距离，33
-*   解释服务层，378–379
-*   扩展卡尔曼滤波 (EKF)，395
-*   扩展、多分区、多块 (EMPC) 集成学习，132
-*   可扩展访问控制标记语言 (XACML)，268，269，274，295，298，311
+*   **早期消除启发式**，281
+*   **EarlyBird**，89
+*   **E-count**，280
+*   **El Ghaoui, L.**，197
+*   **ElephantSQL**，53
+*   **经验误差减少**，133
+*   **集成**
+    *   **分类**，152
+    *   **构建**，132
+    *   **监督学习**，153–155
+    *   **无监督学习**，152–153
+    *   **更新**，132，133
+*   **集成学习**，157–159
+*   **基于集成的学习**，148，151–152
+*   **熵**，93
+*   **误差减少分析**，132–133
+*   **欧几里得距离**，33
+*   **解释服务层**，378–379
+*   **扩展卡尔曼滤波 (EKF)**，395
+*   **扩展、多分区、多块 (EMPC) 集成学习**，132
+*   **可扩展访问控制标记语言 (XACML)**，268，269，274，295，298，311
 
 ## F
 
-*   Facebook，59，331
-*   衰减因子，152–153
-*   假阴性，101–102
-*   假阳性，101–102
-*   特征演化，128
-*   特征提取
-*   分布式，136，137
-*   非分布式，136
-*   特征选择
-*   分布式，136，137
-*   非分布式，136
-*   特征，130
-*   FENCE 系统，230
-*   过滤，116
-*   过滤策略，337–338
-*   一阶马尔可夫模型，34
-*   森林覆盖，119
-*   形式化策略分析，309–310
-*   前向链接，365
-*   Foutliers，116–117
-*   自由范围攻击，179–180，182–184
-*   朋友的朋友 (FOAF)，333，334
-*   `Friendship` 对象属性，335
-*   `FriendshipRelation` 类，334–335，345
-*   Friendster，331
+*   **Facebook**，59，331
+*   **衰减因子**，152–153
+*   **假阴性**，101–102
+*   **假阳性**，101–102
+*   **特征演化**，128
+*   **特征提取**
+    *   **分布式**，136，137
+    *   **非分布式**，136
+*   **特征选择**
+    *   **分布式**，136，137
+    *   **非分布式**，136
+*   **特征**，130
+*   **FENCE 系统**，230
+*   **过滤**，116
+*   **过滤策略**，337–338
+*   **一阶马尔可夫模型**，34
+*   **森林覆盖**，119
+*   **形式化策略分析**，309–310
+*   **前向链接**，365
+*   **Foutliers**，116–117
+*   **自由范围攻击**，179–180，182–184
+*   **朋友的朋友 (FOAF)**，333，334
+*   **`Friendship` 对象属性**，335
+*   **`FriendshipRelation` 类**，334–335，345
+*   **Friendster**，331
 
 ## G
+
+## H
+
+*   **基于 Hive 的**，*311*
+
+## M
+
+*   **MapReduce 框架**，274–284
+    *   **通过汇总统计打破平局**，282–283
+    *   **查询处理的成本估算**，275–279
+    *   **输入文件选择**，274–275
+    *   **连接执行**，283–284
+    *   **查询计划生成**，279–282
+    *   **概述**，267–268
+    *   **安全扩展**，287–291
+        *   **访问令牌分配**，289
+        *   **冲突**，289–290
+        *   **基于令牌的访问控制模型**，287–288
+        *   **基于 XACML 的访问控制**，290–291
+    *   **软件**，285
+
+## N
+
+*   **naming conventions**，307
+*   **policy engine framework**，322–324
+*   **conditional policies**，322
+*   **deployment models**，323
+*   **develop and scale policies**，322
+*   **justification of resources**，323
+*   **location independence**，323
+*   **policy development**，323
+*   **policy reciprocity**，322
+*   **policy specification and enforcement**，323–324
+*   **policy symmetry**，322
+*   **rapid elasticity**，323
+*   **sequencing effects**，323
+*   **policy specification and enforcement**，309
+*   **pre-processing**，312
+*   **query execution and optimization**，312
+*   **RDF policy engine**，312–313，313
+*   **scenario**，301
+*   **secure data storage and retrieval in the cloud**，310–311
+*   **SPARQL query processor**，311
+*   **vertically partitioned layout**，307–308
+
+
+
+## 索引
 
 *   增益率，212，215，217
 *   高斯分布，216
 *   Gemstone Systems Inc.，413
 *   广义 Map 和 Reduce 工作流 (GMRWs)，58
 *   生成器，379–385
-*   背景，380–383
-*   医院，382
-*   患者，380–381
-*   医生，381
-*   背景信息，379–380
-*   杂项，382–384
-*   工作流，384
+    *   背景，380–383
+    *   医院，382
+    *   患者，380–381
+    *   医生，381
+    *   背景信息，379–380
+    *   杂项，382–384
+    *   工作流，384
 *   全球定位系统 (GPS)，393
 *   Globerson, A.，177，197
 *   Gmail，47
@@ -9215,13 +8848,6 @@ Figure A.9 Specific example.
 *   黑客，37
 *   Hadoop，69，70，150，350
 *   Hadoop 分布式文件系统 (HDFS)，43，151，269，311
-
-
-
-
-
-## H
-
 *   **Hadoop MapReduce 框架**, 6, 133–134
 *   **Hadoop 存储架构**, 324–325
 *   **HadoopProv**, 59
@@ -9377,13 +9003,6 @@ Figure A.9 Specific example.
 *   **libSVM**, 99
 *   **激光雷达系统**, 393
 *   **仅链接类型 (LTO)**, 349
-
-
-
-
-
-## L
-
 *   LinkedIn, 59
 *   位置检测机制, 234
 *   对数似然, 199–200
@@ -9396,42 +9015,42 @@ Figure A.9 Specific example.
 *   对抗性, 5, 77
 *   Mahout, 48, 70, 151
 *   恶意代码检测, 134–138
-*   分布式特征提取与选择, 136–138, *137*
-*   非分布式特征提取与选择, 136
+    *   分布式特征提取与选择, 136–138, *137*
+    *   非分布式特征提取与选择, 136
 *   恶意代码, 87
 *   恶意可执行文件, 87–106, 127
-*   架构, 88
-*   检测, 88, *90*
-*   混合特征检索(HFR)模型, 90
+    *   架构, 88
+    *   检测, 88, *90*
+    *   混合特征检索(HFR)模型, 90
 *   恶意入侵, 38
 *   恶意软件, 37–38
 *   数据集, 138–139
 *   定义, 127
 *   多态性, 134
 *   恶意软件检测
-*   用于云计算, 129
-*   基于云的, *128*
-*   用于云数据科学, 127–141
-*   数据流分类问题, 127–129
-*   基于特征码的, 130–131
-*   用于流分析, 109–125
+    *   用于云计算, 129
+    *   基于云的, *128*
+    *   用于云数据科学, 127–141
+    *   数据流分类问题, 127–129
+    *   基于特征码的, 130–131
+    *   用于流分析, 109–125
 *   强制访问控制(MAC), 317
 *   映射输入(MI)阶段, 277
-*   *Map*键, 134
+*   `Map`键, 134
 *   映射输出(MO)阶段, 277
 *   Map 值, 134
 *   映射器, 137
 *   MapReduce, 43, 70, 268, 350–351
 *   MapReduce 框架, 58–59, 133–134, 150, 274–284
-*   通过汇总统计打破平局, 282–283
-*   查询处理的成本估算, 275–279
-*   输入文件选择, 274–275
-*   连接执行, 283–284
-*   查询计划生成, 279–282
+    *   通过汇总统计打破平局, 282–283
+    *   查询处理的成本估算, 275–279
+    *   输入文件选择, 274–275
+    *   连接执行, 283–284
+    *   查询计划生成, 279–282
 *   MapReduceJoin(MRJ), 276
 *   马尔可夫模型, 29, 34–35
-*   一阶, *34*, 34
-*   二阶, 35, *35*
+    *   一阶, *34*, 34
+    *   二阶, 35, *35*
 *   冒充检测, 89
 *   匹配模式, 362–363
 *   MaxCardinalityRestriction, 376
@@ -9451,8 +9070,8 @@ Figure A.9 Specific example.
 *   MongoDB, 43, 47, 351
 *   最具区分度指令序列(MDIS), 96, 105
 *   多类问题, 36–37
-*   一对多, 36–37
-*   一对一, 36
+    *   一对多, 36–37
+    *   一对一, 36
 *   Multiply, 331
 *   Mydex, 231
 
@@ -9482,12 +9101,12 @@ Figure A.9 Specific example.
 *   非分布式特征提取与选择, 136
 *   NoSQL 数据库, 47, 48, 351
 *   新颖类, 109, 112–113, 119
-*   计算速度, 117
-*   定义, 114
-*   检测, 114–118
-*   实例, 117
-*   标签, 117–118
-*   时间复杂度, 117–118
+    *   计算速度, 117
+    *   定义, 114
+    *   检测, 114–118
+    *   实例, 117
+    *   标签, 117–118
+    *   时间复杂度, 117–118
 *   Nugache P2P 僵尸程序, 138
 
 ## O
@@ -9500,43 +9119,38 @@ Figure A.9 Specific example.
 *   一对一多类问题, 36
 *   在线新颖性与漂移检测算法(OLINDDA), 120
 *   在线社交网络(OSNs)
-*   用于访问控制, *332*
-*   访问控制框架, 344–345
-*   数据生成, 347–350
-*   框架架构, 345–347
-*   RDF 数据存储, 346
-*   RDF/OWL 引擎, 347
-*   推理器, 346–347
-*   由语义 Web 技术建模, 333–336
-*   动作建模, 336
-*   个人信息建模, 334
-*   个人关系建模, 334–335
-*   资源建模, 335
-*   用户/资源关系建模, 335–336
-*   关系类型, 333–334
-*   概述, 331–332
-*   研究, 332–333
-*   可扩展性, 350–351
-*   安全策略, 336–339
-*   访问控制策略, 337
-*   动作规范, 339
-*   管理员策略, 338–339
-*   授权, 339–341
-*   过滤策略, 337–338
-*   对象规范, 339
-*   策略语言, 339
-*   安全规则, 341–342
-*   规范, 339–342
-*   主体规范, 339
-*   安全规则执行, 342–344
-*   访问请求评估, 344
-*   管理员请求评估, 343–344
-
-
-
-
-
-*   方法，342
+    *   用于访问控制, *332*
+    *   访问控制框架, 344–345
+    *   数据生成, 347–350
+    *   框架架构, 345–347
+    *   RDF 数据存储, 346
+    *   RDF/OWL 引擎, 347
+    *   推理器, 346–347
+    *   由语义 Web 技术建模, 333–336
+        *   动作建模, 336
+        *   个人信息建模, 334
+        *   个人关系建模, 334–335
+        *   资源建模, 335
+        *   用户/资源关系建模, 335–336
+    *   关系类型, 333–334
+    *   概述, 331–332
+    *   研究, 332–333
+    *   可扩展性, 350–351
+    *   安全策略, 336–339
+        *   访问控制策略, 337
+        *   动作规范, 339
+        *   管理员策略, 338–339
+        *   授权, 339–341
+        *   过滤策略, 337–338
+        *   对象规范, 339
+        *   策略语言, 339
+        *   安全规则, 341–342
+        *   规范, 339–342
+        *   主体规范, 339
+    *   安全规则执行, 342–344
+        *   访问请求评估, 344
+        *   管理员请求评估, 343–344
+        *   方法，342
 *   本体，57
 *   Ontos Inc.，413
 *   Open Cirrus 测试平台，43
@@ -9545,13 +9159,13 @@ Figure A.9 Specific example.
 *   Oracle NoSQL 数据库，48
 *   Orkut，331
 *   异常值，115–116
-*   检测，115–116
-*   过滤，116
-*   F 异常值，116–117
-*   r 异常值，115–116
+    *   检测，115–116
+    *   过滤，116
+    *   F 异常值，116–117
+    *   r 异常值，115–116
 *   OWL（Web 本体语言），55
 
-P
+## P
 
 *   PAP（策略访问点），290–291
 *   解析过程，374，375
@@ -9569,18 +9183,25 @@ P
 *   扰动数值数据，213–214
 *   医生生成器，381
 *   基于物理的异常检测（PBAD），395
-*   PigLatin，70
-*   PIP（策略信息点），290–291
-*   策略编写工具，233，234
-*   策略执行，22–25
+
+
+
+# 索引
+
+## P
+
+*   **PigLatin**，70
+*   **PIP（策略信息点）**，290–291
+*   **策略编写工具**，233，234
+*   **策略执行**，22–25
     *   数据库函数，24–25
     *   自主安全，24–25
     *   查询修改，23–24
     *   用于安全的 SQL 扩展，23
-*   策略执行引擎，234
-*   策略引擎，317
-*   策略语言，233，234
-*   策略管理，373–378
+*   **策略执行引擎**，234
+*   **策略引擎**，317
+*   **策略语言**，233，234
+*   **策略管理**，373–378
     *   访问控制策略组装器，377
     *   访问控制策略翻译，377
     *   基数限制，376
@@ -9595,19 +9216,19 @@ P
     *   支持限制，376–377
     *   SWRL 策略翻译，374
     *   SWRL 规则组装器，374
-*   策略管理器，357
-*   策略细化，342
-*   策略界面，373，374
-*   策略序列，321
-*   策略翻译，374
-*   政治派别，60
-*   测谎仪，89，130
-*   多态攻击，87
-*   正向授权，17
-*   PPDTC4.5 分类器准确率，221–223，223
-*   存在检测机制，234
-*   主成分分析（PCA），221
-*   隐私，69–70
+*   **策略管理器**，357
+*   **策略细化**，342
+*   **策略界面**，373，374
+*   **策略序列**，321
+*   **策略翻译**，374
+*   **政治派别**，60
+*   **测谎仪**，89，130
+*   **多态攻击**，87
+*   **正向授权**，17
+*   **PPDTC4.5 分类器准确率**，221–223，223
+*   **存在检测机制**，234
+*   **主成分分析（PCA）**，221
+*   **隐私**，69–70
     *   接触者追踪与，252
     *   COVID-19 数据收集与，251–252
     *   数据收集与，252
@@ -9620,9 +9241,9 @@ P
     *   与安全及防护的对比，257
     *   社交网络，62
     *   违规，3
-*   隐私与，数据挖掘与，250–251
-*   隐私度量，211
-*   隐私感知量化自我数据管理框架，227–243
+*   **隐私与**，数据挖掘与，250–251
+*   **隐私度量**，211
+*   **隐私感知量化自我数据管理框架**，227–243
     *   访问控制策略，230–231
     *   架构，229，229–230
     *   行为方面，242
@@ -9641,7 +9262,7 @@ P
     *   隐私保护数据挖掘，232
     *   用户设备安全，242
     *   效用，230–231
-*   隐私保护决策树，209–225
+*   **隐私保护决策树**，209–225
     *   算法复杂度，223–224
     *   C4.5 决策树分类器，220
     *   噪声实例分类，219
@@ -9663,13 +9284,13 @@ P
     *   使用阈值划分训练数据，215–216
     *   使用随机路径选择划分训练数据集，218
     *   停止准则，212
-*   概率异常检测（PAD），146
-*   概率，100，156
-*   禁止，340
-*   授权规则传播，17–18
-*   属性路径，361
-*   属性路径查询，361
-*   来源
+*   **概率异常检测（PAD）**，146
+*   **概率**，100，156
+*   **禁止**，340
+*   **授权规则传播**，17–18
+*   **属性路径**，361
+*   **属性路径查询**，361
+*   **来源**
     *   生成器，379–385
     *   图，385
     *   在医疗领域，371–373
@@ -9680,12 +9301,6 @@ P
     *   医疗示例，385–386
     *   策略管理，373–378
     *   访问控制策略组装器，377
-
-
-
-
-
-# 索引
 
 ## Q
 
@@ -9712,7 +9327,6 @@ P
 *   来源文件，58–59
 *   来源策略引擎，319–321
 *   伪点，115
-
 *   量化自我 (QS) 数据，3，227，229，231–232，235
     *   挖掘，232
 *   量词限制，375，375–376
@@ -9832,15 +9446,6 @@ P
 *   SHARD，151
 *   签名，87，127
 *   签名行为，146，148
-
-
-
-
-
-# 索引
-
-## S
-
 *   **签名数据库**，130
 *   **签名检测**，87，127
 *   **基于签名的恶意软件检测器**，130–131
@@ -9972,6 +9577,12 @@ P
 
 ## W
 
+
+
+# 索引
+
+## W
+
 *   **弱授权**，17
 *   **网络爬虫**，372
 *   **Web 挖掘**，61
@@ -9993,12 +9604,6 @@ P
 *   **工作流**，372–373
     *   标注，384
 
-
-
-
-
-# 索引
-
 ## X
 
 *   **XACML** (eXtensive Access Control Markup Language)，268，269，274，290–291，295，298，311
@@ -10018,4 +9623,3 @@ P
 *   **零知识证明 (ZKPK)**，72
 *   **Zhou, Y.**，197
 *   **ZQL 解析器**，311
-

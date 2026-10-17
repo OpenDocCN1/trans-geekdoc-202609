@@ -1,9 +1,7 @@
+
 # PHP 库开发 101：从基础到高级：PHP 库开发指南：成功的原则、实践与模式
 
-
-
 ![](img/image_rsrc3BY.jpg)
-
 
 ## 前言
 
@@ -19,7 +17,7 @@
 
 ## 致谢
 
-我由衷地感谢那些卓越的评审员，他们为本书的内容贡献了时间和知识。你们宝贵的见解和意见非常珍贵，极大地丰富了书的最终手稿。本书受益于你们的多样视角和对细节的关注关注。
+我由衷地感谢那些卓越的评审员，他们为本书的内容贡献了时间和知识。你们宝贵的见解和意见非常珍贵，极大地丰富了书的最终手稿。本书受益于你们的多样视角和对细节的关注。
 
 此外，我妻子日复一日、夜夜复始的支持，也对我编写这本书并将其呈现给你们提供了巨大的帮助。
 
@@ -29,33 +27,37 @@
 
 这个引言部分为后续内容奠定了坚实的基础，并为读者接下来的精彩旅程做好准备，深入探讨 PHP 社区库构建的复杂性。
 
-### 概述
+## 概述
 
 本书旨在通过深入研究深度 PHP 主题（如面向对象编程、自动加载、命名空间和测试），提升你的 PHP 专业知识。我们将这些概念应用于设计、构建和评估我们自己的 Jazzon PHP 库。让我们花点时间讨论本书涵盖的内容、它为什么对你有利，以及它的目标群体是谁。
 
 {notice} 在书中构建的 Jazzon 库是一个处理 JSON 解析函数的库。这个名字来源于 `JSON` 和 `Jazz` 两个词，为了给它独特且响亮的名字。
 
-### 从书中受益的前提条件
+## 从书中受益的前提条件
 
 为了充分享受并从书中获益，你应该具备：
 
 * 对 `PHP` 有深入理解，包括其核心原理如 `variables`（变量）、`arrays`（数组）、`loops`（循环）、`functions`（函数）和面向对象编程。
+
 * 熟悉 `Composer`、`Git`、`Docker` 和 `PHPUnit` 等技术。
+
 * Web 开发的基础知识。
 
-### 本书的目标
+## 本书的目标
 
 在你将能够：
 
 * 通过设计、编码和测试编写你自己的 `PHP` 库。
+
 * 更好地掌握 `PHP` 命名空间以及自动加载，以便你能够在开发工作中成功使用它们。
+
 * 增强编写 `PHP` 重用代码的能力，从而贡献你自己的 `PHP` 库。
 
-### 这本书是给谁看的？
+## 这本书是给谁看的？
 
 它是为想要提升水平的初级和中级开发者设计的。即使你是经验丰富的开发者，本书也将帮助你刷新知识以及如何构建。
 
-### 搭建舞台
+## 搭建舞台
 
 在整本书中，我们将使用代码示例，这提供了一个绝佳的机会。到书结束时，你将掌握高级 `PHP` 概念并拥有一个可用的库。
 
@@ -80,9 +82,6 @@
 项目背景下 PHP 库的结构概述
 
 ### 它与框架或应用程序有何不同？
-
-
-
 
 另一方面，应用程序是完整的、自包含的软件产品，旨在执行特定任务或为用户提供特定服务而构建。PHP 库是可重用的组件，可以用于构建应用程序，而不是框架或应用程序那样是完整且自包含的产品。它们可以用于各种项目（如框架），或者与其他库轻松集成以构建整个应用程序。
 
@@ -138,13 +137,13 @@ $results = $db->query("SELECT * FROM table");
 
 PHP 库提供了许多优势，从代码重用到社区支持。它们可以轻松简化开发过程，并使构建高质量应用程序变得更加容易。让我们仔细观察其中的一些优势。
 
-### 代码重用
+#### 代码重用
 
 这指的是在多个项目中重用代码的能力，这可以通过使用 `classes`、`functions`或其他可重用组件来实现。PHP 库在这里起着至关重要的作用，因为它们提供了一种方便封装和分发重用代码的方法。想象开发者在构建多个需要发送电子邮件函数的项目时，而不是反复编写相同的代码，他们可以轻松地将其封装在库并在多个项目中重用，而无需每次都重新发明轮子。
 
 ![](img/image_rsrc3C0.jpg)
 
-#### 代码重用示例
+##### 代码重用示例
 
 发送电子邮件的示例：
 
@@ -208,13 +207,13 @@ $emailSender = new EmailSender("smtp.example.com", "username", "password");
 $emailSender->sendEmail("user@example.com", "Welcome!", "Thank you for joining us!");
 ```
 
-### 模块化
+#### 模块化
 
 指的是将大型软件应用程序拆分为更小、更易管理的组件的能力，这些组件可以在各种项目中轻松重用。将应用程序拆分为较小的组件允许开发者创建用于执行特定任务（如身份验证、数据验证、文件处理或发送电子邮件）的 PHP 库。
 
 ![](img/image_rsrc3C1.jpg)
 
-#### 软件开发中模块化的思维图
+##### 软件开发中模块化的思维图
 
 让我们来看代码中模块化的示例，我们将使用之前发送电子邮件的示例：
 
@@ -308,12 +307,7 @@ class Emailer {
 }  
 ```
 
-
-
-### 节省时间和成本
-
-
-
+#### 节省时间和成本
 
 在软件开发中，时间就是金钱。库提供了可重用的代码，可以极大地减少构建应用程序所需的时间和精力。作为回报，这降低了开发成本并使其更容易满足截止日期，因为开发者不需要花费更多时间编写已经存在且可以轻松复用的代码。
 
@@ -365,130 +359,157 @@ $efficientSender = new UsingLibrary\EfficientEmailSender();
 $efficientSender->sendEmail("user2@example.com", "Hello!", "Used a library to send this.");
 ```
 
-### 一致性和标准化
+#### 一致性和标准化
+
 PHP 开发者为常见问题提供了一致且标准的解决方案，而不是让每个开发者都编写自己的解决方案，这样他们可以轻松使用经过证明良好的 PHP 库。这确保了代码的一致性并遵循最佳实践，使其他开发者更容易理解和处理代码，有助于减少错误和 Bug 的概率，并提高代码的可读性。
 
-### 提高代码质量
+#### 提高代码质量
+
 PHP 库通常由经验丰富的开发者编写，他们对 PHP 和软件开发最佳实践有深入的理解。这意味着这些库中的代码质量通常高于从零编写的代码。
 
 通常，PHP 库具有完善的文档和充分的测试，这有助于你确保代码质量。开发者可以利用这些资源来避免常见的错误或问题。
 
-### 社区支持
+#### 社区支持
+
 许多 PHP 库拥有大型且活跃的开发者社区，他们为代码库做出贡献、提供支持并为库的使用提供有用资源。对于使用该库的开发者来说，这是一个非常宝贵的资源，特别是那些新熟悉特定库或在特定问题上需要帮助的开发者。
 
-### 提高可维护性
+#### 提高可维护性
+
 正如前面的优点提到的，使用成熟的库时，你可以利用其提供的社区支持。你可以从库的持续开发和维护中获益，这意味着 Bug 和问题更有可能被快速识别并修复。而且随着时间的推移，库更有可能会更新新的改进和功能。
 
-### 增强协作
+#### 增强协作
+
 上述两个优势直接引出了这一点，因为在不同的应用程序中共享和使用同一个库可以增强开发者之间的协作。这可以导致更精简的开发流程，因为每个人使用相同的代码库，并更高效地协作进行改进。
 
 ### 库的类型
+
 我们已经定义了库以及使用它们的好处。让我们探索一下最流行的 PHP 库类型。
 
-### 框架库
+#### 框架库
+
 正如我们之前讨论过的，PHP 框架带有它们自己的库和工具，这些工具专门设计用于与框架协同工作。这些库提供了大多数 Web 应用程序所需的功能，例如缓存。
 
 框架库的一些示例包括：
+
 * `Symfony` 框架：提供用于验证（Validation）、HTTP 处理和模板渲染的库。
+
 * `Laravel` 框架：提供用于身份验证处理、路由和数据库访问的库。
 
 这些库实际上在两个框架和其他库之间共享，但通常它们以不同的方式实现或使用相同的库。例如，（`Symfony` 和 `Laravel`）都依赖 `PHPUnit` 库进行测试。
 
 ![](img/image_rsrc3C2.jpg)
 
+
+
 Symfony/Laravel 框架使用 `PHPUnit`
 
-#### SDK 库
+## SDK 库
+
 SDK（软件开发包）库是工具和库的集合，提供了访问第三方服务 API 的接口。它让能够能够构建集成这些服务的应用程序。
 
 这些 SDK 库的示例有：
+
 * `Google SDK`：提供对 Google APIs 的访问。
 * `Stripe SDK`：提供对 Stripe APIs 的访问。
 * `AWS SDK`：提供对 AWS APIs 的访问。
 
-#### 第三方库
+## 第三方库
+
 第三方库也称为工具库（Utility Libraries），是 PHP 开发中最常用的 PHP 库。这些库由第三方开发者开发并增加功能。
 
 一些常见的库有：
+
 * `Guzzle`：用于发送 HTTP 请求和处理响应的库。
 * `Monolog`：用于 PHP 应用程序的日志库。
 * `Mailer`：由 Symfony 核心团队构建用于发送邮件的库。
 
-### 测试库
+## 测试库
+
 测试库是提供为应用程序编写自动化测试能力的库集合。这些库的设计旨在让开发者更容易测试应用程序并确保其运行正常。
 
 一些常见的测试库有：
+
 * `PHPUnit`：最流行的 PHP 测试框架。
 * `Behat`：用于行为驱动开发（BDD）测试的库。
 * `Codeception`：可以用于 Web 应用程序的验收测试也可以用于单元测试。
 
-#### 组件库
+### 组件库
+
 这些库是可重用的组件，可以构建整个 Web 应用程序。这些库是模块化的，可以广泛应用于各种应用程序。
 
 常见的组件库有：
+
 * `Doctrine`：数据库抽象层。
 * `Twig` 或 `Blade`：PHP 模板引擎。
 
-#### 自定义库
+### 自定义库
+
 这些库是由 PHP 开发者在内部（特定公司或组织内）为特定项目或目的开发的。这些库旨在用于特定项目，或在组织内部多个项目之间共享。
 
 这些库的示例可以是：
+
 * 一个以特定方式发送电子邮件的库。
 * 一个用于确定用户或服务访问权限的授权库。
+* **过时的库**：使用过时的库可能会让您的应用程序暴露于已知的安全漏洞。
 
+## 性能开销
 
+* **臃肿**：为了微小功能引入大型库会导致应用程序出现不必要的臃肿和性能开销。
+* **开销成本**：某些库可能消耗资源，会影响性能，特别是在资源受限的环境中。
 
+## 学习曲线和开销
 
+* **复杂性**：某些库非常复杂，学习曲线陡峭。开发者可能需要花费大量时间来理解并正确实现它们。
+* **文档质量**：文档记录不全的库会增加开发时间并导致实现错误。
 
-*   **过时的库**：使用过时的库可能会让您的应用程序暴露于已知的安全漏洞。
+## 法律和许可问题
 
-### 性能开销
-*   **臃肿**：为了微小功能引入大型库会导致应用程序出现不必要的臃肿和性能开销。
-*   **开销成本**：某些库可能消耗资源，会影响性能，特别是在资源受限的环境中。
+* **许可证限制**：不同的库带有不同的许可证。某些许可证可能会对您的软件的使用或分发实施限制。
+* **合规性**：确保符合每个库的许可协议是一项挑战，特别是在商业项目中。
 
-### 学习曲线和开销
-*   **复杂性**：某些库非常复杂，学习曲线陡峭。开发者可能需要花费大量时间来理解并正确实现它们。
-*   **文档质量**：文档记录不全的库会增加开发时间并导致实现错误。
+## 缺乏定制化
 
-### 法律和许可问题
-*   **许可证限制**：不同的库带有不同的许可证。某些许可证可能会对您的软件的使用或分发实施限制。
-*   **合规性**：确保符合每个库的许可协议是一项挑战，特别是在商业项目中。
+* **一刀切**：库通常是为了通用情况设计的，可能无法完美适应您的特定需求。
+* **灵活性**：修改库代码进行定制化是具有挑战性的，在某些情况下，这可能会违反库的许可证条款。
 
-### 缺乏定制化
-*   **一刀切**：库通常是为了通用情况设计的，可能无法完美适应您的特定需求。
-*   **灵活性**：修改库代码进行定制化是具有挑战性的，在某些情况下，这可能会违反库的许可证条款。
+## 集成挑战
 
-### 集成挑战
-*   **兼容性**：确保不同库之间或与现有项目代码之间的兼容性具有挑战性。
-*   **更新与维护**：库需要不断更新。更新可能会引入破坏性更改，需要对项目进行大规模的重构。
+* **兼容性**：确保不同库之间或与现有项目代码之间的兼容性具有挑战性。
+* **更新与维护**：库需要不断更新。更新可能会引入破坏性更改，需要对项目进行大规模的重构。
 
-### 缓解风险
+## 缓解风险
+
 尽管有这些缺点，但在 PHP 开发中，使用库是一种常见且通常必要的做法。关键在于通过最佳实践来缓解这些风险，例如：
 
-*   **筛选库**：在使用库之前，仔细评估它们，考虑维护性、社区支持和性能等因素。
-*   **保持更新**：定期将库更新到最新版本以避免安全漏洞。
-*   **使用依赖管理器**：利用 `Composer` 等工具有效率管理依赖项。
-*   **理解许可**：意识到并遵守所用库的许可条款。
+* **筛选库**：在使用库之前，仔细评估它们，考虑维护性、社区支持和性能等因素。
+* **保持更新**：定期将库更新到最新版本以避免安全漏洞。
+* **使用依赖管理器**：利用 `Composer` 等工具有效率管理依赖项。
+* **理解许可**：意识到并遵守所用库的许可条款。
 
 通过意识到这些风险并主动管理它们，开发者可以利用库的力量，同时最大限度地减少潜在的缺点。
 
 # 库开发概述
+
 开发 PHP 库是一个结构化的、逐步进行的过程，以确保结果或产品符合预期并具有高质量。在本节中，让我们检查这些步骤。
 
 ![](img/image_rsrc3C3.jpg)
 
 PHP 库开发流程
 
-### 问题识别
+## 问题识别
+
 在开始编写代码之前，准确识别该库应该解决的具体问题或需求关关重要。识别这些问题不仅是勾勒功能的基础，还能保证在解决问题时的相关性。这好比在出去冒险之前画一张地图。了解了要去哪里，在开发过程中更容易导航，并确保采取的每一步都让你向交付真实价值更近。此外，有了明确的问题陈述，可以减少偏离正轨的情况，从而避免不必要的转向和功能膨胀。
 
-### 库的研究与规划
+## 库的研究与规划
+
 伟大的艺术总是始于规划。在这个阶段，开发者对建立库所需的工具、技术可能需要的框架进行初步研究。此外，考虑其他方面也很重要，例如确保高性能的用户体验以及包含强大的安全功能。这可以被视为为您的库奠定基础。
 
-### 决定结构
+## 决定结构
+
 现在基础工作已经就绪，是时候构建大厦了。这包括选择合适的编程语言、定义组织良好的文件结构并遵循原则和命名约定。架构起着蓝图的作用，这样随着您的库不断成长，每个组件都能完美匹配。
 
-### 编写代码
+## 编写代码
+
 创建库的核心方面在于编码。与其一次性处理所有功能，拆分成较小的部分会有帮助。使用模块化方法可以确保每个部分都经过适当测试。编写代码应专注于库的可重用可维护性，以使其具有生命力和适应性。查看这个解决算术问题的类示例。
 
 ```php
@@ -530,7 +551,8 @@ class AdvancedOperations {
 }
 ```
 
-### 测试库
+## 测试库
+
 编写良好的库不仅是功能性的，而且是可靠的。编码完成后，彻底的测试是必不可少的步骤。它将确保库的功能满足所有要求并通过质量基准。在此阶段应该进行性能和安全测试。`PHPUnit` 等自动化工具可以提高执行测试的速度。测试可以在编码的同时在任何级别进行，因为可以根据反馈立即实施更改。现在让我们为之前写的算术函数编写测试用例。
 
 ```php
@@ -563,10 +585,7 @@ class ArithmeticTest extends TestCase {
 }
 ```
 
-### 文档化库
-
-
-
+## 文档化库
 
 对于一个库要对用户产生影响，清晰度比功能更重要。完整的文档正是为了这一目的。应该重点突出库的目标、特性以及清晰的使用指南。在你的文档中穿插实用的示例，以突出该库的潜力并帮助开发者有效地利用它。让我们看看如何利用代码中的 `DocBlocks` 来为我们的库编写文档。
 
@@ -594,8 +613,11 @@ class Arithmetic {
      *   
      * @example  
      * ```php  
+
      * $math = new Arithmetic();  
+
      * echo $math->add(3, 4); // 输出: 7  
+
      * ```  
      */  
     public function add($a, $b) {  
@@ -613,8 +635,11 @@ class Arithmetic {
      *   
      * @example  
      * ```php  
+
      * $math = new Arithmetic();  
+
      * echo $math->subtract(7, 3); // 输出: 4  
+
      * ```  
      */  
     public function subtract($a, $b) {  
@@ -641,7 +666,7 @@ PHP 库的项目结构是使库成功的至关重要的方面，因为它直接�
 
 PHP 库的项目结构是使库成功的至关重要的方面，因为它直接影响库的可维护性、可扩展性和易用性。设计良好的结构可以更容易导航，而组织不当的结构会降低效率。
 
-### 良好的良好的项目结构
+### 良好的项目结构
 
 通常，它包含了各种
 
@@ -662,9 +687,6 @@ PHP 库的项目结构是使库成功的至关重要的方面，因为它直接�
 * `README.md`: 此文件应包含有关库的信息。
 
 ### 模块化结构
-
-
-
 
 这涉及到库如何被组织成模块或组件，每个模块都有自己独立的目录和命名空间结构。这允许更多的代码复用和极高的灵活性，但在设置和维护方面可能会非常复杂。
 
@@ -691,7 +713,7 @@ jazzon/
 
 在根据选定的项目结构构建 PHP 库时，还有一些需要遵循的最佳实践。
 
-*   **自动加载 (Autoloading)**：这涉及到使用 `PSR-4` 标准进行自动加载。通过执行这一标准，你可以确保类和函数自动加载，而无需在代码中显式地包含它们。这减少了大量的类类加载，从而提高了整个库的可维护性。
+* **自动加载 (Autoloading)**：这涉及到使用 `PSR-4` 标准进行自动加载。通过执行这一标准，你可以确保类和函数自动加载，而无需在代码中显式地包含它们。这减少了大量的类类加载，从而提高了整个库的可维护性。
 
     即自动加载：
 
@@ -703,40 +725,37 @@ jazzon/
     }
     ```
 
-*   **命名规范 (Naming Conventions)**：一致的命名规范可以提高可读性，并有助于保持整个库风格的统一。建议命名空间和类名都遵循 `PSR-4` 命名规范。
+* **命名规范 (Naming Conventions)**：一致的命名规范可以提高可读性，并有助于保持整个库风格的统一。建议命名空间和类名都遵循 `PSR-4` 命名规范。
 
     示例：
 
     ```php
-<?php
-// 声明命名空间以避免类命名冲突并组织相关类。
-namespace Jazzon\\Parser;
+    <?php
+    // 声明命名空间以避免类命名冲突并组织相关类。
+    namespace Jazzon\\Parser;
 
-// 在 'Jazzon\Parser' 命名空间内定义名为 'JsonParser' 的类。
-class JsonParser {}
+    // 在 'Jazzon\Parser' 命名空间内定义名为 'JsonParser' 的类。
+    class JsonParser {}
     ```
 
-*   **使用 Composer 进行依赖管理 (Dependency Management with Composer)**：`Composer` 是一个依赖管理工具，协助轻松管理外部依赖，并确保所有库都能被快速安装和更新。
+* **使用 Composer 进行依赖管理 (Dependency Management with Composer)**：`Composer` 是一个依赖管理工具，协助轻松管理外部依赖，并确保所有库都能被快速安装和更新。
 
-*   **编写文档 (Document Your Code)**：这包括使用 `PHPDoc` 为代码编写注释，并编写清晰的 `README.md` 文件来解释如何使用此库。
+* **编写文档 (Document Your Code)**：这包括使用 `PHPDoc` 为代码编写注释，并编写清晰的 `README.md` 文件来解释如何使用此库。
 
     示例：
 
-```php
-<?php
-/**
- * JsonParser - 负责将 JSON 字符串解析为 PHP 数组的类。
- *
- * @package Jazzon\Parser
- */
-namespace Jazzon\\Parser;
+    ```php
+    <?php
+    /**
+     * JsonParser - 负责将 JSON 字符串解析为 PHP 数组的类。
+     *
+     * @package Jazzon\Parser
+     */
+    namespace Jazzon\\Parser;
 
-// 在 'Jazzon\Parser' 命名空间内定义名为 'JsonParser' 的类。
-class JsonParser {}
-```
-
-
-
+    // 在 'Jazzon\Parser' 命名空间内定义名为 'JsonParser' 的类。
+    class JsonParser {}
+    ```
 
 ```php
 return "Welcome, $name!";  
@@ -747,6 +766,8 @@ return "Welcome, $name!";
 ```
 
 ### JazzonTest.php
+
+
 
 ```php
 <?php  
@@ -817,7 +838,7 @@ class JazzonTest extends TestCase
 }
 ```
 
-### 运行 Jazzon
+## 运行 Jazzon
 
 你可以在提供的资源（`initial-jazzon-library` 目录）中看到整个项目已经作为一个带有测试函数的起点初始化，你只需要关注包含我们库实现的 `Jazzon` 目录。
 
@@ -826,12 +847,15 @@ class JazzonTest extends TestCase
 一旦打开了项目目录，你可以运行以下命令来启动它并查看运行情况：
 
 *   启动所有容器：
+
 `$ docker-compose up -d --build`
 
 *   安装所有依赖项：
+
 `$ docker-compose exec php composer install`
 
 *   运行测试以确保一切正常：
+
 `$ docker-compose exec php ./vendor/bin/phpunit tests/`
 
 我们将有一个名为 `php` 的容器，我们在其中运行该库。
@@ -905,10 +929,6 @@ interface Product {
 
 // 声明一个实现了 Product 接口的类 ConcreteProductA。  
 ```
-
-
-
-
 
 ```php
 class ConcreteProductA implements Product {
@@ -1039,6 +1059,8 @@ echo $coffeeWithMilk->getCost();
 
 * 适配器（Adapter）允许具有不兼容接口的类通过创建一个中间类（将一个请求翻译成另一个）来协同工作。示例：
 
+
+
 ```php
 <?php
 // Old Interface
@@ -1108,9 +1130,6 @@ class Subject {
     public function addObserver(Observer $observer) {
 ```
 
-
-
-
 ```php
 $this->observers[] = $observer;
 }
@@ -1135,13 +1154,13 @@ $subject->addObserver($observer);
 $subject->notify("Hello, observers!");
 ```
 
-*   `Command` 模式有助于将请求封装为对象，允许你用不同的请求对客户端进行参数化、记录或队列请求，并支持撤销操作。
+* `Command` 模式有助于将请求封装为对象，允许你用不同的请求对客户端进行参数化、记录或队列请求，并支持撤销操作。
 
 ![](img/image_rsrc3CC.jpg)
 
-PHP 中 Command 设计模式的结构布局
+PHP 中 `Command` 设计模式的结构布局
 
-*   通过 `Strategy`，用户可以定义一组算法，封装每个算法并使它们可以相互替换，从而允许算法从使用它的客户端独立变化。
+* 通过 `Strategy`，用户可以定义一组算法，封装每个算法并使它们可以相互替换，从而允许算法从使用它的客户端独立变化。
 
 在我们检查了不同类型的设计模式之后，让我们探索它们在库开发中的优势和用法。
 
@@ -1154,7 +1173,9 @@ PHP 中 Command 设计模式的结构布局
 ### PHP 库中常用的模式
 
 I. **单例模式 (Singleton)**：用于确保一个类只能有一个实例，并为其提供一个全局访问点。该模式通常用于资源管理、日志记录和数据库连接。示例：
+
 - 用于日志记录的 `Monolog`
+
 - 用于依赖注入的 `PHP-DI`。
 
 让我们看看 `Singleton` 模式创建数据库连接的示例：
@@ -1186,7 +1207,9 @@ var_dump($db);
 ```
 
 2. **工厂模式 (Factory)**：每当你想在不指定具体类的情况下创建对象时，请使用此模式。当你想要根据某些条件在运行时创建对象，或者确切的对象类型未知时，它非常有用。示例：
+
 - `Laravel` 的 `Factory` 类允许轻松创建模型实例。
+
 - 用于 PHP 测试的 `PHPUnit`。
 
 展示 `Factory` 模式实际运行的示例：
@@ -1232,7 +1255,9 @@ $animal->speak();
 ```
 
 3. **适配器模式 (Adapter)**：每当你想让不兼容的接口一起工作时，请使用此模式。当你也想重用现有代码但它符合你的要求时，它非常有用。示例：
+
 - 用于 HTTP 请求的 `Guzzle`。
+
 - `Monolog` 库使用了这种模式。
 
 展示 `Adapter` 模式实际运行的示例：
@@ -1272,6 +1297,7 @@ $payment->pay(50);
 ```
 
 4. **装饰器模式 (Decorator)**：允许你通过封装在另一个提供这些功能的对象内部，静态或动态地添加对象的特定功能。示例：
+
 - `Guzzle` 通过允许添加中间件来修改请求/响应对象使用了它。
 
 展示 `Decorator` 模式实际运行的示例：
@@ -1305,10 +1331,6 @@ class DatabaseLoggerDecorator implements Logger {
 }
 ```
 
-
-
-
-
 ```php
 echo "\nLogging to database: $message";  
 
@@ -1328,7 +1350,9 @@ $logger->log('Hello, world!');
 ## 策略模式 (Strategy)
 
 这种模式允许你定义一组算法，将每一个算法封装成对象，并使它们可以相互替换。当你想要在运行时切换算法，或者根据某些条件更改算法的行为时，这种模式非常有用。示例：
+
 - Symfony 的 `HTTPKernal` 用于处理 HTTP 请求。
+
 - Laravel `Eloquent` 用于数据库访问。
 
 一个展示策略模式运行的示例：
@@ -1406,10 +1430,14 @@ print_r($result);
 ## 观察者模式 (Observer)
 
 这主要用于事件驱动编程，允许对象接收其他对象的更改通知。它通常出现在处理用户输入或需要与外部系统交互的库中。当你想要解耦对象并确保对一个对象的更改不会对其他对象产生影响时，这种模式非常有用。示例：
+
 - Symfony 的 `EventDispatcher` 允许向注册的监听器轻松创建并分发事件。
+
 - Laravel `Eloquent` 在模型事件中使用了这种模式。
 
 一个展示观察者模式运行的示例：
+
+
 
 ```php
 <?php  
@@ -1476,10 +1504,6 @@ $event->addObserver(new Observer('B'));
 $event->notify('Event occurred!');
 ```
 
-
-
-
-
 ```php
 protected function setUp(): void {
     // 使用 `Calculator` 类的一个新实例初始化 `$calculator` 属性。
@@ -1501,7 +1525,7 @@ public function testAdd() {
 - `Calculator` 类非常易于测试，因为它的设计简单，没有隐藏的依赖关系或副作用。
 - 我们编写了测试（`CalculatorTest`），这些测试保证了 `Calculator` 类的行为符合预期。
 
-### 不要重复自己 (DRY)
+## 不要重复自己 (DRY)
 
 我们讨论过 PHP 库的优点，其中一个优点就是代码的可重用性。这正是该设计原则的核心所在，它确保我们不编写冗余代码。
 
@@ -1581,11 +1605,12 @@ function squareArea($side) {
 
 提供的文本随后列出了相同逻辑的多个版本。根据指令，我将清晰地组织输出。
 
-### 简单性
+## 简单性
 
 我们之前讨论过，需要让库尽可能易于维护，并且代码要让其他开发者容易阅读和理解，因此我们需要确保代码应该写得简单。过度复杂的代码会增加测试、调试和库维护的复杂性。
 
 简单且清晰的代码的一些属性是：
+
 - 格式化的代码。
 - 解耦的代码。
 - 具有描述性的变量、类、对象名称。
@@ -1619,10 +1644,6 @@ function fetchAndDisplayUser($database, $userId) {
     $result = $query->fetch(); // 从结果集中获取下一行。
 }
 ```
-
-
-
-
 
 ```php
 echo $result['name'] . " - " . $result['email'];  // 显示从获取的行中的'name'和'email'字段。  
@@ -1722,15 +1743,14 @@ class AreaCalculator {
     }  
 }
 ```
+
 *(注：所提供的开/闭示例源码中的逻辑是碎片化的且包含冗余注释；我已清理了结构以使其成为有效的表示，同时按照要求保留了所有描述性文本和变量。)*
 
 - **里氏夫替换**：子类应该增强而非替换父类。
+
 - **接口隔离**：任何类都不应被强制实现未使用的方法。
+
 - **依赖倒置**：依赖抽象而非具体实现。
-
-
-
-
 
 ```php
 protected $width;  // 矩形的宽度。
@@ -1810,6 +1830,8 @@ interface Eatable {
 
 我们不应该这样做：
 
+
+
 ```php
 <?php
 // 定义一个名为“LightBulb”（灯泡）的类。
@@ -1858,7 +1880,7 @@ class Key {
 
 S.O.L.I.D 原则是最重要的之一。
 
-### 使用 S.O.L.I.D 原则的优势
+## 使用 S.O.L.I.D 原则的优势
 
 让我们来看看使用这些原则的优势：
 
@@ -1868,18 +1890,17 @@ S.O.L.I.D 原则是最重要的之一。
 - **增加复用性**：设计原则鼓励编写可重用的代码，使其更容易共享。
 - **促进协作**：原则有助于开发者更有效地共同工作。
 
-### 与规范
+## 与规范
 
 在本节中，我们将探索收集需求和规范的重要性。
 
-#### 定义问题陈
+### 定义问题陈
 
 我们的库需要能够解析和处理 JSON 数据。我们需要能够将 JSON 转换为数组，反之亦然。
 
-#### 定义库的需求
+### 定义库的需求
 
 1. 库应该能够将关联数组编码为 JSON 字符串。例如：`encode(['name' => 'David', 'age' => 30])` 应该返回 `'{"name": "David", "age": 30}`。
-
 2. 库应该能够将 JSON 字符串解码为关联数组。例如：`decode({"name": "David", "age": 30})` 应该返回 `['name' => 'David', 'age' => 30]`。
 
 ```php
@@ -1908,10 +1929,6 @@ function decode($jsonString) {
 // 使用
 print_r(decode('{"name": "David", "age": 30}')); // 预期输出: Array ([name] => David [age] => 30 )
 ```
-
-
-
-
 
 ### 3. 库应该能够优雅地处理错误，并向用户提供清晰/有效的错误消息。
 
@@ -1954,19 +1971,12 @@ echo decode('name": "David", "age": 30}'); // 预期输出: Invalid JSON string 
 ### 定义库规范
 
 I. 库应该使用面向对象的编程原则进行实现。
-
 2. 库应该提供两个主要类：一个用于编码，一个用于解码。
-
 3. 编码类应该有一个公共方法 `encode()`，它接收关联数组作为输入并返回 JSON 字符串。
-
 4. 解码类应该有一个公共方法 `decode()`，它接收 JSON 字符串作为输入并返回一个关联数组。
-
 V. 如果在编码或解码过程中发生错误，库应该抛出异常。
-
 6. 库应该有一个命名空间 `MyLibrary/Json` ，以遵循 PSR-4 自动加载标准。
-
 7. 库应该有一个 `composer.json` 文件，其中指定了依赖项、自动加载信息和许可协议。
-
 8. 库应该拥有单元测试，以确保其按预期工作。
 
 通过定义库的要求和规范，我们对想要让库做什么以及它应该如何实现有了清晰的思路。这使得开发过程更有组织，并且在库中更容易实现。
@@ -1974,6 +1984,7 @@ V. 如果在编码或解码过程中发生错误，库应该抛出异常。
 请记住，这些要求只是开始的一个构想，在构建库的过程中，我们可能需要为库添加更多功能，例如一个从 JSON 对象中检索特定元素的函数，或添加新元素的功能。
 
 我们还需要考虑库的非功能性需求，例如：
+
 - 性能：库应该能够处理大型对象。
 - 安全性：验证输入并确保其有效性。
 - 可维护性：我们的库应该容易维护和更新。
@@ -1989,6 +2000,7 @@ V. 如果在编码或解码过程中发生错误，库应该抛出异常。
 设计库时首先需要考虑的事情之一是命名空间和目录结构。命名空间用于将代码组织成逻辑组，而目录结构应该反映这种组织形式。例如，如果我们正在构建一个名为 `Json` 的用于解析 JSON 的库，我们可以使用以下命名空间和目录结构：
 
 带有目录的命名空间
+
 在此示例中，我们创建了一个包含 `JsonParser` 类的 `Parser` 命名空间，用于解析 JSON。同时，我们创建了一个包含 `JsonException` 类的 `Exception` 命名空间，用于处理异常。
 
 ### 关注点分离
@@ -2065,9 +2077,6 @@ class JsonParser {
     }
 }
 ```
-
-
-
 
 ```php
 return json_decode($this->jsonData, true);
@@ -2178,11 +2187,13 @@ print_r($result);
 
 在设计 PHP 库的模块时，有几个关键原则需要记住：
 
-*   **目的**意味着每个模块都有明确的角色。
-*   **松耦合**意味着模块之间不应直接依赖。
-*   **高内聚**意味着模块内部的代码与其目的相关。
+- **目的**意味着每个模块都有明确的角色。
+- **松耦合**意味着模块之间不应直接依赖。
+- **高内聚**意味着模块内部的代码与其目的相关。
 
 以下代码段展示了这些概念的实际应用：
+
+
 
 ```php
 <?php
@@ -2228,9 +2239,6 @@ $userManager->createUser("alice", "password123");
 $logger->log("User alice was created.");
 ```
 
-
-
-
 ```php
 }
 
@@ -2250,10 +2258,12 @@ class JsonUtils {
 ```
 
 // 每个类都包含在自己的命名空间中并处理 JSON 的特定方面（解析、编码或工具函数），
+
 确保了关注点分离，并且每个类都具有单一职责。
+
 通常，此脚本代表了如何根据功能需求或关注点分离原则，使用命名空间来组织类和功能。
 
-### 接口与抽象类
+## 接口与抽象类
 
 在 PHP 库中实现模块化设计的另一种策略是使用接口和抽象类为每个模块定义通用的 API。这通过允许模块被轻松替换或扩展，有助于促进代码的可用性和模块化。
 
@@ -2296,7 +2306,7 @@ class JsonParser implements JsonParserInterface {
 
 通过为 JSON 解析定义此通用接口，我们可以轻松地切换 `JsonParser` 类的不同实现，使库更具模块化和扩展性。
 
-### 依赖注入 (DI)
+## 依赖注入 (DI)
 
 我们提到的模块化设计的另一个关键原则是松耦合，这意味着模块不应该直接相互依赖。实现这一点的方法是通过依赖注入，它允许模块依赖于接口而不是具体的实现。
 
@@ -2332,7 +2342,9 @@ class JsonSerializer {
 ```
 
 通过将 `JsonParser` 依赖注入到 `JsonSerializer` 中，
+
 我们实现了组件之间的松耦合，使系统
+
 更具维护性、灵活性且更容易测试。
 
 总而言之，此脚本演示了应用依赖注入来构建灵活、可维护且松耦合代码结构的积极意义。
@@ -2358,10 +2370,6 @@ PHP 中的自动加载是一种自动类加载器机制，它对更整洁、更�
 ### 什么是命名空间？
 
 假设你正在编写一本书，每章都专注于一个主题。每章的不同章节和子节可以有不同的名称。但如果它们位于各自章节的范围内，那么第一章可以重复其包含的任何章节名称，而不会与第二章产生冲突。PHP 中的命名空间也是如此。
-
-
-
-
 
 PHP 使用 `namespace` 关键字来声明命名空间。这些命名空间的设计理念是防止代码实体因共享相同名称而产生非预期的冲突。你可以使用命名空间，在不同位置使用名称相同的类、函数和常量时避开命名冲突。
 
@@ -2399,7 +2407,7 @@ $result = new \Jazzon\Decoding\DecodedValue($data, $bytesConsumed);
 
 类名之前的反斜杠（并同样用反斜杠分隔）告诉脚本引用该类的全局命名空间位置。在这里，例如，为 `Jazzon\Decoding` 命名空间实例化 `DecodedValue` 类的一个实例。在实例化时，构造函数参数 `$data` 和 `$bytesConsumed` 被传递到 `DecodedValue` 类。
 
-2. **使用 use 导入**：使用 `use` 语句导入类、函数或常量，然后在代码中可以直接使用，而无需命名空间前缀：
+2. **使用 `use` 导入**：使用 `use` 语句导入类、函数或常量，然后在代码中可以直接使用，而无需命名空间前缀：
 
 ```php
 <?php  
@@ -2417,7 +2425,7 @@ $result = new DecodedValue($data, $bytesConsumed);
 
 与之前一样，构造函数参数 `$data` 和 `$bytesConsumed` 在实例化期间被传递。
 
-3. **别名或使用 use 导入**：当一个文件中存在两个同名的类时，你可以使用 `as` 关键字为其中任一个创建别名：
+3. **别名或使用 `use` 导入**：当一个文件中存在两个同名的类时，你可以使用 `as` 关键字为其中任一个创建别名：
 
 ```php
 <?php  
@@ -2477,7 +2485,7 @@ $result = new \Jazzon\Decoding\DecodedValue($data, $bytesConsumed);
 $value = \str_replace(" ", "", $value);
 ```
 
-2. `namespace\` - 要引用当前命名空间，使用 namespace 关键字：
+2. `namespace\` - 要引用当前命名空间，使用 `namespace` 关键字：
 
 ```php
 <?php  
@@ -2543,29 +2551,24 @@ $result = new DValue($data, $bytesConsumed);
 
 分组导入的概念也是随着 PHP 7 出现的，允许我们从同一个命名空间导入多个项：
 
+
+
 ```php
-<?php  
+<?php
 
 // 声明此文件中的代码属于 "Jazzon\Parsers" 命名空间
-
-namespace Jazzon\Parsers;  
+namespace Jazzon\Parsers;
 
 // 使用分组 `use` 语句从 `Jazzon\Decoding` 命名空间导入多个类
-
-use Jazzon\Decoding\{  
-    DecodedValue,  
-    AnotherClass,  
-    YetAnotherClass  
-};  
+use Jazzon\Decoding\{
+    DecodedValue,
+    AnotherClass,
+    YetAnotherClass
+};
 
 // 通过提供 `$data` 和 `$bytesConsumed` 作为构造函数参数实例化 `DecodedValue` 类
-
 $result = new DecodedValue($data, $bytesConsumed);
 ```
-
-
-
-
 
 ```php
 $result = new DecodedValue($data, $bytesConsumed);
@@ -2578,56 +2581,48 @@ $result = new DecodedValue($data, $bytesConsumed);
 因此，全局类将引用以反斜杠开头的完全限定名称：
 
 ```php
-<?php  
+<?php
 
-// 声明此文件中的代码属于 "Jazzon\\Parsers" 命名空间  
+// 声明此文件中的代码属于 "Jazzon\\Parsers" 命名空间
+namespace Jazzon\\Parsers;
 
-namespace Jazzon\\Parsers;  
-
-// 实例化全局命名空间中的 DateTime 类  
-
+// 实例化全局命名空间中的 DateTime 类
 $dateTime = new \DateTime();
 ```
 
 对于函数和常量，PHP 将在当前命名空间中查找同名的函数或常量。如果没有找到，它将直接获取全局函数或常量：
 
 ```php
-<?php  
+<?php
 
-// 声明此文件中的代码属于 "Jazzon\\Parsers" 命名空间  
+// 声明此文件中的代码属于 "Jazzon\\Parsers" 命名空间
+namespace Jazzon\\Parsers;
 
-namespace Jazzon\\Parsers;  
+// 在不使用前导反斜杠的情况下使用全局函数 strlen
+$value = strlen("Hello");
 
-// 在不使用前导反斜杠的情况下使用全局函数 strlen  
-
-$value = strlen("Hello");  
-
-// 打印变量 `$value` 的值  
-
+// 打印变量 `$value` 的值
 echo $value;
 ```
 
 但如果你想确保调用的是全局函数，请使用其完全限定名称：
 
 ```php
-<?php  
+<?php
 
-// 声明此文件中的代码属于 "Jazzon\\Parsers" 命名空间  
+// 声明此文件中的代码属于 "Jazzon\\Parsers" 命名空间
+namespace Jazzon\\Parsers;
 
-namespace Jazzon\\Parsers;  
+// 使用前导反斜杠使用全局函数 strlen 以确保它是一个全局函数
+$value = \strlen("Hello");
 
-// 使用前导反斜杠使用全局函数 strlen 以确保它是一个全局函数  
-
-$value = \strlen("Hello");  
-
-// 打印变量 `$value` 的值  
-
+// 打印变量 `$value` 的值
 echo $value;
 ```
 
 初看之下，这些关于 PHP 命名空间的细节似乎很复杂——但一旦掌握，这个新工具将为你提供一种更好地结构和组织代码的绝佳方式。通过掌握复杂的命名空间功能如何协同工作，可以编写更高效、更易维护的 PHP 代码。
 
-## PHP 中的自动加载 (Autoloading)
+## PHP 中的自动加载（Autoloading）
 
 到目前，我们深入研究了 PHP 命名空间并检查了它们的高级用法。本节将介绍另一个关键的 PHP 概念——自动加载。
 
@@ -2635,51 +2630,48 @@ echo $value;
 
 ### 自动加载的重要性
 
-随着项目规模的扩大，不同类和文件之间的依赖关系变得越来越难以。你可能会发现在脚本开头需要引入多个文件，这可能导致代码杂乱且难以维护。
+随着项目规模的扩大，不同类和文件之间的依赖关系变得越来越难以管理。你可能会发现在脚本开头需要引入多个文件，这可能导致代码杂乱且难以维护。
 
 这就是自动加载大显身手的地方。有了自动加载器，你只需要使用需要的类，PHP 会自动加载必要的文件。这将产生更整洁、更易维护的代码。
 
-### spl_autoload_register 函数
+### `spl_autoload_register()` 函数
 
-PHP 有一个用于注册自动加载器的函数，称为 `spl_autoload_register()`，你可以向 `spl_autoload_register` 传递一个回调函数，当你尝试使用一个尚未定义的类时，该函数就会被调用。
+PHP 有一个用于注册自动加载器的函数，称为 `spl_autoload_register()`。你可以向 `spl_autoload_register()` 传递一个回调函数，当你尝试使用一个尚未定义的类时，该函数就会被调用。
 
-以下是使用 `spl_autoload_register` 的简单示例：
+以下是使用 `spl_autoload_register()` 的简单示例。
 
 首先，让我们创建一个简单的类来使用，`MyClass.php`：
 
 ```php
-<?php  
+<?php
 
-// 声明类  
+// 声明类
+class MyClass
+{
+    // 类构造函数
+    public function __construct()
+    {
+        // 当创建 MyClass 的实例时将执行此代码
+        echo "MyClass has been instantiated!";
+    }
 
-class MyClass {  
-
-    // 类构造函数  
-
-    public function __construct() {  
-        // 当创建 MyClass 的实例时将执行此代码  
-        echo "MyClass has been instantiated!";  
-    }  
-
-    // 这里添加额外的方法和属性  
+    // 这里添加额外的方法和属性
 }
 ```
 
-然后，我们有 `autoload.php` 文件，在其中使用 `spl_autoload_register` 函数来加载我们的类：
+然后，我们有 `autoload.php` 文件，在其中使用 `spl_autoload_register()` 函数来加载我们的类：
 
 ```php
-<?php  
+<?php
 
-// 注册一个自定义的自动加载函数  
+// 注册一个自定义的自动加载函数
+spl_autoload_register(function ($class) {
+    // 尝试从当前目录引入与类相同的 PHP 文件
+    require __DIR__ . '/' . $class . '.php';
+});
 
-spl_autoload_register(function ($class) {  
-    // 尝试从当前目录引入与类相同的 PHP 文件  
-    require __DIR__ . '/' . $class . '.php';  
-});  
-
-// 创建 MyClass 的新实例。  
-// 如果当前目录下存在 'MyClass.php'，它将会被自动加载  
-
+// 创建 MyClass 的新实例。
+// 如果当前目录下存在 'MyClass.php'，它将会被自动加载
 new MyClass();
 ```
 
@@ -2689,30 +2681,29 @@ new MyClass();
 
 我们之前讨论过 PHP 命名空间以及如何使用它们将相关类组合在一起并避免命名冲突。与自动加载结合时，命名空间为管理和组织项目类提供了一种强有力的方法。
 
-以下是如何向自动加载器添加命名空间支持：
+以下是如何向自动加载器添加命名空间支持。
 
 我们将使用之前创建的 `MyClass.php`，我们的 `autoload.php` 将更新为如下所示：
 
 ```php
-<?php  
+<?php
 
-// autoload.php  
+// autoload.php
 
-// 注册一个自定义的自动加载函数  
+// 注册一个自定义的自动加载函数
+spl_autoload_register(function ($class) {
+    // 将命名空间反斜杠转换为目录斜杠（符合 PSR-4 规范）
+    $path = str_replace('\\', '/', $class);
 
-spl_autoload_register(function ($class) {  
-    // 将命名空间反斜杠转换为目录斜杠（符合 PSR-4 规范）  
-    $path = str_replace('\\', '/', $class);  
-    // 根据类的命名空间和名称引入适当的文件  
-    require __DIR__ . '/' . $path . '.php';  
-});  
+    // 根据类的命名空间和名称引入适当的文件
+    require __DIR__ . '/' . $path . '.php';
+});
 
-// 使用 MyClass  
-
+// 使用 MyClass
 $instance = new MyClass();
 ```
 
-在这个版本的自动加载器中，命名空间分隔符（`\\`）被目录分隔符（`/`）替换。这使我们能够将命名空间与目录关联。类 `Jazzon\\Parsers\\JsonParser`对应文件 `Jazzon/Parsers/JsonParser.php`。
+在这个版本的自动加载器中，命名空间分隔符（`\\`）被目录分隔符（`/`）替换。这使我们能够将命名空间与目录关联。类 `Jazzon\\Parsers\\JsonParser` 对应文件 `Jazzon/Parsers/JsonParser.php`。
 
 虽然初看开发自动加载器非常有用，但在实践中，你可能会使用 Composer 提供的自动加载器。Composer 是一个带有强大自动加载器的依赖管理器。
 
@@ -2733,80 +2724,76 @@ $instance = new MyClass();
 我们在这个 `composer.json` 文件中告诉 Composer 使用 PSR-4 标准并将 `Jazzon\` 映射到 `src/`。现在，任何位于 `Jazzon` 命名空间的类都应该放在 `src/` 中。要使用它，只需在脚本开头引入以下代码：
 
 ```php
-<?php  
+<?php
 
-// 引入 Composer 生成的加载器  
+// 引入 Composer 生成的加载器
+require __DIR__ . '/vendor/autoload.php';
 
-require __DIR__ . '/vendor/autoload.php';  
-
-// 创建 Jazzon\\Parsers\\JsonParser 的新实例  
-
+// 创建 Jazzon\\Parsers\\JsonParser 的新实例
 new Jazzon\\Parsers\\JsonParser();
 ```
 
-我们在本节中学了 PHP 自动加载的重要性、工作原理以及如何在应用程序中使用。我们查看了内置的 `spl_autoload_register` 函数，学习了如何在加载器中处理命名空间，并研究了 Composer 加载器。
+我们在本节中学了 PHP 自动加载的重要性、工作原理以及如何在应用程序中使用。我们查看了内置的 `spl_autoload_register()` 函数，学习了如何在加载器中处理命名空间，并研究了 Composer 加载器。
 
 自动加载是管理项目依赖和保持代码整洁组织的有用工具。我们将在未来的课程中继续构建我们的 Jazzon 库，并看到这些自动加载技术的实际应用。
 
-
-
-
-
 ```php
-<?php  
+<?php
 
-// 此类有自己独立的文件 "MyFirstClass.php"  
-
-class MyFirstClass {  
-    // 此处编写类代码  
+// 此类有自己独立的文件 "MyFirstClass.php"
+class MyFirstClass
+{
+    // 此处编写类代码
 }
 ```
 
 * `MySecondClass.php`
 
 ```php
-<?php  
+<?php
 
-// 此类有自己独立的文件 "MySecondClass.php"  
-
-class MySecondClass {  
-    // 此处编写类代码  
+// 此类有自己独立的文件 "MySecondClass.php"
+class MySecondClass
+{
+    // 此处编写类代码
 }
 ```
 
-2. 类（Class）和命名空间（Namespace）名称是区分大小写的：`PSR-4` 认为命名空间和类名是区分大小写的。这意味着 `MyClass` **不等于于** `Myclass`，两者被视为两个完全不同的类。
+2. 类（Class）和命名空间（Namespace）名称是区分大小写的：`PSR-4` 认为命名空间和类名是区分大小写的。这意味着 `MyClass` 不等于 `Myclass`，两者被视为两个完全不同的类。
 
 3. 命名空间层级 <==> 目录结构：你的类命名空间层级应该与你文件系统的目录结构对应。这种方法在你的命名空间和文件结构之间建立了自然的映射。
 
 ```php
-<?php  
+<?php
 
 /**
-* 文件夹结构示例
-project/
-  src/
-    MyNamespace/
-      SubNamespace/
-        MyClass.php
-*/  
+ * 文件夹结构示例
+ * project/
+ *   src/
+ *     MyNamespace/
+ *       SubNamespace/
+ *         MyClass.php
+ */
 
-// 在 `MyNamespace` 命名空间下声明 `SubNamespace`  
-namespace MyNamespace\SubNamespace;  
+// 在 `MyNamespace` 命名空间下声明 `SubNamespace`
+namespace MyNamespace\SubNamespace;
 
-// 命名空间直接对应目录结构  
-class MyClass {  
-    // 此处编写类代码  
+// 命名空间直接对应目录结构
+class MyClass
+{
+    // 此处编写类代码
 }
 ```
 
 4. 类文件的 `.php` 扩展名：所有类文件都应该使用 `.php` 扩展名。
 
 ```php
-<?php  
+<?php
 
-// 此类应该存在于名为 `MyClass.php` 的文件中  
-class MyClass {  
-    // 此处编写类代码  
+// 此类应该存在于名为 `MyClass.php` 的文件中
+class MyClass
+{
+    // 此处编写类代码
 }
 ```
 
@@ -2824,7 +2811,7 @@ PHP 依赖管理工具 `Composer` 通常用于实现 `PSR-4` 自动加载标准�
 }
 ```
 
-在此示例中，`Jazzon` 命名空间下的任何类都对应 `src/` 目录下的一个文件。`composer` 将查找 `src/Parsers/JsonParser.php` 文件来自动加载类 `Jazzon\Parsers\JsonParser.php`。
+在此示例中，`Jazzon` 命名空间下的任何类都对应 `src/` 目录下的一个文件。`Composer` 将查找 `src/Parsers/JsonParser.php` 文件来自动加载类 `Jazzon\Parsers\JsonParser.php`。
 
 ![](img/image_rsrc3CH.jpg)
 
@@ -2833,13 +2820,13 @@ PHP 依赖管理工具 `Composer` 通常用于实现 `PSR-4` 自动加载标准�
 在指定命名空间后，你可以使用 `composer install` 或 `composer dump-autoload` 构建自动加载文件。在你的 PHP 文件开头包含以下代码，以使用 `Composer` 的自动加载器：
 
 ```php
-<?php  
+<?php
 
-// 引入 Composer 自动加载器，它为你的项目设置了类加载。  
-require __DIR__ . '/vendor/autoload.php';  
+// 引入 Composer 自动加载器，它为你的项目设置了类加载。
+require __DIR__ . '/vendor/autoload.php';
 
-// 创建 JsonParser 类的实例。  
-// 得益于自动加载器，你不需要手动引入（require）类。  
+// 创建 JsonParser 类的实例。
+// 得益于自动加载器，你不需要手动引入（require）类。
 $parser = new Jazzon\Parsers\JsonParser();
 ```
 
@@ -2872,13 +2859,13 @@ $parser = new Jazzon\Parsers\JsonParser();
 3. 在你的脚本中引入自动加载器：在 PHP 文件的顶部引入自动加载文件。如果你的项目完全依赖 `Composer`，则不需要这一步，它会为你完成所有这些“魔法操作”。
 
 ```php
-<?php  
+<?php
 
-// 加载 Composer 的自动加载器，根据指定的配置启用自动类加载。  
-require __DIR__ . '/vendor/autoload.php';  
+// 加载 Composer 的自动加载器，根据指定的配置启用自动类加载。
+require __DIR__ . '/vendor/autoload.php';
 
-// 实例化 JsonParser 类。  
-// 得益于自动加载，无需手动引入类文件。  
+// 实例化 JsonParser 类。
+// 得益于自动加载，无需手动引入类文件。
 $parser = new Jazzon\Parsers\JsonParser();
 ```
 
@@ -2897,30 +2884,33 @@ $parser = new Jazzon\Parsers\JsonParser();
 1. 逻辑结构：定义命名空间时，使用与项目结构对应的逻辑结构。这种方法有助于自动加载。
 
 ```php
-<?php  
+<?php
 
 // 为当前 PHP 文件声明 Jazzon\Parsers 命名空间。
-// 这允许在该命名空间下组织代码。  
+// 这允许在该命名空间下组织代码。
 namespace Jazzon\Parsers;
 ```
 
 查看以下关于 Jazzon 结构的示例：
 
 ![](img/image_rsrc3CK.jpg)
+
 *Jazzon 逻辑结构*
 
 2. 类名与文件名匹配：类名应与文件名相同。这是 `PSR-4` 的要求，并有助于代码的可读性和发现。
 
 ```php
-<?php  
+<?php
 
-// 指定文件的位置和名称以增加清晰度。  
-// 文件：src/Parsers/JsonParser.php  
+// 指定文件的位置和名称以增加清晰度。
+// 文件：src/Parsers/JsonParser.php
 // 为此 PHP 文件声明 Jazzon\Parsers 命名空间。
-namespace Jazzon\Parsers;  
+namespace Jazzon\Parsers;
 
 // 在 Jazzon\Parsers 命名空间内定义名为 JsonParser 的类。
-class JsonParser { }
+class JsonParser
+{
+}
 ```
 
 3. 命名空间使用大驼峰命名：对于命名空间和类名，PHP-FIG 标准建议使用大驼峰命名（也称为 PascalCase）。它增加了代码的统一性和可读性。
@@ -2930,20 +2920,17 @@ class JsonParser { }
 1. 使用 Composer 的自动加载器：使用 `Composer` 的自动加载器可以显著简化 PHP 项目的自动加载。它可以加载函数和常量，并支持 `PSR-4` 和 `PSR-0`。
 
 ```php
-<?php  
+<?php
 
-// 加载 Composer 自动加载脚本。  
-// 该脚本根据项目设置自动类加载。  
+// 加载 Composer 自动加载脚本。
+// 该脚本根据项目设置自动类加载。
 require __DIR__ . '/vendor/autoload.php';
 ```
 
 2. 自动加载与性能：由于自动加载可能对性能产生影响，建议使用生产优化的自动加载器。可以通过 `composer dump-autoload-optimize` 命令生成。
 
+### 3. 命名空间映射（Namespace Mapping）
 
-
-
-
-### 3. 命名空间映射 (Namespace Mapping)
 在你的 `composer.json` 文件中，将基础命名空间映射到 `src/` 目录。这是一个典型的策略，可以提高项目结构的统一性。
 
 ```json
@@ -2956,18 +2943,23 @@ require __DIR__ . '/vendor/autoload.php';
 }
 ```
 
-### 4. 类的使用 (Class Usage)
+### 4. 类的使用（Class Usage）
+
 为了避免混乱，请在文件顶部导入类，而不是在代码中使用完全限定名引用它们。
 
 ```php
 <?php
+
 // 指定在该文件中将使用来自 "Jazzon\Parsers" 命名空间的 JsonParser 类。
 // 这避免了在实例化类时需要使用完整的命名空间路径。
 use Jazzon\Parsers\JsonParser;
+
 // 实例化 JsonParser 类。
-// 由于由于上面的 "use" 语句，我们在这里不需要完整的命名空间路径。
+// 由于上面的 "use" 语句，我们在这里不需要完整的命名空间路径。
 $parser = new JsonParser();
 ```
+
+
 
 命名空间和自动加载是 PHP 的核心组成部分，对于较大的应用程序尤其如此。通过采用最佳实践，你可以让代码库更加整洁、高效且易于管理。记住，结构良好、组织合理的代码库更容易被理解、调试和维护。
 
@@ -3085,10 +3077,6 @@ Jazzon 库中的组件关系
 
 {notice} 我们将在本章的稍后部分提供函数的实现。
 
-
-
-
-
 ## 函数最佳实践
 
 在定义/设计库函数时，请记住以下一些良好实践：
@@ -3097,7 +3085,7 @@ Jazzon 库中的组件关系
 
 ## 函数最佳实践
 
-*   保持函数短小并专注于单一的小型任务，以提高代码的可读性和可维护性。
+* 保持函数短小并专注于单一的小型任务，以提高代码的可读性和可维护性。
 
 ```php
 <?php
@@ -3110,7 +3098,7 @@ $result = add(5, 3);
 echo $result; // 输出: 8
 ```
 
-*   避免使用全局变量，并使用参数传递数据。
+* 避免使用全局变量，并使用参数传递数据。
 
 ```php
 <?php
@@ -3123,7 +3111,7 @@ $result = multiply(6, 4);
 echo $result; // 输出: 24
 ```
 
-*   使用具有描述性的常量命名，以便于理解函数。
+* 使用具有描述性的常量命名，以便于理解函数。
 
 ```php
 <?php
@@ -3136,7 +3124,7 @@ $celsius = convertFahrenheitToCelsius(98.6);
 echo $celsius; // 输出: 37
 ```
 
-*   使用类型提示以确保传递到函数的数据类型是正确的。
+* 使用类型提示以确保传递到函数的数据类型是正确的。
 
 ```php
 <?php
@@ -3150,7 +3138,7 @@ $count = countElementsInArray($arrayItems);
 echo $count; // 输出: 3
 ```
 
-*   使用异常处理来优雅地处理函数内部的错误和失败。
+* 使用异常处理来优雅地处理函数内部的错误和失败。
 
 ```php
 <?php
@@ -3174,7 +3162,7 @@ try {
 
 让我们列出库中预期的函数：
 
-*   `parse(bool $assoc = false, int $depth = 512, int $options = 0)` - 负责将 JSON 字符串解析为 PHP 数组。
+* `parse(bool $assoc = false, int $depth = 512, int $options = 0)` - 负责将 JSON 字符串解析为 PHP 数组。
 
 ```php
 <?php
@@ -3193,9 +3181,9 @@ function parse(bool $assoc = false, int $depth = 512, int $options = 0): string
 }
 ```
 
-*   `getArray()` 返回解析后的 JSON 字符串的 PHP 数组。
-*   `getObject()` 返回解析后的 JSON 字符串的 PHP 对象。
-*   `encode(int $options = 0, int $depth = 512)` 用于将数据编码为 JSON 字符串。
+* `getArray()` 返回解析后的 JSON 字符串的 PHP 数组。
+* `getObject()` 返回解析后的 JSON 字符串的 PHP 对象。
+* `encode(int $options = 0, int $depth = 512)` 用于将数据编码为 JSON 字符串。
 
 ```php
 <?php
@@ -3212,7 +3200,7 @@ function encode(int $options = 0, int $depth = 512): string
 }
 ```
 
-*   `validate(string $json)` 是验证 JSON 字符串的函数。
+* `validate(string $json)` 是验证 JSON 字符串的函数。
 
 ```php
 <?php
@@ -3331,77 +3319,48 @@ class JsonParser
  */
 class JsonEncoder
 {
-```
-
-
-
-
-
-```php
-*/  
-
-    public function encode(int $options = 0, int $depth = 512): string  
-
-    {  
-
-      // encoding logic  
-
-    }  
-
+    public function encode(int $options = 0, int $depth = 512): string
+    {
+        // encoding logic
+    }
 }
 ```
 
 另一个用于校验的类如下：
 
 ```php
-<?php  
-
-// JsonValidator.php  
-
-/**  
-
-* Class JsonValidator  
-
-* 验证 JSON 字符串  
-
-*/  
-
-class JsonValidator  
-
-{  
-
-    /**  
-     * 验证 JSON 字符串  
-     *  
-     * @param string $json 需要验证的 JSON 字符串  
-     * @return bool 如果 JSON 字符串有效则返回 true，否则返回 false  
-     */  
-    public function validate(string $json): bool  
-    {  
-        // validation logic  
-
-    }  
+<?php
+// JsonValidator.php
+/**
+ * Class JsonValidator
+ * 验证 JSON 字符串
+ */
+class JsonValidator
+{
+    /**
+     * 验证 JSON 字符串
+     *
+     * @param string $json 需要验证的 JSON 字符串
+     * @return bool 如果 JSON 字符串有效则返回 true，否则返回 false
+     */
+    public function validate(string $json): bool
+    {
+        // validation logic
+    }
 }
 ```
 
 我们在库初始版本中需要的最后一个类是自定义异常类：
 
 ```php
-<?php  
-
-// JsonException.php  
-
-/**  
-
-* Class JsonException  
-
-* 用于处理 JSON 错误的自定义异常类  
-
-*/  
-
-class JsonException extends \RuntimeException  
-
-{  
+<?php
+// JsonException.php
+/**
+ * Class JsonException
+ * 用于处理 JSON 错误的自定义异常类
+ */
+class JsonException extends \RuntimeException
+{
 }
 ```
 
@@ -3409,29 +3368,29 @@ class JsonException extends \RuntimeException
 
 在设计类时，我们需要遵循一些实践，使其更加清晰且易于维护。我们在讨论函数时谈到的相同实践也适用于这里。除了这些实践外，我们还需要考虑以下几点：
 
-*   使用单一职责原则确保一个类只有一个职责。
+* 使用单一职责原则确保一个类只有一个职责。
 
 ```php
-<?php  
-
-// 此类专门负责管理系统中的用户。  
-class UserManager  
-
-{  
-    // 添加新用户的函数。  
-    public function addUser($user) {  
-        // 在此处编写添加用户的代码。  
-    }  
-    // 移除用户的函数。  
-    public function removeUser($user) {  
-        // 在此处编写移除用户的代码。  
-    }  
-}  
-// `UserManager` 类不处理其他职责  
+<?php
+// 此类专门负责管理系统中的用户。
+class UserManager
+{
+    // 添加新用户的函数。
+    public function addUser($user) {
+        // 在此处编写添加用户的代码。
+    }
+    // 移除用户的函数。
+    public function removeUser($user) {
+        // 在此处编写移除用户的代码。
+    }
+}
+// `UserManager` 类不处理其他职责
 // 例如管理产品或订单。
 ```
 
-*   在可能的情况下，使用依赖注入而非继承，以确保类不会与其他类紧密耦合。我们可以用不同的、更准确的说法来表述，即“使用组合代替继承”。
+* 在可能的情况下，使用依赖注入而非继承，以确保类不会与其他类紧密耦合。我们可以用不同的、更准确的说法来表述，即“使用组合代替继承”。
+
+
 
 ```php
 <?php  
@@ -3461,7 +3420,7 @@ $orderManager = new OrderManager(new FileLogger());
 $orderManager->createOrder();
 ```
 
-*   在可能的情况下，使用抽象类或接口来定义通用功能，并确保相关类之间的一致性。
+在可能的情况下，使用抽象类或接口来定义通用功能，并确保相关类之间的一致性。
 
 ```php
 <?php  
@@ -3495,11 +3454,7 @@ $stripe = new StripeGateway();
 $stripe->processPayment(100);
 ```
 
-
-
-
-
-- 在最后，会创建一个新的 `DecodedValue` 对象，包含解码后的值和消耗的字节数，然后返回。
+在最后，会创建一个新的 `DecodedValue` 对象，包含解码后的值和消耗的字节数，然后返回。
 
 该函数直接使用 PHP 内置函数 `json_decode()` 来解析 JSON 字符串并将其转换为 `DecodedValue` 对象，我们可以用它来获取 PHP 数组或 PHP 对象。如果在解析过程中发生错误，它将抛出一个带有适当错误消息的 `JsonException`。
 
@@ -3533,7 +3488,9 @@ function encode(int $options = 0, int $depth = 512): string
 让我们从高层级分析此函数以看看它的作用：
 
 - 定义的 `encode` 函数将 PHP 数据转换为格式化的 JSON 字符串。它可选地接收参数：用于设置编码选项的 `$options` 和用于最大递归深度的 `$depth`。它将返回编码后的 JSON 结果或抛出一个 `JsonException` 异常。
+
 - 使用 PHP 内置的 `json_encode()` 函数对给定数据进行编码。如果编码过程中发生错误，则抛出带有适当错误消息的 `JsonException`。
+
 - 返回成功编码的 JSON 字符串。
 
 我们使用 PHP 内置函数 `json_encode()` 将 PHP 数组/对象转换为 JSON 字符串，并在发生任何错误时抛出 `JsonException`。
@@ -3564,8 +3521,10 @@ public function validate(string $json): bool
 
 让我们从高层级分析此函数以看看它的作用：
 
-字体 定义 `validate` 函数来验证提供的 JSON 字符串。该函数返回一个布尔值，表示验证是否通过。
+定义 `validate` 函数来验证提供的 JSON 字符串。该函数返回一个布尔值，表示验证是否通过。
+
 - 如果使用 `json_decode()` 解码 JSON 字符串结果为 null 且提供的字符串未显式为‘null’，则判定该 JSON 字符串无效。
+
 - 如果解码成功，该函数返回 true，表示 JSON 是有效的。
 
 ## 组装库类
@@ -3579,10 +3538,15 @@ public function validate(string $json): bool
 我们将为每个部分创建命名空间（目录），因此我们的项目中将拥有以下命名空间：
 
 - `Jazzon`：父命名空间。
+
 - `Decoding`：用于解码值对象类或任何其他我们需要实现解码值的类。
+
 - `Validators`：将包含库的验证器。
+
 - `Exceptions`：将存放库的自定义异常。
+
 - `Parsers`：存放我们的解析器，目前是 `JsonParser`。
+
 - `Encoders`：存放编码器，目前是 `JsonEncoder`。
 
 ### `DecodedValue`
@@ -3650,11 +3614,17 @@ class DecodedValue
 让我们从高层级查看该类：
 
 - 位于 `Jazzon\Decoding` 命名空间。
+
 - `DecodedValue` 类实现了解码的结果。它有私有成员来存储数据以及消耗的字节数。
+
 - 构造函数根据输入初始化数据。
+
 - `getData()` 方法返回数据。
+
 - `getDataArray()` 以数组形式返回数据。
+
 - `getDataObject()` 以对象形式返回数据。
+
 - `getBytesConsumed()` 返回调用时消耗的字节数。
 
 ### `JsonValidator`
@@ -3691,7 +3661,9 @@ class JsonValidator
 让我们从高层级查看该类：
 
 - 这种类属于 `Jazzon\Validators` 命名空间。
+
 - `JsonValidator` 类评估 JSON 字符串。
+
 - `validate` 方法用于检查给定字符串是否为有效的 JSON。
 
 ### `JsonException`
@@ -3712,17 +3684,15 @@ class JsonException extends \RuntimeException
 
 - 它属于 `Jazzon\Exceptions` 命名空间。
 
+- `JsonException` 类继承自 PHP 的标准 `RuntimeException`，以便在发生任何由于 JSON 操作引起的异常时，可以提供相关的特殊异常处理。
 
-
-
-
--   `JsonException` 类继承自 PHP 的标准 `RuntimeException`，以便在发生任何由于 JSON 操作引起的异常时，可以提供相关的特殊异常处理。
-
-### JsonParser
+### `JsonParser`
 
 现在，让我们来实现 `JsonParser`。记住我们已经实现了 `parse()` 函数，因此我们将将其放置在类中，并创建一个构造函数来初始化 JSON 字符串变量、我们的 `JsonValidator` 实例，最后是 `DecodedValue` 实例。
 
 我们也将将其放在一个独立的命名空间 `Parsers` 中，这将使得以后如果需要为文件添加新的解析器或不同的解析器将变得非常方便。这里会有三个对 `DecodedValue`、`JsonValidator` 和 `JsonException` 的导入，因为它们都存在各自的命名空间中。
+
+
 
 ```php
 <?php  
@@ -3787,13 +3757,13 @@ class JsonParser
 
 从高层角度来看这个类，我们可以说：
 
--   它属于 `Jazzon\Parsers` 命名空间。
--   导入了所需类所需的必要命名空间。
--   `JsonParser` 类承担解析 JSON 字符串的角色。它拥有私有属性，负责持有待解析的字符串和一个验证器。
--   构造函数用于初始化类属性。
--   `parse` 方法用于解析 JSON 字符串并返回 `DecodedValue` 实例。该方法处理验证错误、字节计数以及解析错误。
+- 它属于 `Jazzon\Parsers` 命名空间。
+- 导入了所需类所需的必要命名空间。
+- `JsonParser` 类承担解析 JSON 字符串的角色。它拥有私有属性，负责持有待解析的字符串和一个验证器。
+- 构造函数用于初始化类属性。
+- `parse` 方法用于解析 JSON 字符串并返回 `DecodedValue` 实例。该方法处理验证错误、字节计数以及解析错误。
 
-### JsonEncoder
+## JsonEncoder
 
 让我们对 `JsonEncoder` 执行相同的操作。我们将它也放在一个独立的命名空间 `Encoders` 中。
 
@@ -3845,14 +3815,11 @@ class JsonEncoder
 
 从高层角度来看这个类，我们可以说：
 
--   它属于 `Jazzon\Encoders` 命名空间。
--   导入了所需类所需的必要命名空间。
--   `JsonEncoder` 类承担将数据编码为 JSON 字符串的角色。它拥有私有属性，负责持有待解析的字符串。
--   构造函数用于初始化类属性。
--   `encode` 方法使用 PHP 内置的 `json_decode()` 函数，并处理解析过程中可能发生的任何错误（通过抛出 `JsonException`）。
-
-
-
+- 它属于 `Jazzon\Encoders` 命名空间。
+- 导入了所需类所需的必要命名空间。
+- `JsonEncoder` 类承担将数据编码为 JSON 字符串的角色。它拥有私有属性，负责持有待解析的字符串。
+- 构造函数用于初始化类属性。
+- `encode` 方法使用 PHP 内置的 `json_decode()` 函数，并处理解析过程中可能发生的任何错误（通过抛出 `JsonException`）。
 
 在软件开发中，确保代码的韧性和稳定性至关重要。单元测试是实现这一目标的技术之一，它是被称为**测试驱动开发（TDD）**的更广泛测试策略的基础。
 
@@ -3896,9 +3863,9 @@ function testAdd() {
 testAdd();  // 执行测试
 ```
 
-* 定义了一个返回两个数字之和的简单 `add` 函数。
-* `add` 的单元测试命名为 `testAdd()` 函数，专门编写作为一个隔离的单元测试。它用于检查已知输入与预期输出。
-* `testAdd()` 函数验证了 `add` 函数的正确性。
+- 定义了一个返回两个数字之和的简单 `add` 函数。
+- `add` 的单元测试命名为 `testAdd()` 函数，专门编写作为一个隔离的单元测试。它用于检查已知输入与预期输出。
+- `testAdd()` 函数验证了 `add` 函数的正确性。
 
 2. **自动化**：单元测试应该是自动化的。这允许你在每次做出更改时轻松地重新运行测试，保证你的修改不会破坏任何当前功能。
 
@@ -3927,8 +3894,8 @@ class AdderTest extends TestCase {
 }
 ```
 
-* 我们定义了一个类 `Adder`，它有一个方法 `add`，提供两个数字之和。
-* 通过名为 `AdderTest` 的独立测试类对 `Adder` 类进行测试。这允许使用 `PHPUnit` 的 `TestCase` 类进行结构化测试。在上面的代码段中，`PHPUnit` 的 `assertEquals` 方法确保了 `add` 函数实现了它的目标。
+- 我们定义了一个类 `Adder`，它有一个方法 `add`，提供两个数字之和。
+- 通过名为 `AdderTest` 的独立测试类对 `Adder` 类进行测试。这允许使用 `PHPUnit` 的 `TestCase` 类进行结构化测试。在上面的代码段中，`PHPUnit` 的 `assertEquals` 方法确保了 `add` 函数实现了它的目标。
 
 3. **易读易写**：单元测试应该是简单直接的。它们起到了文档的作用，解释你的代码是如何工作的。
 
@@ -3964,12 +3931,9 @@ testSubtract();  // 执行测试
 2. **测试方法**：断言位于这些方法内部。
 3. **断言**：这些是用于验证代码行为是否符合预期的语句。
 
-
-
-
 在后续过程中，我们将探讨如何将单元测试集成到我们的 Jazzon 库中。
 
-#为库编写测试
+# 为库编写测试
 
 测试是任何软件开发过程中不可或缺的一部分，库也不例外。通过为我们的库组件实现单元测试，我们可以及早发现可能的错误、加速更新并简化集成过程。在本节中，我们将学习如何使用 `PHPUnit` 为我们的 Jazzon 库组件创建单元测试。
 
@@ -4058,11 +4022,9 @@ class JsonValidatorTest extends TestCase
 }
 ```
 
-
-
-
-
 `testOrderProcessorWithMockedPaymentGateway` 方法旨在孤离 `PaymentGateway` 类来测试 `OrderProcessor` 类。通过创建一个 `PaymentGateway` 的模拟对象（mock），可以在不依赖支付网关实际实现的情况下验证 `OrderProcessor` 的功能。
+
+
 
 ```php
 <?php  
@@ -4132,6 +4094,7 @@ class JsonEncoderTest extends TestCase
 上面的代码段包含两个函数：
 
 - `testEncodeReturnsValidJsonForArray` 函数确保通过 `JsonEncoder` 类编码的数组返回了有效的 JSON 字符串。
+
 - `testEncodeThrowsJsonExceptionForMalformedData` 函数确保使用 `JsonEncoder` 类编码不当的数据时应该抛出 `JsonException`。
 
 ### JsonParser 类测试
@@ -4182,6 +4145,7 @@ class JsonParserTest extends TestCase
 上面的代码段包含两个函数：
 
 - `testParseReturnsDecodedValueForJson` 函数确保 `JsonParser` 解析有效的 JSON 返回 `DecodedValue` 实例。
+
 - `testParseThrowsJsonExceptionForInvalidJson` 函数确保使用 `JsonParser` 解析无效数据时抛出 `JsonException`。
 
 ### DecodedValue 类测试
@@ -4244,22 +4208,16 @@ class DecodedValueTest extends TestCase
 }
 ```
 
-
-
-
-
-```
-}
-
-}
-```
-
 上述代码段包含以下 5 个函数：
 
 - `setUp` 函数在运行此类类中的任何测试之前，创建一个持有示例数据的 `DecodedValue` 对象的实例。
+
 - 一个函数用于确保 `DecodedValue` 的 `getData` 方法返回特定的数据。
+
 - 一个函数用于检查 `DecodedValue` 的 `getDataAsArray` 方法是否返回给定的数组格式数据。
+
 - 一个函数用于测试 `DecodedValue` 的 `getDataAsObject` 方法是否数据的对象表示。
+
 - 一个函数用于断言 `DecodedValue` 的 `getBytesConsumed` 方法返回当前实例中消耗的特定字节数。
 
 为你的库组件编写单元测试是软件开发中至关重要的部分。它们能确保你的代码按计划运行，使代码库更具可维护性，并甚至有助于未来功能的开发。这些测试评估了我们 Jazzon 解析器、验证器和编码器的主要功能，使其更加健壮和可靠。
@@ -4360,6 +4318,8 @@ Xdebug 是一个强大的 PHP 调试和分析工具。堆栈跟踪、断点以�
 
 以下是 `php.ini` 中 Xdebug 配置的示例：
 
+
+
 ```ini
 ; 加载 PHP Xdebug 扩展模块。
 zend_extension="xdebug.so"
@@ -4377,10 +4337,6 @@ xdebug.client_host=127.0.0.1
 ; 许多环境和 IDE（包括 PhpStorm）的默认端口为 9003。
 xdebug.client_port=9003
 ```
-
-
-
-
 
 `xdebug.log="/path/to/your/logfile"`
 
@@ -4539,9 +4495,6 @@ $profilingFile = $outputDir . uniqid() . '.prof';
 file_put_contents($profilingFile, serialize($data));
 ```
 
-
-
-
 如果库没有按照预期方式工作，请逐步步进库的代码。虽然这看起来很耗时（特别是对于较大的库而言），但这种方法通常能找到问题的根源。Xdebug 支持此类分析，它让你能够在任何代码行暂停执行，并检查应用程序中的当前状态。
 
 ## 单元测试
@@ -4586,9 +4539,13 @@ trigger_error("Sample error for logging demonstration");
 让我们来分解这段代码段：
 
 *   `customErrorHandler()` 函数用于处理错误。它格式化错误消息并将其写入特定文件。
+
 *   `set_error_handler()` 函数用于将 `customErrorHandler()` 设置为错误处理器。
+
 *   `error_log()` 函数用于将错误类型为 `3` 的错误消息写入文件。
+
 *   `$logFile` 变量保存你想要存储错误消息的文件路径。
+
 *   `trigger_error()` 函数用于触发错误以演示其工作原理。
 
 ## 库文档
@@ -4614,9 +4571,13 @@ trigger_error("Sample error for logging demonstration");
 代码质量指标
 
 总而言之，代码质量意味着：
+
 - **可读性**：代码易于阅读。
+
 - **可维护性**：代码易于维护。
+
 - **高效性**：代码运行高效。
+
 - **可靠性**：代码运行可靠。
 
 ## 代码质量的重要性
@@ -4671,9 +4632,6 @@ NPath 复杂度与函数中执行路径的数量有关。它是通过计算整�
 
 可以通过 PHPMD 获取 NPath 复杂度。
 
-
-
-
 我们应该努力编写易于阅读、维护且高效的代码，并使用这些工具。这可能包括将复杂方法重构为简单方法、删除冗余代码或添加组件以显示代码中某些部分的用途。
 
 对于任何专业的 PHP 开发工作，都必须关注高质量编码。虽然编写高质量代码在最初可能需要付出一些精力，但在可维护性和可靠性方面的回报是值得的。
@@ -4726,6 +4684,8 @@ class StringUtility {
 
 现在，我们需要确保该函数按预期工作并返回预期的结果。因此，这里有一个简单的 PHPUnit 类，用于测试该函数的某些用例/场景。
 
+
+
 ```php
 <?php  
 
@@ -4763,10 +4723,6 @@ class StringUtilityTest extends TestCase {
     }  
 }
 ```
-
-
-
-
 
 ```php
 // 检查订单类型是否为店内并进行相应的处理  
@@ -4855,13 +4811,11 @@ public function parse(bool $assoc \= false, int $depth \= 512, int $options \= 0
 使用 PHPDoc 在以下方面有益：
 
 *   **可读性**：使用 PHPDoc 注释使你的代码更具可读性。它们为代码的每个部分提供了清晰的解释，这在涉及复杂或模糊的代码时非常有用。
+
 *   **维护性**：PHPDoc 注释有助于代码的维护。当你或其他开发者以后需要修改现有代码库时，注释提供了关键信息，帮助他们节省大量时间。
 
-
-
-
-
 *   **入职引导**：PHPDoc 注释可以帮助新团队成员快速熟悉代码库。通过阅读注释，他们可以更容易地理解你的代码并缩短他们的学习曲线。
+
 *   **文档生成**：通过你的 PHPDoc 注释，你可以使用工具生成 HTML（或其他格式）文档——这对于内部和外部用户都非常有用。
 
 ### PHPDoc 语法
@@ -4894,10 +4848,15 @@ echo add(3, 5); // output: 8
 PHPDoc 有许多可用于语法的标签。以下是一些常用标签的列表：
 
 *   `@param`：指定函数/方法的参数。
+
 *   `@return`：描述函数/方法的返回类型。
+
 *   `@var`：声明类属性类型。
+
 *   `@throws`：列出函数或方法可能抛出的异常。
+
 *   `@deprecated`：表示该元素不再使用，应避免使用。
+
 *   `@see`：表示指向另一个元素的链接。
 
 对于每个标签，都列出了标签分类并在后是其描述。类型可以是任何有效的 PHP 类型或类名。
@@ -4939,8 +4898,11 @@ PHPDoc 注释作为 PHP 环境的重要组成部分，确保开发人员能够�
 在进入细节之前，了解为什么投入精力编写有效的 PHPDoc 注释是有益的很重要：
 
 *   **清晰性**：信息丰富的注释消除了歧义。它们确保开发者理解某段代码的作用。
+
 *   **缩短入职时间**：这些注释对于进入成熟项目的新团队成员或开发者来说是关键的指南。
+
 *   **一致性**：统一的 PHPDoc 注释在整个代码库中呈现出专业、统一的形象，使代码看起来良好且规范。
+
 *   **辅助调试**：如果出现故障，PHPDoc 注释可以提供代码原始意图的见解。
 
 让我们来看下面两个示例，看看 PHPDoc 注释有什么益处；
@@ -4986,19 +4948,20 @@ PHPDoc 块描述了 `rectangleArea` 函数的目的以及它通过该函数执�
 ### 有效使用标签
 
 *   `@param`：始终以类型、变量名，最后是描述开头。
+
 *   `@return`：描述返回类型。
+
 *   `@var`：对于类属性非常有用。
+
 *   `@throws`：使用此标签描述你的方法或函数何时可能抛出异常。
 
 ### 高级 PHPDoc 技术
 
 *   **多行描述**：如果函数行为复杂，不要害怕提供多行解释。
+
 *   **使用 {} 处理复杂类型**：如果参数接受不同的类型，可以使用大括号。
+
 *   **文档间的链接**：你可以使用 `@see` 标签提供指向相似函数或方法的连接。
-
-
-
-
 
 最佳实践是编写优秀 PHPDoc 注释的基础。本课程将介绍这些技术，以确保你的文档脱颖而出。
 
@@ -5114,6 +5077,8 @@ public function setUsername($username) {
 
 *   将“This method will return the value”（此方法将返回该值）替换为“Returns the value”（返回该值）。
 
+
+
 ```php
 <?php  
 
@@ -5144,7 +5109,7 @@ public function getTotalPrice() {
 
 ## 使用 Jazzon 最佳实践
 
-考虑以下场景，以我们的 Jazzon 库为背景：
+考虑以下场景，以我们的 `Jazzon` 库为背景：
 
 ```php
 <?php  
@@ -5164,17 +5129,17 @@ public function encode($value): string
 
 清楚地看到，我们在为 `encode()` 函数编写 PHPDoc 注释块时采用了所有的最佳实践。
 
-采用 PHPDoc 最佳实践体现了你对清晰、专业和开发者友好的追求。在你继续开发像 Jazzon 这样的 PHP 库/应用程序时，使用这些策略来确保你的文档成为 PHP 社区的指南明灯。
+采用 PHPDoc 最佳实践体现了你对清晰、专业和开发者友好的追求。在你继续开发像 `Jazzon` 这样的 PHP 库/应用程序时，使用这些策略来确保你的文档成为 PHP 社区的指南明灯。
 
 ## 使用 PHPDoc 生成代码文档
 
 PHPDoc 就像 Java 的 JavaDoc 一样，不仅关于编写注释，还关乎如何利用这些注释获取完整的文档。一旦你对代码编写了极其精确且注重细节的注释，下一步就涉及使用工具扫描这些注释并生成格式化、可读性强的文档。
 
-PHPDocumentor（也称为 phpdoc）是创建文档的行业标准工具。
+PHPDocumentor（也称为 `phpdoc`）是创建文档的行业标准工具。
 
 ### 安装
 
-遗憾的是，根据 phpdoc 文档，不建议通过 Composer 安装。为了此目的，我们将使用 `phive`。
+遗憾的是，根据 `phpdoc` 文档，不建议通过 Composer 安装。为了此目的，我们将使用 `phive`。
 
 请确保先安装 `phive`。
 
@@ -5192,9 +5157,9 @@ phive install --force phpdoc
 php tools/phpDocumentor -d src/ -d tests/
 ```
 
-使用 `-d` 来指定你想要为哪些目录生成文档。默认情况下，此命令将查找当前目录下的 PHP 文件，读取它们的 phpdoc 注释并将 HTML 写入名为 `output` 的文件夹中。
+使用 `-d` 来指定你想要为哪些目录生成文档。默认情况下，此命令将查找当前目录下的 PHP 文件，读取它们的 `phpdoc` 注释并将 HTML 写入名为 `output` 的文件夹中。
 
-找到 phpdoc 索引页
+找到 `phpdoc` 索引页
 
 在浏览器中打开此 `index.html` 将让你得到类似下面的的内容：
 
@@ -5237,10 +5202,6 @@ PHPDocumentor 文档的主要优势是其可导航性。
 
 *   例如，颜色编码显示了可见性（公共、私有或保护）。
 
-
-
-
-
 你可以在下方截图的左侧看到导航栏，通过它可以轻松地在代码的不同部分之间进行；
 
 ![](img/image_rsrc3D7.jpg)
@@ -5264,7 +5225,9 @@ PHPDocumentor 文档的主要优势是其可导航性。
 文档的主要目的是支持开发者——无论是为了让他们快速上手、简化对库复杂性的理解，还是为了更容易进行调试。当你的文档过时时，可能会发生以下情况：
 
 * 对函数的误解或理解错误。
+
 * 在已弃用或修改的函数上浪费时间。
+
 * 因过时的流程导致效率低下或出现错误。
 
 ### 审查 PHPDocs
@@ -5272,7 +5235,9 @@ PHPDocumentor 文档的主要优势是其可导航性。
 定期审查 `PHPDoc` 注释（类似于代码审查）被证明是有有益的。
 
 * 定期审查注释，特别是在代码发生变更之后。
+
 * 训练你的团队成员标记过时或错误的注释。
+
 * 在更新代码时，优先考虑 `PHPDoc` 注释。每当你更新一个方法或函数时，请确保同时更新 `PHPDoc` 注释。
 
 ### 文档的版本控制
@@ -5280,7 +5245,9 @@ PHPDocumentor 文档的主要优势是其可导航性。
 你需要像管理软件一样对文档进行版本控制。
 
 * 你可以在发布软件新版本的同时，创建并保留相应的文档。
+
 * 通过确保存在显式链接或下拉菜单，允许用户在不同版本之间切换。
+
 * 突出最新版本，并为维护遗留系统的开发者保留旧版本的可用。
 
 ### 自动化检查
@@ -5288,7 +5255,9 @@ PHPDocumentor 文档的主要优势是其可导航性。
 自动化可以确保每个方法和类都包含 `PHPDoc` 注释。
 
 * 将 `PHP_CodeSniffer` 添加到你的 `CI/CD` 流水线。
+
 * 创建规则，在合并新代码之前检查其是否包含 `PHPDoc` 注释。
+
 * 定期运行 `PHPDocumentor`，对缺失或格式错误的注释发出警告或提供反馈。
 
 ### 文档访问
@@ -5296,7 +5265,9 @@ PHPDocumentor 文档的主要优势是其可导航性。
 为你的同事以及一些潜在的外部开发者/用户提供访问权限和方便的浏览选项。
 
 * 将文档托管在特殊的子域名或已知平台上。
+
 * 频繁备份你的文档。
+
 * 确保文档中包含的所有链接都是有效的。
 
 ### 社区参与
@@ -5304,12 +5275,10 @@ PHPDocumentor 文档的主要优势是其可导航性。
 为你的同事以及一些潜在的外部开发者/用户提供访问权限和方便的浏览选项。
 
 * 将文档托管在特殊的子域名或已知平台上。
+
 * 频繁备份你的文档。
+
 * 确保文档中包含的所有链接都是有效的。
-
-
-
-
 
 在知名且流行的网站上发布，可以为你的库带来一种真实感。这证明了你的库满足特定的需求，并且在项目中使用是可信的。
 
@@ -5332,24 +5301,31 @@ PHPDocumentor 文档的主要优势是其可导航性。
 ### 代码精炼
 
 *   优化性能：检查库是否以优化的方式运行。审查算法，移除冗余操作，并优化代码路径。
+
 *   单元测试：测试你的库的每个组件是否都有足够的测试用例覆盖。对于我们的 `Jazzon` 示例，必须为 `JsonEncoder`、`JsonParser` 和 `JsonValidator` 类编写单独的测试。此外，我们应该让所有的测试都像图片中那样通过。
 
     ![](img/image_rsrc3D9.jpg)
+
     Jazzon 单元测试通过
 
 *   错误处理：库应该优雅地处理错误。这包括包含信息的错误消息，并附带关于如何修复它们的清晰指示。
+
 *   代码一致性：保持统一的代码可以确保可维护性。这包括遵循编码标准、使用易于理解的变量名并保持缩进一致。
 
 ### 完善的文档
 
 *   PHPDoc 注释：正如本文之前提到的，PHPDoc 注释是不可或的。它们提供了背景信息，描述了函数，并为使用你库的其他开发者提供了指南。
+
 *   用户指南：除了技术文档之外，有一个解释如何使用该库及其功能的用户指南将非常有用。它可能包含使用 `Jazzon` 进行 JSON 解析和验证的简单示例。
+
 *   包含示例：真实世界的示例和用例有助于用户理解你的库可以做什么。`Jazzon` 可以包含编码复杂的 PHP 对象或处理嵌套 JSON 结构的示例。
 
 ### 用户体验考虑
 
 *   直观的 API 设计：你库的公共接口应该易于操作。例如，在 `Jazzon` 中，`encode()`、`parse()` 和 `validate()` 等方法自言其明。
+
 *   用户指南：将外部依赖降至最低，如果存在依赖，要保持它们维护良好且不会给用户带来问题。
+
 *   版本兼容性：确保你的库能够兼容许多 PHP 版本，或者预先说明它与哪个版本兼容。
 
 ### 打包和仓库考虑
@@ -5357,8 +5333,11 @@ PHPDocumentor 文档的主要优势是其可导航性。
 *   目录结构：为你的库创建一个清晰且逻辑性的目录结构。一个标准可以是 `src/` 用于源文件，`tests/` 用于测试代码，`docs/` 用于文档。这里是来自我们 `Jazzon` 库的示例。
 
     ![](img/image_rsrc3DA.jpg)
+
     Jazzon 文件夹结构
+
 *   许可证：为你的库选择一个合适的许可证。这明确说明了赋予软件用户哪些权利，以及是否存在任何使用限制。
+
 *   变更日志（Changelog）：保留一份改进、错误修复和新功能的变更日志。有助于查看随着时间的推移发生了哪些变化。
 
 准备发布库意味着不仅仅是检查它是否运行正常。它关乎为将在其项目中使用你库的另一个开发者提供便利。你根据所有适当规则设计的库不仅功能完备，在开发者工作时也成为一种乐趣。
@@ -5370,6 +5349,7 @@ PHPDocumentor 文档的主要优势是其可导航性。
 ### 选择合适的仓库
 
 *   Packagist 和 Composer：对于 PHP 库，Packagist 是主要的仓库。它与 PHP 依赖管理器 `Composer` 无缝集成，允许开发者轻松地引入你的库。
+
 *   GitHub 和 GitLab：两者不仅仅用于版本控制；它们也已成为发现和审查库的事实所在地。确保你的库位于这些站点中的一个（或两个）上有助于增强其可见性。
 
 ### 在 Packagist 上发布的步骤
@@ -5377,11 +5357,15 @@ PHPDocumentor 文档的主要优势是其可导航性。
 *   创建账户：如果你还没有账户，请[在 Packagist 上创建一个账户](https://packagist.org/login/)。
 
     ![](img/image_rsrc3DB.jpg)
+
     Packagist 登录页面
+
 *   链接仓库：注册后，点击提交按钮然后输入你的 GitHub 或 GitLab 仓库的 URL。Packagist 将提取所需信息。
 
     ![](img/image_rsrc3DC.jpg)
+
     提交库到 Packagist 表单
+
 *   配置 composer.json：确保你的 `composer.json` 文件正确配置了名称、描述、许可证和其他信息。Jazzon 的示例可以是：
 
 ```json
@@ -5411,6 +5395,7 @@ PHPDocumentor 文档的主要优势是其可导航性。
 ```
 
 *   发布版本：使用语义化版本对你的库的稳定版本进行标记。这有助于开发者理解版本之间的差异。
+
 *   Webhooks（可选）：将 Webhooks 与你的 GitHub/GitLab 仓库集成以自动更新。这确保 Packagist 显示库的最新版本。
 
 ### 仓库维护
@@ -5418,14 +5403,12 @@ PHPDocumentor 文档的主要优势是其可导航性。
 定期应用以下步骤，确保你的库维护良好：
 
 ![](img/image_rsrc3DD.jpg)
+
     维护良好库的步骤
 
 *   保持活跃：定期更新你的库，解决错误并纳入反馈。维护良好的仓库会吸引更多用户。
+
 *   与社区互动：响应用户的查询、问题或拉取请求（pull requests）。社区参与可以带来协作改进和更好的声誉。
-
-
-
-
 
 *   **发布日志**：每当更新你的库时，请提供详细的发布日志，概述更改、新功能或错误修复。这体现了开放性并建立了用户的预期。
 
@@ -5481,17 +5464,17 @@ $ composer require username/jazzon
 
 该命令从 `Packagist` 下载库并将其安装到用户的项目中。
 
-*   **更新包**：每当发布新版本时，在 `Packagist` 上更新你的库是至关重要的。如果你配置了 `webhooks`，这将自动发生。否则，请手动更新以确保消费者获得最新版本。
+
+
+- **更新包**：每当发布新版本时，在 `Packagist` 上更新你的库是至关重要的。如果你配置了 `webhooks`，这将自动发生。否则，请手动更新以确保消费者获得最新版本。
 
 ### 妥当打包的重要性
 
-*   **易于集成**：妥的打包意味着开发者可以轻松将你的库引入到他们的项目中。
+- **易于集成**：妥当的打包意味着开发者可以轻松将你的库引入到他们的项目中。
+- **依赖管理**：使用 `Composer` 打包可以实现自动依赖处理，确保所有必要的包都已安装。
+- **版本控制**：开发者可以选择特定的库版本，以确保项目的兼容性和稳定性。
 
-*   **依赖管理**：使用 `Composer` 打包可以实现自动依赖处理，确保所有必要的包都已安装。
-
-*   **版本控制**：开发者可以选择特定的库版本，以确保项目的兼容性和稳定性。
-
-打包和分发是像 `Jazzon` 这样的库生命周期中最后也是持续的步骤。妥当的打包确保了库能够无缝集成到各种项目中，造福更的开发者社区。
+打包和分发是像 `Jazzon` 这样的库生命周期中最后也是持续的步骤。妥当的打包确保了库能够无缝集成到各种项目中，造福更多的开发者社区。
 
 # 库的维护
 
@@ -5499,11 +5482,11 @@ $ composer require username/jazzon
 
 首先，这部分强调了库维护的重要性以及定期升级的必要性。它解释了持续的维护不仅能延长库的寿命和实用性，还能确保它继续满足用户不断变化的需求。这部分旨在让读者理解主动维护在保持库的相关性和功能性方面的价值。
 
-接下来，这部分建议紧密跟踪问题和反馈，以根据用户需求不断改进库。它强调了互动社区在这一过程中的作用，并建议了对内容进行分类和积极参与用户的方法。这种参与不仅让用户感到更有参与感，还为库的发展提供了宝贵的见解。
+接下来，这部分建议紧密跟踪问题和反馈，以根据用户需求不断改进库。它强调了互动社区在此过程中的作用，并建议了对内容进行分类和积极参与用户的方法。这种参与不仅让用户感到更有参与感，还为库的发展提供了宝贵的见解。
 
 分析和规划库更新的过程是另一个关键主题。指南涵盖了如何实施、测试并负责任地发布更新，并强调了维护兼容性和完整文档的重要性。它还强调了更新后增长的重要性，这包括监控结果并积极寻求反馈以持续改进。
 
-书中还强调了库开发中同时需要向前和向后兼容性的必要性。这部分提供了如何平衡创新与稳定性的见解，使用 `Semantic Versioning` 等工具和有效的沟通策略来应对在此过程中可能出现的挑战。
+书中还强调了库开发中同时需要向前和向后兼容性的必要性。这部分提供了如何平衡创新与稳定性的见解，使用 `Semantic Versioning` 等工具和有效的沟通策略来应对此过程中可能出现的挑战。
 
 安全性是这部分涵盖的库维护的一个关键方面。它涉及理解风险、进行定期审核、维护当前的编码标准、实施响应事件计划、保护依赖项以及持续监控威胁。这些实践对于确保库的安全性和完整性至关重要。
 
@@ -5515,17 +5498,10 @@ $ composer require username/jazzon
 
 ### 维护的必要性
 
-*   **质量保证**：维护确保库能够正常运行并符合性能和安全标准。换句话说，它让代码库保持更新，使其不会随时间推移变得过时或失效。
-
-*   **社区互动**：维护良好的库会吸引其他开发者和用户，从而创建一个能够决定库未来发展的活跃社区。
-
-*   **适应变化**：技术和用户需求不断变化，因此库必须具有灵活性和创新性，以保持相关性和实用性。
-
-*   **寿命**：通过维护，使库能够生存多年，从而成为开发者之间可靠的选择。
-
-
-
-
+- **质量保证**：维护确保库能够正常运行并符合性能和安全标准。换句话说，它让代码库保持更新，使其不会随时间推移变得过时或失效。
+- **社区互动**：维护良好的库会吸引其他开发者和用户，从而创建一个能够决定库未来发展的活跃社区。
+- **适应变化**：技术和用户需求不断变化，因此库必须具有灵活性和创新性，以保持相关性和实用性。
+- **寿命**：通过维护，使库能够生存多年，从而成为开发者之间可靠的选择。
 
 ![](img/image_rsrc3DE.jpg)
 
@@ -5535,15 +5511,16 @@ $ composer require username/jazzon
 
 更新不仅意味着修复漏洞或添加新功能。它们体现了库对追求卓越的能量和投入。
 
-* **漏洞修复**：快速解决漏洞可以建立用户信任，并消除不便。
-* **功能增强**：对现有功能进行增强或添加新功能可以保持库的吸引力和时效性。
-* **安全更新**：定期修复安全漏洞对于确保库的完整性及其声誉至关重要。
-* **兼容性更新**：如果该库已被广泛使用，则需要更新以实现与多个平台、版本和依赖项的兼容。
-* **性能优化**：专注于速度、效率和资源使用的更新有助于确保愉悦的用户体验。
+- **漏洞修复**：快速解决漏洞可以建立用户信任，并消除不便。
+- **功能增强**：对现有功能进行增强或添加新功能可以保持库的吸引力和时效性。
+- **安全更新**：定期修复安全漏洞对于确保库的完整性及其声誉至关重要。
+- **兼容性更新**：如果该库已被广泛使用，则需要更新以实现与多个平台、版本和依赖项的兼容。
+- **性能优化**：专注于速度、效率和资源使用的更新有助于确保愉悦的用户体验。
 
 以下是库更新的不同侧面：
 
 ![](img/image_rsrc3DF.jpg)
+
 ### 库更新的不同维度
 
 维护和更新库是保持库健康、相关性和成功的关键。例行维护、对用户反馈的响应、对趋势的预测以及审慎的升级，使库在充满挑战的市场中保持活力。以下课程将深入探讨这些细微差别，提供良好库管理的概述。
@@ -5557,21 +5534,22 @@ $ composer require username/jazzon
 问题监控的一项活动是跟踪用户报告的问题和请求的。需要一个组织良好的系统来分析、优先排序并对所有报告的问题做出及时响应。
 
 ![](img/image_rsrc3DG.jpg)
+
 #### 问题监控流程流程图
 
-* **问题分类**：不同类别的问题，如漏洞报告、增强请求和查询请求。
-* **问题优先级**：需要逐一考虑紧急和重要程度。
-* **分配给团队成员**：让合适的团队成员处理问题的解决。
+- **问题分类**：不同类别的问题，如漏洞报告、增强请求和查询请求。
+- **问题优先级**：需要逐一考虑紧急和重要程度。
+- **分配给团队成员**：让合适的团队成员处理问题的解决。
 
 通过 `Trello` 或 `Jira` 等 Scrum 面板跟踪所有问题/任务的进度。
 
 ### 用户反馈
 
-用户反馈信息的重要来源。它可能揭示库是如何使用的，以及哪些地方可以改进。
+用户反馈是信息的重要来源。它可能揭示库是如何使用的，以及哪些地方可以改进。
 
-* **收集反馈**：使用 `GitHub`、论坛或直接用户调查来收集反馈。
-* **分析反馈**：寻找共同模式以及独特的用户请求或困难。
-* **深思回复**：认可用户的输入并提供实际的后续操作。
+- **收集反馈**：使用 `GitHub`、论坛或直接用户调查来收集反馈。
+- **分析反馈**：寻找共同模式以及独特的用户请求或困难。
+- **深思回复**：认可用户的输入并提供实际的后续操作。
 
 ### 通信渠道
 
@@ -5586,16 +5564,18 @@ $ composer require username/jazzon
 你可以通过访问仓库视图上的 `Actions` 标签并点击“自行设置工作流”，在你的 `GitHub` 库仓库上设置工作流，你应该看到类似的内容：
 
 ![](img/image_rsrc3DH.jpg)
+
 #### 找到工作流设置链接/按钮
 
 在新窗口打开后，你可以按照下面的说明添加你的工作流配置并将其提交到仓库，你应该会有像这样的视图：
 
 ![](img/image_src3DJ.jpg)
+
 #### 添加你的工作流
 
 你可以利用这种强大的工具完成一些事情，例如：
 
-* **自动标记**：自动化的一个有效用途是在问题被报告时对其进行分类。例如，使用 `GitHub Actions`，你可以根据问题标题中的特定关键词自动将问题标记为 `bug`。例如，此脚本如果问题标题中包含 `bug`，则会自动将新问题标记为 `bug`，从而简化分类过程。
+- **自动标记**：自动化的一个有效用途是在问题被报告时对其进行分类。例如，使用 `GitHub Actions`，你可以根据问题标题中的特定关键词自动将问题标记为 `bug`。例如，此脚本如果问题标题中包含 `bug`，则会自动将新问题标记为 `bug`，从而简化分类过程。
 
 ```yaml
 name: Automated Labeling
@@ -5625,7 +5605,7 @@ jobs:
             }
 ```
 
-* **关键问题的自动告警**：为关键问题设置自动告警可确保紧急事项得到及时处理。`GitHub Actions` 可用于在问题标记为 `critical` 时向相关团队成员或利益相关者发送通知。此工作流片段每当问题标记为 `critical` 时就会触发告警，便于立即关注高优先级问题。
+- **关键问题的自动告警**：为关键问题设置自动告警可确保紧急事项得到及时处理。`GitHub Actions` 可用于在问题标记为 `critical` 时向相关团队成员或利益相关者发送通知。此工作流片段每当问题标记为 `critical` 时就会触发告警，便于立即关注高优先级问题。
 
 ```yaml
 name: Critical Issue Alert
@@ -5648,7 +5628,7 @@ jobs:
             }
 ```
 
-* **常见问题的自动回复**：通常，用户有可以使用标准回答的常见查询。可以配置自动化工具提供这些初始解决方案，提供快速且一致的回复。以下工作流示例展示了如何自动回答常见问题，提升用户体验并减少重复性任务。
+- **常见问题的自动回复**：通常，用户有可以使用标准回答的常见查询。可以配置自动化工具提供这些初始解决方案，提供快速且一致的回复。以下工作流示例展示了如何自动回答常见问题，提升用户体验并减少重复性任务。
 
 ```yaml
 name: Automated Issue Response
@@ -5674,11 +5654,7 @@ jobs:
             });
 ```
 
-
-
-
-
-总而言，通过利用 `GitHub actions` 等自动化工具，库维护者可以成功地管理问题并与社区互动。这些工具有助于在库的支持和开发中保持极高的响应速度和高质量。
+总而言之，通过利用 `GitHub actions` 等自动化工具，库维护者可以成功地管理问题并与社区互动。这些工具有助于在库的支持和开发中保持极高的响应速度和高质量。
 
 这是一个持续倾听并响应关注点及意见的过程。它要求你保持敏锐，与社区所表达的需求保持密切联系，在尝试满足这些需求时保持敏感性，并准备好正确的工具。以这种方式与社区保持联系可以帮助你为库营造一个更健康的氛围——这种氛围能够支持更好的质量和用户满意度。
 
@@ -5688,11 +5664,11 @@ jobs:
 
 ### 为什么要更新？
 
-*   满足用户需求：随着用户需求的演变，库必须不断调整以满足这些需求。
-*   修复漏洞：需要定期更新以解决已知的漏洞并维护库的完整性。
-*   增强性能：优化和增强将带来性能的提升。
-*   合规性与标准：遵循最新的标准和法律可以确保库保持相关性和合法性。
-*   安全：保持库的更新可以确保其符合最新的安全标准。
+- 满足用户需求：随着用户需求的演变，库必须不断调整以满足这些需求。
+- 修复漏洞：需要定期更新以解决已知的漏洞并维护库的完整性。
+- 增强性能：优化和增强将带来性能的提升。
+- 合规性与标准：遵循最新的标准和法律可以确保库保持相关性和合法性。
+- 安全：保持库的更新可以确保其符合最新的安全标准。
 
 ### 更新流程
 
@@ -5702,26 +5678,26 @@ jobs:
 
 PHP 库更新过程流程图
 
-*   分析与规划：确定需要更新的内容以及更新原因。
-*   开发与测试：实施改进措施并进行广泛测试。
-*   用户通知与文档：告知用户更新情况并提供相应的文档。
-*   部署：受控地部署更新，以确保与当前系统兼容。
-*   监控与反馈收集：更新后的监控有助于尽早发现任何潜在问题。
+- 分析与规划：确定需要更新的内容以及更新原因。
+- 开发与测试：实施改进措施并进行广泛测试。
+- 用户通知与文档：告知用户更新情况并提供相应的文档。
+- 部署：受控地部署更新，以确保与当前系统兼容。
+- 监控与反馈收集：更新后的监控有助于尽早发现任何潜在问题。
 
 ### 更新的考虑因素
 
-*   向后兼容性：这是确保更改不会破坏现有功能的过程。
-*   测试：进行彻底的测试，以保证新更改不会引入新漏洞。
+- 向后兼容性：这是确保更改不会破坏现有功能的过程。
+- 测试：进行彻底的测试，以保证新更改不会引入新漏洞。
 
-    以下代码段演示了使用 `PHPUnit` 对假设的新功能进行基础单元测试。该测试检查 `NewFeature` 类的 `functionality` 方法是否返回预期结果，以确保新功能按预期工作。
+  以下代码段演示了使用 `PHPUnit` 对假设的新功能进行基础单元测试。该测试检查 `NewFeature` 类的 `functionality` 方法是否返回预期结果，以确保新功能按预期工作。
 
 ```php
 assertEquals('Expected result', $feature->functionality()); } }
 ```
 
-*   文档：用户必须拥有更新后的文档以反映新的进展。
+- 文档：用户必须拥有更新后的文档以反映新的进展。
 
-    以下片段显示了如何在 PHP 库中记录新功能。`PHPDoc` 注释提供了方法的清晰描述，包括其用途、参数和返回类型，这对于用户和开发者理解其功能至关重要。
+  以下片段显示了如何在 PHP 库中记录新功能。`PHPDoc` 注释提供了方法的清晰描述，包括其用途、参数和返回类型，这对于用户和开发者理解其功能至关重要。
 
 ```php
 <?php
@@ -5745,19 +5721,19 @@ public function functionality($param) { // 方法实现 }
 
 ### 兼容性的重要性
 
-### 用户信任与采用
+#### 用户信任与采用
 
-*   稳定性：用户依赖库的一致行为。突然的变化可能会导致困惑或破坏现有代码。
-*   迁移路径：直接的迁移过程有助于用户适应新版本，而不会中断他们的生产力。
-*   长寿：对旧版本的支持可以建立信任，并确保用户即使在旧系统中也能继续使用该库。
+- 稳定性：用户依赖库的一致行为。突然的变化可能会导致困惑或破坏现有代码。
+- 迁移路径：直接的迁移过程有助于用户适应新版本，而不会中断他们的生产力。
+- 长寿：对旧版本的支持可以建立信任，并确保用户即使在旧系统中也能继续使用该库。
 
 ### 兼容性中的挑战
 
-### 平衡创新与稳定性
+#### 平衡创新与稳定性
 
-*   创新：新的添加和更新对于增长是必要的，但它们可能会带来不兼容性。
-*   弃用：移除过时的功能需要仔细的规划和沟通。
-*   依赖关系：依赖项的变化可能会影响兼容性。
+- 创新：新的添加和更新对于增长是必要的，但它们可能会带来不兼容性。
+- 弃用：移除过时的功能需要仔细的规划和沟通。
+- 依赖关系：依赖项的变化可能会影响兼容性。
 
 ### 维护兼容性的策略
 
@@ -5767,24 +5743,24 @@ public function functionality($param) { // 方法实现 }
 
 维护库/项目兼容性的步骤
 
-### 语义版本控制 (SemVer)
+#### 语义版本控制（SemVer）
 
-*   清晰的版本控制：遵循 `SemVer` 指南有助于用户理解更改的性质和影响。
-*   版本规划：通过根据兼容性规划发布，促进平滑过渡。
+- 清晰的版本控制：遵循 `SemVer` 指南有助于用户理解更改的性质和影响。
+- 版本规划：通过根据兼容性规划发布，促进平滑过渡。
 
-### 全面测试
+#### 全面测试
 
-*   自动化测试：定期运行测试，以确保新的修改不会损坏现有功能。
-*   跨版本测试：通过在多个版本上测试来评估兼容性。
+- 自动化测试：定期运行测试，以确保新的修改不会损坏现有功能。
+- 跨版本测试：通过在多个版本上测试来评估兼容性。
 
-### 文档与沟通
+#### 文档与沟通
 
-*   更新文档：通过修改和弃用维护文档。
-*   与用户互动：当用户获知计划变更时，他们准备得更充分并提供更有价值的投入。
+- 更新文档：通过修改和弃用维护文档。
+- 与用户互动：当用户获知计划变更时，他们准备得更充分并提供更有价值的投入。
 
-### 考虑长期支持 (LTS) 版本
+#### 考虑长期支持（LTS）版本
 
-*   稳定发布：LTS 版本为需要长期支持的人提供了稳定的基础。
+- 稳定发布：LTS 版本为需要长期支持的人提供了稳定的基础。
 
 在库开发中维护兼容性是一项艰巨但必要的努力。必须在交付新功能和保持现有功能之间取得微妙的平衡。
 
@@ -5798,8 +5774,8 @@ public function functionality($param) { // 方法实现 }
 
 可能同时存在外部和内部安全威胁。理解这些威胁是创建安全库的第一步。
 
-*   外部风险：包括黑客攻击、第三方依赖项的缺陷等。
-*   内部风险：包括代码缺陷、测试不足、不符合安全要求等。
+- 外部风险：包括黑客攻击、第三方依赖项的缺陷等。
+- 内部风险：包括代码缺陷、测试不足、不符合安全要求等。
 
 ### 安全审计
 
@@ -5809,33 +5785,30 @@ public function functionality($param) { // 方法实现 }
 
 PHP 库维护中安全审计的思维图
 
-*   静态分析：通过分析代码而不运行它来发现漏洞。
-*   动态分析：通过在运行时条件下测试库来检测问题。
-*   自动化安全测试：指使用自动化工具执行例行安全测试。
+- 静态分析：通过分析代码而不运行它来发现漏洞。
+- 动态分析：通过在运行时条件下测试库来检测问题。
+- 自动化安全测试：指使用自动化工具执行例行安全测试。
 
 ### 依赖扫描
 
-库经常依赖第三方库。跟踪这些依赖项并确保它们更新且安全的至关重要的。
+库经常依赖第三方库。跟踪这些依赖项并确保它们更新且安全是至关重要的。
 
 ![](img/image_rsrc3DP.jpg)
 
 依赖扫描和更新过程流程图
 
-*   定期更新依赖项：保持所有依赖项为最新状态。
-
-
-
-
-
--   漏洞告警监控：使用技术接收有关已知漏洞的通知。
+- 定期更新依赖项：保持所有依赖项为最新状态。
+- 漏洞告警监控：使用技术接收有关已知漏洞的通知。
 
 ### 安全编码实践
 
 遵循安全编码标准和指南可以确保库对安全风险有强大的防御能力。
 
--   输入验证：始终对用户输入进行验证，以避免 SQL 注入、XSS 和其他漏洞。
+- 输入验证：始终对用户输入进行验证，以避免 SQL 注入、XSS 和其他漏洞。
 
   让我们来看一个使用 `filter_var()` 等函数验证电子邮件地址的示例。像这样验证用户输入可以确保只处理格式正确的数据，从而帮助防止 SQL 注入和 XSS 攻击等常见漏洞。
+
+
 
 ```php
 <?php
@@ -5847,9 +5820,9 @@ if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 ```
 
--   加密：对于敏感数据，使用适当的加密。
+- **加密**：对于敏感数据，使用适当的加密。
 
-  下面的示例演示了如何使用 OpenSSL 的 `AES-128-CBC` 算法加密数据。这种加密对于保护敏感数据至关重要，确保确保即使数据被拦截，在没有正确密钥的情况下也无法读取。
+下面的示例演示了如何使用 OpenSSL 的 `AES-128-CBC` 算法加密数据。这种加密对于保护敏感数据至关重要，确保即使数据被拦截，在没有正确密钥的情况下也无法读取。
 
 ```php
 <?php
@@ -5857,9 +5830,9 @@ if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
 $encryptedData = openssl_encrypt(data, 'AES-128-CBC', $key, 0, $iv);
 ```
 
--   身份验证与授权：建立稳健的身份验证和授权程序。
+- **身份验证与授权**：建立稳健的身份验证和授权程序。
 
-  下面的基础示例使用 PHP 的 `password_verify` 函数安全地将用户输入的密码与存储的哈希进行比较。这种身份验证方法对于维护安全的访问控制至关重要，确保只有经过验证的用户才能访问某些功能。
+下面的基础示例使用 PHP 的 `password_verify` 函数安全地将用户输入的密码与存储的哈希进行比较。这种身份验证方法对于维护安全的访问控制至关重要，确保只有经过验证的用户才能访问某些功能。
 
 ```php
 <?php
@@ -5879,9 +5852,9 @@ if (password_verify($inputPassword, $storedPasswordHash)) {
 
 应急响应计划的流程图
 
--   立即响应：识别出事件后立即需要做什么。
--   通信计划：如何将事件通知给用户和利益相关者？
--   事后分析：调查哪里出了问题，并确定未来如何避免此类问题发生。
+- **立即响应**：识别出事件后立即需要做什么。
+- **通信计划**：如何将事件通知给用户和利益相关者？
+- **事后分析**：调查哪里出了问题，并确定未来如何避免此类问题发生。
 
 保持库的安全需要多样化的方法。理解风险、进行定期审计、监控依赖项、遵循安全编码实践以及拥有应急响应策略都是其中的一部分。一个维护良好且安全的库能够赢得用户的信任，并使更广泛的开发者社区受益。
 
@@ -5897,19 +5870,19 @@ if (password_verify($inputPassword, $storedPasswordHash)) {
 
 PHP 库开发中文档更新过程的流程图
 
--   通知用户新功能或已弃的功能。
--   对已知 Bug 提供修复方案或解释。
--   回答常见问题或解释疑难点。
+- 通知用户新功能或已弃的功能。
+- 对已知 Bug 提供修复方案或解释。
+- 回答常见问题或解释疑难点。
 
 ### 利用社区反馈改进维护
 
 你的用户群可能是一项重要资产。他们提供了新的视角，发现了隐藏的问题，并提供了真实的应用场景。
 
-你可以用来从社区收集反馈的某些参与平台包括：：
+你可以用来从社区收集反馈的某些参与平台包括：
 
--   论坛与讨论板：人们讨论问题、分享解决方案和提供反馈的地方。
--   调查问：收集关于库的使用、功能和潜在改进的系统性输入。
--   社交媒体：社交媒体有助于快速公告和互动。
+- **论坛与讨论板**：人们讨论问题、分享解决方案和提供反馈的地方。
+- **调查问卷**：收集关于库的使用、功能和潜在改进的系统性输入。
+- **社交媒体**：社交媒体有助于快速公告和互动。
 
 ### 社区对库代码的贡献
 
@@ -5917,9 +5890,9 @@ PHP 库开发中文档更新过程的流程图
 
 社区对库贡献的某些益处是：
 
--   多样化的视角有助于提供解决方案。
--   更快速地检测和解决 Bug。
--   由于更广泛的开发者群体，功能集得到了增强。
+- 多样化的视角有助于提供解决方案。
+- 更快速地检测和解决 Bug。
+- 由于更广泛的开发者群体，功能集得到了增强。
 
 ### 保持清晰的通信渠道
 
@@ -5927,25 +5900,21 @@ PHP 库开发中文档更新过程的流程图
 
 为了实现有效的沟通，你可以遵循某些良好实践：
 
--   对问题做出回应。
--   认可贡献。
--   通知更新。
+- 对问题做出回应。
+- 认可贡献。
+- 通知更新。
 
 ### 通过研讨会和教程教育用户
 
 通过研讨会和教程教育用户。这样做可以带来一些好处：
 
--   缩短用户的学习曲线。
--   提供对复杂功能的深度解析。
--   增强社区关系。
-
-
-
-
+- 缩短用户的学习曲线。
+- 提供对复杂功能的深度解析。
+- 增强社区关系。
 
 提高 PHP 库的性能也是核心重点之一。开发者将学习最佳实践，以确保库运行顺畅高效，从而使其在所属领域脱颖而出。性能优化对于满足用户预期以及处理增长的流量或数据处理需求至关重要。
 
-最后，这部分介绍了可扩展性和可维护性，教授开发者如何创建不仅能高效扩展以处理更高流量，而且在成熟后仍保持易于维护的库。平衡这些方面对于 PHP 库的长期成功和易用性至关重要，确保它在增长和演过程中持续满足用户需求。
+最后，这部分介绍了可扩展性和可维护性，教授开发者如何创建不仅能高效扩展以处理更高流量，而且在成熟后仍保持易于维护的库。平衡这些方面对于 PHP 库的长期成功和易用性至关重要，确保它在增长和演进过程中持续满足用户需求。
 
 ## 编写整洁且高效的代码
 
@@ -5974,12 +5943,12 @@ echo p($l);  // Outputs: 16
 
 上述代码的问题：
 
-*   函数名 `p()` 缺乏描述。
-*   变量名不具描述性 `$a`, `$s`, `$n`, `$l`。
-*   没有注释或文档。
-*   单字母变量名难以查找它们出现的位置。
+- 函数名 `p()` 缺乏描述。
+- 变量名不具描述性 `$a`, `$s`, `$n`, `$l`。
+- 没有注释或文档。
+- 单字母变量名难以查找它们出现的位置。
 
-现在，让我们这段代码的另一个版本。
+现在，让我们看看这段代码的另一个版本。
 
 ```php
 <?php  
@@ -6006,30 +5975,30 @@ echo sumOfOdds($sampleList);  // Outputs: 16
 
 新版本的改进：
 
-*   `sumOfOdds()` 是一个具描述性的函数名。
-*   对函数参数和返回值使用了类型提示。
-*   变量名具描述性 `$numbers`, `$total`, `$number`, `$sampleList`。
-*   添加了 doc-block 注释，明确了函数的用途和参数。
+- `sumOfOdds()` 是一个具描述性的函数名。
+- 对函数参数和返回值使用了类型提示。
+- 变量名具描述性 `$numbers`, `$total`, `$number`, `$sampleList`。
+- 添加了 doc-block 注释，明确了函数的用途和参数。
 
 ### 遵循命名规范
 
-*   **变量**：变量名应始终具描述性。例如，使用 `$number` 代替 `$n`。
-*   **函数**：函数和方法的名称应指示其功能。选择 `sumOfOdds()` 而不是 `p()`。
-*   **类**：使用能清晰表达目的的名词，例如 `JsonEncoder`。
+- **变量**：变量名应始终具描述性。例如，使用 `$number` 代替 `$n`。
+- **函数**：函数和方法的名称应指示其功能。选择 `sumOfOdds()` 而不是 `p()`。
+- **类**：使用能清晰表达目的的名词，例如 `JsonEncoder`。
 
 ### 追求代码效率
 
-*   **时间复杂度**：评估算法的性能。是否存在多余的循环或冗余的操作？
-*   **空间复杂度**：从空间复杂度的角度分析内存占用。可以通过优化数据结构来节省内存吗？
-*   **数据库调用**：通过最小化和优化数据库交互来降低延迟。
+- **时间复杂度**：评估算法的性能。是否存在多余的循环或冗余的操作？
+- **空间复杂度**：从空间复杂度的角度分析内存占用。可以通过优化数据结构来节省内存吗？
+- **数据库调用**：通过最小化和优化数据库交互来降低延迟。
 
 ### 倡导重构
 
 定期重构有助于：
 
-*   检测并修正代码气味。
-*   通过采用新标准或技术保持代码库更新。
-*   使功能开发变得容易，无需昂贵的权宜方案。
+- 检测并修正代码气味。
+- 通过采用新标准或技术保持代码库更新。
+- 使功能开发变得容易，无需昂贵的权宜方案。
 
 ### 清晰优于巧妙
 
@@ -6056,19 +6025,15 @@ $totalProduct = calculateProduct(5, 10);
 echo $totalProduct;
 ```
 
-
-
-
-
-* 包含了指定这些税收法规来源的标记，这可能对未来的参考或更新有所益。
-* `function` 内部的注释提供了对每个条件背后逻辑的见解。
+- 包含了指定这些税收法规来源的标记，这可能对未来的参考或更新有所裨益。
+- `function` 内部的注释提供了对每个条件背后逻辑的见解。
 
 如果这样做了，未来的开发者（甚至是过段时间后回到代码的同一位开发者）将立即理解税收计算机制背后的逻辑。
 
 ## 通过代码风格保持一致性
 
-* 采用风格指南：无论是 Python 的 `PEP 8`、PHP 的 `PSR` 还是其他指南，都都要严格不疑地遵守。
-* 自动化代码检查工具：诸如 `ESLint` 或 `Prettier` 等工具可以强制执行一致风格并检测差异。
+- 采用风格指南：无论是 Python 的 `PEP 8`、PHP 的 `PSR` 还是其他指南，都要严格不疑地遵守。
+- 自动化代码检查工具：诸如 `ESLint` 或 `Prettier` 等工具可以强制执行一致风格并检测差异。
 
 考虑以下场景：你正在编写一个用于管理系统用户配置的库。
 
@@ -6112,18 +6077,19 @@ addUser($userData);
 ```
 
 在上面的修订版本中：
-* 遵循了命名规范。变量具有描述性并使用了 `camelCase`。
-* 间距和缩进都是一致的。
-* 数组键标签标记正确。
-* 函数名以动词为基础，指示了它们的操作。
+
+- 遵循了命名规范。变量具有描述性并使用了 `camelCase`。
+- 间距和缩进都是一致的。
+- 数组键标签标记正确。
+- 函数名以动词为基础，指示了它们的操作。
 
 当贯应用于整个代码库时，这种统一性可以显著提高代码的可读性和维护性。使用像 `PHP_CodeSniffer` 这样的工具在项目中强制此类风格将会有帮助。
 
 ## 代码审查的价值
 
-* 疏忽：即使是经验丰富的开发者也会出错。审查确保每一处修改都经过了多双眼睛的审视。
-* 知识传递：通过允许开发者分享想法、方法论和最佳实践，促进了学习。
-* 可维护性：审查有助于验证代码不仅功能正常，而且具有维护性并符合更广泛的架构。
+- **疏忽**：即使是经验丰富的开发者也会出错。审查确保每一处修改都经过了多双眼睛的审视。
+- **知识传递**：通过允许开发者分享想法、方法论和最佳实践，促进了学习。
+- **可维护性**：审查有助于验证代码不仅功能正常，而且具有维护性并符合更广泛的架构。
 
 代码审查的价值通常不是通过代码本身体现，而是通过审查过程中提供的输入。然而，我们可以展示一段示例 PHP 代码，然后演示开发者在代码审查期间可能收到的反馈。
 
@@ -6142,14 +6108,15 @@ echo userAge($usr_dob);
 ```
 
 潜在的代码审查反馈可能是：
-* 关于 `function` 名称歧义的注释可能是：
-    * “函数名 `userAge` 暗示它与用户对象或类相关。” “考虑重命名函数 `calculateAgeFromDOB` 以明确其目的。”
-* 关于变量命名的注释可能是：
-    * `$user_dop` 应该更明确。为了更清晰起见，考虑将其更改为 `$userDateOfBirth`。”
-* 关于错误处理的注释可能是：
-    * “如果提供的 `$dob` 不符合预期格式或无效会发生什么？” 设置错误检查来处理此类情况是一个好主意。”
-* 关于内联文档的注释可能是：
-    * 在函数上方添加 doc 注释以描述其目的、接受的参数及其返回值。
+
+- 关于 `function` 名称歧义的注释可能是：
+  - “函数名 `userAge` 暗示它与用户对象或类相关。” “考虑重命名函数 `calculateAgeFromDOB` 以明确其目的。”
+- 关于变量命名的注释可能是：
+  - `$user_dop` 应该更明确。为了更清晰起见，考虑将其更改为 `$userDateOfBirth`。
+- 关于错误处理的注释可能是：
+  - “如果提供的 `$dob` 不符合预期格式或无效会发生什么？” 设置错误检查来处理此类情况是一个好主意。
+- 关于内联文档的注释可能是：
+  - 在函数上方添加 doc 注释以描述其目的、接受的参数及其返回值。
 
 让我们将这些注释应用到最后的代码段中，这里是修订版本：
 
@@ -6177,31 +6144,33 @@ echo calculateAgeFromDOB($userDateOfBirth);
 ```
 
 检查修订版本：
-* 遵循了命名规范。变量具有描述性并使用了 `camelCase`。
-* 间距和缩进都是一致的。
-* 数组键标记正确。
-* 函数名以动词为基础，指示了它们的操作。
+
+- 遵循了命名规范。变量具有描述性并使用了 `camelCase`。
+- 间距和缩进都是一致的。
+- 数组键标记正确。
+- 函数名以动词为基础，指示了它们的操作。
 
 代码不仅仅是行。
 
 ## 设计与架构
 
 库的架构影响其可扩展性和维护性。良好的架构可以确保你的库：
-* 轻松适应变化
-* 与其他库良好协作
-* 利于新开发者理解
+
+- 轻松适应变化
+- 与其他库良好协作
+- 利于新开发者理解
 
 ### PHP 中的模块化设计
 
 采用模块化设计。使用 PHP 命名空间，将你的库组织成独立的模块。这不仅使源代码更易维护，还允许用户使用他们需要的部分。
 
-### PHP 特的设计模式
+### PHP 中的设计模式
 
 使用与属性兼容的设计模式。在 PHP 库中，`Singleton`、`Dependency Injection` 等模式被广泛用于增加重用性和灵活性。例如，使用 `Factory` 模式构建数据库连接或 HTTP 客户端，确保灵活性。
 
 ## 使用 Composer 关注依赖管理
 
-Composer 改变了 PHP 管理。在设计库时要明确依赖关系，并在 `composer.json` 中精确列出它们。这避免了冲突并提供了平滑集成。
+Composer 改变了 PHP 依赖管理。在设计库时要明确依赖关系，并在 `composer.json` 中精确列出它们。这避免了冲突并提供了平滑集成。
 
 让我们通过我们的 `Jazzon` 库来看完整的 `composer.json` 示例：
 
@@ -6236,19 +6205,17 @@ Composer 改变了 PHP 管理。在设计库时要明确依赖关系，并在 `c
 
 ### 使用 PHP 测试框架
 
-
-
-
-
 拥有健全的测试策略是实现健壮软件架构的基石之一。通过测试框架的帮助，开发者不仅可以验证代码的正确性，还可以保护自己免受未来回归的影响，确保新更改不会导致旧更改失效。`PHPUnit` 和 `Behat` 都是 PHP 生态系统中优秀的工具，使用它们将帮助你确保你的库不仅在功能上是健全的，在结构上也是如此。
 
-当你专门针对可测试性设计你的库架构时，你会更容易诊断问题、更快速地进行调试，并能够更有信地发布代码。此外，一个经过良好测试的库将提高项目在开发者社区中的声誉，从而确保用户能够信任其项目中该软件组件的可靠性。
+当你专门针对可测试性设计你的库架构时，你会更容易诊断问题、更快速地进行调试，并能够更有信心地发布代码。此外，一个经过良好测试的库将提高项目在开发者社区中的声誉，从而确保用户能够信任其项目中该软件组件的可靠性。
 
 ### 跟进 PHP-FIG 建议
 
 `PSRs`（PHP 标准建议）是由 PHP 框架互操作性小组（`PHP-FIG`）提出的 PHP 库开发指南。遵循这些指南可以使你的库符合社区标准。
 
-### 将将代码逻辑与框架解耦
+### 将代码逻辑与框架解耦
+
+
 
 虽然框架能够快速开发，但将你库的核心功能从任何单一框架中隔离出来至关重要。这确保了使用多个 PHP 框架的用户可以轻松集成你的库。
 
@@ -6256,9 +6223,9 @@ Composer 改变了 PHP 管理。在设计库时要明确依赖关系，并在 `c
 
 ### 在 PHP 中遵循 SOLID 原则
 
-`SOLID` 原则是五种设计原则的缩写，旨在使软件设计更加清晰、灵活且易于维护，这些原则对于 PHP 库至关重要；
+`SOLID` 原则是五种设计原则的缩写，旨在使软件设计更加清晰、灵活且易于维护，这些原则对于 PHP 库至关重要。
 
-| 原则 |  | 示例实现 |
+| 原则 | 说明 | 示例实现 |
 | --- | --- | --- |
 | 单一职责 | 类/函数应该只有一个职责 | 分离 `User` 和 `UserNotification` 类 |
 | 开/闭原则 | 对扩展开放，对修改关闭 | 为 `Shapes` 使用接口，在 `Square`、`Circle` 等中实现 |
@@ -6266,42 +6233,38 @@ Composer 改变了 PHP 管理。在设计库时要明确依赖关系，并在 `c
 | 接口隔离 | 任何类都不应被强制实现未使用的方法 | 分离 `Workable` 和 `Eatable` 接口 |
 | 依赖倒置 | 依赖抽象，而非依赖具体实现 | 核心类依赖于 `SwitchableDevice` 接口，而不是 `LightBulb` 类 |
 
-*   `SRP` (单一职责原则)：你库中的每个 PHP 类应该只有一个变化的理由。这确保了每个类都处理一个不同的问题。
-    *   考虑将一个同时负责数据验证和数据存储的类分为两个独立的类。
-*   `开/闭原则` (`OCP`)：PHP 类应该应对扩展开放但对修改关闭。这鼓励了更模块化的方法，允许在不更改现有代码的情况下进行简单扩展。
-    *   使用 `abstract` 类或可以在不更改源代码的情况下进行扩展的接口作为示例。
-*   `里氏替换原则` (`LSP`)：该原则规定超类对象可以与子类对象交换，而不影响程序的正确性。
-    *   例如，如果你在库中扩展了一个类或实现了一个接口，请确保派生类与基类兼容。
-*   `接口隔离原则` (`ISP`)：该原则规定客户端类不应被强制依赖于它们不使用的接口。
-    *   与其使用单一宽泛接口，不如将其拆分为更小、更关注的接口。
-*   `依赖倒置原则` (`DIP`)：该原则规定你应该依赖抽象而非具体的实现。这使得你的库能够扩展。
+- `SRP`（单一职责原则）：你库中的每个 PHP 类应该只有一个变化的理由。这确保了每个类都处理一个不同的问题。
+  - 考虑将一个同时负责数据验证和数据存储的类分为两个独立的类。
+- `开/闭原则`（`OCP`）：PHP 类应该应对扩展开放但对修改关闭。这鼓励了更模块化的方法，允许在不更改现有代码的情况下进行简单扩展。
+  - 使用 `abstract` 类或可以在不更改源代码的情况下进行扩展的接口作为示例。
+- `里氏替换原则`（`LSP`）：该原则规定超类对象可以与子类对象交换，而不影响程序的正确性。
+  - 例如，如果你在库中扩展了一个类或实现了一个接口，请确保派生类与基类兼容。
+- `接口隔离原则`（`ISP`）：该原则规定客户端类不应被强制依赖于它们不使用的接口。
+  - 与其使用单一宽泛接口，不如将其拆分为更小、更关注的接口。
+- `依赖倒置原则`（`DIP`）：该原则规定你应该依赖抽象而非具体的实现。这使得你的库能够扩展。
 
 ### PHP 的扩展性
 
 一个经过深思的分支策略可以确保主分支保持稳定。以下是一个策略示例：
 
-*   `Main/Master` 分支：此分支包含库的稳定版本。
-*   `Development/Dev` 分支：这是所有新开发发生的地方。
-*   `Feature` 分支：每个新功能或功能都会创建一个新分支。完成后，将其合并到开发分支。
-*   `Hotfix` 分支：用于必须应用到主分支的紧急修复。
+- `Main/Master` 分支：此分支包含库的稳定版本。
+- `Development/Dev` 分支：这是所有新开发发生的地方。
+- `Feature` 分支：每个新功能或功能都会创建一个新分支。完成后，将其合并到开发分支。
+- `Hotfix` 分支：用于必须应用到主分支的紧急修复。
 
 ## 版本控制与协作
 
 版本控制系统是任何开发项目的骨干，在创建 PHP 库时尤为重要。
 
 它们有助于：
-*   记录更改：每个更改都可能追溯到其来源，提供更好的调试和理解。
-*   促进协作：由于多个开发者可以在同一个库上工作，而不会覆盖彼此的更改，协作变得更加容易。
 
-
-
-
-
-* **自动化测试**：当提交拉请求（pull request）时，结合 `CI/CD` 系统可以对代码进行自动测试。
+- 记录更改：每个更改都可能追溯到其来源，提供更好的调试和理解。
+- 促进协作：由于多个开发者可以在同一个库上工作，而不会覆盖彼此的更改，协作变得更加容易。
+- 自动化测试：当提交拉请求（pull request）时，结合 `CI/CD` 系统可以对代码进行自动测试。
 
 ### 使用 Git 进行标记和版本控制
 
-* 当你的库达到关键里程碑或准备发布时，请使用以下标签：
+当你的库达到关键里程碑或准备发布时，请使用以下标签：
 
 ```bash
 $ git tag v1.0.0
@@ -6311,9 +6274,9 @@ $ git tag v1.0.0
 
 ### 版本控制之外的协作工具
 
-* 使用 `Slack`、`Microsoft Teams` 或 `Discord` 进行团队通信。
-* 使用 `Trello` 或 `Jira` 进行任务和项目管理。
-* 使用 `Docker` 提供一致的开发环境。
+- 使用 `Slack`、`Microsoft Teams` 或 `Discord` 进行团队通信。
+- 使用 `Trello` 或 `Jira` 进行任务和项目管理。
+- 使用 `Docker` 提供一致的开发环境。
 
 在开发 PHP 库时，使用版本控制（尤其是 `Git`）至关重要。它不仅提供了无缝的开发流程，还能鼓励参与并保留库的历史记录。接受促进协作并简化你库开发流程的工具和平台。
 
@@ -6323,24 +6286,26 @@ $ git tag v1.0.0
 
 ### 良好的库设计安全性的重要原则
 
-* **深度防御**：不要依赖单一方式来阻止威胁。分层你的防御，这样当一种机制失效时，另一种机制也可以阻止攻击。
-* **最小权限原则**：组件（函数或方法）应仅具有执行其功能所需的权限。
-* **安全失败机制**：当发生任何问题时，返回安全状态，而不是暴露漏洞。
-* **避免通过隐性实现安全**：依赖于隐藏库内部实现的技术不是一种良好的安全技术。即使攻击者知道如何绕过保护，良好的安全性也必须有效的。
+- **深度防御**：不要依赖单一方式来阻止威胁。分层你的防御，这样当一种机制失效时，另一种机制也可以阻止攻击。
+- **最小权限原则**：组件（函数或方法）应仅具有执行其功能所需的权限。
+- **安全失败机制**：当发生任何问题时，返回安全状态，而不是暴露漏洞。
+- **避免通过隐性实现安全**：依赖于隐藏库内部实现的技术不是一种良好的安全技术。即使攻击者知道如何绕过保护，良好的安全性也必须有效的。
 
 ### 常见漏洞及其缓解
 
-* **注入攻击**：对所有输入进行清理和验证。通过参数化查询防止 `SQL` 注入。让我们在示例中查看：
+- **注入攻击**：对所有输入进行清理和验证。通过参数化查询防止 `SQL` 注入。让我们在示例中查看：
 
 下面的代码片段显示了一个通过直接引入用户输入而容易注入攻击的 `SQL` 查询：
+
 ```php
 prepare("SELECT * FROM users WHERE username = :username"); 
 $stmt->execute(['username' => $_GET['username']]);
 ```
 
-* **跨站脚本 (XSS)**：如果你的库处理网页内容，请转义所有输出并使用内容安全策略（`CSP`）。让我们在示例中查看：
+- **跨站脚本 (XSS)**：如果你的库处理网页内容，请转义所有输出并使用内容安全策略（`CSP`）。让我们在示例中查看：
 
 在代码片段中，我们直接打印用户输入，如果包含恶意脚本，可能会导致 `XSS`：
+
 ```php
 <?php
 // 显示用户输入
@@ -6348,30 +6313,29 @@ echo "Hello," . $_GET['username'];
 ```
 
 在接后的片段中，使用 `htmlspecialchars()` 转义用户输入，防止 `XSS` 攻击：
+
 ```php
 <?php
 // 安全转义用户输入
 echo "Hello," . htmlspecialchars($_GET['username'], ENT_QUOTES, 'UTF-8');
 ```
 
-* **不安全的依赖**：定期更新你的库所依赖的库和组件。使用 `Composer` 内置的安全检查器或类似工具来监控已知漏洞。
-* **不安全的反序列化**：不要反序列化来自不可信源的数据。如果必须这样做，请考虑 `JSON` 等安全数据格式。让我们来看一个简单的示例：
+- **不安全的依赖**：定期更新你的库所依赖的库和组件。使用 `Composer` 内置的安全检查器或类似工具来监控已知漏洞。
+- **不安全的反序列化**：不要反序列化来自不可信源的数据。如果必须这样做，请考虑 `JSON` 等安全数据格式。让我们来看一个简单的示例：
 
 从不可信源反序列化数据会导致安全问题：
+
 ```php
 // 不安全的反序列化
 $data = unserialize($untrusted_data);
 ```
 
 使用安全的数据格式：
+
 ```php
 // 安全的数据格式
 $data = json_decode($json_data);
 ```
-
-
-
-
 
 - 负载测试：这涉及使用 `Apache JMeter` 等工具模拟许多用户同时访问你的库。
 
@@ -6454,7 +6418,7 @@ $data = json_decode($json_data);
 - 实践经验：从一个实际项目开始。通过升级现有的开源 PHP 库或从零创建一个。
 - 持续学习：技术世界不断变化。利用 PHP 社区更新、最佳实践并定期开发。
 - 深度学习：深入研究特殊主题，如复杂的 PHP 安全程序、特定的 PHP 框架或数据库改进。
-- 参与社区：积极参与 社区可以改变现状。论坛、网络研讨会和 PHP 大会可以是极佳的资源。
+- 参与社区：积极参与社区可以改变现状。论坛、网络研讨会和 PHP 大会可以是极佳的资源。
 
 ### 感谢说明
 
@@ -6470,50 +6434,48 @@ $data = json_decode($json_data);
 
 祝未来有许多编程体验！
 
+## 资源与进一步学习
 
-
-
-
-* PHP 文档：理解 PHP 特性和函数的必备工具。[访问 PHP 官方文档链接](https://www.php.net/docs.php)
-* SOLID 原则文章：为了深入理解这些设计原则，你可以阅读一些文章，例如[通俗易懂的面向对象 SOLID 原则](https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/)
-* Composer 文档：了解 PHP 包管理。[访问 Composer 官方文档链接](https://getcomposer.org/doc/)
+- PHP 文档：理解 PHP 特性和函数的必备工具。[访问 PHP 官方文档链接](https://www.php.net/docs.php)
+- SOLID 原则文章：为了深入理解这些设计原则，你可以阅读一些文章，例如[通俗易懂的面向对象 SOLID 原则](https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/)
+- Composer 文档：了解 PHP 包管理。[访问 Composer 官方文档链接](https://getcomposer.org/doc/)
 
 ## 在线教程与课程
 
-* PHPUnit 教程：学习 PHP 单元测试。
-    * [PHPUnit 手册](https://docs.phpunit.de/en/10.5/): `PHPUnit` 的官方文档和教程，适用于学习 PHP 单元测试。
-    * [初学者 PHPUnit 教程](https://startutorial.com/view/phpunit-beginner-part-1-get-started): 一份适合入门者的 `PHPUnit` 入门指南。
-* PHP 安全实践：关于安全 PHP 的教程和课程。
-    * OWASP 提供的 [PHP 安全备查表](https://www.owasp.org/index.php/PHP_Security_Cheat_Sheet)：提供了安全 PHP 编码的最佳实践指南集。
-    * [PHP: The Right Way - Security](https://phptherightway.com/#security)：热门指南“PHP: The Right Way”中专门介绍安全实践的章节。
+- PHPUnit 教程：学习 PHP 单元测试。
+  - [PHPUnit 手册](https://docs.phpunit.de/en/10.5/)：`PHPUnit` 的官方文档和教程，适用于学习 PHP 单元测试。
+  - [初学者 PHPUnit 教程](https://startutorial.com/view/phpunit-beginner-part-1-get-started)：一份适合入门者的 `PHPUnit` 入门指南。
+- PHP 安全实践：关于安全 PHP 的教程和课程。
+  - OWASP 提供的 [PHP 安全备查表](https://www.owasp.org/index.php/PHP_Security_Cheat_Sheet)：提供了安全 PHP 编码的最佳实践指南集。
+  - [PHP: The Right Way - Security](https://phptherightway.com/#security)：热门指南“PHP: The Right Way”中专门介绍安全实践的章节。
 
 ## 软件工具与库
 
-* Xdebug：用于 PHP 的调试工具。[访问 Xdebug 链接](https://xdebug.org/)
-* Blackfire.io：用于 PHP 的性能分析器。[访问 Blackfire.io 链接](https://blackfire.io/)
-* `PHP_CodeSniffer`：维护编码规范。[访问 PHP_CodeSniffer 链接](https://github.com/squizlabs/PHP_CodeSniffer)
+- Xdebug：用于 PHP 的调试工具。[访问 Xdebug 链接](https://xdebug.org/)
+- Blackfire.io：用于 PHP 的性能分析器。[访问 Blackfire.io 链接](https://blackfire.io/)
+- `PHP_CodeSniffer`：维护编码规范。[访问 PHP_CodeSniffer 链接](https://github.com/squizlabs/PHP_CodeSniffer)
 
 ## 在线平台与社区
 
-* GitHub：探索开源 PHP 项目和库。[访问 GitHub 链接](https://github.com/)
-* Stack Overflow：故障排除和社区支持的论坛。[访问 Stack Overflow 链接](https://stackoverflow.com/)
-* PHP 框架互操作小组 (PHP-FIG)：跟踪 PHP 标准和 PSR。[访问 PHP-FIG 链接](https://www.php-fig.org/)
+- GitHub：探索开源 PHP 项目和库。[访问 GitHub 链接](https://github.com/)
+- Stack Overflow：故障排除和社区支持的论坛。[访问 Stack Overflow 链接](https://stackoverflow.com/)
+- PHP 框架互操作小组 (PHP-FIG)：跟踪 PHP 标准和 PSR。[访问 PHP-FIG 链接](https://www.php-fig.org/)
 
 ## 文档工具
 
-* PHPDocumentor：用于生成 API 文档。[访问 PHPDocumentor 链接](https://phpdoc.org/)
+- PHPDocumentor：用于生成 API 文档。[访问 PHPDocumentor 链接](https://phpdoc.org/)
 
 ## 性能优化工具
 
-* Redis：用数据库缓存的内存数据结构存储器。[访问 Redis 链接](https://redis.io/)
-* Memcached：分布式内存缓存系统。[访问 Memcached 链接](https://memcached.org/)
+- Redis：用数据库缓存的内存数据结构存储器。[访问 Redis 链接](https://redis.io/)
+- Memcached：分布式内存缓存系统。[访问 Memcached 链接](https://memcached.org/)
 
 ## 版本控制与协作工具
 
-* Git：版本控制系统。[访问 Git 链接](https://git-scm.com/)
-* GitHub, GitLab, Bitbucket：托管和管理代码仓库的平台。
+- Git：版本控制系统。[访问 Git 链接](https://git-scm.com/)
+- GitHub, GitLab, Bitbucket：托管和管理代码仓库的平台。
 
-## PHP PHP 开发资源
+## PHP 开发资源
 
 1. [PHP 官方手册](https://www.php.net/manual/en/)：关于 PHP 语法、函数和最佳实践的全面资源。
 2. [PHP: The Right Way](https://phptherightway.com/)：一个关于 PHP 最佳实践、编码规范和权威教程的热且易于遵循的指南。
@@ -6521,4 +6483,3 @@ $data = json_decode($json_data);
 4. [Laracasts](https://laracasts.com/)：提供大量关于 PHP 及其框架（尤其是 Laravel）的视频教程。
 5. [PHP Weekly](http://www.phpweekly.com/)：包含 PHP 相关文章、新闻和教程的精选每周通讯。
 6. [SitePoint PHP](https://www.sitepoint.com/php/)：提供涵盖 PHP 及相关技术的文章、教程和书籍。
-

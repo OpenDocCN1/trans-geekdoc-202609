@@ -1,75 +1,27 @@
+
 # PHP 12 版 FileMaker API：使用 FileMaker Pro 12 和 FileMaker Server 12 创建数据库驱动网站的实用指南
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 在以下下载示例文件和源代码：
-http://www.formulationspro.com/PHP12Book/filemakerphp12examples.zip
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+`http://www.formulationspro.com/PHP12Book/filemakerphp12examples.zip`
 
 FileMaker 与 PHP 语法对比 ................................................354
+
 其他方法 — PHP/ODBC, ASP, JSP, IWP.......................................................357
+
 成本 ............................................................................360
+
 性能考量 .................................................................363
+
 安全 ......................................................................................366
+
 错误和服务器日志 ................................................................368
+
 FileMaker 错误代码...............................................................................370
+
 FileMaker PHP API 参考..................................................................376
+
 索引 .......................................................................379
-
-
-
-
 
 # 引言
 
@@ -89,16 +41,13 @@ FileMaker PHP API 参考........................................................
 
 如果你已经熟练掌握构建 FileMaker 数据库和 PHP，你可以直接跳到第七部分。课程分为两个部分：核心部分是你需要理解的内容；高级部分则是更进阶的内容。
 
-
-
-
 线条粗细为 1 像素。单元格可以使用许多属性，包括内边距（padding）和单元格间距（cell spacing）。
 
 大多数情况下，你会使用第一行的 `<<tr>>` 标签创建一个表头行。然后使用表格表头 `<<th>>` 标签显示“名”（First Name）和“姓”（Last Name）表头。`<<th>>` 将以强调方式（即加粗）显示你的标题，而无需实际使用 `<<em>>` 标签。忘记用 `</</tr>` 标签关闭第一行。然后按照上述过程处理内容部分。与这些内容不同，你将使用表格 `<td>` 标签以纯文本的形式显示数据（即从数据库中获取记录数据）。一旦你创建了文档，你就可以将该标签用于表格（table）、主体（body）和 html 标签。
 
 这里的教训不是如何创建表格、行、表格表头、表格数据等。教训是观察设计 HTML 数据的重复性。从直观来看：数据库中的每条记录都将被封装在 `<tr>` 标签中。每个字段将被封装在 `<td>` 标签中。当你遍历记录和字段时，你的 PHP 代码将简单地为数据库中的数据开始和停止标签。这将允许浏览器显示内容。
 
-# 创建表单
+## 创建表单
 
 在处理来自数据库的数据时，表单将迅速成为你的得力助手。你将使用表单来搜索记录并提交数据以创建、更新和删除记录。在表单内部，你将能够向 Web 服务器和数据库传递各种信息。数据可以是输入的（如搜索字段 2 所示），也可以是隐藏的（即你不希望用户看到的数据）。
 
@@ -128,7 +77,7 @@ get GET 和 POST 数据都将使用 `Name=Value` 对进行发送。这意味着�
 http://localhost/TodduePHP/Form.php?id=123&search=Todd&Search=Submit
 ```
 
-它以表单 `action` 属性中的文件名和单词开头：http://localhost/TodduePHP/Form.php。然后它添加了表单中定义的所有 `Name=Value` 对。在示例中，有三个 `Name=Value` 对。第一个是记录 ID (id) 的值，以及从现有的 URL 名称 'id'=123 获取的值。下一个是 `Search`，你输入 Search 文本框的值。然后用户点击的按钮也被设置了。在这种情况下，按钮的 `Name=Value` 对是 `Search=Submit`。在示例中，为你的按钮命名是非常重要的，以便准确确定到底点击了哪个按钮。特别是当表单上有一个多个按钮时：
+它以表单 `action` 属性中的文件名和单词开头：`http://localhost/TodduePHP/Form.php`。然后它添加了表单中定义的所有 `Name=Value` 对。在示例中，有三个 `Name=Value` 对。第一个是记录 ID (id) 的值，以及从现有的 URL 名称 'id'=123 获取的值。下一个是 `Search`，你输入 Search 文本框的值。然后用户点击的按钮也被设置了。在这种情况下，按钮的 `Name=Value` 对是 `Search=Submit`。在示例中，为你的按钮命名是非常重要的，以便准确确定到底点击了哪个按钮。特别是当表单上有一个多个按钮时：
 
 现在让我们向后退一步，看看你可以在表单内部放置什么。在此示例中，你将 "id" 的隐藏元素放在了指定的 `type="hidden"` 类型中。隐藏值允许你向 Web 服务器和数据库传递信息，而用户无需在浏览器屏幕上实际看到任何数据。这对于作为记录 ID 的搜索非常有用。在示例中，我正在传递一些 PHP 代码，通过 `$_GET` 全局变量从 'id' 获取 URL。
 
@@ -140,7 +89,7 @@ http://localhost/TodduePHP/Form.php?id=123&search=Todd&Search=Submit
 
 这里的教训不是如何创建表格、行、表格表头、表格数据等。教训是观察设计 HTML 数据的重复性。从直观来看：数据库中的每条记录都将被封装在 `<tr>` 标签中。每个字段将被封装在 `<td>` 标签中。当你遍历记录和字段时，你的 PHP 代码将简单地为数据库中的数据开始和停止标签。这将允许浏览器显示内容。
 
-# 创建表单
+## 创建表单
 
 在处理来自数据库的数据时，表单将迅速成为你的得力助手。你将使用表单来搜索记录并提交数据以创建、更新和删除记录。在表单内部，你将能够向 Web 服务器和数据库传递各种信息。数据可以是输入的（如搜索字段 2 所示），也可以是隐藏的（即你不希望用户看到的数据）。
 
@@ -170,7 +119,7 @@ get GET 和 POST 数据都将使用 `Name=Value` 对进行发送。这意味着�
 http://localhost/TodduePHP/Form.php?id=123&search=Todd&Search=Submit
 ```
 
-它以表单 `action` 属性中的文件名和单词开头：http://localhost/TodduePHP/Form.php。然后它添加了表单中定义的所有 `Name=Value` 对。在示例中，有三个 `Name=Value` 对。第一个是记录 ID (id) 的值，以及从现有的 URL 名称 'id'=123 获取的值。下一个是 `Search`，你输入 Search 文本框的值。然后用户点击的按钮也被设置了。在这种情况下，按钮的 `Name=Value` 对是 `Search=Submit`。在示例中，为你的按钮命名是非常重要的，以便准确确定到底点击了哪个按钮。特别是当表单上有一个多个按钮时：
+它以表单 `action` 属性中的文件名和单词开头：`http://localhost/TodduePHP/Form.php`。然后它添加了表单中定义的所有 `Name=Value` 对。在示例中，有三个 `Name=Value` 对。第一个是记录 ID (id) 的值，以及从现有的 URL 名称 'id'=123 获取的值。下一个是 `Search`，你输入 Search 文本框的值。然后用户点击的按钮也被设置了。在这种情况下，按钮的 `Name=Value` 对是 `Search=Submit`。在示例中，为你的按钮命名是非常重要的，以便准确确定到底点击了哪个按钮。特别是当表单上有一个多个按钮时：
 
 现在让我们向后退一步，看看你可以在表单内部放置什么。在此示例中，你将 "id" 的隐藏元素放在了指定的 `type="hidden"` 类型中。隐藏值允许你向 Web 服务器和数据库传递信息，而用户无需在浏览器屏幕上实际看到任何数据。这对于作为记录 ID 的搜索非常有用。在示例中，我正在传递一些 PHP 代码，通过 `$_GET` 全局变量从 'id' 获取 URL。
 
@@ -182,7 +131,7 @@ http://localhost/TodduePHP/Form.php?id=123&search=Todd&Search=Submit
 
 这里的教训不是如何创建表格、行、表格表头、表格数据等。教训是观察设计 HTML 数据的重复性。从直观来看：数据库中的每条记录都将被封装在 `<tr>` 标签中。每个字段将被封装在 `<td>` 标签中。当你遍历记录和字段时，你的 PHP 代码将简单地为数据库中的数据开始和停止标签。这将允许浏览器显示内容。
 
-# 创建表单
+## 创建表单
 
 在处理来自数据库的数据时，表单将迅速成为你的得力助手。你将使用表单来搜索记录并提交数据以创建、更新和删除记录。在表单内部，你将能够向 Web 服务器和数据库传递各种信息。数据可以是输入的（如搜索字段 2 所示），也可以是隐藏的（即你不希望用户看到的数据）。
 
@@ -200,19 +149,21 @@ http://localhost/TodduePHP/Form.php?id=123&search=Todd&Search=Submit
 
 图 1-2：示例表单
 
-`method` 属性至关重要。你可以使用两种方法在 页面之间传递信息——GET 和 POST。GET 将把表单中的所有数据发送到 URL 中。URL 对用户是可见的。在 URL 中发送数据的优势是用户可以对你的页面进行签名。缺点是用户可能会看到你不希望他们看到的信息。此外，URL 中可以发送的数据量是有限制的。你只能发送 2048 个字符。
 
-这看起来可能很多，但当你创建和修改请求时，2048 个字符很快就会用完。GET 方法最适用于搜索。
 
-另一种方法是 POST。POST 发送在 URL 的标头中。这可以向用户隐藏并发送大量大量的数据。因为用户看不到数据并不意味着它是安全的。对于真正的安全，你仍然需要使用加密页面（即 https）。POST 用于创建、更新和删除记录。
+`method` 属性至关重要。你可以使用两种方法在页面之间传递信息——`GET` 和 `POST`。`GET` 将把表单中的所有数据发送到 URL 中。URL 对用户是可见的。在 URL 中发送数据的优势是用户可以对你的页面进行签名。缺点是用户可能会看到你不希望他们看到的信息。此外，URL 中可以发送的数据量是有限制的。你只能发送 2048 个字符。
 
-get GET 和 POST 数据都将使用 `Name=Value` 对进行发送。这意味着你定义了值的名称，例如字段名。然后输入一些类似于文本字段的内容，供用户输入数据。例如，如果你在 `Todd` 中输入 `T`，那么 `Name=Value` 对将是 `Search=Todd`。为了扩展 `Name=Value` 对的逻辑，表单的实际 URL 看起来如下：
+这看起来可能很多，但当你创建和修改请求时，2048 个字符很快就会用完。`GET` 方法最适用于搜索。
+
+另一种方法是 `POST`。`POST` 发送在 URL 的标头中。这可以向用户隐藏并发送大量大量的数据。因为用户看不到数据并不意味着它是安全的。对于真正的安全，你仍然需要使用加密页面（即 `https`）。`POST` 用于创建、更新和删除记录。
+
+`get` `GET` 和 `POST` 数据都将使用 `Name=Value` 对进行发送。这意味着你定义了值的名称，例如字段名。然后输入一些类似于文本字段的内容，供用户输入数据。例如，如果你在 `Todd` 中输入 `T`，那么 `Name=Value` 对将是 `Search=Todd`。为了扩展 `Name=Value` 对的逻辑，表单的实际 URL 看起来如下：
 
 ```
 http://localhost/TodduePHP/Form.php?id=123&search=Todd&Search=Submit
 ```
 
-它以表单 `action` 属性中的文件名和单词开头：http://localhost/TodduePHP/Form.php。然后它添加了表单中定义的所有 `Name=Value` 对。在示例中，有三个 `Name=Value` 对。第一个是记录 ID (id) 的值，以及从现有的 URL 名称 'id'=123 获取的值。下一个是 `Search`，你输入 Search 文本框的值。然后用户点击的按钮也被设置了。在这种情况下，按钮的 `Name=Value` 对是 `Search=Submit`。在示例中，为你的按钮命名是非常重要的，以便准确确定到底点击了哪个按钮。特别是当表单上有一个多个按钮时：
+它以表单 `action` 属性中的文件名和单词开头：`http://localhost/TodduePHP/Form.php`。然后它添加了表单中定义的所有 `Name=Value` 对。在示例中，有三个 `Name=Value` 对。第一个是记录 ID (`id`) 的值，以及从现有的 URL 名称 'id'=123 获取的值。下一个是 `Search`，你输入 Search 文本框的值。然后用户点击的按钮也被设置了。在这种情况下，按钮的 `Name=Value` 对是 `Search=Submit`。在示例中，为你的按钮命名是非常重要的，以便准确确定到底点击了哪个按钮。特别是当表单上有一个多个按钮时：
 
 现在让我们向后退一步，看看你可以在表单内部放置什么。在此示例中，你将 "id" 的隐藏元素放在了指定的 `type="hidden"` 类型中。隐藏值允许你向 Web 服务器和数据库传递信息，而用户无需在浏览器屏幕上实际看到任何数据。这对于作为记录 ID 的搜索非常有用。在示例中，我正在传递一些 PHP 代码，通过 `$_GET` 全局变量从 'id' 获取 URL。
 
@@ -255,10 +206,6 @@ header("Location:FindAllRecords.php");
 
 与 FileMaker Pro 相比，设计 Web 应用程序是你可能需要做过的任何事情。由于 FileMaker 使大多数过程变得如此无缝，以至于你真的不需要知道内部发生了什么。作为一个无状态过程，它与数据库服务器没有连接，你必须告诉（程序）页面它们需要的一切。这意味着你必须为每一个工作流创建所有必要的 Web 页面。在许多情况下，工作流真的无法重用。例如，为了容纳一个 FileMaker 布局及其能做的所有事情，你只需要制作少于四个 Web 页面！如果你的布局上有端口，你需要将该数字翻倍。好消息是，有标准的方法和术语来描述工作流。一旦掌握了工作流和术语，你就可以快速地为你的用户创建任何过程。
 
-
-
-
-
 搜索：搜索页面设计用于在一个网页上搜索并显示所有记录。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_16_0.png)
@@ -286,6 +233,7 @@ header("Location:FindAllRecords.php");
 插入、更新、删除>相关>数据库：如果你必须处理相关记录，你需要从父级记录开始。然后点击相关记录将其隔离为单个相关记录，然后才能在数据库中处理该记录。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_17_0.png)
+
 # 第二部分 — Web 安装
 
 在本书中，我假设你已经有了生产 Web 服务器，而不是使用第三方托管来运行网站；我还将假设你将整个解决方案部署在单台机器上。这意味着你将在同一台计算机上安装 Web 服务器和 FileMaker Server。为了方便起见，我建议准备一台设置和配置与生产服务器完全相同的开发计算机。这样，当你将数据库和网页从开发计算机传输到生产环境时，就不会遇到任何问题。如果你真的预算非常紧张，我想你可以在生产服务器上进行开发。我不绝对建议这样做，以防你误删线上文件。我假设你使用 FileMaker Server 在 Web 服务器上安装 PHP。这样你将获得最新的支持版本（OS X 上的 5.3，Windows 上的 5.5），而无需手动安装或配置。它开箱即用。
@@ -305,7 +253,8 @@ header("Location:FindAllRecords.php");
 图 2-1：Apache Web 服务器
 
 你将把所有网页放在以下位置（图 2-2）：
-Macintosh HD/Library/WebServer/Documents/
+
+`Macintosh HD/Library/WebServer/Documents/`
 
 ## Windows XP 上的 IIS Server 6
 
@@ -365,7 +314,7 @@ Macintosh HD/Library/WebServer/Documents/
 9. 点击“属性”。
 10. 点击“基本”选项卡。
 11. 点击“浏览”。
-12. 导航到 C:\inetpub\wwwroot。
+12. 导航到 `C:\inetpub\wwwroot`。
 13. 点击“确定”。
 14. 点击“确定”。
 15. 点击“确定”。
@@ -387,7 +336,7 @@ Macintosh HD/Library/WebServer/Documents/
 9. 点击“属性”。
 10. 点击“基本”选项卡。
 11. 点击“浏览”。
-12. 导航到 C:\inetpub\wwwroot。
+12. 导航到 `C:\inetpub\wwwroot`。
 13. 点击“确定”。
 14. 点击“确定”。
 15. 点击“确定”。
@@ -404,7 +353,7 @@ Macintosh HD/Library/WebServer/Documents/
 4. 点击“属性”。
 5. 点击“基本”选项卡。
 6. 点击“浏览”。
-7. 导航到 C:\inetpub\wwwroot。
+7. 导航到 `C:\inetpub\wwwroot`。
 8. 点击“确定”。
 9. 点击“确定”。
 10. 点击“确定”。
@@ -414,10 +363,7 @@ Macintosh HD/Library/WebServer/Documents/
 
 图 2-9：IIS
 
-
-
-
-目前。当你将文件从测试服务器移动到生产服务器时，这样做之所以方便，是因为你不需要对数据库连接文件进行任何更改。这是因为环境完全相同，使用 '127.0.0.1' 而不是域名或 IP 地址仍然可以正常运行。有一个值得注意的重要问题：**不要**使用 'localhost'，因为 Windows 在解析 localhost 方面存在困难，这会导致严重的性能问题和崩溃。如果你在一台机器上使用 Apache 或 IIS，另一台机器使用 PHP 的双服务器设置，那么在生产环境中中使用 'localhost' 将无法不起通。在这种情况下，你必须将服务器上 `dbaccess` 文件中的 `hostspec` 连接更改为你的 IP 或域名名。诀窍在于记住这一点，不要用你的开发文件覆盖生产环境连接文件。如果无法连接数据库，它不会破坏任何东西或损坏数据，但在你修复之前，用户将无法从数据库访问他们需要的任何网页。
+目前。当你将文件从测试服务器移动到生产服务器时，这样做之所以方便，是因为你不需要对数据库连接文件进行任何更改。这是因为环境完全相同，使用 `'127.0.0.1'` 而不是域名或 IP 地址仍然可以正常运行。有一个值得注意的重要问题：**不要**使用 `'localhost'`，因为 Windows 在解析 localhost 方面存在困难，这会导致严重的性能问题和崩溃。如果你在一台机器上使用 Apache 或 IIS，另一台机器使用 PHP 的双服务器设置，那么在生产环境中中使用 `'localhost'` 将无法不起通。在这种情况下，你必须将服务器上 `dbaccess` 文件中的 `hostspec` 连接更改为你的 IP 或域名名。诀窍在于记住这一点，不要用你的开发文件覆盖生产环境连接文件。如果无法连接数据库，它不会破坏任何东西或损坏数据，但在你修复之前，用户将无法从数据库访问他们需要的任何网页。
 
 在你的测试服务器上测试页面时，你将使用 URL。请注意，我将示例文件放在 'PHPFiles/Core/Lesson#' 文件夹中。这仅仅是为了让你的测试服务器针对不同的项目保持整洁。
 
@@ -432,7 +378,7 @@ http://www.mydomain.com/PHPFiles/Core/Lesson/1/FindAllRecords.php
 ```
 
 | 名字 | 姓 | 数量 | 日期 | 时间戳 | 计算 | 记录 ID | |
-|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|
 | Todd | Duell | 47 | 09/07/2010 | 08/03/2010 | 14:56:50 | 48 | 52 |
 | Tim | Warner | 13 | 08/01/2010 | 08/01/2010 | 14:56:50 | 15 | 54 |
 | Fred | Hutchison | 14 | 08/09/2010 | 08/09/2010 | 11:54:22 | 17 | 59 |
@@ -459,18 +405,16 @@ http://www.mydomain.com/PHPFiles/Core/Lesson/1/FindAllRecords.php
 
 > 在 OS X 和 Windows 上安装 FileMaker Server 的本质上是相同的。然而，界面略有不同。
 
+
+
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_26_0.png)
 
 - 1. 将光盘插入电脑，或者如果你有软件的电子下载版，双击安装程序图标。
 - 2. 阅读“开始之前”的说明。然后点击继续。
 
-
-
-
 ## 安装 PHP
 
 16. 点击“是”以启用 Web 发布引擎。
-
 17. 点击“下一步”。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_30_0.png)
@@ -478,9 +422,7 @@ http://www.mydomain.com/PHPFiles/Core/Lesson/1/FindAllRecords.php
 图 3-8：启用 Web 发布
 
 18. 勾选 PHP Web 发布框。
-
 19. 如果你想让 FileMaker 安装 PHP，请点击“是”按钮。否则，如果你已经安装了自己的 PHP，可以选择“否”。
-
 20. 点击“下一步”按钮。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_30_1.png)
@@ -488,7 +430,6 @@ http://www.mydomain.com/PHPFiles/Core/Lesson/1/FindAllRecords.php
 图 3-9：启用 PHP
 
 21. 选择部署类型。对于本书，我们正在使用单机配置。
-
 22. 点击“下一步”。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_31_0.png)
@@ -496,7 +437,6 @@ http://www.mydomain.com/PHPFiles/Core/Lesson/1/FindAllRecords.php
 图 3-10：选择部署类型。
 
 23. FileMaker 将识别你电脑上可用的 Web 服务器。从弹出列表中选择要部署 PHP 的 Web 服务器。
-
 24. 点击“下一步”。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_31_1.png)
@@ -504,7 +444,6 @@ http://www.mydomain.com/PHPFiles/Core/Lesson/1/FindAllRecords.php
 图 3-11：选择 Web 服务器。
 
 25. 屏幕将显示所有已启用和禁用功能的部署摘要。如果你将来需要启用或禁用某些功能，可以在控制台（Admin Console）中进行。
-
 26. 点击“完成”。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_32_0.png)
@@ -512,13 +451,9 @@ http://www.mydomain.com/PHPFiles/Core/Lesson/1/FindAllRecords.php
 ## 配置客户端
 
 27. 点击左窗口中的“数据库服务器”。
-
 28. 点击“FileMaker 客户端”选项卡。
-
 29. 设置允许访问服务器上 FileMaker 数据库的 FileMaker Pro 客户端用户数量。建议的数量比预估的峰值人数多约 10%。这限制了打开线程的总数，可以显著提高性能。因此，仅仅因为你可以将连接数设置为 250（或 FileMaker Server Advanced 设置为不限制），并不意味着你应该这样做——那只是懒惰管理员的表现。
-
 30. 如果你想踢出数据库中的空闲用户，可以勾选“最大空闲时间”框并设置小时和分钟。
-
 31. 点击“保存”。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_33_0.png)
@@ -528,9 +463,7 @@ http://www.mydomain.com/PHPFiles/Core/Lesson/1/FindAllRecords.php
 ## 配置数据库
 
 31. 设置你想在服务器上托管的文件（数据库）数量。我建议将该数量设置为 n+1，其中 n 是服务器上的文件数量。这允许你向服务器添加新数据库，而无必花几分钟去琢磨为什么它无法打开。同样，你可以设置服务器托管 125 个文件，但这完全是在浪费服务器性能，是管理员懒惰的明显表现。
-
 32. 为 FileMaker Server 分配内存。在在可能运行许多应用程序的单服务器开发环境中，你可能希望将 FileMaker Server 的内存设置为最小值 64 MB。在生产服务器上，你绝对想要尽可能使用内存来提升性能。FileMaker Server 可以使用服务器上可用内存的 70%。
-
 33. 点击“保存”。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_34_0.png)
@@ -538,11 +471,8 @@ http://www.mydomain.com/PHPFiles/Core/Lesson/1/FindAllRecords.php
 ### 33-14：客户端配置
 
 35. 安全配置取决于你的环境。对于测试服务器，我建议执行客户端验证的方式与你的生产服务器完全相同。如果你想仅使用数据库内置的 FileMaker 账户进行身份验证，请选择“仅 FileMaker 账户”单选按钮。
-
 36. 对于测试服务器，你可以“列出所有数据库”。在生产服务器上你也可以这样做，除非你有特定的安全要求，来限制用户在访问服务器时看到的数据库。
-
 37. 在测试服务器上，没有理由创建 128 位 SSL 加密连接。不要将其与创建安全网页 (https) 混淆。此设置仅加密 FileMaker Server 与 FileMaker Pro 客户端之间的连接，而不加密服务器或网页。那是在 Apache 或 IIS 服务器上配置的。
-
 38. 点击“保存”。
 
 ## FileMaker Server 控制台
@@ -613,13 +543,10 @@ http://www.mydomain.com/PHPFiles/Core/Lesson/1/FindAllRecords.php
 - 更新管理员密码
 - 查看或断开客户端
 
-
-
-
-
 ## FileMaker Server 管理控制台
 
 ## FileMaker Server 概述
+
 - 管理
   - 客户端
   - 数据库
@@ -634,6 +561,7 @@ http://www.mydomain.com/PHPFiles/Core/Lesson/1/FindAllRecords.php
   - ODBC/ODBC
 
 ## 配置：数据库服务器
+
 - FileMaker Pro 客户端
 - 数据库
 - 安全
@@ -641,12 +569,15 @@ http://www.mydomain.com/PHPFiles/Core/Lesson/1/FindAllRecords.php
 - 服务器端插件
 
 ### 统计
+
 配置 FileMaker Server 收集统计信息的频率，以便在统计视图中显示，并进行可选的日志记录。
 
 收集间隔：05:00 (:mm)
 
 ### 日志
+
 配置 FileMaker Server 如何记录事件和使用统计数据。
+
 注意：事件日志始终开启，且无法禁用。
 
 日志大小：MB
@@ -655,6 +586,7 @@ http://www.mydomain.com/PHPFiles/Core/Lesson/1/FindAllRecords.php
 - 使用统计数据
 
 ## 相关任务
+
 - 查看日志条目
 - 设置 Web 发布日志选项
 - 配置电子邮件通知
@@ -663,10 +595,10 @@ http://www.mydomain.com/PHPFiles/Core/Lesson/1/FindAllRecords.php
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_37_0.png)
 
 43. 服务器插件是 FileMaker Server 用于向 FileMaker Pro 客户端使用和分插件的机制。本文将不涵盖插件的使用，因为它超出范围。勾选框以启用 FileMaker 脚本引擎 (FMSE) 以使用插件。这将允许 FileMaker Server 在计划脚本中使用插件。如果你希望允许 FileMaker Pro 客户端更新存储在数据库中的插件，请勾选框框以允许“安装插件”脚本步骤更新服务器插件。作为开发者，你需要将插件存储在数据库内部。然后编写一个自定义脚本从数据库安装插件。启用此复选框后，客户端就可以从你的数据库安装和更新插件。
-
 44. 点击保存。
 
 ## FileMaker Server 概述
+
 - 管理
 - 客户端
 - 数据库
@@ -682,6 +614,7 @@ http://www.mydomain.com/PHPFiles/Core/Lesson/1/FindAllRecords.php
 ## 配置：数据库服务器
 
 ### 服务器端插件
+
 允许 FileMaker Server 在运行 FileMaker 脚本时使用插件。启用插件后，FileMaker 引擎 (FMSE) 进程将加载插件，供从 FileMaker 计划任务运行的脚本使用。
 
 - 启用 FileMaker 脚本引擎 (FMSE) 使用插件
@@ -699,6 +632,7 @@ http://www.mydomain.com/PHPFiles/Core/Lesson/1/FindAllRecords.php
 选择 FMSE 使用的插件。
 
 ## 网站任务
+
 - 上传数据库
 - 配置电子邮件通知
 - 配置 Web 发布引擎
@@ -708,11 +642,8 @@ http://www.mydomain.com/PHPFiles/Core/Lesson/1/FindAllRecords.php
 ## 配置 Web 发布
 
 45. 点击左侧窗口中的“Web 发布”。
-
 46. 在测试服务器上，如果知道错误是来自 Web 发布核心、Web 发布引擎还是 FileMaker Server 是很有用的。因此，我建议选择“错误级别”（Error level）消息的单选按钮。如果你的生产环境稳定，可以取消勾选日志框以提高性能。
-
 47. 在测试服务器上，你可以将 Web 发布会话数设置为 5，这样就不会损失性能。在生产环境中，你可能想将会话数设置为 100，因为你不知道会有多少人同时访问你的 Web 服务器。100 个连接听起来并不多。然而，会话在请求期间打开（例如，搜索请求），并在信息发送回用户浏览器后会立即关闭。这在几分之一钟内就完成了。因此，100 个并发会话实际上是一个很大的容量。只需记住，遗留的未使用的会话越多，服务器性能就越慢。
-
 48. 点击保存。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_39_0.png)
@@ -720,11 +651,8 @@ http://www.mydomain.com/PHPFiles/Core/Lesson/1/FindAllRecords.php
 图 3-19: 通用设置配置
 
 49. 我们显然将使用 PHP API 访问 FileMaker 数据。因此，你需要勾选框以启用 PHP 发布。
-
 50. 书中的几个示例使用了预验证，在将数据发送到数据库之前在 Web 服务器上检查数据检查。对于预验证，你需要勾选框以启用记录数据预验证。
-
 51. 根据你的语言偏好，选择 UTF-8 或 ISO-8859-1 作为字符编码。UTF-8 基本上与 ASCII 相同的字符集，与英语配合良好。ISO-8859 也是与 ASCII 相同的字符集，但专为处理欧洲语言设计。
-
 52. 点击保存。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_40.png)
@@ -732,12 +660,12 @@ http://www.mydomain.com/PHPFiles/Core/Lesson/1/FindAllRecords.php
 图 3-20: PHP 配置
 
 51. 点击左窗口中的“数据库”。这将允许你看到哪些数据库由 FileMaker 托管，以及哪些技术可以访问（例如 FileMaker）。
-
 52. 从此窗口执行以下操作：向特定用户发送消息、暂停、恢复或添加新文件。FileMaker 预装了 FMServer_Sample。
 
 ## FileMaker Server 管理控制台
 
 ## FileMaker Server 概述
+
 - 管理
 - 客户端
 - 数据库
@@ -751,17 +679,19 @@ http://www.mydomain.com/PHPFiles/Core/Lesson/1/FindAllRecords.php
   - ODBC/ODBC
 
 # 数据库
+
 | 动作 | 状态 | IP 地址 |
 | --- | --- | --- |
-| FileMaker_Sample | 正常 | |
-| ORID | 正常 | |
-| JDB_demo | 正常 | |
-| PHPExternal | 正常 | |
-| POP3ix Pro | 正常 | |
-| SMTP Pro | 正常 | |
-| FMServer_Sample | 正常 | |
+| FileMaker_Sample | 正常 |  |
+| ORID | 正常 |  |
+| JDB_demo | 正常 |  |
+| PHPExternal | 正常 |  |
+| POP3ix Pro | 正常 |  |
+| SMTP Pro | 正常 |  |
+| FMServer_Sample | 正常 |  |
 
 ## 相关任务
+
 - 上传数据库
 - 启用外部身份验证
 - 创建备份计划
@@ -773,10 +703,9 @@ http://www.mydomain.com/PHPFiles/Core/Lesson/1/FindAllRecords.php
 
 53. 在托管 FileMaker Server 的计算机上打开 浏览器并输入以下地址：
 
-http://localhost:1600
+`http://localhost:1600`
 
-这将打开控制台首页。如果你无法直接访问 FileMaker Server，可以将 localhost 替换为服务器的 IP 地址。FileMaker 控制台运行在端口 1600。因此，你只需要确保你和服务器之间的防火墙已开放该端口。
-
+这将打开控制台首页。如果你无法直接访问 FileMaker Server，可以将 `localhost` 替换为服务器的 IP 地址。FileMaker 控制台运行在端口 1600。因此，你只需要确保你和服务器之间的防火墙已开放该端口。
 54. 点击页面底部的“FileMaker 技术测试”链接
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_42_0.png)
@@ -809,25 +738,21 @@ FileMaker Server 是最新版本。目前不需要更新。
 
 图 3-24: 来自 FMServer_Sample.fp7 文件的示例 PHP 页面
 
-
-
-
-
 ## 上传 "php_demo.fmp12" 数据库文件
 
 在此下载示例文件和源代码：
-http://www.formulationspro.com/PHP12Book/filemakerphp12examples.zip
 
-56. 解压文件。你会在 PHPBook12/Lessons/FileMaker12Files/php_demo.fmp12 文件夹中找到示例数据库。在“相关任务”窗口中点击“上传数据库”（Upload a Database）。然后按照上传向导操作。
+`http://www.formulationspro.com/PHP12Book/filemakerphp12examples.zip`
 
-如果你可以直接访问服务器，可以直接将数据库文件复制/粘贴到 Databases 文件夹中。这比使用上传向导快得多。上传向导的优势在于你可以将文件上传到远程服务器，它会自动更改文件权限，并在完成后打开文件。
+56. 解压文件。你会在 `PHPBook12/Lessons/FileMaker12Files/php_demo.fmp12` 文件夹中找到示例数据库。在“相关任务”窗口中点击“上传数据库”（Upload a Database）。然后按照上传向导操作。
+
+如果你可以直接访问服务器，可以直接将数据库文件复制/粘贴到 `Databases` 文件夹中。这比使用上传向导快得多。上传向导的优势在于你可以将文件上传到远程服务器，它会自动更改文件权限，并在完成后打开文件。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_44_0.png)
 
 图 3-25：上传数据库
 
 57. 选择你想要上传数据库的文件夹。
-
 58. 点击“添加数据库”（Add Database）。
 
 ## 上传数据库助手
@@ -848,7 +773,6 @@ http://www.formulationspro.com/PHP12Book/filemakerphp12examples.zip
 图 3-26：上传数据库助手
 
 59. 在你的电脑上找到数据库文件。
-
 60. 点击“选择”（Select）。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_45_1.png)
@@ -860,14 +784,15 @@ http://www.formulationspro.com/PHP12Book/filemakerphp12examples.zip
 ## 上传数据库助手
 
 上传数据库助手进度
+
 欢迎使用上传数据库助手
 
 要将数据库上传到 FileMaker Server。
 
 - 1. 选择要上传的数据库
 1. 指定你想要放置数据库的文件夹。可以选择列表中的文件夹，也可以创建一个新的子文件夹。
-
 - 2. 点击“添加数据库”选择要上传到文件夹的数据库。
+
 要移除数据库，在列表中选择数据库文件并点击“移除数据库”。你只能移除在此步骤中添加的文件。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_46_0.png)
@@ -875,16 +800,18 @@ http://www.formulationspro.com/PHP12Book/filemakerphp12examples.zip
 图 3-28：选择文件后点击下一步
 
 62. 勾选框框在上传后自动打开数据库。
-
 63. 点击“下一步”（Next）。
 
 ## 上传数据库助手指定打开数据库的选项
 
 上传数据库助手进度
+
 上传后自动打开数据库
 
 - 2. 指定打开数据库的选项
+
 注意：数据库服务器会检查数据库是否启用了某种形式的共享。
+
 如果没有启用共享，数据库服务器将自动将 fmap 扩展权限添加到完全访问权限集中。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_46_1.png)
@@ -913,7 +840,6 @@ http://www.formulationspro.com/PHP12Book/filemakerphp12examples.zip
 图 3-30：上传进度和状态
 
 65. 上传数据库摘要屏幕将显示文件的最终状态。
-
 66. 点击“完成”（Finish）。你现在可以通过 FileMaker 客户端或 PHP 网页访问数据库了。
 
 | 状态 | 数据库 | 消息 |
@@ -922,15 +848,13 @@ http://www.formulationspro.com/PHP12Book/filemakerphp12examples.zip
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_47_1.png)
 
+
+
 图 3-31：上传数据库摘要
 
 # 第四部分 —— 选择 RAD 工具还是 免费文本编辑器
 
 你需要一个文本编辑器或快速应用开发（RAD）软件来创建你的网页。请不要尝试用 Microsoft Word、记事本、TextEdit 等工具创建网页。问题在于你想花多少钱，以及你希望自己处于什么种状态。在我看来，某些东西是“免费”的，并不意味着你能够在商业开发环境中有效地使用它。你使用免费软件所花费的时间成本可能远超过购买专业软件开发工具的费用。说实话，如果这是你的现实需求、关键业务决策，或者你想要能够提高生产效率的工具，400 美元并不多。互联网并不是“免费”的，但许多人认为它是免费的，那是另一个讨论的话题了。
-
-
-
-
 
 # 第五部分 — PHP 简介
 
@@ -940,7 +864,7 @@ http://www.formulationspro.com/PHP12Book/filemakerphp12examples.zip
 
 学习耗时：1-2 周。
 
-在进入 FileMaker PHP API 之前，你需要一个 PHP 基础来开始。如果你不知道一些基础 PHP 语法和方法，你将立即对 FileMaker 感到挫败，我保证你会在一小时内放弃。我会告诉你我在开发者会议上见过多少人因为看不到基础 PHP 代码向向者翻白眼或起身离开，因为我们没有准备好看到基础的 PHP 代码。你必须学习这些，而且没有办法可以规避。互联网上提供学习 PHP 完整教程的最佳来源之一是 w3schools.com。在他们的网站上，你将学习到所需的知识：语法、变量、字符串、运算符、if、数组、循环、函数和表单。你将学会吸收这些信息。接下，如果你有冒险精神，可以深入研究高级部分。我建议至少读一下高级部分是有帮助的。然而，书中的示例将比高级部分有用得多，因为它们是与 FileMaker 完善的，而不是理论。除非你想配合 ODBC 驱动程序使用 PHP 和 FileMaker，否则你可以跳过 PHP 数据库部分。最后，你还有关于 HTML、CSS、JS、JavaScript、AJAX 以及其他常用 PHP 方法的参考章节，我发现这些非常有用。当你完成他们的网站后，还可以做一个测验来测试你所学的内容。更好的是，如果你足够自信，还可以参加认证考试。
+在进入 FileMaker PHP API 之前，你需要一个 PHP 基础来开始。如果你不知道一些基础 PHP 语法和方法，你将立即对 FileMaker 感到挫败，我保证你会在一小时内放弃。我会告诉你我在开发者会议上见过多少人因为看不到基础 PHP 代码向向者翻白眼或起身离开，因为我们没有准备好看到基础的 PHP 代码。你必须学习这些，而且没有办法可以规避。互联网上提供学习 PHP 完整教程的最佳来源之一是 `w3schools.com`。在他们的网站上，你将学习到所需的知识：语法、变量、字符串、运算符、`if`、数组、循环、函数和表单。你将学会吸收这些信息。接下，如果你有冒险精神，可以深入研究高级部分。我建议至少读一下高级部分是有帮助的。然而，书中的示例将比高级部分有用得多，因为它们是与 FileMaker 完善的，而不是理论。除非你想配合 ODBC 驱动程序使用 PHP 和 FileMaker，否则你可以跳过 PHP 数据库部分。最后，你还有关于 HTML、CSS、JS、JavaScript、AJAX 以及其他常用 PHP 方法的参考章节，我发现这些非常有用。当你完成他们的网站后，还可以做一个测验来测试你所学的内容。更好的是，如果你足够自信，还可以参加认证考试。
 
 ## w3schools
 
@@ -951,26 +875,42 @@ http://www.formulationspro.com/PHP12Book/filemakerphp12examples.zip
 无费用，无需注册
 
 免费 Flash 网站
+
 免费网站生成器
+
 免费网页设计
 
 ## PHP
 
 - PHP 首页
+
 - PHP 信息
+
 - PHP 安装
+
 - PHP 语法
+
 - PHP 变量
+
 - PHP 字符串
+
 - PHP 运算符
+
 - PHP Switch
+
 - PHP 数组
+
 - PHP While Loop
+
 - PHP 循环
+
 - PHP 函数
+
 - PHP 表单
-- PHP $_GET
-- PHP $_POST
+
+- PHP `$_GET`
+
+- PHP `$_POST`
 
 PHP 是制作动态交互式 Web 页面的强大工具。
 
@@ -991,18 +931,29 @@ PHP 是微软 ASP 等竞争对手广泛使用的、免费且高效的替代方�
 在 W3Schools 你将找到 PHP 函数的完整参考：
 
 - 数组函数
+
 - 标准函数
+
 - 日期函数
 
 - 高级
+
 - PHP 日期
+
 - PHP 包含
+
 - PHP 文件上传
+
 - PHP 课程
+
 - PHP Session
+
 - PHP 电子邮件
+
 - PHP 错误
+
 - PHP 异常
+
 - PHP 过滤器
 
 从 translate.googlemaps.com 传输
@@ -1013,9 +964,9 @@ PHP 是微软 ASP 等竞争对手广泛使用的、免费且高效的替代方�
 
 ## 预计学习时间：需要
 
-php.net 是 PHP 所有内容的官方来源，包括应用程序本身。他们还有一个入门教程。然而，它没有 w3schools.com 好。我们在安装 FileMaker Server 时已经安装了 PHP 5.3。在本书编写期间，PHP 5.4 已可用，它修复了一小部分的安全问题和 Bug。升级 PHP 安装超本书的范围。在查看了 Bug 列表后，我没有发现任何直接影响书中示例的内容。FileMaker Server 的库存将免费提供。
+`php.net` 是 PHP 所有内容的官方来源，包括应用程序本身。他们还有一个入门教程。然而，它没有 `w3schools.com` 好。我们在安装 FileMaker Server 时已经安装了 PHP 5.3。在本书编写期间，PHP 5.4 已可用，它修复了一小部分的安全问题和 Bug。升级 PHP 安装超本书的范围。在查看了 Bug 列表后，我没有发现任何直接影响书中示例的内容。FileMaker Server 的库存将免费提供。
 
-正如手册中的任何文档一样，它必须是人们需要的。要做很多假设：你是一个专业程序员，非常熟悉命令行，并且需要工程支持。在我看来，他们遗漏了很多信息，你不得不求助于在线论坛和其他网站，为普通人——甚至是为了专家——寻找完整的说明。如果你是视觉型学习者，不要期望看到任何截图。信息仅是文本的。这也是为什么我可能认为让你使用来自 FileMaker Server 的安装更好。php.net 网站的一个优点是，每个带有说明的页面都允许终端用户进行表单类型的反馈。
+正如手册中的任何文档一样，它必须是人们需要的。要做很多假设：你是一个专业程序员，非常熟悉命令行，并且需要工程支持。在我看来，他们遗漏了很多信息，你不得不求助于在线论坛和其他网站，为普通人——甚至是为了专家——寻找完整的说明。如果你是视觉型学习者，不要期望看到任何截图。信息仅是文本的。这也是为什么我可能认为让你使用来自 FileMaker Server 的安装更好。`php.net` 网站的一个优点是，每个带有说明的页面都允许终端用户进行表单类型的反馈。
 
 ## PHP：超文本处理器
 
@@ -1039,18 +990,28 @@ PHP 5.4.4 修复了 30 多个 Bug。请注意，phpsimap 在 CLI API 中已被�
 
 ## 即将举行的活动
 
-下载 PHP 5.4.5 和 5.3.15 请访问我们的 php.net/download/
+下载 PHP 5.4.5 和 5.3.15 请访问我们的 `php.net/download/`
 
 - 24. 新 PHP
+
 - 25. AzPHP
+
 - 26. DCP
+
 - 27. 布里斯班用户小组
+
 - 28. 爱尔兰用户小组
+
 - 29. 用户小组会议
+
 - 30. 爱丁堡用户小组
+
 - 31. 利物浦用户小组
+
 - 32. 阿拉语用户小组
+
 - 33. 马来西亚用户小组
+
 - 34. 孟菲斯 PHP
 
 好奇过 PHP 是如何工作的吗？看看基百科。
@@ -1068,25 +1029,33 @@ PHP 5.4.4 修复了 30 多个 Bug。请注意，phpsimap 在 CLI API 中已被�
 ## 感谢
 
 - easyDNS
+
 - Directi
+
 - peer networks
+
 - Server Central
+
 - Hosted Solutions
+
 - VIP Premium
+
 - Open Source Lab
+
 - Yahoo
+
 - NECSUCCESS
+
 - Racksoftware
+
 - SoftApache Webhosting
+
 - Redirection
 
 图 5-2：php.net，官方网站
 
-
-
-
-
 # FileMaker Server 12
+
 使用 PHP 进行自定义网页发布
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_53_0.png)
@@ -1097,7 +1066,173 @@ PHP 5.4.4 修复了 30 多个 Bug。请注意，phpsimap 在 CLI API 中已被�
 
 预计学习时间：1 周
 
-FileMaker Server/Examples/PHP/Tutorial/English/
+`FileMaker Server/Examples/PHP/Tutorial/English/`
+
+FileMaker Server 提供的 FileMaker PHP API 教程是基于一份问卷的。它共有六个基础课程。第 1 节课很好，因为它展示了如何连接到数据库。第 2 节解释了如何使用 `ContainerBridge.php` 文件从容器文件中显示图像。这个示例也很有帮助。其余课程在内容和可用性方面很快就变得乏味。如你所见，拥有 50 多个 API 方法但只有 6 个示例，这在完整的学习环境方面显得非常短缺。真正的问题在于 `questionnaire.fp12` 文件。工作流和表结构对于新学习环境来说太复杂了。这个概念本身足够简单，但他们本可以从一个更简单的关联型 FileMaker 开始。
+
+## FileMaker PHP API 教程
+
+# 目录
+
+- 简介
+
+- 第 1 节
+
+- 第 2 节
+
+- 第 3 节
+
+- 第 4 节
+
+- 第 5 节
+
+- 第 6 节
+
+# 简介
+
+欢迎学习 FileMaker PHP API 教程
+
+本教程演示了 FileMaker PHP API 的功能。教程由 6 节组成，旨在教你如何使用 API 将 FileMaker Pro 数据库集成到 Web 应用中。每节介绍 API 的一项功能，解释了代码是如何编写以及如何运行的。
+
+教程完成了一个 PHP Web 应用的开发，每节都基于上一节的基础上：
+
+- 第 1 节
+
+  - 设置 FileMaker 数据库对象
+
+  - 执行查找 `Find`
+
+    - 我如何找到数据库中的所有记录并在网页上显示它们？
+
+- 第 2 节
+
+  - 显示容器图像
+
+    - 如何在我的网站容器字段中显示兼容 Web 的图像？
+
+图 5-4：FileMaker PHP API 教程
+
+# FileMaker PHP API 示例
+
+预计学习时间：1 周
+
+`FileMaker Server/Examples/FMPHP_Sample.fmp2` 文件，这是一个长期存在的美国 24/7 集合，曾用于 FileMaker 的各种演示项目。它是一个简单的单表，包含几个字段。没有与 PHP 文件配套的用户指南。因此，你必须仔细研究代码来弄清楚它们想要实现什么。代码中虽然有一些注释，但显然这不是最好的学习场景。这些示例仅涵盖了少数基础知识，如显示记录、删除记录和复合查找。没什么可写的。我建议你在熟练掌握 FileMaker API 方法之前跳过这些文件，因为没有足够的信息引导你完成这些文件。此外，请使用新的 `getContainerData` 方法而不是旧方法！在读完这本书之后，你对 FileMaker 和 PHP 的熟练程度可能比这些示例中要高得多。
+
+![](img/5a2c5fda68d42e5d65f51850276e49ec_55_0.png)
+
+# FileMaker PHP API 示例
+
+- 24/7 示例：一个用于查看、创建、编辑和删除关联数据库记录的基础型站点。
+
+  使用的文件：
+
+  - `containerBridge.php`
+
+  - `deleteRecord.php`
+
+  - `displayRecord.php`
+
+  - `handleForm.php`
+
+  - `style.css`
+
+  - `viewRecord.php`
+
+- 复合查找示例：用于说明使用 `CompoundFind` 类。
+
+  使用的文件：
+
+  - `compoundFind.php`
+
+- 数据库列表示例：`FileMaker::listDatabases()` 方法的基础示例。
+
+  使用的文件：
+
+  - `listDatabases.php`
+
+- 布局列表示例：`FileMaker::listLayouts()` 方法的基础示例。
+
+  使用的文件：
+
+  - `listLayouts.php`
+
+- 脚本列表示例：`FileMaker::listScripts()` 方法的基础示例。
+
+  使用的文件：
+
+  - `listScripts.php`
+
+图 5-5：FileMaker PHP API 示例
+
+## PHP 参考指南
+
+预计学习时间：仅 Maker Server/Documentation/index.html
+
+来自 FileMaker 的 PHP 参考指南是由一个名为 `phpDocument` 的程序生成的。基本上，它的作用是使用 API 文件并生成一个基于 HTML 的手册，显示有关类和文件的信息。方法的描述将向你提供所有的变量和选项，在某些情况下还会提供使用建议。然而，你不会获得任何关于方法应如何使用的语法或示例。这使得 PHP 参考指南变得非常令人沮丧，不是学习使用 PHP API 的好地方。在没有运行示例的情况下，这真的只是为那些具有 FileMaker 和 PHP 经验的用户准备的。好的方面是，你可以通过按字母顺序查看此元素索引来找到 API 中的每一个方法。
+
+![](img/5a2c5fda68d42e5d65f51850276e49ec_56_0.png)
+
+| [FileMaker] 元素索引 |
+| :--- | :--- |
+| 所有元素 | |
+| `addFind.addInCompoundFind.php` | 向此命令添加请求。 |
+| `addError.addErrorIn.php` | 添加错误。 |
+| `addFindCriterion.addCriterionInRequest.php` | 为查找请求添加准则。 |
+| `addFindCriterion.addCriterionInFind.php` | 为查找添加准则。 |
+| `addFind.addInCompoundFind.php` | 复合查找。 |
+| `addError.addErrorIn.php` | |
+| `addFindCriterion.addCriterionInRequest.php` | 查找请求。 |
+| `addFindCriterion.addCriterionInFind.php` | 查找。 |
+| `addFind.addInCompoundFind.php` | |
+| `addError.addErrorIn.php` | |
+| `addFindCriterion.addCriterionInRequest.php` | |
+| `addFindCriterion.addCriterionInFind.php` | |
+
+*(注：此处表格内容因原文存在重复和逻辑混乱，翻译时保持了结构对齐)*
+
+图 5-6：PHP 参考指南
+
+## Formulations Site
+
+预计学习时间：仅 Maker Server/Documentation/index.html
+
+来自 FileMaker 的 PHP 参考指南是由一个名为 `phpDocument` 的程序生成的。基本上，它的作用是使用 API 文件并生成一个基于 HTML 的手册，显示有关类和文件的信息。方法的描述将向你提供所有的变量和选项，在某些情况下还会提供使用建议。然而，你不会获得任何关于方法应如何使用的语法或示例。这使得 PHP 参考指南变得非常令人沮丧，不是学习使用 PHP API 的好地方。在没有运行示例的情况下，这真的只是为那些具有 FileMaker 和 PHP 经验的用户准备的。好的方面是，你可以通过按字母顺序查看此元素索引来找到 API 中的每一个方法。
+
+![](img/5a2c5fda68d42e5d65f51850276e49ec_56_0.png)
+
+| [FileMaker] 元素索引 |
+| :--- | :--- |
+| 所有元素 | |
+| `addFind.addInCompoundFind.php` | 向此命令添加请求。 |
+| `addError.addErrorIn.php` | 添加错误。 |
+| `addFindCriterion.addCriterionInRequest.php` | 为查找请求添加准则。 |
+| `addFindCriterion.addCriterionInFind.php` | 为查找添加准则。 |
+| `addFind.addInCompoundFind.php` | |
+| `addError.addErrorIn.php` | |
+| `addFindCriterion.addCriterionInRequest.php` | |
+| `addFindCriterion.addCriterionInFind.php` | |
+
+图 5-6：PHP 参考指南
+
+## Formulations Site
+
+预计学习时间：仅 Maker Server/Documentation/index.html
+
+
+
+# FileMaker Server 12
+
+使用 PHP 进行自定义网页发布
+
+![](img/5a2c5fda68d42e5d65f51850276e49ec_53_0.png)
+
+图 5-3：FileMaker PHP“用户指南”
+
+## FileMaker PHP API 教程
+
+预计学习时间：1 周
+
+`FileMaker Server/Examples/PHP/Tutorial/English/`
 
 FileMaker Server 提供的 FileMaker PHP API 教程是基于一份问卷的。它共有六个基础课程。第 1 节课很好，因为它展示了如何连接到数据库。第 2 节解释了如何使用 `ContainerBridge.php` 文件从容器文件中显示图像。这个示例也很有帮助。其余课程在内容和可用性方面很快就变得乏味。如你所见，拥有 50 多个 API 方法但只有 6 个示例，这在完整的学习环境方面显得非常短缺。真正的问题在于 `questionnaire.fp12` 文件。工作流和表结构对于新学习环境来说太复杂了。这个概念本身足够简单，但他们本可以从一个更简单的关联型 FileMaker 开始。
 
@@ -1123,7 +1258,7 @@ FileMaker Server 提供的 FileMaker PHP API 教程是基于一份问卷的。�
 
 - 第 1 节
   - 设置 FileMaker 数据库对象
-  - 执行查找 (Find)
+  - 执行查找 `Find`
     - 我如何找到数据库中的所有记录并在网页上显示它们？
 - 第 2 节
   - 显示容器图像
@@ -1135,7 +1270,7 @@ FileMaker Server 提供的 FileMaker PHP API 教程是基于一份问卷的。�
 
 预计学习时间：1 周
 
-FileMaker Server/Examples/FMPHP_Sample.fmp2 文件，这是一个长期存在的美国 24/7 集合，曾用于 FileMaker 的各种演示项目。它是一个简单的单表，包含几个字段。没有与 PHP 文件配套的用户指南。因此，你必须仔细研究代码来弄清楚它们想要实现什么。代码中虽然有一些注释，但显然这不是最好的学习场景。这些示例仅涵盖了少数基础知识，如显示记录、删除记录和复合查找。没什么可写的。我建议你在熟练掌握 FileMaker API 方法之前跳过这些文件，因为没有足够的信息引导你完成这些文件。此外，请使用新的 `getContainerData` 方法而不是旧方法！在读完这本书之后，你对 FileMaker 和 PHP 的熟练程度可能比这些示例中要高得多。
+`FileMaker Server/Examples/FMPHP_Sample.fmp2` 文件，这是一个长期存在的美国 24/7 集合，曾用于 FileMaker 的各种演示项目。它是一个简单的单表，包含几个字段。没有与 PHP 文件配套的用户指南。因此，你必须仔细研究代码来弄清楚它们想要实现什么。代码中虽然有一些注释，但显然这不是最好的学习场景。这些示例仅涵盖了少数基础知识，如显示记录、删除记录和复合查找。没什么可写的。我建议你在熟练掌握 FileMaker API 方法之前跳过这些文件，因为没有足够的信息引导你完成这些文件。此外，请使用新的 `getContainerData` 方法而不是旧方法！在读完这本书之后，你对 FileMaker 和 PHP 的熟练程度可能比这些示例中要高得多。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_55_0.png)
 
@@ -1143,30 +1278,30 @@ FileMaker Server/Examples/FMPHP_Sample.fmp2 文件，这是一个长期存在的
 
 - 24/7 示例：一个用于查看、创建、编辑和删除关联数据库记录的基础型站点。
   使用的文件：
-  - containerBridge.php
-  - deleteRecord.php
-  - displayRecord.php
-  - handleForm.php
-  - style.css
-  - viewRecord.php
+  - `containerBridge.php`
+  - `deleteRecord.php`
+  - `displayRecord.php`
+  - `handleForm.php`
+  - `style.css`
+  - `viewRecord.php`
 - 复合查找示例：用于说明使用 `CompoundFind` 类。
   使用的文件：
-  - compoundFind.php
+  - `compoundFind.php`
 - 数据库列表示例：`FileMaker::listDatabases()` 方法的基础示例。
   使用的文件：
-  - listDatabases.php
+  - `listDatabases.php`
 - 布局列表示例：`FileMaker::listLayouts()` 方法的基础示例。
   使用的文件：
-  - listLayouts.php
+  - `listLayouts.php`
 - 脚本列表示例：`FileMaker::listScripts()` 方法的基础示例。
   使用的文件：
-  - listScripts.php
+  - `listScripts.php`
 
 图 5-5：FileMaker PHP API 示例
 
 ## PHP 参考指南
 
-预计学习时间：仅 Maker Server/Documentation/index.html
+预计学习时间：`Server/Documentation/index.html`
 
 来自 FileMaker 的 PHP 参考指南是由一个名为 `phpDocument` 的程序生成的。基本上，它的作用是使用 API 文件并生成一个基于 HTML 的手册，显示有关类和文件的信息。方法的描述将向你提供所有的变量和选项，在某些情况下还会提供使用建议。然而，你不会获得任何关于方法应如何使用的语法或示例。这使得 PHP 参考指南变得非常令人沮丧，不是学习使用 PHP API 的好地方。在没有运行示例的情况下，这真的只是为那些具有 FileMaker 和 PHP 经验的用户准备的。好的方面是，你可以通过按字母顺序查看此元素索引来找到 API 中的每一个方法。
 
@@ -1175,151 +1310,10 @@ FileMaker Server/Examples/FMPHP_Sample.fmp2 文件，这是一个长期存在的
 | [FileMaker] 元素索引 |
 | :--- | :--- |
 | 所有元素 | |
-| addFind.addInCompoundFind.php | 向此命令添加请求。 |
-| addError.addErrorIn.php | 添加错误。 |
-| addFindCriterion.addCriterionInRequest.php | 为查找请求添加准则。 |
-| addFindCriterion.addCriterionInFind.php | 为查找添加准则。 |
-| addFind.addInCompoundFind.php | 复合查找。 |
-| addError.addErrorIn.php | | |
-| addFindCriterion.addCriterionInRequest.php | 查找请求。 |
-| addFindCriterion.addCriterionInFind.php | 查找。 |
-| addFind.addInCompoundFind.php | | |
-| addError.addErrorIn.php | | |
-| addFindCriterion.addCriterionInRequest.php | | |
-| addFindCriterion.addCriterionInFind.php | | |
-*(注：此处表格内容因原文存在重复和逻辑混乱，翻译时保持了结构对齐)* 
-图 5-6：PHP 参考指南
-
-## Formulations Site
-
-预计学习时间：仅 Maker Server/Documentation/index.html
-
-来自 FileMaker 的 PHP 参考指南是由一个名为 `phpDocument` 的程序生成的。基本上，它的作用是使用 API 文件并生成一个基于 HTML 的手册，显示有关类和文件的信息。方法的描述将向你提供所有的变量和选项，在某些情况下还会提供使用建议。然而，你不会获得任何关于方法应如何使用的语法或示例。这使得 PHP 参考指南变得非常令人沮丧，不是学习使用 PHP API 的好地方。在没有运行示例的情况下，这真的只是为那些具有 FileMaker 和 PHP 经验的用户准备的。好的方面是，你可以通过按字母顺序查看此元素索引来找到 API 中的每一个方法。
-
-![](img/5a2c5fda68d42e5d65f51850276e49ec_56_0.png)
-
-| [FileMaker] 元素索引 |
-| :--- | :--- |
-| 所有元素 | |
-| addFind.addInCompoundFind.php | 向此命令添加请求。 |
-| addError.addErrorIn.php | 添加错误。 |
-| addFindCriterion.addCriterionInRequest.php | 为查找请求添加准则。 |
-| addFindCriterion.addCriterionInFind.php | 为查找添加准则。 |
-| addFind.addInCompoundFind.php | | |
-| addError.addErrorIn.php | | |
-| addFindCriterion.addCriterionInRequest.php | | |
-| addFindCriterion.addCriterionInFind.php | | |
-图 5-6：PHP 参考指南
-
-## Formulations Site
-
-预计学习时间：仅 Maker Server/Documentation/index.html
-
-来自 FileMaker 的 PHP 参考指南是由一个名为 `phpDocument` 的程序生成的。基本上，它的作用是使用 API 文件并生成一个基于 HTML 的手册，显示有关类和文件的信息。方法的描述将向你提供所有的变量和选项，在某些情况下还会提供使用建议。然而，你不会获得任何关于方法应如何使用的语法或示例。这使得 PHP 参考指南变得非常令人沮丧，不是学习使用 PHP API 的好地方。在没有运行示例的情况下，这真的只是为那些具有 FileMaker 和 PHP 经验的用户准备的。好的方面是，你可以通过按字母顺序查看此元素索引来找到 API 中的每一个方法。
-
-*(注：由于原文文本在结尾出现大量重复和乱码，译文已根据“不要重复输出原文”的原则仅保留核心内容的准确翻译。)*
-
-[/content] (注：由于您提供的原文在后半部分存在大量的重复行和无意义片段，作为高级文档工程师，我遵循了“不要重复输出原文”的指令，仅对核心逻辑和内容进行了翻译，并确保格式的完整性。) 抱歉，由于您提供的原始文本在后半部分存在严重的重复和乱码，我已根据您的要求，仅为您翻译了核心的有效内容，并剔除了冗余部分。[/content] 
-
-*(更正：由于系统输入的原文文本存在大量逻辑重复，以下是针对原文中**有效部分的精翻**：)*
-
-[content]
-# FileMaker Server 12
-使用 PHP 进行自定义网页发布
-
-![](img/5a2c5fda68d42e5d65f51850276e49ec_53_0.png)
-
-图 5-3：FileMaker PHP“用户指南”
-
-## FileMaker PHP API 教程
-
-预计学习时间：1 周
-
-FileMaker Server/Examples/PHP/Tutorial/English/
-
-FileMaker Server 提供的 FileMaker PHP API 教程是基于一份问卷的。它共有六个基础课程。第 1 节课很好，因为它展示了如何连接到数据库。第 2 节解释了如何使用 `ContainerBridge.php` 文件从容器文件中显示图像。这个示例也很有帮助。其余课程在内容和可用性方面很快就变得乏味。如你所见，拥有 50 多个 API 方法但只有 6 个示例，这在完整的学习环境方面显得非常短缺。真正的问题在于 `questionnaire.fp12` 文件。工作流和表结构对于新学习环境来说太复杂了。这个概念本身足够简单，但他们本可以从一个更简单的关联型 FileMaker 开始。
-
-## FileMaker PHP API 教程
-
-# 目录
-
-- 简介
-- 第 1 节
-- 第 2 节
-- 第 3 节
-- 第 4 节
-- 第 5 节
-- 第 6 节
-
-# 简介
-
-欢迎学习 FileMaker PHP API 教程
-
-本教程演示了 FileMaker PHP API 的功能。教程由 6 节组成，旨在教你如何使用 API 将 FileMaker Pro 数据库集成到 Web 应用中。每节介绍 API 的一项功能，解释了代码是如何编写以及如何运行的。
-
-教程完成了一个 PHP Web 应用的开发，每节都基于上一节的基础上：
-
-- 第 1 节
-  - 设置 FileMaker 数据库对象
-  - 执行查找 (Find)
-    - 我如何找到数据库中的所有记录并在网页上显示它们？
-- 第 2 节
-  - 显示容器图像
-    - 如何在我的网站容器字段中显示兼容 Web 的图像？
-
-图 5-4：FileMaker PHP API 教程
-
-# FileMaker PHP API 示例
-
-预计学习时间：1 周
-
-FileMaker Server/Examples/FMPHP_Sample.fmp2 文件，这是一个长期存在的美国 24/7 集合，曾用于 FileMaker 的各种演示项目。它是一个简单的单表，包含几个字段。没有与 PHP 文件配套的用户指南。因此，你必须仔细研究代码来弄清楚它们想要实现什么。代码中虽然有一些注释，但显然这不是最好的学习场景。这些示例仅涵盖了少数基础知识，如显示记录、删除记录和复合查找。没什么可写的。我建议你在熟练掌握 FileMaker API 方法之前跳过这些文件，因为没有足够的信息引导你完成这些文件。此外，请使用新的 `getContainerData` 方法而不是旧方法！在读完这本书之后，你对 FileMaker 和 PHP 的熟练程度可能比这些示例中要高得多。
-
-![](img/5a2c5fda68d42e5d65f51850276e49ec_55_0.png)
-
-# FileMaker PHP API 示例
-
-- 24/7 示例：一个用于查看、创建、编辑和删除关联数据库记录的基础型站点。
-  使用的文件：
-  - containerBridge.php
-  - deleteRecord.php
-  - displayRecord.php
-  - handleForm.php
-  - style.css
-  - viewRecord.php
-- 复合查找示例：用于说明使用 `CompoundFind` 类。
-  使用的文件：
-  - compoundFind.php
-- 数据库列表示例：`FileMaker::listDatabases()` 方法的基础示例。
-  使用的文件：
-  - listDatabases.php
-- 布局列表示例：`FileMaker::listLayouts()` 方法的基础示例。
-  使用的文件：
-  - listLayouts.php
-- 脚本列表示例：`FileMaker::listScripts()` 方法的基础示例。
-  使用的文件：
-  - listScripts.php
-
-图 5-5：FileMaker PHP API 示例
-
-## PHP 参考指南
-
-预计学习时间：Server/Documentation/index.html
-
-来自 FileMaker 的 PHP 参考指南是由一个名为 `phpDocument` 的程序生成的。基本上，它的作用是使用 API 文件并生成一个基于 HTML 的手册，显示有关类和文件的信息。方法的描述将向你提供所有的变量和选项，在某些情况下还会提供使用建议。然而，你不会获得任何关于方法应如何使用的语法或示例。这使得 PHP 参考指南变得非常令人沮丧，不是学习使用 PHP API 的好地方。在没有运行示例的情况下，这真的只是为那些具有 FileMaker 和 PHP 经验的用户准备的。好的方面是，你可以通过按字母顺序查看此元素索引来找到 API 中的每一个方法。
-
-![](img/5a2c5fda68d42e5d65f51850276e49ec_56_0.png)
-
-| [FileMaker] 元素索引 |
-| :--- | :--- |
-| 所有元素 | |
-| addFind.addInCompoundFind.php | 向此命令添加请求。 |
-| addError.addErrorIn.php | 添加错误。 |
-| addFindCriterion.addCriterionInRequest.php | 为查找请求添加准则。 |
-| addFindCriterion.addCriterionInFind.php | 为查找添加准则。 |
-
-
-
+| `addFind.addInCompoundFind.php` | 向此命令添加请求。 |
+| `addError.addErrorIn.php` | 添加错误。 |
+| `addFindCriterion.addCriterionInRequest.php` | 为查找请求添加准则。 |
+| `addFindCriterion.addCriterionInFind.php` | 为查找添加准则。 |
 
 记录被定义为包含 Demo php 布局中所有字段（即 `$result`）的内容，并使用了表中的所有记录（`newFindAllCommand('Demo php')`）。你可能会认为，取决于布局中字段的数量和表中的记录数，这可能会产生大量数据。然而，当你继续往下看时，你会发现搜索“循环”可以快速处理 Records 文件中的内容进行解析，以便在网页上显示每个字段和记录。你甚至不需要显示布局上的每一个字段。你可以选择：
 
@@ -1335,7 +1329,7 @@ $request->setField('FirstName', $_POST['FirstName']);
 Set Field [php::FirstName; Get(ScriptParameter)]
 ```
 
-PHP 方法与 FileMaker 函数或自定义函数相同。PHP 拥有的方法比 FileMaker 函数多得多。你可以在 php.net 网站找到特定的方法。PHP 的主要优势是处理和解析数据字符串。你的工作是为方法提供来自字段、变量或表单输入的数据。例如，下方的 PHP 方法正在返回由 `$max` 计算的变量 `$found` 的整数值。这与 FileMaker 中的整数函数非常相似。并不是所有的 FileMaker 函数都相似的。不过，在扩展 FileMaker 章节的末尾，我们将尝试提供 FileMaker 方法与 PHP 方法的对比作为参考。
+PHP 方法与 FileMaker 函数或自定义函数相同。PHP 拥有的方法比 FileMaker 函数多得多。你可以在 `php.net` 网站找到特定的方法。PHP 的主要优势是处理和解析数据字符串。你的工作是为方法提供来自字段、变量或表单输入的数据。例如，下方的 PHP 方法正在返回由 `$max` 计算的变量 `$found` 的整数值。这与 FileMaker 中的整数函数非常相似。并不是所有的 FileMaker 函数都相似的。不过，在扩展 FileMaker 章节的末尾，我们将尝试提供 FileMaker 方法与 PHP 方法的对比作为参考。
 
 ```
 int($found / $max)
@@ -1353,48 +1347,47 @@ RecordID vs. Serial Number
 
 # 使用序列号而不是 RecordID 将让你的生活变得艰难。
 
-| 自动输入 (Auto-Enter) | 验证 (Validation) | 存储 (Storage) | 假名 (Furigana) |
+| 自动输入 `Auto-Enter` | 验证 `Validation` | 存储 `Storage` | 假名 `Furigana` |
 |---|---|---|---|
 | 自动将以下数据输入此字段中： | | | |
-| 创建日期 (Creation Date) | | | |
-| 修改日期 (Modification Date) | | | |
-| 序列号 (Serial number) | | 创建时 (On creation) | 提交时 (On commit) |
-| 下一个值 (next value) | 1 | 递增1 | |
-| 来自上一次访问记录的值 (Value from last visited record) | | | |
-| 数据 (Data:): | | | |
-
-| 计算值 (Calculated value) | 指定... (Specify...) |
+| 创建日期 `Creation Date` | | | |
+| 修改日期 `Modification Date` | | | |
+| 序列号 `Serial number` | | 创建时 `On creation` | 提交时 `On commit` |
+| 下一个值 `next value` | 1 | 递增1 | |
+| 来自上一次访问记录的值 `Value from last visited record` | | | |
+| 数据 `Data:` | | | |
+| 计算值 `Calculated value` | 指定... `Specify...` |
 |---|---|
 | 不替换字段现有值（如果有的话） | |
-| 查找值 (Looked-up value) | 指定... |
+| 查找值 `Looked-up value` | 指定... |
 
-禁止在数据输入期间修改值 (Prohibit modification of value during data entry)
+禁止在数据输入期间修改值 `Prohibit modification of value during data entry`
 
 # 图 5-9：主键的自动输入序列号
 
-在 php_demo 的上下文中求此此计算
+在 `php_demo` 的上下文中求此此计算
 
-| 当前表 (php_demo) | 运算符 (Operators) | 视图：按名称查看所有函数 (View: all functions by name) |
+| 当前表 `php_demo` | 运算符 `Operators` | 视图：按名称查看所有函数 `View: all functions by name` |
 |---|---|---|
-| FirstName | & | Abs (number) |
-| LastName | + | Asc (number) |
-| Number | | Count (number) |
-| Date | 1 | Atn (number) |
-| Timestamp | | Average (field result...) |
-| Image | 0 | Case (text) result(text2 resu... |
-| Calculation | | Ceiling (number) |
-| RecordID | | Char (number) |
-| Email | | Choose (text; res0) result1 r... |
-| Serial - | | Cast (text; res0) result1 |
-| Get(RecordID) | | |
+| `FirstName` | & | `Abs(number)` |
+| `LastName` | + | `Asc(number)` |
+| `Number` | | `Count(number)` |
+| `Date` | 1 | `Atn(number)` |
+| `Timestamp` | | `Average(field result...)` |
+| `Image` | 0 | `Case(text) result(text2 resu...` |
+| `Calculation` | | `Ceiling(number)` |
+| `RecordID` | | `Char(number)` |
+| `Email` | | `Choose(text; res0) result1 r...` |
+| `Serial -` | | `Cast(text; res0) result1` |
+| `Get(RecordID)` | | |
 
-计算结果必须为文本 (Text)
+计算结果必须为文本 `Text`
 
-不要在所有引用的字段为空时求值 (Do not evaluate all referenced fields are empty)
+不要在所有引用的字段为空时求值 `Do not evaluate all referenced fields are empty`
 
-## 图 5-10：自动输入 Get(RecordID) 而非自动序列号
+## 图 5-10：自动输入 `Get(RecordID)` 而非自动序列号
 
-## 布局 (Layouts)，而非表访问
+## 布局 `Layouts`，而非表访问
 
 对于那些有 ASP 或 JSP 经验的人来说，你们习惯于使用 SQL 从表中检索数据并连接表。我不想扫大家的兴，FileMaker PHP API 不提供这种对数据库的访问。你必须为你的网页创建一个包含你可能需要的各种功能和值列表的特定布局。这种情况下真正的问题在于，单个布局可能会强制暴露额外的字段和记录，这将极大地影响 Web 应用程序的性能。因此，提高性能的唯一方法是创建仅包含网页所需的字段和记录的 PHP 布局。当然，更多的布局意味着更多的管理和文档工作。好消息是 FileMaker 客户端不会访问你的 PHP 布局。因此，你可能不需要创建复杂的用户界面。只需字段和记录就能为你提供操作空间，例如将布局命名为特定的名称如“Contact php”，除非你想破坏 PHP 页面，否则永远不要删除该布局。我还建议你将所有的 PHP 布局组织在一个 FileMaker Pro 文件夹中，以此提醒开发者在更改任何与 PHP 相关的数据库时要极其小心。
 
@@ -1404,17 +1397,13 @@ RecordID vs. Serial Number
 
 图 5-11：仅为 PHP 设计的布局
 
-## 命名规范 (Naming Conventions)
+## 命名规范 `Naming Conventions`
 
-字段的命名规范不仅对 FileMaker Pro 重要，对 PHP 也是如此。网页在特殊字符方面往往脆弱，而 FileMaker 则允许使用它们。标准的 Web 规定你应该使用 a-z、0-9、下划线来命名字段，并且不要使用点、空格或高 ASCII 字符（如 "??"）。字段名应以字母开头，而不是数字或下划线。例如，使用 "FirstName" 而不是 "First Name"。注意我在每个单词的首字母使用了大写字母，以便于阅读字段名。
+字段的命名规范不仅对 FileMaker Pro 重要，对 PHP 也是如此。网页在特殊字符方面往往脆弱，而 FileMaker 则允许使用它们。标准的 Web 规定你应该使用 `a-z`、`0-9`、`下划线` 来命名字段，并且不要使用点、空格或高 ASCII 字符（如 `"??"`）。字段名应以字母开头，而不是数字或下划线。例如，使用 `"FirstName"` 而不是 `"First Name"`。注意我在每个单词的首字母使用了大写字母，以便于阅读字段名。
 
 ![](img/5a2c5fda68d42e5d65f51850276e9ec_61_1.png)
 
 > 绝对不要一旦字段在 PHP 网页上使用就更改它。如果你更改了字段名，你将必须更新你的 PHP 网页。
-
-
-
-
 
 ## 语法
 
@@ -1431,14 +1420,16 @@ echo "FileMaker API for PHP";
 </html>
 ```
 
-## 包含 (Includes)
+## 包含 `Includes`
 
 你可以在服务器执行 PHP 文件之前，将其他 PHP 文件的内容插入到你的 PHP 文件中。这是通过 `include()` 或 `require()` 函数实现的。这对于执行某些任务非常有用，例如为整个网站创建一个单个数据库连接、创建自定义函数，以及插入页眉或其他会被多次使用的元素。这与在 FileMaker 中创建子脚本非常相似，目的是更有逻辑地组织你的代码并尽可能地重用代码。`include` 和 `require()` 函数是相同的，区别仅在于它们在找不到文件时处理错误的方式。
 
 - `include()` 会产生致命错误，但脚本将继续执行。
 - `require()` 会产生致命错误并在此停止脚本。
 
-书中的每个 PHP 文件都将从 `include()` 开始，使用预定义的账户名和密码连接数据库。注意 `../Conn/` 路径。此相对路径从当前文件夹向上两个文件夹，并进入 `Conn` 文件夹寻找 `dbaccess.php` 文件。`Conn` 是 connection（连接）的缩写。如果不连接到数据库，任何 FileMaker API 方法都无法从数据库中检索任何数据。这是一个多次重用代码的良好示例。如果你需要更改用户名和密码，只需要修改一次 `dbaccess.php` 文件，而无需修改网站中的每一个文件。
+书中的每个 PHP 文件都将从 `include()` 开始，使用预定义的账户名和密码连接数据库。注意 `../Conn/` 路径。此相对路径从当前文件夹向上两个文件夹，并进入 `Conn` 文件夹寻找 `dbaccess.php` 文件。`Conn` 是 `connection`（连接）的缩写。如果不连接到数据库，任何 FileMaker API 方法都无法从数据库中检索任何数据。这是一个多次重用代码的良好示例。如果你需要更改用户名和密码，只需要修改一次 `dbaccess.php` 文件，而无需修改网站中的每一个文件。
+
+
 
 ```php
 <?php
@@ -1463,12 +1454,14 @@ HTML
 
 ### 单行注释
 
+```php
 /*
 多
 行
 注释
 */
 ?>
+```
 
 ### 引号 (Quotes)
 
@@ -1617,8 +1610,6 @@ for ($i=1; $i<=5; $i++) {
 ?>
 ```
 
-
-
 ```php
 <?php
 for($counter=1; $counter<=5; $counter++)
@@ -1628,7 +1619,7 @@ for($counter=1; $counter<=5; $counter++)
 ?>
 ```
 
-当你想要显示来自数据库的记录时，将使用 `foreach` 循环 —— `foreach($array as $value)`。为了让 `foreach` 循环易于使用，你应该将 $array 定义为复数形式（$records）。然后将 $value 定义为单数（$Record）。请注意，下面的示例显示了每条记录的 `FirstName` 和 `LastName` 字段的数据。你还需要在 `foreach` 循环中包含表格行（tr）和数据单元（td）的所有正确 html 结构。
+当你想要显示来自数据库的记录时，将使用 `foreach` 循环 —— `foreach($array as $value)`。为了让 `foreach` 循环易于使用，你应该将 `$array` 定义为复数形式（`$records`）。然后将 `$value` 定义为单数（`$Record`）。请注意，下面的示例显示了每条记录的 `FirstName` 和 `LastName` 字段的数据。你还需要在 `foreach` 循环中包含表格行（tr）和数据单元（td）的所有正确 html 结构。
 
 ### foreach($records as $record)
 
@@ -1645,7 +1636,7 @@ echo '</tr>';
 
 数组有三种类型。数值数组（Numeric）是最常见的。它为数组中的每条记录分配一个索引数字，从 0 开始。关联数组（Associative array）为每个值使用 ID 键。多维数组（Multidimensional array）是数组的数组。
 
-在下面的数值示例中，$names 数组包含 3 条记录。输出显示了数组中每条记录的值。如果你想从数组中提取特定记录，可以使用索引号。如果你只想获取第一条记录，这是一个常用方法。否则，在大多数情况下，你将使用 `foreach` 循环，它不需要你为每条记录指定索引号。
+在下面的数值示例中，`$names` 数组包含 3 条记录。输出显示了数组中每条记录的值。如果你想从数组中提取特定记录，可以使用索引号。如果你只想获取第一条记录，这是一个常用方法。否则，在大多数情况下，你将使用 `foreach` 循环，它不需要你为每条记录指定索引号。
 
 ```php
 <?php
@@ -1679,6 +1670,7 @@ echo $names[0] . ", " . $names[1] . ", " . $names[2];
 书中附带了一个数据库文件 `php_demo.fmp`，你应该已经将其上传到服务器。你将此文件用于所有的示例 PHP 网页。它包含了所有可能的字段、值列表、布局、脚本等，以为你提供一个完整的示例文件。该文件设置为使用以下账户自动打开：
 
 Account: Admin
+
 Password: 1234
 
 通常你不会使用 Admin 账户或简单密码，因为它们很容易破解。但为了演示目的，它可以正常工作。
@@ -1718,21 +1710,21 @@ FileMaker API for PHP 使用 `RecordID` 来查找记录，而不是自动输入�
 | * Checkbox | Text | 索引, 通过值列表 | |
 | * MultValueList | Text | 索引 | |
 
-
-
-
 `related_data` 表非常简单。`FK` 字段用于存储由 `php_demo` 表的 `RecordID` 字段提供的外键。唯一用于实际数据录入字段是 `Text` 字段。与其他做法一样，你还会注意到此表也有一个 `RecordID` 字段。此时你可能会想，既然 PHP 的 FileMaker API 已经有一个获取记录内部序列号的方法，为什么在表和布局中还需要这个额外的字段呢？答案是，没有哪个 FileMaker 脚本函数可以使用具有实际字段的内部 `RecordID` 来查找记录。因此，为了让 FileMaker 服务器和脚本可以使用这些信息，你必须创建一个字段来显示这些信息。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_71_0.png)
 
 图 6-4：`related_data` 表字段。
 
-`import` 表是一个独立表，用于导入（上传）脚本。它的作用是记录每个上传到服务器的文件，并捕获信息以判断上传是否成功。`URL` 是上传到服务器的原始位置路径和文件名。`Success` 标识了从 `.XLS` 文件导入了多少条记录。如果为空，则导入未成功。`ScriptParameter` 是 PHP 代码转换后的文件名，且每个文件都有唯一的名称。`DocumentsPath` 是上传文件的最终位置。
 
-### 为 "php_demo" 管理数据库
+
+`import`表是一个独立表，用于导入（上传）脚本。它的作用是记录每个上传到服务器的文件，并捕获信息以判断上传是否成功。`URL`是上传到服务器的原始位置路径和文件名。`Success`标识了从`.XLS`文件导入了多少条记录。如果为空，则导入未成功。`ScriptParameter`是PHP代码转换后的文件名，且每个文件都有唯一的名称。`DocumentsPath`是上传文件的最终位置。
+
+### 为"php_demo"管理数据库
 
 | 表名 | import | 字段 | 视图方式： | 创建顺序 |
 |---|---|---|---|---|
+
 | 字段名称 | 类型 | 选项 / 注释（点击切换） | | |
 | RecordID | 数字 | | | |
 | URL | 文本 | 索引、自动输入计算、不可修改自动输入 | | |
@@ -1743,17 +1735,17 @@ FileMaker API for PHP 使用 `RecordID` 来查找记录，而不是自动输入�
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_72_0.png)
 
-### 图 6-5：`import` 表字段。
+### 图 6-5：`import`表字段。
 
 ### 字段验证
 
-在使用 PHP 构建网站时，字段验证是一个非常重要的考虑因素。如果你包含层级验证，将需要仔细测试你的 PHP 网页，以确保创建、更新或删除记录不会抛出意外错误。你可能还需要配置 FileMaker 服务器的 Web 发布 PHP 设置以启用记录数据预验证。需要注意的是，尽管 FileMaker 的验证选项非常健壮，但你可能在网页上使用验证会效果更好，这样你就不需要检查 Web 服务器或 Web 发布引擎的错误了。示例文件将演示 PHP 和 FileMaker 方法如何工作以确保你的数据完整性。
+在使用PHP构建网站时，字段验证是一个非常重要的考虑因素。如果你包含层级验证，将需要仔细测试你的PHP网页，以确保创建、更新或删除记录不会抛出意外错误。你可能还需要配置FileMaker服务器的Web发布PHP设置以启用记录数据预验证。需要注意的是，尽管FileMaker的验证选项非常健壮，但你可能在网页上使用验证会效果更好，这样你就不需要检查Web服务器或Web发布引擎的错误了。示例文件将演示PHP和FileMaker方法如何工作以确保你的数据完整性。
 
-> 在测试严格数据类型：仅限日期（Date Only）时，我发现即使网页发送了正确的日期格式，Web 发布引擎也会拒绝该数据且更新记录。
+> 在测试严格数据类型：仅限日期（Date Only）时，我发现即使网页发送了正确的日期格式，Web发布引擎也会拒绝该数据且更新记录。
 
-> 当使用 Web 服务器或 Web 发布引擎进行数据验证时，“通过计算验证”不起作用。在提交数据到数据库之前，必须在你的网页上执行通过计算验证。
+> 当使用Web服务器或Web发布引擎进行数据验证时，“通过计算验证”不起作用。在提交数据到数据库之前，必须在你的网页上执行通过计算验证。
 
-### 字段 "Number" 的选项
+### 字段"Number"的选项
 
 | 自动输入 | 验证 | 存储 | 假名 |
 | --- | --- | --- | --- |
@@ -1773,17 +1765,13 @@ FileMaker API for PHP 使用 `RecordID` 来查找记录，而不是自动输入�
 
 ### 值列表
 
-值列表（Value lists）是 FileMaker Pro 的一个独特功能。大多数数据库和 Web 应用程序使用单独的表作为值列表。你完全可以在 FileMaker 中这样做。使用 FileMaker 内置值列表的缺点是它并不是“内置”的。示例文件将演示 PHP 和 FileMaker 方法如何工作以确保你的数据完整性。
+值列表（Value lists）是FileMaker Pro的一个独特功能。大多数数据库和Web应用程序使用单独的表作为值列表。你完全可以在FileMaker中这样做。使用FileMaker内置值列表的缺点是它并不是“内置”的。示例文件将演示PHP和FileMaker方法如何工作以确保你的数据完整性。
 
-> 在测试严格数据类型：仅限日期（Date Only）时，我发现即使网页发送了正确的日期格式，Web 发布引擎也会拒绝该数据且更新记录。
+> 在测试严格数据类型：仅限日期（Date Only）时，我发现即使网页发送了正确的日期格式，Web发布引擎也会拒绝该数据且更新记录。
 
-> 当使用 Web 服务器或 Web 发布引擎进行数据验证时，“通过计算验证”不起作用。在提交数据到数据库之前，必须在你的网页上执行通过计算验证。
+> 当使用Web服务器或Web发布引擎进行数据验证时，“通过计算验证”不起作用。在提交数据到数据库之前，必须在你的网页上执行通过计算验证。
 
-（注：OCR 文本此处有重复。）
-
-
-
-
+（注：OCR文本此处有重复。）
 
 | relaxed_data: Text FK RecordID |
 | :--- | :--- |
@@ -1792,23 +1780,23 @@ FileMaker API for PHP 使用 `RecordID` 来查找记录，而不是自动输入�
 
 图 6-11: 端口（Portals）。
 
-### Web 查看器
+### Web查看器
 
-php_demo.fmp12 示例文件中包含的网络查看器仅用于演示。该网络查看器与上传示例配合使用。网络查看器的目的是让 FileMaker Pro 客户端能够通过网络查看器上传图像和文件，而不需要通过网络访问服务器上存储文件的目录。它还会重命名上传的文件以确保其与数据库正常工作，而不是依赖用户在传输文件到服务器时正确命名。对于通过 FileMaker Pro 客户端访问数据库的用户来说，这种方法效率更高。我一直建议您的内部用户和管理员使用 FileMaker Pro 客户端来更新数据库，而不是创建一个单一的 PHP 程序，如果可能只有几个人会更新网站数据库，这样做会更具成本效益。因此，为管理员准备几个 FileMaker 客户端的成本将远低于构建网站管理端的成本。既然 FileMaker 12 现在支持外部存储的图像和文件，我还将演示一种显示这些文件的新方法。
+`php_demo.fmp12`示例文件中包含的网络查看器仅用于演示。该网络查看器与上传示例配合使用。网络查看器的目的是让FileMaker Pro客户端能够通过网络查看器上传图像和文件，而不需要通过网络访问服务器上存储文件的目录。它还会重命名上传的文件以确保其与数据库正常工作，而不是依赖用户在传输文件到服务器时正确命名。对于通过FileMaker Pro客户端访问数据库的用户来说，这种方法效率更高。我一直建议您的内部用户和管理员使用FileMaker Pro客户端来更新数据库，而不是创建一个单一的PHP程序，如果可能只有几个人会更新网站数据库，这样做会更具成本效益。因此，为管理员准备几个FileMaker客户端的成本将远低于构建网站管理端的成本。既然FileMaker 12现在支持外部存储的图像和文件，我还将演示一种显示这些文件的新方法。
 
-php_demo (FMS11v2) — 测试服务器
+`php_demo` (FMS11v2) — 测试服务器
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_76_0.png)
 
-### PHP 示例账户名: Admin 密码: 1234
+### PHP示例账户名: Admin 密码: 1234
 
 图 6-12: 网络查看器。
 
 ### 账户与权限
 
-网页将使用账户“Admin”和密码“1234”来访问示例文件 php_demo.fmp12。Admin 账户对文件中的所有内容具有完全访问权限——记录、布局、值、脚本、菜单等。在生产环境数据库中，你可能希望创建一个单一的 PHP 账户来访问数据库。你的网页可以根据数据库中的账户来验证用户。然而，这目前不在本书的涵盖范围内。本书提供了最佳实践，即根据 `demo_php` 表中包含其电子邮件地址和密码的记录来对用户进行身份验证。这是最常用的身份验证方法——用户可以从记录中添加或删除，而 FileMaker PHP API 在不运行自定义脚本的情况下无法控制存储在数据库内部的账户和权限。
+网页将使用账户“Admin”和密码“1234”来访问示例文件`php_demo.fmp12`。Admin账户对文件中的所有内容具有完全访问权限——记录、布局、值、脚本、菜单等。在生产环境数据库中，你可能希望创建一个单一的PHP账户来访问数据库。你的网页可以根据数据库中的账户来验证用户。然而，这目前不在本书的涵盖范围内。本书提供了最佳实践，即根据`demo_php`表中包含其电子邮件地址和密码的记录来对用户进行身份验证。这是最常用的身份验证方法——用户可以从记录中添加或删除，而FileMaker PHP API在不运行自定义脚本的情况下无法控制存储在数据库内部的账户和权限。
 
-### 管理 "php_demo" 的安全性
+### 管理"php_demo"的安全性
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_77_0.png)
 
@@ -1816,7 +1804,7 @@ php_demo (FMS11v2) — 测试服务器
 
 ### 安全
 
-当网络用户访问你的数据时，安全性极其重要。我必须强调，你不应该赋予任何启用了 PHP 的账户访问他们不拥有的数据库。你应该为记录、布局、值列表和脚本指定自定义权限。你应该只允许通过 PHP Web 发布进行访问。你不应该允许打印、管理扩展权限集、覆盖数据验证或允许我们更改密码。菜单命令应设置为最小，如果通过自定义菜单完全移除。PHP 用户应该拥有的唯一权限是导出记录，以便数据可以在网页上显示。此外，对于赋予 PHP 用户的权限要保持谨慎，因为他们确实会执行你给他们的所有操作。这意味着你可能为外部客户准备一个账户（该账户除了记录外被锁定），并为内部用户准备第二个账户（根据他们的培训水平拥有更多访问权限）。
+当网络用户访问你的数据时，安全性极其重要。我必须强调，你不应该赋予任何启用了PHP的账户访问他们不拥有的数据库。你应该为记录、布局、值列表和脚本指定自定义权限。你应该只允许通过PHP Web发布进行访问。你不应该允许打印、管理扩展权限集、覆盖数据验证或允许我们更改密码。菜单命令应设置为最小，如果通过自定义菜单完全移除。PHP用户应该拥有的唯一权限是导出记录，以便数据可以在网页上显示。此外，对于赋予PHP用户的权限要保持谨慎，因为他们确实会执行你给他们的所有操作。这意味着你可能为外部客户准备一个账户（该账户除了记录外被锁定），并为内部用户准备第二个账户（根据他们的培训水平拥有更多访问权限）。
 
 选择权限并将其保存为“权限集”（Privilege Set），该集可以被一个或多个账户使用。如果你编辑了一个权限集，所有使用它的账户都会受到影响。
 
@@ -1824,44 +1812,49 @@ php_demo (FMS11v2) — 测试服务器
 
 图 6-14: 安全。
 
-在数据库中启用 PHP 访问非常简单。只需勾选权限集（图 6-14）中的“通过 PHP Web 发布访问”复选框。不要忘记 FileMaker Server Web 发布设置也需要勾选“启用 PHP 发布”。就够了。一旦数据库托管在服务器上，你就可以通过 PHP 访问数据库。
+在数据库中启用PHP访问非常简单。只需勾选权限集（图 6-14）中的“通过PHP Web发布访问”复选框。不要忘记FileMaker Server Web发布设置也需要勾选“启用PHP发布”。就够了。一旦数据库托管在服务器上，你就可以通过PHP访问数据库。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_78_0.png)
 
-图 6-15: 启用 PHP 访问。
+图 6-15: 启用PHP访问。
 
 ### CORE
 
 本书的这部分将使用核心课程：
-PHPFiles/Core/Lesson#
+
+`PHPFiles/Core/Lesson#`
 
 # 第二部分 — 发布 FileMaker 数据
 
-这是你一直等待的部分，或者是你有些恐惧的部分。这一部分将深入研究 FileMaker PHP API，并向你展示所有可用方法的示例，以利用你的 FileMaker 数据库数据创建生产质量的商业网页。我们将从核心示例开始，这些示例演示了每个网页都所需的必备技术。然后我们将继续学习显示、搜索、创建、删除和编辑记录的基础知识。在这里我们将处理更复杂的话，如端口（portals）和容器字段。最后，我们将处理每个网站所需的细节，如登录安全、导航、运行脚本、使用值列表和验证。我们将移动到高级部分，演示我们学到的其他其他内容。一旦你掌握了这些技术，你就掌握了 95% 的内容。
+这是你一直等待的部分，或者是你有些恐惧的部分。这一部分将深入研究FileMaker PHP API，并向你展示所有可用方法的示例，以利用你的FileMaker数据库数据创建生产质量的商业网页。我们将从核心示例开始，这些示例演示了每个网页都所需的必备技术。然后我们将继续学习显示、搜索、创建、删除和编辑记录的基础知识。在这里我们将处理更复杂的话，如端口（portals）和容器字段。最后，我们将处理每个网站所需的细节，如登录安全、导航、运行脚本、使用值列表和验证。我们将移动到高级部分，演示我们学到的其他其他内容。一旦你掌握了这些技术，你就掌握了 95% 的内容。
 
-**目标：** 创建用于连接 FileMaker 数据库的包含文件。
+**目标：** 创建用于连接FileMaker数据库的包含文件。
 
 **难度：** 简单
 
-**示例文件：** PHPFiles/Core/Lesson#
+**示例文件：** `PHPFiles/Core/Lesson#`
 
 **页面导航：** 仅包含文件。
 
 **FileMaker 方法：**
-FileMaker()
-setProperty()
+
+`FileMaker()`
+
+`setProperty()`
 
 **代码：**
-所有 PHP 代码都以 `<?php` 开始并以 `?>` 结束。首先使用 PHP 方法 `require_once` 来加载 FileMaker API。这允许你访问这些方法。
+
+所有PHP代码都以`<?php`开始并以`?>`结束。首先使用PHP方法`require_once`来加载FileMaker API。这允许你访问这些方法。
 
 ```php
 <?php
 require_once ('FileMaker.php');
 $fm = new FileMaker();
 ```
-创建 `$fm` 对象。注意变量名 `fm`。此对象将在每个示例中被调用以从数据库检索数据。
 
-下一部分是数据库的“连接字符串”。`database` 是数据库的精确名称。你不需要包含 `.fmp` 后缀。`hostspec` 是提供服务的 IP 地址（例如 `http://192.168.1.100` 或 `http://127.0.0.1`）或域名（例如 `http://formulationspro.com`）。如果你是单服务器方案，`http://127.0.0.1` 将完美工作。技术上讲，如果没有声明属性，FileMaker 会假设 `hostspec` 为 `127.0.0.1`。我假设你在书中使用的是单服务器。如果你有双服务器方案，你需要托管服务器的地址。`username` 是数据库中的账户名——记住账户需要分配给启用了 PHP 的权限集。`password` 是账户的密码。对于示例文件和 php_demo.fmp12 示例数据库，账户是 "Admin"，密码是 "1234"。
+创建`$fm`对象。注意变量名`fm`。此对象将在每个示例中被调用以从数据库检索数据。
+
+下一部分是数据库的“连接字符串”。`database`是数据库的精确名称。你不需要包含`.fmp`后缀。`hostspec`是提供服务的IP地址（例如`http://192.168.1.100`或`http://127.0.0.1`）或域名（例如`http://formulationspro.com`）。如果你是单服务器方案，`http://127.0.0.1`将完美工作。技术上讲，如果没有声明属性，FileMaker会假设`hostspec`为`127.0.0.1`。我假设你在书中使用的是单服务器。如果你有双服务器方案，你需要托管服务器的地址。`username`是数据库中的账户名——记住账户需要分配给启用了PHP的权限集。`password`是账户的密码。对于示例文件和`php_demo.fmp12`示例数据库，账户是"Admin"，密码是"1234"。
 
 ```php
 $fm->setProperty('database', 'php_demo');
@@ -1870,40 +1863,33 @@ $fm->setProperty('username', 'Admin');
 $fm->setProperty('password', '1234');
 ```
 
-> 不要在 Windows 上使用 http://localhost。Windows 无法将 localhost 解析为 127.0.0.1，并可能导致性能下降或崩溃问题。相反，请始终使用 //127.0.0.1。
+> 不要在Windows上使用`http://localhost`。Windows无法将`localhost`解析为`127.0.0.1`，并可能导致性能下降或崩溃问题。相反，请始终使用`//127.0.0.1`。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_80_0.png)
 
-
-
-
-
+```php
 <?php
 require_once('FilePaser.php');
-
 $db = new FilePaser();
-
 $db->setProperty('database', 'phpuser');
 $db->setProperty('host', 'localhost');
 $db->connect('', '');
-
 $db->setProperty('username', 'admin');
 $db->setProperty('password', '1234');
-
 ?>
 ```
 
-图 7-1: dbaccess.php 文件。
+图 7-1: `dbaccess.php`文件。
 
 ## 容器桥接文件 (Container Bridge File)
 
-**目标：** ContainerBridge.php 是你将原样包含在解决方案中的文件。此文件中不需要进行任何操作。它可以独立运行。它用于转换容器字段中的图像，以便你可以在网页上显示它们。
+**目标：** `ContainerBridge.php`是你将原样包含在解决方案中的文件。此文件中不需要进行任何操作。它可以独立运行。它用于转换容器字段中的图像，以便你可以在网页上显示它们。
 
-> 我不建议你使用容器字段显示图像。将图像存储在服务器上，并使用带有图像路径的文本字段要好得多。ContainerBridge.php 可以工作，但你将面临巨大的性能损失。FileMaker 的 PHP API 很好用，它可以处理容器图像。但 ASP 和 JSP 的 XDBC 驱动不支持 FileMaker 的专有容器字段。
+> 我不建议你使用容器字段显示图像。将图像存储在服务器上，并使用带有图像路径的文本字段要好得多。`ContainerBridge.php`可以工作，但你将面临巨大的性能损失。FileMaker的PHP API很好用，它可以处理容器图像。但ASP和JSP的XDBC驱动不支持FileMaker的专有容器字段。
 
 难度： 简单
 
-**示例文件：** PHPFiles/Core/Lesson12/ContainerBridge.php
+**示例文件：** `PHPFiles/Core/Lesson12/ContainerBridge.php`
 
 **页面导航：** 仅包含文件。
 
@@ -1911,21 +1897,21 @@ FileMaker API 方法：无
 
 **代码：**
 
-由于这已经是一个独立文件，我将不会逐行解释代码，而是描述它的预期用处。在 PHP 代码中，如果你想显示来自容器的图像，将使用以下示例代码：
+由于这已经是一个独立文件，我将不会逐行解释代码，而是描述它的预期用处。在PHP代码中，如果你想显示来自容器的图像，将使用以下示例代码：
 
 ```
 <img src="ContainerBridge.php?path=' . urlencode($_GET['record']) . ' />
 ```
 
-此处的目的是做两件事。首先，定义图像源。你可以看到代码通过变量 "path"（一个名为 "Image" 的数据库中经过 URL 编码的容器字段）将图像源传递给 ContainerBridge.php。如果你跟进传递给 ContainerBridge.php 文件的值，你会发现它首先验证路径信息是否已设置。接下来，它使用 PHP 的 `substr` 去掉文件中存储的路径，仅返回图像的扩展名。一旦确定了扩展名，它将在头部中返回相应的 jpg 或 gif。最后，`fm` 对象将使用 `getContainerData` 方法从容器字段中检索图像。再次，你不一定需要知道为什么或如何实现。接下来的课程将详细演示如何在内部和外部从容器字段显示图像。现在，如果你打算显示来自容器的图像，请原样将此文件包含到你的网站中。
+此处的目的是做两件事。首先，定义图像源。你可以看到代码通过变量"path"（一个名为"Image"的数据库中经过URL编码的容器字段）将图像源传递给`ContainerBridge.php`。如果你跟进传递给`ContainerBridge.php`文件的值，你会发现它首先验证路径信息是否已设置。接下来，它使用PHP的`substr`去掉文件中存储的路径，仅返回图像的扩展名。一旦确定了扩展名，它将在头部中返回相应的jpg或gif。最后，`fm`对象将使用`getContainerData`方法从容器字段中检索图像。再次，你不一定需要知道为什么或如何实现。接下来的课程将详细演示如何在内部和外部从容器字段显示图像。现在，如果你打算显示来自容器的图像，请原样将此文件包含到你的网站中。
 
-> `substr` 通过起始和长度参数返回字符串的一部分。这与 FileMaker 的 `Middle` 函数非常相似。
+> `substr`通过起始和长度参数返回字符串的一部分。这与FileMaker的`Middle`函数非常相似。
 
 ```
 http://us.php.net/manual/en/function.substr.php
 ```
 
-> `header` 用于绘制原始 HTTP 头部。
+> `header`用于绘制原始HTTP头部。
 
 ```
 http://us.php.net/manual/en/function.header.php
@@ -1951,11 +1937,11 @@ echo $fm->getContainerData($_GET['path']);
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_84_0.png)
 
-图 7: ContainerBridge.php 文件。
+图 7: `ContainerBridge.php`文件。
 
-## PHP 信息 (PHP Info)
+## PHP信息 (PHP Info)
 
-**目标：** 你偶尔会需要关于你的 PHP 构建的信息。使用 PHP_Info.php 文件将返回你想要关于你的 PHP 和服务器安装的所有信息。非常遗憾的是，你无法从此界面配置任何设置。对于 Apache，你仍然需要手动更改配置文件。
+**目标：** 你偶尔会需要关于你的PHP构建的信息。使用`PHP_Info.php`文件将返回你想要关于你的PHP和服务器安装的所有信息。非常遗憾的是，你无法从此界面配置任何设置。对于Apache，你仍然需要手动更改配置文件。
 
 **难度：** 简单
 
@@ -1965,7 +1951,7 @@ echo $fm->getContainerData($_GET['path']);
 
 **代码：**
 
-显示 PHP 安装的所有信息与使用 `phpinfo()` 方法一样简单。
+显示PHP安装的所有信息与使用`phpinfo()`方法一样简单。
 
 ```php
 <?php
@@ -1975,29 +1961,29 @@ phpinfo();
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_85_0.png)
 
-图 7-3: PHP_Info.php 文件。*注意*
+图 7-3: `PHP_Info.php`文件。*注意*
 
 ## 课程 1：查找所有记录 (Find All Records)
 
-**目标：** 在在本节中你将学习如何查找所有记录并将它们在简单的表格中显示。
+**目标：** 在本节中你将学习如何查找所有记录并将它们在简单的表格中显示。
 
-**难度：** 简单 
+**难度：** 简单
 
-**示例文件：** PHPFiles/Core/Lesson1/FindAllRecords.php
+**示例文件：** `PHPFiles/Core/Lesson1/FindAllRecords.php`
 
 **页面导航：**
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_86_0.png)
 
 **FileMaker API 方法：**
-newFindAllCommand()
-execute()
-getRecords()
-getField()
+`newFindAllCommand()`
+`execute()`
+`getRecords()`
+`getField()`
 
 **代码：**
 
-每当你需要连接到数据库时，都要通过包含 dbaccess.php 文件来开始你的 PHP 代码。
+每当你需要连接到数据库时，都要通过包含`dbaccess.php`文件来开始你的PHP代码。
 
 ```php
 <?php
@@ -2005,21 +1991,24 @@ include("../dbaccess.php");
 ?>
 ```
 
-通过创建一个新的搜索事务来查找所有记录，进入 php 代码部分。创建变量 `$result` 告诉 `$f` 对象使用 `newFindAllCommand()` 从 Demo 布局检索记录。记住 `$f` 对象是在 dbaccess.php 文件中创建的，该文件被包含在每个页面开始的代码中。
+通过创建一个新的搜索事务来查找所有记录，进入php代码部分。创建变量`$result`告诉`$f`对象使用`newFindAllCommand()`从Demo布局检索记录。记住`$f`对象是在`dbaccess.php`文件中创建的，该文件被包含在每个页面开始的代码中。
 
 ```php
 <?php
 $result = $f->newFindAllCommand('Demo php');
 ```
 
-> FileMaker API 语法: newFindAllCommand('LayoutName')
-$result = $f->newFindAllCommand('Demo php');
+> FileMaker API 语法: `newFindAllCommand('LayoutName')`
+`$result = $f->newFindAllCommand('Demo php');`
 
-在向数据库发送请求后，你必须执行它。创建变量 `$result` 来执行 `$request`。找到的记录集将存储在 `$records` 中，并在下面的代码中使用。
+在向数据库发送请求后，你必须执行它。创建变量`$result`来执行`$request`。找到的记录集将存储在`$records`中，并在下面的代码中使用。
 
 ```php
-$result = $request->execute();
 ```
+
+
+
+`$result = $request->execute();`
 
 每当你向数据库执行请求时，都需要捕获错误。你只需要在执行任何方法后复制/粘贴这段通用代码即可。
 
@@ -2075,29 +2064,25 @@ echo '</table>';
 | Mat | Lanos | 38 | 08/25/2010 | 09/09/2010 | |
 | Wade | LeBlanc | 49 | 08/25/2010 | 09/09/2010 | |
 
-
-
-
-
 ## 第 2 Lesson：排序记录，用户定义
 
 **目标：** 在本节中，你将学习如何在简单表格的头部创建一个链接，允许用户对记录进行排序。
 
 **难度：** 简单
 
-**示例文件：** PHPFiles/Core/Lesson2/SortRecordsUser.php
+**示例文件：** `PHPFiles/Core/Lesson2/SortRecordsUser.php`
 
 **页面导航：**
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_89_0.png)
 
 **FileMaker API 方法：**
-- FindAllCommand()
-- addSortRule()
-- execute()
-- getMessage()
-- getRecords()
-- getField()
+- `FindAllCommand()`
+- `addSortRule()`
+- `execute()`
+- `getMessage()`
+- `getRecords()`
+- `getField()`
 
 **代码：**
 
@@ -2114,6 +2099,7 @@ include "../Conn/dbaccess.php";
 ```php
 <?php
 $request = $php->newAllCommand('Demo php');
+?>
 ```
 
 使用 PHP 方法 `isset` 来检查 URL 中用于 `sortBy` 的键值对是否已设置且不为空。如果已设置，你可以根据 URL 中的 `sortBy` 值为 `$request` 变量添加 `addSortRule`。`addSortRule` 始终需要在执行 `find` 请求之前执行。
@@ -2129,7 +2115,7 @@ if (isset($_GET['sortBy']) && $_GET['sortBy'] != "")
 }
 ```
 
-### FileMaker API 语法：addSortRule('FieldName', Precedence, Order)
+### FileMaker API 语法：`addSortRule('FieldName', Precedence, Order)`
 
 ```php
 $php $request = addSortRule($_GET['sortby'], 1, FILEMAKER_SORT_ASCEND);
@@ -2137,7 +2123,7 @@ $php $request = addSortRule($_GET['sortby'], 1, FILEMAKER_SORT_ASCEND);
 
 优先级（Precedence）是一个数字优先顺序 1, 2, 3 等。
 
-顺序（Order） = FILEMAKER_SORT_ASCEND（未指定时默认）FILEMAKER_SORT_DESCEND 
+顺序（Order） = `FILEMAKER_SORT_ASCEND`（未指定时默认）`FILEMAKER_SORT_DESCEND`
 
 执行查找。
 
@@ -2208,7 +2194,7 @@ echo '</table>';
 | Mat | Latos | 38 | 08/25/2010 | 09/09/2010 | 07:48 | 87 |
 | Wade | LeBlanc | 49 | 08/25/2010 | 09/09/2010 | 24:60 | 88 |
 
-图 7-5: SortRecordsUser.php。
+图 7-5: `SortRecordsUser.php`。
 
 ## 第 2 Lesson：排序记录，固定
 
@@ -2216,19 +2202,19 @@ echo '</table>';
 
 **难度：** 简单
 
-**示例文件：** PHPFiles/Core/Lesson2/SortRecordsFixed.php
+**示例文件：** `PHPFiles/Core/Lesson2/SortRecordsFixed.php`
 
 **页面导航：**
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_92_0.png)
 
 **FileMaker API 方法：**
-- FindAllCommand()
-- addSortRule()
-- execute()
-- getMessage()
-- getRecords()
-- getField()
+- `FindAllCommand()`
+- `addSortRule()`
+- `execute()`
+- `getMessage()`
+- `getRecords()`
+- `getField()`
 
 **代码：**
 
@@ -2312,20 +2298,20 @@ echo '</table>';
 
 **难度：** 简单
 
-**示例文件：** PHPFiles/Core/Lessons/SearchRecordsSimple.php
+**示例文件：** `PHPFiles/Core/Lessons/SearchRecordsSimple.php`
 
 **页面导航：**
 
 搜索
 
 **FileMaker API 方法：**
-- newFindAllCommand()
-- newFindAllCommand()
-- addCriterion()
-- execute()
-- getMessage()
-- getRecords()
-- getField()
+- `newFindAllCommand()`
+- `newFindAllCommand()`
+- `addCriterion()`
+- `execute()`
+- `getMessage()`
+- `getRecords()`
+- `getField()`
 
 **代码：**
 
@@ -2363,15 +2349,13 @@ $request->addCriterion('FirstName', $FirstName);
 
 
 
-
-
-### FileMaker API 语法: newFindCommand('LayoutName')
+### FileMaker API 语法: `newFindCommand('LayoutName')`
 
 ```php
 $request = newFindCommand('Demo php');
 ```
 
-### FileMaker API 语法: addFindCriterion('FieldName', Value)
+### FileMaker API 语法: `addFindCriterion('FieldName', Value)`
 
 ```php
 $request = addFindCriterion('FirstName', $FirstName);
@@ -2391,7 +2375,7 @@ if (FileMaker::isError($result))
     exit;
 ```
 
-使用 getRecords 方法将所有记录存储在变量 $records 数组中。
+使用 `getRecords` 方法将所有记录存储在变量 `$records` 数组中。
 
 ```php
 $records = $result->getRecords();
@@ -2412,7 +2396,7 @@ echo '<table border="1">
 </tr>';
 ```
 
-在 FindAllRecords 示例中，你将 foreach 循环和 getField($method) 创建所有显示记录的 html。
+在 FindAllRecords 示例中，你将 `foreach` 循环和 `getField($method)` 创建所有显示记录的 html。
 
 ```php
 foreach ($records as $record)
@@ -2460,20 +2444,20 @@ FirstName: Todd
 
 **难度**：简单
 
-示例文件：PHP/Lesson3/SearchRecords.php
+示例文件：`PHP/Lesson3/SearchRecords.php`
 
 页面导航：
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_0.png)
 
 **FileMaker 方法**：
-- FindAllCommand()
-- newFindCommand()
-- addFindCriterion()
-- execute()
-- getMessage()
-- getRecords()
-- getField()
+- `FindAllCommand()`
+- `newFindCommand()`
+- `addFindCriterion()`
+- `execute()`
+- `getMessage()`
+- `getRecords()`
+- `getField()`
 
 **代码**：
 
@@ -2485,7 +2469,7 @@ include ("Conn/dbaccess.php");
 ?>
 ```
 
-为文件 SearchRecords.php 创建按 FirstName 和 LastName 搜索的表单。此表单将作为搜索和记录集的显示。表单使用 get 方法，这意味着搜索字符串将在 URL 中可见。输入名称 FirstName 和 LastName 将传递到 URL。我倾向于使用字段的实际名称以便于读取 URL。值将是输入的：
+为文件 `SearchRecords.php` 创建按 `FirstName` 和 `LastName` 搜索的表单。此表单将作为搜索和记录集的显示。表单使用 `get` 方法，这意味着搜索字符串将在 URL 中可见。输入名称 `FirstName` 和 `LastName` 将传递到 URL。我倾向于使用字段的实际名称以便于读取 URL。值将是输入的：
 
 ```html
 <form action="SearchRecords.php" method="get">
@@ -2495,7 +2479,7 @@ Last Name: <input name="LastName" type="text" /><br>
 </form>
 ```
 
-通过检查 $GET 全局的 FirstName 和 LastName 值开始代码。如果两者为空，变量 $request 将查找 Demo php 布局中的所有记录。否则，使用 $GET 全局从 URL 获取 FirstName 和 LastName 值。然后告诉 $fm 对象向 $request 变量添加新字段命令，使用来自 FirstName 和 $LastName 变量的内容。
+通过检查 `$GET` 全局的 `FirstName` 和 `LastName` 值开始代码。如果两者为空，变量 `$request` 将查找 `Demo php` 布局中的所有记录。否则，使用 `$GET` 全局从 URL 获取 `FirstName` 和 `LastName` 值。然后告诉 `$fm` 对象向 `$request` 变量添加新字段命令，使用来自 `FirstName` 和 `$LastName` 变量的内容。
 
 ```php
 <?php
@@ -2526,7 +2510,7 @@ if (FileMaker::isError($result)) {
 }
 ```
 
-使用 getRecords 方法将所有记录存储在变量 $records 数组中。
+使用 `getRecords` 方法将所有记录存储在变量 `$records` 数组中。
 
 ```php
 $records = $result->getRecords();
@@ -2547,7 +2531,7 @@ echo "<table border='1'>
 </tr>";
 ```
 
-与 FindAllRecords 示例一样，你将使用 foreach 循环和 getField($method) 创建所有显示记录的 html。
+与 FindAllRecords 示例一样，你将使用 `foreach` 循环和 `getField($method)` 创建所有显示记录的 html。
 
 ```php
 foreach ($records as $record) {
@@ -2583,35 +2567,35 @@ echo '</table>';
 | Ernesto | Frier | 39 | 08/25/2010 | 25:55 | | 84 |
 | John | Garland | 27 | 08/25/2010 | 21:06 | | 85 |
 
-图 7-8: SearchRecords.php 文件。
+图 7-8: `SearchRecords.php` 文件。
 
 ## 课程 4：搜索详情
 
-**目标**：在本节中，你将学习如何为用户创建一个点击详情页的链接。该链接将 RecordID 发送到详情页。详情页的目的是显示比搜索页更多内容。
+**目标**：在本节中，你将学习如何为用户创建一个点击详情页的链接。该链接将 `RecordID` 发送到详情页。详情页的目的是显示比搜索页更多内容。
 
 **难度**：中
 
 **示例文件**：
-- PHPFiles/Core/SearchResults.php
-- PHPFiles/Core/SearchResultsDetail.php
+- `PHPFiles/Core/SearchResults.php`
+- `PHPFiles/Core/SearchResultsDetail.php`
 
 **页面导航**：
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_100_0.png)
 
 **FileMaker 方法**：
-- newFindCommand()
-- findCommand()
-- addFindCriterion()
-- execute()
-- getMessage()
-- getRecords()
-- getField()
-- getRecordID()
+- `newFindCommand()`
+- `findCommand()`
+- `addFindCriterion()`
+- `execute()`
+- `getMessage()`
+- `getRecords()`
+- `getField()`
+- `getRecordID()`
 
 **代码**：
 
-SearchResults.php
+`SearchResults.php`
 
 始终从包含数据库开始。
 
@@ -2621,7 +2605,7 @@ include("../Conn/dbaccess.php");
 ?>
 ```
 
-为指向 SearchResults.php 的 FirstName 字段创建一个简单的搜索表单。
+为指向 `SearchResults.php` 的 `FirstName` 字段创建一个简单的搜索表单。
 
 ```html
 <form action="SearchResults.php" method="get">
@@ -2630,7 +2614,7 @@ First Name: <input name="FirstName" type="text" /><br>
 </form>
 ```
 
-通过检查 URL 中的 FirstName 是否有值开始 PHP 代码。如果为空，则查找所有记录。否则，使用 URL 中的 FirstName 为 $request 变量查找准则。
+通过检查 URL 中的 `FirstName` 是否有值开始 PHP 代码。如果为空，则查找所有记录。否则，使用 URL 中的 `FirstName` 为 `$request` 变量查找准则。
 
 ```php
 <?php
@@ -2659,7 +2643,7 @@ if (FileMaker::isError($result)) {
 }
 ```
 
-将记录作为数组获取在 $records 变量中。
+将记录作为数组获取在 `$records` 变量中。
 
 ```php
 $records = $result->getRecords();
@@ -2681,7 +2665,7 @@ echo '<table border="1">
 </tr>';
 ```
 
-使用 fetch 方法遍历所有记录。使用 getField 方法显示字段内容。最后一列包含指向详情页的查看链接。当用户点击链接时，它将打开详情页并使用 getRecordID 方法将记录中的 RecordID 值作为 "id" 传递。
+使用 `fetch` 方法遍历所有记录。使用 `getField` 方法显示字段内容。最后一列包含指向详情页的查看链接。当用户点击链接时，它将打开详情页并使用 `getRecordID` 方法将记录中的 `RecordID` 值作为 `"id"` 传递。
 
 ```php
 foreach ($records as $record) {
@@ -2700,9 +2684,6 @@ foreach ($records as $record) {
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_101_0.png)
 
-
-
-
 最后，关闭表格和 PHP 代码段。
 
 ```php
@@ -2712,7 +2693,7 @@ echo '</table>';
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_102_0.png)
 
-图 7-9：SearchResults.php 文件。
+图 7-9：`SearchResults.php` 文件。
 
 现在搜索页面已经构建并带有详情页的链接，你可以创建详情页了。始终从包含数据库的连接开始。
 
@@ -2722,7 +2703,7 @@ include("../Conn/dbaccess.php");
 ?>
 ```
 
-让 $form 对象使用 `getRecordID` 方法通过传入 URL 的 id 值从数据库检索记录。从 Demo php 检索数据。使用 `$_GET` 超全局变量从 URL 获取 RecordID。数据将存储在 $record 变量中。
+让 `$form` 对象使用 `getRecordID` 方法通过传入 URL 的 `id` 值从数据库检索记录。从 `Demo php` 检索数据。使用 `$_GET` 超全局变量从 URL 获取 `RecordID`。数据将存储在 `$record` 变量中。
 
 ```php
 <?php
@@ -2735,28 +2716,51 @@ $record = $fm->getRecordByID("Demo php", $_GET["id"]);
 最后，用简单的 HTML 表格显示单条记录。注意，在这种情况下，表格不在 PHP 代码内部。只有来自 PHP 代码包裹的字段数据。
 
 ```html
-<table border="1">
-<tr>
-<td><?php echo $record->getField("FirstName"); ?></td>
-</tr>
-<tr>
-<td><?php echo $record->getField("LastName"); ?></td>
-</tr>
-<tr>
-<td><?php echo $record->getField("Number"); ?></td>
-</tr>
 ```
+
+
+
+<table border="1">
+
+<tr>
+
+<td><?php echo $record->getField("FirstName"); ?></td>
+
+</tr>
+
+<tr>
+
+<td><?php echo $record->getField("LastName"); ?></td>
+
+</tr>
+
+<tr>
+
+<td><?php echo $record->getField("Number"); ?></td>
+
+</tr>
+
+</table>
 
 ```html
 <tr>
+
 <td><?php echo $record->getField("Date"); ?></td>
+
 </tr>
+
 <tr>
+
 <td><?php echo $record->getField("TimeStamp"); ?></td>
+
 </tr>
+
 <tr>
+
 <td><?php echo $record->getField("Calculation"); ?></td>
+
 </tr>
+
 </table>
 ```
 
@@ -2771,21 +2775,21 @@ $record = $fm->getRecordByID("Demo php", $_GET["id"]);
 **难度：** 中等
 
 **示例文件：**
-PHPFiles/Core/Lesson5/InsertRecordSimple.php
+`PHPFiles/Core/Lesson5/InsertRecordSimple.php`
 
 **页面导航：**
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_104_0.png)
 
 **FileMaker API 方法：**
-- newAddCommand()
-- execute()
-- addField()
-- getMessage()
+- `newAddCommand()`
+- `execute()`
+- `addField()`
+- `getMessage()`
 
 **代码：**
 
-关于这种技术，你会注意到的一点是，表单使用 Post 方法放在代码的末尾。这是因为表单使用 Post 方法将数据发送回自身。我希望 PHP 代码在页面上创建表单之前运行，以确保消息能够正确显示。因此，你需要做的第一件事是将 $message 变量设为空，这样当用户第一次访问页面时就不会显示消息。
+关于这种技术，你会注意到的一点是，表单使用 Post 方法放在代码的末尾。这是因为表单使用 Post 方法将数据发送回自身。我希望 PHP 代码在页面上创建表单之前运行，以确保消息能够正确显示。因此，你需要做的第一件事是将 `$message` 变量设为空，这样当用户第一次访问页面时就不会显示消息。
 
 ```php
 <?php
@@ -2798,7 +2802,7 @@ $message = '';
 if (isset($_POST['insert'])) {
 ```
 
-检查 insert URL 值是否为 Cancel。如果用户取消了请求，更新 $message 变量以显示记录未创建。
+检查 insert URL 值是否为 Cancel。如果用户取消了请求，更新 `$message` 变量以显示记录未创建。
 
 ```php
 if ($_POST['insert']=='Cancel') {
@@ -2823,7 +2827,7 @@ $request = $fm->newAddCommand('Demo php');
 $request = $fm->addNewCommand('Demo php');
 ```
 
-接下来，让 $request 变量使用 `$_POST` 超全局数据设置字段。
+接下来，让 `$request` 变量使用 `$_POST` 超全局数据设置字段。
 
 ```php
 $request->setField('FirstName', $_POST['FirstName']);
@@ -2857,7 +2861,7 @@ if (FileMaker::isError($result)) {
 http://us.php.net/manual/en/function.php
 ```
 
-最后，创建所有你想插入数据库的字段。在表单的最顶部，你可以为每个字段放置 $message 代码。表单的另一个重要部分是按钮的名称。Save 和 Cancel 按钮的名称都是 "insert"。然而，当它们被点击时，传递的是 Save 或 Cancel 的值。这节省了上面脚本的工作，我们只需要检查 insert-Save 或 insert-Cancel。
+最后，创建所有你想插入数据库的字段。在表单的最顶部，你可以为每个字段放置 `$message` 代码。表单的另一个重要部分是按钮的名称。Save 和 Cancel 按钮的名称都是 "insert"。然而，当它们被点击时，传递的是 Save 或 Cancel 的值。这节省了上面脚本的工作，我们只需要检查 insert-Save 或 insert-Cancel。
 
 ```php
 <?php
@@ -2893,14 +2897,11 @@ echo $message; ?>
 
 图 7-11：SearchResultsDetail.php。
 
-
 ` 标签内主要是代码和占位符，我对这些部分进行了结构化处理。
 
 如果您有完整的英文正文，请重新提供，我将为您进行精确翻译。
 
 以下是基于您提供片段的结构性翻译：
-
-[content]
 
 ```php
 $number=$_POST['Number'];
@@ -2927,7 +2928,7 @@ if(filter_var($number, FILTER_VALIDATE_INT, $int_options))
 $Date=$_POST['Date'];
 ```
 
-接下来，使用 PHP 的 `explode` 方法以斜杠 `/` 为分隔符，将三组数字（MM, DD, YYYY ）分离到一个数组中，其中 $mm 被赋值给第一个数组，$dd 被赋值给第二个数组，$yyyy 被赋值给第三个数组。
+接下来，使用 PHP 的 `explode` 方法以斜杠 `/` 为分隔符，将三组数字（MM, DD, YYYY ）分离到一个数组中，其中 `$mm` 被赋值给第一个数组，`$dd` 被赋值给第二个数组，`$yyyy` 被赋值给第三个数组。
 
 ```php
 $array=explode("/", $Date);
@@ -2967,7 +2968,6 @@ if(filter_var($_POST['Email'],FILTER_VALIDATE_EMAIL))
 
 ```php
 $result=$request->execute();
-
 if (FileMaker::isError($result)) {
   $message = "<p>Error: " . $result->getMessage() . "</p>";
   exit;
@@ -3022,25 +3022,28 @@ echo $message;InsertValidation;
 **难度：**中等
 
 **示例文件：**
-- PHPFiles/Core/Lesson6/DeleteRecord.php
+
+- `PHPFiles/Core/Lesson6/DeleteRecord.php`
 
 **页面导航：**
+
 （此处应为导航图片）
 
 ![](img/5a2c5fda68d4f5850276e49ec11_12_0.png)
 
 FileMaker API 方法：
-- newFindAllCommand()
-- newFindCommand()
-- findCriterion()
-- execute()
-- setField()
-- getMessage()
-- Records()
-- getField()
-- RecordID()
-- getByID()
-- delete()
+
+- `newFindAllCommand()`
+- `newFindCommand()`
+- `findCriterion()`
+- `execute()`
+- `setField()`
+- `getMessage()`
+- `Records()`
+- `getField()`
+- `RecordID()`
+- `getByID()`
+- `delete()`
 
 **代码：**
 
@@ -3107,6 +3110,8 @@ echo '<table border="1">
 
 使用 `foreach` 循环显示数组中的每个字段内容。
 
+
+
 ```php
 foreach ($records as $record) {
   echo '<tr>';
@@ -3136,19 +3141,17 @@ echo '</</table>';
 | First Name | Last Name | Number | Date | Time Stamp | Calculation | Record ID | Delete |
 |---|---|---|---|---|---|---|---|
 | Tim | | | | | | | |
-| Fred | | | | | | | | |
-| Mike | | | | | | | | |
-| Heath | | | | | | | | |
-| Mike | | | | | | | | |
-| Bell | | | | | | | | |
-| Kevin | | | | | | | | |
-| Emes | | | | | | | | |
-| Frost | | | | | | | | |
-| Garland | | | | | | | | |
-| John | | | | | | | | |
-| Luke | | | | | | | | |
-
-
+| Fred | | | | | | | |
+| Mike | | | | | | | |
+| Heath | | | | | | | |
+| Mike | | | | | | | |
+| Bell | | | | | | | |
+| Kevin | | | | | | | |
+| Emes | | | | | | | |
+| Frost | | | | | | | |
+| Garland | | | | | | | |
+| John | | | | | | | |
+| Luke | | | | | | | |
 
 ```php
 $display = '<tdEmail: . $record->getField('Email') . '</td>';
@@ -3190,7 +3193,7 @@ view</a></p>';
 ?>
 ```
 
-最后，$display` 变量用于存储所有的 html 代码，页面的主体只需简单地输出 `$display` 变量的内容。
+最后，`$display` 变量用于存储所有的 html 代码，页面的主体只需简单地输出 `$display` 变量的内容。
 
 ```html
 <<html>
@@ -3214,7 +3217,6 @@ echo $display;
 | 编号 | 47 |
 | 日期 | 09/07/2010 |
 | 邮箱 | sduell@formulationspro.com |
-
 | 删除 | 取消 |
 
 前往 "http://127.0.0.1/PHPFiles/Core/Lesson/DeleteRecordDetail.php?id=52"
@@ -3236,7 +3238,9 @@ echo $display;
 **难度：** 中等
 
 **示例文件：**
+
 PHPFiles/Core/Lesson7/EditRecord.php
+
 PHPFiles/Core/Lesson7/EditRecordDetail.php
 
 页面导航：
@@ -3244,6 +3248,7 @@ PHPFiles/Core/Lesson7/EditRecordDetail.php
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_117_0.png)
 
 **FileMaker API 方法：**
+
 - newFindAllCommand()
 - newFindCommand()
 - addFindCriterion()
@@ -3355,31 +3360,44 @@ echo '</tr>';
 ```php
 echo '</table>';
 ?>
+```
 
 编辑->详情
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_115_0.png) 编辑->详情
 
-
-
-
-
 ```html
+
 <table>
+
   <tr>
+
     <th>时间戳</th>
+
   </tr>
+
   <tr>
+
     <td><?php echo $TimeStamp; ?></td>
+
   </tr>
+
 </table>
+
 <p>
+
   <input name="save" type="submit" value="保存" />
+
 </p>
+
 <?php echo $message . "<a href=EditRecord.php>点击此处返回列表页</a>"; ?>
+
 </p>
+
 </body>
+
 </html>
+
 ```
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_121_0.png)
@@ -3431,99 +3449,159 @@ echo '</table>';
 始终从包含数据库连接开始。
 
 ```php
+
 <?php
+
 include("./../conn/dbaccess.php");
+
 ?>
+
 ```
 
 创建一个表单来搜索记录。在这种情况下，表单通过方法指向同一个页面。
 
 ```html
+
 <form action="SearchResultsPortal.php" method="GET">
+
 名字: <input name="FirstName" type="text" />
+
 <br />
+
 <input name="submit" type="submit" />
+
 </form>
+
 ```
 
 创建 PHP 代码来搜索数据库并显示结果。这与之前的示例相同。
 
 ```php
+
 <?php
+
 if(empty($_GET['FirstName']))
+
 {
+
 $FirstName = "";
+
 $request = $fm->findAllCommand('Demo php');
+
 }
+
 else
+
 {
+
 ```
 
 ```php
+
 $FirstName = $_GET['FirstName'];
+
 $request = $fm->newFindCommand('Demo php');
+
 $request->findCriterion('FirstName', $FirstName);
+
 }
+
 ```
 
 执行搜索请求。
 
 ```php
+
 $result = $request->execute();
+
 ```
 
 捕获错误。
 
 ```php
+
 if (FileMaker::isError($result)) {
+
   echo "<p>错误: " . $result->getMessage() . "</p>";
+
   exit;
+
 }
+
 ```
 
 显示结果表的表头。
 
 ```php
+
 echo '<table border="1">
+
 <tr>
+
 <th>FirstName</th>
+
 <th>LastName</th>
+
 <th>Number Number</th>
+
 <th>Date</th>
+
 <th>Timestamp</th>
+
 <th>Calculation</th>
+
 <th>RecordID</th>
+
 <th>View Detail</th>
+
 </tr>';
+
 ```
 
 使用 `foreach` 循环显示字段内容，以显示数组中的每条记录。
 
 ```php
+
 foreach ($records as $record) {
+
   echo '<tr>';
+
   echo '<td>' . $record->getField('FirstName') . '</td>';
+
   echo '<td>' . $record->getField('LastName') . '</td>';
+
   echo '<td>' . $record->getField('Number') . '</td>';
+
   echo '<td>' . $record->getField('Date') . '</td>';
+
   echo '<td>' . $record->getField('Timestamp') . '</td>';
+
   echo '<td>' . $record->getField('Calculation') . '</td>';
+
   echo '<td>' . $record->getField('RecordID') . '</td>';
+
 ```
 
 创建查看详情页的链接。将 RecordID 传递到 SearchResultsDetailPortal.php 页面，以便隔离单个记录。
 
 ```php
+
 echo '<td><a href="SearchResultsDetailPortal.php?id=' . $record->getRecordID() . '">删除</a></td>';
+
 } '</tr>';
+
 ```
 
 关闭表格和 PHP 代码。
 
 ```php
+
 echo '</</table>>';
+
 ?>
 ```
+
+
 
 # 搜索结果 -> 详情
 
@@ -3543,13 +3621,9 @@ echo '</</table>>';
 | John | Garland | 27 | 08/25/2010 | 21:06:35 | | 85 | 查看 |
 | Luke | Gregson | 57 | 08/25/2010 | 25:21 | | 86 | 查看 |
 
-
-
-
-
 ## 搜索结果 - 详情
 
-http://127.0.0.1/PHPFiles/Core/Lesson9/SearchResults/Portal.php
+`http://127.0.0.1/PHPFiles/Core/Lesson9/SearchResults/Portal.php`
 
 名字：Todd
 
@@ -3577,7 +3651,7 @@ include("../Conn/dbaccess.php");
 ?>
 ```
 
-首先根据 URL 中的 id 获取数据。将记录存储在 $record 变量中。
+首先根据 URL 中的 id 获取数据。将记录存储在 `$record` 变量中。
 
 ```php
 $record = $fm->getRecordByID("Demo php", $_GET['id']);
@@ -3591,7 +3665,7 @@ if (empty($_GET['id'])) {
 }
 ```
 
-代码的下一部分检查是根据表单创建一个新的关联数据（RelatedData）按钮组。如果是，你可以告诉 $record 变量使用 related_data 表创建一个新记录，并将结果存储在 $record 变量中。接下来，你可以使用表单从 URL 传递的值来更新 Text 字段。与通常一样，你需要提交请求。最后，你可以使用 $fm 对象根据 URL 中的 id 值获取记录，并使用 $record 变量显示结果。
+代码的下一部分检查是根据表单创建一个新的关联数据（RelatedData）按钮组。如果是，你可以告诉 `$record` 变量使用 related_data 表创建一个新记录，并将结果存储在 `$record` 变量中。接下来，你可以使用表单从 URL 传递的值来更新 Text 字段。与通常一样，你需要提交请求。最后，你可以使用 `$fm` 对象根据 URL 中的 id 值获取记录，并使用 `$record` 变量显示结果。
 
 ```php
 if(isset($_POST['newRelatedData'])) {
@@ -3608,7 +3682,7 @@ if(isset($_POST['newRelatedData'])) {
 $new_record = $record->newRelatedRecord('related_data');
 ```
 
-接下来，$relatedRecords 变量中的所有关联记录创建 $table_data 变量，用于存储表单的 HTML。这将允许 PHP 代码在用户点击提交按钮后使用新表单显示结果。有了新表单，用户可以向数据库提交额外记录而无需返回列表页面。
+接下来，`$relatedRecords` 变量中的所有关联记录创建 `$table_data` 变量，用于存储表单的 HTML。这将允许 PHP 代码在用户点击提交按钮后使用新表单显示结果。有了新表单，用户可以向数据库提交额外记录而无需返回列表页面。
 
 ```php
 $related_records = $record->getRelatedSet('related_data');
@@ -3697,9 +3771,6 @@ $table_data = '</form>';
 - `getRelatedSet()`
 - `setField()`
 
-
-
-
 提交按钮。通过新用户可以向数据库提交额外的记录，而无需跳转到列表页面。表单将指向同一页面，并将记录中的值作为 `RecordID` 传递回。
 
 ```php
@@ -3760,7 +3831,6 @@ $table_data .= '</form>';
 </tr>
 </table>
 <?php echo $table_data; ?>
-
 <?php
 echo '<a href="SearchResultsPortal.php">点击此处返回列表视图。</a>';
 ?>
@@ -3828,23 +3898,39 @@ $Text = $record->getField('Text');
   <title>编辑记录 - 相关记录</title>
 </head>
 <body>
-```表单通过 `Post` 方法指向同一页面。这确保了页面刷新时信息已更新，用户可以进行额外更改。使用 `Post` 方法隐藏这些信息很重要，这样即使记录被删除，用户也不会签该页面。记录的 id 以隐藏值传递。底部的 `$message` 变量将显示来自 PHP 代码的消息。
+```
 
 ```php
 <form action="EditDetailPortal.php" method="post">
   <input type="hidden" name="id" value="<?php echo $_REQUEST['id']; ?>" />
   <input type="hidden" name="parent" value="<?php echo $_REQUEST['parent']; ?>" />
   <table border="1">
-    <tr>
-      <th>Text</th>
-    </tr>
-    <tr>
-      <td><input type="text" name="Text" value="<?php echo $Text; ?>" /></td>
-    </tr>
-  </table>
-  <p>
-    <input name="save" type="submit" value="Save" />
-  </p>
+
+
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
+
+```
+<tr>
+  <th>Text</th>
+</tr>
+<tr>
+  <td><input type="text" name="Text" value="<?php echo $Text; ?>" /></td>
+</tr>
+</table>
+<p>
+  <input name="save" type="submit" value="Save" />
+</p>
 <?php echo $message; ?>
 ```
 
@@ -3868,33 +3954,33 @@ $Text = $record->getField('Text');
 **难度：**
 
 **示例文件：**
-- PHPFiles/Core/Lesson11/SearchResultsPortal.php
-- PHPFiles/Core/Lesson11/SearchResultsDetailPortal.php
-- PHPFiles/Core/Lesson11/DeleteRecordPortal.php
+- `PHPFiles/Core/Lesson11/SearchResultsPortal.php`
+- `PHPFiles/Core/Lesson11/SearchResultsDetailPortal.php`
+- `PHPFiles/Core/Lesson11/DeleteRecordPortal.php`
 
 **页面导航：**
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_138_0.png)
 
 **FileMaker API 方法：**
-- findAllCommand()
-- findCommand()
-- findCriterion()
-- execute()
-- getMessage()
-- getRecords()
-- getField()
-- getRecordID()
-- getRecordByID()
-- newRelatedRecord()
-- Field()
-- commit()
-- getRelatedSet()
-- newEditCommand()
+- `findAllCommand()`
+- `findCommand()`
+- `findCriterion()`
+- `execute()`
+- `getMessage()`
+- `getRecords()`
+- `getField()`
+- `getRecordID()`
+- `getRecordByID()`
+- `newRelatedRecord()`
+- `Field()`
+- `commit()`
+- `getRelatedSet()`
+- `newEditCommand()`
 
 **代码：**
 
-SearchResultsPortal.php
+### SearchResultsPortal.php
 
 始终从包含数据库连接开始。
 
@@ -3976,9 +4062,10 @@ foreach ($records as $record) {
 }
 ```
 
-
+```
 echo '</table>';
 ?
+```
 
 # 搜索结果 -> 详情
 
@@ -3986,7 +4073,7 @@ echo '</table>';
 
 图 7-26：SearchResultsPortal.php 页面。
 
-###SearchResultsDetailPortal.php
+### SearchResultsDetailPortal.php
 始终从包含数据库连接开始。
 
 ```php
@@ -3995,7 +4082,7 @@ include("../../dbaccess.php");
 ?>
 ```
 
-首先根据 URL 中的 id 获取记录。将记录存储在 $record 变量中。
+首先根据 URL 中的 id 获取记录。将记录存储在 `$record` 变量中。
 
 ```php
 $record = $fm->getById("Demo php", $_GET['id']);
@@ -4009,7 +4096,7 @@ if (empty($_GET['id'])) {
 }
 ```
 
-下一段代码检查是否从下方的表单设置了 `newRelatedData` 按钮。如果你可以调用 $record 变量使用 `related_data` 表创建一个新记录，并将结果存储在 $new_record 变量中。接下来，你可以使用表单从 URL 传递的值更新 Text 字段。作为用户，你需要提交该请求。最后，你可以告诉 $fm 对象通过 URL 传递的值获取记录，并使用 $record 变量显示结果。
+下一段代码检查是否从下方的表单设置了 `newRelatedData` 按钮。如果你可以调用 `$record` 变量使用 `related_data` 表创建一个新记录，并将结果存储在 `$new_record` 变量中。接下来，你可以使用表单从 URL 传递的值更新 Text 字段。作为用户，你需要提交该请求。最后，你可以告诉 `$fm` 对象通过 URL 传递的值获取记录，并使用 `$record` 变量显示结果。
 
 ```php
 if(isset($_POST['newRelatedData'])) {
@@ -4020,7 +4107,7 @@ if(isset($_POST['newRelatedData'])) {
 }
 ```
 
-接下来，将所有相关记录存储在 $related_records 变量中，并创建 $style_data 变量来存储表单的 HTML。这将允许 PHP 代码在用户点击提交 按钮后用新表单显示结果。对于新用户，你可以直接向数据库提交额外记录，而无需返回列表页面。表单将指向同一页面，并将代码中的 id 值作为 RecordID 传递。
+接下来，将所有相关记录存储在 `$related_records` 变量中，并创建 `$style_data` 变量来存储表单的 HTML。这将允许 PHP 代码在用户点击提交 按钮后用新表单显示结果。对于新用户，你可以直接向数据库提交额外记录，而无需返回列表页面。表单将指向同一页面，并将代码中的 id 值作为 RecordID 传递。
 
 ```php
 $related_records = $record->getRelatedSet('related_data');
@@ -4082,7 +4169,6 @@ $table_data .= '</form>';?>
 
 ```php
 <?php echo $table_data; ?>
-
 <?php
 echo '<a href="SearchResultsPortal.php">Click here to return to the list
 view.</a>';
@@ -4112,8 +4198,8 @@ include ('../Conn/dbaccess.php');
 if (isset($_POST['delete'])) {
 $display = ' Are you sure you want to delete record id: '.$record->getField('RecordID').?';
 $display .= '<form action="DeleteRecordDetailPortal.php" method="post">';
-$display .= '<input type="hidden" name="id" value="'.$_REQUEST['id']." />';
-$display .= '<input type="hidden" name="parent" value="'.$_REQUEST['parent']." />';
+$display .= '<input type="hidden" name="id" value="'.$_REQUEST['id']." />";
+$display .= '<input type="hidden" name="parent" value="'.$_REQUEST['parent']." />";
 }
 $display = '<p>';
 $display .= '<table>';
@@ -4127,7 +4213,6 @@ $display .= '<input type="submit" name="delete" value="Cancel" />';
 $display .= '</form>';
 }
 else
-
 ```php
 {
 if ($_POST['delete'] == 'Delete') {
@@ -4139,7 +4224,7 @@ if ($_POST['delete'] == 'Delete') {
 }
 ```如果用户点击删除按钮，你可以使用标头中 POST 方法传递的值处理删除记录的请求。否则，如果他们点击取消按钮，你可以停止脚本。
 
-最后，由 $display 创建的表单和消息可以作为 HTML 显示，并带有返回父记录的链接。
+最后，由 `$display` 创建的表单和消息可以作为 HTML 显示，并带有返回父记录的链接。
 
 ```html
 <html>
@@ -4157,11 +4242,9 @@ if ($_POST['delete'] == 'Delete') {
 
 图 7-8：DeleteRecordDetail.php 页面。
 
+使用 `foreach` 循环方法为表格中的所有记录创建 HTML。要显示来自容器字段的图像，你将向 `ContainerBridge.php` 文件传递两个信息。图像的 `src` 属性将是文件名 `ContainerBridge.php`，随后是 `path=` 的键值对，以及容器字段内容的编码格式的值。在书的早些章节，我们描述了 `ContainerBridge.php` 文件是如何工作以完成所有繁重任务的。要显示字段的内容，你只需要将此信息传递给页眉。这很好地说明了为什么将代码拆分为逻辑部分非常重要，这样它们就可以被多个网页重用。
 
 
-
-
-使用 foreach 循环方法为表格中的所有记录创建 HTML。要显示来自容器字段的图像，你将向 `ContainerBridge.php` 文件传递两个信息。图像的 `src` 属性将是文件名 `ContainerBridge.php`，随后是 `path=` 的键值对，以及容器字段内容的编码格式的值。在书的早些章节，我们描述了 `ContainerBridge.php` 文件是如何工作以完成所有繁重任务的。要显示字段的内容，你只需要将此信息传递给页眉。这很好地说明了为什么将代码拆分为逻辑部分非常重要，这样它们就可以被多个网页重用。
 
 ```php
 foreach ($records as $record) {
@@ -4175,15 +4258,15 @@ echo '</tr>';
 
 FileMaker API 语法：<img src="ContainerBridge.php?Path="/>
 
-src = 将转换图像的 php 文件名 — ContainerBridge.php 路径 = 使用 getField 方法对容器字段的内容进行 urlencode。
+`src` = 将转换图像的 php 文件名 — `ContainerBridge.php` 路径 = 使用 `getField` 方法对容器字段的内容进行 `urlencode`。
 
 ```php
 <img src="ContainerBridge.php?path=' . urlencode($record->getField('Image')) . ' />
 ```
 
-urlencode：URL 编码提供的字符串或变量。
+`urlencode`：URL 编码提供的字符串或变量。
 
-http://us.php.net/manual/en/function.urlencode.php
+`http://us.php.net/manual/en/function.urlencode.php`
 
 关闭 PHP 代码以创建表格。
 
@@ -4205,20 +4288,22 @@ echo '</tr>';
 
 **难度：** 简单
 
-**示例文件：** DisplayURLField.php
+**示例文件：** `DisplayURLField.php`
 
 页面导航：
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_147_0.png)
 
 **FileMaker API 方法：**
-- newFindAddCommand()
-- execute()
-- getMessage()
-- getRecords()
-- getField()
+
+- `newFindAddCommand()`
+- `execute()`
+- `getMessage()`
+- `getRecords()`
+- `getField()`
 
 **代码：**
+
 始终从包含数据库连接开始。
 
 ```php
@@ -4243,7 +4328,7 @@ exit;
 }
 ```
 
-获取记录并将结果存储在 $records 数组中。
+获取记录并将结果存储在 `$records` 数组中。
 
 ```php
 $records = $result->getRecords();
@@ -4260,7 +4345,7 @@ echo '<table border="1">
 </tr>';
 ```
 
-使用 foreach 循环为表格中的所有记录创建 HTML。图像 `src` 属性来自数据库中的 URL 文本字段。存储在数据库记录中的路径可以是相对路径（如 /images/myimage.jpg），也可以是绝对路径（如 http://www.formulationspro.com/images/myimage.jpg）。使用带有图像路径的文本字段以及存储在 Web 服务器文件夹中的图像是显示图像的首选方法。
+使用 `foreach` 循环为表格中的所有记录创建 HTML。图像 `src` 属性来自数据库中的 URL 文本字段。存储在数据库记录中的路径可以是相对路径（如 `/images/myimage.jpg`），也可以是绝对路径（如 `http://www.formulationspro.com/images/myimage.jpg`）。使用带有图像路径的文本字段以及存储在 Web 服务器文件夹中的图像是显示图像的首选方法。
 
 ```php
 foreach ($records as $record) {
@@ -4285,28 +4370,31 @@ echo '</table>';
 
 ## 第 12 节：上传文件
 
-**目标：** 在节中你将学习如何将文件上传到服务器的定义位置，更改文件名以匹配你的数据库，并验证上传的文件以确保用户上传了正确类型和大小的文件。最大文件大小由 `php.ini` 文件中的设置控制。通过使用 php.ini，你可以找到安装位置。在 OS X 上，路径为：/Library/FileMaker Server/Web Publishing/publishing-engine/php/lib/php.ini；在 Windows 上，路径为：C:\Program Files\FileMaker Server\Web Publishing\publishing-engine\php.ini
+**目标：** 在节中你将学习如何将文件上传到服务器的定义位置，更改文件名以匹配你的数据库，并验证上传的文件以确保用户上传了正确类型和大小的文件。最大文件大小由 `php.ini` 文件中的设置控制。通过使用 php.ini，你可以找到安装位置。在 OS X 上，路径为：`/Library/FileMaker Server/Web Publishing/publishing-engine/php/lib/php.ini`；在 Windows 上，路径为：`C:\Program Files\FileMaker Server\Web Publishing\publishing-engine\php.ini`
 
 **难度：** 困难
 
 **示例文件：**
-- PHPFiles/Advanced/Lesson12/DisplayUpload.php
-- PHPFiles/Advanced/Lesson12/Upload.php
+
+- `PHPFiles/Advanced/Lesson12/DisplayUpload.php`
+- `PHPFiles/Advanced/Lesson12/Upload.php`
 
 页面导航：
 
 **FileMaker API 方法：**
-- newFindAllCommand()
-- execute()
-- getMessage()
-- getRecords()
-- getField()
-- RecordId()
-- RecordId()
-- newEditCommand()
-- setField()
+
+- `newFindAllCommand()`
+- `execute()`
+- `getMessage()`
+- `getRecords()`
+- `getField()`
+- `RecordId()`
+- `RecordId()`
+- `newEditCommand()`
+- `setField()`
 
 **代码：**
+
 DisplayUpload.php
 
 **（此处说明）** 始终在开始时包含数据库连接。
@@ -4333,7 +4421,7 @@ exit;
 }
 ```
 
-**（此处说明）** 获取记录并将结果存储在 $records 数组中。
+**（此处说明）** 获取记录并将结果存储在 `$records` 数组中。
 
 ```php
 $records = $result->getRecords();
@@ -4350,7 +4438,7 @@ echo '<table border="1">
 </tr>';
 ```
 
-**（此处说明）** 使用 foreach 循环为表格中的所有记录创建 HTML。图像 `src` 属性来自数据库中的 URL 文本字段。存储在数据库记录中的路径可以是相对路径（如 /images/myimage.jpg），也可以是绝对路径（如 http://www.formulationspro.com/images/myimage.jpg）。使用带有图像路径的文本字段以及存储在 Web 服务器文件夹中的图像是显示图像的首选方法。
+**（此处说明）** 使用 `foreach` 循环为表格中的所有记录创建 HTML。图像 `src` 属性来自数据库中的 URL 文本字段。存储在数据库记录中的路径可以是相对路径（如 `/images/myimage.jpg`），也可以是绝对路径（如 `http://www.formulationspro.com/images/myimage.jpg`）。使用带有图像路径的文本字段以及存储在 Web 服务器文件夹中的图像是显示图像的首选方法。
 
 ```php
 foreach ($records as $record) {
@@ -4399,19 +4487,19 @@ die('The record id is missing.');
 if (isset($_POST['upload']) && $_POST['upload'] == 'Upload')
 ```
 
-**（此处说明）** 接下来，使用 $_FILES 全局变量验证用户尝试上传的文件类型。在示例中，我们将上传限制为 gif、jpg 和 png 图像。通常限制其他已知的文件类型以防止病毒被上传。
+**（此处说明）** 接下来，使用 `$_FILES` 全局变量验证用户尝试上传的文件类型。在示例中，我们将上传限制为 gif、jpg 和 png 图像。通常限制其他已知的文件类型以防止病毒被上传。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_151_0.png)
 
 pjpg 是一种渐进式 jpg 文件。处理 jpeg 将文件划分为一系列扫描。第一次扫描显示相当于极低质量设置的图像，占用空间很小。随后的扫描逐渐提高质量。每次扫描都会增加已提供的数据，因此总存储需求与相同扫描质量的基准 JPEG 图像相当。
 
-$FILES：全局变量允许你从客户端计算机上传文件到服务器，捕捉有关文件的重要信息。
+`$FILES`：全局变量允许你从客户端计算机上传文件到服务器，捕捉有关文件的重要信息。
 
-- $FILES["file']['name'] - 上传的文件名
-- $FILES["file']['type'] - 上传的文件类型
-- $FILES["file']['size'] - 上传的文件大小（字节）
-- $FILES["file']['tmp_name'] - 服务器上存储的临时文件的文件名
-- $FILES["file']['error'] - 文件上传产生的错误代码
+- `$FILES["file']['name']` - 上传的文件名
+- `$FILES["file']['type']` - 上传的文件类型
+- `$FILES["file']['size']` - 上传的文件大小（字节）
+- `$FILES["file']['tmp_name']` - 服务器上存储的临时文件的文件名
+- `$FILES["file']['error']` - 文件上传产生的错误代码
 
 ```php
 if(
@@ -4421,8 +4509,6 @@ if(
 ($_FILES["new_image"]["type"] == "image/pjpg" ||
 ($_FILES["new_image"]["type"] == "image/png")))
 ```
-
-
 
 如果文件类型匹配我们允许的上传文件类型，则无需操作。否则，你应该停止脚本并提醒用户他们正尝试上传未许可的文件。
 
@@ -4435,7 +4521,7 @@ if(
 }
 ```
 
-接下来，我们将通过检查文件大小是否大于 20 KB 来验证文件大小。我通常建议限制文件大小，以防止出现大量错误。$_FILES 超全局变量以字节（Bytes）测量文件大小，大约 1 MB = 1,000 KB。如果你希望是 1 KB = 1024 Bytes。
+接下来，我们将通过检查文件大小是否大于 20 KB 来验证文件大小。我通常建议限制文件大小，以防止出现大量错误。`$_FILES` 超全局变量以字节（Bytes）测量文件大小，大约 1 MB = 1,000 KB。如果你希望是 1 KB = 1024 Bytes。
 
 ```php
 if($_FILES['new_image']['size'] > 20000) {
@@ -4453,7 +4539,7 @@ if($_FILES['new_image']['error'] > 0) {
 }
 ```
 
-现在我们可以为图像目录设置变量，并获取服务器上临时文件的名称。图像目录是我们希望放置上传文件夹的地方，相对于  。$_FILES 超全局变量将从服务器上的临时文件夹中检索文件。这是获取文件名的唯一方法，因为 PHP 会将临时文件重命名为唯一的随机字符串，例如 php4H6d3M。一旦脚本结束，临时文件将从服务器上删除。
+现在我们可以为图像目录设置变量，并获取服务器上临时文件的名称。图像目录是我们希望放置上传文件夹的地方，相对于  。`$_FILES` 超全局变量将从服务器上的临时文件夹中检索文件。这是获取文件名的唯一方法，因为 PHP 会将临时文件重命名为唯一的随机字符串，例如 `php4H6d3M`。一旦脚本结束，临时文件将从服务器上删除。
 
 ```php
 $image_directory = 'Images';
@@ -4478,31 +4564,31 @@ http://us.php.net/manual/en/functions.user-defined.php
 
 ```php
 // php strtolower: 将提供的字符串转为小写。
-http://us.php.net/manual/en/function/strtolower.php
+http://us.php.net/manual/en/function.strtolower.php
 ```
 
 ```php
 // php explode: 使用分隔符将字符串拆分为数组。
-http://us.php.net/manual/en/function/explode.php
+http://us.php.net/manual/en/function.explode.php
 ```
 
 ```php
 // php end: 获取数组的最后一个元素。
-http://us.php.net/manual/en/function/end.php
+http://us.php.net/manual/en/function.end.php
 ```
 
 ```php
 // php return: 结束当前函数的执行，并将参数作为函数的值返回。
-http://us.php.net/manual/en/function/return.php
+http://us.php.net/manual/en/function.return.php
 ```
 
-现在我们有一个可以获取扩展名的函数，我们可以定义一个变量来创建最终的目标路径和名称，该名称将插入到记录的 URL 字段中。将之前定义的 $image_directory 路径、来自 URL 的 id 值、用于扩展名的点，以及通过 findext 函数从上传的文件获取扩展名结合。
+现在我们有一个可以获取扩展名的函数，我们可以定义一个变量来创建最终的目标路径和名称，该名称将插入到记录的 URL 字段中。将之前定义的 `$image_directory` 路径、来自 URL 的 id 值、用于扩展名的点，以及通过 `findext` 函数从上传的文件获取扩展名结合。
 
 ```php
 $destination_file = $image_directory . $_REQUEST['id'] . "." . findext($_FILES['new_image']['name']);
 ```
 
-现在我们拥有了移动临时文件、重命名文件和更新数据库所需的所有部分。使用 PHP move_uploaded_file 方法并插入上面定义的 $temporary_file 和 $destination_file 变量，如果 $move 变量成功，我们可以更新数据库并设置 URL 字段。否则，我们应该提醒用户发生了错误。
+现在我们拥有了移动临时文件、重命名文件和更新数据库所需的所有部分。使用 PHP `move_uploaded_file` 方法并插入上面定义的 `$temporary_file` 和 `$destination_file` 变量，如果 `$move` 变量成功，我们可以更新数据库并设置 URL 字段。否则，我们应该提醒用户发生了错误。
 
 ```php
 $move = move_uploaded_file($temporary_file, $destination_file);
@@ -4517,9 +4603,10 @@ if ($move) {
 ```
 
 ### move_uploaded_file: 将上传的文件移动到新位置。
-http://us.php.net/manual/en/function.move-uploaded-file.php
 
-接下来，我们要根据记录 ID 获取选定的记录。然后我们可以为表单中的显示定义几个变量。$id 用于表单中的隐藏值，将记录 ID 传递到数据库以查找并显示正确的记录。$url 用于通过 $path 变量从 URL 字段显示上传的图像，该变量将文本字段中的路径转换为显示图像源的正确 HTML 代码。
+`http://us.php.net/manual/en/function.move-uploaded-file.php`
+
+接下来，我们要根据记录 ID 获取选定的记录。然后我们可以为表单中的显示定义几个变量。`$id` 用于表单中的隐藏值，将记录 ID 传递到数据库以查找并显示正确的记录。`$url` 用于通过 `$path` 变量从 URL 字段显示上传的图像，该变量将文本字段中的路径转换为显示图像源的正确 HTML 代码。
 
 ```php
 $record = $fm->getRecord('Demo php', $_REQUEST['id']);
@@ -4532,7 +4619,9 @@ if ($url == "") {
 }
 ```
 
-最后，我们可以创建一个 HTML 表单让用户上传并查看上传的图像。此表单与我们目前为止处理过的其他表单的区别在于 enctype 是 "multipart/form-data"。这允许用户上传文件而不是文本。与之前一样，我们将记录 ID 作为隐藏值提供。一旦文件上传，我们可以为用户显示图像以及目标路径，以便他们知道文件去了哪里以及名称是什么。这部分仅用于您的开发目的。如果是用于公共生产网站，您绝不应该包含文件名和路径。最后，一旦用户对他们的上传满意，他们可以点击链接返回记录列表。
+
+
+最后，我们可以创建一个 HTML 表单让用户上传并查看上传的图像。此表单与我们目前为止处理过的其他表单的区别在于 `enctype` 是 `"multipart/form-data"`。这允许用户上传文件而不是文本。与之前一样，我们将记录 ID 作为隐藏值提供。一旦文件上传，我们可以为用户显示图像以及目标路径，以便他们知道文件去了哪里以及名称是什么。这部分仅用于您的开发目的。如果是用于公共生产网站，您绝不应该包含文件名和路径。最后，一旦用户对他们的上传满意，他们可以点击链接返回记录列表。
 
 ```html
 <html>
@@ -4555,30 +4644,26 @@ if ($url == "") {
 </html>
 ```
 
-# # 上传图像并验证
+# 上传图像并验证
 
 上传图像：[选择文件] 未选择文件 [上传]
 
 ![](5a2cfda68d42ed65f1850276e49ec_155_0.png)点击此处返回记录列表
 
-图 7-32：Upload.php 页面。
+图 7-32：`Upload.php` 页面。
 
 ## 第 12 节：显示外部存储的容器字段
 
-**目标**：在本节中，你将学习如何使用 ContainerBridge.php 文件显示在外部存储图像或文件的容器字段内容。这是 FileMaker12 数据库的一个新功能。getContainerDataURL 方法是 FileMaker 12 API 中的唯一方法。此新方法提供了一些机会，无需将文件存储在服务器上即可减小数据库，同时也允许 FileMaker 用户将文件上传到容器字段，而无需使用专门的页面或 Web服务器。
+**目标**：在本节中，你将学习如何使用 `ContainerBridge.php` 文件显示在外部存储图像或文件的容器字段内容。这是 FileMaker12 数据库的一个新功能。`getContainerDataURL` 方法是 FileMaker 12 API 中的唯一方法。此新方法提供了一些机会，无需将文件存储在服务器上即可减小数据库，同时也允许 FileMaker 用户将文件上传到容器字段，而无需使用专门的页面或 Web服务器。
 
-在测试此新的 getContainerDataURL 方法时，我发现它对图像效果良好。然而，显示文件（如 PDF、mp3、电影等）表现出严重的跨浏览器问题。糟糕的是 Firefox 显示了 Web 页面的原始源代码！通常你会使用 embed 或 object 标签来显示文件。这些在此方法中完全不起作用。替代标签是 iframe，它适用于大多数浏览器。Firefox 用户需要安装 PDF 插件和 Adobe Acrobat Reader 10 或更高版本。由于你无法控制用户机器上安装了哪些浏览器和插件，显示文件的最佳方法仍然是将文件存储在服务器上，并使用带有文件路径的文本字段。
-
-
-
-
+在测试此新的 `getContainerDataURL` 方法时，我发现它对图像效果良好。然而，显示文件（如 PDF、mp3、电影等）表现出严重的跨浏览器问题。糟糕的是 Firefox 显示了 Web 页面的原始源代码！通常你会使用 `embed` 或 `object` 标签来显示文件。这些在此方法中完全不起作用。替代标签是 `iframe`，它适用于大多数浏览器。Firefox 用户需要安装 PDF 插件和 Adobe Acrobat Reader 10 或更高版本。由于你无法控制用户机器上安装了哪些浏览器和插件，显示文件的最佳方法仍然是将文件存储在服务器上，并使用带有文件路径的文本字段。
 
 ```php
 <?php
 include ("dbaccess.php");
 ?>
-查找 Demo 表中的第一条记录。
 ```
+查找 Demo 表中的第一条记录。
 
 ```php
 <?php
@@ -4595,8 +4680,10 @@ getContainerDataURL(urlencode($record->getField('ExternalContainer')))) . '/>';
 ```
 
 FileMaker API 语法：`<img src="ContainerBridge.php?path=" . "Path"/>`
-src = 将转换图像的文件名称 — ContainerBridge.php
-path = 使用 `getContainerDataURL` 对容器字段的内容进行 urlencode 编码。
+
+`src` = 将转换图像的文件名称 — `ContainerBridge.php`
+
+`path` = 使用 `getContainerDataURL` 对容器字段的内容进行 urlencode 编码。
 
 ```php
 'img src="ContainerBridge.php?path=" . $fm-
@@ -4614,7 +4701,7 @@ getContainerDataURL(urlencode($record->getField('ExternalContainer')))) .
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_157_0.png)
 
-7-33: DisplayExternalContainer.php 页面。
+7-33: `DisplayExternalContainer.php` 页面。
 
 ## 第 13 节：显示列表菜单
 
@@ -4624,7 +4711,7 @@ getContainerDataURL(urlencode($record->getField('ExternalContainer')))) .
 
 **难度：** 中等
 
-**示例文件：** PHPFiles/Advanced/Lesson13/ListMenu.php
+**示例文件：** `PHPFiles/Advanced/Lesson13/ListMenu.php`
 
 **页面导航：**
 
@@ -4632,12 +4719,12 @@ getContainerDataURL(urlencode($record->getField('ExternalContainer')))) .
 
 **FileMaker API 方法：**
 
-- getLayout()
-- getValueList()
-- AddNewCommand()
-- setField()
-- execute()
-- getMessage()
+- `getLayout()`
+- `getValueList()`
+- `AddNewCommand()`
+- `setField()`
+- `execute()`
+- `getMessage()`
 
 **代码：**
 
@@ -4666,9 +4753,8 @@ $layout = &$php->getLayout('Demo php');
 ```
 
 > FileMaker API 语法：`getLayout('LayoutName')`
-$layout = &$php->getLayout('Demo php');
 
-
+`$layout = &$php->getLayout('Demo php');`
 
 一旦你获取了布局对象，就可以使用 `getValueList` 方法检索数据库中存储的 `SampleValueList` 内容。
 
@@ -4749,10 +4835,8 @@ if ($result->isError()) {
 </form>
 ```
 
-
-
-
 23
+
 你可以清楚地看到 `[]` 之间和箭头 `=>` 之后的值之间的显示。问题是如何从数组中提取内容并将其放在正确的代码位置以生成值列表？你通过为 `$displayValue` 和 `$value` 分配关联数组变量来实现这一点。这样，当你使用 `foreach` 循环遍历数组时，就可以正确地提取每个值。最后，使用 `$showSecondVariable` 输出值列表。
 
 ```php
@@ -4767,32 +4851,37 @@ echo $showSecond;
 ```
 
 ![](img/5a2c5fda68d42e5d65f518502765e49ec163_0.png)
-图 7-35：ListTwoFields.php 页面。
 
-## 第 14 ：显示搜索结果
+图 7-35：`ListTwoFields.php` 页面。
+
+## 第 14 节：显示搜索结果
 
 **目标：**在本节中，你将学习如何在搜索后显示数据库中的记录数量。例如：在总共 10 条中显示 3 条。
 
 **难度：** 简单
 
-**示例文件：**SearchResultsLabel.php
+**示例文件：**`SearchResultsLabel.php`
 
 **导航：** ![](img/5a2c5fda68d42e5d65f518502765e49ec164_0.png)
 
 **FileMaker 方法：**
-- newFindCommand()
-- execute()
-- getMessage()
-- getTableRecordCount()
-- getFoundSetCount()
-- getRecords()
-- getField()
+
+- `newFindCommand()`
+- `execute()`
+- `getMessage()`
+- `getTableRecordCount()`
+- `getFoundSetCount()`
+- `getRecords()`
+- `getField()`
 
 **代码：**
+
 ```php
 <?php
 include('../Conn/dbaccess.php');
+```
 始终包含与数据库的连接。查找所有记录。然后执行搜索。
+```php
 $request = $fm->newFindCommand('Demo');
 $result = $request->execute();
 
@@ -4800,48 +4889,86 @@ if ($result->isError()) {
     echo "Error: " . $result->getMessage();
     exit;
 }
-// 错误捕获。构建搜索结果消息以在表格顶部显示搜索结果。例如：在总共 10 条中显示 3 条。如果没有找到任何记录，你可以显示“No records.”。$total$ 变量使用 `getTableRecordCount` 方法存储表格中的记录数。$found$ 变量使用 `getFoundSetCount` 方法存储找到的数量。
+```
+错误捕获。构建搜索结果消息以在表格顶部显示搜索结果。例如：在总共 10 条中显示 3 条。如果没有找到任何记录，你可以显示“No records.”。`$total$` 变量使用 `getTableRecordCount` 方法存储表格中的记录数。`$found$` 变量使用 `getFoundSetCount` 方法存储找到的数量。
+
 ```php
 $total = $result->getTableRecordCount();
+
 $found = $result->getFoundSetCount();
+
 if($found == 0) {
+
     $record_count = 'No records.';
+
 } else {
+
     $record_count = 'Displaying ' . $total . ' record(s) of ' . $found . ' total';
+
 }
 ```
+
 ```php
 $total = $result->getTableRecordCount();
 ```
+
 ```php
 $found = $result->getFoundSetCount();
 ```
-// 现在我们已经有了 $record_count 的显示内容，可以获取记录并使用字段构建 HTML 表格。从从 $result 获取所有记录开始。为表格创建表头。在表格顶部显示 $record_count 消息。
+
+现在我们已经有了 `$record_count` 的显示内容，可以获取记录并使用字段构建 HTML 表格。从从 `$result` 获取所有记录开始。为表格创建表头。在表格顶部显示 `$record_count` 消息。
+
 ```php
 echo '<td>' . $record_count . '</td>';
+
 <table border="1">
+
     <tr>
+
         <th>First Name</th>
+
         <th>Last Name</th>
+
         <th>Number Number</th>
+
         <th>Date</th>
+
         <th>Time Stamp</th>
+
         <th>Calculation</th>
+
         <th>Record ID</th>
+
     </tr>
 ```
-// 使用 foreach 方法遍历记录并显示字段。
+
+使用 `foreach` 方法遍历记录并显示字段。
+
 ```php
 foreach ($records as $record) {
+
     echo '<td>' . $record->getField('FirstName') . '</td>';
+
     echo '<td>' . $record->getField('LastName') . '</td>';
+
     echo '<td>' . $record->getField('Number') . '</td>';
+
     echo '<td>' . $record->getField('Date') . '</td>';
+
     echo '<td>' . $record->getField('TimeStamp') . '</td>';
+
     echo '<td>' . $record->getField('Calculation') . '</td>';
+```
+
+
+
+```php
     echo '<td>' . $record->getField('RecordID') . '</td>';
+
 }
+
 echo '</table>';
+
 ?>
 ```
 
@@ -4862,29 +4989,29 @@ echo '</table>';
 | Luke | Lains | | | | | |
 | Mar | | | | | | |
 
-```
-
 图 7-36：SearchResultsLabel.php 页面。
 
-## 第 15 ：程序中创建登录
+# 第 15 节：程序中创建登录
 
-**目标：**在本节中，你将学习如何执行登录程序以保护你的网页免受未经授权的。基本原理是从 Login.php 页面开始。如果登录成功并且能够在数据库中找到匹配的记录，用户将被重定向到受保护的 LoginSuccess.php 页面。如果用户在未登录的情况下尝试打开受保护的网页，他们将被重定向回 Login.php 页面。最后，虽然不是必须的，我们将使用会。
+**目标：**在本节中，你将学习如何执行登录程序以保护你的网页免受未经授权的。基本原理是从 `Login.php` 页面开始。如果登录成功并且能够在数据库中找到匹配的记录，用户将被重定向到受保护的 `LoginSuccess.php` 页面。如果用户在未登录的情况下尝试打开受保护的网页，他们将被重定向回 `Login.php` 页面。最后，虽然不是必须的，我们将使用会。
 
 **难度：** 困难
 
-**示例文件：**Login.php, LoginSuccess.php, Logout.php
+**示例文件：**`Login.php`, `LoginSuccess.php`, `Logout.php`
 
 **导航：**![](img/5a2c5fda68d42e5d65f518502765e49ec167_0.png)
 
 **FileMaker 方法：**
-- newFindCommand()
-- execute()
-- getMessage()
-- getTableRecordCount()
-- getFoundSetCount()
-- getField()
+
+- `newFindCommand()`
+- `execute()`
+- `getMessage()`
+- `getTableRecordCount()`
+- `getFoundSetCount()`
+- `getField()`
 
 **代码：**
+
 ```php
 <?php
 session_start();
@@ -4899,10 +5026,9 @@ $_SESSION['login'] = 0; // 为了保护你的登录页面
 <body>
 ```
 
-
 捕获错误。在这种情况下，我们希望返回登录页面其余部分没有问题的所有记录。
 
-```
+```php
 if (FileMaker::isError($result))
 {
   $request = $fm->findAllCommand('Demo php');
@@ -4912,7 +5038,7 @@ if (FileMaker::isError($result))
 
 接下来，我们可以使用 `getFoundCount` 方法从搜索中获取找到的数量。如果找到的数量为 1，我们可以将登录的 `$_SESSION` 全局变量设置为 "1"，并使用 php `header` 方法将用户重定向到受保护的成功页面。注意，我们假设用户根据其电子邮件地址和密码只有一条记录。这意味着当用户在您的网站注册时，我们将检查数据库中是否存在记录，以防止他们创建多一条记录。
 
-```
+```php
 $found = $result->getFoundCount();
 if($found == 1)
 {
@@ -4923,14 +5049,15 @@ if($found == 1)
 else
 ```
 
-header: 通过 location 重定向到另一个页面。
-http://us.php/manual/en/function.header.php
+`header`: 通过 location 重定向到另一个页面。
+
+`http://us.php/manual/en/function.header.php`
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_169_0.png)
 
 如果数据库中没有记录或记录过多，您应该通过将 `$_SESSION` 全局变量设置为 "0" 来立即注销用户，并向用户提供一条消息。我建议消息要非常通用，这样他们无法判断是电子邮件地址还是密码正确。这将限制那些试图破解您系统的人的努力。
 
-```
+```php
 $_SESSION['login']=0;
 $message = 'Incorrect user name or password.';
 }
@@ -4939,14 +5066,14 @@ else
 
 PHP 代码的最后部分是用户既没有输入电子邮件地址也没有输入密码时的默认消息。
 
-```
+```php
 $message = 'Please enter a user name and password.';
 ?>
 ```
 
 表单非常简单。它指向同一个页面，因此 PHP 代码将运行并使用 `Post` 方法。我喜欢将 `$message` 变量放在表单顶部。当然，它只传递了用户名（即数据库中的电子邮件地址字段）并检查。
 
-```
+```html
 <form action="Login.php" method="post">
 <table border="0" cellspacing="3" cellpadding="3">
 <tr>
@@ -4973,7 +5100,7 @@ $message = 'Please enter a user name and password.';
 </body>
 </html>
 ```
-```
+
 （注：OCR 在此处有一些格式错误的 PHP/HTML 标签，已经根据逻辑结构进行了清理）
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_170_0.png)
@@ -5039,11 +5166,13 @@ Log out successful.
 - 使用 `session_destroy()`。
 - 注销后重定向用户。
 
-
 ```php
 $result = $request->execute();
+```
 
 捕获错误。在这种情况下，我们希望返回所有记录，以免登录页面的其余部分出现问题。
+
+```php
 if ($FileMaker::isError($result)) {
   $request = $fm->newFindAllCommand('Demo php');
   $result = $request->execute();
@@ -5180,7 +5309,7 @@ $_SESSION['timeout'] = time();
 
 **页面导航：** ![](img/5a2c5fda68d42e5d65f51850276e49ec_178_0.png)
 
-findAllCommand(), execute(), getRecords(), getField()
+`findAllCommand()`, `execute()`, `getRecords()`, `getField()`
 
 **代码：** 使用 CSS 是实现交替背景色的最佳方法。通常您会包含一个单独的 CSS 文件。但是，为了让演示更容易，我们在页面中嵌入了 `alt_row_color` 的 CSS。您可以将 CSS 样式嵌入到 head 标签中。
 
@@ -5221,8 +5350,11 @@ if (FileMaker::isError($result)) {
 将记录存储在 `$records` 变量中。
 
 ```php
-$records = $result->getRecords();
 ```
+
+
+
+`$records = $result->getRecords();`
 
 创建表格的表头。
 
@@ -5239,7 +5371,7 @@ echo '<table border="1">
 </tr>';
 ```
 
-现在是字段的示例。这与某些 FileMaker 用于激活记录列表背景色的技巧非常相似。区别在于它不需要任何特殊字段，也不消耗数据库。我们将使用 CSS 样式 `alt_row_color` 以及配合 `$row` 变量的巧妙取运算函数来判断行是奇是偶。先将 `$row` 变量设置为零。然后开始 foreach 循环显示结果。
+现在是字段的示例。这与某些 FileMaker 用于激活记录列表背景色的技巧非常相似。区别在于它不需要任何特殊字段，也不消耗数据库。我们将使用 CSS 样式 `alt_row_color` 以及配合 `$row` 变量的巧妙取运算函数来判断行是奇是偶。先将 `$row` 变量设置为零。然后开始 `foreach` 循环显示结果。
 
 ```php
 $row = 0;
@@ -5275,10 +5407,6 @@ echo '</tr>';
 $row++;
 ```
 
-
-
-
-
 ## 递增/递减函数：数值加1或减1。
 http://www.php.net/manual/en/language.operators.increment.php
 
@@ -5292,7 +5420,7 @@ echo '</</table>>';?>
 
 图 7-42：AlternateBackground.php 页面。
 
-## 第 17 ：运行脚本 — 更新记录
+# 第 17 章：运行脚本 — 更新记录
 
 **目标：** 在本节中，你将学习如何运行存储在数据库中的脚本。这就是 FileMaker API for PHP 威力远超 ASP 和 JSP 的地方。FileMaker API for PHP 是唯一允许你运行存储在 FileMaker Pro 数据库中脚本的技术。当你将运行脚本整合到你的 PHP 代码中时，你会很快发现你可以创建非常强大的应用程序。唯一的缺点是，你向外部用户开放了数据库，提供了一个可能被视为伪 Web 服务的功能。因此，对于你想要在网站上提供的脚本需要格外谨慎。
 
@@ -5300,31 +5428,30 @@ echo '</</table>>';?>
 
 **难度：** 中
 
-**示例文件：** RunScriptUpdate.php
+**示例文件：** `RunScriptUpdate.php`
 
 **导航：**
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_181_1.png)
 
 **FileMaker API 方法：**
-- PerformScriptCommand()
-- execute()
-- getMessage()
-- findAllCommand()
-- getRecords()
-- getField()
+- `PerformScriptCommand()`
+- `execute()`
+- `getMessage()`
+- `findAllCommand()`
+- `getRecords()`
+- `getField()`
 
 **代码：**
 
 这是一个非常简单的示例，演示了如何运行脚本。脚本本身除了演示通过点击按钮即可释放的威力之外，并没有其他实际用途。记录的显示将遵循与上一个示例相同的设计 —— 交替背景（Alternate Background）。
 
-在 head 标签中嵌入 css 样式以交替背景颜色。
+在 `head` 标签中嵌入 css 样式以交替背景颜色。
 
 ```html
 <html
 <head>
 <title>Run Script</title>
-
 <style type="text/css">
 .alt_row_color {background-color: #CCCCCC}
 </style>
@@ -5340,7 +5467,7 @@ include("../Conn/dbaccess.php");
 ?>
 ```
 
-创建一个带有按钮的表单以更新数据库中的记录。表单将使用 Post 方法指向同一个页面。
+创建一个带有按钮的表单以更新数据库中的记录。表单将使用 `Post` 方法指向同一个页面。
 
 ```html
 <form action="RunScriptUpdate.php" method="post" name="Update">
@@ -5349,7 +5476,7 @@ include("../Conn/dbaccess.php");
 </form>
 ```
 
-下一段 PHP 代码将运行脚本。首先检查 $_POST 全局变量是否设置了 Update，以及用户是否点击了 Update 按钮。为 $layout 名称创建变量。布局本身不需要在（上附带脚本或按钮，但你必须根据布局的上下文来运行脚本。$script 变量是存储在数据库中的脚本的准确名称。$parameter 是你想要传递给此脚本的任何信息。这与在 FileMaker Pro 中使用脚本参数非常相似。你同样使用相同的方法获取参数 -- Get(ScriptParameter)。最后，使用 `newPerformScriptCommand` 将所有变量组合并执行脚本。
+下一段 PHP 代码将运行脚本。首先检查 `$_POST` 全局变量是否设置了 `Update`，以及用户是否点击了 `Update` 按钮。为 `$layout` 名称创建变量。布局本身不需要在（上附带脚本或按钮，但你必须根据布局的上下文来运行脚本。`$script` 变量是存储在数据库中的脚本的准确名称。`$parameter` 是你想要传递给此脚本的任何信息。这与在 FileMaker Pro 中使用脚本参数非常相似。你同样使用相同的方法获取参数 -- `Get(ScriptParameter)`。最后，使用 `newPerformScriptCommand` 将所有变量组合并执行脚本。
 
 > 如果你更改了数据库中脚本的名称，网页页面将会损坏，因为更改不会通过你的网页进行同步
 
@@ -5364,8 +5491,8 @@ $result = $request->execute();
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_182_0.png)
 
-FileMaker API 语法：newPerformScriptCommand('Layout', 'ScriptName', 'Parameter[optional]')
-$request = $fm->Start('Demo php', 'PHP Modifier Number Field', '');
+FileMaker API 语法：`newPerformScriptCommand('Layout', 'ScriptName', 'Parameter[optional]')`
+`$request = $fm->Start('Demo php', 'PHP Modifier Number Field', '');`
 
 错误捕获。
 
@@ -5413,7 +5540,7 @@ echo '<table border="1">
 </tr>';
 ```
 
-使用 foreach 方法显示记录。
+使用 `foreach` 方法显示记录。
 
 ```php
 $row = 0;
@@ -5441,7 +5568,7 @@ echo '</table>';
 
 ### Modify Number 脚本
 
-正如之前提到的，此脚本的目标非常简单：更新 Number 字段。然而，在从 PHP 运行脚本时，有一些值得注意的问题：
+正如之前提到的，此脚本的目标非常简单：更新 `Number` 字段。然而，在从 PHP 运行脚本时，有一些值得注意的问题：
 
 - 1. 只有兼容服务器的脚本有效。
 - 2. 你可能需要向脚本传递参数。
@@ -5465,27 +5592,23 @@ End Loop
 Commit Records/Requests [Skip data entry validation: no dialog]
 ```
 
-
-
-
-
-# 第 17 ：运行脚本 — 删除记录
+# 第 17 章：运行脚本 — 删除记录
 
 **目标：** 在本节中，你将学习如何运行存储在数据库中的脚本。该脚本将删除表中所有的空白记录。本示例的重点是如何使用脚本删除空白记录，并将正确的记录集返回到网页上。正如上一个示例提到的，当你删除一组找到的记录时，数据库会将表中的剩余记录返回到网页，而不是像在 FileMaker Pro 中那样，在找到的记录集中返回 0 条记录。因此，你对网页上显示数据的预期与 FileMaker Pro 客户端的预期完全不同。
 
 **难度：** 中等
 
-**示例文件：** RunScriptDelete.php
+**示例文件：** `RunScriptDelete.php`
 
 页面导航：
 
 - FileMaker API 方法：
-- newPerformScriptCommand()
-- execute()
-- getMessage()
-- newFindAll()
-- getRecords()
-- getField()
+- `newPerformScriptCommand()`
+- `execute()`
+- `getMessage()`
+- `newFindAll()`
+- `getRecords()`
+- `getField()`
 
 **代码：**
 记录的显示将遵循与交替背景（Alternate Background）示例相同的的设计。在 `head` 标签中嵌入 css 样式以交替背景颜色。
@@ -5589,13 +5712,25 @@ foreach ($records as $record) {
         echo '<tr>';
     }
     echo '<td>' . $record->getField('FirstName') . '</td>';
-    echo '<td>' . $record->getField('LastName') . '</td>';
-    echo '<td>' . $record->getField('Number') . '</td>';
-    echo '<td>' . $record->getField('Date') . '</td>';
-    echo '<td>' . $record->getField('Timestamp') . '</td>';
-    echo '<td>' . $record->getField('Calculation') . '</td>';
-    echo '<td>' . $record->getField('RecordID') . '</td>';
-    $row++;
+```
+
+
+
+```php
+echo '<td>' . $record->getField('LastName') . '</td>';
+
+echo '<td>' . $record->getField('Number') . '</td>';
+
+echo '<td>' . $record->getField('Date') . '</td>';
+
+echo '<td>' . $record->getField('Timestamp') . '</td>';
+
+echo '<td>' . $record->getField('Calculation') . '</td>';
+
+echo '<td>' . $record->getField('RecordID') . '</td>';
+
+$row++;
+
 }
 ?>
 ```
@@ -5647,8 +5782,8 @@ Figure 7-46: PHP 脚本.
 **页面导航：**
 
 **FileMaker API 方法：**
-- PerformScriptCommand()
-- execute()
+- `PerformScriptCommand()`
+- `execute()`
 
 **代码：**
 始终从包含数据库的连接开始。
@@ -5716,10 +5851,6 @@ Figure 7-48: 找到了电子邮件地址，并通过脚本发送了密码。
 ### PHP 丢失密码脚本
 
 发送自动电子邮件的能力是非常用的。你不仅可以使用此概念找回丢失的密码，还可以用它执行如从电子商务系统发送发票等操作。这种方法的棒之处在于，你不需要在 Web 服务器上运行特殊的 SMTP 服务器，也不需要在 Apache 或 IIS 中配置任何内容将电子邮件转发到你的 SMTP 服务器。只需使用 FileMaker 内置的 SMTP 功能，它运行得非常完美。
-
-
-
-
 
 打开“允许用户中止”和“设置错误捕捉”，以确保脚本不会出现任何问题。
 
@@ -5799,14 +5930,14 @@ Figure 7-48: 找到了电子邮件地址，并通过脚本发送了密码。
 ![](img/5a2c5fda68d4e5d65f1850276e493.png)
 
 **FileMaker API 方法：**
-- FindAll()
-- addCriterion()
-- setRange()
-- execute()
-- getMessage()
-- getRecords()
-- getFoundCount()
-- getField()
+- `FindAll()`
+- `addCriterion()`
+- `setRange()`
+- `execute()`
+- `getMessage()`
+- `getRecords()`
+- `getFoundCount()`
+- `getField()`
 
 **代码：** 此示例结合了之前示例中的几种技术。总体目的是提供一个功能性示例。将 CSS 样式嵌入到 `<head>` 标签中以交替背景颜色。
 
@@ -5839,7 +5970,7 @@ include("../Conn/dbaccess.php");
 ```
 
 ```php
-$_SERVER['SELF'] 返回当前文件的完整路径。
+$_SERVER['SELF'] 返回当前文件的完整路径.
 // manual/reserved_variables.php
 ```
 
@@ -5932,8 +6063,6 @@ $total = $result->getTableRecordCount();
 echo "<p>" . $found . " 共 " . $total . " 条总记录</p>";
 ```
 
-
-
 ```php
 if(empty($_GET['FirstName']))
 {
@@ -5952,7 +6081,9 @@ else
   $totalLinks=intval($found / $max);
 ```
 
-PHP 代码的最后部分是构建实际的链接，使其看起来像 1 2 3 4，其中没有下划线的链接是您当前所在的页面，带下划线的代表记录的其他页面。在这一过程中，`skip` 值是唯一变化的内容，因为每一页都必须从 while 循环选择的记录编号开始，然后递减。链接的 `skip` 值将在 while 循环运行时作为计数器使用。上面计算出的 `TotalLinks` 将在 `n` 小于等于 `TotalLinks` 时停止循环。`$totalLinks` 也必须大于 1 页，否则没有理由创建分页链接。显示的技巧是不为用户当前所在的页面创建链接 —— 仅当页面等于 `$.page` 时才显示页码。你需要组装链接的 URL。该 URL 将包含 `page`、`skip`、`max` 以及针对 `FirstName` 的搜索条件的值。每当循环一次代码，你就将 `$n` 加 1， 直到不再符合条件。URL 看起来如下例所示。
+
+
+PHP 代码的最后部分是构建实际的链接，使其看起来像 1 2 3 4，其中没有下划线的链接是您当前所在的页面，带下划线的代表记录的其他页面。在这一过程中，`skip` 值是唯一变化的内容，因为每一页都必须从 while 循环选择的记录编号开始，然后递减。链接的 `skip` 值将在 while 循环运行时作为计数器使用。上面计算出的 `TotalLinks` 将在 `n` 小于等于 `TotalLinks` 时停止循环。`$totalLinks` 也必须大于 1 页，否则没有理由创建分页链接。显示的技巧是不为用户当前所在的页面创建链接 —— 仅当页面等于 `$.page` 时才显示页码。你需要组装链接的 URL。该 URL 将包含 `page`、`skip`、`max` 以及针对 `FirstName` 的搜索条件的值。每当循环一次代码，你就将 `$n` 加 1，直到不再符合条件。URL 看起来如下例所示。
 
 ```http
 http://localhost/ToddBuPHP/Pagination.php?page=1&skip=0&max=10&FirstName=Todd&submit=Submit
@@ -6000,51 +6131,10 @@ foreach ($records as $record) {
     echo '<td>' . $record->getField('Date') . '</td>';
     echo '<td>' . $record->getField('Timestamp') . '</td>';
     echo '<td>' . $record->getField('Calculation') . '</td>';
-    echo '<td>' . $record->getField('Record ID') . '</td>'; // 注意：此处原文为getField('Record ID')，但逻辑上通常是ID，此处保持翻译一致
+    echo '<td>' . $record->getField('Record ID') . '</td>';
 }
 ```
-*(注：由于原文最后一行代码 `$record->getField('Record ID')` 似乎与示例中逻辑略有出入，已按原样翻译。)*
 
-现在记录分页链接已经显示了，你可以使用 HTML 表格来显示记录。
-
-*(此处根据您提供的文本内容继续翻译，但您提供的待翻译文本在某处中断了或包含了重复逻辑，我将根据您提供的逻辑完成完整翻译)*
-
-**等等，重新审视您提供的待翻译文本，以下是针对您提供的文本块的完整翻译：**
-
-[content]
-现在记录分页链接已经显示了，你可以使用 HTML 表格来显示记录。
-
-```
-
-*(由于您提供的“需要翻译的文本”部分最后似乎重复了之前的 HTML 代码且有截断，我将基于您提供的最后一段话进行结束翻译)*
-
-**抱歉，我发现您提供的“需要翻译的文本”在最后部分似乎存在重复或未完全完整。以下是基于您提供的最后一段文本的完整翻译：**
-
-[content]
-现在记录分页链接已经显示了，你可以使用 HTML 表格来显示记录。
-
-```php
-echo '<table border="1">
-<tr>
-<th>First Name</th>
-<th>Last Name</th>
-<th>Number</th>
-<th>Date</th>
-<th>Time Stamp</th>
-<th>Calculation</th>
-<th>Record ID</th>
-</tr>
-';
-```
-
-*(注：由于待翻译文本在结尾处重复了前面的逻辑且代码截断，我已确保了您提供的所有文本行都已准确翻译并翻译。)*
-
-[/content]
-
----
-**更正：重新查看您的“需要翻译的文本”，它包含了从 PHP 代码开始到 HTML 结束的逻辑。以下是该文本的完整翻译：**
-
-[content]
 ```php
 if(empty($_GET['FirstName']))
 {
@@ -6063,12 +6153,6 @@ else
   $totalLinks=intval($found / $max);
 ```
 
-PHP 代码的最后部分是构建实际的链接，使其看起来像 1 2 3 4，其中没有下划线的链接是您当前所在的页面，带下划线的代表记录的其他页面。在这一过程中，`skip` 值是唯一变化的内容，因为每一页都必须从 while 循环选择的记录编号开始，然后递减。链接的 `skip` 值将在 while 循环运行时作为计数器使用。上面计算出的 `TotalLinks` 将在 `n` 小于等于 `TotalLinks` 时停止循环。`$totalLinks` 也必须大于 1 页，否则没有理由创建分页链接。显示的技巧是不为用户当前所在的页面创建链接 —— 仅当页面等于 `$page` 时才显示页码。你需要组装链接的 URL。该 URL 将包含 `page`、`skip`、`max` 以及针对 `FirstName` 的搜索条件的值。每当循环一次代码，你就将 `$n` 加 1， 直到不再符合条件。URL 看起来如下例所示。
-
-```http
-http://localhost/ToddBuPHP/Pagination.php?page=1&skip=0&max=10&FirstName=Todd&submit=Submit
-```
-
 ```php
 $n=1;
 while($n<=$totalLinks && $totalLinks>1)
@@ -6080,8 +6164,6 @@ while($n<=$totalLinks && $totalLinks>1)
     echo '<a href="'.$_SERVER['PHP_SELF'] . '?page=' . $n . '&skip=' . $skip . '&max=' . $max . '&FirstName=' . $firstName . '">';
   }
 ```
-
-现在记录分页链接已经显示了，你可以使用 HTML 表格来显示记录。
 
 ```php
 echo '<table border="1">
@@ -6097,16 +6179,17 @@ echo '<table border="1">
 ';
 ```
 
-
 else
 {
   echo '<img src="Images/previous_record.jpg" border=0/>';
 }
 ?>
+
 </html>
+
 <td>
 
-URL 跳转下一条记录的跳过值计算方式为当前跳过值加一，因为你想向前移动一条记录。只有当你不在最后一条记录时，按钮才需要包含链接。记录是使用 $found 变量计算的。
+URL 跳转下一条记录的跳过值计算方式为当前跳过值加一，因为你想向前移动一条记录。只有当你不在最后一条记录时，按钮才需要包含链接。记录是使用 `$found` 变量计算的。
 
 ```php
 <?php
@@ -6140,7 +6223,7 @@ else {
 <p>
 ```
 
-现在记录分页链接和按钮已经显示，你可以创建 HTML 来显示记录的字段。虽然技术上由于我们将最大值定义为 1，集合中技术上只有一条记录，但我正在使用 `foreach` 循环方法来从 $records 数组中显示记录。
+现在记录分页链接和按钮已经显示，你可以创建 HTML 来显示记录的字段。虽然技术上由于我们将最大值定义为 1，集合中技术上只有一条记录，但我正在使用 `foreach` 循环方法来从 `$records` 数组中显示记录。
 
 ```php
 <?php
@@ -6191,7 +6274,9 @@ echo '</table>';
 **难度：** 中等
 
 示例文件：
+
 PHPFiles/Advanced/Lesson20/MultiUserEditRecord.php
+
 PHPFiles/Advanced/Lesson20/MultiUserEditRecordDetail.php
 
 页面导航：
@@ -6199,23 +6284,22 @@ PHPFiles/Advanced/Lesson20/MultiUserEditRecordDetail.php
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_203_0.png)
 
 FileMaker API 方法：
-- newFindAllCommand()
-- newFindCommand()
-- addFindCriterion()
-- execute()
-- getRecords()
-- getField()
-- RecordID()
-- newEditCommand()
-- getField()
-- setModificationID()
-- setRecordByID()
+
+- `newFindAllCommand()`
+- `newFindCommand()`
+- `addFindCriterion()`
+- `execute()`
+- `getRecords()`
+- `getField()`
+- `RecordID()`
+- `newEditCommand()`
+- `getField()`
+- `setModificationID()`
+- `setRecordByID()`
 
 代码：
 
-```
-MultiUserEditRecord.php
-```
+`MultiUserEditRecord.php`
 
 此编辑记录页面与之前的示例相同。其目的是将记录 ID 传递到详情页，以便隔离记录并显示更多字段。
 
@@ -6227,7 +6311,7 @@ include ("../conn/dbaccess.php");
 ?>
 ```
 
-创建一个按 First Name（ own）搜索的表单。
+创建一个按 First Name 搜索的表单。
 
 ```html
 <form action="MultiUserEditRecord.php" method="get">
@@ -6243,28 +6327,23 @@ First Name: <input name="FirstName" type="text" />
 <?php
 if(empty($_GET['FirstName']))
 ```
+
 {
-  $FirstName = "";  $request = $fm->newFindAll('Demo');
+  `$FirstName` = "";  `$request` = `$fm->newFindAll('Demo')`;
 }else {
-  $FirstName = $_GET['FirstName'];
-  $request = $fm->newFindCommand('Demo');
-  $request->addFindCriterion('First Name', $FirstName);
+  `$FirstName` = `$_GET['FirstName']`;
+  `$request` = `$fm->newFindCommand('Demo')`;
+  `$request->addFindCriterion('First Name', $FirstName)`;
 }
-$result = $request->execute();
-
- 检查错误。
-
-if ($result->isError()) {
-  echo '<p>Error: ' . $result->getMessage() . '</p>';
+`$result` = `$request->execute()`;
+检查错误。
+if (`$result->isError()`) {
+  echo '<p>Error: ' . `$result->getMessage()` . '</p>';
   exit;
 }
-
- 将记录存储在 $records 变量中。
-
-$records = $result->getRecords();
-
- 创建显示结果的表头。
-
+将记录存储在 `$records` 变量中。
+`$records` = `$result->getRecords()`;
+创建显示结果的表头。
 echo '<table border="1">
 <tr>
 <th>First Name</th>
@@ -6276,22 +6355,21 @@ echo '<table border="1">
 <th>Record ID</th>
 <th>Edit Record</th>
 </tr>';
-
- 使用 `foreach` 循环方法显示字段。创建指向详情页的链接并传递记录 ID。
-
-foreach ($records as $record) {
+使用 `foreach` 循环方法显示字段。创建指向详情页的链接并传递记录 ID。
+foreach (`$records` as `$record`) {
   echo '<tr>';
-  echo '<td>' . $record->getField('FirstName') . '</td>';
-  echo '<td>' . $record->getField('LastName') . '</td>';
-  echo '<td>' . $record->getField('Number') . '</td>';
-  echo '<td>' . $record->getField('Date') . '</td>';
-  echo '<td>' . $record->getField('TimeStamp') . '</td>';
-  echo '<td>' . $record->getField('Calculation') . '</td>';
-  echo '<td><a href="MultiUserEditRecordDetail.php?id=' . $record->getRecordID() . '">edit</a></td>';
+  echo '<td>' . `$record->getField('FirstName')` . '</td>';
+  echo '<td>' . `$record->getField('LastName')` . '</td>';
+  echo '<td>' . `$record->getField('Number')` . '</td>';
+  echo '<td>' . `$record->getField('Date')` . '</td>';
+  echo '<td>' . `$record->getField('TimeStamp')` . '</td>';
+  echo '<td>' . `$record->getField('Calculation')` . '</td>';
+  echo '<td><a href="MultiUserEditRecordDetail.php?id=' . `$record->getRecordID()` . '">edit</a></td>';
   echo '</tr>';
 }
 echo '</table>';
-```
+
+
 
 ## 编辑记录 -> 详情
 
@@ -6307,10 +6385,6 @@ echo '</table>';
 | John | Garland | 27 | 25/25/2010 | 21:06 | | 85 | |
 | Luke | Greg | 35 | 25/25/2010 | 21:05 | | 86 | |
 | Mate | Latos | 38 | 25/25/2010 | 22:07 | | 87 | |
-
-
-
-
 
 <table>
   <tr>
@@ -6366,23 +6440,23 @@ echo '</table>';
 困难
 
 **示例文件：**
-- PHPFiles/Advanced/Lesson21/Import.php
-- PHPFiles/Advanced/Lesson21/Trio File Plugin v6.1
-- PHPFiles/Advanced/Lesson21/Import/sample_import.xls
+- `PHPFiles/Advanced/Lesson21/Import.php`
+- `PHPFiles/Advanced/Lesson21/Trio File Plugin v6.1`
+- `PHPFiles/Advanced/Lesson21/Import/sample_import.xls`
 
 页面导航：
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_208_0.png)
 
 **FileMaker API 方法：**
-- newSqlCommand()\execute()
-- getMessage()
-- newFindAllCommand()
-- getLastRecord()
-- EditRecord()
-- newEditCommand()
-- setField()
-- PerformScriptCommand()
+- `newSqlCommand()`\`execute()`
+- `getMessage()`
+- `newFindAllCommand()`
+- `getLastRecord()`
+- `EditRecord()`
+- `newEditCommand()`
+- `setField()`
+- `PerformScriptCommand()`
 
 **代码：**
 我已经在之前的示例中使用过导入过程。因此，从 PHP 代码的角度来看，并没有什么真正新东西。此过程中的重要变化在于使用了 Trio File 插件以及通过 FileMaker 脚本将 xls 文件从根目录移动到 FileMaker Server 的 Documents 文件夹。
@@ -6401,7 +6475,6 @@ include("../../Conn/dbaccess.php");
 <?php
 echo $message;
 ```
-
 ```php
 echo $importMessage;
 ?>
@@ -6418,7 +6491,7 @@ echo $importMessage;
 </p>
 ```
 
-检查用户是否点击了“导入”按钮。使用 application/vnd.ms-excel 验证他们尝试上传的文件是否为 Excel 文件。
+检查用户是否点击了“导入”按钮。使用 `application/vnd.ms-excel` 验证他们尝试上传的文件是否为 Excel 文件。
 
 > 你**绝不**允许未知用户向你的数据库导入记录。此过程通常应留给内部员工或信任的业务伙伴。
 
@@ -6456,7 +6529,7 @@ if (FileMaker::isError($result)) {
 $record = $result->getLastRecord();
 ```
 
-接下来，检查从 $_FILES 超局变量返回的任何通用错误。
+接下来，检查从 `$_FILES` 超局变量返回的任何通用错误。
 
 ```php
 if ($_FILES['xls_file']['error'] > 0) {
@@ -6508,7 +6581,7 @@ $importMessage = '<p>文件上传成功。</p>';
 ```php
 echo '<meta http-equiv="refresh" content="3;URL=' . $_SERVER['PHP_SELF'] . '">';
 ?>
-
+```
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_211_0.png)
 
 图 7-54：ImportXLS.php 页面。
@@ -6519,15 +6592,14 @@ FileMaker 脚本从 xls 文件导入记录我创建一个完整的示例。在�
 
 有几种免费方法可以将文件从根文件夹移动到 FileMaker Documents 文件夹。我认为 Trio 插件是最好的方法，因为它与 FileMaker 脚本协作工作，并且相对容易使用。此外，该插件对于许多任务非常多功能。唯一的缺点是它不是免费。此过程你需要 Web 许可。
 
-
-
-
 此脚本在 FileMaker Server 和 FileMaker Pro 客户端上的运行方式完全不同。请确保仅从示例网页或 FileMaker Server 计划（Schedule）测试此脚本。
 
 要获取 FileMaker Server Documents 文件夹中的文档列表，可以使用 `Get(DocumentsPathListing)`。要获取 Documents 文件夹的动态路径，可以使用 `Get(DocumentsPath)`。请注意，FileMaker Server 中有两个名为 "Documents" 的文件夹，正确的文件夹位于 `FileMaker Server/Data/Documents`。你还需要更改 Documents 文件夹的文件权限，启用“所有人（everyone） = 读/写（Read/Write）”。然后将其应用于文件夹中的所有文件。如果不执行此步骤，FileMaker 将无法从 xls 文件中导入记录，因为它将无法打开文件读取记录。
 
 | FileMaker Server **仅**从以下位置导入文件： |
+
 | :--- |
+
 | FileMaker Server/Data/Documents/ |
 
 你必须将文件夹权限设置为所有人 = 读/写
@@ -6539,6 +6611,7 @@ FileMaker 脚本从 xls 文件导入记录我创建一个完整的示例。在�
 通过开启“允许用户中止（Allow User Abort）”和“错误捕（Error Capture）”来启动脚本。如果发生任何错误，这将停止脚本并防止任何对话框引起问题。
 
 Allow User Abort [ On ]
+
 Set Error Capture [ On ]
 
 接下来，你可以运行一个脚本，使用许可证提供的密钥来注册 Troi File 插件。出于演示之目的，它在未注册的情况下可以运行几小时。如果你需要更多时间，可以随时重启服务器。目前，脚本中显示此代码以使插件以演示模式运行。
@@ -6603,6 +6676,8 @@ Go to Layout [ "Demo php" (php_demo) ]
 
 Set Variable [ $RecordCount; Value:Get ( TotalRecordCount ) ]
 
+
+
 从示例 xls 文件导入记录。
 
 ```
@@ -6617,9 +6692,6 @@ Source field 15 import to php_demo:Checkbox
 Source field 16 import to php_demo:Multi
 ```
 
-
-
-
 # 第 23 Lesson：布尔复选框
 
 **目标：** 在本中，你将学习如何使用值为 1 的布尔复选框来更新记录。当用户填写表单时，很容易创建一个布尔复选框来存储“是”的值（1），并为该框提供文本描述。你不应该为复选框的值使用长描述，这会浪费数据库空间并迫使你创建过多的特殊值列表。而布尔复选框可以用于多个字段。
@@ -6627,26 +6699,38 @@ Source field 16 import to php_demo:Multi
 **难度：** 简单
 
 **示例文件：**
-PHPFiles/Advanced/Lesson22/BooleanCheckBox.php
-PHPFiles/Advanced/Lesson22/Update BooleanCheckBox.php
+
+`/PHPFiles/Advanced/Lesson22/BooleanCheckBox.php`
+
+`/PHPFiles/Advanced/Lesson22/Update BooleanCheckBox.php`
 
 **页面导航：**
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_216_0.png)
 
 **FileMaker API 方法：**
-newFindAllCommand()
-execute()
-getMessage()
-getFirstRecord()
-getRecordID()
-getField()
-getRecordByID()
-newEditCommand()
-setField()
 
-**代码：**
-BooleanCheckBox.php
+`newFindAllCommand()`
+
+`execute()`
+
+`getMessage()`
+
+`getFirstRecord()`
+
+`getRecordID()`
+
+`getField()`
+
+`getRecordByID()`
+
+`newEditCommand()`
+
+`setField()`
+
+## 代码：
+
+### BooleanCheckBox.php
 
 始终从包含数据库连接开始。
 
@@ -6715,7 +6799,7 @@ $booleanCheckbox = $record->getField('BooleanCheckbox');
 <body>
 ```
 
-该表单使用 get 方法指向 UpdateBooleanCheckbox.php。它在 URL 中发送了 Record ID 的隐藏值。接下来，你可以使用 PHP 的 strcmp 方法将我们在 PHP 代码中创建的变量 $booleanCheckbox 的当前值与值 1 进行比较。如果数据库中的当前值为 1，你可以输出 `checked='checked'`，这是在框中显示勾选标记的方法。最后，你可以完成复选框的编写，我们将复选框的名称与数据库（BooleanCheckbox）匹配，类型='checkbox' 且值为='1' 以接收更新。
+该表单使用 get 方法指向 `UpdateBooleanCheckbox.php`。它在 URL 中发送了 Record ID 的隐藏值。接下来，你可以使用 PHP 的 `strcmp` 方法将我们在 PHP 代码中创建的变量 `$booleanCheckbox` 的当前值与值 1 进行比较。如果数据库中的当前值为 1，你可以输出 `checked='checked'`，这是在框中显示勾选标记的方法。最后，你可以完成复选框的编写，我们将复选框的名称与数据库（BooleanCheckbox）匹配，类型='checkbox' 且值为='1' 以接收更新。
 
 ```html
 <form action="UpdateBooleanCheckbox.php" method="get">
@@ -6731,7 +6815,7 @@ $booleanCheckbox = $record->getField('BooleanCheckbox');
 </html>
 ```
 
-strcmp(string1, string2): 比较两个字符串。注意比较是区分大小写的。
+`strcmp(string1, string2)`: 比较两个字符串。注意比较是区分大小写的。
 
 http://us.php.net/manual/en/function.php
 
@@ -6739,9 +6823,9 @@ http://us.php.net/manual/en/function.php
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_218_0.png)
 
-图 7-58：BooleanCheckBox.php 文件。
+图 7-58：`BooleanCheckBox.php` 文件。
 
-UpdateBooleanCheckBox.php
+### UpdateBooleanCheckBox.php
 
 更新文件将用于使用复选框的值更新记录。始终从包含数据库连接开始。
 
@@ -6796,34 +6880,47 @@ if (FileMaker::isError($edit)) {
 
 记录已成功更新，值为 1。
 
-## Lesson 23：多值复选框
+# Lesson 23：多值复选框
 
 **目标：** 在本中，你将学习如何使用具有多个值的布尔复选框来更新记录。复选框可以使用比一个字段更多的值。不幸的是，使用换行符来分隔复选框会导致 BooleanCheckbox 的名称和值将不会传递到 URL 中。因此，你可以检查值是否为空，以确定是应该清除该字段还是使用 URL 中的值。
 
 **难度：** 中等
 
 **示例文件：**
-PHPFiles/Advanced/Lesson23/CheckBox.php
-PHPFiles/Advanced/Lesson23/UpdateCheckBox.php
+
+`/PHPFiles/Advanced/Lesson23/CheckBox.php`
+
+`/PHPFiles/Advanced/Lesson23/UpdateCheckBox.php`
 
 **页面导航：**
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_220_png)
 
 **FileMaker API 方法：**
-FindAllCommand()
-execute()
-getMessage()
-FirstRecord()
-getRecordID()
-getField()
-getRecordByID()
-newEditCommand()
-setField()
-()
 
-**代码：**
-CheckBox.php
+`FindAllCommand()`
+
+`execute()`
+
+`getMessage()`
+
+`FirstRecord()`
+
+`getRecordID()`
+
+`getField()`
+
+`getRecordByID()`
+
+`newEditCommand()`
+
+`setField()`
+
+`()`
+
+## 代码：
+
+### CheckBox.php
 
 始终从包含数据库连接开始。
 
@@ -6899,10 +6996,6 @@ foreach($checkBoxValues as $checkBoxValue) {
 $checkbox .= '<input name="Checkbox[]" type="checkbox" value=' . $checkBoxValue . ' ' . $checked;
 ```
 
-
-
-
-
 ```
 <body>
 ```
@@ -6922,7 +7015,7 @@ $checkbox .= '<input name="Checkbox[]" type="checkbox" value=' . $checkBoxValue 
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_222_0.png)
 
-图 7-60：CheckBox.php 文件。
+图 7-60：`CheckBox.php` 文件。
 
 ### UpdateCheckBox.php
 
@@ -6993,29 +7086,42 @@ if (FileMaker::isError($result)) {
 **难度：** 中等
 
 **示例文件：**
-PHPFiles/Advanced/Lesson24/MultiValueList.php
-PHPFiles/Advanced/Lesson24/UpdateMultiValueList.php
+
+`/PHPFiles/Advanced/Lesson24/MultiValueList.php`
+
+`/PHPFiles/Advanced/Lesson24/UpdateMultiValueList.php`
 
 **页面导航：**
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_224_0.png)
 
 **FileMaker API 方法：**
-- newFindAllCommand()
-- execute()
-- getMessage()
-- getFirstRecord()
-- getRecordID()
-- Layout()
-- GetValueList()
-- getField()
-- getRecordByID()
-- newEditCommand()
-- setField()
 
-**代码：**
+- `newFindAllCommand()`
 
-MultiValueList.php
+- `execute()`
+
+- `getMessage()`
+
+- `getFirstRecord()`
+
+- `getRecordID()`
+
+- `Layout()`
+
+- `GetValueList()`
+
+- `getField()`
+
+- `getRecordByID()`
+
+- `newEditCommand()`
+
+- `setField()`
+
+## 代码：
+
+### MultiValueList.php
 
 多值列表使用重复代码将内容显示为 HTML。这使得数据库和 PHP 代码很容易组装多值列表。如果选择了某个值，你只需要添加 "selected"。此示例将创建的多值列表代码所示：
 
@@ -7067,12 +7173,14 @@ $id = $record->getRecordID();
 
 从 Demo php 布局获取多值列表，然后我们就可以为多值列表创建 HTML。
 
+
+
 ```php
 $layout = $layout->getLayout('Demo php');
 $multiValues = $layout->getValue('MultiValueList');
 ```
 
-从 MultiValueList 中获取实际值。然后使用 PHP 的 `explode` 方法，使用换车符 ("\n") 作为分隔符将值分离到数组中。
+从 `MultiValueList` 中获取实际值。然后使用 PHP 的 `explode` 方法，使用换车符 `("\n")` 作为分隔符将值分离到数组中。
 
 ```php
 $values = $record->getField('MultiValueList');
@@ -7117,11 +7225,7 @@ $multiValueList .= '</select>';
 </html>
 ```
 
-
-
-
-
-## FileMaker Server 管理控制台
+# FileMaker Server 管理控制台
 
 文件 编辑：服务器 菜单 帮助
 
@@ -7130,15 +7234,25 @@ $multiValueList .= '</select>';
 Windows/TestServer
 
 - FileMaker Server 概述
+
 - 管理
+
   - 数据库
+
   - 计划
+
   - 统计数据
+
 - 日志查看器
+
   - 配置
+
     - 通用设置
+
     - 管理员组
+
     - 数据库服务器
+
     - ODBC/JDBC
 
 ### 通用设置 PHP XML 即时 Web 发布
@@ -7172,14 +7286,18 @@ Windows/TestServer
 相关任务：
 
 - 查看数据库
+
 - 查看客户端
+
 - 设置 Web 发布日志选项
 
 难度：中
 
 示例文件：
-- PHPFiles/Advanced/Lesson25/PreValidate.php
-- PHPFiles/Advanced/Lesson25/UpdatePreValidate.php
+
+- `PHPFiles/Advanced/Lesson25/PreValidate.php`
+
+- `PHPFiles/Advanced/Lesson25/UpdatePreValidate.php`
 
 页面导航：
 
@@ -7320,9 +7438,10 @@ if(FileMaker::isError($result)) {
 ```
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_232_0.png)
+
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_232_1.png)
 
-使用 `foreach` 循环方法显示所有错误结果。注意我使用了精确的数组值 [0]、[1] 和 [2]，因为每个错误数组中返回了恰好三个值。你可以将其视为数组的数组，或者在技术上被称为多维数组。
+使用 `foreach` 循环方法显示所有错误结果。注意我使用了精确的数组值 `[0]`、`[1]` 和 `[2]`，因为每个错误数组中返回了恰好三个值。你可以将其视为数组的数组，或者在技术上被称为多维数组。
 
 ```php
 foreach($errors as $error) {
@@ -7339,14 +7458,14 @@ foreach($errors as $error) {
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_233_0.png)
 
 **验证失败**
+
 错误数量：3
+
 字段名：Number，错误代码：3，值：101
+
 字段名：Date，错误代码：7，值：2/31/2010
+
 字段名：Timestamp，错误代码：8，值：2/31/2010
-
-
-
-
 
 ```php
 $compoundRequest->add(3, $request3);
@@ -7354,10 +7473,12 @@ $compoundRequest->add(4, $request4);
 ```
 
 | FileMaker Syntax: add(Precedence, FindRequest) |
-| :--- |
-| $compoundRequest->add(1, $request1); |
 
-指定字段的排序顺序。注意使用数字顺序来指定排序字段。请记住 FILEMAKER_SORT_ASCEND 是默认的排序顺序。你只需要指定 FILEMAKER_SORT_DESCEND。
+| :--- |
+
+| `$compoundRequest->add(1, $request1);` |
+
+指定字段的排序顺序。注意使用数字顺序来指定排序字段。请记住 `FILEMAKER_SORT_ASCEND` 是默认的排序顺序。你只需要指定 `FILEMAKER_SORT_DESCEND`。
 
 ```php
 $compoundRequest->addSortRule('MultiValueList', 1, FILEMAKER_SORT_ASCEND);
@@ -7371,7 +7492,7 @@ $compoundRequest->addSortRule('Number', 3, FILEMAKER_SORT_ASCEND);
 $result = $compoundRequest->execute();
 ```
 
-从 $result 变量中获取记录。
+从 `$result` 变量中获取记录。
 
 ```php
 $records = $result->getRecords();
@@ -7399,7 +7520,7 @@ echo '<table border="1">
 </tr>';
 ```
 
-使用 `foreach` 方法显示字段。对于 MultiValueList 字段，我使用 PHP 的 `str_replace` 方法将换行符替换为逗号，以便信息以更易读的格式显示。
+使用 `foreach` 方法显示字段。对于 `MultiValueList` 字段，我使用 PHP 的 `str_replace` 方法将换行符替换为逗号，以便信息以更易读的格式显示。
 
 ```php
 foreach ($records as $record)
@@ -7423,18 +7544,29 @@ echo '</table>';
 # 组合搜索
 
 First Name*: Todd
+
 OR Last Name*: Hutchinson
+
 OR Number*: 9
+
 OR Pet (OMIT): Cat
+
 * 注意：搜索时所有值均为必填
 
 | First Name | Last Name | Number | Pet |
+
 | :--- | :--- | :--- | :--- |
+
 | Clayton | Richard | 33 | Bird |
+
 | Saif | Lane | 28 | Bird |
+
 | David | Eckstein | 22 | Bird |
+
 | Chris | Denorfia | 13 | Bird |
+
 | Kevin | Corcia | 29 | Bird |
+
 | Tim | Warner | 13 | Dog |
 
 图 7-68：CompoundSearch.php 文件。
@@ -7447,8 +7579,9 @@ OR Pet (OMIT): Cat
 
 **示例文件：**
 
-- PHPFiles/Advanced/Lesson27/QuickFind.php
-- PHPFiles/Advanced/Lesson27/ContainerBridge.php
+- `PHPFiles/Advanced/Lesson27/QuickFind.php`
+
+- `PHPFiles/Advanced/Lesson27/ContainerBridge.php`
 
 页面导航：
 
@@ -7456,18 +7589,29 @@ OR Pet (OMIT): Cat
 
 **FileMaker API 方法：**
 
-- getLayout()
-- getFields()
-- findAllCommand()
-- newFindCommand()
-- setLogicalOperator()
-- getName()
-- getResult()
-- addFindCriterion()
-- setResultLayout()
-- execute()
-- getMessage()
-- Records()
+- `getLayout()`
+
+- `getFields()`
+
+- `findAllCommand()`
+
+- `newFindCommand()`
+
+- `setLogicalOperator()`
+
+- `getName()`
+
+- `getResult()`
+
+- `addFindCriterion()`
+
+- `setResultLayout()`
+
+- `execute()`
+
+- `getMessage()`
+
+- `Records()`
 
 **代码：**
 
@@ -7479,7 +7623,7 @@ include("../Conn/dbaccess.php");
 ?>
 ```
 
-从 $_GET 全局变量获取搜索准则。
+从 `$_GET` 全局变量获取搜索准则。
 
 ```php
 if (isset($_GET['Search'])) {
@@ -7524,7 +7668,7 @@ else {
 $request = $fm->newFindFirst('Quick Find');
 ```
 
-使用 FILEMAKER_FIND_OR 让匹配的请求返回并循环每个字段。
+使用 `FILEMAKER_FIND_OR` 让匹配的请求返回并循环每个字段。
 
 ```php
 foreach($fields as $field)
@@ -7542,7 +7686,9 @@ $fieldName = $field->getName();
 $fieldType = $field->getResult();
 ```
 
-根据字段类型格式化。对于日期，使用 PHP date 方法将搜索内容转换为正确的日期格式。
+
+
+根据字段类型格式化。对于日期，使用 PHP `date` 方法将搜索内容转换为正确的日期格式。
 
 ```php
 if ($fieldType == 'date') {
@@ -7552,7 +7698,7 @@ if ($fieldType == 'date') {
 }
 ```
 
-对于时间，使用 PHP date 方法将搜索内容转换为正确的时间格式。
+对于时间，使用 PHP `date` 方法将搜索内容转换为正确的时间格式。
 
 ```php
 elseif ($fieldType == 'time') {
@@ -7562,7 +7708,7 @@ elseif ($fieldType == 'time') {
 }
 ```
 
-对于时间戳，使用 PHP date 方法将搜索内容转换为正确的时间戳格式。
+对于时间戳，使用 PHP `date` 方法将搜索内容转换为正确的时间戳格式。
 
 ```php
 elseif ($fieldType == 'timestamp') {
@@ -7572,7 +7718,7 @@ elseif ($fieldType == 'timestamp') {
 }
 ```
 
-对于数字，使用 PHP intval 方法将搜索准则转换为数字。
+对于数字，使用 PHP `intval` 方法将搜索准则转换为数字。
 
 ```php
 elseif ($fieldType == 'number') {
@@ -7688,8 +7834,6 @@ $html = '</table>';
 </html>
 ```
 
-
-
 ```html
 <body>
 </html>
@@ -7699,22 +7843,23 @@ $html = '</table>';
 
 | 姓 | 数量 | 日期 | 时间戳 | 图片 | 计算 | 记录ID | 电子邮件 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Duell | 47 | 08/07/2012 | 08/03/2010 14:46:50 | ![image](...) | 48 | 52 | duell@formulatioexpo.com | |
+| Duell | 47 | 08/07/2012 | 08/03/2010 14:46:50 | ![image](...) | 48 | 52 | duell@formulatioexpo.com |
 
-图 7-69：QuickFind.php 文件。
+图 7-69：`QuickFind.php` 文件。
 
 # 第 28 课：Google reCAPTCHA
 
 在本中，你将学习如何实现 Google 的 reCAPTCHA 方法来限制垃圾邮件者和机器人向你的数据库提交伪记录。CAPTCHA 是一种可以判断用户是人类还是计算机的程序。CAPTCHA 技术已非常普及，因为没有计算机程序能像人类一样辨读扭曲的文本，所以机器人无法通过 CAPTCHA 技术浏览网站。不过，我喜欢 Google 的这一个，因为它不断更新，你不需要在自己的端进行任何操作即可从这些更新中受益。我最喜欢的部分是它能够检测到解决了过多 CAPTCHA 的 IP 地址并将其切断。最后，如果你真的感兴趣，Google 还提供一个针对 Mailchimp 的库，它会隐藏你的电子邮件地址，用户必须解决 CAPTCHA 才能获取该地址。有关获取免费完整 CAPTCHA 账户的更多信息，你可以访问 Google 网站：
 
-http://www.google.com/recaptcha
+`http://www.google.com/recaptcha`
 
 难度：简单
 
 示例文件：
-- PHPFiles/Advanced/Lesson28/captcha.php
-- PHPFiles/Advanced/Lesson28/verify.php
-- PHPFiles/Advanced/Lesson28/recapchalib.php
+
+- `PHPFiles/Advanced/Lesson28/captcha.php`
+- `PHPFiles/Advanced/Lesson28/verify.php`
+- `PHPFiles/Advanced/Lesson28/recapchalib.php`
 
 页面导航：
 
@@ -7724,11 +7869,11 @@ http://www.google.com/recaptcha
 
 此示例中没有 FileMaker API 方法。
 
-代码：
+### 代码：
 
 通过 FileMaker 方法实现 reCAPTCHA 方法的目的是。此示例是一个简单的表单，在将信息提交到数据库之前，将其将其从 captcha 页面发送到 verify页面。reCAPTCHA 方法强制用户在信息传递到 verify 页面之前验证 captcha 页面上的扭曲文本。Google 提供的 recaptib.php 页面包含了连接到 Google 的所有代码，处理将在那里进行。这对你的服务器不会产生额外的性能影响，Google 可以让你与最新的安全更改同步。你们只需要做一些简单的代码
 
-captcha.php
+#### captcha.php
 
 创建一个将联系信息提交到数据库的表单。将其指向 verify php 页面。
 
@@ -7772,7 +7917,7 @@ echo captcha_get_html($publickey);
 </html>
 ```
 
-verify.php 是你可以测试用户是否输入了正确的 CAPTCHA 代码的地方。如果是，你就可以将数据提交到数据库。否则，重定向用户输入新的 CAPTCHA 代码。再次，这里的私钥适用于你测试服务器的 "http://localhost" 域名。你需要从 Google 获取你自己的密钥以用于你的网站。
+`verify.php` 是你可以测试用户是否输入了正确的 CAPTCHA 代码的地方。如果是，你就可以将数据提交到数据库。否则，重定向用户输入新的 CAPTCHA 代码。再次，这里的私钥适用于你测试服务器的 "http://localhost" 域名。你需要从 Google 获取你自己的密钥以用于你的网站。
 
 ```php
 <?php
@@ -7790,15 +7935,15 @@ if (!$resp->is_valid) {
 ?>
 ```
 
-recaptachalib.php
+`recaptachalib.php`
 
-recaptachalib.php 页面不需要更改。这是 Google 提供的用于将 CAPTCHA 传递到他们的服务器进行验证的代码。你只需要将其包含在你的网站中。
+`recaptachalib.php` 页面不需要更改。这是 Google 提供的用于将 CAPTCHA 传递到他们的服务器进行验证的代码。你只需要将其包含在你的网站中。
 
-图 7-70：captcha.php。
+图 7-70：`captcha.php`。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_245_0.png)
 
-图 7-71：verify.php。
+图 7-71：`verify.php`。
 
 # 第 29 课：显示随机广告
 
@@ -7807,8 +7952,9 @@ recaptachalib.php 页面不需要更改。这是 Google 提供的用于将 CAPTC
 难度：简单
 
 示例文件：
-- PHPFiles/Advanced/Lesson29/RandomBanner.php
-- PHPFiles/Advanced/Lesson29/Container.php
+
+- `PHPFiles/Advanced/Lesson29/RandomBanner.php`
+- `PHPFiles/Advanced/Lesson29/Container.php`
 
 页面导航：
 
@@ -7818,7 +7964,7 @@ recaptachalib.php 页面不需要更改。这是 Google 提供的用于将 CAPTC
 
 此示例中没有 FileMaker API 方法。
 
-代码：
+### 代码：
 
 随机横幅用于显示随机记录。始终从包含数据库的连接开始。
 
@@ -7837,10 +7983,10 @@ $request = $fm->findAll('Demo');
 
 在数据库中显示记录。
 
-| 语法 | |
+| 语法 |
 | --- |
-| newFindCommand('Demo') |
-| $request = $fm->findAll('Demo') |
+| `newFindCommand('Demo')` |
+| `$request = $fm->findAll('Demo')` |
 
 搜索结果被使用。
 
@@ -7878,7 +8024,7 @@ echo '<table border="1">
 </tr>';
 ```
 
-使用 foreach 循环显示记录。使用 getRecordID 方法包含指向详情页的链接。
+使用 `foreach` 循环显示记录。使用 `getRecordID` 方法包含指向详情页的链接。
 
 ```php
 foreach ($records as $record) {
@@ -7902,7 +8048,7 @@ echo '</table>';
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_249_0.png)
 
-图 7-72：DuplicateList.php 文件。
+图 7-72：`DuplicateList.php` 文件。
 
 # 第 30 课：复制记录
 
@@ -7911,8 +8057,9 @@ echo '</table>';
 难度：简单
 
 示例文件：
-- PHPFiles/Advanced/Lesson30/DuplicateList.php
-- PHPFiles/Advanced/Lesson30/DuplicateDetail.php
+
+- `PHPFiles/Advanced/Lesson30/DuplicateList.php`
+- `PHPFiles/Advanced/Lesson30/DuplicateDetail.php`
 
 页面导航：
 
@@ -7922,17 +8069,13 @@ echo '</table>';
 
 此示例中没有 FileMaker API 方法。
 
-代码：
+### 代码：
 
 详情页用于编辑你想复制的记录。始终从包含数据库的连接开始。
 
 ```php
 <?php include("../database.php"); ?>
 ```
-
-
-
-
 
 通过 URL 中传递的 'id' 值的 Record ID 获取记录。
 
@@ -7942,6 +8085,8 @@ $record = $fm->getRecordID('Demo php', $_GET['id']);
 ```
 
 检查 POST 数组以确认用户是否点击了重复按钮。页面首次加载时，你可以显示表单中的所有字段和按钮。用户点击“重复”或“取消”后，你将显示适当的消息而不是字段和按钮。
+
+
 
 ```php
 if (!isset($_POST['duplicate'])) {
@@ -8023,7 +8168,9 @@ $display .= '<p><a href="DuplicateList.php">Click here to return to the list vie
 **难度：** 中等
 
 示例文件：
+
 - PHPFiles/Advanced/Lesson31/DuplicateList.php
+
 - PHPFiles/Advanced/Lesson31/DuplicateDetail.php
 
 **页面导航：**
@@ -8031,16 +8178,23 @@ $display .= '<p><a href="DuplicateList.php">Click here to return to the list vie
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_252_0.png)
 
 **FileMaker API：**
-- findAllCommand()
-- execute()
-- getMessage()
-- getRecords()
-- getByID()
-- newDuplicateCommand()
+
+- `findAllCommand()`
+
+- `execute()`
+
+- `getMessage()`
+
+- `getRecords()`
+
+- `getByID()`
+
+- `newDuplicateCommand()`
 
 **代码：**
 
 ### DuplicateList.php
+
 该页面用于显示所有记录并提供指向详情页的链接，以便隔离你想复制的记录。始终从连接数据库开始。
 
 ```php
@@ -8117,18 +8271,31 @@ echo '</table>';
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_253_0.png)
 
 | First Name | Last Name | Number | Date | Time Stamp | Calculation | Record ID | Duplicate |
+
 |---|---|---|---|---|---|---|---|
+
 | Todd | 47 | 08/07/2012 | 08/03/2010 | 14:56:40 | 55 | 52 |
+
 | Tim | 13 | 08/01/2010 | 08/01/2010 | 14:55:10 | 54 | 54 |
+
 | Fred | 14 | 08/25/2009 | 08/25/2009 | 15:42:27 | 59 | 59 |
+
 | Mike | 37 | 08/25/2009 | 09/09/2010 | 15:20:21 | 81 | 81 |
+
 | Heabl | 21 | 08/25/2009 | 09/09/2010 | 15:20:36 | 82 | 82 |
+
 | Kevin | 29 | 08/25/2009 | 09/09/2010 | 15:20:47 | 83 | 83 |
+
 | Ermesto | 39 | 08/25/2009 | 09/09/2010 | 15:22:56 | 84 | 84 |
+
 | John | 27 | 06/25/2009 | 09/09/2010 | 15:21:06 | 85 | 85 |
+
 | Lake | 57 | 06/25/2009 | 09/09/2010 | 15:21:16 | 86 | 86 |
+
 | Mat | 38 | 08/25/2009 | 09/09/2010 | 15:22:47 | 87 | 87 |
+
 | Wade | 49 | 08/25/2009 | 09/09/2010 | 15:22:24 | 88 | 88 |
+
 | Edward | Mujica | 456 | 08/25/2009 | 09/09/2010 | 15:22:33 | 89 | 89 |
 
 图 75：DuplicateRelatedList.php。
@@ -8205,9 +8372,6 @@ $display = '</p>';
 $display = '</form>';
 ```
 
-
-
-
 如果用户点击“复制”（Duplicate）按钮，你将在数据库中运行 PHP 复制记录脚本（Duplicate Record）。没有理由让 PHP 让过程变得过于复杂。将父记录的 ID 传递给数据库并在服务器上运行脚本要简单得多。
 
 ```php
@@ -8231,7 +8395,7 @@ else {
 }?
 ```
 
-使用 $display 变量输出 PHP 代码创建的 html。
+使用 `$display` 变量输出 PHP 代码创建的 html。
 
 ```html
 <html
@@ -8255,9 +8419,10 @@ else {
 首先确保你开启了“允许用户取消”（User Abort）和“设置错误捕获”（Set Error Capture）。
 
 - 允许用户取消 [  ]
+
 - 设置错误捕获 [ On ]
 
-从 PHP 代码传递的脚本参数创建 $RecordID 变量。
+从 PHP 代码传递的脚本参数创建 `$RecordID` 变量。
 
 ```filemaker
 Set Variable [ $RecordID; Value:Get(ScriptParameter) ]
@@ -8281,6 +8446,8 @@ End If
 ```
 
 复制记录并存储新记录的记录 ID，以便将其传递给新相关记录的外键。
+
+
 
 ```filemaker
 Duplicate Record/Request
@@ -8323,75 +8490,138 @@ Commit Records/Requests [ Skip data entry ]
 
 视图：按类别查看所有
 
-脚本名称：PHP Duplicate Record
+脚本名称：`PHP Duplicate Record`
 
 - 允许用户取消 [ On ] - 不支持的脚本步骤。如果此处包含，FM 允许用户取消。
 
 *(注：OCR 文本包含一些乱码；根据提供的文本：)*
+
 - 允许用户取消 [0]
-- 设置变量 ($User, On) - 如果 FileMaker 返回错误框未显示或将产生
+
+- 设置变量 (`$User`, On) - 如果 FileMaker 返回错误框未显示或将产生
+
 - 设置错误捕获 (0)
-- GetRecord($RecordID) 由 PHP 脚本。
-- 设置变量 ($RecordID, GetScriptParameter())
-- 转布局 ('Demo php', php_demo)
+
+- `GetRecord($RecordID)` 由 PHP 脚本。
+
+- 设置变量 (`$RecordID`, `GetScriptParameter()`)
+
+- 转布局 ('Demo php', `php_demo`)
+
 - 结束循环
-- 设置字段 (php_demo.RecordID, $RecordID)
+
+- 设置字段 (`php_demo.RecordID`, `$RecordID`)
+
 - 执行查找
+
 - 如果错误 - 未找到记录。
-- 如果 (GetLastError() > 0)
+
+- 如果 (`GetLastError() > 0`)
+
 - 退出循环
+
 - 结束
-- 复制记录并存储新记录的 PK，以便可以传递给 related_data 的外键。
+
+- 复制记录并存储新记录的 PK，以便可以传递给 `related_data` 的外键。
+
 - 复制记录/请求
-- 设置变量 ($Value, $RecordID)
-- 转到列表 (List, $PK)
-- 转到相关记录 来自表: "Related_data" 使用布局: "Related Data php" (related_data) 仅显示相关记录
-- 转到相关记录 来自表: "Related_data" 使用布局: "Related Data php" (related_data_) 复制原始记录的门户记录，为每个记录创建一个副本并更改外键。
+
+- 设置变量 (`$Value`, `$RecordID`)
+
+- 转到列表 (List, `$PK`)
+
+- 转到相关记录 来自表: "Related_data" 使用布局: "Related Data php" (`related_data`) 仅显示相关记录
+
+- 转到相关记录 来自表: "Related_data" 使用布局: "Related Data php" (`related_data_`) 复制原始记录的门户记录，为每个记录创建一个副本并更改外键。
+
 - 循环
+
 - 复制记录/请求
-- 设置字段 (related_data.FK, $PK)
+
+- 设置字段 (`related_data.FK`, `$PK`)
+
 - 跳过记录
-- 退出循环 如果 (GetFoundCount = 0)
+
+- 退出循环 如果 (`GetFoundCount = 0`)
+
 - 结束循环
+
 - 提交记录。
+
 - 提交记录/对话 (跳过数据输入，!)
 
 - 控制
+
 - 执行脚本
+
 - 暂停/恢复脚本
+
 - 退出脚本
+
 - 否则
+
 - 如果
+
 - 结束如果
+
 - 循环
+
 - 退出循环
+
 - 允许用户取消
+
 - 设置错误捕获
+
 - 设置变量
+
 - 安装/脚本
+
 - 导航
+
 - 转布局
+
 - 转到相关记录
+
 - 转到门户行
+
 - 转字段
+
 - 转到上一个字段
+
 - 错误消息
+
 - 进入查找模式
+
 - 撤销/重做
+
 - 剪切
+
 - 粘贴
+
 - 清空
+
 - 设置选择
+
 - 设置活动
+
 - 执行查找/替换
+
 - 按名称设置字段
+
 - 设置下一个序列值
+
 - 插入计算结果
+
 - 插入最后有效的
+
 - 插入索引
+
 - 插入当前日期
+
 脚本步骤选项
+
 - 显示兼容性
+
 - 客户端
 
 - 使用完全权限运行脚本
@@ -8413,8 +8643,11 @@ Commit Records/Requests [ Skip data entry ]
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_258_0.png)
 
 1. 打开 IIS。
+
 2. 在连接窗口中点击你的服务器。
+
 3. 点击安全部分的“证书”。
+
 4. 在操作窗口中点击“创建证书请求”。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_258_1.png)
@@ -8422,34 +8655,47 @@ Commit Records/Requests [ Skip data entry ]
 图 7-78：准备证书请求
 
 5. 按照向导创建证书，也称为 CSR。
+
    a. 组织：使用注册域名的业务。
+
    b. 组织单位：使用公司的部门。
-   c. 通用名称：输入计划使用的完整域名或 URL，例如 formulationspro.com。你也可以使用通配符域名如 *.formulationspro.com。但这通常需要付费。
-   d. 国家：使用你国家的两位 ISO 代码，美国使用 US。
-   e. 州/省：使用你所在州的全称，例如 California。
-   f. 城市/位置：使用你所在城市的全称，例如 San Diego。
+
+   c. 通用名称：输入计划使用的完整域名或 URL，例如 `formulationspro.com`。你也可以使用通配符域名如 `*.formulationspro.com`。但这通常需要付费。
+
+   d. 国家：使用你国家的两位 ISO 代码，美国使用 `US`。
+
+   e. 州/省：使用你所在州的全称，例如 `California`。
+
+   f. 城市/位置：使用你所在城市的全称，例如 `San Diego`。
+
 6. 点击下一步
+
 7. 在加密服务提供商窗口中，选择长度为 2048 位的 Microsoft RSA 加密提供商。
+
 8. 输入你想保存的路径（例如桌面文件夹）并点击完成。
+
 9. 将证书发送给你的证书颁发机构（CA）。你购买 SSL 证书的公司（例如 Verisign, Go Daddy 等）。某些公司可能要求你请求并复制/粘贴内容到他们的 Web 服务器提交。
+
 10. 他们通常会通过你的服务器向你发送文件。然后点击操作窗口中的“完成证书链接”并按照向导安装证书。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_259_0.png)
 
 11. 在连接窗口中选择你的站点。
+
 12. 在操作窗口中点击“绑定”。你的常规 HTTP（端口 80）绑定应该是活动状态的。
-13. 编辑端口 80 绑定，并将主机名更改为你的网站（例如 formulationspro.com）。这将告诉 IIS 监听任何使用该域名网站文件夹的请求。
+
+13. 编辑端口 80 绑定，并将主机名更改为你的网站（例如 `formulationspro.com`）。这将告诉 IIS 监听任何使用该域名网站文件夹的请求。
+
 14. 现在点击“添加”以安装 SSL 绑定。选择类型为主机，端口为 443。你应该能够从绑定的弹出菜单中选择你新安装的证书。
+
 15. 完成后保存，你的网站现在应该已启用 SSL（即 https）。
-
-
-
 
 ## 在 OS X 上为你的网站绑定 SSL 证书。
 
 在 OS X 服务器上为网站绑定 SSL 证书与 Windows 非常相似，尽管步骤要少得多。
 
 - 1. 打开服务器管理（Server Admin）。从服务器列表中点击你的 Web 服务器。然后点击证书（Certificates）图标。
+
 - 2. 点击加 + 按钮创建证书身份（Certificate Identity）。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_260_0.png)
@@ -8457,19 +8703,25 @@ Commit Records/Requests [ Skip data entry ]
 图 7-80：创建一个新的证书身份。
 
 - 3. 输入你网站的域名。
+
 - 4. 选择身份类型为自签名根（Self Signed Root）。别担心，当你从证书颁发机构安装签名证书时，它会自动更改。
+
 - 5. 选择证书类型为 SSL 服务器（SSL Server）。
 
-## 证书助手
+### 证书助手
 
-## 创建你的证书
+### 创建你的证书
 
 请在下方指定某些证书信息。
 
 | 名称 | formulationspro.com |
+
 |---|---|
+
 | 身份类型 | 自签名根 (Self Signed Root) |
+
 | 证书类型 | SSL 服务器 (SSL Server) |
+
 | | 让我覆盖默认值（例如：扩展、目标钥匙串等） |
 
  了解更多...
@@ -8479,40 +8731,57 @@ Commit Records/Requests [ Skip data entry ]
 图 7-81：为你的证书输入信息。
 
 - 6. 点击“继续”。然后点击下一个“继续”按钮以创建临时的自签名证书。
-- 7. 点击操作图标并生成证书签名请求 (CSR)。这将在你的桌面上创建一个文本文件 (.csr)。该文件将被你发送给你的证书颁发机构（CA）和/或复制/粘贴到你的网站上。每个 CA 接收文件的方式略有不同。CA 将向你返回一个签名证书，你将在接下来的步骤中放置它。
+
+- 7. 点击操作图标并生成证书签名请求 (CSR)。这将在你的桌面上创建一个文本文件 (`.csr`)。该文件将被你发送给你的证书颁发机构（CA）和/或复制/粘贴到你的网站上。每个 CA 接收文件的方式略有不同。CA 将向你返回一个签名证书，你将在接下来的步骤中放置它。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_261_0.png)
 
 | 名称 | 过期 |
+
 |---|---|
+
 | formulationspro.com | 2013/2/28 |
+
 | formulationspro.com | 2013/7/11 |
 
 图 7-82：生成发送给证书颁发机构 (CA) 的证书签名请求 (CSR)。
 
 - 8. 当你收到签名证书后，在列表中选择自签名证书。然后点击操作图标并选择用签名或更新的证书替换证书（Replace Certificate with Signed or Renewed Certificate）。
 
-## 服务器管理: mailserver1.local: 证书
+### 服务器管理: mailserver1.local: 证书
 
 证书身份由公共证书和私钥组成。这些证书身份可以用于保护你的网络通信：
 
 | 名称 | 到期 |
+
 | --- | --- |
+
 | formulationspro | 2013/8/9 |
+
 | formulationspro2012 | 2012/2/28 |
+
 | | 2013/7/11 |
 
 生成证书签名请求 (CSR)
+
 用签名或更新的证书替换证书
+
 自签名证书
+
 过期：2015年8月9日 星期五 上午 8:59:12 PT
+
 此证书不受信任
 
 formulationspro
+
 美国 US
+
 formulationspro
+
 1
+
 SHA-1 带 RSA 加密 | 1 2 840 113549 1 1 5 |
+
 none
 
 图 7-83：用来自 CA 的签名证书替换自签名证书。
@@ -8528,15 +8797,21 @@ none
 图 7-84：将签名证书拖入窗口。
 
 - 10. 要为你的网站安装证书，请从服务器中选择 Web 服务（Web service）。然后选择站点（Sites）图标。选择你想应用证书的网站。然后选择“安全”（Security）选项卡。
+
 - 11. 勾选启用安全套层 (SSL)。
+
 - 12. 从证书弹出菜单中选择你刚刚安装的证书。
+
 - 13. 点击保存（Save）按钮为站点启用 SSL。
 
-## 服务器管理: mailserver1.local | Web
+### 服务器管理: mailserver1.local | Web
 
 | 概览 | 日志 | 站点 | Smartsgo |
+
 |---|---|---|------|
+
 | 已启用 | 主机名 | IP 地址 | 端口 |
+
 | ✓ | mail.formulationspro.com | 192.168.1.7 | 8080 |
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_263_0.png)
@@ -8545,10 +8820,11 @@ none
 
 ## 重配置 FileMaker Server
 
-此时，如果你在浏览器中打开默认网页（Windows 上的 iisestart.html 或 Mac 上的 index.html），你的 Web 服务器在 http 和 https 上都运行得非常出色。然而，你会很快发现，如果你尝试从数据库访问动态 PHP 页面，一切都无法运行且 Web 发布引擎会崩溃。糟糕了！FileMaker 有一些晦涩的文档（技术文章 #7619）介绍如何配合 SSL 证书使用 cURL。别担心，这项工作不需要了解任何关于 cURL 的知识。执行以下任务以启用 cURL 库：
+此时，如果你在浏览器中打开默认网页（Windows 上的 `iisestart.html` 或 Mac 上的 `index.html`），你的 Web 服务器在 http 和 https 上都运行得非常出色。然而，你会很快发现，如果你尝试从数据库访问动态 PHP 页面，一切都无法运行且 Web 发布引擎会崩溃。糟糕了！FileMaker 有一些晦涩的文档（技术文章 #7619）介绍如何配合 SSL 证书使用 cURL。别担心，这项工作不需要了解任何关于 cURL 的知识。执行以下任务以启用 cURL 库：
 
 - 1. 打开位于以下路径的 FileMaker API 文件：
-/FileMaker Server/Web Publishing/publishing-engine/php/FileMaker/conf/filemaker-api
+
+`/FileMaker Server/Web Publishing/publishing-engine/php/FileMaker/conf/filemaker-api`
 
 - 2. 取消以下代码的注释：
 
@@ -8580,31 +8856,44 @@ $_FM_CONFIG['cURLOptions'] = array(CURLOPT_SSL_VERIFYPEER => false)
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_264_0.png)
 
-- 3. 通过打开 FileMaker Server控制台 (http://localhost:1600) 来编辑 Web 发布部署。按照向导安装服务器部署。
+- 3. 通过打开 FileMaker Server控制台 (`http://localhost:1600`) 来编辑 Web 发布部署。按照向导安装服务器部署。
 
-## 部署助手
+### 部署助手
 
-## 部署进度
+### 部署进度
 
 证书身份由公共证书和私钥组成。这些证书身份可以用于保护你的网络通信：
 
 | 名称 | 过期 |
+
 | --- | --- |
+
 | formulationspro | 2013/8/9 |
+
 | formulationspro2012 | 2012/2/28 |
+
 | | 2013/7/11 |
 
 生成证书签名请求 (CSR)
+
 用签名或更新的证书替换证书
+
 自签名证书
+
 过期：2015年8月9日 星期五 上午 8:59:12 PT
+
 此证书不受信任
 
 formulationspro
+
 美国 US
+
 formulationspro
+
 1
+
 SHA-1 带 RSA 加密 | 1 2 840 113549 1 1 5 |
+
 none
 
 图 7-83：用来自 CA 的签名证书替换自签名证书。
@@ -8620,15 +8909,21 @@ none
 图 7-84：将签名证书拖入窗口。
 
 - 10. 要为你的网站安装证书，请从服务器中选择 Web 服务（Web service）。然后选择站点（Sites）图标。选择你想应用证书的网站。然后选择“安全”（Security）选项卡。
+
 - 11. 勾选启用安全套层 (SSL)。
+
 - 12. 从证书弹出菜单中选择你刚刚安装的证书。
+
 - 13. 点击保存（Save）按钮为站点启用 SSL。
 
 服务器管理: mailserver1.local | Web
 
 | 概览 | 日志 | 站点 | Smartsgo |
+
 |---|---|---|------|
+
 | 已启用 | 主机名 | IP 地址 | 端口 |
+
 | ✓ | mail.formulationspro.com | 192.168.1.7 | 8080 |
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_263_0.png)
@@ -8637,10 +8932,11 @@ none
 
 ## 重配置 FileMaker Server
 
-此时，如果你在浏览器中打开默认网页（Windows 上的 iisestart.html 或 Mac 上的 index.html），你的 Web 服务器在 http 和 https 上都运行得非常出色。然而，你会很快发现，如果你尝试从数据库访问动态 PHP 页面，一切都无法运行且 Web 发布引擎会崩溃。糟糕了！FileMaker 有一些晦涩的文档（技术文章 #7619）介绍如何配合 SSL 证书使用 cURL。别担心，这项工作不需要了解任何关于 cURL 的知识。执行以下任务以启用 cURL 库：
+此时，如果你在浏览器中打开默认网页（Windows 上的 `iisestart.html` 或 Mac 上的 `index.html`），你的 Web 服务器在 http 和 https 上都运行得非常出色。然而，你会很快发现，如果你尝试从数据库访问动态 PHP 页面，一切都无法运行且 Web 发布引擎会崩溃。糟糕了！FileMaker 有一些晦涩的文档（技术文章 #7619）介绍如何配合 SSL 证书使用 cURL。别担心，这项工作不需要了解任何关于 cURL 的知识。执行以下任务以启用 cURL 库：
 
 - 1. 打开位于以下路径的 FileMaker API 文件：
-/FileMaker Server/Web Publishing/publishing-engine/php/FileMaker/conf/filemaker-api
+
+`/FileMaker Server/Web Publishing/publishing-engine/php/FileMaker/conf/filemaker-api`
 
 - 2. 取消以下代码的注释：
 
@@ -8648,29 +8944,44 @@ none
 $_FM_CONFIG['cURLOptions'] = array(CURLOPT_SSL_VERIFYPEER => false)
 ```
 
-## 部署助手
+### 部署助手
 
-## 部署进度
+### 部署进度
 
 证书身份由公共证书和私钥组成。这些证书身份可以用于保护你的网络通信：
 
 | 名称 | 过期 |
+
 | --- | --- |
+
 | formulationspro | 2013/8/9 |
+
+
+
 | formulationspro2012 | 2012/2/28 |
+
 | | 2013/7/11 |
 
-生成证书签名请求 (CSR)
+# 生成证书签名请求 (CSR)
+
 用签名或更新的证书替换证书
+
 自签名证书
+
 过期：2015年8月9日 星期五 上午 8:59:12 PT
+
 此证书不受信任
 
 formulationspro
+
 美国 US
+
 formulationspro
+
 1
+
 SHA-1 带 RSA 加密 | 1 2 840 113549 1 1 5 |
+
 none
 
 图 7-83：用来自 CA 的签名证书替换自签名证书。
@@ -8679,15 +8990,18 @@ none
 
 服务器管理: mailserver1.local: 证书 
 
-添加一个与现有 "formulationsspro" 证书使用相同密钥的包含签名或更新证书的文件。要获取签名或更新的证书，请向你的证书颁发机构发送证书签名请求 (CSR)。
+添加一个与现有 "`formulationsspro`" 证书使用相同密钥的包含签名或更新证书的文件。要获取签名或更新的证书，请向你的证书颁发机构发送证书签名请求 (CSR)。
 
 在此处拖入包含你私钥的文件。
 
 图 7-84：将签名证书拖入窗口。
 
 - 10. 要为你的网站安装证书，请从服务器中选择 Web 服务（Web service）。然后选择站点（Sites）图标。选择你想应用证书的网站。然后选择“安全”（Security）选项卡。
+
 - 11. 勾选启用安全套层 (SSL)。
+
 - 12. 从证书弹出菜单中选择你刚刚安装的证书。
+
 - 13. 点击保存（Save）按钮为站点启用 SSL。
 
 ## 部署助手
@@ -8702,10 +9016,6 @@ none
 
 证书身份由公共证书和私钥组成。这些证书身份可以用于保护你的：
 
-
-
-
-
 # Windows Server 2008 R2 和 Windows 7 的特定问题
 
 让 Windows Server 2008 R2 和 Windows 7 正常运行相当棘手（委婉地说）。几乎所有默认设置都是关闭的，因此需要大量的额外配置，而且没有文档能真正告诉你在情况出现问题时该怎么办。以下是我从 FileMaker Server 角度发现的认为相当有效的解决方法：
@@ -8714,21 +9024,21 @@ none
 
 80, 5003, 16000, 16001, 16016, 16018, 2399, 16006, 16008, 16010, 16012, 16014, 16004, 50006, 5013
 
-- 2. 如果你运行单机服务器设置，你需要在 PHP 连接文件中指定 "hostspec" 设置。如果这样做，你应该使用带有服务器 IP 地址和端口 443 的 https。这与我在之前之前讨论过的 Web 服务器部署场景中的值相同。例如：
+- 2. 如果你运行单机服务器设置，你需要在 PHP 连接文件中指定 "`hostspec`" 设置。如果这样做，你应该使用带有服务器 IP 地址和端口 443 的 https。这与我在之前之前讨论过的 Web 服务器部署场景中的值相同。例如：
 
 ```
 https://192.168.1.5:443
 ```
 
-实际上，一个鲜为人知的事实是，如果没有定义 hostspec，FileMaker 会假设连接到正确的本地主机 (http://127.0.0.1 或 https://127.0.0.1:443)。因此，在单机部署中，在连接文件中省略它也无妨。
+实际上，一个鲜为人知的事实是，如果没有定义 `hostspec`，FileMaker 会假设连接到正确的本地主机 (`http://127.0.0.1` 或 `https://127.0.0.1:443`)。因此，在单机部署中，在连接文件中省略它也无妨。
 
-- 3. PHP 使用 C:/Windows/Temp 来存储临时文件、会话信息等。然而，默认情况下，IIS 服务器不再具有访问该文件夹的权限。你需要向 Temp 文件夹添加 IUSR 和 IIS_IUSRS 组的完全控制权限。
+- 3. PHP 使用 `C:/Windows/Temp` 来存储临时文件、会话信息等。然而，默认情况下，IIS 服务器不再具有访问该文件夹的权限。你需要向 Temp 文件夹添加 `IUSR` 和 `IIS_IUSRS` 组的完全控制权限。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_266_0.png)
 
-图 7-8：为 Temp 文件夹添加 IUSR 和 IIS_IUSRS 组的权限。
+图 7-8：为 Temp 文件夹添加 `IUSR` 和 `IIS_IUSRS` 组的权限。
 
-- 4. IIS 服务器并不一定喜欢 PHP。PHP 会话、重定向或缺失的 URL name=value 对、$_REQUEST，这些都不是显示 FileMaker 字段内容的代码。因此，当你的网页唯一的出路是显示糟糕的通用错误“Undefined Index（未定义索引）”时，它会抛出大量的错误。我发现的唯一停止方法是更改 php.ini 文件中的 `display_errors` 设置为 `off`。
+- 4. IIS 服务器并不一定喜欢 PHP。PHP 会话、重定向或缺失的 URL name=value 对、`$_REQUEST`，这些都不是显示 FileMaker 字段内容的代码。因此，当你的网页唯一的出路是显示糟糕的通用错误“Undefined Index（未定义索引）”时，它会抛出大量的错误。我发现的唯一停止方法是更改 `php.ini` 文件中的 `display_errors` 设置为 `off`。
 
 ```
 php Notepad
@@ -8755,19 +9065,26 @@ reporting 级别    - 所有错误和警告（不包括 E_STRICT）
 ```
 
 - 示例：
+
 - 显示所有错误，排除通知和编码标准
-  error_reporting = E_ALL & ~E_NOTICE
+
+  `error_reporting = E_ALL & ~E_NOTICE`
+
 - 显示所有错误，排除通知
-  error_reporting = E_ALL & ~E_NOTICE | E_STRICT
+
+  `error_reporting = E_ALL & ~E_NOTICE | E_STRICT`
+
 - 仅显示错误
-  error_reporting = E_ALL & ~E_NOTICE | E_CORE_ERROR
+
+  `error_reporting = E_ALL & ~E_NOTICE | E_CORE_ERROR`
+
 - 显示所有错误，排除编码标准警告
 
 打印错误（作为输出的一部分），对于网站，建议关闭此功能并用错误日志（见下文），在网站上显示错误可能是危险的，因为它会暴露敏感信息，例如服务器上的文件路径、数据库架构或其他信息。
 
-图 7-89：在 php.ini 中关闭显示错误
+图 7-89：在 `php.ini` 中关闭显示错误
 
-IIS 和 PHP 的性能基本上与出箱即用的最小性能设置绑定。你服务器上的内存大小决定了你可以分配给 IIS 和 PHP 的内存。这意味着你不想让 FileMaker 占用 100% 的剩余内存。你需要为你的 Web 服务器留出额外的内存。通过更改 php.ini 文件中的某些设置可以提高 PHP 的性能。我建议对以下项目至少执行出厂设置：
+IIS 和 PHP 的性能基本上与出箱即用的最小性能设置绑定。你服务器上的内存大小决定了你可以分配给 IIS 和 PHP 的内存。这意味着你不想让 FileMaker 占用 100% 的剩余内存。你需要为你的 Web 服务器留出额外的内存。通过更改 `php.ini` 文件中的某些设置可以提高 PHP 的性能。我建议对以下项目至少执行出厂设置：
 
 ```
 max_execution_time = 30 to 120 (seconds)
@@ -8776,11 +9093,7 @@ memory_limit = 8MB to 16MB (MB)
 POST_SIZE = 8MB to 16MB (MB)
 ```
 
-
-
-
-
-AJAX 是如何工作的？用户的浏览器显示一条或多条记录。在网页（show_all.php）上有一个按钮，用户可以点击它显示更多详情。网页上的 JavaScript 创建一个 `XMLHttpRequest` 来将请求（HttpRequest）发送到第二个网页（show_detail.php）。用通俗的话说，这意味着当用户点击按钮时，会创建一个预定义的 URL 字符串，以向第二个网页请求信息。通常请求是 POST 格式，因此在需要时我们可以发送大量数据。接下来，网页接收到 HttpRequest 并将其传递给服务器以检索请求的数据。数据库返回记录，由第二个网页（使用 PHP）创建这些记录，并使用 HTML/CSS 对数据进行格式化，然后直接显示在用户的网页上。最后，JavaScript 处理数据并更新页面内容而无需重新加载。
+AJAX 是如何工作的？用户的浏览器显示一条或多条记录。在网页（`show_all.php`）上有一个按钮，用户可以点击它显示更多详情。网页上的 JavaScript 创建一个 `XMLHttpRequest` 来将请求（HttpRequest）发送到第二个网页（`show_detail.php`）。用通俗的话说，这意味着当用户点击按钮时，会创建一个预定义的 URL 字符串，以向第二个网页请求信息。通常请求是 POST 格式，因此在需要时我们可以发送大量数据。接下来，网页接收到 HttpRequest 并将其传递给服务器以检索请求的数据。数据库返回记录，由第二个网页（使用 PHP）创建这些记录，并使用 HTML/CSS 对数据进行格式化，然后直接显示在用户的网页上。最后，JavaScript 处理数据并更新页面内容而无需重新加载。
 
 你需要实现 AJAX 吗？这里没有需要安装或配置的类或 JavaScript 文件（js）。显然，在这个示例中你需要使用 FileMaker 和 PHP。从现实来说，你应该了解一些基本的 JavaScript、HTML 和 CSS。你可以在不了解如何使用 HTML 和 CSS 的情况下应付，这也是我建议的。最重要的是 JavaScript 函数必须定义得完美。你不会对它做太多的更改。你会一直复制/粘贴相同的代码，只微调需要的地方，例如函数名和/或你想传递给它的任何变量。然而，我将向你展示如何使用 *RecordID* 轻松地每次获取记录，而无需为任何解决方案更改核心 JavaScript 代码。
 
@@ -8798,7 +9111,7 @@ $fm->setProperty('username', 'Admin');
 $fm->setProperty('password', '1234');
 ```
 
-接下来，查找 Demo 布局中的所有记录，并将结果存储在 $records 数组中。这将在网页的主体用于显示数据。
+接下来，查找 Demo 布局中的所有记录，并将结果存储在 `$records` 数组中。这将在网页的主体用于显示数据。
 
 ```php
 $request = $fm->findAllCommand('Demo');
@@ -8806,7 +9119,7 @@ $result = $request->execute();
 $records = $result->getRecords();
 ```
 
-主体是执行显示动态工作和 Show Detail 按钮的地方。AJAX 的工作原理是替换从 show_detail.php 页面返回的 div 标签的内容。在这种情况下，我们将替换 DIV 标签的内容，该标签为了演示演示故意是空的。如果你在 DIV 标签中有任何内容，它将无法被替换。由于我们在页面上处理多条记录，DIV 标签的 ID 不能是固定的。如果我们使用固定名称，则只有第一个出现的 DIV 标签会被替换（这非常局限）。然而，它必须是动态的。我们将使用 JavaScript 为浏览器中显示的每条记录动态命名 DIV 标签。代码会遍历每条记录，并将 RecordID 值存储在变量 $id 中。我们在下方定义了 name 字段及其下方的 Show Detail 按钮。当用户点击（onclick）时，它会触发 ShowDetail JavaScript 函数。由于更新特定内容的 JavaScript，通往此代码段的关键路径是——将动态 DIV 标签名作为 RecordID 传递给 JavaScript 函数。再次，如果页面上有多条记录，你必须动态地命名 DIV 标签，否则 JavaScript 将无法工作。正如你预期的，如果页面上只有一条记录，你可以给 DIV 标签一个固定的名称。但是，由于我们正在处理数据库且代码微调很少，我宁愿反复复制/粘贴相同的代码，而不必担心更改任何内容。这段代码适用于一条记录或多条记录。
+主体是执行显示动态工作和 Show Detail 按钮的地方。AJAX 的工作原理是替换从 `show_detail.php` 页面返回的 div 标签的内容。在这种情况下，我们将替换 DIV 标签的内容，该标签为了演示演示故意是空的。如果你在 DIV 标签中有任何内容，它将无法被替换。由于我们在页面上处理多条记录，DIV 标签的 ID 不能是固定的。如果我们使用固定名称，则只有第一个出现的 DIV 标签会被替换（这非常局限）。然而，它必须是动态的。我们将使用 JavaScript 为浏览器中显示的每条记录动态命名 DIV 标签。代码会遍历每条记录，并将 RecordID 值存储在变量 `$id` 中。我们在下方定义了 name 字段及其下方的 Show Detail 按钮。当用户点击（onclick）时，它会触发 ShowDetail JavaScript 函数。由于更新特定内容的 JavaScript，通往此代码段的关键路径是——将动态 DIV 标签名作为 RecordID 传递给 JavaScript 函数。再次，如果页面上有多条记录，你必须动态地命名 DIV 标签，否则 JavaScript 将无法工作。正如你预期的，如果页面上只有一条记录，你可以给 DIV 标签一个固定的名称。但是，由于我们正在处理数据库且代码微调很少，我宁愿反复复制/粘贴相同的代码，而不必担心更改任何内容。这段代码适用于一条记录或多条记录。
 
 ```html
 </head>
@@ -8825,7 +9138,9 @@ foreach($records as $record) {
 </html>
 ```
 
-现在，下文将解释的 show_detail.php 页面将用于接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail.php 页面，下文解释将接收 POST 请求。show_detail..  ， 文 将  POST 请求。show....   ，  
+
+
+现在，下文将解释的 `show_detail.php` 页面将用于接收 `POST` 请求。
 
 ```javascript
 <script>
@@ -8842,20 +9157,17 @@ function showDetail(id) {
 </script>
 ```
 
-此外，我还定义了异步参数为 true，这意味着其他脚本可以执行等待服务器响应，而 JavaScript 函数可以等待 onchange 准备就（xmlhttp.readyState=4, xmlhttp.status=200）。如果你将该值设置为 false，就违背了使用 AJAX 的目的。
+此外，我还定义了异步参数为 `true`，这意味着其他脚本可以执行等待服务器响应，而 JavaScript 函数可以等待 `onchange` 准备就绪（`xmlhttp.readyState=4`, `xmlhttp.status=200`）。如果你将该值设置为 `false`，就违背了使用 AJAX 的目的。
 
-最后，当代码运行时，onchange 事件必须更改。因此，以下代码将 POST 请求发送到 show_detail.php。show_detail.php 页面，下文解释将接收 POST 请求并通过 URL 中传递的 name=value 对查找记录。在此例中我传递了 id=RecordID，其中 id 是由网页上 Detail 按钮的 JavaScript 提供的。POST URL 看起来像
+最后，当代码运行时，`onchange` 事件必须更改。因此，以下代码将 `POST` 请求发送到 `show_detail.php`。`show_detail.php` 页面，下文解释将接收 `POST` 请求并通过 URL 中传递的 `name=value` 对查找记录。在此例中我传递了 `id=RecordID`，其中 `id` 是由网页上 Detail 按钮的 JavaScript 提供的。`POST` URL 看起来像
 
-## show_detail.php
+## `show_detail.php`
 
-此网页绝对没有任何用户交互。好消息是这让你的代码变得超级简单，因为你不需要创建任何用户界面。你只需要从找到的记录创建最终的 HTML/CSS 输出以匹配 show_all.php 页面。记住，此输出将替换 DIV 标签中的所有内容。坏消息是使用 AJAX，你每次安装新函数都必须创建并管理另一个网页。只要你使用数据库中的 RecordID 值来动态命名 DIV，这些 AJAX 代码就非常容易管理。
+此网页绝对没有任何用户交互。好消息是这让你的代码变得超级简单，因为你不需要创建任何用户界面。你只需要从找到的记录创建最终的 HTML/CSS 输出以匹配 `show_all.php` 页面。记住，此输出将替换 DIV 标签中的所有内容。坏消息是使用 AJAX，你每次安装新函数都必须创建并管理另一个网页。只要你使用数据库中的 `RecordID` 值来动态命名 DIV，这些 AJAX 代码就非常容易管理。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_272_0.png)
 
-图 7-1：使用 AJAX 之前用于显示详情的 show_all.php 页面。
-
-
-
+图 7-1：使用 AJAX 之前用于显示详情的 `show_all.php` 页面。
 
 开始连接数据库。
 
@@ -8866,7 +9178,7 @@ $fm = new FileMaker();
 $fm->setProperty('database'
 ```
 
-由于我们在 URL 字符串中传递了 RecordID，因此可以从 `$_POST` 变量中获取它。然后，只需告诉 FileMaker 使用 Demo Detail 布局中的 `getRecordID` 即可。最后，以所需的 HTML/CSS 格式输出 Address、City 和 State 字段的内容，这些将显示在页面的 DIV 标签中。就这么。速度极快且极简单。
+由于我们在 URL 字符串中传递了 `RecordID`，因此可以从 `$_POST` 变量中获取它。然后，只需告诉 FileMaker 使用 Demo Detail 布局中的 `getRecordID` 即可。最后，以所需的 HTML/CSS 格式输出 Address、City 和 State 字段的内容，这些将显示在页面的 DIV 标签中。就这么。速度极快且极简单。
 
 ```php
 $record = $fm->getRecordID("Demo Detail $_POST["id"]"]);
@@ -8878,7 +9190,7 @@ echo 'State: ' . $record->getField('State') . '>';
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_273_0.png)
 
-7-92: 使用 AJAX后的 show_all.php 页面用于更新一条记录。
+7-92: 使用 AJAX后的 `show_all.php` 页面用于更新一条记录。
 
 # 第34 节：PHP 日历
 
@@ -8889,9 +9201,12 @@ echo 'State: ' . $record->getField('State') . '>';
 **难度：** 困难
 
 **示例文件：**
-- PHPFiles/Advanced/Lesson34/PHPCalendar.php
-- PHPFiles/Advanced/Lesson34/PHPCalendaretail.php
-- PHPFiles/Advanced/Lesson34/PHPCalendar.f12
+
+- `PHPFiles/Advanced/Lesson34/PHPCalendar.php`
+
+- `PHPFiles/Advanced/Lesson34/PHPCalendaretail.php`
+
+- `PHPFiles/Advanced/Lesson34/PHPCalendar.f12`
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_274_1.png)
 
@@ -8900,16 +9215,22 @@ echo 'State: ' . $record->getField('State') . '>';
 | 列表 | 详情 |
 
 **FileMaker API 方法：**
-- newFindAllCommand()
-- execute()
-- getRecords()
-- getRecordID()
-- getField()
-- getRecordByID()
+
+- `newFindAllCommand()`
+
+- `execute()`
+
+- `getRecords()`
+
+- `getRecordID()`
+
+- `getField()`
+
+- `getRecordByID()`
 
 **代码：**
 
-数据库有六个字段。完整的日历可能会有比这更多的字段。然而，我想关注核心需求，即那些点缀功能。你可以将它们添加到你自己的解决方案中。任何好的日历解决方案都允许单个事件记录跨越一天或几天。因此，每条记录都有 DateFrom 和 DateTo。这就是 DateRange 字段用用场。通过使用自定义函数 cRange，我能够为事件创建一个日期列表。DateRange 字段在解决方案中用于查找在每个日历单元格中显示的记录。Time 字段保持记录的顺序。Event 字段由用户填充，对事件进行简短描述。最后，RecordID 是我倾向于在所有 PHP 解决方案中包含的标准记录标识，以便我直接访问 FileMaker 内部数字。
+数据库有六个字段。完整的日历可能会有比这更多的字段。然而，我想关注核心需求，即那些点缀功能。你可以将它们添加到你自己的解决方案中。任何好的日历解决方案都允许单个事件记录跨越一天或几天。因此，每条记录都有 `DateFrom` 和 `DateTo`。这就是 `DateRange` 字段用用场。通过使用自定义函数 `cRange`，我能够为事件创建一个日期列表。`DateRange` 字段在解决方案中用于查找在每个日历单元格中显示的记录。`Time` 字段保持记录的顺序。`Event` 字段由用户填充，对事件进行简短描述。最后，`RecordID` 是我倾向于在所有 PHP 解决方案中包含的标准记录标识，以便我直接访问 FileMaker 内部数字。
 
 创建一个日历看起来像是一项艰巨的任务，确实如此。然而，如果你将其拆解为基本的子组件，你会发现它是一个包含许多重复表格行和表格数据的大表。这应该是第一个关键，代码记录实际上并没有那么困难。你将循环几部分代码来构建日历的 HTML 代码。开始最简单的方法是识别出你需要构建的日历的唯一部分。这些部分是：
 
@@ -8925,7 +9246,7 @@ echo 'State: ' . $record->getField('State') . '>';
 
 图 7-93：PHP 日历使用带有六个字段的单表。
 
-PHPCalendar.php 页面用于绘制月份视图。为了简单起见，我将 CSS 和日历函数包含在一个页面中。通常，你会将 CSS 和日历函数放在单独的页面中，并在代码中使用 include 语句来保持整洁。这篇文章不是关于 CSS 的，所以我我不会讨论日历的get CSS 格式化。你应该能够在代码和你的浏览器中清楚地看到格式，包括滚动效果。我更倾向于简洁和简单。因此，CSS 是简洁而简单的。
+`PHPCalendar.php` 页面用于绘制月份视图。为了简单起见，我将 CSS 和日历函数包含在一个页面中。通常，你会将 CSS 和日历函数放在单独的页面中，并在代码中使用 `include` 语句来保持整洁。这篇文章不是关于 CSS 的，所以我我不会讨论日历的get CSS 格式化。你应该能够在代码和你的浏览器中清楚地看到格式，包括滚动效果。我更倾向于简洁和简单。因此，CSS 是简洁而简单的。
 
 始终从包含数据库连接开始。
 
@@ -8939,7 +9260,9 @@ $fm->setProperty('username', 'Admin');
 $fm->setProperty('password', 'password');
 ```
 
-接下来，我们可以用几个变量绘制日历函数。该函数将接受 3 个参数：$month,$year 和来自数据库的 $records。$running_day 是月份第一天的数字表示（日=0，周一=1...周六=6）。这将有助于通过知道哪个单元格在哪里来绘制第一组空单元格。例如，2011 年 7 月从周五（5）开始。这意味着前四个单元格应该是空的。days_in_month 告诉我们绘制多少个带有数据的单元格（天=31）。最后，初始化 days_in_week 和 day_counter 计数。在代码中使用这些变量。
+接下来，我们可以用几个变量绘制日历函数。该函数将接受 3 个参数：`$month`, `$year` 和来自数据库的 `$records`。`$running_day` 是月份第一天的数字表示（日=0，周一=1...周六=6）。这将有助于通过知道哪个单元格在哪里来绘制第一组空单元格。例如，2011 年 7 月从周五（5）开始。这意味着前四个单元格应该是空的。`days_in_month` 告诉我们绘制多少个带有数据的单元格（天=31）。最后，初始化 `days_in_week` 和 `day_counter` 计数。在代码中使用这些变量。
+
+
 
 ```php
 <?php
@@ -8952,14 +9275,13 @@ function draw_calendar($month,$year,$records) {
 
 接下来，你将组合带有后退和向前链接以及日期的头部。日历的 URL 将使用月份和年份值对（GET），如下所示。当用户进入页面且不存在 GET 参数时，不要担心。我会在代码中处理。
 
-```http://localhost/PHPCalendar.php?month=7&year=2011
-```
+`http://localhost/PHPCalendar.php?month=7&year=2011`
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_276_0.png)
 
 图 7-91：显示后/向前按钮和日期。
 
-从技术上讲，要导航月份你可以增加月份 +/-1，其中 month=-1&year=2011 将正确显示 2010 年 11 月。然而，这有点混乱且不符合逻辑。我将修正链接以计算月份和年份以便 URL 有意义。然后我们将使用修正后的变量来组合链接。
+从技术上讲，要导航月份你可以增加月份 +/-1，其中 `month=-1&year=2011` 将正确显示 2010 年 11 月。然而，这有点混乱且不符合逻辑。我将修正链接以计算月份和年份以便 URL 有意义。然后我们将使用修正后的变量来组合链接。
 
 ```php
 if($month-1 == 0) {
@@ -8982,14 +9304,14 @@ $back=$SERVER['PHP_SELF'] . "?month=" . $back_month . "&year=" . $back_year;
 $fwd=$SERVER['PHP_SELF'] . "?month=" . $fwd_month . "&year=" . $fwd_year;
 ```
 
-组合头部并显示月份和年份以及前后按钮。整个函数中我们将使用 calendar 变量存储生成的 HTML。
+组合头部并显示月份和年份以及前后按钮。整个函数中我们将使用 `calendar` 变量存储生成的 HTML。
 
 ```php
 $calendar='<table class="header"><tr><td><h2>' . $month . ' <a href="' . $back . '">&lt;</a>' .
 date('F Y',mktime(0,0,0,$month,$year)) . ' <a href="' . $fwd . '">&gt;</a></h2></td></tr></table>';
 ```
 
-接下来，开始实际日历表格。我试图让代码尽可能短。我定义了日期并使用 implode 函数为每一天创建表格数据。
+接下来，开始实际日历表格。我试图让代码尽可能短。我定义了日期并使用 `implode` 函数为每一天创建表格数据。
 
 ```php
 $calendar='<table cellpadding="0" cellspacing="0" class="calendar">\n';
@@ -9002,7 +9324,7 @@ implode(',<td class="calendar-day-head">', $headings) . '</td></tr>\n';
 
 图 7-4：显示星期。
 
-现在我们终于制作第一行了。如果月份不是从周日开始，我们需要从任何可能的空单元格开始。我们创建 $running_day 变量也代表月份第一天的数字（7月=5）。我们将使用该数字循环遍历任何空单元格。我们还将使用 CSS 为此单元格涂上灰色背景。
+现在我们终于制作第一行了。如果月份不是从周日开始，我们需要从任何可能的空单元格开始。我们创建 `$running_day` 变量也代表月份第一天的数字（7月=5）。我们将使用该数字循环遍历任何空单元格。我们还将使用 CSS 为此单元格涂上灰色背景。
 
 ```php
 $calendar='<tr class="calendar-row">';
@@ -9016,8 +9338,7 @@ $calendar .= '</tr>';
 
 图 7-95：为第一周创建空单元格。
 
-现在是日历的迭代部分 —— 构建所有单元格并包含记录数据以及指向 PHPCalendar.php 页面的链接以显示参数。我们现在处于第一天，这很简单 —— $list_day=1。我们将循环到月份的最后，这在上面由 $days_in_month 定义（7月=31）。最后，我们将增加日历单元格中的日期。
-
+现在是日历的迭代部分 —— 构建所有单元格并包含记录数据以及指向 `PHPCalendar.php` 页面的链接以显示参数。我们现在处于第一天，这很简单 —— `$list_day=1`。我们将循环到月份的最后，这在上面由 `$days_in_month` 定义（7月=31）。最后，我们将增加日历单元格中的日期。
 
 boost。为了确保我们只显示正确的记录，我们将确保 `DateRange` 字段中存在当前日期。下一个问题是如何显示信息。显然，月视图在显示大量信息方面效率不高。因此，我将显示限制在 23 个字符。这将使得单元格中每行显示一条记录。最后，每行将根据 `RecordID` 创建指向特定日期记录的链接。
 
@@ -9122,47 +9443,65 @@ echo draw_calendar($month,$year,$records);
 
 # 日历
 
-http://localhost/PHPCalendar.php?month=7&year=2011
+`http://localhost/PHPCalendar.php?month=7&year=2011`
 
 Apple Formulations Pro Yahoo! MSN.com Google Maps
 
 # < 2011年7月 >
 
 | 星期日 | 星期一 | 星期二 | 星期三 | 星期四 | 星期五 | 星期六 |
+
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
 | | | | | | | |
+
 | | | | | | 2:00 PM 示例 |
+
 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM | |
+
 | | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 |
+
 | 200 PM 示例 | | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 |
+
 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 |
+
 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 |
+
 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 |
+
 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 |
+
 | | | | | | | |
+
 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 |
+
 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 |
+
 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 |
+
 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 |
+
 | 2:00 PM 示例 | | | | | | |
+
 | | | | | | | |
+
 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 |
+
 | | | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 | 2:00 PM 示例 |
+
 | 2:00 PM 示例 | | | | | | |
 
-http://localhost/PHPCalendar.php?month=7&year=2011
+`http://localhost/PHPCalendar.php?month=7&year=2011`
 
-图 98：使用 $month, $year 和 $records 数据绘制日历。
+图 98：使用 `$month`, `$year` 和 `$records` 数据绘制日历。
 
 # PHPCalendarDetail.php
 
-一旦日历完成后，你还需要为数据创建一个日视图。你可能可以使用 JavaScript 创建一个华丽的弹出窗口。然而，这是一个纯 PHP 解决方案。我将使用 PHPCalendarDetail.php 页面来显示我在月视图中找到详细信息。此页面将显示来自日期的数据，显示该日期的所有记录。如果链接来自单个记录页面，请注意页面上创建的链接；你会发现 NVP 字符串略有不同。如果你从日期链接，NVP 将仅包含 RecordID 值，它会弹出月份、年份和日期。如果你从特定记录链接，它将仅包含 RecordID 值，这使得值准确并设置了特定的代码代码。
+一旦日历完成后，你还需要为数据创建一个日视图。你可能可以使用 JavaScript 创建一个华丽的弹出窗口。然而，这是一个纯 PHP 解决方案。我将使用 `PHPCalendarDetail.php` 页面来显示我在月视图中找到详细信息。此页面将显示来自日期的数据，显示该日期的所有记录。如果链接来自单个记录页面，请注意页面上创建的链接；你会发现 NVP 字符串略有不同。如果你从日期链接，NVP 将仅包含 RecordID 值，它会弹出月份、年份和日期。如果你从特定记录链接，它将仅包含 RecordID 值，这使得值准确并设置了特定的代码代码。
 
+`$fm->setProperty('username', 'Admin');`
 
-
-
-$fm->setProperty('username', 'Admin');
-$fm->setProperty('password', '1234');
+`$fm->setProperty('password', '1234');`
 
 从 URL 中存储变量。
 
@@ -9176,7 +9515,7 @@ $id=$GET['id'];
 开始创建表格以显示数据。显然，这个解决方案并不华复杂。我会让你自己进行美化以匹配你的网站。使用你喜欢的代码更重要。
 
 ```php
-echo '<table width="100%\'>";
+echo '<table width="100%\">';
 echo '<tr>';
 echo '<td></td>';"
 ```
@@ -9224,6 +9563,8 @@ if(isset($_GET['day']))
 
 然后遍历查找集中的每条记录以显示结果。
 
+
+
 ```php
 echo '</table>';
 echo '</tr>';
@@ -9237,26 +9578,30 @@ echo '</table>';
 
 # 第 35 节：比较日期
 
-目标：在本节中，你将学习如何使用 FileMaker 与 PHP 比较日期。早晚你都会需要显示通过日期过滤或某种类型比较的记录，以做出分支决策。例如，仅显示日期大于今天的相关记录计划。你们中的大多数人可能想：这很简单，我只需在数据库布局上对门户进行过滤，并使用 `setRelatedSetsFilters` 来过滤显示，这将会轻而易举。问题在于，在编写本节时，`setRelatedSetsFilters` 函数无法工作。因此，你将创建一个带有额外字段的特定发生（TOG），然后编写权限集（Privilege Set）来过滤记录，或者在你的 PHP 代码中执行日期比较。这两者各有优劣。额外的 TOG 意味着你的 PHP 站点增加了不必要的负担。权限集与使用门户过滤器对话框无区别。所有记录都会返回给你，而哪些记录是由 FileMaker 引擎控制的。因此，服务器上的负载与你发送所有记录一样。问题是，权限集会在每个布局上的任何时候过滤所有记录，而不仅仅是你的特殊 PHP 页面上的一个门户。因此，减少负担的唯一合理选择是在你的 PHP 页面上编写日期比较，以保持数据库尽可能整洁。本节将向你展示在 FileMaker 与 PHP 中比较日期的几种不同方法（以及陷阱）。
+## 目标
+在本节中，你将学习如何使用 FileMaker 与 PHP 比较日期。早晚你都会需要显示通过日期过滤或某种类型比较的记录，以做出分支决策。例如，仅显示日期大于今天的相关记录计划。你们中的大多数人可能想：这很简单，我只需在数据库布局上对门户进行过滤，并使用 `setRelatedSetsFilters` 来过滤显示，这将会轻而易举。问题在于，在编写本节时，`setRelatedSetsFilters` 函数无法工作。因此，你将创建一个带有额外字段的特定发生（TOG），然后编写权限集（Privilege Set）来过滤记录，或者在你的 PHP 代码中执行日期比较。这两者各有优劣。额外的 TOG 意味着你的 PHP 站点增加了不必要的负担。权限集与使用门户过滤器对话框无区别。所有记录都会返回给你，而哪些记录是由 FileMaker 引擎控制的。因此，服务器上的负载与你发送所有记录一样。问题是，权限集会在每个布局上的任何时候过滤所有记录，而不仅仅是你的特殊 PHP 页面上的一个门户。因此，减少负担的唯一合理选择是在你的 PHP 页面上编写日期比较，以保持数据库尽可能整洁。本节将向你展示在 FileMaker 与 PHP 中比较日期的几种不同方法（以及陷阱）。
 
-难度：简单
+**难度：** 简单
 
-示例文件：
-- PHPFiles/Advanced/Lesson35/CompareDates.php
-- PHPFiles/Advanced/Lesson35/CompareDates.fp12
+**示例文件：**
 
-| 此处使用独立的数据库文件来演示课程。请将 CompareDates.fp12 数据库文件上传到你的服务器 |
+- `PHPFiles/Advanced/Lesson35/CompareDates.php`
+- `PHPFiles/Advanced/Lesson35/CompareDates.fp12`
+
+| 此处使用独立的数据库文件来演示课程。请将 `CompareDates.fp12` 数据库文件上传到你的服务器 |
 | :--- |
 
-页面导航：N/A
+**页面导航：** N/A
 
-FileMaker API 方法：
-- newFindAllCommand()
-- execute()
-- getFirstRecord()
-- getField()
+**FileMaker API 方法：**
 
-代码：
+- `newFindAllCommand()`
+- `execute()`
+- `getFirstRecord()`
+- `getField()`
+
+### 代码
+
 从连接数据库开始。
 
 ```html
@@ -9272,7 +9617,7 @@ $fm->setProperty('password', '1234');
 ?>?>
 ```
 
-我没有在这个示例中对数据进行任何特殊处理以显示数据。目标是比较日期并显示结果，以便你可以看到哪些方法有效，哪些方法存在问题。因此，我只显示表格中的第一条记录并将结果返回给 $record 变量。
+我没有在这个示例中对数据进行任何特殊处理以显示数据。目标是比较日期并显示结果，以便你可以看到哪些方法有效，哪些方法存在问题。因此，我只显示表格中的第一条记录并将结果返回给 `$record` 变量。
 
 ```php
 $request = $fm->findAllCommand('Demo');
@@ -9293,8 +9638,6 @@ if($record->getField('Date1') < $record->getField('Date2')) {
 ```
 
 第二个示例比较了 FileMaker 内部的两个日期字段。这种直接从数据库比较日期的方法按预期工作，并将做出正确的判断并显示正确的结果。
-
-（注：原文中后续部分存在重复和乱码，已根据逻辑进行处理）
 
 秒数（自 1970 年 1 月 1 日 Unix 纪元）。
 
@@ -9322,22 +9665,28 @@ If($today <= $date) {
 **难度：** 简单
 
 **示例文件：**
-PHPFiles/Advanced/Lesson36/DisplayHTMLCSSUsingPHP.php
-PHPFiles/Advanced/Lesson36/DisplayHTMLCSSUsingPHP.fmp12
 
-> 本节使用单独的数据库文件进行演示。请将 DisplayHTMLCSSUsingPHP.fmp12 数据库文件上传到你的服务器。
+`PHPFiles/Advanced/Lesson36/DisplayHTMLCSSUsingPHP.php`
+
+`PHPFiles/Advanced/Lesson36/DisplayHTMLCSSUsingPHP.fmp12`
+
+> 本节使用单独的数据库文件进行演示。请将 `DisplayHTMLCSSUsingPHP.fmp12` 数据库文件上传到你的服务器。
 
 **页面导航：**
 
 - - 列表
 
 **FileMaker API 方法：**
-newFindAllCommand()
-execute()
-getFirstRecord()
-getField()
 
-**代码：**
+`newFindAllCommand()`
+
+`execute()`
+
+`getFirstRecord()`
+
+`getField()`
+
+### 代码
 
 从连接数据库开始。
 
@@ -9360,7 +9709,7 @@ $fm->setProperty('password', '1234');
 echo '<td>' . html_entity_decode($record->getField('Text')) . '</td>';
 ```
 
-| html_entity_decode(string): 将所有 HTML 实体转换为其相应的字符。 | http://us.php.net/manual/function.html-entity-decode |
+| `html_entity_decode(string)`: 将所有 HTML 实体转换为其相应的字符。 | http://us.php.net/manual/function.html-entity-decode |
 
 你注意到的是使用了 PHP 函数 `html_entity_decode()`。该函数的作用是将所有 HTML 实体转换为相应的字符，并按预期显示来自 `Text` 字段的 HTML 和 CSS。如果你在编写普通的 FileMaker for PHP 代码时省略此函数，你将获得字段的“原样”内容，而没有任何 HTML 或 CSS 格式化效果。这意味着 HTML 和 CSS 标签将以原始文本的形式显示。当你将浏览器中的示例网页与数据库中的内容进行比较时，就能看到区别。
 
@@ -9378,14 +9727,14 @@ echo '<td>' . $record->getFieldUnencoded('Text') . '</td>';
 
 当你需要使用 PHP 和 FileMaker 编码/解码特殊字符时，可能会发现以下函数有用：
 
-- html_entity_decode() — 将所有 HTML 实体转换为其相应的字符 http://us3.php.net/manual/en/function.html-entity-decode.php
-- htmlentities() — 将所有相应的字符转换为 HTML 实体 http://www.php.net/manual/en/function.htmlentities.php
-- htmlspecialchars() — 将特殊字符转换为 HTML 实体 http://www.php.net/manual/en/function.htmlspecialchars.php
-- htmlspecialchars_decode() — 将特殊的 HTML 实体转换回字符 http://www.php.net/manual/en/function.htmlspecialchars-decode.php
+- `html_entity_decode()` — 将所有 HTML 实体转换为其相应的字符 http://us3.php.net/manual/en/function.html-entity-decode.php
+- `htmlentities()` — 将所有相应的字符转换为 HTML 实体 http://www.php.net/manual/en/function.htmlentities.php
+- `htmlspecialchars()` — 将特殊字符转换为 HTML 实体 http://www.php.net/manual/en/function.htmlspecialchars.php
+- `htmlspecialchars_decode()` — 将特殊的 HTML 实体转换回字符 http://www.php.net/manual/en/function.htmlspecialchars-decode.php
 
 所有 PHP 字符串函数 http://www.php.net/manual/en/ref/strings.php
 
-# 第 36 节：使用 PHP 显示 HTML
+## 第 36 节：使用 PHP 显示 HTML
 
 | 解码后 | 原始文本 |
 |---|---|
@@ -9394,12 +9743,15 @@ echo '<td>' . $record->getFieldUnencoded('Text') . '</td>';
 | 以下是如何为网页对字段中的数据进行格式化的下一记录和 | 以下是如何为网页对字段中的数据进行格式化的下一记录和 |
 
 DisplayHTMLUsingPHP 示例网页
+
 如果你需要包含 HTML 标签或 CSS 样式，使用 `html_entity_decode()`
 
 未编码文本
+
 输入到字段中时将显示这段纯文本。注意你在 FileMaker 中应用的格式不会转换为 PHP 网页。以下是如何为网页对字段中的数据进行格式化的下一记录。
 
 DisplayHTMLUsingPHP 示例网页
+
 如果你需要包含 HTML 标签或 CSS 样式，使用 `html_entity_decode()`
 
 FileMaker 的一个特殊功能是你可以提供一个 CSS 脚本来为用户转换 CSS。你还可以使用计算，这可以让你在网页上使用计算时确保格式按预期显示。
@@ -9407,11 +9759,8 @@ FileMaker 的一个特殊功能是你可以提供一个 CSS 脚本来为用户�
 ```
 <span style="font-size:14px;font-weight:bold;">html_entity_decode(Text)</span>
 ```
+
 它是相当准确的，它使用脚本为用户转换 CSS。
-
-
-
-
 
 通过产品表进行计算或查找链接，并将其与 `RandomKey` 值组合以完成完整的 URL 链接。最后，通过电子邮件将链接发送给客户。
 
@@ -9496,6 +9845,8 @@ if($currentdate > $expirationdate) {
 
 接下来，我们需要增加 `DownloadAttempts` 字段。
 
+
+
 ```php
 $edit = $fm->newEdit('Demo', $recordid);
 $edit->addField('DownloadAttempts', $downloadattempts + 1);
@@ -9510,38 +9861,49 @@ header('Content-Disposition: attachment; filename=' . $filename);
 readfile($fullPath);
 ```
 
-
-
 最后，我们可以构建请求头来强制浏览器下载文件而不是显示它。请求头相当复杂。我并不认为自己是构建请求头内容的专家。然而，如果你不确定需要在请求头中包含哪些内容，可以自己给自己发送一封带有附件的邮件并查看其源代码。在互联网上进行了大量搜索并尝试了一些导致下载的文件文件损坏的方法后，我终于拼凑出以下可以运行的代码，它可以将文件输出到浏览器并同时保持缓存清理。
 
 这部分是必须的。
 
 ```
 header("Pragma: public");
+```
 
 立即使请求头过期，从而强制浏览器刷新链接而不是使用缓存。
 
+```
 header("Expires: 0");
+```
 
 让请求头在今天过期。
 
+```
 header("Last-Modified: .date(r)");
+```
 
 强制浏览器从服务器下载文件而不是缓存，以获取文件的最新副本。
 
+```
 header("Cache-Control: must-revalidate
 }
 ?>
 ```
 
-| header(string): 用于发送原始 HTTP 请求头。记住，header() 必须在发送任何实际输出之前调用，否则它将抛出错误。 |
-| http://us.php.net/manual/en/function/header.php |
-| ob_clean(): 清理（擦除）输出缓冲区。 |
-| http://us.php.net/manual/en/function/ob_clean.php |
-| flush(): 刷新输出缓冲区。这尝试立即将当前输出推送到浏览器。 |
-| http://us.php.net/manual/en/function/flush.php |
-| readfile(filename): 读取文件并将其写入输出缓冲区。 |
-| http://us.php.net/manual/en/function/readfile.php |
+| `header(string)`: 用于发送原始 HTTP 请求头。记住，`header()` 必须在发送任何实际输出之前调用，否则它将抛出错误。 |
+
+| `http://us.php.net/manual/en/function/header.php` |
+
+| `ob_clean()`: 清理（擦除）输出缓冲区。 |
+
+| `http://us.php.net/manual/en/function/ob_clean.php` |
+
+| `flush()`: 刷新输出缓冲区。这尝试立即将当前输出推送到浏览器。 |
+
+| `http://us.php.net/manual/en/function/flush.php` |
+
+| `readfile(filename)`: 读取文件并将其写入输出缓冲区。 |
+
+| `http://us.php.net/manual/en/function/readfile.php` |
 
 # 第 38 节：Google 饼图
 
@@ -9550,25 +9912,34 @@ header("Cache-Control: must-revalidate
 **难度：** 中
 
 **示例文件：**
-PHPFiles/Advanced/Lesson38/GooglePieChart.php
-PHPFiles/Advanced/Lesson38/GooglePieCharts.fp12
+
+`PHPFiles/Advanced/Lesson38/GooglePieChart.php`
+
+`PHPFiles/Advanced/Lesson38/GooglePieCharts.fp12`
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_296_0.png)
 
 **页面导航：**
 
 **FileMaker API 方法：**
-- newFindAllCommand()
-- addSortRule()
-- execute()
-- getRecords()
-- getField()
+
+- `newFindAllCommand()`
+
+- `addSortRule()`
+
+- `execute()`
+
+- `getRecords()`
+
+- `getField()`
 
 **代码：**
+
 Google Chart API 让每个技能水平的人制作图表变得极其简单。你会遇到的最困难的事情是从数据库中检索数据并按照它们的标准进行格式化，这其实也不难。之后就取决于你决定想要利用图表的哪些功能。有几个必选元素和大量的可选元素供你利用。本节的示例页面包含了每个元素，仅需一行简单的代码即可嵌入图像，该图像将所有数据传递给 Google 并向你的网页返回图表图像。
 
 > 有关 Google Chart API 的完整信息，请访问 Google Web 页面：
-http://google.com/apis/chart/image/docs/making_charts.html
+
+`http://google.com/apis/chart/image/docs/making_charts.html`
 
 始终从连接数据库开始。
 
@@ -9602,24 +9973,21 @@ $data = rtrim($data, ", ");
 $labels = rtrim($labels, ", ");
 ```
 
-rtrim(string): 去除字符串末尾的空格或其他字符。
+`rtrim(string)`: 去除字符串末尾的空格或其他字符。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_297_0.png)
 
-# 必要元素
+## 必要元素
 
 目标是构建一个用于 image 标签的 URL。基础 URL googleapis.com/chart 是：
 
-https://chart.googleapis.com/chart?
+`https://chart.googleapis.com/chart?`
 
 从这里开始用 `&` 分隔添加所有的键值对 (NVPs)，`&` 是 `&` 的 URL 编码值。`&?` 因为我们将图表 URL 作为图像源嵌入网页中。为了获得正确的 URL 字符串，特殊字符需要进行 URL 编码。也包括对数据库中任何可能引起字符串问题的值进行编码。与其创建一个沉重的值字符串，我决定在 PHP 代码中定义必要和可选变量。然后以易于阅读和修改的顺序组装最终的 URL 字符串。NVPs 可以任何顺序组装。然而，我倾向于必要元素和随机 ID 数字的顺序。
 
-# 可选元素
+## 可选元素
 
 以下元素是可选的。我这种设置方式的好处是所有元素都存在，即使它们可能不会被利用。你只需要决定是否想要使用它们。
-
-
-
 
 你能想象必须用所有的原始字符串来组装源码吗？我相信在 PHP 代码中设置变量可以为每种类型的图表创建模板变得更容易，更容易修改图表的设计和显示，并且确实让图像标签的组装和解析变得简单易得多。
 
@@ -9634,32 +10002,40 @@ https://chart.googleapis.com/chart?
 **难度：** 中等
 
 **示例文件：**
-- PHPFiles/Advanced/Lesson38/GoogleBarChart.php
-- PHPFiles/Advanced/Lesson38/GoogleBarCharts.fmp12
+
+- `PHPFiles/Advanced/Lesson38/GoogleBarChart.php`
+
+- `PHPFiles/Advanced/Lesson38/GoogleBarCharts.fmp12`
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_300_0.png)
 
-本节使用数据库文件进行演示。请将 GoogleBarCharts.fmp12 数据库文件上传到你的服务器。
+本节使用数据库文件进行演示。请将 `GoogleBarCharts.fmp12` 数据库文件上传到你的服务器。
 
-# 页面导航：
+## 页面导航：
 
 - 列表
 
 **FileMaker API 方法：**
-- newFindAllCommand()
-- addSortRule()
-- execute()
-- getRecords()
-- getField()
 
-# 代码：
+- `newFindAllCommand()`
+
+- `addSortRule()`
+
+- `execute()`
+
+- `getRecords()`
+
+- `getField()`
+
+## 代码：
 
 Google Chart API 为每个技能水平的人制作图表变得极其简单。你会遇到的最困难的事情是从数据库中检索数据并将其格式化为它们的标准，这并不算困难。之后，就取决于你想要利用图表的哪些功能了。有几个必选元素和大量的可选元素供你利用。本节的示例页面包含了每个元素，并用一行简单的代码实现嵌入图像，该代码将所有数据传递给 Google 并将图表图像返回到你的网页。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_300_1.png)
 
 有关 Google Chart API 的完整信息，请访问 Google 网页：
-http://code.google.com/apis/chart/image/docs/making_charts.html
+
+`http://code.google.com/apis/chart/image/docs/making_charts.html`
 
 始终从包含到数据库的连接开始。
 
@@ -9682,11 +10058,11 @@ $request = newFindAll('Demo');
 $request->addSort('Number');
 ```
 
-# 必选元素
+## 必选元素
 
 和饼图一样，目标是为图像容器构建一个 URL。每种类型图表的基础 URL 为：
 
-https://chart.googleapis.com/chart?
+`https://chart.googleapis.com/chart?`
 
 从那里开始，是所有由 `&` 分隔的键值对 (NVPs)，即 `&` 的编码值。为什么是 `&amp;`？因为我们要将图表 URL 作为图像源嵌入到网页中。为了获得正确的 URL，特殊字符需要编码。这还包括数据库中任何可能导致字符串出现问题的值。与其创建一个巨大的值字符串，我决定在 PHP 代码内部定义所有必选和可选变量。然后以一种易读且易修改的格式组装最终 URL。NVPs 可以按任何顺序组装。然而，我更倾向于必选、可选和随机 ID 数字的顺序。让我们从必选的 NVPs 开始。
 
@@ -9732,7 +10108,7 @@ $chbb='chbb=25,5' . '&';
 $chid='chid=' . md5(rand(),true) . '&';
 ```
 
-# 可选元素
+## 可选元素
 
 以下图表元素是可选的。我设置图表的方式的好处是，所有元素都为你准备好了，尽管它们可能不会被使用。你只需要决定是否要使用它们并将它们包含在图像源中。第一个是标题，格式化实际上是一个必选元素。如果不包含它，图表将无法工作。标题要求单词用 `|` 分隔。如果你需要额外的行，可以使用 `|` 字符。颜色通过 API 以十六进制格式指定。
 
@@ -9782,10 +10158,6 @@ $chf='bg,s,EFEF'
 <img src="https://chart.googleapis.com/chart?<?php echo $cht . $chs . $chds . $chd . $chl . $chm . $chbb . $scht . $chid?>">
 ```
 
-
-
-
-
 # 第 38 Lesson：Google 折线图
 
 **目标：** 在本节中，你将学习如何集成 Google 图表 API。我决定让它与我的 FileMaker Pro 11 文章《图表，第2部分》（可以在我们的网站 www.formulationspro.com/FileMaker 章节查看）非常相似，在该文中我创建了一个用于监控设施温度的统计过程控制图。你将能够看到 FileMaker Pro 与 PHP 制作图表之间的差异。PHP 的构建显然更加复杂，因为没有向导可以帮助你。结果是，你将能够构建一个完全按照你想要的方式显示数据的复合折线图。
@@ -9793,22 +10165,30 @@ $chf='bg,s,EFEF'
 **难度：** 中等
 
 **示例文件：**
-PHPFiles/Advanced/Lesson38/GoogleLineChart.php
-PHPFiles/Advanced/Lesson38/GoogleLineCharts.fmp12
 
-> 本节使用独立的数据库文件进行演示。请将 GoogleLineCharts.fmp12 数据库文件上传到你的服务器。
+`PHPFiles/Advanced/Lesson38/GoogleLineChart.php`
 
-# 页面导航：
+`PHPFiles/Advanced/Lesson38/GoogleLineCharts.fmp12`
+
+> 本节使用独立的数据库文件进行演示。请将 `GoogleLineCharts.fmp12` 数据库文件上传到你的服务器。
+
+## 页面导航：
 
 - 列表
 
 **FileMaker API 方法：**
-- newFindAllCommand()
-- addSortRule()->execute()
-- Records()
-- getField()
 
-# 代码：
+- `newFindAllCommand()`
+
+- `addSortRule()->execute()`
+
+- `Records()`
+
+- `getField()`
+
+## 代码：
+
+
 
 折线图具有许多可以迅速变得复杂的特性。特别是当你有多个数据系列时。Google Chart API 允许你构建简单的无轴图表，为每个点定义 x 和 y 坐标，并创建复合折线图。我选择创建一个复合折线图来表示我的数据图表、上控制限（UCL）和下控制限（LCL）。
 
@@ -9868,7 +10248,7 @@ foreach($records as $record) {
 }
 ```
 
-# 必需元素
+## 必需元素
 
 与其他元素不同，目标是构建一个用于容器的 URL 字符串。图表类型的基础 URL 字符串是：
 
@@ -9881,8 +10261,6 @@ https://googleapis.com/chart/
 // ... (组装最终 URL 字符串的逻辑)
 $scht = "https://googleapis.com/chart/?cht=lc&";
 ```
-
-
 
 ```php
 $chtt = 'chtt=SalesByRegion' . ' ' . date('m/d/Y') . ' ' . '&';
@@ -9928,7 +10306,7 @@ $chf = 'chf' . 'bg,s=EFEFEF' . ' ' . '&';
 
 图 7-104：Google 折线图
 
-# 第39 节：Google Map API 商店定位器
+## 第39 节：Google Map API 商店定位器
 
 **目标：** 在本节中你将学习如何集成 Google map API。如果你一直尝试将 Google maps 集成到你的 FileMaker PHP 站点，我知道你查看过他们的代码，要么放弃了，要么在忍受无数页文档和 JavaScript 中浪费了时间。截至 2011 年 5 月，Brad Welled 发布了一个卓越的 PHP 类，让 Google Maps 变得极其容易使用。尽管没有被 Google “官方支持”（因为它不是内部项目），但他们在会议上展示了它，并为 Brad 提供了一个使用他们域名的漂亮网站。这告诉我 Google 真的很喜欢它，我也一样。你可以在此处找到关于该类的更多信息：
 
@@ -9939,23 +10317,31 @@ http://code.google.com/p/php-google-map-api/
 **难度：** 困难
 
 **示例文件：** 
-- PHPFiles/Advanced/Lesson39/GoogleMap.php
-- PHPFiles/Advanced/Lesson39/JSMIn.php
-- PHPFiles/Advanced/Lesson39/StoreLocator.php
-- PHPFiles/Advanced/Lesson39/StoreLocator.f12
 
-本节使用独立的数据库文件来演示。请将 StoreLocator.fmp2 数据库文件上传到你的服务器。
+- `PHPFiles/Advanced/Lesson39/GoogleMap.php`
+
+- `PHPFiles/Advanced/Lesson39/JSMIn.php`
+
+- `PHPFiles/Advanced/Lesson39/StoreLocator.php`
+
+- `PHPFiles/Advanced/Lesson39/StoreLocator.f12`
+
+本节使用独立的数据库文件来演示。请将 `StoreLocator.fmp2` 数据库文件上传到你的服务器。
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_309_0.png)
 
 **页面导航：**
 
 | 列表 |
+
 |---|
 
 **FileMaker API 方法：**
+
 - `newPerformScriptCommand(`
+
 - `getRecords(`
+
 - `getField(`
 
 **代码：**
@@ -9976,7 +10362,7 @@ http://en.wikipedia.org/wiki/Haversine_formula
 
 距离计算的数学涉及相当复杂的三角学。由于数学课不是重点，我将让你自己理解这些数学，只要你可以直接使用该计算且它就能正常工作。关于距离计算，我唯一要说的是它是按英里计算距离。如果你在公里中使用它，可以更改计算中的常量。
 
-StoreLocator.php
+### StoreLocator.php
 
 有两个主要过程来使此解决方案运行。首先是 PHP 页面。其次是商店定位器。分别描述它们更高效，所以我们将从 PHP 页面开始。始终从包含数据库的连接开始。
 
@@ -9991,7 +10377,7 @@ $fm->setProperty('password', '1234');
 ?>
 ```
 
-你还需要包含下载文件中要求你提供的两个类。GoogleMap.php 包含了连接到 Google Map API 的所有代码。从技术上说你不需要对其进行任何操作。但是，如果你浏览它，你会发现你可以通过将值从 `false` 改为 `true` 来配置通过 API 提供的任何功能。大多数功能在该文件中默认开启。对于控制 Google Map API 的简单性，我怎么说都不为过。你会怎么做——将值从 `false` 改为 `true`，还是处理 Google 的数百行代码？接下来是 JSMin.php，就这些了。再次，我向 Brad 致敬，因为他将所有代码移植到了 PHP。你不需要编写任何 JavaScript。它就能正常工作！
+你还需要包含下载文件中要求你提供的两个类。`GoogleMap.php` 包含了连接到 Google Map API 的所有代码。从技术上说你不需要对其进行任何操作。但是，如果你浏览它，你会发现你可以通过将值从 `false` 改为 `true` 来配置通过 API 提供的任何功能。大多数功能在该文件中默认开启。对于控制 Google Map API 的简单性，我怎么说都不为过。你会怎么做——将值从 `false` 改为 `true`，还是处理 Google 的数百行代码？接下来是 `JSMin.php`，就这些了。再次，我向 Brad 致敬，因为他将所有代码移植到了 PHP。你不需要编写任何 JavaScript。它就能正常工作！
 
 ```php
 <?php
@@ -10000,9 +10386,7 @@ include_once('JSMin.php');
 ?>
 ```
 
-接下来，使用 PHP_SELF 动态快捷创建表单，将表单指向同一页面。之后，你可以根据你的解决方案设置任何合理值的距离弹出菜单。
-
-
+接下来，使用 `PHP_SELF` 动态快捷创建表单，将表单指向同一页面。之后，你可以根据你的解决方案设置任何合理值的距离弹出菜单。
 
 ```
 <option value="25">25</option>
@@ -10013,7 +10397,7 @@ include_once('JSMin.php');
 </form>
 ```
 
-现在我们可以进入代码的核心部分，该类只需几行代码就能驱动 Google Map API。在用户点击提交（Submit）按钮之前，代码将不会运行。然后，你可以创建一个新的 `GoogleMapAPI` 对象并根据搜索字段检索坐标。坐标实际上是以值关联数组的形式返回的。这使得通过指定 'lat' 和 'lon' 的值可以轻松地创建 $SearchLat 和 $SearchLon 变量。不要忘记 URL 中可用的距离值。最后，该类还可以访问 API 结果以验证地址。如果地址无效，它将返回一个错误，你可以将其错误报告给用户。
+现在我们可以进入代码的核心部分，该类只需几行代码就能驱动 Google Map API。在用户点击提交（Submit）按钮之前，代码将不会运行。然后，你可以创建一个新的 `GoogleMapAPI` 对象并根据搜索字段检索坐标。坐标实际上是以值关联数组的形式返回的。这使得通过指定 'lat' 和 'lon' 的值可以轻松地创建 `$SearchLat` 和 `$SearchLon` 变量。不要忘记 URL 中可用的距离值。最后，该类还可以访问 API 结果以验证地址。如果地址无效，它将返回一个错误，你可以将其错误报告给用户。
 
 ```
 if(isset($_GET['submit'])) {
@@ -10031,14 +10415,18 @@ if(isset($_GET['submit'])) {
 ```
 
 Array
+
 (
+
 [lon] => -106.374
+
 [lat] => 39.6403
+
 )
 
-图 7-105 $geo_coords 数组 — lat 和 lon 值以值关联数组的形式返回。
+图 7-105 `$geo_coords` 数组 — lat 和 lon 值以值关联数组的形式返回。
 
-现在我们有了 Lat、Lon 和 Distance 值，可以将这些值传递给数据库中的门店定位（Store Locator）脚本。我在调用 `PerformScriptCommand` 时使用变量，以便使代码更易读和易修改。修改用于数据库（Demo）的 $Layout、脚本名称 $script（Store Locator）以及脚本参数 $script parameter。如果你仔细查看我用于 SearchLat、SearchLon 和 Distance 的脚本参数，你会发现我正以一种类似 XML 的格式传递它们（例如：`<SearchLon>39.6403</SearchLon>`）。我更倾向于以这种格式传递变量，因为我在数据库中有一个自定义函数，可以通过指定字段名称来解析这些值，这非常有用。我将在下方的“门店定位”部分进行详细说明。不过，目前只是为了指出传递脚本参数的格式。执行代码后，它将运行脚本并将结果返回给用户。你所做的就是检查错误，最常见的错误是
+现在我们有了 Lat、Lon 和 Distance 值，可以将这些值传递给数据库中的门店定位（Store Locator）脚本。我在调用 `PerformScriptCommand` 时使用变量，以便使代码更易读和易修改。修改用于数据库（Demo）的 `$Layout`、脚本名称 `$script`（Store Locator）以及脚本参数 `$script parameter`。如果你仔细查看我用于 SearchLat、SearchLon 和 Distance 的脚本参数，你会发现我正以一种类似 XML 的格式传递它们（例如：`<SearchLon>39.6403</SearchLon>`）。我更倾向于以这种格式传递变量，因为我在数据库中有一个自定义函数，可以通过指定字段名称来解析这些值，这非常有用。我将在下方的“门店定位”部分进行详细说明。不过，目前只是为了指出传递脚本参数的格式。执行代码后，它将运行脚本并将结果返回给用户。你所做的就是检查错误，最常见的错误是
 
 ```
 $layout = 'Demo';
@@ -10052,7 +10440,9 @@ if (File::iserror($result)) {
 }
 ```
 
-```
+
+
+```php
 else {
   $records = $result->getRecords();
   echo '<table border="1" cellpadding="3">';
@@ -10087,26 +10477,36 @@ else {
 
 # 门店定位 (Store Locator)
 
-门店定位脚本是该过程中的一个重要组件。经过反复讨论，我决定更喜欢这种方法，而不是返回表格中的所有记录，然后使用 PHP 代码计算显示哪些记录。这两种方法都有其优点。然而，出于扩展性考虑，我认为显示 $records 变量中的特定记录集比不断使用额外的 PHP 代码来过滤显示要好。
+门店定位脚本是该过程中的一个重要组件。经过反复讨论，我决定更喜欢这种方法，而不是返回表格中的所有记录，然后使用 PHP 代码计算显示哪些记录。这两种方法都有其优点。然而，出于扩展性考虑，我认为显示 `$records` 变量中的特定记录集比不断使用额外的 PHP 代码来过滤显示要好。
 
-每个从服务器运行的脚本都会从开启“用户警报”（User Alert）和“错误捕获”（Error Capture）开始。这将防止不支持的脚本步骤停止脚本运行，并确保不显示错误框（这在服务器上会导致不可预测的结果）。接下来，我需要将经纬度插入到 SearchLat 和 SearchLon 全局字段中。值被插入到这些字段中，并为每个记录计算数据。如果你记得上一个部分，这些值是通过脚本参数传递的。这意味着你可以使用 `GetScriptParameter()` 函数访问数据。然而我在一个脚本参数中传递了三个值。我使用了 `ParseXMLData` 自定义函数，它允许你通过指定名称来解析参数值。所有的重型工作都由该自定义函数完成。参见 formulationspro.com 上的文章《ParseXML Script Parameters》。距离（Distance）字段需要一些额外的处理。通过在脚本的搜索条件中添加 `<="`，我们将检索从 0 到指定距离的所有记录。最后，在结束脚本并将找到记录集返回页面之前，按 Distance 和 Name 字段对记录进行排序。这并不难——该脚本与你在客户端解决方案中创建的任何其他内容相比并不复杂。
+每个从服务器运行的脚本都会从开启“用户警报”`User Alert`和“错误捕获”`Error Capture`开始。这将防止不支持的脚本步骤停止脚本运行，并确保不显示错误框（这在服务器上会导致不可预测的结果）。接下来，我需要将经纬度插入到 `SearchLat` 和 `SearchLon` 全局字段中。值被插入到这些字段中，并为每个记录计算数据。如果你记得上一个部分，这些值是通过脚本参数传递的。这意味着你可以使用 `GetScriptParameter()` 函数访问数据。然而我在一个脚本参数中传递了三个值。我使用了 `ParseXMLData` 自定义函数，它允许你通过指定名称来解析参数值。所有的重型工作都由该自定义函数完成。参见 formulationspro.com 上的文章《ParseXML Script Parameters》。距离 `Distance` 字段需要一些额外的处理。通过在脚本的搜索条件中添加 `<="`，我们将检索从 0 到指定距离的所有记录。最后，在结束脚本并将找到记录集返回页面之前，按 `Distance` 和 `Name` 字段对记录进行排序。这并不难——该脚本与你在客户端解决方案中创建的任何其他内容相比并不复杂。
 
 - 允许警报 [  ]
+
 - 设置错误捕获 [  ]
+
 - 模式 [ 设置字段 demo:SearchLat; ParseXMLData ( Get(ScriptParameter); "SearchLat"; 1
+
 - 设置字段 demo::SearchLon; ParseXMLData ( Get(ScriptParameter); "SearchLon" ; 1 )
+
 - 提交记录/请求（跳过数据输入验证；无对话框）
+
 - 设置字段 demo::Distance; "<=" & ParseXMLData ( Get(ScriptParameter); "Distance" ; ; ) 执行查找 [ \
+
 按指定顺序排序记录：demo::Distance; 升序 demo::Name;
+
 升序；恢复；无对话框 ]
 
 ![](img/5a2c5a)
 
 输入您的地址（城市，州）或邮政编码：
+
 距离（英里）：
+
 提交
 
 纬度：
+
 经度：
 
 | 姓名 | 地址 | 城市 | 州 | 距离 |
@@ -10115,10 +10515,6 @@ else {
 | Sammy's Woodfired | 7704th Ave | San Diego | CA | 16.2 |
 
 图 7-106：使用 Google API 的门店定位 —— 根据地址和距离显示记录。
-
-
-
-
 
 ```php
 $fm->setProperty('password', '12346');
@@ -10131,7 +10527,7 @@ include_once("GoogleMap.php");
 include_once("JSMin.php");
 ```
 
-现在我们可以进入代码的核心部分，它将通过几行代码来驱动 Google Map API。在用户点击“更新”（Update）按钮之前，代码将不会运行。首先，在表中找到所有记录并存储在 `$records` 中。
+现在我们可以进入代码的核心部分，它将通过几行代码来驱动 Google Map API。在用户点击“更新”`Update`按钮之前，代码将不会运行。首先，在表中找到所有记录并存储在 `$records` 中。
 
 ```php
 if(isset($_GET['Update'])) {
@@ -10141,7 +10537,7 @@ if(isset($_GET['Update'])) {
 }
 ```
 
-接下来，遍历所有记录以更新经纬度（lat/lon）值。创建新的 `GoogleMapAPI` 对象，并通过地址（Address）、城市（City）和州（State）检索坐标。坐标实际上是以关联数组的形式的。这使得代码更加简洁。我们通过指定 `$geo_coords` 为 `['lat']` 和 `['lon']` 来创建 `$lat` 和 `$lon` 变量。
+接下来，遍历所有记录以更新经纬度 `lat/lon` 值。创建新的 `GoogleMapAPI` 对象，并通过地址 `Address`、城市 `City` 和州 `State` 检索坐标。坐标实际上是以关联数组的形式的。这使得代码更加简洁。我们通过指定 `$geo_coords` 为 `['lat']` 和 `['lon']` 来创建 `$lat` 和 `$lon` 变量。
 
 ```php
 $map_object = new GoogleMapAPI();
@@ -10161,7 +10557,7 @@ Array (
 )
 ```
 
-图 7-107：$geo_coords 数组 —— 纬度和经度值以关联数组的形式返回。
+图 7-107：`$geo_coords` 数组 —— 纬度和经度值以关联数组的形式返回。
 
 接下来，使用 `RecordID` 更新记录，以便为新的 `EditCommand` 识别每条记录。你们确实都需要更新带有经纬度值的记录。页面上看到的其余代码都是为了展示，除了可视化该过程之外完全没有必要。
 
@@ -10173,7 +10569,7 @@ $edit = $fm->newEditCommand('Demo', $record->getField('RecordID'));
 }
 ```
 
-最后，创建表单以便你可以点击“更新”（Update）按钮。这里没什么特别的，只需将表单指向同一个页面，因为 PHP 代码将在那里运行。
+最后，创建表单以便你可以点击“更新”`Update`按钮。这里没什么特别的，只需将表单指向同一个页面，因为 PHP 代码将在那里运行。
 
 ```html
 <html>
@@ -10195,14 +10591,18 @@ $edit = $fm->newEditCommand('Demo', $record->getField('RecordID'));
 
 # 第 39 节：Google Map API 地图标记
 
-**目标：** 在本节中，你将学习如何集成 Google map API。本节与“店铺定位器”（Store Locator）课程相同，不同之处我们要为从数据库返回的每条记录显示 Google 地图和地图标记。
+**目标：** 在本节中，你将学习如何集成 Google map API。本节与“店铺定位器”`Store Locator`课程相同，不同之处我们要为从数据库返回的每条记录显示 Google 地图和地图标记。
 
 **难度：** 困难
 
 **示例文件：**
+
 - PHPFiles/Advanced/Lesson39/GoogleMap.php
+
 - PHPFiles/Advanced/Lesson39/JSMin.php
+
 - PHPFiles/Advanced/Lesson39/MapMarkers.php
+
 - PHPFiles/Advanced/Lesson39/StoreLocator.fmp12
 
 > 本节使用单独的数据库文件进行演示。请将 `StoreLocator.fmp12` 数据库文件上传到你的服务器。
@@ -10212,18 +10612,23 @@ $edit = $fm->newEditCommand('Demo', $record->getField('RecordID'));
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_317_0.png)
 
 **FileMaker API 方法：**
-- newPerformScriptCommand()
-- getRecords()
-- getField()
+
+- `newPerformScriptCommand()`
+
+- `getRecords()`
+
+- `getField()`
 
 **代码：**
 
-数据库包含名称、地址、城市和州的字段。这些是显而易见的。`MarkerTitle` 和 `MarkerDescription` 字段分别用于在地图上的每个位置显示提示框或对话框。接下来是餐厅的纬度（Lat）和经度（Lon）。`SearchLat`、`SearchLon` 和 `Distance` 字段用于店铺定位器根据用户提供的值查找记录。距离计算使用大圆导航公式（即 Haversine 公式）来计算用户位置与每个商店之间的距离。关于该公式的更多信息可以在我们网站 www.formulationspro.com 的 FileMaker 部分找到我的文章《Map Distance》，或者访问：
+数据库包含名称、地址、城市和州的字段。这些是显而易见的。`MarkerTitle` 和 `MarkerDescription` 字段分别用于在地图上的每个位置显示提示框或对话框。接下来是餐厅的纬度 `Lat` 和经度 `Lon`。`SearchLat`、`SearchLon` 和 `Distance` 字段用于店铺定位器根据用户提供的值查找记录。距离计算使用大圆导航公式（即 Haversine 公式）来计算用户位置与每个商店之间的距离。关于该公式的更多信息可以在我们网站 www.formulationspro.com 的 FileMaker 部分找到我的文章《Map Distance》，或者访问：
 
 ```
 http://en.wikipedia.org/wiki/Haversine_formula
 ```
+
 或
+
 ```
 http://www.best.vwh.net/avform.htm
 ```
@@ -10244,18 +10649,14 @@ http://www.best.vwh.net/avform.htm
 | Marker/Description | Dine and Dish Magazine称为最好的披萨 |
 | Lat | 51.766996 |
 | Lon | -115.50362 |
-| Search | |
-| Search | |
+| Search |  |
+| Search |  |
 | Distance | 621.8 |
 | RecordID | 40 |
 
 图 7-109：使用示例数据
 
 距离计算涉及三角函数。距离以英里计算。脚本使用 Google Map API 为提供的每个地址查找坐标。然后使用这些结果来更新数据库。随后会显示带有每个位置标记的地图。这允许用户在地图上查看餐厅的所在地。
-
-
-
-
 
 ```php
 Array
@@ -10265,7 +10666,7 @@ Array
 }
 ```
 
-图 7-11：纬度 (lat) 和经度 (lon) 以关联数组的形式返回。
+图 7-11：纬度 `lat` 和经度 `lon` 以关联数组的形式返回。
 
 ```php
 if(isset($_GET['submit'])) {
@@ -10281,7 +10682,7 @@ if(isset($_GET['submit'])) {
 }
 ```
 
-现在我们已经有了纬度（Lat）、经度和距离（Distance），可以将它们传递给数据库中的商店定位脚本。我在编写 `performScriptCommand` 时使用了变量，以便代码更易读和修改。在数据库中指定你使用的 $layout（Demo）、确切的 $script 名称（Store Locator）以及 $script 参数。如果你仔细查看我的脚本参数 SearchLat、SearchLon 和 Distance，你会注意到我正以类似 XML 的格式传递它们（例如：`<SearchLat>39.6403</SearchLat>`）。我更倾向于传递变量，因为我在数据库中有一个自定义函数，只需指定字段名即可解析这些值。这在 Store Locator 脚本中的实现方式如下：现在，只需将格式连接到脚本参数即可。执行此代码后，它将记录返回给用户。你所做的就是捕获错误，最常见的情况是未找到记录。
+现在我们已经有了纬度 `Lat`、经度和距离 `Distance`，可以将它们传递给数据库中的商店定位脚本。我在编写 `performScriptCommand` 时使用了变量，以便代码更易读和修改。在数据库中指定你使用的 `$layout` `Demo`、确切的 `$script` 名称 `Store Locator` 以及 `$script` 参数。如果你仔细查看我的脚本参数 SearchLat、SearchLon 和 Distance，你会注意到我正以类似 XML 的格式传递它们（例如：`<SearchLat>39.6403</SearchLat>`）。我更倾向于传递变量，因为我在数据库中有一个自定义函数，只需指定字段名即可解析这些值。这在 Store Locator 脚本中的实现方式如下：现在，只需将格式连接到脚本参数即可。执行此代码后，它将记录返回给用户。你所做的就是捕获错误，最常见的情况是未找到记录。
 
 ```php
 $layout = 'Demo';
@@ -10307,6 +10708,8 @@ foreach ($records as $record) {
 ```
 
 现在地图已经根据找到的记录集构建，我们可以构建表格来显示这些记录。第一部分是表格的表头，后面是记录。
+
+
 
 ```php
 $html .= '<table border="1" cellpadding="3">';
@@ -10371,9 +10774,6 @@ echo $map_object->getJS();
 
 最后，使用 `map_object` 显示地图。注意的是，当没有记录时，它会显示错误框。这是在页面加载时通过代码执行的。
 
-
-
-
 Adobe. 显然，遗留代码在多年后仍然存在。使用 Dreamweaver 的好处在于，当你编写代码时，不需要记住如何从头编写这些代码。它只是
 
 接下来，始终从包含数据库的连接开始。
@@ -10401,14 +10801,14 @@ $fm->setProperty('password', '12345');
 </form>
 ```
 
-首先，从 Demo 布局获取 Animal 值列表，并将它们存储在 $variables 变量中。
+首先，从 Demo 布局获取 Animal 值列表，并将它们存储在 `$variables` 变量中。
 
 ```php
 $layout=$fm->getLayout('Demo');
 $values=$layout->getValueList('Animal');
 ```
 
-开始使用 $menu 变量来存储 HTML 代码，我们将准备好输出这些内容了。
+开始使用 `$menu` 变量来存储 HTML 代码，我们将准备好输出这些内容了。
 
 ```php
 $menu="<form name=\"form\" id=\"Form\">";
@@ -10478,7 +10878,7 @@ foreach($records as $record) {
 
 **难度：**困难
 
-**示例文件：** Files/Advanced/Lesson41/MultipleEmailAttachments.php
+**示例文件：** `Files/Advanced/Lesson41/MultipleEmailAttachments.php`
 
 **页面导航：**
 
@@ -10486,7 +10886,7 @@ foreach($records as $record) {
 
 **代码：** 使用 FileMaker Server 的最大优势是它是跨平台的。你不需要在 Windows Server 上安装 PEAR 或对 IIS 进行任何配置。FileMaker Server 让该过程运行得非常舒适。然而，当发送附件时，需要大量的额外代码来上传、重命名和从服务器删除文件。相比之下，使用 PHP 函数是自包含的，能够完成你需要的一切。只要你愿意锁定你的表单代码，使用 Fort Knox 来防止邮件注入、垃圾邮件发送者控制你的邮件服务器将其变成黑名单开放中继。本节的重点将是构建附件的 PHP 邮件。假设你有一个网站允许客户向你发送消息。你可以通过简单提供邮件链接来做到这一点——这会让你的电子邮件地址容易受到爬虫抓取。隐藏你的电子邮件地址并对抗垃圾邮件是一种更专业、更高级的方法。
 
-本节附带了示例文档 MultipleEmailAttachments.php。此代码功能完全，你只需要在代码中更改电子邮件地址。在文章的剩余部分，我将描述代码的每个部分，包括你可能会遇到的陷阱。我们每天都认为邮件是理所当然的。然而，这是一个复杂的进程。如果某部分代码位置不对，脚本将无法发送邮件，并在你的...产生 64 位乱码。
+本节附带了示例文档 `MultipleEmailAttachments.php`。此代码功能完全，你只需要在代码中更改电子邮件地址。在文章的剩余部分，我将描述代码的每个部分，包括你可能会遇到的陷阱。我们每天都认为邮件是理所当然的。然而，这是一个复杂的进程。如果某部分代码位置不对，脚本将无法发送邮件，并在你的...产生 64 位乱码。
 
 ```html
 <html>
@@ -10530,7 +10930,6 @@ if(empty($_POST['subject']))
 if(empty($_POST['message']))
 ```
 
-
 ```php
 {
 $error=1;
@@ -10553,11 +10952,13 @@ $filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 if(filter_var($form, FILTER_VALIDATE_EMAIL)) {
 ```
 
-一旦邮箱地址通过了清理和验证过程，这就是确保你没有创建垃圾邮件机器最有效的方法。你需要为以下项创建变量：$subject（主题）、$message（消息）、Reply-To、Cc 和 Bcc。Bcc 是你希望将邮件发送到你公司的人员。$subject 和 $message 是从 `$_POST` 获取中获取的。为了确保不使用链接或恶意代码，你使用了 `FILTER_SANITIZE_STRING` 来剥离任何标签。$message 还需要一些额外的处理。某些应用程序在显示每行超过 78 个字符的消息时会出现问题。接下来，你可以将回车符 (\r) 替换为换行符 (\n) 以保持邮件的格式。如果你不这样做，邮件将被标记为垃圾邮件。
+一旦邮箱地址通过了清理和验证过程，这就是确保你没有创建垃圾邮件机器最有效的方法。你需要为以下项创建变量：`$subject`（主题）、`$message`（消息）、Reply-To、Cc 和 Bcc。Bcc 是你希望将邮件发送到你公司的人员。`$subject` 和 `$message` 是从 `$_POST` 获取中获取的。为了确保不使用链接或恶意代码，你使用了 `FILTER_SANITIZE_STRING` 来剥离任何标签。`$message` 还需要一些额外的处理。某些应用程序在显示每行超过 78 个字符的消息时会出现问题。接下来，你可以将回车符 (`\r`) 替换为换行符 (`\n`) 以保持邮件的格式。如果你不这样做，邮件将被标记为垃圾邮件。
 
-创建头部是非常技术性的工作。代码必须与所示完全一致，否则你的邮件将显示乱码或可能丢失内容。`From` 必须包含在邮件的头部部分。你在头部中包含的所有项都必须用 CRLF (\r\n - 回车换行) 分隔。在广泛的测试中，我发现向行尾添加 CRLF 有时不起作用。然而，我必须在我的 OS X Server Post 和 Squirrel 邮件服务器发送头部时进行调整。Reply-To 不是强制要求的。但是，某些邮件服务器需要使用 Bcc 或 Cc 来复制收件人。这可能导致你的邮件被显示为垃圾邮件，或者产生带有 Bcc 和 Cc 的大量垃圾邮件，而这在任何地方都没有被记录——甚至在 PHP 官方网上也没有！大多数邮件服务器可以看到邮件是通过单一 To 地址发送的。然而，来自未验证源（如来自 sendmail 的 PHP 表单）的 Cc 和 Bcc 会被视为垃圾邮件，因为这些地址将被忽略。你可以通过给自己发送一个邮件表单来测试这一点。打开并显示源代码，你会发现消息将会被标记为垃圾邮件。最后，拥有一些关于邮件来源的信息是件好事，所以我喜欢使用带有 PHP 版本的我自定义 X-Mailer 头部。这样，当你向自己发送邮件时，可以检查源代码来识别它是来自你的 Web 表单，还是由某人直接发送给你的。
+创建头部是非常技术性的工作。代码必须与所示完全一致，否则你的邮件将显示乱码或可能丢失内容。`From` 必须包含在邮件的头部部分。你在头部中包含的所有项都必须用 CRLF (`\r\n` - 回车换行) 分隔。在广泛的测试中，我发现向行尾添加 CRLF 有时不起作用。然而，我必须在我的 OS X Server Post 和 Squirrel 邮件服务器发送头部时进行调整。Reply-To 不是强制要求的。但是，某些邮件服务器需要使用 Bcc 或 Cc 来复制收件人。这可能导致你的邮件被显示为垃圾邮件，或者产生带有 Bcc 和 Cc 的大量垃圾邮件，而这在任何地方都没有被记录——甚至在 PHP 官方网上也没有！大多数邮件服务器可以看到邮件是通过单一 To 地址发送的。然而，来自未验证源（如来自 sendmail 的 PHP 表单）的 Cc 和 Bcc 会被视为垃圾邮件，因为这些地址将被忽略。你可以通过给自己发送一个邮件表单来测试这一点。打开并显示源代码，你会发现消息将会被标记为垃圾邮件。最后，拥有一些关于邮件来源的信息是件好事，所以我喜欢使用带有 PHP 版本的我自定义 X-Mailer 头部。这样，当你向自己发送邮件时，可以检查源代码来识别它是来自你的 Web 表单，还是由某人直接发送给你的。
 
 测试你的服务器以查看 Cc 或 Bcc 地址是否有效。大多数邮件服务器会将来自未验证源的 PHP `sendmail` 函数视为垃圾邮件。
+
+
 
 ```php
 $to = "tduel@formulationspro.com";
@@ -10597,7 +10998,7 @@ Cc: tduel@formulationspro.com
 X-Mailers: PHP/5.3.0
 ```
 
-Cc 和 Bcc 地址被标记为已发送，但不是来自未验证的函数。我鼓励给自己发送一封带有消息和附件的邮件，看看代码是什么样子的。打开并显示源代码，你会发现消息将会被标记为垃圾邮件。最后，拥有一些关于邮件来源的信息是件好事，所以我喜欢使用带有 PHP 版本的我自定义 X-Mailer 头部。这样，当你向自己发送邮件时，可以检查源代码来识别它是来自你的 Web 表单，还是由某人直接发送给你的。
+`Cc` 和 `Bcc` 地址被标记为已发送，但不是来自未验证的函数。我鼓励给自己发送一封带有消息和附件的邮件，看看代码是什么样子的。打开并显示源代码，你会发现消息将会被标记为垃圾邮件。最后，拥有一些关于邮件来源的信息是件好事，所以我喜欢使用带有 PHP 版本的我自定义 `X-Mailer` 头部。这样，当你向自己发送邮件时，可以检查源代码来识别它是来自你的 Web 表单，还是由某人直接发送给你的。
 
 头部已经构建完成，我们可以使用当前消息的唯一哈希值来包含每封邮件的消息部分。每条消息（以及附件）必须由边界符（boundary）分隔。文件的消息部分将作为文本发送并以 MIME 格式编码。如果你不这样做，邮件将无法正常显示。
 
@@ -10610,10 +11011,11 @@ $message = "This is a multi-message email in MIME format.\n--$boundary\nContent-
 
 在包含附件之前，你检查服务器设置的总大小。默认情况下，`php.input` 的 `max_filesize` 值为 2MB。这不多，考虑到大多数邮件服务器设置为允许 20MB 以上。需要注意的是，当你的代码执行到这一步时，文件大小已经上传到临时目录了。因此，你想验证文件大小的唯一目的是检查传入的文件大小。当你更改服务器设置时，文件大小检查在他们尝试上传 1 GB 文件时将生效。你也可以使用以下 PHP 代码更改设置：
 
-# PHP Info
+### PHP Info
 
 | | | |
 |---|---|---|
+
 | short_open_tag | On | On |
 | SMTP | localhost | |
 | smtp_port | 25 | 25 |
@@ -10627,13 +11029,12 @@ $message = "This is a multi-message email in MIME format.\n--$boundary\nContent-
 | user_ini | | userini |
 | variables_order | GPCS | GPCS |
 
-php.ini 用于文件上传大小的设置。
+`php.ini` 用于文件上传大小的设置。
 
 ```php
 ini_set('post_max_size', '50M');
 ini_set('upload_max_filesize', '50M');
 ```
-
 
 包含了一个相当常见的文件类型列表。如果你不确定特定文件类型的 MIME 类型，可以始终通过发送该文件给自己来节省邮件。然后检查源代码中的 `content type`。
 
@@ -10649,7 +11050,7 @@ $allowed_type = array("application/msword",
 "application/zip");
 ```
 
-一旦你确定该文件类型是允许的，就需要对其进行 base64 编码，以便邮件程序能够正确处理文件。此此的方法是打开文件并读取二进制内容。打开文件后，你可以将内容存储到 $data 变量中。然后关闭文件。最后一步是对文件进行 base64 编码并使用 `chunk_split` 分分为易于管理的大小。如果你查看过 base64 编码文件的原始文本，你会发现它可能非常长。
+一旦你确定该文件类型是允许的，就需要对其进行 base64 编码，以便邮件程序能够正确处理文件。此此的方法是打开文件并读取二进制内容。打开文件后，你可以将内容存储到 `$data` 变量中。然后关闭文件。最后一步是对文件进行 base64 编码并使用 `chunk_split` 分分为易于管理的大小。如果你查看过 base64 编码文件的原始文本，你会发现它可能非常长。
 
 ```php
 if(in_array($type,$allowed_type)) {
@@ -10713,28 +11114,29 @@ if (mail($to, $subject, $message, $headers)) {
 
 这里有一个防弹的 PHP 邮件消息，可以防止机器人和垃圾邮件发送者利用邮件注入技术接管你的邮件服务器。我们学习了如何组装边界、消息和附件。使用我们创建的 `$_FILES` 全局变量，我们创建了一个带有视觉反馈的表单。最好的部分是每个页面都将其字段和数据传递给下一个页面。只需表单内部的几行 PHP 代码。整个过程只需要几分钟。
 
-
-
-
-
-# 账单地址 >> 收货地址 >> 确认订单
+## 账单地址 >> 收货地址 >> 确认订单
 
 名：Todd
+
 姓：Dusi
+
 地址：12608 Carmel Count
+
 城市：San Diego
+
 州：CA
+
 邮政：92130
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_335_0.png)
 
-# 第 7-116 页：空表单流程的第一页。
+### 第 7-116 页：空表单流程的第一页。
 
-# page2.php
+### page2.php
 
 第二个页面有两个目的。第一个是“捕获”从第一页提交的字段和值，并将它们作为隐藏字段存储在表单中。第二个是显示另一组字段，所有字段都将提交到该过程的最后一个页面。
 
-与其再次描述一个相同的表单顺序，让我们关注放在表单底部的 PHP 代码。来自 page1.php 的所有字段都是使用 POST 方法发送的。如你所知，POST 格式是 `name=value`。这基本上是一个数组，其中 `name` 是键，`value` 是值。因此，我们将使用 `foreach` 方法作为关联数组遍历每个 `name=value` 对。我们唯一想要跳过的是“next”按钮，因为该数据是通过 `strip_tags` 使用 URL 编码过程获取的。否则，我们将取消转义，或者移除 HTML 或 PHP 标签插入的隐藏字段文本中的任何反斜杠。最后，将使用 `htmlentities` 将值转换回原始文本。你可能需要更改的最后一个注意事项的项目是上一个页面提交按钮的 `name` 名称。我鼓励你查看源代码，以查看隐藏字段是如何添加到表单底部的。
+与其再次描述一个相同的表单顺序，让我们关注放在表单底部的 PHP 代码。来自 `page1.php` 的所有字段都是使用 POST 方法发送的。如你所知，POST 格式是 `name=value`。这基本上是一个数组，其中 `name` 是键，`value` 是值。因此，我们将使用 `foreach` 方法作为关联数组遍历每个 `name=value` 对。我们唯一想要跳过的是“next”按钮，因为该数据是通过 `strip_tags` 使用 URL 编码过程获取的。否则，我们将取消转义，或者移除 HTML 或 PHP 标签插入的隐藏字段文本中的任何反斜杠。最后，将使用 `htmlentities` 将值转换回原始文本。你可能需要更改的最后一个注意事项的项目是上一个页面提交按钮的 `name` 名称。我鼓励你查看源代码，以查看隐藏字段是如何添加到表单底部的。
 
 ```
 <?php
@@ -10747,21 +11149,27 @@ foreach($_POST as $key=>$value) {
 ?>
 ```
 
-# 多页表单第1页
+### 多页表单第1页
 
-http://192.168.1.18/PHPFiles/Advanced/Lesson42/page2.php
+`http://192.168.1.18/PHPFiles/Advanced/Lesson42/page2.php`
 
 账单地址>> 收货地址>>> 确认：
+
 名：Tool
+
 姓：Duel
+
 地址：12608 Carmel Count-
+
 城市：San Diego
+
 州：CA
+
 邮政：92130
 
 图 7-117：多表单流程中的第二页。
 
-来源：http://localhost/ToddDuelPHP/MultiPageForm/page...
+来源：`http://localhost/ToddDuelPHP/MultiPageForm/page...`
 
 ```
 <html>
@@ -10790,93 +11198,34 @@ Zip: <input name="zip" type="text" value="92130">
 图 7-118：第一个字段作为隐藏字段存储。
 
 page3
-最后一个页面用于在用户点击提交按钮向用户显示所有摘要信息。一旦他们点击提交按钮，数据就会插入数据库。在表单中创建隐藏字段的过程与第二个页完全相同。因此，我不再重复这一点。你从这个列表中应该学到的点是，每个页面创建隐藏字段的代码完全相同。你只需要使用 PHP 代码创建表单并将其指向下一个页面即可。
 
-我本可以在这里列出课程。但是，为了实现它，我包含了 FileMaker PHP 代码来将数据插入数据库。让我们看看代码，看看如何在最后一页插入所有信息。通过确保使用 POST 方法点击了提交按钮。
 
-```
-if(isset($_POST['submit'])) {
-建立到数据库的连接。
-require_once ('FileMaker.php');
-$fm = new FileMaker();
-$fm->setProperty('database', 'MultiPageForm');
-```
-
-```
-$fm->setProperty('hostspec', 'http://127.168.0.1');
-$fm->setProperty('username', 'Admin');
-$fm->setProperty('password', '1234');
-```
-
-$request 对象使用 Demo 布局，将用于向数据库添加新记录。
-
-```
-$request = $fm->newSqlCommand('Demo');
-```
-
-![](img/5a2c5fda68d42e5d65f51850276e49ec_337_0.png)
-
-账单信息
-
-名：Todd
-姓：Duell
-地址：12608 Camel Country Rd
-城市：San Diego
-州：CA
-邮政：92130
-
-收货信息
-
-名：Todd
-姓：Duell
-地址：12608 Camel Country Rd
-城市：San Diego
-州：CA
-邮政：92130
-
-图 7-119：多表单流程中的最后账单和发货字段。记住所有的 `name=value` 对都是从 `_POST` 超全局变量获取的。为了方便起见，我的字段命名与数据库中的字段完全相同。
-
-```
-$request->setfield('billFirstName', $POST['billFirstName']);
-$request->setfield('billLastName', $POST['billLastName']);
-$request->setfield('billAddress', $POST['billAddress']);
-$request->setfield('billCity', $POST['billCity']);
-$request->setfield('billState', $POST['billState']);
-$request->setfield('billZip', $POST['billZip']);
-$request->setfield('shipFirstName', $POST['shipFirstName']);
-$request->setfield('shipLastName', $POST['shipLastName']);
-$request->setfield('shipAddress', $POST['shipAddress']);
-$request->setfield('shipCity', $POST['shipCity']);
-$request->setfield('shipState', $POST['shipState']);
-$request->setfield('shipZip', $POST['shipZip']);
-```
-
-[/content]
-
-译文：
-
-[content]
 
 # 账单地址 >> 收货地址 >> 确认订单
 
 名：Todd
+
 姓：Dusi
+
 地址：12608 Carmel Count
+
 城市：San Diego
+
 州：CA
+
 邮政：92130
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_335_0.png)
 
 # 第 7-116 页：空表单流程的第一页。
 
-# page2.php
+## page2.php
 
 第二个页面有两个目的。第一个是“捕获”从第一页提交的字段和值，并将它们作为隐藏字段存储在表单中。第二个是显示另一组字段，所有字段都将提交到该过程的最后一个页面。
 
-与其再次描述一个相同的表单顺序，让我们关注放在表单底部的 PHP 代码。来自 page1.php 的所有字段都是使用 POST 方法发送的。如你所知，POST 格式是 `name=value`。这基本上是一个数组，其中 `name` 是键，`value` 是值。因此，我们将使用 `foreach` 方法作为关联数组遍历每个 `name=value` 对。我们唯一想要跳过的是“next”按钮，因为该数据是通过 `strip_tags` 使用 URL 编码过程获取的。否则，我们将取消转义，或者移除 HTML 或 PHP 标签插入的隐藏字段文本中的任何反斜杠。最后，将使用 `htmlentities` 将值转换回原始文本。你可能需要更改的最后一个注意事项的项目是上一个页面提交按钮的 `name` 名称。我鼓励你查看源代码，以查看隐藏字段是如何添加到表单底部的。
+与其再次描述一个相同的表单顺序，让我们关注放在表单底部的 PHP 代码。来自 `page1.php` 的所有字段都是使用 POST 方法发送的。如你所知，POST 格式是 `name=value`。这基本上是一个数组，其中 `name` 是键，`value` 是值。因此，我们将使用 `foreach` 方法作为关联数组遍历每个 `name=value` 对。我们唯一想要跳过的是“next”按钮，因为该数据是通过 `strip_tags` 使用 URL 编码过程获取的。否则，我们将取消转义，或者移除 HTML 或 PHP 标签插入的隐藏字段文本中的任何反斜杠。最后，将使用 `htmlentities` 将值转换回原始文本。你可能需要更改的最后一个注意事项的项目是上一个页面提交按钮的 `name` 名称。我鼓励你查看源代码，以查看隐藏字段是如何添加到表单底部的。
 
-```
+```php
 <?php
 foreach($_POST as $key=>$value) {
   if($key!="next") {
@@ -10887,23 +11236,29 @@ foreach($_POST as $key=>$value) {
 ?>
 ```
 
-# 多页表单第1页
+## 多页表单第1页
 
-http://192.168.1.18/PHPFiles/Advanced/Lesson42/page2.php
+`http://192.168.1.18/PHPFiles/Advanced/Lesson42/page2.php`
 
 账单地址>> 收货地址>>> 确认：
+
 名：Tool
+
 姓：Duel
+
 地址：12608 Carmel Count-
+
 城市：San Diego
+
 州：CA
+
 邮政：92130
 
 图 7-117：多表单流程中的第二页。
 
-来源：http://localhost/ToddDuelPHP/MultiPageForm/page...
+来源：`http://localhost/ToddDuelPHP/MultiPageForm/page...`
 
-```
+```html
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset="UTF-8">
 <title>Multi Page Form Page 1</title>
@@ -10929,12 +11284,13 @@ Zip: <input name="zip" type="text" value="92130">
 
 图 7-118：第一个字段作为隐藏字段存储。
 
-page3
+## page3
+
 最后一个页面用于在用户点击提交按钮向用户显示所有摘要信息。一旦他们点击提交按钮，数据就会插入数据库。在表单中创建隐藏字段的过程与第二个页完全相同。因此，我不再重复这一点。你从这个列表中应该学到的点是，每个页面创建隐藏字段的代码完全相同。你只需要使用 PHP 代码创建表单并将其指向下一个页面即可。
 
 我本可以在这里列出课程。但是，为了实现它，我包含了 FileMaker PHP 代码来将数据插入数据库。让我们看看代码，看看如何在最后一页插入所有信息。通过确保使用 POST 方法点击了提交按钮。
 
-```
+```php
 if(isset($_POST['submit'])) {
 建立到数据库的连接。
 require_once ('FileMaker.php');
@@ -10942,15 +11298,15 @@ $fm = new FileMaker();
 $fm->setProperty('database', 'MultiPageForm');
 ```
 
-```
+```php
 $fm->setProperty('hostspec', 'http://127.168.0.1');
 $fm->setProperty('username', 'Admin');
 $fm->setProperty('password', '1234');
 ```
 
-$request 对象使用 Demo 布局，将用于向数据库添加新记录。
+`$request` 对象使用 Demo 布局，将用于向数据库添加新记录。
 
-```
+```php
 $request = $fm->newSqlCommand('Demo');
 ```
 
@@ -10959,24 +11315,34 @@ $request = $fm->newSqlCommand('Demo');
 账单信息
 
 名：Todd
+
 姓：Duell
+
 地址：12608 Camel Country Rd
+
 城市：San Diego
+
 州：CA
+
 邮政：92130
 
 收货信息
 
 名：Todd
+
 姓：Duell
+
 地址：12608 Camel Country Rd
+
 城市：San Diego
+
 州：CA
+
 邮政：92130
 
 图 7-119：多表单流程中的最后账单和发货字段。记住所有的 `name=value` 对都是从 `_POST` 超全局变量获取的。为了方便起见，我的字段命名与数据库中的字段完全相同。
 
-```
+```php
 $request->setfield('billFirstName', $POST['billFirstName']);
 $request->setfield('billLastName', $POST['billLastName']);
 $request->setfield('billAddress', $POST['billAddress']);
@@ -10990,8 +11356,6 @@ $request->setfield('shipCity', $POST['shipCity']);
 $request->setfield('shipState', $POST['shipState']);
 $request->setfield('shipZip', $POST['shipZip']);
 ```
-
-
 
 ```php
 $fm->setProperty('hostspec', 'http://127.0.0.1');
@@ -11048,9 +11412,6 @@ foreach($records as $record) {
 }
 ```
 
-
-
-
 # 选择多条记录
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_344_0.png)
@@ -11075,6 +11436,8 @@ foreach($records as $record) {
 
 始终通过连接数据库来实现。
 
+
+
 ```php
 <?php
 require_once ('FileMaker.php');
@@ -11086,7 +11449,7 @@ $fm->setProperty('password', '1234');
 ?>
 ```
 
-使用 Demo 布局查找所有记录并将结果存储在 $records 变量中。
+使用 Demo 布局查找所有记录并将结果存储在 `$records` 变量中。
 
 ```php
 <?php
@@ -11099,7 +11462,7 @@ if (FileMaker::error($result)) {
 $records = $request->getRecords();
 ```
 
-下一部分代码只有在用户点击表单上的“更新”按钮时才会运行。通常情况下，你的表单会使用 POST 方法处理这些信息，因为你不希望用户书签会变化的记录。我在这里使用 GET 方法，这样我们就可以设置通过 URL 传递的 name=value 值对。遍历 $records 数组中的每条记录，以确定哪些记录需要更新。这允许你唯一地识别每条记录，并根据 FileMaker 获取的 `RecordID` 来更新记录。如果 `RecordID` 被设置为 URL 中的 `name`，则你就可以更新该记录。否则，你可以跳过该记录。在这个演示中，我简单地更新了每条记录的 `Timestamp` 字段。如果你想执行不同的操作（例如删除被选中的记录），这就是你修改以执行该任务的代码部分。最后，由于你正在更新记录，你会希望为用户刷新屏幕。执行此操作仅一次的最佳机制是使用 PHP 的 `header()` 在最后一步将用户重定向同一页面。
+下一部分代码只有在用户点击表单上的“更新”按钮时才会运行。通常情况下，你的表单会使用 POST 方法处理这些信息，因为你不希望用户书签会变化的记录。我在这里使用 GET 方法，这样我们就可以设置通过 URL 传递的 `name=value` 值对。遍历 `$records` 数组中的每条记录，以确定哪些记录需要更新。这允许你唯一地识别每条记录，并根据 FileMaker 获取的 `RecordID` 来更新记录。如果 `RecordID` 被设置为 URL 中的 `name`，则你就可以更新该记录。否则，你可以跳过该记录。在这个演示中，我简单地更新了每条记录的 `Timestamp` 字段。如果你想执行不同的操作（例如删除被选中的记录），这就是你修改以执行该任务的代码部分。最后，由于你正在更新记录，你会希望为用户刷新屏幕。执行此操作仅一次的最佳机制是使用 PHP 的 `header()` 在最后一步将用户重定向同一页面。
 
 ```php
 if(isset($_GET['Update'])) {
@@ -11116,7 +11479,7 @@ if(isset($_GET['Update'])) {
 ?>
 ```
 
-PHP 代码与下方的表单协同工作。表单的 action 将使用 GET 方法调用 `SelectMultipleRecords` 页面。再次，在生产解决方案中，你可能希望将其更改为 POST 方法。表单的第一部分是表格内部的静态头部信息：
+PHP 代码与下方的表单协同工作。表单的 `action` 将使用 GET 方法调用 `SelectMultipleRecords` 页面。再次，在生产解决方案中，你可能希望将其更改为 POST 方法。表单的第一部分是表格内部的静态头部信息：
 
 ```html
 <form action="SelectMultipleRecords.php" method="get" id="form">
@@ -11129,7 +11492,7 @@ PHP 代码与下方的表单协同工作。表单的 action 将使用 GET 方法
 </tr>
 ```
 
-表单的内容是根据 $records 数组中的数据动态创建的。这从本质上说，我们通过这种方式“欺骗”了用户界面，使其看起来像有多条记录在显示，而实际上是一个巨大的表单。遍历每条记录，创建表格行和表格数据。关键点是复选框的命名。你将使用 `RecordID` 作为复选框的 `name`。这种技术不需要复选框有值，所以我将其留空以便编写代码并提高性能。复选框的一个有趣之处是，如果它们没有勾选，复选框就不会出现在 URL 中。因此，PHP 代码只需要检查 URL 中是否存在复选框名称，而不是检查值。
+表单的内容是根据 `$records` 数组中的数据动态创建的。这从本质上说，我们通过这种方式“欺骗”了用户界面，使其看起来像有多条记录在显示，而实际上是一个巨大的表单。遍历每条记录，创建表格行和表格数据。关键点是复选框的命名。你将使用 `RecordID` 作为复选框的 `name`。这种技术不需要复选框有值，所以我将其留空以便编写代码并提高性能。复选框的一个有趣之处是，如果它们没有勾选，复选框就不会出现在 URL 中。因此，PHP 代码只需要检查 URL 中是否存在复选框名称，而不是检查值。
 
 ```php
 <?php
@@ -11177,10 +11540,6 @@ function selectToggle(toggle, form)
 
 <a href="javascript:selectToggle(true, 'form')">全选</a> | <a href="javascript:selectToggle(false, 'form')">取消全选</a>
 
-
-
-
-
 # 排序记录
 
 | 当前布局 ('Subsummarar... | 排序顺序 |
@@ -11188,7 +11547,6 @@ function selectToggle(toggle, form)
 | 金额 | 销售人员 |
 | 销售人员 | 全部清除 |
 |  | 清除 |
-
 - 升序
 - 降序
 - 基于值列表的自定义顺序 <unknown>
@@ -11248,7 +11606,7 @@ $request->setScript('Subsummary Report');
 $result = $request->execute();
 ```
 
-FileMaker 语法：setScript($ScriptName, ScriptParameter)
+FileMaker 语法：`setScript($ScriptName, ScriptParameter)`
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_349_0.png)
 
@@ -11262,7 +11620,7 @@ if (FileMaker::getError($result))
 }
 ```
 
-将 FileMaker Server 返回的记录内容存储在 $records 变量中。
+将 FileMaker Server 返回的记录内容存储在 `$records` 变量中。
 
 ```php
 $records = $result->getRecords();
@@ -11279,13 +11637,13 @@ echo '<table border="1">
 </tr>';
 ```
 
-现在我们可以使用 PHP 方法遍历 $records 变量中的数据。在这里我们需要逻辑地思考如何显示小计（Subtotal）和总计（Grand Total）值，因为这些值在 FileMaker 层的主体（Body）中并不存在。
+现在我们可以使用 PHP 方法遍历 `$records` 变量中的数据。在这里我们需要逻辑地思考如何显示小计（Subtotal）和总计（Grand Total）值，因为这些值在 FileMaker 层的主体（Body）中并不存在。
 
 ```php
 foreach ($records as $record)
 ```
 
-小计行在代码在前。但从逻辑角度来看，它似乎是乱序的。一旦你找到循环的结尾，它就会意义得多。脚本在第一次循环中会跳过小计，因为 $salesperson 变量在第一次循环结束时才会被创建。然后它检查后续循环中的最后一个 $salesperson。如果 $salesperson 与循环中的 SalesPerson 不匹配，你可以假设你即将开始一个新的子汇总部分。这时你就可以添加小计表格行。这和我经常在 FileMaker 记录列表使用的技术非常相似，我通过比较当前记录与上一个记录，在记录值发生变化时执行某些任务。
+小计行在代码在前。但从逻辑角度来看，它似乎是乱序的。一旦你找到循环的结尾，它就会意义得多。脚本在第一次循环中会跳过小计，因为 `$salesperson` 变量在第一次循环结束时才会被创建。然后它检查后续循环中的最后一个 `$salesperson`。如果 `$salesperson` 与循环中的 SalesPerson 不匹配，你可以假设你即将开始一个新的子汇总部分。这时你就可以添加小计表格行。这和我经常在 FileMaker 记录列表使用的技术非常相似，我通过比较当前记录与上一个记录，在记录值发生变化时执行某些任务。
 
 ```php
 if(!empty($salesperson) and $salesperson != $record->getField('SalesPerson'))
@@ -11312,7 +11670,7 @@ $salesperson = $record->getField('SalesPerson');
 $subtotal = $record->getField('Subtotal');
 ```
 
-由于总计（GrandTotal）不在数据库布局的主体内，我们需要进行一些计算来找到表格底部总计的最终值。我们在这里定义 $grandTotal 变量，在每次循环中累加金额字段。有时，问题的最佳解决方案是最简单的。
+由于总计（GrandTotal）不在数据库布局的主体内，我们需要进行一些计算来找到表格底部总计的最终值。我们在这里定义 `$grandTotal` 变量，在每次循环中累加金额字段。有时，问题的最佳解决方案是最简单的。
 
 ```php
 $grandTotal = + ($record->getField('Amount'));
@@ -11339,10 +11697,11 @@ PHP 页面与 FileMaker 布局完全一致。
 **难度：** 本节需要特别注意。
 
 **API 方法：**
-- FindAll()
-- setScript()
-- execute()
-- getField()
+
+- `FindAll()`
+- `setScript()`
+- `execute()`
+- `getField()`
 
 **代码：**
 
@@ -11366,9 +11725,6 @@ $fm->setProperty('password', '1234');
 等等，重点不在于如何查找记录，而在于如何生成子汇总报告。
 
 此验证部分需要特别说明。它使用了来自 `validate_cc.php` 文件的 `validate_cc` 函数（下文将详细解释）。如果该函数返回值 2，则信用卡有效。否则，信用卡无效。
-
-
-
 
 } 
 
@@ -11395,7 +11751,9 @@ if(empty($errors)) {
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_353_0.png)
 
-preg_replace($pattern, $replacement, $subject): 执行正则表达式并替换。
+`preg_replace($pattern, $replacement, $subject)`: 执行正则表达式并替换。
+
+
 
 http://php.net/manual/en/function.preg-replace.php
 
@@ -11407,7 +11765,7 @@ $message = 'Success!';
 ?>
 ```
 
-下面的代码没什么特别。它只是一个将数据 POST 回 ValidateCC.php 页面进行验证的表单。你唯一需要知道的是 Confirm 按钮的值设置为 Confirm。脚本运行需要值。此外，在这段代码中，如果有错误，它将显示表单中 POST 值的字段数据，你可以看到它是如何运作的。在生产版本中，我不建议重新显示 POST 数据。你应该让用户重新输入数据以确保他们万无误。否则，显示在表单底部的错误信息几乎毫无用。
+下面的代码没什么特别。它只是一个将数据 POST 回 `ValidateCC.php` 页面进行验证的表单。你唯一需要知道的是 Confirm 按钮的值设置为 Confirm。脚本运行需要值。此外，在这段代码中，如果有错误，它将显示表单中 POST 值的字段数据，你可以看到它是如何运作的。在生产版本中，我不建议重新显示 POST 数据。你应该让用户重新输入数据以确保他们万无误。否则，显示在表单底部的错误信息几乎毫无用。
 
 ```html
 <form action="ValidateCC.php" method="Confirm">
@@ -11482,9 +11840,9 @@ $message = 'Success!';
 </html>
 ```
 
-validate_cc.php
+### validate_cc.php
 
-validate_cc.php 文件包含两个主函数和一个合并结果以确定整体结果的函数。第一个函数 `validate_number_type` 判断卡片类型、位数以及是否匹配提供的卡号前缀。如果卡片通过，函数返回 1。否则，函数返回 0。下面的代码仅适用于 VISA、MASTERCARD、AMEX 和 DISCOVER。如果你需要验证更多的卡类型，可以在此处找到更多信息：
+`validate_cc.php` 文件包含两个主函数和一个合并结果以确定整体结果的函数。第一个函数 `validate_number_type` 判断卡片类型、位数以及是否匹配提供的卡号前缀。如果卡片通过，函数返回 1。否则，函数返回 0。下面的代码仅适用于 VISA、MASTERCARD、AMEX 和 DISCOVER。如果你需要验证更多的卡类型，可以在此处找到更多信息：
 
 http://en.wikipedia.org/wiki/Credit_card_number.
 
@@ -11565,7 +11923,7 @@ function luhn_check($ccnum) {
 }
 ```
 
-最后，`validate_cc` 函数提取上述函数的值。如果都通过，它们将提供值 1，总和为 1+1=2。Validate.php 页面检查值是否为 2。如果其中一个或两个失败，它们返回的最大值为 1。我假设如果返回 1 或 0，则信用卡号失败。我不在乎它是如何失败的。我只知道出了问题，并在数据插入数据库之前停止用户。
+最后，`validate_cc` 函数提取上述函数的值。如果都通过，它们将提供值 1，总和为 1+1=2。`Validate.php` 页面检查值是否为 2。如果其中一个或两个失败，它们返回的最大值为 1。我假设如果返回 1 或 0，则信用卡号失败。我不在乎它是如何失败的。我只知道出了问题，并在数据插入数据库之前停止用户。
 
 ```php
 function validate_cc($ccnum, $type = 'UNKNOWN') {
@@ -11575,19 +11933,22 @@ function validate_cc($ccnum, $type = 'UNKNOWN') {
 }
 ```
 
-
-
-
 # 验证信用卡
 
 名字: John
+
 姓氏: Doe
+
 类型: VISA
+
 信用卡号: 4111111111111
+
 有效期 (MM/YY): 05 / 13
+
 安全码 CCCV: 1234
 
 成功！
+
 确认
 
 图 7-126 输入一个有效的信用卡号已成功。
@@ -11595,13 +11956,19 @@ function validate_cc($ccnum, $type = 'UNKNOWN') {
 # 验证信用卡
 
 名字: John
+
 姓氏: Doe
+
 类型: VISA
+
 信用卡号: 123456789
+
 有效期 (MM/YY): 05 / 13
+
 安全码 CCCV: 1234
 
 信用卡号无效。
+
 确认
 
 图 7-127 输入一个无效的信用卡号未能成功。
@@ -11613,20 +11980,27 @@ function validate_cc($ccnum, $type = 'UNKNOWN') {
 **难度：** 困难
 
 示例文件：
-- PHPFiles/Advanced/Lesson46/ValidatePhoneNumber.php
-- PHPFiles/Advanced/Lesson46/ValidatePhoneNumber.fmp12
 
-> 本节使用独立的数据库进行演示。请将 ValidatePhoneNumber.fmp12 数据库文件上传到你的服务器上。
+- `PHPFiles/Advanced/Lesson46/ValidatePhoneNumber.php`
+
+- `PHPFiles/Advanced/Lesson46/ValidatePhoneNumber.fmp12`
+
+> 本节使用独立的数据库进行演示。请将 `ValidatePhoneNumber.fmp12` 数据库文件上传到你的服务器上。
 
 页面导航：
+
 - 列表
 
 **FileMaker API 方法：**
-- newInputCommand()
-- setFill()
-- execute()
+
+- `newInputCommand()`
+
+- `setFill()`
+
+- `execute()`
 
 **代码：**
+
 从连接到数据库开始。
 
 ```php
@@ -11642,8 +12016,7 @@ $fm->setProperty('password', '1234');
 当你点击 html 表单中的按钮时，下面的 PHP 代码将运行。它会在电话号码提交到数据库之前验证其格式。为了演示目的，我使用了 GET 方法，这样你可以看到 URL。在生产网站中，你可能会使用 POST 方法。要启动代码，你必须确保设置了 GET 方法并且按钮的名称为 Submit。接下来，我将使用正则表达式来定义我想要我的电话格式匹配的模式 (XXX-XXX-XXXX)。为了解释这个正则表达式，我将提供一组选项，你可以根据自己的电话格式进行选择。在使用正则表达式时你唯一需要做的事情是，如果你想在 `preg_match` 函数中使用 `$match` 选项，请用 `^` 分隔匹配标准。
 
 ```
-//
-开始数据（必需）
+// 开始数据（必需）
 [0]
 0 或 1 个 "(" 字符
 (\d{0,3})
@@ -11656,12 +12029,16 @@ $fm->setProperty('password', '1234');
 0 或 1 个连字符
 ```
 
-(\d(3)) 交换机恰好 3 个数字
-[\s] 0 或 1 个空格字符
-[-] 0 或 1 个连字符
-(\d(4)) 号码恰好 4 个数字
+`(\d(3))` 交换机恰好 3 个数字
+
+`[\s]` 0 或 1 个空格字符
+
+`[-]` 0 或 1 个连字符
+
+`(\d(4))` 号码恰好 4 个数字
 
 如果你使用上述所有选项，你的电话号码将格式化为 XXX-XXX 或 (XXX) XXX-XXXX。
+
 正则表达式看起来像：
 
 ```
@@ -11669,7 +12046,9 @@ $fm->setProperty('password', '1234');
 ```
 
 另一方面，我更倾向于强制用户提供整个电话号码，包括区号。
+
 因此，我建议在例例中使用下面的代码。我也知道当用户完成电话号码输入时，数字的长度应该恰好是 12 个字符，包括连字符。
+
 所以我还将使用 `str (length)` 函数。如果有任何不匹配的地方，我将设置 `$message` 变量作为给用户的响应并在表单中显示。
 
 ```php
@@ -11689,8 +12068,11 @@ If(isset($_GET['Submit']) && $_GET['Submit']=='Submit') {
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_359_0.png)
 
-preg_match($pattern, $subject): 执行正则表达式匹配。
+`preg_match($pattern, $subject)`: 执行正则表达式匹配。
+
 http://us.php.net/manual/function/preg-match.php
+
+
 
 当我们验证了电话号码后，就可以将其插入数据库中。由于数据来自网络，我使用 `strip_tags` 函数来清理数据，以防某些黑客发现了如何用带有恶意代码的伪造电话号码。或者，如果你想使用 FileMaker 引擎，可以使用 `preg_replace('/D/', '', $_GET['PhoneNumber'])`，其中 `preg_replace` 用于删除电话号码中数字以外的所有内容。我在 PHP 页面中包含了注释掉的代码，如果你想尝试的话。我已经在数据库中包含了计算字段，以便默认格式化数据输入。
 
@@ -11707,6 +12089,7 @@ if(empty($errors)) {
 ```
 
 此解决方案的最后部分是一个简单的表单，用于将 `PhoneNumber` 字段提交到网页进行验证。
+
 名为 Submit 的按钮会将 Submit 的值传递过去，以运行上面的 PHP 代码。
 
 ```html
@@ -11718,157 +12101,10 @@ if(empty($errors)) {
 ```
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_359_0.png)
-*(注：此处根据上下文逻辑补全了原文中缺失的 HTML 代码片段以保持翻译一致性)*
 
-preg_match($pattern, $subject): 执行正则表达式匹配。
-http://us.php.net/manual/function/preg-match.php
+`preg_match($pattern, $subject)`: 执行正则表达式匹配。
 
-当我们验证了电话号码后，就可以将其插入数据库中。由于数据来自网络，我使用 `strip_tags` 函数来清理数据，以防某些黑客发现了如何用带有恶意代码的伪造电话号码。或者，如果你想使用 FileMaker 引擎，可以使用 `preg_replace('/D/', '', $_GET['PhoneNumber'])`，其中 `preg_replace` 用于删除电话号码中数字以外的所有内容。
-
-第 46 节：验证电话号码
-
-**目标：** 在本节中，你将学习如何验证电话号码。使用 FileMaker Pro 格式化电话号码已经很长时间了。确保用户以一致的格式输入电话号码应该是开发者工具箱能力的一部分。多年来，我们使用的方法在 FileMaker Pro 中更改了多次。如果你需要允许网络用户向你的数据库输入电话号码，你将需要使用 PHP 来验证他们的数据输入。幸运的是，使用正则表达式在将表单提交到数据库之前对格式进行测试是一个相对简单的过程。
-
-**难度：** 困难
-
-示例文件：
-- PHPFiles/Advanced/Lesson46/ValidatePhoneNumber.php
-- PHPFiles/Advanced/Lesson46/ValidatePhoneNumber.fmp12
-
-> 本节使用独立的数据库进行演示。请将 ValidatePhoneNumber.fmp12 数据库文件上传到你的服务器上。
-
-页面导航：
-- 列表
-
-**FileMaker API 方法：**
-- newInputCommand()
-- setFill()
-- execute()
-
-**代码：**
-从连接到数据库开始。
-
-```php
-<?php
-require_once ('FileMaker.php');
-$fm = new FileMaker();
-$fm->setProperty('database', '//ValidatePhoneNumber');
-$fm->setProperty('hostspec', 'http://127.0.0.1/');
-$fm->setProperty('username', 'Admin');
-$fm->setProperty('password', '1234');
-```
-
-当你点击 html 表单中的按钮时，下面的 PHP 代码将运行。它会在电话号码提交到数据库之前验证其格式。为了演示目的，我使用了 GET 方法，这样你可以看到 URL。在生产网站中，你可能会使用 POST 方法。要启动代码，你必须确保设置了 GET 方法并且按钮的名称为 Submit。接下来，我将使用正则表达式来定义我想要我的电话格式匹配的模式 (XXX-XXX-XXXX)。为了解释这个正则表达式，我将提供一组选项，你可以根据自己的电话格式进行选择。在使用正则表达式时你唯一需要做的事情是，如果你想在 `preg_match` 函数中使用 `$match` 选项，请用 `^` 分隔匹配标准。
-
-```
-//
-开始数据（必需）
-[0]
-0 或 1 个 "(" 字符
-(\d{0,3})
-区号的 0 到 3 个数字
-[1]
-0 或 1 个字符
-[\s]
-0 或 1 个空格字符
-[-]
-0 或 1 个连字符
-```
-
-(\d(3)) 交换机恰好 3 个数字
-[\s] 0 或 1 个空格字符
-[-] 0 或 1 个连字符
-(\d(4)) 号码恰好 4 个数字
-
-如果你使用上述所有选项，你的电话号码将格式化为 XXX-XXX 或 (XXX) XXX-XXXX。
-正则表达式看起来像：
-
-```
-/^(\d(0,3))?[-\s]?\(\d(3))\)?[-\s]?(\d(4))$/
-```
-
-另一方面，我更倾向于强制用户提供整个电话号码，包括区号。
-因此，我建议在例例中使用下面的代码。我也知道当用户完成电话号码输入时，数字的长度应该恰好是 12 个字符，包括连字符。
-所以我还将使用 `str (length)` 函数。如果有任何不匹配的地方，我将设置 `$message` 变量作为给用户的响应并在表单中显示。
-
-```php
-<?php
-If(isset($_GET['Submit']) && $_GET['Submit']=='Submit') {
-    // 匹配数字 858-555-1212 且为 12 位
-    $pattern = '/^(\d(3))?[-\s]?(\d(3))?[-\s]?(\d(4))$/';
-    if (preg_match($pattern, $_GET['PhoneNumber']) &&
-        strlen($_GET['PhoneNumber'])==12) {
-        $message = '感谢使用正确的电话号码格式。<br>';
-    } else {
-        $message = '电话格式无效。<br>';
-        $errors = 1;
-    }
-}
-```
-
-![](img/5a2c5fda68d42e5d65f51850276e49ec_359_0.png)
-
-preg_match($pattern, $subject): 执行正则表达式匹配。
-http://us.php.net/manual/function/preg-match.php
-
-当我们验证了电话号码后，就可以将其插入数据库中。由于数据来自网络，我使用 `strip_tags` 函数来清理数据，以防某些黑客发现了如何用带有恶意代码的伪造电话号码。或者，如果你想使用 FileMaker 引擎，可以使用 `preg_replace('/D/', '', $_GET['PhoneNumber'])`，其中 `preg_replace` 用于删除电话号码中数字以外的所有内容。我在 PHP 页面中包含了注释掉的代码，如果你想尝试的话。我已经在数据库中包含了计算字段，以便默认格式化数据输入。
-
-```php
-if(empty($errors)) {
-    $request = $fm->newAddCommand('Demo');
-    $request->setfield('PhoneNumber', strip_tags($_GET['PhoneNumber']));
-    $request->execute();
-    if(FileMaker::isError($result)) {
-        $message = '错误：' . $result->getMessage() . ' 请尝试重新提交你的电话号码。<br>';
-        exit;
-    }
-}
-```
-
-此解决方案的最后部分是一个简单的表单，用于将 `PhoneNumber` 字段提交到网页进行验证。
-名为 Submit 的按钮会将 Submit 的值传递过去，以运行上面的 PHP 代码。
-
-```html
-<form action="ValidatePhoneNumber" method="get">
-电话号码 (XXX-XXX-XXXX): <input name="PhoneNumber" type="text" maxlength="12" value="<?php echo $_GET['PhoneNumber']; ?>"><br>
-<?php echo $message; ?>
-<input name="Submit" type="submit">
-</form>
-```
-[/content] (抱歉，由于提供的原文中存在大量重复内容，我已根据指令“不要重复输出原文”的原则进行了去重处理，并确保翻译逻辑连贯。)
-
-*(修正：重新审视输入文本，原文中包含了多个重复的“Validate Credit Card”段落。根据指令“不要重复输出原文”，我应仅提供一份去重后的翻译。)*
-
-**以下是去重后的最终翻译：**
-
-[content]
-# 验证信用卡
-
-名字: John
-姓氏: Doe
-类型: VISA
-信用卡号: 4111111111111
-有效期 (MM/YY): 05 / 13
-安全码 CCCV: 1234
-
-成功！
-确认
-
-图 7-126 输入一个有效的信用卡号已成功。
-
-# 验证信用卡
-
-名字: John
-姓氏: Doe
-类型: VISA
-信用卡号: 123456789
-有效期 (MM/YY): 05 / 13
-安全码 CCCV: 1234
-
-信用卡号无效。
-确认
-
-图 7-127 输入一个无效的信用卡号未能成功。
+`http://us.php.net/manual/function/preg-match.php`
 
 # 第 46 节：验证电话号码
 
@@ -11877,20 +12113,24 @@ if(empty($errors)) {
 **难度：** 困难
 
 示例文件：
-- PHPFiles/Advanced/Lesson46/ValidatePhoneNumber.php
-- PHPFiles/Advanced/Lesson46/ValidatePhoneNumber.fmp12
 
-> 本节使用独立的数据库进行演示。请将 ValidatePhoneNumber.fmp12 数据库文件上传到你的服务器上。
+- `PHPFiles/Advanced/Lesson46/ValidatePhoneNumber.php`
+- `PHPFiles/Advanced/Lesson46/ValidatePhoneNumber.fmp12`
+
+> 本节使用独立的数据库进行演示。请将 `ValidatePhoneNumber.fmp12` 数据库文件上传到你的服务器上。
 
 页面导航：
+
 - 列表
 
 **FileMaker API 方法：**
-- newInputCommand()
-- setFill()
-- execute()
+
+- `newInputCommand()`
+- `setFill()`
+- `execute()`
 
 **代码：**
+
 从连接到数据库开始。
 
 ```php
@@ -11903,7 +12143,7 @@ $fm->setProperty('username', 'Admin');
 $fm->setProperty('password', '1234');
 ```
 
-当你点击 html 表单中的按钮时，下面的 PHP 代码将运行。它会在电话号码提交到数据库之前验证其格式。为了演示目的，我使用了 GET 方法，这样你可以看到 URL。在生产网站中，你可能会使用 POST 方法。要启动代码，你必须确保设置了 GET 方法并且按钮的名称为 Submit。接下来，我将使用正则表达式来定义我想要我的电话格式匹配的模式 (XXX-XXX-XXXX)。为了解释这个正则表达式，我将提供一组选项，你可以根据自己的电话格式进行选择。在使用正则表达式时你唯一需要做的事情是，如果你想在 `preg_match` 函数中使用 `$match` 选项，请用 `^` 分隔匹配标准。
+当你点击 html 表单中的按钮时，下面的 PHP 代码将运行。它会在电话号码提交到数据库之前验证其格式。为了演示目的，我使用了 GET 方法，这样你可以看到 URL。在生产网站中，你可能会使用 POST 方法。要启动代码，你必须确保设置了 GET 方法并且按钮的名称为 Submit。接下来，我将使用正则表达式来定义我想要我的电话格式匹配的模式 `(XXX-XXX-XXXX)`。为了解释这个正则表达式，我将提供一组选项，你可以根据自己的电话格式进行选择。在使用正则表达式时你唯一需要做的事情是，如果你想在 `preg_match` 函数中使用 `$match` 选项，请用 `^` 分隔匹配标准。
 
 ```
 //
@@ -11920,12 +12160,16 @@ $fm->setProperty('password', '1234');
 0 或 1 个连字符
 ```
 
-(\d(3)) 交换机恰好 3 个数字
-[\s] 0 或 1 个空格字符
-[-] 0 或 1 个连字符
-(\d(4)) 号码恰好 4 个数字
+`(\d(3))` 交换机恰好 3 个数字
 
-如果你使用上述所有选项，你的电话号码将格式化为 XXX-XXX 或 (XXX) XXX-XXXX。
+`[\s]` 0 或 1 个空格字符
+
+`[-]` 0 或 1 个连字符
+
+`(\d(4))` 号码恰好 4 个数字
+
+如果你使用上述所有选项，你的电话号码将格式化为 XXX-XXX 或 `(XXX) XXX-XXXX`。
+
 正则表达式看起来像：
 
 ```
@@ -11933,7 +12177,9 @@ $fm->setProperty('password', '1234');
 ```
 
 另一方面，我更倾向于强制用户提供整个电话号码，包括区号。
+
 因此，我建议在例例中使用下面的代码。我也知道当用户完成电话号码输入时，数字的长度应该恰好是 12 个字符，包括连字符。
+
 所以我还将使用 `str (length)` 函数。如果有任何不匹配的地方，我将设置 `$message` 变量作为给用户的响应并在表单中显示。
 
 ```php
@@ -11953,8 +12199,9 @@ If(isset($_GET['Submit']) && $_GET['Submit']=='Submit') {
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_359_0.png)
 
-preg_match($pattern, $subject): 执行正则表达式匹配。
-http://us.php.net/manual/function/preg-match.php
+`preg_match($pattern, $subject)`: 执行正则表达式匹配。
+
+`http://us.php.net/manual/function/preg-match.php`
 
 当我们验证了电话号码后，就可以将其插入数据库中。由于数据来自网络，我使用 `strip_tags` 函数来清理数据，以防某些黑客发现了如何用带有恶意代码的伪造电话号码。或者，如果你想使用 FileMaker 引擎，可以使用 `preg_replace('/D/', '', $_GET['PhoneNumber'])`，其中 `preg_replace` 用于删除电话号码中数字以外的所有内容。我在 PHP 页面中包含了注释掉的代码，如果你想尝试的话。我已经在数据库中包含了计算字段，以便默认格式化数据输入。
 
@@ -11971,6 +12218,7 @@ if(empty($errors)) {
 ```
 
 此解决方案的最后部分是一个简单的表单，用于将 `PhoneNumber` 字段提交到网页进行验证。
+
 名为 Submit 的按钮会将 Submit 的值传递过去，以运行上面的 PHP 代码。
 
 ```html
@@ -11982,9 +12230,18 @@ if(empty($errors)) {
 ```
 
 图 7-128 输入一个有效的电话号码已成功。
+
 图 7-129 输入一个无效的电话号码未能成功。
-*(注：由于原文中存在大量重复段落，此处已按要求进行去重翻译)*
 
+# FileMaker
+
+## PHP
+
+# PHP 与 FileMaker 差异
+
+| Filter() | PHP | 结果 |
+|---|---|---|
+| Filter("(858)-794-1530") | `preg_replace("[0-9]+",","", "(858)-794-1530")` | 858794153 |
 
 
 
@@ -11994,181 +12251,102 @@ if(empty($errors)) {
 
 # PHP 与 FileMaker 差异
 
-| Filter() | PHP | 结果 |
-|---|---|---||
-| Filter("(858)-794-1530") | preg_replace("[0-9]+",","", "(858)-794-1530") | 858794153 |
-| GetDate("12/14/2010") | date("m/d/Y") | 12/14/2010 |
-| GetNumber("ABC123") | preg_replace("[0-9]+",","", "ABC123") | 123 |
-| GetText("ABC123") | preg_replace("[a-zA-Z]+",","", "ABC123") | ABC |
-| GetTime("08:00") | date("h:i:s") | 08:00 |
-| GetTimeStamp("12/14/2010 08:00") | date("m/d/Y H:i:s") | 12/14/2010 08:00 |
-| GetURLencode("tduell@formulations.com") | urlencode("tduell@formulations.com") | tduell%40formulations.com |
-| Hour("9.5") | int(9) | 9 |
-| Int(Random(10)) | rand(10) | 5 |
-| IsValid("22/09/2010") | strpos("22/09/2010",1) | 0 |
-| Left Text("Duell") | substr("Duell",0,4) | Todd |
-| LeftWords("Todd Duel") | implode(",",array_str_word_count("Todd Duel",1),0,1) | Todd |
-| Length("Duell") | strlen("Duell") | 5 |
-| Lower Text("Duell") | strtolower("Duell") | duell |
-| Log(2) | log(2) | 1 |
-| Log(100) | log(100) | 2 |
-| MiddleText("Duell",2,3) | substr("Duell",1,3) | odd |
-| MiddleWords("Todd Duel San Diego;3") | implode(",",array_str_word_count("Todd Duel San Diego",1,2),1) | San |
-| Minute("08:00") | date("i") | 0 |
-| Mod(5,3) | 5%3 | 2 |
-| Month("12/14/2010") | date("m") | 5 |
-| MonthName | date("F") | December |
-| PatternCount("Todd;d") | substr(strtolower("Todd"),"d") | |
-| Pi | pi | 3.14 |
-| Position("Duell";1,1) | strpos("Duell",1,1) | 1 |
-| Proper("Duell") | ucwords("Duell") | Todd |
-| Random | rand(1000) | 0.15 |
-| Replace("Todd Duel:",("Todd Duel":1)) | str_replace("Todd Duel:","Tim","Tim Duel",0) | Tim |
-| Length("Tim") | | | |
-| Right("Todd Duel",5) | substr("Todd Duel",-5) | Duel |
-| RightWords("Todd Duel",1) | implode(",",array_str_word_count("Todd Duel",1),1) | Duel |
-| Round(10,12.5) | round(10,12.5) | 10.1 |
-| Seconds(08:00:25) | date("s") | 25 |
-| Sign(-10) | gmp_sign("-10") | -1 |
-| Sqrt(10) | sqrt(10) | 3.16 |
-| StDev("2;4;6") | $values = array("2","4","6"); $result = stdev_standard_deviation($values); | | |
-| Substitute("Todd Duel";"B":"B") | str_replace("B","B","Todd Duel") | Buell |
+| FileMakerName | PHP | 结果 | PHP 参考 |
+|---|---|---|---|
+| `GetDate("12/14/2010")` | `date("m/d/Y")` | 12/14/2010 | |
+| `GetNumber("ABC123")` | `preg_replace("[0-9]+",","", "ABC123")` | 123 | |
+| `GetText("ABC123")` | `preg_replace("[a-zA-Z]+",","", "ABC123")` | ABC | |
+| `GetTime("08:00")` | `date("h:i:s")` | 08:00 | |
+| `GetTimeStamp("12/14/2010 08:00")` | `date("m/d/Y H:i:s")` | 12/14/2010 08:00 | |
+| `GetURLencode("tduell@formulations.com")` | `urlencode("tduell@formulations.com")` | tduell%40formulations.com | |
+| `Hour("9.5")` | `int(9)` | 9 | |
+| `Int(Random(10))` | `rand(10)` | 5 | |
+| `IsValid("22/09/2010")` | `strpos("22/09/2010",1)` | 0 | |
+| `Left Text("Duell")` | `substr("Duell",0,4)` | Todd | |
+| `LeftWords("Todd Duel")` | `implode(",",array_str_word_count("Todd Duel",1),0,1)` | Todd | |
+| `Length("Duell")` | `strlen("Duell")` | 5 | |
+| `Lower Text("Duell")` | `strtolower("Duell")` | duell | |
+| `Log(2)` | `log(2)` | 1 | |
+| `Log(100)` | `log(100)` | 2 | |
+| `MiddleText("Duell",2,3)` | `substr("Duell",1,3)` | odd | |
+| `MiddleWords("Todd Duel San Diego;3")` | `implode(",",array_str_word_count("Todd Duel San Diego",1,2),1)` | San | |
+| `Minute("08:00")` | `date("i")` | 0 | |
+| `Mod(5,3)` | `5%3` | 2 | |
+| `Month("12/14/2010")` | `date("m")` | 5 | |
+| `MonthName` | `date("F")` | December | |
+| `PatternCount("Todd;d")` | `substr(strtolower("Todd"),"d")` |  | |
+| `Pi` | `pi` | 3.14 | |
+| `Position("Duell";1,1)` | `strpos("Duell",1,1)` | 1 | |
+| `Proper("Duell")` | `ucwords("Duell")` | Todd | |
+| `Random` | `rand(1000)` | 0.15 | |
+| `Replace("Todd Duel:",("Todd Duel":1))` | `str_replace("Todd Duel:","Tim","Tim Duel",0)` | Tim | |
+| `Right("Todd Duel",5)` | `substr("Todd Duel",-5)` | Duel | |
+| `RightWords("Todd Duel",1)` | `implode(",",array_str_word_count("Todd Duel",1),1)` | Duel | |
+| `Round(10,12.5)` | `round(10,12.5)` | 10.1 | |
+| `Seconds(08:00:25)` | `date("s")` | 25 | |
+| `Sign(-10)` | `gmp_sign("-10")` | -1 | |
+| `Sqrt(10)` | `sqrt(10)` | 3.16 | |
+| `StDev("2;4;6")` | `$values = array("2","4","6"); $result = stdev_standard_deviation($values);` |  |  |
+| `Substitute("Todd Duel";"B":"B")` | `str_replace("B","B","Todd Duel")` | Buell | |
+| `Sum(FieldName)` | `$values = array(2,4,6); echo $result = array_sum($values);` | 12 | http://us.php.net/manual/en/function.array-sum.php |
+| `Tan(13)` | `tan(13);` | 0.13 | http://us.php.net/manual/en/function.tan.php |
+| `Time(8;00,00)` | `date("H:i:s");` | 8:00:00 | http://us.php.net/manual/en/function.date.php |
+| `Timestamp(Date(12/14/2010);` | `date("m/d/Y H:i A");` | 12/14/2010 6:30 AM | http://us.php.net/manual/en/function.date.php |
+| `Trim("Todd Duel")` | `trim("Todd Duel");` | Todd Duel | http://us.php.net/manual/en/function.trim.php |
+| `Truncate(1.2345; 1)` | `floor(1.2345*pow(10,1))/10` | 1.2 | http://www.php.net/manual/en/function.intval.php |
+| `Upper("Todd Duel")` | `strupper("Todd Duel");` | TODEL | http://us.php.net/manual/en/function.strtoupper.php |
+| `ValueCount("Todd Duel")` | `$values = array("Todd", "Duel"); echo $result = count($values);` | 2 | http://us.php.net/manual/en/function.count.php |
+| `WeekOfYear("12/14/2010")` | `date("W");` | 51 | http://us.php.net/manual/en/function.date.php |
+| `WordCount("Todd Duel")` | `str_word_count("Todd Duel", 0);` | 2 | http://us.php.net/manual/en/function.str_count.php |
+| `Year("12/14/2010")` | `date("Y");` | 2010 | http://us.php.net/manual/en/function.date.php |
+
+
+
+| `GetURLencode("tduell@formulations.com")` | `urlencode("tduell@formulations.com")` | tduell%40formulations.com |
+| `Hour("9.5")` | `int(9)` | 9 |
+| `Int(Random(10))` | `rand(10)` | 5 |
+| `IsValid("22/09/2010")` | `strpos("22/09/2010",1)` | 0 |
+| `Left Text("Duell")` | `substr("Duell",0,4)` | Todd |
+| `LeftWords("Todd Duel")` | `implode(",",array_str_word_count("Todd Duel",1),0,1)` | Todd |
+| `Length("Duell")` | `strlen("Duell")` | 5 |
+| `Lower Text("Duell")` | `strtolower("Duell")` | duell |
+| `Log(2)` | `log(2)` | 1 |
+| `Log(100)` | `log(100)` | 2 |
+| `MiddleText("Duell",2,3)` | `substr("Duell",1,3)` | odd |
+| `MiddleWords("Todd Duel San Diego;3")` | `implode(",",array_str_word_count("Todd Duel San Diego",1,2),1)` | San |
+| `Minute("08:00")` | `date("i")` | 0 |
+| `Mod(5,3)` | `5%3` | 2 |
+| `Month("12/14/2010")` | `date("m")` | 5 |
+| `MonthName` | `date("F")` | December |
+| `PatternCount("Todd;d")` | `substr(strtolower("Todd"),"d")` |  |
+| `Pi` | `pi` | 3.14 |
+| `Position("Duell";1,1)` | `strpos("Duell",1,1)` | 1 |
+| `Proper("Duell")` | `ucwords("Duell")` | Todd |
+| `Random` | `rand(1000)` | 0.15 |
+| `Replace("Todd Duel:",("Todd Duel":1))` | `str_replace("Todd Duel:","Tim","Tim Duel",0)` | Tim |
+| `Length("Tim")` |  |  |
+| `Right("Todd Duel",5)` | `substr("Todd Duel",-5)` | Duel |
+| `RightWords("Todd Duel",1)` | `implode(",",array_str_word_count("Todd Duel",1),1)` | Duel |
+| `Round(10,12.5)` | `round(10,12.5)` | 10.1 |
+| `Seconds(08:00:25)` | `date("s")` | 25 |
+| `Sign(-10)` | `gmp_sign("-10")` | -1 |
+| `Sqrt(10)` | `sqrt(10)` | 3.16 |
+| `StDev("2;4;6")` | `$values = array("2","4","6"); $result = stdev_standard_deviation($values);` |  |
+| `Substitute("Todd Duel";"B":"B")` | `str_replace("B","B","Todd Duel")` | Buell |
 
 | FileMakerName | PHP | 结果 | PHP 参考 |
 |---|---|---|---|
-| Sum(FieldName) | $values = array(2,4,6); echo $result = array_sum($values); | 12 | http://us.php.net/manual/en/function.array-sum.php |
-| Tan(13) | tan(13); | 0.13 | http://us.php.net/manual/en/function.tan.php |
-| Time(8;00,00) | date("H:i:s"); | 8:00:00 | http://us.php.net/manual/en/function.date.php |
-| Timestamp(Date(12/14/2010); | date("m/d/Y H:i A"); | 12/14/2010 6:30 AM | http://us.php.net/manual/en/function.date.php |
-| Trim("Todd Duel") | trim("Todd Duel"); | Todd Duel | http://us.php.net/manual/en/function.trim.php |
-| Truncate(1.2345; 1) | floor(1.2345*pow(10,1))/10 | 1.2 | http://www.php.net/manual/en/function.intval.php |
-| Upper("Todd Duel") | strupper("Todd Duel"); | TODEL | http://us.php.net/manual/en/function.strtoupper.php |
-| ValueCount("Todd Duel") | $values = array("Todd", "Duel"); echo $result = count($values); | 2 | http://us.php.net/manual/en/function.count.php |
-| WeekOfYear("12/14/2010") | date("W"); | 51 | http://us.php.net/manual/en/function.date.php |
-| WordCount("Todd Duel") | str_word_count("Todd Duel", 0); | 2 | http://us.php.net/manual/en/function.str_count.php |
-| Year("12/14/2010") | date("Y"); | 2010 | http://us.php.net/manual/en/function.date.php |
-| Year("12/14/2010") | date("Y"); | 2010 | http://us.php.net/manual/en/function.date.php |
-
-| FileMakerName | PHP | 结果 | PHP 参考 |
-|---|---|---|---|
-| Sum(FieldName) | $values = array(2,4,6); echo $result = array_sum($values); | 12 | http://us.php.net/manual/en/function.array-sum.php |
-| Tan(13) | tan(13); | 0.13 | http://us.php.net/manual/en/function.tan.php |
-| Time(8;00,00) | date("H:i:s"); | 8:00:00 | http://us.php.net/manual/en/function.date.php |
-| Timestamp(Date(12/14/2010); | date("m/d/Y H:i A"); | 12/14/2010 6:30 AM | http://us.php.net/manual/en/function.date.php |
-| Trim("Todd Duel") | trim("Todd Duel"); | Todd Duel | http://us.php.net/manual/en/function.trim.php |
-| Truncate(1.2345; 1) | floor(1.2345*pow(10,1))/10 | 1.2 | http://www.php.net/manual/en/function.intval.php |
-| Upper("Todd Duel") | strupper("Todd Duel"); | TODEL | http://us.php.net/manual/en/function.strtoupper.php |
-| ValueCount("Todd Duel") | $values = array("Todd", "Duel"); echo $result = count($values); | 2 | http://us.php.net/manual/en/function.count.php |
-| WeekOfYear("12/14/2010") | date("W"); | 51 | http://us.php.net/manual/en/function.date.php |
-| WordCount("Todd Duel") | str_word_count("Todd Duel", 0); | 2 | http://us.php.net/manual/en/function.str_count.php |
-| Year("12/14/2010") | date("Y"); | 2010 | http://us.php.net/manual/en/function.date.php |
-
-| FileMakerName | PHP | 结果 | PHP 参考 |
-|---|---|---|---|
-| Sum(FieldName) | $values = array(2,4,6); echo $result = array_sum($values); | 12 | http://us.php.net/manual/en/function.array-sum.php |
-| Tan(13) | tan(13); | 0.13 | http://us.php.net/manual/en/function.tan.php |
-| Time(8;00,00) | date("H:i:s"); | 8:00:00 | http://us.php.net/manual/en/function.date.php |
-| Timestamp(Date(12/14/2010); | date("m/d/Y H:i A"); | 12/14/2010 6:30 AM | http://us.php.net/manual/en/function.date.php |
-| Trim("Todd Duel") | trim("Todd Duel"); | Todd Duel | http://us.php.net/manual/en/function.trim.php |
-| Truncate(1.2345; 1) | floor(1.2345*pow(10,1))/10 | 1.2 | http://www.php.net/manual/en/function.intval.php |
-| Upper("Todd Duel") | strupper("Todd Duel"); | TODEL | http://us.php.net/manual/en/function.strtoupper.php |
-| ValueCount("Todd Duel") | $values = array("Todd", "Duel"); echo $result = count($values); | 2 | http://us.php.net/manual/en/function.count.php |
-| WeekOfYear("12/14/2010") | date("W"); | 51 | http://us.php.net/manual/en/function.date.php |
-| WordCount("Todd Duel") | str_word_count("Todd Duel", 0); | 2 | http://us.php.net/manual/en/function.str_count.php |
-| Year("12/14/2010") | date("Y"); | 2010 | http://us.php.net/manual/en/function.date.php |
-
-*(注：由于原文中存在大量重复内容，翻译时已根据要求进行了去重处理，仅保留核心逻辑表格。)*
-
-[content]
-# FileMaker
-
-## PHP
-
-# PHP 与 FileMaker 差异
-
-| Filter() | PHP | 结果 |
-|---|---|---||
-... (省略重复表格)
-
-| FileMakerName | PHP | 结果 | PHP 参考 |
-|---|---|---|---|
-| Sum(FieldName) | $values = array(2,4,6); echo $result = array_sum($values); | 12 | http://us.php.net/manual/en/function.array-sum.php |
-| Tan(13) | tan(13); | 0.13 | http://us.php.net/manual/en/function.tan.php |
-| Time(8;00,00) | date("H:i:s"); | 8:00:00 | http://us.php.net/manual/en/function.date.php |
-| Timestamp(Date(12/14/2010); | date("m/d/Y H:i A"); | 12/14/2010 6:30 AM | http://us.php.net/manual/en/function.date.php |
-| Trim("Todd Duel") | trim("Todd Duel"); | Todd Duel | http://us.php.net/manual/en/function.trim.php |
-| Truncate(1.2345; 1) | floor(1.2345*pow(10,1))/10 | 1.2 | http://www.php.net/manual/en/function.intval.php |
-| Upper("Todd Duel") | strupper("Todd Duel"); | TODEL | http://us.php.net/manual/en/function.strtoupper.php |
-| ValueCount("Todd Duel") | $values = array("Todd", "Duel"); echo $result = count($values); | 2 | http://us.php.net/manual/en/function.count.php |
-| WeekOfYear("12/14/2010") | date("W"); | 51 | http://us.php.net/manual/en/function.date.php |
-| WordCount("Todd Duel") | str_word_count("Todd Duel", 0); | 2 | http://us.php.net/manual/en/function.str_count.php |
-| Year("12/14/2010") | date("Y"); | 2010 | http://us.php.net/manual/en/function.date.php |
-[/content]
-
-*(注：由于您提供的原文中包含大量重复的段落，为了遵循“一定不要重复输出原文”的指令，上方仅展示了对应的逻辑结构。以下为完整翻译后的内容呈现：)**
-
-[content]
-# FileMaker
-
-## PHP
-
-# PHP 与 FileMaker 差异
-
-| Filter() | PHP | 结果 |
-|---|---|---||
-| Filter("(858)-794-1530") | preg_replace("[0-9]+",","", "(858)-794-1530") | 858794153 |
-| GetDate("12/14/2010") | date("m/d/Y") | 12/14/2010 |
-| GetNumber("ABC123") | preg_replace("[0-9]+",","", "ABC123") | 123 |
-| GetText("ABC123") | preg_replace("[a-zA-Z]+",","", "ABC123") | ABC |
-| GetTime("08:00") | date("h:i:s") | 08:00 |
-| GetTimeStamp("12/14/2010 08:00") | date("m/d/Y H:i:s") | 12/14/2010 08:00 |
-| GetURLencode("tduell@formulations.com") | urlencode("tduell@formulations.com") | tduell%40formulations.com |
-| Hour("9.5") | int(9) | 9 |
-| Int(Random(10)) | rand(10) | 5 |
-| IsValid("22/09/2010") | strpos("22/09/2010",1) | 0 |
-| Left Text("Duell") | substr("Duell",0,4) | Todd |
-| LeftWords("Todd Duel") | implode(",",array_str_word_count("Todd Duel",1),0,1) | Todd |
-| Length("Duell") | strlen("Duell") | 5 |
-| Lower Text("Duell") | strtolower("Duell") | duell |
-| Log(2) | log(2) | 1 |
-| Log(100) | log(100) | 2 |
-| MiddleText("Duell",2,3) | substr("Duell",1,3) | odd |
-| MiddleWords("Todd Duel San Diego;3") | implode(",",array_str_word_count("Todd Duel San Diego",1,2),1) | San |
-| Minute("08:00") | date("i") | 0 |
-| Mod(5,3) | 5%3 | 2 |
-| Month("12/14/2010") | date("m") | 5 |
-| MonthName | date("F") | December |
-| PatternCount("Todd;d") | substr(strtolower("Todd"),"d") | |
-| Pi | pi | 3.14 |
-| Position("Duell";1,1) | strpos("Duell",1,1) | 1 |
-| Proper("Duell") | ucwords("Duell") | Todd |
-| Random | rand(1000) | 0.15 |
-| Replace("Todd Duel:",("Todd Duel":1)) | str_replace("Todd Duel:","Tim","Tim Duel",0) | Tim |
-| Length("Tim") | | |
-| Right("Todd Duel",5) | substr("Todd Duel",-5) | Duel |
-| RightWords("Todd Duel",1) | implode(",",array_str_word_count("Todd Duel",1),1) | Duel |
-| Round(10,12.5) | round(10,12.5) | 10.1 |
-| Seconds(08:00:25) | date("s") | 25 |
-| Sign(-10) | gmp_sign("-10") | -1 |
-| Sqrt(10) | sqrt(10) | 3.16 |
-| StDev("2;4;6") | $values = array("2","4","6"); $result = stdev_standard_deviation($values); | |
-| Substitute("Todd Duel";"B":"B") | str_replace("B","B","Todd Duel") | Buell |
-
-| FileMakerName | PHP | 结果 | PHP 参考 |
-|---|---|---|---|
-| Sum(FieldName) | $values = array(2,4,6); echo $result = array_sum($values); | 12 | http://us.php.net/manual/en/function.array-sum.php |
-| Tan(13) | tan(13); | 0.13 | http://us.php.net/manual/en/function.tan.php |
-| Time(8;00,00) | date("H:i:s"); | 8:00:00 | http://us.php.net/manual/en/function.date.php |
-| Timestamp(Date(12/14/2010); | date("m/d/Y H:i A"); | 12/14/2010 6:30 AM | http://us.php.net/manual/en/function.date.php |
-| Trim("Todd Duel") | trim("Todd Duel"); | Todd Duel | http://us.php.net/manual/en/function.trim.php |
-| Truncate(1.2345; 1) | floor(1.2345*pow(10,1))/10 | 1.2 | http://www.php.net/manual/en/function.intval.php |
-| Upper("Todd Duel") | strupper("Todd Duel"); | TODEL | http://us.php.net/manual/en/function.strtoupper.php |
-| ValueCount("Todd Duel") | $values = array("Todd", "Duel"); echo $result = count($values); | 2 | http://us.php.net/manual/en/function.count.php |
-| WeekOfYear("12/14/2010") | date("W"); | 51 | http://us.php.net/manual/en/function.date.php |
-| WordCount("Todd Duel") | str_word_count("Todd Duel", 0); | 2 | http://us.php.net/manual/en/function.str_count.php |
-| Year("12/14/2010") | date("Y"); | 2010 | http://us.php.net/manual/en/function.date.php |
-
-
+| `Sum(FieldName)` | `$values = array(2,4,6); echo $result = array_sum($values);` | 12 | http://us.php.net/manual/en/function.array-sum.php |
+| `Tan(13)` | `tan(13);` | 0.13 | http://us.php.net/manual/en/function.tan.php |
+| `Time(8;00,00)` | `date("H:i:s");` | 8:00:00 | http://us.php.net/manual/en/function.date.php |
+| `Timestamp(Date(12/14/2010);` | `date("m/d/Y H:i A");` | 12/14/2010 6:30 AM | http://us.php.net/manual/en/function.date.php |
+| `Trim("Todd Duel")` | `trim("Todd Duel");` | Todd Duel | http://us.php.net/manual/en/function.trim.php |
+| `Truncate(1.2345; 1)` | `floor(1.2345*pow(10,1))/10` | 1.2 | http://www.php.net/manual/en/function.intval.php |
+| `Upper("Todd Duel")` | `strupper("Todd Duel");` | TODEL | http://us.php.net/manual/en/function.strtoupper.php |
+| `ValueCount("Todd Duel")` | `$values = array("Todd", "Duel"); echo $result = count($values);` | 2 | http://us.php.net/manual/en/function.count.php |
+| `WeekOfYear("12/14/2010")` | `date("W");` | 51 | http://us.php.net/manual/en/function.date.php |
+| `WordCount("Todd Duel")` | `str_word_count("Todd Duel", 0);` | 2 | http://us.php.net/manual/en/function.str_count.php |
+| `Year("12/14/2010")` | `date("Y");` | 2010 | http://us.php.net/manual/en/function.date.php |
 
 如果出现问题，提供 OEM 技术支持。如果任何部分损坏，你可能需要等待很长时间才能修复。
 
@@ -12230,8 +12408,6 @@ Windows 服务器：如果你只需要一个网站，你可能可以使用 Windo
 
 Apache/IIS：如果你只需要一个网站，你可能可以使用 Apache 或 IIS。无论你使用什么操作系统，FileMaker Server 都不在，但你可能需要 CALS。对于每个访问网站的用户，购买 Windows 2008 R2 标准版 ($2000 - $5000 + CALS) 可能会更贵一些。
 
-
-
 该国家，并且该服务器上有很多用户。如果你有 40 kbps 的带宽已经算走运了，但却为 T1 连接付钱——这太荒谬了！最后，你还需要评估主机在服务器上具体提供了哪些服务。他们提供 Web 服务器、提供 PHP、ASP、JSP、即时网络发布（Instant Web Publishing）、数据库的 WAN 访问、SSL 等。他们支持哪个版本的 FileMaker？你是否有权访问任何类型的 FileMaker Server、Apache、IIS 或通过 PHP 触发 FileMaker Server 的自定义配置？他们是否允许你远程打开/关闭、上传/下载和管理你的数据库？FileMaker Server 不像其他允许你执行这些操作的数据库。你必须通过管理控制（Admin Console）进行所有操作。这意味着你可能需要等待主机管理员帮助你，和/或者他们可能会收取服务费来处理你的数据库。不要指望他们会为你配置一个共享服务器。那需要专用服务器或托管托管服务器。再次，当你真正深入使用时，托管解决方案在开始时每月 250 美元可能看起来很不错。然而，从长远来看，如果你是认真的，并开始使用 FileMaker Server 为你的业务运营托管更大的网站和/或更多数据库，你就需要自己托管服务器。
 
 ## 性能考虑
@@ -12257,6 +12433,8 @@ Apache/IIS：如果你只需要一个网站，你可能可以使用 Apache 或 I
 ## 将文件最大数量限制为服务器上数据库的精确数量
 
 这个问题与数据库的并发用户数量相似。因为仅仅因为 FileMaker Server 托管，并不意味着它是最佳设置。由于 FileMaker Server 托管，你可以在服务器上分配内存， 内存大于文件总大小。每当操作系统需要进入虚拟内存，性能就会受到巨大影响，因为虚拟内存实际上来自硬盘，这是最慢的组件。
+
+
 
 你可以关闭数据库和 Web 服务器的日志。日志不会占用空间。然而，这为了服务器，可能无法为你提供有用信息。由于 FileMaker Server 托管，你可以在测试服务器上开启它们。当你遇到任何问题时，你可以重新开启。
 
@@ -12303,16 +12481,27 @@ FileMaker Server 概述
 配置：管理员组
 
 - 管理
+
 - 客户端
+
 - 数据库
+
 - 计划
+
 - 统计
+
 - 日志查看器
+
 - 配置
+
 - 通用设置
+
 - 管理员组
+
 - 数据库服务器
+
 - Web 发布
+
 - ODBC/JDBC
 
 管理组
@@ -12324,38 +12513,59 @@ FileMaker Server 概述
 身份：指定管理员组的名称、密码和可选的身份验证。
 
 组名称：PHP
+
 组密码：****
+
 确认密码：****
 
 选择此组的权限：
+
 - 对数据库执行操作
+
 - 查看统计数据和日志
+
 - 对计划执行操作
+
 - 发送消息（默认）
+
 - 备份数据库
+
 - 验证数据库
+
 - 运行脚本
 
 - 使用外部组。
 
-组文件夹：filemac:/Macintosh HD/Library/FileMakerServer/Data/Databases/
+组文件夹：`filemac:/Macintosh HD/Library/FileMakerServer/Data/Databases/`
 
 选择文件夹
+
 取消
+
 确定
 
 权限
+
 - 查看数据库、发送消息、断开客户端（默认）
 
 相关任务：
+
 - 上传数据库
+
 - 创建计划
+
 - 配置电子邮件通知
+
 - FileMaker Server 
+
 - 管理数据库
+
 - 编辑权限
+
 - 添加
+
 - 还原
+
 - 保存
 
 图 8-1：FileMaker Server 管理员组。
@@ -12376,28 +12586,30 @@ ini_set('display_errors', '0');
 
 Apache 和 IIS 服务器会生成访问日志和错误日志。这些文本文件记录了向 Web 服务器提出的每一个请求。访问日志包含 URL、日期、时间、IP 地址、请求的文件等信息。这些日志可以帮助衡量你网站的指标。错误日志记录了服务器遇到的每一个问题。在多机器部署中，日志文件与生成日志的 FileMaker Server 组件位于同一台机器上。所有日志文件位于 Logs 文件夹中：
 
-Windows: [d]:\Program Files\FileMaker\Server\Logs
+Windows: `[d]:\Program Files\FileMaker\Server\Logs`
 
-Mac OS:/Library/FileMaker Server/Logs
+Mac OS:`/Library/FileMaker Server/Logs`
 
 ![](img/5a2c5fda68d42e5d65f51850276e49ec_375_0.png)
 
 图 8-2：管理日志查看器。
 
-
-
-
-
 # 事件日志
 
 数据库服务器运行期间发生的事件会记录在制表符分隔的事件日志并带有时间戳。
+
 当 `Event.log` 文件达到指定的日志大同时，它将被重命名为 `Event-old.log` 并创建一个新的 `Event.log` 文件。如需配置 `Event.log` 文件的大小，请参阅数据库服务器> 日志和日志查看器设置。记录的典型事件包括：
 
 - 数据库服务器的启动和停止。
+
 - 数据库服务器打开和关闭数据库文件。
+
 - 对未正常关闭或在 FileMaker 产品中未打开的文件进行一致性检查。
+
 - 新的、完成的、即将进行的和正在运行的计划。
+
 - 数据库服务器在您的配置中检测到的预错误和条件。
+
 - 数据库服务器启动时的当前属性设置，以及数据库服务器会话期间更改的设置。
 
 # 访问日志
@@ -12405,6 +12617,7 @@ Mac OS:/Library/FileMaker Server/Logs
 数据库服务器在一个名为 `Access.log` 的独立文件中访问所有数据库。当文件达到指定的日志大同时，它将被重命名为 `Access-old.log` 并创建一个新的 `Access.log` 文件。如需配置 `Access.log` 文件的大小，请参阅数据库服务器> 日志和日志查看器设置。记录的典型事件包括：
 
 - 连接和断开数据库服务器的客户端。
+
 - 使用唯一账户访问且具有内置访客帐户的数据库。
 
 # 统计日志
@@ -12412,6 +12625,7 @@ Mac OS:/Library/FileMaker Server/Logs
 数据库服务器在一个名为 `Stats.log` 的独立文件中使用使用数据。统计日志对于监控 FileMaker Server 的性能非常重要。记录的典型统计数据：
 
 - 连接统计：PHP、FileMaker Pro 客户端、IWP、xDDB。
+
 - 数据库统计：缓存命中率%、未保存缓存、磁盘读/写、调用耗时、I/O、网络输入/流出、打开的数据库、远程调用和等待时间。
 
 # Web 发布日志
@@ -12419,7 +12633,9 @@ Mac OS:/Library/FileMaker Server/Logs
 Web 发布引擎生成以下日志文件：
 
 - `wpc_access_log.txt` 访问：所有终端用户生成 XML 和使用 IWP 的请求记录。请求直接从 Web 服务器路由到 Web 发布引擎的 Web 发布组件。
+
 - `pe_internal_log.txt` 应用：Web 发布引擎的 XSLT-IWP 软件组件在处理 XSLT 请求时产生的所有内部 XML 请求的记录。这些请求在 Web 发布引擎内部从 XSLT-CWP 组件路由到 Web 发布核心组件。
+
 - `pe_application_log.txt` 应用：Web 发布引擎错误、ScriptMaker 脚本和用户信息的记录。错误信息描述了发生的任何异常 Web 发布引擎错误。脚本日志描述了网络用户执行脚本时生成的任何错误。用户日志包含由 样式表中 XSLT 元素生成的消息。
 
 # Web 服务器模块日志
@@ -12493,7 +12709,6 @@ Web 发布引擎生成以下日志文件：
 | 215 | 字段无法修改 |
 | 216 | 字段无法修改 |
 | 217 | 字段无法修改 |
-
 *(注：提供的表格 OCR 数据包含大量重复和乱码。根据标准的 FileMaker 错误代码和提供的片段，我已重建了映射关系。)*
 
 | 代码 | 描述 |
@@ -12519,11 +12734,6 @@ Web 发布引擎生成以下日志文件：
 | 215 | 字段无法修改 |
 | 216 | 字段无法修改 |
 | 217 | 字段无法修改 |
-
-
-
-
-
 | 735 | 此文件类型无法作为图片显示；它将作为文件插入并显示 |
 | 736 | 数据过多，无法导出到此格式：将会被截断 |
 | 737 | 正在导入的 Bento 表缺失 |
@@ -12568,9 +12778,11 @@ Web 发布引擎生成以下日志文件：
 | 951 | 发生了一个意外错误 (*) |
 | 954 | 不支持的 XML 语法 (*) |
 | 955 | 缺少数据库名称 (*) |
+
+
+
 | 956 | 数据库会话最大数量限制 (*) |
 | 957 | 命令冲突 (*) |
-
 | | |
 |---|---|
 | 958 | 参数缺失 (*) |
@@ -12618,7 +12830,6 @@ Web 发布引擎生成以下日志文件：
 | 1450 | 操作需要 PHP 扩展 (*) |
 | 1451 | 操作要求文件是远程的 |
 | 1501 | SMTP 认证失败 |
-
 | | |
 |---|---|
 | 1502 | SMTP 服务器拒绝连接 |
@@ -12638,517 +12849,434 @@ Web 发布引擎生成以下日志文件：
 
 # FileMaker API PHP 参考
 
-我写这本书的原因之一是，长期以来用于 FileMaker API PHP 的参考材料只有 FileMaker Server 提供的电子文档。当然，这些信息作为使用 FileMaker API 方法的起点完全没用。然而，当你浏览书中的所有示例后，你可能会发现这些参考材料很有用。电子文档引用了 19 个不同的视图（例如类）。方法仅适用于特定的类，某些方法适用于多个类。例如，你永远不会告诉 fm 对象使用方法。FileMaker 类用于检索文件内容。FileMaker 类用于检索数据库属性、连接数据库并获取 API 信息。如果你需要从文件中获取信息，你会发现使用 FileMaker_Layout 类是最好的方法。你实际上是在 PHP 页面上编写代码，类是逻辑组织方法以及 FileMaker API 可以执行操作的简单方式。除了编写方法的语法外，你需要知道最重要的就是方法将返回什么。方法可以返回以下九不同的值：
+我写这本书的原因之一是，长期以来用于 FileMaker API PHP 的参考材料只有 FileMaker Server 提供的电子文档。当然，这些信息作为使用 FileMaker API 方法的起点完全没用。然而，当你浏览书中的所有示例后，你可能会发现这些参考材料很有用。电子文档引用了 19 个不同的视图（例如类）。方法仅适用于特定的类，某些方法适用于多个类。例如，你永远不会告诉 `fm` 对象使用方法。`FileMaker` 类用于检索文件内容。`FileMaker` 类用于检索数据库属性、连接数据库并获取 API 信息。如果你需要从文件中获取信息，你会发现使用 `FileMaker_Layout` 类是最好的方法。你实际上是在 PHP 页面上编写代码，类是逻辑组织方法以及 FileMaker API 可以执行操作的简单方式。除了编写方法的语法外，你需要知道最重要的就是方法将返回什么。方法可以返回以下九不同的值：
 
 - **Array**（数组）：用于显示的一个或多个字段。
 - **Boolean**（布尔）：用于错误处理的 TRUE 或 FALSE。
 - **Integer**（整数）：一个数字，例如记录计数。
 - **String**（字符串）：文本，例如文件内容。
 - **Void**（空）：不返回任何结果的方法。
-- **FileMaker_Record**：返回一个包含记录信息数组的对象。
-- **FileMaker_Result**：返回一个包含结果信息数组的对象。
-- **FileMaker_Layout**：返回一个包含布局信息数组的对象。
-- **FileMaker_Command**：返回一个对指定方法或记录集操作的对象。
+- `FileMaker_Record`：返回一个包含记录信息数组的对象。
+- `FileMaker_Result`：返回一个包含结果信息数组的对象。
+- `FileMaker_Layout`：返回一个包含布局信息数组的对象。
+- `FileMaker_Command`：返回一个对指定方法或记录集操作的对象。
 
 参考材料将仅列出一次方法及其语法和预期的返回值。列列出了该方法在书中使用的第一个文件。许多方法用于多个示例。如果你需要更详细的信息，可以在此处找到参考文档：
 
-FileMaker Server/Documentation/PHP API Documentation/index.html
+`FileMaker Server/Documentation/PHP API Documentation/index.html`
 
 | 方法 | 语法 | 值 | 课程 |
 |---|---|---|---|
-| add() | add($Precedence, $FindRequest, $Value) | void | 26 |
-| addError() | addError($File, $Rule) | void | N/A |
-| addFindCriterion() | addFindCriterion($FieldName, $TestValue) | void | 3 |
-| addSortRule() | addSortRule($FieldName, $Precedence, $Order) | void | 2 |
-| clearCriteria() | clearCriteria() | void | N/A |
-| clearSortRules() | clearSortRules() | void | N/A |
-| commit() | commit() | void | 9 |
-| createRecord() | createRecord($LayoutName, $FieldValue) | FileMaker_Record | N/A |
-| delete() | delete($Name as add newCommand) | FileMaker_Result | 6 |
-| describeLocalValidationRules() | describeLocalValidationRules() | array | N/A |
-| describeValidationRule() | describeValidationRule($ValidationRule) | array | N/A |
-| execute() | execute() | FileMaker_Result | 1 |
-
-
-
-
-
+| `add()` | `add($Precedence, $FindRequest, $Value)` | void | 26 |
+| `addError()` | `addError($File, $Rule)` | void | N/A |
+| `addFindCriterion()` | `addFindCriterion($FieldName, $TestValue)` | void | 3 |
+| `addSortRule()` | `addSortRule($FieldName, $Precedence, $Order)` | void | 2 |
+| `clearCriteria()` | `clearCriteria()` | void | N/A |
+| `clearSortRules()` | `clearSortRules()` | void | N/A |
+| `commit()` | `commit()` | void | 9 |
+| `createRecord()` | `createRecord($LayoutName, $FieldValue)` | `FileMaker_Record` | N/A |
+| `delete()` | `delete($Name as add newCommand)` | `FileMaker_Result` | 6 |
+| `describeLocalValidationRules()` | `describeLocalValidationRules()` | array | N/A |
+| `describeValidationRule()` | `describeValidationRule($ValidationRule)` | array | N/A |
+| `execute()` | `execute()` | `FileMaker_Result` | 1 |
 | 方法 | 语法 | 值 | 课程 |
 |---|---|---|---|
-| getContainerData() | getContainerData() | string | |
-| getContainerDataURL() | getContainerData($URL) | String | 12 |
-| getErrors() | getErrors($FileName) | array | 12 |
-| getFetchCount() | getFetchCount() | integer | 25 |
-| getField() | getField($FileName, $Repetition) | string | N/A |
-| getFieldTimestamp() | getFieldTimestamp($FileName, $Repetition) | integer | 35 |
-| getFields() | getFields() | array | 27 |
-| getFieldUnencoded() | getFieldUnencoded($FileName, $Repetition) | string | 36 |
-| getFirstRecord() | $result = $request->getFirstRecord() | FileMarker_Record | 22 |
-| getFoundSetCount() | getFoundSetCount() | integer | 14 |
-| getLastRecord() | $result = $request->getLastRecord() | FileMarker_Record | 21 |
-| getLayout() | getLayout() | FileMarker_Layout | 13 |
-| getLocalValidationRules() | getLocalValidationRules() | array | N/A |
-| getMessage() | getMessage() | string | 1 |
-| getModificationID() | getModificationID() | integer | 20 |
-| getName() | getName() | string | 25 |
-| getParent() | getParent() | FileMarker_Record | N/A |
-| getProperties() | getProperties() | array | N/A |
-| getProperty() | getProperty($PropertyName) | string | N/A |
-| getRecordByID() | getRecordByID($layoutName, $recordID) | FileMarker_Record | 4 |
-| getRecordID() | getRecordID() | string | N/A |
-| getRecords() | getRecords() | array | 1 |
-| getRelatedSets() | getRelatedSets($tableName) | array | 8 |
-| getRelatedSetsFilters() | getRelatedSetsFilters() | array | N/A |
-| getRepetitionCount() | getRepetitionCount() | integer | N/A |
-| getResult() | getResult() | string | 27 |
-| getStyleType() | getStyleType() | string | N/A |
-| getTableRecordCount() | getTableRecordCount() | integer | 14 |
-| getTypeValue() | getTypeValue() | string | N/A |
-| getValidationMask() | getValidationMask() | array | N/A |
-| getValidationRules() | getValidationRules() | string | 13 |
-| getValueList() | getValueList($valueList) | array | N/A |
-| getValueTwoFields() | getValueListTwoFields($valueList) | array | N/A |
-| hasValidationRule() | hasValidationRule($number) | Boolean | N/A |
-| isAutoEntered() | isAutoEntered() | Boolean | N/A |
-| isError() | isError() | Boolean | N/A |
-| isValidationError() | isValidationError() | array | N/A |
-| listFields() | listFields() | FileMarker | dbaccess.php |
-| newFile() | newFile($DatabaseName, $HostSpec, $UserName, $Password) | FileMarker_Command | 5 |
-| newCommand() | newCommand($layoutName, $fieldValues) | FileMarker_Command | 26 |
-| newFindCommand() | newFindCommand($layoutName) | FileMarker_Command | N/A |
-| newDeleteCommand() | newDeleteCommand($layoutName, $recordID) Note: As Document | | |
-| newDuplicateCommand() | newDuplicateCommand($layoutName, $recordID) | FileMarker_Command | 30 |
-| newEditCommand() | newEditCommand($layoutName, $recordID, $fieldValues) | FileMarker_Command | 7 |
-| newFindCommand() | newFindCommand($layoutName) | FileMarker_Command | 3 |
-| newAllFindCommand() | newAllFindCommand($layoutName) | FileMarker_Command | 1 |
-| newAnyFindCommand() | newAnyFindCommand($layoutName) | FileMarker_Command | 29 |
-| newConfigRequest() | newConfigRequest($layoutName) | FileMarker_Command | 26 |
-| newPerformScriptCommand() | newPerformScriptCommand($LayoutName, $ScriptName, $ScriptParameter) | FileMaker_Command | 17 |
-| numErrors() | | integer | 25 |
-| setField() | setField($FieldName, $Value) | void | 5 |
-| setFieldFromTimestamp() | setFieldFromTimestamp($FieldName, $Timestamp) | void | N/A |
-| setLogicalOperator() | setLogicalOperator($operator) | void | 27 |
-| setModificationId() | setModificationId($ModificationID) | void | 20 |
-| setOmit() | setOmit($Value) | void | 26 |
-| setPreScriptCommand() | setPreScriptCommand($ScriptName, $ScriptParameter) | void | N/A |
-| setPreSortScript() | setPreSortScript($ScriptName, $ScriptParameter) | void | N/A |
-| setRange() | setRange($skip, $max) | void | 18 |
-| setRelatedSetsFilters() | setRelatedSetsFilters($RelatedSetsFilter, $RelatedSets) | void | 35 |
-| setResultLayout() | setResultLayout($LayoutName) | void | 27 |
-| setScript() | setScript($Scriptname, $ScriptParameter) | void | 45 |
-| validate() | validate($FieldName) | Boolean | 5 |
+| `getContainerData()` | `getContainerData()` | string | |
+| `getContainerDataURL()` | `getContainerData($URL)` | String | 12 |
+| `getErrors()` | `getErrors($FileName)` | array | 12 |
+| `getFetchCount()` | `getFetchCount()` | integer | 25 |
+| `getField()` | `getField($FileName, $Repetition)` | string | N/A |
+| `getFieldTimestamp()` | `getFieldTimestamp($FileName, $Repetition)` | integer | 35 |
+| `getFields()` | `getFields()` | array | 27 |
+| `getFieldUnencoded()` | `getFieldUnencoded($FileName, $Repetition)` | string | 36 |
+| `getFirstRecord()` | `$result = $request->getFirstRecord()` | `FileMarker_Record` | 22 |
+| `getFoundSetCount()` | `getFoundSetCount()` | integer | 14 |
+| `getLastRecord()` | `$result = $request->getLastRecord()` | `FileMarker_Record` | 21 |
+| `getLayout()` | `getLayout()` | `FileMarker_Layout` | 13 |
+| `getLocalValidationRules()` | `getLocalValidationRules()` | array | N/A |
+| `getMessage()` | `getMessage()` | string | 1 |
+| `getModificationID()` | `getModificationID()` | integer | 20 |
+| `getName()` | `getName()` | string | 25 |
+| `getParent()` | `getParent()` | `FileMarker_Record` | N/A |
+| `getProperties()` | `getProperties()` | array | N/A |
+| `getProperty()` | `getProperty($PropertyName)` | string | N/A |
+| `getRecordByID()` | `getRecordByID($layoutName, $recordID)` | `FileMarker_Record` | 4 |
+| `getRecordID()` | `getRecordID()` | string | N/A |
+| `getRecords()` | `getRecords()` | array | 1 |
+| `getRelatedSets()` | `getRelatedSets($tableName)` | array | 8 |
+| `getRelatedSetsFilters()` | `getRelatedSetsFilters()` | array | N/A |
+| `getRepetitionCount()` | `getRepetitionCount()` | integer | N/A |
+| `getResult()` | `getResult()` | string | 27 |
+| `getStyleType()` | `getStyleType()` | string | N/A |
+| `getTableRecordCount()` | `getTableRecordCount()` | integer | 14 |
+| `getTypeValue()` | `getTypeValue()` | string | N/A |
+| `getValidationMask()` | `getValidationMask()` | array | N/A |
+| `getValidationRules()` | `getValidationRules()` | string | 13 |
+| `getValueList()` | `getValueList($valueList)` | array | N/A |
+| `getValueTwoFields()` | `getValueListTwoFields($valueList)` | array | N/A |
+| `hasValidationRule()` | `hasValidationRule($number)` | Boolean | N/A |
+| `isAutoEntered()` | `isAutoEntered()` | Boolean | N/A |
+| `isError()` | `isError()` | Boolean | N/A |
+| `isValidationError()` | `isValidationError()` | array | N/A |
+| `listFields()` | `listFields()` | `FileMarker` | `dbaccess.php` |
+| `newFile()` | `newFile($DatabaseName, $HostSpec, $UserName, $Password)` | `FileMarker_Command` | 5 |
+| `newCommand()` | `newCommand($layoutName, $fieldValues)` | `FileMarker_Command` | 26 |
+| `newFindCommand()` | `newFindCommand($layoutName)` | `FileMarker_Command` | N/A |
+| `newDeleteCommand()` | `newDeleteCommand($layoutName, $recordID)` Note: As Document | | |
+| `newDuplicateCommand()` | `newDuplicateCommand($layoutName, $recordID)` | `FileMarker_Command` | 30 |
+| `newEditCommand()` | `newEditCommand($layoutName, $recordID, $fieldValues)` | `FileMarker_Command` | 7 |
+| `newFindCommand()` | `newFindCommand($layoutName)` | `FileMarker_Command` | 3 |
+| `newAllFindCommand()` | `newAllFindCommand($layoutName)` | `FileMarker_Command` | 1 |
+| `newAnyFindCommand()` | `newAnyFindCommand($layoutName)` | `FileMarker_Command` | 29 |
+| `newConfigRequest()` | `newConfigRequest($layoutName)` | `FileMarker_Command` | 26 |
+| `newPerformScriptCommand()` | `newPerformScriptCommand($LayoutName, $ScriptName, $ScriptParameter)` | `FileMaker_Command` | 17 |
+| `numErrors()` | | integer | 25 |
+| `setField()` | `setField($FieldName, $Value)` | void | 5 |
+| `setFieldFromTimestamp()` | `setFieldFromTimestamp($FieldName, $Timestamp)` | void | N/A |
+| `setLogicalOperator()` | `setLogicalOperator($operator)` | void | 27 |
+| `setModificationId()` | `setModificationId($ModificationID)` | void | 20 |
+| `setOmit()` | `setOmit($Value)` | void | 26 |
+| `setPreScriptCommand()` | `setPreScriptCommand($ScriptName, $ScriptParameter)` | void | N/A |
+| `setPreSortScript()` | `setPreSortScript($ScriptName, $ScriptParameter)` | void | N/A |
+| `setRange()` | `setRange($skip, $max)` | void | 18 |
+| `setRelatedSetsFilters()` | `setRelatedSetsFilters($RelatedSetsFilter, $RelatedSets)` | void | 35 |
+| `setResultLayout()` | `setResultLayout($LayoutName)` | void | 27 |
+| `setScript()` | `setScript($Scriptname, $ScriptParameter)` | void | 45 |
+| `validate()` | `validate($FieldName)` | Boolean | 5 |
+
 # 索引
 
 - access log, 368, 369
 - Accounts and Privileges, 66
 - action, 61
-- add(), 227
+- `add()`, 227
 - database, 26, 71
 - Date field, 85, 221, 277, 284
-- date_create(), 278
-- date_diff(), 278, 102, 276
+- `date_create()`, 278
+- `date_diff()`, 278, 102, 276
 - database_job, 17, 55, 74
-- decrement(), 58, 173
+- `decrement()`, 58, 173
 - default, 11, 15, 29
 - delete page, 105
 - delete portal record, 131
 - delete related record, 105, 179
-- decode(105), 108, 136
-- decode url, 140
-- decode display field, 138
-- decode display image, 138
-- decode related records, 115, 157
-- decode_errors, 260
-- addCriterion(), 87, 90, 93, 105, 110, 115, 119, 124, 131, 160, 166, 171, 174, 179, 183, 186, 191, 196, 201, 209, 213, 217, 222, 227, 231, 239, 241, 245, 262, 267, 276, 280, 283, 289, 293, 297, 302, 307, 310, 316, 322, 336, 340, 351
-- addSort(), 82, 85, 227, 289, 293, 376
-- Admin Console, 35
-- Adobe, 61
-- AJAX, 43, 73, 62
-- alternate_row, 171
-- alternate background color, 171
-- anchor tag, 339
-- Apache, 11, 251, 354, 357
-- array, 43, 60
-- associative array, 60, 155, 304, 323
-- AWStats, 368
-- backspace character, 56
-- bandwidth, 360
-- bar chart, 293
-- BEdit, 41
-- boolean, 209, 376
-- box, 209
-- cache flush, 364
-- Calendar, 267
-- ALS, 358
-- return, 213, 229, 321
-- check box, 66, 209, 213, 336
-- date(), 100
-- chunk_split(), 324
-- Class, 376
-- clients, 26
-- commenting code, 55
-- commit(), 119, 124, 131, 377
-- compound search, 227
-- concatenation, 18, 74, 366
-- Container.php, 76, 138, 149, 231
-- cost, 369
-- CLRF, 321
-- CSS, 5, 43, 171, 267, 280, 319
-- CURL, 256
-- custom function, 52, 145, 264, 304, 313, 354
-- echo, 55
-- edit portal record, 124
-- edit record, 110, 196
-- edit related record, 124
-- else, 59
-- elise, 58
-- em tag, 6
-- mail address, 69, 100, 102, 161, 167, 183, 236, 319
-- mail attachments, 319
-- enable PHP, 23, 32, 171
-- end(), 146
-- error codes, 370
-- error log, 368
-- escape character, 56
-- event log, 369
-- executing, 82, 85, 98, 90, 93, 100, 105, 110, 115, 119, 124, 131, 138, 140, 142, 149, 151, 157, 160, 166, 171, 174, 183, 186, 191, 196, 201, 209, 213, 217, 222, 227, 231, 239, 241, 245, 262, 267, 276, 280, 283, 289, 293, 297, 302, 307, 310, 316, 322, 336, 340, 351
-- extext, 58
-- export, 283
-- explode(), 100, 102, 145, 203, 218
-- externally stored field, 149
-- Documents folder, 201, 206, 286
-- DocumentsPath, 65
-- DocumentsListing, 205
-- Dreamweaver, 41
-- drop list, 187, 213, 217
-- duplicate record, 241
-- duplicate related records, 245
-- dynamic DNS, 361
-- close(), 324
-- field validation, 65, 221
-- file size, 286, 323
-- FileMaker API for PHP, 48
-- FileMaker API for PHP Reference, 376
-- FileMaker API for PHP Tutorial, 42
-- FileMaker Insert, 199, 177, 201, 256, 359, 341, 360
-- FileMaker Server Group, 366
-- FileMaker Server Advanced, 359
-- FileMaker Server installation, 191
-- FileMaker Command, 376
-- FileMaker_FIND_OR, 232
-- FileMaker_Layout, 376
-- FileMaker_Record, 376
-- FileMaker_SORT_ASC, 83, 229
-- FileMaker_SORT_DESC, 83, 229
-- FilePSys.php, 354
-- filter_var, 100
-- FILTER_SANITIZE_EMAIL, 100
-- FILTER_SANITIZE_INT, 100
-- FILTER_SANITIZE_STRING, 100
-- VALIDATE_EMAIL, 100
-- VALIDATE_INT, 100
-- VALIDATE_URL, 100
-- find all records, 79
-- find(), 145, 203
-- fireworks, 360
-- flush(), 287
-- folder permissions, 205
-- fopen(), 324
-- for, 60
-- foreign key, 52, 64, 249
-- form tag, 61
-- pdf, 332
-- geocoding, 332
-- GetScriptParameter, 52, 175, 180, 185, 206, 249, 305
-- getContainerData(), 138, 149, 150
-- Errors(), 222
-- get(), 60, 79, 80, 82, 85, 87, 90, 97, 100, 105, 115, 119, 124, 131, 138, 140, 142, 151, 157, 171, 179, 184, 186, 191, 201, 209, 213, 217, 222, 227, 231, 239, 241, 245, 262, 267, 276, 280, 283, 289, 297, 303, 302, 330, 332, 338, 344
-- getField(), 205
-- getFirstRecord(), 149, 150, 209, 210, 217, 222, 239, 276, 280, 281
-- getFoundCount(), 157, 158, 160, 186, 191
-- Layout(), 151, 154, 217, 231, 316
-- getMessage(), 79, 82, 85, 87, 90, 97, 100, 105, 115, 119, 124, 131, 138, 140, 142, 151, 157, 171, 179, 184, 186, 191, 201, 209, 213, 217, 222, 227, 231, 239, 241, 241
-- getNames(), 21
-- getByID(), 93, 110, 115, 121, 132, 141, 142, 196, 201, 209, 213, 217, 222, 239, 241, 245
-- getRecordID(), 93, 104, 105, 110, 115, 119, 121, 131, 196, 201, 209, 213, 217, 222, 239, 241, 245
-- getRecords(), 51, 82, 85, 90, 93, 100, 105, 110, 115, 119, 124, 131, 138, 140, 142, 151, 157, 171, 179, 184, 186, 191, 196, 201, 209, 213, 217, 222, 227, 231, 239, 241, 245
-
-
 
 
 
 ## I
-- idate(), 279, 279
-- 空闲用户, 26, 364
-- if, 58
-- 是服务器, 12, 14, 198, 251, 258, 259, 311, 357, 358, 361
-- implode(), 215, 219, 270
--  php 表, 202
-- 记录, 52, 201-208
-- 表, 62, 65, 68
-- include, 53, 55, 74
-- 递增函数++, 58-60, 172, 181, 189, 190, 270, 271, 289, 339, 349
-- in_set(), 286, 323, 367
-- 插入页面, 9
-- 插入门户记录, 110
-- 插入记录, 97, 100
-- 插入相关记录, 119
-- interg, 52, 156, 376
-- Internet 连接, 360, 361
-- intval(), 56, 189, 233
-- is_uploaded_file(), 323
-- set, 82
-- IWP, 357
-- 多页表单, 327
-- 多用户, 196
-- 多值选择框, 213
-- 多值列表, 217
-- 多维数组, 60
-- multipart/form-data, 147
-- MultiValue.list, 66
+
+- `decode(105)`, 108, 136
+- `decode url`, 140
+- `decode display field`, 138
+- `decode display image`, 138
+- `decode related records`, 115, 157
+- `decode_errors`, 260
+- `addCriterion()`, 87, 90, 93, 105, 110, 115, 119, 124, 131, 160, 166, 171, 174, 179, 183, 186, 191, 196, 201, 209, 213, 217, 222, 227, 231, 239, 241, 245, 262, 267, 276, 280, 283, 289, 293, 297, 302, 307, 310, 316, 322, 336, 340, 351
+- `addSort()`, 82, 85, 227, 289, 293, 376
+- `Admin Console`, 35
+- `Adobe`, 61
+- `AJAX`, 43, 73, 62
+- `alternate_row`, 171
+- `alternate background color`, 171
+- `anchor tag`, 339
+- `Apache`, 11, 251, 354, 357
+- `array`, 43, 60
+- `associative array`, 60, 155, 304, 323
+- `AWStats`, 368
+- `backspace character`, 56
+- `bandwidth`, 360
+- `bar chart`, 293
+- `BEdit`, 41
+- `boolean`, 209, 376
+- `box`, 209
+- `cache flush`, 364
+- `Calendar`, 267
+- `ALS`, 358
+- `return`, 213, 229, 321
+- `check box`, 66, 209, 213, 336
+- `date()`, 100
+- `chunk_split()`, 324
+- `Class`, 376
+- `clients`, 26
+- `commenting code`, 55
+- `commit()`, 119, 124, 131, 377
+- `compound search`, 227
+- `concatenation`, 18, 74, 366
+- `Container.php`, 76, 138, 149, 231
+- `cost`, 369
+- `CLRF`, 321
+- `CSS`, 5, 43, 171, 267, 280, 319
+- `CURL`, 256
+- `custom function`, 52, 145, 264, 304, 313, 354
+- `echo`, 55
+- `edit portal record`, 124
+- `edit record`, 110, 196
+- `edit related record`, 124
+- `else`, 59
+- `elise`, 58
+- `em tag`, 6
+- `mail address`, 69, 100, 102, 161, 167, 183, 236, 319
+- `mail attachments`, 319
+- `enable PHP`, 23, 32, 171
+- `end()`, 146
+- `error codes`, 370
+- `error log`, 368
+- `escape character`, 56
+- `event log`, 369
+- `executing`, 82, 85, 98, 90, 93, 100, 105, 110, 115, 119, 124, 131, 138, 140, 142, 149, 151, 157, 160, 166, 171, 174, 183, 186, 191, 196, 201, 209, 213, 217, 222, 227, 231, 239, 241, 245, 262, 267, 276, 280, 283, 289, 293, 297, 302, 307, 310, 316, 322, 336, 340, 351
+- `extext`, 58
+- `export`, 283
+- `explode()`, 100, 102, 145, 203, 218
+- `externally stored field`, 149
+- `Documents folder`, 201, 206, 286
+- `DocumentsPath`, 65
+- `DocumentsListing`, 205
+- `Dreamweaver`, 41
+- `drop list`, 187, 213, 217
+- `duplicate record`, 241
+- `duplicate related records`, 245
+- `dynamic DNS`, 361
+- `close()`, 324
+- `field validation`, 65, 221
+- `file size`, 286, 323
+- `FileMaker API for PHP`, 48
+- `FileMaker API for PHP Reference`, 376
+- `FileMaker API for PHP Tutorial`, 42
+- `FileMaker Insert`, 199, 177, 201, 256, 359, 341, 360
+- `FileMaker Server Group`, 366
+- `FileMaker Server Advanced`, 359
+- `FileMaker Server installation`, 191
+- `FileMaker Command`, 376
+- `FileMaker_FIND_OR`, 232
+- `FileMaker_Layout`, 376
+- `FileMaker_Record`, 376
+- `FileMaker_SORT_ASC`, 83, 229
+- `FileMaker_SORT_DESC`, 83, 229
+- `FilePSys.php`, 354
+- `filter_var`, 100
+- `FILTER_SANITIZE_EMAIL`, 100
+- `FILTER_SANITIZE_INT`, 100
+- `FILTER_SANITIZE_STRING`, 100
+- `VALIDATE_EMAIL`, 100
+- `VALIDATE_INT`, 100
+- `VALIDATE_URL`, 100
+- `find all records`, 79
+- `find()`, 145, 203
+- `fireworks`, 360
+- `flush()`, 287
+- `folder permissions`, 205
+- `fopen()`, 324
+- `for`, 60
+- `foreign key`, 52, 64, 249
+- `form tag`, 61
+- `pdf`, 332
+- `geocoding`, 332
+- `GetScriptParameter`, 52, 175, 180, 185, 206, 249, 305
+- `getContainerData()`, 138, 149, 150
+- `Errors()`, 222
+- `get()`, 60, 79, 80, 82, 85, 87, 90, 97, 100, 105, 115, 119, 124, 131, 138, 140, 142, 151, 157, 171, 179, 184, 186, 191, 201, 209, 213, 217, 222, 227, 231, 239, 241, 245, 262, 267, 276, 280, 283, 289, 297, 303, 302, 330, 332, 338, 344
+- `getField()`, 205
+- `getFirstRecord()`, 149, 150, 209, 210, 217, 222, 239, 276, 280, 281
+- `getFoundCount()`, 157, 158, 160, 186, 191
+- `Layout()`, 151, 154, 217, 231, 316
+- `getMessage()`, 79, 82, 85, 87, 90, 97, 100, 105, 115, 119, 124, 131, 138, 140, 142, 151, 157, 171, 179, 184, 186, 191, 201, 209, 213, 217, 222, 227, 231, 239, 241, 241
+- `getNames()`, 21
+- `getByID()`, 93, 110, 115, 121, 132, 141, 142, 196, 201, 209, 213, 217, 222, 239, 241, 245
+- `getRecordID()`, 93, 104, 105, 110, 115, 119, 121, 131, 196, 201, 209, 213, 217, 222, 239, 241, 245
+- `getRecords()`, 51, 82, 85, 90, 93, 100, 105, 110, 115, 119, 124, 131, 138, 140, 142, 151, 157, 171, 179, 184, 186, 191, 196, 201, 209, 213, 217, 222, 227, 231, 239, 241, 245
+
+## I
+
+- `idate()`, 279, 279
+- `空闲用户`, 26, 364
+- `if`, 58
+- `是服务器`, 12, 14, 198, 251, 258, 259, 311, 357, 358, 361
+- `implode()`, 215, 219, 270
+- `php 表`, 202
+- `记录`, 52, 201-208
+- `表`, 62, 65, 68
+- `include`, 53, 55, 74
+- `递增函数++`, 58-60, 172, 181, 189, 190, 270, 271, 289, 339, 349
+- `in_set()`, 286, 323, 367
+- `插入页面`, 9
+- `插入门户记录`, 110
+- `插入记录`, 97, 100
+- `插入相关记录`, 119
+- `interg`, 52, 156, 376
+- `Internet 连接`, 360, 361
+- `intval()`, 56, 189, 233
+- `is_uploaded_file()`, 323
+- `set`, 82
+- `IWP`, 357
+- `多页表单`, 327
+- `多用户`, 196
+- `多值选择框`, 213
+- `多值列表`, 217
+- `多维数组`, 60
+- `multipart/form-data`, 147
+- `MultiValue.list`, 66
 
 ## J
-- 键值对, 7, 61, 82, 150, 193, 259, 265, 290, 294, 299, 318, 328, 330, 337
-- 命名规范, 54
-- addNewCommand(), 97, 100, 151, 201
-- newFoundCommand(), 227
-- newDuplicateCommand(), 241, 245
-- newError(), 110, 124, 131, 142, 196, 201, 209, 213, 217, 222, 267, 283, 307
-- newAddCommand(), 138, 140
-- newFindAllCommand(), 79, 82, 85, 90, 93, 105, 110, 115, 119, 124, 131, 142, 149, 157, 160, 166, 171, 174, 178, 179, 181, 186, 198, 201, 219, 217, 222, 237, 242, 256, 262, 267, 276, 280, 289, 293, 297, 307, 332, 336, 340
-- newFindAnyCommand(), 239
-- newFoundCommand(), 87, 90, 93, 105, 110, 119, 124, 131, 142, 166, 196, 231, 286
-- newFoundRequest(), 227
-- newPerformCommand(), 174, 179, 183, 201, 302, 310
-- JavaScript, 43, 262-265, 302-317, 336-339
-- JSP, 357
-- 下拉菜单, 316
+
+- `键值对`, 7, 61, 82, 150, 193, 259, 265, 290, 294, 299, 318, 328, 330, 337
+- `命名规范`, 54
+- `addNewCommand()`, 97, 100, 151, 201
+- `newFoundCommand()`, 227
+- `newDuplicateCommand()`, 241, 245
+- `newError()`, 110, 124, 131, 142, 196, 201, 209, 213, 217, 222, 267, 283, 307
+- `newAddCommand()`, 138, 140
+- `newFindAllCommand()`, 79, 82, 85, 90, 93, 105, 110, 115, 119, 124, 131, 142, 149, 157, 160, 166, 171, 174, 178, 179, 181, 186, 198, 201, 219, 217, 222, 237, 242, 256, 262, 267, 276, 280, 289, 293, 297, 307, 332, 336, 340
+- `newFindAnyCommand()`, 239
+- `newFoundCommand()`, 87, 90, 93, 105, 110, 119, 124, 131, 142, 166, 196, 231, 286
+- `newFoundRequest()`, 227
+- `newPerformCommand()`, 174, 179, 183, 201, 302, 310
+- `JavaScript`, 43, 262-265, 302-317, 336-339
+- `JSP`, 357
+- `下拉菜单`, 316
 
 ## L
-- 布局, 53, 68
-- 换行, 215, 219
-- 折线图, 297
-- 链接, 7
-- 列表菜单, 151
-- 双字段列表菜单, 154
-- 列表页面, 9
-- localhost, 2, 171
-- 登录, 160
-- 登出空闲用户, 166
-- 记录, 29
-- 日志, 368
-- 循环, 59
-- Luhn 算法, 349
-- ob clean(), 287, 288
-- ODBC, 357
-- omit, 357
-- 运算符, 58
-- OS 服务器, 19, 251, 263, 360
+
+- `布局`, 53, 68
+- `换行`, 215, 219
+- `折线图`, 297
+- `链接`, 7
+- `列表菜单`, 151
+- `双字段列表菜单`, 154
+- `列表页面`, 9
+- `localhost`, 2, 171
+- `登录`, 160
+- `登出空闲用户`, 166
+- `记录`, 29
+- `日志`, 368
+- `循环`, 59
+- `Luhn 算法`, 349
+- `ob clean()`, 287, 288
+- `ODBC`, 357
+- `omit`, 357
+- `运算符`, 58
+- `OS 服务器`, 19, 251, 263, 360
 
 ## P
-- 密码, 62
-- pathinfo(), 286
-- PDF, 149
-- pe_application_log, 369
-- pe_internal_log, 369
-- 性能考虑, 363
-- PHP 删除记录脚本, 181
-- PHP 重复记录, 249
-- PHP 导入记录, 208
-- PHP 安装, 233
-- PHP 丢失记录, 184
-- PHP 修改数字, 177
-- PHP 参考, 49
-- php.ini, 60, 142, 280, 322, 367
-- php.net, 44
-- Mailide, 236
-- 标记, 310
-- 数学函数, 354
-- max, 187, 188, 192
-- md5(), 161, 167, 184, 295, 322
-- meta 刷新, 8
-- Meta 类型, 144, 286, 323
-- ModificationID, 198
-- , 172, 189, 349
-- move_uploaded_file(), 146
-- PHPDBG, 357
-- php_demo_table, 62
-- PHP_Info.php, 78
-- PHP_SELF, 187
-- phpinfo(), 78
-- 饼图, 289
-- 门户, 68
-- post, 6
-- post_max_size, 60, 260, 323
-- 优先级, 351, 352
-- preg_match(), preg_replace(), 346
-- prevalidate_data, 221-224
-- 主键, 52
-- 服务器, 11
-- 发布引擎, 2, 23, 65, 180, 256-258, 368
-- 发布引擎访问, 368
-- 脚本参数, 175-177, 206, 249, 265, 304-305, 313
-- 脚本, 67
-- , 77, 80, 93, 115, 157, 227, 231
-- 和, 227
-- 搜索页面, 9
-- 搜索门户记录, 115
-- 搜索记录, 87, 90, 93
-- 搜索相关记录, 115
-- 搜索结果, 157
-- 搜索详情页, 9
-- 搜索详情相关页, 9
-- 搜索结果页, 9
-- 安全, 27, 70, 163, 169, 286
-- 分号, 55
-- 序列号, 152
-- 服务器访问, 366
-- 服务器事件, 366
-- 服务器日志, 364-368
-- 服务器模态, 364
-- session, 160
-- session_destroy(), 164
-- session_start(), 160-161
-- addField(), 197, 100, 105, 110, 119, 124, 131, 142, 151, 196, 209, 213, 217, 222, 283, 307, 327, 336, 351
-- setLogicalOperator(), 231
-- setModificationID(), 196
-- setOpt(true), 227
-- setProperty(), 74
-- setRange(), 186, 191
-- setRelatedFilters(), 276, 363
-- setResultLayout(), 340, 344
-- setScript(), 194
-- 跳过, 186-191
-- 排序顺序, 229
-- 排序记录, 82, 85
-- 源属性, 139, 150
-- SSL, 251
-- 统计日志, 369
-- 存储位置, 302
-- str_replace(), 229, 322
-- strcmp, 210
-- string, 281, 364
-- 字符串函数, 354
-- str_pos(), 100, 348, 346, 352
-- strlen(), 100, 348, 352
-- strlower(), 145, 146, 203, 286
-- strtime(), 232, 271, 274, 277, 278
-- substr(), 76, 271, 348
-- 总结报告, 340
-- 全局变量, 7, 60
-- 语法, 55
-- 快速查找, 231
-- 快速查找布局, 68
-- 引号, 56
-- 随机, 239
-- 随机横幅广告, 239
-- readfile(), 287-288
-- reCAPTCHA, 236
-- 记录计数, 157
-- 记录锁定, 191
-- 记录导航, 186
-- recordID, 52
-- recordID_field, 62, 64
-- 直接, 160, 162, 170, 233, 237, 260, 316, 338
-- 正表达式, 346, 351-352
-- 相关数据_php, 128, 249
-- 相关数据表, 62-68, 121, 126, 133
-- require, 55
-- 结果布局, 236
-- 返回, 146
-- 根目录, 201, 366
-- trim(), 290
-- 脚本删除记录, 179
-- 脚本导入_XLS, 201
-- 脚本发送邮件, 183
-- 脚本更新记录, 174
-- 运行脚本, 177
 
-## S
-- 示例数据库, 72
-- 值列表, 151
-- 数据洗涤, 100, 321, 325, 366
-- 脚本函数, 52
-- 表结构, 62
-- t_tag, 62
-- 临时文件夹, 145, 259, 324, 366
-- 测试 PHP 安装, 36
-- 文本编辑器, 4
-- 文本字段, 122-135, 280
-- 文本管理器, 42
-- 时间字段, 63, 83, 225, 277
-- 标题, 5
-- 切换选择框, 336, 339
-- 标签, 5
-- 错误捕获, 79
--  插件, 201
+- `密码`, 62
+- `pathinfo()`, 286
+- `PDF`, 149
+- `pe_application_log`, 369
+- `pe_internal_log`, 369
+- `性能考虑`, 363
+- `PHP 删除记录脚本`, 181
+- `PHP 重复记录`, 249
+- `PHP 导入记录`, 208
+- `PHP 安装`, 233
+- `PHP 丢失记录`, 184
+- `PHP 修改数字`, 177
+- `PHP 参考`, 49
+- `php.ini`, 60, 142, 280, 322, 367
+- `php.net`, 44
+- `Mailide`, 236
+- `标记`, 310
+- `数学函数`, 354
+- `max`, 187, 188, 192
+- `md5()`, 161, 167, 184, 295, 322
+- `meta 刷新`, 8
+- `Meta 类型`, 144, 286, 323
+- `ModificationID`, 198
+- `move_uploaded_file()`, 146
+- `PHPDBG`, 357
+- `php_demo_table`, 62
+- `PHP_Info.php`, 78
+- `PHP_SELF`, 187
+- `phpinfo()`, 78
+- `饼图`, 289
+- `门户`, 68
+- `post`, 6
+- `post_max_size`, 60, 260, 323
+- `优先级`, 351, 352
+- `preg_match()`, `preg_replace()`, 346
+- `prevalidate_data`, 221-224
+- `主键`, 52
+- `服务器`, 11
+- `发布引擎`, 2, 23, 65, 180, 256-258, 368
+- `发布引擎访问`, 368
+- `脚本参数`, 175-177, 206, 249, 265, 304-305, 313
+- `脚本`, 67
+- `搜索页面`, 9
+- `搜索门户记录`, 115
+- `搜索记录`, 87, 90, 93
+- `搜索相关记录`, 115
+- `搜索结果`, 157
+- `搜索详情页`, 9
+- `搜索详情相关页`, 9
+- `搜索结果页`, 9
+- `安全`, 27, 70, 163, 169, 286
+- `分号`, 55
+- `序列号`, 152
+- `服务器访问`, 366
+- `服务器事件`, 366
+- `服务器日志`, 364-368
+- `服务器模态`, 364
+- `session`, 160
+- `session_destroy()`, 164
+- `session_start()`, 160-161
+- `addField()`, 197, 100, 105, 110, 119, 124, 131, 142, 151, 196, 209, 213, 217, 222, 283, 307, 327, 336, 351
+- `setLogicalOperator()`, 231
+- `setModificationID()`, 196
+- `setOpt(true)`, 227
+- `setProperty()`, 74
+- `setRange()`, 186, 191
+- `setRelatedFilters()`, 276, 363
+- `setResultLayout()`, 340, 344
+- `setScript()`, 194
+- `跳过`, 186-191
+- `排序顺序`, 229
+- `排序记录`, 82, 85
+- `源属性`, 139, 150
+- `SSL`, 251
+- `统计日志`, 369
+- `存储位置`, 302
+- `str_replace()`, 229, 322
+- `strcmp`, 210
+- `string`, 281, 364
+- `字符串函数`, 354
+- `str_pos()`, 100, 348, 346, 352
+- `strlen()`, 100, 348, 352
+- `strlower()`, 145, 146, 203, 286
+- `strtime()`, 232, 271, 274, 277, 278
+- `substr()`, 76, 271, 348
+- `总结报告`, 340
+- `全局变量`, 7, 60
+- `语法`, 55
+- `快速查找`, 231
+- `快速查找布局`, 68
+- `引号`, 56
+- `随机`, 239
+- `随机横幅广告`, 239
+- `readfile()`, 287-288
+- `reCAPTCHA`, 236
+- `记录计数`, 157
+- `记录锁定`, 191
+- `记录导航`, 186
+- `recordID`, 52
+- `recordID_field`, 62, 64
+- `直接`, 160, 162, 170, 233, 237, 260, 316, 338
+- `正表达式`, 346, 351-352
+- `相关数据_php`, 128, 249
+- `相关数据表`, 62-68, 121, 126, 133
+- `require`, 55
+- `结果布局`, 236
+- `返回`, 146
+- `根目录`, 201, 366
 
-## Z
-- Zend Studio, 42
 
-## Misc
-- $_FILES, 144, 202, 323
-- $_GET, 60
-- $_POST, 60
-- $_REQUEST, 60
-- $_SERVER, 186
-- $_SESSION, 160
-- $fm 对象, 74
-- $int_options, 101
-- $message, 97
-- ln, 214
-- lr, 215
-- <php>, 55
 
-## U
-- 更新多个记录, 336
-- 更新页面, 9
-- 上传, 33-39, 69, 142, 201, 319
-- 上传数据库, 38
-- 上传文件, 142, 325
-- 上传最大文件大小, 322-323
-- url, 2, 6
-- URL 编码, 161, 183, 290, 294, 299
-- urldecode(), 161, 167, 183
-- urldecodecode, 76, 139, 150, 234, 240
-- 用户名, 74
+# FileMaker API for PHP 12
 
-## V
-- 通过计算验证, 65
-- 验证信用卡, 344
-- 验证日期, 102
-- 验证电子邮件地址, 102
-- 验证电话号码, 351
-- validate(), 100-102, 142, 202, 221, 224, 285, 304, 312, 321, 344, 351
-- 验证, 65, 100
-- 验证错误, 224-225
-- 值列表, 66
-- 变量, 56
-- void, 376
-
-## W
-- w3schools, 43
-- Web 发布, 32
-- Web 发布核心, 32, 368, 369
-- Web 发布日志, 369
-- Web 服务器安装, 11, 12, 14
-- Web 服务器日志, 369
-- Web 服务器模块日志, 369
-- Web 视图, 69
-- webserver_module_log, 369
-- while, 59
-- Windows 服务器, 19, 259, 360
-- wpc_access_log, 369
-
-## X
-- XMLHttpRequest, 263-264
-
-## FileMaker API for PHP 12
 使用 FileMaker 12 和 FileMaker Server 12 创建数据库网站的实用指南
 
 本书是使用 FileMakerPro 12 和 FileMaker Server 12 的 FileMaker API for PHP 的唯一完整参考书。无论您是初学者还是专业开发者，都会发现书中的信息是无价的。第一部分通过对你所需的基础 HTML 的介绍，让你准备好将数据发布到网上。第二部分介绍了如何安装和配置 Apache 或 IIS 作为你的 Web 服务器。第三部分介绍了如何安装和配置 FileMaker Server。第四部分提供了有关用于构建网站的免费文本编辑器信息。第五部分将教你如何使用 PHP 语法来处理书中的示例。第六部分解释了示例数据库、布局和脚本。第七部分包含了更高级的 PHP 示例。第八部分总结了参考内容。最后，即使你拥有这本书的旧版本，花时间研究新内容也是值得的。
 
-示例包括：
+## 示例包括
+
 - 如何连接数据库
 - 从容器字段显示图像
 - 查找记录
@@ -13169,10 +13297,104 @@ FileMaker Server/Documentation/PHP API Documentation/index.html
 - 会话管理
 - 显示外部存储的图像和文件
 - 为 HTTPS 安装并配置 SSL
-- PHP  AJAX
+- PHP AJAX
 - PHP 日历
 - 邮件集成和附件
 - 打印 PDF 报告
 - 打印子总结报告
 - 验证电话号码
 
+## S
+
+- `trim()`, 290
+- 脚本删除记录, 179
+- 脚本导入_XLS, 201
+- 脚本发送邮件, 183
+- 脚本更新记录, 174
+- 运行脚本, 177
+
+## S
+
+- 示例数据库, 72
+- 值列表, 151
+- 数据洗涤, 100, 321, 325, 366
+- 脚本函数, 52
+- 表结构, 62
+- t_tag, 62
+- 临时文件夹, 145, 259, 324, 366
+- 测试 PHP 安装, 36
+- 文本编辑器, 4
+- 文本字段, 122-135, 280
+- 文本管理器, 42
+- 时间字段, 63, 83, 225, 277
+- 标题, 5
+- 切换选择框, 336, 339
+- 标签, 5
+- 错误捕获, 79
+- 插件, 201
+
+## Z
+
+- Zend Studio, 42
+
+## Misc
+
+- `$_FILES`, 144, 202, 323
+- `$_GET`, 60
+- `$_POST`, 60
+- `$_REQUEST`, 60
+- `$_SERVER`, 186
+- `$_SESSION`, 160
+- `$fm` 对象, 74
+- `$int_options`, 101
+- `$message`, 97
+- ln, 214
+- lr, 215
+- `<php>`, 55
+
+## U
+
+- 更新多个记录, 336
+- 更新页面, 9
+- 上传, 33-39, 69, 142, 201, 319
+- 上传数据库, 38
+- 上传文件, 142, 325
+- 上传最大文件大小, 322-323
+- url, 2, 6
+- URL 编码, 161, 183, 290, 294, 299
+- `urldecode()`, 161, 167, 183
+- urldecodecode, 76, 139, 150, 234, 240
+- 用户名, 74
+
+## V
+
+- 通过计算验证, 65
+- 验证信用卡, 344
+- 验证日期, 102
+- 验证电子邮件地址, 102
+- 验证电话号码, 351
+- `validate()`, 100-102, 142, 202, 221, 224, 285, 304, 312, 321, 344, 351
+- 验证, 65, 100
+- 验证错误, 224-225
+- 值列表, 66
+- 变量, 56
+- void, 376
+
+## W
+
+- w3schools, 43
+- Web 发布, 32
+- Web 发布核心, 32, 368, 369
+- Web 发布日志, 369
+- Web 服务器安装, 11, 12, 14
+- Web 服务器日志, 369
+- Web 服务器模块日志, 369
+- Web 视图, 69
+- webserver_module_log, 369
+- `while`, 59
+- Windows 服务器, 19, 259, 360
+- wpc_access_log, 369
+
+## X
+
+- `XMLHttpRequest`, 263-264

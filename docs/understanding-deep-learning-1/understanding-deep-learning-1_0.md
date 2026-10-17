@@ -1,46 +1,27 @@
-# 深度学习理解. 1
 
-
-
-
-
-
-
-
+# 深度学习理解
 
 ![f1-fig-5001.jpg](img/f1-fig-5001.jpg)
 
+## 前言
 
-
-
-
-
-
-
-
-### 前言
-
-深度学习的历史在科学史上独树一帜。一小群科学家在一个看似前景渺茫的领域坚持钻研了二十五年，最终彻底变革了该领域，并对社会产生了巨大影响。通常情况下，当研究人员探索科学或工程中一个晦涩且显然不切实际的角落时，它往往就止步于此——依然晦涩且不切实际。然而，这是一个显著的例外。尽管面临广泛的质疑，Yoshua Bengio、Geoffrey Hinton、Yann LeCun 等人的系统性努力最终获得了回报。
+深度学习的历史在科学史上独树一帜。一小群科学家在一个看似前景渺茫的领域坚持钻研了二十五年，最终彻底变革了该领域，并对社会产生了巨大影响。通常情况下，当研究人员探索科学或工程中一个晦涩且显然不切实际的角落时，它往往就止步于此——依然晦涩且不切实际。然而，这是一个显著的例外。尽管面临广泛的质疑，`Yoshua Bengio`、`Geoffrey Hinton`、`Yann LeCun` 等人的系统性努力最终获得了回报。
 
 本书标题为“Understanding Deep Learning”（理解深度学习），旨在将其与涵盖编码及其他实操层面的书籍区分开来。本书主要关注深度学习背后的*思想*。第一部分介绍深度学习模型，并讨论如何训练它们、衡量其性能以及提升性能。第二部分探讨针对图像、文本和图数据的专用架构。这些章节仅需要入门级的线性代数、微积分和概率知识，任何理工科大二学生均可读懂。后续部分涉及生成模型和强化学习。这些章节需要更多的概率论和微积分知识，面向更高阶的学生。
 
 标题在某种程度上也是个玩笑——撰写本书时，*没有人*真正理解深度学习。现代深层网络学习的分段线性函数拥有的区域数量超过了宇宙中的原子总数，且训练所需的数据样本数可以少于模型参数量。我们既无法显然地断定能可靠地拟合这些函数，也无法显然地断定它们能很好地泛化到新数据。倒数第二章探讨了这些及其他尚未完全理解的方面。无论如何，深度学习将或好或坏地改变世界。最后一章讨论 AI 伦理，并以呼吁从业者考虑其工作的道德含义作为结语。
 
-您的时间宝贵，我竭力筛选并呈现材料，以便您尽可能高效地理解它们。每章正文包含仅最核心思想的简明描述及配套插图。附录复习了所有数学先修知识，无需参考外部资料。对于希望深入钻研的读者，每章都配有习题、Python 笔记本和详尽的背景阐释。
+您的时间宝贵，我竭力筛选并呈现材料，以便您尽可能高效地理解它们。每章正文包含仅最核心思想的简明描述及配套插图。附录复习了所有数学先修知识，无需参考外部资料。对于希望深入钻研的读者，每章都配有习题、`Python` 笔记本和详尽的背景阐释。
 
 写书是一个孤独、枯燥、耗时数年的过程，只有书籍被广泛采纳才值得。如果您喜欢阅读本书或有改进建议，请通过配套网站联系我。我非常期待听到您的想法，这将为后续版本提供参考和动力。
 
-### 致谢
+## 致谢
 
+撰写本书若没有以下人士的慷慨帮助和建议将不可能完成：`Kathryn Hume`、`Kevin Murphy`、`Christopher Bishop`、`Peng Xu`、`Yann Dubois`、`Justin Domke`、`Chris Fletcher`、`Yanshuai Cao`、`Wendy Tay`、`Corey Toler-Franklin`、`Dmytro Mishkin`、`Guy McCusker`、`Daniel Worrall`、`Paul McIlroy`、`Roy Amoyal`、`Austin Anderson`、`Romero Barata de Morais`、`Gabriel Harrison`、`Peter Ball`、`Alf Muir`、`David Bryson`、`Vedika Parulkar`、`Patryk Lietzau`、`Jessica Nicholson`、`Alexa Huxley`、`Oisin Mac Aodha`、`Giuseppe Castiglione`、`Josh Akylbekov`、`Alex Gougoulaki`、`Joshua Omilabu`、`Alister Guenther`、`Joe Goodier`、`Logan Wade`、`Joshua Guenther`、`Kylan Tobin`、`Benedict Ellett`、`Jad Araj`、`Andrew Glennerster`、`Giorgos Sfikas`、`Diya Vibhakar`、`Sam Mansat-Bhattacharyya`、`Ben Ross`、`Ivor Simpson`、`Gaurang Aggarwal`、`Shakeel Sheikh`、`Jacob Horton`、`Felix Rammell`、`Sasha Luccioni`、`Akshil Patel`、`Alessandro Gentilini`、`Kevin Mercier`、`Krzysztof Lichocki`、`Chuck Krapf`、`Brian Ha`、`Chris Kang`、`Leonardo Viotti`、`Kai Li`、`Himan Abdollahpouri`、`Ari Pakman`、`Giuseppe Antonio Di Luna`、`Dan Oneat,ă`、`Conrad Whiteley`、`Joseph Santarcangelo`、`Brad Shook`、`Gabriel Brostow`、`Lei He`、`Ali Satvaty`、`Romain Sabathé`、`Qiang Zhou`、`Prasanna Vigneswaran`、`Siqi Zheng`、`Stephan Grein`、`Jonas Klesen`、`Giovanni Stilo`、`Huang Bokai`、`Bernhard Pfahringer`、`Joseph Santarcangelo`、`Kevin McGuinness`、`Qiang Sun`、`Zakaria Lotfi`、`Yifei Lin`、`Sylvain Bouix`、`Alex Pitt`、`Stephane Chretien`、`Robin Liu`、`Bian Li`、`Adam Jones`、`Marcin Świerkot`、`Tommy Löfstedt`、`Eugen Hotaj`、`Fernando Flores-Mangas`、`Tony Polichroniadis`、`Pietro Monticone`、`Rohan Deepak Ajwani`、`Menashe Yarden Einy`、`Robert Gevorgyan`、`Thilo Stadelmann`、`Gui JieMiao`、`Botao Zhu`、`Mohamed Elabbas`、`Satya Krishna Gorti`、`James Elder`、`Helio Perroni Filho`、`Xiaochao Qu`、`Jaekang Shin`、`Joshua Evans`、`Robert Dobson`、`Shibo Wang`、`Edoardo Zorzi`、`Joseph Santarcangelo`、`Stanisław Jastrzębski`、`Pieris Kalligeros`、`Matt Hewitt`、`Zvika Haramaty`、`Ted Mavroidis`、`Nikolaj Kuntner`、`Amir Yorav`、`Masoud Mokhtari`、`Xavier Gabaix`、`Marco Garosi`、`Vincent Schönbach`、`Avishek Mondal`、`Victor S.C. Lui`、`Sumit Bhatia`、`Julian Asilis`、`Hengchao Chen`、`Siavash Khallaghi`、`Csaba Szepesvári` 和 `Mike Singer`。
 
+我特别感谢 `Daniyar Turmukhambetov`、`Amedeo Buonanno`、`Andrea Panizza`、`Mark Hudson` 和 `Bernhard Pfahringer`，他们为本书的多个章节提供了详细意见。我要特别感谢 `Andrew Fitzgibbon`、`Konstantinos Derpanis` 和 `Tyler Mills`，他们通读了全书，他们的热情帮助我完成了这个项目。我还要感谢 `Neill Campbell` 和 `Özgür Şimşek`，他们在巴斯大学接待了我，我在那里首次基于这些材料授课。最后，我要对我的编辑 `Elizabeth Swayze` 表示极大的感谢，感谢她在整个过程中提供的坦诚建议。
 
-
-
-撰写本书若没有以下人士的慷慨帮助和建议将不可能完成：Kathryn Hume、Kevin Murphy、Christopher Bishop、Peng Xu、Yann Dubois、Justin Domke、Chris Fletcher、Yanshuai Cao、Wendy Tay、Corey Toler-Franklin、Dmytro Mishkin、Guy McCusker、Daniel Worrall、Paul McIlroy、Roy Amoyal、Austin Anderson、Romero Barata de Morais、Gabriel Harrison、Peter Ball、Alf Muir、David Bryson、Vedika Parulkar、Patryk Lietzau、Jessica Nicholson、Alexa Huxley、Oisin Mac Aodha、Giuseppe Castiglione、Josh Akylbekov、Alex Gougoulaki、Joshua Omilabu、Alister Guenther、Joe Goodier、Logan Wade、Joshua Guenther、Kylan Tobin、Benedict Ellett、Jad Araj、Andrew Glennerster、Giorgos Sfikas、Diya Vibhakar、Sam Mansat-Bhattacharyya、Ben Ross、Ivor Simpson、Gaurang Aggarwal、Shakeel Sheikh、Jacob Horton、Felix Rammell、Sasha Luccioni、Akshil Patel、Alessandro Gentilini、Kevin Mercier、Krzysztof Lichocki、Chuck Krapf、Brian Ha、Chris Kang、Leonardo Viotti、Kai Li、Himan Abdollahpouri、Ari Pakman、Giuseppe Antonio Di Luna、Dan Oneat,ă、Conrad Whiteley、Joseph Santarcangelo、Brad Shook、Gabriel Brostow、Lei He、Ali Satvaty、Romain Sabathé、Qiang Zhou、Prasanna Vigneswaran、Siqi Zheng、Stephan Grein、Jonas Klesen、Giovanni Stilo、Huang Bokai、Bernhard Pfahringer、Joseph Santarcangelo、Kevin McGuinness、Qiang Sun、Zakaria Lotfi、Yifei Lin、Sylvain Bouix、Alex Pitt、Stephane Chretien、Robin Liu、Bian Li、Adam Jones、Marcin Świerkot、Tommy Löfstedt、Eugen Hotaj、Fernando Flores-Mangas、Tony Polichroniadis、Pietro Monticone、Rohan Deepak Ajwani、Menashe Yarden Einy、Robert Gevorgyan、Thilo Stadelmann、Gui JieMiao、Botao Zhu、Mohamed Elabbas、Satya Krishna Gorti、James Elder、Helio Perroni Filho、Xiaochao Qu、Jaekang Shin、Joshua Evans、Robert Dobson、Shibo Wang、Edoardo Zorzi、Joseph Santarcangelo、Stanisław Jastrzębski、Pieris Kalligeros、Matt Hewitt、Zvika Haramaty、Ted Mavroidis、Nikolaj Kuntner、Amir Yorav、Masoud Mokhtari、Xavier Gabaix、Marco Garosi、Vincent Schönbach、Avishek Mondal、Victor S.C. Lui、Sumit Bhatia、Julian Asilis、Hengchao Chen、Siavash Khallaghi、Csaba Szepesvári 和 Mike Singer。
-
-我特别感谢 Daniyar Turmukhambetov、Amedeo Buonanno、Andrea Panizza、Mark Hudson 和 Bernhard Pfahringer，他们为本书的多个章节提供了详细意见。我要特别感谢 Andrew Fitzgibbon、Konstantinos Derpanis 和 Tyler Mills，他们通读了全书，他们的热情帮助我完成了这个项目。我还要感谢 Neill Campbell 和 Özgür Şimşek，他们在巴斯大学接待了我，我在那里首次基于这些材料授课。最后，我要对我的编辑 Elizabeth Swayze 表示极大的感谢，感谢她在整个过程中提供的坦诚建议。
-
-第 12 章（Transformers）和第 17 章（变分自编码器）最初作为博客文章发表在 Borealis AI 上，经 Royal Bank of Canada 与 Borealis AI 许可，在此复制改编版本。我感谢他们对这一事业的支持。第 16 章（归一化流）大致基于 Kobyzev 等人（2020）的综述文章，我是该文的合著者之一。我非常有幸能与达尔豪斯大学的 Travis LaCroix 合作第 21 章，他不仅合作愉快、轻松，而且承担了绝大部分工作。
+第 12 章（Transformers）和第 17 章（变分自编码器）最初作为博客文章发表在 `Borealis AI` 上，经 `Royal Bank of Canada` 与 `Borealis AI` 许可，在此复制改编版本。我感谢他们对这一事业的支持。第 16 章（归一化流）大致基于 `Kobyzev` 等人（2020）的综述文章，我是该文的合著者之一。我非常有幸能与达尔豪斯大学的 `Travis LaCroix` 合作第 21 章，他不仅合作愉快、轻松，而且承担了绝大部分工作。
 
 ## 第 1 章 简介
 
@@ -66,11 +47,7 @@
 
 ![Figure 1.2 Regression and classification problems. a) This regression model takes a vector of numbers that characterize a property and predicts its price. b) This multivariate regression model takes the structure of a chemical molecule and predicts its melting and boiling points. c) This binary classification model takes a restaurant review and classifies it as either positive or negative. d) This multiclass classification problem assigns a snippet of audio to one of N genres. e) A second multiclass classification problem in which the model classifies an image according to which of N possible objects that it might contain.](img/c1-fig-0002.jpg)
 
-
-
-
-
-# 1.1.2 输入
+#### 1.1.2 输入
 
 图 1.2 中的输入数据差异很大。在房价预测示例中，输入是一个固定长度的向量，包含刻画房产特征的数值。这是*表格数据*的一个例子，因为它没有内部结构；如果我们改变输入的顺序并构建一个新模型，则期望模型预测保持不变。
 
@@ -80,7 +57,7 @@
 
 最后，考虑预测分子熔点和沸点的模型的输入。分子可能包含数量不等、连接方式不同的原子。在这种情况下，模型必须同时接收分子的几何结构和组成原子。
 
-# 1.1.3 机器学习模型
+#### 1.1.3 机器学习模型
 
 直到现在，我们一直将机器学习模型视为一个黑盒，它接收一个输入向量并返回一个输出向量。但这个黑盒里到底是什么？考虑一个根据年龄预测儿童身高的模型（图 1.3）。机器学习模型是一个数学方程，描述平均身高如何作为年龄的函数而变化（图 1.3 中的青色曲线）。当我们将年龄代入该方程时，它会返回身高。例如，如果年龄是 10 岁，则预测身高为 139 厘米。
 
@@ -90,25 +67,27 @@
 
 由此可见，图 1.2 中的模型训练需要带标签的输入/输出对。例如，音乐分类模型需要大量音频片段，且每个片段的流派都由人类专家标识。这些输入/输出对在训练过程中扮演教师或监督者的角色，从而产生了*监督学习*这一术语。
 
-# 1.1.4 深度神经网络
+#### 1.1.4 深度神经网络
 
 本书关注深度神经网络，这是一种特别有用的机器学习模型。它们是能够表示输入与输出之间极其广泛关系族的方程，并且在这种关系族中搜索描述训练数据的关系特别容易。
 
 深度神经网络可以处理非常大、长度可变且包含各种内部结构的输入。它们可以输出单个实数（回归）、多个数值（多元回归），或两个或多个类别上的概率（分别对应二分类和多分类）。正如我们在下一节将看到的，它们的输出也可能非常大、长度可变且包含内部结构。现在很难想象具有这些特性的方程，读者暂时应尽量放下怀疑。
 
-# 1.1.5 结构化输出
-
-
-
-
-
-## 1.1 具有结构化输出的监督学习
+#### 1.1.5 结构化输出
 
 图 1.4a 描绘了一个用于语义分割的多元二分类模型。在这里，输入图像的每个像素都被分配一个二进制标签，指示其属于奶牛还是背景。图 1.4b 展示了一个多元回归模型，其中输入是街景图像，输出是每个像素处的深度。在这两种情况下，输出均为高维且结构化的。然而，这种结构与输入紧密相关，且可被利用；如果一个像素被标记为“奶牛”，则具有相似 RGB 值的邻域像素很可能具有相同的标签。
 
 ![Figure 1.4 Supervised learning tasks with structured outputs. a) This semantic segmentation model maps an RGB image to a binary image indicating whether each pixel belongs to the background or a cow (adapted from Noh et al., 2015). b) This monocular depth estimation model maps an RGB image to an output image where each pixel represents the depth (adapted from Cordts et al., 2016). c) This audio transcription model maps an audio sample to a transcription of the spoken words in the audio. d) This translation model maps an English text string to its French translation. e) This image synthesis model maps a caption to an image (example from https://openai.com/dall-e-2/). In each case, the output has a complex internal structure or grammar. In some cases, many outputs are compatible with the input.](img/c1-fig-0004.jpg)
 
-图 1.4 具有结构化输出的监督学习任务。a) 该语义分割模型将 RGB 图像映射为二值图像，指示每个像素属于背景还是奶牛（改编自 Noh 等人，2015）。b) 该单目深度估计模型将 RGB 图像映射为输出图像，其中每个像素代表深度（改编自 Cordts 等人，2016）。c) 该音频转录模型将音频样本映射为音频中口语单词的转录文本。d) 该翻译模型将英文文本字符串映射为其法语翻译。e) 该图像合成模型将标题映射为图像（示例来自 [`openai.com/dall-e-2/`](https://openai.com/dall-e-2/)）。在每种情况下，输出都具有复杂的内部结构或语法。在某些情况下，许多输出均与输入兼容。
+
+
+# 图 1.4 具有结构化输出的监督学习任务
+
+a) 该语义分割模型将 RGB 图像映射为二值图像，指示每个像素属于背景还是奶牛（改编自 Noh 等人，2015）。  
+b) 该单目深度估计模型将 RGB 图像映射为输出图像，其中每个像素代表深度（改编自 Cordts 等人，2016）。  
+c) 该音频转录模型将音频样本映射为音频中口语单词的转录文本。  
+d) 该翻译模型将英文文本字符串映射为其法语翻译。  
+e) 该图像合成模型将标题映射为图像（示例来自 [`openai.com/dall-e-2/`](https://openai.com/dall-e-2/)）。在每种情况下，输出都具有复杂的内部结构或语法。在某些情况下，许多输出均与输入兼容。
 
 图 1.4c–e 描绘了三个模型，在这些模型中，输出具有复杂的结构，但与输入的联系不那么紧密。图 1.4c 展示了一个模型，其输入为音频文件，输出为该文件的转录单词。图 1.4d 是一个翻译模型，其中输入为一段英文文本，输出包含其法语翻译。图 1.4e 描绘了一项极具挑战性的任务，其中输入为描述性文本，模型必须生成与该描述相匹配的图像。
 
@@ -116,11 +95,11 @@
 
 幸运的是，这种“语法”可以在无需输出标签的情况下学习。例如，我们可以通过学习大量文本语料库的统计规律来学习如何构成有效的英文句子。这为本书的下一节提供了联系，下一节将讨论*无监督学习模型*。
 
-### 1.2 无监督学习
+## 1.2 无监督学习
 
 在没有相应输出标签的情况下，仅从输入数据构建模型被称为*无监督学习*；输出标签的缺失意味着不存在“监督”。其目标不是学习从输入到输出的映射，而是描述或理解数据的结构。正如监督学习的情况一样，数据可能具有截然不同的特征；它可能是离散或连续的、低维或高维的、定长或变长的。
 
-#### 1.2.1 生成模型
+### 1.2.1 生成模型
 
 本书重点关注*生成式无监督模型*，这类模型学习合成新的数据样本，使其在统计上与训练数据无法区分。一些生成模型显式地描述了输入域上的概率分布，新样本通过从该分布中采样生成。另一些则仅学习一种生成新样本的机制。
 
@@ -140,11 +119,7 @@
 
 ![Figure 1.8 Conditional text synthesis. Given an initial body of text (in black), generative models of text can continue the string plausibly by synthesizing the "missing" remaining part of the string. Generated by GPT3 (Brown et al., 2020).](img/c1-fig-0008.jpg)
 
-
-
-
-
-# 1.2.2 潜变量
+### 1.2.2 潜变量
 
 部分（但并非所有）生成模型利用了这样一个观察结果：数据的维度可能比原始观测变量的数量所暗示的要低。例如，有效且有意义的英语句子数量远少于随机抽取单词所能组成的字符串数量。同理，现实世界的图像只是对每个像素随机抽取 RGB 值所能生成的图像中的一小部分。这是因为图像是由物理过程生成的（参见图 1.9）。
 
@@ -164,7 +139,7 @@
 
 图 1.11 图像插值。在每一行中，最左和最右的图像为真实图像，中间的三幅图像代表由生成模型创建的一系列插值结果。支撑这些插值的生成模型已经学会所有图像均可由一组底层潜变量创建。通过找到这两幅真实图像对应的潜变量，对其值进行插值，再利用这些中间变量生成新图像，我们便能得到既视觉合理又融合了原始两幅图像特征的中间结果。顶行改编自 Sauer 等人 (2022) 的成果。底行改编自 Ramesh 等人 (2022) 的成果。
 
-### 1.2.3 连接监督学习与无监督学习
+### 1.2.3 连接监督学习与无监督学习
 
 带有潜变量的生成模型还能造福输出具有结构的监督学习模型（图 1.4）。例如，考虑学习预测与标题对应的图像。我们不直接将文本输入映射到图像，而是学习解释文本的潜变量与解释图像的潜变量之间的关系。
 
@@ -174,26 +149,23 @@
 
 图 1.12 根据标题“泰迪熊在时代广场滑滑板”生成的多幅图像。由 DALL·E-2 生成 (Ramesh et al., 2022)。
 
-# 1.3 强化学习
+## 1.3 强化学习
 
 机器学习的最后一个领域是强化学习。该范式引入了**智能体**的概念，它生存于一个环境中，并可在每个时间步执行特定动作。动作会改变系统的状态，但不一定以确定性方式改变。执行动作还可能产生奖励，强化学习的目标是让智能体学会选择能带来平均高奖励的动作。
 
 一个复杂因素是奖励可能在动作执行一段时间后才出现，因此将奖励与动作关联并非易事。这被称为 `temporal credit assignment problem`（时间信用分配问题）。随着智能体学习，它必须在 `exploration`（探索）和 `exploitation`（利用）已知知识之间权衡；也许智能体已学会如何获得微薄奖励；它是坚持此策略（利用已知），还是尝试不同动作以求改进（探索其他机会）？
 
-### 1.3.1 两个例子
+### 1.3.1 两个例子
 
 考虑教一个人形机器人移动。机器人在给定时刻只能执行有限数量的动作（移动各个关节），这些动作会改变世界的状态（它的姿态）。我们可能会在机器人到达障碍赛道的检查点时给予奖励。要到达每个检查点，它必须执行许多动作，而在收到奖励时，不清楚哪些动作促成了奖励，哪些无关紧要。这是时间信用分配问题的一个例子。
 
-
-
-
-##### 学习下棋的第二个例子
+#### 学习下棋的第二个例子
 
 同样，智能体在任何给定时刻都有一组有效动作（棋步）。然而，这些动作以非确定性的方式改变系统状态；对于任何动作选择，对手可能会以许多不同的棋步进行回应。在这里，我们可能会根据吃子设置奖励结构，或者仅在游戏结束获胜时给予单一奖励。在后一种情况下，时间信用分配问题极其突出；系统必须学习其众多棋步中哪些对成功或失败起到了关键作用。
 
 探索-利用权衡在这两个例子中也很明显。机器人可能已经发现，通过侧卧并用一条腿推地可以取得进展。这种策略能移动机器人并产生奖励，但速度比最优解（用腿保持平衡并行走）慢得多。因此，它面临在利用已知知识（如何笨拙地在地板上滑行）和探索动作空间（可能导致更快的移动方式）之间做选择。同样，在下棋例子中，智能体可能学会了一套合理的开局棋步序列。它应该利用这些知识，还是探索不同的开局序列？
 
-##### 深度学习如何融入强化学习框架
+#### 深度学习如何融入强化学习框架
 
 这或许并不明显。有几种可能的方法，但其中一种技术是使用深度网络构建从观测到的世界状态到动作的映射。这被称为**策略网络**（*policy network*）。在机器人例子中，策略网络将学习从其传感器测量值到关节运动的映射。在下棋例子中，网络将学习从棋盘当前状态到棋步选择的映射（图 1.13）。
 
@@ -203,35 +175,35 @@
 
 图 1.13 强化学习的策略网络。将深度神经网络融入强化学习的一种方法是用它们定义从状态（此处为棋盘上的位置）到动作（可能的棋步）的映射。这种映射称为**策略**（*policy*）。改编自 Pablok (2017)。
 
-### 1.4 伦理
+## 1.4 伦理
 
 如果在不讨论人工智能伦理影响的情况下撰写本书，将是不负责任的。这项强大技术改变世界的程度，至少不亚于电力、内燃机、晶体管或互联网。在医疗、设计、娱乐、交通、教育及几乎所有商业领域，其潜在益处巨大。然而，科学家和工程师往往对其工作成果抱有不切实际的乐观态度，其潜在危害同样巨大。以下段落重点强调了五大担忧。
 
-#### 偏见与公平
+### 偏见与公平
 
 如果我们基于历史数据训练系统预测个人薪资水平，该系统将复现历史偏见；例如，它很可能预测女性薪资应低于男性。已有多起此类案例成为国际新闻：一款面部图像超分辨率 AI 系统让非白人肤色变白；一款图像生成系统在被要求合成律师图片时，仅生成男性图片。粗心应用基于 AI 的算法决策，有可能巩固或加剧现有偏见。详见 Binns (2018)。
 
-#### 可解释性
+### 可解释性
 
 深度学习系统做出决策，但我们通常不清楚其具体依据或依赖何种信息。它们可能包含数十亿参数，仅凭人工检查无法理解其工作原理。这催生了可解释 AI 子领域。一个相对成功的方向是生成局部解释；虽无法解释整个系统，但可针对特定决策生成可理解的说明。然而，是否可能构建对用户甚至创建者完全透明的复杂决策系统，仍属未知。详见 Grennan 等 (2022)。
 
-#### AI 武器化
+### AI 武器化
+
+
 
 所有重大技术均直接或间接应用于战争。遗憾的是，暴力冲突似乎是人类行为的必然特征。AI 可以说是有史以来最强大的技术，必将在军事领域大规模部署。事实上，这已在发生 (Heikkilä, 2022)。
 
-#### 权力集中
+### 权力集中
 
 世界最强大的公司大举投资 AI，并非出于改善人类命运的善意。它们深知这些技术将带来巨额利润。像任何先进技术一样，深度学习极可能将权力集中在少数掌控它的组织手中。自动化目前由人类从事的工作将改变经济环境，并对技能较少、薪资较低的工作者生计产生不成比例的影响。乐观者认为工业革命期间也发生过类似动荡，最终缩短了工时。真相是，我们根本不知道大规模采用 AI 对社会将产生何种影响 (见 David, 2015)。
 
-#### 生存风险
+### 生存风险
 
 人类面临的主要生存风险皆源于技术。气候变化由工业化驱动。核武器源于物理学研究。因交通、农业、建筑创新使人口规模更大、密度更高、联系更紧密，大流行病发生概率更高、传播更快。人工智能带来新的生存风险。我们应对构建比人类更强大、更具扩展性的系统保持极度审慎。在最乐观的情况下，它将把巨大权力交给拥有者；在最悲观的情况下，我们将无法控制它，甚至无法理解其动机 (见 Tegmark, 2018)。
 
 此清单远非详尽。AI 还可能助长监控、虚假信息、隐私侵犯、欺诈、金融市场操纵，且训练 AI 系统所需能源加剧气候变化。此外，这些担忧非臆测；已有大量伦理存疑的 AI 应用案例 (详见 Dao, 2021 部分列表)。而且，互联网近期历史显示，新技术会以意想不到的方式造成危害。八九十年代的在线社区难以预见假新闻、垃圾邮件、网络骚扰、欺诈、网络霸凌、非自愿独身者文化、政治操控、人肉搜索、网络极端化和报复性色情内容的泛滥。
 
 所有研究、研发（或撰写书籍）AI 的人都应深思：科学家对其技术用途应负何种程度的责任？我们应考虑到资本主义是 AI 发展的主要驱动力，法律进步和造福社会的部署恐将显著滞后。我们应反思：作为科学家和工程师，是否有可能控制该领域进展、降低危害风险？我们应考虑愿为何种组织工作。它们对降低 AI 潜在危害的承诺有多认真？仅是为规避声誉风险而“漂绿”，还是真正实施了叫停伦理存疑项目的机制？
-
-
 
 所有读者都被鼓励进一步探究这些问题。在线课程 [`ethics-of-ai.mooc.fi/`](https://ethics-of-ai.mooc.fi/) 是一个有用的入门资源。如果您是使用本书授课的教授，建议您与学生讨论这些问题。如果您是选修相关课程但未涉及此内容的学生，请游说您的教授安排相关教学。如果您在企业环境中部署或研究 AI，建议您审视雇主的价值观，并帮助改变它们（或选择离开），如果它们令人失望的话。
 
@@ -284,8 +256,6 @@
 *监督学习模型* 定义了从一个或多个输入到一个或多个输出的映射。例如，输入可能是二手丰田普锐斯的车龄和里程，输出可能是该车的美元估值。
 
 模型只是一个数学方程；当输入通过此方程时，它计算输出，这称为 *推理*。模型方程还包含 *参数*。不同的参数值会改变计算结果；模型方程描述了一族输入和输出之间可能的关系，而参数指定了特定的关系。
-
-
 
 当我们`训练`或`学习`一个模型时，我们是在寻找能够描述输入与输出之间真实关系的参数。学习算法接收一组输入/输出对作为训练集，并调整参数，直到输入能够尽可能准确地预测其对应的输出。如果模型在这些训练对上表现良好，那么我们希望它也能对真实输出未知的新输入做出良好的预测。
 
@@ -357,8 +327,6 @@ L[ϕ] = Σ_{i=1}^I (y[i] - f[x[i], ϕ])²
 
 (2.5)
 
-
-
 由于最佳参数使该表达式最小化，我们称之为*最小二乘*损失。平方运算意味着偏差的方向（即直线位于数据上方还是下方）并不重要。对于这一选择也存在理论依据，我们将在第 5 章中回到这一点。
 
 损失 *L* 是参数 `ϕ` 的函数；当模型拟合较差时（图 2.2b,c）它会较大，而当拟合良好时（图 2.2d）它会较小。从这个角度来看，我们称 `L[ϕ]` 为*损失函数*或*代价函数*。目标是找到使该量最小化的参数 `ϕ̂`：
@@ -369,7 +337,9 @@ L[ϕ] = Σ_{i=1}^I (y[i] - f[x[i], ϕ])²
 
 ***
 
-##### 笔记本 2.1：监督学习
+##### Notebook 2.1
+
+监督学习
 
 ***
 
@@ -387,7 +357,9 @@ L[ϕ] = Σ_{i=1}^I (y[i] - f[x[i], ϕ])²
 
 #### 2.2.3 训练
 
-寻找使损失最小化的参数的过程称为*模型拟合*、*训练*或*学习*。基本方法是随机选择初始参数，然后通过“沿着”损失函数“向下走”来改进它们，直到到达底部（图 2.4）。实现这一点的一种方法是测量当前位置处曲面的梯度，并沿最陡峭的下坡方向迈出一步。然后我们重复此过程，直到梯度变平，无法再进一步改进。²
+
+
+寻找使损失最小化的参数的过程称为`模型拟合`、`训练`或`学习`。基本方法是随机选择初始参数，然后通过“沿着”损失函数“向下走”来改进它们，直到到达底部（图 2.4）。实现这一点的一种方法是测量当前位置处曲面的梯度，并沿最陡峭的下坡方向迈出一步。然后我们重复此过程，直到梯度变平，无法再进一步改进。²
 
 ![Figure 2.4 Linear regression training. The goal is to find the y-intercept and slope parameters that correspond to the smallest loss. a) Iterative training algorithms initialize the parameters randomly and then improve them by “walking downhill” until no further improvement can be made. Here, we start at position 0 and move a certain distance downhill (perpendicular to the contours) to position 1. Then we re-calculate the downhill direction and move to position 2. Eventually, we reach the minimum of the function (position 4). b) Each position 0–4 from panel (a) corresponds to a different y-intercept and slope and so represents a different line. As the loss decreases, the lines fit the data more closely.](img/c2-fig-0004.jpg)
 
@@ -395,7 +367,7 @@ L[ϕ] = Σ_{i=1}^I (y[i] - f[x[i], ϕ])²
 
 #### 2.2.4 测试
 
-训练好模型后，我们想知道它在现实世界中的表现如何。我们通过在单独的*测试数据*集上计算损失来实现这一点。预测准确度*泛化*到测试数据的程度部分取决于训练数据的代表性和完整性。然而，这也取决于模型的表达能力。像直线这样的简单模型可能无法捕捉输入和输出之间的真实关系。这被称为*欠拟合*。相反，一个表达能力很强的模型可能会描述训练数据中那些非典型的统计特性，从而导致异常的预测。这被称为*过拟合*。
+训练好模型后，我们想知道它在现实世界中的表现如何。我们通过在单独的`测试数据`集上计算损失来实现这一点。预测准确度`泛化`到测试数据的程度部分取决于训练数据的代表性和完整性。然而，这也取决于模型的表达能力。像直线这样的简单模型可能无法捕捉输入和输出之间的真实关系。这被称为`欠拟合`。相反，一个表达能力很强的模型可能会描述训练数据中那些非典型的统计特性，从而导致异常的预测。这被称为`过拟合`。
 
 ### 2.3 总结
 
@@ -403,13 +375,13 @@ L[ϕ] = Σ_{i=1}^I (y[i] - f[x[i], ϕ])²
 
 第 3–9 章将展开阐述这些思想。首先，我们解决模型本身的问题；线性回归有一个明显的缺点，即它只能将输入和输出之间的关系描述为一条直线。浅层神经网络（第 3 章）仅比线性回归稍微复杂一些，但能描述大得多的输入/输出关系族。深层神经网络（第 4 章）表达能力相当，但可以用更少的参数描述复杂函数，且在实践中效果更好。
 
-第 5 章研究不同任务的损失函数，并揭示最小二乘损失的理论基础。第 6 章和第 7 章讨论训练过程。第 8 章讨论如何衡量模型性能。第 9 章探讨*正则化*技术，旨在提高该性能。
+第 5 章研究不同任务的损失函数，并揭示最小二乘损失的理论基础。第 6 章和第 7 章讨论训练过程。第 8 章讨论如何衡量模型性能。第 9 章探讨`正则化`技术，旨在提高该性能。
 
 ### 注释
 
-**损失函数与代价函数：** 在大部分机器学习文献及本书中，损失函数和代价函数这两个术语可互换使用。然而，更严格地说，损失函数是与单个数据点相关的项（即方程 2.5 右侧的每个平方项），而代价函数是被最小化的总体量（即方程 2.5 右侧的整体）。代价函数可以包含不与单个数据点相关的额外项（见第 9.1 节）。更一般地，*目标函数*是指任何待最大化或最小化的函数。
+**损失函数与代价函数：** 在大部分机器学习文献及本书中，损失函数和代价函数这两个术语可互换使用。然而，更严格地说，损失函数是与单个数据点相关的项（即方程 2.5 右侧的每个平方项），而代价函数是被最小化的总体量（即方程 2.5 右侧的整体）。代价函数可以包含不与单个数据点相关的额外项（见第 9.1 节）。更一般地，`目标函数`是指任何待最大化或最小化的函数。
 
-**生成模型与判别模型：** 本章中的模型 `y = f[x, ϕ]` 是*判别模型*。这些模型从现实世界的测量值 `x` 中进行输出预测 `y`。另一种方法是构建*生成模型* `x = g[y, ϕ]`，其中现实世界的测量值 `x` 作为输出 `y` 的函数被计算得出。
+**生成模型与判别模型：** 本章中的模型 `y = f[x, ϕ]` 是`判别模型`。这些模型从现实世界的测量值 `x` 中进行输出预测 `y`。另一种方法是构建`生成模型` `x = g[y, ϕ]`，其中现实世界的测量值 `x` 作为输出 `y` 的函数被计算得出。
 
 ***
 
@@ -417,9 +389,7 @@ L[ϕ] = Σ_{i=1}^I (y[i] - f[x[i], ϕ])²
 
 ***
 
-
-
-生成式方法的缺点在于它不能直接预测 `y`。要进行推理，我们必须将生成式方程反转为 `y = g*^−*¹[x, *ϕ*]`，这可能很困难。然而，生成式模型的优势在于我们可以将关于数据如何生成的先验知识构建到模型中。例如，如果我们想预测图像 `x` 中汽车的三维位置和朝向 `y`，那么我们可以将关于汽车形状、三维几何和光传输的知识构建到函数 `x = g[y, *ϕ*]` 中。
+生成式方法的缺点在于它不能直接预测 `y`。要进行推理，我们必须将生成式方程反转为 `y = g⁻¹[x, ϕ]`，这可能很困难。然而，生成式模型的优势在于我们可以将关于数据如何生成的先验知识构建到模型中。例如，如果我们想预测图像 `x` 中汽车的三维位置和朝向 `y`，那么我们可以将关于汽车形状、三维几何和光传输的知识构建到函数 `x = g[y, ϕ]` 中。
 
 这听起来是个好主意，但实际上，判别式模型主导着现代机器学习；从生成式模型利用先验知识中获得的优势，通常会被利用大量训练数据学习非常灵活的判别式模型所超越。
 
@@ -429,7 +399,7 @@ L[ϕ] = Σ_{i=1}^I (y[i] - f[x[i], ϕ])²
 
 **习题 2.2** 证明我们可以通过将习题 2.1 中导数的表达式设为零并求解 `ϕ[0]` 和 `ϕ[1]`，以闭式找到损失函数的最小值。注意这适用于线性回归，但不适用于更复杂的模型；这就是为什么我们使用迭代模型拟合方法，如梯度下降（图 2.4）。
 
-**习题 2.3\*** 考虑将线性回归重新表述为生成式模型，因此我们有 `x = g[y, *ϕ*] = ϕ[0] + ϕ[1]y`。新的损失函数是什么？求用于执行推理的反函数 `y = g*^−*¹[x, *ϕ*]` 的表达式。对于给定的训练数据集 `{x[i], y[i]}`，该模型的预测结果会与判别式版本相同吗？验证这一点的一种方法是编写代码，分别使用这两种方法为三个数据点拟合一条线，看结果是否相同。
+**习题 2.3\*** 考虑将线性回归重新表述为生成式模型，因此我们有 `x = g[y, ϕ] = ϕ[0] + ϕ[1]y`。新的损失函数是什么？求用于执行推理的反函数 `y = g⁻¹[x, ϕ]` 的表达式。对于给定的训练数据集 `{x[i], y[i]}`，该模型的预测结果会与判别式版本相同吗？验证这一点的一种方法是编写代码，分别使用这两种方法为三个数据点拟合一条线，看结果是否相同。
 
 ## 第 3 章
 
@@ -439,15 +409,15 @@ L[ϕ] = Σ_{i=1}^I (y[i] - f[x[i], ϕ])²
 
 ### 3.1 神经网络示例
 
-浅层神经网络是具有参数 `*ϕ*` 的函数 `y = f[x, *ϕ*]`，将多变量输入 `x` 映射到多变量输出 `y`。我们将完整定义推迟到第 3.4 节，并通过一个示例网络 `f[x, *ϕ*]` 来介绍主要思想，该网络将标量输入 `x` 映射到标量输出 `y`，并具有十个参数 `*ϕ* = {ϕ[0], ϕ[1], ϕ[2], ϕ[3], θ[10], θ[11], θ[20], θ[21], θ[30], θ[31]}`：
+浅层神经网络是具有参数 `ϕ` 的函数 `y = f[x, ϕ]`，将多变量输入 `x` 映射到多变量输出 `y`。我们将完整定义推迟到第 3.4 节，并通过一个示例网络 `f[x, ϕ]` 来介绍主要思想，该网络将标量输入 `x` 映射到标量输出 `y`，并具有十个参数 `ϕ = {ϕ[0], ϕ[1], ϕ[2], ϕ[3], θ[10], θ[11], θ[20], θ[21], θ[30], θ[31]}`：
 
 ![c3-fig-5001.jpg](img/c3-fig-5001.jpg)
 
 (3.1)
 
-我们可以将此计算分解为三部分：首先，我们计算输入数据的三个线性函数（`θ[10] + θ[11]x`、`θ[20] + θ[21]x` 和 `θ[30] + θ[31]x`）。其次，我们将这三个结果通过一个*激活函数* `a[•]`。最后，我们用 `ϕ[1]、ϕ[2] 和 ϕ[3]` 对生成的三个激活值进行加权，求和，并加上偏移 `ϕ[0]`。
+我们可以将此计算分解为三部分：首先，我们计算输入数据的三个线性函数（`θ[10] + θ[11]x`、`θ[20] + θ[21]x` 和 `θ[30] + θ[31]x`）。其次，我们将这三个结果通过一个`激活函数` `a[•]`。最后，我们用 `ϕ[1]、ϕ[2] 和 ϕ[3]` 对生成的三个激活值进行加权，求和，并加上偏移 `ϕ[0]`。
 
-为了完善描述，我们必须定义激活函数 `a[•]`。有很多选择，但最常用的是*线性修正单元*或*ReLU*：
+为了完善描述，我们必须定义激活函数 `a[•]`。有很多选择，但最常用的是`线性修正单元`或`ReLU`：
 
 ![c3-fig-5002.jpg](img/c3-fig-5002.jpg)
 
@@ -459,7 +429,7 @@ L[ϕ] = Σ_{i=1}^I (y[i] - f[x[i], ϕ])²
 
 图 3.1 线性修正单元 (ReLU)。如果输入小于零，该激活函数返回零；否则返回未改变的输入。换句话说，它将负值截断为零。注意，激活函数还有许多其他可能的选择（见图 3.13），但 ReLU 是最常用且最容易理解的。
 
-方程 3.1 表示哪一族输入/输出关系可能并不显而易见。尽管如此，前一章的思想都适用。方程 3.1 表示一族函数，该族的特定成员取决于 `*ϕ*` 中的十个参数。如果我们知道这些参数，就可以通过为给定输入 `x` 求解方程来执行推理（预测 `y`）。给定训练数据集 ![c3-fig-5003.jpg](img/c3-fig-5003.jpg)，我们可以定义最小二乘损失函数 `L[*ϕ*]`，并用它来衡量模型对于任意给定参数值 `*ϕ*` 描述该数据集的效果。为了训练模型，我们寻找使该损失最小化的值 ![c3-fig-5004.jpg](img/c3-fig-5004.jpg)。
+方程 3.1 表示哪一族输入/输出关系可能并不显而易见。尽管如此，前一章的思想都适用。方程 3.1 表示一族函数，该族的特定成员取决于 `ϕ` 中的十个参数。如果我们知道这些参数，就可以通过为给定输入 `x` 求解方程来执行推理（预测 `y`）。给定训练数据集 ![c3-fig-5003.jpg](img/c3-fig-5003.jpg)，我们可以定义最小二乘损失函数 `L[ϕ]`，并用它来衡量模型对于任意给定参数值 `ϕ` 描述该数据集的效果。为了训练模型，我们寻找使该损失最小化的值 ![c3-fig-5004.jpg](img/c3-fig-5004.jpg)。
 
 #### 3.1.1 神经网络直觉
 
@@ -471,9 +441,9 @@ L[ϕ] = Σ_{i=1}^I (y[i] - f[x[i], ϕ])²
 
 ![Figure 3.2 Family of functions defined by equation 3.1. a–c) Functions for three different choices of the ten parameters ϕ. In each case, the input/output relation is piecewise linear. However, the positions of the joints, the slopes of the linear regions between them, and the overall height vary.](img/c3-fig-0002.jpg)
 
-图 3.2 方程 3.1 定义的函数族。a–c) 十个参数 `*ϕ*` 的三种不同选择对应的函数。在每种情况下，输入/输出关系都是分段线性的。然而，节点的位置、它们之间线性区域的斜率以及整体高度各不相同。
+图 3.2 方程 3.1 定义的函数族。a–c) 十个参数 `ϕ` 的三种不同选择对应的函数。在每种情况下，输入/输出关系都是分段线性的。然而，节点的位置、它们之间线性区域的斜率以及整体高度各不相同。
 
-其中我们将 `h[1]、h[2] 和 h[3]` 称为*隐藏单元*。其次，我们通过用线性函数组合这些隐藏单元来计算输出：¹
+其中我们将 `h[1]、h[2] 和 h[3]` 称为`隐藏单元`。其次，我们通过用线性函数组合这些隐藏单元来计算输出：¹
 
 `y = ϕ[0] + ϕ[1]h[1] + ϕ[2]h[2] + ϕ[3]h[3].`
 
@@ -489,14 +459,11 @@ L[ϕ] = Σ_{i=1}^I (y[i] - f[x[i], ϕ])²
 
 ![Figure 3.3 Computation for function in figure 3.2a. a–c) The input x is passed through three linear functions, each with a different y-intercept θ•0 and slope θ•1. d–f) Each line is passed through the ReLU activation function, which clips negative values to zero. g–i) The three clipped lines are then weighted (scaled) by ϕ1, ϕ2, and ϕ3, respectively. j) Finally, the clipped and weighted functions are summed, and an offset ϕ0 that controls the height is added. Each of the four linear regions corresponds to a different activation pattern in the hidden units. In the shaded region, h2 is inactive (clipped), but h1 and h3 are both active.](img/c3-fig-0003.jpg)
 
-
-
-
 ##### 图 3.3 图 3.2a 中函数的计算过程
 
-a–c) 输入 `x` 通过三个线性函数，每个函数具有不同的 y 轴截距 `θ[•][0]` 和斜率 `θ[•][1]`。d–f) 每条线再通过 ReLU 激活函数，该函数将负值截断为零。g–i) 然后，这三条被截断的线分别由 `ϕ[1]`、`ϕ[2]` 和 `ϕ[3]` 加权（缩放）。j) 最后，将截断并加权后的函数求和，并加上一个控制高度的偏移量 `ϕ[0]`。四个线性区域中的每一个都对应隐藏单元中不同的*激活模式*。在阴影区域中，`h[2]` 处于非激活状态（被截断），但 `h[1]` 和 `h[3]` 均处于激活状态。
+a–c) 输入 `x` 通过三个线性函数，每个函数具有不同的 y 轴截距 `θ[•][0]` 和斜率 `θ[•][1]`。d–f) 每条线再通过 ReLU 激活函数，该函数将负值截断为零。g–i) 然后，这三条被截断的线分别由 `ϕ[1]`、`ϕ[2]` 和 `ϕ[3]` 加权（缩放）。j) 最后，将截断并加权后的函数求和，并加上一个控制高度的偏移量 `ϕ[0]`。四个线性区域中的每一个都对应隐藏单元中不同的`激活模式`。在阴影区域中，`h[2]` 处于非激活状态（被截断），但 `h[1]` 和 `h[3]` 均处于激活状态。
 
-图 3.3j 中的每个线性区域都对应隐藏单元中不同的*激活模式*。当一个单元被截断时，我们称其为*非激活*；当它未被截断时，我们称其为*激活*。例如，阴影区域接收来自 `h[1]` 和 `h[3]`（它们是激活的）的贡献，但不接收来自 `h[2]`（它是非激活的）的贡献。每个线性区域的斜率由以下因素决定：(i) 该区域激活输入的原始斜率 `θ[•1]`，以及 (ii) 随后施加的权重 `ϕ[•]`。例如，阴影区域的斜率（见问题 3.3）为 `θ[11]*ϕ[1] + θ[31]*ϕ[3]`，其中第一项是面板 (g) 中的斜率，第二项是面板 (i) 中的斜率。
+图 3.3j 中的每个线性区域都对应隐藏单元中不同的`激活模式`。当一个单元被截断时，我们称其为`非激活`；当它未被截断时，我们称其为`激活`。例如，阴影区域接收来自 `h[1]` 和 `h[3]`（它们是激活的）的贡献，但不接收来自 `h[2]`（它是非激活的）的贡献。每个线性区域的斜率由以下因素决定：(i) 该区域激活输入的原始斜率 `θ[•1]`，以及 (ii) 随后施加的权重 `ϕ[•]`。例如，阴影区域的斜率（见问题 3.3）为 `θ[11]*ϕ[1] + θ[31]*ϕ[3]`，其中第一项是面板 (g) 中的斜率，第二项是面板 (i) 中的斜率。
 
 每个隐藏单元为函数贡献一个“折点”，因此有三个隐藏单元时，最多可有四个线性区域。然而，这些区域的斜率只有三个是独立的；第四个斜率要么为零（如果该区域内所有隐藏单元均非激活），要么是其他区域斜率的总和。
 
@@ -518,13 +485,17 @@ a–c) 输入 `x` 通过三个线性函数，每个函数具有不同的 y 轴�
 
 ![Figure 3.4 Depicting neural networks. a) The input x is on the left, the hidden units h1, h2, and h3 in the center, and the output y on the right. Computation flows from left to right. The input is used to compute the hidden units, which are combined to create the output. Each of the ten arrows represents a parameter (intercepts in orange and slopes in black). Each parameter multiplies its source and adds the result to its target. For example, we multiply the parameter ϕ1 by source h1 and add it to y. We introduce additional nodes containing ones (orange circles) to incorporate the offsets into this scheme, so we multiply ϕ0 by one (with no effect) and add it to y. ReLU functions are applied at the hidden units. b) More typically, the intercepts, ReLU functions, and parameter names are omitted; this simpler depiction represents the same network.](img/c3-fig-0004.jpg)
 
+
+
 **图 3.4 神经网络的描绘。** a) 输入 `x` 在左侧，隐藏单元 `h[1]`、`h[2]` 和 `h[3]` 在中间，输出 `y` 在右侧。计算从左向右流动。输入用于计算隐藏单元，隐藏单元再组合生成输出。十个箭头中的每一个代表一个参数（截距用橙色表示，斜率用黑色表示）。每个参数将其源乘以该参数并将结果加到其目标上。例如，我们将参数 `ϕ[1]` 乘以源 `h[1]` 并将结果加到 `y` 上。我们引入包含 1 的额外节点（橙色圆圈）以将偏移量纳入此方案，因此我们将 `ϕ[0]` 乘以 1（无影响）并将结果加到 `y` 上。ReLU 函数作用于隐藏单元。b) 更典型的是，省略截距、ReLU 函数和参数名称；这种更简单的描绘代表同一个网络。
 
 ### 3.2 通用近似定理
 
 在上一节中，我们介绍了一个具有一个输入、一个输出、ReLU 激活函数和三个隐藏单元的示例神经网络。现在让我们稍微推广一下，考虑具有 `D` 个隐藏单元的情况，其中第 `d` 个隐藏单元为：
 
-`h[d] = a[θ[d][0] + θ[d][1]*x]`
+```
+h[d] = a[θ[d][0] + θ[d][1]*x]
+```
 
  (3.5)
 
@@ -566,9 +537,6 @@ a–c) 输入 `x` 通过三个线性函数，每个函数具有不同的 y 轴�
 
 这两个输出是隐藏单元的两个不同线性函数。
 
-
-
-
 正如我们在图 3.3 中所见，分段函数中的“关节”取决于初始线性函数`θ[•0] + θ[•1]x`在隐藏单元处被 ReLU 函数`a[•]`裁剪的位置。由于两个输出`y[1]`和`y[2]`都是相同四个隐藏单元的不同线性函数，因此两者中的四个“关节”必须位于相同的位置。然而，线性区域的斜率和整体垂直偏移量可能会有所不同（图 3.6）。
 
 ---
@@ -595,7 +563,9 @@ a–c) 输入 `x` 通过三个线性函数，每个函数具有不同的 y 轴�
 
 其中现在每个输入都有一个斜率参数。隐藏单元按常规方式组合形成输出：
 
-`y = ϕ[0] + ϕ[1]h[1] + ϕ[2]h[2] + ϕ[3]h[3]`
+```
+y = ϕ[0] + ϕ[1]h[1] + ϕ[2]h[2] + ϕ[3]h[3]
+```
 
  (3.10)
 
@@ -643,16 +613,14 @@ a–c) 输入 `x` 通过三个线性函数，每个函数具有不同的 y 轴�
 
 ![图 3.10 线性区域数量与输入维度。a) 具有单个输入维度时，带有一个隐藏单元的模型创建一个关节，将轴分成两个线性区域。b) 具有两个输入维度时，带有两个隐藏单元的模型可以使用两条线（此处与轴对齐）划分输入空间以创建四个区域。c) 具有三个输入维度时，带有三个隐藏单元的模型可以使用三个平面（同样与轴对齐）划分输入空间以创建八个区域。继续这一论证，可知具有 Di 个输入维度和 Di 个隐藏单元的模型可以用 Di 个超平面划分输入空间，从而创建 2^Di 个线性区域。](img/c3-fig-0010.jpg)
 
-
-
-
-## 3.4 浅层神经网络：一般情况
+## 3.4 浅层神经网络：一般情况
 
 我们已经描述了几个浅层网络示例，以帮助建立关于其工作原理的直觉。我们现在为浅层神经网络 `y = f[x, ϕ]` 定义一个通用方程，该方程利用 `h ∈ ℝ^D` 个隐藏单元将多维输入 `x ∈ ℝ^D_x` 映射为多维输出 `y ∈ ℝ^D_y`。每个隐藏单元的计算方式为：
 
 ```
 h_i = a[θ_i^T x + ϕ_i]
 ```
+
  (3.11)
 
 这些隐藏单元通过线性组合来生成输出：
@@ -660,6 +628,7 @@ h_i = a[θ_i^T x + ϕ_i]
 ```
 y = Θ h + b
 ```
+
  (3.12)
 
 其中 `a[•]` 是非线性激活函数。模型参数为 `ϕ = {θ[••], ϕ[••]}`。图 3.11 展示了一个包含三个输入、三个隐藏单元和两个输出的示例。
@@ -686,7 +655,7 @@ y = Θ h + b
 
 ---
 
-## 3.5 术语
+## 3.5 术语
 
 我们通过介绍一些术语来结束本章。遗憾的是，神经网络伴随着大量专业术语。它们通常用*层*来描述。图 3.12 左侧是*输入层*，中间是*隐藏层*，右侧是*输出层*。我们会说 图 3.12 中的网络有一个包含四个隐藏单元的隐藏层。隐藏单元本身有时被称为*神经元*。当我们将数据传递通过网络时，隐藏层的输入值（即应用 ReLU 函数之前）称为*预激活值*。隐藏层的值（即应用 ReLU 函数之后）称为*激活值*。
 
@@ -696,7 +665,7 @@ y = Θ h + b
 
 由于历史原因，任何至少包含一个隐藏层的神经网络也被称为*多层感知机*，简称*MLP*。具有一个隐藏层的网络（如本章所述）有时被称为*浅层神经网络*。具有多个隐藏层的网络（如下一章所述）被称为*深层神经网络*。连接形成有向无环图的神经网络（即无环图，如本章所有示例所示）被称为*前馈网络*。如果一层中的每个元素都连接到下一层中的每个元素（如本章所有示例所示），则该网络是*全连接的*。这些连接代表底层方程中的斜率参数，称为*网络权重*。偏移参数（图 3.12 中未显示）称为*偏置*。
 
-## 3.6 总结
+## 3.6 总结
 
 浅层神经网络有一个隐藏层。它们 (i) 计算输入的若干线性函数，(ii) 将每个结果通过激活函数，然后 (iii) 对这些激活值进行线性组合以形成输出。浅层神经网络通过将输入空间划分为连续的分段线性区域曲面，基于输入 `x` 进行预测 `y`。只要有足够的隐藏单元（神经元），浅层神经网络可以以任意精度逼近任何连续函数。
 
@@ -706,9 +675,6 @@ y = Θ h + b
 
 **“神经”网络：** 如果本章中的模型只是函数，为什么它们被称为“神经网络”？这种联系不幸的是很牵强。像 图 3.12 这样的可视化图包含相互密集连接的节点（输入、隐藏单元和输出）。这与哺乳动物大脑中的神经元表面上相似，后者也具有密集连接。然而，几乎没有证据表明大脑计算的工作方式与神经网络相同，在未来的思考中引入生物学视角是无益的。
 
-
-
-
 #### 神经网络的历史
 
 McCulloch & Pitts (1943) 首先提出了人工神经元的概念，该神经元将输入组合以产生输出，但该模型没有实用的学习算法。Rosenblatt (1958) 开发了 `perceptron`（感知机），它对输入进行线性组合，然后通过阈值处理来做出是/否的决策。他还提供了一种从数据中学习权重的算法。Minsky & Papert (1969) 认为线性函数不足以解决一般分类问题，但增加具有非线性激活函数的隐藏层（因此称为多层感知机）可以学习更一般的输入/输出关系。然而，他们得出结论认为 Rosenblatt 的算法无法学习此类模型的参数。直到 1980 年代，一种实用算法（反向传播，见第 7 章）被开发出来，神经网络的重要研究工作才得以恢复。神经网络的历史由 Kurenkov (2020)、Sejnowski (2018) 和 Schmidhuber (2022) 记录在案。
@@ -716,6 +682,8 @@ McCulloch & Pitts (1943) 首先提出了人工神经元的概念，该神经元�
 #### 激活函数
 
 `ReLU` 函数早在 Fukushima (1969) 中就已被使用。然而，在神经网络的早期，更常用的是 logistic sigmoid 或 tanh 激活函数（图 3.13a）。`ReLU` 由 Jarrett et al. (2009)、Nair & Hinton (2010) 和 Glorot et al. (2011) 重新推广，是现代神经网络成功故事的重要组成部分。它有一个良好的性质：对于大于零的输入，输出关于输入的导数始终为一。这有助于训练的稳定性和效率（见第 7 章），并与 sigmoid 激活函数的导数形成对比，后者对于大的正输入和大的负输入会饱和（接近于零）。
+
+
 
 ![Figure 3.13 Activation functions. a) Logistic sigmoid and tanh functions. b) Leaky ReLU and parametric ReLU with parameter 0.25. c) SoftPlus, Gaussian error linear unit, and sigmoid linear unit. d) Exponential linear unit with parameters 0.5 and 1.0, e) Scaled exponential linear unit. f) Swish with parameters 0.4, 1.0, and 1.4.](img/c3-fig-0013.jpg)
 
@@ -725,7 +693,9 @@ McCulloch & Pitts (1943) 首先提出了人工神经元的概念，该神经元�
 
 还研究了各种平滑函数（图 3.13c–d），包括 softplus 函数（Glorot et al., 2011）、高斯误差线性单元（Hendrycks & Gimpel, 2016）、sigmoid 线性单元（Hendrycks & Gimpel, 2016）和指数线性单元。这些大多是试图在限制负值梯度的同时避免神经元失活问题。Klambauer et al. (2017) 引入了缩放指数线性单元（图 3.13e），这特别有趣，因为当输入方差具有有限范围时，它有助于稳定激活值的方差（见第 7.5 节）。Ramachandran et al. (2017) 采用实证方法来选择激活函数。他们搜索可能的函数空间，以找到在各种监督学习任务中表现最好的函数。发现的最优函数是 `a[x] = x/(1 + exp[−βx])`，其中 `β` 是学习到的参数（图 3.13f）。他们将此函数称为 `Swish`。有趣的是，这重新发现了 Hendrycks & Gimpel (2016) 和 Elfwing et al. (2018) 之前提出的激活函数。Howard et al. (2019) 用 `HardSwish` 函数近似 `Swish`，它具有非常相似的形状但计算更快：
 
+```
 ![c3-fig-5017.jpg](img/c3-fig-5017.jpg)
+```
 
 (3.13)
 
@@ -737,7 +707,7 @@ McCulloch & Pitts (1943) 首先提出了人工神经元的概念，该神经元�
 
 #### 线性区域的数量
 
-考虑一个具有 `D[i] ≥` 2 维输入和 `D` 个隐藏单元的浅层网络。线性区域的数量由 `ReLU` 函数中的“关节”创建的 `D` 个超平面的交点决定（例如 图 3.8d–f）。每个区域由 `ReLU` 函数截断或不截断输入的不同组合创建。Zaslavsky (1975) 证明了在 `D[i]` ≤ `D` 维输入空间中，`D` 个超平面创建的区域数量至多为 ![c3-fig-5018.jpg](img/c3-fig-5018.jpg)（即二项式系数的和）。根据经验法则，浅层神经网络几乎总是拥有比输入维度 `D[i]` 更多的隐藏单元数量 `D`，并创建介于 ![c3-fig-5012.jpg](img/c3-fig-5012.jpg) 和 2^D 之间的线性区域。
+考虑一个具有 `D[i] ≥` 2 维输入和 `D` 个隐藏单元的浅层网络。线性区域的数量由 `ReLU` 函数中的“关节”创建的 `D` 个超平面的交点决定（例如 图 3.8d–f）。每个区域由 `ReLU` 函数截断或不截断输入的不同组合创建。Zaslavsky (1975) 证明了在 `D[i]` ≤ `D` 维输入空间中，`D` 个超平面创建的区域数量至多为 `![c3-fig-5018.jpg](img/c3-fig-5018.jpg)`（即二项式系数的和）。根据经验法则，浅层神经网络几乎总是拥有比输入维度 `D[i]` 更多的隐藏单元数量 `D`，并创建介于 `![c3-fig-5012.jpg](img/c3-fig-5012.jpg)` 和 2^D 之间的线性区域。
 
 ---
 
@@ -760,10 +730,6 @@ McCulloch & Pitts (1943) 首先提出了人工神经元的概念，该神经元�
 #### 问题 3.1
 
 如果方程 3.1 中的激活函数是线性的，即 `a[z] = ψ[0] + ψ[1]z`，会创建什么样的从输入到输出的映射？如果移除激活函数，即 `a[z] = z`，会创建什么样的映射？
-
-
-
-
 
 #### Problem 3.2
 
@@ -804,13 +770,18 @@ ReLU[α · z] = α · ReLU[z].
 #### Problem 3.8
 
 考虑将 ReLU 激活函数替换为：
+
 (i) Heaviside 阶跃函数 `heaviside[z]`
+
 (ii) 双曲正切函数 `tanh[z]`
+
 (iii) 矩形函数 `rect[z]`
 
 其中：
 
+```
 ![c3-fig-5019.jpg](img/c3-fig-5019.jpg)
+```
 
  (3.15)
 
@@ -854,7 +825,7 @@ figure 3.11 中的网络最多可以创建多少个 3D 线性区域？
 
 #### Problem 3.18*
 
-证明具有 *D*[i] = 2 维输入、*D*[o] = 1 维输出和 *D* = 3 个隐藏单元的浅层网络创建的最大区域数为七，如 figure 3.8j 所示。使用 Zaslavsky (1975) 的结果：用 *D* 个超平面划分 *D*[i] 维空间所能创建的最大区域数为 ![c3-fig-5018.jpg](img/c3-fig-5018.jpg)。如果我们向该模型添加两个隐藏单元，使 *D* = 5，最大区域数是多少？
+证明具有 *D*[i] = 2 维输入、*D*[o] = 1 维输出和 *D* = 3 个隐藏单元的浅层网络创建的最大区域数为七，如 figure 3.8j 所示。使用 Zaslavsky (1975) 的结果：用 *D* 个超平面划分 *D*[i] 维空间所能创建的最大区域数为 `![c3-fig-5018.jpg](img/c3-fig-5018.jpg)`。如果我们向该模型添加两个隐藏单元，使 *D* = 5，最大区域数是多少？
 
 ## Chapter 4
 
@@ -868,37 +839,47 @@ Deep neural networks
 
 为了深入了解深度神经网络的行为，我们首先考虑将两个浅层网络组合起来，使第一个网络的输出成为第二个网络的输入。考虑两个各有三个隐藏单元的浅层网络（figure 4.1a）。第一个网络接受输入 *x* 并返回输出 *y*，定义如下：
 
+```
 ![c4-fig-5001.jpg](img/c4-fig-5001.jpg)
+```
 
  (4.1)
 
 ![Figure 4.1 Composing two single-layer networks with three hidden units each. a) The output y of the first network constitutes the input to the second network. b) The first network maps inputs x ∈ [−1, 1] to outputs y ∈ [−1, 1] using a function comprised of three linear regions that are chosen so that they alternate the sign of their slope. Multiple inputs x (gray circles) now map to the same output y (cyan circle). c) The second network defines a function comprising three linear regions that takes y and returns y′ (i.e., the cyan circle is mapped to the brown circle). d) The combined effect of these two functions when composed is that (i) three different inputs x are mapped to any given value of y by the first network and (ii) are processed in the same way by the second network; the result is that the function defined by the second network in panel (c) is duplicated three times, variously flipped and rescaled according to the slope of the regions of panel (b).](images/c4-fig-0001.jpg)
-
-
-
-
 
 #### 组合网络与深度网络
 
 ##### 图 4.1 组合两个各含三个隐藏单元的单层网络
 
 a) 第一个网络的输出 `y` 构成了第二个网络的输入。  
+
 b) 第一个网络使用一个由三个线性区域组成的函数，将输入 `x ∈ [−1, 1]` 映射到输出 `y ∈ [−1, 1]`，这三个区域的选择使得它们的斜率符号交替。多个输入 `x`（灰色圆圈）现在映射到同一个输出 `y`（青色圆圈）。  
+
 c) 第二个网络定义了一个包含三个线性区域的函数，它接收 `y` 并返回 `y′`（即青色圆圈被映射为棕色圆圈）。  
+
 d) 当这两个函数组合时，其综合效果是：(i) 三个不同的输入 `x` 通过第一个网络映射到任意给定的 `y` 值，并且 (ii) 以相同的方式被第二个网络处理；结果是面板 (c) 中第二个网络定义的函数被复制了三次，根据面板 (b) 中各区域的斜率，分别进行翻转和缩放。
 
-![c4-fig-5002.jpg](img/c4-fig-5002.jpg)  
+```
+![c4-fig-5002.jpg](img/c4-fig-5002.jpg)
+```
+
 (4.2)
 
 第二个网络以 `y` 为输入并返回 `y′`，其定义为：
 
-![c4-fig-5003.jpg](img/c4-fig-5003.jpg)  
-(4.3)
+```
+![c4-fig-5003.jpg](img/c4-fig-5003.jpg)
+```
+
+ (4.3)
 
 以及
 
-![c4-fig-5004.jpg](img/c4-fig-5004.jpg)  
-(4.4)
+```
+![c4-fig-5004.jpg](img/c4-fig-5004.jpg)
+```
+
+ (4.4)
 
 使用 ReLU 激活函数时，该模型同样描述了一族分段线性函数。然而，线性区域的数量可能大于具有六个隐藏单元的浅层网络。为了理解这一点，考虑选择第一个网络以产生三个正负斜率交替的区域（图 4.1b）。这意味着三个不同的 `x` 范围被映射到相同的输出范围 `y ∈ [−1, 1]`，随后从该 `y` 范围到 `y′` 的映射被应用了三次。总体效果是第二个网络定义的函数被复制三次，从而创建出九个线性区域。同一原理也适用于高维空间（图 4.2）。
 
@@ -909,6 +890,7 @@ d) 当这两个函数组合时，其综合效果是：(i) 三个不同的输入 
 ---
 
 **笔记本 4.1**  
+
 组合网络
 
 ---
@@ -916,9 +898,14 @@ d) 当这两个函数组合时，其综合效果是：(i) 三个不同的输入 
 ##### 图 4.2 组合具有二维输入的神经网络
 
 a) 第一个网络（来自图 3.8）有三个隐藏单元，接收两个输入 `x[1]` 和 `x[2]` 并返回一个标量输出 `y`。这被传递给一个具有两个隐藏单元的第二个网络以产生 `y′`。  
+
 b) 第一个网络产生一个由七个线性区域组成的函数，其中一个区域是平坦的。  
+
 c) 第二个网络定义了一个在 `y ∈ [−1, 1]` 中包含两个线性区域的函数。  
+
 d) 当这些网络组合时，第一个网络的六个非平坦区域中的每一个都被第二个网络分成两个新区域，从而创建总共 13 个线性区域。
+
+
 
 ![Figure 4.2 Composing neural networks with a 2D input. a) The first network (from figure 3.8) has three hidden units and takes two inputs x1 and x2 and returns a scalar output y. This is passed into a second network with two hidden units to produce y′. b) The first network produces a function consisting of seven linear regions, one of which is flat. c) The second network defines a function comprising two linear regions in y ∈ [−1, 1]. d) When these networks are composed, each of the six non-flat regions from the first network is divided into two new regions by the second network to create a total of 13 linear regions.](images/c4-fig-0002.jpg)
 
@@ -928,7 +915,7 @@ d) 当这些网络组合时，第一个网络的六个非平坦区域中的每�
 
 ![Figure 4.3 Deep networks as folding input space. a) One way to think about the first network from figure 4.1 is that it “folds” the input space back on top of itself. b) The second network applies its function to the folded space. c) The final output is revealed by “unfolding” again.](img/c4-fig-0003.jpg)
 
-图 4.3 深度网络作为输入空间的折叠。a) 理解 图 4.1 中第一个网络的一种方式是，它将输入空间“折叠”回自身顶部。b) 第二个网络将其函数应用于折叠后的空间。c) 通过再次“展开”，最终输出显现出来。
+图 4.3 深度网络作为输入空间的折叠。a) 理解图 4.1 中第一个网络的一种方式是，它将输入空间“折叠”回自身顶部。b) 第二个网络将其函数应用于折叠后的空间。c) 通过再次“展开”，最终输出显现出来。
 
 ### 4.2 从组合网络到深度网络
 
@@ -936,12 +923,14 @@ d) 当这些网络组合时，第一个网络的六个非平坦区域中的每�
 
 第一个网络的输出（`y = ϕ[0] + ϕ[1]h[1] + ϕ[2]h[2] + ϕ[3]h[3]`）是线性的，第二个网络的第一步运算（方程 4.3，其中我们计算 ![c4-fig-5023.jpg](img/c4-fig-5023.jpg)、![c4-fig-5024.jpg](img/c4-fig-5024.jpg) 和 ![c4-fig-5025.jpg](img/c4-fig-5025.jpg)）也是线性的。将一个线性函数应用于另一个线性函数会产生另一个线性函数。当我们将 `y` 的表达式代入方程 4.3 时，结果为：
 
-![c4-fig-5005.jpg](img/c4-fig-5005.jpg)  
+![c4-fig-5005.jpg](img/c4-fig-5005.jpg)
+
 (4.5)
 
 我们可以将其重写为：
 
-![c4-fig-5006.jpg](img/c4-fig-5006.jpg)  
+![c4-fig-5006.jpg](img/c4-fig-5006.jpg)
+
 (4.6)
 
 其中 ![c4-fig-5026.jpg](img/c4-fig-5026.jpg)*、* ![c4-fig-5027.jpg](img/c4-fig-5027.jpg)*、* ![c4-fig-5028.jpg](img/c4-fig-5028.jpg) 等。结果是一个具有两个隐藏层的网络（图 4.4）。
@@ -956,35 +945,39 @@ d) 当这些网络组合时，第一个网络的六个非平坦区域中的每�
 
 在上一节中，我们展示了组合两个浅层网络产生了具有两个隐藏层的深度网络的一个特例。现在我们考虑具有两个隐藏层、每层包含三个隐藏单元的深度网络的一般情况（图 4.4）。第一层定义为：
 
-![c4-fig-5007.jpg](img/c4-fig-5007.jpg)  
+![c4-fig-5007.jpg](img/c4-fig-5007.jpg)
+
 (4.7)
 
 第二层定义为：
 
-![c4-fig-5008.jpg](img/c4-fig-5008.jpg)  
+![c4-fig-5008.jpg](img/c4-fig-5008.jpg)
+
 (4.8)
 
 输出定义为：
 
-![c4-fig-5009.jpg](img/c4-fig-5009.jpg)  
+![c4-fig-5009.jpg](img/c4-fig-5009.jpg)
+
 (4.9)
 
 考虑这些方程，可以得出另一种关于网络如何构建日益复杂函数的理解方式（图 4.5）：
 
 ---
 
-**笔记本 4.2**  
+**笔记本 4.2**
+
 裁剪函数
 
 ---
 
 1. 第一层中的三个隐藏单元 `h[1]`、`h[2]` 和 `h[3]` 通过形成输入的线性函数并将其通过 ReLU 激活函数来计算，这与常规方式相同（方程 4.7）。
+
 2. 第二层的预激活值通过获取这些隐藏单元的三个新线性函数来计算（方程 4.8 中激活函数的参数）。此时，我们实际上拥有了一个具有三个输出的浅层网络；我们计算了三个分段线性函数，它们的线性区域之间的“关节”位于相同的位置（见图 3.6）。
+
 3. 在第二隐藏层，另一个 ReLU 函数 `a[•]` 被应用到每个函数上（方程 4.8），这会对它们进行裁剪，并为每个函数添加新的“关节”。
+
 4. 最终输出是这些隐藏单元的线性组合（方程 4.9）。
-
-
-
 
 ![图 4.5 图 4.4 中深度网络的计算过程。a–c) 第二隐藏层的输入（即预激活值）是三个分段线性函数，它们的线性区域之间的“接头”位于相同位置（见图 3.6）。d–f) 每个分段线性函数都被 ReLU 激活函数截断至零。g–i) 这些被截断的函数随后分别用参数 `c4-fig-5030.jpg`、`c4-fig-5031.jpg` 和 `c4-fig-5032.jpg` 进行加权。j) 最后，将这些被截断并加权的函数求和，并加上一个控制整体高度的偏移量 `c4-fig-5033.jpg`。](img/c4-fig-0005.jpg)
 
@@ -994,7 +987,7 @@ d) 当这些网络组合时，第一个网络的六个非平坦区域中的每�
 
 ![c4-fig-5010.jpg](img/c4-fig-5010.jpg)
 
- (4.10)
+(4.10)
 
 尽管这确实相当难以理解。
 
@@ -1016,11 +1009,11 @@ d) 当这些网络组合时，第一个网络的六个非平坦区域中的每�
 
 ![c4-fig-5011.jpg](img/c4-fig-5011.jpg)
 
- (4.11)
+(4.11)
 
 ![c4-fig-5012.jpg](img/c4-fig-5012.jpg)
 
- (4.12)
+(4.12)
 
 ***
 
@@ -1034,13 +1027,13 @@ d) 当这些网络组合时，第一个网络的六个非平坦区域中的每�
 
 ![c4-fig-5013.jpg](img/c4-fig-5013.jpg)
 
- (4.13)
+(4.13)
 
 甚至可以用矩阵表示法更紧凑地表示为：
 
 ![c4-fig-5014.jpg](img/c4-fig-5014.jpg)
 
- (4.14)
+(4.14)
 
 在上述每种情况下，函数 `a[•]` 都将激活函数单独应用于其向量输入的每个元素。
 
@@ -1050,7 +1043,7 @@ d) 当这些网络组合时，第一个网络的六个非平坦区域中的每�
 
 ![c4-fig-5015.jpg](img/c4-fig-5015.jpg)
 
- (4.15)
+(4.15)
 
 该模型的参数 `ϕ` 包含所有这些权重矩阵和偏置向量 ![c4-fig-5016.jpg](img/c4-fig-5016.jpg)。
 
@@ -1072,7 +1065,7 @@ d) 当这些网络组合时，第一个网络的六个非平坦区域中的每�
 
 ![c4-fig-5017.jpg](img/c4-fig-5017.jpg)
 
- (4.16)
+(4.16)
 
 ***
 
@@ -1100,9 +1093,6 @@ d) 当这些网络组合时，第一个网络的六个非平坦区域中的每�
 
 ***
 
-
-
-
 ##### 问题 4.8–4.11
 
 ***
@@ -1129,9 +1119,11 @@ d) 当这些网络组合时，第一个网络的六个非平坦区域中的每�
 
 深度网络相对于浅层网络的另一个潜在优势是其拟合的容易程度；通常训练中等深度的网络比训练浅层网络更容易（见图 20.2）。可能是过参数化的深度模型拥有一大族大致等价且易于寻找的解。然而，随着隐藏层的增加，训练又变得更加困难，尽管已经开发出许多方法来缓解这一问题（见第 11 章）。
 
+
+
 深度神经网络似乎也比浅层网络更好地泛化到新数据。在实践中，大多数任务的最佳结果都是使用具有数十或数百层的网络实现的。这两种现象都尚未被很好地理解，我们将在第 20 章回到它们。
 
-### 4.6 总结
+## 4.6 总结
 
 在本章中，我们首先考虑了组合两个浅层网络会发生什么。我们论证了第一个网络“折叠”输入空间，然后第二个网络应用分段线性函数。第二个网络的效果在输入空间折叠到自身的地方被复制。
 
@@ -1141,102 +1133,99 @@ d) 当这些网络组合时，第一个网络的六个非平坦区域中的每�
 
 现在我们理解了深度和浅层网络模型，我们将注意力转向训练它们。在下一章中，我们将讨论损失函数。对于任何给定的参数值 `ϕ`，损失函数返回一个单一数字，指示模型输出与训练数据集的真实预测之间的不匹配程度。在第 6 章和第 7 章中，我们将处理训练过程本身，在其中我们寻找使该损失最小化的参数值。
 
-### 注释
+## 注释
 
-**深度学习：** 人们早已理解，通过组合浅层神经网络或开发具有多个隐藏层的网络，可以构建更复杂的函数。事实上，“深度学习”一词最早由 Dechter (1986) 使用。然而，由于实际顾虑，人们的兴趣有限；无法很好地训练此类网络。现代深度学习时代由 Krizhevsky 等人 (2012) 报告的图像分类惊人改进所开启。这一突飞猛进的进步可以说归因于四个因素的汇聚：更大的训练数据集、用于训练的改进算力、`ReLU` 激活函数的使用以及随机梯度下降的使用（见第 6 章）。LeCun 等人 (2015) 概述了现代深度学习时代的早期进展。
+### 深度学习
 
+人们早已理解，通过组合浅层神经网络或开发具有多个隐藏层的网络，可以构建更复杂的函数。事实上，“深度学习”一词最早由 Dechter (1986) 使用。然而，由于实际顾虑，人们的兴趣有限；无法很好地训练此类网络。现代深度学习时代由 Krizhevsky 等人 (2012) 报告的图像分类惊人改进所开启。这一突飞猛进的进步可以说归因于四个因素的汇聚：更大的训练数据集、用于训练的改进算力、`ReLU` 激活函数的使用以及随机梯度下降的使用（见第 6 章）。LeCun 等人 (2015) 概述了现代深度学习时代的早期进展。
 
+### 线性区域的数量
 
+对于使用总共 `D` 个带有 `ReLU` 激活函数的隐藏单元的深度网络，区域数量的上界为 `2^D`（Montufar 等人，2014）。同一作者表明，具有 `D[i]` 维输入和 `K` 层的深度 `ReLU` 网络，每层包含 `D ≥ D[i]` 个隐藏单元，拥有 ![c4-fig-5018.jpg](img/c4-fig-5018.jpg) 个线性区域。Montúfar (2017)、Arora 等人 (2016) 和 Serra 等人 (2018) 都提供了更紧的上界，这些上界考虑了每层可能拥有不同数量隐藏单元的情况。Serra 等人 (2018) 提供了一种计算神经网络中线性区域数量的算法，尽管它仅适用于非常小的网络。
 
-#### 线性区域的数量
-
-对于使用总共 *D* 个带有 ReLU 激活函数的隐藏单元的深度网络，区域数量的上界为 2*^D*（Montufar 等人，2014）。同一作者表明，具有 *D[i]* 维输入和 *K* 层的深度 ReLU 网络，每层包含 *D* ≥ *D[i]* 个隐藏单元，拥有 ![c4-fig-5018.jpg](img/c4-fig-5018.jpg) 个线性区域。Montúfar (2017)、Arora 等人 (2016) 和 Serra 等人 (2018) 都提供了更紧的上界，这些上界考虑了每层可能拥有不同数量隐藏单元的情况。Serra 等人 (2018) 提供了一种计算神经网络中线性区域数量的算法，尽管它仅适用于非常小的网络。
-
-如果每个 *K* 层中的隐藏单元数量 *D* 相同，且 *D* 是输入维度 *D[i]* 的整数倍，则最大线性区域数量 *N[r]* 可以精确计算，公式为：
+如果每个 `K` 层中的隐藏单元数量 `D` 相同，且 `D` 是输入维度 `D[i]` 的整数倍，则最大线性区域数量 `N[r]` 可以精确计算，公式为：
 
 ![c4-fig-5019.jpg](img/c4-fig-5019.jpg)
 
  (4.17)
 
-该表达式中的第一项对应网络的前 *K* − 1 层，可以看作是反复折叠输入空间。然而，我们现在需要为每个输入维度投入 *D/D[i]* 个隐藏单元来创建这些折叠。该方程中的最后一项（二项式系数之和）是浅层网络能创建的区域数量，归因于最后一层。更多信息请参阅 Montufar 等人 (2014)、Pascanu 等人 (2013) 和 Montúfar (2017)。
+该表达式中的第一项对应网络的前 `K − 1` 层，可以看作是反复折叠输入空间。然而，我们现在需要为每个输入维度投入 `D/D[i]` 个隐藏单元来创建这些折叠。该方程中的最后一项（二项式系数之和）是浅层网络能创建的区域数量，归因于最后一层。更多信息请参阅 Montufar 等人 (2014)、Pascanu 等人 (2013) 和 Montúfar (2017)。
 
----
+### 二项式系数
 
-##### 附录 B.2
+### 通用近似定理
 
-###### 二项式系数
+我们在第 4.5.1 节中论证过，如果深度网络的层拥有足够多的隐藏单元，则通用近似定理的宽度版本适用：存在一个网络可以以任意精度近似 ![c4-fig-5020.jpg](img/c4-fig-5020.jpg) 的紧子集上任意给定的连续函数。Lu 等人 (2017) 证明了存在一个具有 `ReLU` 激活函数且每层至少拥有 `D[i] + 4` 个隐藏单元的网络，给定足够多的层，可以以任意精度近似任意指定的 `D[i]` 维勒贝格可积函数。这被称为通用近似定理的*深度版本*。
 
----
-
-#### 通用近似定理
-
-我们在第 4.5.1 节中论证过，如果深度网络的层拥有足够多的隐藏单元，则通用近似定理的宽度版本适用：存在一个网络可以以任意精度近似 ![c4-fig-5020.jpg](img/c4-fig-5020.jpg) 的紧子集上任意给定的连续函数。Lu 等人 (2017) 证明了存在一个具有 ReLU 激活函数且每层至少拥有 *D[i]* + 4 个隐藏单元的网络，给定足够多的层，可以以任意精度近似任意指定的 *D[i]* 维勒贝格可积函数。这被称为通用近似定理的*深度版本*。
-
-#### 深度效率
+### 深度效率
 
 有若干结果表明，存在一些函数可以由深度网络实现，但无法由任何容量上界呈指数增长的浅层网络实现。换句话说，浅层网络需要指数级更多的单元才能准确描述这些函数。这被称为神经网络的*深度效率*。
 
-Telgarsky (2016) 表明，对于任意整数 *k*，可以构建具有一个输入、一个输出和 𝒪\[*k*³\] 层恒定宽度的网络，这些网络无法用 𝒪\[*k*\] 层且宽度小于 2*^k* 的网络来实现。也许令人惊讶的是，Eldan & Shamir (2016) 表明，当存在多变量输入时，存在一个三层网络，如果容量在输入维度上是亚指数的，则无法由任何两层网络实现。Cohen 等人 (2016)、Safran & Shamir (2017) 和 Poggio 等人 (2017) 也展示了深度网络可以高效近似但浅层网络无法高效近似的函数。Liang & Srikant (2016) 表明，对于一大类函数（包括单变量函数），在给定近似误差上界的情况下，浅层网络所需的隐藏单元比深度网络多指数级。
+Telgarsky (2016) 表明，对于任意整数 `k`，可以构建具有一个输入、一个输出和 `𝒪[k³]` 层恒定宽度的网络，这些网络无法用 `𝒪[k]` 层且宽度小于 `2^k` 的网络来实现。也许令人惊讶的是，Eldan & Shamir (2016) 表明，当存在多变量输入时，存在一个三层网络，如果容量在输入维度上是亚指数的，则无法由任何两层网络实现。Cohen 等人 (2016)、Safran & Shamir (2017) 和 Poggio 等人 (2017) 也展示了深度网络可以高效近似但浅层网络无法高效近似的函数。Liang & Srikant (2016) 表明，对于一大类函数（包括单变量函数），在给定近似误差上界的情况下，浅层网络所需的隐藏单元比深度网络多指数级。
 
-#### 宽度效率
+### 宽度效率
 
-Lu 等人 (2017) 探讨了是否存在无法由深度没有显著增加的窄网络实现的宽浅层网络（即具有大量隐藏单元的浅层网络）。他们表明，存在一些宽浅层网络类，只能用具有多项式深度的窄网络来表达。这被称为神经网络的*宽度效率*。宽度上的这个多项式下界比深度上的指数下界限制性更小，这表明深度更重要。Vardi 等人 (2022) 随后表明，对于具有 ReLU 激活函数的网络，减小宽度的代价仅是网络深度的线性增加。
+Lu 等人 (2017) 探讨了是否存在无法由深度没有显著增加的窄网络实现的宽浅层网络（即具有大量隐藏单元的浅层网络）。他们表明，存在一些宽浅层网络类，只能用具有多项式深度的窄网络来表达。这被称为神经网络的*宽度效率*。宽度上的这个多项式下界比深度上的指数下界限制性更小，这表明深度更重要。Vardi 等人 (2022) 随后表明，对于具有 `ReLU` 激活函数的网络，减小宽度的代价仅是网络深度的线性增加。
 
-### 习题
+## 习题
 
-#### 习题 4.1*
+### 习题 4.1*
 
-考虑组合 图 4.8 中的两个神经网络。为 *x* ∈ \[−1*,* 1\] 绘制输入 *x* 和输出 *y′* 之间关系的图。
+考虑组合图 4.8 中的两个神经网络。为 `x ∈ [−1, 1]` 绘制输入 `x` 和输出 `y′` 之间关系的图。
 
-![图 4.8 习题 4.1 的两个网络组合。a) 第一个网络的输出 y 成为第二个网络的输入。b) 第一个网络计算此函数，输出值 y ∈ \[−1, 1\]。c) 第二个网络在输入范围 y ∈ \[−1, 1\] 上计算此函数。](images/c4-fig-0008.jpg)
+![图 4.8 习题 4.1 的两个网络组合。a) 第一个网络的输出 y 成为第二个网络的输入。b) 第一个网络计算此函数，输出值 y ∈ [−1, 1]。c) 第二个网络在输入范围 y ∈ [−1, 1] 上计算此函数。](images/c4-fig-0008.jpg)
 
-图 4.8 习题 4.1 的两个网络组合。a) 第一个网络的输出 *y* 成为第二个网络的输入。b) 第一个网络计算此函数，输出值 *y* ∈ \[−1*,* 1\]。c) 第二个网络在输入范围 *y* ∈ \[−1*,* 1\] 上计算此函数。
+图 4.8 习题 4.1 的两个网络组合。a) 第一个网络的输出 `y` 成为第二个网络的输入。b) 第一个网络计算此函数，输出值 `y ∈ [−1, 1]`。c) 第二个网络在输入范围 `y ∈ [−1, 1]` 上计算此函数。
 
-#### 习题 4.2
+### 习题 4.2
 
-找出 图 4.6 中的四个超参数。
+找出图 4.6 中的四个超参数。
 
-#### 习题 4.3
+### 习题 4.3
 
-利用 ReLU 函数的非负齐次性质（见习题 3.5），证明：
+利用 `ReLU` 函数的非负齐次性质（见习题 3.5），证明：
 
 ![c4-fig-5022.jpg](img/c4-fig-5022.jpg)
 
  (4.18)
 
-其中 *λ*[0] 和 *λ*[1] 为非负标量。由此可知，权重矩阵可以按任意幅度重新缩放，只要偏置也相应调整，缩放因子可以在网络末尾重新应用。
+其中 `λ[0]` 和 `λ[1]` 为非负标量。由此可知，权重矩阵可以按任意幅度重新缩放，只要偏置也相应调整，缩放因子可以在网络末尾重新应用。
 
-#### 习题 4.4
+### 习题 4.4
 
-写出一个深度神经网络的方程，该网络接收 *D[i]* = 5 个输入，*D[o]* = 4 个输出，并有三个隐藏层，大小分别为 *D*[1] = 20、*D*[2] = 10 和 *D*[3] = 7，采用方程 4.15 和 4.16 两种形式。每个权重矩阵 **Ω***[•]* 和偏置向量 ***β****[•]* 的尺寸是多少？
+写出一个深度神经网络的方程，该网络接收 `D[i] = 5` 个输入，`D[o] = 4` 个输出，并有三个隐藏层，大小分别为 `D[1] = 20`、`D[2] = 10` 和 `D[3] = 7`，采用方程 4.15 和 4.16 两种形式。每个权重矩阵 `Ω[•]` 和偏置向量 `β[•]` 的尺寸是多少？
 
-#### 习题 4.5
+### 习题 4.5
 
-考虑一个深度神经网络，具有 *D[i]* = 5 个输入，*D[o]* = 1 个输出，以及 *K* = 20 个隐藏层，每层包含 *D* = 30 个隐藏单元。该网络的深度是多少？宽度是多少？
+考虑一个深度神经网络，具有 `D[i] = 5` 个输入，`D[o] = 1` 个输出，以及 `K = 20` 个隐藏层，每层包含 `D = 30` 个隐藏单元。该网络的深度是多少？宽度是多少？
 
-#### 习题 4.6
+### 习题 4.6
 
-考虑一个具有 *D[i]* = 1 个输入、*D[o]* = 1 个输出和 *K* = 10 层的网络，每层有 *D* = 10 个隐藏单元。增加一层深度还是增加一个宽度单元会导致权重数量增加更多？请提供你的推理。
+考虑一个具有 `D[i] = 1` 个输入、`D[o] = 1` 个输出和 `K = 10` 层的网络，每层有 `D = 10` 个隐藏单元。增加一层深度还是增加一个宽度单元会导致权重数量增加更多？请提供你的推理。
 
-#### 习题 4.7
+### 习题 4.7
 
-为方程 3.1 中浅层神经网络的参数 ***ϕ*** ={*ϕ*[0]*, ϕ*[1]*, ϕ*[2]*, ϕ*[3]*, θ*[10]*, θ*[11]*, θ*[20]*, θ*[21]*, θ*[30]*, θ*[31]} 选择数值，使其在有限范围 *x* ∈ \[*a, b*\] 上定义一个恒等函数。
+为方程 3.1 中浅层神经网络的参数 `ϕ = {ϕ[0], ϕ[1], ϕ[2], ϕ[3], θ[10], θ[11], θ[20], θ[21], θ[30], θ[31]}` 选择数值，使其在有限范围 `x ∈ [a, b]` 上定义一个恒等函数。
 
-#### 习题 4.8*
+### 习题 4.8*
 
-图 4.9 展示了浅层网络（如图 3.3 所示）三个隐藏单元的激活值。隐藏单元的斜率分别为 1.0、1.0 和 -1.0，“关节”位置分别位于 1/6、2/6 和 4/6。找出 *ϕ*[0]、 *ϕ*[1]、 *ϕ*[2] 和 *ϕ*[3] 的值，将隐藏单元激活值组合为 *ϕ*[0] + *ϕ*[1]*h*[1] + *ϕ*[2]*h*[2] + *ϕ*[3]*h*[3]，以创建一个具有四个线性区域、在输出值 0 和 1 之间振荡的函数。最左侧区域的斜率应为正，下一个为负，依此类推。如果将该网络与自身组合，将创建多少个线性区域？如果组合 *K* 次，将创建多少个？
+图 4.9 展示了浅层网络（如图 3.3 所示）三个隐藏单元的激活值。隐藏单元的斜率分别为 1.0、1.0 和 -1.0，“关节”位置分别位于 1/6、2/6 和 4/6。找出 `ϕ[0]`、`ϕ[1]`、`ϕ[2]` 和 `ϕ[3]` 的值，将隐藏单元激活值组合为 `ϕ[0] + ϕ[1]h[1] + ϕ[2]h[2] + ϕ[3]h[3]`，以创建一个具有四个线性区域、在输出值 0 和 1 之间振荡的函数。最左侧区域的斜率应为正，下一个为负，依此类推。如果将该网络与自身组合，将创建多少个线性区域？如果组合 `K` 次，将创建多少个？
 
 ![图 4.9 习题 4.8 的隐藏单元激活值。a) 第一个隐藏单元在 x = 1/6 处有一个关节，在激活区域斜率为 1。b) 第二个隐藏单元在 x = 2/6 处有一个关节，在激活区域斜率为 1。c) 第三个隐藏单元在 x = 4/6 处有一个关节，在激活区域斜率为 -1。](img/c4-fig-0009.jpg)
 
-
-
 图 4.9 问题 4.8 的隐藏单元激活值。a) 第一个隐藏单元在位置 `x = 1/6` 处有一个折点，且在激活区域斜率为 1。b) 第二个隐藏单元在位置 `x = 2/6` 处有一个折点，且在激活区域斜率为 1。c) 第三个隐藏单元在位置 `x = 4/6` 处有一个折点，且在激活区域斜率为 -1。
 
-**问题 4.9\*** 承接问题 4.8，是否可能利用具有两个隐藏单元的浅层网络，创建一个具有三个线性区域、在输出值 0 和 1 之间来回振荡的函数？是否可能利用具有四个隐藏单元的浅层网络，创建一个具有五个线性区域、以相同方式振荡的函数？
+### 习题 4.9*
 
-**问题 4.10** 考虑一个深度神经网络，具有单个输入、单个输出，以及 `K` 个隐藏层，每层包含 `D` 个隐藏单元。证明该网络总共将拥有 `3*D + 1 + (K − 1)*D*(D + 1)` 个参数。
+承接习题 4.8，是否可能利用具有两个隐藏单元的浅层网络，创建一个具有三个线性区域、在输出值 0 和 1 之间来回振荡的函数？是否可能利用具有四个隐藏单元的浅层网络，创建一个具有五个线性区域、以相同方式振荡的函数？
 
-**问题 4.11\*** 考虑两个将标量输入 `x` 映射到标量输出 `y` 的神经网络。第一个网络是浅层的，具有 `D = 95` 个隐藏单元。第二个是深层的，具有 `K = 10` 层，每层包含 `D = 5` 个隐藏单元。每个网络各有多少参数？每个网络能创建多少个线性区域？哪个运行得更快？
+### 习题 4.10
+
+考虑一个深度神经网络，具有单个输入、单个输出，以及 `K` 个隐藏层，每层包含 `D` 个隐藏单元。证明该网络总共将拥有 `3*D + 1 + (K − 1)*D*(D + 1)` 个参数。
+
+### 习题 4.11*
+
+考虑两个将标量输入 `x` 映射到标量输出 `y` 的神经网络。第一个网络是浅层的，具有 `D = 95` 个隐藏单元。第二个是深层的，具有 `K = 10` 层，每层包含 `D = 5` 个隐藏单元。每个网络各有多少参数？每个网络能创建多少个线性区域？哪个运行得更快？
 
 # 第 5 章 损失函数
 
@@ -1244,39 +1233,37 @@ Lu 等人 (2017) 探讨了是否存在无法由深度没有显著增加的窄网
 
 该定义需要一个由输入/输出对组成的训练数据集 `{x[i], y[i]}`。*损失函数* 或 *代价函数* `L[ϕ]` 返回一个单一数值，用以描述模型预测 `f[x[i], ϕ]` 与其对应的真实标签输出 `y[i]` 之间的不匹配程度。在训练期间，我们寻找使损失最小化的参数值 `ϕ`，从而使训练输入能尽可能紧密地映射到输出。我们在第 2 章中见过一个损失函数的例子；最小二乘损失函数适用于目标为实数 `y ∈ ℝ` 的单变量回归问题。它计算模型预测 `f[x[i], ϕ]` 与真实值 `y[i]` 之间偏差的平方和。
 
-* * *
+---
 
-附录 A
+### 附录 A
 
-数集
+#### 数集
 
-* * *
+---
 
 本章提供了一个框架，既证明了最小二乘准则用于实值输出的合理性，又允许我们为其他预测类型构建损失函数。我们将探讨*二分类*，其中预测 `y ∈ {0, 1}` 是两个类别之一；*多分类*，其中预测 `y ∈ {1, 2, …, K}` 是 `K` 个类别之一；以及更复杂的情况。在接下来的两章中，我们将讨论模型训练，其目标是找到使这些损失函数最小化的参数值。
 
-## 5.1 最大似然估计
+## 5.1 最大似然估计
 
 在本节中，我们将开发一种构建损失函数的方法。考虑一个具有参数 `ϕ` 的模型 `f[x, ϕ]`，它根据输入 `x` 计算输出。直到现在，我们一直暗示模型直接计算预测值 `y`。我们现在转换视角，将模型视为在给定输入 `x` 的条件下，计算可能输出 `y` 上的条件概率分布 `Pr(y|x)`。损失函数鼓励每个训练输出 `y[i]` 在由对应输入 `x[i]` 计算出的分布 `Pr(y[i]|x[i])` 下具有较高的概率（图 5.1）。
 
-附录 C.1.3
+### 附录 C.1.3
 
-条件概率
+#### 条件概率
 
-* * *
+---
 
-![图 5.1 预测输出上的分布。a) 回归任务，目标是根据训练数据 `{x[i], y[i]}`（橙色点）从输入 `x` 预测实值输出 `y`。对于每个输入值 `x`，机器学习模型预测输出 `y ∈ ℝ` 上的一个分布 `Pr(y|x)`（青色曲线显示了 `x = 2.0` 和 `x = 7.0` 时的分布）。损失函数旨在最大化在对应输入 `x[i]` 预测的分布下，观测到的训练输出 `y[i]` 的概率。b) 在分类任务中，为了预测离散类别 `y ∈{1, 2, 3, 4}`，我们使用离散概率分布，因此模型为每个 `x[i]` 值预测 `y[i]` 四个可能值上的不同直方图。c) 为了预测计数 `y ∈ {0, 1, 2,…}` 和 d) 方向 `y ∈ (−π, π]`，我们分别使用定义在正整数域和圆周域上的分布。](images/c5-fig-0001.jpg)
+![图 5.1 预测输出上的分布。a) 回归任务，目标是根据训练数据 {x[i], y[i]}（橙色点）从输入 x 预测实值输出 y。对于每个输入值 x，机器学习模型预测输出 y ∈ ℝ 上的一个分布 Pr(y|x)（青色曲线显示了 x = 2.0 和 x = 7.0 时的分布）。损失函数旨在最大化在对应输入 x[i] 预测的分布下，观测到的训练输出 y[i] 的概率。b) 在分类任务中，为了预测离散类别 y ∈{1, 2, 3, 4}，我们使用离散概率分布，因此模型为每个 x[i] 值预测 y[i] 四个可能值上的不同直方图。c) 为了预测计数 y ∈ {0, 1, 2,…} 和 d) 方向 y ∈ (−π, π]，我们分别使用定义在正整数域和圆周域上的分布。](images/c5-fig-0001.jpg)
 
-图 5.1 预测输出上的分布。a) 回归任务，目标是根据训练数据 `{x[i], y[i]}`（橙色点）从输入 `x` 预测实值输出 `y`。对于每个输入值 `x`，机器学习模型预测输出 `y ∈ ℝ` 上的一个分布 `Pr(y|x)`（青色曲线显示了 `x = 2.0` 和 `x = 7.0` 时的分布）。损失函数旨在最大化在对应输入 `x[i]` 预测的分布下，观测到的训练输出 `y[i]` 的概率。b) 在分类任务中，为了预测离散类别 `y ∈{1, 2, 3, 4}`，我们使用离散概率分布，因此模型为每个 `x[i]` 值预测 `y[i]` 四个可能值上的不同直方图。c) 为了预测计数 `y ∈ {0, 1, 2,…}` 和 d) 方向 `y ∈ (−π, π]`，我们分别使用定义在正整数域和圆周域上的分布。
+图 5.1 预测输出上的分布。a) 回归任务，目标是根据训练数据 `{x[i], y[i]}`（橙色点）从输入 `x` 预测实值输出 `y`。对于每个输入值 `x`，机器学习模型预测输出 `y ∈ ℝ` 上的一个分布 `Pr(y|x)`（青色曲线显示了 `x = 2.0` 和 `x = 7.0` 时的分布）。损失函数旨在最大化在对应输入 `x[i]` 预测的分布下，观测到的训练输出 `y[i]` 的概率。b) 在分类任务中，为了预测离散类别 `y ∈ {1, 2, 3, 4}`，我们使用离散概率分布，因此模型为每个 `x[i]` 值预测 `y[i]` 四个可能值上的不同直方图。c) 为了预测计数 `y ∈ {0, 1, 2,…}` 和 d) 方向 `y ∈ (−π, π]`，我们分别使用定义在正整数域和圆周域上的分布。
 
-* * *
-
-### 5.1.1 计算输出上的分布
+### 5.1.1 计算输出上的分布
 
 这引出了一个问题：模型 `f[x, ϕ]` 究竟如何被改造以计算概率分布？解决方案很简单。首先，我们在输出域 `y` 上选择一个参数化分布 `Pr(y|θ)`。然后，我们利用网络来计算该分布的一个或多个参数 `θ`。
 
-例如，假设预测域是实数集，即 `y ∈ ℝ`。此时，我们可能会选择定义在 ℝ 上的单变量正态分布。该分布由均值 `μ` 和方差 `σ²` 定义，因此 `θ = {μ, σ²}`。机器学习模型可能预测均值 `μ`，而方差 `σ²` 可被视为一个未知常数。
+例如，假设预测域是实数集，即 `y ∈ ℝ`。此时，我们可能会选择定义在 `ℝ` 上的单变量正态分布。该分布由均值 `μ` 和方差 `σ²` 定义，因此 `θ = {μ, σ²}`。机器学习模型可能预测均值 `μ`，而方差 `σ²` 可被视为一个未知常数。
 
-### 5.1.2 最大似然准则
+### 5.1.2 最大似然准则
 
 模型现在为每个训练输入 `x[i]` 计算不同的分布参数 `θ[i] = f[x[i], ϕ]`。每个观测到的训练输出 `y[i]` 应在其对应的分布 `Pr(y[i]|θ[i])` 下具有较高的概率。因此，我们选择模型参数 `ϕ`，使其最大化所有 `I` 个训练示例的联合概率：
 
@@ -1292,24 +1279,19 @@ Lu 等人 (2017) 探讨了是否存在无法由深度没有显著增加的窄网
 
  (5.2)
 
-* * *
+### 附录 C.1.5
 
-附录 C.1.5
+#### 独立性
 
-独立性
-
-* * *
+---
 
 换句话说，我们假设数据是*独立同分布*的（*i.i.d.*）。
 
-### 5.1.3 最大化对数似然
+### 5.1.3 最大化对数似然
 
+#### 最大似然准则与损失函数构建
 
-
-
-##### 最大似然准则与损失函数构建
-
-##### 5.1.3 对数似然
+#### 5.1.3 对数似然
 
 最大似然准则（公式 5.1）不太实用。每一项 `Pr(y[i] | f[x[i], ϕ])` 都可能很小，因此许多此类项的乘积可能极小。用有限精度算术表示该量可能比较困难。幸运的是，我们可以等价地最大化似然的对数：
 
@@ -1321,9 +1303,9 @@ Lu 等人 (2017) 探讨了是否存在无法由深度没有显著增加的窄网
 
 ![Figure 5.2 The log transform. a) The log function is monotonically increasing. If z > z′, then log[z] > log[z′]. It follows that the maximum of any function g[z] will be at the same position as the maximum of log[g[z]]. b) A function g[z]. c) The logarithm of this function log[g[z]]. All positions on g[z] with a positive slope retain a positive slope after the log transform, and those with a negative slope retain a negative slope. The position of the maximum remains the same.](images/c5-fig-0002.jpg)
 
-图 5.2 对数变换。a) 对数函数单调递增。如果 `z > z'`，则 `log[z] > log[z']`。由此可见，任意函数 `g[z]` 的最大值位置将与 `log[g[z]]` 的最大值位置相同。b) 函数 `g[z]`。c) 该函数的对数 `log[g[z]]`。`g[z]` 上所有具有正斜率的位置在对数变换后保持正斜率，具有负斜率的位置保持负斜率。最大值的位置保持不变。
 
-#### 5.1.4 最小化负对数似然
+
+## 5.1.4 最小化负对数似然
 
 最后，按照惯例，模型拟合问题通常表述为最小化损失。要将最大对数似然准则转换为最小化问题，我们乘以负一，得到**负对数似然准则**：
 
@@ -1333,7 +1315,7 @@ Lu 等人 (2017) 探讨了是否存在无法由深度没有显著增加的窄网
 
 这构成了最终的损失函数 `L[ϕ]`。
 
-#### 5.1.5 推理
+## 5.1.5 推理
 
 网络不再直接预测输出 `y`，而是确定 `y` 上的概率分布。执行推理时，我们通常想要点估计而非分布，因此返回分布的最大值：
 
@@ -1343,7 +1325,7 @@ Lu 等人 (2017) 探讨了是否存在无法由深度没有显著增加的窄网
 
 通常可以用模型预测的分布参数 `θ` 来表示该表达式。例如，在单变量正态分布中，最大值出现在均值 `μ` 处。
 
-### 5.2 基于最大似然构建损失函数的配方
+## 5.2 基于最大似然构建损失函数的配方
 
 使用最大似然方法为训练数据 `{x[i], y[i]}` 构建损失函数的配方如下：
 
@@ -1359,7 +1341,7 @@ Lu 等人 (2017) 探讨了是否存在无法由深度没有显著增加的窄网
 
 本章其余大部分内容将致力于使用此配方为常见预测类型构建损失函数。
 
-### 5.3 示例 1：单变量回归
+## 5.3 示例 1：单变量回归
 
 我们首先考虑单变量回归模型。目标是使用具有参数 `ϕ` 的模型 `f[x, ϕ]` 从输入 `x` 预测单个标量输出 `y ∈ ℝ`。遵循该配方，我们选择输出域 `y` 上的概率分布。我们选择单变量正态分布（图 5.3），其定义在 `y ∈ ℝ` 上。该分布有两个参数（均值 `μ` 和方差 `σ²`），概率密度函数为：
 
@@ -1385,14 +1367,11 @@ Lu 等人 (2017) 探讨了是否存在无法由深度没有显著增加的窄网
 
 ![Figure 5.4 Equivalence of least squares and maximum likelihood loss for the normal distribution. a) Consider the linear model from figure 2.2. The least squares criterion minimizes the sum of the squares of the deviations (dashed lines) between the model prediction f[xi, ϕ] (green line) and the true output values yi (orange points). Here the fit is good, so these deviations are small (e.g., for the two highlighted points). b) For these parameters, the fit is bad, and the squared deviations are large. c) The least squares criterion follows from the assumption that the model predicts the mean of a normal distribution over the outputs and that we maximize the probability. For the first case, the model fits well, so the probability Pr(yi|xi) of the data (horizontal orange dashed lines) is large (and the negative log probability is small). d) For the second case, the model fits badly, so the probability is small and the negative log probability is large.](images/c5-fig-0004.jpg)
 
-
-
-
-图 5.4 正态分布下最小二乘法与最大似然损失的等价性。a) 考虑图 2.2 中的线性模型。最小二乘准则最小化模型预测值 `f[x[i], ϕ]`（绿线）与真实输出值 `y[i]`（橙点）之间偏差（虚线）的平方和。此处拟合良好，因此这些偏差很小（例如两个高亮显示的点）。b) 对于这些参数，拟合效果差，平方偏差很大。c) 最小二乘准则源于这样一个假设：模型预测输出的正态分布的均值，且我们最大化概率。对于第一种情况，模型拟合良好，因此数据的概率 `Pr(y[i]∣x[i])`（橙色水平虚线）很大（负对数概率很小）。d) 对于第二种情况，模型拟合不佳，因此概率很小，负对数概率很大。
+图 5.4 正态分布下最小二乘法与最大似然损失的等价性。a) 考虑图 2.2 中的线性模型。最小二乘准则最小化模型预测值 `f[x[i], ϕ]`（绿线）与真实输出值 `y[i]`（橙点）之间偏差（虚线）的平方和。此处拟合良好，因此这些偏差很小（例如两个高亮显示的点）。b) 对于这些参数，拟合效果差，平方偏差很大。c) 最小二乘准则源于这样一个假设：模型预测输出的正态分布的均值，且我们最大化概率。对于第一种情况，模型拟合良好，因此数据的概率 `Pr(y[i]∣x[i])`（橙色水平虚线）很大（负对数概率很小）。d) 对于第二种情况，模型拟合不佳，因此概率很小，负对数概率很大。
 
 当我们训练模型时，我们寻找能最小化该损失的参数 `ϕ`。
 
-#### 5.3.1 最小二乘损失函数
+### 5.3.1 最小二乘损失函数
 
 现在让我们对损失函数进行一些代数操作。我们寻求：
 
@@ -1418,7 +1397,7 @@ Notebook 5.1
 
 ---
 
-#### 5.3.2 推理
+### 5.3.2 推理
 
 网络不再直接预测 `y`，而是预测 `y` 的正态分布的均值 `μ = f[x, ϕ]`。当我们进行推理时，通常想要一个单一的“最佳”点估计 `ŷ`，因此我们取预测分布的最大值：
 
@@ -1428,7 +1407,7 @@ Notebook 5.1
 
 对于一元正态分布，最大值的位置由均值参数 `μ` 决定（图 5.3）。这正是模型计算的内容，所以 `ŷ = f[x, ϕ]`。
 
-#### 5.3.3 估计方差
+### 5.3.3 估计方差
 
 为了构建最小二乘损失函数，我们假设网络预测正态分布的均值。方程 5.11 的最终表达式（或许令人惊讶地）不依赖于方差 `σ²`。然而，没有什么能阻止我们将 `σ²` 视为模型的一个参数，并同时关于模型参数 `ϕ` 和分布方差 `σ²` 最小化方程 5.9：
 
@@ -1438,7 +1417,7 @@ Notebook 5.1
 
 在推理中，模型从输入中预测均值 `μ = f[x, ϕ]`，我们在训练过程中学习了方差 `σ²`。前者是最佳预测。后者告诉我们预测的不确定性。
 
-#### 5.3.4 异方差回归
+### 5.3.4 异方差回归
 
 上述模型假设数据的方差处处恒定。然而，这可能不切实际。当模型的不确定性随输入数据变化时，我们称之为*异方差*（相对于*同方差*，后者指不确定性恒定）。
 
@@ -1458,11 +1437,11 @@ Notebook 5.1
 
 同方差模型和异方差模型在图 5.5 中进行了比较。
 
-![图 5.5 同方差与异方差回归。a) 用于同方差回归的浅层神经网络仅从输入 `x` 预测输出分布的均值 `μ`。b) 结果是，虽然均值（蓝线）是输入 `x` 的分段线性函数，但方差处处恒定（箭头和灰色区域显示 ±2 个标准差）。c) 用于异方差回归的浅层神经网络也预测方差 `σ²`（更准确地说，计算其平方根，然后再平方）。d) 标准差现在也成为输入 `x` 的分段线性函数。](img/c5-fig-0005.jpg)
+![图 5.5 同方差与异方差回归。a) 用于同方差回归的浅层神经网络仅从输入 `x` 预测输出分布的均值 `μ`。b) 结果是，虽然均值（蓝线）是输入 `x` 的分段线性函数，但方差处处恒定（箭头和灰色区域显示 ±2 个标准差）。c) 用于异方差回归的浅层神经网络也预测方差 `σ²`（更准确地说，计算其平方根，然后再平方）。d) 标准差现在也成为输入 `x` 的分段线性函数。](img/c5-fig-0005.jpg)
 
-图 5.5 同方差与异方差回归。a) 用于同方差回归的浅层神经网络仅从输入 `x` 预测输出分布的均值 `μ`。b) 结果是，虽然均值（蓝线）是输入 `x` 的分段线性函数，但方差处处恒定（箭头和灰色区域显示 ±2 个标准差）。c) 用于异方差回归的浅层神经网络也预测方差 `σ²`（更准确地说，计算其平方根，然后再平方）。d) 标准差现在也成为输入 `x` 的分段线性函数。
+图 5.5 同方差与异方差回归。a) 用于同方差回归的浅层神经网络仅从输入 `x` 预测输出分布的均值 `μ`。b) 结果是，虽然均值（蓝线）是输入 `x` 的分段线性函数，但方差处处恒定（箭头和灰色区域显示 ±2 个标准差）。c) 用于异方差回归的浅层神经网络也预测方差 `σ²`（更准确地说，计算其平方根，然后再平方）。d) 标准差现在也成为输入 `x` 的分段线性函数。
 
-### 5.4 示例 2：二分类
+## 5.4 示例 2：二分类
 
 在*二分类*中，目标是将数据 `x` 分配到两个离散类别 `y ∈ {0, 1}` 中的一个。在此背景下，我们称 `y` 为*标签*。二分类的例子包括：(i) 根据文本数据 `x` 预测餐厅评论是正面 (`y = 1`) 还是负面 (`y = 0`)；(ii) 根据 MRI 扫描 `x` 预测肿瘤是存在 (`y = 1`) 还是不存在 (`y = 0`)。
 
@@ -1472,9 +1451,9 @@ Notebook 5.1
 (5.16)
 ```
 
-![图 5.6 伯努利分布。伯努利分布定义在域 `z ∈ {0, 1}` 上，具有一个参数 `λ`，表示观测到 `z = 1` 的概率。由此可知，观测到 `z = 0` 的概率是 `1 − λ`。](img/c5-fig-0006.jpg)
+![图 5.6 伯努利分布。伯努利分布定义在域 `z ∈ {0, 1}` 上，具有一个参数 `λ`，表示观测到 `z = 1` 的概率。由此可知，观测到 `z = 0` 的概率是 `1 − λ`。](img/c5-fig-0006.jpg)
 
-图 5.6 伯努利分布。伯努利分布定义在域 `z ∈ {0, 1}` 上，具有一个参数 `λ`，表示观测到 `z = 1` 的概率。由此可知，观测到 `z = 0` 的概率是 `1 − λ`。
+图 5.6 伯努利分布。伯努利分布定义在域 `z ∈ {0, 1}` 上，具有一个参数 `λ`，表示观测到 `z = 1` 的概率。由此可知，观测到 `z = 0` 的概率是 `1 − λ`。
 
 它也可以等价地写为：
 
@@ -1482,16 +1461,13 @@ Notebook 5.1
 (5.17)
 ```
 
-
-
-
-#### 第二，我们设置机器学习模型
+### 第二，我们设置机器学习模型
 
 第二，我们设置机器学习模型 `f[x, ϕ]` 来预测单个分布参数 `λ`。然而，`λ` 只能取 `[0, 1]` 范围内的值，我们无法保证网络输出会落在该范围内。因此，我们将网络输出通过一个将实数 `ℝ` 映射到 `[0, 1]` 的函数。一个合适的函数是 *logistic sigmoid*（图 5.7）：
 
 ![c5-fig-5019.jpg](img/c5-fig-5019.jpg)
 
- (5.18)
+(5.18)
 
 ***
 
@@ -1507,13 +1483,13 @@ Notebook 5.1
 
 ![c5-fig-5020.jpg](img/c5-fig-5020.jpg)
 
- (5.19)
+(5.19)
 
 图 5.8 展示了浅层神经网络模型的此过程。损失函数是训练集的负对数似然：
 
 ![c5-fig-5021.jpg](img/c5-fig-5021.jpg)
 
- (5.20)
+(5.20)
 
 ![Figure 5.8 Binary classification model. a) The network output is a piecewise linear function that can take arbitrary real values. b) This is transformed by the logistic sigmoid function, which compresses these values to the range [0, 1]. c) The transformed output predicts the probability λ that y = 1 (solid line). The probability that y = 0 is hence 1 − λ (dashed line). For any fixed x (vertical slice), we retrieve the two values of a Bernoulli distribution similar to that in figure 5.6. The loss function favors model parameters that produce large values of λ at positions xi that are associated with positive examples yi = 1 and small values of λ at positions associated with negative examples yi = 0.](images/c5-fig-0008.jpg)
 
@@ -1523,7 +1499,7 @@ Notebook 5.1
 
 ***
 
-##### 笔记本 5.2：二元交叉熵损失
+##### Notebook 5.2：二元交叉熵损失
 
 ***
 
@@ -1535,11 +1511,13 @@ Notebook 5.1
 
 ***
 
-### 5.5 示例 3：多类分类
+## 5.5 示例 3：多类分类
 
 *Multiclass classification*（多类分类）的目标是将输入数据样本 `x` 分配给 `K > 2` 个类别中的一个，即 `y ∈ {1, 2, …, K}`。现实世界的例子包括：(i) 预测手写数字图像 `x` 中出现的是 `K = 10` 个数字 `y` 中的哪一个；(ii) 预测在不完整句子 `x` 之后跟随的是 `K` 个可能单词 `y` 中的哪一个。
 
 我们再次遵循第 5.2 节中的配方。我们首先选择预测空间 `y` 上的分布。在这种情况下，`y ∈ {1, 2, …, K}`，所以我们选择 *categorical distribution*（图 5.9），它定义在该域上。它有 `K` 个参数 `λ[1], λ[2], …, λ[K]`，它们决定每个类别的概率：
+
+
 
 ![c5-fig-5022.jpg](img/c5-fig-5022.jpg)
 
@@ -1551,7 +1529,7 @@ Notebook 5.1
 
 这些参数被约束在 0 和 1 之间取值，并且它们的总和必须为 1，以确保是一个有效的概率分布。
 
-然后我们使用一个具有 `K` 个输出的网络 `f[x, ϕ]` 从输入 `x` 计算这 `K` 个参数。不幸的是，网络输出不一定满足上述约束。因此，我们将网络的 `K` 个输出通过一个函数，以确保满足这些约束。一个合适的选择是 *softmax* 函数（图 5.10）。它接收一个长度为 `K` 的任意向量，并返回一个长度相同的向量，但其中的元素现在位于范围 `[0, 1]` 内且和为 1。softmax 函数的第 `k` 个输出为：
+然后我们使用一个具有 `K` 个输出的网络 `f[x, ϕ]` 从输入 `x` 计算这 `K` 个参数。不幸的是，网络输出不一定满足上述约束。因此，我们将网络的 `K` 个输出通过一个函数，以确保满足这些约束。一个合适的选择是 `softmax` 函数（图 5.10）。它接收一个长度为 `K` 的任意向量，并返回一个长度相同的向量，但其中的元素现在位于范围 `[0, 1]` 内且和为 1。softmax 函数的第 `k` 个输出为：
 
 ![c5-fig-5023.jpg](img/c5-fig-5023.jpg)
 
@@ -1559,7 +1537,7 @@ Notebook 5.1
 
 ![Figure 5.10 Multiclass classification for K = 3 classes. a) The network has three piecewise linear outputs, which can take arbitrary values. b) After the softmax function, these outputs are constrained to be non-negative and sum to one. Hence, for a given input x, we compute valid parameters for the categorical distribution: any vertical slice of this plot produces three values sum to one and would form the heights of the bars in a categorical distribution similar to figure 5.9.](img/c5-fig-0010.jpg)
 
-图 5.10 `K = 3` 个类别的多类分类。a) 网络有三个分段线性输出，可以取任意值。b) 经过 softmax 函数后，这些输出被约束为非负且和为 1。因此，对于给定的输入 `x`，我们计算 categorical 分布的有效参数：该图的任意垂直切片产生的三个值和为 1，将形成类似于图 5.9 中 categorical 分布柱状图的高度。
+图 5.10 `K = 3` 个类别的多类分类。a) 网络有三个分段线性输出，可以取任意值。b) 经过 `softmax` 函数后，这些输出被约束为非负且和为 1。因此，对于给定的输入 `x`，我们计算 categorical 分布的有效参数：该图的任意垂直切片产生的三个值和为 1，将形成类似于图 5.9 中 categorical 分布柱状图的高度。
 
 其中指数函数确保非负性，分母中的求和确保这 `K` 个数字之和为 1。
 
@@ -1581,10 +1559,7 @@ Notebook 5.1
 
  (5.24)
 
-其中 `f[k][x, ϕ]` 表示神经网络的第 `k` 个输出。由于将在第 5.7 节中解释的原因，这被称为 *multiclass cross-entropy loss*（多类交叉熵损失）。
-
-
-
+其中 `f[k][x, ϕ]` 表示神经网络的第 `k` 个输出。由于将在第 5.7 节中解释的原因，这被称为 `multiclass cross-entropy loss`（多类交叉熵损失）。
 
 转换后的模型输出表示可能类别 `y` ∈ {1, 2, …, `K`} 上的分类分布。对于点估计，我们取概率最大的类别 `ŷ` = argmax[k]`Pr`(`y` = `k`|**f**[**x**, ![c5-fig-5004.jpg])]。这对应于在图 5.10 中该 **x** 值下最高的那条曲线。
 
@@ -1712,14 +1687,11 @@ Appendix B.1.3
 
 最小二乘回归准则是该方法的自然结果；它源于假设 `y` 服从正态分布且我们预测均值。我们还看到了回归模型如何 (i) 扩展以估计预测的不确定性，以及 (ii) 扩展使该不确定性依赖于输入（异方差模型）。我们将相同的方法应用于二分类和多分类，并为每种情况推导了损失函数。我们讨论了如何处理更复杂的数据类型以及如何处理多输出。最后，我们论证了交叉熵是拟合模型的一种等价思维方式。
 
-
-
-
 ### 注记
 
 **基于正态分布的损失：** Nix & Weigend (1994) 和 Williams (1996) 研究了异方差非线性回归，其中输出的均值和方差均为输入的函数。在无监督学习背景下，Burda 等人 (2016) 使用基于对角协方差多元正态分布的损失函数，而 Dorta 等人 (2018) 使用基于全协方差正态分布的损失函数。
 
-**鲁棒回归：** Qi 等人 (2020) 研究了最小化平均绝对误差而非均方误差的回归模型的性质。该损失函源于假设输出服从拉普拉斯分布，并针对给定输入估计中位数输出而非均值。Barron (2019) 提出了一种参数化鲁棒程度的损失函数。在概率语境下解释时，它产生了一族单变量概率分布，其中正态分布和柯西分布作为特例包含在内。
+**鲁棒回归：** Qi 等人 (2020) 研究了最小化平均绝对误差而非均方误差的回归模型的性质。该损失函数源于假设输出服从拉普拉斯分布，并针对给定输入估计中位数输出而非均值。Barron (2019) 提出了一种参数化鲁棒程度的损失函数。在概率语境下解释时，它产生了一族单变量概率分布，其中正态分布和柯西分布作为特例包含在内。
 
 **分位数估计：** 有时，我们在回归任务中可能不想估计均值或中位数，而是想预测一个分位数。例如，这在风险模型中很有用，我们想知道真实值有 90% 的时间小于预测值。这被称为 `分位数回归` (Koenker & Hallock, 2001)。这可以通过拟合异方差回归模型，然后基于预测的正态分布估计分位数来完成。或者，可以使用 `分位数损失`（也称为 `针球损失`）直接估计分位数。在实践中，这最小化了数据相对于模型的绝对偏差，但对一个方向的偏差赋予比另一个方向更大的权重。近期的工作研究了同时预测多个分位数，以了解整体分布形状 (Rodrigues & Pereira, 2020)。
 
@@ -1769,11 +1741,9 @@ Appendix B.1.3
 
 其中 `λ ∈ [0, 1]` 控制两个分量的相对权重，它们的均值分别为 `μ[1], μ[2]`，方差分别为 `σ²[1], σ²[2]`。该模型可以表示双峰分布（图 5.14b）或单峰但形状更复杂的分布（图 5.14c）。
 
+
+
 使用第 5.2 节的方法，为模型 `f[x, ϕ]` 构建一个损失函数，该模型接收输入 `x`，具有参数 `ϕ`，并预测双高斯混合。损失函数应基于 `I` 个训练数据对 `{x[i], y[i]}`。你预见在执行推理时会遇到什么问题？
-
-
-
-
 
 #### 图 5.14：多模态数据与高斯混合密度
 
@@ -1865,17 +1835,12 @@ c) 当均值靠近时，混合模型可以建模单峰但非正态的密度。
 (6.4)
 ```
 
-
-
-
-
-#### 6.1.1 线性回归示例
-
 给定一个包含 `I` 个输入/输出对的数据集 {`x[i]`, `y[i]`}，我们选择最小二乘损失函数：
 
 ```
 L[ϕ] = (1/I) Σ[i=1 to I] ℓ[i]
 ```
+
  (6.5)
 
 其中项 `ℓ[i] = (ϕ[0] + ϕ[1]x[i] − y[i])²` 是第 `i^(th)` 个训练样本对损失的单独贡献。
@@ -1885,6 +1850,7 @@ L[ϕ] = (1/I) Σ[i=1 to I] ℓ[i]
 ```
 ∂L[ϕ]/∂ϕ = (1/I) Σ[i=1 to I] ∂ℓ[i]/∂ϕ
 ```
+
  (6.6)
 
 其中这些导数由下式给出：
@@ -1893,6 +1859,7 @@ L[ϕ] = (1/I) Σ[i=1 to I] ℓ[i]
 ∂ℓ[i]/∂ϕ[0] = 2(ϕ[0] + ϕ[1]x[i] − y[i])
 ∂ℓ[i]/∂ϕ[1] = 2(ϕ[0] + ϕ[1]x[i] − y[i])x[i]
 ```
+
  (6.7)
 
 ---
@@ -1928,6 +1895,7 @@ L[ϕ] = (1/I) Σ[i=1 to I] ℓ[i]
 ```
 y = exp(−ϕ1²) sin(x)
 ```
+
  (6.8)
 
 这个* Gabor 模型*将标量输入 `x` 映射到标量输出 `y`，由一个正弦分量（产生振荡函数）乘以一个负指数分量（导致振幅随远离中心而减小）组成。它有两个参数 `ϕ = [ϕ[0], ϕ[1]]^T`，其中 `ϕ[0] ∈ ℝ` 决定函数的平均位置，`ϕ[1] ∈ ℝ^+` 沿 `x` 轴拉伸或挤压函数（图 6.2）。
@@ -1947,6 +1915,7 @@ y = exp(−ϕ1²) sin(x)
 ```
 L[ϕ] = (1/I) Σ[i=1 to I] (exp(−ϕ1²) sin(x[i]) − y[i])²
 ```
+
  (6.9)
 
 ![图 6.3 用于拟合 Gabor 模型的训练数据。训练数据集包含 28 个输入/输出样本 {xi, yi}。这些数据通过在 [−15, 15] 中均匀采样 xi，将样本通过参数为 ϕ = [0.0, 16.6]T 的 Gabor 模型，并添加正态分布噪声来创建。](images/c6-fig-0003.jpg)
@@ -1968,9 +1937,6 @@ L[ϕ] = (1/I) Σ[i=1 to I] (exp(−ϕ1²) sin(x[i]) − y[i])²
 ![图 6.4 Gabor 模型的损失函数。a) 损失函数是非凸的，除了全局极小值（灰色圆圈）外，还有多个局部极小值（青色圆圈）。它还包含鞍点，梯度在局部为零，但函数在一个方向上增加，在另一个方向上减少。蓝色十字是一个鞍点的例子；当我们在水平方向向任一方向移动时函数减小，但在垂直方向移动时函数增加。b–f) 与不同极小值相关联的模型。在每种情况下，没有微小的变化能减小损失。面板 (c) 显示了全局极小值，其损失为 0.64。](img/c6-fig-0004.jpg)
 
 图 6.4 Gabor 模型的损失函数。a) 损失函数是非凸的，除了全局极小值（灰色圆圈）外，还有多个局部极小值（青色圆圈）。它还包含鞍点，梯度在局部为零，但函数在一个方向上增加，在另一个方向上减少。蓝色十字是一个鞍点的例子；当我们在水平方向向任一方向移动时函数减小，但在垂直方向移动时函数增加。b–f) 与不同极小值相关联的模型。在每种情况下，没有微小的变化能减小损失。面板 (c) 显示了全局极小值，其损失为 0.64。
-
-
-
 
 如果我们从随机位置开始并使用梯度下降向下搜索，无法保证会到达全局最小值并找到最佳参数（图 6.5a）。算法终止于某个局部最小值的可能性同样大，甚至更大。此外，无法知晓其他地方是否存在更好的解。
 
@@ -2020,14 +1986,11 @@ Gabor 模型有两个参数，因此我们可以通过 (i) 穷举搜索参数空
 
 SGD 的另一种解释是，它在每次迭代计算不同损失函数的梯度；该损失函数取决于模型和训练数据，因此对于每个随机选择的批次都会不同。从这个角度看，SGD 在一个不断变化的损失函数上执行确定性梯度下降（图 6.6）。然而，尽管存在这种变化，任意一点的期望损失和期望梯度与梯度下降的情况保持相同。
 
-![图 6.6 批量大小为三时 Gabor 模型 SGD 的替代视角。a) 整个训练数据集的损失函数。在每次迭代中，可能的参数变化存在一个概率分布（插图显示样本）。这些对应于三个批次元素的不同选择。b) 一种可能批次的损失函数。SGD 算法沿着该函数的下降方向移动，移动距离由学习率和局部梯度幅度决定。当前模型（插图中的虚线函数）发生变化以更好地拟合批次数据（实线函数）。c) 不同的批次产生不同的损失函数，导致不同的更新。d) 对于该批次，算法相对于批次损失函数向下移动，但相对于面板 (a) 中的全局损失函数向上移动。这就是 SGD 如何逃离局部最小值。](img/c6-fig-0006.jpg)
+![图 6.6 批量大小为三时 Gabor 模型 SGD 的替代视角。a) 整个训练数据集的损失函数。在每次迭代中，可能的参数变化存在一个概率分布（插图显示样本）。这些对应于三个批次元素的不同选择。b) 一种可能批次的损失函数。SGD 算法沿着该函数的下降方向移动，移动距离由学习率和局部梯度幅度决定。当前模型（插图中的虚线函数）发生变化以更好地拟合批次数据（实线函数）。c) 不同的批次产生不同的损失函数，导致不同的更新。d) 对于该批次，算法相对于批次损失函数向上移动，但相对于面板 (a) 中的全局损失函数向上移动。这就是 SGD 如何逃离局部最小值。](img/c6-fig-0006.jpg)
 
 图 6.6 批量大小为三时 Gabor 模型 SGD 的替代视角。a) 整个训练数据集的损失函数。在每次迭代中，可能的参数变化存在一个概率分布（插图显示样本）。这些对应于三个批次元素的不同选择。b) 一种可能批次的损失函数。SGD 算法沿着该函数的下降方向移动，移动距离由学习率和局部梯度幅度决定。当前模型（插图中的虚线函数）发生变化以更好地拟合批次数据（实线函数）。c) 不同的批次产生不同的损失函数，导致不同的更新。d) 对于该批次，算法相对于批次损失函数向*下*移动，但相对于面板 (a) 中的全局损失函数向*上*移动。这就是 SGD 如何逃离局部最小值。
 
 ### 6.2.2 随机梯度下降的性质
-
-
-
 
 ##### SGD 特性
 
@@ -2035,23 +1998,27 @@ SGD 具有多个吸引人的特性。首先，尽管它给轨迹增加了噪声�
 
 ##### 收敛与学习率调度
 
-SGD 不一定按传统意义上“收敛”。然而，我们期望当接近全局极小值时，所有数据点都能被模型很好地描述。因此，无论选择哪个批次，梯度都会很小，参数也就不再发生太大变化。在实践中，SGD 通常配合*学习率调度*使用。学习率 `α` 从一个较高值开始，每 `N` 个周期按一个常数因子衰减。其逻辑是：在训练早期，我们希望算法探索参数空间，在山谷间跳跃以找到一个合理的区域。在后期，我们大致处于正确位置，更关注微调参数，因此减小 `α` 以进行更小幅度的改动。
 
-### 6.3 动量
 
-随机梯度下降的一种常见修改是添加*动量*项。我们用当前批次计算出的梯度与上一步移动方向的加权组合来更新参数：
+# SGD 不一定按传统意义上“收敛”
+
+然而，我们期望当接近全局极小值时，所有数据点都能被模型很好地描述。因此，无论选择哪个批次，梯度都会很小，参数也就不再发生太大变化。在实践中，SGD 通常配合`学习率调度`使用。学习率 `α` 从一个较高值开始，每 `N` 个周期按一个常数因子衰减。其逻辑是：在训练早期，我们希望算法探索参数空间，在山谷间跳跃以找到一个合理的区域。在后期，我们大致处于正确位置，更关注微调参数，因此减小 `α` 以进行更小幅度的改动。
+
+## 6.3 动量
+
+随机梯度下降的一种常见修改是添加`动量`项。我们用当前批次计算出的梯度与上一步移动方向的加权组合来更新参数：
 
 ![c6-fig-5012.jpg](img/c6-fig-5012.jpg)
 
  (6.11)
 
-其中 `m[t]` 是动量（驱动第 `t` 次迭代的更新），`β ∈ 0, 1)` 控制梯度随时间平滑的程度，`α` 是学习率。
+其中 `m[t]` 是动量（驱动第 `t` 次迭代的更新），`β ∈ [0, 1)` 控制梯度随时间平滑的程度，`α` 是学习率。
 
-动量计算的递归公式意味着梯度步长是所有先前梯度的无限加权和，权重随时间倒退而变小。如果这些梯度在多次迭代中方向一致，有效学习率会增加；如果梯度方向反复变化，求和项相互抵消，有效学习率则会降低。整体效果是轨迹更平滑，并在山谷中减少了振荡行为（[图 6.7）。
+动量计算的递归公式意味着梯度步长是所有先前梯度的无限加权和，权重随时间倒退而变小。如果这些梯度在多次迭代中方向一致，有效学习率会增加；如果梯度方向反复变化，求和项相互抵消，有效学习率则会降低。整体效果是轨迹更平滑，并在山谷中减少了振荡行为（图 6.7）。
 
 ***
 
-问题 6.10
+### 问题 6.10
 
 ***
 
@@ -2059,7 +2026,7 @@ SGD 不一定按传统意义上“收敛”。然而，我们期望当接近全�
 
 图 6.7 带动量的随机梯度下降。a) 常规随机下降走了一条非常迂回的路径趋向极小值。b) 有了动量项，当前步骤的变化是先前变化和从批次计算出的梯度的加权组合。这使轨迹更平滑并提高了收敛速度。
 
-#### 6.3.1 Nesterov 加速动量
+### 6.3.1 Nesterov 加速动量
 
 动量项可被视为 SGD 算法下一步将移动位置的粗略预测。Nesterov 加速动量（图 6.8）计算的是在这个预测点而非当前点的梯度：
 
@@ -2071,9 +2038,7 @@ SGD 不一定按传统意义上“收敛”。然而，我们期望当接近全�
 
 ***
 
-笔记本 6.4
-
-动量
+### 笔记本 6.4：动量
 
 ***
 
@@ -2081,7 +2046,7 @@ SGD 不一定按传统意义上“收敛”。然而，我们期望当接近全�
 
 图 6.8 Nesterov 加速动量。解沿虚线移动到达点 1。传统动量更新在点 1 处测量梯度，沿该方向移动一段距离到达点 2，然后加上上一迭代的动量项（即与虚线同方向），到达点 3。Nesterov 动量更新先应用动量项（从点 1 移至点 4），然后测量梯度并应用更新到达点 5。
 
-### 6.4 Adam
+## 6.4 Adam
 
 固定步长的梯度下降具有以下不良特性：它对关联大梯度的参数做大幅调整（此时或许应更谨慎），对关联小梯度的参数做小幅调整（此时或许应探索更远）。当损失曲面在某个方向上比另一个方向陡峭得多时，很难选择一个学习率既能（i）在两个方向上都取得良好进展，又能（ii）保持稳定（图 6.9a–b）。
 
@@ -2090,10 +2055,6 @@ SGD 不一定按传统意义上“收敛”。然而，我们期望当接近全�
 图 6.9 自适应矩估计。a) 该损失函数在垂直方向变化快，在水平方向变化慢。若用在垂直方向取得良好进展的学习率运行全批次梯度下降，算法需很长时间才能到达最终水平位置。b) 若学习率选为在水平方向取得良好进展，则在垂直方向会超调并变得不稳定。c) 一种直接的方法是每步沿每个轴移动固定距离，使两个方向都向下移动。这通过归一化梯度幅度并仅保留符号来实现。然而，这通常不收敛于精确极小值，而是在其周围来回振荡（此处在最后两点之间）。d) Adam 算法在估计梯度和归一化项中均使用动量，从而产生更平滑的路径。
 
 一种直接的方法是归一化梯度，使我们在每个方向上移动固定距离（由学习率控制）。为此，我们首先测量梯度 `m[t+1]` 和逐点平方梯度 `v[t+1]`：
-
-
-
-
 
 ![c6-fig-5014.jpg](img/c6-fig-5014.jpg)
 
@@ -2105,9 +2066,9 @@ SGD 不一定按传统意义上“收敛”。然而，我们期望当接近全�
 
  (6.14)
 
-其中平方根和除法均为逐点进行，`α` 是学习率，`ϵ` 是一个防止梯度幅度为零时除以零的小常数。项 `v[t][+1]` 是平方梯度，其正平方根用于归一化梯度本身，因此每个坐标方向上仅剩下符号。结果是算法沿每个坐标移动固定距离 `α`，方向由哪个方向是下坡决定（图 6.9c）。该简单算法在两个方向上都能取得良好进展，但除非恰好落在极小值点，否则不会收敛。相反，它会在极小值周围来回反弹。
+其中平方根和除法均为逐点进行，`α` 是学习率，`ϵ` 是一个防止梯度幅度为零时除以零的小常数。项 `v[t+1]` 是平方梯度，其正平方根用于归一化梯度本身，因此每个坐标方向上仅剩下符号。结果是算法沿每个坐标移动固定距离 `α`，方向由哪个方向是下坡决定（图 6.9c）。该简单算法在两个方向上都能取得良好进展，但除非恰好落在极小值点，否则不会收敛。相反，它会在极小值周围来回反弹。
 
-*自适应矩估计*，或 *Adam*，采用了这一思路，并为梯度估计和平方梯度估计都添加了动量：
+`自适应矩估计`，或 `Adam`，采用了这一思路，并为梯度估计和平方梯度估计都添加了动量：
 
 ![c6-fig-5016.jpg](img/c6-fig-5016.jpg)
 
@@ -2121,11 +2082,17 @@ SGD 不一定按传统意义上“收敛”。然而，我们期望当接近全�
 
  (6.16)
 
-由于 `β` 和 `γ` 在范围 `0, 1)` 内，指数为 `t + 1` 的项随每个时间步变小，分母趋近于 1，因此这种修正的影响逐渐减弱。
+由于 `β` 和 `γ` 在范围 `[0, 1)` 内，指数为 `t + 1` 的项随每个时间步变小，分母趋近于 1，因此这种修正的影响逐渐减弱。
 
 最后，我们像以前一样更新参数，但使用修正后的项：
 
-![c6-fig-5018.jpg (6.17)结果是一种能够收敛到整体极小值、且在参数空间的每个方向上都能取得良好进展的算法。请注意，Adam 通常用于随机设置，其中梯度及其平方是从小批量计算得出的：![c6-fig-5019.jpg](img/c6-fig-5019.jpg)
+![c6-fig-5018.jpg](img/c6-fig-5018.jpg)
+
+ (6.17)
+
+结果是一种能够收敛到整体极小值、且在参数空间的每个方向上都能取得良好进展的算法。请注意，Adam 通常用于随机设置，其中梯度及其平方是从小批量计算得出的：
+
+![c6-fig-5019.jpg](img/c6-fig-5019.jpg)
 
  (6.18)
 
@@ -2133,53 +2100,51 @@ SGD 不一定按传统意义上“收敛”。然而，我们期望当接近全�
 
 ***
 
-Notebook 6.5
-
-Adam
+### Notebook 6.5：Adam
 
 ***
 
-正如我们将在第 7 章看到的，神经网络参数的梯度幅度可能取决于它们在网络中的深度。Adam 有助于补偿这种倾向，并平衡不同层之间的变化。在实践中，Adam 还有一个优势，即对初始学习率不那么敏感，因为它避免了 图 6.9a–b 中那样的情况，所以不需要复杂的学习率调度。
+正如我们将在第 7 章看到的，神经网络参数的梯度幅度可能取决于它们在网络中的深度。Adam 有助于补偿这种倾向，并平衡不同层之间的变化。在实践中，Adam 还有一个优势，即对初始学习率不那么敏感，因为它避免了图 6.9a–b 中那样的情况，所以不需要复杂的学习率调度。
 
-### 6.5 训练算法超参数
+## 6.5 训练算法超参数
 
-学习算法、批量大小、学习率调度和动量系数的选择都被视为训练算法的*超参数*；这些直接影响最终模型性能，但不同于模型参数。选择这些参数更多是一门艺术而非科学，通常会用不同的超参数训练许多模型并选择最佳的一个。这被称为*超参数搜索*。我们将在第 8 章回到这个问题。
+学习算法、批量大小、学习率调度和动量系数的选择都被视为训练算法的`超参数`；这些直接影响最终模型性能，但不同于模型参数。选择这些参数更多是一门艺术而非科学，通常会用不同的超参数训练许多模型并选择最佳的一个。这被称为`超参数搜索`。我们将在第 8 章回到这个问题。
 
-### 6.6 总结
+## 6.6 总结
 
 本章讨论了模型训练。该问题被形式化为寻找对应于损失函数 `L[ϕ]` 极小值的参数 `ϕ`。梯度下降法测量当前参数下损失函数的梯度（即当我们对参数做微小改动时损失如何变化）。然后它沿着损失下降最快的方向移动参数。这会重复进行直到收敛。
 
 对于非线性函数，损失函数可能同时存在局部极小值（梯度下降会陷入其中）和鞍点（梯度下降似乎已收敛但实则不然）。随机梯度下降有助于缓解这些问题。¹ 在每次迭代中，我们使用数据的不同随机子集（一个批次）来计算梯度。这为过程增加了噪声，有助于防止算法陷入参数空间的次优区域。由于每次迭代仅使用数据子集，计算成本也更低。我们了解到添加动量项可以使收敛更高效。最后，我们介绍了 Adam 算法。
 
-本章的思想适用于优化*任意*模型。下一章将解决神经网络训练特有的两个方面。首先，我们将探讨如何计算损失相对于神经网络参数的梯度。这是通过著名的反向传播算法实现的。其次，我们将讨论如何在优化开始前初始化网络参数。如果没有谨慎的初始化，优化所用的梯度可能变得极大或极小，从而阻碍训练过程。
+本章的思想适用于优化`任意`模型。下一章将解决神经网络训练特有的两个方面。首先，我们将探讨如何计算损失相对于神经网络参数的梯度。这是通过著名的反向传播算法实现的。其次，我们将讨论如何在优化开始前初始化网络参数。如果没有谨慎的初始化，优化所用的梯度可能变得极大或极小，从而阻碍训练过程。
 
-### 注释
+## 注释
 
-**优化算法：** 优化算法在工程中广泛使用，通常使用*目标函数*一词而非损失函数或代价函数。梯度下降由柯西发明于 1847 年，随机梯度下降至少可追溯至 Robbins & Monro (1951)。二者的一个现代折衷方案是随机方差缩减下降，其中周期性地计算完整梯度，并穿插随机更新。关于神经网络优化算法的综述可参见 Ruder (2016)、Bottou et al. (2018) 和 Sun (2020)。Bottou (2012) 讨论了 SGD 的最佳实践，包括不放回洗牌。
+### 优化算法
 
-**凸性、极小值和鞍点：** 如果没有任何弦（曲面上两点间的线段）与函数相交，则该函数为凸函数。这可以通过考虑*海森矩阵*（二阶导数矩阵）从代数上进行测试：
+优化算法在工程中广泛使用，通常使用`目标函数`一词而非损失函数或代价函数。梯度下降由柯西发明于 1847 年，随机梯度下降至少可追溯至 Robbins & Monro (1951)。二者的一个现代折衷方案是随机方差缩减下降，其中周期性地计算完整梯度，并穿插随机更新。关于神经网络优化算法的综述可参见 Ruder (2016)、Bottou et al. (2018) 和 Sun (2020)。Bottou (2012) 讨论了 SGD 的最佳实践，包括不放回洗牌。
+
+### 凸性、极小值和鞍点
+
+如果没有任何弦（曲面上两点间的线段）与函数相交，则该函数为凸函数。这可以通过考虑`海森矩阵`（二阶导数矩阵）从代数上进行测试：
 
 ![c6-fig-5020.jpg](img/c6-fig-5020.jpg)
 
  (6.19)
 
-如果海森矩阵对所有可能的参数值均为正定（具有正特征值），则该函数为凸函数；损失函数将呈现光滑碗状（如 图 6.1c 所示），因此训练将相对容易。将存在单一全局极小值，且没有局部极小值或鞍点。
+如果海森矩阵对所有可能的参数值均为正定（具有正特征值），则该函数为凸函数；损失函数将呈现光滑碗状（如图 6.1c 所示），因此训练将相对容易。将存在单一全局极小值，且没有局部极小值或鞍点。
 
 ***
 
-Appendix B.3.7
-
-特征值
+### Appendix B.3.7：特征值
 
 ***
 
 对于任意损失函数，梯度为零处海森矩阵的特征值允许我们将该位置分类为：(i) 极小值（特征值均为正），(ii) 极大值（特征值均为负），或 (iii) 鞍点（正特征值对应极小值方向，负特征值对应极大值方向）。
 
-**线搜索：** 固定步长的梯度下降效率低下，因为移动距离完全取决于梯度幅度。当函数变化快时移动距离长（此时或许应更谨慎），而函数变化慢时移动距离短（此时或许应探索更远）。因此，梯度下降法通常结合线搜索过程，在期望方向上对函数进行采样，以尝试找到最优步长。一种此类方法是区间搜索（图 6.10）。梯度下降的另一个问题是，在下降山谷时倾向于导致低效的振荡行为（例如 图 6.5a 中的路径 1）。
+### 线搜索
 
-
-
-
+固定步长的梯度下降效率低下，因为移动距离完全取决于梯度幅度。当函数变化快时移动距离长（此时或许应更谨慎），而函数变化慢时移动距离短（此时或许应探索更远）。因此，梯度下降法通常结合线搜索过程，在期望方向上对函数进行采样，以尝试找到最优步长。一种此类方法是区间搜索（图 6.10）。梯度下降的另一个问题是，在下降山谷时倾向于导致低效的振荡行为（例如图 6.5a 中的路径 1）。
 
 ![图 6.10 使用括间法进行线搜索。a) 当前解位于位置 a（橙点），我们希望搜索区域 [a, d]（灰色阴影区域）。我们在搜索区域内部定义两个点 b、c 并在这些点处评估损失函数。此处 L[b] > L[c]，因此我们排除范围 [a, b]。b) 我们现在在细化后的搜索区域中重复此过程，并发现 L[b] < L[c]，因此我们排除范围 [c, d]。c) 我们重复此过程，直到该最小值被紧密括住。](images/c6-fig-0010.jpg)
 
@@ -2191,19 +2156,19 @@ Appendix B.3.7
 
 ---
 
-#### 问题 6.11
+### 问题 6.11
 
 ---
 
-##### SGD 的性质
+#### SGD 的性质
 
 当学习率趋近于零时，SGD 的极限是一个随机微分方程。Jastrzębski 等人（2018）表明，该方程依赖于学习率与批量大小的比率，并且该比率与所发现极小值的宽度之间存在关系。更宽的极小值被认为更可取；如果测试数据的损失函数相似，则参数估计中的微小误差对测试性能影响甚微。He 等人（2019）证明了 SGD 的一个泛化界，该界与批量大小与学习率的比率呈正相关。他们在不同架构和数据集上训练了大量模型，并发现了经验证据：当批量大小与学习率的比率较低时，测试准确率会提高。Smith 等人（2018）和 Goyal 等人（2018）也确定了批量大小与学习率的比率对泛化很重要（见图 20.10）。
 
-##### 动量
+#### 动量
 
 利用动量加速优化的想法可追溯至 Polyak（1964）。Goh（2017）深入讨论了动量的性质。Nesterov 加速梯度法由 Nesterov（1983）引入。Nesterov 动量首次由 Sutskever 等人（2013）在随机梯度下降的背景下应用。
 
-##### 自适应训练算法
+#### 自适应训练算法
 
 AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数分配不同的学习率，来解决某些参数可能需要比其他参数移动得更远的可能性。AdaGrad 使用每个参数的累积平方梯度来衰减其学习率。这有一个缺点，即学习率会随时间减小，并且学习可能在找到最小值之前就停止。RMSProp（Hinton 等人，2012a）和 AdaDelta（Zeiler，2012）修改了该算法，通过递归更新平方梯度项来帮助防止这些问题。
 
@@ -2211,21 +2176,23 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 
 自适应训练算法的一个潜在问题是，学习率基于观察到的梯度的累积统计量。在训练开始时，当样本很少时，这些统计量可能非常嘈杂。这可以通过 `learning rate warm-up`（学习率预热）（Goyal 等人，2018）来补救，即在前几千次迭代中逐渐增加学习率。另一种解决方案是修正 Adam（Liu 等人，2021a），它以一种有助于避免高方差的方式随时间逐渐改变动量项。Dozat（2016）将 Nesterov 动量融入了 Adam 算法。
 
-##### SGD 与 Adam
+#### SGD 与 Adam
 
-关于 SGD 和 Adam 相对优劣一直有着热烈的讨论。Wilson 等人（2017）提供了证据，表明带动量的 SGD 可以找到比 Adam 更低的极小值，这在各种深度学习任务中泛化得更好。然而，这很奇怪，因为一旦修正项（方程 6.16）变为 1（这发生得很快），SGD 就是 Adam 的一个特例（当 `ϵ = γ = 0` 时）。因此，更有可能的是，*当我们使用 Adam 的默认超参数时*，SGD 优于 Adam。Loshchilov & Hutter（2019）提出了 AdamW，它在存在 L2 正则化的情况下大幅提高了 Adam 的性能（见第 9.1 节）。Choi 等人（2019）提供了证据，表明如果我们搜索最佳的 Adam 超参数，其表现与 SGD 一样好且收敛更快。Keskar & Socher（2017）提出了一种称为 SWATS 的方法，它开始使用 Adam（以取得快速的初始进展），然后切换到 SGD（以获得更好的最终泛化性能）。
 
-##### 穷举搜索
+
+关于 SGD 和 Adam 相对优劣一直有着热烈的讨论。Wilson 等人（2017）提供了证据，表明带动量的 SGD 可以找到比 Adam 更低的极小值，这在各种深度学习任务中泛化得更好。然而，这很奇怪，因为一旦修正项（方程 6.16）变为 1（这发生得很快），SGD 就是 Adam 的一个特例（当 `ϵ = γ = 0` 时）。因此，更有可能的是，当我们使用 Adam 的默认超参数时，SGD 优于 Adam。Loshchilov & Hutter（2019）提出了 AdamW，它在存在 L2 正则化的情况下大幅提高了 Adam 的性能（见第 9.1 节）。Choi 等人（2019）提供了证据，表明如果我们搜索最佳的 Adam 超参数，其表现与 SGD 一样好且收敛更快。Keskar & Socher（2017）提出了一种称为 SWATS 的方法，它开始使用 Adam（以取得快速的初始进展），然后切换到 SGD（以获得更好的最终泛化性能）。
+
+### 穷举搜索
 
 本章讨论的所有算法都是迭代的。一种完全不同的方法是量化网络参数，并使用 SAT 求解器（Mézard & Mora，2009）穷举搜索生成的离散化参数空间。这种方法有可能找到全局最小值，并保证不存在更低的损失，但仅适用于非常小的模型。
 
-### 问题
+## 问题
 
-#### 问题 6.1
+### 问题 6.1
 
 证明方程 6.5 中最小二乘损失函数的导数由方程 6.7 中的表达式给出。
 
-#### 问题 6.2
+### 问题 6.2
 
 如果海森矩阵 `H[ϕ]` 的特征值在所有地方均为正，则曲面是凸的。在这种情况下，曲面有一个唯一的最小值，且优化很容易。求海森矩阵的代数表达式，
 
@@ -2235,29 +2202,17 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 
 针对线性回归模型（方程 6.5）。通过证明特征值始终为正来证明该函数是凸的。这可以通过证明矩阵的迹和行列式均为正来完成。
 
----
+#### 附录 B.3.7 特征值
 
-###### 附录 B.3.7 特征值
+#### 附录 B.3.8 迹
 
----
+#### 附录 B.3.8 行列式
 
-###### 附录 B.3.8 迹
-
----
-
-##### 附录 B.3.8 行列式
-
----
-
-#### 问题 6.3
+### 问题 6.3
 
 计算 Gabor 模型（方程 6.8）的最小二乘损失 `L[ϕ]` 关于参数 `ϕ[0]` 和 `ϕ[1]` 的导数。
 
-
-
-
-
-#### 问题 6.4*
+### 问题 6.4*
 
 逻辑回归模型使用线性函数将输入 **x** 分配到两个类别 *y* ∈ {0, 1} 中的一个。对于一维输入和一维输出，它有两个参数，*ϕ*[0] 和 *ϕ*[1]，定义如下：
 
@@ -2273,7 +2228,7 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 
 (i) 绘制该模型在不同 *ϕ*[0] 和 *ϕ*[1] 值下的 *y* 对 *x* 图，并解释每个参数的定性含义。(ii) 什么是该模型合适的损失函数？(iii) 计算该损失函数关于参数的导数。(iv) 从均值为 -1、标准差为 1 的正态分布中生成十个数据点并分配标签 *y* = 0。再从均值为 1、标准差为 1 的正态分布中生成十个数据点并分配标签 *y* = 1。以两个参数 *ϕ*[0] 和 *ϕ*[1] 为变量，将损失作为热力图绘制出来。(v) 该损失函数是凸的吗？如何证明这一点？
 
-#### 问题 6.5*
+### 问题 6.5*
 
 计算方程 3.1 中引入的简单神经网络模型的最小二乘损失关于其十个参数的导数：
 
@@ -2283,7 +2238,7 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 
 仔细思考 ReLU 函数 *a*[•] 的导数将是什么。
 
-#### 问题 6.6
+### 问题 6.6
 
 图 6.11 中的哪个函数是凸的？证明你的答案。将 1-7 每个点表征为 (i) 局部极小值，(ii) 全局极小值，或 (iii) 两者皆非。
 
@@ -2291,29 +2246,29 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 
 图 6.11 问题 6.6 的三个一维损失函数。
 
-#### 问题 6.7*
+### 问题 6.7*
 
 图 6.5a 中路径 1 的梯度下降轨迹在向山谷底部的最小值移动时，会低效地来回震荡。值得注意的是，它在每一步都以直角转向，垂直于前一方向。为这些现象提供定性解释。提出一种可能有助于防止这种行为的解决方案。
 
-#### 问题 6.8*
+### 问题 6.8*
 
-具有*固定*学习率的（非随机）梯度下降能否逃离局部极小值？
+具有固定学习率的（非随机）梯度下降能否逃离局部极小值？
 
-#### 问题 6.9
+### 问题 6.9
 
 我们在大小为 100 的数据集上运行随机梯度下降算法 1,000 次迭代，批量大小为 20。我们训练模型进行了多少个周期？
 
-#### 问题 6.10
+### 问题 6.10
 
 证明动量项 **m**[t]（方程 6.11）是之前迭代梯度的无限加权和，并推导该求和系数（权重）的表达式。
 
-#### 问题 6.11
+### 问题 6.11
 
 如果模型有一百万个参数，海森矩阵将具有什么维度？
 
-## 第 7 章
+# 第 7 章
 
-梯度与初始化
+## 梯度与初始化
 
 第 6 章介绍了迭代优化算法。这些是寻找函数最小值的通用方法。在神经网络的背景下，它们寻找使损失最小化的参数，以便模型能准确地从输入预测训练输出。基本方法是随机选择初始参数，然后进行一系列平均减小损失的小幅更改。每次更改都基于当前位置处损失关于参数的梯度。
 
@@ -2329,9 +2284,9 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 
 其中函数 **a**[•] 将激活函数分别应用于输入的每个元素。模型参数 **ϕ** = {**β**[0], **Ω**[0], **β**[1], **Ω**[1], **β**[2], **Ω**[2], **β**[3], **Ω**[3]} 由每层之间的偏置向量 **β**[k] 和权重矩阵 **Ω**[k] 组成（图 7.1）。
 
-![图 7.1 反向传播前向传递。目标是计算损失 ℓ 关于每个权重（箭头）和偏置（未显示）的导数。换句话说，我们想知道每个参数的微小变化将如何影响损失。每个权重乘以其源头的隐藏单元，并将结果贡献给目标隐藏单元。因此，权重微小变化的影响将按源隐藏单元的激活值进行缩放。例如，蓝色权重应用于第 1 层的第二个隐藏单元；如果该单元的激活值加倍，则蓝色权重微小变化的影响也将加倍。因此，为了计算权重的导数，我们需要计算并存储隐藏层的激活值。这被称为*前向传递*，因为它涉及按顺序运行网络方程。](img/c7-fig-0001.jpg)
+![图 7.1 反向传播前向传递。目标是计算损失 ℓ 关于每个权重（箭头）和偏置（未显示）的导数。换句话说，我们想知道每个参数的微小变化将如何影响损失。每个权重乘以其源头的隐藏单元，并将结果贡献给目标隐藏单元。因此，权重微小变化的影响将按源隐藏单元的激活值进行缩放。例如，蓝色权重应用于第 1 层的第二个隐藏单元；如果该单元的激活值加倍，则蓝色权重微小变化的影响也将加倍。因此，为了计算权重的导数，我们需要计算并存储隐藏层的激活值。这被称为前向传递，因为它涉及按顺序运行网络方程。](img/c7-fig-0001.jpg)
 
-图 7.1 反向传播前向传递。目标是计算损失 *ℓ* 关于每个权重（箭头）和偏置（未显示）的导数。换句话说，我们想知道每个参数的微小变化将如何影响损失。每个权重乘以其源头的隐藏单元，并将结果贡献给目标隐藏单元。因此，权重微小变化的影响将按源隐藏单元的激活值进行缩放。例如，蓝色权重应用于第 1 层的第二个隐藏单元；如果该单元的激活值加倍，则蓝色权重微小变化的影响也将加倍。因此，为了计算权重的导数，我们需要计算并存储隐藏层的激活值。这被称为*前向传递*，因为它涉及按顺序运行网络方程。
+图 7.1 反向传播前向传递。目标是计算损失 *ℓ* 关于每个权重（箭头）和偏置（未显示）的导数。换句话说，我们想知道每个参数的微小变化将如何影响损失。每个权重乘以其源头的隐藏单元，并将结果贡献给目标隐藏单元。因此，权重微小变化的影响将按源隐藏单元的激活值进行缩放。例如，蓝色权重应用于第 1 层的第二个隐藏单元；如果该单元的激活值加倍，则蓝色权重微小变化的影响也将加倍。因此，为了计算权重的导数，我们需要计算并存储隐藏层的激活值。这被称为前向传递，因为它涉及按顺序运行网络方程。
 
 我们还拥有单独的损失项 *ℓ[i]*，它们返回在给定训练输入 **x**[i] 的模型预测 **f**[**x**[i], **ϕ**] 下，真实标签 *y[i]* 的负对数似然。例如，这可能是最小二乘损失 *ℓ[i]* = (**f**[**x**[i], **ϕ**] − *y[i]*)²。总损失是这些项在训练数据上的求和：
 
@@ -2351,21 +2306,15 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 (7.4)
 ```
 
-针对每层 *k* ∈ {0, 1, …, *K*} 的参数 {**β**[k], **Ω**[k]} 以及批量中的每个索引 *i*。本章的第一部分描述了*反向传播算法*，该算法可高效计算这些导数。
+针对每层 *k* ∈ {0, 1, …, *K*} 的参数 {**β**[k], **Ω**[k]} 以及批量中的每个索引 *i*。本章的第一部分描述了反向传播算法，该算法可高效计算这些导数。
 
 ---
 
-问题 7.1
+#### 问题 7.1
 
 ---
-
-在本章的第二部分中，我们考虑在开始训练之前如何初始化网络参数。我们描述了选择初始权重 **Ω**[k] 和偏置 **β**[k] 的方法，以使训练保持稳定。
 
 ### 7.2 计算导数
-
-
-
-
 
 损失函数的导数告诉我们，当我们对参数进行微小改动时，损失会如何变化。优化算法利用这些信息来操控参数，使损失变小。`backpropagation algorithm`（反向传播算法）用于计算这些导数。数学细节稍显复杂，因此我们首先提出两个观察结果，以提供一些直观理解。
 
@@ -2387,7 +2336,7 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 
 反向传播背后的思想相对容易理解。然而，推导过程需要矩阵微积分，因为偏置和权重项分别是向量和矩阵。为了帮助掌握底层机制，下一节将推导一个具有标量参数的更简单的玩具模型的反向传播。然后我们将在第 7.4 节中将相同的方法应用于深度神经网络。
 
-## 7.3 玩具示例
+### 7.3 玩具示例
 
 考虑一个包含八个标量参数 `ϕ = {β[0], ω[0], β[1], ω[1], β[2], ω[2], β[3], ω[3]}` 的模型 `f[x, ϕ]`，它由函数 `sin[•]`、`exp[•]` 和 `cos[•]` 的复合组成：
 
@@ -2447,9 +2396,6 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 
  (7.11)
 
-
-
-
 左侧询问当 `h[3]` 变化时 `ℓ[i]` 如何变化。右侧表明我们可以将其分解为：(i) 当 `h[3]` 变化时 `f[3]` 如何变化，以及 (ii) 当 `f[3]` 变化时 `ℓ[i]` 如何变化。在原始方程中，`h[3]` 改变 `f[3]`，进而改变 `ℓ[i]`，而导数代表了这一链条的效应。注意我们已经计算了这两个导数中的第二个，而另一个是 `β[3] + ω[3] · h[3]` 关于 `h[3]` 的导数，即 `ω[3]`。
 
 我们以此类推，计算输出关于这些中间量的导数（图 7.4）：
@@ -2464,13 +2410,17 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 
 在每种情况下，我们在上一步中已经计算了括号中的量，而最后一项具有简单的表达式。这些方程体现了上一节的观察 2（图 7.2）；如果我们按逆序计算，就可以重用先前计算的导数。
 
-***
+---
 
-习题 7.2
+#### 习题 7.2
 
-***
+---
 
-**后向传递 #2：** 最后，我们考虑当改变参数 `β[•]` 和 `ω[•]` 时，损失 `ℓ[i]` 如何变化。我们再次应用链式法则（图 7.5）：
+
+
+## 后向传递 #2
+
+最后，我们考虑当改变参数 `β[•]` 和 `ω[•]` 时，损失 `ℓ[i]` 如何变化。我们再次应用链式法则（图 7.5）：
 
 ![c7-fig-5014.jpg](img/c7-fig-5014.jpg)
 
@@ -2492,13 +2442,11 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 
 (7.15)
 
-***
+---
 
-笔记本 7.1
+### 笔记本 7.1 玩具模型中的反向传播
 
-玩具模型中的反向传播
-
-***
+---
 
 反向传播比单独计算导数（如方程 7.7 所示）既更简单又更高效。¹
 
@@ -2506,7 +2454,9 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 
 现在我们对三层网络重复此过程（图 7.1）。直觉和大部分代数运算是相同的。主要区别在于中间变量 `f[k]`、`h[k]` 是向量，偏置 `β[k]` 是向量，权重 `Ω[k]` 是矩阵，并且我们使用 ReLU 函数而不是简单的代数函数（如 `cos[•]`）。
 
-**前向传递：** 我们将网络写作一系列顺序计算：
+#### 前向传递
+
+我们将网络写作一系列顺序计算：
 
 ![c7-fig-5017.jpg](img/c7-fig-5017.jpg)
 
@@ -2514,19 +2464,19 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 
 其中 `f[k][−1]` 表示第 `k` 个隐藏层的预激活值（即 ReLU 函数 `a[•]` 之前的值），`h[k]` 包含第 `k` 个隐藏层的激活值（即 ReLU 函数之后的值）。项 `l[f[3], y[i]]` 表示损失函数（例如最小二乘损失或二元交叉熵损失）。在前向传递中，我们执行这些计算并存储所有中间量。
 
-**后向传递 #1：** 现在让我们考虑当修改预激活值 `f[0]`、`f[1]`、`f[2]` 时，损失如何变化。应用链式法则，损失 `ℓ[i]` 关于 `f[2]` 的导数表达式为：
+#### 后向传递 #1
+
+现在让我们考虑当修改预激活值 `f[0]`、`f[1]`、`f[2]` 时，损失如何变化。应用链式法则，损失 `ℓ[i]` 关于 `f[2]` 的导数表达式为：
 
 ![c7-fig-5018.jpg](img/c7-fig-5018.jpg)
 
 (7.17)
 
-***
+---
 
-附录 B.5
+### 附录 B.5 矩阵微积分
 
-矩阵微积分
-
-***
+---
 
 右侧的三项尺寸分别为 `D[3] × D[3]`、`D[3] × D[f]` 和 `D[f] × 1`，其中 `D[3]` 是第三层隐藏单元的数量，`D[f]` 是模型输出 `f[3]` 的维度。
 
@@ -2542,23 +2492,22 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 
 注意在每种情况下，括号中的项都是在上一步中计算的。通过反向遍历网络，我们可以重用之前的计算。
 
-***
+---
 
-习题 7.3
+### 习题 7.3
 
-***
+---
 
 此外，这些项本身很简单。从方程 7.17 右侧反向工作，我们有：
 
-***
+---
 
-习题 7.4–7.5
+### 习题 7.4–7.5
 
-***
+---
 
-*   损失 `ℓ[i]` 关于网络输出 `f[3]` 的导数 `∂ℓ[i]/∂f[3]` 将取决于损失函数，但通常具有简单的形式。
-
-*   网络输出关于隐藏层 `h[3]` 的导数 `∂f[3]/∂h[3]` 为：
+* 损失 `ℓ[i]` 关于网络输出 `f[3]` 的导数 `∂ℓ[i]/∂f[3]` 将取决于损失函数，但通常具有简单的形式。
+* 网络输出关于隐藏层 `h[3]` 的导数 `∂f[3]/∂h[3]` 为：
 
     ![c7-fig-5021.jpg](img/c7-fig-5021.jpg)
 
@@ -2566,19 +2515,19 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 
     如果您不熟悉矩阵微积分，这个结果并不显而易见。这在习题 7.6 中探讨。
 
-***
+---
 
-习题 7.6
+### 习题 7.6
 
-***
+---
 
-*   激活函数输出 `h[3]` 关于其输入 `f[2]` 的导数 `∂h[3]/∂f[2]` 将取决于激活函数。它将是一个对角矩阵，因为每个激活值仅依赖于对应的预激活值。对于 ReLU 函数，当 `f[2]` 小于零时对角项为零，否则为一（图 7.6）。我们不直接乘以这个矩阵，而是将对角项提取为向量 `𝕀[f[2] > 0]` 并进行逐点相乘，这样效率更高。
+* 激活函数输出 `h[3]` 关于其输入 `f[2]` 的导数 `∂h[3]/∂f[2]` 将取决于激活函数。它将是一个对角矩阵，因为每个激活值仅依赖于对应的预激活值。对于 ReLU 函数，当 `f[2]` 小于零时对角项为零，否则为一（图 7.6）。我们不直接乘以这个矩阵，而是将对角项提取为向量 `𝕀[f[2] > 0]` 并进行逐点相乘，这样效率更高。
 
-***
+---
 
-习题 7.7–7.8
+### 习题 7.7–7.8
 
-***
+---
 
 ![图 7.6 线性整流单元的导数。线性整流单元（橙色曲线）在输入小于零时返回零，否则返回输入。其导数（青色曲线）在输入小于零时返回零（因为此处斜率为零），在输入大于零时返回一（因为此处斜率为一）。](img/c7-fig-0006.jpg)
 
@@ -2586,7 +2535,9 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 
 方程 7.18 和 7.19 右侧的项具有相似的形式。随着我们向后遍历网络，我们交替进行：(i) 乘以权重矩阵的转置 ![c7-fig-5022.jpg](img/c7-fig-5022.jpg) 和 (ii) 基于隐藏层的输入 `f[k][−1]` 进行阈值处理。这些输入在前向传递期间已存储。
 
-**后向传递 #2：** 现在我们知道了如何计算 `∂ℓ[i]/∂f[k]`，我们可以专注于计算损失关于权重和偏置的导数。为了计算损失关于偏置 `β[k]` 的导数，我们再次使用链式法则：
+#### 后向传递 #2
+
+现在我们知道了如何计算 `∂ℓ[i]/∂f[k]`，我们可以专注于计算损失关于权重和偏置的导数。为了计算损失关于偏置 `β[k]` 的导数，我们再次使用链式法则：
 
 ![c7-fig-5023.jpg](img/c7-fig-5023.jpg)
 
@@ -2595,8 +2546,6 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 我们已经在方程 7.17 和 7.18 中计算了它。
 
 类似地，权重向量 `Ω[k]` 的导数由下式给出：
-
-
 
 ![c7-fig-5024.jpg](img/c7-fig-5024.jpg)
 
@@ -2630,7 +2579,7 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 
 ---
 
-习题 7.10
+### 习题 7.10
 
 ---
 
@@ -2638,9 +2587,7 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 
 ---
 
-笔记本 7.2
-
-反向传播
+### 笔记本 7.2 反向传播
 
 ---
 
@@ -2654,7 +2601,7 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 
 ---
 
-习题 7.11
+### 习题 7.11
 
 ---
 
@@ -2666,7 +2613,7 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 
 ---
 
-习题 7.12–7.13
+### 习题 7.12–7.13
 
 ---
 
@@ -2682,18 +2629,14 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 
 其中 `a[•]` 应用 ReLU 函数，`Ω[k]` 和 `β[k]` 分别是权重和偏置。假设我们将所有偏置初始化为零，并根据均值为零、方差为 `σ²` 的正态分布初始化 `Ω[k]` 的元素。考虑两种情况：
 
-*   如果方差 `σ²` 非常小（例如 10⁻⁵），那么 `β[k] + Ω[k]h[k]` 的每个元素将是 `h[k]` 的加权和，其中权重非常小；结果的幅度可能小于输入。此外，ReLU 函数会截断小于零的值，因此 `h[k]` 的范围将是 `f[k][−1]` 的一半。因此，随着网络层数加深，隐藏层预激活值的幅度将变得越来越小。
-
-*   如果方差 `σ²` 非常大（例如 10⁵），那么 `β[k] + Ω[k]h[k]` 的每个元素将是 `h[k]` 的加权和，其中权重非常大；结果的幅度可能远大于输入。ReLU 函数将输入范围减半，但如果 `σ²` 足够大，预激活值的幅度随着网络层数加深仍会变大。
+* 如果方差 `σ²` 非常小（例如 10⁻⁵），那么 `β[k] + Ω[k]h[k]` 的每个元素将是 `h[k]` 的加权和，其中权重非常小；结果的幅度可能小于输入。此外，ReLU 函数会截断小于零的值，因此 `h[k]` 的范围将是 `f[k][−1]` 的一半。因此，随着网络层数加深，隐藏层预激活值的幅度将变得越来越小。
+* 如果方差 `σ²` 非常大（例如 10⁵），那么 `β[k] + Ω[k]h[k]` 的每个元素将是 `h[k]` 的加权和，其中权重非常大；结果的幅度可能远大于输入。ReLU 函数将输入范围减半，但如果 `σ²` 足够大，预激活值的幅度随着网络层数加深仍会变大。
 
 在这两种情况下，预激活处的值可能变得极小或极大，以至于无法用有限精度的浮点运算来表示。
 
 即使前向传播是可行的，同样的逻辑也适用于后向传播。每次梯度更新（公式 7.24）都涉及乘以 `Ω^T`。如果 `Ω` 的值初始化得不合理，那么梯度幅度在后向传播过程中可能会不可控地减小或增大。这些情况分别被称为*梯度消失问题*和*梯度爆炸问题*。在前一种情况下，模型更新变得微乎其微；在后一种情况下，它们变得不稳定。
 
 #### 7.5.1 前向传播的初始化
-
-
-
 
 ##### 数学推导版本
 
@@ -2789,17 +2732,19 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 
 ---
 
-##### Notebook 7.3 初始化
+### Notebook 7.3 初始化
 
 ---
 
+
+
 ![Figure 7.7 Weight initialization. Consider a deep network with 50 hidden layers and Dh = 100 hidden units per layer. The network has a 100-dimensional input x initialized from a standard normal distribution, a single fixed target y = 0, and a least squares loss function. The bias vectors βk are initialized to zero, and the weight matrices Ωk are initialized with a normal distribution with mean zero and five different variances c7-fig-5031.jpg. a) Variance of hidden unit activations computed in forward pass as a function of the network layer. For He initialization (c7-fig-5031.jpg = 2/Dh = 0.02), the variance is stable. However, for larger values, it increases rapidly, and for smaller values, it decreases rapidly (note log scale). b) The variance of the gradients in the backward pass (solid lines) continues this trend; if we initialize with a value larger than 0.02, the magnitude of the gradients increases rapidly as we pass back through the network. If we initialize with a value smaller, then the magnitude decreases. These are known as the exploding gradient and vanishing gradient problems, respectively.](img/c7-fig-0007.jpg)
 
-图 7.7 权重初始化。考虑一个具有 50 个隐藏层、每层 `D[h]` = 100 个隐藏单元的深层网络。该网络具有 100 维输入 **x**（从标准正态分布初始化）、单一固定目标 `y` = 0 和最小二乘损失函数。偏置向量 `β[k]` 初始化为零，权重矩阵 `Ω[k]` 初始化为均值为零、具有五种不同方差 ![c7-fig-5031.jpg](img/c7-fig-5031.jpg) 的正态分布。a) 前向传播中计算的隐藏单元激活值方差随网络层变化的函数。对于 He 初始化（![c7-fig-5031.jpg](img/c7-fig-5031.jpg) = 2/`D[h]` = 0.02），方差是稳定的。然而，对于较大的值，它迅速增加，对于较小的值，它迅速减少（注意对数刻度）。b) 反向传播中梯度的方差（实线）延续了这一趋势；如果我们用大于 0.02 的值初始化，梯度的幅度在反向通过网络时迅速增加。如果我们用较小的值初始化，则幅度减小。这些分别被称为 **梯度爆炸** 和 **梯度消失** 问题。
+图 7.7 权重初始化。考虑一个具有 50 个隐藏层、每层 `D[h]` = 100 个隐藏单元的深层网络。该网络具有 100 维输入 `x`（从标准正态分布初始化）、单一固定目标 `y` = 0 和最小二乘损失函数。偏置向量 `β[k]` 初始化为零，权重矩阵 `Ω[k]` 初始化为均值为零、具有五种不同方差 `c7-fig-5031.jpg` 的正态分布。a) 前向传播中计算的隐藏单元激活值方差随网络层变化的函数。对于 He 初始化（`c7-fig-5031.jpg` = 2/`D[h]` = 0.02），方差是稳定的。然而，对于较大的值，它迅速增加，对于较小的值，它迅速减少（注意对数刻度）。b) 反向传播中梯度的方差（实线）延续了这一趋势；如果我们用大于 0.02 的值初始化，梯度的幅度在反向通过网络时迅速增加。如果我们用较小的值初始化，则幅度减小。这些分别被称为 **梯度爆炸** 和 **梯度消失** 问题。
 
 ### 7.6 示例训练代码
 
-本书的主要关注点是科学性的；这不是实现深度学习模型的指南。尽管如此，在 图 7.8 中，我们展示了实现本书迄今探讨思想的 PyTorch 代码。该代码定义了一个神经网络并初始化权重。它创建随机输入和输出数据集并定义最小二乘损失函数。模型使用批量大小为 10 的 SGD with momentum 在 100 个 epoch 上从数据中训练。学习率从 0.01 开始，每 10 个 epoch 减半。
+本书的主要关注点是科学性的；这不是实现深度学习模型的指南。尽管如此，在图 7.8 中，我们展示了实现本书迄今探讨思想的 PyTorch 代码。该代码定义了一个神经网络并初始化权重。它创建随机输入和输出数据集并定义最小二乘损失函数。模型使用批量大小为 10 的 SGD with momentum 在 100 个 epoch 上从数据中训练。学习率从 0.01 开始，每 10 个 epoch 减半。
 
 ---
 
@@ -2816,9 +2761,6 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 ### 7.7 总结
 
 上一章介绍了随机梯度下降（SGD），一种旨在寻找函数最小值的迭代优化算法。在神经网络的背景下，该算法寻找最小化损失函数的参数。SGD 依赖于损失函数相对于参数的梯度，这些参数必须在优化前初始化。本章解决了深度神经网络的这两个问题。
-
-
-
 
 梯度必须针对大量参数、批次中的每个成员以及每次 SGD 迭代进行评估。因此，梯度计算的高效性至关重要，为此引入了反向传播算法。谨慎的参数初始化同样关键。隐藏单元激活值的幅度在前向传播中可能呈指数级减小或增大。在反向传播中，梯度幅度也存在同样的情况，这些行为被称为梯度消失和梯度爆炸问题。两者都会阻碍训练，但可以通过适当的初始化来避免。
 
@@ -2839,8 +2781,6 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 **Reducing memory requirements:** 训练神经网络需要大量内存。我们必须在前向传播期间存储模型参数以及批次中每个成员在隐藏单元处的预激活值。减少内存需求的两种方法是 `gradient checkpointing` (Chen 等人, 2016a) 和 `micro-batching` (Huang 等人, 2019)。在梯度检查点中，激活值仅在前向传播期间每 `N` 层存储一次。在反向传播期间，缺失的中间激活值从最近的检查点重新计算。通过这种方式，我们可以以执行两次前向传播的计算成本为代价，大幅降低内存需求（问题 7.11）。在微批处理中，批次被细分为较小的部分，梯度更新在应用于网络之前从每个子批次聚合。一种完全不同的方法是构建可逆网络（例如 Gomez 等人, 2017），其中前一层的激活值可以从当前层的激活值计算得出，因此前向传播期间无需缓存任何内容（见第 16 章）。Sohoni 等人 (2019) 综述了减少内存需求的方法。
 
 **Distributed training:** 对于足够大的模型，内存需求或所需总时间可能过大，单个处理器无法承担。在这种情况下，我们必须使用 `distributed training`，即在多个处理器上并行进行训练。并行性有几种方法。在 `data parallelism` 中，每个处理器或 `node` 包含模型的完整副本，但运行批次的一个子集（见 Xing 等人, 2015; Li 等人, 2020b）。来自每个节点的梯度被集中聚合，然后重新分发回每个节点，以确保模型保持一致。这被称为 `synchronous training`。聚合和重新分发梯度所需的同步可能成为性能瓶颈，这导致了异步训练的想法。例如，在 `Hogwild!` 算法 (Recht 等人, 2011) 中，节点的梯度在准备好时用于更新中央模型。更新后的模型随后被重新分发给该节点。这意味着在任何给定时间，每个节点可能拥有略微不同版本的模型，因此梯度更新可能是陈旧的；然而，它在实践中效果很好。其他去中心化方案也已开发。例如，在 Zhang 等人 (2016a) 中，各个节点在环形结构中相互更新。
-
-
 
 数据并行方法仍然假设整个模型可以存放在单个节点的内存中。*流水线模型并行*将网络的不同层存储在不同的节点上，因此没有这一要求。在一种朴素的实现中，第一个节点对批次数据在前几层运行前向传播，并将结果传递给下一个节点，后者在接下来的几层运行前向传播，以此类推。在反向传播中，梯度按相反的顺序进行更新。这种方法显而易见的缺点是，每台机器在大部分周期内都处于空闲状态。针对每个节点顺序处理微批次的各种方案已被提出，以减少这种低效率（例如 Huang 等人，2019；Narayanan 等人，2021a）。最后，在*张量模型并行*中，单个网络层的计算分布在各个节点上（例如 Shoeybi 等人，2019）。关于分布式训练方法的一个很好的综述可以参见 Narayanan 等人（2021b），他们结合了张量、流水线和数据并行，在 3072 个 GPU 上训练了一个拥有万亿参数的语言模型。
 
@@ -2966,13 +2906,13 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 
 前几章介绍了神经网络模型、损失函数和训练算法。本章探讨如何度量训练模型的性能。只要容量足够（即隐藏单元数量足够），神经网络模型通常能在训练数据上表现完美。然而，这并不一定意味着它能很好地泛化到新的测试数据。
 
+
+
 我们将看到，测试误差有三个不同的原因，它们的相对贡献取决于 (i) 任务固有的不确定性，(ii) 训练数据的数量，以及 (iii) 模型的选择。后一种依赖关系引出了超参数搜索的问题。我们将讨论如何选择模型超参数（例如隐藏层的数量和每层隐藏单元的数量）以及学习算法超参数（例如学习率和批次大小）。
 
-### 8.1 训练一个简单的模型
+## 8.1 训练一个简单的模型
 
-
-
-#### 我们使用 MNIST-1D 数据集探索模型性能
+### 我们使用 MNIST-1D 数据集探索模型性能
 
 该数据集包含十个类别 `y ∈ {0, 1, …, 9}`，代表数字 0–9。数据源自每个数字的 1D 模板。每个数据样本 `x` 是通过随机变换其中一个模板并添加噪声来创建的。完整的训练数据集 `{x[i], y[i]}` 包含 `I = 4000` 个训练样本，每个样本由 `D[i] = 40` 个维度组成，表示 40 个位置处的水平偏移。在数据生成过程中，十个类别被均匀抽取，因此每个类别约有 400 个样本。
 
@@ -2984,7 +2924,7 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 
 ---
 
-##### 问题 8.1
+#### 问题 8.1
 
 ---
 
@@ -2998,13 +2938,13 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 
 ---
 
-##### 笔记本 8.1
+#### 笔记本 8.1
 
 **MNIST-1D 性能**
 
 ---
 
-### 8.2 误差来源
+## 8.2 误差来源
 
 我们现在考虑模型无法泛化时发生的误差来源。为了更容易地可视化，我们回到一个 1D 线性最小二乘回归问题，在这里我们确切知道真实数据是如何生成的。**图 8.3** 展示了一个准正弦函数；训练和测试数据均通过在范围 `[0, 1]` 内采样输入值，将其通过该函数，并添加方差固定的高斯噪声来生成。
 
@@ -3024,16 +2964,13 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 
 **图 8.4** 具有三个隐藏单元的简化神经网络。a) 输入层和隐藏层之间的权重和偏置是固定的（虚线箭头）。b–d) 它们被选定使得隐藏单元激活函数斜率为 1，且它们的关节在区间内均匀分布，关节分别位于 `x = 0`、`x = 1/3` 和 `x = 2/3`。修改剩余参数 `ϕ = {β, ω[1], ω[2], ω[3]}` 可以创建关节位于 1/3 和 2/3 处、定义在 `x ∈ [0, 1]` 上的任意分段线性函数。e–g) 具有不同参数 `ϕ` 值的三个示例函数。
 
-#### 8.2.1 噪声、偏差和方差
+### 8.2.1 噪声、偏差和方差
 
 有三种可能的误差来源，分别称为*噪声*、*偏差*和*方差*（**图 8.5**）：
 
-
-
-
 ![图 8.5 测试误差的来源。a) 噪声。数据生成过程存在噪声，因此即使模型精确复制了真实的底层函数（黑线），测试数据中的噪声（灰点）也意味着仍会存在一定误差（灰色区域代表两个标准差）。b) 偏差。即使使用最优参数，三区域模型（青色线）也无法精确拟合真实函数（黑线）。这种偏差是另一个误差来源（灰色区域代表有符号误差）。c) 方差。实际上，我们只有有限的带噪训练数据（橙点）。拟合模型时，我们恢复的不是面板 (b) 中的最佳可能函数，而是一个略有不同的函数（青色线），它反映了训练数据的特有性质。这提供了一个额外的误差来源（灰色区域代表两个标准差）。图 8.6 展示了该区域是如何计算的。](img/c8-fig-0005.jpg)
 
-图 8.5 测试误差的来源。a) 噪声。数据生成过程存在噪声，因此即使模型精确复制了真实的底层函数（黑线），测试数据中的噪声（灰点）也意味着仍会存在一定误差（灰色区域代表两个标准差）。b) 偏差。即使使用最优参数，三区域模型（青色线）也无法精确拟合真实函数（黑线）。这种偏差是另一个误差来源（灰色区域代表有符号误差）。c) 方差。实际上，我们只有有限的带噪训练数据（橙点）。拟合模型时，我们恢复的不是面板 (b) 中的最佳可能函数，而是一个略有不同的函数（青色线），它反映了训练数据的特有性质。这提供了一个额外的误差来源（灰色区域代表两个标准差）。图 8.6 展示了该区域是如何计算的。
+**图 8.5** 测试误差的来源。a) 噪声。数据生成过程存在噪声，因此即使模型精确复制了真实的底层函数（黑线），测试数据中的噪声（灰点）也意味着仍会存在一定误差（灰色区域代表两个标准差）。b) 偏差。即使使用最优参数，三区域模型（青色线）也无法精确拟合真实函数（黑线）。这种偏差是另一个误差来源（灰色区域代表有符号误差）。c) 方差。实际上，我们只有有限的带噪训练数据（橙点）。拟合模型时，我们恢复的不是面板 (b) 中的最佳可能函数，而是一个略有不同的函数（青色线），它反映了训练数据的特有性质。这提供了一个额外的误差来源（灰色区域代表两个标准差）。图 8.6 展示了该区域是如何计算的。
 
 **噪声** 数据生成过程包含噪声的添加，因此对于每个输入 `x`，都存在多个可能的有效输出 `y`（图 8.5a）。对于测试数据而言，这种误差来源是不可逾越的。请注意，它不一定限制训练性能；在训练期间，我们极不可能两次看到相同的输入 `x`，因此仍然有可能完美拟合训练数据。
 
@@ -3043,7 +2980,7 @@ AdaGrad（Duchi 等人，2011）是一种优化算法，它通过为每个参数
 
 **方差** 我们只有有限的训练样本，无法将底层函数的系统性变化与底层数据中的噪声区分开来。拟合模型时，我们得到的不是最接近真实底层函数的近似。实际上，对于不同的训练数据集，结果每次都会略有不同。拟合函数中这种额外的变异性来源被称为*方差*（图 8.5c）。实际上，由于随机学习算法不一定每次都收敛到相同的解，因此可能还存在额外的方差。
 
-#### 8.2.2 测试误差的数学表述
+### 8.2.2 测试误差的数学表述
 
 我们现在使噪声、偏差和方差的概念在数学上变得精确。考虑一个一维回归问题，其中数据生成过程具有方差为 `σ²` 的加性噪声（例如，图 8.3）；我们可以为相同的输入 `x` 观测到不同的输出 `y`，因此对于每个 `x`，都存在一个分布 `Pr(y|x)`，其期望值（均值）为 `μ[x]`：
 
@@ -3125,18 +3062,15 @@ c8-fig-5007.jpg
 
 该公式表明，在考虑了训练数据 `𝒟` 和测试数据 `y` 的不确定性后，期望损失由三个加性分量组成。方差是由于我们采样的特定训练数据集导致的拟合模型的不确定性。偏差是模型相对于我们建模的函数均值的系统性偏离。噪声是输入到输出的真实映射中固有的不确定性。这三种误差来源将存在于任何任务中。对于带最小二乘损失的线性回归，它们以加性方式结合。然而，对于其他类型的问题，它们的相互作用可能更为复杂。
 
-### 8.3 降低误差
+## 8.3 降低误差
 
 在上一节中，我们了解到测试误差源于三个方面：噪声、偏差和方差。噪声分量是不可逾越的；我们无法规避它，它代表了模型性能的根本极限。然而，可以降低另外两项。
 
-#### 8.3.1 降低方差
+### 8.3.1 降低方差
 
-回顾一下，方差源于有限的带噪训练数据。将模型拟合到两个不同的训练集会导致略微不同的参据。因此，我们可以通过增加训练数据量来降低方差。这可以平均掉固有噪声，并确保输入空间得到充分采样。
+回顾一下，方差源于有限的带噪训练数据。将模型拟合到两个不同的训练集会导致略微不同的参数。因此，我们可以通过增加训练数据量来降低方差。这可以平均掉固有噪声，并确保输入空间得到充分采样。
 
-
-
-
-#### 8.3.2 减少偏差
+### 8.3.2 减少偏差
 
 偏差项源于模型无法描述真实的底层函数。这表明我们可以通过使模型更灵活来减少此错误。这通常通过增加模型 `capacity` 来完成。对于神经网络，这意味着添加更多隐藏单元和/或隐藏层。
 
@@ -3144,13 +3078,15 @@ c8-fig-5007.jpg
 
 ![Figure 8.7 Bias and variance as a function of model capacity. a–c) As we increase the number of hidden units of the toy model, the number of linear regions increases, and the model becomes able to fit the true function closely; the bias (gray region) decreases. d–f) Unfortunately, increasing the model capacity has the side-effect of increasing the variance term (gray region). This is known as the bias-variance trade-off.](img/c8-fig-0007.jpg)
 
-图 8.7 模型容量函数下的偏差和方差。a–c) 随着我们增加玩具模型的隐藏单元数量，线性区域的数量增加，模型变得能够紧密拟合真实函数；偏差（灰色区域）减小。d–f) 不幸的是，增加模型容量有一个副作用，即增加方差项（灰色区域）。这被称为偏差-方差权衡。
+**图 8.7** 模型容量函数下的偏差和方差。a–c) 随着我们增加玩具模型的隐藏单元数量，线性区域的数量增加，模型变得能够紧密拟合真实函数；偏差（灰色区域）减小。d–f) 不幸的是，增加模型容量有一个副作用，即增加方差项（灰色区域）。这被称为偏差-方差权衡。
 
-#### 8.3.3 偏差-方差权衡
+### 8.3.3 偏差-方差权衡
 
 然而，图 8.7d–f 显示了增加模型容量的一个意外副作用。对于固定大小的训练数据集，方差项随着模型容量的增加而增加。因此，增加模型容量并不一定会减少测试误差。这被称为 `bias-variance trade-off`。
 
 图 8.8 探讨了这一现象。在面板 a–c) 中，我们将简化的三区域模型拟合到三个各包含十五个点的不同数据集。尽管数据集不同，但最终模型大致相同；数据集中的噪声在每个线性区域大致平均掉了。在面板 d–f) 中，我们将具有十个区域的模型拟合到相同的三个数据集。该模型具有更大的灵活性，但这却是不利的；模型确实更好地拟合了数据，训练误差会更低，但大部分额外的描述能力都用于建模噪声。这种现象称为 `overfitting`。
+
+
 
 ![Figure 8.8 Overfitting. a–c) A model with three regions is fit to three different datasets of fifteen points each. The result is similar in all three cases (i.e., the variance is low). d–f) A model with ten regions is fit to the same datasets. The additional flexibility does not necessarily produce better predictions. While these three models each describe the training data better, they are not necessarily closer to the true underlying function (black curve). Instead, they overfit the data and describe the noise, and the variance (difference between fitted curves) is larger.](img/c8-fig-0008.jpg)
 
@@ -3170,10 +3106,7 @@ c8-fig-5007.jpg
 
 ### 8.4 双重下降
 
-在上一节中，我们研究了随着增加模型容量而产生的偏差-方差权衡。现在让我们回到 MNIST-1D 数据集，看看这在实践中是否会发生。我们使用 10,000 个训练样本，用另外 5,000 个样本进行测试，并随着增加模型中的容量（参数数量）来检查训练和测试性能。我们使用 `Adam` 和步长 `0.005`，以 10,000 个样本的完整批次训练模型 4000 步。
-
-
-
+在上一节中，我们研究了随着增加模型容量而产生的偏差-方差权衡。现在让我们回到 `MNIST-1D` 数据集，看看这在实践中是否会发生。我们使用 10,000 个训练样本，用另外 5,000 个样本进行测试，并随着增加模型中的容量（参数数量）来检查训练和测试性能。我们使用 `Adam` 和步长 `0.005`，以 10,000 个样本的完整批次训练模型 4000 步。
 
 #### 双重下降
 
@@ -3181,11 +3114,11 @@ c8-fig-5007.jpg
 
 ![Figure 8.10 双重下降。a) 随着我们增加每层隐藏单元（从而增加参数）的数量，两隐藏层网络在 MNIST-1D 上的训练和测试损失。随着参数数量接近训练样本数量（垂直虚线），训练损失降至零。测试误差未显示预期的偏差-方差权衡，而是在模型记住数据集后继续下降。b) 使用更嘈杂的训练数据重复相同实验。同样，训练误差降至零，尽管现在需要几乎与训练点一样多的参数来记住数据集。测试误差显示了预测的偏差/方差权衡；随着容量增加而减小，但当我们接近精确记住训练数据的点时又再次增加。然而，随后它再次下降并最终达到更好的性能水平。这被称为双重下降。根据损失、模型和数据中的噪声量，双重下降模式可以在许多数据集中或多或少地观察到。c) 来自 Belkin 等人 (2019) 的浅层神经网络在 MNIST（无标签噪声）上的结果。d) 来自 Nakkiran 等人 (2021) 的 ResNet18 网络（见第 11 章）在 CIFAR-100 上的结果。详见原始论文。](img/c8-fig-0010.jpg)
 
-图 8.10 双重下降。a) 随着我们增加每层隐藏单元（从而增加参数）的数量，两隐藏层网络在 MNIST-1D 上的训练和测试损失。随着参数数量接近训练样本数量（垂直虚线），训练损失降至零。测试误差未显示预期的偏差-方差权衡，而是在模型记住数据集后继续下降。b) 使用更嘈杂的训练数据重复相同实验。同样，训练误差降至零，尽管现在需要几乎与训练点一样多的参数来记住数据集。测试误差显示了预测的偏差/方差权衡；随着容量增加而减小，但当我们接近精确记住训练数据的点时又再次增加。然而，随后它再次下降并最终达到更好的性能水平。这被称为双重下降。根据损失、模型和数据中的噪声量，双重下降模式可以在许多数据集中或多或少地观察到。c) 来自 Belkin 等人 (2019) 的浅层神经网络在 MNIST（无标签噪声）上的结果。d) 来自 Nakkiran 等人 (2021) 的 ResNet18 网络（见第 11 章）在 CIFAR-100 上的结果。详见原始论文。
+图 8.10 双重下降。a) 随着我们增加每层隐藏单元（从而增加参数）的数量，两隐藏层网络在 `MNIST-1D` 上的训练和测试损失。随着参数数量接近训练样本数量（垂直虚线），训练损失降至零。测试误差未显示预期的偏差-方差权衡，而是在模型记住数据集后继续下降。b) 使用更嘈杂的训练数据重复相同实验。同样，训练误差降至零，尽管现在需要几乎与训练点一样多的参数来记住数据集。测试误差显示了预测的偏差/方差权衡；随着容量增加而减小，但当我们接近精确记住训练数据的点时又再次增加。然而，随后它再次下降并最终达到更好的性能水平。这被称为 `double descent`（双重下降）。根据损失、模型和数据中的噪声量，双重下降模式可以在许多数据集中或多或少地观察到。c) 来自 Belkin 等人 (2019) 的浅层神经网络在 `MNIST`（无标签噪声）上的结果。d) 来自 Nakkiran 等人 (2021) 的 `ResNet18` 网络（见第 11 章）在 `CIFAR-100` 上的结果。详见原始论文。
 
 在图 8.10b 中，我们重复了这个实验，但这次我们将 15% 的训练标签随机化。再一次，训练误差降至零。这一次，随机性更大，模型需要几乎与数据点数量一样多的参数来记住数据。随着我们增加容量直到模型精确拟合训练数据，测试误差确实显示出典型的偏差-方差权衡。然而，随后它做了一些意想不到的事情；它开始再次下降。确实，如果我们添加足够的容量，测试损失会降低到低于曲线第一部分达到的最小水平。
 
-这种现象被称为 `double descent`（双重下降）。对于像 MNIST 这样的某些数据集，它存在于原始数据中（图 8.10c）。对于其他数据集，如 MNIST-1D 和 CIFAR-100（图 8.10d），当我们向标签添加噪声时，它会出现或变得更加显著。曲线的第一部分被称为 `classical`（经典）或 `under-parameterized regime`（欠参数化区域），第二部分被称为 `modern`（现代）或 `over-parameterized regime`（过参数化区域）。误差增加的中间部分被称为 `critical regime`（临界区域）。
+这种现象被称为 `double descent`（双重下降）。对于像 `MNIST` 这样的某些数据集，它存在于原始数据中（图 8.10c）。对于其他数据集，如 `MNIST-1D` 和 `CIFAR-100`（图 8.10d），当我们向标签添加噪声时，它会出现或变得更加显著。曲线的第一部分被称为 `classical`（经典）或 `under-parameterized regime`（欠参数化区域），第二部分被称为 `modern`（现代）或 `over-parameterized regime`（过参数化区域）。误差增加的中间部分被称为 `critical regime`（临界区域）。
 
 ---
 
@@ -3205,15 +3138,11 @@ c8-fig-5007.jpg
 
 ---
 
-模型在数据点之间的行为至关重要，因为在高维空间中，训练数据极其稀疏。MNIST-1D 数据集有 40 个维度，我们用 10,000 个样本进行训练。如果这看起来像是大量数据，考虑一下如果我们将每个输入维度量化为 10 个箱会发生什么。总共将有 `10⁴⁰` 个箱，仅受 `10⁵` 个样本约束。即使使用这种粗略的量化，每 `10³⁵` 个箱中也只会有一个数据点！高维空间的体积倾向于压倒训练点数量，这被称为 `curse of dimensionality`（维度灾难）。
+模型在数据点之间的行为至关重要，因为在高维空间中，训练数据极其稀疏。`MNIST-1D` 数据集有 40 个维度，我们用 10,000 个样本进行训练。如果这看起来像是大量数据，考虑一下如果我们将每个输入维度量化为 10 个箱会发生什么。总共将有 `10⁴⁰` 个箱，仅受 `10⁵` 个样本约束。即使使用这种粗略的量化，每 `10³⁵` 个箱中也只会有一个数据点！高维空间的体积倾向于压倒训练点数量，这被称为 `curse of dimensionality`（维度灾难）。
 
 这意味着高维问题可能看起来更像图 8.11a；输入空间中存在我们观察到数据的小区域，它们之间有显著的空隙。双重下降的假设解释是，随着我们增加模型容量，它在最近数据点之间的插值变得越来越平滑。在缺乏关于训练点之间发生什么的信息的情况下，假设平滑性是合理的，并且可能会合理地泛化到新数据。
 
 ![Figure 8.11 增加容量（隐藏单元）允许在稀疏数据点之间进行更平滑的插值。a) 考虑这种训练数据（橙色圆圈）稀疏的情况；中心有一大块区域没有数据样本来约束模型模仿真实函数（黑色曲线）。b) 如果我们拟合一个刚好有足够容量拟合训练数据的模型（青色曲线），那么它必须扭曲自身以通过训练数据，输出预测将不平滑。c–f) 然而，随着我们添加更多隐藏单元，模型获得了在点之间更平滑地插值的能力（每种情况绘制了最平滑的可能曲线）。然而，与本图不同，它并不被强制这样做。](img/c8-fig-0011.jpg)
-
-
-
-
 
 ### 8.5 选择超参数
 
@@ -3233,10 +3162,6 @@ c8-fig-5007.jpg
 
 ### 注释
 
-
-
-
-
 #### 偏差-方差权衡
 
 我们已经证明，对于使用最小二乘损失的回归问题，测试误差可以分解为噪声、偏差和方差项之和。这些因素在使用其他损失函数的模型中也都存在，但它们之间的相互作用通常更为复杂（Friedman, 1997; Domingos, 2000）。对于分类问题，存在一些反直觉的预测；例如，如果模型在输入空间的某个区域倾向于选择错误的类别，那么增加方差反而可以提高分类率，因为这会将部分预测推过阈值从而被正确分类。
@@ -3251,17 +3176,17 @@ c8-fig-5007.jpg
 
 我们非正式地使用*容量*一词来指代模型中的参数数量或隐藏单元数量（因此间接地指代模型拟合日益复杂函数的能力）。模型的*表征容量*描述了当我们考虑所有可能的参数值时，模型能够构建的可能函数空间。当我们考虑到优化算法可能无法到达所有这些解这一事实时，剩下的就是*有效容量*。
 
-Vapnik-Chervonenkis (VC) 维数（Vapnik & Chervonenkis, 1971）是容量的一种更正式的度量。它是二分类器可以任意标记的最大训练样本数量。Bartlett 等人（2019）根据层数和权重数量推导了 VC 维数的上界和下界。另一种容量度量是 Rademacher 复杂度，它是分类模型（具有最优参数）在随机标签数据上的期望经验性能。Neyshabur 等人（2017）根据 Rademacher 复杂度推导了泛化误差的下界。
+`Vapnik-Chervonenkis (VC)` 维数（Vapnik & Chervonenkis, 1971）是容量的一种更正式的度量。它是二分类器可以任意标记的最大训练样本数量。Bartlett 等人（2019）根据层数和权重数量推导了 `VC` 维数的上界和下界。另一种容量度量是 `Rademacher` 复杂度，它是分类模型（具有最优参数）在随机标签数据上的期望经验性能。Neyshabur 等人（2017）根据 `Rademacher` 复杂度推导了泛化误差的下界。
 
 #### 双重下降
 
-“双重下降”这一术语由 Belkin 等人（2019）提出，他们证明了对于双层神经网络和随机特征，在过参数化区域测试误差会再次下降。他们还声称这种现象也发生在决策树中，尽管 Buschjäger & Morik（2021）随后提供了相反的证据。Nakkiran 等人（2021）表明，双重下降发生在各种现代数据集（CIFAR-10, CIFAR-100, IWSLT'14 de-en）、架构（CNN, ResNet, Transformer）和优化器（SGD, Adam）上。当向目标标签添加噪声（Nakkiran 等人，2021）以及使用某些正则化技术（Ishida 等人，2020）时，该现象更为明显。
+“双重下降”这一术语由 Belkin 等人（2019）提出，他们证明了对于双层神经网络和随机特征，在过参数化区域测试误差会再次下降。他们还声称这种现象也发生在决策树中，尽管 Buschjäger & Morik（2021）随后提供了相反的证据。Nakkiran 等人（2021）表明，双重下降发生在各种现代数据集（`CIFAR-10`, `CIFAR-100`, `IWSLT'14 de-en`）、架构（`CNN`, `ResNet`, `Transformer`）和优化器（`SGD`, `Adam`）上。当向目标标签添加噪声（Nakkiran 等人，2021）以及使用某些正则化技术（Ishida 等人，2020）时，该现象更为明显。
 
 Nakkiran 等人（2021）还提供了实证证据，表明测试性能取决于*有效模型容量*（给定模型和训练方法能够实现零训练误差的最大样本数量）。此时，模型开始致力于平滑插值。因此，测试性能不仅取决于模型，还取决于训练算法和训练时长。当他们研究固定容量的模型并增加训练迭代次数时，观察到了相同的模式。他们将其称为*逐轮双重下降*。Pezeshki 等人（2022）从模型中不同特征以不同速度被学习的角度对该现象进行了建模。
 
 双重下降做出了一个相当奇怪的预测：增加训练数据有时会恶化测试性能。考虑处于曲线第二下降部分的过参数化模型。如果我们增加训练数据以匹配模型容量，我们将处于新测试误差曲线的临界区域，测试损失可能会增加。
 
-Bubeck & Sellke（2021）证明了过参数化是在高维空间中平滑插值数据的必要条件。他们展示了模型参数数量与 Lipschitz 常数（输出随微小输入变化而变化的最快速率）之间的权衡。关于过参数化机器学习理论的综述可参见 Dar 等人（2021）。
+Bubeck & Sellke（2021）证明了过参数化是在高维空间中平滑插值数据的必要条件。他们展示了模型参数数量与 `Lipschitz` 常数（输出随微小输入变化而变化的最快速率）之间的权衡。关于过参数化机器学习理论的综述可参见 Dar 等人（2021）。
 
 ---
 
@@ -3293,29 +3218,27 @@ Bubeck & Sellke（2021）证明了过参数化是在高维空间中平滑插值�
 
 
 
-
-
 现实世界的性能可能比测试性能所暗示的更差，主要有三个原因。首先，输入数据 `x` 的统计特性可能会发生变化；我们现在可能正在观察函数的那些在训练期间稀疏采样或根本未采样的部分。这被称为*协变量偏移*。其次，输出数据 `y` 的统计特性可能会发生变化；如果某些输出值在训练期间很少见，那么模型可能会学会在模棱两可的情况下不预测这些值，如果它们在现实世界中更常见，模型就会犯错。这被称为*先验偏移*。第三，输入和输出之间的关系可能会发生变化。这被称为*概念偏移*。这些问题在 Moreno-Torres 等人 (2012) 的研究中有讨论。
 
-###### 超参数搜索
+### 超参数搜索
 
 寻找最佳超参数是一项具有挑战性的优化任务。测试单个超参数配置成本高昂；我们必须训练一个完整的模型并衡量其性能。我们没有简单的方法来获取导数（即当我们对超参数进行微小改动时性能如何变化）。此外，许多超参数是离散的，因此我们无法使用梯度下降方法。存在多个局部极小值，且无法判断我们是否接近全局极小值。噪声水平很高，因为每个训练/验证周期都使用随机训练算法；如果我们用相同的超参数训练模型两次，预期会得到不同的结果。最后，一些变量是有条件的，只有当其他变量被设定时才存在。例如，第三隐藏层的隐藏单元数量只有在我们至少有三个隐藏层时才相关。
 
 一种简单的方法是随机采样搜索空间 (Bergstra & Bengio, 2012)。然而，对于连续变量，最好建立一个性能作为超参数函数的模型，以及该函数的不确定性。这可以被用来在不确定性大的地方进行测试（探索空间），或聚焦于性能看起来有希望的区域（利用先验知识）。贝叶斯优化是一个基于高斯过程的框架，正好能做到这一点，其在超参数搜索中的应用见 Snoek 等人 (2012)。Beta-Bernoulli 老虎机（见 Lattimore & Szepesvári, 2020）是一个大致等价的模型，用于描述由离散变量引起的结果不确定性。
 
-顺序模型算法配置 (SMAC) 算法 (Hutter et al., 2011) 可以处理连续、离散和条件参数。基本方法是使用随机森林来建模目标函数，其中树预测的均值是对目标函数的最佳猜测，而它们的方差代表不确定性。一种完全不同的、也能应对连续、离散和条件参数组合的方法是树形帕岑估计器 (Bergstra et al., 2011)。前述方法建模的是给定超参数下的模型性能概率。相比之下，树形帕岑估计器建模的是给定模型性能下的超参数概率。
+顺序模型算法配置 (`SMAC`) 算法 (Hutter et al., 2011) 可以处理连续、离散和条件参数。基本方法是使用随机森林来建模目标函数，其中树预测的均值是对目标函数的最佳猜测，而它们的方差代表不确定性。一种完全不同的、也能应对连续、离散和条件参数组合的方法是树形帕岑估计器 (Bergstra et al., 2011)。前述方法建模的是给定超参数下的模型性能概率。相比之下，树形帕岑估计器建模的是给定模型性能下的超参数概率。
 
-Hyperband (Li et al., 2017b) 是一种用于超参数优化的多臂老虎机策略。它假设存在计算成本低廉但近似的性能衡量方法（例如，不训练到收敛），并且这些方法可以与预算相关联（例如，通过训练固定数量的迭代）。采样若干随机配置并运行直到预算用完。然后保留最好的 `η` 比例的运行，并将预算乘以 `1/η`。重复此过程直到达到最大预算。这种方法的优势在于效率；对于糟糕的配置，它不需要将实验运行到结束。然而，每个样本只是随机选择的，这效率低下。BOHB 算法 (Falkner et al., 2018) 将 Hyperband 的效率与树形帕岑估计器更合理的超参数选择相结合，构建了一种更好的方法。
+`Hyperband` (Li et al., 2017b) 是一种用于超参数优化的多臂老虎机策略。它假设存在计算成本低廉但近似的性能衡量方法（例如，不训练到收敛），并且这些方法可以与预算相关联（例如，通过训练固定数量的迭代）。采样若干随机配置并运行直到预算用完。然后保留最好的 `η` 比例的运行，并将预算乘以 `1/η`。重复此过程直到达到最大预算。这种方法的优势在于效率；对于糟糕的配置，它不需要将实验运行到结束。然而，每个样本只是随机选择的，这效率低下。`BOHB` 算法 (Falkner et al., 2018) 将 `Hyperband` 的效率与树形帕岑估计器更合理的超参数选择相结合，构建了一种更好的方法。
 
 ### 习题
 
 **习题 8.1** 图 8.2 中的多类别交叉熵训练损失是否会达到零？请解释你的推理。
 
-**习题 8.2** 我们应该为 图 8.4a 中模型第一层的三个权重和偏置选择什么值，以使隐藏单元的响应如 图 8.4b–d 所示？
+**习题 8.2** 我们应该为图 8.4a 中模型第一层的三个权重和偏置选择什么值，以使隐藏单元的响应如图 8.4b–d 所示？
 
-**习题 8.3\*** 给定一个由 `I` 个输入/输出对 `{x[i], y[i]}` 组成的训练数据集，展示如何用闭式解求出 图 8.4a 中模型使用最小二乘损失函数时的参数 `{β, ω[1], ω[2], ω[3]}`。
+**习题 8.3\*** 给定一个由 `I` 个输入/输出对 `{x[i], y[i]}` 组成的训练数据集，展示如何用闭式解求出图 8.4a 中模型使用最小二乘损失函数时的参数 `{β, ω[1], ω[2], ω[3]}`。
 
-**习题 8.4** 考虑 图 8.10b 中的曲线，在隐藏层大小为 200（将拥有 50,410 个参数）的模型训练点处。如果我们将训练样本数量从 10,000 增加到 50,410，你预测训练和测试性能会发生什么变化？
+**习题 8.4** 考虑图 8.10b 中的曲线，在隐藏层大小为 200（将拥有 50,410 个参数）的模型训练点处。如果我们将训练样本数量从 10,000 增加到 50,410，你预测训练和测试性能会发生什么变化？
 
 **习题 8.5** 考虑模型容量超过训练数据点数量，且模型足够灵活以将训练损失降至零的情况。这对拟合异方差模型有什么影响？提出一种方法来解决你发现的任何问题。
 
@@ -3349,17 +3272,13 @@ Hyperband (Li et al., 2017b) 是一种用于超参数优化的多臂老虎机策
 
 ![图 8.13 典型集。a) 二维标准正态分布。圆圈是该分布的四个样本。随着距离中心的增加，概率降低，但该半径处的空间体积（即相邻均匀间距圆圈之间的面积）增加。b) 这些因素相互权衡，使得样本距离中心的距离直方图有一个明显的峰值。c) 在更高维度中，这种效应变得更极端，观测到接近均值的样本的概率变得微乎其微。尽管最可能的点位于分布的均值处，但典型样本位于一个相对狭窄的壳层中。](img/c8-fig-0013.jpg)
 
-
-
-
-
 # 第 9 章 正则化
 
 第 8 章介绍了如何衡量模型性能，并指出训练数据和测试数据之间可能存在显著的性能差距。造成这种差异的可能原因包括：(i) 模型描述了训练数据的统计特性，而这些特性并不代表从输入到输出的真实映射关系（过拟合）；(ii) 模型在没有训练样本的区域是无约束的，导致预测结果次优。
 
 本章讨论*正则化*技术。这些是一系列能够缩小训练性能与测试性能之间泛化差距的方法。严格来说，正则化涉及向损失函数添加显式项，以偏向特定的参数选择。然而，在机器学习中，该术语通常用于指代任何能提高泛化能力的策略。
 
-我们首先从最严格的意义上探讨正则化。随后展示随机梯度下降算法本身如何偏向某些解。这被称为隐式正则化。在此之后，我们将探讨一组能提升测试性能的启发式方法。这些方法包括早停法、集成学习、Dropout、标签平滑和迁移学习。
+我们首先从最严格的意义上探讨正则化。随后展示随机梯度下降算法本身如何偏向某些解。这被称为隐式正则化。在此之后，我们将探讨一组能提升测试性能的启发式方法。这些方法包括早停法、集成学习、`Dropout`、标签平滑和迁移学习。
 
 ## 9.1 显式正则化
 
@@ -3368,6 +3287,7 @@ Hyperband (Li et al., 2017b) 是一种用于超参数优化的多臂老虎机策
 ```
 L[ϕ] = (1/N) Σ ℓ[i][x[i], y[i]]
 ```
+
  (9.1)
 
 其中各个项 `ℓ[i][x[i], y[i]]` 衡量每个训练对的网络预测 `f[x[i], ϕ]` 与输出目标 `y[i]` 之间的不匹配程度。为了使该最小化过程偏向某些解，我们引入一个额外项：
@@ -3375,6 +3295,7 @@ L[ϕ] = (1/N) Σ ℓ[i][x[i], y[i]]
 ```
 L_reg[ϕ] = L[ϕ] + λ · g[ϕ]
 ```
+
  (9.2)
 
 其中 `g[ϕ]` 是一个函数，返回一个标量，当参数不那么受青睐时，该标量取较大值。项 `λ` 是一个正标量，控制原始损失函数与正则化项的相对贡献。正则化损失函数的极小值通常不同于原始损失函数的极小值，因此训练过程会收敛到不同的参数值（图 9.1）。
@@ -3388,6 +3309,7 @@ L_reg[ϕ] = L[ϕ] + λ · g[ϕ]
 ```
 L[ϕ] = -log Pr(y[1...N] | x[1...N], ϕ)
 ```
+
  (9.3)
 
 正则化项可以被视为一个*先验 Pr(ϕ)*，它代表在观测数据之前关于参数的知识：
@@ -3395,6 +3317,7 @@ L[ϕ] = -log Pr(y[1...N] | x[1...N], ϕ)
 ```
 Pr(ϕ | x[1...N], y[1...N]) ∝ Pr(y[1...N] | x[1...N], ϕ) · Pr(ϕ)
 ```
+
  (9.4)
 
 通过取对数并乘以负一，回到负对数似然损失函数，我们可以看到 `λ · g[ϕ] = -log[Pr(ϕ)]`。
@@ -3406,6 +3329,7 @@ Pr(ϕ | x[1...N], y[1...N]) ∝ Pr(y[1...N] | x[1...N], ϕ) · Pr(ϕ)
 ```
 g[ϕ] = Σ ϕ_j²
 ```
+
  (9.5)
 
 其中 `j` 为参数索引。这也被称为*Tikhonov 正则化*或*岭回归*（当应用于矩阵时，称为*Frobenius 范数正则化*）。
@@ -3429,25 +3353,23 @@ L2 正则化
 图 9.2 展示了使用权重衰减和不同正则化系数 `λ` 值拟合图 8.4 中简化网络的效果。当 `λ` 很小时，影响微乎其微。然而，随着 `λ` 增大，对数据的拟合变得不那么精确，函数变得更平滑。这可能因两个原因改善测试性能：
 
 *   如果网络发生过拟合，添加正则化项意味着网络必须在盲目拟合数据与追求平滑之间做出权衡。一种理解方式是：方差导致的误差减小了（模型不再需要通过每个数据点），代价是偏差增加了（模型只能描述平滑函数）。
+
 *   当网络过参数化时，部分额外的模型容量描述了没有训练数据的区域。在此处，正则化项会偏向于在附近点之间平滑插值的函数。在缺乏关于真实函数知识的情况下，这是合理的行为。
 
 ![Figure 9.2 简化网络中的 L2 正则化（见图 8.4）。a–f) 随着正则化系数 λ 增大的拟合函数。黑色曲线为真实函数，橙色圆圈为带噪训练数据，青色曲线为拟合模型。λ 较小时（a–b 面板），拟合函数精确通过数据点。λ 适中时（c–d 面板），函数更平滑且更接近真实情况。λ 较大时（e–f 面板），拟合函数比真实情况更平滑，导致拟合变差。](img/c9-fig-0002.jpg)
 
-
-
-
-
-### 9.2 隐式正则化
+## 9.2 隐式正则化
 
 一个引人入胜的最新发现是，无论是梯度下降还是随机梯度下降，都不会中立地移动到损失函数的最小值处；它们各自都表现出对某些解的偏好，而非其他解。这被称为*隐式正则化*。
 
-#### 9.2.1 梯度下降中的隐式正则化
+### 9.2.1 梯度下降中的隐式正则化
 
 考虑一个步长为无穷小的梯度下降连续版本。参数 `ϕ` 的变化将由以下微分方程控制：
 
 ```
 dϕ/dt = -∇L(ϕ)
 ```
+
 (9.6)
 
 梯度下降用一系列大小为 `α` 的离散步骤来近似这一过程：
@@ -3455,6 +3377,7 @@ dϕ/dt = -∇L(ϕ)
 ```
 ϕ_{t+1} = ϕ_t - α∇L(ϕ_t)
 ```
+
 (9.7)
 
 离散化导致了与连续路径的偏离（**图 9.3**）。
@@ -3466,17 +3389,19 @@ dϕ/dt = -∇L(ϕ)
 ```
 L_mod(ϕ) = L(ϕ) + (α/4)||∇L(ϕ)||²
 ```
+
 (9.8)
 
 换句话说，离散轨迹会被梯度范数较大（曲面较陡峭）的地方排斥。这无论如何都不会改变梯度为零的极小值位置。然而，它改变了其他地方的有效损失函数并修改了优化轨迹，这可能会收敛到不同的极小值。梯度下降导致的隐式正则化可能是全批量梯度下降在较大学习率下泛化性能更好的原因（**图 9.5a**）。
 
-#### 9.2.2 随机梯度下降中的隐式正则化
+### 9.2.2 随机梯度下降中的隐式正则化
 
-类似的分析可以应用于随机梯度下降。现在我们寻找一个修正后的损失函数，使得连续版本到达的位置与可能的随机 SGD 更新的平均值到达的位置相同。可以证明这是：
+类似的分析可以应用于随机梯度下降。现在我们寻找一个修正后的损失函数，使得连续版本到达的位置与可能的随机 `SGD` 更新的平均值到达的位置相同。可以证明这是：
 
 ```
 L_mod(ϕ) = L(ϕ) + (α/4)||∇L(ϕ)||² + (α/4)Var_b[∇L_b(ϕ)]
 ```
+
 (9.9)
 
 这里，`L_b` 是一个周期中 `B` 个批次中的第 `b` 个批次的损失，`L` 和 `L_b` 现在分别代表完整数据集中 `I` 个个体损失的平均值和批次中 `|B|` 个个体损失的平均值：
@@ -3484,13 +3409,14 @@ L_mod(ϕ) = L(ϕ) + (α/4)||∇L(ϕ)||² + (α/4)Var_b[∇L_b(ϕ)]
 ```
 L(ϕ) = (1/I) Σ_i L_i(ϕ),  L_b(ϕ) = (1/|B|) Σ_{i∈B} L_i(ϕ)
 ```
+
 (9.10)
 
-公式 9.9 揭示了一个额外的正则化项，它对应于批次损失 `L_b` 的梯度方差。换句话说，SGD 隐式地偏向于梯度稳定的地方（所有批次对斜率达成一致）。再次强调，这修改了优化过程的轨迹（**图 9.4**），但不一定改变全局最小值的位置；如果模型是过参数化的，那么它可能精确拟合所有训练数据，因此在全局最小值处，*所有*这些梯度项都将为零。
+公式 9.9 揭示了一个额外的正则化项，它对应于批次损失 `L_b` 的梯度方差。换句话说，`SGD` 隐式地偏向于梯度稳定的地方（所有批次对斜率达成一致）。再次强调，这修改了优化过程的轨迹（**图 9.4**），但不一定改变全局最小值的位置；如果模型是过参数化的，那么它可能精确拟合所有训练数据，因此在全局最小值处，*所有*这些梯度项都将为零。
 
 **图 9.4** 随机梯度下降的隐式正则化。a) Gabor 模型的原始损失函数（第 6.1.2 节）。b) 来自梯度下降的隐式正则化项惩罚梯度模的平方。c) 来自随机梯度下降的额外隐式正则化惩罚批次梯度的方差。d) 修正后的损失函数（原始损失加上两个隐式正则化分量之和）。
 
-SGD 的泛化性能优于梯度下降，且较小的批次大小通常比较大的批次表现更好（**图 9.5b**）。一种可能的解释是，固有的随机性使算法能够到达损失函数的不同部分。然而，也有可能部分或全部性能提升归因于隐式正则化；这鼓励所有数据都拟合良好的解（因此批次方差小），而不是部分数据拟合极好而其他数据拟合较差的解（可能具有相同的总体损失，但批次方差较大）。前者更有可能泛化得更好。
+`SGD` 的泛化性能优于梯度下降，且较小的批次大小通常比较大的批次表现更好（**图 9.5b**）。一种可能的解释是，固有的随机性使算法能够到达损失函数的不同部分。然而，也有可能部分或全部性能提升归因于隐式正则化；这鼓励所有数据都拟合良好的解（因此批次方差小），而不是部分数据拟合极好而其他数据拟合较差的解（可能具有相同的总体损失，但批次方差较大）。前者更有可能泛化得更好。
 
 ---
 
@@ -3500,15 +3426,9 @@ SGD 的泛化性能优于梯度下降，且较小的批次大小通常比较大�
 
 ---
 
-**图 9.5** 来自 MNIST-1D（见图 8.1）的 4000 个训练和 4000 个测试样本在具有两个隐藏层的神经网络上的学习率和批次大小的影响。a) 大学习率的表现优于中等或较小的学习率。在每种情况下，迭代次数均为 6000×学习率，因此每个解都有机会移动相同的距离。b) 较小批次大小的表现更优。在每种情况下，迭代次数的选择使得训练数据在大致相同的模型容量下被记忆。
+**图 9.5** 来自 `MNIST-1D`（见图 8.1）的 4000 个训练和 4000 个测试样本在具有两个隐藏层的神经网络上的学习率和批次大小的影响。a) 大学习率的表现优于中等或较小的学习率。在每种情况下，迭代次数均为 6000×学习率，因此每个解都有机会移动相同的距离。b) 较小批次大小的表现更优。在每种情况下，迭代次数的选择使得训练数据在大致相同的模型容量下被记忆。
 
 ### 9.3 提升性能的启发式方法
-
-
-
-
-
-# 9.3 改善泛化的其他启发式方法
 
 我们已经看到，添加显式正则化项通过向损失函数添加额外项，鼓励训练算法找到一个好的解。这也会作为随机梯度下降的一个无意（但看似有帮助）的副产品隐式发生。本节介绍用于改善泛化的其他启发式方法。
 
@@ -3522,11 +3442,13 @@ SGD 的泛化性能优于梯度下降，且较小的批次大小通常比较大�
 
 早停法只有一个超参数，即终止学习后的步数。像往常一样，这是使用验证集（第 8.5 节）经验性地选择的。然而，对于早停法，无需训练多个模型即可选择超参数。模型只训练一次，每 `T` 次迭代监控一次验证集上的性能，并存储相关模型。选择验证性能最好的存储模型。
 
+
+
 #### 9.3.2 集成学习
 
-减少训练数据和测试数据之间泛化差距的另一种方法是构建多个模型并对其预测进行平均。这样一组模型称为 *集成*。这种技术以训练和存储多个模型并多次执行推理为代价，可靠地提高了测试性能。
+减少训练数据和测试数据之间泛化差距的另一种方法是构建多个模型并对其预测进行平均。这样一组模型称为*集成*。这种技术以训练和存储多个模型并多次执行推理为代价，可靠地提高了测试性能。
 
-模型可以通过取输出的平均值（针对回归问题）或 pre-softmax 激活值的平均值（针对分类问题）来组合。其假设是模型误差是独立的，将会相互抵消。或者，我们可以取输出的中位数（针对回归问题）或频率最高的预测类别（针对分类问题），使预测更加稳健。
+模型可以通过取输出的平均值（针对回归问题）或`pre-softmax`激活值的平均值（针对分类问题）来组合。其假设是模型误差是独立的，将会相互抵消。或者，我们可以取输出的中位数（针对回归问题）或频率最高的预测类别（针对分类问题），使预测更加稳健。
 
 训练不同模型的一种方法就是使用不同的随机初始化。这可能有助于远离训练数据的输入空间区域。在这里，拟合函数相对不受约束，不同的模型可能会产生不同的预测，因此多个模型的平均值可能比任何单一模型都泛化得更好。
 
@@ -3538,7 +3460,7 @@ Ensembling
 
 ---
 
-第二种方法是通过有放回地重采样训练数据生成多个不同的数据集，并从每个数据集训练一个不同的模型。这被称为 *自助聚合* 或简称 *Bagging*（图 9.7）。它具有平滑数据的效果；如果某个数据点不在某个训练集中，模型将从附近的点进行插值；因此，如果该点是异常值，拟合函数在该区域将更加温和。其他方法包括使用不同超参数训练模型，或训练完全不同系列的模型。
+第二种方法是通过有放回地重采样训练数据生成多个不同的数据集，并从每个数据集训练一个不同的模型。这被称为*自助聚合*或简称*Bagging*（图 9.7）。它具有平滑数据的效果；如果某个数据点不在某个训练集中，模型将从附近的点进行插值；因此，如果该点是异常值，拟合函数在该区域将更加温和。其他方法包括使用不同超参数训练模型，或训练完全不同系列的模型。
 
 ![Figure 9.7 Ensemble methods. a) Fitting a single model (gray curve) to the entire dataset (orange points). b–e) Four models created by re-sampling the data with replacement (bagging) four times (size of orange point indicates number of times the data point was re-sampled). f) When we average the predictions of this ensemble, the result (cyan curve) is smoother than the result from panel (a) for the full dataset (gray curve) and will probably generalize better.](img/c9-fig-0007.jpg)
 
@@ -3546,7 +3468,7 @@ Ensembling
 
 #### 9.3.3 Dropout
 
-*Dropout* 在 `SGD` 的每次迭代中随机将一部分（通常为 50%）隐藏单元钳制为零（图 9.8）。这使得网络对任何给定隐藏单元的依赖性降低，并鼓励权重具有较小的幅度，从而减少隐藏单元的存在或缺失导致的函数变化。
+*Dropout*在`SGD`的每次迭代中随机将一部分（通常为 50%）隐藏单元钳制为零（图 9.8）。这使得网络对任何给定隐藏单元的依赖性降低，并鼓励权重具有较小的幅度，从而减少隐藏单元的存在或缺失导致的函数变化。
 
 ![Figure 9.8 Dropout. a) Original network. b–d) At each training iteration, a random subset of hidden units is clamped to zero (gray nodes). The result is that the incoming and outgoing weights from these units have no effect, so we are training with a slightly different network each time.](img/c9-fig-0008.jpg)
 
@@ -3556,21 +3478,17 @@ Ensembling
 
 当多个单元以这种方式合谋时，消除其中一个（如在 Dropout 中会发生的）会导致输出函数发生显著变化，并传播到该单元激活的半空间（图 9.9b）。后续的梯度下降步骤将尝试补偿这种变化所引起的影响，并且这种依赖关系将随时间被消除。总体效果是，即使它们对损失没有任何贡献，训练数据点之间巨大的不必要变化也会逐渐被移除（图 9.9）。
 
-
-
-
-
 ![图 9.9 Dropout 机制。a) 曲线中不希望出现的折点是由斜率的连续增加、减少（在圆圈标记的连接处），然后再次增加以使曲线回到其原始轨迹所导致的。这里我们使用的是全批量梯度下降，且模型已经尽可能好地拟合了数据，因此进一步的训练不会消除该折点。b) 考虑如果我们移除在面板 (a) 中产生圆圈标记连接处的隐藏单元，就像使用 dropout 时可能发生的那样。如果没有斜率的减少，函数的右侧将呈上升轨迹，随后的梯度下降步骤将旨在补偿这一变化。c) 经过 2000 次迭代后的曲线，迭代过程为：(i) 随机移除导致折点的三个隐藏单元之一，以及 (ii) 执行一个梯度下降步骤。该折点不影响损失，但仍然被这种 dropout 机制的近似所移除。](img/c9-fig-0009.jpg)
 
 图 9.9 Dropout 机制。a) 曲线中不希望出现的折点是由斜率的连续增加、减少（在圆圈标记的连接处），然后再次增加以使曲线回到其原始轨迹所导致的。这里我们使用的是全批量梯度下降，且模型已经尽可能好地拟合了数据，因此进一步的训练不会消除该折点。b) 考虑如果我们移除在面板 (a) 中产生圆圈标记连接处的隐藏单元，就像使用 dropout 时可能发生的那样。如果没有斜率的减少，函数的右侧将呈上升轨迹，随后的梯度下降步骤将旨在补偿这一变化。c) 经过 2000 次迭代后的曲线，迭代过程为：(i) 随机移除导致折点的三个隐藏单元之一，以及 (ii) 执行一个梯度下降步骤。该折点不影响损失，但仍然被这种 dropout 机制的近似所移除。
 
-在测试时，我们可以像往常一样运行网络，所有隐藏单元均处于激活状态；然而，网络现在拥有的隐藏单元比在任何给定迭代中训练时的都要多，因此我们将权重乘以 1 减去 dropout 概率以进行补偿。这被称为 `weight scaling inference rule`（权重缩放推理规则）。另一种推理方法是使用 `Monte Carlo dropout`（蒙特卡洛 dropout），即我们使用不同的随机单元子集（在训练中被钳制为零）多次运行网络并组合结果。这与集成学习密切相关，因为网络的每个随机版本都是一个不同的模型；然而，我们在这里不必训练或存储多个网络。
+在测试时，我们可以像往常一样运行网络，所有隐藏单元均处于激活状态；然而，网络现在拥有的隐藏单元比在任何给定迭代中训练时的都要多，因此我们将权重乘以 1 减去 dropout 概率以进行补偿。这被称为`weight scaling inference rule`（权重缩放推理规则）。另一种推理方法是使用`Monte Carlo dropout`（蒙特卡洛 dropout），即我们使用不同的随机单元子集（在训练中被钳制为零）多次运行网络并组合结果。这与集成学习密切相关，因为网络的每个随机版本都是一个不同的模型；然而，我们在这里不必训练或存储多个网络。
 
 #### 9.3.4 应用噪声
 
 Dropout 可以被解释为向网络激活值施加乘性伯努利噪声。这引出了在训练期间向网络的其他部分施加噪声以使最终模型更加鲁棒的想法。
 
-一种选择是向输入数据添加噪声；这会使学习到的函数变得平滑（图 9.10）。对于回归问题，可以证明这等价于添加一个正则化项，该项惩罚网络输出相对于其输入的导数。一个极端的变体是 `adversarial training`（对抗训练），其中优化算法主动搜索导致输出发生大幅变化的输入小扰动。这些可以被视为最坏情况下的加性噪声向量。
+一种选择是向输入数据添加噪声；这会使学习到的函数变得平滑（图 9.10）。对于回归问题，可以证明这等价于添加一个正则化项，该项惩罚网络输出相对于其输入的导数。一个极端的变体是`adversarial training`（对抗训练），其中优化算法主动搜索导致输出发生大幅变化的输入小扰动。这些可以被视为最坏情况下的加性噪声向量。
 
 ---
 
@@ -3578,15 +3496,15 @@ Dropout 可以被解释为向网络激活值施加乘性伯努利噪声。这引
 
 ---
 
-![图 9.10 向输入添加噪声。在 SGD 的每一步中，方差为 c9-fig-5012.jpg 的随机噪声被添加到批次数据中。a–c) 具有不同噪声水平的拟合模型（小点代表十个样本）。添加更多噪声会使拟合函数（青色线）变得更平滑。](img/c9-fig-0010.jpg)
+![图 9.10 向输入添加噪声。在 SGD 的每一步中，方差为 ![c9-fig-5012.jpg](img/c9-fig-5012.jpg) 的随机噪声被添加到批次数据中。a–c) 具有不同噪声水平的拟合模型（小点代表十个样本）。添加更多噪声会使拟合函数（青色线）变得更平滑。](img/c9-fig-0010.jpg)
 
-图 9.10 向输入添加噪声。在 SGD 的每一步中，方差为 ![c9-fig-5012.jpg](img/c9-fig-5012.jpg) 的随机噪声被添加到批次数据中。a–c) 具有不同噪声水平的拟合模型（小点代表十个样本）。添加更多噪声会使拟合函数（青色线）变得更平滑。
+图 9.10 向输入添加噪声。在 SGD 的每一步中，方差为`c9-fig-5012.jpg`的随机噪声被添加到批次数据中。a–c) 具有不同噪声水平的拟合模型（小点代表十个样本）。添加更多噪声会使拟合函数（青色线）变得更平滑。
 
 第二种可能性是向权重添加噪声。这鼓励网络即使在权重发生微小扰动时也能做出合理的预测。结果是训练收敛到宽阔、平坦区域中间的局部极小值处，在那里改变单个权重并不重要。
 
 最后，我们可以扰动标签。多类分类的最大似然准则旨在以绝对确定性预测正确类别（公式 5.24）。为此，最终的网络激活值（即 softmax 函数之前的值）被推向正确类别的极大值和错误类别的极小值。
 
-我们可以通过假设训练标签中有一定比例 `ρ` 是不正确的，且以相等的概率属于其他类别，来抑制这种过度自信的行为。这可以通过在每次训练迭代中随机更改标签来实现。然而，通过更改损失函数以最小化预测分布与一个分布之间的交叉熵，可以达到相同的目的，在该分布中，真实标签的概率为 1 − `ρ`，而其他类别具有相等的概率。这被称为 `label smoothing`（标签平滑），并在各种场景中提高了泛化能力。
+我们可以通过假设训练标签中有一定比例`ρ`是不正确的，且以相等的概率属于其他类别，来抑制这种过度自信的行为。这可以通过在每次训练迭代中随机更改标签来实现。然而，通过更改损失函数以最小化预测分布与一个分布之间的交叉熵，可以达到相同的目的，在该分布中，真实标签的概率为 1 − `ρ`，而其他类别具有相等的概率。这被称为`label smoothing`（标签平滑），并在各种场景中提高了泛化能力。
 
 ---
 
@@ -3596,13 +3514,13 @@ Dropout 可以被解释为向网络激活值施加乘性伯努利噪声。这引
 
 #### 9.3.5 贝叶斯推断
 
-最大似然方法通常过于自信；在训练阶段，它选择最可能的参数，并基于由这些参数定义的模型进行预测。然而，许多参数值可能大体上与数据兼容，且仅略微不那么可能。贝叶斯方法将参数视为未知变量，并利用贝叶斯法则计算参数 `ϕ` 在给定训练数据 `{xi, yi}` 条件下的分布 `Pr(ϕ|{xi, yi})`：
+最大似然方法通常过于自信；在训练阶段，它选择最可能的参数，并基于由这些参数定义的模型进行预测。然而，许多参数值可能大体上与数据兼容，且仅略微不那么可能。贝叶斯方法将参数视为未知变量，并利用贝叶斯法则计算参数`ϕ`在给定训练数据`{xi, yi}`条件下的分布`Pr(ϕ|{xi, yi})`：
 
 ![c9-fig-5013.jpg](img/c9-fig-5013.jpg)
 
 (9.11)
 
-其中 `Pr(ϕ)` 是参数的先验概率，分母是一个归一化项。因此，每个参数选择都被分配了一个概率（图 9.11）。
+其中`Pr(ϕ)`是参数的先验概率，分母是一个归一化项。因此，每个参数选择都被分配了一个概率（图 9.11）。
 
 ---
 
@@ -3614,12 +3532,9 @@ Dropout 可以被解释为向网络激活值施加乘性伯努利噪声。这引
 
 ![图 9.11 简化网络模型的贝叶斯方法（见图 8.4）。参数被视为不确定的。一组参数的后验概率 `Pr(ϕ|{xi, yi})` 由其与数据 `{xi, yi}` 的兼容性和先验分布 `Pr(ϕ)` 决定。a–c) 使用均值为零、具有三种方差的正态分布先验，从后验中采样的两组参数（青色曲线）。当先验方差较小时，参数也倾向于较小，函数也更平滑。d–f) 推理通过对所有可能的参数值进行加权求和来进行，权重为后验概率。这产生了均值的预测（青色曲线）和相关的不确定性（灰色区域为两个标准差）。](img/c9-fig-0011.jpg)
 
-图 9.11 简化网络模型的贝叶斯方法（见图 8.4）。参数被视为不确定的。一组参数的后验概率 `Pr(ϕ|{xi, yi})` 由其与数据 `{xi, yi}` 的兼容性和先验分布 `Pr(ϕ)` 决定。a–c) 使用均值为零、具有三种方差的正态分布先验，从后验中采样的两组参数（青色曲线）。当先验方差较小时，参数也倾向于较小，函数也更平滑。d–f) 推理通过对所有可能的参数值进行加权求和来进行，权重为后验概率。这产生了均值的预测（青色曲线）和相关的不确定性（灰色区域为两个标准差）。
+图 9.11 简化网络模型的贝叶斯方法（见图 8.4）。参数被视为不确定的。一组参数的后验概率`Pr(ϕ|{xi, yi})`由其与数据`{xi, yi}`的兼容性和先验分布`Pr(ϕ)`决定。a–c) 使用均值为零、具有三种方差的正态分布先验，从后验中采样的两组参数（青色曲线）。当先验方差较小时，参数也倾向于较小，函数也更平滑。d–f) 推理通过对所有可能的参数值进行加权求和来进行，权重为后验概率。这产生了均值的预测（青色曲线）和相关的不确定性（灰色区域为两个标准差）。
 
-
-
-
-针对新输入 `x` 的预测 `y` 是每个参数集预测的无限加权和（即积分），其中权重是相关概率：
+针对新输入`x`的预测`y`是每个参数集预测的无限加权和（即积分），其中权重是相关概率：
 
 ![c9-fig-5014.jpg](img/c9-fig-5014.jpg)
 
@@ -3671,23 +3586,26 @@ Notebook 9.5
 
 ![Figure 9.13 Data augmentation. For some problems, each data example can be transformed to augment the dataset. a) Original image. b–h) Various geometric and photometric transformations of this image. For image classification, all these images still have the same label, "bird." Adapted from Wu et al. (2015a).](img/c9-fig-0013.jpg)
 
+
+
 图 9.13 数据增强。对于某些问题，每个数据样本都可以被变换以扩充数据集。a) 原始图像。b–h) 该图像的各种几何和光度变换。对于图像分类，所有这些图像仍具有相同的标签“鸟”。改编自 Wu et al. (2015a)。
 
-以这种方式生成额外训练数据称为*数据增强*。其目的是教会模型对这些无关的数据变换保持不变性。
+以这种方式生成额外训练数据称为`数据增强`。其目的是教会模型对这些无关的数据变换保持不变性。
 
 ### 9.4 总结
 
 显式正则化涉及向损失函数添加一个额外项，从而改变极小值的位置。该项可被解释为参数上的先验概率。具有有限步长的随机梯度下降不会中性地下降到损失函数的极小值。这种偏差可被解释为向损失函数添加了额外项，这被称为隐式正则化。
 
-
-
-
 ### 正则化方法与泛化改进
 
 有许多启发式方法可以改进泛化能力，包括早停法、Dropout、集成学习、贝叶斯方法、添加噪声、迁移学习、多任务学习和数据增强。这些方法背后有四大主要原则（参见图 9.14）。我们可以：
+
 (i) 鼓励函数更平滑（如 `L2` 正则化）；
+
 (ii) 增加数据量（如数据增强）；
+
 (iii) 组合模型（如集成学习）；
+
 (iv) 寻找更宽的极小值（如向网络权重添加噪声）。
 
 ![Figure 9.14 Regularization methods. The regularization methods discussed in this chapter aim to improve generalization by one of four mechanisms. Some methods aim to make the modeled function smoother. Other methods increase the effective amount of data. The third group of methods combine multiple models and hence mitigate against uncertainty in the fitting process. Finally, the fourth group of methods encourages the training process to converge to a wide minimum where small errors in the estimated parameters are less important (see also figure 20.11).](img/c9-fig-0014.jpg)
@@ -3707,6 +3625,7 @@ Kukačka 等人（2017）提供了深度学习中正则化技术的概述和分�
 ```
 c9-fig-5015.jpg
 ```
+
  (9.13)
 
 其中，像往常一样，`α` 是学习率，`L` 是损失。这与梯度下降相同，只是在梯度更新之前，权重按因子 `1 − λ′` 减小。对于标准 SGD，权重衰减等同于系数 `λ = λ′/2α` 的 `L2` 正则化（公式 9.5）。然而，对于 `Adam`，学习率 `α` 对每个参数都不同，因此 `L2` 正则化和权重衰减有所不同。Loshchilov & Hutter（2019）提出了 `AdamW`，它修改了 `Adam` 以正确实现权重衰减，并表明这能提高性能。
@@ -3756,6 +3675,7 @@ c9-fig-5015.jpg
 ```
 c9-fig-5016.jpg
 ```
+
  (9.14)
 
 其中 `g[ϕ[0]]` 是损失函数梯度的负值，`α` 是步长。当 `α → 0` 时，梯度下降过程可用微分方程描述：
@@ -3763,6 +3683,7 @@ c9-fig-5016.jpg
 ```
 c9-fig-5017.jpg
 ```
+
  (9.15)
 
 对于典型步长 `α`，离散版和连续版收敛到不同的解。我们可以使用 `backward error analysis` 找到连续版的修正项 `g[1][ϕ]`：
@@ -3770,6 +3691,7 @@ c9-fig-5017.jpg
 ```
 c9-fig-5018.jpg
 ```
+
  (9.16)
 
 使其产生与离散版相同的结果。
@@ -3779,6 +3701,7 @@ c9-fig-5018.jpg
 ```
 c9-fig-5019.jpg
 ```
+
  (9.17)
 
 在第二行中，我们引入了修正项（公式 9.16），在最后一行，我们移除了高于 `α²` 阶的项。
@@ -3788,6 +3711,7 @@ c9-fig-5019.jpg
 ```
 c9-fig-5020.jpg
 ```
+
  (9.18)
 
 训练期间，演化函数 `g[ϕ]` 是损失梯度的负值：
@@ -3795,6 +3719,7 @@ c9-fig-5020.jpg
 ```
 c9-fig-5021.jpg
 ```
+
  (9.19)
 
 这等同于在损失函数上执行连续梯度下降：
@@ -3802,13 +3727,10 @@ c9-fig-5021.jpg
 ```
 c9-fig-5022.jpg
 ```
+
  (9.20)
 
 因为公式 9.19 的右边是公式 9.20 中式子的导数。
-
-
-
-
 
 这种隐式正则化的表述由 Barrett 和 Dherin (2021) 开发，并由 Smith 等人 (2021) 扩展到随机梯度下降。Smith 等人 (2020) 和其他人已经表明，与全批次梯度下降相比，使用小或中等批次大小的随机梯度下降在测试集上表现更好，这在一定程度上可能归因于隐式正则化。
 
@@ -3858,9 +3780,6 @@ Ishida 等人 (2020) 使用了一种名为 `flooding`（淹没法）的技术，
 
 对于某些模型，包括 图 9.11 中的简化神经网络模型，贝叶斯预测分布可以以闭式计算（参见 Bishop, 2006; Prince, 2012）。对于神经网络，参数上的后验分布无法用闭式表示，必须进行近似。两种主要方法是变分贝叶斯 (Hinton & van Camp, 1993; MacKay, 1995; Barber & Bishop, 1997; Blundell 等人, 2015)，即用一个更简单的易处理分布来近似后验，以及马尔可夫链蒙特卡洛 (MCMC) 方法，通过抽取一组样本来近似分布 (Neal, 1995; Welling & Teh, 2011; Chen 等人, 2014; Ma 等人, 2015; Li 等人, 2016a)。样本的生成可以集成到 SGD 中，这被称为随机梯度 MCMC (参见 Ma 等人, 2015)。最近发现，“冷却”参数上的后验分布（使其更尖锐）可以改善这些模型的预测 (Wenzel 等人, 2020a)，但目前尚不完全理解这一点 (参见 Noci 等人, 2021)。
 
-
-
-
 #### 迁移学习
 
 迁移学习在视觉任务中效果极佳（Sharif Razavian 等人，2014），并推动了计算机视觉的快速发展，包括最初的 AlexNet 结果（Krizhevsky 等人，2012）。迁移学习也影响了自然语言处理（NLP），许多模型基于 BERT 模型（Devlin 等人，2019）的预训练特征。更多信息可参阅 Zhuang 等人（2020）和 Yang 等人（2020b）。
@@ -3874,6 +3793,8 @@ NLP 中的自监督学习可以基于预测被遮挡的词（Devlin 等人，201
 #### 数据增强
 
 图像数据增强至少可以追溯到 LeCun 等人（1998），并促成了 AlexNet 的成功（Krizhevsky 等人，2012），其中数据集增加了 2048 倍。图像增强方法包括几何变换、改变或操纵色彩空间、噪声注入和应用空间滤波器。更复杂的技术包括随机混合图像（Inoue，2018；Summers & Dinneen，2019）、随机擦除图像部分（Zhong 等人，2020）、风格迁移（Jackson 等人，2019）和随机交换图像补丁（Kang 等人，2017）。此外，许多研究使用生成对抗网络或 GANs（见第 15 章）生成新颖但合理的数据样本（例如 Calimeri 等人，2017）。在其他情况下，数据通过对抗样本（Goodfellow 等人，2015a）进行增强，对抗样本是训练数据的微小扰动，会导致样本被错误分类。图像数据增强的综述可参阅 Shorten & Khoshgoftaar（2019）。
+
+
 
 声学数据的增强方法包括音高偏移、时间拉伸、动态范围压缩和添加随机噪声（例如 Abeßer 等人，2017；Salamon & Bello，2017；Xu 等人，2015；Lasseck，2018），以及混合数据对（Zhang 等人，2017c；Yun 等人，2019）、遮挡特征（Park 等人，2019）和使用 GANs 生成新数据（Mun 等人，2017）。语音数据的增强包括声道长度扰动（Jaitly & Hinton，2013；Kanda 等人，2013）、风格迁移（Gales，1998；Ye & Young，2004）、添加噪声（Hannun 等人，2014）和语音合成（Gales 等人，2009）。
 
@@ -3935,8 +3856,6 @@ NLP 中的自监督学习可以基于预测被遮挡的词（Devlin 等人，201
 
 图像具有三个特性，表明需要专门的模型架构。首先，它们是高维的。分类任务的典型图像包含 224×224 个 RGB 值（即 150,528 个输入维度）。全连接网络中的隐藏层通常大于输入尺寸，因此即使对于浅层网络，权重数量也将超过 150,528²，即 220 亿。这在所需训练数据、内存和计算方面带来了明显的实际问题。
 
-
-
 其次，相邻的图像像素在统计上是相关的。然而，全连接网络没有“相邻”的概念，而是平等地对待每个输入之间的关系。如果以相同的方式随机打乱训练图像和测试图像的像素，网络仍可进行训练，且没有实际区别。第三，图像的解释在几何变换下是稳定的。如果将一棵树的图像向左平移几个像素，它仍然是一棵树的图像。然而，这种平移改变了网络的每一个输入。因此，全连接模型必须在每个位置分别学习代表树的像素模式，这显然是低效的。
 
 卷积层使用在整个图像中共享的参数，独立处理每个局部图像区域。它们比全连接层使用更少的参数，利用了相邻像素之间的空间关系，并且不必在每个位置重新学习像素的解释。一个主要由卷积层组成的网络被称为 `convolutional neural network` 或 `CNN`。
@@ -3989,12 +3908,7 @@ Problem 10.1
 
 有两种常见方法。第一种是在输入边缘填充新值，然后照常进行。`Zero padding`（零填充）假设输入在其有效范围之外为零（图 10.2c）。其他可能性包括将输入视为循环的，或在边界处反射它。第二种方法是丢弃卷积核超出输入位置范围的输出位置。这些 `valid convolutions`（有效卷积）的优点是在输入边缘不引入额外信息。然而，它们的缺点是表示的尺寸会减小。
 
-#### 10.2.3 步幅、核大小和膨胀
-
-
-
-
-## 10.2.3 步幅、核大小和膨胀率
+#### 10.2.3 步幅、核大小和膨胀率
 
 在上面的示例中，每个输出都是最近三个输入的总和。然而，这只是卷积操作大家族中的一种，该家族的成员由其 `stride`（步幅）、`kernel size`（核大小）和 `dilation rate`（膨胀率）来区分。当我们在每个位置都计算输出时，我们称之为步幅为一。不过，也可以将核按大于一的步幅进行移动。如果步幅为二，我们创建的输出数量大约减半（图 10.3a–b）。
 
@@ -4038,7 +3952,11 @@ Problem 10.1
 
 #### 10.2.5 通道
 
-如果我们只应用单个卷积，信息不可避免地会丢失；我们正在对附近的输入进行平均，而 ReLU 激活函数会截断小于零的结果。因此，通常会并行计算多个卷积。每个卷积产生一组新的隐藏变量，称为 `feature map`（特征图）或 `channel`（通道）。
+
+
+# 10.2.5 多通道卷积
+
+如果我们只应用单个卷积，信息不可避免地会丢失；我们正在对附近的输入进行平均，而 `ReLU` 激活函数会截断小于零的结果。因此，通常会并行计算多个卷积。每个卷积产生一组新的隐藏变量，称为 `feature map`（特征图）或 `channel`（通道）。
 
 图 10.5a–b 通过两个大小为三且带有零填充的卷积核对此进行了说明。第一个核计算最近三个像素的加权和，加上一个偏置，并将结果通过激活函数以产生隐藏单元 `h[1]` 到 `h[6]`。这些构成了第一个通道。第二个核计算最近三个像素的不同加权和，加上不同的偏置，并将结果通过激活函数以创建隐藏单元 `h[7]` 到 `h[12]`。这些构成了第二个通道。
 
@@ -4046,11 +3964,7 @@ Problem 10.1
 
 图 10.5 通道。通常，多个卷积被应用于输入 `x` 并存储在通道中。a) 应用一个卷积以创建隐藏单元 `h[1]` 到 `h[6]`，它们构成第一个通道。b) 应用第二个卷积操作以创建隐藏单元 `h[7]` 到 `h[12]`，它们构成第二个通道。通道存储在二维数组 `H[1]` 中，该数组包含第一隐藏层中的所有隐藏单元。c) 如果我们添加另一个卷积层，现在每个输入位置有两个通道。在这里，一维卷积定义了在三个最近位置上跨两个输入通道的加权和，以创建每个新的输出通道。
 
-
-
-
-
-#### 10.2.6 卷积网络与感受野
+## 10.2.6 卷积网络与感受野
 
 第 4 章介绍了深度网络，其由一系列全连接层组成。同样，卷积网络由一系列卷积层组成。网络中某隐藏单元的*感受野*是指馈送给它的原始输入区域。考虑一个卷积网络，其中每个卷积层的核大小为三。第一层中的隐藏单元对三个最近的输入进行加权求和，因此感受野大小为三。第二层中的单元对第一层中三个最近位置进行加权求和，而这些位置本身又是三个输入的加权求和。因此，第二层中的隐藏单元具有大小为五的感受野。以此类推，后续层中单元的感受野逐渐增大，来自整个输入的信息被逐步整合（图 10.6）。
 
@@ -4062,15 +3976,15 @@ Problem 10.1
 
 图 10.6 核宽度为三的网络的感受野。a) 一个十一维的输入馈送到一个具有三个通道且卷积核大小为三的隐藏层。第一隐藏层 `H[1]` 中三个高亮显示的隐藏单元的预激活值是最近三个输入的不同加权求和，因此 `H[1]` 中的感受野大小为三。b) 第二层 `H[2]` 中四个高亮显示的隐藏单元的预激活值分别对第一层 `H[1]` 中三个通道在三个最近位置上的值进行加权求和。第一层 `H[1]` 中的每个隐藏单元对最近的三个输入位置进行加权。因此，`H[2]` 中的隐藏单元具有大小为五的感受野。c) 第三层中的隐藏单元（核大小三，步幅二）将感受野大小增加到七。d) 当我们添加第四层时，位置三处隐藏单元的感受野覆盖了整个输入。
 
-#### 10.2.7 示例：MNIST-1D
+## 10.2.7 示例：MNIST-1D
 
-我们现在将卷积网络应用于 MNIST-1D 数据（见图 8.1）。输入 `x` 是一个 40 维向量，输出 `f` 是一个 10 维向量，通过 softmax 层产生类别概率。我们使用一个具有三个隐藏层的网络（图 10.7）。第一隐藏层 `H[1]` 的十五个通道分别使用核大小为三、步幅为二且采用“valid”填充的方式计算，得到十九个空间位置。第二隐藏层 `H[2]` 同样使用核大小为三、步幅为二和“valid”填充进行计算。第三隐藏层的计算方式类似。此时，表示具有四个空间位置和十五个通道。这些值被重塑为大小为六十的向量，并通过一个全连接层映射到十个输出激活值。
+我们现在将卷积网络应用于 MNIST-1D 数据（见图 8.1）。输入 `x` 是一个 40 维向量，输出 `f` 是一个 10 维向量，通过 `softmax` 层产生类别概率。我们使用一个具有三个隐藏层的网络（图 10.7）。第一隐藏层 `H[1]` 的十五个通道分别使用核大小为三、步幅为二且采用“valid”填充的方式计算，得到十九个空间位置。第二隐藏层 `H[2]` 同样使用核大小为三、步幅为二和“valid”填充进行计算。第三隐藏层的计算方式类似。此时，表示具有四个空间位置和十五个通道。这些值被重塑为大小为六十的向量，并通过一个全连接层映射到十个输出激活值。
 
 ![Figure 10.7 Convolutional network for classifying MNIST-1D data (see figure 8.1). The MNIST-1D input has dimension Di = 40. The first convolutional layer has fifteen channels, kernel size three, stride two, and only retains "valid" positions to make a representation with nineteen positions and fifteen channels. The following two convolutional layers have the same settings, gradually reducing the representation size. Finally, a fully connected layer takes all sixty hidden units from the third hidden layer. It outputs ten activations that are subsequently passed through a softmax layer to produce the ten class probabilities.](img/c10-fig-0007.jpg)
 
-图 10.7 用于对 MNIST-1D 数据进行分类的卷积网络（见图 8.1）。MNIST-1D 输入的维度 `D[i]` = 40。第一个卷积层有十五个通道，核大小三，步幅二，仅保留“valid”位置，从而形成一个具有十九个位置和十五个通道的表示。接下来的两个卷积层具有相同的设置，逐渐减小表示的大小。最后，一个全连接层接收来自第三隐藏层的所有六十个隐藏单元。它输出十个激活值，随后通过 softmax 层产生十个类别概率。
+图 10.7 用于对 MNIST-1D 数据进行分类的卷积网络（见图 8.1）。MNIST-1D 输入的维度 `D[i]` = 40。第一个卷积层有十五个通道，核大小三，步幅二，仅保留“valid”位置，从而形成一个具有十九个位置和十五个通道的表示。接下来的两个卷积层具有相同的设置，逐渐减小表示的大小。最后，一个全连接层接收来自第三隐藏层的所有六十个隐藏单元。它输出十个激活值，随后通过 `softmax` 层产生十个类别概率。
 
-该网络使用 SGD（无动量）、学习率 0.01、批量大小 100，在包含 4,000 个样本的数据集上训练了 100,000 步。我们将其与一个具有相同层数和隐藏单元数量的全连接网络进行比较（即三个隐藏层，分别具有 285、135 和 60 个隐藏单元）。卷积网络有 2,050 个参数，而全连接网络有 150,185 个参数。根据图 10.4 的逻辑，卷积网络是全连接网络的一个特例。后者具有足够的灵活性来精确复制前者。图 10.8 显示两个模型都完美拟合了训练数据。然而，卷积网络的测试误差远小于全连接网络。
+该网络使用 `SGD`（无动量）、学习率 0.01、批量大小 100，在包含 4,000 个样本的数据集上训练了 100,000 步。我们将其与一个具有相同层数和隐藏单元数量的全连接网络进行比较（即三个隐藏层，分别具有 285、135 和 60 个隐藏单元）。卷积网络有 2,050 个参数，而全连接网络有 150,185 个参数。根据图 10.4 的逻辑，卷积网络是全连接网络的一个特例。后者具有足够的灵活性来精确复制前者。图 10.8 显示两个模型都完美拟合了训练数据。然而，卷积网络的测试误差远小于全连接网络。
 
 **问题 10.12**
 
@@ -4080,15 +3994,11 @@ Problem 10.1
 
 图 10.8 MNIST-1D 结果。a) 来自图 10.7 的卷积网络最终完美拟合训练数据，测试误差约为 17%。b) 一个具有相同隐藏层数量和每层隐藏单元数量的全连接网络学习训练数据的速度更快，但无法很好地泛化，测试误差约为 40%。后者模型可以复现卷积模型，但未能做到这一点。卷积结构将可能的映射限制为以相似方式处理每个位置的映射，这种限制提高了性能。
 
-
-
-
-
-这种差异很可能不是由于参数数量的差异造成的；我们知道过参数化通常能提高性能（第 8.4.1 节）。可能的解释是，卷积架构具有更优越的**归纳偏置**（即能更好地在训练数据之间进行插值），因为我们在架构中体现了一些先验知识；我们强制网络以相同的方式处理输入中的每个位置。我们知道数据是从一个模板开始创建的，该模板（除其他操作外）经过了随机平移，因此这样做是合理的。
+这种差异很可能不是由于参数数量的差异造成的；我们知道过参数化通常能提高性能（第 8.4.1 节）。可能的解释是，卷积架构具有更优越的**归纳偏置**（即能更好地在训练数据之间进行插值），因为我们在架构中体现了一些先验知识；我们强制网络以相同的方式处理输入中的每个位置。
 
 全连接网络必须学习每个数字模板在每个位置上的样子。相比之下，卷积网络跨位置共享信息，因此能更准确地学会识别每个类别。另一种思考方式是，当我们训练卷积网络时，我们在一组较小的输入/输出映射族中进行搜索，这些映射都是合理的。或者，卷积结构可被视为一种正则化项，它对全连接网络能描述的大多数解施加无限大的惩罚。
 
-### 10.3 面向 2D 输入的卷积网络
+# 10.3 面向 2D 输入的卷积网络
 
 上一节描述了用于处理 1D 数据的卷积网络。此类网络可应用于金融时间序列、音频和文本。然而，卷积网络更常用于 2D 图像数据。卷积核现在是一个 2D 对象。应用于包含元素 `x[ij]` 的 2D 输入的 `3×3` 卷积核 **Ω** ∈ ℝ³*^×*³ 计算单层隐藏单元 `h[ij]`，公式如下：
 
@@ -4098,11 +4008,11 @@ Problem 10.1
 
 其中 `ω[mn]` 是卷积核的元素。这只是对一个方形 `3×3` 输入区域的加权求和。卷积核在 2D 输入上水平和垂直平移（图 10.9），以在每个位置创建一个输出。
 
-* * *
+---
 
-问题 10.13
+**问题 10.13**
 
-* * *
+---
 
 ![Figure 10.9 2D convolutional layer. Each output hij computes a weighted sum of the 3×3 nearest inputs, adds a bias, and passes the result through an activation function. a) Here, the output h23 (shaded output) is a weighted sum of the nine positions from x12 to x34 (shaded inputs). b) Different outputs are computed by translating the kernel across the image grid in two dimensions. c–d) With zero padding, positions beyond the image's edge are considered to be zero.](img/c10-fig-0009.jpg)
 
@@ -4110,56 +4020,51 @@ Problem 10.1
 
 通常输入是 RGB 图像，它被视为具有三个通道的 2D 信号（图 10.10）。这里，一个 `3×3` 的卷积核将拥有 `3×3×3` 个权重，并应用于 `3×3` 个位置上每个位置的三个输入通道，以创建一个与输入图像高宽相同的 2D 输出（假设使用零填充）。为了生成多个输出通道，我们使用不同的卷积核重复此过程，并将结果拼接形成一个 3D 张量。如果卷积核大小为 `K × K`，且有 `C[i]` 个输入通道，则每个输出通道是 `C[i] × K × K` 个量的加权和加上一个偏置。由此可见，要计算 `C[o]` 个输出通道，我们需要 `C[i] × C[o] × K × K` 个权重和 `C[o]` 个偏置。
 
-* * *
+---
 
-笔记本 10.3
+**笔记本 10.3：2D 卷积**
 
-2D 卷积
+---
 
-* * *
+---
 
-* * *
+**问题 10.14**
 
-问题 10.14
+---
 
-* * *
+---
 
-* * *
+**附录 B.3：张量**
 
-附录 B.3
-
-张量
-
-* * *
+---
 
 ![Figure 10.10 2D convolution applied to an image. The image is treated as a 2D input with three channels corresponding to the red, green, and blue components. With a 3×3 kernel, each pre-activation in the first hidden layer is computed by pointwise multiplying the 3×3×3 kernel weights with the 3×3 RGB image patch centered at the same position, summing, and adding the bias. To calculate all the pre-activations in the hidden layer, we “slide” the kernel over the image in both horizontal and vertical directions. The output is a 2D layer of hidden units. To create multiple output channels, we would repeat this process with multiple kernels, resulting in a 3D tensor of hidden units at hidden layer H1.](img/c10-fig-0010.jpg)
 
 图 10.10 2D 卷积应用于图像。图像被视为具有三个通道的 2D 输入，分别对应红、绿、蓝三个分量。使用 `3×3` 卷积核时，第一隐藏层中的每个预激活值是通过将 `3×3×3` 卷积核权重与以同一位置为中心的 `3×3` RGB 图像块进行逐点相乘、求和并加上偏置来计算的。为了计算隐藏层中所有的预激活值，我们在水平和垂直方向上“滑动”卷积核遍历图像。输出是一个隐藏单元的 2D 层。要创建多个输出通道，我们将使用多个卷积核重复此过程，从而在隐藏层 **H**[1] 处得到一个隐藏单元的 3D 张量。
 
-### 10.4 下采样和上采样
+# 10.4 下采样和上采样
 
 图 10.7 中的网络通过在每一层使用步长为二的卷积来缩小表示，从而增加感受野大小。我们现在考虑缩小或*下采样* 2D 输入表示的方法。我们还描述了将它们放大（*上采样*）的方法，当输出也是图像时这很有用。最后，我们考虑在层之间改变通道数的方法。这在重组网络两个分支的表示时很有帮助（第 11 章）。
 
-#### 10.4.1 下采样
+## 10.4.1 下采样
+
+
 
 缩小 2D 表示主要有三种方法。这里我们考虑最常见的情况：将两个维度都缩小两倍。首先，我们可以对每隔一个位置进行采样。当我们使用步长为二时，实际上是同时将此方法与卷积操作一起应用（图 10.11a）。
 
-* * *
+---
 
-问题 10.15
+### 问题 10.15
 
-* * *
+---
 
 ![Figure 10.11 Methods for scaling down representation size (downsampling). a) Sub-sampling. The original 4×4 representation (left) is reduced to size 2×2 (right) by retaining every other input. Colors on the left indicate which inputs contribute to the outputs on the right. This is effectively what happens with a kernel of stride two, except that the intermediate values are never computed. b) Max pooling. Each output comprises the maximum value of the corresponding 2×2 block. c) Mean pooling. Each output is the mean of the values in the 2×2 block.](img/c10-fig-0011.jpg)
 
 图 10.11 缩小表示尺寸的方法（下采样）。a) 子采样。原始 `4×4` 表示（左）通过保留每隔一个输入而缩小为 `2×2` 尺寸（右）。左侧的颜色指示哪些输入贡献给了右侧的输出。这实际上就是步长为二的卷积核所发生的情况，只是中间值从未被计算过。b) 最大池化。每个输出由对应 `2×2` 块的最大值组成。c) 平均池化。每个输出是 `2×2` 块中值的平均值。
 
-其次，*最大池化* 保留 `2×2` 输入值中的最大值（图 10.11b）。这引入了对平移的某种不变性；如果输入偏移一个像素，许多最大值保持不变。最后，*平均池化* 或 *均值池化* 对输入求平均。对于所有方法，我们分别对每个通道应用下采样，因此输出的宽度和高度减半，但通道数保持不变。
+其次，`最大池化` 保留 `2×2` 输入值中的最大值（图 10.11b）。这引入了对平移的某种不变性；如果输入偏移一个像素，许多最大值保持不变。最后，`平均池化` 或 `均值池化` 对输入求平均。对于所有方法，我们分别对每个通道应用下采样，因此输出的宽度和高度减半，但通道数保持不变。
 
 #### 10.4.2 上采样
-
-
-
 
 ##### 方法
 
@@ -4171,13 +4076,11 @@ Problem 10.1
 
 图 10.12 缩放表示大小的方法（上采样）。a) 将 2D 层大小加倍的最简单方法是将每个输入复制四次。b) 在我们之前使用过最大池化操作的网络中（图 10.11b），我们可以将数值重新分配到它们最初所在的位置（即最大值所在位置）。这称为最大反池化。c) 第三种选择是输入值之间的双线性插值。
 
-第四种方法大致类似于使用步长为二的下采样。在该方法中，输出数量是输入的一半，对于核大小为三的情况，每个输出是三个最近输入的加权和（图 10.13a）。在*转置卷积*中，这一过程被反转（图 10.13c）。输出数量是输入的两倍，每个输入贡献给三个输出。当我们考虑此上采样机制相关的权重矩阵（图 10.13d）时，会发现它是下采样机制权重矩阵的转置（图 10.13b）。
+第四种方法大致类似于使用步长为二的下采样。在该方法中，输出数量是输入的一半，对于核大小为三的情况，每个输出是三个最近输入的加权和（图 10.13a）。在`转置卷积`中，这一过程被反转（图 10.13c）。输出数量是输入的两倍，每个输入贡献给三个输出。当我们考虑此上采样机制相关的权重矩阵（图 10.13d）时，会发现它是下采样机制权重矩阵的转置（图 10.13b）。
 
 ---
 
-##### Notebook 10.4
-
-下采样与上采样
+##### Notebook 10.4：下采样与上采样
 
 ---
 
@@ -4187,11 +4090,11 @@ Problem 10.1
 
 ##### 10.4.3 改变通道数
 
-有时我们想在不进行进一步空间池化的情况下，改变一个隐藏层与下一个隐藏层之间的通道数。这通常是为了将表示与另一个并行计算相结合（见第 11 章）。为此，我们应用核大小为一的卷积。输出层的每个元素通过在同一位置对所有通道进行加权和来计算（图 10.14）。我们可以使用不同的权重重复此操作多次，以生成所需数量的输出通道。相关的卷积权重大小为 `1 × 1 × C[i] × C[∘]`。因此，这被称为*`1×1`卷积*。结合偏置和激活函数，它等同于在每个位置的通道上运行相同的全连接网络。
+有时我们想在不进行进一步空间池化的情况下，改变一个隐藏层与下一个隐藏层之间的通道数。这通常是为了将表示与另一个并行计算相结合（见第 11 章）。为此，我们应用核大小为一的卷积。输出层的每个元素通过在同一位置对所有通道进行加权和来计算（图 10.14）。我们可以使用不同的权重重复此操作多次，以生成所需数量的输出通道。相关的卷积权重大小为 `1 × 1 × C[i] × C[∘]`。因此，这被称为 `1×1` 卷积。结合偏置和激活函数，它等同于在每个位置的通道上运行相同的全连接网络。
 
 ![Figure 10.14 1×1 convolution. To change the number of channels without spatial pooling, we apply a 1×1 kernel. Each output channel is computed by taking a weighted sum of all of the channels at the same position, adding a bias, and passing through an activation function. Multiple output channels are created by repeating this operation with different weights and biases.](img/c10-fig-0014.jpg)
 
-图 10.14 `1×1`卷积。为了在不进行空间池化的情况下改变通道数，我们应用 `1×1` 核。每个输出通道通过在同一位置对所有通道进行加权和、加上偏置并通过激活函数来计算。通过使用不同的权重和偏置重复此操作来创建多个输出通道。
+图 10.14 `1×1` 卷积。为了在不进行空间池化的情况下改变通道数，我们应用 `1×1` 核。每个输出通道通过在同一位置对所有通道进行加权和、加上偏置并通过激活函数来计算。通过使用不同的权重和偏置重复此操作来创建多个输出通道。
 
 ### 10.5 应用
 
@@ -4205,71 +4108,67 @@ Problem 10.1
 
 图 10.15 ImageNet 分类图像示例。模型旨在将输入图像分配到 1000 个类别之一。这项任务具有挑战性，因为图像在不同属性（列）上变化很大。这些属性包括刚性（猴子 `<` 独木舟）、图像中的实例数量（蜥蜴 `<` 草莓）、杂乱度（指南针 `<` 钢鼓）、大小（蜡烛 `<` 蜘蛛网）、纹理（螺丝刀 `<` 豹子）、颜色独特性（马克杯 `<` 红酒）和形状独特性（海角 `<` 钟）。改编自 Russakovsky 等人 (2015)。
 
-大多数方法将输入图像重塑为标准尺寸；在典型系统中，网络的输入 **x** 是一个 `224×224` 的 RGB 图像，输出是 1000 个类别上的概率分布。该任务具有挑战性；类别数量大，且表现出相当大的变化（图 10.15）。2011 年，在深度网络被应用之前，最先进的方法在测试图像上的分类错误率约为 25%（正确类别在前五个建议中）。五年后，最好的深度学习模型超越了人类表现。
-
-
-
+大多数方法将输入图像重塑为标准尺寸；在典型系统中，网络的输入 `x` 是一个 `224×224` 的 RGB 图像，输出是 1000 个类别上的概率分布。该任务具有挑战性；类别数量大，且表现出相当大的变化（图 10.15）。2011 年，在深度网络被应用之前，最先进的方法在测试图像上的分类错误率约为 25%（正确类别在前五个建议中）。五年后，最好的深度学习模型超越了人类表现。
 
 ##### AlexNet (2012)
 
-2012 年，`AlexNet`成为第一个在此任务上表现良好的卷积网络。它由八个隐藏层组成，使用`ReLU`激活函数，其中前五层为卷积层，其余为全连接层（**图 10.16**）。网络首先使用步长为 4 的`11×11`卷积核对输入进行下采样，创建 96 个通道。随后通过最大池化层再次下采样，然后应用`5×5`卷积核创建 256 个通道。还有三个卷积核大小为`3×3`的卷积层，最终形成一个具有 256 个通道的`13×13`表示。该表示被重塑为长度为 43,264 的单个向量，然后通过三个全连接层，分别包含 4096、4096 和 1000 个隐藏单元。最后一层通过`softmax`函数输出 1000 个类别的概率分布。完整网络包含约 6000 万个参数。其中大部分位于网络末端的全连接层中。
+2012 年，`AlexNet` 成为第一个在此任务上表现良好的卷积网络。它由八个隐藏层组成，使用 `ReLU` 激活函数，其中前五层为卷积层，其余为全连接层（**图 10.16**）。网络首先使用步长为 4 的 `11×11` 卷积核对输入进行下采样，创建 96 个通道。随后通过最大池化层再次下采样，然后应用 `5×5` 卷积核创建 256 个通道。还有三个卷积核大小为 `3×3` 的卷积层，最终形成一个具有 256 个通道的 `13×13` 表示。该表示被重塑为长度为 43,264 的单个向量，然后通过三个全连接层，分别包含 4096、4096 和 1000 个隐藏单元。最后一层通过 `softmax` 函数输出 1000 个类别的概率分布。完整网络包含约 6000 万个参数。其中大部分位于网络末端的全连接层中。
 
-***
+---
 
 ###### 图 10.16：AlexNet 架构
 
 ![Figure 10.16 AlexNet (Krizhevsky et al., 2012). The network maps a 224×224 color image to a 1000-dimensional vector representing class probabilities. The network first convolves with 11×11 kernels and stride 4 to create 96 channels. It decreases the resolution again using a max pool operation and applies a 5×5 convolutional layer. Another max pooling layer follows, and three 3×3 convolutional layers are applied. After a final max pooling operation, the result is vectorized and passed through three fully connected (FC) layers and finally the softmax layer.](img/c10-fig-0016.jpg)
 
-**图 10.16** AlexNet (Krizhevsky et al., 2012)。网络将`224×224`彩色图像映射为代表类别概率的 1000 维向量。网络首先使用步长为 4 的`11×11`卷积核进行卷积以创建 96 个通道。它再次使用最大池化操作降低分辨率，并应用`5×5`卷积层。随后是另一个最大池化层，并应用三个`3×3`卷积层。经过最后一个最大池化操作后，结果被向量化并通过三个全连接（FC）层，最后通过 softmax 层。
+**图 10.16** AlexNet (Krizhevsky et al., 2012)。网络将 `224×224` 彩色图像映射为代表类别概率的 1000 维向量。网络首先使用步长为 4 的 `11×11` 卷积核进行卷积以创建 96 个通道。它再次使用最大池化操作降低分辨率，并应用 `5×5` 卷积层。随后是另一个最大池化层，并应用三个 `3×3` 卷积层。经过最后一个最大池化操作后，结果被向量化并通过三个全连接（FC）层，最后通过 softmax 层。
 
-数据集大小通过(i)空间变换和(ii)输入强度修改扩充了 2048 倍。测试时，图像的五个不同裁剪和镜像版本被送入网络，并对它们的预测进行平均。系统使用动量系数为 0.9、批量大小为 128 的`SGD`进行训练。`Dropout`应用于全连接层，并使用了`L2`（权重衰减）正则化项。该系统实现了 16.4%的 top-5 错误率和 38.1%的 top-1 错误率。当时，这在被认为远超当代方法能力的任务上实现了巨大的性能飞跃。这一结果揭示了深度学习的潜力，并开启了现代 AI 研究的新纪元。
+数据集大小通过 (i) 空间变换和 (ii) 输入强度修改扩充了 2048 倍。测试时，图像的五个不同裁剪和镜像版本被送入网络，并对它们的预测进行平均。系统使用动量系数为 0.9、批量大小为 128 的 `SGD` 进行训练。`Dropout` 应用于全连接层，并使用了 `L2`（权重衰减）正则化项。该系统实现了 16.4% 的 top-5 错误率和 38.1% 的 top-1 错误率。当时，这在被认为远超当代方法能力的任务上实现了巨大的性能飞跃。这一结果揭示了深度学习的潜力，并开启了现代 AI 研究的新纪元。
 
-***
+---
 
-###### 笔记本 10.5：MNIST 卷积
+###### Notebook 10.5：MNIST 卷积
 
-***
+---
 
 ##### VGG 网络
 
-`VGG 网络`同样针对 ImageNet 分类任务，实现了相当更好的性能：6.8%的 top-5 错误率和 23.7%的 top-1 错误率。该网络同样由一系列交织的卷积层和最大池化层组成，表示的空间尺寸逐渐减小，但通道数增加。随后是三个全连接层（**图 10.17**）。VGG 网络同样使用数据增强、权重衰减和 dropout 进行训练。
+`VGG 网络` 同样针对 ImageNet 分类任务，实现了相当更好的性能：6.8% 的 top-5 错误率和 23.7% 的 top-1 错误率。该网络同样由一系列交织的卷积层和最大池化层组成，表示的空间尺寸逐渐减小，但通道数增加。随后是三个全连接层（**图 10.17**）。VGG 网络同样使用数据增强、权重衰减和 dropout 进行训练。
 
-***
+---
 
 ###### 图 10.17：VGG 网络架构
 
 ![Figure 10.17 VGG network (Simonyan & Zisserman, 2014) depicted at the same scale as AlexNet (see Figure 10.16). This network consists of a series of convolutional layers and max pooling operations, in which the spatial scale of the representation gradually decreases, but the number of channels gradually increases. The hidden layer after the last convolutional operation is resized to a 1D vector and three fully connected layers follow. The network outputs 1000 activations corresponding to the class labels that are passed through a softmax function to create class probabilities.](img/c10-fig-0017.jpg)
 
-**图 10.17** VGG 网络 (Simonyan & Zisserman, 2014) 与 AlexNet 按相同比例绘制（见**图 10.16**）。该网络由一系列卷积层和最大池化操作组成，表示的空间尺度逐渐减小，但通道数逐渐增加。最后一个卷积操作后的隐藏层被重塑为 1D 向量，随后是三个全连接层。网络输出 1000 个激活值，对应通过`softmax`函数生成类别概率的类别标签。
+**图 10.17** VGG 网络 (Simonyan & Zisserman, 2014) 与 AlexNet 按相同比例绘制（见**图 10.16**）。该网络由一系列卷积层和最大池化操作组成，表示的空间尺度逐渐减小，但通道数逐渐增加。最后一个卷积操作后的隐藏层被重塑为 1D 向量，随后是三个全连接层。网络输出 1000 个激活值，对应通过 `softmax` 函数生成类别概率的类别标签。
 
-尽管训练制度存在各种细微差别，但 AlexNet 和 VGG 之间最重要的变化是网络深度。后者使用了 19 个隐藏层和 1.44 亿个参数。**图 10.16 和图 10.17**按相同比例绘制以供比较。在数年间，随着网络深度增加，该任务性能普遍呈改善趋势，这证明了深度在神经网络中的重要性。
+尽管训练制度存在各种细微差别，但 AlexNet 和 VGG 之间最重要的变化是网络深度。后者使用了 19 个隐藏层和 1.44 亿个参数。**图 10.16 和图 10.17** 按相同比例绘制以供比较。在数年间，随着网络深度增加，该任务性能普遍呈改善趋势，这证明了深度在神经网络中的重要性。
 
-***
+---
 
 #### 问题 10.18
 
-***
+---
 
 #### 10.5.2 目标检测
 
-在`目标检测`中，目标是识别并定位图像中的多个物体。基于卷积网络的早期方法是`You Only Look Once`，简称`YOLO`。YOLO 网络的输入是一个`448×448`的 RGB 图像。它通过 24 个卷积层，利用最大池化操作逐渐减小表示尺寸，同时增加通道数，这与 VGG 网络类似。最后一个卷积层大小为`7×7`，拥有 1024 个通道。这被重塑为向量，一个全连接层将其映射为 4096 个值。另一个全连接层将此表示映射到输出。
+在 `目标检测` 中，目标是识别并定位图像中的多个物体。基于卷积网络的早期方法是 `You Only Look Once`，简称 `YOLO`。YOLO 网络的输入是一个 `448×448` 的 RGB 图像。它通过 24 个卷积层，利用最大池化操作逐渐减小表示尺寸，同时增加通道数，这与 VGG 网络类似。最后一个卷积层大小为 `7×7`，拥有 1024 个通道。这被重塑为向量，一个全连接层将其映射为 4096 个值。另一个全连接层将此表示映射到输出。
 
-输出值编码了`7×7`网格中每个位置存在的类别（**图 10.18a–b**）。对于每个位置，输出值还编码固定数量的边界框。五个参数定义每个框：中心点的 x 和 y 坐标、框的高度和宽度以及预测的置信度（**图 10.18c**）。置信度估计预测边界框与真实边界框的重叠程度。系统使用动量、权重衰减、dropout 和数据增强进行训练。采用了迁移学习；网络最初在 ImageNet 分类任务上训练，然后针对目标检测进行微调。
+输出值编码了 `7×7` 网格中每个位置存在的类别（**图 10.18a–b**）。对于每个位置，输出值还编码固定数量的边界框。五个参数定义每个框：中心点的 x 和 y 坐标、框的高度和宽度以及预测的置信度（**图 10.18c**）。置信度估计预测边界框与真实边界框的重叠程度。系统使用动量、权重衰减、dropout 和数据增强进行训练。采用了迁移学习；网络最初在 ImageNet 分类任务上训练，然后针对目标检测进行微调。
 
-***
+---
 
 ##### 图 10.18：YOLO 目标检测
+
+
 
 ![Figure 10.18 YOLO object detection. a) The input image is reshaped to 448×448 and divided into a regular 7×7 grid. b) The system predicts the most likely class at each grid cell. c) It also predicts two bounding boxes per cell, and a confidence value (represented by thickness of line). d) During inference, the most likely bounding boxes are retained, and boxes with lower confidence values that belong to the same object are suppressed. Adapted from Redmon et al. (2016).](img/c10-fig-0018.jpg)
 
 **图 10.18** YOLO 目标检测。a) 输入图像重塑为`448×448`并划分为规则的`7×7`网格。b) 系统预测每个网格单元最可能的类别。c) 它还为每个单元预测两个边界框和一个置信度值（用线条粗细表示）。d) 推理期间，保留最可能的边界框，抑制属于同一物体且置信度较低的框。改编自 Redmon 等人(2016)。
 
-
-
-
 网络运行后，会使用启发式过程移除置信度低的矩形框，并抑制对应同一物体的预测边界框，仅保留置信度最高的一个。
 
-#### 10.5.3 语义分割
+### 10.5.3 语义分割
 
 语义分割的目标是根据像素所属的物体为每个像素分配一个标签，如果该像素不对应训练数据库中的任何内容，则不分配标签。图 10.19 展示了一个早期的语义分割网络。输入为 `224×224` 的 RGB 图像，输出为 `224×224×21` 的数组，包含每个位置属于 21 个可能类别中每一类的概率。
 
@@ -4300,9 +4199,6 @@ Problem 10.1
 Dumoulin & Visin (2016) 概述了卷积的数学原理，扩展了本章的简要论述。
 
 **卷积网络：** 早期卷积网络由 Fukushima & Miyake (1982)、LeCun 等人 (1989a) 和 LeCun 等人 (1989b) 开发。初始应用包括手写识别 (LeCun 等人, 1989a; Martin, 1993)、人脸识别 (Lawrence 等人, 1997)、音素识别 (Waibel 等人, 1989)、语音词识别 (Bottou 等人, 1990) 和签名验证 (Bromley 等人, 1993)。然而，卷积网络由 LeCun 等人 (1998) 推广，他们构建了一个名为 `LeNet` 的系统，用于对 `28×28` 灰度手写数字图像进行分类。这立即被识别为现代网络的前身；它使用一系列卷积层，后接全连接层、Sigmoid 激活而非 `ReLU`、平均池化而非最大池化。`AlexNet` (Krizhevsky 等人, 2012) 被广泛认为是现代深度卷积网络的起点。
-
-
-
 
 #### ImageNet Challenge
 
@@ -4342,10 +4238,6 @@ Shi 等人（2016）引入了 `PixelShuffle`，它使用步长为 `1/s` 的卷�
 
 采用卷积层的部分动机在于它们关于平移近似**等变**，而采用最大池化的部分动机在于诱导对小平移的**不变性**。Zhang（2019）考察了卷积网络真正具备这些特性的程度，并提出了 max-blur-pooling 修改，该修改明显改善了这些特性。人们非常有兴趣使网络对其他类型的变换（如反射、旋转和缩放）具有等变性或不变性。Sifre & Mallat（2013）构建了一个基于小波的系统，该系统在图像块中诱导了平移和旋转不变性，并将其应用于纹理分类。Kanazawa 等人（2014）开发了局部尺度不变卷积神经网络。Cohen & Welling（2016）利用群论构建了 `group CNNs`，它们对更大家族的变换（包括反射和旋转）具有等变性。Esteves 等人（2018）引入了 `polar transformer networks`，它们对平移不变，对旋转和缩放等变。Worrall 等人（2017）开发了 `harmonic networks`，这是第一个对连续旋转等变的 group CNN 示例。
 
-
-
-
-
 #### 初始化与正则化
 
 卷积网络通常使用 Xavier 初始化（Glorot & Bengio, 2010）或 He 初始化（He et al., 2015），如第 7.5 节所述。然而，`ConvolutionOrthogonal` 初始化器（Xiao et al., 2018a）专门针对卷积网络设计（Xiao et al., 2018a）。使用该初始化方法，无需残差连接即可训练多达 10,000 层的网络。
@@ -4359,6 +4251,8 @@ Shi 等人（2016）引入了 `PixelShuffle`，它使用步长为 `1/s` 的卷�
 Dropout 对全连接网络有效，但对卷积层效果较差（Park & Kwak, 2016）。这可能是因为相邻图像像素高度相关，因此如果一个隐藏单元被丢弃，相同的信息仍会通过相邻位置传递。这就是空间 dropout 和 cutout 的动机。在空间 dropout 中（Tompson et al., 2015），丢弃的是整个特征图，而不是单个像素。这规避了相邻像素携带相同信息的问题。类似地，DeVries & Taylor (2017b) 提出了 `cutout`，即在训练时对每张输入图像遮盖一个方形补丁。Wu & Gu (2015) 通过一种从构成元素的概率分布中采样而非总是取最大值的方法，修改了用于 dropout 层的最大池化。
 
 #### 自适应卷积核
+
+
 
 `inception block`（Szegedy et al., 2017）并行应用不同尺寸的卷积滤波器，从而为网络学习合适的滤波器尺寸提供了一种粗糙的机制。其他工作研究了将卷积尺度的学习作为训练过程的一部分（例如，Pintea et al., 2021; Romero et al., 2021）或下采样层步幅的学习（Riad et al., 2022）。
 
@@ -4388,47 +4282,54 @@ Dropout 对全连接网络有效，但对卷积层效果较差（Park & Kwak, 20
 
 **问题 10.5** 仿照图 10.4d 的风格，为以下情况绘制权重矩阵：(i) 图 10.3a–b 中的步幅卷积，(ii) 图 10.3c 中卷积核大小为 5 的卷积，(iii) 图 10.3d 中的膨胀卷积。
 
-**问题 10.6\*** 仿照图 10.4d 的风格，绘制一个 6×12 的权重矩阵，关联输入 `x`[1], …, `x`[6] 与输出 `h`[1], …, `h`[12]，对应图 10.5a–b 所示的多通道卷积。
+**问题 10.6\*** 仿照图 10.4d 的风格，绘制一个 6×12 的权重矩阵，关联输入 `x[1]`, …, `x[6]` 与输出 `h[1]`, …, `h[12]`，对应图 10.5a–b 所示的多通道卷积。
 
-**问题 10.7\*** 仿照图 10.4d 的风格，绘制一个 12×6 的权重矩阵，关联输入 `h`[1], …, `h`[12] 与输出 ![c10-fig-5010.jpg](img/c10-fig-5010.jpg)，对应图 10.5c 所示的多通道卷积。
+**问题 10.7\*** 仿照图 10.4d 的风格，绘制一个 12×6 的权重矩阵，关联输入 `h[1]`, …, `h[12]` 与输出 ![c10-fig-5010.jpg](img/c10-fig-5010.jpg)，对应图 10.5c 所示的多通道卷积。
 
 **问题 10.8** 考虑一个输入具有三个通道的一维卷积网络。第一隐藏层使用卷积核大小为三、具有四个通道计算。第二隐藏层使用卷积核大小为五、具有十个通道计算。这两个卷积层各需要多少个偏置和多少个权重？
 
 **问题 10.9** 一个网络包含三个一维卷积层。在每一层，应用卷积核大小为三、步幅为一、膨胀率为零的零填充卷积。第三层中隐藏单元的感受野大小是多少？
 
-
-
-
 ### 问题
 
 #### 问题 10.10
+
 一个网络由三个一维卷积层组成。在每一层中，应用了一个零填充卷积，其核大小为七，步幅为一，膨胀率为零。第三层中隐藏单元的感受野大小是多少？
 
 #### 问题 10.11
+
 考虑一个输入为一维 `x` 的卷积网络。第一隐藏层 `H[1]` 使用核大小为五、步幅为二、膨胀率为零的卷积计算。第二隐藏层 `H[2]` 使用核大小为三、步幅为一、膨胀率为零的卷积计算。第三隐藏层 `H[3]` 使用核大小为五、步幅为一、膨胀率为一的卷积计算。每个隐藏层的感受野大小分别是多少？
 
 #### 问题 10.12
+
 图 10.7 中的一维卷积网络使用随机梯度下降进行训练，学习率为 0.01，批量大小为 100，训练数据集包含 4,000 个样本，共训练了 100,000 步。该网络训练了多少个 epoch？
 
 #### 问题 10.13
+
 绘制一个类似于 图 10.4d 风格的权重矩阵，展示 图 10.9 中 24 个输入与 24 个输出之间的关系。
 
 #### 问题 10.14
+
 考虑一个核大小为 5×5 的二维卷积层，它接收 3 个输入通道并输出 10 个输出通道。共有多少个卷积权重？多少个偏置？
 
 #### 问题 10.15
+
 绘制一个类似于 图 10.4d 风格的权重矩阵，对一维输入进行隔变量采样（即 图 10.11a 的一维类比）。证明核大小和步幅均为二的一维卷积的权重矩阵，等价于核大小为一的一维卷积矩阵与该采样矩阵的复合。
 
 #### 问题 10.16*
+
 考虑 AlexNet 网络（图 10.16）。每个卷积层和全连接层分别使用了多少参数？总参数量是多少？
 
 #### 问题 10.17
+
 AlexNet（图 10.16）前三层的感受野大小分别是多少？
 
 #### 问题 10.18
+
 VGG 架构（图 10.17）中，每个卷积层和全连接层分别有多少权重和偏置？
 
 #### 问题 10.19*
+
 考虑两个大小均为 224×224 的隐藏层，通道数分别为 `C[1]` 和 `C[2]`，它们由一个 3×3 卷积层连接。描述如何使用 He 初始化来初始化权重。
 
 ## 第 11 章
@@ -4451,6 +4352,7 @@ h[2] = f[2][h[1], ϕ[2]]
 h[3] = f[3][h[2], ϕ[3]]
 y = h[3]
 ```
+
  (11.1)
 
 其中 `h[1]`、`h[2]` 和 `h[3]` 表示中间隐藏层，`x` 是网络输入，`y` 是输出，函数 `f[k][•, ϕ[k]]` 执行处理过程。
@@ -4466,6 +4368,7 @@ y = h[3]
 ```
 y = f[3][f[2][f[1][x, ϕ[1]], ϕ[2]], ϕ[3]]
 ```
+
  (11.2)
 
 #### 11.1.1 顺序处理的局限性
@@ -4485,9 +4388,6 @@ y = f[3][f[2][f[1][x, ϕ[1]], ϕ[2]], ϕ[3]]
 破碎的梯度
 
 ---
-
-
-
 
 这一推测得到了对具有单输入和单输出网络中梯度进行实证观察的支持。对于浅层网络，随着输入的改变，输出关于输入的梯度变化缓慢（图 11.3a）。然而，对于深层网络，输入的微小变化会导致完全不同的梯度（图 11.3b）。这由梯度的自相关函数捕捉（图 11.3c）。对于浅层网络，附近的梯度是相关的，但对于深层网络，这种相关性迅速降至零。这被称为 `shattered gradients`（梯度破碎）现象。
 
@@ -4521,13 +4421,17 @@ y = f[3][f[2][f[1][x, ϕ[1]], ϕ[2]], ϕ[3]]
 
 其中每行右侧的第一项是残差连接。每个函数 `f*[k]*` 学习对当前表示的一个加性改变。由此可知，它们的输出必须与输入具有相同的尺寸。输入与处理后输出的每个加性组合被称为 *残差块* 或 *残差层*。
 
+
+
 ![Figure 11.4 Residual connections. a) The output of each function fk[x, ϕk] is added back to its input, which is passed via a parallel computational path called a residual or skip connection. Hence, the function computes an additive change to the representation. b) Upon expanding (unraveling) the network equations, we find that the output is the sum of the input plus four smaller networks (depicted in white, orange, gray, and cyan, respectively, and corresponding to terms in equation 11.5); we can think of this as an ensemble of networks. Moreover, the output from the cyan network is itself a transformation f4[•, ϕ4] of another ensemble, and so on. Alternatively, we can consider the network as a combination of 16 different paths through the computational graph. One example is the dashed path from input x to output y, which is the same in panels (a) and (b).](images/c11-fig-0004.jpg)
 
-图 11.4 残差连接。a) 每个函数 `f*[k]*[x, ϕ*[k]*]` 的输出被加回到其输入上，该输入通过一条称为残差或跳跃连接的并行计算路径传递。因此，该函数计算表示的一个加性改变。b) 通过展开（解卷）网络方程，我们发现输出是输入加上四个较小网络的和（分别以白色、橙色、灰色和青色描绘，对应公式 11.5 中的各项）；我们可以将其视为一个网络集成。此外，青色网络的输出本身是另一个集成的变换 `f[4][•, ϕ[4]]`，以此类推。或者，我们可以将网络视为通过计算图的 16 条不同路径的组合。一个例子是从输入 `x` 到输出 `y` 的虚线路径，它在面板 (a) 和 (b) 中是相同的。
+图 11.4 残差连接。a) 每个函数 `fk[x, ϕk]` 的输出被加回到其输入上，该输入通过一条称为残差或跳跃连接的并行计算路径传递。因此，该函数计算表示的一个加性改变。b) 通过展开（解卷）网络方程，我们发现输出是输入加上四个较小网络的和（分别以白色、橙色、灰色和青色描绘，对应公式 11.5 中的各项）；我们可以将其视为一个网络集成。此外，青色网络的输出本身是另一个集成的变换 `f4[•, ϕ4]`，以此类推。或者，我们可以将网络视为通过计算图的 16 条不同路径的组合。一个例子是从输入 `x` 到输出 `y` 的虚线路径，它在面板 (a) 和 (b) 中是相同的。
 
-我们再次通过代入中间量 `h*[k]*` 的表达式，将其写为单个函数：
+我们再次通过代入中间量 `hk` 的表达式，将其写为单个函数：
 
-![c11-fig-5005.jpg](img/c11-fig-5005.jpg)
+```
+c11-fig-5005.jpg
+```
 
  (11.5)
 
@@ -4539,9 +4443,11 @@ y = f[3][f[2][f[1][x, ϕ[1]], ϕ[2]], ϕ[3]]
 
 ***
 
-思考这一残差网络的一个互补方式是，它从输入到输出创建了十六条不同长度的路径。例如，第一个函数 `f[1][x]` 出现在这十六条路径中的八条中，包括作为直接加性项（即路径长度为一），类比公式 11.3 的导数为：
+思考这一残差网络的一个互补方式是，它从输入到输出创建了十六条不同长度的路径。例如，第一个函数 `f1[x]` 出现在这十六条路径中的八条中，包括作为直接加性项（即路径长度为一），类比公式 11.3 的导数为：
 
-![c11-fig-5006.jpg](img/c11-fig-5006.jpg)
+```
+c11-fig-5006.jpg
+```
 
  (11.6)
 
@@ -4557,7 +4463,7 @@ y = f[3][f[2][f[1][x, ϕ[1]], ϕ[2]], ϕ[3]]
 
 ***
 
-其中每一项对应八条路径中的一条。右侧的恒等项表明，第一层 `f[1][x, ϕ[1]]` 中参数 `ϕ[1]` 的变化直接导致网络输出 `y` 的变化。它们还通过不同长度的其他导数链间接产生影响。一般来说，较短路径上的梯度表现更好。由于恒等项和各种短导数链都将对每一层的导数产生贡献，具有残差链接的网络较少遭受梯度破碎的困扰。
+其中每一项对应八条路径中的一条。右侧的恒等项表明，第一层 `f1[x, ϕ1]` 中参数 `ϕ1` 的变化直接导致网络输出 `y` 的变化。它们还通过不同长度的其他导数链间接产生影响。一般来说，较短路径上的梯度表现更好。由于恒等项和各种短导数链都将对每一层的导数产生贡献，具有残差链接的网络较少遭受梯度破碎的困扰。
 
 ***
 
@@ -4569,15 +4475,13 @@ y = f[3][f[2][f[1][x, ϕ[1]], ϕ[2]], ϕ[3]]
 
 #### 11.2.1 残差块中的运算顺序
 
-
-
 到目前为止，我们暗示加性函数 `f[x]` 可以是任何有效的网络层（例如全连接层或卷积层）。从技术上讲这是正确的，但这些函数中的运算顺序很重要。它们必须包含像 ReLU 这样的非线性激活函数，否则整个网络将是线性的。然而，在典型的网络层中（图 11.5a），ReLU 函数位于末尾，因此输出是非负的。如果我们采用这一惯例，那么每个残差块只能增加输入值。
 
 ![Figure 11.5 Order of operations in residual blocks. a) The usual order of linear transformation or convolution followed by a ReLU nonlinearity means that each residual block can only add non-negative quantities. b) With the reverse order, both positive and negative quantities can be added. However, we must add a linear transformation at the start of the network in case the input is all negative. c) In practice, it's common for a residual block to contain several network layers.](img/c11-fig-0005.jpg)
 
 图 11.5 残差块中的运算顺序。a) 线性变换或卷积后跟 ReLU 非线性的常规顺序意味着每个残差块只能添加非负量。b) 采用反向顺序，可以添加正负量。但是，我们必须在网络开头添加一个线性变换，以防输入全为负。c) 实际上，残差块通常包含多个网络层。
 
-因此，通常会更改运算顺序，使激活函数首先被应用，随后是线性变换（图 11.5b）。有时残差块内部可能包含多个处理层（图 11.5c），但这些层通常以线性变换结束。最后我们注意到，当我们用 ReLU 操作开始这些块时，如果初始网络输入为负，它们将不执行任何操作，因为 ReLU 会将整个信号裁剪为零。因此，通常以线性变换而不是残差块开始网络，如 图 11.5b 所示。
+因此，通常会更改运算顺序，使激活函数首先被应用，随后是线性变换（图 11.5b）。有时残差块内部可能包含多个处理层（图 11.5c），但这些层通常以线性变换结束。最后我们注意到，当我们用 ReLU 操作开始这些块时，如果初始网络输入为负，它们将不执行任何操作，因为 ReLU 会将整个信号裁剪为零。因此，通常以线性变换而不是残差块开始网络，如图 11.5b 所示。
 
 #### 11.2.2 具有残差连接的更深层网络
 
@@ -4587,53 +4491,55 @@ y = f[3][f[2][f[1][x, ϕ[1]], ϕ[2]], ϕ[3]]
 
 在第 7.5 节中，我们看到初始化网络参数至关重要。如果没有仔细的初始化，反向传播前向传递过程中中间值的幅度可能会呈指数级增加或减少。同样，当我们向后穿过网络时，反向传递过程中的梯度可能会爆炸或消失。
 
-因此，我们初始化网络参数，使得激活值（在前向传递中）和梯度（在反向传递中）的期望方差在层之间保持不变。He 初始化（第 7.5 节）通过将偏置 `β` 初始化为零，并选择均值为零、方差为 `2/D[h]` 的正态分布权重 `Ω`（其中 `D[h]` 是前一层隐藏单元的数量），为 ReLU 激活实现了这一点。
+因此，我们初始化网络参数，使得激活值（在前向传递中）和梯度（在反向传递中）的期望方差在层之间保持不变。He 初始化（第 7.5 节）通过将偏置 `β` 初始化为零，并选择均值为零、方差为 `2/Dh` 的正态分布权重 `Ω`（其中 `Dh` 是前一层隐藏单元的数量），为 ReLU 激活实现了这一点。
 
-现在考虑一个残差网络。由于存在一条路径，使得每一层都直接对网络输出做出贡献（公式 11.5 和 图 11.4b），我们不必担心中间值或梯度会随网络深度而消失。然而，即使我们在残差块内使用 He 初始化，前向传递中的值也会随网络深度呈指数级增加。
+现在考虑一个残差网络。由于存在一条路径，使得每一层都直接对网络输出做出贡献（公式 11.5 和图 11.4b），我们不必担心中间值或梯度会随网络深度而消失。然而，即使我们在残差块内使用 He 初始化，前向传递中的值也会随网络深度呈指数级增加。
 
 为了理解原因，请考虑我们将残差块中处理的结果加回到输入上。每个分支都有一些（不相关的）变异性。因此，当我们重新组合它们时，总方差会增加。使用 ReLU 激活和 He 初始化时，每个块中的处理不会改变期望方差。因此，当我们与输入重新组合时，方差翻倍（图 11.6a），并随残差块的数量呈指数级增长。这限制了在前向传递中超过浮点精度之前可能的网络深度。类似的论证也适用于反向传播算法反向传递中的梯度。
 
 ***
 
-问题 11.4
+#### 问题 11.4
 
 ***
 
 ![Figure 11.6 Variance in residual networks. a) He initialization ensures that the expected variance remains unchanged after a linear plus ReLU layer fk. Unfortunately, in residual networks, the input of each block is added back to the output, so the variance doubles at each layer (gray numbers indicate variance) and grows exponentially. b) One approach would be to rescale the signal by c11-fig-5007.jpg between each residual block. c) A second method uses batch normalization (BN) as the first step in the residual block and initializes the associated offset δ to zero and scale γ to one. This transforms the input to each layer to have unit variance, and with He initialization, the output variance will also be one. Now the variance increases linearly with the number of residual blocks. A side-effect is that, at initialization, later network layers are dominated by the residual connection and are hence close to computing the identity.](img/c11-fig-0006.jpg)
 
-图 11.6 残差网络中的方差。a) He 初始化确保线性加 ReLU 层 `f[k]` 之后期望方差保持不变。不幸的是，在残差网络中，每个块的输入被加回到输出，因此方差在每一层翻倍（灰色数字表示方差）并呈指数级增长。b) 一种方法是在每个残差块之间按 `c11-fig-5007.jpg` 重新缩放信号。c) 第二种方法在残差块的第一步使用批量归一化（BN），并将相关偏移 `δ` 初始化为零、缩放 `γ` 初始化为一。这将每层的输入转换为单位方差，配合 He 初始化，输出方差也将为一。现在方差随残差块数量线性增加。一个副作用是，在初始化时，后面的网络层由残差连接主导，因此接近于计算恒等映射。
+图 11.6 残差网络中的方差。a) He 初始化确保线性加 ReLU 层 `fk` 之后期望方差保持不变。不幸的是，在残差网络中，每个块的输入被加回到输出，因此方差在每一层翻倍（灰色数字表示方差）并呈指数级增长。b) 一种方法是在每个残差块之间按 `c11-fig-5007.jpg` 重新缩放信号。c) 第二种方法在残差块的第一步使用批量归一化（BN），并将相关偏移 `δ` 初始化为零、缩放 `γ` 初始化为一。这将每层的输入转换为单位方差，配合 He 初始化，输出方差也将为一。现在方差随残差块数量线性增加。一个副作用是，在初始化时，后面的网络层由残差连接主导，因此接近于计算恒等映射。
 
 因此，即使使用 He 初始化，残差网络仍然遭受不稳定的前向传播和梯度爆炸。一种能稳定前向和反向传递的方法是使用 He 初始化，然后将每个残差块的组合输出乘以 `c11-fig-5007.jpg` 以补偿翻倍（图 11.6b）。然而，更常用的方法是使用*批量归一化*。
 
 ### 11.4 批量归一化
 
-*批量归一化* 或 *BatchNorm* 对每个激活值 `h` 进行平移和重缩放，使其在批次 `ẞ` 上的均值和方差成为训练期间学习的值。首先，计算经验均值 `m[h]` 和标准差 `s[h]`：
+*批量归一化* 或 *BatchNorm* 对每个激活值 `h` 进行平移和重缩放，使其在批次 `B` 上的均值和方差成为训练期间学习的值。首先，计算经验均值 `mh` 和标准差 `sh`：
 
-![c11-fig-5008.jpg](img/c11-fig-5008.jpg)
+```
+c11-fig-5008.jpg
+```
 
 (11.7)
 
 其中所有量均为标量。然后我们使用这些统计量将批次激活值标准化为零均值和单位方差：
 
-![c11-fig-5009.jpg](img/c11-fig-5009.jpg)
+```
+c11-fig-5009.jpg
+```
 
 (11.8)
 
-其中 `ϵ` 是一个防止除以零的小数，如果批次中每个成员的 `h[i]` 都相同，则 `s[h]` = 0。
+其中 `ϵ` 是一个防止除以零的小数，如果批次中每个成员的 `hi` 都相同，则 `sh` = 0。
 
 ***
 
-附录 C.2.4
-
-标准化
+#### 附录 C.2.4 标准化
 
 ***
-
-
 
 最后，归一化变量由 `γ` 缩放并由 `δ` 平移：
 
-![c11-fig-5010.jpg](img/c11-fig-5010.jpg)
+```
+c11-fig-5010.jpg
+```
 
  (11.9)
 
@@ -4641,23 +4547,23 @@ y = f[3][f[2][f[1][x, ϕ[1]], ϕ[2]], ϕ[3]]
 
 ---
 
-Problem 11.5
+#### 问题 11.5
 
 ---
 
-批量归一化独立地应用于每个隐藏单元。在一个包含 `K` 层的标准神经网络中，每层包含 `D` 个隐藏单元，将会有 `KD` 个学习到的偏移 `δ` 和 `KD` 个学习到的缩放 `γ`。在卷积网络中，归一化统计量是在批次和空间位置上共同计算的。如果有 `K` 层，每层包含 `C` 个通道，则会有 `KC` 个偏移和 `KC` 个缩放。在测试时，我们没有一个批次来收集统计量。为了解决这个问题，统计量 `m[h]` 和 `s[h]` 是在整个训练数据集上（而不仅仅是一个批次）计算并冻结在最终网络中的。
+批量归一化独立地应用于每个隐藏单元。在一个包含 `K` 层的标准神经网络中，每层包含 `D` 个隐藏单元，将会有 `KD` 个学习到的偏移 `δ` 和 `KD` 个学习到的缩放 `γ`。在卷积网络中，归一化统计量是在批次和空间位置上共同计算的。如果有 `K` 层，每层包含 `C` 个通道，则会有 `KC` 个偏移和 `KC` 个缩放。在测试时，我们没有一个批次来收集统计量。为了解决这个问题，统计量 `mh` 和 `sh` 是在整个训练数据集上（而不仅仅是一个批次）计算并冻结在最终网络中的。
 
 ---
 
-Problem 11.6
+#### 问题 11.6
 
 ---
 
 ---
 
-Notebook 11.3
+#### 笔记本 11.3
 
-BatchNorm
+##### BatchNorm
 
 ---
 
@@ -4683,7 +4589,7 @@ BatchNorm
 
 ---
 
-Problem 11.7
+#### 问题 11.7
 
 ---
 
@@ -4695,20 +4601,23 @@ Problem 11.7
 
 ---
 
-Problem 11.8
+#### 问题 11.8
 
 ---
 
-`ResNet-200` 模型（图 11.8）包含 200 层，用于 ImageNet 数据库（图 10.15）上的图像分类。其架构类似于 `AlexNet` 和 `VGG`，但使用瓶颈残差块代替普通卷积层。与 `AlexNet` 和 `VGG` 一样，这些块定期穿插着空间分辨率的降低和通道数的同步增加。在这里，分辨率通过使用步长为二的卷积进行下采样来降低。通道数通过向表示追加零或使用额外的 1×1 卷积来增加。网络开头是一个 7×7 卷积层，后跟一个下采样操作。最后，一个全连接层将块映射到长度为 1000 的向量。这通过一个 softmax 层生成类别概率。
+
+
+# ResNet-200 模型与 DenseNet、U-Net 等残差网络变体
+
+## ResNet-200 模型
+
+`ResNet-200` 模型（图 11.8）包含 200 层，用于 ImageNet 数据库（图 10.15）上的图像分类。其架构类似于 `AlexNet` 和 `VGG`，但使用瓶颈残差块代替普通卷积层。与 `AlexNet` 和 `VGG` 一样，这些块定期穿插着空间分辨率的降低和通道数的同步增加。在这里，分辨率通过使用步长为二的卷积进行下采样来降低。通道数通过向表示追加零或使用额外的 `1×1` 卷积来增加。网络开头是一个 `7×7` 卷积层，后跟一个下采样操作。最后，一个全连接层将块映射到长度为 1000 的向量。这通过一个 softmax 层生成类别概率。
 
 ![Figure 11.8 ResNet-200 model. A standard 7×7 convolutional layer with stride two is applied, followed by a MaxPool operation. A series of bottleneck residual blocks follow (number in brackets is channels after first 1×1 convolution), with periodic downsampling and accompanying increases in the number of channels. The network concludes with average pooling across all spatial positions and a fully connected layer that maps to pre-softmax activations.](img/c11-fig-0008.jpg)
 
-图 11.8 ResNet-200 模型。应用一个步长为二的标准 7×7 卷积层，后跟一个 MaxPool 操作。随后是一系列瓶颈残差块（括号中的数字是第一个 1×1 卷积后的通道数），并定期进行下采样和相应的通道数增加。网络以跨所有空间位置的平均池化和一个映射到 softmax 前激活值的全连接层结束。
+图 11.8 ResNet-200 模型。应用一个步长为二的标准 `7×7` 卷积层，后跟一个 MaxPool 操作。随后是一系列瓶颈残差块（括号中的数字是第一个 `1×1` 卷积后的通道数），并定期进行下采样和相应的通道数增加。网络以跨所有空间位置的平均池化和一个映射到 softmax 前激活值的全连接层结束。
 
-
-
-
-#### 11.5.2 DenseNet
+## 11.5.2 DenseNet
 
 残差块接收来自前一层的输出，通过某些网络层对其进行修改，然后将其加回到原始输入中。另一种替代方案是将修改后的信号与原始信号进行拼接。这会增加表示的大小（对于卷积网络而言，即通道数），但后续可选的线性变换可以将其映射回原始大小（对于卷积网络而言，即 `1×1` 卷积）。这使得模型能够将表示相加、进行加权求和，或以更复杂的方式将它们组合起来。
 
@@ -4722,7 +4631,7 @@ DenseNet 架构采用拼接方式，使得某层的输入包含*所有*前序层
 
 该网络在图像分类任务上的表现与 ResNet 模型具有竞争力（见图 10.21）；事实上，在参数量相当的情况下，它的表现可能更好。这大概是因为它能更灵活地复用早期层的处理结果。
 
-#### 11.5.3 U-Net 与沙漏网络
+## 11.5.3 U-Net 与沙漏网络
 
 第 10.5.3 节描述了一种具有编码器-解码器或沙漏结构的语义分割网络。编码器反复对图像进行下采样，直到感受野足够大，并整合来自整幅图像的信息。然后解码器将其上采样回原始图像的大小。最终输出是每个像素处可能目标类别的概率分布。该架构的一个缺点是，网络中间的低分辨率表示必须“记住”高分辨率细节，以使最终结果准确。如果残差连接将表示从编码器传递到解码器中对应的部分，则无需如此。
 
@@ -4730,7 +4639,7 @@ DenseNet 架构采用拼接方式，使得某层的输入包含*所有*前序层
 
 ---
 
-问题 11.9
+### 问题 11.9
 
 ---
 
@@ -4742,20 +4651,17 @@ U-Net 最初旨在用于医学图像分割（图 11.11），但在计算机图�
 
 ![Figure 11.11 Segmentation using U-Net in 3D. a) Three slices through a 3D volume of mouse cortex taken by scanning electron microscope. b) A single U-Net is used to classify voxels as being inside or outside neurites. Connected regions are identified with different colors. c) For a better result, an ensemble of five U-Nets is trained, and a voxel is only classified as belonging to the cell if all five networks agree. Adapted from Falk et al. (2019).](img/c11-fig-0011.jpg)
 
-
-
-
-##### 图 11.11 在 3D 中使用 U-Net 进行分割
+#### 图 11.11 在 3D 中使用 U-Net 进行分割
 
 图 11.11 在 3D 中使用 U-Net 进行分割。a) 由扫描电子显微镜拍摄的小鼠皮层 3D 体积的三个切片。b) 单个 `U-Net` 用于将体素分类为神经突内部或外部。连通区域用不同颜色标识。c) 为了获得更好的结果，训练了一个由五个 `U-Nets` 组成的集成模型，只有当所有五个网络都一致时，体素才被分类为属于细胞。改编自 Falk 等人 (2019)。
 
-##### 图 11.12 用于姿态估计的堆叠沙漏网络
+#### 图 11.12 用于姿态估计的堆叠沙漏网络
 
 ![图 11.12 用于姿态估计的堆叠沙漏网络。a) 网络输入是一张包含人的图像，输出是一组热力图，每个关节对应一张热力图。这被表述为一个回归问题，目标是热力图图像，在真实关节位置处有小的高亮区域。估计热力图的峰值用于确定每个最终关节位置。b) 架构由初始的卷积层和残差层组成，后面跟随一系列沙漏模块。c) 每个沙漏模块由一个类似于 `U-Net` 的编码器-解码器网络组成，不同之处在于卷积使用零填充，在残差链接中进行了一些进一步处理，并且这些链接添加的是这种处理后的表示而不是将其拼接。每个蓝色长方体本身就是一个瓶颈残差块（图 11.7b）。改编自 Newell 等人 (2016)。](img/c11-fig-0012.jpg)
 
 图 11.12 用于姿态估计的堆叠沙漏网络。a) 网络输入是一张包含人的图像，输出是一组热力图，每个关节对应一张热力图。这被表述为一个回归问题，目标是热力图图像，在真实关节位置处有小的高亮区域。估计热力图的峰值用于确定每个最终关节位置。b) 架构由初始的卷积层和残差层组成，后面跟随一系列沙漏模块。c) 每个沙漏模块由一个类似于 `U-Net` 的编码器-解码器网络组成，不同之处在于卷积使用零填充，在残差链接中进行了一些进一步处理，并且这些链接添加的是这种处理后的表示而不是将其拼接。每个蓝色长方体本身就是一个瓶颈残差块（图 11.7b）。改编自 Newell 等人 (2016)。
 
-### 11.6 为什么带有残差连接的网络表现如此出色？
+## 11.6 为什么带有残差连接的网络表现如此出色？
 
 残差网络允许训练深得多的网络；可以将 `ResNet` 架构扩展到 1000 层并仍能有效训练。图像分类性能的提升最初归因于网络深度的增加，但有两个证据与这一观点相矛盾。
 
@@ -4767,7 +4673,7 @@ U-Net 最初旨在用于医学图像分割（图 11.11），但在计算机图�
 
 图 11.13 神经网络损失表面的可视化。每个图显示了参数空间中围绕 `SGD` 在 `CIFAR-10` 数据集图像分类任务中找到的极小值的两个随机方向上的损失表面。这些方向经过归一化以便并排比较。a) 56 层残差网络。b) 移除跳跃连接后同一网络的结果。有跳跃连接时表面更平滑。这促进了学习，并使最终网络性能对参数中的微小误差更具鲁棒性，因此它很可能泛化得更好。改编自 Li 等人 (2018b)。
 
-### 11.7 总结
+## 11.7 总结
 
 无限增加网络深度会导致图像分类的训练和测试性能均下降。这可能是因为网络早期参数的损失梯度相对于更新步长变化迅速且不可预测。残差连接将处理后的表示加回到其自身的输入上。现在每一层都直接对输出做出贡献，而不仅仅是间接贡献，因此不再强制要求梯度通过许多层传播，且损失表面更平滑。
 
@@ -4775,13 +4681,11 @@ U-Net 最初旨在用于医学图像分割（图 11.11），但在计算机图�
 
 残差块已被纳入卷积网络中。它们允许训练更深的网络，并带来相应的图像分类性能提升。残差网络的变体包括 `DenseNet` 架构，它将所有先前层的输出拼接起来馈送到当前层；以及 `U-Nets`，它将残差连接融入编码器-解码器模型中。
 
-### 注释
+## 注释
 
-**残差连接：** 残差连接由 He 等人 (2016a) 提出，他们构建了一个包含 152 层的网络，其规模是 `VGG`（图 10.17）的八倍，并在 `ImageNet` 分类任务上达到了最先进的性能。每个残差块由一个卷积层、批量归一化、一个 `ReLU` 激活函数、第二个卷积层和第二个批量归一化组成。在该块加回主表示后，应用第二个 `ReLU` 函数。该架构称为 `ResNet v1`。He 等人 (2016b) 研究了残差架构的不同变体，其中要么 (i) 跳跃连接上也可以应用处理，要么 (ii) 在两个分支重新合并后应用处理。他们得出结论，两者都不是必需的，从而得到了 图 11.7 中的架构，这有时被称为*预激活残差块*，是 `ResNet v2` 的骨干。他们训练了一个 200 层的网络，进一步提高了 `ImageNet` 分类任务的性能（见 图 11.8）。自那时以来，正则化、优化和数据增强的新方法已被开发出来，Wightman 等人 (2021) 利用这些方法为 `ResNet` 架构展示了一个更现代的训练流程。
+### 残差连接
 
-
-
-
+残差连接由 He 等人 (2016a) 提出，他们构建了一个包含 152 层的网络，其规模是 `VGG`（图 10.17）的八倍，并在 `ImageNet` 分类任务上达到了最先进的性能。每个残差块由一个卷积层、批量归一化、一个 `ReLU` 激活函数、第二个卷积层和第二个批量归一化组成。在该块加回主表示后，应用第二个 `ReLU` 函数。该架构称为 `ResNet v1`。He 等人 (2016b) 研究了残差架构的不同变体，其中要么 (i) 跳跃连接上也可以应用处理，要么 (ii) 在两个分支重新合并后应用处理。他们得出结论，两者都不是必需的，从而得到了 图 11.7 中的架构，这有时被称为*预激活残差块*，是 `ResNet v2` 的骨干。他们训练了一个 200 层的网络，进一步提高了 `ImageNet` 分类任务的性能（见 图 11.8）。自那时以来，正则化、优化和数据增强的新方法已被开发出来，Wightman 等人 (2021) 利用这些方法为 `ResNet` 架构展示了一个更现代的训练流程。
 
 #### 为什么残差连接有帮助
 
@@ -4799,26 +4703,25 @@ Veit 等人（2016）将残差网络表征为较短网络的集成，并描绘�
 
 权重的 L2 正则化在普通网络和没有 `BatchNorm` 的残差网络中有着根本不同的效果。在前者中，它鼓励层的输出成为由偏置决定的常数函数。在后者中，它鼓励残差块计算恒等映射加上由偏置决定的常数。
 
+
+
 已经开发出几种专门针对残差架构的正则化方法。`ResDrop`（Yamada 等人，2016）、随机深度（Huang 等人，2016）和 `RandomDrop`（Yamada 等人，2019）都通过在训练过程中随机丢弃残差块来正则化残差网络。在后一种情况下，丢弃块的倾向由一个伯努利变量决定，其参数在训练期间线性减小。测试时，残差块按其期望概率加回。这些方法实际上是 Dropout 的变体，其中一个块内的所有隐藏单元同时协同被丢弃。在残差网络的多路径视角（图 11.4b）中，它们只是在每个训练步骤移除一些路径。Wu 等人（2018b）开发了 `BlockDrop`，它分析现有网络并在运行时决定使用哪些残差块，旨在提高推理效率。
 
 其他正则化方法是为残差块内部具有多条路径的网络开发的。`Shake-shake`（Gastaldi，2017a,b）在前向和反向传递期间随机重新加权路径。在前向传递中，这可以视为合成随机数据；在反向传递中，则可视为向训练方法注入另一种形式的噪声。`ShakeDrop`（Yamada 等人，2019）抽取一个伯努利变量，决定每个块在该训练步骤是接受 `Shake-Shake` 还是表现得像标准残差单元。
 
-#### 批量归一化
+### 批量归一化
 
 批量归一化由 Ioffe & Szegedy（2015）在残差网络背景之外提出。他们在实验上表明，它允许更高的学习率，加快收敛速度，并使 Sigmoid 激活函数更实用（因为输出分布受到控制，样本不太可能落在 Sigmoid 的饱和极值区域）。Balduzzi 等人（2017）研究了深层网络后期隐藏单元在初始化时使用 `ReLU` 函数的激活情况。他们表明，许多此类隐藏单元无论输入如何都始终处于激活或非激活状态，但 `BatchNorm` 减少了这种倾向。
 
 虽然批量归一化有助于稳定信号在网络中的前向传播，但 Yang 等人（2019）表明，在没有跳跃连接的 `ReLU` 网络中，它会导致梯度爆炸，每一层将梯度幅度增加 ![c11-fig-5011.jpg](img/c11-fig-5011.jpg)。Luther（2020）总结了这一论点。既然残差网络可以看作不同长度路径的组合（图 11.4），这种效应也必然存在于残差网络中。然而，推测在具有 `K` 层的网络前向传播中消除 `2*^K*` 量级增长的益处，超过了反向传播中梯度增加 `1*.*21*^K*` 造成的危害，因此总体上 `BatchNorm` 使训练更加稳定。
 
-#### 批量归一化的变体
+### 批量归一化的变体
 
-已经提出了几种 `BatchNorm` 变体（图 11.14）。`BatchNorm` 基于跨批次收集的统计数据，分别对每个通道进行归一化。*幽灵批量归一化* 或 *GhostNorm*（Hoffer 等人，2017）仅使用部分批次来计算归一化统计量，这使得统计量更具噪声，并在批次大小非常大时增加正则化量（图 11.14b）。
+已经提出了几种 `BatchNorm` 变体（图 11.14）。`BatchNorm` 基于跨批次收集的统计数据，分别对每个通道进行归一化。*幽灵批量归一化* 或 `GhostNorm`（Hoffer 等人，2017）仅使用部分批次来计算归一化统计量，这使得统计量更具噪声，并在批次大小非常大时增加正则化量（图 11.14b）。
 
 ![图 11.14 归一化方案。BatchNorm 分别修改每个通道，但根据跨批次和空间位置收集的统计数据以相同方式调整每个批次成员。Ghost BatchNorm 仅从部分批次计算这些统计量以使其更多变。LayerNorm 基于跨通道和空间位置收集的统计数据，为每个批次成员分别计算统计量。它为每个通道保留单独的学习缩放因子。GroupNorm 在每组通道内归一化，并为每个通道保留单独的缩放和偏移参数。InstanceNorm 分别在每个通道内归一化，仅跨空间位置计算统计量。改编自 Wu & He (2018)。](img/c11-fig-0014.jpg)
 
 图 11.14 归一化方案。`BatchNorm` 分别修改每个通道，但根据跨批次和空间位置收集的统计数据以相同方式调整每个批次成员。`Ghost BatchNorm` 仅从部分批次计算这些统计量以使其更多变。`LayerNorm` 基于跨通道和空间位置收集的统计数据，为每个批次成员分别计算统计量。它为每个通道保留单独的学习缩放因子。`GroupNorm` 在每组通道内归一化，并为每个通道保留单独的缩放和偏移参数。`InstanceNorm` 分别在每个通道内归一化，仅跨空间位置计算统计量。改编自 Wu & He (2018)。
-
-
-
 
 ### 归一化方法与网络架构
 
@@ -4872,22 +4775,24 @@ Zhang et al. (2019a) 引入了 `FixUp`，其中每一层都使用 He 初始化�
 
 ### 习题
 
-
-
-
 #### 问题 11.1
+
 从公式 11.4 的网络定义推导公式 11.5。
 
 #### 问题 11.2
+
 展开图 11.4a 中的四模块网络，会产生一条长度为零的路径、四条长度为一的路径、六条长度为二的路径、四条长度为三的路径和一条长度为四的路径。如果有 (i) 三个残差模块和 (ii) 五个残差模块，每种长度的路径各有多少条？推导出 *K* 个残差模块的规律。
 
 #### 问题 11.3
+
 证明公式 11.5 中网络关于第一层 **f**[1][**x**] 的导数由公式 11.6 给出。
 
 #### 问题 11.4*
+
 解释为什么图 11.6a 中残差模块两个分支的值是不相关的。证明不相关变量之和的方差等于它们各自方差之和。
 
 #### 问题 11.5*
+
 给定一批标量值 ![c11-fig-5014.jpg](img/c11-fig-5014.jpg)，批量归一化的前向传播包含以下操作（图 11.15）：
 
 ![c11-fig-5015.jpg](img/c11-fig-5015.jpg)
@@ -4901,20 +4806,24 @@ Zhang et al. (2019a) 引入了 `FixUp`，其中每一层都使用 He 初始化�
 图 11.15 批量归一化的计算图（见问题 11.10）。
 
 #### 问题 11.6
+
 考虑一个全连接神经网络，包含一个输入、一个输出和十个隐藏层，每层包含二十个隐藏单元。该网络有多少参数？如果我们在每个线性变换和 ReLU 之间放置一个批量归一化操作，会有多少参数？
 
 #### 问题 11.7*
+
 考虑对图 11.7a 中卷积层的权重施加 L2 正则化惩罚，但不对后续 BatchNorm 层的缩放参数施加惩罚。随着训练进行，你预期会发生什么？
 
 #### 问题 11.8
+
 考虑一个包含批量归一化操作、ReLU 激活函数和 3×3 卷积层的卷积残差模块。如果输入和输出均为 512 通道，定义该模块需要多少参数？现在考虑一个瓶颈残差模块，包含三个批量归一化/ReLU/卷积序列。第一个使用 1×1 卷积将通道数从 512 降至 128。第二个使用 3×3 卷积，输入输出通道数相同。第三个使用 1×1 卷积将通道数从 128 增至 512（见图 11.7b）。定义该模块需要多少参数？
 
 #### 问题 11.9
+
 U-Net 完全是卷积式的，训练后可处理任意尺寸的图像。为什么我们不使用任意尺寸的图像集合进行训练？
 
 ## 第 12 章
 
-Transformer
+### Transformer
 
 第 10 章介绍了卷积网络，它专门用于处理位于规则网格上的数据。它们特别适合处理图像，因为图像拥有极大数量的输入变量，这使得全连接网络难以使用。卷积网络的每一层都采用参数共享，使得局部图像补丁在图像的每个位置都以相似的方式被处理。
 
@@ -4962,11 +4871,13 @@ Transformer
 
 标量权重 *a*[**x**[m], **x**[n]] 是第 *n* 个输出对输入 **x**[m] 所支付的*注意力*。*N* 个权重 *a*[•, **x**[n]] 非负且和为一。因此，自注意力可被视为按不同比例*路由*值以创建每个输出（图 12.1）。
 
-
-
 #### 自注意力机制
 
 ##### 图 12.1 自注意力作为路由
+
+
+
+# 自注意力机制
 
 自注意力机制接收 `N` 个输入 `x[1], …, x[N] ∈ ℝ^D`（此处 `N = 3` 且 `D = 4`），并分别处理每个输入以计算 `N` 个值向量。第 `n` 个输出 `sa[n][x[1], … x[N]]`（简写为 `sa[n][x•]`）随后被计算为这 `N` 个值向量的加权和，其中权重为正且和为 1。
 
@@ -4980,7 +4891,7 @@ c) 输出 `sa[3][x•]` 的加权方式又有不同。因此，每个输出都�
 
 以下章节将更详细地探讨点积自注意力。首先，我们考虑值的计算及其后续加权（公式 12.3）。然后描述如何计算注意力权重 `a[x[m], x[n]]` 本身。
 
-#### 12.2.1 计算与加权值
+## 12.2.1 计算与加权值
 
 公式 12.2 表明，相同的权重 `Ω[v] ∈ ℝ^(D×D)` 和偏置 `β[v] ∈ ℝ^D` 被应用于每个输入 `x[n] ∈ ℝ^D`。该计算随序列长度 `N` 线性缩放，因此所需参数比将所有 `DN` 个输入关联到所有 `DN` 个输出的全连接网络更少。值的计算可视为具有共享参数的稀疏矩阵运算（图 12.2b）。
 
@@ -4994,7 +4905,7 @@ c) 输出 `sa[3][x•]` 的加权方式又有不同。因此，每个输出都�
 
 ---
 
-#### 12.2.2 计算注意力权重
+## 12.2.2 计算注意力权重
 
 在上一节中，我们看到输出来自两个串联的线性变换；值向量 `β[v] + Ω[v]x[m]` 为每个输入 `x[m]` 独立计算，这些向量通过注意力权重 `a[x[m], x[n]]` 线性组合。然而，整体自注意力计算是*非线性*的。正如我们稍后将看到的，注意力权重本身就是输入的非线性函数。这是一个*超网络*的例子，其中一个网络分支计算另一个网络的权重。
 
@@ -5004,6 +4915,7 @@ c) 输出 `sa[3][x•]` 的加权方式又有不同。因此，每个输出都�
 q[n] = β[q] + Ω[q]x[n]
 k[m] = β[k] + Ω[k]x[m]
 ```
+
  (12.4)
 
 其中 `{q[n]}` 和 `{k[m]}` 分别称为*查询*和*键*。然后我们计算查询与键之间的点积，并将结果通过 softmax 函数：
@@ -5011,6 +4923,7 @@ k[m] = β[k] + Ω[k]x[m]
 ```
 a[x[m], x[n]] = softmax(q[n] · k[m])
 ```
+
  (12.5)
 
 因此对于每个 `x[n]`，它们均为非负且和为 1（图 12.3）。显而易见，这被称为*点积自注意力*。
@@ -5031,17 +4944,13 @@ a[x[m], x[n]] = softmax(q[n] · k[m])
 
 ---
 
-#### 12.2.3 自注意力总结
+## 12.2.3 自注意力总结
 
 第 `n` 个输出是对所有输入应用的同一线性变换 `v[•] = β[v] + Ω[v]x[•]` 的加权和，这些注意力权重为正且和为 1。权重取决于输入 `x[n]` 与其他输入之间的相似度度量。虽然没有激活函数，但由于用于计算注意力权重的点积和 softmax 运算，该机制是非线性的。
 
 请注意，该机制满足了最初的要求。首先，存在一组共享参数 `ϕ = {β[v], Ω[v], β[q], Ω[q], β[k], Ω[k]}`。这与输入数量 `N` 无关，因此网络可应用于不同的序列长度。其次，输入（词元）之间存在连接，这些连接的强度通过注意力权重取决于输入本身。
 
-
-
-
-
-##### 12.2.4 矩阵形式
+### 12.2.4 矩阵形式
 
 如果 *N* 个输入 **x**[n] 构成 *D* × *N* 矩阵 **X** 的列，则上述计算可以写成紧凑形式。值、查询和键可以计算为：
 
@@ -5073,11 +4982,11 @@ Notebook 12.1
 
 图 12.4 矩阵形式的自注意力。如果我们将 *N* 个输入向量 **x**[n] 存储在 *D*×*N* 矩阵 **X** 的列中，自注意力可以高效实现。输入 **X** 分别由查询矩阵 **Q**、键矩阵 **K** 和值矩阵 **V** 进行操作。然后使用矩阵乘法计算点积，并将 softmax 操作独立地应用于结果矩阵的每一列以计算注意力。最后，值与注意力后相乘，创建一个与输入大小相同的输出。
 
-### 12.3 点积自注意力的扩展
+# 12.3 点积自注意力的扩展
 
 在上一节中，我们描述了自注意力。在这里，我们介绍三种在实践中几乎总是被使用的扩展。
 
-#### 12.3.1 位置编码
+## 12.3.1 位置编码
 
 细心的读者会注意到，自注意力机制丢弃了重要信息：无论输入 **x**[n] 的顺序如何，计算都是相同的。更准确地说，它关于输入排列是等变的。然而，当输入对应句子中的单词时，顺序*很*重要。句子“The woman ate the raccoon”（女人吃了浣熊）的含义与“The raccoon ate the woman”（浣熊吃了女人）不同。主要有两种方法来融入位置信息。
 
@@ -5095,7 +5004,7 @@ Problem 12.3
 
 **相对位置编码：** 自注意力机制的输入可能是整个句子、多个句子，或仅仅是句子片段，单词的绝对位置远不如两个输入之间的相对位置重要。当然，如果系统知道两者的绝对位置，就可以恢复这一信息，但相对位置编码直接编码了这一信息。注意力矩阵的每个元素对应查询位置 *a* 和键位置 *b* 之间的特定偏移量。相对位置编码为每个偏移量学习一个参数 *π[a]*[,]*[b]*，并通过添加这些值、乘以这些值或以其他方式改变注意力矩阵来修改注意力矩阵。
 
-#### 12.3.2 缩放点积自注意力
+## 12.3.2 缩放点积自注意力
 
 注意力计算中的点积可能具有很大的幅度，并将 softmax 函数的参数移入一个区域，在那里最大值完全占主导地位。此时，softmax 函数输入的微小变化对输出影响很小（即梯度非常小），使得模型难以训练。为了防止这种情况，点积按查询和键的维度 *D[q]* 的平方根进行缩放（即 **Ω**[q] 和 **Ω**[k] 的行数，二者必须相同）：
 
@@ -5111,7 +5020,7 @@ Problem 12.4
 
 这被称为*缩放点积自注意力*。
 
-#### 12.3.3 多头
+## 12.3.3 多头
 
 多个自注意力机制通常并行应用，这被称为*多头自注意力*。现在计算 *H* 组不同的值、键和查询：
 
@@ -5151,13 +5060,9 @@ Notebook 12.2
 
 ***
 
-### 12.4 Transformer
+# 12.4 Transformer
 
-
-
-
-
-#### 自注意力与 Transformer 机制
+## 自注意力与 Transformer 机制
 
 自注意力只是更大 `transformer` 机制的一部分。这由一个多头自注意力单元（允许词向量相互交互）组成，后面跟着一个全连接网络 `mlp[x[•]]`（分别作用于每个词）。这两个单元都是残差网络（即，它们的输出被加回到原始输入中）。此外，通常在自注意力和全连接网络之后都会添加一个 `LayerNorm` 操作。这类似于 `BatchNorm`，但使用单个输入序列内各 token 之间的统计量来执行归一化（第 11.4 节和图 11.14）。完整的层可以用以下一系列操作来描述（图 12.7）：
 
@@ -5171,11 +5076,13 @@ Notebook 12.2
 
 图 12.7 Transformer。输入由一个 `D` × `N` 矩阵组成，包含 `N` 个输入 token 中每一个的 `D` 维词嵌入。输出是一个相同大小的矩阵。Transformer 由一系列操作组成。首先，有一个多头注意力块，允许词嵌入相互交互。这构成了残差块的处理过程，因此输入会被加回到输出中。其次，应用一个 `LayerNorm` 操作。第三，有一个第二个残差层，其中相同的全连接神经网络被分别应用于 `N` 个词表示（列）中的每一个。最后，再次应用 `LayerNorm`。
 
-### 12.5 用于自然语言处理的 Transformers
+# 12.5 用于自然语言处理的 Transformers
+
+
 
 上一节描述了 transformer。本节描述它如何用于自然语言处理（NLP）任务。典型的 NLP 流程始于一个 `tokenizer`，它将文本分割成单词或词片段。然后将这些 token 映射到学习到的嵌入中。这些嵌入被传递通过一系列 transformer。我们现在依次考虑这些阶段中的每一个。
 
-#### 12.5.1 分词
+### 12.5.1 分词
 
 文本处理流程始于一个 `tokenizer`。它将文本分割成来自可能 token `vocabulary`（词表）的较小组成单元（token）。在上述讨论中，我们暗示这些 token 代表单词，但存在几个困难。
 
@@ -5197,29 +5104,25 @@ Notebook 12.2
 
 图 12.8 子词分词。a) 一段童谣文本。token 最初只是字符和空白字符（用下划线表示），它们的频率显示在表格中。b) 在每次迭代中，子词分词器寻找最常出现的相邻字符对（在本例中为 se）并将它们合并。这创建了一个新 token 并减少了原始 token s 和 e 的计数。c) 在第二次迭代中，算法合并 e 和空白字符 _。注意，要合并的第一个 token 的最后一个字符不能是空白字符，这防止了跨单词合并。d) 经过 22 次迭代后，token 由字母、词片段和常用单词的混合组成。e) 如果我们无限期地继续这个过程，token 最终将代表完整的单词。f) 随着时间推移，token 数量先随着我们将词片段添加到字母中而增加，然后随着我们合并这些片段而再次减少。在真实情况下，会有大量的单词，算法将在词表大小（token 数量）达到预定值时终止。标点符号和大写字母也将被视为单独的输入字符。
 
-#### 12.5.2 嵌入
+### 12.5.2 嵌入
 
 词表 `𝒱` 中的每个 token 都被映射到一个唯一的 `word embedding`（词嵌入），整个词表的嵌入存储在矩阵 `Ω[e] ∈ ℝ^(D×|𝒱|)` 中。为此，`N` 个输入 token 首先被编码在矩阵 `T ∈ ℝ^(|𝒱|×N)` 中，其中第 `n^(th)` 列对应第 `n^(th)` 个 token，是一个 `|𝒱| × 1` 的 `one-hot vector`（独热向量，即除对应 token 的条目设为 1 外，所有条目均为 0 的向量）。输入嵌入计算为 `X = Ω[e]T`，`Ω[e]` 像其他网络参数一样被学习（图 12.9）。典型的嵌入大小 `D` 为 1024，典型的总词表大小 `|𝒱|` 为 30,000，因此即使在主网络之前，`Ω[e]` 中也有许多参数需要学习。
-
-
-
-
 
 ![图 12.9 输入嵌入矩阵 `X` ∈ ℝ*^(D×N)* 包含 *N* 个长度为 *D* 的嵌入，由包含整个词汇表嵌入的矩阵 `Ω`*[e]* 与列中包含对应词或子词索引的独热向量的矩阵相乘创建而成。词汇表矩阵 `Ω`*[e]* 被视为模型的一个参数，并与其他参数一同学习。注意 `X` 中单词 "an" 的两个嵌入是相同的。](images/c12-fig-0009.jpg)
 
 图 12.9 输入嵌入矩阵 `X` ∈ ℝ*^(D×N)* 包含 *N* 个长度为 *D* 的嵌入，由包含整个词汇表嵌入的矩阵 `Ω`*[e]* 与列中包含对应词或子词索引的独热向量的矩阵相乘创建而成。词汇表矩阵 `Ω`*[e]* 被视为模型的一个参数，并与其他参数一同学习。注意 `X` 中单词 "an" 的两个嵌入是相同的。
 
-#### 12.5.3 Transformer 模型
+### 12.5.3 Transformer 模型
 
 最后，代表文本的嵌入矩阵 `X` 通过一系列 *K* 个 Transformer，称为 *Transformer 模型*。共有三类 Transformer 模型。*编码器* 将文本嵌入转换为可支持多种任务的表示。*解码器* 预测下一个词元以延续输入文本。*编码器-解码器* 用于 *序列到序列任务*，即将一个文本字符串转换为另一个（例如机器翻译）。这些变体分别在 12.6–12.8 节中描述。
 
-### 12.6 编码器模型示例：BERT
+## 12.6 编码器模型示例：BERT
 
 BERT 是一种编码器模型，使用包含 30,000 个词元的词汇表。输入词元被转换为 1024 维的词嵌入，并通过 24 个 Transformer。每个 Transformer 包含一个具有 16 个头的自注意力机制。每个头的查询、键和值的维度为 64（即矩阵 `Ω`*[vh]*, `Ω`*[qh]*, `Ω`*[kh]* 为 1024 × 64）。Transformer 中全连接网络单隐藏层的维度为 4096。参数总量约为 3.4 亿。BERT 推出时被认为规模很大，但现在比最先进的模型小得多。
 
 像 BERT 这样的编码器模型利用 *迁移学习*（第 9.3.6 节）。在 *预训练* 阶段，利用大规模文本语料库通过 *自监督* 学习 Transformer 架构的参数。此处的目标是让模型学习语言统计规律的通用信息。在 *微调阶段*，利用较小规模的有监督训练数据，将生成的网络调整以解决特定任务。
 
-#### 12.6.1 预训练
+### 12.6.1 预训练
 
 在预训练阶段，网络使用自监督进行训练。这使得在无需人工标签的情况下使用海量数据成为可能。对于 BERT，自监督任务是从大型互联网语料库的句子中预测缺失单词（图 12.10）¹。训练期间，最大输入长度为 512 个词元，批次大小为 256。系统训练一百万步，相当于约 33 亿词语料库的 50 个轮次。
 
@@ -5235,7 +5138,7 @@ BERT 是一种编码器模型，使用包含 30,000 个词元的词汇表。输�
 
 预测缺失单词迫使 Transformer 网络理解一定的语法。例如，它可能学到形容词 "red" 常出现在 "house" 或 "car" 等名词之前，但绝不会出现在 "shout" 等动词之前。这也让模型能学习关于世界的浅层 *常识*。例如，训练后，模型会给句子 "The `<mask>` pulled into the station" 中的缺失词 "train" 分配比 "peanut" 更高的概率。然而，这类模型所能拥有的“理解”程度是有限的。
 
-#### 12.6.2 微调
+### 12.6.2 微调
 
 在微调阶段，调整模型参数以使网络专门化于特定任务。在 Transformer 网络后附加一个额外层，将输出向量转换为所需的输出格式。示例包括：
 
@@ -5243,14 +5146,11 @@ BERT 是一种编码器模型，使用包含 30,000 个词元的词汇表。输�
 
 ![图 12.11 预训练后，使用人工标注数据对编码器进行微调以解决特定任务。通常，在编码器后附加一个线性变换或多层感知机（MLP）以产生所需的任何输出。a) 文本分类任务示例。在此情感分类任务中，`<cls>` 词元嵌入用于预测评论为正面的概率。b) 词分类任务示例。在此命名实体识别问题中，每个词的嵌入用于预测该词是否对应人、地点或组织，或非实体。](img/c12-fig-0011.jpg)
 
-
-
-
-### 12.7 解码器模型示例：GPT3
+## 12.7 解码器模型示例：GPT3
 
 本节将对 GPT3 进行高层描述，它是解码器模型的一个示例。其基本架构与编码器模型极其相似，由一系列作用于学习到的词嵌入的 Transformer 组成。然而，其目标截然不同。编码器旨在构建文本的表示，以便微调来解决各种更具体的 NLP 任务。相反，解码器只有一个目的：生成序列中的下一个 token。通过将扩展后的序列反馈回模型，它可以生成连贯的文本段落。
 
-#### 12.7.1 语言建模
+### 12.7.1 语言建模
 
 GPT3 构建了一个自回归语言模型。通过一个具体的例子最容易理解这一点。请考虑句子 "It takes great courage to let yourself appear weak." 为简单起见，假设 token 为完整的单词。整个句子的概率为：
 
@@ -5266,7 +5166,7 @@ GPT3 构建了一个自回归语言模型。通过一个具体的例子最容易
 
 自回归公式揭示了损失函数中最大化 token 对数概率与下一个 token 预测任务之间的联系。
 
-#### 12.7.2 掩码自注意力
+### 12.7.2 掩码自注意力
 
 为了训练解码器，我们在自回归模型下最大化输入文本的对数概率。理想情况下，我们会输入整个句子，并同时计算所有的对数概率和梯度。然而，这会带来一个问题；如果我们输入完整的句子，计算 log `Pr(great|It takes)` 这一项时，将同时获得答案 `great` 和右侧上下文 `courage to let yourself appear weak`。因此，系统可以“作弊”而不是学习预测后续单词，导致无法正常训练。
 
@@ -5278,7 +5178,7 @@ GPT3 构建了一个自回归语言模型。通过一个具体的例子最容易
 
 图 12.12 训练 GPT3 类型的解码器网络。Token 被映射为词嵌入，并在序列开头添加一个特殊的 `<start>` token。嵌入通过一系列使用掩码自注意力的 Transformer。在此，句子中的每个位置只能关注其自身的嵌入以及序列中较早 token 的嵌入（橙色连线）。每个位置的目标都是最大化序列中下一个真实 token 的概率。换句话说，在位置一，我们希望最大化 token `It` 的概率；在位置二，我们希望最大化 token `takes` 的概率；以此类推。掩码自注意力确保系统无法通过查看后续输入来“作弊”。自回归任务的优势在于高效利用数据，因为每个词都为损失函数贡献了一项。然而，它仅利用了每个词的左侧上下文。
 
-#### 12.7.3 从解码器生成文本
+### 12.7.3 从解码器生成文本
 
 
 
@@ -5286,15 +5186,15 @@ GPT3 构建了一个自回归语言模型。通过一个具体的例子最容易
 
 ---
 
-##### 问题 12.7
+### 问题 12.7
 
 ---
 
-##### 笔记本 12.4：解码策略
+### 笔记本 12.4：解码策略
 
 ---
 
-#### 12.7.4 GPT3 与少样本学习
+### 12.7.4 GPT3 与少样本学习
 
 像 GPT3 这样的`大语言模型`在大规模上应用了这些思想。在 GPT3 中，序列长度为 2048 个标记，总批量大小为 320 万个标记。共有 96 个 Transformer（其中一些实现了注意力的稀疏版本），每个处理大小为 12288 的词嵌入。自注意力层中有 96 个头，值、查询和键的维度为 128。它使用 3000 亿个标记进行训练，包含 1750 亿个参数。
 
@@ -5345,9 +5245,6 @@ GPT3 构建了一个自回归语言模型。通过一个具体的例子最容易
 
 这是通过修改解码器中的 Transformer 来实现的。解码器中的原始 Transformer（图 12.12）由一个掩码自注意力层组成，后面跟着一个单独应用于每个嵌入的神经网络。在这两个组件之间添加了一个新的自注意力层，在该层中，解码器嵌入关注编码器嵌入。这使用了一种称为`编码器-解码器注意力`或`交叉注意力`的自注意力版本，其中查询从解码器嵌入计算，而键和值从编码器嵌入计算（图 12.14）。
 
-
-
-
 ![图 12.14 交叉注意力。计算流程与标准自注意力相同。然而，查询是从解码器嵌入 `Xdec` 计算得出的，而键和值则来自编码器嵌入 `Xenc`。在翻译任务中，编码器包含源语言的信息，解码器包含目标语言统计信息。](img/c12-fig-0014.jpg)
 
 图 12.14 交叉注意力。计算流程与标准自注意力相同。然而，查询是从解码器嵌入 `Xdec` 计算得出的，而键和值则来自编码器嵌入 `Xenc`。在翻译任务中，编码器包含源语言的信息，解码器包含目标语言统计信息。
@@ -5380,20 +5277,17 @@ ImageGPT 是一个 Transformer 解码器；它构建图像像素的自回归模�
 
 图 12.16 ImageGPT。a) 从自回归 ImageGPT 模型生成的图像。左上角像素从此位置的估计经验分布中抽取。后续像素依次生成，条件是之前的像素，沿行方向进行，直到到达图像右下角。对每个像素，Transformer 解码器按公式 12.15 生成条件分布，并抽取一个样本。扩展后的序列再反馈给网络生成下一个像素，以此类推。b) 图像补全。在每种情况下，移除图像下半部分（顶行），ImageGPT 逐像素补全剩余部分（展示三种不同的补全结果）。改编自 [`openai.com/blog/image-gpt/`](https://openai.com/blog/image-gpt/)。
 
-
-
-
 该解码器的内部表示被用作图像分类的基础。最终的像素嵌入被平均化，然后一个线性层将这些映射为激活值，并通过 softmax 层传递以预测类别概率。该系统在大量网络图像语料库上进行预训练，随后在缩放至 48×48 像素的 ImageNet 数据库上进行微调，使用的损失函数同时包含用于图像分类的交叉熵项和用于预测像素的生成损失项。尽管使用了大量外部训练数据，该系统在 ImageNet 上仅达到了 27.4% 的 top-1 错误率（图 10.15）。这优于当时的卷积架构（见图 10.21），但考虑到输入图像尺寸很小，这仍然令人印象深刻；毫不奇怪，它无法对目标物体细小或纤细的图像进行分类。
 
 #### 12.10.2 Vision Transformer (ViT)
 
 `Vision Transformer` 通过将图像划分为 16×16 的补丁来解决图像分辨率问题（图 12.17）。每个补丁通过学习到的线性变换映射到较低维度，这些表示被送入 Transformer 网络。同样，标准的 1D 位置编码也是学习得到的。
 
-***
+---
 
-Problem 12.8
+### 问题 12.8
 
-***
+---
 
 ![Figure 12.17 Vision transformer. The Vision Transformer (ViT) breaks the image into a grid of patches (16×16 in the original implementation). Each of these is projected via a learned linear transformation to become a patch embedding. These patch embeddings are fed into a transformer encoder network, and the `<cls>` token is used to predict the class probabilities.](img/c12-fig-0017.jpg)
 
@@ -5407,7 +5301,11 @@ Problem 12.8
 
 Vision Transformer 与卷积架构的不同之处在于它在单一尺度上运行。已经提出了几种在多个尺度上处理图像的 Transformer 模型。与卷积网络类似，这些模型通常从高分辨率、少通道的补丁开始，并逐渐降低分辨率，同时增加通道数。
 
-多尺度 Transformer 的一个典型示例是 `shifted-window`（移动窗口）或 `SWin` Transformer。这是一个编码器 Transformer，它将图像分割成补丁，并将这些补丁分组为窗口网格，在每个窗口内独立应用自注意力（图 12.18）。在相邻的 Transformer 层中，这些窗口发生位移，因此给定补丁的有效感受野可以扩展到窗口边界之外。
+
+
+# 多尺度 Transformer 的一个典型示例是 `shifted-window`（移动窗口）或 `SWin` Transformer
+
+这是一个编码器 Transformer，它将图像分割成补丁，并将这些补丁分组为窗口网格，在每个窗口内独立应用自注意力（图 12.18）。在相邻的 Transformer 层中，这些窗口发生位移，因此给定补丁的有效感受野可以扩展到窗口边界之外。
 
 ![Figure 12.18 Shifted window (SWin) transformer (Liu et al., 2021c). a) Original image. b) The SWin transformer breaks the image into a grid of windows and each of these windows into a sub-grid of patches. The transformer network applies self-attention to the patches within each window independently. c) Each alternate layer shifts the windows so that the subsets of patches that interact with one another change, and information can propagate across the whole image. d) After several layers, the 2×2 blocks of patch representations are concatenated to increase the effective patch (and window) size. e) Alternate layers use shifted windows at this new lower resolution. f) Eventually, the resolution is such that there is just a single window, and the patches span the entire image.](img/c12-fig-0018.jpg)
 
@@ -5419,11 +5317,11 @@ Vision Transformer 与卷积架构的不同之处在于它在单一尺度上运�
 
 ***
 
-Problem 12.9
+## Problem 12.9
 
 ***
 
-### 12.11 总结
+## 12.11 总结
 
 本章介绍了自注意力和 Transformer 架构。随后描述了编码器、解码器和编码器-解码器模型。Transformer 对高维嵌入集合进行操作。它每层的计算复杂度较低，且大部分计算可以使用矩阵形式并行执行。由于每个输入嵌入都与其他所有嵌入交互，它可以描述文本中的长距离依赖关系。最终，计算量与序列长度的平方成正比；降低复杂度的一种方法是稀疏化交互矩阵。
 
@@ -5431,16 +5329,13 @@ Problem 12.9
 
 第 13 章讨论用于处理图数据的网络。这些网络与 Transformer 相关，因为图的节点在每个网络层中相互注意。第 14-18 章回归无监督学习和生成模型。
 
-### Notes
+## Notes
 
-
-
-
-#### 自然语言处理
+### 自然语言处理
 
 Transformer 是为自然语言处理（NLP）任务而开发的。这是一个庞大的领域，涉及文本分析、分类、生成和操作。示例任务包括词性标注、翻译、文本分类、实体识别（人、地点、公司等）、文本摘要、问答、词义消歧和文档聚类。NLP 最初是通过基于规则的方法来解决的，这些方法利用了语法的结构和统计特性。早期方法请参阅 Manning & Schutze (1999) 和 Jurafsky & Martin (2000)。
 
-#### 循环神经网络
+### 循环神经网络
 
 在 Transformer 引入之前，许多最先进的 NLP 应用使用 `循环神经网络`，简称 `RNN`（图 12.19）。"Recurrent"（循环）一词由 Rumelhart 等人 (1985) 提出，但其核心思想至少可以追溯到 Minsky & Papert (1969)。RNN 逐个按顺序接收输入序列（NLP 中的词）。在每一步，网络同时接收新输入和从上一时间步计算得出的隐藏表示（循环连接）。最终输出包含关于整个输入的信息。该表示随后可支持分类或翻译等 NLP 任务。它们也被用于解码场景，其中生成的标记被反馈回模型以形成序列的下一个输入。例如，`PixelRNN` (Van den Oord 等人, 2016c) 利用 RNN 构建了图像的自回归模型。
 
@@ -5448,15 +5343,15 @@ Transformer 是为自然语言处理（NLP）任务而开发的。这是一个�
 
 图 12.19 循环神经网络 (RNN)。词嵌入按顺序通过一系列相同的神经网络。每个网络有两个输出；一个是输出嵌入，另一个（橙色箭头）连同下一个词嵌入反馈到下一个神经网络。每个输出嵌入包含关于该词本身及其在前文片段中上下文的信息。原则上，最终输出包含关于整个句子的信息，可用于支持分类任务，类似于 Transformer 编码器模型中的 `<cls>` 标记。然而，RNN 有时会逐渐"遗忘"时间上更靠后的标记。
 
-#### 从 RNN 到 Transformer
+### 从 RNN 到 Transformer
 
-RNN 的问题之一是它们可能会遗忘序列中较早位置的信息。该架构更复杂的版本，如 `长短期记忆网络` 或 `LSTM` (Hochreiter & Schmidhuber, 1997b) 以及 `门控循环单元` 或 `GRU` (Cho 等人, 2014; Chung 等人, 2014)，部分解决了这一问题。然而，在机器翻译中，人们萌生了这样一个想法：RNN 中的所有中间表示都可以被利用来生成输出句子。此外，根据词与词的关系，某些输出词应该更多地 `关注` 某些输入词 (Bahdanau 等人, 2015)。这最终导致摒弃了循环结构，转而采用编码器-解码器 Transformer (Vaswani 等人, 2017)。在此架构中，输入标记相互关注（自注意力），输出标记关注序列中较早的标记（掩码自注意力），输出标记也关注输入标记（交叉注意力）。Transformer 的正式算法描述见 Phuong & Hutter (2022)，相关工作综述见 Lin 等人 (2022)。阅读文献时应保持谨慎，因为许多 Transformer 的改进在经过受控实仔细评估时，并不能带来有意义的性能提升 (Narang 等人, 2021)。
+RNN 的问题之一是它们可能会遗忘序列中较早位置的信息。该架构更复杂的版本，如 `长短期记忆网络` 或 `LSTM` (Hochreiter & Schmidhuber, 1997b) 以及 `门控循环单元` 或 `GRU` (Cho 等人, 2014; Chung 等人, 2014)，部分解决了这一问题。然而，在机器翻译中，人们萌生了这样一个想法：RNN 中的所有中间表示都可以被利用来生成输出句子。此外，根据词与词的关系，某些输出词应该更多地 `关注` 某些输入词 (Bahdanau 等人, 2015)。这最终导致摒弃了循环结构，转而采用编码器-解码器 Transformer (Vaswani 等人, 2017)。在此架构中，输入标记相互关注（自注意力），输出标记关注序列中较早的标记（掩码自注意力），输出标记也关注输入标记（交叉注意力）。Transformer 的正式算法描述见 Phuong & Hutter (2022)，相关工作综述见 Lin 等人 (2022)。阅读文献时应保持谨慎，因为许多 Transformer 的改进在经过受控实验仔细评估时，并不能带来有意义的性能提升 (Narang 等人, 2021)。
 
-#### 应用
+### 应用
 
 基于自注意力和/或 Transformer 架构的模型已被应用于文本序列 (Vaswani 等人, 2017)、图像块 (Dosovitskiy 等人, 2021)、蛋白质序列 (Rives 等人, 2021)、图 (Veličković 等人, 2019)、数据库模式 (Xu 等人, 2021b)、语音 (Wang 等人, 2020c)、当数学积分被表述为翻译问题时 (Lample & Charton, 2020) 以及时间序列 (Wu 等人, 2020b)。然而，它们最著名的成功在于构建语言模型，以及最近作为卷积网络在计算机视觉中的替代品。
 
-#### 大语言模型
+### 大语言模型
 
 Vaswani 等人 (2017) 以翻译任务为目标，但 Transformer 现在更常用于构建纯编码器或纯解码器模型，其中最著名的分别是 `BERT` (Devlin 等人, 2019) 和 `GPT2`/`GPT3` (Radford 等人, 2019; Brown 等人, 2020)。这些模型通常针对 `GLUE` (Wang 等人, 2019b) 等基准进行测试，后者包含第 12.6.2 节所述的 `SQuAD` 问答任务 (Rajpurkar 等人, 2016)、`SuperGLUE` (Wang 等人, 2019a) 和 `BIG-bench` (Srivastava 等人, 2022)，它们结合了许多 NLP 任务以创建衡量语言能力的综合分数。解码器模型通常不针对这些任务进行微调，但当给出几个问答示例并要求完成下一个问题的文本时，仍能表现良好。这被称为 `少样本学习` (Brown 等人, 2020)。
 
@@ -5464,23 +5359,21 @@ Vaswani 等人 (2017) 以翻译任务为目标，但 Transformer 现在更常用
 
 这些模型拥有相当多的世界知识。例如，在第 12.7.4 节中，模型了解深度学习的关键事实，包括它是一种机器学习类型，具有相关算法和应用。事实上，此类模型曾被误认为具有感知能力 (Clark, 2022)。然而，有令人信服的论据表明，此类模型所能拥有的"理解"程度是有限的 (Bender & Koller, 2020)。
 
-
-
-#### 分词器
+### 分词器
 
 Schuster & Nakajima (2012) 和 Sennrich 等人 (2015) 分别提出了 `WordPiece` 和 `字节对编码` (`BPE`)。这两种方法都基于相邻频率贪婪地合并标记对（图 12.8），主要区别在于初始标记的选择方式。例如，在 BPE 中，初始标记是字符或标点符号，并带有一个特殊标记来表示空白字符。合并操作不能跨越空白字符进行。随着算法的进行，新标记通过递归组合字符形成，从而产生子词和词级标记。Unigram 语言模型 (Kudo, 2018) 生成若干可能的候选合并，并根据语言模型中的似然选择最佳者。Provilkov 等人 (2020) 开发了 BPE dropout，通过在频率计数过程中引入随机性，更高效地生成候选项。`SentencePiece` 库 (Kudo & Richardson, 2018) 包含了字节对编码和 unigram 语言模型的两个版本，它直接作用于 Unicode 字符，可适用于任何语言。He 等人 (2020) 提出了一种方法，将子词分割视为一个潜在变量，在学习和推理过程中应将其边缘化掉。
 
-#### 解码算法
+### 解码算法
 
 Transformer 解码器模型接收一段文本，返回下一个标记的概率分布。然后将其添加到前文之后，再次运行模型。从这些概率分布中选择标记的过程称为 `解码`。简单的做法是 (i) 贪婪地选择概率最高的标记，或 (ii) 根据分布随机选择标记。然而，这两种方法在实践中效果都不佳。前一种情况结果可能非常平淡，后一种情况可能导致输出质量下降 (Holtzman 等人, 2020)。部分原因在于，训练期间模型仅接触真实标记序列（称为 `教师强制`），但在部署时却面对自己的输出。
 
 穷举输出序列中所有标记组合在计算上不可行，但可以维护固定数量的并行假设，并选择整体最可能的序列。这称为 `束搜索`。束搜索倾向于产生许多相似的假设，已有改进旨在探索更多样化的序列 (Vijayakumar 等人, 2016; Kulikov 等人, 2018)。随机采样的一个潜在问题是，极不可能的后续词汇构成了非常长的尾部，但它们合起来具有显著的概率。这促使了 `top-K 采样` 的发展，即仅从 K 个最可能的假设中采样标记 (Fan 等人, 2018)。当只有少数高概率选择时，Top-K 采样仍可能允许不合理的标记选择。为解决此问题，Holtzman 等人 (2020) 提出了 `核采样`，即从固定比例的总概率质量中采样标记。El Asri & Prince (2020) 更深入地讨论了解码算法。
 
-#### 注意力类型
+### 注意力类型
 
 缩放点积注意力 (Vaswani 等人, 2017) 只是注意力机制家族中的一种，该家族还包括加性注意力 (Bahdanau 等人, 2015)、乘性注意力 (Luong 等人, 2015)、键值注意力 (Daniluk 等人, 2017) 和记忆压缩注意力 (Liu 等人, 2019c)。Zhai 等人 (2021) 构建了“无注意力” Transformer，其中标记以不具有二次复杂度的方式交互。多头注意力也由 Vaswani 等人 (2017) 引入。有趣的是，训练后似乎大多数头都可以剪枝，而不会严重影响性能 (Voita 等人, 2019)；有人推测其作用是防范不良初始化。Hu 等人 (2018b) 提出了挤压激励网络，这是一种类注意力机制，基于全局计算的特征对卷积层中的通道进行重新加权。
 
-#### 自注意力与其他模型的关系
+### 自注意力与其他模型的关系
 
 自注意力计算与其他模型有着密切联系。首先，它是超网络 (Ha 等人, 2017) 的一个例子，因为它用网络的一部分来选择另一部分的权重：注意力矩阵形成了一个稀疏网络层的权重，将值映射到输出（图 12.3）。`合成器` (Tay 等人, 2021) 通过简单地使用神经网络从相应输入创建注意力矩阵的每一行，简化了这一想法。即使输入标记不再相互作用以创建注意力权重，这效果出奇地好。Wu 等人 (2019) 提出了一个类似的系统，生成具有卷积结构的注意力矩阵，使标记关注其邻居。门控多层感知机 (Wu 等人, 2019) 计算一个矩阵，逐点乘以值，从而在不混合它们的情况下对其进行修改。Transformer 还与 `快速权重记忆系统` 密切相关，后者是超网络的智力先驱 (Schlag 等人, 2021)。
 
@@ -5488,56 +5381,53 @@ Transformer 解码器模型接收一段文本，返回下一个标记的概率�
 
 多头自注意力还与图神经网络（见第 13 章）、卷积 (Cordonnier 等人, 2020)、循环神经网络 (Choromanski 等人, 2020) 和 Hopfield 网络中的记忆检索 (Ramsauer 等人, 2021) 有密切联系。有关 Transformer 与其他模型关系的更多信息，请参阅 Prince (2021a)。
 
-#### 位置编码
+### 位置编码
 
 原始 Transformer 论文 (Vaswani 等人, 2017) 尝试了预定义位置编码矩阵 `Π` 和学习位置编码 `Π`。将位置编码 `加` 到 `D × N` 数据矩阵 `X` 上而不是拼接它们，这似乎有些奇怪。然而，数据维度 `D` 通常大于标记数量 `N`，因此位置编码位于一个子空间中。`X` 中的词嵌入是学习得到的，因此系统理论上可以将这两个分量保持在正交子空间中，并在需要时检索位置编码。Vaswani 等人 (2017) 选择的预定义嵌入是一族正弦分量，具有两个吸引人的特性：(i) 两个嵌入的相对位置易于通过线性运算恢复，(ii) 它们的点积通常随位置距离增加而减小（详见 Prince, 2021a）。许多系统（如 GPT3 和 BERT）学习位置编码。Wang 等人 (2020a) 检查了这些模型中位置编码的余弦相似性，表明它们通常随相对距离衰减，尽管也具有周期性成分。
 
 后续大量工作仅修改注意力矩阵，使得在缩放点积自注意力方程中：
 
+### 将 Transformer 扩展到更长序列
 
 
 
-##### 将 Transformer 扩展到更长序列
+# 自注意力机制的复杂度随序列长度呈二次方增长
 
 自注意力机制的复杂度随序列长度呈二次方增长。摘要或问答等任务可能需要长输入，因此这种二次依赖限制了性能。三条研究路线试图解决此问题。第一种减小注意力矩阵的尺寸，第二种使注意力变得稀疏，第三种修改注意力机制以使其更高效。
 
-###### 减小注意力矩阵的尺寸
+## 减小注意力矩阵的尺寸
 
 Liu 等人 (2018b) 引入了*内存压缩注意力*。这对键和值应用步长卷积，以一种与卷积网络中下采样非常相似的方式减少位置数量。现在注意力作用于相邻位置的加权组合之间，其中权重是可学习的。沿着类似的思路，Wang 等人 (2020b) 观察到注意力机制中的量在实践中通常是低秩的，并开发了 *LinFormer*，它在计算注意力矩阵之前将键和值投影到一个更小的子空间上。
 
-###### 使注意力稀疏
+## 使注意力稀疏
 
 Liu 等人 (2018b) 提出了*局部注意力*，其中相邻的 Token 块仅相互关注。这创建了一个块对角交互矩阵（参见图 12.15）。信息无法在块之间传递，因此此类层通常与全注意力层交替使用。沿着同一思路，GPT3 (Brown 等人, 2020) 使用卷积交互矩阵并将其与全注意力交替。Child 等人 (2019) 和 Beltagy 等人 (2020) 尝试了各种交互矩阵，包括具有不同膨胀率的卷积结构，但允许某些查询与所有其他键交互。Ainslie 等人 (2020) 引入了*扩展 Transformer 构造* (图 12.15h)，它使用一组与所有其他 Token 交互的全局嵌入。这只能在编码器版本中完成，否则这些会隐式地允许系统“窥视未来”。当与相对位置编码结合时，该方案需要特殊的编码来映射到、从以及在这些全局嵌入之间。*BigBird* (Ainslie 等人, 2020) 将全局嵌入、卷积结构与可能连接的随机采样相结合。其他工作研究了学习注意力矩阵的稀疏模式 (Roy 等人, 2021; Kitaev 等人, 2020; Tay 等人, 2020)。
 
-###### 修改注意力机制以提高效率
+## 修改注意力机制以提高效率
 
 最后，人们注意到计算注意力的 softmax 操作中分子和分母的项具有 `exp[k^T q]` 的形式。这可以被视为核函数，因此可以表示为点积 `g[k]^T g[q]`，其中 `g[•]` 是非线性变换。这种公式解耦了查询和键，使注意力计算更高效。不幸的是，为了复制指数项的形式，变换 `g[•]` 必须将输入映射到无限空间。线性 Transformer (Katharopoulos 等人, 2020) 认识到这一点，并用不同的相似度度量替换了指数项。*Performer* (Choromanski 等人, 2020) 用有限维映射近似这种无限映射。关于将 Transformer 扩展到更长序列的更多细节，请参见 Tay 等人 (2023) 和 Prince (2021a)。
 
 ---
 
-##### 问题 12.10
+### 问题 12.10
 
 ---
 
-##### Transformer 的训练
+### Transformer 的训练
 
 训练 Transformer 具有挑战性，需要学习率预热 (Goyal 等人, 2018) 和 Adam 优化器 (Kingma & Ba, 2015)。确实，Xiong 等人 (2020a) 和 Huang 等人 (2020a) 表明，如果没有学习率预热，梯度会消失，且 Adam 更新的幅度会减小。几个相互作用的因素导致了这个问题。残差连接导致梯度爆炸（图 11.6），但归一化层可以防止这种情况。Vaswani 等人 (2017) 使用 `LayerNorm` 而非 `BatchNorm`，因为 NLP 任务中批次间的统计量高度可变，尽管后续工作已为 Transformer 修改了 `BatchNorm` (Shen 等人, 2020a)。`LayerNorm` 位于残差块之外，导致梯度在反向传播通过网络时收缩 (Xiong 等人, 2020a)。此外，残差连接和主自注意力机制的相对权重随着我们在初始化时穿过网络而变化（见图 11.6c）。还有额外的复杂因素：查询和键参数的梯度小于值参数的梯度 (Liu 等人, 2020)，这使得使用 Adam 成为必要。这些因素以复杂的方式相互作用，使训练不稳定，从而需要学习率预热。
 
 已经有各种尝试来稳定训练，包括 (i) 一种称为 *TFixup* 的 FixUp 变体 (Huang 等人, 2020a)，它允许移除 `LayerNorm` 组件，(ii) 改变网络中 `LayerNorm` 组件的位置 (Liu 等人, 2020)，以及 (iii) 重新加权残差分支中的两条路径 (Liu 等人, 2020; Bachlechner 等人, 2021)。Xu 等人 (2021b) 引入了一种称为 *DTFixup* 的初始化方案，允许在较小数据集上训练 Transformer。详细讨论请参见 Prince (2021b)。
 
-
-
-
-
-#### 视觉领域的应用
+## 视觉领域的应用
 
 ImageGPT (Chen et al., 2020a) 和 Vision Transformer (Dosovitskiy et al., 2021) 都是早期应用于图像的 Transformer 架构。Transformer 已被用于图像分类 (Dosovitskiy et al., 2021; Touvron et al., 2021)、目标检测 (Carion et al., 2020; Zhu et al., 2020b; Fang et al., 2021)、语义分割 (Ye et al., 2019; Xie et al., 2021; Gu et al., 2022)、超分辨率 (Yang et al., 2020a)、动作识别 (Sun et al., 2019; Girdhar et al., 2019)、图像生成 (Chen et al., 2021b; Nash et al., 2021)、视觉问答 (Su et al., 2019b; Tan & Bansal, 2019)、图像修复 (Wan et al., 2021; Zheng et al., 2021; Zhao et al., 2020b; Li et al., 2022)、图像着色 (Kumar et al., 2021) 以及许多其他视觉任务 (Khan et al., 2022; Liu et al., 2023b)。
 
-#### Transformer 与卷积网络
+## Transformer 与卷积网络
 
 Transformer 已与卷积神经网络结合用于许多任务，包括图像分类 (Wu et al., 2020a)、目标检测 (Hu et al., 2018a; Carion et al., 2020)、视频处理 (Wang et al., 2018c; Sun et al., 2019)、无监督目标发现 (Locatello et al., 2020) 以及各种文本/视觉任务 (Chen et al., 2020d; Lu et al., 2019; Li et al., 2019)。Transformer 在视觉任务上可超越卷积网络，但通常需要大量数据才能实现卓越性能。通常，它们在 JRT (Sun et al., 2017) 和 LAION (Schuhmann et al., 2021) 等海量数据集上进行预训练。Transformer 不具备卷积网络的归纳偏置，但通过使用海量数据，它可以克服这一劣势。
 
-#### 从像素到视频
+## 从像素到视频
 
 非局部网络 (Wang et al., 2018c) 是将自注意力应用于图像数据的早期尝试。Transformer 最初被应用于局部邻域内的像素 (Parmar et al., 2018; Hu et al., 2019; Parmar et al., 2019; Zhao et al., 2020a)。ImageGPT (Chen et al., 2020a) 将其扩展以建模小图像中的所有像素。Vision Transformer (ViT) (Dosovitskiy et al., 2021) 使用不重叠的图像块来分析更大的图像。
 
@@ -5545,21 +5435,21 @@ Transformer 已与卷积神经网络结合用于许多任务，包括图像分�
 
 随后，Transformer 被改编用于视频处理 (Arnab et al., 2021; Bertasius et al., 2021; Liu et al., 2021c; Neimark et al., 2021; Patrick et al., 2021)。关于应用于视频的 Transformer 的综述可参见 Selva et al. (2022)。
 
-#### 结合图像与文本
+## 结合图像与文本
 
 CLIP (Radford et al., 2021) 使用对比预训练任务为图像及其标题学习一个联合编码器。系统摄入 `N` 张图像及其标题，并生成图像与标题之间兼容性的矩阵。损失函数鼓励正确配对获得高分，错误配对获得低分。Ramesh et al. (2021) 和 Ramesh et al. (2022) 训练一个扩散解码器来反转 CLIP 图像编码器，用于文本条件图像生成（见第 18 章）。
 
-### 习题
+# 习题
 
-#### 习题 12.1
+## 习题 12.1
 
 考虑一个处理长度为 `D` 的 `N` 个输入以产生相同大小的 `N` 个输出的自注意力机制。计算查询、键和值使用了多少权重和偏置？会有多少注意力权重 `a[•, •]`？在一个将所有 `DN` 个输入关联到所有 `DN` 个输出的全连接网络中，会有多少权重和偏置？
 
-#### 习题 12.2
+## 习题 12.2
 
 为什么我们可能希望确保自注意力机制的输入与输出大小相同？
 
-#### 习题 12.3*
+## 习题 12.3*
 
 证明自注意力机制（公式 12.8）关于数据 `X` 的排列 `XP` 是等变的，其中 `P` 是一个排列矩阵。换句话说，证明：
 
@@ -5575,7 +5465,7 @@ CLIP (Radford et al., 2021) 使用对比预训练任务为图像及其标题学�
 
 ***
 
-#### 习题 12.4
+## 习题 12.4
 
 考虑 Softmax 操作：
 
@@ -5585,27 +5475,27 @@ CLIP (Radford et al., 2021) 使用对比预训练任务为图像及其标题学�
 
 在有五个输入的情况下，其值为：`z[1] = -3`，`z[2] = 1`，`z[3] = 100`，`z[4] = 5`，`z[5] = -1`。计算所有 `i, j` ∈ {1, 2, 3, 4, 5} 的 25 个导数 `∂y[i]/∂z[j]`。你得出什么结论？
 
-#### 习题 12.5
+## 习题 12.5
 
 为什么如果 `H` 个头中的值、查询和键各自的维度为 `D/H`（其中 `D` 是数据的原始维度），实现会更高效？
 
-#### 习题 12.6
+## 习题 12.6
 
 BERT 使用两个任务进行预训练。第一个任务要求系统预测缺失（被掩盖）的单词。第二个任务要求系统将句子对分类为在原文中是否相邻。识别这些任务分别是生成式还是对比式的（见第 9.3.6 节）。你认为为什么要使用两个任务？提出两个可用于预训练语言模型的新颖对比任务。
 
-#### 习题 12.7
+## 习题 12.7
 
 考虑向一个包含 `N` 个 Token 的预计算掩码自注意力机制中添加一个新 Token。描述为纳入此新 Token 所必须进行的*额外*计算。
 
-#### 习题 12.8
+## 习题 12.8
 
 视觉 Transformer 中的计算量随图像块数量呈二次方增长。利用 图 12.15 的原则，设计两种减少计算量的方法。
 
-#### 习题 12.9
+## 习题 12.9
 
 考虑用 16 × 16 的网格图像块表示图像，每个图像块由长度为 512 的图像块嵌入表示。比较 DaViT Transformer 执行注意力所需的计算量：(i) 在图像块之间，使用所有通道；(ii) 在通道之间，使用所有图像块。
 
-#### 习题 12.10*
+## 习题 12.10*
 
 注意力权重通常计算为：
 
@@ -5615,19 +5505,15 @@ BERT 使用两个任务进行预训练。第一个任务要求系统预测缺失
 
 考虑将 ![c12-fig-5021.jpg](img/c12-fig-5021.jpg) 替换为点积 `g[k[m]]^T g[q[n]]`，其中 `g[•]` 是一个非线性变换。展示这如何使注意力权重的计算更高效。
 
-## 第 13 章
+# 第 13 章
 
-图神经网络
+## 图神经网络
 
 第 10 章介绍了卷积网络，其专门处理规则数据阵列（如图像）。第 12 章介绍了 Transformer，其专门处理可变长度序列（如文本）。本章介绍*图神经网络*。顾名思义，这些是处理图（即由边连接的节点集合）的神经架构。
 
 处理图面临三个新挑战。首先，其拓扑结构是可变的，很难设计既足够表达强又能应对这种变化的网络。其次，图可能非常庞大；表示社交网络用户连接的图可能有十亿个节点。第三，可能只有一个单一的整体图可用，因此用许多样本训练并用新数据测试的常规协议并不总是合适的。
 
-
-
-
-
-# 本章首先展示图的真实世界示例。随后描述如何对这些图进行编码，以及如何为图构建监督学习问题。文中讨论了处理图的算法要求，这自然引出了`图卷积网络`，这是一种特定类型的图神经网络。
+本章首先展示图的真实世界示例。随后描述如何对这些图进行编码，以及如何为图构建监督学习问题。文中讨论了处理图的算法要求，这自然引出了`图卷积网络`，这是一种特定类型的图神经网络。
 
 ### 13.1 什么是图？
 
@@ -5656,7 +5542,16 @@ BERT 使用两个任务进行预训练。第一个任务要求系统预测缺失
 
 ![Figure 13.2 Types of graphs. a) A social network is an undirected graph; the connections between people are symmetric. b) A citation network is a directed graph; one publication cites another, so the relationship is asymmetric. c) A knowledge graph is a directed heterogeneous multigraph. The nodes are heterogeneous in that they represent different object types (people, places, companies) and multiple edges may represent different relations between each node. d) A point set can be converted to a graph by forming edges between nearby points. Each node has an associated position in 3D space, and this is termed a geometric graph (adapted from Hu et al., 2022). e) The scene on the left can be represented by a hierarchical graph. The topology of the room, table, and light are all represented by graphs. These graphs form nodes in a larger graph representing object adjacency (adapted from Fernández-Madrigal & González, 2002).](img/c13-fig-0002.jpg)
 
-图 13.2 图的类型。a) 社交网络是无向图；人与人之间的连接是对称的。b) 引用网络是有向图；一篇出版物引用另一篇，因此关系是不对称的。c) 知识图谱是有向异构多重图。节点是异构的，因为它们代表不同的对象类型（人、地点、公司），且节点之间可能存在多条边代表不同的关系。d) 点集可通过在附近点之间形成边转换为图。每个节点在 3D 空间中都有关联位置，这称为几何图（改编自 Hu 等人，2022）。e) 左侧场景可用层次图表示。房间、桌子和灯的拓扑结构均由图表示。这些图本身构成了一个更大图中的节点，代表对象邻接关系（改编自 Fernández-Madrigal & González, 2002）。
+
+
+## 图的类型
+
+图 13.2 展示了不同类型的图：
+- **a) 社交网络**：无向图，人与人之间的连接是对称的。
+- **b) 引用网络**：有向图，一篇出版物引用另一篇，关系是不对称的。
+- **c) 知识图谱**：有向异构多重图。节点是异构的，因为它们代表不同的对象类型（人、地点、公司），且节点之间可能存在多条边代表不同的关系。
+- **d) 几何图**：点集可通过在附近点之间形成边转换为图。每个节点在 3D 空间中都有关联位置（改编自 Hu 等人，2022）。
+- **e) 层次图**：左侧场景可用层次图表示。房间、桌子和灯的拓扑结构均由图表示。这些图本身构成了一个更大图中的节点，代表对象邻接关系（改编自 Fernández-Madrigal & González, 2002）。
 
 图 13.2c 描绘了一个`知识图谱`，它通过定义对象间的关系来编码一组关于对象的事实。从技术上讲，这是一个`有向异构多重图`。它是异构的，因为节点可以代表不同类型的实体（如人、国家、公司）。它是多重图，因为任意两个节点之间可以存在不同类型的多条边。
 
@@ -5664,7 +5559,7 @@ BERT 使用两个任务进行预训练。第一个任务要求系统预测缺失
 
 所有类型的图均可使用深度学习进行处理。然而，本章重点关注如图 13.2a 所示社交网络这样的无向图。
 
-### 13.2 图表示
+## 13.2 图表示
 
 除了图结构本身，通常还会有信息与每个节点相关联。例如，在社交网络中，每个个体可能由一个代表其兴趣的定长向量来表征。有时，边也附带信息。例如，在路网示例中，每条边可能由其长度、车道数、事故频率和限速来表征。节点处的信息存储在`节点嵌入`中，边处的信息存储在`边嵌入`中。
 
@@ -5672,15 +5567,11 @@ BERT 使用两个任务进行预训练。第一个任务要求系统预测缺失
 
 ![Figure 13.3 Graph representation. a) Example graph with six nodes and seven edges. Each node has an associated embedding of length five (brown vectors). Each edge has an associated embedding of length four (blue vectors). This graph can be represented by three matrices. b) The adjacency matrix is a binary matrix where element (m, n) is set to one if node m connects to node n. c) The node data matrix X contains the concatenated node embeddings. d) The edge data matrix E contains the edge embeddings.](img/c13-fig-0003.jpg)
 
+### 图表示
 
+图 13.3 图表示。a) 包含六个节点和七条边的示例图。每个节点都有一个关联的长度为五的嵌入（棕色向量）。每条边都有一个关联的长度为四的嵌入（蓝色向量）。该图可以用三个矩阵来表示。b) 邻接矩阵是一个二值矩阵，若节点 `m` 连接到节点 `n`，则元素 `(m, n)` 设为 1。c) 节点数据矩阵 `X` 包含拼接的节点嵌入。d) 边数据矩阵 `E` 包含边嵌入。
 
-
-
-#### 图表示
-
-图 13.3 图表示。a) 包含六个节点和七条边的示例图。每个节点都有一个关联的长度为五的嵌入（棕色向量）。每条边都有一个关联的长度为四的嵌入（蓝色向量）。该图可以用三个矩阵来表示。b) 邻接矩阵是一个二值矩阵，若节点 *m* 连接到节点 *n*，则元素 (*m, n*) 设为 1。c) 节点数据矩阵 **X** 包含拼接的节点嵌入。d) 边数据矩阵 **E** 包含边嵌入。
-
-图结构由*邻接矩阵* **A** 表示。这是一个 *N* × *N* 矩阵，若节点 *m* 和 *n* 之间存在边，则位置 (*m, n*) 的条目设为 1，否则设为 0。对于无向图，该矩阵始终是对称的。对于大型稀疏图，可以将其存储为连接列表 (*m*, *n*) 以节省内存。
+图结构由*邻接矩阵* `A` 表示。这是一个 `N × N` 矩阵，若节点 `m` 和 `n` 之间存在边，则位置 `(m, n)` 的条目设为 1，否则设为 0。对于无向图，该矩阵始终是对称的。对于大型稀疏图，可以将其存储为连接列表 `(m, n)` 以节省内存。
 
 ---
 
@@ -5688,11 +5579,11 @@ BERT 使用两个任务进行预训练。第一个任务要求系统预测缺失
 
 ---
 
-第 *n* 个节点具有一个长度为 *D* 的关联节点嵌入 **x**^(*n*)^。这些嵌入被拼接并存储在 *D*×*N* 的节点数据矩阵 **X** 中。类似地，第 *e* 条边具有一个长度为 *D*[E] 的关联边嵌入 **e**^(*e*)^。这些边嵌入被收集到 *D*[E] × *E* 的矩阵 **E** 中。为简化起见，我们最初仅考虑具有节点嵌入的图，并在 13.9 节中回到边嵌入。
+第 `n` 个节点具有一个长度为 `D` 的关联节点嵌入 `x^(n)`。这些嵌入被拼接并存储在 `D × N` 的节点数据矩阵 `X` 中。类似地，第 `e` 条边具有一个长度为 `D_E` 的关联边嵌入 `e^(e)`。这些边嵌入被收集到 `D_E × E` 的矩阵 `E` 中。为简化起见，我们最初仅考虑具有节点嵌入的图，并在 13.9 节中回到边嵌入。
 
-### 13.2.1 邻接矩阵的性质
+### 13.2.1 邻接矩阵的性质
 
-邻接矩阵可用于通过线性代数查找节点的邻居。考虑将第 *n* 个节点编码为独热列向量（仅在位置 *n* 处有一个非零条目（设为 1）的向量）。当我们用邻接矩阵左乘该向量时，它会提取邻接矩阵的第 *n* 列，并返回一个在邻居位置（即从第 *n* 个节点出发、步长为一的游走所能到达的所有位置）为 1 的向量。如果我们重复此过程（即再次用 **A** 左乘），则生成的向量包含从节点 *n* 到每个节点的步长为二的游走数量（图 13.4d–f）。
+邻接矩阵可用于通过线性代数查找节点的邻居。考虑将第 `n` 个节点编码为独热列向量（仅在位置 `n` 处有一个非零条目（设为 1）的向量）。当我们用邻接矩阵左乘该向量时，它会提取邻接矩阵的第 `n` 列，并返回一个在邻居位置（即从第 `n` 个节点出发、步长为一的游走所能到达的所有位置）为 1 的向量。如果我们重复此过程（即再次用 `A` 左乘），则生成的向量包含从节点 `n` 到每个节点的步长为二的游走数量（图 13.4d–f）。
 
 ---
 
@@ -5702,33 +5593,31 @@ BERT 使用两个任务进行预训练。第一个任务要求系统预测缺失
 
 ![图 13.4 邻接矩阵的性质。a) 示例图。b) 邻接矩阵 A 的位置 (m, n) 包含从节点 m 到节点 n 的步长为一的游走数量。c) 邻接矩阵平方 A² 的位置 (m, n) 包含从节点 n 到节点 m 的步长为二的游走数量。d) 代表节点六的独热向量，该节点在面板 (a) 中被高亮显示。e) 当我们用 A 左乘该向量时，结果包含从节点六到每个节点的步长为一的游走数量；我们可以一步到达节点五、七和八。f) 当我们用 A² 左乘该向量时，生成的向量包含从节点六到每个节点的步长为二的游走数量；我们可以在两步内到达节点二、三、四、五和八，并可通过三种不同方式（经节点五、七和八）返回原始节点。](img/c13-fig-0004.jpg)
 
-图 13.4 邻接矩阵的性质。a) 示例图。b) 邻接矩阵 **A** 的位置 (*m, n*) 包含从节点 *m* 到节点 *n* 的步长为一的游走数量。c) 邻接矩阵平方 **A**² 的位置 (*m, n*) 包含从节点 *n* 到节点 *m* 的步长为二的游走数量。d) 代表节点六的独热向量，该节点在面板 (a) 中被高亮显示。e) 当我们用 **A** 左乘该向量时，结果包含从节点六到每个节点的步长为一的游走数量；我们可以一步到达节点五、七和八。f) 当我们用 **A**² 左乘该向量时，生成的向量包含从节点六到每个节点的步长为二的游走数量；我们可以在两步内到达节点二、三、四、五和八，并可通过三种不同方式（经节点五、七和八）返回原始节点。
+图 13.4 邻接矩阵的性质。a) 示例图。b) 邻接矩阵 `A` 的位置 `(m, n)` 包含从节点 `m` 到节点 `n` 的步长为一的游走数量。c) 邻接矩阵平方 `A²` 的位置 `(m, n)` 包含从节点 `n` 到节点 `m` 的步长为二的游走数量。d) 代表节点六的独热向量，该节点在面板 (a) 中被高亮显示。e) 当我们用 `A` 左乘该向量时，结果包含从节点六到每个节点的步长为一的游走数量；我们可以一步到达节点五、七和八。f) 当我们用 `A²` 左乘该向量时，生成的向量包含从节点六到每个节点的步长为二的游走数量；我们可以在两步内到达节点二、三、四、五和八，并可通过三种不同方式（经节点五、七和八）返回原始节点。
 
-一般来说，如果我们将邻接矩阵提升到 *L* 次幂，**A**^L^ 在位置 (*m*, *n*) 处的条目包含从节点 *n* 到节点 *m* 的步长为 *L* 的唯一*游走*数量（图 13.4a–c）。这与唯一*路径*的数量不同，因为它包含多次访问同一节点的路线。尽管如此，**A**^L^ 仍然包含关于图连通性的有价值信息；位置 (*m*, *n*) 处的非零条目表明从 *m* 到 *n* 的距离必须小于或等于 *L*。
-
----
-
-笔记本 13.1
-
-图编码
+一般来说，如果我们将邻接矩阵提升到 `L` 次幂，`A^L` 在位置 `(m, n)` 处的条目包含从节点 `n` 到节点 `m` 的步长为 `L` 的唯一*游走*数量（图 13.4a–c）。这与唯一*路径*的数量不同，因为它包含多次访问同一节点的路线。尽管如此，`A^L` 仍然包含关于图连通性的有价值信息；位置 `(m, n)` 处的非零条目表明从 `m` 到 `n` 的距离必须小于或等于 `L`。
 
 ---
 
-### 13.2.2 节点索引的排列
+笔记本 13.1：图编码
 
-图中的节点索引是任意的；对节点索引进行排列会导致节点数据矩阵 **X** 的列排列以及邻接矩阵 **A** 的行和列同时排列。然而，底层图保持不变（图 13.5）。这与图像形成对比，在图像中排列像素会创建不同的图像；也与文本形成对比，在文本中排列词语会创建不同的句子。
+---
+
+### 13.2.2 节点索引的排列
+
+图中的节点索引是任意的；对节点索引进行排列会导致节点数据矩阵 `X` 的列排列以及邻接矩阵 `A` 的行和列同时排列。然而，底层图保持不变（图 13.5）。这与图像形成对比，在图像中排列像素会创建不同的图像；也与文本形成对比，在文本中排列词语会创建不同的句子。
 
 ![图 13.5 节点索引的排列。a) 示例图，b) 关联的邻接矩阵和 c) 节点嵌入。d) 同一图，但索引的（任意）顺序已改变。e) 邻接矩阵和 f) 节点矩阵现在不同了。因此，作用于图的任何网络层都应对节点的排序不敏感。](img/c13-fig-0005.jpg)
 
 图 13.5 节点索引的排列。a) 示例图，b) 关联的邻接矩阵和 c) 节点嵌入。d) 同一图，但索引的（任意）顺序已改变。e) 邻接矩阵和 f) 节点矩阵现在不同了。因此，作用于图的任何网络层都应对节点的排序不敏感。
 
-交换节点索引的操作可以用*排列矩阵* **P** 来数学化表达。这是一个矩阵，其中每行和每列恰好有一个条目取值为 1，其余值为 0。当排列矩阵的位置 (*m*, *n*) 设为 1 时，表示节点 *m* 在排列后将变为节点 *n*。要从一种索引映射到另一种索引，我们使用以下操作：
+交换节点索引的操作可以用*排列矩阵* `P` 来数学化表达。这是一个矩阵，其中每行和每列恰好有一个条目取值为 1，其余值为 0。当排列矩阵的位置 `(m, n)` 设为 1 时，表示节点 `m` 在排列后将变为节点 `n`。要从一种索引映射到另一种索引，我们使用以下操作：
 
 ![c13-fig-5001.jpg](img/c13-fig-5001.jpg)
 
  (13.1)
 
-其中右乘 **P** 对列进行排列，左乘 **P**^T^ 对行进行排列。由此可见，应用于图的任何处理也应对这些排列不敏感。否则，结果将取决于节点索引的选择。
+其中右乘 `P` 对列进行排列，左乘 `P^T` 对行进行排列。由此可见，应用于图的任何处理也应对这些排列不敏感。否则，结果将取决于节点索引的选择。
 
 ---
 
@@ -5736,18 +5625,15 @@ BERT 使用两个任务进行预训练。第一个任务要求系统预测缺失
 
 ---
 
-## 13.3 图神经网络、任务与损失函数
+## 13.3 图神经网络、任务与损失函数
 
-图神经网络是一种模型，它以节点嵌入 **X** 和邻接矩阵 **A** 作为输入，并将它们通过一系列 *K* 个层进行传递。节点嵌入在每一层都会更新，以创建中间“隐藏”表示 **H**[k]，最终计算出输出嵌入 **H**[K]。
+图神经网络是一种模型，它以节点嵌入 `X` 和邻接矩阵 `A` 作为输入，并将它们通过一系列 `K` 个层进行传递。节点嵌入在每一层都会更新，以创建中间“隐藏”表示 `H[k]`，最终计算出输出嵌入 `H[K]`。
 
-在该网络开始时，输入节点嵌入 **X** 的每一列仅包含关于节点本身的信息。在结束时，模型输出 **H**[K] 的每一列包含关于节点及其在图中上下文的信息。这类似于词嵌入通过 Transformer 网络。它们在开始时代表词汇，但在结束时代表词汇在句子语境下的含义。
+在该网络开始时，输入节点嵌入 `X` 的每一列仅包含关于节点本身的信息。在结束时，模型输出 `H[K]` 的每一列包含关于节点及其在图中上下文的信息。这类似于词嵌入通过 Transformer 网络。它们在开始时代表词汇，但在结束时代表词汇在句子语境下的含义。
 
-### 13.3.1 任务与损失函数
+### 13.3.1 任务与损失函数
 
 我们将图神经网络模型的讨论推迟到 13.4 节，首先描述这些网络解决的问题类型及其相关的损失函数。有监督图问题通常分为三类（图 13.6）。
-
-
-
 
 ![图 13.6 图的常见任务。在每种情况下，输入都是由邻接矩阵和节点嵌入表示的图。图神经网络通过将节点嵌入传递给一系列层来处理它们。最后一层的节点嵌入包含关于节点本身及其在图中上下文的信息。a) 图分类。节点嵌入被组合（例如通过平均），然后映射到一个固定大小的向量，该向量通过 softmax 函数产生类别概率。b) 节点分类。每个节点嵌入单独用作分类的基础（青色和橙色代表分配的节点类别）。c) 边预测。与边相邻的节点嵌入被组合（例如通过点积）来计算一个单一数值，该数值通过 sigmoid 函数映射以产生缺失边应该存在的概率。](img/c13-fig-0006.jpg)
 
@@ -5761,21 +5647,21 @@ BERT 使用两个任务进行预训练。第一个任务要求系统预测缺失
 
 (13.2)
 
-其中标量 `β[K]` 和 1 × *D* 向量 `ω[K]` 是学习到的参数。后乘输出嵌入矩阵 `H[K]` 和包含 1 的列向量 `1` 的效果是将所有嵌入求和，随后除以节点数 *N* 即可计算平均值。这被称为*平均池化*（见图 10.11）。
+其中标量 `β[K]` 和 `1 × D` 向量 `ω[K]` 是学习到的参数。后乘输出嵌入矩阵 `H[K]` 和包含 1 的列向量 `1` 的效果是将所有嵌入求和，随后除以节点数 `N` 即可计算平均值。这被称为*平均池化*（见图 10.11）。
 
-**节点级任务：** 网络利用图结构和节点嵌入，为图的每个节点分配一个标签（分类）或一个或多个值（回归）。例如，给定一个类似于图 13.2d 由 3D 点云构建的图，目标可能是根据节点属于机翼还是机身对其进行分类。损失函数的定义方式与图级任务相同，只是现在这是在每个节点 *n* 处独立完成的：
+**节点级任务：** 网络利用图结构和节点嵌入，为图的每个节点分配一个标签（分类）或一个或多个值（回归）。例如，给定一个类似于图 13.2d 由 3D 点云构建的图，目标可能是根据节点属于机翼还是机身对其进行分类。损失函数的定义方式与图级任务相同，只是现在这是在每个节点 `n` 处独立完成的：
 
 ![c13-fig-5003.jpg](img/c13-fig-5003.jpg)
 
 (13.3)
 
-**边预测任务：** 网络预测节点 *n* 和 *m* 之间是否应该存在一条边。例如，在社交网络设置中，网络可能预测两个人是否相识且互相喜欢，如果是这种情况则建议他们建立连接。这是一个二分类任务，其中两个节点嵌入必须映射到一个代表边存在概率的单一数值。一种可能性是计算节点嵌入的点积，并将结果通过 sigmoid 函数以创建概率：
+**边预测任务：** 网络预测节点 `n` 和 `m` 之间是否应该存在一条边。例如，在社交网络设置中，网络可能预测两个人是否相识且互相喜欢，如果是这种情况则建议他们建立连接。这是一个二分类任务，其中两个节点嵌入必须映射到一个代表边存在概率的单一数值。一种可能性是计算节点嵌入的点积，并将结果通过 sigmoid 函数以创建概率：
 
 ![c13-fig-5004.jpg](img/c13-fig-5004.jpg)
 
 (13.4)
 
-### 13.4 图卷积网络
+## 13.4 图卷积网络
 
 有许多类型的图神经网络，但这里我们专注于*基于空间的卷积图神经网络*，简称* GCN*。这些模型之所以称为卷积，是因为它们通过聚合来自附近节点的信息来更新每个节点。因此，它们诱导了一种*关系归纳偏置*（即优先考虑来自邻居信息的偏置）。它们基于空间，是因为它们使用原始图结构。这与*基于谱的方法*形成对比，后者在傅里叶域应用卷积。
 
@@ -5785,9 +5671,9 @@ GCN 的每一层都是一个带有参数 `Φ` 的函数 `F[•]`，它接收节�
 
 (13.5)
 
-其中 `X` 是输入，`A` 是邻接矩阵，`H[k]` 包含第 *k* 层修改后的节点嵌入，`ϕ[k]` 表示将第 *k* 层映射到第 *k*+1 层的参数。
+其中 `X` 是输入，`A` 是邻接矩阵，`H[k]` 包含第 `k` 层修改后的节点嵌入，`ϕ[k]` 表示将第 `k` 层映射到第 `k+1` 层的参数。
 
-#### 13.4.1 等变性与不变性
+### 13.4.1 等变性与不变性
 
 我们之前注意到，图中节点的索引是任意的，节点索引的任何排列都不会改变图。因此，任何模型都必须尊重这一属性。由此可知，每一层必须关于节点索引的排列具有等变性（见第 10.1 节）。换句话说，如果我们对节点索引进行排列，每个阶段的节点嵌入将以相同的方式被排列。用数学术语表示，如果 `P` 是一个排列矩阵，则必须满足：
 
@@ -5811,34 +5697,33 @@ GCN 的每一层都是一个带有参数 `Φ` 的函数 `F[•]`，它接收节�
 
 这与图像的情况相似，其中分割应对几何变换具有等变性，而图像分类应具有不变性（图 10.1）。在那里，卷积层和池化层部分实现了对平移的这些属性，但没有已知方法能为更一般的变换精确保证这些属性。然而，对于图，可以定义网络以确保对排列的等变性或不变性。
 
-#### 13.4.2 参数共享
+### 13.4.2 参数共享
 
 第 10 章论证了将全连接网络应用于图像是不明智的，因为这要求网络在每个图像位置单独学习如何识别物体。相反，我们使用了在图像中每个位置以相同方式处理的卷积层。这减少了参数数量，并引入了一种归纳偏置，迫使模型以相同方式对待图像的每个部分。
 
 关于图中的节点，可以提出相同的论点。我们可以学习一个与每个节点关联独立参数的模型。然而，现在网络必须在每个位置独立学习图中连接的含义，并且训练将需要许多具有相同拓扑结构的图。相反，我们构建一个在每个节点使用相同参数的模型，减少参数数量，并在整个图中共享网络在每个节点学到的知识。
 
-
-
-
 回想一下，卷积（公式 10.3）通过获取来自邻居的加权信息和来更新变量。理解这一点的一种方式是：每个邻居向感兴趣的变量发送一条消息，该变量聚合这些消息以形成更新。当我们考虑图像时，邻居是当前位置周围固定大小正方形区域内的像素，因此每个位置的空间关系是相同的。然而，在图中，每个节点可能有不同数量的邻居，且不存在一致的关系；我们无法以不同的方式加权来自感兴趣节点“上方”节点的信息与来自“下方”节点的信息。
 
-#### 13.4.3 示例 GCN 层
+### 13.4.3 示例 GCN 层
 
-这些考量引出了一个简单的 GCN 层（图 13.7）。在第 `k` 层的每个节点 `n` 处，我们通过对其节点嵌入 **h**[•] 求和来聚合来自邻居节点的信息：
+这些考量引出了一个简单的 GCN 层（图 13.7）。在第 `k` 层的每个节点 `n` 处，我们通过对其节点嵌入 `h[•]` 求和来聚合来自邻居节点的信息：
 
 ![c13-fig-5008.jpg](img/c13-fig-5008.jpg)
 
  (13.8)
 
-其中 `ne[n]` 返回节点 `n` 的邻居索引集合。然后我们将线性变换 **Ω**[k] 应用于当前节点的嵌入 ![c13-fig-5009.jpg](img/c13-fig-5009.jpg) 和这个聚合值，加上偏置项 **β**[k]，并将结果通过非线性激活函数 **a**[•]，该函数独立地应用于其向量参数的每个成员：
+其中 `ne[n]` 返回节点 `n` 的邻居索引集合。然后我们将线性变换 `Ω[k]` 应用于当前节点的嵌入 `h[n]` 和这个聚合值，加上偏置项 `β[k]`，并将结果通过非线性激活函数 `a[•]`，该函数独立地应用于其向量参数的每个成员：
 
 ![c13-fig-5010.jpg](img/c13-fig-5010.jpg)
 
  (13.9)
 
-![图 13.7 简单图 CNN 层。a) 输入图由结构（体现在图邻接矩阵 **A** 中，未显示）和节点嵌入（存储在 **X** 的列中）组成。b) 第一隐藏层中的每个节点通过以下方式更新：(i) 聚合邻居节点形成单个向量，(ii) 对聚合节点应用线性变换 **Ω**[0]，(iii) 对原始节点应用相同的线性变换 **Ω**[0]，(iv) 将它们与偏置 **β**[0] 相加，最后 (v) 应用非线性激活函数 **a**[•]（如 ReLU）。c) 此过程在后续层中重复（但每层使用不同的参数），直到在网络末端产生最终嵌入。](images/c13-fig-0007.jpg)
+![图 13.7 简单图 CNN 层。a) 输入图由结构（体现在图邻接矩阵 A 中，未显示）和节点嵌入（存储在 X 的列中）组成。b) 第一隐藏层中的每个节点通过以下方式更新：(i) 聚合邻居节点形成单个向量，(ii) 对聚合节点应用线性变换 Ω[0]，(iii) 对原始节点应用相同的线性变换 Ω[0]，(iv) 将它们与偏置 β[0] 相加，最后 (v) 应用非线性激活函数 a[•]（如 ReLU）。c) 此过程在后续层中重复（但每层使用不同的参数），直到在网络末端产生最终嵌入。](images/c13-fig-0007.jpg)
 
-图 13.7 简单图 CNN 层。a) 输入图由结构（体现在图邻接矩阵 **A** 中，未显示）和节点嵌入（存储在 **X** 的列中）组成。b) 第一隐藏层中的每个节点通过以下方式更新：(i) 聚合邻居节点形成单个向量，(ii) 对聚合节点应用线性变换 **Ω**[0]，(iii) 对原始节点应用相同的线性变换 **Ω**[0]，(iv) 将它们与偏置 **β**[0] 相加，最后 (v) 应用非线性激活函数 **a**[•]（如 ReLU）。c) 此过程在后续层中重复（但每层使用不同的参数），直到在网络末端产生最终嵌入。
+图 13.7 简单图 CNN 层。a) 输入图由结构（体现在图邻接矩阵 `A` 中，未显示）和节点嵌入（存储在 `X` 的列中）组成。b) 第一隐藏层中的每个节点通过以下方式更新：(i) 聚合邻居节点形成单个向量，(ii) 对聚合节点应用线性变换 `Ω[0]`，(iii) 对原始节点应用相同的线性变换 `Ω[0]`，(iv) 将它们与偏置 `β[0]` 相加，最后 (v) 应用非线性激活函数 `a[•]`（如 ReLU）。c) 此过程在后续层中重复（但每层使用不同的参数），直到在网络末端产生最终嵌入。
+
+
 
 我们可以通过注意到矩阵后乘向量返回其列的加权和，来更简洁地写出这一点。邻接矩阵 **A** 的第 `n` 列在邻居位置包含 1。因此，如果我们将节点嵌入收集到 `D × N` 矩阵 **H**[k] 中并后乘以邻接矩阵 **A**，结果的第 `n` 列就是 **agg**[n, k]。节点的更新现在是：
 
@@ -5889,9 +5774,6 @@ Notebook 13.2
 相比之下，*传导式*模型同时考虑带标签和不带标签的数据。它不产生规则，而仅仅产生未知输出的标记。这有时被称为*半监督学习*。其优势在于它可以利用未标记数据中的模式来帮助做决策。然而，其劣势在于当添加额外的未标记数据时，模型需要重新训练。
 
 这两种问题类型在图中都很常见（图 13.8）。有时，我们有许多带标签的图并学习图与标签之间的映射。例如，我们可能有许多分子，每个都根据其对人类是否有毒进行标记。我们学习将图映射到有毒/无毒标签的规则，然后将此规则应用于新分子。然而，有时存在单个整体图。在科学论文引用图中，我们可能有一些节点带有表示领域（物理、生物等）的标签，并希望为剩余节点打标签。在这里，训练数据和测试数据是不可分割地连接在一起的。
-
-
-
 
 ### 13.7 示例：节点分类
 
@@ -5950,10 +5832,6 @@ Notebook 13.2
 ![图 13.11 图划分](img/c13-fig-0011.jpg)
 
 第二种方法是在处理前将原始图聚类为不相交的节点子集（即彼此不相连的较小图）。有标准算法来选择这些子集以最大化内部链接的数量。这些较小的图可以各自作为一个批次处理，或者可以将它们的随机子集组合起来形成一个批次（恢复原始图中它们之间的任何边）。
-
-
-
-
 
 ![图 13.11 图划分。a) 输入图。b) 输入图使用一种有原则的方法被划分为更小的子图，该方法移除的边最少。c-d) 现在我们可以在归纳式设置中使用这些子图作为批次进行训练，所以这里有四个可能的批次。e) 或者，我们可以使用子图的组合作为批次，恢复它们之间的边。如果我们使用成对的子图，这里将会有六个可能的批次。](img/c13-fig-0011.jpg)
 
@@ -6083,10 +5961,6 @@ Notebook 13.2
 
 ***
 
-
-
-
-
 ![图 13.12 图卷积网络、点积注意力和图注意力网络的对比。在每种情况下，该机制都将存储在 `D × N` 矩阵 `X` 中的 `N` 个大小为 `D` 的嵌入映射为相同大小的输出。a) 图卷积网络对数据矩阵应用线性变换 `X′ = ΩX`。然后计算变换后数据的加权和，其中加权基于邻接矩阵。加上偏置 `β`，并将结果通过激活函数。b) 自注意力机制的输出也是变换后输入的加权和，但这一次权重通过注意力矩阵取决于数据本身。c) 图注意力网络结合了这两种机制；权重既基于数据计算，又基于邻接矩阵。](img/c13-fig-0012.jpg)
 
 图 13.12 图卷积网络、点积注意力和图注意力网络的对比。在每种情况下，该机制都将存储在 `D × N` 矩阵 `X` 中的 `N` 个大小为 `D` 的嵌入映射为相同大小的输出。a) 图卷积网络对数据矩阵应用线性变换 `X′ = ΩX`。然后计算变换后数据的加权和，其中加权基于邻接矩阵。加上偏置 `β`，并将结果通过激活函数。b) 自注意力机制的输出也是变换后输入的加权和，但这一次权重通过注意力矩阵取决于数据本身。c) 图注意力网络结合了这两种机制；权重既基于数据计算，又基于邻接矩阵。
@@ -6119,99 +5993,95 @@ Notebook 13.2
 
 图由一组节点组成，这些节点成对由边连接。节点和边都可以附带数据，分别称为节点嵌入和边嵌入。许多现实世界的问题可以用图来建模，目标是确定整个图的属性、每个节点或边的属性，或图中额外边的存在。
 
+
+
+# 图神经网络
+
 图神经网络是应用于图的深度学习模型。由于图中的节点顺序是任意的，图神经网络的层必须对节点索引的排列保持等变性。基于空间的卷积网络是一类图神经网络，它们从节点的邻居聚合信息，然后用它来更新节点嵌入。
 
 处理图的一个挑战是它们经常出现在转导设置中，即只有一个部分标注的图，而不是成套的训练图和测试图。这个图可能非常大，这在训练方面增加了进一步的挑战，并导致了采样和分区算法的出现。边图在原始图中每条边对应一个节点。通过转换为这种表示，图神经网络可用于更新边嵌入。
 
-### 注释
+## 注释
 
 Sanchez-Lengeling 等人 (2021) 和 Daigavane 等人 (2021) 提供了关于使用神经网络进行图处理的优秀入门文章。关于图神经网络研究的最新综述可参见 Zhou 等人 (2020a)、Wu 等人 (2020c) 和 Veličković (2023) 的文章，以及 Hamilton (2020) 和 Ma & Tang (2021) 的著作。GraphEDM (Chami 等人, 2020) 将许多现有的图算法统一到一个框架中。在本章中，我们遵循 Bruna 等人 (2013) 将图与卷积网络联系起来，但也存在与信念传播 (Dai 等人, 2016) 和图同构测试 (Hamilton 等人, 2017a) 的紧密联系。Zhang 等人 (2019c) 提供了专门关注图卷积网络的综述。Bronstein 等人 (2021) 提供了几何深度学习的总体概述，包括图上的学习。Loukas (2020) 讨论了图神经网络可以学习哪些类型的函数。
 
-**应用：** 应用包括图分类（如 Zhang 等人, 2018b）、节点分类（如 Kipf & Welling, 2017）、边预测（如 Zhang & Chen, 2018）、图聚类（如 Tsitsulin 等人, 2020）和推荐系统（如 Wu 等人, 2023）。节点分类方法由 Xiao 等人 (2022a) 综述，图分类方法由 Errica 等人 (2019) 综述，边预测方法由 Mutlu 等人 (2020) 和 Kumar 等人 (2020a) 综述。
+**应用：** 应用包括图分类（如 Zhang 等人, 2018b）、节点分类（如 Kipf & Welling, 2017）、边预测（如 Zhang & Chen, 2018）、图聚类（如 Tsitsulin 等人, 2020）和推荐系统（如 Wu 等人, 2023）。节点分类方法由 Xiao 等人 (2022a) 综述，图分类方法由 Errica 等人 (2019) 综述，边预测方法由 Mutlu 等人 (2020) 和 Kumar 等人 (2020a) 综述。
 
-**图神经网络：** 图神经网络由 Gori 等人 (2005) 和 Scarselli 等人 (2008) 提出，他们将其表述为递归神经网络的推广。后一种模型使用迭代更新：
+**图神经网络：** 图神经网络由 Gori 等人 (2005) 和 Scarselli 等人 (2008) 提出，他们将其表述为递归神经网络的推广。后一种模型使用迭代更新：
 
 ![c13-fig-5030.jpg](img/c13-fig-5030.jpg)
 
- (13.25)
+(13.25)
 
 其中每个节点嵌入 `h[n]` 从初始嵌入 `x[n]`、相邻节点的初始嵌入 `x[m]∈ne[n]`、相邻边的初始嵌入 `e[e]∈nee[n]` 以及相邻节点嵌入 `h[m]∈ne[n]` 进行更新。为保证收敛，函数 `f[•, •, •, •, ϕ]` 必须是收缩映射（见图 16.9）。如果我们将此方程在时间上展开 `K` 步，并允许每个时间 `K` 使用不同的参数 `ϕ[k]`，则方程 13.25 变得类似于图卷积网络。后续工作将图神经网络扩展为使用门控循环单元 (Li 等人, 2016b) 和长短期记忆网络 (Selsam 等人, 2019)。
 
+### 谱方法
 
+Bruna 等人（2013）在傅里叶域中应用了卷积运算。傅里叶基向量可以通过对`图拉普拉斯矩阵` **L** = **D** − **A** 进行特征分解来找到，其中 **D** 是度矩阵，**A** 是邻接矩阵。这有缺点：滤波器不具备局部性，且对于大型图而言，分解的计算代价过高。Henaff 等人（2015）通过强制傅里叶表示平滑（从而使空间域具有局部性）解决了第一个问题。Defferrard 等人（2016）提出了 `ChebNet`，利用切比雪夫多项式的递归特性高效近似滤波器。这既提供了空间局部化的滤波器，又降低了计算量。Kipf & Welling（2017）进一步简化了这一点，构建了仅使用 1 跳邻域的滤波器，得到的公式类似于本章所述的空间方法，在谱方法和空间方法之间架起了一座桥梁。
 
+### 空间方法
 
+谱方法最终基于图拉普拉斯矩阵，因此如果图结构发生变化，模型必须重新训练。这一问题推动了空间方法的发展。Duvenaud 等人（2015）在空间域中定义了卷积，使用不同的权重矩阵为每个节点度组合相邻嵌入。其缺点是，如果某些节点拥有非常大量的连接，则变得不切实际。扩散卷积神经网络（Atwood & Towsley, 2016）利用归一化邻接矩阵的幂在不同尺度间融合特征，对这些特征求和，逐点乘以权重，并通过激活函数生成节点嵌入。Gilmer 等人（2017）引入了`消息传递神经网络`，将图上的卷积定义为从空间邻居传播消息。`GraphSAGE` 的“聚合与组合”公式（Hamilton 等人，2017a）符合这一框架。
 
-#### 谱方法
+### 聚合与组合
 
-Bruna 等人（2013）在傅里叶域中应用了卷积运算。傅里叶基向量可以通过对*图拉普拉斯矩阵* **L** = **D** − **A** 进行特征分解来找到，其中 **D** 是度矩阵，**A** 是邻接矩阵。这有缺点：滤波器不具备局部性，且对于大型图而言，分解的计算代价过高。Henaff 等人（2015）通过强制傅里叶表示平滑（从而使空间域具有局部性）解决了第一个问题。Defferrard 等人（2016）提出了 ChebNet，利用切比雪夫多项式的递归特性高效近似滤波器。这既提供了空间局部化的滤波器，又降低了计算量。Kipf & Welling（2017）进一步简化了这一点，构建了仅使用 1 跳邻域的滤波器，得到的公式类似于本章所述的空间方法，在谱方法和空间方法之间架起了一座桥梁。
+`图卷积网络`（Kipf & Welling, 2017）对邻居和当前节点进行加权平均，然后应用线性映射和 ReLU。`GraphSAGE`（Hamilton 等人，2017a）对每个邻居应用一个神经网络层，取逐元素最大值进行聚合。Chiang 等人（2019）提出了`对角增强`，其中前一层嵌入的权重大于邻居。Kipf & Welling（2017）引入了 `Kipf 归一化`，根据当前节点及其邻居的度来归一化邻居嵌入的总和（见公式 13.19）。
 
-#### 空间方法
+`混合模型网络`或 `MoNet`（Monti 等人，2017）更进一步，基于当前节点和邻居的度`学习`加权。它们为每个节点关联一个伪坐标系，邻居的位置取决于这两个量。然后基于高斯混合模型学习一个连续函数，并在邻居的伪坐标处对该函数采样以获得权重。这样，它们可以学习具有任意度的节点和邻居的加权。Pham 等人（2017）使用节点嵌入与邻居的线性插值，每个维度采用不同的加权组合。该门控机制的权重作为数据的函数生成。
 
-谱方法最终基于图拉普拉斯矩阵，因此如果图结构发生变化，模型必须重新训练。这一问题推动了空间方法的发展。Duvenaud 等人（2015）在空间域中定义了卷积，使用不同的权重矩阵为每个节点度组合相邻嵌入。其缺点是，如果某些节点拥有非常大量的连接，则变得不切实际。扩散卷积神经网络（Atwood & Towsley, 2016）利用归一化邻接矩阵的幂在不同尺度间融合特征，对这些特征求和，逐点乘以权重，并通过激活函数生成节点嵌入。Gilmer 等人（2017）引入了*消息传递神经网络*，将图上的卷积定义为从空间邻居传播消息。*GraphSAGE* 的“聚合与组合”公式（Hamilton 等人，2017a）符合这一框架。
+### 高阶卷积层
 
-#### 聚合与组合
+Zhou & Li（2017）通过将邻接矩阵 **A** 替换为 **Ã** = **Min**[**A**^L^ + **I**, **1**] 使用了高阶卷积，其中 *L* 是最大游走长度，**1** 是仅包含 1 的矩阵，**Min**[•] 对其两个矩阵参数取逐点最小值；更新现在将至少存在一条长度为 *L* 的游走的任意节点的贡献求和。Abu-El-Haija 等人（2019）提出了 `MixHop`，它从邻居（使用邻接矩阵 **A**）、邻居的邻居（使用 **A**²）等计算节点更新。它们在每一层连接这些更新。Lee 等人（2018）利用几何`基序`结合了超出直接邻居的节点信息，基序是图中的小局部几何模式（例如，五个节点的全连接团）。
 
-*图卷积网络*（Kipf & Welling, 2017）对邻居和当前节点进行加权平均，然后应用线性映射和 ReLU。*GraphSAGE*（Hamilton 等人，2017a）对每个邻居应用一个神经网络层，取逐元素最大值进行聚合。Chiang 等人（2019）提出了*对角增强*，其中前一层嵌入的权重大于邻居。Kipf & Welling（2017）引入了 Kipf 归一化，根据当前节点及其邻居的度来归一化邻居嵌入的总和（见公式 13.19）。
+### 残差连接
 
-*混合模型网络*或 *MoNet*（Monti 等人，2017）更进一步，基于当前节点和邻居的度*学习*加权。它们为每个节点关联一个伪坐标系，邻居的位置取决于这两个量。然后基于高斯混合模型学习一个连续函数，并在邻居的伪坐标处对该函数采样以获得权重。这样，它们可以学习具有任意度的节点和邻居的加权。Pham 等人（2017）使用节点嵌入与邻居的线性插值，每个维度采用不同的加权组合。该门控机制的权重作为数据的函数生成。
+Kipf & Welling（2017）提出了一种残差连接，将原始嵌入加到更新后的嵌入上。Hamilton 等人（2017b）将前一层嵌入连接到下一层的输出（见公式 13.16）。Rossi 等人（2020）提出了一种 Inception 风格的网络，其中节点嵌入不仅连接到其邻居的聚合，还连接到游走长度为二以内所有邻居的聚合（通过计算邻接矩阵的幂）。Xu 等人（2018）引入了`跳跃知识连接`，其中每个节点的最终输出由网络中各层的节点嵌入连接而成。Zhang & Meng（2019）提出了残差嵌入的通用公式 `GResNet`，并研究了多种变体，其中加入了前一层嵌入、输入嵌入，或这些嵌入的聚合邻居信息版本（无进一步变换）。
 
-#### 高阶卷积层
+### 图神经网络中的注意力机制
 
-Zhou & Li（2017）通过将邻接矩阵 **A** 替换为 **Ã** = **Min**[**A**^L^ + **I**, **1**] 使用了高阶卷积，其中 *L* 是最大游走长度，**1** 是仅包含 1 的矩阵，**Min**[•] 对其两个矩阵参数取逐点最小值；更新现在将至少存在一条长度为 *L* 的游走的任意节点的贡献求和。Abu-El-Haija 等人（2019）提出了 *MixHop*，它从邻居（使用邻接矩阵 **A**）、邻居的邻居（使用 **A**²）等计算节点更新。它们在每一层连接这些更新。Lee 等人（2018）利用几何*基序*结合了超出直接邻居的节点信息，基序是图中的小局部几何模式（例如，五个节点的全连接团）。
+Veličković 等人（2019）开发了`图注意力网络`（图 13.12c）。其公式使用多个头，其输出以对称方式组合。`门控注意力网络`（Zhang 等人，2018a）以依赖于数据本身的方式对不同头的输出加权。`Graph-BERT`（Zhang 等人，2020）仅使用自注意力进行节点分类；通过向数据添加位置嵌入来捕获图的结构，这类似于 Transformer（第 12 章）中捕获单词绝对或相对位置的方式。例如，它们添加取决于图中节点间跳数的位置信息。
 
-#### 残差连接
+### 排列不变性
 
-Kipf & Welling（2017）提出了一种残差连接，将原始嵌入加到更新后的嵌入上。Hamilton 等人（2017b）将前一层嵌入连接到下一层的输出（见公式 13.16）。Rossi 等人（2020）提出了一种 Inception 风格的网络，其中节点嵌入不仅连接到其邻居的聚合，还连接到游走长度为二以内所有邻居的聚合（通过计算邻接矩阵的幂）。Xu 等人（2018）引入了*跳跃知识连接*，其中每个节点的最终输出由网络中各层的节点嵌入连接而成。Zhang & Meng（2019）提出了残差嵌入的通用公式 *GResNet*，并研究了多种变体，其中加入了前一层嵌入、输入嵌入，或这些嵌入的聚合邻居信息版本（无进一步变换）。
+在 `DeepSets` 中，Zaheer 等人（2017）提出了一种处理集合的通用排列不变算子。Janossy 池化（Murphy 等人，2018）承认许多函数不是排列等变的，而是使用排列敏感函数并跨多个排列平均结果。
 
-#### 图神经网络中的注意力机制
+### 边图
 
-Veličković 等人（2019）开发了*图注意力网络*（图 13.12c）。其公式使用多个头，其输出以对称方式组合。*门控注意力网络*（Zhang 等人，2018a）以依赖于数据本身的方式对不同头的输出加权。*Graph-BERT*（Zhang 等人，2020）仅使用自注意力进行节点分类；通过向数据添加位置嵌入来捕获图的结构，这类似于 Transformer（第 12 章）中捕获单词绝对或相对位置的方式。例如，它们添加取决于图中节点间跳数的位置信息。
+`边图`、`线图`或`伴随图`的符号可追溯至 Whitney（1932）。Kearnes 等人（2016）提出了“编织”层的思想，这些层从节点嵌入更新节点嵌入、从边嵌入更新节点嵌入、从边嵌入更新边嵌入、从节点嵌入更新边嵌入。然而，此处节点-节点和边-边更新不涉及邻居。Monti 等人（2018）引入了`对偶-原始图 CNN`，这是一种在 CNN 框架中的现代公式，在原始图和边图之间交替进行更新。
 
-#### 排列不变性
+### 图神经网络的表达能力
 
-在 *DeepSets* 中，Zaheer 等人（2017）提出了一种处理集合的通用排列不变算子。Janossy 池化（Murphy 等人，2018）承认许多函数不是排列等变的，而是使用排列敏感函数并跨多个排列平均结果。
-
-#### 边图
-
-*边图*、*线图*或*伴随图*的符号可追溯至 Whitney（1932）。Kearnes 等人（2016）提出了“编织”层的思想，这些层从节点嵌入更新节点嵌入、从边嵌入更新节点嵌入、从边嵌入更新边嵌入、从节点嵌入更新边嵌入。然而，此处节点-节点和边-边更新不涉及邻居。Monti 等人（2018）引入了*对偶-原始图 CNN*，这是一种在 CNN 框架中的现代公式，在原始图和边图之间交替进行更新。
-
-#### 图神经网络的表达能力
-
-Xu 等人（2019）认为神经网络应能区分不同的图结构；如果两个图具有相同的初始节点嵌入但不同的邻接矩阵，将它们映射到相同的输出是不可取的。他们识别出之前的方法（如 GCN [Kipf & Welling, 2017] 和 GraphSAGE [Hamilton 等人，2017a]）无法区分的图结构。他们开发了一种更强大的架构，其判别能力与 Weisfeiler-Lehman 图同构测试（Weisfeiler & Leman, 1968）相当，后者已知能区分广泛类别的图。这种由此产生的*图同构网络*基于聚合操作：
+Xu 等人（2019）认为神经网络应能区分不同的图结构；如果两个图具有相同的初始节点嵌入但不同的邻接矩阵，将它们映射到相同的输出是不可取的。他们识别出之前的方法（如 `GCN` [Kipf & Welling, 2017] 和 `GraphSAGE` [Hamilton 等人，2017a]）无法区分的图结构。他们开发了一种更强大的架构，其判别能力与 `Weisfeiler-Lehman 图同构测试`（Weisfeiler & Leman, 1968）相当，后者已知能区分广泛类别的图。这种由此产生的`图同构网络`基于聚合操作：
 
 ![c13-fig-5031.jpg](img/c13-fig-5031.jpg)
 
 (13.26)
 
-
-
-
-
-##### 批次
+#### 批次
 
 图卷积网络的原始论文（Kipf & Welling, 2017）使用了全批次梯度下降。这在训练期间具有与节点数量、嵌入大小和层数成正比的内存需求。自那时起，已提出了三类方法来降低内存需求，并在归纳设置中为 SGD 创建批次：节点采样、层采样和子图采样。
 
-###### 节点采样方法
+##### 节点采样方法
 
-**节点采样方法**首先随机选择一部分目标节点，然后反向通过网络，在每个阶段添加感受野中一部分节点的子集。**GraphSAGE**（Hamilton et al., 2017a）提出了如图 13.10b 所示的固定数量邻域采样。Chen et al. (2018b) 引入了一种方差缩减技术，但这使用了节点的历史激活值，因此仍然具有较高的内存需求。**PinSAGE**（Ying et al., 2018a）从目标节点发起随机游走，并选择访问次数最高的 `K` 个节点。这优先考虑了连接更紧密的祖先节点。
+**节点采样方法**首先随机选择一部分目标节点，然后反向通过网络，在每个阶段添加感受野中一部分节点的子集。`GraphSAGE`（Hamilton et al., 2017a）提出了如图 13.10b 所示的固定数量邻域采样。Chen et al. (2018b) 引入了一种方差缩减技术，但这使用了节点的历史激活值，因此仍然具有较高的内存需求。`PinSAGE`（Ying et al., 2018a）从目标节点发起随机游走，并选择访问次数最高的 `K` 个节点。这优先考虑了连接更紧密的祖先节点。
 
 节点采样在反向通过图时仍然需要不断增加的节点数量。
 
-###### 层采样方法
+##### 层采样方法
 
-**层采样方法**通过在每一层独立地直接采样感受野来解决这个问题。层采样的示例包括 **FastGCN**（Chen et al., 2018a）、自适应采样（Huang et al., 2018b）和层依赖重要性采样（Zou et al., 2019）。
+**层采样方法**通过在每一层独立地直接采样感受野来解决这个问题。层采样的示例包括 `FastGCN`（Chen et al., 2018a）、自适应采样（Huang et al., 2018b）和层依赖重要性采样（Zou et al., 2019）。
 
-###### 子图采样方法
+##### 子图采样方法
 
-**子图采样方法**随机抽取子图或将原始图划分为子图。这些子图随后作为独立的数据样本进行训练。这些方法的示例包括 **GraphSAINT**（Zeng et al., 2020），它在训练期间使用随机游走采样子图，然后在子图上运行完整的 GCN，同时校正小批量的偏差和方差。**Cluster GCN**（Chiang et al., 2019）在预处理阶段将图划分为簇（通过最大化嵌入利用率或批次内边的数量），并随机选择簇以形成小批量。为了创建更多随机性，他们训练这些簇的随机子集以及它们之间的边（见图 13.11）。
+**子图采样方法**随机抽取子图或将原始图划分为子图。这些子图随后作为独立的数据样本进行训练。这些方法的示例包括 `GraphSAINT`（Zeng et al., 2020），它在训练期间使用随机游走采样子图，然后在子图上运行完整的 GCN，同时校正小批量的偏差和方差。`Cluster GCN`（Chiang et al., 2019）在预处理阶段将图划分为簇（通过最大化嵌入利用率或批次内边的数量），并随机选择簇以形成小批量。为了创建更多随机性，他们训练这些簇的随机子集以及它们之间的边（见图 13.11）。
 
 Wolfe et al. (2021) 提出了一种分布式训练方法，该方法既对图进行分区，又通过在不同层对特征空间进行分区，并行训练更窄的 GCN。关于图采样的更多信息可以在 Rozemberczki et al. (2020) 中找到。
 
 #### 正则化和归一化
 
-Rong et al. (2020) 提出了 **DropEdge**，它通过掩盖邻接矩阵，在每次训练迭代中随机从图中丢弃边。这可以针对整个神经网络进行，也可以在每一层以不同方式进行（逐层 DropEdge）。从某种意义上说，这类似于 dropout，因为它打断了数据流中的连接，但它也可以被视为一种增强方法，因为改变图类似于扰动数据。Schlichtkrull et al. (2018)、Teru et al. (2020) 和 Veličković et al. (2019) 也提出了从图中随机丢弃边作为一种类似于 dropout 的正则化形式。节点采样方法（Hamilton et al., 2017a; Huang et al., 2018b; Chen et al., 2018a）也可以被视为正则化器。Hasanzadeh et al. (2020) 提出了一个称为 **DropConnect** 的通用框架，统一了上述许多方法。
+Rong et al. (2020) 提出了 `DropEdge`，它通过掩盖邻接矩阵，在每次训练迭代中随机从图中丢弃边。这可以针对整个神经网络进行，也可以在每一层以不同方式进行（逐层 DropEdge）。从某种意义上说，这类似于 dropout，因为它打断了数据流中的连接，但它也可以被视为一种增强方法，因为改变图类似于扰动数据。Schlichtkrull et al. (2018)、Teru et al. (2020) 和 Veličković et al. (2019) 也提出了从图中随机丢弃边作为一种类似于 dropout 的正则化形式。节点采样方法（Hamilton et al., 2017a; Huang et al., 2018b; Chen et al., 2018a）也可以被视为正则化器。Hasanzadeh et al. (2020) 提出了一个称为 `DropConnect` 的通用框架，统一了上述许多方法。
 
-针对图神经网络也提出了许多归一化方案，包括 **PairNorm**（Zhao & Akoglu, 2020）、**权重归一化**（Oono & Suzuki, 2019）、**可微分组归一化**（Zhou et al., 2020b）和 **GraphNorm**（Cai et al., 2021）。
+针对图神经网络也提出了许多归一化方案，包括 `PairNorm`（Zhao & Akoglu, 2020）、`权重归一化`（Oono & Suzuki, 2019）、`可微分组归一化`（Zhou et al., 2020b）和 `GraphNorm`（Cai et al., 2021）。
 
 #### 多关系图
 
@@ -6219,26 +6089,23 @@ Schlichtkrull et al. (2018) 为多关系图（即具有多种边类型的图）�
 
 #### 分层表示和池化
 
-用于图像分类的 CNN 随着网络深入逐渐减小表示大小但增加通道数量。然而，本章用于图分类的 GCN 保持整个图直到最后一层，然后结合所有节点计算最终预测。Ying et al. (2018b) 提出了 **DiffPool**，它对图节点进行聚类，生成一个随着深度增加而逐渐变小的图，这种方式是可微的，因此可以被学习。这可以仅基于图结构完成，也可以基于图结构和嵌入自适应地完成。其他池化方法包括 **SortPool**（Zhang et al., 2018b）和 **自注意力图池化**（Lee et al., 2019）。图神经网络池化层的比较可以在 Grattarola et al. (2022) 中找到。Gao & Ji (2019) 基于 U-Net（见图 11.10）为图提出了一种编码器-解码器结构。
+用于图像分类的 CNN 随着网络深入逐渐减小表示大小但增加通道数量。然而，本章用于图分类的 GCN 保持整个图直到最后一层，然后结合所有节点计算最终预测。Ying et al. (2018b) 提出了 `DiffPool`，它对图节点进行聚类，生成一个随着深度增加而逐渐变小的图，这种方式是可微的，因此可以被学习。这可以仅基于图结构完成，也可以基于图结构和嵌入自适应地完成。其他池化方法包括 `SortPool`（Zhang et al., 2018b）和 `自注意力图池化`（Lee et al., 2019）。图神经网络池化层的比较可以在 Grattarola et al. (2022) 中找到。Gao & Ji (2019) 基于 U-Net（见图 11.10）为图提出了一种编码器-解码器结构。
 
 #### 几何图
 
-**MoNet** 模型（Monti et al., 2017）可以利用几何信息，因为相邻节点具有明确定义的空间位置。它们学习一个高斯混合函数，并根据邻居的相对坐标从中采样。通过这种方式，它们可以根据相对位置对相邻节点进行加权，就像标准卷积神经网络一样，即使这些位置不是恒定的。**测地线 CNN**（Masci et al., 2015）和 **各向异性 CNN**（Boscaini et al., 2016）都将卷积适应于由三角网格表示的流形（即表面）。它们将表面局部近似为一个平面，并在当前节点周围的这个平面上定义一个坐标系。
+`MoNet` 模型（Monti et al., 2017）可以利用几何信息，因为相邻节点具有明确定义的空间位置。它们学习一个高斯混合函数，并根据邻居的相对坐标从中采样。通过这种方式，它们可以根据相对位置对相邻节点进行加权，就像标准卷积神经网络一样，即使这些位置不是恒定的。`测地线 CNN`（Masci et al., 2015）和 `各向异性 CNN`（Boscaini et al., 2016）都将卷积适应于由三角网格表示的流形（即表面）。它们将表面局部近似为一个平面，并在当前节点周围的这个平面上定义一个坐标系。
 
 #### 过度平滑和挂起动画
 
-与其他深度学习模型不同，直到最近，图神经网络并没有从增加深度中显著受益。事实上，原始 GCN 论文（Kipf & Welling, 2017）和 GraphSAGE（Hamilton et al., 2017a）都只使用两层，而 Chiang et al. (2019) 训练了一个五层的 Cluster-GCN，在 PPI 数据集上获得了最先进的性能。一种可能的解释是 **过度平滑**（Li et al., 2018c）；在每一层，网络都会融合来自更大邻域的信息，这最终可能导致（重要的）局部信息的消融。确实，Xu et al. (2018) 证明了一个节点对另一个节点的影响与在 `K` 步随机游走中到达该节点的概率成正比。随着 `K` 的增加，这趋近于图上游走的平稳分布，导致局部邻域被冲淡。
+与其他深度学习模型不同，直到最近，图神经网络并没有从增加深度中显著受益。事实上，原始 GCN 论文（Kipf & Welling, 2017）和 GraphSAGE（Hamilton et al., 2017a）都只使用两层，而 Chiang et al. (2019) 训练了一个五层的 Cluster-GCN，在 PPI 数据集上获得了最先进的性能。一种可能的解释是 `过度平滑`（Li et al., 2018c）；在每一层，网络都会融合来自更大邻域的信息，这最终可能导致（重要的）局部信息的消融。确实，Xu et al. (2018) 证明了一个节点对另一个节点的影响与在 `K` 步随机游走中到达该节点的概率成正比。随着 `K` 的增加，这趋近于图上游走的平稳分布，导致局部邻域被冲淡。
 
 Alon & Yahav (2021) 为性能为何不随网络深度提高提出了另一种解释。他们认为增加深度允许从更长的路径聚合信息。然而，在实践中，邻居数量的指数级增长意味着存在一个瓶颈，即过多的信息被“压缩”进固定大小的节点嵌入中。
 
-Ying et al. (2018a) 还指出，当网络深度超过一定限制时，梯度不再反向传播，导致训练和测试数据的学习都失败。他们将这种效应称为 **挂起动画**。这类似于当许多层被天真地添加到卷积神经网络时的情况（图 11.2）。他们提出了一系列残差连接，允许训练更深的网络。消失梯度（第 7.5 节）也被 Li et al. (2021b) 确定为一个局限性。
-
-
-
+Ying et al. (2018a) 还指出，当网络深度超过一定限制时，梯度不再反向传播，导致训练和测试数据的学习都失败。他们将这种效应称为 `挂起动画`。这类似于当许多层被天真地添加到卷积神经网络时的情况（图 11.2）。他们提出了一系列残差连接，允许训练更深的网络。消失梯度（第 7.5 节）也被 Li et al. (2021b) 确定为一个局限性。
 
 最近，利用各种形式的残差连接（Xu et al., 2018; Li et al., 2020a; Gong et al., 2020; Chen et al., 2020b; Xu et al., 2021a），训练更深层的图神经网络已成为可能。Li et al. (2021a) 利用可逆网络降低训练内存需求（见第 16 章），训练了一个拥有 1000 多层的最先进模型。
 
-### 习题
+## 习题
 
 **习题 13.1** 写出 图 13.14 中两个图的邻接矩阵。
 
@@ -6268,7 +6135,7 @@ Ying et al. (2018a) 还指出，当网络深度超过一定限制时，梯度不
 
 ![c13-fig-5033.jpg](img/c13-fig-5033.jpg)
 
- (13.27)
+(13.27)
 
 其中 **P** 是 *N* × *N* 置换矩阵（一个全零矩阵，除每行和每列恰好有一个元素为 1），**1** 是 *N* × 1 的全 1 向量。
 
@@ -6276,17 +6143,19 @@ Ying et al. (2018a) 还指出，当网络深度超过一定限制时，梯度不
 
 ![c13-fig-5034.jpg](img/c13-fig-5034.jpg)
 
- (13.28)
+(13.28)
 
-其中 **H** 是包含 *N* 个节点嵌入（在其列中）的 *D* × *N* 矩阵，**A** 是 *N* × *N* 邻接矩阵，**β** 是偏置向量，**Ω** 是权重矩阵。证明该层对节点顺序的置换是等变的，即：
+
+
+其中`H`是包含`N`个节点嵌入（在其列中）的`D × N`矩阵，`A`是`N × N`邻接矩阵，`β`是偏置向量，`Ω`是权重矩阵。证明该层对节点顺序的置换是等变的，即：
 
 ![c13-fig-5035.jpg](img/c13-fig-5035.jpg)
 
  (13.29)
 
-其中 **P** 是 *N* × *N* 置换矩阵。
+其中`P`是`N × N`置换矩阵。
 
-**习题 13.8** 图 13.14 中每个图的度矩阵 **D** 是什么？
+**习题 13.8** 图 13.14 中每个图的度矩阵`D`是什么？
 
 **习题 13.9** GraphSAGE 的作者（Hamilton et al., 2017a）提出了一种池化方法，其中节点嵌入与其邻居的嵌入一起求平均，使得：
 
@@ -6294,44 +6163,41 @@ Ying et al. (2018a) 还指出，当网络深度超过一定限制时，梯度不
 
  (13.30)
 
-展示如何使用线性代数同时为 *D* × *N* 嵌入矩阵 **H** 中的所有节点嵌入计算此操作。你将需要同时用到邻接矩阵 **A** 和度矩阵 **D**。
+展示如何使用线性代数同时为`D × N`嵌入矩阵`H`中的所有节点嵌入计算此操作。你将需要同时用到邻接矩阵`A`和度矩阵`D`。
 
-**习题 13.10\*** 基于点积自注意力设计一种图注意力机制，并仿照 图 13.12 的风格绘制其机制图。
+**习题 13.10\*** 基于点积自注意力设计一种图注意力机制，并仿照图 13.12 的风格绘制其机制图。
 
-**习题 13.11\*** 绘制与 图 13.15a 中的图相关联的边图。
+**习题 13.11\*** 绘制与图 13.15a 中的图相关联的边图。
 
 ![图 13.15 习题 13.11–13.13 的图。](img/c13-fig-0015.jpg)
 
 图 13.15 习题 13.11–13.13 的图。
 
-**习题 13.12\*** 绘制与 图 13.15b 中的边图对应的节点图。
+**习题 13.12\*** 绘制与图 13.15b 中的边图对应的节点图。
 
 **习题 13.13** 对于一般无向图，描述节点图的邻接矩阵与相应边图的邻接矩阵之间的关系。
 
-**习题 13.14\**** 设计一个层，根据节点嵌入 **h**[n] 的邻居节点嵌入 ![c13-fig-5037.jpg](img/c13-fig-5037.jpg) 和邻居边嵌入 ![c13-fig-5038.jpg](img/c13-fig-5038.jpg) 来更新它。你应该考虑到边嵌入可能与节点嵌入大小不同的情况。
+**习题 13.14\**** 设计一个层，根据节点嵌入`h[n]`的邻居节点嵌入`h[n']`和邻居边嵌入`e[n,n']`来更新它。你应该考虑到边嵌入可能与节点嵌入大小不同的情况。
 
 # 第 14 章 无监督学习
 
-第 2–9 章介绍了*监督学习*流程。我们定义了将观测数据 **x** 映射到输出值 **y** 的模型，并引入了衡量该映射在训练数据集 {**x**[i], **y**[i]} 上质量的损失函数。然后我们讨论了如何拟合和衡量这些模型的性能。第 10–13 章介绍了包含参数共享并允许并行计算路径的更复杂模型架构。
+第 2–9 章介绍了*监督学习*流程。我们定义了将观测数据`x`映射到输出值`y`的模型，并引入了衡量该映射在训练数据集`{x[i], y[i]}`上质量的损失函数。然后我们讨论了如何拟合和衡量这些模型的性能。第 10–13 章介绍了包含参数共享并允许并行计算路径的更复杂模型架构。
 
-*无监督学习模型*的决定性特征是它们是在没有标签的情况下，从一组观测数据 {**x**[i]} 中学习得到的。所有无监督模型都共享这一属性，但它们的目标多种多样。它们可用于从数据集生成合理的新样本，或用于操纵、去噪、插值或压缩样本。它们还可用于揭示数据集的内部结构（例如，将其划分为连贯的聚类），或区分新示例是属于同一数据集还是异常值。
+*无监督学习模型*的决定性特征是它们是在没有标签的情况下，从一组观测数据`{x[i]}`中学习得到的。所有无监督模型都共享这一属性，但它们的目标多种多样。它们可用于从数据集生成合理的新样本，或用于操纵、去噪、插值或压缩样本。它们还可用于揭示数据集的内部结构（例如，将其划分为连贯的聚类），或区分新示例是属于同一数据集还是异常值。
 
 本章介绍无监督学习模型的分类，然后讨论模型的理想属性及如何衡量其性能。随后的四章将讨论四种特定模型：生成对抗网络（GAN）、变分自编码器（VAE）、归一化流和扩散模型。¹
 
 ## 14.1 无监督学习模型分类
 
-无监督学习中的一种常见策略是定义数据样本 **x** 与一组未见*潜在*变量 **z** 之间的映射。这些潜在变量捕捉数据集中的潜在结构，且通常比原始数据维度更低；从这个意义上说，潜在变量 **z** 可以被视为数据样本 **x** 的压缩版本，捕捉了其本质特质（图 1.9–1.10）。
+无监督学习中的一种常见策略是定义数据样本`x`与一组未见*潜在*变量`z`之间的映射。这些潜在变量捕捉数据集中的潜在结构，且通常比原始数据维度更低；从这个意义上说，潜在变量`z`可以被视为数据样本`x`的压缩版本，捕捉了其本质特质（图 1.9–1.10）。
 
-原则上，观测变量与潜在变量之间的映射可以是任一方向。一些模型从数据 **x** 映射到潜在变量 **z**。例如，著名的 *k-means* 算法将数据 **x** 映射到簇分配 *z* ∈{1, 2, …, *K*}。其他模型从潜在变量 **z** 映射到数据 **x**。考虑在这些模型中定义潜在变量 **z** 上的分布 *Pr*(**z**)。现在可以通过 (i) 从该分布中抽样，以及 (ii) 将样本映射到数据空间 **x** 来*生成*新样本。因此，这些被称为*生成模型*（见 图 14.1）。
+原则上，观测变量与潜在变量之间的映射可以是任一方向。一些模型从数据`x`映射到潜在变量`z`。例如，著名的*k-means*算法将数据`x`映射到簇分配`z ∈ {1, 2, …, K}`。其他模型从潜在变量`z`映射到数据`x`。考虑在这些模型中定义潜在变量`z`上的分布`Pr(z)`。现在可以通过(i)从该分布中抽样，以及(ii)将样本映射到数据空间`x`来*生成*新样本。因此，这些被称为*生成模型*（见图 14.1）。
 
 ![图 14.1 无监督学习模型分类。无监督学习指任何在无标签数据集上训练的模型。生成模型可以合成（生成）具有与训练数据相似统计特性的新样本。其中一部分是概率性的，并定义了数据上的分布。我们从该分布中抽取样本以生成新样本。潜在变量模型定义了底层解释（潜在）变量与数据之间的映射。它们可能属于上述任何类别。](img/c14-fig-0001.jpg)
 
 图 14.1 无监督学习模型分类。无监督学习指任何在无标签数据集上训练的模型。生成模型可以合成（生成）具有与训练数据相似统计特性的新样本。其中一部分是概率性的，并定义了数据上的分布。我们从该分布中抽取样本以生成新样本。潜在变量模型定义了底层解释（潜在）变量与数据之间的映射。它们可能属于上述任何类别。
 
-第 15 至 18 章中的四种模型都是使用潜在变量的生成模型。*生成对抗网络*（第 15 章）学习从潜在变量 **z** 生成数据样本 **x**\*，使用的损失函数鼓励生成的样本与真实样本无法区分（图 14.2a）。
-
-
-
+第 15 至 18 章中的四种模型都是使用潜在变量的生成模型。*生成对抗网络*（第 15 章）学习从潜在变量`z`生成数据样本`x*`，使用的损失函数鼓励生成的样本与真实样本无法区分（图 14.2a）。
 
 ![Figure 14.2 Fitting generative models a) Generative adversarial models provide a mechanism for generating samples (orange points). As training proceeds (left to right), the loss function encourages these samples to become progressively less distinguishable from real examples (cyan points). b) Probabilistic models (including variational autoencoders, normalizing flows, and diffusion models) learn a probability distribution over the training data. As training proceeds (left to right), the likelihood of the real examples increases under this distribution, which can be used to draw new samples and assess the probability of new data points.](img/c14-fig-0002.jpg)
 
@@ -6394,10 +6260,6 @@ KL 散度
 
 ![Figure 14.4 Inception score. a) A pretrained network classifies the generated images. If the images are realistic, the resulting class probabilities c14-fig-5003.jpg should be peaked at the correct class. b) If the model generates all classes equally frequently, the marginal (average) class probabilities should be flat. The inception score measures the average distance between the distributions in (a) and the distribution in (b). Images from Deng et al. (2009).](img/c14-fig-0004.jpg)
 
-
-
-
-
 #### 图 14.4：Inception Score
 
 图 14.4 Inception Score。a) 预训练网络对生成的图像进行分类。如果图像逼真，则生成的类别概率应在正确类别处达到峰值。b) 如果模型以相同频率生成所有类别，则边缘（平均）类别概率应是平坦的。Inception Score 测量 (a) 中分布与 (b) 中分布之间的平均距离。图片来源：Deng et al. (2009)。
@@ -6418,29 +6280,29 @@ KL 散度
 
 ![图 14.5 流形精确率/召回率。a) 真实样本和生成模型合成样本的真实分布。b) 重叠部分可用精确率（与真实样本分布或流形重叠的合成样本比例）和 c) 召回率（与合成样本流形重叠的真实样本比例）来总结。d) 合成样本的流形可通过以每个样本为中心的一组超球体的并集来近似。此处这些超球体半径恒定，但更常见的是基于到第 k 近邻的距离来确定半径。e) 真实样本的流形以类似方式近似。f) 精确率可计算为位于样本近似流形内的真实样本比例。类似地，召回率计算为位于真实样本近似流形内的样本比例（未显示）。改编自 Kynkäänniemi et al. (2019)。](img/c14-fig-0005.jpg)
 
-图 14.5 流形精确率/召回率。a) 真实样本和生成模型合成样本的真实分布。b) 重叠部分可用*精确率*（与真实样本分布或*流形*重叠的合成样本比例）和 c) *召回率*（与合成样本流形重叠的真实样本比例）来总结。d) 合成样本的流形可通过以每个样本为中心的一组超球体的并集来近似。此处这些超球体半径恒定，但更常见的是半径基于到第 *k^(th)* 近邻的距离。e) 真实样本的流形以类似方式近似。f) 精确率可计算为位于样本近似流形内的真实样本比例。类似地，召回率计算为位于真实样本近似流形内的样本比例（未显示）。改编自 Kynkäänniemi et al. (2019)。
+图 14.5 流形精确率/召回率。a) 真实样本和生成模型合成样本的真实分布。b) 重叠部分可用*精确率*（与真实样本分布或*流形*重叠的合成样本比例）和 c) *召回率*（与合成样本流形重叠的真实样本比例）来总结。d) 合成样本的流形可通过以每个样本为中心的一组超球体的并集来近似。此处这些超球体半径恒定，但更常见的是半径基于到第*k^(th)*近邻的距离。e) 真实样本的流形以类似方式近似。f) 精确率可计算为位于样本近似流形内的真实样本比例。类似地，召回率计算为位于真实样本近似流形内的样本比例（未显示）。改编自 Kynkäänniemi et al. (2019)。
 
-为了估计流形，我们在每个数据样本周围放置一个超球体，其半径为到第 *k^(th)* 近邻的距离。这些球体的并集是流形的一种近似，且很容易判断新点是否位于其中。该流形通常也是在分类器的特征空间中计算的，这带来了相应的优缺点。
+为了估计流形，我们在每个数据样本周围放置一个超球体，其半径为到第*k^(th)*近邻的距离。这些球体的并集是流形的一种近似，且很容易判断新点是否位于其中。该流形通常也是在分类器的特征空间中计算的，这带来了相应的优缺点。
 
 ### 14.4 总结
 
-无监督模型在没有标签的情况下学习数据集的结构。这些模型的一个子集是生成式的，可以合成新的数据样本。更小的一个子集是概率式的，它们既能生成新样本，又能为观测数据分配概率。接下来四章讨论的模型都从一个具有已知分布的潜在变量 `z` 开始。然后，一个深度神经网络将潜在变量映射到观测数据空间。我们讨论了生成模型的理想属性，并介绍了试图量化其性能的指标。
+无监督模型在没有标签的情况下学习数据集的结构。这些模型的一个子集是生成式的，可以合成新的数据样本。更小的一个子集是概率式的，它们既能生成新样本，又能为观测数据分配概率。接下来四章讨论的模型都从一个具有已知分布的潜在变量`z`开始。然后，一个深度神经网络将潜在变量映射到观测数据空间。我们讨论了生成模型的理想属性，并介绍了试图量化其性能的指标。
 
 ### 注释
 
 流行的生成模型包括生成对抗网络（Goodfellow et al., 2014）、变分自编码器（Kingma & Welling, 2014）、归一化流（Rezende & Mohamed, 2015）、扩散模型（Sohl-Dickstein et al., 2015; Ho et al., 2020）、自回归模型（Bengio et al., 2000; Van den Oord et al., 2016b）和基于能量的模型（LeCun et al., 2006）。除基于能量的模型外，其余均在本书中讨论。Bond-Taylor et al. (2022) 提供了生成模型的最新综述。
 
-**评估：** Salimans et al. (2016) 提出了 Inception Score，Heusel et al. (2017) 提出了 Fréchet Inception Distance，两者均基于 Inception V3 模型（Szegedy et al., 2016）的 Pool-3 层。Nash et al. (2021) 使用了同一网络的早期层，这些层保留了更多空间信息，以确保图像的空间统计特性也被复现。Kynkäänniemi et al. (2019) 提出了流形精确率/召回率方法。Barratt & Sharma (2018) 详细讨论了 Inception Score 并指出了其弱点。Borji (2022) 讨论了评估生成模型的不同方法的优缺点。
-
-## 第 15 章：生成对抗网络
-
-*生成对抗网络*（Generative Adversarial Network，简称 *GAN*）是一种无监督模型，旨在生成与一组训练样本无法区分的新样本。GAN 只是创建新样本的机制；它们不建立对建模数据的概率分布，因此无法评估新数据点属于同一分布的概率。
 
 
+# 评估
 
+Salimans et al. (2016) 提出了 Inception Score，Heusel et al. (2017) 提出了 Fréchet Inception Distance，两者均基于 `Inception V3` 模型（Szegedy et al., 2016）的 Pool-3 层。Nash et al. (2021) 使用了同一网络的早期层，这些层保留了更多空间信息，以确保图像的空间统计特性也被复现。Kynkäänniemi et al. (2019) 提出了流形精确率/召回率方法。Barratt & Sharma (2018) 详细讨论了 Inception Score 并指出了其弱点。Borji (2022) 讨论了评估生成模型的不同方法的优缺点。
 
+# 第 15 章：生成对抗网络
 
-# GAN 概述
+**生成对抗网络**（Generative Adversarial Network，简称 **GAN**）是一种无监督模型，旨在生成与一组训练样本无法区分的新样本。GAN 只是创建新样本的机制；它们不建立对建模数据的概率分布，因此无法评估新数据点属于同一分布的概率。
+
+## GAN 概述
 
 在 GAN 中，主 **生成器** 网络通过将随机噪声映射到输出数据空间来创建样本。如果第二个 **判别器** 网络无法区分生成的样本和真实样本，则这些样本必须是合理的。如果该网络 **能** 区分，这将提供一个训练信号，可反馈用于提高样本质量。这一想法很简单，但训练 GAN 很 **困难**：学习算法可能不稳定，虽然 GAN 可能学会生成逼真的样本，但这并不意味着它们学会生成 **所有** 可能的样本。
 
@@ -6448,25 +6310,25 @@ GAN 已应用于多种数据类型，包括音频、3D 模型、文本、视频�
 
 ### 15.1 判别作为信号
 
-我们的目标是生成新样本 ![c15-fig-5001.jpg](img/c15-fig-5001.jpg)，使其服从与真实训练数据集 {**x**[i]} 相同的分布。生成单个新样本 ![c15-fig-5002.jpg](img/c15-fig-5002.jpg) 的过程为：(i) 从简单的基础分布（如标准正态分布）中选择一个 **潜在变量** **z**[j]；(ii) 将该数据通过带参数 **θ** 的网络 **x*** = **g**[**z**[j], **θ**]。该网络称为 **生成器**。学习过程中，目标是找到参数 **θ**，使生成的样本 ![c15-fig-5001.jpg](img/c15-fig-5001.jpg) 与真实数据 {**x**[i]} “相似”（见图 14.2a）。
+我们的目标是生成新样本 ![c15-fig-5001.jpg](img/c15-fig-5001.jpg)，使其服从与真实训练数据集 `{x[i]}` 相同的分布。生成单个新样本 ![c15-fig-5002.jpg](img/c15-fig-5002.jpg) 的过程为：(i) 从简单的基础分布（如标准正态分布）中选择一个 **潜在变量** `z[j]`；(ii) 将该数据通过带参数 `θ` 的网络 `x* = g[z[j], θ]`。该网络称为 **生成器**。学习过程中，目标是找到参数 `θ`，使生成的样本 ![c15-fig-5001.jpg](img/c15-fig-5001.jpg) 与真实数据 `{x[i]}` “相似”（见图 14.2a）。
 
-相似性可用多种方式定义，但 GAN 采用的原则是：样本应在统计上与真实数据无法区分。为此，引入了带参数 **ϕ** 的第二个网络 f[•, **ϕ**]，称为 **判别器**。该网络旨在将输入分类为真实样本或生成样本。若无法分类，则生成样本与真实样本无法区分，即成功；若可分类，判别器提供的信号可用于改进生成过程。
+相似性可用多种方式定义，但 GAN 采用的原则是：样本应在统计上与真实数据无法区分。为此，引入了带参数 `ϕ` 的第二个网络 `f[•, ϕ]`，称为 **判别器**。该网络旨在将输入分类为真实样本或生成样本。若无法分类，则生成样本与真实样本无法区分，即成功；若可分类，判别器提供的信号可用于改进生成过程。
 
-图 15.1 展示了这一机制。我们从真实 1D 样本训练集 {*x[i]*} 开始。每个面板展示不同批次的十个真实样本 ![c15-fig-5003.jpg](img/c15-fig-5003.jpg)（青色箭头）。为创建生成样本批次 ![c15-fig-5001.jpg](img/c15-fig-5001.jpg)，我们使用简单的生成器：
+图 15.1 展示了这一机制。我们从真实 1D 样本训练集 `{x[i]}` 开始。每个面板展示不同批次的十个真实样本 ![c15-fig-5003.jpg](img/c15-fig-5003.jpg)（青色箭头）。为创建生成样本批次 ![c15-fig-5001.jpg](img/c15-fig-5001.jpg)，我们使用简单的生成器：
 
 ![c15-fig-5004.jpg](img/c15-fig-5004.jpg)
 
  (15.1)
 
-其中潜在变量 {*z[j]*} 服从标准正态分布，参数 *θ* 沿 x 轴平移生成样本（图 15.1）。
+其中潜在变量 `{z[j]}` 服从标准正态分布，参数 `θ` 沿 x 轴平移生成样本（图 15.1）。
 
 ![图 15.1 GAN 机制。a) 给定参数化函数（生成器）合成样本（橙色箭头）和一批真实样本（青色箭头），训练判别器区分真实样本和生成样本（Sigmoid 曲线表示数据点为真实的估计概率）。b) 通过修改生成器参数使判别器对样本为合成的置信度降低（本例中将橙色样本右移）来训练生成器。随后更新判别器。c) 交替更新生成器和判别器，使生成样本与真实样本无法区分，且改变生成器的动力（即 Sigmoid 函数的斜率）逐渐减弱。](img/c15-fig-0001.jpg)
 
 图 15.1a GAN 机制。a) 给定参数化函数（生成器）合成样本（橙色箭头）和一批真实样本（青色箭头），训练判别器区分真实样本和生成样本（Sigmoid 曲线表示数据点为真实的估计概率）。b) 通过修改生成器参数使判别器对样本为合成的置信度降低（本例中将橙色样本右移）来训练生成器。随后更新判别器。c) 交替更新生成器和判别器，使生成样本与真实样本无法区分，且改变生成器的动力（即 Sigmoid 函数的斜率）逐渐减弱。
 
-初始化时，*θ* = 3.0，生成样本（橙色箭头）位于真实样本（青色箭头）左侧。判别器被训练以区分生成样本和真实样本（Sigmoid 曲线表示数据点为真实的概率）。训练期间，操纵生成器参数 *θ* 以增加其样本被分类为真实的概率。此处即增大 *θ* 使样本右移至 Sigmoid 曲线较高处。
+初始化时，`θ` = 3.0，生成样本（橙色箭头）位于真实样本（青色箭头）左侧。判别器被训练以区分生成样本和真实样本（Sigmoid 曲线表示数据点为真实的概率）。训练期间，操纵生成器参数 `θ` 以增加其样本被分类为真实的概率。此处即增大 `θ` 使样本右移至 Sigmoid 曲线较高处。
 
-我们交替更新判别器和生成器。图 15.1b–c 展示了该过程的两次迭代。分类逐渐变难，改变 *θ* 的动力减弱（即 Sigmoid 变平）。过程结束时，两组数据无法区分；判别器（此时表现为随机猜测）被丢弃，留下能生成合理样本的生成器。
+我们交替更新判别器和生成器。图 15.1b–c 展示了该过程的两次迭代。分类逐渐变难，改变 `θ` 的动力减弱（即 Sigmoid 变平）。过程结束时，两组数据无法区分；判别器（此时表现为随机猜测）被丢弃，留下能生成合理样本的生成器。
 
 ---
 
@@ -6478,23 +6340,23 @@ GAN 已应用于多种数据类型，包括音频、3D 模型、文本、视频�
 
 #### 15.1.1 GAN 损失函数
 
-我们现在更精确地定义训练 GAN 的损失函数。判别器 f[**x**, **ϕ**] 接收输入 **x**，含参数 **ϕ**，输出一个标量，值越大表示越认为输入是真实样本。这是一个二分类任务，因此我们改编二元交叉熵损失函数（第 5.4 节），其原始形式为：
+我们现在更精确地定义训练 GAN 的损失函数。判别器 `f[x, ϕ]` 接收输入 `x`，含参数 `ϕ`，输出一个标量，值越大表示越认为输入是真实样本。这是一个二分类任务，因此我们改编二元交叉熵损失函数（第 5.4 节），其原始形式为：
 
 ![c15-fig-5005.jpg](img/c15-fig-5005.jpg)
 
  (15.2)
 
-其中 *y[i]* ∈ {0, 1} 为标签，sig[•] 为逻辑 Sigmoid 函数（图 5.7）。
+其中 `y[i]` ∈ {0, 1} 为标签，`sig[•]` 为逻辑 Sigmoid 函数（图 5.7）。
 
-本例中，假设真实样本 **x** 标签 *y* = 1，生成样本 **x*** 标签 *y* = 0，因此：
+本例中，假设真实样本 `x` 标签 `y` = 1，生成样本 `x*` 标签 `y` = 0，因此：
 
 ![c15-fig-5006.jpg](img/c15-fig-5006.jpg)
 
  (15.3)
 
-其中 *i* 和 *j* 分别为真实样本和生成样本的索引。
+其中 `i` 和 `j` 分别为真实样本和生成样本的索引。
 
-现在代入生成器定义 ![c15-fig-5007.jpg](img/c15-fig-5007.jpg)，注意我们必须关于 **θ** 最大化，因为我们希望生成样本被误分类（即合成可能性低或负对数似然高）：
+现在代入生成器定义 ![c15-fig-5007.jpg](img/c15-fig-5007.jpg)，注意我们必须关于 `θ` 最大化，因为我们希望生成样本被误分类（即合成可能性低或负对数似然高）：
 
 ![c15-fig-5008.jpg](img/c15-fig-5008.jpg)
 
@@ -6502,7 +6364,7 @@ GAN 已应用于多种数据类型，包括音频、3D 模型、文本、视频�
 
 #### 15.1.2 训练 GAN
 
-公式 15.4 是比之前更复杂的损失函数；判别器参数 **ϕ** 被操纵以最小化损失函数，生成器参数 **θ** 被操纵以最大化损失函数。GAN 训练被表征为 **极大极小博弈**；生成器试图找到新方法欺骗判别器，判别器则寻找新方法区分生成样本与真实样本。技术上，解是 **纳什均衡** —— 优化算法寻找一个位置，使其同时是一个函数的最小值和另一个函数的最大值。若训练按计划进行，收敛时 **g**[**z**, **θ**] 将服从与数据相同的分布，且 sig[**f**[•, **ϕ**]] 将处于随机猜测水平（即 0.5）。
+公式 15.4 是比之前更复杂的损失函数；判别器参数 `ϕ` 被操纵以最小化损失函数，生成器参数 `θ` 被操纵以最大化损失函数。GAN 训练被表征为 **极大极小博弈**；生成器试图找到新方法欺骗判别器，判别器则寻找新方法区分生成样本与真实样本。技术上，解是 **纳什均衡** —— 优化算法寻找一个位置，使其同时是一个函数的最小值和另一个函数的最大值。若训练按计划进行，收敛时 `g[z, θ]` 将服从与数据相同的分布，且 `sig[f[•, ϕ]]` 将处于随机猜测水平（即 0.5）。
 
 训练 GAN 时，可将公式 15.4 分为两个损失函数：
 
@@ -6510,11 +6372,7 @@ GAN 已应用于多种数据类型，包括音频、3D 模型、文本、视频�
 
  (15.5)
 
-其中第二个函数乘以负一转为最小化问题，并去除了不依赖 **θ** 的第二项。最小化第一个损失函数训练判别器，最小化第二个训练生成器。
-
-
-
-
+其中第二个函数乘以负一转为最小化问题，并去除了不依赖 `θ` 的第二项。最小化第一个损失函数训练判别器，最小化第二个训练生成器。
 
 #### 15.1.3 深度卷积 GAN
 
@@ -6584,9 +6442,6 @@ Jensen-Shannon divergence
 
 ***
 
-
-
-
 第一项表明，如果在样本密度 `Pr(x**)` 较高的地方，混合分布 `(Pr(x**) + Pr(x))/2` 具有较高概率，则距离将很小。换句话说，它惩罚有样本 `x**` 但无真实样本 `x` 的区域；它强制要求 `quality`（质量）。第二项表明，如果在真实密度 `Pr(x)` 较高的地方，混合分布 `(Pr(x**) + Pr(x))/2` 具有较高概率，则距离将很小。换句话说，它惩罚有真实样本但无生成样本的区域。它强制要求 `coverage`（覆盖度）。参考公式 15.6，我们看到第二项不依赖于生成器，因此生成器并不关心覆盖度；它乐于准确地生成可能样本的一个子集。这是模式丢失的推定原因。
 
 ***
@@ -6609,17 +6464,19 @@ Kullback-Leibler 散度（KL 散度）
 
 图 15.7 提供了支持这一假设的实证证据。如果冻结 DCGAN 生成器并反复更新判别器以提高其分类性能，生成器的梯度会减小。简而言之，判别器和生成器的质量之间存在着非常微妙的平衡；如果判别器变得太好，生成器的训练更新就会被削弱。
 
+
+
 ![Figure 15.7 Vanishing gradients in the generator of a DCGAN. The generator is frozen after 1, 10, and 25 epochs, and the discriminator is trained further. The gradient of the generator decreases rapidly (note log scale); if the discriminator becomes too accurate, the gradients for the generator vanish. Adapted from Arjovsky & Bottou (2017).](img/c15-fig-0007.jpg)
 
 图 15.7 DCGAN 生成器中的梯度消失。生成器在 1、10 和 25 个 epoch 后被冻结，判别器继续训练。生成器的梯度迅速减小（注意对数刻度）；如果判别器变得太准确，生成器的梯度就会消失。改编自 Arjovsky & Bottou (2017)。
 
-#### 15.2.3 Wasserstein 距离
+### 15.2.3 Wasserstein 距离
 
 前几节表明：(i) GAN 损失可以用概率分布之间的距离来解释；(ii) 当生成样本太容易与真实样本区分时，该距离的梯度变为零。显而易见的前进方向是选择一个具有更好性质的距离度量。
 
 *Wasserstein* 距离（对于离散分布称为 *earth mover's* 距离，即“推土机距离”）是将概率质量从一个分布转移以创建另一个分布所需的工作量。这里，“工作”被定义为质量乘以移动距离。这听起来立刻更有希望了；即使分布不相交，Wasserstein 距离也定义良好，并且随着它们相互靠近而平滑减小。
 
-#### 15.2.4 离散分布的 Wasserstein 距离
+### 15.2.4 离散分布的 Wasserstein 距离
 
 Wasserstein 距离对于离散分布最容易理解（图 15.8）。考虑定义在 `K` 个箱上的分布 `Pr(x = i)` 和 `q(x = j)`。假设将一个单位质量从第一个分布的箱 `i` 移动到第二个分布的箱 `j` 有一个代价 `P[ij]`；这个代价可能是索引之间的绝对差值 `|i - j|`。移动的量构成 *transport plan*（传输计划），并存储在矩阵 `P` 中。
 
@@ -6641,11 +6498,9 @@ Wasserstein 距离定义为：
 
 换句话说，Wasserstein 距离是一个将一个分布的质量映射到另一个分布的约束最小化问题的解。这很不方便，因为每次计算距离时，我们都必须对元素 `P[ij]` 求解这个最小化问题。幸运的是，这是一个标准问题，对于小型方程组很容易求解。它是*原始形式*下的*线性规划问题*。
 
-![](img/c15-fig-5018.jpg)
-
-
-
-其中 `p` 包含向量化元素 `P[ij]`，这些元素决定了移动的质量大小，`c` 包含距离，`Ap = b` 包含初始分布约束，而 `p ≥ 0` 确保移动的质量为非负值。¹
+```
+p 包含向量化元素 P[ij]，这些元素决定了移动的质量大小，c 包含距离，Ap = b 包含初始分布约束，而 p ≥ 0 确保移动的质量为非负值。¹
+```
 
 ---
 
@@ -6673,7 +6528,7 @@ Wasserstein 距离定义为：
 
 换句话说，我们在一组新变量 `{f[i]}` 上进行优化，其中相邻值的变化量不能超过 1。
 
-###### 15.2.5 连续分布的 Wasserstein 距离
+### 15.2.5 连续分布的 Wasserstein 距离
 
 将这些结果转换回连续多维域，原始形式（公式 15.10）的等价形式为：
 
@@ -6701,7 +6556,7 @@ Wasserstein 距离定义为：
 
 ---
 
-###### 15.2.6 Wasserstein GAN 损失函数
+### 15.2.6 Wasserstein GAN 损失函数
 
 在神经网络的背景下，我们通过优化神经网络 `f[x, ϕ]` 中的参数 `ϕ`，在函数 `f[x]` 的空间上进行最大化，并使用生成样本 ![c15-fig-5023.jpg](img/c15-fig-5023.jpg) 和真实样本 `x*[i]*` 来近似这些积分：
 
@@ -6717,7 +6572,7 @@ Wasserstein 距离定义为：
 
 实现这一点的一种方法是将判别器权重裁剪到一个小范围内（例如 `[−0.01, 0.01]`）。另一种方法是*梯度惩罚 Wasserstein GAN* 或 *WGAN-GP*，它添加一个正则化项，当梯度范数偏离 1 时该项会增加。
 
-### 15.3 渐进式增长、小批量判别与截断
+## 15.3 渐进式增长、小批量判别与截断
 
 Wasserstein 公式使 GAN 训练更加稳定。然而，生成高质量图像还需要进一步的机制。我们现在回顾*渐进式增长*、*小批量判别*和*截断*，它们都能提高输出质量。
 
@@ -6745,18 +6600,15 @@ Wasserstein 公式使 GAN 训练更加稳定。然而，生成高质量图像还
 
 图 15.11 渐进式增长。当在 CELEBA-HQ 数据集上训练时，此方法生成逼真的人脸图像；当在 LSUN 类别上训练时，生成更复杂、多变的物体。改编自 Karras 等人 (2018)。
 
-
-
-
 ![图 15.12 在 LSUN 汽车数据集上训练的渐进式 GAN 的潜在空间遍历。在潜在空间中移动会产生平滑变化的汽车图像。这通常仅适用于短轨迹；最终，潜在变量会移动到产生不真实图像的位置。改编自 Karras 等人 (2018)。](img/c15-fig-0012.jpg)
 
 图 15.12 在 LSUN 汽车数据集上训练的渐进式 GAN 的潜在空间遍历。在潜在空间中移动会产生平滑变化的汽车图像。这通常仅适用于短轨迹；最终，潜在变量会移动到产生不真实图像的位置。改编自 Karras 等人 (2018)。
 
-### 15.4 条件生成
+## 15.4 条件生成
 
 GAN 能够生成逼真的图像，但无法指定其属性：如果不为每种特征组合训练单独的 GAN，我们就无法选择人脸的发色、种族或年龄。*条件生成*模型为我们提供了这种控制。
 
-#### 15.4.1 条件 GAN
+### 15.4.1 条件 GAN
 
 *条件 GAN* 将属性向量 **c** 同时传递给生成器和判别器，它们现在分别记为 **g**[**z**, **c**, **θ**] 和 f[**x**, **c**, **ϕ**]。生成器旨在将潜在变量 **z** 转换为具有正确属性 **c** 的数据样本 **x**。判别器的目标是区分 (i) 具有目标属性的生成样本或 (ii) 具有真实属性的真实样本 (图 15.13a)。
 
@@ -6766,15 +6618,15 @@ GAN 能够生成逼真的图像，但无法指定其属性：如果不为每种�
 
 对于生成器，属性 **c** 可以追加到潜在向量 **z** 后。对于判别器，如果数据是 1D 的，属性可以追加到输入端。如果数据由图像组成，属性可以线性变换为 2D 表示，并作为额外通道追加到判别器输入或其某个中间隐藏层。
 
-#### 15.4.2 辅助分类器 GAN
+### 15.4.2 辅助分类器 GAN
 
-*辅助分类器 GAN* 或 *ACGAN* 通过要求判别器正确预测属性来简化条件生成 (图 15.13b)。对于具有 *C* 个类别的离散属性，判别器以真实/合成图像为输入，并有 *C* + 1 个输出；第一个输出通过 Sigmoid 函数，预测样本是生成的还是真实的。其余输出通过 Softmax 函数，预测数据属于 *C* 个类别中每一个的概率。使用此方法训练的网络可以从 ImageNet 合成多个类别 (图 15.14)。
+*辅助分类器 GAN* 或 *ACGAN* 通过要求判别器正确预测属性来简化条件生成 (图 15.13b)。对于具有 `C` 个类别的离散属性，判别器以真实/合成图像为输入，并有 `C` + 1 个输出；第一个输出通过 Sigmoid 函数，预测样本是生成的还是真实的。其余输出通过 Softmax 函数，预测数据属于 `C` 个类别中每一个的概率。使用此方法训练的网络可以从 ImageNet 合成多个类别 (图 15.14)。
 
 ![图 15.14 辅助分类器 GAN。生成器接收类别标签以及潜在向量。判别器必须既识别数据点是否为真实，*又*预测类别标签。该模型在十个 ImageNet 类别上训练。从左到右：帝王蝶、金翅雀、雏菊、红脚鹬和灰鲸的生成示例。改编自 Odena 等人 (2017)。](img/c15-fig-0014.jpg)
 
 图 15.14 辅助分类器 GAN。生成器接收类别标签以及潜在向量。判别器必须既识别数据点是否为真实，*又*预测类别标签。该模型在十个 ImageNet 类别上训练。从左到右：帝王蝶、金翅雀、雏菊、红脚鹬和灰鲸的生成示例。改编自 Odena 等人 (2017)。
 
-#### 15.4.3 InfoGAN
+### 15.4.3 InfoGAN
 
 条件 GAN 和 ACGAN 都生成具有预定属性的样本。相比之下，InfoGAN (图 15.13c) 试图自动识别重要属性。生成器接收一个由随机噪声变量 **z** 和*随机*属性变量 **c** 组成的向量。判别器既预测图像是真实还是合成的，又估计属性变量。
 
@@ -6782,28 +6634,29 @@ GAN 能够生成逼真的图像，但无法指定其属性：如果不为每种�
 
 ![图 15.15 用于 MNIST 的 InfoGAN。a) 来自 MNIST 数据库的训练示例，该数据库包含 28×28 像素的手写数字图像。b) 第一个属性 c1 是分类的，有 10 个类别；每列显示使用其中一个类别生成的样本。InfoGAN 恢复出了十个数字。属性向量 c2 和 c3 是连续的。c) 从左到右，每列代表 c2 的不同值，同时保持其他潜在变量不变。该属性似乎对应于字符的方向。d) 第三个属性似乎对应于笔画的粗细。改编自 Chen 等人 (2016b)。](img/c15-fig-0015.jpg)
 
-图 15.15 用于 MNIST 的 InfoGAN。a) 来自 MNIST 数据库的训练示例，该数据库包含 28×28 像素的手写数字图像。b) 第一个属性 *c*[1] 是分类的，有 10 个类别；每列显示使用其中一个类别生成的样本。InfoGAN 恢复出了十个数字。属性向量 *c*[2] 和 *c*[3] 是连续的。c) 从左到右，每列代表 *c*[2] 的不同值，同时保持其他潜在变量不变。该属性似乎对应于字符的方向。d) 第三个属性似乎对应于笔画的粗细。改编自 Chen 等人 (2016b)。
-
-### 15.5 图像转换
 
 
+# 图 15.15 用于 MNIST 的 InfoGAN
 
+a) 来自 MNIST 数据库的训练示例，该数据库包含 28×28 像素的手写数字图像。b) 第一个属性 `c[1]` 是分类的，有 10 个类别；每列显示使用其中一个类别生成的样本。InfoGAN 恢复出了十个数字。属性向量 `c[2]` 和 `c[3]` 是连续的。c) 从左到右，每列代表 `c[2]` 的不同值，同时保持其他潜在变量不变。该属性似乎对应于字符的方向。d) 第三个属性似乎对应于笔画的粗细。改编自 Chen 等人 (2016b)。
+
+## 15.5 图像转换
 
 虽然对抗判别器最初是在生成随机样本的 GAN 背景下使用的，但它也可以作为一种先验，用于倾向于真实感的任务，即将一个数据样本转换为另一个。这最常见于图像领域，例如我们可能想要将灰度图像转为彩色、将有噪图像转为干净图像、将模糊图像转为清晰图像，或将草图转为照片级真实感图像。
 
 本节讨论三种使用不同数量人工标注的图像转换模型。Pix2Pix 模型使用前后配对图像进行训练。带有对抗损失的模型对主模型使用前后配对图像，但在判别器中也利用未配对的“后”图像。CycleGAN 模型则使用未配对图像。
 
-#### 15.5.1 Pix2Pix
+### 15.5.1 Pix2Pix
 
-Pix2Pix 模型（图 15.16）是一个网络 `x = g[c, θ]`，它使用带有参数 `θ` 的 U-Net（图 11.10）将一幅图像 `c` 映射为另一种风格的图像 `x`。典型用例是上色，输入为灰度图，输出为彩色图。输出应与输入相似，这通过*内容损失*来鼓励，该损失惩罚输入与输出之间的 *ℓ*[1] 范数 `||x − g[c, θ]||`[1]。
+Pix2Pix 模型（图 15.16）是一个网络 `x = g[c, θ]`，它使用带有参数 `θ` 的 U-Net（图 11.10）将一幅图像 `c` 映射为另一种风格的图像 `x`。典型用例是上色，输入为灰度图，输出为彩色图。输出应与输入相似，这通过*内容损失*来鼓励，该损失惩罚输入与输出之间的 `ℓ1` 范数 `||x − g[c, θ]||1`。
 
-* * *
+***
 
 附录 B.3.2
 
-*ℓ*[1] 范数
+`ℓ1` 范数
 
-* * *
+***
 
 ![图 15.16 Pix2Pix 模型。a) 该模型使用 U-Net（见图 11.10）将输入图像转换为不同风格的预测图像。在此例中，它将灰度图像映射为一个看似合理的彩色版本。U-Net 使用两种损失进行训练。首先，内容损失鼓励输出图像具有与输入图像相似的结构。其次，对抗损失鼓励灰度/彩色图像对在这些图像的每个局部区域中都难以与真实图像对区分。该框架可适应许多任务，包括 b) 将地图转换为卫星影像，c) 将包的草图转换为照片级真实感示例，d) 上色，以及 e) 将标签图转换为照片级真实感的建筑立面。改编自 Isola 等人 (2017)。](img/c15-fig-0016.jpg)
 
@@ -6813,7 +6666,7 @@ Pix2Pix 模型（图 15.16）是一个网络 `x = g[c, θ]`，它使用带有参
 
 理解该模型的一种方式是将其视为条件 GAN，其中 U-Net 是生成器，且条件是一幅图像而非标签。但请注意，U-Net 的输入不包含噪声，因此在传统意义上并非真正的“生成器”。有趣的是，原作者曾尝试在输入图像 `c` 之外向 U-Net 添加噪声 `z`。然而，网络只是学会了忽略它。
 
-#### 15.5.2 对抗损失
+### 15.5.2 对抗损失
 
 Pix2Pix 模型的判别器试图区分图像转换任务中的前后对是否合理。这有一个缺点：我们需要真实的前后对来利用判别器损失。幸运的是，有一种更简单的方法可以在监督学习背景下利用对抗判别器的力量，而无需额外的标注训练数据。
 
@@ -6825,13 +6678,11 @@ Pix2Pix 模型的判别器试图区分图像转换任务中的前后对是否合
 
 图 15.17 超分辨率生成对抗网络 (SRGAN)。a) 一个带有残差连接的卷积网络被训练以将图像分辨率提高四倍。该模型具有鼓励内容接近真实高分辨率图像的损失。然而，它也包含对抗损失，该损失惩罚那些能与真实高分辨率图像区分开的结果。b) 使用双三次插值上采样的图像。c) 使用 SRGAN 上采样的图像。d) 使用双三次插值上采样的图像。e) 使用 SRGAN 上采样的图像。改编自 Ledig 等人 (2017)。
 
-#### 15.5.3 CycleGAN
+### 15.5.3 CycleGAN
 
-对抗损失假设我们拥有用于主监督网络的标注前后图像。*CycleGAN* 解决了这样一种情况：我们拥有两组具有不同风格的数据，但*没有*匹配的配对。一个例子是将照片转换为莫奈的艺术风格。存在许多照片和许多莫奈画作，但它们之间没有对应关系。CycleGAN 利用了这样一个思想：将图像向一个方向转换（例如，照片 *→* 莫奈），然后再转换回来，应该能恢复原始图像。
+对抗损失假设我们拥有用于主监督网络的标注前后图像。*CycleGAN* 解决了这样一种情况：我们拥有两组具有不同风格的数据，但*没有*匹配的配对。一个例子是将照片转换为莫奈的艺术风格。存在许多照片和许多莫奈画作，但它们之间没有对应关系。CycleGAN 利用了这样一个思想：将图像向一个方向转换（例如，照片 → 莫奈），然后再转换回来，应该能恢复原始图像。
 
-
-
-##### CycleGAN 损失函数
+#### CycleGAN 损失函数
 
 CycleGAN 损失函数是三个损失的加权和（图 15.18）。内容损失鼓励前后图像相似，并基于 `ℓ1` 范数。对抗损失使用判别器鼓励输出与目标域的真实样本无法区分。最后，*循环一致性* 损失鼓励映射是可逆的。这里，两个模型被联合训练。一个将第一个域映射到第二个域，另一个则反向映射。如果翻译后的图像能成功被翻译回原始域的图像，循环一致性损失将会很低。该模型结合这三个损失来训练网络，实现将图像从一种风格翻译到另一种风格，并再翻译回来。
 
@@ -6839,7 +6690,7 @@ CycleGAN 损失函数是三个损失的加权和（图 15.18）。内容损失�
 
 图 15.18 CycleGAN。两个模型同时训练。第一个 `c′ = g[cj, θ]` 将第一种风格（马）的图像 `c` 翻译为第二种风格（斑马）的图像 `c′`。第二个模型 `c = g′[c′, θ]` 学习相反的映射。如果两个模型无法成功将图像转换到另一个域并再转换回原始图像，循环一致性损失会惩罚这两个模型。此外，两个对抗损失鼓励翻译后的图像看起来像目标域的真实样本（此处仅展示斑马）。两个内容损失鼓励每次映射前后图像的细节和布局相似（即斑马处于马所在的相同位置和姿势，且背景相同，反之亦然）。改编自 Zhu 等人 (2017)。
 
-### 15.6 StyleGAN
+## 15.6 StyleGAN
 
 StyleGAN 是一种更现代的 GAN，它将数据集中的变化划分为有意义的组件，每个组件由一部分潜在变量控制。具体而言，StyleGAN 在不同尺度控制输出图像，并将风格与噪声分离。对于人脸图像，大尺度变化包括脸型和头部姿态，中尺度变化包括面部特征的形状和细节，细尺度变化包括发色和肤色。风格组件代表人类感知显著的图像方面，而噪声方面代表不重要的变化，如头发、胡茬、雀斑或毛孔的确切位置。
 
@@ -6859,11 +6710,9 @@ StyleGAN 的主生成分支从一个具有 512 个通道的学习到的常数 4�
 
 图 15.20 StyleGAN 结果。前四列展示了在各种尺度上风格的系统性变化。第五列展示了增加噪声幅度的效果。最后两列展示了两个不同尺度下的不同噪声向量。
 
-### 15.7 总结
+## 15.7 总结
 
 GAN 学习一个生成器网络，将随机噪声转换为与训练集无法区分的数据。为此，生成器使用一个判别器网络进行训练，该判别器试图区分真实样本和生成样本。然后更新生成器，使其创建的数据被判别器识别为更“真实”。这种想法的原始公式有一个缺陷：当很容易判断样本是真实还是生成时，训练信号很弱。这导致了 Wasserstein GAN 的出现，它提供了更一致的训练信号。
-
-
 
 ### GAN 综述与训练技巧
 
@@ -6879,9 +6728,9 @@ GANs 主要是为图像数据开发的。示例包括本章介绍的深度卷积
 
 #### GAN loss functions
 
-最初声称 GANs 在训练期间收敛到纳什均衡。然而，较新的证据表明并非总是如此（Farnia & Ozdaglar，2020；Jin 等人，2020；Berard 等人，2019）。Arjovsky 等人（2017）；Metz 等人（2017）；Qi（2020）指出原始 GAN 损失函数不稳定，这导致了不同的公式化。Mao 等人（2017）引入了最小二乘 GAN。对于某些参数选择，这隐式地最小化了 Pearson *χ*²散度。Nowozin 等人（2016）认为 Jensen-Shannon 散度是更大一族 f-散度的特例，并表明任何 f-散度都可用于训练 GANs。Jolicoeur-Martineau（2019）引入了相对论 GAN，其中判别器估计真实数据示例比生成示例更逼真的概率，而不是其为真实的绝对概率。Zhao 等人（2017a）将 GAN 重构为一个通用的基于能量的框架，其中判别器是一个函数，给真实数据分配低能量，给其他地方分配较高能量。作为示例，他们使用自编码器并基于重构误差计算能量。
+最初声称 GANs 在训练期间收敛到纳什均衡。然而，较新的证据表明并非总是如此（Farnia & Ozdaglar，2020；Jin 等人，2020；Berard 等人，2019）。Arjovsky 等人（2017）；Metz 等人（2017）；Qi（2020）指出原始 GAN 损失函数不稳定，这导致了不同的公式化。Mao 等人（2017）引入了最小二乘 GAN。对于某些参数选择，这隐式地最小化了 Pearson `χ²` 散度。Nowozin 等人（2016）认为 Jensen-Shannon 散度是更大一族 f-散度的特例，并表明任何 f-散度都可用于训练 GANs。Jolicoeur-Martineau（2019）引入了相对论 GAN，其中判别器估计真实数据示例比生成示例更逼真的概率，而不是其为真实的绝对概率。Zhao 等人（2017a）将 GAN 重构为一个通用的基于能量的框架，其中判别器是一个函数，给真实数据分配低能量，给其他地方分配较高能量。作为示例，他们使用自编码器并基于重构误差计算能量。
 
-Arjovsky & Bottou（2017）分析了 GANs 中的梯度消失问题，这导致了 Wasserstein GAN（Arjovsky 等人，2017），它基于土方距离/最优传输。Wasserstein 公式要求判别器的 Lipschitz 常数小于 1；原始论文提议裁剪判别器中的权重，但后续工作施加了梯度惩罚（Gulrajani 等人，2016）或应用谱归一化（Miyato 等人，2018）来限制 Lipschitz 常数。Wasserstein GAN 的其他变体由 Wu 等人（2018a）、Bellemare 等人（2017b）和 Adler & Lunz（2018）引入。Hermann（2017）展示了一个讨论对偶性和 Wasserstein GAN 的优秀博客文章。关于最优传输的更多信息，请参阅 Peyré等人（2019）的书。Lucic 等人（2018）展示了当时 GAN 损失函数的实证比较。
+Arjovsky & Bottou（2017）分析了 GANs 中的梯度消失问题，这导致了 Wasserstein GAN（Arjovsky 等人，2017），它基于土方距离/最优传输。Wasserstein 公式要求判别器的 Lipschitz 常数小于 1；原始论文提议裁剪判别器中的权重，但后续工作施加了梯度惩罚（Gulrajani 等人，2016）或应用谱归一化（Miyato 等人，2018）来限制 Lipschitz 常数。Wasserstein GAN 的其他变体由 Wu 等人（2018a）、Bellemare 等人（2017b）和 Adler & Lunz（2018）引入。Hermann（2017）展示了一个讨论对偶性和 Wasserstein GAN 的优秀博客文章。关于最优传输的更多信息，请参阅 Peyré 等人（2019）的书。Lucic 等人（2018）展示了当时 GAN 损失函数的实证比较。
 
 #### Tricks for training GANs
 
@@ -6891,58 +6740,57 @@ Arjovsky & Bottou（2017）分析了 GANs 中的梯度消失问题，这导致�
 
 #### Sample diversity
 
-原始 GAN 论文（Goodfellow 等人，2014）认为，给予足够的容量、训练样本和计算时间，GAN 可以学会最小化生成样本与真实分布之间的 Jensen-Shannon 散度。然而，后续工作对这在实践中是否发生表示怀疑。Arora 等人（2017）认为判别器的有限容量意味着 GAN 训练目标可以接近其最优值，即使输出分布的变化有限。Wu 等人（2017）使用退火重要性采样近似 GANs 产生的分布的对数似然，发现生成分布与真实分布之间存在不匹配。Arora & Zhang（2017）让人类观察者识别（近似）重复的 GAN 样本，并从这些重复的频率推断图像的多样性。他们发现对于 DCGAN，用 400 个样本出现重复的概率>50%；这意味着支持集大小约为 400,000，小于训练集。他们还表明，多样性随着判别器大小的增加而增加。Bau 等人（2019）采取了不同的方法，研究 GANs*无法*生成的数据空间部分。
-
-#### Increasing diversity and preventing mode collapse
-
-缺乏多样性的极端情况是*模式崩溃*，即网络反复生成相同的图像（Salimans 等人，2016）。这对于条件 GANs 是一个特定问题，其中潜在变量有时被完全忽略，输出仅取决于条件信息。Mao 等人（2019）引入了一个正则化项以帮助防止条件 GANs 中的模式崩溃，该项最大化生成图像之间的距离与相应潜在变量之间距离的比率，从而鼓励输出的多样性。旨在减少模式崩溃的其他工作包括 VEEGAN（Srivastava 等人，2017），它引入了一个重构网络将生成的图像映射回原始噪声，从而阻止从噪声到图像的多对一映射。
 
 
+原始 GAN 论文（Goodfellow 等人，2014）认为，给予足够的容量、训练样本和计算时间，GAN 可以学会最小化生成样本与真实分布之间的 Jensen-Shannon 散度。然而，后续工作对这在实践中是否发生表示怀疑。Arora 等人（2017）认为判别器的有限容量意味着 GAN 训练目标可以接近其最优值，即使输出分布的变化有限。Wu 等人（2017）使用退火重要性采样近似 GANs 产生的分布的对数似然，发现生成分布与真实分布之间存在不匹配。Arora & Zhang（2017）让人类观察者识别（近似）重复的 GAN 样本，并从这些重复的频率推断图像的多样性。他们发现对于 DCGAN，用 400 个样本出现重复的概率>50%；这意味着支持集大小约为 400,000，小于训练集。他们还表明，多样性随着判别器大小的增加而增加。Bau 等人（2019）采取了不同的方法，研究 GANs 无法生成的数据空间部分。
 
+### 增加多样性和防止模式崩溃
+
+缺乏多样性的极端情况是模式崩溃，即网络反复生成相同的图像（Salimans 等人，2016）。这对于条件 GANs 是一个特定问题，其中潜在变量有时被完全忽略，输出仅取决于条件信息。Mao 等人（2019）引入了一个正则化项以帮助防止条件 GANs 中的模式崩溃，该项最大化生成图像之间的距离与相应潜在变量之间距离的比率，从而鼓励输出的多样性。旨在减少模式崩溃的其他工作包括 VEEGAN（Srivastava 等人，2017），它引入了一个重构网络将生成的图像映射回原始噪声，从而阻止从噪声到图像的多对一映射。
 
 Salimans 等人 (2016) 建议跨小批量计算统计量，并使用判别器确保这些统计量与真实图像批次的统计量无法区分。这被称为 `mini-batch discrimination`（小批量判别），通过在判别器末端附近添加一个层来实现，该层为每张图像学习一个张量，以捕获批次的统计量。Karras 等人 (2018) 对此进行了简化，他们计算了小批量中每个空间位置每个特征的标准差。然后他们对空间位置和特征求平均，以获得单个估计值。这被复制以获得单个特征图，并附加到判别器网络末端附近的一个层。Lin 等人 (2018) 将连接的（真实或生成的）样本传递给判别器，并提供了关于向判别器呈现多个样本如何增加多样性的理论分析。MAD-GAN (Ghosh 等人, 2018) 通过使用多个生成器，并要求单个判别器识别样本是由哪个生成器创建的，从而增加了 GAN 样本的多样性，这提供了一个信号，有助于推动生成器相互创建不同的样本。
 
-#### 多尺度
+### 多尺度
 
 Wang 等人 (2018b) 在不同尺度使用多个判别器，以帮助确保图像在所有频带中的质量都很高。其他工作则在不同分辨率定义了生成器和判别器 (Denton 等人, 2015; Zhang 等人, 2017d; Huang 等人, 2017c)。Karras 等人 (2018) 引入了渐进式增长方法（图 15.9），该方法训练起来相对更简单、更快。
 
-#### StyleGAN
+### StyleGAN
 
 Karras 等人 (2019) 引入了 StyleGAN 框架（第 15.6 节）。在后续工作中 (Karras 等人, 2020b)，他们通过 (i) 重新设计生成器中的归一化层以消除“水滴”伪影，以及 (ii) 通过改变渐进式增长框架来减少精细细节不遵循粗略细节处的伪影，从而提高了生成图像的质量。进一步的改进包括开发用于在有限数据上训练 GAN 的方法 (Karras 等人, 2020a) 和修复混叠伪影 (Karras 等人, 2021)。大量工作发现并操纵 StyleGAN 中的潜在变量以编辑图像（例如，Abdal 等人, 2021; Collins 等人, 2020; Härkönen 等人, 2020; Patashnik 等人, 2021; Shen 等人, 2020b; Tewari 等人, 2020; Wu 等人, 2021; Roich 等人, 2022）。
 
-#### 条件 GAN
+### 条件 GAN
 
 条件 GAN 由 Mirza & Osindero (2014) 开发，辅助分类器 GAN 由 Odena 等人 (2017) 开发，InfoGAN 由 Chen 等人 (2016b) 开发。这些模型的判别器通常将条件信息附加到判别器输入 (Mirza & Osindero, 2014; Denton 等人, 2015; Saito 等人, 2017) 或判别器中的中间隐藏层 (Reed 等人, 2016a; Zhang 等人, 2017d; Perarnau 等人, 2016)。然而，Miyato & Koyama (2018) 尝试了在嵌入的条件信息与判别器的一层之间取内积，其动机是类别信息在底层概率模型中的作用。GAN 生成的图像已被以各种方式进行条件控制：类别 (例如，Odena 等人, 2017)、输入文本 (Reed 等人, 2016a; Zhang 等人, 2017d)、属性 (Yan 等人, 2016; Donahue 等人, 2018a; Xiao 等人, 2018b)、边界框和关键点 (Reed 等人, 2016b) 以及图像 (例如，Isola 等人, 2017)。
 
-#### 图像转换
+### 图像转换
 
 Isola 等人 (2017) 开发了 Pix2Pix 算法（图 15.16），随后 Wang 等人 (2018b) 开发了一个具有更高分辨率结果的类似系统。StarGAN (Choi 等人, 2018) 仅使用单个模型即可跨多个域执行图像到图像的转换。循环一致性损失的思想由 Zhou 等人 (2016b) 在 DiscoGAN 中提出，并由 Zhu 等人 (2017) 在 CycleGAN 中提出（图 15.18）。
 
-#### 对抗损失
+### 对抗损失
 
 在许多图像转换任务中，不存在“生成器”；此类模型可被视为带有鼓励真实感的对抗损失的监督学习任务。Ledig 等人 (2017) 的超分辨率算法就是一个很好的例子（图 15.17）。Esser 等人 (2021) 使用了带有对抗损失的自编码器。该网络接收一张图像，减小表示大小以创建“瓶颈”，然后从这个降维数据空间重建图像。实际上，其架构类似于编码器-解码器网络（例如，图 10.19）。训练后，自编码器重现的内容既接近原图又看起来高度真实。他们对自编码器的瓶颈进行矢量量化（离散化），然后使用 Transformer 解码器学习离散变量上的概率分布。通过从这个 Transformer 解码器采样，他们可以生成极大尺寸的高质量图像。
 
-#### GAN 反演
+### GAN 反演
 
 编辑真实图像的一种方法是将它们投影到潜在空间，操纵潜在变量，然后将它们重新投影回图像空间。这个过程称为 `resynthesis`（重合成）。不幸的是，GAN 只能从潜在变量映射到观测数据，不能反向映射。这导致了 `invert`（反演）GAN 的方法（即找到与观测图像尽可能接近的潜在变量）。这些方法分为两类。第一类学习一个反向映射的网络 (Donahue 等人, 2018b; Luo 等人, 2017a; Perarnau 等人, 2016; Dumoulin 等人, 2017; Guan 等人, 2020)。这被称为 `encoder`（编码器）。第二种方法是从某个潜在变量 `z` 开始，并优化它，直到它尽可能接近地重建图像 (Creswell & Bharath, 2018; Karras 等人, 2020b; Abdal 等人, 2019; Lipton & Tripathi, 2017)。Zhu 等人 (2020a) 结合了这两种方法。
 
 人们对 StyleGAN 反演特别感兴趣，因为它产生出色的结果，并且可以在不同尺度控制图像。不幸的是，Abdal 等人 (2020) 表明，不产生伪影地反演 StyleGAN 是不可能的，并提出了反演到扩展风格空间，Richardson 等人 (2021) 训练了一个能可靠映射到该空间的编码器。即使反演到扩展空间后，编辑域外图像仍可能效果不佳。Roich 等人 (2022) 通过微调 StyleGAN 的生成器使其精确重建图像来解决此问题，并表明结果可以被良好编辑。他们还添加额外项以精确重建附近的点，从而使修改成为局部的。这种技术称为 `pivotal tuning`（关键调优）。GAN 反演技术的综述可参见 Xia 等人 (2022)。
 
-#### 使用 GAN 编辑图像
+### 使用 GAN 编辑图像
 
 iGAN (Zhu 等人, 2016) 允许用户通过在现有图像的部分区域涂鸦或扭曲来进行交互式编辑。该工具随后调整输出图像，使其既真实又符合这些新约束。它通过寻找一个潜在向量来实现这一点，该向量生成的图像与编辑后的图像相似，并遵守任何添加线条的边缘图。通常也会添加一个掩码，以便仅更改接近编辑区域的图像部分。EditGAN (Ling 等人, 2021) 联合建模图像及其语义分割掩码，并允许编辑该掩码。
 
-### 问题
+## 问题
 
-#### 问题 15.1
+### 问题 15.1
 
 当 `q(x) = Pr(x)` 时，方程 15.8 中的损失将是多少？
 
-#### 问题 15.2*
+### 问题 15.2*
 
 写出一个方程，将方程 15.8 中的损失 `L` 与方程 15.9 中的 Jensen-Shannon 距离 `D[JS] [q(x) || Pr(x)]` 联系起来。
 
-#### 问题 15.3
+### 问题 15.3
 
 考虑使用线性规划的原始形式计算土方距离。离散分布 `Pr(x = i)` 和 `q(x = j)` 定义在 `x = 1, 2, 3, 4` 上：
 
@@ -6950,12 +6798,9 @@ iGAN (Zhu 等人, 2016) 允许用户通过在现有图像的部分区域涂鸦�
 
 (15.18)
 
+## 第 15 章 习题
 
-
-
-### 第 15 章 习题
-
-#### 习题 15.4
+### 习题 15.4
 
 计算以下分布之间的 (i) KL 散度，(ii) 反向 KL 散度，(iii) Jensen-Shannon 散度，以及 (iv) Wasserstein 距离：
 
@@ -6965,7 +6810,7 @@ iGAN (Zhu 等人, 2016) 允许用户通过在现有图像的部分区域涂鸦�
 
 范围为 `a ∈ [−3, 3]`。为了得到该特殊情况下 Wasserstein 距离的公式，请考虑必须移动的总“土方”（即概率质量），并将其乘以必须移动的距离的平方。
 
-#### 习题 15.5
+### 习题 15.5
 
 单变量高斯分布之间的 KL 距离和 Wasserstein 距离分别由下式给出：
 
@@ -6981,27 +6826,27 @@ iGAN (Zhu 等人, 2016) 允许用户通过在现有图像的部分区域涂鸦�
 
 对于 `σ[1] = σ[2] = 1` 的情况，将这些距离作为 `μ[1] − μ[2]` 的函数绘制出来。
 
-#### 习题 15.6
+### 习题 15.6
 
 考虑一个维度为 100 的潜在变量 `z`。考虑将该变量的值截断至 (i) `τ = 2.0`，(ii) `τ = 1.0`，(iii) `τ = 0.5`，(iv) `τ = 0.04` 个标准差。在每种情况下，原始概率分布中被忽略的比例是多少？
 
-## 第 16 章
+# 第 16 章
 
 归一化流
 
 第 15 章介绍了生成对抗网络（GAN）。这些是生成模型，它们将潜在变量通过深度网络传递以创建新样本。GAN 的训练基于这样一个原则：生成的样本应与真实数据无法区分。然而，它们并未定义数据样本的分布。因此，评估新样本属于同一数据集的概率并不直观。
 
-在本章中，我们将描述*归一化流*。这些模型通过使用深度网络将简单分布转换为更复杂的分布来学习概率模型。归一化流既可以从该分布中采样，也可以评估新样本的概率。然而，它们需要专门的架构：每一层都必须是*可逆的*。换句话说，它必须能够双向转换数据。
+在本章中，我们将描述归一化流。这些模型通过使用深度网络将简单分布转换为更复杂的分布来学习概率模型。归一化流既可以从该分布中采样，也可以评估新样本的概率。然而，它们需要专门的架构：每一层都必须是可逆的。换句话说，它必须能够双向转换数据。
 
-### 16.1 一维示例
+## 16.1 一维示例
 
-归一化流是概率生成模型：它们将概率分布拟合到训练数据（图 14.2b）。考虑建模一维分布 `Pr(x)`。归一化流从潜在变量 `z` 上一个简单易处理的*基础*分布 `Pr(z)` 开始，并应用函数 `x = f[z, ϕ]`，其中参数 `ϕ` 的选择使得 `Pr(x)` 具有期望的分布（图 16.1）。生成新样本 `x*` 很容易；我们从基础密度中抽取 `z*`，并将其通过该函数，使得 `x* = f[z*, ϕ]`。
+归一化流是概率生成模型：它们将概率分布拟合到训练数据（图 14.2b）。考虑建模一维分布 `Pr(x)`。归一化流从潜在变量 `z` 上一个简单易处理的基础分布 `Pr(z)` 开始，并应用函数 `x = f[z, ϕ]`，其中参数 `ϕ` 的选择使得 `Pr(x)` 具有期望的分布（图 16.1）。生成新样本 `x*` 很容易；我们从基础密度中抽取 `z*`，并将其通过该函数，使得 `x* = f[z*, ϕ]`。
 
 ![Figure 16.1 Transforming probability distributions. a) The base density is a standard normal defined on a latent variable z. b) This variable is transformed by a function x = f[z, ϕ] to a new variable x, which c) has a new distribution. To sample from this model, we draw values z from the base density (green and brown arrows in panel (a) show two examples). We pass these through the function f[z, ϕ] as shown by dotted arrows in panel (b) to generate the values of x, which are indicated as arrows in panel (c).](images/c16-fig-0001.jpg)
 
 图 16.1 概率分布的转换。a) 基础密度是定义在潜在变量 `z` 上的标准正态分布。b) 该变量通过函数 `x = f[z, ϕ]` 转换为新变量 `x`，c) 后者具有新的分布。为了从该模型采样，我们从基础密度中抽取 `z` 值（面板 a 中的绿色和棕色箭头显示了两个示例）。我们将这些值通过函数 `f[z, ϕ]` 传递，如面板 b 中的虚线箭头所示，以生成 `x` 的值，这些值在面板 c 中用箭头表示。
 
-#### 16.1.1 概率测度
+### 16.1.1 概率测度
 
 测量数据点 `x` 的概率更具挑战性。考虑将函数 `f[z, ϕ]` 应用于具有已知密度 `Pr(z)` 的随机变量 `z`。在函数拉伸的区域，概率密度会降低；在函数压缩的区域，概率密度会增加，以使新分布下的面积保持为 1。函数 `f[z, ϕ]` 拉伸或压缩其输入的程度取决于其梯度的大小。如果输入的微小变化导致输出的较大变化，则函数被拉伸。如果输入的微小变化导致输出的较小变化，则函数被压缩（图 16.2）。
 
@@ -7025,9 +6870,9 @@ Notebook 16.1
 
 ***
 
-#### 16.1.2 正向与逆向映射
+### 16.1.2 正向与逆向映射
 
-为了从分布中抽取样本，我们需要正向映射 `x = f[z, ϕ]`，但为了计算似然，我们需要计算逆映射 `z = f⁻¹[x, ϕ]`。因此，我们需要审慎地选择 `f[z, ϕ]`，使其具有*可逆性*。
+为了从分布中抽取样本，我们需要正向映射 `x = f[z, ϕ]`，但为了计算似然，我们需要计算逆映射 `z = f⁻¹[x, ϕ]`。因此，我们需要审慎地选择 `f[z, ϕ]`，使其具有可逆性。
 
 ***
 
@@ -7035,27 +6880,27 @@ Notebook 16.1
 
 ***
 
-正向映射有时称为*生成方向*。基础密度通常选择为标准正态分布。因此，逆映射称为*归一化方向*，因为它将 `x` 上的复杂分布转换为 `z` 上的正态分布（图 16.3）。
+正向映射有时称为生成方向。基础密度通常选择为标准正态分布。因此，逆映射称为归一化方向，因为它将 `x` 上的复杂分布转换为 `z` 上的正态分布（图 16.3）。
 
 ![Figure 16.3 Inverse mapping (normalizing direction). If the function is invertible, then it's possible to transform the model density back to the original base density. The probability of a point x under the model density depends partly on the probability of the equivalent point z under the base density (see equation 16.1).](img/c16-fig-0003.jpg)
 
 
 
+图 16.3 逆映射（归一化方向）。如果函数可逆，则可以将模型密度转换回原始基础密度。模型密度下点 `x` 的概率部分取决于基础密度下等价点 `z` 的概率（见公式 16.1）。
 
+### 16.1.3 学习
 
-图 16.3 逆映射（归一化方向）。如果函数可逆，则可以将模型密度转换回原始基础密度。模型密度下点 `x` 的概率部分取决于基础密度下等价点 `z` 的概率（见公式 16.1）。
+为了学习该分布，我们寻找使训练数据 `Pr(x)` 的似然最大化的参数 `ϕ`，或者等价地最小化负对数似然：
 
-#### 16.1.3 学习
-
-为了学习该分布，我们寻找使训练数据 ![c16-fig-5002.jpg](img/c16-fig-5002.jpg) 的似然最大化的参数 `ϕ`，或者等价地最小化负对数似然：
-
-![c16-fig-5003.jpg](img/c16-fig-5003.jpg)
-
+```
+L[ϕ] = -∑ log Pr(x[i]|ϕ)
+     = -∑ log Pr(z[i]) - ∑ log |∂f[z[i], ϕ]/∂z[i]|
+```
  (16.2)
 
 其中我们在第一行假设数据是独立同分布的，并在第三行使用了公式 16.1 中的似然定义。
 
-### 16.2 一般情况
+## 16.2 一般情况
 
 上一节开发了一个简单的 1D 示例，通过转换更简单的基础密度 `Pr(z)` 来建模概率分布 `Pr(x)`。我们现在将其扩展到多元分布 `Pr(x)` 和 `Pr(z)`，并增加了由深度神经网络定义转换的复杂性。
 
@@ -7063,238 +6908,207 @@ Notebook 16.1
 
 类比公式 16.1，该分布下样本的似然为：
 
-![c16-fig-5004.jpg](img/c16-fig-5004.jpg)
-
+```
+Pr(x|ϕ) = Pr(z) |∂f[z, ϕ]/∂z|⁻¹
+```
  (16.3)
 
-其中 `z = f^−¹[x, ϕ]` 是生成 `x` 的潜在变量 `z`。第一项是 `D × D` 雅可比矩阵 `∂f[z, ϕ]/∂z` 的行列式绝对值的倒数，该矩阵在位置 `(i, j)` 处包含项 `∂f[i][z, ϕ]/∂z[j]`。正如绝对导数衡量函数应用时 1D 函数上某点的面积变化一样，绝对行列式衡量多元函数中某点的体积变化。第二项是潜在变量在基础密度下的概率。
+其中 `z = f⁻¹[x, ϕ]` 是生成 `x` 的潜在变量 `z`。第一项是 `D × D` 雅可比矩阵 `∂f[z, ϕ]/∂z` 的行列式绝对值的倒数，该矩阵在位置 `(i, j)` 处包含项 `∂f[i][z, ϕ]/∂z[j]`。正如绝对导数衡量函数应用时 1D 函数上某点的面积变化一样，绝对行列式衡量多元函数中某点的体积变化。第二项是潜在变量在基础密度下的概率。
 
-***
+> **附录 B.3.8**  
+> 行列式
+>
+> **附录 B.5**  
+> 雅可比矩阵
 
-附录 B.3.8
-
-行列式
-
-***
-
-***
-
-附录 B.5
-
-雅可比矩阵
-
-***
-
-#### 16.2.1 使用深度神经网络的前向映射
+### 16.2.1 使用深度神经网络的前向映射
 
 在实践中，前向映射 `f[z, ϕ]` 通常由神经网络定义，由一系列具有参数 `ϕ[k]` 的层 `f[k][•, ϕ[k]]` 组成，它们按如下方式复合：
 
-![c16-fig-5005.jpg](img/c16-fig-5005.jpg)
-
+```
+f[z, ϕ] = f[K][f[K-1][...f[1][z, ϕ[1]]..., ϕ[K-1]], ϕ[K]]
+```
  (16.4)
 
-逆映射（归一化方向）由每一层的逆 ![c16-fig-5006.jpg](img/c16-fig-5006.jpg) 按相反顺序复合定义：
+逆映射（归一化方向）由每一层的逆 `f⁻¹[k][•, ϕ[k]]` 按相反顺序复合定义：
 
-![c16-fig-5007.jpg](img/c16-fig-5007.jpg)
-
+```
+f⁻¹[x, ϕ] = f⁻¹[1][f⁻¹[2][...f⁻¹[K][x, ϕ[K]]..., ϕ[2]], ϕ[1]]
+```
  (16.5)
 
 基础密度 `Pr(z)` 通常定义为多元标准正态分布（即均值为零、协方差为单位矩阵）。因此，每个后续逆层的作用是逐渐移动或“流动”数据密度，使其趋向于该正态分布（图 16.4）。这也就有了“归一化流”这个名字。
 
-![图 16.4 深度神经网络的前向和逆映射。基础密度（左）通过网络层 f1[•, ϕ1], f2[•, ϕ2], … 逐渐转换以创建模型密度。每一层都是可逆的，我们可以等价地认为各层的逆逐渐转换（或“流动”）模型密度回到基础密度。](images/c16-fig-0004.jpg)
-
-图 16.4 深度神经网络的前向和逆映射。基础密度（左）通过网络层 `f[1][•, ϕ[1]]`、`f[2][•, ϕ[2]]`、……逐渐转换以创建模型密度。每一层都是可逆的，我们可以等价地认为各层的逆逐渐转换（或“流动”）模型密度回到基础密度。
+![图 16.4 深度神经网络的前向和逆映射。基础密度（左）通过网络层 `f[1][•, ϕ[1]]`、`f[2][•, ϕ[2]]`、……逐渐转换以创建模型密度。每一层都是可逆的，我们可以等价地认为各层的逆逐渐转换（或“流动”）模型密度回到基础密度。](images/c16-fig-0004.jpg)
 
 前向映射的雅可比矩阵可以表示为：
 
-![c16-fig-5008.jpg](img/c16-fig-5008.jpg)
-
+```
+∂f[z, ϕ]/∂z = ∂f[K]/∂f[K-1] · ∂f[K-1]/∂f[K-2] · ... · ∂f[1]/∂z
+```
  (16.6)
 
 其中我们重载了符号，使 `f[k]` 成为函数 `f[k][•, ϕ[k]]` 的输出。该雅可比矩阵的绝对行列式可以通过计算各个绝对行列式的乘积来得到：
 
-![c16-fig-5009.jpg](img/c16-fig-5009.jpg)
-
+```
+|∂f[z, ϕ]/∂z| = ∏ |∂f[k]/∂f[k-1]|
+```
  (16.7)
 
 逆映射雅可比矩阵的绝对行列式是通过将同一规则应用于公式 16.5 来求得的。它是前向映射中绝对行列式的倒数。
 
-***
-
-问题 16.3
-
-***
+> **问题 16.3**
 
 我们使用包含 `I` 个训练样本的数据集 `{x[i]}` 通过负对数似然准则训练归一化流：
 
-![c16-fig-5010.jpg](img/c16-fig-5010.jpg)
-
+```
+L[ϕ] = -∑ log Pr(x[i]|ϕ)
+     = -∑ log Pr(z[i]) - ∑ log |∂f[z[i], ϕ]/∂z[i]|
+```
  (16.8)
 
-其中 `z[i] = f^−¹[x[i], ϕ]`，`Pr(z[i])` 在基础分布下测量，而绝对行列式 `|∂f[z[i], ϕ]/∂z[i]|` 由公式 16.7 给出。
+其中 `z[i] = f⁻¹[x[i], ϕ]`，`Pr(z[i])` 在基础分布下测量，而绝对行列式 `|∂f[z[i], ϕ]/∂z[i]|` 由公式 16.7 给出。
 
-#### 16.2.2 网络层的期望特性
+### 16.2.2 网络层的期望特性
 
 归一化流的理论很简单。然而，为了使其具有实用性，我们需要神经网络层 `f[k]` 具备四个性质。
 
-1.  **1.** 总体而言，网络层的集合必须具有足够的*表达能力*，以将多元标准正态分布映射到任意密度。
+1. 总体而言，网络层的集合必须具有足够的**表达能力**，以将多元标准正态分布映射到任意密度。
+2. 网络层必须是**可逆的**；每一层必须从任意输入点到输出点定义唯一的一对一映射（一个**双射**）。如果多个输入映射到同一个输出，逆映射将变得模棱两可。
+3. 必须能够**高效地计算**每一层的**逆**。我们每次评估似然时都需要这样做。这在训练期间会反复发生，因此必须存在逆的闭式解或快速算法。
+4. 对于前向或逆映射，也必须能够**高效地评估**雅可比矩阵的**行列式**。
 
-2.  **2.** 网络层必须是*可逆的*；每一层必须从任意输入点到输出点定义唯一的一对一映射（一个*双射*）。如果多个输入映射到同一个输出，逆映射将变得模棱两可。
+> **附录 B.1**  
+> 双射
 
-3.  **3.** 必须能够*高效地计算*每一层的*逆*。我们每次评估似然时都需要这样做。这在训练期间会反复发生，因此必须存在逆的闭式解或快速算法。
-
-4.  **4.** 对于前向或逆映射，也必须能够*高效地评估*雅可比矩阵的*行列式*。
-
-***
-
-附录 B.1
-
-双射
-
-***
-
-### 16.3 可逆网络层
+## 16.3 可逆网络层
 
 我们现在描述用于这些模型的不同可逆网络层或*流*。我们从线性流和逐元素流开始。这些易于求逆，且可以计算其雅可比矩阵的行列式，但两者都不足以描述基础密度的任意变换。然而，它们构成了耦合流、自回归流和残差流的构建块，后者都更具表达力。
 
-#### 16.3.1 线性流
+### 16.3.1 线性流
 
 线性流的形式为 `f[h] = β + Ωh`。如果矩阵 `Ω` 可逆，则线性变换可逆。对于 `Ω ∈ ℝ^(D×D)`，求逆的计算量为 `𝒪[D³]`。雅可比矩阵的行列式就是 `Ω` 的行列式，也可以在 `𝒪[D³]` 内计算。这意味着随着维度 `D` 的增加，线性流会变得昂贵。
 
-***
-
-附录 A
-
-大 O 符号
-
-***
+> **附录 A**  
+> 大 O 符号
 
 如果矩阵 `Ω` 采取特殊形式，则求逆和行列式计算可以变得更高效，但变换会变得不那么通用。例如，对角矩阵求逆和行列式仅需 `𝒪[D]` 计算量，但 `h` 的元素之间不相互作用。正交矩阵求逆也更高效，且其行列式固定，但它们不允许缩放各个维度。三角矩阵更实用；它们可通过称为回代的过程求逆，计算量为 `𝒪[D²]`，且行列式仅为对角值的乘积。
 
-***
+> **附录 B.4**  
+> 矩阵类型
+>
+> **问题 16.4**
 
-附录 B.4
-
-矩阵类型
-
-***
-
-***
-
-问题 16.4
-
-***
-
-
-
-
-
-#### 16.3.2 逐元素流
+### 16.3.2 逐元素流
 
 由于线性流的表达能力不足，我们必须转向非线性流。其中最简单的是逐元素流，它将带有参数 `ϕ` 的逐点非线性函数 `f[•, ϕ]` 应用于输入的每个元素，使得：
 
-![c16-fig-5012.jpg](img/c16-fig-5012.jpg)
-
+```
+h'[d] = f[h[d], ϕ]
+```
  (16.10)
 
 雅可比矩阵 `∂f[h]/∂h` 是对角矩阵，因为 `f[h]` 的第 `d` 个输入仅影响第 `d` 个输出。其行列式是对角线上各项的乘积，因此：
 
-![c16-fig-5013.jpg](img/c16-fig-5013.jpg)
-
+```
+|∂f[h]/∂h| = ∏ ∂f[h[d], ϕ]/∂h[d]
+```
  (16.11)
 
-函数 `f[•, ϕ]` 可以是固定的可逆非线性函数，如 Leaky ReLU（图 3.13），这种情况下没有参数；也可以是任意参数化的可逆一对一映射。一个简单的例子是具有 `K` 个区域的分段线性函数（图 16.5），它将 `[0, 1]` 映射到 `[0, 1]`，如下所示：
+函数 `f[•, ϕ]` 可以是固定的可逆非线性函数，如 `Leaky ReLU`（图 3.13），这种情况下没有参数；也可以是任意参数化的可逆一对一映射。一个简单的例子是具有 `K` 个区域的分段线性函数（图 16.5），它将 `[0, 1]` 映射到 `[0, 1]`，如下所示：
 
-![c16-fig-5014.jpg](img/c16-fig-5014.jpg)
-
+```
+f[h, ϕ] = ∑_{k=1}^{b-1} ϕ[k]/K + (h - b/K) ϕ[b]/K
+```
  (16.12)
 
 其中参数 `ϕ[1], ϕ[2], …, ϕ[K]` 为正且和为 `K`，`b = ⌊K[h]⌋` 是包含 `h` 的箱子的索引。第一项是所有前面箱子的和，第二项表示 `h` 穿过当前箱子的比例。该函数易于求逆，且其梯度几乎处处可计算。存在许多创建平滑函数的类似方案，通常使用样条，其参数确保函数单调，因此可逆。
 
-![Figure 16.5 piecewise linear mapping. An invertible piecewise linear mapping h′ = f[h, ϕ] can be created by dividing the input domain h ∈ [0, 1] into K equally sized regions (here K = 5). Each region has a slope with parameter, ϕk. a) If these parameters are positive and sum to one, then b) the function will be invertible and map to the output domain h′ ∈ [0, 1].](images/c16-fig-0005.jpg)
-
-图 16.5 分段线性映射。通过将输入域 `h ∈ [0, 1]` 划分为 `K` 个等大小的区域（此处 `K = 5`），可以创建一个可逆的分段线性映射 `h′ = f[h, ϕ]`。每个区域有一个带参数 `ϕ[k]` 的斜率。a) 如果这些参数为正且和为 1，则 b) 该函数将是可逆的，并映射到输出域 `h′ ∈ [0, 1]`。
+![图 16.5 分段线性映射。通过将输入域 `h ∈ [0, 1]` 划分为 `K` 个等大小的区域（此处 `K = 5`），可以创建一个可逆的分段线性映射 `h′ = f[h, ϕ]`。每个区域有一个带参数 `ϕ[k]` 的斜率。a) 如果这些参数为正且和为 1，则 b) 该函数将是可逆的，并映射到输出域 `h′ ∈ [0, 1]`。](images/c16-fig-0005.jpg)
 
 逐元素流是非线性的，但不混合输入维度，因此无法在变量间创建相关性。当与线性流（混合维度）交替使用时，可以建模更复杂的变换。然而在实践中，逐元素流被用作更复杂层（如*耦合流*）的组件。
 
-#### 16.3.3 耦合流
+### 16.3.3 耦合流
 
 *耦合流*将输入 `h` 分成两部分，使得 `h = [h[1], h[2]]`，并按如下方式定义流 `f[h, ϕ]`：
 
-![c16-fig-5020.jpg](img/c16-fig-5020.jpg)
-
+```
+h'[1] = h[1]
+h'[2] = g[h[2], ϕ[h[1]]]
+```
  (16.13)
 
 此处 `g[•, ϕ]` 是逐元素流（或其他可逆层），其参数 `ϕ[h[1]]` 本身是输入 `h[1]` 的非线性函数（图 16.6）。函数 `ϕ[•]` 通常是某种神经网络，不必可逆。原始变量可按如下方式恢复：
 
-![c16-fig-5021.jpg](img/c16-fig-5021.jpg)
-
+```
+h[1] = h'[1]
+h[2] = g⁻¹[h'[2], ϕ[h[1]]]
+```
  (16.14)
 
-![Figure 16.6 Coupling flows. a) The input (orange vector) is divided into h1 and h2. The first part c16-fig-5016.jpg of the output (cyan vector) is a copy of h1. The output c16-fig-5017.jpg is created by applying an invertible transformation g[, ϕ] to h2, where the parameters ϕ are themselves a (not necessarily invertible) function of h1. b) In the inverse mapping, c16-fig-5018.jpg. This allows us to calculate the parameters ϕ[h1] and then apply the inverse c16-fig-5019.jpg to retrieve h2.](images/c16-fig-0006.jpg)
-
-图 16.6 耦合流。a) 输入（橙色向量）被分为 `h[1]` 和 `h[2]`。输出（青色向量）的第一部分 `h'[1] = h[1]` 是 `h[1]` 的副本。输出 `h'[2]` 是通过将可逆变换 `g[, ϕ]` 应用于 `h[2]` 来创建的，其中参数 `ϕ` 本身是 `h[1]` 的（不一定可逆的）函数。b) 在逆映射中，`h[1] = h'[1]`。这使我们能够计算参数 `ϕ[h[1]]`，然后应用逆变换 `g⁻¹[h'[2], ϕ]` 来恢复 `h[2]`。
+![图 16.6 耦合流。a) 输入（橙色向量）被分为 `h[1]` 和 `h[2]`。输出（青色向量）的第一部分 `h'[1] = h[1]` 是 `h[1]` 的副本。输出 `h'[2]` 是通过将可逆变换 `g[, ϕ]` 应用于 `h[2]` 来创建的，其中参数 `ϕ` 本身是 `h[1]` 的（不一定可逆的）函数。b) 在逆映射中，`h[1] = h'[1]`。这使我们能够计算参数 `ϕ[h[1]]`，然后应用逆变换 `g⁻¹[h'[2], ϕ]` 来恢复 `h[2]`。](images/c16-fig-0006.jpg)
 
 如果函数 `g[•, ϕ]` 是逐元素流，雅可比矩阵将是对角矩阵，其左上象限为单位矩阵，右下象限为逐元素变换的导数。其行列式是这些对角值的乘积。
 
-逆变换和雅可比矩阵可以高效计算，但这种方法仅以依赖于前半部分的方式变换后半部分参数。为了实现更通用的变换，使用排列矩阵在层之间随机打乱 `h` 的元素，使每个变量最终都由其他每个变量变换。在实践中，这些排列矩阵难以学习。因此，它们被随机初始化后冻结。对于图像等结构化数据，通道被分成两半 `h[1]` 和 `h[2]`，并使用 1×1 卷积在层之间进行置换。
+逆变换和雅可比矩阵可以高效计算，但这种方法仅以依赖于前半部分的方式变换后半部分参数。为了实现更通用的变换，使用排列矩阵在层之间随机打乱 `h` 的元素，使每个变量最终都由其他每个变量变换。在实践中，这些排列矩阵难以学习。因此，它们被随机初始化后冻结。对于图像等结构化数据，通道被分成两半 `h[1]` 和 `h[2]`，并使用 `1×1` 卷积在层之间进行置换。
 
-#### 16.3.4 自回归流
+### 16.3.4 自回归流
 
 自回归流是耦合流的推广，将每个输入维度视为单独的“块”（图 16.7）。它们根据输入 `h` 的前 `d−1` 个维度计算输出 `h'` 的第 `d` 个维度：
 
-![c16-fig-5025.jpg](img/c16-fig-5025.jpg)
-
+```
+h'[d] = g[h[d], ϕ[h[1:d-1]]]
+```
  (16.15)
 
-![Figure 16.7 Autoregressive flows. The input h (orange column) and output h′ (cyan column) are split into their constituent dimensions (here four dimensions). a) Output c16-fig-5022.jpg is an invertible transformation of input h1. Output c16-fig-5023.jpg is an invertible function of input h2 where the parameters depend on h1. Output c16-fig-5024.jpg is an invertible function of input h3 where the parameters depend on previous inputs h1 and h2, and so on. None of the outputs depend on one another, so they can be computed in parallel. b) The inverse of the autoregressive flow is computed using a similar method as for coupling flows. However, notice that to compute h2 we must already know h1, to compute h3, we must already know h1 and h2, and so on. Consequently, the inverse cannot be computed in parallel.](img/c16-fig-0007.jpg)
+![图 16.7 自回归流。输入 **h**（橙色列）和输出 **h**′（青色列）被分割为其组成维度（此处为四个维度）。a) 输出 `h'[1]` 是输入 `h[1]` 的可逆变换。输出 `h'[2]` 是输入 `h[2]` 的可逆函数，其参数取决于 `h[1]`。输出 `h'[3]` 是输入 `h[3]` 的可逆函数，其参数取决于之前的输入 `h[1]` 和 `h[2]`，以此类推。输出之间互不依赖，因此可以并行计算。b) 自回归流的逆运算采用与耦合流类似的方法计算。但请注意，要计算 `h[2]`，我们必须已知 `h[1]`；要计算 `h[3]`，我们必须已知 `h[1]` 和 `h[2]`，以此类推。因此，逆运算无法并行计算。](images/c16-fig-0007.jpg)
 
+函数 `g[•, •]` 称为*变换器*¹，参数 `ϕ`、`ϕ[h[1]]`、`ϕ[h[1], h[2]]`……称为*条件器*。与耦合流一样，变换器 `g[•, ϕ]` 必须是可逆的，但条件器 `ϕ[•]` 可以采取任何形式，通常是神经网络。如果变换器和条件器具有足够的灵活性，自回归流就是*通用逼近器*，意味着它们可以表示任意概率分布。
 
-
-
-图 16.7 自回归流。输入 **h**（橙色列）和输出 **h**′（青色列）被分割为其组成维度（此处为四个维度）。a) 输出 ![c16-fig-5022.jpg](img/c16-fig-5022.jpg) 是输入 `h[1]` 的可逆变换。输出 ![c16-fig-5023.jpg](img/c16-fig-5023.jpg) 是输入 `h[2]` 的可逆函数，其参数取决于 `h[1]`。输出 ![c16-fig-5024.jpg](img/c16-fig-5024.jpg) 是输入 `h[3]` 的可逆函数，其参数取决于之前的输入 `h[1]` 和 `h[2]`，以此类推。输出之间互不依赖，因此可以并行计算。b) 自回归流的逆运算采用与耦合流类似的方法计算。但请注意，要计算 `h[2]`，我们必须已知 `h[1]`；要计算 `h[3]`，我们必须已知 `h[1]` 和 `h[2]`，以此类推。因此，逆运算无法并行计算。
-
-函数 `g[•, •]` 称为*变换器*¹，参数 `***ϕ***`、`***ϕ***[h[1]]`、`***ϕ***[h[1], h[2]]`……称为*条件器*。与耦合流一样，变换器 `g[•, ***ϕ***]` 必须是可逆的，但条件器 `***ϕ***[•]` 可以采取任何形式，通常是神经网络。如果变换器和条件器具有足够的灵活性，自回归流就是*通用逼近器*，意味着它们可以表示任意概率分布。
-
-可以使用带有适当掩码的网络并行计算输出 **h**′ 的所有条目，使得位置 `d` 处的参数 `***ϕ***` 仅依赖于之前的位置。这被称为*掩码自回归流*。其原理与掩码自注意力机制非常相似（第 12.7.2 节）；将输入与之前输出相关联的连接被剪除。
+可以使用带有适当掩码的网络并行计算输出 **h**′ 的所有条目，使得位置 `d` 处的参数 `ϕ` 仅依赖于之前的位置。这被称为*掩码自回归流*。其原理与掩码自注意力机制非常相似（第 12.7.2 节）；将输入与之前输出相关联的连接被剪除。
 
 逆变换的效率较低。考虑正向映射：
 
-![c16-fig-5026.jpg](img/c16-fig-5026.jpg)
-
+```
+h'[1] = g[h[1], ϕ]
+h'[2] = g[h[2], ϕ[h[1]]]
+...
+```
  (16.16)
 
 这必须采用与耦合流类似的原则按顺序求逆：
 
-![c16-fig-5027.jpg](img/c16-fig-5027.jpg)
-
+```
+h[1] = g⁻¹[h'[1], ϕ]
+h[2] = g⁻¹[h'[2], ϕ[h[1]]]
+...
+```
  (16.17)
 
-由于 `h[d]` 的计算依赖于 `h[1:][d−][1]`（即迄今为止的部分结果），因此无法并行完成。因此，当输入较大时，求逆过程非常耗时。
+由于 `h[d]` 的计算依赖于 `h[1:d-1]`（即迄今为止的部分结果），因此无法并行完成。因此，当输入较大时，求逆过程非常耗时。
 
-***
+> **笔记本 16.2**  
+> 自回归流
 
-笔记本 16.2
-
-自回归流
-
-***
-
-#### 16.3.5 逆自回归流
+### 16.3.5 逆自回归流
 
 掩码自回归流是在归一化（逆）方向上定义的。这是为了高效评估似然并从而学习模型所必需的。然而，采样需要正向方向，在该方向上，每一层的每个变量都必须按顺序计算，这很慢。如果我们将自回归流用于正向（生成）变换，则采样高效，但计算似然（和训练）很慢。这被称为*逆自回归流*。
 
 一种既能快速学习又能快速（但近似）采样的技巧是：构建一个掩码自回归流来学习分布（教师），然后利用它来训练一个逆自回归流（学生），从而可以从中高效采样。这需要一种不同的归一化流公式，它从另一个函数学习，而不是从一组样本中学习（见第 16.5.3 节）。
 
-#### 16.3.6 残差流：iRevNet
+### 16.3.6 残差流：iRevNet
 
-*残差流*的灵感来源于残差网络。它们将输入分为两部分 ![c16-fig-5028.jpg](img/c16-fig-5028.jpg)（与耦合流类似），并定义输出为：
+*残差流*的灵感来源于残差网络。它们将输入分为两部分 `h = [h[1], h[2]]`（与耦合流类似），并定义输出为：
 
-![c16-fig-5029.jpg](img/c16-fig-5029.jpg)
-
+```
+h'[1] = h[1] + g[h[2], ϕ[1]]
+h'[2] = h[2] + g[h'[1], ϕ[2]]
+```
  (16.18)
 
-其中 `f[1][•, ***ϕ***[1]]` 和 `f[2][•, ***ϕ***[2]]` 是两个函数，不一定非要可逆（图 16.8）。通过反转计算顺序可以计算逆运算：
+
+
+其中 `f[1][•, ϕ[1]]` 和 `f[2][•, ϕ[2]]` 是两个函数，不一定非要可逆（图 16.8）。通过反转计算顺序可以计算逆运算：
 
 ![c16-fig-5030.jpg](img/c16-fig-5030.jpg)
 
@@ -7302,15 +7116,15 @@ Notebook 16.1
 
 ![图 16.8 残差流。a) 通过将输入分割为 h1 和 h2 并创建两个残差层来计算可逆函数。在第一层中，处理 h2 并加上 h1。在第二层中，处理结果并加上 h2。b) 在反向机制中，函数按相反顺序计算，加法运算变为减法。](img/c16-fig-0008.jpg)
 
-图 16.8 残差流。a) 通过将输入分割为 **h**[1] 和 **h**[2] 并创建两个残差层来计算可逆函数。在第一层中，**h**[2] 被处理并加上 **h**[1]。在第二层中，处理结果并加上 **h**[2]。b) 在反向机制中，函数按相反顺序计算，加法运算变为减法。
+图 16.8 残差流。a) 通过将输入分割为 `h[1]` 和 `h[2]` 并创建两个残差层来计算可逆函数。在第一层中，`h[2]` 被处理并加上 `h[1]`。在第二层中，处理结果并加上 `h[2]`。b) 在反向机制中，函数按相反顺序计算，加法运算变为减法。
 
 与耦合流一样，分割成块限制了可表示的变换族。因此，在层之间对输入进行排列，以便变量可以以任意方式混合。
 
-这种公式易于求逆，但对于一般函数 `f[1][•, ***ϕ***[1]]` 和 `f[2][•, ***ϕ***[2]]`，没有高效的方法来计算雅可比矩阵。这种公式有时用于训练残差网络时节省内存；因为网络是可逆的，所以在正向传播中存储每层的激活值是不必要的。
+这种公式易于求逆，但对于一般函数 `f[1][•, ϕ[1]]` 和 `f[2][•, ϕ[2]]`，没有高效的方法来计算雅可比矩阵。这种公式有时用于训练残差网络时节省内存；因为网络是可逆的，所以在正向传播中存储每层的激活值是不必要的。
 
 ***
 
-问题 16.10
+### 问题 16.10
 
 ***
 
@@ -7326,9 +7140,7 @@ Notebook 16.1
 
 ***
 
-笔记本 16.3
-
-收缩映射
+### 笔记本 16.3：收缩映射
 
 ***
 
@@ -7342,21 +7154,19 @@ Notebook 16.1
 
  (16.21)
 
-
-
 ##### 正规化流的逆向计算与多尺度流
 
-如果 $f[z]$ 是一个收缩映射。换句话说，它可以用来找到映射到给定值 $y^*$ 的 $z^*$。这可以通过从任意点 $z[0]$ 开始并迭代 $z[k+1] = y^* - f[z[k]]$ 来完成。这在 $z + f[z] = y^*$ 处有一个不动点（图 16.9b）。
+如果 `f[z]` 是一个收缩映射。换句话说，它可以用来找到映射到给定值 `y*` 的 `z*`。这可以通过从任意点 `z[0]` 开始并迭代 `z[k+1] = y* - f[z[k]]` 来完成。这在 `z + f[z] = y*` 处有一个不动点（图 16.9b）。
 
-同样的原理可用于求形式为 $\mathbf{h}' = \mathbf{h} + \mathbf{f}[\mathbf{h}, \boldsymbol{\phi}]$ 的残差网络层的逆，前提是我们确保 $\mathbf{f}[\mathbf{h}, \boldsymbol{\phi}]$ 是一个收缩映射。在实践中，这意味着利普希茨常数必须小于 1。假设激活函数的斜率不大于 1，这等价于确保每个权重矩阵 $\mathbf{\Omega}$ 的最大特征值小于 1。一种粗略的方法是通过裁剪来确保权重 $\mathbf{\Omega}$ 的绝对幅度很小。
-
-***
-
-###### 附录 B.1.1 利普希茨常数
+同样的原理可用于求形式为 `h' = h + f[h, ϕ]` 的残差网络层的逆，前提是我们确保 `f[h, ϕ]` 是一个收缩映射。在实践中，这意味着利普希茨常数必须小于 1。假设激活函数的斜率不大于 1，这等价于确保每个权重矩阵 `Ω` 的最大特征值小于 1。一种粗略的方法是通过裁剪来确保权重 `Ω` 的绝对幅度很小。
 
 ***
 
-###### 附录 B.3.7 特征值
+### 附录 B.1.1 利普希茨常数
+
+***
+
+### 附录 B.3.7 特征值
 
 ***
 
@@ -7366,9 +7176,9 @@ Notebook 16.1
 
  (16.22)
 
-其中第一行使用了恒等式 $\log[|\mathbf{A}|] = \text{trace}[\log[\mathbf{A}]]$，第二行将其展开为幂级数。
+其中第一行使用了恒等式 `log[|A|] = trace[log[A]]`，第二行将其展开为幂级数。
 
-即使截断该级数，计算各项的迹仍然计算量很大。因此，我们使用 `Hutchinson's trace estimator` 进行近似。考虑一个均值为 $\mathbf{0}$、方差为 $\mathbf{I}$ 的正态随机变量 $\boldsymbol{\epsilon}$。矩阵 $\mathbf{A}$ 的迹可以估计为：
+即使截断该级数，计算各项的迹仍然计算量很大。因此，我们使用 `Hutchinson's trace estimator` 进行近似。考虑一个均值为 `0`、方差为 `I` 的正态随机变量 `ε`。矩阵 `A` 的迹可以估计为：
 
 ![c16-fig-5034.jpg](img/c16-fig-5034.jpg)
 
@@ -7376,11 +7186,11 @@ Notebook 16.1
 
 ***
 
-###### 附录 B.3.8 迹
+### 附录 B.3.8 迹
 
 ***
 
-第一行成立是因为 $\mathbb{E}[\boldsymbol{\epsilon}\boldsymbol{\epsilon}^T] = \mathbf{I}$。第二行源于期望算子的性质。第三行来自迹算子的线性性。第四行是由于迹对循环置换的不变性。最后一行成立是因为第四行中的参数现在是一个标量。我们通过从 $Pr(\boldsymbol{\epsilon})$ 中抽取样本 $\boldsymbol{\epsilon}[i]$ 来估计迹：
+第一行成立是因为 `E[εε^T] = I`。第二行源于期望算子的性质。第三行来自迹算子的线性性。第四行是由于迹对循环置换的不变性。最后一行成立是因为第四行中的参数现在是一个标量。我们通过从 `Pr(ε)` 中抽取样本 `ε[i]` 来估计迹：
 
 ![c16-fig-5035.jpg](img/c16-fig-5035.jpg)
 
@@ -7390,13 +7200,13 @@ Notebook 16.1
 
 ### 16.4 多尺度流
 
-在正规化流中，潜在空间 $\mathbf{z}$ 必须与数据空间 $\mathbf{x}$ 大小相同，但我们知道自然数据集通常可以用更少的潜在变量来描述。在某个时刻，我们必须引入所有这些变量，但让它们通过整个网络是低效的。这引出了*多尺度流*的概念（图 16.10）。
+在正规化流中，潜在空间 `z` 必须与数据空间 `x` 大小相同，但我们知道自然数据集通常可以用更少的潜在变量来描述。在某个时刻，我们必须引入所有这些变量，但让它们通过整个网络是低效的。这引出了*多尺度流*的概念（图 16.10）。
 
 ![图 16.10 多尺度流。在正规化流中，潜在空间 z 必须与模型密度大小相同。然而，它可以被划分为几个组件，这些组件可以在不同层逐步引入。这使得密度估计和采样都更快。对于逆过程，黑色箭头反转，每个块的最后一部分跳过剩余处理。例如，c16-fig-5036.jpg 仅作用于前三个块，第四个块变为 z4 并根据基础密度进行评估。](img/c16-fig-0010.jpg)
 
-图 16.10 多尺度流。潜在空间 $\mathbf{z}$ 必须与正规化流中的模型密度大小相同。然而，它可以被划分为几个组件，这些组件可以在不同层逐步引入。这使得密度估计和采样都更快。对于逆过程，黑色箭头反转，每个块的最后一部分跳过剩余处理。例如，![c16-fig-5036.jpg](img/c16-fig-5036.jpg) 仅作用于前三个块，第四个块变为 $\mathbf{z}[4]$ 并根据基础密度进行评估。
+图 16.10 多尺度流。潜在空间 `z` 必须与正规化流中的模型密度大小相同。然而，它可以被划分为几个组件，这些组件可以在不同层逐步引入。这使得密度估计和采样都更快。对于逆过程，黑色箭头反转，每个块的最后一部分跳过剩余处理。例如，`c16-fig-5036.jpg` 仅作用于前三个块，第四个块变为 `z[4]` 并根据基础密度进行评估。
 
-在生成方向上，多尺度流将潜在向量划分为 $\mathbf{z} = [\mathbf{z}[1], \mathbf{z}[2], \dots, \mathbf{z}[N]]$。第一个分区 $\mathbf{z}[1]$ 由一系列维度与 $\mathbf{z}[1]$ 相同的可逆层处理，直到某个时刻 $\mathbf{z}[2]$ 被追加并与第一个分区结合。这一直持续到网络大小与数据 $\mathbf{x}$ 相同。在正规化方向上，网络从 $\mathbf{x}$ 的全维度开始，但当它到达添加 $\mathbf{z}[n]$ 的位置时，这会根据基础分布进行评估。
+在生成方向上，多尺度流将潜在向量划分为 `z = [z[1], z[2], ..., z[N]]`。第一个分区 `z[1]` 由一系列维度与 `z[1]` 相同的可逆层处理，直到某个时刻 `z[2]` 被追加并与第一个分区结合。这一直持续到网络大小与数据 `x` 相同。在正规化方向上，网络从 `x` 的全维度开始，但当它到达添加 `z[n]` 的位置时，这会根据基础分布进行评估。
 
 ### 16.5 应用
 
@@ -7412,17 +7222,13 @@ Notebook 16.1
 
 #### 16.5.2 合成
 
-*生成流*（Generative flows），或 *GLOW*，是一种可以创建高保真图像的正规化流模型（图 16.12），并使用了本章中的许多思想。在正规化方向上最容易理解。GLOW 从一个包含 RGB 图像的 $256 \times 256 \times 3$ 张量开始。它使用耦合层，其中通道被分成两半。第二半在每个空间位置经受不同的仿射变换，仿射变换的参数由在另一半通道上运行的二维卷积神经网络计算。耦合层与 $1 \times 1$ 卷积交替，后者参数化为 LU 分解以混合通道。
+*生成流*（Generative flows），或 *GLOW*，是一种可以创建高保真图像的正规化流模型（图 16.12），并使用了本章中的许多思想。在正规化方向上最容易理解。GLOW 从一个包含 RGB 图像的 `256 × 256 × 3` 张量开始。它使用耦合层，其中通道被分成两半。第二半在每个空间位置经受不同的仿射变换，仿射变换的参数由在另一半通道上运行的二维卷积神经网络计算。耦合层与 `1 × 1` 卷积交替，后者参数化为 LU 分解以混合通道。
 
 ![图 16.12 在 CelebA HQ 数据集 (Karras 等人, 2018) 上训练的 GLOW 样本。样本质量尚可，尽管 GAN 和扩散模型产生更优的结果。改编自 Kingma & Dhariwal (2018)。](img/c16-fig-0012.jpg)
 
 图 16.12 在 CelebA HQ 数据集 (Karras 等人, 2018) 上训练的 GLOW 样本。样本质量尚可，尽管 GAN 和扩散模型产生更优的结果。改编自 Kingma & Dhariwal (2018)。
 
-周期性地，通过将每个 $2 \times 2$ 补丁合并为一个具有四倍通道数的位置，将分辨率减半。GLOW 是一种多尺度流，部分通道会周期性地被移除以成为潜在向量 $\mathbf{z}$ 的一部分。图像是离散的（由于 RGB 值的量化），因此向输入添加噪声以防止训练似然无界增长。这被称为*去量化*。
-
-
-
-
+周期性地，通过将每个 `2 × 2` 补丁合并为一个具有四倍通道数的位置，将分辨率减半。GLOW 是一种多尺度流，部分通道会周期性地被移除以成为潜在向量 `z` 的一部分。图像是离散的（由于 RGB 值的量化），因此向输入添加噪声以防止训练似然无界增长。这被称为*去量化*。
 
 #### 16.5.3 近似其他密度模型
 
@@ -7436,7 +7242,7 @@ Notebook 16.1
 
 ---
 
-**问题 16.11**
+### 问题 16.11
 
 ---
 
@@ -7474,10 +7280,6 @@ Notebook 16.1
 
 应用包括图像生成 (Ho 等人, 2019; Kingma 和 Dhariwal, 2018)、噪声建模 (Abdelhamed 等人, 2019)、视频生成 (Kumar 等人, 2019b)、音频生成 (Esling 等人, 2019; Kim 等人, 2018; Prenger 等人, 2019)、图生成 (Madhawa 等人, 2019)、图像分类 (Kim 等人, 2021; Mackowiak 等人, 2021)、图像隐写 (Lu 等人, 2021)、超分辨率 (Yu 等人, 2020; Wolf 等人, 2021; Liang 等人, 2021)、风格迁移 (An 等人, 2021)、动作风格迁移 (Wen 等人, 2021)、三维形状建模 (Paschalidou 等人, 2021)、压缩 (Zhang 等人, 2021b)、sRGB 到 RAW 图像转换 (Xing 等人, 2021)、去噪 (Liu 等人, 2021b)、异常检测 (Yu 等人, 2021)、图像到图像转换 (Ardizzone 等人, 2020)、在不同分子干预下合成细胞显微镜图像 (Yang 等人, 2021) 以及光传输模拟 (Müller 等人, 2019b)。对于使用图像数据的应用，学习前必须添加噪声，因为输入被量化且因此是离散的（参见 Theis 等人, 2016）。
 
-
-
-
-
 ### 归一化流：应用与架构
 
 #### 应用
@@ -7487,6 +7289,8 @@ Rezende & Mohamed (2015) 利用归一化流在 VAE 中建模后验分布。Abdal
 归一化流在物理学 (Kanwar 等人, 2020; Köhler 等人, 2020; Noé 等人, 2019; Wirnsberger 等人, 2020; Wong 等人, 2020)、自然语言处理 (Tran 等人, 2019; Ziegler & Rush, 2019; Zhou 等人, 2019; He 等人, 2018; Jin 等人, 2019) 以及强化学习 (Schroecker 等人, 2019; Haarnoja 等人, 2018a; Mazoure 等人, 2020; Ward 等人, 2019; Touati 等人, 2020) 中也有着多样化的应用。
 
 #### 线性流
+
+
 
 对角线性流可以表示归一化变换，如 `Batch-Norm` (Dinh 等人, 2016) 和 `ActNorm` (Kingma & Dhariwal, 2018)。Tomczak & Welling (2016) 探索了结合三角矩阵并使用由 Householder 变换参数化的正交变换。Kingma & Dhariwal (2018) 提出了第 16.5.2 节所述的 `LU` 参数化。Hoogeboom 等人 (2019b) 提出改用 `QR` 分解，这不需要预先确定的置换矩阵。卷积是深度学习中广泛使用的线性变换（图 10.4），但其逆和行列式并不容易计算。Kingma & Dhariwal (2018) 使用了 `1×1` 卷积，这实际上是在每个位置单独应用的全线性变换。Zheng 等人 (2017) 引入了 `ConvFlow`，该方法仅限于 `1D` 卷积。Hoogeboom 等人 (2019b) 为建模 `2D` 卷积提供了更通用的解决方案，要么通过堆叠掩码自回归卷积，要么在傅里叶域中操作。
 
@@ -7514,9 +7318,6 @@ Kingma 等人 (2016) 在归一化流中使用了自回归模型。Germain 等人
 
 如果残差网络可被视为常微分方程 (ODE) 的离散化，那么下一逻辑步骤是直接用 ODE 表示变量的变化。神经 ODE 由 Chen 等人 (2018e) 探索，并利用 ODE 前向和反向传播的标准方法。计算似然不再需要雅可比矩阵；这由另一个 ODE 表示，其中对数概率的变化与前向传播导数的迹相关。Grathwohl 等人 (2019) 使用 Hutchinson 估计器估计迹并进一步简化了这一点。Finlay 等人 (2020) 在损失函数中添加正则化项以使训练更容易，Dupont 等人 (2019) 扩展了表示以允许神经 ODE 表示更广泛的微分同胚类。Tzen & Raginsky (2019) 和 Peluchetti & Favaro (2020) 用随机微分方程替换了 ODE。
 
-
-
-
 **普适性：** 普适性是指归一化流以任意精度建模任意概率分布的能力。某些流（如平面流、逐元素流）不具备此属性。当耦合函数为神经单调网络（Huang 等人，2018a）时，自回归流可被证明具有普适性，该网络基于单调多项式（Jaini 等人，2020）或样条函数（Kobyzev 等人，2020）。对于维度 *D*，一系列 *D* 个耦合流可构成一个自回归流。要理解原因，请注意将变量划分为 `h[1]` 和 `h[2]` 两部分意味着在任意给定层中 `h[2]` 仅依赖于先前的变量（图 16.6）。因此，如果我们在每一层将 `h[1]` 的大小增加一，就能重现自回归流，且结果具有普适性。目前尚不清楚耦合流是否能在少于 *D* 层的情况下实现普适性。然而，在实践中（如 GLOW），它们无需这种诱导的自回归结构也能良好工作。
 
 **其他工作：** 归一化流研究的活跃领域包括对*离散流*的探索（Hoogeboom 等人，2019a；Tran 等人，2019）、非欧几里得流形上的归一化流（Gemici 等人，2016；Wang & Wang，2019），以及*等变流*（Köhler 等人，2020；Rezende 等人，2019），后者旨在创建对一族变换保持不变的密度。
@@ -7525,7 +7326,7 @@ Kingma 等人 (2016) 在归一化流中使用了自回归模型。Germain 等人
 
 **习题 16.1** 考虑使用函数 *x* = f[*z*] = *z*² 变换定义在 *z* ∈ [0, 1] 上的均匀基础密度。求变换后分布 *Pr*(*x*) 的表达式。
 
-**习题 16.2**** 考虑变换一个标准正态分布：
+**习题 16.2** 考虑变换一个标准正态分布：
 
 ![c16-fig-5039.jpg](img/c16-fig-5039.jpg)
 
@@ -7539,7 +7340,7 @@ Kingma 等人 (2016) 在归一化流中使用了自回归模型。Germain 等人
 
 求变换后分布 *Pr*(*x*) 的表达式。
 
-**习题 16.3**** 以类似于公式 16.6 和 16.7 的形式，写出逆映射 `z = f^−¹[x, ϕ]` 的雅可比矩阵及其绝对行列式的表达式。
+**习题 16.3** 以类似于公式 16.6 和 16.7 的形式，写出逆映射 `z = f^−¹[x, ϕ]` 的雅可比矩阵及其绝对行列式的表达式。
 
 **习题 16.4** 手动计算以下矩阵的逆和行列式：
 
@@ -7549,7 +7350,7 @@ Kingma 等人 (2016) 在归一化流中使用了自回归模型。Germain 等人
 
 **习题 16.5** 考虑一个均值为 **μ**、协方差为 **Σ** 的随机变量 **z**，经过变换 **x** = **Az** + **b**。证明 **x** 的期望为 **Aμ** + **b**，**x** 的协方差为 **AΣA^T**。
 
-**习题 16.6**** 利用以下关系证明：若 **x** = **f**[**z**] = **Az** + **b** 且 *Pr*(**z**) = Norm**[z]**[**μ**, **Σ**]，则 *Pr*(**x**) = Norm**[x]**[**Aμ** + **b**, **AΣA^T**]：
+**习题 16.6** 利用以下关系证明：若 **x** = **f**[**z**] = **Az** + **b** 且 *Pr*(**z**) = Norm**[z]**[**μ**, **Σ**]，则 *Pr*(**x**) = Norm**[x]**[**Aμ** + **b**, **AΣA^T**]：
 
 ![c16-fig-5042.jpg](img/c16-fig-5042.jpg)
 
@@ -7571,7 +7372,7 @@ Kingma 等人 (2016) 在归一化流中使用了自回归模型。Germain 等人
 
 **习题 16.8** 考虑将公式 16.12 中定义的分段线性函数 f[*h*, **ϕ**] 作用于定义域 *h′* ∈ [0, 1]，逐元素地应用于输入 **h** = [*h*[1], *h*[2], …, *h[D]*]*^T*，使得 **f**[**h**] = [f[*h*[1], **ϕ**], f[*h*[2], **ϕ**], *…*, f[*h[D]*, **ϕ**]]。雅可比矩阵 *∂*f[**h**]*/∂***h** 是什么？雅可比矩阵的行列式是什么？
 
-**习题 16.9**** 考虑基于等间距箱中平方根函数的圆锥组合构建逐元素流：
+**习题 16.9** 考虑基于等间距箱中平方根函数的圆锥组合构建逐元素流：
 
 ![c16-fig-5045.jpg](img/c16-fig-5045.jpg)
 
@@ -7581,7 +7382,7 @@ Kingma 等人 (2016) 在归一化流中使用了自回归模型。Germain 等人
 
 **习题 16.10** 绘制 图 16.8 中残差流前向映射的雅可比矩阵结构（指示哪些元素为零），针对 **f**[1][•, **ϕ**[1]] 和 **f**[2][•, **ϕ**[2]] 分别为 (i) 全连接神经网络，(ii) 逐元素流 的情况。
 
-**习题 16.11**** 写出公式 16.25 中 KL 散度的表达式。为什么如果我们只能在缩放因子 *κ* 下评估概率 *q*(**x**) 也没关系？最小化该损失函数是否要求网络可逆？请解释你的理由。
+**习题 16.11** 写出公式 16.25 中 KL 散度的表达式。为什么如果我们只能在缩放因子 *κ* 下评估概率 *q*(**x**) 也没关系？最小化该损失函数是否要求网络可逆？请解释你的理由。
 
 ## 第 17 章
 
@@ -7639,9 +7440,6 @@ Kingma 等人 (2016) 在归一化流中使用了自回归模型。Germain 等人
 
 ***
 
-
-
-
 ### 17.2 非线性潜变量模型
 
 在非线性潜变量模型中，数据 `x` 和潜变量 `z` 均为连续且多元的。先验 `Pr(z)` 是标准多元正态分布：
@@ -7649,6 +7447,7 @@ Kingma 等人 (2016) 在归一化流中使用了自回归模型。Germain 等人
 ```
 c17-fig-5006.jpg
 ```
+
  (17.5)
 
 ---
@@ -7664,6 +7463,7 @@ c17-fig-5006.jpg
 ```
 c17-fig-5007.jpg
 ```
+
  (17.6)
 
 函数 `f[z, ϕ]` 由具有参数 `ϕ` 的深度网络描述。潜变量 `z` 的维度低于数据 `x`。模型 `f[z, ϕ]` 描述了数据的重要方面，而剩余的未建模方面被归因于噪声 `σ²I`。
@@ -7673,6 +7473,7 @@ c17-fig-5007.jpg
 ```
 c17-fig-5008.jpg
 ```
+
  (17.7)
 
 ---
@@ -7701,6 +7502,8 @@ c17-fig-5008.jpg
 
 ---
 
+
+
 ![Figure 17.3 Generation from nonlinear latent variable model. a) We draw a sample z* from the prior probability Pr(z) over the latent variable. b) A sample x* is then drawn from Pr(x|z*, ϕ). This is a spherical Gaussian with a mean that is a nonlinear function f[•, ϕ] of z* and a fixed variance σ²I. c) If we repeat this process many times, we recover the density Pr(x|ϕ).](images/c17-fig-0003.jpg)
 
 图 17.3 从非线性潜变量模型生成。a) 我们从潜变量的先验概率 `Pr(z)` 中抽取样本 `z*`。b) 然后从 `Pr(x|z*, ϕ)` 中抽取样本 `x*`。这是一个球形高斯分布，其均值是 `z*` 的非线性函数 `f[•, ϕ]`，方差固定为 `σ²I`。c) 如果我们重复此过程多次，即可恢复密度 `Pr(x|ϕ)`。
@@ -7712,6 +7515,7 @@ c17-fig-5008.jpg
 ```
 c17-fig-5010.jpg
 ```
+
  (17.8)
 
 其中：
@@ -7719,6 +7523,7 @@ c17-fig-5010.jpg
 ```
 c17-fig-5011.jpg
 ```
+
  (17.9)
 
 不幸的是，这是难以处理的。该积分没有闭式表达式，也没有简单的方法针对特定的 `x` 值对其进行求值。
@@ -7734,6 +7539,7 @@ c17-fig-5011.jpg
 ```
 c17-fig-5012.jpg
 ```
+
  (17.10)
 
 ---
@@ -7749,6 +7555,7 @@ c17-fig-5012.jpg
 ```
 c17-fig-5013.jpg
 ```
+
  (17.11)
 
 ---
@@ -7762,6 +7569,7 @@ c17-fig-5013.jpg
 ```
 c17-fig-5014.jpg
 ```
+
  (17.12)
 
 这在图 17.4–17.5 中进行了探讨。事实上，稍微更一般的陈述也是成立的：
@@ -7769,6 +7577,7 @@ c17-fig-5014.jpg
 ```
 c17-fig-5015.jpg
 ```
+
  (17.13)
 
 其中 `h[y]` 是 `y` 的函数。这成立是因为 `h[y]` 是具有新分布的另一个随机变量。由于我们从未指定 `Pr(y)`，该关系保持成立。
@@ -7776,10 +7585,6 @@ c17-fig-5015.jpg
 ![Figure 17.4 Jensen's inequality (discrete case). The logarithm (black curve) is a concave function; you can draw a straight line between any two points on the curve, and this line will always lie underneath it. It follows that any convex combination (weighted sum with positive weights that sum to one) of the six points on the log function must lie in the gray region under the curve. Here, we have weighted the points equally (i.e., taken the mean) to yield the cyan point. Since this point lies below the curve, log[𝔼[y]] > 𝔼[log[y]].](images/c17-fig-0004.jpg)
 
 图 17.4 詹森不等式（离散情况）。对数（黑色曲线）是一个凹函数；你可以在曲线上的任意两点之间画一条直线，这条线将始终位于曲线下方。由此可见，对数函数上六个点的任意凸组合（权重为正且和为一的加权求和）必须位于曲线下的灰色区域内。这里，我们对这些点赋予相等的权重（即取平均值）以得到青色点。由于该点位于曲线下方，`log[𝔼[y]] > 𝔼[log[y]]`。
-
-
-
-
 
 ##### 詹森不等式（连续情况）
 
@@ -7791,13 +7596,17 @@ c17-fig-5015.jpg
 
 我们现在利用詹森不等式来推导对数似然的下界。我们首先通过关于潜在变量的任意概率分布 `q(z)` 对对数似然进行乘除：
 
-![c17-fig-5016.jpg](img/c17-fig-5016.jpg)
+```
+c17-fig-5016.jpg
+```
 
  (17.14)
 
 然后我们利用对数的詹森不等式（公式 17.12）来寻找下界：
 
-![c17-fig-5017.jpg](img/c17-fig-5017.jpg)
+```
+c17-fig-5017.jpg
+```
 
  (17.15)
 
@@ -7805,7 +7614,9 @@ c17-fig-5015.jpg
 
 在实践中，分布 `q(z)` 具有参数 `θ`，因此 ELBO 可以写为：
 
-![c17-fig-5018.jpg](img/c17-fig-5018.jpg)
+```
+c17-fig-5018.jpg
+```
 
  (17.16)
 
@@ -7823,13 +7634,16 @@ c17-fig-5015.jpg
 
 当对于固定的 `ϕ` 值，ELBO 与似然函数重合时，ELBO 是*紧致*的。为了找到使界紧致的分布 `q(z|θ)`，我们利用条件概率的定义对 ELBO 中对数项的分子进行分解：
 
-![c17-fig-5019.jpg](img/c17-fig-5019.jpg)
+```
+c17-fig-5019.jpg
+```
 
  (17.17)
 
 ***
 
 **附录 C.1.3**  
+
 **条件概率**
 
 ***
@@ -7839,6 +7653,7 @@ c17-fig-5015.jpg
 ***
 
 **附录 C.5.1**  
+
 **KL 散度**
 
 ***
@@ -7851,15 +7666,13 @@ c17-fig-5015.jpg
 
 #### 17.4.2 ELBO 作为重构损失减去到先验的 KL 距离
 
-
-
-
-
 ##### 公式 17.16 和 17.17
 
 公式 17.16 和 17.17 是表达 ELBO 的两种不同方式。第三种方式是将该下界视为重构误差减去与先验的距离：
 
-![c17-fig-5020.jpg](img/c17-fig-5020.jpg)
+```
+c17-fig-5020.jpg
+```
 
 (17.18)
 
@@ -7877,7 +7690,9 @@ c17-fig-5015.jpg
 
 我们在公式 17.17 中看到，当 `q(z|θ)` 是后验 `Pr(z|x, ϕ)` 时，ELBO 是紧致的。原则上，我们可以使用贝叶斯法则计算后验：
 
-![c17-fig-5021.jpg](img/c17-fig-5021.jpg)
+```
+c17-fig-5021.jpg
+```
 
 (17.19)
 
@@ -7897,6 +7712,8 @@ c17-fig-5015.jpg
 
 由于 `q(z|θ)` 的最优选择是后验 `Pr(z|x)`，而这取决于数据样本 `x`，因此变分近似也应如此，所以我们选择：
 
+
+
 ![c17-fig-5022.jpg](img/c17-fig-5022.jpg)
 
 (17.20)
@@ -7905,7 +7722,7 @@ c17-fig-5015.jpg
 
 ---
 
-### 17.6 变分自编码器
+## 17.6 变分自编码器
 
 最后，我们可以描述 VAE。我们构建一个计算 ELBO 的网络：
 
@@ -7929,9 +7746,9 @@ c17-fig-5015.jpg
 
 ---
 
-##### 附录 C.2
+### 附录 C.2
 
-###### 期望
+#### 期望
 
 第二项是变分分布 `q(z|x, θ) = Norm[z][μ, Σ]` 与先验 `Pr(z) = Norm[z][0, I]` 之间的 KL 散度。两个正态分布之间的 KL 散度可以闭式计算。对于其中一个分布参数为 `μ, Σ`、另一个为标准正态分布的特殊情况，其公式为：
 
@@ -7943,11 +7760,11 @@ c17-fig-5015.jpg
 
 ---
 
-##### 附录 C.5.4
+### 附录 C.5.4
 
-###### 正态分布之间的 KL 散度
+#### 正态分布之间的 KL 散度
 
-#### 17.6.1 VAE 算法
+### 17.6.1 VAE 算法
 
 总结一下，我们的目标是构建一个模型，为数据点 `x` 计算证据下界。然后我们使用优化算法在数据集上最大化这个下界，从而提高对数似然。为了计算 ELBO，我们：
 
@@ -7963,15 +7780,11 @@ c17-fig-5015.jpg
 
 VAE 将 ELBO 作为 `ϕ` 和 `θ` 的函数进行计算。为了最大化这个下界，我们让小批量样本通过网络，并使用 SGD 或 Adam 等优化算法更新这些参数。ELBO 关于参数的梯度像往常一样通过自动微分计算。在此过程中，我们既在彩色曲线之间移动（改变 `θ`），也沿着曲线移动（改变 `ϕ`），如图 17.10 所示。在此过程中，参数 `ϕ` 发生变化，使得非线性潜在变量模型为数据分配更高的似然。
 
-
-
-
-
 ![Figure 17.10 The VAE updates both factors that determine the lower bound at each iteration. Both the parameters ϕ of the decoder and the parameters θ of the encoder are manipulated to increase this lower bound.](img/c17-fig-0010.jpg)
 
 Figure 17.10 VAE 在每次迭代中更新决定下界的两个因素。解码器的参数 `ϕ` 和编码器的参数 `θ` 都会被操控以增加该下界。
 
-### 17.7 重参数化技巧
+## 17.7 重参数化技巧
 
 还有一个复杂因素；网络涉及一个采样步骤，很难通过这个随机组件进行求导。然而，为了更新网络中位于该步骤之前的参数 `θ`，必须能够通过该步骤进行求导。
 
@@ -8001,11 +7814,11 @@ Notebook 17.2
 
 Figure 17.11 重参数化技巧。使用原始架构 (figure 17.9) 时，我们无法轻松地通过采样步骤进行反向传播。重参数化技巧将采样步骤从主流程中移除；我们从标准正态分布中抽样，并将其与预测的均值和协方差相结合，以获得来自变分分布的样本。
 
-### 17.8 应用
+## 17.8 应用
 
 变分自编码器有许多用途，包括去噪、异常检测和压缩。本节回顾了针对图像数据的几种应用。
 
-#### 17.8.1 近似样本概率
+### 17.8.1 近似样本概率
 
 在第 17.3 节中，我们论证了无法使用 VAE 评估样本的概率，VAE 将该概率描述为：
 
@@ -8039,7 +7852,7 @@ Notebook 17.3
 
 通过这种方式，我们可以近似新样本的概率。只要样本足够多，这将比下界提供更好的估计，并可用于通过评估测试数据的对数似然来评估模型质量。或者，它可用作判断新示例是否属于该分布或为异常值的标准。
 
-#### 17.8.2 生成
+### 17.8.2 生成
 
 VAE 构建了一个概率模型，通过从潜在变量的先验 `Pr(z)` 中抽样，将结果传递给解码器 `f[z, ϕ]`，并根据 `Pr(x|f[z, ϕ])` 添加噪声，即可轻松地从该模型中采样。不幸的是，标准 VAE 生成的样本通常质量较低 (figure 17.12a–c)。这部分是因为朴素的球形高斯噪声模型，部分是因为用于先验和变分后验的高斯模型。提高生成质量的一个技巧是从*聚合后验 `q(z|θ) = (1/I)Σ[i]q(z|x[i], θ)`* 而非先验中采样；这是所有样本的平均后验，是一个高斯混合模型，更能代表潜在空间中的真实分布。
 
@@ -8049,14 +7862,11 @@ Figure 17.12 在 CELEBA 上训练的标准 VAE 采样。在每一列中，抽取
 
 现代 VAE 可以生成高质量样本 (figure 17.12d)，但这需要使用分层先验、专用网络架构和正则化技术。扩散模型（第 18 章）可被视为具有分层先验的 VAE。这些模型也能生成非常高质量的样本。
 
-#### 17.8.3 重合成
+### 17.8.3 重合成
 
 VAE 还可用于修改真实数据。数据点 `x` 可以通过以下两种方式投影到潜在空间：(i) 取编码器预测分布的均值，或 (ii) 使用优化过程寻找使后验概率最大化的潜在变量 `z`，贝叶斯规则告诉我们这与 `Pr(x|z)Pr(z)` 成正比。
 
 在 figure 17.13 中，多张标记为“中性”或“微笑”的图像被投影到潜在空间。通过计算这两组在潜在空间中均值的差值，估计出代表该变化的向量。第二个向量被估计用于表示“闭嘴”与“张嘴”。
-
-
-
 
 ![图 17.13 重合成。左侧的原始图像通过编码器投影到潜在空间中，并选择预测高斯分布的均值来表示该图像。网格中左数第二张图像是输入的重建图。其他图像是在代表微笑/中性（水平）和张嘴/闭嘴（垂直）方向上操纵潜在空间后的重建结果。改编自 White (2016)。](img/c17-fig-0013.jpg)
 
@@ -8072,7 +7882,7 @@ VAE 还可用于修改真实数据。数据点 `x` 可以通过以下两种方�
 
 在再次解码之前对输入数据进行编码（并可能修改）的过程称为`重合成`。这也可以用 GAN 和归一化流来完成。然而，在 GAN 中没有编码器，因此必须使用单独的过程来找到与观测数据对应的潜在变量。
 
-#### 17.8.4 解耦
+### 17.8.4 解耦
 
 在上述重合成示例中，代表可解释属性的空间方向必须使用带标签的训练数据来估计。其他工作试图改善潜在空间的特性，使其坐标方向对应现实世界的属性。当每个维度代表一个独立的现实世界因素时，该潜在空间被描述为`解耦`的。例如，在建模人脸图像时，我们可能希望将头部姿态或发色作为独立因素发现。
 
@@ -8096,7 +7906,7 @@ VAE 还可用于修改真实数据。数据点 `x` 可以通过以下两种方�
 
 图 17.14 总相关性 VAE 中的解耦。修改 VAE 模型使得损失函数鼓励最小化潜在变量的总相关性，从而鼓励解耦。当在椅子图像数据集上训练时，几个潜在维度具有清晰的现实世界解释，包括 a) 旋转，b) 整体大小，和 c) 椅腿（旋转椅与普通椅）。在每种情况下，中间列描绘了模型的样本，当我们从左向右移动时，我们在潜在空间中减去或加上一个坐标向量。改编自 Chen et al. (2018d)。
 
-### 17.9 总结
+## 17.9 总结
 
 VAE 是一种有助于学习 `x` 上非线性潜在变量模型的架构。该模型可以通过从潜在变量采样，将结果通过深度网络传递，然后添加独立高斯噪声来生成新样本。
 
@@ -8108,25 +7918,25 @@ VAE 是一种有助于学习 `x` 上非线性潜在变量模型的架构。该�
 
 VAE 最初由 Kingma & Welling (2014) 提出。关于变分自编码器的全面介绍可参见 Kingma et al. (2019)。
 
+
+
 **应用：** VAE 及其变体已应用于图像 (Kingma & Welling, 2014; Gregor et al., 2016; Gulrajani et al., 2016; Akuzawa et al., 2018)、语音 (Hsu et al., 2017b)、文本 (Bowman et al., 2015; Hu et al., 2017; Xu et al., 2020)、分子 (Gómez-Bombarelli et al., 2018; Sultan et al., 2018)、图 (Kipf & Welling, 2016; Simonovsky & Komodakis, 2018)、机器人技术 (Hernández et al., 2018; Inoue et al., 2018; Park et al., 2018)、强化学习 (Heess et al., 2015; Van Hoof et al., 2016)、三维场景 (Eslami et al., 2016, 2018; Rezende Jimenez et al., 2016) 和手写体 (Chung et al., 2015)。
 
 应用包括重合成和插值 (White, 2016; Bowman et al., 2015)、协同过滤 (Liang et al., 2018) 和压缩 (Gregor et al., 2016)。Gómez-Bombarelli et al. (2018) 利用 VAE 构建化学结构的连续表示，随后可针对理想性质进行优化。Ravanbakhsh et al. (2017) 模拟天文观测以校准测量。
 
 **与其他模型的关系：** 自编码器 (Rumelhart et al., 1985; Hinton & Salakhutdinov, 2006) 将数据通过编码器传递到瓶颈层，然后使用解码器重建。瓶颈层类似于 VAE 中的潜在变量，但动机不同。这里的目标不是学习概率分布，而是创建一个捕捉数据本质的低维表示。自编码器也有各种应用，包括去噪 (Vincent et al., 2008) 和异常检测 (Zong et al., 2018)。
 
-
-
 如果编码器和解码器是线性变换，自编码器就是主成分分析（PCA）。因此，非线性自编码器是 PCA 的推广。也存在 PCA 的概率形式。概率 PCA（Tipping & Bishop, 1999）向重构中添加球形高斯噪声以创建概率模型，而因子分析添加对角高斯噪声（见 Rubin & Thayer, 1982）。如果我们使这些概率变体的编码器和解码器非线性，我们就回到了变分自编码器。
 
-#### 架构变体
+### 架构变体
 
 条件 VAE（Sohn 等人，2015）将类别信息`c`传递给编码器和解码器。结果是潜在空间不需要编码类别信息。例如，当 MNIST 数据以数字标签为条件时，潜在变量可能编码数字的方向和宽度，而不是数字类别本身。Sønderby 等人（2016a）引入了阶梯变分自编码器，它使用依赖数据的近似似然项递归地修正生成分布。
 
-#### 修改似然
+### 修改似然
 
 其他工作研究了更复杂的似然模型`Pr(x|z)`。PixelVAE（Gulrajani 等人，2016）在输出变量上使用了自回归模型。Dorta 等人（2018）对解码器输出的协方差和均值进行了建模。Lamb 等人（2016）通过添加额外的正则化项提高了重构质量，这些项鼓励重构在图像分类模型某一层的激活空间中与原始图像相似。该模型鼓励保留语义信息，并被用于生成图 17.13 中的结果。Larsen 等人（2016）对重构使用对抗损失，这也改善了结果。
 
-#### 潜在空间、先验和后验
+### 潜在空间、先验和后验
 
 已经研究了许多不同形式的后验变分近似，包括归一化流（Rezende & Mohamed, 2015; Kingma 等人，2016）、有向图模型（Maaløe 等人，2016）、无向模型（Vahdat 等人，2020）以及用于时间数据的递归模型（Gregor 等人，2016, 2019）。
 
@@ -8134,35 +7944,33 @@ VAE 最初由 Kingma & Welling (2014) 提出。关于变分自编码器的全面
 
 Jiang 等人（2016）对后验使用高斯混合模型，允许聚类。这是一个分层潜在变量模型，它添加了一个离散潜在变量以提高后验的灵活性。其他作者（Salimans 等人，2015; Ranganath 等人，2016; Maaløe 等人，2016; Vahdat & Kautz, 2020）尝试了使用连续变量的分层模型。这些与扩散模型（第 18 章）有密切联系。
 
-#### 与其他模型结合
+### 与其他模型结合
 
 Gulrajani 等人（2016）将 VAE 与自回归模型结合以生成更逼真的图像。Chung 等人（2015）将 VAE 与循环神经网络结合以建模随时间变化的测量值。
 
 如上所述，对抗损失已被用于直接告知似然项。然而，其他模型以不同方式将生成对抗网络（GAN）的思想与 VAE 结合。Makhzani 等人（2015）在潜在空间中使用对抗损失；其思想是判别器将确保聚合后验分布`q(z)`与先验分布`Pr(z)`不可区分。Tolstikhin 等人（2018）将其推广到先验和聚合后验之间更广泛的距离族。Dumoulin 等人（2017）引入了对抗学习推断，它使用对抗损失来区分两对潜在/观测数据点。在一种情况下，潜在变量从潜在后验分布中抽取，在另一种情况下，从先验中抽取。其他 VAE 和 GAN 的混合模型由 Larsen 等人（2016）、Brock 等人（2016）和 Hsu 等人（2017a）提出。
 
-#### 后验坍塌
+### 后验坍塌
 
 训练中的一个潜在问题是*后验坍塌*，即编码器总是预测先验分布。这由 Bowman 等人（2015）识别，可以通过在训练期间逐渐增加鼓励后验与先验之间 KL 距离较小的项来缓解。还提出了其他几种防止后验坍塌的方法（Razavi 等人，2019a; Lucas 等人，2019b,a），这也是使用离散潜在空间（Van Den Oord 等人，2017）的部分动机。
 
-#### 模糊重构
+### 模糊重构
 
 Zhao 等人（2017c）提供了证据表明，模糊重构部分归因于高斯噪声，也归因于变分近似诱导的次优后验分布。也许并非巧合，一些最好的合成结果来自于使用由复杂自回归模型建模的离散潜在空间（Razavi 等人，2019b）或使用分层潜在空间（Vahdat & Kautz, 2020；见图 17.12d）。图 17.12a-c 使用了在 CELEBA 数据库（Liu 等人，2015）上训练的 VAE。图 17.12d 使用了在 CELEBA HQ 数据集（Karras 等人，2018）上训练的分层 VAE。
 
-#### 其他问题
+### 其他问题
 
 Chen 等人（2017）指出，当使用更复杂的似然项时，例如 PixelCNN（Van den Oord 等人，2016c），输出可能完全不再依赖于潜在变量。他们将此称为*信息偏好*问题。这由 Zhao 等人（2017b）在 InfoVAE 中解决，后者添加了一个额外项来最大化潜在分布和观测分布之间的互信息。
 
 VAE 的另一个问题是潜在空间中可能存在不对应任何真实样本的“空洞”。Xu 等人（2020）引入了约束后验 VAE，通过添加正则化项帮助防止潜在空间中的这些空白区域。这允许从真实样本进行更好的插值。
 
-#### 解耦潜在表示
+### 解耦潜在表示
 
 “解耦”潜在表示的方法包括 beta VAE（Higgins 等人，2017）和其他方法（例如 Kim & Mnih, 2018; Kumar 等人，2018）。Chen 等人（2018d）进一步分解了 ELBO，以显示存在一个测量潜在变量间总相关性的项（即聚合后验与其边缘分布乘积之间的距离）。他们利用此来激励总相关性 VAE，后者试图最小化该量。Factor VAE（Kim & Mnih, 2018）使用不同的方法来最小化总相关性。Mathieu 等人（2019）讨论了解耦表示中重要的因素。
 
-#### 重参数化技巧
+### 重参数化技巧
 
 考虑计算某个函数的期望，其中用于计算期望的概率分布依赖于某些参数。重参数化技巧计算该期望关于这些参数的导数。本章将其作为一种微分采样过程以近似期望的方法引入；存在替代方法（见问题 17.5），但重参数化技巧给出的估计器（通常）具有低方差。Rezende 等人（2014）、Kingma 等人（2015）和 Roeder 等人（2017）讨论了这一问题。
-
-
 
 ### 下界与 EM 算法
 
@@ -8222,7 +8030,7 @@ VAE 训练基于优化证据下界（有时也称为 ELBO、变分下界或负�
 
 ## 第 18 章
 
-扩散模型
+### 扩散模型
 
 第 15 章描述了生成对抗模型，它们能生成看似合理的样本，但未在数据上定义概率分布。第 16 章讨论了归一化流。这些模型确实定义了此类概率分布，但必须对网络施加架构约束；每一层必须可逆，且其雅可比矩阵的行列式必须易于计算。第 17 章介绍了变分自编码器，它们也拥有坚实的概率基础，但似然计算难以处理，必须通过下界进行近似。
 
@@ -8236,10 +8044,7 @@ VAE 训练基于优化证据下界（有时也称为 ELBO、变分下界或负�
 
 ![Figure 18.1 Diffusion models. The encoder (forward, or diffusion process) maps the input x through a series of latent variables z1 … zT. This process is prespecified and gradually mixes the data with noise until only noise remains. The decoder (reverse process) is learned and passes the data back through the latent variables, removing noise at each stage. After training, new examples are generated by sampling noise vectors zT and passing them through the decoder.](img/c18-fig-0001.jpg)
 
-**图 18.1** 扩散模型。编码器（前向过程，或扩散过程）将输入 `x` 通过一系列潜变量 `z[1] … z[T]` 进行映射。此过程是预先指定的，逐渐将数据与噪声混合，直到仅剩噪声。解码器（反向过程）是学习得到的，它将数据通过潜变量反向传递，在每个阶段去除噪声。训练完成后，通过采样噪声向量 `z[T]` 并将其传递通过解码器来生成新样本。
-
-
-
+**图 18.1** 扩散模型。编码器（前向过程，或扩散过程）将输入 `x` 通过一系列潜在变量 `z[1] … z[T]` 进行映射。此过程是预先指定的，逐渐将数据与噪声混合，直到仅剩噪声。解码器（反向过程）是学习得到的，它将数据通过潜在变量反向传递，在每个阶段去除噪声。训练完成后，通过采样噪声向量 `z[T]` 并将其传递通过解码器来生成新样本。
 
 在解码器中，一系列网络被训练用于在每一对相邻的潜在变量 `z[t]` 和 `z[t-1]` 之间执行反向映射。损失函数鼓励每个网络反转相应的编码器步骤。结果是噪声从表示中逐渐被移除，直到剩下一个看起来逼真的数据样本。要生成一个新的数据样本 `x`，我们从 `q(z[T])` 中抽取一个样本并将其传递给解码器。
 
@@ -8259,15 +8064,17 @@ VAE 训练基于优化证据下界（有时也称为 ELBO、变分下界或负�
 (18.2)
 ```
 
-![图 18.2 前向过程。a) 我们考虑一维数据 x，包含 T = 100 个潜在变量 z1, …, z100，所有步骤的 β = 0.03。三个 x 值（灰色、青色和橙色）被初始化（顶行）。这些值通过 z1, …, z100 传播。在每一步中，变量通过 c18-fig-5002.jpg 衰减其值并添加均值为零、方差为 β 的噪声来更新（公式 18.1）。因此，这三个示例以噪声方式通过变量传播，并倾向于向零移动。b) 条件概率 Pr(z1|x) 和 Pr(zt|zt−1) 是正态分布，其均值比当前点略微接近零，方差固定为 βt（公式 18.2）。](img/c18-fig-0002.jpg)
 
-图 18.2 前向过程。a) 我们考虑一维数据 `x`，包含 `T` = 100 个潜在变量 `z[1]`、…、`z[100]`，且所有步骤的 `β` = 0.03。三个 `x` 值（灰色、青色和橙色）被初始化（顶行）。这些值通过 `z[1]`、…、`z[100]` 传播。在每一步中，变量通过衰减其值 ![c18-fig-5002.jpg](img/c18-fig-5002.jpg) 并添加均值为零、方差为 `β` 的噪声来更新（公式 18.1）。因此，这三个示例以噪声方式通过变量传播，并倾向于向零移动。b) 条件概率 `Pr(z[1]|x)` 和 `Pr(z[t]|z[t-1])` 是正态分布，其均值比当前点略微接近零，方差固定为 `β[t]`（公式 18.2）。
+
+# 18.2 前向过程
+
+![图 18.2 前向过程。a) 我们考虑一维数据 `x`，包含 `T = 100` 个潜在变量 `z[1]`、…、`z[100]`，所有步骤的 `β = 0.03`。三个 `x` 值（灰色、青色和橙色）被初始化（顶行）。这些值通过 `z[1]`、…、`z[100]` 传播。在每一步中，变量通过 ![c18-fig-5002.jpg](img/c18-fig-5002.jpg) 衰减其值并添加均值为零、方差为 `β` 的噪声来更新（公式 18.1）。因此，这三个示例以噪声方式通过变量传播，并倾向于向零移动。b) 条件概率 `Pr(z[1]|x)` 和 `Pr(z[t]|z[t-1])` 是正态分布，其均值比当前点略微接近零，方差固定为 `β[t]`（公式 18.2）。](img/c18-fig-0002.jpg)
 
 这是一个*马尔可夫链*，因为 `z[t]` 的概率仅取决于紧邻的前一个变量 `z[t-1]` 的值。经过足够多的步骤 `T` 后，原始数据的所有痕迹都被移除，`q(z[T]|x)` = `q(z[T])` 变为标准正态分布。²
 
 ***
 
-问题 18.1
+## 问题 18.1
 
 ***
 
@@ -8277,13 +8084,11 @@ VAE 训练基于优化证据下界（有时也称为 ELBO、变分下界或负�
 (18.3)
 ```
 
-#### 18.2.1 扩散核 `q(z[t]|x)`
+### 18.2.1 扩散核 `q(z[t]|x)`
 
 为了训练解码器以反转此过程，我们对同一示例 `x` 在时间 `t` 使用多个样本 `z[t]`。然而，当 `t` 很大时，使用公式 18.1 顺序生成这些样本非常耗时。幸运的是，`q(z[t]|x)` 存在闭式表达式，称为*扩散核*（图 18.3），它允许我们在给定初始数据点 `x` 的情况下直接抽取样本 `z[t]`，而无需计算中间变量 `z[1]` … `z[t-1]`。
 
-![图 18.3 扩散核。a) 点 x* = 2.0 使用公式 18.1 通过潜在变量传播（显示了五条灰色路径）。扩散核 q(zt|x*) 是给定从 x* 开始时变量 zt 的概率分布。它可以用闭式计算，是一个正态分布，其均值向零移动，方差随 t 增加而增加。热力图显示了每个变量的 q(zt|x*)。青色线显示均值 ±2 个标准差。b) 扩散核 q(zt|x*) 在 t = 20, 40, 80 时显式展示。实际上，扩散核允许我们采样对应于给定 x* 的潜在变量 zt，而无需计算中间变量 z1, …, zt−1。当 t 变得非常大时，扩散核变为标准正态分布。](img/c18-fig-0003.jpg)
-
-图 18.3 扩散核。a) 点 `x*` = 2.0 使用公式 18.1 通过潜在变量传播（显示了五条灰色路径）。扩散核 `q(z[t]|x*)` 是给定从 `x*` 开始时变量 `z[t]` 的概率分布。它可以用闭式计算，是一个正态分布，其均值向零移动，方差随 `t` 增加而增加。热力图显示了每个变量的 `q(z[t]|x*)`。青色线显示均值 ±2 个标准差。b) 扩散核 `q(z[t]|x*)` 在 `t` = 20, 40, 80 时显式展示。实际上，扩散核允许我们采样对应于给定 `x*` 的潜在变量 `z[t]`，而无需计算中间变量 `z[1]`、…、`z[t-1]`。当 `t` 变得非常大时，扩散核变为标准正态分布。
+![图 18.3 扩散核。a) 点 `x*` = 2.0 使用公式 18.1 通过潜在变量传播（显示了五条灰色路径）。扩散核 `q(z[t]|x*)` 是给定从 `x*` 开始时变量 `z[t]` 的概率分布。它可以用闭式计算，是一个正态分布，其均值向零移动，方差随 `t` 增加而增加。热力图显示了每个变量的 `q(z[t]|x*)`。青色线显示均值 ±2 个标准差。b) 扩散核 `q(z[t]|x*)` 在 `t` = 20, 40, 80 时显式展示。实际上，扩散核允许我们采样对应于给定 `x*` 的潜在变量 `z[t]`，而无需计算中间变量 `z[1]`、…、`z[t-1]`。当 `t` 变得非常大时，扩散核变为标准正态分布。](img/c18-fig-0003.jpg)
 
 为了推导 `q(z[t]|x)` 的表达式，考虑前向过程的前两步：
 
@@ -8307,7 +8112,7 @@ VAE 训练基于优化证据下界（有时也称为 ELBO、变分下界或负�
 
 ***
 
-问题 18.2
+## 问题 18.2
 
 ***
 
@@ -8325,13 +8130,13 @@ VAE 训练基于优化证据下界（有时也称为 ELBO、变分下界或负�
 
 ***
 
-问题 18.3
+## 问题 18.3
 
 ***
 
 对于任意起始数据点 `x`，变量 `z[t]` 服从具有已知均值和方差的正态分布。因此，如果我们不关心通过中间变量 `z[1]` … `z[t-1]` 的演变历史，从 `q(z[t]|x)` 生成样本就很容易。
 
-#### 18.2.2 边缘分布 `q(z[t])`
+### 18.2.2 边缘分布 `q(z[t])`
 
 边缘分布 `q(z[t])` 是在给定可能的起始点 `x` 的分布及每个起始点可能的扩散路径的情况下，观察到 `z[t]` 某值的概率（图 18.4）。它可以通过考虑联合分布 `q(x, z[1…t])` 并对除 `z[t]` 以外的所有变量进行边缘化来计算：
 
@@ -8343,17 +8148,11 @@ VAE 训练基于优化证据下界（有时也称为 ELBO、变分下界或负�
 
 ***
 
-附录 C.1.2
-
-边缘化
+## 附录 C.1.2 边缘化
 
 ***
 
-
-
 ![图 18.4 边缘分布。 a) 给定初始密度 `Pr(x)`（顶行），扩散过程随着其穿过潜在变量 `z[t]` 逐渐模糊分布，并将其移向标准正态分布。热力图的每一条后续水平线代表一个边缘分布 `q(z[t])`。 b) 顶部图表显示初始分布 `Pr(x)`。其余两个图表分别显示边缘分布 `q(z[20])` 和 `q(z[60])`。](images/c18-fig-0004.jpg)
-
-图 18.4 边缘分布。 a) 给定初始密度 `Pr(x)`（顶行），扩散过程随着其穿过潜在变量 `z[t]` 逐渐模糊分布，并将其移向标准正态分布。热力图的每一条后续水平线代表一个边缘分布 `q(z[t])`。 b) 顶部图表显示初始分布 `Pr(x)`。其余两个图表分别显示边缘分布 `q(z[20])` 和 `q(z[60])`。
 
 然而，既然我们现在有了一个“跳过”中间变量的扩散核 `q(z[t]|x)` 表达式，我们可以等价地写为：
 
@@ -8365,13 +8164,11 @@ VAE 训练基于优化证据下界（有时也称为 ELBO、变分下界或负�
 
 ***
 
-笔记本 18.1
-
-扩散编码器
+## 笔记本 18.1 扩散编码器
 
 ***
 
-### 18.2.3 条件分布 `q(z[t−1]|z[t])`
+### 18.2.3 条件分布 `q(z[t−1]|z[t])`
 
 我们将条件概率 `q(z[t]|z[t−1])` 定义为混合过程（公式 18.2）。为了反转该过程，我们应用贝叶斯法则：
 
@@ -8381,9 +8178,7 @@ VAE 训练基于优化证据下界（有时也称为 ELBO、变分下界或负�
 
 ***
 
-附录 C.1.4
-
-贝叶斯法则
+## 附录 C.1.4 贝叶斯法则
 
 ***
 
@@ -8391,11 +8186,9 @@ VAE 训练基于优化证据下界（有时也称为 ELBO、变分下界或负�
 
 对于这个简单的 1D 示例，可以数值计算 `q(z[t−1]|z[t])`（图 18.5）。通常情况下，它们的形式很复杂，但在许多情况下，它们可以用正态分布很好地近似。这一点很重要，因为当我们构建解码器时，将使用正态分布来近似反向过程。
 
-![图 18.5 条件分布 q(z[t−1]|z[t])。 a) 边缘密度 q(z[t])，其中高亮显示了三个点 c18-fig-5014.jpg。 b) 概率 c18-fig-5015.jpg（青色曲线）通过贝叶斯法则计算，与 c18-fig-5016.jpg 成正比。通常它不是正态分布（顶部图表），尽管正态分布通常是一个很好的近似（底部两个图表）。第一个似然项 c18-fig-5017.jpg 在 z[t−1] 中是正态分布（公式 18.2），其均值比 c18-fig-5018.jpg 略远离零（棕色曲线）。第二项是边缘密度 q(z[t−1])（灰色曲线）。](images/c18-fig-0005.jpg)
+![图 18.5 条件分布 `q(z[t−1]|z[t])`。 a) 边缘密度 `q(z[t])`，其中高亮显示了三个点 ![c18-fig-5014.jpg](img/c18-fig-5014.jpg)。 b) 概率 ![c18-fig-5015.jpg](img/c18-fig-5015.jpg)（青色曲线）通过贝叶斯法则计算，与 ![c18-fig-5016.jpg](img/c18-fig-5016.jpg) 成正比。通常它不是正态分布（顶部图表），尽管正态分布通常是一个很好的近似（底部两个图表）。第一个似然项 ![c18-fig-5017.jpg](img/c18-fig-5017.jpg) 在 `z[t−1]` 中是正态分布（公式 18.2），其均值比 ![c18-fig-5018.jpg](img/c18-fig-5018.jpg) 略远离零（棕色曲线）。第二项是边缘密度 `q(z[t−1])`（灰色曲线）。](images/c18-fig-0005.jpg)
 
-图 18.5 条件分布 `q(z[t−1]|z[t])`。 a) 边缘密度 `q(z[t])`，其中高亮显示了三个点 ![c18-fig-5014.jpg](img/c18-fig-5014.jpg)。 b) 概率 ![c18-fig-5015.jpg](img/c18-fig-5015.jpg)（青色曲线）通过贝叶斯法则计算，与 ![c18-fig-5016.jpg](img/c18-fig-5016.jpg) 成正比。通常它不是正态分布（顶部图表），尽管正态分布通常是一个很好的近似（底部两个图表）。第一个似然项 ![c18-fig-5017.jpg](img/c18-fig-5017.jpg) 在 `z[t−1]` 中是正态分布（公式 18.2），其均值比 ![c18-fig-5018.jpg](img/c18-fig-5018.jpg) 略远离零（棕色曲线）。第二项是边缘密度 `q(z[t−1])`（灰色曲线）。
-
-### 18.2.4 条件扩散分布 `q(z[t−1]|z[t], x)`
+### 18.2.4 条件扩散分布 `q(z[t−1]|z[t], x)`
 
 还有一个与编码器相关的最终分布需要考虑。我们在上面指出，无法找到条件分布 `q(z[t−1]|z[t])`，因为我们不知道边缘分布 `q(z[t−1])`。然而，如果我们知道起始变量 `x`，那么我们*确实*知道前一时刻的分布 `q(z[t−1]|x)`。这只是扩散核（图 18.3），并且它是正态分布的。
 
@@ -8413,9 +8206,7 @@ VAE 训练基于优化证据下界（有时也称为 ELBO、变分下界或负�
 
 ***
 
-附录 C.3.4
-
-高斯变量变换
+## 附录 C.3.4 高斯变量变换
 
 ***
 
@@ -8427,7 +8218,7 @@ VAE 训练基于优化证据下界（有时也称为 ELBO、变分下界或负�
 
 ***
 
-问题 18.4–18.5
+## 问题 18.4–18.5
 
 ***
 
@@ -8439,17 +8230,15 @@ VAE 训练基于优化证据下界（有时也称为 ELBO、变分下界或负�
 
 ***
 
-问题 18.6
+## 问题 18.6
 
 ***
 
 注意，公式 18.12、18.13 和 18.14 中的比例常数必须相互抵消，因为最终结果已经是一个正确归一化的概率分布。
 
-![图 18.6 条件分布 q(z[t−1]|z[t], x)。 a) x* = −2.1 的扩散核，其中高亮显示了三个点 c18-fig-5019.jpg。 b) 概率 c18-fig-5020.jpg 通过贝叶斯法则计算，与 c18-fig-5021.jpg 成正比。*这*是正态分布的，并且可以闭式计算。第一个似然项 c18-fig-5022.jpg 在 z[t−1] 中是正态分布（公式 18.2），其均值比 c18-fig-5023.jpg 略远离零（棕色曲线）。第二项是扩散核 q(z[t−1]|x*)（灰色曲线）。](images/c18-fig-0006.jpg)
+![图 18.6 条件分布 `q(z[t−1]|z[t], x)`。 a) `x* = −2.1` 的扩散核，其中高亮显示了三个点 ![c18-fig-5019.jpg](img/c18-fig-5019.jpg)。 b) 概率 ![c18-fig-5020.jpg](img/c18-fig-5020.jpg) 通过贝叶斯法则计算，与 ![c18-fig-5021.jpg](img/c18-fig-5021.jpg) 成正比。*这*是正态分布的，并且可以闭式计算。第一个似然项 ![c18-fig-5022.jpg](img/c18-fig-5022.jpg) 在 `z[t−1]` 中是正态分布（公式 18.2），其均值比 ![c18-fig-5023.jpg](img/c18-fig-5023.jpg) 略远离零（棕色曲线）。第二项是扩散核 `q(z[t−1]|x*)`（灰色曲线）。](images/c18-fig-0006.jpg)
 
-图 18.6 条件分布 `q(z[t−1]|z[t], x)`。 a) `x* = −2.1` 的扩散核，其中高亮显示了三个点 ![c18-fig-5019.jpg](img/c18-fig-5019.jpg)。 b) 概率 ![c18-fig-5020.jpg](img/c18-fig-5020.jpg) 通过贝叶斯法则计算，与 ![c18-fig-5021.jpg](img/c18-fig-5021.jpg) 成正比。*这*是正态分布的，并且可以闭式计算。第一个似然项 ![c18-fig-5022.jpg](img/c18-fig-5022.jpg) 在 `z[t−1]` 中是正态分布（公式 18.2），其均值比 ![c18-fig-5023.jpg](img/c18-fig-5023.jpg) 略远离零（棕色曲线）。第二项是扩散核 `q(z[t−1]|x*)`（灰色曲线）。
-
-## 18.3 解码器模型（反向过程）
+# 18.3 解码器模型（反向过程）
 
 当我们学习扩散模型时，我们学习的是*反向过程*。换句话说，我们学习一系列从潜在变量 `z[T]` 回到 `z[T−1]`、从 `z[T−1]` 到 `z[T−2]` 的概率映射，依此类推，直到到达数据 `x`。扩散过程的真实反向分布 `q(z[t−1]|z[t])` 是依赖于数据分布 `Pr(x)` 的复杂多模态分布（图 18.5）。我们将这些近似为正态分布：
 
@@ -8457,13 +8246,11 @@ VAE 训练基于优化证据下界（有时也称为 ELBO、变分下界或负�
 
  (18.16)
 
-
-
 其中 `f[t][z[t], ϕ[t]]` 是一个神经网络，用于计算从 `z[t]` 到前一个潜在变量 `z[t−1]` 的估计映射中正态分布的均值。项 ![c18-fig-5033.jpg](img/c18-fig-5033.jpg) 是预先确定的。如果扩散过程中的超参数 `β[t]` 接近零（且时间步数 `T` 很大），那么这个正态近似就是合理的。
 
 我们使用祖先采样从 `Pr(x)` 生成新样本。我们首先从 `Pr(z[T])` 中采样 `z[T]`。然后从 `Pr(z[T−1]|z[T], ϕ[T])` 中采样 `z[T−1]`，从 `Pr(z[T−2]|z[T−1], ϕ[T−1])` 中采样 `z[T−2]`，以此类推，直到最终从 `Pr(x|z[1], ϕ[1])` 生成 `x`。
 
-### 18.4 训练
+# 18.4 训练
 
 观测变量 `x` 和潜在变量 `{z[t]}` 的联合分布为：
 
@@ -8479,9 +8266,7 @@ VAE 训练基于优化证据下界（有时也称为 ELBO、变分下界或负�
 
 ***
 
-附录 C.1.2
-
-边缘化
+## 附录 C.1.2 边缘化
 
 ***
 
@@ -8493,7 +8278,7 @@ VAE 训练基于优化证据下界（有时也称为 ELBO、变分下界或负�
 
 我们无法直接最大化这个值，因为公式 18.18 中的边缘化是难以处理的。因此，我们利用詹森不等式定义似然的下界，并针对该下界优化参数 `ϕ[1…T]`，这与我们在 VAE 中所做的完全相同（见第 17.3.1 节）。
 
-#### 18.4.1 证据下界 (ELBO)
+### 18.4.1 证据下界 (ELBO)
 
 为了推导下界，我们将对数似然乘以并除以编码器分布 `q(z[1…T]|x)`，并应用詹森不等式（见第 17.3.2 节）：
 
@@ -8509,7 +8294,7 @@ VAE 训练基于优化证据下界（有时也称为 ELBO、变分下界或负�
 
 在 VAE 中，编码器 `q(z|x)` 近似潜在变量的后验分布以使界变紧，解码器最大化该界（图 17.10）。在扩散模型中，由于编码器没有参数，解码器必须完成所有工作。它通过以下两种方式使界变紧：(i) 改变其参数，使静态编码器近似后验 `Pr(z[1…T]|x, ϕ[1…T])`；(ii) 针对该界优化其自身参数（见图 17.6）。
 
-#### 18.4.2 简化 ELBO
+### 18.4.2 简化 ELBO
 
 我们现在将 ELBO 中的对数项操作为我们将要优化的最终形式。我们首先代入公式 18.17 和 18.3 中分子和分母的定义：
 
@@ -8527,9 +8312,7 @@ VAE 训练基于优化证据下界（有时也称为 ELBO、变分下界或负�
 
 ***
 
-附录 C.1.4
-
-贝叶斯规则
+## 附录 C.1.4 贝叶斯规则
 
 ***
 
@@ -8551,25 +8334,25 @@ VAE 训练基于优化证据下界（有时也称为 ELBO、变分下界或负�
 
 ***
 
-问题 18.7
+## 问题 18.7
 
 ***
 
 ***
 
-附录 C.5.1
-
-KL 散度
+## 附录 C.5.1 KL 散度
 
 ***
 
-#### 18.4.3 分析 ELBO
+### 18.4.3 分析 ELBO
 
 ELBO 中的第一个概率项在公式 18.16 中定义：
 
 ![c18-fig-5039.jpg](img/c18-fig-5039.jpg)
 
 (18.26)
+
+
 
 等同于 VAE 中的重构项。如果模型预测与观测数据匹配，ELBO 将会更大。与 VAE 一样，我们将使用蒙特卡洛估计（见公式 17.22-17.23）来近似该量的对数期望，其中我们用来自 `q(z[1]|x)` 的样本来估计期望。
 
@@ -8587,15 +8370,11 @@ ELBO 中的 KL 散度项衡量 `Pr(z[t−1]|z[t], ϕ[t])` 和 `q(z[t−1]|z[t], 
 
 ***
 
-附录 C.5.4
-
-正态分布之间的 KL 散度
+### 附录 C.5.4 正态分布之间的 KL 散度
 
 ***
 
-***
-
-问题 18.8
+### 问题 18.8
 
 ***
 
@@ -8617,17 +8396,11 @@ ELBO 中的 KL 散度项衡量 `Pr(z[t−1]|z[t], ϕ[t])` 和 `q(z[t−1]|z[t], 
 
 ***
 
-笔记本 18.2
-
-1D 扩散模型
+### 笔记本 18.2 1D 扩散模型
 
 ***
 
 ![图 18.7 拟合模型。a) 可以通过从标准正态分布 Pr(zT) 中采样（底行），然后从 c18-fig-5042.jpg 中采样 zT−1，以此类推直到达到 x 来生成单个样本（显示了五条路径）。估计的边缘密度（热力图）是这些样本的聚合，类似于真实的边缘密度（图 18.4）。b) 估计分布 Pr(zt−1|zt)（棕色曲线）是扩散模型真实后验 q(zt−1|zt)（青色曲线）的合理近似，后者来自图 18.5。估计模型和真实模型的边缘分布 Pr(zt) 和 q(zt)（深蓝色和灰色曲线）也很相似。](img/c18-fig-0007.jpg)
-
-
-
-
 
 ##### 图 18.7 拟合模型
 
@@ -8671,7 +8444,7 @@ a) 可以通过从标准正态分布 `Pr(z[T])` 采样（底行），然后从 `
 
 ---
 
-**问题 18.9**
+### 问题 18.9
 
 ---
 
@@ -8679,7 +8452,7 @@ a) 可以通过从标准正态分布 `Pr(z[T])` 采样（底行），然后从 `
 
 ---
 
-**问题 18.10**
+### 问题 18.10
 
 ---
 
@@ -8715,7 +8488,7 @@ a) 可以通过从标准正态分布 `Pr(z[T])` 采样（底行），然后从 `
 
 ---
 
-**问题 18.11**
+### 问题 18.11
 
 ---
 
@@ -8741,13 +8514,13 @@ a) 可以通过从标准正态分布 `Pr(z[T])` 采样（底行），然后从 `
 
 ---
 
-**笔记本 18.3：重参数化模型**
+### 笔记本 18.3：重参数化模型
 
 ---
 
 ---
 
-**算法 18.1：扩散模型训练**
+### 算法 18.1：扩散模型训练
 
 ![c18-fig-5058.jpg](img/c18-fig-5058.jpg)
 
@@ -8757,7 +8530,7 @@ a) 可以通过从标准正态分布 `Pr(z[T])` 采样（底行），然后从 `
 
 ---
 
-**算法 18.2：采样**
+### 算法 18.2：采样
 
 ![c18-fig-5059.jpg](img/c18-fig-5059.jpg)
 
@@ -8767,17 +8540,13 @@ a) 可以通过从标准正态分布 `Pr(z[T])` 采样（底行），然后从 `
 
 #### 18.6.1 在图像上的应用
 
-扩散模型在建模图像数据方面非常成功。在这里，我们需要构建能够接收带噪图像并预测每一步添加的噪声的模型。这种图像到图像映射的明显架构选择是 U-Net（第 11.10 节）。然而，扩散步骤可能非常多，训练和存储多个 U-Net 是低效的。解决方案是训练一个单一的 U-Net，它也将代表时间步的预定向量作为输入（图 18.9）。在实践中，这会被调整大小以匹配 U-Net 每个阶段的通道数，并用于偏移和/或缩放每个空间位置的表示。
+扩散模型在建模图像数据方面非常成功。在这里，我们需要构建能够接收带噪图像并预测每一步添加的噪声的模型。这种图像到图像映射的明显架构选择是 `U-Net`（第 11.10 节）。然而，扩散步骤可能非常多，训练和存储多个 `U-Net` 是低效的。解决方案是训练一个单一的 `U-Net`，它也将代表时间步的预定向量作为输入（图 18.9）。在实践中，这会被调整大小以匹配 `U-Net` 每个阶段的通道数，并用于偏移和/或缩放每个空间位置的表示。
 
 ![图 18.9 扩散模型中用于图像的 U-Net。网络旨在预测添加到图像上的噪声。它由一个降低尺度并增加通道数的编码器和一个增加尺度并减少通道数的解码器组成。编码器表示与解码器中的对应表示拼接。相邻表示之间的连接由残差块组成，以及周期性的全局自注意力，其中每个空间位置与其他每个空间位置交互。通过将正弦时间嵌入（图 12.5）通过一个浅层神经网络并将结果添加到 U-Net 每个阶段每个空间位置的通道中，单个网络可用于所有时间步。](img/c18-fig-0009.jpg)
 
-
-
-
-
 图 18.9 用于图像扩散模型中的 U-Net。该网络旨在预测添加到图像中的噪声。它由一个编码器和一个解码器组成：编码器降低尺度并增加通道数，解码器增加尺度并减少通道数。编码器的表征与解码器中对应的部分进行拼接。相邻表征之间的连接由残差块组成，以及周期性的全局自注意力机制，其中每个空间位置都与其他所有空间位置进行交互。通过将正弦时间嵌入（图 12.5）传递给一个浅层神经网络，并将结果添加到 U-Net 每个阶段每个空间位置的通道中，从而使用单个网络处理所有时间步。
 
-由于当超参数 `β[t]` 接近零时，条件概率 `q(z[t-1]|z[t])` 会变得更接近正态分布，从而与解码器分布 `Pr(z[t-1]|z[t], ϕ[t])` 的形式相匹配，因此需要大量的时间步。然而，这会使采样变慢。我们可能需要运行 `T = 1000` 步 U-Net 模型来生成高质量图像。
+由于当超参数 `β[t]` 接近零时，条件概率 `q(z[t-1]|z[t])` 会变得更接近正态分布，从而与解码器分布 `Pr(z[t-1]|z[t], ϕ[t])` 的形式相匹配，因此需要大量的时间步。然而，这会使采样变慢。我们可能需要运行 `T = 1000` 步 `U-Net` 模型来生成高质量图像。
 
 #### 18.6.2 提高生成速度
 
@@ -8791,9 +8560,7 @@ a) 可以通过从标准正态分布 `Pr(z[T])` 采样（底行），然后从 `
 
 ---
 
-**笔记本 18.4**
-
-扩散模型家族
+### 笔记本 18.4 扩散模型家族
 
 ---
 
@@ -8805,13 +8572,13 @@ a) 可以通过从标准正态分布 `Pr(z[T])` 采样（底行），然后从 `
 
  (18.40)
 
-新项取决于基于潜在变量 `z[t]` 的分类器 `Pr(c|z[t])` 的梯度。这将 U-Net 下采样部分的特征映射到类别 `c`。与 U-Net 一样，它通常在所有时间步之间共享，并以时间作为输入。现在从 `z[t]` 到 `z[t-1]` 的更新使类别 `c` 更有可能。
+新项取决于基于潜在变量 `z[t]` 的分类器 `Pr(c|z[t])` 的梯度。这将 `U-Net` 下采样部分的特征映射到类别 `c`。与 `U-Net` 一样，它通常在所有时间步之间共享，并以时间作为输入。现在从 `z[t]` 到 `z[t-1]` 的更新使类别 `c` 更有可能。
 
-*无分类器引导*避免学习单独的分类器 `Pr(c|z[t])`，而是将类别信息合并到主模型 `g[t][z[t], ϕ[t], c]` 中。实际上，这通常采用将基于 `c` 的嵌入添加到 U-Net 层中的形式，方式类似于时间步的添加方式（见图 18.9）。该模型通过在训练期间随机丢弃类别信息，在条件和无条件目标上联合训练。因此，它可以在测试时生成无条件或有条件的数据样本，或两者的任意加权组合。这带来了一个令人惊讶的优势：如果过度加权条件信息，模型倾向于生成质量非常高但略显刻板的样本。这在一定程度上类似于 GAN 中截断技巧的使用（图 15.10）。
+*无分类器引导*避免学习单独的分类器 `Pr(c|z[t])`，而是将类别信息合并到主模型 `g[t][z[t], ϕ[t], c]` 中。实际上，这通常采用将基于 `c` 的嵌入添加到 `U-Net` 层中的形式，方式类似于时间步的添加方式（见图 18.9）。该模型通过在训练期间随机丢弃类别信息，在条件和无条件目标上联合训练。因此，它可以在测试时生成无条件或有条件的数据样本，或两者的任意加权组合。这带来了一个令人惊讶的优势：如果过度加权条件信息，模型倾向于生成质量非常高但略显刻板的样本。这在一定程度上类似于 GAN 中截断技巧的使用（图 15.10）。
 
 ---
 
-**习题 18.12**
+### 习题 18.12
 
 ---
 
@@ -8819,12 +8586,9 @@ a) 可以通过从标准正态分布 `Pr(z[T])` 采样（底行），然后从 `
 
 与其他生成模型一样，最高质量的结果来自于将各种技巧和扩展应用于基础模型的组合。首先，人们注意到估计反向过程的方差 `![c18-fig-5062.jpg](img/c18-fig-5062.jpg)` 以及均值（即图 18.7 中棕色正态分布的宽度）也有帮助。这在使用较少步数采样时特别能改善结果。其次，可以修改前向过程中的噪声调度，使 `β[t]` 在每一步变化，这也可以改善结果。
 
-第三，为了生成高分辨率图像，会使用一级联的扩散模型。第一个创建低分辨率图像（可能由类别信息引导）。后续的扩散模型生成逐步提高分辨率的图像。它们通过调整低分辨率图像的大小并将其追加到组成 U-Net 的层中，以及任何其他类别信息，来以低分辨率图像为条件（图 18.11）。
+第三，为了生成高分辨率图像，会使用一级联的扩散模型。第一个创建低分辨率图像（可能由类别信息引导）。后续的扩散模型生成逐步提高分辨率的图像。它们通过调整低分辨率图像的大小并将其追加到组成 `U-Net` 的层中，以及任何其他类别信息，来以低分辨率图像为条件（图 18.11）。
 
 ![图 18.11 基于文本提示的级联条件生成。a) 由一系列 U-Net 组成的扩散模型用于生成 64×64 图像。b) 该生成由语言模型计算的句子嵌入条件控制。c) 生成更高分辨率的 256×256 图像，条件为较小图像和文本编码。d) 重复此过程以创建 1024×1024 图像。e) 最终图像序列。改编自 Saharia 等人 (2022b)。](img/c18-fig-0011.jpg)
-
-
-
 
 ### 18.7 总结
 
@@ -8838,32 +8602,31 @@ a) 可以通过从标准正态分布 `Pr(z[T])` 采样（底行），然后从 `
 
 #### 图像应用
 
+
+
 扩散模型的应用包括文本到图像生成（Nichol 等人，2022；Ramesh 等人，2022；Saharia 等人，2022b）、图像到图像任务，如着色、修复、外推和复原（Saharia 等人，2022a）、超分辨率（Saharia 等人，2022c）、图像编辑（Hertz 等人，2022；Meng 等人，2021）、去除对抗扰动（Nie 等人，2022）、语义分割（Baranchuk 等人，2022）和医学成像（Song 等人，2021b；Chung 和 Ye，2022；Chung 等人，2022；Peng 等人，2022；Xie 和 Li，2022；Luo 等人，2022），其中扩散模型有时被用作先验。
 
-#### 不同数据类型
+### 不同数据类型
 
 扩散模型也已应用于视频数据（Ho 等人，2022b；Harvey 等人，2022；Yang 等人，2022；Höppe 等人，2022；Voleti 等人，2022），用于生成、过去和未来帧预测以及插值。它们已被用于 3D 形状生成（Zhou 等人，2021；Luo 和 Hu，2021），最近还引入了一种仅使用 2D 文本到图像扩散模型生成 3D 模型的技术（Poole 等人，2023）。Austin 等人（2021）和 Hoogeboom 等人（2021）研究了用于离散数据的扩散模型。Kong 等人（2021）和 Chen 等人（2021d）将扩散模型应用于音频数据。
 
-#### 去噪的替代方案
+### 去噪的替代方案
 
 本章中的扩散模型将噪声与数据混合，并构建模型逐步对结果进行去噪。然而，使用噪声降低图像质量并非必要。Rissanen 等人（2022）设计了一种逐步模糊图像的方法，Bansal 等人（2022）表明，相同的思路适用于一大类不必是随机的降质操作。这些包括掩码、变形、模糊和像素化。
 
-#### 与其他生成模型的比较
+### 与其他生成模型的比较
 
 扩散模型合成的图像质量高于其他生成模型，且易于训练。它们可被视为分层 `VAE`（Vahdat 和 Kautz，2020；Sønderby 等人，2016b）的一种特殊情况，其中编码器是固定的，且潜在空间与数据大小相同。它们是概率模型，但在其基本形式下，只能计算数据点似然的下界。然而，Kingma 等人（2021）表明，该下界在来自归一化流和自回归模型的测试数据上，优于精确对数似然。扩散模型的似然可以通过转换为常微分方程（Song 等人，2021c）或通过基于扩散准则训练连续归一化流模型（Lipman 等人，2022）来计算。扩散模型的主要缺点是速度较慢，且潜在空间缺乏语义解释。
 
-#### 提高质量
+### 提高质量
 
 已提出许多技术来提高图像质量。这些包括第 18.5 节所述的网络重参数化和后续项的等权重加权（Ho 等人，2020）。Choi 等人（2022）随后研究了损失函数中不同项的加权方式。
 
-Kingma 等人（2021）通过学习去噪权重 `β[t]` 提高了模型的测试对数似然。相反，Nichol 和 Dhariwal（2021）通过在学习均值的基础上，额外学习每个时间步去噪估计的单独方差 `σ²` 来提高性能。Bao 等人（2022）展示了如何在*训练模型后*学习方差。
-
-
-
+Kingma 等人（2021）通过学习去噪权重 `β[t]` 提高了模型的测试对数似然。相反，Nichol 和 Dhariwal（2021）通过在学习均值的基础上，额外学习每个时间步去噪估计的单独方差 `σ²` 来提高性能。Bao 等人（2022）展示了如何在训练模型后学习方差。
 
 Ho 等人 (2022a) 开发了用于生成超高分辨率图像的级联方法（图 18.11）。为防止低分辨率图像中的伪影传播到高分辨率，他们引入了 `噪声条件增强`；在此方法中，通过在每个训练步骤添加噪声来降低低分辨率条件图像的质量。这减少了训练期间对低分辨率图像精确细节的依赖。推理阶段也会执行此操作，通过遍历不同的值来选择最佳噪声水平。
 
-#### 提升速度
+### 提升速度
 
 扩散模型的主要缺点之一是训练和采样耗时较长。`稳定扩散`（Rombach 等人，2022）利用传统自编码器将原始数据投影到更小的潜在空间，然后在该较小空间中运行扩散过程。这具有降低扩散过程训练数据维度的优势，并允许其他数据类型（文本、图等）由扩散模型描述。Vahdat 等人 (2021) 应用了类似的方法。
 
@@ -8875,7 +8638,7 @@ Song 等人 (2021c) 提出将底层随机微分方程转换为 `概率流 ODE`�
 
 Salimans 和 Ho (2022) 将去噪过程的相邻步骤蒸馏为单一步骤以加速合成。Dockhorn 等人 (2022) 在扩散过程中引入了动量。这使轨迹更平滑，从而更适合粗采样。
 
-#### 条件生成
+### 条件生成
 
 Dhariwal 和 Nichol (2021) 引入了分类器引导，其中分类器学习在每一步识别正在合成的物体类别，并利用此信息将去噪更新偏向该类别。这效果很好，但训练单独的分类器成本高昂。`无分类器引导`（Ho 和 Salimans，2022）通过在类似 dropout 的过程中以一定比例丢弃类别信息，同时训练条件和无条件去噪模型。该技术允许控制条件和无条件组件的相对贡献。增加条件组件的权重会导致模型生成更典型、更逼真的样本。
 
@@ -8883,17 +8646,17 @@ Dhariwal 和 Nichol (2021) 引入了分类器引导，其中分类器学习在�
 
 现有的扩散模型还可以通过称为 `控制网络` 的神经网络结构（Zhang 和 Agrawala，2023）进行微调，以基于边缘图、关节位置、分割、深度图等进行条件控制。
 
-#### 文本生成图像
+### 文本生成图像
 
 在扩散模型出现之前，最先进的文本生成图像系统基于 Transformer（例如 Ramesh 等人，2021）。`GLIDE`（Nichol 等人，2022）和 `Dall·E 2`（Ramesh 等人，2022）均基于 `CLIP` 模型（Radford 等人，2021）的嵌入进行条件控制，该模型为文本和图像数据生成联合嵌入。`Imagen`（Saharia 等人，2022b）表明，来自大语言模型的文本嵌入能产生更好的结果（参见 图 18.13）。同一作者引入了一个基准（`DrawBench`），旨在评估模型渲染颜色、物体数量、空间关系及其他特征的能力。Feng 等人 (2022) 开发了一个中文文本生成图像模型。
 
-#### 与其他模型的联系
+### 与其他模型的联系
 
 本章将扩散模型描述为分层变分自编码器，因为这种方法与本书的其他部分联系最为紧密。然而，扩散模型还与随机微分方程（考虑 图 18.5 中的路径）和得分匹配（Song 和 Ermon，2019，2020）有着密切联系。Song 等人 (2021c) 提出了一个基于随机微分方程的框架，涵盖了去噪和得分匹配两种解释。扩散模型也与归一化流（Zhang 和 Chen，2021）有密切联系。Yang 等人 (2022) 概述了扩散模型与其他生成方法之间的关系。
 
-### 习题
+## 习题
 
-#### 习题 18.1
+### 习题 18.1
 
 证明如果 `Var[x[t-1]] = I` 且我们使用更新公式：
 
@@ -8905,7 +8668,7 @@ Dhariwal 和 Nichol (2021) 引入了分类器引导，其中分类器学习在�
 
 则 `Var[x[t]] = I`，即方差保持不变。
 
-#### 习题 18.2
+### 习题 18.2
 
 考虑变量：
 
@@ -8925,7 +8688,7 @@ Dhariwal 和 Nichol (2021) 引入了分类器引导，其中分类器学习在�
 
 因此我们可以等价地计算 `![c18-fig-5066.jpg](img/c18-fig-5066.jpg)`，其中 `ϵ` 也取自标准正态分布。
 
-#### 习题 18.3
+### 习题 18.3
 
 延续公式 18.5 中的过程，证明：
 
@@ -8937,7 +8700,7 @@ Dhariwal 和 Nichol (2021) 引入了分类器引导，其中分类器学习在�
 
 其中 `ϵ'` 是从标准正态分布中抽取的样本。
 
-#### 习题 18.4**
+### 习题 18.4**
 
 证明关系式：
 
@@ -8947,7 +8710,7 @@ Dhariwal 和 Nichol (2021) 引入了分类器引导，其中分类器学习在�
 
  (18.45)
 
-#### 习题 18.5**
+### 习题 18.5**
 
 证明关系式：
 
@@ -8957,15 +8720,15 @@ Dhariwal 和 Nichol (2021) 引入了分类器引导，其中分类器学习在�
 
  (18.46)
 
-#### 习题 18.6**
+### 习题 18.6**
 
 推导公式 18.15。
 
-#### 习题 18.7**
+### 习题 18.7**
 
 从第二行推导公式 18.25 的第三行。
 
-#### 习题 18.8**
+### 习题 18.8**
 
 `D` 维两个正态分布的 KL 散度，其均值分别为 `a` 和 `b`，协方差矩阵分别为 `A` 和 `B`，由下式给出：
 
@@ -8975,13 +8738,9 @@ Dhariwal 和 Nichol (2021) 引入了分类器引导，其中分类器学习在�
 
  (18.47)
 
-
-
-
-
 将公式 18.27 中的定义代入此表达式，并证明唯一依赖于参数 `ϕ` 的项是公式 18.28 中的第一项。
 
-#### 问题 18.9
+### 问题 18.9
 
 若 `c18-fig-5071.jpg`，则证明：
 
@@ -8989,7 +8748,7 @@ Dhariwal 和 Nichol (2021) 引入了分类器引导，其中分类器学习在�
 
  (18.48)
 
-#### 问题 18.10
+### 问题 18.10
 
 若 `c18-fig-5073.jpg`，则证明：
 
@@ -8997,17 +8756,17 @@ Dhariwal 和 Nichol (2021) 引入了分类器引导，其中分类器学习在�
 
  (18.49)
 
-#### 问题 18.11
+### 问题 18.11
 
 证明公式 18.37。
 
-#### 问题 18.12
+### 问题 18.12
 
 无分类器引导允许我们创建给定类别更具刻板印象的“规范”图像。当我们描述 Transformer 解码器、生成对抗网络和 GLOW 算法时，也讨论了减少变化量并产生更具刻板印象输出的方法。这些方法是什么？你认为以这种方式限制生成模型的输出是不可避免的吗？
 
-## 第 19 章
+# 第 19 章
 
-强化学习
+## 强化学习
 
 强化学习（RL）是一种序贯决策框架，其中智能体学习在环境中执行动作，目标是最大化接收到的奖励。例如，RL 算法可能控制电子游戏（环境）中角色（智能体）的移动（动作），旨在最大化分数（奖励）。在机器人技术中，RL 算法可能控制机器人（智能体）在世界（环境）中的移动（动作）以执行任务（获得奖励）。在金融领域，RL 算法可能控制虚拟交易员（智能体）在交易平台（环境）上买卖资产（动作）以最大化利润（奖励）。
 
@@ -9055,26 +8814,25 @@ Dhariwal 和 Nichol (2021) 引入了分类器引导，其中分类器学习在�
 
 
 
+![图 19.3 马尔可夫决策过程。a) 智能体（企鹅）可以在每个状态下执行一组动作中的一个。该动作同时影响移动到后继状态的概率和获得奖励的概率。b) 此处，四个动作分别对应向上、向右、向下和向左移动。c) 对于任意状态（此处为状态 6），动作会改变移动到下一状态的概率。企鹅以 50% 的概率按预期方向移动，但冰面湿滑，因此它可能以相等的概率滑向其他相邻位置之一。因此，在面板 (a) 中，采取的动作（灰色箭头）并不总是与轨迹（橙色线）一致。此处动作不影响奖励，所以 `Pr(r[t+1]|s[t], a[t]) = Pr(r[t+1]|s[t])`。来自 MDP 的轨迹 `τ` 由一系列交替的状态 `s[t]`、动作 `a[t]` 和奖励 `r[t+1]` 组成：`s[1], a[1], r[2], s[2], a[2], r[3], s[3], a[3], r[4] …`。注意，此处企鹅在*离开*有鱼的状态时获得奖励（即，只要经过有鱼的格子就会获得奖励，无论企鹅是否有意到达那里）。](images/c19-fig-0003.jpg)
 
-![图 19.3 马尔可夫决策过程。a) 智能体（企鹅）可以在每个状态下执行一组动作中的一个。该动作同时影响移动到后继状态的概率和获得奖励的概率。b) 此处，四个动作分别对应向上、向右、向下和向左移动。c) 对于任意状态（此处为状态 6），动作会改变移动到下一状态的概率。企鹅以 50% 的概率按预期方向移动，但冰面湿滑，因此它可能以相等的概率滑向其他相邻位置之一。因此，在面板 (a) 中，采取的动作（灰色箭头）并不总是与轨迹（橙色线）一致。此处动作不影响奖励，所以 `Pr(r[t+1]|s[t], a[t]) = Pr(r[t+1]|s[t])`。来自 MDP 的轨迹 `τ` 由一系列交替的状态 `s[t]`、动作 `a[t]` 和奖励 `r[t+1]` 组成：`s[1], a[1], r[2], s[2], a[2], r[3], s[3], a[3], r[4] …`。注意，此处企鹅在*离开*有鱼的状态时获得奖励（即，只要经过有鱼的格子就会获得奖励，无论企鹅是否有意到达那里）。](images/c19-fig-0003.jpg)
+图 19.3 马尔可夫决策过程。a) 智能体（企鹅）可以在每个状态下执行一组动作中的一个。该动作同时影响移动到后继状态的概率和获得奖励的概率。b) 此处，四个动作分别对应向上、向右、向下和向左移动。c) 对于任意状态（此处为状态 6），动作会改变移动到下一状态的概率。企鹅以 50% 的概率按预期方向移动，但冰面湿滑，因此它可能以相等的概率滑向其他相邻位置之一。因此，在面板 (a) 中，采取的动作（灰色箭头）并不总是与轨迹（橙色线）一致。此处动作不影响奖励，所以 `Pr(r[t+1]|s[t], a[t]) = Pr(r[t+1]|s[t])`。来自 MDP 的轨迹 `τ` 由一系列交替的状态 `s[t]`、动作 `a[t]` 和奖励 `r[t+1]` 组成：`s[1], a[1], r[2], s[2], a[2], r[3], s[3], a[3], r[4] …`。注意，此处企鹅在*离开*有鱼的状态时获得奖励（即，只要经过有鱼的格子就会获得奖励，无论企鹅是否有意到达那里）。
 
-图 19.3 马尔可夫决策过程。a) 智能体（企鹅）可以在每个状态下执行一组动作中的一个。该动作同时影响移动到后继状态的概率和获得奖励的概率。b) 此处，四个动作分别对应向上、向右、向下和向左移动。c) 对于任意状态（此处为状态 6），动作会改变移动到下一状态的概率。企鹅以 50% 的概率按预期方向移动，但冰面湿滑，因此它可能以相等的概率滑向其他相邻位置之一。因此，在面板 (a) 中，采取的动作（灰色箭头）并不总是与轨迹（橙色线）一致。此处动作不影响奖励，所以 `Pr(r[t+1]|s[t], a[t]) = Pr(r[t+1]|s[t])`。来自 MDP 的轨迹 `τ` 由一系列交替的状态 `s[t]`、动作 `a[t]` 和奖励 `r[t+1]` 组成：`s[1], a[1], r[2], s[2], a[2], r[3], s[3], a[3], r[4] …`。注意，此处企鹅在*离开*有鱼的状态时获得奖励（即，只要经过有鱼的格子就会获得奖励，无论企鹅是否有意到达那里）。
-
-### 19.1.4 部分可观测马尔可夫决策过程
+### 19.1.4 部分可观测马尔可夫决策过程
 
 在*部分可观测马尔可夫决策过程*（*POMDP*）中，状态不直接可见（图 19.4）。取而代之的是，智能体接收到一个从 `Pr(o[t]|s[t])` 中抽取的观测值 `o[t]`。因此，POMDP 生成一个由状态、观测、动作和奖励组成的序列：`s[1], o[1], a[1], r[2], s[2], o[2], a[2], r[3], o[3], a[3], s[3], r[4], …`。通常情况下，每个观测值与某些状态的兼容性比与其他状态的更高，但不足以唯一确定状态。
 
-![图 19.4 部分可观测马尔可夫决策过程 (POMDP)。在 POMDP 中，智能体无法访问完整状态。此处，企鹅位于状态三，只能看到虚线框内的区域。这与它在状态九时看到的情况无法区分。在第一种情况下，向右移动会导致掉入冰洞（获得 -2 奖励），而在后一种情况下，则会到达鱼的位置（获得 +3 奖励）。](img/c19-fig-0004.jpg)
+![图 19.4 部分可观测马尔可夫决策过程 (POMDP)。在 POMDP 中，智能体无法访问完整状态。此处，企鹅位于状态三，只能看到虚线框内的区域。这与它在状态九时看到的情况无法区分。在第一种情况下，向右移动会导致掉入冰洞（获得 -2 奖励），而在后一种情况下，则会到达鱼的位置（获得 +3 奖励）。](img/c19-fig-0004.jpg)
 
-图 19.4 部分可观测马尔可夫决策过程 (POMDP)。在 POMDP 中，智能体无法访问完整状态。此处，企鹅位于状态三，只能看到虚线框内的区域。这与它在状态九时看到的情况无法区分。在第一种情况下，向右移动会导致掉入冰洞（获得 -2 奖励），而在后一种情况下，则会到达鱼的位置（获得 +3 奖励）。
+图 19.4 部分可观测马尔可夫决策过程 (POMDP)。在 POMDP 中，智能体无法访问完整状态。此处，企鹅位于状态三，只能看到虚线框内的区域。这与它在状态九时看到的情况无法区分。在第一种情况下，向右移动会导致掉入冰洞（获得 -2 奖励），而在后一种情况下，则会到达鱼的位置（获得 +3 奖励）。
 
-### 19.1.5 策略
+### 19.1.5 策略
 
 决定智能体在每个状态下采取何种动作的规则称为*策略*（图 19.5）。策略可以是随机的（为每个状态定义动作上的分布），也可以是确定性的（智能体在给定状态下总是采取相同的动作）。随机策略 `π[a|s]` 返回状态 `s` 下每个可能动作 `a` 的概率分布，并从中采样出一个新动作。确定性策略 `π[a|s]` 对状态 `s` 选定的动作 `a` 返回 1，否则返回 0。*平稳*策略仅依赖于当前状态。*非平稳*策略则同时依赖于时间步。
 
-![图 19.5 策略。a) 确定性策略在每个状态下总是选择相同的动作（由箭头指示）。有些策略比其他策略更好。该策略并非最优，但仍大体上将企鹅从左上角引导至右下角奖励所在的位置。b) 该策略更加随机。c) 随机策略在每个状态下拥有动作的概率分布（概率由箭头大小表示）。其优势在于智能体能更彻底地探索状态，且在部分可观测马尔可夫决策过程中可能是实现最优性能所必需的。](img/c19-fig-0005.jpg)
+![图 19.5 策略。a) 确定性策略在每个状态下总是选择相同的动作（由箭头指示）。有些策略比其他策略更好。该策略并非最优，但仍大体上将企鹅从左上角引导至右下角奖励所在的位置。b) 该策略更加随机。c) 随机策略在每个状态下拥有动作的概率分布（概率由箭头大小表示）。其优势在于智能体能更彻底地探索状态，且在部分可观测马尔可夫决策过程中可能是实现最优性能所必需的。](img/c19-fig-0005.jpg)
 
-图 19.5 策略。a) 确定性策略在每个状态下总是选择相同的动作（由箭头指示）。有些策略比其他策略更好。该策略并非最优，但仍大体上将企鹅从左上角引导至右下角奖励所在的位置。b) 该策略更加随机。c) 随机策略在每个状态下拥有动作的概率分布（概率由箭头大小表示）。其优势在于智能体能更彻底地探索状态，且在部分可观测马尔可夫决策过程中可能是实现最优性能所必需的。
+图 19.5 策略。a) 确定性策略在每个状态下总是选择相同的动作（由箭头指示）。有些策略比其他策略更好。该策略并非最优，但仍大体上将企鹅从左上角引导至右下角奖励所在的位置。b) 该策略更加随机。c) 随机策略在每个状态下拥有动作的概率分布（概率由箭头大小表示）。其优势在于智能体能更彻底地探索状态，且在部分可观测马尔可夫决策过程中可能是实现最优性能所必需的。
 
 环境与智能体形成一个循环（图 19.6）。智能体接收来自上一时间步的状态 `s[t]` 和奖励 `r[t]`。基于此，它可以在需要时修改策略 `π[a[t]|s[t]]` 并选择下一个动作 `a[t]`。随后，环境根据 `Pr(s[t+1]|s[t], a[t])` 分配下一个状态，并根据 `Pr(r[t+1]|s[t], a[t])` 分配奖励。
 
@@ -9086,21 +8844,19 @@ Dhariwal 和 Nichol (2021) 引入了分类器引导，其中分类器学习在�
 
 ***
 
-![图 19.6 强化学习循环。智能体根据策略 `π[a[t]|s[t]]`，基于状态 `s[t]` 在时间 `t` 采取动作 `a[t]`。这触发了新状态 `s[t+1]` 的生成（通过状态转移函数）和奖励 `r[t+1]` 的生成（通过奖励函数）。两者都被传回智能体，智能体随后选择新的动作。](images/c19-fig-0006.jpg)
+![图 19.6 强化学习循环。智能体根据策略 `π[a[t]|s[t]]`，基于状态 `s[t]` 在时间 `t` 采取动作 `a[t]`。这触发了新状态 `s[t+1]` 的生成（通过状态转移函数）和奖励 `r[t+1]` 的生成（通过奖励函数）。两者都被传回智能体，智能体随后选择新的动作。](images/c19-fig-0006.jpg)
 
-图 19.6 强化学习循环。智能体根据策略 `π[a[t]|s[t]]`，基于状态 `s[t]` 在时间 `t` 采取动作 `a[t]`。这触发了新状态 `s[t+1]` 的生成（通过状态转移函数）和奖励 `r[t+1]` 的生成（通过奖励函数）。两者都被传回智能体，智能体随后选择新的动作。
+图 19.6 强化学习循环。智能体根据策略 `π[a[t]|s[t]]`，基于状态 `s[t]` 在时间 `t` 采取动作 `a[t]`。这触发了新状态 `s[t+1]` 的生成（通过状态转移函数）和奖励 `r[t+1]` 的生成（通过奖励函数）。两者都被传回智能体，智能体随后选择新的动作。
 
-## 19.2 期望回报
+## 19.2 期望回报
 
 上一节介绍了马尔可夫决策过程以及智能体根据策略执行动作的概念。我们希望选择一个能最大化期望回报的策略。在本节中，我们将使这一想法在数学上更加精确。为此，我们为每个状态 `s[t]` 和状态-动作对 `{s[t], a[t]}` 分配一个*价值*。
 
-### 19.2.1 状态价值与动作价值
+### 19.2.1 状态价值与动作价值
 
 回报 `G[t]` 取决于状态 `s[t]` 和策略 `π[a|s]`。从该状态出发，智能体将经历一系列状态，采取动作并获得奖励。由于通常情况下策略 `π[a[t]|s[t]]`、状态转移 `Pr(s[t+1]|s[t], a[t])` 和发放的奖励 `Pr(r[t+1]|s[t], a[t])` 都是随机的，因此每次智能体从同一地点出发时，这一序列都会有所不同。
 
-
-
-##### 状态值与动作值
+#### 状态值与动作值
 
 我们可以通过考虑在给定策略 `π` 下的期望回报 `v[s[t]|π]` 来描述一个状态有多“好”。这是从该状态开始的序列平均会收到的回报，称为*状态值*或*状态价值函数*（图 19.7a）：
 
@@ -9190,12 +8946,10 @@ Dhariwal 和 Nichol (2021) 引入了分类器引导，其中分类器学习在�
 
 *表格型 RL 算法*（即不依赖函数近似的算法）分为*基于模型*和*无模型*方法。*基于模型方法*显式地使用 MDP 结构，并从转移矩阵 `Pr(s[t+1]|s[t], a[t])` 和奖励结构 `r[s, a]` 中找到最佳策略。如果这些是已知的，这是一个简单的优化问题，可以用*动态规划*来解决。如果未知，则必须首先从观察到的 MDP 轨迹中估计它们。⁴
 
-
-
-
 相反，`model-free`（无模型）方法不使用 MDP 模型，并分为两类：
 
 1.  `Value estimation`（价值估计）方法估计最优状态-动作价值函数，然后根据每个状态中价值最大的动作来确定策略。
+
 2.  `Policy estimation`（策略估计）方法直接使用梯度下降技术估计最优策略，无需经过估计模型或价值的中间步骤。
 
 在每个系列中，`Monte Carlo`（蒙特卡洛）方法针对给定策略模拟穿过 MDP 的多条轨迹，以收集可用于改进该策略的信息。有时在更新策略前模拟多条轨迹是不可行或不切实际的。`Temporal difference (TD)`（时序差分）方法在智能体遍历 MDP `while`（时）更新策略。
@@ -9213,18 +8967,22 @@ Dhariwal 和 Nichol (2021) 引入了分类器引导，其中分类器学习在�
 ```
 v[s[t]] = Σ Pr(s[t]+1 | s[t], a[t]) (r[t] + γ v[s[t]+1])
 ```
+
  (19.11)
 
-其中 `s[t]+1` 是后继状态，`Pr(s[t]+1 | s[t], a[t])` 是状态转移概率。每次更新都利用状态价值的贝尔曼方程（方程 19.9）使 `v[s[t]]` 与后继状态 `s[t]+1` 的价值保持一致。这被称为 `bootstrapping`（自举法/引导法）。
+
+
+其中`s[t]+1`是后继状态，`Pr(s[t]+1 | s[t], a[t])`是状态转移概率。每次更新都利用状态价值的贝尔曼方程（方程 19.9）使`v[s[t]]`与后继状态`s[t]+1`的价值保持一致。这被称为`bootstrapping`（自举法/引导法）。
 
 **策略改进：** 为了更新策略，我们贪婪地选择使每个状态价值最大化的动作：
 
 ```
 π[a|s] = argmax_a Σ Pr(s' | s, a) (r + γ v[s'])
 ```
+
  (19.12)
 
-根据 `policy improvement theorem`（策略改进定理），这保证能改进策略。这两个步骤迭代进行，直到策略收敛（图 19.10）。
+根据`policy improvement theorem`（策略改进定理），这保证能改进策略。这两个步骤迭代进行，直到策略收敛（图 19.10）。
 
 ***
 
@@ -9236,7 +8994,7 @@ Problems 19.2-19.3
 
 图 19.10 动态规划。a) 状态价值初始化为零，策略（箭头）随机选择。b) 状态价值更新以与其邻居保持一致（方程 19.11，展示两次迭代后的结果）。策略更新以使智能体移动到价值最高的状态（方程 19.12）。c) 经过几次迭代后，算法收敛到最优策略，其中企鹅试图避开洞并到达鱼的位置。
 
-这种方法有许多变体。在 `policy iteration`（策略迭代）中，策略评估步骤迭代至收敛，然后再进行策略改进。价值可以在每次遍历中就地更新或同步更新。在 `value iteration`（价值迭代）中，策略评估过程在策略改进前仅遍历价值一次。`Asynchronous`（异步）动态规划算法不必在每一步系统地遍历所有价值，而是可以按任意顺序就地更新状态的一个子集。
+这种方法有许多变体。在`policy iteration`（策略迭代）中，策略评估步骤迭代至收敛，然后再进行策略改进。价值可以在每次遍历中就地更新或同步更新。在`value iteration`（价值迭代）中，策略评估过程在策略改进前仅遍历价值一次。`Asynchronous`（异步）动态规划算法不必在每一步系统地遍历所有价值，而是可以按任意顺序就地更新状态的一个子集。
 
 ***
 
@@ -9250,26 +9008,25 @@ Notebook 19.2
 
 与动态规划算法不同，蒙特卡洛方法不假设已知 MDP 的转移概率和奖励结构。相反，它们通过反复从 MDP 中采样轨迹并观察奖励来获得经验。它们在基于该经验计算动作价值和基于动作价值更新策略之间交替进行。
 
-为了估计动作价值 `q[s, a]`，运行一系列 `episodes`（回合/情节）。每个回合从给定的状态和动作开始，此后遵循当前策略，产生一系列动作、状态和回报（图 19.11a）。在当前策略下，给定状态-动作对的动作价值被估计为每次观察到该对后所跟随的经验回报的平均值（图 19.11b）。然后通过在每个状态选择价值最大的动作来更新策略（图 19.11c）：
+为了估计动作价值`q[s, a]`，运行一系列`episodes`（回合/情节）。每个回合从给定的状态和动作开始，此后遵循当前策略，产生一系列动作、状态和回报（图 19.11a）。在当前策略下，给定状态-动作对的动作价值被估计为每次观察到该对后所跟随的经验回报的平均值（图 19.11b）。然后通过在每个状态选择价值最大的动作来更新策略（图 19.11c）：
 
 ```
 π[a|s] = argmax_a q[s, a]
 ```
+
  (19.13)
 
 ![Figure 19.11 Monte Carlo methods. a) The policy (arrows) is initialized randomly. The MDP is repeatedly simulated, and the trajectories of these episodes are stored (orange and brown paths represent two trajectories). b) The action values are empirically estimated based on the observed returns averaged over these trajectories. In this case, the action values were all initially zero and have been updated where an action was observed. c) The policy can then be updated according to the action which received the best (or least bad) reward.](img/c19-fig-0011.jpg)
 
 图 19.11 蒙特卡洛方法。a) 策略（箭头）随机初始化。MDP 被反复模拟，这些回合的轨迹被存储（橙色和棕色路径代表两条轨迹）。b) 动作价值基于这些轨迹上观察到的平均回报进行经验估计。在这种情况下，动作价值最初全为零，并在观察到动作的地方进行了更新。c) 然后可以根据获得最佳（或最不坏）奖励的动作来更新策略。
 
-这是一种 `on-policy`（同策略）方法；当前最优策略用于引导智能体穿越环境。该策略基于每个状态观察到的动作价值，但当然，无法估计未被使用的动作的价值，也没有任何机制鼓励算法探索这些动作。一种解决方案是使用 `exploring starts`（探索性起始）。在这里，所有可能的状态-动作对都被用来启动回合，因此每种组合至少被观察一次。然而，如果状态数量巨大或起始点无法控制，这并不切实际。另一种方法是使用 `epsilon greedy`（ε-贪婪）策略，即以概率 `ϵ` 采取随机动作，并将剩余概率分配给最优动作。`ϵ` 的选择在利用和探索之间进行权衡。在这里，同策略方法将寻找这个 ε-贪婪家族中的最佳策略，这通常 `not`（不）是整体最优策略。
+这是一种`on-policy`（同策略）方法；当前最优策略用于引导智能体穿越环境。该策略基于每个状态观察到的动作价值，但当然，无法估计未被使用的动作的价值，也没有任何机制鼓励算法探索这些动作。一种解决方案是使用`exploring starts`（探索性起始）。在这里，所有可能的状态-动作对都被用来启动回合，因此每种组合至少被观察一次。然而，如果状态数量巨大或起始点无法控制，这并不切实际。另一种方法是使用`epsilon greedy`（ε-贪婪）策略，即以概率`ϵ`采取随机动作，并将剩余概率分配给最优动作。`ϵ`的选择在利用和探索之间进行权衡。在这里，同策略方法将寻找这个 ε-贪婪家族中的最佳策略，这通常`not`（不）是整体最优策略。
 
 ***
 
 Problem 19.4
 
 ***
-
-
 
 反之，在*离线策略*方法中，最优策略`π`（*目标策略*）是基于由不同的*行为策略`π`′*生成的回合来学习的。通常，目标策略是确定性的，而行为策略是随机的（例如，ε-贪婪策略）。因此，行为策略可以探索环境，但学到的目标策略仍然保持高效。一些离线策略方法显式地使用重要性采样（第 17.8.1 节），利用来自`π`′的样本来估计策略`π`下的动作价值。另一些方法，如 Q 学习（下一节描述），则基于贪婪动作来估计价值，即使这不一定是实际选择的动作。
 
@@ -9353,16 +9110,13 @@ Problem 19.5
 
 图 19.14 深度 Q 网络架构。输入`st`由 ATARI 游戏的四帧相邻画面组成。每帧调整大小为 84×84 并转为灰度图。这些帧作为四个通道，经由步长为 4 的 8×8 卷积、步长为 2 的 4×4 卷积，再经两个全连接层处理。最终输出预测该状态下 18 个动作各自的动作价值`q[st, at]`。
 
-
-
-
 ##### 深度 Q 网络架构
 
-图 19.14 展示了深度 Q 网络架构。输入 `s[t]` 由 ATARI 游戏的四帧相邻画面组成。每帧被调整为 84×84 并转换为灰度图。这些帧作为四个通道表示，并由步幅为 4 的 8×8 卷积处理，随后是步幅为 2 的 4×4 卷积，最后是两个全连接层。最终输出预测该状态下 18 个动作中每个动作的动作值 `q[s[t], a[t]]`。
+图 19.14 展示了深度 Q 网络架构。输入`s[t]`由 ATARI 游戏的四帧相邻画面组成。每帧被调整为 84×84 并转换为灰度图。这些帧作为四个通道表示，并由步幅为 4 的 8×8 卷积处理，随后是步幅为 2 的 4×4 卷积，最后是两个全连接层。最终输出预测该状态下 18 个动作中每个动作的动作值`q[s[t], a[t]]`。
 
-对标准训练过程进行了若干修改。首先，奖励（由游戏得分驱动）被裁剪为：负变化为 −1，正变化为 +1。这补偿了不同游戏之间得分的巨大差异，并允许使用相同的学习率。其次，系统利用了*经验回放*。系统不基于当前步骤的元组 `<s[t], a[t], r[t+1], s[t+1]>` 或最后 `I` 个元组的批次来更新网络，而是将所有最近的元组存储在缓冲区中。每一步从该缓冲区随机采样以生成一个批次。这种方法多次重用数据样本，并减少了因相邻帧相似性而导致的批次中样本间的相关性。
+对标准训练过程进行了若干修改。首先，奖励（由游戏得分驱动）被裁剪为：负变化为 −1，正变化为 +1。这补偿了不同游戏之间得分的巨大差异，并允许使用相同的学习率。其次，系统利用了*经验回放*。系统不基于当前步骤的元组`<s[t], a[t], r[t+1], s[t+1]>`或最后`I`个元组的批次来更新网络，而是将所有最近的元组存储在缓冲区中。每一步从该缓冲区随机采样以生成一个批次。这种方法多次重用数据样本，并减少了因相邻帧相似性而导致的批次中样本间的相关性。
 
-最后，通过将目标参数固定为值 `ϕ^−` 并仅定期更新它们，解决了拟合 Q 网络的收敛问题。这给出了如下更新：
+最后，通过将目标参数固定为值`ϕ^−`并仅定期更新它们，解决了拟合 Q 网络的收敛问题。这给出了如下更新：
 
 ```
 (19.18)
@@ -9370,7 +9124,7 @@ Problem 19.5
 
 现在网络不再追逐移动的目标，且不易发生震荡。
 
-利用这些及其他启发式方法，并采用 `ϵ`-贪婪策略，深度 Q 网络在 49 款游戏组成的集合上达到了与专业游戏测试员相当的水平（每款游戏单独训练）。值得注意的是，训练过程数据密集。学习每款游戏大约需要 38 个完整天数的经验。在某些游戏中，算法超越了人类表现。而在像“蒙特祖马的复仇”这样的其他游戏中，它几乎没有取得任何进展。该游戏具有稀疏奖励和多个外观截然不同的屏幕。
+利用这些及其他启发式方法，并采用`ϵ`-贪婪策略，深度 Q 网络在 49 款游戏组成的集合上达到了与专业游戏测试员相当的水平（每款游戏单独训练）。值得注意的是，训练过程数据密集。学习每款游戏大约需要 38 个完整天数的经验。在某些游戏中，算法超越了人类表现。而在像“蒙特祖马的复仇”这样的其他游戏中，它几乎没有取得任何进展。该游戏具有稀疏奖励和多个外观截然不同的屏幕。
 
 #### 19.4.2 双重 Q 学习与双重深度 Q 网络
 
@@ -9380,21 +9134,19 @@ Q 学习的一个潜在缺陷在于更新中的动作最大化操作：
 (19.19)
 ```
 
-会导致估计的状态值 `q[s[t], a[t]]` 产生系统性偏差。考虑两个提供相同平均奖励的动作，但一个是随机的，另一个是确定性的。随机奖励大约有一半的时间会超过平均值，并被最大化操作选中，导致相应的动作值 `q[s[t], a[t]]` 被高估。对于网络输出 `q[s[t], a[t], ϕ]` 的随机不准确性或 q 函数的随机初始化，也可以提出类似的论证。
+会导致估计的状态值`q[s[t], a[t]]`产生系统性偏差。考虑两个提供相同平均奖励的动作，但一个是随机的，另一个是确定性的。随机奖励大约有一半的时间会超过平均值，并被最大化操作选中，导致相应的动作值`q[s[t], a[t]]`被高估。对于网络输出`q[s[t], a[t], ϕ]`的随机不准确性或 q 函数的随机初始化，也可以提出类似的论证。
 
-根本问题是同一个网络既选择目标（通过最大化操作）又更新值。双重 Q 学习通过同时训练两个模型 `q1[s[t], a[t], π1]` 和 `q2[s[t], a[t], π2]` 来解决这个问题：
+根本问题是同一个网络既选择目标（通过最大化操作）又更新值。双重 Q 学习通过同时训练两个模型`q1[s[t], a[t], π1]`和`q2[s[t], a[t], π2]`来解决这个问题：
 
 ```
 (19.20)
 ```
 
-现在目标的选择与目标本身解耦了，这有助于防止这些偏差。在实践中，新元组 `<s, a, r, s'>` 被随机分配用于更新其中一个模型。这被称为*双重 Q 学习*。*双重深度 Q 网络*或*双重 DQN* 使用深度网络 `q[s[t], a[t], ϕ1]` 和 `q[s[t], a[t], ϕ2]` 来估计动作值，更新变为：
+现在目标的选择与目标本身解耦了，这有助于防止这些偏差。在实践中，新元组`<s, a, r, s'>`被随机分配用于更新其中一个模型。这被称为*双重 Q 学习*。*双重深度 Q 网络*或*双重 DQN*使用深度网络`q[s[t], a[t], ϕ1]`和`q[s[t], a[t], ϕ2]`来估计动作值，更新变为：
 
-```
-(19.21)
-```
 
-### 19.5 策略梯度方法
+
+# 19.5 策略梯度方法
 
 Q 学习先估计动作值，然后利用这些值更新策略。相反，*基于策略的方法*直接学习一个随机策略 `π[a[t]|s[t], θ]`。这是一个具有可训练参数 `θ` 的函数，它将状态 `s[t]` 映射为动作 `a[t]` 上的分布 `Pr(a[t]|s[t])`，我们可以从中采样。在 MDP 中，总存在一个最优确定性策略。然而，有三个理由使用随机策略：
 
@@ -9402,7 +9154,7 @@ Q 学习先估计动作值，然后利用这些值更新策略。相反，*基�
 2. 随着我们修改随机策略，损失函数平滑变化。这意味着即使奖励是离散的，我们也可以使用梯度下降方法。这类似于在（离散）分类问题中使用最大似然估计。随着模型参数变化使真实类别的可能性变大，损失函数平滑变化。
 3. MDP 假设通常是不正确的；我们通常不具备状态的完整知识。例如，考虑一个在环境中导航的智能体，它只能观察附近的位置（例如，图 19.4）。如果两个位置看起来相同，但附近的奖励结构不同，随机策略允许采取不同动作的可能性，直到消除这种歧义。
 
-#### 19.5.1 梯度更新的推导
+## 19.5.1 梯度更新的推导
 
 考虑穿过 MDP 的一条轨迹 `τ = [s[1], a[1], s[2], a[2], …, s[T], a[T]]`。该轨迹的概率 `Pr(τ|θ)` 同时取决于状态演化函数 `Pr(s[t+1]|s[t], a[t])` 和当前的随机策略 `π[a[t]|s[t], θ]`：
 
@@ -9437,9 +9189,6 @@ Q 学习先估计动作值，然后利用这些值更新策略。相反，*基�
 ![图 19.15 策略梯度。同一策略的五个回合（亮度越高表示奖励越高）。轨迹 1、2 和 3 产生持续的高奖励，但相似的轨迹在该策略下已频繁出现，因此无需改变。相反，轨迹 4 获得低奖励，因此应修改策略以避免产生类似轨迹。轨迹 5 获得高奖励*且*罕见。根据公式 19.25，这将导致策略发生最大的变化。](img/c19-fig-0015.jpg)
 
 图 19.15 策略梯度。同一策略的五个回合（亮度越高表示奖励越高）。轨迹 1、2 和 3 产生持续的高奖励，但相似的轨迹在该策略下已频繁出现，因此无需改变。相反，轨迹 4 获得低奖励，因此应修改策略以避免产生类似轨迹。轨迹 5 获得高奖励*且*罕见。根据公式 19.25，这将导致策略发生最大的变化。
-
-
-
 
 我们可以使用*似然比恒等式*简化此表达式：
 
@@ -9479,7 +9228,7 @@ Q 学习先估计动作值，然后利用这些值更新策略。相反，*基�
 
  (19.31)
 
-#### 19.5.2 REINFORCE 算法
+## 19.5.2 REINFORCE 算法
 
 *REINFORCE* 是一种早期的策略梯度算法，它利用了这一结果并结合了折扣因子。它是一种蒙特卡洛方法，基于当前策略 `π[a|s, θ]` 生成回合 `τ[i] = [s[i][1], a[i][1], r[i][2], s[i][2], a[i][2], r[i][3], …, r[iT]]`。对于离散动作，该策略可由神经网络 `π[s|θ]` 确定，该网络接收当前状态 `s` 并为每个可能的动作返回一个输出。这些输出通过 softmax 函数生成动作分布，并在每个时间步进行采样。
 
@@ -9497,7 +9246,7 @@ Q 学习先估计动作值，然后利用这些值更新策略。相反，*基�
 
 其中 `c19-fig-5035.jpg` 是给定当前状态 `s[t]` 和参数 `θ` 时神经网络输出动作 `a[t]` 的概率，`α` 是学习率。额外项 `γ^t` 确保相对于序列开始对奖励进行折扣，因为我们最大化整个序列回报的对数概率（公式 19.23）。
 
-#### 19.5.3 基线
+## 19.5.3 基线
 
 策略梯度方法的缺点是表现出高方差；可能需要许多回合才能获得稳定的导数更新。减少这种方差的一种方法是从基线 `b` 中减去轨迹回报 `r[τ]`：
 
@@ -9557,7 +9306,7 @@ Problem 19.8
 
 减去此基线可以消除当所有轨迹的回报 `r[τ[i]]` 都大于典型值时可能出现的方差，但这仅仅是因为它们碰巧通过了无论采取何种动作回报都高于平均水平的状态。
 
-#### 19.5.4 状态相关基线
+## 19.5.4 状态相关基线
 
 一个更好的选择是使用依赖于当前状态 `s[it]` 的基线 `b[s[it]]`。
 
@@ -9573,7 +9322,7 @@ Problem 19.8
 
  (19.39)
 
-### 19.6 Actor-Critic 方法
+# 19.6 Actor-Critic 方法
 
 Actor-Critic 算法是时序差分（TD）策略梯度算法。它们可以在每一步更新策略网络的参数。这与蒙特卡洛 REINFORCE 算法形成对比，后者*必须*等待一个或多个回合完成后才能更新参数。
 
@@ -9599,12 +9348,9 @@ Actor-Critic 算法是时序差分（TD）策略梯度算法。它们可以在�
 
 预测 `Pr(a|s[t])` 的策略网络 `π[s[t], θ]` 称为*Actor*。价值网络 `v[s[t], ϕ]` 称为*Critic*。通常同一个网络同时表示 Actor 和 Critic，具有两组输出分别预测策略和价值。请注意，尽管 Actor-Critic 方法可以在每一步更新策略参数，但在实践中很少这样做。智能体通常在更新策略之前，跨许多时间步收集一批经验。
 
-### 19.7 离线强化学习
+# 19.7 离线强化学习
 
-
-
-
-#### 强化学习中的环境交互
+## 强化学习中的环境交互
 
 与环境的交互是强化学习的核心。然而，在某些场景中，让一个初始的智能体进入环境以探索不同动作的效果并不切实际。这可能是因为环境中的异常行为具有危险性（例如驾驶自动驾驶汽车），或者因为数据收集耗时或昂贵（例如进行金融交易）。
 
@@ -9622,7 +9368,7 @@ Actor-Critic 算法是时序差分（TD）策略梯度算法。它们可以在�
 
 决策变换器也可以从在线经验中微调，从而随时间学习。它们的优势在于摒弃了大部分强化学习机制及其相关的不稳定性，并用标准的监督学习取而代之。变换器可以从海量数据中学习，并跨越大时间上下文整合信息（使时间信用分配问题更易处理）。这代表了强化学习一个引人入胜的新方向。
 
-### 19.8 总结
+# 19.8 总结
 
 强化学习是马尔可夫决策过程及类似系统的序贯决策框架。本章回顾了强化学习的表格方法，包括动态规划（其中环境模型已知）、蒙特卡洛方法（运行多个回合，随后根据接收到的奖励改变动作值和策略）以及时序差分方法（在回合进行时更新这些值）。
 
@@ -9630,24 +9376,29 @@ Actor-Critic 算法是时序差分（TD）策略梯度算法。它们可以在�
 
 当我们无法与环境交互，但必须从历史数据中学习时，会使用离线强化学习。决策变换器利用深度学习的最新进展来构建状态-动作-奖励序列的模型，并预测将最大化奖励的动作。
 
-### 注释
+# 注释
 
 Sutton & Barto (2018) 深入涵盖了表格强化学习方法。Li (2017)、Arulkumaran 等人 (2017)、François-Lavet 等人 (2018) 和 Wang 等人 (2022c) 都提供了深度强化学习的概述。Graesser & Keng (2019) 是一份包含 Python 代码的优秀入门资源。
 
-**深度强化学习的里程碑：** 大多数强化学习的里程碑式成就都发生在视频游戏或现实世界游戏中，因为这些提供了动作有限、规则固定的约束环境。深度 Q-Learning（Mnih 等人，2015）在一套 ATARI 游戏基准测试中达到了人类水平的表现。AlphaGo（Silver 等人，2016）击败了围棋世界冠军。这款游戏以前被认为对计算机来说非常难玩。Berner 等人（2019）构建了一个系统，在五对五玩家游戏《Dota 2》中击败了世界冠军团队，这需要玩家间的协作。Ye 等人（2021）构建了一个系统，能在数据有限的情况下在 Atari 游戏中击败人类（与之前需要比人类多得多经验的系统形成对比）。最近，Cicero 系统在《Diplomacy》游戏中展示了人类水平的表现，该游戏需要玩家间的自然语言谈判与协调（FAIR，2022）。
+## 深度强化学习的里程碑
+
+大多数强化学习的里程碑式成就都发生在视频游戏或现实世界游戏中，因为这些提供了动作有限、规则固定的约束环境。深度 Q-Learning（Mnih 等人，2015）在一套 ATARI 游戏基准测试中达到了人类水平的表现。AlphaGo（Silver 等人，2016）击败了围棋世界冠军。这款游戏以前被认为对计算机来说非常难玩。Berner 等人（2019）构建了一个系统，在五对五玩家游戏《Dota 2》中击败了世界冠军团队，这需要玩家间的协作。Ye 等人（2021）构建了一个系统，能在数据有限的情况下在 Atari 游戏中击败人类（与之前需要比人类多得多经验的系统形成对比）。最近，Cicero 系统在《Diplomacy》游戏中展示了人类水平的表现，该游戏需要玩家间的自然语言谈判与协调（FAIR，2022）。
 
 强化学习也已成功应用于组合优化问题（参见 Mazyavkina 等人，2021）。例如，Kool 等人（2019）学习了一个模型，其在旅行商问题上的表现类似于最佳启发式算法。最近，AlphaTensor（Fawzi 等人，2022）将矩阵乘法视为游戏，并学会了用更少的乘法运算进行更快的矩阵乘法。由于深度学习严重依赖矩阵乘法，这是 AI 自我改进的首批案例之一。
 
-**经典强化学习方法：** Thompson (1933) 和 Thompson (1935) 对 MDP 理论做出了非常早期的贡献。Bellman 递归由 Bellman (1966) 引入。Howard (1960) 引入了策略迭代。Sutton & Barto (2018) 指出 Andreae (1969) 的工作为首个使用 MDP 形式化描述强化学习的工作。
+## 经典强化学习方法
+
+Thompson (1933) 和 Thompson (1935) 对 MDP 理论做出了非常早期的贡献。Bellman 递归由 Bellman (1966) 引入。Howard (1960) 引入了策略迭代。Sutton & Barto (2018) 指出 Andreae (1969) 的工作为首个使用 MDP 形式化描述强化学习的工作。
+
+## 强化学习的现代时代
 
 
 
-
-#### 强化学习的现代时代
+# 强化学习的现代时代
 
 强化学习的现代时代可以说始于 Sutton（1984）和 Watkins（1989）的博士论文。Sutton（1988）引入了时序差分学习这一术语。Watkins（1989）和 Watkins & Dayan（1992）引入了 Q-Learning，并利用 Banach 定理证明了其收敛到一个不动点，因为 Bellman 算子是一个压缩映射。Watkins（1989）首次明确建立了动态规划与强化学习之间的联系。SARSA 由 Rummery & Niranjan（1994）开发。Gordon（1995）引入了`拟合 Q-learning`，其中使用机器学习模型来预测每个状态-动作对的动作价值。Riedmiller（2005）引入了`神经网络拟合 Q-learning`，它使用神经网络从状态一次性预测所有动作价值。Singh & Sutton（1996）开展了早期的蒙特卡洛方法研究，而探索性起始算法由 Sutton & Barto（1999）引入。请注意，这只是对五十多年工作的极其简略的总结。更详尽的论述可参见 Sutton & Barto（2018）。
 
-##### 深度 Q-Networks
+## 深度 Q-Networks
 
 深度 Q-Learning 由 Mnih 等人（2015）设计，是神经网络拟合 Q-learning 的智力传承者。它利用当时卷积网络的最新成功，开发出一种拟合 Q-Learning 方法，能在 ATARI 游戏基准测试中达到人类水平的表现。深度 Q-Learning 受到`致命三要素问题`（Sutton & Barto, 2018）的困扰：任何包含（i）自举、（ii）离策略学习和（iii）函数近似的方案，其训练过程都可能不稳定。随后的大量工作旨在使训练更加稳定。Mnih 等人（2015）引入了经验回放缓冲区（Lin, 1992），随后 Schaul 等人（2016）对其进行改进，使其更倾向于重要的元组，从而提高学习速度。这被称为`优先经验回放`。
 
@@ -9655,44 +9406,41 @@ Sutton & Barto (2018) 深入涵盖了表格强化学习方法。Li (2017)、Arul
 
 Fortunato 等人（2018）引入了`带噪声的深度 Q-Networks`，其中 Q-Network 中的部分权重乘以噪声，以增加预测的随机性并鼓励探索。随着网络收敛到合理的策略，它可以学会随时间降低噪声的幅度。分布式 DQN（Bellemare 等人, 2017a; Dabney 等人, 2018 继 Morimura 等人, 2010 之后）旨在估计比单纯期望更完整的回报分布信息。这潜在地允许网络规避最坏情况，并且也能提高性能，因为预测高阶矩提供了更丰富的训练信号。`Rainbow`（Hessel 等人, 2018）结合了对原始深度 Q-learning 算法的六项改进，包括决斗网络、分布式 DQN 和带噪声 DQN，以提高 ATARI 基准测试上的训练速度和最终性能。
 
-##### 策略梯度
+## 策略梯度
 
 Williams（1992）引入了 REINFORCE 算法。“策略梯度方法”这一术语可追溯至 Sutton 等人（1999）。Konda & Tsitsiklis（1999）引入了 Actor-Critic 算法。Greensmith 等人（2004）和 Peters & Schaal（2008）讨论了通过使用不同基线来降低方差。此后有观点认为，价值基线主要降低的是更新的激进程度，而非其方差（Mei 等人, 2022）。
 
 策略梯度已被改编用于生成确定性策略（Silver 等人, 2014; Lillicrap 等人, 2016; Fujimoto 等人, 2018）。最直接的方法是对可能的动作进行最大化，但如果动作空间是连续的，这需要在每一步进行优化过程。`深度确定性策略梯度`算法（Lillicrap 等人, 2016）沿着动作价值的梯度方向移动策略（这意味着使用 Actor-Critic 方法）。
 
-##### 现代策略梯度
+## 现代策略梯度
 
 我们从参数更新的角度介绍了策略梯度。然而，它们也可以被视为基于重要性采样期望奖励来优化代理损失，使用来自当前策略参数的轨迹。这种视角允许我们有效地进行多步优化。然而，这可能导致非常大的策略更新。在监督学习中，过度更新是一个次要问题，因为轨迹稍后可以被修正。然而，在强化学习中，它会影响未来的数据收集，并可能造成极大的破坏。
 
 已经提出了几种方法来缓和这些更新。`自然策略梯度`（Kakade, 2001）基于自然梯度（Amari, 1998），通过 Fisher 信息矩阵修改下降方向。这提供了更好的更新，不太可能陷入局部平台期。然而，在参数众多的模型中，Fisher 矩阵难以计算。在`信任区域策略优化`或`TRPO`（Schulman 等人, 2015）中，代理目标在新旧策略间 KL 散度约束下被最大化。Schulman 等人（2017）提出了一种更简单的公式，其中 KL 散度作为正则化项出现。正则化权重根据 KL 散度与目标值（表示我们希望策略改变多少）之间的距离进行调整。`近端策略优化`或`PPO`（Schulman 等人, 2017）是一种更简单的方法，通过裁剪损失来确保更新幅度较小。
 
-##### Actor-Critic
+## Actor-Critic
 
 在第 19.6 节描述的 Actor-Critic 算法（Konda & Tsitsiklis, 1999）中，Critic 使用了 1 步估计器。也可以使用 k 步估计器（即我们观察 `k` 个折扣奖励，并用状态价值的估计来近似后续奖励）。随着 `k` 的增加，估计的方差增加，但偏差减小。`广义优势估计`（Schulman 等人, 2016）将多步估计加权组合，并用单个项参数化加权，以权衡偏差和方差。Mnih 等人（2016）引入了`异步 Actor-Critic`或`A3C`，其中多个智能体在并行环境中独立运行并更新相同的参数。策略和价值函数每 `T` 个时间步使用 k 步回报的混合进行一次更新。Wang 等人（2017）引入了几种旨在使异步 Actor-Critic 更高效的方法。`软 Actor-Critic`（Haarnoja 等人, 2018b）在代价函数中增加了一个熵项，这鼓励探索并减少过拟合，因为策略被鼓励变得不那么自信。
 
-
-
-
-#### 离线强化学习
+## 离线强化学习
 
 在离线强化学习中，通过观察其他智能体的行为（包括它们获得的奖励）来学习策略，*无需*改变策略的能力。它与模仿学习相关，后者的目标是在无法获取奖励的情况下复制另一个智能体的行为（参见 Hussein 等人，2017）。一种方法是像处理异策略强化学习那样处理离线强化学习。然而，在实践中，观察到的策略与应用的策略之间的分布偏移会表现为对动作价值的过度乐观估计和糟糕的表现（参见 Fujimoto 等人，2019；Kumar 等人，2019a；Agarwal 等人，2020）。保守 Q 学习（Kumar 等人，2020b）通过正则化 Q 值来学习价值函数的保守、下界估计。决策变换器（Chen 等人，2021c）是一种简单的离线学习方法，它利用了经过充分研究的自注意力架构。随后，它可以通过在线训练进行微调（Zheng 等人，2022）。
 
-#### 强化学习与聊天机器人
+## 强化学习与聊天机器人
 
 聊天机器人可以使用一种称为*基于人类反馈的强化学习*或 *RLHF* 的技术进行训练（Christiano 等人，2018；Stiennon 等人，2020）。例如，*InstructGPT*（ChatGPT 的前身，Ouyang 等人，2022）从标准的 Transformer 解码器模型开始。然后，基于提示词-响应对对其进行微调，其中响应由人工标注员编写。在此训练步骤中，模型被优化以预测真实响应中的下一个词。
 
 不幸的是，生成足以支持高质量性能的此类训练数据成本高昂。为了解决这个问题，人工标注员随后指出他们更倾向于几个模型响应中的哪一个。这些（便宜得多的）数据被用来训练一个*奖励模型*。这是一个第二个 Transformer 网络，它接收提示词和模型响应，并返回一个标量来指示响应的质量。最后，使用奖励模型作为监督，进一步训练微调后的聊天机器人模型以产生高奖励。在这里，标准梯度下降无法使用，因为无法通过聊天机器人输出中的采样过程计算导数。因此，使用近端策略优化（一种导数易于处理的策略梯度方法）来训练模型以生成更高的奖励。
 
-#### 强化学习的其他领域
+## 强化学习的其他领域
 
 强化学习是一个庞大的领域，完全足以单独成书，而本文献综述极其浅显。我们未讨论的其他值得注意的强化学习领域包括*基于模型的强化学习*，其中对状态转移概率和奖励函数进行建模（参见 Moerland 等人，2023）。这允许前向规划，并且具有可以为不同的奖励结构重用同一模型的优势。*混合方法*如 AlphaGo（Silver 等人，2016）和 MuZero（Schrittwieser 等人，2020）分别拥有用于状态动态、策略和未来位置价值的独立模型。
 
 本章仅讨论了简单的探索方法，如 epsilon-greedy 方法、带噪声的 Q 学习，以及添加熵项以惩罚过度自信的策略。*内在动机*指的是为探索增加奖励的方法，从而赋予智能体“好奇心”（参见 Barto，2013；Aubret 等人，2019）。*分层强化学习*（参见 Pateria 等人，2021）指的是将最终目标分解为子任务的方法。*多智能体强化学习*（参见 Zhang 等人，2021a）考虑多个智能体共存于同一环境中的情况。这可能是竞争性的，也可能是合作性的。
 
-### 习题
+# 习题
 
-#### 习题 19.1
+## 习题 19.1
 
 图 19.18 显示了示例 MDP 中的一条单一轨迹。已知折扣因子 *γ* 为 0.9，计算该轨迹中每一步的回报。
 
@@ -9700,7 +9448,7 @@ Williams（1992）引入了 REINFORCE 算法。“策略梯度方法”这一术
 
 图 19.18 MDP 中的一条轨迹。企鹅到达第一块鱼砖时获得 +1 奖励，掉入洞中时获得 -2 奖励，到达第二块鱼砖时获得 +1 奖励。折扣因子 *γ* 为 0.9。
 
-#### 习题 19.2**
+## 习题 19.2
 
 证明策略改进定理。考虑从策略 *π* 改变为策略 *π′*，其中对于状态 *s[t]*，新策略 *π′* 选择使期望回报最大化的动作：
 
@@ -9716,11 +9464,11 @@ Williams（1992）引入了 REINFORCE 算法。“策略梯度方法”这一术
 
 提示：首先用新策略表示项 *v*\[*s[t]*[+1]|*π*\]。
 
-#### 习题 19.3
+## 习题 19.3
 
 证明当状态价值和策略按图 19.10a 初始化时，经过两次迭代的 (i) 策略评估（基于当前价值更新所有状态，然后替换之前的值）和 (ii) 策略改进后，它们会变成图 19.10b 中的样子。状态转移将一半的概率分配给策略指示的方向，并将剩余概率平均分配给其他有效动作。当企鹅离开洞时，奖励函数无论采取何种动作均返回 -2。当企鹅离开鱼砖且回合结束时，奖励函数无论采取何种动作均返回 +3，因此鱼砖的价值为 +3。
 
-#### 习题 19.4
+## 习题 19.4
 
 *玻尔兹曼策略*通过基于当前状态-动作奖励函数 *q*\[*s, a*\] 来确定动作概率 *π*\[*a*|*s*\]，在探索和利用之间取得平衡：
 
@@ -9730,7 +9478,7 @@ Williams（1992）引入了 REINFORCE 算法。“策略梯度方法”这一术
 
 解释如何改变温度参数 *τ* 以优先考虑探索或利用。
 
-#### 习题 19.5**
+## 习题 19.5
 
 当学习率 *α* 为 1 时，Q 学习更新由下式给出：
 
@@ -9754,7 +9502,7 @@ Williams（1992）引入了 REINFORCE 算法。“策略梯度方法”这一术
 
 ***
 
-#### 习题 19.6
+## 习题 19.6
 
 证明：
 
@@ -9764,7 +9512,7 @@ Williams（1992）引入了 REINFORCE 算法。“策略梯度方法”这一术
 
 因此添加基线更新不会改变期望的策略梯度更新。
 
-#### 习题 19.7**
+## 习题 19.7
 
 假设我们想从样本 *a*[1], *a*[2] … *a[I]* 中估计量 𝔼\[*a*\]。考虑我们也有配对样本 *b*[1], *b*[2] … *b[I]*，它们是与 *a* 协变的样本，其中 𝔼\[*b*\] = *μ[b]*。我们定义一个新变量：
 
@@ -9774,7 +9522,7 @@ Williams（1992）引入了 REINFORCE 算法。“策略梯度方法”这一术
 
 证明当常数 *c* 选择得当时，Var\[*a*′\] ≤ Var\[*a*\]。求 *c* 的最优值表达式。
 
-#### 习题 19.8
+## 习题 19.8
 
 公式 19.34 中的梯度估计可以写为：
 
@@ -9800,25 +9548,17 @@ Williams（1992）引入了 REINFORCE 算法。“策略梯度方法”这一术
 
 (19.53)
 
-# 第 20 章
-
-深度学习为何有效？
-
-
-
-
-
-## 第 20 章：深度学习为什么有效？
+# 第 20 章：深度学习为什么有效？
 
 本章与前几章不同。它不展示既定结果，而是提出关于深度学习为何如此有效的“如何”和“为什么”的问题。这些问题在教科书中很少被讨论。然而，重要的是要认识到（尽管本书标题如此），对深度学习的理解仍然有限。
 
 我们认为，深层网络易于训练这一点令人惊讶，它们能够泛化也同样令人惊讶。然后我们依次考虑这两个主题。我们列举了影响训练成功的因素，并讨论了关于深层网络损失函数的已知情况。接着我们考虑影响泛化的因素。最后，我们以一场关于网络是否需要过参数化和深度的讨论作为结语。
 
-### 20.1 深度学习的反面论据
+## 20.1 深度学习的反面论据
 
 `MNIST-1D` 数据集（图 8.1）只有四十个输入维度和十个输出维度。只要每层有足够的隐藏单元，两层全连接网络就能完美分类 10000 个 `MNIST-1D` 训练数据点，并能合理地泛化到未见样本（图 8.10a）。确实，我们现在认为理所当然的是，只要有足够的隐藏单元，深层网络几乎能完美拟合任何训练集。我们也认为理所当然的是，拟合出的模型能泛化到新数据。然而，训练过程应该成功，以及由此产生的模型应该泛化，这*完全*不是显而易见的。本节论证这两种现象都令人惊讶。
 
-#### 20.1.1 训练
+### 20.1.1 训练
 
 在 10000 个 `MNIST-1D` 训练样本上，两层全连接网络的性能在每层有 43 个隐藏单元（约 4000 个参数）时达到完美。然而，寻找任意非凸函数的全局最小值是 NP-hard 问题，这对某些神经网络损失函数同样成立。令人称奇的是，拟合算法既没有陷入局部极小值，也没有卡在鞍点附近，并且它能高效地利用多余的模型容量来拟合训练数据中未被解释的部分，无论它们位于何处。
 
@@ -9826,7 +9566,7 @@ Williams（1992）引入了 REINFORCE 算法。“策略梯度方法”这一术
 
 简而言之，我们能够可靠且高效地拟合深层网络，这令人惊讶。数据、模型、训练算法，或这三者的某种组合，必定具有某种特殊性质，使这成为可能。
 
-#### 20.1.2 泛化
+### 20.1.2 泛化
 
 如果神经网络的高效拟合令人震惊，那么它们对新数据的泛化能力简直*令人目瞪口呆*。首先，*先验*来看，典型数据集足以表征输入/输出映射并不明显。维度灾难意味着训练数据集与*可能*的输入相比微乎其微；如果 `MNIST-1D` 数据的 40 个输入每个都量化为 10 个可能值，将会有 $10^{40}$ 种可能的输入，这比训练样本数量多出 $10^{35}$ 倍。
 
@@ -9840,15 +9580,17 @@ Williams（1992）引入了 REINFORCE 算法。“策略梯度方法”这一术
 
 第三，随着参数增加，泛化能力反而*变好*（图 8.10）。上一段提到的模型有 177,201 个参数。假设它每个参数能拟合一个训练样本，它仍有 167,201 个多余的自由度。这种过剩赋予了模型在训练数据之间做*几乎任何事*的自由度，但它表现得却很合理。
 
-#### 20.1.3 深度学习的不可思议的有效性
+### 20.1.3 深度学习的不可思议的有效性
 
 总之，我们既无法显然地看出应该能拟合深层网络，也无法显然地看出它们应该泛化。*先验*来看，深度学习不应该奏效。然而它却奏效了。本章探究原因。第 20.2–20.3 节描述了我们关于拟合深层网络及其损失函数的已知情况。第 20.4–20.6 节考察泛化。
 
-### 20.2 影响拟合性能的因素
+## 20.2 影响拟合性能的因素
+
+
 
 图 6.4 表明非线性模型的损失函数可能同时拥有局部极小值和鞍点。然而，我们可以可靠地将深层网络拟合到复杂的训练集上。例如，图 8.10 展示了在 `MNIST-1D`、`MNIST` 和 `CIFAR-100` 上完美的训练性能。本节考虑可能化解这一矛盾的因素。
 
-#### 20.2.1 数据集
+### 20.2.1 数据集
 
 重要的是要认识到我们无法学习*任意*函数。考虑一个从每一个可能的 28×28 二值图像到十个类别之一的完全随机映射。由于该函数没有结构，唯一的办法是记住 $2^{784}$ 个分配。然而，在 `MNIST` 数据集上训练模型很容易（图 8.10 和 15.15），该数据集包含 60,000 个 28×28 图像样本，每个标注十个类别之一。这一矛盾的一个解释可能是：因为我们要近似的现实世界函数相对简单，所以很容易找到全局最小值。¹
 
@@ -9870,18 +9612,15 @@ Zhang 等人（2017a）研究了这一假设，他们在以下两种情况下于
 
 **图 20.1** 拟合随机数据。使用 `SGD` 在 `CIFAR-10` 数据集上训练的 `AlexNet` 架构的损失。当像素从与原始数据具有相同均值和方差的高斯随机分布中抽取时，模型仍可被拟合（尽管速度较慢）。当标签被随机化时，模型仍可被拟合（尽管速度更慢）。改编自 Zhang 等人（2017a）。
 
-#### 20.2.2 正则化
+### 20.2.2 正则化
 
 模型易于训练的另一个可能解释是正则化使损失表面变得更平坦、更凸。然而，Zhang 等人（2017a）发现，拟合随机数据既不需要显式正则化，也不需要 `Dropout`。这并不排除拟合算法有限步长带来的隐式正则化（第 9.2 节）。然而，这种效应随学习率增加（公式 9.9），而模型拟合并不会随着学习率增大而变得更容易。
 
-#### 20.2.3 随机训练算法
+### 20.2.3 随机训练算法
 
 第 6 章论证 `SGD` 算法可能允许优化轨迹在训练期间在“山谷”之间移动。然而，Keskar 等人（2017）表明，包括全连接和卷积网络在内的多种模型，可以在许多数据集（包括 `CIFAR-100` 和 `MNIST`）上，使用 5000-6000 张图像的超大批次，几乎完美地进行拟合。这消除了大部分随机性，但训练仍然成功。
 
-
-
-
-##### 图 20.2 训练结果
+#### 图 20.2 训练结果
 
 图 20.2 展示了四个全连接模型的训练结果，这些模型使用全批次（即非随机）梯度下降拟合 4000 个标签随机化的 MNIST-1D 样本。没有显式正则化，学习率设置为较小的常数值 0.0025 以最小化隐式正则化。在这里，从数据到标签的真实映射没有结构，训练是确定性的，也没有正则化，但训练误差*仍然*降为零。这表明这些损失函数可能真正没有局部极小值。
 
@@ -9901,7 +9640,7 @@ Zhang 等人（2017a）研究了这一假设，他们在以下两种情况下于
 
 图 20.2 MNIST-1D 训练。四个全连接网络使用全批次梯度下降、He 初始化、无动量或正则化、学习率 0.0025 拟合 4000 个标签随机的 MNIST-1D 样本。1、2、3、4 层的模型每层分别有 298、100、75 和 63 个隐藏单元，参数量分别为 15208、15210、15235 和 15139。所有模型都成功训练，但更深的模型所需轮数更少。
 
-#### 20.2.4 过参数化
+### 20.2.4 过参数化
 
 过参数化几乎肯定*是*导致训练容易的重要因素。这意味着存在大量退化解，因此可能总是存在一个可以修改参数以降低损失的方向。Sejnowski (2020) 指出：“……解的退化性将问题的性质从大海捞针变成了针的干草堆。”
 
@@ -9917,11 +9656,11 @@ Zhang 等人（2017a）研究了这一假设，他们在以下两种情况下于
 
 这些理论结果很有趣，但通常对网络结构做出不切实际的假设。例如，Du et al. (2019a) 表明，当网络宽度 *D*（即隐藏单元数量）为 𝒪\[*I*⁴*K*²\] 时（其中 *I* 是训练数据量，*K* 是网络深度），残差网络收敛到零训练损失。同样，Nguyen & Hein (2017) 假设网络宽度大于数据集大小，这在大多数实际场景中是不现实的。过参数化似乎很重要，但理论尚无法解释经验拟合性能。
 
-#### 20.2.5 激活函数
+### 20.2.5 激活函数
 
 激活函数也已知会影响训练难度。激活函数仅在输入范围的一小部分发生变化的网络比 ReLU（在输入范围的一半变化）或 Leaky ReLU（在全范围变化）更难拟合；例如，sigmoid 和 tanh 非线性（图 3.13a）在其尾部具有浅梯度；在激活函数接近常数的地方，训练梯度接近零，因此没有机制来改进模型。
 
-#### 20.2.6 初始化
+### 20.2.6 初始化
 
 另一个潜在解释是 Xavier/He 初始化将参数设置为易于优化的值。当然，对于更深的网络，这种初始化对于避免梯度爆炸和消失是必要的，因此从平凡意义上说，初始化对训练成功至关重要。然而，对于较浅的网络，权重的初始方差不那么重要。Liu et al. (2023c) 在 1000 个 MNIST 数据点上训练了一个每层 200 个隐藏单元的 3 层全连接网络。他们发现，随着方差从 He 提出的值增加（图 20.4），拟合训练数据所需的迭代次数增加，但这最终并未阻碍拟合。因此，初始化并不能很好地解释为什么拟合神经网络很容易，尽管梯度爆炸/消失确实揭示了在有限精度算术下使训练困难的初始化方式。
 
@@ -9929,12 +9668,9 @@ Zhang 等人（2017a）研究了这一假设，他们在以下两种情况下于
 
 图 20.4 初始化与拟合。一个每层 200 个隐藏单元的三层全连接网络在 1000 个 MNIST 样本上使用 AdamW、one-hot 目标和均方误差损失进行训练。使用更大倍数的 He 初始化时拟合网络需要更长时间，但这不会改变结果。这可能仅反映了权重必须移动的额外距离。改编自 Liu et al. (2023c)。
 
-#### 20.2.7 网络深度
+### 20.2.7 网络深度
 
-
-
-
-##### 当深度变得非常大时，神经网络更难拟合
+#### 当深度变得非常大时，神经网络更难拟合
 
 由于梯度爆炸和消失（图 7.7）以及梯度破碎（图 11.3），当深度变得非常大时，神经网络更难拟合。然而，这些（可以说）是实际的数值问题。没有确凿证据表明，随着网络深度的增加，底层损失函数在根本上变得更凸或更不凸。图 20.2 确实显示，对于具有随机标签和 He 初始化的 MNIST 数据，更深的网络在更少的迭代次数中完成训练。然而，这可能是因为（i）更深网络中的梯度更陡峭，或者（ii）He 初始化只是让更宽、更浅的网络起始于离最优参数更远的位置。
 
@@ -9946,17 +9682,17 @@ Frankle & Carbin (2019) 表明，对于像 `VGG` 这样的小型网络，如果�
 
 ---
 
-### 20.3 损失函数的性质
+## 20.3 损失函数的性质
 
 上一节讨论了影响神经网络训练难易程度的因素。参数数量（过参数化程度）和激活函数的选择都很重要。令人惊讶的是，数据集的选择、拟合算法的随机性以及正则化的使用似乎都不重要。没有确凿证据表明（在参数量固定的情况下）网络深度很重要（除了由梯度爆炸/消失/破碎引起的数值问题）。本节从另一个角度探讨同一主题，通过考察损失函数的经验性质。大多数证据来自全连接网络和 CNN；Transformer 网络的损失函数了解较少。
 
-#### 20.3.1 多个全局最小值
+### 20.3.1 多个全局最小值
 
 我们*预期*深度网络的损失函数拥有一大族等价的全局最小值。在全连接网络中，每一层的隐藏单元及其相关权重可以排列组合而不改变输出。在卷积网络中，适当地排列通道和卷积核不会改变输出。我们可以在任何 `ReLU` 函数之前乘以权重，在之后除以一个正数，而不改变输出。使用 `BatchNorm` 会诱导出另一组冗余，因为每个隐藏单元或通道的均值和方差被重置。
 
 上述修改对*每个*输入都产生相同的输出。然而，全局最小值仅取决于训练数据点的输出。在过参数化网络中，也将存在在数据点处表现相同但在数据点之间表现不同的解族。所有这些也是全局最小值。
 
-#### 20.3.2 通往最小值的路径
+### 20.3.2 通往最小值的路径
 
 Goodfellow 等人 (2015b) 考察了初始参数和最终值之间的直线。他们表明，沿这条线的损失函数通常单调下降（除了起始附近有时有一个小凸起）。这种现象在几种不同类型的网络和激活函数中均被观察到（图 20.5a）。
 
@@ -9972,20 +9708,19 @@ Goodfellow 等人 (2015b) 考察了初始参数和最终值之间的直线。他
 
 Li & Liang (2018) 表明，训练期间参数的相对变化随着网络宽度的增加而减小；对于更大的宽度，参数从较小的值开始，按这些值的较小比例变化，并在更少的步骤内收敛。
 
-#### 20.3.3 最小值之间的连接
+### 20.3.3 最小值之间的连接
 
 Goodfellow 等人 (2015b) 检查了两个独立找到的最小值之间直线上的损失函数。他们在两者之间看到了损失的显著增加（图 20.5b）；好的最小值通常不是线性连通的。然而，Frankle 等人 (2020) 表明，如果网络最初以相同方式训练，随后通过使用不同的 SGD 噪声和增强被允许发散，这种增加就会消失。这表明解在训练早期受到约束，并且*某些*最小值族是线性连通的。
 
 Draxler 等人 (2018) 在 CIFAR-10 数据集上找到了性能良好（但不同）的最小值。他们随后表明，可以从一个构建路径到另一个，使得损失函数沿此路径保持较低。他们得出结论，存在一个单一的连通低损失流形（图 20.7）。随着网络宽度和深度的增加，这似乎越来越真实。Garipov 等人 (2018) 和 Fort & Jastrzębski (2019) 提出了其他连接最小值的方案。
 
-
-
-
 ![图 20.7 极小值之间的连接。DenseNet 在 CIFAR-10 上的损失函数切片。参数 `ϕ1` 和 `ϕ2` 是两个独立发现的极小值。这些参数之间的线性插值揭示了一个能量势垒（虚线）。然而，对于足够深和宽的网络，可以在两个极小值之间找到一条低能量的曲线路径（青色线）。改编自 Draxler 等人 (2018)。](img/c20-fig-0007.jpg)
 
 图 20.7 极小值之间的连接。DenseNet 在 CIFAR-10 上的损失函数切片。参数 `ϕ1` 和 `ϕ2` 是两个独立发现的极小值。这些参数之间的线性插值揭示了一个能量势垒（虚线）。然而，对于足够深和宽的网络，可以在两个极小值之间找到一条低能量的曲线路径（青色线）。改编自 Draxler 等人 (2018)。
 
-#### 20.3.4 损失曲面的曲率
+### 20.3.4 损失曲面的曲率
+
+
 
 随机高斯函数（其中点联合分布，协方差由其距离的核函数给出）具有一个有趣的性质：对于梯度为零的点，当这些点出现在较低损失值时，函数向下弯曲的方向比例变得更小（参见 Bahri 等人，2020）。Dauphin 等人 (2014) 在神经网络损失函数中搜索鞍点，并同样发现了损失与负特征值数量之间的相关性（图 20.8）。Baldi & Hornik (1989) 分析了浅层网络的误差曲面，发现**不存在局部极小值**，只有鞍点。这些结果表明，几乎不存在或完全不存在糟糕的局部极小值。
 
@@ -10021,10 +9756,6 @@ LeCun 等人 (2012) 表明 `SGD` 的泛化能力优于全批量梯度下降。�
 
 ![图 20.11 平坦极小值与尖锐极小值。预期平坦极小值泛化得更好。在平坦区域中，估计参数中的微小误差或训练和测试损失函数对齐中的微小误差问题较小。改编自 Keskar 等人 (2017)。](img/c20-fig-0011.jpg)
 
-
-
-
-
 图 20.11 平坦极小值与尖锐极小值。预期平坦极小值泛化效果更好。在平坦区域中，参数估计中的微小误差或训练损失函数与测试损失函数对齐中的微小误差问题较小。改编自 Keskar 等人 (2017)。
 
 平坦度可以通过以下方式衡量：(i) 极小值周围训练损失相似的连通区域大小 (Hochreiter & Schmidhuber, 1997a)，(ii) 极小值周围的二阶曲率 (Chaudhari 等人, 2019)，或 (iii) 极小值邻域内的最大损失 (Keskar 等人, 2017)。然而，需要谨慎；由于 `ReLU` 函数的非负齐次性，估计的平坦度可能会受到网络平凡重参数化的影响 (Dinh 等人, 2017)。
@@ -10039,17 +9770,17 @@ LeCun 等人 (2012) 表明 `SGD` 的泛化能力优于全批量梯度下降。�
 
 #### 20.4.4 权重范数
 
-第 20.3.4 节回顾了 Fort & Scherlis (2019) 的发现：当权重的 *ℓ*2 范数位于某个范围内时，损失曲面的曲率异常地为正。同一作者提供了证据，表明当 *ℓ*2 权重范数落入这个“恰到好处区间”时，泛化效果也很好（图 20.12）。这或许并不令人惊讶。权重的范数（间接地）与模型的 Lipschitz 常数相关。如果该范数太小，模型将无法足够快地变化以捕捉底层函数的变化。如果范数太大，模型将在训练点之间产生不必要的剧烈变化，无法平滑插值。
+第 20.3.4 节回顾了 Fort & Scherlis (2019) 的发现：当权重的 `ℓ2` 范数位于某个范围内时，损失曲面的曲率异常地为正。同一作者提供了证据，表明当 `ℓ2` 权重范数落入这个“恰到好处区间”时，泛化效果也很好（图 20.12）。这或许并不令人惊讶。权重的范数（间接地）与模型的 Lipschitz 常数相关。如果该范数太小，模型将无法足够快地变化以捕捉底层函数的变化。如果范数太大，模型将在训练点之间产生不必要的剧烈变化，无法平滑插值。
 
-![图 20.12 超球面上的泛化。一个具有两个隐藏层的全连接网络，每层包含 200 个单元（198,450 个参数），在 MNIST 数据库上进行训练。参数被初始化为给定的 ℓ2 范数，然后被约束以维持该范数并位于一个子空间中（垂直方向）。网络在由 Xavier 初始化定义的半径 *r* 附近的一个小范围内泛化效果良好（青色虚线）。改编自 Fort & Scherlis (2019)。](img/c20-fig-0012.jpg)
+![图 20.12 超球面上的泛化。一个具有两个隐藏层的全连接网络，每层包含 200 个单元（198,450 个参数），在 MNIST 数据库上进行训练。参数被初始化为给定的 `ℓ2` 范数，然后被约束以维持该范数并位于一个子空间中（垂直方向）。网络在由 Xavier 初始化定义的半径 `r` 附近的一个小范围内泛化效果良好（青色虚线）。改编自 Fort & Scherlis (2019)。](img/c20-fig-0012.jpg)
 
-图 20.12 超球面上的泛化。一个具有两个隐藏层的全连接网络，每层包含 200 个单元（198,450 个参数），在 MNIST 数据库上进行训练。参数被初始化为给定的 *ℓ*[2] 范数，然后被约束以维持该范数并位于一个子空间中（垂直方向）。网络在由 Xavier 初始化定义的半径 *r* 附近的一个小范围内泛化效果良好（青色虚线）。改编自 Fort & Scherlis (2019)。
+图 20.12 超球面上的泛化。一个具有两个隐藏层的全连接网络，每层包含 200 个单元（198,450 个参数），在 MNIST 数据库上进行训练。参数被初始化为给定的 `ℓ2` 范数，然后被约束以维持该范数并位于一个子空间中（垂直方向）。网络在由 Xavier 初始化定义的半径 `r` 附近的一个小范围内泛化效果良好（青色虚线）。改编自 Fort & Scherlis (2019)。
 
 这一发现被 Liu 等人 (2023c) 用来解释*顿悟*现象，即在训练误差已经为零后的许多轮次，泛化能力可能会突然提高（图 20.13）。据推测，顿悟发生在权重范数最初过大时；训练数据拟合良好，但模型在数据点之间的变化很大。随着时间的推移，隐式或显式正则化降低了权重范数，直到它们达到“恰到好处区间”，泛化能力随之突然提高。
 
-![图 20.13 顿悟。当参数初始化使其 ℓ2 范数（半径）远大于 He 初始化指定的值时，训练耗时更长（虚线），泛化耗时*更长*（实线）。泛化的滞后归因于权重范数减小回“恰到好处区间”所需的时间。改编自 Liu 等人 (2023c)。](img/c20-fig-0013.jpg)
+![图 20.13 顿悟。当参数初始化使其 `ℓ2` 范数（半径）远大于 He 初始化指定的值时，训练耗时更长（虚线），泛化耗时*更长*（实线）。泛化的滞后归因于权重范数减小回“恰到好处区间”所需的时间。改编自 Liu 等人 (2023c)。](img/c20-fig-0013.jpg)
 
-图 20.13 顿悟。当参数初始化使其 *ℓ*[2] 范数（半径）远大于 He 初始化指定的值时，训练耗时更长（虚线），泛化耗时*更长*（实线）。泛化的滞后归因于权重范数减小回“恰到好处区间”所需的时间。改编自 Liu 等人 (2023c)。
+图 20.13 顿悟。当参数初始化使其 `ℓ2` 范数（半径）远大于 He 初始化指定的值时，训练耗时更长（虚线），泛化耗时*更长*（实线）。泛化的滞后归因于权重范数减小回“恰到好处区间”所需的时间。改编自 Liu 等人 (2023c)。
 
 #### 20.4.5 过参数化
 
@@ -10070,10 +9801,6 @@ Notebook 20.4
 对抗攻击
 
 ---
-
-
-
-
 
 ![Figure 20.14 Adversarial examples. In each case, the left image is correctly classified by AlexNet. By considering the gradients of the network output with respect to the input, it's possible to find a small perturbation (center, magnified by 10 for visibility) that, when added to the original image (right), causes the network to misclassify it as an ostrich. This is despite the fact that the original and perturbed images are almost indistinguishable to humans. Adapted from Szegedy et al. (2014).](img/c20-fig-0014.jpg)
 
@@ -10103,24 +9830,17 @@ Figure 20.15 神经网络剪枝。目标是在不降低性能的前提下移除�
 
 参数也可以通过训练一个较小的网络（学生）来复制较大网络（教师）的性能来减少。这被称为 `knowledge distillation`（知识蒸馏），至少可以追溯到 Buciluǎ et al. (2006)。Hinton et al. (2015) 表明输出类别间的信息模式很重要，并训练一个较小的网络来近似较大网络的 pre-softmax logits（softmax 前的 logits，figure 20.16）。
 
-![Figure 20.16 Knowledge distillation. a) A teacher network for image classification is trained as usual, using a multiclass cross-entropy classification loss. b) A smaller student network is trained with the same loss, plus also a distillation loss that encourages the pre-softmax activations to be the same as for the teacher.](img/c20-fig-0016.jpg)
 
-Figure 20.16 知识蒸馏。a) 用于图像分类的教师网络按常规训练，使用多类交叉熵分类损失。b) 一个较小的学生网络使用相同的损失进行训练，外加一个蒸馏损失，鼓励其 pre-softmax activations（softmax 前的激活值）与教师网络相同。
 
-Zagoruyko & Komodakis (2017) 进一步鼓励学生网络在各个点的激活空间图与教师网络相似。他们使用这种 `attention transfer`（注意力迁移）方法，在 ImageNet 分类任务上用一个 18 层残差网络（约 1,100 万参数）来近似 34 层残差网络（约 6,300 万参数）的性能。然而，这仍然大于训练样本的数量（约 100 万张图像）。现代方法（如 Chen et al., 2021a）可以改进这一结果，但蒸馏尚未提供令人信服的证据证明欠参数化模型能表现良好。
+# 第 20 章 深度学习：理论与实践
 
-#### 20.5.3 讨论
+## 20.5.3 讨论
 
 目前的证据表明，过参数化*是*泛化所需的——至少对于目前使用的数据集规模和复杂度而言。没有演示显示在参数显著少于训练样本的复杂数据集上达到最先进性能。通过剪枝或蒸馏训练网络来减小模型规模的尝试并未改变这一局面。
 
 此外，最近的理论表明，模型的 Lipschitz 常数与过参数化之间存在权衡；Bubeck & Sellke (2021) 证明在 *D* 维空间中，*平滑*插值所需的参数数量是单纯插值的 *D* 倍。他们论证当前针对大型数据集（如 ImageNet）的模型过参数化程度*还不够*；进一步增加模型容量可能是提高性能的关键。
 
-### 20.6 网络必须很深吗？
-
-
-
-
-# 第 20 章 深度学习：理论与实践
+## 20.6 网络必须很深吗？
 
 第 3 章讨论了通用近似定理。该定理指出，给定足够多的隐藏单元，浅层神经网络可以以任意精度近似任何函数。这引出了一个显而易见的问题：网络*是否需要*是深层的。
 
@@ -10130,17 +9850,17 @@ Zagoruyko & Komodakis (2017) 进一步鼓励学生网络在各个点的激活空
 
 尽管如此，证据的权衡表明深度至关重要；即使是具有良好图像分类性能的最浅层网络也需要 >10 层。然而，对于*为什么*并没有确定的解释。三种可能的解释是：（i）深层网络比浅层网络能表示更复杂的函数，（ii）深层网络更容易训练，以及（iii）深层网络施加了更好的归纳偏置。
 
-## 20.6.1 建模函数的复杂性
+### 20.6.1 建模函数的复杂性
 
 第 4 章表明，对于相同的参数量，深层网络产生的函数比浅层网络拥有多得多的线性区域。我们还看到，已经确定了一些“病态”函数，用浅层网络建模它们所需的隐藏单元比深层网络多指数级（例如 Eldan 和 Shamir，2016；Telgarsky，2016）。确实，Liang 和 Srikant（2016）发现了相当普遍的函数族，这些函数由深层网络建模更高效。然而，Nye 和 Saxe（2018）发现，其中一些函数在实践中无法被深层网络轻松拟合。此外，几乎没有证据表明我们要近似的现实世界函数具有这些病态特性。
 
-## 20.6.2 训练的可行性
+### 20.6.2 训练的可行性
 
 另一种解释是，具有实际数量隐藏单元的浅层网络*本可以*支持最先进的性能，只是很难找到一个既能很好地拟合训练数据又能合理插值的好解。
 
 证明这一点的一种方法是将成功的深层网络蒸馏到更浅（但更宽）的学生模型中，并查看性能是否能保持。Urban 等人（2017）将用于 CIFAR-10 数据集图像分类的 16 个卷积网络的集成蒸馏到不同深度的学生模型中。他们发现浅层网络无法复制更深层教师网络的性能，并且在参数预算固定的情况下，学生模型的性能随深度的增加而提高。
 
-## 20.6.3 归纳偏置
+### 20.6.3 归纳偏置
 
 大多数当前模型依赖于卷积块或 Transformer。这些网络为输入数据的局部区域共享参数，并且通常逐渐整合整个输入的信息。这些约束意味着这些网络能表示的函数不是通用的。那么，深层网络占优的一个解释是，这些约束具有良好的归纳偏置，而很难强迫浅层网络遵守这些约束。
 
@@ -10164,16 +9884,15 @@ Zagoruyko & Komodakis (2017) 进一步鼓励学生网络在各个点的激活空
 
 **习题 20.3** 图 20.2 展示了一个使用固定学习率的非随机拟合过程，成功拟合了随机数据。这是否意味着损失函数没有局部极小值？这是否意味着该函数是凸的？证明你的回答，如果你认为任一陈述为假，请给出反例。
 
+---
+
 # 第 21 章 深度学习与伦理
 
 *本章由 Travis LaCroix 和 Simon J.D. Prince 撰写。*
 
 AI 即将改变社会，或好或坏。这些技术具有巨大的社会公益潜力（Taddeo 和 Floridi，2018；Tomašev 等人，2020），包括在医疗保健（Rajpurkar 等人，2022）和应对气候变化（Rolnick 等人，2023）中的重要作用。然而，它们也有被滥用和造成意外伤害的潜力。这导致了* AI 伦理 *领域的出现。
 
-
-
-
-# 深度学习的现代时代
+## 深度学习的现代时代
 
 深度学习的现代时代始于 2012 年的 AlexNet，但对 AI 伦理的持续关注并未随即而来。事实上，一场关于机器学习公平性的研讨会因缺乏素材而被 NeurIPS 2013 拒稿。直到 2016 年，AI 伦理才迎来了其“AlexNet 时刻”，当时 ProPublica 曝光了 COMPAS 再犯预测模型中的偏见（Angwin 等人，2016），Cathy O'Neil 的著作《数学毁灭武器》（O'Neil, 2016）也随之出版。从那时起，关注度急剧上升；自 2018 年首届会议召开以来的五年间，提交给“公平性、问责制与透明度会议”（FAccT）的论文数量增加了近十倍。
 
@@ -10223,10 +9942,6 @@ AI 模型中的偏见可通过多种方式引入（Fazelpour & Danks, 2021）：
 
 *   **建模与验证：** 选择一个数学定义来衡量模型公平性需要价值判断。存在截然不同但同样直观的定义，它们在逻辑上却相互矛盾（Kleinberg 等人，2017; Chouldechova, 2017; Berk 等人，2017）。这表明需要从纯数学的公平性概念化，转向对算法在实践中是否促进正义的更实质性评估（Green, 2022）。
 
-
-
-
-
 ##### 部署
 
 已部署的算法可能会与社会中的其他算法、结构或机构相互作用，从而产生复杂的反馈循环，使现有的偏见根深蒂固（O’Neil, 2016）。例如，像 `GPT3` 这样的大语言模型（Brown et al., 2020）是在网络数据上训练的。然而，当 `GPT3` 的输出被发布到网上时，未来模型的训练数据质量会下降。这可能会加剧偏见并产生新的社会危害（Falbo & LaCroix, 2022）。
@@ -10257,54 +9972,53 @@ AI 模型中的偏见可通过多种方式引入（Fazelpour & Danks, 2021）：
 
 许多决策空间不包含具有道德分量的行动。例如，选择下一步棋走哪里没有明显的道德后果。然而，在其他地方，行动可能具有道德分量。例子包括自动驾驶汽车中的决策（Awad et al., 2018; Evans et al., 2020）、致命自主武器系统（Arkin, 2008a,b），以及用于儿童照护、老年照护和医疗保健的专业服务机器人（Anderson & Anderson, 2008; Sharkey & Sharkey, 2012）。随着这些系统变得更加自主，它们可能需要在没有人类输入的情况下做出道德决策。
 
-这引出了*人工道德能动性*的概念。人工道德主体是一种能够做出道德判断的自主 AI 系统。道德能动性可以按复杂性递增的方式分类（Moor, 2006）：
+
+
+这引出了`人工道德能动性`的概念。人工道德主体是一种能够做出道德判断的自主 AI 系统。道德能动性可以按复杂性递增的方式分类（Moor, 2006）：
 
 1.  **伦理影响主体**是其行动具有伦理影响的主体。因此，几乎任何部署在社会中的技术都可能算作伦理影响主体。
+
 2.  **隐性伦理主体**是包含某些内置安全功能的伦理影响主体。
+
 3.  **显性伦理主体**能够根据情境遵循一般道德原则或伦理行为规范。
+
 4.  **完全伦理主体**是拥有信念、欲望、意图、自由意志并对其行动具有意识的主体。
 
-机器伦理学领域寻求创建人工道德主体的方法。这些方法可分为*自上而下*、*自下而上*或*混合*方法（Allen et al., 2005）。自上而下（理论驱动）方法基于某种道德理论，直接实现并层级化地安排具体规则以指导伦理行为。阿西莫夫的“机器人三定律”就是这种方法的一个简单例子。
+机器伦理学领域寻求创建人工道德主体的方法。这些方法可分为`自上而下`、`自下而上`或`混合`方法（Allen et al., 2005）。自上而下（理论驱动）方法基于某种道德理论，直接实现并层级化地安排具体规则以指导伦理行为。阿西莫夫的“机器人三定律”就是这种方法的一个简单例子。
 
 在自下而上（学习驱动）方法中，模型从数据中学习道德规律，而无需显式编程（Wallach et al., 2008）。例如，Noothigattu et al. (2018) 设计了一个基于投票的伦理决策系统，该系统利用从人类在道德困境中的偏好收集的数据来学习社会偏好；然后系统对结果进行总结和聚合，以做出“伦理”决策。混合方法结合了自上而下和自下而上的方法。
 
 一些研究人员质疑人工道德能动性的概念本身，并认为道德能动性对于确保安全并非必要（van Wynsberghe & Robbins, 2019）。关于人工道德能动性的最新综述参见 Cervantes et al. (2019)，关于人工道德能动性技术方法的最新综述参见 Tolmeijer et al. (2020)。
 
-#### 21.1.3 透明性与不透明性
+### 21.1.3 透明性与不透明性
 
-如果一个复杂计算系统的所有运作细节都是已知的，那么它就是*透明*的。如果人类能够理解系统是如何做决策的，那么它就是*可解释*的。在缺乏透明性或可解释性的情况下，用户和 AI 系统之间存在信息不对称，这使得难以确保价值对齐。
+如果一个复杂计算系统的所有运作细节都是已知的，那么它就是`透明`的。如果人类能够理解系统是如何做决策的，那么它就是`可解释`的。在缺乏透明性或可解释性的情况下，用户和 AI 系统之间存在信息不对称，这使得难以确保价值对齐。
 
-Creel (2020) 从几个粒度层面刻画了透明性。*功能透明性*是指了解系统的算法运作（即将输入映射到输出的逻辑规则）。本书中的方法就是在这个细节层面上描述的。*结构透明性*意味着知道程序*如何*执行算法。当高级编程语言编写的命令由机器码执行时，这可能会被掩盖。最后，*运行透明性*要求理解程序在特定实例中是如何执行的。对于深度网络，这包括关于硬件、输入数据、训练数据及其相互作用的知识。这些都无法通过审查代码来确定。
-
----
-
-##### 问题 21.4
+Creel (2020) 从几个粒度层面刻画了透明性。`功能透明性`是指了解系统的算法运作（即将输入映射到输出的逻辑规则）。本书中的方法就是在这个细节层面上描述的。`结构透明性`意味着知道程序*如何*执行算法。当高级编程语言编写的命令由机器码执行时，这可能会被掩盖。最后，`运行透明性`要求理解程序在特定实例中是如何执行的。对于深度网络，这包括关于硬件、输入数据、训练数据及其相互作用的知识。这些都无法通过审查代码来确定。
 
 ---
 
+**问题 21.4**
 
+---
 
+例如，`GPT-3` 在功能上是透明的；其架构在 Brown 等人 (2020) 的论文中有描述。然而，它并不具备结构透明性，因为我们无法访问其代码；也不具备运行透明性，因为我们无法访问其学习到的参数、硬件或训练数据。随后的版本 `GPT-4` 则完全不透明。这款商业产品的工作细节不为人知。
 
-
-例如，GPT-3 在功能上是透明的；其架构在 Brown 等人 (2020) 的论文中有描述。然而，它并不具备结构透明性，因为我们无法访问其代码；也不具备运行透明性，因为我们无法访问其学习到的参数、硬件或训练数据。随后的版本 GPT-4 则完全不透明。这款商业产品的工作细节不为人知。
-
-#### 21.1.4 可解释性与可理解性
+### 21.1.4 可解释性与可理解性
 
 即使一个系统是透明的，这也不意味着我们能理解决策是如何做出的，或者该决策基于什么信息。深度网络可能包含数十亿个参数，因此我们无法仅凭检查就理解其工作原理。然而，在某些司法管辖区，公众可能拥有获得解释的权利。《欧盟通用数据保护条例》第 22 条规定，当决策完全基于自动化处理时，所有数据主体都应有权“获得关于所做出决定的解释”。¹
 
-这些困难催生了可解释 AI 这一子领域。一个颇具成效的方向是生成局部解释。虽然我们无法解释整个系统，但有时可以描述特定输入是如何被分类的。例如，*局部可解释模型无关解释* 或 *LIME* (Ribeiro 等人, 2016) 在附近的输入处对模型输出进行采样，并利用这些样本构建一个更简单的模型（图 21.3）。即使原始模型既不透明也不可解释，这也能为分类决策提供洞见。
+这些困难催生了可解释 AI 这一子领域。一个颇具成效的方向是生成局部解释。虽然我们无法解释整个系统，但有时可以描述特定输入是如何被分类的。例如，`局部可解释模型无关解释` 或 `LIME` (Ribeiro 等人, 2016) 在附近的输入处对模型输出进行采样，并利用这些样本构建一个更简单的模型（图 21.3）。即使原始模型既不透明也不可解释，这也能为分类决策提供洞见。
 
 ***
 
-Notebook 21.2
-
-可解释性
+**Notebook 21.2：可解释性**
 
 ***
 
-![图 21.3 LIME. 深度网络的输出函数很复杂；在高维空间中，若无法访问模型，很难知道为何做出某个决策，或如何修改输入以改变决策。a) 考虑试图理解为何在白色十字处 *Pr*(*y* = 1|**x**) 很低。LIME 在附近点探测网络，以查明其是否将这些点识别为 *Pr*(*y* = 1|**x**) *<* 0*.*5（青色点）或 *Pr*(*y* = 1|**x**) ≥ 0*.*5（灰色点）。它根据与关注点的邻近程度对这些点加权（权重由圆圈大小表示）。b) 加权点用于训练一个更简单的模型（此处为逻辑回归——一个通过 Sigmoid 函数的线性函数）。c) 在白色十字附近，该近似模型接近 d) 原始函数。即使我们无法访问原始模型，也能从该近似模型的参数推断出：若增加 *x*[1] 或减小 *x*[2]，*Pr*(*y* = 1|**x**) 将会增加，输出类别也会随之改变. 来源：Prince (2022).](images/c21-fig-0003.jpg)
+![图 21.3 LIME. 深度网络的输出函数很复杂；在高维空间中，若无法访问模型，很难知道为何做出某个决策，或如何修改输入以改变决策。a) 考虑试图理解为何在白色十字处 `Pr(y = 1|x)` 很低。LIME 在附近点探测网络，以查明其是否将这些点识别为 `Pr(y = 1|x) < 0.5`（青色点）或 `Pr(y = 1|x) ≥ 0.5`（灰色点）。它根据与关注点的邻近程度对这些点加权（权重由圆圈大小表示）。b) 加权点用于训练一个更简单的模型（此处为逻辑回归——一个通过 Sigmoid 函数的线性函数）。c) 在白色十字附近，该近似模型接近 d) 原始函数。即使我们无法访问原始模型，也能从该近似模型的参数推断出：若增加 `x[1]` 或减小 `x[2]`，`Pr(y = 1|x)` 将会增加，输出类别也会随之改变. 来源：Prince (2022).](images/c21-fig-0003.jpg)
 
-图 21.3 LIME. 深度网络的输出函数很复杂；在高维空间中，若无法访问模型，很难知道为何做出某个决策，或如何修改输入以改变决策。a) 考虑试图理解为何在白色十字处 *Pr*(*y* = 1|**x**) 很低。LIME 在附近点探测网络，以查明其是否将这些点识别为 *Pr*(*y* = 1|**x**) *<* 0*.*5（青色点）或 *Pr*(*y* = 1|**x**) ≥ 0*.*5（灰色点）。它根据与关注点的邻近程度对这些点加权（权重由圆圈大小表示）。b) 加权点用于训练一个更简单的模型（此处为逻辑回归——一个通过 Sigmoid 函数的线性函数）。c) 在白色十字附近，该近似模型接近 d) 原始函数。即使我们无法访问原始模型，也能从该近似模型的参数推断出：若增加 *x*[1] 或减小 *x*[2]，*Pr*(*y* = 1|**x**) 将会增加，输出类别也会随之改变. 来源：Prince (2022)。
+图 21.3 LIME. 深度网络的输出函数很复杂；在高维空间中，若无法访问模型，很难知道为何做出某个决策，或如何修改输入以改变决策。a) 考虑试图理解为何在白色十字处 `Pr(y = 1|x)` 很低。LIME 在附近点探测网络，以查明其是否将这些点识别为 `Pr(y = 1|x) < 0.5`（青色点）或 `Pr(y = 1|x) ≥ 0.5`（灰色点）。它根据与关注点的邻近程度对这些点加权（权重由圆圈大小表示）。b) 加权点用于训练一个更简单的模型（此处为逻辑回归——一个通过 Sigmoid 函数的线性函数）。c) 在白色十字附近，该近似模型接近 d) 原始函数。即使我们无法访问原始模型，也能从该近似模型的参数推断出：若增加 `x[1]` 或减小 `x[2]`，`Pr(y = 1|x)` 将会增加，输出类别也会随之改变. 来源：Prince (2022)。
 
 目前尚不清楚是否有可能构建出用户甚至创建者都能完全理解的复杂决策系统。关于什么是可解释、可理解或可诠释的系统，目前也存在持续的争论 (Erasmus 等人, 2021)；这些概念目前尚无具体定义。更多信息请参见 Molnar (2022)。
 
@@ -10314,7 +10028,7 @@ Notebook 21.2
 
 ***
 
-Problem 21.5
+**Problem 21.5**
 
 ***
 
@@ -10332,7 +10046,7 @@ Problem 21.5
 
 ***
 
-Problem 21.6
+**Problem 21.6**
 
 ***
 
@@ -10342,14 +10056,11 @@ Kosinski 等人 (2013) 指出，包括性取向、种族、宗教和政治观点
 
 不幸的是，AI 是自动化欺诈活动的有力工具（例如发送大量电子邮件或短信，诱骗人们泄露敏感信息或汇款）。生成式 AI 可用于欺骗人们，使其误以为正在与合法实体互动，或生成误导、欺骗人们的虚假文件。此外，AI 可能增加网络攻击的复杂性，例如生成更具说服力的钓鱼邮件，或适应目标组织的防御措施。
 
-
-
-
 这凸显了要求机器学习系统透明化的弊端：这些系统越开放透明，就可能越容易受到安全风险或恶意行为者的利用。例如，生成式语言模型（如 `ChatGPT`）已被用于编写可用于间谍活动、勒索软件和其他恶意软件的软件和邮件（Goodin, 2023）。
 
 ***
 
-问题 21.7
+**问题 21.7**
 
 ***
 
@@ -10361,7 +10072,7 @@ Kosinski 等人 (2013) 指出，包括性取向、种族、宗教和政治观点
 
 ***
 
-问题 21.8
+**问题 21.8**
 
 ***
 
@@ -10381,7 +10092,7 @@ Kosinski 等人 (2013) 指出，包括性取向、种族、宗教和政治观点
 
 ***
 
-问题 21.9
+**问题 21.9**
 
 ***
 
@@ -10393,7 +10104,7 @@ Kosinski 等人 (2013) 指出，包括性取向、种族、宗教和政治观点
 
 #### 21.3.3 环境影响
 
-训练深层网络需要巨大的计算能力，因此消耗大量能源。Strubell 等 (2019, 2020) 估计，训练一个拥有 2.13 亿参数的 Transformer 模型排放了约 284 吨 `CO`[2].² Luccioni 等 (2022) 为训练 `BLOOM` 语言模型产生的排放提供了类似估算。不幸的是，封闭专有模型日益普遍，导致我们对它们的环境影响一无所知（Luccioni, 2023）。
+训练深层网络需要巨大的计算能力，因此消耗大量能源。Strubell 等 (2019, 2020) 估计，训练一个拥有 2.13 亿参数的 Transformer 模型排放了约 284 吨 `CO₂`。² Luccioni 等 (2022) 为训练 `BLOOM` 语言模型产生的排放提供了类似估算。不幸的是，封闭专有模型日益普遍，导致我们对它们的环境影响一无所知（Luccioni, 2023）。
 
 #### 21.3.4 就业与社会
 
@@ -10403,7 +10114,7 @@ Kosinski 等人 (2013) 指出，包括性取向、种族、宗教和政治观点
 
 ***
 
-问题 21.10
+**问题 21.10**
 
 ***
 
@@ -10413,13 +10124,11 @@ Kosinski 等人 (2013) 指出，包括性取向、种族、宗教和政治观点
 
 随着深层网络规模的扩大，训练这些模型所需的数据量和算力相应增加。在这方面，中小公司和初创企业可能无法与大型成熟科技公司竞争。这可能引发一个反馈循环，导致权力和财富日益集中在少数公司手中。一项最新研究发现，大型科技公司和“精英”大学与中低层次大学在主要 AI 会议上的出版物数量差距正在扩大（Ahmed & Wahed, 2016）。在许多观点中，这种财富和权力的集中与社会的公正分配不相容（Rawls, 1971）。
 
-
-
 这导致了人们呼吁实现 AI 民主化，使每个人都能创建此类系统（Li, 2018; Knight, 2018; Kratsios, 2019; Riedl, 2020）。这一过程要求通过开源和开放科学，让深度学习技术更广泛地可用且更易于使用，以便更多人能从中受益。这降低了准入门槛，增加了对 AI 的访问，同时削减成本、确保模型准确性，并提高参与度和包容性（Ahmed et al., 2020）。
 
 ***
 
-问题 21.11
+**问题 21.11**
 
 ***
 
@@ -10435,12 +10144,17 @@ Kosinski 等人 (2013) 指出，包括性取向、种族、宗教和政治观点
 
 本章列举了多种 AI 系统目标无意中或因滥用而偏离人类价值观的方式。我们现在论证科学家并非中立行动者；他们的价值观不可避免地会渗透到他们的工作中。
 
-这或许令人惊讶。有一种广泛的信念认为科学是——或应该是——客观的。这被*科学的无价值理想*所规范。许多人会争辩说机器学习是客观的，因为算法只是数学。然而，类似于算法偏见（第 21.1.1 节），AI 从业者的价值观可以在四个阶段影响他们的工作（Reiss & Sprenger, 2017）：
+这或许令人惊讶。有一种广泛的信念认为科学是——或应该是——客观的。这被`科学的无价值理想`所规范。许多人会争辩说机器学习是客观的，因为算法只是数学。然而，类似于算法偏见（第 21.1.1 节），AI 从业者的价值观可以在四个阶段影响他们的工作（Reiss & Sprenger, 2017）：
 
 1.  研究问题的选择。
+
 2.  收集与研究问题相关的证据。
+
 3.  接受科学假设作为问题的答案。
+
 4.  应用科学研究成果。
+
+
 
 价值观在第一和最后阶段发挥重要作用，这或许无可争议。最初的研究问题选择和后续的应用选择受到科学家、机构和资助机构利益的影响。然而，科学的无价值理想规定要将道德、个人、社会、政治和文化价值观对中间科学过程的影响降至最低。这一观点预设了*价值中立论题*，即科学家原则上可以在不做这些价值判断的情况下处理阶段（2）和（3）。
 
@@ -10452,7 +10166,7 @@ Kosinski 等人 (2013) 指出，包括性取向、种族、宗教和政治观点
 
 这些见解对那些认为算法比人类决策者更客观（因此应该在我们认为客观性至关重要的领域取代人类决策者）的研究人员具有重要意义。
 
-### 21.6 作为集体行动问题的负责任 AI 研究
+## 21.6 作为集体行动问题的负责任 AI 研究
 
 推卸责任很容易。阅读本章的学生和专业人士可能会认为他们的工作离现实世界太远，或只是大机器中的一小部分，以至于他们的行动无法产生影响。然而，这是一个错误。研究人员通常可以选择投入时间的项目、工作的公司或机构、寻求的知识、互动的社交和智力圈子，以及沟通的方式。
 
@@ -10460,26 +10174,23 @@ Kosinski 等人 (2013) 指出，包括性取向、种族、宗教和政治观点
 
 ***
 
-问题 21.12
+### 问题 21.12
 
 ***
 
-#### 21.6.1 科学传播
+### 21.6.1 科学传播
 
 一个积极的步骤是负责任地传播。在许多类型的社交网络中，错误信息比真相传播得更快、持续得更久（LaCroix et al., 2021; Ceylan et al., 2023）。因此，重要的是不要夸大机器学习系统的能力（见上述案例研究），并避免误导性的拟人化。同时，也要意识到机器学习技术被误用的可能性。例如，伪科学实践如颅相学和相面术在 AI 中惊人地复活了（Stark & Hutson, 2022）。
 
-#### 21.6.2 多样性与异质性
+### 21.6.2 多样性与异质性
 
-
-
-
-##### 积极的第二步：鼓励多样性
+#### 积极的第二步：鼓励多样性
 
 当社会群体是同质的（主要由相似成员组成）或同质亲和的（由倾向于与相似者交往的成员组成）时，主导群体往往会使其惯例得到重述和稳定（O’Connor & Bruner, 2019）。缓解压迫体系的一种方法是确保考虑多元观点。这可以通过以下方式实现：在制度层面推行公平、多元、包容和无障碍举措；在研究层面采用参与式和基于社区的研究方法；在个人层面提高对社会、政治和道德问题的认识。
 
 *立场认识论*（Harding, 1986）理论表明，知识是社会情境化的（即取决于一个人在社会中的社会地位）。技术圈子的同质性可能导致技术偏见（Noble, 2018; Eubanks, 2018; Benjamin, 2019; Broussard, 2023）。缺乏多样性意味着创造这些技术的个人的观点将作为默认视角渗透到数据集、算法和代码中。Broussard (2023) 认为，由于许多技术是由健全、白人、顺性别、美国男性开发的，这些技术是为健全、白人、顺性别、美国男性*优化*的，他们的视角被视为现状。要确保技术惠及历史上被边缘化的社区，研究人员必须了解这些社区的需求、愿望和观点（Birhane et al., 2022a）。*设计正义*以及参与式和基于社区的 AI 研究方法主张，受技术影响的社区应积极参与其设计（Constanza-Chock, 2020）。
 
-### 21.7 前进的道路
+## 21.7 前进的道路
 
 不可否认，AI 将从根本上改变社会，无论是好是坏。然而，对由 AI 驱动的未来乌托邦社会的乐观愿景应保持谨慎，并进行健康的批判性反思。AI 的许多所谓益处仅在特定情境下、仅对部分人群有益。例如，Green (2019) 指出，一个利用 AI 增强警察问责制和监禁替代方案的项目，另一个利用预测性警务增加安全性的项目，两者都被宣传为“造福社会的 AI”。贴上这个标签是一种价值判断，缺乏任何基本原则；一个社区的利益可能是另一个社区的伤害。
 
@@ -10497,66 +10208,70 @@ Kosinski 等人 (2013) 指出，包括性取向、种族、宗教和政治观点
 
 ***
 
-#### Problem 21.13
+### 问题 21.13
 
 ***
 
-这让普通科学家处于何地？也许面临以下 imperatives（注：原文为 imperative，此处为名词复数形式）：有必要反思自己工作的道德和社会维度。这可能要求积极接触那些最可能受新技术影响的社区，从而培养研究人员与社区之间的关系并赋能这些社区。同样，这可能涉及接触本学科以外的文献。对于哲学问题，*Stanford Encyclopedia of Philosophy* 是宝贵资源。跨学科会议在这方面也很有用。领先的工作发表在 Fairness, Accountability, and Transparency Conference (FAccT) 和 AI and Society Conference (AIES) 上。
+这让普通科学家处于何地？也许面临以下 `imperatives`：有必要反思自己工作的道德和社会维度。这可能要求积极接触那些最可能受新技术影响的社区，从而培养研究人员与社区之间的关系并赋能这些社区。同样，这可能涉及接触本学科以外的文献。对于哲学问题，*`Stanford Encyclopedia of Philosophy`* 是宝贵资源。跨学科会议在这方面也很有用。领先的工作发表在 `Fairness, Accountability, and Transparency Conference (FAccT)` 和 `AI and Society Conference (AIES)` 上。
 
-### 21.8 总结
+## 21.8 总结
 
 本章探讨了深度学习和 AI 的伦理影响。价值对齐问题是确保 AI 系统的目标与人类目标一致的任务。偏见、可解释性、人工道德代理等主题可以通过这一视角来审视。AI 可能被故意滥用，本章详述了其中一些方式。AI 的进步在知识产权法和气候变化等不同领域都有进一步影响。
 
 伦理 AI 是一个集体行动问题，本章以呼吁科学家考虑其工作的道德和伦理影响作为结语。并非每个伦理问题都在每个计算机科学家的控制范围内。然而，这并不意味着研究人员完全没有责任去考虑——并在力所能及的地方减轻——他们创建的系统被滥用的可能性。
 
-### 习题
+## 习题
 
-**Problem 21.1** 有人建议，AI 价值对齐问题最常见的表述是“确保 AI 系统的价值与人类价值观一致的问题”。讨论这一问题表述在哪些方面是 underspecified（未充分指定/定义不全）的。*讨论资源*：LaCroix (2023)。
+**问题 21.1** 有人建议，AI 价值对齐问题最常见的表述是“确保 AI 系统的价值与人类价值观一致的问题”。讨论这一问题表述在哪些方面是 `underspecified`（未充分指定/定义不全）的。*讨论资源*：LaCroix (2023)。
 
-**Problem 21.2** 古德哈特定律指出：“当一种衡量标准成为目标时，它就不再是一个好的衡量标准。”考虑如何重述该定律以适用于 AI 的价值对齐，鉴于损失函数只是我们真实目标的代理。
+**问题 21.2** 古德哈特定律指出：“当一种衡量标准成为目标时，它就不再是一个好的衡量标准。”考虑如何重述该定律以适用于 AI 的价值对齐，鉴于损失函数只是我们真实目标的代理。
 
-**Problem 21.3** 假设一所大学利用过往学生数据构建模型来预测“学生成功”，这些模型可以支持政策和实践的明智变革。考虑偏见如何影响该模型开发和部署的四个阶段。
+**问题 21.3** 假设一所大学利用过往学生数据构建模型来预测“学生成功”，这些模型可以支持政策和实践的明智变革。考虑偏见如何影响该模型开发和部署的四个阶段。
 
 *讨论资源*：Fazelpour & Danks (2021)。
 
-**Problem 21.4** 我们可以将功能透明性、结构透明性和运行透明性视为正交的。提供一个例子，说明一种透明度的增加如何可能不会导致另一种透明度的同步增加。
+**问题 21.4** 我们可以将功能透明性、结构透明性和运行透明性视为正交的。提供一个例子，说明一种透明度的增加如何可能不会导致另一种透明度的同步增加。
 
 *讨论资源*：Creel (2020)。
 
-**Problem 21.5** 如果一位计算机科学家撰写了一篇关于 AI 的研究论文或将代码推送到公共仓库，你认为他们对其工作未来的滥用负有责任吗？
+**问题 21.5** 如果一位计算机科学家撰写了一篇关于 AI 的研究论文或将代码推送到公共仓库，你认为他们对其工作未来的滥用负有责任吗？
 
-**Problem 21.6** 你认为 AI 军事化在多大程度上是不可避免的？
+**问题 21.6** 你认为 AI 军事化在多大程度上是不可避免的？
 
+### 问题 21.7
 
-
-
-#### 问题 21.7
 鉴于第 21.2 节中强调的 AI 可能被滥用的情况，请就深度学习研究中的开源文化提出正反双方的论点。
 
-#### 问题 21.8
+### 问题 21.8
+
 有人认为，个人数据是拥有者的权力来源。请探讨个人数据对利用深度学习的公司有哪些价值，并考量这一主张：隐私损失是集体性地而非个别性地被体验的。
 
 *讨论资源*：Véliz (2020)。
 
-#### 问题 21.9
+### 问题 21.9
+
 生成式 AI 对创意产业有何影响？你认为知识产权法应如何修改以应对这一新发展？
 
-#### 问题 21.10
+### 问题 21.10
+
 一个好的预测必须：(i) 足够具体，以便知道何时是错误的；(ii) 考虑到可能的认知偏差；(iii) 允许理性地更新信念。请考察近期媒体关于未来 AI 的任何一项主张，并讨论其是否满足这些标准。
 
 *讨论资源*：Tetlock & Gardner (2016)。
 
-#### 问题 21.11
+### 问题 21.11
+
 一些批评者认为，关于“实现 AI 民主化”的呼吁过于侧重民主的*参与式*层面，这可能会增加集体感知、推理和能动性出错的风险，从而导致不良的道德后果。请分别反思以下几点：*什么*方面的 AI 应该被民主化？*为什么*要让 AI 民主化？*如何*让 AI 民主化？
 
 *讨论资源*：Himmelreich (2022)。
 
-#### 问题 21.12
+### 问题 21.12
+
 2023 年 3 月，未来生命研究所发布了一封题为“暂停巨型 AI 实验”的公开信，呼吁所有 AI 实验室立即暂停训练比 GPT-4 更强大的 AI 系统，至少持续六个月。请讨论作者撰写此信的动机、公众的反应，以及此类暂停的影响。将这一事件与“AI 伦理可被视为集体行动问题”这一观点联系起来（第 21.6 节）。
 
 *讨论资源*：Gebru et al. (2023)。
 
-#### 问题 21.13
+### 问题 21.13
+
 请讨论第 21.7 节中四点的优劣。你同意这些观点吗？
 
 ## 附录 A
@@ -10592,7 +10307,9 @@ Kosinski 等人 (2013) 指出，包括性取向、种族、宗教和政治观点
 文中反复使用一些特殊函数：
 
 *   函数 `min[x][f[x]]` 返回函数 `f[x]` 在变量 `x` 所有可能取值下的最小值。此符号常在不指定寻找最小值的具体细节的情况下使用。
+
 *   函数 `argmin[x][f[x]]` 返回使 `f[x]` 最小化的 `x` 的值，因此如果 `y = argmin[x][f[x]]`，则 `min[x][f[x]] = f[y]`。
+
 *   函数 `max[x][f[x]]` 和 `argmax[x][f[x]]` 执行针对最大化函数的等效操作。
 
 #### 概率分布
@@ -10600,8 +10317,6 @@ Kosinski 等人 (2013) 指出，包括性取向、种族、宗教和政治观点
 概率分布应写作 `Pr(x = a)`，表示随机变量 `x` 取值 `a`。然而，这种符号比较繁琐。因此，我们通常简化为 `Pr(x)`，其中 `x` 根据等式的含义表示随机变量或其取值。给定 `x` 时 `y` 的条件概率写作 `Pr(y|x)`。`y` 和 `x` 的联合概率写作 `Pr(y, x)`。这两种形式可以结合，因此 `Pr(y|x, ϕ)` 表示在已知 `x` 和 `ϕ` 的情况下变量 `y` 的概率。类似地，`Pr(y, x|ϕ)` 表示在已知 `ϕ` 的情况下变量 `y` 和 `x` 的概率。当我们需要同一变量的两个概率分布时，第一个分布写作 `Pr(x)`，第二个写作 `q(x)`。更多关于概率分布的信息见附录 C。
 
 #### 渐近符号
-
-
 
 *渐近符号* 用于比较不同算法在输入规模 *D* 增加时所做的工作量。这可以通过多种方式完成，但本书仅使用 *大 O* 符号，它表示算法中计算增长的紧确上界。如果存在常数 `c > 0` 和整数 `n[0]`，使得对于所有 `n > n[0]` 都有 `f[n] < c * g[n]`，则函数 `f[n]` 为 `𝒪[g[n]]`。
 
@@ -10613,7 +10328,7 @@ Kosinski 等人 (2013) 指出，包括性取向、种族、宗教和政治观点
 
 ## 附录 B
 
-数学
+### 数学
 
 本附录回顾正文中使用的数学概念。
 
@@ -10625,7 +10340,9 @@ Kosinski 等人 (2013) 指出，包括性取向、种族、宗教和政治观点
 
 如果对于所有 `z[1]`、`z[2]` 均有：
 
+```
 ![b2-fig-5001.jpg](img/b2-fig-5001.jpg)
+```
 
  (B.1)
 
@@ -10635,40 +10352,46 @@ Kosinski 等人 (2013) 指出，包括性取向、种族、宗教和政治观点
 
 #### B.1.2 凸性
 
-如果可以在函数上任意两点之间画一条直线，且这条直线始终位于函数*上方*，则该函数为 *凸* 函数。类似地，如果任意两点之间的直线始终位于函数*下方*，则该函数为 *凹* 函数。根据定义，凸（凹）函数至多有一个最小值（最大值）。
 
-如果可以在 `ℝ^D` 区域边界上的任意两点之间画一条直线，而不在其他地方与边界相交，则该区域为凸区域。梯度下降保证能找到任何既是凸函数又定义在凸区域上的函数的全局最小值。
 
-#### B.1.3 特殊函数
+如果可以在函数上任意两点之间画一条直线，且这条直线始终位于函数上方，则该函数为凸函数。类似地，如果任意两点之间的直线始终位于函数下方，则该函数为凹函数。根据定义，凸（凹）函数至多有一个最小值（最大值）。
+
+如果可以在`ℝ^D`区域边界上的任意两点之间画一条直线，而不在其他地方与边界相交，则该区域为凸区域。梯度下降保证能找到任何既是凸函数又定义在凸区域上的函数的全局最小值。
+
+### B.1.3 特殊函数
 
 正文中使用了以下函数：
 
-*   *指数函数 y* = `exp[x]` （图 B.1a）将实变量 `x ∈ ℝ` 映射为非负数 `y ∈ ℜ^+`，即 `y = e^x`。
-*   *对数 x* = `log[y]` （图 B.1b）是指数函数的逆，将非负数 `y ∈ ℜ^+` 映射为实变量 `x ∈ ℝ`。注意本书中所有对数均为自然对数（即以 `e` 为底）。
-*   *伽马函数* `Γ[x]` （图 B.1c）定义为：
+*   **指数函数** `y = exp[x]` （图 B.1a）将实变量 `x ∈ ℝ` 映射为非负数 `y ∈ ℜ^+`，即 `y = e^x`。
+*   **对数** `x = log[y]` （图 B.1b）是指数函数的逆，将非负数 `y ∈ ℜ^+` 映射为实变量 `x ∈ ℝ`。注意本书中所有对数均为自然对数（即以 `e` 为底）。
+*   **伽马函数** `Γ[x]` （图 B.1c）定义为：
 
-    ![b2-fig-5002.jpg](img/b2-fig-5002.jpg)
-
-     (B.2)
+```
+![b2-fig-5002.jpg](img/b2-fig-5002.jpg)
+ (B.2)
+```
 
     这将阶乘函数扩展到连续值，使得对于 `x ∈ {1, 2, …}` 有 `Γ[x] = (x − 1)!`。
-*   *狄拉克 δ 函数 δ[z]* 总面积为一，且全部集中在 `z = 0` 处。包含 `N` 个元素的数据集可视为一种概率分布，由 `N` 个以各数据点 `x[i]` 为中心、缩放因子为 `1/N` 的 δ 函数求和组成。δ 函数通常绘制为箭头（如图 5.12）。δ 函数具有关键性质：
 
-    ![b2-fig-5003.jpg](img/b2-fig-5003.jpg)
+*   **狄拉克 δ 函数** `δ[z]` 总面积为一，且全部集中在 `z = 0` 处。包含 `N` 个元素的数据集可视为一种概率分布，由 `N` 个以各数据点 `x[i]` 为中心、缩放因子为 `1/N` 的 δ 函数求和组成。δ 函数通常绘制为箭头（如图 5.12）。δ 函数具有关键性质：
 
-     (B.3)
+```
+![b2-fig-5003.jpg](img/b2-fig-5003.jpg)
+ (B.3)
+```
 
 ![图 B.1 指数、对数和伽马函数。a) 指数函数将实数映射为正数。它是凸函数。b) 对数是指数的逆，将正数映射为实数。它是凹函数。c) 伽马函数是阶乘函数的连续扩展，使得对于 x ∈ {1, 2, …} 有 Γ[x] = (x − 1)!。](images/b2-fig-0001.jpg)
 
 图 B.1 指数、对数和伽马函数。a) 指数函数将实数映射为正数。它是凸函数。b) 对数是指数的逆，将正数映射为实数。它是凹函数。c) 伽马函数是阶乘函数的连续扩展，使得 `Γ[x] = (x − 1)!` 对于 `x ∈ {1, 2, …}` 成立。
 
-#### B.1.4 斯特林公式
+### B.1.4 斯特林公式
 
 斯特林公式 （图 B.2）使用以下公式近似阶乘函数（从而也是伽马函数）：
 
+```
 ![b2-fig-5004.jpg](img/b2-fig-5004.jpg)
-
  (B.4)
+```
 
 ![图 B.2 斯特林公式。阶乘函数 x! 可用斯特林公式 Stir[x] 近似，后者对每个实数值均有定义。](images/b2-fig-0002.jpg)
 
@@ -10676,195 +10399,204 @@ Kosinski 等人 (2013) 指出，包括性取向、种族、宗教和政治观点
 
 ### B.2 二项式系数
 
-*二项式系数* 写作 ![b2-fig-5005.jpg](img/b2-fig-5005.jpg) ，读作 “n 选 k”。它们是正整数，表示从 `n` 个项目的集合中不放回地选择 `k` 个项目的无序子集的方法数。二项式系数可用简单公式计算：
+**二项式系数** 写作 `![b2-fig-5005.jpg](img/b2-fig-5005.jpg)` ，读作 “n 选 k”。它们是正整数，表示从 `n` 个项目的集合中不放回地选择 `k` 个项目的无序子集的方法数。二项式系数可用简单公式计算：
 
+```
 ![b2-fig-5006.jpg](img/b2-fig-5006.jpg)
-
  (B.5)
+```
 
 #### B.2.1 自相关
 
 连续函数 `f[z]` 的自相关 `r[τ]` 定义为：
 
+```
 ![b2-fig-5007.jpg](img/b2-fig-5007.jpg)
-
  (B.6)
+```
 
 其中 `τ` 为时间滞后。有时会以 `r[0]` 归一化，使得零时间滞后处的自相关为一。自相关函数衡量函数与自身随偏移量（即时间滞后）变化的相关性。如果函数缓慢且可预测地变化，则自相关函数将随着时间滞后从零增加而缓慢下降。如果函数快速且不可预测地变化，则它将迅速下降至零。
 
 ### B.3 向量、矩阵和张量
 
-
-
-
 #### 线性代数基础
 
-在机器学习中，向量 **x** ∈ ℝ^D 是一个包含 *D* 个数字的一维数组，我们假设它们按列组织。类似地，矩阵 **A** ∈ ℝ^(D₁×D₂) 是一个包含 *D₁* 行和 *D₂* 列的二维数组。张量 **T** ∈ ℝ^(D₁×D₂×...×D_N) 是一个 N 维数组。令人困惑的是，在 PyTorch 和 TensorFlow 等深度学习 API 中，这三种量都存储在称为“张量”的对象中。
+在机器学习中，向量 `**x** ∈ ℝ^D` 是一个包含 `D` 个数字的一维数组，我们假设它们按列组织。类似地，矩阵 `**A** ∈ ℝ^(D₁×D₂)` 是一个包含 `D₁` 行和 `D₂` 列的二维数组。张量 `**T** ∈ ℝ^(D₁×D₂×...×D_N)` 是一个 `N` 维数组。令人困惑的是，在 PyTorch 和 TensorFlow 等深度学习 API 中，这三种量都存储在称为“张量”的对象中。
 
 ##### B.3.1 转置
 
-矩阵 **A** ∈ ℝ^(D₁×D₂) 的转置 **A**^T 是通过绕主对角线反射形成的，使得第 *k* 列变为第 *k* 行，反之亦然。如果我们对矩阵乘积 **AB** 取转置，则取原矩阵的转置但反转顺序，即：
+矩阵 `**A** ∈ ℝ^(D₁×D₂)` 的转置 `**A**^T` 是通过绕主对角线反射形成的，使得第 `k` 列变为第 `k` 行，反之亦然。如果我们对矩阵乘积 `**AB**` 取转置，则取原矩阵的转置但反转顺序，即：
 
+```
 **A**^T **B**^T = (**BA**)^T
-
  (B.7)
+```
 
-列向量 **a** 的转置是行向量 **a**^T，反之亦然。
+列向量 `**a**` 的转置是行向量 `**a**^T`，反之亦然。
 
 ##### B.3.2 向量和矩阵范数
 
-对于向量 **z**，*ℓ_p* 范数定义为：
+对于向量 `**z**`，`*ℓ_p*` 范数定义为：
 
+```
 ‖**z**‖_p = (∑_i |z_i|^p)^(1/p)
-
  (B.8)
+```
 
-当 *p* = 2 时，这返回向量的长度，称为*欧几里得范数*。这是深度学习中最常用的情况，通常省略指数 *p*，欧几里得范数仅写为 ‖**z**‖。当 *p* = ∞ 时，算子返回向量中最大的绝对值。
+当 `p = 2` 时，这返回向量的长度，称为**欧几里得范数**。这是深度学习中最常用的情况，通常省略指数 `p`，欧几里得范数仅写为 `‖**z**‖`。当 `p = ∞` 时，算子返回向量中最大的绝对值。
 
-矩阵的范数计算方式类似。例如，矩阵 **Z** 的 *ℓ_2* 范数（称为*弗罗贝尼乌斯范数*）计算为：
+矩阵的范数计算方式类似。例如，矩阵 `**Z**` 的 `*ℓ_2*` 范数（称为**弗罗贝尼乌斯范数**）计算为：
 
+```
 ‖**Z**‖_F = √(∑_i ∑_j |Z_ij|²)
-
  (B.9)
+```
 
 ##### B.3.3 矩阵乘积
 
-两个矩阵 **A** ∈ ℝ^(D₁×D₂) 和 **B** ∈ ℝ^(D₂×D₃) 的乘积 **C** = **AB** 是第三个矩阵 **C** ∈ ℝ^(D₁×D₃)，其中：
+两个矩阵 `**A** ∈ ℝ^(D₁×D₂)` 和 `**B** ∈ ℝ^(D₂×D₃)` 的乘积 `**C** = **AB**` 是第三个矩阵 `**C** ∈ ℝ^(D₁×D₃)`，其中：
 
+```
 C_ij = ∑_k A_ik B_kj
-
  (B.10)
+```
 
 ##### B.3.4 向量点积
 
-两个向量 **a** ∈ ℝ^D 和 **b** ∈ ℝ^D 的点积 **a**^T **b** 是一个标量，定义为：
+两个向量 `**a** ∈ ℝ^D` 和 `**b** ∈ ℝ^D` 的点积 `**a**^T **b**` 是一个标量，定义为：
 
+```
 **a**^T **b** = ∑_i a_i b_i
-
  (B.11)
+```
 
-可以证明，点积与第一个向量的欧几里得范数、第二个向量的欧几里得范数以及它们之间的夹角 *θ* 成正比：
+可以证明，点积与第一个向量的欧几里得范数、第二个向量的欧几里得范数以及它们之间的夹角 `θ` 成正比：
 
-**a**^T **b** = ‖**a**‖ ‖**b**‖ cos *θ*
-
+```
+**a**^T **b** = ‖**a**‖ ‖**b**‖ cos θ
  (B.12)
+```
 
 ##### B.3.5 逆矩阵
 
-方阵 **A** 可能有也可能没有逆矩阵 **A**^−¹，使得 **A**^−¹**A** = **AA**^−¹ = **I**。如果矩阵没有逆，则称为*奇异矩阵*。如果我们对矩阵乘积 **AB** 求逆，则可以等价地对每个矩阵单独求逆并反转乘法顺序：
+方阵 `**A**` 可能有也可能没有逆矩阵 `**A**^−¹`，使得 `**A**^−¹**A** = **AA**^−¹ = **I`。如果矩阵没有逆，则称为**奇异矩阵**。如果我们对矩阵乘积 `**AB**` 求逆，则可以等价地对每个矩阵单独求逆并反转乘法顺序：
 
+```
 (**AB**)^−¹ = **B**^−¹ **A**^−¹
-
  (B.13)
+```
 
-通常，求 *D* × *D* 矩阵的逆需要 𝒪[D³] 次操作。然而，对于特殊类型的矩阵（包括对角、正交和三角矩阵，见第 B.4 节），求逆更高效。
+通常，求 `D × D` 矩阵的逆需要 `𝒪[D³]` 次操作。然而，对于特殊类型的矩阵（包括对角、正交和三角矩阵，见第 B.4 节），求逆更高效。
 
 ##### B.3.6 子空间
 
-考虑矩阵 **A** ∈ ℝ^(D₁×D₂)。如果矩阵的列数 *D₂* 大于行数 *D₁*（即矩阵为“竖向”），则乘积 **Ax** 无法到达 *D₁* 维输出空间中的所有可能位置。该乘积由 **A** 的 *D₂* 列加权 *D₂* 个 **x** 元素组成，只能到达由这些列张成的*线性子空间*。这称为矩阵的*列空间*。无法到达的剩余空间部分（即对所有 **x** 都有 **Ax** = 0 的部分）称为矩阵的*零空间*。
+考虑矩阵 `**A** ∈ ℝ^(D₁×D₂)`。如果矩阵的列数 `D₂` 大于行数 `D₁`（即矩阵为“竖向”），则乘积 `**Ax**` 无法到达 `D₁` 维输出空间中的所有可能位置。该乘积由 `**A**` 的 `D₂` 列加权 `D₂` 个 `**x**` 元素组成，只能到达由这些列张成的**线性子空间**。这称为矩阵的**列空间**。无法到达的剩余空间部分（即对所有 `**x**` 都有 `**Ax** = 0` 的部分）称为矩阵的**零空间**。
 
 ##### B.3.7 特征谱
 
-如果我们将单位圆上的 2D 点集乘以 2×2 矩阵 **A**，它们会映射到一个椭圆（图 B.3）。该椭圆长轴和短轴的半径（即最长和最短方向）对应于矩阵特征值 *λ₁* 和 *λ₂* 的大小。特征值也有符号，这与矩阵是否关于原点反射输入有关。同样的思想适用于高维。*D* 维球体通过 *D* × *D* 矩阵 **A** 映射到 *D* 维椭球体。该椭球体 *D* 个主轴的半径决定了特征值的大小。
+如果我们将单位圆上的 2D 点集乘以 2×2 矩阵 `**A`，它们会映射到一个椭圆（图 B.3）。该椭圆长轴和短轴的半径（即最长和最短方向）对应于矩阵特征值 `λ₁` 和 `λ₂` 的大小。特征值也有符号，这与矩阵是否关于原点反射输入有关。同样的思想适用于高维。`D` 维球体通过 `D × D` 矩阵 `**A**` 映射到 `D` 维椭球体。该椭球体 `D` 个主轴的半径决定了特征值的大小。
 
 ![图 B.3 特征值。当单位圆上的点 {**x**_i} 通过线性变换 **b** = **Ax** 变换为点时，它们被映射到一个椭圆。例如，单位圆上的浅蓝色点被映射到椭圆上的浅蓝色点。椭圆长轴（最长）的长度（长灰色箭头）是矩阵第一个特征值的大小，短轴（最短）的长度（短灰色箭头）是第二个特征值的大小。](img/b2-fig-0003.jpg)
 
-方阵的*谱范数*是最大绝对特征值。它捕捉了将矩阵应用于单位长度向量时幅度的最大可能变化。因此，它告诉我们变换的 Lipschitz 常数。特征值的集合有时称为*特征谱*，它告诉我们矩阵在所有方向上施加的缩放幅度。这些信息可以用矩阵的*行列式*和*迹*来总结。
+方阵的**谱范数**是最大绝对特征值。它捕捉了将矩阵应用于单位长度向量时幅度的最大可能变化。因此，它告诉我们变换的 Lipschitz 常数。特征值的集合有时称为**特征谱**，它告诉我们矩阵在所有方向上施加的缩放幅度。这些信息可以用矩阵的**行列式**和**迹**来总结。
 
 ##### B.3.8 行列式和迹
 
-每个方阵 **A** 都有一个与之相关的标量，称为行列式，记为 |**A**| 或 det[**A**]，它是特征值的乘积。因此，它与矩阵对不同输入施加的平均缩放有关。绝对行列式较小的矩阵在乘法时倾向于减小向量的范数。绝对行列式较大的矩阵倾向于增大范数。如果矩阵是*奇异*的，行列式将为零，并且当矩阵应用时，空间中至少有一个方向会被映射到原点。矩阵表达式的行列式遵循以下规则：
+每个方阵 `**A**` 都有一个与之相关的标量，称为行列式，记为 `|**A**|` 或 `det[**A**]`，它是特征值的乘积。因此，它与矩阵对不同输入施加的平均缩放有关。绝对行列式较小的矩阵在乘法时倾向于减小向量的范数。绝对行列式较大的矩阵倾向于增大范数。如果矩阵是**奇异**的，行列式将为零，并且当矩阵应用时，空间中至少有一个方向会被映射到原点。矩阵表达式的行列式遵循以下规则：
 
+```
 det(**AB**) = det(**A**) det(**B**)
 det(**A**^T) = det(**A**)
 det(**A**^−¹) = 1 / det(**A**)
-
  (B.14)
+```
 
 方阵的迹是对角线元素之和（矩阵本身不必是对角矩阵）或特征值之和。迹遵循以下规则：
 
+```
 tr(**A** + **B**) = tr(**A**) + tr(**B**)
 tr(**A**^T) = tr(**A**)
 tr(**AB**) = tr(**BA**)
-
  (B.15)
+```
 
-其中在最后一个关系中，迹仅对循环排列不变，因此通常 tr(**ABC**) ≠ tr(**BAC**)。
+其中在最后一个关系中，迹仅对循环排列不变，因此通常 `tr(**ABC**) ≠ tr(**BAC**)`。
 
 ### B.4 特殊类型的矩阵
 
-计算方阵 **A** ∈ ℝ^(D×D) 的逆的复杂度为 𝒪[D³]，行列式的计算也是如此。然而，对于具有特殊性质的某些矩阵，这些计算可以更高效。
+计算方阵 `**A** ∈ ℝ^(D×D)` 的逆的复杂度为 `𝒪[D³]`，行列式的计算也是如此。然而，对于具有特殊性质的某些矩阵，这些计算可以更高效。
 
 #### B.4.1 对角矩阵
 
-*对角矩阵* 在主对角线以外的位置全为零。如果这些对角线元素全非零，则逆矩阵也是对角矩阵，每个对角线元素 *d_ii* 替换为 1/*d_ii*。行列式是对角线值的乘积。一个特例是*单位矩阵*，其对角线上为 1。因此，它的逆也是单位矩阵，行列式为 1。
+**对角矩阵** 在主对角线以外的位置全为零。如果这些对角线元素全非零，则逆矩阵也是对角矩阵，每个对角线元素 `d_ii` 替换为 `1/d_ii`。行列式是对角线值的乘积。一个特例是**单位矩阵**，其对角线上为 1。因此，它的逆也是单位矩阵，行列式为 1。
 
 #### B.4.2 三角矩阵
 
-
-
-
-*下三角矩阵*仅在主对角线及其以下位置包含非零值。*上*三角矩阵仅在主对角线及其以上位置包含非零值。在这两种情况下，矩阵均可在 𝒪\[*D*²\] 时间内求逆（见问题 16.4），且行列式仅为对角线上值的乘积。
+**下三角矩阵**仅在主对角线及其以下位置包含非零值。**上**三角矩阵仅在主对角线及其以上位置包含非零值。在这两种情况下，矩阵均可在 `𝒪[D²]` 时间内求逆（见问题 16.4），且行列式仅为对角线上值的乘积。
 
 #### B.4.3 正交矩阵
 
-*正交矩阵*表示绕原点的旋转和反射，因此在图 B.3 中，圆将被映射为另一个单位半径的圆，但会发生旋转且可能被反射。因此，特征值的模必须均为 1，且行列式必须为 1 或 -1。正交矩阵的逆即为其转置，即 **A***^−*¹ = **A***^T*。
+**正交矩阵**表示绕原点的旋转和反射，因此在图 B.3 中，圆将被映射为另一个单位半径的圆，但会发生旋转且可能被反射。因此，特征值的模必须均为 1，且行列式必须为 1 或 -1。正交矩阵的逆即为其转置，即 `**A**^−¹ = **A**^T`。
 
 #### B.4.4 置换矩阵
 
 置换矩阵在每行和每列中恰好有一个非零元素，且这些元素的值均为 1。它是正交矩阵的一种特例，因此其逆矩阵即为其自身的转置，且其行列式恒为 1。顾名思义，它的作用是置换向量的元素。例如：
 
+```
 ![b2-fig-5027.jpg](img/b2-fig-5027.jpg)
-
  (B.16)
+```
 
 #### B.4.5 线性代数
 
 线性代数是研究线性函数的数学，其形式如下：
 
+```
 ![b2-fig-5028.jpg](img/b2-fig-5028.jpg)
-
  (B.17)
+```
 
-其中 *ϕ*[1], *…*, *ϕ[D]* 是定义该函数的参数。我们通常在右侧添加一个常数项 *ϕ*[0]。严格来说这是一个*仿射*函数，但在机器学习中通常被称为线性函数。我们全书沿用这一惯例。
+其中 `ϕ[1], …, ϕ[D]` 是定义该函数的参数。我们通常在右侧添加一个常数项 `ϕ[0]`。严格来说这是一个**仿射**函数，但在机器学习中通常被称为线性函数。我们全书沿用这一惯例。
 
 #### B.4.6 矩阵形式的线性方程
 
 考虑一组线性函数：
 
+```
 ![b2-fig-5029.jpg](img/b2-fig-5029.jpg)
-
  (B.18)
+```
 
 这些可以写成矩阵形式：
 
+```
 ![b2-fig-5030.jpg](img/b2-fig-5030.jpg)
-
  (B.19)
+```
 
-或简写为 **y** = ***ϕ***[0] + **Φz**，其中 ![b2-fig-5031.jpg](img/b2-fig-5031.jpg)。
+或简写为 `**y** = **ϕ**[0] + **Φz**`，其中 `![b2-fig-5031.jpg](img/b2-fig-5031.jpg)`。
 
 ### B.5 矩阵微积分
 
-本书的大多数读者都习惯这样一个概念：若函数 *y* = f\[*x*\]，我们可以计算导数 *∂y/∂x*，它表示当 *x* 发生微小变化时 *y* 如何变化。这一概念可推广至将向量 **x** 映射为标量 *y* 的函数 *y* = f\[**x**\]、将向量 **x** 映射为向量 **y** 的函数 **y** = **f**\[**x**\]、将矩阵 **X** 映射为向量 **y** 的函数 **y** = **f**\[**X**\] 等。*矩阵微积分*的规则帮助我们计算这些量的导数。导数采取以下形式：
+本书的大多数读者都习惯这样一个概念：若函数 `y = f[x]`，我们可以计算导数 `∂y/∂x`，它表示当 `x` 发生微小变化时 `y` 如何变化。这一概念可推广至将向量 `**x**` 映射为标量 `y` 的函数 `y = f[**x**]`、将向量 `**x**` 映射为向量 `**y**` 的函数 `**y** = **f**[**x**]`、将矩阵 `**X**` 映射为向量 `**y**` 的函数 `**y** = **f**[**X**]` 等。**矩阵微积分**的规则帮助我们计算这些量的导数。导数采取以下形式：
 
-*   对于函数 *y* = f\[**x**\]，其中 *y* ∈ ℝ 且 **x** ∈ ℝ*^D*，导数 *∂y/∂***x** 也是一个 *D* 维向量，其第 *i* 个元素计算为 *∂y/∂x[i]*。
-
-*   对于函数 **y** = **f**\[**x**\]，其中 ![b2-fig-5032.jpg](img/b2-fig-5032.jpg) 和 ![b2-fig-5033.jpg](img/b2-fig-5033.jpg)，导数 *∂***y***/∂***x** 是一个 *D[x]* × *D[y]* 矩阵，其元素 (*i*, *j*) 包含导数 *∂y[j]/∂x[i]*。这被称为*雅可比矩阵*，在其他文献中有时记为 ∇**[x]y**。
-
-*   对于函数 **y** = **f**\[**X**\]，其中 ![b2-fig-5034.jpg](img/b2-fig-5034.jpg) 和 ![b2-fig-5035.jpg](img/b2-fig-5035.jpg)，导数 *∂***y***/∂***X** 是一个包含导数 *∂y[i]/∂x[jk]* 的 3D 张量。
+*   对于函数 `y = f[**x**]`，其中 `y ∈ ℝ` 且 `**x** ∈ ℝ^D`，导数 `∂y/∂**x**` 也是一个 `D` 维向量，其第 `i` 个元素计算为 `∂y/∂x[i]`。
+*   对于函数 `**y** = **f**[**x**]`，其中 `![b2-fig-5032.jpg](img/b2-fig-5032.jpg)` 和 `![b2-fig-5033.jpg](img/b2-fig-5033.jpg)`，导数 `∂**y**/∂**x**` 是一个 `D[x] × D[y]` 矩阵，其元素 `(i, j)` 包含导数 `∂y[j]/∂x[i]`。这被称为**雅可比矩阵**，在其他文献中有时记为 `∇[**x**]y`。
+*   对于函数 `**y** = **f**[**X**]`，其中 `![b2-fig-5034.jpg](img/b2-fig-5034.jpg)` 和 `![b2-fig-5035.jpg](img/b2-fig-5035.jpg)`，导数 `∂**y**/∂**X**` 是一个包含导数 `∂y[i]/∂x[jk]` 的 3D 张量。
 
 这些矩阵和向量导数通常具有与标量情况表面上相似的形式。例如，我们有：
 
+```
 ![b2-fig-5036.jpg](img/b2-fig-5036.jpg)
-
  (B.20)
+```
 
 和
 
+```
 ![b2-fig-5037.jpg](img/b2-fig-5037.jpg)
-
  (B.21)
+```
 
 ## 附录 C 概率
 
@@ -10872,36 +10604,37 @@ tr(**AB**) = tr(**BA**)
 
 ### C.1 随机变量与概率分布
 
-*随机变量 x* 表示一个不确定的量。它可以是*离散*的（仅取特定值，例如整数）或*连续*的（在连续体上取任意值，例如实数）。若我们观察随机变量 *x* 的多个实例，它将取不同的值，而取不同值的相对倾向由*概率分布 Pr*(*x*) 描述。
+**随机变量** `x` 表示一个不确定的量。它可以是**离散**的（仅取特定值，例如整数）或**连续**的（在连续体上取任意值，例如实数）。若我们观察随机变量 `x` 的多个实例，它将取不同的值，而取不同值的相对倾向由**概率分布** `Pr(x)` 描述。
 
-对于离散变量，该分布将概率 *Pr*(*x* = *k*) ∈ \[0, 1\] 与每个潜在结果 *k* 关联，这些概率之和为 1。对于连续变量，*x* 定义域内的每个值 *a* 都关联一个非负的*概率密度 Pr*(*x* = *a*) ≥ 0，该概率密度函数（PDF）在该定义域上的积分必须为 1。该密度在任意点 *a* 处可以大于 1。从这里开始，我们假设随机变量是连续的。离散分布的思想完全相同，只是用求和代替积分。
+对于离散变量，该分布将概率 `Pr(x = k) ∈ [0, 1]` 与每个潜在结果 `k` 关联，这些概率之和为 1。对于连续变量，`x` 定义域内的每个值 `a` 都关联一个非负的**概率密度** `Pr(x = a) ≥ 0`，该概率密度函数（PDF）在该定义域上的积分必须为 1。该密度在任意点 `a` 处可以大于 1。从这里开始，我们假设随机变量是连续的。离散分布的思想完全相同，只是用求和代替积分。
 
 #### C.1.1 联合概率
 
-考虑有两个随机变量 *x* 和 *y* 的情况。*联合分布 Pr*(*x*, *y*) 告诉我们 *x* 和 *y* 取特定值组合的倾向（图 C.1a）。现在，每一对值 *x* = *a* 和 *y* = *b* 都关联一个非负概率密度 *Pr*(*x* = *a*, *y* = *b*)，且必须满足：
+考虑有两个随机变量 `x` 和 `y` 的情况。**联合分布** `Pr(x, y)` 告诉我们 `x` 和 `y` 取特定值组合的倾向（图 C.1a）。现在，每一对值 `x = a` 和 `y = b` 都关联一个非负概率密度 `Pr(x = a, y = b)`，且必须满足：
 
+```
 ![b3-fig-5001.jpg](img/b3-fig-5001.jpg)
-
  (C.1)
+```
 
 ![图 C.1 联合分布与边缘分布。a) 联合分布 Pr(x, y) 捕捉变量 x 和 y 取不同值组合的倾向。此处概率密度用颜色图表示，更亮的位置概率更高。例如，观测到组合 x = 6, y = 6 的可能性远低于组合 x = 5, y = 0。b) 变量 x 的边缘分布 Pr(x) 可通过对 y 积分恢复。c) 变量 y 的边缘分布 Pr(y) 可通过对 x 积分恢复。](img/b3-fig-0001.jpg)
 
-图 C.1 联合分布与边缘分布。a) 联合分布 *Pr*(*x*, *y*) 捕捉变量 *x* 和 *y* 取不同值组合的倾向。此处概率密度用颜色图表示，更亮的位置概率更高。例如，组合 *x* = 6*, y* = 6 被观测到的可能性远低于组合 *x* = 5, *y* = 0。b) 变量 *x* 的边缘分布 *Pr*(*x*) 可通过对 *y* 积分恢复。c) 变量 *y* 的边缘分布 *Pr*(*y*) 可通过对 *x* 积分恢复。
+图 C.1 联合分布与边缘分布。a) 联合分布 `Pr(x, y)` 捕捉变量 `x` 和 `y` 取不同值组合的倾向。此处概率密度用颜色图表示，更亮的位置概率更高。例如，组合 `x = 6, y = 6` 被观测到的可能性远低于组合 `x = 5, y = 0`。b) 变量 `x` 的边缘分布 `Pr(x)` 可通过对 `y` 积分恢复。c) 变量 `y` 的边缘分布 `Pr(y)` 可通过对 `x` 积分恢复。
 
-这一思想可推广至两个以上变量，因此 *x*, *y* 和 *z* 的联合密度记为 *Pr*(*x*, *y*, *z*)。有时我们将多个随机变量存储在向量 **x** 中，并将它们的联合密度记为 *Pr*(**x**)。进一步地，我们可以将两个向量 **x** 和 **y** 中所有变量的联合密度记为 *Pr*(**x**, **y**)。
+这一思想可推广至两个以上变量，因此 `x`, `y` 和 `z` 的联合密度记为 `Pr(x, y, z)`。有时我们将多个随机变量存储在向量 `**x**` 中，并将它们的联合密度记为 `Pr(**x**)`。进一步地，我们可以将两个向量 `**x**` 和 `**y**` 中所有变量的联合密度记为 `Pr(**x**, **y**)`。
 
 #### C.1.2 边缘化
 
-若我们知道两个变量的联合分布 *Pr*(*x*, *y*)，可通过对另一变量积分来恢复*边缘*分布 *Pr*(*x*) 和 *Pr*(*y*)（图 C.1b-c）：
+若我们知道两个变量的联合分布 `Pr(x, y)`，可通过对另一变量积分来恢复**边缘**分布 `Pr(x)` 和 `Pr(y)`（图 C.1b-c）：
 
+```
 ![b3-fig-5002.jpg](img/b3-fig-5002.jpg)
-
  (C.2)
+```
 
-此过程称为*边缘化*，其含义是我们计算一个变量的分布，*而不管*另一个变量取了什么值。边缘化的思想可推广至高维，因此若我们有联合分布 *Pr*(*x*, *y*, *z*)，可通过对 *y* 积分来恢复联合分布 *Pr*(*x*, *z*)。
+此过程称为**边缘化**，其含义是我们计算一个变量的分布，*而不管*另一个变量取了什么值。边缘化的思想可推广至高维，因此若我们有联合分布 `Pr(x, y, z)`，可通过对 `y` 积分来恢复联合分布 `Pr(x, z)`。
 
 #### C.1.3 条件概率与似然
-
 
 
 
@@ -10921,7 +10654,7 @@ tr(**AB**) = tr(**BA**)
 
 当我们将条件概率 `Pr(x|y)` 视为 `x` 的函数时，其总和必须为 1。当我们将同一量 `Pr(x|y)` 视为 `y` 的函数时，它被称为给定 `y` 时 `x` 的*似然*，且不必求和为 1。
 
-#### C.1.4 贝叶斯规则
+### C.1.4 贝叶斯规则
 
 由公式 C.3 和 C.4，我们得到联合概率 `Pr(x, y)` 的两个表达式：
 
@@ -10939,7 +10672,7 @@ tr(**AB**) = tr(**BA**)
 
 贝叶斯规则中的每一项都有特定名称。项 `Pr(y|x)` 是给定 `x` 时 `y` 的*似然*，项 `Pr(x)` 是 `x` 的*先验概率*。分母 `Pr(y)` 称为*证据*，左侧 `Pr(x|y)` 称为给定 `y` 时 `x` 的*后验概率*。该公式将先验 `Pr(x)`（观察 `y` 之前我们对 `x` 的了解）映射为后验 `Pr(x|y)`（观察 `y` 之后我们对 `x` 的了解）。
 
-#### C.1.5 独立性
+### C.1.5 独立性
 
 如果随机变量 `y` 的值无法告诉我们关于 `x` 的任何信息，反之亦然，我们称 `x` 和 `y` *独立*，并可写为 `Pr(x|y) = Pr(x)` 和 `Pr(y|x) = Pr(y)`。由此可知，所有条件分布 `Pr(y|x = •)` 相同，条件分布 `Pr(x|y = •)` 也相同。
 
@@ -10953,7 +10686,7 @@ tr(**AB**) = tr(**BA**)
 
 ![Figure C.3 Independence. a) When two variables x and y are independent, the joint distribution factors into the product of marginal distributions, so Pr(x, y) = Pr(x)Pr(y). Independence implies that knowing the value of one variable tells us nothing about the other. b-c) Accordingly, all of the conditional distributions Pr(x|y = •) are the same and are equal to the marginal distribution Pr(x).](img/b3-fig-0003.jpg)
 
-### C.2 期望
+## C.2 期望
 
 考虑函数 `f[x]` 和定义在 `x` 上的概率分布 `Pr(x)`。随机变量 `x` 的函数 `f[•]` 关于概率分布 `Pr(x)` 的*期望值*定义为：
 
@@ -10975,7 +10708,7 @@ tr(**AB**) = tr(**BA**)
 (C.10)
 ```
 
-#### C.2.1 期望操作规则
+### C.2.1 期望操作规则
 
 操作期望有四条规则：
 
@@ -11015,15 +10748,11 @@ tr(**AB**) = tr(**BA**)
 
 其中 `A` 为常数矩阵，`f[x]` 为返回向量的向量 `x` 的函数，`g[y]` 为返回向量的向量 `y` 的函数。
 
-#### C.2.2 均值、方差和协方差
+### C.2.2 均值、方差和协方差
 
 对于某些函数 `f[•]` 的选择，期望会被赋予特殊名称。这些量常用于总结复杂分布的性质。例如，当 `f[x] = x` 时，所得期望 `E[x]` 称为*均值*，记为 `μ`。它是分布中心的度量。类似地，与均值的期望平方偏差 `E[(x - μ)²]` 称为*方差*，记为 `σ²`。它是分布分散程度的度量。*标准差 σ* 是方差的正平方根。它也度量分布的分散程度，但优点是与变量 `x` 具有相同的单位。
 
-
-
-
-
-##### 协方差与正态概率分布
+#### 协方差与正态概率分布
 
 顾名思义，两个变量 `x` 和 `y` 的*协方差* `𝔼[(x − μ[x])(y − μ[y])]` 衡量了它们协同变化的程度。此处 `μ[x]` 和 `μ[y]` 分别代表变量 `x` 和 `y` 的均值。当两个变量的方差都很大，且 `x` 的值倾向于随着 `y` 的值增加而增加时，协方差将会很大。
 
@@ -11031,7 +10760,7 @@ tr(**AB**) = tr(**BA**)
 
 存储在列向量 `x ∈ ℝ^D` 中的多个随机变量的协方差可以用 `D × D 协方差矩阵` `𝔼[(x − μ[x])(x − μ[x])^T]` 来表示，其中向量 `μ[x]` 包含均值 `𝔼[x]`。该矩阵位置 `(i, j)` 处的元素代表变量 `x[i]` 和 `x[j]` 之间的协方差。
 
-###### C.2.3 方差恒等式
+##### C.2.3 方差恒等式
 
 期望规则（附录 C.2.1）可用于证明以下恒等式，它允许我们以不同形式书写方差：
 
@@ -11051,7 +10780,7 @@ tr(**AB**) = tr(**BA**)
 
 其中我们在第 1 行和第 2 行之间使用了规则 3，在第 2 行和第 3 行之间使用了规则 1 和 2，并在剩余两行中使用了定义 `μ = 𝔼[x]`。
 
-###### C.2.4 标准化
+##### C.2.4 标准化
 
 将随机变量的均值设为零、方差设为一称为*标准化*。这是通过以下变换实现的：
 
@@ -11103,11 +10832,11 @@ tr(**AB**) = tr(**BA**)
 
  (C.20)
 
-### C.3 正态概率分布
+## C.3 正态概率分布
 
 本书中使用的概率分布包括伯努利分布（图 5.6）、类别分布（图 5.9）、泊松分布（图 5.15）、冯·米塞斯分布（图 5.13）和高斯混合模型（图 5.14 和 17.1）。然而，机器学习中最常见的分布是正态分布或高斯分布。
 
-#### C.3.1 一元正态分布
+### C.3.1 一元正态分布
 
 标量变量 `x` 上的一元正态分布（图 5.3）有两个参数：均值 `μ` 和方差 `σ²`，定义如下：
 
@@ -11127,7 +10856,7 @@ tr(**AB**) = tr(**BA**)
 
 确保函数积分为一，从而成为一个有效的分布。由此论证可知，均值 `μ` 控制钟形曲线中心的位置，方差的平方根 `σ`（标准差）控制钟形曲线的宽度。
 
-#### C.3.2 多元正态分布
+### C.3.2 多元正态分布
 
 多元正态分布将正态分布推广至描述长度为 `D` 的向量量 `x` 的概率。它由一个 `D × 1 均值向量` `μ` 和一个对称正定 `D × D 协方差矩阵` `Σ` 定义：
 
@@ -11159,7 +10888,7 @@ tr(**AB**) = tr(**BA**)
 
 图 C.4 二元正态分布。a–b) 当协方差矩阵是对角矩阵的倍数时，等高线为圆形，我们称之为球形协方差。c–d) 当协方差为任意对角矩阵时，等高线为轴对齐的椭圆，我们称之为对角协方差。e–f) 当协方差为任意对称正定矩阵时，等高线为一般椭圆，我们称之为完整协方差。
 
-#### C.3.3 两个正态分布的乘积
+### C.3.3 两个正态分布的乘积
 
 根据以下关系，两个正态分布的乘积与第三个正态分布成正比：
 
@@ -11169,7 +10898,7 @@ tr(**AB**) = tr(**BA**)
 
 这可以通过展开指数项并配方面轻松证明（见问题 18.5）。
 
-#### C.3.4 变量变换
+### C.3.4 变量变换
 
 当 `x` 的多元正态分布的均值是第二个变量 `y` 的线性函数 `Ay + b` 时，这与另一个关于 `y` 的正态分布成正比，其中均值是 `x` 的线性函数：
 
@@ -11181,51 +10910,55 @@ tr(**AB**) = tr(**BA**)
 
 乍一看，这种关系相当晦涩，但 图 C.5 展示了标量 `x` 和 `y` 的情况，这很容易理解。与前一个关系一样，这可以通过展开指数项中的二次乘积并配方来证明，使其成为关于 `y` 的分布（见问题 18.4）。
 
-
-
-
-
 ![图 C.5 变量变换。a) 条件分布 `Pr(x|y)` 是一个方差恒定且均值线性依赖于 `y` 的正态分布。青色分布展示了 `y = −0.2` 时的一个示例。b) 这与条件概率 `Pr(y|x)` 成正比，后者是一个方差恒定且均值线性依赖于 `x` 的正态分布。青色分布展示了 `x = −3` 时的一个示例。](img/b3-fig-0005.jpg)
 
 图 C.5 变量变换。a) 条件分布 `Pr(x|y)` 是一个方差恒定且均值线性依赖于 `y` 的正态分布。青色分布展示了 `y = −0.2` 时的一个示例。b) 这与条件概率 `Pr(y|x)` 成正比，后者是一个方差恒定且均值线性依赖于 `x` 的正态分布。青色分布展示了 `x = −3` 时的一个示例。
 
-### C.4 采样
+## C.4 采样
 
 要从单变量分布 `Pr(x)` 中采样，我们首先计算累积分布 `F[x]`（即 `Pr(x)` 的积分）。然后我们从范围 `[0, 1]` 上的均匀分布中抽取一个样本 `z*`，并将其与累积分布的逆函数进行对比，从而创建样本 `x*`：
 
+```
 ![b3-fig-5033.jpg](img/b3-fig-5033.jpg)
+```
 
 (C.26)
 
-#### C.4.1 从正态分布采样
+### C.4.1 从正态分布采样
 
 上述方法可用于从单变量标准正态分布生成样本 `x*`。然后，利用公式 C.18，可以创建一个均值为 `μ`、方差为 `σ²` 的正态分布样本。类似地，通过独立采样 `D` 个单变量标准正态变量，可以创建一个来自 D 维多元标准分布的样本 `x**`。随后，利用公式 C.20，可以创建一个均值为 `μ`、协方差为 `Σ` 的多元正态分布样本。
 
-#### C.4.2 祖先采样
+### C.4.2 祖先采样
 
 当联合分布可以分解为一系列条件概率时，我们可以使用 `祖先采样` 来生成样本。基本思路是先生成根变量的样本，然后基于该实例化从后续的条件分布中采样。这一过程称为 `祖先采样`，通过一个示例最容易理解。考虑三个变量 `x`、`y` 和 `z` 的联合分布，其中该分布分解为：
 
+```
 ![b3-fig-5034.jpg](img/b3-fig-5034.jpg)
+```
 
 (C.27)
 
 要从该联合分布中采样，我们首先从 `Pr(x)` 中抽取样本 `x*`。然后从 `Pr(y|x*)` 中抽取样本 `y*`。最后从 `Pr(z|y*)` 中抽取样本 `z*`。
 
-### C.5 概率分布间的距离
+## C.5 概率分布间的距离
 
 监督学习可以表述为最小化由模型隐含的概率分布与由样本隐含的离散概率分布之间的距离（第 5.7 节）。无监督学习通常可以表述为最小化真实样本的概率分布与来自模型的数据分布之间的距离。在这两种情况下，我们都需要一种衡量两个概率分布间距离的度量。本节探讨几种不同分布间距离度量的性质（另见图 15.8 中关于 Wasserstein 距离或土方距离的讨论）。
 
-#### C.5.1 Kullback-Leibler 散度
+### C.5.1 Kullback-Leibler 散度
 
 概率分布 `p(x)` 和 `q(x)` 之间最常用的距离度量是 `Kullback-Leibler` 散度或 KL 散度，定义如下：
 
+```
 ![b3-fig-5035.jpg](img/b3-fig-5035.jpg)
+```
 
 (C.28)
 
 该距离总是大于或等于零，这可以通过注意到 `−log[y] ≥ 1 − y`（图 C.6）轻松证明，因此：
 
+```
 ![b3-fig-5036.jpg](img/b3-fig-5036.jpg)
+```
 
 (C.29)
 
@@ -11233,9 +10966,11 @@ tr(**AB**) = tr(**BA**)
 
 图 C.6 负对数的下界。函数 `1 − y` 始终小于函数 `−log[y]`。此关系用于证明 Kullback-Leibler 散度总是大于或等于零。
 
+
+
 如果存在 `q(x)` 为零但 `p(x)` 非零的情况，则 KL 散度为无穷大。当我们基于此距离最小化函数时，这可能会导致问题。
 
-#### C.5.2 Jensen-Shannon 散度
+### C.5.2 Jensen-Shannon 散度
 
 KL 散度不对称（即 `D[KL][p(x)‖q(x)] ≠ D[KL][q(x)‖p(x)]`）。Jensen-Shannon 散度是一种通过构造具有对称性的距离度量：
 
@@ -11245,7 +10980,7 @@ KL 散度不对称（即 `D[KL][p(x)‖q(x)] ≠ D[KL][q(x)‖p(x)]`）。Jensen
 
 它是 `p(x)` 和 `q(x)` 到这两个分布平均值的散度的均值。
 
-#### C.5.3 Fréchet 距离
+### C.5.3 Fréchet 距离
 
 两个分布 `p(x)` 和 `q(x)` 之间的 Fréchet 距离 `D[FR]` 由下式给出：
 
@@ -11255,7 +10990,7 @@ KL 散度不对称（即 `D[KL][p(x)‖q(x)] ≠ D[KL][q(x)‖p(x)]`）。Jensen
 
 它是累积概率曲线之间最大距离的度量。
 
-#### C.5.4 正态分布间的距离
+### C.5.4 正态分布间的距离
 
 通常我们想要计算两个多元正态分布之间的距离，它们的均值分别为 `μ[1]` 和 `μ[2]`，协方差分别为 `Σ[1]` 和 `Σ[2]`。在这种情况下，各种距离度量都可以写成闭式解。
 
@@ -11292,12 +11027,6 @@ KL 散度可以计算为：
 9. Abu-El-Haija, S., Perozzi, B., Kapoor, A., Alipourfard, N., Lerman, K., Harutyunyan, H., Ver Steeg, G., & Galstyan, A. (2019). MixHop: Higher-order graph convolutional architectures via sparsified neighborhood mixing. *国际机器学习会议*, 21–29. 263
 
 10. Adler, J., & Lunz, S. (2018). Banach Wasserstein GAN. *神经信息处理系统*, *31*, 6755–6764. 299
-
-
-
-
-
-## 参考文献
 
 11. Agarwal, R., Schuurmans, D., & Norouzi, M. (2020). An optimistic perspective on offline reinforcement learning. *International Conference on Machine Learning*, 104–114. 398
 
@@ -11351,6 +11080,10 @@ KL 散度可以计算为：
 
 36. Arkin, R. C. (2008a). Governing lethal behavior: Embedding ethics in a hybrid deliberative/reactive robot architecture—Part I: Motivation and philosophy. *ACM/IEEE International Conference on Human Robot Interaction*, 121–128. 424
 
+
+
+## 参考文献
+
 37. Arkin, R. C. (2008b). Governing lethal behavior: Embedding ethics in a hybrid deliberative/reactive robot architecture—Part II: Formalization for ethical control. *Conference on Artificial General Intelligence*, 51–62. 424
 
 38. Arnab, A., Dehghani, M., Heigold, G., Sun, C., Lučić, M., & Schmid, C. (2021). ViVit: A video vision transformer. *IEEE/CVF International Conference on Computer Vision*, 6836–6846. 238
@@ -11380,12 +11113,6 @@ KL 散度可以计算为：
 50. Bachlechner, T., Majumder, B. P., Mao, H., Cottrell, G., & McAuley, J. (2021). ReZero is all you need: Fast convergence at large depth. *Uncertainty in Artificial Intelligence*, 1352–1361. 238
 
 51. Bahdanau, D., Cho, K., & Bengio, Y. (2015). Neural machine translation by jointly learning to align and translate. *International Conference on Learning Representations*. 233, 235
-
-
-
-
-
-## 参考文献
 
 52. Bahri, Y., Kadmon, J., Pennington, J., Schoenholz, S. S., Sohl-Dickstein, J., & Ganguli, S. (2020). Statistical mechanics of deep learning. *Annual Review of Condensed Matter Physics*, *11*, 501–528. 409, 410
 
@@ -11447,6 +11174,10 @@ KL 散度可以计算为：
 
 81. Berard, H., Gidel, G., Almahairi, A., Vincent, P., & Lacoste-Julien, S. (2019). A closer look at the optimization landscapes of generative adversarial networks. *arXiv:1906.04848*. 299
 
+
+
+## 参考文献
+
 82. Berger, P. (2019). MTA's initial foray into facial recognition at high speed is a bust. April 07, 2019. <https://www.wsj.com/articles/mtasinitial-foray-into-facial-recognition-at-high-speed-is-a-bust-11554642000>. 427
 
 83. Bergstra, J., & Bengio, Y. (2012). Random search for hyper-parameter optimization. *Journal of Machine Learning Research*, *13*(10), 281–305. 136
@@ -11476,12 +11207,6 @@ KL 散度可以计算为：
 95. Bjorck, N., Gomes, C. P., Selman, B., & Weinberger, K. Q. (2018). Understanding batch normalization. *Neural Information Processing Systems*, *31*, 7705–7716. 204
 
 96. Blum, A. L., & Rivest, R. L. (1992). Training a 3-node neural network is NP-complete. *Neural Networks*, *5*(1), 117–127. 401
-
-
-
-
-
-## 参考文献
 
 97. Blundell, C., Cornebise, J., Kavukcuoglu, K., & Wierstra, D. (2015). Weight uncertainty in neural network. *International Conference on Machine Learning*, 1613–1622. 159
 
@@ -11545,6 +11270,10 @@ KL 散度可以计算为：
 
 127. Buschjäger, S., & Morik, K. (2021). There is no double-descent in random forests. *arXiv:2111.04409*. 134
 
+
+
+## 参考文献
+
 128. Cai, T., Luo, S., Xu, K., He, D., Liu, T.-y., & Wang, L. (2021). GraphNorm: A principled approach to accelerating graph neural network training. *International Conference on Machine Learning*, 1204–1215. 265
 
 129. Calimeri, F., Marzullo, A., Stamile, C., & Terracina, G. (2017). Biomedical data augmentation using adversarial neural networks. *International Conference on Artificial Neural Networks*, 626–634. 159
@@ -11570,12 +11299,6 @@ KL 散度可以计算为：
 139. Chami, I., Abu-El-Haija, S., Perozzi, B., Ré, C., & Murphy, K. (2020). Machine learning on graphs: A model and comprehensive taxonomy. *arXiv:2005.03675*. 261
 
 140. Chang, B., Chen, M., Haber, E., & Chi, E. H. (2019a). AntisymmetricRNN: A dynamical system view on recurrent neural networks. *International Conference on Learning Representations*. 323
-
-
-
-
-
-## 参考文献
 
 141. Chang, B., Meng, L., Haber, E., Ruthotto, L., Begert, D., & Holtham, E. (2018). 任意深度残差神经网络的可逆架构。*AAAI 人工智能会议*，2811–2818。 323
 
@@ -11655,17 +11378,15 @@ KL 散度可以计算为：
 
 179. Chu, X., Tian, Z., Wang, Y., Zhang, B., Ren, H., Wei, X., Xia, H., & Shen, C. (2021)。Twins：重审视觉 Transformer 中空间注意力的设计。*神经信息处理系统会议*，*34*，9355–9366。 238
 
-
-
-
-
-## 参考文献
-
 180. Chung, H., Sim, B., & Ye, J. C. (2022). Come-closer-diffuse-faster: Accelerating conditional diffusion models for inverse problems through stochastic contraction. *IEEE/CVF Computer Vision & Pattern Recognition*, 12413–12422. 369
 
 181. Chung, H., & Ye, J. C. (2022). Score-based diffusion models for accelerated MRI. *Medical Image Analysis*, *80*, 102479. 369
 
 182. Chung, J., Gulcehre, C., Cho, K., & Bengio, Y. (2014). Empirical evaluation of gated recurrent neural networks on sequence modeling. *Deep Learning and Representation Workshop*. 233
+
+
+
+## 参考文献
 
 183. Chung, J., Kastner, K., Dinh, L., Goel, K., Courville, A. C., & Bengio, Y. (2015). A recurrent latent variable model for sequential data. *Neural Information Processing Systems*, *28*, 2980–2988. 344, 345
 
@@ -11749,12 +11470,6 @@ KL 散度可以计算为：
 
 223. Deng, J., Dong, W., Socher, R., Li, L.-J., Li, K., & Fei-Fei, L. (2009). ImageNet: A large-scale hierarchical image database. *IEEE Computer Vision & Pattern Recognition*, 248–255. 181, 272
 
-
-
-
-
-## 参考文献
-
 224. Denton, E. L., Chintala, S., Fergus, R., 等 (2015). 使用对抗网络的拉普拉斯金字塔的深度生成图像模型. *神经信息处理系统*, *28*, 1486–1494. 300, 301
 
 225. Devlin, J., Chang, M., Lee, K., & Toutanova, K. (2019). BERT: 用于语言理解的深度双向变换器的预训练. *ACL 人类语言技术*, 4171–4186. 159, 234
@@ -11764,6 +11479,10 @@ KL 散度可以计算为：
 227. DeVries, T., & Taylor, G. W. (2017b). 使用 Cutout 改进卷积神经网络的正则化. *arXiv:1708.04552*. 183
 
 228. Dhariwal, P., & Nichol, A. (2021). 扩散模型在图像合成上胜过 GAN. *神经信息处理系统*, *34*, 8780–8794. 367, 368, 370
+
+
+
+## 参考文献
 
 229. Ding, M., Xiao, B., Codella, N., Luo, P., Wang, J., & Yuan, L. (2022). DaViT: 双重注意力视觉变换器. *欧洲计算机视觉会议*, 74–92. 238
 
@@ -11839,9 +11558,6 @@ KL 散度可以计算为：
 
 265. Eslami, S., Heess, N., Weber, T., Tassa, Y., Szepesvari, D., Hinton, G. E., 等 (2016). 关注、推理、重复：使用生成模型快速理解场景. *神经信息处理系统*, *29*, 3225–3233. 344
 
-
-
-
 266. Eslami, S. A., Jimenez Rezende, D., Besse, F., Viola, F., Morcos, A. S., Garnelo, M., Ruderman, A., Rusu, A. A., Danihelka, I., Gregor, K., et al. (2018). Neural scene representation and rendering. *Science*, *360*(6394), 1204–1210. 344
 
 267. Esling, P., Masuda, N., Bardet, A., Despres, R., et al. (2019). Universal audio synthesizer control with normalizing flows. *International Conference on Digital Audio Effects*. 322
@@ -11877,6 +11593,10 @@ KL 散度可以计算为：
 282. Fang, Y., Liao, B., Wang, X., Fang, J., Qi, J., Wu, R., Niu, J., & Liu, W. (2021). You only look at one sequence: Rethinking transformer in vision through object detection. *Neural Information Processing Systems*, *34*, 26183–26197. 238
 
 283. Farnia, F., & Ozdaglar, A. (2020). Do GANs always have Nash equilibria? *International Conference on Machine Learning*, 3029–3039. 299
+
+
+
+## 参考文献
 
 284. Fawzi, A., Balog, M., Huang, A., Hubert, T., Romera-Paredes, B., Barekatain, M., Novikov, A., R Ruiz, F. J., Schrittwieser, J., Swirszcz, G., et al. (2022). Discovering faster matrix multiplication algorithms with reinforcement learning. *Nature*, *610*(7930), 47–53. 396
 
@@ -11922,11 +11642,6 @@ KL 散度可以计算为：
 
 305. Fujimoto, S., Hoof, H., & Meger, D. (2018). Addressing function approximation error in actorcritic methods. *International Conference on Machine Learning*, 1587–1596. 397
 
-
-
-
-## 参考文献
-
 306. Fujimoto, S., Meger, D., & Precup, D. (2019). Off-policy deep reinforcement learning without exploration. *International Conference on Machine Learning*, 2052–2062. 398
 
 307. Fukushima, K. (1969). Visual feature extraction by a multilayered network of analog threshold elements. *IEEE Transactions on Systems Science and Cybernetics*, *5*(4), 322–333. 37
@@ -11966,6 +11681,10 @@ KL 散度可以计算为：
 324. Gidaris, S., Singh, P., & Komodakis, N. (2018). Unsupervised representation learning by predicting image rotations. *International Conference on Learning Representations*. 159
 
 325. Gilmer, J., Schoenholz, S. S., Riley, P. F., Vinyals, O., & Dahl, G. E. (2017). Neural message passing for quantum chemistry. *International Conference on Machine Learning*, 1263–1272. 262
+
+
+
+## 参考文献
 
 326. Girdhar, R., Carreira, J., Doersch, C., & Zisserman, A. (2019). Video action transformer network. *IEEE/CVF Computer Vision & Pattern Recognition*, 244–253. 238
 
@@ -12015,12 +11734,6 @@ KL 散度可以计算为：
 
 349. Grattarola, D., Zambon, D., Bianchi, F. M., & Alippi, C. (2022). Understanding pooling in graph neural networks. *IEEE Transactions on Neural Networks and Learning Systems*. 265
 
-
-
-
-
-## 参考文献
-
 350. Green, B. (2019). “Good” isn't good enough. *NeurIPS Workshop on AI for Social Good*. 433
 
 351. Green, B. (2022). Escaping the impossibility of fairness: From formal to substantive algorithmic fairness. *Philosophy & Technology*, *35*(90). 422
@@ -12060,6 +11773,10 @@ KL 散度可以计算为：
 368. Hamilton, W. L. (2020). Graph representation learning. *Synthesis Lectures on Artifical Intelligence and Machine Learning*, *14*(3), 1–159. 15, 261
 
 369. Hamilton, W. L., Ying, R., & Leskovec, J. (2017b). Representation learning on graphs: Methods and applications. *IEEE Data Engineering Bulletin*, *40*(3), 52–74. 263
+
+
+
+## 参考文献
 
 370. Han, S., Mao, H., & Dally, W. J. (2016). Deep compression: Compressing deep neural networks with pruning, trained quantization and Huffman coding. *International Conference on Learning Representations*. 414, 415
 
@@ -12105,10 +11822,6 @@ KL 散度可以计算为：
 
 391. Heikkilä, M. (2022). *Why business is booming for military AI startups*. MIT Technology Review, July 7 2022. <https://www.technologyreview.com/2022/07/07/1055526/why-business-is-booming-for-military-ai-startups/>. 13, 427
 
-
-
-
-
 392. Henaff, M., Bruna, J., & LeCun, Y. (2015). 基于图结构数据的深度卷积网络。*arXiv:1506.05163*。 262
 
 393. Henderson, P., Li, X., Jurafsky, D., Hashimoto, T., Lemley, M. A., & Liang, P. (2023). 基础模型与合理使用。*arXiv:2303.15715*。 428
@@ -12133,7 +11846,7 @@ KL 散度可以计算为：
 
 403. Hindupur, A. (2022). GAN 动物园。GitHub，于 2023 年 1 月 17 日检索。[`github.com/hindupuravinash/the-gan-zoo`](https://github.com/hindupuravinash/the-gan-zoo)。 299
 
-404. Hinton, G., Srivastava, N., & Swersky, K. (2012a). 机器学习神经网络：第 6a 讲 – 小批量梯度下降概述。[`www.cs.toronto.edu/~tijmen/csc321/slides/lecture\_slides\_lec6.pdf`](https://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf)。 93
+404. Hinton, G., Srivastava, N., & Swersky, K. (2012a). 机器学习神经网络：第 6a 讲 – 小批量梯度下降概述。[`www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf`](https://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf)。 93
 
 405. Hinton, G., & van Camp, D. (1993). 通过最小化权重描述长度来保持神经网络简单。*Computational learning theory*，5–13。 159
 
@@ -12162,6 +11875,10 @@ KL 散度可以计算为：
 417. Hoffman, M. D., & Johnson, M. J. (2016). ELBO 手术：分割变分证据下界的另一种方法。*NIPS Workshop in Advances in Approximate Bayesian Inference*，2。 346
 
 418. Hoffmann, J., Borgeaud, S., Mensch, A., Buchatskaya, E., Cai, T., Rutherford, E., Casas, D. d. L., Hendricks, L. A., Welbl, J., Clark, A., et al. (2023). 训练计算最优大语言模型。*arXiv:2203.15556*。 234
+
+
+
+## 参考文献
 
 419. Hofstadter, D. R. (1995). 不可根除的伊丽莎效应及其危险（前言 4）。*Fluid Concepts and Creative Analogies: Computer Models Of The Fundamental Mechanisms Of Thought*，155–168。Basic Books。 428
 
@@ -12194,12 +11911,6 @@ KL 散度可以计算为：
 433. Hu, H., Zhang, Z., Xie, Z., & Lin, S. (2019). 用于图像识别的局部关系网络。*IEEE/CVF International Conference on Computer Vision*，3464–3473。 238
 
 434. Hu, J., Shen, L., & Sun, G. (2018b). Squeeze-and-Excitation 网络。*IEEE/CVF Computer Vision & Pattern Recognition*，7132–7141。 181, 235
-
-
-
-
-
-## 参考文献
 
 435. Hu, W., Pang, J., Liu, X., Tian, D., Lin, C.-W., & Vetro, A. (2022). Graph signal processing for geometric data and beyond: Theory and applications. *IEEE Transactions on Multimedia*, *24*, 3961–3977. 242
 
@@ -12259,6 +11970,10 @@ KL 散度可以计算为：
 
 463. Jacobsen, J.-H., Smeulders, A., & Oyallon, E. (2018). i-RevNet: Deep invertible networks. *International Conference on Learning Representations*. 322, 323
 
+
+
+## 参考文献
+
 464. Jaini, P., Kobyzev, I., Yu, Y., & Brubaker, M. A. (2020). Tails of Lipschitz triangular flows. *International Conference on Machine Learning*, 4673–4681. 324
 
 465. Jaini, P., Selby, K. A., & Yu, Y. (2019). Sum-of-squares polynomial flow. *International Conference on Machine Learning*, 3009–3018. 323
@@ -12282,12 +11997,6 @@ KL 散度可以计算为：
 474. Jin, L., Doshi-Velez, F., Miller, T., Schwartz, L., & Schuler, W. (2019). Unsupervised learning of PCFGs with normalizing flow. *Meeting of the Association for Computational Linguistics*, 2442–2452. 322
 
 475. Jing, L., & Tian, Y. (2020). Self-supervised visual feature learning with deep neural networks: A survey. *IEEE Transactions on Pattern Analysis & Machine Intelligence*, *43*(11), 4037–4058. 159
-
-
-
-
-
-## 参考文献
 
 476. Jobin, A., Ienca, M., & Vayena, E. (2019). The global landscape of AI ethics guidelines. *Nature Machine Intelligence*, *1*, 389–399. 420
 
@@ -12353,6 +12062,10 @@ KL 散度可以计算为：
 
 507. Kingma, D. P., & Ba, J. (2015). Adam: A method for stochastic optimization. *International Conference on Learning Representations*. 93, 237
 
+
+
+## 参考文献
+
 508. Kingma, D. P., & Dhariwal, P. (2018). Glow: Generative flow with invertible 1x1 convolutions. *Neural Information Processing Systems*, *31*, 10236–10245. 319, 322, 323
 
 509. Kingma, D. P., Salimans, T., Jozefowicz, R., Chen, X., Sutskever, I., & Welling, M. (2016). Improved variational inference with inverse autoregressive flow. *Neural Information Processing Systems*, *29*, 4736–4744. 323, 344
@@ -12380,10 +12093,6 @@ KL 散度可以计算为：
 520. Klambauer, G., Unterthiner, T., Mayr, A., & Hochreiter, S. (2017). Self-normalizing neural networks. *Neural Information Processing Systems*, vol. 30, 972–981. 38, 113
 
 521. Kleinberg, J., Mullainathan, S., & Raghavan, M. (2017). Inherent trade-offs in the fair determination of risk scores. *Innovations in Theoretical Computer Science Conference*, vol. 67, 1–23. 422
-
-
-
-
 
 522. Kleinberg, R., Li, Y., & Yuan, Y. (2018). An alternative view: When does SGD escape local minima? *International Conference on Machine Learning*, 2703–2712. 411
 
@@ -12443,6 +12152,10 @@ KL 散度可以计算为：
 
 550. LaCroix, T. (2022). The linguistic blind spot of value-aligned agency, natural and artificial. *arXiv:2207.00868*. 421
 
+
+
+## 参考文献
+
 551. LaCroix, T. (2023). *Artificial Intelligence and the Value-Alignment Problem: A Philosophical Introduction*. [`value-alignment.github.io`](https://value-alignment.github.io). 422, 435
 
 552. LaCroix, T., Geil, A., & O’Connor, C. (2021). The dynamics of retraction in epistemic networks. *Philosophy of Science*, *88*(3), 415–438. 432
@@ -12470,12 +12183,6 @@ KL 散度可以计算为：
 563. LeCun, Y., Bengio, Y., & Hinton, G. (2015). Deep learning. *Nature*, *521*(7553), 436–444. 52
 
 564. LeCun, Y., Boser, B., Denker, J., Henderson, D., Howard, R., Hubbard, W., & Jackel, L. (1989a). Handwritten digit recognition with a back-propagation network. *Neural Information Processing Systems*, *2*, 396–404. 180, 181
-
-
-
-
-
-## 参考文献
 
 565. LeCun, Y., Boser, B., Denker, J. S., Henderson, D., Howard, R. E., Hubbard, W., & Jackel, L. D. (1989b). Backpropagation applied to hand-written zip code recognition. *Neural Computation*, *1*(4), 541–551. 180
 
@@ -12541,6 +12248,10 @@ KL 散度可以计算为：
 
 596. Liang, S., & Srikant, R. (2016). Why deep neural networks for function approximation? *International Conference on Learning Representations*. 53, 417
 
+
+
+## 参考文献
+
 597. Lillicrap, T. P., Hunt, J. J., Pritzel, A., Heess, N., Erez, T., Tassa, Y., Silver, D., & Wierstra, D. (2016). Continuous control with deep reinforcement learning. *International Conference on Learning Representations*. 397
 
 598. Lin, K., Li, D., He, X., Zhang, Z., & Sun, M.-T. (2017a). Adversarial ranking for language generation. *Neural Information Processing Systems*, *30*, 3155–3165. 299
@@ -12564,9 +12275,6 @@ KL 散度可以计算为：
 607. Lipton, Z. C., & Tripathi, S. (2017). Precise recovery of latent vectors from generative adversarial networks. *International Conference on Learning Representations*. 301
 
 608. Liu, G., Reda, F. A., Shih, K. J., Wang, T.-C., Tao, A., & Catanzaro, B. (2018a). Image inpainting for irregular holes using partial convolutions. *European Conference on Computer Vision*, 85–100. 181
-
-
-
 
 609. Liu, H., Simonyan, K., & Yang, Y. (2019a). DARTS: 可微架构搜索。*International Conference on Learning Representations*。414
 
@@ -12650,12 +12358,11 @@ KL 散度可以计算为：
 
 649. Ma, Y.-A., Chen, T., & Fox, E. (2015)。随机梯度 MCMC 的完整配方。*Neural Information Processing Systems*，*28*，2917–2925。159
 
-650. Maaløe, L., Sønderby, C. K., Sønderby, S. K., & Winther, O. (2016)。辅助深度生成模型。*International Conference on Machine Learning*，1445–1453。344, 345
-
-
 
 
 ## 参考文献
+
+650. Maaløe, L., Sønderby, C. K., Sønderby, S. K., & Winther, O. (2016)。辅助深度生成模型。*International Conference on Machine Learning*，1445–1453。344, 345
 
 651. Maas, A. L., Hannun, A. Y., & Ng, A. Y. (2013). Rectifier nonlinearities improve neural network acoustic models. *ICML Workshop on Deep Learning for Audio, Speech, and Language Processing*. 38
 
@@ -12740,8 +12447,6 @@ KL 散度可以计算为：
 691. Mishkin, D., & Matas, J. (2016). All you need is a good init. *International Conference on Learning Representations*. 113
 
 692. Mitchell, M., Forrest, S., & Holland, J. H. (1992). The royal road for genetic algorithms: Fitness landscapes and GA performance. *European Conference on Artificial Life*. 421
-
-
 
 
 
@@ -12833,12 +12538,6 @@ KL 散度可以计算为：
 
 735. Nie, W., Guo, B., Huang, Y., Xiao, C., Vahdat, A., & Anandkumar, A. (2022). 用于对抗净化的扩散模型。 *International Conference on Machine Learning*, 16805–16827. 369
 
-
-
-
-
-## 参考文献
-
 736. Nix, D. A., & Weigend, A. S. (1994). Estimating the mean and variance of the target probability distribution. *IEEE 国际神经网络会议*, 55–60. 73
 
 737. Noble, S. (2018). *压迫的算法*. 纽约: 纽约大学出版社. 433
@@ -12861,7 +12560,11 @@ KL 散度可以计算为：
 
 746. Odena, A. (2019). Open questions about generative adversarial networks. Distill, <https://distill.pub/2019/gan-open-problems>. 299
 
-747. Odena, A., Dumoulin, V., & Olah, C. (2016). Deconvolution and checkerboard artifacts. Distill, <https://distill.pub/2016/deconv-checkerboard/>. 181
+
+
+## 参考文献
+
+747. Odena, A., Dumoulin, V., & Olah, C. (2016). Deconvolution and checkerboard artifacts. *Distill*, <https://distill.pub/2016/deconv-checkerboard/>. 181
 
 748. Odena, A., Olah, C., & Shlens, J. (2017). Conditional image synthesis with auxiliary classifier GANs. *国际机器学习会议*, 2642–2651. 290, 301
 
@@ -12923,12 +12626,6 @@ KL 散度可以计算为：
 
 777. Pezeshki, M., Mitra, A., Bengio, Y., & Lajoie, G. (2022). Multi-scale feature learning dynamics: Insights for double descent. *国际机器学习会议*, 17669–17690. 134
 
-
-
-
-
-## 参考文献
-
 778. Pham, T., Tran, T., Phung, D., & Venkatesh, S. (2017). Column networks for collective classification. *AAAI Conference on Artificial Intelligence*, 2485–2491. 263
 
 779. Phuong, M., & Hutter, M. (2022). Formal algorithms for transformers. *Technical Report, DeepMind*. 233
@@ -12960,6 +12657,10 @@ KL 散度可以计算为：
 792. Provilkov, I., Emelianenko, D., & Voita, E. (2020). BPE-Dropout: Simple and effective subword regularization. *Meeting of the Association for Computational Linguistics*, 1882–1892. 234
 
 793. Qi, G.-J. (2020). Loss-sensitive generative adversarial networks on Lipschitz densities. *International Journal of Computer Vision*, *128*(5), 1118–1140. 299
+
+
+
+## 参考文献
 
 794. Qi, J., Du, J., Siniscalchi, S. M., Ma, X., & Lee, C.-H. (2020). On mean absolute error for deep neural network based vector-to-vector regression. *IEEE Signal Processing Letters*, *27*, 1485–1489. 73
 
@@ -13013,12 +12714,6 @@ KL 散度可以计算为：
 
 819. Redmon, J., Divvala, S., Girshick, R., & Farhadi, A. (2016). You only look once: Unified, realtime object detection. *IEEE/CVF Computer Vision & Pattern Recognition*, 779–788. 178, 184
 
-
-
-
-
-## 参考文献
-
 820. Reed, S., Akata, Z., Yan, X., Logeswaran, L., Schiele, B., & Lee, H. (2016a). Generative adversarial text to image synthesis. *International Conference on Machine Learning*, 1060–1069. 301
 
 821. Reed, S. E., Akata, Z., Mohan, S., Tenka, S., Schiele, B., & Lee, H. (2016b). Learning what and where to draw. *Neural Information Processing Systems*, *29*, 217–225. 301
@@ -13052,6 +12747,10 @@ KL 散度可以计算为：
 835. Rissanen, J. (1983). A universal prior for integers and estimation by minimum description length. *The Annals of Statistics*, *11*(2), 416–431. 411
 
 836. Rissanen, S., Heinonen, M., & Solin, A. (2022). Generative modelling with inverse heat dissipation. *arXiv:2206.13397*. 369
+
+
+
+## 参考文献
 
 837. Rives, A., Meier, J., Sercu, T., Goyal, S., Lin, Z., Liu, J., Guo, D., Ott, M., Zitnick, C. L., Ma, J., et al. (2021). Biological structure and function emerge from scaling unsupervised learning to 250 million protein sequences. *Proceedings of the National Academy of Sciences*, *118*(15). 234
 
@@ -13103,12 +12802,6 @@ KL 散度可以计算为：
 
 861. Saha, S., Singh, G., Sapienza, M., Torr, P. H., & Cuzzolin, F. (2016). Deep learning for detecting multiple space-time action tubes in videos. *British Machine Vision Conference*. 182
 
-
-
-
-
-## 参考文献
-
 862. Saharia, C., Chan, W., Chang, H., Lee, C., Ho, J., Salimans, T., Fleet, D., & Norouzi, M. (2022a). Palette: Image-to-image diffusion models. *ACM SIGGRAPH*. 8, 369
 
 863. Saharia, C., Chan, W., Saxena, S., Li, L., Whang, J., Denton, E., Ghasemipour, S. K. S., Ayan, B. K., Mahdavi, S. S., Lopes, R. G., et al. (2022b). Photorealistic text-to-image diffusion models with deep language understanding. *arXiv:2205.11487*. 366, 368, 369, 371
@@ -13138,6 +12831,10 @@ KL 散度可以计算为：
 875. Sauer, A., Schwarz, K., & Geiger, A. (2022). StyleGAN-XL: Scaling StyleGAN to large diverse datasets. *ACM SIGGRAPH*. 10
 
 876. Scarselli, F., Gori, M., Tsoi, A. C., Hagenbuchner, M., & Monfardini, G. (2008). The graph neural network model. *IEEE Transactions on Neural Networks*, *20*(1), 61–80. 262
+
+
+
+## 参考文献
 
 877. Schaul, T., Quan, J., Antonoglou, I., & Silver, D. (2016). Prioritized experience replay. *International Conference on Learning Representations*. 396
 
@@ -13191,12 +12888,6 @@ KL 散度可以计算为：
 
 902. Shen, X., Tian, X., Liu, T., Xu, F., & Tao, D. (2017). Continuous dropout. *IEEE Transactions on Neural Networks and Learning Systems*, *29*(9), 3926–3937. 158
 
-
-
-
-
-## 参考文献
-
 903. Shen, Y., Gu, J., Tang, X., & Zhou, B. (2020b). Interpreting the latent space of GANs for semantic face editing. *IEEE/CVF Computer Vision & Pattern Recognition*, 9243–9252. 300
 
 904. Shi, W., Caballero, J., Huszár, F., Totz, J., Aitken, A. P., Bishop, R., Rueckert, D., & Wang, Z. (2016). Real-time single image and video super-resolution using an efficient sub-pixel convolutional neural network. *IEEE/CVF Computer Vision & Pattern Recognition*, 1874–1883. 182
@@ -13228,6 +12919,10 @@ KL 散度可以计算为：
 917. Smith, M., & Miller, S. (2022). The ethical application of biometric facial recognition technology. *AI & Society*, *37*, 167–175. 426
 
 918. Smith, S., Elsen, E., & De, S. (2020). On the generalization benefit of noise in stochastic gradient descent. *International Conference on Machine Learning*, 9058–9067. 157
+
+
+
+## 参考文献
 
 919. Smith, S., Patwary, M., Norick, B., LeGresley, P., Rajbhandari, S., Casper, J., Liu, Z., Prabhumoye, S., Zerveas, G., Korthikanti, V., et al. (2022). Using DeepSpeed and Megatron to train Megatron-Turing NLG 530B, a large-scale generative language model. *arXiv:2201.11990*. 234
 
@@ -13278,10 +12973,6 @@ KL 散度可以计算为：
 942. Strubell, E., Ganesh, A., & McCallum, A. (2019). Energy and policy considerations for deep learning in NLP. *Meeting of the Association for Computational Linguistics*, 3645–3650. 429
 
 943. Strubell, E., Ganesh, A., & McCallum, A. (2020). Energy and policy considerations for modern deep learning research. *Meeting of the Association for Computational Linguistics*, 13693–13696. 429
-
-
-
-
 
 944. Su, H., Jampani, V., Sun, D., Gallo, O., Learned-Miller, E., & Kautz, J. (2019a). 像素自适应卷积神经网络。 *IEEE/CVF 计算机视觉与模式识别会议*, 11166–11175. 183
 
@@ -13343,6 +13034,10 @@ KL 散度可以计算为：
 
 973. Teru, K., Denis, E., & Hamilton, W. (2020). 基于子图推理的归纳关系预测。 *国际机器学习会议*, 9448–9457. 265
 
+
+
+## 参考文献
+
 974. Tetlock, P. E., & Gardner, D. (2016). *超级预测：预测的艺术与科学*。多伦多：Signal, McClelland & Stewart。 435
 
 975. Tewari, A., Elgharib, M., Bharaj, G., Bernard, F., Seidel, H.-P., Pérez, P., Zollhofer, M., & Theobalt, C. (2020). StyleRig：为 StyleGAN 绑定骨架以实现对肖像图像的 3D 控制。 *IEEE/CVF 计算机视觉与模式识别会议*, 6142–6151. 300
@@ -13374,10 +13069,6 @@ KL 散度可以计算为：
 988. Torralba, A., Freeman, W., & Isola, P. (2024). *计算机视觉基础*。MIT 出版社。 15
 
 989. Touati, A., Satija, H., Romoff, J., Pineau, J., & Vincent, P. (2020). 通过乘法正规化流实现的随机化价值函数。 *人工智能不确定性会议*, 422–432. 322
-
-
-
-
 
 ## 参考文献
 
@@ -13467,95 +13158,87 @@ KL 散度可以计算为：
 
 
 
-
-
 ## 参考文献
 
-1032. Waibel, A., Hanazawa, T., Hinton, G., Shikano, K., & Lang, K. J. (1989). 使用时延神经网络进行音素识别。 *IEEE Transactions on Acoustics, Speech, and Signal Processing* (*IEEE 声学、语音与信号处理汇刊*), *37*(3), 328–339. 181
+1032. Waibel, A., Hanazawa, T., Hinton, G., Shikano, K., & Lang, K. J. (1989). 使用时延神经网络进行音素识别。*IEEE Transactions on Acoustics, Speech, and Signal Processing* (*IEEE 声学、语音与信号处理汇刊*), *37*(3), 328–339. 181
 
-1033. Wallach, W., Allen, C., & Smit, I. (2008). 机器道德：为建模人类道德机能而采用的自下而上和自上而下方法。 *AI & Society*, *22*(4), 565–582. 424
+1033. Wallach, W., Allen, C., & Smit, I. (2008). 机器道德：为建模人类道德机能而采用的自下而上和自上而下方法。*AI & Society*, *22*(4), 565–582. 424
 
-1034. Wan, L., Zeiler, M., Zhang, S., Le Cun, Y., & Fergus, R. (2013). 使用 DropConnect 对神经网络进行正则化。 *International Conference on Machine Learning* (*国际机器学习会议*), 1058–1066. 158
+1034. Wan, L., Zeiler, M., Zhang, S., Le Cun, Y., & Fergus, R. (2013). 使用 DropConnect 对神经网络进行正则化。*International Conference on Machine Learning* (*国际机器学习会议*), 1058–1066. 158
 
-1035. Wan, Z., Zhang, J., Chen, D., & Liao, J. (2021). 基于 Transformer 的高保真多元化图像补全。 *IEEE/CVF International Conference on Computer Vision* (*IEEE/CVF 国际计算机视觉会议*), 4692–4701. 238
+1035. Wan, Z., Zhang, J., Chen, D., & Liao, J. (2021). 基于 Transformer 的高保真多元化图像补全。*IEEE/CVF International Conference on Computer Vision* (*IEEE/CVF 国际计算机视觉会议*), 4692–4701. 238
 
-1036. Wang, A., Pruksachatkun, Y., Nangia, N., Singh, A., Michael, J., Hill, F., Levy, O., & Bowman, S. (2019a). SuperGLUE：面向通用语言理解系统的更具挑战性的基准。 *Neural Information Processing Systems* (*神经信息处理系统会议*), *32*, 3261–3275. 234
+1036. Wang, A., Pruksachatkun, Y., Nangia, N., Singh, A., Michael, J., Hill, F., Levy, O., & Bowman, S. (2019a). SuperGLUE：面向通用语言理解系统的更具挑战性的基准。*Neural Information Processing Systems* (*神经信息处理系统会议*), *32*, 3261–3275. 234
 
-1037. Wang, A., Singh, A., Michael, J., Hill, F., Levy, O., & Bowman, S. R. (2019b). GLUE：面向自然语言理解的多任务基准与分析平台。 *International Conference on Learning Representations* (*国际学习表征会议*). 234
+1037. Wang, A., Singh, A., Michael, J., Hill, F., Levy, O., & Bowman, S. R. (2019b). GLUE：面向自然语言理解的多任务基准与分析平台。*International Conference on Learning Representations* (*国际学习表征会议*). 234
 
-1038. Wang, B., Shang, L., Lioma, C., Jiang, X., Yang, H., Liu, Q., & Simonsen, J. G. (2020a). 关于 BERT 中的位置嵌入。 *International Conference on Learning Representations* (*国际学习表征会议*). 236
+1038. Wang, B., Shang, L., Lioma, C., Jiang, X., Yang, H., Liu, Q., & Simonsen, J. G. (2020a). 关于 BERT 中的位置嵌入。*International Conference on Learning Representations* (*国际学习表征会议*). 236
 
-1039. Wang, C.-Y., Bochkovskiy, A., & Liao, H.-Y. M. (2022a). Yolov7：可训练的免费包集合为实时目标检测器设立了新的最先进水平。 *arXiv:2207.02696*. 184
+1039. Wang, C.-Y., Bochkovskiy, A., & Liao, H.-Y. M. (2022a). Yolov7：可训练的免费包集合为实时目标检测器设立了新的最先进水平。*arXiv:2207.02696*. 184
 
-1040. Wang, P. Z., & Wang, W. Y. (2019). 用于文本建模的变分 Wasserstein 自编码器上的黎曼正规化流。 *ACL Human Language Technologies* (*ACL 人类语言技术会议*), 284–294. 324
+1040. Wang, P. Z., & Wang, W. Y. (2019). 用于文本建模的变分 Wasserstein 自编码器上的黎曼正规化流。*ACL Human Language Technologies* (*ACL 人类语言技术会议*), 284–294. 324
 
-1041. Wang, S., Li, B. Z., Khabsa, M., Fang, H., & Ma, H. (2020b). Linformer：具有线性复杂度的自注意力机制。 *arXiv:2006.04768*. 237
+1041. Wang, S., Li, B. Z., Khabsa, M., Fang, H., & Ma, H. (2020b). Linformer：具有线性复杂度的自注意力机制。*arXiv:2006.04768*. 237
 
-1042. Wang, T., Liu, M., Zhu, J., Yakovenko, N., Tao, A., Kautz, J., & Catanzaro, B. (2018a). 视频到视频合成。 *Neural Information Processing Systems* (*神经信息处理系统会议*), vol. 31, 1152–1164. 299
+1042. Wang, T., Liu, M., Zhu, J., Yakovenko, N., Tao, A., Kautz, J., & Catanzaro, B. (2018a). 视频到视频合成。*Neural Information Processing Systems* (*神经信息处理系统会议*), vol. 31, 1152–1164. 299
 
-1043. Wang, T.-C., Liu, M.-Y., Zhu, J.-Y., Tao, A., Kautz, J., & Catanzaro, B. (2018b). 基于条件 GAN 的高分辨率图像合成与语义操纵。 *IEEE/CVF Computer Vision & Pattern Recognition* (*IEEE/CVF 计算机视觉与模式识别会议*), 8798–8807. 300, 301
+1043. Wang, T.-C., Liu, M.-Y., Zhu, J.-Y., Tao, A., Kautz, J., & Catanzaro, B. (2018b). 基于条件 GAN 的高分辨率图像合成与语义操纵。*IEEE/CVF Computer Vision & Pattern Recognition* (*IEEE/CVF 计算机视觉与模式识别会议*), 8798–8807. 300, 301
 
-1044. Wang, W., Xie, E., Li, X., Fan, D.-P., Song, K., Liang, D., Lu, T., Luo, P., & Shao, L. (2021). 金字塔视觉 Transformer：一种无需卷积即可进行稠密预测的通用骨干网络。 *IEEE/CVF International Conference on Computer Vision* (*IEEE/CVF 国际计算机视觉会议*), 568–578. 238
+1044. Wang, W., Xie, E., Li, X., Fan, D.-P., Song, K., Liang, D., Lu, T., Luo, P., & Shao, L. (2021). 金字塔视觉 Transformer：一种无需卷积即可进行稠密预测的通用骨干网络。*IEEE/CVF International Conference on Computer Vision* (*IEEE/CVF 国际计算机视觉会议*), 568–578. 238
 
-1045. Wang, W., Yao, L., Chen, L., Lin, B., Cai, D., He, X., & Liu, W. (2022b). Crossformer：一种基于跨尺度注意力的通用视觉 Transformer。 *International Conference on Learning Representations* (*国际学习表征会议*). 238
+1045. Wang, W., Yao, L., Chen, L., Lin, B., Cai, D., He, X., & Liu, W. (2022b). Crossformer：一种基于跨尺度注意力的通用视觉 Transformer。*International Conference on Learning Representations* (*国际学习表征会议*). 238
 
-1046. Wang, X., Girshick, R., Gupta, A., & He, K. (2018c). 非局部神经网络。 *IEEE/CVF Computer Vision & Pattern Recognition* (*IEEE/CVF 计算机视觉与模式识别会议*), 7794–7803. 238
+1046. Wang, X., Girshick, R., Gupta, A., & He, K. (2018c). 非局部神经网络。*IEEE/CVF Computer Vision & Pattern Recognition* (*IEEE/CVF 计算机视觉与模式识别会议*), 7794–7803. 238
 
-1047. Wang, X., Wang, S., Liang, X., Zhao, D., Huang, J., Xu, X., Dai, B., & Miao, Q. (2022c). 深度强化学习：综述。 *IEEE Transactions on Neural Networks and Learning Systems* (*IEEE 神经网络与学习系统汇刊*). 396
+1047. Wang, X., Wang, S., Liang, X., Zhao, D., Huang, J., Xu, X., Dai, B., & Miao, Q. (2022c). 深度强化学习：综述。*IEEE Transactions on Neural Networks and Learning Systems* (*IEEE 神经网络与学习系统汇刊*). 396
 
-1048. Wang, Y., & Kosinski, M. (2018). 深度神经网络在根据面部图像检测性取向方面比人类更准确。 *Journal of Personality and Social Psychology* (*人格与社会心理学杂志*), *114*(2), 246–257. 430
+1048. Wang, Y., & Kosinski, M. (2018). 深度神经网络在根据面部图像检测性取向方面比人类更准确。*Journal of Personality and Social Psychology* (*人格与社会心理学杂志*), *114*(2), 246–257. 430
 
-1049. Wang, Y., Mohamed, A., Le, D., Liu, C., Xiao, A., Mahadeokar, J., Huang, H., Tjandra, A., Zhang, X., Zhang, F., et al. (2020c). 用于混合语音识别的基于 Transformer 的声学建模。 *IEEE International Conference on Acoustics, Speech and Signal Processing* (*IEEE 国际声学、语音与信号处理会议*), 6874–6878. 234
+1049. Wang, Y., Mohamed, A., Le, D., Liu, C., Xiao, A., Mahadeokar, J., Huang, H., Tjandra, A., Zhang, X., Zhang, F., et al. (2020c). 用于混合语音识别的基于 Transformer 的声学建模。*IEEE International Conference on Acoustics, Speech and Signal Processing* (*IEEE 国际声学、语音与信号处理会议*), 6874–6878. 234
 
-1050. Wang, Z., Bapst, V., Heess, N., Mnih, V., Munos, R., Kavukcuoglu, K., & de Freitas, N. (2017). 带经验回放的样本高效 Actor-Critic。 *International Conference on Learning Representations* (*国际学习表征会议*). 398
+1050. Wang, Z., Bapst, V., Heess, N., Mnih, V., Munos, R., Kavukcuoglu, K., & de Freitas, N. (2017). 带经验回放的样本高效 Actor-Critic。*International Conference on Learning Representations* (*国际学习表征会议*). 398
 
-1051. Wang, Z., Schaul, T., Hessel, M., van Hasselt, H., Lanctot, M., & Freitas, N. (2016). 用于深度强化学习的决斗网络架构。 *International Conference on Machine Learning* (*国际机器学习会议*), 1995–2003. 397
+1051. Wang, Z., Schaul, T., Hessel, M., van Hasselt, H., Lanctot, M., & Freitas, N. (2016). 用于深度强化学习的决斗网络架构。*International Conference on Machine Learning* (*国际机器学习会议*), 1995–2003. 397
 
-1052. Ward, P. N., Smofsky, A., & Bose, A. J. (2019). 利用正规化流策略改进 Soft-Actor-Critic 中的探索。 *ICML Workshop on Invertible Neural Networks and Normalizing Flows* (*ICML 可逆神经网络与正规化流研讨会*). 322
+1052. Ward, P. N., Smofsky, A., & Bose, A. J. (2019). 利用正规化流策略改进 Soft-Actor-Critic 中的探索。*ICML Workshop on Invertible Neural Networks and Normalizing Flows* (*ICML 可逆神经网络与正规化流研讨会*). 322
 
-1053. Watkins, C. J., & Dayan, P. (1992). Q-learning。 *Machine learning* (*机器学习*), *8*(3-4), 279–292. 396
+1053. Watkins, C. J., & Dayan, P. (1992). Q-learning。*Machine learning* (*机器学习*), *8*(3-4), 279–292. 396
 
 1054. Watkins, C. J. C. H. (1989). *Learning from delayed rewards* (*从延迟奖励中学习*). Ph.D., University of Cambridge. 396
 
-1055. Wehenkel, A., & Louppe, G. (2019). 无约束单调神经网络。 *Neural Information Processing Systems* (*神经信息处理系统会议*), *32*, 1543–1553. 323
+1055. Wehenkel, A., & Louppe, G. (2019). 无约束单调神经网络。*Neural Information Processing Systems* (*神经信息处理系统会议*), *32*, 1543–1553. 323
 
-1056. Wei, J., Ren, X., Li, X., Huang, W., Liao, Y., Wang, Y., Lin, J., Jiang, X., Chen, X., & Liu, Q. (2019). NEZHA：面向中文语言理解的神经语境化表征。 *arXiv:1909.00204*. 236
+1056. Wei, J., Ren, X., Li, X., Huang, W., Liao, Y., Wang, Y., Lin, J., Jiang, X., Chen, X., & Liu, Q. (2019). NEZHA：面向中文语言理解的神经语境化表征。*arXiv:1909.00204*. 236
 
-1057. Wei, J., & Zou, K. (2019). EDA：用于提升文本分类任务性能的简易数据增强技术。 *ACL Empirical Methods in Natural Language Processing* (*ACL 自然语言处理实证方法会议*), 6382–6388. 160
+1057. Wei, J., & Zou, K. (2019). EDA：用于提升文本分类任务性能的简易数据增强技术。*ACL Empirical Methods in Natural Language Processing* (*ACL 自然语言处理实证方法会议*), 6382–6388. 160
 
-1058. Weidinger, L., Uesato, J., Rauh, M., Griffin, C., Huang, P.-S., Mellor, J., Glaese, A., Cheng, M., Balle, B., Kasirzadeh, A., Biles, C., Brown, S., Kenton, Z., Hawkins, W., Stepleton, T., Birhane, A., Hendricks, L. A., Rimell, L., Isaac, W., Haas, J., Legassick, S., Irving, G., & Gabriel, I. (2022). 语言模型带来的风险分类学。 *ACM Conference on Fairness, Accountability, and Transparency* (*ACM 公平性、问责制与透明度会议*), 214–229. 428
+1058. Weidinger, L., Uesato, J., Rauh, M., Griffin, C., Huang, P.-S., Mellor, J., Glaese, A., Cheng, M., Balle, B., Kasirzadeh, A., Biles, C., Brown, S., Kenton, Z., Hawkins, W., Stepleton, T., Birhane, A., Hendricks, L. A., Rimell, L., Isaac, W., Haas, J., Legassick, S., Irving, G., & Gabriel, I. (2022). 语言模型带来的风险分类学。*ACM Conference on Fairness, Accountability, and Transparency* (*ACM 公平性、问责制与透明度会议*), 214–229. 428
 
-1059. Weisfeiler, B., & Leman, A. (1968). 图的规范形式归约及其所涉及的代数。 *NTI, Series*, *2*(9), 12–16. 264
+1059. Weisfeiler, B., & Leman, A. (1968). 图的规范形式归约及其所涉及的代数。*NTI, Series*, *2*(9), 12–16. 264
 
-1060. Welling, M., & Teh, Y. W. (2011). 通过随机梯度朗之万动力学进行贝叶斯学习。 *International Conference on Machine Learning* (*国际机器学习会议*), 681–688. 159
+1060. Welling, M., & Teh, Y. W. (2011). 通过随机梯度朗之万动力学进行贝叶斯学习。*International Conference on Machine Learning* (*国际机器学习会议*), 681–688. 159
 
-1061. Wen, Y.-H., Yang, Z., Fu, H., Gao, L., Sun, Y., & Liu, Y.-J. (2021). 基于生成流的自回归风格化运动合成。 *IEEE/CVF Computer Vision & Pattern Recognition* (*IEEE/CVF 计算机视觉与模式识别会议*), 13612–13621. 322
+1061. Wen, Y.-H., Yang, Z., Fu, H., Gao, L., Sun, Y., & Liu, Y.-J. (2021). 基于生成流的自回归风格化运动合成。*IEEE/CVF Computer Vision & Pattern Recognition* (*IEEE/CVF 计算机视觉与模式识别会议*), 13612–13621. 322
 
-1062. Wenzel, F., Roth, K., Veeling, B. S., Świątkowski, J., Tran, L., Mandt, S., Snoek, J., Salimans, T., Jenatton, R., & Nowozin, S. (2020a). 深度神经网络中的贝叶斯后验究竟有多好？ *International Conference on Machine Learning* (*国际机器学习会议*), 10248–10259. 159
+1062. Wenzel, F., Roth, K., Veeling, B. S., Świątkowski, J., Tran, L., Mandt, S., Snoek, J., Salimans, T., Jenatton, R., & Nowozin, S. (2020a). 深度神经网络中的贝叶斯后验究竟有多好？*International Conference on Machine Learning* (*国际机器学习会议*), 10248–10259. 159
 
-1063. Wenzel, F., Snoek, J., Tran, D., & Jenatton, R. (2020b). 用于鲁棒性和不确定性量化的超参数集成。 *Neural Information Processing Systems* (*神经信息处理系统会议*), *33*, 6514–6527. 158
+1063. Wenzel, F., Snoek, J., Tran, D., & Jenatton, R. (2020b). 用于鲁棒性和不确定性量化的超参数集成。*Neural Information Processing Systems* (*神经信息处理系统会议*), *33*, 6514–6527. 158
 
-1064. Werbos, P. (1974). 超越回归：行为科学中预测与分析的新工具。 *Ph.D. dissertation, Harvard University* (*哈佛大学博士学位论文*). 113
+1064. Werbos, P. (1974). 超越回归：行为科学中预测与分析的新工具。*Ph.D. dissertation, Harvard University* (*哈佛大学博士学位论文*). 113
 
-1065. White, T. (2016). 采样生成网络。 *arXiv:1609.04468*. 342, 344
+1065. White, T. (2016). 采样生成网络。*arXiv:1609.04468*. 342, 344
 
-1066. Whitney, H. (1932). 同构图与图的连通性。 *Hassler Whitney Collected Papers* (*Hassler Whitney 文集*), 61–79. 264
+1066. Whitney, H. (1932). 同构图与图的连通性。*Hassler Whitney Collected Papers* (*Hassler Whitney 文集*), 61–79. 264
 
-1067. Wightman, R., Touvron, H., & Jégou, H. (2021). ResNet 反击：timm 中的改进训练流程。 *Neural Information Processing Systems Workshop* (*神经信息处理系统会议研讨会*). 202
+1067. Wightman, R., Touvron, H., & Jégou, H. (2021). ResNet 反击：timm 中的改进训练流程。*Neural Information Processing Systems Workshop* (*神经信息处理系统会议研讨会*). 202
 
 1068. Williams, C. K., & Rasmussen, C. E. (2006). *Gaussian processes for machine learning* (*机器学习的高斯过程*). MIT Press. 15
 
-1069. Williams, P. M. (1996). 使用神经网络建模条件多元密度。 *Neural Computation* (*神经计算*), *8*(4), 843–854. 73
+1069. Williams, P. M. (1996). 使用神经网络建模条件多元密度。*Neural Computation* (*神经计算*), *8*(4), 843–854. 73
 
-1070. Williams, R. J. (1992). 用于连接主义强化学习的简单统计梯度跟随算法。 *Machine learning* (*机器学习*), *8*(3), 229–256. 397
+1070. Williams, R. J. (1992). 用于连接主义强化学习的简单统计梯度跟随算法。*Machine learning* (*机器学习*), *8*(3), 229–256. 397
 
-1071. Wilson, A. C., Roelofs, R., Stern, M., Srebro, N., & Recht, B. (2017). 机器学习中自适应梯度方法的边际价值。 *Neural Information Processing Systems* (*神经信息处理系统会议*), *30*, 4148–4158. 94, 410
-
-
-
-
-
-## 参考文献
+1071. Wilson, A. C., Roelofs, R., Stern, M., Srebro, N., & Recht, B. (2017). 机器学习中自适应梯度方法的边际价值。*Neural Information Processing Systems* (*神经信息处理系统会议*), *30*, 4148–4158. 94, 410
 
 1072. Wirnsberger, P., Ballard, A. J., Papamakarios, G., Abercrombie, S., Racanière, S., Pritzel, A., Jimenez Rezende, D., & Blundell, C. (2020). 基于学习映射的目标自由能估计。*The Journal of Chemical Physics*, *153*(14), 144112. 322
 
@@ -13571,9 +13254,13 @@ KL 散度可以计算为：
 
 1078. Worrall, D. E., Garbin, S. J., Turmukhambetov, D., & Brostow, G. J. (2017). 谐波网络：深度平移与旋转等变性。*IEEE/CVF Computer Vision & Pattern Recognition*, 5028–5037. 183
 
-1079. Wu, B., Xu, C., Dai, X., Wan, A., Zhang, P., Yan, Z., Tomizuka, M., Gonzalez, J., Keutzer, K., & Vajda, P. (2020a). 视觉 Transformer：面向计算机视觉的基于 Token 的图像表示与处理。*arXiv:2006.03677*. 238
 
-1080. Wu, F., Fan, A., Baevski, A., Dauphin, Y. N., & Auli, M. (2019). 以轻量级动态卷积减少注意力开销。*International Conference on Learning Representations*. 235
+
+## 参考文献
+
+1079. Wu, B., Xu, C., Dai, X., Wan, A., Zhang, P., Yan, Z., Tomizuka, M., Gonzalez, J., Keutzer, K., & Vajda, P. (2020a). 视觉 Transformer：面向计算机视觉的基于 Token 的图像表示与处理。*arXiv:2006.03677*。 238
+
+1080. Wu, F., Fan, A., Baevski, A., Dauphin, Y. N., & Auli, M. (2019). 以轻量级动态卷积减少注意力开销。*International Conference on Learning Representations*。 235
 
 1081. Wu, H., & Gu, X. (2015). 用于卷积神经网络正则化的最大池化 Dropout。*Neural Information Processing Systems*, vol. 18, 46–54. 183
 
@@ -13581,15 +13268,15 @@ KL 散度可以计算为：
 
 1083. Wu, J., Zhang, C., Xue, T., Freeman, B., & Tenenbaum, J. (2016). 通过 3D 生成对抗建模学习物体形状的概率潜在空间。*Neural Information Processing Systems*, *29*, 82–90. 299
 
-1084. Wu, N., Green, B., Ben, X., & O’Banion, S. (2020b). 用于时间序列预测的深度 Transformer 模型：流感流行病例。*arXiv:2001.08317*. 234
+1084. Wu, N., Green, B., Ben, X., & O’Banion, S. (2020b). 用于时间序列预测的深度 Transformer 模型：流感流行病例。*arXiv:2001.08317*。 234
 
 1085. Wu, R., Yan, S., Shan, Y., Dang, Q., & Sun, G. (2015a). Deep Image：扩大图像识别规模。*arXiv:1501.02876*, *7* (8). 154
 
 1086. Wu, S., Sun, F., Zhang, W., Xie, X., & Cui, B. (2023). 推荐系统中的图神经网络：综述。*ACM Computing Surveys*, *55*(5), 97:1–97:37. 262
 
-1087. Wu, X., & Zhang, X. (2016). 基于面部图像的犯罪倾向自动推断。*arXiv:1611.04135*. 427
+1087. Wu, X., & Zhang, X. (2016). 基于面部图像的犯罪倾向自动推断。*arXiv:1611.04135*。 427
 
-1088. Wu, Y., Burda, Y., Salakhutdinov, R., & Grosse, R. (2017). 基于解码器的生成模型定量分析。*International Conference on Learning Representations*. 300
+1088. Wu, Y., Burda, Y., Salakhutdinov, R., & Grosse, R. (2017). 基于解码器的生成模型定量分析。*International Conference on Learning Representations*。 300
 
 1089. Wu, Y., & He, K. (2018). 组归一化。*European Conference on Computer Vision*, 3–19. 203, 204
 
@@ -13609,9 +13296,9 @@ KL 散度可以计算为：
 
 1097. Xiao, S., Wang, S., Dai, Y., & Guo, W. (2022a). 节点分类中的图神经网络：综述与评估。*Machine Vision and Applications*, *33*(1), 1–19. 262
 
-1098. Xiao, T., Hong, J., & Ma, J. (2018b). DNAGAN：从多属性图像中学习解耦表示。*International Conference on Learning Representations*. 301
+1098. Xiao, T., Hong, J., & Ma, J. (2018b). DNAGAN：从多属性图像中学习解耦表示。*International Conference on Learning Representations*。 301
 
-1099. Xiao, Z., Kreis, K., & Vahdat, A. (2022b). 利用去噪扩散 GAN 解决生成学习三难困境。*International Conference on Learning Representations*. 370
+1099. Xiao, Z., Kreis, K., & Vahdat, A. (2022b). 利用去噪扩散 GAN 解决生成学习三难困境。*International Conference on Learning Representations*。 370
 
 1100. Xie, E., Wang, W., Yu, Z., Anandkumar, A., Alvarez, J. M., & Luo, P. (2021). SegFormer：基于 Transformer 的语义分割简洁高效设计。*Neural Information Processing Systems*, *34*, 12077–12090. 238
 
@@ -13629,19 +13316,13 @@ KL 散度可以计算为：
 
 1107. Xiong, Z., Yuan, Y., Guo, N., & Wang, Q. (2020b). 用于室内场景解析的变分上下文可变形卷积网络。*IEEE/CVF Computer Vision & Pattern Recognition*, 3992–4002. 183
 
-1108. Xu, B., Wang, N., Chen, T., & Li, M. (2015). 卷积网络中修正激活函数的实证评估。*arXiv:1505.00853*. 158, 160
+1108. Xu, B., Wang, N., Chen, T., & Li, M. (2015). 卷积网络中修正激活函数的实证评估。*arXiv:1505.00853*。 158, 160
 
-1109. Xu, K., Hu, W., Leskovec, J., & Jegelka, S. (2019). 图神经网络有多强？*International Conference on Learning Representations*. 264
+1109. Xu, K., Hu, W., Leskovec, J., & Jegelka, S. (2019). 图神经网络有多强？*International Conference on Learning Representations*。 264
 
 1110. Xu, K., Li, C., Tian, Y., Sonobe, T., Kawarabayashi, K.-i., & Jegelka, S. (2018). 基于跳跃知识网络的图表示学习。*International Conference on Machine Learning*, 5453–5462. 263, 265, 266
 
 1111. Xu, K., Zhang, M., Jegelka, S., & Kawaguchi, K. (2021a). 图神经网络优化：跳跃连接带来的隐式加速及更深层网络。*International Conference on Machine Learning*, 11592–11602. 266
-
-
-
-
-
-## 参考文献
 
 1112. Xu, P., Cheung, J. C. K., & Cao, Y. (2020). On variational learning of controllable representations for text without supervision. *International Conference on Machine Learning*, 10534–10543. 343, 345
 
@@ -13649,19 +13330,19 @@ KL 散度可以计算为：
 
 1114. Yamada, Y., Iwamura, M., Akiba, T., & Kise, K. (2019). Shakedrop regularization for deep residual learning. *IEEE Access*, *7*, 186126–186136. 202, 203
 
-1115. Yamada, Y., Iwamura, M., & Kise, K. (2016). Deep pyramidal residual networks with separated stochastic depth. *arXiv:1612.01230*. 202
+1115. Yamada, Y., Iwamura, M., & Kise, K. (2016). Deep pyramidal residual networks with separated stochastic depth. *arXiv:1612.01230*。 202
 
 1116. Yan, X., Yang, J., Sohn, K., & Lee, H. (2016). Attribute2Image: Conditional image generation from visual attributes. *European Conference on Computer Vision*, 776–791. 301
 
 1117. Yang, F., Yang, H., Fu, J., Lu, H., & Guo, B. (2020a). Learning texture transformer network for image super-resolution. *IEEE/CVF Computer Vision & Pattern Recognition*, 5791–5800. 238
 
-1118. Yang, G., Pennington, J., Rao, V., Sohl-Dickstein, J., & Schoenholz, S. S. (2019). A mean field theory of batch normalization. *International Conference on Learning Representations*. 203
+1118. Yang, G., Pennington, J., Rao, V., Sohl-Dickstein, J., & Schoenholz, S. S. (2019). A mean field theory of batch normalization. *International Conference on Learning Representations*。 203
 
 1119. Yang, K., Goldman, S., Jin, W., Lu, A. X., Barzilay, R., Jaakkola, T., & Uhler, C. (2021). Mol2Image: Improved conditional flow models for molecule to image synthesis. *IEEE/CVF Computer Vision & Pattern Recognition*, 6688–6698. 322
 
 1120. Yang, Q., Zhang, Y., Dai, W., & Pan, S. J. (2020b). *Transfer learning*. Cambridge University Press. 159
 
-1121. Yang, R., Srivastava, P., & Mandt, S. (2022). Diffusion probabilistic modeling for video generation. *arXiv:2203.09481*. 369, 371
+1121. Yang, R., Srivastava, P., & Mandt, S. (2022). Diffusion probabilistic modeling for video generation. *arXiv:2203.09481*。 369, 371
 
 1122. Yao, W., Zeng, Z., Lian, C., & Tang, H. (2018). Pixel-wise regression using U-Net and its application on pansharpening. *Neurocomputing*, *312*, 364–371. 205
 
@@ -13675,7 +13356,11 @@ KL 散度可以计算为：
 
 1127. Ying, Z., You, J., Morris, C., Ren, X., Hamilton, W., & Leskovec, J. (2018b). Hierarchical graph representation learning with differentiable pooling. *Neural Information Processing Systems*, *31*, 4805–4815. 265
 
-1128. Yoshida, Y., & Miyato, T. (2017). Spectral norm regularization for improving the generalizability of deep learning. *arXiv:1705.10941*. 156
+1128. Yoshida, Y., & Miyato, T. (2017). Spectral norm regularization for improving the generalizability of deep learning. *arXiv:1705.10941*。 156
+
+
+
+## 参考文献
 
 1129. You, Y., Chen, T., Wang, Z., & Shen, Y. (2020). When does self-supervision help graph convolutional networks? *International Conference on Machine Learning*, 10871–10880. 159
 
@@ -13728,12 +13413,6 @@ KL 散度可以计算为：
 1153. Zhang, H., Hsieh, C.-J., & Akella, V. (2016a). Hogwild++: A new mechanism for decentralized asynchronous stochastic gradient descent. *IEEE International Conference on Data Mining*, 629–638. 114
 
 1154. Zhang, H., Xu, T., Li, H., Zhang, S., Wang, X., Huang, X., & Metaxas, D. N. (2017d). StackGAN: Text to photo-realistic image synthesis with stacked generative adversarial networks. *IEEE/CVF International Conference on Computer Vision*, 5907–5915. 300, 301
-
-
-
-
-
-## 参考文献
 
 1155. Zhang, J., & Meng, L. (2019). GResNet: 用于使深度 GNN 从挂起动画中复苏的图残差网络。 *arXiv:1909.05729*. 263
 
@@ -13797,6 +13476,10 @@ KL 散度可以计算为：
 
 1185. Zhou, Z., & Li, X. (2017). 图卷积：一种高阶自适应方法。 *arXiv:1706.09916*. 263
 
+
+
+## 参考文献
+
 1186. Zhou, Z., Rahman Siddiquee, M. M., Tajbakhsh, N., & Liang, J. (2018). UNet++：用于医学图像分割的嵌套 U-Net 架构。 *医学图像分析深度学习研讨会*, 3–11. 205
 
 1187. Zhu, C., Ni, R., Xu, Z., Kong, K., Huang, W. R., & Goldstein, T. (2021). GradInit：学习初始化神经网络以实现稳定高效的训练。 *神经信息处理系统*, *34*, 16410–16422. 113
@@ -13841,718 +13524,691 @@ KL 散度可以计算为：
 *   `activation function` (激活函数), 25, 38
     *   `concatenated ReLU` (拼接 ReLU), 38
     *   `ELU`, 38
-
-
-
-
-*   GeLU，38
-*   HardSwish，38
-*   leaky ReLU，38
-*   logistic sigmoid，38
-*   parametric ReLU，38
-*   ReLU，25，38
-*   scaled exponential linear unit，113
-*   SiLU，38
-*   Softplus，38
-*   Swish，38
-*   tanh，38
-
-*   激活归一化，113
-*   激活模式，27
-*   ActNorm，113
-*   Actor-Critic 方法，393
-*   AdaDelta，93
-*   AdaGrad，93
-*   Adam，88，93
-    *   修正版，93
-*   AdamW，94，155
-*   自适应核，183
-*   自适应矩估计，93
-*   自适应训练方法，93
-*   邻接矩阵，243–245
-*   伴随图，260
-*   优势估计，391
-*   优势函数，393
-*   对抗攻击，413
-*   对抗损失，292，301
-*   对抗训练，149
-*   仿射函数，446
-*   聚合后验，340，341
-*   AlexNet，174
-*   算法微分，106
-*   AMSGrad，93
-*   祖先采样，459
-*   argmax 函数，437
-*   argmin 函数，437
-*   人工道德代理，424
-    *   伦理影响代理，424
-    *   显性伦理代理，424
-    *   完全伦理代理，424
-    *   隐性伦理代理，424
-*   异步数据并行，114
-*   ATARI 2600 基准，386
-*   空洞卷积，181
+    *   `GeLU`, 38
+    *   `HardSwish`, 38
+    *   `leaky ReLU`, 38
+    *   `logistic sigmoid`, 38
+    *   `parametric ReLU`, 38
+    *   `ReLU`, 25, 38
+    *   `scaled exponential linear unit`, 113
+    *   `SiLU`, 38
+    *   `Softplus`, 38
+    *   `Swish`, 38
+    *   `tanh`, 38
+*   激活归一化, 113
+*   激活模式, 27
+*   `ActNorm`, 113
+*   Actor-Critic 方法, 393
+*   `AdaDelta`, 93
+*   `AdaGrad`, 93
+*   `Adam`, 88, 93
+    *   修正版, 93
+*   `AdamW`, 94, 155
+*   自适应核, 183
+*   自适应矩估计, 93
+*   自适应训练方法, 93
+*   邻接矩阵, 243–245
+*   伴随图, 260
+*   优势估计, 391
+*   优势函数, 393
+*   对抗攻击, 413
+*   对抗损失, 292, 301
+*   对抗训练, 149
+*   仿射函数, 446
+*   聚合后验, 340, 341
+*   `AlexNet`, 174
+*   算法微分, 106
+*   `AMSGrad`, 93
+*   祖先采样, 459
+*   `argmax` 函数, 437
+*   `argmin` 函数, 437
+*   人工道德代理, 424
+    *   伦理影响代理, 424
+    *   显性伦理代理, 424
+    *   完全伦理代理, 424
+    *   隐性伦理代理, 424
+*   异步数据并行, 114
+*   `ATARI 2600` 基准, 386
+*   空洞卷积, 181
 *   注意力
-    *   加性，235
-    *   作为路由，235
-    *   图注意力网络，258
-    *   键值，235
-    *   局部，237
-    *   内存压缩，235
-    *   内存压缩，237
-    *   乘性，235
-    *   Squeeze-and-Excitation 网络，235
-    *   合成器，235
-*   数据增强，152–154，159
-    *   在图神经网络中，264
-*   自相关函数，441
-*   自编码器，344
-    *   变分，326–347
-*   自动翻译，226
-*   自动化偏见，429
-*   工作自动化，13
-*   自回归流，311–313，323
-*   辅助分类器 GAN，288
-*   平均池化，171，181
-*   渐近符号，438
-*   反向传播，97–106，113
-    *   在分支图中，107
-    *   在无环图上，116
-*   Bagging，146
-*   Banach 不动点定理，314
-*   基线，391
-*   批次，85
-*   批归一化，192–194，203
-    *   替代方案，205
-    *   成本与收益，194
-    *   Ghost，203
-    *   蒙特卡洛，203
-    *   为何有效，204
-*   批强化学习，394
-*   批重归一化，203
-*   贝叶斯法则，450
-*   贝叶斯神经网络，150
-*   贝叶斯优化，135
-*   束搜索，224
-*   行为策略，384
-*   Bellman 方程，379
-*   伯努利分布，65
-*   BERT，219–222
-*   Beta VAE，342，345
-*   Beta-伯努利老虎机，135
-*   偏差（测试误差的组成部分），122
-*   偏差与公平性，13，421–424
-    *   通过无知实现公平，423
-    *   缓解，423
-    *   受保护属性，423
-    *   分离，423
-*   偏置参数，36
-*   偏置向量，49
-*   偏差-方差权衡，125
-*   大 O 符号，438
-*   BigBird，237
-*   双射，439
-*   二分类，64–66
-*   二元交叉熵损失，66
-*   二项式系数，441
-*   BlockDrop，202
-*   BOHB，136
-*   Boltzmann 策略，399
-*   Bootstrap 聚合，146
-*   BPE dropout，234
-*   字节对编码，218，234
-*   容量，29，46，125，134
-    *   有效，134
-    *   Rademacher 复杂度，134
-    *   Vapnik-Chervonenkis 维数，134
-*   胶囊网络，235
-*   级联扩散模型，367，369
-*   类别分布，67
-*   通道，165
-*   通道分离卷积，181
-*   聊天机器人，398
-    *   ChatGPT，398
-    *   InstructGPT，398
-*   经典区域，129
+    *   加性, 235
+    *   作为路由, 235
+    *   图注意力网络, 258
+    *   键值, 235
+    *   局部, 237
+    *   内存压缩, 235, 237
+    *   乘性, 235
+    *   `Squeeze-and-Excitation` 网络, 235
+    *   合成器, 235
+*   数据增强, 152–154, 159
+    *   在图神经网络中, 264
+*   自相关函数, 441
+*   自编码器, 344
+    *   变分, 326–347
+*   自动翻译, 226
+*   自动化偏见, 429
+*   工作自动化, 13
+*   自回归流, 311–313, 323
+*   辅助分类器 GAN, 288
+*   平均池化, 171, 181
+*   渐近符号, 438
+*   反向传播, 97–106, 113
+    *   在分支图中, 107
+    *   在无环图上, 116
+*   `Bagging`, 146
+*   `Banach` 不动点定理, 314
+*   基线, 391
+*   批次, 85
+*   批归一化, 192–194, 203
+    *   替代方案, 205
+    *   成本与收益, 194
+    *   `Ghost`, 203
+    *   蒙特卡洛, 203
+    *   为何有效, 204
+*   批强化学习, 394
+*   批重归一化, 203
+*   贝叶斯法则, 450
+*   贝叶斯神经网络, 150
+*   贝叶斯优化, 135
+*   束搜索, 224
+*   行为策略, 384
+*   `Bellman` 方程, 379
+*   伯努利分布, 65
+*   `BERT`, 219–222
+*   `Beta VAE`, 342, 345
+*   `Beta-伯努利` 老虎机, 135
+*   偏差（测试误差的组成部分）, 122
+*   偏差与公平性, 13, 421–424
+    *   通过无知实现公平, 423
+    *   缓解, 423
+    *   受保护属性, 423
+    *   分离, 423
+*   偏置参数, 36
+*   偏置向量, 49
+*   偏差-方差权衡, 125
+*   大 O 符号, 438
+*   `BigBird`, 237
+*   双射, 439
+*   二分类, 64–66
+*   二元交叉熵损失, 66
+*   二项式系数, 441
+*   `BlockDrop`, 202
+*   `BOHB`, 136
+*   `Boltzmann` 策略, 399
+*   `Bootstrap` 聚合, 146
+*   `BPE dropout`, 234
+*   字节对编码, 218, 234
+*   容量, 29, 46, 125, 134
+    *   有效, 134
+    *   `Rademacher` 复杂度, 134
+    *   `Vapnik-Chervonenkis` 维数, 134
+*   胶囊网络, 235
+*   级联扩散模型, 367, 369
+*   类别分布, 67
+*   通道, 165
+*   通道分离卷积, 181
+*   聊天机器人, 398
+    *   `ChatGPT`, 398
+    *   `InstructGPT`, 398
+*   经典区域, 129
 *   分类
-    *   二分类，2，64–66
-    *   ImageNet，174–176，181
-    *   多分类，2，67–69
-    *   文本，221
-*   分类器引导，364，370
-*   无分类器引导，365
-*   CLIP，238
-*   cls token，221
-*   Cluster GCN，264
-*   CNN，*见* 卷积网络
-*   上色，291
-*   列空间，443
+    *   二分类, 2, 64–66
+    *   `ImageNet`, 174–176, 181
+    *   多分类, 2, 67–69
+    *   文本, 221
+*   分类器引导, 364, 370
+*   无分类器引导, 365
+*   `CLIP`, 238
+*   `cls token`, 221
+*   `Cluster GCN`, 264
+*   `CNN`, *见* 卷积网络
+*   上色, 291
+*   列空间, 443
 *   计算机视觉
-    *   图像分类，174
-    *   目标检测，177
-    *   语义分割，178
-*   凹函数，440
-*   权力集中，430
-*   概念漂移，135
-*   条件 GAN，288，300
-*   条件生成，7，288，290，370
-*   条件概率，449
-*   条件 VAE，344
-*   连续分布，448
-*   压缩映射，314
-*   控制网络，370
-*   凸函数，80，91
-*   凸区域，440
+    *   图像分类, 174
+    *   目标检测, 177
+    *   语义分割, 178
+*   凹函数, 440
+*   权力集中, 430
+*   概念漂移, 135
+*   条件 GAN, 288, 300
+*   条件生成, 7, 288, 290, 370
+*   条件概率, 449
+*   条件 VAE, 344
+*   连续分布, 448
+*   压缩映射, 314
+*   控制网络, 370
+*   凸函数, 80, 91
+*   凸区域, 440
 *   卷积
-    *   1×1，174，181
-    *   1D，163
-    *   自适应，183
-    *   空洞，181
-    *   通道，165
-    *   深度可分，181
-    *   膨胀，164，181
-    *   特征图，165
-    *   分数步长，278
-    *   门控，181
-    *   分组，181
-    *   引导，183
-    *   核，163
-    *   填充，164
-    *   部分，181
-    *   可分离，181
-    *   步长，164
-    *   转置，172，181
-    *   有效，164
-*   卷积层，161，165
-*   卷积网络，161–185
-    *   1D，162–170，182
-    *   2D，170–174
-    *   3D，182
-    *   AlexNet，174
-    *   改变通道数，174
-    *   下采样，171
-    *   早期应用，180
-    *   Geodesic CNN，265
-    *   GoogLeNet，181
-    *   归纳偏置，170
-    *   LeNet，180
-    *   网络中的网络，181
-    *   上采样，172
-    *   VGG，176
-    *   可视化，184
-*   ConvolutionOrthogonal 初始化器，183
-*   代价函数，*见* 损失函数
-*   耦合流，310–311，323
-*   耦合函数，322
-*   协方差，454
-*   协方差矩阵，454，456
-    *   对角，456
-    *   全，456
-    *   球形，456
-*   协变函数，162
-*   协变量漂移，135
-*   交叉注意力，227
-*   交叉协方差图像 Transformer，238
-*   交叉熵，71–72
-*   交叉验证，134
-*   Crossformer，238
-*   维度灾难，129，135
-*   Cutout，158，183
-*   CycleGAN，292–295
-*   DALL·E-2，11，370
+    *   `1×1`, 174, 181
+    *   `1D`, 163
+    *   自适应, 183
+    *   空洞, 181
+    *   通道, 165
+    *   深度可分, 181
+    *   膨胀, 164, 181
+    *   特征图, 165
+    *   分数步长, 278
+    *   门控, 181
+    *   分组, 181
+    *   引导, 183
+    *   核, 163
+    *   填充, 164
+    *   部分, 181
+    *   可分离, 181
+    *   步长, 164
+    *   转置, 172, 181
+    *   有效, 164
+*   卷积层, 161, 165
+*   卷积网络, 161–185
+    *   `1D`, 162–170, 182
+    *   `2D`, 170–174
+    *   `3D`, 182
+    *   `AlexNet`, 174
+    *   改变通道数, 174
+    *   下采样, 171
+    *   早期应用, 180
+    *   `Geodesic CNN`, 265
+    *   `GoogLeNet`, 181
+    *   归纳偏置, 170
+    *   `LeNet`, 180
+    *   网络中的网络, 181
+    *   上采样, 172
+    *   `VGG`, 176
+    *   可视化, 184
+*   `ConvolutionOrthogonal` 初始化器, 183
+*   代价函数, *见* 损失函数
+*   耦合流, 310–311, 323
+*   耦合函数, 322
+*   协方差, 454
+*   协方差矩阵, 454, 456
+    *   对角, 456
+    *   全, 456
+    *   球形, 456
+*   协变函数, 162
+*   协变量漂移, 135
+*   交叉注意力, 227
+*   交叉协方差图像 Transformer, 238
+*   交叉熵, 71–72
+*   交叉验证, 134
+*   `Crossformer`, 238
+*   维度灾难, 129, 135
+*   `Cutout`, 158, 183
+*   `CycleGAN`, 292–295
+*   `DALL·E-2`, 11, 370
 *   数据
-    *   结构化，17
-    *   表格，17
-    *   训练集，118
-*   数据增强，152–154，159
-*   数据漂移，135
-    *   概念漂移，135
-    *   协变量漂移，135
-    *   先验漂移，135
+    *   结构化, 17
+    *   表格, 17
+    *   训练集, 118
+*   数据增强, 152–154, 159
+*   数据漂移, 135
+    *   概念漂移, 135
+    *   协变量漂移, 135
+    *   先验漂移, 135
 *   数据并行
-    *   异步，114
-    *   同步，114
-*   数据隐私，428
+    *   异步, 114
+    *   同步, 114
+*   数据隐私, 428
 *   数据集
-    *   ImageNet，174
-    *   MNIST，291
-    *   MNIST-1D，118
-*   DaViT，232，238
-*   DCGAN，278
-*   DDIM，370
-*   致命三元组问题，396
-*   决策 Transformer，395
+    *   `ImageNet`, 174
+    *   `MNIST`, 291
+    *   `MNIST-1D`, 118
+*   `DaViT`, 232, 238
+*   `DCGAN`, 278
+*   `DDIM`, 370
+*   致命三元组问题, 396
+*   决策 Transformer, 395
 *   解码器
-    *   卷积网络，179
-    *   扩散模型，348
-    *   Transformer，222–227
-    *   VAE，337
-*   解码算法，234
-*   深度卷积 GAN，278
-*   深度决斗网络，397
-*   深度神经网络，41–55
-    *   矩阵表示法，49
-    *   必要性，417–418
-    *   线性区域数量，50，52
-    *   对比 浅层，49–51
-*   深度 Q 网络，385–387，396
-*   DeepSets，263
-*   度矩阵，257
-*   去噪扩散隐式模型，364，370
-*   DenseNet，195，205
-*   深度效率，50，53
-*   神经网络深度，46
-*   深度可分离卷积，181
-*   设计正义，433
-*   行列式，444
-*   对角协方差矩阵，456
-*   对角增强，257
-*   对角矩阵，445
-*   微分同胚，439
+    *   卷积网络, 179
+    *   扩散模型, 348
+    *   Transformer, 222–227
+    *   VAE, 337
+*   解码算法, 234
+*   深度卷积 GAN, 278
+*   深度决斗网络, 397
+*   深度神经网络, 41–55
+    *   矩阵表示法, 49
+    *   必要性, 417–418
+    *   线性区域数量, 50, 52
+    *   对比 浅层, 49–51
+*   深度 Q 网络, 385–387, 396
+*   `DeepSets`, 263
+*   度矩阵, 257
+*   去噪扩散隐式模型, 364, 370
+*   `DenseNet`, 195, 205
+*   深度效率, 50, 53
+*   神经网络深度, 46
+*   深度可分离卷积, 181
+*   设计正义, 433
+*   行列式, 444
+*   对角协方差矩阵, 456
+*   对角增强, 257
+*   对角矩阵, 445
+*   微分同胚, 439
 *   微分
-    *   前向模式，117
-    *   反向模式，116
-*   DiffPool，265
-*   扩散模型，367，348–372
-    *   应用，369
-    *   级联，369
-    *   分类器引导，364，370
-    *   无分类器引导，365
-    *   计算似然，369
-    *   条件分布，353–355
-    *   控制网络，370
-    *   DALL·E-2，370
-    *   DDIM，370
-    *   解码器，348，355–356
-    *   去噪扩散隐式模型，364
-    *   编码器，348–355
-    *   证据下界，356–358
-    *   前向过程，349–355
-    *   生成图像，362
-    *   GLIDE，370
-    *   Imagen，370
-
-
-
-*   实现，362–367
-*   提升质量，369
-*   提升速度，363，369
-*   核函数，350–352
-*   损失函数，358–359
-*   边缘分布，352–353
-*   噪声条件增强，369
-*   噪声调度，349
-*   概率流 ODE，370
-*   与其他模型的关系，371
-*   重参数化，360–362
-*   反向过程，355–356
-*   文本生成图像，370
-*   训练，356–360
-*   更新，349
-*   与其他生成模型对比，369
-
-*   膨胀卷积，164，181
-*   膨胀率，165
-*   狄拉克 δ 函数，440
-*   折扣因子，374
-*   离散分布，448
-*   判别模型，23
-*   判别器，275
-*   解耦潜在空间，270
-*   解耦，341，345
-*   分布间距离，459–461
-*   正态分布间距离，461
-*   蒸馏，415，418
-*   分布式训练，114
+    *   前向模式, 117
+    *   反向模式, 116
+*   `DiffPool`, 265
+*   扩散模型, 348–372
+    *   应用, 369
+    *   级联, 369
+    *   分类器引导, 364, 370
+    *   无分类器引导, 365
+    *   计算似然, 369
+    *   条件分布, 353–355
+    *   控制网络, 370
+    *   `DALL·E-2`, 370
+    *   `DDIM`, 370
+    *   解码器, 348, 355–356
+    *   去噪扩散隐式模型, 364
+    *   编码器, 348–355
+    *   证据下界, 356–358
+    *   前向过程, 349–355
+    *   生成图像, 362
+    *   `GLIDE`, 370
+    *   `Imagen`, 370
+    *   实现, 362–367
+    *   提升质量, 369
+    *   提升速度, 363, 369
+    *   核函数, 350–352
+    *   损失函数, 358–359
+    *   边缘分布, 352–353
+    *   噪声条件增强, 369
+    *   噪声调度, 349
+    *   概率流 ODE, 370
+    *   与其他模型的关系, 371
+    *   重参数化, 360–362
+    *   反向过程, 355–356
+    *   文本生成图像, 370
+    *   训练, 356–360
+    *   更新, 349
+    *   与其他生成模型对比, 369
+*   膨胀卷积, 164, 181
+*   膨胀率, 165
+*   狄拉克 δ 函数, 440
+*   折扣因子, 374
+*   离散分布, 448
+*   判别模型, 23
+*   判别器, 275
+*   解耦潜在空间, 270
+*   解耦, 341, 345
+*   分布间距离, 459–461
+*   正态分布间距离, 461
+*   蒸馏, 415, 418
+*   分布式训练, 114
     *   数据并行
-        *   异步，114
-        *   同步，114
-    *   流水线模型并行，114
-    *   张量模型并行，114
-
+        *   异步, 114
+        *   同步, 114
+    *   流水线模型并行, 114
+    *   张量模型并行, 114
 *   分布
-    *   伯努利分布，65
-    *   类别分布，67
-    *   高斯混合模型，75，327
-    *   多元正态分布，456
-    *   正态分布，61
-    *   泊松分布，76
-    *   一元正态分布，456
-    *   冯·米塞斯分布，74
-
+    *   伯努利分布, 65
+    *   类别分布, 67
+    *   高斯混合模型, 75, 327
+    *   多元正态分布, 456
+    *   正态分布, 61
+    *   泊松分布, 76
+    *   一元正态分布, 456
+    *   冯·米塞斯分布, 74
 *   散度
-    *   詹森-香农散度，460
-    *   库尔巴克-莱布勒散度，71，460
-
-*   多样性，433
-*   点积，443
-*   点积自注意力，208–215
-    *   键，210
-    *   矩阵表示，212
-    *   查询，210
-    *   缩放，214
-    *   值，208
-
-*   双重下降，127，134，412
-    *   按轮次，134
-
-*   Double DQN，387
-*   Double Q-learning，387
-*   下采样，171
-*   DropConnect，265
-*   DropEdge，264
-*   Dropout，147
-    *   Cutout，158，183
-    *   在最大池化层中，183
-    *   蒙特卡洛，158
-    *   循环，158
-    *   空间，158，183
-
-*   双重注意力视觉 Transformer，232，238
-*   对偶-原始图 CNN，264
-*   逐点消亡 ReLU 问题，38
-*   动态规划方法，382
-*   早停法，145，157
-*   边，240
-    *   有向，241
-    *   嵌入，243
-    *   无向，241
-
-*   边图，260
-*   有效模型容量，134
-*   特征谱，444
-*   特征值，444
-*   弹性网络惩罚，156
-*   ELBO，*参见* 证据下界
-*   逐元素流，309–310，322
-*   ELIZA 效应，428
-*   ELU，38
-*   EM 算法，346
-*   嵌入，218
-*   就业，429
-*   编码器，179
-    *   卷积网络，179
-    *   扩散模型，348
-    *   Transformer，219–222
-    *   VAE，337
-
-*   编码器-解码器网络，179
-*   编码器-解码器自注意力，227
-*   编码器-解码器 Transformer，226
-*   集成，145，157，158
-    *   快速几何集成，158
-    *   快照集成，158
-    *   随机权重平均，158
-
-*   熵 SGD，158
-*   环境影响，429
-*   回合，383
-*   轮次，85
-*   ε-贪婪策略，384
-*   等变性，162
-    *   群，182
-    *   置换，239
-    *   旋转，182
-    *   平移，182
-
-*   伦理影响智能体，424
-*   伦理，12–14，420–435
-    *   人工道德代理，424
-        *   伦理影响智能体，424
-        *   显式伦理智能体，424
-        *   完全伦理智能体，424
-        *   隐式伦理智能体，424
-    *   自动化偏见，429
-    *   工作自动化，13
-    *   偏见与公平，13，421–424
-        *   通过不知情实现公平，423
-        *   缓解，423
-        *   受保护属性，423
-        *   分离，423
-    *   案例研究，430
-    *   权力集中，430
-    *   多样性，433
-    *   就业，429
-    *   环境影响，429
-    *   存续风险，14
-    *   可解释性，13，425–426
-        *   LIME，426
-    *   知识产权，428
-    *   滥用
-        *   军事化，13
-    *   AI 滥用，426
-        *   数据隐私，428
-        *   人脸识别，426
-        *   欺诈，427
-        *   军事化，427
-        *   政治干预，427
-    *   道德技能退化，429
-    *   科学传播，432
-    *   透明度，424–425
-        *   功能性，425
-        *   运行时，425
-        *   结构性，425
-    *   价值对齐，420–426
-        *   内部对齐问题，421
-        *   外部对齐问题，421
-        *   委托-代理问题，421
-    *   科学无价值理想，431
-
-*   欧几里得范数，442
-*   证据，451
-*   证据下界，330–335
-    *   性质，333
-    *   重新表述，333
-    *   界的紧致性，333
-
-*   存续风险，14
-*   期望，452–455
-    *   操作规则，452
-
-*   期望最大化，346
-*   经验回放，386
-*   可解释性，13，425–426
-    *   LIME，426
-
-*   显式伦理智能体，424
-*   梯度爆炸问题，108
-    *   在残差网络中，192
-
-*   探索-利用权衡，373
-*   指数函数，440
-*   扩展 Transformer 构造，237
-*   人脸识别，426
-*   因子分析，344
-*   Factor VAE，346
-*   公平性，*参见* 偏见
-*   通过不知情实现公平，423
-*   快速几何集成，158
-*   特征图，165
-*   特征金字塔网络，183
-*   前馈网络，35
-*   少样本学习，224，225
-*   滤波器，163
-*   微调，151，152
-*   拟合 Q-learning，384
-*   拟合，*参见* 训练
-*   Fixup，205
-*   极小值平坦度，411
-*   Flooding，159
-*   Focal Loss，73
-*   前向模式微分，117
-*   Fréchet 距离，461
-    *   正态分布之间，461
-
-*   Fréchet Inception Distance，272
-*   分数步长卷积，278
-*   欺诈，427
-*   Frobenius 范数，442
-    *   正则化，140，155
-
-*   完整协方差矩阵，456
-*   完全伦理智能体，424
-*   全批量梯度下降，85
-*   全连接，36
-*   函数，437，439
-    *   双射，439
-    *   微分同胚，439
-    *   指数，440
-    *   Gamma，440
-    *   单射，439
-    *   对数，440
-    *   满射，439
-
-*   功能性透明度，425
-*   Gabor 模型，80
-*   Gamma 函数，440
-*   GAN，*参见* 生成对抗网络
-*   门控卷积，181
-*   门控多层感知机，235
-*   高斯分布，*参见* 正态分布
-*   GeLU，38
-*   泛化，118，402
-    *   决定因素，410–414
-
-*   生成对抗网络，275–302
-    *   ACGAN，288
-    *   对抗损失，292
-    *   条件，288，300
-    *   条件生成，288–290
-    *   CycleGAN，292–295
-    *   DCGAN，278
-    *   训练困难，279
-    *   判别器，275
-    *   使用其编辑图像，301
-    *   生成器，275
-    *   图像转换，290–295
-    *   InfoGAN，290
-    *   反演，301
-    *   最小二乘，299
-    *   损失函数，276，299
-    *   小批量判别，288，300
-    *   模式崩溃，279，300
-    *   模式丢失，279
-    *   多尺度，300
-    *   PatchGAN，291
-    *   Pix2Pix，291
-    *   渐进式增长，286，300
-    *   SRGAN，292
-    *   StyleGAN，295–297，300
-    *   训练技巧，299
-    *   截断技巧，288
-    *   VEEGAN，300
-    *   Wasserstein，280–285，299
-        *   梯度惩罚，285
-        *   权重裁剪，285
-
-*   生成模型，7，23，223，269
-    *   理想属性，269
-    *   量化性能，271
-
-*   生成器，275
-*   测地线 CNN，265
-*   几何图
-    *   示例，241
-    *   测地线 CNN，265
-    *   MoNet，265
-
-*   幽灵批归一化，203
-*   GLIDE，370
-*   全局最小值，81
-*   Glorot 初始化，113
-*   GLOW，318–320，323
-*   适居带，410，412
-*   GoogLeNet，181
-*   GPT3，222–227
-    *   解码，223
-    *   少样本学习，224
-
-*   GPU，107
+    *   詹森-香农散度, 460
+    *   库尔巴克-莱布勒散度, 71, 460
+*   多样性, 433
+*   点积, 443
+*   点积自注意力, 208–215
+    *   键, 210
+    *   矩阵表示, 212
+    *   查询, 210
+    *   缩放, 214
+    *   值, 208
+*   双重下降, 127, 134, 412
+    *   按轮次, 134
+*   `Double DQN`, 387
+*   `Double Q-learning`, 387
+*   下采样, 171
+*   `DropConnect`, 265
+*   `DropEdge`, 264
 
 
 
+* Dropout，147
+    * Cutout，158，183
+    * 在最大池化层中，183
+    * 蒙特卡洛，158
+    * 循环，158
+    * 空间，158，183
+* 双重注意力视觉 Transformer，232，238
+* 对偶-原始图 CNN，264
+* 逐点消亡 ReLU 问题，38
+* 动态规划方法，382
+* 早停法，145，157
+* 边，240
+    * 有向，241
+    * 嵌入，243
+    * 无向，241
+* 边图，260
+* 有效模型容量，134
+* 特征谱，444
+* 特征值，444
+* 弹性网络惩罚，156
+* ELBO，*参见* 证据下界
+* 逐元素流，309–310，322
+* ELIZA 效应，428
+* ELU，38
+* EM 算法，346
+* 嵌入，218
+* 就业，429
+* 编码器，179
+    * 卷积网络，179
+    * 扩散模型，348
+    * Transformer，219–222
+    * VAE，337
+* 编码器-解码器网络，179
+* 编码器-解码器自注意力，227
+* 编码器-解码器 Transformer，226
+* 集成，145，157，158
+    * 快速几何集成，158
+    * 快照集成，158
+    * 随机权重平均，158
+* 熵 SGD，158
+* 环境影响，429
+* 回合，383
+* 轮次，85
+* ε-贪婪策略，384
+* 等变性，162
+    * 群，182
+    * 置换，239
+    * 旋转，182
+    * 平移，182
+* 伦理影响智能体，424
+* 伦理，12–14，420–435
+    * 人工道德代理，424
+        * 伦理影响智能体，424
+        * 显式伦理智能体，424
+        * 完全伦理智能体，424
+        * 隐式伦理智能体，424
+    * 自动化偏见，429
+    * 工作自动化，13
+    * 偏见与公平，13，421–424
+        * 通过不知情实现公平，423
+        * 缓解，423
+        * 受保护属性，423
+        * 分离，423
+    * 案例研究，430
+    * 权力集中，430
+    * 多样性，433
+    * 就业，429
+    * 环境影响，429
+    * 存续风险，14
+    * 可解释性，13，425–426
+        * LIME，426
+    * 知识产权，428
+    * 滥用
+        * 军事化，13
+    * AI 滥用，426
+        * 数据隐私，428
+        * 人脸识别，426
+        * 欺诈，427
+        * 军事化，427
+        * 政治干预，427
+    * 道德技能退化，429
+    * 科学传播，432
+    * 透明度，424–425
+        * 功能性，425
+        * 运行时，425
+        * 结构性，425
+    * 价值对齐，420–426
+        * 内部对齐问题，421
+        * 外部对齐问题，421
+        * 委托-代理问题，421
+    * 科学无价值理想，431
+* 欧几里得范数，442
+* 证据，451
+* 证据下界，330–335
+    * 性质，333
+    * 重新表述，333
+    * 界的紧致性，333
+* 存续风险，14
+* 期望，452–455
+    * 操作规则，452
+* 期望最大化，346
+* 经验回放，386
+* 可解释性，13，425–426
+    * LIME，426
+* 显式伦理智能体，424
+* 梯度爆炸问题，108
+    * 在残差网络中，192
+* 探索-利用权衡，373
+* 指数函数，440
+* 扩展 Transformer 构造，237
+* 人脸识别，426
+* 因子分析，344
+* Factor VAE，346
+* 公平性，*参见* 偏见
+* 通过不知情实现公平，423
+* 快速几何集成，158
+* 特征图，165
+* 特征金字塔网络，183
+* 前馈网络，35
+* 少样本学习，224，225
+* 滤波器，163
+* 微调，151，152
+* 拟合 Q-learning，384
+* 拟合，*参见* 训练
+* Fixup，205
+* 极小值平坦度，411
+* Flooding，159
+* Focal Loss，73
+* 前向模式微分，117
+* Fréchet 距离，461
+    * 正态分布之间，461
+* Fréchet Inception Distance，272
+* 分数步长卷积，278
+* 欺诈，427
+* Frobenius 范数，442
+    * 正则化，140，155
+* 完整协方差矩阵，456
+* 完全伦理智能体，424
+* 全批量梯度下降，85
+* 全连接，36
+* 函数，437，439
+    * 双射，439
+    * 微分同胚，439
+    * 指数，440
+    * Gamma，440
+    * 单射，439
+    * 对数，440
+    * 满射，439
+* 功能性透明度，425
+* Gabor 模型，80
+* Gamma 函数，440
+* GAN，*参见* 生成对抗网络
+* 门控卷积，181
+* 门控多层感知机，235
+* 高斯分布，*参见* 正态分布
+* GeLU，38
+* 泛化，118，402
+    * 决定因素，410–414
+* 生成对抗网络，275–302
+    * ACGAN，288
+    * 对抗损失，292
+    * 条件，288，300
+    * 条件生成，288–290
+    * CycleGAN，292–295
+    * DCGAN，278
+    * 训练困难，279
+    * 判别器，275
+    * 使用其编辑图像，301
+    * 生成器，275
+    * 图像转换，290–295
+    * InfoGAN，290
+    * 反演，301
+    * 最小二乘，299
+    * 损失函数，276，299
+    * 小批量判别，288，300
+    * 模式崩溃，279，300
+    * 模式丢失，279
+    * 多尺度，300
+    * PatchGAN，291
+    * Pix2Pix，291
+    * 渐进式增长，286，300
+    * SRGAN，292
+    * StyleGAN，295–297，300
+    * 训练技巧，299
+    * 截断技巧，288
+    * VEEGAN，300
+    * Wasserstein，280–285，299
+        * 梯度惩罚，285
+        * 权重裁剪，285
+* 生成模型，7，23，223，269
+    * 理想属性，269
+    * 量化性能，271
+* 生成器，275
+* 测地线 CNN，265
+* 几何图
+    * 示例，241
+    * 测地线 CNN，265
+    * MoNet，265
+* 幽灵批归一化，203
+* GLIDE，370
+* 全局最小值，81
+* Glorot 初始化，113
+* GLOW，318–320，323
+* 适居带，410，412
+* GoogLeNet，181
+* GPT3，222–227
+    * 解码，223
+    * 少样本学习，224
+* GPU，107
+* `gradient checkpointing`（梯度检查点），114
+* `gradient descent`（梯度下降），77–78, 91
+* `GradInit`，113
+* `graph`（图）
+    * `adjacency matrix`（邻接矩阵），243–245
+    * `adjoint`（伴随），260
+    * `edge`（边），240, 260
+        * `directed`（有向），241
+        * `embedding`（嵌入），243
+        * `undirected`（无向），241
+    * `examples`（示例），240
+    * `expansion problem`（扩展问题），254
+    * `geometric`（几何），241
+    * `heterogenous`（异构），241
+    * `hierarchical`（层次），241
+    * `knowledge`（知识），241
+    * `line`（线图），260
+    * `max pooling aggregation`（最大池化聚合），258
+    * `neighborhood sampling`（邻域采样），254
+    * `node`（节点），240
+        * `embedding`（嵌入），243, 244
+    * `partitioning`（划分），254
+    * `real world`（现实世界），240
+    * `tasks`（任务），246
+    * `types`（类型），241
+* `graph attention network`（图注意力网络），258, 263
+* `graph isomorphism network`（图同构网络），264
+* `graph Laplacian`（图拉普拉斯算子），262
+* `graph neural network`（图神经网络），240–267
+    * `augmentation`（增强），264
+    * `batches`（批次），264
+    * `dual-primal graph CNN`（对偶-原始图 CNN），264
+    * `graph attention network`（图注意力网络），258
+    * `GraphSAGE`，262
+    * `higher-order convolutional layer`（高阶卷积层），263
+    * `MixHop`，263
+    * `MoNet`，262
+    * `normalization`（归一化），265
+    * `over-smoothing`（过度平滑），265
+    * `pooling`（池化），265
+    * `regularization`（正则化），264
+    * `residual connection`（残差连接），263, 266
+    * `spectral methods`（谱方法），262
+    * `suspended animation`（暂停动画/挂起动画），265–266
+* `graphics processing unit`（图形处理单元），107
+* `GraphNorm`，265
+* `GraphSAGE`，262
+* `GraphSAINT`，264
+* `GResNet`，263
+* `grokking`（顿悟/彻悟），412
+* `group normalization`（组归一化），203
+* `grouped convolution`（分组卷积），181
+* `guided convolution`（引导卷积），183
+* `HardSwish`，38
+* `He initialization`（He 初始化），110, 113
+* `Heaviside function`（海维赛函数），104
+* `heteroscedastic regression`（异方差回归），64, 73
+* `hidden layer`（隐藏层），35
+* `hidden unit`（隐藏单元），27, 35
+* `hidden variable`（隐变量），*see* `latent variable`
+* `hierarchical graph`（层次图），241
+* `highway network`（高速公路网络），202
+* `Hogwild!`，114
+* `homoscedastic regression`（同方差回归），64
+* `hourglass network`（沙漏网络），179, 197, 205
+    * `stacked`（堆叠），198
+* `Hutchinson trace estimator`（Hutchinson 迹估计器），316
+* `hyperband`，136
+* `hypernetwork`（超网络），235
+* `hyperparameter`（超参数），46
+    * `model`（模型），46
+    * `training algorithm`（训练算法），91
+* `hyperparameter search`（超参数搜索），132, 133, 135
+    * `Bayesian optimization`（贝叶斯优化），135
+    * `beta-Bernoulli bandit`（Beta-伯努利老虎机），135
+    * `BOHB`，136
+    * `hyperband`，136
+    * `random sampling`（随机采样），135
+    * `SMAC`，136
+    * `Tree-Parzen estimators`（树形帕岑估计器），136
+* `i.i.d.`，*see* `independent and identically distributed`
+* `identity matrix`（单位矩阵），445
+* `image interpolation`（图像插值），11
+* `image translation`（图像转换），290–295, 301
+* `ImageGPT`，229
+* `Imagen`，370
+* `ImageNet classification`（ImageNet 分类），174–176, 181
+* `implicit ethical agent`（隐性伦理智能体），424
+* `implicit regularization`（隐式正则化），144, 156–157
+* `importance sampling`（重要性采样），339
+* `inception block`（Inception 模块），181
+* `inception score`（Inception 得分），271
+* `independence`（独立性），451
+* `independent and identically distributed`（独立同分布），58
+* `inductive bias`（归纳偏置），129
+    * `convolutional`（卷积），170
+    * `relational`（关系），248
+* `inductive model`（归纳模型），252
+* `inference`（推理），17
+* `infinitesimal flows`（无限小流），324
+* `InfoGAN`，290
+* `information preference problem`（信息偏好问题），345
+* `initialization`（初始化），107–111
+    * `ActNorm`，113
+    * `convolutional layers`（卷积层），183
+    * `ConvolutionOrthogonal`，183
+    * `Fixup`，205
+    * `Glorot`，113
+    * `GradInit`，113
+    * `He`，113
+    * `layer-sequential unit variance`（逐层单位方差），113
+    * `LeCun`，113
+    * `SkipInit`，205
+    * `TFixup`，237
+    * `Xavier`，113
+* `injection`（注入），439
+* `inner alignment problem`（内部对齐问题），421
+* `inpainting`（图像修复），8
+* `instance normalization`（实例归一化），203
+* `InstructGPT`，398
+* `intellectual property`（知识产权），428
 
-*   `gradient checkpointing`（梯度检查点），114
-*   `gradient descent`（梯度下降），77–78, 91
-*   `GradInit`，113
-*   `graph`（图）
-    *   `adjacency matrix`（邻接矩阵），243–245
-    *   `adjoint`（伴随），260
-    *   `edge`（边），240, 260
-        *   `directed`（有向），241
-        *   `embedding`（嵌入），243
-        *   `undirected`（无向），241
-    *   `examples`（示例），240
-    *   `expansion problem`（扩展问题），254
-    *   `geometric`（几何），241
-    *   `heterogenous`（异构），241
-    *   `hierarchical`（层次），241
-    *   `knowledge`（知识），241
-    *   `line`（线图），260
-    *   `max pooling aggregation`（最大池化聚合），258
-    *   `neighborhood sampling`（邻域采样），254
-    *   `node`（节点），240
-        *   `embedding`（嵌入），243, 244
-    *   `partitioning`（划分），254
-    *   `real world`（现实世界），240
-    *   `tasks`（任务），246
-    *   `types`（类型），241
-*   `graph attention network`（图注意力网络），258, 263
-*   `graph isomorphism network`（图同构网络），264
-*   `graph Laplacian`（图拉普拉斯算子），262
-*   `graph neural network`（图神经网络），240–267
-    *   `augmentation`（增强），264
-    *   `batches`（批次），264
-    *   `dual-primal graph CNN`（对偶-原始图 CNN），264
-    *   `graph attention network`（图注意力网络），258
-    *   `GraphSAGE`，262
-    *   `higher-order convolutional layer`（高阶卷积层），263
-    *   `MixHop`，263
-    *   `MoNet`，262
-    *   `normalization`（归一化），265
-    *   `over-smoothing`（过度平滑），265
-    *   `pooling`（池化），265
-    *   `regularization`（正则化），264
-    *   `residual connection`（残差连接），263, 266
-    *   `spectral methods`（谱方法），262
-    *   `suspended animation`（暂停动画/挂起动画），265–266
-*   `graphics processing unit`（图形处理单元），107
-*   `GraphNorm`，265
-*   `GraphSAGE`，262
-*   `GraphSAINT`，264
-*   `GResNet`，263
-*   `grokking`（顿悟/彻悟），412
-*   `group normalization`（组归一化），203
-*   `grouped convolution`（分组卷积），181
-*   `guided convolution`（引导卷积），183
-*   `HardSwish`，38
-*   `He initialization`（He 初始化），110, 113
-*   `Heaviside function`（海维赛函数），104
-*   `heteroscedastic regression`（异方差回归），64, 73
-*   `hidden layer`（隐藏层），35
-*   `hidden unit`（隐藏单元），27, 35
-*   `hidden variable`（隐变量），*see* `latent variable`
-*   `hierarchical graph`（层次图），241
-*   `highway network`（高速公路网络），202
-*   `Hogwild!`，114
-*   `homoscedastic regression`（同方差回归），64
-*   `hourglass network`（沙漏网络），179, 197, 205
-    *   `stacked`（堆叠），198
-*   `Hutchinson trace estimator`（Hutchinson 迹估计器），316
-*   `hyperband`，136
-*   `hypernetwork`（超网络），235
-*   `hyperparameter`（超参数），46
-    *   `model`（模型），46
-    *   `training algorithm`（训练算法），91
-*   `hyperparameter search`（超参数搜索），132, 133, 135
-    *   `Bayesian optimization`（贝叶斯优化），135
-    *   `beta-Bernoulli bandit`（Beta-伯努利老虎机），135
-    *   `BOHB`，136
-    *   `hyperband`，136
-    *   `random sampling`（随机采样），135
-    *   `SMAC`，136
-    *   `Tree-Parzen estimators`（树形帕岑估计器），136
-*   `i.i.d.`，*see* `independent and identically distributed`
-*   `identity matrix`（单位矩阵），445
-*   `image interpolation`（图像插值），11
-*   `image translation`（图像转换），290–295, 301
-*   `ImageGPT`，229
-*   `Imagen`，370
-*   `ImageNet classification`（ImageNet 分类），174–176, 181
-*   `implicit ethical agent`（隐性伦理智能体），424
-*   `implicit regularization`（隐式正则化），144, 156–157
-*   `importance sampling`（重要性采样），339
-*   `inception block`（Inception 模块），181
-*   `inception score`（Inception 得分），271
-*   `independence`（独立性），451
-*   `independent and identically distributed`（独立同分布），58
-*   `inductive bias`（归纳偏置），129
-    *   `convolutional`（卷积），170
-    *   `relational`（关系），248
-*   `inductive model`（归纳模型），252
-*   `inference`（推理），17
-*   `infinitesimal flows`（无限小流），324
-*   `InfoGAN`，290
-*   `information preference problem`（信息偏好问题），345
-*   `initialization`（初始化），107–111
-    *   `ActNorm`，113
-    *   `convolutional layers`（卷积层），183
-    *   `ConvolutionOrthogonal`，183
-    *   `Fixup`，205
-    *   `Glorot`，113
-    *   `GradInit`，113
-    *   `He`，113
-    *   `layer-sequential unit variance`（逐层单位方差），113
-    *   `LeCun`，113
-    *   `SkipInit`，205
-    *   `TFixup`，237
-    *   `Xavier`，113
-*   `injection`（注入），439
-*   `inner alignment problem`（内部对齐问题），421
-*   `inpainting`（图像修复），8
-*   `instance normalization`（实例归一化），203
-*   `InstructGPT`，398
-*   `intellectual property`（知识产权），428
+
+
+## 索引
+
+### I
+
 *   `internal covariate shift`（内部协变量偏移），203
 *   `interpretability`（可解释性），*see* `explainability`
 *   `intersectionality`（交叉性），423
@@ -14576,6 +14232,9 @@ KL 散度可以计算为：
 *   `Jensen's inequality`（詹森不等式），330
 *   `Jensen-Shannon divergence`（詹森-香农散度），460
 *   `joint probability`（联合概率），448
+
+### K
+
 *   `k-fold cross-validation`（K 折交叉验证），134
 *   `k-hop neighborhood`（K 跳邻域），254
 *   `kernel`（核/卷积核），163
@@ -14587,6 +14246,9 @@ KL 散度可以计算为：
 *   `knowledge graph`（知识图谱），241
 *   `Kullback-Leibler divergence`（KL 散度/库尔巴克-莱布勒散度），71, 460
     *   `between normals`（正态分布之间），461
+
+### L
+
 *   `L*[k]* pooling`，181
 *   `L-infinity norm`（L-无穷范数），442
 *   `L0 regularization`（L0 正则化），155
@@ -14671,10 +14333,13 @@ KL 散度可以计算为：
     *   `saddle point`（鞍点），81
     *   `vs. cost function`（对比代价函数），23
     *   `vs. objective function`（对比目标函数），23
-    *   `lottery ticket`（彩票/中奖彩票），406
+*   `lottery ticket`（彩票/中奖彩票），406
 *   `lottery ticket`（彩票假设/中奖彩票），415
 *   `lower triangular matrix`（下三角矩阵），445
 *   `LP norm`（LP 范数），442
+
+### M
+
 *   `manifold`（流形），273
 *   `manifold precision/recall`（流形精确率/召回率），273
 *   `marginalization`（边缘化），449
@@ -14716,350 +14381,597 @@ KL 散度可以计算为：
 *   `memory-compressed attention`（内存压缩注意力），237
 *   `micro-batching`（微批处理），114
 
+### M (续)
 
-
-
-
-## 索引
-
-### M
-
-*   **militarization**（军事化），427
-*   **min function**（最小值函数），437
-*   **mini-batch**（小批量），85
-    *   discrimination（判别），288, 300
-*   **minimax game**（极小极大博弈），277
-*   **minimum**（最小值），81
-    *   connections between（之间的联系），407
-    *   family of（族），407
-    *   global（全局），81
-    *   local（局部），81
-    *   route to（通往...的路径），407
-*   **misuse**（滥用），426
-    *   data privacy（数据隐私），428
-    *   face recognition（人脸识别），426
-    *   fraud（欺诈），427
-    *   militarization（军事化），427
-    *   political interference（政治干预），427
-*   **MixHop**，263
-*   **mixture density network**（混合密度网络），74
-*   **mixture model network**（混合模型网络），262, 265
-*   **mixture of Gaussians**（高斯混合），75, 327
-*   **MLP**，35
-*   **MNIST**，291
-*   **MNIST-1D**，118
-*   **mode collapse**（模式崩塌），279, 300
-*   **mode dropping**（模式丢失），279
-*   **model**（模型），17
-    *   capacity（容量），134
-        *   effective（有效），134
-            *   representational（表征），134
-    *   inductive（归纳式），252
-    *   machine learning（机器学习），4
-    *   parameter（参数），18
-    *   testing（测试），22
-    *   transductive（推断式），252
-*   **modern regime**（现代区域/状态），129
-*   **momentum**（动量），86, 92
-    *   Nesterov（内斯特罗夫），86, 92
-*   **MoNet**，262, 265
-*   **Monte Carlo batch normalization**（蒙特卡洛批量归一化），203
-*   **Monte Carlo dropout**（蒙特卡洛 Dropout），158
-*   **Monte Carlo method**（蒙特卡洛方法），381, 383
-*   **moral deskilling**（道德技能退化），429
-*   **multi-head self-attention**（多头自注意力），214
-*   **multi-layer perceptron**（多层感知机），35
-*   **multi-scale flow**（多尺度流），316–317
-*   **multi-scale vision transformer**（多尺度视觉 Transformer），230, 238
-*   **multi-task learning**（多任务学习），151
-*   **multiclass classification**（多分类），67–69
-*   **multiclass cross-entropy loss**（多分类交叉熵损失），69
-*   **multigraph**（多重图），241
-*   **multivariate normal**（多元正态分布），456
-*   **multivariate regression**（多元回归），69
-*   **MViT**，238
+*   `militarization`（军事化），427
+*   `min function`（最小值函数），437
+*   `mini-batch`（小批量），85
+    *   `discrimination`（判别），288, 300
+*   `minimax game`（极小极大博弈），277
+*   `minimum`（最小值），81
+    *   `connections between`（之间的联系），407
+    *   `family of`（族），407
+    *   `global`（全局），81
+    *   `local`（局部），81
+    *   `route to`（通往...的路径），407
+*   `misuse`（滥用），426
+    *   `data privacy`（数据隐私），428
+    *   `face recognition`（人脸识别），426
+    *   `fraud`（欺诈），427
+    *   `militarization`（军事化），427
+    *   `political interference`（政治干预），427
+*   `MixHop`，263
+*   `mixture density network`（混合密度网络），74
+*   `mixture model network`（混合模型网络），262, 265
+*   `mixture of Gaussians`（高斯混合），75, 327
+*   `MLP`，35
+*   `MNIST`，291
+*   `MNIST-1D`，118
+*   `mode collapse`（模式崩塌），279, 300
+*   `mode dropping`（模式丢失），279
+*   `model`（模型），17
+    *   `capacity`（容量），134
+        *   `effective`（有效），134
+            *   `representational`（表征），134
+    *   `inductive`（归纳式），252
+    *   `machine learning`（机器学习），4
+    *   `parameter`（参数），18
+    *   `testing`（测试），22
+    *   `transductive`（推断式），252
+*   `modern regime`（现代区域/状态），129
+*   `momentum`（动量），86, 92
+    *   `Nesterov`（内斯特罗夫），86, 92
+*   `MoNet`，262, 265
+*   `Monte Carlo batch normalization`（蒙特卡洛批量归一化），203
+*   `Monte Carlo dropout`（蒙特卡洛 Dropout），158
+*   `Monte Carlo method`（蒙特卡洛方法），381, 383
+*   `moral deskilling`（道德技能退化），429
+*   `multi-head self-attention`（多头自注意力），214
+*   `multi-layer perceptron`（多层感知机），35
+*   `multi-scale flow`（多尺度流），316–317
+*   `multi-scale vision transformer`（多尺度视觉 Transformer），230, 238
+*   `multi-task learning`（多任务学习），151
+*   `multiclass classification`（多分类），67–69
+*   `multiclass cross-entropy loss`（多分类交叉熵损失），69
+*   `multigraph`（多重图），241
+*   `multivariate normal`（多元正态分布），456
+*   `multivariate regression`（多元回归），69
+*   `MViT`，238
 
 ### N
 
-*   **NAdam**，92
-*   **named entity recognition**（命名实体识别），221
-*   **Nash equilibrium**（纳什均衡），277
-*   **natural language processing**（自然语言处理），207, 216
-    *   automatic translation（自动翻译），226
-    *   benchmarks（基准测试），234
-    *   **BERT**，219–222
-    *   embedding（嵌入），218
-    *   **GPT3**，222–227
-    *   named entity recognition（命名实体识别），221
-    *   question answering（问答），222
-    *   sentiment analysis（情感分析），221
-    *   tasks（任务），232
-    *   text classification（文本分类），221
-    *   tokenization（分词/标记化），218
+*   `NAdam`，92
+*   `named entity recognition`（命名实体识别），221
+*   `Nash equilibrium`（纳什均衡），277
+*   `natural language processing`（自然语言处理），207, 216
+    *   `automatic translation`（自动翻译），226
+    *   `benchmarks`（基准测试），234
+    *   `BERT`，219–222
+    *   `embedding`（嵌入），218
+    *   `GPT3`，222–227
+    *   `named entity recognition`（命名实体识别），221
+    *   `question answering`（问答），222
+    *   `sentiment analysis`（情感分析），221
+    *   `tasks`（任务），232
+    *   `text classification`（文本分类），221
+
+
+
+*   `tokenization`（分词/标记化），218
+
 *   **natural policy gradients**（自然策略梯度），397
+
 *   **negative log-likelihood**（负对数似然），60
+
 *   **neighborhood sampling**（邻域采样），254
+
 *   **Nesterov accelerated momentum**（内斯特罗夫加速动量），86, 92
-*   **network**（网络），*see* neural network（参见神经网络）
+
+*   **network**（网络），*see* `neural network`（参见神经网络）
+
 *   **network dissection**（网络解剖），184
+
 *   **network inversion**（网络反演），184
+
 *   **network-in-network**（网络套网络），181
+
 *   **neural architecture search**（神经架构搜索），132
+
 *   **neural network**（神经网络）
+
     *   shallow（浅层），25–40
+
     *   bias（偏置），36
+
     *   capacity（容量），29, 46
+
     *   capsule（胶囊），235
+
     *   composing（组合），41
+
     *   convolutional（卷积），161–185
+
     *   deep（深层），41–55
+
     *   deep vs. shallow（深层与浅层对比），49–51
+
     *   depth（深度），46
+
     *   depth efficiency（深度效率），50, 53
+
     *   encoder-decoder（编码器-解码器），179
+
     *   feed-forward（前馈），35
+
     *   fully connected（全连接），36
+
     *   graph（图），240–267
+
     *   highway（高速公路），202
+
     *   history（历史），37
+
     *   hourglass（沙漏型），179, 197
+
     *   hyperparameter（超参数），46
+
     *   layer（层），35
+
     *   matrix notation（矩阵表示法），49
+
     *   recurrent（循环），233
+
     *   residual（残差），186, 206
+
     *   stacked hourglass（堆叠沙漏型），198
+
     *   transformer（Transformer），207–239
+
     *   U-Net，197
+
     *   weights（权重），36
+
     *   width（宽度），46
+
     *   width efficiency（宽度效率），53
+
 *   **neural ODE**（神经常微分方程），202
-*   **neuron**（神经元），*see* hidden unit（参见隐藏单元）
+
+*   **neuron**（神经元），*see* `hidden unit`（参见隐藏单元）
+
 *   **Newton method**（牛顿法），92
-*   **NLP**，*see* natural language processing（参见自然语言处理）
+
+*   **NLP**，*see* `natural language processing`（参见自然语言处理）
+
 *   **node**（节点），240
+
     *   embedding（嵌入），243, 244
+
 *   **noise**（噪声），122
+
     *   adding to inputs（添加到输入），149
+
     *   adding to weights（添加到权重），149
+
 *   **noise conditioning augmentation**（噪声条件增强），369
+
 *   **noise schedule**（噪声调度），349
+
 *   **noisy deep Q-network**（噪声深度 Q 网络），397
+
 *   **non-convex function**（非凸函数），80
+
 *   **non-negative homogeneity**（非负齐次性），39
+
 *   **nonlinear function**（非线性函数），27
+
 *   **nonlinear latent variable model**（非线性潜变量模型），327
+
 *   **norm**（范数）
+
     *   `ℓ[p]`，442
+
     *   Euclidean（欧几里得），442
+
     *   spectral（谱），442
+
     *   vector（向量），442
+
 *   **norm of weights**（权重范数），412
+
 *   **normal distribution**（正态分布），61, 456–458
+
     *   change of variable（变量变换），458
+
     *   distance between（之间的距离），461
+
     *   Frećhet distance between（弗雷歇距离），461
+
     *   KL divergence between（KL 散度），461
+
     *   multivariate（多元），456
+
     *   product of two normals（两个正态分布的乘积），458
+
     *   sampling（采样），459
+
     *   standard（标准），456
+
     *   univariate（一元），456
+
     *   Wasserstein distance between（瓦瑟斯坦距离），461
+
 *   **normalization**（归一化）
+
     *   batch（批量），192–194
+
         *   Monte Carlo（蒙特卡洛），203
+
     *   batch renormalization（批量重归一化），203
+
     *   ghost batch（虚拟批量），203
+
     *   group（组），203
+
     *   in graph neural networks（在图神经网络中），265
+
     *   instance（实例），203
+
     *   Kipf，258, 262
+
     *   layer（层），203
+
 *   **normalizing flows**（归一化流），303–325
+
     *   applications（应用），322
+
     *   autoregressive（自回归），311–313, 323
+
     *   coupling（耦合），323
+
     *   coupling flow（耦合流），310–311
+
     *   coupling functions（耦合函数），322
+
     *   elementwise（逐元素），309–310, 322
+
     *   generative direction（生成方向），305
+
     *   **GLOW**，318–320, 323
+
     *   in variational inference（在变分推断中），320
+
     *   infinitesimal（无穷小），324
+
     *   inverse autoregressive（逆自回归），313
+
     *   linear（线性），308–309, 322
+
     *   masked autoregressive（掩码自回归），312
+
     *   multi-scale（多尺度），316–317
+
     *   normalizing direction（归一化方向），305
+
     *   planar（平面），322
+
     *   radial（径向），322
+
     *   residual（残差），313–316, 323
+
         *   **iResNet**，314–316
+
         *   **iRevNet**，313–314
+
     *   universality（普适性），324
+
 *   **notation**（符号表示法），436–438
+
 *   **nullspace**（零空间），443
+
 *   **number set**（数集），436
 
 ### O
 
 *   **object detection**（目标检测），177, 183
+
     *   feature pyramid network（特征金字塔网络），183
+
     *   proposal based（基于提议），183
+
     *   proposal free（无提议），184
+
     *   **R-CNN**，183
+
     *   **YOLO**，177, 184
-*   **objective function**（目标函数），*see* loss function（参见损失函数）
+
+*   **objective function**（目标函数），*see* `loss function`（参见损失函数）
+
 *   **off-policy method**（离策略方法），384
+
 *   **offline reinforcement learning**（离线强化学习），394
+
 *   **on-policy method**（在线策略方法/同策略方法），384
+
 *   **one-hot vector**（独热向量），218, 245
-*   **opacity**（不透明度），*see* transparency（参见透明度）
+
+*   **opacity**（不透明度），*see* `transparency`（参见透明度）
+
 *   **optimization**（优化）
+
     *   **AdaDelta**，93
+
     *   **AdaGrad**，93
+
     *   **Adam**，93
+
     *   **AdamW**，94
+
     *   algorithm（算法），77
+
     *   **AMSGrad**，93
+
     *   gradient descent（梯度下降），91
+
     *   learning rate（学习率）
+
         *   warmup（预热），93
+
     *   line search（线搜索），92
+
     *   **NAdam**，92
+
     *   **Newton method**（牛顿法），92
+
     *   objective function（目标函数），91
+
     *   **RAdam**，93
+
     *   **RMSProp**，93
+
     *   **SGD**，91
+
     *   stochastic variance reduced descent（随机方差缩减梯度下降），91
+
     *   **YOGI**，93
+
 *   **orthogonal matrix**（正交矩阵），446
+
 *   **outer alignment problem**（外部对齐问题），421
-*   **output function**（输出函数），*see* loss function（参见损失函数）
+
+*   **output function**（输出函数），*see* `loss function`（参见损失函数）
+
 *   **over-smoothing**（过度平滑），265
+
 *   **overfitting**（过拟合），22, 125
+
 *   **overparameterization**（过参数化），404, 414
 
 ### P
 
 *   **padding**（填充），164
+
 *   **PairNorm**，265
+
 *   **parameter**（参数），18, 436
+
 *   **parameteric ReLU**（参数化 ReLU），38
+
 *   **partial convolution**（部分卷积），181
+
 *   **partially observable MDP**（部分可观测马尔可夫决策过程），377
+
 *   **PatchGAN**，291
+
 *   **PCA**，344
+
 *   **perceptron**（感知机），37
+
 *   **perceptual loss**（感知损失），292
+
 *   **performance**（性能），118–137
+
 *   **Performer**，237
+
 *   **permutation invariance**（排列不变性），162, 213, 249
+
 *   **permutation matrix**（排列矩阵），245, 446
+
 *   **pinball loss**（针球损失/分位数损失），73
+
 *   **pipeline model parallelism**（流水线模型并行），114
+
 *   **pivotal tuning**（关键微调），301
+
 *   **Pix2Pix**，291
+
 *   **PixelShuffle**，182
+
 *   **PixelVAE**，344
+
 *   **planar flow**（平面流），322
+
 *   **Poisson distribution**（泊松分布），76
+
 *   **policy**（策略），377
+
     *   behavior（行为），384
+
     *   Boltzmann（玻尔兹曼），399
+
     *   epsilon-greedy（ε-贪婪），384
+
     *   target（目标），384
+
 *   **policy gradient method**（策略梯度方法），388
+
     *   **PPO**，397
+
     *   **REINFORCE**，391
+
     *   **TRPO**，397
+
 *   **policy network**（策略网络），12
+
 *   **political interference**（政治干预），427
+
 *   **POMDP**，377
+
 *   **pooling**（池化）
+
     *   `ℓ[k]`，181
+
     *   average（平均），181
+
     *   in graph neural networks（在图神经网络中），265
+
     *   Janossy，263
+
     *   max（最大），181
+
     *   max-blur（最大模糊），181
+
 *   **positional encoding**（位置编码），213, 236
+
 *   **posterior**（后验），451
+
 *   **posterior collapse**（后验坍塌），345
+
 *   **PPO**，397
+
 *   **pre-activation**（预激活），35
+
 *   **pre-activation residual block**（预激活残差块），201
+
 *   **pre-training**（预训练），151
+
     *   transformer encoder（Transformer 编码器），219
+
 *   **precision**（精确率），273
+
 *   **principal agent problem**（委托-代理问题），421
+
 *   **prior**（先验），139, 140, 451
+
 *   **prior shift**（先验偏移），135
+
 *   **prioritized experience replay**（优先经验回放），396
+
 *   **probabilistic generative model**（概率生成模型），269
+
 *   **probabilistic PCA**（概率 PCA），344
+
 *   **probability**（概率），448–461
+
     *   Bayes’ rule（贝叶斯法则），450
+
     *   conditional（条件），449
+
     *   density function（密度函数），448
+
     *   distribution（分布），437, 448
+
         *   Bernoulli（伯努利），65
+
         *   categorical（类别），67
+
         *   continuous（连续），448
+
         *   discrete（离散），448
+
         *   distance between（之间的距离），459–461
+
         *   mixture of Gaussians（高斯混合），327
+
         *   multivariate normal（多元正态），456
+
         *   normal（正态），456–458
+
         *   Poisson（泊松），76
+
         *   sampling from（从...采样），459
+
         *   univariate normal（一元正态），61, 456
+
         *   von Mises（冯·米塞斯），74
+
     *   joint（联合），448
+
     *   marginalization（边缘化），449
+
     *   notation（符号表示法），437
+
     *   random variable（随机变量），448
+
 *   **probability flow ODE**（概率流常微分方程），370
 
+*   渐进式增长，286，300
+
+*   受保护属性，423
+
+*   近端策略优化，397
+
+*   剪枝，414
+
+*   金字塔视觉 Transformer，238
+
+*   `PyTorch`，106
+
+*   Q-learning，384
+
+    *   深度，385–387
+
+    *   双重，387
+
+    *   双重深度，387
+
+    *   拟合，384
+
+    *   噪声深度 Q 网络，397
+
+*   分位数损失，73
+
+*   分位数回归，73
+
+*   查询，210
+
+*   问答，222
+
+*   `R-CNN`，183
+
+*   Rademacher 复杂度，134
+
+*   径向流，322
+
+*   Rainbow，397
+
+*   随机合成器，235
+
+*   随机变量，448
+
+*   `RandomDrop`，202
+
+*   排序，73
+
+*   召回率，273
+
+*   感受野，167
+
+    *   在图神经网络中，254
+
+*   重构损失，334
+
+*   修正 Adam，93
+
+*   修正线性单元，25
+
+    *   导数，104
+
+    *   逐渐消亡的 ReLU 问题，38
 
 
 
-* 渐进式增长，286，300
-* 受保护属性，423
-* 近端策略优化，397
-* 剪枝，414
-* 金字塔视觉 Transformer，238
-* `PyTorch`，106
-* Q-learning，384
-    * 深度，385–387
-    * 双重，387
-    * 双重深度，387
-    * 拟合，384
-    * 噪声深度 Q 网络，397
-* 分位数损失，73
-* 分位数回归，73
-* 查询，210
-* 问答，222
-* `R-CNN`，183
-* Rademacher 复杂度，134
-* 径向流，322
-* Rainbow，397
-* 随机合成器，235
-* 随机变量，448
-* `RandomDrop`，202
-* 排序，73
-* 召回率，273
-* 感受野，167
-    * 在图神经网络中，254
-* 重构损失，334
-* 修正 Adam，93
-* 修正线性单元，25
-    * 导数，104
-    * 逐渐消亡的 ReLU 问题，38
-    * 非负齐次性，39
+* 非负齐次性，39
 * 循环 dropout，158
 * 循环神经网络，233
 * 回归，2
@@ -15310,179 +15222,174 @@ KL 散度可以计算为：
 * TFixup，237
 * Tikhonov 正则化，140
 * 分词，218，234
-
-
-
-
-*   BPE dropout，234
-*   字节对编码，234
-*   SentencePiece，234
-*   子词，218
-*   WordPiece，234
-*   top-k 采样，224
-*   总相关 VAE，345
-*   迹，444
-    *   Hutchinson 估计量，316
-*   训练，5，18，77–117
-    *   批次，85
-    *   轮次，85
-    *   误差，19
-    *   决定成功的因素，402–406
-    *   梯度检查点，114
-    *   微批处理，114
-    *   降低内存需求，114
-    *   随机梯度下降，83–86
-    *   可处理性，401
-*   轨迹，381
-*   传导模型，252
-*   迁移学习，151，159，219
-    *   微调，151
-    *   预训练，151
-*   Transformer，207–239
-    *   应用，233
-    *   应用于图像，228–232
-    *   BERT，219–222
-    *   BigBird，237
-    *   CLIP，238
-    *   与 CNN 结合，238
-    *   结合图像和文本，238
-    *   交叉协方差图像 Transformer，238
-    *   Crossformer，238
-    *   DaViT，232，238
-    *   解码算法，234
-    *   定义，215
-    *   编码器模型，219–222
-    *   编码器-解码器模型，226
-    *   扩展结构，237
-    *   用于 NLP，216
-    *   用于视频处理，238
-    *   用于视觉，238
-    *   ImageGPT，229
-    *   LinFormer，237
-    *   长序列，227
-    *   多头自注意力，214
-    *   多尺度，238
-    *   多尺度视觉，230
-    *   Performer，237
-    *   位置编码，213，236
-    *   金字塔视觉，238
-    *   缩放点积注意力，214
-    *   SWin，230，238
-    *   SWin V2，238
-    *   合成器，235
-    *   TFixup，237
-    *   ViT，229
-*   翻译（自动），226
-*   平移等变性，182
-*   平移不变性，182
-*   透明度，424–425
-    *   功能性，425
-    *   运行时，425
-    *   结构性，425
-*   传输计划，283
-*   转置，442
-*   转置卷积，172，181
-*   Tree-Parzen 估计器，136
-*   三角矩阵，445
-*   TRPO，397
-*   截断技巧，288
-*   信任区域策略优化，397
-*   U-Net，197，205
-    *   ++，205
-    *   3D，205
-    *   分割结果，199
-*   欠拟合，22
-*   无向边，241
-*   一元正态分布，456
-*   一元回归，61
-*   通用近似定理，29
-    *   深度，53
-    *   宽度，38
-*   通用归一化流，324
-*   反池化，181
-*   展开，189
-*   无监督学习，7–11，268–274
-    *   模型分类学，268
-*   上三角矩阵，445
-*   上采样，171
-*   V-Net，205
-*   VAE，*参见* 变分自编码器
-*   有效卷积，164
-*   值，208，374
-*   价值对齐，420–426
-    *   内部对齐问题，421
-    *   外部对齐问题，421
-    *   委托-代理问题，421
-*   动作价值，377
-*   状态价值，377
-*   科学无价值理想，431
-*   梯度消失问题，108
-    *   在残差网络中，192
-*   Vapnik-Chervonenkis 维数，134
-*   变量，436
-*   方差，122，454
-    *   恒等式，454
-*   变分近似，335
-    *   结合归一化流，320
-*   变分自编码器，326–347
-    *   对抗学习推断，345
-    *   聚合后验，340，341
-    *   应用，343
-    *   Beta VAE，342，345
-    *   与其他模型结合，345
-    *   条件式，344
-    *   解码器，337
-    *   解离，341
-    *   编码器，337
-    *   概率估计，339
-    *   Factor VAE，346
-    *   生成，340
-    *   后验的分层模型，344
-    *   潜在空间中的空洞，345
-    *   信息偏好问题，345
-    *   修改似然项，344
-    *   归一化流，344
-    *   PixelVAE，344
-    *   后验坍塌，345
-    *   与 EM 算法的关系，346
-    *   与其他模型的关系，344
-    *   重参数化技巧，338，346
-    *   重构，341
-    *   总相关 VAE，345
-*   VC 维数，134
-*   向量，436，442
-    *   点积，443
-    *   范数，442
-*   VEEGAN，300
-*   VGG，176
-*   VGG 损失，292
-*   视觉 Transformer
-    *   DaViT，232
-    *   ImageGPT，229
-    *   多尺度，230
-    *   SWin，230
-    *   ViT，229
-*   可视化激活值：，184
-*   ViT，229
-*   von Mises 分布，74
-*   Wasserstein 距离，282
-    *   正态分布之间，461
-*   Wasserstein GAN，280–285，299
-*   AI 武器化，13
-*   权重，36
-    *   衰减，140，155
-    *   初始化，107–111
-    *   矩阵，49
-*   Weisfeiler-Lehman 图同构测试，264
-*   WGAN-GP，285
-*   宽极小值，158
-*   宽度效率，53
-*   神经网络宽度，46
-*   词分类，221
-*   词嵌入，218
-*   WordPiece，234
-*   Xavier 初始化，113
-*   YOGI，93
-*   YOLO，177，184
-*   零填充，164
-
+    * BPE dropout，234
+    * 字节对编码，234
+    * SentencePiece，234
+    * 子词，218
+    * WordPiece，234
+* top-k 采样，224
+* 总相关 VAE，345
+* 迹，444
+    * Hutchinson 估计量，316
+* 训练，5，18，77–117
+    * 批次，85
+    * 轮次，85
+    * 误差，19
+    * 决定成功的因素，402–406
+    * 梯度检查点，114
+    * 微批处理，114
+    * 降低内存需求，114
+    * 随机梯度下降，83–86
+    * 可处理性，401
+* 轨迹，381
+* 传导模型，252
+* 迁移学习，151，159，219
+    * 微调，151
+    * 预训练，151
+* Transformer，207–239
+    * 应用，233
+    * 应用于图像，228–232
+    * BERT，219–222
+    * BigBird，237
+    * CLIP，238
+    * 与 CNN 结合，238
+    * 结合图像和文本，238
+    * 交叉协方差图像 Transformer，238
+    * Crossformer，238
+    * DaViT，232，238
+    * 解码算法，234
+    * 定义，215
+    * 编码器模型，219–222
+    * 编码器-解码器模型，226
+    * 扩展结构，237
+    * 用于 NLP，216
+    * 用于视频处理，238
+    * 用于视觉，238
+    * ImageGPT，229
+    * LinFormer，237
+    * 长序列，227
+    * 多头自注意力，214
+    * 多尺度，238
+    * 多尺度视觉，230
+    * Performer，237
+    * 位置编码，213，236
+    * 金字塔视觉，238
+    * 缩放点积注意力，214
+    * SWin，230，238
+    * SWin V2，238
+    * 合成器，235
+    * TFixup，237
+    * ViT，229
+* 翻译（自动），226
+* 平移等变性，182
+* 平移不变性，182
+* 透明度，424–425
+    * 功能性，425
+    * 运行时，425
+    * 结构性，425
+* 传输计划，283
+* 转置，442
+* 转置卷积，172，181
+* Tree-Parzen 估计器，136
+* 三角矩阵，445
+* TRPO，397
+* 截断技巧，288
+* 信任区域策略优化，397
+* U-Net，197，205
+    * ++，205
+    * 3D，205
+    * 分割结果，199
+* 欠拟合，22
+* 无向边，241
+* 一元正态分布，456
+* 一元回归，61
+* 通用近似定理，29
+    * 深度，53
+    * 宽度，38
+* 通用归一化流，324
+* 反池化，181
+* 展开，189
+* 无监督学习，7–11，268–274
+    * 模型分类学，268
+* 上三角矩阵，445
+* 上采样，171
+* V-Net，205
+* VAE，*参见* 变分自编码器
+* 有效卷积，164
+* 值，208，374
+* 价值对齐，420–426
+    * 内部对齐问题，421
+    * 外部对齐问题，421
+    * 委托-代理问题，421
+* 动作价值，377
+* 状态价值，377
+* 科学无价值理想，431
+* 梯度消失问题，108
+    * 在残差网络中，192
+* Vapnik-Chervonenkis 维数，134
+* 变量，436
+* 方差，122，454
+    * 恒等式，454
+* 变分近似，335
+    * 结合归一化流，320
+* 变分自编码器，326–347
+    * 对抗学习推断，345
+    * 聚合后验，340，341
+    * 应用，343
+    * Beta VAE，342，345
+    * 与其他模型结合，345
+    * 条件式，344
+    * 解码器，337
+    * 解离，341
+    * 编码器，337
+    * 概率估计，339
+    * Factor VAE，346
+    * 生成，340
+    * 后验的分层模型，344
+    * 潜在空间中的空洞，345
+    * 信息偏好问题，345
+    * 修改似然项，344
+    * 归一化流，344
+    * PixelVAE，344
+    * 后验坍塌，345
+    * 与 EM 算法的关系，346
+    * 与其他模型的关系，344
+    * 重参数化技巧，338，346
+    * 重构，341
+    * 总相关 VAE，345
+* VC 维数，134
+* 向量，436，442
+    * 点积，443
+    * 范数，442
+* VEEGAN，300
+* VGG，176
+* VGG 损失，292
+* 视觉 Transformer
+    * DaViT，232
+    * ImageGPT，229
+    * 多尺度，230
+    * SWin，230
+    * ViT，229
+* 可视化激活值：，184
+* ViT，229
+* von Mises 分布，74
+* Wasserstein 距离，282
+    * 正态分布之间，461
+* Wasserstein GAN，280–285，299
+* AI 武器化，13
+* 权重，36
+    * 衰减，140，155
+    * 初始化，107–111
+    * 矩阵，49
+* Weisfeiler-Lehman 图同构测试，264
+* WGAN-GP，285
+* 宽极小值，158
+* 宽度效率，53
+* 神经网络宽度，46
+* 词分类，221
+* 词嵌入，218
+* WordPiece，234
+* Xavier 初始化，113
+* YOGI，93
+* YOLO，177，184
+* 零填充，164

@@ -1,18 +1,12 @@
+
 # PHP 领域驱动设计：架构风格、战术设计与边界上下文集成
-
-
-
-
-
-
-
-
 
 ## 推特此书！
 
 请通过在 [Twitter](http://twitter.com) 上分享这本书来帮助 Carlos Buenosvinos、Christian Soronellas 和 Keyvan Akbary！
 
 本书的建议推文内容为：
+
 [我刚刚买了 @theUniC、@keyvanakbary 等写的“Domain-Driven Design in PHP” (@dddbook)](https://twitter.com/intent/tweet?text=I%20just%20bought%20%22Domain-Driven%20Design%20in%20PHP%22%20\(@dddbook\)%20by%20@theUniC,%20@keyvanakbary%20and%20@buenosvinos%20https://leanpub.com/ddd-in-php%20%23ddd%20%23php)
 
 [@buenosvinos https://leanpub.com/ddd-in-php #ddd #php](https://twitter.com/intent/tweet?text=I%20just%20bought%20%22Domain-Driven%20Design%20in%20PHP%22%20\(@dddbook\)%20by%20@theUniC,%20@keyvanakbary%20and%20@buenosvinos%20https://leanpub.com/ddd-in-php%20%23ddd%20%23php)
@@ -20,59 +14,81 @@
 本书的建议标签为 [#DDDinPHP](https://twitter.com/search?q=%23DDDinPHP)。
 
 点击此链接在 Twitter 上搜索该标签，了解其他人对这本书的评价：
+
 [`twitter.com/search?q=#DDDinPHP`](https://twitter.com/search?q=%23DDDinPHP)
 
-*这本书献给我最亲爱的 Vanessa、Valentina 和 Gabriela。感谢你们的爱、支持和耐心。Carlos。献给我我亲爱的 Elena。没有你们的鼓励、爱和耐心，这本书将无法完成。Christian.*
-
-
+*这本书献给我最亲爱的 Vanessa、Valentina 和 Gabriela。感谢你们的爱、支持和耐心。Carlos。献给我我亲爱的 Elena。没有你们的鼓励、爱和耐心，这本书将无法完成。Christian。*
 
 ## 1. DDD 入门
 
 ### 1.1 为什么用领域驱动设计？
+
 ### 1.2 领域驱动设计如何帮助我们？
+
 ### 1.2.1 通用语言
+
 ### 1.3 我应该将领域驱动设计作为一种选项开始吗？
+
 ### 1.4 应用领域驱动设计的主要挑战
+
 ### 1.5 使用领域驱动设计的业务价值
+
 ### 1.6 总结
 
 ## 2. 架构风格
 
 ### 2.1 过去美好的时光
+
 ### 2.2 分层架构
+
 ### 2.2.1 模型-视图-控制器 (MVC)
+
 ### 2.2.2 分层架构示例
+
 ### 2.2.2.1 模型
+
 ### 2.2.2.2 视图
+
 ### 2.2.2.3 控制器
+
 ### 2.3 依赖反反转：六形架构
+
 ### 2.3.1 依赖倒置原则 (DIP)
+
 ### 2.3.2 应用六形架构
+
 ### 2.4 命令查询职责分离 (CQRS)
+
 ### 2.4.1 写模型
+
 ### 2.4.2 读模型
+
 ### 2.4.3 同步写模型与读模型
+
 ### 2.5 事件源
+
 ### 2.6 总结
 
 ## 3. 值对象
 
 ### 3.1 定义
 
-
-
-
-
 ### 3.2 值对象 vs 实体
 
 ### 3.3 货币与金额示例
 
 ### 3.4 特性
+
 ### 3.4.1 测量、量化或描述
+
 ### 3.4.2 不变性
+
 ### 3.4.3 概念整体
+
 ### 3.4.4 值相等性
+
 ### 3.4.5 可替换性
+
 ### 3.4.6 无副作用的行为
 
 ### 3.5 基础类型
@@ -80,7 +96,9 @@
 ### 3.6 测试
 
 ### 3.7 持久化值对象
+
 ### 3.7.1 持久化单个值对象
+
 - 使用即用 ORM 的嵌入值
 - 使用 `Doctrine >= 2.5` 的嵌入值
 - 使用 `Doctrine <= 2.4` 的嵌入值
@@ -89,13 +107,17 @@
 - 使用 `Doctrine` 的序列化 LOB
 - `Doctrine` 对象映射
 - `Doctrine` 自定义类型
+
 ### 3.7.2 持久化值对象集合
+
 - 序列化为单列
 - 由连接表支持的集合
 - 使用 `Doctrine` 的连接表支持集合
 - 使用即用 ORM 的连接表支持集合
 - 由数据库实体支持的集合
+
 ### 3.7.3 NoSQL
+
 - PostgreSQL 和 `JSONB`
 
 ### 3.8 安全
@@ -103,192 +125,319 @@
 ### 3.9 总结
 
 ## 4 实体
+
 ### 4.1 介绍
+
 ### 4.2 对象 vs 原始类型
+
 ### 4.3 标识操作
+
 ### 4.3.1 持久化机制生成标识
+
 - 代理标识
 - 针对富领域模型的 `Active Record` vs `Data Mapper`
 - 客户端标识
 - 应用生成标识
 - 其他边界上下文生成标识
+
 ### 4.4 持久化实体
+
 - 配置 `Doctrine`
 - 映射实体
 - 使用注解代码映射实体
 - 使用 `XML` 映射实体
+
 ### 4.5 测试实体
+
 ### 4.6 验证
+
 ### 4.6.1 属性验证
+
 ### 4.6.2 整个对象验证
+
 - 解耦验证消息
+
 ### 4.6.3 验证对象组合
+
 ### 4.7 总结
 
 ## 5 服务
+
 ### 5.1 介绍
+
 ### 5.2 应用服务
+
 ### 5.2.1 事务
+
 ### 5.2.2 测试应用服务
+
 ### 5.3 领域服务
+
 ### 5.4 具有多个实现的领域服务
+
 ### 5.4.1 关于代码复用的一个问题
+
 ### 5.5 测试领域服务
+
 ### 5.6 贫血领域模型 vs 富领域模型
+
 ### 5.6.1 贫血领域模型破坏了封装性
+
 ### 5.6.2 贫血领域模型带来了代码复用的假象
+
 ### 5.6.3 如何避免贫血领域模型？
-
-
-
-
 
 ### 5.7 总结
 
 ## 6. 领域事件
+
 ### 6.1 简介
+
 ### 6.2 定义
+
 ### 6.2.1 小故事
+
 ### 6.2.2 比喻
+
 ### 6.2.3 真实世界(tm) 示例
+
 ### 6.3 特性
+
 ### 6.3.1 命名规范
+
 ### 6.3.2 领域事件与通用语言
+
 ### 6.3.3 不可变性
+
 ### 6.4 事件建模
+
 ### 6.5 持久化领域事件
+
 ### 6.5.1 事件存储库 (Event Store)
+
 ### 6.6 从领域模型中发布事件
+
 ### 6.6.1 从实体发布领域事件
+
 ### 6.6.2 从领域服务或应用服务发布领域事件
-### 6.6.3 DomainEventPublisher 的工作原理
+
+### 6.6.3 `DomainEventPublisher` 的工作原理
+
 ### 6.6.4 设置领域事件监听器 (DomainEventListeners)
+
 ### 6.6.5 单元测试
+
 ### 6.7 将消息传播到远程边界上下文
+
 ### 6.7.1 消息传递
+
 ### 6.7.2 REST
+
 ### 6.8 总结
 
 ## 7. 模块
+
 ### 7.1 在模块中结构化代码
+
 ### 7.1.1 基础设施层中的模块
+
 ### 7.1.1 混合不同的技术
+
 ### 7.2 在 PHP 中利用模块
+
 ### 7.2.1 PEAR 风格的命名空间
+
 ### 7.2.2 PSR-0 和 PSR-4 命名规范
+
 ### 7.3 总结
 
 ## 8. 聚合根 (Aggregates)
+
 ### 8.1 简介
+
 ### 8.1.1 Martin Fowler 的观点
+
 ### 8.1.2 维基百科的观点
-## 8.2 历史回顾
+
+### 8.2 历史回顾
+
 ### 8.3 聚合与簇
+
 ### 8.4 聚合根的解剖
+
 ### 8.4.1 基于业务真不变性的设计聚合根
+
 ### 8.4.2 小聚合根 vs 大聚合根
+
 ### 8.4.3 追求最终一致性
+
 ### 8.4.4 修改单个聚合根
+
 ### 8.4.5 例：异常情况
+
 ### 8.5 示例应用：用户
+
 ### 8.5.1 每个事务不超过三个
+
 ### 8.5.2 悲观并发
+
 ### 8.5.3 乐观并发
+
 ### 8.5.4 授予用户权限
+
 ### 8.5.5 更新用户信息
+
 ### 8.6 总结
 
 ## 9. 工厂 (Factories)
-## 9.1 简介
+
+### 9.1 简介
+
 ### 9.2 聚合根上的工厂方法
+
 ### 9.3 服务上的工厂
+
 ### 9.3.1 构建规格说明 (Specifications)
+
 ### 9.3.2 构建聚合根
+
 ### 9.4 测试
+
 ### 9.4.1 对象母亲 (Object Mother)
+
 ### 9.4.2 测试数据构建器 (Test Data Builder)
+
 ### 9.5 总结
-
-
-
-
 
 ## 10. 存储库 (Repositories)
 
 ### 10.1 引言
+
 ### 10.2 定义
+
 ### 10.3 仓库不是 DAO
+
 ### 10.4 面向集合的仓库
+
 ### 10.4.1 内存实现
+
 ### 10.4.2 Doctrine ORM
+
 ### 10.4.2.1 对象映射
-##### 10.4.2.1.1 Doctrine 自定义映射类型
-### 10.4.2.1.2 XML 映射
-#### 10.4.2.2 实体管理器 (Entity Manager)
+
+#### 10.4.2.1.1 Doctrine 自定义映射类型
+
+#### 10.4.2.1.2 XML 映射
+
+### 10.4.2.2 实体管理器 (Entity Manager)
+
 ### 10.4.2.3 DQL 实现
-## 10.5 面向持久化实现
+
+### 10.5 面向持久化实现
+
 ### 10.5.1 Redis 实现
+
 ### 10.5.2 SQL 实现
+
 ### 10.6 额外行为
+
 ### 10.7 查询仓库
+
 ### 10.7.1 规格模式 (Specification Pattern)
+
 ### 10.7.1.1 内存实现
+
 ### 10.7.1.2 SQL 实现
+
 ### 10.8 事务管理
+
 ### 10.9 测试仓库
-## 10.10 使用内存实现测试你的服务
+
+### 10.10 使用内存实现测试你的服务
+
 ### 10.11 总结
 
 ## 11. 应用 (Application)
 
 ### 11.1 引言
+
 ### 11.2 请求 (Requests)
+
 ### 11.2.1 构建应用服务请求
+
 ### 11.2.2 请求设计
+
 ### 11.2.2.1 使用基本类型
+
 ### 11.2.2.2 可序列化
+
 ### 11.2.2.3 不包含业务逻辑
+
 ### 11.2.2.4 无需测试
+
 ### 11.3 应用服务的剖析
+
 ### 11.3.1 依赖倒置
+
 ### 11.3.2 实例化应用服务
+
 ### 11.3.3 执行
+
 ### 11.3.3.1 每个应用服务一个类
+
 ### 11.3.3.2 一个类包含多个服务方法
+
 ### 11.3.4 返回值
+
 ### 11.3.4.1 从聚合实例创建 DTO
+
 ### 11.3.4.2 数据转换器 (Data Transformers)
+
 ### 11.3.5 布局中的多个应用服务
+
 ### 11.3.5.1 AJAX 内容
+
 ### 11.3.5.2 ESI 内容
+
 ### 11.3.5.3 Symfony 子请求
+
 ### 11.3.5.4 单个控制器，多个应用服务
+
 ### 11.4 测试
+
 ### 11.5 事务
+
 ### 11.6 安全性
+
 ### 11.7 领域事件
+
 ### 11.8 命令处理器 (Command Handlers)
+
 ### 11.8.1 Tactician 库及其他选项
+
 ### 11.9 总结
 
 ## 12. 集成限界上下文 (Bounded Contexts)
 
 ### 12.1 通过数据存储进行集成
+
 ### 12.2 关系
+
 ### 12.2.1 客户 / 供应商
+
 ### 12.2.2 分别处理
+
 ### 12.2.3 顺从者 (Conformist)
+
 ### 12.3 实现限界上下文集成
+
 ### 12.3.1 现代 RPC
+
 ### 12.3.2 消息队列
+
 ### 12.4 总结
 
-
-
-
-
 ## 13. 参考文献 - 275
-
 
 ## 引言 - 276
 
@@ -354,8 +503,6 @@ ii
 
 iii
 
-
-
 ## 第 1 章：入门 DDD
 
 领域驱动设计是关于什么的？它在复杂系统中扮演什么角色？它值得吗？开发者在进入这一领域时需要了解哪些核心概念？
@@ -388,9 +535,6 @@ iv
 
 ## 第 8 章：聚合根（进行中）
 
-
-
-
 聚合根（Aggregates）可能是战术 DDD 中困难的部分。我们将介绍在处理它们时的关键概念，以及如何设计它们。我们将看到一个实际场景：在添加一条业务规则时，两个聚合根如何合并为一个，以及其他对象必须如何进行重构。
 
 ## 第 9 章：工厂（Factories）（已完成）
@@ -421,17 +565,19 @@ iv
 
 ## 致谢
 
-我们是三位正在编写英文书的西班牙人。如果你认为我们的英语远非完美，那么你猜得没错。Edd Mann 从初就在语言方面为我们提供支持。他不仅是一位出色的合作者，还是一位好朋友。我们深表感谢。我们还要感谢 Albert Casademont 和 Ricard Clau 协助修订工作。
+
+
+我们是三位正在编写英文书的西班牙人。如果你认为我们的英语远非完美，那么你猜得没错。`Edd Mann` 从一开始就在语言方面为我们提供支持。他不仅是一位出色的合作者，还是一位好朋友。我们深表感谢。我们还要感谢 `Albert Casademont` 和 `Ricard Clau` 协助修订工作。
 
 我们感谢所有在初期购买本书的早期用户，他们给予了我们所需的爱和支持，让我们能够不断推进。
 
-## Github 贡献者
+## GitHub 贡献者
 
 我们还要感谢所有在我们的 [GitHub 仓库](https://github.com/dddinphp/ddd-in-php-book-issues)[¹] 中报告问题、提出建议等的人。非常感谢每一个人，你们帮助我们让这本书变得更好，更重要的是，帮助了社区和其他开发者成为更优秀的开发者。
 
 正如 [Dave Thomas](https://twitter.com/pragdave)[²] 在他的书《程序员之道》中所写的：“如果你正在读这本书，是因为你想成为更好的开发者。太好了，我们需要更优秀的开发者。”
 
-所以，感谢 Jordi Abad, Jonathan Wondrusch, César Rodríguez, Yannick Voyer, Oriol González, Henry Snoek, Tom Jowitt, Nico Oelgart, Sascha Schimke, Sven Herrmann, Daniel Abad, Luis Rovirosa 和 Marc Aube。
+所以，感谢 `Jordi Abad`、`Jonathan Wondrusch`、`César Rodríguez`、`Yannick Voyer`、`Oriol González`、`Henry Snoek`、`Tom Jowitt`、`Nico Oelgart`、`Sascha Schimke`、`Sven Herrmann`、`Daniel Abad`、`Luis Rovirosa` 和 `Marc Aube`。
 
 ¹[`github.com/dddinphp/ddd-in-php-book-issues`](https://github.com/dddinphp/ddd-in-php-book-issues)
 
@@ -441,23 +587,26 @@ iv
 
 ### Carlos Buenosvinos
 
-PHP 极端编程专家，担任 Atrapalo.com 的 CTO，PHP Barcelona 用户组董事成员，敏捷教练，Valu 和 Gabriela 的父亲，Vanessa 的丈夫。他曾工作于电子商务（Atrapalo.com 和 Ebay International）、支付处理（Vendo）和分类广告（Emagister.com）。他喜欢开发移动应用、树莓派项目和游戏。拥有 Zend PHP、Scrum Master 和 MySQL 5.6 认证。
+PHP 极端编程专家，担任 `Atrapalo.com` 的 CTO，PHP Barcelona 用户组董事成员，敏捷教练，`Valu` 和 `Gabriela` 的父亲，`Vanessa` 的丈夫。他曾工作于电子商务（`Atrapalo.com` 和 `Ebay International`）、支付处理（`Vendo`）和分类广告（`Emagister.com`）。他喜欢开发移动应用、树莓派项目和游戏。拥有 Zend PHP、Scrum Master 和 MySQL 5.6 认证。
 
 - Twitter: [@buenosvinos³](https://twitter.com/buenosvinos)
+
 - GitHub: https://github.com/carlosbuenosvinos
 
 ### Christian Soronellas
 
-热情的软件开发者。软件行者与匠学徒。极端编程灵魂。拥有 10 年以上的 Web 开发经验。Zend PHP 5.3 认证工程师。Zend Framework 认证工程师。SensioLabs 认证 Symfony 开发者。他曾作为自由职业工作于 Privalia、Emagister，目前在 Atrapalo 担任软件架构师。
+热情的软件开发者。软件行者与匠学徒。极端编程灵魂。拥有 10 年以上的 Web 开发经验。Zend PHP 5.3 认证工程师。Zend Framework 认证工程师。SensioLabs 认证 Symfony 开发者。他曾作为自由职业工作于 `Privalia`、`Emagister`，目前在 `Atrapalo` 担任软件架构师。
 
 - Twitter: [@theUniC⁴](https://twitter.com/theUniC)
+
 - GitHub: https://github.com/theUniC
 
 ### Keyvan Akbary
 
-多语言软件开发者。热爱软件基础、匠心运动、极端编程、SOLID 原则、清洁代码、设计模式和测试。偶尔的函数式编程冒险者。他将技术理解为为业务提供价值的媒介。他曾为大小客户提供自由职业服务，并在 Youzee、MyBuilder 工作过，目前在伦敦的 TransferWise 担任首席开发者。
+多语言软件开发者。热爱软件基础、匠心运动、极端编程、SOLID 原则、清洁代码、设计模式和测试。偶尔的函数式编程冒险者。他将技术理解为为业务提供价值的媒介。他曾为大小客户提供自由职业服务，并在 `Youzee`、`MyBuilder` 工作过，目前在伦敦的 `TransferWise` 担任首席开发者。
 
 - Twitter: [@keyvanakbary⁵](https://twitter.com/keyvanakbary)
+
 - GitHub: https://github.com/keyvanakbary
 
 # 1. 开始 DDD
@@ -467,11 +616,17 @@ PHP 极端编程专家，担任 Atrapalo.com 的 CTO，PHP Barcelona 用户组�
 ### 1.1 为什么用领域驱动设计？
 
 - 软件不仅对编码人员有意义，也对业务有意义。DDD 强调确保业务和软件使用相同的语言。
+
 - 软件优先级与业务优先级对齐。
+
 - 通过 DDD，每个人在发现业务领域的过程中学习并做出贡献。
+
 - 知识不再仅仅属于开发者，通过 DDD，每个人都清楚业务正在发生什么。
+
 - 领域专家之间没有翻译，意味着没有信息丢失或琐碎的同步。每个人都说同一种语言。
+
 - 设计就是代码，代码就是设计，是通用语言唯一实现的真理。
+
 - DDD 为战略设计和战术设计提供了一个框架。战略设计用于根据业务价值准确定最重要的开发领域，战术设计则关于经过实践检验的构建块和模式。
 
 ## 1.2 领域驱动设计如何帮助？
@@ -480,28 +635,32 @@ PHP 极端编程专家，担任 Atrapalo.com 的 CTO，PHP Barcelona 用户组�
 
 1. 通用语言（Ubiquitous Language）：领域专家和软件开发者共同工作，为正在开发的业务领域建立一种通用语言。没有“我们”和“他们”，只有*我们*。开发软件是一项业务投资，而不只是成本。构建通用语言的努力有助于在所有团队成员中传播深刻的领域洞察。
 
-2. 战略设计（Strategic Design）：领域驱动设计解决业务方向背后的策略，而不仅仅是技术方面。它有助于定义内部关系和预警反馈系统。在技术方面，战略设计通过为实现服务体系架构提供动力，保护每个*业务**服务*。
-
-
-
-
+2. 战略设计（Strategic Design）：领域驱动设计解决业务方向背后的策略，而不仅仅是技术方面。它有助于定义内部关系和预警反馈系统。在技术方面，战略设计通过为实现服务体系架构提供动力，保护每个*业务*服务。
 
 # 3. 战术设计
+
 领域驱动设计（DDD）为迭代的软件交付提供了工具和构建组件。战术设计工具产生的软件能够准确映射领域专家的心理模型，具有可测试性且错误率较低。
 
 ### 1.2.1 通用语言
-与限界上下文 一样，`通用语言`（Ubiquitous Language）是 DDD 的核心优势之一。
+
+与`限界上下文`一样，`通用语言`（Ubiquitous Language）是 DDD 的核心优势之一。
 
 ### 从上下文的角度来看
+
 目前，请将`限界上下文`（Bounded Context）视为系统周围的一个概念边界。边界内部的`通用语言`具有特定的上下文含义。边界之外的概念可能有不同的含义。
 
 那么，如何捕获这种特殊的语言呢？
+
 - 为物理操作和概念领域概念标记名称。
+
 - 创建术语和定义的词汇表。
+
 - 使用某种文档记录记录重要的软件概念。
+
 - 与团队其他成员共享并演进收集到的知识。
 
 ## 1.3 我是否应该开始考虑将领域驱动设计作为一个备选项？
+
 领域驱动设计并不是万能灵药，就像软件中的任何事物一样，它取决于上下文。作为一个经验法则，用它来简化你的领域，而永远不要增加复杂性。
 
 如果你的应用是以数据为中心的，且用例围绕数据操作和 CRUD 操作（即：创建、读取、更新和删除）展开——那么你不需要 DDD。你的公司只需要在数据库前面放一个华丽的界面即可。
@@ -511,6 +670,7 @@ PHP 极端编程专家，担任 Atrapalo.com 的 CTO，PHP Barcelona 用户组�
 如果你有超过 30 个用例，你的系统可能正在向令人可怕的“大泥球”（big ball of mud）演变。如果你确定你的系统复杂性将会增加，你应该开始考虑使用 DDD 来对抗复杂性。
 
 ### 开始使用 DDD
+
 如果你知道你的应用程序将会增长并且可能经常变化，DDD 将无疑有助于管理复杂性并随着时间的推移重构你的模型。
 
 如果你不理解你所工作的领域，因为它是新的且以前没有人投入过解决方案，这可能意味着它已经复杂到可以开始应用 DDD 了。你需要与`领域专家`（Domain Experts）密切合作，以获得正确的模型。这需要与专家进行开放、健康、尊重且持续的对话，将他们的口语建模为软件。
@@ -518,30 +678,46 @@ PHP 极端编程专家，担任 Atrapalo.com 的 CTO，PHP Barcelona 用户组�
 我们开发者是技术型思考者。技术解决方案是我们的专长。思考技术问题并不坏，唯一的问题是，有时少从技术角度思考反而更好。为了从对象的行为进行思考，我们需要先用`通用语言`进行思考。
 
 ### 1.5 使用领域驱动设计的业务价值
+
 证明一种技术或方法的最佳方式是为业务提供价值。总结来说，应用 DDD 的主要益处是：
+
 - 该领域有用且有意义的模型
+
 - 领域专家参与软件设计
+
 - 更好的用户体验
+
 - 清晰的边界
+
 - 更好的架构组织
+
 - 以敏捷的方式迭代和持续建模
+
 - 更好的工具，包括战略性和战术性的
 
 ### 1.6 总结
+
 实施领域驱动设计需要努力。如果这很容易，每个人都会编写高质量的代码了。准备好，因为通过这段旅程，你将学会如何让你的设计看起来就像你的软件工作方式一样。在本章中，你学习了：
+
 - 领域驱动设计不是关于技术的，而是通过关注模型在你工作的领域提供价值。每个人都参与到发现领域的过程中，开发者和领域专家合作，通过共享相同的语言——`通用语言`来建立知识库。
+
 - 领域驱动设计提供了`战术`和`战略`建模工具来设计高质量的软件。战略设计针对业务方向，有助于定义内部关系，并通过定义强边界在技术上保护每个`业务服务`。战术设计为迭代设计提供了实用的构建组件。
+
 - 我们学习了 DDD 有意义的上下文。DDD 不是万能灵药，它取决于上下文。
+
 - 我们还看到应用 DDD 是一项长期投资，它需要努力。
+
 - 最终，`通用语言`是 DDD 的核心需求。
 
 ## 2. 架构风格
+
 为了能够构建复杂的应用程序，关键要求之一是拥有符合需求的架构风格。
 
-## 2.1  old 时光
+## 2.1 旧时光
+
 在 PHP 5 发布之前，该语言并没有接纳面向对象的范式。在那个时代，编写应用程序的通常方法是使用过程和全局状态。`关注点分离`（Separation of Concerns）、`MVC` 等概念在 PHP 社区是陌生的。
 
-下面的示例是用“传统方式”编写的应用程序，应用程序由与 HTML 代码混合的前控制器组成。在此期间，`基础设施（Infrastructure）、`表示层（Presentation）或`UI`以及`领域（Domain）层代码全部交织在一起。
+下面的示例是用“传统方式”编写的应用程序，应用程序由与 HTML 代码混合的前控制器组成。在此期间，`基础设施`（Infrastructure）、`表示层`（Presentation）或`UI`以及`领域`（Domain）层代码全部交织在一起。
 
 ```php
 <?php
@@ -575,12 +751,9 @@ $posts = $stm->fetchAll(PDO::FETCH_ASSOC);
 <head></head>
 <body>
 <?php if (null !== $errormsg): ?>
-<div class="alert error"><?php echo $errormsg; ?></逐>
+<div class="alert error"><?php echo $errormsg; ?></div>
 <?php else: ?>
 ```
-
-
-
 
 <div class="alert success">太棒了！文章创建成功！</div>
 
@@ -589,25 +762,43 @@ $posts = $stm->fetchAll(PDO::FETCH_ASSOC);
 ```
 
 <table>
+
   <thead>
+
     <tr>
+
       <th>ID</th>
+
       <th>标题</th>
+
       <th>操作</th>
+
     </tr>
+
   </thead>
+
   <tbody>
+
     <?php foreach ($posts as $post): ?>
+
       <tr>
+
         <td><?php echo $post['ID']; ?></td>
+
         <td><?php echo $post['TITLE']; ?></td>
+
         <td><?php editPostUrl($post['ID']); ?></td>
+
       </tr>
+
     <?php endforeach; ?>
+
   </tbody>
+
 </table>
 
 </body>
+
 </html>
 
 这种编码风格通常被称为***大泥球架构（Big Ball of Mud）***¹。在这一风格中看到的一种改进是：
@@ -620,7 +811,7 @@ $posts = $stm->fetchAll(PDO::FETCH_ASSOC);
 
 然而，改进是将网页的页眉和页脚封装在各自独立的文件中，
 
-这些文件被包含在其他文件中。这避免了重复并有利于于重用。
+这些文件被包含在其他文件中。这避免了重复并有利于重用。
 
 `include __DIR__ . '/bootstrap.php';`
 
@@ -661,23 +852,41 @@ $posts = $stm->fetchAll(PDO::FETCH_ASSOC);
 ```
 
 <table>
+
   <thead>
+
     <tr>
+
       <th>ID</th>
+
       <th>标题</th>
+
       <th>操作</th>
+
     </tr>
+
   </thead>
+
   <tbody>
+
     <?php foreach ($posts as $post): ?>
+
       <tr>
+
         <td><?php echo $post['ID']; ?></td>
+
         8
+
         <td><?php echo $post['TITLE']; ?></td>
+
         <td><?php editPostUrl($post['ID']); ?></td>
+
       </tr>
+
     <?php endforeach; ?>
+
   </tbody>
+
 </table>
 
 ```php
@@ -685,7 +894,6 @@ $posts = $stm->fetchAll(PDO::FETCH_ASSOC);
 ```
 
 如今，尽管非常不被推荐这样做，但仍有应用程序在使用这种过程化编码方式。这种架构风格的主要缺点是没有实现真正的关注点分离——与其它知名且经过验证的架构相比，维护成本和更改成本大幅增加。
-
 
 架构风格
 
@@ -696,21 +904,24 @@ $posts = $stm->fetchAll(PDO::FETCH_ASSOC);
 分层架构的核心是实现关注点分离。为了实现这一点，我们将代码划分为不同的层。在我们的示例中，这涉及到应用层、领域层和基础设施层。每一层都有明确的职责：
 
 - **应用层**：负责处理用户请求并协调领域逻辑。
+
 - **领域层**：包含核心业务逻辑和规则。
+
 - **基础设施层**：处理底层技术实现，如数据库访问或文件系统。
 
-通过这种分层，代码变得更于维护和测试，因为每一层的更改通常只会影响到该层本身与其依赖层。
+通过这种分层，代码变得更易于维护和测试，因为每一层的更改通常只会影响到该层本身与其依赖层。
 
 ### 2.2.1 MVC（模型-视图-控制器）
 
 MVC 是一种经典的架构模式，它将应用程序分为三个部分：
 
 - **模型（Model）**：负责数据和逻辑。
+
 - **视图（View）**：负责用户界面。
+
 - **控制器（Controller）**：处理输入并协调模型与视图之间的交互。
 
 虽然 MVC 被广泛使用，但如果不正确设计，控制器往往会变得臃肿，产生所谓的“胖控制器”。
-
 
 架构风格
 
@@ -718,10 +929,9 @@ MVC 是一种经典的架构模式，它将应用程序分为三个部分：
 
 
 
+每当`Model`更新时，在 UI 中进行表示。通常情况下，`View`层接收一个对象，通常是一个`Data Transfer Object (DTO)`而不是`Model`层的实例，它收集了为了成功表示所需的所有信息。对于 PHP 来说，有几个模板引擎可以极大地帮助将`Model`的表示与`Model`本身以及`Controller`分离开。目前最受欢迎的引擎是 [Twig](http://twig.sensiolabs.org/)。让我们看看如果使用 Twig 使用 DTO 代替 Model 实例，View 层会变成什么样？
 
-每当 `Model` 更新时，在 UI 中进行表示。通常情况下，`View` 层接收一个对象，通常是一个 `Data Transfer Object (DTO)` 而不是 `Model` 层的实例，它收集了为了成功表示所需的所有信息。对于 PHP 来说，有几个模板引擎可以极大地帮助将 `Model` 的表示与 `Model` 本身以及 `Controller` 离离开。目前最受欢迎的引擎是 [Twig](http://twig.sensiolabs.org/)。让我们看看如果使用 Twig **使用 DTO 代替 Model 实例**，View 层会变成什么样？
-
-这是一个老旧且活跃的话题。为什么要创建一个 DTO 而不是直接给 View 层提供 `Model` 实例？主要原因和简短的答案是，同样是，*关注点分离*。让视图检查并使用 `Model` 实例会导致 `View` 层与 `Model` 层之间紧密耦合。事实上，`Model` 层的更改可能会破坏所有使用了已更改的 `Model` 实例的视图。
+这是一个老旧且活跃的话题。为什么要创建一个 DTO 而不是直接给 View 层提供`Model`实例？主要原因和简短的答案是，同样是，关注点分离。让视图检查并使用`Model`实例会导致`View`层与`Model`层之间紧密耦合。事实上，`Model`层的更改可能会破坏所有使用了已更改的`Model`实例的视图。
 
 ```twig
 {% extends "base.html.twig" %}
@@ -733,12 +943,12 @@ MVC 是一种经典的架构模式，它将应用程序分为三个部分：
 {% endif %}
 <table>
 <thead><tr><th>ID</th><th>TITLE</th><th>ACTIONS</th></tr></head>
-<<tbody>
+<tbody>
 {% for post in posts %}
-<tr
+<tr>
 <td>{{ post.id }}</td>
-<td>{{ post.title }}<?php echo $post['TITLE']; ?></td></td>
-<td><a href="{{ editPostUrl(post.id) }}">Edit Post</a></a></td>
+<td>{{ post.title }}<?php echo $post['TITLE']; ?></td>
+<td><a href="{{ editPostUrl(post.id) }}">Edit Post</a></td>
 </tr>
 {% endfor %}
 </tbody>
@@ -746,18 +956,18 @@ MVC 是一种经典的架构模式，它将应用程序分为三个部分：
 {% endblock %}
 ```
 
-大多数时候，当 `Model` 触发状态更改时，它也会通知相关的 `Views` 以便 UI 可以刷新。在典型的 Web 场景中，由于客户端-服务器的性质，`Model` 及其表示之间的同步可能有点复杂。在此类环境中，通常需要一些 JavaScript 定义的交互来维持这种同步。出于这个原因，JavaScript MVC 框架如下面的框架在近年来变得非常流行：
+大多数时候，当`Model`触发状态更改时，它也会通知相关的`Views`以便 UI 可以刷新。在典型的 Web 场景中，由于客户端-服务器的性质，`Model`及其表示之间的同步可能有点复杂。在此类环境中，通常需要一些 JavaScript 定义的交互来维持这种同步。出于这个原因，JavaScript MVC 框架如下面的框架在近年来变得非常流行：
 
 * [AngularJS](https://angularjs.org/)
 * [EmberJS](http://emberjs.com/)
 * [Marionette](http://marionettejs.com/)
 * [ReactJS](https://facebook.github.io/react/)
 
-## 2.2.2.3 Controller
+## Controller
 
-Controller 层负责组织和协调 `View` 和 `Model`。它接收来自 `View` 层的消息并触发 `Model` 行为以执行所需的操作。此外，它向 `View` 发送消息以显示 `Model` 的表示。这两个操作都归功于 `Application Layer`，该层负责协调、组织和封装领域行为。
+Controller 层负责组织和协调`View`和`Model`。它接收来自`View`层的消息并触发`Model`行为以执行所需的操作。此外，它向`View`发送消息以显示`Model`的表示。这两个操作都归功于`Application Layer`，该层负责协调、组织和封装领域行为。
 
-对于 PHP 的 Web 应用而言，`Controller` 通常包含一组类，它们为了实现其目的会“说 HTTP”。也就是说，它们接收一个 HTTP 请求并返回一个 HTTP 响应。
+对于 PHP 的 Web 应用而言，`Controller`通常包含一组类，它们为了实现其目的会“说 HTTP”。也就是说，它们接收一个 HTTP 请求并返回一个 HTTP 响应。
 
 ```php
 class PostsController
@@ -789,25 +999,27 @@ class PostsController
 }
 ```
 
-## 2.3 依赖倒置。六边形架构
+## 依赖倒置。六边形架构
 
 遵循分层架构的核心规则，存在实现某些需要在领域模型层中使用基础设施关注点的接口的风险。
 
-例如，如果我们遵循 MVC，上一个示例中的 `PDORepository` 应该被放在 `Domain Model` 中。然而，将基础设施细节直接放在我们的领域中间违反了关注点分离。这可能会导致问题，很难避免违反分层架构的核心规则，如果 `Domain Layer` 感知技术实现，将导致代码风格可能变得难以测试。
+例如，如果我们遵循 MVC，上一个示例中的`PDORepository`应该被放在`Domain Model`中。然而，将基础设施细节直接放在我们的领域中间违反了关注点分离。这可能会导致问题，很难避免违反分层架构的核心规则，如果`Domain Layer`感知技术实现，将导致代码风格可能变得难以测试。
 
-### 2.3.1 依赖倒置原则 (DIP)
+### 依赖倒置原则 (DIP)
 
-我们如何修复这个问题？由于 `Domain Model layer` 依赖于具体的基础设施实现，可以通过将 `Infrastructure layer` 移动到其他三层之上来应用[依赖倒置原则](http://www.objectmentor.com/resources/articles/dip.pdf)。
+我们如何修复这个问题？由于`Domain Model layer`依赖于具体的基础设施实现，可以通过将`Infrastructure layer`移动到其他三层之上来应用[依赖倒置原则](http://www.objectmentor.com/resources/articles/dip.pdf)。
 
 **依赖倒置原则**
 
 高层模块不应该依赖低层模块。两者都应该依赖抽象。
+
 抽象不应该依赖细节。细节应该依赖于抽象。
+
 Robert C. Martin
 
-通过使用 `依赖倒置原则`，架构方案发生了变化，可以被称为*低层模块*的 `Infrastructure layer` 现在依赖于 `UI`、`Application Layer` 和 `Domain Layer`，这些是*高层模块*。依赖被反转了。但那么，六边形架构是什么？它是如何融入其中的？六边形架构（也称为端口和适配器）由 Alistair Cockburn 定义，它将应用程序表示为一个六边形，每个边代表一个端口（Port），并带有一个或多个适配器（Adapter）。端口是一个带有可插拔适配器的连接器，它将外部输入转换为**内部**可以理解的内容。
+通过使用`依赖倒置原则`，架构方案发生了变化，可以被称为*低层模块*的`Infrastructure layer`现在依赖于`UI`、`Application Layer`和`Domain Layer`，这些是*高层模块*。依赖被反转了。但那么，六边形架构是什么？它是如何融入其中的？六边形架构（也称为端口和适配器）由 Alistair Cockburn 定义，它将应用程序表示为一个六边形，每个边代表一个端口（Port），并带有一个或多个适配器（Adapter）。端口是一个带有可插拔适配器的连接器，它将外部输入转换为**内部**可以理解的内容。
 
-### 2.3.2 应用六边形架构
+### 应用六边形架构
 
 继续之前的博客示例，我们需要的第一个概念是让*外部*世界可以与应用程序通信的端口。在这种情况下，我们将使用一个 HTTP 端口及其相应的适配器。外部将使用端口向应用程序发送消息。示例使用数据库来存储整个博客集合，因此，为了让应用程序从数据库检索博客，需要一个端口。
 
@@ -819,7 +1031,7 @@ interface PostRepository
 }
 ```
 
-该接口定义了应用程序检索博客博客信息的端口，*并且它将位于领域层*。现在，需要一个该端口的适配器。适配器负责定义使用特定技术检索博客的方式。
+该接口定义了应用程序检索博客信息的端口，*并且它将位于领域层*。现在，需要一个该端口的适配器。适配器负责定义使用特定技术检索博客的方式。
 
 ```php
 class PDOPostRepository implements PostRepository
@@ -832,9 +1044,6 @@ class PDOPostRepository implements PostRepository
     }
 }
 ```
-
-
-
 
 ```php
 public function byId(PostId $id)
@@ -858,13 +1067,9 @@ public function add(Post $post)
 }
 ```
 
-一旦定义了端口（Port）及其对应的适配器（Adapter），最后一步就是重构 `PostService` 类以便使用它们。这可以通过[依赖注入](http://www.martinfowler.com/articles/injection.html)⁸ 轻松实现。
+一旦定义了端口（Port）及其对应的适配器（Adapter），最后一步就是重构`PostService`类以便使用它们。这可以通过[依赖注入](http://www.martinfowler.com/articles/injection.html)⁸ 轻松实现。
 
 ⁸⁸[`www.martinfowler.com/articles/injection.html`](http://www.martinfowler.com/articles/injection.html)
-
-# 架构风格
-
-18
 
 ```php
 class PostService
@@ -885,17 +1090,13 @@ class PostService
 }
 ```
 
-这六边形架构（Hexagonal Architecture）的一个简单示例。它是一种灵活的架构，像分层架构一样促进关注点分离，并且具有对称性——内部应用程序通过端口与外部进行通信。从现在起，这将作为构建和解释 `CQRS` 和`事件溯源（Event Sourcing）`的基础架构。
+这是六边形架构（Hexagonal Architecture）的一个简单示例。它是一种灵活的架构，像分层架构一样促进关注点分离，并且具有对称性——内部应用程序通过端口与外部进行通信。从现在起，这将作为构建和解释`CQRS`和`事件溯源（Event Sourcing）`的基础架构。
 
-为了更深入地了解这种架构，你可以查看附录](#index_split_000.html#294)，其中包含详细示例，解释了如`事务性（transactionability）`和其他`交叉关注点（cross cutting concerns）`等高级主题。
+为了更深入地了解这种架构，你可以查看[附录](#index_split_000.html#294)，其中包含详细示例，解释了如`事务性（transactionability）`和其他`交叉关注点（cross cutting concerns）`等高级主题。
 
-## 2.4 命令查询职责分离
+## 命令查询职责分离
 
-六边形架构是一个很好的基础架构，但它也有一些局限性。例如，复杂的 UI 可能需要以多种形式显示聚合根
-
-架构风格
-
-19
+六边形架构是一个很好的基础架构，但它也有一些局限性。例如，复杂的 UI 可能需要以多种形式显示聚合根。
 
 ```php
 interface PostRepository
@@ -913,7 +1114,7 @@ interface PostRepository
 
 当这些技术被滥用时，UI 视图的构建可能会变得非常痛苦，我们应该权衡是让应用程序服务返回领域模型实例，还是使用某种数据传输对象（DTO），以避免领域模型与 Web 控制器、CLI 控制器等基础设施代码之间的紧耦合。
 
-幸运的是，还有另一种方法。如果问题是存在多个异的视图，我们可以将它们从领域模型中排除，并开始将它们视为纯粹的基础设施关注点。这种选项基于 Bertrand Meyer 定义的名为命令查询分离（CQS）的的设计原则，该原则诞生了由 Greg Young 定义的名为命令查询职责分离（CQRS）的新型架构模式。
+幸运的是，还有另一种方法。如果问题是存在多个异的视图，我们可以将它们从领域模型中排除，并开始将它们视为纯粹的基础设施关注点。这种选项基于 Bertrand Meyer 定义的名为命令查询分离（CQS）的设计原则，该原则诞生了由 Greg Young 定义的名为命令查询职责分离（CQRS）的新型架构模式。
 
 ### 命令查询分离 (CQS)
 
@@ -921,7 +1122,7 @@ interface PostRepository
 
 该设计原则规定每个方法要么是一个执行操作的命令（Command），要么是一个向调用者返回数据的查询（Query），不能两者兼顾。
 
-`CQRS` 追求更激进的关注点分离，将模型分为二：
+`CQRS`追求更激进的关注点分离，将模型分为二：
 
 - **写模型（Write Model）**：也称为**命令模型（Command Model）**，它执行写入并负责真实的领域行为。
 - **读模型（Read Model）**：负责应用程序内部的读取，并将其视为应该属于领域模型之外的内容。
@@ -932,15 +1133,11 @@ interface PostRepository
 
 想想 Web 应用前的缓存系统。每当数据库更新新信息时，缓存层的数据都可能是过时的，因此`缓存系统是最终一致的`。
 
-架构风格
-
-20
-
 `写模型投影（Write Model projections）`或`投影（Projections）`。这将在书后部分解释，领域事件。写模型投影的基础是收集所有已发布的事件。
 
-### 2.4.1 写模型
+### 写模型
 
-这是领域行为的真实持有者。延续示例，`Repository` 接口将简化为：
+这是领域行为的真实持有者。延续示例，`Repository`接口将简化为：
 
 ```php
 interface PostRepository
@@ -950,11 +1147,7 @@ interface PostRepository
 }
 ```
 
-现在 PostRepository 已从所有的读取关注点中释放，除了 `byId`，它负责加载聚合根以便我们对其进行操作。一旦完成，所有查询方法从 Post 模型中剥离，只留下命令方法。这意味着有效地去掉了所有的 getter 方法以及任何暴露信息的方法。相反，`领域事件`将被发布，以便通过订阅来触发写模型投影。
-
-架构风格
-
-21
+现在`PostRepository`已从所有的读取关注点中释放，除了`byId`，它负责加载聚合根以便我们对其进行操作。一旦完成，所有查询方法从`Post`模型中剥离，只留下命令方法。这意味着有效地去掉了所有的 getter 方法以及任何暴露信息的方法。相反，`领域事件`将被发布，以便通过订阅来触发写模型投影。
 
 ```php
 class AggregateRoot
@@ -996,10 +1189,6 @@ class AggregateRoot
 }
 ```
 
-架构风格
-
-22
-
 ```php
 class Post extends AggregateRoot
 {
@@ -1016,8 +1205,6 @@ class Post extends AggregateRoot
     }
 }
 ```
-
-
 
 
 
@@ -1098,11 +1285,12 @@ class Post extends AggregateRoot
 
 ## 2.4.2 读取模型
 
-*读取模型*（read model），也称为*查询模型*（Query Model），是从领域关注点中提取的纯反规范化数据模型。事实上，在 CQRS 中，所有的*读取关注点*都被视为报告过程，这是一种基础设施层面的关注点。通常情况下，在使用 CQRS 时，*读取模型*取决于 UI 的需求以及组成 UI 的视图的复杂程度。
+*读取模型*（read model），也称为*查询模型*（Query Model），是从领域关注点中提取的纯反规范化数据模型。事实上，在 `CQRS` 中，所有的*读取关注点*都被视为报告过程，这是一种基础设施层面的关注点。通常情况下，在使用 `CQRS` 时，*读取模型*取决于 UI 的需求以及组成 UI 的视图的复杂程度。
 
-在*读取模型*基于关系型数据库定义的情况下，简单的方法是在数据库表和 UI 视图之间建立一对一的关系。这些数据库表 / UI 视图将通过由*写侧*（write side）发布的*领域*事件*触发的*写模型投影*（write model projections）进行更新。
+在*读取模型*基于关系型数据库定义的情况下，简单的方法是在数据库表和 UI 视图之间建立一对一的关系。这些数据库表 / UI 视图将通过由*写侧*（write side）发布的*领域事件*触发的*写模型投影*（write model projections）进行更新。
 
 -- 单个文章及其评论的 UI 视图定义
+
 ```sql
 CREATE TABLE single_post_with_comments (
     id INTEGER NOT NULL,
@@ -1115,6 +1303,7 @@ CREATE TABLE single_post_with_comments (
 ```
 
 -- 设置一些数据
+
 ```sql
 INSERT INTO single_post_with_comments(1, 1, "Layered architecture", "Lorem ipsum dolor sit amet, ...", NOW(), "Lorem ipsum dolor sit amet, ...");
 INSERT INTO single_post_with_comments(2, 1, "Layered architecture", "Lorem ipsum dolor sit amet, ...", NOW(), "Lorem ipsum dolor sit amet, ...");
@@ -1125,6 +1314,7 @@ INSERT INTO single_post_with_comments(6, 3, "Command - Query Responsability Segr
 ```
 
 -- 查询它
+
 ```sql
 SELECT * FROM single_post_with_comments WHERE post_id = 1;
 ```
@@ -1132,6 +1322,7 @@ SELECT * FROM single_post_with_comments WHERE post_id = 1;
 这种架构风格的一个重要特征是，*读取模型*应该是完全可弃的，因为应用程序的*真实状态*是由*写模型*处理的。这意味着在需要时，可以使用*写模型投影*删除并重新创建*读取模型*。
 
 在这里我们可以看到博客应用程序中可能的视图示例：
+
 ```sql
 SELECT * FROM posts_grouped_by_month_and_year ORDER BY month DESC, year ASC;
 SELECT * FROM posts_by_tags WHERE tag = "ddd";
@@ -1171,6 +1362,7 @@ class PostsController
 这里是棘手的部分。我们如何同步*写模型*和*读取模型*？我们已经说过，通过在*写模型*事务中使用*领域事件*来实现。对于捕获的每个事件类型，都会执行特定的投影。因此，事件与投影之间将建立一对一的关系。
 
 让我们来看一个配置投影的示例，以便理解：
+
 ```php
 $client = new \Elasticsearch\ClientBuilder::create()->build();
 $projector = new Projector();
@@ -1195,7 +1387,7 @@ $projector->project($event);
 
 这段代码是同步的，但根据需要可以是异步的。你可以通过放置一些警报让客户意识到这些数据不同步。
 
-在下一个示例中，我们将使用 ampq-lib PHP 扩展结合 [ReactPHP¹⁰](http://github.com/GeniusesOfSymfony/ReactAMQP)。
+在下一个示例中，我们将使用 `ampq-lib` PHP 扩展结合 [ReactPHP¹⁰](http://github.com/GeniusesOfSymfony/ReactAMQP)。
 
 ```php
 // 连接到 AMQP 代理
@@ -1212,10 +1404,6 @@ $ex->declare();
 
 // 创建事件循环
 ```
-
-
-
-
 
 ```php
 $loop = React\EventLoop\Factory::create();
@@ -1239,7 +1427,7 @@ $events = [
 $projector->project($event);
 ```
 
-而 RabbitMQ 交换上的事件消费者将如下所示
+而 RabbitMQ 交换上的事件消费者将如下所示。
 
 # 架构样式
 
@@ -1285,13 +1473,13 @@ $consumer->on(
 $loop->run();
 ```
 
-从现在起，只需让所有需要的仓库消费一个
+从现在起，只需让所有需要的仓库消费一个 `projector` 实例并让它们调用投影过程即可。
 
 # 架构样式
 
 29
 
-project 器 实例并让它们调用投影过程即可。
+
 
 ```php
 class DoctrinePostRepository implements PostRepository
@@ -1323,23 +1511,21 @@ class DoctrinePostRepository implements PostRepository
 }
 ```
 
-Post 实例和记录的事件在同一个事务中触发并持久化。
+`Post` 实例和记录的事件在同一个事务中触发并持久化。
 
 这确保了事件不会丢失，因为如果事务成功，我们将它们投影到`read model`。因此，`write model`和`read model`之间不存在不一致性。
 
 ![](img/index-48_1.png)
 
-# 2.5 事件溯源 (Event Sourcing)
-
-30
+## 2.5 事件溯源 (Event Sourcing)
 
 `CQRS` 是一种强大且灵活的架构。在收集和保存`domain events`（在聚合操作期间发生的事件）方面，它还有一个额外的好处，让你对领域内部发生的情况具有高层面的详细了解。由于`Domain Events` 在领域内的重要性，它们是关键战术模式之一，因为它们描述了过去发生的事件。
 
 事件数量的不断增长预示着业务忽略了对领域的深度洞察。通过使用 `CQRS`，我们获得了一个极其复杂的关于所有相关事件的历史，其程度仅可以通过重现`domain events` 来表达整个领域模型的状态。我们只需要一个工具以一致的方式存储所有这些事件。这种存储被称为 `eventstore`（事件存储）。
 
-## 事件溯源的核心思想是将聚合（Aggregates）的状态表达为事件的线性序列
+### 事件溯源的核心思想是将聚合（Aggregates）的状态表达为事件的线性序列
 
-通过 `CQRS`，我们部分实现了以下目标——Post 实体通过使用`domain events`改变其状态，但它始终被持久化，将对象映射到数据库表。`Event Sourcing` 将此又了一层。如果我们使用数据库表来存储所有博客文章的状态，用另一个表来存储所有博客评论的状态等等，那么通过使用 `Event Sourcing`，我们只需要一个数据库表。一个单一的只追加（append-only）数据库表，将存储领域模型内所有聚合发布的所有 `domain events`。是的，你读得正确，**单个**数据库表。
+通过 `CQRS`，我们部分实现了以下目标——`Post` 实体通过使用`domain events`改变其状态，但它始终被持久化，将对象映射到数据库表。`Event Sourcing` 将此又了一层。如果我们使用数据库表来存储所有博客文章的状态，用另一个表来存储所有博客评论的状态等等，那么通过使用 `Event Sourcing`，我们只需要一个数据库表。一个单一的只追加（append-only）数据库表，将存储领域模型内所有聚合发布的所有 `domain events`。是的，你读得正确，**单个**数据库表。
 
 考虑到这种模型，不再需要 `object-relational mappers`（对象关系映射）等工具了。对于单个数据库表来说，它们太自杀了。`eventstore` 是存储所有这些事件所需的简单数据库表。
 
@@ -1361,8 +1547,6 @@ class Post extends AggregateRoot implements EventSAggregateRoot
     }
 }
 ```
-
-架构样式 31
 
 现在，聚合根有一个方法，给定一组 `events`（换句话说就是流），它能够逐步重放直到达到保存前的状态。
 
@@ -1389,8 +1573,6 @@ class EventStorePostRepository implements PostRepository
 ```
 
 这就是 `PostRepository` 的实现方式，我们使用 `eventstore` 保存由聚合发布的所有事件。现在我们需要一种从事件历史恢复聚合的方法。由聚合根实现的 `reconstitute` 方法非常有用。
-
-架构样式 32
 
 ```php
 class EventStorePostRepository implements PostRepository
@@ -1441,39 +1623,29 @@ class EventStore
 
     public function getEventsFor($id)
     {
-}
-```
+        $serializedEvents = $this->redis->lrange(
+            'events:' . $id,
+            0,
+            -1
+        );
 
-架构样式 33
+        $eventStream = [];
 
+        foreach ($serializedEvents as $serializedEvent) {
+            $eventData = $this->serializer->deserialize(
+                $serializedEvent,
+                'array',
+                'json'
+            );
+            $eventStream[] = $this->serializer->deserialize(
+                $eventData['data'],
+                $eventData['type'],
+                'json'
+            );
+        }
 
-
-
-
-```php
-$serializedEvents = $this->redis->lrange(
-    'events:' . $id,
-    0,
-    -1
-);
-
-$eventStream = [];
-
-foreach ($serializedEvents as $serializedEvent) {
-    $eventData = $this->serializer->deserialize(
-        $serializedEvent,
-        'array',
-        'json'
-    );
-    $eventStream[] = $this->serializer->deserialize(
-        $eventData['data'],
-        $eventData['type'],
-        'json'
-    );
-}
-
-return new EventStream($id, $eventStream);
-}
+        return new EventStream($id, $eventStream);
+    }
 }
 ```
 
@@ -1585,6 +1757,8 @@ class EventStorePostRepository implements PostRepository
 
 ## 3. 值对象（Value Objects）
 
+
+
 值对象是领域驱动设计中的基本构建块，用于在代码中建模通用语言。值对象不仅仅是领域中的某个“实体”，它衡量、量化或描述某些事物。它们可以被视为简单的对象，例如金额或日期范围——其相等性不是基于身份，而是基于内容。例如，产品价格可以使用值对象建模。在这种情况下，它不代表一个“实体”，而是一个我们衡量价值的值。这些对象的内存占用非常容易确定（通过其组成部分计算），且开销很小。因此，创建新实例优于引用引用，即使它们表示相同的值。相等性根据两个实例的字段进行检查。
 
 ### 3.1 定义
@@ -1593,13 +1767,10 @@ Ward Cunningham [定义](http://c2.com/cgi/wiki?ValueObject)¹ 了值对象为�
 
 Martin Fowler [定义²](http://martinfowler.com/bliki/ValueObject.html) 了值对象为金额或日期范围对象等的小对象。它们的关键属性是遵循值语义而不是引用语义。你通常能识别出它们，因为它们的相等概念不是基于身份，相反，如果两个值对象的字段都相等，它们就相等。尽管所有字段都相等，如果某个子集是唯一的，你不需要比较所有字段——例如，货币的代码就足够测试相等性。一个通用的启发式方法是值对象应该是完全不可变的。如果你想更改一个值对象，应该用新对象替换它，而不是允许更新值对象本身的值。
 
-
-
-
-
 值对象会导致别名问题。
 
 ¹[`c2.com/cgi/wiki?ValueObject`](http://c2.com/cgi/wiki?ValueObject)
+
 ²[`martinfowler.com/bliki/ValueObject.html`](http://martinfowler.com/bliki/ValueObject.html)
 
 # 值对象
@@ -1607,6 +1778,7 @@ Martin Fowler [定义²](http://martinfowler.com/bliki/ValueObject.html) 了值�
 值对象的示例包括数字、文本字符串、日期、时间、人的姓名（由名、中间名、姓和头组成）、货币、颜色、电话号码和邮寄地址。
 
 ### 练习
+
 尝试在你当前的领域中寻找更多潜在的值对象示例。
 
 ### 3.2 值对象 vs 实体
@@ -1618,18 +1790,21 @@ Martin Fowler [定义²](http://martinfowler.com/bliki/ValueObject.html) 了值�
 另一个例子可能是，许多航空公司区分座位，将它们视为独特的位置。在这种情况下，座位可以被视为一个实体。另一方面，也有一些航空公司（如美国西南航空（或欧洲的廉捷航空/莱安航空））并不区分座位。在这种背景下，座位可以被视为一个值对象。
 
 ### 练习
+
 关于地址（街道、门牌、邮政编码等）的概念。在什么可能的语境下，地址可以被建模为实体而不是值对象？请与同事讨论你的发现。
 
 ## 3.3 货币和金额示例
 
-货币和金额值对象可能是解释值对象最常用的示例，这得益于[货币模式](http://martinfowler.com/eaaCatalog/money.html)⁴.。这种设计模式提供了一种建模该问题的解决方案，以避免浮点数舍入问题，允许执行确定性的计算。
+货币和金额值对象可能是解释值对象最常用的示例，这得益于[货币模式](http://martinfowler.com/eaaCatalog/money.html)⁴。这种设计模式提供了一种建模该问题的解决方案，以避免浮点数舍入问题，允许执行确定性的计算。
 
 在现实世界中，货币描述单位的方式就像米和码描述距离单位一样。每种货币用三个大写字母 ISO 代码表示。
 
-³[`en.wikipedia.org/wiki/Domain-driven\_design#Building\_blocks\_of_DDD`](http://en.wikipedia.org/wiki/Domain-driven_design#Building_blocks_of_DDD)
+³[`en.wikipedia.org/wiki/Domain-driven\_design#Building\_blocks\_of\_DDD`](http://en.wikipedia.org/wiki/Domain-driven_design#Building_blocks_of_DDD)
+
 ⁴[`martinfowler.com/eaaCatalog/money.html`](http://martinfowler.com/eaaCatalog/money.html)
 
 ### class Currency
+
 ```php
 class Currency
 {
@@ -1663,6 +1838,7 @@ class Currency
 ⁵[`martinfowler.com/bliki/SelfEncapsulation.html`](http://martinfowler.com/bliki/SelfEncapsulation.html)
 
 ### class Money
+
 ```php
 class Money
 {
@@ -1703,16 +1879,23 @@ class Money
 在代码中建模通用语言（Ubiquitous Languages）概念时，你应该始终优先选择值对象而不是实体。值对象更容易创建、测试、使用和维护。
 
 考虑到这一点，如果满足以下条件，你可以决定问题概念是否可以建模为值对象：
+
 - 它衡量、量化或描述了某个事物
+
 - 它可以保持不可变性
+
 - 它通过组合相关属性来建模一个概念整体
+
 - 当描述变化时，它是可替换的
+
 - 它为协作者提供无副作用（Side-Free）的行为
 
 ### 3.4.1 衡量、量化或描述
+
 如前所述，值对象不应该仅仅被视为领域中的一个事物。作为一个“值”，它衡量、量化或或描述了一个概念。在我们的示例中，`Currency` 对象描述了是什么种类型的钱。
 
 ### 3.4.2 不可变性
+
 这是掌握值对象最重要的方面之一。对象不应在其整个生命周期内被修改。由于这种不可变性，值对象易于推理、测试，并且没有意外的副作用。因此，值对象应该通过其构造函数创建。带有多个设置器（setter）的空构造函数会将创建责任推移给客户端，导致[贫血的](http://martinfowler.com/bliki/AnemicDomainModel.html)[领域模型](http://martinfowler.com/bliki/AnemicDomainModel.html)⁶，这被认为是一种反模式。
 
 同样值得指出的是，不建议在你的值对象中持有实体的引用。实体是可变的，因此这可能会导致值对象中出现不必要的副作用。
@@ -1739,12 +1922,10 @@ class Money
 ```
 
 通过使用 `self` 关键字，我们没有将代码与类名耦合。这样，对⁶[`martinfowler.com/bliki/AnemicDomainModel.html`](http://martinfowler.com/bliki/AnemicDomainModel.html)
+
 ⁷[`en.wikipedia.org/wiki/Function\_overloading`](http://en.wikipedia.org/wiki/Function_overloading)
+
 ⁸[`en.wikipedia.org/wiki/Factory\_method\_pattern`](http://en.wikipedia.org/wiki/Factory_method_pattern) 的更改将受到影响。
-
-
-
-
 
 `class` 名称或命名空间不会影响这些工厂方法。这个细小的实现细节有助于日后对代码进行重构。
 
@@ -1873,17 +2054,19 @@ class Money
 
 由于此示例中突出了持有值对象引用而非修改其值产生的问题，建议直接替换整个对象。
 
+
+
 ```php
 $this->price = new Money(100, new Currency('USD'));
 // ... ...
 $this->price = $this->price->increaseAmountBy(200);
 ```
 
-这种行为类似于 PHP 中基本类型（如字符串）的工作方式。考虑 `strtolower` 函数，它返回一个新字符串而不是修改原始字符串。没有使用引用，而是返回了一个新值。
+这种行为类似于 PHP 中基本类型（如字符串）的工作方式。考虑`strtolower`函数，它返回一个新字符串而不是修改原始字符串。没有使用引用，而是返回了一个新值。
 
 ### 3.4.6 无副作用行为
 
-如果我们想在 `Money` 类中包含一些额外的行为，例如 `add` 方法，检查输入是否符合任何先置条件并维护任何不变性是是很自然的做法。在我们的案例中，我们只希望相相同货币的金额。
+如果我们想在`Money`类中包含一些额外的行为，例如`add`方法，检查输入是否符合任何先置条件并维护任何不变性是是很自然的做法。在我们的案例中，我们只希望相相同货币的金额。
 
 ```php
 class Money
@@ -1899,7 +2082,7 @@ class Money
 }
 ```
 
-如果两种货币不匹配，则抛出异常。否则，金额会相加。然而，这段代码有一些不理想的陷阱。现在假设我们有另一个方法 `otherMethod`。
+如果两种货币不匹配，则抛出异常。否则，金额会相加。然而，这段代码有一些不理想的陷阱。现在假设我们有另一个方法`otherMethod`。
 
 ```php
 class Banking
@@ -1913,13 +2096,11 @@ class Banking
 }
 ```
 
+一切都正常，直到由于某种原因，我们开始在`$aMoney`中看到意之外的结果。如果`otherMethod`使用了我们之前定义的`add`方法会发生什么？也许你没有意识到`add`会改变`Money`实例的状态。这就是我们所说的**副作用（`side-effect`）**。你不应该修改参数，因为客户端永远不会期望这种行为。
 
+那么，我们该如何修复这个问题呢？很简单，通过确保值对象（Value Object）保持不可变，我们就可以避免这种意外的问题。一个简单的解决方案是为每个潜在的可变操作（例如`add`方法）返回一个新实例。
 
-一切都正常，直到由于某种原因，我们开始在 `$aMoney` 中看到意之外的结果。如果 `otherMethod` 使用了我们之前定义的 `add` 方法会发生什么？也许你没有意识到 `add` 会改变 `Money` 实例的状态。这就是我们所说的**副作用（`side-effect`）**。你不应该修改参数，因为客户端永远不会期望这种行为。
-
-那么，我们该如何修复这个问题呢？很简单，通过确保值对象（Value Object）保持不可变，我们就可以避免这种意外的问题。一个简单的解决方案是为每个潜在的可变操作（例如 `add` 方法）返回一个新实例。
-
-# Value Objects
+## Value Objects
 
 ```php
 class Money
@@ -1939,9 +2120,9 @@ class Money
 }
 ```
 
-通过这个简单的改动，不可变性得到了保证。每当将两个 `Money` 相加时，都会返回一个新的结果实例。其他类可以执行任意数量的更改而不会影响原始副本。没有副作用的代码易于理解、易于测试，且不易出错。
+通过这个简单的改动，不可变性得到了保证。每当将两个`Money`相加时，都会返回一个新的结果实例。其他类可以执行任意数量的更改而不会影响原始副本。没有副作用的代码易于理解、易于测试，且不易出错。
 
-# Value Objects
+## Value Objects
 
 ### 3.5 基础类型
 
@@ -1962,13 +2143,13 @@ var_dump($a);
 // integer(50)
 ```
 
-尽管 `$a` 和 `$b` 是不同的变量，在底层存储在不同的内存位置，但当比较时它们是相同的。它们持有相同的值。我们认为它们是相等的。你可以随时将 `$a` 的值从 10 改为 20，新值是 20，而 10 消失了。你可以随所欲地替换整数值而不必考虑之前的值，因为你并不是在修改它，你只是在替换它。如果你对它们执行任何操作（如加法 `$a + $b`），你会得到另一个新值并赋值给另一个变量或之前定义的变量。当你将 `$a` 传递给另一个函数时，除非显式通过引用传递，否则你传递的是值。`$a` 在函数内部是否被修改无关，因为在你的当前代码中，仍然拥有原始副本。值对象的行为就像基础类型一样。
+尽管`$a`和`$b`是不同的变量，在底层存储在不同的内存位置，但当比较时它们是相同的。它们持有相同的值。我们认为它们是相等的。你可以随时将`$a`的值从 10 改为 20，新值是 20，而 10 消失了。你可以随所欲地替换整数值而不必考虑之前的值，因为你并不是在修改它，你只是在替换它。如果你对它们执行任何操作（如加法`$a + $b`），你会得到另一个新值并赋值给另一个变量或之前定义的变量。当你将`$a`传递给另一个函数时，除非显式通过引用传递，否则你传递的是值。`$a`在函数内部是否被修改无关，因为在你的当前代码中，仍然拥有原始副本。值对象的行为就像基础类型一样。
 
-# Value Objects
+## Value Objects
 
 ### 3.6 测试
 
-值对象的测试方式与普通对象相同。然而，必须测试不可变性和无副作用的行为。一种解决方案是在执行任何修改之前，为你正在测试的值对象创建一个副本。使用实现的等性检查断言两者是相等的。执行你想测试的操作并断言结果。最后，断言原始对象和副本仍然是相等的。让我们付诸实践，测试 `Money` 类中 `add` 方法的无副作用实现。
+值对象的测试方式与普通对象相同。然而，必须测试不可变性和无副作用的行为。一种解决方案是在执行任何修改之前，为你正在测试的值对象创建一个副本。使用实现的等性检查断言两者是相等的。执行你想测试的操作并断言结果。最后，断言原始对象和副本仍然是相等的。让我们付诸实践，测试`Money`类中`add`方法的无副作用实现。
 
 ```php
 class MoneyTest extends \PHPUnit_Test_TestCase
@@ -2006,13 +2187,13 @@ class MoneyTest extends \PHPUnit_Test_TestCase
 }
 ```
 
-# Value Objects
+## Value Objects
 
 ### 3.7 持久化值对象
 
 值对象不会独立持久化，它们通常在聚合根（Aggregate）内部被持久化。值对象不应作为完整的记录持久化，尽管在某些情况下这是一种选项。相反，最好使用**嵌入值（Embedded Value）**或**序列化大对象（Serialize LOB）**模式。当你使用开源 ORM（如 Doctrine）或自定义 ORM 持久化对象时，这两种模式均可使用。由于值对象很小，嵌入值通常是最佳选择，因为它允许通过值对象拥有的任何属性来轻松查询实体（Entities）。然而，如果通过这些字段查询对你来说并不重要，序列化策略可以非常容易实现。
 
-考虑以下 `Product` 实体，它具有字符串类型的 id、name 和 price（Money 值对象）属性。我们特意决定简化此示例，让 id 为字符串而非值对象。
+考虑以下`Product`实体，它具有字符串类型的 id、name 和 price（Money 值对象）属性。我们特意决定简化此示例，让 id 为字符串而非值对象。
 
 ```php
 class Product
@@ -2034,10 +2215,7 @@ class Product
 }
 ```
 
-
-
-
-在 DBAL 中，`DbalProductRepository` 应该创建 `INSERT` 语句，绑定参数并执行它。
+在 DBAL 中，`DbalProductRepository`应该创建`INSERT`语句，绑定参数并执行它。
 
 ```php
 class DbalProductRepository extends DbalRepository implements ProductRepository
@@ -2068,7 +2246,7 @@ price_currency: USD
 1 row in set (0.00 sec)
 ```
 
-如你所见，你可以以临时的方式映射你的值对象（Value Objects）和查询参数以持久化你的值对象。然而，一切并不看起来那么简单。让我们尝试获取持久化的 Product 及其的 Money 值对象。一种常见的方法是执行 `SELECT` 语句并返回一个新的实体。
+如你所见，你可以以临时的方式映射你的值对象（Value Objects）和查询参数以持久化你的值对象。然而，一切并不看起来那么简单。让我们尝试获取持久化的 Product 及其的 Money 值对象。一种常见的方法是执行`SELECT`语句并返回一个新的实体。
 
 ![](img/index-74_1.png)
 
@@ -2100,13 +2278,13 @@ class DbalProductRepository extends DbalRepository implements ProductRepository
 
 这种方法具有一些优点。首先，你可以轻松地逐步读取持久化以及随后的创建是如何发生的。其次，你可以根据值对象的任何属性进行查询。最后，持久化实体所需的空间恰好是所需的，不多也不少。
 
-然而，使用这种临时的 ORM 方法也有其缺点。正如在 领域事件 中解释的那样，如果你的领域对聚合根（Aggregates）的创建感兴趣，实体（以聚合的形式存在）应该在构造函数中触发一个事件。如果你使用 `new` 运算符，你触发事件的次数将与聚合根从数据库加载的次数相同。
+然而，使用这种临时的 ORM 方法也有其缺点。正如在 领域事件 中解释的那样，如果你的领域对聚合根（Aggregates）的创建感兴趣，实体（以聚合的形式存在）应该在构造函数中触发一个事件。如果你使用`new`运算符，你触发事件的次数将与聚合根从数据库加载的次数相同。
 
-这就是为什么 Doctrine 内部使用 `Proxies`（代理）、`serialize` 和 `unserialize` 方法在不使用构造函数的情况下重构一个带有其属性的对象。一个实体在其生命周期内内应该只被使用 `new` 运算符创建一次。
+这就是为什么 Doctrine 内部使用`Proxies`（代理）、`serialize`和`unserialize`方法在不使用构造函数的情况下重构一个带有其属性的对象。一个实体在其生命周期内内应该只被使用`new`运算符创建一次。
 
 ### 构造函数
 
-构造函数不需要为对象中的每个属性包含一个参数。考虑一个 Post（文章）。构造函数可能需要一个 `id` 和一个 `title`，但在内部，它也可以将状态设为草稿。在发布时，应该调用 `publish` 方法来更改其状态并设置发布日期。如果你的意图仍然是推出自己的 ORM，请准备好解决一些基础性问题，例如事件、不同的构造函数、懒加载关系等。这就是为什么我们建议在 DDD 应用中尝试 Doctrine。此外，在此实例中，你需要创建一个扩展自 Product 的 DbalProduct 实体，并能够能够使用静态工厂方法从数据库重构实体。
+构造函数不需要为对象中的每个属性包含一个参数。考虑一个 Post（文章）。构造函数可能需要一个`id`和一个`title`，但在内部，它也可以将状态设为草稿。在发布时，应该调用`publish`方法来更改其状态并设置发布日期。如果你的意图仍然是推出自己的 ORM，请准备好解决一些基础性问题，例如事件、不同的构造函数、懒加载关系等。这就是为什么我们建议在 DDD 应用中尝试 Doctrine。此外，在此实例中，你需要创建一个扩展自 Product 的 DbalProduct 实体，并能够能够使用静态工厂方法从数据库重构实体。
 
 ### 3.7.1.2. Doctrine >= 2.5 的嵌入式 (Embeddables)
 
@@ -2153,7 +2331,9 @@ class Product
 }
 ```
 
-如你所见，有两个新属性。一个用于金额，另一个用于货币 ISO 代码。我们还更新了 `setPrice` 方法以在设置时保持一致性。在此基础上，我们更新了 `price` getter 以从新字段构建 Money 对象。让我们看看对应的 XML Doctrine 映射应该如何改变。
+如你所见，有两个新属性。一个用于金额，另一个用于货币 ISO 代码。我们还更新了`setPrice`方法以在设置时保持一致性。在此基础上，我们更新了`price` getter 以从新字段构建 Money 对象。让我们看看对应的 XML Doctrine 映射应该如何改变。
+
+
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -2176,9 +2356,7 @@ class Product
 
 ## 代理属性
 
-这两个新字段并不严格属于领域，因为它们不指向基础设施细节，但由于 Doctrine 缺乏嵌入支持，它们是必要的（原文为 an necessity）。存在其他替代方案可以将这两个属性推到纯领域之外，然而，这种方法更简单、更容易，并且作为权衡，是可以接受的。代理属性在书中还有另一个用处，你可以在代理实体标识 时找到它。
-
-
+这两个新字段并不严格属于领域，因为它们不指向基础设施细节，但由于 Doctrine 缺乏嵌入支持，它们是必要的（原文为 an necessity）。存在其他替代方案可以将这两个属性推到纯领域之外，然而，这种方法更简单、更容易，并且作为权衡，是可以接受的。代理属性在书中还有另一个用处，你可以在代理实体标识时找到它。
 
 使用了[抽象工厂](http://en.wikipedia.org/wiki/Abstract_factory_pattern)¹³。首先，我们需要在 `Infrastructure` 文件夹中创建一个新的 `Entity`，即 `DoctrineProduct`，它继承自 `Product` 实体。所有的代理字段将将放在新类中，并且诸如 `price` 或 `setPrice` 等方法需要重新实现。我们将 `Doctrine` 配置为使用新的 `DoctrineProduct` 而不是 `Product` 实体。现在，我们能够从数据库中获取 `Entities`，但是，创建一个新的 `Product` 呢？在某些时刻，我们需要调用 `new Product`，但因为我们需要处理 `DoctrineProduct`，且不希望我们的 `Application Services` 了解基础设施细节，我们需要使用 `Factories` 来创建 `Product` 实体。因此，在每个使用 `new` 创建 `Entity` 的实例中，你现在将改为调用 `ProductFactory` 上的 `createProduct`。
 
@@ -2261,10 +2439,6 @@ Doctrine 支持序列 LOB 模式。你有许多映射类型可以匹配 `Entity`
 xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```
-
-
-
-
 
 ```xml
 xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping https://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
@@ -2394,7 +2568,9 @@ class EntityManagerFactory
 }
 ```
 
-现在，我们需要在映射中指定我们要使用的自定义类型。
+
+
+现在，我们需要在映射中指定要使用的自定义类型。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -2409,9 +2585,9 @@ class EntityManagerFactory
 </doctrine-mapping>
 ```
 
-### 3.7.2 持久化值对象集合
+## 3.7.2 持久化值对象集合
 
-假设现在我们想为我们的 `Product` 实体添加一个要持久化的价格集合。这些价格可能代表产品在其生命周期内经历过的价格，或者不同货币下的产品价格。它可以命名为所示的 `HistoricalProduct`。
+假设现在我们想为`Product`实体添加一个要持久化的价格集合。这些价格可能代表产品在其生命周期内经历过的价格，或者不同货币下的产品价格。它可以命名为所示的`HistoricalProduct`。
 
 ```php
 class HistoricalProduct extends Product
@@ -2439,24 +2615,21 @@ class HistoricalProduct extends Product
 }
 ```
 
-`HistoricalProduct` 继承自 `Product`，因此继承了相同的行为以及价格集合的功能。
+`HistoricalProduct`继承自`Product`，因此继承了相同的行为以及价格集合的功能。
 
 ### 3.7.2.1 序列化到单列的集合
 
 将值对象集合序列化到单列可能是最简单的解决方案。之前讨论的所有关于持久化单个值对象的内容都适用于此处。
 
+在这种情况下，使用 Doctrine 时你可以使用对象（Object）或自定义类型（Custom Type），但需要注意一些额外的问题：值对象（Value Objects）的大小应该尽可能小，但如果你想持久化一个大型集合，请务必考虑数据库引擎能够处理的最大列长度和最大行宽。
 
-
-
-在这种情况下，使用 Doctrine 时你可以使用对象（Object）或自定义类型（Custom Type），但需要注意一些额外的：值对象（Value Objects）的大小应该尽可能小，但如果你想持久化一个大型集合，请务必考虑数据库引擎能够处理的最大列长度和最大行宽。
-
-### 练习
+#### 练习
 
 为持久具有不同价格的产品（Product）构思两种 Doctrine 对象类型和 Doctrine 自定义类型的实现策略。
 
-### 3.7.2.2 由连接表（Join Table）回支持的集合
+### 3.7.2.2 由连接表支持的集合
 
-当需要持久化一个包含值对象集合的实体且需要查询能力时，你可以选择将值对象持久化为实体（Entities）。在领域（Domain）中，这些对象仍然是值对象，但我们需要为它们提供一个 `id`，并与所有者（一个真实的实体）建立“一对多”或“一对一”关联。简而言之，你的 ORM 将值对象的集合作为实体处理，但在你的领域中，它们仍然被视为值对象。
+当需要持久化一个包含值对象集合的实体且需要查询能力时，你可以选择将值对象持久化为实体（Entities）。在领域（Domain）中，这些对象仍然是值对象，但我们需要为它们提供一个`id`，并与所有者（一个真实的实体）建立“一对多”或“一对一”关联。简而言之，你的 ORM 将值对象的集合作为实体处理，但在你的领域中，它们仍然被视为值对象。
 
 “连接表”策略的核心思想是创建一个连接所有者实体及其值对象的表。让我们来看看数据库的表示。
 
@@ -2470,7 +2643,7 @@ CREATE TABLE `historical_products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 ```
 
-`historical_products` 表看起来与 `products` 表相同。记住，为了方便展示如何处理集合的持久化，`HistoricalProduct` 扩展了 `Product` 实体。现在需要一个新的表来持久化产品实体可以处理的所有不同 Money 值对象。
+`historical_products`表看起来与`products`表相同。记住，为了方便展示如何处理集合的持久化，`HistoricalProduct`扩展了`Product`实体。现在需要一个新的表来持久化产品实体可以处理的所有不同 Money 值对象。
 
 ```sql
 CREATE TABLE `prices` (
@@ -2495,9 +2668,9 @@ CREATE TABLE `products_prices` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 ```
 
-### 3.7.2.2.1 使用 Doctrine 由连接表支持的集合
+#### 3.7.2.2.1 使用 Doctrine 由连接表支持的集合
 
-Doctrine 要求所有数据库实体必须具有唯一标识。因为我们要持久化 Money 值对象，所以我们需要添加一个人工标识，以便 Doctrine 可以处理其持久化。有两种方案：在 Money 值对象中包含代理标识（surrogate identity），或将其放在扩展类中。
+Doctrine 要求所有数据库实体必须具有唯一标识。因为我们要持久化 Money 值对象，所以需要添加一个人工标识，以便 Doctrine 可以处理其持久化。有两种方案：在 Money 值对象中包含代理标识（surrogate identity），或将其放在扩展类中。
 
 第一种方案的问题是，新标识仅仅是因为数据库持久化层的需要。这个标识并不属于领域。
 
@@ -2551,7 +2724,7 @@ class Money
 }
 ```
 
-如所示，添加了两个新属性。第一个属性 `surrogateId` 我们的领域并不使用，但是持久化基础设施将此值对象持久化为实体时所需的。第二个属性 `surrogateCurrencyIsoCode` 保存货币的 ISO 代码。使用这些新属性可以很容易地映射我们的值对象。
+如所示，添加了两个新属性。第一个属性`surrogateId`我们的领域并不使用，但是持久化基础设施将此值对象持久化为实体时所需的。第二个属性`surrogateCurrencyIsoCode`保存货币的 ISO 代码。使用这些新属性可以很容易地映射我们的值对象。
 
 Money 的映射非常直接。
 
@@ -2568,7 +2741,7 @@ Money 的映射非常直接。
 </doctrine-mapping>
 ```
 
-使用 Doctrine，HistoricalProduct 实体将拥有如下映射。
+使用 Doctrine，`HistoricalProduct`实体将拥有如下映射。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -2591,41 +2764,48 @@ Money 的映射非常直接。
 </doctrine-mapping>
 ```
 
-### 3.7.2.2.2 使用即时 ORM 由连接表支持的集合
+#### 3.7.2.2.2 使用即时 ORM 由连接表支持的集合
 
 使用即时 ORM 实现同样的操作，此时需要级联插入（Cascade INSERTS）和连接查询。唯一需要注意的是如何处理值对象的删除，以免留下孤立的 Money 值对象。
 
-### 练习
+#### 练习
 
-为 DbalHistoricalRepository 构思一个解决方案处理 `persist` 方法。
+为`DbalHistoricalRepository`构思一个解决方案处理`persist`方法。
 
 ### 3.7.2.3 由数据库实体支持的集合
 
 “数据库实体”策略与“连接表”策略相同，不同在于值对象仅由所有者实体管理。在当前场景中，考虑 Money 值对象仅被 HistoricalProduct 实体使用。使用连接表会过于复杂。因此，可以使用“一对多”数据库关系来实现相同的结果。
 
+#### 练习
 
+如果使用“数据库实体”（Database Entity）方法，考虑`HistoricalProduct`和`Money`之间所需的映射关系。
 
+## 3.7.3 NoSQL
 
-## 练习
-如果使用“数据库实体”（Database Entity）方法，考虑 `HistoricalProduct` 和 `Money` 之间所需的映射关系。
-
-### 3.7.3 NoSQL
-像 `Redis`、`MongoDB` 或 `CouchDB` 等 NoSQL 机制如何？遗憾的是，你无法逃避这些问题。为了使用 `Redis` 持化一个 `Aggregate`，你需要在设置值之前将其序列化为字符串。如果你使用 `PHP` 的 `serialize`/`unserialize` 方法，你将再次面临命名空间或类名的重构问题。如果你选择用自定义方式（json、自定义字符串等）进行序列化，那么你需要在从 Redis 获取时重新构建 `Value Object`。
+像`Redis`、`MongoDB`或`CouchDB`等 NoSQL 机制如何？遗憾的是，你无法逃避这些问题。为了使用`Redis`持化一个`Aggregate`，你需要在设置值之前将其序列化为字符串。如果你使用`PHP`的`serialize`/`unserialize`方法，你将再次面临命名空间或类名的重构问题。如果你选择用自定义方式（json、自定义字符串等）进行序列化，那么你需要在从 Redis 获取时重新构建`Value Object`。
 
 ### 3.7.3.1 PostgreSQL 和 JSONB
-如果我们的数据库引擎不仅允许我们使用序列化 LOB 策略，还能根据其值进行搜索，那么我们就能兼顾两种方法的优点。嗯，现在可以了。从 PostgreSQL 9.4 版本开始，增加了对 [JSONB](http://www.postgresql.org/docs/9.4/static/functions-json.html)¹⁹的支持。Value Objects 现在可以作为 JSON 序列化的形式持久化，并在该 JSON 序列化内部进行查询。
 
-### 3.8 安全
-使用 Value Object 对领域概念进行建模时，另一个有趣的细节是其安全性方面的优势。考虑一个机票销售背景的应用程序。如果你处理国际民航运输协会机场代码（也称为 [IATA 代码](https://en.wikipedia.org/wiki/International_Air_Transport_Association_airport_code)²⁰，你可以决定使用字符串或使用 Value Object 对该概念进行建模。如果你选择使用字符串，请考虑所有你将检查该字符串是否为有效 IATA 代码的地方。在任何重要地方遗忘的概率有多大？另一方面，考虑尝试实例化一个新的 `IATA("BCN'; DROP TABLE users;--")`。如果你在构造函数中集中[守卫逻辑（guards）](https://en.wikipedia.org/wiki/Guard_\(computer_science\))²¹ 并向你的模型传递 IATA Value Object，那么避免 SQL 注入或类似的攻击将变得更容易。
+如果我们的数据库引擎不仅允许我们使用序列化 LOB 策略，还能根据其值进行搜索，那么我们就能兼顾两种方法的优点。嗯，现在可以了。从 PostgreSQL 9.4 版本开始，增加了对[JSONB](http://www.postgresql.org/docs/9.4/static/functions-json.html)¹⁹的支持。Value Objects 现在可以作为 JSON 序列化的形式持久化，并在该 JSON 序列化内部进行查询。
 
-如果你想了解更多关于领域驱动设计的安全方面，可以关注 [Dan](https://twitter.com/danbjson) [Bergh Johnsson](https://twitter.com/danbjson)²² 或阅读他的[博客](http://dearjunior.blogspot.com.es/search/label/domain%20driven%20security)²³。
+## 3.8 安全
 
-### 3.9 总结
+使用 Value Object 对领域概念进行建模时，另一个有趣的细节是其安全性方面的优势。考虑一个机票销售背景的应用程序。如果你处理国际民航运输协会机场代码（也称为[IATA 代码](https://en.wikipedia.org/wiki/International_Air_Transport_Association_airport_code)²⁰），你可以决定使用字符串或使用 Value Object 对该概念进行建模。如果你选择使用字符串，请考虑所有你将检查该字符串是否为有效 IATA 代码的地方。在任何重要地方遗忘的概率有多大？另一方面，考虑尝试实例化一个新的`IATA("BCN'; DROP TABLE users;--")`。如果你在构造函数中集中[守卫逻辑（guards）](https://en.wikipedia.org/wiki/Guard_\(computer_science\))²¹并向你的模型传递 IATA Value Object，那么避免 SQL 注入或类似的攻击将变得更容易。
+
+如果你想了解更多关于领域驱动设计的安全方面，可以关注[Dan](https://twitter.com/danbjson)[Bergh Johnsson](https://twitter.com/danbjson)²²或阅读他的[博客](http://dearjunior.blogspot.com.es/search/label/domain%20driven%20security)²³。
+
+## 3.9 总结
+
+
+
 强烈建议使用 Value Objects 对领域中需要衡量、量化或描述的概念进行建模。如所示，Value Objects 易于创建、维护和测试。为了在 DDD 应用中处理持久化，使用 ORM 是必须的。然而，为了在 `Doctrine` 目前尚不支持嵌入值（embedded values，计划在 2.5 版本支持）的情况下持久化 Value Objects，有两种方案：将 Value Object 字段直接添加到你的 `Entity` 中并进行映射（不够优雅，但更简单）或扩展你的实体（优雅得多，但很复杂）。
 
 ## 4 实体 (Entities)
+
 ### 4.1 引言
+
 我们讨论了首先尝试将领域中的所有内容建模为值对象的益处。但在建模领域时，可能会出现这样的情况：你会发现通用语言（ubiquitous language）中的某些概念需要身份线程（thread of identity）。这些的例子包括：
+
 - 一个 `person`（人）。`person` 总是有一个身份，且就姓名而言始终相同。
 - 电子商务系统中的 `order`（订单）。在该背景下，创建的每个新订单都有自己的身份，且是唯一的。
 
@@ -2657,7 +2837,9 @@ class Order {
 ```
 
 ### 4.2 对象 vs 原始类型
+
 在大多数情况下，实体的身份被表示为一种原始类型：通常是字符串或整数。但使用值对象来表示它有更多优势：
+
 - Value Objects 是不可变的，因此无法被修改。
 - Value Objects 是复杂类型，可以拥有原始类型不具备的自定义行为。例如相等性操作。通过值对象，相等操作可以封装在自己的类中，使概念从隐式变为显式。
 
@@ -2711,16 +2893,12 @@ class Order {
 ```
 
 ### 4.3 身份操作
+
 如前所述，实体的身份是定义它的东西。因此，处理身份是实体的重要方面。通常有 4 种定义实体身份的方法：客户端提供身份、应用程序本身提供身份、持久化机制提供身份或另一个边界上下文（bounded context）提供身份。
 
 #### 4.3.1 持久化机制生成身份
-通常最简单的方法是让持久化机制生成身份，因为大部分持久化机制都支持某种身份生成，例如 MySQL 的 `AUTO_INCREMENT` 属性或 Oracle/Postgres 的序列。这虽然简单，但存在一个主要的
 
-
-
-
-
-缺点：`在持久化实体之前，我们无法获得实体的标识。` 因此，在某种程度上，如果我们使用由持久化机制生成的标识，将会标识操作与底层的持久化存储进行耦合。
+通常最简单的方法是让持久化机制生成身份，因为大部分持久化机制都支持某种身份生成，例如 MySQL 的 `AUTO_INCREMENT` 属性或 Oracle/Postgres 的序列。这虽然简单，但存在一个主要的缺点：`在持久化实体之前，我们无法获得实体的标识。` 因此，在某种程度上，如果我们使用由持久化机制生成的标识，将会标识操作与底层的持久化存储进行耦合。
 
 ```sql
 CREATE TABLE `orders` (
@@ -2824,7 +3002,9 @@ class Order extends IdentifiableDomainObject
 - 大多数实现通过继承强制要求使用某些构造结构来施加若干约定。这可能会通过将领域模型与 ORM 耦合，导致`持久化泄漏 (persistence leakage)` 到领域模型中。作者看到的唯一不强制继承自基类的 Active Record 实现是来自 [Castel Project](http://www.castleproject.org/)⁴ 的 [Castle ActiveRecord³](http://docs.castleproject.org/Active%20Record.MainPage.ashx)，这是一个 .NET 框架。虽然这在生成的实体实现了持久化和领域关注点之间的某种分离，但并没有防止数据设计与对象设计的耦合。
 
 ²[`www.martinfowler.com/eaaCatalog/activeRecord.html`](http://www.martinfowler.com/eaaCatalog/activeRecord.html)
+
 ³[`docs.castleproject.org/Active%20Record.MainPage.ashx`](http://docs.castleproject.org/Active%20Record.MainPage.ashx)
+
 ⁴[`www.castleproject.org/`](http://www.castleproject.org/)
 
 目前 PHP 最好的 ORM 是 [Doctrine](http://doctrine-project.org)⁵。它是[Data Mapper (数据映射器)](http://www.martinfowler.com/eaaCatalog/dataMapper.html) [`模式`⁶](http://www.martinfowler.com/eaaCatalog/dataMapper.html) 的实现。Data Mapper 将持久化与领域解耦。
@@ -2936,12 +3116,7 @@ implements OrderRepository
 
 ### 4.3.4 其他边界上下文生成标识
 
-这可能是最复杂的标识生成策略，因为它强制本地实体不仅依赖于本地边界上下文的事件，还依赖于外部边界
-
-
-
-
-上下文事件。因此，从维护的角度来看，成本将会很高。
+这可能是最复杂的标识生成策略，因为它强制本地实体不仅依赖于本地边界上下文的事件，还依赖于外部边界上下文事件。因此，从维护的角度来看，成本将会很高。
 
 其他边界上下文（Bounded Context）提供了一些 UI 组件来选择本地实体的标识。这甚至可以从远程实体抓取某些属性到其自身。
 
@@ -2955,13 +3130,15 @@ implements OrderRepository
 
 ### 4.4.1 设置 Doctrine
 
-首先，我们需要通过 `composer` 引入它。在项目根目录下必须执行以下命令：
+
+
+首先，我们需要通过`composer`引入它。在项目根目录下必须执行以下命令：
 
 ```bash
 php composer.phar require "doctrine/orm=~2.4"
 ```
 
-然后，这些行代码将允许设置 doctrine：
+然后，这些行代码将允许设置`doctrine`：
 
 ```php
 require_once "/path/to/vendor/autoload.php";
@@ -2983,17 +3160,17 @@ $config = Setup::createAnnotationMetadataConfiguration($paths, $isDevMode);
 $entityManager = EntityManager::create($dbParams, $config);
 ```
 
-### 4.4.2 映射实体
+## 4.4.2 映射实体
 
-默认情况下，`Doctrine` 文档使用注解展示代码示例。因此我们从注解开始代码示例，并讨论为什么尽可能避免它们。为了这样做，我们将引入本章之前讨论过的 `Order` 类。
+默认情况下，`Doctrine`文档使用注解展示代码示例。因此我们从注解开始代码示例，并讨论为什么尽可能避免它们。为了这样做，我们将引入本章之前讨论过的`Order`类。
 
-#### 4.4.2.1 使用注解代码映射实体
+### 4.4.2.1 使用注解代码映射实体
 
-`Doctrine` 发布时使用的特性之一是可以使用注解代码来指定映射信息。
+`Doctrine`发布时使用的特性之一是可以使用注解代码来指定映射信息。
 
 **什么是注解？**
 
-注解是元数据的一种特殊形式。在 PHP 中，它被放在源代码的注释下。例如，`PHPDocumentor` 利用注解来构建 API 信息，或者 `PHPUnit` 使用某些注解来指定 `dataProviders` 或对代码代码抛出的异常提供期望言。
+注解是元数据的一种特殊形式。在 PHP 中，它被放在源代码的注释下。例如，`PHPDocumentor`利用注解来构建 API 信息，或者`PHPUnit`使用某些注解来指定`dataProviders`或对代码代码抛出的异常提供期望言。
 
 ```php
 class SumTest extends PHPUnit_Framework_TestCase {
@@ -3006,7 +3183,7 @@ class SumTest extends PHPUnit_Framework_TestCase {
 }
 ```
 
-因此，为了将 `Order` 实体映射到持久化存储，首先必须修改 `Order` 的源代码以添加 `Doctrine` 注解：
+因此，为了将`Order`实体映射到持久化存储，首先必须修改`Order`的源代码以添加`Doctrine`注解：
 
 ```php
 use Doctrine\ORM\Mapping\Entity;
@@ -3072,13 +3249,13 @@ $entityManager->persist($order);
 $entityManager->flush();
 ```
 
-乍一看，这段代码看起来很简单，可以是指定映射信息的一种简单方法。但这种方法是有代价的。最终代码奇怪之处何？首先，领域关注与基础设施关注点混合在了一起。`Order` 是一个领域概念，而 `Table` 和 `Column` 等是基础设施关注点。因此，该实体紧密耦合到源代码中通过注解指定的映射信息。如果使用另一个实体管理器和不同的映射元数据来持久化实体，将是不可能的。注解往往会导致副作用和紧耦合。
+乍一看，这段代码看起来很简单，可以是指定映射信息的一种简单方法。但这种方法是有代价的。最终代码奇怪之处何？首先，领域关注与基础设施关注点混合在了一起。`Order`是一个领域概念，而`Table`和`Column`等是基础设施关注点。因此，该实体紧密耦合到源代码中通过注解指定的映射信息。如果使用另一个实体管理器和不同的映射元数据来持久化实体，将是不可能的。注解往往会导致副作用和紧耦合。
 
 那么指定映射信息的最佳方法是什么？最佳方法是将映射信息与实体本身分离。这可以通过 XML 映射、YAML 映射或 PHP 映射来实现。在本书中我们将涵盖 XML 映射。
 
-#### 4.4.2.2 使用 XML 映射实体
+### 4.4.2.2 使用 XML 映射实体
 
-使用 XML 映射 `Order` 实体，首先需要更改 `Doctrine` 的设置代码：
+使用 XML 映射`Order`实体，首先需要更改`Doctrine`的设置代码：
 
 ```php
 require_once "/path/to/vendor/autoload.php";
@@ -3100,7 +3277,7 @@ $config = Setup::createXMLMetadataConfiguration($paths, $isDevMode);
 $entityManager = EntityManager::create($dbParams, $config);
 ```
 
-映射文件应该在 `Doctrine` 搜索路径处创建。映射文件根据完全限定类名命名，并将反斜杠（`\`）替换为点。因此，`Acme\Billing\Domain\Order` 的映射文件命名为 `Acme.Billing.Domain.Order.dcm.xml`。此外，映射文件使用专门为指定映射信息创建的特殊 XML Schema：
+映射文件应该在`Doctrine`搜索路径处创建。映射文件根据完全限定类名命名，并将反斜杠（`\`）替换为点。因此，`Acme\Billing\Domain\Order`的映射文件命名为`Acme.Billing.Domain.Order.dcm.xml`。此外，映射文件使用专门为指定映射信息创建的特殊 XML Schema：
 
 `https://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd`
 
@@ -3124,7 +3301,7 @@ $entityManager = EntityManager::create($dbParams, $config);
 </doctrine-mapping>
 ```
 
-### 4.5 测试实体
+## 4.5 测试实体
 
 测试实体相对容易。因为它们是根据其所代表的领域概念产生的普通 PHP 类。测试的重点应该是实体保护的不不变性，因为实体的行为可能会围绕这些不变量性进行建模。
 
@@ -3152,9 +3329,6 @@ class Post
     }
 }
 ```
-
-
-
 
 ```php
 private function setTitle($aPostTitle)
@@ -3236,7 +3410,7 @@ class Status
 }
 ```
 
-为了测试这个领域模型，我们必须确保测试覆盖了所有的 Post（文章）不变性。
+为了测试这个领域模型，我们必须确保测试覆盖了所有的`Post`（文章）不变性。
 
 ```php
 class PostTest extends PHPUnit_Framework_TestCase
@@ -3279,13 +3453,15 @@ class PostTest extends PHPUnit_Framework_TestCase
 }
 ```
 
-### 4.6 验证
+## 4.6 验证
 
 验证是我们领域模型中一个非常重要的过程。它不仅检查属性的正确性，还检查整个对象甚至这些对象的组合。为了保持该模型处于有效状态，需要不同层次的验证。仅仅因为一个对象由有效的属性（从基础而言）组成，并不意味着该对象（整体）是有效的。反之，有效的对象并不意味着我们拥有有效的组合。
 
 ### 4.6.1 属性验证
 
-有些开发者将验证视为一种检查给定对象状态的过程。通过[契约设计](https://en.wikipedia.org/wiki/Design_by_contract) 方法，验证包含了前置条件、后置条件和不变性。为了确保属性的有效，我们可以使用值对象（Value Objects）来保护单个属性。为了使验证更加灵活，我们可以采用如下代码：
+有些开发者将验证视为一种检查给定对象状态的过程。通过[契约设计](https://en.wikipedia.org/wiki/Design_by_contract)方法，验证包含了前置条件、后置条件和不变性。为了确保属性的有效，我们可以使用值对象（Value Objects）来保护单个属性。为了使验证更加灵活，我们可以采用如下代码：
+
+
 
 ```php
 class Username
@@ -3336,7 +3512,8 @@ class Username
 }
 ```
 
-正如上面的示例所示，Username 必须满足以下条件：
+正如上面的示例所示，`Username` 必须满足以下条件：
+
 - 不为空
 - 至少 5 个字符
 - 少于 10 个字符
@@ -3344,9 +3521,9 @@ class Username
 
 有些开发者可能会将验证视为防御性编程。在这种情况下，我们关注的是输入的正确性，而不允许空值。
 
-### 4.6.2 整个对象验证
+## 4.6.2 整个对象验证
 
-有时，一个由有效属性组成的对象在整体上仍可能是无效的。可能会将这种验证逻辑添加到对象中，但这是一种反模式。良好的做法是分离这些职责。验证应该向客户端告知发现的问题，或者收集结果后续审查。我们不想在遇到第一个错误时停止执行。抽象的 Validator 可能如下：
+有时，一个由有效属性组成的对象在整体上仍可能是无效的。可能会将这种验证逻辑添加到对象中，但这是一种反模式。良好的做法是分离这些职责。验证应该向客户端告知发现的问题，或者收集结果后续审查。我们不想在遇到第一个错误时停止执行。抽象的 `Validator` 可能如下：
 
 ```php
 abstract class Validator
@@ -3400,13 +3577,10 @@ class Location
 }
 ```
 
-
-
-
-
 一旦设置了所有属性，我们就可以对实体进行验证，通常是在某些描述的过程之后。从上看，`Location` 似乎是在验证它自己，但事实并非如此。`Location` 将此验证委托给了具体的验证器实例，从而分开了这两个清晰的职责。
 
 ## 实体
+
 99
 
 ### `class Location`
@@ -3424,6 +3598,7 @@ class Location
 ```
 
 ### 4.6.2.1 解耦验证消息
+
 通过对现有实现进行微调，我们能够将验证消息从验证器中解耦：
 
 ```php
@@ -3460,6 +3635,7 @@ class LocationValidator
 ```
 
 实体
+
 100
 
 我们还需要更改验证方法的签名为：
@@ -3477,45 +3653,52 @@ class Location
 ```
 
 ### 4.6.3 验证对象组合
+
 验证对象组合可能会变得复杂，因此，实现这一点的优方法是通过领域服务（Domain Service）。该服务随后与仓库通信以检索有效的 `Aggregate`（聚合根）。由于创建的对象图可能复杂，`Aggregate` 可能处于中间状态，需要预先对其他聚合进行验证。我们可以使用领域事件（Domain Events）通知系统的其他部分某个元素已通过验证。
 
 ### 4.7 总结
+
 领域中的某些概念需要身份（Identity），即其状态的改变不会改变它们作为概念的本质。我们已经看到将身份建模为值对象（Value Object）带来了一些好处，例如不可变性和操作身份本身的逻辑。我们展示了提供身份的几种方式：
 
-*   持久化机制：容易实现，但在持久化对象之前你无法获得身份，这会延迟并使事件传播复杂。
-*   代理 ID (Surrogate id)：某些 ORM 要求在你的 `Entity` 上增加额外的字段，以将身份与持久化机制映射。
-*   由客户端提供：有时身份符合某个领域概念，你可以在领域内部对其进行建模。
+* 持久化机制：容易实现，但在持久化对象之前你无法获得身份，这会延迟并使事件传播复杂。
+* 代理 ID (Surrogate id)：某些 ORM 要求在你的 `Entity` 上增加额外的字段，以将身份与持久化机制映射。
+* 由客户端提供：有时身份符合某个领域概念，你可以在领域内部对其进行建模。
 
 实体
+
 101
 
-*   由应用程序生成：你可以使用库来生成 ID。
-*   由边界上下文（Bounded Context）生成：这可能是最复杂的策略。其他边界上下文会提供一个生成身份的接口。
+* 由应用程序生成：你可以使用库来生成 ID。
+* 由边界上下文（Bounded Context）生成：这可能是最复杂的策略。其他边界上下文会提供一个生成身份的接口。
 
 我们已经看到了几种提供身份的方法，它们的缺点如下：
 
-*   持久化机制：容易实现，但在持久化对象之前你无法获得身份，这会延迟并使事件传播复杂。
-*   代理 ID (Surrogate id)：某些 ORM 要求在你的 `Entity` 上增加额外的字段，以将身份与持久化机制映射。
-*   由客户端提供：有时身份符合某个领域概念，你可以在领域内部对其进行建模。
-*   由应用程序生成：你可以使用库来生成 ID。
-*   由边界上下文生成：这可能是最复杂的策略。其他边界上下文会提供一个生成身份的接口。
+* 持久化机制：容易实现，但在持久化对象之前你无法获得身份，这会延迟并使事件传播复杂。
+* 代理 ID (Surrogate id)：某些 ORM 要求在你的 `Entity` 上增加额外的字段，以将身份与持久化机制映射。
+* 由客户端提供：有时身份符合某个领域概念，你可以在领域内部对其进行建模。
+* 由应用程序生成：你可以使用库来生成 ID。
+* 由边界上下文生成：这可能是最复杂的策略。其他边界上下文会提供一个生成身份的接口。
 
 最后我们可以得出结论：身份策略的选择取决于领域的需求和架构。
 
 ## 5. 服务
+
 ### 5.1 介绍
+
 服务是封装了不属于单一实体的行为的对象。它们通常用于协调涉及多个实体的操作。
 
 你会遇到三种类型的服务：
 
-*   **应用服务 (Application Services)**：这些服务协调应用逻辑，编排领域与外部世界之间对象的流动。
-*   **领域服务 (Domain Services)**：它们包含无法在实体或值对象中领域领域逻辑。
-*   **基础设施服务 (Infrastructure Services)**：它们处理技术性问题，例如发送电子邮件、日志记录或与数据库交互。
+* **应用服务 (Application Services)**：这些服务协调应用逻辑，编排领域与外部世界之间对象的流动。
+* **领域服务 (Domain Services)**：它们包含无法在实体或值对象中领域领域逻辑。
+* **基础设施服务 (Infrastructure Services)**：它们处理技术性问题，例如发送电子邮件、日志记录或与数据库交互。
 
 ### 5.2 应用服务
+
 应用服务协调应用逻辑，编排领域与外部世界之间对象的流动。它们是应用程序的入口。
 
 ### 5.2.1 事务
+
 在领域驱动设计中，事务是在应用服务层处理的。你不会在领域代码的任何地方找到 `beginTransaction` 或类似代码。在执行应用服务期间执行的所有操作都将以原子方式针对你的数据库运行。
 
 在 PHP 中，我们有一个优雅的解决方案，让你的应用服务在事务范围内执行，而无必担心领域代码中的事务。
@@ -3532,9 +3715,6 @@ class TransactionalService
     private $service;
 }
 ```
-
-
-
 
 ```php
 public function __construct(Service $service, TransactionalSession $session)
@@ -3655,7 +3835,9 @@ class CreateOrderFromCart
 
 ### 5.4 具有多种实现的领域服务
 
-在建模领域服务时，经常遇到基础设施依赖，例如在需要处理加密机制的情况下。通过这种模式可以在领域和基础设施之间实现**关注点分离。领域服务本身不持有状态。
+
+
+在建模领域服务时，经常遇到基础设施依赖，例如在需要处理加密机制的情况下。通过这种模式可以在领域和基础设施之间实现**关注点分离**。领域服务本身不持有状态。
 
 ```php
 interface SignIn
@@ -3692,7 +3874,7 @@ class DefaultEncryption
 }
 ```
 
-另一种基于 MD5 的实现：
+另一种基于 `MD5` 的实现：
 
 ```php
 class Md5Encryption implements SignIn
@@ -3727,7 +3909,7 @@ class Md5Encryption implements SignIn
 }
 ```
 
-选择这种方案允许对领域服务有多种实现，每个实现负责不同的加密机制。要决定哪个实现可以通过反转控制容器轻松管理，例如 Symfony 的依赖注入组件：
+选择这种方案允许对领域服务有多种实现，每个实现负责不同的加密机制。要决定哪个实现可以通过反转控制容器轻松管理，例如 `Symfony` 的依赖注入组件：
 
 ```xml
 <?xml version="1.0"?>
@@ -3750,10 +3932,6 @@ http://symfony.com/dic/services/services-1.0.xsd">
 ### 5.4.1 关于代码复用的问题
 
 尽管上述实现清晰地定义了关注点分离，但每当我们想要实现一种新的加密机制时，都必须重复密码验证算法。
-
-
-
-
 
 解决此问题的另一种方法（有助于代码复用）是将这两项职责分离出来。相反，我们可以将密码加密逻辑提取到一个专门的类中，并对所有定义的加密算法使用[策略模式²](http://en.wikipedia.org/wiki/Strategy_pattern)。这使得设计对扩展开放，而对修改关闭。
 
@@ -3805,7 +3983,7 @@ interface PasswordEncryption
 }
 ```
 
-定义不同的加密策略就像实现 `PasswordEncryption` 接口一样简单。
+定义不同的加密策略就像实现`PasswordEncryption`接口一样简单。
 
 ```php
 class BasicPasswordEncryption implements PasswordEncryption
@@ -3839,7 +4017,7 @@ class Md5PasswordEncryption implements PasswordEncryption
 
 ### 5.5 测试领域服务
 
-考虑到来自*多个领域服务实现* 的用户身份验证示例，能够轻松测试该服务是极有益的。然而，通常情况下测试模板方法的实现可能是复杂的，因此我们将使用一个简单的密码加密实现来进行测试目的。
+考虑到来自*多个领域服务实现*的用户身份验证示例，能够轻松测试该服务是极有益的。然而，通常情况下测试模板方法的实现可能是复杂的，因此我们将使用一个简单的密码加密实现来进行测试目的。
 
 ```php
 class PlainPasswordEncryption implements PasswordEncryption
@@ -3915,10 +4093,6 @@ class SignInTest extends PHPUnit_Framework_TestCase
 
 必须小心不要在你的系统中过度使用领域服务抽象。遵循这条路径会导致实体和值对象被剥离所有行为，变成仅仅的数据容器。这与面向对象编程（OOP）的目标背道而驰，OOP 可以被认为是将数据和行为聚集到被称为对象的语义单元中，其意图是表达现实世界的概念和问题。
 
-
-
-
-
 [`martinfowler.com/eaaCatalog/serviceLayer.html`](http://martinfowler.com/eaaCatalog/serviceLayer.html)
 
 # 服务
@@ -3972,24 +4146,26 @@ class UpdateOrderAmountService
 
 客户端代码将大幅减少为以下意图清晰的操作：
 
-``````php
+```php
 $updateOrderAmountService = new UpdateOrderAmountService(
     $orderRepository
 );
 $updateOrderAmountService->execute(1, 20.5);
 ```
 
-实现这种方法可以带来很大程度的代码复用性。想要更新订单金额的人只需获取 `UpdateOrderAmountService` 的实例，并使用适当的参数调用 `execute` 方法即可。
+实现这种方法可以带来很大程度的代码复用性。想要更新订单金额的人只需获取`UpdateOrderAmountService`的实例，并使用适当的参数调用`execute`方法即可。
 
 然而，选择这条路径破坏了前面讨论的面向对象设计原则，并且付出了构建领域模型的成本，却没有利用它的任何好处。
 
 ## 5.6.1 贫血领域模型破坏了封装
 
-如果我们重新审视在 `Service Layer`（服务层）中定义服务的代码，我们可以看到，作为一个使用 `Order` 实体的客户端，我们被要求知道其内部表示的每一个细节。这一发现违背了面向对象编程的基本规则，即将数据与后续行为相结合。
+
+
+如果我们重新审视在`Service Layer`（服务层）中定义服务的代码，我们可以看到，作为一个使用`Order`实体的客户端，我们被要求知道其内部表示的每一个细节。这一发现违背了面向对象编程的基本规则，即将数据与后续行为相结合。
 
 ## 5.6.2 贫血领域模型带来了虚假的代码复用感
 
-假设有一种情况，客户端跳过了 `UpdateOrderAmountService`，而是直接从 `OrderRepository` 获取、更新并持久化订单。如果 `UpdateOrderAmountService` 包含任何关于订单金额的其他相关业务逻辑，这些逻辑将不会被执行。这可能导致订单以不一致的状态存储。因此，不变性（invariants）应该被正确保护，而最好的方法是让真正的领域模型来处理。在本例中，`Order` 实体是确保此点的最佳位置。
+假设有一种情况，客户端跳过了`UpdateOrderAmountService`，而是直接从`OrderRepository`获取、更新并持久化订单。如果`UpdateOrderAmountService`包含任何关于订单金额的其他相关业务逻辑，这些逻辑将不会被执行。这可能导致订单以不一致的状态存储。因此，不变性（invariants）应该被正确保护，而最好的方法是让真正的领域模型来处理。在本例中，`Order`实体是确保此点的最佳位置。
 
 服务
 
@@ -4007,7 +4183,7 @@ class Order
 }
 ```
 
-注意通过将此操作下推到实体并用“通用语言”（Ubiquitous Language）对其命名，系统实现了极大的代码复用。现在任何想更改订单金额的人都必须直接调用 `Order::changeAmount` 方法。
+注意通过将此操作下推到实体并用“通用语言”（Ubiquitous Language）对其命名，系统实现了极大的代码复用。现在任何想更改订单金额的人都必须直接调用`Order::changeAmount`方法。
 
 这导致了更丰富的类，其中行为是追求的目标方向，从而实现了代码复用。这通常被称为丰富领域模型（rich domain model）。
 
@@ -4020,12 +4196,14 @@ class Order
 正如我们看到的，在开始一个新项目时要考虑行为。服务代表了系统内部的操作。我们可以区分：
 
 *   **应用服务 (Application Services)**：协调来自外部世界的请求。它们不应包含领域逻辑。事务在应用层处理，封装事务。
+
 *   **领域服务 (Domain Services)**：仅操作领域概念，通过“通用语言”表示。推迟实现细节会导致贫血模型和糟糕的面向对象设计。
+
 *   **基础设施服务 (Infrastructure Services)**：处理如发送邮件等基础设施。
 
 ## 6. 领域事件
 
-领域事件是一个或多个组件关心的领域变化。 开发者通常不习惯处理事件。领域事件在语言中并不常见。然而，可以看到框架和库利用它们来提供新的解耦、复用和加速。领域事件是领域变化的事件。
+领域事件是一个或多个组件关心的领域变化。开发者通常不习惯处理事件。领域事件在语言中并不常见。然而，可以看到框架和库利用它们来提供新的解耦、复用和加速。领域事件是领域变化的事件。
 
 ### 6.1 引言
 
@@ -4033,7 +4211,7 @@ class Order
 
 可能有两种方案：第一种是让每个组件与其连接的组件耦合。在示例中，玩家组件将与许多组件耦合。记得开闭原则吗？添加新组件不应该修改第一个组件的代码。如果组件太多会怎样？容易维护吗？完全不是。
 
-第二种是将所有组件连接到一个单一对象，该对象接收每个组件的事件并将其转发给特定的组件。例如，得分组件会对 `Enemyilled` 事件感兴趣，或者 `LifeCaptured` 事件对玩家实体和剩余生命组件非常有用。通过这种方式，所有组件都耦合到一个管理通知的单一组件上。通过这种方法，添加新组件或删除现有组件不会影响剩余组件。
+第二种是将所有组件连接到一个单一对象，该对象接收每个组件的事件并将其转发给特定的组件。例如，得分组件会对`Enemyilled`事件感兴趣，或者`LifeCaptured`事件对玩家实体和剩余生命组件非常有用。通过这种方式，所有组件都耦合到一个管理通知的单一组件上。通过这种方法，添加新组件或删除现有组件不会影响剩余组件。
 
 在开发单个应用时，事件对于解耦组件非常有帮助。在分布式开发整个领域时，事件对于解耦每个服务或应用程序非常有用。关键点是相同的，但规模不同。
 
@@ -4053,24 +4231,21 @@ Vaughn Vernon 定义](http://www.amazon.com/Implementing-Domain-Driven-Design-Va
 
 Eric Evans 定义](https://domainlanguage.com/ddd/patterns/DDD_Reference_2011-01-31.pdf)³ 领域事件为
 
-
-
-
 领域模型的一个完整组成部分，是对领域内发生某些事件的表示。在忽略无关领域活动的同时，显式地表示领域专家想要跟踪或接收通知的事件，或者与其他模型对象的状态变更相关的事件。
 
 Martin Fowler [定义⁴](http://martinfowler.com/eaaDev/DomainEvent.html) 将领域事件（Domain Event）定义为捕捉影响影响的某些有趣事件的记忆。
 
-Web 应用中的领域事件示例有 `UserRegistered`、`OrderPlaced`、`UserRelocated` 或 `ProductAdded`。
+Web 应用中的领域事件示例有`UserRegistered`、`OrderPlaced`、`UserRelocated`或`ProductAdded`。
 
 ### 6.2.1 短故事
 
-在一个票务代理机构，一名内容经理决定增加 U2 演唱会的价格。她通过后台系统编辑了该演出。一个 `ShowPriceChanged` 领域事件被发布，并与新的演出价格在同一个事务中持久化到数据库中。
+在一个票务代理机构，一名内容经理决定增加 U2 演唱会的价格。她通过后台系统编辑了该演出。一个`ShowPriceChanged`领域事件被发布，并与新的演出价格在同一个事务中持久化到数据库中。
 
-一个批处理获取该领域事件并将其放入 `RabbitMQ`。该领域事件被分发到两个队列中：一个用于本地相同的边界上下文（Bounded Context），另一个用于业务智能目的的远程队列。
+一个批处理获取该领域事件并将其放入`RabbitMQ`。该领域事件被分发到两个队列中：一个用于本地相同的边界上下文（Bounded Context），另一个用于业务智能目的的远程队列。
 
-在第一个队列中，工作线程使用事件中的 `id` 获取对应的 `Show` 并将其推送到 `Elasticsearch` 服务器中，以便用户在搜索时能看到新价格。它也可以更新另一个数据库表中的新价格。
+在第一个队列中，工作线程使用事件中的`id`获取对应的`Show`并将其推送到`Elasticsearch`服务器中，以便用户在搜索时能看到新价格。它也可以更新另一个数据库表中的新价格。
 
-在第二个队列中，工作线程将信息插入到 `Logs Server` 或 `Data Lake` 中，可以在那里运行报告或数据挖掘过程。
+在第二个队列中，工作线程将信息插入到`Logs Server`或`Data Lake`中，可以在那里运行报告或数据挖掘过程。
 
 ²[`www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon-ebook/dp/B00BCLEBN8`](http://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon-ebook/dp/B00BCLEBN8)
 
@@ -4081,15 +4256,16 @@ Web 应用中的领域事件示例有 `UserRegistered`、`OrderPlaced`、`UserRe
 ![](img/index-142_1.png)
 
 领域事件
+
 124
 
-无法使用领域事件集成的外部应用程序，可以通过本地边界上下文提供的 REST API 访问所有的 `ShowPriceChanged` 事件。
+无法使用领域事件集成的外部应用程序，可以通过本地边界上下文提供的 REST API 访问所有的`ShowPriceChanged`事件。
 
 如你所见，领域事件对于处理最终一致性和集成不同的边界上下文非常有用。聚合根（Aggregates）创建事件并发布它们。订阅者可以存储事件然后将其转发给远程订阅者。
 
 ### 6.2.2 比喻
 
-我周二去 Babur’s 吃饭，并用信用卡支付。这可以被建模为一个事件，其事件类型为 `PurchasePlaced`，主体是我的信用卡，发生日期是周二。如果 Babur’s 使用的是旧的人工系统，并且直到周五才传输交易记录，那么记录日期就是周五。
+我周二去 Babur’s 吃饭，并用信用卡支付。这可以被建模为一个事件，其事件类型为`PurchasePlaced`，主体是我的信用卡，发生日期是周二。如果 Babur’s 使用的是旧的人工系统，并且直到周五才传输交易记录，那么记录日期就是周五。
 
 事情总会发生。并非所有事情都是有趣的，有些可能值得记录但不会引起反应。最有趣的事件会引起反应。许多系统需要对有趣的事件做出反应。通常，你需要知道系统为什么以那种方式做出反应。
 
@@ -4103,9 +4279,10 @@ Web 应用中的领域事件示例有 `UserRegistered`、`OrderPlaced`、`UserRe
 
 在深入讨论领域事件的细节之前，让我们来看一个使用领域事件的真实示例，以及它们如何帮助我们的应用程序和整个领域。
 
-考虑一个用于注册新用户的简单应用程序服务（Application Service）。例如在电子商务背景下。应用程序服务将在自己的章节中解释，所以不要过于担心它的接口，只需关注 `execute` 方法。
+考虑一个用于注册新用户的简单应用程序服务（Application Service）。例如在电子商务背景下。应用程序服务将在自己的章节中解释，所以不要过于担心它的接口，只需关注`execute`方法。
 
 领域事件
+
 125
 
 ```php
@@ -4149,41 +4326,40 @@ class SignInUserService implements ApplicationService
 ```
 
 领域事件
+
 126
 
-所示，`ApplicationService` 检查用户是否存在。如果不存在，它会创建一个新的 `User` 并将其添加到 `UserRepository` 中。现在考虑一个新需求：必须通过电子邮件通知新用户。不用想太多，首先想到的种方法是更新 `ApplicationService` 以包含一些完成工作的代码。然而，让我们考虑另一种方法。触发一个 `UserRegistered` 事件如何？让其他组件监听该事件并发送邮件如何？这种方法有很多很酷的处。首先，每当执行新操作时，我们需要更新 `ApplicationService`。其次，它更容易测试。
+所示，`ApplicationService`检查用户是否存在。如果不存在，它会创建一个新的`User`并将其添加到`UserRepository`中。现在考虑一个新需求：必须通过电子邮件通知新用户。不用想太多，首先想到的种方法是更新`ApplicationService`以包含一些完成工作的代码。然而，让我们考虑另一种方法。触发一个`UserRegistered`事件如何？让其他组件监听该事件并发送邮件如何？这种方法有很多很酷的处。首先，每当执行新操作时，我们需要更新`ApplicationService`。其次，它更容易测试。
 
 在同一个电子商务项目中，我们被要求集成一个不是用 PHP 编写的开源游戏化平台。每当用户在我们的边界上下下单或评价产品时，她可以获得显示在电子商务用户主页上的勋章。我们该如何建模这个问题？
 
-遵循第一种方法，我们将更新 `ApplicationService` 以集成具有类似确认邮件功能的平台。使用 `DomainEvent` 方法，我们将为 `UserRegistered` 事件创建另一个监听器，通过 REST 或 SOA 直接连接到游戏化平台，或者更好，通过某些消息系统（如 `RabbitMQ`）传播它，这样事件就可以被游戏化平台接收并做出相应反应，而我们的电子商务边界无需感知新的游戏化边界。
+遵循第一种方法，我们将更新`ApplicationService`以集成具有类似确认邮件功能的平台。使用`DomainEvent`方法，我们将为`UserRegistered`事件创建另一个监听器，通过 REST 或 SOA 直接连接到游戏化平台，或者更好，通过某些消息系统（如`RabbitMQ`）传播它，这样事件就可以被游戏化平台接收并做出相应反应，而我们的电子商务边界无需感知新的游戏化边界。
 
 ### 6.3 特征
 
 ### 6.3.1 命名规范
 
-所有事件都应该用过去时动词表示，例如 `CustomerRelocated`、`Cargo-Shipped` 或 `InventoryLossageRecorded`。它们是过去已经完成的事情。在英语中，有很多有趣的例子，人们倾向于使用名词而不是动词。
-
-
+所有事件都应该用过去时动词表示，例如`CustomerRelocated`、`Cargo-Shipped`或`InventoryLossageRecorded`。它们是过去已经完成的事情。在英语中，有很多有趣的例子，人们倾向于使用名词而不是动词。
 
 过去时动词，一个例子是“地震”（Earthquake）或“倾覆”（Capsize），正如最近一位议员对关亚的担忧那样。我们建议避免使用此类名称来命名领域事件（Domain Events），而是坚持使用过去时动词。名词倾向于与后文在《精简对象建模》（Streamlined Object Modeling）中讨论的“事务对象”（Transaction Objects）匹配。将事件建模为过去时动词是至关重要的，因为它们是通用语言（Ubiquitous Language）的一部分。
 
 ### 6.3.2 领域事件与通用语言
 
-考虑我们在讨论迁移客户所产生的副作用时，通用语言中的差异：事件使该概念变得显式化，而之前发生在聚合根（Aggregate）内部或多个聚合根之间的变化被视为一个隐式概念，需要去探索和定义。例如，在大多数系统中，副作用发生的这一事实仅仅是通过通如 `Hibernate` 或 `Entity Framework` 等工具发现的，如果用例的副作用发生了变化，它就是一个隐式概念。引入事件使得该概念变得显式化并成为通用语言的一部分；迁移客户不仅仅是改变某些东西，迁移客户会产生一个在语言中被明确定义的 `CustomerRelocatedEvent`（客户迁移事件）。
+考虑我们在讨论迁移客户所产生的副作用时，通用语言中的差异：事件使该概念变得显式化，而之前发生在聚合根（Aggregate）内部或多个聚合根之间的变化被视为一个隐式概念，需要去探索和定义。例如，在大多数系统中，副作用发生的这一事实仅仅是通过通如`Hibernate`或`Entity Framework`等工具发现的，如果用例的副作用发生了变化，它就是一个隐式概念。引入事件使得该概念变得显式化并成为通用语言的一部分；迁移客户不仅仅是改变某些东西，迁移客户会产生一个在语言中被明确定义的`CustomerRelocatedEvent`（客户迁移事件）。
 
 ### 6.3.3 不变性
 
-领域事件描述了领域中已经发生的变化。它们谈论的是过去。根据定义，改变过去是不可能的，除非你是 `Marty McFly` 且拥有一辆 `Delorean` 时空车，但事实可能并非如此。领域事件是不可变的，仅此而已。
+领域事件描述了领域中已经发生的变化。它们谈论的是过去。根据定义，改变过去是不可能的，除非你是`Marty McFly`且拥有一辆`Delorean`时空车，但事实可能并非如此。领域事件是不可变的，仅此而已。
 
 #### Symfony 事件调度器
 
-某些 PHP 框架支持事件。然而，不要将这些事件与领域事件混淆。它们在特征和目标上是不同的。例如，Symfony 拥有 `Event Dispatcher` 组件。如果你需要为状态机实现一个事件系统（例如），你可以依赖它。整个从请求到响应的 Symfony 生命周期也是基于事件的。然而，Symfony 事件是可变的，每个监听器（Listener）都能够修改事件以向其中添加或更新信息。
+某些 PHP 框架支持事件。然而，不要将这些事件与领域事件混淆。它们在特征和目标上是不同的。例如，Symfony 拥有`Event Dispatcher`组件。如果你需要为状态机实现一个事件系统（例如），你可以依赖它。整个从请求到响应的 Symfony 生命周期也是基于事件的。然而，Symfony 事件是可变的，每个监听器（Listener）都能够修改事件以向其中添加或更新信息。
 
 ### 6.4 建模事件
 
-在建模事件时，请根据其所属的边界上下文（Bounded Context）中的通用语言来命名事件及其属性。如果一个事件是在 `Aggregate` 上执行命令操作的结果，那么该的名称通常源自执行的命令。事件名称反映了事件发生的过去性质，这一点非常重要。它现在没有发生。它是之前发生的。选择最好的名称是反映这一事实的名称。
+在建模事件时，请根据其所属的边界上下文（Bounded Context）中的通用语言来命名事件及其属性。如果一个事件是在`Aggregate`上执行命令操作的结果，那么该的名称通常源自执行的命令。事件名称反映了事件发生的过去性质，这一点非常重要。它现在没有发生。它是之前发生的。选择最好的名称是反映这一事实的名称。
 
-让我们考虑我们的用户注册功能，`DomainEvent` 需要代表这一事实。以下代码显示了基础 `DomainEvent` 的最小接口。
+让我们考虑我们的用户注册功能，`DomainEvent`需要代表这一事实。以下代码显示了基础`DomainEvent`的最小接口。
 
 ```php
 interface DomainEvent
@@ -4195,9 +4371,9 @@ interface DomainEvent
 }
 ```
 
-如所示，所需的最小信息是一个 `DateTime`，以便知道事件发生的时间。
+如所示，所需的最小信息是一个`DateTime`，以便知道事件发生的时间。
 
-现在让我们建模新的用户注册事件。以下代码可以用于建模一个表示“应用程序中已注册新用户”这一事实的事件。如前所述，名称应该是过去时动词，因此 `UserRegistered`（用户注册）可能是一个不错的选择。
+现在让我们建模新的用户注册事件。以下代码可以用于建模一个表示“应用程序中已注册新用户”这一事实的事件。如前所述，名称应该是过去时动词，因此`UserRegistered`（用户注册）可能是一个不错的选择。
 
 ```php
 class UserRegistered implements DomainEvent
@@ -4222,17 +4398,25 @@ class UserRegistered implements DomainEvent
 }
 ```
 
-通知新用户的最少信息可能是她的 `UserId`。有了这些信息，来自同一或不同边界上下文的任何进程、命令或应用程序服务都可以对此事件采取行动。
+通知新用户的最少信息可能是她的`UserId`。有了这些信息，来自同一或不同边界上下文的任何进程、命令或应用程序服务都可以对此事件采取行动。
 
 经验法则如下：
-- `DomainEvents` 通常被设计为不可变的
-- 构造函数将初始化 `DomainEvent` 的完整状态
-- `DomainEvents` 将具有用于访问其属性的 getter 方法
-- 包含执行操作的 `Aggregate` 标识
+
+- `DomainEvents`通常被设计为不可变的
+
+- 构造函数将初始化`DomainEvent`的完整状态
+
+- `DomainEvents`将具有用于访问其属性的 getter 方法
+
+- 包含执行操作的`Aggregate`标识
+
 - 包含与第一个聚合根相关的其他聚合标识
+
 - 如果有用，包含导致事件发生的参数
 
 但是，如果来自同一或不同边界上下文的领域专家需要更多信息怎么办？让我们看看带有更多信息的同一个领域事件建模，例如电子邮件地址。
+
+
 
 ```php
 class UserRegistered implements DomainEvent
@@ -4268,20 +4452,21 @@ class UserRegistered implements DomainEvent
 
 你还记得那个游戏化的例子吗？为了创建游戏化平台的用户（可能称为 `Player` 用户），来自电子商务边界上下文的 `UserId` 可能就足够了。但是，如果游戏化平台需要通过电子邮件通知用户奖励怎么办？在这种情况下，电子邮件地址也是强制性的。因此，如果原始领域事件中包含了电子邮件地址，我们就完成了。如果情况并非如此，游戏化边界上下文需要通过 REST 从另一个请求此类信息。
 
-#### 为什么不包含整个用户实体？
+## 为什么不包含整个用户实体？
 
 我是否应该在领域事件中包含来自边界上下文的整个 `User Entity`？我们的建议是：不要。领域事件用于边界上下文自身与其他边界上下文之间的通信。这意味着，在 C2C 电子商务目录边界上下文中的 `Seller`（卖家），可以是产品反馈边界上下产品评论的 `Author`（作者）。两者可以共享相同的 ID 或邮箱，但 `Seller` 和 `Author` 是来自不同边界上下文的不同概念实体。因此，一个边界上下文的实体在其他地方没有意义，或者具有完全不同的意义。
 
-### 6.5 持久化领域事件
+## 6.5 持久化领域事件
 
 持久化事件总是好主意。某些读者可能想为什么不直接将领域事件发布到消息或日志系统，但持久化它们有许多益处：
+
 - 你可以通过 REST 方式为其他边界上下文暴露领域事件
 - 你可以在推送到 RabbitMQ 之前，将领域事件和聚合更改放在同一个数据库事务中（你不想通知未发生的事情，也不不想错过已发生事情的通知）
 - 商业智能可以使用这些数据进行分析、预测或趋势分析
 - 审计你的实体变化
 - 对于事件溯源（Event Sourcing），你可以从领域事件重构聚合根
 
-#### 6.5.1 事件存储
+### 6.5.1 事件存储
 
 我们在哪里持久化领域事件？在 `Event Store`（事件存储）中。`Event Store` 是一个位于领域空间中以抽象（接口或抽象类）存在的领域事件仓库，它的职责是追加领域事件并查询它们。一个可能的基础接口如下：
 
@@ -4292,8 +4477,6 @@ interface EventStore
     public function allStoredEventsSince($anEventId);
 }
 ```
-
-
 
 然而，取决于你对 `DomainEvents` 的用法，之前的接口可以拥有更多方法来查询你的事件。
 
@@ -4381,6 +4564,7 @@ class StoredEvent implements DomainEvent
 ```
 
 以及它的映射。
+
 `Ddd\Domain\Event\StoredEvent`:
 
 ```yaml
@@ -4415,6 +4599,7 @@ fields:
 当领域事件代表的事实发生时，就应该发布 `DomainEvents`。例如，当一个新用户注册时，应该发布一个新的 `UserRegistered` 事件。
 
 遵循报纸的比喻：
+
 - **建模（Modeling）** 领域事件就像写一篇新闻稿
 - **发布（Publishing）** 领域事件就像在报纸上印刷文章
 - **传播（Spreading）** 领域事件就像发送报纸，让每个人都能阅读文章
@@ -4473,8 +4658,6 @@ class CustomOrmUser extends User
 
 **服务（Services）**
 
-
-
 你应该努力在链条中更深层的地方发布领域事件（Domain Events）。越靠近实体（Entity）或值对象（Value Object）越好。正如我们在上一节看到的，有时这并不容易，但最终结果对客户端来说会更简单。我们见过开发者从应用服务（Application Services）或领域服务（Domain Services）发布领域事件。这看起来是一个更容易实现的方法，但与将业务逻辑推向领域服务而不是将其放入实体中一样，会导致贫血领域模型（Anemic-Domain Model）。
 
 ### 6.6.3 DomainEventPublisher 如何工作
@@ -4484,6 +4667,7 @@ class CustomOrmUser extends User
 ⁶[`packagist.org/packages/ocramius/proxy-manager`](https://packagist.org/packages/ocramius/proxy-manager)
 
 领域事件
+
 138
 
 ```php
@@ -4531,6 +4715,7 @@ class DomainEventPublisher
 `subscribe` 方法添加一个新的 `DomainEventSubscriber`，该对象将监听特定的领域事件类型。
 
 领域事件
+
 139
 
 ```php
@@ -4550,6 +4735,8 @@ interface DomainEventSubscriber
 ```
 
 正如我们已经讨论过的，持久化所有的领域事件是一个好主意。我们如何轻松地持久化应用中发布的所有领域事件？使用一个特定的订阅来实现。让我们创建一个 `DomainEventSubscriber`，它将监听所有类型的领域事件，并使用我们的 `EventStore` 将它们持久化。
+
+
 
 ```php
 class PersistDomainEventSubscriber implements DomainEventSubscriber
@@ -4575,14 +4762,13 @@ class PersistDomainEventSubscriber implements DomainEventSubscriber
 
 `eventStore` 可以是一个自定义的 Doctrine 仓库（如之前所示），或者任何其他能够将领域事件持久化到数据库的对象。
 
-领域事件
-140
+## 领域事件
 
 ### 6.6.4 设置 DomainEventListeners
 
 设置 `DomainEventPublisher` 订阅者的最佳位置在哪里？这取决于具体情况。对于影响所有请求的全局订阅者，可能是在构建你的 `DomainEventPublisher` 时。如果某些订阅者只影响特定的应用服务，则在构建应用服务时。让我们来看一个使用 Silex 的示例。
 
-在 [Silex](http://silex.sensiolabs.org/)⁷, 中，注册持久化所有领域事件的领域事件发布者的最佳方法是使用[应用中间件](http://silex.sensiolabs.org/doc/middlewares.html)⁸.。一个*应用前中间件（before application middleware）允许你在执行执行器之前调整 `Request`。这是订阅负责将这些事件持久化到数据库（稍后将发送到 RabbitMQ）的监听器的正确位置。
+在 [Silex](http://silex.sensiolabs.org/)⁷ 中，注册持久化所有领域事件的领域事件发布者的最佳方法是使用[应用中间件](http://silex.sensiolabs.org/doc/middlewares.html)⁸。一个*应用前中间件（before application middleware）允许你在执行执行器之前调整 `Request`。这是订阅负责将这些事件持久化到数据库（稍后将发送到 RabbitMQ）的监听器的正确位置。
 
 ```php
 // ...
@@ -4612,7 +4798,7 @@ $app->before(function (Symfony\Component\HttpFoundation\Request $request) use ($
 
 ### 6.6.5 测试
 
-你已经知道如何发布领域事件，但我们如何通过单元测试这种发布行为的发生呢？我们如何真正测试 `UserRegistered` 是否真的触发了？我们建议的简单方法 ⁷[`silex.sensiolabs.org/`](http://silex.sensiolabs.org/) ⁸[`silex.sensiolabs.org/doc/middlewares.html`](http://silex.sensiolabs.org/doc/middlewares.html) 领域事件 141 是使用一个特定的 `EventListener`，它将充当[间谍⁹](http://www.martinfowler.com/bliki/TestDouble.html) 来记录领域事件是否发布。让我们来看一个 User 实体的单元测试示例。
+你已经知道如何发布领域事件，但我们如何通过单元测试这种发布行为的发生呢？我们如何真正测试 `UserRegistered` 是否真的触发了？我们建议的简单方法⁷[`silex.sensiolabs.org/`](http://silex.sensiolabs.org/) ⁸[`silex.sensiolabs.org/doc/middlewares.html`](http://silex.sensiolabs.org/doc/middlewares.html) 是使用一个特定的 `EventListener`，它将充当[间谍⁹](http://www.martinfowler.com/bliki/TestDouble.html) 来记录领域事件是否发布。让我们来看一个 `User` 实体的单元测试示例。
 
 ```php
 use Ddd\Domain\DomainEventPublisher;
@@ -4650,9 +4836,6 @@ class SpySubscriber implements DomainEventSubscriber
         $this->domainEvent = $aDomainEvent;
     }
 
-领域事件
-142
-
     public function isSubscribedTo($aDomainEvent)
     {
         return true;
@@ -4668,25 +4851,15 @@ class SpySubscriber implements DomainEventSubscriber
 
 ### 6.7.1 消息传递
 
-当所有领域事件持久化到数据库后，剩下的唯一传播工作是将它们推送到我们喜爱的消息系统。我们个人喜欢 [RabbitMQ¹⁰](https://www.rabbitmq.com),，但任何其他如 ActiveMQ 或 ZeroMQ 都能胜任。对于使用 PHP 集成 RabbitMQ，选项并不多，[php-amqplib¹¹](https://packagist.org/packages/videlalvaro/php-amqplib) 可以。
+当所有领域事件持久化到数据库后，剩下的唯一传播工作是将它们推送到我们喜爱的消息系统。我们个人喜欢 [RabbitMQ¹⁰](https://www.rabbitmq.com)，但任何其他如 ActiveMQ 或 ZeroMQ 都能胜任。对于使用 PHP 集成 RabbitMQ，选项并不多，[php-amqplib¹¹](https://packagist.org/packages/videlalvaro/php-amqplib) 可以。
 
-首先，我们需要一个能够将持久化的领域事件发送到 RabbitMQ 的服务。这可以是
-
-
-
-
-
-很简单，通过 `EventStore` 查询所有事件并发送每一个事件如何？这听起来不坏，但是，我们可能会多次推送同一个 `DomainEvent`。通常情况下，**我们需要尽力减少重新发布的 `DomainEvents` 的次数**。如果次数为零，那就更好。为了实现这一点，我们需要某种组件来跟踪哪些 `DomainEvents` 已经推送，哪些是剩余的。
+首先，我们需要一个能够将持久化的领域事件发送到 RabbitMQ 的服务。这可以很简单，通过 `EventStore` 查询所有事件并发送每一个事件如何？这听起来不坏，但是，我们可能会多次推送同一个 `DomainEvent`。通常情况下，**我们需要尽力减少重新发布的 `DomainEvents` 的次数**。如果次数为零，那就更好。为了实现这一点，我们需要某种组件来跟踪哪些 `DomainEvents` 已经推送，哪些是剩余的。
 
 最后但同样重要的一是，一旦我们知道必须推送哪些 `DomainEvents`，我们就发送它们，并跟踪发布到我们消息系统中的最后一个。让我们来看看该服务的一种可能实现：
 
 ¹⁰[`www.rabbitmq.com`](https://www.rabbitmq.com)
 
 ¹¹[`packagist.org/packages/videlalvaro/php-amqplib`](https://packagist.org/packages/videlalvaro/php-amqplib)
-
-# 领域事件
-
-143
 
 ```php
 class NotificationService
@@ -4810,10 +4983,6 @@ class NotificationService
 
 `NotificationService` 依赖于三个接口。我们已经见过 `EventStore`，它负责追加和查询 `DomainEvents`。第二个是 `PublishedMessageTracker`，负责跟踪已推送的消息。第三个是 `MessageProducer`，一个代表我们消息系统的接口。
 
-领域事件
-
-146
-
 ```php
 interface PublishedMessageTracker
 {
@@ -4832,6 +5001,8 @@ interface PublishedMessageTracker
 ```
 
 `mostRecentPublishedMessageId` 返回最后一条消息的 id，`trackMostRecentPublishedMessage` 负责跟踪发送的内容。
+
+
 
 ```php
 class DoctrinePublishedMessageTracker extends EntityRepository implements PublishedMessageTracker
@@ -4964,10 +5135,6 @@ interface MessageProducer
 }
 ```
 
-
-
-
-
 ```php
 \DateTime $notificationOccurredOn);
 
@@ -4976,7 +5143,7 @@ public function close($exchangeName);
 }
 ```
 
-# 领域事件 (Domain Events)
+# 领域事件（Domain Events）
 
 150
 
@@ -5060,7 +5227,7 @@ class RabbitMqMessageProducer extends RabbitMqMessaging implements MessageProduc
 }
 ```
 
-现在我们已经有了一个领域服务（DomainService）将领域事件（DomainEvents）推送到 RabbitMQ 这样的消息系统中，现在是执行它们了。我们需要选择一种交付机制来运行该服务。我们个人建议创建一个 [Symfony Console](http://symfony.com/doc/current/components/console/introduction.html) 命令。
+现在我们已经有了一个领域服务（DomainService）将领域事件（DomainEvents）推送到 `RabbitMQ` 这样的消息系统中，现在是执行它们了。我们需要选择一种交付机制来运行该服务。我们个人建议创建一个 [Symfony Console](http://symfony.com/doc/current/components/console/introduction.html) 命令。
 
 领域事件
 
@@ -5116,17 +5283,17 @@ class PushNotificationsCommand extends Command
 
 !(-173)
 
-# 7. 模块 (Modules)
+# 7. 模块（Modules）
 
 当你将一些类放在一个模块（Module）中时，你是在告诉查看你设计的后续开发者将它们放在一起。如果你的模型是在讲述一个故事，那么模块就是章节。Eric Evans，领域驱动设计
 
 在遵循领域驱动设计（DDD）构建应用时，一个常见的问题是：我们将代码放在哪里？推荐如何将代码放入应用程序？基础设施代码放在哪里？更重要的是，模型内部的不同概念应该如何组织？
 
-有一个战术模式可以解决这个问题：**模块**。如今，每个人使用模块组织代码。但 DDD 更进一步，它将模块视为模型的一部分。
+有一个战术模式可以解决这个问题：模块。如今，每个人使用模块组织代码。但 DDD 更进一步，它将模块视为模型的一部分。
 
 ## 7.1 在模块中组织代码
 
-如果我们以一个名为 **buy.it** 的虚拟电子商务应用程序为例，为每个不同的限界上下文定义一个模块可能是合理的，因为每个限界上下文代表了一个自包含且独立的应用程序
+如果我们以一个名为 `buy.it` 的虚拟电子商务应用程序为例，为每个不同的限界上下文定义一个模块可能是合理的，因为每个限界上下文代表了一个自包含且独立的应用程序。
 
 ```text
 ├── billing
@@ -5153,17 +5320,14 @@ class PushNotificationsCommand extends Command
 
 每个模块包含一个暴露类似 REST API 的应用程序。请注意，每个模块名称都是电子商务系统中的意义概念，并使用通用语言（Ubiquitous Language）命名：
 
-- **账单模块 (Billing)**：包含所有与支付、发票、运单以及具有有限状态机的订单处理系统等相关的代码。
-- **购物车模块 (Cart)**：包含所有与购物车系统相关的代码。
-- **目录模块 (Catalog)**：包含所有与产品描述、产品组合等相关的代码。
-- **库存模块 (Inventory)**：包含所有与产品库存管理相关的代码。
+- **账单模块（Billing）**：包含所有与支付、发票、运单以及具有有限状态机的订单处理系统等相关的代码。
+- **购物车模块（Cart）**：包含所有与购物车系统相关的代码。
+- **目录模块（Catalog）**：包含所有与产品描述、产品组合等相关的代码。
+- **库存模块（Inventory）**：包含所有与产品库存管理相关的代码。
 
+让我们进一步深入探讨其中一个模块。以 `Billing`（账单）上下文为例，检查其结构细节。正如其名称所示，该模块负责表示订单所经历的所有流程。从它的创建到交付给购买它的客户。此外，它是一个独立的应用程序，因此它包含一个源代码文件夹（`src`）和一个测试文件夹（`tests`）。源代码文件夹包含了使该边界上下文（bounded context）工作所需的所有代码：`domain`、`code` 和 `infrastructure code`。
 
-
-
-让我们进一步深入探讨其中一个模块。以 `Billing`（账单）上下文为例，检查其结构细节。正如其名称所示，该模块负责表示订单所经历的所有流程。从它的创建到交付给购买它的客户。此外，它是一个独立的应用程序，因此它包含一个源代码文件夹（src）和一个测试文件夹（tests）。源代码文件夹包含了使该边界上下文（bounded context）工作所需的所有代码：`domain`、`code` 和 `infrastructure code`。
-
-```
+```text
 ├── composer.json
 ├── composer.lock
 ├── src
@@ -5178,11 +5342,14 @@ class PushNotificationsCommand extends Command
 └── tests
 ```
 
-所有代码都带有以组织命名的供应商命名空间（vendor namespace）前缀（在本例中为 `BuyIt`），并包含两个子文件夹：`DomainModel` 存放所有领域代码，`Infrastructure` 存放基础设施层，将所有领域逻辑与基础设施层的细节隔离开来。通过这种结构，我们清晰地表明了，我们将使用 `Hexagonal Architecture`（六边形架构）作为基础架构。我们可能使用的另一种替代结构如下：
+
+
+所有代码都带有以组织命名的供应商命名空间（vendor namespace）前缀（在本例中为`BuyIt`），并包含两个子文件夹：`DomainModel`存放所有领域代码，`Infrastructure`存放基础设施层，将所有领域逻辑与基础设施层的细节隔离开来。通过这种结构，我们清晰地表明了，我们将使用`Hexagonal Architecture`（六边形架构）作为基础架构。我们可能使用的另一种替代结构如下：
 
 ![](img/index-175_1.png)
 
 ### Modules
+
 157
 
 ```
@@ -5206,9 +5373,9 @@ class PushNotificationsCommand extends Command
 
 这种风格的结构使用额外的子文件夹来存储定义在领域模型内部的类。虽然这种组织方式可能是合理的，但我们倾向于不使用它，因为这种分离代码的方法往往更关注架构元素，而不是模型中的相关概念。我们认为这种风格很容易在领域模型之上产生某种服务层，这并不是一件坏事，但请记住，`Domain Services`（领域服务）用于描述领域中的事物，即不属于实体（entities）也不属于值对象（value objects）的操作。因此，从现在起我们将坚持之前的代码组织方式。
 
-可以将代码直接放在 `DomainModel` 子文件夹中。例如，将公共接口和服务类放在其中是非常常见的，如 `DomainEventPublisher`、`DomainEventSubscriber` 等。
+可以将代码直接放在`DomainModel`子文件夹中。例如，将公共接口和服务类放在其中是非常常见的，如`DomainEventPublisher`、`DomainEventSubscriber`等。
 
-如果我们对账单上下文进行建模，可能会有一个 `Order` 实体及其存储库（repository）以及所有状态信息。因此，我们的第一次尝试将是将所有这些元素直接放入 `DomainModel` 子文件夹中。乍看之下，这似乎是最简单的方法。
+如果我们对账单上下文进行建模，可能会有一个`Order`实体及其存储库（repository）以及所有状态信息。因此，我们的第一次尝试将是将所有这些元素直接放入`DomainModel`子文件夹中。乍看之下，这似乎是最简单的方法。
 
 ```
 ├── composer.json
@@ -5236,9 +5403,10 @@ class PushNotificationsCommand extends Command
 ```
 
 ### Modules
+
 158
 
-我们将 `Order` 和 `OrderLine` 实体、`OrderLineWasAdded` 和 `OrderWasCreated` 事件以及 `OrderRepository` 放在同一个子文件夹（`DomainModel`）中。这种结构可能是可以的，但那是因为我们仍然有一个简单的模型。那么 `Bill` 实体加上它的存储库呢？或者 `Waybill`（运单）实体加上相应的存储库呢？让我们添加所有这些元素，看看它们如何适应实际的代码结构。
+我们将`Order`和`OrderLine`实体、`OrderLineWasAdded`和`OrderWasCreated`事件以及`OrderRepository`放在同一个子文件夹（`DomainModel`）中。这种结构可能是可以的，但那是因为我们仍然有一个简单的模型。那么`Bill`实体加上它的存储库呢？或者`Waybill`（运单）实体加上相应的存储库呢？让我们添加所有这些元素，看看它们如何适应实际的代码结构。
 
 ```
 ├── composer.json
@@ -5277,9 +5445,10 @@ class PushNotificationsCommand extends Command
 
 （注：此处代码块内容展示了包含账单实体、存储库、运单实体及其对应存储库的逻辑，由于原文未提供重复翻译，此处保持结构逻辑一致）
 
-虽然这种代码组织方式目前可能可行，但从长远来看，它会变得不实用且难以维护。每当我们迭代并添加新功能时，模型就会变得更大，该文件夹也会变得臃肿。为了实现这一点，我们可以使用 `Ubiquitous Language`（通用语言）来拆分模型，按领域关注点划分。我们可以尝试如下方法：
+虽然这种代码组织方式目前可能可行，但从长远来看，它会变得不实用且难以维护。每当我们迭代并添加新功能时，模型就会变得更大，该文件夹也会变得臃肿。为了实现这一点，我们可以使用`Ubiquitous Language`（通用语言）来拆分模型，按领域关注点划分。我们可以尝试如下方法：
 
 ### Modules
+
 159
 
 ```
@@ -5367,13 +5536,13 @@ class PushNotificationsCommand extends Command
 └── tests
 ```
 
-这种方式代码在概念上更有组织性，而不仅仅是技术关注点。观察之前的示例，我们可以发现 `Order` 和 `OrderLine` 概念关系紧密，因此它们位于同一个模块中。另一方面，`Order` 和 `Waybill` 虽然共享同一个上下文，但它们是不同的概念，因此它们位于不同的模块。模块是一种通信方式，并记住模块的主要目的是将领域模型的相关概念组织在一起，并将它们与不相关的解耦。模块并不分离代码，而是分离有意义的概念。![](img/index-178.png)
+这种方式代码在概念上更有组织性，而不仅仅是技术关注点。观察之前的示例，我们可以发现`Order`和`OrderLine`概念关系紧密，因此它们位于同一个模块中。另一方面，`Order`和`Waybill`虽然共享同一个上下文，但它们是不同的概念，因此它们位于不同的模块。模块是一种通信方式，并记住模块的主要目的是将领域模型的相关概念组织在一起，并将它们与不相关的解耦。模块并不分离代码，而是分离有意义的概念。![](img/index-178.png)
 
 ### 7.1.1 基础设施层中的模块
 
-到为止，我们一直在讨论如何构建和组织领域层的代码，但几乎没有提到过 `Infrastructure Layer`。由于我们使用 `Hexagonal Architecture` 来反转领域层和基础设施层之间的依赖，我们需要一个地方来放置领域层定义的所有接口的实现。回到账单上下文示例，我们需要为 `BillRepository`、`OrderRepository` 和 `WaybillRepository` 的实现提供一个位置。
+到为止，我们一直在讨论如何构建和组织领域层的代码，但几乎没有提到过`Infrastructure Layer`。由于我们使用`Hexagonal Architecture`来反转领域层和基础设施层之间的依赖，我们需要一个地方来放置领域层定义的所有接口的实现。回到账单上下文示例，我们需要为`BillRepository`、`OrderRepository`和`WaybillRepository`的实现提供一个位置。
 
-显然，它们应该放在 `Infrastructure` 文件夹中，但放在哪里？假设我们决定使用 `Doctrine ORM` 来实现持久层。我们如何将存储库的 Doctrine 实现放入 `Infrastructure` 文件夹？让我们直接放在里面并看看看起来是什么样。
+显然，它们应该放在`Infrastructure`文件夹中，但放在哪里？假设我们决定使用`Doctrine ORM`来实现持久层。我们如何将存储库的 Doctrine 实现放入`Infrastructure`文件夹？让我们直接放在里面并看看看起来是什么样。
 
 ```
 ├── composer.json
@@ -5389,9 +5558,6 @@ class PushNotificationsCommand extends Command
 ├── ...
 └── Infrastructure
 ```
-
-
-
 
 ```text
 ├── OrderLine.php
@@ -5411,7 +5577,7 @@ class PushNotificationsCommand extends Command
 └── tests
 ```
 
-我们可以保持现状。但正如我们在`Domain Layer`中看到的，这种结构和组织方式在经过几次模型迭代后就会迅速腐化并变得混乱。每当模型增长时，可能需要更多的基础设施，这样我们最终会将不同的技术关注点（如 `persistence`、`messaging`、`logging` 等）混合在一起。我们避免基础设施实现变得错综复杂的的第一个尝试，是在边界上下文（bounded context）中为每个`技术关注点`定义一个模块。
+我们可以保持现状。但正如我们在`Domain Layer`中看到的，这种结构和组织方式在经过几次模型迭代后就会迅速腐化并变得混乱。每当模型增长时，可能需要更多的基础设施，这样我们最终会将不同的技术关注点（如`persistence`、`messaging`、`logging`等）混合在一起。我们避免基础设施实现变得错综复杂的的第一个尝试，是在边界上下文（bounded context）中为每个`技术关注点`定义一个模块。
 
 ```text
 ├── composer.json
@@ -5448,7 +5614,7 @@ class PushNotificationsCommand extends Command
         └── tests
 ```
 
-这看起来好多了，而且从长期来看比我们的第一次尝试更具维护性。如果你预先知道自己将始终只有一个持久化机制，那么可以坚持这种结构和组织。它非常简单且易于维护。但当你必须处理多种持久化机制时怎么办？如今，拥有一个关系型数据库以及某种如 `Redis` 或 `Riak` 之类的共享内存持久化是非常常见的。或者为了测试代码而拥有某种本地内存实现。让我们看看这如何融入实际方案。
+这看起来好多了，而且从长期来看比我们的第一次尝试更具维护性。如果你预先知道自己将始终只有一个持久化机制，那么可以坚持这种结构和组织。它非常简单且易于维护。但当你必须处理多种持久化机制时怎么办？如今，拥有一个关系型数据库以及某种如`Redis`或`Riak`之类的共享内存持久化是非常常见的。或者为了测试代码而拥有某种本地内存实现。让我们看看这如何融入实际方案。
 
 ```text
 ├── composer.json
@@ -5538,9 +5704,11 @@ class PushNotificationsCommand extends Command
 
 ### 7.1.1.1 混合不同的技术
 
-在大型关键业务应用中，混合多种技术是相当常见的。例如，在读密集型 Web 应用中，你通常会有某种去范式化数据源（`Solr`、`Elastic`、`Sphinx` 等）提供应用程序所有的读取操作，而传统的 RDBMS（如 `MySQL` 或 `Postgres`）主要负责处理所有的写入操作。当这种情况发生时，产生的问题之一是，是否可以让读取操作使用搜索引擎，而写入操作使用传统的数据库。我们的通用建议是，这类情况是 `CQRS` 的信号，因为我们需要独立地扩展读取和写入。如果你可以使用 `CQRS`，那么这可能是最好的选择。
+在大型关键业务应用中，混合多种技术是相当常见的。例如，在读密集型 Web 应用中，你通常会有某种去范式化数据源（`Solr`、`Elastic`、`Sphinx`等）提供应用程序所有的读取操作，而传统的 RDBMS（如`MySQL`或`Postgres`）主要负责处理所有的写入操作。当这种情况发生时，产生的问题之一是，是否可以让读取操作使用搜索引擎，而写入操作使用传统的数据库。我们的通用建议是，这类情况是`CQRS`的信号，因为我们需要独立地扩展读取和写入。如果你可以使用`CQRS`，那么这可能是最好的选择。
 
-但由于某种原因你无法使用 `CQRS`，则需要替代方案。在这种情况下，来自“四人行”的`代理模式`将派上用场。我们可以根据`代理模式`定义仓库的实现。
+但由于某种原因你无法使用`CQRS`，则需要替代方案。在这种情况下，来自“四人行”的`代理模式`将派上用场。我们可以根据`代理模式`定义仓库的实现。
+
+
 
 ```php
 namespace BuyIt\Billing\Infrastructure\FullTextSearching\Elastica;
@@ -5590,20 +5758,19 @@ class ElasticaOrderRepository implements OrderRepository
 }
 ```
 
-这个示例提供了一个使用 `DoctrineOrderRepository` 和 `Elastica` 客户端（一个与 Elastic 服务器交互的客户端）的简单实现。注意，对于某些操作我们使用了 RDBMS 数据源，而对另一些操作使用了 Elastica 客户端。此外注意添加操作由两个部分组成。第一部分尝试将订单存储到 Elastic 索引，第二部分
+这个示例提供了一个使用`DoctrineOrderRepository`和`Elastica`客户端（一个与 Elastic 服务器交互的客户端）的简单实现。注意，对于某些操作我们使用了 RDBMS 数据源，而对另一些操作使用了`Elastica`客户端。此外注意添加操作由两个部分组成。第一部分尝试将订单存储到 Elastic 索引，第二部分尝试将`Order`存储到关系型数据库中，并将该操作委托给 Doctrine 实现。
 
-
-
-
-尝试将 `Order` 存储到关系型数据库中，并将该操作委托给 Doctrine 实现。请注意，这只是一个示例和一种方法。它可能会被改进，例如现在整个添加操作是同步的。相反，我们可以将操作入队到某种消息中间件中，例如将 `Order` 存储到 Elastic 中。根据你的需求，有很多可能性和改进空间。
+请注意，这只是一个示例和一种方法。它可能会被改进，例如现在整个添加操作是同步的。相反，我们可以将操作入队到某种消息中间件中，例如将`Order`存储到 Elastic 中。根据你的需求，有很多可能性和改进空间。
 
 ### 7.2 在 PHP 中利用模块
 
-在 PHP 5.3 之前，模块并没有被完全支持。如今，自 PHP 5.3 以来，我们可以使用 PHP 命名空间（namespaces）来实现 `Module` 模式。由于历史原因，我们将介绍在 PHP 5.3 之前如何使用命名空间。但你应该努力使用支持 PHP 命名空间的 PHP 版本。最佳选择始终是 PHP 的最新稳定版本。
+在 PHP 5.3 之前，模块并没有被完全支持。如今，自 PHP 5.3 以来，我们可以使用 PHP 命名空间（namespaces）来实现`Module`模式。由于历史原因，我们将介绍在 PHP 5.3 之前如何使用命名空间。但你应该努力使用支持 PHP 命名空间的 PHP 版本。最佳选择始终是 PHP 的最新稳定版本。
 
-### 7.2.1 PEAR 风格的命名空间
+#### 7.2.1 PEAR 风格的命名空间
 
-在 PHP 5.3 之前，由于缺乏命名空间结构，使用了 PEAR 风格的命名空间。PEAR 是 `PHP Extension and Application Repository` 的缩写，在过去的旧时代，它是可重用组件的仓库。它仍然活跃，但其使用已是少数，并且有许多未维护的包。特别是自从 `composer` 和 `packagist` 上台之后。PEAR 作为可重用组件的来源，需要一种避免类名冲突的方法，因此他们开始用命名空间类类名前。仍然有项目使用这种形式的命名空间（例如 `PHPUnit` 或 `Zend Framework 1`）。以下是 PEAR 风格命名空间的一个示例：
+在 PHP 5.3 之前，由于缺乏命名空间结构，使用了 PEAR 风格的命名空间。PEAR 是`PHP Extension and Application Repository`的缩写，在过去的旧时代，它是可重用组件的仓库。它仍然活跃，但其使用已是少数，并且有许多未维护的包。特别是自从`composer`和`packagist`上台之后。
+
+PEAR 作为可重用组件的来源，需要一种避免类名冲突的方法，因此他们开始用命名空间类类名前。仍然有项目使用这种形式的命名空间（例如`PHPUnit`或`Zend Framework 1`）。以下是 PEAR 风格命名空间的一个示例：
 
 ```
 Modules
@@ -5617,11 +5784,13 @@ Modules
 └── Bill.php
 ```
 
-使用 PEAR 风格的命名空间，`Bill` 实体的类名将变为 `BuyIt_Billing_DomainModel_Bill_Bill`。这个类名有点丑陋，并且没有遵循 DDD 的核心准则之一：每个类名都应该根据**通用语言**（Ubiquitous Language）来命名。出于这个原因，我们强烈不建议使用它。
+使用 PEAR 风格的命名空间，`Bill`实体的类名将变为`BuyIt_Billing_DomainModel_Bill_Bill`。这个类名有点丑陋，并且没有遵循 DDD 的核心准则之一：每个类名都应该根据通用语言（Ubiquitous Language）来命名。出于这个原因，我们强烈不建议使用它。
 
-### 7.2.2 PSR-0 和 PSR-4 命名规范
+#### 7.2.2 PSR-0 和 PSR-4 命名规范
 
-与 PHP 5.3 的其他重要功能一起，命名空间进入了舞台。这是一次重大转变，一群最重要的框架合作者形成了 [PHP-FIG](http://www.php-fig.org/)（这是 `PHP Framework Interop Group` 的缩写），旨在标准化和统一框架及库创建的共同方面。该小组发布的第一个 `PHP 标准建议`（下简称 `PSR`）是一个自动加载标准，总而言之，它提议使用命名空间在类和 PHP 文件之间建立一一关系。如今，`PSR-4`（`PSR-0` 的简化版，仍然保持了类与物理 PHP 文件之间的关系）是构建代码的首选且推荐的方法，我们认为这应该是在项目中实现 `Modules` 的使用方法。回到之前的示例：
+与 PHP 5.3 的其他重要功能一起，命名空间进入了舞台。这是一次重大转变，一群最重要的框架合作者形成了 [PHP-FIG](http://www.php-fig.org/)（这是`PHP Framework Interop Group`的缩写），旨在标准化和统一框架及库创建的共同方面。
+
+该小组发布的第一个`PHP 标准建议`（下简称`PSR`）是一个自动加载标准，总而言之，它提议使用命名空间在类和 PHP 文件之间建立一一关系。如今，`PSR-4`（`PSR-0`的简化版，仍然保持了类与物理 PHP 文件之间的关系）是构建代码的首选且推荐的方法，我们认为这应该是在项目中实现`Modules`的使用方法。回到之前的示例：
 
 ```
 ├── composer.json
@@ -5634,13 +5803,13 @@ Modules
 └── Bill.php
 ```
 
-使用命名空间和 `PSR-0/PSR-4`，`Bill` 实体的类名将简单变为 `Bill`，完全限定类名将是 `BuyIt\Billing\DomainModel\Bill\Bill`。正如你所看到的，这种方式使我们能够根据**通用语言**命名领域对象，并且构建和组织代码的首选方式。
+使用命名空间和`PSR-0/PSR-4`，`Bill`实体的类名将简单变为`Bill`，完全限定类名将是`BuyIt\Billing\DomainModel\Bill\Bill`。正如你所看到的，这种方式使我们能够根据通用语言命名领域对象，并且构建和组织代码的首选方式。
 
 ### 7.3 总结
 
-模块是在我们的领域模型中分组和分离概念的一种方式。模块的命名应该遵循通用语言。我们不应该忘记，模块是通信高层概念的一种方式，它帮助我们保持低耦合和高内聚。我们看到，即使在旧版本的 PHP 中，也可以通过使用前缀创建有的模块。现在很容易遵循 `PSR-0` 和 `PSR-4` 命名规范来构建我们的模块。
+模块是在我们的领域模型中分组和分离概念的一种方式。模块的命名应该遵循通用语言。我们不应该忘记，模块是通信高层概念的一种方式，它帮助我们保持低耦合和高内聚。我们看到，即使在旧版本的 PHP 中，也可以通过使用前缀创建有的模块。现在很容易遵循`PSR-0`和`PSR-4`命名规范来构建我们的模块。
 
-## 8. 聚合 (Aggregates)
+## 8. 聚合（Aggregates）
 
 ### 8.1 引言
 
@@ -5662,7 +5831,7 @@ DDD 聚合有时会与集合类（列表、映射等）混淆。DDD 聚合是领
 
 来自 [`en.wikipedia.org/wiki/Domain-driven_design#Building_blocks_of_DDD`](https://en.wikipedia.org/wiki/Domain-driven_design#Building_blocks_of_DDD)：聚合：由一个根实体（又称为聚合根）结合在一起的对象集合。聚合根通过禁止外部对象持有对其成员的引用，来保证聚合内所做更改的一致性。
 
-示例：当你开车时，你不需要担心让轮子向前移动、让引擎通过火花和燃料燃烧等等；你只是在开车。在在这种语境下，汽车是几个其他对象的聚合，并作为所有其他系统的聚合根。
+示例：当你开车时，你不需要担心让轮子向前移动、让引擎通过火花和燃料燃烧等等；你只是在开车。在这种语境下，汽车是几个其他对象的聚合，并作为所有其他系统的聚合根。
 
 ### 8.2 简史历史
 
@@ -5670,33 +5839,43 @@ DDD 聚合有时会与集合类（列表、映射等）混淆。DDD 聚合是领
 
 这种规模的增长正在许多维度上发生。网站开始以非常详细跟踪活动和结构。出现了大量数据集：链接、社交网络、日志中的活动、映射数据。随着数据的增长，用户也增长了——因为最大的网站已成为经常服务大量访问者的庞大园区。
 
-应对数据和流量的增长需要更多的计算资源。为了处理这种
+应对数据和流量的增长需要更多的计算资源。为了处理这种关于扩展，你有两个选择：向上扩展（up）或向外扩展（out）。向上扩展意味着更大的机器、更多的处理器、磁盘存储和内存。但更大的机器变得越来越贵，更不用说随着规模的增大，还存在真实的限制。
 
+另一种方案是在集群中使用许多小机器。小机器集群可以使用廉价的硬件，在这些规模下最终成本更低。它还更具韧性——虽然单台机器故障很常见，但整个集群可以设计为即使发生此类故障也能运行，提供高可靠性。
 
+当大型属性转向集群时，这揭示了一个新问题——关系型数据库并不是为在集群上运行而设计的。集群关系型数据库（如`Oracle RAC`或`Microsoft SQL Server`）基于共享磁盘子系统的概念工作。它们使用感知集群的文件系统并写入到高可用磁盘子系统——但这意味着集群仍然将磁盘子系统视为单点故障。
 
-关于扩展，你有两个选择：向上扩展（up）或向外扩展（out）。向上扩展意味着更大的机器、更多的处理器、磁盘存储和内存。但更大的机器变得越来越贵，更不用说随着规模的增大，还存在真实的限制。另一种方案是在集群中使用许多小机器。小机器集群可以使用廉价的硬件，在这些规模下最终成本更低。它还更具韧性——虽然单台机器故障很常见，但整个集群可以设计为即使发生此类故障也能运行，提供高可靠性。
+关系型数据库也可以作为独立的服务器运行于不同的数据集，有效地实现了数据库分片（sharding）。虽然这分离了负载，但所有的分片必须由应用程序控制，程序必须跟踪每一条数据应该与哪个数据库服务器通信。此外，我们还失去了任何跨分片的查询、引用完整性、事务或一致性控制。在这种背景下，我们经常听到做过此类的人说“不自然的行为（unnatural acts）”。
 
-当大型属性转向集群时，这揭示了一个新问题——关系型数据库并不是为在集群上运行而设计的。集群关系型数据库（如 `Oracle RAC` 或 `Microsoft SQL Server` 基于共享磁盘子系统的概念工作。它们使用感知集群的文件系统并写入到高可用磁盘子系统——但这意味着集群仍然将磁盘子系统视为单点故障。关系型数据库也可以作为独立的服务器运行于不同的数据集，有效地实现了数据库分片（sharding）。虽然这分离了负载，但所有的分片必须由应用程序控制，程序必须跟踪每一条数据应该与哪个数据库服务器通信。此外，我们还失去了任何跨分片的查询、引用完整性、事务或一致性控制。在这种背景下，我们经常听到做过此类的人说“不自然的行为（unnatural acts）”。
+这些技术问题因许可成本而加剧。商业关系型数据库通常基于单服务器假设进行定价，因此在集群上运行推高价格，并导致了与采购部门令人沮丧的谈判。关系型数据库与集群之间的这种不匹配导致一些组织考虑数据存储的替代方案。
 
-这些技术问题因许可成本而加剧。商业关系型数据库通常基于单服务器假设进行定价，因此在集群上运行推高价格，并导致了与采购部门令人沮丧的谈判。关系型数据库与集群之间的这种不匹配导致一些组织考虑数据存储的替代方案。特别是两家公司——`Google` 和 `Amazon`——极具影响力。它们都处于运行此类大型集群的前沿；此外，它们正在捕获海量数据。这些因素给了它们动力。它们都是成功且不断增长的公司，拥有强大的技术组成部分，这给了它们手段和机会。难怪它们对自己的关系型数据库下了“杀身之决心”。随着 2000 年代的到来，这两家公司都发表了关于其努力的简短但极具影响力的论文：Google 的 `BigTable` 和 Amazon 的 `Dynamo`。
+特别是两家公司——`Google`和`Amazon`——极具影响力。它们都处于运行此类大型集群的前沿；此外，它们正在捕获海量数据。这些因素给了它们动力。它们都是成功且不断增长的公司，拥有强大的技术组成部分，这给了它们手段和机会。难怪它们对自己的关系型数据库下了“杀身之决心”。
 
-人们常说 `Amazon` 和 `Google` 的运行规模远超大多数组织，因此它们需要的解决方案可能对普通组织并不适用。虽然大多数软件项目确实不需要那种程度的规模，但事实也是如此，越来越多的组织开始探索通过捕获和处理更多数据可以做些什么——并遇到了相同的问题。因此，随着关于 `Google` 和 `Amazon` 所做的更多信息泄露出来，人们开始探索沿着类似的路线构建数据库——显式设计为在集群世界中生存。虽然早期对关系主地位的威胁被证明是幻影，但来自集群的威胁是严重的。
+随着 2000 年代的到来，这两家公司都发表了关于其努力的简短但极具影响力的论文：Google 的`BigTable`和 Amazon 的`Dynamo`。
 
-## 8.3 聚合（Aggregates）与集群
+人们常说`Amazon`和`Google`的运行规模远超大多数组织，因此它们需要的解决方案可能对普通组织并不适用。虽然大多数软件项目确实不需要那种程度的规模，但事实也是如此，越来越多的组织开始探索通过捕获和处理更多数据可以做些什么——并遇到了相同的问题。
 
-一个 `Aggregate`（聚合）由一个根 `Entity`（实体）组成，该实体持有其他的 `Entities` 和值对象（Value Objects）。一个没有任何子实体 `Entities` 或值对象的单个 `Entity` 自身就构成一个 `Aggregate`。这就是为什么在某些书中，`Aggregates` 术语被用来代替 `Entity` 使用。
+因此，随着关于`Google`和`Amazon`所做的更多信息泄露出来，人们开始探索沿着类似的路线构建数据库——显式设计为在集群世界中生存。虽然早期对关系主地位的威胁被证明是幻影，但来自集群的威胁是严重的。
 
-`Aggregate` 的主要优势或真实目标是确保我们领域模型操作的一致性。它允许我们保证对 `Entities` 和值对象层级结构的更改是以原子方式执行的。
+### 8.3 聚合（Aggregates）与集群
 
-考虑一个粗略的例子来引入这个概念。想象一个电子商务应用程序和一个典型的持久化机制。有 `Orders`（订单）和 `Line Orders`（订单项）。`Orders` 的总金额和 `Line Orders` 的小计总和必须匹配。你绝不会在使用不保护这两个更改的事务的情况下更改 `Line Order` 的金额和 `Order` 的金额。为什么？因为更新 `Line Order` 的 `UPDATE` 语句可以正常工作，而对 `Order` 总金额的 `UPDATE` 可能会因为网络连接问题而失败。在这种情况下，你会在表和你的 `Domain` 中导致不一致，如果你请求 `Order` 的总金额，然后应用业务逻辑计算所有 `Line Orders` 的和，会发生什么？你明白意思了。如果你将两个更改放在一个事务中，它们要么全部成功要么全部失败，这就是一致性。所以事务帮助你保持这种一致性。
+一个`Aggregate`（聚合）由一个根`Entity`（实体）组成，该实体持有其他的`Entities`和值对象（Value Objects）。一个没有任何子实体`Entities`或值对象的单个`Entity`自身就构成一个`Aggregate`。这就是为什么在某些书中，`Aggregates`术语被用来代替`Entity`使用。
 
-在另一方面，负面影响是性能问题和持久化错误。`Aggregate` 使用它自己的仓库（repository）进行获取和持久化，无论它持有许多 `Entities` 和值对象还是没有。
+`Aggregate`的主要优势或真实目标是确保我们领域模型操作的一致性。它允许我们保证对`Entities`和值对象层级结构的更改是以原子方式执行的。
 
-为了设计一个 `Aggregate`，需要遵循一些规则或考虑因素，以便我们获得所有收益并最小化负面影响。
+考虑一个粗略的例子来引入这个概念。想象一个电子商务应用程序和一个典型的持久化机制。有`Orders`（订单）和`Line Orders`（订单项）。`Orders`的总金额和`Line Orders`的小计总和必须匹配。你绝不会在使用不保护这两个更改的事务的情况下更改`Line Order`的金额和`Order`的金额。
+
+为什么？因为更新`Line Order`的`UPDATE`语句可以正常工作，而对`Order`总金额的`UPDATE`可能会因为网络连接问题而失败。在这种情况下，你会在表和你的`Domain`中导致不一致，如果你请求`Order`的总金额，然后应用业务逻辑计算所有`Line Orders`的和，会发生什么？你明白意思了。
+
+如果你将两个更改放在一个事务中，它们要么全部成功要么全部失败，这就是一致性。所以事务帮助你保持这种一致性。
+
+在另一方面，负面影响是性能问题和持久化错误。`Aggregate`使用它自己的仓库（repository）进行获取和持久化，无论它持有许多`Entities`和值对象还是没有。
+
+为了设计一个`Aggregate`，需要遵循一些规则或考虑因素，以便我们获得所有收益并最小化负面影响。
 
 ### 8.4.1 基于业务真实不变性（Business True Invariants）设计聚合
 
-首先，什么是不变性（invariant）？不变性是在代码执行期间必须为且保持一致的规则。让我们来看一个例子帮助理解。`stack`（栈）是一个后进先出（LIFO）的数据结构，我们可以推送元素、弹出元素并查询大小。考虑一个纯 PHP 实现，不使用任何特定的 PHP 数组函数（如 `array_pop`）。
+首先，什么是不变性（invariant）？不变性是在代码执行期间必须为且保持一致的规则。让我们来看一个例子帮助理解。`stack`（栈）是一个后进先出（LIFO）的数据结构，我们可以推送元素、弹出元素并查询大小。考虑一个纯 PHP 实现，不使用任何特定的 PHP 数组函数（如`array_pop`）。
 
 ```php
 class Stack
@@ -5762,22 +5941,19 @@ class Stack
 }
 ```
 
-通过这种方法，现在请求栈的大小变成了一个轻量级的方法。代价是什么？在 `pop` 和 `push` 方法中有一些更新，以便在添加和删除元素时跟踪新的大小。让我们尝试寻找一个不变性，即在栈对象的任何方法调用之前之后都应该为真的规则。`$this->size === count($this->data)` 怎么样？在栈对象的任何方法调用之前之后，属性 `size` 都是一致的，并且它始终持有栈的大小。
-
-那么什么是不变性？不变性是一个必须始终为真且在事务中保持一致的业务规则。在上例中，`Order` 的金额必须匹配所有 `Line Orders` 的金额总和，这是一个不变性。这可能使得 `Order` 成为根，并允许我们对它进行操作，而不是对它内部的 `Order Lines` 进行操作。
 
 
+通过这种方法，现在请求栈的大小变成了一个轻量级的方法。代价是什么？在`pop`和`push`方法中有一些更新，以便在添加和删除元素时跟踪新的大小。让我们尝试寻找一个不变性，即在栈对象的任何方法调用之前之后都应该为真的规则。`$this->size === count($this->data)`怎么样？在栈对象的任何方法调用之前之后，属性`size`都是一致的，并且它始终持有栈的大小。
 
+那么什么是不变性？不变性是一个必须始终为真且在事务中保持一致的业务规则。在上例中，`Order`的金额必须匹配所有`Line Orders`的金额总和，这是一个不变性。这可能使得`Order`成为根，并允许我们对它进行操作，而不是对它内部的`Order Lines`进行操作。
 
-在集群上执行的操作应当保持一致性，且不破坏任何不变性。这意味着，
+在集群上执行的操作应当保持一致性，且不破坏任何不变性。这意味着，没有机会调用方法来破坏此类规则。每当你添加一个`Line Order`或从根节点更新信息时，内部都会计算`Order`的数量。
 
-没有机会调用方法来破坏此类规则。每当你添加一个 `Line Order` 或从根节点更新信息时，内部都会计算 `Order` 的数量。
-
-注意那些“包含”（has-a）/“包含多个”（has-many）关系，它们并不意味着会将两个 `Entities` 变成一个 `Aggregate` 且其中一个是根节点。
+注意那些“包含”（has-a）/“包含多个”（has-many）关系，它们并不意味着会将两个`Entities`变成一个`Aggregate`且其中一个是根节点。
 
 ### 8.4.2 小聚合根 vs 大聚合根
 
-在设计 `Aggregates` 时，要努力创建小的 `Aggregates`。如果没有不变性需要保护，那么意味着所有单个 `Entities` 都在执行。
+在设计`Aggregates`时，要努力创建小的`Aggregates`。如果没有不变性需要保护，那么意味着所有单个`Entities`都在执行。
 
 你可能已经在 90% 的情况下这样做了。
 
@@ -5785,19 +5961,19 @@ class Stack
 
 ### 8.4.4 每个事务只修改一个聚合根
 
-“在所有情况下，一个设计良好的 `Bounded Context` 在每个事务中只修改一个 `Aggregate` 实例。此外，如果不应用事务分析，我们无法正确地推断 `Aggregate` 的设计。将修改限制在每个事务一个 `Aggregate` 实例听起来可能过于严格。然而，这是一条经验法则，在大多数情况下应该是我们的目标。它解决了使用 `Aggregates` 的根本原因。”
+“在所有情况下，一个设计良好的`Bounded Context`在每个事务中只修改一个`Aggregate`实例。此外，如果不应用事务分析，我们无法正确地推断`Aggregate`的设计。将修改限制在每个事务一个`Aggregate`实例听起来可能过于严格。然而，这是一条经验法则，在大多数情况下应该是我们的目标。它解决了使用`Aggregates`的根本原因。”
 
 ### 8.4.5 异常：UX 情况
 
-在遵循之前的规则设计 `Aggregates` 时，有一个典型的例外。
+在遵循之前的规则设计`Aggregates`时，有一个典型的例外。
 
 聚合根
 
 ### 8.5 示例应用服务：用户与愿望
 
-学习 `Aggregates` 的最好方法是看代码。所以，让我们考虑以下场景：一个 Web 应用，用户可以提出愿望，如果他们发生了某些事，这些愿望就能实现。把它想象成一份遗嘱。例如，我想给妻子发一封邮件，解释我在发生不幸事故并去世后该如何处理我的 `GitHub` 账户。检查我是否还活着的方法是回复平台发送我的邮件。如果你想了解更多关于[这个](https://github.com/ddd-in-php/last-wishes) [应用⁴](https://github.com/ddd-in-php/last-wishes)，你可以访问我们的 [GitHub 账户⁵](https://github.com/ddd-in-php) 查看此示例及更多内容。
+学习`Aggregates`的最好方法是看代码。所以，让我们考虑以下场景：一个 Web 应用，用户可以提出愿望，如果他们发生了某些事，这些愿望就能实现。把它想象成一份遗嘱。例如，我想给妻子发一封邮件，解释我在发生不幸事故并去世后该如何处理我的`GitHub`账户。检查我是否还活着的方法是回复平台发送我的邮件。如果你想了解更多关于[这个](https://github.com/ddd-in-php/last-wishes)[应用⁴](https://github.com/ddd-in-php/last-wishes)，你可以访问我们的[GitHub 账户⁵](https://github.com/ddd-in-php)查看此示例及更多内容。
 
-好了，我们有用户和他们的愿望。让我们只考虑一个用例，“作为一个用户，我想要许下一个愿望”。我们如何如何建模这两个概念？作为设计 `Aggregates` 的良好实践，让我们尝试追求较小的 `Aggregates`，也就是说在这种情况下，是两个各包含一个 `Entity` 的不同 `Aggregates`：`User` 和 `Wish`。它们之间的关系呢？嗯，我们应该使用标识符，例如 `UserId`。让我们看一些代码。
+好了，我们有用户和他们的愿望。让我们只考虑一个用例，“作为一个用户，我想要许下一个愿望”。我们如何建模这两个概念？作为设计`Aggregates`的良好实践，让我们尝试追求较小的`Aggregates`，也就是说在这种情况下，是两个各包含一个`Entity`的不同`Aggregates`：`User`和`Wish`。它们之间的关系呢？嗯，我们应该使用标识符，例如`UserId`。让我们看一些代码。
 
 #### 8.5.1 没有不变性，两个聚合根
 
@@ -5829,11 +6005,11 @@ class MakeWishService
 }
 ```
 
-你觉得这段代码如何？它可能是性能最好的代码了。在后台，你几乎可以看到 `INSERT` 语句。对于此类用例，这是最少的操作次数，只有一个，所以干得好。按照目前的实现，你可以根据业务逻辑创建你想要的任何愿望，再次干得好。
+你觉得这段代码如何？它可能是性能最好的代码了。在后台，你几乎可以看到`INSERT`语句。对于此类用例，这是最少的操作次数，只有一个，所以干得好。按照目前的实现，你可以根据业务逻辑创建你想要的任何愿望，再次干得好。
 
-然而，可能存在一个潜在问题，你可以为一个在你的领域（Domain）中可能不存在的用户创建愿望。这是一个问题。事实上，无论你是使用关系型数据库还是 NoSQL 数据库，在持久化任何内容之前，使用这种方法，你可以在内存中创建一个没有对应 `User` 的 `Wish`。
+然而，可能存在一个潜在问题，你可以为一个在你的领域（Domain）中可能不存在的用户创建愿望。这是一个问题。事实上，无论你是使用关系型数据库还是 NoSQL 数据库，在持久化任何内容之前，使用这种方法，你可以在内存中创建一个没有对应`User`的`Wish`。
 
-确实，这是业务逻辑的破坏。我知道，我知道，你可以通通过在数据库中使用外键从 `wish(user_id)` 到 `user(id)` 来修复它。正确，但如果我们不使用带外键的数据库怎么办？更糟糕的是，如果是 NoSQL 数据库，例如 `Redis` 或 `ElasticSearch` 怎么办？
+确实，这是业务逻辑的破坏。我知道，我知道，你可以通过在数据库中使用外键从`wish(user_id)`到`user(id)`来修复它。正确，但如果我们不使用带外键的数据库怎么办？更糟糕的是，如果是 NoSQL 数据库，例如`Redis`或`ElasticSearch`怎么办？
 
 所以，如果我们想修复这个问题，以便相同的代码能够在不同的基础设施中正常工作，我们需要检查用户是否存在。可能最简单的方法是在同一个应用服务中完成，不是吗？
 
@@ -5935,11 +6111,11 @@ class User
 }
 ```
 
-为什么我们返回一个 `Wish` 而不是将新的 `Wish` 添加到内部集合，正如我们可能会在使用 Doctrine 时所做的那样？总结，在这种场景中，`User` 和 `Wish` 并不构成聚合。每个 `Entity` 都有自己的 `Repository`，并且通过 `UserId` 关联。获取用户所有的愿望可以通过愿望 Repository 中的查找方法完成。
+为什么我们返回一个`Wish`而不是将新的`Wish`添加到内部集合，正如我们可能会在使用 Doctrine 时所做的那样？总结，在这种场景中，`User`和`Wish`并不构成聚合。每个`Entity`都有自己的`Repository`，并且通过`UserId`关联。获取用户所有的愿望可以通过愿望 Repository 中的查找方法完成。
 
 #### 8.5.2 每个用户最多三个愿望
 
-我们的应用程序取得了取得了巨大的成功，现在是时候变现了。我们希望新用户最多拥有三个愿望。作为一个用户，如果你想拥有更多的愿望，你可能需要为付费账户付费。让我们看看如何修改代码以遵循新的关于愿望数量的业务规则（不考虑付费用户）。
+我们的应用程序取得了巨大的成功，现在是时候变现了。我们希望新用户最多拥有三个愿望。作为一个用户，如果你想拥有更多的愿望，你可能需要为付费账户付费。让我们看看如何修改代码以遵循新的关于愿望数量的业务规则（不考虑付费用户）。
 
 ```php
 class MakeWishService
@@ -5953,10 +6129,6 @@ class MakeWishService
     }
 }
 ```
-
-
-
-
 
 ```php
 $count = $this->wishRepository->numberOfWishesByUserId($userId);
@@ -5976,17 +6148,17 @@ $this->wishRepository->add($wish);
 }
 ```
 
-这很简单，对吧？可能太简单了。我们在这里看到了了不同的问题。第一个问题是 `Application Services`（应用服务）不应该包含此类业务逻辑。它们必须负责协调，但不应包含业务逻辑。可能，更好的地方是把它们放入 `User` 中。我们可以对 `User` 和 `Wish` 之间的关系拥有更多的控制。然而，对于这里解释的问题，这段代码是可以运行的。
+这很简单，对吧？可能太简单了。我们在这里看到了不同的问题。第一个问题是`Application Services`（应用服务）不应该包含此类业务逻辑。它们必须负责协调，但不应包含业务逻辑。可能，更好的地方是把它们放入`User`中。我们可以对`User`和`Wish`之间的关系拥有更多的控制。然而，对于这里解释的问题，这段代码是可以运行的。
 
 ## 聚合根 (Aggregates)
 
-第二个问题是关于代码本身的。它`在竞态条件下无法工作`。因此，它是不可接受的。暂不考虑领域驱动设计（DDD），在高流量下，这段代码会有什么问题？思考一下。是否可能打破 `User` 拥有超过三个愿望的规则？为什么你的 QA 在运行她那些古怪的测试时会超级开心？
+第二个问题是关于代码本身的。它`在竞态条件下无法工作`。因此，它是不可接受的。暂不考虑领域驱动设计（DDD），在高流量下，这段代码会有什么问题？思考一下。是否可能打破`User`拥有超过三个愿望的规则？为什么你的 QA 在运行她那些古怪的测试时会超级开心？
 
 你的 QA 平静地尝试了两次，结果是一个用户有两个愿望。很好。你的 QA 想要见血。想象一下，她在浏览器中打开了两个标签页，填写了两个表单并同时提交了两个按钮。突然，在两次请求之后，用户在数据库中最终有了四个愿望。发生了什么？
 
-像调试器一样思考，考虑两个请求同时到达 `if ($count > 3) {` 这一行。两个请求的评估结果都为 `false`，因为用户只有两个愿望。所以，两个请求都会创建 `Wish`，并且两个请求都会将其添加到数据库中。噢！一个 `User` 有了四个愿望。
+像调试器一样思考，考虑两个请求同时到达`if ($count > 3) {`这一行。两个请求的评估结果都为`false`，因为用户只有两个愿望。所以，两个请求都会创建`Wish`，并且两个请求都会将其添加到数据库中。噢！一个`User`有了四个愿望。
 
-我们知道你在想什么。是因为我们忘记了将所有内容放入事务（transaction）中。很好，假设将之前相同的代码放在事务块中，你将看到如何在 `Application Services` 中正确地执行。在内部，让我们检查你的数据库发生了什么。
+我们知道你在想什么。是因为我们忘记了将所有内容放入事务（transaction）中。很好，假设将之前相同的代码放在事务块中，你将看到如何在`Application Services`中正确地执行。在内部，让我们检查你的数据库发生了什么。
 
 ```sql
 START TRANSACTION;
@@ -5996,7 +6168,7 @@ SELECT COUNT(*) FROM wishes; -- @a is 3
 COMMIT;
 ```
 
-如果你取这段 SQL 块并在两个不同的连接中逐行执行（为新的愿望使用不同的 `UUIDs`），你将看到 `wishes` 表最后会有 4 行。所以，这看起来不是事务的问题。我们该如何修复这个问题？可能，你了解过持久化机制中的`悲观并发`（Pessimistic Concurrency）和`乐观并发`（Optimistic Concurrency），让我们来探索一下它们吧。
+如果你取这段 SQL 块并在两个不同的连接中逐行执行（为新的愿望使用不同的`UUIDs`），你将看到`wishes`表最后会有 4 行。所以，这看起来不是事务的问题。我们该如何修复这个问题？可能，你了解过持久化机制中的`悲观并发`（Pessimistic Concurrency）和`乐观并发`（Optimistic Concurrency），让我们来探索一下它们吧。
 
 ### 8.5.2.1 悲观并发
 
@@ -6022,21 +6194,26 @@ class User {
 ```
 
 ### 8.5.3 渲染用户的愿望
+
 ### 8.5.4 更新用户的愿望
+
 ### 8.5.5 成全用户的愿望
+
 ### 8.6 总结
 
 ## 9. 工厂 (Factories)
 
 ### 9.1 引言
 
-在领域中，工厂帮助将客户端从了解如何构建复杂对象和 `Aggregates`（聚合）中解耦。你可以使用它们来作为一个整体创建一个 `Aggregates`，并强制执行它们不变性（invariants）。
+在领域中，工厂帮助将客户端从了解如何构建复杂对象和`Aggregates`（聚合）中解耦。你可以使用它们来作为一个整体创建一个`Aggregates`，并强制执行它们不变性（invariants）。
 
 ### 9.2 聚合根上的工厂方法
 
 `Factory Method`（工厂方法）模式正如经典的“四人小组”定义的，是一种创建模式，它定义了创建对象的接口，但将类型选择留给子类，创建过程延迟到运行时。在`Aggregate Root`（聚合根）中添加`Factory Method`可以向任何外部客户端隐藏创建聚合的内部实现细节。这也将聚合完整性的责任交回了根节点。
 
-在一个拥有 `User` 和 `Wish` 实体的领域模型中，`User` 充当聚合根。没有 `User` 就没有 `Wish`。`User` 实体应该管理它的聚合。将 `Wish` 的控制权移回 `User` 实体的方法是在聚合根中放置一个 `Factory Method`。
+在一个拥有`User`和`Wish`实体的领域模型中，`User`充当聚合根。没有`User`就没有`Wish`。`User`实体应该管理它的聚合。将`Wish`的控制权移回`User`实体的方法是在聚合根中放置一个`Factory Method`。
+
+
 
 ```php
 class User {
@@ -6066,7 +6243,7 @@ $wish = $aUser->makeWish(
 );
 ```
 
-### 9.2.1 强制不变性
+## 9.2.1 强制不变性
 
 `Aggregate Root` 中的工厂方法也是处理不变性的良好位置。在一个拥有 `Forum` 和 `Article` 实体的领域模型中，其中 `Article` 是 `Forum` 的一个聚合，发布一个 `Article` 可能如下：
 
@@ -6101,7 +6278,7 @@ class Forum {
 }
 ```
 
-### 9.3 服务上的工厂
+## 9.3 服务上的工厂
 
 解耦创建逻辑在我们的服务中有用。
 
@@ -6126,8 +6303,6 @@ class LatestPostsFeedService {
         $posts = $this->postRepository->latestPosts($request->since);
         return array_map(function(Post $post) {
 ```
-
-
 
 ```php
 return [
@@ -6379,6 +6554,8 @@ class DoctrineUserFactory implements UserFactory
 
 一旦解耦，我们只需要将工厂（Factory）注入到应用服务中：
 
+
+
 ```php
 class SignInUserService
 {
@@ -6398,9 +6575,6 @@ class SignInUserService
 ### 9.4 测试
 
 在编写测试时，你会看到一种常见的模式。构建实体和复杂的聚合根
-
-
-
 
 这可能是一个非常枯燥且重复的过程。复杂性和重复将开始渗透到你的测试套件中。
 
@@ -6449,9 +6623,7 @@ class MyTest extends PHPUnit_Framework_TestCase
 
 ### 9.4.1 对象母 (Object Mother)
 
-[对象母](http://martinfowler.com/bliki/ObjectMother.html)#index_split_000.html#212) 是一个为你的测试创建固定固件的工厂的生动名称。接上之前的例子，我们可以将重复的逻辑提取到对象母中，以便在不同测试之间复用。
-
-³[`martinfowler.com/bliki/ObjectMother.html`](http://martinfowler.com/bliki/ObjectMother.html)
+[对象母](http://martinfowler.com/bliki/ObjectMother.html) 是一个为你的测试创建固定固件的工厂的生动名称。接上之前的例子，我们可以将重复的逻辑提取到对象母中，以便在不同测试之间复用。
 
 ```php
 class AuthorObjectMother
@@ -6483,7 +6655,7 @@ class MyTest extends PHPUnit_Framework_TestCase
 
 ### 9.4.2 测试数据构建器 (Test Data Builder)
 
-测试数据构建器只是带有默认值的普通构建器（Builders），专门用于你的测试套套件中，这样你就不需要在特定的测试用例中指定无关的参数。
+测试数据构建器只是带有默认值的普通构建器（Builders），专门用于你的测试套件中，这样你就不需要在特定的测试用例中指定无关的参数。
 
 ```php
 class AuthorBuilder
@@ -6622,25 +6794,21 @@ class MyTest extends PHPUnit_Framework_TestCase
 
 ### 9.5 总结
 
-工厂解耦逻辑与业务逻辑的强大工具。工厂方法不仅有助于将创建责任移动到聚合根，还能强制领域不变性。在服务中使用抽象工厂模式允许我们将领域逻辑与基础设施分离。常见的用例是规范及其相应的持久化实现。我们已经看到工厂在测试套件中非常有用。虽然我们可以将构建逻辑提取到对象母，但测试数据构建器提供了更高的活性。
+工厂是解耦逻辑与业务逻辑的强大工具。工厂方法不仅有助于将创建责任移动到聚合根，还能强制领域不变性。在服务中使用抽象工厂模式允许我们将领域逻辑与基础设施分离。常见的用例是规范及其相应的持久化实现。我们已经看到工厂在测试套件中非常有用。虽然我们可以将构建逻辑提取到对象母，但测试数据构建器提供了更高的灵活性。
 
 ### 10. 仓库 (Repositories)
 
 ### 10.1 引言
 
-为了与领域对象交互，你需要持有它的引用。实现这一点的可以通过创建，也可以通过关联来实现。在面向对象的程序中，对象拥有其他对象的引用，这使得它们易于遍历。这极大地增强了我们模型的表达。困难在于，你需要一种机制来获取第一个对象，即聚合根。
+为了与领域对象交互，你需要持有它的引用。实现这一点可以通过创建，也可以通过关联来实现。在面向对象的程序中，对象拥有其他对象的引用，这使得它们易于遍历。这极大地增强了我们模型的表达。困难在于，你需要一种机制来获取第一个对象，即聚合根。
 
 仓库作为存储位置，获取的对象与其被持久化时的状态完全相同。每个聚合类型通常有一个唯一的关联仓库，用于其持久化需求。然而，在需要共享聚合对象层次树的情况下，这些类型可能会共享一个仓库。
 
 ### 10.2 定义
 
-Martin Fowler 定义¹](http://martinfowler.com/eaaCatalog/repository.html) 仓库为领域层和数据映射层之间的机制，类似于内存中的领域对象集合。客户端对象声明地构造查询规范并将其提交给仓库以满足。对象可以像在简单集合中一样添加或删除，封装在仓库中的映射代码会在后台执行适当的操作。
+Martin Fowler 定义仓库为领域层和数据映射层之间的机制，类似于内存中的领域对象集合。客户端对象声明地构造查询规范并将其提交给仓库以满足。对象可以像在简单集合中一样添加或删除，封装在仓库中的映射代码会在后台执行适当的操作。
 
-¹[`martinfowler.com/eaaCatalog/repository.html`](http://martinfowler.com/eaaCatalog/repository.html)
-
-
-
-数据访问对象（Data Access Objects）是一种将领域对象持久化到数据库的常用模式。很容易将数据访问对象模式与仓库（Repository）混淆。它们的显著区别在于：仓库代表集合，而 DAO 更贴于数据库，通常更以表为中心。通常，一个 DAO 会包含针对特定领域对象的 CRUD 方法。
+数据访问对象（Data Access Objects）是一种将领域对象持久化到数据库的常用模式。很容易将数据访问对象模式与仓库（Repository）混淆。它们的显著区别在于：仓库代表集合，而 DAO 更贴近于数据库，通常更以表为中心。通常，一个 DAO 会包含针对特定领域对象的 CRUD 方法。
 
 一个 DAO 的常见接口可以是：
 
@@ -6682,7 +6850,7 @@ interface BloatUserDAO
 }
 ```
 
-如你所见，DAO 变得越来越难以单元测试，因为你需要实现更多的方法，而且它与 `User` 对象的耦合变得更加紧。这个问题会随着时间的推移而增长，许多其他贡献者的协作会让这个“泥球球（ball of mud）”变得更大。
+如你所见，DAO 变得越来越难以单元测试，因为你需要实现更多的方法，而且它与 `User` 对象的耦合变得更加紧密。这个问题会随着时间的推移而增长，许多其他贡献者的协作会让这个“泥球（ball of mud）”变得更大。
 
 ### 10.4 面向集合的仓库
 
@@ -6693,6 +6861,8 @@ interface BloatUserDAO
 仓库实现了一种具体的集合类型：`Set`。`Set` 是一种数据结构，其不变性是不包含重复条目。如果你尝试向已经存在的 `Set` 中添加元素，它将不会被添加。这在我们的用例中很有用，因为每个聚合根（Aggregate）都有一个与根实体（Root Entity）关联的唯一标识。
 
 例如，我们有如下的领域模型：
+
+
 
 ```php
 namespace Domain\Model;
@@ -6805,7 +6975,7 @@ class PostId
 }
 ```
 
-如果我们想持久化这个 `Post` 实体，可以创建一个如下简单的内存 `Post 仓库`（Post Repository）：
+如果我们想持久化这个`Post`实体，可以创建一个如下简单的内存`Post`仓库（Post Repository）：
 
 ```php
 class SimplePostRepository
@@ -6841,7 +7011,7 @@ $post = $repository->postOfId($id);
 assert('Updated content' === $post->body());
 ```
 
-如你所示，从集合的角度来看，仓库中不需要 `save` 方法。影响对象的更改由持久化层正确处理。第一步是为你的仓库定义一个类似集合的接口。
+如你所示，从集合的角度来看，仓库中不需要`save`方法。影响对象的更改由持久化层正确处理。第一步是为你的仓库定义一个类似集合的接口。
 
 ```php
 interface PostRepository
@@ -6854,7 +7024,7 @@ interface PostRepository
 }
 ```
 
-接口定义应该放置在聚合根使用的同一个模块中。有时 `remove` 并不是真正的聚合删除。在某些情况下，你需要为了法律目的或商业智能保留信息。在这种情况下，你可以将聚合根标记为禁用或逻辑删除。相应地更新接口，移除删除方法或在仓库中提供禁用行为。
+接口定义应该放置在聚合根使用的同一个模块中。有时`remove`并不是真正的聚合删除。在某些情况下，你需要为了法律目的或商业智能保留信息。在这种情况下，你可以将聚合根标记为禁用或逻辑删除。相应地更新接口，移除删除方法或在仓库中提供禁用行为。
 
 仓库另一个重要部分是查找方法，例如：
 
@@ -6887,7 +7057,7 @@ interface PostRepository
 }
 ```
 
-构建每个 `Post` 实例的代码调用 `nextIdentity()` 来获取唯一标识 `PostId`。
+构建每个`Post`实例的代码调用`nextIdentity()`来获取唯一标识`PostId`。
 
 ```php
 $post = new Post($postRepository->nextIdentity(), $body);
@@ -6895,16 +7065,13 @@ $post = new Post($postRepository->nextIdentity(), $body);
 
 ### 10.4.1 内存实现
 
-正如 Uncle Bob 在[尖叫式架构](http://blog.8thlight.com/uncle-bob/2011/09/30/Screaming-Architecture.html)² 中写道
+正如 Uncle Bob 在[尖叫式架构](http://blog.8thlight.com/uncle-bob/2011/09/30/Screaming-Architecture.html)² 中写道：
 
 良好的软件架构允许对框架、数据库、Web 服务器以及其他环境问题和工具的决策被推迟和延迟。
 
-
-
-
 或者使用 MySql，直到项目后期才这样做。良好的架构也能让你轻松地对这些决策做出改变。良好的架构强调用例，并将其与外围关注点解耦。
 
-在应用程序的早期，快速的内存实现可能会大有用场。你可以用它来完善系统的其他部分，允许你将数据库决策推到合适的时机。内存仓库简单、快速且易于实现。对于我们的 `Post` 仓库，一个内存哈希表（hash-map）就足够提供我们所需的所有功能。[`blog.8thlight.com/uncle-bob/2011/09/30/Screaming-Architecture.html`](http://blog.8thlight.com/uncle-bob/2011/09/30/Screaming-Architecture.html)
+在应用程序的早期，快速的内存实现可能会大有用场。你可以用它来完善系统的其他部分，允许你将数据库决策推到合适的时机。内存仓库简单、快速且易于实现。对于我们的`Post`仓库，一个内存哈希表（hash-map）就足够提供我们所需的所有功能。[`blog.8thlight.com/uncle-bob/2011/09/30/Screaming-Architecture.html`](http://blog.8thlight.com/uncle-bob/2011/09/30/Screaming-Architecture.html)
 
 ### 仓库 (209)
 
@@ -6974,9 +7141,9 @@ composer require doctrine/orm:~2.4
 
 领域对象与数据库之间的映射可以被视为一种实现细节。领域生命周期不应该感知这些持久化细节。因此，映射信息应该定义为基础设施层的一部分，位于领域之外，并作为仓库的实现。
 
-##### 10.4.2.1.1 Doctrine 自定义映射类型
+#### 10.4.2.1.1 Doctrine 自定义映射类型
 
-由于我们的 `Post` 实体是由 `Body` 或 `PostId` 等值对象组成的，因此为它们创建自定义映射类型是一个好主意。这会让对象映射变得简单得多。
+由于我们的`Post`实体是由`Body`或`PostId`等值对象组成的，因此为它们创建自定义映射类型是一个好主意。这会让对象映射变得简单得多。
 
 仓库 (211)
 
@@ -7044,11 +7211,13 @@ class PostIdType extends Type
 }
 ```
 
-不要忘记实现 `PostId` 值对象。
+不要忘记实现`PostId`值对象。
 
-### 10.4.2.1.2 XML 映射
+#### 10.4.2.1.2 XML 映射
 
 Doctrine 提供了多种映射格式，如 YAML、XML 或注解。
+
+
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -7066,7 +7235,7 @@ Doctrine 提供了多种映射格式，如 YAML、XML 或注解。
 </doctrine-mapping>
 ```
 
-### 10.4.2.2 Entity Manager
+## 10.4.2.2 Entity Manager
 
 `EntityManager` 是 ORM 功能的中心访问点，它的初始化非常简单仓库 (214)：
 
@@ -7089,7 +7258,7 @@ $entityManager = EntityManager::create([
 
 根据你的需要进行配置。
 
-### 10.4.2.3 DQL 实现
+## 10.4.2.3 DQL 实现
 
 在这个仓库的情况下，我们只需要 `EntityManager` 直接从数据库检索领域对象仓库 (215)：
 
@@ -7137,10 +7306,6 @@ class DoctrinePostRepository implements PostRepository
 }
 ```
 
-
-
-
-
 ```php
 ->setParameter(':since', $sinceADate)
 
@@ -7159,9 +7324,9 @@ public function nextIdentity()
 }
 ```
 
-### 10.5 面向持久化
+## 10.5 面向持久化
 
-在某些情况下，面向集合的仓库（collection-oriented repositories）与我们的持久化机制并不契合。如果你没有工作单元（unit of work），跟踪聚合（Aggregate）的变化将一项困难的任务。持久化此类更改的唯一方法是显式地调用 save。
+在某些情况下，面向集合的仓库（collection-oriented repositories）与我们的持久化机制并不契合。如果你没有工作单元（unit of work），跟踪聚合（Aggregate）的变化将是一项困难的任务。持久化此类更改的唯一方法是显式地调用 `save`。
 
 面向持久化的仓库的接口定义与你定义一个面向集合的等价物类似。
 
@@ -7199,7 +7364,7 @@ $postRepository->save($post);
 
 除了此差异外，细节仅存在于实现中。
 
-### 10.5.1 Redis 实现
+## 10.5.1 Redis 实现
 
 [Redis](http://redis.io/⁷⁷) 是一种极速的内存键值对存储，可以作为缓存或存储。根据情况，我们可以考虑将 Redis 作为我们聚合的存储器。
 
@@ -7210,6 +7375,7 @@ composer require predis/predis:~1.0
 ```
 
 ⁷ [`redis.io/`](http://redis.io/)
+
 ⁸ [`github.com/nrk/predis`](https://github.com/nrk/predis)
 
 ### 仓库 217
@@ -7285,7 +7451,7 @@ class RedisPostRepository implements PostRepository
 }
 ```
 
-### 10.5.2 SQL 实现
+## 10.5.2 SQL 实现
 
 在一个经典示例中，我们可以仅通过使用原生 SQL 查询为我们的 `PostRepository` 创建一个简单的 [PDO](http://php.net/manual/en/book.pdo.php⁹⁹）实现。
 
@@ -7385,6 +7551,8 @@ class SqlPostRepository implements PostRepository
 
 由于我们没有任何映射配置，在同一个类中有一个针对架构的初始化方法将非常有用。*变化在一起应该保持在一起*。
 
+
+
 ```php
 class SqlPostRepository implements PostRepository
 {
@@ -7406,7 +7574,7 @@ SQL
 
 ### 10.6 额外行为
 
-为仓库添加额外行为可能是非常有益的，例如计算给定集合中所有项的能力。你可能会考虑添加一个名为 `count` 的方法，然而，由于我们正在尝试模拟集合，更好的名称将是 `size`。
+为仓库添加额外行为可能是非常有益的，例如计算给定集合中所有项的能力。你可能会考虑添加一个名为`count`的方法，然而，由于我们正在尝试模拟集合，更好的名称将是`size`。
 
 ### 仓库 222
 
@@ -7439,24 +7607,21 @@ class DoctrinePostRepository implements PostRepository
 
 在某些情况下，你不需要整个聚合就可以访问少量信息。为了解决这个问题，你可以添加仓库方法来作为快捷方式访问这些信息。你应该确保只访问那些通过导航聚合根可以获取的数据。
 
+你不应该允许访问`Aggregate Roots`的私有和内部区域，因为这将违反既定的契约规定。
 
+对于某些用例，你可能需要非常特定的查询，这些查询是由多个`Aggregate`类型组合成的，每个类型返回特定的信息。这些查询可以运行并作为单个`Value Object`返回。仓库返回`Value Objects`是非常常见的现象。
 
-
-你不应该允许访问 `Aggregate Roots` 的私有和内部区域，因为这将违反既定的契约规定。
-
-对于某些用例，你可能需要非常特定的查询，这些查询是由多个 `Aggregate` 类型组合成的，每个类型返回特定的信息。这些查询可以运行并作为单个 `Value Object` 返回。仓库返回 `Value Objects` 是非常常见的现象。
-
-如果你发现自己正在创建许多针对用例优化的查找器方法，你可能引入了常见的代码气味（code smell）。这可能表明 `Aggregate` 边界判断有误。然而，如果你确定边界是正确的，那么可能是时候探索 `CQRS` 了。
+如果你发现自己正在创建许多针对用例优化的查找器方法，你可能引入了常见的代码气味（code smell）。这可能表明`Aggregate`边界判断有误。然而，如果你确定边界是正确的，那么可能是时候探索`CQRS`了。
 
 # 10.7 查询存储库
 
-从比较的角度来看，如果我们考虑查询能力，存储库（repositories）与集合（`Collection`）不同。`Repository` 处理的是大型对象，这些对象在执行查询时通常不在内存中。将领域对象的所有实例加载到内存中并对它们进行查询是不可行的。
+从比较的角度来看，如果我们考虑查询能力，存储库（repositories）与集合（`Collection`）不同。`Repository`处理的是大型对象，这些对象在执行查询时通常不在内存中。将领域对象的所有实例加载到内存中并对它们进行查询是不可行的。
 
-一个良好的解决方案是传递一个准则（criterion），并让 `Repository` 处理实现细节以成功执行操作。它可能会将准则转换为 `SQL`、`ORM` 查询或遍历内存中的集合，这并不重要，实现层会处理。
+一个良好的解决方案是传递一个准则（criterion），并让`Repository`处理实现细节以成功执行操作。它可能会将准则转换为`SQL`、`ORM`查询或遍历内存中的集合，这并不重要，实现层会处理。
 
 ## 10.7.1 规格模式
 
-准则对象的常见实现是 `Specification Pattern`（规格模式）。规格只是一个简单的谓词，它接收一个领域对象并返回一个布尔值。给定一个领域对象，如果它符合（`specifies`）该规格，则返回 true，否则返回 false。
+准则对象的常见实现是`Specification Pattern`（规格模式）。规格只是一个简单的谓词，它接收一个领域对象并返回一个布尔值。给定一个领域对象，如果它符合（`specifies`）该规格，则返回 true，否则返回 false。
 
 ```php
 interface PostSpecification
@@ -7480,7 +7645,7 @@ interface PostRepository
 
 ### 10.7.1.1 内存实现
 
-作为一个示例，如果我们想通过使用 `Specification` 的内存实现，在 `PostRepository` 中重现 `latestPosts` 查询方法：
+作为一个示例，如果我们想通过使用`Specification`的内存实现，在`PostRepository`中重现`latestPosts`查询方法：
 
 ```php
 namespace Infrastructure\Persistence\InMemory;
@@ -7496,7 +7661,7 @@ interface InMemoryPostSpecification
 }
 ```
 
-`latestPosts` 行为的内存实现如下：
+`latestPosts`行为的内存实现如下：
 
 ```php
 namespace Infrastructure\Persistence\InMemory;
@@ -7551,7 +7716,7 @@ $latestPosts = $postRepository->query(
 
 ### 10.7.1.2 SQL 实现
 
-标准的 `Specification` 对于内存实现效果良好。然而，由于在 `SQL` 实现中我们没有预先将所有领域对象加载到内存中，对于这些情况我们需要更具体的规格。
+标准的`Specification`对于内存实现效果良好。然而，由于在`SQL`实现中我们没有预先将所有领域对象加载到内存中，对于这些情况我们需要更具体的规格。
 
 ```php
 namespace Infrastructure\Persistence\Sql;
@@ -7586,7 +7751,7 @@ class SqlLatestPostSpecification implements SqlPostSpecification
 }
 ```
 
-以及如何查询 `SQL` 实现：
+以及如何查询`SQL`实现：
 
 ```php
 class SqlPostRepository implements PostRepository
@@ -7604,7 +7769,7 @@ class SqlPostRepository implements PostRepository
 
 # 10.8 管理事务
 
-`Domain Model`（领域模型）不是管理事务的地方。解决此问题的常用方法是在应用层（Application Layer）放置一个 `Facade`，将相关的用例组合在一起。当从用户界面调用 `Facade` 时，它会开启事务。完成后，`Facade` 通过提交事务结束交互。如果发生任何错误，事务将回滚。
+`Domain Model`（领域模型）不是管理事务的地方。解决此问题的常用方法是在应用层（Application Layer）放置一个`Facade`，将相关的用例组合在一起。当从用户界面调用`Facade`时，它会开启事务。完成后，`Facade`通过提交事务结束交互。如果发生任何错误，事务将回滚。
 
 ```php
 use Doctrine\ORM\EntityManager;
@@ -7632,7 +7797,7 @@ class ServiceFacade
 }
 ```
 
-使用 facade 引入的问题是，我们需要不断重复相同的样板代码。如果我们统一执行用例的方式，可以使用 `Decorator Pattern`（装饰器模式）将它们封装在事务中。
+使用 facade 引入的问题是，我们需要不断重复相同的样板代码。如果我们统一执行用例的方式，可以使用`Decorator Pattern`（装饰器模式）将它们封装在事务中。
 
 ```php
 interface ApplicationService
@@ -7689,7 +7854,7 @@ class TransactionalApplicationService implements ApplicationService
 }
 ```
 
-在此之后，我们也可以地创建一个 `Doctrine` 事务会话实现：
+在此之后，我们也可以地创建一个`Doctrine`事务会话实现：
 
 ```php
 class DoctrineSession implements TransactionalSession
@@ -7697,10 +7862,6 @@ class DoctrineSession implements TransactionalSession
     private $entityManager;
 }
 ```
-
-
-
-
 
 ```php
 public function __construct(EntityManager $entityManager)
@@ -7763,37 +7924,38 @@ class DoctrinePostRepositoryTest extends \PHPUnit_Framework_TestCase
 
 ### 仓库（第 231 页）
 
+
+
 ```php
-    private function addCustomTypes()
-    {
-        if (!Type::hasType('post_id')) {
-            Type::addType('post_id', 'Infrastructure\Persistence\Doctrine\Types\PostIdType');
-        }
-        if (!Type::hasType('body')) {
-            Type::addType('body', 'Infrastructure\Persistence\Doctrine\Types\BodyType');
-        }
+private function addCustomTypes()
+{
+    if (!Type::hasType('post_id')) {
+        Type::addType('post_id', 'Infrastructure\Persistence\Doctrine\Types\PostIdType');
     }
-
-    protected function initEntityManager()
-    {
-        return EntityManager::create(
-            ['url' => 'sqlite:///:memory:'],
-            Tools\Setup::createXMLMetadataConfiguration(
-                ['/Path/To/Infrastructure/Persistence/Doctrine/Mapping'],
-                $devMode = true
-            )
-        );
+    if (!Type::hasType('body')) {
+        Type::addType('body', 'Infrastructure\Persistence\Doctrine\Types\BodyType');
     }
-
-    private function initSchema(EntityManager $em)
-    {
-        $tool = new Tools\SchemaTool($em);
-        $tool->createSchema([
-            $em->getClassMetadata('Domain\Model\Post')
-        ]);
-    }
-    //...
 }
+
+protected function initEntityManager()
+{
+    return EntityManager::create(
+        ['url' => 'sqlite:///:memory:'],
+        Tools\Setup::createXMLMetadataConfiguration(
+            ['/Path/To/Infrastructure/Persistence/Doctrine/Mapping'],
+            $devMode = true
+        )
+    );
+}
+
+private function initSchema(EntityManager $em)
+{
+    $tool = new Tools\SchemaTool($em);
+    $tool->createSchema([
+        $em->getClassMetadata('Domain\Model\Post')
+    ]);
+}
+//...
 ```
 
 ### 仓库（第 232 页）
@@ -7851,7 +8013,7 @@ class DoctrinePostRepositoryTest extends \PHPUnit_Framework_TestCase
 }
 ```
 
-按照我们之前的断言，如果我们保存了一个 Post，我们期望以完全相同的状态找到它。现在我们可以开始测试通过指定特定日期来查找最新的帖子。
+按照我们之前的断言，如果我们保存了一个 `Post`，我们期望以完全相同的状态找到它。现在我们可以开始测试通过指定特定日期来查找最新的帖子。
 
 ```php
 class DoctrinePostRepositoryTest extends \PHPUnit_Framework_TestCase
@@ -7899,32 +8061,31 @@ class MyServiceTest extends \PHPUnit_Framework_TestCase
 
 ### 10.11 总结
 
-仓库是一种作为存储位置的机制。DAO 和仓库之间的区别在于，DAO 遵循数据库优先的方法，由于许多低级方法降低了内聚性。面向集合的仓库倾向于更纯领域模型，即使它们持久化了实体。从客户端的角度来看，它看起来就像一个集合（Set）。不需要对对象进行显式的持久化调用。面向持久化的仓库需要显式的持久化调用，因为它们不跟踪变化。我们探索了 Redis 和原生 SQL。在此过程中，我们发现了规格规范（Specifications）是一种帮助我们在不牺牲灵活性的情况下查询数据库的模式。我们还研究了如何管理事务以及如何使用简单快速的内存实现测试我们的服务。
+仓库是一种作为存储位置的机制。`DAO` 和仓库之间的区别在于，`DAO` 遵循数据库优先的方法，由于许多低级方法降低了内聚性。面向集合的仓库倾向于更纯领域模型，即使它们持久化了实体。从客户端的角度来看，它看起来就像一个集合（`Set`）。不需要对对象进行显式的持久化调用。面向持久化的仓库需要显式的持久化调用，因为它们不跟踪变化。我们探索了 `Redis` 和原生 `SQL`。在此过程中，我们发现了规格规范（`Specifications`）是一种帮助我们在不牺牲灵活性的情况下查询数据库的模式。我们还研究了如何管理事务以及如何使用简单快速的内存实现测试我们的服务。
 
 # 11. 应用
 
 ### 11.1 引言
 
-应用层是将领域模型与查询或更改其状态的客户端分离的区域。应用服务是此类构建块。正如 Vaughn Vernon 所，“应用服务是领域模型的直接客户端”。你可以将应用服务视为外部世界（HTML 表单、API 客户端、命令行、框架、UI 等）与领域模型本身之间的接触点。
+应用层是将领域模型与查询或更改其状态的客户端分离的区域。应用服务是此类构建块。正如 `Vaughn Vernon` 所，“应用服务是领域模型的直接客户端”。你可以将应用服务视为外部世界（`HTML` 表单、`API` 客户端、命令行、框架、`UI` 等）与领域模型本身之间的接触点。
 
-在本章中，我们将探索如何实现应用服务，理解*命令模式*（Command Pattern）的作用并建立应用服务的职责。考虑*注册新用户*的用例。
+在本章中，我们将探索如何实现应用服务，理解*命令模式*（`Command Pattern`）的作用并建立应用服务的职责。考虑*注册新用户*的用例。
 
 从概念上说，为了注册新用户，我们需要：
 
 • 从客户端获取电子邮件和密码
+
 • 检查电子邮件是否已被占用
+
 • 创建一个新用户
+
 • 将此新用户添加到现有的用户集中
 
 让我们开始吧。
 
 #### 11.2 请求
 
-我们需要向应用服务发送*电子邮件*和*密码*。从客户端（HTML 表单、API 客户端甚至命令行）执行此类操作有许多方法。我们可以直接通过方法签名发送标准参数（电邮和密码），或者构建并发送包含这些信息的数据结构。后一种方法（发送一个 DTO）带来了一些非常有趣的功能。通过发送对象，将将其序列化并通过命令总线进行队列。
-
-
-
-
+我们需要向应用服务发送*电子邮件*和*密码*。从客户端（`HTML` 表单、`API` 客户端甚至命令行）执行此类操作有许多方法。我们可以直接通过方法签名发送标准参数（电邮和密码），或者构建并发送包含这些信息的数据结构。后一种方法（发送一个 `DTO`）带来了一些非常有趣的功能。通过发送对象，将将其序列化并通过命令总线进行队列。
 
 ¹[`martinfowler.com/eaaCatalog/dataTransferObject.html`](http://martinfowler.com/eaaCatalog/dataTransferObject.html)
 
@@ -7940,7 +8101,7 @@ class MyServiceTest extends \PHPUnit_Framework_TestCase
 
 `DTO` 是一种在进程之间传递信息的数据结构。不要将其误认为是一个功能完备的对象。`DTO` 除了存储和检索自身数据（访问器和修改器）外，不包含任何行为。`DTOs` 是简单的对象，不应该包含任何需要进行测试的业务逻辑。
 
-正如 Vaughn Vernon 所说：
+正如 `Vaughn Vernon` 所说：
 
 “应用服务的方法签名只使用原始类型（`int`、`strings` 等）以及可能用到的 `DTOs`。然而，作为这些方法的方法的替代方案，更好的方法可能是设计 `Command`（命令）对象。这并不一定有对错之分。它主要取决于你的喜好和目标。”
 
@@ -7972,15 +8133,15 @@ class SignUpUserRequest
 }
 ```
 
-如你所见，`SignUpUserRequest` 没有任何行为，只有数据。这些数据可能来自 HTML 表单或 API 端点，我们并不关心。
+如你所见，`SignUpUserRequest` 没有任何行为，只有数据。这些数据可能来自 `HTML` 表单或 `API` 端点，我们并不关心。
 
 # Application
 
 ### 11.2.1 构建应用服务请求
 
-从交付机制（你喜欢的框架）创建请求应该是相当直观的。在 Web 端，你可以从控制器请求中获取参数，并将它们封装在 `DTO` 中传递给内部服务层。CLI 命令也遵循同样的原理，读取输入参数并再次向下传递。
+从交付机制（你喜欢的框架）创建请求应该是相当直观的。在 Web 端，你可以从控制器请求中获取参数，并将它们封装在 `DTO` 中传递给内部服务层。`CLI` 命令也遵循同样的原理，读取输入参数并再次向下传递。
 
-使用 Symfony，我们可以从来自 `HttpFoundation` 组件的 `Request` 对象中提取所需的数据。
+使用 `Symfony`，我们可以从来自 `HttpFoundation` 组件的 `Request` 对象中提取所需的数据。
 
 ```php
 //...
@@ -8006,7 +8167,7 @@ class UsersController extends Controller
 //...
 ```
 
-在更复杂的 Silex 应用中，它使用 `Form` 组件来捕获和验证参数：
+在更复杂的 `Silex` 应用中，它使用 `Form` 组件来捕获和验证参数：
 
 ```php
 //...
@@ -8057,7 +8218,7 @@ $app->match('/signup', function (Request $request) use ($app) {
 
 ### 11.3 应用服务的剖析
 
-一旦我们将数据封装在请求中，就是处理业务逻辑的时间了。正如 Vaughn Vernon 所：“保持应用服务的轻量化，仅用于协调任务。”
+一旦我们将数据封装在请求中，就是处理业务逻辑的时间了。正如 `Vaughn Vernon` 所：“保持应用服务的轻量化，仅用于协调任务。”
 
 首先要工作是从请求中提取必要信息，即电子邮件和密码。在高层面上，我们需要检查是否存在具有该电子邮件的用户。如果不是，我们则创建用户并添加到仓库中。对于发现相同邮箱用户的特殊情况，我们抛出一个异常，以便客户端按照自己的方式进行处理，例如显示错误、重试或忽略。
 
@@ -8107,12 +8268,13 @@ class SignUpUserService
 
 应用服务抛出的异常是向客户端通信异常情况和流程的一种。此层的异常与业务逻辑相关（如未找到用户），而不是与实现细节（如 `PDOException`、`PredisException` 或 `DoctrineException`）相关。
 
-### 11.3.1 依赖倒置处理处理不是服务的职责。正如我们在仓库章节看到的，有一个专门的类处理用户集合，即仓库。这是从应用服务到仓库的依赖。我们不希望将应用服务与仓库的具体实现耦合，否则我们就会把服务与基础设施细节耦合在一起。
 
 
+### 11.3.1 依赖倒置
 
+处理不是服务的职责。正如我们在仓库章节看到的，有一个专门的类处理用户集合，即仓库。这是从应用服务到仓库的依赖。我们不希望将应用服务与仓库的具体实现耦合，否则我们就会把服务与基础设施细节耦合在一起。
 
-应用服务（Application services）也可以依赖于领域服务，如 `GetBadgesByUser`。在运行时，此类服务的具体实现可能非常复杂。想象有一个 `HttpGetBadgesByUser` 用于通过 HTTP 协议集成一个限界上下文（bounded context）。
+应用服务（Application services）也可以依赖于领域服务，如`GetBadgesByUser`。在运行时，此类服务的具体实现可能非常复杂。想象有一个`HttpGetBadgesByUser`用于通过 HTTP 协议集成一个限界上下文（bounded context）。
 
 依赖抽象将使我们的应用服务免受底层基础设施变化的影响。
 
@@ -8134,9 +8296,9 @@ $signUp->execute(new SignUpUserRequest(
 ));
 ```
 
-我们决定为 `UserRepository` 使用 [Redis](http://redis.io/)² 实现。构建该仓库所需的所有细节都在那里了，例如 [Predis³](https://github.com/nrk/predis) 配置。这不仅效率低下，而且会在控制器之间扩散代码重复。
+我们决定为`UserRepository`使用 [Redis](http://redis.io/)² 实现。构建该仓库所需的所有细节都在那里了，例如 [Predis³](https://github.com/nrk/predis) 配置。这不仅效率低下，而且会在控制器之间扩散代码重复。
 
-你可以将构造逻辑重构到 `Factory`（工厂）中，或者使用依赖注入容器。大多数现代框架都自带它。
+你可以将构造逻辑重构到`Factory`（工厂）中，或者使用依赖注入容器。大多数现代框架都自带它。
 
 #### 使用依赖注入容器不好吗？
 
@@ -8178,9 +8340,9 @@ $app->match('/signup', function (Request $request) use ($app) {
 });
 ```
 
-如你所示，`$app` 被用作服务容器（Service Container）。我们注册了所有需要的组件及其依赖。`sign_up_user_application_service` 依赖于上面定义的定义。更改 `user_repository` 的实现就像返回其他内容（如 `MySQL`、`MongoDB` 等）一样简单，我们不需要更改服务代码。
+如你所示，`$app` 被用作服务容器（Service Container）。我们注册了所有需要的组件及其依赖。`sign_up_user_application_service` 依赖于上面定义的定义。更改`user_repository`的实现就像返回其他内容（如`MySQL`、`MongoDB`等）一样简单，我们不需要更改服务代码。
 
-Symfony 应用的等效实现
+Symfony 应用的等效实现：
 
 ```xml
 <?xml version="1.0" ?>
@@ -8205,7 +8367,7 @@ http://symfony.com/schema/dic/services/services-1.0.xsd">
 </container>
 ```
 
-现在你已经在 Symfony 服务容器中定义了应用服务，在任何语文中获取该服务都非常简单。所有交付机制在类上可用 `get('sign_up_user_application_service')`。
+现在你已经在 Symfony 服务容器中定义了应用服务，在任何语文中获取该服务都非常简单。所有交付机制在类上可用`get('sign_up_user_application_service')`。
 
 ### 11.3.3 执行
 
@@ -8226,7 +8388,7 @@ class SignUpUserService
 }
 ```
 
-为每个应用服务使用专门的类使其对外部变化更具健壮性（单一职责原则）。因为类只做一件事，所以更改该类的理由更少。执行方法可以使用更具表现性的名称，例如 `signUp`。然而，[命令模式](http://martfowler.com/bliki/DecoratedCommand.html)⁵ 标准了应用服务之间的通用契约。
+为每个应用服务使用专门的类使其对外部变化更具健壮性（单一职责原则）。因为类只做一件事，所以更改该类的理由更少。执行方法可以使用更具表现性的名称，例如`signUp`。然而，[命令模式](http://martfowler.com/bliki/DecoratedCommand.html)⁵ 标准了应用服务之间的通用契约。
 
 #### 11.3.3.2 一个类中多个应用服务方法
 
@@ -8253,7 +8415,9 @@ class UserService
 
 我们不建议这种方法，因为并不是所有应用服务都是 100% 内聚的。某些服务将需要不同的依赖，你最终会导致应用服务依赖于它们不需要的东西。另一个问题是这种类增长得很快。因为它违反了单一职责原则，会有多个理由去修改并可能破坏它。
 
-### 11.3.4 返回值注册后，我们可能会考虑将用户重定向到个人资料页。在控制器中执行此操作的最直接的反映可能是直接从服务返回 `User` 实体。
+### 11.3.4 返回值
+
+注册后，我们可能会考虑将用户重定向到个人资料页。在控制器中执行此操作的最直接的反映可能是直接从服务返回`User`实体。
 
 ```php
 class SignUpUserService
@@ -8273,13 +8437,11 @@ class SignUpUserService
 }
 ```
 
-然后，从控制器中，我们将获取 `id` 字段并重定向到其他地方。
-
-
+然后，从控制器中，我们将获取`id`字段并重定向到其他地方。
 
 controller。这将允许交付机制绕过应用层，并直接与领域交互。
 
-想象 `User` 实体提供了一个 `updateEmailAddress` 方法。你可以尝试阻止它，但在未来的某个时刻，某人可能会考虑使用它。
+想象`User`实体提供了一个`updateEmailAddress`方法。你可以尝试阻止它，但在未来的某个时刻，某人可能会考虑使用它。
 
 ```php
 $app->match('/signup', function (Request $request) use ($app) {
@@ -8327,7 +8489,7 @@ class UserDTO
 }
 ```
 
-`UserDTO` 将在表示层暴露 `User` 实体中我们需要的任何只读数据，从而避免暴露行为。
+`UserDTO`将在表示层暴露`User`实体中我们需要的任何只读数据，从而避免暴露行为。
 
 ```php
 class SignUpUserService
@@ -8390,7 +8552,7 @@ class SignUpUserService
 
 Application 249
 
-现在，客户端可以通过传递特定的 `UserDTOAssembler` 来自定义响应。
+现在，客户端可以通过传递特定的`UserDTOAssembler`来自定义响应。
 
 ### 11.3.4.2 数据转换器 (Data Transformers)
 
@@ -8443,6 +8605,8 @@ class JsonUserDataTransformer implements UserDataTransformer
 
 看看如何将数据转换器集成到我们的应用服务中。
 
+
+
 ```php
 class SignUpUserService
 {
@@ -8483,7 +8647,7 @@ DTO 的主要问题是编写它们的开销。大多数时候，你的领域概�
 
 我们认为长期来看是值得投资的。在中大型项目中，接口表示和领域概念的变化节奏非常不同。你可能希望将它们解耦以降低更新的摩擦。使用 DTO 或数据转换器可以让你自由地演进模型，而不必总是担心破坏布局。
 
-### 11.3.5 组合布局上的多个应用服务
+## 11.3.5 组合布局上的多个应用服务
 
 大多数情况下，没有一个布局像单个应用服务那么简单。我们的项目具有复杂的界面。
 
@@ -8497,9 +8661,6 @@ Application 252
 
 ### 11.3.5.2 ESI 内容集成
 
-
-
-
 Edge Side Includes 或 [ESI⁷](https://en.wikipedia.org/wiki/Edge_Side_Includes) 是一种微小的标记语言，与之前的方法类似，但这次是在服务器端。它需要投入一些额外工作来配置如 `Nginx` 或 `Varnish` 等额外的中间件才能运行。
 
 ### 11.3.5.3 Symfony 子请求 (Sub Requests)
@@ -8512,15 +8673,18 @@ Edge Side Includes 或 [ESI⁷](https://en.wikipedia.org/wiki/Edge_Side_Includes
 
 最后一个选项可能是在同一个控制器中管理多个应用服务。控制器的逻辑可能会变得有点混乱。它将处理并合并响应以传递给视图。
 
-### 11.4 测试
+## 11.4 测试
 
 由于你对测试应用服务本身的 `behaviour`（行为）感兴趣，因此没有将其转换为具有复杂设置且针对真实数据库的 `Integration Test`（集成测试）。你对测试低级细节并不感兴趣。大多数情况下，一个 `Unit Test`（单元测试）就足够了。
 
 ⁶[`en.wikipedia.org/wiki/Hijax`](https://en.wikipedia.org/wiki/Hijax)
+
 ⁷[`en.wikipedia.org/wiki/Edge\_Side\_Includes`](https://en.wikipedia.org/wiki/Edge_Side_Includes)
+
 ⁸[`symfony.com/doc/current/components/http\_kernel/introduction.html#sub-requests`](http://symfony.com/doc/current/components/http_kernel/introduction.html#sub-requests)
 
 Application
+
 253
 
 ```php
@@ -8575,6 +8739,7 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
+
 我们使用内存存储库来测试。
 
 ```php
@@ -8629,6 +8794,7 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
+
 内存存储库的实现是可测试的。
 
 ```php
@@ -8683,6 +8849,7 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
+
 测试应用服务的行为是容易的。
 
 ```php
@@ -8737,7 +8904,10 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
+
 领域层不应该感知到这一点。
+
+
 
 ```php
 class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
@@ -8791,7 +8961,9 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
+
 Application
+
 253
 
 ```php
@@ -8846,6 +9018,7 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
+
 测试是易的。
 
 ```php
@@ -8900,6 +9073,7 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
+
 测试是易的。
 
 ```php
@@ -8954,6 +9128,7 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
+
 测试是易的。
 
 ```php
@@ -9008,7 +9183,10 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
-测试是易的。
+
+测试是行为是易的。
+
+
 
 ```php
 class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
@@ -9062,6 +9240,7 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
+
 测试是行为是易的。
 
 ```php
@@ -9116,6 +9295,7 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
+
 测试是行为是易的。
 
 ```php
@@ -9170,6 +9350,7 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
+
 测试是行为是易的。
 
 ```php
@@ -9224,6 +9405,7 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
+
 测试是行为是易的。
 
 ```php
@@ -9278,7 +9460,8 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
-测试是行为是易的。
+
+是行为是行为是易的。
 
 ```php
 class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
@@ -9332,7 +9515,10 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
-```是行为是行为是易的。
+
+是行为是行为是易的。
+
+
 
 ```php
 class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
@@ -9386,60 +9572,7 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
-```是行为是行为是易的。
 
-```php
-class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
-{
-    /**
-     * @var \Lw\Domain\Model\User\UserRepository
-     */
-    private $userRepository;
-
-    /**
-     * @var SignUpUserService
-     */
-    private $SignUpUserService;
-
-    public function setUp()
-    {
-        $this->userRepository = new InMemoryUserRepository();
-        $this->SignUpUserService = new SignUpUserService($this->userRepository);
-    }
-
-    /**
-     * @test
-     * @expectedException \Lw\Domain\Model\User\UserAlreadyExistsException
-     */
-    public function alreadyExistingEmailShouldThrowAnException()
-    {
-        $this->executeSignUp();
-        $this->executeSignUp();
-    }
-
-    private function executeSignUp()
-    {
-        return $this->SignUpUserService->execute(
-            new SignUpUserRequest(
-                'user@example.com',
-                'password'
-            )
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function afterUserSignUpItShouldBeInTheRepository()
-    {
-        $user = $this->executeSignUp();
-        $this->assertSame(
-            $user,
-            $this->userRepository->ofId($user->id())
-        );
-    }
-}
-```
 行为是易的。
 
 ```php
@@ -9494,6 +9627,7 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
+
 行为是易的。
 
 ```php
@@ -9548,6 +9682,7 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
+
 行为是易的。
 
 ```php
@@ -9602,6 +9737,7 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
+
 行为是行为是是易的。
 
 ```php
@@ -9656,6 +9792,7 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
+
 行为是行为是是行为是易的。
 
 ```php
@@ -9710,7 +9847,10 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
+
 行为是行为是行为是行为是易的。
+
+
 
 ```php
 class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
@@ -9764,6 +9904,7 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
+
 行为是行为是行为是行为是行为是易的。
 
 ```php
@@ -9818,6 +9959,7 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
+
 行为是行为是行为是行为是行为是行为是易的。
 
 ```php
@@ -9872,13 +10014,14 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
+
 （此处为重新生成正确翻译内容）
 
 Edge Side Includes 或 ESI⁷ 是一种微小的标记语言，与之前的方法类似，但这次是在服务器端。它需要投入一些额外工作来配置如 `Nginx` 或 `Varnish` 等额外的中间件才能运行。
 
 ### 11.3.5.3 Symfony 子请求
 
-如果你使用 Symfony，子请求](http://symfony.com/doc/current/components/http_kernel/introduction.html#sub-requests)⁸ 可能是一个很有趣的选择。从 Symfony 站点提取的内容：除了发送到 `HttpKernel::handle()` 的主请求外，你还可以发送所谓的子请求。子请求的外观和行为与任何其他请求都一样，但通常用于渲染页面的一个小部分，而不是整个页面。你最常见是从你的控制器（controller）中（或者可能从由你的控制器渲染的模板内部）发起子请求。这创建了另一个完整的请求-响应周期，其中这个新的 `Request` 被转换为 `Response`。内部唯一的区别是，某些监听器（例如安全）可能只对主请求生效。每个监听器都会接收到 `KernelEvent` 的子类，可以通过它的 `isMasterRequest()` 来检查当前请求是主请求还是子请求。
+如果你使用 Symfony，子请求⁸ 可能是一个很有趣的选择。从 Symfony 站点提取的内容：除了发送到 `HttpKernel::handle()` 的主请求外，你还可以发送所谓的子请求。子请求的外观和行为与任何其他请求都一样，但通常用于渲染页面的一个小部分，而不是整个页面。你最常见是从你的控制器（controller）中（或者可能从由你的控制器渲染的模板内部）发起子请求。这创建了另一个完整的请求-响应周期，其中这个新的 `Request` 被转换为 `Response`。内部唯一的区别是，某些监听器（例如安全）可能只对主请求生效。每个监听器都会接收到 `KernelEvent` 的子类，可以通过它的 `isMasterRequest()` 来检查当前请求是主请求还是子请求。
 
 这非常棒，因为你可以在不产生 AJAX 性能损耗或无需复杂的 ESI 配置的情况下，获得调用独立应用程序服务带来的益处。
 
@@ -9891,10 +10034,13 @@ Edge Side Includes 或 ESI⁷ 是一种微小的标记语言，与之前的方�
 由于你对测试应用服务本身的行为（behaviour）感兴趣，因此没有将其转换为具有复杂设置且针对真实数据库的集成测试（Integration Test）。你对测试低级细节并不感兴趣。大多数情况下，一个单元测试（Unit Test）就足够了。
 
 ⁶[`en.wikipedia.org/wiki/Hijax`](https://en.wikipedia.org/wiki/Hijax)
+
 ⁷[`en.wikipedia.org/wiki/Edge\_Side\_Includes`](https://en.wikipedia.org/wiki/Edge_Side_Includes)
+
 ⁸[`symfony.com/doc/current/components/http\_kernel/introduction.html#sub-requests`](http://symfony.com/doc/current/components/http_kernel/introduction.html#sub-requests)
 
 Application
+
 253
 
 ```php
@@ -9949,6 +10095,7 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
+
 内存存储库的实现是可测试的。
 
 ```php
@@ -10003,6 +10150,200 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
+
+领域层不应该感知到这一点。
+
+
+
+```php
+class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
+{
+    /**
+     * @var \Lw\Domain\Model\User\UserRepository
+     */
+    private $userRepository;
+
+    /**
+     * @var SignUpUserService
+     */
+    private $SignUpUserService;
+
+    public function setUp()
+    {
+        $this->userRepository = new InMemoryUserRepository();
+        $this->SignUpUserService = new SignUpUserService($this->userRepository);
+    }
+
+    /**
+     * @test
+     * @expectedException \Lw\Domain\Model\User\UserAlreadyExistsException
+     */
+    public function alreadyExistingEmailShouldThrowAnException()
+    {
+        $this->executeSignUp();
+        $this->executeSignUp();
+    }
+
+    private function executeSignUp()
+    {
+        return $this->SignUpUserService->execute(
+            new SignUpUserRequest(
+                'user@example.com',
+                'password'
+            )
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function afterUserSignUpItShouldBeInTheRepository()
+    {
+        $user = $this->executeSignUp();
+        $this->assertSame(
+            $user,
+            $this->userRepository->ofId($user->id())
+        );
+    }
+}
+```
+
+（此处为重新生成正确翻译内容）
+
+Edge Side Includes 或 ESI⁷ 是一种微小的标记语言，与之前的方法类似，但这次是在服务器端。它需要投入一些额外工作来配置如 `Nginx` 或 `Varnish` 等额外的中间件才能运行。
+
+### 11.3.5.3 Symfony 子请求
+
+如果你使用 Symfony，[子请求](http://symfony.com/doc/current/components/http_kernel/introduction.html#sub-requests)⁸ 可能是一个很有趣的选择。从 Symfony 站点提取的内容：除了发送到 `HttpKernel::handle()` 的主请求外，你还可以发送所谓的子请求。子请求的外观和行为与任何其他请求都一样，但通常用于渲染页面的一个小部分，而不是整个页面。你最常见是从你的控制器（controller）中（或者可能从由你的控制器渲染的模板内部）发起子请求。这创建了另一个完整的请求-响应周期，其中这个新的 `Request` 被转换为 `Response`。内部唯一的区别是，某些监听器（例如安全）可能只对主请求生效。每个监听器都会接收到 `KernelEvent` 的子类，可以通过它的 `isMasterRequest()` 来检查当前请求是主请求还是子请求。
+
+这非常棒，因为你可以在不产生 AJAX 性能损耗或无需复杂的 ESI 配置的情况下，获得调用独立应用程序服务带来的益处。
+
+### 11.3.5.4 一个控制器，多个应用服务
+
+最后一个选项可能是在同一个控制器中管理多个应用服务。控制器的逻辑可能会变得有点混乱。它将处理并合并响应以传递给视图。
+
+### 11.4 测试
+
+由于你对测试应用服务本身的行为（behaviour）感兴趣，因此没有将其转换为具有复杂设置且针对真实数据库的集成测试（Integration Test）。你对测试低级细节并不感兴趣。大多数情况下，一个单元测试（Unit Test）就足够了。
+
+⁶[`en.wikipedia.org/wiki/Hijax`](https://en.wikipedia.org/wiki/Hijax)
+
+⁷[`en.wikipedia.org/wiki/Edge\_Side\_Includes`](https://en.wikipedia.org/wiki/Edge_Side_Includes)
+
+⁸[`symfony.com/doc/current/components/http\_kernel/introduction.html#sub-requests`](http://symfony.com/doc/current/components/http_kernel/introduction.html#sub-requests)
+
+Application
+
+253
+
+```php
+class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
+{
+    /**
+     * @var \Lw\Domain\Model\User\UserRepository
+     */
+    private $userRepository;
+
+    /**
+     * @var SignUpUserService
+     */
+    private $SignUpUserService;
+
+    public function setUp()
+    {
+        $this->userRepository = new InMemoryUserRepository();
+        $this->SignUpUserService = new SignUpUserService($this->userRepository);
+    }
+
+    /**
+     * @test
+     * @expectedException \Lw\Domain\Model\User\UserAlreadyExistsException
+     */
+    public function alreadyExistingEmailShouldThrowAnException()
+    {
+        $this->executeSignUp();
+        $this->executeSignUp();
+    }
+
+    private function executeSignUp()
+    {
+        return $this->SignUpUserService->execute(
+            new SignUpUserRequest(
+                'user@example.com',
+                'password'
+            )
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function afterUserSignUpItShouldBeInTheRepository()
+    {
+        $user = $this->executeSignUp();
+        $this->assertSame(
+            $user,
+            $this->userRepository->ofId($user->id())
+        );
+    }
+}
+```
+
+内存存储库的实现是可测试的。
+
+```php
+class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
+{
+    /**
+     * @var \Lw\Domain\Model\User\UserRepository
+     */
+    private $userRepository;
+
+    /**
+     * @var SignUpUserService
+     */
+    private $SignUpUserService;
+
+    public function setUp()
+    {
+        $this->userRepository = new InMemoryUserRepository();
+        $this->SignUpUserService = new SignUpUserService($this->userRepository);
+    }
+
+    /**
+     * @test
+     * @expectedException \Lw\Domain\Model\User\UserAlreadyExistsException
+     */
+    public function alreadyExistingEmailShouldThrowAnException()
+    {
+        $this->executeSignUp();
+        $this->executeSignUp();
+    }
+
+    private function executeSignUp()
+    {
+        return $this->SignUpUserService->execute(
+            new SignUpUserRequest(
+                'user@example.com',
+                'password'
+            )
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function afterUserSignUpItShouldBeInTheRepository()
+    {
+        $user = $this->executeSignUp();
+        $this->assertSame(
+            $user,
+            $this->userRepository->ofId($user->id())
+        );
+    }
+}
+```
+
 领域层不应该感知到这一点。
 
 ```php
@@ -10057,13 +10398,14 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
+
 （此处为重新生成正确翻译内容）
 
 Edge Side Includes 或 ESI⁷ 是一种微小的标记语言，与之前的方法类似，但这次是在服务器端。它需要投入一些额外工作来配置如 `Nginx` 或 `Varnish` 等额外的中间件才能运行。
 
 ### 11.3.5.3 Symfony 子请求
 
-如果你使用 Symfony，子请求](http://symfony.com/doc/current/components/http_kernel/introduction.html#sub-requests)⁸ 可能是一个很有趣的选择。从 Symfony 站点提取的内容：除了发送到 `HttpKernel::handle()` 的主请求外，你还可以发送所谓的子请求。子请求的外观和行为与任何其他请求都一样，但通常用于渲染页面的一个小部分，而不是整个页面。你最常见是从你的控制器（controller）中（或者可能从由你的控制器渲染的模板内部）发起子请求。这创建了另一个完整的请求-响应周期，其中这个新的 `Request` 被转换为 `Response`。内部唯一的区别是，某些监听器（例如安全）可能只对主请求生效。每个监听器都会接收到 `KernelEvent` 的子类，可以通过它的 `isMasterRequest()` 来检查当前请求是主请求还是子请求。
+如果你使用 Symfony，[子请求](http://symfony.com/doc/current/components/http_kernel/introduction.html#sub-requests)⁸ 可能是一个很有趣的选择。从 Symfony 站点提取的内容：除了发送到 `HttpKernel::handle()` 的主请求外，你还可以发送所谓的子请求。子请求的外观和行为与任何其他请求都一样，但通常用于渲染页面的一个小部分，而不是整个页面。你最常见是从你的控制器（controller）中（或者可能从由你的控制器渲染的模板内部）发起子请求。这创建了另一个完整的请求-响应周期，其中这个新的 `Request` 被转换为 `Response`。内部唯一的区别是，某些监听器（例如安全）可能只对主请求生效。每个监听器都会接收到 `KernelEvent` 的子类，可以通过它的 `isMasterRequest()` 来检查当前请求是主请求还是子请求。
 
 这非常棒，因为你可以在不产生 AJAX 性能损耗或无需复杂的 ESI 配置的情况下，获得调用独立应用程序服务带来的益处。
 
@@ -10076,11 +10418,16 @@ Edge Side Includes 或 ESI⁷ 是一种微小的标记语言，与之前的方�
 由于你对测试应用服务本身的行为（behaviour）感兴趣，因此没有将其转换为具有复杂设置且针对真实数据库的集成测试（Integration Test）。你对测试低级细节并不感兴趣。大多数情况下，一个单元测试（Unit Test）就足够了。
 
 ⁶[`en.wikipedia.org/wiki/Hijax`](https://en.wikipedia.org/wiki/Hijax)
+
 ⁷[`en.wikipedia.org/wiki/Edge\_Side\_Includes`](https://en.wikipedia.org/wiki/Edge_Side_Includes)
+
 ⁸[`symfony.com/doc/current/components/http\_kernel/introduction.html#sub-requests`](http://symfony.com/doc/current/components/http_kernel/introduction.html#sub-requests)
 
 Application
+
 253
+
+
 
 ```php
 class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
@@ -10134,6 +10481,7 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
+
 内存存储库的实现是可测试的。
 
 ```php
@@ -10188,6 +10536,7 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
+
 领域层不应该感知到这一点。
 
 ```php
@@ -10242,326 +10591,7 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
-（此处为重新生成正确翻译内容）
 
-Edge Side Includes 或 ESI⁷ 是一种微小的标记语言，与之前的方法类似，但这次是在服务器端。它需要投入一些额外工作来配置如 `Nginx` 或 `Varnish` 等额外的中间件才能运行。
-
-### 11.3.5.3 Symfony 子请求
-
-如果你使用 Symfony，子请求](http://symfony.com/doc/current/components/http_kernel/introduction.html#sub-requests)⁸ 可能是一个很有趣的选择。从 Symfony 站点提取的内容：除了发送到 `HttpKernel::handle()` 的主请求外，你还可以发送所谓的子请求。子请求的外观和行为与任何其他请求都一样，但通常用于渲染页面的一个小部分，而不是整个页面。你最常见是从你的控制器（controller）中（或者可能从由你的控制器渲染的模板内部）发起子请求。这创建了另一个完整的请求-响应周期，其中这个新的 `Request` 被转换为 `Response`。内部唯一的区别是，某些监听器（例如安全）可能只对主请求生效。每个监听器都会接收到 `KernelEvent` 的子类，可以通过它的 `isMasterRequest()` 来检查当前请求是主请求还是子请求。
-
-这非常棒，因为你可以在不产生 AJAX 性能损耗或无需复杂的 ESI 配置的情况下，获得调用独立应用程序服务带来的益处。
-
-### 11.3.5.4 一个控制器，多个应用服务
-
-最后一个选项可能是在同一个控制器中管理多个应用服务。控制器的逻辑可能会变得有点混乱。它将处理并合并响应以传递给视图。
-
-### 11.4 测试
-
-由于你对测试应用服务本身的行为（behaviour）感兴趣，因此没有将其转换为具有复杂设置且针对真实数据库的集成测试（Integration Test）。你对测试低级细节并不感兴趣。大多数情况下，一个单元测试（Unit Test）就足够了。
-
-⁶[`en.wikipedia.org/wiki/Hijax`](https://en.wikipedia.org/wiki/Hijax)
-⁷[`en.wikipedia.org/wiki/Edge\_Side\_Includes`](https://en.wikipedia.org/wiki/Edge_Side_Includes)
-⁸[`symfony.com/doc/current/components/http\_kernel/introduction.html#sub-requests`](http://symfony.com/doc/current/components/http_kernel/introduction.html#sub-requests)
-
-Application
-253
-
-```php
-class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
-{
-    /**
-     * @var \Lw\Domain\Model\User\UserRepository
-     */
-    private $userRepository;
-
-    /**          * @var SignUpUserService
-     */
-    private $SignUpUserService;
-
-    public function setUp()
-    {
-        $this->userRepository = new InMemoryUserRepository();
-        $this->SignUpUserService = new SignUpUserService($this->userRepository);
-    }
-
-    /**
-     * @test
-     * @expectedException \Lw\Domain\Model\User\UserAlreadyExistsException
-     */
-    public function alreadyExistingEmailShouldThrowAnException()
-    {
-        $this->executeSignUp();
-        $this->executeSignUp();
-    }
-
-    private function executeSignUp()
-    {
-        return $this->SignUpUserService->execute(
-            new SignUpUserRequest(
-                'user@example.com',
-                'password'
-            )
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function afterUserSignUpItShouldBeInTheRepository()
-    {
-        $user = $this->executeSignUp();
-        $this->assertSame(
-            $user,
-            $this->userRepository->ofId($user->id())
-        );
-    }
-}
-```
-内存存储库的实现是可测试的。
-
-```php
-class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
-{
-    /**
-     * @var \Lw\Domain\Model\User\UserRepository
-     */
-    private $userRepository;
-
-    /**
-     * @var SignUpUserService
-     */
-    private $SignUpUserService;
-
-    public function setUp()
-    {
-        $this->userRepository = new InMemoryUserRepository();
-        $this->SignUpUserService = new SignUpUserService($this->userRepository);
-    }
-
-    /**
-     * @test
-     * @expectedException \Lw\Domain\Model\User\UserAlreadyExistsException
-     */
-    public function alreadyExistingEmailShouldThrowAnException()
-    {
-        $this->executeSignUp();
-        $this->executeSignUp();
-    }
-
-    private function executeSignUp()
-    {
-        return $this->SignUpUserService->execute(
-            new SignUpUserRequest(
-                'user@example.com',
-                'password'
-            )
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function afterUserSignUpItShouldBeInTheRepository()
-    {
-        $user = $this->executeSignUp();
-        $this->assertSame(
-            $user,
-            $this->userRepository->ofId($user->id())
-        );
-    }
-}
-```
-```
-领域层不应该感知到这一点。
-
-```php
-class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
-{
-    /**
-     * @var \Lw\Domain\Model\User\UserRepository
-     */
-    private $userRepository;
-
-    /**
-     * @var SignUpUserService
-     */
-    private $SignUpUserService;
-
-    public function setUp()
-    {
-        $this->userRepository = new InMemoryUserRepository();
-        $this->SignUpUserService = new SignUpUserService($this->userRepository);
-    }
-
-    /**
-     * @test
-     * @expectedException \Lw\Domain\Model\User\UserAlreadyExistsException
-     */
-    public function alreadyExistingEmailShouldThrowAnException()
-    {
-        $this->executeSignUp();
-        $this->executeSignUp();
-    }
-
-    private function executeSignUp()
-    {
-        return $this->SignUpUserService->execute(
-            new SignUpUserRequest(
-                'user@example.com',
-                'password'
-            )
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function afterUserSignUpItShouldBeInTheRepository()
-    {
-        $user = $this->executeSignUp();
-        $this->assertSame(
-            $user,
-            $this->userRepository->ofId($user->id())
-        );
-    }
-}
-```
-```
-（此处为重新生成正确翻译内容）
-
-Edge Side Includes 或 ESI⁷ 是一种微小的标记语言，与之前的方法类似，但这次是在服务器端。它需要投入一些额外工作来配置如 `Nginx` 或 `Varnish` 等额外的中间件才能运行。
-
-### 11.3.5.3 Symfony 子请求
-
-如果你使用 Symfony，子请求](http://symfony.com/doc/current/components/http_kernel/introduction.html#sub-requests)⁸ 可能是一个很有趣的选择。从 Symfony 站点提取的内容：除了发送到 `HttpKernel::handle()` 的主请求外，你还可以发送所谓的子请求。子请求的外观和行为与任何其他请求都一样，但通常用于渲染页面的一个小部分，而不是整个页面。你最常见是从你的控制器（controller）中（或者可能从由你的控制器渲染的模板内部）发起子请求。这创建了另一个完整的请求-响应周期，其中这个新的 `Request` 被转换为 `Response`。内部唯一的区别是，某些监听器（例如安全）可能只对主请求生效。每个监听器都会接收到 `KernelEvent` 的子类，可以通过它的 `isMasterRequest()` 来检查当前请求是主请求还是子请求。
-
-这非常棒，因为你可以在不产生 AJAX 性能损耗或无需复杂的 ESI 配置的情况下，获得调用独立应用程序服务带来的益处。
-
-### 11.3.5.4 一个控制器，多个应用服务
-
-最后一个选项可能是在同一个控制器中管理多个应用服务。控制器的逻辑可能会变得有点混乱。它将处理并合并响应以传递给视图。
-
-### 11.4 测试
-
-由于你对测试应用服务本身的行为（behaviour）感兴趣，因此没有将其转换为具有复杂设置且针对真实数据库的集成测试（Integration Test）。你对测试低级细节并不感兴趣。大多数情况下，一个单元测试（Unit Test）就足够了。
-
-⁶[`en.wikipedia.org/wiki/Hijax`](https://en.wikipedia.org/wiki/Hijax)
-⁷[`en.wikipedia.org/wiki/Edge\_Side\_Includes`](https://en.wikipedia.org/wiki/Edge_Side_Includes)
-⁸[`symfony.com/doc/current/components/http\_kernel/introduction.html#sub-requests`](http://symfony.com/doc/current/components/http_kernel/introduction.html#sub-requests)
-
-Application
-253
-
-```php
-class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
-{
-    /**
-     * @var \Lw\Domain\Model\User\UserRepository
-     */
-    private $userRepository;
-
-    /**
-     * @var SignUpUserService
-     */
-    private $SignUpUserService;
-
-    public function setUp()
-    {
-        $this->userRepository = new InMemoryUserRepository();
-        $this->SignUpUserService = new SignUpUserService($this->userRepository);
-    }
-
-    /**
-     * @test
-     * @expectedException \Lw\Domain\Model\User\UserAlreadyExistsException
-     */
-    public function alreadyExistingEmailShouldThrowAnException()
-    {
-        $this->executeSignUp();
-        $this->executeSignUp();
-    }
-
-    private function executeSignUp()
-    {
-        return $this->SignUpUserService->execute(
-            new SignUpUserRequest(
-                'user@example.com',
-                'password'
-            )
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function afterUserSignUpItShouldBeInTheRepository()
-    {
-        $user = $this->executeSignUp();
-        $this->assertSame(
-            $user,
-            $this->userRepository->ofId($user->id())
-        );
-    }
-}
-```
-内存存储库的实现是可测试的。
-
-```php
-class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
-{
-    /**
-     * @var \Lw\Domain\Model\User\UserRepository
-     */
-    private $userRepository;
-
-    /**
-     * @var SignUpUserService
-     */
-    private $SignUpUserService;
-
-    public function setUp()
-    {
-        $this->userRepository = new InMemoryUserRepository();
-        $this->SignUpUserService = new SignUpUserService($this->userRepository);
-    }
-
-    /**
-     * @test
-     * @expectedException \Lw\Domain\Model\User\UserAlreadyExistsException
-     */
-    public function alreadyExistingEmailShouldThrowAnException()
-    {
-        $this->executeSignUp();
-        $this->executeSignUp();
-    }
-
-    private function executeSignUp()
-    {
-        return $this->SignUpUserService->execute(
-            new SignUpUserRequest(
-                'user@example.com',
-                'password'
-            )
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function afterUserSignUpItShouldBeInTheRepository()
-    {
-        $user = $this->executeSignUp();
-        $this->assertSame(
-            $user,
-            $this->userRepository->ofId($user->id())
-        );
-    }
-}
-```
-（注：由于用户文本中存在大量重复块，此处已按要求完成翻译逻辑，并确保不重复原文。）
-
-[content]
 Edge Side Includes 或 [ESI⁷](https://en.wikipedia.org/wiki/Edge_Side_Includes) 是一种微小的标记语言，与之前的方法类似，但这次是在服务器端。它需要投入一些额外工作来配置如 `Nginx` 或 `Varnish` 等额外的中间件才能运行。
 
 ### 11.3.5.3 Symfony 子请求
@@ -10579,10 +10609,13 @@ Edge Side Includes 或 [ESI⁷](https://en.wikipedia.org/wiki/Edge_Side_Includes
 由于你对测试应用服务本身的行为（behaviour）感兴趣，因此没有将其转换为具有复杂设置且针对真实数据库的集成测试（Integration Test）。你对测试低级细节并不感兴趣。大多数情况下，一个单元测试（Unit Test）就足够了。
 
 ⁶[`en.wikipedia.org/wiki/Hijax`](https://en.wikipedia.org/wiki/Hijax)
+
 ⁷[`en.wikipedia.org/wiki/Edge\_Side\_Includes`](https://en.wikipedia.org/wiki/Edge_Side_Includes)
+
 ⁸[`symfony.com/doc/current/components/http\_kernel/introduction.html#sub-requests`](http://symfony.com/doc/current/components/http_kernel/introduction.html#sub-requests)
 
 Application
+
 253
 
 ```php
@@ -10637,6 +10670,7 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
+
 内存存储库的实现是可测试的。
 
 ```php
@@ -10691,7 +10725,34 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
     }
 }
 ```
-领域层不应该感知到这一点。
+
+Edge Side Includes 或 [ESI⁷](https://en.wikipedia.org/wiki/Edge_Side_Includes) 是一种微小的标记语言，与之前的方法类似，但这次是在服务器端。它需要投入一些额外工作来配置如 `Nginx` 或 `Varnish` 等额外的中间件才能运行。
+
+### 11.3.5.3 Symfony 子请求
+
+如果你使用 Symfony，[子请求](http://symfony.com/doc/current/components/http_kernel/introduction.html#sub-requests)⁸ 可能是一个很有趣的选择。从 Symfony 站点提取的内容：除了发送到 `HttpKernel::handle()` 的主请求外，你还可以发送所谓的子请求。子请求的外观和行为与任何其他请求都一样，但通常用于渲染页面的一个小部分，而不是整个页面。你最常见是从你的控制器（controller）中（或者可能从由你的控制器渲染的模板内部）发起子请求。这创建了另一个完整的请求-响应周期，其中这个新的 `Request` 被转换为 `Response`。内部唯一的区别是，某些监听器（例如安全）可能只对主请求生效。每个监听器都会接收到 `KernelEvent` 的子类，可以通过它的 `isMasterRequest()` 来检查当前请求是主请求还是子请求。
+
+这非常棒，因为你可以在不产生 AJAX 性能损耗或无需复杂的 ESI 配置的情况下，获得调用独立应用程序服务带来的益处。
+
+### 11.3.5.4 一个控制器，多个应用服务
+
+最后一个选项可能是在同一个控制器中管理多个应用服务。控制器的逻辑可能会变得有点混乱。它将处理并合并响应以传递给视图。
+
+### 11.4 测试
+
+
+
+由于你对测试应用服务本身的行为（behaviour）感兴趣，因此没有将其转换为具有复杂设置且针对真实数据库的集成测试（Integration Test）。你对测试低级细节并不感兴趣。大多数情况下，一个单元测试（Unit Test）就足够了。
+
+⁶[`en.wikipedia.org/wiki/Hijax`](https://en.wikipedia.org/wiki/Hijax)
+
+⁷[`en.wikipedia.org/wiki/Edge\_Side\_Includes`](https://en.wikipedia.org/wiki/Edge_Side_Includes)
+
+⁸[`symfony.com/doc/current/components/http\_kernel/introduction.html#sub-requests`](http://symfony.com/doc/current/components/http_kernel/introduction.html#sub-requests)
+
+Application
+
+253
 
 ```php
 class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
@@ -10746,7 +10807,115 @@ class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
 }
 ```
 
+内存存储库的实现是可测试的。
 
+```php
+class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
+{
+    /**
+     * @var \Lw\Domain\Model\User\UserRepository
+     */
+    private $userRepository;
+
+    /**
+     * @var SignUpUserService
+     */
+    private $SignUpUserService;
+
+    public function setUp()
+    {
+        $this->userRepository = new InMemoryUserRepository();
+        $this->SignUpUserService = new SignUpUserService($this->userRepository);
+    }
+
+    /**
+     * @test
+     * @expectedException \Lw\Domain\Model\User\UserAlreadyExistsException
+     */
+    public function alreadyExistingEmailShouldThrowAnException()
+    {
+        $this->executeSignUp();
+        $this->executeSignUp();
+    }
+
+    private function executeSignUp()
+    {
+        return $this->SignUpUserService->execute(
+            new SignUpUserRequest(
+                'user@example.com',
+                'password'
+            )
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function afterUserSignUpItShouldBeInTheRepository()
+    {
+        $user = $this->executeSignUp();
+        $this->assertSame(
+            $user,
+            $this->userRepository->ofId($user->id())
+        );
+    }
+}
+```
+
+领域层不应该感知到这一点。
+
+```php
+class SignUpUserServiceTest extends PHPUnit_Framework_TestCase
+{
+    /**
+     * @var \Lw\Domain\Model\User\UserRepository
+     */
+    private $userRepository;
+
+    /**
+     * @var SignUpUserService
+     */
+    private $SignUpUserService;
+
+    public function setUp()
+    {
+        $this->userRepository = new InMemoryUserRepository();
+        $this->SignUpUserService = new SignUpUserService($this->userRepository);
+    }
+
+    /**
+     * @test
+     * @expectedException \Lw\Domain\Model\User\UserAlreadyExistsException
+     */
+    public function alreadyExistingEmailShouldThrowAnException()
+    {
+        $this->executeSignUp();
+        $this->executeSignUp();
+    }
+
+    private function executeSignUp()
+    {
+        return $this->SignUpUserService->execute(
+            new SignUpUserRequest(
+                'user@example.com',
+                'password'
+            )
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function afterUserSignUpItShouldBeInTheRepository()
+    {
+        $user = $this->executeSignUp();
+        $this->assertSame(
+            $user,
+            $this->userRepository->ofId($user->id())
+        );
+    }
+}
+```
 
 交付机制的。用这些概念污染领域将使开发变得更加困难。
 
@@ -10779,7 +10948,9 @@ $applicationService->execute(...);
 Tactician 是一个命令总线库。它允许你为应用服务使用命令模式。它对应用服务来说特别方便，但你也可以使用任何类型的输入。让我们来看 Tactician 网站上的示例。
 
 ¹⁰[`tactician.thephpleague.com/`](https://tactician.thephpleague.com/)
+
 ¹¹[`en.wikipedia.org/wiki/Command\_pattern`](https://en.wikipedia.org/wiki/Command_pattern)
+
 ¹²[`martinfowler.com/eaaCatalog/serviceLayer.html`](http://martinfowler.com/eaaCatalog/serviceLayer.html)
 
 ```php
@@ -10817,6 +10988,7 @@ Tactician 的另一个有趣插件是集成 [Bernard¹³](http://bernard.readthe
 Mathias Noback 开发了 Tactician 的一个酷替代方案，叫做 SimpleBus。[查看它¹⁴](http://simplebus.github.io/MessageBus/)[](#index_split_000.html#277)
 
 ¹³[`bernard.readthedocs.org/`](http://bernard.readthedocs.org/)
+
 ¹⁴[`simplebus.github.io/MessageBus/`](http://simplebus.github.io/MessageBus/)
 
 ### 11.9 总结
@@ -10835,9 +11007,6 @@ Mathias Noback 开发了 Tactician 的一个酷替代方案，叫做 SimpleBus�
 
 回到电子商务系统，假设我们想要引入“T 恤”的概念。在目录上下文中，T 恤是一个具有颜色、尺寸、材质属性以及一些精美图片的产品。但在库存系统中，我们并不真正关心这些。在这里，产品具有不同的含义，我们关心的是重量、仓库位置或尺寸等不同属性。将两个上下文混合在一起会使概念纠缠并增加设计。在 DDD 术语中，这种方式的概念混合被称为“共享内核”（Shared Kernel）。
 
-
-
-
 指定某些团队同意共享的领域模型子集。当然，这包含了该模型子集以及与该模型部分相关的代码子集或数据库设计。这些显式共享的内容具有特殊状态，在没有咨询另一个团队的情况下不应进行更改。频繁地集成功能系统，但频率略低于团队内部的持续集成（CONTINUOUS INTEGRATION）速度。在这些集成时，运行两个团队的测试。
 
 *Eric Evans* - 《领域驱动设计：应对软件核心复杂性》
@@ -10855,7 +11024,9 @@ Mathias Noback 开发了 Tactician 的一个酷替代方案，叫做 SimpleBus�
 当两个限界上下文之间存在单向集成时，其中一个作为提供者（`upstream`），另一个作为其客户端（`downstream`），我们将得到`客户-供应商开发团队（Customer - Supplier Development Teams）`。
 
 ![](img/index-281_1.png)
+
 ![](img/index-281_2.png)
+
 ![](img/index-281_3.png)
 
 集成限界上下文 263
@@ -10866,9 +11037,11 @@ Mathias Noback 开发了 Tactician 的一个酷替代方案，叫做 SimpleBus�
 
 *Eric Evans* - 《领域驱动设计：应对软件核心复杂性》
 
+
+
 `Customer / Supplier Development Teams` 是集成限界上下文常见的方式。当团队紧密合作时，这通常代表着双赢的局面。
 
-### 12.2.2 分离 (Separate Ways)
+## 12.2.2 分离 (Separate Ways)
 
 延续电子商务的例子，考虑向旧的遗留零售商财务系统报告收入。这种集成可能非常昂贵，以至于投入实现没有价值。在 DDD 战略术语中，这被称为`分离（Separate Ways）`。
 
@@ -10885,10 +11058,6 @@ Mathias Noback 开发了 Tactician 的一个酷替代方案，叫做 SimpleBus�
 ### 12.3.2 遵循者 (Conformist)
 
 再次考虑电子商务例子以及与第三方的集成。限界上下文之间存在关系。我们将假设限界上下文之间存在关系。以电子商务为例，考虑向旧的遗留零售商财务系统报告收入。这种集成可能非常昂贵，以至于投入实现没有价值。在 DDD 战略术语中，这被称为`分离（Separate Ways）`。
-
-
-
-
 
 ⁴[`github.com/willdurand/BazingaHateoasBundle`](https://github.com/willdurand/BazingaHateoasBundle)
 
@@ -10974,6 +11143,7 @@ class UsersController extends FOSRestController
 ## 反腐保护层
 
 > *创建一个隔离层，为客户端提供其自身的领域模型的功能。反腐保护层在内部在两个模型之间进行必要的翻译。通过适配器（Adapters）和面面（Facades）与系统交互。*
+
 > — *Eric Evans - 领域驱动设计，隐藏复杂性。*
 
 反腐保护层是如何定义的呢？我们将看到如何定义从游戏化上下文获取的勋章。
@@ -11076,9 +11246,6 @@ class UserTranslator
 
 翻译器专门负责将来自游戏化上下文的积分转换为勋章。
 
-
-
-
 *使用一种文档良好的共享语言，将必要的领域信息作为通信的通用媒介，根据需要翻译成该语言或从该语言翻译。*
 
 *Eric Evans* - 《领域驱动设计：解决软件核心的复杂性》
@@ -11170,7 +11337,9 @@ class PhpAmqpLibLastWillWishWasMadeConsumer implements ConsumerInterface
 
 集成边界上下文
 
-再次，我们只感兴趣 `Lw\Domain\Model\Wish\WishWasMade`。游戏化上下文使用了 [`Tactician`³](http://tactician.phpleague.com/) 和 [`TacticianBundle`⁴](https://github.com/videlalvaro/tactician-bundle)，这是一个可以扩展并适应你系统的简单总线（bus）。所以现在我们几乎已经准备好在 Symfony 的 `config.yml` 中定义 `RabbitMQ` 配置。
+
+
+再次，我们只感兴趣`Lw\Domain\Model\Wish\WishWasMade`。游戏化上下文使用了[`Tactician`³](http://tactician.phpleague.com/)和[`TacticianBundle`⁴](https://github.com/videlalvaro/tactician-bundle)，这是一个可以扩展并适应你系统的简单总线（bus）。所以现在我们几乎已经准备好在 Symfony 的`config.yml`中定义`RabbitMQ`配置。
 
 ```yaml
 services:
@@ -11212,44 +11381,57 @@ consumers:
       name: last-will
 ```
 
-通过这两个命令，Symfony 将执行两个消费者并监听领域事件。我们指定了 1000 条消息的限制，因为 PHP 不是运行长时间进程的最佳平台。使用像 [**Supervisor**](http://supervisord.org/) 的工具来定期监控和重启进程可能是一个好主意。
+通过这两个命令，Symfony 将执行两个消费者并监听领域事件。我们指定了 1000 条消息的限制，因为 PHP 不是运行长时间进程的最佳平台。使用像[**Supervisor**](http://supervisord.org/)的工具来定期监控和重启进程可能是一个好主意。
 
 ```bash
 php app/console rabbitmq:consumer --messages=1000 last_will_user_registered
 php app/console rabbitmq:consumer --messages=1000 last_will_wish_made
 ```
 
-可能最方便的 RabbitMQ 配置是[发布/订阅（Publish / Subscribe）十五](https://www.rabbitmq.com/tutorials/tutorial-three-php)](#index_split_000.html#292)。Will 上下发布的所有消息都会传递给所有消费者。这在 RabbitMQ 交换机中被称为 `fanout`。交换机由一个代理负责将消息传递相应的队列。
+可能最方便的 RabbitMQ 配置是[发布/订阅（Publish / Subscribe）十五](https://www.rabbitmq.com/tutorials/tutorial-three-php)](#index_split_000.html#292)。Will 上下发布的所有消息都会传递给所有消费者。这在 RabbitMQ 交换机中被称为`fanout`。交换机由一个代理负责将消息传递相应的队列。
 
 尽管我们只看到了局部，但策略设计是领域驱动设计的核心。它是帮助你开发更好、更有语义模型的关键部分。
 
 我们建议使用消息中间件来集成边界上下文，因为这自然会导致更简单、解耦和事件驱动的架构。
 
 ⁹[`www.rabbitmq.com/`](https://www.rabbitmq.com/)
+
 ¹⁰[`www.amqp.org/`](https://www.amqp.org/)
+
 ¹¹[`github.com/videlalvaro/php-amqplib`](https://github.com/videlalvaro/php-amqplib)
+
 ¹²[`github.com/videlalvaro/RabbitMQBundle`](https://github.com/videlalvaro/RabbitMQBundle)
+
 ³[`tactician.phpleague.com/`](http://tactician.phpleague.com/)
+
 ⁴[`github.com/videlalvaro/tactician-bundle`](https://github.com/videlalvaro/tactician-bundle)
+
 ¹⁵[`www.rabbitmq.com/tutorials/tutorial-three-php.html`](https://www.rabbitmq.com/tutorials/tutorial-three-php.html)
+
 ¹⁶[`supervisord.org/`](http://supervisord.org/)
 
-
-
-
-
 - [领域驱动设计实现¹](http://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon-ebook/dp/B00BCLEBN8) Vaughn Vernon 著
+
 - [企业应用架构模式²](http://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin-ebook/dp/B000OZ0NAI) Martin Fowler 著
+
 - [企业集成模式³](http://www.amazon.com/Enterprise-Integration-Patterns-Designing-Addison-Wesley-ebook/dp/B007MQLL4E) Gregor Hohpe 和 Bobby Woolf 著
+
 - [领域驱动设计⁴](http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software-ebook/dp/B00794TAUG) Eric Evans 著
+
 - [NoSQL 精粹](http://www.amazon.com/NoSQL-Distilled-Emerging-Polyglot-Persistence/dp/0321826620)⁵ Martin Fowler 和 Pramod J. Sadalage 著
+
 - [微服务构建⁶](http://www.amazon.com/Building-Microservices-Sam-Newman/dp/1491950358) Sam Newman 著
 
 ¹[http://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon-ebook/dp/B00BCLEBN8]
+
 ²[http://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin-ebook/dp/B000OZ0NAI]
+
 ³[http://www.amazon.com/Enterprise-Integration-Patterns-Designing-Addison-Wesley-ebook/dp/B007MQLL4E]
+
 ⁴[http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software-ebook/dp/B00794TAUG]
+
 ⁵[http://www.amazon.com/NoSQL-Distilled-Emerging-Polyglot-Persistence/dp/0321826620]
+
 ⁶[http://www.amazon.com/Building-Microservices-Sam-Newman/dp/1491950358]
 
 ## 附录 A：基于 PHP 的六形架构
@@ -11313,7 +11495,7 @@ class IdeaController extends Zend_Controller_Action
 }
 ```
 
-我知道读者在想什么：“谁会在控制器中直接访问数据？这是 90 年代的示例！”，好吧，好吧，你说得对。如果你已经在使用框架，你很可能也在使用 ORM。可能是自己实现的，也可能是使用任何现有的工具如 `Doctrine`、`Eloquent`、`ZendDB` 等。如果是这样，你比那些只有数据库连接对象的人多走了一步，但别高兴得太早。
+我知道读者在想什么：“谁会在控制器中直接访问数据？这是 90 年代的示例！”，好吧，好吧，你说得对。如果你已经在使用框架，你很可能也在使用 ORM。可能是自己实现的，也可能是使用任何现有的工具如`Doctrine`、`Eloquent`、`ZendDB`等。如果是这样，你比那些只有数据库连接对象的人多走了一步，但别高兴得太早。
 
 对于初学者来说，列表 1 的代码可以直接运行。然而，如果你仔细观察控制器，你看到的不仅仅是业务规则，你还会看到 Web 框架如何将请求路由到业务规则、数据库的引用或如何连接它。在这里你看到了基础设施。
 
@@ -11323,13 +11505,13 @@ class IdeaController extends Zend_Controller_Action
 
 无论业务规则还是基础设施发生变化，我们都必须修改同一部分代码。相信我，在计算机科学中，你不希望人们为了不同的原因接触同一部分代码。尝试让你的函数只做一件事且只做一件事，这样就就不可能出现人们在同一部分代码上乱搞。你可以通过……了解更多
 
-
-
 看看单一职责原则（SRP）。关于该原则的更多信息，请参考：[http:](http://www.objectmentor.com/resources/articles/srp.pdf)
 
-列表 1 显然是这种情况这种情况。如果我们想迁移到 `Redis` 或添加作者通知功能，就必须更新 `rateAction` 方法。影响 `rateAction` 中与更新逻辑不相关的其他方面的概率很高。列表 1 的代码是脆弱的。如果在你的团队中经常听到“如果它能运行，就不要动它”，那么说明缺少 SRP。
+列表 1 显然是这种情况这种情况。如果我们想迁移到`Redis`或添加作者通知功能，就必须更新`rateAction`方法。影响`rateAction`中与更新逻辑不相关的其他方面的概率很高。列表 1 的代码是脆弱的。如果在你的团队中经常听到“如果它能运行，就不要动它”，那么说明缺少 SRP。
 
-因此，我们必须对代码解耦，并将处理获取和持久化点的责任封装到另一个对象中。正如之前解释过的，最好的方法是使用 `Repository`。接受挑战！让我们看看列表 2 中的结果。
+因此，我们必须对代码解耦，并将处理获取和持久化点的责任封装到另一个对象中。正如之前解释过的，最好的方法是使用`Repository`。接受挑战！让我们看看列表 2 中的结果。
+
+
 
 ```php
 class IdeaController extends Zend_Controller_Action
@@ -11400,9 +11582,6 @@ class IdeaRepository
 
 到此时，我们可以看到六边形的一个边缘，即 `persistence` 边缘。然而，这一面并没有画得很好，`IdeaRepository` 是什么与它如何实现之间存在某种关系。为了在我们的 `application boundary` 之间实现有效的分离，……
 
-
-
-
 配合该应用使用？
 
 你的 CTO 已经在路线图中设定了团队将迁移到 Symfony2，因此当在你当前的 ZF1 应用中开发新功能时，我们希望让即将到来的迁移更加容易。
@@ -11430,6 +11609,7 @@ interface IdeaRepository
 ```
 
 附录 A：PHP 六边形架构
+
 285
 
 ```php
@@ -11472,6 +11652,7 @@ class RateIdeaUseCase
 这真的很酷。如果你查看 `RateIdeaUseCase` 内部，没有任何内容关于 `MySQL` 或 `Zend Framework`。没有引用、没有实例、没有注解，什么都没有。这就像你的
 
 附录 A：PHP 六边形架构
+
 286
 
 基础设施并不在乎。它只谈论业务逻辑。
@@ -11542,6 +11723,7 @@ class RateIdeaUseCase
 你目前的 API 是使用 Silex 构建的，这是一个基于 Symfony 的 PHP 微框架。让我们在 7 中实现它。
 
 附录 A：PHP 六边形架构
+
 288
 
 ```php
@@ -11561,6 +11743,7 @@ $app->get('/api/idea/{ideaId}/{rating}', function ($ideaId, $rating) use ($app) 
 等等，提供的文本由于换行和复制错误有些混乱。让我们根据提供的内容重新对齐逻辑：
 
 附录 A：PHP 六边形架构
+
 289
 
 再次那三行代码。与之前一样，`UseCase` 及其业务逻辑保持不变，我们只是为评分提供了一种新的方式；另一种 `delivery mechanism`。主要的区别在于我们从哪里创建 `RateIdeaRequest`。在第一个例子中，它是来自 ZF request，现在它是来自路由的参数。
@@ -11609,12 +11792,10 @@ class VoteIdeaCommand extends Command
 ```
 
 附录 A：PHP 六边形架构
+
 290
 
 再次那三行代码。与之前一样，`UseCase` 及其业务逻辑保持不变，我们只是为评分提供了一种新的 `delivery mechanism`。恭喜你，你发现了*用户侧*的六边形边缘。
-
-
-
 
 还有很多工作要做。正如你可能听过的，真正的工匠会进行 TDD（测试驱动开发）。我们已经开始了我们的故事，所以我们必须接受在事后进行测试。
 
@@ -11623,6 +11804,8 @@ class VoteIdeaCommand extends Command
 Michael Feathers 将遗留代码定义为`没有测试的代码`。你不希望你的代码从出生那起就成为遗留代码，对吧？
 
 为了对这个 `UseCase` 对象进行单元测试，你决定从简单的部分开始：如果仓库不可用会怎样？我们如何生成这种行为？我们需要在运行单元测试时停止我们的 `Redis` 服务器吗？不需要。我们需要一个具有这种行为的对象。让我们使用列表 9 中的 `mock`（模拟）对象。
+
+
 
 ```php
 class RateIdeaUseCaseTest extends PHPUnit_Framework_TestCase
@@ -11654,7 +11837,7 @@ class NotAvailableRepository implements IdeaRepository
 }
 ```
 
-很极。`NotAvailableRepository` 具有我们需要的行为，我们可以在 `RateIdeaUseCase`中使用它，因为它实现了 `IdeaRepository` 接口。
+很极。`NotAvailableRepository` 具有我们需要的行为，我们可以在 `RateIdeaUseCase` 中使用它，因为它实现了 `IdeaRepository` 接口。
 
 下一个要测试的用例是如果想法不在仓库中会怎样。列表 10 显示了代码。
 
@@ -11776,9 +11959,6 @@ class OneIdeaRepository implements IdeaRepository
 
 砰！（Bam!）搞定了。
 
-
-
-
 ```php
 $ideaId = $this->request->getParam('id');
 
@@ -11794,7 +11974,6 @@ $this->redirect('/idea/'.$response->idea->getId());
 
 }
 }
-
 ```
 
 控制器已经过修改以访问容器（container），这就是为什么它继承自一个新的基控制器 `ContainerAwareController`，该控制器包含一个 `get` 方法来获取包含的每个服务。
@@ -11903,261 +12082,468 @@ class RateIdeaUseCase
 
 如果你对学习更多六边形架构和其他其他相关概念感兴趣，你应该查看文章开头提供的相关 URL，查看 CQRS 和事件溯源（Event Sourcing）。此外，不要忘记订阅关于 DDD 的 Google Groups 和 RSS，例如 [`dddinphp.org`](http://dddinphp.org) [//dddinphp.org](http://dddinphp.org)，并在 Twitter 上关注 @VaughnVernon 和 @ericevans0 等人。
 
-
-
-
-
 # 总结
 
 # 架构风格
+
 ## 过去的日子
+
 ## 分层架构
+
 ### 模型-视图-控制器 (MVC)
+
 ### 分层架构示例
+
 #### 模型 (Model)
+
 #### 视图 (View)
+
 #### 控制器 (Controller)
+
 ## 依赖倒置。六边形架构
+
 ### 依赖倒置原则 (DIP)
+
 ### 应用六边形架构
+
 ## 命令查询职责分离 (CQRS)
+
 ### 写模型
+
 ### 模型
+
 ### 写模型与读模型的同步
+
 ## 事件溯源
+
 ## 总结
 
 # 值对象
+
 ## 定义
+
 ### 值对象 vs 实体 (Entity)
+
 ### 货币与金额示例
+
 ### 特性
+
 #### 测量、量化或描述
+
 #### 不变性
+
 #### 概念整体
+
 #### 值等性
+
 #### 可替换性
+
 #### 无副作用行为 `Side-Effect-Free-Behaviour`
-### 基础类型
-### 测试
-### 持久值对象
-#### 持久单个值对象
-##### 使用即时 ORM 持久嵌入值
-##### 使用 `Doctrine` >= `2.5` 的嵌入值 (Embeddables)
-##### 使用 `Doctrine` <= `2.4` 的嵌入值
-##### 序列化 LOB 和即时 ORM
-###### 使用 `JMS Serializer` 改进序列化
-###### 使用 `Doctrine` 的序列化 LOB
-###### `Doctrine Object Mapping Type`
-###### `Doctrine Custom Types`
-#### 持久值对象集合
-##### 序列化为单个列的集合
-##### 由连接表支持的集合
-###### 使用 `Doctrine` 的连接表支持
-###### 使用即时 ORM 的连接表支持
-##### 由数据库实体支持的集合
-#### NoSQL
-##### `PostgreSQL` 和 `JSONB`
-### 安全
-### 总结
+
+
 
 # 实体 (Entities)
+
 ## 简介
+
 ### 对象 vs 原始类型
+
 ### 身份操作
+
 #### 持久化机制生成身份
+
 #### 代理身份 (Surrogate Identity)
+
 #### 针对丰富领域模型的 Active Record vs Data Mapper
+
 #### 客户端提供身份
+
 #### 应用生成身份
+
 #### 其他边界上下文 (Bounded Context) 生成身份
+
 ### 持久实体
+
 #### 配置 `Doctrine`
+
 #### 映射实体
+
 ##### 使用代码映射实体
+
 ##### 使用 XML 映射实体
+
 ### 测试实体
+
 ### 验证
+
 #### 属性验证
+
 #### 全局验证
+
 #### 消息解耦
+
 #### 组合验证
+
 ### 总结
 
 # 服务
+
 ## 简介
+
 ### 应用服务
+
 #### 事务
+
 #### 测试应用服务
+
 ### 领域服务
+
 ### 具有多个实现的领域服务
+
 #### 代码复用问题
+
 ### 测试领域服务
+
 ### 贫血领域模型 vs 丰富领域模型
+
 #### 贫血领域模型破坏封装性
+
 #### 贫血领域模型带来虚假的代码复用感
+
 #### 如何避免贫血领域模型？
+
 ### 总结
 
 # 领域事件
+
 ## 简介
+
 ### 定义
+
 #### 小故事
+
 #### 比喻
+
 #### RealLife(tm) 示例
+
 ### 特性
+
 #### 命名规范
+
 #### 领域事件与通用语言
+
 #### 不变性
+
 ### 建模事件
+
 ### 持久化领域事件
+
 #### 事件存储 (Event Store)
+
 ### 从领域模型发布事件
+
 #### 从实体发布领域事件
+
 #### 从领域或应用服务发布领域事件
+
 #### `DomainEventPublisher` 如何工作
+
 #### 设置 `DomainEventListeners`
+
 #### 单元测试
+
 ### 传播到远程边界上下文
+
 #### 消息传递
+
 #### REST
+
 ### 总结
 
 # 模块
+
 ## 在模块中结构化代码
+
 ### 基础设施层中的模块
+
 #### 混合不同的技术
+
 #### 利用 PHP 中的模块
+
 #### PEAR 风格的命名空间
+
 #### PSR-0 和 PSR-4 命名空间规范
+
 ### 总结
 
 # 聚合 (Aggregates)
+
 ## 简介
+
 #### Martin Fowler 是怎么说的
+
 #### 维基百科是怎么说的
-
-
-
-
 
 # 一点历史
 
 # 聚合与聚类
+
 ## 聚合的解剖结构
+
 ### 基于业务真·不变性的设计聚合
+
 ## 小聚合与大聚合
+
 ## 追求最终一致性
+
 ## 每次事务仅修改一个聚合
+
 ## 异常情况：UX 场景
 
 # 示例应用服务：用户与愿望
+
 ## 无不变性，两个聚合
+
 ## 每个用户最多三个愿望
+
 ### 悲观锁并发控制
+
 ### 乐观并发控制
+
 ## 渲染用户的愿望
+
 ## 更新用户的愿望
+
 ## 实现用户的愿望
 
 # 总结
 
 # 工厂 (Factories)
+
 ## 简介
+
 ## 聚合根上的工厂方法
+
 ### 强制执行不变性
+
 ## 服务上的工厂
+
 ### 构建规格说明
+
 ### 构建聚合根
+
 ## 测试
+
 ### 对象母 (Object Mother)
+
 ### 测试数据构建器 (Test Data Builder)
+
 ## 总结
 
 # 存储库 (Repositories)
+
 ## 简介
+
 ## 定义
+
 ## 存储库不是 DAO
+
 ## 面向集合的存储库
+
 ### 内存实现
+
 ### Doctrine ORM
+
 #### 对象关系映射
+
 #### Doctrine 自定义类型
+
 #### XML 映射
+
 #### 实体管理器 (Entity Manager)
+
 #### DQL 实现
+
 ### 面向持久化
+
 ### Redis 实现
+
 ### SQL 实现
+
 ## 额外行为
+
 ## 查询存储库
+
 ### 规格模式 (Specification Pattern)
+
 #### 内存实现
+
 #### SQL 实现
+
 ## 管理事务
+
 ## 测试存储库
+
 ## 使用内存实现测试你的服务
+
 ## 总结
 
 # 应用 (Application)
-## 简介 
+
+## 简介
+
 ## 请求 (Requests)
+
 ### 构建应用请求
+
 ### 请求设计
+
 #### 使用原始类型
+
 #### 可序列化
+
 #### 无业务逻辑
+
 #### 无测试
+
 ## 应用服务的解剖结构
+
 ### 依赖反转
+
 ### 实例化应用服务
+
 ### 执行
+
 #### 每个应用服务一个类
+
 #### 一个类中多个应用服务方法
+
 ### 返回值
+
 #### 从聚合实例生成 DTO
+
 #### 数据转换器 (Data Transformers)
+
 ## 复合布局上的多个应用服务
+
 #### AJAX 内容集成
+
 #### ESI 内容集成
+
 #### Symfony 子请求
-        #### 一个控制器，多个应用服务
+
+#### 一个控制器，多个应用服务
+
 ## 测试
+
 ## 事务
+
 ## 安全
+
 ## 领域事件 (Domain Events)
+
 ## 命令处理器 (Command Handlers)
+
 ### Tactician 库及其他选项
+
 ## 总结
 
 # 整合边界上下文 (Bounded Contexts)
+
 ## 通过数据存储进行集成
+
 ## 集成关系
+
 ### 客户 / 供应商
+
 ### 分别对待
+
 ### 顺从者 (Conformist)
+
 ### 实现边界上下文集成
+
 ### 现代 RPC
+
 ### 消息队列
+
 ## 总结
 
 # 参考文献
 
 # 附录 A：基于 PHP 的六边形架构
+
 ## 简介
+
 ## 第一种方法
+
 ## 存储库与持久化边缘
+
 ## 解耦业务与持久化
+
 ## 将我们的持久化迁移到 Redis
+
 ## 解耦业务与 Web 框架
+
 ## 使用 API 对想法评分
+
 ### 控制台应用评分
+
 ## 测试想法的使用
+
 ## 测试基础设施
+
 ## 天额，这么多依赖！
+
 ## 领域服务与通知六边形边缘
+
 ## 让我们总结一下
+
 ## 六边形架构
+
 ## 关键点
+
 ## 接下来是什么？
 
+# 基础类型
+
+# 测试
+
+# 持久值对象
+
+## 持久单个值对象
+
+### 使用即时 ORM 持久嵌入值
+
+### 使用 `Doctrine` >= `2.5` 的嵌入值 (Embeddables)
+
+### 使用 `Doctrine` <= `2.4` 的嵌入值
+
+### 序列化 LOB 和即时 ORM
+
+#### 使用 `JMS Serializer` 改进序列化
+
+#### 使用 `Doctrine` 的序列化 LOB
+
+#### `Doctrine Object Mapping Type`
+
+#### `Doctrine Custom Types`
+
+## 持久值对象集合
+
+### 序列化为单个列的集合
+
+### 由连接表支持的集合
+
+#### 使用 `Doctrine` 的连接表支持
+
+#### 使用即时 ORM 的连接表支持
+
+### 由数据库实体支持的集合
+
+## NoSQL
+
+### `PostgreSQL` 和 `JSONB`
+
+# 安全
+
+# 总结

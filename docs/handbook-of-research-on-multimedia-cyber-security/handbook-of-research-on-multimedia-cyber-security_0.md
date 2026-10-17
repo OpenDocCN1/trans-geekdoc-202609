@@ -1,30 +1,15 @@
-## 多媒体网络安全研究手册
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+# 多媒体网络安全研究手册
 
 ---
 
-
-
-### 使命
+## 使命
 
 随着数字技术在日常生活中变得更加普及，以及私营和公共实体以日益增长的方式利用互联网，对数字威胁的担忧变得更加普遍。
 
 **Advances in Information Security, Privacy, & Ethics (AISPE) 丛书** 提供了关于跨各行业和环境保护与滥用信息及技术的前沿研究。该丛书汇集了身份管理、密码学、系统安全、认证和数据保护等主题的学术研究，是 IT 专业人士、学者和高年级学生的理想参考资料。
 
-### 涵盖领域
+## 涵盖领域
 
 *   网络伦理
 *   IT 风险
@@ -41,7 +26,7 @@
 
 **Advances in Information Security, Privacy, and Ethics (AISPE) 丛书** (ISSN 1948-9730) 由 IGI Global 出版，地址：701 E. Chocolate Avenue, Hershey, PA 17033-1240, USA，网址：`www.igi-global.com`。本系列由可单独购买的书目组成；每个书目均经过编辑，以确保在系列内与其他书目在内容上互不重叠。定价和订购信息请访问 `http://www.igi-global.com/book-series/advances-information-security-privacy-ethics/37157`。邮政局长：请将所有地址变更发送至上述地址。版权所有 © 2020 IGI Global。保留所有权利，包括翻译成其他语言的权利。未经出版商书面许可，不得以任何形式或任何方式（图形、电子或机械方式，包括影印、录制、录音或信息存储检索系统）复制或使用本系列的任何部分，但非商业性、教育性使用（包括课堂教学目的）除外。本系列表达的观点为作者观点，不一定代表 IGI Global 观点。
 
-### 本系列书目
+## 本系列书目
 
 *   **面向未来互联网环境的工业控制系统网络安全**  
     Mirjana D. Stojanović (塞尔维亚贝尔格莱德大学) 和 Slavica V. Boštjančič Rakas (塞尔维亚贝尔格莱德大学)  
@@ -77,119 +62,167 @@
 
 *   **传感器网络与物联网中的安全与隐私问题**
 
+### 图书列表
 
+#### Modern Principles, Practices, and Algorithms for Cloud Security
 
-
-
-#### 图书列表
-
-##### Modern Principles, Practices, and Algorithms for Cloud Security
 **作者**：Brij B. Gupta (National Institute of Technology, Kurukshetra, India)  
+
 **出版信息**：Information Science Reference • 版权年份 2020 • 344 页 • 精装 (ISBN: 9781799810827) • 美元 $195.00 (我方价格)
 
-##### Security, Privacy, and Forensics Issues in Big Data
+#### Security, Privacy, and Forensics Issues in Big Data
+
 **作者**：Ramesh C. Joshi (Graphic Era University, Dehradun, India) and Brij B. Gupta (National Institute of Technology, Kurukshetra, India)  
+
 **出版信息**：Information Science Reference • 版权年份 2020 • 456 页 • 精装 (ISBN: 9781522597421) • 美元 $235.00 (我方价格)
 
-##### Handbook of Research on Machine and Deep Learning Applications for Cyber Security
+#### Handbook of Research on Machine and Deep Learning Applications for Cyber Security
+
 **作者**：Padmavathi Ganapathi (Avinashilingam Institute for Home Science and Higher Education for Women, India) and D. Shanmugapriya (Avinashilingam Institute for Home Science and Higher Education for Women, India)  
+
 **出版信息**：Information Science Reference • 版权年份 2020 • 482 页 • 精装 (ISBN: 9781522596110) • 美元 $295.00 (我方价格)
 
-##### Advanced Digital Image Steganography Using LSB, PVD, and EMD Emerging Research and Opportunities
+#### Advanced Digital Image Steganography Using LSB, PVD, and EMD Emerging Research and Opportunities
+
 **作者**：Gandharba Swain (Koneru Lakshmaiah Education Foundation, India)  
+
 **出版信息**：Information Science Reference • 版权年份 2019 • 201 页 • 精装 (ISBN: 9781522575160) • 美元 $165.00 (我方价格)
 
-##### Developments in Information Security and Cybernetic Wars
+#### Developments in Information Security and Cybernetic Wars
+
 **作者**：Muhammad Sarfraz (Kuwait University, Kuwait)  
+
 **出版信息**：Information Science Reference • 版权年份 2019 • 351 页 • 精装 (ISBN: 9781522583042) • 美元 $225.00 (我方价格)
 
-##### Cybersecurity Education for Awareness and Compliance
+#### Cybersecurity Education for Awareness and Compliance
+
 **作者**：Ismini Vasileiou (University of Plymouth, UK) and Steven Furnell (University of Plymouth, UK)  
+
 **出版信息**：Information Science Reference • 版权年份 2019 • 306 页 • 精装 (ISBN: 9781522578475) • 美元 $195.00 (我方价格)
 
-##### Detection and Mitigation of Insider Attacks in a Cloud Infrastructure Emerging Research and Opportunities
+#### Detection and Mitigation of Insider Attacks in a Cloud Infrastructure Emerging Research and Opportunities
+
 **作者**：T. Gunasekhar (Koneru Lakshmaiah Education Foundation, India) K. Thirupathi Rao (Koneru Lakshmaiah Education Foundation, India) P. Sai Kiran (Koneru Lakshmaiah Education Foundation, India) V. Krishna Reddy (Koneru Lakshmaiah Education Foundation, India) and B. Thirumala Rao (Koneru Lakshmaiah Education Foundation, India)  
+
 **出版信息**：Information Science Reference • 版权年份 2019 • 113 页 • 精装 (ISBN: 9781522579243) • 美元 $165.00 (我方价格)
 
-##### Network Security and Its Impact on Business Strategy
+#### Network Security and Its Impact on Business Strategy
+
 **作者**：Ionica Oncioiu (European Academy of the Regions, Belgium)  
+
 **出版信息**：Business Science Reference • 版权年份 2019 • 289 页 • 精装 (ISBN: 9781522584551) • 美元 $225.00 (我方价格)
 
-##### Exploring Security in Software Architecture and Design
+#### Exploring Security in Software Architecture and Design
+
 **作者**：Michael Felderer (University of Innsbruck, Austria) and Riccardo Scandariato (Chalmers University of Technology, Sweden & University of Gothenburg, Sweden)  
+
 **出版信息**：Information Science Reference • 版权年份 2019 • 349 页 • 精装 (ISBN: 9781522563136) • 美元 $215.00 (我方价格)
 
-##### Cryptographic Security Solutions for the Internet of Things
+#### Cryptographic Security Solutions for the Internet of Things
+
 **作者**：Mohammad Tariq Banday (University of Kashmir, India)  
+
 **出版信息**：Information Science Reference • 版权年份 2019 • 367 页 • 精装 (ISBN: 9781522557425) • 美元 $195.00 (我方价格)
 
-##### Advanced Methodologies and Technologies in System Security, Information Privacy, and Forensics
+#### Advanced Methodologies and Technologies in System Security, Information Privacy, and Forensics
+
 **作者**：Mehdi Khosrow-Pour, D.B.A. (Information Resources Management Association, USA)  
+
 **出版信息**：Information Science Reference • 版权年份 2019 • 417 页 • 精装 (ISBN: 9781522574927) • 美元 $285.00 (我方价格)
 
-##### Handbook of Research on Information and Cyber Security in the Fourth Industrial Revolution
+#### Handbook of Research on Information and Cyber Security in the Fourth Industrial Revolution
+
 **作者**：Ziska Fields (University of KwaZulu-Natal, South Africa)  
+
 **出版信息**：Information Science Reference • 版权年份 2018 • 647 页 • 精装 (ISBN: 9781522547631) • 美元 $345.00 (我方价格)
 
-##### Security and Privacy in Smart Sensor Networks
+#### Security and Privacy in Smart Sensor Networks
+
 **作者**：Yassine Maleh (University Hassan I, Morocco) Abdellah Ezzati (University Hassan I, Morocco) and Mustapha Belaissaoui (University Hassan I, Morocco)  
+
 **出版信息**：Information Science Reference • 版权年份 2018 • 441 页 • 精装 (ISBN: 9781522557364) • 美元 $215.00 (我方价格)
 
-##### The Changing Scope of Technoethics in Contemporary Society
+#### The Changing Scope of Technoethics in Contemporary Society
+
 **作者**：Rocci Luppicini (University of Ottawa, Canada)  
+
 **出版信息**：Information Science Reference • 版权年份 2018 • 403 页 • 精装 (ISBN: 9781522550945) • 美元 $225.00 (我方价格)
 
-##### Handbook of Research on Information Security in Biomedical Signal Processing
+#### Handbook of Research on Information Security in Biomedical Signal Processing
+
 **作者**：Chittaranjan Pradhan (KIIT University, India) Himansu Das (KIIT University, India) Bighnaraj Naik (Veer Surendra Sai University of Technology (VSSUT), India) and Nilanjan Dey (Techno India College of Technology, India)  
+
 **出版信息**：Information Science Reference • 版权年份 2018 • 414 页 • 精装 (ISBN: 9781522551522) • 美元 $325.00 (我方价格)
 
-##### Handbook of Research on Network Forensics and Analysis Techniques
+#### Handbook of Research on Network Forensics and Analysis Techniques
+
 **作者**：Gulshan Shrivastava (National Institute of Technology Patna, India) Prabhat Kumar (National Institute of Technology Patna, India) B. B. Gupta (National Institute of Technology Kurukshetra, India) Suman Bala (Orange Labs, France) and Nilanjan Dey (Techno India College of Technology, India)  
+
 **出版信息**：Information Science Reference • 版权年份 2018 • 509 页 • 精装 (ISBN: 9781522541004) • 美元 $335.00 (我方价格)
 
-##### Cyber Harassment and Policy Reform in the Digital Age Emerging Research and Opportunities
-**作者**：Ramona S. McNeal (University of Northern Iowa, USA) Susan M. Kunkle (Kent State University, USA) and Mary Schmeida (Kent State University, USA)  
+
+
+# 书籍列表
+
+## Cyber Harassment and Policy Reform in the Digital Age: Emerging Research and Opportunities
+
+**作者**：Ramona S. McNeal (University of Northern Iowa, USA)、Susan M. Kunkle (Kent State University, USA)、Mary Schmeida (Kent State University, USA)
+
 **出版信息**：Information Science Reference • 版权年份 2018 • 170 页 • 精装 (ISBN: 9781522552857) • 美元 $145.00 (我方价格)
 
-##### Security and Privacy Management, Techniques, and Protocols
-**作者**：Yassine Maleh (University Hassan I, Morocco)  
+## Security and Privacy Management, Techniques, and Protocols
+
+**作者**：Yassine Maleh (University Hassan I, Morocco)
+
 **出版信息**：Information Science Reference • 版权年份 2018 • 426 页 • 精装 (ISBN: 9781522555834) • 美元 $205.00 (我方价格)
 
-##### Multidisciplinary Perspectives on Human Capital and Information Technology Professionals
-**作者**：Vandana Ahuja (Jaypee Institute of Information Technology, India) and Shubhangini Rathore (IBS Gurgaon, India)  
+## Multidisciplinary Perspectives on Human Capital and Information Technology Professionals
+
+**作者**：Vandana Ahuja (Jaypee Institute of Information Technology, India)、Shubhangini Rathore (IBS Gurgaon, India)
+
 **出版信息**：Information Science Reference • 版权年份 2018 • 400 页 • 精装 (ISBN: 9781522552970) • 美元 $215.00 (我方价格)
 
-##### Security, Privacy, and Anonymization in Social Networks Emerging Research and Opportunities
-**作者**：B. K. Tripathy (VIT University, India) and Kiran Baktha (VIT University, India)  
+## Security, Privacy, and Anonymization in Social Networks: Emerging Research and Opportunities
+
+**作者**：B. K. Tripathy (VIT University, India)、Kiran Baktha (VIT University, India)
+
 **出版信息**：Information Science Reference • 版权年份 2018 • 176 页 • 精装 (ISBN: 9781522551584) • 美元 $155.00 (我方价格)
 
-##### Critical Research on Scalability and Security Issues in Virtual Cloud Environments
-**作者**：Shadi Aljawarneh (Jordan University of Science and Technology, Jordan) and Manisha Malhotra (Chandigarh University, India)  
+## Critical Research on Scalability and Security Issues in Virtual Cloud Environments
+
+**作者**：Shadi Aljawarneh (Jordan University of Science and Technology, Jordan)、Manisha Malhotra (Chandigarh University, India)
+
 **出版信息**：Information Science Reference • 版权年份 2018 • 341 页 • 精装 (ISBN: 9781522530299) • 美元 $225.00 (我方价格)
 
-##### The Morality of Weapons Design and Development Emerging Research and Opportunities
-**作者**：John Forge (University of Sydney, Australia)  
+## The Morality of Weapons Design and Development: Emerging Research and Opportunities
+
+**作者**：John Forge (University of Sydney, Australia)
+
 **出版信息**：Information Science Reference • 版权年份 2018 • 216 页 • 精装 (ISBN: 9781522539841) • 美元 $175.00 (我方价格)
 
-##### Advanced Cloud Computing Security Techniques and Applications
-**作者**：Ihssan Alkadi (Independent Researcher, USA)  
+## Advanced Cloud Computing Security Techniques and Applications
+
+**作者**：Ihssan Alkadi (Independent Researcher, USA)
+
 **出版信息**：Information Science Reference • 版权年份 2018 • 350 页 • 精装 (ISBN: 9781522525066) • 美元 $225.00 (我方价格)
 
-##### Algorithmic Strategies for Solving Complex Problems in Cryptography
-**作者**：Kannan Balasubramanian (Mepco Schlenk Engineering College, India) and M. Rajakani (Mepco Schlenk Engineering College, India)  
+## Algorithmic Strategies for Solving Complex Problems in Cryptography
+
+**作者**：Kannan Balasubramanian (Mepco Schlenk Engineering College, India)、M. Rajakani (Mepco Schlenk Engineering College, India)
+
 **出版信息**：Information Science Reference • 版权年份 2018 • 302 页 • 精装 (ISBN: 9781522529156) • 美元 $245.00 (我方价格)
 
-##### Information Technology Risk Management and Compliance in Modern Organizations
-**作者**：Manish Gupta (State University of New York, Buffalo, USA) Raj Sharman (State University of New York, Buffalo, USA) John Walp (M&T Bank Corporation, USA) and Pavankumar Mulgund (State University of New York, Buffalo, USA)  
+## Information Technology Risk Management and Compliance in Modern Organizations
+
+**作者**：Manish Gupta (State University of New York, Buffalo, USA)、Raj Sharman (State University of New York, Buffalo, USA)、John Walp (M&T Bank Corporation, USA)、Pavankumar Mulgund (State University of New York, Buffalo, USA)
+
 **出版信息**：Business Science Reference • 版权年份 2018 • 360 页 • 精装 (ISBN: 9781522526049) • 美元 $225.00 (我方价格)
 
+---
 
+## 书籍列表 (2017-2016)
 
-
-
-#### 书籍列表
-
-##### Detecting and Mitigating Robotic Cyber Security Risks
+### Detecting and Mitigating Robotic Cyber Security Risks
 
 **作者**：Raghavendra Kumar (LNCT Group of College, India)、Prasant Kumar Pattnaik (KIIT University (Deemed), India)、Priyanka Pandey (LNCT Group of College, India)
 
@@ -197,7 +230,7 @@
 
 ---
 
-##### Advanced Image-Based Spam Detection and Filtering Techniques
+### Advanced Image-Based Spam Detection and Filtering Techniques
 
 **作者**：Sunita Vikrant Dhavale (Defense Institute of Advanced Technology (DIAT), Pune, India)
 
@@ -205,7 +238,7 @@
 
 ---
 
-##### Privacy and Security Policies in Big Data
+### Privacy and Security Policies in Big Data
 
 **作者**：Sharvari Tamane (MGM's Jawaharlal Nehru Engineering College, India)、Vijender Kumar Solanki (Institute of Technology and Science Ghaziabad, India)、Nilanjan Dey (Techno India College of Technology, India)
 
@@ -213,7 +246,7 @@
 
 ---
 
-##### Securing Government Information and Data in Developing Countries
+### Securing Government Information and Data in Developing Countries
 
 **作者**：Saleem Zoughbi (UN APCICT, UN ESCAP, South Korea)
 
@@ -221,7 +254,7 @@
 
 ---
 
-##### Security Breaches and Threat Prevention in the Internet of Things
+### Security Breaches and Threat Prevention in the Internet of Things
 
 **作者**：N. Jeyanthi (VIT University, India)、R. Thandeeswaran (VIT University, India)
 
@@ -229,7 +262,7 @@
 
 ---
 
-##### Decentralized Computing Using Blockchain Technologies and Smart Contracts Emerging Research and Opportunities
+### Decentralized Computing Using Blockchain Technologies and Smart Contracts: Emerging Research and Opportunities
 
 **作者**：S. Asharaf (Indian Institute of Information Technology and Management, Kerala, India)、S. Adarsh (Indian Institute of Information Technology and Management, Kerala, India)
 
@@ -237,7 +270,7 @@
 
 ---
 
-##### Cybersecurity Breaches and Issues Surrounding Online Threat Protection
+### Cybersecurity Breaches and Issues Surrounding Online Threat Protection
 
 **作者**：Michelle Moore (George Mason University, USA)
 
@@ -245,7 +278,7 @@
 
 ---
 
-##### Security Solutions and Applied Cryptography in Smart Grid Communications
+### Security Solutions and Applied Cryptography in Smart Grid Communications
 
 **作者**：Mohamed Amine Ferrag (Guelma University, Algeria)、Ahmed Ahmim (University of Larbi Tebessi, Algeria)
 
@@ -253,7 +286,7 @@
 
 ---
 
-##### Threat Mitigation and Detection of Cyber Warfare and Terrorism Activities
+### Threat Mitigation and Detection of Cyber Warfare and Terrorism Activities
 
 **作者**：Maximiliano E. Korstanje (University of Palermo, Argentina)
 
@@ -261,7 +294,7 @@
 
 ---
 
-##### Online Banking Security Measures and Data Protection
+### Online Banking Security Measures and Data Protection
 
 **作者**：Shadi A. Aljawarneh (Jordan University of Science and Technology, Jordan)
 
@@ -269,7 +302,7 @@
 
 ---
 
-##### Developing Next-Generation Countermeasures for Homeland Security Threat Prevention
+### Developing Next-Generation Countermeasures for Homeland Security Threat Prevention
 
 **作者**：Maurice Dawson (Illinois Institute of Technology, USA)、Dakshina Ranjan Kisku (National Institute of Technology, India)、Phalguni Gupta (National Institute of Technical Teachers' Training & Research, India)、Jamuna Kanta Sing (Jadavpur University, India)、Weifeng Li (Tsinghua University, China)
 
@@ -277,7 +310,7 @@
 
 ---
 
-##### Security Solutions for Hyperconnectivity and the Internet of Things
+### Security Solutions for Hyperconnectivity and the Internet of Things
 
 **作者**：Maurice Dawson (Illinois Institute of Technology, USA)、Mohamed Eltayeb (Colorado Technical University, USA)、Marwan Omar (Saint Leo University, USA)
 
@@ -285,7 +318,7 @@
 
 ---
 
-##### Managing Security Issues and the Hidden Dangers of Wearable Technologies
+### Managing Security Issues and the Hidden Dangers of Wearable Technologies
 
 **作者**：Andrew Marrington (Zayed University, UAE)、Don Kerr (University of the Sunshine Coast, Australia)、John Gammack (Zayed University, UAE)
 
@@ -293,7 +326,7 @@
 
 ---
 
-##### Security Management in Mobile Cloud Computing
+### Security Management in Mobile Cloud Computing
 
 **作者**：Kashif Munir (University of Hafr Al-Batin, Saudi Arabia)
 
@@ -301,7 +334,7 @@
 
 ---
 
-##### Cryptographic Solutions for Secure Online Banking and Commerce
+### Cryptographic Solutions for Secure Online Banking and Commerce
 
 **作者**：Kannan Balasubramanian (Mepco Schlenk Engineering College, India)、K. Mala (Mepco Schlenk Engineering College, India)、M. Rajakani (Mepco Schlenk Engineering College, India)
 
@@ -309,7 +342,7 @@
 
 ---
 
-##### Handbook of Research on Modern Cryptographic Solutions for Computer and Cyber Security
+### Handbook of Research on Modern Cryptographic Solutions for Computer and Cyber Security
 
 **作者**：Brij Gupta (National Institute of Technology, Kurukshetra, India)、Dharma P. Agrawal (University of Cincinnati, USA)、Shingo Yamaguchi (Yamaguchi University, Japan)
 
@@ -317,15 +350,17 @@
 
 ---
 
-##### Innovative Solutions for Access Control Management
+### Innovative Solutions for Access Control Management
 
-**作者**：Ahmad Kamran Malik (COMSATS Institute of Information Technology, Pakistan)、Adeel Anjum (COMSATS Institute of Information Technology, Pakistan)、Basit Raza (COMSATS Institute of Information Technology, Pakistan)
+**作者**：[作者信息缺失]
 
-**出版信息**：Information Science Reference • 版权 2016 • 330 页 • 精装 (ISBN: 9781522504481) • 定价 US $195.00
+**出版信息**：[出版信息缺失]
 
----
 
-##### Network Security Attacks and Countermeasures
+
+# 书籍列表
+
+## Network Security Attacks and Countermeasures
 
 **作者**：Dileep Kumar G. (Adama Science and Technology University, Ethiopia)、Manoj Kumar Singh (Adama Science and Technology University, Ethiopia)、M.K. Jayanthi (King Khalid University, Saudi Arabia)
 
@@ -333,7 +368,7 @@
 
 ---
 
-##### Next Generation Wireless Network Security and Privacy
+## Next Generation Wireless Network Security and Privacy
 
 **作者**：Kamaljit I. Lakhtaria (Gujarat University, India)
 
@@ -341,7 +376,7 @@
 
 ---
 
-##### Improving Information Security Practices through Computational Intelligence
+## Improving Information Security Practices through Computational Intelligence
 
 **作者**：Wasan Awad (Ahlia University, Bahrain)、El Sayed M. El-Alfy (King Fahd University of Petroleum and Minerals, Saudi Arabia)、Yousif Al-Bastaki (University of Bahrain, Bahrain)
 
@@ -349,7 +384,7 @@
 
 ---
 
-##### Handbook of Research on Security Considerations in Cloud Computing
+## Handbook of Research on Security Considerations in Cloud Computing
 
 **作者**：Kashif Munir (King Fahd University of Petroleum & Minerals, Saudi Arabia)、Mubarak S. Al-Mutairi (King Fahd University of Petroleum & Minerals, Saudi Arabia)、Lawan A. Mohammed (King Fahd University of Petroleum & Minerals, Saudi Arabia)
 
@@ -357,7 +392,7 @@
 
 ---
 
-##### Emerging Security Solutions Using Public and Private Key Cryptography Mathematical Concepts
+## Emerging Security Solutions Using Public and Private Key Cryptography Mathematical Concepts
 
 **作者**：Addepalli VN Krishna (Stanley College of Engineering and Technology for Women, India)
 
@@ -365,7 +400,7 @@
 
 ---
 
-##### Handbook of Research on Emerging Developments in Data Privacy
+## Handbook of Research on Emerging Developments in Data Privacy
 
 **作者**：Manish Gupta (State University of New York at Buffalo, USA)
 
@@ -373,7 +408,7 @@
 
 ---
 
-##### Handbook of Research on Securing Cloud-Based Databases with Biometric Applications
+## Handbook of Research on Securing Cloud-Based Databases with Biometric Applications
 
 **作者**：Ganesh Chandra Deka (Ministry of Labour and Employment, India)、Sambit Bakshi (National Institute of Technology Rourkela, India)
 
@@ -381,7 +416,7 @@
 
 ---
 
-##### Handbook of Research on Threat Detection and Countermeasures in Network Security
+## Handbook of Research on Threat Detection and Countermeasures in Network Security
 
 **作者**：Alaa Hussein Al-Hamami (Amman Arab University, Jordan)、Ghossoon M. Waleed al-Saadoon (Applied Sciences University, Bahrain)
 
@@ -389,89 +424,157 @@
 
 ---
 
-##### Information Security in Diverse Computing Environments
+## Information Security in Diverse Computing Environments
 
 **出版信息**：Information Science Reference
 
+---
 
+## 书籍列表 (续)
 
+### Network Topology in Command and Control Organization, Operation, and Evolution
 
+**作者**：T. J. Grant (R-BAR, 荷兰), R. H. P. Janssen (荷兰国防学院, 荷兰), H. Monsuur (荷兰国防学院, 荷兰)
 
-#### 书籍列表
-
-##### Network Topology in Command and Control Organization, Operation, and Evolution
-**作者**：T. J. Grant (R-BAR, 荷兰), R. H. P. Janssen (荷兰国防学院, 荷兰), H. Monsuur (荷兰国防学院, 荷兰)  
 **出版信息**：Information Science Reference • 版权 2014 • 320 页 • 精装 (ISBN: 9781466660588) • US $215.00 (我方价格)
 
-##### Cases on Research and Knowledge Discovery Homeland Security Centers of Excellence
-**作者**：Cecelia Wright Brown (巴尔的摩大学, 美国), Kevin A. Peters (摩根州立大学, 美国), Kofi Adofo Nyarko (摩根州立大学, 美国)  
+---
+
+### Cases on Research and Knowledge Discovery Homeland Security Centers of Excellence
+
+**作者**：Cecelia Wright Brown (巴尔的摩大学, 美国), Kevin A. Peters (摩根州立大学, 美国), Kofi Adofo Nyarko (摩根州立大学, 美国)
+
 **出版信息**：Information Science Reference • 版权 2014 • 357 页 • 精装 (ISBN: 9781466659469) • US $215.00 (我方价格)
 
-##### Multidisciplinary Perspectives in Cryptology and Information Security
-**作者**：Sattar B. Sadkhan Al Maliky (巴比伦大学, 伊拉克), Nidaa A. Abbas (巴比伦大学, 伊拉克)  
+---
+
+### Multidisciplinary Perspectives in Cryptology and Information Security
+
+**作者**：Sattar B. Sadkhan Al Maliky (巴比伦大学, 伊拉克), Nidaa A. Abbas (巴比伦大学, 伊拉克)
+
 **出版信息**：Information Science Reference • 版权 2014 • 443 页 • 精装 (ISBN: 9781466658080) • US $245.00 (我方价格)
 
-##### Analyzing Security, Trust, and Crime in the Digital World
-**作者**：Hamid R. Nemati (北卡罗来纳大学格林斯伯勒分校, 美国)  
+---
+
+### Analyzing Security, Trust, and Crime in the Digital World
+
+**作者**：Hamid R. Nemati (北卡罗来纳大学格林斯伯勒分校, 美国)
+
 **出版信息**：Information Science Reference • 版权 2014 • 281 页 • 精装 (ISBN: 9781466648562) • US $195.00 (我方价格)
 
-##### Research Developments in Biometrics and Video Processing Techniques
-**作者**：Rajeev Srivastava (印度理工学院(BHU), 印度), S.K. Singh (印度理工学院(BHU), 印度), K.K. Shukla (印度理工学院(BHU), 印度)  
+---
+
+### Research Developments in Biometrics and Video Processing Techniques
+
+**作者**：Rajeev Srivastava (印度理工学院(BHU), 印度), S.K. Singh (印度理工学院(BHU), 印度), K.K. Shukla (印度理工学院(BHU), 印度)
+
 **出版信息**：Information Science Reference • 版权 2014 • 279 页 • 精装 (ISBN: 9781466648685) • US $195.00 (我方价格)
 
-##### Advances in Secure Computing, Internet Services, and Applications
-**作者**：B.K. Tripathy (维洛尔理工大学, 印度), D. P. Acharjya (维洛尔理工大学, 印度)  
+---
+
+### Advances in Secure Computing, Internet Services, and Applications
+
+**作者**：B.K. Tripathy (维洛尔理工大学, 印度), D. P. Acharjya (维洛尔理工大学, 印度)
+
 **出版信息**：Information Science Reference • 版权 2014 • 405 页 • 精装 (ISBN: 9781466649408) • US $195.00 (我方价格)
 
-##### Trust Management in Mobile Environments Autonomic and Usable Models
-**作者**：Zheng Yan (西安电子科技大学, 中国和阿尔托大学, 芬兰)  
+---
+
+### Trust Management in Mobile Environments Autonomic and Usable Models
+
+**作者**：Zheng Yan (西安电子科技大学, 中国和阿尔托大学, 芬兰)
+
 **出版信息**：Information Science Reference • 版权 2014 • 288 页 • 精装 (ISBN: 9781466647657) • US $195.00 (我方价格)
 
-##### Network Security Technologies Design and Applications
-**作者**：Abdelmalek Amine (Tahar Moulay 大学, 阿尔及利亚), Otmane Ait Mohamed (康考迪亚大学, 美国), Boualem Benatallah (新南威尔士大学, 澳大利亚)  
+---
+
+### Network Security Technologies Design and Applications
+
+**作者**：Abdelmalek Amine (Tahar Moulay 大学, 阿尔及利亚), Otmane Ait Mohamed (康考迪亚大学, 美国), Boualem Benatallah (新南威尔士大学, 澳大利亚)
+
 **出版信息**：Information Science Reference • 版权 2014 • 330 页 • 精装 (ISBN: 9781466647893) • US $195.00 (我方价格)
 
-##### Security, Privacy, Trust, and Resource Management in Mobile and Wireless Communications
-**作者**：Danda B. Rawat (佐治亚南方大学, 美国), Bhed B. Bista (岩手县立大学, 日本), Gongjun Yan (南印第安纳大学, 美国)  
+---
+
+### Security, Privacy, Trust, and Resource Management in Mobile and Wireless Communications
+
+**作者**：Danda B. Rawat (佐治亚南方大学, 美国), Bhed B. Bista (岩手县立大学, 日本), Gongjun Yan (南印第安纳大学, 美国)
+
 **出版信息**：Information Science Reference • 版权 2014 • 577 页 • 精装 (ISBN: 9781466646919) • US $195.00 (我方价格)
 
-##### Architectures and Protocols for Secure Information Technology Infrastructures
-**作者**：Antonio Ruiz-Martinez (穆尔西亚大学, 西班牙), Rafael Marin-Lopez (穆尔西亚大学, 西班牙), Fernando Pereniguez-Garcia (穆尔西亚大学, 西班牙)  
+---
+
+### Architectures and Protocols for Secure Information Technology Infrastructures
+
+**作者**：Antonio Ruiz-Martinez (穆尔西亚大学, 西班牙), Rafael Marin-Lopez (穆尔西亚大学, 西班牙), Fernando Pereniguez-Garcia (穆尔西亚大学, 西班牙)
+
 **出版信息**：Information Science Reference • 版权 2014 • 427 页 • 精装 (ISBN: 9781466645141) • US $195.00 (我方价格)
 
-##### Theory and Practice of Cryptography Solutions for Secure Information Systems
-**作者**：Atilla Elçi (阿克萨赖大学, 土耳其), Josef Pieprzyk (麦考瑞大学, 澳大利亚), Alexander G. Chefranov (东地中海大学, 北塞浦路斯), Mehmet A. Orgun (麦考瑞大学, 澳大利亚), Huaxiong Wang (南洋理工大学, 新加坡), Rajan Shankaran (麦考瑞大学, 澳大利亚)  
+---
+
+### Theory and Practice of Cryptography Solutions for Secure Information Systems
+
+**作者**：Atilla Elçi (阿克萨赖大学, 土耳其), Josef Pieprzyk (麦考瑞大学, 澳大利亚), Alexander G. Chefranov (东地中海大学, 北塞浦路斯), Mehmet A. Orgun (麦考瑞大学, 澳大利亚), Huaxiong Wang (南洋理工大学, 新加坡), Rajan Shankaran (麦考瑞大学, 澳大利亚)
+
 **出版信息**：Information Science Reference • 版权 2013 • 351 页 • 精装 (ISBN: 9781466640306) • US $195.00 (我方价格)
 
-##### IT Security Governance Innovations Theory and Research
-**作者**：Daniel Mellado (西班牙税务局, 西班牙), Luis Enrique Sánchez (卡斯蒂利亚-拉曼查大学, 西班牙), Eduardo Fernández-Medina (卡斯蒂利亚-拉曼查大学, 西班牙), Mario G. Piattini (卡斯蒂利亚-拉曼查大学, 西班牙)  
+---
+
+### IT Security Governance Innovations Theory and Research
+
+**作者**：Daniel Mellado (西班牙税务局, 西班牙), Luis Enrique Sánchez (卡斯蒂利亚-拉曼查大学, 西班牙), Eduardo Fernández-Medina (卡斯蒂利亚-拉曼查大学, 西班牙), Mario G. Piattini (卡斯蒂利亚-拉曼查大学, 西班牙)
+
 **出版信息**：Information Science Reference • 版权 2013 • 373 页 • 精装 (ISBN: 9781466620834) • US $195.00 (我方价格)
 
-##### Threats, Countermeasures, and Advances in Applied Information Security
-**作者**：Manish Gupta (纽约州立大学布法罗分校, 美国), John Walp (M&T 银行公司, 美国), Raj Sharman (纽约州立大学, 美国)  
+---
+
+### Threats, Countermeasures, and Advances in Applied Information Security
+
+**作者**：Manish Gupta (纽约州立大学布法罗分校, 美国), John Walp (M&T 银行公司, 美国), Raj Sharman (纽约州立大学, 美国)
+
 **出版信息**：Information Science Reference • 版权 2012 • 319 页 • 精装 (ISBN: 9781466609785) • US $195.00 (我方价格)
 
-##### Investigating Cyber Law and Cyber Ethics Issues, Impacts and Practices
-**作者**：Alfreda Dudley (陶森大学, 美国), James Braman (陶森大学, 美国), Giovanni Vincenti (陶森大学, 美国)  
+---
+
+### Investigating Cyber Law and Cyber Ethics Issues, Impacts and Practices
+
+**作者**：Alfreda Dudley (陶森大学, 美国), James Braman (陶森大学, 美国), Giovanni Vincenti (陶森大学, 美国)
+
 **出版信息**：Information Science Reference • 版权 2012 • 343 页 • 精装 (ISBN: 9781613501320) • US $195.00 (我方价格)
 
-##### Information Assurance and Security Ethics in Complex Systems Interdisciplinary Perspectives
-**作者**：Melissa Jane Dark (普渡大学, 美国)  
+---
+
+### Information Assurance and Security Ethics in Complex Systems Interdisciplinary Perspectives
+
+**作者**：Melissa Jane Dark (普渡大学, 美国)
+
 **出版信息**：Information Science Reference • 版权 2011 • 306 页 • 精装 (ISBN: 9781616922450) • US $180.00 (我方价格)
 
-##### Chaos Synchronization and Cryptography for Secure Communications Applications for Encryption
-**作者**：Santo Banerjee (都灵理工大学, 意大利)  
+---
+
+### Chaos Synchronization and Cryptography for Secure Communications Applications for Encryption
+
+**作者**：Santo Banerjee (都灵理工大学, 意大利)
+
 **出版信息**：Information Science Reference • 版权 2011 • 596 页 • 精装 (ISBN: 9781615207374) • US $180.00 (我方价格)
 
-##### Technoethics and the Evolving Knowledge Society Ethical Issues in Technological Design, Research, Development, and Innovation
-**作者**：Rocci Luppicini (渥太华大学, 加拿大)  
+---
+
+### Technoethics and the Evolving Knowledge Society Ethical Issues in Technological Design, Research, Development, and Innovation
+
+**作者**：Rocci Luppicini (渥太华大学, 加拿大)
+
 **出版信息**：Information Science Reference • 版权 2010 • 323 页 • 精装 (ISBN: 9781605669526) • US $180.00 (我方价格)
 
-##### Collaborative Computer Security and Trust Management
-**作者**：Jean-Marc Seigneur (日内瓦大学, 瑞士), Adam Slagell (国家超级计算应用中心, 美国)  
+---
+
+### Collaborative Computer Security and Trust Management
+
+**作者**：Jean-Marc Seigneur (日内瓦大学, 瑞士), Adam Slagell (国家超级计算应用中心, 美国)
+
 **出版信息**：Information Science Reference • 版权 2010 • 317 页 • 精装 (ISBN: 9781605664149) • US $180.00 (我方价格)
 
----
+
 
 ![IGI_Logo](img/IGI_Logo.png)
 
@@ -512,104 +615,67 @@
 - Jie Wu, 天普大学, 美国
 - Shingo Yamaguchi, 山口大学, 日本
 
-
-
-
-
-
-###### 简介
+### 简介
 
 随着高端数据流设备的改进，以及物联网、无线传感器网络、云计算等技术范式的发展，数据生产源呈现显著增长。多媒体在信息与通信技术（ICT）领域取得了重大突破。伴随这一突破的是海量信息在互联网上的计算设备间生成与传输。消费类应用、娱乐、医疗保健和智慧城市等应用领域中，多媒体方面发挥着至关重要的作用。这些应用伴随着参与实体间更高的移动性和交互性。然而，这些信息（包括信用卡信息和商业机密）通常具有机密性质，需要高端防护以抵御恶意用户或对手。网络攻击已成为全球个人和组织的关键关切，因为它们可能在财务和其他方面造成巨大损失。不安全的信道使得这些信息容易遭受身份盗窃、版权和所有权侵犯、机密性泄露等攻击。机密信息在不同应用中暴露给恶意用户是一个重大关切。因此，建立充分的安全措施以保护敏感信息，并识别和评估安全挑战，已成为必然。
 
 因此，《多媒体网络安全研究手册》为理解多媒体安全领域的最新进展和研究发现提供了全面的解决方案。此外，本书还将呈现网络安全的基础知识，作为学习如何保护机密多媒体信息免受对手侵害的第一步。就所涵盖的概念、开放研究挑战、各种解决方案和研究洞见而言，本书将对读者大有裨益。它强调将关注点聚焦于快速演变且至关重要的网络世界，并开发潜在解决方案以应对相关的安全挑战。本书的主题涵盖了多媒体网络安全的基础、技术、挑战和应用。它通过示例、模型和术语阐释了底层概念，将吸引读者深入了解极具信息量的内容。此外，本书还涵盖了该领域的当前趋势和未来研究方向。本书适合寻求在网络安全、多媒体安全、IT 安全、应急响应、网络管理等领域开展工作的教师、科学家、研究人员、学者和专业人士。
 
-#### 章节概览
+### 章节概览
 
 本手册包含涉及多媒体网络安全不同方面的章节。这些方面包括多媒体加密、多媒体压缩、多媒体水印、多媒体取证、多媒体移动设备认证、云中多媒体数据隐私保护的匿名认证、在线社交网络（OSN）嵌入多媒体内容的安全、医学图像认证、多媒体数据库、医学中的多媒体应用、云计算环境中的多媒体安全、消费类应用的多媒体安全、多媒体软计算技术、人类行为识别、云计算中具有成本效益自动扩缩容的容器编排、用于步态识别的深度学习、基于 USRP 的安全数据传输、用户认证、基于默克尔树的可视区块链设计与实现、火焰识别、基于网络的 Mirai 僵尸网络检测、密码安全。本手册共组织为 17 章。
 
-##### 第 1 章：多媒体压缩综述
+#### 第 1 章：多媒体压缩综述
 
 第 1 章旨在提供一份更新的多媒体压缩综述，展示并探讨其成功关联，附带简明的书目背景，对两种技术的潜力进行分类与综合。
 
-##### 第 2 章：持续自适应认证系统
+#### 第 2 章：持续自适应认证系统
 
 在第 2 章中，作者提出了一种基于异常检测的机器学习技术的持续自适应认证系统。应用使用情况和移动设备的位置被用于检测用户与设备交互时的异常行为。所提系统通过模式的插入和消除，提供了对行为变化的适应性。最后，概念验证和若干实验证明了该工作在设计和实现过程中决策的合理性，并展示了其适用性和性能。
 
-##### 第 3 章：云中隐私保护的匿名认证
+#### 第 3 章：云中隐私保护的匿名认证
 
 云计算技术为用户提供了节省成本和服务灵活性的优势。随着多媒体数据的爆发式增长，越来越多的数据所有者将其个人多媒体数据外包到云端。同时，一些计算开销大的任务也由云服务器承担。然而，外包的多媒体数据及其应用可能会泄露数据所有者的私人信息，因为数据所有者失去了对数据的控制。最近，这一想法激发了针对外包多媒体数据的隐私保护可逆数据隐藏的新研究兴趣。第 3 章提出匿名认证方案，作为云计算专业人员采用的最相关、适用和恰当的技术，以消除与隐私风险和挑战相关的风险。
 
-##### 第 4 章：多媒体水印技术综述
+#### 第 4 章：多媒体水印技术综述
 
 在第 4 章中，基于鲁棒性和嵌入容量对近期多媒体水印技术进行了综述。此外，本文还介绍了多媒体水印技术的特性、应用及攻击手段。
 
-##### 第 5 章：基于 DWT 的水印技术用于版权保护
+#### 第 5 章：基于 DWT 的水印技术用于版权保护
 
 为了使水印过程更加有效，内容在嵌入图像前先进行加密。选定图像根据轴选择（即 X 方向和 Y 方向）通过低通和高通滤波器。基于方法选择，图像的整体频带被分解为四个不同的子频带，称为 `LL`、`LH`、`HL` 和 `HH`。其中低低频（`LL`）包含最低频率分量，高高频（`HH`）包含任何图像的最高频率分量。在第 5 章提出的方法中，`LL` 还被分解为四个不同区域，并再次分解了二级 `LL`。`DWT` 在三级提供水印嵌入。为了评估和识别水印过程的有效性，作者在所提模型中评估了 `PSNR`（峰值信噪比）和 `MSE`（均方误差）值。另一个有效指标即 `NCC`（归一化相关系数）用于将提取的水印与原始水印进行匹配。通过应用此过程，借助 `DWT` 实现了图像版权保护。作者还为视频内容实现了类似应用，通过将视频内容分解为若干不同帧，用于社交网络平台上的共享。
 
-##### 第 6 章：基于整数变换的医学图像水印技术
+#### 第 6 章：基于整数变换的医学图像水印技术
 
 第 6 章提出了一种基于整数变换的水印方案，用于数字眼底图像认证。这属于医学多媒体应用范畴。本章从水印图像认证和数字眼底图像介绍入手。识别并强调了开发眼底图像水印方案的关键需求及其挑战。本章描述了基于整数变换的拟议水印方案。实验结果强调了该方案在满足关键需求方面的能力及其达成情况。同时，也总结了详细结果。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ---
 
 ### 作者信息
 
-*   **Brij B. Gupta**  
-    National Institute of Technology, Kurukshetra, India
+**Brij B. Gupta**  
+National Institute of Technology, Kurukshetra, India
 
-*   **Deepak Gupta**  
-    LoginRadius Inc., Canada
+**Deepak Gupta**  
+LoginRadius Inc., Canada
 
-*   **日期**: December 5, 2019
-
-
-
-
+**日期**: December 5, 2019
 
 许多人为《多媒体网络安全研究手册》做出了巨大贡献。我们作为编辑，要感谢他们所有人为提高本手册质量所提供的宝贵帮助和慷慨建议。怀着感激之情，我们想逐一介绍他们。首先提及的是本手册每一章的作者和审稿人。没有他们卓越的专业知识、建设性的审阅和辛勤的努力，这本全面的手册将变成一本没有内容的书。其次提及的是 IGI Global 的工作人员和开发团队，感谢他们持续的鼓励、持续的协助和不知疲倦的支持。没有他们的技术支持，这本手册无法完成。第三提及的是编辑的家人，感谢他们不仅为此项工作，而且贯穿我们一生，成为持续的爱、无条件的支持和祈祷的源泉。最后但同样重要，我们衷心感谢全能的上帝赋予我们面对生活复杂性并完成这项工作的勇气。
 
 #### 第 1 章
 
-*   **Reinaldo Padilha França**  
-    坎皮纳斯州立大学 (UNICAMP)，巴西
+**Reinaldo Padilha França**  
+坎皮纳斯州立大学 (UNICAMP)，巴西
 
-*   **Yuzo Iano**  
-    坎皮纳斯州立大学 (UNICAMP)，巴西
+**Yuzo Iano**  
+坎皮纳斯州立大学 (UNICAMP)，巴西
 
-*   **Ana Carolina Borges Monteiro**  
-    坎皮纳斯州立大学 (UNICAMP)，巴西
+**Ana Carolina Borges Monteiro**  
+坎皮纳斯州立大学 (UNICAMP)，巴西
 
-*   **Rangel Arthur**  
-    坎皮纳斯州立大学 (UNICAMP) 技术学院 (FT)，巴西
+**Rangel Arthur**  
+坎皮纳斯州立大学 (UNICAMP) 技术学院 (FT)，巴西
 
 ##### 摘要
 
@@ -631,17 +697,13 @@
 
 事实上，多媒体压缩技术允许您更高效地表示信息，减少所占用的大量存储空间，从而减少在网络和互联网上传输所消耗的带宽。因此，本章旨在提供多媒体压缩的最新综述，展示并探讨其成功关联，并附有简明的文献背景，对这两种技术的潜力进行分类和综合。
 
-####### 方法论
-
-
-
-
+##### 方法论
 
 ###### 研究综述
 
 本研究基于 66 篇涉及多媒体和多媒体压缩主题的科学文章和书籍，主要探讨了历史回顾和相关技术的适用性。这些文献的分析依据为发表日期在 5 年以内，重点关注 IEEE 和 Google Scholar 等知名数据库中的出版物和索引。
 
-########## 结果
+###### 结果
 
 随着技术进步和手机、平板电脑、计算机等产品的普及，传输和存储的信息量（如图像、语音和视频）不断增长。因此，通信网络的带宽和/或存储容量需求需要最小化。鉴于此，信号需要高效编码以适应传输信道限制和存储内存限制。高速信息和通信系统的技术发展促使分布式系统领域出现了新应用。这一背景下的主要趋势之一是将文本、语音、图像和视频等不同类型的媒体集成到广泛的分布式计算应用中（如远程教学、电子出版、协同工作，以及目前的娱乐传播）（Hashem et al., 2015; Jeschke et al., 2017）。
 
@@ -651,274 +713,260 @@
 
 多媒体数据具有时间维度，即必须以固定速率传输、处理和呈现，其处理和通信必须满足实时要求，多媒体应用使用多种媒体类型，必须保持媒体间的时空关系。多媒体数据量大，必须压缩，需要高速网络和强大计算机。尽管多媒体数据缺乏明显的语法和语义，传统数据库无法有效支持多媒体数据，因此需要索引、检索和识别多媒体信息的技术。总体而言，在当今现代世界，多媒体广泛存在于交互式互联网应用和娱乐应用中，此类应用要求对非常规对象进行编码、存储和操作、长对象操作、连续数据传输和高数据速率，以及对数据的同步访问（Ohm, 2015）。
 
-####### 数据压缩
+##### 数据压缩
 
 计算机上的文件大小以 Bit、Byte、Kilobyte、Megabyte、Gigabyte 表示，目前 Terabyte 也很常见（均为 1024 的倍数）。通常，文本文件比图像、视频和声音文件小得多，因为后者在原始格式下非常庞大。创建后，我们必须存储它们，无论是为了本地打印还是传输，都需要合适的介质，如 CD 和 DVD。但图像和视频需要大量数据来表示/存储，并需要大带宽来传输。因此，数据压缩对于使信息占用可接受的磁盘空间并以合理的传输速率通过网络传输至关重要。如果没有近年来压缩算法及其实现的显著进步，就不会有今天的多媒体（Sayood, 2017; Cato, 2015）。
+
+
 
 另一个问题是为互联网使用准备这些数据，数据需要以一定速度传输并保持最低性能，特别是视频，我们希望获得实时观看的感知，最广泛使用的解决方案之一是数据压缩。顾名思义，压缩文件意味着将其缩小、变轻，为了实现这一点，我们必须使用消除冗余的技术。多媒体（音频和视频）压缩是使多媒体文件能在 PC、手机和平板电脑上播放和存储的技术。我们可以看到压缩在任何多媒体应用用户生活中的巨大重要性，包括一些当代且广泛使用的互联网应用，通常依赖某种流式系统，甚至数字游戏播放器。尽管通信和计算能力不断扩展，但对新多媒体应用的需求增长迅速，传输和存储成本趋于降低。然而，存储设备的速度仍然限制了时变媒体（特别是视频）的呈现，因此有必要制定标准以促进互操作性和硬件实现（ZainEldin et al., 2015; Berres et al., 2017）。
 
 数据压缩是对特定信息集进行编码，使生成的代码比源数据更小。压缩技术的使用对多媒体应用显然至关重要。有两个原则：压缩原则，指对数据集编码以生成比源数据更小的最终代码；数据冗余（或相关性）消除原则，即利用人类解读数据的方式，如相邻音频采样、静音消除、数字图像中扫描或采样行的相似性、视频中区域的相似性。因为多媒体对象可能需要不可用的网络带宽，即由于传输的数据量（或连接时间），网络上发送的数据越少，成本越低。多媒体数据压缩技术基本上探索两个因素：数据冗余和人类感知特性（Gupta et al., 2016; Wu et al., 2017）。
 
-
-
-
-
-######## 数据冗余
+## 数据冗余
 
 数据冗余涉及后续的音频和图像采样（用于视频）并非完全不同。因此，数字音频是一系列采样值；数字图像是采样值（像素）的数组，而数字视频是以特定速率呈现的一系列图像。由于序列或矩阵中相邻值通常以某种方式相关。这种相关性称为冗余。移除这种冗余不会改变数据的含义；仅仅是消除了数据复制（Wu 等，2017；Terplan & Morreale，2018）。
 
-######### 时间冗余
+### 时间冗余
 
 时间冗余在于利用构成动态图像的连续帧之间的相似性。一个实际的例子是高尔夫球手击球的图像，在发球后，连续帧之间的差异仅在于任意给定时刻球的位置。这样，算法将发送一帧完整图像的信息加上有效的动态图像位移矢量。运动补偿基于后续图像之间的相似性，仅允许传输差异。这种方法可以理解为用一幅图像减去其前一帧（Wu 等，2017；Wien，2015）。
 
-######### 空间冗余
+### 空间冗余
 
 另一方面，空间冗余或空间频率在于图像相邻像素的相似性。一个可能的类比是飞机在无云的天空中飞行，需要传输的相关信息是飞机，而背景是蓝色图像中内容实际上均匀的部分。基于这一物理概念，即消除高频不会导致图像出现明显的质量下降（Wu 等，2017；Rasch 等，2018）。
 
-######## 熵减少
+## 熵减少
 
 虽然“压缩”一词并不意味着损失，然而，在计算机科学中，该表达指的是外部因素作用使系统压力增加的过程。
 
-在熵减少中，使用的算法负责寻找最佳解决方案，即尽可能移除更多比特，以保留“想要展示”的内容。在这种压缩类型中，质量通常会妥协，因为从原始文件中提取了比特，作者根据需要应用压缩比，最高可达 1:200。这是互联网兼容性最常用的类型；一个非常常见的例子是 JPG 格式（Sikora，2018；Wang & Yao，2016；Wu 等，2015）。
+在熵减少中，使用的算法负责寻找最佳解决方案，即尽可能移除更多比特，以保留“想要展示”的内容。在这种压缩类型中，质量通常会妥协，因为从原始文件中提取了比特，作者根据需要应用压缩比，最高可达 1:200。这是互联网兼容性最常用的类型；一个非常常见的例子是 `JPG` 格式（Sikora，2018；Wang & Yao，2016；Wu 等，2015）。
 
-######## 冗余减少
+## 冗余减少
 
-然而在冗余减少中，数据仅被压缩，算法消除冗余。当需要保持质量时使用它们，即数据被重新排列，可还原为其原始形式。这些算法通过重新排列比特工作，例如存在 `zzzzzzzz`（8 个相等的字节）的地方，现在存储为 `8z`（2 个字节）。压缩比在 1:2 到 1:4 之间，因此文件体积缩减不大；实际应用于 ZIP 格式（Wang & Yao，2016；Joshi 等，2017）。
+然而在冗余减少中，数据仅被压缩，算法消除冗余。当需要保持质量时使用它们，即数据被重新排列，可还原为其原始形式。这些算法通过重新排列比特工作，例如存在 `zzzzzzzz`（8 个相等的字节）的地方，现在存储为 `8z`（2 个字节）。压缩比在 1:2 到 1:4 之间，因此文件体积缩减不大；实际应用于 `ZIP` 格式（Wang & Yao，2016；Joshi 等，2017）。
 
-######## 压缩技术
+## 压缩技术
 
-压缩基本上是改变某些数据的表示形式以减小其体积，且不损失质量，或者即使存在损失也是极小的。因此，当数据减少导致信息丢失时，会针对图像、音频和视频等特定信号使用一些技术；即感知无损压缩，人类无法察觉（MP3）。有损压缩旨在使原始数据的一个版本能被检索出来，并被用户感知为与原始数据足够相似，因为人眼和耳朵无法察觉信号质量的微小损失。如果信息压缩后能被精确重构，则称该压缩技术为无损。这种技术必须用于压缩法律或医疗程序和文档。无损压缩技术并非新想法；它们被广泛使用。这些技术仅利用数据统计（数据冗余），压缩比通常较低。这类压缩的一个例子是用特殊标志和出现次数替换连续的空格字符或零（Gregor 等，2016）。
+压缩基本上是改变某些数据的表示形式以减小其体积，且不损失质量，或者即使存在损失也是极小的。因此，当数据减少导致信息丢失时，会针对图像、音频和视频等特定信号使用一些技术；即感知无损压缩，人类无法察觉（`MP3`）。有损压缩旨在使原始数据的一个版本能被检索出来，并被用户感知为与原始数据足够相似，因为人眼和耳朵无法察觉信号质量的微小损失。如果信息压缩后能被精确重构，则称该压缩技术为无损。这种技术必须用于压缩法律或医疗程序和文档。无损压缩技术并非新想法；它们被广泛使用。这些技术仅利用数据统计（数据冗余），压缩比通常较低。这类压缩的一个例子是用特殊标志和出现次数替换连续的空格字符或零（Gregor 等，2016）。
 
-无损技术的例子包括算术编码、霍夫曼编码和游程编码。有损压缩技术用于音频、图像和视频压缩，这些场景下错误和损失是可容忍的。这些技术通常基于数据统计和人类感知特性。借助它们，可以获得较高的压缩比。作为无损技术的例子（用于音频和视频编码）有游程编码，基本上是一行值相等的符号；霍夫曼编码是一种压缩文件的算法，特别是文本文件，给更频繁的符号分配较短的码，给较少频繁的符号分配较长的码，需记住码是一组比特；Lempel-Ziv，是由 Terry Welch 开发的 Lempel-Ziv 变体，实现于 GIF 格式用于图像存储（Hidayat 等，2018）。
+无损技术的例子包括算术编码、`霍夫曼编码`和`游程编码`。有损压缩技术用于音频、图像和视频压缩，这些场景下错误和损失是可容忍的。这些技术通常基于数据统计和人类感知特性。借助它们，可以获得较高的压缩比。作为无损技术的例子（用于音频和视频编码）有`游程编码`，基本上是一行值相等的符号；`霍夫曼编码`是一种压缩文件的算法，特别是文本文件，给更频繁的符号分配较短的码，给较少频繁的符号分配较长的码，需记住码是一组比特；`Lempel-Ziv`，是由 Terry Welch 开发的 `Lempel-Ziv` 变体，实现于 `GIF` 格式用于图像存储（Hidayat 等，2018）。
 
-作为有损技术的例子，有小波变换，是一种能够分解和描述或表示另一个函数（或数据集）的函数，后者原本在时域（或另一个或多个自变量，如空间）中描述，以便我们可以在不同的频率和时间尺度上分析这个其他函数；矢量量化可视为标量量化在多维空间中的扩展，基于香农的速率-失真理论，根据该理论，对采样块（即矢量）进行编码比对单个（即标量）采样进行编码能获得更好的性能，量化是信号压缩系统中的相关技术。其目的是将信号的采样值数字化。同样，按传输数据量（或连接时间）收费的网络用户，将从网络上发送数据量的减少中受益（Chui，2016；Pagès，2015）。
+作为有损技术的例子，有`小波变换`，是一种能够分解和描述或表示另一个函数（或数据集）的函数，后者原本在时域（或另一个或多个自变量，如空间）中描述，以便我们可以在不同的频率和时间尺度上分析这个其他函数；`矢量量化`可视为标量量化在多维空间中的扩展，基于香农的速率-失真理论，根据该理论，对采样块（即矢量）进行编码比对单个（即标量）采样进行编码能获得更好的性能，量化是信号压缩系统中的相关技术。其目的是将信号的采样值数字化。同样，按传输数据量（或连接时间）收费的网络用户，将从网络上发送数据量的减少中受益（Chui，2016；Pagès，2015）。
 
-######### 域减少
+### 域减少
 
-域减少简单地丢弃少量采样。一个应用示例是数字视频标准，采用 4:2:2、4:2:0 格式，其中亮度信息比色度更重要，因此色度采样数量可以较少；类似地，图像压缩通过增加像素大小来降低几何分辨率；也应用于数字视频标准。
+域减少简单地丢弃少量采样。一个应用示例是数字视频标准，采用 `4:2:2`、`4:2:0` 格式，其中亮度信息比色度更重要，因此色度采样数量可以较少；类似地，图像压缩通过增加像素大小来降低几何分辨率；也应用于数字视频标准。
 
-######### 量化空间减少
+### 量化空间减少
 
-量化空间减少减少每个采样的比特数，在图像压缩中有实际应用，其中原始图像每像素 24 位（1600 万色）可压缩为每像素 8 位（256 色），通过在代码之间建立映射来实现（Onggosanusi 等，2015）。
+量化空间减少减少每个采样的比特数，在图像压缩中有实际应用，其中原始图像每像素 `24` 位（`1600` 万色）可压缩为每像素 `8` 位（`256` 色），通过在代码之间建立映射来实现（Onggosanusi 等，2015）。
 
-######### 差分编码
+### 差分编码
 
-差分编码或相对编码，当一个采样的幅度很大，但连续采样之间的幅度差异相对较小时，不是编码每个采样的值，而是编码其值与前一个值的差值，使用更少的比特并获得相同的误差。在差分脉冲编码调制（DPCM）和自适应差分脉冲编码调制（ADPCM）等实际传输应用中使用（Wu & Rao，2017）。
+差分编码或相对编码，当一个采样的幅度很大，但连续采样之间的幅度差异相对较小时，不是编码每个采样的值，而是编码其值与前一个值的差值，使用更少的比特并获得相同的误差。在差分脉冲编码调制（`DPCM`）和自适应差分脉冲编码调制（`ADPCM`）等实际传输应用中使用（Wu & Rao，2017）。
 
-######### 子带编码
+### 子带编码
 
-子带编码是将信号通过带划分为若干个分别编码的子带，更精确地处理信号中最重要的子带。例如，语音信号，如 Hz（音质和音色及每采样 8 位，低信息量为每采样 2 位，具有识别度和可懂度及更大信息内容如金属音，每采样 3 位）（Aydin & Foroosh，2017）。
+子带编码是将信号通过带划分为若干个分别编码的子带，更精确地处理信号中最重要的子带。例如，语音信号，如 `Hz`（音质和音色及每采样 `8` 位，低信息量为每采样 `2` 位，具有识别度和可懂度及更大信息内容如金属音，每采样 `3` 位）（Aydin & Foroosh，2017）。
 
-######### 变换编码
+### 变换编码
 
-变换编码将数据变换到另一个数学域，在该域中可应用最佳压缩技术，即傅里叶变换将时域信号变换到频域。然而，必须存在逆变换，其中有效的数据约简变换为 DCT - 离散余弦变换（JPEG）和 FFT - 快速傅里叶变换（MPEG 音频）（Sikora，2018）。
+变换编码将数据变换到另一个数学域，在该域中可应用最佳压缩技术，即傅里叶变换将时域信号变换到频域。然而，必须存在逆变换，其中有效的数据约简变换为 `DCT` - 离散余弦变换（`JPEG`）和 `FFT` - 快速傅里叶变换（`MPEG` 音频）（Sikora，2018）。
 
-
-
-
-
-######## 向量量化
+## 向量量化
 
 向量量化构建一个表（或使用预定义的表），其中包含出现频率最高的值的集合（默认值）。对于每个块，都会查询该表以找到最相似的模式，因此每个块都用向量的索引进行编码。解码器必须知道相同的表，并使用索引来生成原始数据流的近似值（Guo 等，2017）。
 
-######## 多媒体数据压缩
+## 多媒体数据压缩
 
 多媒体中使用的大多数文件都包含重复信息，压缩所做的无非是组织并消除这些冗余。多媒体数据压缩的主要目标是减少存储空间以及减少传输时间。
 
-######## 音频
+## 音频
 
-######### 预测编码与静音移除
+### 预测编码与静音移除
 
 在许多情况下，相邻的音频采样是相似的，未来的采样并不完全不同于过去的采样；下一个值可以根据当前值进行预测。利用这一音频特性的压缩技术称为**预测编码**。预测压缩技术基于这样一个事实：可以存储前一个采样并利用它来帮助构建下一个采样。
 
 在数字语音的情况下，存在另一种类型的冗余，假设你不会一直说话。在信息爆发之间，存在静默时刻。在知道该时段得以保留的前提下，这段静默期可以在不丢失信息的情况下被抑制。这些压缩技术称为**静音移除**（Gibson, 2016）。
 
-######### 采样与量化
+### 采样与量化
 
-声音经过滤波、采样和量化后，便处于数字格式，而且是人耳可听的，因此通常被称为音频。采样过程以称为**采样频率**的频率观察原始（模拟）声音信号，该频率决定了在 1 秒间隔内将进行多少次（等间距）观察。此过程用等间距的值对 x 轴进行离散化。
+声音经过滤波、采样和量化后，便处于数字格式，而且是人耳可听的，因此通常被称为音频。采样过程以称为**采样频率**的频率观察原始（模拟）声音信号，该频率决定了在 `1` 秒间隔内将进行多少次（等间距）观察。此过程用等间距的值对 x 轴进行离散化。
 
-根据**奈奎斯特-香农采样定理**，要使采样信号能够完美重建，采样频率必须等于或大于组成原始信号的最高频率的两倍。由于人耳可听频谱范围在 20 Hz 到 20 kHz 之间，因此采样频率必须至少为 40 kHz，以便将原本限制在该频谱范围内的信号完美重建。利用这一原理，CD 使用 **44100 Hz**，在此介质中满足这一条件。请注意，采样频率越高，存储该信号所需的内存空间就越大。
+根据**奈奎斯特-香农采样定理**，要使采样信号能够完美重建，采样频率必须等于或大于组成原始信号的最高频率的两倍。由于人耳可听频谱范围在 `20 Hz` 到 `20 kHz` 之间，因此采样频率必须至少为 `40 kHz`，以便将原本限制在该频谱范围内的信号完美重建。利用这一原理，CD 使用 **`44100 Hz`**，在此介质中满足这一条件。请注意，采样频率越高，存储该信号所需的内存空间就越大。
 
-量化过程则对 y 轴进行离散化，从而采用一组有限的可能值供每个音频采样假定。决定不同可能值数量的是分辨率位深；**2 位**允许使用 **4** 个不同的值；**3 位**允许 **8** 个值；**4 位**允许 **16** 个值，以此类推（Sayood, 2017; Chion, 2019; Sanders, 2017）。
+量化过程则对 y 轴进行离散化，从而采用一组有限的可能值供每个音频采样假定。决定不同可能值数量的是分辨率位深；**`2 位`**允许使用 **`4`** 个不同的值；**`3 位`**允许 **`8`** 个值；**`4 位`**允许 **`16`** 个值，以此类推（Sayood, 2017; Chion, 2019; Sanders, 2017）。
 
-######### CD 音频规格
+### CD 音频规格
 
-对于 CD，使用 **16 位**，即每个采样有 **65536** 个不同的可取值。仍按 **44100 Hz** 采样频率和 **16 位** 位深计算，单声道音频信号每秒将需要 **705,600 位**（或 **88200 字节**）。对于一首 **5 分钟的歌曲**（或 **300 秒**），总计将是 **26,460,000 字节**，即每个音频通道约消耗 **25.2 兆字节**。由于 CD 有 **2 个音频通道**（即立体声），一首歌将占用 **50.4 MB**。
+对于 CD，使用 **`16 位`**，即每个采样有 **`65536`** 个不同的可取值。仍按 **`44100 Hz`** 采样频率和 **`16 位`** 位深计算，单声道音频信号每秒将需要 **`705,600 位`**（或 **`88200 字节`**）。对于一首 **`5 分钟的歌曲`**（或 **`300 秒`**），总计将是 **`26,460,000 字节`**，即每个音频通道约消耗 **`25.2 兆字节`**。由于 CD 有 **`2 个音频通道`**（即立体声），一首歌将占用 **`50.4 MB`**。
 
-如果我们想基于比特率进行分析，其度量单位通常以 **kbps** 给出，考虑到该音频每秒消耗的千比特数，每个音轨的结果为 **705.600 位/秒**。此时比特率约为 **1411 kbps**。请注意，比特率会干扰所听音频的质量，这一指标与用户收听音频时的体验质量相关（Sayood, 2017; Chion, 2019; Sanders, 2017）。
+如果我们想基于比特率进行分析，其度量单位通常以 **`kbps`** 给出，考虑到该音频每秒消耗的千比特数，每个音轨的结果为 **`705.600 位/秒`**。此时比特率约为 **`1411 kbps`**。请注意，比特率会干扰所听音频的质量，这一指标与用户收听音频时的体验质量相关（Sayood, 2017; Chion, 2019; Sanders, 2017）。
 
-######### 流媒体服务与压缩效率
+### 流媒体服务与压缩效率
 
-流媒体服务与上述场景完全相关，免费计划用户可访问约 **128 kbps** 比特率的音乐，而付费用户通常可访问 **256 kbps**、**320 kbps** 或高达 **1411 kbps** 的音乐。然而，对于绝大多数非发烧友用户来说，**128 kbps** 的音乐已经足够好听且令人愉悦。
+流媒体服务与上述场景完全相关，免费计划用户可访问约 **`128 kbps`** 比特率的音乐，而付费用户通常可访问 **`256 kbps`**、**`320 kbps`** 或高达 **`1411 kbps`** 的音乐。然而，对于绝大多数非发烧友用户来说，**`128 kbps`** 的音乐已经足够好听且令人愉悦。
 
 值得注意的是，确保流媒体服务运行所需的最小理论带宽必须高于音频比特率。需要额外带宽（超出服务比特率的部分）来妥善使用**缓冲区**，可用的额外带宽越多（同时也遵守服务器限制），缓冲区填充得就越快。
 
-**MP3** 并非唯一存在的压缩音乐格式，但无疑是最著名的。如果使用 **MP3** 以 **128 kbps** 的恒定速率压缩相同的 **5 分钟白噪音立体声** 音频，结果将是一个仅略大于 **4.5 MB** 的小文件。基于 **WAV** 文件占用的 **50.4 MB** 空间，此 **MP3** 版本实现了约 **91% 的压缩效率**。从计算机网络的角度来看，关注比特率可以更容易地理解这种压缩的重要性（Sayood, 2017; Chion, 2019; Sanders, 2017）。
+**`MP3`** 并非唯一存在的压缩音乐格式，但无疑是最著名的。如果使用 **`MP3`** 以 **`128 kbps`** 的恒定速率压缩相同的 **`5 分钟白噪音立体声`** 音频，结果将是一个仅略大于 **`4.5 MB`** 的小文件。基于 **`WAV`** 文件占用的 **`50.4 MB`** 空间，此 **`MP3`** 版本实现了约 **`91% 的压缩效率`**。从计算机网络的角度来看，关注比特率可以更容易地理解这种压缩的重要性（Sayood, 2017; Chion, 2019; Sanders, 2017）。
 
-######### 音频格式：有损与无损
+### 音频格式：有损与无损
 
-数字音乐随着时间的推移有了巨大发展。**MP3** 文件是使用最广泛的音频文件，但还有更多格式正变得越来越流行，如 **FLAC**、**WAV** 和 **AAC**。在这些文件中，有**有损格式**，从 CD 导入到计算机时会丢失数据。这一压缩过程的好处是文件体积缩小。**MP3** 和 **AAC** 是此类格式的例子。
+数字音乐随着时间的推移有了巨大发展。**`MP3`** 文件是使用最广泛的音频文件，但还有更多格式正变得越来越流行，如 **`FLAC`**、**`WAV`** 和 **`AAC`**。在这些文件中，有**有损格式**，从 CD 导入到计算机时会丢失数据。这一压缩过程的好处是文件体积缩小。**`MP3`** 和 **`AAC`** 是此类格式的例子。
 
-也有**无损格式**，这些格式与 CD 相比不显示质量损失。然而，文件大小平均占用四倍以上的空间。此外，iPod 和 MP3 播放器不支持此类别中的主流音频格式（**FLAC** 和 **WAV**）（Dittmar, 2017; Kim & Rafii, 2018）。
+也有**无损格式**，这些格式与 CD 相比不显示质量损失。然而，文件大小平均占用四倍以上的空间。此外，iPod 和 MP3 播放器不支持此类别中的主流音频格式（**`FLAC`** 和 **`WAV`**）（Dittmar, 2017; Kim & Rafii, 2018）。
 
-######### MP3 与 AAC 对比
+### MP3 与 AAC 对比
 
-**MP3** 是互联网上的主要音频文件，并受所有音乐播放器支持。尽管它是有损文件，但如果 **MP3** 文件的比特率为 **224-320 kbps** 或 **192 kbps**，你几乎无法将其与 CD 区分开来。
+**`MP3`** 是互联网上的主要音频文件，并受所有音乐播放器支持。尽管它是有损文件，但如果 **`MP3`** 文件的比特率为 **`224-320 kbps`** 或 **`192 kbps`**，你几乎无法将其与 CD 区分开来。
 
-**AAC**（高级音频编码）得益于苹果而越来越流行。尽管 iPod 和 iPhone 支持 **MP3**，但它们的默认格式是 **AAC**。与 **MP3** 格式一样，**AAC** 格式也有数据丢失。
+**`AAC`**（高级音频编码）得益于苹果而越来越流行。尽管 iPod 和 iPhone 支持 **`MP3`**，但它们的默认格式是 **`AAC`**。与 **`MP3`** 格式一样，**`AAC`** 格式也有数据丢失。
 
-**MP3** 和 **AAC** 的区别在于 **MP3** 格式的采样频率为 **16 至 48 kHz**，而 **AAC** 为 **8 至 96 kHz**。**AAC** 的通道数也更多，**48** 个对比 **5.1**。**AAC** 的压缩比也能带来更高的质量和更小的文件（Britanak & Rao, 2018）。
+**`MP3`** 和 **`AAC`** 的区别在于 **`MP3`** 格式的采样频率为 **`16 至 48 kHz`**，而 **`AAC`** 为 **`8 至 96 kHz`**。**`AAC`** 的通道数也更多，**`48`** 个对比 **`5.1`**。**`AAC`** 的压缩比也能带来更高的质量和更小的文件（Britanak & Rao, 2018）。
 
+## 音频格式
 
+### FLAC
 
+`FLAC` 是 **Free Lossless Audio Codec**（免费无损音频编解码器）的首字母缩写，顾名思义，它是一种无损音频格式。这种格式已变得流行，被希望在电脑上保存 CD 收藏的用户所使用。已有支持此类文件的便携式播放器。任何人都可以自由使用 `FLAC`。
 
+### WAV
 
-######## 音频格式
+`WAV` 由微软公司创建，但也兼容 Macintosh。它包含与 `FLAC` 相同的质量，但作为一种鲜为人用的格式，其体积平均是 `FLAC` 文件的两倍。
 
-######### FLAC
+### MPEG-1（三层）
 
-FLAC 是 **Free Lossless Audio Codec**（免费无损音频编解码器）的首字母缩写，顾名思义，它是一种无损音频格式。这种格式已变得流行，被希望在电脑上保存 CD 收藏的用户所使用。已有支持此类文件的便携式播放器。任何人都可以自由使用 FLAC。
+`MPEG-1` 由 Fraunhofer IIS 研究所创建，对应一种三层压缩方案。音频数据压缩存在大量损失，仅受限于人耳预期的质量。默认压缩比为 `10:1`。
 
-######### WAV
+### HD-AAC
 
-WAV 由微软公司创建，但也兼容 Macintosh。它包含与 FLAC 相同的质量，但作为一种鲜为人用的格式，其体积平均是 FLAC 文件的两倍。
+`HD-AAC` 是 `AAC` 的继任者，为提取的音频文件提供高质量。该格式提供了新的音乐存储能力，因为它压缩率较低，且受 iPod 和手机支持。与 CD 相比（CD 采用 `16 位`压缩和 `44.1 kHz` 采样率），该格式提供了更好的质量。其优势在于保留了原曲的所有比特信息，得益于 `96 kHz` 采样率和 `24 位`压缩。
 
-######### MPEG-1（三层）
+### WMA
 
-MPEG-1 由 Fraunhofer IIS 研究所创建，对应一种三层压缩方案。音频数据压缩存在大量损失，仅受限于人耳预期的质量。默认压缩比为 10:1。
+`WMA` 是 **Windows Media Audio** 的首字母缩写，由微软创建。它允许创建比 `MP3` 小 `50%` 的文件，但会有轻微的质量损失（Britanak & Rao, 2018; Rai & Sathuvalli, 2017）。
 
-######### HD-AAC
+### MPEG-2
 
-HD-AAC 是 AAC 的继任者，为提取的音频文件提供高质量。该格式提供了新的音乐存储能力，因为它压缩率较低，且受 iPod 和手机支持。与 CD 相比（CD 采用 16 位压缩和 44.1 kHz 采样率），该格式提供了更好的质量。其优势在于保留了原曲的所有比特信息，得益于 96 kHz 采样率和 24 位压缩。
+`MPEG-2` 是一种高级音频编码格式，是 `MPEG` 最新的感知声音编码标准。它使用一种涉及众多技术的复杂编码系统，其中包括：霍夫曼编码；量化与缩放；`M/S` 矩阵；强度立体声；耦合通道；反向自适应预测；时域噪声整形；修正离散余弦变换；增益控制和混合滤波器组（多相正交滤波器）（Britanak & Rao, 2018; Rai & Sathuvalli, 2017; Cardozo et al., 2018）。
 
-######### WMA
+### VQF / TwinVQ
 
-WMA 是 **Windows Media Audio** 的首字母缩写，由微软创建。它允许创建比 MP3 小 50% 的文件，但会有轻微的质量损失（Britanak & Rao, 2018; Rai & Sathuvalli, 2017）。
+正如 `VQF` 格式一样，与 `MP3` 相比，编解码需要更快的计算机。**Transform-domain Weighted Interleave Vector Quantization (`VQF`)** 或 **`TwinVQ`** 是来自 YAMAHA 的专有音频压缩格式。由于 `VQF` 格式的高压缩比，最终文件大小比同质量的 `MP3` 文件小约 `30%`（以 `128kbps` 码率编码的 `MP3` 为基准）。在三种格式中，它具有最好的最终质量（最接近原版）。然而，其最大问题之一是存在多个直接不兼容的版本（显著的编码差异）。尽管质量较低，但 `MP3` 更受欢迎，因为可用的音乐和软件更多（Britanak & Rao, 2018; Rai & Sathuvalli, 2017; Cardozo et al., 2018）。
 
-######### MPEG-2
-
-MPEG-2 是一种高级音频编码格式，是 MPEG 最新的感知声音编码标准。它使用一种涉及众多技术的复杂编码系统，其中包括：霍夫曼编码；量化与缩放；M/S 矩阵；强度立体声；耦合通道；反向自适应预测；时域噪声整形；修正离散余弦变换；增益控制和混合滤波器组（多相正交滤波器）（Britanak & Rao, 2018; Rai & Sathuvalli, 2017; Cardozo et al., 2018）。
-
-######### VQF / TwinVQ
-
-正如 VQF 格式一样，与 MP3 相比，编解码需要更快的计算机。**Transform-domain Weighted Interleave Vector Quantization (VQF)** 或 **TwinVQ** 是来自 YAMAHA 的专有音频压缩格式。由于 VQF 格式的高压缩比，最终文件大小比同质量的 MP3 文件小约 30%（以 128kbps 码率编码的 MP3 为基准）。在三种格式中，它具有最好的最终质量（最接近原版）。然而，其最大问题之一是存在多个直接不兼容的版本（显著的编码差异）。尽管质量较低，但 MP3 更受欢迎，因为可用的音乐和软件更多（Britanak & Rao, 2018; Rai & Sathuvalli, 2017; Cardozo et al., 2018）。
-
-######## 音频编解码器
+## 音频编解码器
 
 音频编解码器是编码器与解码器（压缩器/解压缩器）的结合，用最少的比特量表示高质量音频信号，从而减少存储空间和带宽。在某些语境下，音频编解码器指声卡的硬件实现。按此用法，音频编解码器指将模拟音频信号编码的设备。
 
 根据压缩类型，分为**有损音频编解码器**和**无损音频编解码器**：
 
-- **有损音频编解码器**：编码声音，通过牺牲质量换取更高的压缩比。许多此类编解码器作用于 MP3、AC3 和 WMA 文件时质量损失可忽略不计。
-- **无损音频编解码器**：编码声音，压缩文件且不改变质量。此类编解码器生成的编码文件比原始文件小 2 到 3 倍。广播电台普遍使用，作用于 FLAC、Shorten、WavPack 文件（Hennequin et al., 2017, March）。
+- **有损音频编解码器**：编码声音，通过牺牲质量换取更高的压缩比。许多此类编解码器作用于 `MP3`、`AC3` 和 `WMA` 文件时质量损失可忽略不计。
+- **无损音频编解码器**：编码声音，压缩文件且不改变质量。此类编解码器生成的编码文件比原始文件小 `2` 到 `3` 倍。广播电台普遍使用，作用于 `FLAC`、`Shorten`、`WavPack` 文件（Hennequin et al., 2017, March）。
 
-############ 图像格式
+## 图像格式
 
-######### 图像基础
+### 图像基础
 
-图像可理解为像素数组。以 RGB（红、绿、蓝）模式为例，每个像素可用一个三维向量表示，每个分量对应一个颜色通道的值。通常使用 8 位色深，即每个像素的 3 个颜色通道各接受 0 到 255 之间的整数值。
+图像可理解为像素数组。以 `RGB`（红、绿、蓝）模式为例，每个像素可用一个三维向量表示，每个分量对应一个颜色通道的值。通常使用 `8 位`色深，即每个像素的 `3` 个颜色通道各接受 `0` 到 `255` 之间的整数值。
 
 在数字图像中，扫描线上的相邻采样点和相邻行上的相邻采样点是相似的。这种相似性称为**空间冗余**。可通过预测编码或其他编码技术去除。
 
-现代常规显示器普遍采用所谓的 **Full HD（或 FHD）**，分辨率为 1920x1080。该分辨率表示像素矩阵的大小：1920 列、1080 行。行数乘以列数得 2,073,600 个像素。按 8 位（1 字节）表示每个颜色通道计算，每个像素需 3 字节；一张 Full HD 图像约需 6,220,800 字节，即约 6 MB（Wu & Rao, 2017; Stearns & Hush, 2016）。
+现代常规显示器普遍采用所谓的 **Full HD（或 `FHD`）**，分辨率为 `1920x1080`。该分辨率表示像素矩阵的大小：`1920` 列、`1080` 行。行数乘以列数得 `2,073,600` 个像素。按 `8 位`（`1 字节`）表示每个颜色通道计算，每个像素需 `3 字节`；一张 Full HD 图像约需 `6,220,800 字节`，即约 `6 MB`（Wu & Rao, 2017; Stearns & Hush, 2016）。
 
-######### JPEG
+### JPEG
+
+
+
+# 图像文件格式
+
+## JPEG
 
 **JPEG（Joint Pictures Expert Group）** 是通过电子邮件发送图像的最佳格式。它诞生于 1983 年，最终成为最流行的互联网标准之一。JPEG（也称 JPG）文件体积相对其他格式较小，便于存储和分发。它将数据压缩得更小，但会导致图像质量损失，最常用于文件大小比最大图像质量更重要的场景（如网页、博客、电子邮件、相机存储卡等）（Wu & Rao, 2017; Stearns & Hush, 2016; Kaur & Choudhary, 2016）。
 
-######### GIF
+## GIF
 
 **GIF（Graphics Interchange Format）** 是互联网上另一种非常常见的格式。它体积轻巧，因动态摄影（动画 GIF）而闻名。推荐给需要在互联网上传播大量图像的人，因为它生成的文件很小；也适合不关心低色彩图像的人，因为 GIF 仅支持 256 色方案（8 位），所以不常用于照片。
 
 GIF 创建于 1987 年，由 CompuServe 在 8 位计算机视频早期设计，甚至早于 JPG，用于拨号调制解调器连接速度下的查看。它不适合 24 位彩色照片，因此不要将 GIF 用于当今的彩色照片，色彩非常有限。但 GIF 仍非常适合网络图形（色彩数量有限）。尽管因色彩数量少似乎受限，GIF 因其某些特性而被广泛使用。其用途主要在图标、插图（主要是黑白）和小动画。它还允许保存透明背景文件和无损压缩（Wu & Rao, 2017; Stearns & Hush, 2016; Kaur & Choudhary, 2016）。
 
-######### PNG
+## PNG
 
 **Portable Network Graphics (PNG)** 与 GIF 不同，支持更多颜色。它是 GIF 的竞争对手。1996 年出现，具备使 GIF 广受接受的特性：动画、透明背景和无损压缩（即使反复保存），支持数百万色而非仅 256 色，是照片的绝佳选择。
 
 PNG 的额外特性是 24 位 RGB 图像的透明度。通常 PNG 文件比 TIF 略小（两者均使用 LZW 进行无损压缩，但压缩类型不同），但 PNG 读写可能稍慢。它仍不如 TIF 或 JPG 广泛使用，但却是无损质量工作的另一个好选择（Wu & Rao, 2017; Stearns & Hush, 2016; Kaur & Choudhary, 2016）。
 
-######### BMP
+## BMP
 
 位图可支持数百万色并保留细节，但因不使用压缩，文件极大。若想给朋友发照片，请忘掉 Bitmap。该格式因文件未压缩，导致在互联网上传输图像缓慢。BMP 是一种历史格式，随 Windows 操作系统出现。BMP 图像范围从黑白（每像素 1 位）到 24 位色彩（1670 万色）（Wu & Rao, 2017; Stearns & Hush, 2016; Kaur & Choudhary, 2016）。
 
-
-
-
-
-######## 图像文件格式
-
-######### 标签图像文件格式 (TIFF)
+## 标签图像文件格式 (TIFF)
 
 标签图像文件格式 (TIFF) 最常被图像专业人士使用。它是大多数平面设计师用于编辑和打印的首选文件类型。它们几乎没有压缩或无压缩，且不丢失任何细节，尽管文件可能相当大。除网页外，TIF 是最通用的格式，因为某些浏览器不显示 TIF 图像。它也广泛用于扫描（扫描仪和传真）。它提供大量的色彩和出色的图像质量，导致文件体积较大。它还允许使用图层（如原始 Photoshop PSD 文件）并支持透明背景 (Wu & Rao, 2017; Stearns & Hush, 2016; Kaur & Choudhary, 2016)。
 
-######### RAW
+## RAW
 
 RAW 是某些数码相机的标准，但它不是必需的格式，您可以在 JPG 或 PNG 标准之间进行选择。之所以称之为“原始”，是因为它不包含任何特效或调整。因此，它提供高图像质量和更大的色彩深度。由于该模式下的文件是“纯净”的，编辑者可以自由地按捕获时的方式使用图像，并应用自己的特效或调整，通常能生成非常好的照片 (Wu & Rao, 2017; Stearns & Hush, 2016; Kaur & Choudhary, 2016)。
 
-######### 可交换图像文件格式 (EXIF)
+## 可交换图像文件格式 (EXIF)
 
 可交换图像文件格式 (EXIF) 是一种类似于带有 TIFF 扩展的 JFIF 格式的文件标准，它被合并到大多数相机使用的 JPEG 写入软件中。其目的是记录并标准化数码相机图像与其编辑和查看软件之间的元数据交换。元数据记录在单个图像中，包括相机设置、日期和时间、快门速度、曝光、图像尺寸、压缩、相机名称和色彩信息等。当图像被图像编辑软件查看或编辑时，所有这些信息都可能被显示 (Wu & Rao, 2017; Stearns & Hush, 2016; Kaur & Choudhary, 2016)。
 
-######### SVG (可缩放矢量图形)
+## SVG (可缩放矢量图形)
 
 SVG (可缩放矢量图形) 是一种矢量图像文件。它是一种开放格式，由 W3C 开发，于 2001 年出现。它不基于像素，即组成图像的“点”，而是使用 XML 语言来描述文件应有的外观。适用于静态和动态图像。作为矢量图，图像可以放大或缩小而不造成质量损失。CDR 图像（来自 CorelDraw 程序）也是同样的情况 (Wu & Rao, 2017; Stearns & Hush, 2016; Kaur & Choudhary, 2016)。
 
-######### WebP
+## WebP
 
 WebP 是一种使用有损压缩的新图像格式。它由 Google 设计，旨在减小图像文件大小以加快网页加载速度：其主要目的是取代 JPEG 成为网页照片的主要格式。WebP 基于 VP8 帧内编码，并使用基于 RIFF 的容器 (Wu & Rao, 2017; Stearns & Hush, 2016; Kaur & Choudhary, 2016)。
 
-######## 视频
+# 视频
 
-######### 视频基础
+## 视频基础
 
 视频是一组图像，例如，位图（帧）以特定速度按顺序播放，以传达运动的概念。每秒播放的图像数量通常称为帧率或每秒帧数 (nfs)。在视频的情况下，有大量的移动图像，并且可以包含音频。以全高清和 24 FPS（每秒帧数）标准的视频为例，这常用于电影。这相当于每 24 秒的视频以等间隔序列显示。以未压缩场景为例，假设每张图像占用 6 MB，外加 WAV 音频比特率为每秒立体声 0.2 MB。对于一部 2 小时的电影（或 7200 秒），将显示 172,800 张图像。仅图像就会消耗 1,036,800 MB（接近 1 TB）。音频单独消耗 1440 MB。值得注意的是，就所需空间而言，音频可以忽略不计。无论如何，一部电影大约需要 1 TB 的存储空间（如果通过流媒体观看则为流量） (Kaur & Choudhary, 2016; Owens, 2017)。
 
 如果通过流媒体播放，甚至连 1 Gbps 的连接都不足以确保视频不间断播放，这意味着普通终端用户无法享受此类服务，即使电影托管在本地服务器上，因为终端用户的网卡通常限制在 1 Gbps（甚至老旧机型仍为 100 Mbps）。尽管如此，Netflix、YouTube 和 Twitch 等服务很可能已享受比示例中引用的更高分辨率甚至更高帧率的服务，其中关键因素正是所使用的压缩技术，它在确保极佳图像质量和高运动流畅度的同时，使用户无需依赖难以置信的强大连接 (Kaur & Choudhary, 2016; Owens, 2017)。
 
-######### 压缩视频格式
+## 压缩视频格式
 
-########## 视频压缩原理
+### 视频压缩原理
 
 视频压缩是指**冗余减少**，即帧的某些区域具有跨越多个像素的相同颜色（空间冗余）；当场景或其部分主要包含垂直方向的物体时，两条相邻线极有可能相同（空间冗余）；同样，某些像素在多帧中重复的图像（时间冗余）。标准清晰度视频最多有 480 条可视线，而高清视频高达 1,080 条。高清视频更清晰，尤其是在大屏幕上观看时 (Bovik, 2010; Wu et al., 2018; Wu et al., 2018; Baraniuk et al., 2017)。
 
-########## MPEG 标准
+### MPEG 标准
 
 ISO 成立了**动态图像专家组 (MPEG)** 以制定数字视频标准，创建于 1988 年。压缩同时发生在视频和音频中，比特率范围从 1.5 Mbps 到 60 Mbps（MPEG1、MPEG2 和 MPEG3（后被废弃））。显示视频从 30 帧/秒高达 60 fps。MPEG-1 是用于 VCD 制订的标准，分辨率为 352 x 240，质量略低于录像带。MPEG-2 是 DVD 标准，分辨率为 720 x 480 或 1280 x 780，质量极佳，是数字电视中最流行的使用方法。MPEG2 过程的基本原理是使用人眼难以察觉的降低图像质量的技术，以及不影响图像质量的技术，主要通过消除信息冗余的过程。MPEG-4 与 MPEG-1/2 的线性音视频编码不同，它是基于对象对视听场景进行编码，例如一辆移动的汽车、一张狗的照片，以及一个图像或音频对象，如乐器或声音，因此我处理视听对象。它是创作、多媒体、游戏、视频会议、移动通信、交互式图形应用和 WWW 的当前标准。它质量良好，广泛用于窄带 (Shree, 2016; Paikray et al., 2018)。
 
-########## VCD 与 SVCD
+### VCD 与 SVCD
 
 VCD (Video Compact Disc) 由飞利浦、JVC、松下和索尼组成的财团于 1993 年创建，使用 MPEG1 标准，可在 CR-ROM 和 DVD 播放器上播放，属于只读标准和单面录制。可容纳 70 分钟（普通电影时长需要 2 张光盘）。具有 350 x 240 NTSC 和 352 x 288 PAL 分辨率，质量类似于录像带。SVCD (Super Video CD) 由中国国家录制标准委员会于 1998 年开发，使用 MPEG2 标准，可在 CR-ROM 和 DVD 播放器上以只读模式播放，且仅在 CD 媒体单面刻录。可容纳 70 分钟（普通电影时长需要 2 张光盘）。1988 年，中国确立了一种名为超级 VCD 的标准，此类播放器应能播放 CVD、SVCD、VCD 1.1、VCD 2.0 和 CD-Audio。采用可变比特率 MPEG2 分辨率，5.1 环绕声，效果逊于 DVD 但优于 VCD，NTSC 制式为 480 x 480，PAL 制式为 480 x 576 (Shree, 2016; Paikray et al., 2018)。
 
-
-
-
-
-########## DivX
+### DivX
 
 DivX 由两个软件组件组成：`DeCSS`，它通过破解阻止 DVD 文件被复制到计算机的加密来提取内容；以及微软制作的 MPEG-4 版本（codec avi）软件，这是一种内置于 Windows Media Tools 中的视频压缩标准。DivX 可以将 DVD 放入 CD 中，分辨率与 MPEG4 相同。在计算机上通过互联网全屏观看时，其质量类似于普通电视广播。Xvid 与 DivX 相同，但代码免费；其分辨率取决于播放的视频，在保持良好质量的同时比 DivX 更好（Shree, 2016; Paikray et al., 2018; Zhang & Mao, 2019）。
 
-########## WMV (Windows Media Video)
+### WMV (Windows Media Video)
 
 WMV 是微软的格式，工作在 1.3–2 Mbps，分辨率为 480 到 1280，质量极佳。
 
-########## Matroska (MKV - Matroska Video 和 MKA - Matroska Audio)
+### Matroska (MKV - Matroska Video 和 MKA - Matroska Audio)
 
 Matroska 不是视频编解码器，而是一个容器，允许你将视频、音频和字幕的组合插入单个文件中。你可以将 DivX 电影与字幕包结合；它也适用于纯音频。Matroska 是一个开源项目，质量良好，分辨率与 MPEG4 相当（Batubara & Ariani, 2016）。
 
-######## 数字游戏
+# 数字游戏
 
 对于那些喜欢长时间玩数字游戏的人来说，特别是竞技玩家，他们渴望以高达 240 FPS 的帧率进行游戏，甚至是那些虽然不一定支付如此高昂费用，但热爱高分辨率（如日益普及的 4K (3840x2160)，相当于 2x2 矩阵排列的 4 个全高清屏幕）的玩家而言，媒体压缩与这一现实成正比。
 
 举例说明一个当今可能存在的场景：一个使用 10 位 RGB 标准、运行在 240 FPS 的 4K 游戏：每个 4K 图像相当于 8,294,400 个像素，如果每个像素需要 30 位，那将达到每帧 248,832,000 位（接近 237 MB）。以每秒 240 帧计算，单秒将需要处理 56,880 MB（接近 56 GB）的信息。仅作说明用途，一局《英雄联盟》或《FIFA》等游戏的单场比赛持续约 30 分钟（1800 秒），将需要处理 100,800 GB（接近 98 TB）的信息，这还不包括玩家之间的语音通话。考虑到访问此类内容的设备范围从普通移动设备到专为执行此类场景设计的设备，这清楚地说明了多媒体压缩的重要性（Redi et al., 2015; Eliseo & Silva, 2016）。
 
-######## 音频编码与压缩
+# 音频编码与压缩
 
 音频压缩用于减少音频文件的带宽（以信号频率带宽、赫兹为单位测量）和/或物理空间。在音频压缩出现之前，高质量音频文件的数字数据占用了大量磁盘空间。一个例子是 CD 音质音乐，具有 44.1 kHz 立体声（2 声道），每采样 16 位，意味着每分钟音频约 10 兆字节。在此背景下，音频编码等同于音频压缩，因为只有通过这些概念才能减小音频文件的大小。因此，当前的文件格式（MP3）利用人耳听觉能力来减小音频文件大小，而不会造成明显的质量损失（Thompson, 2018; Winer, 2017）。
 
 音频压缩分为两点：编码，即将存储在未压缩文件中的音频文件数据转换为压缩文件（在称为比特流的结构内）；以及解码，它分析比特流并将其重新展开。解码后得到的文件与原始文件不同；所有不重要的信息已被删除。然而，根据文件压缩比，该文件听起来仍然相同（或多或少）。通常，压缩率越低，文件质量越好，因为比特率指的是压缩力度，它表示一秒内将带来压缩比特流的平均比特数（Thompson, 2018; Winer, 2017）。
 
-######### 表 1
+## 表 1
 
 | 比特率 | 带宽 | 质量（相当/更好） |
 | :--- | :--- | :--- |
@@ -929,35 +977,33 @@ Matroska 不是视频编解码器，而是一个容器，允许你将视频、�
 | 160-180 kbps | 20 kHz | 感知透明度 |
 | 256 kbps | 22 kHz | 录音棚 |
 
-######## 文件编解码 - CODEC
+# 文件编解码 - CODEC
 
 CODEC 一词由 COder 和 DECoder（编码和解码）或 Compression 和 DECompression（压缩和解压缩）的结合形成。正如前文某些情况提到的，该技术的一个常见例子是压缩视频；如果没有适当的 CODEC 来解码视频保存所用的文件格式，图像将不会出现在屏幕上，而是会报告缺少特定 CODEC 的消息。如今，以互联网用户通用语言中的著名 MP3、AIFF、AAC、MIDI、AVI、WMA、MPEG、MPEG2、DivX 等所谓的压缩格式下载或保存文件很常见，运行所有现有 CODEC（如图像、视频和声音）的程序也是如此（Khan et al., 2017）。
 
-######## 性能参数
+# 性能参数
 
 编解码器之所以能达到最佳压缩率，是因为它压缩数据（无论是音频、图像还是视频），然后解压缩以检索其内容或查看它，同时也具有数据丢失的特性，即该媒体质量的部分或全部丢失。然而，有一些指标有助于估算该媒体压缩性能的质量以及其通过特定媒介的传输质量（Winer, 2017; Khan et al., 2017; Dubin et al., 2018）。
 
 压缩比是原始数据大小与压缩后数据大小的比率。在无损技术的情况下，压缩比越高，压缩技术越好。对于有损压缩技术，还应考虑还原媒体的质量。还原媒体的质量可以用 SNR（信噪比）来衡量。此参数仅适用于有损技术。在选择有损压缩技术时，应在高压缩比和开发应用所需的期望质量之间做出妥协。实现复杂度和压缩速度通常相关：技术越复杂，压缩速度越低。对于视频会议等实时应用，应考虑这些参数。这是因为压缩/解压缩必须实时执行。在信息收集和演示应用的情况下，压缩速度不是很重要，但解压缩速度很重要（Winer, 2017; Khan et al., 2017; Dubin et al., 2018）。
 
-######## 趋势
+# 趋势
 
-
-
-
-
-######## 创新与技术突破
+## 创新与技术突破
 
 创新与技术突破正变得更快、更频繁，正在改变社会和商业，我们看到世界正朝着一个未来迈进，在这个未来中，世界将被大容量光纤数据网络交织连接，连接我们所有日益无处不在的设备。从便携媒体正在改变世界这一点来看，未来是移动的；起初，通信行业和媒体是电子化的，如今它们是数字化的，在此过程中，它们已成为多媒体，并将日益变得更具交互性。而移动性正是这种变革。现代设备是电子化的，从本章呈现的所有方面来看，也被视为多媒体，但尚不擅长交互性。互联网在这方面做得很好，但使用传统设备时尚未普及到每个地方。因此，移动性是正在发生并将通过移动设备越来越多地发生的变革，我们借此实现人们的通信。只要你做一些有趣的事，在那一刻用照片记录下来，并利用移动设备通过互联网上传，或上传游戏或阅读一些新闻。从那时起，它获得了交互功能，从那时起，成为了一种多媒体通信设备（AlZu’bi 等，2019；Zhang 等，2018；Li 等，2018；Li 等，2019；Wang 等，2018；Gupta，2018；Gupta 等，2016；Tian 等，2019；Hai 等，2018；Li 等，2018；Panjanathan & Ramachandran，2017）。
 
+
+
 类似于基于 LUT 的客户端水印嵌入共谋安全性、用于分层属性的多授权中心 CP-ABE 压缩密文长度方案、多媒体物联网的高效应用、通过标签相关性挖掘进行自我标注、多媒体传感器网络中基于水印的认证与图像恢复、云存储方法下多媒体社交网络的新授权方案、面向无线应用的带有主动队列管理的增强型低延迟排队算法等新技术的涌现，以及其他许多将促进并为人们提供更高质量生活和技术交互的技术（AlZu’bi 等，2019；Zhang 等，2018；Li 等，2018；Li 等，2019；Wang 等，2018；Gupta，2018；Gupta 等，2016；Tian 等，2019；Hai 等，2018；Li 等，2018；Panjanathan & Ramachandran，2017）。
 
-####### 结论
+## 结论
 
 数据压缩是减少给定设备所占用数据空间的行为。此操作通过各种压缩算法执行，减少表示给定数据（图像、文本或任何文件）所需的字节数。压缩数据还旨在消除冗余，因为过多数据包含可能需要以某种方式删除的冗余信息。这种形式是通过一条规则（称为代码或协议）来实现的，随后消除冗余信息位以减小其在文件中的大小。除了消除冗余外，压缩数据还出于多种原因。最著名的原因是节省硬盘等存储设备上的空间，或在传输中获得性能提升（减少这些传输发生的时间）。
 
 尽管它们看起来可能是同义词，但数据压缩和压缩是截然不同的过程。正如所见，压缩减少表示某些数据所需的位数，而压缩的功能是将未连接的数据连接起来。如今，在 21 世纪，与技术相关的主要关键词是优化和低内存消耗。因此，创建新方法并投资于此类研究将导致更轻量、更紧凑的电信设备和信道的开发，它们允许数据以更流畅的方式和低计算消耗流动，为家庭、医疗、工业、社交和教育设备的数据共享以及通信带来更大便利的时代铺平道路。
 
-##### 参考文献
+## 参考文献
 
 Ahmed, R., Islam, M., & Uddin, J. (2018). 利用 NVIDIA CUDA 架构优化 Apple 无损音频编解码器算法。*International Journal of Electrical & Computer Engineering (2088-8708)*，8(1)。
 
@@ -1004,12 +1050,6 @@ Gibson, J. (2016). 语音压缩。*Information*，7(2)，32。doi:10.3390/info70
 Gregor, K., Besse, F., Rezende, D. J., Danihelka, I., & Wierstra, D. (2016). 面向概念压缩。载于 *神经信息处理系统进展*（第 3549-3557 页）。
 
 Guo, Y., Ding, G., & Han, J. (2017). 面向通用相似性搜索的鲁棒量化。*IEEE Transactions on Image Processing*，27(2)，949–963。doi:10.1109/TIP.2017.2766445
-
-
-
-
-
-##### 参考文献
 
 Gupta, B., Agrawal, D. P., & Yamaguchi, S. (Eds.). (2016). *计算机与网络安全现代加密解决方案研究手册*。IGI Global. doi:10.4018/978-1-5225-0105-3
 
@@ -1091,6 +1131,10 @@ Wang, H., & Yao, X. (2016). 基于非线性相关信息熵的目标约简。*软
 
 Wang, Y. G., Xie, D., & Gupta, B. B. (2018). 基于 LUT 的客户端水印嵌入抗共谋安全性研究。*IEEE Access: Practical Innovations, Open Solutions*，6，15816–15822。doi:10.1109/ACCESS.2018.2802928
 
+
+
+# 参考文献
+
 Wien, M. (2015). 高效视频编码。*编码工具与规范*，133-160。
 
 Winer, E. (2017). *音频专家：你需要了解的关于音频的一切*。Routledge。doi:10.4324/9781315223162
@@ -1099,15 +1143,7 @@ Wu, C. Y., Singhal, N., & Krahenbuhl, P. (2018). 通过图像插值进行视频�
 
 Wu, C. Y., Zaheer, M., Hu, H., Manmatha, R., Smola, A. J., & Krähenbühl, P. (2018). 压缩视频动作识别。*IEEE 计算机视觉与模式识别会议论文集* (pp. 6026-6035)。
 
-
-
-
-
-##### 参考文献
-
 Wu, H., Miao, Z., Wang, Y., Chen, J., Ma, C., & Zhou, T. (2015). 基于熵减的多图像补全。*Neurocomputing*, 159, 157–171. doi:10.1016/j.neucom.2014.12.088
-
-Wu, H. R., & Rao, K. R. (Eds.). (2017). 数字视频图像质量与感知编码。Boca Raton, FL: CRC Press. doi:10.1201/9781420027822
 
 Wu, H. R., & Rao, K. R. (Eds.). (2017). 数字视频图像质量与感知编码。Boca Raton, FL: CRC Press. doi:10.1201/9781420027822
 
@@ -1117,9 +1153,9 @@ Zhang, T., & Mao, S. (2019). 新兴视频编码标准概述。*GetMobile: Mobile
 
 Zhang, Z., Li, C., Gupta, B. B., & Niu, D. (2018). 面向分层属性的多授权中心 CP-ABE 高效压缩密文长度方案。*IEEE Access: Practical Innovations, Open Solutions*, 6, 38273–38284. doi:10.1109/ACCESS.2018.2854600
 
-#### 第 2 章
+# 第 2 章
 
-##### 作者
+## 作者
 
 *   **José María Jorquera Valero**  
     穆尔西亚大学，西班牙
@@ -1134,11 +1170,11 @@ Zhang, Z., Li, C., Gupta, B. B., & Niu, D. (2018). 面向分层属性的多授�
 *   **Gregorio Martínez Pérez**  
     穆尔西亚大学，西班牙
 
-##### 摘要
+## 摘要
 
 持续认证系统允许用户无需持有或记忆任何凭据即可完成自我认证。这些系统执行永久性认证，提升了仅间歇性认证的传统机制的安全级别。尽管持续认证益处良多，但用于建模用户行为的维度与特征选择，以及基于机器学习的精确模型创建与管理，仍是两大开放性挑战。本章提出了一种基于异常检测的机器学习技术的持续自适应认证系统。通过考量应用使用情况和移动设备位置，检测用户与设备交互时的异常行为。所提系统通过模式的插入与删除，提供了对行为变化的适应性。最后，概念验证及若干实验论证了设计与实现过程中决策的合理性，并证明了其适用性与性能。
 
-##### 1. 引言
+## 1. 引言
 
 持续认证系统提供的安全级别（Gupta, Yamaguchi, & Agrawal, 2018）高于传统认证系统。这是因为传统系统依赖密码、图案或 PIN 码，这些凭据可能丢失、遗忘或被攻击者破解。此外，用户往往在不同服务中使用相同的认证凭据，一旦被窃取便会造成安全隐患。在此背景下，持续认证系统允许用户无需持有或记忆凭据即可在设备或系统中完成自我认证。这一特性改善了用户的服务质量体验，因为它使得需要预先认证的操作能以更快捷、简便的方式完成。这是因为持续认证系统负责在不要求新凭据的情况下执行认证。除了当前移动设备提供的各种传统安全技术外，持续认证用户的能力提供了更高级别的安全性。此外，它还允许用户以更简单、敏捷和愉悦的方式与需要预先认证的应用程序进行交互。
 
@@ -1146,23 +1182,17 @@ Zhang, Z., Li, C., Gupta, B. B., & Niu, D. (2018). 面向分层属性的多授�
 
 基于用户行为（行为生物识别）的认证机制理念应运而生，作为提升多媒体移动设备安全性（Gupta, 2018）的潜在解决方案。这些机制允许持续分析设备所有者的行为模式。在对用户行为建模后，认证系统创建一个与该行为或行为相关联的行为档案。最后，认证系统实时将移动设备的当前行为与所有者的存储档案进行评估。根据该评估的数值输出，系统判断使用设备的人是否为所有者。该机制是被动的，不需要改变用户与设备之间的交互方式。请注意，若处理在外部云中进行，应采取额外措施以保护用户隐私（Olakanmi & Dada, 2019）。
 
-尽管持续认证系统提供了如前所述的诸多益处，但也存在一些亟待解决的开放性挑战，以构建完整有效的系统。在这些开放性挑战中，我们重点强调以下几点：
+尽管持续认证系统提供了诸多益处，但也存在一些亟待解决的开放性挑战，以构建完整有效的系统。在这些开放性挑战中，我们重点强调以下几点：
 
 *   **选择能够准确有效地建模用户行为的维度和特征。** 认证系统获取用户行为信息的不同设备输入源与维度的组合与选择，以及构成这些维度的特征，是正确评估用户行为的主要支柱之一。
-
 *   **创建和管理塑造用户行为的模型。** 一旦选定了将纳入用户行为建模的维度，必须为每个维度选择特征。每个维度的特征集将存储在数据集中。在此背景下，必须做出的另一个重要决定是确定何时用新特征更新数据集内容以建模用户行为。这将确保系统的适应性。
-
 *   **使用能在不忽视资源受限等关键方面的前提下准确认证移动设备所有者的机器学习（ML）技术。** 应使用基于异常检测而非基于用户向量分类的机器学习算法。
 
-
-
-
-
-###### 改进挑战的目标：基于用户行为的多媒体移动设备机器学习自适应持续认证系统
+### 改进挑战的目标：基于用户行为的多媒体移动设备机器学习自适应持续认证系统
 
 旨在改进以往的挑战，本章提出了一种基于用户行为的多媒体移动设备机器学习自适应持续认证系统。该系统能够根据移动设备的位置和多媒体应用的使用情况创建用户行为档案。档案创建后，该解决方案利用基于异常检测的机器学习技术，实时测量当前设备使用情况与档案建模的已知行为之间的相似度。该持续认证系统具有足够的通用性，可适应不同的现实环境。本章展示了一系列实验，以证明该解决方案的适用性和性能。
 
-###### 本章结构
+### 本章结构
 
 本章其余部分结构如下：
 
@@ -1172,11 +1202,11 @@ Zhang, Z., Li, C., Gupta, B. B., & Niu, D. (2018). 面向分层属性的多授�
 - **第 5 节** 通过一系列测试演示所提方案的实用性。
 - **第 6 节** 总结已完成的工作，并提出继续开发该系统的不同未来步骤。
 
-###### 2 文献综述
+## 2 文献综述
 
 在当前技术水平中，可找到多项针对移动设备持续认证的研究。
 
-####### 触屏与传感器识别用户
+### 触屏与传感器识别用户
 
 (Bo, Zhang, Li, Huang & Wang, 2013) 通过触屏和设备传感器识别用户。在传感器维度上，作者利用加速度计和陀螺仪，开展了不同的用户实验，获取设备信息，如与屏幕交互时的旋转和振动、用户施加在屏幕上的压力和持续时间，以及上述传感器的数值（见图 1）。实验涵盖用户静止和行走两种状态。用户按压屏幕生成的模式与行走时获得的模式相结合，可通过非侵入式技术识别用户，虚拒率（FRR）低于 1%。
 
@@ -1186,18 +1216,19 @@ Zhang, Z., Li, C., Gupta, B. B., & Niu, D. (2018). 面向分层属性的多授�
 
 *(Bo, Zhang, Li, Huang and Wang, 2013)*
 
-####### 多维度分析与分类器对比
+### 多维度分析与分类器对比
 
-(Patel, Chellappa, Chandra & Barbello, 2016) 分析了人脸识别、用户手势、触屏、设备移动、应用和位置等维度。作者使用 SVM (Ng, 2003)、决策树 (Gilles, 2014)、贝叶斯网络 (Ben-Gal, Ruggeri, Faltin & Kenett, 2007) 和 K-NN (Sutton, 2012) 等机器学习分类算法进行测试。结果显示，SVM 算法产生的高计算成本是将原型部署在用户设备上的负面因素。
+(Patel, Chellappa, Chandra & Barbello, 2016) 分析了人脸识别、用户手势、触屏、设备移动、应用和位置等维度。作者使用 `SVM` (Ng, 2003)、决策树 (Gilles, 2014)、贝叶斯网络 (Ben-Gal, Ruggeri, Faltin & Kenett, 2007) 和 `K-NN` (Sutton, 2012) 等机器学习分类算法进行测试。结果显示，`SVM` 算法产生的高计算成本是将原型部署在用户设备上的负面因素。
 
-####### 基于运动传感器的交互识别
+### 基于运动传感器的交互识别
 
 (Ehatisham-ul-Haq et al., 2017) 提出了一种基于加速度计、陀螺仪和磁力计识别用户与设备交互的解决方案。基于日常习惯，作者确定了设备所处的五种位置。该框架将三种运动传感器（加速度计、陀螺仪、磁力计）组合作为活动识别和用户认证的输入数据源。作者对每个传感器的坐标应用最大值、最小值、平均值、方差、峰峰距离等公式生成不同特征。生成特征向量后，基于训练数据集对用户行为进行分类。训练数据集由不同用户的向量组成，包含各传感器函数返回的结果和设备可能的位置。向量将被分类为不同的用户档案，以赋予不同权限级别（见图 2）：
+
 - **已认证用户**：获得设备完全访问权限。
 - **子用户**：行为与已认证用户相似，拥有受限访问权限。
 - **未认证用户**：权限级别为零。
 
-作者使用了 SVM (Ng, 2003)、贝叶斯网络 (Ben-Gal, Ruggeri, Faltin & Kenett, 2007)、K-NN (Sutton, 2012)、决策树 (Zhu, 2018) 等分类算法。结果表明，SVM 分类用户的平均成功率为 99.18%，贝叶斯网络为 97.38%。值得注意的是，尽管贝叶斯网络成功率略低，但其计算成本是 SVM 的五分之一，平均仅需 5 秒分类一个用户向量，而 SVM 需 25 秒。
+作者使用了 `SVM` (Ng, 2003)、贝叶斯网络 (Ben-Gal, Ruggeri, Faltin & Kenett, 2007)、`K-NN` (Sutton, 2012)、决策树 (Zhu, 2018) 等分类算法。结果表明，`SVM` 分类用户的平均成功率为 99.18%，贝叶斯网络为 97.38%。值得注意的是，尽管贝叶斯网络成功率略低，但其计算成本是 `SVM` 的五分之一，平均仅需 5 秒分类一个用户向量，而 `SVM` 需 25 秒。
 
 **图 2. 设备持续认证的方法论**
 
@@ -1205,7 +1236,7 @@ Zhang, Z., Li, C., Gupta, B. B., & Niu, D. (2018). 面向分层属性的多授�
 
 *(Ehatisham-ul-Haq et al., 2017)*
 
-####### 多特征融合认证
+### 多特征融合认证
 
 (Fridman, Weber, Greenstadt & Kam, 2017) 考虑了截然不同的特征，分别评估后再结合以获得结果。作者考量了用户输入文本、位置、使用的应用和访问的网页。实验由 200 名受试者完成，各自使用 Android 设备至少 30 天。认证系统在用户与设备交互 1 分钟后达到 0.05（5%）的等错误率（EER），30 分钟后达到 0.01（1%）。交互 1 分钟后，位置维度对短时间内分类用户行为的贡献最大，是其他维度的两到三倍。其次依次为网页、使用的应用和用户输入（见图 3）。
 
@@ -1215,56 +1246,53 @@ Zhang, Z., Li, C., Gupta, B. B., & Niu, D. (2018). 面向分层属性的多授�
 
 *(Fridman, Weber, Greenstadt & Kam, 2017)*
 
+### 相关研究综述
 
+#### 基于键盘动力学的用户识别
 
+(Bala, 2017) 开展的项目基于机器学习（ML）的不同特征组合和算法，生成用户画像，从而能够通过击键动力学识别用户。选择脉冲动力学作为识别用户行为的方法的主要原因在于，该技术被认为比其他生物识别方法更可靠、成本更低且速度更快。该项目的目标是在完成训练阶段后展示评估结果，该阶段存储了由一些无关特征组成的向量，并展示仅选择被认为相关的特征后的后续影响。从数据集中移除无关特征的过程可减少过拟合、提高准确率并缩短训练时间。为了筛选数据集的相关特征，我们使用 `Weka` 工具（Weka 3, 2019），它允许通过各种图表观察构成数据集的特征值，并选择要从输入数据集中移除的特征。此外，还使用不同的 ML 算法来检查哪种特征组合能获得最佳结果，并显示选择相关特征前后的评估值。
 
-
-####### 相关研究综述
-
-######## 基于键盘动力学的用户识别
-
-(Bala, 2017) 开展的项目基于机器学习（ML）的不同特征组合和算法，生成用户画像，从而能够通过击键动力学识别用户。选择脉冲动力学作为识别用户行为的方法的主要原因在于，该技术被认为比其他生物识别方法更可靠、成本更低且速度更快。该项目的目标是在完成训练阶段后展示评估结果，该阶段存储了由一些无关特征组成的向量，并展示仅选择被认为相关的特征后的后续影响。从数据集中移除无关特征的过程可减少过拟合、提高准确率并缩短训练时间。为了筛选数据集的相关特征，我们使用 Weka 工具（Weka 3, 2019），它允许通过各种图表观察构成数据集的特征值，并选择要从输入数据集中移除的特征。此外，还使用不同的 ML 算法来检查哪种特征组合能获得最佳结果，并显示选择相关特征前后的评估值。
-
-######## 基于加速度计数据的异常行为检测
+#### 基于加速度计数据的异常行为检测
 
 (Centeno, van Moorsel & Castruccio, 2017) 发表了另一篇相关文章，旨在仅通过设备的传感器（更具体地说是通过加速度计数据）检测用户的异常行为。与其他找到的文章和项目不同，在本例中，数据处理不是在设备上执行的，而是在公司的服务器（Gupta & Agrawal, 2019）上进行的，该服务器通过接收设备中定期生成的向量来获取数据。该系统在现实场景中的有效性已被证明，在 20 秒的评估时间内可达到 2.2% 的等错误率（EER）。为满足移动平台的内在需求，检测过程基于少量的特征生物识别数据，这些数据被发送到云端进行处理。处理用户认证请求所花费的时间微不足道（约五毫秒），而训练达到最高准确率的模型所需时间约为 72 秒。
 
-######## 移动设备智能自适应持续认证系统
+#### 移动设备智能自适应持续认证系统
 
 (Jorquera et al., 2018) 提出了一种面向移动设备的智能自适应持续认证系统。该系统通过考虑来自应用程序、传感器的统计信息以及基于异常检测的机器学习技术，实现了用户的实时认证。多项实验证明了其解决方案的准确性、适应性和资源消耗。最后，提出了一个在线银行应用作为概念验证，允许用户根据其认证等级执行不同操作。
 
-######## PALOT 框架：基于物联网的上下文感知认证授权
+#### PALOT 框架：基于物联网的上下文感知认证授权
 
-(Nespoli et al., 2019) 提出了 PALOT 框架，该框架利用物联网（IoT）提供上下文感知、持续且非侵入式的认证和授权服务。具体而言，作者基于本体论提出了一个形式化的信息系统模型，作为框架的主要知识来源。此外，为了识别物联网生态系统中的用户行为模式，他们引入了置信度管理器模块。随后，该模块被集成到他们早期框架架构 IoTCAF（Nespoli et al., 2018）的扩展版本中，从而适配以包含上述组件。
+(Nespoli et al., 2019) 提出了 PALOT 框架，该框架利用物联网（IoT）提供上下文感知、持续且非侵入式的认证和授权服务。具体而言，作者基于本体论提出了一个形式化的信息系统模型，作为框架的主要知识来源。此外，为了识别物联网生态系统中的用户行为模式，他们引入了置信度管理器模块。随后，该模块被集成到他们早期框架架构 `IoTCAF`（Nespoli et al., 2018）的扩展版本中，从而适配以包含上述组件。
 
-######## 面向智能办公室的持续智能认证架构
+#### 面向智能办公室的持续智能认证架构
 
 (Sánchez, Huertas, Fernández, Martínez & Wang, 2019) 提出了一种面向智能办公室的持续智能认证架构。该架构面向云计算范式，并考虑使用 ML 技术根据用户行为对其进行认证。一些实验证明了该解决方案在使用分类算法识别和认证不同用户时的适用性。
 
-######## 商业持续认证解决方案
+#### 商业持续认证解决方案
 
-######### BehavioSec
+##### BehavioSec
 
 发现有多家公司为用户提供持续认证服务。其中，(BehavioSec, 2019) 目前是在安卓和 iOS 操作系统设备上持续认证领域提供最佳产品的私营公司。BehavioSec 成立于 2006 年，总部位于瑞典。通过使用行为生物识别技术，他们获取属于用户行为的特征，维度包括键盘动力学、移动和手势模式，随后将这些特征结合，通过使用 ML 技术保证对异常行为的精确检测。所提供的产品通过使用一个随用户行为和能力保持更新的算法，提供透明且自适应的安全技术，因此随着用户行为和能力的变化和提升，安全层也随之改进，从而减少误报。核心算法持续改进以验证合法用户，为自动化和动态风险评估提供风险情报。
 
-######### Veridium
+##### Veridium
 
-Veridium (Veridium Ltd., 2019) 是一家为移动设备提供 SDK 的公司，支持安卓和 iOS，允许将生物识别认证集成到任何企业或消费者应用程序中。为了识别用户行为，它使用摄像头、传感器、设备闪光灯以及多种生物识别因素，如设备屏幕上的压力和触摸。此外，该产品利用视觉密码学来保护用户的生物识别数据。这种密码学包含 SDK 对捕获的生物识别向量进行加密和分割。一部分存储在服务器上，而另一部分保留在设备上。为了进行用户识别，这些碎片会被重组并解密，以便在认证期间进行比较。Veridium 允许配置 SDK，使事件的数据存储发生在您的后端服务器或设备内存中。如果将数据存储在后端服务器上，设备与服务器之间的通信将通过安全的双向 SSL 连接发送。
+Veridium (Veridium Ltd., 2019) 是一家为移动设备提供 `SDK` 的公司，支持安卓和 iOS，允许将生物识别认证集成到任何企业或消费者应用程序中。为了识别用户行为，它使用摄像头、传感器、设备闪光灯以及多种生物识别因素，如设备屏幕上的压力和触摸。此外，该产品利用视觉密码学来保护用户的生物识别数据。这种密码学包含 `SDK` 对捕获的生物识别向量进行加密和分割。一部分存储在服务器上，而另一部分保留在设备上。为了进行用户识别，这些碎片会被重组并解密，以便在认证期间进行比较。Veridium 允许配置 `SDK`，使事件的数据存储发生在您的后端服务器或设备内存中。如果将数据存储在后端服务器上，设备与服务器之间的通信将通过安全的双向 SSL 连接发送。
+
+总部位于马萨诸塞州贝德福德的 Aware 公司提供了一款市场产品，能够通过行为和生理生物特征对用户进行认证，尽管不像之前的提案那样是连续进行的。该产品利用语音识别、面部识别、击键动力学和指纹识别。名为 `Knomi` 的产品通过一组运行在移动设备（Android 或 iOS）上的生物特征 `SDK` 以及一台服务器执行生物特征认证，二者协同工作，允许从使用生物特征数据的单一移动设备上进行强认证、多因子认证和无密码认证。`Knomi` 软件组件可用于不同的组合和配置，以实现以服务器为中心的架构或以设备为中心的实现。另一家提供基于连续认证产品的公司是 Zighra，它提供了一个由人工智能驱动的连续认证和威胁检测平台，既适用于移动设备（Android 和 iOS），也适用于 Web 端。其产品名为 `SensifyID`，结合了生成行为模型和生物系统的知识，与当今使用的 AI 方法相比，能够更快地训练、动态适应并加速威胁检测。更具体地说，它利用位置、用户书写技巧、网络和传感器等维度。该产品由基于任务的认证技术组成，通过这些技术，系统会要求用户执行特定操作，以证明当前使用设备的人是合法所有者。此外，为了识别用户行为，他们使用专有的 ML 和 AI 算法，能够持续学习用户行为，最重要的是，仅需利用用户与设备的 15 次交互即可快速完成。
+
+## 3. 方法论
+
+### 3.1 用于连续认证的可用机器学习技术
 
 
 
-
-总部位于马萨诸塞州贝德福德的 Aware 公司提供了一款市场产品，能够通过行为和生理生物特征对用户进行认证，尽管不像之前的提案那样是连续进行的。该产品利用语音识别、面部识别、击键动力学和指纹识别。名为 Knomi 的产品通过一组运行在移动设备（Android 或 iOS）上的生物特征 SDK 以及一台服务器执行生物特征认证，二者协同工作，允许从使用生物特征数据的单一移动设备上进行强认证、多因子认证和无密码认证。Knomi 软件组件可用于不同的组合和配置，以实现以服务器为中心的架构或以设备为中心的实现。另一家提供基于连续认证产品的公司是 Zighra，它提供了一个由人工智能驱动的连续认证和威胁检测平台，既适用于移动设备（Android 和 iOS），也适用于 Web 端。其产品名为 SensifyID，结合了生成行为模型和生物系统的知识，与当今使用的 AI 方法相比，能够更快地训练、动态适应并加速威胁检测。更具体地说，它利用位置、用户书写技巧、网络和传感器等维度。该产品由基于任务的认证技术组成，通过这些技术，系统会要求用户执行特定操作，以证明当前使用设备的人是合法所有者。此外，为了识别用户行为，他们使用专有的 ML 和 AI 算法，能够持续学习用户行为，最重要的是，仅需利用用户与设备的 15 次交互即可快速完成。
-
-###### 3. 方法论
-
-####### 3.1 用于连续认证的可用机器学习技术
+# ML 算法分类与异常检测算法分析
 
 ML 算法分为两大类：监督学习和无监督学习。监督学习算法旨在基于训练数据集确定一个函数，该函数能够从输入数据中获得期望的结果。因此，训练数据集向量被标记，即训练数据将是分为两部分的向量：输入数据和期望输出，也称为类别。从这个意义上说，从一组训练向量出发，算法确定该函数，使得从特定输入出发，将产生最适合该输入数据的输出。无监督学习算法旨在检测异常或聚类数据向量。这类算法在现有技术中已存在多年，但如今影响力更大。如果输出是一个数字，该算法将是回归算法。相反，如果输出是已知集合内的一个值，该算法将是分类算法。此类算法的一些示例包括 `支持向量机 (SVM)`、`贝叶斯网络`、`决策树`、`神经网络` 或 `K 近邻 (k-NN)`。
 
 接下来，将分析用于执行异常检测的主要算法，并通过比较这些算法在准确性和性能方面的特性，选择最适合连续认证系统的算法。
 
-######## 3.1.1 单类 SVM (支持向量机)
+## 3.1.1 单类 SVM (支持向量机)
 
 尽管 `SVM` 是一种监督学习算法，但存在一种符合连续认证系统的特殊情况，允许我们检测用户生成向量中的异常。这种情况符合训练数据集中所有向量具有相同输出的条件，即所有训练向量属于同一类。这种情况称为单类 SVM 或 `One-Class SVM`。
 
@@ -1272,51 +1300,47 @@ ML 算法分为两大类：监督学习和无监督学习。监督学习算法�
 
 在这种情况下，算法的输出将为 `1` 或 `-1`，其中值 `1` 表示向量正常，`-1` 表示向量异常。这种输出的缺点之一是，如果向量是异常的，无法知道其异常的程度，只知道它是否异常。该算法的另一个对应面是其计算复杂度，因为训练的阶数介于 `O (n2m)` 和 `O (n3m)` 之间，具体取决于实现方式，其中 `n` 是训练向量的数量，`m` 是每个向量的字段数。`One-Class SVM` 算法的运作如图 4 所示。这是一个向量具有两个输入字段的示例，这使得空间可以在二维图上表示，从而让人眼易于理解，并使我们能更好地理解算法的运作。
 
-| 图 4. 双变量向量单类 SVM 的图形化表示 |
-| --- |
-| ![Figure978-1-7998-2701-6.ch002.f04](img/ch002.f04.png) |
-| --- |
-| *(Zhu, Yang, Gao, Xu, Ye, & Yin, 2016)* |
+**图 4. 双变量向量单类 SVM 的图形化表示**
 
-######## 3.1.2 用于检测异常的 K-NN
+![Figure978-1-7998-2701-6.ch002.f04](img/ch002.f04.png)
+
+*(Zhu, Yang, Gao, Xu, Ye, & Yin, 2016)*
+
+## 3.1.2 用于检测异常的 K-NN
 
 `K-NN` (`k nearest neighbours`) 算法也是监督学习。然而，它可以像本文所讨论的那样，适配用于异常检测系统。`K-NN` 算法通过将向量放置在训练数据集向量旁边的空间中来对向量进行分类。然后，计算待评估向量与训练向量在空间中的距离，选择最近的 `k` 个邻居进行评估。根据距离及其所属类别，从这些邻居中计算待评估向量属于每个 `k` 个邻居类别的概率。算法运作的二维图形表示如图 5 所示。
 
-| 图 5. k-NN 算法运作的图形化表示 |
-| --- |
-| ![Figure978-1-7998-2701-6.ch002.f05](img/ch002.f05.png) |
-| --- |
-| *(Ömer, 2019)* |
+**图 5. k-NN 算法运作的图形化表示**
 
+![Figure978-1-7998-2701-6.ch002.f05](img/ch002.f05.png)
 
-
+*(Ömer, 2019)*
 
 用于异常检测的 k-NN 算法使用单一类别的向量，就像 `One-Class SVM` 的情况一样。在这种情况下，算法计算待评估实例与其最近的 `k` 个邻居之间的距离（`k-distance`）。获得的分数将反映待评估点周围点空间中的密度。因此，值越接近 0 表示有许多向量与被评估向量相似，而结果越高，被评估向量将离空间中点的聚集区越远，因此将被视为异常。使用该算法的问题之一是，不存在一个固定的分数来判定向量何时为异常，而是取决于训练数据集。例如，在某些情况下，`k-distance` 为 4 可能代表异常，而在其他情况下则可能不是。用于异常检测的 k-NN 算法也称为 `Local outlier factor (LOF)`，在某些文献中可以看到这一称呼。k-NN 算法的复杂度阶为 `O (nkd)`，其中 `k` 是考虑的邻居数量，`d` 是所用向量的维度数，`n` 是使用的样本数量，即训练数据集的大小。由于 `k` 通常是 3 到 10 之间的整数，该阶可以简化为 `O (nd)`。
 
-######## 3.1.3 隔离森林
+## 3.1.3 隔离森林
 
 `Isolation Forest`（Liu, F., Ming, K., & Zhou, Zhi-Hua., 2008）是一种基于 `Random Forest`（Svetnik, Andy, Christopher, Culberson, Sheridan, & Bradley, 2003）的无监督学习算法，专门设计用于执行异常检测。该算法的目标是通过由训练向量生成的空间的随机划分来隔离被评估的实例。为此，首先，算法随机选择向量的一个特征。接下来，也随机地划分该变量的值集合。划分后，选择包含被评估向量值的值集合，检查该值是否已与其他值分离，或者该集合中是否仍包含其他训练向量的值。此过程重复必要的次数，直到实例被完全隔离，从而生成一棵树，树上包含对每个特征值集合所做的不同划分。
 
 `Isolation Forest` 随机选择向量的一个特征，通过对采样空间进行不同的递归划分来创建一棵树。然而，此过程并非仅执行一次；默认情况下，算法生成 100 棵树，因为该数量在准确性和资源消耗之间实现了平衡的性能。与采样大小一样，执行算法时可以手动确定此数字以改进获得的结果。通过上述过程，算法能够给向量一个代表其相对于训练数据集的异常程度的值。该值介于 0 和 1 之间。因此，值越高（越接近 1），向量越异常（见图 6）。为了计算该值，算法会计算隔离该值所需的划分次数。少量的划分表示异常值，而大量的划分表明该向量位于一个大的点云中，表明该向量处于正常范围内。
 
-| 图 6. Isolation Forest 授予的异常值图形化表示 |
-| --- |
-| ![Figure978-1-7998-2701-6.ch002.f06](img/ch002.f06.png) |
-| --- |
-| *(Liu, F., Ming, K., & Zhou, Zhi-Hua., 2008)* |
+**图 6. Isolation Forest 授予的异常值图形化表示**
+
+![Figure978-1-7998-2701-6.ch002.f06](img/ch002.f06.png)
+
+*(Liu, F., Ming, K., & Zhou, Zhi-Hua., 2008)*
 
 `Isolation Forest` 的算法复杂度在训练阶段为 `O (tvlog (v))`，执行时为 `O (ntlog (v))`（Liu, F., Ming, K., & Zhou, Zhi-Hua., 2008），其中 `n` 为待评估实例的数量，`t` 为生成的树的数量，`v` 为采样大小。取默认值 `t = 100` 和 `v = 256`，算法的复杂度保持为 `O (100256log (256)) + O (n100log (256))`。因此，由于常数在复杂度阶中没有权重，我们得到该算法的复杂度实际上为 `O (n)`。
 
-######## 3.1.4 椭圆包络
+## 3.1.4 椭圆包络
 
 `elliptic envelope` 算法（Rousseeuw, & Driessen, 1999）也允许在数据集中发现异常。该算法在代表数据集向量的点空间周围生成一个椭圆。随后，为了评估一个实例，将其置于空间中，并根据其是否落在椭圆内部及其与椭圆的接近程度给出一个分数。当构成数据集的数据遵循高斯分布时，该算法能产生良好的结果。然而，当向量具有大量字段且不遵循高斯分布时，算法的性能会下降。高斯分布是指其密度函数图形呈喇叭状（见图 7）的分布，即最常重复的数值集中在值域中的一个点周围。
 
-| 图 7. 高斯分布（蓝色）与非高斯分布（黑色）对比 |
-| --- |
-| ![Figure978-1-7998-2701-6.ch002.f07](img/ch002.f07.png) |
-| --- |
+**图 7. 高斯分布（蓝色）与非高斯分布（黑色）对比**
 
-####### 3.2 所提方案的机器学习算法选择
+![Figure978-1-7998-2701-6.ch002.f07](img/ch002.f07.png)
+
+## 3.2 所提方案的机器学习算法选择
 
 重要的是要考虑到向量将拥有大量字段，且其值预期不会呈高斯分布。这导致从最初的问题切入点来看，`elliptic envelope` 算法被排除在外。
 
@@ -1326,33 +1350,29 @@ ML 算法分为两大类：监督学习和无监督学习。监督学习算法�
 
 因此，决定本工作中使用的异常检测算法为 `Isolation Forest`，因为与 `One-Class SVM` 或 `LOF` 相比，它以更低的资源消耗提供了更好的结果。
 
-| 图 8. 异常检测算法对比 |
-| --- |
-| ![Figure978-1-7998-2701-6.ch002.f08](img/ch002.f08.png) |
-| --- |
-| *(Novelty and Outlier detection, 2019)* |
+**图 8. 异常检测算法对比**
 
-####### 3.3 自适应持续智能认证系统的设计与实现
+![Figure978-1-7998-2701-6.ch002.f08](img/ch002.f08.png)
 
+*(Novelty and Outlier detection, 2019)*
 
+## 3.3 自适应持续智能认证系统的设计与实现
 
+### 基于设备用户画像建模的持续认证系统
 
-
-######## 基于设备用户画像建模的持续认证系统
-
-######### 系统概述
+#### 系统概述
 
 该提议的持续认证系统基于对设备所有者画像的建模，将其与当前使用情况进行比较，并评估二者之间的相似度。为建立用户画像，需生成一个或多个包含用户使用设备时行为数据的数据集。
 
-######### 实现平台选择
+#### 实现平台选择
 
 考虑到当前 Android 设备用户（约 23 亿）多于其主要竞争对手 iOS（Android Developers, 2019），决定在 Android 平台上开发概念验证方案。此外，我们使用 API 21（对应 Android 5.0）或更高版本，因为该版本覆盖了超过 84% 的 Android 设备。
 
-######### 特征维度与向量生成
+#### 特征维度与向量生成
 
-用于形成向量的特征来源于两个维度：**应用使用统计**和**位置信息**。两个维度生成的向量将分别存储在不同的数据集中，以便后续生成用户行为画像。
+用于形成向量的特征来源于两个维度：`应用使用统计`和`位置信息`。两个维度生成的向量将分别存储在不同的数据集中，以便后续生成用户行为画像。
 
-########## 应用使用统计维度
+##### 应用使用统计维度
 
 该维度每分钟生成一次向量。仅在设备解锁时收集应用相关向量，这使得我们能在不产生高能耗的情况下进行必要的读取以收集信息。这些向量包含以下特征：
 
@@ -1365,7 +1385,7 @@ ML 算法分为两大类：监督学习和无监督学习。监督学习算法�
 *   上一分钟发送和接收的字节数。
 *   星期几和时间（秒）。
 
-########## 位置信息维度
+##### 位置信息维度
 
 该维度每 5 分钟收集一次向量，无论用户设备是锁定还是解锁状态。这些向量包含以下特征：
 
@@ -1374,33 +1394,33 @@ ML 算法分为两大类：监督学习和无监督学习。监督学习算法�
 *   星期几。
 *   时间（秒）。
 
-######### Android 应用架构设计
+#### Android 应用架构设计
 
 确定两个维度的向量特征后，下一步是设计并实现一个 Android 应用，包含收集这些信息所需的类，在训练和评估阶段将数据存储在不同的数据集中。
 
-########## 核心类
+##### 核心类
 
 *   **`AlarmManager`**：核心类之一，用于通过计划闹钟管理应用使用统计和位置统计收集服务的启动。由于设备长时间闲置时闹钟会自动暂停，需额外使用 **`BootReceiver`** 类（继承自 `BroadcastReceiver`）。该类负责接收设备开机事件并安排必要的闹钟。
 *   **`IntentService`**：Android 库提供的类，支持在后台异步执行获取向量数据所需的操作。该类同时用于 **`DataApssIntentService`** 类和 **`Location`** 类，以周期性收集各维度特征。配合闹钟程序（`AlarmManager`），即使实现传感器收集的应用在后台运行甚至关闭，也能获取特征信息。
 
-########## 数据收集类
+##### 数据收集类
 
 *   **`DataApssIntentService`**：负责周期性收集（每分钟）所有与应用使用统计相关的特征。通过 `Android.app.usage` 库提供的类获取应用数据（如打开顺序、使用时长、首次使用时间等）。收集完成后，将特征发送给 **`DataMachineLearning`** 类生成该维度向量并存入对应数据集。
 *   **`Location`**：负责周期性收集（每 5 分钟）设备位置。使用 **Google Play Services location API** 实现位置检测，可节省能耗。收集特征后，将数值发送给 **`DataMachineLearning`** 类存入对应数据集。
 
-########## 机器学习处理类
+##### 机器学习处理类
 
 *   **`DataMachineLearning`**：实现从 `Localization` 和 `DataApssIntentService` 类获取特征、生成各维度向量并存入数据集的功能。此外，该类还负责执行 **Isolation Forest** 算法训练，以及在为期两周的训练阶段结束后，对用户实时生成的向量进行评估。图 9 展示了上述步骤的流程图。
 
-| Figure 9. UML diagram of application main actions |
-| --- |
-| ![Figure978-1-7998-2701-6.ch002.f09](img/ch002.f09.png) |
+**图 9. 应用主要动作的 UML 图**
 
-######### Isolation Forest 算法应用
+![Figure978-1-7998-2701-6.ch002.f09](img/ch002.f09.png)
+
+#### Isolation Forest 算法应用
 
 如前所述，我们使用 Isolation Forest 识别异常并认证设备所有者。提供配置 Isolation Forest 算法所需方法的最常用库是 **Scikit-learn**（Scikit-learn developers, 2019）。
 
-########## 训练阶段
+##### 训练阶段
 
 训练阶段预计持续 **14 天** 以获得最佳效果。
 
@@ -1408,7 +1428,7 @@ ML 算法分为两大类：监督学习和无监督学习。监督学习算法�
 *   位置特征：通过 `Location` 类每 5 分钟收集一次。
 *   每个维度独立生成向量，存储在不同文件中，供 Isolation Forest 算法训练使用。
 
-########## 评估阶段
+##### 评估阶段
 
 训练阶段结束后，IF 算法已学习所有者行为，进入评估阶段。数据收集服务保持相同的周期性流程，不同之处在于每分钟设备解锁时会对生成的向量进行评估。
 
@@ -1423,26 +1443,26 @@ GA = 0.5 * Uva + 0.5 * Uvl
 ```
 
 其中：
+
 *   **`GA`**：认证度，取值范围 [0, 1]，计算公式为 `1 - 待评估向量的异常分数`。
 *   **`Uva`**：最后一个应用特征向量的评估结果。
 *   **`Uvl`**：最后一个位置特征向量的评估结果。
-
 *   评估结果接近 **0**：表示评估向量由算法视为异常的特征组成。
 *   评估结果接近 **1**：表示用户行为与训练阶段获得的行为具有高度相似性。
 
-
-
-
 最后，请注意本文档中使用的隔离森林算法具有适应所有者用户行为某些变化的能力。为此，一旦训练阶段结束，算法将使用超过设定阈值的某些向量进行重新训练，这些向量被认为用户的行为并非异常。重新训练的目的是为认证系统提供适应所有者行为可能变化的能力。因此，一旦评估阶段开始（在此阶段用户将持续进行实时认证），如果系统认为评估向量属于所有者用户，它们将被添加到训练阶段生成的数据集中。通过不存储超过系统运行所需的数据，也保护了用户的隐私（Huertas, Gil, García & Martínez, 2014a, 2017, 2014b, 2016）。
 
-########## 讨论
+##### 讨论
 
 本章提出的系统在现有技术水平中属于创新，因为没有其他工作结合应用程序和位置的数据。正如表 1 所示，尽管之前的解决方案取得了一定进展，但它们存在一系列缺陷。例如，大多数系统使用分类机器学习算法，而不是异常检测算法。这一事实意味着这些系统无法检测任何入侵者，只能识别其拥有行为数据的用户。此外，那些执行异常检测的系统，其结果不如使用分类算法的系统好。
 
-########## 表 1. 最新解决方案的比较
+**表 1. 最新解决方案的比较**
 
 | 提案 | 考虑的维度 | 适应性 | 机器学习技术 | 结果 |
 | --- | --- | --- | --- | --- |
+
+
+
 | SilentSense (Bo, Zhang, Li, Huang and Wang, 2013) | 移动和屏幕触摸 | 否 | OneClass-SVM, SVM | 准确率：72.36%<br>误接受率 (FAR)：24.99% |
 | (Ehatisham-ul-Haq et al., 2017) | 加速度计、磁力计和陀螺仪传感器 | 否 | SVM, 贝叶斯网络 (BN), 决策树 (DT), K-近邻 (K-NN) | 准确率：99.18-93.30%，取决于算法 |
 | SenGuard (Shi, Yang, Jiang, Yang & Xiong, 2011) | 移动、位置、语音和屏幕触摸 | 否 | 贝叶斯网络 | 准确率：97-95% |
@@ -1459,11 +1479,11 @@ GA = 0.5 * Uva + 0.5 * Uvl
 
 作为系统局限性，GPS 坐标定位并非在所有环境下都能正常工作。因此，在用户四周被建筑物包围的大城市中，坐标可能更不准确或难以确定。此外，使用运动传感器可能导致系统在用户做出跑步或其他运动等异常动作时无法正常工作。
 
-########## 结果
+## 结果
 
 在本节中，将解释为确定最佳特征和维度集而执行的不同实验。通过不同的实验，旨在实现一个持续且自适应的认证系统，能够准确评估用户行为，检测异常行为。
 
-########## 5.1 第一次实验
+## 5.1 第一次实验
 
 本次实验的目的是收集尽可能多的特征来建模用户的行为档案，以检测异常行为。为进行此实验，实现了一个 Android 移动应用程序，负责收集设备所有者在 14 天内的应用程序使用情况。训练阶段的数据收集是在设备处于静止状态（锁屏）以及所有者每日使用设备（解锁）时进行的。
 
@@ -1482,7 +1502,7 @@ GA = 0.5 * Uva + 0.5 * Uvl
 
 表 2 显示了评估阶段所进行的不同测试所获得的标准化结果的平均值。
 
-########## 表 2. 使用手机锁屏和解锁状态下收集的应用程序数据的认证结果
+### 表 2. 使用手机锁屏和解锁状态下收集的应用程序数据的认证结果
 
 | 评估用户 | 结果 |
 | --- | --- |
@@ -1491,18 +1511,16 @@ GA = 0.5 * Uva + 0.5 * Uvl
 
 接下来展示一张图（见图 10），显示一组向量相对于隔离森林拥有的训练数据集的评估情况。图中的红线（见图 10）代表异常行为和正常行为之间的分界阈值，黄线代表数据集中每个向量评估的结果。评估数据集由 20 个向量组成，其中前 15 个属于所有者用户，后 5 个属于异常用户。为了以图形方式表示这些值，有必要将系统针对每个表示向量返回的认证程度结果进行归一化。
 
-########## 图 10. 实验 1 数据集的图形表示
+### 图 10. 实验 1 数据集的图形表示
 
 ![Figure978-1-7998-2701-6.ch002.f10](img/ch002.f10.png)
-
-
 
 可以看出，第一次实验获得的结果不够显著，无法区分设备使用中的异常行为（向量 16-20）。这是由两个因素造成的：
 
 *   由于手机大部分时间处于待机模式，算法在设备处于锁定状态时会给用户更高的评价，将设备的使用视为异常行为。
 *   向量中收集的一些特征无法为算法检测异常提供有用信息。收集了一些特征，即使用户行为发生变化，这些特征也会线性增加或变化极小。
 
-########## 5.2 第二次实验
+## 5.2 第二次实验
 
 本实验的目的是选择最相关的特征，以更确定地判定所有者的异常行为，并选择收集特征的时间点。具体而言，代表应用使用统计维度的向量由以下特征组成：
 
@@ -1520,13 +1538,13 @@ GA = 0.5 * Uva + 0.5 * Uvl
 
 图 11 展示了 `Isolation Forest` 所用训练数据集相关向量集的评估结果。红线表示异常行为与正常行为之间的边界阈值，黄线表示数据集中每个向量的评估结果。评估数据集由 20 个向量组成，前 15 个属于所有者用户，后 5 个属于异常用户。正如所观察到的，获得的结果显示出的评估能够区分设备使用中的异常行为。
 
-| 图 11. 实验 2 数据集的图形化表示 |
-| --- |
-| ![Figure978-1-7998-2701-6.ch002.f11](img/ch002.f11.png) |
+### 图 11. 实验 2 数据集的图形化表示
+
+![Figure978-1-7998-2701-6.ch002.f11](img/ch002.f11.png)
 
 如果我们将图 10 与图 11 的结果进行比较，可以看到在进行特征选择后，属于所有者的向量评估值更好（在本实验中，大多数值在 0.5 左右）。然而，我们认为如果考虑额外的维度，这些结果可能会更好。在此意义上，下一个实验展示了增加新维度对评估值的影响。
 
-########## 5.3 第三次实验
+## 5.3 第三次实验
 
 根据上一测试获得的结果，我们研究了考虑有助于建模用户配置文件并提高异常检测成功率的新维度和特征的可能性。在此意义上，我们决定添加地理位置维度的以下特征。
 
@@ -1539,7 +1557,7 @@ GA = 0.5 * Uva + 0.5 * Uvl
 
 本测试分别在从向量中移除与时间和星期相关的特征以及不移除这些特征的情况下进行。移除这些特征的原因是 `IF` 会随机选择某些特征来判定用户行为的异常程度，可能会出现选择当天时间或星期作为特征，也可能不选择的情况。此外，将对比过滤训练数据集（按小时和天）后的评估结果，与评估相同向量但不对训练数据集应用任何过滤器的结果。获得的归一化结果平均值（在 0 和 1 之间，同实验 1）如表 3 所示。
 
-表 3. 使用新特征并选择将用于训练的数据集向量时的所有者向量认证结果。
+### 表 3. 使用新特征并选择将用于训练的数据集向量时的所有者向量认证结果
 
 | 应用使用与定位 | | 得分 |
 | --- | --- | --- |
@@ -1556,7 +1574,7 @@ GA = 0.5 * Uva + 0.5 * Uvl
 
 最后，将通过评估不属于所有者用户的不同向量，来评估系统是否能够检测设备的异常行为。与前一种情况一样，将通过对训练数据集应用过滤以获得更具体和更小的数据集，以及在不应用任何过滤器以获得减少向量数量的两个数据集的情况下，检查训练数据集的评估结果。获得的结果如表 4 所示。
 
-表 4. 使用新特征并选择将用于训练的数据集向量时的异常向量认证结果。
+### 表 4. 使用新特征并选择将用于训练的数据集向量时的异常向量认证结果
 
 | 应用使用与定位 | | 得分 |
 | --- | --- | --- |
@@ -1568,30 +1586,27 @@ GA = 0.5 * Uva + 0.5 * Uvl
 正如所见，无论是否对训练数据集应用过滤以仅选择属于同一天且同时间的收集向量，系统都能准确检测异常向量。原因如下：
 
 *   一周中的时间和天特征可能被 `Isolation Forest` 选为判定待评估向量是否异常的特征。因此，消除这些特征可使算法随机选择其他特征，这些特征相对于训练数据集向量将具有异常值。
-
-
-
-• 不应用时间和星期几的过滤器这一事实，由于数据集规模较小，为检测异常提供了更好的结果。这意味着 `Isolation Forest` 只需执行较少次数的分割即可隔离向量所选特征的值。
+*   不应用时间和星期几的过滤器这一事实，由于数据集规模较小，为检测异常提供了更好的结果。这意味着 `Isolation Forest` 只需执行较少次数的分割即可隔离向量所选特征的值。
 
 结论是，决定为位置维度使用一个数据集，为应用维度使用另一个数据集。这两个数据集均不按时间和星期几进行过滤。此外，新增的特征（本意欲通过它们构建两个特定的训练数据集）被移除，因为 `Isolation Forest` 可以从异常向量中选择这些特征。
 
 图 12 显示了 `Isolation Forest` 所拥有的训练数据集方面的一组向量的评估。被评估的数据集由 15 个向量（前面表示的那些）组成，属于设备所有者用户；以及 5 个向量（后面表示的那些）组成，属于异常用户。正如你所见，设定在 0.55 的阈值使我们能够区分设备所有者用户与具有异常行为用户的行为。
 
-| 图 12. 实验 3 数据集的图形表示 |
-| --- |
-| ![Figure978-1-7998-2701-6.ch002.f12](img/ch002.f12.png) |
+### 图 12. 实验 3 数据集的图形表示
 
-###### 6. 结论与未来工作
+![Figure978-1-7998-2701-6.ch002.f12](img/ch002.f12.png)
+
+## 6. 结论与未来工作
 
 在本工作中，提出了一种基于通过位置维度和应用使用统计维度收集用户特征的、面向多媒体移动设备的持续自适应认证系统。采用了一种基于异常检测的无监督机器学习技术（如 `IF`），以精确的结果检测设备所有者和入侵者。选择 `IF` 作为使用的算法，是因为它在移动设备上使用时具有低能耗和低计算消耗，且提供较高的精度水平。在 `IF` 经过设备所有者配置文件训练后，所提出的解决方案准备好实时评估用户行为，允许算法通过插入满足特定特征的新向量到数据集中来实现自适应性。最后，不同的实验获得了有效结果，能够准确区分异常用户和设备所有者的行为。
 
 在未来的研究方向中，我们计划将 `IF` 执行的计算迁移到云端，以降低其在移动设备上产生的计算成本和能耗成本。还打算研究新的维度，以更确定地建模用户行为档案。最后，我们计划使用额外的机器学习算法，测试在新改进加入后的异常检测效率。
 
-###### 致谢
+## 致谢
 
 本工作由 Fundación Séneca - 穆尔西亚大区科学技术局通过 AUTHCODE（面向设备持续访问的认证）项目（资助代码 20549/PDC/18）以及爱尔兰政府通过 IRC 博士后奖学金（资助代码 GOIPD/2018/466）提供资助。
 
-##### 参考文献
+## 参考文献
 
 Abdiansah, A., & Wardoyo, R. (2015). Time complexity analysis of support vector machines (SVM) in LibSVM. *International Journal of Computers and Applications*, 128(3).
 
@@ -1607,7 +1622,7 @@ BehavioSec, Inc. (2019). Continuous Authentication through Passive Behavioral Bi
 
 Ben-Gal, I., Ruggeri, F., Faltin, F., & Kenett, R. (2007). Bayesian Network.
 
-Bo C., Zhang L., Li X., Y. Huang Q., Wang Y. (2013). SilentSense: Silent User’s identification Via Touch and Movement Behavioral Biometrics. *Proceedings 19th Annual International Conference on Mobile Computing & Networking*, 187-190. 10.1145/2500423.2504572
+Bo C., Zhang L., Li X., Y. Huang Q., Wang Y. (2013). SilentSense: Silent User's identification Via Touch and Movement Behavioral Biometrics. *Proceedings 19th Annual International Conference on Mobile Computing & Networking*, 187-190. 10.1145/2500423.2504572
 
 Carmona, E. (2014). Tutorial sobre Máquinas de Vectores Soporte (SVM). *Department of Intelligence Artificial, Universidad Nacional de Educación a Distancia*. Spain: UNED.
 
@@ -1618,6 +1633,10 @@ Developers, A. (2019). Distribution Dashboard. Retrieved October 29, 2019, from 
 Deyan, G. (2019, March 28). 60+ Smartphone. *Stat*, 2019. Retrieved from https://techjury.net/stats-about/smartphone-usage/
 
 Domingos, P. (2012). A Few Useful Things to Know about Machine Learning. *Communications of the ACM*, 55(10), 78–87. doi:10.1145/2347736.2347755
+
+
+
+## 参考文献
 
 Ehatisham-ul-Haq, M., Azam, M. A., Loo, J., Shuang, K., Islam, S., Naeem, U., & Amin, Y. (2017). Authentication of Smartphone Users Based on Activity Recognition and Mobile Sensing. *Sensors (Basel)*, 17(9), 2043. doi:10.3390/s17092043
 
@@ -1646,11 +1665,6 @@ Huertas, A., Gil, M., García, F. J., & Martínez, G. (2017). Preserving patient
 Hyperplane, W. (2019). Retrieved October 29, 2019, from https://en.wikipedia.org/wiki/Hyperplane
 
 Jararweh, Y., Alsmirat, M., Al-Ayyoub, M., Benkhelifa, E., Darabseh, A., Gupta, B., & Doulat, A. (2017). Software-defined system support for enabling ubiquitous mobile edge computing. *The Computer Journal*, 60(10), 1443–1457. doi:10.1093/comjnl/bxx019
-
-
-
-
-##### 参考文献
 
 Jiang, F., Fu, Y., Gupta, B. B., Lou, F., Rho, S., Meng, F., & Tian, Z. (2018). Deep learning based multi-channel intelligent attack detection for data security. *IEEE Transactions on Sustainable Computing*。
 
@@ -1706,31 +1720,29 @@ Zhu, F., Yang, J., Gao, C., Xu, S., Ye, N., & Yin, T. (2016). A weighted one-cla
 
 Zhu, J. (2018). Machine Learning Decision Tree. *University of Wisconsin*。
 
-Zighra. (2019). Smart Identity Defense. AI-Powered Continuous Authentication and Fraud Detection. Retrieved October 29, 2019, from https://zighra.com/
 
-#### 第 3 章
 
-*   **Sadiq J. Almuairfi**  
-    ![Orcid Imagehttps://orcid.org/0000-0002-7275-1677](https://orcid.org/0000-0002-7275-1677)  
+# Zighra. (2019). Smart Identity Defense. AI-Powered Continuous Authentication and Fraud Detection. Retrieved October 29, 2019, from https://zighra.com/
+
+## 第 3 章
+
+*   **Sadiq J. Almuairfi**
+    ![Orcid Imagehttps://orcid.org/0000-0002-7275-1677](https://orcid.org/0000-0002-7275-1677)
     Prince Sultan University, Saudi Arabia
 
-*   **Mamdouh Alenezi**  
-    ![Orcid Imagehttps://orcid.org/0000-0001-6852-1206](https://orcid.org/0000-0001-6852-1206)  
+*   **Mamdouh Alenezi**
+    ![Orcid Imagehttps://orcid.org/0000-0001-6852-1206](https://orcid.org/0000-0001-6852-1206)
     Prince Sultan University, Saudi Arabia
 
-##### 摘要
+### 摘要
 
 云计算技术为用户提供了节省成本和服务灵活性。随着多媒体数据的爆炸式增长，越来越多的数据所有者将其个人多媒体数据外包到云端。同时，一些计算成本高昂的任务也由云服务器承担。然而，外包的多媒体数据及其应用可能会泄露数据所有者的私人信息，因为数据所有者失去了对其数据的控制。最近，这一想法激发了针对外包多媒体数据的隐私保护可逆数据隐藏的新研究兴趣。本章将提出匿名认证方案，作为云计算专业人员采用的最相关、最适用、最恰当的技术，以消除与隐私风险和挑战相关的风险。
 
-##### 引言
+### 引言
 
 认证是确定特定个人或设备是否应被允许访问系统、应用程序或仅仅是运行在设备上的对象的过程。这是一个确保基本安全目标（即机密性和完整性）的重要过程。此外，充分的认证是保护任何资源的第一道防线。重要的是，并非在每种场景下都可使用相同的认证技术。例如，与访问企业数据库相比，访问“聊天服务器”可能采用不那么复杂的方法。大多数现有的认证方案都需要在客户端和服务器端进行处理。因此，任何认证方案的可接受性在很大程度上取决于其抵御攻击的鲁棒性，以及客户端和服务器端的资源需求。由于移动和手持设备的普及，资源需求已成为一个主要因素。如今，随着手机的使用，用户可以访问包括银行和企业数据库在内的任何信息。
 
-
-
-
-
-###### 云计算中的匿名性与隐私
+#### 云计算中的匿名性与隐私
 
 匿名性与保密性和隐私息息相关。用户应知晓其在线活动是安全的，仅对其本人及服务提供商的少数授权人员可见。用户的全部浏览、购物活动被他人访问是不可接受的，云服务提供商应确保此类情况不发生。用户不应让欺诈者获知其访问过的在线商店、购买的商品、访问频率及交易详情。
 
@@ -1738,13 +1750,13 @@ Zighra. (2019). Smart Identity Defense. AI-Powered Continuous Authentication and
 
 对于不愿与他人分享个人或私人信息的用户而言，隐藏真实身份至关重要。例如，他们可能不愿分享与商业伙伴的会议日程、购买阅读的书籍、账户资金数额、执行的交易、去向等信息。简而言之，许多用户强烈倾向于在一切可能的情况下和时机保持匿名。
 
-###### 移动与无线技术的演进
+#### 移动与无线技术的演进
 
 自 20 世纪复兴以来，移动和无线技术实现了巨大增长。目前，绝大多数无线设备用户（包括手机、笔记本电脑、智能手机、PDA 等）均可随时随地在全球范围内访问各类在线应用和服务。这些服务可能包括视频会议、网络研讨会、社交网络、远程医疗、政府服务、VoIP 和网页浏览。然而，这些在线服务的一个局限性在于公共互联网的基础设施，它允许攻击者篡改、中断并窃听两个可信实体之间传输的消息。因此，确保传输消息的安全性（包括用户隐私）已成为最重要的因素。此外，先进的云计算技术为用户提供了经济且灵活的服务，导致海量机密多媒体数据被外包至云端，从而引发了与该数据相关的风险和隐私担忧。隐私保护已成为云计算领域近几年来的热门研究课题之一。鉴于一旦用户数据泄露，可能导致多种负面后果，因此构建与隐私保护相关的技术已成为云计算领域的根本关切。
 
 云计算技术为用户提供了节省成本和灵活的服务。随着多媒体数据的爆发式增长，越来越多的数据所有者将个人多媒体数据外包至云端。同时，云服务器也承担了一些计算成本高昂的任务。然而，由于数据所有者失去了对数据的控制权，外包的多媒体数据及其应用可能会泄露数据所有者的私人信息。最近，这一问题引发了关于外包多媒体数据上“隐私保护可逆数据隐藏”的新研究兴趣。本章将提出匿名认证方案，作为云计算专业人员采用的最相关、最适用、最恰当的技术，以消除与隐私风险和挑战相关的风险。
 
-###### 云中的多媒体数据担忧
+#### 云中的多媒体数据担忧
 
 先进的云计算技术为用户提供经济且灵活的服务，加上云端多媒体数据的爆发式增长，导致数据所有者大量将私人多媒体数据外包至云端。同时，云服务器承担了少量计算成本高昂的任务，但由于所有者失去了对数据的控制，已外包的多媒体数据可能泄露数据所有者的机密信息。近期，针对已外包多媒体数据上的“隐私保护可逆数据隐藏”展开了研究。正如 Xiong (2018) 所讨论的，建议对多媒体数据进行加密，以在数据外包后保护隐私。
 
@@ -1752,11 +1764,7 @@ Zighra. (2019). Smart Identity Defense. AI-Powered Continuous Authentication and
 
 “车载自组网” 与社交网络的融合提供了一些创新应用，主要致力于娱乐和安全。例如，考虑一名驾驶员收到附近发生事故的警告消息。在此类紧急情况（如交通拥堵、火灾、自然灾害等）下，车载自组网中安全相关消息的通信可向车辆推送预警消息。多媒体消息（如视频和音频）在车载通信中十分有效，因为与纯文本消息相比，它们更具说明性、用户友好、全面和描述性。
 
-
-
-
-
-###### 认证方案
+#### 认证方案
 
 文献中存在多种认证方案，大致可分为以下三类：
 
@@ -1774,17 +1782,13 @@ Zighra. (2019). Smart Identity Defense. AI-Powered Continuous Authentication and
 
 一般来说，图形密码技术可分为两类：基于识别和基于回忆的图形技术。
 
-####### 基于识别的系统
+##### 基于识别的系统
 
 在基于识别的系统中，一组图像会显示给用户，通过的认证要求按特定顺序点击或触摸正确的图像。基于识别的系统示例包括 `Awase-E` 系统、`Pass-faces` 系统和 `AuthentiGraph`，分别由 Takada 和 Hoike (2003)、Memon et al. (2007) 以及 Wei-Chi 和 Maw-Jinn (2005) 提出。
 
+###### 图形密码系统综述
 
-
-
-
-######## 图形密码系统综述
-
-######### Awase-E 系统
+####### Awase-E 系统
 
 一种称为 Awase-E 的图像密码系统，允许用户使用喜欢的图像作为“通行图像”来替代文本密码进行身份验证。Awase-E 认证框架包含两个阶段：图像注册界面和通知界面。
 
@@ -1796,11 +1800,11 @@ Dirik 等人（2007）研究了基于识别的方案，得出结论：即使过�
 
 虽然基于识别的图形密码易于记忆，提高了易用性，但并不完全安全。Wei-Chi 和 Maw-Jinn（2005）指出，为提供合理大的密码空间，认证需要多轮图像识别，这很繁琐。此外，由于使用固定图像作为密码，基于识别的系统容易受到重放攻击和鼠标追踪攻击。因此，我们在下一章描述的拟议系统中考虑了这些缺陷，该系统也克服了基于回忆方案的问题。
 
-######### 基于回忆的系统
+####### 基于回忆的系统
 
 在基于回忆的系统中，用户需重现注册阶段创建或选择的内容。基于回忆的方案大致可分为两类：纯回忆技术和提示回忆技术。
 
-########## 纯回忆技术
+######## 纯回忆技术
 
 此方法要求用户在无任何系统帮助或提示的情况下重现密码。Draw-A-Secret（DAS）技术、网格选择和 Passdoodle 是常见的纯回忆技术示例。
 
@@ -1822,7 +1826,7 @@ Passdoodle（Birget 和 Dawei，2006 讨论）是手绘图形或文本的图形�
 | --- |
 | ![Figure978-1-7998-2701-6.ch003.f03](img/ch003.f03.png) |
 
-########## 提示回忆技术
+######## 提示回忆技术
 
 此技术中，系统提供提示帮助用户高准确度地重现密码。提示以图像中的热点（区域）形式呈现。用户需选择部分区域注册为密码，登录时按相同顺序选择相同区域。用户必须记住“选定的点击点”并保密。实现方式包括 Blonder 算法和 PassPoint 方案。
 
@@ -1840,14 +1844,11 @@ Passdoodle（Birget 和 Dawei，2006 讨论）是手绘图形或文本的图形�
 
 PassPoint 系统拥有巨大的密码空间，与其他类似系统相比提高了安全级别。例如，图像上的五或六个点击点可产生的密码数量超过标准 26 字母表的 8 字符文本密码。为增强安全性，PassPoint 系统以哈希（加密）形式在密码文件中存储图像密码。此外，哈希不允许近似匹配：两个几乎相同但不完全相同的密码将产生不同的哈希值。为通过身份验证，用户必须点击接近选定点的位置，在距通行点某个测量容差距离内。
 
-
-
-
 Wiedenbeck 等人 (2006) 提出了此类图像中点击点周围的最佳容差。要登录，用户应在该点击点的容差范围内点击。事实上，更大的密码空间会导致所选点击点或像素周围的容差尺寸变小，例如（2 到 5 mm²）。例如，尺寸为（330 x 260 mm²）且容差区域大小为（6 x 6 mm²）的图像可提供 590 多个容差区域。显然，密码空间取决于容差大小或系统选择。这一改进使 Passpoint 系统更加灵活，特别是对于使用移动设备的人群。
 
 上述方案用于设备级认证和应用级认证。不幸的是，正如下一节所示，它们遭受不同的问题。
 
-####### 认证方案的问题
+##### 认证方案的问题
 
 传统的字母数字密码始终容易受到猜测和字典攻击。甚至可能存在流氓程序记录按键并将其发布到远程网站。为了克服基于键盘记录器的攻击，较新的系统可能会显示图形键盘，用户必须使用“鼠标点击”输入正确的密码。如果攻击者使用屏幕捕获机制而不是键盘记录器，这种方法也可能被破解。由于新的视频编解码器提供了更高的压缩比，攻击者可能会使用屏幕捕获程序录制短视频片段并将其发送到远程服务器进行发布。因此，作为替代方案，可以使用基于令牌的认证方法，无论是作为独立认证还是结合传统的字母数字密码使用。但这项技术并不普及。用户可能需要携带受信任的令牌卡读取器。面对未知的令牌读取器，用户可能不知道自己使用的是受信任的合法读取器，还是可能克隆令牌的不受信任读取器（类似于最近的 ATM 卡诈骗）。
 
@@ -1855,99 +1856,93 @@ Wiedenbeck 等人 (2006) 提出了此类图像中点击点周围的最佳容差�
 
 有人可能会辩称，重放攻击可以通过加密和防篡改时间戳来防止，物理肩窥攻击可能为用户所知，因为此过程具有侵入性。然而，由于高带宽移动设备和轻量级、高效视频编解码器的普及，流氓程序可能能够捕获密码并远程发布。由于我们已知的所有基于图像的密码方案都使用静态密码，录制的视频可能被重放，并通过一些人工交互，用户的密码可能被解码。此外，使用固定图像或静态密码容易受到内部软件录制的攻击，例如特洛伊木马软件，这可能被远程黑客控制。特洛伊木马通常充当不可检测的后门，联系控制器，后者随后可对受影响设备进行未经授权的访问。因此，加密和防篡改时间戳不足以防止此类用户遭受重放攻击和肩窥攻击。表 1 总结了认证方案的优缺点。
 
-######## 表 1. 认证方案总结
+###### 表 1. 认证方案总结
 
 | | 示例 | 优势 | 劣势 |
 | --- | --- | --- | --- |
 | 基于文本 | 字母数字 | 易于使用、成本不高、易于实现 | 易受猜测和攻击，如字典攻击、肩窥攻击、重放攻击、社会工程学等 |
 | 基于令牌 | 卡片、一次性密码令牌机 | 易于使用、比基于文本的更安全 | 令牌的额外成本，易受中间人攻击、丢失和盗窃、肩窥攻击等攻击 |
 | 基于生物特征 | 指纹、语音、面部和虹膜识别 | 简单易用、无需记忆密码 | 实施成本高、易受中间人攻击、重放攻击和内部录制攻击 |
+
+
+
 | 基于图形 | Awase-E、AuthentiGraph、Passdoodle、Draw a secret | 易于使用和记忆。 | 易受重放攻击和肩窥攻击，需要额外硬件 |
 | 基于图像 | Blonder、Passfaces、Passpoint | 易于记忆、比其他方案更安全。 | 易受肩窥攻击和重放攻击 |
 
-####### 匿名认证
+### 匿名认证
 
 匿名认证和位置隐私的概念可分为三大类。
 
-######## 加密 IMSI
+#### 加密 IMSI
 
-在 LTE（长期演进）网络的认证协议中，IMSI（国际移动用户识别码）的捕获已被视为隐私挑战。因此，存在一种基于公钥密码学在传输过程中加密 IMSI 的自认证方案，称为“SP-AKA”。然而，两个传输身份之间的关联至今仍是隐私顾虑。Sanaa 等人 (2017) 在研究异构网络时，考虑了移动节点的匿名性和位置隐私。他们认为，保护某些移动节点的位置隐私是通过异构网络进行可信漫游所面临的挑战。因此，作者为“mobileIPv6 无线网络”提出了“匿名归属构建”的更新方案。该方案包含实现相互认证以及在两个匿名网络之间共享对称密钥。现有文献还揭示，4G 网络伴随着多宿主、位置隐私和移动性等诸多挑战。因此，引入了一种用于修改的代理协议，即 IPv6 协议。在该方案中，利用虚拟身份实现位置隐私。然而，这些代理协议允许归属实体将特权委托给其他实体代表其进入。因此，正如 Jabr (2017) 所讨论的，冒充攻击至今仍然存在。
+在 `LTE`（长期演进）网络的认证协议中，`IMSI`（国际移动用户识别码）的捕获已被视为隐私挑战。因此，存在一种基于公钥密码学在传输过程中加密 `IMSI` 的自认证方案，称为“`SP-AKA`”。然而，两个传输身份之间的关联至今仍是隐私顾虑。`Sanaa` 等人 (2017) 在研究异构网络时，考虑了移动节点的匿名性和位置隐私。他们认为，保护某些移动节点的位置隐私是通过异构网络进行可信漫游所面临的挑战。因此，作者为“`mobileIPv6` 无线网络”提出了“匿名归属构建”的更新方案。该方案包含实现相互认证以及在两个匿名网络之间共享对称密钥。现有文献还揭示，`4G` 网络伴随着多宿主、位置隐私和移动性等诸多挑战。因此，引入了一种用于修改的代理协议，即 `IPv6` 协议。在该方案中，利用虚拟身份实现位置隐私。然而，这些代理协议允许归属实体将特权委托给其他实体代表其进入。因此，正如 `Jabr` (2017) 所讨论的，冒充攻击至今仍然存在。
 
-######## 基于动态身份的隐私
+#### 基于动态身份的隐私
 
-正如 Hamandi (2013) 所述，互联网连接和 AP（接入点）被视为不可信实体。因此，活动和被动攻击者可能通过这些不可信的互联网连接和 AP 传播，以侵犯用户设备的隐私。为了保护用户设备的隐私，分配了一些动态身份，而不是使用传统的 IMSI 来创建化名“W-AKA”。“归属用户服务器 (HSS)”实体必须在每次认证过程中定期或最初会面，这给网络造成了巨大的开销。此外，由于即将到来的化名是在先前化名的帮助下生成的，该方案除了实现进一步的保密性外，未实现后向保密性。此外，在注册过程中必须以明文传输 IMSI，这导致建立了与 IMSI 的关联。
+正如 `Hamandi` (2013) 所述，互联网连接和 `AP`（接入点）被视为不可信实体。因此，活动和被动攻击者可能通过这些不可信的互联网连接和 `AP` 传播，以侵犯用户设备的隐私。为了保护用户设备的隐私，分配了一些动态身份，而不是使用传统的 `IMSI` 来创建化名“`W-AKA`”。“归属用户服务器 (`HSS`)”实体必须在每次认证过程中定期或最初会面，这给网络造成了巨大的开销。此外，由于即将到来的化名是在先前化名的帮助下生成的，该方案除了实现进一步的保密性外，未实现后向保密性。此外，在注册过程中必须以明文传输 `IMSI`，这导致建立了与 `IMSI` 的关联。
 
-同样，Gier M. Koien (2013) 提出了一种称为相互认证的增强隐私方法，即密码学，因为他认为用户设备隐私可能通过追踪攻击被侵犯，因为此类攻击可能针对用户设备的临时身份序列。因此，文献提供了作者利用公钥加密，使用虚拟 IMSI 构建能够抵御追踪攻击的临时不可链接身份。然而，该方案增加了执行认证所需的消息数量，导致消耗大量网络带宽，Zaher (2013)。
+同样，`Gier M. Koien` (2013) 提出了一种称为相互认证的增强隐私方法，即密码学，因为他认为用户设备隐私可能通过追踪攻击被侵犯，因为此类攻击可能针对用户设备的临时身份序列。因此，文献提供了作者利用公钥加密，使用虚拟 `IMSI` 构建能够抵御追踪攻击的临时不可链接身份。然而，该方案增加了执行认证所需的消息数量，导致消耗大量网络带宽，`Zaher` (2013)。
 
-######## 基于化名的隐私
+#### 基于化名的隐私
 
+#### 用于实现 IMSI 的认证方案 (HSK-AKA) 中的假名
 
+用于实现 `IMSI` 的认证方案 (`HSK-AKA`) 中的假名由 `Hamandi` 等人 (2013) 提出。由于所提认证方案必须到达 `HSS`，该方案会消耗网络带宽。此外，网络实体——移动性管理实体和用户设备——不具备检查假名准确性的能力。因此，恶意攻击者仍然是一个问题。
 
+用户设备的永久 `ID` 提出了一种基于假名的认证方案，用于保护 `IMSI` 隐私。另一方面，预期的认证方案必须到达 `HSS`，这需要消耗更多带宽。此外，所提方案依赖于一组新颖的函数，这可能适用也可能不适用于 `LTE` 网络基础设施。
 
-######## 用于实现 IMSI 的认证方案 (HSK-AKA) 中的假名
+此外，`Parne` 等人 (2019) 在 `LTE` 认证方案中利用假名来保护 `IMSI` 隐私。正如 `Haddad` (2017) 所证明的，由于攻击者有能力将两个永久假名关联起来，可追踪攻击仍然是一个挑战。
 
-用于实现 IMSI 的认证方案 (HSK-AKA) 中的假名由 Hamandi 等人 (2013) 提出。由于所提认证方案必须到达 HSS，该方案会消耗网络带宽。此外，网络实体——移动性管理实体和用户设备——不具备检查假名准确性的能力。因此，恶意攻击者仍然是一个问题。
-
-用户设备的永久 ID 提出了一种基于假名的认证方案，用于保护 IMSI 隐私。另一方面，预期的认证方案必须到达 HSS，这需要消耗更多带宽。此外，所提方案依赖于一组新颖的函数，这可能适用也可能不适用于 LTE 网络基础设施。
-
-此外，Parne 等人 (2019) 在 LTE 认证方案中利用假名来保护 IMSI 隐私。正如 Haddad (2017) 所证明的，由于攻击者有能力将两个永久假名关联起来，可追踪攻击仍然是一个挑战。
-
-######## 现有认证方案中的漏洞
+#### 现有认证方案中的漏洞
 
 上述认证方案易受多种威胁攻击，例如：
 
 *   偷窥攻击
 *   重放攻击（内部或外部记录）
 
-在下一节中，研究人员提出了一种免疫上述威胁的认证方案。所提认证方案，我们称之为**隐式密码认证系统**，属于基于图形的技术。IPAS 具有轻量级、易记忆、且难以被常见攻击方法破解的特点。此外，IPAS 以友好灵活的方式适用于移动和非移动设备。
+在下一节中，研究人员提出了一种免疫上述威胁的认证方案。所提认证方案，我们称之为**隐式密码认证系统**，属于基于图形的技术。`IPAS` 具有轻量级、易记忆、且难以被常见攻击方法破解的特点。此外，`IPAS` 以友好灵活的方式适用于移动和非移动设备。
 
-####### 隐式密码认证系统 (IPAS)
+### 隐式密码认证系统 (IPAS)
 
-认证是防止机密性和完整性受损的第一道防线。尽管传统的登录/基于密码的方案易于实现，但它们一直遭受多种攻击。作为替代方案，引入了基于令牌和生物特征的认证系统。然而，它们的改进尚不足以证明投资的合理性。因此，引入了登录/密码方案的一种变体，即图形方案，但它也因偷窥攻击和屏幕转储攻击而受损。在本节中，研究人员介绍了一个由 Almuairfi 等人 (2011) 发起的名为**隐式密码认证系统** 的框架，该框架能免疫其他认证方案所遭受的常见攻击。
+认证是防止机密性和完整性受损的第一道防线。尽管传统的登录/基于密码的方案易于实现，但它们一直遭受多种攻击。作为替代方案，引入了基于令牌和生物特征的认证系统。然而，它们的改进尚不足以证明投资的合理性。因此，引入了登录/密码方案的一种变体，即图形方案，但它也因偷窥攻击和屏幕转储攻击而受损。在本节中，研究人员介绍了一个由 `Almuairfi` 等人 (2011) 发起的名为**隐式密码认证系统** 的框架，该框架能免疫其他认证方案所遭受的常见攻击。
 
-######## 概述
+#### 概述
 
-IPAS 类似于图形方案，但有一些细微差别。在我们所知的每一种“你知道要输入什么”的认证方案中，服务器都要求用户复现注册时提供给服务器的事实。这在图形密码（如 PassPoint）中同样适用。
+`IPAS` 类似于图形方案，但有一些细微差别。在我们所知的每一种“你知道要输入什么”的认证方案中，服务器都要求用户复现注册时提供给服务器的事实。这在图形密码（如 `PassPoint`）中同样适用。
 
-在 IPAS 中，我们将密码视为服务器在注册时已知的一条信息。在认证时，用户以只有服务器能理解的隐式形式提供该信息。IPAS 也可实现在任何客户端-服务器环境中，用于将人类作为客户端进行认证（IPAS 不适用于机器对机器认证）。作者还假设服务器拥有足够的硬件资源，如内存和 CPU。这并不夸张，因为高端服务器正日益变得廉价。
+在 `IPAS` 中，我们将密码视为服务器在注册时已知的一条信息。在认证时，用户以只有服务器能理解的隐式形式提供该信息。`IPAS` 也可实现在任何客户端-服务器环境中，用于将人类作为客户端进行认证（`IPAS` 不适用于机器对机器认证）。作者还假设服务器拥有足够的硬件资源，如内存和 `CPU`。这并不夸张，因为高端服务器正日益变得廉价。
 
-######## IPAS 实现
+#### IPAS 实现
 
 认证系统通常包含客户端和服务端两个组件。每个组件通过定义标准接口函数和初始化函数来促进实现，该初始化函数将模块注册到系统中。事实上，客户端-服务器模型比其他模型是一种更具可扩展性的客户端认证方法。
 
-因此，IPAS 的设计模型是一个客户端-服务器模型，其中两端都必须受信。当客户端连接到服务器（云）并随后受信时，即完成认证。经过认证的用户操作将根据特定的访问控制策略进行检查，该策略控制允许或拒绝访问。
+因此，`IPAS` 的设计模型是一个客户端-服务器模型，其中两端都必须受信。当客户端连接到服务器（云）并随后受信时，即完成认证。经过认证的用户操作将根据特定的访问控制策略进行检查，该策略控制允许或拒绝访问。
 
-######## IPAS 设计阶段
+#### IPAS 设计阶段
 
 客户端设备可以是任何便携设备，如笔记本电脑或手机。手机在我们的日常生活中变得越来越重要。一个主要原因是手机集成了越来越多的功能，如互联网浏览、移动银行和购物。一些最新的智能手机在性能上类似于十年前的高端台式电脑。
 
-人们现在比以前更加关注他们的手机，这使得手机相对较难丢失，相比之下，用户不太在意的设备（如 USB 闪存驱动器）更容易丢失。然而，拥有这种安全优势还不足以证明手机比 USB 驱动器更适合网上银行认证。因此，对手机、恶意软件和应用程序进行深入检查是必要的。
+人们现在比以前更加关注他们的手机，这使得手机相对较难丢失，相比之下，用户不太在意的设备（如 `USB` 闪存驱动器）更容易丢失。然而，拥有这种安全优势还不足以证明手机比 `USB` 驱动器更适合网上银行认证。因此，对手机、恶意软件和应用程序进行深入检查是必要的。
 
-IPAS 通过允许用户在移动中以高安全性和可用性访问其账户，考虑了这一问题。我们的系统不需要任何高端专用软件。拥有标准网页浏览器和互联网连接即可启动我们的应用程序。因此，我们的系统可以从智能手机很好地扩展到台式电脑。
+`IPAS` 通过允许用户在移动中以高安全性和可用性访问其账户，考虑了这一问题。我们的系统不需要任何高端专用软件。拥有标准网页浏览器和互联网连接即可启动我们的应用程序。因此，我们的系统可以从智能手机很好地扩展到台式电脑。
 
-另一方面，服务器（位于云端）是 IPAS 设计模型中的另一个实体。然而，我们假设客户端和服务器之间的通信通过 **SSL (Secure Socket Layer，安全套接字层)** 和 **IPSec** 等协议是安全且受信的，可防止恶意中间节点缓存并进行离线猜测。这仅增加了一层额外保护。然而，IPAS 认证过程即使没有此假设仍可工作。
+另一方面，服务器（位于云端）是 `IPAS` 设计模型中的另一个实体。然而，我们假设客户端和服务器之间的通信通过 **`SSL` (Secure Socket Layer，安全套接字层)** 和 **`IPSec`** 等协议是安全且受信的，可防止恶意中间节点缓存并进行离线猜测。这仅增加了一层额外保护。然而，`IPAS` 认证过程即使没有此假设仍可工作。
 
 位于云端的服务器应配备适当的安全措施，如防火墙、入侵检测系统和快速恢复机制，以保证信息安全。认证服务器是我们设计模型中最重要的服务器之一，应包含一个**智能图形模块**，以将用户信息/答案转换为图像。
 
 该图像隐式地代表用户的密码，将在认证过程中推送到客户端设备。只有当用户点击图像中与存储信息匹配的正确对象时，才会通过认证。此外，认证服务器与主图像数据库服务器之间应建立受信链接，以实现此认证级别的访问控制目的。
 
-######## IPAS 开发模型
+#### IPAS 开发模型
 
-在该阶段，研究人员提供了重构 IPAS 所需的系统需求。客户端-服务器交互始于定义各方的需求。因此，我们需要定义系统属性，这些属性可被任何组织或用于任何支付环境。
+在该阶段，研究人员提供了重构 `IPAS` 所需的系统需求。客户端-服务器交互始于定义各方的需求。因此，我们需要定义系统属性，这些属性可被任何组织或用于任何支付环境。
 
-######### 图像数据库
+##### 图像数据库
 
 服务器端的图像数据库是我们认证方案的核心。根据用户数量，图像数据库可能包含数万到数百万张图像。系统管理员和/或用户可定期添加更多图像。
 
-每张图像可能包含多个“可点击”对象。每个可点击对象关联一个或多个文本关键词。图像中的某些对象将被用作诱饵对象，以提高 IPAS 的安全级别。图像对象与关联文本之间的关系在我们的认证方案中起着重要作用，将在本章后面描述。
+每张图像可能包含多个“可点击”对象。每个可点击对象关联一个或多个文本关键词。图像中的某些对象将被用作诱饵对象，以提高 `IPAS` 的安全级别。图像对象与关联文本之间的关系在我们的认证方案中起着重要作用，将在本章后面描述。
 
-########## 注册阶段
-
-
-
-
-
-########## 注册阶段
+##### 注册阶段
 
 在此阶段，将收集用户的初始信息，以使其能够使用该系统。在注册时（无论是在线还是离线），系统会向用户提供一组不同的主题，例如童年回忆、当前爱好、梦想假期等。用户可能需要从 `n` 个主题中选择 `m` 个（其中 `m` 和 `n` 是由领域专家决定的系统参数）。
 
@@ -1969,36 +1964,33 @@ IPAS 通过允许用户在移动中以高安全性和可用性访问其账户，
 
 基于这些信息，系统可能会创建或链接到现有的图像数据库。关键词和信息将被嵌入图像中，并在认证过程中隐式地呈现给用户。用户必须点击正确的对象来代表他/她的答案。研究表明，这些信息比复杂密码更容易记忆。
 
-########## 分割阶段
+##### 分割阶段
 
 在此阶段，系统致力于创建用户记录答案（关键词）的可视化图像，从而引导出界面行为。可视化中使用的工具旨在改进系统设计，以便在系统开发中实现的技术能够被完美地分割。
 
-据 Merch 和 White (2003) 报道，图像关系功能可分为三组：(A) 表达与文本远/疏远关系的功能；(B) 表达与文本近/紧密关系的功能；(C) 超越文本的功能。应用这些组别可识别每个图像的隐式程度。该概念的语义变体可由系统开发人员快速且轻松地开发。因此，实施一项新的技术分段将需要专业技能、时间以及许多组织必须考虑在内的大量资源。
+据 `Merch` 和 `White` (2003) 报道，图像关系功能可分为三组：(A) 表达与文本远/疏远关系的功能；(B) 表达与文本近/紧密关系的功能；(C) 超越文本的功能。应用这些组别可识别每个图像的隐式程度。该概念的语义变体可由系统开发人员快速且轻松地开发。因此，实施一项新的技术分段将需要专业技能、时间以及许多组织必须考虑在内的大量资源。
 
-########## 认证阶段
+##### 认证阶段
 
 首先，用户可通过提供其用户名和所需的访问级别来请求访问系统。这可能以明文形式发送。根据所需的访问级别，系统可能会要求用户在注册过程中选定的 `m` 个领域中提供 `k` 个。对于每个选定的领域，服务器可能会从用户的故事中提取的关键词中随机选取一个。对于每个关键词，服务器可能会再次从图像数据库中随机选取一张包含具有所选文本属性对象的图像。
 
-类似于 Kerberos，会话密钥 `S` 通过函数 `f(I)` 从正确的可点击区域派生而来。服务器将选择一个随机数 `p`，然后用会话密钥 `S` 加密 `p`，并将 `(Image, S[p], f(I))` 传输到移动设备。客户端应用程序随后显示该图像。用户需要使用触控笔或鼠标选择正确的“可点击区域”。然后，基于函数 `f(I)`、图像 `I` 以及用户点击的区域，客户端将生成一个密钥 `K`。函数 `f(I)` 的选择方式使得 `S = K` 当且仅当用户和服务器在图像中拥有完全相同的关注区域。用户随后解密 `S[p]` 以获得随机数。然后他传输 `p+1` 给服务器进行认证并进入下一级。通过这种方式，用户被隐式认证，且无机密信息在网络上交换。当服务器在认证过程中执行最后一个问题时，它不会加密伪随机数，而是会选取一个会话密钥并用派生密钥对其加密。当客户端解密它时，他会从服务器接收到一条隐式消息，指示使用此会话密钥进行传输。此过程不仅隐式地认证用户，还隐式地交换会话密钥。
+类似于 `Kerberos`，会话密钥 `S` 通过函数 `f(I)` 从正确的可点击区域派生而来。服务器将选择一个随机数 `p`，然后用会话密钥 `S` 加密 `p`，并将 `(Image, S[p], f(I))` 传输到移动设备。客户端应用程序随后显示该图像。用户需要使用触控笔或鼠标选择正确的“可点击区域”。然后，基于函数 `f(I)`、图像 `I` 以及用户点击的区域，客户端将生成一个密钥 `K`。函数 `f(I)` 的选择方式使得 `S = K` 当且仅当用户和服务器在图像中拥有完全相同的关注区域。用户随后解密 `S[p]` 以获得随机数。然后他传输 `p+1` 给服务器进行认证并进入下一级。通过这种方式，用户被隐式认证，且无机密信息在网络上交换。当服务器在认证过程中执行最后一个问题时，它不会加密伪随机数，而是会选取一个会话密钥并用派生密钥对其加密。当客户端解密它时，他会从服务器接收到一条隐式消息，指示使用此会话密钥进行传输。此过程不仅隐式地认证用户，还隐式地交换会话密钥。
 
-图 6 展示了已注册用户的 IPAS 客户端/服务器认证过程步骤，如下所示：
+图 6 展示了已注册用户的 `IPAS` 客户端/服务器认证过程步骤，如下所示：
 
-1.  用户使用其移动电话设备或计算机向 IPAS 服务器发送认证（登录）请求。
+1.  用户使用其移动电话设备或计算机向 `IPAS` 服务器发送认证（登录）请求。
 2.  服务器检查用户的注册状态。如果用户未注册，则认证过程失败（结束）；但是，对于已注册用户，它将继续下一步。
-3.  系统根据用户预设的 IPAS 域和图像中对象的隐式级别检查用户的访问级别（在支付流程的情况下，访问控制将检查支付金额以做出决定）。
-4.  根据步骤 3 的输出，创建 IPAS 认证图像并发送给用户。
-5.  用户收到带有 IPAS 图像的服务器响应。如果用户点击了错误的对象来代表其密码，则他/她需要重新发送认证请求（即返回步骤 1）。但是，如果用户在 IPAS 图像中点击了正确的对象，则用户将通过认证（登录）。
+3.  系统根据用户预设的 `IPAS` 域和图像中对象的隐式级别检查用户的访问级别（在支付流程的情况下，访问控制将检查支付金额以做出决定）。
+4.  根据步骤 3 的输出，创建 `IPAS` 认证图像并发送给用户。
+5.  用户收到带有 `IPAS` 图像的服务器响应。如果用户点击了错误的对象来代表其密码，则他/她需要重新发送认证请求（即返回步骤 1）。但是，如果用户在 `IPAS` 图像中点击了正确的对象，则用户将通过认证（登录）。
 
 ![图 6. IPAS 客户端/服务器认证过程](img/ch003.f06.png)
 
-在本节中，我们展示了用户（客户端）和服务器（云）之间 IPAS 认证过程的高层流程图。上述步骤展示了客户端和服务器为认证目的而进行的交互架构。我们未来的方向将集中于使用 UML（统一建模语言）设计详细的软件架构/原型，这将包括软件工程和数学模型。我们认为 IPAS 是一个包含多个阶段的复杂项目；因此，更多的科学模型和系统流程将留待未来的设计、开发和实施。此外，IPAS 及其域性能指标的更多分析模型将在后续阶段涵盖。通信/网络媒体和移动设备能力的快速发展将帮助我们形成 IPAS 剩余阶段的未来工作。
+在本节中，我们展示了用户（客户端）和服务器（云）之间 `IPAS` 认证过程的高层流程图。上述步骤展示了客户端和服务器为认证目的而进行的交互架构。我们未来的方向将集中于使用 `UML`（统一建模语言）设计详细的软件架构/原型，这将包括软件工程和数学模型。我们认为 `IPAS` 是一个包含多个阶段的复杂项目；因此，更多的科学模型和系统流程将留待未来的设计、开发和实施。此外，`IPAS` 及其域性能指标的更多分析模型将在后续阶段涵盖。通信/网络媒体和移动设备能力的快速发展将帮助我们形成 `IPAS` 剩余阶段的未来工作。
 
-######## 数据库和图像特征
+#### 数据库和图像特征
 
-
-
-
-######## 用户画像与智能图像服务器关联
+#### 用户画像与智能图像服务器关联
 
 包含个人信息、账户数据、访问控制级别以及身份验证问题和答案的用户画像将链接到智能图像服务器。每个身份验证图像可能包含一个或多个“可点击对象”，这些对象代表用户的关键字或信息。例如，“蹦床”代表用户说她喜欢跳的关键字之一。对于其他用户，它可能代表他/她最讨厌的游戏；可能代表黑色；可能代表体操等。因此，图像可能具有以下特征：
 
@@ -2021,7 +2013,7 @@ IPAS 通过允许用户在移动中以高安全性和可用性访问其账户，
 
 结果，用户可在无法识别当前图像时请求另一图像，或随时切换至基于文本/令牌的方法。因此，`IPAS` 提供了灵活的身份验证环境，增强了方案的用户友好性，并提供了如上所述的高安全级别。
 
-######## IPAS 示例场景
+#### IPAS 示例场景
 
 针对每个关键字（密码），服务器可使用图像创建智能身份验证空间，将各用户针对特定关键字的答案隐式嵌入图像中。身份验证时，服务器可随机选取用户注册时选择的一个或多个关键字（关键字数量取决于请求的服务级别）。针对每个选定关键字，服务器可从身份验证空间随机选择一幅图像作为挑战呈现给用户。用户需使用手写笔或鼠标浏览图像并点击正确答案。例如，服务器可能呈现一幅地球图片。若悉尼是用户喜欢访问或已访问过的城市，他需点击澳大利亚。随后澳大利亚放大，用户需在地图上点击悉尼（如图 7 所示）。下一次若服务器选中相同关键字，呈现的场景可能不同。下一次服务器可能显示包含著名建筑和纪念碑的图像。用户需点击“悉尼歌剧院”以隐式传达答案。由于服务器每次使用不同场景且答案隐式给出，该系统免疫屏幕捕获攻击。此外，除服务器和合法用户外，对其他人答案可能模糊不清。例如，用户点击“歌剧院”可能意味着“用户喜欢聆听的音乐类型”，或代表其“出生地”、“当前居住地”等。
 
@@ -2029,150 +2021,148 @@ IPAS 通过允许用户在移动中以高安全性和可用性访问其账户，
 | :--- |
 | ![Figure978-1-7998-2701-6.ch003.f07](img/ch003.f07.png) |
 
-######## IPAS 组件
+#### IPAS 组件
 
 大多数当前用于用户身份验证的方案在静态过程中运行（如密码或令牌），然而 `IPAS` 的灵活性根据所需操作的访问级别，为用户提供了身份验证过程的空间和选择。因此，用户可随时使用相同信息从基于图像的方法切换至基于文本的方法，详见下一小节。
 
-######### 智能基于图像的身份验证选项
+##### 智能基于图像的身份验证选项
+
+
+
+# 基于图像的身份验证
 
 基于图像的身份验证是 `IPAS` 的主要组件，用户的答案在身份验证过程中隐式呈现于图像中。系统将根据先前分阶段描述的请求访问级别选择图像的隐式级别。因此，用户需点击图像中代表其答案的正确对象以完成身份验证。随后，访问控制模块将允许用户执行所需操作和动作。
 
 得益于 `IPAS` 的动态性和高灵活性，用户可在成功导航基于图像的方法时随时切换至基于文本的方法。此外，若用户在当前图像上遇到困难，可请求另一幅图像。
 
-######### 智能基于文本的身份验证选项
+## 智能基于文本的身份验证选项
 
+### IPAS 认证方法
 
-
-######## IPAS 认证方法
-
-######### 基于文本的方法
+#### 基于文本的方法
 
 在基于文本的方法中，允许用户使用键盘输入答案。这些答案（关键词）代表给定图像中的隐式对象。例如，如果图像包含苹果或枕头的隐式对象，用户可以输入“apple”或“pillow”。只有当用户针对给定隐式图像的对象输入正确答案时，才会通过认证。然后，访问控制模块将控制所需的操作。
 
-######### 基于令牌的方法
+#### 基于令牌的方法
 
 与基于文本的方法类似，用户可以切换到基于令牌的“所拥有物”类型的密码，特别是数字密码。因此，如果用户因某些原因无法正确响应基于图像的方法，他/她可以随时切换到基于令牌的方法。例如，某些银行提供的一次性密码（OTP）令牌，可用作数字密码，适用于用户无法在隐式基于图像的方法中识别数字的情况。
 
-######### 隐私与可用性考量
+#### 隐私与可用性考量
 
-出于认证目的，最好依赖用户已知的信息，而不是要求他/她记忆额外的信息。一般来说，收集用户信息的系统或注册机构应了解用户隐私原则。因此，IPAS 的隐私、安全性和可用性是主要关注点。
+出于认证目的，最好依赖用户已知的信息，而不是要求他/她记忆额外的信息。一般来说，收集用户信息的系统或注册机构应了解用户隐私原则。因此，`IPAS` 的隐私、安全性和可用性是主要关注点。
 
-######## IPAS 域
+### IPAS 域
 
-IPAS 提供另一项服务，允许系统用于任何客户端-服务器环境。IPAS 的域服务使其足够灵活，适用于任何组织，无论位置或规模如何。注册用户可根据其交互行为分类为：区域/州域和词汇空间/距离域。
+`IPAS` 提供另一项服务，允许系统用于任何客户端-服务器环境。`IPAS` 的域服务使其足够灵活，适用于任何组织，无论位置或规模如何。注册用户可根据其交互行为分类为：区域/州域和词汇空间/距离域。
 
-######### 区域/州域
+#### 区域/州域
 
 系统中的各类用户有时对其需求有不同的看法。例如，身处美国的人的认知可能与身处澳大利亚的人不同。因此，系统在创建用户密码时会考虑用户所属的区域/地区，并将其信息链接到区域域。结果，认证图像中的对象将与用户的区域相关。例如，如果关键词或信息是“Opera”，澳大利亚用户可能容易识别悉尼歌剧院，而欧洲用户可能更容易识别伦敦科利塞姆剧院，而不是悉尼歌剧院（甚至可能完全无法识别）。因此，该域下的系统将依赖于国家/地区，这应在生产推出模块中予以考虑。
 
-######### 词汇空间/距离域
+#### 词汇空间/距离域
 
 其次，空间/距离域将依赖图像与单词之间分类关系的分类法，可用于分析图像与文本的交互方式。Merch 和 White (2003) 指出，该分类法确定了图像针对相关文本执行的 49 种功能。例如，设选定的关键词为“apple”。包含苹果派的图像将代表与单词“apple”较近的关系，而包含史蒂夫·乔布斯的图像将代表与单词“apple”较远的关系。因此，词汇空间/距离域可根据所需的安全级别应用其中一些功能。
 
-######### 域的影响
+#### 域的影响
 
-上述域是 IPAS 的关键组件，因为它们提高了其可用性和安全性。将用户链接到其所在区域的区域域，提高了 IPAS 的可用性和用户友好标准；而用户选择关键词与图像之间隐式层级的距离域，增强了 IPAS 的安全性和匿名性级别，如下所述。
+上述域是 `IPAS` 的关键组件，因为它们提高了其可用性和安全性。将用户链接到其所在区域的区域域，提高了 `IPAS` 的可用性和用户友好标准；而用户选择关键词与图像之间隐式层级的距离域，增强了 `IPAS` 的安全性和匿名性级别，如下所述。
 
-######## IPAS 评估标准
+### IPAS 评估标准
 
-作为 IPAS 设计和评估的辅助，考虑了匿名性、安全性和可用性标准。
+作为 `IPAS` 设计和评估的辅助，考虑了匿名性、安全性和可用性标准。
 
-######### 匿名性
+#### 匿名性
 
 在使用个人信息的环境中，遵循公认的隐私原则应成为常规做法。例如，收集的个人用户信息应仅用于认证过程。此外，此类问题的答案应允许用户访问其账户的特定级别。
 
-##### 安全性
+#### 安全性
 
-一般来说，IPAS 的安全性关注保护用户的账户信息和财务记录。另一方面，在密码空间方面，将 IPAS 与其他认证方案进行比较，显示了 IPAS 在安全性标准方面的优势。此外，正式攻击破解 IPAS 的难度提高了其相对于其他方案的安全级别。
+一般来说，`IPAS` 的安全性关注保护用户的账户信息和财务记录。另一方面，在密码空间方面，将 `IPAS` 与其他认证方案进行比较，显示了 `IPAS` 在安全性标准方面的优势。此外，正式攻击破解 `IPAS` 的难度提高了其相对于其他方案的安全级别。
 
-######### 可用性
+#### 可用性
 
-IPAS 的可用性关注在回答从用户先前提供的难忘故事中挑选出的个人问题阶段，提供用户友好的体验。事实上，使用信息作为密码，可以使用户在认证过程中轻松记住其密码。此外，在某些情况下，IPAS 不用作常规认证的替代品，而是作为附加因素。因此，允许用户随时切换回常规认证过程，例如使用常规用户名和密码。
+`IPAS` 的可用性关注在回答从用户先前提供的难忘故事中挑选出的个人问题阶段，提供用户友好的体验。事实上，使用信息作为密码，可以使用户在认证过程中轻松记住其密码。此外，在某些情况下，`IPAS` 不用作常规认证的替代品，而是作为附加因素。因此，允许用户随时切换回常规认证过程，例如使用常规用户名和密码。
 
-######## IPAS 的优势与局限性
+### IPAS 的优势与局限性
 
-显而易见，IPAS 免疫窥视攻击和屏幕转储攻击。此外，认证信息以隐式形式呈现给用户，仅合法最终用户能够理解和解码。在 IPAS 中，客户端和服务器之间不交换任何密码信息。由于认证信息是隐式传达的，IPAS 能够容忍窥视攻击和屏幕转储攻击，而现有方案均无法容忍。IPAS 的优势在于创建一个良好的认证空间，拥有足够大的图像集合以避免短周期重复。与我们研究中回顾的其他方法相比，IPAS 可能需要人工交互以及精心选择图像和“可点击”区域。传统的基于密码的认证方案和 PassPoint 是 IPAS 的特例。IPAS 的伮势在很大程度上取决于认证信息嵌入图像的隐式效果如何，它应易于合法用户解密，而对非合法用户则高度模糊。
+显而易见，`IPAS` 免疫窥视攻击和屏幕转储攻击。此外，认证信息以隐式形式呈现给用户，仅合法最终用户能够理解和解码。在 `IPAS` 中，客户端和服务器之间不交换任何密码信息。由于认证信息是隐式传达的，`IPAS` 能够容忍窥视攻击和屏幕转储攻击，而现有方案均无法容忍。`IPAS` 的优势在于创建一个良好的认证空间，拥有足够大的图像集合以避免短周期重复。与我们研究中回顾的其他方法相比，`IPAS` 可能需要人工交互以及精心选择图像和“可点击”区域。传统的基于密码的认证方案和 `PassPoint` 是 `IPAS` 的特例。`IPAS` 的优势在很大程度上取决于认证信息嵌入图像的隐式效果如何，它应易于合法用户解密，而对非合法用户则高度模糊。
 
-此外，IPAS 提供了如下可接受级别的属性：
+此外，`IPAS` 提供了如下可接受级别的属性：
 
-######### 正确性
+#### 正确性
 
 每个单独认证实例的结果应是正确的。只有合法用户能轻松通过认证步骤，获得对系统的正确访问权限。
 
-######### 用户匿名性与隐私
+#### 用户匿名性与隐私
 
-在 IPAS 中完成认证过程，无需泄露用户的真实身份，也不会被黑客知晓。
+在 `IPAS` 中完成认证过程，无需泄露用户的真实身份，也不会被黑客知晓。
 
-######### 速度
+#### 速度
 
-IPAS 认证过程快速且灵活，可在任何客户端-服务器环境中实施，且适用于手机。
+`IPAS` 认证过程快速且灵活，可在任何客户端-服务器环境中实施，且适用于手机。
 
-######### 抗攻击性
+#### 抗攻击性
 
-IPAS 对重放攻击、外部泄露、猜测攻击、通信窃听和主机入侵等常见攻击提供强有力的抵抗。
+`IPAS` 对重放攻击、外部泄露、猜测攻击、通信窃听和主机入侵等常见攻击提供强有力的抵抗。
 
-######### 低成本
+#### 低成本
 
-与基于令牌的认证技术不同，IPAS 无需任何额外设备即可用于认证目的。
+与基于令牌的认证技术不同，`IPAS` 无需任何额外设备即可用于认证目的。
 
-######### 通用性
+#### 通用性
 
-IPAS 用户将在所有服务和任何地方使用相同的认证方法，根据其属性应用 IPAS 域。
+`IPAS` 用户将在所有服务和任何地方使用相同的认证方法，根据其属性应用 `IPAS` 域。
 
-######## 抵抗攻击
+### 抵抗攻击
 
-IPAS 能抵抗暴力攻击、窥视攻击、字典攻击和重放攻击等。
+`IPAS` 能抵抗暴力攻击、窥视攻击、字典攻击和重放攻击等。
 
-######### 暴力攻击
+#### 暴力攻击
 
-IPAS 通过拥有庞大的密码空间（由基于文本的密码或基于图形的密码组成）来防范暴力攻击。
+`IPAS` 通过拥有庞大的密码空间（由基于文本的密码或基于图形的密码组成）来防范暴力攻击。
 
-######### 字典攻击
+#### 字典攻击
 
-由于 IPAS 包含高度的随机性，因此很难对其发起字典攻击。
+由于 `IPAS` 包含高度的随机性，因此很难对其发起字典攻击。
 
+#### 肩窥攻击
 
+肩窥攻击基本上是指在用户输入密码时，通过摄像头在用户肩后观察或记录其密码。`IPAS` 通过在每次认证时提供一个新的隐式对象作为密码，从而免疫此类攻击。
 
+#### 重放攻击
 
+键盘记录器或键盘间谍软件无法破解 `IPAS` 方案，鼠标追踪软件也无法攻破 `IPAS`，因为它完全受到保护，免受这些威胁。
 
-######### 肩窥攻击
+### IPAS 局限性
 
-肩窥攻击基本上是指在用户输入密码时，通过摄像头在用户肩后观察或记录其密码。IPAS 通过在每次认证时提供一个新的隐式对象作为密码，从而免疫此类攻击。
-
-######### 重放攻击
-
-键盘记录器或键盘间谍软件无法破解 IPAS 方案，鼠标追踪软件也无法攻破 IPAS，因为它完全受到保护，免受这些威胁。
-
-######## IPAS 局限性
-
-与任何系统一样，IPAS 因各种组件（如网络、人为因素和系统硬件问题）而存在一定的局限性。最常见的复杂情况可能被视为 IPAS 过程的障碍，并可能影响系统性能，具体如下：
+与任何系统一样，`IPAS` 因各种组件（如网络、人为因素和系统硬件问题）而存在一定的局限性。最常见的复杂情况可能被视为 `IPAS` 过程的障碍，并可能影响系统性能，具体如下：
 
 *   **某些位置网络和无线通信的覆盖范围有限或较短**，导致用户（客户端）无法与服务器或服务提供商通信，尤其是在支付认证过程中。
-*   **客户端移动设备的存储空间、屏幕显示或处理能力有限**，可能导致处理 IPAS 图像时出现延迟。
-*   **用户频繁登录**可能导致 IPAS 图像在特定层级上重复出现，例如，使用 IPAS 登录设有 1 分钟自动锁屏的手机，若用户一小时内登录超过 30 次。这种情况需要许多图像来表示用户的密码，可能导致服务器端过载。
+*   **客户端移动设备的存储空间、屏幕显示或处理能力有限**，可能导致处理 `IPAS` 图像时出现延迟。
+*   **用户频繁登录**可能导致 `IPAS` 图像在特定层级上重复出现，例如，使用 `IPAS` 登录设有 1 分钟自动锁屏的手机，若用户一小时内登录超过 30 次。这种情况需要许多图像来表示用户的密码，可能导致服务器端过载。
 *   有人认为即使是隐式对象也可能被猜测。
 
-研究人员尝试通过应用不同的解决方案来最小化上述局限性，这有助于稳定 IPAS 的使用。第一种解决方案是为用户提供可选的次要方法，当他们在处理 IPAS 主要认证方法时遇到困难，可以切换到基于文本或基于令牌的方法。第二种解决方案取决于 IPAS 域，它帮助用户在 IPAS 图像中选择其对象的隐式层级，如前一节所述。最后，为避免图像重复，用户可以使用实时个人图像（用自己的相机拍摄）更新其个人资料，并不时更改代表其密码的关键词。由于我们旨在引入一种免疫常见攻击（如重放攻击（内部和外部）和/或肩窥攻击）的认证方案，上述解决方案有助于最小化上述 IPAS 局限性的副作用，但无法完全消除它们。
+研究人员尝试通过应用不同的解决方案来最小化上述局限性，这有助于稳定 `IPAS` 的使用。第一种解决方案是为用户提供可选的次要方法，当他们在处理 `IPAS` 主要认证方法时遇到困难，可以切换到基于文本或基于令牌的方法。第二种解决方案取决于 `IPAS` 域，它帮助用户在 `IPAS` 图像中选择其对象的隐式层级，如前一节所述。最后，为避免图像重复，用户可以使用实时个人图像（用自己的相机拍摄）更新其个人资料，并不时更改代表其密码的关键词。由于我们旨在引入一种免疫常见攻击（如重放攻击（内部和外部）和/或肩窥攻击）的认证方案，上述解决方案有助于最小化上述 `IPAS` 局限性的副作用，但无法完全消除它们。
 
-######## 总结
+### 总结
 
-在本章中，作者介绍了 IPAS 及其应用，它们解决了其他认证方案的安全缺陷，并在云环境中为多媒体数据提供了安全性与匿名性之间可接受的平衡。
+在本章中，作者介绍了 `IPAS` 及其应用，它们解决了其他认证方案的安全缺陷，并在云环境中为多媒体数据提供了安全性与匿名性之间可接受的平衡。
 
-在认证方面，IPAS 具有以下诸多特性：
+在认证方面，`IPAS` 具有以下诸多特性：
 
-*   **免疫重放攻击和肩窥攻击**，这些被认为是其他认证系统和基于图形的密码认证系统（如 PassPoint）的主要问题，IPAS 通过在每次认证时以隐式形式提供新图像来解决。
+*   **免疫重放攻击和肩窥攻击**，这些被认为是其他认证系统和基于图形的密码认证系统（如 `PassPoint`）的主要问题，`IPAS` 通过在每次认证时以隐式形式提供新图像来解决。
 *   **灵活**，与其他基于图形的认证技术相比，用户若在处理图像时遇到困难，可通过应用智能基于文本的认证选项切换到基于文本的密码。
-*   **IPAS 域**根据用户需求提供不同级别的安全性。
-*   **可在移动和非移动设备上实现**。总体而言，IPAS 是一种客户端-服务器认证，可在个人电脑和手机上运行。
-*   **IPAS 将提高云中多媒体数据的安全级别。**
-*   **IPAS 是一种面向移动用户的快速且灵活的认证方案。**
+*   **`IPAS` 域**根据用户需求提供不同级别的安全性。
+*   **可在移动和非移动设备上实现**。总体而言，`IPAS` 是一种客户端-服务器认证，可在个人电脑和手机上运行。
+*   **`IPAS` 将提高云中多媒体数据的安全级别。**
+*   **`IPAS` 是一种面向移动用户的快速且灵活的认证方案。**
 *   **所提方案的计算成本可接受，并能适应不同的安全级别。**
 
-####### 结论
+## 结论
 
-云计算技术为用户提供了节省成本和服务灵活性。随着多媒体数据的爆发式增长，越来越多的数据所有者将其个人多媒体数据外包到云端。隐私保护近年来是云计算中的热门话题。一旦用户数据泄露，负面影响可能非常巨大。因此，隐私保护技术的发展是云计算的关键因素。IPAS 可为用户在云环境中的多媒体数据提供第一层保护和便捷访问。它在移动银行、多媒体数据和在线购物等某些敏感应用中非常理想且有用。
+云计算技术为用户提供了节省成本和服务灵活性。随着多媒体数据的爆发式增长，越来越多的数据所有者将其个人多媒体数据外包到云端。隐私保护近年来是云计算中的热门话题。一旦用户数据泄露，负面影响可能非常巨大。因此，隐私保护技术的发展是云计算的关键因素。`IPAS` 可为用户在云环境中的多媒体数据提供第一层保护和便捷访问。它在移动银行、多媒体数据和在线购物等某些敏感应用中非常理想且有用。
 
-##### 参考文献
+## 参考文献
 
 Almuairfi, S., Veeraraghavan, P., & Chilamkurti, N. (2011). IPAS: Implicit Password Authentication System. *Proceedings 2011 IEEE Workshops of International Conference Advanced Information Networking and Applications (WAINA)*, pp. 430-435, March 22-25, 2011 doi: 10.1109/WAINA.2011.36
 
@@ -2202,32 +2192,37 @@ Ogundoyin, Sunday Oyinlola. (2018). An autonomous lightweight conditional privac
 
 Parne, B. L., Gupta, S., & Chaudhari, N. S. (2019). PSE-AKA: Performance and security enhanced authentication key agreement protocol for IoT enabled LTE/LTE-A networks. *Peer-to-Peer Networking and Applications*, 12(5), 1156–1177. doi:10.1007/s12083-019-00785-5
 
-
-
-
-
-#### 第 4 章：特性、应用与攻击
+# 第 4 章：特性、应用与攻击
 
 **Avinash Kaur**  
+
 Lovely Professional University, Phagwara, India
 
 **Parminder Singh**  
+
 ![Orcid Image](https://orcid.org/0000-0002-0750-6309) https://orcid.org/0000-0002-0750-6309  
+
 Lovely Professional University, Phagwara, India
 
 **Anand Nayyar**  
+
 ![Orcid Image](https://orcid.org/0000-0002-9821-6146) https://orcid.org/0000-0002-9821-6146  
+
 Duy Tan University, Da Nang, Vietnam
 
-##### 摘要
+## 摘要
+
+
+
+# 多媒体水印技术综述
 
 在过去几十年中，网络信道上的数据传输量急剧增加。水印技术是将水印作为数字信号、标签或标记添加到载体媒体中的过程。多媒体水印的主要要求是鲁棒性和嵌入能力。鲁棒性被定义为算法抵抗噪声的强度。然而，同时实现这两者具有挑战性。水印的众多特性在多媒体水印系统中至关重要。研究人员在军事、数字取证、医疗等各种应用中使用水印方案。针对这些水印方案的攻击会损害或暴露水印中携带的秘密信息。潜在的研究人员提出了各种技术来平衡或改善这些问题。本章基于鲁棒性和嵌入能力回顾了近期的多媒体水印技术。介绍了多媒体水印技术的特性、应用和攻击。
 
-##### 介绍
+## 介绍
 
 在过去，各种信道和网络之间的数据传输有所增加。随着技术的发展，传输媒体的增长和使用也在增加。为避免滥用并确立真实性，应使用水印技术来保护多媒体数据。数字水印通过在宿主图像中隐藏数据所有权，防止了数字图像的恶意复制和非法传播（Ganic & Eskicioglu, 2004; Patel, Mehta, & Pradhan, 2011）。水印被设计为一种将双重/单一水印作为标签、标记或数字信号进行嵌入的过程。水印过程根据不同的群组和域进行定义（Aslantas, 2008）。水印方法分为变换域和空间域（Loukhaoukha, Nabti, & Zebbiche, 2014）。最初使用的方法是空间域，这是一种通过直接改变像素来执行水印嵌入的技术。它具有易于实现和计算成本低的特点。该领域的重要技术有基于相关的、扩频和最低有效位（`LSB`）。变换域的潜在例子包括离散傅里叶变换（`DFT`）、离散小波变换（`DWT`）、奇异值分解（`SVD`）和离散余弦变换（`DCT`）。从可见性角度来看，数字水印分为不可见和可见两大类。不可见水印的类别包括脆弱和鲁棒（Aslantas, 2008）。详细的水印分类在（Aslantas, 2008; Singh, 2017; Tsai, Huang, Kuo, Horng, 2012）中进一步介绍。
 
-###### 水印嵌入与提取过程
+### 水印嵌入与提取过程
 
 完整的水印嵌入与提取过程如图 1 所示。在水印嵌入过程中，会生成一个密钥。水印恢复的方法是水印原始数据/水印图像、测试数据和密钥的函数。如图 2 和图 3 所示，类似的密钥用于后续过程。
 
@@ -2239,7 +2234,7 @@ Duy Tan University, Da Nang, Vietnam
 | --- |
 | ![Figure978-1-7998-2701-6.ch004.f02](img/ch004.f02.png) |
 
-###### 水印系统分类
+### 水印系统分类
 
 水印系统分为三个不同类别（Mathon, Cayre, Bas, & Mac, 2014; Singh, Dave, & Mohan, 2014; Singh, Kumar, Singh, & Mohan, 2017; Tsai, Jhuang, & Lai, 2012），如下图 3 所示。
 
@@ -2251,13 +2246,9 @@ Duy Tan University, Da Nang, Vietnam
 | --- |
 | ![Figure978-1-7998-2701-6.ch004.f03](img/ch004.f03.png) |
 
-###### 水印特性
+### 水印特性
 
-
-
-
-
-####### 水印特征与应用
+#### 水印特征与应用
 
 它表现出图 4 所示的多种水印特征 [106]。
 
@@ -2267,7 +2258,7 @@ Duy Tan University, Da Nang, Vietnam
 | --- |
 | ![Figure978-1-7998-2701-6.ch004.f04](img/ch004.f04.png) |
 
-######## 水印应用
+##### 水印应用
 
 不同的水印方法用于不同的应用。这些包括数字取证、版权保护、医疗保健、军事、医疗应用等，如下所示 (Vallabha, 2003; Kumar, Singh, & Kumar, 2018)。
 
@@ -2281,7 +2272,7 @@ Duy Tan University, Da Nang, Vietnam
 
 在将敏感图像传输到另一处之前，必须对其进行认证。因此，云服务器在发送加密图像到服务器之前插入唯一水印。当发现非法图像时，未经授权的用户会被识别出来。
 
-######## 水印攻击
+##### 水印攻击
 
 在水印应用中，数据的处理方式就像它将水印的接收者分散开一样 (Sherekar, Thakare, & Jain, 2011)。在水印的定义中，攻击是指在水印过程中损害未隐藏的秘密信息。此外，被攻击的数据由经过处理的含水印数据描述。攻击分类如下：
 
@@ -2295,110 +2286,127 @@ Duy Tan University, Da Nang, Vietnam
 8.  **移除攻击**：在不妨碍水印技术安全性的情况下，完全移除含水印数据 (Voloshynovskiy, Pereira, Pun, Eggers, &Su, 2001)。嵌入水印时不使用密钥。它使用量化和去噪。
 9.  **几何攻击**：主要目标是将水印检测与插入的信息同步，而不移除插入的水印。
 
-####### 多媒体水印技术综述
+### 多媒体水印技术综述
 
-######## 数字水印技术
+#### 数字水印技术
 
 数字水印由多种方法组成，用于保护数字数据免遭修改，以及防止未经授权的数据访问。水印技术分为变换域和空间域。水印的嵌入在空间域中执行，功能作用于像素 (Singh, Sharma, Dave, & Mohan, 2012)。该技术中会改变像素值。它主要使用 `LSB` 技术进行修改过程。变换域技术的主要目标是改变变换域系数。变换域中水印主要使用的方法是 `DFT`、`DWT` 和 `DCT`。由于安全性和鲁棒性，变换域比空间域技术有效得多。
 
-######### 空间域水印
+##### 空间域水印
 
 该技术将图像描绘为像素的组合。为了附加水印，修改像素的颜色值和像素强度。它们消耗较少的时间，且复杂度较低。该技术中的每一个操作都很简单，但具有较高的计算速度。这些对攻击的鲁棒性相对较弱。在 `LSB` 技术中 (Neeta, Snehal, & Jacobs, 2006)，水印嵌入在任意选定像素的最低有效位中。它可以轻松应用于图像，且不破坏图像质量。主要缺点是对信号处理操作缺乏鲁棒性，导致水印因信号处理攻击而耗尽。它能抵抗简单的攻击，如噪声添加和裁剪。
 
-######### 变换域水印
+##### 变换域水印
 
 在此方法中，不在载体图像上执行水印嵌入。第一步，对载体图像进行变换，然后将水印嵌入到变换后的图像中。此外，为提取图像，对操作后的系数计算逆变换 (Akiyama, Motoyoshi, Uchida, & Nakanishi, 2006)。这些对 JPEG 压缩等攻击具有鲁棒性。它们用于鲁棒水印，以确保水印对最流行的信号处理攻击的灵活性。存在许多变换水印技术，如奇异值分解 (`SVD`)、离散小波变换 (`DWT`)、离散余弦变换 (`DCT`) 和离散傅里叶变换 (`DFT`)。这些方法具有高不可感知性、对信号处理攻击和图像改动的有效抵抗力。与基于空间域的方法相比，该方法的计算成本更高。
 
-
-
-
-
-######## 离散余弦变换（DCT）水印技术
+#### 离散余弦变换（DCT）水印技术
 
 它从时域信号获取频域信号。当对图像应用 DCT 技术时，会形成一个二维系数矩阵（Lin, Shie, & Guo, 2010）。它用于模式识别、数据压缩以及图像处理的各个领域。在 DCT 方法中，图像被划分为固定维度的非重叠块。它适用于图像的每个块。应用块选择标准以提取重要块。相应地，根据选定的相应块选择系数。在系数矩阵的左上角位于低频分量，右下角位于高频分量。它将图像分解为伪频带。水印嵌入在中频子带中。如果水印嵌入在高频分量之间，则可以隐藏。系数被平滑修改以插入水印。最后，对图像块应用逆 DCT。
 
 对于长度为 M 的一维序列，DCT 计算如下：
 
+```
 ![Mathtype978-1-7998-2701-6.ch004.m01](img/ch004.m01.svg) (1)
+```
 
 其中 V = 0, 1, 2, 3 ... M-1
 
 逆 DCT 计算如下：
 
+```
 ![Mathtype978-1-7998-2701-6.ch004.m02](img/ch004.m02.svg) (2)
+```
 
 α(V) 描述如下：
 
+```
 ![Mathtype978-1-7998-2701-6.ch004.m03](img/ch004.m03.svg) (3)
+```
 
 对图像块应用 DCT 时，会得到两种系数：DC 和 AC（Kothari & Dwivedi, 2013）。系数矩阵仅包含一个 DC 系数，其余均为 AC 系数。DCT 方法能抵抗噪声、锐化、裁剪和滤波等各类攻击。它还具有出色的计算能力，并为比特率降低提供了改进的性能。对于二维变换，DCT 定义如方程所示。
 
+```
 ![Mathtype978-1-7998-2701-6.ch004.m04](img/ch004.m04.svg) (4)
+```
 
-######## 离散小波变换（DWT）水印技术
+#### 离散小波变换（DWT）水印技术
 
 它生成多尺度图像视图，有助于理解图像的形成。此外，可在多个分辨率下观察信号（Tao & Eskicioglu, 2004）。图像分解为低频和高频分量。为获得期望结果，对低频分量进行递归分解。对图像应用 DWT 时，图像分解为四个子带，如图 4 所示。四个子带 HH、HL、LH 和 LL 分别包含图像的对角细节、水平数据、垂直数据和近似分量。近似子带包含适合嵌入水印的图像低频分量。图像的最大相关信息包含在该子带中。逆离散小波变换（IDWT）用于恢复原始图像。由于多尺度和局部化特性，DWT 是水印过程中最常用的技术之一。通过空间局部化特性可识别嵌入在图像区域中的水印。应用 DWT 后，图像分解为四个非重叠的多尺度集合。方程 5、6、7、8 描述了系数：
 
+```
 ![Mathtype978-1-7998-2701-6.ch004.m05](img/ch004.m05.svg) (5)
+```
 
+```
 ![Mathtype978-1-7998-2701-6.ch004.m06](img/ch004.m06.svg) (6)
+```
 
+```
 ![Mathtype978-1-7998-2701-6.ch004.m07](img/ch004.m07.svg) (7)
+```
 
+```
 ![Mathtype978-1-7998-2701-6.ch004.m08](img/ch004.m08.svg) (8)
+```
 
-其中分解级别为 ![Mathtype978-1-7998-2701-6.ch004.m09](img/ch004.m09.svg)。![Mathtype978-1-7998-2701-6.ch004.m10](img/ch004.m10.svg) 和 ![Mathtype978-1-7998-2701-6.ch004.m11](img/ch004.m11.svg) 为冲激响应。DWT 提供的视觉图像质量优于 DCT，且提供更好的局部化。DWT 支持宿主图像的多尺度描述。图像分辨率的级数可从低到高显示。其局限性在于计算成本高、计算时间长。示例见图 5。
+其中分解级别为 `![Mathtype978-1-7998-2701-6.ch004.m09](img/ch004.m09.svg)`。`![Mathtype978-1-7998-2701-6.ch004.m10](img/ch004.m10.svg)` 和 `![Mathtype978-1-7998-2701-6.ch004.m11](img/ch004.m11.svg)` 为冲激响应。DWT 提供的视觉图像质量优于 DCT，且提供更好的局部化。DWT 支持宿主图像的多尺度描述。图像分辨率的级数可从低到高显示。其局限性在于计算成本高、计算时间长。示例见图 5。
 
 | Figure 5. Image decomposition using DWT |
 | --- |
 | ![Figure978-1-7998-2701-6.ch004.f05](img/ch004.f05.png) |
-| --- |
 
-######## 离散傅里叶变换（DFT）水印技术
+#### 离散傅里叶变换（DFT）水印技术
 
 该技术具有纯频域分析特性，是常用技术之一。它能抵抗缩放、平移、旋转、裁剪等各类攻击。应用 DFT 时，图像转换为正弦和余弦形式。它们进一步分为基于模板的嵌入和离散嵌入。在直接嵌入技术中，通过修改 DFT 相位系数和幅度来嵌入水印。利用 DFT 域，估计包含模板结构的变换因子。在图像变换过程中，通过估计变换因子来搜索模板。对于嵌入的扩频水印提取，使用检测器。DFT 用于数字信号、周期性信号和离散时间函数。其计算公式如下，周期 MP 为：
 
+```
 ![Mathtype978-1-7998-2701-6.ch004.m12](img/ch004.m12.svg) (9)
+```
 
 逆离散傅里叶变换计算如下：
 
+```
 ![Mathtype978-1-7998-2701-6.ch004.m13](img/ch004.m13.svg) (10)
+```
 
 其中 v, i = 0, 1, 2, ..., MP-1。DFT 的计算维度公式如方程 11 和 12 所示。
 
+```
 ![Mathtype978-1-7998-2701-6.ch004.m14](img/ch004.m14.svg) (11)
+```
 
+```
 ![Mathtype978-1-7998-2701-6.ch004.m15](img/ch004.m15.svg) (12)
+```
 
 在 DFT 中，图像为复值图像，以幅度和相位形式表示。低频分量是 DFT 最重要的分量之一，也称为中心分量。它针对导致频谱模糊的裁剪攻击有效。由于水印嵌入在幅度中，因此不需要任何同步。如果对图像执行缩放，通过相关系数发现的提取信号会被放大。它能从几何攻击中恢复，因此对平移、缩放和旋转具有不变性。在 DFT 和 DWT 中，几何畸变难以恢复。DFT 的主要局限性是输出为复值。在时空域中，不产生定位信息。
 
-######## 奇异值分解（SVD）水印技术
+#### 奇异值分解（SVD）水印技术
 
 它源于线性代数，用于降维。对矩阵 B 应用 SVD 时，矩阵分解为三个矩阵。第一个生成的矩阵是 'V'，一个正交矩阵；'J' 是另一个矩阵的转置；'S' 是一个对角矩阵。该方法能清晰地揭示变量间的关系，因为它将相关变量转换为不相关变量集。数字图像的矩阵由非负标量项组成。假设 'B' 是大小为 i x J 的图像。SVD 方法可用于分解 SVD 图像，如方程 13 所示。
 
+```
 B = V L J^T (13)
+```
 
 它是高鲁棒性方法之一。在该过程中，生成的奇异值有助于保护所有者提供的水印。内存约束减小，精度提高。此外，它能抵抗攻击。奇异值代表图像层的亮度。
 
-######## 鲁棒水印技术
+#### 鲁棒水印技术
 
 研究重点是针对几何畸变鲁棒的水印算法（Elbafisi, 2012）。解决此类问题的各种方法包括隐式同步、不变域、同步模板/模式和穷举搜索。RST 的唯一变体主要是几何变换不变算法。
 
+### 几何失真水印技术综述
 
-
-
-
-######## 几何失真水印技术综述
-
-######### 几何失真标准的重要性
+#### 几何失真标准的重要性
 
 几何失真标准的重要性日益凸显。全局对齐变换对水印算法性能影响巨大，但实现复杂。
 
-######### 详尽水印搜索
+#### 详尽水印搜索
 
 详尽水印搜索是解决重同步问题最流行的方法之一 (Kutter, Jordan, & Bossen, 1998)。水印检测在由引导几何逆变形组成的训练序列上进行。水印搜索在每个失真参数中执行。在缺少原始图像的情况下，难以分析变形参数 (Alghoniemy & Tewfik, 2000; 2006)。同时也存在高计算复杂度。参数包括待探索的空间。因此，搜索空间的大小限制降低了感知质量。但搜索空间中存在不可接受的影响 (Lichtenauer, Setyawan, Kalker, & Lagendijk, 2003)，导致基于同步器结果的错误。此外，由于插值误差和几何失真 (FiAlvarez-Rodriguez & Perez-Gonzalez, 2002)，存在激增的假阳性概率。
 
-######### 基于模板的方法与自同步
+#### 基于模板的方法与自同步
 
 针对同步攻击，最常用的解决方案是将周期性水印模式嵌入图像，或在水印的同时插入模板 (Herrigel, Perrig, & Ruanaidh, 1997; Stankovic, Djurovic, & Pitas, 2001)。为了重同步，额外的模板被用作人工嵌入的参考。其中携带的信息不敏感。基于模板的技术通过补偿和估计几何变换，以及断言水印的存在来完成重同步模式 (Lu, Lu, & Chung, 2006)。因此，配准方法被识别并能抵御几何攻击 (Bas, Chassery, & Macq, 2002)。
 
@@ -2406,11 +2414,13 @@ B = V L J^T (13)
 
 基于模板的水印领域取得了巨大进展，但这些方法忽略了含水印图像与原始图像之间的相似性。模板和水印的插入发生在嵌入位置，并仔细加强了账户管理。它还保持了原始图像的受限保真度，导致数据负载妥协。
 
+
+
 此外，安全方面被忽视，因为所有这些算法都容易受到模板移除攻击 (Dong & Galatsanos, 2002; Herrigel, Voloshynovskiy, & Rytsar, 2001; Bas, Chassery, & Macq, 2002)。可利用特定特征来破坏同步模式。模板的插入作为伪随机噪声模式执行，如滤波算子滤除局部最大值。然后通过恶意攻击，消除已应用的模板。因此，它存在无法承受模板攻击和威胁风险的局限性。
 
 与基于模板的方法类似，自同步水印 (Kutter, 1999; Delannay & Macq, 2000) 也容易受到估计或移除攻击，因为攻击者利用水印周期性平铺的知识来移除它。此外，自相关函数中的峰值可通过频域或空域滤波移除，从而使水印容易受到几何攻击。
 
-######### 不变域
+### 不变域
 
 另一种技术是在几何不变子空间中嵌入水印。建议使用直方图规定 (Coltuc & Bolon, 1999) 将水印隐藏至几何失真中。也提出了基于 Fourier-Mellin 变换 (Lin & Brandt, 1993) 的水印方法 (Ruanaidh & Pun, 1998; Lin et al., 2001)。利用傅里叶变换的不变性和对数极坐标映射 (LPM) 处理平移，获得了平移、缩放和旋转不变域。该方案在图像经历局部几何变形后实施具有局限性。此外，图像离散性质的近似问题和嵌入空间的减小，使水印对有损压缩和低通滤波的抵抗力变弱。
 
@@ -2418,7 +2428,7 @@ B = V L J^T (13)
 
 另一种技术提出创建自相似水印，而非在不变空间嵌入水印 (Solachidis & Pitas, 2000)。这些水印嵌入 DFT 域且不影响 DFT 幅度。使用相同扇区创建水印，因此即使旋转也能轻松检测。它还减少了频率采样步骤，仅在图像缩放或裁剪时执行检测。
 
-######### 水印特征
+### 水印特征
 
 多年来开发了许多基于特征的水印算法。为解决水印同步问题，首选方法是特征区域检测，以抵抗局部几何失真。基于内容的同步方法遵循的主要步骤如下：
 
@@ -2432,41 +2442,37 @@ B = V L J^T (13)
 
 另一种方法中 (Bas, Chassery, Macq, 2002)，使用 Harris 检测器提取特征点，在稳定特征点组上生成 Delaunay 三角剖分。之后在每个三角剖分三角形中插入水印。但这些点对缩放不变 (Mikolajczyk & Schmid, 2002)，无法抵御缩放攻击。
 
+### 基于特征的水印技术进一步发展
 
-
-
-
-######## 基于特征的水印技术进一步发展
-
-######### 墨西哥帽小波与哈里斯特征点
+#### 墨西哥帽小波与哈里斯特征点
 
 此外，引入了墨西哥帽小波尺度（Tang & Hang, 2003）。对图像进行单独利用，处理以获取的特征点为坚定中心和半径的重叠圆。在每个图像圆中选择两个 `32 X 32` 的块用于嵌入水印（Li & Guo, 2009）。它能抵抗大多数攻击，但缩放变换攻击会对其产生影响，因为这会改变块的内容。
 
 此外，还提出了一种具有归一化尺度的哈里斯特征点技术，水印嵌入在每个具有固定半径和局部最稳定哈里斯点的圆盘区域内。该技术能抵抗全局几何变换，包括适度的平移、旋转和缩放。但这无法抵抗裁剪攻击。
 
-######### 尺度不变特征变换 (SIFT)
+#### 尺度不变特征变换 (SIFT)
 
 进一步引入了尺度不变特征变换（`SIFT`），用于生成圆形图案作为插入模块（Gupta, Agrawal, & Yamaguchi, 2016）。矩形水印被变换为极坐标映射水印（Li, Yu, Gupta, & Ren, 2018）。反之，在水印插入前，通过极坐标映射来确定插入模块。圆形卷积用于检测水印对应关系（Li, Deng, Gupta, Wang, & Choi, 2019）。利用极坐标映射圆形垫的平移特性来获得旋转不变水印。
 
-######### 哈里斯-拉普拉斯与仿射归一化
+#### 哈里斯-拉普拉斯与仿射归一化
 
 哈里斯-拉普拉斯技术适用于利用哈里斯角点提取尺度不变特征点（Lee, Kim, & Lee, 2006）。根据每个特征点的局部特征尺度，在仿射归一化后嵌入水印。特征尺度被定义为归一化尺度空间表示达到最大值时的尺度。方向特征依赖于图像主轴的角度（Hai, Qing, & Ke, 2018）。
 
-######### 局部圆形区域与切比雪夫矩
+#### 局部圆形区域与切比雪夫矩
 
 引入了一种结合局部圆形区域（`LCRs`）和切比雪夫矩的技术（Deng, Gao, Li, & Tao, 2009）。`LCRs` 的形成由哈里斯-拉普拉斯检测器完成，`LCRs` 的全局特性通过切比雪夫矩获得。
 
-######### 仿射不变点检测器
+#### 仿射不变点检测器
 
 此外，引入了仿射不变点检测器来检测特征点（Li, Yu, Gupta, & Ren, 2018; Mikolajczyk & Schmid, 2002）。对于特定特征点，使用并形成椭圆特征区域用于空间域插入。根据区域形状，在嵌入前将水印几何变换为椭圆图案。
 
-####### 结论
+### 结论
 
 随着多媒体技术的进步和全球网络的快速普及，存储设备和经济实惠的数字记录技术构建了一个平台，使得以数字格式传输、分发、复制、呈现和获取内容成为可能，且质量不降低。篡改也变得可能。然而，通过网络传输内容使其变得不安全。安全特性对于某些类型的传输媒体数据至关重要。因此，我们引入了数字水印技术，这是最热门的研究领域之一。该方法涉及以某种方式嵌入信息的过程。从而满足了版权保护等各种应用对信息安全的需求。
 
 在本章中，分析并回顾了不同的水印方法。这基于变换域和空间域。进一步回顾了使用离散小波变换和奇异值分解的方法。此外，可以得出结论：各种攻击技术被用于评估水印系统。此外，抗几何畸变的水印算法是主要关注点。解决这些问题的不同方案广泛包括同步模板/模式、穷举搜索、隐式同步和利用图像特征的不变域。
 
-##### 参考文献
+### 参考文献
 
 Akiyama, T., Motoyoshi, F., Uchida, O., & Nakanishi, S. (2006). Hybrid digital watermarking for color images based on wavelet transform. Retrieved from https://www.researchgate.net/publication/267818801_HYBRID_DIGITAL_WATERMARKING_FOR_COLOR_IMAGES_BASED_ON_WAVELET_TRANSFORM
 
@@ -2506,12 +2512,6 @@ Kumar, C., Singh, A. K., & Kumar, P. (2018). A recent survey on image watermarki
 
 Kutter, M. (1999). Watermarking resistance to translation, rotation, and scaling. *Proceedings Multimedia Systems and Applications* (Vol. 3528, pp. 423-431). International Society for Optics and Photonics.
 
-
-
-
-
-##### 参考文献
-
 Kutter, M., Jordan, F. D., & Bossen, F. (1998). Digital watermarking of color images using amplitude modulation. *Journal of Electronic Imaging*, 7(2), 326–333. doi:10.1117/1.482648
 
 Lee, H. Y., Kim, H., & Lee, H. K. (2006). Robust image watermarking using local invariant features. *Optical Engineering (Redondo Beach, Calif.)*, 45(3). doi:10.1117/1.2181887
@@ -2521,6 +2521,8 @@ Li, D., Deng, L., Gupta, B. B., Wang, H., & Choi, C. (2019). A novel CNN based s
 Li, J., Yu, C., Gupta, B., & Ren, X. (2018). Color image watermarking scheme based on quaternion Hadamard transform and Schur decomposition. *Multimedia Tools and Applications*, 77(4), 4545–4561. doi:10.1007/s11042-017-4452-0
 
 Li, L. D., & Guo, B. L. (2009). Localized image watermarking in spatial domain resistant to geometric attacks. *AEÜ. International Journal of Electronics and Communications*, 63(2), 123–131. doi:10.1016/j.aeue.2007.11.007
+
+
 
 Lichtenauer, J. F., Setyawan, I., Kalker, T., & Lagendijk, R. L. (2003). Exhaustive geometrical search and the false positive watermark detection probability. In *Security and Watermarking of Multimedia Contents V* (Vol. 5020, pp. 203-214). International Society for Optics and Photonics.
 
@@ -2582,9 +2584,9 @@ Yuan, W., Ling, H., Lu, Z., Zou, F., & Yu, Y. (2006). Image Content-based Waterm
 
 Zheng, D., Liu, Y., Zhao, J., & Saddik, A. E. (2007). A survey of RST invariant image watermarking algorithms. *ACM Computing Surveys*, 39(2), 5. doi:10.1145/1242471.1242473
 
-#### 第 5 章
+## 第 5 章
 
-##### 作者
+### 作者
 
 *   **Brij B. Gupta**  
     印度库鲁克谢特拉国家理工学院
@@ -2601,31 +2603,25 @@ Zheng, D., Liu, Y., Zhao, J., & Saddik, A. E. (2007). A survey of RST invariant 
 *   **Anupam Shukla**  
     印度库鲁克谢特拉国家理工学院
 
-##### 摘要
+### 摘要
 
-
-
-
-
-###### 简介
+#### 简介
 
 在全球互联网使用中，网络上不断增加的多媒体消息（包括视频、音频、图像和文本文档）引发了许多与版权相关的问题。为了版权保护、认证目的以及伪造检测，数字水印是社交网络内容保护的稳健方式。在这项技术中，私有信息被嵌入到图像和视频等多媒体内容内部。嵌入在多媒体内容内部的受保护内容称为水印启用信息。为了使水印过程更有效，内容在嵌入图像前会先进行加密。基本上，数字水印嵌入过程是在空域和频域这两个不同域中实现的。在空域数字水印中，根据所选的位平面和图像的像素，水印信息被嵌入到原始图像的最低有效位中；并执行嵌入和检测操作。
 
+#### 数字水印技术综述
 
-
-
-
-###### 数字水印技术综述
-
-####### 1. 社交媒体背景与虚假信息传播
+##### 1. 社交媒体背景与虚假信息传播
 
 自 1990 年代中期以来，社交媒体视角下人际沟通模式发生了变化。Facebook、Twitter、Instagram 和 WhatsApp 等多个在线社交网络（OSN）使得用户的实时信息能够在同一网络或不同网络的多个用户之间轻松分发。由于在线社交网络具有易用性、传播速度快、成本低等特点，它已成为重要的沟通和信息共享方式。如今，几乎所有社交网络用户都通过在线渠道获取新闻 (Zhang et al., 2017)。然而，随着 OSN 的日益流行，互联网使用已成为传播虚假新闻的理想途径。虚假新闻以误导性内容、虚假评论、虚假谣言、广告、政治虚假言论、讽刺等形式，通过图像在社交媒体中传播速度比主流媒体更快 (Sahoo & Gupta, 2020; Sahoo & Gupta, 2018)。
 
-####### 2. 数字水印概述
+##### 2. 数字水印概述
 
 为了保护图像、视频、文本和音频等多媒体内容免受攻击者侵害，数字水印是将特定信息以数字方式隐藏并嵌入到该内容中的过程 (Sahoo & Gupta, 2019)。这是保护多媒体内容用户/作者权利、并查明内容是否被网络中未授权用户滥用/篡改的有效方法 (Balan et al., 2017; Zedan et al., 2017; Sahoo & Gupta, 2019)。
 
 数字水印在一定程度上与隐写术相关。在该技术中，我们将文本消息隐藏在任何可用的多媒体内容背后。数字水印过程用于认证多媒体内容所有者或作者的身份。早期，不同领域使用水印技术保护相似性，即水印最初用于纸张，随后用于纸币 (Singh et al., 2012)。
+
+
 
 近年来，由于社交网络及其音频、视频、图像等内容以及其他个人和专业内容共享方式的推动，互联网普及率迅速扩大。因此，为恶意目的复制原始内容并篡改主题的现象日益增加，影响了普通用户。因此，为防止未授权访问保护多媒体内容，数字水印是最有力的方式 (Abraham et al., 2016)。
 
@@ -2639,41 +2635,37 @@ Zheng, D., Liu, Y., Zhao, J., & Saddik, A. E. (2007). A survey of RST invariant 
 4. 应能容忍对该内容执行的各种不同操作；
 5. 必须在感知上不可见。
 
-####### 3. 水印技术分类
+### 3. 水印技术分类
 
 水印过程分为两大类：空域水印和频域水印 (Patel et al., 2013)。
 
-######## 3.1 空域水印
+#### 3.1 空域水印
 
 在空域水印技术中，基于图像的像素进行嵌入和检测。空域水印方法是一种通过修改原始图像的像素值来嵌入水印信息的技术。该技术实现简单，但对压缩、裁剪等不同类型的攻击不够鲁棒 (Cheng et al., 2004)。
 
-为防止不同攻击，水印在嵌入原始图像前会用伪随机噪声加密。加密水印根据水印像素的 LSB（最低有效位）是置位还是复位，嵌入原始图像的最低有效位中。水印嵌入原始图像后，水印图像的 LSB 发生变化，原始图像会产生轻微失真 (Zeki et al., 2011)。此处逐像素处理水印，根据水印图像的 LSB 设置或复位原始图像的 LSB。若水印位置位，则原始图像 LSB 置位；若水印位复位，则原始图像 LSB 复位。该技术的局限性在于水印未加密，若攻击者知晓加解密算法，极易遭受攻击 (Singh et al., 2012)。
+为防止不同攻击，水印在嵌入原始图像前会用伪随机噪声加密。加密水印根据水印像素的 `LSB`（最低有效位）是置位还是复位，嵌入原始图像的最低有效位中。水印嵌入原始图像后，水印图像的 `LSB` 发生变化，原始图像会产生轻微失真 (Zeki et al., 2011)。此处逐像素处理水印，根据水印图像的 `LSB` 设置或复位原始图像的 `LSB`。若水印位置位，则原始图像 `LSB` 置位；若水印位复位，则原始图像 `LSB` 复位。该技术的局限性在于水印未加密，若攻击者知晓加解密算法，极易遭受攻击 (Singh et al., 2012)。
 
-将水印分解为 RGB 通道，并将加密水印按 8x8 块嵌入原始图像分块中，但用于水印的水印本身未分区 (Zeimpekis et al., 2006)。该技术对椒盐噪声和裁剪攻击提供鲁棒性，但不抗压缩攻击及其他攻击，且 PSNR 和 MSE 值不如拟议技术理想。该方法实现简单直接。无法抵抗 JPEG 压缩和低通滤波攻击。编解码所需计算时间较少。图像像素信息因根据水印图像操作而产生少量失真 (Dougherty et al., 2009)。
+将水印分解为 `RGB` 通道，并将加密水印按 `8x8` 块嵌入原始图像分块中，但用于水印的水印本身未分区 (Zeimpekis et al., 2006)。该技术对椒盐噪声和裁剪攻击提供鲁棒性，但不抗压缩攻击及其他攻击，且 `PSNR` 和 `MSE` 值不如拟议技术理想。该方法实现简单直接。无法抵抗 `JPEG` 压缩和低通滤波攻击。编解码所需计算时间较少。图像像素信息因根据水印图像操作而产生少量失真 (Dougherty et al., 2009)。
 
-######## 3.2 频域水印
+#### 3.2 频域水印
 
-另一方面，频域技术基于图像的频率表示工作。常用变换包括离散余弦变换（DCT）、奇异值分解（SVD）、快速傅里叶变换（FFT）和时效离散小波变换（DWT）。与空域技术相比，频域水印技术更鲁棒。基于可见性，数字水印分为可见和不可见两类。Bianchi et al. (2013) 描述了一种基于带加密水印的空域水印技术的不可见水印技术。
+另一方面，频域技术基于图像的频率表示工作。常用变换包括离散余弦变换（`DCT`）、奇异值分解（`SVD`）、快速傅里叶变换（`FFT`）和时效离散小波变换（`DWT`）。与空域技术相比，频域水印技术更鲁棒。基于可见性，数字水印分为可见和不可见两类。Bianchi et al. (2013) 描述了一种基于带加密水印的空域水印技术的不可见水印技术。
 
-DWT 相比包含 DFT 和 DCT 在内的其他变换方法，计算效率更高 (Lowe et al., 2004)。相比之下，由于信息分散在整个图像上，频域数字水印比空域数字水印更安全、更鲁棒 (Almomani et al., 2013; Jiang et al., 2018)。由于鲁棒性要求，图像的高频部分不应用于水印嵌入过程。
+`DWT` 相比包含 `DFT` 和 `DCT` 在内的其他变换方法，计算效率更高 (Lowe et al., 2004)。相比之下，由于信息分散在整个图像上，频域数字水印比空域数字水印更安全、更鲁棒 (Almomani et al., 2013; Jiang et al., 2018)。由于鲁棒性要求，图像的高频部分不应用于水印嵌入过程。
 
-在 DWT 中，图像的数字水印在频域生成。它以不同小波的形式表示整幅图像。小波由具有特定频率和确定持续时间的小波组成。在此过程中，选定图像沿 X 和 Y 坐标平面用高通和低通滤波器进行滤波。该方法将整幅图像分为四个不同的子带：LL、LH、HL 和 HH。其中，LL 包含最低频率分量，HH 包含最高频率分量。进一步将低频带 LL 划分为四个区域，并持续至第 3 级。为增强水印鲁棒性，DWT 增加了第 2 级和第 3 级。该技术将整幅图像分为表 1 所示的四个不同子带。
+在 `DWT` 中，图像的数字水印在频域生成。它以不同小波的形式表示整幅图像。小波由具有特定频率和确定持续时间的小波组成。在此过程中，选定图像沿 `X` 和 `Y` 坐标平面用高通和低通滤波器进行滤波。该方法将整幅图像分为四个不同的子带：`LL`、`LH`、`HL` 和 `HH`。其中，`LL` 包含最低频率分量，`HH` 包含最高频率分量。进一步将低频带 `LL` 划分为四个区域，并持续至第 3 级。为增强水印鲁棒性，`DWT` 增加了第 2 级和第 3 级。该技术将整幅图像分为表 1 所示的四个不同子带。
 
-
-
-
-
-######## 表 1. 图像的 DWT 分解模型
+#### 表 1. 图像的 DWT 分解模型
 
 | (HL)[3] | | (LH)[3] | | (LH)[2] | | (LH)[1] |
 | --- | --- | --- | --- | --- | --- | --- |
-| (HL)[3] | | (HH)[3] | | | |
-| (HL)[2] | | (HH)[2] | | | |
-| (HL)[1] | | (HH)[1] | | | |
+| (HL)[3] | | (HH)[3] | | | | |
+| (HL)[2] | | (HH)[2] | | | | |
+| (HL)[1] | | (HH)[1] | | | | |
 
-图像的每一部分即子带都包含关于原始图像的一些信息。其中，`(LL)[1]` 频带包含图像的最大信息量[7]。对于图像变换，基于 DWT 的水印技术使用各种滤波器，如 Haar 小波滤波器、Morlet 小波、Coiflets 小波、Meyer 小波等。互联网上可用的视频内容也需要类似的机制，且与其他内容相比，用户对视频内容的关注度更高。视频由大量帧组合在一起，产生某种错觉并以高速播放。因此，为了使用数字水印保护视频内容，整个视频被分割成各种帧；即对于 25 fps，视频中每秒将有 25 帧。分割成帧后，该技术被应用于一帧或多帧以保护数字内容。选定的图像首先利用低通和高通滤波器以及两个坐标 X 和 Y，根据其频率分量分解为若干子带 (Kang et al., 2003)。成功地将水印应用于视频的某些部分后，我们将所有帧组合成单个视频作为含水印视频 (Gupta, 2018; Zhang et al., 2018; Chaudhary et al., 2016)。本文其余部分组织如下。第 2 节描述基于可用内容的各种数字水印类型。第 3 节描述与数字水印原理相关的文献综述。此外，我们在第 4 节和第 5 节中描述各域中的水印嵌入过程。第 6 节描述与水印相关的鲁棒性和各种抗攻击性。第 7 节描述信息流和处理过程。最后，我们在第 8 节通过比较分析描述各种结果分析，并在第 9 节总结整个执行过程的总体情况。
+图像的每一部分即子带都包含关于原始图像的一些信息。其中，`(LL)[1]` 频带包含图像的最大信息量[7]。对于图像变换，基于 `DWT` 的水印技术使用各种滤波器，如 `Haar` 小波滤波器、`Morlet` 小波、`Coiflets` 小波、`Meyer` 小波等。互联网上可用的视频内容也需要类似的机制，且与其他内容相比，用户对视频内容的关注度更高。视频由大量帧组合在一起，产生某种错觉并以高速播放。因此，为了使用数字水印保护视频内容，整个视频被分割成各种帧；即对于 `25 fps`，视频中每秒将有 `25` 帧。分割成帧后，该技术被应用于一帧或多帧以保护数字内容。选定的图像首先利用低通和高通滤波器以及两个坐标 `X` 和 `Y`，根据其频率分量分解为若干子带 (Kang et al., 2003)。成功地将水印应用于视频的某些部分后，我们将所有帧组合成单个视频作为含水印视频 (Gupta, 2018; Zhang et al., 2018; Chaudhary et al., 2016)。本文其余部分组织如下。第 2 节描述基于可用内容的各种数字水印类型。第 3 节描述与数字水印原理相关的文献综述。此外，我们在第 4 节和第 5 节中描述各域中的水印嵌入过程。第 6 节描述与水印相关的鲁棒性和各种抗攻击性。第 7 节描述信息流和处理过程。最后，我们在第 8 节通过比较分析描述各种结果分析，并在第 9 节总结整个执行过程的总体情况。
 
-######## 基于可用内容的水印类型
+#### 基于可用内容的水印类型
 
 根据用途和内容保护，水印原理实现于各种多媒体内容中，如图像水印、视频水印、音频水印和文本水印。在图像水印中，数字水印内容被嵌入图像中，以便在必要时检测和提取原始内容以确立所有者的所有权 (Ruanidh et al., 1996)。此外，图像水印原理可通过下文描述的多种方式实现。
 
@@ -2685,11 +2677,11 @@ DWT 相比包含 DFT 和 DCT 在内的其他变换方法，计算效率更高 (L
 *   **不可见鲁棒水印**：不可见鲁棒水印通过图像的像素值实现。在此过程中，水印的检测极难识别，只能通过解码过程恢复。
 *   **不可见脆弱水印**：这是一个结合了脆弱水印与不可见概念的过程。由于其不可见的性质，它不会被任何用户或威胁篡改。
 
-另一方面，在视频水印中，水印基于视频内容可用的特征进行。在此水印原理中，总帧根据特征供给情况被分割成若干帧用于嵌入。它是图片水印的详细阐述。在音频水印方面，由于网络音乐、MP3 和其他一些声音格式，先进的水印技术占主导地位 (Xianglin et al., 2006)。最常用的称为文本水印的原理，使用 PDF、.doc 文件及社交结构上可用的其他文档的先进水印技术。用于唯一标识的信息也随文档内容一同添加。
+另一方面，在视频水印中，水印基于视频内容可用的特征进行。在此水印原理中，总帧根据特征供给情况被分割成若干帧用于嵌入。它是图片水印的详细阐述。在音频水印方面，由于网络音乐、`MP3` 和其他一些声音格式，先进的水印技术占主导地位 (Xianglin et al., 2006)。最常用的称为文本水印的原理，使用 `PDF`、`.doc` 文件及社交结构上可用的其他文档的先进水印技术。用于唯一标识的信息也随文档内容一同添加。
 
-######## 数字水印的应用覆盖
+#### 数字水印的应用覆盖
 
-基于社交网络中可用内容的各种水印相关应用及其用于抵御 OSN 中攻击者的各种威胁描述如下：
+基于社交网络中可用内容的各种水印相关应用及其用于抵御 `OSN` 中攻击者的各种威胁描述如下：
 
 为了保护通过各种电视频道广播的内容，该内容的所有者将版权图像嵌入多媒体内容中。水印仅嵌入某一特定图像而非所有可用内容，以维持网络或媒体中的质量 (Hamadi et al., 2015)。另一个应用称为数字水印中的事务追踪。例如，各种水印被嵌入视频的某些部分，这些部分在接收端被接收并记录电影每个合法副本的接收者。如果电影内容在互联网上泄露，则内容所有者可以轻松识别哪个接收者泄露了内容或传播内容的来源 (Ding et al., 2016)。
 
@@ -2697,32 +2689,28 @@ DWT 相比包含 DFT 和 DCT 在内的其他变换方法，计算效率更高 (L
 *   **广播监控**：此应用检查未经授权的广播站 (Abraham et al., 2016)，并分析内容是否由授权供应商播放。篡改检测是基于脆弱水印的另一个应用。如果通过任何方式发现水印被破坏，则表明存在篡改，因此数字内容不再可靠 (Hu et al., 2011)。
 *   **认证与完整性验证**：数字水印的目的还包括保护客户内容免受未经授权的访问。如果有人使用了用户内容的合法副本，并有意或无意地与他人重新分发该内容，则使用含水印内容更容易检测到该内容。在每个交易点，水印作为发送方和接收方之间的屏障来保护内容。通过此过程，追踪未授权用户变得更容易 (Tusi et al., 2008)。基于指纹的认证：现有的指纹相关技术保护用户内容。如果有人合法制作了复制品并非法分发给他人，则指纹认证可防止此类未经授权的访问。此原理也可用于通过将水印原理嵌入网络上的多媒体内容来追踪整个交易 (Lu et al., 2000)。
 
-
-
-
-
-######### 内容描述：水印中的多媒体内容标记与渲染
+#### 内容描述：水印中的多媒体内容标记与渲染
 
 水印嵌入过程发生在宿主图像内部。嵌入图像的尺寸与原始图像长度一致，且能在不产生任何行为变化的情况下轻松嵌入。该应用所选的水印方法对鲁棒性要求较低。由于水印中存储了大量信息，水印尺寸较大，且该应用对鲁棒性要求极低。
 
-######### 与医疗相关的应用
+#### 与医疗相关的应用
 
 为防止未授权访问医疗信息，数字水印技术投入应用。相关内容包括患者报告及其他与专利和医院记录相关的文档（Tyagi et al., 2016）。鉴于多媒体内容在网络上频繁传输，医疗数据的安全性与验证至关重要。
 
-######## 空间域中的水印嵌入与提取过程
+### 空间域中的水印嵌入与提取过程
 
-######### 水印嵌入过程
+#### 水印嵌入过程
 
-在水印嵌入过程中，作者或多媒体内容所有者已知的私有密钥（即秘密密钥）用于加密水印，如图 1 所示。当水印被加密到原始图像或视频中时，称为嵌入在原始图像内部，从而获得含水印图像（Huang et al., 2005）。在嵌入过程中，若水印图像的 LSB（最低有效位）被置位，则原始图像对应的 LSB 也被置位。数字水印的嵌入过程如图 2 和图 3 所示。
+在水印嵌入过程中，作者或多媒体内容所有者已知的私有密钥（即秘密密钥）用于加密水印，如图 1 所示。当水印被加密到原始图像或视频中时，称为嵌入在原始图像内部，从而获得含水印图像（Huang et al., 2005）。在嵌入过程中，若水印图像的 `LSB`（最低有效位）被置位，则原始图像对应的 `LSB` 也被置位。数字水印的嵌入过程如图 2 和图 3 所示。
 
 | 图 1. 嵌入水印原理 |
 | --- |
 | ![Figure978-1-7998-2701-6.ch005.f01](img/ch005.f01.png) |
 
-########## 算法
+##### 算法
 
-*   **步骤 1**：利用 0 和 1 的随机函数创建大小为 32 x 32 位的随机图像 `R`，其中 0 表示黑色，1 表示白色。
-*   **步骤 2**：将主水印图像与随机图像 `R` 进行加密，即对水印图像的最低有效位与 `R` 执行 XOR 运算。形成一个新的 32 x 32 位图像 `WPRIME`，即加密后的水印。
+*   **步骤 1**：利用 `0` 和 `1` 的随机函数创建大小为 `32 x 32` 位的随机图像 `R`，其中 `0` 表示黑色，`1` 表示白色。
+*   **步骤 2**：将主水印图像与随机图像 `R` 进行加密，即对水印图像的最低有效位与 `R` 执行 `XOR` 运算。形成一个新的 `32 x 32` 位图像 `WPRIME`，即加密后的水印。
 
 | 图 2. 随机图像与水印加密 |
 | --- |
@@ -2735,24 +2723,25 @@ DWT 相比包含 DFT 和 DCT 在内的其他变换方法，计算效率更高 (L
     ![Mathtype978-1-7998-2701-6.ch005.m03](img/ch005.m03.svg)
     ![Mathtype978-1-7998-2701-6.ch005.m04](img/ch005.m04.svg)
 
-    其中，`m` 表示为 0, 2, 4... (P/2–2)，`n` 表示为 0, 2, 4... (Q/2–2)。`P=Q=32`。
+    其中，`m` 表示为 `0, 2, 4... (P/2–2)`，`n` 表示为 `0, 2, 4... (Q/2–2)`。`P=Q=32`。
 
-    现在将原始图像的区域 `r1` 与加密水印图像的区域 `W1` 进行嵌入。同理，对其他对应区域也进行水印嵌入。嵌入水印时，若水印的该位被置位，则置原始图像的最低有效位（LSB）。
-*   **步骤 4**：通过计算 MSE 和 PSNR 值，分析含水印图像的质量。
+    现在将原始图像的区域 `r1` 与加密水印图像的区域 `W1` 进行嵌入。同理，对其他对应区域也进行水印嵌入。嵌入水印时，若水印的该位被置位，则置原始图像的最低有效位（`LSB`）。
+
+*   **步骤 4**：通过计算 `MSE` 和 `PSNR` 值，分析含水印图像的质量。
 
 | 图 3. 水印嵌入图像 |
 | --- |
 | ![Figure978-1-7998-2701-6.ch005.f03](img/ch005.f03.png) |
 
-######### 水印提取过程
+#### 水印提取过程
 
-在水印提取过程中，从含水印图片的 LSB 中提取加密水印，如图 4 所示。解密水印所用的过程或密钥与加密时使用的相同（Kumar et al., 2016）。整个过程的结果和数据内容如图 5 所示。
+在水印提取过程中，从含水印图片的 `LSB` 中提取加密水印，如图 4 所示。解密水印所用的过程或密钥与加密时使用的相同（Kumar et al., 2016）。整个过程的结果和数据内容如图 5 所示。
 
 | 图 4. 从嵌入图像中提取水印的过程 |
 | --- |
 | ![Figure978-1-7998-2701-6.ch005.f04](img/ch005.f04.png) |
 
-########## 算法
+##### 算法
 
 *   **步骤 1**：将原始图像分成 4 个相等的区域，即 `(r1, r2, r3, r4)`。
 
@@ -2763,9 +2752,10 @@ DWT 相比包含 DFT 和 DCT 在内的其他变换方法，计算效率更高 (L
 
     其中 `m = 0, 2, 4... (P/2–2)`，`n = 0, 2, 4... (Q/2–2)`。`P=Q=32`。
 
-    通过将含水印图像的区域 `r1` 与原始图像比较，提取水印图像的 `W1`。同理，利用原始图像和含水印图像对其他对应区域进行水印提取。提取水印时，若含水印图像的该位被置位，则置水印图像的 LSB。
-*   **步骤 2**：利用加密时使用的随机图像 `R`，通过获取图像的 LSB 与 `R` 进行 XOR 运算，对获得的水印图像进行解密，如图 7 所示。
-*   **步骤 3**：通过计算 NCC（归一化相关系数）分析提取水印图像的质量。
+    通过将含水印图像的区域 `r1` 与原始图像比较，提取水印图像的 `W1`。同理，利用原始图像和含水印图像对其他对应区域进行水印提取。提取水印时，若含水印图像的该位被置位，则置水印图像的 `LSB`。
+
+*   **步骤 2**：利用加密时使用的随机图像 `R`，通过获取图像的 `LSB` 与 `R` 进行 `XOR` 运算，对获得的水印图像进行解密，如图 7 所示。
+*   **步骤 3**：通过计算 `NCC`（归一化相关系数）分析提取水印图像的质量。
 
 | 图 5. 无攻击情况下的提取水印 |
 | --- |
@@ -2779,22 +2769,22 @@ DWT 相比包含 DFT 和 DCT 在内的其他变换方法，计算效率更高 (L
 | --- |
 | ![Figure978-1-7998-2701-6.ch005.f07](img/ch005.f07.png) |
 
-######## 频率域（DWT）中的水印嵌入过程
+### 频率域（DWT）中的水印嵌入过程
 
 下文详述频率域中水印的嵌入过程。
 
-######### 嵌入图像算法
+#### 嵌入图像算法
 
-1.  为加密水印，生成一个 2000 位的密钥或随机二进制字符串。
+1.  为加密水印，生成一个 `2000` 位的密钥或随机二进制字符串。
 2.  水印图像的行号或列号代表密钥中的位位置。初始按行加密水印：若密钥中对应位被置位，则整行顺时针旋转；否则逆时针旋转。
 3.  接下来按列加密图像：若对应位被置位，则整列上下颠倒旋转；未置位则逆时针旋转。
-4.  为增强加密强度，重复步骤 2 和步骤 3 多次。整个 DWT 过程以图像形式展示，即水印加密如图 8 所示，信号不同频带如图 9 所示，含水印图像如图 10 所示。
+4.  为增强加密强度，重复步骤 2 和步骤 3 多次。整个 `DWT` 过程以图像形式展示，即水印加密如图 8 所示，信号不同频带如图 9 所示，含水印图像如图 10 所示。
 
 | 图 8. 水印加密 |
 | --- |
 | ![Figure978-1-7998-2701-6.ch005.f08](img/ch005.f08.png) |
 
-5.  对宿主图像应用 1 级 DWT，将整幅图像分解为四个不同的子频带 `LL[1]`、`LH[1]`、`HL[1]` 和 `HH[1]`。再对 `LL[1]` 应用 DWT，获得 `LL[1]` 的 2 级 DWT 即 `LL[2]`。对 `LL[2]` 再应用 DWT，将其分解为 `LL[3]`、`LH[3]`、`HL[3]`、`HH[3]`。
+5.  对宿主图像应用 1 级 `DWT`，将整幅图像分解为四个不同的子频带 `LL[1]`、`LH[1]`、`HL[1]` 和 `HH[1]`。再对 `LL[1]` 应用 `DWT`，获得 `LL[1]` 的 2 级 `DWT` 即 `LL[2]`。对 `LL[2]` 再应用 `DWT`，将其分解为 `LL[3]`、`LH[3]`、`HL[3]`、`HH[3]`。
 
 | 图 9. 原始图像的不同频带 |
 | --- |
@@ -2814,43 +2804,43 @@ DWT 相比包含 DFT 和 DCT 在内的其他变换方法，计算效率更高 (L
 
     M.S.E = ![Mathtype978-1-7998-2701-6.ch005.m09](img/ch005.m09.svg) (1)
 
-    ![Mathtype978-1-7998-2701-6.ch005.m10](img/ch005.m10.svg) (2)
-
-    其中，`N` 为图像尺寸，类似于 `(R*C)` 即 `(ROW * COLUMN)`。`![Mathtype978-1-7998-2701-6.ch005.m11](img/ch005.m11.svg)` 为原始水印，`![Mathtype978-1-7998-2701-6.ch005.m12](img/ch005.m12.svg)` 为含水印图像。LSB 嵌入时 `MAX=255`（Abraham et al., 2016）。
 
 
+![Mathtype978-1-7998-2701-6.ch005.m10](img/ch005.m10.svg) (2)
 
+其中，`N` 为图像尺寸，类似于 `(R*C)` 即 `(ROW * COLUMN)`。`![Mathtype978-1-7998-2701-6.ch005.m11](img/ch005.m11.svg)` 为原始水印，`![Mathtype978-1-7998-2701-6.ch005.m12](img/ch005.m12.svg)` 为含水印图像。LSB 嵌入时 `MAX=255`（Abraham et al., 2016）。
 
-
-######### 图像提取算法
+## 图像提取算法
 
 从嵌入图像中提取图像的过程详情如下。
 
-1.  对水印图像应用一级 DWT；此过程将整个图像分为 4 个不同的子带：`LL[1]`、`LH[1]`、`HL[1]` 和 `HH[1]`。同一 DWT 应用于 `LL[1]`，获得 `LL[1]` 的二级 DWT，即 `LL[2]`。对 `LL[2]` 再次应用 DWT 后，`LL[2]` 再次分为 `LL[3]`、`LH[3]`、`HL[3]`、`HH[3]`。
+1. 对水印图像应用一级 DWT；此过程将整个图像分为 4 个不同的子带：`LL[1]`、`LH[1]`、`HL[1]` 和 `HH[1]`。同一 DWT 应用于 `LL[1]`，获得 `LL[1]` 的二级 DWT，即 `LL[2]`。对 `LL[2]` 再次应用 DWT 后，`LL[2]` 再次分为 `LL[3]`、`LH[3]`、`HL[3]`、`HH[3]`。
 
-2.  用于水印嵌入的可见性因子 `F` 和图像的子带发生变化。例如：
-    `WMKD-LL[3] = H-LL[3] + (F * W-LL[3])`。
+2. 用于水印嵌入的可见性因子 `F` 和图像的子带发生变化。例如：
 
-    为了从上述方程中找到水印子带信息，我们按如下方式求得水印子带：
-    `W-LL[3] = (Wmkd-LL[3] - H-LL[3]) / F`。
+   `WMKD-LL[3] = H-LL[3] + (F * W-LL[3])`。
 
-    其中，`WMKD-LL[3]` 是水印图像的 `LL[3]`，`H-LL[3]` 是宿主图像的 `LL[3]`，`W-LL[3]` 是水印图像的 `LL[3]`（如图 11 所示）。
+   为了从上述方程中找到水印子带信息，我们按如下方式求得水印子带：
 
-    类似地，水印图像的 `LL[2]` 通过对 `LL[3]`、`LH[3]`、`HL[3]`、`HH[3]` 进行 IDWT（逆离散小波变换）获得。同样，水印图像的 `LL[1]`、`LH[1]`、`HL[1]`、`HH[1]` 通过 IDWT 获得（如图 12 所示）。
+   `W-LL[3] = (Wmkd-LL[3] - H-LL[3]) / F`。
+
+   其中，`WMKD-LL[3]` 是水印图像的 `LL[3]`，`H-LL[3]` 是宿主图像的 `LL[3]`，`W-LL[3]` 是水印图像的 `LL[3]`（如图 11 所示）。
+
+   类似地，水印图像的 `LL[2]` 通过对 `LL[3]`、`LH[3]`、`HL[3]`、`HH[3]` 进行 IDWT（逆离散小波变换）获得。同样，水印图像的 `LL[1]`、`LH[1]`、`HL[1]`、`HH[1]` 通过 IDWT 获得（如图 12 所示）。
 
 | 图 11. 水印提取 |
 | --- |
 | ![Figure978-1-7998-2701-6.ch005.f11](img/ch005.f11.png) |
 
-3.  获得加密水印。因此，为获得原始内容，必须对其进行解密。水印图像的行号或列号代表密钥中的比特位置。然后解密过程从行开始，然后是列，即对于设置位，整行逆时针旋转；对于未设置位，顺时针旋转（如图 13 所示）。
+3. 获得加密水印。因此，为获得原始内容，必须对其进行解密。水印图像的行号或列号代表密钥中的比特位置。然后解密过程从行开始，然后是列，即对于设置位，整行逆时针旋转；对于未设置位，顺时针旋转（如图 13 所示）。
 
-4.  然后解密过程应用于列，自下而上和自上而下，分别对应设置位和未设置位。
+4. 然后解密过程应用于列，自下而上和自上而下，分别对应设置位和未设置位。
 
-5.  重复步骤 3 和步骤 4 以获得更好的结果（X 次，即加密水印时使用的次数），以获得解密后的水印。归一化相关系数计算如下：
+5. 重复步骤 3 和步骤 4 以获得更好的结果（X 次，即加密水印时使用的次数），以获得解密后的水印。归一化相关系数计算如下：
 
-    `NCC = ![Mathtype978-1-7998-2701-6.ch005.m13](img/ch005.m13.svg)` (3)
+   `NCC = ![Mathtype978-1-7998-2701-6.ch005.m13](img/ch005.m13.svg)` (3)
 
-    其中，`W` = 原始水印，`W'` = 提取的水印，`(M * N)` 是原始水印大小。提取水印的质量分析由 NCC 表示。
+   其中，`W` = 原始水印，`W'` = 提取的水印，`(M * N)` 是原始水印大小。提取水印的质量分析由 NCC 表示。
 
 | 图 12. 添加噪声后的水印图像 |
 | --- |
@@ -2860,15 +2850,19 @@ DWT 相比包含 DFT 和 DCT 在内的其他变换方法，计算效率更高 (L
 | --- |
 | ![Figure978-1-7998-2701-6.ch005.f13](img/ch005.f13.png) |
 
-######### 视频嵌入算法
+## 视频嵌入算法
 
 整个视频水印嵌入过程及生成结果如图 14 和图 15 所示。
 
-1.  将总视频分为若干帧，即 `M`。
-2.  生成 `M` 的随机排列向量。例如，`M=3`，随机排列为 `[2, 3, 1]`。
-3.  从随机排列中选择特定数量 (`N`) 的起始数字作为 `f[1]`、`f[2]`、`f[3]` … `f[N]`。即 `[2, 3, 1]`，对于特定数字 2，向量变为 `[2, 3]` 或 `f[1]=2`、`f[2]=3`。
-4.  提取所有帧，并使用图像的 DWT 嵌入水印，将水印应用于帧 `f[1]`、`f[2]`…`f[N]`。
-5.  为分析质量，计算累积 MSE 和 PSNR。
+1. 将总视频分为若干帧，即 `M`。
+
+2. 生成 `M` 的随机排列向量。例如，`M=3`，随机排列为 `[2, 3, 1]`。
+
+3. 从随机排列中选择特定数量 (`N`) 的起始数字作为 `f[1]`、`f[2]`、`f[3]` … `f[N]`。即 `[2, 3, 1]`，对于特定数字 2，向量变为 `[2, 3]` 或 `f[1]=2`、`f[2]=3`。
+
+4. 提取所有帧，并使用图像的 DWT 嵌入水印，将水印应用于帧 `f[1]`、`f[2]`…`f[N]`。
+
+5. 为分析质量，计算累积 MSE 和 PSNR。
 
 | 图 14. 加密过程 |
 | --- |
@@ -2878,17 +2872,23 @@ DWT 相比包含 DFT 和 DCT 在内的其他变换方法，计算效率更高 (L
 | --- |
 | ![Figure978-1-7998-2701-6.ch005.f15](img/ch005.f15.png) |
 
-######### 视频提取算法
+## 视频提取算法
 
 从嵌入图像中提取的结果如图 16 所示。
 
-1.  将视频分为若干帧，即 `M`。
-2.  生成 `M` 的随机排列向量。例如，`M=3`，随机排列为 `[2, 3, 1]`。
-3.  从随机排列中选择特定数量 (`N`) 的起始数字作为 `f[1]`、`f[2]`、`f[3]` … `f[N]`。即 `[2, 3, 1]`，对于特定数字 2，向量变为 `[2, 3]` 或 `f[1]=2`、`f[2]=3`。
-4.  提取所有帧，并使用图像的 DWT 嵌入水印，将水印应用于帧 `f[1]`、`f[2]`…`f[N]`。
-5.  获得加密水印。因此，为获得原始内容，必须对其进行解密。水印图像的行号或列号代表密钥中的比特位置。然后解密过程从行开始，然后是列，即对于设置位，整行逆时针旋转；对于未设置位，顺时针旋转。
-6.  然后解密过程应用于列，自下而上和自上而下，分别对应设置位和未设置位。
-7.  重复步骤 5 和步骤 6 以获得更好的结果（X 次，即加密水印时使用的次数），以获得解密后的水印。
+1. 将视频分为若干帧，即 `M`。
+
+2. 生成 `M` 的随机排列向量。例如，`M=3`，随机排列为 `[2, 3, 1]`。
+
+3. 从随机排列中选择特定数量 (`N`) 的起始数字作为 `f[1]`、`f[2]`、`f[3]` … `f[N]`。即 `[2, 3, 1]`，对于特定数字 2，向量变为 `[2, 3]` 或 `f[1]=2`、`f[2]=3`。
+
+4. 提取所有帧，并使用图像的 DWT 嵌入水印，将水印应用于帧 `f[1]`、`f[2]`…`f[N]`。
+
+5. 获得加密水印。因此，为获得原始内容，必须对其进行解密。水印图像的行号或列号代表密钥中的比特位置。然后解密过程从行开始，然后是列，即对于设置位，整行逆时针旋转；对于未设置位，顺时针旋转。
+
+6. 然后解密过程应用于列，自下而上和自上而下，分别对应设置位和未设置位。
+
+7. 重复步骤 5 和步骤 6 以获得更好的结果（X 次，即加密水印时使用的次数），以获得解密后的水印。
 
 NCC（归一化相关系数）计算如下：
 
@@ -2900,21 +2900,21 @@ NCC（归一化相关系数）计算如下：
 | --- |
 | ![Figure978-1-7998-2701-6.ch005.f16](img/ch005.f16.png) |
 
-######### 鲁棒且抗攻击的数字水印
+## 鲁棒且抗攻击的数字水印
 
 为更安全地嵌入水印，在现有方法论中增加了以下改进。
 
-*   应用了不可见水印概念，且可见性因子可根据条件控制。
-*   使用三级 DWT 保护图像，与二级或一级 DWT 相比更鲁棒，同时保持图像质量。
-*   在应用于原始图像前对水印进行加密，以提高安全性。加密内容使用 2000 位进行加密。
-*   对不同类型的攻击（如椒盐噪声攻击和压缩攻击）具有更强的抵抗力。
-*   为更好地分析，维护水印图像的 PSNR 值。
+* 应用了不可见水印概念，且可见性因子可根据条件控制。
+* 使用三级 DWT 保护图像，与二级或一级 DWT 相比更鲁棒，同时保持图像质量。
+* 在应用于原始图像前对水印进行加密，以提高安全性。加密内容使用 2000 位进行加密。
+* 对不同类型的攻击（如椒盐噪声攻击和压缩攻击）具有更强的抵抗力。
+* 为更好地分析，维护水印图像的 PSNR 值。
 
 为保持图像质量，我们将水印嵌入图像的 LL 子带，因其失真较小且不可见（Abraham et al., 2016）。另一方面，通过将水印嵌入原始图像，可安全地保护图像。攻击者不易提取，且恶意用户无法在网络中篡改。因此，这使得水印图像易于验证但难以修改（Sruthi et al., 2014）。不同类型的攻击会影响图像的原始性，如裁剪攻击、以椒盐噪声形式出现的噪声攻击等。本文描述了在尽可能维护 PSNR 值的前提下，保护图像免受不同攻击的方法。维护原始图像的 PSNR 很重要，因为最大信噪比有助于保持质量。
 
-######### 数据流图
+## 数据流图
 
-########## Level 0 DFD
+### Level 0 DFD
 
 Level 0 DFD 或上下文级图显示充当源的各种外部代理、连接各种系统和数据项的接口。另一方面，结构图显示与外部世界的链接和展示的数据流（Devi et al., 2017）。此处，为创建加密水印图像，需提供一份原始图像和水印图像作为输入。整个加密过程如图 17 所示。
 
@@ -2922,7 +2922,7 @@ Level 0 DFD 或上下文级图显示充当源的各种外部代理、连接各�
 | --- |
 | ![Figure978-1-7998-2701-6.ch005.f17](img/ch005.f17.png) |
 
-########## Level 1 DFD
+### Level 1 DFD
 
 Level 1 DFD 比 Level 0 DFD 更详细（如图 18 所示）。它将主过程划分为不同的子过程，以便更好地理解将水印嵌入图像的实现。此处我们在子过程中详述加密过程，以解决各种安全问题。获得加密水印。最后，通过以图像、视频等形式应用数字水印，获得水印图像（Debas et al., 2013）。
 
@@ -2930,46 +2930,40 @@ Level 1 DFD 比 Level 0 DFD 更详细（如图 18 所示）。它将主过程划
 | --- |
 | ![Figure978-1-7998-2701-6.ch005.f18](img/ch005.f18.png) |
 
-
-
-
-
-########## 二级 DFD
+### 二级 DFD
 
 二级 DFD 通过详细阐述构成信息系统的各个过程，提供了用于保护的图像嵌入水印的详细结构，这一点与图 19 和图 20 所示的一级 DFD 形成对比。它用于规划或记录系统的具体构成（Devi & Singh, 2017）。在二级 DFD 中，针对随机二进制字符串对过程进行了深度定义。随机字符串充当加密水印的密钥（Wu et al., 2017）。
 
 | 图 19. 空域二级 DFD |
 | --- |
-
-![Figure978-1-7998-2701-6.ch005.f19](img/ch005.f19.png)
+| ![Figure978-1-7998-2701-6.ch005.f19](img/ch005.f19.png) |
 
 | 图 20. 频域二级 DFD（多级水印） |
 | --- |
+| ![Figure978-1-7998-2701-6.ch005.f20](img/ch005.f20.png) |
 
-![Figure978-1-7998-2701-6.ch005.f20](img/ch005.f20.png)
-
-########## 结果与评估
+### 结果与评估
 
 生成的含水印图像的特性通过所提算法的两个指标进行衡量，即 PSNR 和 MSE。PSNR 是峰值信噪比，如文献（Abraham et al., 2016）所述。该指标显示了实际内容以及水印嵌入过程中添加的噪声。原始图像在嵌入水印的过程中不应产生过大的失真。高 PSNR 值表明含水印图像质量良好，显示出低失真度。通过计算含水印图像的 PSNR 和 MSE（均方误差）来确定失真量（Sruthi et al., 2014）。
 
-NCC = ![Mathtype978-1-7998-2701-6.ch005.m15](img/ch005.m15.svg) (5)
+`NCC = ![Mathtype978-1-7998-2701-6.ch005.m15](img/ch005.m15.svg)` (5)
 
 其中，
 
-*   W = 原始水印，
-*   W' = 提取的水印，(M \* N) 为原始水印尺寸（Kimpan, Lasakul, & Chitwong, 2004）。
+* `W` = 原始水印，
+* `W'` = 提取的水印，`(M * N)` 为原始水印尺寸（Kimpan, Lasakul, & Chitwong, 2004）。
 
 计算得到的 PSNR 和 MSE 分别如公式 6 和公式 7 所示。
 
-M.S.E = ![Mathtype978-1-7998-2701-6.ch005.m16](img/ch005.m16.svg) (6)
+`M.S.E = ![Mathtype978-1-7998-2701-6.ch005.m16](img/ch005.m16.svg)` (6)
 
-![Mathtype978-1-7998-2701-6.ch005.m17](img/ch005.m17.svg) (7)
+`![Mathtype978-1-7998-2701-6.ch005.m17](img/ch005.m17.svg)` (7)
 
-其中，N 为图像尺寸，类似于 (R\*C) 即（行 \* 列）。![Mathtype978-1-7998-2701-6.ch005.m18](img/ch005.m18.svg) 为原始水印，含水印图像表示为 ![Mathtype978-1-7998-2701-6.ch005.m19](img/ch005.m19.svg) 。LSB 嵌入时 MAX = 255。
+其中，`N` 为图像尺寸，类似于 `(R*C)` 即（行 * 列）。`![Mathtype978-1-7998-2701-6.ch005.m18](img/ch005.m18.svg)` 为原始水印，含水印图像表示为 `![Mathtype978-1-7998-2701-6.ch005.m19](img/ch005.m19.svg)` 。LSB 嵌入时 `MAX = 255`。
 
 我们通过分析各种图像来计算 NCC 和 MSE，这些是表 2 和表 3 所示的我们所提算法的输入参数。计算得出的 MSE 值比 PSNR 更小。
 
-########### 表 2. 根据空域所述算法得出的 MSE 和 PSNR 值
+#### 表 2. 根据空域所述算法得出的 MSE 和 PSNR 值
 
 | 图像编号 | MSE | PSNR | NCC |
 | --- | --- | --- | --- |
@@ -2978,7 +2972,7 @@ M.S.E = ![Mathtype978-1-7998-2701-6.ch005.m16](img/ch005.m16.svg) (6)
 | 3 | 0.028 | 68.092 | 0.947 |
 | 4 | 0.025 | 70.9 | 0.951 |
 
-########### 表 3. 根据频域所述算法得出的 MSE 和 PSNR 值
+#### 表 3. 根据频域所述算法得出的 MSE 和 PSNR 值
 
 | 图像编号 | MSE | PSNR | NCC |
 | --- | --- | --- | --- |
@@ -2989,11 +2983,11 @@ M.S.E = ![Mathtype978-1-7998-2701-6.ch005.m16](img/ch005.m16.svg) (6)
 
 与空域相比，频域通过我们提出的方法实现了更小的失真。因此，频域中图像 4 的 PSNR 值高于其他图像，且同一图像的 MSE 值较小，即 0.018。在某些情况下，由于图像质量和分辨率的原因，频域的结果高于空域。此外，图像上的内容等其他因素对嵌入过程也至关重要。通过结合各图像的 MSE 和 PSNR 值进行分析，我们得出结论：与其他现有技术相比，我们提出的方法实现水印嵌入原理达到了较好的准确性。第 8.1 节详细描述了我们的结果与其他现有技术的对比分析细节。
 
-########## 我们的方法与其他现有技术的对比分析
+### 我们的方法与其他现有技术的对比分析
 
 表 4 给出了我们框架与现有方法的对比。因此，与其他方法相比，我们的方法在 MSE 和 PSNR 方面取得了更好的结果。这是通过分析从各种图像中提取的特征实现的。在每幅图像中，与其他水印方法相比，我们提出的方法都能更好地嵌入水印。
 
-########### 表 4. 我们提出的方法与其他现有技术的对比分析
+#### 表 4. 我们提出的方法与其他现有技术的对比分析
 
 | 各类图像 | 我们的结果 空域 | 我们的结果 频域 | Sruthi et al., 2014 | Hameed et al., 2016 |
 | --- | --- | --- | --- | --- |
@@ -3003,11 +2997,11 @@ M.S.E = ![Mathtype978-1-7998-2701-6.ch005.m16](img/ch005.m16.svg) (6)
 | 图像 3 | 0.028 | 68.092 | 0.020 | 70.9 | 0.2679 | 51.9029 | 0.3252 | 52.52 |
 | 图像 4 | 0.025 | 70.9 | 0.018 | 72.7 | 0.2619 | 51.1587 | 0.2012 | 50.94 |
 
-####### 结论
+## 结论
 
 所提出的方法描述了通过嵌入水印图像来保护图像安全的方式。由于水印信息分散在更宽的区域，其抵御攻击的生存几率得到提高。在该方法中，我们使用特定的随机二进制字符串对水印进行加密，并利用 DWT 将其应用于原始图像。嵌入的比特（蓝色比特）对人眼干扰较小，使其对观察者不可见。应用这一原理，我们保护图像免受攻击者的各种攻击，如椒盐噪声攻击和裁剪攻击。与其他技术相比，嵌入内容后的图像质量仅比原始图像轻微失真。为验证我们提出方法的有效性，我们采用椒盐噪声攻击进行了测试。所提出的算法在多幅图像上进行了测试。此处提供的算法生成质量极高的含水印图像，能在网络传输中抵御各类图像攻击。
 
-##### 参考文献
+## 参考文献
 
 Abraham, J., & Paul, V. (2016). An imperceptible spatial domain color image watermarking scheme. Journal of King Saud University-Computer and Information Sciences.
 
@@ -3021,17 +3015,15 @@ Almomani, A., Gupta, B. B., Wan, T. C., Altaher, A., & Manickam, S. (2013). Phis
 
 Ansari, I. A., & Pant, M. (2017). Multipurpose image watermarking in the domain of DWT based on SVD and ABC. Pattern Recognition Letters , 94, 228–236. doi:10.1016/j.patrec.2016.12.010
 
-Ansari, R., Devanalamath, M. M., Manikantan, K., & Ramachandran, S. (2012, October). Robust digital image watermarking algorithm in DWT-DFT-SVD domain for color images. In 2012 International Conference on Communication, Information, & Computing Technology, (pp. 1-6). IEEE. 10.1109/ICCICT.2012.6398160
-
-Balan, S., & Rege, J. (2017). Mining for social media: Usage patterns of small businesses. Business Systems Research Journal: International Journal of the Society for Advancing Business & Information Technology (BIT), 8(1), 43-50.
-
-Bianchi, T., & Piva, A. (2013). Secure watermarking for multimedia content protection: A review of its benefits and open issues. IEEE Signal Processing Magazine , 30(2), 87–96. doi:10.1109/MSP.2012.2228342
 
 
+# 参考文献
 
+Ansari, R., Devanalamath, M. M., Manikantan, K., & Ramachandran, S. (2012, October). Robust digital image watermarking algorithm in DWT-DFT-SVD domain for color images. In *2012 International Conference on Communication, Information, & Computing Technology* (pp. 1-6). IEEE. 10.1109/ICCICT.2012.6398160
 
+Balan, S., & Rege, J. (2017). Mining for social media: Usage patterns of small businesses. *Business Systems Research Journal: International Journal of the Society for Advancing Business & Information Technology (BIT)*, 8(1), 43-50.
 
-##### 参考文献
+Bianchi, T., & Piva, A. (2013). Secure watermarking for multimedia content protection: A review of its benefits and open issues. *IEEE Signal Processing Magazine*, 30(2), 87–96. doi:10.1109/MSP.2012.2228342
 
 Chaudhary, P., Gupta, S., & Gupta, B. B. (2016). 面向基于在线社交网络 Web 应用的 XSS 蠕虫审计防御。载于 *计算机与网络安全现代加密解决方案研究手册* (pp. 216–245)。IGI Global. doi:10.4018/978-1-5225-0105-3.ch010
 
@@ -3103,24 +3095,23 @@ Su, Q., & Chen, B. (2018). 空域鲁棒彩色图像水印技术。 *软计算*, 
 
 Tsui, T. K., Zhang, X. P., & Androutsos, D. (2008). 利用多维傅里叶变换的彩色图像水印。 *IEEE 信息取证与安全汇刊*, 3(1), 16–28. doi:10.1109/TIFS.2007.916275
 
-
-
-
-
-#### 第 6 章：医学图像认证的应用
+# 第 6 章：医学图像认证的应用
 
 **Poonkuntran Shanmugam**  
-![Orcid Imagehttps://orcid.org/0000-0002-2778-7937](https://orcid.org/0000-0002-2778-7937)  
+
+![Orcid Image](https://orcid.org/0000-0002-2778-7937)  
+
 Velammal College of Engineering and Technology, Madurai, India
 
 **Manessa Jayaprakasam**  
+
 Independent Researcher, India
 
-##### 摘要
+## 摘要
 
 本章提出了一种基于整数变换的水印方案，用于数字眼底图像认证。它被呈现为医学中的多媒体应用。本章介绍了基于水印的图像认证和数字眼底图像。开发眼底图像水印方案的关键要求及其挑战被识别并重点强调。作者描述了一种基于整数变换的水印方案。实验结果强调了该方案在满足关键要求方面的能力及其成效。详细结果已总结。
 
-##### 引言
+## 引言
 
 现代计算技术的出现与万维网（WWW）的爆发式增长相结合，为大量家庭和企业提供了即时信息访问。这种融合的发展刺激了以文本、图片、图形和集成多媒体应用形式的信息使用。此类信息通过将连续信号转换为数字格式而获取，并可使用计算机显示器和投影仪等显示设备进行查看。这种信息以数字视觉格式广泛交换，用于其传输、接收、存储、处理和显示。互联网的最新发展结合廉价的数字记录和存储设备，创造了一个环境，在该环境中数字信息可以轻松地被访问、复制和分发，而不会有任何质量损失。这已成为信息安全的一个隐患。因此，在交换此类信息时，需要用高效的方法对其进行保护（Bovik, 2000; Cole, 2003）。
 
@@ -3128,27 +3119,25 @@ Independent Researcher, India
 
 DIP 的应用获取了广泛的辐射谱，如图 1 所示。各类图像类型均可从各种类型的辐射中衍生出来。数字图像获取方法是通过这些辐射开发和改进的。例如，医学图像的最新发展源自新型传感器，它们记录来自先前很少使用的辐射源的图像数据，如正电子发射断层扫描（PET）和磁共振成像（MRI）（Bovik, 2000）。
 
-| 图 1. 数字图像处理（DIP）的应用 |
-| --- |
-| ![Figure978-1-7998-2701-6.ch006.f01](img/ch006.f01.png) |
+### 图 1. 数字图像处理（DIP）的应用
 
-###### 从密码学到水印技术
+![Figure978-1-7998-2701-6.ch006.f01](img/ch006.f01.png)
+
+### 从密码学到水印技术
 
 虽然安全是文献中使用的一个通用术语，但安全在人类日常生活中的应用方式却是非同寻常的。其范围涵盖从用于进入安全计算机和电子钱包的密码，到用于个人身份识别的指纹扫描技术。因此，安全措施已成为人类日常生活的一部分，就像电话或汽车一样。人类的日常生活被一个秘密通信的世界所包围，各类人员都在传输信息，既有发送给在线商店的加密信用卡号这样无害的信息，也有发送给恐怖分子的劫机计划这样危险的信息。因此，安全的秘密通信变得至关重要。秘密通信可通过两种技术实现。它们是密码学和数据隐藏（也称为信息隐藏）。
 
-*   **密码学**：它是利用数学对敏感信息进行加密和解密的科学。密码学以不可读的乱码格式（称为密文）跨不安全网络传输敏感信息。因此，除预期接收者外，任何人都无法读取该信息。待传输的信息称为明文。明文无需任何处理即可阅读和理解。加密是将明文转换为密文的过程。它用于确保信息对非预期接收者隐藏，即使是那些能看到加密信息的人也无法读取。将密文还原为其原始明文的过程称为解密。加密和解密如图 2 所示。
+#### 密码学
 
-| 图 2. 加密和解密 |
-| --- |
-| ![Figure978-1-7998-2701-6.ch006.f02](img/ch006.f02.png) |
+它是利用数学对敏感信息进行加密和解密的科学。密码学以不可读的乱码格式（称为密文）跨不安全网络传输敏感信息。因此，除预期接收者外，任何人都无法读取该信息。待传输的信息称为明文。明文无需任何处理即可阅读和理解。加密是将明文转换为密文的过程。它用于确保信息对非预期接收者隐藏，即使是那些能看到加密信息的人也无法读取。将密文还原为其原始明文的过程称为解密。加密和解密如图 2 所示。
+
+### 图 2. 加密和解密
+
+![Figure978-1-7998-2701-6.ch006.f02](img/ch006.f02.png)
 
 虽然密码学技术用于防止未经授权访问数字信息，但显然密码学在保护知识产权方面存在局限性。一旦信息被解密，就没有任何东西能阻止授权用户非法复制该信息。因此，需要另一种技术来促进内容认证、保护所有权、追踪内容使用、确保授权访问和防止非法复制（Cox, Miller, Linnartz & Kalker, 1999）。
 
-
-
-
-
-###### 数据隐藏或信息隐藏
+#### 数据隐藏或信息隐藏
 
 数据隐藏或信息隐藏是一个统称，包含两个子学科：隐写术和水印技术。
 
@@ -3156,7 +3145,7 @@ DIP 的应用获取了广泛的辐射谱，如图 1 所示。各类图像类型�
 
 **水印技术** 是通过不可感知地改变载体媒介来嵌入关于该载体媒介的信息的过程。水印技术与隐写术密切相关；然而，两者之间存在差异。在水印技术中，秘密信息与载体媒介相关。隐写术涉及双方之间的秘密点对点通信，其中秘密信息与载体媒介无关。水印技术具有额外特性：它必须具有抵抗试图移除隐藏秘密信息的攻击的鲁棒性。隐写术不涉及攻击的概念，因为秘密信息与载体无关，不会引起攻击者的任何怀疑。
 
-####### 图 3. 通用水印模型
+### 图 3. 通用水印模型
 
 ![Figure978-1-7998-2701-6.ch006.f03](img/ch006.f03.png)
 
@@ -3164,11 +3153,13 @@ DIP 的应用获取了广泛的辐射谱，如图 1 所示。各类图像类型�
 
 它用于载体数据的验证和确认。提取过程可以在已知或未知载体数据或水印的情况下进行。根据目标应用，提取过程可以是有损的，也可以是无损的。
 
-###### 水印技术的历史
+### 水印技术的历史
+
+
 
 水印技术并非本世纪才出现。700 多年前，意大利就已采用水印技术来标识造纸品牌和造纸厂。18 世纪，水印技术开始被用于货币和其他文件的防伪措施（Muharemagic & Furht, 2004）。"Watermark"（水印）一词是在 18 世纪末提出的。由于这些标记类似于水在纸上产生的效果，因此选择了"watermark"这一术语。1954 年，Emil Hembrook 就其在音乐数字水印方面的识别方法申请了专利。这是数字水印领域的首项工作，并成为了典范。1988 年，Komatsu 和 Tominaga 在文献中首次使用了"Digital Watermarking"（数字水印）一词。自 1995 年以来，水印研究的兴趣开始增长（Muharemagic & Furht, 2004; Cox, Miller, Linnartz & Kalker, 1999）。
 
-###### 水印技术在医学图像中的相关性
+## 水印技术在医学图像中的相关性
 
 医学图像处理（MIP）是指用于为临床目的创建和操作人体图像的技术。临床目的包括旨在揭示和诊断疾病的医疗程序。该领域具有研究潜力，试图理解人类或动物模型中的过程。虽然通用图像处理技术可用于医学图像，但由于其特殊性质，它们需要特殊处理。医学图像源自不同的采集方法，如 X 射线、计算机断层扫描（CT）、磁共振成像（MRI）、超声成像、核医学成像、眼底成像等。因此，医学图像因采集方法而异。它们也因被采集对象的不同而异。医学图像经过处理以推断皮肤下体积的信息，专门用于探测皮肤下隐藏物体的解剖结构。医学图像可以是二维投影信息，也可以是完整的三维映射信息。在所有视觉信息和临床记录以数字形式存储和交换的电子医疗环境中，医学图像保护和认证非常重要。医学图像水印技术是一个增强信息安全、验证和保真度的过程。同时，必须尽可能保留图像中的原始信息，以避免医生诊断性能的下降。
 
@@ -3187,7 +3178,7 @@ DIP 的应用获取了广泛的辐射谱，如图 1 所示。各类图像类型�
 1.  **完整性**：确保图像未被未授权人员修改。
 2.  **认证**：确保图像确实属于正确的患者，且来源于正确的源头。
 
-######### 可用性
+## 可用性
 
 它是指图像在正常计划的访问和使用条件下，能被授权用户使用的能力。
 
@@ -3203,21 +3194,17 @@ DIP 的应用获取了广泛的辐射谱，如图 1 所示。各类图像类型�
 
 本章重点在于开发一种用于数字眼底图像（DFI）认证的水印方案，DFI 是医学图像的一个特殊类别。接下来的几节将讨论 DFI 的重要性及其安全性。
 
-###### 数字眼底图像
+## 数字眼底图像
 
+### 医学科学中的数字眼底图像
 
-
-
-
-####### 医学科学中的数字眼底图像
-
-######## 概述
+#### 概述
 
 数字眼底图像是医学图像的一个特定类别。眼科学是处理视觉通路（包括眼球、大脑以及眼睑等周围区域）疾病和手术的医学分支。在眼科学中，眼底是眼球的内表面，由视网膜、视神经乳头和黄斑组成。眼底可通过眼底镜观察，眼底图像则通过眼底相机捕获。
 
-眼底相机是一种带有摄像头的专用低倍显微镜，旨在拍摄眼球内表面，如**图 4**所示。其光学设计基于单眼间接检眼镜原理，提供直立、放大的眼底视图。典型相机可观察 30 至 50 度的视网膜区域，放大倍数为 2.5 倍，可通过变焦或辅助透镜进行修改，范围从 15 度（5 倍放大）到 140 度（广角镜头将图像缩小一半）。其光学系统类似于间接检眼镜，即观察系统和照明系统遵循不同的路径（Coatrieux, Lamard, Puentes & Roux, 2005）。
+眼底相机是一种带有摄像头的专用低倍显微镜，旨在拍摄眼球内表面，如`图 4`所示。其光学设计基于单眼间接检眼镜原理，提供直立、放大的眼底视图。典型相机可观察 30 至 50 度的视网膜区域，放大倍数为 2.5 倍，可通过变焦或辅助透镜进行修改，范围从 15 度（5 倍放大）到 140 度（广角镜头将图像缩小一半）。其光学系统类似于间接检眼镜，即观察系统和照明系统遵循不同的路径（Coatrieux, Lamard, Puentes & Roux, 2005）。
 
-观察光通过一系列透镜聚焦于一个甜甜圈状的孔径，然后通过中央孔径形成一个环形光束，再通过相机物镜和角膜到达视网膜。从视网膜反射的光通过照明系统形成的甜甜圈状非照明孔径。由于两个系统的光路相互独立，因此形成的图像中极少捕捉到光源的反射。成像光线继续向低倍望远镜目镜传播。当按下按钮拍照时，一面反射镜会中断照明系统的光路，使闪光灯的光线进入眼睛。同时，一面反射镜落在观察望远镜前，将光线重定向到捕获介质上。由于眼睛在通过望远镜观察时倾向于调节，因此必须保证出射光线为平行光，以便在捕获介质上形成清晰的图像。**图 5**展示了眼底图像的示例。眼底摄影通常使用绿色滤镜来获取视网膜血管图像。绿光被血液吸收，在眼底照片中呈现比背景和视网膜神经纤维层更深的颜色。因此，眼底图像的绿色通道比其他通道包含更多有价值的诊断信息（Hu, GuoHu, & Chen, 2005）。
+观察光通过一系列透镜聚焦于一个甜甜圈状的孔径，然后通过中央孔径形成一个环形光束，再通过相机物镜和角膜到达视网膜。从视网膜反射的光通过照明系统形成的甜甜圈状非照明孔径。由于两个系统的光路相互独立，因此形成的图像中极少捕捉到光源的反射。成像光线继续向低倍望远镜目镜传播。当按下按钮拍照时，一面反射镜会中断照明系统的光路，使闪光灯的光线进入眼睛。同时，一面反射镜落在观察望远镜前，将光线重定向到捕获介质上。由于眼睛在通过望远镜观察时倾向于调节，因此必须保证出射光线为平行光，以便在捕获介质上形成清晰的图像。`图 5`展示了眼底图像的示例。眼底摄影通常使用绿色滤镜来获取视网膜血管图像。绿光被血液吸收，在眼底照片中呈现比背景和视网膜神经纤维层更深的颜色。因此，眼底图像的绿色通道比其他通道包含更多有价值的诊断信息（Hu, GuoHu, & Chen, 2005）。
 
 | 图 4. 眼底相机 |
 | :--- |
@@ -3228,67 +3215,61 @@ DIP 的应用获取了广泛的辐射谱，如图 1 所示。各类图像类型�
 | :--- |
 | ![Figure978-1-7998-2701-6.ch006.f05](img/ch006.f05.png) |
 
-######## 数字眼底图像在医学科学中的重要性
+#### 数字眼底图像在医学科学中的重要性
 
 验光师、眼科医生和受过培训的医疗专业人员使用眼底图像来监测疾病进展和进行诊断。它们还可以与视网膜血管造影结合用于大规模筛查，此时首先对这些图像进行分析。视网膜眼底图像有助于早期发现多种眼部疾病，若不及时治疗，这些疾病可能导致失明。使用视网膜眼底图像进行检查具有成本效益，适合大规模筛查。因此，在许多医疗中心和医疗机构的体检中，都会获取视网膜眼底图像用于眼科检查。眼科检查的增加改善了眼部健康护理，但也增加了眼科医生的工作量。因此，现代医疗系统开发了计算机辅助设计（CAD）和网络技术来分析视网膜眼底图像，协助减轻眼科医生的工作量并提高筛查准确性。此类现代医疗系统需要高度安全的通信技术来交换信息（Wu & Liu, 2003）。
 
 为数字眼底图像开发用户认证是一项具有挑战性的任务。当图像通过网络发送给不同地理位置的医疗专家征求意见和判断时，必须确保其免受任何形式的外部攻击。
 
-######## 数字眼底图像研究范围
+#### 数字眼底图像研究范围
 
 数字眼底图像的研究是医学科学中一个新兴且前景广阔的领域。定期的眼底检查可以检测出糖尿病视网膜病变等多种重大疾病的早期迹象，从而大幅降低此类疾病在后期阶段的实际治疗成本。在医学图像安全领域，数字眼底图像尚未得到广泛研究。因此，本文着手开发数字眼底图像的安全方案。
 
-######## 医学图像认证方案的关键需求
+#### 医学图像认证方案的关键需求
 
 以下是用于设计和开发任意类别医学图像认证方案的关键需求。这些需求同样适用于数字眼底图像；然而，不同类别图像的需求表现会有所不同。
 
-######### R1：可逆性
+##### R1：可逆性
 
 可逆性是指一种无损水印方案，在提取过程后保留原始图像。如果方案在提取后无法无损地恢复原始图像，则称为不可逆。由于眼底图像用于诊断目的，水印方案必须是可逆的。此类情况下的信息丢失可能导致不准确的诊断。因此，眼底图像仅使用可逆水印方案（Bovik, 2000; Muharemagic & Furht, 2004; Poonkuntran, Rajesh, & Eswaran, 2008）。
 
-######### R2：篡改检测
+##### R2：篡改检测
 
 篡改检测是认证中的一项基本功能。它检测眼底图像在网络传输过程中遭受的未经授权的修改。该需求只能检测眼底图像上的修改，而无法定位修改位置（Bovik, 2000; Gonzalez & Woods, 2002）。
 
-######### R3：篡改定位
+##### R3：篡改定位
 
 这是认证中的另一项功能。它定位眼底图像中的修改区域。基于该需求（R3），可衡量第二个需求（R2）。对于给定的眼底图像，如果没有修改，则图像是真实的；否则，则不是真实的（Bovik, 2000; Gonzalez & Woods, 2002）。
 
-######### R4：不可感知性
+##### R4：不可感知性
 
 不可感知性是指在正常观察下水印在眼底图像中出现的程度。由于研究主要针对认证，水印应当是不可见的。隐藏的水印不应在图像中产生任何外部伪影。外部伪影可能给黑客留下可疑的空间（Bovik, 2000）。
 
-######### R5：容量
+##### R5：容量
 
-容量是指嵌入眼底图像中的信息量，以比特数衡量。容量将与不可感知性和脆弱性存在权衡关系，如**图 6**所示。
+容量是指嵌入眼底图像中的信息量，以比特数衡量。容量将与不可感知性和脆弱性存在权衡关系，如`图 6`所示。
 
 | 图 6. 不可感知性、脆弱性与容量之间的权衡 |
 | :--- |
 | ![Figure978-1-7998-2701-6.ch006.f06](img/ch006.f06.png) |
 
-######### R6：盲检测
+##### R6：盲检测
 
+水印提取过程可通过两种方式完成，它们分别是盲检测和知情检测。
 
-
-
-
-######## 水印提取过程可通过两种方式完成
-
-它们分别是盲检测和知情检测。
-
-######### 盲检测
+###### 盲检测
 
 在盲检测中，无需了解原始图像即可从含水印图像中提取水印。仅借助密钥（秘密或非秘密），即可提取水印。
 
-######### 知情检测
+###### 知情检测
 
 在知情检测中，利用原始图像的知识来提取水印。提取过程中对原始图像知识的需求可能会降低安全性。此外，原始图像的知识可能帮助攻击者在不改变水印的情况下篡改图像。从而导致认证过程失效（Bovik, 2000; Gonzalez & Woods, 2002）。因此，决定在本研究中采用盲检测。
 
-######## R7：脆弱性
+##### R7：脆弱性
 
 脆弱性是指水印方案对攻击的敏感度。该方案必须对攻击敏感，从而使水印容易被破坏，以实现认证目的（Bovik, 2000）。
 
-######## 问题陈述与挑战
+#### 问题陈述与挑战
 
 本工作的主要目标是对数字眼底图像认证水印方案的设计与开发进行详细研究，以满足上述所有关键需求（R1-R7）。本研究的第二个目标是提出并验证一种基于数学的算法水印方案，用于眼底图像认证。该方案将在通用测试平台上进行定量分析，以针对上述需求（R1-R7）评估其满足所有需求的程度。
 
@@ -3296,33 +3277,27 @@ DIP 的应用获取了广泛的辐射谱，如图 1 所示。各类图像类型�
 
 数字眼底图像属于医学图像的一种特定类别，通过眼底相机获取。眼底图像的特性可能会限制方案的表现，导致部分关键需求无法满足。在需求中，容量、不可见性和脆弱性本质上存在权衡。对方案所有需求的完整研究非常困难（Muharemagic & Furht, 2004）。要找到一个使所有需求均能在可能的最大程度上得到满足的最优点，也非常困难（Muharemagic & Furht, 2004）。朝着当前研究领域方向的文献极少。方案设计应符合当前可用的网络带宽需求，不应寻求额外的带宽需求（Poonkuntran, Rajesh & Eswaran, 2009a; Poonkuntran, Rajesh & Eswaran, 2009b; Poonkuntran, Rajesh & Eswaran, 2009c; Poonkuntran, Rajesh & Eswaran, 2009d）。
 
-######## 拟议方案：改进整数变换水印方案
+#### 拟议方案：改进整数变换水印方案
 
 本节提出了一种用于眼底图像认证的改进整数变换水印方案（`MITWS`）。`MITWS` 利用像素的颜色特征和整数变换。它将图像中像素的颜色值分为主色和次色。仅次色用于通过整数变换进行嵌入。`MITWS` 在提高容量的同时改善了不可见性。`MITWS` 能在接收端完整提取水印。
 
-###### 相关工作
+### 相关工作
 
 Nammer 和 Emman（2007）提出了一种用于彩色位图（`BMP`）图像的高容量隐写方案（`HCSS`）。它将数据隐藏在通过大量颜色差异识别出的图像“非感兴趣区域”中。它提供了高嵌入率，并能抵抗视觉和统计攻击。`HCSS` 的局限性在于不可逆性。眼底图像需要一种可逆方案，能在无任何信息丢失的情况下恢复图像原貌。因此，`HCSS` 无法直接应用于眼底图像。Tian（2003）提出了一种用于医学图像的多层数据隐藏方案（`MLDHS`）。它利用整数变换嵌入秘密数据并产生可逆解。但它无法提供可靠且保密的通信。原因在于嵌入在多层进行时会产生高失真。上述两种方案均不适用于眼底图像。因为第一种方案 `HCSS` 不可逆，第二种方案 `MLDHS` 产生高失真，这两种方案都不适合数字眼底图像。通过文献调研发现，利用像素的颜色特征可在低失真下提高容量。既然 `HCSS` 利用颜色特征嵌入，而 `MLDHS` 具有可逆性，因此提出了一种结合 `HCSS` 和 `MLDHS` 的新型混合水印方案。拟议方案主要利用像素的颜色特征和整数变换。`MLDHS` 中的整数变换采用顺序像素选择策略，拟议方案通过引入一种称为“平面内差值嵌入”的新像素选择策略对其进行了修改，以降低失真。由于拟议方案采用改进的整数变换，故称为“改进整数变换水印方案（`MITWS`）”。
 
-######### 像素的颜色特征及其与水印的相关性
+#### 像素的颜色特征及其与水印的相关性
 
-在图像内部隐藏信息是当今一种流行的技术。
+在图像内部隐藏信息是当今一种流行的技术。包含秘密消息的图像可轻松通过万维网传播。
 
-包含秘密消息的图像可轻松通过万维网传播。
-
-为在不改变图像可见属性的前提下在图像中隐藏消息，可在颜色变化丰富的“杂乱”区域修改载体图像，从而减少对修改的察觉。Poonkuntran, Rajesh & Eswaran（2009a; 2009b; 2009c; 2009d）中的方案是最常见的采用上述方式进行嵌入的方案。在真彩色图像中，每个像素由红色（`R`）、绿色（`G`）和蓝色（`B`）分量给出。这三个分量被称为主色或 `RGB` 色彩空间。此处，每个像素用 24 位或 3 字节表示。每字节包含 0 到 255 之间的数值。利用这三个字节，计算机可生成 256×256×256 = 16777216 种组合。图 7 展示了此类组合，其中 `R`、`G` 和 `B` 分量分别绘制在三个不同轴上。通过调整这三个分量来精确定义一种颜色是非常困难的。
+为在不改变图像可见属性的前提下在图像中隐藏消息，可在颜色变化丰富的“杂乱”区域修改载体图像，从而减少对修改的察觉。Poonkuntran, Rajesh & Eswaran（2009a; 2009b; 2009c; 2009d）中的方案是最常见的采用上述方式进行嵌入的方案。在真彩色图像中，每个像素由红色（`R`）、绿色（`G`）和蓝色（`B`）分量给出。这三个分量被称为主色或 `RGB` 色彩空间。此处，每个像素用 24 位或 3 字节表示。每字节包含 0 到 255 之间的数值。利用这三个字节，计算机可生成 256×256×256 = 16777216 种组合。`图 7`展示了此类组合，其中 `R`、`G` 和 `B` 分量分别绘制在三个不同轴上。通过调整这三个分量来精确定义一种颜色是非常困难的。
 
 | 图 7. RGB 色彩空间（立方体模型） |
 | --- |
 | ![Figure978-1-7998-2701-6.ch006.f07](img/ch006.f07.png) |
 
+#### 利用平面内差值嵌入的整数变换
 
-
-
-
-######### 利用平面内差值嵌入的整数变换
-
-########## 整数变换
+##### 整数变换
 
 整数变换也称为整数哈尔小波变换或 S 变换。整数变换满足可逆性（Tian, 2002）。其工作原理如下。对于一对 8 位灰度像素 `(x, y)`，整数变换由一对 `(m, d)` 给出。其中 `m` 表示整数平均值，`d` 表示差值。
 
@@ -3406,6 +3381,8 @@ d' = 2 * d + b              (13)
 d' = 2 * 4 + 1 = 9          (14)
 ```
 
+
+
 现在，利用公式 12 从 `d'` 导出 `d'`，过程如下。
 
 由公式 12
@@ -3422,7 +3399,7 @@ d' = 2 * d + LSB(d')        (15)
 
 因此，扩展后的差值 (`d'`) 被重写。首先检查差值是否可扩展。对于可扩展的差值，通过修改 LSB 进行扩展。在此修改后，可扩展差值可进一步改变以嵌入另一比特信息。这称为多层嵌入。扩展后的差值在整数平均值下进行改变。整数平均值在整数变换中不被改变。借助该整数平均值，在提取过程中可无损恢复原始像素值。因此，整数变换实现了可逆嵌入。
 
-########## 利用平面内差值嵌入的改进整数变换
+## 利用平面内差值嵌入的改进整数变换
 
 Tian (2003) 提出了一种利用上述整数变换的 MLDHS。它通俗地称为 DE 方法。该方案工作流程如下。
 
@@ -3436,7 +3413,7 @@ Tian (2003) 提出了一种利用上述整数变换的 MLDHS。它通俗地称�
 
     现在，从像素对 `(x, y)` 获得 `(m, d)` 对。这称为正向整数变换。
 
-2.  **步骤 2：** 扩展差值以在像素对 `(x, y)` 内嵌入水印比特 (`b)`。这是通过用水印比特 (`b`) 修改差值 (`d`) 来完成的。例如 `b = 1`，根据公式 10 获得修改后的差值 (`d'`) 如下：
+2.  **步骤 2：** 扩展差值以在像素对 `(x, y)` 内嵌入水印比特 (`b`)。这是通过用水印比特 (`b`) 修改差值 (`d`) 来完成的。例如 `b = 1`，根据公式 10 获得修改后的差值 (`d'`) 如下：
 
     ```
     d' = 2 * d + b = 2 * 5 + 1 = 11.
@@ -3472,9 +3449,6 @@ Tian (2003) 提出了一种利用上述整数变换的 MLDHS。它通俗地称�
     y = m - floor(d' / 2) = 205 - floor(5 / 2) = 203.
     ```
 
-
-
-
 因此，无需任何信息损失即可提取水印和原始像素对。实验发现，对于较小尺寸的水印，MLDHS 并不脆弱。当该方案应用于具有各种尺寸水印的眼底图像时，该方案仅能在一个颜色平面上进行更改。其余颜色平面保持不变。
 
 当 MLDHS 应用于眼底图像时，如表 1 所示，对于水印尺寸从 10000 到 100000 的情况，它仅改变眼底图像的红色颜色平面。
@@ -3495,7 +3469,7 @@ Tian (2003) 提出了一种利用上述整数变换的 MLDHS。它通俗地称�
 
 | --- |
 
-########## 修正整数变换水印方案 (MITWS)
+## 修正整数变换水印方案 (MITWS)
 
 原始眼底图像 (`I`) 在 MITWS 中以 24 位或 3 字节的 RGB 颜色给出。每个字节包含两个半字节。左半字节包含字节中的最高值，而右半字节包含字节中的最低值。由于半字节值用 4 位表示，在区间 `[0, 15]` 内产生 16 个不同的十进制值。
 
@@ -3551,20 +3525,16 @@ Tian (2003) 提出了一种利用上述整数变换的 MLDHS。它通俗地称�
 
 因此，MITWS 使用平面内差值嵌入和像素颜色特征进行嵌入和提取。
 
-########### 实验结果与分析
+### 实验结果与分析
 
 MITWS 已使用本研究创建的一个专用通用测试平台进行模拟，用于对建议方案进行定量分析。测试平台详情如下。
+
+#### 数据集与实验设置
 
 *   **测试图像：** 测试数字眼底图像取自两个公共研究数据库 STARE 和 DRIVE（Poonkuntran, Rajesh & Eswaran, 2014）。数据库详情如下。
 
     *   **数据库名称：** 视网膜结构分析 (STARE)
-
     *   **数字视网膜图像用于血管提取 (DRIVE)**
-
-
-
-
-########### 数据集与实验设置
 
 *   **Address**: `http://www.ces.clemson.edu/~ahoover/stare/`
 *   `http://www.isi.uu.nl/Research/Databases/DRIVE/`
@@ -3572,21 +3542,25 @@ MITWS 已使用本研究创建的一个专用通用测试平台进行模拟，�
 *   **Size of the image**: 565x584x3
 *   **Color Mode**: RGB (Red, Green, Blue)
 
-############ 图像格式
+#### 图像格式
 
 实验中使用的测试图像采用 **Tagged Image File Format (TIFF)** 格式。Tagged Image File Format（简称 TIFF）是一种用于存储图像（包括照片和线条图）的文件格式。截至 2010 年，它由 Adobe Systems 控制。最初由 Aldus 公司创建，称为“桌面出版”。TIFF 格式广泛应用于医学图像处理、图像处理、出版、扫描、传真、文字处理、光学字符识别及其他应用。收购了 Aldus 的 Adobe Systems 现在持有 TIFF 规范的版权。实验使用了图 9 所示的 12 张测试图像。用于嵌入的秘密消息如图 10 所示。
 
 | Figure 9. 实验中使用的测试图像 |
+
 | --- |
+
 | ![Figure978-1-7998-2701-6.ch006.f09](img/ch006.f09.png) |
 
 | Figure 10. 实验中使用的秘密消息 |
+
 | --- |
+
 | ![Figure978-1-7998-2701-6.ch006.f10](img/ch006.f10.png) |
 
 秘密消息由 64 位 IIN（图像识别号）、160 位数字签名、48 位清单类型（包含视网膜各类改变的代码，例如 emboli 指栓塞表现）和 128 位血管信息（包含视盘直径、杯盘比 (C/D) 和血管宽度细节）组成。最后，总信息量达 400 位 (Coatrieux, Maitre, Sankur, Rolland & Collorec, 2000; Gonzalez & Woods, 2002)。因此，水印是作为与载体无关的水印生成的。实验针对第 1 节提到的所有关键需求进行。结果将在后续小节中分析和讨论。
 
-########### 可逆性实验
+### 可逆性实验
 
 为了定量评估 MITWS 的可逆性，采用原始图像 (I) 与其提取版本图像 (I[E]) 之间的峰值信噪比 (PSNR)（单位：分贝 dB）作为参数。PSNR 由下式给出：
 
@@ -3598,29 +3572,40 @@ PSNR (I, I[E]) = 10 Log[10] [(2^(depth)-1)² / MSE]  (25)
 
 其中 MSE 为均方误差，i=0 到 M-1，j=0 到 N-1。实验发现 MITWS 对任意大小的水印（容量）均具有可逆性。MITWS 产生的 PSNR 为 100%，从而保证了可逆性。这证实了因嵌入而在原始图像中所做的更改因整数变换而完全可恢复。
 
-########### 不可见性实验
+### 不可见性实验
 
 上述 PSNR 再次用于衡量方案的不可见性。此处 PSNR 取原始图像 (I) 与其加水印图像 (I[W]) 之间。实验发现 MITWS 的平均不可见性 PSNR 为 80.72%。这意味着 80.72% 的原始图像未被改变，且在正常视觉下不产生任何外部伪影。较低的 PSNR 会产生伪影。然而，不可见性受容量限制。当容量增加时，不可见性降低。不可见性结果列于表 3。
 
-**Table 3. MITWS 的不可见性**
+**表 3. MITWS 的不可见性**
 
 | ![Figure978-1-7998-2701-6.ch006.g03](img/ch006.g03.png) |
+
 | --- |
 
-########### 篡改检测、篡改定位与脆弱性实验
+### 篡改检测、篡改定位与脆弱性实验
 
 本实验根据文献调查 (Muharemagic & Furht, 2004; Poonkuntran & Rajesh, 2014) 选取了 11 种攻击。包括抖动攻击、几何攻击和滤波攻击。这些攻击广泛针对图像认证 (Muharemagic & Furht, 2004)。攻击说明如下：
 
 *   **Jittering Attack（抖动攻击）**：抖动攻击是任何类型水印系统常见的攻击。它通过以不易察觉的方式改变像素值或复制像素值来修改图像的像素值。因此，此类攻击在外部不会引起任何怀疑。在正常视觉下，人类无法察觉这些差异。实验中抖动等级建模为 5% 到 95% 的 5 的倍数。
+
 *   **Average（均值滤波）**：返回图像的均值滤波输出。均值滤波可使用大小为 (M x N) 的掩码完成。M 指行数，N 指列数。实验使用 3x3 掩码大小。
+
 *   **Disk（圆盘滤波）**：返回图像的圆形均值滤波输出。通过掩码和圆半径完成。掩码大小基于所用圆的半径定义。若圆半径为 R，则掩码大小为 (2xR+1) x (2xR+1)。实验使用的圆半径为 5。
+
 *   **Gaussian（高斯滤波）**：返回图像的旋转对称高斯低通滤波输出。通过掩码和 sigma 值两个参数完成。实验使用 3x3 掩码大小和默认 sigma = 0.5。
+
 *   **Laplacian（拉普拉斯滤波）**：用近似二维拉普拉斯算子形状操作图像并返回输出。拉普拉斯的近似形状由称为 alpha 的参数控制。实验使用 3x3 掩码大小和默认 alpha=0.2。
+
 *   **Log（高斯拉普拉斯滤波）**：返回图像的旋转对称高斯拉普拉斯滤波输出。实验使用的掩码大小为 5×5。默认 sigma = 0.5。
+
 *   **Motion（运动滤波）**：返回运动滤波器的输出。运动滤波器用 l 个像素的线性运动和逆时针 theta 度角的相机卷积图像近似。对于水平和垂直运动，滤波器变为向量。默认 l 为 9，默认 theta 为 0，对应水平移动 9 个像素。实验使用滤波器的默认值。
+
 *   **Prewitt（Prewitt 边缘滤波）**：返回图像的 Prewitt 边缘滤波输出。
+
 *   **Sobel（Sobel 边缘滤波）**：返回图像的 Sobel 边缘滤波输出。
+
 *   **Unsharp（反锐化掩模）**：返回图像的 3x3 反锐化对比度增强滤波输出。
+
 *   **Rotate（旋转）**：将图像绕其中心点逆时针或顺时针旋转 angle 度。旋转图像使用双线性插值计算。最终旋转图像被裁剪以适应原始图像大小。实验使用两个角度值 25° 和 75°。
 
 对于上述所有攻击，实验均使用参数的默认值。原因是默认值规定了所有攻击的稳定行为。此外，这些是攻击的最低要求。
@@ -3629,18 +3614,17 @@ PSNR (I, I[E]) = 10 Log[10] [(2^(depth)-1)² / MSE]  (25)
 
 第一个实验针对抖动攻击。其中，加水印图像按 5 的倍数从 5% 修改到 95%。同时测量相应水印中改变的比特数。结果发现 MITWS 平均改变约 38% 的水印以进行认证。结果列于表 4。
 
-**Table 4. MITWS：抖动攻击结果**
+**表 4. MITWS：抖动攻击结果**
 
 | ![Figure978-1-7998-2701-6.ch006.g04](img/ch006.g04.png) |
+
 | --- |
 
 下一个实验针对几何和滤波攻击。实验发现 MITWS 平均改变约 45% 的水印用于几何和滤波攻击。结果如图 11 和表 5 所示。实验还发现 MITWS 无法检测和定位图像中的篡改。原因是 MITWS 中的水印是在不知晓载体图像的情况下生成的。
 
+#### 表 5. MITWS：几何攻击与滤波攻击的结果
 
 
-
-
-############ 表 5. MITWS：几何攻击与滤波攻击的结果
 
 ![Figure978-1-7998-2701-6.ch006.g05](img/ch006.g05.png)
 
@@ -3648,7 +3632,7 @@ PSNR (I, I[E]) = 10 Log[10] [(2^(depth)-1)² / MSE]  (25)
 
 ![Figure978-1-7998-2701-6.ch006.f11](img/ch006.f11.png)
 
-########### 容量实验
+### 容量实验
 
 为了确定具有良好不可感知性的水印最佳尺寸，实验在一组尺寸为 `512×512×3` 的测试眼底图像上进行，并利用原始图像 (`I`) 与含水印图像 (`I[W]`) 之间的 PSNR 计算了相应的不可感知性。在本实验中，仅考虑眼底图像的红色和蓝色色彩平面的不可感知性。原因在于眼底图像的绿色色彩平面是主要颜色，且在嵌入过程中不被修改。仅修改眼底图像的红色和蓝色色彩平面用于嵌入。
 
@@ -3656,7 +3640,7 @@ PSNR (I, I[E]) = 10 Log[10] [(2^(depth)-1)² / MSE]  (25)
 
 因此，通过数值测试得出结论：`30000 bits` 是具有良好不可感知性（平均约 60 dB）的水印最佳尺寸。这在图 14 中清晰地显示出来。当水印尺寸超过 `30000 bits` 时，会引入视觉伪影。
 
-############ 表 6. MITWS：不可感知性与容量
+#### 表 6. MITWS：不可感知性与容量
 
 ![Figure978-1-7998-2701-6.ch006.g06](img/ch006.g06.png)
 
@@ -3672,31 +3656,31 @@ PSNR (I, I[E]) = 10 Log[10] [(2^(depth)-1)² / MSE]  (25)
 
 ![Figure978-1-7998-2701-6.ch006.f14](img/ch006.f14.png)
 
-########### 盲检测实验
+### 盲检测实验
 
 MITWS 提取水印需要水印的相关知识。
 
 实验发现 MITWS 是非盲的。
 
-########### 观察结果
+### 观察结果
 
 本章介绍了利用颜色特征和整数变换进行眼底图像认证的 MITWS。MITWS 首先将图像像素的颜色值分为主要颜色和次要颜色。通过整数变换修改像素的次要颜色，以在其中隐藏秘密信息。该方案引入了一种名为“平面内差分嵌入”的新像素选择策略，该策略跨平面选择像素，而非在单一平面内选择连续像素。该策略提高了方案的脆弱性和容量。由于使用可逆整数变换进行嵌入，MITWS 是可逆的。对于任何尺寸的水印，可逆性均得以保持。MITWS 平均可产生 80.72% 的不可感知性。MITWS 对抖动、滤波和几何攻击具有脆弱性。
 
 MITWS 对抖动攻击的平均脆弱率为 38%，对滤波和几何攻击的平均脆弱率为 45%。它无法检测篡改，也无法定位图像中的篡改区域。发现 `30000 bits` 的水印是具有良好不可感知水平的 MITWS 最佳容量。MITWS 是非盲的。在提取过程中需要水印的知识。
 
-########### 关键发现
+### 关键发现
 
 MITWS 未解决篡改检测和定位问题。原因在于水印与载体无关，即方案在无需载体图像知识的情况下生成水印。如果利用载体图像的知识生成水印，则图像中的任何修改都能被轻松定位。因此，需要设计基于载体图像的水印生成方法。
 
 MITWS 是非盲的。在提取过程中需要水印的知识。根据第 1 节给出的本研究关键需求，方案应为盲检测。原因在于水印与载体无关。如果水印是载体图像的函数，则可在提取过程中通过该函数获知水印，而无需在嵌入和提取之间共享任何信息。
 
-########### 结论与未来改进
+### 结论与未来改进
 
 本章阐述了用于眼底图像认证的改进整数变换水印方案 (MITWS)。它主要利用颜色特征和整数变换。该方案引入了一种名为“平面内差分嵌入”的新像素选择策略，通过跨颜色平面选择像素来形成像素对。MITWS 具有可逆性、脆弱性和不可感知性。它无法检测和定位图像中的篡改。MITWS 是非盲的。在提取过程中需要水印的知识。篡改检测、篡改定位和盲检测是 MITWS 中的主要问题。如果水印作为载体图像的函数生成，上述两个主要问题便可轻松解决。对于篡改检测和定位，载体的任何变化都会导致用于生成水印的函数响应发生变化。如果图像被篡改，则水印也会被修改。因此，篡改可被轻松检测和定位。对于盲检测，用于生成水印的函数可用于在提取过程中生成参考水印，以进行验证和确认。实际嵌入的水印可通过整数变换提取。因此，该方案可设计为盲方案。
 
 本工作的未来改进是利用非线性函数（如混沌模型和哈希技术）生成载体相关的水印。这一步骤将为所提方案带来篡改检测和定位功能。将进一步利用伪随机过程审查嵌入的标记空间，使方案能在完全无需原始数据和秘密数据知识的情况下进行完全盲提取。
 
-##### 参考文献
+#### 参考文献
 
 Amato, F., Cozzolino, G., Mazzeo, A., & Romano, S. (2018). Intelligent medical record management: A diagnosis support system. *International Journal of High-Performance Computing and Networking*, 12(4), 391–399. doi:10.1504/IJHPCN.2018.096726
 
@@ -3714,11 +3698,7 @@ Cole, E. (2003). *Hiding in Plain Sight: Steganography and Art of Covert Communi
 
 Cox, I., Miller, M., Linnartz, J. P., & Kalker, T. (1999). A Review of Watermarking Principles and Practices. In K. K. Parhi, & T. Nishitani (Eds.), *Digital Signal Processing in Multimedia Systems*, pp. 461-485. Marcell Dekker Inc. doi:10.1201/9781482276046-17
 
-
-
-
-
-##### 参考文献
+#### 参考文献
 
 Dutta, M. K., Singh, A., Singh, A., Burget, R., & Prinosil, J. (2015). 用于远程眼科应用的医学眼底图像数字识别标签。*2015 年第 38 届电信与信号处理国际会议论文集*。第 781-784 页。捷克共和国布拉格。DOI: 10.1109/TSP.2015.7296372
 
@@ -3758,19 +3738,21 @@ Wang, B., Ding, Q., & Gu, X. (2019). 一种带有隐藏组分隔符的安全可�
 
 Wu, M., & Liu, B. (2003). 图像与视频中的数据隐藏。I. 基本问题与解决方案。*IEEE 图像处理汇刊*, 12(6), 第 685-695 页。
 
-#### 第 7 章
+### 第 7 章
 
 **Phuc Do**  
+
 胡志明市国家大学信息技术大学 (VNU-HCM)，越南
 
 **Trung Hong Phan**  
+
 胡志明市国家大学信息技术大学 (VNU-HCM)，越南
 
-##### 摘要
+#### 摘要
 
 在本章中，使用 `Image2vec` 或 `Video2vector` 将大型多媒体数据库中的图像和视频片段转换为向量。`M-tree` 是一种索引结构，可用于高效解决复杂对象上的相似性查询。在从对象中提取了相关特征的前提下，`M-tree` 可有效地用于多媒体数据库上的基于内容的检索。在大型多媒体数据库中，为了搜索相似性，如 `k-NN` 查询和 `Range` 查询，需要计算查询对象到所有其余对象（图像或视频片段）的距离。在大型多媒体数据库中，查询与实体之间的计算是不可行的。本章提出了一种解决方案，将 `M-Tree` 结构分布在 `Apache Spark` 框架上，以解决包含大量图像和视频片段的大型多媒体数据库中的 `Range Query` 和 `kNN Query` 问题。
 
-##### 绪论
+#### 绪论
 
 多媒体数据库包含图像和视频片段（Guo, 2013; Riaz, Ashraf, & Aslam, 2014）。如今，多媒体数据库的容量包含海量对象。在此我们使用 `Image2vec` (Garcia-Gasulla, Béjar, Cortés, Ayguadé, & Labarta, 2015) 或 `Video2vec` (Hu, Li, & Li, 2016) 将图像和视频转换为向量，并存储这些向量以便于处理。为了在向量空间中（代表图像和视频片段）搜索相似性，如 `kNN` 查询和 `Range` 查询，我们需要计算查询向量到所有其余向量的距离。在大型多媒体数据库中，向量空间包含数百万到数十亿个向量。上述距离计算是不可行的。因此，我们需要一种方法来减少这些问题中的距离计算次数。`M-Tree` 结构是一种基于距离的向量空间索引方法，可以有效地解决 `Range` 查询和 `kNN` 查询（Ciaccia, Patella, & Zezula, 1997; Kouahla, 2011）。由于 `M-Tree` 结构是在本地系统上实现的，它只能解决小型向量空间中的问题，其中向量集可以放入一台计算机中。然而，包含数百万图像或视频片段向量的超大型多媒体数据库非常普遍。本地 `M-Tree` 结构无法满足在大型向量空间中解决相似性搜索问题的新需求，在这些空间中，向量必须分布式地存储在多台计算机上。因此，在本文中，我们提出了一种将 `M-Tree` 结构分布在 `Apache Spark` 框架上（Assefi, Behravesh, Liu, & Tafti, 2018; Shanahan & Dai, 2019; Zecevic & Bonaci, 2017）的解决方案，以解决大型向量空间中的 `kNN` 和 `Range Query` 问题。此外，我们还展示了基于不同规模的 64 维向量集创建本地和分布式 `M-Tree` 结构的实验结果。最后，我们展示了在图像和视频片段多媒体数据库的已构建 `M-Tree` 结构上进行 `kNN` 和 `Range` 查询的实验结果。
 
@@ -3783,40 +3765,39 @@ Wu, M., & Liu, B. (2003). 图像与视频中的数据隐藏。I. 基本问题与
 
 本文其余部分组织如下。第 2 节是相关工作。第 3 节介绍本文使用的知识库。第 4 节是方法论。第 5 节是实验。最后是结论与未来工作。
 
-###### 相关工作
+##### 相关工作
 
-
-
-
-
-######## 相关工作综述
+###### 相关工作综述
 
 始于一篇提出 M-Tree 结构作为有效相似性搜索方法的论文（Ciaccia et al., 1997），随后出现了许多实现和开发 M-Tree 结构以及开发类似索引结构的工作。
 
-2010 年，Akrivi Vlachou 提出了一个分布式相似性搜索框架，其中每个参与节点存储自己的数据，并使用 M-Tree 结构在本地建立索引。为了搜索的可扩展性和效率，他们采用了超级节点架构，超级节点负责查询路由。他们还提出了构建适用于度量空间中分布式相似性搜索的度量路由索引（Vlachou, Doulkeridis, & Kotidis, 2010）。
 
-2011 年，Z. Kouahla 研究了一种用于索引和查询数据的度量树数据结构变体，并进行了实验将其解决方案与 MM-Tree 和 SliM-Tree 技术进行比较。作者还提供了度量空间中索引技术的分类法，如图 1 所示（Kouahla, 2011）。
 
-最近，在 2019 年 2 月，Jörg Peter Bachmann 提出了 SuperM-Tree 结构作为 M-Tree 结构的扩展（Bachmann, 2019）。该作者引入了度量子集空间作为度量空间的广义概念。各种度量距离函数可以扩展为度量子集距离函数。
+## 相关工作
 
-上述大多数工作未提及大型向量空间（其中数据分布式存储在计算机集群中），Akrivi Vlachou 的工作除外。然而，该作者提出了一个新的分布式相似性搜索框架。在此，我们不构建新框架，而是使用著名的 `Apache Spark` 框架来分发 M-Tree 结构，以解决相似性搜索问题。
+2010 年，Akrivi Vlachou 提出了一个分布式相似性搜索框架，其中每个参与节点存储自己的数据，并使用 `M-Tree` 结构在本地建立索引。为了搜索的可扩展性和效率，他们采用了超级节点架构，超级节点负责查询路由。他们还提出了构建适用于度量空间中分布式相似性搜索的度量路由索引（Vlachou, Doulkeridis, & Kotidis, 2010）。
+
+2011 年，Z. Kouahla 研究了一种用于索引和查询数据的度量树数据结构变体，并进行了实验将其解决方案与 `MM-Tree` 和 `SliM-Tree` 技术进行比较。作者还提供了度量空间中索引技术的分类法，如图 1 所示（Kouahla, 2011）。
+
+最近，在 2019 年 2 月，Jörg Peter Bachmann 提出了 `SuperM-Tree` 结构作为 `M-Tree` 结构的扩展（Bachmann, 2019）。该作者引入了度量子集空间作为度量空间的广义概念。各种度量距离函数可以扩展为度量子集距离函数。
+
+上述大多数工作未提及大型向量空间（其中数据分布式存储在计算机集群中），Akrivi Vlachou 的工作除外。然而，该作者提出了一个新的分布式相似性搜索框架。在此，我们不构建新框架，而是使用著名的 `Apache Spark` 框架来分发 `M-Tree` 结构，以解决相似性搜索问题。
 
 | Figure 1. A simplified taxonomy of indexing techniques in metric spaces |
 | --- |
 | ![Figure978-1-7998-2701-6.ch007.f01](img/ch007.f01.png) |
-| --- |
 
-###### 大数据时代的向量表示
+## 大数据时代的向量表示
 
-在大数据时代，词表示已被用于多个研究领域。著名模型是 Mikolov 开发的 `word2vec` 模型（Mikolov, Chen, Corrado, & Dean, 2013）。基于该模型，我们有 `graph2vec`、`node2vec`、`topic2vec` 等模型（Cai, Zheng, & Chang, 2018）。通常，这些模型使用预训练模型将对象（词、图节点、文档主题）转换为向量（Cai et al., 2018; Mikolov et al., 2013; H. Cai V. W., 2018）。许多作者开发了类似模型将图像转换为向量，这些模统称为 `Image2vec`（Garcia-Gasulla, 2016）。此外，还有 `Video2vec` 模型（Hu et al., 2016），可将视频片段转换为向量。本文不深入讨论 `Image2vec` 或 `Video2vec`，仅使用此类模型生成图像或视频片段的向量，然后将这些向量输入我们提出的 `DM-Tree` 模型。
+在大数据时代，词表示已被用于多个研究领域。著名模型是 Mikolov 开发的 `word2vec` 模型（Mikolov, Chen, Corrado, & Dean, 2013）。基于该模型，我们有 `graph2vec`、`node2vec`、`topic2vec` 等模型（Cai, Zheng, & Chang, 2018）。通常，这些模型使用预训练模型将对象（词、图节点、文档主题）转换为向量（Cai et al., 2018; Mikolov et al., 2013; H. Cai V. W., 2018）。许多作者开发了类似模型将图像转换为向量，这些模型统称为 `Image2vec`（Garcia-Gasulla, 2016）。此外，还有 `Video2vec` 模型（Hu et al., 2016），可将视频片段转换为向量。本文不深入讨论 `Image2vec` 或 `Video2vec`，仅使用此类模型生成图像或视频片段的向量，然后将这些向量输入我们提出的 `DM-Tree` 模型。
 
-###### 预备知识
+## 预备知识
 
-####### 图像转向量
+### 图像转向量
 
 本节讨论如何将图像或视频片段转换为向量。向量空间词表示包含语言学规律，支持基于向量算术的语义操作。在语言学研究中，我们使用 `Word2vec` 或 `Glove2vec` 等预训练模型将词转换为向量（Mikolov et al., 2013）。同样，本文使用相同方法获取大型稀疏向量。作者使用 `CNN` 为每张图像构建向量。他们使用 `Caffe` 深度学习框架中可用的 `GoogLeNet` 预训练模型，该模型使用 120 万张图像训练而成，用于创建图像向量（Garcia-Gasulla et al., 2015）。此外，我们也可将视频片段转换为向量。该模型使用循环神经网络（`RNN`）学习视频的时间结构，并嵌入语义含义以形成固定长度的向量表示，称为 `Video2vec`（Hu et al., 2016）。
 
-####### 度量空间与欧氏距离
+### 度量空间与欧氏距离
 
 在数学中，度量空间是一个集合及其上的度量。度量是定义集合中任意两个成员（通常称为点）之间距离概念的函数（Ciaccia et al., 1997; Kouahla, 2011）。度量满足以下性质：
 
@@ -3845,13 +3826,17 @@ Wu, M., & Liu, B. (2003). 图像与视频中的数据隐藏。I. 基本问题与
 
 在 `R^n` 中，点（或向量）`x` 和 `y` 之间的欧氏距离或欧氏度量是连接它们的线段长度，由勾股公式给出：
 
-`d(x, y) = √(Σ(x_i - y_i)²)`
+```
+d(x, y) = √(Σ(x_i - y_i)²)
+```
 
 例如，在 `R²` 中，给定 `x = (x_1, x_2)` 和 `y = (y_1, y_2)`，则
 
-`d(x, y) = √((x_1 - y_1)² + (x_2 - y_2)²)`
+```
+d(x, y) = √((x_1 - y_1)² + (x_2 - y_2)²)
+```
 
-####### 相似性查询
+### 相似性查询
 
 有两种重要的相似性查询类型：范围查询和 k 最近邻（`kNN`）查询。范围查询用于在度量空间中查找与查询对象距离小于或等于给定半径的对象。k 最近邻查询用于在度量空间中查找最接近查询对象的 k 个对象。定义如下（Ciaccia et al., 1997）。
 
@@ -3863,35 +3848,36 @@ Wu, M., & Liu, B. (2003). 图像与视频中的数据隐藏。I. 基本问题与
 
 给定度量空间 `M = (X, d)`、查询对象 `Q ∈ X` 和整数 `k ≥ 1`。`kNN` 查询 `kNN(Q, k)` 选择 `X` 中距离 `Q` 最近的 k 个对象。
 
+### M-Tree
 
+`M-Tree` 是一种用于索引度量空间的方法。从结构上看，`M-Tree` 是一棵平衡树，能够处理动态数据文件，因此不需要定期重建。它根据特定距离函数测量的相对距离对对象进行划分，并将这些对象存储到固定大小的节点中，这些节点对应于度量空间的区域。
 
+`M-Tree` 的一个节点最多可存储 `M` 个条目，其中 `M` 是节点的容量。内部节点存储路由对象的条目，而叶子节点存储所有被索引对象的条目。每个路由对象 `O_r` 的条目具有以下格式：
 
-####### M-Tree
+```
+Entry(O_r) = (O_r, r(O_r), d(O_r, P(O_r)), ptr(T(O_r)))
+```
 
-M-Tree 是一种用于索引度量空间的方法。从结构上看，M-Tree 是一棵平衡树，能够处理动态数据文件，因此不需要定期重建。它根据特定距离函数测量的相对距离对对象进行划分，并将这些对象存储到固定大小的节点中，这些节点对应于度量空间的区域。
+其中 `O_r` 是路由对象，`r(O_r)` 是 `O_r` 的覆盖半径；`d(O_r, P(O_r))` 是 `O_r` 与 `P(O_r)` 之间的距离，后者是 `O_r` 的父对象；`ptr(T(O_r))` 是指向子树 `T(O_r)` 根节点的指针，该子树是 `O_r` 的覆盖树。而每个被索引对象 `O_j` 的条目具有以下格式：
 
-M-Tree 的一个节点最多可存储 `M` 个条目，其中 `M` 是节点的容量。内部节点存储路由对象的条目，而叶子节点存储所有被索引对象的条目。每个路由对象 `![Mathtype978-1-7998-2701-6.ch007.m33](img/ch007.m33.svg)` 的条目具有以下格式：
+```
+Entry(O_j) = (O_j, d(O_j, P(O_j)))
+```
 
-`![Mathtype978-1-7998-2701-6.ch007.m34](img/ch007.m34.svg)`
+其中 `O_j` 是被索引对象，`d(O_j, P(O_j))` 是 `O_j` 与 `P(O_j)` 之间的距离，后者是 `O_j` 的父对象。
 
-其中 `![Mathtype978-1-7998-2701-6.ch007.m35](img/ch007.m35.svg)` 是路由对象，`![Mathtype978-1-7998-2701-6.ch007.m36](img/ch007.m36.svg)` 是 `![Mathtype978-1-7998-2701-6.ch007.m37](img/ch007.m37.svg)` 的覆盖半径；`![Mathtype978-1-7998-2701-6.ch007.m38](img/ch007.m38.svg)` 是 `![Mathtype978-1-7998-2701-6.ch007.m39](img/ch007.m39.svg)` 与 `![Mathtype978-1-7998-2701-6.ch007.m40](img/ch007.m40.svg)` 之间的距离，后者是 `![Mathtype978-1-7998-2701-6.ch007.m41](img/ch007.m41.svg)` 的父对象；`![Mathtype978-1-7998-2701-6.ch007.m42](img/ch007.m42.svg)` 是指向子树 `![Mathtype978-1-7998-2701-6.ch007.m43](img/ch007.m43.svg)` 根节点的指针，该子树是 `![Mathtype978-1-7998-2701-6.ch007.m44](img/ch007.m44.svg)` 的覆盖树。而每个被索引对象 `![Mathtype978-1-7998-2701-6.ch007.m45](img/ch007.m45.svg)` 的条目具有以下格式：
+总之，`M-Tree` 的组成部分包括以下内容：
 
-`![Mathtype978-1-7998-2701-6.ch007.m46](img/ch007.m46.svg)`
-
-其中 `![Mathtype978-1-7998-2701-6.ch007.m47](img/ch007.m47.svg)` 是被索引对象，`![Mathtype978-1-7998-2701-6.ch007.m48](img/ch007.m48.svg)` 是 `![Mathtype978-1-7998-2701-6.ch007.m49](img/ch007.m49.svg)` 与 `![Mathtype978-1-7998-2701-6.ch007.m50](img/ch007.m50.svg)` 之间的距离，后者是 `![Mathtype978-1-7998-2701-6.ch007.m51](img/ch007.m51.svg)` 的父对象。
-
-总之，M-Tree 的组成部分包括以下内容：
-
-1.  **路由对象**：。
-2.  **被索引对象**：。
-3.  **路由对象的条目**。每个路由对象 `![Mathtype978-1-7998-2701-6.ch007.m52](img/ch007.m52.svg)` 的条目包括：
-    *   a. 路由对象：`![Mathtype978-1-7998-2701-6.ch007.m53](img/ch007.m53.svg)`。
-    *   b. `![Mathtype978-1-7998-2701-6.ch007.m54](img/ch007.m54.svg)` 的覆盖半径：`![Mathtype978-1-7998-2701-6.ch007.m55](img/ch007.m55.svg)`。
-    *   c. 指向 `![Mathtype978-1-7998-2701-6.ch007.m56](img/ch007.m56.svg)` 的覆盖树 `![Mathtype978-1-7998-2701-6.ch007.m57](img/ch007.m57.svg)` 的指针：`![Mathtype978-1-7998-2701-6.ch007.m58](img/ch007.m58.svg)`。
-    *   d. `![Mathtype978-1-7998-2701-6.ch007.m59](img/ch007.m59.svg)` 与 `![Mathtype978-1-7998-2701-6.ch007.m60](img/ch007.m60.svg)` 之间的距离，其中 `![Mathtype978-1-7998-2701-6.ch007.m61](img/ch007.m61.svg)` 是 `![Mathtype978-1-7998-2701-6.ch007.m62](img/ch007.m62.svg)` 的父对象：`![Mathtype978-1-7998-2701-6.ch007.m63](img/ch007.m63.svg)`。
-4.  **被索引对象的条目**。每个被索引对象 `![Mathtype978-1-7998-2701-6.ch007.m64](img/ch007.m64.svg)` 的条目包括：
-    *   a. 被索引对象：`![Mathtype978-1-7998-2701-6.ch007.m65](img/ch007.m65.svg)`。
-    *   b. `![Mathtype978-1-7998-2701-6.ch007.m66](img/ch007.m66.svg)` 与 `![Mathtype978-1-7998-2701-6.ch007.m67](img/ch007.m67.svg)` 之间的距离，其中 `![Mathtype978-1-7998-2701-6.ch007.m68](img/ch007.m68.svg)` 是 `![Mathtype978-1-7998-2701-6.ch007.m69](img/ch007.m69.svg)` 的父对象：`![Mathtype978-1-7998-2701-6.ch007.m70](img/ch007.m70.svg)`。
+1.  **路由对象**
+2.  **被索引对象**
+3.  **路由对象的条目**。每个路由对象 `O_r` 的条目包括：
+    *   a. 路由对象：`O_r`。
+    *   b. `O_r` 的覆盖半径：`r(O_r)`。
+    *   c. 指向 `O_r` 的覆盖树 `T(O_r)` 的指针：`ptr(T(O_r))`。
+    *   d. `O_r` 与 `P(O_r)` 之间的距离，其中 `P(O_r)` 是 `O_r` 的父对象：`d(O_r, P(O_r))`。
+4.  **被索引对象的条目**。每个被索引对象 `O_j` 的条目包括：
+    *   a. 被索引对象：`O_j`。
+    *   b. `O_j` 与 `P(O_j)` 之间的距离，其中 `P(O_j)` 是 `O_j` 的父对象：`d(O_j, P(O_j))`。
 5.  **内部节点**。每个内部节点包含一组路由对象的条目。
 6.  **叶子节点**。每个叶子节点包含一组被索引对象的条目。
 
@@ -3899,21 +3885,22 @@ M-Tree 的一个节点最多可存储 `M` 个条目，其中 `M` 是节点的容
 | --- |
 | ![Figure978-1-7998-2701-6.ch007.f02](img/ch007.f02.png) |
 
-图 2 是一个容量为 `M = 3` 的 M-Tree 示例。M-Tree 的根节点（节点 1）有两个路由对象 `![Mathtype978-1-7998-2701-6.ch007.m71](img/ch007.m71.svg)` 和 `![Mathtype978-1-7998-2701-6.ch007.m72](img/ch007.m72.svg)` 的条目。考虑节点 1 中的 `![Mathtype978-1-7998-2701-6.ch007.m73](img/ch007.m73.svg)`，`![Mathtype978-1-7998-2701-6.ch007.m74](img/ch007.m74.svg)` 的覆盖半径为 4.8。因为 `![Mathtype978-1-7998-2701-6.ch007.m75](img/ch007.m75.svg)` 属于根节点（节点 1），意味着 `![Mathtype978-1-7998-2701-6.ch007.m76](img/ch007.m76.svg)`，所以 `![Mathtype978-1-7998-2701-6.ch007.m77](img/ch007.m77.svg)` 与 `![Mathtype978-1-7998-2701-6.ch007.m78](img/ch007.m78.svg)` 之间的距离为 0.0。`![Mathtype978-1-7998-2701-6.ch007.m79](img/ch007.m79.svg)` 的条目指向左侧的子树，其根节点为节点 2。类似地，节点 2 有两个路由对象 `![Mathtype978-1-7998-2701-6.ch007.m80](img/ch007.m80.svg)` 和 `![Mathtype978-1-7998-2701-6.ch007.m81](img/ch007.m81.svg)` 的条目。`![Mathtype978-1-7998-2701-6.ch007.m82](img/ch007.m82.svg)` 的覆盖半径为 2.5，`![Mathtype978-1-7998-2701-6.ch007.m83](img/ch007.m83.svg)` 的覆盖半径为 3.5。在节点 2 中，
+图 2 是一个容量为 `M = 3` 的 `M-Tree` 示例。`M-Tree` 的根节点（节点 1）有两个路由对象 `O_r1` 和 `O_r2` 的条目。考虑节点 1 中的 `O_r1`，`O_r1` 的覆盖半径为 4.8。因为 `O_r1` 属于根节点（节点 1），意味着 `P(O_r1) = O_r1`，所以 `O_r1` 与 `P(O_r1)` 之间的距离为 0.0。`O_r1` 的条目指向左侧的子树，其根节点为节点 2。类似地，节点 2 有两个路由对象 `O_r3` 和 `O_r4` 的条目。`O_r3` 的覆盖半径为 2.5，`O_r4` 的覆盖半径为 3.5。在节点 2 中，
 
-`![Mathtype978-1-7998-2701-6.ch007.m84](img/ch007.m84.svg)`
+```
+d(O_r3, P(O_r3)) = 0.0
+d(O_r4, P(O_r4)) = 1.3
+```
 
-`![Mathtype978-1-7998-2701-6.ch007.m85](img/ch007.m85.svg)` 与 `![Mathtype978-1-7998-2701-6.ch007.m86](img/ch007.m86.svg)` 之间的距离为 0.0，`![Mathtype978-1-7998-2701-6.ch007.m87](img/ch007.m87.svg)` 与 `![Mathtype978-1-7998-2701-6.ch007.m88](img/ch007.m88.svg)` 之间的距离为 1.3。继续，`![Mathtype978-1-7998-2701-6.ch007.m89](img/ch007.m89.svg)` 的条目指向一个叶子节点，即节点 4。节点 4 装满了三个被索引对象 `![Mathtype978-1-7998-2701-6.ch007.m90](img/ch007.m90.svg)`、`![Mathtype978-1-7998-2701-6.ch007.m91](img/ch007.m91.svg)` 和 `![Mathtype978-1-7998-2701-6.ch007.m92](img/ch007.m92.svg)` 的条目。在节点 4 中，
+继续，`O_r3` 的条目指向一个叶子节点，即节点 4。节点 4 装满了三个被索引对象 `O_1`、`O_2` 和 `O_3` 的条目。在节点 4 中，
 
-`![Mathtype978-1-7998-2701-6.ch007.m93](img/ch007.m93.svg)`
+```
+d(O_1, P(O_1)) = d(O_1, O_r3)
+d(O_2, P(O_2)) = d(O_2, O_r3)
+d(O_3, P(O_3)) = d(O_3, O_r3)
+```
 
-`![Mathtype978-1-7998-2701-6.ch007.m94](img/ch007.m94.svg)`
 
-`![Mathtype978-1-7998-2701-6.ch007.m95](img/ch007.m95.svg)`
-
-和
-
-`![Mathtype978-1-7998-2701-6.ch007.m96](img/ch007.m96.svg)`
 
 `![Mathtype978-1-7998-2701-6.ch007.m97](img/ch007.m97.svg)` 的条目指向一个叶子节点，即节点 5。节点 5 未装满，有两个被索引对象 `![Mathtype978-1-7998-2701-6.ch007.m98](img/ch007.m98.svg)` 和 `![Mathtype978-1-7998-2701-6.ch007.m99](img/ch007.m99.svg)` 的条目。在节点 5 中，
 
@@ -3927,35 +3914,27 @@ M-Tree 的一个节点最多可存储 `M` 个条目，其中 `M` 是节点的容
 
 其余节点与上述类似。
 
-####### 方法论
+## 方法论
 
 为了解决相似性搜索问题，我们可以计算查询向量与向量空间中所有其他向量之间的距离。然而，这种方法仅适用于小型向量空间。在大型向量空间中，我们必须寻找一种能够减少距离计算次数的方法。我们研究了许多方法，并意识到 M-Tree 可以帮助我们实现这一目标。因此，我们使用 Scala 语言实现了本地 M-Tree 结构（在单机上运行）。随后，我们在 Apache Spark 框架上使用 Scala 语言实现了分布式 M-Tree。我们还对本地和分布式 M-Tree 结构进行了大量实验。M-Tree 结构在单机上进行测试，DM-Tree 结构在 Spark 集群上进行测试，如图 8 所示。以下是我们解决方案的详细信息。
 
 我们基于 (Ciaccia et al., 1997; Kouahla, 2011) 使用 Scala 语言创建了 `M-Tree` 类来表示本地 M-Tree 结构。`M-Tree` 类有两个用于搜索相似性的重要方法，如下所示：
 
 *   `def kNNSearch(Q: Entry, k: Int): ListBuffer[(Long, Double)]`：执行 kNN 查询，并返回 Q 条目的 k 个最近邻条目的 k 对 (id, distance)。
-
-
-
-
-####### DM-Tree 结构与算法
-
-*   **`def rangeSearch(Q: Entry, rQ: Double): ListBuffer[(Long, Double)]`**: 执行范围查询，返回满足从 Q 到条目距离小于或等于 rQ 的条目对 (id, distance)。
+*   `def rangeSearch(Q: Entry, rQ: Double): ListBuffer[(Long, Double)]`：执行范围查询，返回满足从 Q 到条目距离小于或等于 rQ 的条目对 (id, distance)。
 
 我们不在此展示这些算法，因为它们已在 (Ciaccia et al., 1997) 中描述。
 
 在大数据时代，我们拥有包含大量表示图像或视频片段向量的大型多媒体数据库。为了存储大型向量空间，我们使用 Hadoop 框架的 HDFS 分布式文件系统 (Zecevic & Bonaci, 2017)。除了 HDFS，我们还可以使用其他分布式文件系统，如 Amazon S3、Google File System 等。为了解决在大型向量空间中搜索相似性的问题，我们构建了一个分布式 M-Tree 结构并将其命名为 DM-Tree。
 
-######## 表 1. DM-Tree 类的属性
+### 表 1. DM-Tree 类的属性
 
 | Properties | Types | Descriptions |
 | --- | --- | --- |
 | CAPACITY | Int | DM-Tree 对象的容量。 |
 | M-Trees | `RDD[(Int, M-Tree)]` | 存储 M-Tree 对象及其 id。 |
 
-我们通过定义 DM-Tree 类并将其与 M-Tree 类结合来实现 DM-Tree 结构。一个 DM-Tree 对象包含一组由向量空间创建的 M-Tree 对象。向量空间存储在 RDD 的分区中。我们从每个分区创建一个 M-Tree 对象，并使用 RDD 结构分布式存储这些 M-Tree 对象。表 1 和表 2 展示了 DM-Tree 类的属性和方法。
-
-######## 表 2. DM-Tree 类的方法
+### 表 2. DM-Tree 类的方法
 
 | Methods | Descriptions |
 | --- | --- |
@@ -3967,17 +3946,18 @@ M-Tree 的一个节点最多可存储 `M` 个条目，其中 `M` 是节点的容
 
 以下是应用于 DM-Tree 类中的算法详情。
 
-####### 创建 DM-Tree 结构
+## 创建 DM-Tree 结构
 
-######## 图 3. 从向量集创建 DM-Tree 结构的过程
+### 图 3. 从向量集创建 DM-Tree 结构的过程
 
 ![Figure978-1-7998-2701-6.ch007.f03](img/ch007.f03.png)
 
 创建 DM-Tree 结构的过程如图 3 所示。首先，我们将向量集从 Hadoop 框架的 HDFS 分布式文件系统加载到 Apache Spark 集群的 RDD 结构中 (Zecevic & Bonaci, 2017)。然后，在 RDD 结构的每个分区上，我们通过使用 Map 转换创建一个 M-Tree 结构。Map 转换类似于 forEach 循环，但它并行执行任务。由 RDD 结构的分区创建的一组 M-Tree 结构即为 DM-Tree 结构。因为我们可以配置 RDD 结构的分区数量，所以 DM-Tree 结构的 M-Tree 结构数量也可以配置。算法 1 详述了创建 DM-Tree 结构的算法。
 
-######## 算法 1. 从向量集创建 DM-Tree 对象的算法
+### 算法 1. 从向量集创建 DM-Tree 对象的算法
 
 **输入**：
+
 1. `path`：包含向量集的 HDFS 文件路径。
 2. `CAPACITY`：DM-Tree 对象中 M-Tree 对象的容量。
 
@@ -3988,13 +3968,14 @@ M-Tree 的一个节点最多可存储 `M` 个条目，其中 `M` 是节点的容
 3. 将 RDD 对象的每个分区映射到 DM-Tree 对象中的一个 M-Tree 对象（即并行地从 RDD 对象的每个分区创建一个 M-Tree 对象）。
 4. 返回 DM-Tree 对象。
 
-####### 存储 DM-Tree 结构
+## 存储 DM-Tree 结构
 
 由于创建 DM-Tree 结构耗时，我们需要存储 DM-Tree 结构以便后续复用。此外，向量空间可能非常大，因此 DM-Tree 结构也可能非常大。我们无法将 DM-Tree 结构存储在本地文件系统中，而必须存储在像 HDFS 这样的分布式文件系统中。算法 2 详述了将 DM-Tree 结构存储到 HDFS 的算法。
 
-######## 算法 2. 将 DM-Tree 对象存储到 HDFS 的算法
+### 算法 2. 将 DM-Tree 对象存储到 HDFS 的算法
 
 **输入**：
+
 1. `path`：将存储 DM-Tree 对象的 HDFS 中目录的路径。
 2. `dmtree`：将被存储到 HDFS 的 DM-Tree 对象。
 
@@ -4006,13 +3987,14 @@ M-Tree 的一个节点最多可存储 `M` 个条目，其中 `M` 是节点的容
 4. }
 5. 返回。
 
-####### 加载 DM-Tree 结构
+## 加载 DM-Tree 结构
 
 当我们需要在向量空间中有效地搜索相似性时，我们需要将 DM-Tree 结构从 HDFS 加载到 Spark 集群中。因为 DM-Tree 结构由一组 M-Tree 结构组成，每个执行器应该加载一个 M-Tree 结构以有效处理。因此，执行器的数量应等于 M-Tree 结构的数量。算法 3 详述了从 HDFS 加载 DM-Tree 对象的算法。
 
-######## 算法 3. 从 HDFS 加载 DM-Tree 对象的算法
+### 算法 3. 从 HDFS 加载 DM-Tree 对象的算法
 
 **输入**：
+
 1. `path`：存储 DM-Tree 对象的 HDFS 中目录的路径。
 
 **输出**：一个 DM-Tree 对象。
@@ -4022,49 +4004,49 @@ M-Tree 的一个节点最多可存储 `M` 个条目，其中 `M` 是节点的容
 3. 从每个执行器并行加载由 `path` 指定目录中文件中的 DM-Tree 对象的 M-Tree 对象。
 4. 返回 DM-Tree 对象。
 
-####### 执行分布式 kNN 查询
+## 执行分布式 kNN 查询
 
 分布式 kNN 查询是在 DM-Tree 结构上进行的 kNN 查询。图 4 展示了执行分布式 kNN 查询的过程。首先，主节点中的驱动程序通过使用 Map 转换向工作节点中的 M-Tree 对象发送执行 kNN 查询的请求。然后，驱动程序将结果从工作节点收集到主节点，并通过使用 Reduce 动作将它们合并为单个结果。结果按距离升序排序，然后从排序后的结果中提取前 k 个条目。算法 4 详述了执行分布式 kNN 查询的算法。
 
-######## 图 4. 执行分布式 kNNSearch(Q, k) 的过程
+### 图 4. 执行分布式 kNNSearch(Q, k) 的过程
 
 ![Figure978-1-7998-2701-6.ch007.f04](img/ch007.f04.png)
 
-######## 算法 4. 在 DM-Tree 对象上执行分布式 kNN 查询的算法
+### 算法 4. 在 DM-Tree 对象上执行分布式 kNN 查询的算法
 
 **输入**：
+
 1. `Q`：一个查询向量。
 2. `k`：查询向量的最近邻数量。
 
 **输出**：一个包含 (id, distance) 对的列表，其中 id 是向量的 id，distance 是从 Q 到该向量的距离。
 
+```
 1. 映射 DM-Tree 对象的 M-Tree 对象 RDD 中的每个 `mtree` 对象 {
-2. 设置 `result = mtree.kNNSearch(Q, k)`
+2.   设置 `result = mtree.kNNSearch(Q, k)`
 3. }
 4. 将结果从工作节点收集到主节点。
 5. 设置 `unionResult = union` 收集到的结果。
 6. 设置 `sortedResult = unionResult.sortBy("distance", "ascending")`。
 7. 返回 `sortedResult.top(k)`。
+```
 
 算法 4 成功解决了 kNN 搜索问题。然而，该算法仍有一个需要改进的缺点。即每个工作节点向主节点发送 k 个向量，然后主节点排序并仅选择最接近查询向量的 k 个向量。因此，存在发送到主节点但从未被使用的向量。这增加了从工作节点无谓传输到主节点的数据量，降低了算法的效率。然而，改进这一缺点并不简单。我们需要做更多研究。
 
-####### 执行分布式范围查询
+## 执行分布式范围查询
 
-######## 图 5. 执行分布式 RangeSearch(Q, rQ) 的过程
+### 图 5. 执行分布式 RangeSearch(Q, rQ) 的过程
 
 ![Figure978-1-7998-2701-6.ch007.f05](img/ch007.f05.png)
 
-
-
-
-
-######## 分布式范围查询
+### 分布式范围查询
 
 分布式范围查询是针对 `DM-Tree` 结构的范围查询。图 5 展示了执行分布式范围查询的过程。首先，驱动程序通过 `Map` 变换向工作节点中的 `M-Tree` 对象发送执行范围查询的请求。然后，驱动程序将结果从工作节点收集到主节点，并通过 `Reduce` 动作将它们合并为单个结果。为了便于观察，结果按距离升序排序。算法 5 详细描述了在 `DM-Tree` 结构上执行范围查询的算法。
 
-######### 算法 5. 执行分布式范围查询的算法
+### 算法 5. 执行分布式范围查询的算法
 
 **输入：**
+
 1. `Q`：查询向量。
 2. `rQ`：最大距离。
 
@@ -4080,11 +4062,11 @@ M-Tree 的一个节点最多可存储 `M` 个条目，其中 `M` 是节点的容
 7. Return sortedResult
 ```
 
-###### 实验
+## 实验
 
 本节展示了在 `M-Tree` 和 `DM-Tree` 结构上的实验。我们使用的数据是从马克斯·普朗克信息学研究所网站下载的 Yago 知识库（“YAGO (database) Wikipedia,” n.d.; “YAGO Homepage,” n.d.）合成的。我们还使用 Scala 语言构建了一个应用程序来实现 `M-Tree` 和 `DM-Tree` 结构以进行实验。以下是实验的详细信息。
 
-####### M-Tree 结构实验
+### M-Tree 结构实验
 
 为了对 `M-Tree` 结构（“M-Tree Wikipedia,” n.d.）进行实验，我们使用了一台配置如下的计算机：
 
@@ -4097,7 +4079,7 @@ M-Tree 的一个节点最多可存储 `M` 个条目，其中 `M` 是节点的容
 
 图 7 展示了在 `M-Tree` 结构上执行 kNN 和范围查询时间的对比图表。该图表表明，执行查询非常快，且 kNN 查询总是比范围查询耗时更长。例如，在 200 万向量的 `M-Tree` 上执行 kNN 查询耗时 7,823 毫秒（约 8 秒），而执行范围查询耗时 5,649 毫秒（约 6 秒）。
 
-######## 表 3. 创建和存储、加载 M-Tree 结构；在 M-Tree 结构上执行 kNN 和范围查询的实验结果（单位：毫秒）
+### 表 3. 创建和存储、加载 M-Tree 结构；在 M-Tree 结构上执行 kNN 和范围查询的实验结果（单位：毫秒）
 
 | Number of Vectors | Creating & Storing | Loading | kNN Query | Range Query |
 | :--- | :--- | :--- | :--- | :--- |
@@ -4130,9 +4112,11 @@ M-Tree 的一个节点最多可存储 `M` 个条目，其中 `M` 是节点的容
 
 ![Figure978-1-7998-2701-6.ch007.f07](img/ch007.f07.png)
 
-####### DM-Tree 结构实验
+### DM-Tree 结构实验
 
 为了对多媒体数据库的 `DM-Tree` 结构进行实验，我们构建了一个包含 16 台计算机的 Spark 集群，配置如下：
+
+
 
 *   **处理器：** Intel(R) Core™ i5-6500 CPU @ 3.20GHz 3.20GHz
 *   **安装内存 (RAM)：** 16.0 GB
@@ -4147,7 +4131,7 @@ M-Tree 的一个节点最多可存储 `M` 个条目，其中 `M` 是节点的容
 
 ![Figure978-1-7998-2701-6.ch007.f08](img/ch007.f08.png)
 
-######## 表 4. 创建和存储、加载 DM-Tree 结构；在 DM-Tree 结构上执行分布式 kNN 和范围查询的实验结果（单位：毫秒）
+### 表 4. 创建和存储、加载 DM-Tree 结构；在 DM-Tree 结构上执行分布式 kNN 和范围查询的实验结果（单位：毫秒）
 
 | Number of Vectors | Creating & Storing | Loading | kNN Query | Range Query |
 | :--- | :--- | :--- | :--- | :--- |
@@ -4166,26 +4150,23 @@ M-Tree 的一个节点最多可存储 `M` 个条目，其中 `M` 是节点的容
 
 图 10 是对比在 `DM-Tree` 结构上执行分布式 kNN 和范围查询时间的图表。该图表表明，执行查询非常快，且分布式 kNN 查询总是比分布式范围查询耗时更长。
 
-
-
-
-######## 图 10. 在 DM-Tree 结构上执行分布式 kNN 和 Range 查询的实验结果（毫秒）
+### 图 10. 在 DM-Tree 结构上执行分布式 kNN 和 Range 查询的实验结果（毫秒）
 
 ![Figure978-1-7998-2701-6.ch007.f10](img/ch007.f10.png)
 
 例如，在 600 万向量的 DM-Tree 结构上执行分布式 kNN 查询耗时 6,483 毫秒（约 6.5 秒），而执行分布式 Range 查询仅耗时 5,190 毫秒（约 5 秒）。
 
-######## 结论与未来工作
+## 结论与未来工作
 
 在大数据时代，旧的解决方案已不再适用。我们需要分发数据和处理。Apache Spark 与 HDFS 的结合是分布式存储和处理的有效且廉价的解决方案。如今，我们拥有包含大量图像或视频片段的超大多媒体数据库。我们使用 `Image2vec` 和 `Video2vec` 将图像或视频片段转换为向量，以便于处理。`M-Tree` 是度量空间的索引方法。它有助于有效解决度量空间中的相似性搜索问题，即 kNN 和 Range 查询。然而，`M-Tree` 无法索引大型向量空间，例如大型多媒体数据库中的向量，这些向量必须分布式地存储在多台计算机上。为了满足以嵌入向量形式存在的、包含数百万图像和视频片段的大型多媒体数据库的新需求，我们在 Apache Spark 框架上研究并成功实现了分布式 M-Tree 结构，称为 `DM-Tree`。我们还展示了关于 `DM-Tree` 结构的一些实验，以证明 `DM-Tree` 在搜索多媒体数据库方面的性能。未来，我们将继续研究以减小 `DM-Tree` 结构的规模，并降低主节点与工作节点之间的通信成本，从而在更大的多媒体数据库中更有效地搜索相似性。
 
 为了拥有一个好的分布式算法，重要的是要注意本地处理算法必须优秀，且工作节点与主节点之间的通信成本必须很小。事实上，同时满足这两个要求并不简单。
 
-###### 致谢
+### 致谢
 
 本研究由越南国家大学胡志明市分校（VNU-HCMC）资助，资助编号为 B2017-26-02。
 
-##### 参考文献
+### 参考文献
 
 Assefi, M., Behravesh, E., Liu, G., & Tafti, A. P. (2018). Big data machine learning using apache spark MLlib. *Proceedings - 2017 IEEE International Conference on Big Data, Big Data 2017*. 10.1109/BigData.2017.8258338
 
@@ -4219,25 +4200,22 @@ YAGO. (database) Wikipedia. (n.d.). Retrieved January 21, 2019, from https://en.
 
 Zecevic, P., & Bonaci, M. (2017). *Spark in Action*. Manning Publications.
 
-#### 第 8 章
+## 第 8 章
 
 *   Kirti Raj Bhatele  
     Rustamji Institute of Technology, India
-
 *   Shivangi Jain  
     Rustamji Institute of Technology, India
-
 *   Abhishek Kataria  
     Rustamji Institute of Technology, India
-
 *   Prerana Jain  
     Rustamji Institute of Technology, India
 
-##### 摘要
+### 摘要
 
 本章简要介绍了与数字取证相关的各种基础知识和概念。数字取证的概述包括数字取证的生命周期及其不同阶段，即准备、收集、分析和报告。数字取证工具的评估包括 `EnCase Forensic`、`FTK (Forensics Tool Kit)` 和 `Helix` 数字取证工具及其优缺点。数字取证工具和技术检查包括数字检查技术、活体取证分析、Windows 注册表恢复、数字取证工具比较，并重点关注用于数字取证分析的 ACPO 准则。
 
-##### 引言
+### 引言
 
 数字取证是一门科学，涉及证据收集、调查和逆向工程，可确定计算机是如何被组成的。有多种工具和方法可供使用，以正常工作并帮助调查人员认证和分析证据 (Bennett, 2012)。数字取证的目标是以最原始的形式保存任何类型的数字证据。数字取证基于通过收集、识别和验证数字证据或信息来执行结构化研究，主要目的是重现发生在受害者计算机上的网络犯罪相关的过去事件。
 
@@ -4247,41 +4225,33 @@ Zecevic, P., & Bonaci, M. (2017). *Spark in Action*. Manning Publications.
 2.  **法律挑战**：如隐私问题、缺乏标准化的国际立法和行政问题。
 3.  **资源挑战**：如获取和分析取证介质所需的时间。
 
-
-
-
-
 ##### 犯罪发生且调查陷入僵局，因为似乎没有目击者或证据——直到数字取证介入。
 
 FBI 于 2008 年利用计算机取证破获了一起案件，2011 年 FBI 政府部门接到一起事件响应与数字取证案件，涉及两名儿童在一家旅馆遭受性虐待。不幸的是，当线索被接收时，犯罪已经发生。当时没有证据可对罪犯提起指控，直到对嫌疑人的计算机进行了分析。计算机上的证据——一封已删除的、包含虐待发生地点旅馆路线的电子邮件——足以指控三名成年人，他们目前正在服无期徒刑。有时，直到进行取证分析，你才会知道犯罪已经发生。回想一下之前描述的情况：一名高管在辞职后、去竞争对手公司工作前，访问了商业机密。关键在于，事件可能看似无害或无法解决，直到情况被分析。例如，服务器似乎无故下线，分析日志文件后，你可能会确定原因是入侵后安装的恶意软件。如果犯罪已经发生或甚至只是被怀疑，调查员以取证合规的方式收集和记录证据至关重要，因为下一步就是将所有证据移交给执法部门 (Beebe, 2009)。
 
 数字取证的另一个应用是为电子取证收集证据——即审前阶段，收集电子证据。例如，律师可能想证明配偶出轨，并可能利用对电子邮件文件的取证分析来证实指控。在证据收集中，技术和准确性对于确保事件发生时所收集数据的真实性至关重要。取证调查员必须时刻铭记，他或她可能会被要求为收集证据所用的技术进行辩护。此处呈现一则判例法，以演示在收集和保存证据时若不遵守法律会发生什么。处理数字证据是一个复杂的过程，应由专业人员处理 (Beebe, 2009)。如果处理不当，证据很容易被销毁，若进入法庭审理，则会被判定为不可采信。有些证据容易找到，但也可能有其他证据被隐藏、删除或加密，任何人都无法访问。增加复杂性的是，如果证据处理不当，将被排除或导致败诉。
 
-###### 数字取证的生命周期
+### 数字取证的生命周期
 
 数字取证生命周期有四个主要阶段。
 
-####### 准备
+#### 准备
 
 准备是数字取证生命周期的第一阶段。在此阶段，我们为涉及数字证据的取证调查做准备，这在长远来看能节省大量时间。这包括所需的所有设备、工具，以及对工具的理解，如如何高效使用这些工具来收集和分析证据。应有一个安全的地方存放我们的数据或证据，并确保其安全存储，以防污染或数据破坏。如今有大量硬件和软件用于执行取证调查。一些软件用于以取证合规的方式复制证据，不改变证据；一些软件用于分析已复制的驱动器空间；写保护器用于证明磁盘复制过程未修改证据。调查期间可能有用的其他物品包括笔记本、证据袋、胶带、标签、笔、相机等。这并非详尽的物品清单，但能让你了解准备数字取证调查时需要考虑哪些类型的事项 (Chan, 2011)。
 
-####### 收集
+#### 收集
 
 收集是数字取证的第二阶段。这包括记录设备型号和制造商等信息，以及拍摄周围环境照片。调查员可拍摄屏幕照片，以显示进入现场时的情况。此外，调查员还可检查任务栏，并拍摄最大化运行的应用程序照片。文档记录完成后，需处理电子数据。众所周知，如今计算环境复杂性日益增加，调查员的响应并非对每起事件都相同，立即关机可能不是避免进一步损害的最佳主意。不应关闭计算机的原因是，易失性数据（运行中的进程或网络连接）会丢失。检测到关机时，恶意程序也可能发起恶意攻击。因此，有多种方式响应活体数据收集，重点收集易失性数据、收集易失性数据和日志文件，或通过收集所有内容（复制每一比特数据）进行全面调查。镜像存储在外部驱动器上，或可使用网络工具（如 `netcat` 或 `crypcat`）通过网络发送。`Netcat` 是一种网络工具，可跨网络连接读写数据。`Cryptcat` 是带加密功能的 netcat。请记住，切勿使用嫌疑系统进行任何分析，否则会覆盖证据。所有收集到的数字证据必须得到保存，以适合法庭使用。数字证据非常脆弱，如雪地或沙滩上的脚印，因为它极易被销毁或篡改。保存证据的一种方法是将数字信息传输到只读、不可写的 CD-ROM 上，或将数据上传到源服务器并对文件进行哈希，以确保数据完整性。
 
-############# 分析
-
-
-
-
-
-############# 分析
+#### 分析
 
 分析是数字取证的第三阶段。数据收集完成后，将对数据进行分析。嫌疑机器的镜像需要被还原，以便开始对证据进行分析。镜像应还原到一个稍大的干净驱动器上，或者还原到一个由同一制造商生产的干净目标驱动器上，以确保镜像能够完全容纳。之后，使用取证工具（如 `Encase` 取证工具包）开始审查过程。要恢复已删除的文件，需要审查镜像的未分配空间。调查人员可能会找到完整的文件或文件片段，因为利用删除功能时，文件永远不会从硬盘驱动器上真正移除。被删除的只是操作系统用于构建目录树结构的指针。一旦该指针消失，操作系统将无法找到该文件——但调查人员可以！但请记住，当创建新文件时，会选择一个内存位置，因此文件有可能被覆盖，或者至少部分被覆盖。原因如下：硬盘驱动器上的所有数据都被排列成称为簇的分配单元。
 
+
+
 常见的调查之一是互联网使用情况分析，用于监控工作场所的不当使用，例如员工赌博或浏览色情内容。离婚律师可能会利用此类分析来证明不忠，通过展示社交网站上的证据，或证明配偶曾访问博客网站寻求轻松离婚的建议。通过证明配偶在博客发帖前后使用信用卡进行了购物，可以将匿名博客发帖归因于该配偶。Web 浏览器存储多种信息，例如访问页面的历史记录、最近输入的 URL、先前查看页面的缓存版本和收藏夹。挑战还在于证明被指控者在事件发生时确实是使用该计算机的人。例如，如果在某员工的计算机上浏览了色情内容，调查人员必须确保该员工在滥用行为发生时并未休假或全天开会。
 
-######## 报告
+## 报告
 
 数字取证生命周期的最后阶段是报告上一阶段分析的结果，并描述采取行动、选择工具和程序背后的理由。`NIST`（2006）描述了影响报告的三个主要因素：替代解释、受众考量和可执行信息。替代解释通过包含对发生事件的所有合理解释，来支持对事件结论的论证。
 
@@ -4289,15 +4259,15 @@ FBI 于 2008 年利用计算机取证破获了一起案件，2011 年 FBI 政府
 
 取证分析结果报告的内容和详细程度会因事件而异。因此，取证分析报告的详细程度由需要该报告的受众决定。如果分析导致的是非刑事案件，高管或管理层可能只想要一份简单的概述（Giustini, 2009）。
 
-######## 数字取证工具评估
+## 数字取证工具评估
 
 在数字取证中，分析和调查涉及许多步骤和技术。如今，有许多数字取证技术和相应工具可供数字取证调查使用，但其中能在市场上广受欢迎并成功提供准确证据和分析的寥寥无几。数字取证调查和分析中涉及的步骤是任何数字取证工具效率的主要贡献因素。有许多流行的数字取证工具，如 `Encase`、`FTK`（取证工具包）和 `Helix`，但主要目标是在不同参数上评估和比较这些工具。下文讨论了每种工具的优势和局限性（Fowler, 2011）。
 
-######### Encase 数字取证工具
+### Encase 数字取证工具
 
 众所周知，有数字取证工具和技术，但其中流行的寥寥无几。`Encase` 就是其中一款数字取证工具。它是最广泛使用的数字取证工具之一，可适用于数字取证证据、调查和分析过程的任何环节或每个步骤。`Encase` 拥有许多新的不同功能和一些内置工具，可用于数字数据。`Encase V7` 中还有一个高级搜索选项，用于调查和分析传统计算机和数字源（Fowler, 2011）。
 
-########## Encase 数字取证工具的优势
+#### Encase 数字取证工具的优势
 
 `Encase` 数字取证工具有许多优势或益处。
 
@@ -4307,24 +4277,18 @@ FBI 于 2008 年利用计算机取证破获了一起案件，2011 年 FBI 政府
 *   与其他数字取证工具相比，`Encase` 拥有简单的报告架构。
 *   该数字取证工具的关键优势是生成二进制副本，为检查员提供了并行预览证据数据与实际数据的选项。
 
-########## 数字取证工具的局限性
+#### 数字取证工具的局限性
 
 数字取证工具存在一些劣势和局限性。
 
 *   `Encase` 在用户界面和设计阶段存在复杂功能问题。
 *   与 `Helix` 和 `FTK` 等其他数字取证工具相比，`Encase` 在最终用户培训和实时搜索功能方面存在时间限制问题。
 
-########## FTK（取证工具包）
+### FTK（取证工具包）
 
+与其他数字取证工具相比，FTK (Forensics Tool Kit) 拥有许多先进的技术、特性和功能。访问数据是取证工具包的基本技术。FTK 提供了扫描硬盘和内存等数字证据源的最简便方法。借助 FTK，可以检索被删除的相关信息，如电子邮件、密码和其他相关文本或字符串。在数字取证工具 FTK 中，`Imager` 是可以扫描并以单个或多个磁盘镜像形式检索硬盘镜像的工具之一。与其他工具相比，借助 FTK 也可以完成复杂的 MD5 哈希值计算。FTK 是最流行的数字取证工具，可用于许多调查和网络犯罪案件中。
 
-
-
-
-########### FTK (取证工具包)
-
-与其他数字取证工具相比，FTK (Forensics Tool Kit) 拥有许多先进的技术、特性和功能。访问数据是取证工具包的基本技术。FTK 提供了扫描硬盘和内存等数字证据源的最简便方法。借助 FTK，可以检索被删除的相关信息，如电子邮件、密码和其他相关文本或字符串。在数字取证工具 FTK 中，**Imager** 是可以扫描并以单个或多个磁盘镜像形式检索硬盘镜像的工具之一。与其他工具相比，借助 FTK 也可以完成复杂的 MD5 哈希值计算。FTK 是最流行的数字取证工具，可用于许多调查和网络犯罪案件中。
-
-############ FTK 的优势
+#### FTK 的优势
 
 *   FTK 提供了处理、搜索和轻松恢复 IPv4 和 IPv6 两种协议数据包的能力。
 *   借助 FTK，可以读取不同的文件格式，而其他数字取证工具则无法做到。
@@ -4333,18 +4297,18 @@ FBI 于 2008 年利用计算机取证破获了一起案件，2011 年 FBI 政府
 *   哈希值计算可以由取证工具包轻松完成。
 *   FTK 提供了简单读取多个证据源和相关文件的功能，其中包括手机、智能手机、平板电脑、PDA、笔记本电脑等。
 
-############ 取证工具包的局限性
+#### 取证工具包的局限性
 
 FTK 存在一些局限性：
 
 *   FTK 数字取证工具在事件分析方面存在响应时间问题。
 *   在 FTK 中，将 FTK 与第三方取证工具集成的过程繁琐且复杂，配置的复杂性限制了工具级集成技术的范围。
 
-########### Helix 数字取证工具
+### Helix 数字取证工具
 
 Helix 构建于 UNIX 操作系统之上。它是一个基于 Ubuntu 操作系统架构的面向数字化的取证工具。Helix 数字取证工具的主要目标是对事件进行数字化调查、分析和获取。事件报告的生成同时满足传统计算机和数字取证的需求。Helix 可以轻松在 CD 和 DVD 等便携式存储设备上运行。它还具备在包括 Windows、Linux 和 Solaris 等在内的多操作系统环境中工作的能力。Helix 是一个合规的取证工具，并被视为数字取证分析过程中的主机计算机。
 
-############ Helix 数字取证工具的优势
+#### Helix 数字取证工具的优势
 
 数字取证工具的一些优势如下：
 
@@ -4356,14 +4320,14 @@ Helix 构建于 UNIX 操作系统之上。它是一个基于 Ubuntu 操作系统
 *   它还具备实时网络取证获取的关键功能。
 *   Helix 工具提供生成准确的数字取证调查报告的功能。
 
-############ Helix 数字取证工具的局限性
+#### Helix 数字取证工具的局限性
 
 Helix 数字取证工具存在一些局限性：
 
 *   Helix 数字取证工具的主要局限性是用户界面和复杂的命令知识要求。
 *   实时成像和备份过程本质上比较复杂。
 
-########### 数字取证工具对比：FTK、EnCase 和 Helix
+### 数字取证工具对比：FTK、EnCase 和 Helix
 
 见表 1。
 
@@ -4381,21 +4345,15 @@ Helix 数字取证工具存在一些局限性：
 | FTK 数字取证工具支持面向对象和结构化编程语言。 | Helix 数字取证工具支持 UNIX 编程语言和 Shell 脚本。 | EnCase 也支持 C++ 和 Java 等面向对象编程语言。 |
 | 与 Helix 和 EnCase 相比，FTK 中可以进行简单的查询检索和处理功能。 | Helix 的主要优势是在实时系统上具有更好的查询处理能力。 | EnCase 的主要优势是查询处理，且支持 MLI（多语言索引）。 |
 
-########### 数字取证工具与技术考察
-
-
-
-
-
-########### 数字取证工具与技术
+### 数字取证工具与技术
 
 我们在上一节中简要讨论了各种工具及其技术。通过对比这些工具，我们得出结论：这些工具既有优点也有局限性，且适用于各种技术。在数字取证的数据获取、检查、调查与分析过程中，证据来源可以是简单的计算机、内存、笔记本电脑、智能手机和平板电脑，而在所有这些场景中，数字证据来源都起着关键作用。这一数字调查来源在估算相应工具和技术的优化条件方面也起着关键作用，相应的工具可以是移动设备、内存或笔记本电脑（Huebner 等，2009）。数字取证分析过程中的主要步骤是收集数字证据，在此背景下，评估本报告中提到的每个工具的作用以衡量数字取证工具的整体性能非常重要（Rocha，2011）。在本节中，我们将讨论 EnCase、FTK 和 Helix 等相关工具的数字检查技术，内容如下。
 
-############ 数字检查技术
+#### 数字检查技术
 
 数字检查过程涉及多种技术。其中 Windows 注册表恢复或重建以及实时取证是关键。被调查分析的来源决定了相应数字取证工具的性能（Rocha，2011）。用于评估过程的两种技术如下。
 
-############# 实时取证分析
+##### 实时取证分析
 
 数字取证检查过程中的关键环节是实时取证分析，其中包括在实时或离线环境中获取硬盘等内存设备镜像的步骤。相应的硬盘实时取证分析需要至少 10 TB 的数据，且该过程可以是在线、实时或离线的。
 
@@ -4407,7 +4365,7 @@ FTK 仅支持有限的实时搜索和取证分析选项，并受时间戳问题�
 
 由于 Helix 运行在 Live CD 或 USB 上，因此它提供实时取证支持，但也会针对取证分析访问少量离线内容。
 
-############# Windows 注册表恢复
+##### Windows 注册表恢复
 
 通常，恢复过程涵盖 Windows 注册表恢复或重建，包括 IIS 和 FTP 事件日志以及系统安全要求级别。所有已安装程序、访问过的网站、最近处理过的文档等关键信息均由 Windows 注册表保存。数字取证分析和调查过程可恢复所需的 Windows 注册表，也可重建所需的 Windows 目录（Pasupuleti，2019）。
 
@@ -4415,7 +4373,7 @@ FTK 仅支持有限的实时搜索和取证分析选项，并受时间戳问题�
 
 Helix 纯粹运行在 UNIX 操作系统环境中，因此其主要局限性在于无法重建和恢复 Windows 注册表。
 
-############ 数字取证分析的 ACPO 准则
+#### 数字取证分析的 ACPO 准则
 
 数字取证分析过程遵循以下 ACPO 准则：
 
@@ -4424,86 +4382,80 @@ Helix 纯粹运行在 UNIX 操作系统环境中，因此其主要局限性在�
 *   **ACPO 准则 3：** ACPO 准则 3 主要涉及数字取证中的实际数据记录。在此背景下，最高优先级给予所需的审计角色和管理。
 *   **ACPO 准则 4：** 当前 ACPO 准则的主要来源是取证调查及相关信息。在数字取证分析过程中，维护所需的完整性和可靠性是取证调查员的责任。
 
-####### 结论
+### 结论
 
 本章的主要目标是分析和评估各种数字取证工具和技术。分析过程考虑了 EnCase、FTK 和 Helix，在数字取证获取、检查和分析的各个层面对这些工具进行了比较和评估。报告讨论了每个层面的优缺点，并对所需的 ACPO 准则进行了讨论和解释。
 
 从对数字取证的整体分析来看，FTK、EnCase 和 Helix 数字取证工具各有局限性和特点，可应用于大多数数字取证和关键网络分析场景。
 
-############ 数字取证的常见应用
+### 数字取证的常见应用
 
 取证一词意味着在法庭上针对某些恶意犯罪者，数字取证用于恢复真实的数字证据，这在许多情况下属实。数字取证不仅限于法庭。数字取证寻找的证据或多或少能支持或反驳某种假设。根据这些应用，数字取证可分为五个部分：
 
-############# 识别
+#### 识别
 
 识别是所有数字取证的起点。在任何事情之前，识别存储的数据至关重要。如今，数据存储在计算机和服务器的硬盘、闪存驱动器、网络设备上。
 
-############# 保全
+#### 保全
 
 保全是数字取证的关键环节。它很大程度上取决于调查员。调查过程中，另一种常见做法是创建正在检查的数据或设备的取证镜像。
 
-############# 恢复
+#### 恢复
 
 每个案件都涉及某种恢复过程。这包括从正常操作系统流程中恢复已删除文件、故意删除的文件、受密码保护的文件，甚至损坏或腐坏的文件。
 
-############# 分析
+#### 分析
 
 分析是调查的核心。我们使用多种应用程序和工具来查看常见工件，如内存、注册表、事件日志和浏览器历史记录。简单的 Google 搜索就是一个很好的例子。每当你搜索某样东西时，它不仅记录在浏览器历史记录中，还有一个协调的注册表工件指向该搜索。
 
-############# 提交
+#### 提交
 
+# 第 9 章
 
-
-
-
-#### 第 9 章
-
-**作者**
+## 作者
 
 *   **Jia Lu**  
     奥克兰理工大学，新西兰
 *   **Wei Qi Yan**  
     奥克兰理工大学，新西兰
 
-##### 摘要
+## 摘要
 
 随着摄像头等安防监控设施成本的降低，视频监控已广泛应用于银行、交通、商场等公共安全领域，使警方能够监控异常事件。通过深度学习，作者利用模型训练和测试实现了人体行为检测与识别的高性能。本章使用公共数据集 `Weizmann dataset` 和 `KTH dataset` 训练深度学习模型。研究了四种用于人体行为识别的深度学习模型。结果表明，`YOLOv3` 模型表现最佳，在 `Weizmann dataset` 上实现了 96.29% 的 mAP，在 `KTH dataset` 上实现了 84.58% 的 mAP。本章利用深度学习进行人体行为识别，并在数据集的支持下评估了不同方法的结果。
 
-##### 介绍
+## 介绍
 
 随着各种场景中监控摄像头数量的快速增加，从成千上万的监控视频中定位感兴趣区域 (`ROI`) 已成为突出问题之一。另一方面，随着监控系统的持续扩展，海量视频资料被归档，从这些大数据中查找有用信息变得越来越困难；目标识别的效率也随之降低。因此，如何在海量视觉大数据的环境中使监控更加高效，需要予以考虑。
 
 对于传统的人体行为识别，都需要考虑低层（无语义理解）和高层（有语义理解）两个处理过程。低层处理有助于定位感兴趣区域并减少视频资料中的无用信息；同时，高层处理将分析这些特征以最终实现行为识别。
 
-如今，随着计算设备能力的增强，深度神经网络 (`DNNs`) 在目标检测方面获得了极大关注，从而开启了计算机视觉的新时代 (Lu et al., 2017)。深度学习模型 (Hinton et al., 2006) 包含多个隐藏层；采用预训练方法以缓解局部最优解的困扰；隐藏层因“深度”而达到多层，因此称为“深度学习”。最先进的方法主要依赖人工神经网络，如卷积神经网络 (`CNNs` 或 `ConvNets`)、`R-CNNs`、`Fast R-CNNs`、`Faster R-CNNs`、`Mask R-CNN` 和 `SSD` (单发多框检测器)。此外，深度学习已在监督和无监督模型中均得以实现 (Ji et al., 2013)。显然，这些工作在各个方面清楚地展示了深度神经网络、浅层神经网络以及传统机器学习之间的差异 (Liu et al., 2016)。
 
-在人体行为识别中，为深度神经网络提出了边界框以对这些建议像素进行重采样。由于图像中存在固有的局部模式，如眼睛、鼻子、嘴巴等，`CNN` 通过将数字图像处理与人工神经网络相结合而衍生出来，它通过卷积核连接上下层。卷积核在所有图像间共享；图像在卷积操作后仍保留原始位置。与传统方法相比，深度学习以端到端的方式进行，具有更高的分类概率，且对光照、姿态等表现出不变性 (LeCun et al., 2004)。此外，区域建议方法和基于区域的卷积神经网络 (`R-CNN`) 在模式识别中以高精度取得了更大成功 (Ren et al., 2017)。选择性 `Faster R-CNN` (Uijlings et al., 2013) 在一系列比较中也表现出优异性能 (Ren et al., 2017; He et al., 2016)。区域建议网络 (`RPN`) 为端到端目的而训练，并生成了感兴趣区域的精确位置。`RPN` 和 `Fast R-CNN` 已合并为单一网络，能够加速检测 (Ren et al., 2017)。
+
+如今，随着计算设备能力的增强，深度神经网络（`DNNs`）在目标检测方面获得了极大关注，从而开启了计算机视觉的新时代 (Lu et al., 2017)。深度学习模型 (Hinton et al., 2006) 包含多个隐藏层；采用预训练方法以缓解局部最优解的困扰；隐藏层因“深度”而达到多层，因此称为“深度学习”。最先进的方法主要依赖人工神经网络，如卷积神经网络（`CNNs` 或 `ConvNets`）、`R-CNNs`、`Fast R-CNNs`、`Faster R-CNNs`、`Mask R-CNN` 和 `SSD`（单发多框检测器）。此外，深度学习已在监督和无监督模型中均得以实现 (Ji et al., 2013)。显然，这些工作在各个方面清楚地展示了深度神经网络、浅层神经网络以及传统机器学习之间的差异 (Liu et al., 2016)。
+
+在人体行为识别中，为深度神经网络提出了边界框以对这些建议像素进行重采样。由于图像中存在固有的局部模式，如眼睛、鼻子、嘴巴等，`CNN` 通过将数字图像处理与人工神经网络相结合而衍生出来，它通过卷积核连接上下层。卷积核在所有图像间共享；图像在卷积操作后仍保留原始位置。与传统方法相比，深度学习以端到端的方式进行，具有更高的分类概率，且对光照、姿态等表现出不变性 (LeCun et al., 2004)。此外，区域建议方法和基于区域的卷积神经网络（`R-CNN`）在模式识别中以高精度取得了更大成功 (Ren et al., 2017)。选择性 `Faster R-CNN` (Uijlings et al., 2013) 在一系列比较中也表现出优异性能 (Ren et al., 2017; He et al., 2016)。区域建议网络（`RPN`）为端到端目的而训练，并生成了感兴趣区域的精确位置。`RPN` 和 `Fast R-CNN` 已合并为单一网络，能够加速检测 (Ren et al., 2017)。
 
 本书章节安排如下。第 2 节呈现文献综述，第 3 节描述我们的方法。第 4 节展示我们的结果，第 5 节得出结论。
 
-###### 相关工作
+## 相关工作
 
 人体行为理解是指分析和识别人体运动模式，并用自然语言描述 (Aggarwal et al., 1997)。运动序列可视为在不同状态节点中静态动作的遍历过程 (Guo et al., 1994)。因此计算遍历过程的联合概率；将其最大值纳入考量进行分类 (Fujiyoshi et al., 2004)。
 
 人体行为识别旨在自动识别预定义行为，从而有效减少人力 (Aggarwal et al., 1997)。为识别和分析人体行为的周期性运动，提出了时空模型 (Rui et al., 2000) 和周期性模型 (Cutler et al., 2000)。人体行为识别主要可分为两类，包含基于模板匹配的方法和基于状态空间的方法。
 
+## 利用无监督学习和深度学习进行人类行为识别
 
-
-
-
-###### 利用无监督学习和深度学习进行人类行为识别
-
-####### 无监督学习方法
+### 无监督学习方法
 
 人类行为识别可以通过无监督学习来实现，无监督学习不需要预训练数据；在这种情况下，训练数据中的类别是未标记的。无监督学习的目标是研究未标记的训练数据，以揭示数据的规律模式，从而进行进一步的数据分析。聚类是无监督学习中最典型的方法。
 
 提出了一种多观测隐马尔可夫模型（`MOHMM`）来检测异常活动，该模型对嘈杂和稀疏的数据集非常有效（Xiang et al., 2005）。自组织映射（`SOM`）是一种无监督学习神经网络，它可以将高维输入数据映射到低维空间，保持高维空间中输入数据的拓扑结构；它将高维空间中相似的样本点映射到输出层中相邻的神经元。`SOM`被用于检测罕见事件；一种利用`SOM`映射中的高斯混合模型（`GMM`）对新事件进行分类的方法实现了异常行为识别（Petrushin et al., 2005）。一种无监督学习方法通过提取兴趣点与时空词相结合，实现了人类动作分类，该方法可以对包含复杂视频序列的多种动作进行分类（Niebles et al., 2008）。
 
-####### 深度学习基础
+### 深度学习基础
 
 2006 年，深度学习的概念被提出；具体而言，使用预训练方法来缓解局部最优解问题，隐藏层增加到多层，从而在实际场景中实现了“深度”。此外，多层神经网络具有更强的学习能力，通过逐层初始化可以有效缓解其训练复杂度（Hinton et al., 2006）。与传统方法不同，受`CNNs`（`ConvNets`）启发的深度学习开启了现代计算的新纪元。尽管深度学习直接使用视频帧作为输入数据，但图像将在不进行特征提取的情况下直接输入网络。因此，这些方法被视为端到端方法，特征图由网络自行生成并集成到算法中，无需人工干预；端到端方法的输入是原始图像，输出是带有概率的类别。
 
-######## 卷积神经网络（CNNs）
+#### 卷积神经网络（CNNs）
 
 `CNNs`作为目前最流行的方法之一，已被应用于直接处理原始图像。图像中存在固有的局部模式，如嘴巴、眼睛等；因此，`CNNs`被视为数字图像处理和人工神经网络的结合，在目标识别、图像分割（Ciresan et al., 2012）和目标检测（Farabet et al. 2013; Girshick et al., 2014; Krizhevsky et al., 2012）中发挥着关键作用。`CNNs`通过卷积核将上下层连接在一起；“权重共享”策略可以充分利用一组具有相同权重的神经元，这在识别任务中取得了巨大成效（LeCun et al., 1995; LeCun et al., 1998）。图 1 展示了典型`CNNs`的示例，其中“Conv”表示用于特征提取的卷积层；“Pool”表示用于降维的“池化层”，`FC`代表“全连接层”。
 
@@ -4522,13 +4474,13 @@ Helix 纯粹运行在 UNIX 操作系统环境中，因此其主要局限性在�
 | **传统方法** | 易于实现。<br>训练前可减少冗余特征。<br>特征工程（易于解释和理解）。<br>通常不需要 GPU 加速。 | 通常无法实现实时识别。<br>需要多个模型协同工作。<br>结果可能受外部环境影响，准确性较低。 |
 | **深度学习方法** | 需要大量数据。<br>需要 GPU 加速。<br>训练需要更多时间。<br>黑盒（难以解释和理解）。 | 可实现实时识别。<br>可在无额外特征提取过程的情况下训练数据。<br>结果可能不受外部环境影响，准确性更高。<br>适应性强且易于转换（迁移学习）。 |
 
-######## 3D 卷积神经网络
+#### 3D 卷积神经网络
 
 一种用于人类行为识别的 3D 神经网络构建了时空信息，并结合`SVM`分类器进行特征图提取（Ji et al. 2013）。与 2D `CNNs`相比，无论 2D `CNNs`有多少通道，卷积核只能输出一个特征图，这意味着只存在空间关系，而时间关系将丢失。对于人类行为识别，时间信息对于提高分类性能也很重要。3D 卷积操作是将多个连续帧堆叠成立方体，并将 3D 卷积核应用于该立方体（Tran et al., 2015）。在这种结构中，卷积层中的每个特征图将连接到上一层中多个相邻帧，从而捕获运动信息。图 2 展示了 3D 卷积神经网络（`3D-CNN`）的简单过程。
 
 由于整个立方体中卷积核的权重与共享权重相同，3D 卷积核只能从立方体中提取一种类型的特征。图 2 中相同颜色的连接线代表相同的权重。我们使用多个卷积核来提取特征图。
 
-######## 目标检测进展
+#### 目标检测进展
 
 Szegedy et al.使用深度神经网络，将目标检测视为回归问题（Szegedy et al., 2013）。Girshick et al.提出了一种基于区域的卷积神经网络（`R-CNN`），该网络利用区域建议（Sande et al., 2011）获取图像的多个局部区域；利用`CNNs`获取每个区域的特征以解决目标检测问题（Girshick et al., 2014）。区域建议是寻找图像中目标可能的位置，通过利用图像中的视觉信息（如纹理、边缘和颜色），在保证`IOU`（交并比）的同时选择少量候选窗口。然而，`R-CNNs`仍存在不足，如提取的局部区域增加了磁盘存储空间；此外，大多数区域建议可能相互重叠，导致从重叠部分提取的特征重复。空间金字塔池化网络（`SPP-Nets`）通过替换最后的池化层，克服了`R-CNNs`的信息损失和使用问题（He et al., 2015）。
 
@@ -4536,38 +4488,35 @@ Szegedy et al.使用深度神经网络，将目标检测视为回归问题（Sze
 
 ![Figure978-1-7998-2701-6.ch009.f02](img/ch009.f02.png)
 
-
-
-
-
-######## Fast R-CNN 与 Faster R-CNN
+#### Fast R-CNN 与 Faster R-CNN
 
 Fast R-CNN 的提出旨在改进 R-CNN，在 PASCAL VOC2012 上实现了 66% 的更高 mAP（平均精度）。Fast R-CNN 通过采用 ROI 池化层和反向传播，具备了更新所有网络层训练过程的能力。Fast R-CNN 将区域建议直接映射到特征图上，图像仅需获取一次，从而大幅降低了时间消耗。Faster R-CNN 采用区域建议网络（RPN）替代了 Fast R-CNN 中的选择性搜索方法，以共享整张图像的卷积特征 (Ren et al., 2017)。图 3 展示了三种 R-CNN 及其处理步骤。
 
-| Figure 3. The R-CNNs with its steps |
-| --- |
-| ![Figure978-1-7998-2701-6.ch009.f03](img/ch009.f03.png) |
+**图 3. The R-CNNs with its steps**
 
-######## YOLO (Darknets)
+![Figure978-1-7998-2701-6.ch009.f03](img/ch009.f03.png)
+
+#### YOLO (Darknets)
 
 You Only Look Once (YOLO 或 Darknets) 近期被提出，它基于端到端神经网络，将视觉目标检测视为一个回归问题。YOLO 网络包含 24 个卷积层和 2 个全连接层 (Redmon et al., 2016)。YOLO 的核心思想是将整张图片作为输入，直接输出边界框的位置。YOLO 网络能够训练直接对应检测性能的损失函数，使整个模型能够联合训练。YOLO 算法描述如下：
+
 1.  对输入图像应用固定的 7×7 网格核。如果物体中心落在对应网格内，则该网格响应该物体位置的回归。
 2.  每个网格预测包含物体位置及其置信度信息，编码为一个向量。
 3.  网络输出层为每个网格对应的结果，实现端到端训练。
 
 然而，YOLO 网络利用平方和误差作为损失函数，导致收敛效果变差；同时，它无法正确地与最大化平均精度对齐。
 
-######## 本章贡献
+#### 本章贡献
 
 本章的贡献在于采用端到端深度学习方法进行人类行为识别。此外，使用强大的 GPU 加速处理以实现时间效率。本章实现了四种不同的深度学习模型并取得了积极结果。
 
-####### 方法论
+### 方法论
 
-######### YOLO9000 (YOLOv2)
+#### YOLO9000 (YOLOv2)
 
 YOLO9000 (YOLOv2) 的提出旨在克服 YOLO 初始版本的局限性，可实时检测多达 9000 个物体类别，并提高了物体定位的准确率/召回率。YOLOv2 使用 WordTree 对分类和检测进行联合训练，该联合训练算法旨在利用可用的分类和检测数据训练目标检测器 (Redmon et al., 2017)。它还能在没有框标注的情况下，预测字典中 9000 个概念的物体边界框。YOLOv2 引入了来自 Faster R-CNN 的锚框思想，替代了 YOLO 网络中用于预测每个边界框坐标的全连接层。批量归一化被应用于所有卷积层，通过归一化所有层的数据来防止梯度消失和梯度爆炸。由于 YOLOv2 仅包含卷积层和池化层，其输入限于固定尺寸图像。为增强模型鲁棒性，YOLOv2 采用了多尺度输入训练策略，即在训练过程中经过几轮迭代后改变模型的输入图像尺寸。因此，通过采用多尺度训练策略，YOLOv2 能适应各种尺寸的图像并预测出良好结果。
 
-######### YOLOv3
+#### YOLOv3
 
 YOLOv3 的提出旨在改进 YOLOv2 网络，它使用逻辑回归基于边界框定位物体；逻辑回归独立用于每个类别；使用二元交叉熵损失替代 softmax 以提高类别预测率。边界框预测公式如下：
 
@@ -4581,11 +4530,11 @@ YOLOv3 的提出旨在改进 YOLOv2 网络，它使用逻辑回归基于边界�
 
 其中 `b[x]`、`b[y]`、`b[w]` 和 `b[h]` 代表预测的中心坐标 x、y、w、h；`t[x]`、`t[y]`、`t[w]`、`t[h]` 代表预测坐标；`c[x]` 和 `c[y]` 是图像单元格左上角到网格单元的距离；`p[w]` 和 `p[h]` 是边界框的宽度和高度；`σ` 用于约束其偏移范围。
 
-######## 数据集
+#### 数据集
 
 有大量用于人类行为识别的公开数据集，由多个研究小组提供，如 Weizmann 数据集、KTH 数据集、UCF 数据集、CAVIAR 数据集、CASIA 数据集和 BEHAVE 数据集。表 2 简要描述了这些数据集。
 
-**Table 2. A brief description of the different datasets**
+**表 2. A brief description of the different datasets**
 
 | Dataset | Description |
 | --- | --- |
@@ -4598,51 +4547,49 @@ YOLOv3 的提出旨在改进 YOLOv2 网络，它使用逻辑回归基于边界�
 
 本章所有实验基于前两个公开数据集，即 Weizmann 数据集和 KTH 数据集。对于 Weizmann 数据集，包含十个类别，每个类别由静态摄像头捕获，共有九名参与者。数据集分辨率为 180×144。对于 KTH 数据集，包含 25 名参与者在四个场景下完成的六个动作，共 2391 个视频。该数据集中的视频样本包含缩放、服装和光照变化，由静态摄像头捕获。图像分辨率为 160×120。我们主要采用这两个公开数据集获得实验结果。此外，KTH 数据集有 5667 个视频帧；Weizmann 数据集包含 1500 个视频帧。所有实验在单块 GPU (RTX 2080Ti) 上运行，以减少训练时间消耗。
 
-######### 评价指标
+#### 评价指标
 
 为衡量模型性能，采用交叉验证以评估人类行为识别的表现。混淆矩阵的主要目的是将真实标签与分类结果进行比较。此外，混淆矩阵不仅提供分类准确率，还展示结果与预测类别的相关关系。
 
-####### 实验结果
+### 实验结果
 
 本章采用四种网络进行实验，包括 YOLOv3、YOLOv2、ResNet 和 DenseNet，以实现人类行为识别结果。我们的重点主要在于深度学习方法及其对结果的影响。图 4 展示了利用两个采用数据集的这些模型的视频帧结果。
 
-| Figure 4. The video frames for the adopted datasets. |
-| --- |
-| ![Figure978-1-7998-2701-6.ch009.f04](img/ch009.f04.png) |
+**图 4. The video frames for the adopted datasets.**
+
+![Figure978-1-7998-2701-6.ch009.f04](img/ch009.f04.png)
 
 本章采用了四种不同的深度学习模型；利用这些模型，准确率最高达到 90%。YOLOv3 显示出最高准确率 (96.29%)，DenseNet 准确率最低 (92.62%)。图 5 展示了各提议模型的训练损失，YOLOv2 实现了最低训练损失 0.96%。YOLOv3 具有最高训练损失 1.81%。
 
-| Figure 5. The training loss via Weizmann dataset by adopting proposed models |
-| --- |
-| ![Figure978-1-7998-2701-6.ch009.f05](img/ch009.f05.png) |
+**图 5. The training loss via Weizmann dataset by adopting proposed models**
 
+![Figure978-1-7998-2701-6.ch009.f05](img/ch009.f05.png)
 
-
-
-
-########## 魏茨曼数据集结果
+#### 魏茨曼数据集结果
 
 在魏茨曼数据集方面，`YOLOv3` 达到了最高准确率 96.29%，而 `ResNet` 的总体准确率仅达到 91.40%（He et al., 2016）。经过 44,200 个 epoch 后，训练损失约为 0.0181。使用 `YOLOv3` 的测试结果 mAP 为 0.946。Jacking（跳跃拍手）的精确率最高，达到 100%，测试帧率高达 22.7 FPS。此外，总准确率达到了 96.29%。采用 `YOLOv2` 时，总体准确率高达 92.71%。使用 `YOLOv2` 的测试结果 mAP 为 0.911；Jacking 动作的识别准确率最高（100%），而 Running（跑步）行为识别仅达到最低识别率（65.33%）。实验以 31.3 帧/秒（fps）的速度进行行为识别。实验中也使用了 `DenseNet`；人体行为识别的总准确率为 92.62%。采用 `DenseNet` 的测试结果 mAP 为 0.953。Jacking 识别率最高（100%），而 Running 行为识别精确率仅达到最低（90.83%）；FPS 高达 30.3。`ResNet` 达到了高达 91.40% 的准确率。与其他三个深度神经网络相比，采用 `ResNet` 的测试损失结果最低（0.888）。在此实验条件下，Jacking 的识别精确率最高（100%），而 Running 的识别精确率仅为 82.05%。人体行为检测的帧率高达 17.1 fps。
 
-########## KTH 数据集结果
+#### KTH 数据集结果
+
+
 
 对于 KTH 数据集，`YOLOv3` 达到了最高 mAP 0.8458；`YOLOv2` 的 mAP 仅为 0.8059，与其他模型相比最低。图 6 展示了各提议模型的训练损失，`DenseNet` 达到了最低的训练损失 1.85%。`ResNet` 的训练损失最高（3.92%）。
 
-########### 图 6. 采用提议模型在 KTH 数据集上的训练损失
+### 图 6. 采用提议模型在 KTH 数据集上的训练损失
 
 ![Figure978-1-7998-2701-6.ch009.f06](img/ch009.f06.png)
 
 在 KTH 数据集中，`YOLOv3` 的准确率为 84%。经过 28,800 个 epoch 后，训练损失为 0.0373。测试结果高达 0.8458 mAP，FPS 高达 22.7。Boxing（拳击）识别的精确率最高，达到 100%，而 Running 识别的精确率为 54%，低于其他行为。使用 `YOLOv2` 的测试结果仅产生 0.8059 mAP，与其他神经网络相比最低；此外，FPS 高达 31.2。Boxing 行为识别精确率最高（100%），但 Running 识别的精确率最低（44.60%），低于其他行为。在 KTH 数据集中采用 `DenseNet`，准确率为 86.63%，平均精确率为 0.8446 mAP，FPS 高达 32.3。Boxing 行为识别精确率最高（100%），而 Running 行为最低（63.46%）。网络 `ResNet` 总准确率为 85.45%，测试结果达到 0.8383 mAP；FPS 仅为 16.4。Boxing 行为精确率最高（100%），而 Running 行为与其他行为相比精确率最低（64.38%）。
 
-########### 图 7. 错误分类示例；正确标签为：(a) Skip，（b) Run，（c) Jog，和 (d) Boxing
+### 图 7. 错误分类示例；正确标签为：(a) Skip，（b) Run，（c) Jog，和 (d) Boxing
 
 ![Figure978-1-7998-2701-6.ch009.f07](img/ch009.f07.png)
 
-########## 讨论
+## 讨论
 
 经过这些实验，`DenseNet` 拥有最高的 0.953 mAP 准确率；使用魏茨曼数据集时，`YOLOv3` 达到了最高的 96.29% 准确率；在 KTH 数据集上，`YOLOv3` 拥有最高的 mAP（0.8458）。对于魏茨曼数据集，Jacking 识别拥有最高的精确率和准确率。此外，在所有实验中，使用 KTH 数据集的 Boxing 识别拥有最高精确率。然而，在魏茨曼数据集中，Running 和 Skipping 的精确率和准确率可能不够稳健；KTH 数据集中的 Running 和 Jogging 识别也是如此。导致精确率低的原因是我们使用视频帧作为训练数据集；这些行为之间可能存在相似性。因此，在测试期间，结果低于预期。
 
-########### 表 4. 使用魏茨曼数据集的机器学习与深度学习方法对比
+### 表 4. 使用魏茨曼数据集的机器学习与深度学习方法对比
 
 | | | | Walk | Skip | Run | Jack | Jump | mAP | Accuracy | fps |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -4664,7 +4611,7 @@ YOLOv3 的提出旨在改进 YOLOv2 网络，它使用逻辑回归基于边界�
 
 对于 KTH 数据集，`DenseNet` 达到了 86.63% 的准确率。关于 3D CNN，它们通过执行 3D 卷积提取时空特征，拥有最高准确率（90.2%）（Ji et al., 2013）。此外，Ivan 等人提出了一种基于贪婪匹配方法的梯度直方图来识别人体行为，准确率达到了 94.2%（Ivanov et al., 2000）。由于某些行为具有相似的局部时空事件，导致了错误分类（Laptev et al., 2004）。此外，Jagadeesh 等人通过采用带有 HOG 特征的 SVM 实现了 92.48% 准确率的人体行为识别（Jagadeesh et al., 2019）。此外，还提出了一种基于集成学习的方法，使用 Weka 3 将这四个模型结合在一起，在人体行为识别中获得了更先进的结果。在实验中，我们利用两种不同的集成学习器来评估结果。对于带有随机森林的 Bagging 分类器，其准确率达到了 98.8%，比单模型识别高出 12.17%；通过利用带有随机森林的 AdaBoost 分类器，在 KTH 数据集上能够达到 98.71% 的准确率。通过在魏茨曼数据集上结合 AdaBoost 和 Bagging 集成学习器与随机森林，最终准确率达到了 97.76%。
 
-########### 表 5. 使用 KTH 数据集的机器学习与深度学习方法对比
+### 表 5. 使用 KTH 数据集的机器学习与深度学习方法对比
 
 | | | | Walk | Run | Box | Handclap | Jog | Handwave | mAP | Accuracy | fps |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -4674,11 +4621,7 @@ YOLOv3 的提出旨在改进 YOLOv2 网络，它使用逻辑回归基于边界�
 | | | `ResNet` | 0.9773 | 0.6438 | 1 | 0.8711 | 0.6628 | 0.8748 | 0.8383 | 0.8545 | 16.4 |
 | | | 3D-CNN | 0.97 | 0.79 | 0.9 | 0.94 | 0.84 | 0.97 | - | 0.902 | 22.7 |
 
-
-
-
-
-####### 实验结果
+#### 实验结果
 
 | 机器学习方法 | | LF+SVM | 0.838 | 0.549 | 0.979 | 0.597 | 0.604 | 0.736 | - | 0.717 | 0.838 |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -4693,11 +4636,11 @@ YOLOv3 的提出旨在改进 YOLOv2 网络，它使用逻辑回归基于边界�
 
 结果表明，传统机器学习方法和深度学习方法在人类行为识别方面均取得了成功。然而，传统机器学习方法虽然可能在行为识别上达到最佳准确率，但需要对 ROI、分割和特征提取进行预处理；无法实现实时识别。Ji 等人 (Ji et al., 2013) 提出的 3D CNN 模型具有最高的准确率 90.2%，该模型不仅利用了视频帧的空间信息，还通过使用多个相邻帧捕获了时序运动信息。3D CNN 模型可应用于实际场景中的实时识别。
 
-####### 结论
+### 结论
 
 在我们的实验中，我们实现了四种深度神经网络以比较结果。先前的研究采用传统方法进行人类行为识别。我们的研究表明，深度学习在未来可以得到改进。然而，目前仅考虑了空间信息，我们未考虑场景的时序信息。对于未来的工作，我们希望纳入时序信息，以避免对相似行为的误分类，使模型更适用、更稳健。
 
-##### 参考文献
+## 参考文献
 
 Aggarwal, J. K., & Cai, Q. (1997). Human motion analysis: A review. *Nonrigid and Articulated Motion Workshop*, pp. 99-102.
 
@@ -4731,6 +4674,10 @@ Jagadeesh, B., & Patil, C. M. (2019). Video based human activity detection, reco
 
 Ji, S., Xu, W., Yang, M., & Yu, K. (2013). 3D convolutional neural networks for human action recognition. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 35(1), 221–231. doi:10.1109/TPAMI.2012.59
 
+
+
+# 参考文献
+
 Krizhevsky, A., Sutskever, I., & Hinton, G. E. (2012). ImageNet classification with deep convolutional neural networks. *Advances in Neural Information Processing Systems*, 1097–1105.
 
 Laptev, I., & Lindeberg, T. (2004). Local descriptors for spatio-temporal recognition. *International Workshop on Spatial Coherence for Visual Motion Analysis*, pp. 91-103. Academic Press.
@@ -4763,22 +4710,18 @@ Szegedy, C., Toshev, A., & Erhan, D. (2013). Deep neural networks for object det
 
 Tran, D., Bourdev, L., Fergus, R., Torresani, L., & Paluri, M. (2015). Learning spatiotemporal features with 3D convolutional networks. *Proceedings of the IEEE International Conference on Computer Vision*, pp. 4489-4497.
 
-
-
-
-
-#### 第 10 章
+# 第 10 章
 
 *   Maria Rodriguez
     墨尔本大学，澳大利亚
 *   Rajkumar Buyya
     墨尔本大学，澳大利亚
 
-##### 摘要
+## 摘要
 
 容器被组织广泛用于部署各种工作负载，例如 Web 服务、大数据和 IoT 应用。容器编排平台旨在管理大规模集群中容器化应用的部署。大多数此类平台针对固定规模的集群优化容器调度，并未启用集群自动伸缩功能，也不考虑公有云环境特有的特性。本章提出了一种具有三个目标的资源管理方法：1) 通过在现有资源上高效调度容器来优化其初始放置；2) 基于集群工作负载在运行时自动伸缩资源数量；3) 在运行时将应用整合到更少的 VM 中。该框架作为 `Kubernetes` 插件实现，并在澳大利亚云基础设施上评估了其效率。实验表明，通过动态管理集群规模和应用放置，可实现 58% 的成本降低。
 
-##### 引言
+## 引言
 
 容器（如 `Docker` (`Docker`, n.d.) 和 `Linux Containers` (`LXC`) (`Bernstein`, 2014)）是独立且自包含的单元，将软件及其依赖项打包在一起。与虚拟机 (`VMs`) 类似，容器是一种虚拟化技术，允许多个用户和应用共享单个计算节点的资源。然而，`VMs` 在硬件层面虚拟化资源，而容器则在操作系统层面进行虚拟化。这使它们成为一种轻量级虚拟化方法，能够实现应用环境隔离、快速灵活的部署以及细粒度的资源共享。
 
@@ -4796,18 +4739,15 @@ Tran, D., Bourdev, L., Fergus, R., Torresani, L., & Paluri, M. (2015). Learning 
 
 本章其余部分组织如下。第 2 节介绍现有的容器管理平台及其他相关调度算法。第 3 节讨论我们的编排框架所考虑的应用和资源模型。第 4 节讨论拟议系统的架构及其利用 `Kubernetes` 的实现。第 5 节讨论拟议的自动伸缩、重新调度和调度方法。第 6 节展示在澳大利亚国家云基础设施上对我们的框架和拟议算法的评估。最后，第 7 节总结本章，并确定和讨论新的研究方向。
 
-###### 相关工作
+## 相关工作
 
 Uijlings, J., Sande, K., Gevers, T., & Smeulders, A. (2013). Selective search for object recognition. *International Journal of Computer Vision*, 104(2), 154-171.
 
 Xiang, T., Gong, S. (2005) Video behavior profiling and abnormality detection without manual labelling. *Proceedings of the IEEE International Conference on Computer Vision*, pp. 1238-1245.
 
-
-
-
 在研究和开源社区中，已经有大量尝试构建可靠且可扩展的集群容器管理平台（Rodriguez & Buyya, 2019）。这些系统负责管理通用应用程序的部署，这些应用通常打包在基于 `Docker` 或 `Linux cgroups` 的容器中。在本节中，我们将简要介绍容器编排领域中软件系统和资源管理算法的相关工作。
 
-##### 软件系统
+### 软件系统
 
 **Kubernetes** (Hightower, Burns, & Beda, 2017) 是领先的开源容器管理平台，源自 Google 的内部 **Borg** 系统 (Verma et al., 2015)。Kubernetes 在虚拟化或物理集群中编排和管理异构容器化应用程序（如服务和批处理作业）的生命周期。它提供了一个默认调度器，根据用户定义的需求筛选可用集群资源，并基于单独定义的应用亲和性进行排序，将每个容器组（或 `pod`）分配给这些资源。Kubernetes 的详细评估可参见 (Medel, Rana, Bañares, & Arronategui, 2016)。
 
@@ -4821,7 +4761,7 @@ Xiang, T., Gong, S. (2005) Video behavior profiling and abnormality detection wi
 
 尽管上述大多数系统已经成熟，但资源管理优化领域仍可进一步探索。这在云计算时代尤为真实，因为大多数现有框架假设资源集群是静态的，而忽略了云平台的许多固有特性。结果是，弹性、定价和服务异构性被忽视。用于碎片整理和自动扩缩容的重新调度是上述系统中缺失的另一项功能。本文旨在通过探索在管理集群资源时考虑自动扩缩容和重新调度的优势来弥补这些空白。
 
-##### 资源管理算法
+### 资源管理算法
 
 本节讨论专注于基于容器调度算法的相关工作。Xu 等人 (Xu, Yu, & Pei, 2014) 为基于容器的云环境提出了一种资源调度方法，旨在减少请求响应时间并提高资源利用率，该方法利用稳定机器理论获得容器到主机的最优映射。(Zhang et al., 2016) 设计了一个基于容器的新型视频监控云平台，应用未来工作负载预测实现细粒度资源配置并确保服务质量。(Kaewkasi & Chuenmuneewong, 2017) 应用蚁群优化算法将容器分配给主机，旨在平衡资源使用。(Kehrer & Blochinger, 2018) 为 **Apache Mesos** 提出了一种两阶段部署方法，以实现对容器更灵活的管理。(Guerrero, Lera, & Juiz, 2018) 为 **Kubernetes** 平台提出了一种遗传算法，以优化容器分配和弹性管理。他们的算法可以提高系统性能并减少网络开销。与本章提出的工作相反，上述方法专注于容器的初始放置（即调度），并未考虑重新调度和自动扩缩容。
 
@@ -4829,7 +4769,9 @@ Xiang, T., Gong, S. (2005) Video behavior profiling and abnormality detection wi
 
 (Xu, Toosi,, & Buyya, 2018) 提出了一种基于容器和 Brownout（电压降低/功能降级）的方法，可以动态激活和停用可选容器，以在满足服务质量要求的前提下实现云资源的节能管理。该方法应用自动扩缩容来减少活跃主机数量，但未考虑容器的初始放置和重新调度。
 
-表 1 总结了专注于资源管理算法的相关工作对比。
+
+
+# 表 1 总结了专注于资源管理算法的相关工作对比
 
 **表 1. 相关算法工作对比**
 
@@ -4844,11 +4786,9 @@ Xiang, T., Gong, S. (2005) Video behavior profiling and abnormality detection wi
 | (Xu et al. 2018) | 降低能耗 | | | √ | Docker |
 | 本工作 (本章) | 降低成本 | √ | √ | √ | Kubernetes |
 
-##### 应用与资源模型
+## 应用与资源模型
 
-
-
-###### 容器编排框架
+### 容器编排框架
 
 我们考虑一个部署在虚拟化公有云环境中的容器编排框架，由组织或平台即服务提供商部署。因此，该框架可以访问无限数量的虚拟机，这些虚拟机可按需供应和取消供应。在本工作的初始阶段，我们假设虚拟机是同构的，即具有相同的价格和特征，并按计费周期收费。虚拟机的特征由其内存和 CPU 容量定义。
 
@@ -4864,15 +4804,13 @@ Xiang, T., Gong, S. (2005) Video behavior profiling and abnormality detection wi
 
 本工作的总体目标是强调并说明容器编排需要整体资源管理方法的必要性；即一种同时考虑调度、重新调度和自动扩缩容的方法。所提出的框架集成了这三个过程，并允许不同的策略无缝插入。
 
-###### 系统架构
+### 系统架构
 
-图 1 描述了系统的架构及其通过扩展 Kubernetes (K8s) 平台实现的方式。现有的 K8s 组件显示为蓝色，扩展组件显示为绿色。在本节其余部分中，我们首先介绍 Kubernetes 及与本工作相关的关键特性，随后概述每个提议的组件。
+**图 1. Architecture of the prototype system**
 
-| Figure 1. Architecture of the prototype system |
-| --- |
-| ![Figure978-1-7998-2701-6.ch010.f01](img/ch010.f01.png) |
+![Figure978-1-7998-2701-6.ch010.f01](img/ch010.f01.png)
 
-####### Kubernetes
+#### Kubernetes
 
 Kubernetes 是一个旨在管理集群上容器化工作负载的框架。Kubernetes 中的基本构建块是 `pod`。一个 `pod` 封装一个或多个紧密耦合的容器，这些容器被放置在同一位置并共享同一组资源。`pod` 还封装存储资源、一个网络 IP 以及一组选项，这些选项控制 `pod` 的容器应如何运行。一个 `pod` 旨在运行应用程序的单个实例；通过这种方式，可以使用多个 `pod` 来水平扩展应用程序。创建 `pod` 时可以指定容器所需的 CPU、内存和临时存储量。然后调度程序可以使用此信息来决定 `pod` 的放置。这些计算资源既可以指定为请求量，也可以指定为容器允许消耗的量的限制。
 
@@ -4884,11 +4822,11 @@ Kubernetes 是一个旨在管理集群上容器化工作负载的框架。Kubern
 
 总体而言，Kubernetes 是一个高度成熟的系统；它源自 Google 十年来在 `Borg` 和 `Omega` 上的经验，并且是拥有广泛社区驱动支持和开发基础的领先容器化集群管理系统。它为用户提供了广泛的选项来管理其 `pod` 及其调度方式，甚至允许可插拔的自定义调度程序轻松集成到系统中。总之，尽管 Kubernetes 的性能和可扩展性可能仍未达到 `Borg` 等行业系统的水平，但截至 1.10 版本，Kubernetes 能够支持多达 5000 个节点的集群，这适合许多现代组织的需求。
 
-####### 扩展组件
+#### 扩展组件
 
 本节讨论作为本章提出的工作实现的一部分而添加到 Kubernetes 框架中的附加组件。
 
-######## Algorithm 1
+##### Algorithm 1
 
 ```
 while the scheduler exit condition is not satisfied
@@ -4902,33 +4840,31 @@ while the scheduler exit condition is not satisfied
         scale in
 ```
 
-
-
-######## 自定义调度器与 Kubernetes API 交互，持续监控集群中 Pod 的状态
+##### 自定义调度器与 Kubernetes API 交互，持续监控集群中 Pod 的状态
 
 一个 Pod 对应单个任务，无论是长期运行还是批处理。因此，调度器专注于处理待调度 Pod（即那些需要被调度的 Pod）。对于每个待调度 Pod，会从整个集群资源池中筛选出一组合适的资源（即 Kubernetes 工作节点）。然后从中选择一个资源，并在该 Pod 与资源之间创建绑定。此绑定会导致 Kubernetes 在选定节点上运行该 Pod。再次值得一提的是，已实现了不同的策略来选择合适的节点集合并将任务分配给其中一个，这些策略可轻松插入系统。这些内容在第 5 节中详细描述。
 
 每当无法放置 Pod 时，自定义调度器会与自定义重调度器交互。重调度器随后尝试整合可移动的 Pod，以便将传入的 Pod 放置在现有节点上。如果集群已达容量上限，且没有空间容纳传入的待调度 Pod，则会调用自动扩缩容组件，以确定是否应配置新的 VM 来放置该 Pod。自动扩缩容器随后可决定要启动的 VM 数量和类型，并指示云适配器通过特定的 IaaS 云提供商 API 创建新实例。在此期间，不可调度的 Pod 可保留在调度队列中处于待调度状态，以便在新配置（或最近释放）的资源可用时，在后续周期中进行调度。该 Pod 也可从常规调度队列中移除，以便在新创建的节点可用后直接分配给它。自定义组件之间的交互如算法 1 所示。
 
-| 图 2. 原型系统的类图 |
-| --- |
-| ![Figure978-1-7998-2701-6.ch010.f02](img/ch010.f02.png) |
+**图 2. 原型系统的类图**
 
-######## 设计与实现
+![Figure978-1-7998-2701-6.ch010.f02](img/ch010.f02.png)
+
+##### 设计与实现
 
 原型系统使用 Java 实现。它作为一个独立进程运行，因此无需部署在属于 Kubernetes 集群的节点上。如图 1 所示，系统通过 API 与 Kubernetes 交互。图 2 展示了原型系统的高层类图。我们包含了与本文讨论相关的类、方法和属性。`util` 包中的类是直接与 Kubernetes 交互的类，而其余类包含算法的实际逻辑。
 
-长期运行任务被定义为 Kubernetes 部署。一个部署会创建一个副本集，生成所需数量的复制 Pod。Pod 定义了实际的应用程序或任务。当副本失败时，Pod 会自动重新创建。在本工作的初始实例中，我们假设部署具有单个副本。此外，定义为可移动的长期运行服务必须包含一个标签来指示这一点（键：`rescheduling`，值：`moveable`）。必须指定 CPU 和内存请求，以及 CPU 和内存限制，二者应相等，以确保 Pod 被分配到 Kubernetes **Guaranteed** QoS 类。图 3 展示了定义单副本 nginx 服务部署的 YAML 文件示例。
+长期运行任务被定义为 Kubernetes 部署。一个部署会创建一个副本集，生成所需数量的复制 Pod。Pod 定义了实际的应用程序或任务。当副本失败时，Pod 会自动重新创建。在本工作的初始实例中，我们假设部署具有单个副本。此外，定义为可移动的长期运行服务必须包含一个标签来指示这一点（键：`rescheduling`，值：`moveable`）。必须指定 CPU 和内存请求，以及 CPU 和内存限制，二者应相等，以确保 Pod 被分配到 Kubernetes `Guaranteed` QoS 类。图 3 展示了定义单副本 nginx 服务部署的 YAML 文件示例。
 
-| 图 3. 定义单副本 nginx 服务部署的 YAML 文件 |
-| --- |
-| ![Figure978-1-7998-2701-6.ch010.f03](img/ch010.f03.png) |
+**图 3. 定义单副本 nginx 服务部署的 YAML 文件**
 
-| 图 4. 定义批处理作业的 YAML 文件 |
-| --- |
-| ![Figure978-1-7998-2701-6.ch010.f04](img/ch010.f04.png) |
+![Figure978-1-7998-2701-6.ch010.f03](img/ch010.f03.png)
 
-######### 算法 2. 最佳适配装箱调度器
+**图 4. 定义批处理作业的 YAML 文件**
+
+![Figure978-1-7998-2701-6.ch010.f04](img/ch010.f04.png)
+
+###### 算法 2. 最佳适配装箱调度器
 
 **输入：** 待调度 Pod `p`
 
@@ -4945,23 +4881,23 @@ return false
 
 关于请求/限制和副本的相同规则也适用于批处理作业。然而，这些是使用 Kubernetes Job 而非 Deployment 定义的，Job 允许定义运行至完成的任务。此外，Job 不能标记为可移动，而必须使用键 `type` 和值 `batch` 进行标记。图 4 展示了定义 Job 的示例 YAML。
 
-######### 成本高效的调度与自动扩缩容算法
+###### 成本高效的调度与自动扩缩容算法
 
 本节描述了在原型系统中提出并实现的算法。该框架的设计灵活，允许在启动系统时使用任意组合的调度、重调度和自动扩缩容算法。
 
-########## 调度
+####### 调度
 
-########### 最佳适配装箱调度器
+######## 最佳适配装箱调度器
 
 通用装箱问题可定义如下。给定 `n` 个不同重量的物品和容量均为 `c` 的箱子，将每个物品分配到一个箱子中，使得使用的箱子总数最小化。针对此问题的在线版本（即物品逐个到达，必须在考虑下一个物品前将当前物品放入箱子）设计了多种贪心解法。其中一种解法称为最佳适配，它将物品放入仍能容纳该物品且未超出箱子容量的最满箱子中。
 
 针对本工作解决的调度问题，物品对应 Pod，箱子对应集群节点。由于 Pod 持续到达等待执行，我们也将该问题视为在线问题。因此，该调度器将传入的待调度 Pod 放置在满足 Pod 要求且可用资源量最小的节点上。然而，此问题并非一维的，因为 Pod 需要两种不同的可用资源：CPU 和内存。我们通过首先筛选出具有足够可用 CPU 的节点，然后从该列表中选择可用内存量最少且至少满足传入 Pod 内存请求的节点来解决此问题。这样做有两个原因。首先，我们的目标是保持算法简单且能快速做出决策。其次，我们认为 CPU 是可压缩资源；即如果超出请求量或节点过载，其使用可被限制。另一方面内存是不可压缩的，其使用无法被限制。阻止 Pod 使用超额内存只能通过终止 Pod 来实现，而缓解节点内存压力只能通过驱逐当前部署在该节点上的 Pod 来实现。
 
-########## 重调度
+####### 重调度
 
 见算法 3。
 
-########### 算法 3. 非绑定重调度器
+######## 算法 3. 非绑定重调度器
 
 **输入：** 不可调度 Pod `p`
 
@@ -4984,23 +4920,21 @@ If age of p is greater than or equal to max_pod_age
                 break
 ```
 
-############ 空重调度器
+######## 空重调度器
 
 空重调度器将直接忽略重调度请求，因此等同于没有重调度能力的系统。
 
-############ 非绑定重调度器
+######## 非绑定重调度器
 
 此重调度器旨在驱逐节点上的可移动 Pod，当且仅当 i) 这些可移动 Pod 可被重新调度到其他位置，且 ii) 通过驱逐这些可移动 Pod，该节点现在拥有足够资源来放置不可调度的 Pod。然而，仅当不可调度 Pod 处于待调度状态的时间至少达到 `max_pod_age` 时才会尝试此操作。其目的是减少不必要的重调度和自动扩缩容决策，因为这给了批处理作业完成的机会，从而为不可调度 Pod 腾出空间。
 
-
-
 基于最佳适配启发式算法，并在关于可压缩和不可压缩资源的假设与最佳适配装箱调度器相同的前提下，非绑定重调度器通过以下方式实现其目标。首先，对节点进行过滤，仅获取那些拥有足够可用 CPU 以容纳不可调度 Pod 的节点。然后，根据这些节点拥有的可用内存量按升序排序。接着，对于这些节点中的每一个，如果一个或多个可移动 Pod 可以在集群中的其他节点上调度，并且该节点释放的内存量足以执行不可调度 Pod，则驱逐这些可移动 Pod，并将这些 Pod 以及不可调度 Pod 留在待调度队列中，以便它们在下一个周期中由调度器进行放置（即非绑定方式）。
 
-########## 绑定重调度器
+######## 绑定重调度器
 
 绑定重调度器的工作方式与非绑定重调度器类似。唯一的区别在于，它不会将被驱逐和不可调度的 Pod 留在待调度队列中，而是由重调度器实际将它们放置在其对应的节点上。
 
-########### 算法 4. 绑定重调度器
+####### 算法 4. 绑定重调度器
 
 **输入：** 不可调度 Pod `p`
 
@@ -5025,19 +4959,21 @@ for each node in nodes
         break
 ```
 
-########## 自动扩缩容
 
-########### 空自动扩缩器
+
+## 自动扩缩容
+
+### 空自动扩缩器
 
 空自动扩缩器将直接忽略扩容和缩容请求，因此等同于一个不具备自动扩缩容能力的系统。
 
-########### 简单自动扩缩器
+### 简单自动扩缩器
 
 每当调用扩容操作时，简单自动扩缩器都会考虑启动一个预定义类型的新实例。启动的实例数量上限为每个 `provisioning_interval` 一个。此限制背后的动机基于以下观察。不可调度 Pod 很可能成批出现。也就是说，如果资源不足以部署一个 Pod，则队列中的下一个待调度 Pod 也可能因资源不足而无法部署。因此，在同一个调度周期中，可能会多次发出扩容请求。这可能导致启动过多的实例，而实际上一个实例可能就足以执行那些不可调度 Pod。事实上，我们根据实例预配延迟的估计值（即虚拟机启动并加入 K8s 集群所需的时间）加上一个小的应急值来设置 `provisioning_interval`。但请注意，该参数可由用户配置。
 
 关于缩容操作，仅当调度周期成功地将队列中所有待调度 Pod 都放置完毕时才会发生。此外，仅考虑动态创建的节点（例如通过扩容创建的节点）进行关闭。如果满足这些条件，首先，取消预配任何没有运行 Pod 的空闲节点。其次，关闭那些仅运行可移动 Pod 且这些 Pod 可以在集群中任何其他节点上放置的节点。第三，如果某节点同时运行可移动 Pod 和批处理 Pod，且其所有可移动 Pod 都可以放置在其他节点上，则将该节点标记为不可调度。如果是这种情况，则驱逐可移动 Pod，留待 Kubernetes 重新创建，并在下一个周期由调度器进行放置。因为该节点已被标记为不可调度，除非严格必要（即没有其他未标记的节点具有足够容量），否则调度器将避免在该节点上放置 Pod。通过这种方式，一旦节点上运行的批处理作业完成，该节点有可能变为空闲，从而在后续的缩容周期中被取消预配。
 
-############ 算法 5. 简单自动扩缩器 – 扩容
+#### 算法 5. 简单自动扩缩器 – 扩容
 
 **输入：** 不可调度 Pod `p`
 
@@ -5049,7 +4985,7 @@ else
     ignore scale out operation
 ```
 
-############ 算法 6. 简单自动扩缩器 – 缩容
+#### 算法 6. 简单自动扩缩器 – 缩容
 
 ```
 if all pending pods were successfully scheduled in the last cycle
@@ -5069,7 +5005,7 @@ if all pending pods were successfully scheduled in the last cycle
                 taint the node as unschedulable
 ```
 
-########### 单实例绑定自动扩缩器
+### 单实例绑定自动扩缩器
 
 该启发式算法类似于单实例自动扩缩器。然而，此自动扩缩器旨在解决非绑定自动扩缩器的一个关键劣势。当不可调度 Pod 未以任何方式绑定或关联到自动扩容启动的节点时，由同一个不可调度 Pod 触发的多次自动扩容请求可能会被调用。这可能导致不必要地启动多个实例。
 
@@ -5077,7 +5013,7 @@ if all pending pods were successfully scheduled in the last cycle
 
 为了进一步防止不必要的节点启动，绑定自动扩缩器在决定是否启动新实例时，会考虑已预配但尚未加入集群的节点。当为不可调度 Pod 发出扩容请求时，自动扩缩器会扫描正在预配过程中的节点列表。如果这些节点中仍有空间容纳该待调度 Pod，则将该 Pod 添加到可能在该节点上运行的 Pod 列表中，并且不启动新实例。
 
-############ 算法 7. 简单绑定自动扩缩器 – 扩容
+#### 算法 7. 简单绑定自动扩缩器 – 扩容
 
 **输入：** 不可调度 Pod `p`
 
@@ -5093,20 +5029,17 @@ when new node is provisioned
     let the scheduler place pods in the new node
 ```
 
-########## 性能评估
+## 性能评估
 
-########### 测试环境与工作负载
+### 测试环境与工作负载
 
-
-
-
-########## 实验验证
+### 实验验证
 
 为了展示所提框架的潜在能力以及自动扩缩容的优势，我们执行了一组验证实验。我们根据表 2 的描述，对由批处理作业和长期运行服务组成的合成工作负载进行了建模。如表 3 所示，我们使用了三种不同的工作负载，它们具有不同的作业到达间隔时间以及作业与服务的组合。为了生成这些工作负载，作业以相等的概率随机选择，它们之间的延迟从具有不同均值的指数分布中采样。对于突发型工作负载，使用了 10 秒的均值，旨在模拟高速率到达的作业。对于缓慢型工作负载，使用了 60 秒的均值。混合型工作负载结合了突发和缓慢的作业到达率。它通过将工作负载分割为多个周期来生成，每个周期要么是突发的，要么是缓慢的。第一个周期随机选择，后续周期交替进行。每个周期中的作业数量随机选择，每个周期的最小作业数为 10。
 
 作业实际上并不使用所请求的资源；然而，这不影响获得的结果，因为请求的目的是验证调度器的功能和性能。
 
-########### 表 2. 评估中使用的作业类型
+#### 表 2. 评估中使用的作业类型
 
 | Name | Task | Memory Requests | CPU Requests |
 | --- | --- | --- | --- |
@@ -5119,7 +5052,7 @@ when new node is provisioned
 | `service_med` | nginx server | 1.4Gi | 200m |
 | `service_large` | nginx server | 2.359Gi | 300m |
 
-########### 表 3. 评估中使用的工作负载
+#### 表 3. 评估中使用的工作负载
 
 | Workload Name | Exponential Dist. Mean (sec) | Number of Batch Jobs | | | Number of Service Jobs | | | Total Batch | Total Service | Total |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -5128,14 +5061,14 @@ when new node is provisioned
 | Slow | 60 | 17 | 11 | 4 | 6 | 7 | 5 | 32 | 18 | 50 |
 | Mixed | 60 slow, 10 bursty | 6 | 7 | 9 | 7 | 11 | 10 | 22 | 28 | 50 |
 
-########### 表 4. Master 和 Worker 节点 VM 规格
+#### 表 4. Master 和 Worker 节点 VM 规格
 
 | VM Type | # of vCPUs | RAM | Operating System |
 | --- | --- | --- | --- |
 | Master: `m2.medium` | 2 | 6 GB | Ubuntu 17.01 |
 | Worker: `m2.small` | 1 | 4 GB | Ubuntu 17.01 |
 
-########### 表 5. 评估中使用的算法专用参数值
+#### 表 5. 评估中使用的算法专用参数值
 
 | Parameter | Value | Algorithm |
 | --- | --- | --- |
@@ -5145,7 +5078,7 @@ when new node is provisioned
 
 Kubernetes 集群部署在 Nectar（Nectar, n.d.）上，这是一个基于 OpenStack 的澳大利亚研究云平台。用于部署 Kubernetes Master 和 Worker 节点的 VM 规格如表 4 所示。自定义架构组件部署在 Nectar 之外的一台 MacBook Pro 上（配置为 2.9 GHz Intel Core i7 处理器和 8 GB 内存），使用的 Kubernetes 版本为 1.10。由于 Nectar 不收取资源使用费，我们根据现有云提供商的计费模型估算每种方法的成本。具体而言，我们假设每个 Worker 的按秒计费为 $0.011，基于 Microsoft Azure 通用型 B2S 实例类型，任何部分使用均向上取整至最近的秒。虽然 Microsoft 按分钟计费，但考虑到实验的性质和规模，我们假设按秒计费，这不会影响结果的显著性。表 5 描述了算法专用参数所使用的值。
 
-########## 结果
+## 结果
 
 首先，我们从成本和调度时长两方面评估每种重调度和自动扩缩容启发式算法的性能。我们将调度时长定义为从提交第一个作业时刻到最后一个批处理作业完成执行时刻所经过的时间。成本根据每个 VM 被提供的时间量进行估算；即从向云提供商发出提供请求的那一刻起，直到发出取消提供请求的那一刻止。对于静态节点，成本基于工作负载的总调度时间进行估算。最后，整个实验过程中只有重调度和自动扩缩容策略发生变化，调度器（最佳适配装箱算法）保持不变。
 
@@ -5161,17 +5094,13 @@ Kubernetes 集群部署在 Nectar（Nectar, n.d.）上，这是一个基于 Open
 
 为了进一步了解所提方法的优势，我们还将其性能与默认 Kubernetes 调度器进行了比较。我们根据每种重调度器/自动扩缩容器组合在成本和调度时长方面的表现给出一个得分，两者权重相同。我们将 Kubernetes 调度器（K8S）与每种工作负载下得分最低（即性能最佳）的两种算法进行比较。结果如图 6 所示。K8S 的成本和调度时间是通过在 K8S 能成功放置并执行所有作业的最少静态节点数上运行每个工作负载来估算的。在重调度器/自动扩缩容器算法组合中，VR 对应 `Void Rescheduler`，NBR 对应 `Non-binding Rescheduler`，NBAS 对应 `Non-binding Autoscaler`，BAS 对应 `Binding Autoscaler`。
 
-
-
-
-
-########### 图 6. 不同工作负载（混合、突发和缓慢）下 k8s 调度器与表现最佳的重调度器/自动扩缩容器组合的成本与调度时长对比。
+#### 图 6. 不同工作负载（混合、突发和缓慢）下 k8s 调度器与表现最佳的重调度器/自动扩缩容器组合的成本与调度时长对比。
 
 ![Figure978-1-7998-2701-6.ch010.f06](img/ch010.f06.png)
 
 对于每种工作负载，与 Kubernetes 调度器相关的成本均明显高于所提方法的相关成本。最大的成本降低出现在缓慢工作负载中，`NBR-BAS` 相比 Kubernetes 默认调度器实现了超过 58% 的成本降低。关于调度时长，我们算法的性能仅略逊于 `K8S`。考虑到在成本方面获得的收益，我们认为这是一个非常合理的权衡。
 
-########### 表 6. 每种重调度器/自动扩缩容器组合的调度性能与资源利用率。
+#### 表 6. 每种重调度器/自动扩缩容器组合的调度性能与资源利用率。
 
 | 工作负载 | 重调度器 | 自动扩缩容器 | 中位数调度时间 (秒) | 平均内存 请求/容量 | 平均 CPU 请求/容量 | 平均 Pod 数/节点 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -5191,6 +5120,9 @@ Kubernetes 集群部署在 Nectar（Nectar, n.d.）上，这是一个基于 Open
 | 突发 | Binding | Non-binding | 297.00 | 0.67 | 0.71 | 2.24 |
 | 突发 | Non-binding | Non-binding | 467.00 | 0.62 | 0.67 | 2.04 |
 | 突发 | Void | Binding | 418.00 | 0.70 | 0.72 | 2.28 |
+
+
+
 | 突发 | Binding | Binding | 354.00 | 0.71 | 0.73 | 2.31 |
 | 突发 | Non-binding | Binding | 388.50 | 0.73 | 0.74 | 2.36 |
 
@@ -5200,7 +5132,7 @@ Kubernetes 集群部署在 Nectar（Nectar, n.d.）上，这是一个基于 Open
 
 关于内存利用率比，所有使用非绑定自动扩缩容器的方法表现最差。这是因为资源被过度预置，从而导致利用率不足。CPU 比率也获得了类似的结果。在突发工作负载上，`NBR-BAS` 方法在更好的利用率方面优势明显，它获得了最高的比率和每节点平均 Pod 数。
 
-########## 结论与未来方向
+## 结论与未来方向
 
 在本工作中，我们提出了将调度器、自动扩缩容器和重调度器集成使用，作为使容器编排系统具备云感知能力的一种机制。其中，调度器优化容器的初始放置；自动扩缩容器使当前资源需求得到满足，并关闭利用率不足或空闲的节点，以提高系统利用率并降低成本；最后，重调度器允许在运行时修订容器的初始放置，以减少碎片并整合负载，从而促进更好的资源利用。我们开发了一个原型系统，作为 Kubernetes（一种广泛使用的开源容器管理系统）的扩展。我们提出、实现并评估了各种重调度和自动扩缩机制。总体而言，我们发现重调度和自动扩缩在最小化计算成本和提高资源效率方面具有明显优势。我们还确定并讨论了未来的研究方向。
 
@@ -5210,19 +5142,15 @@ Kubernetes 集群部署在 Nectar（Nectar, n.d.）上，这是一个基于 Open
 
 应用 QoS 管理是另一个值得探索的改进方向。应用具有特定的 QoS 要求，例如，长期运行的服务通常必须在单位时间内服务最少数量的请求，或有严格的延迟要求。另一方面，批处理作业可能有截止时间作为执行的时间约束，或需要尽可能快地完成。针对第一种场景，许多系统提供基本的自动扩缩机制。它监控服务的 CPU 利用率，如果超过预定义阈值，则启动另一个服务实例。然而，这是一种基线自动扩缩方法，需要将更复杂的方法集成到基于容器的管理系统中。对于批处理作业，对其进行编排并分配资源以满足其 QoS 是另一个开放的研究领域。这一功能在任何开源系统中均不存在，对异构 QoS 约束的支持仍未被探索。
 
-
-
-
-
-########## 资源消耗估算
+## 资源消耗估算
 
 资源消耗估算可用于预测和估算容器在不同时间点消耗的资源量，而不仅仅依赖于为特定容器请求的资源量。原因有二。首先，用户通常会错误估计和高估资源请求。其次，任务的资源消耗可能会随时间变化，峰值消耗仅持续其生命周期的一小部分。这两种情况都会导致资源被预留但大部分时间处于闲置状态，从而导致集群利用率不足。通过监控和估算容器的资源消耗，系统可以做出更好的超售和机会主义调度决策。在所提出的系统原型中，这可以通过利用 `Kubernetes metrics server`、一个用于存储收集到的消耗数据时间序列的 `InfluxDB`，以及专为流式数据设计的在线预测算法（如分层时序记忆（Cui, Ahmad, & Hawkins, 2016））来实现。
 
-###### 致谢
+### 致谢
 
 本工作由墨尔本大学与三星电子（韩国）之间的合作研究协议资助，作为三星 GRO（全球研究推广）计划的一部分。我们感谢徐敏贤对提高本章质量所提供的帮助。
 
-##### 参考文献
+### 参考文献
 
 Bernstein, D. (2014). Containers and cloud: From lxc to docker to kubernetes. *IEEE Cloud Computing*, 1(3), 81–84. doi:10.1109/MCC.2014.51
 
@@ -5278,49 +5206,50 @@ Yin, L., Luo, J., & Luo, H. (2018). Tasks scheduling and resource allocation in 
 
 Zhang, H., Ma, H., Fu, G., Yang, X., Jiang, Z., & Gao, Y. (2016, June). Container based video surveillance cloud service with fine-grained resource provisioning. *Proceedings 2016 IEEE 9th International Conference on Cloud Computing (CLOUD)* (pp. 758-765). IEEE. 10.1109/CLOUD.2016.0105
 
-#### 第 11 章
+# 第 11 章
 
-##### 作者
+## 作者
 
 *   **Chaoran Liu**  
     奥克兰理工大学，新西兰
-
 *   **Wei Qi Yan**  
     奥克兰理工大学，新西兰
 
-##### 摘要
+## 摘要
 
 步态识别主要利用每个个体的不同姿态进行身份认证。在现有方法中，使用全周期步态图像进行特征提取，但在实际场景中存在遮挡和丢帧等问题。获取全周期步态图像并不容易。因此，如何基于少量步态图像构建高效的步态识别算法框架，以提高识别的效率和准确性，已成为步态识别研究的焦点。在本章中，创建了深度神经网络 `CRBM+FC`。基于 `局部二值模式（LBP）` 和 `方向梯度直方图（HOG）` 融合的特征，提出了一种从 `步态能量图像（GEI）` 学习到输出的步态识别方法。提出了一种基于 `LBP` 和 `HOG` 分层融合的全新步态识别算法。本章还提出了一种特征学习网络，该网络使用无监督卷积约束玻尔兹曼机来训练 `步态能量图像（GEI）`。
 
-##### 引言
+## 引言
 
 生物特征识别基于个体独特的生理或行为特征。生物特征识别不像身份证等物理证件那样容易被转移或窃取，具有安全、可靠、方便的特点（Ahonen, Hadid, & Pietikainen, 2006）。步态识别基于人体的行走姿态（Little & Boyd, 1998）。与指纹识别、语音识别、人脸识别等技术相比，步态识别具有采集容易、距离远、接触少、难以伪造等优势，是生物特征识别、计算机视觉、智能监控等领域的热门研究课题（Cunado, et al. 1997）。
 
-
-
-
-
-###### 计算机视觉与步态识别
+### 计算机视觉与步态识别
 
 计算机视觉是包含步态识别的研究领域之一。给定一个包含一个或多个行走姿态的图像序列，广义上的步态识别可分为四个主要阶段：行人检测、行人区域分割、行人跟踪和行人识别（Boykov & Jolly, 2001; Bulat & Tzimiropoulos, 2016; Cao et al., 2017; Tan et al., 2006）。
 
-####### 行人检测阶段
+#### 行人检测阶段
 
 在行人检测阶段，它定位单个视频帧中行人的位置并确定图像大小（Liu & Payandeh, 2018）。
 
-####### 行人分割阶段
+#### 行人分割阶段
 
 在行人分割阶段，基于检测结果执行像素级分割，并将视频中的背景信息移除。
 
-####### 行人跟踪阶段
+#### 行人跟踪阶段
 
 行人跟踪阶段确定目标对象的运动轨迹，并从视频序列中区分不同个体（Foresti, 1999）。
 
-####### 分类与识别阶段
+#### 分类与识别阶段
 
 在分类与识别阶段，它将类标签之一分配给测试步态样本以识别人员（Kusakunniran, 2014）。该过程计算测试样本与注册样本之间的相似度，并根据机器学习规则完成分类。该阶段通常与特征提取相结合，以识别适合分类的类别。根据时间序列方式的步态特征，此类方法可分为两类。
 
-###### 相关工作
+### 相关工作
+
+
+
+# 步态识别研究
+
+## 概述
 
 一般来说，步态识别指的是行人识别（Sarkar et al., 2005; Shiraga et al., 2016），它利用从行人轮廓图中提取的特征来识别人员（Lam et al., 2011; Murase & Sakai, 1996; Wang et al., 2004）。近年来，随着深度学习的发展，例如 `Mask Region-Based Convolutional Neural Network (Mask-RCNN)`，将步态识别应用于实际复杂场景成为可能（He et al., 2017; Lee & Grimson, 2002）。
 
@@ -5332,13 +5261,13 @@ Zhang, H., Ma, H., Fu, G., Yang, X., Jiang, Z., & Gao, Y. (2016, June). Containe
 
 提取步态特征的传统步态识别算法相对简单（Niyogi & Adelson, 1994）。此外，由于遮挡、光照和其他干扰因素的影响，步态识别率通常很低。因此，信息融合理论广泛应用于步态识别。Han 结合 Platts 分析与椭圆傅里叶描述子来匹配人体轮廓以进行步态识别（Han, 2010）。该方法结合了人体的时空运动特征、统计和物理参数来分析步态轮廓形状。然而，它忽略了内部特征。Derlatka 提出了一种基于人体不同步态数据的生物特征系统，结合了动态信息（地面反作用力）和静态信息（如躯干和臀部宽度、大腿长度和身高）（Derlatka & Bogdan, 2015）。该方法需要繁琐的特征提取过程和复杂的信息输入，导致计算过程复杂，无法满足实时需求。本章的组合方法不仅能描述局部纹理信息，还能描述边缘轮廓信息，计算非常简单快捷。
 
-| 图 1. 步态识别通用步骤流程图 |
-| --- |
-| ![Figure978-1-7998-2701-6.ch011.f01](img/ch011.f01.png) |
+### 图 1. 步态识别通用步骤流程图
 
-| 图 2. 分层 LBP 和 HOG 特征 |
-| --- |
-| ![Figure978-1-7998-2701-6.ch011.f02](img/ch011.f02.png) |
+![Figure978-1-7998-2701-6.ch011.f01](img/ch011.f01.png)
+
+### 图 2. 分层 LBP 和 HOG 特征
+
+![Figure978-1-7998-2701-6.ch011.f02](img/ch011.f02.png)
 
 前两层的 `LBP` 和 `HOG` 特征包含相对清晰的纹理特征和轮廓边缘。随着提取层数的增加，图像中可用的信息减少。第三层的信息明显模糊。因此，本章将由三层表示的 `LBP` 和 `HOG` 特征图像进行划分，每层均包含有用信息。如果综合不同层的信息，提取的信息将更加完整和有效。因此，本章采用特征融合方法，即分层 `LBP` 和基于分层 `LBP` 的分层特征融合。该方法首先对 `GEI` 图提取三次 `LBP` 特征，以获得每层的 `LBP` 直方图和每层的 `LBP` 图像，然后在每层的 `LBP` 图像上提取相应的 `HOG` 特征。基于 `LBP` 图像的 `HOG` 特征图像，将每层的 `LBP` 特征直方图和基于 `LBP` 图像的 `HOG` 特征直方图顺序连接，得到每层的融合特征直方图，最后将三层的特征直方图顺序级联，形成最终的融合特征。
 
@@ -5346,97 +5275,89 @@ Zhang, H., Ma, H., Fu, G., Yang, X., Jiang, Z., & Gao, Y. (2016, June). Containe
 
 步态数据集包括训练数据集和测试集。训练集用于训练并生成分类模型；测试集用于评估分类模型的泛化性能。训练集和测试集保持互斥关系；即测试样本不应出现在训练集中（Zheng et al., 2011）。通常，我们使用训练数据集训练模型，并基于测试集评估步态识别方法的优劣。从实际角度来看，识别率是衡量步态识别算法性能的指标。一般来说，识别率越高，算法性能越好。此外，累积识别率和 `ROC` 曲线常用于评估性能（Yu et al., 2006; Yu et al., 2009）。
 
-####### 方法论
+## 方法论
 
 本章采用结合 `HOG`（Viola et al., 2005）和 `LBP`（Han & Bhanu, 2005; Jeevan et al., 2013）的特征。从 `GEI` 提取 `m` 次特征可获得 `m` 级 `LBP` 特征图像（Derlatka & Bogdan, 2015; Yan et al., 2015）。将每级 `LBP` 特征与 `HOG` 特征融合，可获得最终的融合特征。将所有特征顺序连接在一起（Wang et al., 2003）即可得到该 `GEI` 的最终特征，如图 2 所示。
 
-
-
-
-
-###### 深度神经网络架构
+### 深度神经网络架构
 
 本章的深度神经网络由一个卷积受限玻尔兹曼机和一个全连接层网络组成（Begg, Palaniswami & Owen, 2005）。不同于卷积神经网络的监督学习方法（Tao & Maybank, 2007; Yu, et al. 2006），卷积受限玻尔兹曼机是一种无监督学习模型，它通过比较散度算法来学习网络参数，并完成输入图像的特征提取以用于识别和分类（Chen, et al. 2009; Lee, et al. 2009）。本章提出的网络使用 GEI+LBP+HOG 特征作为输入，并分别用 3×3 和 7×7 卷积核对其进行卷积，以获得不同尺度下的异步特征（Xu, et al. 2011）。同时，在卷积受限玻尔兹曼机之后获得步态特征，利用全连接网络将两个不同卷积核获得的特征融合，最终在全连接网络末端利用该特征进行分类识别，如图 3 所示。
 
-| 图 3. 网络结构 |
-| --- |
-| ![Figure978-1-7998-2701-6.ch011.f03](img/ch011.f03.png) |
+### 图 3. 网络结构
+
+![Figure978-1-7998-2701-6.ch011.f03](img/ch011.f03.png)
 
 首先，使用卷积受限玻尔兹曼机（CRBM）进行特征提取；提取的步态特征通过全连接网络进行训练，最后使用 softmax 函数对特征进行分类以获得预测结果；然后将预测结果与真实结果进行比较，计算交叉熵损失。同时，使用反向传播算法优化网络参数。
 
 在卷积受限玻尔兹曼模型训练中设置了两个不同尺寸的卷积核，分别为 3×3 和 7×7 矩阵；每种尺寸各有 32 个卷积核。通过此操作，将发现核尺寸对性能的影响。
 
-####### 实验结果
+## 实验结果
 
 实验旨在研究所提算法的有效性。在实验中，训练数据的行走姿态与测试数据的行走姿态相同，该组实验（训练集-测试集）记为 (nm-nm)、(bg-bg)、(cl-cl)。在跨状态实验中，训练数据集的行走姿态与测试数据集不同，实验（训练集-测试集）包括 (nm-bg) 和 (nm-cl)。数据集中的四个视频序列用于 (nm-nm) 的训练，其余数据用于测试。在 (bg-bg) 和 (cl-cl) 中，一半数据用作训练集，一半用作测试集。在跨状态实验 (nm-bg) 和 (nm-cl) 中，nm 中的四个视频序列作为训练集，bg 和 cl 中的所有数据作为测试集。表 2 展示了我们的实验策略。
 
 表 1 展示了已建立的步态识别数据库。目前，这些数据库缺乏普适性和广泛的适用性。目前最大的步态数据库是英国南安普顿大学创建的 Soton Big Gait Database，以及中国科学院自动化研究所（CASIA）创建的多视角步态数据库（CASIA-B）和红外步态数据库（CASIA-C）。此外，CASIA-C 数据库是目前唯一公开可用的大规模红外步态数据库。USMT 步态数据库是目前为数不多的可用 3D 步态库之一。
 
-####### 表 1. 现有的步态识别数据库
+### 表 1. 现有的步态识别数据库
 
-| ![Figure978-1-7998-2701-6.ch011.g01](img/ch011.g01.png) |
+![Figure978-1-7998-2701-6.ch011.g01](img/ch011.g01.png)
 
-####### 图 4. 最终融合特征
+### 图 4. 最终融合特征
 
-| ![Figure978-1-7998-2701-6.ch011.f04](img/ch011.f04.png) |
+![Figure978-1-7998-2701-6.ch011.f04](img/ch011.f04.png)
 
-####### 图 5. LBP 和 HOG 特征提取组合流程图
+### 图 5. LBP 和 HOG 特征提取组合流程图
 
-| ![Figure978-1-7998-2701-6.ch011.f05](img/ch011.f05.png) |
+![Figure978-1-7998-2701-6.ch011.f05](img/ch011.f05.png)
 
 计算得到的步态能量图被输入神经网络进行训练，卷积受限玻尔兹曼机的重构误差如图 6 所示。
 
-####### 图 6. 重构误差
+### 图 6. 重构误差
 
-| ![Figure978-1-7998-2701-6.ch011.f06](img/ch011.f06.png) |
+![Figure978-1-7998-2701-6.ch011.f06](img/ch011.f06.png)
 
 在图 6 中，初始重构误差较大，因为参数是随机初始化的。经过几轮带参数更新的迭代后，误差迅速下降并逐渐趋于一个固定值或在一个小范围内波动。
 
 全连接层网络的训练基于交叉熵损失函数，通过迭代更新网络参数以获得优化的网络模型。训练过程中，训练误差曲线如图 7 所示。迭代后，训练误差逐渐减小并趋于稳定，这表明模型已收敛。
 
-####### 图 7. 训练误差曲线
+### 图 7. 训练误差曲线
 
-| ![Figure978-1-7998-2701-6.ch011.f07](img/ch011.f07.png) |
+![Figure978-1-7998-2701-6.ch011.f07](img/ch011.f07.png)
 
 该方法的验证也在自拍视频上进行了测试，我们对数据集进行标记用于训练和测试。图 8 展示了实验研究结果。
 
-####### 图 8. 正确结果显示在单个框中，错误结果显示在多个框中。
+### 图 8. 正确结果显示在单个框中，错误结果显示在多个框中
 
-| ![Figure978-1-7998-2701-6.ch011.f08](img/ch011.f08.png) |
+![Figure978-1-7998-2701-6.ch011.f08](img/ch011.f08.png)
 
 在本实验中，对比了算法在三个步态数据集上、在 2×4、4×4、4×8、8×8、8×16、16×16、16×32 个分块下的识别率。获得了最佳分块，结果如图 9 所示。
 
 在图 9 中，最佳分块为 8×8。过大或过小的分块都会影响识别率，因为过大的分块无法提取准确合适的局部特征；而过小的分块对图像配准和人体运动敏感，提取的全局和局部特征不准确。
 
-####### 图 9. 分块大小对准确率的影响
+### 图 9. 分块大小对准确率的影响
 
-| ![Figure978-1-7998-2701-6.ch011.f09](img/ch011.f09.png) |
+![Figure978-1-7998-2701-6.ch011.f09](img/ch011.f09.png)
 
 本章在评估算法性能时，采用“留一交叉验证法”获得正确分类率（CCR）的无偏估计；即每次实验保留一个样本序列作为测试样本，其余样本序列作为 ANN 的训练样本（Rida, et al. 2016），根据与训练样本的相似度进行分类（Han, 2010）。为了对比本章融合特征的优势，对比了 Original-GEI（Han & Bhanu, 2005）、GEI+LBP+PCA（Sivapalan, et al. 2013）、Bayes+HMM（Chen, et al. 2009）和 Integrated-HOG（Viola, et al. 2005）的识别率。结果如表 2 所示。
 
-####### 表 2. 不同特征提取方法的 CCR
+### 表 2. 不同特征提取方法的 CCR
 
-| ![Figure978-1-7998-2701-6.ch011.g02](img/ch011.g02.png) |
+![Figure978-1-7998-2701-6.ch011.g02](img/ch011.g02.png)
 
 此外，累积匹配分数（CMS）也被应用于评估。CMS 定义为测试度量实际类别在其前序秩值（例如 Rank = 10）处的累积概率。CCR 是 Rank 等于 1 时的累积识别率。五种方法的 CMS 分别如表 3 所示。
 
-####### 表 3. 跨状态测试结果
+### 表 3. 跨状态测试结果
 
-| ![Figure978-1-7998-2701-6.ch011.g03](img/ch011.g03.png) |
-
-
-
-
+![Figure978-1-7998-2701-6.ch011.g03](img/ch011.g03.png)
 
 使用 CASIA-B 数据集的卷积核识别率优于 `3×3` 卷积核的识别结果，特征融合基于 `3×3` 和 `7×7` 卷积核。后续识别准确率优于或等于单一卷积核的识别准确率。同时，本章将所提方法与其他现有方法 GPPE、GEI、STIPs 及基于 CNN 的方法进行了比较。在表 3 中，所提方法在同一状态实验（nm-nm）和（cl-cl）中略低于现有基于深度学习的方法，因为后者使用了更深的网络。在跨状态实验中，该方法表现更好，表明本章方法在鲁棒性方面更优。此外，跨状态的准确率低于其他现有方法，因为传统方法可通过针对性设计特征进行识别，而深度学习需要更多步态姿态进行训练以增强网络的泛化能力。然而，仅有一种步态状态会导致网络泛化能力较差；因此，跨状态的实验结果不优于现有方法。
 
-####### 结论
+## 结论
 
 本章构建了用于人体步态识别的深度神经网络 `CRBM+FC`。基于 LBP 和 HOG 融合，提出了一种从 GEI 到输出的端到端深度学习步态识别方法。本文还提出了一种基于步态能量图的步态识别算法。该方法采用分层思想克服了步态能量图的缺陷，不仅捕捉人体图像的局部信息，还提取其轮廓和形状信息。这些信息的融合基于 CASIA 步态数据集。本章的识别算法实现了较高的识别率。文中提出了一种由卷积受限玻尔兹曼机和全连接神经网络组成的特征学习网络。该网络首先利用不同卷积核的特征受限玻尔兹曼机从步态图像中提取特征；由于卷积受限玻尔兹曼机是无监督的，它们能够广泛且丰富地学习。尽管学习到了丰富的步态特征信息，但必然存在冗余和不太有用的信息。因此，本文使用有监督的全连接层网络对这些特征进行深度学习。
 
 在单一场景中，步态的检测和提取相对简单。然而，在复杂的实际场景中，背景和多个个体等因素的复杂性使得难以准确获取步态。不准确的步态信息直接影响最终的识别效率和准确性（Sivapalan 等，2013）。
 
-##### 参考文献
+## 参考文献
 
 Ahonen, T., Hadid, A., & Pietikainen, M. (2006). Face description with local binary patterns: Application to face recognition. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 28(12), 2037–2041. doi:10.1109/TPAMI.2006.244
 
@@ -5455,6 +5376,10 @@ Cunado, D., Nixon, M. S., & Carter, J. N. (1997). Using gait as a biometric, via
 Dalal, N., & Triggs, B. (2005). Histograms of oriented gradients for human detection. *Proceedings International Conference on Computer Vision & Pattern Recognition*, 1, 886–893. IEEE.
 
 DerlatkaM.BogdanM. (2015). Fusion of static and dynamic parameters at decision level in human gait recognition. *Proceedings International Conference on Pattern Recognition and Machine Intelligence* (pp. 515-524). Springer. 10.1007/978-3-319-19941-2\_49
+
+
+
+# 参考文献
 
 Foresti, G. L. (1999). Object recognition and tracking for remote video surveillance. *IEEE Transactions on Circuits and Systems for Video Technology*, 9(7), 1045–1062. doi:10.1109/76.795058
 
@@ -5488,12 +5413,6 @@ RidaI.BoubchirL.Al-MaadeedN.Al-MaadeedS.BouridaneA. (2016). Robust model-free ga
 
 Sarkar, S., Phillips, P. J., Liu, Z., Vega, I. R., Grother, P., & Bowyer, K. W. (2005). The humanid gait challenge problem: Data sets, performance, and analysis. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 27(2), 162–177. doi:10.1109/TPAMI.2005.39
 
-
-
-
-
-##### 参考文献
-
 Shin, J., Kim, S., Kang, S., Lee, S. W., Paik, J., Abidi, B., & Abidi, M. (2005). Optical flow-based real-time object tracking using non-prior training active feature model. *Real-Time Imaging*, 11(3), 204–218. doi:10.1016/j.rti.2005.03.006
 
 Shiraga, K., Makihara, Y., Muramatsu, D., Echigo, T., & Yagi, Y. (2016). Geinet: View-invariant gait recognition using a convolutional neural network. *Proceedings International Conference on Biometrics (ICB)* (pp. 1-8). IEEE. doi:10.1109/ICB.2016.7550060
@@ -5524,16 +5443,17 @@ Zhao, N., Zhang, L., Du, B., Zhang, L., Tao, D., & You, J. (2016). Sparse tensor
 
 Zheng, S., Zhang, J., Huang, K., He, R., & Tan, T. (2011). Robust view transformation model for gait recognition. *Proceedings IEEE International Conference on Image Processing* (pp. 2073-2076). doi:10.1109/ICIP.2011.6115889
 
-#### 第 12 章
+# 第 12 章
 
-**Avila Jayapalan**  
+**Avila Jayapalan**
+
 SASTRA University (Deemed), India
 
-##### 摘要
+## 摘要
 
 随着无线技术的飞速发展，正交频分复用（`OFDM`）近年来越来越受欢迎。`OFDM` 构成了当前许多无线传输标准的基本骨干。它是一种多载波调制方案，克服了因多径传播导致的 `ISI`（符号间干扰）而需要均衡器的问题。在本工作中，利用源编码、信道编码、`IFFT-FFT`、扰码器、循环前缀和信号映射器等各种模块开发了一个基于 `OFDM` 的收发器。为确保数据传输安全，哈达玛矩阵与数据进行 `XOR`（异或）运算。这为传输的图像提供了一定程度的低级保护。`LabVIEW` 已被用作处理工具来开发收发器，并利用通用软件无线电外设（`USRP`）测试了开发的原型。
 
-##### 绪论
+## 绪论
 
 无线系统的发展因其成本较低且易于使用，为全球连接敞开了大门。但是，即使存在这些优势，仍需应对一个称为多径衰落的严重问题，它会导致符号间干扰（`ISI`）或串扰。
 
@@ -5543,47 +5463,49 @@ SASTRA University (Deemed), India
 
 在时域中，这些子载波将表现为这些载波频率上的永恒正弦波。然而，为了在这些子载波上传输数据，它们被加载了调制符号，这些符号代表数字调制方案（如正交相移键控（`QPSK`）和 M 阵正交幅度调制（`QAM`））（Sklar & Ray, 2001）的星座点。
 
-##### 图像获取
+## 图像获取
 
 本工作强调仅传输灰度图像（Saravanan, 2010）。灰度图像是一种图像类型，其中每个像素元素中的值仅代表光的量，即强度。灰度级由 `2^n` 给出，其中 `n` 是考虑的位数。由于重点是 8 位灰度图像，因此有 `2⁸` 即 256 个级别，范围从 0 到 255。考虑的输入数据是一幅 `256*256` 的灰度图像。
 
-##### 安全性
+## 安全性
 
 加密是对数据进行编码的过程，使得只有拥有加密密钥的人才能访问数据（Balouch, Aslam, & Ahmed, 2017）。在发射端，阵列元素根据加密密钥进行打乱；而在接收端，接收到的数据根据相同的密钥进行重新排序，从而恢复原始传输的数据。为了确保通过 `OFDM` 收发器传输的图像具有一定程度的低级安全性，哈达玛序列被 `XOR`（异或）运算。
 
+
+
+# 哈达玛矩阵与基于 USRP 的 OFDM 收发机设计
+
+## 哈达玛矩阵
+
 哈达玛矩阵是一个由 1 和 -1 两个值组成的方阵，其行彼此正交。这可以用两个基本术语来解释。从几何术语来看，每一对行都是相互垂直的向量；从组合术语来看，可以说每一对行恰好有一半的元素匹配。某些哈达玛矩阵被用作纠错码，如哈达玛码。哈达玛矩阵也用于低规模加密目的，因为将图像与同尺寸的哈达玛矩阵相乘会产生一幅打乱的图像（Lee, Shahab, Kader & Shin, 2016）。
 
-##### USRP
+## USRP
 
-
-
-
-
-###### 使用 LabVIEW 工具开发的收发机随后利用 USRP 实现
+### 使用 LabVIEW 工具开发的收发机随后利用 USRP 实现
 
 USRP 软件定义无线电设备是一种可调谐的收发机（Nafkha, Naoues, Cichon, & Kliks, 2014）。利用 LabVIEW 软件工具可设计任意无线系统，并通过使用 USRP 发送和接收信号来分析各种参数。
 
 本工作旨在开发基于 OFDM 的收发机，其中包括源编码、信道编码、信号映射器、扰码器-解扰码器、IFFT-FFT 模块，均借助 LabVIEW 工具实现。图像利用 Hadamard 序列加密，并通过 USRP 进行发送和接收。
 
-###### 相关工作
+### 相关工作
 
 在 Serkin & Vazhenin (2013) 中，作者讨论了通过 USRP 进行数据传输。设计并分析了基于 Simulink 的 FSK 发射机和接收机。在 Jian Chen, Shengli Zhang, Hui Wang & Xiufeng Zhang (2013) 中，利用 USRP 传输了两类信号。一类是 FM 信号，另一类是 GPS 信号。两种信号均被接收并记录。在 Nagarjuna Telagam, Shailender Reddy, Menakadevi Nanjundan & Nehru (2018) 中，使用 LabVIEW 工具设计了基于 OFDM 的收发机，并利用 USRP 进行信号发送和接收。在 Rupali B. Patil, K. D. Kulat & A. S. Gandhi (2018) 中，通过 USRP 传输和接收了真实视频信号。同时将视频信号视为主用户，并利用基于能量检测的频谱感知检测白空的存在。使用 GNU Radio 作为处理工具。在 Carsten Andrich, Alexander Ihlow, Julia Bauer, Niklas Beuster & Giovanni Del Galdo (2018) 中，利用 USRP 对正弦和脉冲参考信号进行了高精度测量。在 C. I. M. Althaf & S. C. Prema (2018) 中，利用特征值法进行了频谱感知。在 Shujaat Ali Khan Tanoli, Mubashir Rehman, Muhammad Bilal Khan, Ihtesham Jadoon, Farman Ali Khan, et al. (2018) 中，利用 USRP 分析了协作环境下的信道容量。在 A. Kumar, A. S. Khan, N. Modanwal & S. Saha (2019) 中，使用能量检测法和特征值法检测主用户的存在。决策时考虑的不是最小特征值，而是平均特征值。在 Nagarjuna Telagam, S. Lakshmi & K. Nehru (2019) 中，利用广义频分复用技术传输和接收了数字音频信号。在 J. Muslimin, A. L. Asnawi, A. F. Ismail & A. Z. Jusoh (2016) 中，使用 GNU Radio 开发了一个采用高斯最小频移键控 (GMSK) 作为调制方案的简单数字通信系统。发送和接收信号后，绘制并分析了功率谱密度。在 Devidas Kushnure, Murtaza Jiniyawala, Sushama Molawade & Snehal Patil (2017) 中，设计了调频发射机和接收机，并传输了音频信号。仿真信号证明了发射信号与接收信号相似。除了 USRP 接收机外，音频信号还通过手机接收。在 Fei Peng, Shunqing Zhang, Shan Cao & Shugong Xu (2018) 中，根据实时场景修改了 LTE 框架，并得出结论：需要 4dB 回退以支持可靠的车车通信。
 
 在 Padmapriya Praveenkumar, P. Catherine Priya, J. Avila1, K. Thenmozhi, ohn Bosco Balaguru Rayappan et al. (2017) 中，对图像进行加密以防止入侵者窃取，并通过空气介质利用 USRP 传输加密图像。在接收端恢复了原始图像。作者主要关注加密算法。本文主要关注基于 USRP 的数据传输。
 
-####### 提出的方法
+### 提出的方法
 
-Huffman 编码是一种无损压缩技术（Arshad, Saleem, Khan, 2016）。在利用 Hadamard 矩阵进行扰码后，采用了 Huffman 编码。该扰码单元的输出（即一组扰乱后的像素值）被写入文件。计算这些值（即符号值）的直方图并写入文件。该直方图将给出图像包含的唯一像素值。通过将每个像素的出现次数除以输入图像中存在的总像素数，计算每个像素的出现概率，并写入文件。编码后的值被写入文件，由 `Permute` 模块读取以进行后续处理。在接收端，解压缩在解扰后进行。该解码器的输出被写入文件，供后续处理阶段使用。
+`Huffman` 编码是一种无损压缩技术（Arshad, Saleem, Khan, 2016）。在利用 Hadamard 矩阵进行扰码后，采用了 `Huffman` 编码。该扰码单元的输出（即一组扰乱后的像素值）被写入文件。计算这些值（即符号值）的直方图并写入文件。该直方图将给出图像包含的唯一像素值。通过将每个像素的出现次数除以输入图像中存在的总像素数，计算每个像素的出现概率，并写入文件。编码后的值被写入文件，由 `Permute` 模块读取以进行后续处理。在接收端，解压缩在解扰后进行。该解码器的输出被写入文件，供后续处理阶段使用。
 
-####### 置换
+### 置换
 
-Huffman 编码后的输入比特被送入 `MT Permute` 模块。该模块根据置换数组参数中指定的值改变输入数据元素的位置。置换数组参数是一个用户指定元素的数组，作为双端加密的密钥。置换越彻底，加密越安全。此外，随着置换数组参数中数组元素数量的增加以及所用置换器数量的增加，加密等级可能会提高。在接收端，通过将相同的置换数组参数作为输入送入 `MT depermute` 模块来执行解密。这将根据置换数组元素的位置重新排列接收到的数据。
+`Huffman` 编码后的输入比特被送入 `MT Permute` 模块。该模块根据置换数组参数中指定的值改变输入数据元素的位置。置换数组参数是一个用户指定元素的数组，作为双端加密的密钥。置换越彻底，加密越安全。此外，随着置换数组参数中数组元素数量的增加以及所用置换器数量的增加，加密等级可能会提高。在接收端，通过将相同的置换数组参数作为输入送入 `MT depermute` 模块来执行解密。这将根据置换数组元素的位置重新排列接收到的数据。
 
-####### 信道编码
+### 信道编码
 
 信道编码使用 `MT BCH encoder`（Mathew, Augustine, G. & Devis, 2014）和 `MT BCH decoder` 模块执行。在该系统中，采用了 BCH 编码器和解码器，其中 `(n, k, t) = (7, 4, 1)`。该编码方案接收一个 `k` 比特的数据字，并产生一个 `n` 比特的码字。BCH 编码后，编码数据被转换为布尔型，并送往后续的比特到字转换阶段。
 
-####### 利用 Hadamard 矩阵进行数据隐藏
+### 利用 Hadamard 矩阵进行数据隐藏
 
 设 `H` 为 `n` 阶 Hadamard 矩阵。Hadamard 矩阵的构造如下：
 
@@ -5591,7 +5513,7 @@ Huffman 编码后的输入比特被送入 `MT Permute` 模块。该模块根据�
 
 其中 `2^k` 表示 Hadamard 矩阵的阶。第一行和第一列的所有元素均为 `1`。像素矩阵与 `256*256` Hadamard 矩阵相乘，产生扰乱后的输出图像。与发射端的过程类似，接收端接收到的像素值必须进行解扰。由于根据上述性质 Hadamard 矩阵等于其逆矩阵，因此将扰乱后的二维数组再次乘以同一 `256` 阶 Hadamard 矩阵，以重现输入图像。
 
-####### FFT 和 IFFT
+### FFT 和 IFFT
 
 傅里叶变换是分析信号并从其频率分量构建信号的有力工具。逆傅里叶变换用于将信号从频域转换到时域。在发射端，OFDM 符号通过将输入比特映射到 QPSK 符号，然后根据 OFDM 符号中的子载波数量按特定长度对其进行排序，在频域中构建。也就是说，通过映射和排序过程，构建了 OFDM 符号的频率分量。为了发射它们，信号必须在时域中表示。这通过逆快速傅里叶变换 (IFFT) 实现。在 OFDM 系统的接收部分，使用了快速傅里叶变换。快速傅里叶变换用于将接收信号从时域转换回频域，以便在系统的其余部分处理信号。
 
@@ -5599,20 +5521,16 @@ Huffman 编码后的输入比特被送入 `MT Permute` 模块。该模块根据�
 
 ![Mathtype978-1-7998-2701-6.ch012.m03](img/ch012.m03.svg) (3)
 
-其中，
+其中：
 
 *   `X[k]` 为频域采样值
 *   `x[n]` 为时域采样值
 *   `K` 取值范围为 `0` 到 `(N-1)`
 *   `N` 为 FFT 规模
 
-####### 图像重建
+### 图像重建
 
-
-
-
-
-###### 接收端
+#### 接收端
 
 在接收端，需要重建处理后的像素值。像素值以一维数组的格式接收。为了将其描绘为图片，必须将一维数组转换为二维数组。因此，使用数组调色板中的 `reshape array` 块，其中行和列维度均设为 256。这样便获得了二维表示。这些像素使用图形和声音调色板中的 `Flatten pixmap` 块进行扁平化处理。8 位灰度图像的相应色表也作为输入给出。输出可以写入文件或使用指示器显示。结合上述讨论的模块，所提方法的发射端和接收端框图如图 1a 和图 1b 所示。
 
@@ -5624,7 +5542,7 @@ Huffman 编码后的输入比特被送入 `MT Permute` 模块。该模块根据�
 | --- |
 | ![Figure978-1-7998-2701-6.ch012.f01b](img/ch012.f01b.png) |
 
-###### USRP 传输
+#### USRP 传输
 
 USRP 是无线系统公认的原型平台。实验装置如图 2 所示。使用两台 USRP。一台 USRP 作为发射机，另一台作为接收机。实验在室内进行，以空气为传输介质。待传输的图像被转换为一维数组并发射。在接收端执行反向过程，图像得以恢复。
 
@@ -5632,7 +5550,7 @@ USRP 是无线系统公认的原型平台。实验装置如图 2 所示。使用
 | --- |
 | ![Figure978-1-7998-2701-6.ch012.f02](img/ch012.f02.png) |
 
-###### 结果与讨论
+## 结果与讨论
 
 软件仿真涉及输入 256×256 灰度图像的可观传输与接收，以及通过仿真 AWGN 噪声信道模型在接收端的正确重建。结合上述获得的参数值，软件仿真结果在 `LabVIEW` 平台上进行测试。所提方法包括在发射端按给定顺序串联低级加密模块：使用哈达马矩阵、BCH 编码器、置换器、符号映射、`IFFT` 块、循环前缀插入和加窗。上述模块使用 `LabVIEW` 中各种信号处理和射频通信调色板中的不同模块构建。获得的仿真结果在框图窗口和前面板窗口中以特写形式展示如下。
 
@@ -5696,7 +5614,7 @@ USRP 的前面板如图 11a 和图 11b 所示。
 | --- |
 | ![Figure978-1-7998-2701-6.ch012.f11b](img/ch012.f11b.png) |
 
-###### 性能指标
+## 性能指标
 
 本文考虑的性能指标为均方误差 (MSE)（Romi Singh, Shipra Sharma & Shikha Singh, 2014）和峰值信噪比。两幅图像间的 MSE 计算公式为：
 
@@ -5708,7 +5626,7 @@ USRP 的前面板如图 11a 和图 11b 所示。
 
 已获得结果以寻找 BCH 编码器参数 (n, k, t) 的最优值。所有结果均基于置换数组为 `[2 0 1 3 4]` 的假设获得。
 
-####### 表 1. 不同 BCH 编码块 (n,k,t) 的 MSE 和 PSNR 值
+### 表 1. 不同 BCH 编码块 (n,k,t) 的 MSE 和 PSNR 值
 
 | 序号 | BCH (n, k, t) | BCH 编码比特数 | 字数 | MSE | PSNR |
 | --- | --- | --- | --- | --- | --- |
@@ -5716,42 +5634,39 @@ USRP 的前面板如图 11a 和图 11b 所示。
 | 2 | (15,11,1) | 681810 | 340905 | 4.4806 | 41.617 |
 | 3 | (15,7,2) | 1071420 | 535710 | 4.1003 | 42.0027 |
 | 4 | (15,5,3) | 1500000 | 750000 | 3.7412 | 42.4006 |
-
-
-
-
-
-| 5 || (31,26,1) || 596130 || 298065 || 5.0051 || 41.13 |
-| 6 || (31,16,3) || 968750 || 484375 || 3.7412 || 42.4006 |
-| 7 || (63,51,2) || 617589 || 308795 || 6.3971 || 40.0710 |
-| 8 || (63,36,5) || 874944 || 437472 || 5.6426 || 40.6160 |
+| 5 | (31,26,1) | 596130 | 298065 | 5.0051 | 41.13 |
+| 6 | (31,16,3) | 968750 | 484375 | 3.7412 | 42.4006 |
+| 7 | (63,51,2) | 617589 | 308795 | 6.3971 | 40.0710 |
+| 8 | (63,36,5) | 874944 | 437472 | 5.6426 | 40.6160 |
 
 从表 1 的结果可以看出，编码器 `(n, k, t)` 取值为 `(7, 4, 1)`、`(15, 5, 3)` 和 `(63,51, 2)` 时可获得最大 PSNR。此处通过同时考虑编码位数的权衡来寻找最优值。编码位数越少，符号数越少，因此跨信道传输所需的子载波数也越少。通过观察上述结果表可知，采用参数 `(7, 4, 1)` 进行编码，可获得 42.4006 的最大 PSNR 值。因此，为进一步测试以寻找置换数组，`(n, k, t)` 值固定为 `(7, 4, 1)`。表 2 给出了通过改变置换数组获得的 MSE 和 PSNR 值。
 
-####### 表 2. 不同置换数组的 MSE 和 PSNR
+### 表 2. 不同置换数组的 MSE 和 PSNR
 
-| 级别 || 置换数组 || MSE || PSNR |
+| 级别 | 置换数组 | MSE | PSNR |
 | --- | --- | --- | --- |
-| 1. || `[2 0 1]` || 4.1003 || 42.0037 |
-| --- | --- | --- | --- |
-| 2. || `[2 0 1 3 4]` || 3.7412 || 42.4006 |
-| 3. || `[3 0 5 2 4 1]` || 4.1003 || 42.0027 |
-| 4. || `[6 0 5 2 4 1 3]` || 4.0516 || 42.0545 |
-| 5. || `[6 0 5 2 7 1 3 4 ]` || 3.3712 || 42.4006 |
+| 1. | `[2 0 1]` | 4.1003 | 42.0037 |
+| 2. | `[2 0 1 3 4]` | 3.7412 | 42.4006 |
+| 3. | `[3 0 5 2 4 1]` | 4.1003 | 42.0027 |
+| 4. | `[6 0 5 2 4 1 3]` | 4.0516 | 42.0545 |
+| 5. | `[6 0 5 2 7 1 3 4 ]` | 3.3712 | 42.4006 |
+
+
+
 | 6. || `[6 0 8 2 7 1 3 4 5]` || 4.7078 || 41.4026 |
 | 7. || `[6 9 10 2 7 1 3 4 5 0 8]` || 4.9396 || 41.1939 |
 
 分析表 2 可知，置换数组 `[2 0 1 3 4]` 给出了最大 PSNR 值，因此这些 `(n, k, t)` 参数值和置换数组可固定下来，配合通用软件无线电外设 (`USRP-2920`) 硬件组件一起使用。
 
-####### 结论
+### 结论
 
 本工作专注于使用 LabVIEW 工具开发基于 OFDM 的收发器，并利用 OFDM 收发器传输数据。借助 USRP 实现了这一点，因为它是无线系统公认的通用原型。为克服信道噪声，采用了 BCH 编码方案。为确保数据安全，数据与 Hadamard 矩阵进行异或运算。这为传输数据提供了低级别的保护。该工作可通过用强加密算法替换 Hadamard 矩阵来扩展。这以复杂度增加为代价确保了高级别的保护。
 
-###### 致谢
+### 致谢
 
 作者谨向 SASTRA 视同大学表示衷心感谢，感谢其提供的 R&M 基金资助 (`R&M / 0027 / SEEE – 010 / 2012 – 13`) 以支持开展这项研究工作。
 
-##### 参考文献
+### 参考文献
 
 AlthafC. I. M.PremaS. C. (2018). Covariance and eigenvalue-based spectrum sensing using USRP in real environment. 10th International Conference on Communication Systems & Networks (COMSNETS), 414-417. 10.1109/COMSNETS.2018.8328231
 
@@ -5801,24 +5716,18 @@ Telagam, , N., Lakshmi, S., & Nehru, K. (2019). Digital Audio Broadcasting Based
 
 Telagam, N., Reddy, S., Nanjundan, M., & Nehru, K. (2018). USRP 2901 Based MIMO-OFDM Transceiver in Virtual and Remote Laboratory. International Journal on Computer Science and Engineering , 6, 1033–1040.
 
-#### 第 13 章
+## 第 13 章
 
 *   Amany Sarhan
-
-
-
-
-工程学院计算机与控制工程系，坦塔大学，埃及
-
+    工程学院计算机与控制工程系，坦塔大学，埃及
 *   Ahmed Ramadan
-
     工程学院计算机与控制工程系，坦塔大学，埃及
 
-##### 摘要
+### 摘要
 
-如今，触摸屏移动设备在市场中占据更大份额，这使得持续认证基于触摸的设备用户的有效且稳健的方法成为必要。本文提出了一个分类框架，该框架学习用户的触摸行为，随后能够通过监控用户执行输入触摸动作时的行为来认证用户。构建了两种特征模型：低级特征（笔画级）模型或高级抽象特征（会话级）模型。在构建这些模型时，对两种不同的特征选择和数据分类方法进行了权衡：加权特征法和主成分分析（PCA）。使用了两种分类算法：人工神经网络（ANN）和支持向量机（SVM）。实验结果表明，利用会话级特征比笔画级特征更有希望实现触摸输入用户的持续认证。作者发现，在构建会话级模型时使用加权特征法和人工神经网络，能产生最高效、最准确的行为生物特征持续用户认证。
+如今，触摸屏移动设备在市场中占据更大份额，这使得持续认证基于触摸的设备用户的有效且稳健的方法成为必要。本文提出了一个分类框架，该框架学习用户的触摸行为，随后能够通过监控用户执行输入触摸动作时的行为来认证用户。构建了两种特征模型：低级特征（笔画级）模型或高级抽象特征（会话级）模型。在构建这些模型时，对两种不同的特征选择和数据分类方法进行了权衡：加权特征法和主成分分析（`PCA`）。使用了两种分类算法：人工神经网络（`ANN`）和支持向量机（`SVM`）。实验结果表明，利用会话级特征比笔画级特征更有希望实现触摸输入用户的持续认证。作者发现，在构建会话级模型时使用加权特征法和人工神经网络，能产生最高效、最准确的行为生物特征持续用户认证。
 
-##### 引言
+### 引言
 
 随着移动计算设备及其访问银行等安全服务和其他交易的应用日益普及，保护移动设备上的用户数据变得日益重要。数字技术如今已成为生活的一部分。从网上购物到网上银行、政府事务和商业基础设施，保护这一大量数据发挥着至关重要的作用。数据可以通过各种软硬件技术来保护（Karnan 等，2011；Ouaguid 等，2018；Olakanmi & Dada, A. 2019）。
 
@@ -5832,12 +5741,11 @@ Telagam, N., Reddy, S., Nanjundan, M., & Nehru, K. (2018). USRP 2901 Based MIMO-
 
 从易用性角度来看，传统认证方案（即密码、PIN 码或图形图案）不方便，因为用户每次开始与设备交互时都必须专注于认证步骤。当我们考虑移动设备时，这种不便成为一个重大问题，因为移动设备被频繁访问，且每次使用通常时间较短。
 
+
+
 另一个重大问题是，用户大多选择易记的密码，如前所述，这很容易被窃取。即使是最强大的密码也可能被字典攻击、窥视攻击、暴力破解攻击，或近期的社会工程学攻击窃取，此外还可能被遗忘。这促使研究人员转向生物特征识别，如指纹、虹膜扫描、人脸识别和语音识别，作为更方便、安全的认证方法，但这带来了另一个问题：许多基于生物特征的认证方法要么成本高昂、要么不方便、要么实施复杂。为了解决上述问题，大多数研究如 Mahfouz 等（2017）、Fierrez 等（2018）、Yampolskiy and Govindaraju（2008）以及 Song Fierrez 等（2017）引入了行为生物特征认证方法，这些方法考虑了固有因素，即用户“所是”的东西。这些方法依赖于监控用户在使用鼠标、键盘和触摸屏等输入外设与设备交互时的行为。
 
-
-
-
-###### 触摸屏输入动作作为行为生物特征认证
+## 触摸屏输入动作作为行为生物特征认证
 
 本文关注触摸屏输入动作作为一种行为生物特征认证方法，通过监控和分析用户如何与触摸屏移动设备交互来识别用户。触摸屏交互数据的监控可应用于用户能执行的最简单手势层面，即手指触摸屏幕然后抬起，这被称为**笔划**。笔划是用户将手指放在屏幕上然后释放时形成的轨迹（Eljetlawi, 2010）。根据记录这些动作的采样率，每个笔划由若干触摸动作组成。另一个监控层面是**会话层面**，可在其中记录和处理多个笔划作为一个整体，称为**触摸会话**。这不同于前述的笔划层面，后者将每个单独的笔划作为一个独立的信息单元进行处理。
 
@@ -5848,12 +5756,12 @@ Telagam, N., Reddy, S., Nanjundan, M., & Nehru, K. (2018). USRP 2901 Based MIMO-
 *   引入一个用户认证框架，作为概念验证，旨在考虑用户在触摸屏上的输入动作的会话层面信息，以获得更准确、更高效的认证方法。
 *   在两个模型中使用人工神经网络和支持向量机作为分类算法，以选择最优分类算法。
 *   通过搜索特征判别力和特征一致性，并根据特征重要性使用加权特征法，引入一种新的特征选择方法。
-*   使用 PCA 作为特征选择的替代方法，以代替加权特征法，从而选择特征选择方法。
+*   使用 `PCA` 作为特征选择的替代方法，以代替加权特征法，从而选择特征选择方法。
 *   将单点触控笔划和多点触控笔划结合到一个模型中，以利用现代触摸屏的所有能力，并最大化认证系统的整体准确性和效率。
 
 本文结构安排如下。除本节外，第 2 节重点介绍与行为生物特征相关的背景知识，特别是触摸屏输入行为，以帮助我们理解基于触摸屏的行为生物特征认证方案。还详细展示了该研究领域先前相关工作的贡献。第 3 节介绍一种从用户触摸动作原始数据中提取的最合适特征的选择方法，详细描述其背后的概念，然后展示我们如何开发该框架以使其灵活适应未来的改进。第 4 节展示构建和评估该认证框架所进行的实验阶段，并呈现我们为评估所提框架而进行的所有实验结果，分析这些结果以评估所提框架的性能。最后，第 5 节总结本论文，并给出未来工作的路线图特征。
 
-###### 生物特征认证
+## 生物特征认证
 
 任何生物特征识别系统（见图 1）都必然通过检查某人已注册的物理和/或行为特征及其提交的相应查询特征，来自动识别该人。理想的生物特征应具有“零”误接纳率和误拒率，并应满足一些特性，如普遍性、唯一性、永久性、可接受性，且应能抵御可能的攻击。图 1 描绘了包含四个组件的生物特征系统框图，定义如下（Jain et al., 2004）：
 
@@ -5878,13 +5786,9 @@ Telagam, N., Reddy, S., Nanjundan, M., & Nehru, K. (2018). USRP 2901 Based MIMO-
 
 生理生物特征通常需要一种获取方法，如扫描仪或摄像头，以及一种将其从详细扫描转换为简洁特征向量的方法，该向量代表最显著（即最独特）的部分。这些生物特征各有优劣，选择使用哪种取决于将部署它的应用程序的需求。生理生物特征的例子包括指纹、掌纹、虹膜和视网膜扫描以及人脸识别。
 
+## 生物特征特性分析
 
-
-
-
-###### 生物特征特性分析
-
-####### 生理生物特征
+### 生理生物特征
 
 表 1 展示了每种生物特征如何满足生物特征特性。针对每种生物特征，均已确定其对相关特性的符合程度。判定等级为高 (H)、中 (M) 和低 (L)，由作者选定。例如，指纹普适性判定为 H 意味着大多数人可通过指纹扫描进行认证。视网膜采集性判定为 L 意味着采集视网膜扫描存在问题，阻碍了其更高的采集性 (Yampolskiy and Govindaraju, 2008)。生理生物特征的一些问题，特别是采集性和规避性，可通过使用行为生物特征来解决。基于个人行为的生物特征模式可能不那么独特，但它们通常不需要额外硬件，且可在受试者从事正常活动时采集，而非要求其接受扫描。
 
@@ -5898,18 +5802,14 @@ Telagam, N., Reddy, S., Nanjundan, M., & Nehru, K. (2018). USRP 2901 Based MIMO-
 | 虹膜 | H | H | H | H | H | M | L |
 | 人脸 | H | M | M | M | M | M | L |
 
-####### 行为生物特征
+### 行为生物特征
 
 生理生物特征可能存在局限性，特别是在移动设备环境中，因为它们可能需要额外硬件来采集生物特征。行为生物特征被认为不如生理生物特征独特 (Yampolskiy and Govindaraju, 2008)，但相较于生理系统具有若干优势。它们易于在受试者进行其他任务时采集，因此非常适合透明认证。其采集通常不需要特殊硬件，因此可能更具成本效益。已有大量研究探讨各种可能性，包括击键动力学 (Clarke and Furnell, 2007)、语音验证 (Bimbot et al., 2004 and Kenny et al., 2004)、触屏交互模式 (Khan et al., 2014) 和设备使用模式 (Gamboa and A. Fred 2004, Yampolskiy and Govindaraju, 2008)。下表简要描述了关键行为生物特征。
 
 1.  **签名**：是个人签署姓名的独特方式。签名指标包括书写工具压力（仅限电子签名）、字母形状以及点和装饰笔画等其他附加特征。它长期以来被政府和法律机构以及公众接受为一种识别和验证方法。它需要使用书写工具以及纸张或电子签名面，成本相对较低。签名极易遭到伪造，尽管通过人工验证签名或改进的模式匹配算法可以改善这些方法 (Fierrez et al., 2018)。签名变异性可能很大，因此需要在一定容差范围内接受，而非要求完全匹配。
-
 2.  **步态**：是个人行走的特征方式。步态是一种复杂的生物特征，因为它结合了空间和时间问题，即必须同时测量三维空间中的运动以及每次运动的时序。它使用加速度计和陀螺仪等硬件进行测量 (Mantyjarvi et al., 2005)，这些在移动设备中很常见，也可使用 3D 摄像头。步态的问题包括普适性有限，因为无法行走者直接被排除在外，包括幼童、老弱病残及轮椅使用者。步态还可能因受试者的体重、年龄和精神状态等而变化，因此不具备高度不变性 (Gafurov et al., 2006)。由于采集数据的复杂性，在特征向量创建和匹配方面计算量密集。
-
 3.  **设备使用**：试图采集受试者使用台式机、笔记本电脑和手机等设备的模式。设备使用示例包括事件序列、快捷键与菜单项的使用偏好、步行或驾驶时的路线选择 (Mazhelis and Puuro, 2007)。这些模式可从浏览器历史记录和应用通知等中采集，预期具有中等独特性，且需要相对较长的训练期 (Shi et al., 2011)。它们受设备更换影响（即受试者开始使用新手机），以及设备功能变化影响（即电脑上安装了新软件或程序）。这种监控可能因其类似窃听而引起受试者担忧。
-
 4.  **打字**：个人的打字方式预期具有独特性，称为击键动力学 (Karnan et al., 2011)。采集按键速度、字符和 n-gram 频率以及按键压力等测量值，并将其组合成独特模式 (Clarke and Furnell, 2007, and Eberz and Rasmussen, 2017)。它被认为适合验证但不适合识别 (Jain et al., 2004)。由于精神状态、受试者姿势（即站立、坐着或行走）和键盘熟悉度，该生物特征变异性很高。可在受试者进行其他任务时使用标准键盘采集。击键动力学可能遭受重放和模仿攻击，尽管后者可能更难实施。
-
 5.  **语音**：既是生理也是行为生物特征。生理方面包括因受试者喉部、声门褶皱、口腔和嘴唇等特征的独特形状而变化的语音特征测量 (Jain et al., 2004)。行为方面包括发音、词频和用法及口音。生理方面在一个人一生中相对不变，但行为方面可能受情绪、心理状态、年龄和感冒等疾病影响。语音生物特征不够独特，且因录音时其他噪音污染问题，不适合大规模部署 (Bonastre et al., 2003)。它可能因录制和重放受试者语音而被滥用，且可在受试者不知情的情况下采集。
 
 **表 2. 选定行为生物特征的特性。**
@@ -5922,18 +5822,15 @@ Telagam, N., Reddy, S., Nanjundan, M., & Nehru, K. (2018). USRP 2901 Based MIMO-
 | 打字 | H | M | L | H | M | M | M |
 | 语音 | H | M | M | H | M | H | M |
 
-####### 多模态生物特征
+### 多模态生物特征
 
 近年来，生物特征认证的准确性和可靠性显著提高。然而，大多数经过评估和测试的先进生物特征系统也存在一些局限性；其中一些局限性与数据类型有关，一些与方法论有关。更具体地说，由于输入数据中存在噪声、类间变异、非普适性以及其他可能影响这些系统性能、安全性和可用性的因素，生物特征系统的性能会大打折扣 (Ross et al., 2008)。
 
-
-
-
-###### 多模态生物识别系统
+## 多模态生物识别系统
 
 多模态生物识别系统是一种较新的方法，旨在解决单模态生物识别系统相关的一些问题。它整合了来自多个信息源的数据，例如将指纹扫描仪和虹膜扫描仪的数据相结合，并额外收集鼠标和键盘输入动态数据。这种组合提高了识别性能和效率。多模态系统能显著提升识别性能并增加人口覆盖率（从而降低 FTER），防止欺骗攻击，并增加自由度。尽管与单模态生物识别系统相比，这些系统需要更多存储空间、更高的处理时间并涉及更多计算成本，但上述优势使其在大规模认证系统中部署极具吸引力（Clancy et al., 2003）。
 
-###### 生物识别认证系统的性能指标
+## 生物识别认证系统的性能指标
 
 评估击键生物识别系统或任何其他生物识别系统性能最常用的指标是**误拒率（FRR）**和**误纳率（FAR）**（AbdelDayem et al., 2017）。FRR 是被标记为冒名顶替者并被拒绝访问的合法用户的百分比。其定义如下（Kumar et al., 2016; AbdelDayem et al., 2017）：
 
@@ -5955,7 +5852,7 @@ FAR = (False Accepts / Total Impostor Access Attempts) × 100%
 
 生物识别系统最常用的度量之一是 FAR 和 FRR 相等时的比率。这被称为**等错误率（EER）**，或**交叉错误率（CER）**（Jain et al., 2004）。该值表示误接受的比例等于误拒绝的比例。EER 值越低，生物识别系统越好。
 
-###### 持续认证方法与途径
+## 持续认证方法与途径
 
 认证是提高移动设备安全性的常用措施。在认证过程中，根据用户直接或间接提供的不同信息源来验证用户身份。认证过程可分为**基于知识的方法**（如密码、PIN 码和图形图案）和**基于生物特征的方法**。
 
@@ -5963,7 +5860,7 @@ FAR = (False Accepts / Total Impostor Access Attempts) × 100%
 
 针对上述问题，提出了**持续认证方法**。目前提出的为数不多的持续生物识别认证方法均基于机器学习技术，如 `k-nearest neighbor`、`support vector machines` 和 `artificial neural networks`。这些方法允许自动检测欺诈用户，但在所有情况下并不总能达到足够有效的结果。在下一节中，我们将介绍一些先前的研究方法。
 
-####### 触摸屏认证研究
+### 触摸屏认证研究
 
 过去十年中，触摸屏在认证中的应用增长迅速。许多研究致力于将其与其他生物特征融合用于认证，或验证其作为独立认证方法的可行性。Zhao et al. (2017) 使用由语音、人脸和签名数据组成的多模态生物特征进行手机认证。目标是使具有法律约束力的合同能够被签署。虽然人脸验证显示出非常高的等错误率（EER），约为 28%，但语音和签名的 EER 分别约为 5% 和 8%。三种生物特征的融合将 EER 降低至 2%，从而增强了系统。此类系统的问题在于高度侵入式的认证过程，用户需要阅读、签名并输入 PIN 码。此外，还有多项研究涉及采用基于图形的密码代替基于文本的密码进行认证。Rachna 和 Adrian (2000) 研究了基于图形的密码并将其与传统密码和 PIN 认证进行比较。结果表明，在基于文本的密码难以频繁访问的情况下，基于图形的密码表现更好。
 
@@ -5971,31 +5868,31 @@ Wei et al. (2010) 的另一项研究比较了多种类型的密码。研究证�
 
 **单指触摸滑动手势**（或简称**滑动**）被视为一种触摸手势，用户将一根手指放在触摸屏上并快速水平或垂直移动，通常用于滚动目的。尽管滑动并非唯一适合移动生物识别的触摸信号（例如，也可使用点击、按压或捏合信号），但迄今为止绝大多数触摸生物识别研究都表明，使用单指滑动手势能获得最佳结果。因此，我们将专注于滑动信号，在本文其余部分将互换使用“滑动生物识别”和“触摸生物识别”术语。
 
+
+
 现有的滑动生物识别文献可分为两大类。第一类使用在入口点（即秘密图案）上进行的滑动来认证主体。因此，认证不是持续进行的。第二类方法探索**主动认证方法**，即在与设备的正常交互过程中进行的屏幕滑动被持续用于认证。由于正如引言所述，本文的主要焦点是滑动生物识别用于主动认证，本节将回顾一些属于此类技术的现有方法。其他比较基于图像特征并探讨经验、性别和年龄等因素的相关工作分别发表在（Zhao et al., 2014 和 Antal et al., 2015）中。
 
+### 智能手机认证方法综述
 
-
-####### 智能手机认证方法综述
-
-######## 触屏分析认证
+#### 触屏分析认证
 
 智能手机先驱认证方法基于触屏分析。Feng 等人（2012）提出了 `FAST`（基于触屏的手指手势认证系统），这是一种新型的基于触屏的移动设备认证方法。除了从配备触屏的智能手机提取触摸数据外，`FAST` 还使用我们利用现成组件构建的数字传感器手套来补充和验证这些数据。`FAST` 利用最先进的分类算法提供透明且持续的移动系统保护。一个显著特点是 `FAST` 的持续、用户透明的登录后认证。他们使用从 40 位用户收集的触摸数据表明，`FAST` 在持续登录后用户认证中实现了 4.66% 的误接纳率（`FAR`）和 0.13% 的误拒率。低 `FAR` 和 `FRR` 值表明 `FAST` 提供了卓越的登录后访问安全性，且不打扰诚实的移动用户。
 
 Lin 等人（2013）提出了一种基于加权 k-最近邻算法的方法。在受控环境中的实验显示，当重新认证时间设置为最多十分钟时，等错误率（`EER`）为 3.5%。减少重新认证时间会导致结果显著变差，从而限制了该方法在真实场景中的实用性，因为 Budiu（2015）最近的研究表明平均智能手机会话时长为 72 秒。此外，触摸识别用于持续认证的一个明显局限性是需要用户持续输入。智能手机活动用途非常多样，一些最流行的活动涉及很少的打字。随着加速度计、磁力计和陀螺仪等传感器的嵌入，智能手机运动认证成为越来越多研究的主题。部分近期文献专注于基于持握模式识别用户（Conti 等人，2011）。由于智能手机上的运动数据可以持续收集，类似的方法可用于实现持续生物特征认证系统，尽管该领域的文献非常稀少（Lin 等人，2013）。
 
-######## 运动识别认证
+#### 运动识别认证
 
 Neverova 等人（2016）提出了一种基于加速度计和陀螺仪数据的持续运动识别系统。该方法分两阶段应用。在第一阶段，他们将观察值转换为一组新特征，并使用高斯混合模型估计其总体分布。当新用户加入方案时，他们对总体数据模型的均值向量执行最大后验适应，以构建特定客户端模型。然后，两个模型均用于为每个新观察值生成验证分数。作者在真实场景中获得了 18.2% 的 `ERR`。
 
 Song Fierrez 等人（2017）提出了一种多模态方法，包括加速度计、陀螺仪和触屏观察。作者使用单类 `SVM` 模型将样本分类为属于所有者或访客/攻击者。他们在受控环境中使用数据集测试了该方法，要求用户在坐着和走路时输入文本。用户走路时获得 7.16% 的 `EER`，坐着时获得 10.05% 的 `EER`。作者将真实场景下的评估推迟到未来研究。
 
-######## 多点触控手势认证
+#### 多点触控手势认证
 
 触屏技术已改进以应对更复杂的输入需求。现代触屏不再仅支持单指执行所需手势，现在支持单个手势中多达十指的触摸动作，这使得执行更复杂的手势成为可能，并提供更多关于用户手部几何结构的信息，这在行为生物特征认证中非常有用。
 
 Jain 等人（2011）使用 22 种不同的多点触控手势在 `iPad` 上认证 34 位用户。作者报告称，如果用户执行一个手势，`EER` 为 7%–15%；如果结合两个手势，`EER` 为 2.6%–3.9%；如果每个用户使用一个唯一手势，`EER` 为 3%。这两篇论文的问题设定与我们的工作至少有两个显著差异。虽然 Buriro 等人（2016）要求用户认证的定义入口点，但他们旨在实现隐式和持续的场景。其次，在他们的认证方案中，用户可以随意与屏幕交互，而 Jain 等人（2011）和 Buriro 等人（2016）中，触摸轨迹与特定的（秘密）手势进行比较。
 
-######## 连续触摸认证
+#### 连续触摸认证
 
 Frank 等人（2013）是最早且最全面的利用触摸数据进行持续认证的工作之一。他们研究了 41 名受试者，这些受试者在比较图像和阅读文本时提供了单点触摸操作的数据。研究了会话内和会话间认证，使用带径向基函数（`RBF`）的支持向量机（`SVM`）和 k-最近邻（`kNN`）获得小于 4.0% 的等错误率（`EER`）。分类器在会话内认证中达到 0% 的中位等错误率，会话间认证为 2%–3%，注册阶段一周后进行认证测试时低于 4%。此外，观察到结合笔画块进行认证可获得更好性能，其他工作也得出了相同结论，如 Serwadda 等人（2013）和 Shen 等人（2016）。
 
@@ -6009,10 +5906,7 @@ Mahbub 等人（2016）研究了在允许自由交互的更真实应用中获得
 
 此外，单点触摸操作与其他生物特征的融合已在 Xu 等人（2014）（击键、滑动、捏合）、Kumar 等人（2018）（击键、滑动、手机移动）和 Sitov´a 等人（2016）（手部移动、方向、握持、点击、击键特征）中研究。第一项使用 `SVM` 报告了 90% 以上的准确率，第二项仅使用滑动数据进行认证，利用 `kNN` 和随机森林获得 10% `EER`。最后，第三项比较了用户走路和坐着时获得的 `EER`，报告结合所有上述特征时分别为 7.16% 和 10.05%。
 
-
-
-
-######## 相关工作综述
+#### 相关工作综述
 
 上述文献大多假设训练时同时拥有真实样本和冒名顶替者样本。然而，某些应用场景施加的限制使得使用冒名顶替者样本进行训练变得困难甚至不切实际。为应对这些情况，研究人员探索了单类分类器和异常检测技术的应用。
 
@@ -6030,20 +5924,17 @@ AbdelDayem 等人 (2017) 针对短文本认证提出统计方法，针对长文�
 
 Fridman 和 Weber (2016) 针对基于四种生物特征模态（文本、应用使用、网页浏览和位置）的分类器，提出了一种并行二元决策级融合架构。利用该融合方法，他们解决了主动认证问题，并在包含 200 名受试者、每人使用个人 Android 设备至少 30 天的真实数据集上评估了性能。用户与设备交互 1 分钟后，认证系统达到 0.05 (5%) 的等错误率 (EER)；30 分钟后 EER 降至 0.01 (1%)。他们展示了各单独分类器的性能及其对融合全局决策的贡献。基于位置的分类器虽触发率最低，但对融合系统性能贡献最大。
 
-######## 基于触屏动作的持续用户认证框架
+### 基于触屏动作的持续用户认证框架
 
 在本工作中，隐式认证定义为：在不显式打断用户活动、不要求用户额外付出的情况下，验证移动设备用户身份。这意味着认证决策所依据的数据源于用户执行常规任务时对设备的使用方式 (Gianni et al., 2017)。所提框架旨在提供一种隐式持续认证方案：用户像往常一样使用移动设备，同时隐式认证进程在后台持续运行。首先，在离线学习阶段为用户建立模型；随后，在用户日常使用设备期间，认证作为后台进程执行 (Eljetlawi, 2010)。
 
 先前研究如 (Eljetlawi, 2010)、(Nakamura 等人, 2012)、(Jeanjaitrong 和 Bhattarakoso, 2013) 及 (Eberz 和 Rasmussen, 2017) 侧重于单次触摸笔画中与用户行为相关的简单特征，将其视为独立向量，未考虑同一触摸会话内的所有笔画。同一会话内的触摸笔画数据可能包含关于用户行为的相关信息，这对用户认证可能比单个笔画获取的信息更有价值。本研究构建了两种用户行为模型：笔画级模型和会话级模型，并对比两者性能，寻找能实现高效认证流程的模型。
 
-######## Android MotionEvent 概览
+### Android MotionEvent 概览
 
 运动事件通过动作代码和一组轴值来描述运动。动作代码指明发生的状态变化，如指针按下或抬起。轴值描述位置及其他运动属性。例如，用户首次触摸屏幕时，系统会向相应视图分发一个触摸事件，其动作代码为 `ACTION_DOWN`，轴值集包含触摸点的 X、Y 坐标，以及接触区域的压力、大小和方向信息 (Android Developer, 2018)。
 
 部分设备可同时报告多个运动轨迹。多点触控屏为每根手指发出一条运动轨迹。产生运动轨迹的单个手指或其他物体称为指针。运动事件包含当前所有活动指针的信息，即使自上次事件分发以来其中一些指针未移动。指针数量仅随单个指针的按下和抬起而逐个变化，手势取消时除外 (Android Developer, 2018)。
-
-
-
 
 每个指针都有一个唯一的 ID，该 ID 在指针首次按下时分配（由 `ACTION_DOWN` 或 `ACTION_POINTER_DOWN` 指示）。指针 ID 保持有效，直到指针最终抬起（由 `ACTION_UP` 或 `ACTION_POINTER_UP` 指示）或手势被取消（由 `ACTION_CANCEL` 指示，即指针离开子视图边界进入父视图时）。`MotionEvent` 类提供了许多方法来查询指针的位置和其他属性，例如 `getX(int)`、`getY(int)`、`getAxisValue(int)`、`getPointerId(int)`、`getToolType(int)` 等。这些方法大多接受指针索引作为参数，而不是指针 ID。事件中每个指针的指针索引范围是从 0 到 `getPointerCount()` 返回值减 1（Android Developer, 2018）。单个指针在动作事件中出现的顺序是未定义的。因此，指针的指针索引可能会从一个事件变到下一个事件，但只要指针保持激活状态，其指针 ID 保证保持不变。我们使用 `getPointerId(int)` 方法获取指针 ID，以便在手势中跨所有后续动作事件进行跟踪。然后对于后续的动作事件，我们使用 `findPointerIndex(int)` 方法获取该动作事件中给定指针 ID 对应的指针索引。
 
@@ -6051,7 +5942,7 @@ Fridman 和 Weber (2016) 针对基于四种生物特征模态（文本、应用�
 
 对于触摸屏或触控板，它报告手指或任何其他工具施加在表面上的近似压力。该值被归一化到 0（完全无压力）到 1（正常压力）的范围，尽管根据输入设备的校准情况，可能会生成大于 1 的值。对于触摸屏或触控板，它报告接触区域相对于设备最大可检测尺寸的近似大小。该值也被归一化到 0（最小可检测尺寸）到 1（最大可检测尺寸）的范围，尽管它不是线性刻度。该值用途有限。为了获得校准后的尺寸信息，我们使用 `AXIS_TOUCH_MAJOR` 或 `AXIS_TOOL_MAJOR`（Android Developer, 2018）。
 
-######## 单点触控与多点触控笔划
+### 单点触控与多点触控笔划
 
 笔划是一系列触摸数据序列，始于触摸屏幕，终于抬起手指。笔划“s”被编码为一系列触摸笔划向量的轨迹，格式为：
 
@@ -6065,7 +5956,7 @@ Fridman 和 Weber (2016) 针对基于四种生物特征模态（文本、应用�
 | --- |
 | ![Figure978-1-7998-2701-6.ch013.f02](img/ch013.f02.png) |
 
-######## 提出的框架
+### 提出的框架
 
 图 3 展示了提出的用户认证框架。我们要强调的是，我们的主要目的是在用户自己的触屏移动设备上识别该用户，而不是验证多个用户，但我们以那种方式设计实验是为了简化研究。
 
@@ -6073,17 +5964,19 @@ Fridman 和 Weber (2016) 针对基于四种生物特征模态（文本、应用�
 | --- |
 | ![Figure978-1-7998-2701-6.ch013.f03](img/ch013.f03.png) |
 
-######### 离线阶段
+#### 离线阶段
 
 在此阶段，构建一个训练好的神经网络模型，代表每个用户档案，该模型将在后续的在线阶段用于认证用户。该阶段分为四个步骤，如图 4 所示；始于使用专为此目的开发的应用程序，通过 Android 操作系统 API 执行原始数据收集。然后提取、选择这些原始数据的特征，并用于训练神经网络模型，为每个用户生成一个训练好的模型。该模型代表了用户触摸设备屏幕的行为模式。
 
-########## 原始数据收集与预处理组件
+##### 原始数据收集与预处理组件
 
 我们框架中的原始数据是使用操作系统中提供的 API 收集的。在我们的工作中，我们依赖移动设备 Android 操作系统提供的事件数据。在原始数据收集阶段，要求用户执行所有移动设备应用程序中常用的特定单点触控和多点触控手势。这实际上是通过一个专为此目的设计和实现的应用程序完成的。该阶段的主要目的是收集代表每个用户的原始触摸数据，以便对用户认证过程进行进一步分析。
 
+
+
 从 Android 设备收集触摸数据受到这样一个事实的限制：Android 禁止跨不同应用程序访问触摸数据，即每个应用程序只能读取与其自身交互产生的触摸数据，正如 Frank 等人 (2013) 所述。基于上述事实，我们开发了一个 Android 应用程序，使用户能够执行特定触摸手势并以结构化形式记录原始触摸数据。在以下章节中，我们将阐述该应用程序的设计与实现。
 
-########## 手势选择
+## 手势选择
 
 在我们的应用程序中，要求用户执行所有 Android 应用程序中最常用的手势，以模拟用户在使用任何 Android 应用程序时的真实体验（见图 4）。因此，我们选择了以下手势：点击 - 长按 - 向上滚动 - 向下滚动 - 向左滚动 - 向右滚动 - 旋转 - 放大 - 缩小 - 快速滑动。
 
@@ -6093,15 +5986,13 @@ Fridman 和 Weber (2016) 针对基于四种生物特征模态（文本、应用�
 
 执行的手势要么是单点触控手势，即用户仅使用一根手指执行，如点击、滚动、快速滑动等；要么是多点触控手势，需要用户使用两根或更多手指执行；如放大、缩小、旋转等。
 
-########## 特征提取组件
-
-
+## 特征提取组件
 
 此时，许多问题浮现脑海：可以从这些原始数据中提取哪些特征？如何提取？这些特征是否适合很好地区分不同用户？本文将从两个不同的视角讨论特征。第一个是面向笔画的，即从每个笔画作为独立信息单元中提取特征，该单元包含制作笔画用户的指纹信息。这与许多先前研究的做法类似。第二个视角是面向会话的；每个触摸会话被视为一个独立信息单元，从所有会话笔画中提取特征，以获取关于制作该触摸会话用户的更具代表性的信息。将介绍这两种不同的模型，并提供两者之间的完整比较，以选择哪种模型在认证过程中更准确、更高效。在以下章节中，我们将深入探讨特征提取和特征选择过程的细节。
 
 先前的研究介绍了许多可以从原始触摸数据中提取的特征。我们将这些特征纳入考量，此外，我们还将引入其他我们认为在我们的模型中更有用的特征，因为它们能很好地代表用户在触摸屏输入设备上的行为。我们试图涵盖先前与触摸相关的研究中提到的几乎所有最常见特征，例如：坐标、时间、覆盖面积、速度、加速度和按压压力。我们还使用了更复杂的特征，我们认为这些特征将在下一阶段（即分类和识别）中产生更好的结果，这将在本章后面讨论。
 
-########### 笔画级特征模型
+### 笔画级特征模型
 
 正如上一节所述，我们将要实现的第一个特征模型是笔画级特征模型。表 3 列出了拟议的 27 个特征集。其中大多数不言自明，但对于其中一些，我们想补充一些关于它们如何计算以及为什么我们认为它们是相关特征的细节。笔画起点和终点的坐标被选中，因为注意到用户倾向于为其笔画使用独特的屏幕区域。
 
@@ -6128,7 +6019,7 @@ Fridman 和 Weber (2016) 针对基于四种生物特征模态（文本、应用�
 
 触摸分析中的一个重要因素是时间。一些用户在阅读时稳定且缓慢地滚动。其他人快速滚动到新位置并在静止屏幕上阅读。这可以通过笔画持续时间来检测。根据 Frank 等人 (2013) 的研究，这是关于阅读速度的信息数据，据推测不同用户的阅读速度是不同的。我们用于从原始数据中提取这些特征的所有公式将在本论文末尾的附录 A 中提及。前面提到的每个特征以某种方式代表用户行为，例如，笔画的平均速度告诉我们用户书写是快还是慢，其他特征也是如此。
 
-########### 会话级特征模型
+### 会话级特征模型
 
 第二个特征模型是会话级特征模型，其中会话被视为一个信息单元。通过这种方式，收集更具泛化性的信息数据，从而提供触摸屏设备用户行为的更广阔视角。大多数会话级特征是从笔画级特征的聚合中提取的，以给出一般视图。这里拟议了一组 35 个特征，如表 4 所列。
 
@@ -6155,7 +6046,7 @@ Fridman 和 Weber (2016) 针对基于四种生物特征模态（文本、应用�
 | 向右滚动平均方向 | 缩放进入两次落点延迟 |
 | 缩放进入落点间距离 | |
 
-########## 特征选择
+## 特征选择
 
 现在我们拥有了所有特征数据，但大量的特征会导致复杂的分类和识别模型。我们必须从所有拟议特征列表中选择最佳特征。这引出了另一个问题：什么是最佳特征，我们如何选择它们？在以下章节中，我们将通过提供两种不同的特征选择方法来回答这个问题；第一种使用区分度和一致性值，而第二种使用主成分分析。在此之前，我们想更清晰地说明特征选择的重要性。
 
@@ -6163,14 +6054,11 @@ Fridman 和 Weber (2016) 针对基于四种生物特征模态（文本、应用�
 
 在接下来的章节中，我们将搜索触摸会话之间的用户-特征一致性以及不同用户之间的特征区分度。然后，我们将把这种方法应用于笔画级特征模型和会话级特征模型。
 
-########## 特征数据归一化
+## 特征数据归一化
 
 在处理特征数据之前，我们必须指出它们具有不同的取值范围。以下是笔画级特征模型的特征数据向量示例：
 
-
-
-
-########### 数据归一化
+### 数据归一化
 
 我们需要对所有特征数据进行归一化，以便使搜索判别性和一致性变得更加灵活。根据公式 (2) 对所有特征值进行归一化，使每个特征的缩放值落在 0 到 1 之间：
 
@@ -6178,7 +6066,7 @@ Fridman 和 Weber (2016) 针对基于四种生物特征模态（文本、应用�
 
 其中 `x = (x[1], ……, x[n])`，`z[i]` 为第 `i` 个归一化数据，`min` 和 `max` 分别为该数据的最小值和最大值。
 
-########### 判别性与一致性
+### 判别性与一致性
 
 使用公式 (3) 计算每个用户每个特征集的方差。
 
@@ -6190,13 +6078,13 @@ Fridman 和 Weber (2016) 针对基于四种生物特征模态（文本、应用�
 
 我们可以通过将方差之和按升序排列，来判断哪些特征比其他特征更一致。排在最前面的特征是在会话间具有最高用户-特征一致性的特征，即最理想的特征。特征判别性旨在找出哪些特征能比其他特征更好地区分不同用户。我们计算每个特征在所有用户所有会话中的方差，然后将这些方差按降序排列，以确定最理想的特征。排在最前面的特征是区分不同用户能力最强的特征。
 
-########### 主成分分析
+### 主成分分析
 
 主成分分析（PCA）在保留趋势和模式的同时简化高维数据的复杂性。它通过将数据转换为较少的维度来实现这一点，这些维度作为特征的摘要。高维数据在生物学中非常常见，当为每个样本测量多个特征（如许多基因的表达）时就会产生这类数据。这种数据带来的几个挑战可由 PCA 缓解：计算开销大，以及在测试每个特征与结果的关联时，因多重检验校正导致的错误率增加（Lever et al., 2017）。
 
 PCA 是一种无监督学习方法，类似于聚类——它在没有先验知识（即样本来自不同处理组或具有表型差异）的情况下寻找模式。PCA 通过将数据几何投影到称为主成分（PCs）的低维空间来降低数据维度，目标是使用有限数量的 PC 找到数据的最佳摘要（Lever et al., 2017）。
 
-########## ANN 与 SVM 学习（分类阶段）
+## ANN 与 SVM 学习（分类阶段）
 
 认证过程的核心是数据分类，这是用户认证中最重要、最关键的阶段。它代表了决策阶段，系统在此决定哪些特征数据属于哪个类（即分类系统将每组特征数据分类到其所属的用户）（Matlab Guide, 2019）。
 
@@ -6210,29 +6098,25 @@ PCA 是一种无监督学习方法，类似于聚类——它在没有先验知�
 
 ANN 和 SVM 用作分类器，将提取的数据特征分类到其对应的类别（即将每个特征向量分配给其对应的用户），因为神经网络分类器提供了使用学习算法进行适应以生成训练模型的能力，该模型可以区分不同用户。用户特征向量作为输入，输出为确定输入特征所属的用户。在下一小节中，将概述 ANN 和 SVM 的工作原理。在我们的工作中，将比较这两种不同分类器的性能，以找到最适合认证框架的分类器。
 
-######### 在线阶段
+#### 在线阶段
 
 在此阶段，我们几乎遍历离线阶段的所有步骤，不同之处在于在线阶段，我们使用每个用户先前训练好的模型，来识别未参与离线训练阶段的新特征数据是否属于该用户，然后将其训练模型用作用户画像。
 
-########## 识别组件
+## 识别组件
 
 识别组件使用离线阶段生成的目标用户先前训练并适配的模型，针对新的未训练特征向量对其进行测试，以验证训练模型在多大程度上真正能区分设备所有者的触摸动作与冒充者的触摸动作。
 
-########## 实验设计、结果与性能评估
+## 实验设计、结果与性能评估
 
 在本节中，将验证所提出的连续触屏认证框架。首先，我们将介绍为从两个不同角度（笔画级别和触摸会话级别）证明该概念而进行的实验。给出实验结果，并评估两种不同模型的性能，以决定哪种模型更具代表性并满足用户认证需求。
 
-########### 原始数据移动应用设计
+### 原始数据移动应用设计
 
-
-
-
-
-############ 原始数据采集移动应用程序
+#### 原始数据采集移动应用程序
 
 原始数据采集移动应用程序的设计非常简单。如前所述，由于安全问题，我们无法使用系统服务来监听移动设备上所有正在运行的应用程序中的所有触摸数据。Android 操作系统的设计是将每个触摸动作仅传递给其所属的进程，因此我们设计了一个简单的应用程序，要求用户执行前面提到的单点触控和多点触控手势。
 
-############# 通过应用程序收集的数据
+#### 通过应用程序收集的数据
 
 本小节提供了关于所开发应用程序的一些基本信息，以便充分理解其细节及通过它提取的数据。用户执行的每一笔划都以 `stroke` 对象的形式存储在内存中，该对象包含一个触摸动作列表，其中含有以下数据字段：
 
@@ -6246,27 +6130,29 @@ ANN 和 SVM 用作分类器，将提取的数据特征分类到其对应的类�
 
 在该阶段，我们面临两个问题：第一个问题是如何在实验期间高效地从用户那里收集原始数据，因为我们必须在很长一段时间内收集数据（以克服用户对实验的适应性）。第二个问题是如果需要，如何在更多触摸会话中收集更多数据？那将非常难以实现。为克服这两个问题，我们设计了一个 Windows Communication Foundation (WCF) Web 服务，用于接收来自我们移动应用程序的原始数据并将其存储在数据库中，以供进一步分析。
 
-############## Windows Communication Foundation (WCF)
+#### Windows Communication Foundation (WCF)
 
 **Windows Communication Foundation (WCF)** 是一个用于构建面向服务的应用程序的框架。使用 WCF，您可以将数据作为异步消息从一个服务终结点发送到另一个服务终结点。服务终结点可以是由 IIS 承载的持续可用服务的一部分，也可以是承载在应用程序中的服务。终结点可以是请求来自服务终结点数据的服务客户端。消息可以像作为 XML、JSON 对象发送的单个字符或单词那样简单，也可以像二进制数据流那样复杂（What Is Windows Communication Foundation, 2017）。WCF 旨在提供一种可管理的方法来创建 Web 服务和 Web 服务客户端。
 
-############## JSON (JavaScript Object Notation)
+#### JSON (JavaScript Object Notation)
 
 **JSON (JavaScript Object Notation)** 是一种轻量级的数据交换格式。它易于人阅读和编写，同时也易于机器解析和生成。JSON 是一种完全独立于语言的文本格式，但使用了包括 C、C++、C#、Java、JavaScript、Perl、Python 等在内的 C 语言家族程序员熟悉的约定。这些特性使 JSON 成为理想的数据交换语言（Introducing JSON, 2018）。
 
 在我们的实验中，内存中的对象（即 `session` 对象、`stroke` 对象和 `touch action` 对象）被转换为序列化的 JSON 对象，以便它们能通过 Web 服务跨互联网从 Android 客户端设备传输到数据库服务器，以进行进一步的数据分析。此处首选 JSON 对象而非 XML 消息，因为 JSON 比 XML 消息消耗更少的资源，且几乎所有编程语言都支持它，此外它比另一种选择（即 XML 消息）更简单。
 
-########### 实验设置
+### 实验设置
 
 选取了 10 名移动设备用户，年龄从 24 到 60 岁，4 名女性和 6 名男性，均为右撇子，执行特定的触摸动作；即单点触控和多点触控手势的组合。所用设备为三星 Galaxy Note 10.1 平板电脑，具有 2560 x 1600 像素、299 ppi 密度的超清 LCD 显示屏，运行 Android 4.4 系统。
 
 根据我们的文献综述，大多数研究人员如 AbdelDayem 等人 (2016)、Fridman 和 Weber (2016) 以及 Ali 等人 (2016) 都设计了带有指导方针的实验场景，以引导用户完成实验，从而使收集的原始数据保持在合适的区域内并降低其粗糙度。然而，在我们的实验场景中，我们没有对用户如何执行触摸手势施加任何限制。在我们的场景中，用户可以自由地执行手势，就像他在使用真实的移动应用程序并执行一系列触摸手势一样。我们认为，这更加真实，能给我们带来比大多数研究在其实验场景中所做的更能反映稳健适用模型的结果。
 
+
+
 我们开发了一个 Android 应用程序，使用户能够执行特定的触摸手势，并以结构化形式记录原始触摸数据。每位用户在跨度为 2 个月的时间段内进行了约 10 次触摸会话，以避免用户适应实验任务。用户需执行我们认为在大多数移动设备应用程序中最常用的特定触摸动作。要求用户执行以下触摸手势：点击、轻扫、长按、向上滚动、向下滚动、向左滚动、向右滚动、放大、缩小和旋转。图 5 展示了我们实验中使用的应用程序快照，该程序模拟用户输入动作。执行的手势要么是单点触控手势，即用户仅使用一根手指执行，如点击、滚动、轻扫等；要么是多点触控手势，即用户必须使用两根或更多手指，如放大、缩小、旋转等。
 
-| 图 5. 实验移动应用程序示例快照 |
-| --- |
-| ![Figure978-1-7998-2701-6.ch013.f05](img/ch013.f05.png) |
+**图 5. 实验移动应用程序示例快照**
+
+![Figure978-1-7998-2701-6.ch013.f05](img/ch013.f05.png)
 
 在实验期间，平板设备记录了用户的触摸原始数据，这些数据代表若干原始特征：事件代码（例如手指抬起、手指按下、手指移动、多点触控）、以毫秒为单位的绝对事件时间以及设备方向。对于每个触摸手指，我们记录以下数据：
 
@@ -6278,13 +6164,9 @@ S[i] = {x[i], y[i], P[i], A[i], Oi} (5)
 
 收集到的原始数据被提交到数据库服务器，以便在下一步中进行分析并提取我们研究所需的特征。在接下来的章节中，我们将展示分为两个方向的实验结果。首先给出笔划级方法的结果，随后是会话级方法的结果。最后，我们对这两种方法做出总结。在每组实验中，特征选择方法和分类器都会有所变化。
 
-########### 笔划级模型特征选择结果
+## 笔划级模型特征选择结果
 
-
-
-
-
-########### 实验结果：笔画级模型
+### 实验结果：笔画级模型
 
 实验结果分为两部分：第一部分展示特征选择分析的结果，以寻找可用于第二部分（分类结果部分）的最有效特征。在第二部分中，使用 MATLAB ANN Toolbox 根据第一部分提取的特征训练模型。
 
@@ -6336,11 +6218,11 @@ S[i] = {x[i], y[i], P[i], A[i], Oi} (5)
 
 作为替代方案，可根据所需模型复杂度选择一系列特征，或使用任何适合的准则根据应用需求选择特征。使用主成分分析（PCA）进行降维，结果是从所有特征的 27 个维度中仅选择了 13 个维度。
 
-########### 笔画级分类
+### 笔画级分类
 
 本节将考虑两种不同的分类算法：人工神经网络（ANN）和支持向量机（SVM）。
 
-########### 人工神经网络
+#### 人工神经网络
 
 本节将深入探讨如何使用 ANN 工具对笔画级和会话级分类器建模，如何在识别过程中使用生成的模型，以及性能评估参数。
 
@@ -6348,9 +6230,9 @@ S[i] = {x[i], y[i], P[i], A[i], Oi} (5)
 
 ![Mathtype978-1-7998-2701-6.ch013.m12](img/ch013.m12.svg) (7)
 
-| Figure 6. The Artificial Neural Network Classifier Construction |
-| --- |
-| ![Figure978-1-7998-2701-6.ch013.f06](img/ch013.f06.png) |
+**图 6. The Artificial Neural Network Classifier Construction**
+
+![Figure978-1-7998-2701-6.ch013.f06](img/ch013.f06.png)
 
 我们使用这种激活函数是因为它具有类似阶跃函数的特性，但增加了一个不确定区域。Sigmoid 函数也非常类似于生物神经元的输入/输出关系，因此被用于大多数神经网络应用。我们使用 Sigmoid 函数的主要原因是它的输出范围在（0 到 1）之间。因此，它特别适用于需要预测概率作为输出的模型。由于任何事物的概率仅存在于 0 和 1 的范围内，Sigmoid 是正确的选择。
 
@@ -6360,24 +6242,23 @@ S[i] = {x[i], y[i], P[i], A[i], Oi} (5)
 *   25% 的样本用于验证，以衡量网络泛化能力，并在泛化不再改善时停止训练。
 *   25% 用于测试，这对训练没有影响，因此可在训练期间和训练后提供网络性能的独立度量。
 
+##### 在人工神经网络学习过程中使用了缩放共轭梯度（SCG）反向传播学习算法
 
-
-
-############# 在人工神经网络学习过程中使用了缩放共轭梯度（SCG）反向传播学习算法。与其他算法（如贪婪地消耗计算资源的 Levenberg-Marquardt 算法）相比，该算法提供了最佳性能和快速收敛（Matlab 指南，2019）。在我们的工作中，我们测试了不同的学习算法，然而，考虑到我们的实验规格和条件，SCG 反向传播算法的结果在性能和速度方面表现最佳。
+与其他算法（如贪婪地消耗计算资源的 Levenberg-Marquardt 算法）相比，该算法提供了最佳性能和快速收敛（Matlab 指南，2019）。在我们的工作中，我们测试了不同的学习算法，然而，考虑到我们的实验规格和条件，SCG 反向传播算法的结果在性能和速度方面表现最佳。
 
 我们使用了 MATLAB MathWorks 提供的现成 ANN 建模工具。我们使用了一台配备 Intel Core i5 处理器、6GB 内存和 Nvidia GeForce 520m GPU 的笔记本电脑，运行 MATLAB 2017a 版本。它节省了大量实现 ANN、训练和部署的时间。MATLAB 中的神经网络工具箱提供了一个带有图形用户界面的应用程序，每个用户都可以通过遵循一些顺序步骤来提供输入样本和期望输出样本，轻松地提供输入、输出、学习算法、隐藏神经元数量以及激活每个神经网络中每个单个神经元所需的激活函数。
 
-############ 支持向量机
+#### 支持向量机
 
 MATLAB MathWorks 还提供了一个图形用户界面应用程序，用于使用不同类型的分类器对数据进行分类。在这里，我们使用了具有不同核函数的 SVM 分类器，以找到最适合我们应用的分类器（Matlab 指南，2019）。此处使用的数据样本与之前在 ANN 分类器中使用的相同。SVM 的类型包括：线性、二次、三次、精细高斯、中等高斯和粗糙高斯。分类和识别的结果将在后面讨论。
 
-########### 会话级模型特征选择结果
+## 会话级模型特征选择结果
 
 在本节中，我们介绍了应用于高层会话特征模型的用户-特征一致性和特征-判别性搜索结果（见表 6）。我们在此也可以使用任何选择标准来选择最佳特征。在这个特征模型中，我们考虑了第 4.4 节中提到的特征选择方法。我们使用了所有特征，但为每个特征分配了一个权重数值，以在分类阶段放大最佳特征的效果并抑制最差特征的效果。
 
 在会话级模型中，最佳特征主要与用户在多点触控笔划中的行为有关，主要是放大和缩小的时机。此外，弹射速度是最佳特征。这种行为可能是由于我们实验中不同用户之间不同的手部几何结构造成的。当我们在 MATLAB 中使用主成分分析时，这 35 个特征减少到了 21 个特征；换句话说，PCA 算法将 35 维数据转换到新的 21 个维度或空间，以降低复杂性并消除这些特征中的冗余信息。
 
-############ 表 6. 会话级一致性判别值
+### 表 6. 会话级一致性判别值
 
 | 特征 | 方差之和（一致性） | 方差（判别性） | 归一化方差之和 | 归一化方差 |
 | --- | --- | --- | --- | --- |
@@ -6400,6 +6281,9 @@ MATLAB MathWorks 还提供了一个图形用户界面应用程序，用于使用
 | ScrlrghtAverageDirection | 1.04155984 | 0.009042729 | 0.264482726 | 0 |
 | ZinDistanceBetweenLandingPoints | 1.050980586 | 0.029852361 | 0.287965375 | 0.339414467 |
 | ScrlrghtAverageVelocity | 1.052226046 | 0.039409691 | 0.291069874 | 0.495298823 |
+
+
+
 | ScrlupAverageDistance | 1.055615215 | 0.027538978 | 0.299517896 | 0.301682149 |
 | LongTapAveragePressure | 1.056163214 | 0.024239621 | 0.300883867 | 0.247868151 |
 | RotationAverageRadius | 1.06462446 | 0.033319379 | 0.321974815 | 0.395963092 |
@@ -6417,54 +6301,51 @@ MATLAB MathWorks 还提供了一个图形用户界面应用程序，用于使用
 | ZoutTwoLeftingLatency | 1.253710473 | 0.052696271 | 0.793300586 | 0.712008925 |
 | ZinTwoLandingLatency | 1.336633942 | 0.048222567 | 1 | 0.639040798 |
 
-########### 会话级分类
+### 会话级分类
 
-人工神经网络分类器也被用于对所有触控会话的输入样本进行分类。使用了图 6 所示的相同 ANN 结构，但输入特征为 35 个，而不是 27 个。输入样本被随机划分为：
+人工神经网络分类器也被用于对所有触控会话的输入样本进行分类。使用了图 6 所示的相同 `ANN` 结构，但输入特征为 35 个，而不是 27 个。输入样本被随机划分为：
 
 *   65% 用于训练。
-*   15% 用于验证
+*   15% 用于验证。
 *   20% 用于测试。
 
 我们以这种方式划分数据样本，是因为在会话级模型中我们只有少量样本。
 
-########## 性能评估与结果讨论
+### 性能评估与结果讨论
 
-在本节中，我们介绍了使用分类和识别算法（ANN 和 SVM）以及两种特征选择方法（利用判别性和一致性值的加权特征以及主成分分析 [PCA] 方法）进行实验的结果。
+在本节中，我们介绍了使用分类和识别算法（`ANN` 和 `SVM`）以及两种特征选择方法（利用判别性和一致性值的加权特征以及主成分分析 [`PCA`] 方法）进行实验的结果。
 
-########### 人工神经网络
+### 人工神经网络
 
 在笔划级特征模型中执行 10 次训练会话后，我们获得了训练样本 14% - 16% 的误分类错误率和测试样本 25% - 30% 的误分类错误率，而在会话级特征模型中，我们获得了训练样本 0% 的误分类错误率和测试样本 16% - 20% 的误分类错误率。使用这个会话级特征模型，我们得到了比笔划级特征模型更高效的分类器。
 
 图 7 显示了会话级模型分类器训练的误差直方图。该图显示了导致特定误差值的样本数量。
 
-############ 图 7. 会话级分类误差直方图
+#### 图 7. 会话级分类误差直方图
 
 ![Figure978-1-7998-2701-6.ch013.f07](img/ch013.f07.png)
 
-
-
-
-########### 实验结果与分析
+### 实验结果与分析
 
 根据图 7 所示，大多数样本的训练误差约为 0.04，根据图 8 所示的混淆矩阵，总体准确率约为 93%。混淆矩阵显示了每个训练样本的目标类别和分类器提供的实际输出类别，矩阵对角线显示了训练会话中正确分类的样本数量。
 
 从图 8 可以看出，根据混淆矩阵中对角线单元格的值，会话级特征提供了更好的分类准确率。还可以看到，分类器在训练轮次 31 达到了最佳验证性能 0.003，这意味着分类器训练算法收敛良好，请参见图 9，它显示了轮次数量与三组数据（训练、测试和验证）的验证性能之间的关系。通常，经过更多轮次的训练后误差会减小，但随着网络开始过拟合训练数据，验证数据集上的误差可能会开始增加。在默认设置中，验证误差连续增加六次后训练停止，并取验证误差最低的那一轮的最佳性能。
 
-| 图 8. 10 个用户的会话级分类器混淆矩阵 |
-| --- |
-| ![Figure978-1-7998-2701-6.ch013.f08](img/ch013.f08.png) |
+#### 图 8. 10 个用户的会话级分类器混淆矩阵
+
+![Figure978-1-7998-2701-6.ch013.f08](img/ch013.f08.png)
 
 在学习背景下，反向传播通常被梯度下降优化算法用来通过计算损失函数的梯度来调整神经元的权重。图 9 中梯度的大小和验证检查的次数被用来终止训练。随着训练达到最小性能，梯度将变得非常小，而验证检查的次数代表验证性能未能下降的连续迭代次数。因此，从该图可以看出，考虑到我们的实验规格，我们获得了最准确的分类器。
 
-| 图 9. 验证性能 |
-| --- |
-| ![Figure978-1-7998-2701-6.ch013.f09](img/ch013.f09.png) |
+#### 图 9. 验证性能
 
-| 图 10. 验证检查 |
-| --- |
-| ![Figure978-1-7998-2701-6.ch013.f10](img/ch013.f10.png) |
+![Figure978-1-7998-2701-6.ch013.f09](img/ch013.f09.png)
 
-############ 评估指标
+#### 图 10. 验证检查
+
+![Figure978-1-7998-2701-6.ch013.f10](img/ch013.f10.png)
+
+### 评估指标
 
 评估基于触摸的生物识别系统或任何其他生物识别系统性能最常用的指标是误拒率（`FRR`）和误接率（`FAR`）（AbdelDayem 等，2017）。`FRR` 是被标记为冒名顶替者并被拒绝访问的合法用户的百分比。`FRR` 表示系统的特异性。`FAR` 是被允许访问系统的冒名顶替者的百分比。`FAR` 表示系统的灵敏度。以下公式用于计算 `FAR` 和 `FRR`（AbdelDayem 等，2017）。
 
@@ -6478,11 +6359,11 @@ MATLAB MathWorks 还提供了一个图形用户界面应用程序，用于使用
 
 图 11 展示了其中一个用户的混淆矩阵。`FAR` 通过将被验证为“1”类的“0”类样本数量除以“0”类样本总数来计算。以同样的方式，我们可以通过将被验证为“0”类的“1”类样本数量除以“1”类样本总数来计算 `FRR`。
 
-| 图 11. 识别混淆矩阵示例 |
-| --- |
-| ![Figure978-1-7998-2701-6.ch013.f11](img/ch013.f11.png) |
+#### 图 11. 识别混淆矩阵示例
 
-############ 支持向量机
+![Figure978-1-7998-2701-6.ch013.f11](img/ch013.f11.png)
+
+### 支持向量机
 
 支持向量机（`SVM`）分类器用于笔划级和会话级模型。准确率值汇总在表 7 中。从表中可以注意到，三次 `SVM` 在笔划级模型中给出了最佳准确率，但在会话级模型中，二次 `SVM` 给出了最高准确率值。
 
@@ -6514,7 +6395,7 @@ MATLAB MathWorks 还提供了一个图形用户界面应用程序，用于使用
 | `FAR` | 0.85% | 1.22% | 0% | 0.88% | 2.22% | 3.2% | 3.31% | 2.7% |
 | `FRR` | 57.13% | 43.18% | 5% | 11% | 36.22% | 53.4% | 44% | 42% |
 
-######## 结论与未来工作
+## 结论与未来工作
 
 在本文中，我们提出了一个用于触摸屏持续用户认证的框架，旨在识别冒名顶替者对机器的任何滥用。我们的研究证明，使用可以在触摸会话级提取的会话级特征模型，在使用 `ANN` 分类器对触摸设备用户进行分类时更为高效。考虑到我们的实验条件和规格，我们获得了更好的性能和识别准确率。此外，在笔划级特征模型中，冒名顶替者用户以某种方式可以模拟笔划行为，然而，他无法模拟长时间在设备上工作的所有触摸会话中的所有笔划。因此，当我们有大量训练样本时，强烈推荐使用此模型，此时分类准确率将非常令人满意。
 
@@ -6522,17 +6403,11 @@ MATLAB MathWorks 还提供了一个图形用户界面应用程序，用于使用
 
 未来的工作可以考虑不同的操作系统和不同尺寸、分辨率和像素密度的触摸屏，以使该概念适用于所有设备，并具有令人满意的性能和效率。此外，可以使用其他机器学习算法和工具，如深度学习、`k` 近邻、朴素贝叶斯或决策树，以获得更好的性能和更高的准确率。移动应用程序开发框架的新趋势，如 `Xamarin` 跨平台和 `Cordova` 框架，可用于构建认证框架。
 
-##### 参考文献
+### 参考文献
 
 AbdelDayem, M., Hemeda, H., & Sarhan, A. (2016). Enhanced User Authentication through Keystroke Biometrics for Short-Text and Long-Text Inputs. *Artificial Intelligence and Machine Learning Journal*, ICGST LLC, Delaware, USA, 16(1).
 
 Activation Functions in Neural Networks. (2017). Retrieved from https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6
-
-
-
-
-
-##### 参考文献
 
 Ali, L., Monaco, J. V., Tappert, C. C., & Qiu, M. (2016). Keystroke Biometric Systems for User Authentication. *Journal of Signal Processing Systems*, Springer, 86(2-3), 175–190. doi:10.1007/s11265-016-1114-9
 
@@ -6555,6 +6430,10 @@ Conti, M., Zachia-Zlatea, I., & Crispo, B. (2011). Mind How You Answer Me! Trans
 Eberz, S., & Rasmussen, K. B. (2017). Evaluating Behavioral Biometrics for Continuous Authentication: Challenges and Metrics. *Proceedings of the 2017 ACM on Asia Conference on Computer and Communications Security*, 386-399. Abu Dhabi, United Arab Emirates. 10.1145/3052973.3053032
 
 Eljetlawi, M. (2010). Graphical Password: Existing Recognition Based Graphical Password Usability. *Proceedings of the IEEE 6th Conference on Networked Computing (INC)*. IEEE.
+
+
+
+## 参考文献
 
 Feng, T., Liu, Z., Kwon, K. A., Shi, W., Carbunar, B., Jiang, Y., & Nguyen, N. (2012). Continuous Mobile Authentication Using Touchscreen Gestures. *Proceedings of the 2012 IEEE International Conference on Technologies for Homeland Security (HST 2012)*, Waltham, MA, 451–456. 10.1109/THS.2012.6459891
 
@@ -6608,12 +6487,6 @@ Mahfouz, A., Mahmoud, T. M., & Sharaf Eldin, A. (2017). A Survey on Behavioral B
 
 Mantyjarvi, J., Lindholm, M., Vildjiounaite, E., Makela, S. M., & Allisto, H. (2005). Identifying Users of Portable Devices from Gait Pattern with Accelerometers. *Proceedings of the IEEE International Conference on Acoustics, Speech, and Signal Processing*, 2, 973–976.
 
-
-
-
-
-##### 参考文献
-
 Mazhelis, O., & Puuronen, S. (2007). A Framework for Behavior-Based Detection of User Substitution in a Mobile Context. *Computers & Security*, 26(2), 154–176. doi:10.1016/j.cose.2006.08.010
 
 Mondal, S., & Bours, P. (2015). Swipe Gesture Based Continuous Authentication for Mobile Devices. *Proceedings of the IAPR International Conference on Biometrics*. 10.1109/ICB.2015.7139110
@@ -6633,6 +6506,10 @@ Ouaguid, A., Abghour, N., & Ouzzif, M. (2018). A Novel Security Framework for Ma
 Perera, P., & Patel, V. M. (2018). Efficient and Low Latency Detection of Intruders in Mobile Active Authentication. *IEEE Transactions on Information Forensics and Security*, 13(6), 1392–1405. doi:10.1109/TIFS.2017.2787995
 
 Ross, A., Nandakumar, K., & Jain, A. K. (2008). Introduction to Multibiometrics. *Handbook of Biometrics*, Springer, 271–292.
+
+
+
+# 参考文献
 
 Serwadda, A., Phoha, V. V., & Wang, Z. (2013). Which Verifiers Work? A Benchmark Evaluation of Touch-based Authentication Algorithms. *Proceedings of the 6th IEEE International Conference on Biometrics: Theory, Applications and Systems (BTAS)*, 1–8. 10.1109/BTAS.2013.6712758
 
@@ -6684,26 +6561,23 @@ Suthaharan, S. (2016). Machine Learning Models and Algorithms for Big Data Class
 
 **Traditional authentication schemes（传统认证方案）**：验证系统用户合法性的常规方法，即密码、PIN 码或图形密码。
 
-#### 第 14 章
+# 第 14 章
 
 *   **Rui Hu**
+
     ![Orcid Imagehttps://orcid.org/0000-0003-0266-4348](https://orcid.org/0000-0003-0266-4348)
+
     奥克兰理工大学，新西兰
 
 *   **Wei Qi Yan**
+
     奥克兰理工大学，新西兰
 
-##### 摘要
+## 摘要
 
+尽管我们的社区正在广泛关注区块链技术，但它距离现实应用仍很遥远。因此，这项炙手可热的技术可以被理解并用于视觉应用。作者专注于在线视频，由于每天的高需求，这些视频收集了足够的用户点击量。当人们在在线网站观看电视剧集视频时，往往需要按升序或降序精确组织播放列表。然而，由于多种原因，`YouTube` 等视频网站无法提供这项服务。本章为这些视频网站创建了一条私有链，并应用 `Merkle tree`（默克尔树）将排序后的视频存储在链上。已在视频网站中创建了一个排序播放列表。跳出视频搜索的框架，以提供快速的视频排名解决方案是作者的主要任务。排序结果通过编辑距离进行评估。
 
-
-
-
-##### 尽管我们的社区正在广泛关注区块链技术，但它距离现实应用仍很遥远
-
-因此，这项炙手可热的技术可以被理解并用于视觉应用。作者专注于在线视频，由于每天的高需求，这些视频收集了足够的用户点击量。当人们在在线网站观看电视剧集视频时，往往需要按升序或降序精确组织播放列表。然而，由于多种原因，`YouTube` 等视频网站无法提供这项服务。本章为这些视频网站创建了一条私有链，并应用 `Merkle tree`（默克尔树）将排序后的视频存储在链上。已在视频网站中创建了一个排序播放列表。跳出视频搜索的框架，以提供快速的视频排名解决方案是作者的主要任务。排序结果通过编辑距离进行评估。
-
-###### 简介
+## 简介
 
 随着互联网的病毒式普及，它在消除地理限制和提高效率方面给人们带来了极大便利。互联网用户逐渐形成了基于网络的生活圈（Li 等，2018）。用户每天至少有三分之一的时间在线，我们观察到在各大主流在线视频网站中，用户在观看视频时有以下意图（Wang 等，2018）。第一，他们想质疑视频的真实性，怀疑造假；第二，他们需要多次重复搜索才能找到目标视频；第三，在播放当前视频时，如果播放列表中没有下一集可播，或者他们想返回上一集，将会花费过多时间重复相同的操作。
 
@@ -6715,7 +6589,7 @@ Suthaharan, S. (2016). Machine Learning Models and Algorithms for Big Data Class
 
 在本文中，我们将介绍相关工作和我们的设计。随后将给出我们的实验及结果分析以及讨论。本文末尾将阐述我们的结论和未来工作。
 
-###### 相关工作
+## 相关工作
 
 如今，`YouTube` 的视频索引主要分为两部分：召回和排序。如图 1 所示，第一个绿色方块代表召回算法，它可以帮助推荐系统从数百万视频资源中筛选出数百个视频。此外，除配合深度学习使用的召回算法外，还可以添加其他召回来源；这些资源将被传递到下一部分（Wang 等，2015）。可能由于计算量巨大，不可能且几乎无法避免地使用召回算法的所有特征；因此，召回算法仅利用用户行为和场景特征（Sedhain 等，2015）。排序算法利用更多特征，为每个候选视频计算得分，并按得分从高到低排序。这样，将从数百个视频中筛选出几十个目标（Davidson 等，2010）。离线指标和在线 AB 测试被用于评估算法，AB 测试被设定为主要评价指标。
 
@@ -6734,7 +6608,7 @@ Suthaharan, S. (2016). Machine Learning Models and Algorithms for Big Data Class
 | --- |
 | ![Figure978-1-7998-2701-6.ch014.f02](img/ch014.f02.png) |
 
-###### 我们的设计
+## 我们的设计
 
 为了节省成本和提高效率，本文将采用创建私有链进行测试的方法。尽管对区块扩容的需求巨大，世界上有许多组织在进行相关研究，但进展不大，因为大家认为扩大区块容量本身会延迟交易速率。整个区块链存在延迟（Dai 等，2018）。
 
@@ -6746,17 +6620,13 @@ Suthaharan, S. (2016). Machine Learning Models and Algorithms for Big Data Class
 
 当消费者一段时间后需要检索文档时，执行以下操作。客户端查询私有链以获取当时存储的相关根哈希；根哈希向下分支获取对应原始文件的叶子节点哈希值，然后利用其寻址属性索引 `P2P network`。因为哈希值与文件一一对应，所以找到了原始文件的分割文件；最后，可以组合成完整文件。
 
-###### 实验
+## 实验
 
-
-
-
-
-####### 论文标题
+### 论文标题
 
 在本文中，考虑到比特币底层技术的不完善性，我们将对当前应用范围相对广泛且图灵完备的以太坊进行优化，以构建一条用于安装和调试目的的私有链（Gramoli & Staples, 2018）。
 
-######## 创世区块配置
+#### 创世区块配置
 
 在运行以太坊私有链之前，我们需要定义链的第一个区块，即创世区块。下文将创世区块的相关信息写入 JSON 格式的配置文件中，描述如下（Maxim, et al., 2018）。
 
@@ -6780,7 +6650,7 @@ Suthaharan, S. (2016). Machine Learning Models and Algorithms for Big Data Class
 }
 ```
 
-######## 椭圆曲线加密原理
+#### 椭圆曲线加密原理
 
 椭圆曲线能相对直观地反映其数学原理。在数字货币加密算法中，因为通常采用整数，我们通常使用公式 (1)：
 
@@ -6788,9 +6658,11 @@ Suthaharan, S. (2016). Machine Learning Models and Algorithms for Big Data Class
 
 其中 `(0, p)` 是 `y²` 的取值区间。
 
+
+
 与基于 RSA 密码学的 DSA 相比，数字签名所需的公钥长度可以大幅缩短（Wang, He & Ji, 2017）。以安全级别为 80 位的数字签名为例，基于 ECDSA 的公钥长度几乎是安全级别的两倍，而在同等安全级别下，RSA 所需的公钥长度至少为 1024 位。基于 ECDSA 或 RSA 算法生成的签名长度均为 320 位；因此，ECDSA 相对于 RSA 的优势显而易见。
 
-######## 视频数据处理与 Merkle 树
+## 视频数据处理与 Merkle 树
 
 我们将应用这项技术来处理视频数据，如图 3 所示。我们解析视频数据，考虑到视频本质上是由一帧帧画面按时间顺序组成的，为保证传输效率和传输质量，我们将视频按等时长进行分割。原始视频数据按大小均分，我们将最后一个无法达到标准大小的部分设为剩余部分。然后，从每个视频片段计算哈希值，我们将这些哈希值及对应的视频数据保存到分布式数据库 IPFS 中（Liu, et al., 2015）。
 
@@ -6806,19 +6678,19 @@ Suthaharan, S. (2016). Machine Learning Models and Algorithms for Big Data Class
 | --- |
 | ![Figure978-1-7998-2701-6.ch014.f04](img/ch014.f04.png) |
 
-######## 区块链存储与矿工机制
+## 区块链存储与矿工机制
 
 在区块链中，数据写入区块所需的时间由矿工决定，矿工是系统的关键维护者之一。在开发初期，比特币仅设置了两种方式：一是挖矿，二是记录转账交易并确认。随着各类数字货币的兴起，这一规则逐渐发生变化，开发者开始占据最初发行货币的一部分，但不变的是记录和确认仍通过奖励获取数字货币来实现。
 
 影响矿工记录和确认的主要原因是交易费。根据我们的实验，最快的不到 36 秒，慢的可达 18 分钟以上。这种差异极其巨大，但两者的成本均仅为 12 点。因此，我们在该项目中选择最高效率的方式。
 
-######## IPFS 分布式存储系统
+## IPFS 分布式存储系统
 
 考虑到区块链容量的限制及交易效率问题，本实验引入了 IPFS 这一分布式存储系统的概念。该系统允许文件在客户端计算机上共享，并整合进全球文件系统。该技术基于 BitTorrent 协议和分布式哈希表。
 
 因此，任何人都可以向系统上传任意文件，它是内容寻址的。因此，不可能篡改给定地址的文件。基于这一假设，我们通过快速验证 BitTorrent 协议来确保文件的安全性。我们可以自由上传和下载所需文件；数据可通过相同地址进行确认。换句话说，我们可以创建一个具有无限存储空间的数据库。
 
-######## 结果分析与讨论
+## 结果分析与讨论
 
 在本节中，我们假设链上的所有数据均可按升序或降序排列。在本实验中，我们按“美国最佳舞团第 7 季第 1 周”到“第 10 周”的顺序上传视频，默认顺序是根据链上的时间顺序存储视频。
 
@@ -6836,7 +6708,7 @@ Suthaharan, S. (2016). Machine Learning Models and Algorithms for Big Data Class
 | --- |
 | ![Figure978-1-7998-2701-6.ch014.f06](img/ch014.f06.png) |
 
-######### 编辑距离计算
+### 编辑距离计算
 
 为了计算两个列表之间的距离，我们引入了“编辑距离”，也可称为莱文斯坦距离（Yujian, Bo, 2007），如公式 (2) 所示。
 
@@ -6844,19 +6716,16 @@ Suthaharan, S. (2016). Machine Learning Models and Algorithms for Big Data Class
 
 我们将公式 (2) 转换为矩阵形式以使其更直观，图 7 举例说明了这一点（Wachter-Zeh, & Antonia, 2018）。第一行代表 YouTube 列表，第一列代表目标列表。我们可以遵循以下步骤获得结果：
 
-*   步骤 1：初始化一个矩阵。
-*   步骤 2：按照从左行到右行、从上到下的规则填充矩阵。
-*   步骤 3：每次水平或垂直跳跃分别对应一次插入或删除。
-*   步骤 4：每次跳跃的代价设为 1。
-*   步骤 5：每个单元格填入最小值。如果行和列中两个对角跳跃的对象不同则代价为 1，否则为 0。
-*   步骤 6：矩阵右下角的数字即为两个对象之间的莱文斯坦距离。
+* 步骤 1：初始化一个矩阵。
+* 步骤 2：按照从左行到右行、从上到下的规则填充矩阵。
+* 步骤 3：每次水平或垂直跳跃分别对应一次插入或删除。
+* 步骤 4：每次跳跃的代价设为 1。
+* 步骤 5：每个单元格填入最小值。如果行和列中两个对角跳跃的对象不同则代价为 1，否则为 0。
+* 步骤 6：矩阵右下角的数字即为两个对象之间的莱文斯坦距离。
 
 | 图 7. 用于计算编辑距离的矩阵 |
 | --- |
 | ![Figure978-1-7998-2701-6.ch014.f07](img/ch014.f07.png) |
-
-
-
 
 右下角的数字是 11，这意味着 YouTube 列表与目标列表之间的距离为 11。我们搜索了多种关键词，并将这些数据与我们的实验进行了比较，如下所示。当我们在 YouTube 和实验中都搜索“ABDC2”时，结果如图 8 所示。
 
@@ -6880,9 +6749,8 @@ YouTube 列表与目标列表之间的距离如图 9 所示。当我们将关键
 
 表 1. 使用相同搜索词时 YouTube 与实验的比较
 
-| 搜索关键词 | 距离 | 距离 |
+| 搜索关键词 | 距离 (YouTube) | 距离 (实验) |
 | --- | --- | --- |
-| | (YouTube) | (实验) |
 | ABDC7 | 11 | 0 |
 | ABDC2 | 10 | 0 |
 | Uncle Season1 | 4 | 0 |
@@ -6893,13 +6761,13 @@ YouTube 列表与目标列表之间的距离如图 9 所示。当我们将关键
 
 如图 12 所示，干扰项的数量减少，目标数量减少，距离也呈现这一趋势。通过比较结果，显而易见，不仅节省了大数据上行存储的成本，而且缠绕的交易时间也存储在我们的实验中。我们利用区块链作为数据库，以确保视频数据的稳健性和不可篡改性；一方面，播放列表按正确顺序排序，这节省了视频浏览的检索时间，并提高了视频网站的效率。
 
-####### 结论
+## 结论
 
 我们考虑将存储在每个区块中的数据利用时间戳特性按时间顺序重新排序。在本文中，我们创建了一个用作数据库存储视频数据的私有链；还有一点，该数据库的另一个功能是利用时间戳将视频存储在区块链中。结合这些特性使播放列表能够按升序或降序组织；因此，在可视化区块链的帮助下，我们在浏览这些在线网站时节省了大量时间。更新后的播放列表仍然保持有序，当我们点击播放列表中的任何图标时，下一集是当前播放视频的下一集。
 
 在我们的实验中，我们在本地创建了一个私有区块链，所有数据均基于私有网络。我们的实验基于理论或在理想环境中实现了预期结果。未来，我们将尝试连接到主网并同步相应的视频数据。
 
-##### 参考文献
+## 参考文献
 
 Aste, T., Tasca, P., & Di Matteo, T. (2017). Blockchain Technologies: The Foreseeable Impact on Society and Industry. *Computer*, 50(9), 18–28. doi:10.1109/MC.2017.3571064
 
@@ -6941,31 +6809,28 @@ Wang, H., Wang, N., & Yeung, D.-Y. (2015). Collaborative deep learning for recom
 
 Wang, S., Zhang, Y., & Zhang, Y. (2018). A blockchain-based framework for data sharing with fine-grained access control in decentralized storage systems. *IEEE Access: Practical Innovations, Open Solutions*, 6(6), 38437–38450. doi:10.1109/ACCESS.2018.2851611
 
+
+
 Zhang, J., Wang, Z., Quan, Z., Yin, J., Chen, Y., & Guo, M. (2018). Optimizing power consumption of mobile devices for video streaming over 4G LTE networks. *Peer-to-Peer Networking and Applications*, 11(5), 1101–1114. doi:10.1007/s12083-017-0580-6
 
 Zhou, Y., Gu, X., Wu, D., Chen, M., Chan, T. H., & Ho, S. W. (2018). Statistical study of view preferences for online videos with cross-platform Information. *IEEE Transactions on Multimedia*, 20(6), 1512–1524. doi:10.1109/TMM.2017.2769807
 
-#### 第 15 章
+## 第 15 章
 
 *   Chen Xin
     奥克兰理工大学，新西兰
-
 *   Minh Nguyen
     奥克兰理工大学，新西兰
-
 *   Wei Qi Yan
     奥克兰理工大学，新西兰
 
-##### 摘要
+### 摘要
 
-
-
-
-##### 基于目标识别的火焰识别在智能监控中具有重要应用价值
+### 基于目标识别的火焰识别在智能监控中具有重要应用价值
 
 本章重点关注利用深度学习进行火焰识别及其评估。为实现这一目标，作者设计了一种多火焰检测方案（`MFD`），该方案利用卷积神经网络（`CNNs`）。作者在深度学习中使用 `TensorFlow`，配合 `NVIDIA GPU` 训练图像数据集并构建了用于火焰识别的模型。本章的贡献包括：(1) 火焰识别的数据增强，(2) 深度学习的模型构建，以及 (3) 基于深度学习的火焰识别结果评估。
 
-###### 简介
+#### 简介
 
 如今，火焰识别已成为视觉目标识别领域最热门的研究课题之一（Jiao 等，2011；Wang 等，2018；Ren 等，2018；Wang 等，2017；Lu 等，2017；Gu 等，2017）。它在公共安全监控方面拥有无数宝贵的应用。在本章中，我们旨在开发一种计算工具，能够自动检测各类火焰，并从输入视觉数据中对火焰进行分类。可靠的识别需要一个设计良好的深度神经网络。人类视觉系统基于日常生活中的长期训练来识别物体。当视觉目标相对复杂时，我们通常根据人类经验进行推断（Yan，2017）。
 
@@ -6981,7 +6846,7 @@ Zhou, Y., Gu, X., Wu, D., Chen, M., Chan, T. H., & Ho, S. W. (2018). Statistical
 
 本章结构安排如下。相关工作见第 2 节，我们的方法见第 3 节。我们的结果与分析见第 4 节，结论见第 5 节。
 
-###### 相关工作
+#### 相关工作
 
 火焰识别的性能主要取决于火焰分类器（Jiao 等，2011）。因此，我们需要一种具有高准确率和低误报率的分类器。大多数基于视频的火灾检测技术致力于火焰检测，以提供早期火灾报警。传统的紫外线和红外线火灾检测存在诸多缺点。由于影响因素过多，极易产生误报或虚警。同时，火焰的位置、大小和增长率也可能判断错误。
 
@@ -6993,21 +6858,17 @@ Zhou, Y., Gu, X., Wu, D., Chen, M., Chan, T. H., & Ho, S. W. (2018). Statistical
 
 2016 年，一种通过神经网络进行森林火灾检测的深度学习方法被提出（Shen 等，2018）。火灾检测以级联方式执行；即首先由全局分类器测试完整图像。若存在火焰，则使用细粒度分类器进行精确的火灾位置检测。火点探测器利用精心准备的数据集实现了 90% 以上的准确率（Zhang 等，2014）。一种卷积神经网络（`CNN` 或 `ConvNet`）被提出用于识别视频中的火焰。`CNN` 在相同架构下的目标分类领域表现良好。在真实视频上测试，基于 `CNN` 的方法实现了优异的分类性能，结果极具前景（Frizzi 等，2016）。
 
-
-
-
-
-####### YOLO 目标分类方法
+##### YOLO 目标分类方法
 
 YOLO（Redmon 等，2016）是一种优秀的目标分类方法，它与其他方法（Shen 等，2018）截然不同，例如 F-FCN（Dai 等，2016）、R-CNN（Zhang 等，2014）、Fast R-CNN（Girshick，2015）和 Faster R-CNN（Ren 等，2015）。YOLO（Redmon 等，2016；Redmon & Farhadi，2017）（You Only Look Once，只看一次）还阐释了该方法如何利用神经网络处理数字图像。YOLO 的架构受用于图像分类的 GoogLeNet 模型启发。该网络拥有 24 个卷积层，后接 2 个全连接层。采用了 `1×1` 缩减层，随后接 `3×3` 卷积层，而非 GoogLeNet 使用的初始模块。当输入图像进入 YOLO 的神经网络时，图像仅被分析一次，这与 R-CNN（Girshick，2015）等传统分类器不同。
 
 YOLO 中的网络将输入图像分割成 `13×13` 的网格，每个网格将预测五个边界框。这些边界框勾勒出包围物体的矩形；这意味着，这些边界框不仅揭示是否存在物体，还描述物体属于何种类别。预测结果基于置信度得分，它向我们展示边界框包围物体的优劣程度。置信度得分反映框的形状是否良好，而非框内是什么物体。对于每个边界框，网格还会预测一个类别；它给出所有可能类别的概率分布。YOLO 网络还表明，向预训练网络添加卷积层和连接层可以提升性能。
 
-####### R-FCN 检测器
+##### R-FCN 检测器
 
 R-FCN（Dai 等，2016）是一种用于目标检测或识别的最先进检测器。它通过将卷积操作移至 RoI 层之前，并使用位置敏感特征图来评估每个类别的概率，修改了传统的 Faster R-CNN 结构（Ren 等，2015）。RoI 池化功能已被用于所有目标检测方法。它将任意大小的输入矩形区域转换为固定大小的特征。这种方法能实现更高的定位精度，并极大地提高目标检测的速度。R-FCN 必须解决的根本问题是 Faster R-CNN 检测速度慢。其速度慢的原因在于，不同的候选区域在 RoI 层之后不共享其结构。
 
-####### 方法论
+##### 方法论
 
 火焰检测可视为火焰识别的一个步骤。我们将火焰识别任务分为两部分：火焰的分类与检测。图像首先被导入以提取高层特征（Girshick 等，2014）；然后，这些特征被用作网络的输入。考虑到网络模型的大规模（Karpathy 等，2014），火焰识别的复杂性也低于一般目标识别（Szegedy, Toshev & Erhan，2013）。
 
@@ -7049,11 +6910,7 @@ R-FCN（Dai 等，2016）是一种用于目标检测或识别的最先进检测�
 
 输入图像进入 `input[process]` 层，该层将像素强度从 `[0, 255]` 归一化为 `[-1, 1]` 范围内的浮点数。在 CNN 训练中，训练样本的框将在此层同时进行编码。CNN 中共有六层；这些层从原始图像中提取高层特征。结构展开如图 1 所示。
 
-
-
-
-
-####### 实验结果
+##### 实验结果
 
 经过六层 CNN 后，紧接着一个名为 `flatten[dropout]` 的层。我们展开 CNN 的输出并添加 dropout 操作以克服过拟合问题。然后，`flatten[dropout]` 的结果将被导入 `cls[output]` 和 `loc[output]` 层进行火焰分类和定位。`cls[output]` 和 `loc[output]` 都等同于一个两层 MLP，由两个子层组成。我们在输出层使用非线性激活函数。`predict` 层通过处理 `cls[output]` 和 `loc[output]` 层的输出给出最终输出，最终输出呈现为 `[classID, conf, x[min], x[max], y[min], y[max]]`，其中 `classID` 代表对象所属类别的标签，`conf` 指属于该类别的概率。输出的其余部分 `[x[min], x[max], y[min], y[max]]` 是边界框的坐标。
 
@@ -7083,8 +6940,11 @@ Table 2. Comparisons of multiple models for flame recognition(%)
 
 | Figure 2b. Motion pictures for single flame detection: Camp fire detection |
 | --- |
-| ![Figure978-1-7998-2701-6.ch015.f02b](img/ch015.f02b.png) |
 
+
+
+| --- |
+| ![Figure978-1-7998-2701-6.ch015.f02b](img/ch015.f02b.png) |
 | Figure 3. Motion pictures for multiple flames detection |
 | --- |
 | ![Figure978-1-7998-2701-6.ch015.f03](img/ch015.f03.png) |
@@ -7097,7 +6957,7 @@ Table 3. Four groups of parameters for the proposed MFD models
 
 总的来说，`MFD 1` 模型在我们的火焰识别中表现最好。卓越的准确率不仅体现在识别上，也体现在定位上，无论目标大小。在我们的比较中，`YOLO` 对小目标表现不佳，因为它在一个网格中预测两个框且只归属一类。由于损失函数的选择，定位误差是影响检测效率的主要原因，特别是在处理过大或过小目标时。由于结构复杂，`R-FCN` 在火焰识别方面表现优于 `YOLO`。
 
-####### 结论
+### 结论
 
 在本章中，我们使用深度学习中的卷积神经网络训练了一个有价值的模型，用于自动识别和检测火焰的发生。基于我们自己的数据集，介绍并考察了卷积神经网络的各种要素和相关关键功能。
 
@@ -7105,7 +6965,7 @@ Table 3. Four groups of parameters for the proposed MFD models
 
 未来，我们将致力于多火焰的检测和识别。此外，森林火灾、建筑火灾等更复杂的火焰将被加入项目。由于真实场景中复杂多变的环境，将会有更多不可控因素可能影响我们的火焰识别。未来，视频源的动态特性（如白炽灯、荧光灯等）将被纳入考虑。
 
-##### 参考文献
+### 参考文献
 
 Borji, A., Cheng, M., Jiang, H., & Li, J. (2015). Salient object detection: A benchmark. *IEEE Transactions on Image Processing*, 24(12), 5706–5722. doi:10.1109/TIP.2015.2487833
 
@@ -7114,12 +6974,6 @@ Dai, J., He, K., Li, Y., Ren, S., & Sun, J. (2016). Instance-sensitive fully con
 Dai, J., Li, Y., He, K., & Sun, J. (2016). R-FCN: Object detection via region-based fully convolutional networks. *Proceedings NIPS*, pp. 379-387.
 
 Erhan, D., Szegedy, C., Toshev, A., & Anguelov, D. (2014). Scalable object detection using deep neural networks. *Proceedings IEEE CVPR*, pp. 2147-2154. doi:10.1109/CVPR.2014.276
-
-
-
-
-
-##### 参考文献
 
 Foo, S. (2000). A machine vision approach to detect and categorize hydrocarbon fires in aircraft dry bays and engine compartments. *IEEE Transactions on Industry Applications*, 36(2), 459–466. doi:10.1109/28.833762
 
@@ -7177,50 +7031,43 @@ Zhang, N., Donahue, J., Girshick, R., & Darrell, T. (2014). Part-based R-CNNs fo
 
 Zheng, K., Yan, W., & Nand, P. (2018). Video dynamics detection using deep neural networks. *IEEE Transactions on Emerging Topics in Computational Intelligence*, 2(3), pp. 224–234.
 
-#### 第 16 章
+## 第 16 章
 
-##### 作者
+### 作者
 
 *   **Ahmad Al-Qerem**  
     扎尔卡大学，约旦
-
 *   **Bushra Mohammed Abutahoun**  
     赛义德·苏玛雅技术大学，约旦
-
 *   **Shadi Ismail Nashwan**  
     ![Orcid Image](https://orcid.org/0000-0002-1476-4162)  
     计算机科学系，朱夫大学，沙特阿拉伯
-
 *   **Shatha Shakhatreh**  
     赛义德·苏玛雅技术大学，约旦
-
 *   **Mohammad Alauthman**  
     ![Orcid Image](https://orcid.org/0000-0003-0319-1968)  
     扎尔卡大学，约旦
-
 *   **Ammar Almomani**  
     ![Orcid Image](https://orcid.org/0000-0002-8808-6114)  
     信息技术系，侯赛因大学学院，巴尔卡应用大学，约旦
 
-##### 摘要
+### 摘要
 
-物联网设备在全球范围内的普及显著增加，由于其设计安全性较低，比台式计算机更容易遭到攻破。这导致了基于物联网的僵尸网络攻击现象，如 Mirai 僵尸网络，其最近已成为持续存在的高调威胁。需要准确及时的检测方法来识别这些攻击并缓解这些新威胁。为此，本章将使用各种机器学习和特征选择算法，实施一种基于网络的异常检测方法来应对 Mirai 僵尸网络。作者采用`Multiphase Genetic Algorithm`节中的方法和`PSO`来选择能够产生良好整体分类结果的最佳特征子集，借助该`Feature Selection Algorithm`，`Random forest`算法能够以 100%的准确率检测所有异常行为。
+物联网设备在全球范围内的普及显著增加，由于其设计安全性较低，比台式计算机更容易遭到攻破。这导致了基于物联网的僵尸网络攻击现象，如 `Mirai` 僵尸网络，其最近已成为持续存在的高调威胁。需要准确及时的检测方法来识别这些攻击并缓解这些新威胁。为此，本章将使用各种机器学习和特征选择算法，实施一种基于网络的异常检测方法来应对 `Mirai` 僵尸网络。作者采用 `Multiphase Genetic Algorithm` 节中的方法和 `PSO` 来选择能够产生良好整体分类结果的最佳特征子集，借助该 `Feature Selection Algorithm`，`Random forest` 算法能够以 100% 的准确率检测所有异常行为。
 
-##### 引言
+### 引言
+
+
+
+# 基于多阶段特征选择的物联网僵尸网络检测
 
 物联网（`IoT`）是一个平台，日常设备变得更智能，日常处理变得更智能化，日常通信变得更富有信息量（Ray, 2018）。随着物联网设备参与到方方面面，其数量在安全性缺乏的情况下极速增长，从而引发灾难性攻击，因此，及时检测物联网攻击的方法变得至关重要，以促进物联网网络安全并防止攻击蔓延。物联网是一种新范式，旨在将物理世界的所有组件连接到数字世界中，其理念是将代表世界的事物融合到软件应用和互联网中，使它们能够通信并利用世界的上下文信息（Alauthman et al., 2019; Alauthman et al., 2020; Atzori et al., 2010; Gonzalez et al., 2008; Sterling, 2005）。物联网技术发展迅速，已成为现代城市和大型企业的焦点，最近构建了许多应用。作为一项新技术，它面临着许多挑战，其中一个非常重要且关键的挑战是安全性（Alauthaman et al., 2018; Xia et al., 2012）。
 
-
-
-
-
-###### 基于多阶段特征选择的物联网僵尸网络检测
-
 物联网设备和系统正遭受安全和隐私问题的困扰，这些问题是万物互联的核心（Lee & Kim, 2017），且存在极高风险的漏洞。这些设备在缺乏基本安全和隐私保护考量的情况下涌入市场——即“设计上的不安全”。因此，物联网的普及及其日益增长的流行度，加上其拥有大量不安全、算力强、资源丰富的设备，使其成为攻击者寻求入侵这些设备并利用其构建大规模僵尸网络的容易、诱人且强大的目标。
 
-僵尸网络是被恶意软件感染并受第三方（攻击者）控制的机器组成的机器人网络；它利用命令控制基础设施实施各种恶意攻击，如垃圾邮件投递、身份盗窃和分布式拒绝服务攻击（DDOS）。DDOS 攻击调动大量机器（僵尸节点），用海量请求淹没目标网站。因此，目标网站将无法为实际和合法用户提供服务。物联网设备的安全薄弱助长了此类攻击，并使其规模更大、危害更强（Bertino & Islam, 2017）。
+僵尸网络是被恶意软件感染并受第三方（攻击者）控制的机器组成的机器人网络；它利用命令控制基础设施实施各种恶意攻击，如垃圾邮件投递、身份盗窃和分布式拒绝服务攻击（`DDOS`）。`DDOS` 攻击调动大量机器（僵尸节点），用海量请求淹没目标网站。因此，目标网站将无法为实际和合法用户提供服务。物联网设备的安全薄弱助长了此类攻击，并使其规模更大、危害更强（Bertino & Islam, 2017）。
 
-图 1 展示了 DDOS 攻击。2016 年，计算机安全顾问 Brian Krebs 的网站遭受了 620 Gbps 流量的攻击；随后又发生了一次攻击，波及 Twitter、Netflix、Reddit 和 GitHub 等数百个网站；2017 年 2 月，针对一所美国大学的 DDOS 攻击持续了 54 小时，以及其他危险攻击。分析这些大规模 DDOS 攻击表明，物联网设备助长了这些攻击，这也是攻击规模如此巨大的原因。他们称这种类型的 DDOS 攻击为 Mirai（意为“未来”）（Shoemaker, 2017）。这次攻击凸显了安全的重要性，而这在物联网设备中一直缺失，导致了灾难性的攻击。Mirai 攻击取代了此前最大、最危险、最有效的 DDOS 攻击，达到了前所未有的水平（Kolias et al., 2017）。
+图 1 展示了 `DDOS` 攻击。2016 年，计算机安全顾问 Brian Krebs 的网站遭受了 620 Gbps 流量的攻击；随后又发生了一次攻击，波及 Twitter、Netflix、Reddit 和 GitHub 等数百个网站；2017 年 2 月，针对一所美国大学的 `DDOS` 攻击持续了 54 小时，以及其他危险攻击。分析这些大规模 `DDOS` 攻击表明，物联网设备助长了这些攻击，这也是攻击规模如此巨大的原因。他们称这种类型的 `DDOS` 攻击为 Mirai（意为“未来”）（Shoemaker, 2017）。这次攻击凸显了安全的重要性，而这在物联网设备中一直缺失，导致了灾难性的攻击。Mirai 攻击取代了此前最大、最危险、最有效的 `DDOS` 攻击，达到了前所未有的水平（Kolias et al., 2017）。
 
 | 图 1. 利用僵尸网络的 DDOS 攻击，Shoemaker |
 | --- |
@@ -7231,65 +7078,62 @@ Zheng, K., Yan, W., & Nand, P. (2018). Video dynamics detection using deep neura
 
 本文结构安排如下：第 2 节讨论相关工作。第 3 节介绍数据集描述。第 4 节描述提出的方法。第 5 节讨论实验与结果。最后，第 6 节总结并结论本文的发现。
 
-####### 背景
+## 背景
 
 已有多种僵尸网络检测方法被提出，其分类取决于检测方法和待检测的操作步骤。在（Alieyan et al., 2019）中，他们提出了一种基于网络的物联网攻击检测方法，针对 Bashlite 和 Mirai 攻击，为了评估其方法，他们研究了九种商用物联网设备的行为，通过从最近 100ms 到 1min 的五个时间窗口获取快照来监控数据包行为，并提取了 115 个统计特征（每个窗口 23 个）。他们使用深度自编码器作为无监督学习算法来检测网络的异常行为。他们在每个设备的正常行为上训练自编码器，这赋予了自编码器识别任何异常行为的能力，他们提出的方法成功以 100% 的准确率检测了 Mirai 和 Bashlite 的所有异常行为。
 
-在（Özçelik et al., 2017）中，他们研究了检测物联网僵尸网络的操作步骤，重点关注感染和传播的早期阶段以及与 C&C 服务器的通信。他们使用了仿真物联网节点、模拟数据集，并采用流规则的动态更新来检测搜索更多设备的 Mirai 感染物联网设备。正如（Summerville et al., 2015）所做的，他们在两台真实设备上使用深度数据包异常检测，作为蠕虫传播、隧道技术和代码注入攻击的检测方法。仅通过监控组织网络流量来识别感染早期阶段的检测手段是不充分的。
+在（Özçelik et al., 2017）中，他们研究了检测物联网僵尸网络的操作步骤，重点关注感染和传播的早期阶段以及与 `C&C` 服务器的通信。他们使用了仿真物联网节点、模拟数据集，并采用流规则的动态更新来检测搜索更多设备的 Mirai 感染物联网设备。正如（Summerville et al., 2015）所做的，他们在两台真实设备上使用深度数据包异常检测，作为蠕虫传播、隧道技术和代码注入攻击的检测方法。仅通过监控组织网络流量来识别感染早期阶段的检测手段是不充分的。
 
-在（Sedjelmaci et al., 2016）中，他们提出使用混合检测方法，即基于特征的检测和异常检测（BPN），来检测在无线传感器网络上模拟的 DDOS 攻击中被攻陷的设备。同理，在（Bostani & Sheikhan, 2017）中，他们也采用了混合检测方法，即基于规范的检测和异常检测（OFPC），利用在代表智慧城市的 6LoWPAN WSN 上的仿真来检测路由攻击（选择性转发和黑洞攻击）。
+在（Sedjelmaci et al., 2016）中，他们提出使用混合检测方法，即基于特征的检测和异常检测（`BPN`），来检测在无线传感器网络上模拟的 `DDOS` 攻击中被攻陷的设备。同理，在（Bostani & Sheikhan, 2017）中，他们也采用了混合检测方法，即基于规范的检测和异常检测（`OFPC`），利用在代表智慧城市的 `6LoWPAN WSN` 上的仿真来检测路由攻击（选择性转发和黑洞攻击）。
 
-在（Midi et al., 2017）中，他们引入了 Kalis，一种知识驱动的自适应入侵检测系统。他们使用真实设备，在 ZigBee、6LoWPAN、XBee、WIFI 和 BT 上进行数据仿真，利用知识驱动的异常检测来检测 ICMP 洪水、Smurf 攻击、TCP SYN 洪水、蜂窝攻击、数据篡改、选择性转发、Hello 干扰和复制等不同攻击。该方法不影响物联网设备上应用的性能，且不需要对软件进行任何更改。
+在（Midi et al., 2017）中，他们引入了 Kalis，一种知识驱动的自适应入侵检测系统。他们使用真实设备，在 ZigBee、`6LoWPAN`、XBee、`WIFI` 和 `BT` 上进行数据仿真，利用知识驱动的异常检测来检测 `ICMP` 洪水、Smurf 攻击、`TCP SYN` 洪水、蜂窝攻击、数据篡改、选择性转发、Hello 干扰和复制等不同攻击。该方法不影响物联网设备上应用的性能，且不需要对软件进行任何更改。
 
 在这些建议的僵尸网络检测方法中，每种技术应用的部署层级存在本质差异；第一种是基于主机的检测方法（Sedjelmaci et al., 2016; Summerville et al., 2015），第二种是基于网络的检测方法（Bostani & Sheikhan, 2017; Butun et al., 2015; Midi et al., 2017; Özçelik et al., 2017）。依赖基于主机检测的方法被认为在检测物联网受感染设备方面不够现实，因为我们无法保证软件安装在设备上（因为其中一些是可穿戴设备）；我们也无法依赖制造商在其设备上安装异常检测器。此外，工具的资源和计算能力各不相同，安装异常检测算法时会反映在性能上，这可能影响其主要功能，因此单一的非分布式解决方案更好。
 
-在（Raza et al., 2013）中，他们引入了 SVELTE，一种面向物联网的入侵检测系统。他们使用在 6LoWPAN 上的模拟数据，采用混合的基于特征和异常检测，来检测选择性转发、黑洞攻击，以及篡改信息或欺骗等路由攻击。该方法不影响物联网设备上应用的能量和内存容量，并能检测所有发起的恶意节点。
+在（Raza et al., 2013）中，他们引入了 SVELTE，一种面向物联网的入侵检测系统。他们使用在 `6LoWPAN` 上的模拟数据，采用混合的基于特征和异常检测，来检测选择性转发、黑洞攻击，以及篡改信息或欺骗等路由攻击。该方法不影响物联网设备上应用的能量和内存容量，并能检测所有发起的恶意节点。
 
 总之，本文区别于先前研究之处在于，它专注于能够选择与问题最相关特征并减少总体特征数量的特征选择算法，以用于实时检测问题，从而节省时间和计算资源，并使依赖少量特征即可高效检测实时异常行为成为可能，随后利用这些特征训练随机森林机器学习算法以识别异常行为。
 
-####### 提出的方法
+## 提出的方法
 
-
-
-
-######## Mirai 攻击检测流程
+### Mirai 攻击检测流程
 
 在本节中，我们将介绍通过研究被感染机器产生的网络流量异常行为来检测 Mirai 攻击所遵循的流程。高效检测 Mirai 攻击将有助于在早期阶段阻止攻击，并防止其他机器被感染。我们使用了多阶段特征选择算法和不同的机器学习算法。图 2 展示了总体方法，每个阶段将在下文中详细描述。
 
-######## 数据集
+### 数据集
 
-我们使用了一个名为 N-BALOT 的数据集。该数据集通过在交换机上使用端口镜像捕获原始网络流量数据（PCAP 格式），然后使用 Wireshark 数据包分析器记录流量数据（组织流量通常通过该分析器流动）而收集。为确保训练数据不含恶意行为，在 IoT 设备安装入网后立即采集其常规流量。他们在最近 100ms、500ms、1.5 秒、10 秒和 1 分钟的多个时间窗口内采集了主机和协议的行为快照，并通过计算不同的流量统计度量（如数据包大小的均值和方差）提取了每个窗口的 23 个特征，汇总为四类：
+我们使用了一个名为 `N-BALOT` 的数据集。该数据集通过在交换机上使用端口镜像捕获原始网络流量数据（`PCAP` 格式），然后使用 `Wireshark` 数据包分析器记录流量数据（组织流量通常通过该分析器流动）而收集。为确保训练数据不含恶意行为，在 `IoT` 设备安装入网后立即采集其常规流量。他们在最近 100ms、500ms、1.5 秒、10 秒和 1 分钟的多个时间窗口内采集了主机和协议的行为快照，并通过计算不同的流量统计度量（如数据包大小的均值和方差）提取了每个窗口的 23 个特征，汇总为四类：
 
 1.  来自同一 IP 生成的数据包
 2.  来自同一 IP 地址和同一源媒体访问控制层生成的数据包
 3.  源 IP 和目的 IP 之间发送的数据包（信道）
-4.  源和目的 TCP/UDP 套接字之间发送的数据包
+4.  源和目的 `TCP/UDP` 套接字之间发送的数据包
 
 最终数据集包含 115 个特征和一个目标标签，其值为恶意行为或良性（Meidan 等人，2018）。
 
-######## 数据预处理与特征选择
+### 数据预处理与特征选择
 
-N-BALOT 数据集干净且无缺失值。因此，无需应用任何缺失值处理技术。接下来是特征选择阶段，当数据集拥有成百上千个属性时，该阶段被认为是构建机器学习模型的关键阶段。其结果影响整个过程并提升分类性能。该过程包含选择与目标变量相关且能对预测结果值有贡献的特征。
+`N-BALOT` 数据集干净且无缺失值。因此，无需应用任何缺失值处理技术。接下来是特征选择阶段，当数据集拥有成百上千个属性时，该阶段被认为是构建机器学习模型的关键阶段。其结果影响整个过程并提升分类性能。该过程包含选择与目标变量相关且能对预测结果值有贡献的特征。
 
 特征选择方法分为包装器方法和过滤器方法。过滤器方法作为预处理步骤，独立于预测器选择子集；而包装器方法则使用搜索算法和学习机，基于变量的预测能力来选择变量子集（Guyon & Elisseeff, 2003）。
 
-本文的贡献主要集中在减少特征数量以检测 Mirai 僵尸网络的异常行为。我们将进行实验评估，以证明较少的特征也能取得良好结果并高效识别异常行为。我们专注于包装器方法，并应用了两种优化搜索算法来选择最佳特征子集；我们研究了遗传算法的双重影响，随后是粒子群优化（PSO）。特征包装器方法需要两个阶段：子集评估和搜索策略。
+本文的贡献主要集中在减少特征数量以检测 Mirai 僵尸网络的异常行为。我们将进行实验评估，以证明较少的特征也能取得良好结果并高效识别异常行为。我们专注于包装器方法，并应用了两种优化搜索算法来选择最佳特征子集；我们研究了遗传算法的双重影响，随后是粒子群优化（`PSO`）。特征包装器方法需要两个阶段：子集评估和搜索策略。
 
-######### 子集评估
+#### 子集评估
 
-这是评估由搜索算法确定的子集的步骤。为选择最佳子集解决方案，我们决定使用基于相关性的特征选择（CFS）来评估子集。它通过寻找属性之间的相关性以及属性与目标变量之间的相关性来工作，然后选择的子集将是特征之间相关性低且与目标变量相关性高的那个（Hall, 1999）。
+这是评估由搜索算法确定的子集的步骤。为选择最佳子集解决方案，我们决定使用基于相关性的特征选择（`CFS`）来评估子集。它通过寻找属性之间的相关性以及属性与目标变量之间的相关性来工作，然后选择的子集将是特征之间相关性低且与目标变量相关性高的那个（Hall, 1999）。
 
 | 图 2. 建议方法的主要步骤 |
 | --- |
 | ![Figure978-1-7998-2701-6.ch016.f02](img/ch016.f02.png) |
 
-######### 搜索策略
+#### 搜索策略
 
-在此阶段，可应用任意搜索算法在多个解决方案中搜索最优解（变量子集）。在我们的实验中，为寻找最优子集，我们利用了两种最知名的元启发式搜索算法的影响，即遗传算法和 PSO（Leardi, 1996）。
+在此阶段，可应用任意搜索算法在多个解决方案中搜索最优解（变量子集）。在我们的实验中，为寻找最优子集，我们利用了两种最知名的元启发式搜索算法的影响，即遗传算法和 `PSO`（Leardi, 1996）。
 
-######## 建模
+### 建模
 
-特征选择后，包含所选合适特征的新过滤数据集即可输入模型进行学习，从而具备检测异常行为的能力。将使用 Breiman (2001) 提出的随机森林算法（RF）作为分类算法，将观测值分类为异常或良性类别。由于 RF 通过结合多棵随机树（树林）工作，在变量数量远大于观测值数量时，取其结果的平均值，这使得 RF 近期在实现高准确率方面展现出高效性（Biau and Scorned）。
+特征选择后，包含所选合适特征的新过滤数据集即可输入模型进行学习，从而具备检测异常行为的能力。将使用 Breiman (2001) 提出的随机森林算法（`RF`）作为分类算法，将观测值分类为异常或良性类别。由于 `RF` 通过结合多棵随机树（树林）工作，在变量数量远大于观测值数量时，取其结果的平均值，这使得 `RF` 近期在实现高准确率方面展现出高效性（Biau and Scorned）。
 
 以下是随机森林算法工作原理的描述：
 
@@ -7301,13 +7145,13 @@ N-BALOT 数据集干净且无缺失值。因此，无需应用任何缺失值处
 *   每棵决策树为每个实例投票一个类别。
 *   返回每个实例得票最多的预测类别。
 
-######## 实验与结果
+## 实验与结果
 
 我们的目标是通过研究网络流量正确检测 Mirai 攻击的异常行为。我们的实验专注于与目标类别相关的属性特征选择，以证明在实时检测中提取较少数量的特征足以让预测模型更高效地检测异常行为。
 
-表 1 展示了五组属性（MI、H、HH、HH_jit、HpHp）；这些组别根据所捕获属性所在的层被归类为“数据链路层”、“网络层”和“传输层”。例如，MAC 地址属于“数据链路层”，因此所有包含 MAC 地址的属性均被归类在“数据链路层”。
+表 1 展示了五组属性（`MI`、`H`、`HH`、`HH_jit`、`HpHp`）；这些组别根据所捕获属性所在的层被归类为“数据链路层”、“网络层”和“传输层”。例如，MAC 地址属于“数据链路层”，因此所有包含 MAC 地址的属性均被归类在“数据链路层”。
 
-######### 表 1. 属性分组
+### 表 1. 属性分组
 
 | 属性标头 | 描述 | 相关层 | 属性数量 |
 | --- | --- | --- | --- |
@@ -7319,7 +7163,7 @@ N-BALOT 数据集干净且无缺失值。因此，无需应用任何缺失值处
 
 其他属性遵循相同方法。除了将数据集分为三类外，我们还执行特征选择方法以减少每类中的特征数量。我们使用粒子群优化来选择最佳特征。表 2 显示了应用特征选择算法前后每类的元素数量。
 
-######### 表 2. 应用特征选择算法后各类别的特征数量
+### 表 2. 应用特征选择算法后各类别的特征数量
 
 | 数据类别 | 属性数量 | 选择后的特征数量 |
 | --- | --- | --- |
@@ -7327,21 +7171,17 @@ N-BALOT 数据集干净且无缺失值。因此，无需应用任何缺失值处
 | 网络层和传输层 | 35 | 9 |
 | 网络层和数据链路层 | 15 | 4 |
 
-
-
-
-
-######## 实验与结果分析
+### 实验与结果分析
 
 随后，我们采用了随机森林分类算法，因为它在实验中取得了最佳结果。我们将随机森林应用于三个类别，以查看哪一类数据包层对检测攻击贡献最大、效果最好且准确率最高；同时也将其应用于各类别的选定特征，以检查准确率的变化。在保持高效率的前提下获得最少数量的特征将是最佳解决方案。
 
-######### 实验 1
+#### 实验 1
 
-首先，为利用最少特征检测 Mirai 攻击，我们分别采用了两种最常见的元启发式搜索算法——遗传算法和粒子群优化（PSO），以检验它们在众多解决方案中搜索最佳特征子集的效率。遗传算法从 116 个元素中选择了 18 个特征，粒子群优化选择了 12 个元素。
+首先，为利用最少特征检测 Mirai 攻击，我们分别采用了两种最常见的元启发式搜索算法——遗传算法和粒子群优化（`PSO`），以检验它们在众多解决方案中搜索最佳特征子集的效率。遗传算法从 116 个元素中选择了 18 个特征，粒子群优化选择了 12 个元素。
 
-随后，我们应用了三种分类算法——朴素贝叶斯、J48 和随机森林——构建模型以检测网络流量中 Mirai 僵尸网络的恶意行为，并对比哪种算法效果最佳。我们使用 10 折交叉验证测试模型，并采用准确率、精确率、召回率和 F1 值等指标评估结果。表 3 展示了分别应用遗传算法和 PSO 后，这些分类算法在数据集上的性能表现。随机森林算法在两种特征选择算法中均取得最佳结果，遗传算法下准确率为 99.53%，PSO 下为 99.81%。该数据集上的先前工作已达到 100% 准确率（Meidan 等，2018）。因此，我们尝试一种能获得更高准确率的方法：先应用遗传算法再应用 PSO 的实验达到了预期效果，该方法仅选择了 8 个特征，却足以以 100% 的准确率检测 Mirai 僵尸网络的异常行为。表 4 展示了该实验结果，随机森林算法结合这种双重特征选择影响也获得了 100% 的最佳准确率。
+随后，我们应用了三种分类算法——朴素贝叶斯、`J48` 和随机森林——构建模型以检测网络流量中 Mirai 僵尸网络的恶意行为，并对比哪种算法效果最佳。我们使用 10 折交叉验证测试模型，并采用准确率、精确率、召回率和 F1 值等指标评估结果。表 3 展示了分别应用遗传算法和 `PSO` 后，这些分类算法在数据集上的性能表现。随机森林算法在两种特征选择算法中均取得最佳结果，遗传算法下准确率为 99.53%，`PSO` 下为 99.81%。该数据集上的先前工作已达到 100% 准确率（Meidan 等，2018）。因此，我们尝试一种能获得更高准确率的方法：先应用遗传算法再应用 `PSO` 的实验达到了预期效果，该方法仅选择了 8 个特征，却足以以 100% 的准确率检测 Mirai 僵尸网络的异常行为。表 4 展示了该实验结果，随机森林算法结合这种双重特征选择影响也获得了 100% 的最佳准确率。
 
-########## 表 3. 两个网络层子集在随机森林算法下的结果
+##### 表 3. 两个网络层子集在随机森林算法下的结果
 
 | 数据子集 | 特征选择前准确率 | 特征选择后准确率 |
 | :--- | :---: | :---: |
@@ -7349,7 +7189,7 @@ N-BALOT 数据集干净且无缺失值。因此，无需应用任何缺失值处
 | 网络层和传输层 | 99.96% | 99.95% |
 | 网络层和数据链路层 | 100% | 100% |
 
-########## 表 4. 遗传算法与 PSO 单独应用的结果
+##### 表 4. 遗传算法与 PSO 单独应用的结果
 
 | 指标 | 遗传算法 | | | 粒子群优化 (PSO) | | |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -7359,7 +7199,7 @@ N-BALOT 数据集干净且无缺失值。因此，无需应用任何缺失值处
 | 召回率 | 0.880 | 0.974 | **1.00** | 0.981 | 0.975 | **1.00** |
 | F1 值 | 0.880 | 0.967 | **1.00** | 0.981 | 0.963 | **1.00** |
 
-########## 表 5. 多阶段特征选择（遗传算法后接 PSO）的结果
+##### 表 5. 多阶段特征选择（遗传算法后接 PSO）的结果
 
 | 指标 | 遗传算法 + PSO | | |
 | :--- | :---: | :---: | :---: |
@@ -7369,11 +7209,17 @@ N-BALOT 数据集干净且无缺失值。因此，无需应用任何缺失值处
 | 召回率 | 1.00 | 1.00 | **1.00** |
 | F1 值 | 1.00 | 0.994 | **1.00** |
 
-######## 结论与未来工作
+## 结论与未来工作
 
-本文提出了一种结合遗传算法和粒子群优化的多阶段特征选择方法，配合随机森林集成机器学习算法，构建了一个用于检测基于网络的 Mirai 异常行为的分类模型，且仅使用最少数量的特征。在三种分类算法（朴素贝叶斯、J48 和随机森林）的对比中，随机森林表现最佳，成功以 100% 的准确率检测出所有异常行为。未来工作将重点关注传输层（TCP/UDP 套接字）的特性及其对检测异常流量行为的影响，以期获得更好的结果和准确率，并证明仅分析该层并实时计算其统计特征即足以检测 Mirai 的异常行为。
+本文提出了一种结合遗传算法和粒子群优化的多阶段特征选择方法，配合随机森林集成机器学习算法，构建了一个用于检测基于网络的 Mirai 异常行为的分类模型，且仅使用最少数量的特征。在三种分类算法（朴素贝叶斯、`J48` 和随机森林）的对比中，随机森林表现最佳，成功以 100% 的准确率检测出所有异常行为。未来工作将重点关注传输层（`TCP/UDP` 套接字）的特性及其对检测异常流量行为的影响，以期获得更好的结果和准确率，并证明仅分析该层并实时计算其统计特征即足以检测 Mirai 的异常行为。
 
-##### 参考文献
+## 参考文献
+
+
+
+# 第 17 章
+
+## 参考文献
 
 Alauthaman, M., Aslam, N., Zhang, L., Alasem, R., & Hossain, M. A. (2018). A P2P Botnet detection scheme based on decision tree and adaptive multilayer neural networks. *Neural Computing & Applications*, 29(11), 991–1004. doi:10.1007/s00521-016-2564-5
 
@@ -7409,50 +7255,42 @@ Lee, J.-H., & Kim, H. (2017). Security and privacy challenges in the internet of
 
 Meidan, Y., Bohadana, M., Mathov, Y., Mirsky, Y., Shabtai, A., Breitenbacher, D., & Elovici, Y. (2018). N-BaIoT—Network-based detection of IoT botnet attacks using deep autoencoders. *IEEE Pervasive Computing*, 17(3), 12–22. doi:10.1109/MPRV.2018.03367731
 
+Midi, D., Rullo, A., Mudgerikar, A., & Bertino, E. (2017). Kalis—A system for knowledge-driven adaptable intrusion detection for the Internet of Things. *Proceedings 2017 IEEE 37th International Conference on Distributed Computing Systems (ICDCS)*. doi:10.1109/ICDCS.2017.104
 
-
-
-
-#### 第 17 章
-
-##### 参考文献
-
-MidiD.RulloA.MudgerikarA.BertinoE. (2017). Kalis—A system for knowledge-driven adaptable intrusion detection for the Internet of Things. *Proceedings 2017 IEEE 37th International Conference on Distributed Computing Systems (ICDCS)*. 10.1109/ICDCS.2017.104
-
-ÖzçelikM.ChalabianlooN.GürG. (2017). Software-defined edge defense against IoT-based DDoS. *Proceedings 2017 IEEE International Conference on Computer and Information Technology (CIT)*. 10.1109/CIT.2017.61
+Özçelik, M., Chalabianloo, N., & Gür, G. (2017). Software-defined edge defense against IoT-based DDoS. *Proceedings 2017 IEEE International Conference on Computer and Information Technology (CIT)*. doi:10.1109/CIT.2017.61
 
 Ray, P. P. (2018). A survey on Internet of Things architectures. *Journal of King Saud University-Computer and Information Sciences*, 30(3), 291–319. doi:10.1016/j.jksuci.2016.10.003
 
 Raza, S., Wallgren, L., & Voigt, T. (2013). SVELTE: Real-time intrusion detection in the Internet of Things. *Ad Hoc Networks*, 11(8), 2661–2674. doi:10.1016/j.adhoc.2013.04.014
 
-SedjelmaciH.SenouciS. M.Al-BahriM. (2016). A lightweight anomaly detection technique for low-resource IoT devices: A game-theoretic methodology. *Proceedings 2016 IEEE International Conference on Communications (ICC)*. 10.1109/ICC.2016.7510811
+Sedjelmaci, H., Senouci, S. M., & Al-Bahri, M. (2016). A lightweight anomaly detection technique for low-resource IoT devices: A game-theoretic methodology. *Proceedings 2016 IEEE International Conference on Communications (ICC)*. doi:10.1109/ICC.2016.7510811
 
 Shoemaker, A. (2017). How to Identify a Mirai-Style DDoS Attack. 2020. Retrieved from https://www.imperva.com/blog/author/andrewshoemaker/
 
 Sterling, B. (2005). *Shaping things*.
 
-SummervilleD. H.ZachK. M.ChenY. (2015). Ultra-lightweight deep packet anomaly detection for Internet of Things devices. *Proceedings 2015 IEEE 34th international performance computing and communications conference (IPCCC)*. 10.1109/PCCC.2015.7410342
+Summerville, D. H., Zach, K. M., & Chen, Y. (2015). Ultra-lightweight deep packet anomaly detection for Internet of Things devices. *Proceedings 2015 IEEE 34th international performance computing and communications conference (IPCCC)*. doi:10.1109/PCCC.2015.7410342
 
 Xia, F., Yang, L. T., Wang, L., & Vinel, A. (2012). Internet of things. *International Journal of Communication Systems*, 25(9), 1101–1102. doi:10.1002/dac.2417
 
-##### 作者
+## 作者
 
 *   **Leandros Maglaras**  
-    ![Orcid Imagehttps://orcid.org/0000-0001-5360-9782](https://orcid.org/0000-0001-5360-9782)  
+    ![Orcid Image](https://orcid.org/0000-0001-5360-9782)  
     德蒙福特大学，英国
 
 *   **Helge Janicke**  
     网络安全合作研究中心，埃迪斯科文大学，澳大利亚
 
 *   **Mohamed Amine Ferrag**  
-    ![Orcid Imagehttps://orcid.org/0000-0002-0632-3172](https://orcid.org/0000-0002-0632-3172)  
+    ![Orcid Image](https://orcid.org/0000-0002-0632-3172)  
     盖尔马大学，阿尔及利亚
 
-##### 摘要
+## 摘要
 
 本研究从技术上分析了长度不超过 12 个字符的常用密码的最大组合数量。文中还给出了存储所有不超过 12 个字符的可能密码所需的最大存储空间，并将其与主流云存储服务商公布的存储成本以及一个国家的情报和国防预算进行了对比。作者证明，仅凭当前市面上可购买的商用组件，任何密码都有可能在几秒钟内被计算出来。研究结论指出，民族国家甚至合作的多个民族国家有可能已经购买了私人公民和企业的密码，这表明我们可能已经进入了一个密码不再是隐私合法防线的时代。
 
-##### 引言
+## 引言
 
 随着关键国家基础设施越来越容易遭受网络攻击，其防护已成为任何组织乃至国家的重大议题。此外，工业控制系统与物联网（`IoT`）的协同效应应运而生，带来了新的安全挑战（Maglaras 等，2018），这使得基于安全工具、人员和流程的重叠防御策略的部署成为必要。传统安全机制是保护组织或国家边界的适当且有效的手段。防火墙架构、邮件扫描、`DPI`、`VPN`、`HIDS`、`NIDS` 均是组织减少恶意软件入侵其环境机会的成熟途径。作为补充措施，锁定未使用的端口、`USB` 设备，通过企业目录使用访问控制，以及强制执行最小权限访问，所有这些都能降低内部威胁。任何组织必须采取的基本但重要的安全措施之一是密码策略（Gupta 等，2018），以及其他防御机制（Jiang 等，2018；Almomani 等，2013）。
 
@@ -7460,7 +7298,7 @@ Xia, F., Yang, L. T., Wang, L., & Vinel, A. (2012). Internet of things. *Interna
 
 围绕密码存在许多复杂而有趣的理论，这引发了大量讨论和有趣的内容，例如期刊文章“作为熵博弈的密码安全性”（Rass 等，2018），也催生了一些真正鼓舞人心的数学研究。此外，我们正见证着量子计算的出现所带来的“可能的艺术”的演进，这增进了我们对物理学的理解。量子计算为工业带来了以指数级提升的速度计算复杂问题的绝佳机遇。然而，人们早已推测，这种计算能力的巨大飞跃可能预示着密码及依赖复杂性的类似安全防御的消亡。这在论文“量子计算机的全球灾难性风险与安全启示”（Major 等，2015）中有很好的描述，作者也支持这一观点。然而，在本文中，作者质疑的是当下的可能性，仅利用当今人人可买到的现成商用设备。
 
-###### 图 1. 密码规则
+### 图 1. 密码规则
 
 ![Figure978-1-7998-2701-6.ch017.f01](img/ch017.f01.png)
 
@@ -7468,19 +7306,15 @@ Xia, F., Yang, L. T., Wang, L., & Vinel, A. (2012). Internet of things. *Interna
 
 在本章中，我们不会研究长度超过 12 个字符的密码，并将重点放在英国键盘配置上。在没有这些约束的情况下进行进一步研究很有趣，也值得后续跟进，但为了保持本章切合实际且易于理解，这些约束对于以最基本形式证明该理论似乎是合理的。
 
-###### 图 2. 密码与哈希函数
+### 图 2. 密码与哈希函数
 
 ![Figure978-1-7998-2701-6.ch017.f02](img/ch017.f02.png)
 
-
-
-
-
-####### 密码与哈希函数
+#### 密码与哈希函数
 
 本章将探讨密码通常如何存储、常见密码的长度、存储位置和方式、感兴趣的最大熵值、这在存储大小方面会是什么样子、这种假设性存储的相关成本、是否负担得起、是否有更好的方法，最后可以得出什么推论。
 
-####### 密码与哈希函数
+#### 密码与哈希函数
 
 密码当然可以在计算系统中以明文形式存储。也就是说，当计算机要求你设置密码时，无论是在网站、远程服务器，甚至是你的本地桌面，它都会以你输入系统的形式存储它（即：你输入的密码 = `Password1`，系统存储的密码 = `Password1`）。然而，这并非现代最佳实践，系统也不常这样设计。
 
@@ -7491,6 +7325,10 @@ Xia, F., Yang, L. T., Wang, L., & Vinel, A. (2012). Internet of things. *Interna
 | ![Figure978-1-7998-2701-6.ch017.f03](img/ch017.f03.png) |
 
 根据英国国家网络安全中心的说法，“哈希是一种单向加密函数，可将明文密码转换为‘哈希值’”（国家网络安全中心，2016）。从本质上讲，对密码进行哈希处理意味着当密码被输入系统时，密码会被转换为其自身的数学表示，然后该表示通过一个设计为不可逆的单向数学函数。这意味着一旦密码被哈希，就不应能通过进一步的数学计算将其转换回原始形式。了解哈希函数原始字符串输入的唯一方法是反复尝试输入字符串，直到出现与相关原始哈希字符串相同的输出，这意味着这必定是用于认证的原始输入字符串。对此规则有称为冲突的例外情况；即两个不同的输入被传入函数，但产生了相同的输出。这些冲突相对罕见，取决于所使用的哈希函数，就本章而言，被视为超出范围。
+
+
+
+# 密码与成本
 
 将密码作为哈希值存储的好处是为密码增加了一层防御（Gupta 等人，2015），因为如果系统被完全攻破，攻击者可以窃取密码哈希值（Gupta 等人，2015 年 5 月），但随后还面临破解哈希以还原原始密码的进一步任务（假设他们不使用本章范围之外的 `pass the hash`（SANS 2010）技术）。用户的原始密码从未存储在系统中；存储的只是代表它的哈希函数的数学输出，这使得攻击者更难利用。用户在注册后每次登录时，输入的密码会再次被哈希，输出结果与注册阶段存储的哈希值进行比较；如果匹配，则意味着输入了正确的密码。这在以下简化图中有所体现：
 
@@ -7524,9 +7362,6 @@ Xia, F., Yang, L. T., Wang, L., & Vinel, A. (2012). Internet of things. *Interna
 
 发现 LanMan (`LM`) 哈希函数存在缺陷，表明密码实际上被分成两部分再进行哈希，这意味着可以通过实际上猜测两次四字符密码来暴力破解密码。更糟糕的是，其中一个字符是其他字符的校验和，使得这两半实际上只有四个和三个字符长。`NTLM` 哈希是 `LM` 哈希的替代品。微软在其文章“如何防止 Windows 在 Active Directory 和本地 SAM 数据库中存储你的密码的 LAN 管理器哈希”中提到了 `LM` 的弱点。对于本章而言，这些都相对无关紧要，除了进一步证明我们为何只关注九到十二个字符长的密码，因为这是一种社会和文化规范，或许是由技术发现引起的。
 
-
-
-
 用户的密码或哈希值通常存储在其注册的系统上，或被推送到另一个系统（如数据库服务器）进行存储。无论存储在何处，必须攻破存储密码的系统或其通信链路，攻击者才能窃取密码或哈希值。或者，如果攻击者试图入侵的系统没有速率限制（即允许的密码尝试次数不受限制），那么密码尝试的速率将受限于系统处理这些尝试的能力。这被称为在线暴力破解攻击。此外，跨站脚本攻击（XSS）是针对 Web 应用程序的此类攻击之一，用户必须妥协其浏览器资源，而哈希可用于使系统对这类攻击具有鲁棒性（Gupta 等人，2017）。
 
 那么，利用英国键盘创建的密码，最大可能的密码组合数是多少？以下是基于英国键盘、基于 ASCII 可打印字符为本章生成的字符集：
@@ -7546,7 +7381,7 @@ Xia, F., Yang, L. T., Wang, L., & Vinel, A. (2012). Internet of things. *Interna
 
 即使不包含 0–8 位长度的密码可能性，仍有 692,533,995,824,480,256 种可能性。此外，我们可以看到，如果不压缩，仅纯文本存储这样一个字典所需的总存储容量为 6208 PB。
 
-####### 密码与成本
+## 密码与成本
 
 根据微软发布的 Azure Data Lake Storage 价格表（Microsoft 2019），撰写本章时价格为 £0.001/GB/月，该列表的存储成本约为 £6,510,191.62（四舍五入到分），年成本为 £78,122,299.44。显然，这个数字超出了大多数实体的承受范围，但让我们结合英国的国防预算来考虑这个数字。
 
@@ -7562,15 +7397,15 @@ Xia, F., Yang, L. T., Wang, L., & Vinel, A. (2012). Internet of things. *Interna
 
 仔细研究此页面时，我们也无法再回避盐值的话题。存储密码时的一个良好实践是向哈希函数引入盐值。盐值是引入数学运算的随机值，用于增加复杂性，使攻击者更难暴力破解答案。坚持我们的示例，MD5 哈希列出了七种哈希模式变体。我们已经计算了在公共云环境中存储所有可能 MD5 哈希的成本，如下表所示：
 
-######## 表 1. MD5 哈希存储成本
+### 表 1. MD5 哈希存储成本
 
 | Mode | Hash Type | Example Hash | Cost per Year |
 | --- | --- | --- | --- |
 | 0 | MD5 | `8743b52063cd84097a65d1633f5c74f5` | £265,933,056 + £78,122,299.44 |
 
-查看 Hashcat 示例中的下一个条目，显示了一个示例 MD5 及其关联的盐值为 `01dfae6e5d4d90d9892622325959afbe:7050461`，冒号后的关键数字 `7050461` 即为盐值。在此格式下，其最大值为 9,999,999。这意味着，对于原始密码列表中的每一行，我们还需要存储 9,999,999 个 32 字节的 MD5 哈希。这使得数据库成本（不压缩）约为 2.659 万亿英镑。无需进一步计算，这显然超出了单一国家的预算，实际上当考虑到下表所示的所有不同哈希类型和格式（仅针对 MD5 哈希类型）时，极有可能超出任何国家集团的预算：
+查看 Hashcat 示例中的下一个条目，显示一个示例 MD5 及其关联的盐值为 `01dfae6e5d4d90d9892622325959afbe:7050461`，冒号后的关键数字 `7050461` 即为盐值。在此格式下，其最大值为 9,999,999。这意味着，对于原始密码列表中的每一行，我们还需要存储 9,999,999 个 32 字节的 MD5 哈希。这使得数据库成本（不压缩）约为 2.659 万亿英镑。无需进一步计算，这显然超出了单一国家的预算，实际上当考虑到下表所示的所有不同哈希类型和格式（仅针对 MD5 哈希类型）时，极有可能超出任何国家集团的预算：
 
-######## 表 2. 哈希存储成本
+### 表 2. 哈希存储成本
 
 | Mode | Hash Type | Example Hash | Cost per Year |
 | --- | --- | --- | --- |
@@ -7580,12 +7415,9 @@ Xia, F., Yang, L. T., Wang, L., & Vinel, A. (2012). Internet of things. *Interna
 | 30 | `md5(utf16le($pass).$salt)` | `b31d032cfdcf47a399990a71e43c5d2a:144816` | < £2,659 trillion |
 | 40 | `md5($salt.utf16le($pass))` | `d63d0e21fdc05f618d55ef306c54af82:13288442151473` | > £2,659 trillion |
 
-####### 总结与结论
+## 总结与结论
 
-
-
-
-####### 结论
+### 结论
 
 是否有人可能拥有包含世界上所有类型密码的预计算数据库？答案显而易见：没有。这将是一项毫无意义且徒劳的练习。可能性的数量惊人，相关成本更是天文数字。然而，正如本章前面所见，从 GPU 破解向专用加密货币挖矿机的进步，实际上可能正在加速密码的灭绝。
 
@@ -7595,7 +7427,7 @@ Xia, F., Yang, L. T., Wang, L., & Vinel, A. (2012). Internet of things. *Interna
 
 鉴于以上分析，你的密码是否可能在几秒钟内仅凭当前市售组件被破解？简短回答：是的。事实上，除非密码异常长且复杂，否则对于拥有时间、资源和专业知识的实体而言，这只是微不足道的小事。
 
-##### 参考文献
+## 参考文献
 
 Almomani, A., Gupta, B. B., Wan, T. C., Altaher, A., & Manickam, S. (2013). Phishing dynamic evolving neural fuzzy framework for online detection zero-day phishing email.
 
@@ -7623,6 +7455,10 @@ Maglaras, L. A., Kim, K.-H., Janicke, H., Ferrag, M. A., Rallis, S., Fragkou, P.
 
 Major, A., & Yampoiskiy, R. (2015). Global catastrophic risk and security implications of quantum computers. Elsevier, 72, pp. 17-26.
 
+
+
+# 参考文献
+
 Microsoft. (2017). How to prevent Windows from storing a LAN manager hash of your password in Active Directory and local SAM databases. Retrieved from https://support.microsoft.com/en-us/help/299656/how-to-prevent-windows-from-storing-a-lan-manager-hash-of-your-passwor
 
 Microsoft. (2019). Azure storage overview pricing. Retrieved from https://azure.microsoft.com/en-gb/pricing/details/storage/
@@ -7635,7 +7471,7 @@ Rass, S., & König, S. (2018). Password Security as a Game of Entropies. Entropy
 
 SANS. (2010). Pass-the-hash attacks: Tools and Mitigation. Retrieved from https://www.sans.org/reading-room/whitepapers/testing/pass-the-hash-attacks-tools-mitigation-33283
 
-####### 尾注
+## 尾注
 
 1. Kali. (2019). Crunch package description. Retrieved from https://tools.kali.org/password-attacks/crunch
 
@@ -7659,11 +7495,7 @@ Aggarwal, J. K., & Cai, Q. (1997). Human motion analysis: A review. Nonrigid and
 
 Aggarwal, J. K., Cai, Q., Liao, W., & Sabata, B. (1997). Nonrigid motion analysis: Articulated and elastic motion. Computer Vision and Image Understanding, 142–156.
 
-
-
-
-
-##### 参考文献
+## 参考文献
 
 Ahmed, R., Islam, M., & Uddin, J. (2018). 基于 NVIDIA CUDA 架构优化 Apple 无损音频编解码器算法。*International Journal of Electrical & Computer Engineering (2088-8708)*，8(1)。
 
@@ -7723,6 +7555,10 @@ Aste, T., Tasca, P., & Di Matteo, T. (2017). 区块链技术：对社会和工�
 
 Atzori, L., Iera, A., & Morabito, G. (2010). 物联网：综述。*Computer Networks*，54(15)，2787–2805。doi:10.1016/j.comnet.2010.05.010
 
+
+
+# 参考文献
+
 Aware, Inc. (2019). 生物识别软件解决方案。- 指纹、人脸、虹膜、击键识别。于 2019 年 10 月 29 日检索自 `http://aware.com/biometrics-software-solutions/authentication-and-payments`
 
 Aydin V. A. Foroosh H. (2017, 9 月). 利用临界采样 DWT 子带进行运动补偿以实现低比特率视频编码。*Proceedings 2017 IEEE International Conference on Image Processing (ICIP)*（第 21-25 页）。IEEE。10.1109/ICIP.2017.8296235
@@ -7739,12 +7575,6 @@ Balouch Z. A. Aslam M. I. Ahmed I. (2017). 节能图像加密算法。*Proceedin
 
 Baraniuk, R. G., Goldstein, T., Sankaranarayanan, A. C., Studer, C., Veeraraghavan, A., & Wakin, M. B. (2017). 压缩视频感知：算法、架构与应用。*IEEE Signal Processing Magazine*，34(1)，52–66。doi:10.1109/MSP.2016.2602099
 
-
-
-
-
-##### 参考文献
-
 Baroňák, I., Čuba, M., Chen, C. M., & Beháň, L. (2017, November). 基于准入控制的 IMS 网络流量管理。*2017 年第 3 届中捷科学会议论文集*。IntechOpen。
 
 Bartalwar, S., & Deepa, T. (2017). 面向可见光通信的 OFDM 信号传输设计与实现。*International Journal of Engineering Sciences & Research Technology*, 6, 577–583。
@@ -7757,7 +7587,7 @@ Beebe, N. (2009). 数字取证研究：优势、劣势与未解决的问题。�
 
 Begg, R. K., Palaniswami, M., & Owen, B. (2005). 用于自动步态分类的支持向量机。*IEEE Transactions on Biomedical Engineering*, 52(5), 828–838. doi:10.1109/TBME.2005.845241
 
-BehavioSec, Inc. (2019). 基于被动行为生物识别的持续认证。检索日期：2019 年 10 月 29 日，来源：http://behaviosec.com
+BehavioSec, Inc. (2019). 基于被动行为生物识别的持续认证。检索日期：2019 年 10 月 29 日，来源：`http://behaviosec.com`
 
 Ben-Gal, I., Ruggeri, F., Faltin, F., & Kenett, R. (2007). 贝叶斯网络。
 
@@ -7795,11 +7625,11 @@ Bregonzio, M., Gong, S., & Xiang, T. (2009). 将动作识别为时空兴趣点�
 
 Breiman, L. (2001). 随机森林。*Machine Learning*, 45(1), 5–32. doi:10.1023/A:1010933404324
 
-Britain. (2019). Antminer S15-28TH/s。检索自 https://shop.bitmain.com/product/detail?pid=00020190222170435964U2e2qb490657
+Britain. (2019). Antminer S15-28TH/s。检索自 `https://shop.bitmain.com/product/detail?pid=00020190222170435964U2e2qb490657`
 
 Britanak, V., & Rao, K. R. (2018). 音频编码标准、（专有）音频压缩算法及广播/语音/数据通信编解码器：采用的滤波器组概述。载于 *Cosine-/Sine-Modulated Filter Banks* (pp. 13–37)。瑞士 Cham：Springer。doi:10.1007/978-3-319-61080-1_2
 
-Budiu, R. (2015). 移动用户体验：局限性与优势。检索自 https://www.nngroup.com/articles/mobile-ux/
+Budiu, R. (2015). 移动用户体验：局限性与优势。检索自 `https://www.nngroup.com/articles/mobile-ux/`
 
 Bulat, A., & Tzimiropoulos, G. (2016). 基于卷积部件热图回归的人体姿态估计。*欧洲计算机视觉会议论文集* (pp. 717-732)。Springer。10.1007/978-3-319-46478-7_44
 
@@ -7829,12 +7659,6 @@ Chaudhary, P., Gupta, S., & Gupta, B. B. (2016). 面向基于在线社交网络 
 
 Chen, Y., Li, H., Li, K., & Zhang, J. (2017). 基于 IPFS 和区块链的改进型 P2P 文件系统方案。*IEEE International Conference on Big Data*, pp. 2652-2657。
 
-
-
-
-
-##### 参考文献
-
 Chen, C., Liang, J., Zhao, H., Hu, H., & Tian, J. (2009). Frame difference energy image for gait recognition with incomplete silhouettes. *Pattern Recognition Letters*, 30(11), 977–984. doi:10.1016/j.patrec.2009.04.012
 
 Cheng, L. M., Cheng, L. L., Chan, C. K., & Ng, K. W. (2004, December). Digital watermarking based on frequency random position insertion. *Proceedings ICARCV 2004 8th Control, Automation, Robotics, and Vision Conference* (Vol. 2, pp. 977-982). IEEE. doi:10.1109/ICARCV.2004.1468975
@@ -7848,6 +7672,10 @@ Chion, M. (2019). *Audio-vision: sound on screen*. Columbia University Press. do
 Chui, C. K. (2016). *An introduction to wavelets*. Elsevier.
 
 Chu, W. C. (2003). DCT-based image watermarking using subsampling. *IEEE Transactions on Multimedia*, 5(1), 34–38. doi:10.1109/TMM.2003.808816
+
+
+
+## 参考文献
 
 Ciaccia, P., Patella, M., & Zezula, P. (1997). M-tree: An efficient access method for similarity search in metric spaces. *Proceedings of the 23rd International Conference on Very Large Databases, VLD*. Academic Press.
 
@@ -7921,12 +7749,6 @@ Dougherty, G. (2009). *Digital image processing for medical applications*. Cambr
 
 Dubin, R., Hadar, O., Dvir, A., & Pele, O. (2018). Video quality representation classification of encrypted http adaptive video streaming. *TIIS*, 12(8), 3804–3819.
 
-
-
-
-
-##### 参考文献
-
 Dutta, M. K., Singh, A., Singh, A., Burget, R., & Prinosil, J. (2015). 用于远程眼科应用的医学眼底图像数字识别标签。*2015 年第 38 届电信与信号处理国际会议论文集*，第 781-784 页。捷克共和国布拉格。DOI: 10.1109/TSP.2015.7296372
 
 Eberz, S., & Rasmussen, K. B. (2017). 面向持续认证的行为生物特征评估：挑战与度量。*2017 年亚洲计算机与通信安全会议论文集*，386-399。阿联酋阿布扎比。10.1145/3052973.3053032
@@ -7947,6 +7769,10 @@ Farabet, C., Couprie, C., Najman, L., & LeCun, Y. (2013). 用于场景标注的�
 
 Feng T. Liu Z. Kwon K. A. Shi W. Carbunar B. Jiang Y. Nguyen N. (2012). 使用触摸屏手势的持续移动认证。*2012 年 IEEE 国土安全技术国际会议论文集 (HST 2012)*，马萨诸塞州沃尔瑟姆，451–456。10.1109/THS.2012.6459891
 
+
+
+##### 参考文献
+
 Fierrez, J., Morales, A., Vera-Rodriguez, R., & Camacho, D. (2018). 生物特征识别中的多重分类器。第 2 部分：趋势与挑战。*信息融合*，44，103–112。doi:10.1016/j.inffus.2017.12.005
 
 Fierrez, J., Pozo, A., Martinez-Diaz, M., Galbally, J., & Morales, A. (2018). 面向移动认证的触摸屏生物特征基准测试。*IEEE 信息取证与安全汇刊*，13(11)，1556–6013。doi:10.1109/TIFS.2018.2833042
@@ -7961,7 +7787,7 @@ Foresti, G. L. (1999). 面向远程视频监控的目标识别与跟踪。*IEEE 
 
 Fowler, S. (2011). 小规模数字取证概述。可从东密歇根大学学位论文与项目数据库获取 (274)。
 
-Frakti. (n.d.). 取自 https://github.com/kubernetes/frakti
+Frakti. (n.d.). 取自 `https://github.com/kubernetes/frakti`
 
 Frank, M., Biedert, R., Ma, E., Martinovic, I., & Song, D. (2013). Touchalytics：触摸屏输入作为持续认证行为生物特征的适用性。*IEEE 信息取证与安全汇刊*，8(1)，136–148。doi:10.1109/TIFS.2012.2225048
 
@@ -8009,12 +7835,6 @@ Gregor, K., Besse, F., Rezende, D. J., Danihelka, I., & Wierstra, D. (2016). 面
 
 Guerrero, C., Lera, I., & Juiz, C. (2018). 云架构中容器分配多目标优化的遗传算法。*网格计算期刊*，16(1)，113–135。doi:10.1007/s10723-017-9419-x
 
-
-
-
-
-##### 参考文献
-
 Guo, C. (2013). Design and implementation of a multimedia database application system. *Journal of Theoretical and Applied Information Technology*, 47(3).
 
 Guo, Y., Ding, G., & Han, J. (2017). Robust quantization for general similarity search. *IEEE Transactions on Image Processing*, 27(2), 949–963. doi:10.1109/TIP.2017.2766445
@@ -8061,6 +7881,10 @@ Hamidi, M., El Haziti, M., Cherifi, H., & Aboutajdine, D. (2015, November). A bl
 
 Han, J., & Bhanu, B. (2005). Individual recognition using gait energy image. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 28(2), 316–322. doi:10.1109/TPAMI.2006.38
 
+
+
+## 参考文献
+
 Hanjalic, A. (2017). Multimedia Research: What Is the Right Approach? *IEEE MultiMedia*, 24(2), 4–6. doi:10.1109/MMUL.2017.31
 
 Han, X. (2010). *Gait recognition considering walking direction*. USA: University of Rochester.
@@ -8100,12 +7924,6 @@ Hinton, G., Osindero, S., & Teh, Y. (2006). A fast learning algorithm for deep b
 Homepage, Y. A. G. O. (n.d.). Retrieved January 21, 2019, from https://www.mpi-inf.mpg.de/departments/databases-and-information-systems/research/yago-naga/yago
 
 Hu, S. H., Li, Y., & Li, B. (2016). Video2vec: Learning semantic spatio-temporal embeddings for video representation. *Proceedings - International Conference on Pattern Recognition*. 10.1109/ICPR.2016.7899735
-
-
-
-
-
-##### 参考文献
 
 Hu, Z., Guo, X., Hu, X., Chen, X., & Wang, Z. (2005). The Identification and Recognition Based on Ocular Fundus. *Springer Link Lecture Notes in Computer Science*, 3832, 770–776.
 
@@ -8149,6 +7967,10 @@ Jeanjaitrong, N., & Bhattarakoso, P. (2013). Feasibility Study on authentication
 
 Jeevan, M., Jain, N., Hanmandlu, M., & Chetty, G. (2013). Gait recognition based on gait pal and pal entropy image. *Proceedings IEEE International Conference on Image Processing* (pp. 4195–4199). IEEE. doi:10.1109/ICIP.2013.6738864
 
+
+
+##### 参考文献
+
 Jeschke, S., Brecher, C., Meisen, T., Özdemir, D., & Eschert, T. (2017). Industrial internet of things and cyber manufacturing systems. In *Industrial Internet of Things* (pp. 3–19). Cham, Switzerland: Springer. doi:10.1007/978-3-319-42559-7_1
 
 Jiang, F., Fu, Y., Gupta, B. B., Lou, F., Rho, S., Meng, F., & Tian, Z. (2018). Deep learning based multi-channel intelligent attack detection for data security. *IEEE Transactions on Sustainable Computing*.
@@ -8184,12 +8006,6 @@ Karmakar, R., & Basu, A. (2019). Implementation of a Reversible Watermarking Tec
 Karnan, M., Akila, M., & Krishnaraj, N. (2011). Biometric Personal Authentication Using Keystroke Dynamics: A Review. *Applied Soft Computing*, 11(2), 1565–1573. doi:10.1016/j.asoc.2010.08.003
 
 Karpathy, A., Toderici, G., Shetty, S., Sukthankar, R., & Li, F. (2014). Large-scale video classification with convolutional neural networks. *Proceedings IEEE CVPR*, 1725–1732.
-
-
-
-
-
-##### 参考文献
 
 Kaur, R., & Choudhary, P. (2016). A Review of Image Compression Techniques. *International Journal of Computers and Applications*, 975, 8887.
 
@@ -8231,6 +8047,10 @@ Kumar, R., Kundu, P. P., & Phoha, V. V. (2018). Continuous Authentication Using 
 
 Kumar, R., Phoha, V. V., & Serwadda, A. (2016). Continuous Authentication of Smartphone Users by Fusing Typing Swiping and Phone Movement Patterns. *Proceedings of the IEEE International Conference on Biometrics: Theory, Applications, and Systems (BTAS)*, 1–8. doi:10.1109/BTAS.2016.7791164
 
+
+
+##### 参考文献
+
 Kusakunniran, W. (2014). Attribute-based learning for gait recognition using spatio-temporal interest points. *Image and Vision Computing*, 32(12), 1117–1126. doi:10.1016/j.imavis.2014.10.004
 
 Kushnure, D., Jiniyawala, M., Molawade, S., & Patil, S. (2017). Implementation of FM Transceiver using Software Defined Radio (SDR). *International Journal of Engineering Development and Research*, 5, 225–233.
@@ -8271,12 +8091,6 @@ Lee, L., & Grimson, W. E. L. (2002). Gait analysis for recognition and classific
 
 Lever, J., Krzywinski, M., & Altman, N. (2017). Principal Component Analysis. *Nature Methods*, 14(7), 641–642. doi:10.1038/nmeth.4346
 
-
-
-
-
-##### 参考文献
-
 Li, C., Zhang, Z., & Zhang, L. (2018). A Novel Authorization Scheme for Multimedia Social Networks Under Cloud Storage Method by Using MA-CP-ABE. *International Journal of Cloud Applications and Computing*, 8(3), 32–47. doi:10.4018/IJCAC.2018070103
 
 Lichtenauer, J. F., Setyawan, I., Kalker, T., & Lagendijk, R. L. (2003). Exhaustive geometrical search and the false positive watermark detection probability. In *Security and Watermarking of Multimedia Contents V* (Vol. 5020, pp. 203-214). International Society for Optics and Photonics.
@@ -8315,6 +8129,10 @@ Liu, X., & Payandeh, S. (2018). A study of chained stochastic tracking in RGB an
 
 Li, Y., & Bo, L. (2007). A Normalized Levenshtein Distance Metric. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 29(6), 1091–1095. doi:10.1109/TPAMI.2007.1078
 
+
+
+## 参考文献
+
 Loukhaoukha, K., Nabti, M., & Zebbiche, K. (2014). A robust SVD-based image watermarking using a multi-objective particle swarm optimization. *Opto-Electronics Review*, 22(1), 45–54. doi:10.2478/s11772-014-0177-z
 
 Lowe, D. G. (2004). Distinctive image features from scale-invariant keypoints. *International Journal of Computer Vision*, 60(2), 91–110. doi:10.1023/B:VISI.0000029664.99615.94
@@ -8339,7 +8157,7 @@ Major, A., & Yampoiskiy, R. (2015). Global catastrophic risk and security implic
 
 Mantyjarvi, J., Lindholm, M., Vildjiounaite, E., Makela, S. M., & Allisto, H. (2005). Identifying Users of Portable Devices from Gait Pattern with Accelerometers. *Proceedings of the IEEE International Conference on Acoustics, Speech, and Signal Processing*, 2, 973–976.
 
-Marathon. (n.d.). Retrieved from https://mesosphere.github.io/marathon
+Marathon. (n.d.). Retrieved from `https://mesosphere.github.io/marathon`
 
 Masrom, M., Towhidi, F., & Lashkari, A. H. (2009, October). Pure and cued recall-based graphical user authentication. *Proceedings 2009 International Conference on Application of Information and Communication Technologies* (pp. 1-6). IEEE.
 
@@ -8355,31 +8173,25 @@ Medel, V., Rana, O., Bañares, J. Á., & Arronategui, U. (2016, December). Model
 
 Meidan, Y., Bohadana, M., Mathov, Y., Mirsky, Y., Shabtai, A., Breitenbacher, D., & Elovici, Y. (2018). N-BaIoT—Network-based detection of IoT botnet attacks using deep autoencoders. *IEEE Pervasive Computing*, 17(3), 12–22. doi:10.1109/MPRV.2018.03367731
 
-
-
-
-
-##### 参考文献
-
 Melkemi, K., & Golea, N. E. H. (2017). 基于 ROI 的脆弱水印技术用于医学图像篡改检测。*International Journal of High-Performance Computing and Networking*, 1(1), 1. doi:10.1504/IJHPCN.2017.10013846
 
 Merch, E. E., & White, M. D. (2003). 图像与文本关系分类法。*The Journal of Documentation*, 59(6), 647–672. doi:10.1108/00220410310506303
 
-Microsoft. (2017). 如何防止 Windows 在 Active Directory 和本地 SAM 数据库中存储你的密码的 LAN 管理器哈希值。检索自 https://support.microsoft.com/en-us/help/299656/how-to-prevent-windows-from-storing-a-lan-manager-hash-of-your-passwor
+Microsoft. (2017). 如何防止 Windows 在 Active Directory 和本地 SAM 数据库中存储你的密码的 LAN 管理器哈希值。检索自 `https://support.microsoft.com/en-us/help/299656/how-to-prevent-windows-from-storing-a-lan-manager-hash-of-your-passwor`
 
-Microsoft. (2019). Azure 存储概述定价。检索自 https://azure.microsoft.com/en-gb/pricing/details/storage/
+Microsoft. (2019). Azure 存储概述定价。检索自 `https://azure.microsoft.com/en-gb/pricing/details/storage/`
 
 Midi, D., Rullo, A., Mudgerikar, A., & Bertino, E. (2017). Kalis——一种用于物联网的知识驱动自适应入侵检测系统。*Proceedings 2017 IEEE 37th International Conference on Distributed Computing Systems (ICDCS)*。doi:10.1109/ICDCS.2017.104
 
 Mikolajczyk, K., & Schmid, C. (2002). 一种仿射不变兴趣点检测器。载 A. Heyden, G. Sparr, M. Nielsen, & P. Johansen (Eds.)，*Lecture Notes in Computer Science: Vol. 2350. Computer Vision — ECCV 2002. ECCV 2002*。德国柏林：Springer。doi:10.1007/3-540-47969-4_9
 
-Mikolov, T., Chen, K., Corrado, G., & Dean, J. (2013). 向量空间中词表示的高效估计。*ArXiv*, 1–12. 检索自 http://arxiv.org/abs/1301.3781
+Mikolov, T., Chen, K., Corrado, G., & Dean, J. (2013). 向量空间中词表示的高效估计。*ArXiv*, 1–12. 检索自 `http://arxiv.org/abs/1301.3781`
 
-Ministry of Defence UK. (2017). UK Defence in Numbers。[在线] 由 DP and A 开发。检索自 https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/652915/UK_Defence_in_Numbers_2017_-_Update_17_Oct.pdf
+Ministry of Defence UK. (2017). UK Defence in Numbers。[在线] 由 DP and A 开发。检索自 `https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/652915/UK_Defence_in_Numbers_2017_-_Update_17_Oct.pdf`
 
 Mondal, S., & Bours, P. (2015). 基于滑动手势的移动设备持续认证。*Proceedings of the IAPR International Conference on Biometrics*。doi:10.1109/ICB.2015.7139110
 
-M-Tree Wikipedia. (n.d.). 检索于 2019 年 3 月 15 日，来自 https://en.wikipedia.org/wiki/M-tree
+M-Tree Wikipedia. (n.d.). 检索于 2019 年 3 月 15 日，来自 `https://en.wikipedia.org/wiki/M-tree`
 
 Muharemagic, E., & Furht, B. (2004). 水印技术及应用综述，佛罗里达大西洋大学计算机科学与工程系，777 Glades Road, Boca Raton, FL 33431-0991, USA。
 
@@ -8399,11 +8211,13 @@ Nammer, N., & Emman, E. L. (2007). 利用隐写算法高安全性地隐藏大量
 
 Nasir, I., Weng, Y., & Jiang, J. (2007 年 12 月). 空域彩色图像的一种新鲁棒水印方案。*Proceedings Third International IEEE Conference on Signal-Image Technologies and Internet-Based System* (pp. 942-947). IEEE. doi:10.1109/SITIS.2007.67
 
-National Cyber Security Centre. (2016). 密码指南。简化您的方法。检索自 https://www.ncsc.gov.uk/guidance/password-guidance-simplifying-your-approach
+National Cyber Security Centre. (2016). 密码指南。简化您的方法。检索自 `https://www.ncsc.gov.uk/guidance/password-guidance-simplifying-your-approach`
 
-Nectar. (n.d.). 检索自 https://nectar.org.au/
+Nectar. (n.d.). 检索自 `https://nectar.org.au/`
 
 Neeta, D., Snehal, K., & Jacobs, D. (2006). LSB 隐写术的实现及其在各比特下的评估。*Proceedings of 1st International Conference on Digital Information Management*, 173-178.
+
+
 
 Nespoli, P., Zago, M., Huertas, A., Gil, M., Gómez, F., & García, F. J. (2018). 面向物联网环境的动态持续认证框架。*IoTSMS’18: Proceedings of the 5th International Conference on Internet of Things: Systems, Management, and Security, Valencia (Spain)*。doi:10.1109/IoTSMS.2018.8554389
 
@@ -8441,11 +8255,7 @@ Pagès, G. (2015). 矢量量化及其在数值计算中应用的介绍。*ESAIM:
 
 Paikray, B., Mallick, C., Sundaram, R. M., Sharma, R., Sengupta, S., Mishra, S. S., ... & Pradhan, D. C. (2018). 多媒体技术导论。Academic Press。
 
-
-
-
-
-##### 参考文献
+### 参考文献
 
 Panjanathan, R., & Ramachandran, G. (2017). 面向无线网络中多媒体应用的增强型低延迟排队算法与主动队列管理。*International Journal of High Performance Computing and Networking*, 10(1-2), 23–33. doi:10.1504/IJHPCN.2017.083197
 
@@ -8517,6 +8327,10 @@ Redmon, J., & Farhadi, A. (2017). YOLO9000: Better, faster, stronger. *CVPR*, 20
 
 Renaud, K. (2009). 关于用户参与视觉认证所用图像的生产。*Journal of Visual Languages and Computing*, 20(1), 1–15. doi:10.1016/j.jvlc.2008.04.001
 
+
+
+## 参考文献
+
 Ren, S., He, K., Girshick, R., & Sun, J. (2017). Faster R-CNN：面向实时目标检测的区域建议网络。*IEEE Transactions on Pattern Analysis and Machine Intelligence*, 39(6), 1137–1149. doi:10.1109/TPAMI.2016.2577031
 
 Ren, Y., Nguyen, M., & Yan, W. (2018). 新西兰第七系列纸币的实时识别。*International Journal of Digital Crime and Forensics*, 10(3), 50–65. doi:10.4018/IJDCF.2018070105
@@ -8524,12 +8338,6 @@ Ren, Y., Nguyen, M., & Yan, W. (2018). 新西兰第七系列纸币的实时识�
 Riaz, A., Ashraf, I., & Aslam, G. (2014). 多媒体数据库综述。*International Journal of Scientific & Technology Research*, 3(10), 186–191.
 
 Rida I., Boubchir L., Al-Maadeed N., Al-Maadeed S., Bouridane A. (2016). 基于统计依赖特征选择和全局-局部性保持投影的鲁棒无模型步态识别。*Proceedings International Conference on Telecommunications and Signal Processing (TSP)* (pp. 652-655). 10.1109/TSP.2016.7760963
-
-
-
-
-
-##### 参考文献
 
 Rocha, A. (2011). Current trends and challenges in digital image and video forensics. *ACM Computing Surveys*, 25(1), 111–116.
 
@@ -8605,19 +8413,19 @@ Shi, E., Niu, Y., Jakobsson, M., & Chow, R. (2011). Implicit Authentication Thro
 
 Shi, W., Yang, J., Jiang, Y., Yang, F., & Xiong, Y. (2011). SenGuard: Passive user identification on smartphones using multiple sensors. *Proceedings IEEE 7th International Conference on Wireless and Mobile Computing, Networking, and Communications (WiMob)*, 141-148.
 
+
+
+# 参考文献
+
 Shin, J., Kim, S., Kang, S., Lee, S. W., Paik, J., Abidi, B., & Abidi, M. (2005). Optical flow-based real-time object tracking using non-prior training active feature model. *Real-Time Imaging*, 11(3), 204–218. doi:10.1016/j.rti.2005.03.006
 
-Shiraga K. Makihara Y. Muramatsu D. Echigo T. Yagi Y. (2016). Geinet: View-invariant gait recognition using a convolutional neural network. *Proceedings International Conference on Biometrics (ICB)* (pp. 1-8). IEEE. 10.1109/ICB.2016.7550060
+Shiraga K., Makihara Y., Muramatsu D., Echigo T., Yagi Y. (2016). Geinet: View-invariant gait recognition using a convolutional neural network. *Proceedings International Conference on Biometrics (ICB)* (pp. 1-8). IEEE. 10.1109/ICB.2016.7550060
 
 Shoemaker, A. (2017). How to Identify a Mirai-Style DDoS Attack. 2020. Retrieved from https://www.imperva.com/blog/author/andrewshoemaker/
 
 Shree, M. (2016). Zoom Detection in Video Sequences (Doctoral dissertation).
 
-
-
-
-
-##### 参考文献
+## 参考文献
 
 Shujaat, A. K. T., Rehman, M., Khan, M. B., Jadoon, I., Khan, F. A., Nawaz, F., & Nasir, A. A. (2018). 基于通用软件无线电外设 (USRP) 的协作网络实验信道容量分析。*Sustainability*，10，1–13。
 
@@ -8699,11 +8507,7 @@ Tsai, H. H., Jhuang, Y. J., & Lai, Y. S. (2012). 基于 SVR 和 PSO 的小波域
 
 Tsai, J. S., Huang, W. B., Kuo, Y. H., & Horng, M. F. (2012). 利用不变特征区域进行基于特征的图像水印的联合鲁棒性和安全性增强。*Signal Processing*，92(6)，1431–1445。doi:10.1016/j.sigpro.2011.11.033
 
-
-
-
-
-##### 参考文献
+## 参考文献
 
 Tsui, T. K., Zhang, X. P., & Androutsos, D. (2008). 基于多维傅里叶变换的彩色图像水印技术。*IEEE Transactions on Information Forensics and Security*（IEEE 信息取证与安全汇刊），3(1)，16–28。doi:10.1109/TIFS.2007.916275
 
@@ -8714,6 +8518,10 @@ Uijlings, J., Sande, K., Gevers, T., & Smeulders, A. (2013)。面向目标识别
 Uthayakumar, J., Vengattaraman, T., & Dhavachelvan, P. (2018)。数据压缩技术综述：从数据质量、编码方案、数据类型和应用的视角。*Journal of King Saud University-Computer and Information Sciences*（沙特国王大学学报——计算机与信息科学）。
 
 Vallabha, V. (2003)。基于小波变换的数字图像多重分辨率水印。检索自 https://www.mathworks.com/matlabcentral/mlc-downloads/downloads/submissions/3508/versions/1/download/pdf
+
+
+
+### 参考文献
 
 Vavilapalli, V. K., Murthy, A. C., Douglas, C., Agarwal, S., Konar, M., Evans, R., & Saha, B. (2013 年 10 月)。Apache Hadoop YARN：另一种资源协调器。*Proceedings of the 4th annual Symposium on Cloud Computing*（第 4 届云计算研讨会论文集）（第 5 页）。ACM。10.1145/2523616.2523633
 
@@ -8783,12 +8591,6 @@ Wu, C. Y., Zaheer, M., Hu, H., Manmatha, R., Smola, A. J., & Krähenbühl, P. (2
 
 Wu, H., Miao, Z., Wang, Y., Chen, J., Ma, C., & Zhou, T. (2015)。基于熵减的多图像图像补全。*Neurocomputing*（神经计算），159，157–171。doi:10.1016/j.neucom.2014.12.088
 
-
-
-
-
-##### 参考文献
-
 Wu, M. L., Fahn, C. S., & Chen, Y. F. (2017). 基于重叠并发方向模式和神经网络的图像格式无关篡改图像检测。*Applied Intelligence*, 47(2), 347–361. doi:10.1007/s10489-017-0893-4
 
 Xia, F., Yang, L. T., Wang, L., & Vinel, A. (2012). 物联网。*International Journal of Communication Systems*, 25(9), 1101–1102. doi:10.1002/dac.2417
@@ -8816,6 +8618,10 @@ YAGO. (database). Wikipedia. (n.d.). 于 2019 年 1 月 21 日检索，来自 ht
 Yamagishi, H., & Yamaguchi, J. (1999). 使用彩色摄像机的火焰检测算法。*Proceedings International Symposium on Micromechatronics and Human Science*, pp. 255-260. 10.1109/MHS.1999.820014
 
 Yampolskiy, R. V., & Govindaraju, V. (2008). 行为生物识别：综述与分类。*International Journal of Biometrics*, 1(1), 81–113. doi:10.1504/IJBM.2008.018665
+
+
+
+# 参考文献
 
 Yan, C., Zhang, B., & Coenen, F. (2015). 基于卷积神经网络的多属性步态识别。*Proceedings International Congress on Image and Signal Processing* (pp. 642-647). IEEE. 10.1109/CISP.2015.7407957
 
@@ -8865,12 +8671,6 @@ Zhang, Z., Li, C., Gupta, B. B., & Niu, D. (2018). 面向层次属性的多授�
 
 Zhang, Z., Sun, R., Zhao, C., Wang, J., Chang, C. K., & Gupta, B. B. (2017). CyVOD：一种新型三位一体多媒体社交网络方案。*Multimedia Tools and Applications*, 76(18), 18513–18529. doi:10.1007/s11042-016-4162-z
 
-
-
-
-
-##### 参考文献
-
 Zhao, N., Zhang, L., Du, B., Zhang, L., Tao, D., & You, J. (2016). Sparse tensor discriminative locality alignment for gait recognition. *Proceedings International Joint Conference on Neural Networks* (pp. 4489–4495). https://doi.org/10.1109/IJCNN.2016.7727787
 
 Zhao, X., Feng, T., Shi, W., & Kakadiaris, I. A. (2014). Mobile user authentication using statistical touch dynamics images. *IEEE Transactions on Information Forensics and Security*, 9(11), 1780–1789. https://doi.org/10.1109/TIFS.2014.2350916
@@ -8889,17 +8689,13 @@ Zhu, J. (2018). *Machine Learning Decision Tree*. University of Wisconsin.
 
 Zighra. (2019). *Smart Identity Defense. AI-Powered Continuous Authentication and Fraud Detection*. Retrieved October 29, 2019, from https://zighra.com/
 
-#### 作者简介
+# 作者简介
+
+## B. B. Gupta
 
 **B. B. Gupta** 于 2009 年在印度理工学院鲁尔基分校获得信息与网络安全领域的博士学位。2009 年，他被加拿大政府选为加拿大联邦奖学金获得者。他在 IEEE、Elsevier、ACM、Springer、Wiley、Taylor & Francis、Inderscience 等高水平国际期刊和会议上发表了 200 多篇研究论文。他曾访问加拿大、日本、澳大利亚、中国、西班牙、香港、意大利、马来西亚、澳门等多个国家，展示其研究成果。他的传记被选入第 30 版《Marquis Who's Who in the World》（2012）。此外，他还被《Marquis Who's Who in the World》（美国）选为 2017 年 Albert Nelson Marquis 终身成就奖获得者。Gupta 博士于 2017 年荣获印度电子与信息技术部颁发的 Sir Visvesvaraya 青年教师研究奖学金奖。此外，他分别于 2018 年和 2019 年荣获印度国家理工学院库鲁克谢特拉分校颁发的最佳教师奖。他还担任多个由印度政府资助机构资助的研发项目的首席研究员。他分别担任 *IEEE Transactions on Industrial Informatics*、*IEEE Access* 的副编辑，以及 *IJITCA*（Inderscience）的执行编辑。此外，Gupta 博士还担任 *International Journal of Cloud Applications and Computing (IJCAC)*（IGI Global, USA）的主编。他还担任 IEEE、Springer、Wiley、Taylor & Francis 等多家期刊的审稿人。他曾担任 2018 年 IEEE INFOCOM: CCSNA（美国）的 TPC 主席。此外，他还分别担任了在台湾和日本举办的第 10 届 NSS 2016 和第 17 届 IFSA-SCIS 2017 的宣传主席。他还是 FISP 和 ISCW 研讨会的创始主席，这些研讨会每年在不同国家举办。自 2014 年起，Gupta 博士每年担任日本 IEEE 全球消费电子会议 (GCCE) 中“网络安全最新进展专题会议 (SS-CBS)”的组织主席。Gupta 博士于 2016 年 10 月 7-10 日在第 5 届 IEEE 全球消费电子会议 (GCCE)（日本京都）上同时获得了常规类和学生类优秀论文奖。Gupta 博士是 IEEE 高级会员、ACM 会员、SIGCOMM 会员、SDIWC 会员、互联网协会会员、纳米技术学会会员、国际工程师协会 (IAENG) 终身会员、国际计算机科学与信息技术协会 (IACSIT) 终身会员。他曾于 2015 年和 2018 年、2017 年、2018 年分别担任日本山口大学、澳大利亚迪肯大学和澳大利亚斯威本科技大学的访问研究员。目前，Gupta 博士在印度国家理工学院库鲁克谢特拉分校计算机工程系担任助理教授。他的研究兴趣包括信息安全、网络安全、移动/智能手机、云计算、Web 安全、入侵检测、计算机网络和网络钓鱼。
 
-
-
-
-
-#### 作者简介
-
-##### Deepak Gupta
+## Deepak Gupta
 
 Deepak Gupta 拥有美国伊利诺伊理工学院计算机取证与网络安全专业理学硕士学位，专攻语音互联网协议（VOIP）。本科期间，他先后获得 CCNA（Cisco 认证网络管理员）和 MCP（Microsoft 认证专业人员）认证。研究生阶段，他致力于计算机网络安全与取证研究，涉及多重引导计算机系统引导加载程序变更、MP3 隐写术等课题。他还在芝加哥著名的 VOIP 研究实验室 Bell Labs 参与并主导研究项目，深化了对 VOIP 技术的兴趣。他在 P2P 通信和 SIP 协议方面的研究论文荣获 2007 年最佳学生 VOIP 项目奖。
 
@@ -8913,112 +8709,120 @@ Deepak 还热衷于帮助企业改善和优化客户体验。他每天与客户�
 
 网站：`www.guptadeepak.com`、`www.loginradius.com`
 
-***
+## Mohammad Alauthman
 
-##### Mohammad Alauthman
+
+
+# 作者简介
+
+## Mohammad Alauthman
 
 Mohammad Alauthman 于 2016 年在英国诺森比亚大学获得博士学位。2002 年获约旦哈希姆大学计算机科学学士学位，2004 年获约旦安曼阿拉伯大学计算机科学硕士学位。现任约旦扎尔卡大学计算机科学系助理教授兼高级讲师。主要研究领域：网络安全、计算机取证、高级机器学习和数据科学应用。
 
-##### Mamdouh Alenezi
+## Mamdouh Alenezi
 
 Mamdouh Alenezi 现任苏丹王子大学教育服务院长。2011 年和 2014 年分别在美国德保罗大学和北达科他州立大学获得硕士和博士学位。他在数据挖掘和机器学习方面拥有丰富经验，曾应用多种数据挖掘技术解决软件工程问题。他开展了多项研究，利用机器学习开发预测模型，以预测易出错类、理解源代码，并预测分配给新 Bug 的合适开发人员。
 
-##### Ammar Almomani
+## Ammar Almomani
 
 Ammar Almomani 于 2013 年在马来西亚理科大学（USM）获得博士学位。在国际知名期刊和会议上发表 60 余篇研究论文。现任约旦阿尔巴尔卡应用大学阿尔胡森大学学院信息技术系助理教授兼高级讲师。研究兴趣包括高级互联网安全与监控。
 
-##### Sadiq Almuairfi
+## Sadiq Almuairfi
 
 Sadiq Almuairfi 现任沙特阿拉伯利雅得苏丹王子大学安全工程实验室电子服务总监兼研究员。2014 年获澳大利亚墨尔本拉特罗布大学网络安全博士学位，2005 年获沙特阿拉伯吉达阿卜杜拉齐兹国王大学信息管理硕士学位，2001 年获沙特阿拉伯达兰法赫德石油矿业大学（KFUPM）计算机工程学士学位。研究兴趣包括网络安全、网络安全、电子商务安全。
 
-##### Ahmad Al-Qerem
+## Ahmad Al-Qerem
 
 Ahmad Al-Qerem 1997 年获约旦科技大学应用数学学位，2002 年获同校计算机科学硕士学位。随后受聘为扎尔卡大学全职讲师。现任约旦扎尔卡大学互联网技术系副教授兼系主任，同时也是 Princess Sumaya University for Technology (PSUT) 客座教授。他拥有英国拉夫堡大学博士学位。研究兴趣涵盖性能与分析建模、移动计算环境、协议工程、通信网络、IPv6 过渡和事务处理。在计算机科学多个领域发表多篇论文。
 
-##### Kirti Raj Bhatele
+## Kirti Raj Bhatele
 
 Kirti Raj Bhatele 是边境安全部队运营的 RJIT BSF Academy Tekanpur 的助理教授。目前正在攻读计算机科学工程与信息技术领域博士学位。拥有 RGPV 大学信息技术 M.Tech 和 B.E. 学位，以及印度博帕尔国家法律学院网络法研究生文凭。拥有 8 年以上教学经验，发表 20 篇研究论文和 8 个章节。
 
-##### Xin Chen
+## Xin Chen
 
 Xin Chen 于 2018 年在奥克兰理工大学获得计算机科学硕士学位，研究兴趣包括深度学习和智能监控。
 
-##### Phuc Do
+## Phuc Do
 
 Phuc Do 现任越南 VNU-HCM 信息技术大学（UIT）副教授。研究兴趣包括数据挖掘、文本挖掘、信息网络分析、人工智能和机器学习、大数据分析与应用。
 
+## Mohamed Amine Ferrag
 
-
-
-
-#### 作者简介
-
-##### Mohamed Amine Ferrag
 Mohamed Amine Ferrag 分别于 2008 年、2010 年和 2014 年在阿尔及利亚的 Badji Mokhtar–Annaba 大学获得计算机科学学士、硕士和博士学位。自 2014 年以来，他一直担任阿尔及利亚 Guelma 大学计算机科学系助理教授。他编辑了著作 *Security Solutions and Applied Cryptography in Smart Grid Communications*（IGI Global 出版）。他的研究兴趣包括无线网络安全、网络编码安全和应用密码学。他目前在多个期刊担任编辑委员会成员，如 *International Journal of Information Security and Privacy*（IGI Global）、*International Journal of Internet Technology and Secured Transactions*（Inderscience Publishers）和 *EAI Endorsed Transactions on Security and Safety*（EAI）。他在众多国际会议中担任组织委员会成员（担任过专题主席、联合主席、宣传主席、论文集编辑和网站主席）。
 
-##### Reinaldo França
+## Reinaldo França
+
 Reinaldo França 毕业于计算机工程专业。他目前是 UNICAMP 电气与计算机工程学院 (FEEC) DECOM 的博士候选人，也是视觉通信实验室 (LCV) 的研究员。他在技术与科学研究领域有浓厚兴趣，并掌握 `C/C++`、`Python`、`Java` 和 `.NET` 语言的编程与开发知识，研究方向涉及仿真、操作系统、无线与网络、广播、电信系统、数字信号处理、数字图像处理和深度学习。
 
-##### Rui Hu
+## Rui Hu
+
 Rui Hu 是在 AUT 就读的硕士研究生。
 
-##### Alberto Huertas Celdrán
+## Alberto Huertas Celdrán
+
 Alberto Huertas Celdrán 是爱尔兰研究委员会爱尔兰政府博士后研究员，隶属于 TSSG, WIT。Huertas Celdrán 在西班牙穆尔西亚大学获得计算机科学硕士和博士学位。他的科学兴趣包括医疗网络物理系统 (MCPS)、脑机接口 (BCI)、网络安全、数据隐私、持续认证、语义技术、感知上下文系统和计算机网络。
 
-##### Prerana Jain
+## Prerana Jain
+
 Prerana Jain 是助教，正在 Rustmaji Institute of Technology Border Security Force Academy 攻读计算机科学工程学位。
 
-##### Shivangi Jain
+## Shivangi Jain
+
 Shivangi Jain 毕业于 Rustamji Institute of Technology, BSF Academy Tekanpur，该学院由边境安全部队运营。她参与过多个与网络安全和机器学习相关的项目，并代表学院参加过黑客马拉松等国家级竞赛。她撰写过多篇关于计算机编程和网络安全的文章和博客。
 
-##### Avila Jayapalan
+## Avila Jayapalan
+
 Avila Jayapalan 于 1990 年在 V.M.K.V 工程学院获得电子与通信工程学士 (ECE) 学位，在 Vellore Institute Of Technology 获得通信工程硕士 (M.Tech) 学位，并在 SASTRA Deemed University, Thanjavur 获得博士学位。目前她在 SASTRA Deemed University, Thanjavur 的 ECE 系担任高级助理教授。她拥有 15 年教学经验，在国内外期刊发表了 35 篇研究论文。她指导过许多本科生和研究生项目。她的研究领域包括无线通信和认知无线电。她在著作 *Cognitive Radio in 4G/5G Wireless Communication Systems* 中发表过书籍章节。
 
-##### Manessa Jayaprakasam
+## Manessa Jayaprakasam
+
 Manessa Jayaprakasam 于 2011 年在 Anna University, Trichy 获得计算机科学与工程学士 (CSE) 学位。她拥有 2 年以上 IT 经验。她目前担任 `Java` 应用开发和 `PHP` 的自由职业培训师。她的兴趣包括内容安全和多媒体应用。
 
-##### José María Jorquera Valero
+## José María Jorquera Valero
+
 José María Jorquera Valero 是穆尔西亚大学网络安全与网络防御研究实验室的博士生。Jorquera Valero 在西班牙穆尔西亚大学获得计算机科学学士和硕士学位。他的科学兴趣包括计算机网络、机器学习、网络安全、数据隐私和持续认证。
 
-##### Abhishek Kataria
+## Abhishek Kataria
+
 Abhishek Kataria 毕业于 Rustamji Institute of Technology, BSF Academy Tekanpur，该学院由边境安全部队运营。他参与过多个与网络安全和机器学习相关的项目，并代表学院参加过黑客马拉松等国家级竞赛。他撰写过多篇关于计算机编程和网络安全的文章和博客。
 
-##### Vinash Kaur
+## Vinash Kaur
+
 Vinash Kaur - 研究领域：物联网，云计算。
 
-##### Gregorio Martinez Perez
+## Gregorio Martinez Perez
+
 Gregorio Martinez Perez - 西班牙穆尔西亚大学信息与通信工程系。他的学术活动主要致力于网络安全、隐私和网络。Prof. Martinez Perez 在西班牙穆尔西亚大学获得计算机科学硕士和博士学位。他在国内外会议论文集、杂志和期刊上发表了 200 多篇论文。他已指导 10 名博士生，其中多人获得荣誉学位。
 
-##### Ana Carolina Monteiro
+## Ana Carolina Monteiro
+
 Ana Carolina Monteiro 毕业于生物医学专业，拥有工程硕士学位，目前是 UNICAMP 电气与计算机工程学院 (FEEC) DECOM 的博士候选人，也是视觉通信实验室 (LCV) 的研究员，从事与医学领域相关的数字图像处理研究。她在健康与临床分析方面具有亲和力和专业知识，擅长 `Matlab`、`C/C++` 开发，研究方向涉及血液学、医学信息学、细胞生物学、细胞病理学、电信、广播和深度学习。
 
-##### Shadi Nashwan
+## Shadi Nashwan
+
 Shadi Nashwan 1978 年出生于约旦安曼。他分别于 2001 年在巴勒斯坦 Alazhar University 获得计算机科学学士学位，2003 年在约旦 University of Jordan 获得计算机科学硕士学位，2009 年在英国 Anglia Ruskin University 获得计算机与网络安全博士学位。博士毕业后，他在约旦安曼 Al-Zaytoonah University 计算机科学系担任助理教授。2010 年，他加入沙特阿拉伯 Jouf University 计算机科学系担任助理教授，并于 2018 年成为计算机与网络安全副教授。他是年度国际计算机与信息科学会议 (ICCIS) 的出版主席。Prof. Nashwan 的研究重点是网络安全、认证协议、移动性管理以及 NFC、RFID 和 WSN 等无线网络的安全。他在认证协议、恢复技术和移动性管理领域发表了多篇 ISI 和 SCOPUS 收录的论文。
 
-##### Ser Minh Nguyen
+## Ser Minh Nguyen
+
 Ser Minh Nguyen 在新西兰奥克兰大学获得计算机科学博士学位。他的研究兴趣包括机器视觉、深度学习和虚拟现实。
 
-##### Pedro Miguel Sánchez
+## Pedro Miguel Sánchez
+
 Pedro Miguel Sánchez 是西班牙穆尔西亚大学计算机科学博士生。Pedro Miguel Sánchez 在西班牙穆尔西亚大学获得计算机科学硕士和学士学位。他的科学兴趣包括机器学习、网络安全、数据隐私、持续认证和计算机网络。
 
-##### Amany Sarhan
+## Amany Sarhan
+
 Amany Sarhan 于 1990 年在 Mansoura University 工程学院获得电子工程学士学位，1997 年获得计算机工程硕士学位。她通过 Tanta Univ., Egypt 和 Univ. of Connecticut, USA 的联合研究获得博士学位。她目前在 Tanta Univ., Egypt 担任全职教授兼计算机与控制系主任。她的研究兴趣领域包括：分布式系统、软件重构、面向对象数据库、图像和视频处理、GPU 和分布式计算。
 
-
-
-
-
-#### 作者简介
-
-##### Shatha Shakhatreh
+## Shatha Shakhatreh
 
 Shatha Shakhatreh 是 Princess Sumaya University for technology (PSUT) Network and Security Engineering 部门的实验室讲师，位于约旦安曼。她在 PSUT 获得了 Information System Security and Digital Criminology 硕士学位。她拥有 Linux 系统管理的实践经验。她的研究兴趣包括威胁狩猎、恶意软件分析、隐私和数字取证。
 
-##### Poonkuntran Shanmugam
+## Poonkuntran Shanmugam
 
 Poonkuntran Shanmugam 于 2003 年在印度 Tiruchirapalli 的 Bharathidasan University 获得 Information Technology 学士学位，分别于 2005 年和 2011 年在印度 Tirunelveli 的 Manonmaniam Sundaranar University 获得 Computer and Information Technology 硕士和博士学位。他目前在印度 Tamilnadu Madurai 的 Velammal College of Engineering and Technology 担任教授，并执行来自 ISRO (India)、DRDO (New Delhi) 和 MNRE (New Delhi) 的三项资助研究项目。他拥有 15 年以上的教学和研究经验。他是 IACSIT (Singapore)、CSI (India) 和 ISTE (India) 的终身会员。他在图像处理、信息安全和软计算方面发表了 4 篇国家会议论文、43 篇国际会议论文、1 篇国家期刊论文和 20 篇国际期刊论文。他撰写了 6 本书和 1 个计算机科学章节。他在 2016-17 年担任 CSI (India) Region VII 的 State Level Student Coordinator。他获得了 2017-18 年度 Cognizant Best Faculty Award。目前他正在从事水下自主航行器的计算机视觉和医疗信息系统的信息安全研究。他的研究兴趣领域包括数字图像处理、软计算、节能感知计算和计算机视觉。
 
-##### Wei Qi Yan
+## Wei Qi Yan
 
 Wei Qi Yan 是 Auckland University of Technology (AUT) 的副教授，专长领域为数字安全、监控和取证，他领导 AUT 的 Computer and Communication Security (CCS) Research Group。Dr. Yan 曾担任 Royal Society of New Zealand (RSNZ) 和 Chinese Academy of Sciences (CAS) 之间的交换计算机科学家，他是 ACM Multimedia Chapter of New Zealand 的主席，ACM 会员，IEEE 高级会员，以及 IEEE TC 成员。Dr. Yan 是 State Key Laboratory of Information Security (SKLOIS) 中国的客座（兼职）教授，拥有博士生指导资格。他是新西兰 University of Auckland 和新加坡 National University of Singapore 计算机科学系的访问教授。
-

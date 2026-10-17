@@ -1,35 +1,7 @@
+
 # Ultimate Cardano 智能合约：通过使用 Plutus 智能合约和应用开发真实 Web 3.0 项目，解锁 Cardano 区块链的全部潜力
 
-
-
-
-
-
-
-![](img/line.jpg)
-
-
-
-
-
-![](img/line.jpg)
-
-
-![](img/logo.jpg)
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 献给
+## 献给
 
 我的孩子们：
 
@@ -37,7 +9,7 @@ Daniel, Sofi, Josie
 
 以及他们的未来
 
-# 关于作者
+## 关于作者
 
 `Lawrence Arthur Ley` 拥有多伦多大学计算机科学学位和 20 多年的 IT 行业经验。他热于学习新技术以及这些技术如何产生积极影响。他的 Cardano 之旅始于 2021 年的 Plutus Pioneers 程序，并参与了多个开源 Cardano 影响项目。Lawrence 是多伦多乔治·布朗学院（George Brown College）区块链开发课程的教授，并运营着拥有 500 多成员的 Cardano 区块多伦多每月聚会。
 
@@ -45,13 +17,13 @@ Daniel, Sofi, Josie
 
 2023 年 7 月，Lawrence 受邀参加在苏格兰爱丁堡举行的 Cardano CIP-1694 治理工作坊，在那里他见到了 Cardano 联合创始人 Charles Hoskinson。他非常荣幸能参加这些治理工作坊。
 
-# 关于作者
+## 关于作者
 
 `Venu Kumar Borra` 拥有印度国家管理学院（NIBM）的执行营销 MBA 学位，以及马德拉斯大学的数学学士学位。他的能力包括解决方案设计与开发、产品管理、云部署、咨询、项目管理、质量保证、团队领导和培训。Venu 擅长将复杂的业务需求转化为创新解决方案。
 
 在他担任 `Blockmatrix IT Solutions Ltd` 经理期间，他交付了跨多个行业的尖端解决方案。作为 `Blockchain For Productivity Forum` 的董事会成员，Venu 促进区块链的采用并实施解决方案。他的技术技能包括使用 `Solidity`、`Go`、`Python`、`Kotlin` 和 `Haskell` 进行，以及使用 `Hardhat` 和 `Brownie` 等工具。
 
-# 谢谢
+## 谢谢
 
 写这本书是为了帮助他人学习区块链的工作原理以及如何在 Cardano 上创建去中心化应用程序。区块链是一项迷人的技术，可以显著改变业务模式。然而，写一本关于快速变化技术的书并不容易，因为从你开始写书到出版，可能会发生很多变化。因此，本书将提供适用于未来的基础知识和技术，尽管语言特性和版本随时间推移而变化。
 
@@ -63,15 +35,11 @@ Daniel, Sofi, Josie
 
 最后，感谢读者们，感谢你们选择这本书来帮助精通 Cardano 智能合约。愿你在发现这项新颖深刻的技术时，它能成为一份无贵的资源。
 
-# 前言
+## 前言
 
 在构建去中心化应用时决定使用哪种区块链是一个巨大的决定。有很多考虑因素，切换到不同的区块链可能需要时间和精力。《终极 Cardano 智能合约》旨在展示 Cardano 的功能，并为编写智能合约提供实践方法。通过这些知识和见解，你将理解在 Cardano 上构建的优势，以及为什么会有如此庞大且热情的 Cardano 社区。
 
 本书由十四章组成，每一章都建立在前章的基础上。我们将从区块链基础开始，然后进入智能合约写作。书中将以 Cardano 生态系统和理念的概述作为结束。书中包含技术和非技术材料，因此将吸引经验丰富的开发者以及希望提高知识水平和理解的非技术创业者。
-
-
-
-
 
 本章将介绍区块链和分布式账本技术，重点介绍早期的实现方案以及需要克服的挑战。我们将研究比特币和以太坊的白皮书，以及它们如何为第三代区块链 Cardano 铺路。我们将探讨区块链三难困境，并回顾代币经济以及 Cardano 的原生货币 `Ada`。最后，我们将通过讨论 Cardano 路线图和区块链用例来结束本章。
 
@@ -101,13 +69,9 @@ Daniel, Sofi, Josie
 
 本章将回顾 Cardano 的精神。我们将检查软件行业标准以及这些标准在处理高保证软件方面的不足。我们将看到 `IOG` (`IOHK`) 如何使用半形式方法构建 Cardano，以及密码学协会（如 `IACR`）如何促进同行评审。通过真实世界的案例，我们将探索 Cardano 推动积极社会变革的潜力。我们还将讨论监管和合规风险。最后，我们将回顾技术采纳的五个阶段和 Cardano 的旅程。
 
-
-
-
-
 如果代码发生更新，它将在现有的 GitHub 仓库中进行更新。
 
-# 勘误
+## 勘误
 
 我们对在 `Orange Education Pvt Ltd` 的工作感到非常自豪，并遵循最佳实践以确保内容的准确性，为我们的订阅者提供沉浸式的阅读体验。我们的读者是我们的镜子，我们利用他们的反馈来反映并改进在出版过程中可能出现的人为错误（如果有的话）。为了让我们维持质量并帮助我们联系任何可能因不可预见的错误而遇到困难的读者，请通过以下邮箱与我们联系：
 
@@ -115,33 +79,31 @@ Daniel, Sofi, Josie
 
 非常感谢您的支持、建议和反馈。
 
-# 你知道吗
+## 你知道吗
 
 你不知道 Orange Education Pvt Ltd 为出版的每本书都提供电子书版本，并提供 PDF 和 ePub 文件？您可以在 `[www.orangeava.com](http://www.orangeava.com)` 升级到电子书版本，作为纸质书客户，您有权获得电子书副本的折扣。请通过 `info@orangeava.com` 与我们联系获取更多详情。
 
 在 `[www.orangeava.com](http://www.orangeava.com)`，您还可以阅读一系列免费的技术文章，订阅一系列免费的新事列表，并获得 AVA™ 书和电子书的专属折扣和优惠。
 
-# 盗版
+## 盗版
 
 如果您在互联网上遇到任何形式的我们作品的非法副本，如果您能提供所在地址或网站名称，我们将不胜感激。请通过 `info@orangeava.com` 联系我们并附上材料的链接。
 
-# 您有与我们合作写作吗？
+## 您有与我们合作写作吗？
 
 如果您有擅长的领域，并且对编写或贡献书籍感兴趣，请向 `business@orangeava.com` 给我们写信。我们致力于帮助开发者和技术专业人员对全球正在发生的技术进步和创新的见解，并建立一个相信“知识通过与他人分享和学习获得最好”的社区。请与我们联系，了解我们读者的需求以及您如何成为这场教育改革的一部分。我们还欢迎技术专家的建议，并帮助他们为自己的领域构建学习和开发内容。
 
-# 评论
+## 评论
 
 请留下您的评价。在您阅读并使用这本书后，为什么不在购买它的网站上留个评论呢？潜在读者就可以看到并利用您的公正意见做出购买决策。我们 Orange Education 非常想知道您对我们产品的看法，我们的作者也可以从您的反馈中学习。谢谢！
 
 有关关于 Orange Education 的更多信息，请访问 `[www.orangeava.com](http://www.orangeava.com)`。
-
 
 # 区块链演进
 
 ## 引言
 
 本章将介绍区块链和分布式账本技术，重点关注之前的实现和需要克服的挑战。我们将回顾里程碑式的比特币白皮书及其如何开启数字货币的新时代。接下来，我们将介绍以太坊白皮书、智能合约概念是如何产生的以及以太坊正在解决的问题。本章还将回顾著名的 Charles 白板视频的关键要点，这些视频引导许多人深入研究 Cardano 生态系统。随后我们将探索去中心化、安全性和可扩展性的经典区块链三难题。还将回顾代币经济学和 Cardano 的原生货币 `Ada`。最后，我们将通过讨论 Cardano 路线图和区块链用例来结束本章。
-
 
 在本章中，我们将讨论以下主题：
 
@@ -159,8 +121,7 @@ Daniel, Sofi, Josie
 *   Cardano 路线图
 *   区块链用例
 
-
-使用账本记录贷贷交易的概念已经存在了数千年。¹ 随着分布式计算的出现，账本的概念得到了扩展，多方可以使用连接到网络的计算机来查看和更新账本。如 `图 1.1` 所示，中心化分布式账本与去中心化分布式账本的区别在于，您不再拥有单一的中央权威。然而，问题在于，您仍然需要一种方法来确保不可变交易的正确排序。1991 年，`Stuart Haber` 和 `W. Scott Stornetta` 写了 **如何为数字文档时间戳（How to Time-Stamp a Digital Document）*，其中描述了一种使用时间戳和加密哈希值来证明数字文档何时创建或是否被修改的方法。²
+使用账本记录贷贷交易的概念已经存在了数千年。¹ 随着分布式计算的出现，账本的概念得到了扩展，多方可以使用连接到网络的计算机来查看和更新账本。如 `图 1.1` 所示，中心化分布式账本与去中心化分布式账本的区别在于，您不再拥有单一的中央权威。然而，问题在于，您仍然需要一种方法来确保不可变交易的正确排序。1991 年，`Stuart Haber` 和 `W. Scott Stornetta` 写了 **如何为数字文档时间戳（How to Time-Stamp a Digital Document）**，其中描述了一种使用时间戳和加密哈希值来证明数字文档何时创建或是否被修改的方法。²
 
 ```
 OEBPS/images/Figure-1.jpg
@@ -168,204 +129,172 @@ OEBPS/images/Figure-1.jpg
 
 **1.1:** 账本类型
 
-
 分布式账本技术的另一个核心方面是在包含恶意或不可用节点的网络中确保每个节点存储的数据是正确的。这个问题被称为拜占庭将军问题（BGP）。³ `BGP` 描述了一个场景：将军们包围城堡准备攻击，并通过信使相互进行通信和协调。只有当所有将军同时攻击并利用信使发出攻击信号时，攻击才会成功。然而，风险在于攻击信号可能无法被所有将军正确接收，因为信使可能会被杀害或收买。抵抗此类故障的网络分别被称为崩溃容错（CFT）和拜占庭容错（BFT）。
 
-`Mazières` 和 `Shasha` 的论文 **利用拜占庭存储构建安全文件系统（Building Secure File Systems Out of Byzantine Storage）* 引入了一种拜占庭容错（BFT）算法，允许分布式网络在不可信环境中对数据状态达成共。⁴ 作者利用冗余处理拜占庭故障并使用数字签名，创建了一种名为 `SUNDR`（安全不可信数据存储）的一致性协议。如果发现差异，协议将检测恶意行为并将文件系统块分叉。
+`Mazières` 和 `Shasha` 的论文 **利用拜占庭存储构建安全文件系统（Building Secure File Systems Out of Byzantine Storage）** 引入了一种拜占庭容错（BFT）算法，允许分布式网络在不可信环境中对数据状态达成共。⁴ 作者利用冗余处理拜占庭故障并使用数字签名，创建了一种名为 `SUNDR`（安全不可信数据存储）的一致性协议。如果发现差异，协议将检测恶意行为并将文件系统块分叉。
 
+在去中心化共识中利用计算周期解决谜题的概念最早由 `Wei Dai` 的 b-money 在 1998 年提出。⁵ 这种方法的益处是它不需要中心化机构来发行货币。“2005 年，`Hal Finney` 引入了‘可重用工作证明’的概念⁶，该系统结合了 b-money 的思想以及 `Adam Back` 的计算困难型 `Hashcash` 谜题，创建了一种加密货币的概念。”⁷ 遗憾的是，这种方法仍然依赖于受信任的后端，⁸ 因此它没有实现无信任、去中心化货币的目标。
 
+2008 年，名为 `Satoshi Nakamoto` 发布了《比特币：一种点对点的电子现金系统》，旨在通过一种去中心化的点对点电子现金系统来解决双花费问题，如图 1.2 所示。在这篇里程碑式的论文中，Satoshi 提出了“一个使用工作证明的点对点网络，用于记录公共历史，如果诚实节点控制了大部分 CPU 算力，这对于攻击者来说在计算上将迅速变得不可更改”。⁹这是通过使用网络时间戳交易以及“将它们哈希化到持续的基于哈希的工作证明链中实现的，形成了一个如果不重做工作证明就无法更改的记录。最长链不仅是所见事件顺序的证明，也证明了它来自最大的 CPU 算力池。只要大多数的 CPU 算力由不合作攻击网络的节点控制，它们就会生成最长链并超越攻击者”¹⁰
 
-
-
-在去中心化共识中利用计算周期解决谜题的概念最早由 `Wei Dai` 的 b-money 在 1998 年提出。⁵ 这种方法的益处是它不需要中心化机构来发行货币。“2005 年，`Hal Finney` 引入了‘可重用工作证明’的概念⁶，该系统结合了 b-money 的思想以及 `Adam Back` 的计算困难型 `Hashcash` 谜题，创建了一种加密货币的概念。”⁷ 遗憾的是，这种方法仍然依赖于受信任的后端，⁸](#c01.xhtml#ftn8)，因此它没有实现无信任、去中心化货币的目标。
-
-
-2008 年，名为 `Satoshi Nakamoto` 发布了《比特币：一种点对点的电子现金系统》，旨在通过一种去中心化的点对点电子现金系统来解决双花费问题，如图图 1.2 所示。在这篇里程碑式的论文中，Satoshi 提出了“一个使用工作证明的点对点网络，用于记录公共历史，如果诚实节点控制了大部分 CPU 算力，这对于攻击者来说在计算上将迅速变得不可更改”。⁹这是通过使用网络时间戳交易以及“将它们哈希化到持续的基于哈希的工作证明链中实现的，形成了一个如果不重做工作证明就无法更改的记录。最长链不仅是所见事件顺序的证明，也证明了它来自最大的 CPU 算力池。只要大多数的 CPU 算力由不合作攻击网络的节点控制，它们就会生成最长链并超越攻击者”(10)
-
+```
 ![](img/Figure-1.2.jpg)
+```
 
-
-比特币的 `Proof-of-Work`（工作证明）实现是创新的，因为它同时解决了两个问题。首先，它提供了一种简单且中等有效的共识算法，允许网络中的节点共同对比特币账本状态的一组标准更新达成一致。11)其次，它提供了一种允许自由进入共识过程的机制，解决了谁有权影响共识的政治问题，同时防止了 Sybill 攻击。12)
+比特币的 `Proof-of-Work`（工作证明）实现是创新的，因为它同时解决了两个问题。首先，它提供了一种简单且中等有效的共识算法，允许网络中的节点共同对比特币账本状态的一组标准更新达成一致。¹¹ 其次，它提供了一种允许自由进入共识过程的机制，解决了谁有权影响共识的政治问题，同时防止了 Sybill 攻击。¹²
 
 2009 年 1 月 3 日，第一个比特币区块被铸造，一个无许可且无信任的数字货币新时代随之诞生。在后续关于密码学、共识算法概述以及交易的章节中，我们将更详细地探讨比特币白皮书。
 
 
-由 `Vitalik Buterin,` 于 2014 年发布的以太坊白皮书引入了一种利用区块链技术创建更具通用性的分布式计算平台的新方法。特别是，他描述了 `Smart Contract`（智能合约）的概念，这种合约可以被视为包含价值的加密“箱子”，只有在满足特定条件时才会解锁价值。13)与比特币脚本不同，以太坊智能合约是图灵完备的，并且拥有全局状态和持久化存储，如图图 1.3 所示。运行在以太坊虚拟机 (`EVM`）中的 `Smart Contract` 是感知价值的，并且读取合约账户的以太 (`ETH`) 数量。
+
+由 `Vitalik Buterin` 于 2014 年发布的以太坊白皮书引入了一种利用区块链技术创建更具通用性的分布式计算平台的新方法。特别是，他描述了 `Smart Contract`（智能合约）的概念，这种合约可以被视为包含价值的加密“箱子”，只有在满足特定条件时才会解锁价值。与比特币脚本不同，以太坊智能合约是图灵完备的，并且拥有全局状态和持久化存储，如图 1.3 所示。运行在以太坊虚拟机（`EVM`）中的 `Smart Contract` 是感知价值的，并且读取合约账户的以太（`ETH`）数量。
 
 ![](img/Figure-1.3.jpg)
 
-
-以太坊的全局状态包含两种账户：由私钥控制的外部账户和由其 `Smart Contract` 代码控制的合约账户。14)智能合约是自执行的，因为它们在单个节点内包含了所需的所有信息。通过使用全局状态，以太坊的优势在于不需要重建所有之前的交易来确定网络的当前状态。它只需要将最新区块中的当前交易应用到当前状态即可。
-
-以太坊的全局状态包含两种账户：由私钥控制的外部账户和由其 `Smart Contract` 代码控制的合约账户。14)智能合约是自执行的，因为它们在单个节点内包含了所需的所有信息。通过使用全局状态，以太坊的优势在于不需要重建所有之前的交易来确定网络的当前状态。它只需要将最新区块中的当前交易应用到当前状态。（等等，原文在此处有重复/片段，我将根据提供的文本流进行清理）。
+以太坊的全局状态包含两种账户：由私钥控制的外部账户和由其 `Smart Contract` 代码控制的合约账户。智能合约是自执行的，因为它们在单个节点内包含了所需的所有信息。通过使用全局状态，以太坊的优势在于不需要重建所有之前的交易来确定网络的当前状态。它只需要将最新区块中的当前交易应用到当前状态即可。
 
 智能合约是自执行的，因为它们在单个节点内包含了所需的所有信息。通过使用全局状态，以太坊的优势在于不需要重建所有之前的交易来确定网络的当前状态。它只需要将最新区块中的当前交易应用到当前状态。
 
-
-
-
-
-最后一个讨论的领域是区块链如何增长、筹资金以及治理。它将是一个容易被受私利驱动的大型实体收编的赞助模式吗？还是一次性的初始代币发行（ICO），其资金是有限的并在某个时间会耗尽？Cardano 采用的方法是在协议中构建一个自给自足的国库，该国库由初始代币供应分配和持续的交易费用提供资金。同样，甚至更重要的是，由谁来决定以及资金如何花费的问题。这属于 Cardano 的“治理”阶段，Charles 指出这是 Cardano 所有阶段中最困难的一个。其理念是 `Ada` 持有者可以对国库支出进行投票，并对随时间推移的功能或协议改进进行治理。
-
+最后一个讨论的领域是区块链如何增长、筹资金以及治理。它将是一个容易被受私利驱动的大型实体收编的赞助模式吗？还是一次性的初始代币发行（`ICO`），其资金是有限的并在某个时间会耗尽？`Cardano` 采用的方法是在协议中构建一个自给自足的国库，该国库由初始代币供应分配和持续的交易费用提供资金。同样，甚至更重要的是，由谁来决定以及资金如何花费的问题。这属于 `Cardano` 的“治理”阶段，`Charles` 指出这是 `Cardano` 所有阶段中最困难的一个。其理念是 `Ada` 持有者可以对国库支出进行投票，并对随时间推移的功能或协议改进进行治理。
 
 区块链三难题指的是广泛接受的观点，即去中心化网络在去中心化、安全性和扩展性方面同时只能提供这三种优势中的两种。
 
 ![](img/Figure-1.5.jpg)
 
+* **去中心化：** 创建一个避免中心控制点的区块链。
+* **可扩展性：** 区块链必须能够处理不断增加的用户和交易。
+* **安全性：** 区块链必须按照预期运行，并抵御攻击、漏洞和其他不可预见的问题。
 
-*   **去中心化：** 创建一个避免中心控制点的区块链。
-*   **可扩展性：** 区块链必须能够处理不断增加的用户和交易。
-*   **安全性：** 区块链必须按照预期运行，并抵御攻击、漏洞和其他不可预见的问题。
+`Cardano` 旨在通过以下方法解决这些维度的问题：
 
-Cardano 旨在通过以下方法解决这些维度的问题：
-
-*   通过确保维护网络的质押池可以使用普通硬件和典型的互联网连接运行，从而促进去中心化。
-*   通过侧链、加密学汇总（roll-ups）和并行处理（流水线）来解决可扩展性问题，提高交易处理速度。
-*   对于高保证软件和安全性，使用科学方法，包括同行评审过程以及 `Ouroboros Proof-of-Stake` 协议的形式化验证。
-
+* 通过确保维护网络的质押池可以使用普通硬件和典型的互联网连接运行，从而促进去中心化。
+* 通过侧链、加密学汇总（`roll-ups`）和并行处理（流水线）来解决可扩展性问题，提高交易处理速度。
+* 对于高保证软件和安全性，使用科学方法，包括同行评审过程以及 `Ouroboros Proof-of-Stake` 协议的形式化验证。
 
 本章最后一个主题是对代币经济学的简要回顾。加密货币代币对于建立加密货币生态系统的价值至关重要。这很重要是因为运行和支持网络需要现实世界的资源和成本。因此，理解初始代币分配和货币政策（如最大供应量和通胀率）以及它们如何影响价格和市值是关重要的。最后，就像股市一样，价格和价值经常脱节。因此，在根据加密货币代币价格评估生态系统时要谨慎。价格可能与该生态系统的实用或价值关系较小，更多与价格操纵和市场情绪有关。
 
-
-Cardano 的原生代币是 `Ada`，目前流通量为 `35,125,959,544 ADA`，最大供应量为 `45,000,000,000 ADA`。Cardano 的 ICO 在 2015 年 10 月至 2017 年 1 月之间完成，分配情况如图 1.6 所示。
+`Cardano` 的原生代币是 `Ada`，目前流通量为 `35,125,959,544 ADA`，最大供应量为 `45,000,000,000 ADA`。`Cardano` 的 `ICO` 在 2015 年 10 月至 2017 年 1 月之间完成，分配情况如图 1.6 所示。
 
 ![](img/Figure-1.6.jpg)
 
+`Cardano` 有三个创始实体：
 
-Cardano 有三个创始实体：
-
-*   `IOHK (IOG)` 是一家研究工程公司和创投工作室，构建区块链和 Web3 产品以赋能各地的每个人。
-*   `Emurgo` 是一个营利分支，负责开发、支持和孵化商业机会，并帮助企业集成到 Cardano 区块链系统中。
-*   `Cardano Foundation` 是一家位于瑞士的独立非营利组织，促进和推进用于金融和社会系统的 Cardano 平台。
-
+* `IOHK (IOG)` 是一家研究工程公司和创投工作室，构建区块链和 `Web3` 产品以赋能各地的每个人。
+* `Emurgo` 是一个营利分支，负责开发、支持和孵化商业机会，并帮助企业集成到 `Cardano` 区块链系统中。
+* `Cardano Foundation` 是一家位于瑞士的独立非营利组织，促进和推进用于金融和社会系统的 `Cardano` 平台。
 
 由于 `Ada` 有最大供应量，我们可以看到任何时候的代币分配情况。这对于与其他加密货币进行比较很有帮助，因为不在流通量中的代币分配过高，意味着当代币向公众发布时，价格可能会产生下行压力。
 
 ![](img/Figure-1.7.jpg)
 
-**图 1.7:** Ada 代币分配
+**图 1.7:** `Ada` 代币分配
 
-`reserve` 是用于`staking`奖励和国库资金的 `Ada` 数量，如图 1.7 所示。国库支付生态系统的改进和维护。权益证明网络通过质押允许用户质押他们的 `Ada` 来帮助保护网络。作为回报，他们获得与用户质押 `Ada` 相对于网络中所有质押 `Ada` 的奖励。质押奖励和国库资金还包括网络活动产生的交易费用。
-
+`reserve` 是用于 `staking` 奖励和国库资金的 `Ada` 数量，如图 1.7 所示。国库支付生态系统的改进和维护。权益证明网络通过质押允许用户质押他们的 `Ada` 来帮助保护网络。作为回报，他们获得与用户质押 `Ada` 相对于网络中所有质押 `Ada` 的奖励。质押奖励和国库资金还包括网络活动产生的交易费用。
 
 图 1.8 比较了截至 2023 年 9 月 27 日市值最高的加密货币的初始代币分配。有趣的是，随着加密货币的推出，初始内部人员+基金的分配金额呈现上升趋势。
 
 ![](img/Figure-1.8.jpg)
 
-
-
-我们将看到的最后一个指标是 Cardano 0.3% 的通胀率。这是通过质押和资国库从储备释放到活跃供应的 `Ada` 数量。Cardano 的通胀率与比特币相似，在启动时处于最高，然后随着时间的推移指数级减少，如图 1.9 所示。
+我们将看到的最后一个指标是 `Cardano` 0.3% 的通胀率。这是通过质押和资国库从储备释放到活跃供应的 `Ada` 数量。`Cardano` 的通胀率与比特币相似，在启动时处于最高，然后随着时间的推移指数级减少，如图 1.9 所示。
 
 ![](img/Figure-1.9.jpg)
 
-
-
-Cardano 路线图分为五个主题或阶段：Byron、Shelley、Goguen、Basho 和 Voltaire。每个主题专注于跨多次发布交付的一系列能力。每个开发主题有一个或多个具有特定账本规则的时代，如表 1.1 和 1.2 所示。
+`Cardano` 路线图分为五个主题或阶段：`Byron`、`Shelley`、`Goguen`、`Basho` 和 `Voltaire`。每个主题专注于跨多次发布交付的一系列能力。每个开发主题有一个或多个具有特定账本规则的时代，如表 1.1 和 1.2 所示。
 
 | 阶段 | 主题 | 账本时代 | 描述 |
 | :--- | :--- | :--- | :--- |
-| Byron | 基础 | Byron | 使用 Ouroboros 权益证明协议的第一个版本的 Cardano 区块链 |
-| Shelley | 去中心化 | Shelley | 改进去中心化并引入质押和奖励的升级 |
-| Goguen | 智能合约 | Allegra | 引入代币锁定 |
-| | | Mary | 启用原生代币和多资产 |
-| | | Alonzo | 发布智能合约功能 |
-| | | Babbage | 实现内联数据、引用脚本和引用输入等功能 |
-| Basho | 扩展 | N/A | 提高 Cardano 网络的可扩展性和操作性 |
-| Voltaire | 治理 | Conway | 让 Cardano 区块链成为自给自足的系统，网络参与者利用质押的 `Ada` 和投票权影响网络的未来发展 |
-
+| `Byron` | 基础 | `Byron` | 使用 `Ouroboros` 权益证明协议的第一个版本的 `Cardano` 区块链 |
+| `Shelley` | 去中心化 | `Shelley` | 改进去中心化并引入质押和奖励的升级 |
+| `Goguen` | 智能合约 | `Allegra` | 引入代币锁定 |
+| | | `Mary` | 启用原生代币和多资产 |
+| | | `Alonzo` | 发布智能合约功能 |
+| | | `Babbage` | 实现内联数据、引用脚本和引用输入等功能 |
+| `Basho` | 扩展 | `N/A` | 提高 `Cardano` 网络的可扩展性和操作性 |
+| `Voltaire` | 治理 | `Conway` | 让 `Cardano` 区块链成为自给自足的系统，网络参与者利用质押的 `Ada` 和投票权影响网络的未来发展 |
 
 | 日期 | 阶段 | 时代 | 纪区块 | 共识机制 |
 | :--- | :--- | :--- | :--- | :--- |
-| 2017/09 | Byron | Byron | 0 | Ouroboros Classic |
-| 2020/02 | Byron | Byron | 176 | Ouroboros BFT |
-| 2020/07 | Shelley | Shelley | 208 | Ouroboros Praos |
-| 2020/12 | Goguen | Allegra | 236 | Ouroboros Praos |
-| 2021/03 | Goguen | Mary | 251 | Ouroboros Praos |
-| 2021/09 | Goguen | Alonzo | 290 | Ouroboros Praos |
-| 2021/10 | Goguen | Alonzo | 298 | Ouroboros Praos |
+| 2017/09 | `Byron` | `Byron` | 0 | `Ouroboros Classic` |
+| 2020/02 | `Byron` | `Byron` | 176 | `Ouroboros BFT` |
+| 2020/07 | `Shelley` | `Shelley` | 208 | `Ouroboros Praos` |
+| 2020/12 | `Goguen` | `Allegra` | 236 | `Ouroboros Praos` |
+| 2021/03 | `Goguen` | `Mary` | 251 | `Ouroboros Praos` |
+| 2021/09 | `Goguen` | `Alonzo` | 290 | `Ouroboros Praos` |
+| 2021/10 | `Goguen` | `Alonzo` | 298 | `Ouroboros Praos` |
+| 2022/09 | `Goguen` | `Babbage` | 365 | `Ouroboros Praos` |
+| 2023/02 | `Goguen` | `Babbage` | 394 | `Ouroboros Praos` |
 
-
-
-
-
-| 2022/09 | Goguen | Babbage | 365 | Ouroboros Praos |
-| 2023/02 | Goguen | Babbage | 394 | Ouroboros Praos |
-
-表 1.2: Cardano 时间线
-
+表 1.2: `Cardano` 时间线
 
 在结束本介绍章节之前，了解一些展示区块链技术潜力的用例将很有帮助：
 
-*   **资本市场**：更高效的资本流动
-*   **代币化 (Tokenization)**：将黄金、股票、债券、房地产或法币等资产表示化
-*   **奖励 (Rewards)**：使用奖励或积分来激励行为的能力
-*   **去中心化交易所 (DEX)**：用于资产和衍生品交易的非托管交易所
-*   **市场平台 (Marketplaces)**：买卖代币化资产
-*   **金融产品**：例如贷款和借贷
-*   **身份系统 (Identity Systems)**：自主主权身份 (`SSI`) 解决方案
-*   **保险**：使用智能合约和数据喂进行理赔处理
-*   **媒体与娱乐**：跟踪并变化真实数字内容的生命周期及发行
-*   **去中心化存储 (Decentralized Storage)**：利用代币激励模型进行点对点去中心化存储
-*   **去中心化自治组织 (DAO)**：用于治理和投票
+* **资本市场**：更高效的资本流动
+* **代币化 (`Tokenization`)**：将黄金、股票、债券、房地产或法币等资产表示化
+* **奖励 (`Rewards`)**：使用奖励或积分来激励行为的能力
+* **去中心化交易所 (`DEX`)**：用于资产和衍生品交易的非托管交易所
+* **市场平台 (`Marketplaces`)**：买卖代币化资产
+* **金融产品**：例如贷款和借贷
+* **身份系统 (`Identity Systems`)**：自主主权身份（`SSI`）解决方案
+* **保险**：使用智能合约和数据喂进行理赔处理
+* **媒体与娱乐**：跟踪并变化真实数字内容的生命周期及发行
+* **去中心化存储 (`Decentralized Storage`)**：利用代币激励模型进行点对点去中心化存储
+* **去中心化自治组织 (`DAO`)**：用于治理和投票
 
+我们现在应该对区块链技术的演进有一个高层次的理解，从分布式账本的起源到 `Charles Hoskinson` 著名的白板视频，该视频概述了 `Cardano` 的目的和目标。我们介绍了比特币和以太坊白皮书，将在下一章中详细检查工作量证明（`PoW`）和权益证明（`PoS`）共识模型。此外，我们回顾了基础的区块链概念，如区块链三难题、代币经济学、`Cardano` 路线图和区块链用例。在下一章中，我们将深入探讨密码学和共识算法，并探索它们如何确保区块链的安全。
 
-我们现在应该对区块链技术的演进有一个高层次的理解，从分布式账本的起源到 Charles Hoskinson 著名的白板视频，该视频概述了 Cardano 的目的和目标。我们介绍了比特币和以太坊白皮书，将在下一章中详细检查工作量证明（PoW）和权益证明（PoS）共识模型。此外，我们回顾了基础的区块链概念，如区块链三难题、代币经济学、Cardano 路线图和区块链用例。在下一章中，我们将深入探讨密码学和共识算法，并探索它们如何确保区块链的安全。
-
-
-*   网络可以是中心化的，也可以是去中心化的。
-*   去中心化网络的难度在于它不能拥有中心权威。
-*   拜占庭故障（Byzantine fault）是指网络节点不可用或试图破坏网络。
-*   网络使用共识算法来对网络的正确状态达成一致。
-*   当单一实体控制去中心化账本网络中的大多数节点时，就会发生 51% 攻击。
-*   比特币白皮书同时两个问题：
-    *   提供了一个简单高效的共识算法。
-    *   任何人都可以参与共识算法，消除了对中心权威的需求。
-*   以太坊白皮书引入了可以访问账本全局状态的图完备脚本概念。
-*   Cardano 被认为是第三代区块链，其目标是解决扩展性、互操作性和可持续性问题。
-*   代币的价格和价值往往是不对齐的，因此在评估加密货币时，考虑去中心化、安全性和扩展性等基本原则是关重要的。
-*   Cardano 有五个开发主题或阶段：Byron、Shelley、Goguen、Basho 和 Voltaire。
-
+* 网络可以是中心化的，也可以是去中心化的。
+* 去中心化网络的难度在于它不能拥有中心权威。
+* 拜占庭故障（`Byzantine fault`）是指网络节点不可用或试图破坏网络。
+* 网络使用共识算法来对网络的正确状态达成一致。
+* 当单一实体控制去中心化账本网络中的大多数节点时，就会发生 51% 攻击。
+* 比特币白皮书同时两个问题：
+  * 提供了一个简单高效的共识算法。
+  * 任何人都可以参与共识算法，消除了对中心权威的需求。
+* 以太坊白皮书引入了可以访问账本全局状态的图完备脚本概念。
+* `Cardano` 被认为是第三代区块链，其目标是解决扩展性、互操作性和可持续性问题。
+* 代币的价格和价值往往是不对齐的，因此在评估加密货币时，考虑去中心化、安全性和扩展性等基本原则是关重要的。
+* `Cardano` 有五个开发主题或阶段：`Byron`、`Shelley`、`Goguen`、`Basho` 和 `Voltaire`。
 
 1. 哪种类型的网络不需要中心权威？
-    *   中心化
-    *   去中心化
-    *   分布式
-    *   匿名
-2. 大中本卫（Wei Dai）发表了什么今天比特币所采用的创新概念？
-    *   通过谜题进行的计算工作
-    *   通过 CPU 进行计算工作
-    *   通过网络算力计算工作
-    *   通过共识进行计算工作
-3. 为什么 Hal Finney 的 `reusable proofs of work`（可重复工作证明）没有被采用？
-    *   它是基于工作量证明 (`POW`)
-    *   它不是中心化的
-    * 它运行在信任的后端
-    *   不安全
+   * 中心化
+   * 去中心化
+   * 分布式
+   * 匿名
+2. 大中本卫（`Wei Dai`）发表了什么今天比特币所采用的创新概念？
+   * 通过谜题进行的计算工作
+   * 通过 `CPU` 进行计算工作
+   * 通过网络算力计算工作
+   * 通过共识进行计算工作
+3. 为什么 `Hal Finney` 的 `reusable proofs of work`（可重复工作证明）没有被采用？
+   * 它是基于工作量证明（`POW`）
+   * 它不是中心化的
+   * 它运行在信任的后端
+   * 不安全
 4. 比特币的工作量证明是创新的，因为它：
-    * 一个基于时间的共识算法
-    * 一个基于哈希的共识
-    * 一个基于时间和哈希的协议
-    * 一种高效且开放的协议
+   * 一个基于时间的共识算法
+   * 一个基于哈希的共识
+   * 一个基于时间和哈希的协议
+   * 一种高效且开放的协议
 5. 为什么比特币没有使用图完备脚本？
-    * 没有一种计算机语言来编写它
-    * 存在无限循环的风险
+   * 没有一种计算机语言来编写它
+   * 存在无限循环的风险
 6. 第二代区块链的痛点是什么？
-    * 扩展性、互操作性、可持续性
-    *   去中心化、安全性
-    * 可扩展性
-    * 扩展性
+   * 扩展性、互操作性、可持续性
+   * 去中心化、安全性
+   * 可扩展性
+   * 扩展性
 7. 区块链的三个维度是什么？
-    *   安全性、去中心化、扩展性
-    * 扩展性、去中心化、可持续性
-    * 去中心化、安全性、可持续性
-    * 可扩展性、安全性、可持续性
-
+   * 安全性、去中心化、扩展性
+   * 扩展性、去中心化、可持续性
+   * 去中心化、安全性、可持续性
+   * 可扩展性、安全性、可持续性
 
 1. b
 2. d
 3. c
 4. d
 5. b
+
 ## 问题
 
 1. 去中心化账本试图解决什么问题？
@@ -373,62 +302,60 @@ Cardano 路线图分为五个主题或阶段：Byron、Shelley、Goguen、Basho 
 3. 什么是拜占庭故障？如何缓解它？
 4. 比特币白皮书的动机是什么？
 5. 以太坊为什么写了白皮书？
-6. Cardano 的目标是什么？
+6. `Cardano` 的目标是什么？
 7. 代币经济学为什么很重要？
+
 ## 术语
 
-*   **Attribution**：发送者和接收者的身份。
-*   **BFT**：拜占庭容错
-*   **CFT**：崩溃容错
-*   **Compliance**：合规与反洗钱。
-*   **Consensus**：网络节点对状态达成一致的能力。
-*   **Decentralized**：没有中心权威的网络。
-*   **Metadata**：交易背后的元数据。
-*   **Reserve**：用于质押奖励的加密货币数量。
-*   **Scalable**：区块链系统扩展交易的能力。
-*   **Secure**：区块链保持可信的能力。
-*   **Attribution**：发送者和接收者的身份。
-*   **Staking**：使用 Ada 帮助 Cardano 区块链并获得 奖励。
-*   **Treasury**：用于维护和升级的 Ada 数量。
+* **Attribution**：发送者和接收者的身份。
+* **BFT**：拜占庭容错
+* **CFT**：崩溃容错
+* **Compliance**：合规与反洗钱。
+* **Consensus**：网络节点对状态达成一致的能力。
+* **Decentralized**：没有中心权威的网络。
+* **Metadata**：交易背后的元数据。
+* **Reserve**：用于质押奖励的加密货币数量。
+* **Scalable**：区块链系统扩展交易的能力。
+* **Secure**：区块链保持可信的能力。
+* **Attribution**：发送者和接收者的身份。
+* **Staking**：使用 `Ada` 帮助 `Cardano` 区块链并获得奖励。
+* **Treasury**：用于维护和升级的 `Ada` 数量。
 
 ________________
 
-1. Lyn Alden，《破碎货币》，1-2。
-2. Stuart Haber 等人，《如何为数字文档时间戳》。
-3. Leslie Lampor 等人，《拜占庭将问题》。
-4. David Mazieres 等人，《从拜占庭存储构建安全文件系统》。
-5. Wei Dai，《b-money》。
-6. Hal Finney，《RPOW - 可重复工作证明》。
-7. Vitalik Buterin，《下一代智能合约和去中心化应用平台》，4。
-8. Vitalik Buterin，《下一代智能合约和去中心化应用平台》，4。
-9. Satoshi Nakamoto，《比特币：点对点电子现金系统》，8。
-10. Satoshi Nakamoto，《比特币：点对点电子现金系统》，1。
-11. Vitalik Buterin，《下一代智能合约和去中心化应用平台》，4。
-12. Vitalik Buterin，《下一代智能合约和去中心化应用平台》，4。
-
-
-
+1. `Lyn Alden`，《破碎货币》，1-2。
+2. `Stuart Haber` 等人，《如何为数字文档时间戳》。
+3. `Leslie Lampor` 等人，《拜占庭将问题》。
+4. `David Mazieres` 等人，《从拜占庭存储构建安全文件系统》。
+5. `Wei Dai`，《b-money》。
+6. `Hal Finney`，《RPOW - 可重复工作证明》。
+7. `Vitalik Buterin`，《下一代智能合约和去中心化应用平台》，4。
+8. `Vitalik Buterin`，《下一代智能合约和去中心化应用平台》，4。
+9. `Satoshi Nakamoto`，《比特币：点对点电子现金系统》，8。
+10. `Satoshi Nakamoto`，《比特币：点对点电子现金系统》，1。
+11. `Vitalik Buterin`，《下一代智能合约和去中心化应用平台》，4。
+12. `Vitalik Buterin`，《下一代智能合约和去中心化应用平台》，4。
 
 # 参考文献
 
-- [16] Charles Hoskinson, “Cardano 白板；由 Charles Hoskinson 概述。”
-- [17] Cryptopedia, “区块链三难困：快速、安全且可扩展的网络。”
+- [16] `Charles Hoskinson`, “Cardano 白板；由 `Charles Hoskinson` 概述。”
+- [17] `Cryptopedia`, “区块链三难困：快速、安全且可扩展的网络。”
 - [18] https://medium.com/certik/the-blockchain-trilemma-decentralized-scalable-and-secure-e9d8c41a87b3
 - [19] https://coinmarketcap.com/currencies/cardano/#About
 - [20] https://cardano.org/genesis/#audit
 - [21] https://cardano.org/partners/
 - [22] https://cardano.org/partners?tab=iog
-- [23] cardanians.io, “Cardano 中有 12.3 亿 ADA。”
+- [23] `cardanians.io`, “Cardano 中有 12.3 亿 ADA。”
 - [24] 数据来源自：
-    - https://www.investopedia.com/what-is-xrp-6362550#toc-xrp-ledger-and-xrp
-    - https://coinmarketcap.com/currencies/dogecoin/#About
-    - https://www.coingecko.com/en/coins/ethereum/tokenomics
-    - https://coinmarketcap.com/currencies/cardano/#About
-    - https://www.coingecko.com/en/coins/polkadot/tokenomics
-    - https://coinmarketcap.com/currencies/polygon/#About
-    - https://coinmarketcap.com/currencies/bnb/#About
-    - https://coinmarketcap.com/currencies/toncoin/
-    - https://coinmarketcap.com/currencies/solana/#About
+  - https://www.investopedia.com/what-is-xrp-6362550#toc-xrp-ledger-and-xrp
+  - https://coinmarketcap.com/currencies/dogecoin/#About
+  - https://www.coingecko.com/en/coins/ethereum/tokenomics
+  - https://coinmarketcap.com/currencies/cardano/#About
+  - https://www.coingecko.com/en/coins/polkadot/tokenomics
+  - https://coinmarketcap.com/currencies/polygon/#About
+  - https://coinmarketcap.com/currencies/bnb/#About
+  - https://coinmarketcap.com/currencies/toncoin/
+  - https://coinmarketcap.com/currencies/solana/#About
 - [25] https://docs.cardano.org/explore-cardano/monetary-policy/
 - [26] https://docs.cardano.org/about-cardano/evolution/eras-and-phases/
 - [27] https://roadmap.cardano.org/en/
@@ -437,37 +364,41 @@ ________________
 - [30] https://roadmap.cardano.org/en/basho/
 - [31] https://roadmap.cardano.org/en/voltaire/
 - [32] https://docs.cardano.org/explore-cardano/eras-and-phases/
+
+
+
 - [33] https://github.com/cardano-foundation/CIPs/blob/master/CIP-059/feature-table.md
 - [34] https://consensys.io/blockchain-use-cases/capital-markets
 - [35] https://consensys.io/blockchain-use-cases/media-and-entertainment
 
-
 ## 概述
+
 在本章中，我们将介绍密码学和密码哈希。我们将展示密码哈希在区块链技术中是如何被生成和使用的。接下来，我们将探索比特币所使用的工作量证明（Proof-of-Work）共识协议。我们将展示证明者和验证者如何协作来确保区块链的安全。接着，我们将研究权益证明（Proof-of-Stake）及其相比于工作量证明的优势。最后，我们将回顾 Ouroboros，这是 Cardano 的权益证明协议。
 
 在本章中，我们将讨论以下内容：
-*   密码学
-*   公钥加密
-*   哈希
-*   数字签名
-*   所有权链
-*   工作量证明
-*   挖矿
-*   权益证明
-*   概率终结性（基于链）
-*   绝对终结性（PBFT）
-*   Ouroboros
-*   Ouroboros Classic
-*   Ouroboros BFT
-*   Ouroboros Praos
-*   Ouroboros Genesis
-*   Ouroboros Crypsin
-*   Ouroboros Chronos
-*   Ouroboros 协议
 
-“最早记载的用于通信的密码学是由斯巴达人，他们早在公元前 400 年就使用密码（`cipher`）进行秘密通信。” `cipher` 是任何通过转换消息来隐藏其含义的方法。在 20 世纪 70 年代中期，所有的密码系统都使用对称密钥算法，发送者和接收者使用同一个加密密钥，且双方必须对其保密。对称加密的挑战在于密钥密钥必须提前传输，当有大量密钥需要管理或不存在预先的安全通道时，这种方法无法扩展。这种局限性通过非对称加密解决了，非对称加密用于公钥加密和数字签名。
+* 密码学
+* 公钥加密
+* 哈希
+* 数字签名
+* 所有权链
+* 工作量证明
+* 挖矿
+* 权益证明
+* 概率终结性（基于链）
+* 绝对终结性（PBFT）
+* Ouroboros
+* Ouroboros Classic
+* Ouroboros BFT
+* Ouroboros Praos
+* Ouroboros Genesis
+* Ouroboros Crypsin
+* Ouroboros Chronos
+* Ouroboros 协议
 
-使用公钥加密的第一步是基于基于单向加密算法生成一对公钥和私钥。经典的密码学示例参考图 2.1，其中 Alice 尝试向 Bob 发送一条加密消息。在这种情况下，Alice 需要使用 Bob 的公钥来加密消息。除了持有私钥的 Bob 之外，其他人人都无法读取消息。当 Bob 接收到加密消息时，他使用自己的私钥进行解密并读取 Alice 发送的原始消息。
+“最早记载的用于通信的密码学是由斯巴达人，他们早在公元前 400 年就使用密码（`cipher`）进行秘密通信。” `cipher` 是任何通过转换消息来隐藏其含义的方法。在 20 世纪 70 年代中期，所有的密码系统都使用对称密钥算法，发送者和接收者使用同一个加密密钥，且双方必须对其保密。对称加密的挑战在于密钥必须提前传输，当有大量密钥需要管理或不存在预先的安全通道时，这种方法无法扩展。这种局限性通过非对称加密解决了，非对称加密用于公钥加密和数字签名。
+
+使用公钥加密的第一步是基于单向加密算法生成一对公钥和私钥。经典的密码学示例参考图 2.1，其中 Alice 尝试向 Bob 发送一条加密消息。在这种情况下，Alice 需要使用 Bob 的公钥来加密消息。除了持有私钥的 Bob 之外，其他任何人都无法读取消息。当 Bob 接收到加密消息时，他使用自己的私钥进行解密并读取 Alice 发送的原始消息。
 
 ![图 2.1](img/Public Key Encryption)
 
@@ -475,19 +406,16 @@ ________________
 
 Cardano 使用 `BLAKE2b-256` 密码哈希算法生成地址，并使用 `BLAKE2b-224` 生成公钥哈希。哈希函数还用于区块链来生成包含交易列表的区块哈希。这有助于检查并确保不可篡改性，因为区块中包含的任何交易变化都会改变区块哈希。
 
-数字签名提供了一种方法，让 Alice 对消息进行签名，以便以后可以使用 Alice 的公钥进行验证。消息并不像公钥加密那样被加密，相反，数字签名证明是 Alice 且仅 签署了这条消息。在区块链范围内，消息是交易，Alice 是区块链地址的所有者。当交易由 Alice 的私钥签名时，区块链上的任何其他人都可以使用 Alice 的公钥进行验证，如图 2.2 所示。
+数字签名提供了一种方法，让 Alice 对消息进行签名，以便以后可以使用 Alice 的公钥进行验证。消息并不像公钥加密那样被加密，相反，数字签名证明是 Alice 且仅签署了这条消息。在区块链范围内，消息是交易，Alice 是区块链地址的所有者。当交易由 Alice 的私钥签名时，区块链上的任何其他人都可以使用 Alice 的公钥进行验证，如图 2.2 所示。
 
 ![图 2.2](img/Digital Signatures)
 
+第一种常用的数字签名是 Rivest-Shamir-Asleman（`RSA`），创建于 1977 年，它利用了分解两个大质数是困难的特性。1991 年，创建了数字签名算法（`DSA`），它利用了求解离散对数问题（`x ^ y = z`）是困难的这一事实。在给定 `x` 和 `z` 的情况下，当 `y` 是足够大的数字时，求解 `y` 是困难的。`DSA` 增加了椭圆曲线签名算法，产生了椭圆曲线数字签名算法（`ECDSA`），它具有更小的密钥和更快的操作速度。Cardano 使用爱德华曲线数字签名算法（`EdDSA`），它具有以下优势：
 
-
-
-第一种常用的数字签名是 Rivest-Shamir-Asleman (`RSA`)，创建于 1977 年，它利用了分解两个大质数是困难的特性。1991 年，创建了数字签名算法 (`DSA`)，它利用了求解离散对数问题 (`x ^ y = z`) 是困难的这一事实。在给定 `x` 和 `z` 的情况下，当 `y` 是足够大的数字时，求解 `y` 是困难的。DSA 增加了椭圆曲线签名算法，产生了椭圆曲线数字签名算法 (`ECDSA`)，它具有更小的密钥和更快的操作速度。Cardano 使用爱德华曲线数字签名算法 (`EdDSA`)，它具有以下优势：
-
-*   签名和验证快速
-*   高安全性
-*   签名小
-*   密钥小
+* 签名和验证快速
+* 高安全性
+* 签名小
+* 密钥小
 
 `Table 2.1` 总结了比特币、以太坊和 Cardano 使用不同签名算法：
 
@@ -499,48 +427,33 @@ Cardano 使用 `BLAKE2b-256` 密码哈希算法生成地址，并使用 `BLAKE2b
 
 **Table 2.1:** 数字签名
 
-
 正如比特币白皮书中所定义的，电子货币是数字签名的链。`Bitcoin` 通过对前笔交易的哈希值和下一个所有者的公钥进行签名来数字化传输。只有当签名与前笔交易中包含的公钥匹配时，才会被批准。通过将这些链接在一起，就可以验证`chain of ownership`，如`Figure 2.3`所示。
 
 ![](img/Figure-2.3.jpg)
 
-
-
 在比特币白皮书中，双花费问题是指 Bob 试图创建两个交易来两次花费相同的金额。为了解决这个问题，引入了时间戳或时间线。每个区块哈希值都与上一个区块哈希值链接，形成区块链并对交易进行排序，如`Figure 2.4`所示。账本现在可以确认交易是否试图双花费已经花费过的输出，并据此拒绝它。
 
-为了帮助调节区块产生的频率，使用了一个 `nonce` 并对其进行递增，以找到具有所需数量零比特的区块哈希。比特币网络监控区块产生的速度，如果区块产生得太快，所需的零比特数量就会增加。相反，如果产生区块花费的时间太，所需的零比特数量就会减少。所需零比特数量的调整就是`difficulty`。
-
+为了帮助调节区块产生的频率，使用了一个 `nonce` 并对其进行递增，以找到具有所需数量零比特的区块哈希。比特币网络监控区块产生的速度，如果区块产生得太快，所需的零比特数量就会增加。相反，如果产生区块花费的时间太长，所需的零比特数量就会减少。所需零比特数量的调整就是`difficulty`。
 
 最后一个要解决的问题是为矿工的诚实行为提供激励。`difficulty` 随着时间的指数级增长。在 `PoS` 系统中，`difficulty` 并不是这样使用的。
 
-
 随着 `PoS` 越来越流行，它比 `PoW` 节能得多。在 `PoS` 中，验证者是根据其拥有的 `stake` 数量随机选择的。Ouroboros 使用 `entropy` 参数来选择领导者，使得对手难以预测结果。
-
-
-
 
 Ouroboros Classic 是 2017 年 7 月发布的第一个 Ouroboros 协议。该论文将协议定义为 `PoW` 的高效率竞争对手，引入了分析 `PoS` 的数学框架，并引入了一种新颖激励机制来奖励 `PoS` 环境下的参与者。Ouroboros 与其他区块链协议的区别在于，它能够在其领导者选择算法中生成具有安全保障的无偏随机性。让我们更详细地检查这一点。
 
 “Ouroboros 将 Cardano 的时间划分为时代（epochs），每个时代又被划分为插槽（slots）。插槽是一个可以创建区块的短时间，将插槽分组为时代是调整领导者选举过程以适应动态变化的质押分布的核心。每个插槽都会选出一个插槽主（slot leader），负责将区块添加到链中并将其传递给下一个插槽主。为了防止对抗者试图破坏协议的尝试，每个新的插槽主必须将接收到的链的最后几个区块视为瞬态的：只有预设数量瞬态区块之前的链才被认为是最终确定的。”
 
+Ouroboros 拜庭容错（`BFT`）是一个基于 Ouroboros Classic 的简化协议，主要用于帮助实现 Cardano 最重要的里程碑之一——Shelley 发布。它将网络过渡到联邦模型，以避免要求所有节点始终在线。
 
-Ouroboros 拜庭容错（`BFT`）是一个基于 Ouroboros Classic 的简化协议，主要用于帮助实现 Cardano 最重要的里程碑之一—— Shelly 发布。它将网络过渡到联邦模型，以避免要求所有节点始终在线。
-
-
-Praos 对当前时间戳和针对特定时代的随机数（nonce）引入了可验证随机函数（`VRF`）。给定私钥和输入，`VRF` 输出一个伪随机数和一个证明。相应的公钥可以验证该证明和随机数。此外，这种方法防止了除提议的插槽主之外的任何人提前知道特定插槽的插槽主。这对于避免 `DDoS` 或提前公开插槽主的针对攻击至关重要。
-
+Praos 对当前时间戳和针对特定时代的随机数（nonce）引入了可验证随机函数（`VRF`）。给定私钥和输入，`VRF` 输出一个伪随机数和一个证明。相应的公钥可以验证该证明和随机数。此外，这种方法防止了除提议的插槽主之外的任何人提前知道特定插槽的插槽主。这对于避免 `DDoS` 或提前公开插槽主的针对性攻击至关重要。
 
 比特币 `PoW` 共识协议的优势在于任何参与者都可以通过创世区块（Genesis block）加入网络并参与。这是任何区块链的一个非常重要的特性，因为它不依赖于对网络正确状态的任何信任概念或检查点。Ouroboros Genesis 通过使用新颖的链选择规则解决了 Ouroboros `PoS` 协议的局限性，允许新或离线的参与者仅使用创世区块加入网络。这种方法被称为“从创世启动引导（bootstrapping from genesis）”，Ouroboros Genesis 论文证明了它在不同配置下使用仍能保持其安全性。
 
-
 Ouroboros Crypsis 是第一个隐私保护协议。通过 SNARKs，Ouroboros Crypsis 旨在增强网络抵御针对性攻击的能力。
 
-
-Ouroboros Chronos 展示了如何安全地同步时钟。Ouroboros Chronos 为网络提供了安全同步同步的方法。
-
+Ouroboros Chronos 展示了如何安全地同步时钟。Ouroboros Chronos 为网络提供了安全同步的方法。
 
 Cardano 的第一步是注册质押。预计区块频率约为 0.5 秒。
-
 
 质押池运营商（`SPO`）将处理 Ada 的注册，如图 2.5 所示：
 
@@ -548,9 +461,7 @@ Cardano 的第一步是注册质押。预计区块频率约为 0.5 秒。
 2. 获取全局随机数。
 3. 获取全局随机数。
 
-
 在每个时代开始时，`VRF` 输出可以是这些......如果 `VRF` 输出值低于特定阈值，他们就可以成为该区块的插槽主。`VRF` 输出值是这些.................................2.2.2.2......这些。
-
 
 1. 组装应包含在区块中的交易。
 2. 在区块中包含从 `VRF` 获取的随机值（`v`）和证明（`π`）。
@@ -560,54 +471,50 @@ Cardano 的第一步是注册质押。预计区块频率约为 0.5 秒。
 
 ![](img/Figure-2.5.jpg)
 
-
-
-
-
-
-*   为了解决双花问题，每个区块的哈希中都包含时间戳，并且区块链中包含了更多的时间戳，从而确保了先前区块的安全。
-*   比特币挖掘通过将新的比特币和交易费用作为每个区块的第一笔交易分配给创建该区块的矿工，激励诚实行为。
-*   `Proof-of-Stake` 的能源效率远高于 `Proof-of-Work`。
-*   `Proof-of-Stake` 根据参与者在网络上质押的原生货币数量随机且按比例地选择区块生产者（验证者）。
-*   必须向系统中引入熵，以便在 `Proof-of-Stake` 利益者之间实现公平的随机选举。
-*   在安全保障下，`Ouroboros` 可以在协议的领导者选择算法中生成无偏的随机数。
-*   随着更多区块被链接形成最长链，会产生概率终结性。
-*   验证者对包含新区块进行投票，其结果被认为是最终的，实现了绝对终结性。
-
+* 为了解决双花问题，每个区块的哈希中都包含时间戳，并且区块链中包含了更多的时间戳，从而确保了先前区块的安全。
+* 比特币挖掘通过将新的比特币和交易费用作为每个区块的第一笔交易分配给创建该区块的矿工，激励诚实行为。
+* `Proof-of-Stake` 的能源效率远高于 `Proof-of-Work`。
+* `Proof-of-Stake` 根据参与者在网络上质押的原生货币数量随机且按比例地选择区块生产者（验证者）。
+* 必须向系统中引入熵，以便在 `Proof-of-Stake` 利益者之间实现公平的随机选举。
+* 在安全保障下，`Ouroboros` 可以在协议的领导者选择算法中生成无偏的随机数。
+* 随着更多区块被链接形成最长链，会产生概率终结性。
+* 验证者对包含新区块进行投票，其结果被认为是最终的，实现了绝对终结性。
 
 1. 公钥加密使用哪种类型的加密？
     1. 对称加密
     2. 非对称加密
     3. 双对称加密
     4. 匿名加密
+
 2. 你如何验证签名？
     1. 同时使用私钥和公钥
     2. 使用私钥
     3. 使用对称密钥
     4. 使用与私钥相关的公钥
+
 3. 比特是如何解决双花问题的？
     1. 使用时间戳对交易排序
     2. 使用分布式账本记录交易
     3. 使用加密技术对交易进行签名
     4. 使用区块记录交易
+
 4. `Proof-of-Stake` 效率更高是因为：
     1. 不需要区块领导者
     2. 不需要随机性
     3. 不需要求解计算难题
     4. 不需要形成最长链
+
 5. `Proof-of-Stake` 和 `Proof-of-Work` 都会发生哪种风险？
     1. 中心化
     2. 随机性偏差
     3. 财阀政治
     4. 环境问题
 
-
 1. b
 2. d
 3. a
 4. c
 5. a
-
 
 1. 为什么加密技术对区块链很重要？
 2. 比特币白皮书解决了哪些问题？
@@ -616,22 +523,21 @@ Cardano 的第一步是注册质押。预计区块频率约为 0.5 秒。
 5. 为什么 `Ouroboros` 必须是可证明安全的是重要的？
 6. 当客户端加入网络时，`Ouroboros` 如何确保选择正确的链？
 
-
-*   **区块 (Block):** 包含零或多个交易。
-*   **所有权链 (Chain of Ownership):** 将数字签名连接在一起。
-*   **DDos:** 分布式拒绝服务。
-*   **难度 (Difficulty):** 创建区块所需的计算所需的增长率。
-*   **数字签名 (Digital Signature):** 使用私钥对消息的消息。
-*   **熵 (Entropy):** 系统中的随机性程度。
-*   **周期 (Epoch):** 包含固定数量插槽（slots）的时间单位。
-*   **终结性 (Finality):** 一个可以被视为最终且不可逆的状态。
-*   **挖掘 (Mining):** 支付给创建区块矿工的激励。
-*   **公钥加密 (Public Key Encryption):** 生成一对公钥和私钥。
-*   **PoS:** 权益益证明 (Proof-of-Stake)
-*   **PoW:** 工作量证明 (Proof-of-Work)
-*   **插槽 (Slot):** 每秒发生一次，最多包含一个区块。
-*   **SPO:** 质池运营商 (Stake Pool Operator)
-*   **VRF:** 可验证随机函数 (Verifiable Random Function)
+* **区块 (Block):** 包含零或多个交易。
+* **所有权链 (Chain of Ownership):** 将数字签名连接在一起。
+* **DDos:** 分布式拒绝服务。
+* **难度 (Difficulty):** 创建区块所需的计算所需的增长率。
+* **数字签名 (Digital Signature):** 使用私钥对消息的消息。
+* **熵 (Entropy):** 系统中的随机性程度。
+* **周期 (Epoch):** 包含固定数量插槽（slots）的时间单位。
+* **终结性 (Finality):** 一个可以被视为最终且不可逆的状态。
+* **挖掘 (Mining):** 支付给创建区块矿工的激励。
+* **公钥加密 (Public Key Encryption):** 生成一对公钥和私钥。
+* **PoS:** 权益证明 (Proof-of-Stake)
+* **PoW:** 工作量证明 (Proof-of-Work)
+* **插槽 (Slot):** 每秒发生一次，最多包含一个区块。
+* **SPO:** 质押池运营商 (Stake Pool Operator)
+* **VRF:** 可验证随机函数 (Verifiable Random Function)
 
 ________________
 
@@ -658,54 +564,68 @@ ________________
 [21] Alexis Gauba, “Finality in Blockchain Consensus.”
 [22] Shehar Bano, et al., “SoK: Consensus in the Age of Blockchains,” 2.
 [23] Shehar Bano, et al., “SoK: Consensus in the Age of Blockchains,” 4.
+
+
+
 [24] Alexis Gauba, “Finality in Blockchain Consensus.”
+
 [25] [`docs.cardano.org/learn/ouroboros-overview/`](https://docs.cardano.org/learn/ouroboros-overview/)
+
 [26] Aggelos Kiayias, et al., “Ouroboros: Provably Secure Proof-of-Stake Protocol,” 1.
+
 [27] Olga Hryniuk, “From Classic to Chronos: the implementations of Ouroboros explained.”
+
 [28] [`docs.cardano.org/learn/ouroboros-overview/`](https://docs.cardano.org/learn/ouroboros-overview/)
+
 [29] Olga Hryniuk, “From Classic to Chronos: the implementations of Ouroboros explained.”
+
 [30] Aggelos Kiayias, et al., “Ouroboros-BFT:A Simple Byzantine Tolerant Consensus Protocol,” 1.
+
 [31] Olga Hryniuk, “From Classic to Chronos: the implementations of Ouroboros explained.”
+
 [32] Bernardo David, et al. “Ouroboros Praos: An adaptively-secure, semi-synchronous proof-of-stake blockchain”
+
 [33] LLFOURN, “Introduction To Ouroboros.”
+
 [34] Peter Gaži, “Presenting Ouroboros at MIT.”
+
 [35] Christian Badertscher, et al., “Ouroboros Genesis: Composable Proof-of-Stake Blockchains with Dynamic Availability,” 1.
+
 [36] Olga Hryniuk, “From Classic to Chronos: the implementations of Ouroboros explained.”
+
 [37] Thomas Kerber, et al., “Ouroboros Crypsinous: Privacy-Preserving Proof-of-Stake,” 1.
+
 [38] Thomas Kerber, et al., “Ouroboros Crypsinous: Privacy-Preserving Proof-of-Stake,” 1.
+
 [39] Olga Hryniuk, “From Classic to Chronos: the implementations of Ouroboros explained.”
+
 [40] Christian Badertscher, et al., “Ouroboros Chronos: Permissionless Clock Synchronization via Proof-of-Stake,” 1.
 
-
-
-
-
 ⁴¹ Arnaud Bailly，“Cardano 中的时间处理，部分 1。关于 Ouroboros 和确定性的重要性。”
-⁴² Crypto Carlos，“Ourobors 协议。Cardano 的核心。”
-⁴³ [`developers.cardano.org/docs/operate-a-stake-pool/introduction-to-cardano/`](https://developers.cardano.org/docs/operate-a-stake-pool/introduction-to-cardano/)
 
+⁴² Crypto Carlos，“Ourobors 协议。Cardano 的核心。”
+
+⁴³ [`developers.cardano.org/docs/operate-a-stake-pool/introduction-to-cardano/`](https://developers.cardano.org/docs/operate-a-stake-pool/introduction-to-cardano/)
 
 ## 引言
 
 在本章中，我们将首先查看 Cardano 地址（Cardano Addresses）、它们是如何构建的以及内部的数据。接下来，我们将查看 UTXO 架构，并展示如何创建交易以及可选的元数据。我们还将介绍被称为 Plutus 脚本的智能合约是如何执行和评估的。我们将看到验证者（Redeemers）如何将数据传递给 Plutus 脚本，以及数据（Datums）如何用于数据存储和持久化。最后，我们将查看交易见证集（Witness Set）以及它如何授权交易输入的开销。
 
-
 在本章中，我们将讨论以下主题：
 
 * 地址
-    * 网络标签 (Network Tag)
-    * 基础地址 (Base Address)
-    * 企业地址 (Enterprise Address)
-    * 奖励（质押）地址 (Reward Address)
+  * 网络标签 (Network Tag)
+  * 基础地址 (Base Address)
+  * 企业地址 (Enterprise Address)
+  * 奖励（质押）地址 (Reward Address)
 * UTXO
-    * 交易输入 (Transaction Inputs)
-    * 交易输出 (Transaction Outputs)
+  * 交易输入 (Transaction Inputs)
+  * 交易输出 (Transaction Outputs)
 * 元数据 (Metadata)
 * Plutus 脚本 (Plutus Scripts)
 * 数据 (Datum)
 * 验证者 (Redemer)
 * 证集 (Witness Set)
-
 
 Cardano (Shelly) 地址是使用 Bech32 编码的字节序列。¹¹ 在 Cardano 上，你通常会与三种地址进行交互：
 
@@ -717,16 +637,12 @@ Cardano 地址的结构如图 3.1 所示：
 
 ![](img/Figure-3.1.jpg)
 
-
 头部类型指示了地址的类型（或负载），网络标签指示了该地址关联的网络。
-
 
 | 头部位 | 网络 |
 | --- | --- |
 | `xxxx0000` | 测试网 (Testnet) |
 | `xxxx0001` | 主网 (Mainnet) |
-
-
 
 基础地址是最常见的地址类型，如表 3.2 所示。当支付部分为 `PaymentKeyHash` 时，必须使用该地址对应的私钥对交易进行签名。当支付部分为 `ScriptHash` 时，必须执行一个具有匹配哈希值的脚本并将其评估为 `true` 才能从该地址支出资金。委托部分与支付部分类似，但它用于注册（并委托）锁定在该地址的 Ada 质押证书。正如我们在上一章中回顾的那样，质押是帮助保护权益证明区块链安全并以此获得奖励的机制。
 
@@ -737,7 +653,6 @@ Cardano 地址的结构如图 3.1 所示：
 | `0010xxxx` | `PaymentKeyHash` | `ScriptHash` |
 | `0011xxxx` | `ScriptHash` | `ScriptHash` |
 
-
 ### 企业地址
 
 企业地址与基础地址类似，区别在于没有委托部分。企业地址的头部类型列在表 3.3 中。
@@ -746,8 +661,6 @@ Cardano 地址的结构如图 3.1 所示：
 | --- | --- | --- |
 | `0110xxxx` | `PaymentKeyHash` | N/A |
 | `0111xxxx` | `ScriptHash` | N/A |
-
-
 
 奖励地址用于在权益证明协议中发放质押奖励，并具有以下属性：²
 
@@ -761,23 +674,19 @@ Cardano 地址的结构如图 3.1 所示：
 | `1110xxxx` | `StakeKeyHash` |
 | `1111xxxx` | `ScriptHash` |
 
-
 总而言之，以下输出是由 `cardano-address inspect` 工具生成的。请注意，在地址中指针可能指向链上注册证书。指针很少使用，在接下来的示例中，我们可以看到 `stake_reference` 是 `by value`（按值），这表示质押证书位于该地址，而不是指针。
 
 `addr_test1qqq0ucy70wms9p7tku6ntcam2uxnsae7p82qc5dj37lh3ytgyfp8en2pa4cfuvdz8sydnc`
 
+```
 echo addr_test1qqq0ucy70wms9p7tku6ntcam2uxnsae7p82qc5dj37lh3ytgyfp8en2pa4cfuvdz8sydnc
 ```
-
-
-
 
 通过区块链浏览器，我们可以看到这笔交易在 Cardano 区块链上的样子，如*图 3.3**所示：[`preprod.cexplorer.io/tx/c9e6dc1e7ecdf7110747c91d0d638ce896435a504e745025996230533ae9f548`](https://preprod.cexplorer.io/tx/c9e6dc1e7ecdf7110747c91d0d638ce896435a504e745025996230533ae9f548)
 
 ![](img/Figure-3.3.jpg)
 
 **图 3.3：** 区块浏览器交易视图
-
 
 交易输入简单指向账本上的交易哈希和索引，因为一个特定的交易可能有多个交易输出。
 
@@ -791,12 +700,11 @@ echo addr_test1qqq0ucy70wms9p7tku6ntcam2uxnsae7p82qc5dj37lh3ytgyfp8en2pa4cfuvdz8
 transaction_input = [ transaction_id : $hash32, index : uint ]
 ```
 
-
 在智能合约的 Alonzo 时代之前，交易输出包含以下内容：
 
-*   输出锁定的地址
-*   Ada 的值以及任何 Cardano 原生代币
-*   用于存储持久化数据哈希的可选 `datum`
+* 输出锁定的地址
+* Ada 的值以及任何 Cardano 原生代币
+* 用于存储持久化数据哈希的可选 `datum`
 
 在 UTXO 中存储 `datum` 标的能力是 Cardano 使用 EUTXO 模型的方式之所在，而比特币仅使用 UTXO 模型。
 
@@ -804,6 +712,7 @@ transaction_input = [ transaction_id : $hash32, index : uint ]
 
 ```
 $cardano-cli query utxo --address addr_test1vzu…dxn7 --cardano-mode --testnet-magic 1
+
 TxHash TxIx Amount
 --------------------------------------------------------------------
 158…925 0 3551912116 lovelace + TxOutDatumNone
@@ -814,28 +723,29 @@ b4e…0d2 0 5000000 lovelace + TxOutDatumNone
 
 观察结果：
 
-*   在此示例中，有 2 个 UTXO。
-*   索引为 0 的交易哈希 `158…925` 拥有 3,551,912,116 lovelace。
-*   索引为 0 的交易哈希 `b4e…0d2` 拥有 5,000,000 lovelace。
-*   1 Ada 等于 1,000,000 lovelace。
-*   锁定地址上的 Ada 数量为：
-    `3,551.912116`
-    `+ 5.000000`
-    `3,556.912116`
-*   这些 UTXO 没有关联的 datum。
+* 在此示例中，有 2 个 UTXO。
+* 索引为 0 的交易哈希 `158…925` 拥有 3,551,912,116 lovelace。
+* 索引为 0 的交易哈希 `b4e…0d2` 拥有 5,000,000 lovelace。
+* 1 Ada 等于 1,000,000 lovelace。
+* 锁定地址上的 Ada 数量为：
+  `3,551.912116`
+  `+ 5.000000`
+  `3,556.912116`
+* 这些 UTXO 没有关联的 datum。
 
 Alonzo 时代之后，输出中增加了额外的字段。在当前的 Conway 时代，我们拥有以下内容：
 
-*   输出锁定的地址
-*   Ada 和任何原生代币的金额
-*   用于在链上存储持久化数据哈希的可选 `datum`
-*   用于在链上存储数据值的可选 `inline datum`
-*   允许将智能合约存储在链上的可选 `reference script`
+* 输出锁定的地址
+* Ada 和任何原生代币的金额
+* 用于在链上存储持久化数据哈希的可选 `datum`
+* 用于在链上存储数据值的可选 `inline datum`
+* 允许将智能合约存储在链上的可选 `reference script`
 
 以下是 Conway 时代的一个 UTXO 示例：
 
 ```
 $cardano-cli query utxo --tx-in 5f07cfe47c846a7a64850f7174d9281b093a78e51dadcf7 --cardano-mode --testnet-magic 1 --out-file utxo.out
+
 $cat utxo.out
 {
   "5f07cfe47c846a7a64850f7174d9281b093a78e51dadcf7f87m6rh0ceyp03w9elemp960jq528pntsyqh",
@@ -860,14 +770,15 @@ post_alonzo_transaction_output = {
   2 : datum_option ; datum option,
   3 : script_ref ; script reference
 }
+
 datum_option = [ 0, hash // 1 ]
 ```
 
-# 元数据
+## 元数据
 
 在提交交易时，交易可以可选包含元数据。链上只存储元数据的哈希，智能合约无法访问。然而，区块链索引器会捕获、存储并检索元数据的完整内容，这些内容用于链外交易构建。使用标签 721 的 CIP-25⁶ 是非同质化代币（NFT）铸造交易的首个元数据标准。
 
-使用版本 1 的 NFT 最小结构如下
+使用版本 1 的 NFT 最小结构如下：
 
 ```
 {
@@ -890,23 +801,23 @@ datum_option = [ 0, hash // 1 ]
 
 其中：
 
-*   `policy_id` 为 `63733059deaddff620870b22f1ff6a990bcd103e70d5cc3bbb`
-*   `asset_name` 为 `Mad Dog`
-*   NFT 名称为 `Mad Dog`
-*   NFT 图片为 `QmckPQPzthJjkS9GRSxdw2SzSinAwdDW34XD26MrV5S`
-*   NFT 说明为 `Crazy dog that loves treats`
+* `policy_id` 为 `63733059deaddff620870b22f1ff6a990bcd103e70d5cc3bbb`
+* `asset_name` 为 `Mad Dog`
+* NFT 名称为 `Mad Dog`
+* NFT 图片为 `QmckPQPzthJjkS9GRSxdw2SzSinAwdDW34XD26MrV5S`
+* NFT 说明为 `Crazy dog that loves treats`
 
-# Plutus 
+## Plutus
 
 到为止，我们只查看了从拥有相应公私钥的用户地址发送（花费）资产的交易。在 Cardano 中，我们有使用名为 Plutus 的图完脚本语言的智能合约。只有当评估结果返回 `true` 时，Plutus 脚本才能成功花费或铸造。脚本在提交时被包含，以便 Cardano 节点内部的 `Plutus Core Evaluator` 进行评估。回想起来，网络由对有效区块形成共识的连接节点组成。因此，当提交交易时，每个节点必须执行包含的脚本并确认结果。如果是 true，节点将接受该交易进入区块并成为区块链的一部分。
 
 通常，Plutus 脚本要么是 `spending`（验证者），要么是 `minting` 脚本。`spending` 脚本涉及花费锁定在脚本地址的 UTXO。脚本地址只是脚本本身和适当地址头字节值的哈希。`minting` 脚本涉及铸造（添加）或销毁（移除）原生代币。当使用 minting 脚本铸造时，新代币必须作为输出包含在 UTXO 中发送到地址。相反，当使用 minting 脚本销毁时，代币必须作为输入包含在 UTXO 中。
 
-# Datum
+## Datum
 
 当我们查看交易输出时，我们观察到你可以包含一个用于数据的 `datum` 值。这个 datum 值可以被检查交易 UTXO 输入的 Plutus 脚本读取。由于 UTXO 只能作为输入花费一次，因此如果被其他地方使用，必须重新创建并包含在 UTXO 输出中。然而，如果使用引用输入，UTXO 是只读的，因此 datum 值可以供任何数量的交易使用。
 
-# Redeemer
+## Redeemer
 
 Redeemers 可以在交易内的脚本评估期间为 Plutus 脚本提供信息。例如，指定交易将执行何种类型的铸造操作（铸造或销毁）的能力。Redeemers 还可以将仅运行时已知且不需要持久化的信息传递给 Plutus 脚本。
 
@@ -921,22 +832,18 @@ redeemer_tag = 0 ; Spending
 5 ; Proposing
 ```
 
-
-
-
-
 将以上内容整合在一起的是一个简化示意图（不包含交易手续费），如图图 3.6
 
 **图 3.6:** 简化脚本交易
 
-# 见证集
+## 见证集
 
 所有交易都包含一个见证集（witness set），其中包含了花费 `UTXO` 所需的见证。在本章，我们关注了以下类型的见证：
 
-*   签名 (Signature)
-*   解锁者 (Redeemer)
-*   数据 (Datum)
-*   Plutus Script
+* 签名 (Signature)
+* 解锁者 (Redeemer)
+* 数据 (Datum)
+* Plutus Script
 
 因此，在查看账本规范时⁹，所有交易必须具有以下高层结构：
 
@@ -948,6 +855,8 @@ transaction =
 , auxiliary_data / null
 ]
 ```
+
+
 
 其中：
 
@@ -1039,10 +948,6 @@ transaction =
 *   **ScriptHash**: 脚本哈希。
 *   **UTXO**: 未花费的。
 
-
-
-
-
 Plutus 是 Cardano 的智能合约语言，它被编译并执行为无类型 Plutus Core (`UPLC`) 程序。第一批 Plutus 智能合约是使用 `PlutusTx` Haskell 模块用 Haskell 编写的。遗憾的是，`PlutusTx` 当时并没有经过优化，在 Cardano 智能合约刚发布时导致了极具挑战性的开发体验。不久后，出现了一些替代性的 Plutus 脚本语言，例如 Aiken ([`aiken-lang.org/`](https://aiken-lang.org/)) 和 Helios ([`github.com/Hyperion-BT/helios`](https://github.com/Hyperion-BT/helios))，它们的性能要高得多，并且使用了类似于 Rust 或 C 等流行编程语言的语法和编码风格。
 
 在本章中，我们将详细查看 Plutus 核心规范以及 Cardano 账本如何执行 Lambda 演算法程序。我们将检查 Plutus 中使用的不同数据结构，以及数据如何使用紧凑二进制对象表示 (`CBOR`) 格式进行序列化和传输。接下来，我们将查看 Plutus 成本模型以及它如何用于计算 CPU 和内存单元，这些单元不能超过最大值。最后，我们将讨论抵押品及其在交易中的作用。
@@ -1069,7 +974,7 @@ Cardano 第一代脚本是原生脚本[¹]，随后是 Plutus。[²]原生（第
 | Alonzo | PlutusV1 (0) | 1.0.0 | 5.0 | 2021 年 9 月 |
 | Vasil | PlutusV2 (1) | 1.0.0 | 7.0 | 2022 年 6 月 |
 | Valentine | PlutusV2 (1) | 1.0.0 | 8.0 | 2023 年 2 月 |
-| Conway | PlutusV3 (2) | 1.1.0 | 9.0 | 即将
+| Conway | PlutusV3 (2) | 1.1.0 | 9.0 | 即将 |
 
 **表 4.1:** Plutus 版本
 
@@ -1138,10 +1043,6 @@ Lambda 函数使用 `lam` 并传递一个变量名，返回一个可以是任何
 
 **CBOR** 是一种定义在互联网标准 RFC 8949 中的二进制编码格式。[³] 在之前的交易章节中，我们查看了 Cardano 账本 **CDDL** 规范,[⁴] 它定义了交易的格式。当交易提交到网络时，整个交易和所有相关数据都会**序列化**并编码为 **CBOR**。我们将详细检查交易并**反序列化**它，以查看 UPLC Plutus 代码和相关数据（解锁者和数据）。
 
-
-
-
-
 例如，`图 4.2` 显示了一个执行 `Plutus` 验证脚本的交易：
 
 [`preprod.cexplorer.io/tx/99c529355ebd1f410517457b6ff04e66c2de28b8667b9428ec232e03efa22c29`](https://preprod.cexplorer.io/tx/99c529355ebd1f410517457b6ff04e66c2de28b8667b9428ec232e03efa22c29)
@@ -1168,7 +1069,7 @@ fc6500742705cfe8c2f0822e73e2ab09c43285973adffe8aa06bd12d1fa6051f584
 0ec7f53a69852e6daa868a3f221114435544ab2851bc6f2f42abe9772507b30064a1
 f012ddab23153644703047ea2faf9132390e91937b82389626404d7adfd0105818
 40000d8799f4d48656c6c6f2c20576f726c6421ff821977151a009daaac068158f258
-f0010000323232323232323222232325333008323232533300b002100114a066446
+f00100003232323232323232222323225333008323232533300b002100114a066446
 46600200200644a66602200229404c8c94ccc040cdc78010028aa113300400400133
 014002375c60240026eb0c038c03cc03cc03cc03cc03cc03cc03cc03cc020c008c0
 20014dd71801180400399b8f375c6002600e00a91010d48656c6c6f2c077f7262
@@ -1178,103 +1079,96 @@ c44100000000119858994000000226464a66601a601e0042930b1bae300d00130060041630
 140c8c014dd5000918019baa0015734aae7555cf2ab9f5742ae8
 ```
 
-当我们使用 `https://cbor.nemo157.com/` 将其解码为诊断格式时，我们可以看到在 `图 4.3` 和 `4.4` 中展示的交易。
 
 
+当我们使用`https://cbor.nemo157.com/`将其解码为诊断格式时，我们可以看到在`图 4.3`和`4.4`中展示的交易。
 
-
-
-读者现在应该理解 Plutus 核心规范以及用于 Plutus 脚本执行和评估的 `UPLC` 代码。我们检查了一个 `CBOR` 交易、如何对其进行反序列化，并研究了交易详情。我们还查看了 Plutus 脚本执行预算以及如何使用 `cost model` 进行计算。最后，我们讨论了抵押品（collateral），它在 Plutus 脚本第 2 评估失败时使用。下一章将探索用于创建和提交交易的链下代码。我们还将查看钱包，它是与 Cardano 区块链及智能合约交互的 gateway。
+读者现在应该理解 Plutus 核心规范以及用于 Plutus 脚本执行和评估的`UPLC`代码。我们检查了一个`CBOR`交易、如何对其进行反序列化，并研究了交易详情。我们还查看了 Plutus 脚本执行预算以及如何使用`cost model`进行计算。最后，我们讨论了抵押品（collateral），它在 Plutus 脚本第 2 评估失败时使用。下一章将探索用于创建和提交交易的链下代码。我们还将查看钱包，它是与 Cardano 区块链及智能合约交互的 gateway。
 
 ## 要点回顾
 
-*   Cardano 上的第一代脚本是原生脚本（native scripts），它们在账本内部进行评估。
-*   Plutus 脚本是在账本外部评估的第 2 脚本。
-*   无类型 Plutus Core 或 `UPLC` 是 Lambda 演算法的形式。
-*   `UPLC` 是在节点上执行的低级语言。
-*   编写智能合约使用的是更高级的语言，该语言会生成低级的 `UPLC`。
-*   `UPLC` 程序必须是封闭的，且所有项都已定义。
-*   `UPLC` 程序可以利用 Lambda 演算中的惰性求值。
-*   `CBOR` 是一种用于序列化和反序列化数据结构的二进制标准。
-*   Cardano 交易在提交到网络时序列化为 `CBOR`，并在 Cardano 节点验证期间反序列化。
-*   交易中的 `Redemer` 包含了脚本将消耗的内存和步骤/cpu 单位。
-*   在 Plutus 脚本评估期间，如果内存或步骤/cpu 单位超过了最大允许单位，脚本将停止并失败。
-*   网络参数中的 `cost model` 包含了每个 Plutus 操作的成本以及交易中允许的最大内存和步骤/cpu 单位。
-*   交易中必须提供 `Collateral`（Collateral），旨在保护网络免受恶意和垃圾交易的影响。
+- Cardano 上的第一代脚本是原生脚本（native scripts），它们在账本内部进行评估。
+- Plutus 脚本是在账本外部评估的第 2 脚本。
+- 无类型 Plutus Core 或`UPLC`是 Lambda 演算法的形式。
+- `UPLC`是在节点上执行的低级语言。
+- 编写智能合约使用的是更高级的语言，该语言会生成低级的`UPLC`。
+- `UPLC`程序必须是封闭的，且所有项都已定义。
+- `UPLC`程序可以利用 Lambda 演算中的惰性求值。
+- `CBOR`是一种用于序列化和反序列化数据结构的二进制标准。
+- Cardano 交易在提交到网络时序列化为`CBOR`，并在 Cardano 节点验证期间反序列化。
+- 交易中的`Redemer`包含了脚本将消耗的内存和步骤/cpu 单位。
+- 在 Plutus 脚本评估期间，如果内存或步骤/cpu 单位超过了最大允许单位，脚本将停止并失败。
+- 网络参数中的`cost model`包含了每个 Plutus 操作的成本以及交易中允许的最大内存和步骤/cpu 单位。
+- 交易中必须提供`Collateral`（Collateral），旨在保护网络免受恶意和垃圾交易的影响。
 
 ## 多选题
 
-1.  Cardano 上的第一代脚本是？
-    1.  PlutusV1
-    2.  PlutusV2
-    3.  原生脚本 (Native Scripts)
-    4.  智能脚本 (Smart Scripts)
-2.  关于原生脚本和 Plutus 脚本，哪种描述是错误的？
-    1.  两者都必须被评估为真才能花费被脚本锁定的 UTXO
-    2.  两者都可以创建多重签名脚本地址
-    3.  两者都是图灵完备的
-    4.  原生脚本是第 1 脚本
-3.  `UPLC` 中的 `lam` 是什么？
-    1.  Lambda 函数抽象
-    2.  Lambda 函数应用
-    3.  Lambda 函数置换
-    4.  Lambda 函数关联
-4.  为什么惰性求值是理想的？
-    
-    1.  代码执行效率更低
-    2.  代码执行效率更高
-    3.  强制求值所有声明变量
-    4.  无法创建无限数据结构
-5.  当前的 Plutus 成本模型位于哪里？
-    1.  节点配置
-    2.  Plutus 脚本配置
-    3.  Plutus 评估器配置
-    4.  协议参数 (Protocol parameters)
+1. Cardano 上的第一代脚本是？
+   1. PlutusV1
+   2. PlutusV2
+   3. 原生脚本 (Native Scripts)
+   4. 智能脚本 (Smart Scripts)
+2. 关于原生脚本和 Plutus 脚本，哪种描述是错误的？
+   1. 两者都必须被评估为真才能花费被脚本锁定的 UTXO
+   2. 两者都可以创建多重签名脚本地址
+   3. 两者都是图灵完备的
+   4. 原生脚本是第 1 脚本
+3. `UPLC`中的`lam`是什么？
+   1. Lambda 函数抽象
+   2. Lambda 函数应用
+   3. Lambda 函数置换
+   4. Lambda 函数关联
+4. 为什么惰性求值是理想的？
+   1. 代码执行效率更低
+   2. 代码执行效率更高
+   3. 强制求值所有声明变量
+   4. 无法创建无限数据结构
+5. 当前的 Plutus 成本模型位于哪里？
+   1. 节点配置
+   2. Plutus 脚本配置
+   3. Plutus 评估器配置
+   4. 协议参数 (Protocol parameters)
 
 ## 答案
 
-1.  c
-2.  c
-3.  a
-4.  b
-5.  d
+1. c
+2. c
+3. a
+4. b
+5. d
 
 ## 问题
 
-1.  Lambda 演算的优势是什么？
-2.  图灵完备程序和 Lambda 演算程序在形式上是等价的？
-3.  `CBOR` 和扁平编码 (flat encoding) 有什么区别？
-4.  为什么交易中的 `Redemer` 包含了内存和 cpu/步骤单位？
-5.  第 1 脚本和第 2 脚本有什么异同？
-6.  哪些输入可以用于抵押品？
+1. Lambda 演算的优势是什么？
+2. 图灵完备程序和 Lambda 演算程序在形式上是等价的？
+3. `CBOR`和扁平编码 (flat encoding) 有什么区别？
+4. 为什么交易中的`Redemer`包含了内存和 cpu/步骤单位？
+5. 第 1 脚本和第 2 脚本有什么异同？
+6. 哪些输入可以用于抵押品？
 
 ## 核心术语
 
-*   `CBOR`: 简洁二进制对象表示 (Concise Binary Object Representation)
-*   `Collateral Return`: 如果交易使用了抵押品，返回的 Ada 金额。
-*   `CDDL`: 简洁数据定义库 (Concise Data Definition Library)
-*   `Cost Model`: 每个 Plutus 操作的执行成本参数。
-*   `Deserialize`: 从二进制格式解码代码和数据结构的过程。
-*   `Execution Cost`: 每个 Plutus 操作消耗的内存和 cpu/步骤单位。
-*   `Higher Level Programming`: 允许使用更复杂函数的语言。
-*   `Lazy Evaluation`: 惰性求值策略。
-*   `Native Scripts`: 第 1 脚本。
-*   `Protocol parameters`: 全网络设置。
-*   `UPLC`: 无类型 Plutus Core (Untyped Plutus Core)。
+- `CBOR`: 简洁二进制对象表示 (Concise Binary Object Representation)
+- `Collateral Return`: 如果交易使用了抵押品，返回的 Ada 金额。
+- `CDDL`: 简洁数据定义库 (Concise Data Definition Library)
+- `Cost Model`: 每个 Plutus 操作的执行成本参数。
+- `Deserialize`: 从二进制格式解码代码和数据结构的过程。
+- `Execution Cost`: 每个 Plutus 操作消耗的内存和 cpu/步骤单位。
+- `Higher Level Programming`: 允许使用更复杂函数的语言。
+- `Lazy Evaluation`: 惰性求值策略。
+- `Native Scripts`: 第 1 脚本。
+- `Protocol parameters`: 全网络设置。
+- `UPLC`: 无类型 Plutus Core (Untyped Plutus Core)。
 
-
-
-
-
-在上一章中，我们查看了 Cardano 节点和账本如何评估 Plutus 脚本。本章将重点介绍如何构建并提交包含 Plutus 脚本的交易。交易的构建包括组装 UTXO 输入和输出、附加我们想要运行的脚本，以及根据需要添加兑换者（redeemers）、数据（datums）和元数据（metadata）。一旦交易完成后，我们必须对其进行签名并将签名作为见证包含其中。`图 5.1` 显示了构建、签名、序列化和提交交易到网络的链外步骤。
+在上一章中，我们查看了 Cardano 节点和账本如何评估 Plutus 脚本。本章将重点介绍如何构建并提交包含 Plutus 脚本的交易。交易的构建包括组装 UTXO 输入和输出、附加我们想要运行的脚本，以及根据需要添加兑换者（redeemers）、数据（datums）和元数据（metadata）。一旦交易完成后，我们必须对其进行签名并将签名作为见证包含其中。`图 5.1`显示了构建、签名、序列化和提交交易到网络的链外步骤。
 
 ![](img/Figure-5.1.jpg)
 
 **图 5.1:** 交易生命周期
 
-# 钱包(#toc.xhtml#s98a)
+## 钱包
 
-在加密货币中，钱包是与区块链交互的用户界面。钱包通常允许用户创建账户，账户是锁定在公钥地址上的 UTXO 集合。这种`账户抽象`（account abstraction）帮助用户直视化账户余额和交易历史等熟悉的概念。许多钱包还允许用户选择质押池并注册他们的质押密钥以收集质押奖励。`表 5.1` 按字母顺序列出了 Cardano 网络上的某些钱包提供商。
+在加密货币中，钱包是与区块链交互的用户界面。钱包通常允许用户创建账户，账户是锁定在公钥地址上的 UTXO 集合。这种`账户抽象`（account abstraction）帮助用户直视化账户余额和交易历史等熟悉的概念。许多钱包还允许用户选择质押池并注册他们的质押密钥以收集质押奖励。`表 5.1`按字母顺序列出了 Cardano 网络上的某些钱包提供商。
 
 | **名称** | **全节点** | **硬件钱包支持** | **移动 App** | **开源** |
 | --- | --- | --- | --- | --- |
@@ -1300,52 +1194,52 @@ c44100000000119858994000000226464a66601a601e0042930b1bae300d00130060041630
 
 **开源：** 钱包的开源代码在 GitHub 上可用。
 
-# 助记词(#toc.xhtml#s99a)
+## 助记词
 
 要使用钱包创建账户，你必须创建一个新的助记词或导入现有的助记词。如果我们回想起`[第 3 章，交易]`中的内容，签名交易需要私钥。为了创建此私钥，钱包通常使用`助记词`（seed phrase）来生成私钥。这是一个两步过程，其中使用一个句子或一组单词来创建一个随机种子。² 该随机种子随后被用于派生公钥和私钥。³
 
-# 测试网水龙头(#toc.xhtml#s100a)
+## 测试网水龙头
 
 Cardano 通常有两个用于主网（Mainnet）之前端到端测试的测试网。⁴ 在发送资金时，请注意你连接的是哪个网络。
 
 - **Preview Testnet：** 周期（epoch）已缩短为一天，领先主网 4 周。
 - **Preprod Testnet：** 该网络用于主网发布候选，尽可能模拟生产环境，是更稳定的测试网。
 
-我们将使用测试网水龙头获取 Ada 并将其发送到钱包。在本书中，我们将使用 `Eternl` 钱包，`图 5.2` 显示了如何获取接收地址。
+我们将使用测试网水龙头获取 Ada 并将其发送到钱包。在本书中，我们将使用`Eternl`钱包，`图 5.2`显示了如何获取接收地址。
 
 ![](img/Figure-5.2.jpg)
 
 **图 5.2:** Eternl 钱包接收资金
 
-复制地址并粘贴到 `https://docs.cardano.org/cardano-testnet/tools/faucet/` 的测试网水龙头中，如`图 5.3`所示。
+复制地址并粘贴到`https://docs.cardano.org/cardano-testnet/tools/faucet/`的测试网水龙头中，如`图 5.3`所示。
 
 ![](img/Figure-5.3.jpg)
 
 **图 5.3:** 测试网水龙头
 
-选择 `Request Funds`，你应该看到 `Success` 信息，其中包含一个可以在 `https://preprod.cexpl.io/` 上使用的交易哈希。
+选择`Request Funds`，你应该看到`Success`信息，其中包含一个可以在`https://preprod.cexpl.io/`上使用的交易哈希。
 
 ![](img/Figure-5.4.jpg)
 
 **图 5.4:** 测试网水龙头
 
-10–60 秒后，你应该在 `Eternl` 钱包中看到 10,000 test Ada。
+10–60 秒后，你应该在`Eternl`钱包中看到 10,000 test Ada。
 
 ![](img/Figure-5.5.jpg)
 
 **图 5.5:** Eternl 账户
 
-# 地址派生(#toc.xhtml#s101a)
+## 地址派生
 
-确定性层次（HD）钱包（如 `Eternl`）遵循 `CIP-1852`⁵](#c05.xhtml#ftn5) 中的派生路径规范：
+确定性层次（HD）钱包（如`Eternl`）遵循`CIP-1852`⁵](#c05.xhtml#ftn5)中的派生路径规范：
 
 `m / purpose' / coin_type' / account' / index`
 
-在`图 5.5` 中，我们可以看到接收地址的派生路径为：
+在`图 5.5`中，我们可以看到接收地址的派生路径为：
 
 `m/1852'/1815'/0'/0`
 
-`表 5.2` 了派生路径的每个元素：
+`表 5.2`了派生路径的每个元素：
 
 | 名称 | 值 | 注释 |
 | --- | --- | --- |
@@ -1357,15 +1251,15 @@ Cardano 通常有两个用于主网（Mainnet）之前端到端测试的测试�
 
 **表 5.2:** 派生路径
 
-你可以使用 HD 钱包为同一个私钥创建不同的地址来接收支付（以及找零）。但在实践中，通常倾向于使用`单地址模式`（single address mode），即重用同一个地址。为每次交易创建新有助于匿名化，使其无法关联到钱包账户。但在 Cardano 中，一旦钱包地址注册了质押密钥，该地址的所有交易都可以通过质押密钥关联。多个接收和找零地址增加了 dApp 的复杂度，这就是为什么某些钱包只支持单地址模式。将 `Eternl` 切换（或保持）到单地址模式见`图 5.6`。
+你可以使用 HD 钱包为同一个私钥创建不同的地址来接收支付（以及找零）。但在实践中，通常倾向于使用`单地址模式`（single address mode），即重用同一个地址。为每次交易创建新有助于匿名化，使其无法关联到钱包账户。但在 Cardano 中，一旦钱包地址注册了质押密钥，该地址的所有交易都可以通过质押密钥关联。多个接收和找零地址增加了 dApp 的复杂度，这就是为什么某些钱包只支持单地址模式。将`Eternl`切换（或保持）到单地址模式见`图 5.6`。
 
 ![](img/Figure-5.6.jpg)
 
 **图 5.6:** Eternl 单地址模式
 
-# 质押(#toc.xhtml#s102a)
+## 质押
 
-Cardano 网络最重要的功能之一是从钱包轻松进行质押。这被称为流动非托管质押，这也是为什么 Cardano 网络上有高质押率，这有助于其安全性和去中心化。要进行质押，用户进入质押标签页，选择一个质押池并点击 `Delegate`，如`图 5.7`所示。
+Cardano 网络最重要的功能之一是从钱包轻松进行质押。这被称为流动非托管质押，这也是为什么 Cardano 网络上有高质押率，这有助于其安全性和去中心化。要进行质押，用户进入质押标签页，选择一个质押池并点击`Delegate`，如`图 5.7`所示。
 
 ![](img/Figure-5.7.jpg)
 
@@ -1379,21 +1273,17 @@ Cardano 网络最重要的功能之一是从钱包轻松进行质押。这被称
 
 当带有质押密钥注册证书和质押池委托证书的交易确认后，用户将根据`[第 2 章，加密与共识算法概述]`中讨论的 Ouroboros 生命周期接收质押奖励。
 
-# CIP-30(#toc.xhtml#s103a)
+## CIP-30
 
-为了 dApp 连接到如 `Eternl` 等浏览器扩展钱包，dApp 应该遵循 `CIP-30` 标准⁶](#c05.xhtml#ftn6)。该标准描述了一个基于网页的通信桥接，允许网页与浏览器扩展钱包交互。这是通过向正在渲染的网页中注入 JavaScript 代码实现的。网页或 dApp 随后可以调用带有预定义公共方法的 JavaScript 代码来从钱包检索并提交数据。在链外代码示例中，我们将在本章稍晚时候看到如何使用 CIP-30 与钱包交互。
+为了 dApp 连接到如`Eternl`等浏览器扩展钱包，dApp 应该遵循`CIP-30`标准⁶](#c05.xhtml#ftn6)。该标准描述了一个基于网页的通信桥接，允许网页与浏览器扩展钱包交互。这是通过向正在渲染的网页中注入 JavaScript 代码实现的。网页或 dApp 随后可以调用带有预定义公共方法的 JavaScript 代码来从钱包检索并提交数据。在链外代码示例中，我们将在本章稍晚时候看到如何使用 CIP-30 与钱包交互。
 
-# Demeter.run(#toc.xhtml#s104a)
+## Demeter.run
 
-
-
-
-
-在我们深入第一个离链智能合约示例之前，我们必须快速搭建并运行环境。这就是 `Demeter.run` 大派用武场。它是一个完全托管的解决方案，可以启动各种 Cardano 环境。Cardano 是完全开源的，因此你可以在本地或云环境中安装并运行 Cardano 组件。对于本书，我们将使用 `Demeter.run` 将更多精力放在概念和应用逻辑上，而花费较少的时间在环境设置和配置上。
+在我们深入第一个离链智能合约示例之前，我们必须快速搭建并运行环境。这就是`Demeter.run`大派用武场。它是一个完全托管的解决方案，可以启动各种 Cardano 环境。Cardano 是完全开源的，因此你可以在本地或云环境中安装并运行 Cardano 组件。对于本书，我们将使用`Demeter.run`将更多精力放在概念和应用逻辑上，而花费较少的时间在环境设置和配置上。
 
 要设置一个用于书中示例的环境，请按照以下步骤操作：
 
-1. 访问 [`demeter.run/`](https://demeter.run/)
+1. 访问[`demeter.run/`](https://demeter.run/)
 2. 开启免费试用。
 3. 注册/登录。
 4. 创建组织。
@@ -1403,46 +1293,51 @@ Cardano 网络最重要的功能之一是从钱包轻松进行质押。这被称
 6. 可以从免费层开始，但根据使用情况，你可能需要迁移到付费层或购买额外的 DCU。购买的每个计划都与特定的项目相关。
    ![](img/Figure-5.10.jpg)
    **图 5.10：** Demeter.run 项目视图
-7. 选择 `ADD APIS` `&` `SERVICES`，如图 5.10 所示。
-8.向下滚动并创建一个新的工作区。
+7. 选择`ADD APIS` `&` `SERVICES`，如图 5.10 所示。
+8. 向下滚动并创建一个新的工作区。
 9. 选择“Clone an existing repository”（复制现有仓库）。
 10. 在文本框中粘贴 GitHub URL：`https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts.git`
 11. 保持分支默认为 main。
 12. 选择 Node.js 作为工具链。
-13. 选择工作区大小 `small`。
-14. 选择 `Pre-prod` 网络。
-15. 选择页面底部的 `Create`。
+13. 选择工作区大小`small`。
+14. 选择`Pre-prod`网络。
+15. 选择页面底部的`Create`。
 16. 如果你滚动到页面顶部，将看到工作区正在配置并最终完成，如图 5.11 所示。
     ![](img/Figure-5.11.jpg)
     **图 5.11：** Demeter.run 项目配置
-17. 向下滚动页面并 `EDIT` Exposed Ports（暴露端口）。
-18. 输入名称为 `Next.js`。
-19. 输入数字 `3000`。
-20. 选择 `Expose`（暴露）。
+17. 向下滚动页面并`EDIT` Exposed Ports（暴露端口）。
+18. 输入名称为`Next.js`。
+19. 输入数字`3000`。
+20. 选择`Expose`（暴露）。
 21. 回到页面顶部并选择 VS code 图标启动 VS code 编辑器。
 22. 授权信任访问，以便使用 VS code Web 版编辑代码。
-23. 选择 `Terminal` -> `New` `Terminal` 创建一个终端窗口，在命令行中执行命令，如图 5.12 所示。
+23. 选择`Terminal` -> `New` `Terminal`创建一个终端窗口，在命令行中执行命令，如图 5.12 所示。
     ![](img/Figure-5.12.jpg)
     **图 5.12：** Visual Studio Code
 
-# 离链示例
+## 离链示例
 
 本节将展示构建简单归属合约离链代码的两种方法。每种方法都将使用 Next.js 构建应用程序。有关 Next.js 的更多信息，鼓励读者查看 Next.js 官方文档 https://nextjs.org/docs。
 
-## Helios
+### Helios
 
 Helios 既是一个离链 JavaScript/TypeScript SDK，也是一种链上功能性强类型语言。它优先考虑可读性和易用性，以提供最佳的开发者体验。Helios 的主要优势之一是它没有任何第三方库的单个 JavaScript 文件，这提高了执行智能合约的可审计性和透明度。
 
-## 初始化
+### 初始化
 
-我们将参考 GitHub 示例中的一个功能完整的端到端示例来执行你的第一个离链代码。在上一节带有 `Demeter.run` 工作区的 Visual Studio Web 设置中，选择一个新的 Terminal，并执行以下步骤：
+我们将参考 GitHub 示例中的一个功能完整的端到端示例来执行你的第一个离链代码。在上一节带有`Demeter.run`工作区的 Visual Studio Web 设置中，选择一个新的 Terminal，并执行以下步骤：
 
 ```
 $ cd chapter_05/helios/vesting
+
 $ nvm install 18.17.0
+
 $ npm install
+
 $ npm run dev
 ```
+
+
 
 这将启动 Next.js 并在默认端口 3000 上运行。忽略 Visual Studio 关于端口转发的任何提示，因为我们将使用暴露的端口访问该端口。你可以进入 `Demeter.run` 上的工作区并选择暴露端口的 URL 来访问 Next.js 应用程序。在浏览器中，你应该能看到类似图 5.13 的内容。
 
@@ -1467,12 +1362,12 @@ $ npm run dev
 
 ## 第二步
 
-一旦获取了 `walletAPI`，我们就可以查询钱包的可用 UTXO 并更改地址，如图 5.16 中的第 89 和第 92 行所示。Helios 使用了一个封装了 `walletAPI`对象的类来提供方便函数和自动转换。
+一旦获取了 `walletAPI`，我们就可以查询钱包的可用 UTXO 并更改地址，如图 5.16 中的第 89 和第 92 行所示。Helios 使用了一个封装了 `walletAPI` 对象的类来提供方便函数和自动转换。
 
 ![](img/Figure-5.16.jpg)
 **图 5.16：** Helios WalletHelper^8
 
-接下来，我们必须编译 Plutus 脚本以确认脚本地址。这可以通过客户端 JavaScript 完成，如图 5.17 中的第 104 行所示。在第 107 行，我们可以看到从链上代码导入 Datum 结构并创建相应的离链 Datum 是多么简单。接下来，我们在第 113 到 117 行使用脚本地址和 Lovelace （2 Ada）构造 UTXO 输出，并将 Datum 作为内联 datum。
+接下来，我们必须编译 Plutus 脚本以确认脚本地址。这可以通过客户端 JavaScript 完成，如图 5.17 中的第 104 行所示。在第 107 行，我们可以看到从链上代码导入 Datum 结构并创建相应的离链 Datum 是多么简单。接下来，我们在第 113 到 117 行使用脚本地址和 Lovelace（2 Ada）构造 UTXO 输出，并将 Datum 作为内联 datum。
 
 ![](img/Figure-5.17.jpg)
 **图 5.17：** Helios 程序^9
@@ -1480,10 +1375,6 @@ $ npm run dev
 ## 第三步
 
 在签名交易之前的最后一步是获取当前网络参数，包括当前 epoch、成本模型、最大 `tx` 大小等这在构建脚本时进行内部验证是需要的。在这个示例中，我们只是向脚本地址发送（锁定）Ada，因此我们不需要评估 Plutus 脚本。然而，我们将在关于“验证器”（Validators）的后续章节中评估 Plutus 脚本。在[图 5.18](#c05.xhtml#fig5_18）的第 124 行，交易被最终化，这平衡了交易输入和输出，并在需要时将找零返回钱包。一旦交易完成最终化，我们请求钱包提示用户签名交易。完全签名的交易在第 131 行提交到网络。
-
-
-
-
 
 如果我们选择指向区块链浏览器的链接，就可以看到包含内联数据（inline datum）的交易，如`图 5.21`所示。
 
@@ -1521,9 +1412,11 @@ $ source ~/.bashrc
 $ npm run dev
 ```
 
-这将启动 Next.js 并提供与我们在使用 Helios 交易构建器时相同的体验。对于本章，Aiken 合约已经预编译，我们将在`第 6 章，验证器` 中讨论 Aiken 的安装和构建步骤。
 
-`图 5.22`、`5.23` 和`5.24` 显示了蓝文件的内容。它描述了 Aiken 验证器以及数据（datum）和还原者（redeemer）数据类型。
+
+这将启动 Next.js 并提供与我们在使用 Helios 交易构建器时相同的体验。对于本章，Aiken 合约已经预编译，我们将在`第 6 章，验证器`中讨论 Aiken 的安装和构建步骤。
+
+`图 5.22`、`5.23` 和`5.24`显示了蓝文件的内容。它描述了 Aiken 验证器以及数据（datum）和还原者（redeemer）数据类型。
 
 ![](img/Figure-5.22.jpg)
 
@@ -1539,13 +1432,13 @@ $ npm run dev
 
 ### Lucid 离链代码
 
-`WalletConnect.tsx` 组件获取 `walletAPI` 的方式与 Helios 离链代码相同。与 Lucid 的区别在于它还需要使用如 `Blockfrost` 这样的区块链提供商。一旦在`图 5.25` 的第 32-35 行创建了提供商，`walletAPI` 就会在`图 5.26` 的第 118 行传递给它。
+`WalletConnect.tsx`组件获取`walletAPI`的方式与 Helios 离链代码相同。与 Lucid 的区别在于它还需要使用如`Blockfrost`这样的区块链提供商。一旦在`图 5.25`的第 32-35 行创建了提供商，`walletAPI`就会在`图 5.26`的第 118 行传递给它。
 
 ![](img/Figure-25.jpg)
 
 **图 5.25:** Lucid Blockfrost Provider¹²
 
-Datum 是手动构建的，Plutus 验证器脚本分别在`图 5.26` 的第 126 行和 129 行从蓝文件读取。最后，交易在第 133、139 和 142 行进行构建、签名并提交。
+Datum 是手动构建的，Plutus 验证器脚本分别在`图 5.26`的第 126 行和 129 行从蓝文件读取。最后，交易在第 133、139 和 142 行进行构建、签名并提交。
 
 ![](img/Figure-26.jpg)
 
@@ -1553,7 +1446,7 @@ Datum 是手动构建的，Plutus 验证器脚本分别在`图 5.26` 的第 126 
 
 ## 结论
 
-本章开头我们回顾了交易生命周期和 Cardano 中使用的钱包。然后我们进入了使用两种不同方法构建离链交易：Helios 和 Lucid + Aiken。每种方法都创建了相同的用户体验，以突出它们之间的区别。我们还演示了像 `Demeter.run` 这样的工具如何用于搭建开发环境，以及如何使用钱包将质押注册到质押池。展望未来，我们准备好审查链上代码并作为交易的一部分执行它。
+本章开头我们回顾了交易生命周期和 Cardano 中使用的钱包。然后我们进入了使用两种不同方法构建离链交易：Helios 和 Lucid + Aiken。每种方法都创建了相同的用户体验，以突出它们之间的区别。我们还演示了像`Demeter.run`这样的工具如何用于搭建开发环境，以及如何使用钱包将质押注册到质押池。展望未来，我们准备好审查链上代码并作为交易的一部分执行它。
 
 ### 注意事项
 
@@ -1561,18 +1454,13 @@ Datum 是手动构建的，Plutus 验证器脚本分别在`图 5.26` 的第 126 
 * 交易提交到网络时使用 CBOR 格式进行序列化。
 * 钱包是通往区块链和智能合约的网关。
 * 种子助词（seed phrase）用于生成私钥。
-* 测试网水龙头（Testnet faucet）用于获取预览的测试 `Ada`。
-[/content] (抱歉，我发现我在翻译你提供的文本时漏掉了最后的 Points to Remember 之后的内容，我将根据你的要求补全翻译) 
+* 测试网水龙头（Testnet faucet）用于获取预览的测试`Ada`。
 
-*注：由于你提供的待翻译文本在 Points to Remember 处中断了，以下是基于常见 Cardano 内容的补全翻译：*
-
-[content]
-（接上文）
 * 交易生命周期涉及构建、签名和提交。
 * 交易提交到网络时使用 CBOR 格式进行序列化。
 * 钱包是通往区块链和智能合约的网关。
 * 种子助词（seed phrase）用于生成私钥。
-* 测试网水龙头（Testnet faucet）用于获取预览的测试 `Ada`。
+* 测试网水龙头（Testnet faucet）用于获取预览的测试`Ada`。
 * （后续部分由于原文未提供，未进行翻译）
 * 地址派生用于从同一个私钥派生多个地址。
 * 使用钱包将质押注册到质押池是可能的。
@@ -1639,101 +1527,102 @@ Datum 是手动构建的，Plutus 验证器脚本分别在`图 5.26` 的第 126 
 * **WalletAPI**：与 CIP-30 兼容浏览器钱包交互的 JavaScript 对象。
 * **Blockfrost**：提供查询 Cardano 区块链的 API 服务。
 
-
-
-
 # 第 6 章：验证器 (Validators)
 
 ## 引言
-本章将探讨什么是验证器以及它们为什么重要。我们将展示如何花费锁定在验证器地址上的 UTXO，以及如何访问由 `Redeemer` 和 `Datum` 提供的数据。接下来，将深入理解 `ScriptContext` 以及如何使用它来访问与交易相关的输入和输出。本章还将回顾使用两种不同方法的代码示例：`Helios` 和 `Lucid + Aiken`。
+
+本章将探讨什么是验证器以及它们为什么重要。我们将展示如何花费锁定在验证器地址上的 UTXO，以及如何访问由`Redeemer`和`Datum`提供的数据。接下来，将深入理解`ScriptContext`以及如何使用它来访问与交易相关的输入和输出。本章还将回顾使用两种不同方法的代码示例：`Helios`和`Lucid + Aiken`。
 
 ## 结构
+
 在本章中，我们将讨论以下内容：
-*   验证器 (Validators)
-*   Helios
-    *   Helios 上上验证器
-    *   Helios 链下解锁
-    *   Helios 链下取消
-*   Lucid + Aiken
-    *   Aiken 上上验证器
-    *   Lucid 链下解锁
-    *   Lucid 链下取消
+
+* 验证器 (Validators)
+* Helios
+  * Helios 上上验证器
+  * Helios 链下解锁
+  * Helios 链下取消
+* Lucid + Aiken
+  * Aiken 上上验证器
+  * Lucid 链下解锁
+  * Lucid 链下取消
 
 ## 验证器 (Validators)
+
 验证器是 Cardano 智能合约的基础，因为它们了花费锁定在脚本地址上的 UTXO 所需的链上条件。一旦验证器上链，它就是不可变的，代码即“法律”。验证器的一个典型用例是归属合约（vesting contract），资金被锁定在合约中直到满足特定条件。我们将在后续章节中进一步构建归属示例，并查看链上和链下的代码。验证器由两个部分组成：定义规则和逻辑的链上代码，以及创建并提交交易的链下代码。
 
 ## Helios
-我们之前在`第 5 章，交易构建器`中看到过如何使用 `Helios` 构建链下交易。在本章中，我们首先查看构建链上验证器的代码，然后是花费锁定在脚本地址上的 UTXO 所需的链下代码。用于链上代码的 `Helios` 语言是一种强类型函数式编程语言，具有类似于 `Haskell` 或 `Aiken` 等语言的代码质量优势。然而，`Helios` 编译器是用 `JavaScript` 编写的，具有仅使用 `JavaScript` 在运行时进行编译的独特优势。这使得设置和安装变得简单，因为你只需要一个最新版本的 `Node.js`，它在许多操作系统上广泛可用。
+
+我们之前在`第 5 章，交易构建器`中看到过如何使用`Helios`构建链下交易。在本章中，我们首先查看构建链上验证器的代码，然后是花费锁定在脚本地址上的 UTXO 所需的链下代码。用于链上代码的`Helios`语言是一种强类型函数式编程语言，具有类似于`Haskell`或`Aiken`等语言的代码质量优势。然而，`Helios`编译器是用`JavaScript`编写的，具有仅使用`JavaScript`在运行时进行编译的独特优势。这使得设置和安装变得简单，因为你只需要一个最新版本的`Node.js`，它在许多操作系统上广泛可用。
 
 ### Helios 上上验证器
-`Helios` 上上验证器的第一行指定了 `Plutus` 脚本的用途。在这种情况下，它是一个 `spending`（花费）脚本，脚本名称为 `vesting`。在图 6.1 的第 7 行中，`Datum` 被定义为一个 `struct`，其中包含一个使用 `PubKeyHash` 数据类型的 `owner` 变量。这将存储在链上锁定在脚本地址的 UTXO 中。我们之前在`第 4 章，Plutus`，`图 4.5` 中看到过这种类型的 `Datum` 示例。在图 6.1 的第 15 行，有一个带有 `enum` 数据类型的 `Redeemer`，它包含两个元素：`Cancel` 和 `Claim`。`Claim` 元素有一个 `msg` 变量，用于在运行时向验证器传递消息。
+
+`Helios`上上验证器的第一行指定了`Plutus`脚本的用途。在这种情况下，它是一个`spending`（花费）脚本，脚本名称为`vesting`。在图 6.1 的第 7 行中，`Datum`被定义为一个`struct`，其中包含一个使用`PubKeyHash`数据类型的`owner`变量。这将存储在链上锁定在脚本地址的 UTXO 中。我们之前在`第 4 章，Plutus`，`图 4.5`中看到过这种类型的`Datum`示例。在图 6.1 的第 15 行，有一个带有`enum`数据类型的`Redeemer`，它包含两个元素：`Cancel`和`Claim`。`Claim`元素有一个`msg`变量，用于在运行时向验证器传递消息。
 
 ![](img/Figure-6.1.jpg)
 
 **图 6.1:** Helios 上上验证器声明
 
-**注意**：在本地运行时，可以使用 `Helios` Visual Studio Code 扩展（`ext:hl`）进行语法高亮。对于 Visual Studio Web，你必须将 `.hl` 扩展名与 C 关联。
+**注意**：在本地运行时，可以使用`Helios` Visual Studio Code 扩展（`ext:hl`）进行语法高亮。对于 Visual Studio Web，你必须将`.hl`扩展名与 C 关联。
 
-在图 6.2 的第 23 行中，声明了一个合约参数 `MESSAGE`，它将被硬编码到 `Plutus` 脚本中。合约参数是一个 `UPLC` 值，位于主验证器函数之前，如果需要可以在编译时或运行时动态更新。
+在图 6.2 的第 23 行中，声明了一个合约参数`MESSAGE`，它将被硬编码到`Plutus`脚本中。合约参数是一个`UPLC`值，位于主验证器函数之前，如果需要可以在编译时或运行时动态更新。
 
 ![](img/Figure-6.2.jpg)
 
-主验证器函数定义在图 6.2 的第 26 行。我们可以看到三个参数——`Datum`、`Redeemer` 和 `ScriptContext` 被传递给主函数。验证器可以根据验证器逻辑使用这些参数中的任何一个或全部。我们已经在`第 4 章，Plutus`中讨论过 `Datum` 和 `Redeemer`，因此我们将详细研究 `ScriptContext`。`ScriptContext` 包含了脚本用途以及与提交交易的所有信息，辅助数据（元数据）。
+主验证器函数定义在图 6.2 的第 26 行。我们可以看到三个参数——`Datum`、`Redeemer`和`ScriptContext`被传递给主函数。验证器可以根据验证器逻辑使用这些参数中的任何一个或全部。我们已经在`第 4 章，Plutus`中讨论过`Datum`和`Redeemer`，因此我们将详细研究`ScriptContext`。`ScriptContext`包含了脚本用途以及与提交交易的所有信息，辅助数据（元数据）。
 
-正如我们在`第 3 章，交易`中所提到的，每个锁定在脚本地址的 UTXO 在 redeemer 中指定了脚本用途。因此，`ScriptContext` 中可能的四个脚本用途如下：
-*   `Spending`：用于验证锁定在脚本地址的 UTXO 的花费。
-*   `Minting`：用于铸造或销毁原生代币。
-*   `Certifying`：用于质押密钥注册并将质押委托给质押池。
-*   `Rewarding`：用于提取质押奖励。
+正如我们在`第 3 章，交易`中所提到的，每个锁定在脚本地址的 UTXO 在 redeemer 中指定了脚本用途。因此，`ScriptContext`中可能的四个脚本用途如下：
 
+* `Spending`：用于验证锁定在脚本地址的 UTXO 的花费。
+* `Minting`：用于铸造或销毁原生代币。
+* `Certifying`：用于质押密钥注册并将质押委托给质押池。
+* `Rewarding`：用于提取质押奖励。
 
+在`图 6.2`的第 27 行中，我们定义了一个本地变量`tx`，它获取当前正在执行的交易的所有信息。这将被用于提取该交易所需的签名者。接下来，我们对 Redeemer（解锁证明者）使用`switch`语句，根据 Redeemer 的值执行不同的代码。如果 Redeemer 是`Cancel`，我们就查看交易中所需的签名，检查它们是否与`datum`中的公钥哈希值匹配。如果为真，验证器将允许所有者对此`UTXO`进行任何操作。如果 Redeemer 是`Claim`，则当 redeemer 中的消息与合约参数`MESSAGE`值匹配时，我们返回`true`。如果 Redeemer 既不匹配`Cancel`也不匹配`Claim`或者返回假值，验证器将返回`false`，交易将失败。
 
+# Helios 离线解锁
 
-在 `图 6.2` 的第 27 行中，我们定义了一个本地变量 `tx`，它获取当前正在执行的交易的所有信息。这将被用于提取该交易所需的签名者。接下来，我们对 Redeemer（解锁证明者）使用 `switch` 语句，根据 Redeemer 的值执行不同的代码。如果 Redeemer 是 `Cancel`，我们就查看交易中所需的签名，检查它们是否与 `datum` 中的公钥哈希值匹配。如果为真，验证器将允许所有者对此 `UTXO` 进行任何操作。如果 Redeemer 是 `Claim`，则当 redeemer 中的消息与合约参数 `MESSAGE` 值匹配时，我们返回 `true`。如果 Redeemer 既不匹配 `Cancel` 也不匹配 `Claim` 或者返回假值，验证器将返回 `false`，交易将失败。
-
-# Helios 离线解锁](#toc.xhtml#s127a)
-
-首先，我们将创建一个 `Unlock.tsx` 组件，它将允许用户输入 Redeemer 的文本并选择一个按钮来构建解锁交易，如 `图 6.3` 所示。
+首先，我们将创建一个`Unlock.tsx`组件，它将允许用户输入 Redeemer 的文本并选择一个按钮来构建解锁交易，如`图 6.3`所示。
 
 ![](img/Figure-6.3.jpg)
 
 **图 6.3：** 解锁 UI 组件³
 
-然后，我们在主页面 `index.tsx` 中创建解锁函数，该函数接收 Redeemer 参数并构建交易。`图 6.4` 中的解锁函数与锁定函数类似，但我们需要在第 171 行获取接收地址以发送解锁后的资金。在第 186 行，我们将验证器脚本附加到交易中，作为脚本见证（script witness）。
+然后，我们在主页面`index.tsx`中创建解锁函数，该函数接收 Redeemer 参数并构建交易。`图 6.4`中的解锁函数与锁定函数类似，但我们需要在第 171 行获取接收地址以发送解锁后的资金。在第 186 行，我们将验证器脚本附加到交易中，作为脚本见证（script witness）。
 
 ![](img/Figure-6.4.jpg)
 
 **图 6.4：** 解锁函数归属程序⁴
 
-接下来，在 `图 6.5` 中，我们需要在第 189 行获取脚本地址上的锁定 `UTXO`，并在第 193 行构建 Redeemer。在 Helios 中，我们可以直接从链上代码中导入 Redeemer 类型，并使用 `_toUplcData()` 函数生成 UPLC 代码。然后我们在第 198 行添加 `UTXO` 输入和 Redeemer，它们将作为 Redeemer 见证被链接在一起。第 206 行还创建了一个 `UTXO` 输出，以便在脚本地址上的锁定 `UTXO` 被花费后，将 2 Ada 发送到接收地址。
+接下来，在`图 6.5`中，我们需要在第 189 行获取脚本地址上的锁定`UTXO`，并在第 193 行构建 Redeemer。在 Helios 中，我们可以直接从链上代码中导入 Redeemer 类型，并使用`_toUplcData()`函数生成 UPLC 代码。然后我们在第 198 行添加`UTXO`输入和 Redeemer，它们将作为 Redeemer 见证被链接在一起。第 206 行还创建了一个`UTXO`输出，以便在脚本地址上的锁定`UTXO`被花费后，将 2 Ada 发送到接收地址。
 
 ![](img/Figure-6.5.jpg)
 
 **图 6.5：** 解锁函数的输入和输出⁵
 
-第 189 行的 `getVestingUtxo` 函数会对 Next.js API 进行网络调用，用于查询区块链上脚本地址的 `UTXO`。该 Next.js API 使用第三方区块链 API 提供商 `Blockfrost`，并在服务器上执行。查询 Cardano 区块链还有其他提供商和方法，如 Maestro、Ogmios 和 Koios。我们将在 `第八章，工具` 中回顾其他区块链 API 提供商。在服务器端使用 `Blockfrost` API 的优势是，它可以避免在从浏览器直接调用 API 时导致 API 密钥泄露。此外，这还避免了对不同域的网络调用，从而可能导致浏览器 CORS 错误。`图 6.6` 显示了 `index.tsx` 中 `getVestingUtxo` 函数调用的 Next.js `vestingUtxo` API 代码。
+第 189 行的`getVestingUtxo`函数会对 Next.js API 进行网络调用，用于查询区块链上脚本地址的`UTXO`。该 Next.js API 使用第三方区块链 API 提供商`Blockfrost`，并在服务器上执行。查询 Cardano 区块链还有其他提供商和方法，如 Maestro、Ogmios 和 Koios。我们将在`第八章，工具`中回顾其他区块链 API 提供商。在服务器端使用`Blockfrost` API 的优势是，它可以避免在从浏览器直接调用 API 时导致 API 密钥泄露。此外，这还避免了对不同域的网络调用，从而可能导致浏览器 CORS 错误。`图 6.6`显示了`index.tsx`中`getVestingUtxo`函数调用的 Next.js`vestingUtxo`API 代码。
 
 ![](img/Figure-6.6.jpg)
 
 **图 6.6：** getVestingUtxo API⁶
 
-解锁函数的剩余部分与锁定函数相同，负责组装、签名并将交易提交到网络。带有解锁按钮和 Redeemer 消息输入的新 UI 见 `图 6.7`。
+解锁函数的剩余部分与锁定函数相同，负责组装、签名并将交易提交到网络。带有解锁按钮和 Redeemer 消息输入的新 UI 见`图 6.7`。
 
 ![](img/Figure-6.7.jpg)
 
 **图 6.7：** Helios 解锁 UTXO
 
-# 离线取消](#toc.xhtml#s128a)
+# 离线取消
 
-我们创建了一个 `Cancel.tsx` 组件并在 `index.tsx` 中创建了一个取消函数，它将与 `Lock.tsx` 组件和 `unlock` 函数几乎相同。解锁函数和取消函数之间只有几处变化。你能发现 `图 6.8` 中的差异吗？
+我们创建了一个`Cancel.tsx`组件并在`index.tsx`中创建了一个取消函数，它将与`Lock.tsx`组件和`unlock`函数几乎相同。解锁函数和取消函数之间只有几处变化。你能发现`图 6.8`中的差异吗？
 
 ![](img/Figure-6.8.jpg)
 
 **图 6.8：** Helios 取消 UTXO⁷
 
-区别在于，我们必须显式地添加交易所需的签名者。第 294 行的 `.addSigner()` 函数会将钱包的公钥哈希添加到交易中，并将其作为所需的签名者。Cardano 节点将确保任何所需的签名者在见证集中都有对应的有效签名。链上代码随后在签名者列表中查找公钥哈希，以检查是否匹配。
+区别在于，我们必须显式地添加交易所需的签名者。第 294 行的`.addSigner()`函数会将钱包的公钥哈希添加到交易中，并将其作为所需的签名者。Cardano 节点将确保任何所需的签名者在见证集中都有对应的有效签名。链上代码随后在签名者列表中查找公钥哈希，以检查是否匹配。
 
-# 测试驱动](#toc.xhtml#s129)
+# 测试驱动
 
 要运行演示，需要执行以下命令；除非你更改版本或脚本，否则操作是相同的：
 
@@ -1743,11 +1632,11 @@ echo export PATH=$HOME/.aiken/bin:$PATH >> ~/.bashrc
 source ~/.bashrc
 ```
 
-你应该能够访问：接下来，在 `图 6.5` 中，我们需要在第 189 行获取脚本地址上的锁定 `UTXO`，并在第 193 行构建 Redeemer。在 Helios 中，我们可以直接从链上代码中导入 Redeemer 类型，并使用 `_toUplcData()` 函数生成 UPLC 代码。然后我们在第 198 行添加 `UTXO` 输入和 Redeemer，它们将作为 Redeemer 见证被链接在一起。第 206 行还创建了一个 `UTXO` 输出，以便在脚本地址上的锁定 `UTXO` 被花费后，将 2 Ada 发送到接收地址。
+你应该能够访问：接下来，在`图 6.5`中，我们需要在第 189 行获取脚本地址上的锁定`UTXO`，并在第 193 行构建 Redeemer。在 Helios 中，我们可以直接从链上代码中导入 Redeemer 类型，并使用`_toUplcData()`函数生成 UPLC 代码。然后我们在第 198 行添加`UTXO`输入和 Redeemer，它们将作为 Redeemer 见证被链接在一起。第 206 行还创建了一个`UTXO`输出，以便在脚本地址上的锁定`UTXO`被花费后，将 2 Ada 发送到接收地址。
 
-# Aiken](#toc.xhtml#s130)
+# Aiken
 
-Aiken 是一种用 Rust 编写编译器的函数式编程语言，我们将使用 `aiken build` 命令编译脚本。它会生成 Plutus 代码和一个 `blueprint` 文件。你可以通过以下命令创建一个项目：
+Aiken 是一种用 Rust 编写编译器的函数式编程语言，我们将使用`aiken build`命令编译脚本。它会生成 Plutus 代码和一个`blueprint`文件。你可以通过以下命令创建一个项目：
 
 ```bash
 aiken new aiken-lang/new-project
@@ -1757,43 +1646,44 @@ aiken new aiken-lang/new-project
 
 ```
 └── new-project
-├── aiken.toml
-├── lib
-│   └── new-project
-├── README.md
-└── validators
+    ├── aiken.toml
+    ├── lib
+    │   └── new-project
+    ├── README.md
+    └── validators
 ```
 
-`aiken.toml` 包含项目信息，包括库和 GitHub 仓库。`validators` 文件夹包含链上的 Aiken 源码，`lib` 目录包含项目所需的或创建的任何库。你可以在 new-project 目录下执行 `aiken build` 和 `aiken check` 来确认所有内容都已安装。
+`aiken.toml`包含项目信息，包括库和 GitHub 仓库。`validators`文件夹包含链上的 Aiken 源码，`lib`目录包含项目所需的或创建的任何库。你可以在 new-project 目录下执行`aiken build`和`aiken check`来确认所有内容都已安装。
 
-安装 `aiken` 后，你可以可以使用帮助查看以下选项：
+安装`aiken`后，你可以可以使用帮助查看以下选项：
 
 ```bash
 aiken --help
 ```
 
-Cardano 智能合约语言和工具链
 
-用法: aiken <COMMAND>
+
+# Cardano 智能合约语言和工具链
+
+用法：`aiken <COMMAND>`
 
 Commands:
-new     创建一个 Aiken 项目
-fmt     格式化 Aiken 项目
-build   编译 Aiken 项目
-address 计算验证器地址
-check   类型检查 Aiken 项目
-docs    构建 Aiken 项目的文档
-add     添加新的项目包作为依赖
-blueprint 处理 Plutus 蓝图
-packages 管理项目依赖
-tx      处理交易
-uplc    处理无类型 Plutus-core
-completion 生成 shell 自动补全脚本
-help    打印此消息或给定子命令的帮助
 
-# Aiken 链上验证器](#toc.xhtml#s131a)
+- `new`：创建一个 Aiken 项目
+- `fmt`：格式化 Aiken 项目
+- `build`：编译 Aiken 项目
+- `address`：计算验证器地址
+- `check`：类型检查 Aiken 项目
+- `docs`：构建 Aiken 项目的文档
+- `add`：添加新的项目包作为依赖
+- `blueprint`：处理 Plutus 蓝图
+- `packages`：管理项目依赖
+- `tx`：处理交易
+- `uplc`：处理无类型 Plutus-core
+- `completion`：生成 shell 自动补全脚本
+- `help`：打印此消息或给定子命令的帮助
 
-
+# Aiken 链上验证器
 
 现在，我们准备好查看第一个 Aiken 验证器脚本，如`图 6.10`所示：
 
@@ -1801,29 +1691,29 @@ help    打印此消息或给定子命令的帮助
 
 **图 6.10：** Aiken 上验证器声明¹⁰
 
-`图 6.10`中的前 5 行是我们将要用到的类的显式导入，随后是 `Datum` 和 `Redeemer` 类型。`Datum` 包含一个 `Hash` 对象，该对象包含一个 `Blake2b_224` 和一个 `VerificationKey` 对象。需要注意的是，这在链上被存储为代表公钥哈希的单个 `ByteArray`（`字节数组`）。在第 15 行，`Redeemer` 包含两个条件（`Cancel` 和 `Claim`），用于花费锁定在该脚本地址上的 UTXO。`Claim` 还原器还包含一个使用 `ByteArray` 数据类型的 `msg` 负载。在第 21 行，我们将“Hello World!”消息硬编码为脚本常量。
+`图 6.10`中的前 5 行是我们将要用到的类的显式导入，随后是`Datum`和`Redeemer`类型。`Datum`包含一个`Hash`对象，该对象包含一个`Blake2b_224`和一个`VerificationKey`对象。需要注意的是，这在链上被存储为代表公钥哈希的单个`ByteArray`（`字节数组`）。在第 15 行，`Redeemer`包含两个条件（`Cancel`和`Claim`），用于花费锁定在该脚本地址上的 UTXO。`Claim`还原器还包含一个使用`ByteArray`数据类型的`msg`负载。在第 21 行，我们将“Hello World!”消息硬编码为脚本常量。
 
-接下来，在`图 6.11`中，我们在第 23 行定义了验证器函数，并以 `Datum`、`Redeemer` 和 `ScriptContext` 作为参数创建了归属函数：
+接下来，在`图 6.11`中，我们在第 23 行定义了验证器函数，并以`Datum`、`Redeemer`和`ScriptContext`作为参数创建了归属函数：
 
 ![](img/Figure-6.11.jpg)
 
 **图 6.11：** Aiken 上验证器主体¹¹
 
-在第 26 行，我们确定了特定交易提供的 `Redeemer` 类型。在 `Cancel` 的情况下，第 29 行的代码会遍历签名者列表，并确认是否存在公钥哈希与 datum 中的公钥哈希匹配。如果为真，则验证器评估为真并允许花费锁定在脚本地址上的 UTXO。如果 `Redeemer` 是 `Claim`，我们将 `msg` 负载与第 32 行的硬编码消息进行比较。如果 `Redeemer` 没有匹配项，则验证器将失败并不允许花费锁定在脚本地址上的 UTXO。
+在第 26 行，我们确定了特定交易提供的`Redeemer`类型。在`Cancel`的情况下，第 29 行的代码会遍历签名者列表，并确认是否存在公钥哈希与 datum 中的公钥哈希匹配。如果为真，则验证器评估为真并允许花费锁定在脚本地址上的 UTXO。如果`Redeemer`是`Claim`，我们将`msg`负载与第 32 行的硬编码消息进行比较。如果`Redeemer`没有匹配项，则验证器将失败并不允许花费锁定在脚本地址上的 UTXO。
 
 ## Lucid 离链解锁
 
-我们将创建一个与在 Helios 中相同的 `Unlock.tsx` 组件，并在 `index.tsx` 中创建一个 `unlock` 函数。我们需要为 `unlock` 函数创建一个 `Redeemer`，但不需要创建 `Datum`，因为其已经是我们想要花费的 UTXO 的一部分。`图 6.12`中第 172 行的 `Redeemer` 创建了一个 Plutus `Data` 对象，该对象对应于《第 4 章，Plutus》中看到的数据类型。在这种情况下，我们在索引为 1 的处创建了一个 `Constr`，其中包含一个十六进制编码的字符串。当脚本被求值时，该十六进制编码的字符串将转换为 `Redeemer` 的 `ByteArray` 负载。我们指定索引为 1 是因为 `Cancel` 是 Plutus 脚本中定义的第一个 `Redeemer`，索引为 0。按顺序的下一个 `Redeemer` 索引为 1，即 `Claim`。
+我们将创建一个与在 Helios 中相同的`Unlock.tsx`组件，并在`index.tsx`中创建一个`unlock`函数。我们需要为`unlock`函数创建一个`Redeemer`，但不需要创建`Datum`，因为其已经是我们想要花费的 UTXO 的一部分。`图 6.12`中第 172 行的`Redeemer`创建了一个 Plutus`Data`对象，该对象对应于《第 4 章，Plutus》中看到的数据类型。在这种情况下，我们在索引为 1 的处创建了一个`Constr`，其中包含一个十六进制编码的字符串。当脚本被求值时，该十六进制编码的字符串将转换为`Redeemer`的`ByteArray`负载。我们指定索引为 1 是因为`Cancel`是 Plutus 脚本中定义的第一个`Redeemer`，索引为 0。按顺序的下一个`Redeemer`索引为 1，即`Claim`。
 
 ![](img/Figure-612.jpg)
 
 **图 6.12：** Lucid 离链解锁¹²
 
-在第 175 行，通过调用 `lucid.utxosAt` 函数获取锁定在脚本地址上的 UTXO，该函数使用 Blockfrost API 查询区块链。接下来，我们在第 182 行构建交易并指定输入 UTXO，并在第 183 行指定 `Validator` 脚本。我们现在可以使用 `.complete()` 方法组装 Aiken 交易。我们将使用 Lucid 方法来组装并提交交易。在交易完成后，钱包将请求用户签名并提交。
+在第 175 行，通过调用`lucid.utxosAt`函数获取锁定在脚本地址上的 UTXO，该函数使用 Blockfrost API 查询区块链。接下来，我们在第 182 行构建交易并指定输入 UTXO，并在第 183 行指定`Validator`脚本。我们现在可以使用`.complete()`方法组装 Aiken 交易。我们将使用 Lucid 方法来组装并提交交易。在交易完成后，钱包将请求用户签名并提交。
 
 ## Lucid 离链取消
 
-最后，我们将创建一个与 Helios 中相同的 `Cancel.tsx` 组件，并在 `index.tsx` 中创建一个 `cancel` 函数。`图 6.13` 第 226 行的 `Cancel.tsx` 组件与 `Lock.tsx` 组件几乎相同，不同在于交易所需的签名。链上代码需要查看公钥哈希匹配存储在 datum 中的公钥哈希。
+最后，我们将创建一个与 Helios 中相同的`Cancel.tsx`组件，并在`index.tsx`中创建一个`cancel`函数。`图 6.13`第 226 行的`Cancel.tsx`组件与`Lock.tsx`组件几乎相同，不同在于交易所需的签名。链上代码需要查看公钥哈希匹配存储在 datum 中的公钥哈希。
 
 ![](img/Figure-613.jpg)
 
@@ -1846,40 +1736,37 @@ npm run dev
 
 ## 总结
 
-我们查看了使用 Helios 和 Aiken 构建的第一个链上验证器及其对应的离链代码。我们查看了如何使用 Aiken 初始化项目以及编译 Aiken 合约。然后，检查了 `ScriptContext` 以及它包含的输入、输出、脚本等交易信息。我们还查看了链上的 `Datum` 和 `Redeemer` 定义以及它们在脚本执行期间如何访问。示例中还演示了离链 `Redeemer` 和所需签名者的创建。下一章将深入铸币策略、参数化智能合约和原生代币的铸造。
+我们查看了使用 Helios 和 Aiken 构建的第一个链上验证器及其对应的离链代码。我们查看了如何使用 Aiken 初始化项目以及编译 Aiken 合约。然后，检查了`ScriptContext`以及它包含的输入、输出、脚本等交易信息。我们还查看了链上的`Datum`和`Redeemer`定义以及它们在脚本执行期间如何访问。示例中还演示了离链`Redeemer`和所需签名者的创建。下一章将深入铸币策略、参数化智能合约和原生代币的铸造。
 
 ## 知识点回顾
 
-*   Helios 用于链上和离链代码。
-*   Helios 链上代码可以动态编译，因为 Helios 编译器是用 JavaScript 编写的。
-*   Aiken 用于链上代码，并在运行时使用基于 Rust 的 `aiken` 编译器进行编译。
-*   Aiken 生成一个包含 Plutus 脚本元数据和类型定义的蓝文件。
-*   `aiken` 程序具有多个方便的实用函数，可在智能合约开发中使用。
-*   Lucid 用于离链代码，并经常与 Aiken 配合使用。
-*   Lucid 和 Helios 离链代码依赖区块链 API 提供者来获取锁定在脚本地址上的 UTXO。
-*   Helios 离链代码可以导入 Helios 链上代码，从而共享类型定义。
-*   Helios 离链代码不需要任何第三方库并整合在一个文件中。
-*   每个 UTXO 必须提供一个 `Redeemer`。
-*   签名者必须在交易中包含签名。
-
-
-
+- Helios 用于链上和离链代码。
+- Helios 链上代码可以动态编译，因为 Helios 编译器是用 JavaScript 编写的。
+- Aiken 用于链上代码，并在运行时使用基于 Rust 的`aiken`编译器进行编译。
+- Aiken 生成一个包含 Plutus 脚本元数据和类型定义的蓝文件。
+- `aiken`程序具有多个方便的实用函数，可在智能合约开发中使用。
+- Lucid 用于离链代码，并经常与 Aiken 配合使用。
+- Lucid 和 Helios 离链代码依赖区块链 API 提供者来获取锁定在脚本地址上的 UTXO。
+- Helios 离链代码可以导入 Helios 链上代码，从而共享类型定义。
+- Helios 离链代码不需要任何第三方库并整合在一个文件中。
+- 每个 UTXO 必须提供一个`Redeemer`。
+- 签名者必须在交易中包含签名。
 
 ## 6. 交易所需的签名者的 CDDL 规范标识符是什么？
 
 ## 核心术语
 
-- `Auxiliary Data`: 关于交易的元数据，仅将元数据的哈希存储在链上。
-- `Blake2b`: 一种基于字节输入生成哈希的算法。
-- `Blueprint`: 一个由 Aiken 生成的文件，包含 Plutus 脚本元数据和类型定义。
-- `Blockfrost`: 块链数据的 API 提供者。
-- `ByteArray`: 使用十六进制格式编码的字节数组。
-- `Contract Parameter`: 链上变量，可以在编译期间或运行时进行更新。
-- `Enum`: 一种可以枚举并用于 switch/case 语句的数据类型。
-- `ScriptContext`: 包含当前正在评估交易的所有信息，辅助数据（`Auxiliary Data`）除外。
-- `Spending script` (花费脚本): 用于花费锁定在脚本地址的 UTXO 的验证器类型。
-- `Switch Statement` (切换语句): 用于评估不同的枚举（`Enum`）组合情况。
-- `VerificationKey` (验证密钥): 对应私钥的公钥。
+- `Auxiliary Data`：关于交易的元数据，仅将元数据的哈希存储在链上。
+- `Blake2b`：一种基于字节输入生成哈希的算法。
+- `Blueprint`：一个由 Aiken 生成的文件，包含 Plutus 脚本元数据和类型定义。
+- `Blockfrost`：块链数据的 API 提供者。
+- `ByteArray`：使用十六进制格式编码的字节数组。
+- `Contract Parameter`：链上变量，可以在编译期间或运行时进行更新。
+- `Enum`：一种可以枚举并用于 switch/case 语句的数据类型。
+- `ScriptContext`：包含当前正在评估交易的所有信息，辅助数据（`Auxiliary Data`）除外。
+- `Spending script`（花费脚本）：用于花费锁定在脚本地址的 UTXO 的验证器类型。
+- `Switch Statement`（切换语句）：用于评估不同的枚举（`Enum`）组合情况。
+- `VerificationKey`（验证密钥）：对应私钥的公钥。
 
 ---
 
@@ -1901,38 +1788,38 @@ npm run dev
 
 ## 引言
 
-在本章中，我们将研究原生资产（native assets）以及它们与使用 `ERC20` 和 `ERC721` 标准令牌的区别。我们将讨论令牌包（bundles）的概念以及硬币选择（selection）。接下来，我们将深入探讨非同质代币（NFTs）和同质代币（FTs）。我们还将审查 `CIP25` 和 `CIP68` 等 NFT 元数据标准。最后，我们将介绍令牌注册表（Token Registry）及其对钱包体验的影响，并结合一个铸造案例。
+在本章中，我们将研究原生资产（native assets）以及它们与使用`ERC20`和`ERC721`标准令牌的区别。我们将讨论令牌包（bundles）的概念以及硬币选择（selection）。接下来，我们将深入探讨非同质代币（NFTs）和同质代币（FTs）。我们还将审查`CIP25`和`CIP68`等 NFT 元数据标准。最后，我们将介绍令牌注册表（Token Registry）及其对钱包体验的影响，并结合一个铸造案例。
 
 ## 结构
 
 在本章中，我们将讨论以下主题：
 
 - 令牌（Tokens）
-    - 原生资产（Native Assets）
-    - 令牌包（Bundles）
-    - 铸造策略（Minting Policy）
-    - 同质代币（Fungible Tokens）
-    - 非同质代币（Non-Fungible Tokens）
-    - 注册表（Token Registry）
-    - NFT 元数据标准（Metadata Standards）
-        - `CIP25`
-        - `CIP68`
+  - 原生资产（Native Assets）
+  - 令牌包（Bundles）
+  - 铸造策略（Minting Policy）
+  - 同质代币（Fungible Tokens）
+  - 非同质代币（Non-Fungible Tokens）
+  - 注册表（Token Registry）
+  - NFT 元数据标准（Metadata Standards）
+    - `CIP25`
+    - `CIP68`
 - 硬币选择（Coin Selection）
-    - 铸造案例（Minting Use Case）
+  - 铸造案例（Minting Use Case）
 
 ## 令牌
 
-2021 年 3 月 1 日，作为 Mary 硬叉的一部分，Cardano 升级到了多资产账本。这是一个重大事件，因为原生令牌现在可以利用用于原生货币 `Ada` 的安全且经过评审的账本规则。这与以太不同，以太需要遵循 `ERC20` 或 `ERC721` 标准的自定义账本代码。此外，不需要特殊的费用或额外的事件处理逻辑来跟踪关联交易。¹
+2021 年 3 月 1 日，作为 Mary 硬叉的一部分，Cardano 升级到了多资产账本。这是一个重大事件，因为原生令牌现在可以利用用于原生货币`Ada`的安全且经过评审的账本规则。这与以太不同，以太需要遵循`ERC20`或`ERC721`标准的自定义账本代码。此外，不需要特殊的费用或额外的事件处理逻辑来跟踪关联交易。¹
 
 ## 原生资产
 
-原生资产是 Cardano 上的自定义令牌，其运行方式与基础货币 `Ada` 相同。唯一的要求是原生资产必须包含少量的 `Ada`。`CIP55`²：
+原生资产是 Cardano 上的自定义令牌，其运行方式与基础货币`Ada`相同。唯一的要求是原生资产必须包含少量的`Ada`。`CIP55`²：
 
-- **策略标识符 (ID):** 唯一标识符，是铸造策略 Plutus 脚本的哈希。
+- **策略标识符 (ID)：** 唯一标识符，是铸造策略 Plutus 脚本的哈希。
 - **资产名称：** 特定铸造策略上的不可变令牌名称。
-- **数量:** 计数单位。
+- **数量：** 计数单位。
 
-(*) `Ada` 是唯一策略 ID 为空字符串的资产。
+(*) `Ada`是唯一策略 ID 为空字符串的资产。
 
 ## 令牌包
 
@@ -1945,16 +1832,10 @@ npm run dev
     "Game Monetary Policy ID": {
       "Gold": "100",
       "Silver": "1,000",
-      "Bronze": "10,000",
+      "Bronze": "10,000"
     },
     "Game Character Policy ID": {
-      "Dracula": "1"
-    }
-  }
-}
 ```
-
-
 
 
 
@@ -1971,18 +1852,18 @@ Cardano 上有两种不同类型的铸币策略：
 
 铸币策略的编写方式与我们编写验证脚本类似。验证脚本与铸币策略之间的区别在于，铸币策略使用了 `minting` 脚本用途且不使用数据（datum）。`minting` 脚本用途允许铸币策略作为交易的一部分来铸造或销毁原生代币。在铸币策略的自定义逻辑中，仅定义铸造或销毁的条件。
 
-# 同质化代币 (Fungible Tokens)
+## 同质化代币 (Fungible Tokens)
 
 你可能想创建一个供应量为 1,000,000 个令牌的货币策略。该铸币策略将允许一次性铸造 1,000,000 个令牌，每个令牌具有相同的名称。这使得每个令牌同质或可以交易，类似于目前的法币运行方式。
 
 ## 非同质代币 (Non-Fungible Tokens)
 
-非同质代币 (`NFT`)是指每个令牌都是独特且不同的。在 Cardano 上创建唯一令牌有两种方法。
+非同质代币（`NFT`）是指每个令牌都是独特且不同的。在 Cardano 上创建唯一令牌有两种方法。
 
 * 方案 1：时间锁，令牌只能在特定的日期和时间之前铸造。
 * 方案 2：铸币策略逻辑，检查输入中必须花费的 UTXO 是否存在。
 
-第二种方案更优，因为它利用了 Cardano UTXO 架构的独特属性。一旦 UTXO 被花费，它就无法再次被花费，且不会有具有相同哈值的 UTXO。通过将此条件硬编码到铸币策略中，并确保只铸造一个令牌，我们保证了令牌的唯一性。时间锁方法在智能合约功能可用之前曾使用，但在创建大型 NFT 集合时仍在使用这种方法。
+第二种方案更优，因为它利用了 Cardano UTXO 架构的独特属性。一旦 UTXO 被花费，它就无法再次被花费，且不会有具有相同哈希值的 UTXO。通过将此条件硬编码到铸币策略中，并确保只铸造一个令牌，我们保证了令牌的唯一性。时间锁方法在智能合约功能可用之前曾使用，但在创建大型 NFT 集合时仍在使用这种方法。
 
 ## 令牌注册表 (Token Registry)
 
@@ -2002,30 +1883,27 @@ CIP-25 NFT 元数据的格式如图 7.1 所示：
 Figure 7.1: CIP-25 NFT Metadata
 ```
 
-标签 721 表示这是元数据，且格式是灵活，允许你根据需要添加额外的元素。要在生产环境中测试并验证有效的元数据，你可以使用 `Pool.pm` 测试⁷。
+标签 721 表示这是元数据，且格式是灵活的，允许你根据需要添加额外的元素。要在生产环境中测试并验证有效的元数据，你可以使用 `Pool.pm` 测试⁷。
 
 ## CIP-68
 
 CIP-25 的缺点是它是随原始铸造交易创建的，且不可更新。CIP-68[⁸] 通过使用引用令牌（reference token）的概念解决了这个问题，引用令牌是在 NFT 或 FT 创建同时创建的。引用令牌可以锁定在一个不可花费的脚本地址以保持不可变性，也可以在需要更新时锁定在花费地址上。元数据存储在包含在引用令牌 UTXO 中的 datum 中。随着 2022 年 9 月的 Vasil 硬叉，引入了引用输入，允许 Plutus 脚本将 UTXO 作为只读包含，而无需花费它。因此，任何数量的交易（即使是并行）都可以包含只读 UTXO 而不会产生任何并发问题。
 
-在[图 7.2] 中，我们可以看到铸造交易如何生成用户令牌和引用令牌，它们使用相同的令牌名称和铸币策略 ID 链接。令牌名称以前缀 222 表示 NFT 令牌，以 100 表示引用令牌。对于同质化代币，使用前缀 333。需要注意的是，引用令牌与 NFT 或 FT 令牌不需要同时铸造。
+在[图 7.2]中，我们可以看到铸造交易如何生成用户令牌和引用令牌，它们使用相同的令牌名称和铸币策略 ID 链接。令牌名称以前缀 222 表示 NFT 令牌，以 100 表示引用令牌。对于同质化代币，使用前缀 333。需要注意的是，引用令牌与 NFT 或 FT 令牌不需要同时铸造。
 
 ```
 Figure 7.2: CIP-68 Datum Metadata
 ```
 
-在[第 9 章，票务应用设计]中，我们将通过真实示例详细详细讨论创建和使用 CIP-68 元数据数据的过程。
+在[第 9 章，票务应用设计]中，我们将通过真实示例详细讨论创建和使用 CIP-68 元数据数据的过程。
 
 ## 硬币选择 (Coin Selection)
 
 硬币选择是确定需要哪些 UTXO 输入来覆盖 UTXO 输出成本（包括网络费用）的过程。在硬币选择过程中，我们需要注意许多约束条件如下[⁹]。
 
 * 交易的最大大小限制，每个 UTXO（无论是作为输入还是输出）都会增加整个交易的大小。
-* 极小 UTXO（**dust**）的积累，它们是无法花费的，因为你无法合并足够的数量来覆盖交易成本。
+* 极小 UTXO（`dust`）的积累，它们是无法花费的，因为你无法合并足够的数量来覆盖交易成本。
 * UTXO 不能部分花费；它必须作为交易的一部分被完全花费。
-
-
-
 
 因此，硬币选择算法的目标是避免 `dust` 并创建可用的 UTXO。硬币选择算法的考虑因素同时适用于 Ada 和原生代币。硬币选择常用的方法是“最大优先”（Largest-first）和“随机改进”（Random Improve）。最大优先按照从最大值到最小值的顺序选择 UTXO 输入。随机改进算法分为两个阶段：第一阶段遍历降序排列的 UTXO 输入列表，并随机选择 UTXO 直到获得所需的输出金额。在第二阶段，算法再次从降序排列的 UTXO 输入列表中随机选择，直到其金额大约是输出金额的两倍。硬币选择通常由钱包和/或交易构建器框架实现。尽管如此，在选择 UTXO 输入时，理解硬币选择算法至关重要。此外，你需要意识到用户可能会遇到与 `dust` 相关或由于输入需要过多 UTXO 导致的 UTXO 碎片化问题。
 
@@ -2047,7 +1925,7 @@ Figure 7.2: CIP-68 Datum Metadata
 
 ## Helios 链上铸造策略
 
-[图 7.3]中第一行的链上 Helios 铸造策略规定了脚本用途为 `minting`，脚本名称为 `ticket.`。第 7 行和第 8 行有两个 Redeemer 条件：`Mint` 和 `Burn`。第 11–16 行的合约参数将在运行时动态更新。因此，目前它们用占位值初始化，并在离线代码中更新。
+[图 7.3]中第一行的链上 Helios 铸造策略规定了脚本用途为 `minting`，脚本名称为 `ticket`。第 7 行和第 8 行有两个 Redeemer 条件：`Mint` 和 `Burn`。第 11–16 行的合约参数将在运行时动态更新。因此，目前它们用占位值初始化，并在离线代码中更新。
 
 ![](img/Figure-7.3.jpg)
 
@@ -2075,7 +1953,7 @@ Figure 7.2: CIP-68 Datum Metadata
 
 **图 7.6：** Helios 离线铸造代币
 
-在这个铸造用例中，我们还利用了 CIP25 标准。在[图 7.7]的第 160 行，我们调用了 `generateMetadata`，它返回一个类似 JSON 的记录用于数据。`name, qty, utxoId` 和 `utxoIdx` 将存储在元数据中，如果以后需要销毁，可以使用它们来重构铸造策略。`mintingPolicyHash, name, description` 和 `image` 用于离线在钱包、dApp 和区块链浏览器中显示该代币。
+在这个铸造用例中，我们还利用了 CIP25 标准。在[图 7.7]的第 160 行，我们调用了 `generateMetadata`，它返回一个类似 JSON 的记录用于数据。`name`, `qty`, `utxoId` 和 `utxoIdx` 将存储在元数据中，如果以后需要销毁，可以使用它们来重构铸造策略。`mintingPolicyHash`, `name`, `description` 和 `image` 用于离线在钱包、dApp 和区块链浏览器中显示该代币。
 
 ![](img/Figure-7.7.jpg)
 
@@ -2085,7 +1963,7 @@ Figure 7.2: CIP-68 Datum Metadata
 
 可能存在销毁未售出门票的情况。由于 Cardano 账本跟踪并避免任何原生资产的双重花费，销毁门票只有在门票实际存在于交易输入时才能进行。因此，销毁代币的唯一方法是在钱包中实际持有该代币，以便作为交易输入。
 
-我们首先查看[图 7.8]中的第 230 行，它查询区块链以获取特定代币的铸造元数据。正如我们所记得，我们需要代币 `name, qty, utxoId` 和 `utxoIdx` 作为合约参数来重构正确的铸造策略。现在我们有了合约参数，可以编译脚本并将其附加到交易。我们还在第 246 行创建了 `Burn` Redeemer，允许相应地销毁门票。
+我们首先查看[图 7.8]中的第 230 行，它查询区块链以获取特定代币的铸造元数据。正如我们所记得，我们需要代币 `name`, `qty`, `utxoId` 和 `utxoIdx` 作为合约参数来重构正确的铸造策略。现在我们有了合约参数，可以编译脚本并将其附加到交易。我们还在第 246 行创建了 `Burn` Redeemer，允许相应地销毁门票。
 
 最后，我们从存储在元数据中的 `policyId` 构建 `MintingPolicyHash`，并在第 252 行通过负数 `qty` 数字添加要销毁的代币，如[图 7.9]所示。
 
@@ -2095,16 +1973,13 @@ Figure 7.2: CIP-68 Datum Metadata
 
 ## Aiken 链上铸造策略
 
-
-
-
-Aiken 链上铸造策略使用 `token_name`、`qty,` 和 `utxo_ref` 作为合约参数，它们在第 15 行运行时应用，如图 7.10 所示。只有 `Redeemer` 和 `ScriptContext` 被传递给 ticket 函数，该函数包含了铸造策略逻辑。第 18 行，使用 `expect` 语句从脚本 `purpose` 为 `policy_id` 创建一个新绑定。第 19 行，我们解构了 `Transaction` 类型，并从交易中提取出输入和铸造值。然后，我们在第 22 行使用 `expect` 语句将来自铸造值的二元组与 `asset_name` 和 `amount` 绑定，并匹配 `policy_id`。现在我们拥有了执行 `Redeemer` 条件所需的所有信息。在第 31 行和第 32 行，我们检查输入是否包含作为合约参数传递的 `utxo_ref`。第 34 行，我们确认资产名称和数量与提供的合约参数匹配。第 37 行的 `Burn Redeemer` 允许销毁任何负数数量，只要该脚本铸造策略中的 `asset_name` 包含在交易中。
+Aiken 链上铸造策略使用 `token_name`, `qty` 和 `utxo_ref` 作为合约参数，它们在第 15 行运行时应用，如图 7.10 所示。只有 `Redeemer` 和 `ScriptContext` 被传递给 ticket 函数，该函数包含了铸造策略逻辑。第 18 行，使用 `expect` 语句从脚本 `purpose` 为 `policy_id` 创建一个新绑定。第 19 行，我们解构了 `Transaction` 类型，并从交易中提取出输入和铸造值。然后，我们在第 22 行使用 `expect` 语句将来自铸造值的二元组与 `asset_name` 和 `amount` 绑定，并匹配 `policy_id`。现在我们拥有了执行 `Redeemer` 条件所需的所有信息。在第 31 行和第 32 行，我们检查输入是否包含作为合约参数传递的 `utxo_ref`。第 34 行，我们确认资产名称和数量与提供的合约参数匹配。第 37 行的 `Burn Redeemer` 允许销毁任何负数数量，只要该脚本铸造策略中的 `asset_name` 包含在交易中。
 
 ![](img/Figure-7.10.jpg)
 
 **图 7.10:** Aiken 链上铸造策略^(18
 
-# Lucid 链外铸造](#toc.xhtml#s159a)
+## Lucid 链外铸造
 
 Lucid 链外代码与 Helios 链外代码非常相似，我们将仅展示这两种方法之间的差异。特别是，合约参数的应用方式不同，如图 7.11 所示。第 89 行，一个自定义函数接收合约参数，然后在第 96 行将其应用于 Plutus 铸造策略脚本。Plutus 脚本是从蓝图文件读取的，该文件是由 `aiken build` 命令生成的。
 
@@ -2112,7 +1987,7 @@ Lucid 链外代码与 Helios 链外代码非常相似，我们将仅展示这两
 
 **图 7.11:** Lucid 应用的合约参数^(19
 
-在图 7.12 中，第 132 行使用从钱包中 UTXO 计算出的 `name`、`qty` 和 `outRef` 返回验证器（铸造策略）。第 135 行，手动构建 `Redeemer` 以匹配链上 Aiken 代码中的 `Redeemer`。`policyId` 和 `assetName` 分别在第 138 行和第 139 行使用 `validator` 脚本和 `name` 构建。
+在图 7.12 中，第 132 行使用从钱包中 UTXO 计算出的 `name`, `qty` 和 `outRef` 返回验证器（铸造策略）。第 135 行，手动构建 `Redeemer` 以匹配链上 Aiken 代码中的 `Redeemer`。`policyId` 和 `assetName` 分别在第 138 行和第 139 行使用 `validator` 脚本和 `name` 构建。
 
 ![](img/Figure-7.12.jpg)
 
@@ -2126,7 +2001,7 @@ Lucid 链外代码与 Helios 链外代码非常相似，我们将仅展示这两
 
 Lucid 链外销毁与铸造类似，不同在于 `mintAssets()` 使用负数数量且没有元数据或交易输出。
 
-# 钱包信息](#toc.xhtml#s160a)
+## 钱包信息
 
 由于我们处理的是原生资产，我们修改了 `WalletInfo` 组件以显示用户钱包中的 Lovelace 和任何原生资产。这需要调用 `Blockfrost` API 获取资产列表，然后填充一个显示在 UI 上的数组，如图 7.14 所示。
 
@@ -2134,7 +2009,7 @@ Lucid 链外销毁与铸造类似，不同在于 `mintAssets()` 使用负数数�
 
 **图 7.14:** Lucid getWalletInfo^(22
 
-# 设置](#toc.xhtml#s161a)
+## 设置
 
 为了设置运行 Lucid + Aiken 演示的 `Demeter.run` 环境，请在终端中执行以下命令（如果你尚未从第 6 章中执行过）：
 
@@ -2150,7 +2025,9 @@ npm install
 npm run dev
 ```
 
-# 演示](#toc.xhtml#s162a)
+
+
+# 演示
 
 图 7.15 显示 `WalletInfo` 组件中已有 100 个“Dog Show 1”令牌。
 
@@ -2174,13 +2051,13 @@ npm run dev
 
 ![](img/Figure-7.18.jpg)
 
-**图 7.18:** Cardano Explorer Mint Detail^(23
+**图 7.18:** Cardano Explorer Mint Detail
 
 我们也可以在图 7.19 的 Cardano 浏览器上验证元数据：
 
 ![](img/Figure-7.19.jpg)
 
-**图 7.19:** Cardano Explorer Mint Metadata^(24
+**图 7.19:** Cardano Explorer Mint Metadata
 
 接下来，我们将尝试销毁（取消）20 张票，因为需要为活动留留更多空间。用户需要输入铸造 `Policy ID`、令牌名称和要销毁的数量，如图 7.1 所示。只要用户钱包中有活动令牌，此操作就会成功。
 
@@ -2192,52 +2069,49 @@ npm run dev
 
 ![](img/Figure-7.21.jpg)
 
-**图 7.21:** Burn Token Transaction^(25
+**图 7.21:** Burn Token Transaction
 
-
-
-
-* 铸造策略（Minting policy）仅控制代币的铸造或销毁。
-* 铸造策略不管理代币的账本状态或流通量。
-* 需要链外代码通过检查针对特定铸造策略的所有铸造和销毁操作来确定流通量。
-* 非同质化代币（`NFT`s）是独特的独特的资产，彼此之间不可互换。
-* 同质化代币（`FT`s）是相同的，可以相互交换。
-* `CIP-25` 是一种在提交交易时使用的元数据标准。
-* `CIP-68` 使用引用标记（reference token）和数据值（datum value），根据用例可以是不可变的或可更新的。
-* 代币注册表（Token Registry）注册铸造策略和代币名称，以提供代币的元数据，这些数据会被钱包、区块链浏览器和交易所使用。
-* 使用适当的硬币选择算法对于避免粉尘（dust）很重要，粉尘是指金额很小的 UTXO，由于花费成本超过了其总价值而无法花费。
+- 铸造策略（Minting policy）仅控制代币的铸造或销毁。
+- 铸造策略不管理代币的账本状态或流通量。
+- 需要链外代码通过检查针对特定铸造策略的所有铸造和销毁操作来确定流通量。
+- 非同质化代币（`NFT`s）是独特的独特的资产，彼此之间不可互换。
+- 同质化代币（`FT`s）是相同的，可以相互交换。
+- `CIP-25` 是一种在提交交易时使用的元数据标准。
+- `CIP-68` 使用引用标记（reference token）和数据值（datum value），根据用例可以是不可变的或可更新的。
+- 代币注册表（Token Registry）注册铸造策略和代币名称，以提供代币的元数据，这些数据会被钱包、区块链浏览器和交易所使用。
+- 使用适当的硬币选择算法对于避免粉尘（dust）很重要，粉尘是指金额很小的 UTXO，由于花费成本超过了其总价值而无法花费。
 
 ## 单选题
 
 1. 下列哪种描述是错误的？
-    1. Cardano 原生代币等同于 `ERC-20` 代币
-    2. Cardano 原生资产使用基础账本防止双重花费
-    3. Cardano 铸造策略的代码通常比 `ERC-20` 合约少
-    4. Cardano 铸造策略通常比 `ERC-20` 合约更安全
+   1. Cardano 原生代币等同于 `ERC-20` 代币
+   2. Cardano 原生资产使用基础账本防止双重花费
+   3. Cardano 铸造策略的代码通常比 `ERC-20` 合约少
+   4. Cardano 铸造策略通常比 `ERC-20` 合约更安全
 
 2. 一次铸造策略（one-time Minting Policy）是如何创建初始流通量的？
-    1. 铸造策略内部的自定义代码
-    2. 查询 Cardano 账本
-    3. 查询铸造策略元数据
-    4. 以上都不是
+   1. 铸造策略内部的自定义代码
+   2. 查询 Cardano 账本
+   3. 查询铸造策略元数据
+   4. 以上都不是
 
 3. `CIP-25` 元数据是如何存储在链上的？
-    1. 作为链上哈希值并作为交易的辅助数据包含
-    2. 以 JSON 格式并完整存储在链上
-    3. 链上不存储任何内容
-    4. 内容存储在 UTXO datum 中
+   1. 作为链上哈希值并作为交易的辅助数据包含
+   2. 以 JSON 格式并完整存储在链上
+   3. 链上不存储任何内容
+   4. 内容存储在 UTXO datum 中
 
 4. 你如何指定同质化代币（`FT`）的精度单位？
-    1. 仅在使用 `CIP-25` 时可能
-    2. 在 `Token Registry` 或 `CIP-68` 中
-    3. 在铸造策略内部
-    4. 以上都不是
+   1. 仅在使用 `CIP-25` 时可能
+   2. 在 `Token Registry` 或 `CIP-68` 中
+   3. 在铸造策略内部
+   4. 以上都不是
 
 5. 什么是 UTXO 碎片化？
-    1. 区块链上有许多 UTXO
-    2. 需要过多的 UTXO 作为输入以满足输出
-    3. 有太多的 UTXO 输出
-    4. 有太多的资产被锁定在一个 UTXO 中
+   1. 区块链上有许多 UTXO
+   2. 需要过多的 UTXO 作为输入以满足输出
+   3. 有太多的 UTXO 输出
+   4. 有太多的资产被锁定在一个 UTXO 中
 
 ## 答案
 
@@ -2257,90 +2131,77 @@ npm run dev
 
 ## 核心术语
 
-* **资产名称 (Asset Name)**：特定铸造策略在链上的不可变代币名称。
-* **CIP-25**：使用交易元数据的元数据标准。
-* **CIP-68**：使用引用标记和数据的元数据标准。
-* **集合 (Collection)**：代币包中组合在一起的代币。
-* **粉尘 (Dust)**：无法花费的极小价值 UTXO。
-* **ERC-20**：以太坊 FT 代币标准。
-* **ERC-721**：以太坊 NFT 代币标准。
-* **货币政策 (Monetary Policy)**：规定流通中代币的数量以及通胀或通缩率。
-* **策略标识符 (ID)**：铸造策略脚本的哈希值的唯一标识符。
-* **数量 (Quantity)**：记账单位。
-* **引用输入 (Reference Inputs)**：作为交易输入包含但无法花费的只读 UTXO。
+- **资产名称 (Asset Name)**：特定铸造策略在链上的不可变代币名称。
+- **CIP-25**：使用交易元数据的元数据标准。
+- **CIP-68**：使用引用标记和数据的元数据标准。
+- **集合 (Collection)**：代币包中组合在一起的代币。
+- **粉尘 (Dust)**：无法花费的极小价值 UTXO。
+- **ERC-20**：以太坊 FT 代币标准。
+- **ERC-721**：以太坊 NFT 代币标准。
+- **货币政策 (Monetary Policy)**：规定流通中代币的数量以及通胀或通缩率。
+- **策略标识符 (ID)**：铸造策略脚本的哈希值的唯一标识符。
+- **数量 (Quantity)**：记账单位。
+- **引用输入 (Reference Inputs)**：作为交易输入包含但无法花费的只读 UTXO。
 
-***
-
-[¹](https://github.com/IntersectMBO/cardano-ledger/blob/master/doc/explanations/features.rst)
-[²](https://github.com/cardano-foundation/CIPs/tree/master/CIP-0055)
-[³](https://developers.cardano.org/docs/native-tokens/minting/)
-[⁴](https://github.com/IntersectMBO/cardano-node/blob/1.35.7/doc/reference/simple-scripts.md)
-[⁵](https://github.com/cardano-foundation/cardano-token-registry)
-[⁶](https://github.com/cardano-foundation/CIPs/tree/master/CIP-025)
-[⁷](https://pool.pm/test/metadata)
-[⁸](https://github.com/cardano-foundation/CIPs/tree/master/CIP-068)
-[⁹](https://github.com/cardano-foundation/CIPs/tree/master/CIP-002)
-[⁰](https://github.com/cardano-foundation/CIPs/tree/master/CIP-002/algorithms)
-[¹](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_07/helios/ticket/ticket.hl)
-[²](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_07/helios/ticket/ticket.h)
-[³](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_07/helios/ticket/pages/index.tsx)
-[⁴](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_07/helios/ticket/pages/index.tsx)
-[⁵](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_07/helios/ticket/pages/index.tsx)
-[⁶](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_07/helios/ticket/pages/index.tsx)
-[⁷](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_07/helios/ticket/pages/index.tsx)
-[⁸](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_07/aiken/ticket/validators/ticket.ak)
-[⁹](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_07/aiken/ticket/pages/index.tsx)
-
-
-
-
+---
 
 # 第 8 章：工具链
 
 ## 引言
+
 开发智能合约通常涉及处理区块链之外（链下）的代码，并将其无缝集成到 Cardano 网络中。在本章中，我们将回顾一些您可以使用来完成这些任务的工具和服务提供商。首先，我们将深入研究 Cardano API 提供商，例如 `Blockfrost`、`Maestro` 和 `Koios`。接下，我们将探索使用 `Demeter.run` 托管环境来搭建 Cardano `Node`、`Ogmios` 和 `Kupo` 等服务。最后，我们将学习如何设置本地 Devnet，以便使用 SDK 进行快速开发和原型设计。
 
 ## 章节结构
+
 在本章中，我们将讨论以下内容：
-* 区块链 API/监控提供商
-    * Blockfrost
-    * Maestro
-    * Koios
-    * Dandelion
-* 工具链组件
-    * `Cardano-node`
-    * `Ogmios`
-    * `Kupo`
-    * 本地 Devnet
-* 额外资源
+
+- 区块链 API/监控提供商
+  - Blockfrost
+  - Maestro
+  - Koios
+  - Dandelion
+- 工具链组件
+  - `Cardano-node`
+  - `Ogmios`
+  - `Kupo`
+  - 本地 Devnet
+- 额外资源
 
 ## 区块链 API/监控提供商
+
 书中的示例演示了如何使用 `Blockfrost` API 查询区块链并提交交易。然而，在本节中，我们将查看其他广泛使用的区块链提供商和工具，它们有助于避免 Cardano 生态系统中中心化的单点故障。
 
 ### Blockfrost
-`Blockfrost` (`https://blockfrost.io/`) 是 Cardano 最早的提供商之一，凭借超过 1 亿次的日请求和 2 万多开发者，赢得了大量用户的信任。`Blockfrost` 拥有优秀的 API 文档和广泛的服务，从简单的区块链查询到适用于应用程序的 webhook 回调。他们提供免费层级计划，允许您为应用程序测试 API。您可以对其 API 发起 HTTP REST 调用，或者使用他们为 Node.js、Python、Rust、C# 等提供的便捷 `SDKs`。`Blockfrost` 支持主网、Preprod 网络和 Preview 网络，您还可以从他们的 `GitHub` 仓库运行自己的实例。
+
+`Blockfrost`（`https://blockfrost.io/`）是 Cardano 最早的提供商之一，凭借超过 1 亿次的日请求和 2 万多开发者，赢得了大量用户的信任。`Blockfrost` 拥有优秀的 API 文档和广泛的服务，从简单的区块链查询到适用于应用程序的 webhook 回调。他们提供免费层级计划，允许您为应用程序测试 API。您可以对其 API 发起 HTTP REST 调用，或者使用他们为 Node.js、Python、Rust、C# 等提供的便捷 `SDKs`。`Blockfrost` 支持主网、Preprod 网络和 Preview 网络，您还可以从他们的 `GitHub` 仓库运行自己的实例。
 
 ### Maestro
-2023 年 7 月 19 日，`Maestro` (`https://www.gomaestro.org/`) 发布了其 dApp 平台的 V1 版本，新功能显著提升了 Cardano 的集成体验：
-* **加速交易 (Turbo Transactions)**：通过 `Maestro` 的交易传播系统加速交易终局化。
-* **新的区块链索引器**：高性能、低延迟、优化的 Cardano 索引器，具有便捷且高效的 API。
-* **交易管理器**：一个交易监控系统，具有自动重试和零延迟的待处理、链上及回滚通知。
+
+2023 年 7 月 19 日，`Maestro`（`https://www.gomaestro.org/`）发布了其 dApp 平台的 V1 版本，新功能显著提升了 Cardano 的集成体验：
+
+- **加速交易 (Turbo Transactions)**：通过 `Maestro` 的交易传播系统加速交易终局化。
+- **新的区块链索引器**：高性能、低延迟、优化的 Cardano 索引器，具有便捷且高效的 API。
+- **交易管理器**：一个交易监控系统，具有自动重试和零延迟的待处理、链上及回滚通知。
 
 ## 代码示例
+
 在我们的归属和机票示例中，我们更改了 `pages/index.tsx` 中的 `Lucid` 提供者以使用 `Maestro`（包含在 `Lucid` 库中），如图 8.1 所示。
 
 ![](img/Figure-8.1.jpg)
+
 **图 8.1：** Lucid Maestro Provider
 
 机票铸造示例，我们还需要更改 `pages/api` 文件夹下 `getTicketMetadata.ts` 中的区块链查询。我们使用 `Maestro` 提供的 Node.js API，如图 8.2 所示。
 
 ![](img/Figure-8.2.jpg)
+
 **图 8.2：** Maestro TypeScript API
 
 在图 8.2 的第 18 行，我们创建了 `Maestro` 客户端，然后在第 27 行调用 `maestroClient.assets` 来获取资产元数据。
 
 ## 设置
-要设置 `Demeter.run` 环境来运行 `Maestro` ，请在终端窗口中执行以下命令：
+
+要设置 `Demeter.run` 环境来运行 `Maestro`，请在终端窗口中执行以下命令：
 
 ```bash
 export NEXT_PUBLIC_MAESTRO_API_KEY=your-maestro-key-here
@@ -2351,50 +2212,59 @@ export NEXT_PUBLIC_PORT=""
 ```
 
 ### Koios
+
 `Koios` 是一个分布式的、开源的 `RESTful` API，用于查询和提交 Cardano 区块链。它由受尊敬的 `Cardano Stakepool Guild Operators` 构建并维护。`Koios` 通过使用分布式处理架构（Cardano 的核心价值）来促进去中心化。您也可以直接从 `Helios` 库中使用 TypeScript `Koios` 提供者客户端。
 
 ### Dandelion
+
 `Dandelion` 是作为免费社区服务提供的 Cardano 区块链 API 集合。这些服务包括：
-* `GraphQL`
-* `Ogmios`
-* `Cardano DB Sync/Postgres API`
-* `Rosetta API`
+
+- `GraphQL`
+- `Ogmios`
+- `Cardano DB Sync/Postgres API`
+- `Rosetta API`
 
 ## 工具链组件
+
 Cardano 的主要优势之一是代码开源，您有能力自己下载、构建和运行所有所需组件。或者，您可以使用第三方提供商来管理和托管这些组件。我们已经看到了如何使用 `Demeter.run` 为书中的示例设置环境，但他们还提供了许多其他 Cardano 组件和服务。工具链组件用于查询、响应或与区块链进行交易。图 8.3 展示了一个典型的链下工具链设置，其中 `Cardano DB Sync` 处理来自 `Cardano Node` 的区块并将数据存储在 `Postgres Database` 中。应用程序随后查询数据库或相应地对区块链事件做出响应。
 
 ![](img/Figure-8.3.jpg)
+
 **图 8.3：** DB Sync 链下索引
 
+Cardano 区块链的核心组件是 Cardano Node，其源代码托管在 GitHub 上。你可以下载并编译源代码、运行静态二进制文件或使用 Docker 容器。`Demeter.run` 也提供了一个扩展，可以按如下方式置备 Cardano Node：
 
-
-
-
-Cardano 区块链的核心组件是 Cardano Node，其源代码托管在 GitHub 上。你可以下载并编译源代码、运行静态二进制文件或使用 Docker 容器。Demeter.run 也提供了一个扩展，可以按如下方式置备 Cardano Node：
-
-1. 前往 [`demeter.run/`](https://demeter.run/)
-2. 选择你想要部署到的项目。我们将为[第 5 章，交易构建器]中已创建的工作区启用此扩展。
+1. 前往 `demeter.run/`。
+2. 选择你想要部署到的项目。我们将为第 5 章，交易构建器中已创建的工作区启用此扩展。
 3. 一旦在[图 8.4]中置备了工作区，你必须通过向下滚动页面并选择“Connected Extensions”（已连接扩展）来启用 Cardano Node。
    ![](img/Figure-8.4.jpg)
    **图 8.4:** Demeter.run Cardano Workspace
 4. 选择“Browse Extensions”（浏览扩展）。
-5. 找到“Nodes”（节点）框，选择`Deploy`部署），然后点击`Provision Resource`置备资源）。
-6. 向下滚动，选择`Preprod`，并选择页面底部的`Create Resource`创建资源）按钮。
-7. 当你回到`Project Overview`（项目概览）时，你应该看到节点扩展已连接，如[图 8.5]所示。
+5. 找到“Nodes”（节点）框，选择 `Deploy`（部署），然后点击 `Provision Resource`（置备资源）。
+6. 向下滚动，选择 `Preprod`，并选择页面底部的 `Create Resource`（创建资源）按钮。
+7. 当你回到 `Project Overview`（项目概览）时，你应该看到节点扩展已连接，如[图 8.5]所示。
    ![](img/Figure-8.5.jpg)
    **图 8.5:** Demeter.run Cardano Node Connected
 8. 选择你之前置备的工作区。
-9. 点击工作区上的`Visual Studio Code`图标启动 Visual Studio Web 客户端。
-10. 从汉堡菜单中，选择`Terminal`（终端）->`New`新建）。
+9. 点击工作区上的 `Visual Studio Code` 图标启动 Visual Studio Web 客户端。
+10. 从汉堡菜单中，选择 `Terminal`（终端）-> `New`（新建）。
 
 要验证你的 `cardano-node` 已连接到网络，输入以下命令，你应该能看到 `syncProgress` 达到 100%。
 
-```
+```bash
 ~/workspace/repo$ cardano-cli query tip --testnet-magic 1
 {
   "block": 1595041,
   "epoch": 106,
   "era": "Babbage",
+```
+
+
+
+以下是排版后的内容：
+
+```json
+{
   "hash": "ed3be308f9538fe59241f5d90b333de06ddc581ee783ba0002d0c911b3bdf3f6",
   "slot": 44370786,
   "slotInEpoch": 220386,
@@ -2405,39 +2275,45 @@ Cardano 区块链的核心组件是 Cardano Node，其源代码托管在 GitHub 
 
 大多数连接到 `Cardano Node` 的工具都使用套接字，你可以通过打印 shell 环境变量找到套接字的位置：
 
-```
+```bash
 ~/workspace/repo$ echo $CARDANO_NODE_SOCKET_PATH
 /ipc/node.socket
 ```
 
 `cardano-cli` 是 Cardano 的瑞士军刀，有很多关于其用法的资源，建议从这里开始。输入 `cardano-cli` 查看以下顶级常用选项列表。使用 `--help` 标志获取每个命令的额外用法信息。
 
-```
+```bash
 ~/workspace/repo$ cardano-cli
 cardano-cli - 用于与 cardano-node 交互的通用命令行实用程序。提供了特定的命令来管理密钥、地址、构建并提交交易、证书等。
+
 用法: cardano-cli (基于 Era 的命令 | byron | ping | version)
+
 可用选项:
 --version             显示 cardano-cli 版本
 -h,--help             显示此帮助文本
+
 基于 Era 的命令
 address               付款地址命令
 stake-address         质押地址命令
 key                   密钥实用命令
 transaction           交易命令
 node                  节点操作命令
-stake-pool           质押池命令
+stake-pool            质押池命令
 query                 节点查询命令。
                       将查询从 CARDANO_NODE_SOCKET_PATH 环境变量
                       获取 Unix 域套接字的本地节点。
 genesis               创世块命令
-governance             治理命令
+governance            治理命令
 text-view             处理 Shelley TextView 文件的命令。
                       交易、地址
                       等以 TextView 文件的格式存储在磁盘上。
+
 Byron 特有命令
 byron                 Byron 特有命令
+
 可用命令:
 ping                  使用节点到节点或节点到客户端 ping 一个 cardano 节点。它会协商握手并保持存活。
+
 杂项命令
 help                  显示所有帮助
 version               显示 cardano-cli 版本
@@ -2445,13 +2321,15 @@ version               显示 cardano-cli 版本
 
 你现在可以访问 `cardano-address` 和 `bech32` 等命令行工具了。
 
-```
+```bash
 ~/workspace/repo$ cardano-address
 用法: cardano-address (-v|--version) | COMMAND)
 Cardano 中地址和密钥的命令行工具。
+
 可用选项:
 -h,--help             显示此帮助文本
 -v,--version          显示当前版本和构建修订。
+
 可用命令:
 version               显示当前版本和构建修订。
 recovery-phrase       关于恢复助词
@@ -2460,40 +2338,45 @@ address               关于地址
 script                关于脚本
 ```
 
-```
+```bash
 ~/workspace/repo$ bech32 --help
 用法: bech32 [PREFIX]
 在 bech32 字符串之间转换。数据从标准输入读取。
+
 可用选项:
 -h,--help             显示此帮助文本
 PREFIX                可选的可读性前缀（例如 'addr'）。
                       如果提供，输入文本将从各种编码格式解码并使用给定的前缀重新编码为 bech32。
                       如果省略，输入文本将从 bech32 解码为 base16。
 -v,--version          输出版本并退出
+
 支持的编码格式: Base16, Bech32 & Base58。
 ```
 
 示例：
 转换为 Bech32:
-```
+
+```bash
 $ bech32 base16 706174617465
 $ bech32 base58 Ae2tdPwUYy1p58rejhd9592usa8pz2s3x1wpshgcgeak9mv
 ```
+
 从 Bech32 转换:
-```
+
+```bash
 $ bech32 base16 706174617465
 ```
 
-Ogmios 是 Cardano 开发者最广泛使用和流行的工具之一，拥有完善的文档。它是一个通过 REST API 或 Web RPC 接口暴露 节点能力的层。它是开源的，可以从 GitHub 下载、构建并通过 Docker 容器安装。我们将使用 Demeter.run 部署托管版本，以便快速演示如何与它交互。
+Ogmios 是 Cardano 开发者最广泛使用和流行的工具之一，拥有完善的文档。它是一个通过 REST API 或 Web RPC 接口暴露节点能力的层。它是开源的，可以从 GitHub 下载、构建并通过 Docker 容器安装。我们将使用 Demeter.run 部署托管版本，以便快速演示如何与它交互。
 
 添加 Ogmios 扩展：
 
-1. 前往`Project` 页面，向下滚动并选择`BROWSE``浏览扩展），如[图 8.6]所示。
+1. 前往 `Project` 页面，向下滚动并选择 `BROWSE`（浏览扩展），如[图 8.6]所示。
    ![](img/Figure-8.6.jpg)
    **图 8.6:** Demeter.run Project View
 2. 选择 Ogmios Deploy。
-3. 选择`Create Resource`创建资源）和 `Preprod` 网络。
-4. 选择 v5 作为版本并点击`CREATE RESOURCE`创建资源）按钮。
+3. 选择 `Create Resource`（创建资源）和 `Preprod` 网络。
+4. 选择 v5 作为版本并点击 `CREATE RESOURCE`（创建资源）按钮。
 5. 你看到实例正在运行，如[图 8.7]所示。
    ![](img/Figure-8.7.jpg)
    **图 8.7:** Demeter.run Ogmios Live
@@ -2502,8 +2385,8 @@ Ogmios 是 Cardano 开发者最广泛使用和流行的工具之一，拥有完�
 
 1. 前往 URL：[`hoppscotch.io/realtime/websocket`](https://hoppscotch.io/realtime/websocket)。
 2. 粘贴 Ogmios 的公共 https 主机并在地址前加上 `wss://`。
-3. 选择`Connect`连接。
-4. 然后粘贴以下查询并选择`Send`发送：
+3. 选择 `Connect`（连接）。
+4. 然后粘贴以下查询并选择 `Send`（发送）：
 
 ```json
 {
@@ -2521,13 +2404,9 @@ Ogmios 是 Cardano 开发者最广泛使用和流行的工具之一，拥有完�
    ![](img/Figure-8.8.jpg)
    **图 8.8:** Hoppscotch Ogmios Success
 
-
-
-
-
 `Kupo` 是一个开源 Cardano 区块链索引器，快速、轻量级且可配置。其 API 文档非常优秀，是许多倾向于使用内部工具的 Cardano 开发团队的首选。区块链被设计为一系列连接在一起的区块，形成链。然而，这使得执行高效的数据查询变得困难。这就是为什么我们需要索引器，它接收区块链数据并将其存储在数据库中。这些数据可以被索引，然后进行查询、过滤和分析。`Kupo` 可以在本地下载、构建和安装，也可以使用 `Demeter.run` 设置为托管服务。
 
-我们将再次回到项目页面并添加另一个资源，这次是一个 `Kupo` 资源。选择 `deploy` 并为 preprod 网络创建资源。接下来，复制 `https` URL 以备备后参考。我们应该看到四个资源：`Workspace`、`Node`、`Ogmios` 和 `Kupo`，如图 8.9 所示。
+我们将再次回到项目页面并添加另一个资源，这次是一个 `Kupo` 资源。选择 `deploy` 并为 preprod 网络创建资源。接下来，复制 `https` URL 以备后参考。我们应该看到四个资源：`Workspace`、`Node`、`Ogmios` 和 `Kupo`，如图 8.9 所示。
 
 ![](img/Figure-8.9.jpg)
 
@@ -2545,7 +2424,7 @@ kupo_connection_status  1.0
 kupo_most_recent_checkpoint  59235759
 # TYPE kupo_most_recent_node_tip counter
 kupo_most_recent_node_tip  59235759
-
+```
 
 在这种情况下，`Kupo` 实例是健康的，你可以看到最近的 `checkpoint`（检查点）和 `node tip`（节点提示）。检查点是被 `Kupo` 处理过的链区块，主要用于重启后与区块链同步。
 
@@ -2563,7 +2442,7 @@ kupo_most_recent_node_tip  59235759
 
 **图 8.11:** Kupo getMetadata
 
-从 `Kupo` 获取元数据，首先获取与铸造交易（mint transaction）相关的交易。第 70 提供了令牌资产，结果按区块链上发生的交易顺序排序。因此，铸造是第一笔交易，所以使用第一个交易 ID，然后在第 73 行查找该特定交易的元数据。第 76–81 行解析元数据并将结果返回给前端。
+从 `Kupo` 获取元数据，首先获取与铸造交易（mint transaction）相关的交易。第 70 行提供了令牌资产，结果按区块链上发生的交易顺序排序。因此，铸造是第一笔交易，所以使用第一个交易 ID，然后在第 73 行查找该特定交易的元数据。第 76–81 行解析元数据并将结果返回给前端。
 
 ## 设置
 
@@ -2580,7 +2459,7 @@ $ export NEXT_PUBLIC_PORT=""
 
 ## 本地开发网
 
-感谢 `BoxBean` 的出色工作；现在安装本地 Devnet 变得简单，类似于以的 Hardhat。`Yaci Devkit` 使用轻量级组件进行索引和查询区块链数据。特别是，`BoxBean` 创建了 `Yaci`，这是一个基于 Java 的模块化 Ouroboros 最小协议，用于监听传入的区块、监控本地内存池并提交交易。团队还创建了 `Yaci Store`，这是一个基于 Java 的解决方案，提供 API 来查询索引数据并处理回滚。为了实现与 `Nami` 和 `Helios` 等浏览器钱包集成以进行离线交易构建，本地 Devnet 还将使用本地 `Cardano DB Sync` 将区块链数据馈送给本地 `Blockfrost API` 提供程序。
+感谢 `BoxBean` 的出色工作；现在安装本地 Devnet 变得简单，类似于以太坊的 Hardhat。`Yaci Devkit` 使用轻量级组件进行索引和查询区块链数据。特别是，`BoxBean` 创建了 `Yaci`，这是一个基于 Java 的模块化 Ouroboros 最小协议，用于监听传入的区块、监控本地内存池并提交交易。团队还创建了 `Yaci Store`，这是一个基于 Java 的解决方案，提供 API 来查询索引数据并处理回滚。为了实现与 `Nami` 和 `Helios` 等浏览器钱包集成以进行离线交易构建，本地 Devnet 还将使用本地 `Cardano DB Sync` 将区块链数据馈送给本地 `Blockfrost API` 提供程序。
 
 设置本地开发网需要以下五个步骤：
 
@@ -2592,18 +2471,17 @@ $ export NEXT_PUBLIC_PORT=""
 
 ## 环境
 
-以下设置指令已在 Ubuntu Linux 20.04.1 上经过过测试。对于其他操作系统，你可能需要额外的设置。
+以下设置指令已在 Ubuntu Linux 20.04.1 上经过测试。对于其他操作系统，你可能需要额外的设置。
 
 ## 安装 Docker
 
 ```bash
-$ sudo apt -y install apt-transport-https ca-certificates curl
-software-properties-common
+$ sudo apt -y install apt-transport-https ca-certificates curl software-properties-common
 $ curl -fsSL https://download.docker.com/linux/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-keyring.gpg
 $ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list
 $ sudo apt update
 $ sudo apt -y docker-ce docker-ce-cli containerd.io
-sudo usermod -aG docker $USER
+$ sudo usermod -aG docker $USER
 ```
 
 ### 步骤 1：设置 Yaci Devkit
@@ -2630,23 +2508,14 @@ $ ./start-db-sync.sh
 如果成功，你应该看到以下输出：
 
 ```text
-cardano-db-sync_1  � [db-sync-node:Info:65] [2024-05-08 10:15:13.01 UTC] Insert Babbage Block: epoch 0, slot 244, block 244, hash 74ec222296e80d0dae52fd7723c7317746928144fdbf8b9f5fd31a7ca6daf095
-cardano-db-sync_1  � [db-sync-node:Info:65] [2024-05-08 10:15:14.00 UTC] Insert Babbage Block: epoch 0, slot 245, block 245, hash e13b22299709d612d8381bc6292a75ef04f5fa912a308c97ad8f804c8044fc94
+cardano-db-sync_1  [db-sync-node:Info:65] [2024-05-08 10:15:13.01 UTC] Insert Babbage Block: epoch 0, slot 244, block 244, hash 74ec222296e80d0dae52fd7723c7317746928144fdbf8b9f5fd31a7ca6daf095
+cardano-db-sync_1  [db-sync-node:Info:65] [2024-05-08 10:15:14.00 UTC] Insert Babbage Block: epoch 0, slot 245, block 245, hash e13b22299709d612d8381bc6292a75ef04f5fa912a308c97ad8f804c8044fc94
+cardano-db-sync_1  [db-sync-node:Info:65] [2024-05-08 10:15:15.00 UTC] Insert Babbage Block: epoch 0, slot 246, block 246, hash 888f504744cef550755ebd88a6cd6e9b5ad27f3ddcba11076ac8a00a9d04a258
+cardano-db-sync_1  [db-sync-node:Info:65] [2024-05-08 10:15:16.00 UTC] Insert Babbage Block: epoch 0, slot 247, block 247, hash be35c0eb241b0369af4a869480e9340a6c079fc25a3e8f96273fa633a22b4da9
+…
 ```
 
-
-
-
-
-```
-`cardano-db-sync_1  | [db-sync-node:Info:65] [2024-05-08 10:15:15.00 UTC] Insert Babbage Block: epoch 0, slot 246, block 246, hash 888f504744cef550755ebd88a6cd6e9b5ad27f3ddcba11076ac8a00a9d04a258
-
-`cardano-db-sync_1  | [db-sync-node:Info:65] [2024-05-08 10:15:16.00 UTC] Insert Babbage Block: epoch 0, slot 247, block 247, hash be35c0eb241b0369af4a869480e9340a6c079fc25a3e8f96273fa633a22b4da9
-
-`…`
-```
-
-### 第 3 ：启动 Blockfrost-RYO
+### 步骤 3：启动 Blockfrost-RYO
 
 在另一个新的终端窗口中：
 
@@ -2657,7 +2526,7 @@ $ yarn install
 $ yarn run dev-testnet
 ```
 
-### 第 4 ：安装 Nami 本地开发网版本
+### 步骤 4：安装 Nami 本地开发网版本
 
 打开另一个终端窗口并进入 Nami 目录。
 
@@ -2668,15 +2537,17 @@ $ npm install
 $ npm run build
 ```
 
-这将创建一个可以加载到 Chrome 浏览器的构建目录。打开 Chrome 浏览器扩展窗口 `chrome://extensions/`，并点击窗口左角的“加载未解压的扩展程序”。然后导航到刚刚创建的 `nami/build` 目录并选择它。现在 Nami 钱包应该已经安装好了，你可以启动浏览器扩展了。它会首先要求你创建一个新钱包和密码密码。你需要切换到测试网（Testnet）网络，可以通过选择窗口右上角的头像来实现。接下来，选择设置（Settings）、网络（Network），并在网络下拉菜单中选择 Testnet，如图 8.12
+
+
+这将创建一个可以加载到 Chrome 浏览器的构建目录。打开 Chrome 浏览器扩展窗口 `chrome://extensions/`，并点击窗口左角的“加载未解压的扩展程序”。然后导航到刚刚创建的 `nami/build` 目录并选择它。现在 Nami 钱包应该已经安装好了，你可以启动浏览器扩展了。它会首先要求你创建一个新钱包和密码。你需要切换到测试网（Testnet）网络，可以通过选择窗口右上角的头像来实现。接下来，选择设置（Settings）、网络（Network），并在网络下拉菜单中选择 Testnet，如图 8.12 所示。
 
 **图 8.12：** Nami 钱包开发网
 
 **提示**：如果你使用解压方法安装了 Nami 钱包并关闭了浏览器，你可能需要再次遵循解压说明。如果你重新创建了新的本地开发网，你需要创建一个新的 Nami 账户或显式删除 Nami 浏览器插件以清除缓存的 Nami 账户数据。
 
-### 第 5 ：为钱包充值
+## 第 5 步：为钱包充值
 
-打开 Nami 钱包，选择接收（receive）按钮并复制接收地址。然后进入 `yaci-cli` 终端，输入 `topup` 命令，粘贴接收地址和要发送的 Ada 数量，如图 8.13 所示。
+打开 Nami 钱包，选择接收（Receive）按钮并复制接收地址。然后进入 `yaci-cli` 终端，输入 `topup` 命令，粘贴接收地址和要发送的 Ada 数量，如图 8.13 所示。
 
 ![](img/Figure-8.13.jpg)
 
@@ -2704,13 +2575,13 @@ $ npm run dev
 
 **图 8.15：** 在本地开发网上铸造
 
-我们现在可以在本地 Yaci DevKit 区块浏览器的交易（transactions）标签页下查看交易详情，如图 8.16 所示。
+我们现在可以在本地 Yaci DevKit 区块浏览器的交易（Transactions）标签页下查看交易详情，如图 8.16 所示。
 
 ![](img/Figure-8.16.jpg)
 
 **图 8.16：** 本地开发网浏览器交易视图
 
-我们还可以在图 8.17 中查看智能合约详情，包括解锁者值（Redeemer values）。
+我们还可以在图 8.17 中查看智能合约详情，包括解锁者值（Redeemer Values）。
 
 ![](img/Figure-8.17.jpg)
 
@@ -2734,7 +2605,7 @@ $ npm run dev
 
 ## 总结
 
-本章提供了某些 Cardano API 的概述。首先，我们探索了 Blockfrost、Maestro、Koios 和 Demeter.run。接下来，我们理解了 Cardano Node、Ogmios 和 Kupo。我们还学习了如何使用 Yaci 设置开发网。我们现在准备好进入章。
+本章提供了某些 Cardano API 的概述。首先，我们探索了 Blockfrost、Maestro、Koios 和 Demeter.run。接下来，我们理解了 Cardano Node、Ogmios 和 Kupo。我们还学习了如何使用 Yaci 设置开发网。我们现在准备好进入下一章。
 
 ## 知识点
 
@@ -2754,12 +2625,12 @@ $ npm run dev
 
 1. 为什么需要区块链工具？
    - 用于链上逻辑
-   - 用于 账本
+   - 用于账本
    - 需要启动/停止 Cardano 区块
    - 高效访问区块链数据
 
 2. 使用 `cardano-cli` 无法完成什么？
-   - 启动/停止 cardano 节点
+   - 启动/停止 Cardano 节点
    - 提交交易
    - 查询 Cardano 区块顶值
    - 查看 UTXO 内容
@@ -2770,22 +2641,17 @@ $ npm run dev
    - HTTP REST API
    - HTTP REST API 或 RPC Web Socket
 
-4. Yaci Devkit 的某些功能是什么？
+4. Yaci DevKit 的某些功能是什么？
    - 区块链浏览器、Kupo 和 Ogmios API
    - 代币注册表
    - 主网网络
    - GraphQL
 
-
-
-
-
 5. 哪个工具可以提交交易？
-
-1. Kupo
-2. Oura
-3. Carp
-4. ouroboros-network-js
+   1. Kupo
+   2. Oura
+   3. Carp
+   4. ouroboros-network-js
 
 ## 答案
 
@@ -2801,124 +2667,135 @@ $ npm run dev
 2. 为什么区块链技术在直接数据访问方面通常效率不高？
 3. 工具是如何加速数据查询访问的？
 4. Maestro 为了帮助提高提交交易的最终性时间做了哪些工作？
-5. 使用本地测试网（Testnet）或开发网（devnet）有哪些优势？
+5. 使用本地测试网（Testnet）或开发网（Devnet）有哪些优势？
 
 ## 核心术语
 
-- `Node Tip`: 区块链中最新（最高）的已确认区块。
-- `RESTful`: 它使用 HTTP 请求在客户端和服务器之间访问和设置数据。
-- `SDK`: 软件开发工具包（Software Development Kit）让开发者更方便地访问服务提供者的 API。
-- `Service Provider`: 服务提供者，提供离链区块链 API 公司。
-
-- `Transaction Finality`: 交易最终性，在区块链上完成交易最终所需的时间。
-
-- `Webhook`: 回调函数，当满足特定条件时会向应用程序发起网络调用。
+- `Node Tip`：区块链中最新（最高）的已确认区块。
+- `RESTful`：它使用 HTTP 请求在客户端和服务器之间访问和设置数据。
+- `SDK`：软件开发工具包（Software Development Kit）让开发者更方便地访问服务提供者的 API。
+- `Service Provider`：服务提供者，提供离链区块链 API 公司。
+- `Transaction Finality`：交易最终性，在区块链上完成交易最终所需的时间。
+- `Webhook`：回调函数，当满足特定条件时会向应用程序发起网络调用。
 
 ________________
 
 [¹] [`blockfrost.io/`](https://blockfrost.io/)
+
 [²] [`github.com/blockfrost/blockfrost-backend-ryo`](https://github.com/blockfrost/blockfrost-backend-ryo)
+
 [³] [`www.gomaestro.org/dapp-platform`](https://www.gomaestro.org/dapp-platform)
+
 [⁴] [`twitter.com/GoMaestroOrg/status/1681685533314142209`](https://twitter.com/GoMaestroOrg/status/1681685533314142209)
+
 [⁵] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_08/maestro/ticket/pages/index.tsx`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_08/maestro/ticket/pages/index.tsx)
+
 [⁶] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_08/maestro/ticket/pages/api/getTicketMetadata.ts`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_08/maestro/ticket/pages/api/getTicketMetadata.ts)
+
 [⁷] [`koios.rest/`](https://koios.rest/)
+
 [⁸] [`cardano-community.github.io/guild-operators/`](https://cardano-community.github.io/guild-operators/)
+
 [⁹] [`dandelion.link/`](https://dandelion.link/)
+
 [¹⁰] [`github.com/cardano-foundation/cardano-graphql`](https://github.com/cardano-foundation/cardano-graphql)
+
 [¹¹] [`ogmios.dev/`](https://ogmios.dev/)
+
 [¹²] [`github.com/IntersectMBO/cardano-db-sync`](https://github.com/IntersectMBO/cardano-db-sync)
+
 [¹³] [`github.com/cardano-foundation/cardano-rosetta`](https://github.com/cardano-foundation/cardano-rosetta)
+
 [¹⁴] [`github.com/IntersectMBO/cardano-node`](https://github.com/IntersectMBO/cardano-node)
+
 [¹⁵] [`github.com/input-output-hk/cardano-node-wiki/blob/main/docs/getting-started/cli.md`](https://github.com/input-output-hk/cardano-node-wiki/blob/main/docs/getting-started/cli.md)
+
 [¹⁶] [`ogmios.dev/`](https://ogmios.dev/)
+
 [¹⁷] [`github.com/CardanoSolutions/ogmios`](https://github.com/CardanoSolutions/ogmios)
+
 [¹⁸] [`hoppscotch.io/`](https://hoppscotch.io/)
+
 [¹⁹] [`github.com/CardanoSolutions/kupo`](https://github.com/CardanoSolutions/kupo)
+
 [²⁰] [`cardanosolutions.github.io/kupo/`](https://cardanosolutions.github.io/kupo/)
+
 [²¹] [`cardanosolutions.github.io/tag/Checkpoints`](https://cardanosolutions.github.io/tag/Checkpoints)
+
 [²²] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_08/ogmios-kupo/vesting/index.tsx`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_08/ogmios-kupo/vesting/index.tsx)
+
 [²³] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_08/ogmios-kupo/ticket/pages/getTicketMetadata.ts`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_08/ogmios-kupo/ticket/pages/getTicketMetadata.ts)
+
 [²⁴] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts)
+
 [²⁵] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts)
+
 [²⁶] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts)
+
 [²⁷] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts)
+
 [²⁸] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts)
+
 [²⁹] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts)
+
 [³⁰] [`ogmios.dev/`](https://ogmios.dev/)
+
 [³¹] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts)
-(注：由于原文文本中链接部分存在大量重复占位符，翻译时保留了链接格式并根据原文逻辑进行对应，此处为展示正文翻译)
-[/content]
 
-译文：
 
-[content]
-5. 哪个工具可以提交交易？
 
-1.   Kupo
-2.   Oura
-3.   Carp
-4.   ouroboros-network-js
-
-## 答案
-
-1.   d
-2.   a
-3.   d
-4.   a
-5.   d
-
-## 问题
-
-1. 任何区块链的中心化风险有哪些？
-2. 为什么区块链技术在直接数据访问方面通常效率不高？
-3. 工具是如何加速数据查询访问的？
-4. Maestro 为了帮助提高提交交易的最终性时间做了哪些工作？
-5. 使用本地测试网（Testnet）或开发网（devnet）有哪些优势？
-
-## 核心术语
-
-- `Node Tip`: 区块链中最新（最高）的已确认区块。
-- `RESTful`: 它使用 HTTP 请求在客户端和服务器之间访问和设置数据。
-- `SDK`: 软件开发工具包（Software Development Kit）让开发者更方便地访问服务提供者的 API。
-- `Service Provider`: 服务提供者，提供离链区块链 API 公司。
-
-- `Transaction Finality`: 交易最终性，在区块链上完成交易最终所需的时间。
-
-- `Webhook`: 回调函数，当满足特定条件时会向应用程序发起网络调用。
-
-________________
-
-[¹] [`blockfrost.io/`](https://blockfrost.io/)
-[²] [`github.com/blockfrost/blockfrost-backend-ryo`](https://github.com/blockfrost/blockfrost-backend-ryo)
-[³] [`www.gomaestro.org/dapp-platform`](https://www.gomaestro.org/dapp-platform)
-[⁴] [`twitter.com/GoMaestroOrg/status/1681685533314142209`](https://twitter.com/GoMaestroOrg/status/1681685533314142209)
 [⁵] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_08/maestro/ticket/pages/index.tsx`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_08/maestro/ticket/pages/index.tsx)
+
 [⁶] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_08/maestro/ticket/pages/api/getTicketMetadata.ts`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_08/maestro/ticket/pages/api/getTicketMetadata.ts)
+
 [⁷] [`koios.rest/`](https://koios.rest/)
+
 [⁸] [`cardano-community.github.io/guild-operators/`](https://cardano-community.github.io/guild-operators/)
+
 [⁹] [`dandelion.link/`](https://dandelion.link/)
+
 [¹⁰] [`github.com/cardano-foundation/cardano-graphql`](https://github.com/cardano-foundation/cardano-graphql)
+
 [¹¹] [`ogmios.dev/`](https://ogmios.dev/)
+
 [¹²] [`github.com/IntersectMBO/cardano-db-sync`](https://github.com/IntersectMBO/cardano-db-sync)
+
 [¹³] [`github.com/cardano-foundation/cardano-rosetta`](https://github.com/cardano-foundation/cardano-rosetta)
+
 [¹⁴] [`github.com/IntersectMBO/cardano-node`](https://github.com/IntersectMBO/cardano-node)
+
 [¹⁵] [`github.com/input-output-hk/cardano-node-wiki/blob/main/docs/getting-started/cli.md`](https://github.com/input-output-hk/cardano-node-wiki/blob/main/docs/getting-started/cli.md)
+
 [¹⁶] [`ogmios.dev/`](https://ogmios.dev/)
+
 [¹⁷] [`github.com/CardanoSolutions/ogmios`](https://github.com/CardanoSolutions/ogmios)
+
 [¹⁸] [`hoppscotch.io/`](https://hoppscotch.io/)
+
 [¹⁹] [`github.com/CardanoSolutions/kupo`](https://github.com/CardanoSolutions/kupo)
+
 [²⁰] [`cardanosolutions.github.io/kupo/`](https://cardanosolutions.github.io/kupo/)
+
 [²¹] [`cardanosolutions.github.io/tag/Checkpoints`](https://cardanosolutions.github.io/tag/Checkpoints)
+
 [²²] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_08/ogmios-kupo/vesting/index.tsx`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_08/ogmios-kupo/vesting/index.tsx)
+
 [²³] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_08_ogmios-kupo/ticket/pages/getTicketMetadata.ts`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_08/ogmios-kupo/ticket/pages/getTicketMetadata.ts)
+
 [²⁴] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts)
+
 [²⁵] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts)
+
 [²⁶] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts)
+
 [²⁷] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts)
+
 [²⁸] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts)
+
 [²⁹] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts)
+
 [³⁰] [`ogmios.dev/`](https://ogmios.dev/)
+
 [³¹] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts)
 
 # 第 9 章
@@ -2934,27 +2811,38 @@ ________________
 在本章中，我们将讨论以下主题：
 
 - 设计模式：
+
     - 线程令牌 (Thread Token)
+
     - 信标令牌 (Beacon Token)
+
     - 订单簿 (Order Book)
+
 - 反模式：
+
     - 流动性池 (Liquidity Pools)
+
     - 批处理器 (Batchers)
+
 - 卡达尔改进提案（CIPs）：
+
     - `CIP-0003` 钱包密钥生成
+
     - `CIP-0030` Cardano dApp-钱包 Web 桥
+
     - `CIP-0032` 内联数据 (Inline Datums)
+
     - `CIP-0040` 显式质押输出 (Explicit Collateral Output)
+
     - `CIP-0068` 元标准
+
 - 应用程序架构：
+
     - 链上状态机
+
     - 链下序列图
 
 ## 设计模式
-
-
-
-
 
 到此时，你已经意识到 UTXO 模型和账户模型区块链之间存在显著差异。特别是，许多基于账户的区块链设计模式对于 UTXO 区块链并不是最优的，被称为反模式（anti-patterns）。让我们先检查常见的 UTXO 设计模式，然后将它们与反模式进行对比。
 
@@ -2997,10 +2885,15 @@ Alice 和 Bob 拥有可以在没有任何第三方中间的情况下进行交换
 订单簿设计模式之所以运行良好，是因为于以下 Cardano EUTXO 架构原则：
 
 *   本地状态
+
 *   独立且唯一的钱包 UTXO 和智能合约
+
 *   不可变的 UTXO
+
 *   确定性
+
 *   链上验证和离线计算
+
 *   并行交易处理
 
 订单簿设计可以应用于许多涉及两个或多个双方之间价值交换的各种用例。
@@ -3031,10 +2924,6 @@ Alice 和 Bob 拥有可以在没有任何第三方中间的情况下进行交换
 
 ## Cardano 改进提案 (Cardano Improvement Proposals)
 
-
-
-
-
 `Cardano Improvement Proposals (CIPs)` 是设计和实现最佳实践的标准或参考方案。我们将审查以下 CIP 及其它们如何应用于我们的应用程序设计。
 
 ## CIP-0003 钱包密钥生成
@@ -3051,6 +2940,8 @@ Alice 和 Bob 拥有可以在没有任何第三方中间的情况下进行交换
 
 ## CIP-0040 显式抵押输出
 
+
+
 `CIP-0040` 引入了一种名为 `Collateral Outputs`（抵押输出）的新输出类型。正如我们在*第 4 章，Plutus*中所回想的，`Collateral`（抵押）作为押金是要求的，如果 `Plutus` 脚本第二阶段评估失败则将使用它。虽然这有助于保护网络免受垃圾信息或恶意攻击，但它为提交交易增加了额外的 `Ada` 要求。通过使用抵押输出，可以构建交易使我们可以使用任何 `UTXO` 作为抵押，但仅在需要时消耗押金金额，并将找零作为抵押返回输出返回。在 `CIP-0040` 之前，仅包含 `Ada` 的纯 `UTXO` 只能作为抵押输入。
 
 ## CIP-0068 Datum 元数据标准
@@ -3063,16 +2954,12 @@ Alice 和 Bob 拥有可以在没有任何第三方中间的情况下进行交换
 
 代币命名规范是为十六编码标签添加前缀，例如 `NFT`s 使用 `222`，引用令牌使用 `100`。常用的前缀标签列在表 9.1 中。
 
-| Label | Class | Description | Hex Label | 
+| Label | Class | Description | Hex Label |
 | :--- | :--- | :--- | :--- |
 | 100 | NFT | Reference Token | `100` |
 | 222 | NFT | Non-Fungible Token | `222` |
 | 333 | FT | Fungible Token | `333` |
 | 444 | NFT | Non-Fungible Token | `444` |
-
-
-
-
 
 ## 更新交换单 (Updating Swap)
 
@@ -3109,7 +2996,7 @@ Alice 和 Bob 拥有可以在没有任何第三方中间的情况下进行交换
 
 **图 9.14：** 关闭交换交易
 
-票务令牌必须返回到代币持有脚本地址，该地址定义为交换脚本参数。图 9.15 中详细的销毁灯标（Burn Beacon）交易也必须包含在关闭交换交易中
+票务令牌必须返回到代币持有脚本地址，该地址定义为交换脚本参数。图 9.15 中详细的销毁灯标（Burn Beacon）交易也必须包含在关闭交换交易中。
 
 ![](img/Figure-9.15.jpg)
 
@@ -3186,10 +3073,6 @@ Alice 和 Bob 拥有可以在没有任何第三方中间的情况下进行交换
 ## 关闭交换 (Closing Swap)
 
 当交换中的票务数量为零，或者卖家不再希望出售这些票务时，卖家将想要关闭交换（参见图 9.24）。灯标资产用于获取构建交换交易所需的 UTXO，并将票务令牌（如有）返回到票务持有地址。灯标令牌还作为关闭交易的一部分被销毁，因此该交换将不再出现在可用交换列表中。
-
-
-
-
 
 ![](img/Figure-9.24.jpg)
 
@@ -3273,20 +3156,11 @@ Alice 和 Bob 拥有可以在没有任何第三方中间的情况下进行交换
 *   `UTXO Contention`: UTXO 竞争。
 *   `Zero Knowledge`: 零知识。
 
-
-
-
-
 ¹³ [`github.com/cardano-foundation/CIPs/tree/master/CIP-0068`](https://github.com/cardano-foundation/CIPs/tree/master/CIP-0068)
-
 ¹⁴ [`developers.cardano.org/docs/governance/cardano-improvement-proposals/cip-0068/`](https://developers.cardano.org/docs/governance/cardano-improvement-proposals/cip-0068/)
-
 ¹⁵ [`github.com/cardano-foundation/CIPs/tree/master/CIP-0068`](https://github.com/cardano-foundation/CIPs/tree/master/CIP-0068)
-
 ¹⁶ [`github.com/inimrod/cip68-fungible-token-demo/blob/main/src/lib/init-vars.ts`](https://github.com/inimrod/cip68-fungible-token-demo/blob/main/src/lib/init-vars.ts)
-
 ¹⁷ [`www.rapidtables.com/convert/number/decimal-to-hex.html`](https://www.rapidtables.com/convert/number/decimal-to-hex.html)
-
 ¹⁸ [`crccalc.com/`](https://crccalc.com/)
 
 # 第 10 章
@@ -3333,11 +3207,11 @@ Next.js 将用作应用程序服务器框架，用于构建 HTML 和 JavaScript 
 
 `common` 文件夹包含客户端 JavaScript 代码。该目录包含以下文件：
 
-*   metadata.ts: 用于创建元数据
-*   network.ts: 用于与网络交互
-*   orders.ts: 用于订单计算
-*   types.ts: 定义数据类型
-*   utils.ts: 工具函数
+*   `metadata.ts`: 用于创建元数据
+*   `network.ts`: 用于与网络交互
+*   `orders.ts`: 用于订单计算
+*   `types.ts`: 定义数据类型
+*   `utils.ts`: 工具函数
 
 ## 组件
 
@@ -3348,6 +3222,8 @@ Next.js 将用作应用程序服务器框架，用于构建 HTML 和 JavaScript 
 `config` 文件夹定义了设置、主题和标记。
 
 ## 初始化
+
+
 
 `init` 文件夹包含所有钥和私钥的脚本。该密钥用于铸造所有交换。
 
@@ -3375,19 +3251,19 @@ Next.js 将用作应用程序服务器框架，用于构建 HTML 和 JavaScript 
 
 `contracts` 文件夹包含所有的智能合约链上代码。特别是它包含了我们应用程序所需的逻辑：
 
-*   beacon.hl: Beacon 铸造策略的智能合约
-*   holding.hl: 持有的智能合约
-*   swap.hl: 所有交换操作（打开、更新、关闭、执行）的智能合约
-*   ticket.hl: 票务铸造策略的智能合约
+*   `beacon.hl`: Beacon 铸造策略的智能合约
+*   `holding.hl`: 持有的智能合约
+*   `swap.hl`: 所有交换操作（打开、更新、关闭、执行）的智能合约
+*   `ticket.hl`: 票务铸造策略的智能合约
 
 ## 架构
 
 `schema` 文件夹包含了用于存储在 Redis 数据库中的数据架构。
 
-*   beacon.ts: 用于存储并跟踪应用程序创建的 beacon，以便于检索。
-*   event.ts: 事件架构用于存储本地事件，并与用户的质押密钥关联。
-*   stake.ts: 质押架构将所有资产映射到用户的钱包质押密钥。
-*   swap.ts: 交换架构存储交换信息以便用户检索、过滤和显示。
+*   `beacon.ts`: 用于存储并跟踪应用程序创建的 beacon，以便于检索。
+*   `event.ts`: 事件架构用于存储本地事件，并与用户的质押密钥关联。
+*   `stake.ts`: 质押架构将所有资产映射到用户的钱包质押密钥。
+*   `swap.ts`: 交换架构存储交换信息以便用户检索、过滤和显示。
 
 ## 前端应用
 
@@ -3400,13 +3276,8 @@ Next.js 将用作应用程序服务器框架，用于构建 HTML 和 JavaScript 
 应用程序的主入口位于 `pages/index.tsx`，带有一个包含获取票务、我的事件和我的票务视图的标签导航。`index.tsx` 页面还包含以下全局状态变量信息：
 
 *   `walletAPI`: 用于浏览器扩展钱包的 `walletAPI` JavaScript 对象。
-
-
-
-
-
-* `walletInfo` 列出了与该钱包相关的基础地址、质押地址（stake address）、lovelace 余额以及事件资产。
-* `swapViewRefresh` 将触发 `useEffect` 以刷新显示给用户的交易（swaps）列表。这在交易发生变化时（如打开、更新或关闭交易）被调用。
+*   `walletInfo` 列出了与该钱包相关的基础地址、质押地址（stake address）、lovelace 余额以及事件资产。
+*   `swapViewRefresh` 将触发 `useEffect` 以刷新显示给用户的交易（swaps）列表。这在交易发生变化时（如打开、更新或关闭交易）被调用。
 
 # 页眉和页脚
 
@@ -3496,10 +3367,6 @@ Cardano 基金还创建了一个 Wallet Connect 组件。然而，由于它与�
 
 离链代码遵循与之前章节中离链构建器类似的模式。对于执行交易，我们将应用合约参数来构建 Plutus 脚本。如果交换验证成功，我们将使用票据铸造策略转换每个票据。遵循 CIP68 元数据 NFT 标准，NFT 令牌和参考票据都将被铸造。在[图 10.14]的第 224-227 行，NFT 令牌和参考票据被添加到包含要铸造令牌总数的数组中。
 
-
-
-
-
 **图 10.15:** 计算订单详情^(14
 
 在门票应用中，我们还引入了时间概念，以确保交换交易在特定的时间范围内执行。最佳实践是显式地设置 `time interval`（时间间隔），在 Plutus 脚本中检查时间限制时，必须设置该值。`图 10.16` 显示了一个典型的离链有效性区间。
@@ -3583,9 +3450,6 @@ Cardano 基金还创建了一个 Wallet Connect 组件。然而，由于它与�
 
 **图 10.25:** 持有验证器 checkTokensOut^(23
 
-
-
-
 正如*图 10.26*所示，`Transfer` Redeemer 用于将票据令牌从持有脚本转移到交换（swap）。该交易必须由事件所有者的权益密钥（stake key）签名，并且必须包含一个信标令牌（beacon token）。正如我们所记得，每个交换都必须有一个信标令牌，这将有助于确保这些票据进入交换而不去任何其他地方。只有指向交换以及用于找零的可选持有验证脚本的输出才能包含令牌。这一规则在第 43–49 行被强制执行。
 
 ![](img/Figure-10.26.jpg)
@@ -3618,14 +3482,11 @@ Cardano 基金还创建了一个 Wallet Connect 组件。然而，由于它与�
 
 `checkAdaVal` 函数位于*图 10.30*的第 38 行，用于在值包含原生令牌时添加最小量的 Ada (lovelace)。为了简单起见，我们对所有智能合约令牌交互使用固定的 2,000,000 lovelace 最小值。正如我们所记得，只有在包含最小数量 lovelace 的情况下才能发送原生资产。确切的 lovelace 数量可以通过计算特定 UTXO 使用的字节来确定。此金额取决于 UTXO 中包含的令牌数量，可能会大可能会小。因此，我们严格控制输出以确保包含正确的令牌。
 
-（注：原文中包含大量关于 `checkAdaVal` 的重复段落。已根据提供的指令处理了唯一内容并确保了逻辑连贯。）
-
-在交换函数内部，我们首先从*图 10.31*获取 `Context`。接下来，我们创建交换的总资产 `totalAssetVal`。
 
 
+在交换函数内部，我们首先从图 10.31 获取`Context`。接下来，我们创建交换的总资产`totalAssetVal`。
 
-
-以下是用于允许前端与后端应用组件（如 `Redis DB` 和 `Blockfrost`）通信的 API 列表。
+以下是用于允许前端与后端应用组件（如`Redis DB`和`Blockfrost`）通信的 API 列表。
 
 ```bash
 $ tree pages/api
@@ -3651,19 +3512,25 @@ $ tree pages/api
 └── verifyTicket.ts
 ```
 
-所有的前端 API 调用均在 `common/network.ts` 文件中，该文件使用 `axios` 发送 HTTP GET 或 POST 请求。当存在匹配 beacon 铸造策略的区块链交易时，会调用 Blockfrost 的 webhook `updateTxStatus.ts`。该 webhook 被配置在三个 `blockchain confirmations` 之后触发。当 Blockfrost webhook 被调用时，它将更新具有相应交易 ID 的事件和交换，并将其标记为已确认。
+所有的前端 API 调用均在`common/network.ts`文件中，该文件使用`axios`发送 HTTP GET 或 POST 请求。当存在匹配 beacon 铸造策略的区块链交易时，会调用 Blockfrost 的 webhook`updateTxStatus.ts`。该 webhook 被配置在三个`blockchain confirmations`之后触发。当 Blockfrost webhook 被调用时，它将更新具有相应交易 ID 的事件和交换，并将其标记为已确认。
 
 ## Redis DB 设置
 
-在运行演示之前，必须在本地或使用云实例创建一个带有 `JSON stack` 的 `Redis DB` 实例。
+在运行演示之前，必须在本地或使用云实例创建一个带有`JSON stack`的`Redis DB`实例。
 
-1. 访问 [`redis.io/`](https://redis.io/)
+1. 访问[`redis.io/`](https://redis.io/)
+
 2. 登录或创建一个账户。
-3. 创建 `$0` 订阅。
-4. 创建一个新的 `Redis Stack` 数据库（包含 `JSON stack`）。
-5. 选择页面左侧的 `Databases` 导航链接。
-6. 选择 `Endpoint` 列下的 `Connect`。
-7. 然后选择 `Redis` `Client` 以获取您的凭据信息，如图 10.37 所示。
+
+3. 创建`$0`订阅。
+
+4. 创建一个新的`Redis Stack`数据库（包含`JSON stack`）。
+
+5. 选择页面左侧的`Databases`导航链接。
+
+6. 选择`Endpoint`列下的`Connect`。
+
+7. 然后选择`Redis` `Client`以获取您的凭据信息，如图 10.37 所示。
 
 ![](img/Figure-10.37.jpg)
 
@@ -3672,19 +3539,28 @@ $ tree pages/api
 ## Blockfrost 设置
 
 1. 登录 Blockfrost 仪表板并创建一个 webhook。
-2. 输入您的应用程序 URL 作为 `Endpoint URL` 输入：
+
+2. 输入您的应用程序 URL 作为`Endpoint URL`输入：
+
    `https://your.host.domain.name/api/updateTxStatus`
-3. 设置所需的 `blockchain confirmations` 。
-4. 输入 `Beacon Minting Policy ID` 作为触发条件：
+
+3. 设置所需的`blockchain confirmations`。
+
+4. 输入`Beacon Minting Policy ID`作为触发条件：
+
    `policy id = 421dacdd…e5ad68e76a6`
-5. 创建另一个 webhook 并使用相同的 `Endpoint URL`，但使用事件所有者的质押密钥作为发送者：
+
+5. 创建另一个 webhook 并使用相同的`Endpoint URL`，但使用事件所有者的质押密钥作为发送者：
+
    `sender = stake_test1uqk6gt…6a5pj6p5qh6lc8v`
-6. 复制 `Auth Token` 并将其添加到应用程序环境变量：
+
+6. 复制`Auth Token`并将其添加到应用程序环境变量：
+
    `export WEBHOOK_AUTH_TOKEN=8e81d5…240f5`
 
 ## 应用所有者公钥/私钥
 
-你可以使用 `init` 文件夹中的 `generatePrivateKey.mjs` 工具创建应用所有者的公钥和私钥。
+你可以使用`init`文件夹中的`generatePrivateKey.mjs`工具创建应用所有者的公钥和私钥。
 
 ```bash
 $ cd chapter_10/helios/ticket-app
@@ -3726,81 +3602,77 @@ $ npm run
 
 ## 初始状态
 
-[图 10.38] 显示尚未创建任何交换的 `Get Tickets` 页面。
+图 10.38 显示尚未创建任何交换的`Get Tickets`页面。
 
 # 连接钱包
 
-[图 10.39] 显示连接钱包的 `Connect` 状态。
+图 10.39 显示连接钱包的`Connect`状态。
 
 ## 事件列表
 
-[图 10.40] 显示尚未创建任何事件的 `My Events` 页面。
+图 10.40 显示尚未创建任何事件的`My Events`页面。
 
 ## 新事件
 
-[图 10.41] 用户选择 `New Event` 按钮，将弹出详情窗口。
+图 10.41 用户选择`New Event`按钮，将弹出详情窗口。
 
-[图 10.42] 点击 `Mint Tickets` 按钮后，将显示铸造票据。
+图 10.42 点击`Mint Tickets`按钮后，将显示铸造票据。
 
 # 已分配交换
 
-[图 10.43] 开启交换位置后，票据将可以出售。
+图 10.43 开启交换位置后，票据将可以出售。
 
 ## 获取票据
 
-[图 10.44] 用户签名开启交换交易后，票据将出现在 `Get Tickets` 屏幕上。
-
-
-
-
+图 10.44 用户签名开启交换交易后，票据将出现在`Get Tickets`屏幕上。
 
 图 10.48：购票钱包交易
 
 # 我的门票
 
-一旦交易在区块链上通过确认，用户就可以进入`My Tickets`我的门票）页面查看钱包中的门票，如图图 10.49
+一旦交易在区块链上通过确认，用户就可以进入`My Tickets`（我的门票）页面查看钱包中的门票，如图 10.49 所示。
 
 图 10.49：我的门票
 
 # 打印门票
 
-当用户选择`Print Ticket（打印门票）按钮时，他们需要签署一个交易，用钱包的公钥哈希值来更新引用令牌。这样，我们就能确定用户在打印时确实拥有该门票。如果此交易成功，用户将看到一个 QR 代码，他们可以将其保存备用并在活动现场出示，如图图 10.50
+当用户选择`Print Ticket`（打印门票）按钮时，他们需要签署一个交易，用钱包的公钥哈希值来更新引用令牌。这样，我们就能确定用户在打印时确实拥有该门票。如果此交易成功，用户将看到一个 QR 代码，他们可以将其保存备用并在活动现场出示，如图 10.50 所示。
 
 图 10.50：打印门票
 
 # 验证门票
 
-为了模拟在活动现场验证门票，`Print Ticket` 弹出窗口有一个`Verify Ticket（验证门票）`按钮。选中后，它将检查 QR 代码签名和消息，以确认它们与数据库或引用令牌数据中的公钥哈希相匹配，如图图 10.51
+为了模拟在活动现场验证门票，`Print Ticket`弹出窗口有一个`Verify Ticket`（验证门票）按钮。选中后，它将检查 QR 代码签名和消息，以确认它们与数据库或引用令牌数据中的公钥哈希相匹配，如图 10.51 所示。
 
 图 10.51：验证门票
 
 ## 关闭交换
 
-演示的最后部分是关闭交换仓。因此，我们将钱包切换回活动所有者的钱包，并进入`My Events（我的活动）`页面，如图图 10.52
+演示的最后部分是关闭交换仓。因此，我们将钱包切换回活动所有者的钱包，并进入`My Events`（我的活动）页面，如图 10.52 所示。
 
 图 10.52：已转换的门票
 
-在`Get Tickets（获取门票）`页面上，使用活动所有者的钱包，交换交换将带有一个`Close Swap（关闭交换）`按钮，该按钮会将门票返回到持有脚本，如图图 10.53
+在`Get Tickets`（获取门票）页面上，使用活动所有者的钱包，交换交换将带有一个`Close Swap`（关闭交换）按钮，该按钮会将门票返回到持有脚本，如图 10.53 所示。
 
 图 10.53：关闭交换
 
-在`Close Swap`交易完成后，活动所有者将看到持有脚本中的门票数量为`996`，如图图 10.54
+在`Close Swap`交易完成后，活动所有者将看到持有脚本中的门票数量为`996`，如图 10.54 所示。
 
 图 10.54：持有的门票
 
 ## 搜索
 
-用户还可以通过基于文本的搜索或根据时间或门票数量进行过滤来搜索开放的交换。在我们的演示中，现在有两个开放的交换，并将文本搜索 `Jane Town`，它只会在一个交换中被找到，如图图 10.55
+用户还可以通过基于文本的搜索或根据时间或门票数量进行过滤来搜索开放的交换。在我们的演示中，现在有两个开放的交换，并将文本搜索`Jane Town`，它只会在一个交换中被找到，如图 10.55 所示。
 
 图 10.55：搜索交换
 
-一旦用户选择了`Apply Filter（应用筛选）`按钮，将仅显示匹配文本的门票交换，如图图 10.56
+一旦用户选择了`Apply Filter`（应用筛选）按钮，将仅显示匹配文本的门票交换，如图 10.56 所示。
 
 图 10.56：搜索交换
 
 # 浏览器钱包
 
-门票令牌也可以直接在浏览器钱包中查看，如图图 10.57
+门票令牌也可以直接在浏览器钱包中查看，如图 10.57 所示。
 
 图 10.57：浏览器钱包令牌
 
@@ -3809,137 +3681,205 @@ $ npm run
 目前，通过区块链可以确保用户在打印时确实拥有该门票。区块链的优势如下：
 
 - 区块链数据的不可篡改性
+
 - 门票的真实性
+
 - 透明的分配
+
 - 真实的转售验证
+
 - 去中心化的门票销售
+
 - 门票销售的透明度
+
 - 门票令牌也可用于忠诚积分
+
 - 避免第三方支付结算
 
 ## 结论
 
-在本章中，我们回顾了复杂门票应用程序的实现细节。我们探讨了数据复制的概念以改进用户体验。我们利用了 `ChakraUI`、`Next.js`、`Redis DB` 和 `Blockfrost` 技术栈来创建完整的门票生命周期（铸造、出售、购买、兑换）。我们查看了智能合约开发中的一些挑战，如循环引用、检查输入输出以及区块确认。我们展示了如何通过 QR 代码证明门票的所有权。最后，我们通过一个端到端的演示结束了区块链应用程序的功能。在下一章中，我们将介绍测试技术以及如何编写安全可扩展的区块链应用程序。
+在本章中，我们回顾了复杂门票应用程序的实现细节。我们探讨了数据复制的概念以改进用户体验。我们利用了`ChakraUI`、`Next.js`、`Redis DB`和`Blockfrost`技术栈来创建完整的门票生命周期（铸造、出售、购买、兑换）。我们查看了智能合约开发中的一些挑战，如循环引用、检查输入输出以及区块确认。我们展示了如何通过 QR 代码证明门票的所有权。最后，我们通过一个端到端的演示结束了区块链应用程序的功能。在下一章中，我们将介绍测试技术以及如何编写安全可扩展的区块链应用程序。
 
 ## 要点
 
 - 纯客户端区块链应用程序更符合区块链原理，并提供了良好的透明性和可审计性。
-- `Redis DB` 包含了应用程序使用的模型，是相关区块链数据的副本。
-- `Redis DB` 是一种内存数据库，允许极快的读取操作。
+
+- `Redis DB`包含了应用程序使用的模型，是相关区块链数据的副本。
+
+- `Redis DB`是一种内存数据库，允许极快的读取操作。
+
 - 将区块链数据和元数据复制到应用程序数据库中可以提升用户体验并提供丰富的 UI 功能，如多维度筛选和搜索。
-- `Next.js` 中的全局状态通过 `walletAPI` 等对象 传递给子 React 组件。
+
+- `Next.js`中的全局状态通过`walletAPI`等对象传递给子 React 组件。
+
 - UI 更改可以触发应用程序和数据库的变化，同时应用程序监听区块确认。
-- `CIP-68` 元数据标准为令牌名称添加十六进制前缀，以区分用户令牌和引用令牌。
-- 交换数据包含 `askedAssetValue` 和 `offeredAssetValue`。
-- `askedAssetValue` 指定请求的资产以及每种提供资产的价格。
-- `offeredAssetValue` 指定提供的资产以及当前锁定在交换中的资产数量。
+
+- `CIP-68`元数据标准为令牌名称添加十六进制前缀，以区分用户令牌和引用令牌。
+
+- 交换数据包含`askedAssetValue`和`offeredAssetValue`。
+
+- `askedAssetValue`指定请求的资产以及每种提供资产的价格。
+
+- `offeredAssetValue`指定提供的资产以及当前锁定在交换中的资产数量。
+
 - 在智能合约中评估截止日期条件时，需要时间有效性间隔。
+
 - 使用交易 ID 和索引作为合约参数或令牌名称可以创建线程令牌。
+
 - 当一个智能合约依赖于预知另一个智能合约的地址反之亦然时，就会发生循环引用。
+
 - 当涉及涉及策略的事件时，webhook 会调用应用程序。
+
 - 门票令牌一旦铸造并转换就是唯一的 Cardano NFT 原生令牌。
 
 ## 选择题
 
 1. 纯客户端区块链应用程序的优势是什么？
-    1. 响应速度更快
-    2. 更容易审计和信任
-    3. 更容易构建
-    4. 不需要浏览器
 
+   1. 响应速度更快
 
+   2. 更容易审计和信任
 
+   3. 更容易构建
 
+   4. 不需要浏览器
 
 ## 2. 在区块链应用中复制区块链数据有什么优势？
 
 1. 简化架构
+
 2. 提高去中心化
+
 3. 更好的用户体验
+
 4. 更好的供应商支持
 
 ## 3. CIP-25 和 CIP-68 之间有什么区别？
 
 1. 它们是相同的，都记录交易元数据
-2. `CIP-25` 使用 `datum` 来记录交易元数据
-3. `CIP-68` 使用交易元数据来记录 NFT 元数据
-4. `CIP-68` 使用带有 `datum` 的引用标记（reference token）来记录 NFT 元数据
+
+2. `CIP-25`使用`datum`来记录交易元数据
+
+3. `CIP-68`使用交易元数据来记录 NFT 元数据
+
+4. `CIP-68`使用带有`datum`的引用标记（reference token）来记录 NFT 元数据
 
 ## 4. 为什么需要时间有效区间？
 
 1. Cardano 区块链只能确认某个时间范围对于特定交易有效
-2. Cardano 区块链使用 `Oracles` 来获取时间
+
+2. Cardano 区块链使用`Oracles`来获取时间
+
 3. Cardano 区块链是非确定性的
-4. 大约每 20 秒会创建一个 `Cardano Block`
+
+4. 大约每 20 秒会创建一个`Cardano Block`
 
 ## 5. 什么时候会发生循环引用？
 
-1. `Plutus Script` 使用了 `reference script`
+1. `Plutus Script`使用了`reference script`
+
 2. Cardano 是确定性的，因此这不是一个有效的场景
-3. 一个 `Plutus script` 引用另一个 `Plutus script` 反之亦然
+
+3. 一个`Plutus script`引用另一个`Plutus script`反之亦然
+
 4. 使用指针地址
 
 ## 答案
 
 1. b
+
 2. c
+
 3. d
+
 4. a
+
 5. c
 
 ## 问题
 
 1. 在保持可审计性和透明性的同时，提高用户体验的方法有哪些？
-2. `CIP-0067` 和 `CIP-0068` 之间有什么关系？
+
+2. `CIP-0067`和`CIP-0068`之间有什么关系？
+
 3. 如何计算特定 UTXO 的正确最小 lovelace？
+
 4. 输入是如何排序的，为什么很难提前知道？
+
 5. 是否有其他解决循环问题的方法？
 
 ## 核心术语
 
 - **Blake2B**: 产生针对 64 位架构优化的加密哈希值。
+
 - **Blockchain Confirmation**: Cardano 区块链网络对区块的接受。
+
 - **DEX**: 去中心化交易所。
+
 - **Functional Components**: 一种 React UI 组件。
+
 - **Redis JSON full stack**: Redis 数据库中用于存储 JSON 对象的可选组件。
+
 - **Time Interval**: 以毫秒为单位的开始结束时间。
+
 - **Trustless Model**: 自审计能力，且不需要信任应用程序。
+
 - `useEffect`: 根据页面挂载或变量变化触发动作。
+
 - **Witness Signature**: 包含消息和签名，证明消息是由给定的公钥签名的
 
 ________________
 
 [1] [`chakra-ui.com/`](https://chakra-ui.com/)
+
 [2] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/pages/WalletPopup.tsx`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/pages/WalletPopup.tsx)
+
 [3] [`github.com/cardano-foundation/cardano-connect-with-wallet`](https://github.com/cardano-foundation/cardano-connect-with-wallet)
+
 [4] [`swr.vercel.app/`](https://swr.vercel.app/)
+
 [5] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/components/SwapView.tsx`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/components/SwapView.tsx)
+
 [6] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/components/SwapView.tsx`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/components/SwapView.tsx)
+
 [7] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/pages/api/getFilterSwaps.ts`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/pages/api/getFilterSwaps.ts)
+
 [8] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/pages/api/getFilterSwaps.ts`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/pages/api/getFilterSwaps.ts)
+
 [9] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/components/SwapView.tsx`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/components/SwapView.tsx)
+
+
+
 [10] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/components/SwapView.tsx`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/components/SwapView.tsx)
+
 [11] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/pages/WalletPopup.tsx`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/pages/WalletPopup.tsx)
+
 [12] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/pages/WalletPopup.tsx`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/pages/WalletPopup.tsx)
+
 [13] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/pages/WalletPopup.tsx`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/pages/WalletPopup.tsx)
+
 [14] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/pages/WalletPopup.tsx`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/pages/WalletPopup.tsx)
-[15] [https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts///main//_10/heli//-orange-app/Master/-Cardano-Smart-Contracts/com/main/chapter_10/helios/ticket-app/pages/SwapView.tsx)
+
+[15] [`https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/pages/SwapView.tsx`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/pages/SwapView.tsx)
+
 [16] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/components/SwapView.tsx`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/components/SwapView.tsx)
+
 [17] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/pages/api/getFilterSwaps.ts`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/pages/api/getFilterSwaps.ts)
+
 [18] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/pages/api/getFilterSwaps.ts`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/pages/api/getFilterSwaps.ts)
+
 [19] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/components/SwapView.tsx`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/components/SwapView.tsx)
+
 [20] [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/components/SwapView.tsx`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/components/SwapView.tsx)
-
-
-
-
 
 # 第 11 章：测试、安全与扩展
 
 ## 引言
-智能合约的测试总是非常棘手，因为代码是在节点上执行的。幸运的是，大多数智能合约开发工具都包含一个本地模拟器，允许我们捕获许多本会在节点上发生的错误。通常这涉及生成轨迹信息（traces）。然而，追踪默认是禁用的，并且为了优化性能，在生产环境中会被移除。尽管如此，某些某些情况下错误只会在生产环境中发生，在这种情况下，你可能需要开启追踪以获取调试信息。当 `optimization` 标志设置为 `false` 时，Helios 会启用追踪；对于 Aiken，则通过执行带有 `--trace-level` 或 `--filter-traces` 标志的 `aiken build` 来启用。
+
+智能合约的测试总是非常棘手，因为代码是在节点上执行的。幸运的是，大多数智能合约开发工具都包含一个本地模拟器，允许我们捕获许多本会在节点上发生的错误。通常这涉及生成轨迹信息（traces）。然而，追踪默认是禁用的，并且为了优化性能，在生产环境中会被移除。尽管如此，某些情况下错误只会在生产环境中发生，在这种情况下，你可能需要开启追踪以获取调试信息。当 `optimization` 标志设置为 `false` 时，`Helios` 会启用追踪；对于 `Aiken`，则通过执行带有 `--trace-level` 或 `--filter-traces` 标志的 `aiken build` 来启用。
 
 ## 结构
+
 在本章中，我们将讨论：
 
 *   测试框架
@@ -3960,31 +3900,29 @@ ________________
     *   输入背书者（Input Endorsers）
 
 ## 测试框架
-在本节中，我们将介绍如何使用流行的测试框架 Vitest 来测试链上和离链代码。Vitest 运行快速，并有一个交互式网页用于检查通过和失败的测试用例。它适合观察离链代码的任何变化并自动重新运行。Vitest 也可以作为整个应用程序测试框架的一部分，而不仅仅是智能合约。Vitest 的缺点与 Webpack 兼容性不好，因为 Vitest 使用 Vite，而 Vite 不使用 Webpack。还有其他支持 Webpack 的测试框架（如 Jest），但 Jest 在设置和配置方面也有自己的挑战。
 
-我们将使用第 6 章中的验证者（Validators）示例来演示如何使用 Vitest 测试智能合约。在开始之前，我们首先需要重构代码，将离链代码从前端用户界面（**UI**）代码中提取出来。这样做有两个好处：
+在本节中，我们将介绍如何使用流行的测试框架 `Vitest` 来测试链上和离链代码。`Vitest` 运行快速，并有一个交互式网页用于检查通过和失败的测试用例。它适合观察离链代码的任何变化并自动重新运行。`Vitest` 也可以作为整个应用程序测试框架的一部分，而不仅仅是智能合约。`Vitest` 的缺点是与 `Webpack` 兼容性不好，因为 `Vitest` 使用 `Vite`，而 `Vite` 不使用 `Webpack`。还有其他支持 `Webpack` 的测试框架（如 `Jest`），但 `Jest` 在设置和配置方面也有自己的挑战。
 
-*   实现了**UI** 与离链交易构建的整洁分离。
+我们将使用第 6 章中的验证者（Validators）示例来演示如何使用 `Vitest` 测试智能合约。在开始之前，我们首先需要重构代码，将离链代码从前端用户界面（**UI**）代码中提取出来。这样做有两个好处：
+
+*   实现了 **UI** 与离链交易构建的整洁分离。
 *   创建了无需任何修改即可供前端和测试框架使用的函数。
 
-支持这种**UI** 与离链代码分离的新文件夹结构如图 11.1 所示。
+支持这种 **UI** 与离链代码分离的新文件夹结构如图 11.1 所示。
 
 ![](img/Figure-11.1.jpg)
 
 **图 11.1：** 重构后的 Vesting 项目
 
 ¹ [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/public/contracts/ticket.hl`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/public/contracts/ticket.hl)
+
 ² [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/public/contracts/ticket.hl`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_10/helios/ticket-app/public/contracts/ticket.hl)
 
-
-
-
-
-所有的 `UI` 代码都位于 `pages/index.tsx` 和 `components` 目录。`UI` 代码将包含所有的 `UI` 元素和应用程序状态信息，例如连接了哪个钱包、钱包余额等。所有离链代码都位于 `contracts/off-chain` 目录，链上代码位于 `contracts/validators` 目录。`contracts/config` 文件夹定义了我们连接的网络（例如，Mainnet、Preprod 等）以及协议参数。
+所有的 **UI** 代码都位于 `pages/index.tsx` 和 `components` 目录。**UI** 代码将包含所有的 **UI** 元素和应用程序状态信息，例如连接了哪个钱包、钱包余额等。所有离链代码都位于 `contracts/off-chain` 目录，链上代码位于 `contracts/validators` 目录。`contracts/config` 文件夹定义了我们连接的网络（例如，`Mainnet`、`Preprod` 等）以及协议参数。
 
 ## 测试策略
 
-测试策略同时使用了传统测试和基于属性的测试。传统测试涉及创建特定的测试用例以确认智能合约正确实现了需求。这包括正向和反向测试用例。基于属性的测试将尝试向智能合约注入非预期的输入和测试条件。我们将使用适用于 typescript 的 `fast-check`，它与 `Vitest` 集成良好。进行此类测试时的一个考虑因素是，离链交易构建器框架在评估 `UPLC` 之前会执行有效性检查。因此，某些失败的测试将是离链交易构建器的错误处理，而不是智能合约的问题。一个潜在的解决方案是让离链工具在构建和提交交易时跳过任何检查。进行此类更改不在本书的范围范围内，但可以将其视为未来的功能请求，以启用此选项。通过 `Aiken`，你可以修改传统测试和基于属性测试的脚本上下文。然而，这种方法的缺点是无法很好地集成到 `Vitest` 等测试框架中，且设置耗时。
+测试策略同时使用了传统测试和基于属性的测试。传统测试涉及创建特定的测试用例以确认智能合约正确实现了需求。这包括正向和反向测试用例。基于属性的测试将尝试向智能合约注入非预期的输入和测试条件。我们将使用适用于 `typescript` 的 `fast-check`，它与 `Vitest` 集成良好。进行此类测试时的一个考虑因素是，离链交易构建器框架在评估 `UPLC` 之前会执行有效性检查。因此，某些失败的测试将是离链交易构建器的错误处理，而不是智能合约的问题。一个潜在的解决方案是让离链工具在构建和提交交易时跳过任何检查。进行此类更改不在本书的范围范围内，但可以将其视为未来的功能请求，以启用此选项。通过 `Aiken`，你可以修改传统测试和基于属性测试的脚本上下文。然而，这种方法的缺点是无法很好地集成到 `Vitest` 等测试框架中，且设置耗时。
 
 归属应用的测试用例如图 11.2 所示。
 
@@ -4007,9 +3945,10 @@ $ npm run test:ui
 **图 11.4:** Vitest 详情
 
 在图 11.4 中，我们选择了解锁测试场景，该场景执行了三个测试用例：
-* 锁定 2 Ada 测试用例
-* 使用错误的解锁者（redeemer）解锁 2 Ada
-* 使用正确的解锁者解锁 2 Ada
+
+*   锁定 2 Ada 测试用例
+*   使用错误的解锁者（redeemer）解锁 2 Ada
+*   使用正确的解锁者解锁 2 Ada
 
 右侧的控制台视图显示了已执行的交易以及费用、CPU 和内存占用。将 2 Ada 锁定到归属脚本不会调用智能合约，因此不会消耗执行单元。只有解锁（或取消）交易会调用智能合约并显示 `cpu` 和 `mem` 值。我们还向智能合约内部包含了跟踪信息，如图 11.4 的控制台视图所示。这允许我们轻松地找到验证器中哪些部分失败了。
 
@@ -4023,7 +3962,7 @@ $ npm run test:ui
 
 **图 11.6:** 锁定 2 Ada 测试用例 1
 
-下一步是调用图 11.7 第 81 行的 `lock` 离链函数。这与从前端 `UI` 的函数相同，只是 `lucid` 供应商连接到了模拟网络。一旦执行了 `lock` 函数，我们在第 86 行检查返回状态是否为 true，然后更新将用于测试用例的执行计数器。我们还必须在第 89 行手动创建一个模拟器区块。最后，我们检查第 99 行的 2 Ada 是否已成功锁定在智能合约地址。
+下一步是调用图 11.7 第 81 行的 `lock` 离链函数。这与从前端 **UI** 的函数相同，只是 `lucid` 供应商连接到了模拟网络。一旦执行了 `lock` 函数，我们在第 86 行检查返回状态是否为 `true`，然后更新将用于测试用例的执行计数器。我们还必须在第 89 行手动创建一个模拟器区块。最后，我们检查第 99 行的 2 Ada 是否已成功锁定在智能合约地址。
 
 **图 11.7:** 锁定 2 Ada 测试用例 2
 
@@ -4075,15 +4014,15 @@ test prop_bool_distribution(predicate via fuzz.bool()) {
 Summary 101 checks, 0 errors, 0 warnings
 ```
 
-
-
-
-
 智能合约开发最重要的方面是安全性。智能合约可能负责数百万美元的价值转移，也可能负责验证选举结果。因此，在设计和编写智能合约时，需要特别考虑如何以最安全的方式进行。只有当你意识到哪些是`*不应该做的*`，以及关于`*应该做的*`的示例和最佳实践时，才能做到这一点。本节将回顾通过对 Cardano 审计发现的一些常见陷阱。
 
 # 双重满足 (Double Satisfaction)
 
-Cardano 智能合约中最频繁的漏洞之一是双重满足漏洞，如 `图 11.10` 所示。在这个简单的 NFT 交换实现中，验证器脚本查看每次交换中的 datum 值以验证业务逻辑。假设同一时间只执行一个 NFT 交换。然而，没有任何机制可以防止一个交易在同一个交易中包含两个交换。当这种情况发生时，交换验证器会分别验证每个 UTXO，由于两者都为真，导致发送给 Alice 的 Ada 数量被重复计算。她本应该为两个 NFT 接收 250 Ada，但只收到了 150 Ada。这是因为金额 150 Ada 满足了两个 NFT 交换条件，从而导致了双重满足漏洞。
+
+
+# 双重满足漏洞
+
+Cardano 智能合约中最频繁的漏洞之一是双重满足漏洞，如`图 11.10`所示。在这个简单的 NFT 交换实现中，验证器脚本查看每次交换中的 datum 值以验证业务逻辑。假设同一时间只执行一个 NFT 交换。然而，没有任何机制可以防止一个交易在同一个交易中包含两个交换。当这种情况发生时，交换验证器会分别验证每个 UTXO，由于两者都为真，导致发送给 Alice 的 Ada 数量被重复计算。她本应该为两个 NFT 接收 250 Ada，但只收到了 150 Ada。这是因为金额 150 Ada 满足了两个 NFT 交换条件，从而导致了双重满足漏洞。
 
 ![](img/Figure-11.10.jpg)
 
@@ -4097,45 +4036,45 @@ Cardano 智能合约中最频繁的漏洞之一是双重满足漏洞，如 `图 
 4. 使用有效性令牌（validity token），如果它存在，交易就可以继续，因为验证已经在其他地方发生。
 5. 我们应该限制其他交易类型，如铸造（Minting）和提币（Withdraws），除非有特定的业务逻辑。
 
-`图 11.11` 显示了用 Helios 编写该漏洞的代码示例。在第 15 行，检查发送给卖者的金额是否达到或高于价格。
+`图 11.11`显示了用 Helios 编写该漏洞的代码示例。在第 15 行，检查发送给卖者的金额是否达到或高于价格。
 
 ![](img/Figure-11.11.jpg)
 
 **图 11.11:** 双重满足代码漏洞
 
-为了修复此代码并避免双重满足漏洞，我们添加了一些额外的检查，如 `图 11.12` 所示。首先，我们在第 8 行的 redeemer 中要求买家的 `PKH`。其次，我们在第 10 和 11 行定义了合约参数，为验证器脚本硬编码 `NFT` 铸造策略哈希和令牌名称。我们还在第 15 行创建了一个实用函数，递归遍历给输出并返回总值。在主函数内部，我们检查 `NFT` 值是否通过 redeemer 提供的 `PKH` 发送到买家地址。然后，我们计算所有输出的总值，减去发往买家的 `NFT`并验证剩余值。如果剩余值不包含其他令牌，我们就知道交易输出中只有一个 `NFT` 且它已发送给买家。
+为了修复此代码并避免双重满足漏洞，我们添加了一些额外的检查，如`图 11.12`所示。首先，我们在第 8 行的 redeemer 中要求买家的`PKH`。其次，我们在第 10 和 11 行定义了合约参数，为验证器脚本硬编码`NFT`铸造策略哈希和令牌名称。我们还在第 15 行创建了一个实用函数，递归遍历给输出并返回总值。在主函数内部，我们检查`NFT`值是否通过 redeemer 提供的`PKH`发送到买家地址。然后，我们计算所有输出的总值，减去发往买家的`NFT`并验证剩余值。如果剩余值不包含其他令牌，我们就知道交易输出中只有一个`NFT`且它已发送给买家。
 
 ![](img/Figure-11.12.jpg)
 
 **图 11.12:** 双重满足修复
 
-## 无效 datum (Invalid Datums)
+# 无效 datum (Invalid Datums)
 
-我们在 `第 9 章，票务应用设计` 的设计模式中看到，UTXO 架构经常使用状态机。它涉及在 datum 中维护状态，并确保作为交易的一部分更新正确的 datum 状态。务必记住，任何人都可以创建 UTXO 并使用恶意 datum 将其锁定在脚本地址。因此，Plutus 脚本始终检查入站 datum 是否有效至关重要。我们看到一个任何人都可以通过恶意 datum 锁定资金的示例，如 `图 11.13` 所示。
+我们在`第 9 章，票务应用设计`的设计模式中看到，UTXO 架构经常使用状态机。它涉及在 datum 中维护状态，并确保作为交易的一部分更新正确的 datum 状态。务必记住，任何人都可以创建 UTXO 并使用恶意 datum 将其锁定在脚本地址。因此，Plutus 脚本始终检查入站 datum 是否有效至关重要。我们看到一个任何人都可以通过恶意 datum 锁定资金的示例，如`图 11.13`所示。
 
 ![](img/Figure-11.13.jpg)
 
 **图 11.13:** 无效 datum 签名
 
-我们查看允许 Alice 释放资金的多个签名合约。虽然检查了签名者的 `PKH` 是否在输出 datum 中，但没有检查其他 datum 字段是否被修改。这导致 Bob 能够释放资金而无需等待第二个签名，如 `图 11.14` 所示。
+我们查看允许 Alice 释放资金的多个签名合约。虽然检查了签名者的`PKH`是否在输出 datum 中，但没有检查其他 datum 字段是否被修改。这导致 Bob 能够释放资金而无需等待第二个签名，如`图 11.14`所示。
 
 ![](img/Figure-11.14.jpg)
 
 **图 11.14:** 无效 datum 提币
 
-让我们检查包含漏洞的代码，如 `图 11.15` 所示。我们在第 3 行定义了 `Datum`，在第 9 行定义了 `Redeemer`。
+让我们检查包含漏洞的代码，如`图 11.15`所示。我们在第 3 行定义了`Datum`，在第 9 行定义了`Redeemer`。
 
 ![](img/Figure-11.15.jpg)
 
 **图 11.15:** 无效 datum
 
-业务逻辑位于 `图 11.16` 中的主函数中。特别是第 31 行检查 `PKH` 是否在签名数组中。
+业务逻辑位于`图 11.16`中的主函数中。特别是第 31 行检查`PKH`是否在签名数组中。
 
 ![](img/Figure-11.16.jpg)
 
 **图 11.16:** 无效 datum 漏洞
 
-我们可以看到，漏洞允许签名者（在本例中为 Carol）更改签名数量，使得 Alice 的签名不再需要。修复此漏洞需要检查所有的 datum 值，而不仅仅是更新的那个。在 `图 11.17` 中，我们在第 24 行创建了预期的输出。我们在第 30 行查找匹配新 datum 的输出 UTXO。我们在第 32 行执行签名列表增加 1 的检查，但在第 38 行收紧了限制。
+我们可以看到，漏洞允许签名者（在本例中为 Carol）更改签名数量，使得 Alice 的签名不再需要。修复此漏洞需要检查所有的 datum 值，而不仅仅是更新的那个。在`图 11.17`中，我们在第 24 行创建了预期的输出。我们在第 30 行查找匹配新 datum 的输出 UTXO。我们在第 32 行执行签名列表增加 1 的检查，但在第 38 行收紧了限制。
 
 ![](img/Figure-11.17.jpg)
 
@@ -4145,79 +4084,71 @@ Cardano 智能合约中最频繁的漏洞之一是双重满足漏洞，如 `图 
 
 我们将深入的另一个常见漏洞是令牌泄露。这会严重影响依赖铸造唯一令牌的状态机或流动池。如果铸造了多个唯一令牌，智能合约可能会错误验证交易。Cardano 的一个著名的例子是 MinSwap，那里发现了这种类型的漏洞。幸运的是，由于 WingRiders 的快速行动，没有资金损失。Tweag 对代码进行了审计并提供了极好的报告。
 
-这种类型的漏洞有变体，我们将在 `图 11.18` 中查看一种特定类型。
+这种类型的漏洞有变体，我们将在`图 11.18`中查看一种特定类型。
 
 ![](img/Figure-11.18.jpg)
 
 **图 11.18:** 令牌泄露
 
-`图 11.19` 中的代码包含一个允许攻击者铸造其线程令牌的漏洞。`Mint Redeemer` 正确测试了铸造的值是否为线程令牌且数量为一。因此，漏洞实际上位于销毁线程令牌的 `Burn redeemer`。`Burn` 只要具有第 29 行的铸造策略，就可以销毁任何令牌。
+`图 11.19`中的代码包含一个允许攻击者铸造其线程令牌的漏洞。`Mint Redeemer`正确测试了铸造的值是否为线程令牌且数量为一。因此，漏洞实际上位于销毁线程令牌的`Burn redeemer`。`Burn`只要具有第 29 行的铸造策略，就可以销毁任何令牌。
 
 ![](img/Figure-11.19.jpg)
 
 **图 11.19:** 线程令牌漏洞
 
-
-
-
-问题在于，我们没有检查实际被销毁的代币数量；只有铸造值（minted value）包含了一个特定的铸造策略。要修复这个问题，需要显式地检查正在铸造的数量并确认其为负值。修复代码所示在 `图 11.20]` 的第 29—31 行。它查看了正在铸造的值，然后遍历一个 `map` 以检查每个条目的值是否为 -1。
+问题在于，我们没有检查实际被销毁的代币数量；只有铸造值（minted value）包含了一个特定的铸造策略。要修复这个问题，需要显式地检查正在铸造的数量并确认其为负值。修复代码所示在`图 11.20`的第 29—31 行。它查看了正在铸造的值，然后遍历一个`map`以检查每个条目的值是否为 -1。
 
 ![](img/Figure-11.20.jpg)
 
-**图 11.20:** 线程代币修复^(22
+**图 11.20:** 线程代币修复
 
-## 审计
+# 审计
 
-增加额外的额外的眼睛来审查你的代码非常重要，这有助于发现和识别潜在的漏洞。这通常是审计员的角色，有几家审计公司可以为 Cardano 智能合约提供帮助²³。也非常建议探索 Vacuum Labs 提供的优秀仓库，该仓库提供了更多使用 Aiken 在真实审计中发现的漏洞示例²⁴。最后，你还应该审查已完成的审计，以充分理解常见的漏洞类型。虽然智能合约代码语言可能不同（如 Haskell 或 Plutarch），但概念是相同的。以下是已发布的审计列表，供进一步阅读：
+增加额外的额外的眼睛来审查你的代码非常重要，这有助于发现和识别潜在的漏洞。这通常是审计员的角色，有几家审计公司可以为 Cardano 智能合约提供帮助。也非常建议探索 Vacuum Labs 提供的优秀仓库，该仓库提供了更多使用 Aiken 在真实审计中发现的漏洞示例。最后，你还应该审查已完成的审计，以充分理解常见的漏洞类型。虽然智能合约代码语言可能不同（如 Haskell 或 Plutarch），但概念是相同的。以下是已发布的审计列表，供进一步阅读：
 
-*   Vacuum Labs²⁵
-*   Tweag²⁶
-*   Mlabs²⁷
+* Vacuum Labs
+* Tweag
+* Mlabs
 
-## 扩展
+# 扩展
 
 在 Cardano 区块网上扩展智能合约有多种方法，我们将在本节中进行。在提高扩展性时，通常必须考虑去中心化和安全性之间的权衡。应用程序始终受到底层区块链架构的限制，这就是为什么选择什么区块链至关重要。正如我们所知，Cardano 使用 UTXO 架构，该架构使用本地状态而不是全局状态。我们将利用这一属性来增加应用程序的扩展性。
 
 # 避免 UTXO 竞争
 
-对于 `第 10 章，票务应用实现` 中的票务应用，我们可以轻松处理许多同时运行的事件，而不会产生任何 UTXO 竞争或瓶颈。然而，如果有一个极其热门的事件，如果所有活动票务位于一个交换 UTXO 中，可能会出现 UTXO 竞争。缓解这种情况的方法是创建多个带有批量票务的交换，这些票务可以并行访问。就像在体育馆内拥有多个售票窗口一样，链外代码需要修改以路由或显示当前未等待区块确认的交换。通过将活动票务分布到多个交换中，而无需对智能合约进行任何更改，应用程序的扩展限制将直接取决于底层的区块大小和频率。
+对于`第 10 章，票务应用实现`中的票务应用，我们可以轻松处理许多同时运行的事件，而不会产生任何 UTXO 竞争或瓶颈。然而，如果有一个极其热门的事件，如果所有活动票务位于一个交换 UTXO 中，可能会出现 UTXO 竞争。缓解这种情况的方法是创建多个带有批量票务的交换，这些票务可以并行访问。就像在体育馆内拥有多个售票窗口一样，链外代码需要修改以路由或显示当前未等待区块确认的交换。通过将活动票务分布到多个交换中，而无需对智能合约进行任何更改，应用程序的扩展限制将直接取决于底层的区块大小和频率。
 
 # 引用脚本（Reference Scripts）
 
-到目前为止我们看到的所有示例都需要作为交易的一部分花费 UTXO 输入。随着 2022 年 9 月 Vasil 硬分叉的引入，引入了引用输入（Reference Inputs）²⁸，允许将只读的 UTXO 包含在交易中而无需被花费。如果你只需要读取数据值（datum value）而不需要更新它，这特别有用。它极大地提高了并发性，因为多个脚本可以同时包含并使用引用输入。最终的益处为引用脚本（Reference Scripts）铺平了道路²⁹，它允许将 Plutus 脚本包含在链上的 UTXO 中。通过使用引用脚本，交易不需要包含 Plutus CBOR 负载，这将减少整体交易的大小。只要 Plutus 脚本作为 UTXO 引用输入包含，交易就能评估并执行存储在链上的 Plutus 脚本。
+到目前为止我们看到的所有示例都需要作为交易的一部分花费 UTXO 输入。随着 2022 年 9 月 Vasil 硬分叉的引入，引入了引用输入（Reference Inputs），允许将只读的 UTXO 包含在交易中而无需被花费。如果你只需要读取数据值（datum value）而不需要更新它，这特别有用。它极大地提高了并发性，因为多个脚本可以同时包含并使用引用输入。最终的益处为引用脚本（Reference Scripts）铺平了道路，它允许将 Plutus 脚本包含在链上的 UTXO 中。通过使用引用脚本，交易不需要包含 Plutus CBOR 负载，这将减少整体交易的大小。只要 Plutus 脚本作为 UTXO 引用输入包含，交易就能评估并执行存储在链上的 Plutus 脚本。
 
-使用归属（vesting）示例，我们将展示如何在 `图 11.21` 中通过 Helios 提交引用脚本。在 `lock` 函数内部，我们将展示如何提交。在第 89 行，我们首先检查是否存在引用脚本，如果没有，则构建编译后的 Plutus 脚本（`compiledProgram`）第 91 行。费用包含在整体交易中，并使用 `coinsPerUTxord` 进行计算。
+使用归属（vesting）示例，我们将展示如何在`图 11.21`中通过 Helios 提交引用脚本。在`lock`函数内部，我们将展示如何提交。在第 89 行，我们首先检查是否存在引用脚本，如果没有，则构建编译后的 Plutus 脚本（`compiledProgram`）第 91 行。费用包含在整体交易中，并使用`coinsPerUTxord`进行计算。
 
 ![](img/Figure-11.21.jpg)
 
-**图 11.21:** 使用引用脚本锁定 30
+**图 11.21:** 使用引用脚本锁定
 
-一旦引用脚本提交到链上，我们在第 83 行的 `lock` 函数内部查询区块链上的引用脚本 UTXO。在第 88 行，我们使用 `addRefInput` 将其添加，包含了 `uplc`。
+一旦引用脚本提交到链上，我们在第 83 行的`lock`函数内部查询区块链上的引用脚本 UTXO。在第 88 行，我们使用`addRefInput`将其添加，包含了`uplc`。
 
 ![](img/Figure-11.22.jpg)
 
-**图 11.22:** 使用引用脚本解锁 31
+**图 11.22:** 使用引用脚本解锁
 
 # 高级智能合约设计
 
-当智能合约首次在 Cardano 发布时，低的 Plutus 脚本使得创建和部署现实应用变得困难。因此，有很多巧妙的方法来缩小 Plutus 脚本的大小。这些高级技术现在仍然适用，但是以增加复杂性和降低可读性的代价。对于需要本章最佳实践之外额外性能的情况，请查看 Anastasia Labs 提供的优秀示例³² 以进行学习。
+当智能合约首次在 Cardano 发布时，低的 Plutus 脚本使得创建和部署现实应用变得困难。因此，有很多巧妙的方法来缩小 Plutus 脚本的大小。这些高级技术现在仍然适用，但是以增加复杂性和降低可读性的代价。对于需要本章最佳实践之外额外性能的情况，请查看 Anastasia Labs 提供的优秀示例以进行学习。
 
 # Hydra
 
-扩展层 1 区块链通用方法：汇总（rollups）和层 2 侧链。汇总涉及在链外处理交易，这样可以更快、更高效地进行，并在之后作为一次交易应用。层 2 侧链涉及创建一个与层 1 类似的区块链网络，具有更快的区块生成和结算时间，但去中心化和安全性较低。Hydra 是一种创建同态通道的层 2 扩展解决方案 33。这意味着具有类似的账本规则和 Plutus 评估器，无需修改即可运行大多数智能合约。Hydra 是一套协议，其中 Hydra Head 协议涉及层 2 网络的创建（销毁）以及与层 1 的价值交换³⁴。
+扩展层 1 区块链通用方法：汇总（rollups）和层 2 侧链。汇总涉及在链外处理交易，这样可以更快、更高效地进行，并在之后作为一次交易应用。层 2 侧链涉及创建一个与层 1 类似的区块链网络，具有更快的区块生成和结算时间，但去中心化和安全性较低。Hydra 是一种创建同态通道的层 2 扩展解决方案。这意味着具有类似的账本规则和 Plutus 评估器，无需修改即可运行大多数智能合约。Hydra 是一套协议，其中 Hydra Head 协议涉及层 2 网络的创建（销毁）以及与层 1 的价值交换。
 
-Hydra 的设计追溯到 Cardano 结算层和计算层的原始概念。某些情况需要以牺牲去中心化和安全性为代价的专用计算层。例如，可以为 `第 9 章` 和 `第 10 章` 中讨论的票务应用创建一个 Hydra Head，如*图* 11.23 所示。
+Hydra 的设计追溯到 Cardano 结算层和计算层的原始概念。某些情况需要以牺牲去中心化和安全性为代价的专用计算层。例如，可以为`第 9 章`和`第 10 章`中讨论的票务应用创建一个 Hydra Head，如*图* 11.23 所示。
 
 1. 想参加热门票务销售的用户会将 Ada 锁定在 Hydra 智能合约中，并获得其锁定 Ada 量的凭证（Hydra Head 内部的代币）。
 2. 票代币将提前在 Cardano 层 1 网络上铸造，并锁定在 Hydra Head 智能合约中，以便在 Hydra Head 内进行出售。
 3. 用户将使用票务应用程序管理的托管钱包与在 Hydra Head 中运行的票务交换进行交互。
-
-
-
-
 4. 门票销售结束后，在 Hydra Head 中购买的票据将传回 Cardano 层 1 区块链交给新所有者。
-
-5. 任何未使用的代金将转换为层 1  Ada 并返回给原始所有者。
+5. 任何未使用的代金将转换为层 1 Ada 并返回给原始所有者。
 
 ![](img/Figure-11.23.jpg)
 
@@ -4227,11 +4158,11 @@ Hydra 的设计追溯到 Cardano 结算层和计算层的原始概念。某些�
 
 # Mithril
 
-Mithril 是区块链扩展性、钱包和质押池运营商（SPOs）的一项重要进展。它允许客户端在无需下载并重放从创世区块开始的所有交易的情况下，获取区块链的当前状态。Mithril 后的核心创新是使用基于质押的阈值多签名 `STM`，由大多数诚实的利益相关者创建一个证书，证明 Cardano 快照是有效的。通过使用该证书，轻量级客户端或 SPO 可以以与完全同步节点类似的安全属性验证快照。
+Mithril 是区块链扩展性、钱包和质押池运营商（SPOs）的一项重要进展。它允许客户端在无需下载并重放从创世区块开始的所有交易的情况下，获取区块链的当前状态。Mithril 后的核心创新是使用基于质押的阈值多签名`STM`，由大多数诚实的利益相关者创建一个证书，证明 Cardano 快照是有效的。通过使用该证书，轻量级客户端或 SPO 可以以与完全同步节点类似的安全属性验证快照。
 
 # Input Endorsers
 
-Input Endorsers（如 Ouroboros Leios 文档所述）是 Cardano Ouroboros 协议的一个心勃勃且深刻的设计扩展。它特别关注通过并行化区块生产和交易选择来最大化网络利用率。这将显著提高区块生产吞吐量，同时最小化对网络额外资源的需求。。`Figure 11.24` 展示了 Cardano 网络目前的利用不足情况以及优化领域。
+Input Endorsers（如 Ouroboros Leios 文档所述）是 Cardano Ouroboros 协议的一个心勃勃且深刻的设计扩展。它特别关注通过并行化区块生产和交易选择来最大化网络利用率。这将显著提高区块生产吞吐量，同时最小化对网络额外资源的需求。`Figure 11.24`展示了 Cardano 网络目前的利用不足情况以及优化领域。
 
 ![](img/Figure-11.24.jpg)
 
@@ -4243,13 +4174,13 @@ Ouroboros Leios 引入了三种新的区块类型：
 * 认可区块 (Endorsement Blocks)
 * 排序区块 (Ranking Blocks)
 
-从高层次来说，输入区块包含从区块生成节点内存池提取的交易列表。这可以在空闲期间异步完成，如 `Figure 11.24` 所示。认可区块随后生成有效输入区块的证书。排序区块然后使用认可证书并形成认可区块链。账本状态随后基于排序区块的顺序。需要注意的是，Input Endorsers 并没有改变确定最长链的共识机制。有关 Input Endorsers 更详细、彻底的描述，请参考 Ouroboros Leios 论文。
+从高层次来说，输入区块包含从区块生成节点内存池提取的交易列表。这可以在空闲期间异步完成，如`Figure 11.24`所示。认可区块随后生成有效输入区块的证书。排序区块然后使用认可证书并形成认可区块链。账本状态随后基于排序区块的顺序。需要注意的是，Input Endorsers 并没有改变确定最长链的共识机制。有关 Input Endorsers 更详细、彻底的描述，请参考 Ouroboros Leios 论文。
 
-## 结论
+# 结论
 
-我们现在应该对如何测试智能合约并将其作为整体框架的一部分有了良好的理解。我们使用 `Vitest` 和 `fast-check` 等工具检查了传统测试和基于属性的测试。接下来，我们查看了真实审计中的代码示例以及如何避免智能合约漏洞。最后，我们讨论了扩展性和一些工具和技术，例如避免 `UTXO contention`、`Reference Scripts` 和 `Hydra`。我们还查看了使用 Input Endorsers 的层 1 扩展性改进，它将在保持安全性和额外资源需求的同时显著增加区块生产。在下一章中，我们将回顾编写智能合约时可以使用的故障排除工具和技术。
+我们现在应该对如何测试智能合约并将其作为整体框架的一部分有了良好的理解。我们使用`Vitest`和`fast-check`等工具检查了传统测试和基于属性的测试。接下来，我们查看了真实审计中的代码示例以及如何避免智能合约漏洞。最后，我们讨论了扩展性和一些工具和技术，例如避免`UTXO contention`、`Reference Scripts`和`Hydra`。我们还查看了使用 Input Endorsers 的层 1 扩展性改进，它将在保持安全性和额外资源需求的同时显著增加区块生产。在下一章中，我们将回顾编写智能合约时可以使用的故障排除工具和技术。
 
-## 记忆要点
+# 记忆要点
 
 * 测试智能合约是困难的，因为代码在跨网络的分布式节点上执行。
 * 应用程序设计应将 UI 代码与离链及后端代码分离。
@@ -4259,39 +4190,43 @@ Ouroboros Leios 引入了三种新的区块类型：
 * 无效数据（Invalid Datum）发生在数据字段未被检查和验证时。
 * 代币泄露（Token Leakage）涉及铸造多个一个唯一代币。
 * 审计是生产就绪的关键部分，应用于审查智能合约源码。
-* 应用程序扩展技术包括避免 `UTXO contention` 和利用 `Reference Scripts`。
+* 应用程序扩展技术包括避免`UTXO contention`和利用`Reference Scripts`。
 * Hydra 是一种层 2 扩展解决方案，但会影响安全去中心化属性。
 * Input Endorsers 是一种 Cardano 层 1 扩展解决方案，可显著增加区块生产。
 
-## 单选题
+# 单选题
 
 1. 你会使用什么技术来调试生产环境中的智能合约？
    - 使用 VS Code
    - 打开支持工单
    - 在生产环境中开启跟踪 (tracing)
    - 重启 Cardano 节点
+
 2. 属性测试用于什么？
    - 测试意外输入
    - 测试预期输入
    - 回归测试
    - 非功能测试
+
 3. 代币泄露可能发生在哪里？
    - 仅铸造脚本
    - 验证器脚本或铸造脚本
    - 仅验证器脚本
    - 以上都不是
-4. Reference Scripts 仅在 `\_\_\_\_\_\_` 时可行。
+
+4. Reference Scripts 仅在`______`时可行。
    - 原生资产 (Native Assets)
    - 确定性 (Determinism)
    - Shelly 硬分叉
    - 引用输入 (Reference Inputs)
+
 5. 关于 Hydra 的哪个描述正确？
    - 只能开启有限数量的 Hydra heads
    - 可以开启无限数量的 Hydra heads
    - 加入 Hydra head 是无需许可的
    - Hydra 网络上铸造的代币将在基础层创建
 
-## 答案
+# 答案
 
 1. c
 2. a
@@ -4299,7 +4234,7 @@ Ouroboros Leios 引入了三种新的区块类型：
 4. d
 5. a
 
-# 
+# 问题
 
 1. 测试智能合约的其他方法有哪些？
 2. 你能列出三个漏洞并描述漏洞涉及的内容吗？
@@ -4307,7 +4242,7 @@ Ouroboros Leios 引入了三种新的区块类型：
 4. Mithril 还可以做什么？
 5. Input Endorsers 的潜在风险有哪些？
 
-## 术语
+# 术语
 
 * `UPLC`: Untype Plutus Core，从 Helios 或 Aiken 生成的编译语言。
 * `Map`: 字典数据类型，包含键值对的列表。
@@ -4321,13 +4256,16 @@ Ouroboros Leios 引入了三种新的区块类型：
 __________________________
 
 [1] https://vitest.dev/
+
 [2] https://jestjs.io/
+
 [3] Gabriel Lebec, “The Magic of Generative Testing: Fast-Check in JavaScript”
+
 [4] John Hughes, “Testing smart contracts with QuickCheck by John Hughes”
+
 [5] https://fast-check.dev/
+
 [6] https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_11/aiken/vesting/contracts/tests/unlock.test.ts
-
-
 
 
 
@@ -4379,15 +4317,11 @@ __________________________
 
 ³¹ [`github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_11/helios/vesting-reference-script/contracts/off-chain/lock.ts`](https://github.com/ava-orange-education/Mastering-Cardano-Smart-Contracts/blob/main/chapter_11/helios/vesting-reference-script/contracts/off-chain/lock.ts)
 
+当你的智能合约无法正常工作时（在本文编写时），最好的故障排除方法是在智能合约内部使用`print`和追踪功能（traces）。这允许你编写`console log`并查看你的智能合约中执行了哪些内容。我们将重点介绍书中使用的 Helios 和 Lucid + Aiken 智能合约开发工具包。
 
+# Helios
 
-
-
-当你的智能合约无法正常工作时（在本文编写时），最好的故障排除方法是在智能合约内部使用 `print` 和追踪功能（traces）。这允许你编写 `console log` 并查看你的智能合约中执行了哪些内容。我们将重点介绍书中使用的 Helios 和 Lucid + Aiken 智能合约开发工具包。
-
-# Helios (#toc.xhtml#s320a)
-
-以 Helios 为例，你可以使用 `print` 和 `show` 函数打印特定交易中铸造的值。必须将 Helios 的 `optimize` 标志设置为 `false` 以启用追踪。
+以 Helios 为例，你可以使用`print`和`show`函数打印特定交易中铸造的值。必须将 Helios 的`optimize`标志设置为`false`以启用追踪。
 
 ```
 func main(redeemer: Redeemer, ctx: ScriptContext) -> Bool {
@@ -4402,7 +4336,7 @@ INFO (ticket:13:10) tx.minted: lovelace: 0
 INFO (ticket:13:10) 0af9021a0…d93cba53ecf15.54687265616420546f6b656e: 2
 ```
 
-Helios 脚本的行号也会显示在 `INFO` 括号中。`trace()` 函数也可用于输出以测试布尔条件。
+Helios 脚本的行号也会显示在`INFO`括号中。`trace()`函数也可用于输出以测试布尔条件。
 
 ```
 value_minted.contains_policy(mph).trace("TTP3: ")
@@ -4420,7 +4354,7 @@ INFO (ticket:33:52) TTP3: true
 
 **图 12.1:** Helios Trace()
 
-# Aiken (#toc.xhtml#s321a)
+# Aiken
 
 当你构建 Aiken 脚本时，可以指定想要包含的追踪类型，正如图 12.2 所示。
 
@@ -4428,14 +4362,14 @@ INFO (ticket:33:52) TTP3: true
 
 **图 12.2:** Aiken Build Trace Options
 
-要输出 `print` 语句，请使用 `trace` 函数。
+要输出`print`语句，请使用`trace`函数。
 
 ```
 trace "redeemer message: "
 trace string.from_bytearray(msg)
 ```
 
-当条件被评估为 false 时输出追踪，你可以使用 `?` 运算符。
+当条件被评估为 false 时输出追踪，你可以使用`?`运算符。
 
 ```
 some_expression_a? && some_expression_b?
@@ -4443,13 +4377,13 @@ some_expression_a? && some_expression_b?
 
 在这个示例中，它可以帮助隔离哪个表达式失败了，因为如果任何一个条件评估为 false，整个脚本将失败。
 
-输出 `trace` 信息的示例见图 12.3。
+输出`trace`信息的示例见图 12.3。
 
 ![](img/Figure-12.3.jpg)
 
 **图 12.3:** Aiken Traces
 
-验证器脚本使用 `-t` 标志编译。
+验证器脚本使用`-t`标志编译。
 
 ```bash
 $ aiken build -t verbose
@@ -4461,31 +4395,27 @@ $ aiken build -t verbose
 
 **图 12.4:** Aiken Traces
 
-# CBOR 分析 (#toc.xhtml#s322a)
+# CBOR 分析
 
-正如我们在之前的章节中学到的，`CBOR` 是存储数据的格式。验证器脚本使用 `-t` 标志编译。执行脚本时将生成以下输出。
+正如我们在之前的章节中学到的，`CBOR`是存储数据的格式。验证器脚本使用`-t`标志编译。执行脚本时将生成以下输出。
 
-# Helios (#toc.xhtml#s323a)
+# Helios
 
-Helios 对 `CBOR` 有极佳的支持，你可以轻松查看交易的任何部分。
+Helios 对`CBOR`有极佳的支持，你可以轻松查看交易的任何部分。
 
-# Lucid + Aiken (#toc.xhtml#s324a)
+# Lucid + Aiken
 
-Lucid  `diagnostic()` 来帮助你查看 `CBOR` 表示。
+Lucid `diagnostic()`来帮助你查看`CBOR`表示。
 
-# 执行错误 (#toc.xhtml#s325a)
+# 执行错误
 
 当你遇到脚本大小或 CPU 和内存执行限制错误时，错误信息将告诉你发生了什么错误以及错误发生的位置。
-
-
-
-
 
 ```
 tx = ctx.tx;
 ```
 
-`图 12.7` 显示了错误信息，其中列出了错误类型、脚本名称和行号。
+`图 12.7`显示了错误信息，其中列出了错误类型、脚本名称和行号。
 
 ![](img/Figure-12.7.jpg)
 
@@ -4497,7 +4427,7 @@ tx = ctx.tx;
 let { transaction, purpose } = context
 ```
 
-这将生成一个错误，并指示行号和错误原因（请参考 `图 12.8`）。
+这将生成一个错误，并指示行号和错误原因（请参考`图 12.8`）。
 
 ![](img/Figure-12.8.jpg)
 
@@ -4509,13 +4439,13 @@ Helios 和 Lucid 都拥有良好的交易构建错误信息，并且有很多错
 
 # Cardano Node 错误
 
-遗憾的是，Cardano Node（Ledger）错误最难诊断。这是因为你会看到格式不佳的陌生错误信息，导致它们难以阅读⁷和理解。`图 12.9` 提供了一个你在交易失败时可能会看到的 Cardano Node 错误示例。
+遗憾的是，Cardano Node（Ledger）错误最难诊断。这是因为你会看到格式不佳的陌生错误信息，导致它们难以阅读⁷和理解。`图 12.9`提供了一个你在交易失败时可能会看到的 Cardano Node 错误示例。
 
 ![](img/Figure-12.9.jpg)
 
 **图 12.9:** Cardano Node 错误
 
-为了更好地理解这些错误信息的含义，你可能需要参考用 Haskell 编写的 Cardano Ledger⁸ 源代码。你将看到可以解释错误发生原因的代码和注释。`图 12.9` 中的示例非常直观，是一个执行预算错误。还有其他错误并不那么明显，可能需要查看代码来理解错误的含义。幸运的是，这些错误现在大多数都被离链交易构建器捕获，因此遇到 Cardano Node 错误不再以前那么常见了。
+为了更好地理解这些错误信息的含义，你可能需要参考用 Haskell 编写的 Cardano Ledger⁸ 源代码。你将看到可以解释错误发生原因的代码和注释。`图 12.9`中的示例非常直观，是一个执行预算错误。还有其他错误并不那么明显，可能需要查看代码来理解错误的含义。幸运的是，这些错误现在大多数都被离链交易构建器捕获，因此遇到 Cardano Node 错误不再以前那么常见了。
 
 ## 钱包错误
 
@@ -4540,7 +4470,9 @@ Helios 和 Lucid 都拥有良好的交易构建错误信息，并且有很多错
 
 ## 结论
 
-本章概述了 Helios 和 Lucid + Aiken 的调试工具和技术。我们探索了如何为交易和数据类型生成 `CBOR`，以便将其与正式规范进行比较。我们还查看了当 Plutus 脚本超过 CPU 和内存执行限制时该怎么办，以及提高脚本性能的建议。然后我们探索了 Helios 和 Lucid + Aiken 框架在构建和提交交易时如何提供错误信息。还检查了 Cardano Node 错误，以及为什么如果发生错误我们可能需要查看 Cardano Ledger 源代码进行故障排除。最后，我们通过回顾遵循 CIP-0030 规范的浏览器钱包错误来结束本章。在下一章，我们将探索并回顾 Cardano 生态系统以及帮助你在 Cardano 区块链上构建应用程序的资源。
+
+
+本章概述了 Helios 和 Lucid + Aiken 的调试工具和技术。我们探索了如何为交易和数据类型生成 `CBOR`，以便将其与正式规范进行比较。我们还查看了当 Plutus 脚本超过 CPU 和内存执行限制时该怎么办，以及提高脚本性能的建议。然后我们探索了 Helios 和 Lucid + Aiken 框架在构建和提交交易时如何提供错误信息。还检查了 Cardano Node 错误，以及为什么如果发生错误我们可能需要查看 Cardano Ledger 源代码进行故障排除。最后，我们通过回顾遵循 `CIP-0030` 规范的浏览器钱包错误来结束本章。在下一章，我们将探索并回顾 Cardano 生态系统以及帮助你在 Cardano 区块链上构建应用程序的资源。
 
 ## 重点
 
@@ -4562,21 +4494,25 @@ Helios 和 Lucid 都拥有良好的交易构建错误信息，并且有很多错
     2. 离链交易构建器
     3. Plutus 智能合约
     4. 以上所有
+
 2. 你何时想在生产环境中开启追踪？
     1. 帮助排除故障
     2. 提高性能
     3. 收集分析
     4. 以上都不是
+
 3. 你可以在哪里找到最新的协议参数？
     1. `shelley-genesis.json`
     2. `alonzo-genesis.json`
     3. 节点 `config.json`
     4. 活跃的 Cardano 网络
+
 4. 执行预算错误发生的原因是？
     1. 本地计算与 Cardano Node 之间的差异
     2. Cardano 是确定性的
     3. 取决于哪个 Cardano Node 在执行脚本
     4. 不同的 Cardano Node 版本
+
 5. CBOR 使用哪种排序？
     1. FIFO（先进先出）
     2. 词法排序（Lexical）
@@ -4605,29 +4541,16 @@ Helios 和 Lucid 都拥有良好的交易构建错误信息，并且有很多错
 *   **CDDL:** 紧凑数据定义库
 *   **UTXO:** 未花费交易输出
 
-
-
-
-
 ² [https://datatracker.ietf.org/doc/html/rfc7049#section-3.9]
-
 ³ [https://github.com/cardano-foundation/CIPs/tree/master/CIP-0021]
-
 ⁴ [https://cardano.stackexchange.com/]
-
 ⁵ [https://discord.gg/uARRRGXNRr]
-
 ⁶ [https://discord.gg/A4cpwNXzEC]
-
 ⁷ [https://github.com/IntersectMBO/cardano-node/issues/3126]
-
 ⁸ [https://github.com/IntersectMBO/cardano-ledger/tree/master/eras/babbage/impl/src/Cardano/Ledger/Babbage/Rules]
-
 ⁹ [https://github.com/cardano-foundation/CIPs/tree/master/CIP-0030#error-types]
 
-# 第 13 章
-
-# Cardano 生态系统
+# 第 13 章 Cardano 生态系统
 
 ## 引言
 
@@ -4659,24 +4582,23 @@ Messari 发布了关于 Cardano 的最新 2023 年第四季度报告，回顾该
 *   中本系数（Nakamoto coefficient）比其他区块链高出 `31`。需要注意的是，这不包含质押部分。³
 *   探索 Cardano 生态系统的最好方法之一是通过网站。⁴
 *   以下是类别列表⁵ 该网站将生态系统分为以下几类：
-
-*   人工智能 (AI)
-*   社区
-*   DeFi
-*   开发者
-*   教育
-*   游戏
-*   身份
-*   基础设施
-*   启动平台 (Launchpad)
-*   贷
-*   市场
-*   代币
-*   元宇宙
-*   支付与稳定币
-*   社交
-*   工具
-*   钱包
+    *   人工智能 (AI)
+    *   社区
+    *   DeFi
+    *   开发者
+    *   教育
+    *   游戏
+    *   身份
+    *   基础设施
+    *   启动平台 (Launchpad)
+    *   贷
+    *   市场
+    *   代币
+    *   元宇宙
+    *   支付与稳定币
+    *   社交
+    *   工具
+    *   钱包
 
 # Cardano GitHub 仓库
 
@@ -4711,9 +4633,6 @@ Cardano 改进流程（CIP）是在 Cardano 区块链上请求和实施更改的
 *   **Inactive（非活跃）：** 不再相关或已撤回
 *   **Draft（草稿）：** 已不再使用，但某些旧的 `CIP` 可能仍处于此状态。它类似于一个由于信息缺失或不完整而未合并的提议 `CIP` 拉取请求（pull request）。
 
-
-
-
 `CIP` 编辑者负责维护 `CIP` 过程，并将组成小组以帮助执行 `CIP-0001` 中列出的标准。`CIP` 评审者可能是领域的专家，负责对特定的 `CIP` 提供反馈并进行评审。不要求 `CIP` 编辑者必须精通 Cardano 的所有领域，确保所需的 `CIP` 评审人员圆满参与特定的 `CIP` 是 `CIP` 作者的责任。如果某人定期对 `CIP` 过程表现出积极贡献，则可以由现有的 `CIP` 编辑者或社区成员提名为 `CIP` 编辑者。
 
 关于 `CIP` 和 `CIP` 过程，有更多详细信息，读者在继续进行 `CIP` 拉取请求（pull request）之前必须彻底审阅。还引入了 Cardano 问题声明 (`CPS`) 来帮助捕获和记录特定问题，这可以用于帮助创建 `CIP`。在通过 `CIP` 过程请求更改时，并非强制要求 `CPS`，但建议提供。
@@ -4722,11 +4641,11 @@ Cardano 改进流程（CIP）是在 Cardano 区块链上请求和实施更改的
 
 Intersect 于 2023 年 7 月启动，是 Cardano 的基于成员的组织 (`MBO`)。Intersect 将通过社区治理，优先考虑并分配 Cardano 库资金用于 Cardano 区块的未来维护和开发。为了实现这一目标，Intersect 关注五个关键领域：
 
-* 支持 Cardano 生态系统的社区和增长。
-* 根据 `CIP-1694` 的记录对链上治理进行管理和宣传。
-* 监督 Cardano 技术路线图的交付。
-* 促进 系统 系统稳定性的。
-* 协调 Cardano 核心技术的开源开发。
+*   支持 Cardano 生态系统的社区和增长。
+*   根据 `CIP-1694` 的记录对链上治理进行管理和宣传。
+*   监督 Cardano 技术路线图的交付。
+*   促进系统稳定性的。
+*   协调 Cardano 核心技术的开源开发。
 
 Intersect 是一家总部位于美国怀俄明州的非营利公司。怀俄明州对于去中心化自治组织 (`DAO`) 的法律结构拥有有利的立法，这就是 Intersect 在该州注册的原因。Intersect 有一个董事会，他们每月举行会议，并在 Intersect 网站上发布会议记录。一旦成为成员，可以通过 Discord 上的社区公告、委员会工作组和会议信息加入 Intersect。
 
@@ -4734,9 +4653,9 @@ Intersect 是一家总部位于美国怀俄明州的非营利公司。怀俄明�
 
 Cardano 现在处于 Cardano 路线图的 Voltaire 时代，该时代将使用链上治理使 Cardano 网络成为一个自给自足的系统`CIP-1694` 记录了链上治理系统应该如何工作，以及被称为“最小可行治理” (`MVG`) 的初始引导阶段需要什么。`CIP-1694` 最重要的方面是确认一个 Ada 等于一票。`CIP-1694` 中记录了三个治理机构，每个机构在治理过程中都起着关键作用：
 
-* 委托代表 (`DRep`)
-* 质押池运营商 (`SPO`)
-* 宪法委员会 (`CC`)
+*   委托代表 (`DRep`)
+*   质押池运营商 (`SPO`)
+*   宪法委员会 (`CC`)
 
 这些治理机构将根据所投票提案的类型，投票批准或拒绝链上提案。链上治理工具目前正在测试网（Testnet）上进行测试。需要工具让 `DReps` 和 `SPOs` 能够方便地参与链上治理。
 
@@ -4770,33 +4689,30 @@ Cardano 现在处于 Cardano 路线图的 Voltaire 时代，该时代将使用�
 
 Cardano 证明质押协议成功的关键方面是质押和质押池运营商 (`SPO`) 的作用。在让 Ada 持者能够安全地将其 Ada 委托给质押池运营商的同时保持自托管机制方面，进行了大量的分析和设计。因此，现在有一个大型的质押池社区供您质押 Ada。大多数 Cardano 钱包都会提供按质押收益 (`ROS`) 排序的质押池列表供选择。以下是允许搜索和筛选 Cardano `SPOs` 的在线工具列表：
 
-* PoolTool
-* ADASTAT
-* CExplorer
-* AdaPool
-* CardanoScan
-* Pool.pm
+*   PoolTool
+*   ADASTAT
+*   CExplorer
+*   AdaPool
+*   CardanoScan
+*   Pool.pm
 
 设置质押池不在本书的讨论范围内，但网上有很多很棒资源和社区可以帮助您开始：
 
-* Operate A Stake Pool
-* Guild Operators
-* CoinCashew
-* IOG Academy
+*   Operate A Stake Pool
+*   Guild Operators
+*   CoinCashew
+*   IOG Academy
 
 # Project Catalyst
-
-
-
 
 Cardano 生态中最有趣的方面之一是 Project Catalyst（催化剂）。Project Catalyst 最初作为一个实验，旨在根据 Ada 持者的投票结果向项目提供资助。目前为止已经进行了 11 轮融资，其中 `Fund 1` 于 2020 年 9 月宣布。资金金额从 `Fund 1` 到 `Fund 9` 之间不断增加，目前设定为每轮融资 5000 万 Ada。通过使用 IdeaScale 平台，Project Catalyst 声称是全球最大的去中心化创新基金之一。
 
 每一轮融资通常持续约 4 个月，允许社区以各种方式参与并获得 Ada 补偿。社区可以以评审员、项目提交者、投票者或里程碑验证者的身份参与。格式随着时间的推移不断变化，并将根据社区反馈和输入持续进化。任何人都可以提交提案并组建团队；这是吸引和留住人才的主要动力之一。请参考以下内容获取更多关于 Project Catalyst 的信息：
 
-* Cardano IdeaScale
-* Project Catalyst 官网
-* `IOG` (`IOHK`) YouTube 频道
-* Project Catalyst 公 Telegram 频道
+*   Cardano IdeaScale
+*   Project Catalyst 官网
+*   `IOG` (`IOHK`) YouTube 频道
+*   Project Catalyst 公 Telegram 频道
 
 典型的 Project Catalyst 时间线如图 `[Figure 13.1]` 所示：
 
@@ -4812,9 +4728,11 @@ Cardano 生态中最有趣的方面之一是 Project Catalyst（催化剂）。P
 
 # Midnight
 
-Midnight 是一个数据保护区块链，使用零知识证明在公共无许可区块链上进行交易，同时保持敏感数据的私密性。这具有多个优势，可以用于身份验证、代币资产隐私、AI 模块、信用评分和投票等用例。Midnight 使用 Parity Technologies 的 Substrate 栈构建，这为未来额外的合作伙伴链（partner chains）奠定了基础。合作伙伴链的概念有助于实现结算层 (`CSL`) 和计算层 (`CCL`) 分离的目标。Cardano 还有其他侧链，如 Milkomeda、Wanchain 和 World Mobile。
 
-# 额外的 Cardano 合约语言
+
+Midnight 是一个数据保护区块链，使用零知识证明在公共无许可区块链上进行交易，同时保持敏感数据的私密性。这具有多个优势，可以用于身份验证、代币资产隐私、AI 模块、信用评分和投票等用例。Midnight 使用 Parity Technologies 的 Substrate 栈构建，这为未来额外的合作伙伴链（partner chains）奠定了基础。合作伙伴链的概念有助于实现结算层（`CSL`）和计算层（`CCL`）分离的目标。Cardano 还有其他侧链，如 Milkomeda、Wanchain 和 World Mobile。
+
+## 额外的 Cardano 合约语言
 
 尽管此本书侧重于使用 Helios 和 Aiken 进行智能合约开发，但开发者还有其他选择，包括：
 
@@ -4822,12 +4740,12 @@ Midnight 是一个数据保护区块链，使用零知识证明在公共无许�
 * `PyCardano + OpShin` 允许你分别使用 Python 编写链外和链上智能合约。
 * `Plu-ts` 允许你使用 TypeScript 编写智能合约的链上和链外代码。
 
-# 学习资源
+## 学习资源
 
 有很多优秀的资源可以帮助你学习 Cardano：
 
 * `Cardano Academy` 由 Cardano Foundation 创建，是一项关于区块链和 Cardano 的优秀资源。
-* `IOG Academy` 由 `IOG` (`IOHK`) 创建，包含了一系列关于 Cardano、Haskell 和 Plutus Program 的视频。
+* `IOG Academy` 由 `IOG`（`IOHK`）创建，包含了一系列关于 Cardano、Haskell 和 Plutus Program 的视频。
 * `Emurgo Academy` 由 Emurgo 创建，是一个付费计划，拥有生态系统中一些最好的开发者资源。
 * `Gimbalabs` 是 Cardano 开放教育领域的先驱，侧重于基于项目的学习和用于学习与协作的在线编码课程。
 * `Learn Cardano` 它的节目中总有精彩的话题和嘉宾，是关注 Cardano 生态系统动态的首选资源。
@@ -4836,22 +4754,17 @@ Midnight 是一个数据保护区块链，使用零知识证明在公共无许�
 
 ## 结论
 
-我们在章节开始时回顾了 Cardano 的现状，并查看了已发布的 Messari 2023 年第四季度报告。接下来，我们回顾了转移到 Intersect 的公共 GitHub 仓库，其中包含 Cardano 区块链源代码。按照正确的格式检查了 `CIP` 流程以及如何使用带有信息的 `CIP pull request` 对 Cardano 区块链进行更改。还讨论了 Intersect、Cardano 成员组织 (`MBO`) 以及其关注的五个领域。接下来，我们讨论了 Voltaire 时代以及 `CIP-1694` 如何捕捉 Cardano 的链上投票机制。我们回顾了协议参数更改、硬分叉和金库取款等治理操作。我们还查看了 `SPO` 质押回报 (`ROS`) 排名以及 Project Catalyst 在 Cardano 生态系统中的作用。我们介绍了 Atala Prism，一种基于 Cardano 的自主主权身份 (`SSI`) 解决方案，以及它可以提供的优势和机遇。最后，我们讨论了 Midnight，作为 Cardano 第一种类型的合作伙伴链，以及额外的智能合约语言和学习资源。下一章也是最后一将讨论 Cardano 的精神和社会影响，以及区块链如何遵循技术采用的五个阶段。
+我们在章节开始时回顾了 Cardano 的现状，并查看了已发布的 Messari 2023 年第四季度报告。接下来，我们回顾了转移到 Intersect 的公共 GitHub 仓库，其中包含 Cardano 区块链源代码。按照正确的格式检查了 `CIP` 流程以及如何使用带有信息的 `CIP pull request` 对 Cardano 区块链进行更改。还讨论了 Intersect、Cardano 成员组织（`MBO`）以及其关注的五个领域。接下来，我们讨论了 Voltaire 时代以及 `CIP-1694` 如何捕捉 Cardano 的链上投票机制。我们回顾了协议参数更改、硬分叉和金库取款等治理操作。我们还查看了 `SPO` 质押回报（`ROS`）排名以及 Project Catalyst 在 Cardano 生态系统中的作用。我们介绍了 Atala Prism，一种基于 Cardano 的自主主权身份（`SSI`）解决方案，以及它可以提供的优势和机遇。最后，我们讨论了 Midnight，作为 Cardano 第一种类型的合作伙伴链，以及额外的智能合约语言和学习资源。下一章也是最后一将讨论 Cardano 的精神和社会影响，以及区块链如何遵循技术采用的五个阶段。
 
-# 重点回顾
+## 重点回顾
 
-* Cardano 总锁价值 (`TVL`) 不包括在 Cardano 网络中质押的 226 亿枚 Ada。
+* Cardano 总锁价值（`TVL`）不包括在 Cardano 网络中质押的 226 亿枚 Ada。
 * Nakamoto 系数可能是误导性的，因为控制质押池的实体往往不可知。
 * Cardano 公共 GitHub 仓库现在由 Intersect 管理。
 * `CIP` 流程是关于在 Cardano 区块链上进行更改，而不是治理或优先考虑此类请求。
 * `CIP` 作者负责为拟议的 `CIP` 获取反馈并达成共识。
 * Intersect 是一个非营利 `DAO` 是 Cardano 的成员组织。
-* `CIP-1694` 文档说明了 Cardano 链上投票的工作机制以及被称为最小可行治理 (`MVG`) 的初始引导阶段。
-
-
-
-
-
+* `CIP-1694` 文档说明了 Cardano 链上投票的工作机制以及被称为最小可行治理（`MVG`）的初始引导阶段。
 * `DRep`、`SPO` 和 `CC` 是链上投票的三个治理机构。
 * 根据治理行动的不同，需要不同的治理机构进行投票。
 * `DRep` 使用 Ada 持有人委托的投票权进行投票，这些投票会被汇总为针对某治理行动的赞成或反对的 `DRep` 票。
@@ -4867,30 +4780,39 @@ Midnight 是一个数据保护区块链，使用零知识证明在公共无许�
 ## 单选题
 
 1. 谁管理 Cardano 的开源代码仓库？
-    1. Intersect
-    2. IOHK
-    3. Cardano 基金会 (Cardano Foundation)
-    4. 以上所有
+
+   1. Intersect
+   2. IOHK
+   3. Cardano 基金会 (Cardano Foundation)
+   4. 以上所有
+
 2. 哪个示例不适合 CIP？
-    1. 建议修改账本以适应功能请求
-    2. 建议修改协议参数以提高性能
-    3. 请求提取国库资金
-    4. 关于链上治理流程的文档
+
+   1. 建议修改账本以适应功能请求
+   2. 建议修改协议参数以提高性能
+   3. 请求提取国库资金
+   4. 关于链上治理流程的文档
+
 3. `CIP-1694` 的目标是什么？
-    1. 创建 Cardano 宪法
-    2. 确定 Cardano 治理并结束 Voltaire 时代
-    3. 选举宪法委员会成员
-    4. 记录链上治理流程并建立 MVG
+
+   1. 创建 Cardano 宪法
+   2. 确定 Cardano 治理并结束 Voltaire 时代
+   3. 选举宪法委员会成员
+   4. 记录链上治理流程并建立 MVG
+
 4. 关于 `DReps` 的哪个说法是？
-    1. Ada 持有人将能够将其 Ada 投票权委托给 `DRep`
-    2. Ada 持有人将无法更改其对 `DRep` 的 Ada 委托
-    3. Ada 持有人可以通过提交交易更改或撤回其对 Ada 的委托
-    4. Ada 持有人将能够看到其 `DRep` 投过哪些治理行动
+
+   1. Ada 持有人将能够将其 Ada 投票权委托给 `DRep`
+   2. Ada 持有人将无法更改其对 `DRep` 的 Ada 委托
+   3. Ada 持有人可以通过提交交易更改或撤回其对 Ada 的委托
+   4. Ada 持有人将能够看到其 `DRep` 投过哪些治理行动
+
 5. 关于 Project Catalyst，哪个说法是正确的？
-    1. Project Catalyst 控制 Cardano 国库中的资金
-    2. Cardano 大部分国库资金由 Project Catalyst 支出
-    3. 20% 的手续费用于 Project Catalyst
-    4. Project Catalyst 团队由 Project Catalyst 资助
+
+   1. Project Catalyst 控制 Cardano 国库中的资金
+   2. Cardano 大部分国库资金由 Project Catalyst 支出
+   3. 20% 的手续费用于 Project Catalyst
+   4. Project Catalyst 团队由 Project Catalyst 资助
 
 ## 答案
 
@@ -4911,7 +4833,7 @@ Midnight 是一个数据保护区块链，使用零知识证明在公共无许�
 7. `SSI` 广泛采用的障碍是什么？
 8. 使用数据保护区块链的风险是什么？
 
-# 关键术语
+## 关键术语
 
 * `CC`: 委员会 (Committee)
 * `CCL`: Cardano 计算层 (Cardano Computation Layer)
@@ -4959,10 +4881,6 @@ Midnight 是一个数据保护区块链，使用零知识证明在公共无许�
 [26]: https://www.intersectmbo.org/join
 [27]: https://roadmap.cardano.org/en/voltaire/
 
-
-
-
-
 - ²⁸ [`github.com/cardano-foundation/CIPs/tree/master/CIP-1694`](https://github.com/cardano-foundation/CIPs/tree/master/CIP-1694)
 - ²⁹ [`sancho.network/`](https://sancho.network/)
 - ³⁰ [`www.essentialcardano.io/infographic/cip-1694-in-a-nutshell`](https://www.essentialcardano.io/infographic/cip-1694-in-a-nutshell)
@@ -4985,6 +4903,9 @@ Midnight 是一个数据保护区块链，使用零知识证明在公共无许�
 - ⁴⁷ [`projectcatalyst.io/`](https://projectcatalyst.io/)
 - ⁴⁸ [`www.youtube.com/@IohkIo`](https://www.youtube.com/@IohkIo)
 - ⁴⁹ [`t.me/cardanocatalyst`](https://t.me/cardanocatalyst)
+
+
+
 - ⁵⁰ [`www.w3.org/TR/did-core/`](https://www.w3.org/TR/did-core/)
 - ⁵¹ [`atalaprism.io/#why`](https://atalaprism.io/#why)
 - ⁵² [`github.com/hyperledger/identus`](https://github.com/hyperledger/identus)
@@ -4995,10 +4916,6 @@ Midnight 是一个数据保护区块链，使用零知识证明在公共无许�
 - ⁵⁷ Red Sheehan, “2023 年第四季度 Cardano 状态”
 - ⁵⁸ [`milkomeda.com/`](https://milkomeda.com/)
 - ⁵⁹ [`www.w3.org/`](https://www.w3.org/)
-
-
-
-
 
 # 软件行业标准
 
@@ -5080,10 +4997,6 @@ Cardano 从 `ESG` 角度来看是评分最高的区块链之一。它的能耗�
 
 # 技术采用
 
-
-
-
-
 区块链似乎正在遵循与手机、互联网和社交媒体等颠覆性创新类似的轨迹，如图 14.2 所示。创新者首先是该领域的先行者，开创并倡导该技术的首次迭代。接着是早期采用者，他们看到了潜力并传播其益处。接下来，人们预期早期大多数将到来，这将开启一个规模化采纳的新时代。
 
 ![](img/Figure-14.2.jpg)
@@ -5102,53 +5015,57 @@ Cardano 从 `ESG` 角度来看是评分最高的区块链之一。它的能耗�
 
 # 记忆要点 (#toc.xhtml#s374a)
 
-*   Cardano 的精神是开放和透明。
-*   同行评审过程对 Cardano 来说非常重要，因为它符合 Cardano 的精神以及高保证软件的最佳实践。
-*   选择 `Haskell` 作为编写 Cardano 区块链的语言是因为它与正确性的数学证明相似相似。
-*   区块链赋予了网络边缘力量和自主权。
-*   专注于为他人服务的区块链（及项目）长期来看通常会成功，市场将决定价格、价值和产品匹配度。
-*   当前的软件行业质量标准不适用于高保证软件。
-*   真正的去中心化和无许可区块链没有中心机构可以关闭、重启或修补网络。
-*   一个区块链软件漏洞可能导致数百万美元的损失或被盗。
-*   半形式方法是 `IOG` (`IOHK`) 使用的一种方法，其中可执行的规范生成的输出可以与实现的可执行输出进行比较。
-*   国际密码学研究与研究协会 (`IACR`) 是一个推进密码学的非营利组织。
-*   Cardano 为没有银行账户的人提供服务的使命追溯到 Cardano 的最早阶段。
-*   使用 Cardano 进行社会公益的潜力是巨大的，并且有很多真实案例。
-*   需要对适用于应用的每个司法管辖区的监管风险进行监控评估。
-*   理解系统或应用程序用户的 `KYC` 和 `AML` 规定对于项目的成功非常重要。
-*   技术采用的五个阶段包括创新者、早期采用者、早期大多数、晚期大多数和落后者。
-*   鸿沟通常发生在早期采用者和早期大多数之间，这段时期预期的增长和用户采用没有按照预期速度发生。
-*   Cardano 之旅路途漫长，面临许多挑战，这在创建一个新的、复杂的且高度集成的平台时并不罕见。
+* Cardano 的精神是开放和透明。
+* 同行评审过程对 Cardano 来说非常重要，因为它符合 Cardano 的精神以及高保证软件的最佳实践。
+* 选择 `Haskell` 作为编写 Cardano 区块链的语言是因为它与正确性的数学证明相似相似。
+* 区块链赋予了网络边缘力量和自主权。
+* 专注于为他人服务的区块链（及项目）长期来看通常会成功，市场将决定价格、价值和产品匹配度。
+* 当前的软件行业质量标准不适用于高保证软件。
+* 真正的去中心化和无许可区块链没有中心机构可以关闭、重启或修补网络。
+* 一个区块链软件漏洞可能导致数百万美元的损失或被盗。
+* 半形式方法是 `IOG` (`IOHK`) 使用的一种方法，其中可执行的规范生成的输出可以与实现的可执行输出进行比较。
+* 国际密码学研究与研究协会 (`IACR`) 是一个推进密码学的非营利组织。
+* Cardano 为没有银行账户的人提供服务的使命追溯到 Cardano 的最早阶段。
+* 使用 Cardano 进行社会公益的潜力是巨大的，并且有很多真实案例。
+* 需要对适用于应用的每个司法管辖区的监管风险进行监控评估。
+* 理解系统或应用程序用户的 `KYC` 和 `AML` 规定对于项目的成功非常重要。
+* 技术采用的五个阶段包括创新者、早期采用者、早期大多数、晚期大多数和落后者。
+* 鸿沟通常发生在早期采用者和早期大多数之间，这段时期预期的增长和用户采用没有按照预期速度发生。
+* Cardano 之旅路途漫长，面临许多挑战，这在创建一个新的、复杂的且高度集成的平台时并不罕见。
 
 # 单选题 (#toc.xhtml#s375a)
 
-1.  Cardano 的精神是什么？
-    1. 创建价值
-    2. 为没有银行账户的人提供服务
-    3. 开放和透明
-    4. 以上所有
-2.  同行评审过程的好处是什么？
-    1. 促进想法的共享与协作
-    2. 对发表的论文提供无偏见的反馈和评审
-    3. 通过科学研究和推进该领域
-    4. 以上所有
-3.  哪项是错误的？
-    1. 软件行业标准适用于高保证软件
-    2. 区块链赋予网络边缘自主权
-    3. `IACR` 是非营利组织
-    4. 加密货币机始于 ICO
-4.  技术采用的五个阶段是什么？
-    1. 创新者、早期采用者、早期大多数、晚期大多数和落后者
-    2. 创新者、早期大多数、晚期大多数
-    3. 早期采用者、创新者、早期大多数、晚期大多数
-    4. 创新者、早期采用者、早期大多数、中间大多数
-5.  构建区块链为什么困难？
-    1. 加密货币代币包含投机
-    2. 公开构建任何人都可以看到
-    3. 它是一个高度复杂、安全且集成的系统
-    4. 以上所有
+1. Cardano 的精神是什么？
+   1. 创建价值
+   2. 为没有银行账户的人提供服务
+   3. 开放和透明
+   4. 以上所有
 
-#答案 (#toc.xhtml#s376a)
+2. 同行评审过程的好处是什么？
+   1. 促进想法的共享与协作
+   2. 对发表的论文提供无偏见的反馈和评审
+   3. 通过科学研究和推进该领域
+   4. 以上所有
+
+3. 哪项是错误的？
+   1. 软件行业标准适用于高保证软件
+   2. 区块链赋予网络边缘自主权
+   3. `IACR` 是非营利组织
+   4. 加密货币机始于 ICO
+
+4. 技术采用的五个阶段是什么？
+   1. 创新者、早期采用者、早期大多数、晚期大多数和落后者
+   2. 创新者、早期大多数、晚期大多数
+   3. 早期采用者、创新者、早期大多数、晚期大多数
+   4. 创新者、早期采用者、早期大多数、中间大多数
+
+5. 构建区块链为什么困难？
+   1. 加密货币代币包含投机
+   2. 公开构建任何人都可以看到
+   3. 它是一个高度复杂、安全且集成的系统
+   4. 以上所有
+
+# 答案 (#toc.xhtml#s376a)
 
 1. c
 2. d
@@ -5158,220 +5075,289 @@ Cardano 从 `ESG` 角度来看是评分最高的区块链之一。它的能耗�
 
 # 问题 (#toc.xhtml#s377a)
 
-1.  为什么其他区块链不进行同行评审？
-2.  Cardano 可以用哪些语言编写，各自的优缺点是什么？
-3.  世界上为什么有 3 亿人没有银行账户？
-4.  在软件开发中使用形式方法的困难之处？
-5.  敏捷软件开发方法和形式化方法可以共存吗？
-6.  鸿沟出现在技术采用的哪个阶段？
+1. 为什么其他区块链不进行同行评审？
+2. Cardano 可以用哪些语言编写，各自的优缺点是什么？
+3. 世界上为什么有 3 亿人没有银行账户？
+4. 在软件开发中使用形式方法的困难之处？
+5. 敏捷软件开发方法和形式化方法可以共存吗？
+6. 鸿沟出现在技术采用的哪个阶段？
 
 # 关键术语 (#toc.xhtml#s378a)
 
-*   `AML`: 反洗钱
-*   `DID`: 去中心化标识符
-*   `ESG`: 环境、社会和治理
-*   `IACR`: 国际密码学研究协会
-*   `ICO`: 初始代币发行
-*   `IOG`: Input Output Global
-*   `IOHK`: Input Output Hong Kong
-*   `KYC`: 了解您的客户
-*   `UNHCR`: 联合国难民署
-*   `WADA`: 非洲、离散和及其他
-
-
-
-
+* `AML`: 反洗钱
+* `DID`: 去中心化标识符
+* `ESG`: 环境、社会和治理
+* `IACR`: 国际密码学研究协会
+* `ICO`: 初始代币发行
+* `IOG`: Input Output Global
+* `IOHK`: Input Output Hong Kong
+* `KYC`: 了解您的客户
+* `UNHCR`: 联合国难民署
+* `WADA`: 非洲、离散和及其他
 
 # 参考文献
 
 - Aggelos Kiayias, “为什么需要同行评审？”
-- [Cardano 路线图](https://roadmap.cardano.org/en/](https://roadmap.cardano.org/en/)
-- [形式方法](https://en.wikipedia.org/wiki/Formal_methods)(https://en.wikipedia.org/wiki/Formal_methods)
+- [Cardano 路线图](https://roadmap.cardano.org/en/)
+- [形式方法](https://en.wikipedia.org/wiki/Formal_methods)
 - David Marquet, “伟大的领导如何服务他人：TEDxScottAFB  David Marquet”
 - Joi Ito, “亮点：Joi Ito 在 Scaling Bitcoin 谈 ICOs”
 - Duncan Coutts, “IOHK PlutusFest 2018 | Duncan Coutts 演讲与 Rebecca Valentine 结语”
 - Duncan Coutts, “IOHK PlutusFest 2018 | Duncan Coutts 演讲与 Rebecca Valentine 结语”
 - Philipp Kant 等人, “灵活形式化：敏捷形式化方法的实践经验”, 104
 - Andre Knispel 等, “在 Agda 中实现的 Cardano 区块链账本形式化规范”
-- [形式化账本规范](https://github.com/IntersectMBO/formal-ledger-specifications)(https://github.com/IntersectMBO/formal-ledger-specifications)
-- [IACR (国际密码学协会)](https://iacr.org/](https://iacr.org/)
-- [IACR 会议](https://iacr.org/meetings/)(https://iacr.org/meetings/)
-- [IACR 密码学杂志](https://iacr.org/jofc/)(https://iacr.org/jofc/)
+- [形式化账本规范](https://github.com/IntersectMBO/formal-ledger-specifications)
+- [IACR (国际密码学协会)](https://iacr.org/)
+- [IACR 会议](https://iacr.org/meetings/)
+- [IACR 密码学杂志](https://iacr.org/jofc/)
 - Charles Hoskinson, “未来将是去中心化的 | Charles Hoskinson | TEDxBermuda”
-- [探索 CardanoPurpose](https://cardano.org/discover-cardano#purpose)(https://cardano.org/discover-cardano#purpose)
+- [探索 CardanoPurpose](https://cardano.org/discover-cardano#purpose)
 - Alex Hamilton, “连接未连接者，为无银行者提供银行服务”
 - Input Output, “如何解释 Cardano 的使命？”
-- [World Mobile](https://worldmobile.io/en)(https://worldmobile.io/en)
+- [World Mobile](https://worldmobile.io/en)
 - [World Mobile 白皮书](https://worldmobiletoken.com/WhitePaper.pdf), 第 2 页
 - [World Mobile 白皮书](https://worldmobiletoken.com/WhitePaper.pdf), 第 3 页
-- [World Mobile](https://worldmobile.io/en)(https://worldmobile.io/en)
-- [World Mobile 我们的使命](https://worldmobile.io/our-mission/)(https://worldmobile.io/our-mission/)
+- [World Mobile](https://worldmobile.io/en)
+- [World Mobile 我们的使命](https://worldmobile.io/our-mission/)
 - mpowa 白皮书, “赋予非洲社区”
-- [Worldowa](https://worldowa.io/](https://worldowa.io/)
-- [Encrypt Research 区块链](https://www.encryptoresearch.com/blockchains)(https://www.encryptoresearch.com/blockchains)
-- [Encrypt Research ADA 分析](https://www.encryptoresearch.com/blockchains/ada)(https://www.encryptoresearch.com/blockchains/ada)
+- [Worldowa](https://worldowa.io/)
+- [Encrypt Research 区块链](https://www.encryptoresearch.com/blockchains)
+- [Encrypt Research ADA 分析](https://www.encryptoresearch.com/blockchains/ada)
 - Olga Hryniuk, “Atala PRISM：用去中心化解决方案开创身份”
-- [世界反兴奋组织](https://www.wada.org/](https://www.wada.org/)
-- [气候中和社区](https://climateneutralano.org/](https://climateneutralano.org/)
+- [世界反兴奋组织](https://www.wada.org/)
+- [气候中和社区](https://climateneutralano.org/)
 - Alex Maaza, “Cardano 基金会在瑞士因慈善获得认可”
-- [Sustainable ADA](https://sustainableada.com/](https://sustainableada.com/)
-- [ADA Films](https://www.adafilms.art/](https://www.adafilms.art/)
-- [IOHK YouTube 频道](https://www.youtube.com/c/iohkio)(https://www.youtube.com/c/iohkio)
-- [Charles Hoskinson YouTube 频道](https://www.youtube.com/user/charleskinson)(https://www.youtube.com/user/charleskinson)
+- [Sustainable ADA](https://sustainableada.com/)
+- [ADA Films](https://www.adafilms.art/)
+
+
+
+- [IOHK YouTube 频道](https://www.youtube.com/c/iohkio)
+- [Charles Hoskinson YouTube 频道](https://www.youtube.com/user/charleskinson)
 
 # 书目
 
 - Alden, L., “破碎的货币.” Timestamp Press, 2023
+
 - Badertscher, C., Gazi C., Kiayias A., Russell A. and Zikas V., “Ouroboros Chronos: 基于权益证明的无许可时钟同步”, IACR, 2019 年 5 月 15 日. 在线获取：[`eprint.iacr.org/2018/1132.pdf`](https://eprint.iacr.org/2018/1132.pdf)
+
 - Badertscher, C., Gazi P., Kiayias A., Russell A. and Zikas V, “Ouroboros Genesis: 具有动态可用性的可组合权益证明区块链”, IACR, 2019 年 2 月 22 日. 在线获取：[`eprint.iacr.org/2018/378.pdf`](https://eprint.iacr.org/2018/378.pdf)
+
 - Bailly, A., “Cardano 时间处理，部分 1. 关于 Ouroboros 和确定性的重要性”, IOHK, 2022 年 12 月 6 日. 在线获取：[`iohk.io/en/blog/posts/2022/12/07/time-handling-on-cardano-part-1-about-ouroboros-and-the-importance-of-determinism/`](https://iohk.io/en/blog/posts/2022/12/07/time-handling-on-cardano-part-1-about-ouroboros-and-the-importance-of-determinism/)
+
 - Bano S., Sonnino A., Al-Bassam M., Azouvi S., McCorry P., Meiklejohn S. and Danezis D., “SoK: 区块链时代的共识”, 2017 年 11 月 14 日. 在线获取：[`arxiv.org/abs/1711.0392`](https://arxiv.org/abs/1711.0392)
+
 - 百科全书, “加密”, 百科全书, 03
-- Bernstein, D., Lange, T. 等, “高速-安全签名”, 密码学工程, 77-89.  doi：[10.1007/s1389-1](https://doi.org/10.1007/s1389-1)
+
+- Bernstein, D., Lange, T. 等, “高速-安全签名”, 密码学工程, 77-89. doi：[10.1007/s1389-1](https://doi.org/10.1007/s1389-1)
+
 - Burgess, N., “下一代智能合约”, IOHK, 2023 年 10 月。
+
 - Buterin, V., “以太坊：一个去中心化的平台”, 以太坊官网, 2014.
+
 - Cardanians.io, “理解支持者”, Cardanians.io, 6 月。
+
 - Cardanians.io, “Cardano 中的 23 亿 ADA”, Cardanians.io, 2023 年 11 月。
+
 - CertiK, “区块链三难性：去中心化、可扩展与安全?”, Medium, 2019 年 4 月。
+
 - Chaidos, P. and Kiaias, A., “Mithril: 基于权益的阈值多签名”, IACR, 2021 年。
+
 - Chainalysis, “2022 年加密攻击最严重的一，被盗 38 亿美元，主要来自 DeFi 协议和与朝鲜相关的攻击者”, Chainalysis.com, 2023 年 2 月 1 日。
-
-
-
-
 
 # 参考文献
 
 Coutts, D., Panagiotakos, G. and Fitzi, M., “Ouroboros Leios: 设计目标与概念”
+
 IOHK, 2022 年 10 月
+
 在线获取：[`iohk.io/en/research/library/papers/ouroboros-leios-design-goals-and-concepts/`](https://iohk.io/en/research/library/papers/ouroboros-leios-design-goals-and-concepts/)
 
 Crypto Carlos, “节点课程 | 创建质押池，设置”
+
 IOG Academy, 2023 年 3 月 21 日
+
 在线获取：[`www.youtube.com/watch?v=6AQaPdmxnfo`](https://www.youtube.com/watch?v=6AQaPdmxnfo)
 
 Crypto Carlos., “Ourobors 协议。Cardano 的心脏”
+
 Crypto Carlos, 2019 年 5 月 21 日
+
 在线获取：[`www.youtube.com/watch?v=U92Ks8rucDQ`](https://www.youtube.com/watch?v=U92Ks8rucDQ)
 
 Cryptopedia, “区块链三难困：快速、安全且可扩展的网络”
+
 Gemini.com, 2022 年 6 月 28 日
+
 在线获取：[`www.gemini.com/cryptopedia/blockchain-trilemma-decentralization-scalability-definition`](https://www.gemini.com/cryptopedia/blockchain-trilemma-decentralization-scalability-definition)
 
 Dai, W., “b-money”
+
 Weidia.com, 1999 年 2 月 19 日
+
 在线获取：[`www.weidai.com/bmoney.txt`](http://www.weidai.com/bmoney.txt)
 
 David B., Gazi P., Kiayias A. and Russell A., “Ouroboros Praos: 一种自适应安全的、半同步的权益证明区块链”
+
 IACR, 2023 年 4 月 27 日
+
 在线获取：[`eprint.iacr.org/2017/573.pdf`](https://eprint.iacr.org/2017/573.pdf)
 
 Empowa Whitepaper, “赋能非洲社区”
+
 Empowa.io, 2021
+
 在线获取：[`drive.google.com/filed/1ei_0eQFCK5wKGMQgVcyNlTQYUQ4ky-xT/edit`](https://drive.google.com/filed/1ei_0eQFCK5wKGMQgVcyNlTQYUQ4ky-xT/edit)
 
 Finney, H. “RPOW - 可重用工作证明”
+
 Satoshi Nakamoto Institute, 2004 年 8 月 15 日
+
 在线获取：[`nakamotoinstitute.org/rpow/`](https://nakamotoinstitute.org/rpow/)
 
 Kiayias, A., “为什么需要同行评审？”
+
 Input Output, 2018 年 6 月 22 日
+
 在线获取：[`www.youtube.com/watch?v=MV8ANlktGoI`](https://www.youtube.com/watch?v=MV8ANlktGoI)
 
 Knispel, A., Melkonian, O., Chapman, J., Hill, A., Jääger, J., DeMeo, W., Norell, U., “在 Agda 中机械化的 Cardano 区块链账本的形式化规范”
+
 Input Output, 2024 年 3 月
+
 在线获取：[`iohk.io/en/research/library/papers/formal-specification-of-the-cardano-blockchain-ledger-mechanized-in-agda/`](https://iohk.io/en/research/library/papers/formal-specification-of-the-cardano-blockchain-ledger-mechanized-in-agda/)
 
 Gauba A., 区块链共识中的终性
+
 Medium, 2018 年 8 月 30 日
+
 在线获取：[`medium.com/mechanism-labs/finality-in-blockchain-consensus-d1f83c120a9a`](https://medium.com/mechanism-labs/finality-in-blockchain-consensus-d1f83c120a9a)
 
 Gaži, P., “在 MIT 介绍 Ouroboros”
+
 Input Output, 2018 年 3 月 13 日
+
 在线获取：[`www.youtube.com/watch?v=PoNaw-Mtxgo`](https://www.youtube.com/watch?v=PoNaw-Mtxgo)
 
 Goldwasser, S. and Mihir, B., “密码学讲义”
+
 MIT, 2008 年 7 月
+
 在线获取：[`cseweb.ucsd.edu/~mihir/papers/gb.pdf`](https://cseweb.ucsd.edu/~mihir/papers/gb.pdf)
 
 Haber, S. and Stornetta, W. S., “如何为数字文档时间戳”
+
 Journal of Cryptology, 1991
+
 在线获取：[`link.springer.com/article/10.1007/BF00196791`](https://link.springer.com/article/10.1007/BF00196791)
 
 Hamilton, A., “连接未连接的，连接未教育的人”
+
 IOHK, 2021 年 8 月 10 日
+
 在线获取：[`iohk.io/en/blog/posts/2021/08/11/connecting-the-unconnected-the-banked/`](https://iohk.io/en/blog/posts/2021/08/11/connecting-the-unconnected-the-banked/)
 
 Hirniak, J., “Axo 白皮书：交易的新时代”
+
 axo.trade, 2021 年 10 月 21 日
+
 在线获取：[`www.axo.trade/whitepaper.pdf`](https://www.axo.trade/whitepaper.pdf)
 
 Hoskinson, C. “Hoskinson 的 Cardano 白板”
+
 Input Output, 2017 年 10 月 26 日
+
 在线获取：[`www.youtube.com/watch?v=Ja9dkpxw`](https://www.youtube.com/watch?v=Ja9dkpxw)
 
 Hoskinson, C., “未来将是中心化的 | Hoskinson | TED”
+
 TED Talks, 2014 年 12 月 4 日
+
 在线获取：[`www.youtube.com/watch?v=97ufCT6Y`](https://www.youtube.com/watch?v=97ufCT6Y)
 
 Hryniuk, O., “Atala PRISM：中心化的数字身份”
+
 IOHK, 2023 年 5 月 10 日
+
 在线获取：[`iohk.io/en/blog/posts/2023/05/11/atala-prism-pioneering-digital-identity-with-decentralized/`](https://iohk.io/en/blog/posts/2023/05/11/atala-prism-pioneering-digital-identity-with-decentralized/)
 
 Hryniuk, O., “Mithril 如何强化设置”
+
 IOHK, 2023 年 8 月 22 日
+
 在线获取：[`iohk.io/en/blog/posts/2023/08/23/how-mithril-facilitates-strong-settings/`](https://iohk.io/en/blog/posts/2023/08/23/how-mithril-facilitates-strong-settings/)
 
 Hryniuk, O., “从 Classic 到 Chronos：Ouroboros 的实现”
+
 IOHK, 2022 年 6 月 2 日
+
 在线获取：[`iohk.io/en/blog/posts/2022/06/03/from-classic-to-chronos-the-implementations-of-ouroboros/`](https://iohk.io/en/blog/posts/2022/06/03/from-classic-to-chronos-the-implementations-of-ouroboros/)
 
 Hughes, J., “John Hughes 使用 QuickCheck 测试智能合约”
+
 Func Prog Sweden, 2021 年 5 月 27 日
+
 在线获取：[`www.youtube.com/watch?v=V9_14jjiQ`](https://www.youtube.com/watch?v=V9_14jjiQ)
 
 Input Output, “如何解释 Cardano 的使命？”
+
 Input Output, 2021 年 1 月 29 日
+
 在线获取：[`www.youtube.com/watch?v=l_Nv0-PVrnM`](https://www.youtube.com/watch?v=l_Nv0-PVrnM)
 
 Ito, J., “亮点：Joi Ito 扩展比特币的 ICO”
+
 Seoul Bitcoin, 2018 年 6 月 15 日
+
 在线获取：[`www.youtube.com/watch?v=-whIh7n4Yqc`](https://www.youtube.com/watch?v=-whIh7n4Yqc)
 
 Kant, P. 等，“灵活的形式化：敏捷形式方法的实践经验。”
+
 在：Byrski, A., Hughes, J. (编辑) 函数式编程趋势。TFP 2020. `Lecture Notes in Computer Science()`, 第 12222 卷。Springer, Cham。
+
 在线获取：[`doi.org/10.1007/978-3-030-57761-2_5`](https://doi.org/10.1007/978-3-030-57761-2_5)
 
 Kerber, T., Kohlweiss†, M., Kiayias, A. and Zikas V. “Ouroboros Crypsinous：保护的权益证明”
+
 IACR, 2019 年 5 月 15 日
+
 在线获取：[`eprint.iacr.org/2018/1132.pdf`](https://eprint.iacr.org/2018/1132.pdf)
 
 Khovratovich, D. and Law, J., “BIP32-Ed25519：非线性密钥空间的层次确定性密钥，”
+
 2017 IEEE 欧洲安全与隐私研讨会 (EuroS&PW), 法巴黎, 2017, 第 27-31 页，doi: 10.1109/EuroSPW.2017.47，关键词：{公钥;比特币;提议;隐私}
+
 在线获取：[`input-output-hk.github.io/adrestia/static/Ed25519_BIP.pdf`](https://input-output-hk.github.io/adrestia/static/Ed25519_BIP.pdf)
 
 Kiayias, A. and Russell A., “Ouroboros-BFT:简单的简单的拜庭容错共识协议”
+
 IACR, 2018 年 11 月 26 日
+
 在线获取：[`eprint.iacr.org/2018/1049.pdf`](https://eprint.iacr.org/2018/1049.pdf)
 
 Kiayias, A., Russell A., David B. and Oliynyko R., “Ouroboros：可证明安全的权益证明区块链协议”
+
 IACR, 2019 年 7 月 20 日
+
 在线获取：[`eprint.iacr.org/2016/889.pdf`](https://eprint.iacr.org/2016/889.pdf)
 
 Knispel, A., Vinogradova, P., “集成 Plutus 的 Cardano 账本形式化规范”
+
 IOHK, 2021 年 2 月 28 日
+
 在线获取：[`github.com/input-output-hk/cardano-ledger/releases/latest/download/alonzo-ledger.pdf`](https://github.com/input-output-hk/cardano-ledger/releases/latest/download/alonzo-ledger.pdf)
 
 Lamport, L.; Shostak, R.; Pease, M., “拜庭将军问题。”
+
 ACM 编程语言与系统事务。 4 (3): 382–401. 1982 年 7 月。
-
-
-
-
 
 在线可用：[`lamport.azurewebsites.net/pubs/byz.pdf`](https://lamport.azurewebsites.net/pubs/byz.pdf)
 
 Lebec, G., “Lambda 演算 - Lambda 演算基础与 JavaScript 中的函数式编程”
+
+
+
+# 参考文献
 
 Fullstack Academy, 2017 年 8 月 25 日
 
@@ -5381,7 +5367,7 @@ Lebec, G., “生成式测试的魔法：JavaScript 中的 Fast-Check”
 
 Fullstack Academy, 2019 年 7 月 2 日
 
-在线可用：[`www.youtube.com/watch?v=a2J\_FSkxWKo`](https://www.youtube.com/watch?v=a2J_FSkxWKo)
+在线可用：[`www.youtube.com/watch?v=a2J_FSkxWKo`](https://www.youtube.com/watch?v=a2J_FSkxWKo)
 
 LLFOURN, “Ouroboros（衔尾蛇）简介”
 
@@ -5399,7 +5385,7 @@ Marquet, D., “伟大的领导如何服务他人：TEDxScottAFB 的 David Marqu
 
 TEDx Talks, 2012 年 6 月 21 日
 
-在线可用：[`www.youtube.com/watch?v=DLRH5J\_93LQ`](https://www.youtube.com/watch?v=DLRH5J_93LQ)
+在线可用：[`www.youtube.com/watch?v=DLRH5J_93LQ`](https://www.youtube.com/watch?v=DLRH5J_93LQ)
 
 Mazieres, D. and Shasha, D., “基于拜占庭存储构建安全文件系统。”
 
@@ -5453,7 +5439,7 @@ Simmons, G., “密码学历史”
 
 大英百科全书, 2004 年
 
-在线可用：[`messari.com/report/cardano-q4`](https://messari.com/report/cardano-q4
+在线可用：[`messari.com/report/cardano-q4`](https://messari.com/report/cardano-q4)
 
 Upadhyay, D., Gaikwad, N., Zaman, M. and Sampalli, S., “加密哈希函数的影响的研究，”
 
@@ -5463,7 +5449,7 @@ Wadler, P., “Cardano 上的函数式合约”
 
 Input Output, 2020 年 7 月 21 日
 
-在线可用：[https://www.youtube.com/watch?v=VyxsqwZt4](https://www.youtube.com/watch?v=VyxsqwZt4)
+在线可用：[`www.youtube.com/watch?v=VyxsqwZt4`](https://www.youtube.com/watch?v=VyxsqwZt4)
 
 Ward, M., “合作伙伴 链 正在加入 Cardano”
 
@@ -5480,79 +5466,85 @@ Legal Nodes, 2024 年 1 月 26 日
 # 索引
 
 ## A
-绝对一致性 (PBFT) [23]
-地址 [32]
-地址类型
-- 基础地址 [32], [33]
-- 企业地址 [33]
-- 奖励地址 [33], [34]
-Aiken [92], [93]
-Aiken 库
-- lucid 取消函数 [95]
-- lucid 线下解锁 [94], [95]
-- 链验证 [93], [94]
-- 模式 [55]
-- 流动性池 [54]
-- 资产 [107]
-- 后端 [204], [205]
-- 公钥 [202]
-比特币代币 [152]
-比特币 [3]
-拜占庭将 [2]
+
+- 绝对一致性 (PBFT) [23]
+- 地址 [32]
+  - 基础地址 [32], [33]
+  - 企业地址 [33]
+  - 奖励地址 [33], [34]
+- Aiken [92], [93]
+  - lucid 取消函数 [95]
+  - lucid 线下解锁 [94], [95]
+  - 链验证 [93], [94]
+  - 模式 [55]
+  - 流动性池 [54]
+  - 资产 [107]
+  - 后端 [204], [205]
+  - 公钥 [202]
+- 比特币代币 [152]
+- 比特币 [3]
+- 拜占庭将 [2]
 
 ## C
-取消 [95]
-Cardano
-- GitHub 仓库 [267]
-- 历史 [286]
-- 资源 [274], [275]
-- 状态 [266], [267]
+
+- 取消 [95]
+- Cardano
+  - GitHub 仓库 [267]
+  - 历史 [286]
+  - 资源 [274], [275]
+  - 状态 [266], [267]
 
 ## D
-Cardano
-- 关于 [127]
-- 挑战 [128]
-- Kupo [136], [138]
-- 节点组件 [128], [130]
-- Ogmios [133], [135]
-设置 [138]
+
+- Cardano
+  - 关于 [127]
+  - 挑战 [128]
+  - Kupo [136], [138]
+  - 节点组件 [128], [130]
+  - Ogmios [133], [135]
+  - 设置 [138]
 
 ## E
-Cardano 区块方面
-- 背书者 [247], [248]
-- Hydra 分析 [246], [247]
-- Mithril [247]
-- 脚本引用 [244]
-- 智能合约防止 [246]
-- UTXO 冲突 [244], [245]
+
+- Cardano 区块方面
+  - 背书者 [247], [248]
+  - Hydra 分析 [246], [247]
+  - Mithril [247]
+  - 脚本引用 [244]
+  - 智能合约防止 [246]
+  - UTXO 冲突 [244], [245]
 
 ## F
-cardano-cli [130]
+
+- `cardano-cli` [130]
 
 ## G
-Cardano 改进流程 (CIP)
 
+- Cardano 改进流程 (CIP)
 
+## 加密研究
 
-
-# 加密研究
 - 加密研究，优化 284
 
-# Empowa
+## Empowa
+
 - Empowa 284
 - 社交项目，利用了 284, 285
 
-# World Mobile 代币 (WMT)
+## World Mobile 代币 (WMT)
+
 - World Mobile 代币 (World Mobile 代币) 284
 
-# Cardano
+## Cardano
+
 - Cardano 节点 259, 260
 - Cardano，风险 285
 - Cardano 路线图 11
 - Cardano 测试网
-- 参考链接 63
+  - 参考链接 63
 
-# 技术概念
+## 技术概念
+
 - 链序列图，概念
 - 应用，执行 170
 - Beacon，查看 167, 168
@@ -5564,71 +5556,83 @@ Cardano 改进流程 (CIP)
 - 交易，验证 172
 - 钱包，连接 166
 
-# Charles Hoskinson
+## Charles Hoskinson
+
 - 概念 6
 - 互操作性 6, 7
 - 可扩展性 6
 - 可持续性 7
 
-# CIP-1694
+## CIP-1694
+
 - CIP-1694 269
 - CIP-1694，关键角色
-- 宪法委员会 (CC) 270
-- 委托代表 (DReps) 270
-- 质押池运营节点 (SPOs) 270
+  - 宪法委员会 (CC) 270
+  - 委托代表 (DReps) 270
+  - 质押池运营节点 (SPOs) 270
 
-# CIPs，最佳实践
+## CIPs，最佳实践
+
 - CIP-0003 密钥，生成 155
 - CIP-0030 Web，桥接 156
 - CIP-0032 内联，数据 (datums) 156
 - CIP-0040 质押，显式 156
 - CIP-0068 元数据 156, 157
 
-# 硬币选择
+## 硬币选择
+
 - 关于 105
 - 过程，利用 106
 - 质押 56
 
 ## 紧凑二进制表示 (CBOR)
+
 - 关于 50
 - 数据 (Datum)，配置 54
 - Plutus，脚本 53
 - Redeemer，利用 53
 - 交易，分析 51, 52
 
-# 加密学
+## 加密学
+
 - 关于 18
 - 哈希 19
 - 公钥加密 18
 
 ### Dandelion
+
 - Dandelion 127
 - 数据 (Datums) 40
 - Demeter.run 60, 67
 
 ## 设计模式
+
 - 关于 151
 - Beacon Token 152
 - 订单簿 152, 153
 - 线程代币 151
 - 数字签名 19, 20
 
-# 分布式账本技术
+## 分布式账本技术
+
 - 关于 2
 - 拜庭将军问题 (BGP) 2, 3
 - 概念 3
 - `dynamicQuery()` 183
 
-# 以太坊白书
+## 以太坊白书
+
 - 以太坊白书 4, 5
 
-# EUTXO 设计
+## EUTXO 设计
+
 - 架构，利用 158
 - 链序列图 165
 - 状态机图 158
 - 执行预算 256, 258
 
-# 前端 UI
+## 前端 UI
+
 - 前端 UI，事件，查看 185
 - 头部/页脚 181
 - 交换卡片，包含 184
@@ -5638,12 +5642,14 @@ Cardano 改进流程 (CIP)
 - 钱包，连接 181, 182
 
 ## H
+
 - 哈希 19
 - Helios 关于 70
 - GitHub，初始化 71
 - UTXO，锁定 72
 
-# JavaScript 应用
+## JavaScript 应用
+
 - 公共文件夹，分析 179
 - 组件 179
 - init 文件夹，优化 179
@@ -5655,89 +5661,115 @@ Cardano 改进流程 (CIP)
 - 钱包，配置 179
 
 ## K
+
 - Koios 127
 - Kupo 136, 138
 
 ## L
-- `lam function function 49
+
+- `lam function` 49
 
 ## 本地开发网
+
 - 关于 138, 139
 - docker，安装 139, 143
 - 环境，利用 139
 - 资源，利用 146
 
 ### Lucid + Aiken
+
 - 优势 77
 - Blockfrost API，利用 77
 - 代码，初始化 77, 78
 - 链，编码 79, 80
 
 ## M
+
 - Maestro 125
 - Maestro，功能
-- 块链，索引 125
-- 交易，管理 125
-- 交易 125
+  - 块链，索引 125
+  - 交易，管理 125
+  - 交易 125
 - 基于成员的组织 (MBO) 269
 - 元数据 38, 39
 - Midnight 274
 
-# 铸造策略
+## 铸造策略
+
 - Aiken 用例 111, 112
 - Lucid 链 112, 114
 - 链，销毁 110, 111
 - Helios 链 108, 110
 
-# Next.js
+## Next.js
+
 - Next.js 关于 70
 
-# 非同质化代币 (NFT)
+## 非同质化代币 (NFT)
+
 - NFT 关于 73, 74
 
 ## O
+
 - 链，编码 79, 80
 
-# 链，编码
+## 链，编码
+
 - 链，编码 79, 80
 
-# 输出资产
+## 输出资产
+
 - 输出资产 133, 134
 
-# 订单簿
+## 订单簿
+
 - 订单簿 152, 153
 
 ## O
+
 - 输出资产 133, 134
-# 订单簿
+
+## 订单簿
+
 - 订单簿 152, 153
 
 ## O
+
 - 输出资产 133, 134
-# 订单簿
+
+## 订单簿
+
 - 订单簿 152, 153
 
 ## O
+
 - 输出资产 133, 134
-# 订单簿
+
+## 订单簿
+
 - 订单簿 152, 153
 
+## `datum` 分析 239-241](#c11.xhtml#page241)
 
+## `token`，泄露 241-243](#c11.xhtml#page243)
 
+## `vulnerabilities`，满足 236-238](#c11.xhtml#page238)
 
-# `datum` 分析 239-241](#c11.xhtml#page241)
-# `token`，泄露 241-243](#c11.xhtml#page243)
-# `vulnerabilities`，满足 236-238](#c11.xhtml#page238)
-# 软件行业，趋势
-# `Blockchain`风险 281
-# `IACR` 283
-# `semi-formal method`，规范 282, 283
+## 软件行业，趋势
+
+- `Blockchain` 风险 281
+- `IACR` 283
+- `semi-formal method`，规范 282, 283
+
 ## 质押运营者 (SPO)
+
 - `about` 271
 - `project`，验证 272
 - `tools` 271
 - `stake_reference` 34
-# `state machine diagram`，概念
+
+## `state machine diagram`，概念
+
 - `asset`，执行 162, 163
 - `burning` 159
 - `print`，交易 164
@@ -5746,27 +5778,34 @@ Cardano 改进流程 (CIP)
 - `swap`，更新 161
 - `ticket`，铸造 159
 - `swap`，设置
-- `even`，组织 206
-- `script`，修改 208
-- `ticket`，转换 217-219](#c10.xhtml#page219)
-- `ticket`，获取 209
-- `tickets`，购买 211-213](#c10.xhtml#page213)
-- `ticket`，验证 216
-- `transaction`，更新 210
-- `wallet`，连接 206
+  - `even`，组织 206
+  - `script`，修改 208
+  - `ticket`，转换 217-219](#c10.xhtml#page219)
+  - `ticket`，获取 209
+  - `tickets`，购买 211-213](#c10.xhtml#page213)
+  - `ticket`，验证 216
+  - `transaction`，更新 210
+  - `wallet`，连接 206
+
 ## T
+
 ## 测试框架
+
 - `about` 229
 - `benefits` 229
 - `directory`，利用 230
 - `property`，测试 235, 236
 - `strategies` 230-232](#c11.xhtml#page232)
 - `test`，用例 232
-# 测试网
+
+## 测试网
+
 - `preprod` 62
 - `preview` 62
 - `thread token` 151
-# Token
+
+## Token
+
 - `about` 101
 - `CIP-25` 104
 - `CIP-68` 105
@@ -5774,48 +5813,74 @@ Cardano 改进流程 (CIP)
 - `Native Assets` 101
 - `Non-Fungible Token (NFT)` 103
 - `Bundles` 101
-# Token 组件
+
+## Token 组件
+
 - `naming` 101
 - `policy` 101
-# Token 经济学
+
+## Token 经济学
+
 - `about` 8
 - `rate` 10
 - `allocating` 8
 - `comparing` 9
 - `distributing` 9
 - `Registry` 10
-# Transaction Errors 259
+
+## Transaction Errors 259
+
 ## U
-# `Unlock.tsx`
+
+## `Unlock.tsx`
+
 - `Untyped Plutus Core (U)` 47
 - `simplifying` 50
 - `grammar` 49
-# UTXO
+
+## UTXO
+
 - `about` 35
 - `input` transaction 36-38](#c03.xhtml#page38)
 - `lifecycle` 60, 61
-# UTXO 脚本目的
+
+## UTXO 脚本目的
+
 - `certifying` 86
 - `minting` 86
+
+
+
 - `rewarding` 86
 - `spending` 86
+
 ## V
+
 # `Validators` 84
+
 # Validators 组件
+
 - `function` 分析 90, 91
 - `off-chain` code 87-89](#c06.xhtml#page89)
 - `on-chain` code 85-87](#c06.xhtml#page87)
 - `URL` scripting 91
+
 ## W
+
 # `wallet`
+
 - `about` 61, 62
 - `CIP-30` 67
 - `path` derivating 64, 65
 - `seed` phrasing 62
 - `staking` 65, 66
-# Testnets 62-64](#c05.xhtml#page64)
-# `walletAPI` 72
-# `WalletConnect.tsx` 79
-# `WalletInfo` 114
-# `witnesses`,类型 41, 42
 
+# Testnets 62-64](#c05.xhtml#page64)
+
+# `walletAPI` 72
+
+# `WalletConnect.tsx` 79
+
+# `WalletInfo` 114
+
+# `witnesses`,类型 41, 42

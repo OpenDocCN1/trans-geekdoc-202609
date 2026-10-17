@@ -1,27 +1,5 @@
-## 医疗保健应用中的区块链技术：社会、经济与技术影响
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# 医疗保健应用中的区块链技术：社会、经济与技术影响
 
 ## 前言
 
@@ -37,19 +15,13 @@
 
 **Prof. (Dr.) Nitin Rakesh** 是印度 Sharda University 工程与技术学院 `BTech`/`MTech`（`CSE`/`IT`）、`BTech CSE-IBM` 专业方向、`BTech CSE-I` Nurture、`BCA`/`MCA` 以及 `BSc`/`MSc-CS` 计算机科学与工程系的系主任。他获得了计算机科学与工程 `PhD` 学位，专业方向为网络编码。他拥有计算机科学与工程硕士学位和信息技术学士学位。他在知名 `SCI` 或 Scopus 收录期刊及国际会议上发表了 100 多篇研究论文。目前，他正在指导来自不同大学和行业的八名 `PhD` 学生。他的研究重点在于网络编码、互联网络与架构以及在线幻影事务。Dr. Nitin 获得了最佳论文发表、分会场主席、最高被引作者、最佳学生论文指导等多项奖励。他是 IBM Drona 奖获得者和十佳州级奖项获得者。他是 `IEEE`（美国）、`ACM`、`SIAM`（美国）、`CSI` 终身会员等专业学会的活跃会员。
 
-
-
-
-
-## 编辑
-
 ### Yousef Farhaoui 教授（博士）
 
 穆莱·伊斯梅尔大学科学与技术学院教授，摩洛哥；剑桥国际学院（英国）本地出版与研究协调员。他在伊本·佐赫尔科学大学获得计算机安全博士学位。他的研究兴趣包括学习、电子学习、计算机安全、大数据分析和商业智能。Farhaoui 在计算机科学领域出版了三本书。他是多个国际大会的协调员、组委会成员、科学委员会成员，也是多个国际协会的成员。他与 Springer 和 IGI 等知名出版社合作撰写了四本书和许多书章。他担任 IEEE、IET、Springer、Inderscience 和 Elsevier 期刊的审稿人。他还是 Wiley、Springer、Inderscience 等多家期刊的特邀编辑。他曾在多个会议上担任大会主席、分会主席和小组讨论嘉宾。他是 IEEE、IET、ACM 和 EAI 研究组的高级会员。
 
 ### Parma Nand Astya
 
-沙达大学工程技术学院院长，大诺伊达。他在教学、工业界和研究方面拥有 26 年以上的经验。他的专长领域包括无线与传感器网络、密码学、算法和计算机图形学。他在印度理工学院鲁尔基分校获得博士学位，在印度理工学院德里分校获得计算机科学与工程硕士和学士学位。他曾任国家工程师组织主席。他是 IEEE（美国）高级会员。他是 IEEE UP 分会（R10）执行委员会成员、IEEE 计算机与信号处理学会执行委员会成员、印度理事会计算机学会执行委员、印度计算机学会诺伊达分会执行委员会成员，并曾在多个 IEEE 会议中担任观察员。他在印度及国外的国际和国内会议/研讨会/讲习班上发表过多次受邀/主题演讲。他在同行评审的国际/国内期刊和会议上发表了 85 多篇论文。他还是 ACM、CSI、ACEEE、ISOC、IAENG 和 IASCIT 的活跃会员。他是软计算研究学会（SCRS）和 ISTE 的终身会员。
+沙达大学工程技术学院院长，大诺伊达。他在教学、工业界和研究方面拥有 26 年以上的经验。他的专长领域包括无线与传感器网络、密码学、算法和计算机图形学。他在印度理工学院鲁尔基分校获得博士学位，在印度理工学院德里分校获得计算机科学与工程硕士和学士学位。他曾任国家工程师组织主席。他是 IEEE（美国）高级会员。他是 IEEE UP 分会（R10）执行委员会成员、IEEE 计算机与信号处理学会执行委员会成员、印度理事会计算学会执行委员、印度计算机学会诺伊达分会执行委员会成员，并曾在多个 IEEE 会议中担任观察员。他在印度及国外的国际和国内会议/研讨会/讲习班上发表过多次受邀/主题演讲。他在同行评审的国际/国内期刊和会议上发表了 85 多篇论文。他还是 ACM、CSI、ACEEE、ISOC、IAENG 和 IASCIT 的活跃会员。他是软计算研究学会（SCRS）和 ISTE 的终身会员。
 
 ### Bhuvan Unhelkar 教授（博士）
 
@@ -262,10 +234,6 @@ PRINCE 实验室研究，ISITcom，Hammam Sousse
 津巴布韦大学  
 哈拉雷，津巴布韦
 
-
-
-
-
 **Tanmayee Prakash Tilekar**  
 数字取证分析师  
 ISAC India  
@@ -328,18 +296,23 @@ DOI: [10.1201/9781003224075-1](http://doi.org/10.1201/9781003224075-1)
 
 ## 1.2 区块链原理
 
+
+
+# 区块链与物联网基础
+
 区块链随中本聪于 2008 年提出的比特币应用而首次普及 [[12]](#C_006_c1.xhtml#r1_12)。区块链引入了去中心化账本的理念，实现了更安全的交易。区块链于 2009 年至 2013 年用于数字货币交易，被称为区块链 1.0 [[13]](#C_006_c1.xhtml#r1_13)。随后，智能合约的利用于 2015 年引入了区块链 2.0，提供了更好的认证和防篡改交易流程 [[14]](#C_006_c1.xhtml#r1_14)。以太坊平台引入 DApps 的理念，开启了区块链 3.0 时代 [[15]](#C_006_c1.xhtml#r1_15)。如今，我们处于区块链 4.0 时代，其应用拓展至商业和工业领域 [[16]](#C_006_c1.xhtml#r1_16)。
+
+## 1.2 区块链基础
 
 ### 1.2.1 概述
 
 区块链可划分为三个主要部分进行讨论：区块、链和网络。
 
 *   **区块**：区块以加密形式保存交易数据。它使用随机数、默克尔根哈希、时间戳、前一个和当前哈希信息等来加密数据。这些区块不可篡改，分为“区块头”和“区块体”两部分 [[17]](#C_006_c1.xhtml#r1_17)。区块链的类型决定了其功能和特性，如大小和执行过程。
+
 *   **链**：区块链类似于链表，区块链接在一起。
+
 *   **网络**：区块链建立在去中心化网络的概念之上。它确保没有单一参与者或实体能控制区块的交易或验证。它建立 P2P 网络，但包含信息的区块由被称为矿工的对等节点处理和存储 [[18]](#C_006_c1.xhtml#r1_18)。
-
-
-
 
 通常，区块链可分为两类：公有链和私有链。在公有链中，用户可以加入无许可账本，即他们既拥有读取权限，也拥有写入权限[19]。参与者可以匿名，但安全性由有效的区块挖掘和公钥密码系统保障。尽管区块防篡改，但执行和交易速度比私有链慢[20]。另一方面，私有链限制参与者，仅允许选定的矿工进行读写。这里的去中心化概念略有妥协，但效率极高，同时确保了区块链的所有其他特性[21]。还有一种称为联盟链或混合链的区块链类型。它结合了公有链和私有链的条件，以满足预期结果。
 
@@ -365,7 +338,7 @@ DOI: [10.1201/9781003224075-1](http://doi.org/10.1201/9781003224075-1)
 
 3.  **区块验证**：使用真实的哈希值、随机数、时间戳等，矿工对区块进行验证，并考虑将其追加到网络。
 
-4.  **添加至区块链**：最后，区块被组装进区块链网络，遵循 PoW 或 PoS 等共识协议。此后该区块不可移除、不可更改[28]。
+4.  **添加至区块链**：最后，区块被组装进区块链网络，遵循 `PoW` 或 `PoS` 等共识协议。此后该区块不可移除、不可更改[28]。
 
 ## 1.3 物联网基础
 
@@ -383,7 +356,7 @@ DOI: [10.1201/9781003224075-1](http://doi.org/10.1201/9781003224075-1)
 
 ### 1.3.2 网络层
 
-网络层或对象抽象层用于将收集的信息从物体层传输到服务管理层。它利用 GSM、RFID、Wi-Fi、WiMAX、3G、4G、卫星、蓝牙和红外等技术传输数据[31]。此外，数据管理和云计算等任务也由该层维护[32]。
+网络层或对象抽象层用于将收集的信息从物体层传输到服务管理层。它利用 `GSM`、`RFID`、`Wi-Fi`、`WiMAX`、`3G`、`4G`、卫星、蓝牙和红外等技术传输数据[31]。此外，数据管理和云计算等任务也由该层维护[32]。
 
 ### 1.3.3 服务管理层
 
@@ -397,7 +370,7 @@ DOI: [10.1201/9781003224075-1](http://doi.org/10.1201/9781003224075-1)
 
 业务层或管理层代表系统的聚合性能或分析。它可以根据接收和传输的数据生成图表、流程图或模型。因此，它提供了架构中所用各层和设备的完整效率。此外，通过比较各层预期输出与实际输出，它还可以提升性能[35]。
 
-其他提出的物联网架构（如三层模型或中间件模型）在某些情况下也很有效。然而，并非所有层都能利用所有类型的技术和数据传输过程。例如，基于 SOA 的架构有一个服务组合层，在数据执行和传输上耗时较多[36]。另一方面，这种五层模型可以生成架构分析，并倾向于提升性能。业务层可以使用大量数据并在强大设备上执行复杂计算。因此，为满足当前对大数据和更快传输的需求，五层模型是首选架构之一。
+其他提出的物联网架构（如三层模型或中间件模型）在某些情况下也很有效。然而，并非所有层都能利用所有类型的技术和数据传输过程。例如，基于 `SOA` 的架构有一个服务组合层，在数据执行和传输上耗时较多[36]。另一方面，这种五层模型可以生成架构分析，并倾向于提升性能。业务层可以使用大量数据并在强大设备上执行复杂计算。因此，为满足当前对大数据和更快传输的需求，五层模型是首选架构之一。
 
 ### 1.3.6 物联网组件
 
@@ -414,11 +387,6 @@ DOI: [10.1201/9781003224075-1](http://doi.org/10.1201/9781003224075-1)
 5.  **设备**：触发功能后，连接到物联网系统的设备执行期望的功能。
 
 ## 1.4 物联网安全问题
-
-
-
-
-# 物联网系统安全问题
 
 物联网系统及其各类通信设备存在若干安全问题。研究人员正致力于寻找安全风险的解决方案，并提出多种架构以应对这些问题。然而，目前仍无单一架构可被视为适用于所有情境。五层架构被提出作为这些安全问题的通用解决方案，但仍有部分问题未得到解决 [38]。此处，我们将详细探讨物联网五层模型的安全问题。
 
@@ -468,17 +436,13 @@ DOI: [10.1201/9781003224075-1](http://doi.org/10.1201/9781003224075-1)
 
 *   **恶意脚本与特洛伊木马**：物联网应用极易遭受病毒或特洛伊木马攻击。入侵者注入恶意软件，可生成副本并逐步破坏受害者的环境。仅靠杀毒软件很难防范此类恶意代码攻击。恶意脚本还可更改设备中已安装软件的基本命令 [57]。在系统一定部分受到 `HTML` 注入、脚本注入和蠕虫影响后，攻击者可扩大攻击范围。这也为网络钓鱼、`DoS` 和缓冲区溢出等其他攻击创造了条件。
 
-
-
-
-
 #### 软件和固件的不确定性
 
 随着物联网设备不同应用的出现，运行它们的软件和固件类型也各不相同 [58]。但由于缺乏标准化和适当的审查，要创建安全代码变得困难。此外，未能定期向设备提供安全更新会增加漏洞。攻击者还可以通过操纵时钟时间，破坏物联网设备与其他设备的同步过程。最终，入侵者更容易利用后端代码并更改预分配内存的代码 [59]。
 
 #### XMPPilot 攻击
 
-为了窃听发送方和接收方之间的通信信道，攻击者使用 XMPPilot。他编写代码以破坏 XMPP 连接，并将加密过程限制在接收方一侧的通信中 [60]。
+为了窃听发送方和接收方之间的通信信道，攻击者使用 `XMPPilot`。他编写代码以破坏 `XMPP` 连接，并将加密过程限制在接收方一侧的通信中 [60]。
 
 #### 可信度问题
 
@@ -512,25 +476,19 @@ DOI: [10.1201/9781003224075-1](http://doi.org/10.1201/9781003224075-1)
 | 时序攻击 | 易受侧信道攻击，暴露密码系统 | * 将区块链与国产商用密码算法相结合。<br>* 在区块链框架中应用概率模型进行数据收集。 | [66, 67] |
 | 节点劫持 | 破坏数据收集或将数据传输给攻击者 | * 提出许可型区块链的签名方案。<br>* 在无人机网络中引入基于区块链的框架。 | [68, 69] |
 | 重放攻击 | 破坏私有数据安全 | * 带有特殊监控传感器的基于区块链的物流系统。<br>* 区块链方案中的双向认证。<br>* 批量系统的 BSS（区块链赋能安全系统）方案。 | [70, 71, 72] |
-| 恶意和伪造节点 | 消耗能量 | * 区块链网络中基于 RSA（Rivest–Shamir–Adleman）签名的认证。<br>* 使用轻量级区块链管理身份认证。<br>* 基于 Hyperledger Fabric 私有区块链的框架。 | [73, 74, 75] |
-| 女巫攻击 | 破坏数据采集 | * 基于区块链的 SSDT（区块链防女巫攻击安全数据传输）框架。<br>* 面向 UWSN 的基于区块链的检测机制。 | [76, 77] |
-| 黑洞和灰洞攻击 | 网络延迟 | * 基于编码区块链的能量高效机制。<br>* 面向公有区块链的高效轻量级集成区块链（ELIB）模型。 | [78, 79] |
-| 利用攻击 | 污染网络/IP 地址 | * 基于 DPoA（授权委托证明）的混合区块链。 | [80] |
-| 中间人攻击 | 网络安全、密钥管理 | * 用于密钥生成和管理的基于种子的区块链方案。<br>* 面向 CAV（网联自动驾驶汽车）的基于区块链的架构。 | [81, 82] |
-| DoS/DDoS | 网络不可用、系统崩溃 | * 面向 IIoT 的混合区块链。<br>* 使用以太坊平台的私有区块链。<br>* 使用智能合约和 LSTM（长短期记忆）进行访问控制的区块链框架。 | [83, 84, 85] |
+| 恶意和伪造节点 | 消耗能量 | * 区块链网络中基于 `RSA`（Rivest–Shamir–Adleman）签名的认证。<br>* 使用轻量级区块链管理身份认证。<br>* 基于 `Hyperledger Fabric` 私有区块链的框架。 | [73, 74, 75] |
+| 女巫攻击 | 破坏数据采集 | * 基于区块链的 `SSDT`（区块链防女巫攻击安全数据传输）框架。<br>* 面向 `UWSN` 的基于区块链的检测机制。 | [76, 77] |
+| 黑洞和灰洞攻击 | 网络延迟 | * 基于编码区块链的能量高效机制。<br>* 面向公有区块链的高效轻量级集成区块链（`ELIB`）模型。 | [78, 79] |
+| 利用攻击 | 污染网络/`IP` 地址 | * 基于 `DPoA`（授权委托证明）的混合区块链。 | [80] |
+| 中间人攻击 | 网络安全、密钥管理 | * 用于密钥生成和管理的基于种子的区块链方案。<br>* 面向 `CAV`（网联自动驾驶汽车）的基于区块链的架构。 | [81, 82] |
+| `DoS`/`DDoS` | 网络不可用、系统崩溃 | * 面向 `IIoT` 的混合区块链。<br>* 使用以太坊平台的私有区块链。<br>* 使用智能合约和 `LSTM`（长短期记忆）进行访问控制的区块链框架。 | [83, 84, 85] |
 | 病毒攻击 | 数据/系统中断 | * 提出基于联盟区块链的恢复服务。<br>* 分布式数据库中使用区块链的检测机制。 | [86, 87] |
-| 耗尽攻击 | 内存/资源衰减 | * 提出基于区块链的数据边缘验证系统。<br>* 面向 IIoT 的轻量级区块链。<br>* 用于认证的公有链和本地链混合模型。 | [88, 89, 90] |
+| 耗尽攻击 | 内存/资源衰减 | * 提出基于区块链的数据边缘验证系统。<br>* 面向 `IIoT` 的轻量级区块链。<br>* 用于认证的公有链和本地链混合模型。 | [88, 89, 90] |
 | 网络钓鱼攻击 | 凭证安全 | * 基于区块链和零信任的框架。 | [91] |
-| 逻辑攻击 | 运行时错误 | * 用于验证和访问控制的 Hyperledger Fabric。 | [92] |
+| 逻辑攻击 | 运行时错误 | * 用于验证和访问控制的 `Hyperledger Fabric`。 | [92] |
 | 零日攻击 | 网络安全、零知识 | * 基于深度区块链框架的检测机制。<br>* 基于区块链的认证机制。 | [93, 94] |
-| 嗅探攻击 | 未授权访问 | * 基于区块链的事件日志安全机制。<br>* 区块链加密方案中的 GADV。 | [95, 96] |
-| 路由攻击 | 恶化网络效率、DoS | * 使用智能合约识别被篡改传感器节点的基于区块链的框架。 | |
-
-
-
-
-
-|| [97] |
+| 嗅探攻击 | 未授权访问 | * 基于区块链的事件日志安全机制。<br>* 区块链加密方案中的 `GADV`。 | [95, 96] |
+| 路由攻击 | 恶化网络效率、`DoS` | * 使用智能合约识别被篡改传感器节点的基于区块链的框架。 | [97] |
 
 上表表明，区块链在改善物联网安全问题方面具有巨大潜力。但仍需更多研究来探究区块链应用的效率与简易性。
 
@@ -543,6 +501,8 @@ DOI: [10.1201/9781003224075-1](http://doi.org/10.1201/9781003224075-1)
 物联网生态系统涉及从低端设备到高端服务器的各类设备。它们在多层中计算数据，每层都有其自身的机制 [98]。因此，需要引入一个用于安全赋能的通用框架，使设备能在各层动态适应安全需求。
 
 ### 1.6.2 硬件与固件漏洞
+
+
 
 随着需求增加，物联网设备趋向于更低成本、更低功耗。这以降低硬件或固件质量为代价换取了系统的用户友好性 [99]。除了物理干扰外，恶意软件和路由问题等软件相关问题也可能发生。因此，需要一套标准系统来监控这些问题。
 
@@ -566,9 +526,9 @@ DOI: [10.1201/9781003224075-1](http://doi.org/10.1201/9781003224075-1)
 
 2.  Sami, N., Mufti, T., Sohail, S. S., Siddiqui, J., & Kumar, D. (2020). Future Internet of Things (IOT) from cloud perspective: aspects, applications and challenges. In: Alam, M., Shakil, K., & Khan, S. (eds) Internet of Things (IoT) (pp. 515–532). Springer, Cham.
 
-3.  Goyal, S., Sharma, N., Bhushan, B., Shankar, A., & Sagayam, M. (2020). IoT enabled technology in secured healthcare: applications, challenges and future directions. Cognitive Internet of Medical Things for Smart Healthcare, 25–48. Doi: [10.1007/978-3-030-55833-8\_2](http://doi.org/10.1007/978-3-030-55833-8_2).
+3.  Goyal, S., Sharma, N., Bhushan, B., Shankar, A., & Sagayam, M. (2020). IoT enabled technology in secured healthcare: applications, challenges and future directions. Cognitive Internet of Medical Things for Smart Healthcare, 25–48. Doi: [10.1007/978-3-030-55833-8_2](http://doi.org/10.1007/978-3-030-55833-8_2).
 
-4.  Sethi, R., Bhushan, B., Sharma, N., Kumar, R., & Kaushik, I. (2020). Applicability of industrial IoT in diversified sectors: evolution, applications and challenges. Studies in Big Data Multimedia Technologies in the Internet of Things Environment, 45–67. Doi: [10.1007/978-981-15-7965-3\_4](http://doi.org/10.1007/978-981-15-7965-3_4)
+4.  Sethi, R., Bhushan, B., Sharma, N., Kumar, R., & Kaushik, I. (2020). Applicability of industrial IoT in diversified sectors: evolution, applications and challenges. Studies in Big Data Multimedia Technologies in the Internet of Things Environment, 45–67. Doi: [10.1007/978-981-15-7965-3_4](http://doi.org/10.1007/978-981-15-7965-3_4).
 
 5.  ur Rehman, M. H., Yaqoob, I., Salah, K., Imran, M., Jayaraman, P. P., & Perera, C. (2019). The role of big data analytics in industrial Internet of Things. Future Generation Computer Systems, 99, 247–259.
 
@@ -594,10 +554,6 @@ DOI: [10.1201/9781003224075-1](http://doi.org/10.1201/9781003224075-1)
 
 16.  Wang, W., Hoang, D. T., Hu, P., Xiong, Z., Niyato, D., Wang, P., … Kim, D. I. (2019). A survey on consensus mechanisms and mining strategy management in blockchain networks. IEEE Access, 7, 22328–22370.
 
-
-
-
-
 ## 参考文献
 
 17. Kumar, A., Abhishek, K., Bhushan, B., & Chakraborty, C. (2021). 利用以太坊区块链实现制造业的安全访问控制。*Peer-to-Peer Networking and Applications*。Doi: [10.1007/s12083-021-01108-3](http://doi.org/10.1007/s12083-021-01108-3)。
@@ -610,7 +566,7 @@ DOI: [10.1201/9781003224075-1](http://doi.org/10.1201/9781003224075-1)
 
 21. Bhushan, B., Sinha, P., Sagayam, K. M., & J. A. (2021). 梳理区块链技术：关于现状、安全威胁、隐私服务、应用及未来研究方向的综述。*Computers & Electrical Engineering*, 90, 106897。Doi: [10.1016/j.compeleceng.2020.106897](http://doi.org/10.1016/j.compeleceng.2020.106897)。
 
-22. Li, C., & Palanisamy, B. (2020, September). DPoS 与 PoW 区块链去中心化程度的对比。载于 *International Conference on Blockchain* (pp. 18–32)。Springer, Cham。
+22. Li, C., & Palanisamy, B. (2020, September). `DPoS` 与 `PoW` 区块链去中心化程度的对比。载于 *International Conference on Blockchain* (pp. 18–32)。Springer, Cham。
 
 23. Yaqoob, I., Salah, K., Jayaraman, R., & Al-Hammadi, Y. (2021). 面向医疗数据管理的区块链：机遇、挑战与未来建议。*Neural Computing and Applications*, 专刊：医疗分析, 1–16。
 
@@ -638,6 +594,10 @@ DOI: [10.1201/9781003224075-1](http://doi.org/10.1201/9781003224075-1)
 
 35. Khan, R., Khan, S. U., Zaheer, R., & Khan, S. (2012, December). 未来互联网：物联网架构、潜在应用与关键挑战。载于 *2012 10th International Conference on Frontiers of Information Technology* (pp. 257–260)，Islamabad，巴基斯坦，IEEE。
 
+
+
+## 参考文献
+
 36. Kakkar, L., Gupta, D., Saxena, S., & Tanwar, S. (2021). 物联网架构及其安全性：综述。载于 *Proceedings of the Second International Conference on Information Management and Machine Intelligence* (pp. 87–94)。Springer, Singapore。
 
 37. Chegini, H., Naha, R. K., Mahanti, A., & Thulasiraman, P. (2021). 物联网-雾-云生态系统中的流程自动化：综述与分类。*IoT*, 2(1), 92–118。
@@ -659,12 +619,6 @@ DOI: [10.1201/9781003224075-1](http://doi.org/10.1201/9781003224075-1)
 45. Attarian, R., & Hashemi, S. (2021). 一种面向基于物联网的移动医疗交易中客户端安全与隐私的匿名通信协议。*Computer Networks*, 190, 107976。
 
 46. Burhan, M., Rehman, R. A., Khan, B., & Kim, B. S. (2018). 物联网要素、分层架构与安全问题：全面综述。*Sensors*, 18(9), 2796。
-
-
-
-
-
-## 参考文献
 
 47. Perti, A., Singh, A., Sinha, A., & Srivastava, P. K. (2021). Security risks and challenges in IoT-based applications. In *Proceedings of International Conference on Big Data, Machine Learning and their Applications* (pp. 99–111). Springer, Singapore.
 
@@ -720,17 +674,15 @@ DOI: [10.1201/9781003224075-1](http://doi.org/10.1201/9781003224075-1)
 
 73. Nesarani, A., Ramar, R., & Pandian, S. (2020). An efficient approach for rice prediction from authenticated Block chain node using machine learning technique. *Environmental Technology & Innovation*, 20, 101064.
 
+
+
+# 参考文献
+
 74. Mukhandi, M., Andrade, E., Damião, F., Granjal, J., & Vilela, J. P. (2020, November). Blockchain-based scalable authentication for IoT. In *Proceedings of the 18th Conference on Embedded Networked Sensor Systems* (pp. 667–668). Japan, ACM.
 
 75. Seshadri, S. S., Rodriguez, D., Subedi, M., Choo, K. K. R., Ahmed, S., Chen, Q., & Lee, J. (2020). IoTCop: a blockchain-based monitoring framework for detection and isolation of malicious devices in Internet-of-Things systems. *IEEE Internet of Things Journal*, 8(5), 3346–3359.
 
 76. Kumar, S., Das, A. K., & Sinha, D. (2021). Blockchain-Based Sybil-Secure Data Transmission (SSDT) IoT framework for smart city applications. In: Bhateja, V., Peng, S. L., Satapathy, S. C., Zhang, Y. D. (Eds.), *Evolution in Computational Intelligence* (pp. 355–370). Springer, Singapore.
-
-
-
-
-
-## 参考文献
 
 77. Arifeen, M. M., Al Mamun, A., Ahmed, T., Kaiser, M. S., & Mahmud, M. (2021). A blockchain-based scheme for sybil attack detection in underwater wireless sensor networks. In *Proceedings of International Conference on Trends in Computational and Cognitive Engineering* (pp. 467–476). Springer, Singapore.
 
@@ -792,15 +744,11 @@ DOI: [10.1201/9781003224075-2](http://doi.org/10.1201/9781003224075-2)
 
 ## 2.1 引言：工业物联网
 
-工业物联网（IIoT）是当今自动化时代的一个蓬勃发展的领域。IIoT 是指将物联网（IoT）应用于工业以提高运营效率。信息技术（IT）和运营技术（OT）在 IIoT 中融合，使工业能够提升其性能 [[1]](#C_007_c2.xhtml#r2_1)[[2]](#C_007_c2.xhtml#r2_2)。IT 和 OT 的融合有助于组织整合自动化、优化、数据分析等。由智能传感器和执行器组成的物联网生态系统将使机器和其他基础设施的监控与控制变得更加容易。IIoT 的抽象视图如 图 2.1 所示。
+工业物联网（IIoT）是当今自动化时代的一个蓬勃发展的领域。IIoT 是指将物联网（IoT）应用于工业以提高运营效率。信息技术（IT）和运营技术（OT）在 IIoT 中融合，使工业能够提升其性能 [[1]](#C_007_c2.xhtml#r2_1)[[2]](#C_007_c2.xhtml#r2_2)。IT 和 OT 的融合有助于组织整合自动化、优化、数据分析等。由智能传感器和执行器组成的物联网生态系统将使机器和其他基础设施的监控与控制变得更加容易。IIoT 的抽象视图如图 2.1 所示。
 
 ![FIGURE 2.1 IIoT architecture. (Courtesy: The Future of Industrial Automation by Paul McLaughlin and Rohan McAdam.)](img/Fig02_01.jpg)
 
 **图 2.1** IIoT 架构。（来源：Paul McLaughlin 和 Rohan McAdam 合著的《工业自动化的未来》）
-
-
-
-
 
 ### 架构概述
 
@@ -820,6 +768,9 @@ IoT 系统的设备层包含电磁设备，称为传感器和执行器。一旦�
 
 - 第 2.2 节 论述如何在工业规模上部署 IoT 以获得 IIoT。
 - 第 2.3 节 涉及区块链的一般概念，并介绍权益证明（`PoS`）算法。
+
+
+
 - 第 2.4 节 描述如何结合 IIoT 和区块链，重点关注 `PoS`。
 - 第 2.5 节 基于权益概念提出一种算法，确保传感器的可靠性。
 - 第 2.6 节 讨论该算法的仿真并评估其性能。
@@ -851,9 +802,6 @@ IIoT 也称为工业 4.0，具有多种应用。零售、医疗、制造、教�
 - **矿工**：矿工是区块链网络中的共识参与者，确保所有交易得到验证。每笔交易经验证后与其他交易打包进一个区块。若成功，则广播给所有其他节点进行验证，并标记为最新区块。
 - **哈希指针**：由哈希函数创建，将区块内容映射到哈希指针。通常通过获取前一区块的哈希值并将其作为条目添加到当前区块来创建。这通过确保前一数据的任何变更将导致下一区块出现不同的哈希值，并可追溯至创世区块（即链的第一个区块），使任何篡改显而易见。
 - 根据不同共识机制的要求，区块还可包含额外数据。为减少存储空间，区块中的交易可按默克尔树形式存储。
-
-
-
 
 这些概念使区块链具有去中心化、透明、不可篡改、安全和私密的特性。之所以说它是去中心化的，是因为矿工独立工作，仅广播每个过程的成功结果。由于交易携带所有必要的标识符，因此对所有参与者都是透明的。哈希指针使得无法修改链的任何特定部分，因为哈希是单向的，而像 `SHA-256` 和 `SHA-512` 这样的密码学级哈希几乎零碰撞。密码学安全性和隐私性可以轻松地在现有链的基础上融合。
 
@@ -908,9 +856,6 @@ Bhushan 等人 [19] 描述了区块链使其在当今技术领域广泛应用的
 ![图 2.3 基于 PoW 的可靠性模型中存在的模块。](img/Fig02_03.jpg)
 
 **图 2.3** 基于 PoW 的可靠性模型中存在的模块。
-
-
-
 
 ### 贡献者/验证者选择与权益转移机制
 
@@ -1012,34 +957,34 @@ Bhushan 等人 [19] 描述了区块链使其在当今技术领域广泛应用的
 
 **第 4 次迭代**
 
-
-
-
-
-#### 表 2.5 第 4 次迭代（正常运行）
+**表 2.5** 第 4 次迭代（正常运行）
 
 | 传感器编号 | 1 | 2 | 3 | 4 | 5 |
 | --- | --- | --- | --- | --- | --- |
 | 当前质押 (s) | 100 | 100 | 100 | 100 | 100 |
 | 接收读数 (r) | 102 | 94 | 98 | 95 | 102 |
-| 贡献者？(s>min_stake) | True | True | True | True | True |
+| 贡献者？(s > `min_stake`) | True | True | True | True | True |
 | 平均读数 (avg) | 98.2 | 98.2 | 98.2 | 98.2 | 98.2 |
-| 偏差 (d) = |avg−r| | 3.8 | 4.2 | 0.2 | 3.2 | 3.8 |
+| 偏差 (d) = \|avg−r\| | 3.8 | 4.2 | 0.2 | 3.2 | 3.8 |
 | 接受的读数 | | | Accept | | |
-| 在偏差限制内？(d<dev_limit) | Yes | Yes | Yes | Yes | Yes |
+| 在偏差限制内？(d < `dev_limit`) | Yes | Yes | Yes | Yes | Yes |
 | 用于转移的质押 (10%) | 0 | 0 | 0 | 0 | 0 |
 | 用于费用的质押 (5%) | 5 | 5 | 5 | 5 | 5 |
 | 修订后质押 | 100 | 100 | 100 | 100 | 100 |
 
-#### 表 2.6 第 5 次迭代（正常运行）
+**表 2.6** 第 5 次迭代（正常运行）
 
 | 传感器编号 | 1 | 2 | 3 | 4 | 5 |
 | --- | --- | --- | --- | --- | --- |
+
+
+
 | 当前质押 (s) | 100 | 100 | 100 | 100 | 100 |
+| --- | --- | --- | --- | --- | --- |
 | 接收读数 (r) | 96 | 97 | 95 | 96 | 92 |
 | 贡献者？(s>min_stake) | True | True | True | True | True |
 | 平均读数 (avg) | 95.2 | 95.2 | 95.2 | 95.2 | 95.2 |
-| 偏差 (d) = |avg−r| | 0.8 | 1.8 | 0.2 | 0.8 | 3.2 |
+| 偏差 (d) = \|avg−r\| | 0.8 | 1.8 | 0.2 | 0.8 | 3.2 |
 | 接受的读数 | | | Accept | | |
 | 在偏差限制内？(d<dev_limit) | Yes | Yes | Yes | Yes | Yes |
 | 用于转移的质押 (10%) | 0 | 0 | 0 | 0 | 0 |
@@ -1049,10 +994,15 @@ Bhushan 等人 [19] 描述了区块链使其在当今技术领域广泛应用的
 此过程继续进行 15 次迭代。结果汇总如下。
 
 **Iter**：迭代次数
+
 **R1–R5**：传感器 1–5 的读数
+
 **A**：接受的读数
+
 **In**：在 dev_limits 范围内
+
 **Out**：在 dev_limits 范围外
+
 **S1–S5**：传感器 1–5 的修订后质押
 
 系统看起来高度稳定，仅发生了一次传感器表现异常并发生质押转移的情况。该次迭代详述如下。
@@ -1085,7 +1035,7 @@ Bhushan 等人 [19] 描述了区块链使其在当今技术领域广泛应用的
 | 接收读数 (r) | 107 | 108 | 106 | 91 | 109 |
 | 贡献者？(s>min_stake) | True | True | True | True | True |
 | 平均读数 (avg) | 104.2 | 104.2 | 104.2 | 104.2 | 104.2 |
-| 偏差 (d) = |avg−r| | 2.8 | 3.8 | 1.8 | 13.2 | 4.8 |
+| 偏差 (d) = \|avg−r\| | 2.8 | 3.8 | 1.8 | 13.2 | 4.8 |
 | 接受的读数 | | | Accept | | |
 | 在偏差限制内？(d<dev_limit) | Yes | Yes | Yes | No | Yes |
 | 用于转移的质押 (10%) | 0 | 0 | 0 | 10 | 0 |
@@ -1098,18 +1048,18 @@ Bhushan 等人 [19] 描述了区块链使其在当今技术领域广泛应用的
 
 ![图 2.8 不同传感器质押的变化，与 min_stake 对比（情况 1）。](img/Fig02_08.jpg)
 
-**图 2.8** 不同传感器质押的变化，与 min_stake 对比（情况 1）。
+**图 2.8** 不同传感器质押的变化，与 `min_stake` 对比（情况 1）。
 
 ### 情况 2：系统故障
 
 本实验的参数如下：
 
 *   传感器数量 = 5，每个传感器的初始质押 = 100
-*   贡献所需的最小质押 (min_stake) = 75
-*   模拟迭代次数 = 20，偏差限制 (dev_limit) = 10
+*   贡献所需的最小质押 (`min_stake`) = 75
+*   模拟迭代次数 = 20，偏差限制 (`dev_limit`) = 10
 *   质押惩罚 = 10%，验证费用 = 5%
 
-由于这是一个已知的系统故障案例，所有迭代均详细列出。读数取为 70 到 130 之间的随机数。这模拟了一个非理想场景，其中读数有很大概率违反 dev_limit。表 2.9、表 2.10、表 2.11、表 2.12、表 2.13、表 2.14、表 2.15、表 2.16、表 2.17 和表 2.18 汇总了模型在每次迭代中的性能。
+由于这是一个已知的系统故障案例，所有迭代均详细列出。读数取为 70 到 130 之间的随机数。这模拟了一个非理想场景，其中读数有很大概率违反 `dev_limit`。表 2.9、表 2.10、表 2.11、表 2.12、表 2.13、表 2.14、表 2.15、表 2.16、表 2.17 和表 2.18 汇总了模型在每次迭代中的性能。
 
 #### 表 2.9 第 1 次迭代（情况：系统故障）
 
@@ -1119,7 +1069,7 @@ Bhushan 等人 [19] 描述了区块链使其在当今技术领域广泛应用的
 | 接收读数 (r) | 114 | 90 | 116 | 116 | 123 |
 | 贡献者？(s>min_stake) | True | True | True | True | True |
 | 平均读数 (avg) | 111.8 | 111.8 | 111.8 | 111.8 | 111.8 |
-| 偏差 (d) = |avg−r| | 2.2 | 21.8 | 4.2 | 4.2 | 11.2 |
+| 偏差 (d) = \|avg−r\| | 2.2 | 21.8 | 4.2 | 4.2 | 11.2 |
 | 接受的读数 | | | Accept | | |
 | 在偏差限制内？(d<dev_limit) | Yes | No | Yes | Yes | No |
 | 用于转移的质押 (10%) | 0 | 10 | 0 | 0 | 10 |
@@ -1135,16 +1085,12 @@ Bhushan 等人 [19] 描述了区块链使其在当今技术领域广泛应用的
 | 当前质押 (s) | 106.67 | 90 | 106.67 | 106.67 | 90 |
 | 接收读数 (r) | 78 | 102 | 101 | 100 | 127 |
 
-
-
-
-
 #### 迭代 3
 
 **表 2.11** 迭代 3（情况：系统故障）
 
 | 传感器编号 | 1 | 2 | 3 | 4 | 5 |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | 当前股份 (`s`) | 96 | 96.56 | 113.22 | 113.22 | 81 |
 | 接收读数 (`r`) | 119 | 123 | 84 | 95 | 96 |
 | 贡献者？(`s>min_stake`) | True | True | True | True | True |
@@ -1161,7 +1107,7 @@ Bhushan 等人 [19] 描述了区块链使其在当今技术领域广泛应用的
 **表 2.12** 迭代 4（情况：系统故障）
 
 | 传感器编号 | 1 | 2 | 3 | 4 | 5 |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | 当前股份 (`s`) | 86.4 | 86.9 | 101.9 | 128.51 | 96.29 |
 | 接收读数 (`r`) | 119 | 119 | 89 | 105 | 129 |
 | 贡献者？(`s>min_stake`) | True | True | True | True | True |
@@ -1178,7 +1124,7 @@ Bhushan 等人 [19] 描述了区块链使其在当今技术领域广泛应用的
 **表 2.13** 迭代 5（情况：系统故障）
 
 | 传感器编号 | 1 | 2 | 3 | 4 | 5 |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | 当前股份 (`s`) | 93 | 93.5 | 91.71 | 135.12 | 86.66 |
 | 接收读数 (`r`) | 122 | 112 | 91 | 117 | 120 |
 | 贡献者？(`s>min_stake`) | True | True | True | True | True |
@@ -1195,7 +1141,7 @@ Bhushan 等人 [19] 描述了区块链使其在当今技术领域广泛应用的
 **表 2.14** 迭代 6（情况：系统故障）
 
 | 传感器编号 | 1 | 2 | 3 | 4 | 5 |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | 当前股份 (`s`) | 95.3 | 95.8 | 82.54 | 137.41 | 88.95 |
 | 接收读数 (`r`) | 122 | 129 | 94 | 78 | 76 |
 | 贡献者？(`s>min_stake`) | True | True | True | True | True |
@@ -1212,7 +1158,7 @@ Bhushan 等人 [19] 描述了区块链使其在当今技术领域广泛应用的
 **表 2.15** 迭代 7（情况：系统故障）
 
 | 传感器编号 | 1 | 2 | 3 | 4 | 5 |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | 当前股份 (`s`) | 85.77 | 86.22 | 124.29 | 123.67 | 80.06 |
 | 接收读数 (`r`) | 84 | 78 | 115 | 99 | 122 |
 | 贡献者？(`s>min_stake`) | True | True | True | True | True |
@@ -1231,7 +1177,7 @@ Bhushan 等人 [19] 描述了区块链使其在当今技术领域广泛应用的
 **表 2.16** 迭代 8（情况：系统故障）
 
 | 传感器编号 | 1 | 2 | 3 | 4 | 5 |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | 当前股份 (`s`) | 77.2 | 77.6 | 111.86 | 161.3 | 72.05 |
 | 接收读数 (`r`) | 114 | 77 | 126 | 118 | 85 |
 | 贡献者？(`s>min_stake`) | True | True | True | True | False |
@@ -1250,14 +1196,18 @@ Bhushan 等人 [19] 描述了区块链使其在当今技术领域广泛应用的
 **表 2.17** 迭代 9（情况：系统故障）
 
 | 传感器编号 | 1 | 2 | 3 | 4 | 5 |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | 当前股份 (`s`) | 86.67 | 69.84 | 100.67 | 170.77 | 72.05 |
 | 接收读数 (`r`) | 111 | 106 | 123 | 92 | 126 |
-| 贡献者？(`s>min_stake`) | True | False | True | True | False |
+
+
+
+| 贡献者？(`s > min_stake`) | True | False | True | True | False |
+|---|---|---|---|---|---|
 | 平均读数 (`avg`) | 108.67 | 108.67 | 108.67 | 108.67 | 108.67 |
-| 偏差 (`d`) = \|avg−r\| | 2.33 | 2.67 | 14.33 | 16.67 | 17.33 |
+| 偏差 (`d`) = `|avg - r|` | 2.33 | 2.67 | 14.33 | 16.67 | 17.33 |
 | 接受读数 | 接受 | | | | |
-| 在偏差限制内？(`d<dev_limit`) | 是 | 是 | 否 | 否 | 否 |
+| 在偏差限制内？(`d < dev_limit`) | 是 | 是 | 否 | 否 | 否 |
 | 转移股份 (10%) | 0 | 验证者 | 10.07 | 17.077 | 验证者 |
 | 手续费股份 (5%) | 4.33 | 符合资格 | 5.04 | 8.53 | 不符合资格 |
 | 修订后股份 | 108.12 | 87.74 | 86.07 | 146.01 | 72.05 |
@@ -1272,10 +1222,6 @@ Bhushan 等人 [19] 描述了区块链使其在当今技术领域广泛应用的
 |---|---|---|---|---|---|
 | 当前股份 (`s`) | 108.12 | 87.74 | 86.07 | 146.01 | 72.05 |
 
-
-
-
-
 ## 2.7 结论
 
 区块链技术的成功不仅仅局限于架构所提供的不可篡改性。还因为它提供了多种共识模型。本章探讨了其中一种模型——PoS（权益证明），它确保交易只能由拥有足够“权益”的节点执行。权益赋予了等同于权威的地位，随着交易的进行，这种权威在区块链中转移。这一概念经过改造，通过类似的共识机制确保了 IIoT 实现的分布式可靠性。
@@ -1287,11 +1233,11 @@ Bhushan 等人 [19] 描述了区块链使其在当今技术领域广泛应用的
 ### 案例研究：传感器读数分析
 
 | 指标 | 传感器 1 | 传感器 2 | 传感器 3 | 传感器 4 | 传感器 5 |
-| :--- | :---: | :---: | :---: | :---: | :---: |
+|---|---|---|---|---|---|
 | 接收读数 (`r`) | 124 | 123 | 89 | 95 | 83 |
 | 贡献者？(`s > min_stake`) | True | True | True | True | False |
 | 平均读数 (`avg`) | 107.75 | 107.75 | 107.75 | 107.75 | 107.75 |
-| 偏差 (`d`) = `\|avg - r\|` | 16.25 | 15.25 | 18.75 | 12.75 | 24.75 |
+| 偏差 (`d`) = `|avg - r|` | 16.25 | 15.25 | 18.75 | 12.75 | 24.75 |
 | 接受读数 | 停止 | 停止 | 停止 | 停止 | 停止 |
 | 在偏差限制内？(`d < dev_limit`) | 否 | 否 | 否 | 否 | 否 |
 | 用于转移的权益 (10%) | 停止 | 停止 | 停止 | 停止 | 停止 |
@@ -1308,57 +1254,53 @@ Bhushan 等人 [19] 描述了区块链使其在当今技术领域广泛应用的
 
 ## 参考文献
 
-1.  Boyes, H., Hallaq, B., Cunningham, J., & Watson, T. 2018. 工业物联网 (IIoT)：一个分析框架。*Computers in Industry*, 101: 1–12.
+1. Boyes, H., Hallaq, B., Cunningham, J., & Watson, T. 2018. 工业物联网 (IIoT)：一个分析框架。*Computers in Industry*, 101: 1–12.
 
-2.  Aziz, A., Schelén, O., & Bodin, U. 2020. 关于采矿业工业物联网的研究：综合架构与开放研究方向。*IoT*, 1(2): 529–550.
+2. Aziz, A., Schelén, O., & Bodin, U. 2020. 关于采矿业工业物联网的研究：综合架构与开放研究方向。*IoT*, 1(2): 529–550.
 
-3.  Moore, S. J., Nugent, C. D., Zhang, S., & Cleland, I. 2020. IoT 可靠性：通向 5 个关键研究方向的综述。*CCF Transactions on Pervasive Computing and Interaction*, 2: 1–17.
+3. Moore, S. J., Nugent, C. D., Zhang, S., & Cleland, I. 2020. IoT 可靠性：通向 5 个关键研究方向的综述。*CCF Transactions on Pervasive Computing and Interaction*, 2: 1–17.
 
-4.  Wu, Y., Dai, H. N., & Wang, H. 2020. 区块链与边缘计算的融合，用于工业 4.0 中安全且可扩展的 IIoT 关键基础设施。*IEEE Internet of Things Journal*, 8(4): 2300–2317.
+4. Wu, Y., Dai, H. N., & Wang, H. 2020. 区块链与边缘计算的融合，用于工业 4.0 中安全且可扩展的 IIoT 关键基础设施。*IEEE Internet of Things Journal*, 8(4): 2300–2317.
 
-5.  Bhushan, B., & Sahoo, G. 2020. 无线传感器网络中的需求、协议和安全挑战：工业视角。载于 *Handbook of Computer Networks and Cyber Security*, 683–713. Springer, Cham.
+5. Bhushan, B., & Sahoo, G. 2020. 无线传感器网络中的需求、协议和安全挑战：工业视角。载于 *Handbook of Computer Networks and Cyber Security*, 683–713. Springer, Cham.
 
-6.  Sethi, R., Bhushan, B., Sharma, N., Kumar, R., & Kaushik, I. 2021. 工业物联网在多元化领域的适用性：演进、应用与挑战。载于 *Multimedia Technologies in the Internet of Things Environment*, 45–67. Springer, Singapore. Doi: [10.1007/978-981-15-7965-3_4](http://doi.org/10.1007/978-981-15-7965-3_4).
+6. Sethi, R., Bhushan, B., Sharma, N., Kumar, R., & Kaushik, I. 2021. 工业物联网在多元化领域的适用性：演进、应用与挑战。载于 *Multimedia Technologies in the Internet of Things Environment*, 45–67. Springer, Singapore. Doi: [10.1007/978-981-15-7965-3_4](http://doi.org/10.1007/978-981-15-7965-3_4).
 
-7.  Senathipathi, K., Kayalvili, S., Anitha, P., & Henna, K. C. 2021. 区块链集成 IIoT——物联网的未来。*Materials Today: Proceedings*. Doi: [10.1016/j.matpr.2020.12.1051](http://doi.org/10.1016/j.matpr.2020.12.1051).
+7. Senathipathi, K., Kayalvili, S., Anitha, P., & Henna, K. C. 2021. 区块链集成 IIoT——物联网的未来。*Materials Today: Proceedings*. Doi: [10.1016/j.matpr.2020.12.1051](http://doi.org/10.1016/j.matpr.2020.12.1051).
 
-8.  Nguyen, C. T., Hoang, D. T., Nguyen, D. N., Niyato, D., Nguyen, H. T., & Dutkiewicz, E. 2019. 面向未来区块链网络的权益证明共识机制：基础、应用与机遇。*IEEE Access*, 7: 85727–85745.
+8. Nguyen, C. T., Hoang, D. T., Nguyen, D. N., Niyato, D., Nguyen, H. T., & Dutkiewicz, E. 2019. 面向未来区块链网络的权益证明共识机制：基础、应用与机遇。*IEEE Access*, 7: 85727–85745.
 
-9.  Kshetri, N. 2017. 区块链能否强化物联网？*IT Professional*, 19(4): 68–72. Doi: [10.1109/MITP.2017.3051335](http://doi.org/10.1109/MITP.2017.3051335).
+9. Kshetri, N. 2017. 区块链能否强化物联网？*IT Professional*, 19(4): 68–72. Doi: [10.1109/MITP.2017.3051335](http://doi.org/10.1109/MITP.2017.3051335).
 
-10.  Fernández-Caramés, T. M., & Fraga-Lamas, P. 2018. 区块链用于物联网的综述。*IEEE Access*, 6: 32979–33001. Doi: [10.1109/ACCESS.2018.2842685](http://doi.org/10.1109/ACCESS.2018.2842685).
+10. Fernández-Caramés, T. M., & Fraga-Lamas, P. 2018. 区块链用于物联网的综述。*IEEE Access*, 6: 32979–33001. Doi: [10.1109/ACCESS.2018.2842685](http://doi.org/10.1109/ACCESS.2018.2842685).
 
-11.  Dai, H. N., Zheng, Z., & Zhang, Y. 2019. 面向物联网的区块链：综述。*IEEE Internet of Things Journal*, 6(5): 8076–8094. Doi: [10.1109/JIOT.2019.2920987](http://doi.org/10.1109/JIOT.2019.2920987).
+11. Dai, H. N., Zheng, Z., & Zhang, Y. 2019. 面向物联网的区块链：综述。*IEEE Internet of Things Journal*, 6(5): 8076–8094. Doi: [10.1109/JIOT.2019.2920987](http://doi.org/10.1109/JIOT.2019.2920987).
 
-12.  Conoscenti, M., Vetro, A., & De Martin, J. C. 2016. 11 月. 面向物联网的区块链：系统性文献综述。载于 *2016 IEEE/ACS 13th International Conference of Computer Systems and Applications (AICCSA)*: 1–6. IEEE. Doi: [10.1109/AICCSA.2016.7945805](http://doi.org/10.1109/AICCSA.2016.7945805).
+12. Conoscenti, M., Vetro, A., & De Martin, J. C. 2016. 11 月. 面向物联网的区块链：系统性文献综述。载于 *2016 IEEE/ACS 13th International Conference of Computer Systems and Applications (AICCSA)*: 1–6. IEEE. Doi: [10.1109/AICCSA.2016.7945805](http://doi.org/10.1109/AICCSA.2016.7945805).
 
-13.  Wang, X., Zha, X., Ni, W., Liu, R. P., Guo, Y. J., Niu, X., & Zheng, K. 2019. 面向物联网的区块链综述。*Computer Communications*, 136: 10–29. Doi: [10.1016/j.comcom.2019.01.006](http://doi.org/10.1016/j.comcom.2019.01.006).
+13. Wang, X., Zha, X., Ni, W., Liu, R. P., Guo, Y. J., Niu, X., & Zheng, K. 2019. 面向物联网的区块链综述。*Computer Communications*, 136: 10–29. Doi: [10.1016/j.comcom.2019.01.006](http://doi.org/10.1016/j.comcom.2019.01.006).
 
-14.  Ferrag, M. A., Derdour, M., Mukherjee, M., Derhab, A., Maglaras, L., & Janicke, H. 2018. 面向物联网的区块链技术：研究问题与挑战。*IEEE Internet of Things Journal*, 6(2): 2188–2204. Doi: [10.1109/JIOT.2018.2882794](http://doi.org/10.1109/JIOT.2018.2882794).
+14. Ferrag, M. A., Derdour, M., Mukherjee, M., Derhab, A., Maglaras, L., & Janicke, H. 2018. 面向物联网的区块链技术：研究问题与挑战。*IEEE Internet of Things Journal*, 6(2): 2188–2204. Doi: [10.1109/JIOT.2018.2882794](http://doi.org/10.1109/JIOT.2018.2882794).
 
-15.  Miller, D. 2018. 工业领域的区块链与物联网。*IT Professional*, 20(3): 15–18. Doi: [10.1109/MITP.2018.032501742](http://doi.org/10.1109/MITP.2018.032501742).
+15. Miller, D. 2018. 工业领域的区块链与物联网。*IT Professional*, 20(3): 15–18. Doi: [10.1109/MITP.2018.032501742](http://doi.org/10.1109/MITP.2018.032501742).
 
-16.  Fortino, G., Messina, F., Rosaci, D., & Sarné, G. M. 2019. 在基于声誉的模型中使用区块链对物联网中的代理进行分组。*IEEE Transactions on Engineering Management*, 67(4): 1231–1243. Doi: [10.1109/TEM.2019.2918162](http://doi.org/10.1109/TEM.2019.2918162).
+16. Fortino, G., Messina, F., Rosaci, D., & Sarné, G. M. 2019. 在基于声誉的模型中使用区块链对物联网中的代理进行分组。*IEEE Transactions on Engineering Management*, 67(4): 1231–1243. Doi: [10.1109/TEM.2019.2918162](http://doi.org/10.1109/TEM.2019.2918162).
 
-17.  Kang, J., Xiong, Z., Niyato, D., Wang, P., Ye, D., & Kim, D. I. 2018. 在基于权益证明的联盟区块链网络中激励共识传播。*IEEE Wireless Communications Letters*, 8(1): 157–160. Doi: [10.1109/LWC.2018.2864758](http://doi.org/10.1109/LWC.2018.2864758).
+17. Kang, J., Xiong, Z., Niyato, D., Wang, P., Ye, D., & Kim, D. I. 2018. 在基于权益证明的联盟区块链网络中激励共识传播。*IEEE Wireless Communications Letters*, 8(1): 157–160. Doi: [10.1109/LWC.2018.2864758](http://doi.org/10.1109/LWC.2018.2864758).
 
-18.  Yang, F., Zhou, W., Wu, Q., Long, R., Xiong, N. N., & Zhou, M. 2019. 具有降级机制的委托权益证明：一种具有降级机制的安全高效区块链共识算法。*IEEE Access*, 7: 118541–118555. Doi: [10.1109/ACCESS.2019.2935149](http://doi.org/10.1109/ACCESS.2019.2935149).
+18. Yang, F., Zhou, W., Wu, Q., Long, R., Xiong, N. N., & Zhou, M. 2019. 具有降级机制的委托权益证明：一种具有降级机制的安全高效区块链共识算法。*IEEE Access*, 7: 118541–118555. Doi: [10.1109/ACCESS.2019.2935149](http://doi.org/10.1109/ACCESS.2019.2935149).
 
-
-
-
-
-# 19. Bhushan, B., Sinha, P., Sagayam, K. M., & Andrew, J. 2021. Untangling blockchain technology: a survey on state of the art, security threats, privacy services, applications and future research directions. *Computers & Electrical Engineering*, 90: 106897. Doi:[10.1016/j.compeleceng.2020.106897](http://doi.org/10.1016/j.compeleceng.2020.106897).
+19. Bhushan, B., Sinha, P., Sagayam, K. M., & Andrew, J. 2021. Untangling blockchain technology: a survey on state of the art, security threats, privacy services, applications and future research directions. *Computers & Electrical Engineering*, 90: 106897. Doi: [10.1016/j.compeleceng.2020.106897](http://doi.org/10.1016/j.compeleceng.2020.106897).
 
 20. Bhushan, B., Sahoo, C., Sinha, P., & Khamparia, A. 2021. Unification of Blockchain and Internet of Things (BIoT): requirements, working model, challenges and future directions. *Wireless Networks*, 27(1): 55–90.
 
 21. Uddin, M. A., Stranieri, A., Gondal, I., & Balasubramanian, V. 2021. A survey on the adoption of blockchain in IoT: challenges and solutions. *Blockchain: Research and Applications*, 2(2): 100006.
 
-22. Krishna, B., Rajkumar, P., & Velde, V. 2021. Integration of blockchain technology for security and privacy in Internet of Things. *Materials Today: Proceedings*. Doi:[10.1016/j.matpr.2021.01.606](http://doi.org/10.1016/j.matpr.2021.01.606).
+22. Krishna, B., Rajkumar, P., & Velde, V. 2021. Integration of blockchain technology for security and privacy in Internet of Things. *Materials Today: Proceedings*. Doi: [10.1016/j.matpr.2021.01.606](http://doi.org/10.1016/j.matpr.2021.01.606).
 
-23. Pavithran, D., Al-Karaki, J. N., & Shaalan, K. 2021. Edge-based blockchain architecture for event-driven IoT using hierarchical identity based encryption. *Information Processing & Management*, 58(3): 102528. Doi:[10.1016/j.ipm.2021.102528](http://doi.org/10.1016/j.ipm.2021.102528).
+23. Pavithran, D., Al-Karaki, J. N., & Shaalan, K. 2021. Edge-based blockchain architecture for event-driven IoT using hierarchical identity based encryption. *Information Processing & Management*, 58(3): 102528. Doi: [10.1016/j.ipm.2021.102528](http://doi.org/10.1016/j.ipm.2021.102528).
 
-24. Saxena, S., Bhushan, B., & Ahad, M. A. 2021. Blockchain based solutions to secure IoT: background, integration trends and a way forward. *Journal of Network and Computer Applications*, 103050. Doi:[10.1016/j.jnca.2021.103050](http://doi.org/10.1016/j.jnca.2021.103050).
+24. Saxena, S., Bhushan, B., & Ahad, M. A. 2021. Blockchain based solutions to secure IoT: background, integration trends and a way forward. *Journal of Network and Computer Applications*, 103050. Doi: [10.1016/j.jnca.2021.103050](http://doi.org/10.1016/j.jnca.2021.103050).
 
 # 3 面向智慧城市应用物联网安全的区块链技术
 
@@ -1376,6 +1318,10 @@ DOI: [10.1201/9781003224075-3](http://doi.org/10.1201/9781003224075-3)
 
 数据安全一直是现代科学的主要关注点，并持续推动创新，保持着开发新技术以保护各类信息免遭窃取和损坏的稳定曲线。与此同时，我们正在向一个运行着数不胜数的连接智能设备的世界过渡，这些设备也被称为“物联网”，简称 `IoT`，它们与远程服务器协同互操作，服务于不同领域的各种目的（Fox et al. 2019），即农业（Puranik et al. 2019）、供应链（Pal and Kant 2018）、医疗保健（Al-Mahmud et al. 2020）、交通管理（Akhtar et al. 2020）等等。这些智能设备由智能手机、传感器、执行器和计算机程序组成，构成了一个对现代社会运行至关重要的生态系统。事实上，仅在二十年间，人类社会就从有线连接的手机、零星或有限的联网机器和人工管理的服务，转变为无线社会和数量不可胜数的连接设备，产生海量信息。然而，尽管这听起来多么强大，这种宏大和无处不在却是危险的，因为对智能对象数据和通信基础设施的任何附带损害都可能导致许多关键服务的瘫痪。相应地，`blockchain`（区块链）是一种应用于加密货币的革命性技术，作为核心支付网络，由一个去中心化账本组成，该账本包含多个相连的交易节点，每个节点都作为真相的来源，并形成共识以决定交易是否合格（Nakamoto 2009）。虽然 `Blockchain` 常用于加密货币，但也用于其他领域和应用部门，如数字身份（Takemiya and Vanieiev 2018）、选举（Cooley et al. 2018）和合同验证（Upadhyay et al. 2020）。因此，完全有可能将其应用于 `IoT` 应用中，以解决其一些挑战。
 
+
+
+# 本章探讨 `Blockchain` 作为 `IoT` 应用安全组件的效用
+
 本章探讨 `Blockchain` 作为 `IoT` 应用安全组件的效用，以及它如何缓解由连接对象组成的网络世界在全球范围内共享个人和非个人数据所带来的日益增加的风险。我们将这项工作分为四个独立的部分，结构顺序如下。在第 3.2 节中，我们将 `Blockchain` 作为一项新技术进行探索，揭示其可靠性的奥秘；此外，我们讨论其起源、特征、关键组件以及提升其声誉的不同协议。在第 3.3 节中，我们介绍智慧城市、`IoT` 应用概念，以及它们如何已成为现代社会的一部分，真正实现了在我们日常生活中的无处不在。此外，我们介绍复杂事件的概念，并解释它们如何扩大选择范围以丰富数据收集。最后，在第 3.4 节中，我们讨论并提供了一种系统的方法，说明 `Blockchain` 如何集成到 `IoT` 应用中以增强其安全性。
 
 ## 3.2 区块链概述
@@ -1388,13 +1334,9 @@ DOI: [10.1201/9781003224075-3](http://doi.org/10.1201/9781003224075-3)
 
 `Blockchain` 的第一个版本指的是 `Blockchain 1.0`，它是一个启动器，用于开发 `Bitcoin`，允许任何计算机启动一个节点并成为复制账本的网络的一部分——也称为全节点、数字钱包、挖矿设备和挖矿软件。图 3.1 说明了 `Bitcoin` 交易是如何处理的以及 `Blockchain` 在其执行中的作用。验证被称为 `Proof-of-Work (PoW)`（工作量证明）共识过程，它验证节点网络内发生的交易。轻节点创建交易后，交易被分发并使用加密哈希进行加密。然后，节点参与解决一个难度随账本大小而升级的问题。这个操作称为挖矿，需要重要的物理资源和能源容量才能运行。一旦矿工解决了问题，交易就会被提交并广播给 `P2P` 网络中所有在场的节点，作为回报，矿工会获得奖励，作为参与交易去中心化验证的费用，并随之将信息区块添加到不可变链中（Schinckus 2020）。这个过程称为共识协议，它对于允许 `P2P` 网络协作并建立信任地共同工作非常重要。
 
-
-
-
-
 ![FIGURE 3.1 Bitcoin transaction illustration.](img/Fig03_01.jpg)
 
-**FIGURE 3.1** 比特币交易示意图。
+**图 3.1** 比特币交易示意图。
 
 区块链协议验证并保障区块引入账本。
 
@@ -1406,7 +1348,7 @@ DOI: [10.1201/9781003224075-3](http://doi.org/10.1201/9781003224075-3)
 
 ![FIGURE 3.2 Blockchain block structure.](img/Fig03_02.jpg)
 
-**FIGURE 3.2** 区块链区块结构。
+**图 3.2** 区块链区块结构。
 
 *   **Merkle Tree Root Hash（默克尔树根哈希）** – 它是一个用于验证区块内所有交易的哈希值，通过哈希代码的二叉树递归生成。
 *   **Timestamp（时间戳）** – Unix 时间戳，用于不可篡改地追踪区块的创建和更新时间，以验证其完整性。
@@ -1435,10 +1377,6 @@ DOI: [10.1201/9781003224075-3](http://doi.org/10.1201/9781003224075-3)
 很长一个十年来，由小型智能设备统治世界的预言在投机者脑海中游荡，随后激励许多科学家和企业家投入资源，利用创新技术彻底颠覆世界，这些技术已成为我们日常生活的一部分。在下一节中，我们将解释这是何种技术，并探讨其在现代社会中的规模。
 
 ### 3.3.1 总体概述
-
-
-
-
 
 #### 物联网与智慧城市
 
@@ -1470,9 +1408,6 @@ DOI: [10.1201/9781003224075-3](http://doi.org/10.1201/9781003224075-3)
 
 ### 3.4.1 物联网安全性通缩
 
-
-
-
 物联网的无处不在可被视为一种福祉，因为它用可替换的高性能小型机器取代了由人类管理的手工或系统化服务。后者与远程服务器通信，或直接在其单元内部通信，利用从外部世界收集的数据来完成任务：周围环境、无生命物体、自然或工业现象以及人类。物联网连接设备持续增长，每年的预测数量都超过数十亿台。尽管数字不够精确，但仅 100 亿台设备（甚至更少）就暴露在外部世界中，它们的数据实实在在地存在，并代表了特定时间点上外部世界一部分的快照。正如每一个数据库或系统一样，恶意实体可能会觊觎这些数据，意图窃取或破坏它们，从而造成现实世界的损害。
 
 例如，2016 年，许多知名大型网站因一种名为 `Mirai` 的恶意软件而瘫痪。该病毒持续扫描互联网以寻找物联网设备的 IP 地址。`Mirai` 包含一个它不会感染的 IP 地址范围表，包括私有网络以及分配给美国邮政服务和国防部的地址。`Mirai` 能够抓取的大部分地址属于物联网设备，这些设备仍沿用出厂设置和凭证，而这正是其算法的一部分。随后，它控制设备，通过占用大部分带宽来隐藏自身，删除任何其他恶意软件，并封锁所有管理端口以保护自身；最终，重启后，`Mirai` 会在瞬间再次感染该设备。结果，该病毒接管了可能占数十亿设备很大一部分的设备——这些设备本应巩固物联网的声誉——组建了一支受感染设备大军，将 GitHub、Twitter、Reddit、Netflix、Airbnb 及许多其他服务作为其 DDoS（分布式拒绝服务）攻击目标，导致这些服务瘫痪了一整天（Zhang et al. 2020）。
@@ -1495,15 +1430,15 @@ DOI: [10.1201/9781003224075-3](http://doi.org/10.1201/9781003224075-3)
 
 #### 3.4.3.1 区块链作为安全数据存储
 
+
+
 在 Tran 等人（2021）中，区块链在物联网系统中的逻辑位置作为系统的功能性可替换模块随区块链而来。尽管使用区块链的主流技术（如加密货币等）大多是公开的，但它也可以作为私有解决方案纳入（Bhushan et al. 2021）。尽管该模块在访问控制管理、业务流程编排、数据存储、认证管理、信任管理系统或通信通道等应用示例之间有所变化。物联网应用是极短时间内产生大量数据的系统，将数据封装在交易中以安全存储会起阻碍作用，并随着存储的区块链交易数量增长而拖慢系统性能，考虑到区块链节点验证传入交易所需的时间和延迟，这会随难度增加和网络负载而扩展（Cao et al. 2020）。更重要的是，在许多用例场景中，输出数据作为单个测量或观察并不重要（无论其性质如何），但数据作为按时间戳间隔或特定属性分段的大块数据组进行处理时则很重要。然而，说设备收集的数据完整性和数据不重要是不对的；事实上，正如单个数据单元不如其总和有价值这一说法，如果大多数单元被破坏，则操作和分析将不得不应用于损坏的数据，结果将只是误导性的噪音。因此，依赖区块链存储数据的物联网架构不得牺牲速度和响应性。图 3.7 展示了一种架构，其中数据中心和云阶段提供区块链数据库。如前所述，在需要高交互性的系统中存储并尝试读取数据是非最优的。因此，为了补偿这一点，云层将提供一个注册表，可运行批量操作以与分布在雾层许多组件上的片段同步，这些片段作为快速复制数据库。
 
 ![图 3.7 使用区块链作为数据库的物联网应用架构。](img/Fig03_07.jpg)
 
 **图 3.7** 使用区块链作为数据库的物联网应用架构。
 
-#### 3.4.3.2 区块链作为认证管理器
-
-
+### 3.4.3.2 区块链作为认证管理器
 
 在 Basmi 等人 (2020) 的研究中，我们提出了一个复杂时空事件框架架构，重点介绍了四个层：
 
@@ -1543,8 +1478,6 @@ DOI: [10.1201/9781003224075-3](http://doi.org/10.1201/9781003224075-3)
 8.  **Bruns**，R.、J. Dunkel 和 N. Offel (2019)。使用遗传编程学习复杂事件处理规则。专家系统及应用 129，186–199。Doi：[10.1016/j.eswa.2019.04.007](http://doi.org/10.1016/j.eswa.2019.04.007)。
 
 9.  **Cao**，B.、Z. Zhang、D. Feng、S. Zhang、L. Zhang、M. Peng 和 Y. Li (2020)。基于 PoW、PoS 和 DAG 的区块链性能分析与比较。数字通信与网络 6(4)，480–485。Doi：[10.1016/j.dcan.2019.12.001](http://doi.org/10.1016/j.dcan.2019.12.001)。
-
-
 
 10. Cooley, R., S. Wolf, and M. Borowczak (2018). 基于区块链的选举基础设施。载于 2018 IEEE 国际智慧城市会议 (ISC2)，第 1–4 页。Doi: [10.1109/ISC2.2018.8656988](http://doi.org/10.1109/ISC2.2018.8656988)。
 
@@ -1616,16 +1549,19 @@ DOI: [10.1201/9781003224075-4](http://doi.org/10.1201/9781003224075-4)
 
 ## 4.1 简介
 
-几天前，一个标题在市场上引起了轰动：“ICICI 银行成为首家利用区块链进行结算的印度银行。他们目前处于测试阶段。” 现在问题来了，什么是区块链？区块链简单来说就是一个分布式数据库和 P2P 账本 [[1]](#C_009_c4.xhtml#r4_1)。账本基本上是交易的注册表。数据库在去中心化网络的成员之间共享、复制和同步。每个参与者对账本中的记录更新进行治理并达成共识 [[2]](#C_009_c4.xhtml#r4_2)。每条记录都包含一个时间戳和唯一的加密签名，这使得账本不可篡改且可审计。在这种布局下，黑客攻击是不可行的。它可以在参与者之间转移任何有价值的物品。它是比特币背后的底层技术 [[3]](#C_009_c4.xhtml#r4_3)。之所以称为分布式，是因为每个人都是权威，这使其不易崩溃。由于不需要中介，总体成本降低了。区块链的概念源于 2008 年金融危机 [[4]](#C_009_c4.xhtml#r4_4)。它被称为自 1929 年以来最大的衰退。2008 年金融危机的原因如下：低效且腐败的金融体系，经济市场以多米诺骨牌效应崩溃，多家投资银行破产导致多次救助。
 
 
+几天前，一个标题在市场上引起了轰动：“ICICI 银行成为首家利用区块链进行结算的印度银行。他们目前处于测试阶段。” 现在问题来了，什么是区块链？区块链简单来说就是一个分布式数据库和 `P2P` 账本 [[1]](#C_009_c4.xhtml#r4_1)。账本基本上是交易的注册表。数据库在去中心化网络的成员之间共享、复制和同步。每个参与者对账本中的记录更新进行治理并达成共识 [[2]](#C_009_c4.xhtml#r4_2)。每条记录都包含一个时间戳和唯一的加密签名，这使得账本不可篡改且可审计。在这种布局下，黑客攻击是不可行的。它可以在参与者之间转移任何有价值的物品。它是比特币背后的底层技术 [[3]](#C_009_c4.xhtml#r4_3)。之所以称为分布式，是因为每个人都是权威，这使其不易崩溃。由于不需要中介，总体成本降低了。区块链的概念源于 2008 年金融危机 [[4]](#C_009_c4.xhtml#r4_4)。它被称为自 1929 年以来最大的衰退。2008 年金融危机的原因如下：低效且腐败的金融体系，经济市场以多米诺骨牌效应崩溃，多家投资银行破产导致多次救助。
 
+## 经济危机的后续影响
 
-### 经济危机的后续影响
+经济危机的后续影响包括人们对现有金融体系失去信心，导致大规模从银行提款。这促成了比特币的演变 [5]。它由一名叫中本聪的人于 2008 年发明，旨在作为比特币的社区交易或业务注册系统。比特币通常称为 `BTC` [6]，其本质完全是数字化的，运作方式类似于任何独立货币。它是一种开源的 `P2P` 货币，数据同时存储在多个节点上 [7]。由于交易是匿名的，它提供了高度的隐私保护。它具有不可篡改、成本更低、安全和通货紧缩的特性。它也是法币性质的，因为它不由有形物质作担保 [8]。本文介绍了一些机器学习和深度学习算法 [9] 的概念，用于处理比特币数据集，从而提出比特币价格和趋势的时间预测。对于时间序列预测，可以使用两类算法：(1) 白箱算法，如 `Auto Regressive Integrated Moving Average (ARIMA)` [10]、`ARMA` 和 `AR`；(2) 黑箱算法，如 `long short-term memory (LSTM)` [11]、`Recurrent Neural Network (RNN)`、`CNN` 和 `NNETAR`，以及一些监督学习概念，如 `support vector machine` [12]。时间序列可以用不同的模型进行预测。其中一些模型如下：`Naïve`、`Seasonal decomposition (+ any model)`、`ARIMA`、`GARCH`、`Prophet`、`NNETAR` 和 `LSTM`。
 
-经济危机的后续影响包括人们对现有金融体系失去信心，导致大规模从银行提款。这促成了比特币的演变 [5]。它由一名叫中本聪的人于 2008 年发明，旨在作为比特币的社区交易或业务注册系统。比特币通常称为 `BTC` [6]，其本质完全是数字化的，运作方式类似于任何独立货币。它是一种开源的 P2P 货币，数据同时存储在多个节点上 [7]。由于交易是匿名的，它提供了高度的隐私保护。它具有不可篡改、成本更低、安全和通货紧缩的特性。它也是法币性质的，因为它不由有形物质作担保 [8]。本文介绍了一些机器学习和深度学习算法 [9] 的概念，用于处理比特币数据集，从而提出比特币价格和趋势的时间预测。对于时间序列预测，可以使用两类算法：(1) 白箱算法，如 `Auto Regressive Integrated Moving Average (ARIMA)` [10]、`ARMA` 和 `AR`；(2) 黑箱算法，如 `long short-term memory (LSTM)` [11]、`Recurrent Neural Network (RNN)`、`CNN` 和 `NNETAR`，以及一些监督学习概念，如 `support vector machine` [12]。时间序列可以用不同的模型进行预测。其中一些模型如下：`Naïve`、`Seasonal decomposition (+ any model)`、`ARIMA`、`GARCH`、`Prophet`、`NNETAR` 和 `LSTM`。
+使用 `K-means clustering` [13] 预测数据集中的异常数量，旨在检测比特币交易过程中的异常。由于区块链是一个数字化过程，它极易受到虚假交易和异常的影响 [14]。为克服这种情况，首先应预测交易中异常发生的几率和领域。`Blockchain anomaly detection` [15] 有助于构建标准行为模型，然后对新数据集（测试数据）进行预测，以判断其与该基准模型的偏离程度。区块链技术的核心概念蕴含于两个主要组件中：`Hash Tree` 和 `Timestamp`。
 
-使用 `K-means clustering` [13] 预测数据集中的异常数量，旨在检测比特币交易过程中的异常。由于区块链是一个数字化过程，它极易受到虚假交易和异常的影响 [14]。为克服这种情况，首先应预测交易中异常发生的几率和领域。`Blockchain anomaly detection` [15] 有助于构建标准行为模型，然后对新数据集（测试数据）进行预测，以判断其与该基准模型的偏离程度。区块链技术的核心概念蕴含于两个主要组件中：`Hash Tree` 和 `Timestamp`。`Merkle Tree (Hash Tree)`：由 R. Merkle 于 1979 年提出。叶子节点的顶点由数据的哈希标记，非叶子节点的顶点由标签及其子节点的解码哈希标记。如果我们更改数据或哈希，将导致与根哈希不匹配。因此，它非常难以被篡改 [16]。
+### Merkle Tree (Hash Tree)
+
+`Merkle Tree (Hash Tree)`：由 R. Merkle 于 1979 年提出。叶子节点的顶点由数据的哈希标记，非叶子节点的顶点由标签及其子节点的解码哈希标记。如果我们更改数据或哈希，将导致与根哈希不匹配。因此，它非常难以被篡改 [16]。
 
 本文介绍了一种综合方法，利用各种机器学习算法预测比特币过程中时间序列的性质，并自动识别区块链系统中的异常。在当前数据集中，比特币的加权价格和交易量处发生异常的几率较高；因此，在对时间戳进行日期时间转换后，我们分别绘制了比特币加权价格和交易量随时间戳变化的图表。此外，本文还讨论了实施过程中的各种挑战性结果及可能的解决方案。本工作的主要贡献总结如下。
 
@@ -1661,23 +1597,15 @@ DOI: [10.1201/9781003224075-4](http://doi.org/10.1201/9781003224075-4)
 
 ### 4.2.1 ARIMA
 
-
-
-
-
-## 4.2 时间序列预测模型
-
-### 4.2.1 ARIMA
-
-ARIMA 代表一类原型，能够捕捉时间序列统计中一套不同的常规时间配置 [21]。模型的本质或内在性质由其自身捕获。`AR` 代表自回归，一种利用实际观测值与少数滞后观测值之间依赖关系的模型。`I` 代表整合，即利用实际原始观测值的差分（如用后一观测值减去前一观测值）使时间序列平稳。`MA` 代表移动平均，一种利用观测值与移动平均模型的残余误差之间的关联，并进一步应用滞后观测值的模型。在 Python 中，基于 ARIMA 的预测原型可以利用 `Auto ARIMA` (Pyramid ARIMA) 或 `Stats Model` 进行设计 [22]。模型进一步拟合到时间序列数据集中，以预测序列中的后续点。
+`ARIMA` 代表一类原型，能够捕捉时间序列统计中一套不同的常规时间配置 [21]。模型的本质或内在性质由其自身捕获。`AR` 代表自回归，一种利用实际观测值与少数滞后观测值之间依赖关系的模型。`I` 代表整合，即利用实际原始观测值的差分（如用后一观测值减去前一观测值）使时间序列平稳。`MA` 代表移动平均，一种利用观测值与移动平均模型的残余误差之间的关联，并进一步应用滞后观测值的模型。在 Python 中，基于 `ARIMA` 的预测原型可以利用 `Auto ARIMA` (Pyramid ARIMA) 或 `Stats Model` 进行设计 [22]。模型进一步拟合到时间序列数据集中，以预测序列中的后续点。
 
 ### 4.2.2 RNN
 
-RNN 是人工神经网络 (ANN) 的一种分类，其中顶点之间的依赖关系形成一条具有时间序列的有向轨迹，从而使其能够表现出时间动态性能 [23]。“循环神经网络”这一术语被随意用来指代两大类具有相同通用结构的网络，其中一类是有限脉冲，另一类是无限脉冲。这两类网络均表现出时间动态行为。有限脉冲循环网络也可以是一条有向无环轨迹，可以通过实际的前馈人工神经元网络展开并复原；而无限脉冲循环网络可能是一条有向环状轨迹，无法展开 [24]。本章中实现了 LSTM，它是 RNN 的一种分类。
+`RNN` 是人工神经网络 (`ANN`) 的一种分类，其中顶点之间的依赖关系形成一条具有时间序列的有向轨迹，从而使其能够表现出时间动态性能 [23]。“循环神经网络”这一术语被随意用来指代两大类具有相同通用结构的网络，其中一类是有限脉冲，另一类是无限脉冲。这两类网络均表现出时间动态行为。有限脉冲循环网络也可以是一条有向无环轨迹，可以通过实际的前馈人工神经元网络展开并复原；而无限脉冲循环网络可能是一条有向环状轨迹，无法展开 [24]。本章中实现了 `LSTM`，它是 `RNN` 的一种分类。
 
 ### 4.2.3 Prophet
 
-预测被用作战略制定者或企业的顾问，因此在塑造商业决策方面发挥着重要作用 [25]。Prophet 是一款用于商业预测的公共领域软件，由 Facebook 数据科学团队发布。它基于一种加法模型，其中非线性趋势被训练以拟合季节性。图 4.2 展示了 Prophet 模型。Prophet 的通用方程如下：
+预测被用作战略制定者或企业的顾问，因此在塑造商业决策方面发挥着重要作用 [25]。`Prophet` 是一款用于商业预测的公共领域软件，由 Facebook 数据科学团队发布。它基于一种加法模型，其中非线性趋势被训练以拟合季节性。图 4.2 展示了 `Prophet` 模型。`Prophet` 的通用方程如下：
 
 ![FIGURE 4.2 Prophet model.](img/Fig04_02.jpg)
 
@@ -1687,7 +1615,7 @@ RNN 是人工神经网络 (ANN) 的一种分类，其中顶点之间的依赖关
 z(t)=j(t)+r(t)+h(t) + €n(4.1)
 ```
 
-`j(t)` 定义数据中长期增长或下降的模型趋势。根据预测问题的类型，Prophet 结合了两种趋势表示：饱和增长模型和分段线性模型。`r(t)` 描述数据集如何受季节性因素（如年份周期）影响，基本上它用傅里叶级数建模季节性。`h(t)` 对假期或大型事件的影响进行建模，这些事件可能对商业时间序列产生不利或有利影响，`€n` 代表不可约误差项。表 4.2 展示了各类时间序列预测之间的比较。
+`j(t)` 定义数据中长期增长或下降的模型趋势。根据预测问题的类型，`Prophet` 结合了两种趋势表示：饱和增长模型和分段线性模型。`r(t)` 描述数据集如何受季节性因素（如年份周期）影响，基本上它用傅里叶级数建模季节性。`h(t)` 对假期或大型事件的影响进行建模，这些事件可能对商业时间序列产生不利或有利影响，`€n` 代表不可约误差项。表 4.2 展示了各类时间序列预测之间的比较。
 
 **表 4.2** 各类时间序列预测的差异 [26,27]
 
@@ -1696,8 +1624,8 @@ z(t)=j(t)+r(t)+h(t) + €n(4.1)
 | 定义 | 基于回归分析工作。 | 基于加法模型的商业预测公共领域软件。 | 代表循环神经网络，是人工神经网络的一种分类。 |
 | 基础 | 基于线性时间序列分析。 | 基于贝叶斯曲线拟合。 | 以前的观测值用作当前步骤的输入，描绘过去和当前观测值之间的关系。 |
 | 用户 | 由受过训练的专业人员使用。 | 通常由非专业人士（非统计学家）使用。 | 因为是深度学习概念，所以由训练有素的专家使用。 |
-| 优势 | 不需要调整超参数。 | 能高效识别复杂的季节性模式。 | 与 ARIMA 相比，能捕捉时间序列中更多的滞后阶数，本质也非常灵活。 |
-| 后果/局限 | 需持续输入数据以进行进一步预测，且应使用平稳数据。 | 具有强随机成分的时间序列模型无法使用 Prophet 进行适当预测。 | 梯度消失和梯度爆炸问题。此外，训练时间较长。 |
+| 优势 | 不需要调整超参数。 | 能高效识别复杂的季节性模式。 | 与 `ARIMA` 相比，能捕捉时间序列中更多的滞后阶数，本质也非常灵活。 |
+| 后果/局限 | 需持续输入数据以进行进一步预测，且应使用平稳数据。 | 具有强随机成分的时间序列模型无法使用 `Prophet` 进行适当预测。 | 梯度消失和梯度爆炸问题。此外，训练时间较长。 |
 
 ### 4.2.4 聚类
 
@@ -1705,7 +1633,7 @@ z(t)=j(t)+r(t)+h(t) + €n(4.1)
 
 ### 4.2.5 XGBoost
 
-XGBoost 使用零值或前值填补缺失值。eXtreme Gradient Boosting 包的一些特性如下：速度与性能，因为它比其他集成分类器快得多。核心算法可并行化，因为它可以利用多核的力量。它始终表现出优于其他算法方法的性能。有多种调优参数，包括正则化、交叉验证、树参数、缺失值处理和 scikit-learn。XGBoost 属于提升算法家族，其核心使用梯度提升 (GBM) 框架。图 4.3 展示了 XGBoost 模型，表 4.3 展示了 XGBoost 模型与聚类的比较。
+`XGBoost` 使用零值或前值填补缺失值。eXtreme Gradient Boosting 包的一些特性如下：速度与性能，因为它比其他集成分类器快得多。核心算法可并行化，因为它可以利用多核的力量。它始终表现出优于其他算法方法的性能。有多种调优参数，包括正则化、交叉验证、树参数、缺失值处理和 scikit-learn。`XGBoost` 属于提升算法家族，其核心使用梯度提升 (`GBM`) 框架。图 4.3 展示了 `XGBoost` 模型，表 4.3 展示了 `XGBoost` 模型与聚类的比较。
 
 ![FIGURE 4.3 XGBoost model.](img/Fig04_03.jpg)
 
@@ -1721,10 +1649,6 @@ XGBoost 使用零值或前值填补缺失值。eXtreme Gradient Boosting 包的�
 | 用于预测。 | 该方法用于异常检测。 |
 
 ## 4.3 文献综述
-
-
-
-
 
 ### 研究现状与应用综述
 
@@ -1772,25 +1696,23 @@ XGBoost 使用零值或前值填补缺失值。eXtreme Gradient Boosting 包的�
 1. 第一级定义了一种 `ePoW` 方法以确认信息完整性。
 2. 第二级包含一种变分自编码器（`variational auto encoder`）技术，以隐藏数据并将其重组为新配置。
 
+
+
 与当代方法相比，利用两步安全机制可获得更优越的成果，且在避免数据篡改和推理攻击利用智能电网本地数据存储方面也非常有效。其中一种异常观测方法是 `LSTM`，它在执行两步安全技术前后均应用于数据 [[36]](#C_009_c4.xhtml#r4_36)。获得的结果表明，该拟议技术在精确率和预警率方面优于其他拟议技术。该研究的未来扩展包括在来自智能电网的各种实时数据上实施该架构，以评估其可扩展性、可行性和盈利能力。
 
-电网现代化极受关注，特别是对美国和澳大利亚等技术领先的发达国家而言，因为智能电力系统有能力最大化能源消耗并提供最佳解决方案。如 图 4.4 所示的网络物理系统展示了单个每次点击成本（`cost-per-clicks`）单元如何合并以确定智能电网，后者结合物理和信息传输自动化及相应组件，以扩展电网的能力和生产力 [[37]](#C_009_c4.xhtml#r4_37)。
+电网现代化极受关注，特别是对美国和澳大利亚等技术领先的发达国家而言，因为智能电力系统有能力最大化能源消耗并提供最佳解决方案。如图 4.4 所示的网络物理系统展示了单个每次点击成本（`cost-per-clicks`）单元如何合并以确定智能电网，后者结合物理和信息传输自动化及相应组件，以扩展电网的能力和生产力 [[37]](#C_009_c4.xhtml#r4_37)。
 
 ![图 4.4 网络物理系统框图](img/Fig04_04.jpg)
 
 **图 4.4** 网络物理系统框图
 
-
-
-
-
 ### 文献综述
 
-Atzei 等人 [[38]](#C_009_c4.xhtml#r4_38) 提出了通用智能合约程序陷阱的分类，注意到了针对智能合约的各种批评，并提供了常见智能合约编程陷阱的分类法。Anh 等人 [[39]](#C_009_c4.xhtml#r4_39) 结合数据处理视角，强调了私有区块链的概念。Tschorsch 等人 [[40]](#C_009_c4.xhtml#r4_40) 没有强调区块链技术本身，而是提出了关于分布式数字货币的实用综述。Holub 等人 [[41]](#C_009_c4.xhtml#r4_41) 梳理了 1,200 多篇关于比特币的论文，并将其分为六类。Mingli Wu 等人 [[42]](#C_009_c4.xhtml#r4_42) 将区块链技术分为四层，并就区块链的各种应用（特别是在物联网、网络和交易共识机制领域）进行了广泛研究。从版本 1.0 到最近的版本 3.0，区块链在持续演进。版本 1.0 代表比特币时代，版本 2.0 定义了智能合约，版本 3.0 目前处于观察状态，涉及去中心化应用（DApps）。在金融系统未来的背景下，Vigna 等人 [[43]](#C_009_c4.xhtml#r4_43) 分析了区块链应用对全球商业领域的影响。Peters 等人 [[44]](#C_009_c4.xhtml#r4_44) 探讨了区块链的安全攻击面，包括自私挖矿、区块分叉和共享拒绝服务攻击。Swan 等人 [[45]](#C_009_c4.xhtml#r4_45) 提出即将到来的区块链 3.0 时代将在隐私管理、投票结构和物联网方面创造许多新前景。Kosba 等人 [[46]](#C_009_c4.xhtml#r4_46) 分析了涉及罪魁祸首智能合约的智能合约系统的不同前景。McNally 等人 [[47]](#C_009_c4.xhtml#r4_47) 利用比特币价格指数，结合机器学习和深度学习概念预测比特币价格，使用 LSTM 网络实现了 52% 的准确率。Jang 等人 [[48]](#C_009_c4.xhtml#r4_48) 使用贝叶斯神经网络及其他线性和非线性原型来解释比特币的波动性，从而提高了预测性能。
+Atzei 等人 [[38]](#C_009_c4.xhtml#r4_38) 提出了通用智能合约程序陷阱的分类，注意到了针对智能合约的各种批评，并提供了常见智能合约编程陷阱的分类法。Anh 等人 [[39]](#C_009_c4.xhtml#r4_39) 结合数据处理视角，强调了私有区块链的概念。Tschorsch 等人 [[40]](#C_009_c4.xhtml#r4_40) 没有强调区块链技术本身，而是提出了关于分布式数字货币的实用综述。Holub 等人 [[41]](#C_009_c4.xhtml#r4_41) 梳理了 1,200 多篇关于比特币的论文，并将其分为六类。Mingli Wu 等人 [[42]](#C_009_c4.xhtml#r4_42) 将区块链技术分为四层，并就区块链的各种应用（特别是在物联网、网络和交易共识机制领域）进行了广泛研究。从版本 1.0 到最近的版本 3.0，区块链在持续演进。版本 1.0 代表比特币时代，版本 2.0 定义了智能合约，版本 3.0 目前处于观察状态，涉及去中心化应用（DApps）。在金融系统未来的背景下，Vigna 等人 [[43]](#C_009_c4.xhtml#r4_43) 分析了区块链应用对全球商业领域的影响。Peters 等人 [[44]](#C_009_c4.xhtml#r4_44) 探讨了区块链的安全攻击面，包括自私挖矿、区块分叉和共享拒绝服务攻击。Swan 等人 [[45]](#C_009_c4.xhtml#r4_45) 提出即将到来的区块链 3.0 时代将在隐私管理、投票结构和物联网方面创造许多新前景。Kosba 等人 [[46]](#C_009_c4.xhtml#r4_46) 分析了涉及罪魁祸首智能合约的智能合约系统的不同前景。McNally 等人 [[47]](#C_009_c4.xhtml#r4_47) 利用比特币价格指数，结合机器学习和深度学习概念预测比特币价格，使用 `LSTM` 网络实现了 52% 的准确率。Jang 等人 [[48]](#C_009_c4.xhtml#r4_48) 使用贝叶斯神经网络及其他线性和非线性原型来解释比特币的波动性，从而提高了预测性能。
 
 ## 4.4 设计与实现
 
-在时间序列分析方法中，首先对数据进行预处理并转换为合适的形式。基于各种方法找出最佳模型，并将其应用于测试数据集。通过从 Google APIs 导入实时数据集，该架构可很好地用于实时场景。时间序列分析的架构如 图 4.5 所示。
+在时间序列分析方法中，首先对数据进行预处理并转换为合适的形式。基于各种方法找出最佳模型，并将其应用于测试数据集。通过从 Google APIs 导入实时数据集，该架构可很好地用于实时场景。时间序列分析的架构如图 4.5 所示。
 
 ![FIGURE 4.5 Architecture showing the flow of time analysis.](img/Fig04_05.jpg)
 
@@ -1806,7 +1728,7 @@ Atzei 等人 [[38]](#C_009_c4.xhtml#r4_38) 提出了通用智能合约程序陷�
 
 ### 4.4.1 ARIMA 模型
 
-在时间序列预测分析中，实现 表 4.4 所示 ARIMA 模型步骤后获得以下结果。图 4.7–4.9 代表使用 ARIMA 模型预测获得的结果。
+在时间序列预测分析中，实现表 4.4 所示 ARIMA 模型步骤后获得以下结果。图 4.7–4.9 代表使用 ARIMA 模型预测获得的结果。
 
 **表 4.4** ARIMA 模型步骤
 
@@ -1828,7 +1750,7 @@ Atzei 等人 [[38]](#C_009_c4.xhtml#r4_38) 提出了通用智能合约程序陷�
 
 **图 4.7** 比特币价格分解分析。
 
-图 4.7 展示了按原始性、趋势、季节性和残差划分的比特币价格分解分析。一般来说，趋势是随时间变化的结构化线性元素，如 图 4.7 所示，它从不重复。季节性与趋势的唯一区别在于季节性随时间变化并在指定间隔后重复自身。残差描述了应用的模型是否完美捕捉了数据集中的信息。非零残差表明预测存在偏差。
+图 4.7 展示了按原始性、趋势、季节性和残差划分的比特币价格分解分析。一般来说，趋势是随时间变化的结构化线性元素，如图 4.7 所示，它从不重复。季节性与趋势的唯一区别在于季节性随时间变化并在指定间隔后重复自身。残差描述了应用的模型是否完美捕捉了数据集中的信息。非零残差表明预测存在偏差。
 
 图 4.8 展示了自相关和偏相关。自相关显示原始时间序列与其在连续间隔上的滞后版本之间的相似程度。它描绘了变量当前值与过去值之间的联系，而偏相关描绘了两个随机实例之间的联系。
 
@@ -1836,7 +1758,7 @@ Atzei 等人 [[38]](#C_009_c4.xhtml#r4_38) 提出了通用智能合约程序陷�
 
 **图 4.8** 自相关和偏相关分析。
 
-图 4.9 代表 LSTM，它是 RNN 的一种分类。它主要包含四个门：输入门、输出门、遗忘门和神经元细胞状态。细胞在随机时间间隔内回忆值，其他门控制信息进出细胞的流动。
+图 4.9 代表 `LSTM`，它是 `RNN` 的一种分类。它主要包含四个门：输入门、输出门、遗忘门和神经元细胞状态。细胞在随机时间间隔内回忆值，其他门控制信息进出细胞的流动。
 
 ![FIGURE 4.9 LSTM (long short-term memory).](img/Fig04_09.jpg)
 
@@ -1862,10 +1784,6 @@ Atzei 等人 [[38]](#C_009_c4.xhtml#r4_38) 提出了通用智能合约程序陷�
 
 ### 4.4.2 XGBoost 模型
 
-
-
-
-
 #### XGBoost 模型
 
 用于预测的另一个模型是 XGBoost，它使用梯度提升框架，并用前值或零填充缺失值。它基于集成技术工作。表 4.5 显示了 XGBoost 模型的步骤。
@@ -1877,11 +1795,15 @@ Atzei 等人 [[38]](#C_009_c4.xhtml#r4_38) 提出了通用智能合约程序陷�
 3.  生成一组假设值作为 `Z[a]`。
 4.  谬误 = `P(Y[a], Z[a])`
 5.  均方误差可计算为
-    `J() = Σ(Y[a] − Z[a])²`
+    ```
+    J() = Σ(Y[a] − Z[a])²
+    ```
 6.  识别观测值中的负梯度
 7.  重复：
 8.  持续尝试移动 `Z[a]` 以减少假设中的谬误。
-    `Z[a] = Z[a] + γH[a]`
+    ```
+    Z[a] = Z[a] + γH[a]
+    ```
 9.  `H[a]` 近似于 `▼P(Y[a], Z[a])`
 10. 结束
 
@@ -1960,10 +1882,6 @@ Atzei 等人 [[38]](#C_009_c4.xhtml#r4_38) 提出了通用智能合约程序陷�
 
 ## 4.6 结论与未来展望
 
-
-
-
-
 ### 时间序列预测与区块链应用
 
 时间序列预测确实彻底改变了商业领域，因为它能提前预测未来结果，从而据此制定策略。对于处理区块链数据库而言，机器学习算法是最合乎逻辑且最优越的方法。近期研究表明，比特币的趋势容易受到不准确衡量的影响，因为比特币价格极其波动且随机，且常受外部因素（或新闻）影响，如加密货币监管、投资或社交媒体上的简单谣言。需要来自新闻或社交媒体网站的额外数据，才能使这些模型表现得更好、更准确。尽管预测常被视为监督回归类的一个细分领域，但由于数据集的时间相关性质，仍需要一些特定工具；因此，我们使用 `ARIMA`、`XGBoost` 和 `LSTM` 来预测数字加密货币比特币。比特币的时间序列预测显示，`ARIMA` 模型最接近实际值。区块链异常检测已成功实现，每 20,000 笔交易的异常发生率为 4.9%。本文综述了该领域各类最新研究工作，展示了机器学习在区块链技术中的广泛应用。
@@ -1982,76 +1900,79 @@ Atzei 等人 [[38]](#C_009_c4.xhtml#r4_38) 提出了通用智能合约程序陷�
 
 5.  C. H. Liu, Q. Lin and S. Wen. (2018). Blockchain-enabled data collection and sharing for industrial IoT with deep reinforcement learning. IEEE Transactions on Industrial Informatics, 15, 3516–3526.
 
-6.  B. Coma-Puig, J. Carmona, R. Gavald, S. Alcoverro and V. Martin. (2016). Fraud detection in energy consumption: a supervised approach. In 2016 IEEE International Conference on Data Science and Advanced Analytics (DSAA), Montreal, QC, 120–129.
-
-7.  E. Androulaki, A. Barger, V. Bortnikov, C. Cachin, K. Christidis, A. De Caro, D. Enyeart, C. Ferris, G. Laventman, Y. Manevich, S. Muralidharan, C. Murthy, B. Nguyen, M. Sethi, G. Singh, K. Smith, A. Sorniotti, C. Stathakopoulou, M. Vukoli, S. W. Cocco and J. Yellick. (2018). Hyperledger fabric: a distributed operating system for permissioned blockchains. In Proceedings of the Thirteenth EuroSys Conference (EuroSys ’18). ACM, New York, Article 30, 15 p.
-
-8.  D. K. Soni, H. Sharma, B. Bhushan, N. Sharma and I. Kaushik. (2020). Security Issues & Seclusion in Bitcoin System. In 2020 IEEE 9th International Conference on Communication Systems and Network Technologies (CSNT), IEEE, 223–229. Doi: [10.1109/csnt48778.2020.9115744](http://doi.org/10.1109/csnt48778.2020.9115744).
-
-9.  R. Deng, G. Xiao, R. Lu, H. Liang, and A. V. Vasilakos. (2016). False data injection on state estimation in power systems—attacks, impacts, and defense: a survey. IEEE Transactions on Industrial Informatics, 13(2), 411–423.
-
-10.  B. Li, R. Lu, W. Wang, and K. R. Choo. (2017). Distributed host-based collaborative detection for false data injection attacks in smart grid cyber-physical system. Journal of Parallel and Distributed Computing, 103, 32–41.
-
-11.  M. Keshk, N. Moustafa, E. Sitnikova, and G. Creech. (2017). Privacy preservation intrusion detection technique for SCADA systems. In 2017 Military Communications and Information Systems Conference (MilCIS), IEEE, Canberra, ACT, 1–6.
-
-12.  K. Gai, Y. Wu, L. Zhu, M. Qiu, and M. Shen. (2019). Privacy-preserving energy trading using consortium blockchain in smart grid. IEEE Transactions on Industrial Informatics, 15, 3548–3558.
-
-13.  P. Kaur. (2016). Outlier detection using K means and fuzzy min max neural network in network data. In 2016 8th International Conference on Computational Intelligence and Communication Networks (CICN), Tehri, 693–696.
-
-14.  M. S. Rahman, I. Khalil, A. Alabdulatif, and X. Yi. (2019). Privacy preserving service selection using fully homomorphic encryption scheme on untrusted cloud service platform. Knowledge-Based Systems, 180, 104–115.
-
-15.  M. Shen, X. Tang, L. Zhu, X. Du, and M. Guizani. (2019). Privacy preserving support vector machine training over blockchain-based encrypted IoT data in smart cities. IEEE Internet of Things Journal, 6, 7702–7712.
-
-16.  J. Huang, L. Kong, G. Chen, M.-Y. Wu, X. Liu, and P. Zeng. (2019). Towards secure industrial IoT: blockchain system with credit-based consensus mechanism. IEEE Transactions on Industrial Informatics, 15, 3680–3689.
-
-17.  P. Gope and B. Sikdar. (2019). An efficient privacy-preserving authentication scheme for energy internet-based vehicle-to-grid communication. IEEE Transactions on Smart Grid, 10, 6607–6618.
-
-18.  B. Bhushan and N. Sharma. (2020). Transaction privacy preservations for blockchain technology. In Advances in Intelligent Systems and Computing International Conference on Innovative Computing and Communications, 377–393. Doi: [10.1007/978-981-15-5148-2_34](http://doi.org/10.1007/978-981-15-5148-2_34).
 
 
+## 参考文献
 
+6. B. Coma-Puig, J. Carmona, R. Gavald, S. Alcoverro and V. Martin. (2016). Fraud detection in energy consumption: a supervised approach. In *2016 IEEE International Conference on Data Science and Advanced Analytics (DSAA)*, Montreal, QC, 120–129.
 
-19. D. Puthal, N. Malik, S. P. Mohanty, E. Kougianos and C. Yang. (2018). The blockchain as a decentralized security framework [future directions]. IEEE Consumer Electronics Magazine, 7(2), 18–21.
+7. E. Androulaki, A. Barger, V. Bortnikov, C. Cachin, K. Christidis, A. De Caro, D. Enyeart, C. Ferris, G. Laventman, Y. Manevich, S. Muralidharan, C. Murthy, B. Nguyen, M. Sethi, G. Singh, K. Smith, A. Sorniotti, C. Stathakopoulou, M. Vukoli, S. W. Cocco and J. Yellick. (2018). Hyperledger fabric: a distributed operating system for permissioned blockchains. In *Proceedings of the Thirteenth EuroSys Conference (EuroSys ’18)*. ACM, New York, Article 30, 15 p.
 
-20. A. Zohar. (2015, Aug). Bitcoin. Communications of the ACM, 58(9), 104–113.
+8. D. K. Soni, H. Sharma, B. Bhushan, N. Sharma and I. Kaushik. (2020). Security Issues & Seclusion in Bitcoin System. In *2020 IEEE 9th International Conference on Communication Systems and Network Technologies (CSNT)*, IEEE, 223–229. Doi: [10.1109/csnt48778.2020.9115744](http://doi.org/10.1109/csnt48778.2020.9115744).
 
-21. R. Petersen. (2016). Data mining for network intrusion detection: a comparison of data mining algorithms and an analysis of relevant features for detecting cyber-attacks. DIVA. Retrieved January 2, 2022, from [`www.diva-portal.org/smash/record.jsf?pid=diva2%3A939697&dswid=1013`](http://www.diva-portal.org)
+9. R. Deng, G. Xiao, R. Lu, H. Liang, and A. V. Vasilakos. (2016). False data injection on state estimation in power systems—attacks, impacts, and defense: a survey. *IEEE Transactions on Industrial Informatics*, 13(2), 411–423.
 
-22. M. A. Ambusaidi, X. He, P. Nanda and Z. Tan. (2016). Building an intrusion detection system using a filter-based feature selection algorithm. IEEE Transactions on Computers, 65(10), 2986–2998.
+10. B. Li, R. Lu, W. Wang, and K. R. Choo. (2017). Distributed host-based collaborative detection for false data injection attacks in smart grid cyber-physical system. *Journal of Parallel and Distributed Computing*, 103, 32–41.
 
-23. T. Pham and S. Lee (2016, Nov). Anomaly detection in bitcoin network using unsupervised learning methods. Computation Research Repository, abs/1611.03941, 1–5.
+11. M. Keshk, N. Moustafa, E. Sitnikova, and G. Creech. (2017). Privacy preservation intrusion detection technique for SCADA systems. In *2017 Military Communications and Information Systems Conference (MilCIS)*, IEEE, Canberra, ACT, 1–6.
+
+12. K. Gai, Y. Wu, L. Zhu, M. Qiu, and M. Shen. (2019). Privacy-preserving energy trading using consortium blockchain in smart grid. *IEEE Transactions on Industrial Informatics*, 15, 3548–3558.
+
+13. P. Kaur. (2016). Outlier detection using K means and fuzzy min max neural network in network data. In *2016 8th International Conference on Computational Intelligence and Communication Networks (CICN)*, Tehri, 693–696.
+
+14. M. S. Rahman, I. Khalil, A. Alabdulatif, and X. Yi. (2019). Privacy preserving service selection using fully homomorphic encryption scheme on untrusted cloud service platform. *Knowledge-Based Systems*, 180, 104–115.
+
+15. M. Shen, X. Tang, L. Zhu, X. Du, and M. Guizani. (2019). Privacy preserving support vector machine training over blockchain-based encrypted IoT data in smart cities. *IEEE Internet of Things Journal*, 6, 7702–7712.
+
+16. J. Huang, L. Kong, G. Chen, M.-Y. Wu, X. Liu, and P. Zeng. (2019). Towards secure industrial IoT: blockchain system with credit-based consensus mechanism. *IEEE Transactions on Industrial Informatics*, 15, 3680–3689.
+
+17. P. Gope and B. Sikdar. (2019). An efficient privacy-preserving authentication scheme for energy internet-based vehicle-to-grid communication. *IEEE Transactions on Smart Grid*, 10, 6607–6618.
+
+18. B. Bhushan and N. Sharma. (2020). Transaction privacy preservations for blockchain technology. In *Advances in Intelligent Systems and Computing International Conference on Innovative Computing and Communications*, 377–393. Doi: [10.1007/978-981-15-5148-2_34](http://doi.org/10.1007/978-981-15-5148-2_34).
+
+19. D. Puthal, N. Malik, S. P. Mohanty, E. Kougianos and C. Yang. (2018). The blockchain as a decentralized security framework [future directions]. *IEEE Consumer Electronics Magazine*, 7(2), 18–21.
+
+20. A. Zohar. (2015, Aug). Bitcoin. *Communications of the ACM*, 58(9), 104–113.
+
+21. R. Petersen. (2016). Data mining for network intrusion detection: a comparison of data mining algorithms and an analysis of relevant features for detecting cyber-attacks. *DIVA*. Retrieved January 2, 2022, from [`www.diva-portal.org/smash/record.jsf?pid=diva2%3A939697&dswid=1013`](http://www.diva-portal.org).
+
+22. M. A. Ambusaidi, X. He, P. Nanda and Z. Tan. (2016). Building an intrusion detection system using a filter-based feature selection algorithm. *IEEE Transactions on Computers*, 65(10), 2986–2998.
+
+23. T. Pham and S. Lee (2016, Nov). Anomaly detection in bitcoin network using unsupervised learning methods. *Computation Research Repository*, abs/1611.03941, 1–5.
 
 24. S. T. Ali, P. McCorry, P. H.-J. Lee, F. Hao. (2015). ZombieCoin: Powering Next-Generation Botnets with Bitcoin. Berlin, Heidelberg: Springer Berlin Heidelberg, 34–48.
 
-25. N. Atzei, M. Bartoletti and T. Cimoli (2017, Apr). A survey of attacks on ethereum smart contracts (SoK). In International Conference on Principles of Security and Trust, 164–186, Springer, Berlin, Heidelberg.
+25. N. Atzei, M. Bartoletti and T. Cimoli (2017, Apr). A survey of attacks on ethereum smart contracts (SoK). In *International Conference on Principles of Security and Trust*, 164–186, Springer, Berlin, Heidelberg.
 
-26. M. Signorini, M. Pontecorvi, W. Kanoun and R. D. Pietro. (2018, Aug). BAD: blockchain anomaly detection. CoRR, abs/1807.03833.
+26. M. Signorini, M. Pontecorvi, W. Kanoun and R. D. Pietro. (2018, Aug). BAD: blockchain anomaly detection. *CoRR*, abs/1807.03833.
 
-27. Goyal, S., Sharma, N., Kaushik, I., Bhushan, B. and Kumar, A. (2020). Blockchain as a lifesaver of IoT. Security and Trust Issues in Internet of Things, 209–237. Doi: [10.1201/9781003121664-10](http://doi.org/10.1201/9781003121664-10).
+27. Goyal, S., Sharma, N., Kaushik, I., Bhushan, B. and Kumar, A. (2020). Blockchain as a lifesaver of IoT. *Security and Trust Issues in Internet of Things*, 209–237. Doi: [10.1201/9781003121664-10](http://doi.org/10.1201/9781003121664-10).
 
-28. K. R. Choo, S. Gritzalis and J. H. Park. (2018, Aug). Cryptographic solutions for industrial Internet-of-Things: research challenges and opportunities. IEEE Transactions on Industrial Informatics, 14(8), 3567–3569.
+28. K. R. Choo, S. Gritzalis and J. H. Park. (2018, Aug). Cryptographic solutions for industrial Internet-of-Things: research challenges and opportunities. *IEEE Transactions on Industrial Informatics*, 14(8), 3567–3569.
 
 29. E. Heilman, A. Kendler, A. Zohar and S. Goldberg. (2015). Eclipse attacks on bitcoin’s peer-to-peer network. In *24th {USENIX} Security Symposium {USENIX} Security*, USENIX Association, Berkeley, CA, 129–144.
 
-30. P. T. Pham and S. Lee. (2017). Anomaly detection in bitcoin network using unsupervised learning methods. NASA/ADS. Retrieved January 2, 2022, from [`ui.adsabs.harvard.edu/abs/2016arXiv161103941P/abstract`](https://ui.adsabs.harvard.edu)
+30. P. T. Pham and S. Lee. (2017). Anomaly detection in bitcoin network using unsupervised learning methods. *NASA/ADS*. Retrieved January 2, 2022, from [`ui.adsabs.harvard.edu/abs/2016arXiv161103941P/abstract`](https://ui.adsabs.harvard.edu).
 
-31. S. Iyer, S. Thakur, M. Dixit, R. Katkam, A. Agrawal and F. Kazi. (2019). Blockchain and anomaly detection based monitoring system for enforcing wastewater reuse. In 2019 10th International Conference on Computing, Communication and Networking Technologies (ICCCNT). Doi: [10.1109/icccnt45670.2019.8944586](http://doi.org/10.1109/icccnt45670.2019.8944586).
+31. S. Iyer, S. Thakur, M. Dixit, R. Katkam, A. Agrawal and F. Kazi. (2019). Blockchain and anomaly detection based monitoring system for enforcing wastewater reuse. In *2019 10th International Conference on Computing, Communication and Networking Technologies (ICCCNT)*. Doi: [10.1109/icccnt45670.2019.8944586](http://doi.org/10.1109/icccnt45670.2019.8944586).
 
-32. M. Signorini, M. Pontecorvi, W. Kanoun and R. D. Pietro. (2020). BAD: A blockchain anomaly detection solution. IEEE Access, 8, 173481–173490. [`doi.org/10.1109/access.2020.3025622`](https://doi.org/10.1109/access.2020.3025622)
+32. M. Signorini, M. Pontecorvi, W. Kanoun and R. D. Pietro. (2020). BAD: A blockchain anomaly detection solution. *IEEE Access*, 8, 173481–173490. [`doi.org/10.1109/access.2020.3025622`](https://doi.org/10.1109/access.2020.3025622).
 
-33. S. Goyal, N. Sharma, I. Kaushik, and B. Bhushan. (2021). Blockchain as a solution for security attacks in named data networking of things. Security and Privacy Issues in IoT Devices and Sensor Networks, 211–243. Doi: [10.1016/b978-0-12-821255-4.00010-9](http://doi.org/10.1016/b978-0-12-821255-4.00010-9).
+33. S. Goyal, N. Sharma, I. Kaushik, and B. Bhushan. (2021). Blockchain as a solution for security attacks in named data networking of things. *Security and Privacy Issues in IoT Devices and Sensor Networks*, 211–243. Doi: [10.1016/b978-0-12-821255-4.00010-9](http://doi.org/10.1016/b978-0-12-821255-4.00010-9).
 
-34. V. Gramoli. (2016). On the danger of private blockchains. In Proceeding of Workshop on Distributed Cryptocurrencies and Consensus Ledgers (DCCL 2016), CSIRO University of Sydney, IBM.
+34. V. Gramoli. (2016). On the danger of private blockchains. In *Proceeding of Workshop on Distributed Cryptocurrencies and Consensus Ledgers (DCCL 2016)*, CSIRO University of Sydney, IBM.
 
-35. M. Keshk, B. Turnbull, N. Moustafa, D. Vatsalan and K.-K. R. Choo. (2019). A privacy-preserving framework based blockchain and deep learning for protecting smart power networks. IEEE Transactions on Industrial Informatics, 1–1. Doi: [10.1109/tii.2019.2957140](http://doi.org/10.1109/tii.2019.2957140).
+35. M. Keshk, B. Turnbull, N. Moustafa, D. Vatsalan and K.-K. R. Choo. (2019). A privacy-preserving framework based blockchain and deep learning for protecting smart power networks. *IEEE Transactions on Industrial Informatics*, 1–1. Doi: [10.1109/tii.2019.2957140](http://doi.org/10.1109/tii.2019.2957140).
 
-36. M. Apostolaki, A. Zohar and L. Vanbever. (2017). Hijacking bitcoin: routing attacks on cryptocurrencies. In IEEE SP, San Jose, CA.
+36. M. Apostolaki, A. Zohar and L. Vanbever. (2017). Hijacking bitcoin: routing attacks on cryptocurrencies. In *IEEE SP*, San Jose, CA.
 
-37. D. T. T. Anh, W. Ji, C. Gang, L. Rui, O. B. Chin and T. Kian-Lee. (2017, May). BLOCKBENCH: a framework for analyzing private blockchains. In Proceedings of the International Conference on Management of Data, 1085–1100.
+37. D. T. T. Anh, W. Ji, C. Gang, L. Rui, O. B. Chin and T. Kian-Lee. (2017, May). BLOCKBENCH: a framework for analyzing private blockchains. In *Proceedings of the International Conference on Management of Data*, 1085–1100.
 
-38. N. Atzei, M. Bartoletti and T. Cimoli. (2017). A survey of attacks on ethereum smart contracts (sok). In International Conference on Principles of Security and Trust, Springer, Berlin, Heidelberg, 164–186.
+38. N. Atzei, M. Bartoletti and T. Cimoli. (2017). A survey of attacks on ethereum smart contracts (sok). In *International Conference on Principles of Security and Trust*, Springer, Berlin, Heidelberg, 164–186.
 
-39. T.T. Dinh, R. Liu, M. Zhang, G. Chen, B.C. Ooi and J. Wang. (2017). Untangling blockchain: a data processing view of blockchain systems. IEEE Transactions on Knowledge and Data Engineering, 30, 1366–1385.
+39. T.T. Dinh, R. Liu, M. Zhang, G. Chen, B.C. Ooi and J. Wang. (2017). Untangling blockchain: a data processing view of blockchain systems. *IEEE Transactions on Knowledge and Data Engineering*, 30, 1366–1385.
+
+
 
 40. F. Tschorsch and B. Scheuermann. (2016). Bitcoin and beyond: a technical survey on decentralized digital currencies. IEEE Communications Surveys & Tutorials, 18, 2084–2123.
 
@@ -2083,22 +2004,19 @@ DOI: [10.1201/9781003224075-5](http://doi.org/10.1201/9781003224075-5)
 
 ## 5.1 简介：背景
 
-
-
-
 ### 医疗保健领域的当前技术进展
 
-当前的技术进步正在迅速将企业转型为数字化企业，这些企业将以我们尚未想象的方式体验世界。人工智能（AI）、自然语言处理（NLP）、区块链（BC）、云计算、物联网（IoT）以及虚拟现实和增强现实只是推动这一变革的几项技术。
+当前的技术进步正在迅速将企业转型为数字化企业，这些企业将以我们尚未想象的方式体验世界。人工智能（`AI`）、自然语言处理（`NLP`）、区块链（`BC`）、云计算、物联网（`IoT`）以及虚拟现实和增强现实只是推动这一变革的几项技术。
 
 如今，世界上很大一部分人口正在迅速老龄化并伴有共病。经济关联的生活方式将继续导致大规模增长——吸烟、肥胖、有害饮酒、不良饮食和久坐不动的生活方式等现象不断发展。医疗保健是指为维持或改善人们的健康，对疾病、损伤及其他身心障碍进行的预防、诊断、治疗、康复或疗养。医疗保健专业人员和相关行业提供医疗保健服务。其范围涵盖初级、二级和三级医疗工作，以及公共卫生工作。
 
 #### 物联网在医疗保健中的应用
 
-在医疗保健行业，一个互联、持续监测、自动化且支持机器学习的世界的优势显而易见且巨大。数据采集或“监听”组件在“万物健康互联网”（IoHT）领域已相当成熟。通过“捕获”和解读信息来掌握个体状态的能力对医疗保健至关重要，无论是父母倾听孩子的打喷嚏声，还是医生使用节拍器监测患者的心跳。其工作涵盖初级护理、二级护理、三级护理和公共卫生。物联网初创企业正在医疗保健领域寻找越来越多的新用途，并从增强型传感器中受益。在医疗保健行业，物联网正变得越来越普遍。物资管理、医疗信息数字化和医疗流程数字化是智慧医疗中物联网最常见的三大应用。
+在医疗保健行业，一个互联、持续监测、自动化且支持机器学习的世界的优势显而易见且巨大。数据采集或“监听”组件在“万物健康互联网”（`IoHT`）领域已相当成熟。通过“捕获”和解读信息来掌握个体状态的能力对医疗保健至关重要，无论是父母倾听孩子的打喷嚏声，还是医生使用节拍器监测患者的心跳。其工作涵盖初级护理、二级护理、三级护理和公共卫生。物联网初创企业正在医疗保健领域寻找越来越多的新用途，并从增强型传感器中受益。在医疗保健行业，物联网正变得越来越普遍。物资管理、医疗信息数字化和医疗流程数字化是智慧医疗中物联网最常见的三大应用。
 
 在物联网出现之前，医生和患者沟通的唯一途径是就诊、短信和电信。没有方法让医生能够持续筛查或监测患者并做出适当的建议。然而，物联网在医疗保健领域的兴起极大地改变了这一局面。临床医生通过部署支持物联网的设备远程监测患者，能够提供更好的护理。此外，随着患者与医生的联系变得更加舒适高效，物联网提高了患者满意度评分。物联网无意中改变了医疗行业，并对健康极为有益。
 
-连接设备可以通过与手机应用程序关联的智能临床设备，借助持续观察收集宝贵的临床和健康相关信息。相关的物联网设备采集并传输健康数据，如体温、脉搏、血氧、血糖水平、体重和心电图（ECG）。信息存储在云端，并根据共享权限传递给授权个人。该个人可以是医生、医疗机构或专家，这将允许他们无论身处何地、何时，都能查看收集到的信息。
+连接设备可以通过与手机应用程序关联的智能临床设备，借助持续观察收集宝贵的临床和健康相关信息。相关的物联网设备采集并传输健康数据，如体温、脉搏、血氧、血糖水平、体重和心电图（`ECG`）。信息存储在云端，并根据共享权限传递给授权个人。该个人可以是医生、医疗机构或专家，这将允许他们无论身处何地、何时，都能查看收集到的信息。
 
 ##### 物联网出现前的医疗保健
 
@@ -2126,17 +2044,13 @@ DOI: [10.1201/9781003224075-5](http://doi.org/10.1201/9781003224075-5)
 *   医疗信息数字化。
 *   医疗流程数字化。
 
-
-
-
-
 ### 医疗保健中的物联网
 
 这种可穿戴小工具并非临床体温计（临床仪器）。物联网是指一个由相互连接、联网的事物组成的系统，它们能够在无需人工干预的情况下，通过一个小组收集和传输信息。物联网试图在设备（临床传感器、健身追踪器等）之间建立升级的可用性（具有互联网接入），或在所有领域构建自动化，逐步按框架或服务的顺序进行。关联技术是物联网在医疗保健中的基本应用之一。此类设备用于监测患者、获取读数、查看模式，并设备用于监测患者、执行任务、查看模式，以及在模式出现缺陷时通知患者。
 
 同样，该程序用于持续检查患者、做出明智决策并防止创伤中心就诊。创伤中心就诊的减少也增强了临床管理的共性。组织正在创建创新的软件程序，以解决医疗服务中的不同问题。例如，为了解决急诊科等待时间问题，GE Healthcare 开发了一款名为 `auto` 的软件程序，有助于缩短患者等待床位的时间。这些进步可以帮助医疗保健协会挖掘一个日益互联且响应迅速的世界的潜力。如果企业能在单一环境中产生更大的互联性，将给患者、医生、付费人和药物工程师带来巨大优势。
 
-物联网设备，例如智能药丸、可穿戴屏幕和传感器，允许医疗保健专家持续收集信息。AI 框架可以帮助分析这些信息，以识别患者状况的变化、提出治疗方案、识别模式、支持患者依从性、改善患者结果，并加速新疗法的发现和获取 [[10]](#C_010_c5.xhtml#r5_10)、[[11]](#C_010_c5.xhtml#r5_11)、[[12]](#C_010_c5.xhtml#r5_12)。
+物联网设备，例如智能药丸、可穿戴屏幕和传感器，允许医疗保健专家持续收集信息。`AI` 框架可以帮助分析这些信息，以识别患者状况的变化、提出治疗方案、识别模式、支持患者依从性、改善患者结果，并加速新疗法的发现和获取 [[10]](#C_010_c5.xhtml#r5_10)、[[11]](#C_010_c5.xhtml#r5_11)、[[12]](#C_010_c5.xhtml#r5_12)。
 
 互联网将允许机器人将现实世界与虚拟世界连接起来。如果考虑新兴机器人，配合操作系统系统，通过蓝牙与互联网通信需要一组应用程序编程接口调用，如 图 5.3 所示，该图描绘了医疗保健的发展（结合物联网）。未来的机器人将成为物联网的重要组成部分，并能够与云端进行无缝通信。这些机器人将具备敏锐的移动能力和情境计算能力，能够合乎逻辑地通过互联网与其周围的物理环境交互。机器人还可以利用云端配置和消息传递，与连接到云端的任何服务、业务流程或设备进行交互。与云端的对话可以是非同步的，也可以是同步的（机器人在继续下一个动作前等待反馈），基于暴露的 Web 服务挂载在云端。
 
@@ -2146,7 +2060,7 @@ DOI: [10.1201/9781003224075-5](http://doi.org/10.1201/9781003224075-5)
 
 #### 临床数据管理中的物联网
 
-物联网在临床数据管理领域拥有巨大潜力。医院对临床数据管理的需求主要体现在以下方面：识别、模式识别和临床记录识别。确定证据包括患者 ID、医生 ID、测试 ID（包括药物 ID）、临床设备 ID、实验室 ID 和临床记录 ID（包括症状和疾病 ID）。医疗保健专用物联网产品的激增开辟了巨大的机遇。此外，这些联网设备产生的海量数据可以改变医疗保健。这是行业和人类的巨大进步，因为加强网络安全一直是一个关键问题。创建 AI 技能并结合相关系统，有望提供智能服务和基础设施。另一方面，由于可穿戴计算和程序（到 2015 年底时最受关注的项目之一）的流行度下降，健康相关包在物联网本质中正在减少 [[13]](#C_010_c5.xhtml#r5_13)、[[14]](#C_010_c5.xhtml#r5_14)、[[15]](#C_010_c5.xhtml#r5_15) 和 [[16]](#C_010_c5.xhtml#r5_16)。
+物联网在临床数据管理领域拥有巨大潜力。医院对临床数据管理的需求主要体现在以下方面：识别、模式识别和临床记录识别。确定证据包括患者 ID、医生 ID、测试 ID（包括药物 ID）、临床设备 ID、实验室 ID 和临床记录 ID（包括症状和疾病 ID）。医疗保健专用物联网产品的激增开辟了巨大的机遇。此外，这些联网设备产生的海量数据可以改变医疗保健。这是行业和人类的巨大进步，因为加强网络安全一直是一个关键问题。创建 `AI` 技能并结合相关系统，有望提供智能服务和基础设施。另一方面，由于可穿戴计算和程序（到 2015 年底时最受关注的项目之一）的流行度下降，健康相关包在物联网本质中正在减少 [[13]](#C_010_c5.xhtml#r5_13)、[[14]](#C_010_c5.xhtml#r5_14)、[[15]](#C_010_c5.xhtml#r5_15) 和 [[16]](#C_010_c5.xhtml#r5_16)。
 
 #### 物联网四阶段架构
 
@@ -2157,15 +2071,19 @@ DOI: [10.1201/9781003224075-5](http://doi.org/10.1201/9781003224075-5)
 **图 5.4** 结合机器人的物联网。
 
 ##### 第一阶段
+
 第一阶段涉及相互连接设备的组织，包括传感器、执行器、显示器、探测器、摄像头系统等。这些设备收集数据。
 
 ##### 第二阶段
+
 通常，从传感器和其他设备获得的信息以模拟形式存在，被收集并转换为机械设计以进行数据处理。
 
 ##### 第三阶段
+
 数据数字化并收集后，会经过预处理、标准化，并移至数据中心或云端。
 
 ##### 第四阶段
+
 在所需层级对统计信息进行管理和分析。应用于这些数据的高级分析带来重要的商业洞察，以做出有效决策。
 
 #### 物联网在医疗保健中的优势
@@ -2184,12 +2102,7 @@ DOI: [10.1201/9781003224075-5](http://doi.org/10.1201/9781003224075-5)
 由物联网阶段定义的医疗服务框架依赖于各种组件，用于检查慢性疾病、照顾老年患者以及健康管理系统。例如，慢性医疗问题、肥胖、恶性肿瘤和关节炎影响着许多人。对于患有慢性病的个人来说，医疗服务是日常关注的问题。患者每天都需要疾病管理设备，而不仅仅是在拜访专家时。专家接收定期健康更新，使他们能够利用物联网设备全面检测感染。物联网有潜力提高患者的整体健康水平，并可能减少对医疗实践的需求。物联网在医疗保健中发挥着重要作用。物联网的基础使我们能够促进关于患者疾病和健康的适量信息，如果手动归档将花费很长时间。为了更好地理解，它也分为两部分：
 
 1.  基于应用程序的
-
-
-
-
-
-### 2. 基于管理的
+2.  基于管理的
 
 此外，基于应用的分为单一状态基于和群组状态基于。单一状态指特定疾病，而群组状态如图 5.5 所示出现多种疾病。它依赖于当前的物联网医疗服务框架，该框架具有强大的特性，可在未来添加单一或群组状态基于的疾病。
 
@@ -2216,6 +2129,8 @@ DOI: [10.1201/9781003224075-5](http://doi.org/10.1201/9781003224075-5)
 
 根据 Patel 等人[17]。作者阐述了利用先进机械和物联网在临床服务片段、健康相关紧急情况、电子健康等方面人类的有利条件。此外，任务时间、隶属关系、未来的挑战有待分析。在未来几年，医疗服务将变得更加复杂且费用更低，临床领域将更加易及。众多协会和科学家致力于解决物联网挑战、采用问题、基础设施改进和标准化，在不久的将来在全球范围内取得一些良好成果。
 
+
+
 正如 Guntur 等人[18]所指出的，机器人技术是医学领域最显著和新兴的进步之一。电子传感器与控制系统融入机械系统从根本上提高了结构的性能和通用性。过去用于强化手臂的机械进步不够精确，无法传递特定的明确分析、清晰的发展和规划。随着硬件、软件和控制软件结构的进步，广泛的自动化被用于在许多条件下实现比人类更多的自由度。机器人技术进步已在各个领域推出，明显影响患者感知和护理。药物中的先进机械进步是重症监护室、病房和手术室临床管理组织的主要焦点，可降低患者和专家的风险，也用于实验室采集样本，并在需要时进行样本运输、检测和长期保存。
 
 根据 Islam 等人[19]，物联网使智能物品成为改善数字物理智能普适系统的决定性构建块。物联网拥有多种使用领域，包括医疗保健。物联网革命正以充满希望的技术、经济和社会前景更新现代医疗保健。本章研究基于物联网的医疗保健进步，并综述先进的网络结构/平台、应用和基于物联网的医疗保健解决方案的现代趋势。此外，本章从医疗保健角度探讨特定的物联网安全和保护特征，包括安全需求、威胁模型和攻击分类学。
@@ -2226,42 +2141,43 @@ DOI: [10.1201/9781003224075-5](http://doi.org/10.1201/9781003224075-5)
 
 正如 Chae 等人[22]所述，从数字化进步的角度考察学术网络和工业界中的物联网。现有研究已使用不同技术回顾物联网主题。该评估从数字化进步的角度看待物联网，视其为发展、行业应用、思想、方法和社会制度的惊人气候，这在短暂性上是独特的并随时间推移而进步。
 
-
-
-
-
 ### 文献综述
 
 #### Yoon 等 [23]
+
 创作者阐明，随着技术的进步，特别是人工智能机器人在医疗保健行业的应用，基于技术进步的服务体验已获得关键关注。在基于技术进步的服务体验中，技术作为专业社区期望在成功组织体验方面发挥基础作用。本研究旨在为医疗保健行业基于技术进步的服务体验成功因素开发一个结构。回顾并提出了体验中主体（人类和技术）的要素及成功因素。
 
 #### Tian [24]
+
 随着信息技术的发展，智慧医疗的概念逐渐走向前台。智慧医疗利用新一代信息技术，例如物联网（IoT）、大数据、云计算和人工智能，全面变革传统医疗体系，使医疗更高效、更便捷、更个性化，旨在引入胜任医疗的概念。本综述首先列出支持智慧医疗的关键技术，并解释了智慧医疗在几个重要领域的现状。
 
 #### Dimitrov [25]
+
 作者定义了各种可降低慢性病预测或管理总体成本的技术。这些包括持续监测健康指标的设备、自动控制药物的设备，或患者自我给药时跟踪持续健康数据的设备。由于他们获得了快速互联网和个人数字助理的广泛接入，许多患者开始使用移动应用程序来管理各种健康需求。这些设备和移动应用程序正越来越多地通过医疗物联网与远程医疗和远程健康集成。作者回顾了医疗保健领域的物联网和大数据。如今，可穿戴设备和移动应用程序支持健康、健康教育、追踪、慢性病管理和护理协调。
 
 #### Shah [26]
+
 技术和连接性的最新进展导致了物联网和人工智能应用在各个行业的兴起。其章节通过详细回顾 75 篇同行评审的期刊文章，考察了物联网和人工智能在医疗保健中的影响。
 
 评估显示，过去十年发表的文章数量显著增加，传播来源广泛，作者众多，且有各种应用和设计科学章节，所有这些都表明这是一个新兴领域，在未来几年具有巨大的出版潜力。作者还强调了顶级应用类别的关键见解，包括可穿戴设备和连接性、疾病发现和治疗、持续护理以及传感器网络，并确定了与技术设计和采用、数据安全和隐私规则、系统可行性和安全性相关的机会和未来研究方向。
 
 #### Pramanik 等 [27]
+
 智能医疗设备和普适系统的进步正在将相关医疗保健转变为一个繁荣的特定医疗保健平台。物联网、智能传感器和可穿戴设备扩展了医疗保健结构，实现了远程监测，并支持通过中心全程监控患者疾病。本节旨在作为智能和确定性医疗保健系统演进的简要介绍。该部分从物联网、智能传感器和普适系统及其相互关系的概述开始。该角色包括当前临床管理系统面临的挑战，并分析如何在普适医疗服务的帮助下克服这些挑战。
 
 #### Wan 等 [28]
+
 最近，他们看到了移动医疗服务机器人的令人振奋的进步，这些机器人比人类同行具有各种优势。过去医疗机器人的通信网络总是遭受高响应延迟和重复处理需求的困扰。高效快速的通信和快速处理至关重要，有时在医疗机器人中是专门必需的，对医疗接受者而言。作为一个好的解决方案，将延迟敏感和计算密集型任务卸载到机器人上，取决于改进组织和租约客户。在他们的章节中，他们回顾了一些最先进的进展，例如人机界面、环境和用户状态感知、导航、良好通信和自动化思维，并详细讨论了卸载计算和通信任务的改进需求。
 
 根据功能对网络使用的特征需求，他们将标准临床管理机器人的功能分为边缘功能和核心功能两类。例如，各种延迟敏感任务，如用户交互，或单调任务，包括健康采集器状态确认和自我管理移动，可以由机器人设置，而无需与工作场农场进行渐进式通信。
 
 #### Han [29]
+
 作者探讨了规划医疗机器人时的主要估计。许多用于临床管理情况的机器人正在开发中；然而，很少有在真实领域取得成功。同样，他们试图引入另一种视角来推动解决这个问题。他们的章节提出了一个框架，通过从服务景观角度解释机器人设计来确认舒适度。护理机器人的用户测试结果使用四个服务景观要素进行评估：设备、设计、装饰、空间和氛围。设备对机器人的舒适度是必要的，因此主要被考虑，GUI 设计的限制是设计和装饰。空间是随处突出的问题，因为机器人移动，例如通道的宽度和地板的状态。
 
 #### Fan 等 [30]
+
 物联网使所有物体互联和智能，被视为下一次技术革命。作为其典型案例，基于物联网的智能康复系统改善了解决与人口老龄化和医疗专业人员短缺相关的患者问题。尽管它已进入现实，但在现代化设计和重新配置此类结构方面存在根本问题，使其能够快速响应患者的需求。他们的章节为基于功率的自动化设计方法（自适应增量调制）在物联网智能重建系统中的应用提供了思路。宇宙学帮助计算机理解信号和临床资源，这有助于制定康复策略，并根据患者的具体需求快速、自然地重新配置临床资源。
-
-
-
 
 根据 Bodur 等人 [31] 的研究，其调查结果表明，应将物联网发展与护理及临床培训相结合。未来的研究应致力于将技术案例融入临床护理和护理实践中。在受访者中，70.8% 为女性，81.6% 在公立学校就读，61.3% 为高年级护理本科生，38.7% 为高年级临床医学本科生。
 
@@ -2298,9 +2214,6 @@ DOI: [10.1201/9781003224075-5](http://doi.org/10.1201/9781003224075-5)
 
 此外，机器人技术拥有先进的应用。医疗保健领域的进步将推动未来几年的市场增长。自动化技术系统的概念是真实数据与物理世界之间的联系。机器人技术始终是跨学科工程，但它包含生物力学、计算科学、神经系统科学、认知科学、运动科学、生物医学等。主要挑战在于挑战在各种条件下将接口传感器、电机和人类选择与临床先进机器人技术能力相结合。
 
-
-
-
 图 5.7 中的信息流帮助人们将数据信息与现实世界相结合以完成既定任务。在讨论临床先进机械时，会启动一些组件运动，涉及方向、自主性、洞察力等，即一个在多个轴心上旋转且处于其当前环境中的框架。独立性揭示了人类在监督任务机器人或自动化设备方面的参与程度，无论是在常规操作中，还是特别是在框架出现问题或缺陷时。
 
 ![图 5.7 计算机集成手术系统的信息流。](img/Fig05_07.jpg)
@@ -2334,10 +2247,6 @@ DOI: [10.1201/9781003224075-5](http://doi.org/10.1201/9781003224075-5)
 
 扮演不同角色、服务于临床/健康和社会护理领域（超出传统护理和康复机器人范围）的机器人，将成为 21 世纪主要技术发展之一。机器人已从多个角度被执行，以帮助协调健康和社会护理。应用包括医院和护理院环境，范围从解决定义明确的问题的具体方案开始。在当前的智能手机时代，越来越多的消费者习惯于与医生进行视频咨询、通过健康应用进行远程监测，以及将手机中的个人诊断设备作为随时可用的参考工具。机器人无处不在，从科幻小说到您附近的医院，它们正在改变医疗保健。机器人开始影响医学（利用科学技术治疗和预防损伤及疾病）和医疗保健（治疗的可及性和疾病的早期预警）。机器人在康复和智能假肢方面也证明了其能力。通过驻留机器人促进远程医疗，为患者提供持续的关键护理，是增强患者护理和健康信息学及其可及性的另一种途径。当机器人连接后，专家可以指导患者就寝。利用机器人的双向视听视频聊天功能，专家和患者可以轻松自然地交换临床数据。医疗机器人帮助临床工作人员摆脱日常任务，将他们的时间从更紧迫的职责中解放出来，并使手术对患者更安全、更负担得起。它们还能在狭小区域进行精确手术并运输危险物质。机器人临床助手监测患者关键生命体征，在需要人工在场时提醒护士，使护士能同时监测多名患者。这些机器人助手还能自动将数据录入患者电子健康记录。可以观察到机器人手推车在医院走廊运送物资。机器人再次协助手术，让专家通过小切口而非大切口进行手术。先进机器人技术在医学各个领域又产生了重大影响。
 
-
-
-
-
 ### 远程分析与自动化医疗程序
 
 远程分析和自动化医疗程序在全球范围内被广泛应用。信息通信技术（ICT）的快速发展意味着这些创新将有更多机会变为现实。远程诊断允许专家远程检查症状。这种媒介对于没有附近临床资源的偏远地区以及无法前往就医的患者特别有益。
@@ -2359,17 +2268,19 @@ DOI: [10.1201/9781003224075-5](http://doi.org/10.1201/9781003224075-5)
 
 #### 5.5.1 诊所机器人
 
+
+
 医院机器人可以执行各种任务，以减轻专家、护士和技术人员的日常负担。这包括分发患者信息，如药物、实验室测试和其他敏感材料到医院各处——美国机器人公司 Aethon 开发了一种名为 TUG 的自主移动机器人，能够完成这些任务——节省资金以专注于患者护理，并为医疗服务专家节省时间。机械系统也正在被设计用于在医疗系统中对设备和器械进行消毒。
 
-#### 5.5.2 手术机器人
+### 5.5.2 手术机器人
 
 机器人技术在手术中最著名的应用包括配备摄像头和/或手术器械的机械臂，由专家控制。机器人辅助手术意味着它可以以更高的精度和额外的控制完成复杂的过程。它们也通常是微创的，提供了一种替代开放手术的选择，后者风险更大，需要更长的恢复时间。机器人辅助手术的例子包括活检、切除恶性肿瘤、心脏瓣膜修复和胃旁路手术。
 
-#### 5.5.3 护理机器人
+### 5.5.3 护理机器人
 
 虽然许多这些进步旨在用于急诊诊所和其他医疗服务场所，但护理机器人可以帮助家中的老年或残疾患者。目前，护理机器人主要用于完成简单的任务，例如帮助患者起身。一个例子是 Robier——由日本研究机构理化学研究所（RIKEN）和开发组织住友理工（Sumitomo Rico）创建的熊形机器人。
 
-#### 5.5.4 外骨骼
+### 5.5.4 外骨骼
 
 Global Data Research 发现，外骨骼市场是所有机器人技术领域中增长最快的领域之一。外骨骼利用安装在皮肤上的传感器来识别患者体内的电信号，并通过关节运动做出反应。其旨在为从下肢问题（如中风和脊髓损伤）中恢复的患者提供物理康复。
 
@@ -2381,7 +2292,7 @@ Global Data Research 发现，外骨骼市场是所有机器人技术领域中�
 
 它考虑了信息来源的范围（包括动态控制和感知驱动），并展示了可能发生的许多潜在产出、活动或角色。利用机器人关联生态系统中这样一个深思熟虑且重要的部分，信息技术（IT）服务的功能开始显现。
 
-机器人可能具有实际的直接表达，使其能够精确地在现实世界中工作和响应。然而，它最终也可以利用信息技术作为一种实现现实世界连接的安排形式，在虚拟世界中工作（例如，向远程观察者传递重要数据）。机器人也可以具有感知能力。例如，它可以吸收现实世界。从信息来源中产生“适用含义”，并根据其编程和所学进行工作。它呈现了一组涵盖以下主题的幻灯片：m-IoT、医疗 IT、医药、移动医疗、长期演进（LTE）和 4G 健康 [[33]](#C_010_c5.xhtml#r5_33)。
+机器人可能具有实际的直接表达，使其能够精确地在现实世界中工作和响应。然而，它最终也可以利用信息技术作为一种实现现实世界连接的安排形式，在虚拟世界中工作（例如，向远程观察者传递重要数据）。机器人也可以具有感知能力。例如，它可以吸收现实世界。从信息来源中产生“适用含义”，并根据其编程和所学进行工作。它呈现了一组涵盖以下主题的幻灯片：`m-IoT`、`医疗 IT`、`医药`、`移动医疗`、`长期演进（LTE）` 和 `4G 健康` [[33]](#C_010_c5.xhtml#r5_33)。
 
 在未来的日子里，对物联网发展的兴趣将快速增长。提供连接物理世界与基于物联网网络的简单开发工具将变得至关重要。机器人研究、物联网和健康信息学的扩展预计将成为未来医疗系统的因素 [[34]](#C_010_c5.xhtml#r5_34)，[[35]](#C_010_c5.xhtml#r5_35)，[[36]](#C_010_c5.xhtml#r5_36)，[[37]](#C_010_c5.xhtml#r5_37)，[[38]](#C_010_c5.xhtml#r5_38)，[[39]](#C_010_c5.xhtml#r5_39)，[[40]](#C_010_c5.xhtml#r5_40)。由于物联网是另一项正在发展的技术，物联网平台上不同解决方案的工具尚未完全可靠地开发成熟。在这方面，`ROS` 为物联网平台的基础网络提供了有吸引力的机会。`ROS` 具有高抽象级别等特性，吸引专家和科学协会访问任何硬件。
 
@@ -2392,10 +2303,6 @@ Global Data Research 发现，外骨骼市场是所有机器人技术领域中�
 当 IoHT 数据与过去的数据进行比较时，会出现个性化的洞察，使医疗从业者能够在护理交付中变得“更高效、更经济、更有针对性”。数据。到处都是数据。那么，下一步是什么？如前所述，传感器收集的数据驱动着 IoHT，但如何使用和处理这些数据对于将其转化为现实世界语境下的可操作信息至关重要。
 
 虽然医疗数据分析已经相当成熟，这从成本效益和医疗质量研究中可见一斑，但临床或索赔数据库经常被使用。大规模研究大多建立在这些数据集之上，分析师对此很熟悉。由于潜在数据源的数量巨大、获取的数据类型多样以及收集频率高，IoHT 数据不太清晰明了。
-
-
-
-
 
 我们收集的数据越多，分析就越精准，对患者健康状况的理解也就越透彻。有了足够的数据，最终将能在人群层面预测可能出现的医疗问题，且只需极少的人工干预或研究。虽然成本仍是该能力广泛采用的障碍，但日益激烈的竞争正在降低成本并推动创新发展。
 
@@ -2447,10 +2354,6 @@ Global Data Research 发现，外骨骼市场是所有机器人技术领域中�
 
 2.  Gubbi, J., Marusic, S., Palaniswami, M. (2013). Internet of Things (IoT): a vision, architectural elements, and future directions. Futur. Gener. 29, 1645–1660.
 
-
-
-
-
 ## 参考文献
 
 3.  **Islam**, S. M. R., Kwak, D., Kabir, M. H., Hossain, M., Kwak, K. (2015). 面向医疗保健的物联网：综合综述。 *IEEE Access*. 3, 678–708. Doi: [10.1109/ACCESS.2015.2437951](http://doi.org/10.1109/ACCESS.2015.2437951).
@@ -2497,63 +2400,7 @@ Global Data Research 发现，外骨骼市场是所有机器人技术领域中�
 
 24.  **Yoon**, S. N., Lee, D. (2018, Jul 16). 医疗保健中的人工智能与机器人：基于技术的服务遭遇成功因素是什么？ *Int. J. Healthc. Manag*, 1–8. [`doi.org/10.1080/20479700.2018.1498220`](https://doi.org/10.1080/20479700.2018.1498220).
 
-25.  **Tian**, S., Yang, W., Le Grange, J. M., Wang, P., Huang, W., Ye, Z. (2019). 智慧医疗：让医疗服务更智能。 *Glob. Health J.* 3(3), 62–65.
 
-26.  **Mandal**, S., Balas, V. E., Shaw, R. N., Ghosh, A. (2020, Oct. 2–4). 基于 OSIC 数据集的特发性肺纤维化进展预测分析。 *2020 IEEE 国际计算、电力与通信技术会议 (GUCON)*, pp. 861–865, Doi: [10.1109/GUCON48875.2020.9231239](http://doi.org/10.1109/GUCON48875.2020.9231239).
-
-27.  **Dimitrov**, D. V. (2016). 医疗物联网与医疗保健大数据。 *Healthc. Inform. Res.* 22(3), 156–163.
-
-28.  **Shah**, R., Chircu, A. (2018, Jul 1). 医疗保健中的物联网与 AI：系统性文献综述。 *Issues Inf. Syst.* 19(3), 33–41.
-
-29.  **Pramanik**, P. K., Upadhyaya, B. K., Pal, S., Pal, T. (2019, Jan 1). 物联网、智能传感器与泛在系统：赋能互联与泛在医疗保健。 发表于《医疗数据分析与管理》，Academic Press, pp. 1–58.
-
-30.  **Wan**, S., Gu, Z., Ni, Q. (2020, Jan 1). 面向医疗服务机器人的边缘认知计算与无线通信。 *Computer Commun.* 149: 99–106.
-
-31.  **Belkhier**, Y., Achour, A., Shaw, R. N. (2020). 并网 PMSG 风力可再生能源系统的模糊无功性电压控制器策略。 *2020 IEEE 第 5 届计算通信与自动化国际会议 (ICCCA)*, 印度 Greater Noida, pp. 210–214. Doi: [10.1109/ICCCA49541.2020.9250838](http://doi.org/10.1109/ICCCA49541.2020.9250838).
-
-32.  **Han**, J., Kang, H. J., Kwon, G. H. (2017, Jun 28). 理解护士辅助机器人的服务景观：医疗服务体验视角。 发表于《2017 第 14 届泛在机器人与环境智能国际会议 (URAI)》，汉阳大学技术创新管理研究生院，韩国首尔，pp. 644–649. IEEE.
-
-33.  **Fan**, Y. J., Yin, Y. H., Da Xu, L., Zeng, Y., Wu, F. (2014). 基于物联网的智能康复系统。 *IEEE Trans. Ind. Inform.* 10(2), 1568–1577.
-
-34.  **Shaw**, R. N., Walde, P., Ghosh, A. (2020). 基于物联网的 MPPT，用于提高部分阴影分散条件下运行的太阳能光伏阵列性能。 *2020 IEEE 第 9 届电力印度国际会议 (PIICON)* 于印度 Sonepat 的 Deenbandhu Chhotu Ram 科技大学举行，Feb 28–March 1 2020.
-
-
-
-
-
-## 参考文献
-
-35. Bodur, G., Gumus, S., Gursoy, N. G. (2019, Aug 1). Perceptions of Turkish health professional students toward the effects of the Internet of things (IOT) technology in the future. *Nurse Educ. Today*. 79: 98–104.
-
-36. Mandal, S., Biswas, S., Balas, V. E., Shaw, R. N., Ghosh, A. (2020). Motion prediction for autonomous vehicles from Lyft dataset using deep learning. *2020 IEEE 5th International Conference on Computing Communication and Automation (ICCCA)* 30–31 Oct. 2020, pp. 768–773. Doi: [10.1109/ICCCA49541.2020.9250790](http://doi.org/10.1109/ICCCA49541.2020.9250790).
-
-37. World Health Organization (WHO). (2016). *The World Health Report 2016, World Malaria Report*, WHO Library Catalouguing, Geneva, Switzerland, pp. 8–9.
-
-38. Istepanian, R. S. (2011, Apr 6). The potential of Internet of Things (IoT) for assisted living applications. In *IET Seminar on Assisted Living*, London, pp. 1–40. IET.
-
-39. Feynman, R., Vernon, F. Jr. (1963). The theory of a general quantum system interacting with a linear dissipative system, *Ann. Phys.* 24: 118–173. Doi: [10.1016/0003-4916(63)90068-X](http://doi.org/10.1016/0003-4916(63)90068-X).
-
-40. Dirac, P. (1953). The Lorentz transformation and absolute time, *Physica* 19 (1–12), 888–896. Doi: [10.1016/S0031-8914(53)80099-6](http://doi.org/10.1016/S0031-8914(53)80099-6).
-
-41. Javaid, M., Khan, I. H. (2021). Internet of Things (IoT) enabled healthcare helps to take the challenges of COVID-19 Pandemic. *J. Oral Biol. Craniofac. Res.* 11 (2), 209–214.
-
-42. Magsi, H., et al. (2021). A novel adaptive battery-aware algorithm for data transmission in IoT-based healthcare applications. *Electronics* 10 (4), 367.
-
-43. de Morais Barroca Filho, I., Aquino, G., Malaquias, R. S., Girão, G. and Melo, S. R. M. (2021). An IoT-based healthcare platform for patients in ICU beds during the COVID-19 outbreak. *IEEE Access* 9: 27262–27277.
-
-44. Bharadwaj, H. K., Agarwal, A., Chamola, V., Lakkaniga, N. R., Hassija, V., Guizani, M., Sikdar, B. (2021). A review on the role of machine learning in enabling IoT based healthcare applications. *IEEE Access* 9: 38859–38890.
-
-45. Jain, G. (2021, Jan. 2). A secure big data layered approach for privacy. *Sambhodi J.* ISSN: 2249–6661, Available at SSRN: [`ssrn.com/abstract=3899380`](https://ssrn.com).
-
-46. Jain, G., and Prasad, R. R. (2021). Multi-antenna communication security with deep learning network and internet of things. *Blockchain Technology for Data Privacy Management*, CRC Press, pp. 61–80.
-
-47. Jain, E. G. (2021). A comparative analyzing of SMS spam using topic models. *Innovations in Information and Communication Technologies (IICT-2020)*, Springer, Cham, pp. 91–99.
-
-48. Jain, G. (2021). Application of SNORT and Wireshark in network traffic analysis. *IOP Conference Series: Materials Science and Engineering*. Vol. 1119. No. 1. IOP Publishing, London.
-
-49. Yadav, A., et al. (2021). “Intelligent Moving Machine (IMM) based on battery for an efficient regenerative braking system.” *Recent Advances in Mechanical Engineering*. Springer, Singapore, pp. 257–264.
-
-50. Jain, G., Prasad, R. R. (2020). Machine learning, Prophet and XGBoost algorithm: Analysis of Traffic Forecasting in Telecom Networks with time series data. *2020 8th International Conference on Reliability, Infocom Technologies and Optimization (Trends and Future Directions) (ICRITO)*, Noida. IEEE.
 
 # 6 通过机器学习方法改进制药行业机械——以津巴布韦为例
 
@@ -2582,10 +2429,6 @@ DOI: [10.1201/9781003224075-6](http://doi.org/10.1201/9781003224075-6)
 ![图 6.1 2014 年津巴布韦制药市场分布。（转载自 3。）](img/Fig06_01.jpg)
 
 **图 6.1** 2014 年津巴布韦制药市场分布。（转载自 [3]。）
-
-
-
-
 
 ### 津巴布韦制药出口市场
 
@@ -2621,10 +2464,11 @@ DOI: [10.1201/9781003224075-6](http://doi.org/10.1201/9781003224075-6)
 
 由于制药行业监管严格，其制造创新方法通常比较保守。人们认为引入新制造技术会延误监管机构的批准并带来商业挑战[9]。其他加工行业已全面拥抱第四次工业革命，唯独制药制造业尚在探索这一新行业范式的理念和原则是否适用于制药行业。它们需要一定程度的定制（ISPE, 2017）。然而，迫切需要引入创新技术解决方案，以实现复杂药物输送系统[11]。GEA[12]断言，组织应利用智能制造——第四次工业革命的一个子集——来挖掘其众多有益能力，例如对各种条件的敏捷适应。
 
+
+
+# 第四次工业革命（4IR）工厂的机器增强了无线连接和传感器
+
 第四次工业革命（4IR）工厂的机器增强了无线连接和传感器，连接到一个可视化整条生产线并自主做出分散决策的系统。各种物理和数字技术构成了 4IR，可概括为网络物理系统的连接性。Henstock[13]认为工业转型的目的是提高资源效率和生产力，以增强竞争力。控制不断攀升的成本以及对推动以患者为中心的日益认识，促使制药业采用 4IR 技术[14]。ISPE 指出，4IR 应经过定制采用，以支持行业现行的质量和法规指南。4IR 是制药质量要求的推动者。常规制造范式采用 QbT 体系，即在制造过程结束时根据批准的规格验证产品质量。然而，这已被证明对制药制造商产生了负面影响。
-
-
-
 
 制药领域的质量近期趋势是设计质量（QbD）和过程分析技术（PAT）。美国食品药品监督管理局（FDA）此后发起了 QbD 和 PAT，旨在在产品诞生前就将质量构建到产品中 [15]。与 QbT 不同，QbD 是一种现代制药质量方法，它通过深入理解产品与产品制造中涉及的所有组件和工艺的相容性，确保质量内嵌于产品之中 [16]。
 
@@ -2632,7 +2476,7 @@ DOI: [10.1201/9781003224075-6](http://doi.org/10.1201/9781003224075-6)
 
 与传统的制药批量制造系统不同，CPM 将单元操作集成到单一的连续生产线中。通过 PAT 引入关键物料属性（CMA）和关键工艺参数（CPP）等工艺运行数据的实时采集。随后利用这些数据在无人工干预的情况下智能控制生产线，以实现符合预期关键质量属性（CQAs）的产品。除其他益处外，CPM 因其前所未有的维持受控状态的能力、低停留时间和无中间持料步骤，在工艺质量和一致性方面带来了巨大改进 [9]。
 
-### 6.3.2 机器学习
+## 6.3.2 机器学习
 
 正如所强调的，CPM 需要机器来解放人类繁重的体力劳动，提供智力能力，甚至自主产生创新 [18]。Limaye 等人 [19] 断言，基于 QbD 的高效药品制造高度需要实时过程控制。在关于 CPM 试点工厂（从粉末到片剂）控制系统实施的研究中，文献 [19] 的作者对先进模型预测控制（MPC）系统、在线预测工具、PAT 和数据管理工具等各种工具进行了研究。
 
@@ -2642,7 +2486,7 @@ Lin [20] 绘制了一幅草图（**图 6.4**）以展示 ML 与不同知识学�
 
 **图 6.4** 机器学习与其他知识学科的关系。（转载自参考文献 [20]。）
 
-### 6.3.3 AI 在制药行业中的作用
+## 6.3.3 AI 在制药行业中的作用
 
 AI 有助于上市速度、响应能力、资源生产率、效率、定制化和商业模式创新等业务价值驱动因素 [21]。
 
@@ -2652,7 +2496,7 @@ AI 有助于上市速度、响应能力、资源生产率、效率、定制化�
 
 **图 6.5** 智能制造系统。（转载自参考文献 [22]。）
 
-#### 6.3.3.1 AI 在药物发现中的应用
+### 6.3.3.1 AI 在药物发现中的应用
 
 AI 已被发现对药物开发具有变革性影响，能对系统产生积极影响，并带来每年 1000 亿美元的市场规模。在大多数情况下，制药行业中所谓的 AI 主要是指 ML。ML 应用于药物开发的各个领域，从疾病识别、诊断、药物研究和制造试验、临床试验、流行病爆发预测等功能 [23]。
 
@@ -2662,11 +2506,9 @@ AI 已被发现对药物开发具有变革性影响，能对系统产生积极�
 
 制药公司还在药物警戒中使用 ML，利用真实世界数据（如索赔和电子健康数据）进行不良事件处理或收集监管情报 [23]。原本耗时的活动显著减少，从而实现了开发药物上市的整体速度提升。重要的是要注意，AI 通过开发最佳剂量确定、最佳工艺，降低开发成本，最重要的是缩短时间，提高了制药研发工作的运营效率。上市速度是关键业务价值驱动因素之一，利用 AI 可以实现这一点 [21]。
 
-#### 6.3.3.2 AI 在过程控制和质量保证中的应用
+### 6.3.3.2 AI 在过程控制和质量保证中的应用
 
 关于控制和 QA，智能规划、智能调度、智能控制和智能质量管理问题是工业 4.0 概念的关键组成部分。该概念涉及效率、盈利能力、合规性、质量和最终产品消费者——患者。
-
-
 
 智能规划涉及通过智能优化算法（即 ML 的基础）确定制造资源的最佳配置和资源执行。由此产生的工艺计划将确保资源的高效利用，最重要的是，在确保符合所有适用法规指南的前提下，将产品可能发生的交叉污染降至最低 [5]。其他演化方法，如遗传算法 (GA)、人工神经网络 (ANN) 和粒子群优化 (PSO)，已被实施以增强计算机辅助工艺规划系统的 AI 能力，从而提供更高效的系统 [26]。
 
@@ -2678,21 +2520,19 @@ AI 已被发现对药物开发具有变革性影响，能对系统产生积极�
 
 根据质量管理要求，ICH Q10 文件详细说明了制药公司如何开发和使用有效的监控和控制系统，以保证工艺性能和产品质量，确保工艺能力和持续适用性。QbD 和 PAT 作为第四代制药质量保证的主要支柱，已通过 AI 得以实现。
 
-### 6.3.4 AI 的采用，重点关注发达国家利用 ML 改进制药制造
+## 6.3.4 AI 的采用，重点关注发达国家利用 ML 改进制药制造
 
 制药制造始于药物本身的开发，AI 的采用在发达国家取得了巨大成就。凭借当今海量的生物和医疗数据以及先进的 ML 算法，药物的自动化设计正成为现实 [30]。ML 技术被用于成功实现高维噪声生物数据分析的自动化，例如通过分子对接进行药物候选物识别，预测并预选有趣的药物-靶点相互作用以供进一步研究 [30]。生成对抗网络 (GAN) 已被用于生成与蛋白质设计中特定 DNA 基序匹配的 DNA 序列。ML 已应用于自适应临床试验 (ACT) 的药物测试中。ML 算法已成功实施于毒性预测，DeepTrox 算法就是一个很好的例子 [31]。还开发了其他几种基于 AI 的药物发现计算工具。
 
 ML 和其他 AI 技术使 CPM 实施成为必要，因为它实现了 CPM 的关键概念，即 QbD 和 PAT。QbD 和 PAT 是制药制造的关键，因为它们保证药物的疗效和整体质量。QbD 确保在材料的设计和加工过程中将质量构建到产品中，而 PAT 引入了实时过程控制和实时质量保证的理念 [11]。除了效率和质量，CPM 还是一种敏捷灵活的制造技术，能够以减少原材料使用和损耗、减少停机时间、最小化人工或人工干预的方式，提供更一致、更可靠的片剂生产。
 
-#### 6.3.4.1 药物开发
+### 6.3.4.1 药物开发
 
 监督学习、无监督学习和强化学习均已应用于药物开发。deepDR 方法使用自编码器 (AE) 从异构药物数据中生成信息丰富的特征。然而，文献 [30] 的作者指出，必须对 DL 中神经网络的仔细训练和正则化给予重视，以确保学习特征的相关性。这促使发达国家选择半自动化药物发现，以缩短药物研发时间和降低成本。
 
-
-
 他们的研究[23]观察到，70%的受访者表示以某种方式使用了 AI，特别是在临床试验研究的患者选择和招募方面。同时也指出，AI 的使用存在一些挑战，如员工技能约占 55%、数据结构占 52%、预算限制约占 49%。然而，此后多家制药公司已投资基于 AI 的研发项目，并与 AI 机构建立了合作伙伴关系。武田药品工业（世界最大的制药公司之一）与 Recursion Pharmaceuticals（一家 AI 和 ML 公司）合作，最近宣布在罕见病的新型临床前化合物鉴定方面取得了成果[31]。其他一些知名制药公司的合作伙伴关系估计价值达 1 亿美元，以获取 AI 的竞争优势[13]。
 
-#### 6.3.4.2 制造控制与质量保证（QA）
+### 6.3.4.2 制造控制与质量保证（QA）
 
 与传统的 V 型混合机不同，在连续制造中，通常使用管式混合机。管式混合机是带有叶片轴的水平圆筒，该轴沿其中心轴线（叶轮）旋转。配方组分从一端加入，由叶轮诱导的颗粒轴向和径向运动沿圆筒向另一端移动，这决定了混合效果。Limaye 等人[19]开发了一个在 CPM 过程中实施控制系统的框架。在混合过程中，活性药物成分（API）通过先进的预测模型（MPC）和 NIR 传感器得到有效控制。图 6.6 展示了 CPM 闭环操作的典型 GUI。
 
@@ -2704,44 +2544,41 @@ API 浓度在混合机末端通过微型 NIR 传感器进行测量。在`Unscram
 
 实时监测和先进计算控制为实时产品质量保证铺平了道路，即药品的实时放行（RTR）[33]。在药品包装方面，例如将片剂装入泡罩，图像处理和光学缺陷识别已成功用于检测任何未填充或错误填充的泡罩包装。卷积神经网络等机器算法越来越多地用于质量保证中的分类任务[34]。ML 算法通过软传感器为 CPM 中的实时监测提供了“验证”机制。
 
-#### 6.3.4.3 GEA（比利时），一家应用 AI 和 ML 实现 CPM 的制药设备制造商
+### 6.3.4.3 GEA（比利时），一家应用 AI 和 ML 实现 CPM 的制药设备制造商
 
 来自比利时的领先制药设备制造商 GEA，通过在其全集成的从粉末到片剂 CPM 解决方案 ConsiGma 的设计中应用 AI 和 ML，为行业开创连续制造做出了更多贡献。与传统的批量生产线相比，ConsiGma 占用的制造设施空间体积不到 50%。这不仅有利于工厂的占地面积，而且由于暖通空调（HVAC）能耗降低，对整体运营成本也产生了积极影响。采用 AI 和 ML 使得神经模糊空气质量评估成为可能，从而为智能建筑（如制药智能工厂）产出了节能的暖通空调设计[35]。
 
 在利用 AI 赋能的 CPM 生产布洛芬的技术经济可行性研究中，文献[35]的作者观察到资本支出（CapEx）和运营支出（OpEx）均实现了正向成本节约。布洛芬及其替代药青蒿素的 CPM 分别显示了 53%至 71%、27%至 52.6%的总成本大幅降低。因此，CPM 在提升质量和供应响应速度等其他优势之外，还有效降低了药品生产成本。统计数据显示，82%采用 AI 制造技术的公司经历了效率提升，45%经历了客户满意度提升[37]。多家发达国家公司已采用 AI 和 ML 来改善其运营。
 
-## 6.4 方法与材料
+# 6.4 方法与材料
 
 本研究采用案例研究法，这是一种归纳研究技术。对案例收集的证据进行系统分析，以使模式和概念浮现。这些模式和概念随后被用于扩展现有理论并建立新理论[37]。在本例中，案例基于 PharmaCo (PVT) LTD，一家领先的本地制药制造公司，本研究旨在确定 ML 是否确实能提高本地生产线的运营效率，进而降低生产成本，同时提升产品质量和合规性。本研究旨在获得关于特定现实问题的具体且情境化的深入知识，即将 ML 和 AI 整体引入制药行业以实现运营效率的提升。因此，本节涉及所有相关方面，范围涵盖数据收集和处理方法/工具及编程。
 
-### 6.4.1 数据收集
+## 6.4.1 数据收集
 
 必须收集定量和定性数据。定量数据有助于系统描述 ML 采用的影响，并有助于验证研究，因为它产生了可复现的知识。本研究收集的定量数据包括在本地制造业实施 ML 的资本支出及其对生产成本的影响。本地制造业的定量数据包括现状：加工时间、产品产出、产品切换时间和维护数据。收集的定性数据有助于制定全面的技术转移计划，特别是在变更管理方面。定量数据主要通过主要来源（结构化访谈和问卷）从设备制造商处获取，获得了 ML 技术/机械规格和成本数据。
 
-### 6.4.2 编程
+## 6.4.2 编程
 
 数据被分为训练集和测试集，并对算法进行了验证。通过数学计算手动验证了模型，结果显示模型稳健。为模拟 ML 的效果（作为处理样本的一种方式），开发了一种算法并用于评估 ML 对制片机的影响。评估了内置于压片机中的 ML 能力的影响模拟。使用`Python`语言开发了一个 ML 算法。在其他语言和包中选择 Python，是基于其更高的生产率、简化的编程语法、代码可读性以及类英语的命令。
 
-### 6.4.3 观察与访谈
-
-
-
+## 6.4.3 观察与访谈
 
 在观察生产过程和访谈操作员期间，记录了用于编程机器学习（ML）算法的关键数据。记录在案的是，片剂重量主要受料斗向转塔下落的片剂粉末流速以及片剂压缩速度（转塔速度）的影响。通过在案例现场（PharmaCo）进行观察（既作为参与者也作为非参与者），记录了产品制造参数和成本数据。这是在对选定案例进行公司审计期间完成的。同时也探索了次级数据来源。在 PharmCo 审计期间，重点关注制造设备、工艺和设施布局、产品制造工艺细节、产品成本模型以及销售记录。
 
-### 6.4.4 统计工具
+## 6.4.4 统计工具
 
 已确定粉末流速、机器速度与片剂重量之间存在线性关系。因此，ML 算法利用该模型，采用线性回归算法来预测片剂重量 [39]。随后利用百分比偏差预测调整后的速度，从而实现目标产品重量。通过回归分析获得了模型（机器算法）的 R 平方值。
 
-### 6.4.5 数据可用性声明
+## 6.4.5 数据可用性声明
 
 支持本研究发现的数据包含在补充信息文件中。
 
-## 6.5 结果与讨论
+# 6.5 结果与讨论
 
 本节由不同受访者和观察获得的结果组成，涵盖了布洛芬（作为典型药物示例）制造过程中的关键问题。同时也对结果进行了分析，并以多种格式呈现以便快速分析。在制造模拟过程中，考虑了各种场景并记录了行为变化。随后据此对结果进行了讨论。
 
-### 6.5.1 与董事总经理的访谈
+## 6.5.1 与董事总经理的访谈
 
 访谈的主要目的是了解高层管理的观点和对采用 ML 的支持，因为这对于制定技术转让计划或路线图至关重要。董事总经理（MD）的回答显示，他热衷于尽可能降低生产成本。对严格遵守产品规格的要求表明了优化制造的必要性。本研究旨在将劳动力成本降低 50%，从而显著降低总生产成本。成本和产品销售成本的下降将使组织能够抵御进口产品的竞争。这将增加市场份额，这是董事总经理期盼并渴望投资的，正如他们所说，数字不会撒谎。从 MD 的参与中得到的结论是，如果 ML 方法能增加他的市场份额，他愿意投资，这对于采用本地产业方法的便利性来说是一个额外的优势，如图 6.7 所示。
 
@@ -2749,7 +2586,7 @@ API 浓度在混合机末端通过微型 NIR 传感器进行测量。在`Unscram
 
 **图 6.7** 生产经理回答。
 
-### 6.5.2 给生产经理的问卷
+## 6.5.2 给生产经理的问卷
 
 生产经理的回答如图 6.7 所示。
 
@@ -2758,11 +2595,18 @@ API 浓度在混合机末端通过微型 NIR 传感器进行测量。在`Unscram
 *   **Q1**：您与运营效率相关的 KPI 是什么？
 *   **Q2**：从我们最初的讨论中，您对 ML 的理解是什么？
 *   **Q3**：您如何评价贵工厂 AI 采用的水平？ML 呢？描述您最不成功和最成功的采用实例。描述您最不成功和最成功的采用实例。
-*   **Q4**：您从具备 ML 能力的机器中获得了什么收益？
-*   **Q5**：您在这种程度的 ML 应用中面临什么挑战？
-*   **Q6**：您是否需要更多具备 ML 能力的机器？您期望获得什么收益？
-    讨论劳动力、产品产量、物料使用和产品质量等领域。
-*   **Q7**：如果片剂制造线具备 ML 能力，您认为哪些功能对您的运营至关重要？
+
+
+
+### Q4：您从具备 ML 能力的机器中获得了什么收益？
+
+### Q5：您在这种程度的 ML 应用中面临什么挑战？
+
+### Q6：您是否需要更多具备 ML 能力的机器？您期望获得什么收益？
+
+讨论劳动力、产品产量、物料使用和产品质量等领域。
+
+### Q7：如果片剂制造线具备 ML 能力，您认为哪些功能对您的运营至关重要？
 
 生产经理如图 6.7 所示回答了问卷。每个问题都被赋予了权重，并对每个回答进行了评分，以量化采用 ML 的必要性并评估行业的准备情况。93%（平均值）的高分表明 ML 是提高本地制药行业生产力的解决方案。讨论显示，片剂制造中需要解决的关键领域是降低劳动力成本、改善片剂重量变异和物料使用。这与 MD 降低生产成本以促进销售和扩大市场份额的愿景一致。
 
@@ -2782,13 +2626,9 @@ API 浓度在混合机末端通过微型 NIR 传感器进行测量。在`Unscram
 
 ![图 6.8 PharmaCo 的产品成本核算。](img/Fig06_08.jpg)
 
-
-
-
-
 #### 6.5.4.2 用于片剂压片机片重控制的机器学习算法
 
-该算法使用 `Python` 编程语言开发。ML 算法利用了产品属性、机器参数和产品输出之间的线性关系。图 6.10 展示了这种关系。测得的产品流速作为 `CMA` 输入程序。相比之下，机器转速将作为 `CPP`，而片剂重量则作为产品的 `CQA`，如 图 6.9 所示。
+该算法使用 `Python` 编程语言开发。ML 算法利用了产品属性、机器参数和产品输出之间的线性关系。图 6.10 展示了这种关系。测得的产品流速作为 `CMA` 输入程序。相比之下，机器转速将作为 `CPP`，而片剂重量则作为产品的 `CQA`，如图 6.9 所示。
 
 ![FIGURE 6.9 Linear relationship between the CMA, CCP, and CQA for Ibuprofen 400 mg tablets.](img/Fig06_09.jpg)
 
@@ -2804,7 +2644,7 @@ API 浓度在混合机末端通过微型 NIR 传感器进行测量。在`Unscram
 
 根据代码和输出（图 6.10 和 6.11），当测得流速（`FLOW = 5`）与意图值匹配时，程序返回目标转速 60 RPM，并在输出面板（`MACHINE SPEED STATUS`）中显示详细信息。因此，预测重量与 15 g 的意图值相符。这是片剂重量所需的控制标准。
 
-结果如 图 6.11 所示。
+结果如图 6.11 所示。
 
 ![FIGURE 6.11 Scenario 1: When the measured flow rate is equal to the intent.](img/Fig06_11.jpg)
 
@@ -2848,11 +2688,11 @@ API 浓度在混合机末端通过微型 NIR 传感器进行测量。在`Unscram
 
 **图 6.17** 场景 4：测得流速超出可接受产品流速范围时。
 
-此类超范围的流速数据显示粉末 `CMA` 存在显著偏差，或发生机器故障（如粉末给料路径堵塞）；因此必须停止操作。在这种情况下，算法返回错误代码并停止生产，以便操作员处理问题。正如 图 6.16 所示，这是片剂重量所需的控制标准。
+此类超范围的流速数据显示粉末 `CMA` 存在显著偏差，或发生机器故障（如粉末给料路径堵塞）；因此必须停止操作。在这种情况下，算法返回错误代码并停止生产，以便操作员处理问题。正如图 6.16 所示，这是片剂重量所需的控制标准。
 
 ### 6.5.5 机器学习算法在片剂压片机上的应用影响
 
-这些收益对产品价格的影响以图形方式表示，如 图 6.18 所示。
+这些收益对产品价格的影响以图形方式表示，如图 6.18 所示。
 
 ![FIGURE 6.18 Effect of ML adoption on product pricing.](img/Fig06_18.jpg)
 
@@ -2863,9 +2703,6 @@ API 浓度在混合机末端通过微型 NIR 传感器进行测量。在`Unscram
 ## 6.6 结论与建议
 
 ### 6.6.1 结论
-
-
-
 
 ML 算法被证明足以控制一台制片机。正如结果所述，在改变流速时，引入数据以预测相应的机器转速，从而生产出符合预期重量的药片，置信度至少为 99.8%（根据线性模型计算得出）。除了质量提升的益处外，ML 算法还使人工成本显著降低了 50%，材料浪费最多减少 4%（约为初始浪费的 80%），以及设置时间缩短了 13%。因此，采用 ML 可使总生产成本降低多达 19%，这意味着本地生产药片的价格降低 19%。以布洛芬 400 mg 药片（其价格比进口药片高 10%）为例，可以得出结论：ML 可以改进制药机械，使本地产业具备足够的竞争力，从而在本地和区域市场扩大市场份额。通常情况下，通过不同程度的 ML 采用并管理 ML 实施成本，可以达到盈亏平衡点，即本地产业实现最低程度的 ML 采用，在将生产成本至少降低 10% 的同时，还能提升质量和法规合规性。PharmaCo 代表对引入 ML 持积极态度，使技术转移顺利进行；操作员（将在职业上受益）和高层管理人员（最终将为组织实现利润增长）几乎没有任何抵触情绪。结果使用各种统计工具进行处理和分析，并得出了归纳性结论。为 PharmaCo 制定了一份技术转移计划，其他本地制药制造公司也可采用。采用如本研究所述的 ML 能力大约需要 735 美元。还值得注意的是，该研究是作为制药工作组（PWG）提出的问题的解决方案而产生的。本地制造在其生产机器上存在运营效率问题。
 
@@ -2895,94 +2732,91 @@ ML 算法被证明足以控制一台制片机。正如结果所述，在改变�
 
 10.  Fedorov, A., Goloschchapov, E., Ipatov, O., Potekhin, V., Shkodyrev, V., & Zobnin, S. (2015). Aspects of smart manufacturing via agent-based approach. Procedia Engineering, 100(January), 1572–1581. Doi:[10.1016/j.proeng.2015.01.530](http://doi.org/10.1016/j.proeng.2015.01.530).
 
-11.  Forum, W. E. (2018). The next economic growth engine: scaling fourth industrial revolution technologies in production. In World Economic Forum (Issue January). [`www.weforum.org/whitepapers/the-next-economic-growth-engine-scaling-fourth-industrial-revolution-technologies-in-production%0Ahttp://www3.weforum.org/docs/WEF\_Technology\_and\_Innovation\_The\_Next\_Economic\_Growth\_Engine.pdf`](https://www.weforum.org).
+11.  Forum, W. E. (2018). The next economic growth engine: scaling fourth industrial revolution technologies in production. In World Economic Forum (Issue January). [`www.weforum.org/whitepapers/the-next-economic-growth-engine-scaling-fourth-industrial-revolution-technologies-in-production%0Ahttp://www3.weforum.org/docs/WEF_Technology_and_Innovation_The_Next_Economic_Growth_Engine.pdf`](https://www.weforum.org).
 
-12.  GEA, B. (2019). Continuous Processing Solutions for Oral Solid Dosage Forms, p. 42. Available Online: [`www.gea.com/en/binaries/Pharmaceutical-Continuous-Processing-for-oral-solid-dosage-forms\_tcm11-59766.pdf`](https://www.gea.com)
-
-13.  Henstock, P. V. (2019). Trends in pharmacological sciences science and society Artificial Intelligence for pharma : time for internal investment trends in pharmacological sciences. Trends in Pharmacological Sciences, 40(8), 543–546. Doi:[10.1016/j.tips.2019.05.003](http://doi.org/10.1016/j.tips.2019.05.003).
-
-14.  Ibrić, S., Djurić, Z., Parojčić, J., & Petrović, J. (2009). Artificial Intelligence in pharmaceutical product formulation: neural computing. Chemical Industry and Chemical Engineering Quarterly, 15(4), 227–236. Doi:[10.2298/CICEQ0904227I](http://doi.org/10.2298/CICEQ0904227I).
-
-15.  IPA, T. I. P. A. (2019, January). Pharma times. Pharma Times, 51(01), 56.
-
-16.  ISPE. (2017). 2017 ISPE Europe Pharma 4.0TM Conference\_ISPE\_International Society for Pharmaceutical Engineering.
-
-17.  Jolliffe, H. G., & Gerogiorgis, D. I. (2016). Plantwide design and economic evaluation of two Continuous Pharmaceutical Manufacturing (CPM) cases: ibuprofen and artemisinin. Computers and Chemical Engineering, 91, 269–288. Doi:[10.1016/j.compchemeng.2016.04.005](http://doi.org/10.1016/j.compchemeng.2016.04.005).
-
-18.  Lamberti, M. J., Wilkinson, M., Donzanti, B. A., Wohlhieter, G. E., Parikh, S., Wilkins, R. G., & Getz, K. (2019). A study on the application and use of Artificial Intelligence to support drug development. Clinical Therapeutics, 41(8), 1414–1426. Doi:[10.1016/j.clinthera.2019.05.018](http://doi.org/10.1016/j.clinthera.2019.05.018).
-
-19.  Limaye, R., Kumar, L., & Limaye, N. (2018). Fourth generation technologies in pharmaceuticals-revolutionizing healthcare. Journal of Systems Biology and Proteome Research, 2(1), 3–7. [`www.alliedacademies.org/systems-biology-proteome-research/`](http://www.alliedacademies.org).
-
+12.  GEA, B. (2019). Continuous Processing Solutions for Oral Solid Dosage Forms, p. 42. Available Online: [`www.gea.com/en/binaries/Pharmaceutical-Continuous-Processing-for-oral-solid-dosage-forms_tcm11-59766.pdf`](https://www.gea.com)
 
 
 
 ## 参考文献
 
-20.  Lin, Y. J., Wei, S. H., & Huang, C. Y. (2019). 智能制造控制系统：智能工厂的核心。 *Procedia Manufacturing*, 39(2019), 389–397. Doi:[10.1016/j.promfg.2020.01.382](http://doi.org/10.1016/j.promfg.2020.01.382).
+13. Henstock, P. V. (2019). Trends in pharmacological sciences science and society Artificial Intelligence for pharma: time for internal investment trends in pharmacological sciences. *Trends in Pharmacological Sciences*, 40(8), 543–546. Doi: [10.1016/j.tips.2019.05.003](http://doi.org/10.1016/j.tips.2019.05.003).
 
-21.  Lu, Y., & Ju, F. (2017). 基于网络物理制造服务 (CPMS) 的智能制造系统。 *IFAC-PapersOnLine*, 50(1), 15883–15889. Doi:[10.1016/j.ifacol.2017.08.2349](http://doi.org/10.1016/j.ifacol.2017.08.2349).
+14. Ibrić, S., Djurić, Z., Parojčić, J., & Petrović, J. (2009). Artificial Intelligence in pharmaceutical product formulation: neural computing. *Chemical Industry and Chemical Engineering Quarterly*, 15(4), 227–236. Doi: [10.2298/CICEQ0904227I](http://doi.org/10.2298/CICEQ0904227I).
 
-22.  Mak, K. K., & Pichika, M. R. (2019). 药物开发中的人工智能：现状与未来前景。 *Drug Discovery Today*, 24(3), 773–780. Doi:[10.1016/j.drudis.2018.11.014](http://doi.org/10.1016/j.drudis.2018.11.014).
+15. IPA, T. I. P. A. (2019, January). Pharma times. *Pharma Times*, 51(01), 56.
 
-23.  Mészáros, L. A., Galata, D. L., Madarász, L., Köte, Á., Csorba, K., Dávid, Á. Z., Domokos, A., Szabó, E., Nagy, B., Marosi, G., Farkas, A., & Nagy, Z. K. (2020, 12 月). 数字 UV/VIS 成像：一种用于测定片剂压碎强度、药物含量和粒径分布的快速 PAT 工具。 *International Journal of Pharmaceutics*, 578, 119174. Doi:[10.1016/j.ijpharm.2020.119174](http://doi.org/10.1016/j.ijpharm.2020.119174).
+16. ISPE. (2017). 2017 ISPE Europe Pharma 4.0TM Conference_ISPE_International Society for Pharmaceutical Engineering.
 
-24.  Meziane, F., Vadera, S., Kobbacy, K., & Proudlove, N. (2000). 制造业中的智能系统：当前发展与未来前景。 *Integrated Manufacturing Systems*, 11(3), 218–238. Doi:[10.1108/09576060010326221](http://doi.org/10.1108/09576060010326221).
+17. Jolliffe, H. G., & Gerogiorgis, D. I. (2016). Plantwide design and economic evaluation of two Continuous Pharmaceutical Manufacturing (CPM) cases: ibuprofen and artemisinin. *Computers and Chemical Engineering*, 91, 269–288. Doi: [10.1016/j.compchemeng.2016.04.005](http://doi.org/10.1016/j.compchemeng.2016.04.005).
 
-25.  Mohammed, M., Khan, M. B., & Bashie, E. B. M. (2016). 机器学习：算法与应用。 在 *Machine Learning: Algorithms and Applications* 中 (Issue December)。 Doi:[10.1201/9781315371658](http://doi.org/10.1201/9781315371658).
+18. Lamberti, M. J., Wilkinson, M., Donzanti, B. A., Wohlhieter, G. E., Parikh, S., Wilkins, R. G., & Getz, K. (2019). A study on the application and use of Artificial Intelligence to support drug development. *Clinical Therapeutics*, 41(8), 1414–1426. Doi: [10.1016/j.clinthera.2019.05.018](http://doi.org/10.1016/j.clinthera.2019.05.018).
 
-26.  Peng, T., Huang, Y., Mei, L., Wu, L., Chen, L., Pan, X., & Wu, C. (2015). ScienceDirect 过程分析技术在薄膜包衣中应用的研究进展。 *Asian Journal of Pharmaceutical Sciences*, 10(3), 176–185. Doi:[10.1016/j.ajps.2014.10.002](http://doi.org/10.1016/j.ajps.2014.10.002).
+19. Limaye, R., Kumar, L., & Limaye, N. (2018). Fourth generation technologies in pharmaceuticals-revolutionizing healthcare. *Journal of Systems Biology and Proteome Research*, 2(1), 3–7. [`www.alliedacademies.org/systems-biology-proteome-research/`](http://www.alliedacademies.org).
 
-27.  Rantanen, J., & Khinast, J. (2015). 药物制造科学的未来。 *Journal of Pharmaceutical Sciences*, 104(11), 3612–3638. Doi:[10.1002/jps.24594](http://doi.org/10.1002/jps.24594).
+20. Lin, Y. J., Wei, S. H., & Huang, C. Y. (2019). 智能制造控制系统：智能工厂的核心。 *Procedia Manufacturing*, 39(2019), 389–397. Doi: [10.1016/j.promfg.2020.01.382](http://doi.org/10.1016/j.promfg.2020.01.382).
 
-28.  Réda, C., Kaufmann, E., & Delahaye-Duriez, A. (2020). 机器学习在药物开发中的应用。 *Computational and Structural Biotechnology Journal*, 18, 241–252. Doi:[10.1016/j.csbj.2019.12.006](http://doi.org/10.1016/j.csbj.2019.12.006).
+21. Lu, Y., & Ju, F. (2017). 基于网络物理制造服务 (CPMS) 的智能制造系统。 *IFAC-PapersOnLine*, 50(1), 15883–15889. Doi: [10.1016/j.ifacol.2017.08.2349](http://doi.org/10.1016/j.ifacol.2017.08.2349).
 
-29.  Rene, L. (2014). 东非和南部非洲卫生公平区域网络：东非和南部非洲的药品生产与采购及南南合作的作用。 ISBN: 978-0-7974-6044-7.
+22. Mak, K. K., & Pichika, M. R. (2019). 药物开发中的人工智能：现状与未来前景。 *Drug Discovery Today*, 24(3), 773–780. Doi: [10.1016/j.drudis.2018.11.014](http://doi.org/10.1016/j.drudis.2018.11.014).
 
-30.  Saunders, M., Lewis, P. and Thornhill, A. (2007). *Research Methods for Business Students*。 第 4 版，Financial Times Prentice Hall，Edinburgh Gate，Harlow。
+23. Mészáros, L. A., Galata, D. L., Madarász, L., Köte, Á., Csorba, K., Dávid, Á. Z., Domokos, A., Szabó, E., Nagy, B., Marosi, G., Farkas, A., & Nagy, Z. K. (2020, 12 月). 数字 UV/VIS 成像：一种用于测定片剂压碎强度、药物含量和粒径分布的快速 PAT 工具。 *International Journal of Pharmaceutics*, 578, 119174. Doi: [10.1016/j.ijpharm.2020.119174](http://doi.org/10.1016/j.ijpharm.2020.119174).
 
-31.  Schreiber, M., Klöber-Koch, J., Bömelburg-Zacharias, J., Braunreuther, S., & Reinhart, G. (2020). 基于机器学习的自动化质量保证作为智能云服务。 *Procedia CIRP*, 86, 185–191. Doi:[10.1016/j.procir.2020.01.034](http://doi.org/10.1016/j.procir.2020.01.034).
+24. Meziane, F., Vadera, S., Kobbacy, K., & Proudlove, N. (2000). 制造业中的智能系统：当前发展与未来前景。 *Integrated Manufacturing Systems*, 11(3), 218–238. Doi: [10.1108/09576060010326221](http://doi.org/10.1108/09576060010326221).
 
-32.  Schweidtmann, A. M., Clayton, A. D., Holmes, N., Bradford, E., Bourne, R. A., & Lapkin, A. A. (2018). 机器学习遇上连续流化学：面向多目标帕累托前沿的自动化优化。 *Chemical Engineering Journal*, 352(April), 277–282. Doi:[10.1016/j.cej.2018.07.031](http://doi.org/10.1016/j.cej.2018.07.031).
+25. Mohammed, M., Khan, M. B., & Bashie, E. B. M. (2016). 机器学习：算法与应用。 在 *Machine Learning: Algorithms and Applications* 中 (Issue December)。 Doi: [10.1201/9781315371658](http://doi.org/10.1201/9781315371658).
 
-33.  Scott, B., & Wilcock, A. (2006). 制药行业中的过程分析技术：持续改进的工具箱。 *PDA Journal of Pharmaceutical Science and Technology*, 60(1), 17–53.
+26. Peng, T., Huang, Y., Mei, L., Wu, L., Chen, L., Pan, X., & Wu, C. (2015). ScienceDirect 过程分析技术在薄膜包衣中应用的研究进展。 *Asian Journal of Pharmaceutical Sciences*, 10(3), 176–185. Doi: [10.1016/j.ajps.2014.10.002](http://doi.org/10.1016/j.ajps.2014.10.002).
 
-34.  Shalev-Shwartz, S., & Ben-David, S. (2013). 理解机器学习：从理论到算法。 *Understanding Machine Learning: From Theory to Algorithms*, 9781107057. Doi:[10.1017/CBO9781107298019](http://doi.org/10.1017/CBO9781107298019).
+27. Rantanen, J., & Khinast, J. (2015). 药物制造科学的未来。 *Journal of Pharmaceutical Sciences*, 104(11), 3612–3638. Doi: [10.1002/jps.24594](http://doi.org/10.1002/jps.24594).
 
-35.  Shang, C., & You, F. (2019). 面向智能过程制造的数据分析与机器学习：大数据时代的最新进展与展望。 *Engineering*, 5(6), 1010–1016. Doi:[10.1016/j.eng.2019.01.019](http://doi.org/10.1016/j.eng.2019.01.019).
+28. Réda, C., Kaufmann, E., & Delahaye-Duriez, A. (2020). 机器学习在药物开发中的应用。 *Computational and Structural Biotechnology Journal*, 18, 241–252. Doi: [10.1016/j.csbj.2019.12.006](http://doi.org/10.1016/j.csbj.2019.12.006).
 
-36.  Singh, R. (2018a). 连续药物制造工艺的自动化。 *Computer Aided Chemical Engineering*, 41, 431–446. Doi:[10.1016/B978-0-444-63963-9.00017-8](http://doi.org/10.1016/B978-0-444-63963-9.00017-8).
+29. Rene, L. (2014). 东非和南部非洲卫生公平区域网络：东非和南部非洲的药品生产与采购及南南合作的作用。 ISBN: 978-0-7974-6044-7.
 
-37.  Singh, R. (2018b). 将控制系统应用于连续药物制造中试工厂（从粉末到片剂）。 *Computer Aided Chemical Engineering*, 41, 447–469. Doi:[10.1016/B978-0-444-63963-9.00018-X](http://doi.org/10.1016/B978-0-444-63963-9.00018-X).
+30. Saunders, M., Lewis, P. and Thornhill, A. (2007). *Research Methods for Business Students*。 第 4 版，Financial Times Prentice Hall，Edinburgh Gate，Harlow。
 
-38.  Stuart, O., Schweitzer, Z., & Lu, J. (2018). 药物经济学与政策：视角、承诺与问题。 Doi: [10.1093/oso/9780190623784.001.0001](http://doi.org/10.1093/oso/9780190623784.001.0001).
+31. Schreiber, M., Klöber-Koch, J., Bömelburg-Zacharias, J., Braunreuther, S., & Reinhart, G. (2020). 基于机器学习的自动化质量保证作为智能云服务。 *Procedia CIRP*, 86, 185–191. Doi: [10.1016/j.procir.2020.01.034](http://doi.org/10.1016/j.procir.2020.01.034).
 
-39.  Su, Q., Ganesh, S., Moreno, M., Bommireddy, Y., Gonzalez, M., Reklaitis, G. V., & Nagy, Z. K. (2019). 关于药物连续制造中“质量源于控制” (QbC) 的展望。 *Computers and Chemical Engineering*, 125, 216–231. Doi:[10.1016/j.compchemeng.2019.03.001](http://doi.org/10.1016/j.compchemeng.2019.03.001).
+32. Schweidtmann, A. M., Clayton, A. D., Holmes, N., Bradford, E., Bourne, R. A., & Lapkin, A. A. (2018). 机器学习遇上连续流化学：面向多目标帕累托前沿的自动化优化。 *Chemical Engineering Journal*, 352(April), 277–282. Doi: [10.1016/j.cej.2018.07.031](http://doi.org/10.1016/j.cej.2018.07.031).
 
-40.  Suresh, S., Roy, S., & Ahuja, B. K. (2015). 设计质量：概述。 *Indian Drugs*, 52(2), 5–11.
+33. Scott, B., & Wilcock, A. (2006). 制药行业中的过程分析技术：持续改进的工具箱。 *PDA Journal of Pharmaceutical Science and Technology*, 60(1), 17–53.
 
-41.  Tao, F., Qi, Q., Liu, A., & Kusiak, A. (2018). 数据驱动智能制造。 *Journal of Manufacturing Systems*, 48, 157–169. Doi:[10.1016/j.jmsy.2018.01.006](http://doi.org/10.1016/j.jmsy.2018.01.006).
+34. Shalev-Shwartz, S., & Ben-David, S. (2013). 理解机器学习：从理论到算法。 *Understanding Machine Learning: From Theory to Algorithms*, 9781107057. Doi: [10.1017/CBO9781107298019](http://doi.org/10.1017/CBO9781107298019).
 
-42.  U.S. Department of Health and Human Services. (2009). 给行业的指导原则。Q10 药品质量体系。食品药品监督管理局，药物评价与研究中心，生物制品评价与研究中心。人用药品技术要求国际协调会议 (ICH)，4 月，1–22。 [`www.fda.gov/downloads/Drugs/.../Guidances/ucm073517.pdf`](http://www.fda.gov).
+35. Shang, C., & You, F. (2019). 面向智能过程制造的数据分析与机器学习：大数据时代的最新进展与展望。 *Engineering*, 5(6), 1010–1016. Doi: [10.1016/j.eng.2019.01.019](http://doi.org/10.1016/j.eng.2019.01.019).
 
-43.  UNIDO. (2017). 津巴布韦药品制造业部门发展战略。在线获取： [`tii.unido.org/sites/default/files/publications/Zimbabwe%20Pharma%20Strategy%20ebook.pdf`](https://tii.unido.org).
+36. Singh, R. (2018a). 连续药物制造工艺的自动化。 *Computer Aided Chemical Engineering*, 41, 431–446. Doi: [10.1016/B978-0-444-63963-9.00017-8](http://doi.org/10.1016/B978-0-444-63963-9.00017-8).
 
-44.  Ustundag, Alp & Cevikcan, Emre. (2018). *Industry 4.0: Managing The Digital Transformation*。 10.1007/978-3-319-57870-5.
+37. Singh, R. (2018b). 将控制系统应用于连续药物制造中试工厂（从粉末到片剂）。 *Computer Aided Chemical Engineering*, 41, 447–469. Doi: [10.1016/B978-0-444-63963-9.00018-X](http://doi.org/10.1016/B978-0-444-63963-9.00018-X).
 
-45.  Wang, J., Ma, Y., Zhang, L., Gao, R. X., & Wu, D. (2018). 面向智能制造的深度学习：方法与应用。 *Journal of Manufacturing Systems*, 48, 144–156. Doi:[10.1016/j.jmsy.2018.01.003](http://doi.org/10.1016/j.jmsy.2018.01.003).
+38. Stuart, O., Schweitzer, Z., & Lu, J. (2018). 药物经济学与政策：视角、承诺与问题。 Doi: [10.1093/oso/9780190623784.001.0001](http://doi.org/10.1093/oso/9780190623784.001.0001).
 
-46.  Watts, D. C., & Hussain, A. S. (2005, 3 月). 过程分析技术。 在 *Handbook of Pharmaceutical Granulation Technology* 中，第 2 版，545–553。 Doi:[10.1201/b15426-14](http://doi.org/10.1201/b15426-14).
+39. Su, Q., Ganesh, S., Moreno, M., Bommireddy, Y., Gonzalez, M., Reklaitis, G. V., & Nagy, Z. K. (2019). 关于药物连续制造中“质量源于控制” (QbC) 的展望。 *Computers and Chemical Engineering*, 125, 216–231. Doi: [10.1016/j.compchemeng.2019.03.001](http://doi.org/10.1016/j.compchemeng.2019.03.001).
 
-47.  WHO. (2011). 附件 2 药品良好生产规范 (Issue 961)。
+40. Suresh, S., Roy, S., & Ahuja, B. K. (2015). 设计质量：概述。 *Indian Drugs*, 52(2), 5–11.
 
-48.  WHO Expert Committee on Specifications for Pharmaceutical Preparations. 第五十次报告。 *World Health Organization Technical Report Series*. 2016;(996): 1-358, back cover. PMID: 27514184.
+41. Tao, F., Qi, Q., Liu, A., & Kusiak, A. (2018). 数据驱动智能制造。 *Journal of Manufacturing Systems*, 48, 157–169. Doi: [10.1016/j.jmsy.2018.01.006](http://doi.org/10.1016/j.jmsy.2018.01.006).
 
-49.  Wong, Y. K., Yang, J., & He, Y. (2020). 使用氯喹治疗 COVID-19 需谨慎并明确界定。 *The Lancet Rheumatology*, 9913(20), 30093. Doi:[10.1016/S2665-9913(20)30093-X](http://doi.org/10.1016/S2665-9913(20)30093-X).
+42. U.S. Department of Health and Human Services. (2009). 给行业的指导原则。Q10 药品质量体系。食品药品监督管理局，药物评价与研究中心，生物制品评价与研究中心。人用药品技术要求国际协调会议 (ICH)，4 月，1–22。 [`www.fda.gov/downloads/Drugs/.../Guidances/ucm073517.pdf`](http://www.fda.gov).
+
+43. UNIDO. (2017). 津巴布韦药品制造业部门发展战略。在线获取： [`tii.unido.org/sites/default/files/publications/Zimbabwe%20Pharma%20Strategy%20ebook.pdf`](https://tii.unido.org).
+
+44. Ustundag, Alp & Cevikcan, Emre. (2018). *Industry 4.0: Managing The Digital Transformation*。 10.1007/978-3-319-57870-5.
+
+45. Wang, J., Ma, Y., Zhang, L., Gao, R. X., & Wu, D. (2018). 面向智能制造的深度学习：方法与应用。 *Journal of Manufacturing Systems*, 48, 144–156. Doi: [10.1016/j.jmsy.2018.01.003](http://doi.org/10.1016/j.jmsy.2018.01.003).
+
+46. Watts, D. C., & Hussain, A. S. (2005, 3 月). 过程分析技术。 在 *Handbook of Pharmaceutical Granulation Technology* 中，第 2 版，545–553。 Doi: [10.1201/b15426-14](http://doi.org/10.1201/b15426-14).
+
+47. WHO. (2011). 附件 2 药品良好生产规范 (Issue 961)。
+
+48. WHO Expert Committee on Specifications for Pharmaceutical Preparations. 第五十次报告。 *World Health Organization Technical Report Series*. 2016;(996): 1-358, back cover. PMID: 27514184.
+
+49. Wong, Y. K., Yang, J., & He, Y. (2020). 使用氯喹治疗 COVID-19 需谨慎并明确界定。 *The Lancet Rheumatology*, 9913(20), 30093. Doi: [10.1016/S2665-9913(20)30093-X](http://doi.org/10.1016/S2665-9913(20)30093-X).
+
+50. Wood, C., Alwati, A., Halsey, S., Gough, T., Brown, E., Kelly, A., & Paradkar, A. (2016). Journal of pharmaceutical and biomedical analysis near infra red spectroscopy as a multivariate process analytical tool for predicting pharmaceutical co-crystal concentration. *Journal of Pharmaceutical and Biomedical Analysis*, 129, 172–181. Doi: [10.1016/j.jpba.2016.06.010](http://doi.org/10.1016/j.jpba.2016.06.010).
 
 
-
-
-
-# 50. Wood, C., Alwati, A., Halsey, S., Gough, T., Brown, E., Kelly, A., & Paradkar, A. (2016). Journal of pharmaceutical and biomedical analysis near infra red spectroscopy as a multivariate process analytical tool for predicting pharmaceutical co-crystal concentration. Journal of Pharmaceutical and Biomedical Analysis, 129, 172–181. Doi: [10.1016/j.jpba.2016.06.010](http://doi.org/10.1016/j.jpba.2016.06.010).
 
 # 51. World Health Organization, A. (2020). COVID-19: Situation Update for the WHO African Region. [`apps.who.int/iris/bitstream/handle/10665/331587/SITREP_COVID-19_WHOAFRO_20200325-eng.pdf`](https://apps.who.int).
 
@@ -3000,7 +2834,7 @@ DOI: [10.1201/9781003224075-7](http://doi.org/10.1201/9781003224075-7)
 
 血压（BP）是我们整体健康的代表性参数，也是疾病的最佳预测指标之一。在全球范围内，高血压导致 750 万人死亡，约占总死亡人数的 12.8% [[1]](#C_012_c7.xhtml#r7_1)。高血压加剧了冠心病、短暂性脑缺血发作（TIA）、痴呆（脑部疾病）、肾脏损害（肾病）、出血性卒中以及多种慢性疾病的主要风险 [[2]](#C_012_c7.xhtml#r7_2)。低血压则使严重健康状况（如步履蹒跚、头晕、晕厥等）的风险增加。为了有效控制血压，医疗专业人员需要一个持续的健康监测系统。本研究旨在通过生物特征参数——即体重指数（BMI）、心率（HR）和年龄——来估算收缩压（SBP）和舒张压（DBP），以实现早期检测和诊断。总体而言，开发的模型促进了即时检测（POC）应用的发展。
 
-本文其余部分安排如下。第 7.2 节 介绍了与血压研究领域相关的文献综述。在 第 7.3 节 中，利用一些生物特征因素建立了估算 SBP 和 DBP 的模型。这些参数与血压的相关性也通过统计分析进行了展示。第 7.4 节 计算了误差估计，并使用 *t* 检验验证了结果。最后，开发了一款智能手机应用程序用于预测 SBP 和 DBP 数值。结论性意见见 第 7.5 节。
+本文其余部分安排如下。第 7.2 节介绍了与血压研究领域相关的文献综述。在第 7.3 节中，利用一些生物特征因素建立了估算 SBP 和 DBP 的模型。这些参数与血压的相关性也通过统计分析进行了展示。第 7.4 节计算了误差估计，并使用 `t` 检验验证了结果。最后，开发了一款智能手机应用程序用于预测 SBP 和 DBP 数值。结论性意见见第 7.5 节。
 
 ## 7.2 文献综述
 
@@ -3008,7 +2842,7 @@ DOI: [10.1201/9781003224075-7](http://doi.org/10.1201/9781003224075-7)
 
 ## 7.3 提出的方法
 
-提出方法的框图如 图 7.1 所示，描述了从数据收集到血压预测的整个过程。
+提出方法的框图如图 7.1 所示，描述了从数据收集到血压预测的整个过程。
 
 ![图 7.1 提出方法的框图。](img/Fig07_01.jpg)
 
@@ -3016,21 +2850,17 @@ DOI: [10.1201/9781003224075-7](http://doi.org/10.1201/9781003224075-7)
 
 ### 7.3.1 数据收集
 
-为进行本实验，从受试者处收集了血压、心率、年龄、身高和体重。受试者表面健康，在该年龄段无严重临床病症，且无慢性疾病。受试者在仰卧休息状态下，由受过训练的人员通过听诊收缩期和舒张期 Korotkoff 音测量血压。在左侧肱动脉处，血压测量袖带试图阻断动脉。在经验丰富的专业人员协助下，使用 `Rossmax GB102 Aneroid Blood Pressure monitoring device`（Rossmax GB102 液柱血压监测装置）测量血压。BMI 由体重（kg）与身高平方（m²）的比值计算得出。
+为进行本实验，从受试者处收集了血压、心率、年龄、身高和体重。受试者表面健康，在该年龄段无严重临床病症，且无慢性疾病。受试者在仰卧休息状态下，由受过训练的人员通过听诊收缩期和舒张期 Korotkoff 音测量血压。在左侧肱动脉处，血压测量袖带试图阻断动脉。在经验丰富的专业人员协助下，使用 `Rossmax GB102 Aneroid Blood Pressure monitoring device` 测量血压。BMI 由体重（kg）与身高平方（m²）的比值计算得出。
 
 实验研究在 156 名年龄介于 21 至 80 岁的志愿者身上进行。所有获得参数的均值和标准差（SD）分别为：SBP 124.27 ± 13.86 mmHg，DBP 76.1 ± 8.37 mmHg，年龄 43.60 ± 18.11 岁，HR 73.12 ± 7.67 bpm，BMI 24.9 ± 4.35 kg/m²。血压大于 140/90 mmHg 的患者视为高血压，120–140/80–90 mmHg 为高血压前期，低于 120/80 mmHg 定义为正常血压。
 
 ### 7.3.2 模型
 
-基于训练数据，考察了不同的基于机器学习的回归模型以获得最佳性能。在输入值被视为 BMI、HR 和年龄的情况下，选择了采用 10 折交叉验证的线性回归模型。采用 `WEKA Machine Learning toolbox`（WEKA 机器学习工具箱）实现提出的模型 [[14]](#C_012_c7.xhtml#r7_14)。模型经过训练并保存，用于预测未知受试者的血压值。
+基于训练数据，考察了不同的基于机器学习的回归模型以获得最佳性能。在输入值被视为 BMI、HR 和年龄的情况下，选择了采用 10 折交叉验证的线性回归模型。采用 `WEKA Machine Learning toolbox` 实现提出的模型 [[14]](#C_012_c7.xhtml#r7_14)。模型经过训练并保存，用于预测未知受试者的血压值。
 
-此外，还进行了统计分析以确定输入变量作为合适预测因子的有效性 [[15]](#C_012_c7.xhtml#r7_15)。在显著性水平 `P < 0.05` 下，使用 Pearson 相关系数确定所有变量之间的关系。所有这些自变量与血压之间存在中等程度的相关性。相关值如下（见 图 7.2）：SBP 与 BMI（`r = 0.43`，`P < 0.0001`），DBP 与 BMI（`r = 0.35`，`P < 0.0001`），SBP 与 HR（`r = 0.3`，`P < 0.0001`），DBP 与 HR（`r = 0.44`，`P < 0.001`），SBP 与年龄（`r = 0.47`，`P < 0.0001`）以及 DBP 与年龄（`r = 0.17`，`P < 0.0001`）。
+此外，还进行了统计分析以确定输入变量作为合适预测因子的有效性 [[15]](#C_012_c7.xhtml#r7_15)。在显著性水平 `P < 0.05` 下，使用 Pearson 相关系数确定所有变量之间的关系。所有这些自变量与血压之间存在中等程度的相关性。相关值如下（见图 7.2）：SBP 与 BMI（`r = 0.43`，`P < 0.0001`），DBP 与 BMI（`r = 0.35`，`P < 0.0001`），SBP 与 HR（`r = 0.3`，`P < 0.0001`），DBP 与 HR（`r = 0.44`，`P < 0.001`），SBP 与年龄（`r = 0.47`，`P < 0.0001`）以及 DBP 与年龄（`r = 0.17`，`P < 0.0001`）。
 
 ![图 7.2 相关性图。(a) SBP 对 BMI，(b) DBP 对 BMI，(c) SBP 对 HR，(d) DBP 对 HR，(e) SBP 对年龄，(f) DBP 对年龄。](img/Fig07_02.jpg)
-
-
-
-
 
 ### 7.3.3 Android 应用程序
 
@@ -3038,7 +2868,7 @@ DOI: [10.1201/9781003224075-7](http://doi.org/10.1201/9781003224075-7)
 
 ## 7.4 结果与讨论
 
-156 名受试者的测量数据被顺序划分为 106 名受试者用于训练，50 名受试者作为未知测试集。50 名测试受试者的血压预测准确性如 表 7.1 所示。通过测量平均误差（ME）、平均绝对误差（MAE）、误差标准差（SDE）和均方根误差（RMSE）来观察性能。根据医疗仪器促进协会（AAMI）的标准，测试受试者的 ME 和 SDE 值必须分别低于 5 和 8 mmHg [[18]](#C_012_c7.xhtml#r7_18)。在 表 7.1 中，所提方法的 ME 值低于 AAMI 标准的可接受限值。就 SDE 标准而言，DBP 值在误差范围内，而根据获取的数据集，SBP 超出了可接受限值。
+156 名受试者的测量数据被顺序划分为 106 名受试者用于训练，50 名受试者作为未知测试集。50 名测试受试者的血压预测准确性如表 7.1 所示。通过测量平均误差（ME）、平均绝对误差（MAE）、误差标准差（SDE）和均方根误差（RMSE）来观察性能。根据医疗仪器促进协会（AAMI）的标准，测试受试者的 ME 和 SDE 值必须分别低于 5 和 8 mmHg [[18]](#C_012_c7.xhtml#r7_18)。在表 7.1 中，所提方法的 ME 值低于 AAMI 标准的可接受限值。就 SDE 标准而言，DBP 值在误差范围内，而根据获取的数据集，SBP 超出了可接受限值。
 
 **表 7.1** 测试数据血压预测误差
 
@@ -3056,7 +2886,7 @@ DOI: [10.1201/9781003224075-7](http://doi.org/10.1201/9781003224075-7)
 | SBP | 39.74 | 69.23 | 85.25 |
 | DBP | 57.69 | 81.4 | 93.6 |
 
-图 7.3 显示了 Bland-Altman 图的散点图，用于检查实际和预测血压值之间的差异。*y* 轴表示测量值和估计值之间的差异，而 *x* 轴显示这两种技术的平均值 [[20]](#C_012_c7.xhtml#r7_20)，[[21]](#C_012_c7.xhtml#r7_21)。Bland-Altman 图使用虚线包含了上下一致性限值的 95% 置信区间。
+图 7.3 显示了 Bland-Altman 图的散点图，用于检查实际和预测血压值之间的差异。`y` 轴表示测量值和估计值之间的差异，而 `x` 轴显示这两种技术的平均值 [[20]](#C_012_c7.xhtml#r7_20)，[[21]](#C_012_c7.xhtml#r7_21)。Bland-Altman 图使用虚线包含了上下一致性限值的 95% 置信区间。
 
 ![图 7.3 误差值的 Bland-Altman 图。(a) 显示实际值和参考值平均值的 SBP 差异。(b) 显示实际值和参考值平均值的 DBP 差异。](img/Fig07_03.jpg)
 
@@ -3076,13 +2906,9 @@ DOI: [10.1201/9781003224075-7](http://doi.org/10.1201/9781003224075-7)
 | | DBP | NA | 0.25 |
 | 正常 | 作为参考 |
 
-此外，执行了双尾独立样本 *t* 检验，以观察每对血压测量值之间是否存在统计学显著差异。在 *t* 检验中，三个参数（BMI、HR 和年龄）的显著性水平取为 0.05。峰度和偏度的值小于进行 t 检验的可接受值 [[24]](#C_012_c7.xhtml#r7_24)。表 7.4 显示了高血压、高血压前期和正常人不同配对获得的 *P* 值。应注意，*P* 值越小表明这三种情况之间的区分度越好。结果显示，除了一种情况（高血压-高血压前期情况下 HR 的 *P* 值）外，BMI、HR 和年龄的 *P* 值均显示出高血压、高血压前期和正常患者之间的区分。
+此外，执行了双尾独立样本 `t` 检验，以观察每对血压测量值之间是否存在统计学显著差异。在 `t` 检验中，三个参数（BMI、HR 和年龄）的显著性水平取为 0.05。峰度和偏度的值小于进行 `t` 检验的可接受值 [[24]](#C_012_c7.xhtml#r7_24)。表 7.4 显示了高血压、高血压前期和正常人不同配对获得的 `P` 值。应注意，`P` 值越小表明这三种情况之间的区分度越好。结果显示，除了一种情况（高血压-高血压前期情况下 HR 的 `P` 值）外，BMI、HR 和年龄的 `P` 值均显示出高血压、高血压前期和正常患者之间的区分。
 
-
-
-
-
-### 表 7.4 不同血压病例配对获得的 *P* 值
+### 表 7.4 不同血压病例配对获得的 `P` 值
 
 | | BMI | HR | 年龄 |
 |---|---|---|---|
@@ -3118,46 +2944,6 @@ DOI: [10.1201/9781003224075-7](http://doi.org/10.1201/9781003224075-7)
 
 4.  **J. S. Kaufman, M. C. Asuzu, J. Mufunda, T. Forrester, R. Wilks, A. Luke, A. E. Long, and R. S. Cooper**, “Relationship between blood pressure and body mass index in lean populations,” *Hypertension*, vol. 30, no. 6, 1997.
 
-5.  **J. Y. Kim, B. H. Cho, S. M. Im, M. J. Jeon, I. Y. Kim, and S. Kim**, “Comparative study on artificial neural network with multiple regressions for continuous estimation of blood pressure,” in *IEEE International Conference Engineering in Medicine and Biology Society (EMBC)*, 27th Annual Conference, Shanghai, China, 2005, pp. 6942–6945.
-
-6.  **S. S. Franklin, W. Gustin, N. D. Wong, M. G. Larson, M. A. Weber, W. B. Kannel, and D. Levy**, “Hemodynamic patterns of age-related changes in blood pressure,” *Circulation*, vol. 96, no. 1, pp. 308–315, July 1997.
-
-7.  **S. Landahl, C. Bengtsson, J. A. Sigurdsson, A. Svanborg, and K. Svärdsudd**, “Age-related changes in blood pressure,” *Hypertension*, vol. 8, no. 11, pp. 1044–1049, 1986.
-
-8.  **M. Jain, N. Kumar, and S. Deb**, “An affordable cuff-less blood pressure estimation solution,” in *International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)*, Lake Buena Vista, FL, Aug 2016.
-
-9.  **M. Kachuee, M. M. Kiani, H. Mohammadzade, and M. Shabany**, “Cuff-less blood pressure estimation algorithms for continuous health-care monitoring.” *IEEE Transactions on Bio-Medical Engineering*, vol. 9294, no. c, pp. 1–11, 2016.
-
-10.  **R. Murthy and D. Kotz**, “Assessing blood-pressure measurement in tablet-based mHealth apps,” in *Sixth International Conference on Communication Systems and Networks (COMSNETS)*, Bangalore, India, 2014.
-
-11.  **B. Jana, K. Oswal, S. Mitra, G. Saha, and S. Banerjee**, “Windkessel model-based cuffless blood pressure estimation using continuous wave doppler ultrasound system,” *IEEE Sensors Journal*, vol. 20, no. 17, pp. 9989–9999, 2020.
-
-12.  **S. Lee and J.-H. Chang**, “Oscillometric blood pressure estimation based on deep learning,” *IEEE Transactions on Industrial Informatics*, vol. 13, no. 2, pp. 461–472, 2017.
-
-13.  **Harvard Heart Letter**, “Don’t trust this smartphone app to measure your blood pressure,” <http://www.health.harvard.edu/heart-health/dont-trust-this-smartphone-app-to-measure-your-blood-pressure>, 2016 [Accessed: 2016-12-15].
-
-14.  **M. Hall, E. Frank, G. Holmes, B. Pfahringer, P. Reutemann, and I. H. Witten**, “The WEKA data mining software,” *ACM SIGKDD Explorations Newsletter*, vol. 11, no. 1, 2009.
-
-15.  **E. T. Lee and J. W. Wang**, *Statistical Methods for Survival Data Analysis*, 4th ed. Wiley Publishing, New York, 2013.
-
-16.  **R. O. Duda, P. E. Hart, and D. G. Stork**, *Pattern Classification* (2nd Edition). Wiley-Interscience, New York, 2000.
-
-17.  **G. Developers**, “Android developers,” <https://developer.android.com/index.html>, 2016 [Accessed: 2016–10–09].
-
-18.  **“Non-Invasive Sphygmomanometers—Part 2: Clinical Validation of Automated Measurement Type, ANSI/AAMI/ISO Standard 81060-2,”** 2009.
-
-19.  **E. O’brien, J. Petrie, W. Littler, M. De Swiet, P. L. Padfield, D. G. Altmanu, M. Blandg, A. Coats, and N. Atkins**, “The British Hypertension Society protocol for the evaluation of blood pressure measuring devices,” *Journal of Hypertension*, vol. 11, no. 2, pp. 43–62, 1993.
-
-20.  **S. Puke, T. Suzuki, K. Nakayama, H. Tanaka, and S. Minami**, “Blood pressure estimation from pulse wave velocity measured on the chest,” in *35th Annual International Conference Engineering in Medicine and Biology Society (EMBC)*, Osaka, Japan, 2013.
-
-21.  **D. Giavarina**, “Understanding Bland Altman analysis,” *Biochemia medica*, vol. 25, no. 2, pp. 141–151, 2015.
-
-22.  **N. K. Mungreiphy, S. Kapoor, and R. Sinha**, “Association between BMI, blood pressure, and age: study among Tangkhul Naga tribal males of Northeast India,” *Journal of Anthropology*, vol. 2011, pp. 1–6, 2011.
-
-23.  **M. Szumilas**, “Explaining odds ratios,” *Journal of the Canadian Academy of Child and Adolescent Psychiatry*, vol. 19, no. 3, pp. 227–229, Aug 2010.
-
-
-
 
 
 # 8 革新医疗保健：利用区块链技术实现物联网设备的去中心化数据管理
@@ -3188,10 +2974,6 @@ DOI: [10.1201/9781003224075-8](http://doi.org/10.1201/9781003224075-8)
 
 大数据确实在全球各个领域掀起了巨大波澜，无论是商业、政治、经济、法律还是社会环境。大数据指的是极难使用传统技术处理的海量数据。因此，大数据通常通过其特征来定义，即逐年增加的“V”特征。最初的三个 V——容量、多样性和速度——是由行业分析师 Doung Laney 于 2001 年提出的 [[5]](#C_013_c8.xhtml#r8_5)。此外，作者 [[6]](#C_013_c8.xhtml#r8_6) 通过五个 V——容量、速度、多样性、价值和变异性，以及一个代表复杂性的 C 来描述大数据。后来，SAS（统计分析系统）又增加了两个额外维度，即变异性和真实性 [[7]](#C_013_c8.xhtml#r8_7)。
 
-
-
-
-
 患者并非主动选择，而是被迫在别无选择的情况下接受医疗服务，这自然导致每秒钟都积累着惊人的海量数据。这些数据要么因网络技术进步滞后而未被采集，要么虽被采集却因时间和成本方面的数据管理限制而未被分析。尽管大数据和物联网去中心化管理带来了诸多益处，但医疗行业并未像预期那样迅速拥抱这些优势。这种迟缓可能源于连接大数据与 IoMT 设备的现有鸿沟。此外，隐私和安全被赋予最高优先级，绝不能以任何代价妥协。因此，区块链技术（BCT）与大数据及 IoMT 设备的结合，是构建更完善医疗系统的先决条件。
 
 ## 8.2 医疗物联网
@@ -3212,6 +2994,8 @@ IoMT 是一种系统，其中具备连接功能的医疗设备通过互联网接
 
 基于区块链的去中心化 IoMT 系统架构由物理层、网络层和应用层组成。物理层作为人机交互的第一阶段，包含可穿戴设备、医院和临床设备，用于采集患者医疗数据。网络层分为通信层和区块链层。通信层包含各类设备的 Wi-Fi、物联网网关和路由器，它们将与区块链层通信并连接 [[11]](#C_013_c8.xhtml#r8_11)。采集的数据将通过通信协议进入区块链层。该层将保存交易、利用智能合约进行认证、通过认证或匹配密钥或加密进行验证，并提供支付网关功能。每当共识算法验证一笔交易，就会生成一个新区块。该区块具有不可篡改、可追溯和安全的特性，用于存储归患者所有的数据，且仅在获得许可时才可访问。
 
+
+
 验证后的数据进入应用层，该层分为数据分析和用户客户端两个部分。验证后的数据存储在云端以实现更广泛的访问，并利用深度学习或机器学习技术进行进一步的解释性、诊断性和预测性分析。用户客户端层包含医疗服务提供者和医院，他们将访问存储的、经过认证且更新的患者数据，用于治疗、医学研究等更多用途。从全球各地诊所和医院的各类去中心化 IoMT 设备采集的数据，经区块链共识算法验证和认证，存储于云端并赋予增强的功能价值，可服务于疫苗研发、疾病传播模式识别、地理和人口统计学疾病分析、儿科问题、器官可用性等诸多用例。基于 BCT 的去中心化 IoMT 架构如图 8.1 所示。
 
 ![图 8.1 基于 BCT 的去中心化 IoMT 架构。](img/Fig08_01.jpg)
@@ -3219,9 +3003,6 @@ IoMT 是一种系统，其中具备连接功能的医疗设备通过互联网接
 **图 8.1** 基于 BCT 的去中心化 IoMT 架构。
 
 ## 8.4 医疗数据管理
-
-
-
 
 作者[[12]](#C_013_c8.xhtml#r8_12)指出，每年因医疗差错导致的医院死亡人数最少 44,000 人，最多达 98,000 人。由于诊断、治疗和预防护理信息放置错误，可能会发生医疗差错。由此产生了对连接新兴技术的有效医疗数据库管理系统的需求。医疗数据是从医疗部门收集的数据。如今，新兴技术在数据收集中发挥着主要作用。互联网的出现为设备能够交互、创建、存储和交换数据的新世界铺平了道路。决策基于结构化数据的日子已经一去不复返了。物联网和大数据是神奇的术语，通过它们，人、产品和生产者能更好地获取海量数据。这些数据也为利益相关者做出充分知情的决策提供了便利。区块链是另一项颠覆性技术，它与物联网和大数据携手合作，支持金融、教育、治理以及最近的医疗保健等各个领域的数据管理[[13]](#C_013_c8.xhtml#r8_13)。没有人能否认这三项技术给医疗保健领域带来的优势，如缩短急诊等待时间、轻松追踪所有利益相关者（医院、医生、护士、药剂师、临床实验室、救护车和保险机构）、改善药品管理以及预约诊断医疗服务。也许众多可穿戴设备的成功推出，让患者确信他们正在接受全天候 24 小时监测[[14]](#C_013_c8.xhtml#r8_14)。这些设备用户友好，且能够执行无线数据传输、实时反馈和警报机制。它们通过传输患者的实时数据（如血压、血糖和呼吸模式）为医疗服务提供者提供便利[[15]](#C_013_c8.xhtml#r8_15)。因此，在物联网、大数据和区块链技术的帮助下，它们在医疗保健领域拥有巨大潜力。以下小节将讨论将医疗保健与物联网、大数据和区块链技术相连接的数据管理机制。
 
@@ -3254,8 +3035,6 @@ IoMT 是一种系统，其中具备连接功能的医疗设备通过互联网接
 假冒药品对行业、社会和经济构成严重威胁。作者[[20]](#C_013_c8.xhtml#r8_20)指出，发展中国家接触劣质药品的比例约为 30%，导致患者生命流失。考虑到对经济各领域的巨大损失，亟需建立一套系统来克服这一巨大损失。涉及医疗产品特别是药品供应链的利益相关者包括制造商、食品药品监督管理局（FDA）、分销商、药房和患者。为使分销更有效并增强可追溯性，可增加智能合约和星际文件系统（IPFS）[[20]](#C_013_c8.xhtml#r8_20)。它还具备上传药品规格和图像的机制，以便于验证药品及其制造商的真实性和身份。
 
 ### 8.4.6 临床实验室
-
-
 
 患者的临床实验室结果构成了原始数据的主要来源，指导医疗从业者识别和诊断其健康状况。这些数据的安全性和隐私性是首要关注点。同时，数据应在不同利益相关者需要时随时可用。考虑到这些需求，IoMT、大数据和区块链的融合可能促进实验室数据的创建和管理。目前已有不同种类的区块链平台在使用，如 `Ethereum`、`Ripple` 和 `Hyperledger`。它们在共识机制和协议方面各具特色 [21]。表 8.1 总结了本节提出的讨论。基于前文讨论，开发基于区块链的数据库管理系统所涉及的步骤如下：
 
@@ -3303,8 +3082,6 @@ IoMT 无非是通过互联网在全球范围内连接的医疗设备。它有助
 
 ### 8.5.6 慢性病医疗
 
-
-
 Chronic diseases cannot be cured, and patients must coexist with them for life. Chronic patients require continuous monitoring, psychological and dietary counseling to avoid deterioration of their condition, which could lead to fatal consequences. IoMT devices (such as glucose monitoring, weight, bone strength monitoring, and electrolyte concentration monitoring) help diabetic and arthritis patients continuously monitor any abnormalities. Ingestible pills help monitor medication adherence in Alzheimer's or bipolar disorder patients. Wearable and App-based devices with dietary counseling capabilities target various vital-sign-related chronic diseases to prevent multiple critical situations. Through decentralized IoMT, support group assistance, counseling, success story sharing in Apps, community links, and medical and drug support for chronic diseases can be achieved.
 
 ### 8.5.7 Clinical Trials
@@ -3317,162 +3094,161 @@ In recent years, researchers and developers have proposed many prominent technol
 
 ## 8.7 Latest Blockchain Technology in Healthcare
 
-In recent years, many applications have been developed in the healthcare industry. RPM is one such application where IoT devices are deployed inside patients or exist as wearables. Sensed data is sent to remote servers via the network, stored in the cloud, and accessible only to relevant healthcare providers. Advances in Information Technology and BCT have brought tremendous transformation to healthcare research and industry. Blockchain-based healthcare applications allow stakeholders such as patients, doctors, hospitals, and diagnostic centers to securely share and access patient information in the form of EHR. As mentioned in Section 8.3, the decentralized IoMT architecture based on BCT contains three layers. This section will discuss the latest technologies in each layer: the Perception Layer (Medical IoT Devices), the Network Layer (Edge, Fog, and Cloud Computing), and the Blockchain Layer (Data Encryption). Figure 8.3 shows a hierarchical view of the latest blockchain technologies in healthcare.
+
+
+# 医疗领域的区块链技术最新进展
+
+近年来，医疗行业开发了许多应用程序。远程患者监测（RPM）就是其中一种应用，其中物联网设备被部署在患者体内或作为可穿戴设备存在。感知数据通过网络发送到远程服务器，存储在云端，仅相关医疗服务提供者可访问。信息技术和区块链技术（BCT）的进步给医疗研究和行业带来了巨大变革。基于区块链的医疗应用程序允许患者、医生、医院和诊断中心等利益相关者以电子健康记录（EHR）的形式安全地共享和访问患者信息。正如第 8.3 节所述，基于 BCT 的去中心化医疗物联网（IoMT）架构包含三层。本节将讨论每层的最新技术：感知层（医疗物联网设备）、网络层（边缘、雾和云计算）以及区块链层（数据加密）。图 8.3 展示了医疗领域最新区块链技术的层级视图。
 
 ![Figure 8.3 Hierarchical view of latest blockchain technologies in healthcare.](img/Fig08_03.jpg)
 
 **Figure 8.3** Hierarchical view of latest blockchain technologies in healthcare.
 
-### 8.7.1 Medical IoMT Devices
+## 8.7.1 医疗 IoMT 设备
 
-Different types of IoT sensors are used in RPM, particularly portable medical IoT devices, which enhance healthcare system quality by providing data analytics on patient health conditions. Typically, smartphones, wearable sensors, and hospital health monitors serve as IoMT devices. Earlier, temperature sensors, ECG sensors, and blood pressure sensors were commonly used to monitor the condition of healthy individuals. Today, advanced sensors such as spirometers, glucometers, pulse oximeters, and airflow sensors are used to monitor bedridden critical patients [25]. Sensed information is transmitted to data storage via network communication devices such as Wi-Fi, Wireless Sensor Networks, and Bluetooth. These devices are responsible for routing mechanisms and network gateways.
+远程患者监测（RPM）中使用不同类型的物联网传感器，特别是便携式医疗物联网设备，通过提供患者健康状况的数据分析来提高医疗系统质量。通常，智能手机、可穿戴传感器和医院健康监测仪充当 IoMT 设备。早期，温度传感器、心电图（ECG）传感器和血压传感器常用于监测健康个体的状况。如今，肺活量计、血糖仪、脉搏血氧仪和气流传感器等先进传感器被用于监测卧床危重患者 [25]。感知信息通过 Wi-Fi、无线传感器网络和蓝牙等网络通信设备传输到数据存储。这些设备负责路由机制和网络网关。
 
-### 8.7.2 Cloud Computing
+## 8.7.2 云计算
 
-Cloud computing is one of the key technologies in the healthcare industry, possessing configurable computing resources such as servers, applications, networks, storage, and services. It provides cost-effective and efficient services globally. Healthcare systems adopt cloud computing for collecting, transmitting, storing, and analyzing data retrieved from patient IoT medical devices [26]. Cloud computing allows stakeholders to access patient health records from various sources and process details in real-time via the Internet. The increase in device count leads to issues such as latency, insufficient computing power, bandwidth shortage, and slow response for the entire system.
+云计算是医疗行业的关键技术之一，拥有可配置的计算资源，如服务器、应用程序、网络、存储和服务。它在全球范围内提供具有成本效益且高效的服务。医疗系统采用云计算来收集、传输、存储和分析从患者物联网医疗设备检索的数据 [26]。云计算允许利益相关者从各种来源访问患者健康记录，并通过互联网实时处理详细信息。设备数量的增加导致延迟、计算能力不足、带宽短缺和整个系统响应缓慢等问题。
 
-### 8.7.3 Fog Computing
+## 8.7.3 雾计算
 
-Fog computing extends cloud computing services to the IoMT network, providing mobility support, low latency, and location awareness, which are critical for most healthcare systems. Since it hosts most cloud services at the network edge, it provides better user experience, low latency, and improved Quality of Service [27]. It is a strong enabler for real-time big data analytics.
+雾计算将云计算服务扩展到 IoMT 网络，提供移动性支持、低延迟和位置感知，这对大多数医疗系统至关重要。由于它在网络边缘托管大多数云服务，因此提供了更好的用户体验、低延迟和改进的服务质量 [27]。它是实时大数据分析的有力推动者。
 
-### 8.7.4 Edge Computing
+## 8.7.4 边缘计算
 
-Collecting diverse patient health data from various networks using heterogeneous IoMT devices and transmitting sensed data to servers without faults (such as data loss and corruption) is a major challenge. Edge computing collects data from IoMT devices and processes it in real-time in a distributed manner at the network edge, making system response faster. In edge computing, each device acts as a server; this makes most of the computational process handled by the edge end. This increases the difficulty for hackers to access thousands of distributed devices, making it practically impossible [28]. Edge computing enables emergency medical requests to be served because most computation occurs at the edge layer.
+使用异构 IoMT 设备从各种网络收集不同的患者健康数据，并在没有故障（如数据丢失和损坏）的情况下将感知数据传输到服务器，这是一大挑战。边缘计算从 IoMT 设备收集数据，并在网络边缘以分布式方式实时处理数据，使系统响应更快。在边缘计算中，每个设备充当服务器；这使得大部分计算过程由边缘端处理。这增加了黑客访问成千上万个分布式设备的难度，使其在实际上成为不可能 [28]。边缘计算使紧急医疗请求能够得到服务，因为大部分计算发生在边缘层。
 
-### 8.7.5 Artificial Intelligence
+## 8.7.5 人工智能
 
-AI empowers healthcare system implementation to solve complex real-time problems. IoMT and AI are interdependent, enhancing solutions through millions of sensed data points and understanding patterns like humans. AI software embedded in IoMT is deployed alongside edge and fog computing solutions, bringing intelligence to the entire healthcare system. AI can be deployed at different levels of the healthcare system: edge, fog, and cloud layers. HealthFog uses deep learning integration at the fog layer to diagnose heart diseases [29].
+人工智能（AI）赋能医疗系统实施，以解决复杂的实时问题。IoMT 和 AI 相互依赖，通过数百万个感知数据点增强解决方案，并像人类一样理解模式。嵌入在 IoMT 中的 AI 软件与边缘和雾计算解决方案一起部署，为整个医疗系统带来智能。AI 可以部署在医疗系统的不同层级：边缘层、雾层和云层。HealthFog 在雾层使用深度学习集成来诊断心脏病 [29]。
 
-### 8.7.6 Data Encryption
-
-
+## 8.7.6 数据加密
 
 近年来，IoMT 医疗系统中设备和技术的使用量呈爆发式增长。因此，有必要重视数据和网络的安全与隐私。为了保障数据安全，在基于区块链的 IoMT 医疗系统中，加密分为两层进行：用于数据传输的网络层和用于数据安全的区块链层 [30,31]。医疗系统架构在每一层都遵循不同的安全机制，以防止对 EHR（电子健康记录）的攻击。为了提供隐私和安全 [15] 提出了一种利用对称加密和非对称加密等复杂加密原语的分布式 IoT 设备新架构。
 
-## 8.8 医疗领域 IoMT 设备去中心化管理面临的挑战
+# 8.8 医疗领域 IoMT 设备去中心化管理面临的挑战
 
 医疗行业正努力拥抱并挖掘 IoMT 去中心化管理所提供的无限潜力，但面临着大量固有和实际的挑战。这些挑战分为两类：IoMT 挑战和 IoMT 去中心化管理挑战，具体讨论如下。
 
-### 8.8.1 IoMT 挑战
+## 8.8.1 IoMT 挑战
 
 IoMT 挑战主要涉及相关医疗设备的安全层面。
 
-#### 8.8.1.1 设备脆弱性
+### 8.8.1.1 设备脆弱性
 
 IoMT 包括射频识别（RFID）标签、植入式医疗设备（IMD）和可穿戴设备，这些设备均易受安全风险威胁。RFID 标签的安全挑战体现为电磁干扰和无线攻击。IMD 面临无线电攻击、电源拒绝攻击、认证问题、非法流量监控、设备克隆问题、固件更新问题和篡改问题等安全风险。可穿戴外部设备面临劫持和第三方入侵的风险。所有这些问题均可能导致严重的安全事故，给患者和医疗服务提供者带来痛苦，因为隐私遭到泄露，同时也引发了信任危机。因此，寻找针对此类主动和被动攻击的可靠防护措施是一项严峻挑战。
 
-#### 8.8.1.2 能源挑战
+### 8.8.1.2 能源挑战
 
 IoMT 包含依靠受限电池电量运行的小型医疗装置。当不需要传感器观测时，这些装置会进入省电模式；当执行的功能不关键时，它们会以降低的 CPU 速度运行。这些特性给寻找节能感知的防护方案带来了挑战。
 
-#### 8.8.1.3 安全更新挑战
+### 8.8.1.3 安全更新挑战
 
 安全协议需要定期更新以缓解高风险漏洞，这可以通过保持设备防护补丁为最新来实现。在这方面，主要的潜在挑战是开发一种能够协助快速更新防护系统的方法。
 
-#### 8.8.1.4 设备异构性
+### 8.8.1.4 设备异构性
 
 医疗领域使用的设备种类繁多，具有不同的网络、计算能力、内置内存、嵌入式软件和能耗。因此，构建这些设备的定制化防护方案面临挑战。
 
-#### 8.8.1.5 可扩展性挑战
+### 8.8.1.5 可扩展性挑战
 
 随着技术进步，涌入医疗领域的新型医疗设备数量巨大。当这些设备连接到互联网时，会变成一项浩大的工程，从而导致可扩展性挑战。
 
-#### 8.8.1.6 内置内存有限
+### 8.8.1.6 内置内存有限
 
 大多数医疗设备内置内存有限，这要求通过系统软件来启用这些设备。这种内存限制可能阻碍设备承载复杂协议。这些设备计算能力有限，通常同时作为传感器和执行器运行。寻找限制内存使用的解决方案是一项艰巨的任务。
 
-#### 8.8.1.7 准确性挑战
+### 8.8.1.7 准确性挑战
 
 准确性问题源于设备故障。不准确和缺乏精确度可能是由于医疗机器人故障、误诊和错误医疗处方导致的。医疗设备的此类故障代价高昂，因为它们可能导致患者部分或永久性伤害，极端情况下甚至可能导致生命丧失。
 
-#### 8.8.1.8 标准化挑战
+### 8.8.1.8 标准化挑战
 
 医疗设备需要遵循标准化，因为这些设备需要与物联网技术协同运行。因此，如果设备未标准化，将难以制定标准化的安全措施以防止设备被黑客攻破。
 
-### 8.8.2 IoMT 去中心化管理挑战
+## 8.8.2 IoMT 去中心化管理挑战
 
 下文列出了一些因使用 IoMT 实施去中心化管理系统而产生的挑战。
 
-#### 8.8.2.1 网络安全挑战
+### 8.8.2.1 网络安全挑战
 
 开放无线网络始终对数据安全构成威胁，而高度依赖这些网络的 IoMT 设备也会承受这一威胁。然而，医疗数据关乎患者生死，必须得到坚决保护。因此，防范数据窃取、黑客攻击和篡改等网络犯罪是一项严峻挑战，去中心化管理系统可在一定程度上缓解这一问题。然而，去中心化管理系统并非万无一失。大量 IoMT 设备的参与及其分布式特性可能导致协议被破解并暴露患者身份，从而威胁隐私和安全。
 
-#### 8.8.2.2 可扩展性挑战
+### 8.8.2.2 可扩展性挑战
 
 在去中心化管理系统中，由于每个网络节点都存储完整账本，医疗机构的数据存储能力将面临严峻考验。除了节点数量增加外，生成的信息区块数量也将巨大。虽然延迟较低是一大优势，但吞吐率却有所妥协。
 
-#### 8.8.2.3 投资挑战
+### 8.8.2.3 投资挑战
 
 目前 IoMT 可用的设施缺乏足够的计算能力，无法以必要的容量、时间和速度处理加密算法。因此，医疗服务提供者需要巨额投资来部署去中心化机制所需的计算设施。尽管如此，当医疗服务提供者将现有系统迁移到基于去中心化的系统时，在部署和维护方面仍涉及巨大成本。
 
-#### 8.8.2.4 监管挑战
+### 8.8.2.4 监管挑战
 
 去中心化机制（如区块链）缺乏法律或合规准则，因为它们的设计初衷是遵守医疗服务提供者所在地区的法律，例如《健康信息技术经济与临床健康法案》（HITECH） ([HHS.gov](http://HHS.gov) 美国卫生与公众服务部, 2009)、《通用数据保护条例》（GDPR） [32] 和《个人数据保护》（PDP）法案 [33]。由于与区块链（去中心化）应用以及经济、社会和医疗系统建立了不同类型的连接，在法律或合规准则缺失的情况下，尤其是在医疗领域，这构成了一项挑战。
 
-#### 8.8.2.5 基础设施挑战
+### 8.8.2.5 基础设施挑战
 
 医疗基础设施在社会技术协同方面需要健壮，以承受在全国范围内适应去中心化机制（区块链）的复杂性。
 
-#### 8.8.2.6 用户挑战
+### 8.8.2.6 用户挑战
 
 缺乏使用和操作 IoMT 设备的专业知识是另一大挑战，因为医疗行业面临患者和其他群体缺乏信任的问题。
 
-#### 8.8.2.7 不可篡改性挑战
+### 8.8.2.7 不可篡改性挑战
 
-
-
-
-## 8.9 结论
+# 8.9 结论
 
 优质的医疗设施是决定一个国家人类生活水平的首要因素。借助 IoMT（医疗物联网），患者的高级远程监测成为可能，这提高了患者和从业者的满意度。将 BCT（区块链技术）融入 IoMT 设备方面取得了巨大飞跃，旨在提供安全、可靠、透明和受监管的医疗协助。本章讨论了结合 BCT 的去中心化 IoMT 架构，该架构由物理层、通信层和应用层三层组成。文中探讨了关于患者数据管理、医疗专业人员、医疗保险理赔、救护车服务、药品追踪和临床实验室等不同用例。通过实施使用先进 IoMT 设备、区块链技术和嵌入强计算层的 SDN（软件定义网络）的安全医疗系统，旨在获得更好的性能，可进一步指导本研究。
 
+# 参考文献
+
+1.  "区块链技术在医疗保健市场份额和行业增长收入 2021：区域概览、最新技术、业务状况、主要增长因素和市场动态预测至 2027 年（含 COVID-19 影响）," *MarketWatch*, 06-May-2021. [在线]. 可用: [`www.marketwatch.com/press-release/blockchain-technology-in-healthcare-market-share-and-industry-growth-revenue-2021-regional-overview-latest-technology-business-status-top-growing-factors-and-market-dynamics-forecast-to-2027-with-impact-of-covid-19-2021-05-06`](https://www.marketwatch.com). (访问时间: 10-Jun-2021).
+
+2.  世界发展指标, *Worldbank.org*. [在线]. 可用: [`databank.worldbank.org/reports.aspx?source=2&series=SH.MED.PHYS.ZS&country=`](https://databank.worldbank.org). (访问时间: 10-Jun–2021).
+
+3.  Touati, F., and R. Tabish. 2013. "U-healthcare system: state-of-the-art review and challenges." *Journal of Medical Systems* 37 (3). doi:[`10.1007/s10916-013-9949-0`](http://doi.org/10.1007/s10916-013-9949-0).
+
+
+
 ## 参考文献
 
-1.  区块链技术在医疗保健市场份额和行业增长收入 2021：区域概览、最新技术、业务状况、主要增长因素和市场动态预测至 2027 年（含 COVID-19 影响）,” MarketWatch, 06-May-2021. \[在线\]. 可用: [`www.marketwatch.com/press-release/blockchain-technology-in-healthcare-market-share-and-industry-growth-revenue-2021-regional-overview-latest-technology-business-status-top-growing-factors-and-market-dynamics-forecast-to-2027-with-impact-of-covid-19-2021-05-06`](https://www.marketwatch.com). (访问时间: 10-Jun-2021).
+4. Cremer, D.d., B. Nguyen, and L. Simkin. 2017. “The integrity challenge of the Internet-of-Things (IoT): on understanding its dark side.” *Journal of Marketing Management*. Routledge. doi:[10.1080/0267257X.2016.1247517](http://doi.org/10.1080/0267257X.2016.1247517).
 
-2.  世界发展指标, Worldbank.org. \[在线\]. 可用: [`databank.worldbank.org/reports.aspx?source=2&series=SH.MED.PHYS.ZS&country=`](https://databank.worldbank.org). (访问时间: 10-Jun–2021).
+5. Explanation of 3V’s Model of Big data Given by Doug Laney, Cosoit.com, 2021. \[在线\]. 可用: [`www.cosoit.com/explanation-of-3v-model-of-big-data`](https://www.cosoit.com). (访问时间: 10-Jun-2021).
 
-3.  Touati, F., and R. Tabish. 2013. “U-healthcare system: state-of-the-art review and challenges.” Journal of Medical Systems 37 (3). doi:[10.1007/s10916-013-9949-0](http://doi.org/10.1007/s10916-013-9949-0).
+6. Oguntimilehin, A. 2014. “A Review of Big Data Management, Benefits and Challenges IT Governance View Project Students’ Enrolment into Tertiary Institutions in Nigeria: the Influence of the Founder’s Reputation-a Case Study View Project Ojo Ademola Institute of Enterprise Management and Analytic Journal of Emerging Trends in Computing and Information Sciences A Review of Big Data Management, Benefits and Challenges” 5 (6). [`www.cisjournal.org`](http://www.cisjournal.org).
 
-4.  Cremer, D.d., B. Nguyen, and L. Simkin. 2017. “The integrity challenge of the Internet-of-Things (IoT): on understanding its dark side.” Journal of Marketing Management. Routledge. doi:[10.1080/0267257X.2016.1247517](http://doi.org/10.1080/0267257X.2016.1247517).
+7. “Big Data: What it is and why it matters,” What it is and why it matters | SAS India. \[在线\]. 可用: [`www.sas.com/en_in/insights/big-data/what-is-big-data.html`](https://www.sas.com). (访问时间: 10-Jun-2021).
 
-5.  Explanation of 3V’s Model of Big data Given by Doug Laney, Cosoit.com, 2021. \[在线\]. 可用: [`www.cosoit.com/explanation-of-3v-model-of-big-data`](https://www.cosoit.com). (访问时间: 10-Jun-2021).
+8. “Internet of Things \[IoT\] in healthcare Market Size & Trends, 2028.” Fortune businessinsights.com, 2021. \[在线\]. 可用: [`www.fortunebusinessinsights.com/internet-of-things-iot-in-healthcare-market-102188`](https://www.fortunebusinessinsights.com). (访问时间: 10-Jun-2021).
 
-6.  Oguntimilehin, A. 2014. “A Review of Big Data Management, Benefits and Challenges IT Governance View Project Students’ Enrolment into Tertiary Institutions in Nigeria: the Influence of the Founder’s Reputation-a Case Study View Project Ojo Ademola Institute of Enterprise Management and Analytic Journal of Emerging Trends in Computing and Information Sciences A Review of Big Data Management, Benefits and Challenges” 5 (6). [`www.cisjournal.org`](http://www.cisjournal.org).
+9. Van Oranje-Nassau. C., H.R. Schindler, A.M. Vilamovska, and M. Botterman. 2012. “Policy options for radio frequency identification (RFID) application in healthcare; a prospective view: final report (D5).” *Rand Health Quarterly* 1(4):5.
 
-7.  “Big Data: What it is and why it matters,” What it is and why it matters | SAS India. \[在线\]. 可用: [`www.sas.com/en\_in/insights/big-data/what-is-big-data.html`](https://www.sas.com). (访问时间: 10-Jun-2021).
+10. Jara, A.J., M.A. Zamora-Izquierdo, and A.F. Skarmeta. 2013. “Interconnection framework for MHealth and remote monitoring based on the Internet of Things.” *IEEE Journal on Selected Areas in Communications* 31 (9). Institute of Electrical and Electronics Engineers Inc.: 47–65. Doi:[10.1109/JSAC.2013.SUP.0513005](http://doi.org/10.1109/JSAC.2013.SUP.0513005).
 
-8.  “Internet of Things \[IoT\] in healthcare Market Size & Trends, 2028.” Fortune businessinsights.com, 2021. \[在线\]. 可用: [`www.fortunebusinessinsights.com/internet-of-things-iot-in-healthcare-market-102188`](https://www.fortunebusinessinsights.com). (访问时间: 10-Jun-2021).
+11. Dai, H.-N., M. Imran, and N. Haider. 2020. “Blockchain-enabled Internet of Medical Things to combat COVID-19.” August. [`arxiv.org/abs/2008.09933`](http://arxiv.org).
 
-9.  Van Oranje-Nassau. C., H.R. Schindler, A.M. Vilamovska, and M. Botterman. 2012. “Policy options for radio frequency identification (RFID) application in healthcare; a prospective view: final report (D5).” Rand Health Quarterly 1(4):5.
+12. Rao, M. v., D. Thota, and P. Srinivas. 2014. “A study to assess patient safety culture amongst a category of hospital staff of a teaching hospital.” *IOSR Journal of Dental and Medical Sciences (IOSR-JDMS)* e-ISSN 13. [www.iosrjournals.orgwww.iosrjournals.org](http://www.iosrjournals.orgwww.iosrjournals.org).
 
-10.  Jara, A.J., M.A. Zamora-Izquierdo, and A.F. Skarmeta. 2013. “Interconnection framework for MHealth and remote monitoring based on the Internet of Things.” IEEE Journal on Selected Areas in Communications 31 (9). Institute of Electrical and Electronics Engineers Inc.: 47–65. Doi:[10.1109/JSAC.2013.SUP.0513005](http://doi.org/10.1109/JSAC.2013.SUP.0513005).
+13. Saxena, S., B. Bhushan, and M.A. Ahad, 2021, “Blockchain based solutions to secure IoT: Background, integration trends and a way forward.” *Journal of Network and Computer Applications*, doi: [10.1016/j.jnca.2021.103050](http://doi.org/10.1016/j.jnca.2021.103050).
 
-11.  Dai, H.-N., M. Imran, and N. Haider. 2020. “Blockchain-enabled Internet of Medical Things to combat COVID-19.” August. [`arxiv.org/abs/2008.09933`](http://arxiv.org).
+14. Lee, J., D. Kim, H.Y. Ryoo, and B.S. Shin. 2016. “Sustainable wearables: wearable technology for enhancing the quality of human life.” *Sustainability (Switzerland)* 8 (5). MDPI AG. doi:[10.3390/su8050466](http://doi.org/10.3390/su8050466).
 
-12.  Rao, M. v., D. Thota, and P. Srinivas. 2014. “A study to assess patient safety culture amongst a category of hospital staff of a teaching hospital.” IOSR Journal of Dental and Medical Sciences (IOSR-JDMS) e-ISSN 13. [www.iosrjournals.orgwww.iosrjournals.org](http://www.iosrjournals.orgwww.iosrjournals.org).
+15. Dwivedi, A.D., G. Srivastava, S. Dhar, and R. Singh. 2019. “A decentralized privacy-preserving healthcare blockchain for IoT.” *Sensors (Switzerland)* 19 (2). MDPI AG. doi:[10.3390/s19020326](http://doi.org/10.3390/s19020326).
 
-13.  Saxena, S., B. Bhushan, and M.A. Ahad, 2021, “Blockchain based solutions to secure IoT: Background, integration trends and a way forward.” Journal of Network and Computer Applications, doi: [10.1016/j.jnca.2021.103050](http://doi.org/10.1016/j.jnca.2021.103050).
+16. Murphy, G. F., and Waters, K. A., 1999. EHR vision, definition, and characteristics, in Electronic Health Records: Changing the Vision, eds. Murphy, G. F., Hanken, M.A., and Waters, K. A., W.B. Saunders Company, Philadelphia, PA.
 
-14.  Lee, J., D. Kim, H.Y. Ryoo, and B.S. Shin. 2016. “Sustainable wearables: wearable technology for enhancing the quality of human life.” Sustainability (Switzerland) 8 (5). MDPI AG. doi:[10.3390/su8050466](http://doi.org/10.3390/su8050466).
+17. Chen, Y., S. Ding, Z. Xu, H. Zheng, and S. Yang. 2018. “Blockchain-based medical records secure storage and medical service framework.” *Journal of Medical Systems* 43 (1). Springer New York LLC. doi:[10.1007/s10916-018-1121-4](http://doi.org/10.1007/s10916-018-1121-4).
 
-15.  Dwivedi, A.D., G. Srivastava, S. Dhar, and R. Singh. 2019. “A decentralized privacy-preserving healthcare blockchain for IoT.” Sensors (Switzerland) 19 (2). MDPI AG. doi:[10.3390/s19020326](http://doi.org/10.3390/s19020326).
+18. A. Kumar, K. Abhishek, B. Bhushan, and C. Chakraborty, 2021, “Secure access control for manufacturing sector with application of ethereum blockchain.” *Peer Peer Network. Application*. doi: [10.1007/s12083-021-01108-3](http://doi.org/10.1007/s12083-021-01108-3).
 
-16.  Murphy, G. F., and Waters, K. A., 1999. EHR vision, definition, and characteristics, in Electronic Health Records: Changing the Vision, eds. Murphy, G. F., Hanken, M.A., and Waters, K. A., W.B. Saunders Company, Philadelphia, PA.
+19. PWC and FICCI, Federation of Indian Chambers of Commerce and Industry, 2021. “Revamping India’s health insurance sector with blockchain and smart contracts.” 2021. Pricewater house Coopers Pvt Ltd, New Delhi, India.
 
-17.  Chen, Y., S. Ding, Z. Xu, H. Zheng, and S. Yang. 2018. “Blockchain-based medical records secure storage and medical service framework.” Journal of Medical Systems 43 (1). Springer New York LLC. doi:[10.1007/s10916-018-1121-4](http://doi.org/10.1007/s10916-018-1121-4).
+20. Musamih, A., K. Salah, R. Jayaraman, J. Arshad, M. Debe, Y. Al-Hammadi, and S. Ellahham. 2021. “A blockchain-based approach for drug traceability in healthcare supply chain.” *IEEE Access* 9. Institute of Electrical and Electronics Engineers Inc.: 9728–9743. Doi:[10.1109/ACCESS.2021.3049920](http://doi.org/10.1109/ACCESS.2021.3049920).
 
-18.  A. Kumar, K. Abhishek, B. Bhushan, and C. Chakraborty, 2021, “Secure access control for manufacturing sector with application of ethereum blockchain.” Peer Peer Network. Application. doi: [10.1007/s12083-021-01108-3](http://doi.org/10.1007/s12083-021-01108-3).
-
-19.  PWC and FICCI, Federation of Indian Chambers of Commerce and Industry, 2021. “Revamping India’s health insurance sector with blockchain and smart contracts.” 2021. Pricewater house Coopers Pvt Ltd, New Delhi, India.
-
-20.  Musamih, A., K. Salah, R. Jayaraman, J. Arshad, M. Debe, Y. Al-Hammadi, and S. Ellahham. 2021. “A blockchain-based approach for drug traceability in healthcare supply chain.” IEEE Access 9. Institute of Electrical and Electronics Engineers Inc.: 9728–9743. Doi:[10.1109/ACCESS.2021.3049920](http://doi.org/10.1109/ACCESS.2021.3049920).
-
-21.  Khezr, S., M. Moniruzzaman, A. Yassine, and R. Benlamri. 2019. “Blockchain technology in healthcare: a comprehensive review and directions for future research.” Applied Sciences (Switzerland) 9 (9). MDPI AG. doi:[10.3390/app9091736](http://doi.org/10.3390/app9091736).
-
-
-
-
+21. Khezr, S., M. Moniruzzaman, A. Yassine, and R. Benlamri. 2019. “Blockchain technology in healthcare: a comprehensive review and directions for future research.” *Applied Sciences (Switzerland)* 9 (9). MDPI AG. doi:[10.3390/app9091736](http://doi.org/10.3390/app9091736).
 
 22. Jeong, S., J.H. Shen, and B. Ahn. 2021. “A study on smart healthcare monitoring using IoT based on blockchain.” *Wireless Communications and Mobile Computing* 2021. Hindawi Limited. doi:[10.1155/2021/9932091](http://doi.org/10.1155/2021/9932091)。
 
@@ -3493,6 +3269,8 @@ IoMT 包含依靠受限电池电量运行的小型医疗装置。当不需要传
 30. Bhushan, B. C. Sahoo, P. Sinha, and A. Khamparia, 2021, “Unification of blockchain and Internet of Things (BIoT): requirements, working model, challenges and future directions,” *Wireless Network*, doi:[10.1007/s11276-020-02445-6](http://doi.org/10.1007/s11276-020-02445-6)。
 
 31. Bushan, B. P. Sinha, K.M. Sagayam, and J. Andrew, 2020, “Untangling blockchain technology: a survey on state of the art, security threats, privacy services, applications and future research directions,” *Computer and Electrical Engineering*, doi: [10.1016/j.compeleceng.2020.106897](http://doi.org/10.1016/j.compeleceng.2020.106897)。
+
+
 
 32. Tikkinen-Piri, C., A. Rohunen, and J. Markkula. 2018. “EU general data protection regulation: changes and implications for personal data collecting companies.” *Computer Law and Security Review* 34 (1). Elsevier Ltd: 134–53. Doi:[10.1016/j.clsr.2017.05.015](http://doi.org/10.1016/j.clsr.2017.05.015)。
 
@@ -3524,15 +3302,11 @@ DOI: [10.1201/9781003224075-9](http://doi.org/10.1201/9781003224075-9)
 
 ## 9.2 区块链
 
-
-
-
-
 ### 理解区块链
 
-首先，让我们尝试理解什么是区块链，它是如何运作的，以及它的显著特征是什么。简单来说，区块链是最流行的 DLT（分布式账本技术）类型，其中所有的交易记录和数据（价值数据）都被存储、共享并同步到 P2P 网络中所有节点上 [5]。这一记录集合或数据库被称为`digital ledger`（数字账本）。P2P 网络中的节点是参与的机器，它们贡献自己的计算和存储能力来建立和维护区块链设施。此外，由于区块链中的数字账本是共享的；因此，它在所有节点上被复制，从而形成一个分布式账本。这意味着 P2P 区块链网络中的所有节点都在本地存储了整个数据库（即数字账本）的精确副本。由任何节点执行的账本中的任何合法更新都会被广播，以便每个节点在分布式数字账本的当前状态方面保持同步。
+首先，让我们尝试理解什么是区块链，它是如何运作的，以及它的显著特征是什么。简单来说，区块链是最流行的 DLT（分布式账本技术）类型，其中所有的交易记录和数据（价值数据）都被存储、共享并同步到 P2P 网络中所有节点上 [5]。这一记录集合或数据库被称为 `digital ledger`（数字账本）。P2P 网络中的节点是参与的机器，它们贡献自己的计算和存储能力来建立和维护区块链设施。此外，由于区块链中的数字账本是共享的；因此，它在所有节点上被复制，从而形成一个分布式账本。这意味着 P2P 区块链网络中的所有节点都在本地存储了整个数据库（即数字账本）的精确副本。由任何节点执行的账本中的任何合法更新都会被广播，以便每个节点在分布式数字账本的当前状态方面保持同步。
 
-区块链与其他类型 DLT 的区别在于它用于分布式账本的数据结构。从数据结构的角度来看，区块链是一个按时间顺序连接的记录（又称区块）链表 [6]。每个记录或区块将一组在时间窗口内发生的有效交易打包在一起（使用加密技术）。此外，每个区块都存储前一个区块的指针（即哈希值）。在给定的时间窗口过后，会创建一个新区块，并使用基于加密哈希的链在逻辑上与前一个区块相连。因此，该技术被称为`blockchain`（区块链）。随着时间的推移，会创建更多的区块，加上时间戳，并追加到现有的区块链中。因此，区块链的大小随时间增长，新区块以纯追加模式添加。值得注意的是，区块链广泛使用加密技术来保护账本（即数据库）的安全，因为它保存在 P2P 网络中的各个（不受信的）节点上。此外，需要共识算法来就区块链中要执行的每次更新在节点间建立一致。
+区块链与其他类型 DLT 的区别在于它用于分布式账本的数据结构。从数据结构的角度来看，区块链是一个按时间顺序连接的记录（又称区块）链表 [6]。每个记录或区块将一组在时间窗口内发生的有效交易打包在一起（使用加密技术）。此外，每个区块都存储前一个区块的指针（即哈希值）。在给定的时间窗口过后，会创建一个新区块，并使用基于加密哈希的链在逻辑上与前一个区块相连。因此，该技术被称为 `blockchain`（区块链）。随着时间的推移，会创建更多的区块，加上时间戳，并追加到现有的区块链中。因此，区块链的大小随时间增长，新区块以纯追加模式添加。值得注意的是，区块链广泛使用加密技术来保护账本（即数据库）的安全，因为它保存在 P2P 网络中的各个（不受信的）节点上。此外，需要共识算法来就区块链中要执行的每次更新在节点间建立一致。
 
 #### 9.2.1 区块结构
 
@@ -3544,31 +3318,28 @@ DOI: [10.1201/9781003224075-9](http://doi.org/10.1201/9781003224075-9)
 
 ##### 9.2.1.1 区块头
 
-表 9.1 简要描述了比特币区块头中的六个字段。`version`（版本）字段基本上用于跟踪区块链（软件）升级。`timestamp`（时间戳）字段记录矿工开始挖掘新区块时的 Unix 纪元时间。为了将每个区块与其前一个区块相连，使用了`previous block hash`（前一个区块哈希）字段。该字段为 32 字节，存储前一个区块的加密哈希值（通常为 SHA256 哈希 [9])。
+表 9.1 简要描述了比特币区块头中的六个字段。`version`（版本）字段基本上用于跟踪区块链（软件）升级。`timestamp`（时间戳）字段记录矿工开始挖掘新区块时的 Unix 纪元时间。为了将每个区块与其前一个区块相连，使用了 `previous block hash`（前一个区块哈希）字段。该字段为 32 字节，存储前一个区块的加密哈希值（通常为 SHA256 哈希 [9]）。
 
 **表 9.1** 区块链中区块头的字段 [12]
 
 | 字段 | 字段大小 | 数据类型 | 简要说明 |
 | --- | --- | --- | --- |
 | Version（版本） | 4 字节 | Int32 | 指示当前区块需遵循的验证规则集。 |
-| Timestamp（时间戳） | 4 字节 | Unit32 | 存储矿工开始挖掘过程时的 Unix 纪元时间（自 1970-01-01 00:00:00 UTC 以来经过的秒数 [13])。 |
+| Timestamp（时间戳） | 4 字节 | Unit32 | 存储矿工开始挖掘过程时的 Unix 纪元时间（自 1970-01-01 00:00:00 UTC 以来经过的秒数 [13]）。 |
 | Previous block hash（前一个区块哈希） | 32 字节 | Char | 存储前一个区块的双重 SHA-256 哈希值，使所有区块在逻辑上链接在一起。 |
 | Difficulty/nBits（难度/位数） | 4 字节 | Unit32 | 目标阈值的编码版本。 |
 | Nonce（随机数） | 4 字节 | Unit32 | 矿工添加到区块头的任意数字，以便计算区块哈希时，获得的值小于或等于目标阈值。 |
 | Merkle Root（梅克尔根） | 32 字节 | Char | 包含通过梅克尔树哈希获得的最终（根）哈希值。在该树中，所有叶子节点基本上是当前区块中所有交易的哈希值。 |
 
-`nbits`字段只是目标哈希值（一个 256 位数字）的编码和紧凑表示，用于挖掘新区块 [10]。`nonce`是挖矿节点不断更改的字段，以计算当前区块头的哈希值，使得获得的值小于等于目标值。换句话说，矿工通过为`nonce`字段尝试随机数不断对区块头进行哈希运算，直到区块哈希值小于等于目标值时停止。目标哈希值根据当前难度级别设定 [10]。
+`nbits` 字段只是目标哈希值（一个 256 位数字）的编码和紧凑表示，用于挖掘新区块 [10]。`nonce` 是挖矿节点不断更改的字段，以计算当前区块头的哈希值，使得获得的值小于等于目标值。换句话说，矿工通过为 `nonce` 字段尝试随机数不断对区块头进行哈希运算，直到区块哈希值小于等于目标值时停止。目标哈希值根据当前难度级别设定 [10]。
 
 `difficulty`（难度）基本上是挖掘新区块以找到可接受的区块哈希值所需的相对计算量（工作量）。创世区块的难度被认为是 1。如果当前难度级别为 2，则意味着挖掘新区块所需的计算工作量是挖掘创世区块所需计算量的两倍。
 
-在挖掘一组 2016 个区块后，难度会被重新计算，这随后设定目标值，并相应地决定`nbits`字段的值。改变难度级别的原因是为了确保区块间挖掘时间保持大致恒定，即比特币中的约 10 分钟 [11]。值得注意的是，上述解释假设使用的是工作量证明（PoW）共识算法。
+在挖掘一组 2016 个区块后，难度会被重新计算，这随后设定目标值，并相应地决定 `nbits` 字段的值。改变难度级别的原因是为了确保区块间挖掘时间保持大致恒定，即比特币中的约 10 分钟 [11]。值得注意的是，上述解释假设使用的是工作量证明（PoW）共识算法。
 
-为了计算`Merkle Root`（梅克尔根）字段的值，将当前区块中所有交易的加密哈希值作为梅克尔树的叶子节点。然后通过哈希子节点的连接（哈希）值来计算非叶子节点。在二叉梅克尔树的情况下，每个非叶子节点有两个子节点。计算非叶子节点值的过程持续进行，直到获得根哈希值。因此，`Merkle root hash`（梅克尔根哈希）字段提供了一种紧凑表示（即固定大小位）当前区块中所有交易的方法。该字段允许任何实体验证给定区块中打包交易的合法性 [14]。
+为了计算 `Merkle Root`（梅克尔根）字段的值，将当前区块中所有交易的加密哈希值作为梅克尔树的叶子节点。然后通过哈希子节点的连接（哈希）值来计算非叶子节点。在二叉梅克尔树的情况下，每个非叶子节点有两个子节点。计算非叶子节点值的过程持续进行，直到获得根哈希值。因此，`Merkle root hash`（梅克尔根哈希）字段提供了一种紧凑表示（即固定大小位）当前区块中所有交易的方法。该字段允许任何实体验证给定区块中打包交易的合法性 [14]。
 
 ##### 9.2.1.2 区块体
-
-
-
 
 区块体包含一组有限的有效交易，这些交易需要在区块链上得到确认。比特币区块的主体由交易和交易计数器组成。然而，对于其他区块链，主体的内容有所不同。例如，在以太坊区块链中，区块体包含一个名为 `state` 的额外部分，以支持智能合约的存储和执行 [15]。一个区块中的交易数量取决于允许的最大区块大小（例如比特币区块链为 1 MB [7]）以及要包含在区块中的每笔交易的大小。因此，矿工倾向于从交易池中选择体积小、手续费高的交易。换句话说，矿工旨通过在新区块中容纳尽可能多的交易来最大化其利润。此处，交易手续费是指交易用户承诺支付给成功挖出新区块并将其交易确认上链的矿工的金额。总之，区块体可以包含交易和智能合约。此外，区块体的大小是可变的，因为包含在一个区块中的交易数量不是固定的。
 
@@ -3582,7 +3353,7 @@ DOI: [10.1201/9781003224075-9](http://doi.org/10.1201/9781003224075-9)
 
 第一步是在属于鲍勃和爱丽丝的两个数字账户之间发起一笔交易。交易的一个简单示例是将加密货币（如比特币）从一个账户发送到另一个账户。区块链中的每个账户都有一对相关联的公钥和私钥。账户通过其地址来标识，该地址就是与该账户关联的公钥的加密形式。用户可以通过他们的钱包访问这些地址，钱包是用于创建和管理多个地址以执行交易的软件应用程序 [16]。
 
-如图 9.2 所示，鲍勃向爱丽丝发送一些加密货币，并使用他的私钥对交易进行数字签名。交易签名完成后，会被广播到区块链 P2P 网络中直接相连的节点。P2P 网络中的每个节点验证该交易，并将其转发给其对等节点（即直接邻居）。因此，新交易会在整个 P2P 网络中传播 [17]。每个挖矿节点（即有权在区块链上创建新区块的节点）都维护一个未确认交易的临时集合（内存池 [18])。随后，参与的矿工从他们的内存池中选择一组未确认交易。值得注意的是，某些区块链允许用户指定其愿意支付给成功处理该交易的矿工的交易手续费。在这种情况下，矿工通常会根据交易手续费选择未确认交易，以最大化利润。接下来，每个参与的矿工为选定的交易构建一棵默克尔树，并最终获得一个默克尔根哈希 [1]。在此步骤之后，即可挖掘新区块。为了挖掘新区块，矿工为区块加上时间戳，填充区块头中的不同字段，并将交易添加到区块体中。随后，矿工开始在预定义的难度目标范围内计算区块的哈希值（如第 9.2.1 节所述）。区块挖矿要求矿工不断更改区块头中的 `nonce` 值，直到获得满足难度等级且小于或等于目标值的区块哈希值（参见第 9.2.1 节）。这种计算需要消耗大量能源，因为区块头哈希运算是以暴力方式进行的。
+如图 9.2 所示，鲍勃向爱丽丝发送一些加密货币，并使用他的私钥对交易进行数字签名。交易签名完成后，会被广播到区块链 P2P 网络中直接相连的节点。P2P 网络中的每个节点验证该交易，并将其转发给其对等节点（即直接邻居）。因此，新交易会在整个 P2P 网络中传播 [17]。每个挖矿节点（即有权在区块链上创建新区块的节点）都维护一个未确认交易的临时集合（内存池 [18]）。随后，参与的矿工从他们的内存池中选择一组未确认交易。值得注意的是，某些区块链允许用户指定其愿意支付给成功处理该交易的矿工的交易手续费。在这种情况下，矿工通常会根据交易手续费选择未确认交易，以最大化利润。接下来，每个参与的矿工为选定的交易构建一棵默克尔树，并最终获得一个默克尔根哈希 [1]。在此步骤之后，即可挖掘新区块。为了挖掘新区块，矿工为区块加上时间戳，填充区块头中的不同字段，并将交易添加到区块体中。随后，矿工开始在预定义的难度目标范围内计算区块的哈希值（如第 9.2.1 节所述）。区块挖矿要求矿工不断更改区块头中的 `nonce` 值，直到获得满足难度等级且小于或等于目标值的区块哈希值（参见第 9.2.1 节）。这种计算需要消耗大量能源，因为区块头哈希运算是以暴力方式进行的。
 
 然后，所有矿工相互竞争，以在其他人之前计算出区块哈希值。最早成功找到哈希值的矿工是获胜矿工 [19]。该获胜矿工随后将新创建的区块广播到区块链 P2P 网络 [17]。每个矿工通过首先验证接收到的区块中的交易，然后使用区块头中的 `nonce` 值重新计算区块哈希以确保合规性，来验证新创建的区块。如果大多数矿工批准新创建的区块，则达成共识，节点随即将新区块添加到其区块链的本地副本中。同样，新区块被追加到区块链，而新区块中的所有交易得到确认。此外，获胜矿工将获得将新区块挖掘到区块链上的奖励。
 
@@ -3599,8 +3370,6 @@ DOI: [10.1201/9781003224075-9](http://doi.org/10.1201/9781003224075-9)
 如前所述，区块链是一个仅追加型数据库，只能添加新信息（即包含交易数据且可选包含智能合约的新区块）。然而，修改或删除任何现有信息在计算上是不可行的，这使得区块链具有不可篡改性或防篡改性。从根本上说，不可篡改性源于区块创建方式：使用加密技术创建区块，通过基于哈希的链在逻辑上将它们串联在一起，并利用共识算法在 P2P 区块链网络的所有节点上进行复制。数据的任何微小变化都会产生不同的哈希值。因此，区块中已确认交易的任何更改都会改变该区块的哈希值。随着区块链的增长和 P2P 区块链网络规模的扩大，存储在区块上的数据变得更加难以篡改。例如，如果修改了对应第 100 号区块的任何数据，则该区块的哈希值将发生变化。由于前一个区块的哈希值连接着下一个区块，第 100 号区块的哈希值任何变化都会影响后续区块（即 101、102 等）的哈希值，一直到最近的区块。这种级联效应在区块链网络中显而易见，使得区块链具有不可篡改性 [20]。
 
 #### 9.2.3.2 去中心化
-
-
 
 该属性意味着区块链不受中央权威机构管辖。这是因为在 P2P 区块链网络中，每个节点都拥有参与所有操作的平等权利，因此，任何节点都可以向现有的分布式账本添加新区块 [21]。与传统系统相比，去中心化架构防止了任何系统出现单点故障。中心化系统容易发生单点故障，这意味着任何漏洞都可能导致系统完全或部分瘫痪。此类故障可能导致数据泄露以及身份与访问管理（IAM）功能受损 [22]。得益于去中心化和分布式的 P2P 网络（共同管理区块链），即使其中一个节点受到攻击，网络中的其他节点仍将继续运行，并确保系统平稳工作。去中心化还导致了去中介化，即通常存在于中心化系统中的所有中介机构，在基于区块链的系统中不再需要。
 
@@ -3622,43 +3391,49 @@ DOI: [10.1201/9781003224075-9](http://doi.org/10.1201/9781003224075-9)
 
 #### 9.2.3.7 低成本
 
+
+
+# 区块链与智能合约：讨论与参考文献
+
+## 9.2.3 区块链特性（续）
+
+### 9.2.3.7 无需第三方
+
 基于区块链的系统中的任何交易都可以在对等层面进行，无需受信第三方。通常，受信方会为其提供的服务收取一定费用。例如，使用环球同业银行金融电讯协会（SWIFT）系统进行的国际银行交易可能需要经过许多中间银行。这些银行除了收取 SWIFT 费用和汇率费用外，各自还会收取一定手续费 [32]。在基于区块链的系统中，不存在第三方中介机构；因此，总成本低于传统系统。
 
-#### 9.2.3.8 来源溯源
+### 9.2.3.8 来源溯源
 
 来源溯源是提供数据生命周期完整历史的一种方式，即可以从当前时间点追溯到起始点发生的各种状态变更或修改 [33]。换句话说，数据溯源因此提供了关于数据如何获得、存储在何处、如何被利用等完整信息。由于账本分布在 P2P 网络上，且网络中的每个节点均可访问，溯源特性很好地诠释了区块链。溯源被证明是区块链技术在供应链管理、土地登记和珠宝交易等领域的一个有用特性 [34]。
 
-#### 9.2.3.9 可审计性
+### 9.2.3.9 可审计性
 
 区块链上的每笔交易都带有时间戳，并使用用户的私钥进行数字签名。这使得网络能够验证每笔交易 [21]。时间戳允许节点追溯先前的记录并记录交易的具体细节。这提高了交易的透明度和安全性 [35]。
 
-#### 9.2.3.10 可用性
+### 9.2.3.10 可用性
 
 可用性理想情况下意味着给定系统应始终处于运行状态，并无论发生任何故障、问题或持续攻击，都能为其用户提供所需服务。由于去中心化和分布式特性，区块链具备这一特性。与中心化系统不同，去中心化区块链系统中的任何节点都同等具备提供分布式账本访问的能力。此外，可用性适用于系统可用性和交易可用性 [36]。此处，区块数据必须可供合法用户按需获取，以便他们随时随地查看交易数据，而不会出现数据损坏、不可访问或不一致的情况 [25,36]。
 
-#### 9.2.3.11 自动化
-
-
+### 9.2.3.11 自动化
 
 区块链通过使用智能合约来促进自动化，智能合约是模拟协议条款和条件的自执行计算机程序。自动化构成了开发去中心化应用（dApps）的基础，并提高了交易的效率和速度[37]。此外，区块链中的自动化减少了人工干预，消除了对第三方的需求，并提高了依赖区块链的各个领域的运营效率[38]。
 
-### 9.2.4 区块链类型
+## 9.2.4 区块链类型
 
 本节讨论三种不同类型的区块链。
 
-#### 9.2.4.1 公有链
+### 9.2.4.1 公有链
 
 公有链是一个开放、无限制且无需许可的分布式账本系统。在这样的开放网络中，节点有权访问所有记录、在区块链上添加数据、验证交易的能力，甚至参与挖矿过程[39]。公有链充分利用了去中心化和可访问性的特性（尽管并非完全[40]），没有任何限制。公有链最常见的例子是比特币和以太坊。
 
 使用公有链的优势是高度透明、无需信任、开放且最优去中心化[41]。由于所有内容都被记录并对所有人可见，公有链通过消除对受信任第三方的需求，形成了一个无需信任的环境。网络中的每个实体都为区块链的增长做出贡献，并防止了对中介的需求。系统中去中心化的程度意味着系统的容错弹性水平。与中心化系统相比，完全去中心化的系统提供了更好的安全性和容错弹性[42]。然而，公有链的缺点是能源效率低、因高透明度导致隐私较差、收敛缓慢、更容易受到攻击、高度不受监管，因此不适合某些应用[41]。
 
-#### 9.2.4.2 私有链
+### 9.2.4.2 私有链
 
 私有链是一个封闭、受限且需许可的区块链，其中每个节点的网络访问权限不同[43]。此类网络中的大多数节点仅拥有特定权限的访问权，而某些节点可以拥有对网络的完全访问权。因此，这种类型的区块链并非完全去中心化，因为部分许可被限制在中央权威机构[44]。私有链的例子有 Corda 和 Hyperledger[45]。
 
 私有链的优势（与公有链相比）是更高的吞吐量、低延迟、更好的隐私和更强的可扩展性。由于网络中的权威节点数量较少，达成共识所需的时间更短。因此，私有链可以满足高交易吞吐量的需求（即单位时间内的交易速度）。使用私有链，每秒可处理数千笔交易[46]。与公有链相比，私有链具有更强的可扩展性。这得益于较少的授权节点来管理和验证交易及相关数据。私有链面向需要最大隐私和流程稳定性的企业和组织[47]。私有生态系统使此类组织能够以更高的效率、速度和更少的停机时间运行。另一方面，私有链的缺点是需要受信任的节点、监管机构，且由于由单一组织管理，倾向于中心化[41]。
 
-#### 9.2.4.3 联盟链
+### 9.2.4.3 联盟链
 
 联盟被定义为两个或多个个人、组织或政府为实现共同目标而结成的联盟。在联盟链中，联盟中的所有成员都有权在区块链上写入和验证数据。它也是一种像私有链一样的许可区块链[48]。因此，只有来自联盟各成员的选定节点可以参与与区块链相关的操作。这使得联盟链成为一个半去中心化的网络，虽然权力分散在联盟成员之间，但只允许来自各成员的授权节点参与挖矿和验证过程。节点无法在未经每个节点确认的情况下自行向区块链添加信息。每个成员在达成共识中平等参与，这与公有链不同，需要的计算能力显著降低，能耗也更少[49]。
 
@@ -3677,8 +3452,6 @@ DOI: [10.1201/9781003224075-9](http://doi.org/10.1201/9781003224075-9)
 智能合约部署在区块链上后，提供了一系列特性和优势。以下是基于[37,38,55,56]的一些重要特性（运行在区块链之上）。
 
 #### 9.3.2.1 去中心化操作
-
-
 
 智能合约作为去中心化程序在区块链网络中运行。这使得智能合约能够克服中心化应用面临的各种问题。例如，去中心化运行确保了对单点故障的弹性，即使网络中的一个或多个节点受到攻击，也能自主运行。此外，智能合约服务不受拒绝服务攻击影响，并提供有保障的服务可用性。另外，去中心化运行将数据传输成本和延迟降至最低。
 
@@ -3728,9 +3501,6 @@ Vitalik Buterin 于 2015 年开发了 `Ethereum`，旨在提供一个能够支�
 
 #### 9.3.3.5 EOS
 
-
-
-
 ##### EOS 平台概述
 
 EOS 是一个去中心化且可扩展的平台，专为企业级应用设计，同时也可运行 dApps。该平台支持公有链和私有链部署 [64]。合约具有图灵完备性，并使用 C/C++ 进行开发。此外，EOS 中使用的智能合约与以太坊类似，每次执行合约时都会创建一个新的合约实例。另外，EOS 中的合约不需要任何交易手续费 [37]。此外，EOS 中的节点协作出块而非竞争出块，这也提高了安全性 [65]。
@@ -3745,7 +3515,7 @@ EOS 是一个去中心化且可扩展的平台，专为企业级应用设计，�
 
 区块链和智能合约蕴含巨大潜力，由于底层特性如加密技术、去中心化和分布式数据库，被认为是安全的，这使得攻击者极难进行黑客攻击或篡改。特别是，基于区块链的系统不会遭受与中心化系统相关的问题，如单点故障、对第三方或中介的必要性、权威机构保持完全控制，以及最重要的是用户隐私问题。
 
-尽管如此，区块链本身仍存在安全和隐私问题。过去发生的许多安全攻击，如 DAO 攻击、自私挖矿攻击、Parity 多签攻击和 51% 攻击 [77, 78, 79]，表明该技术仍处于发展阶段。一些与区块链和智能合约相关的安全攻击在 表 9.2 中简要讨论。尽管如此，区块链社区和联盟正持续致力于缓解这些攻击。
+尽管如此，区块链本身仍存在安全和隐私问题。过去发生的许多安全攻击，如 DAO 攻击、自私挖矿攻击、Parity 多签攻击和 51% 攻击 [77, 78, 79]，表明该技术仍处于发展阶段。一些与区块链和智能合约相关的安全攻击在表 9.2 中简要讨论。尽管如此，区块链社区和联盟正持续致力于缓解这些攻击。
 
 ### 表 9.2：区块链和智能合约的各类攻击
 
@@ -3763,92 +3533,85 @@ EOS 是一个去中心化且可扩展的平台，专为企业级应用设计，�
 
 ## 9.6 结论
 
-
-
-
-## 区块链与智能合约：讨论与参考文献
-
-本章详细讨论了区块链与智能合约。介绍了区块链概念，解释了区块结构、区块挖矿的流程、区块链特性以及区块链类型。随后，介绍了智能合约的概念，并详述了其特性和支持智能合约的区块链平台。然后，展示了区块链与智能合约的应用。此外，还阐述了区块链与智能合约的安全与隐私问题，重点强调了可能的攻击。区块链的独特特性使其成为开发新颖创新应用和服务的有前景技术。然而，区块链与智能合约仍需进一步的研究与开发工作，特别是在可扩展性、交易速度和安全性方面，以确立其作为支撑未来应用和服务的稳健敏捷平台的地位。
+区块链的独特特性使其成为开发新颖创新应用和服务的有前景技术。然而，区块链与智能合约仍需进一步的研究与开发工作，特别是在可扩展性、交易速度和安全性方面，以确立其作为支撑未来应用和服务的稳健敏捷平台的地位。
 
 ## 参考文献
 
-1.  **Nakamoto** S, Bitcoin A. A peer-to-peer electronic cash system. Bitcoin; [`bitcoin.org/bitcoin.pdf.2008;4`](https://bitcoin.org). 2008.
-
-2.  **Merkle** RC. Secrecy, Authentication, and Public Key Systems. Ph.D. Thesis. Stanford University; [`www.merkle.com/papers/Thesis1979.pdf`](http://www.merkle.com). 1979.
-
-3.  **Haber** S, Stornetta WS. How to time-stamp a digital document. In: Conference on the Theory and Application of Cryptography, Springer, Berlin, Heidelberg, 1990:437–455.
-
-4.  **Szabo** N. Formalizing and securing relationships on public networks. First Monday. Published online, [`firstmonday.org/ojs/index.php/fm/article/download/548/469`](https://firstmonday.org). 1997.
-
-5.  **Natarajan** H, Krause SK, Gradstein HL. Distributed Ledger Technology (DLT) and Blockchain. World Bank, [`openknowledge.worldbank.org/handle/10986/29053`](https://openknowledge.worldbank.org). 2017.
-
-6.  **Crosby** M, Pattanayak P, Verma S, Kalyanaraman V, others. Blockchain technology: beyond bitcoin. Appl Innov. 2016;2(6–10):71.
-
-7.  **Saad** M, Spaulding J, Njilla L, et al. Exploring the attack surface of blockchain: a comprehensive survey. IEEE Commun Surv & Tutorials. 2020; 22(3): 1977–2008.
-
-8.  **Antonopoulos** AM. Mastering Bitcoin: Unlocking Digital Cryptocurrencies. O’Reilly Media, Inc., 2014.
-
-9.  **Martino** R, Cilardo A. Designing a SHA-256 processor for blockchain-based IoT applications. Internet of Things. 2020;11:100254.
-
-10.  **Majeed** U, Hong CS. On the proof-of-work puzzle hardness in bitcoin blockchain. Proc Korean Inf Sci Soc. Published online 2018:1348–1350.
-
-11.  **Vranken** H. Sustainability of bitcoin and blockchains. Curr Opin Environ Sustain. 2017;28:1–9.
-
-12.  **Ma Y**, Sun Y, Lei Y, Qin N, Lu J. A survey of blockchain technology on security, privacy, and trust in crowdsourcing services. World Wide Web. 2020;23(1):393–419.
-
-13.  **Singh** B, Gupta G. Analyzing windows subsystem for linux metadata to detect timestamp forgery. In: IFIP International Conference on Digital Forensics, Springer, Cham, 2019:159–182.
-
-14.  **Chen** P-W, Jiang B-S, Wang C-H. Blockchain-based payment collection supervision system using pervasive Bitcoin digital wallet. In: 2017 IEEE 13th International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob); IEEE, 2017:139–146.
-
-15.  **Khan** MA, Salah K. IoT security: review, blockchain solutions, and open challenges. Futur Gener Comput Syst. 2018;82:395–411.
-
-16.  **ur** Rehman MH, Salah K, Damiani E, Svetinovic D. Trust in blockchain cryptocurrency ecosystem. IEEE Trans Eng Manag. 2019;67(4):1196–1212.
-
-17.  **Li** X, Jiang P, Chen T, Luo X, Wen Q. A survey on the security of blockchain systems. Futur Gener Comput Syst. 2020;107:841–853.
-
-18.  ***Coinguides.*** What is Bitcoin Mempool? Memory pool size, fees, transactions explained. Retrieved on June 30, 2021. Published 2018. Accessed June 30, 2021. [`coinguides.org/bitcoin-mempool/`](https://coinguides.org)
-
-19.  **Kasthala** V. Blockchain nodes and mining, explained. Retrieved on June 30, 2021. Published 2019. [`medium.com/@venkat.kasthala/how-does-mining-work-in-blockchain-b4fc5f7f3209`](https://medium.com).
-
-20.  **Politou** E, Casino F, Alepis E, Patsakis C. Blockchain mutability: challenges and proposed solutions. IEEE Trans Emerg Top Comput. Published online 2019;9(4):1972–1986.
-
-21.  **Zheng** Z, Xie S, Dai H-N, Chen X, Wang H. Blockchain challenges and opportunities: a survey. Int J Web Grid Serv. 2018;14(4):352–375.
-
-22.  **Nuss** M, Puchta A, Kunz M. Towards blockchain-based identity and access management for internet of things in enterprises. In: International Conference on Trust and Privacy in Digital Business, Springer, Cham, 2018:167–181.
-
-23.  **Kritikos** M. What if blockchain offered a way to reconcile privacy with transparency? Retrieved on May 30, 2021. [`policycommons.net/artifacts/1335700/what-if-blockchain-offered-a-way-to-reconcile-privacy-with-transparency/`](https://policycommons.net).
-
-24.  **De** Filippi P. The interplay between decentralization and privacy: the case of blockchain technologies. J Peer Prod Issue. 2016;7:1–19.
-
-25.  **Hammi** MT, Hammi B, Bellot P, Serhrouchni A. Bubbles of trust: a decentralized blockchain-based authentication system for IoT. Comput & Secur. 2018;78:126–142.
-
-26.  **Zhou** J, Gollmann D. Towards verification of non-repudiation protocols. In: Proceedings of 1998 International Refinement Workshop and Formal Methods Pacific, Springer-Verlag, 1998:370–380.
-
-27.  **Fang** W, Chen W, Zhang W, Pei J, Gao W, Wang G. Digital signature scheme for information non-repudiation in blockchain: a state of the art review. EURASIP J Wirel Commun Netw. 2020;2020(1):1–15.
-
-28.  ***CryptoCompare.*** How do digital signatures in Bitcoin work? Retrieved on June 23, 2021. Published 2015. [`www.cryptocompare.com/wallets/guides/how-do-digital-signatures-in-bitcoin-work/`](https://www.cryptocompare.com)
-
-29.  **Georgescu** A, Cirnu CE. Blockchain and critical infrastructures--challenges and opportunities. Rom Cyber Secur J. Published online 2019:1(1):1730–2668.
-
-30.  **Dhar** V, Stein RM. FinTech platforms and strategy. Commun ACM. 2017;60(10):32–35.
-
-31.  **Hewa** TM, Kalla A, Nag A, Ylianttila ME, Liyanage M. Blockchain for 5G and IoT: opportunities and challenges. In: 2020 IEEE Eighth International Conference on Communications and Networking (ComNet), 2020:1–8.
-
-32.  **Qiu** T, Zhang R, Gao Y. Ripple vs. SWIFT: transforming cross border remittance using blockchain technology. Procedia Comput Sci. 2019;147:428–434.
-
-33.  **Salman** T, Zolanvari M, Erbad A, Jain R, Samaka M. Security services using blockchains: a state of the art survey. IEEE Commun Surv & Tutorials. 2018;21(1):858–880.
-
-34.  **Montecchi** M, Plangger K, Etter M. It’s real, trust me! Establishing supply chain provenance using blockchain. Bus Horiz. 2019;62(3):283–293.
-
-35.  **Ali** MS, Vecchio M, Pincheira M, Dolui K, Antonelli F, Rehmani MH. Applications of blockchains in the Internet of Things: a comprehensive survey. IEEE Commun Surv & Tutorials. 2018;21(2):1676–1717.
-
-36.  **Zhang** R, Xue R, Liu L. Security and privacy on blockchain. ACM Comput Surv. 2019;52(3):1–34.
-
-
+1. **Nakamoto** S, Bitcoin A. A peer-to-peer electronic cash system. Bitcoin; [`bitcoin.org/bitcoin.pdf.2008;4`](https://bitcoin.org). 2008.
 
 
 
 ## 参考文献
+
+2. **Merkle** RC. Secrecy, Authentication, and Public Key Systems. Ph.D. Thesis. Stanford University; [`www.merkle.com/papers/Thesis1979.pdf`](http://www.merkle.com). 1979.
+
+3. **Haber** S, Stornetta WS. How to time-stamp a digital document. In: Conference on the Theory and Application of Cryptography, Springer, Berlin, Heidelberg, 1990:437–455.
+
+4. **Szabo** N. Formalizing and securing relationships on public networks. First Monday. Published online, [`firstmonday.org/ojs/index.php/fm/article/download/548/469`](https://firstmonday.org). 1997.
+
+5. **Natarajan** H, Krause SK, Gradstein HL. Distributed Ledger Technology (DLT) and Blockchain. World Bank, [`openknowledge.worldbank.org/handle/10986/29053`](https://openknowledge.worldbank.org). 2017.
+
+6. **Crosby** M, Pattanayak P, Verma S, Kalyanaraman V, others. Blockchain technology: beyond bitcoin. Appl Innov. 2016;2(6–10):71.
+
+7. **Saad** M, Spaulding J, Njilla L, et al. Exploring the attack surface of blockchain: a comprehensive survey. IEEE Commun Surv & Tutorials. 2020; 22(3): 1977–2008.
+
+8. **Antonopoulos** AM. Mastering Bitcoin: Unlocking Digital Cryptocurrencies. O’Reilly Media, Inc., 2014.
+
+9. **Martino** R, Cilardo A. Designing a SHA-256 processor for blockchain-based IoT applications. Internet of Things. 2020;11:100254.
+
+10. **Majeed** U, Hong CS. On the proof-of-work puzzle hardness in bitcoin blockchain. Proc Korean Inf Sci Soc. Published online 2018:1348–1350.
+
+11. **Vranken** H. Sustainability of bitcoin and blockchains. Curr Opin Environ Sustain. 2017;28:1–9.
+
+12. **Ma Y**, Sun Y, Lei Y, Qin N, Lu J. A survey of blockchain technology on security, privacy, and trust in crowdsourcing services. World Wide Web. 2020;23(1):393–419.
+
+13. **Singh** B, Gupta G. Analyzing windows subsystem for linux metadata to detect timestamp forgery. In: IFIP International Conference on Digital Forensics, Springer, Cham, 2019:159–182.
+
+14. **Chen** P-W, Jiang B-S, Wang C-H. Blockchain-based payment collection supervision system using pervasive Bitcoin digital wallet. In: 2017 IEEE 13th International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob); IEEE, 2017:139–146.
+
+15. **Khan** MA, Salah K. IoT security: review, blockchain solutions, and open challenges. Futur Gener Comput Syst. 2018;82:395–411.
+
+16. **ur** Rehman MH, Salah K, Damiani E, Svetinovic D. Trust in blockchain cryptocurrency ecosystem. IEEE Trans Eng Manag. 2019;67(4):1196–1212.
+
+17. **Li** X, Jiang P, Chen T, Luo X, Wen Q. A survey on the security of blockchain systems. Futur Gener Comput Syst. 2020;107:841–853.
+
+18. **Coinguides**. What is Bitcoin Mempool? Memory pool size, fees, transactions explained. Retrieved on June 30, 2021. Published 2018. Accessed June 30, 2021. [`coinguides.org/bitcoin-mempool/`](https://coinguides.org)
+
+19. **Kasthala** V. Blockchain nodes and mining, explained. Retrieved on June 30, 2021. Published 2019. [`medium.com/@venkat.kasthala/how-does-mining-work-in-blockchain-b4fc5f7f3209`](https://medium.com).
+
+20. **Politou** E, Casino F, Alepis E, Patsakis C. Blockchain mutability: challenges and proposed solutions. IEEE Trans Emerg Top Comput. Published online 2019;9(4):1972–1986.
+
+21. **Zheng** Z, Xie S, Dai H-N, Chen X, Wang H. Blockchain challenges and opportunities: a survey. Int J Web Grid Serv. 2018;14(4):352–375.
+
+22. **Nuss** M, Puchta A, Kunz M. Towards blockchain-based identity and access management for internet of things in enterprises. In: International Conference on Trust and Privacy in Digital Business, Springer, Cham, 2018:167–181.
+
+23. **Kritikos** M. What if blockchain offered a way to reconcile privacy with transparency? Retrieved on May 30, 2021. [`policycommons.net/artifacts/1335700/what-if-blockchain-offered-a-way-to-reconcile-privacy-with-transparency/`](https://policycommons.net).
+
+24. **De** Filippi P. The interplay between decentralization and privacy: the case of blockchain technologies. J Peer Prod Issue. 2016;7:1–19.
+
+25. **Hammi** MT, Hammi B, Bellot P, Serhrouchni A. Bubbles of trust: a decentralized blockchain-based authentication system for IoT. Comput & Secur. 2018;78:126–142.
+
+26. **Zhou** J, Gollmann D. Towards verification of non-repudiation protocols. In: Proceedings of 1998 International Refinement Workshop and Formal Methods Pacific, Springer-Verlag, 1998:370–380.
+
+27. **Fang** W, Chen W, Zhang W, Pei J, Gao W, Wang G. Digital signature scheme for information non-repudiation in blockchain: a state of the art review. EURASIP J Wirel Commun Netw. 2020;2020(1):1–15.
+
+28. **CryptoCompare**. How do digital signatures in Bitcoin work? Retrieved on June 23, 2021. Published 2015. [`www.cryptocompare.com/wallets/guides/how-do-digital-signatures-in-bitcoin-work/`](https://www.cryptocompare.com)
+
+29. **Georgescu** A, Cirnu CE. Blockchain and critical infrastructures--challenges and opportunities. Rom Cyber Secur J. Published online 2019:1(1):1730–2668.
+
+30. **Dhar** V, Stein RM. FinTech platforms and strategy. Commun ACM. 2017;60(10):32–35.
+
+31. **Hewa** TM, Kalla A, Nag A, Ylianttila ME, Liyanage M. Blockchain for 5G and IoT: opportunities and challenges. In: 2020 IEEE Eighth International Conference on Communications and Networking (ComNet), 2020:1–8.
+
+32. **Qiu** T, Zhang R, Gao Y. Ripple vs. SWIFT: transforming cross border remittance using blockchain technology. Procedia Comput Sci. 2019;147:428–434.
+
+33. **Salman** T, Zolanvari M, Erbad A, Jain R, Samaka M. Security services using blockchains: a state of the art survey. IEEE Commun Surv & Tutorials. 2018;21(1):858–880.
+
+34. **Montecchi** M, Plangger K, Etter M. It’s real, trust me! Establishing supply chain provenance using blockchain. Bus Horiz. 2019;62(3):283–293.
+
+35. **Ali** MS, Vecchio M, Pincheira M, Dolui K, Antonelli F, Rehmani MH. Applications of blockchains in the Internet of Things: a comprehensive survey. IEEE Commun Surv & Tutorials. 2018;21(2):1676–1717.
+
+36. **Zhang** R, Xue R, Liu L. Security and privacy on blockchain. ACM Comput Surv. 2019;52(3):1–34.
 
 37. Zheng Z, Xie S, Dai H-N, 等. 智能合约综述：挑战、进展与平台. *Futur Gener Comput Syst*. 2020;105:475–491.
 
@@ -3878,80 +3641,7 @@ EOS 是一个去中心化且可扩展的平台，专为企业级应用设计，�
 
 50. Al-Shaibani H, Lasla N, Abdallah M. 基于联盟链的去中心化证券交易平台. *IEEE Access*. 2020;8:123711–123725.
 
-51. Li K, Li H, Hou H, Li K, Chen Y. 投票证明：一种基于投票机制与联盟链的高性能共识协议. 见：2017 年 IEEE 第 19 届高性能计算与通信国际会议；IEEE 第 15 届智慧城市国际会议；IEEE 第 3 届数据科学与系统国际会议 (HPCC/SmartCity/DSS), IEEE 2017:466–473.
 
-52. Wang S, Ouyang L, Yuan Y, Ni X, Han X, Wang F-Y. 区块链赋能的智能合约：架构、应用与未来趋势. *IEEE Trans Syst Man, Cybern Syst*. 2019;49(11):2266–2277.
-
-53. Saputhanthri A, De Alwis C, Liyanage M. 基于区块链的物联网市场的兴起. 见：欧洲网络与通信联合会议 (EuCNC) & 6G 峰会, 法国格勒诺布尔, 2021.
-
-54. Andoni M, Robu V, Flynn D, 等. 区块链技术在能源领域的应用：挑战与机遇的系统性综述. *Renew Sustain Energy Rev*. 2019;100:143–174.
-
-55. Peng K, Li M, Huang H, Wang C, Wan S, Choo K-KR. 物联网中智能合约的安全挑战与机遇：综述. *IEEE Internet Things J*. 2021 年在线发表.
-
-56. Alharby M, Van Moorsel A. 基于区块链的智能合约：系统性映射研究. *arXiv Prepr arXiv171006372*. 2017 年在线发表.
-
-57. Buterin V, 等. 下一代智能合约与去中心化应用平台. *White Pap*. 以太坊基金会, 瑞士楚格, 2014.
-
-58. Kasireddy P. 以太坊究竟是如何工作的. *Publ Mediu* ([`https//mediumcom/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369`](https://mediumcom)). 2017 年在线发表.
-
-59. Androulaki E, Barger A, Bortnikov V, 等. Hyperledger Fabric：面向许可区块链的分布式操作系统. 见：第十三届 EuroSys 会议论文集, 2018:1–15. doi:[`10.1145/3190508.3190538`](http://doi.org/10.1145/3190508.3190538).
-
-60. Docker. 无标题. 2021 年 7 月 7 日检索. 2021 年 6 月发布. [`https://docs.docker.com/`](https://docs.docker.com/).
-
-61. Brown RG, Carlyle J, Grigg I, Hearn M. Corda：简介. *R3 CEV*, 8 月. 2016;1:15.
-
-62. Valenta M, Sandner P. 以太坊、Hyperledger Fabric 与 Corda 的对比. *Frankfurt Sch Blockchain Cent*. [`http://explore-ip.com/2017_Comparison-of-Ethereum-Hyperledger-Corda.pdf`](http://explore-ip.com). 2017.
-
-63. Mazieres D. Stellar 共识协议：面向互联网级共识的联邦模型. *Stellar Dev Found*. [`https://www.stellar.org/papers/stellar-consensus-protocol.pdf`](https://www.stellar.org). 2015;1–32.
-
-64. EOS. EOSIO 开发者门户 - EOSIO 开发文档. 2021 年 7 月 7 日检索. [`https://developers.eos.io/welcome/latest/index`](https://developers.eos.io).
-
-65. Valdeolmillos D, Mezquita Y, González-Briones A, Prieto J, Corchado JM. 区块链技术：加密货币当前挑战的综述. 见：区块链与应用国际大会, Springer, Cham, 2019:153–160.
-
-66. Al-Megren S, Alsalamah S, Altoaimy L, Alsalamah H, Soltanisehat L, Pentland A. 数字领域的区块链用例：文献综述. 2018. doi:[`10.1109/Cybermatics_2018.2018.00242`](http://doi.org/10.1109/Cybermatics_2018.2018.00242).
-
-67. Zile K, Strazdina R. 区块链用例及其可行性. *Appl Comput Syst*. 2018;23:12–20. doi:[`10.2478/acss-2018-0002`](http://doi.org/10.2478/acss-2018-0002).
-
-68. Sitonio C, Nucciarelli A. 区块链对音乐产业的影响. 2018.
-
-69. Kalsgonda V, Kulkarni R. 区块链在保险行业的应用：综述. 在线发表, *PIMT Journal of Res*. 2020:12(4):1–3 doi:[`10.13140/RG.2.2.23708.72322`](http://doi.org/10.13140/RG.2.2.23708.72322).
-
-70. Voinea DV, 等. 面向新闻业的区块链——潜在用例. *Soc Sci Educ Res Rev*. 2019;6(2):244–256.
-
-71. Agbo CC, Mahmoud QH, Eklund JM. 医疗保健领域的区块链技术：系统性综述. *Healthcare*. 7;2019:56.
-
-72. Medicalchain. Medicalchain 白皮书 2.1. 2021 年 5 月 17 日检索. 2018 年发布. [`https://medicalchain.com/Medicalchain-Whitepaper-EN.pdf`](https://medicalchain.com).
-
-73. IRYO Network. IRYO 全球参与式医疗保健生态系统. 2021 年 5 月 17 日检索, 2021. 2017 年发布. [`https://iryo.network/iryo_whitepaper.pdf`](https://iryo.network).
-
-
-
-
-74. *Burstiq. Burstiq*. 于 2021 年 5 月 17 日检索。 [`www.burstiq.com/technology/`](https://www.burstiq.com)。
-
-75. Deloitte. 医疗和人寿保险领域的区块链分析。于 2021 年 6 月 24 日检索。 [`www2.deloitte.com/us/en/pages/life-sciences-and-health-care/articles/blockchain-in-insurance.html`](https://www2.deloitte.com)。
-
-76. *Propertyclub. Propertyclub*. 于 2021 年 5 月 26 日检索。 [`propertyclub.nyc/article/real-estate-tokenization`](https://propertyclub.nyc)。
-
-77. Praitheeshan P, Pan L, Yu J, Liu J, Doss R. 以太坊智能合约漏洞安全分析方法：综述。arXiv 预印本 arXiv190808605。2019 年在线发表。
-
-78. Ye C, Li G, Cai H, Gu Y, Fukuda A. 区块链安全性分析：51% 攻击检测案例研究。载于：2018 年第 5 届可靠系统及其应用国际会议 (DSA)，IEEE，2018:15–24。
-
-79. Averin A, Averina O. 区块链技术漏洞及区块链系统攻击综述。载于：2019 年国际工业工程与现代技术多会议 (FarEastCon)，IEEE，2019:1–6。
-
-80. Anna Katrenko M.S. 区块链攻击向量：最安全技术的漏洞。于 2021 年 7 月 7 日检索。2020 年发表。 [`www.apriorit.com/dev-blog/578-blockchain-attack-vectors`](https://www.apriorit.com)。
-
-81. Heilman E, Kendler A, Zohar A, Goldberg S. 比特币点对点网络上的日蚀攻击。载于：*第 24 届 {USENIX} 安全研讨会 ({USENIX} Security 15)*，2015:129–144。
-
-82. DoS vs DDoS. DoS vs DDoS. 于 5 月 27 日检索， [`www.usenix.org/system/files/Conference/usenixsecurity15/sec15-paper-heilman.pdf`](https://www.usenix.org)。 2021. [`www.fortinet.com/resources/cyberglossary/dos-vs-ddos`](https://www.fortinet.com)。
-
-83. Dasgupta D, Shrein JM, Gupta KD. 安全视角下的区块链综述。J Bank Financ Technol. 2019;3(1):1–17。
-
-84. *Race Attack. Race attack vs. double-spending attack: are they same?* 于 2021 年 6 月 28 日检索。 [`bitcoin.stackexchange.com/questions/60164/race-attack-vs-double-spending-attack-are-they-same`](https://bitcoin.stackexchange.com)。
-
-85. Siegel D. 理解 DAO 攻击。于 2021 年 6 月 1 日检索。2020 年发表。 [`www.coindesk.com/understanding-dao-hack-journalists`](https://www.coindesk.com)。
-
-86. Palladino S. Parity 钱包黑客事件解析。于 2021 年 5 月 17 日检索。2017 年发表。 [`blog.openzeppelin.com/on-the-parity-wallet-multisig-hack-405a8c12e8f7/`](https://blog.openzeppelin.com)。
 
 # 10 医疗保健中的区块链技术：系统综述
 
@@ -3975,7 +3665,7 @@ Hedi Sakli
 
 加贝斯大学 EITA Consulting
 
-DOI: [10.1201/9781003224075-10](http://doi.org/10.1201/9781003224075-10)
+DOI: [`10.1201/9781003224075-10`](http://doi.org/10.1201/9781003224075-10)
 
 ## 10.1 简介
 
@@ -3988,8 +3678,11 @@ DOI: [10.1201/9781003224075-10](http://doi.org/10.1201/9781003224075-10)
 `IoMT` 的一些示例包括针对慢性病或长期疾病患者的远程患者监护。这种治疗方式使患者免于每次有医疗疑问或病情变化时都要去医院或医生办公室，以及可将信息发送给护理人员的住院患者可穿戴 mHealth 设备。另一个例子是在制药领域的药品追踪。然而，重要的是要注意医疗保健领域面临诸多挑战。主要挑战是由于收集的大量数据，导致患者记录的处理和分析困难。该数据的安全性是另一个需要考虑的挑战。由于高度互联，这些系统容易遭受恶意攻击。此外，由于敏感数据的交换，难以确保机密性。总之，主要挑战如下：
 
 *   **患者记录管理**：目前，医生之间不共享信息，患者必须将其过往咨询的报告带给每一位新的专科医生。对于不了解医情、不掌握医学术语且对病历内容没有准确概念的患者来说，这项任务更加困难。随着远程医疗的兴起，看病通过多种渠道进行，这使得医疗专业人员更新患者病历变得更加困难。因此，为该行业创建一种记录和更新线下及线上就诊病历的方式将至关重要。这意味着将这些记录数字化，并在患者同意后与医疗专业人员共享，以便实时更新。
+
     *   **临床试验认证**：涉及药物的临床试验旨在建立或验证一定量的数据。这些数据的共享（包括保密性、完整性、记录保存和患者入组）通常被研究人员以安全的方式使用。不同科学家和组织之间的研究共享可促进特定主题取得更好、更快的进展。
+
     *   **药品可追溯性**：缺乏药品可追溯性是另一个问题，分布式公共数据库可为其提供解决思路。
+
     *   **保障健康数据访问安全：** 这是网络间数据传输中的一个主要问题。`IoMT` 应用程序和平台对中心化云的依赖使安全面临风险。
 
 区块链是一项新兴技术，正在各个领域扩散，并呈现出许多优势和机遇。区块链技术的特点是存储数据的不可篡改性、去中心化和隐私保护。将其融入医疗领域，有助于克服后者遇到的问题。
@@ -3998,21 +3691,25 @@ DOI: [10.1201/9781003224075-10](http://doi.org/10.1201/9781003224075-10)
 
 ## 10.2 区块链技术基本概念
 
-
-
-在点对点网络中，机器和设备之间无需中间实体即可相互通信，从而形成一个称为区块链的去中心化网络。实际上，它是一组共享并记录交易的连接节点。网络中的每个节点都保存一份副本，以避免出现单点故障。通过区块链共享的数据以区块的形式构建，这些区块相互链接，形成分布式账本技术（DLT）。该数据的安全性和不可篡改性通过加密函数来保障。区块链的概念由中本聪于 2008 年提出 [10]。它吸引了不同领域多位研究人员的兴趣。Bhushan 等人 [11, 12] 和 Saxena 等人 [13] 对区块链技术与物联网的结合进行了深入研究。他们专注于物联网应用，确保物联网系统的安全性、保密性和隐私性。他们还探讨了该领域未来的挑战。文献 [14] 的作者以确保安全性和保密性为同一目标，阐述了该技术在智慧城市设计与开发中的贡献。其他研究人员则探索了区块链在供应链中的应用 [15, 16]。这种用法旨在解决可靠性和获取制造商信息的问题。所提出的解决方案基于以太坊区块链和 ERC20 接口的使用。它保证了数据安全性和可追溯性以及互操作性，通过降低成本并使供应链和制造业中的交换自动化 [17]。他们利用区块链解决了车联网中的安全和隐私问题。此外，Halima 等人 [18] 利用去中心化特性确保车辆与服务提供商之间的通信。
+在点对点网络中，机器和设备之间无需中间实体即可相互通信，从而形成一个称为区块链的去中心化网络。实际上，它是一组共享并记录交易的连接节点。网络中的每个节点都保存一份副本，以避免出现单点故障。通过区块链共享的数据以区块的形式构建，这些区块相互链接，形成分布式账本技术（`DLT`）。该数据的安全性和不可篡改性通过加密函数来保障。区块链的概念由中本聪于 2008 年提出 [10]。它吸引了不同领域多位研究人员的兴趣。Bhushan 等人 [11, 12] 和 Saxena 等人 [13] 对区块链技术与物联网的结合进行了深入研究。他们专注于物联网应用，确保物联网系统的安全性、保密性和隐私性。他们还探讨了该领域未来的挑战。文献 [14] 的作者以确保安全性和保密性为同一目标，阐述了该技术在智慧城市设计与开发中的贡献。其他研究人员则探索了区块链在供应链中的应用 [15, 16]。这种用法旨在解决可靠性和获取制造商信息的问题。所提出的解决方案基于以太坊区块链和 `ERC20` 接口的使用。它保证了数据安全性和可追溯性以及互操作性，通过降低成本并使供应链和制造业中的交换自动化 [17]。他们利用区块链解决了车联网中的安全和隐私问题。此外，Halima 等人 [18] 利用去中心化特性确保车辆与服务提供商之间的通信。
 
 区块链技术主要由以下核心要素构成：去中心化、透明、自主、安全和不可篡改。如上所述 [19]：
 
 *   **去中心化**：区块链技术是一种分布式数据库，数据存储在网络的所有节点中。所有节点可以通过定义良好的协议同时且无需中介地操作、访问和更新交易。这些数据并非全部保存在中心中介的服务器上，而是“分布式”地托管在每个参与者手中。
+
 *   **透明**：自创建以来，区块链中的交易可供所有用户访问。但它们通过加密函数进行扩展，使其无法被修改。也就是说，允许添加交易，但不允许修改或删除交易。就像在比特币网络中一样，所有交易都是公开的，且可通过共识机制由所有人验证，这将允许每个人确保每个参与者拥有他们正在花费的比特币，并且仅花费一次。区块链的透明特性当然可以防止这些数据被修改或窃取。
+
 *   **共识**：区块链对应着一个所有人都认同的交易历史。这种关于交易排序的共识解决了所谓的“双重支付”问题：在一笔交易中花费的比特币不能在稍后广播到网络上的另一笔交易中被第二次花费。第二笔交易将被网络拒绝。
+
 *   **安全**：一旦记录在区块链中，由于网络中不同节点存在多个副本，因此无法删除或修改交易。因此，区块只能被扩展，而不能被修改。这赋予了区块链高度的安全性，并使攻击信息区块变得更加复杂。
+
 *   **自主**：在区块链网络中，交易的处理不再集中在一个中心组织，而是分散在网络的所有参与者中。交易可以被每个节点查阅和存储，甚至可以被转移和更新。这样，区块链无需受信第三方的干预即可自主运行，并保持节点身份的匿名性和安全性。
 
 ### 10.2.1 区块链流程与分类
 
 在开始区块链操作流程之前，我们必须定义什么是交易。这是区块链节点之间交换和共享信息的行为。交易实际上是网络参与者之间交换的数据，并存储在称为区块的文件中。这些数据被加密后链接到前一个区块，形成一条链。随着交易的添加，区块链每时每刻都在演变。交易必须经过预先验证和确认。
+
+
 
 图 10.2 说明了区块链交易的功能流程。该流程始于 B 向 A 请求一笔交易。另一方 B 请求的数据将形成一个新区块，并分发到区块链网络的不同节点上。为了传输，新区块将使用加密技术由网络节点进行验证和确认。验证通过后，它将按时间顺序添加到之前的区块中。添加的区块以一种无法被修改或删除的方式被链接。在最后阶段，用户 B 从 A 处接收交易，交易成功结束。
 
@@ -4023,29 +3720,26 @@ DOI: [10.1201/9781003224075-10](http://doi.org/10.1201/9781003224075-10)
 根据其特性和功能，区块链可分为三类 [20]：
 
 *   **公有链**：在公有链网络中，交易由所有参与者管理，无中央控制机构。他们有权查阅甚至修改交换的数据。共识机制的使用保证了此类网络的安全性和不可篡改性。公有链最著名的例子是以太坊和比特币。
-*   **私有链**：在私有链网络中，只有授权参与者才能访问。访问权限由控制网络的实体通过邀请授予。因此，要进行交易，参与者必须向第三方请求许可。此类网络通常应用于同类公司之间。Hyperledger Fabric 是私有链的一个例子。
-*   **联盟链**：联盟链是公有链和私有链的融合。在这种类型中，某些节点允许读写交易，而对其他节点则受限。与每个系统最显著的区别在于共识。联盟链不是任何人都可以验证区块的开放系统，也不是仅由单一实体指定区块生产者的封闭系统，而是由少数权力均等的参与方同时作为验证者运行。BigchainDB 是联盟链的一个例子 [20]。
 
-### 10.2.2 智能合约与以太坊平台
+*   **私有链**：在私有链网络中，只有授权参与者才能访问。访问权限由控制网络的实体通过邀请授予。因此，要进行交易，参与者必须向第三方请求许可。此类网络通常应用于同类公司之间。`Hyperledger Fabric` 是私有链的一个例子。
 
+*   **联盟链**：联盟链是公有链和私有链的融合。在这种类型中，某些节点允许读写交易，而对其他节点则受限。与每个系统最显著的区别在于共识。联盟链不是任何人都可以验证区块的开放系统，也不是仅由单一实体指定区块生产者的封闭系统，而是由少数权力均等的参与方同时作为验证者运行。`BigchainDB` 是联盟链的一个例子 [20]。
 
+## 10.2.2 智能合约与以太坊平台
 
+### 智能合约与去中心化应用
 
-# 区块链在医疗保健中的应用
+区块链的主要优势之一在于智能合约和去中心化应用（`DApp`）的应用。它们的主要作用是实现资产和服务的交换以及货币交易，而无需求助于第三方权威机构。1994 年，Nick Szabo 将智能合约的概念定义为“一种执行合同条款的计算机化交易协议”[[21]](#C_015_c10.xhtml#r10_21)。智能合约自动执行交易，无需人工干预。智能合约处理的信息来自连接的物体和其他测量设备。区块链中的矿工检查交易[[22]](#C_015_c10.xhtml#r10_22)[[23]](#C_015_c10.xhtml#r10_23)并将其更新以保存在区块链中。
 
-## 智能合约与去中心化应用
-
-区块链的主要优势之一在于智能合约和去中心化应用（DApp）的应用。它们的主要作用是实现资产和服务的交换以及货币交易，而无需求助于第三方权威机构。1994 年，Nick Szabo 将智能合约的概念定义为“一种执行合同条款的计算机化交易协议”[[21]](#C_015_c10.xhtml#r10_21)。智能合约自动执行交易，无需人工干预。智能合约处理的信息来自连接的物体和其他测量设备。区块链中的矿工检查交易[[22]](#C_015_c10.xhtml#r10_22)[[23]](#C_015_c10.xhtml#r10_23)并将其更新以保存在区块链中。
-
-智能合约是使用以太坊等区块链平台开发的。该平台是最有前途的区块链，它可以使用图灵完备的编程语言支持高级自定义智能合约。Solidity 作为一种高级编程语言，用于编写智能合约代码，随后将其转换为以太坊虚拟机（EVM）字节码。在 EVM 中，Gas 的数量是每笔交易的成本或执行费用。该费用计算公式如下：
+智能合约是使用以太坊等区块链平台开发的。该平台是最有前途的区块链，它可以使用图灵完备的编程语言支持高级自定义智能合约。`Solidity` 作为一种高级编程语言，用于编写智能合约代码，随后将其转换为以太坊虚拟机（`EVM`）字节码。在 `EVM` 中，`Gas` 的数量是每笔交易的成本或执行费用。该费用计算公式如下：
 
 ```
 Fee = gasPrice × min(gasLimit, gasUsed)  (10.1)
 ```
 
-其中，`gasPrice` 是矿工收到的作为报酬的 Gwei 数量，`gasLimit` 是完成一笔交易所需的最大 Gas 量，`gasUsed` 取决于每笔交易的存储和处理量[[25]](#C_015_c10.xhtml#r10_25)。
+其中，`gasPrice` 是矿工收到的作为报酬的 `Gwei` 数量，`gasLimit` 是完成一笔交易所需的最大 `Gas` 量，`gasUsed` 取决于每笔交易的存储和处理量[[25]](#C_015_c10.xhtml#r10_25)。
 
-去中心化应用是部署在区块链上的应用程序，通常基于智能合约。其目的是提高所收集信息的透明度和可追溯性。鉴于被 DApp 吸引的研究人员和开发人员数量众多，各种网站收集不同 DApp 应用程序的统计数据[[26]](#C_015_c10.xhtml#r10_26)。
+去中心化应用是部署在区块链上的应用程序，通常基于智能合约。其目的是提高所收集信息的透明度和可追溯性。鉴于被 `DApp` 吸引的研究人员和开发人员数量众多，各种网站收集不同 `DApp` 应用程序的统计数据[[26]](#C_015_c10.xhtml#r10_26)。
 
 ## 10.3 区块链在医疗保健中的应用
 
@@ -4055,26 +3749,22 @@ Fee = gasPrice × min(gasLimit, gasUsed)  (10.1)
 
 | 解决的问题 | 用例 | 论文 | 年份 | 框架 | 智能合约 | 贡献 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **患者数据管理** | • 在不同利益相关者间共享患者电子健康记录<br>• 确保共享数据的完整性、机密性和互操作性<br>• 解决电子健康记录系统中的大规模数据管理和共享问题<br>• 远程监控系统保证患者的安全和隐私 | [[25]](#C_015_c10.xhtml#r10_25)[[27]](#C_015_c10.xhtml#r10_27)[[30]](#C_015_c10.xhtml#r10_30)[[26]](#C_015_c10.xhtml#r10_26)[[28]](#C_015_c10.xhtml#r10_28)[[29]](#C_015_c10.xhtml#r10_29)[[31]](#C_015_c10.xhtml#r10_31) | 2020<br>2016<br>2020<br>2019<br>2018<br>2028<br>2020 | NM<br>Ethereum<br>Ethereum<br>NM<br>NM<br>Proprietary<br>NM | Yes<br>No | |
-| **区块链医疗中的安全与隐私** | • 通过控制对敏感数据的访问来实现患者数据共享<br>• 确保私人数据的安全<br>• 确保区块链上消息的机密性<br>• 提供不同粒度级别的访问，无需 PKI<br>• 确保私人患者数据的完整性、安全性和机密性 | [[33]](#C_015_c10.xhtml#r10_33)[[34]](#C_015_c10.xhtml#r10_34)[[35]](#C_015_c10.xhtml#r10_35)[[36]](#C_015_c10.xhtml#r10_36)[[37]](#C_015_c10.xhtml#r10_37)[[38]](#C_015_c10.xhtml#r10_38)[[39]](#C_015_c10.xhtml#r10_39) | 2018<br>2017<br>2018<br>2018<br>2017<br>2016 | NM<br>NM<br>NM<br>NM<br>NM<br>NM | NM<br>NM<br>NM<br>NM<br>Yes<br>NM | |
+| **患者数据管理** | • 在不同利益相关者间共享患者电子健康记录<br>• 确保共享数据的完整性、机密性和互操作性<br>• 解决电子健康记录系统中的大规模数据管理和共享问题<br>• 远程监控系统保证患者的安全和隐私 | [[25]](#C_015_c10.xhtml#r10_25)[[27]](#C_015_c10.xhtml#r10_27)[[30]](#C_015_c10.xhtml#r10_30)[[26]](#C_015_c10.xhtml#r10_26)[[28]](#C_015_c10.xhtml#r10_28)[[29]](#C_015_c10.xhtml#r10_29)[[31]](#C_015_c10.xhtml#r10_31) | 2020<br>2016<br>2020<br>2019<br>2018<br>2028<br>2020 | NM<br>`Ethereum`<br>`Ethereum`<br>NM<br>NM<br>Proprietary<br>NM | Yes<br>No | |
+| **区块链医疗中的安全与隐私** | • 通过控制对敏感数据的访问来实现患者数据共享<br>• 确保私人数据的安全<br>• 确保区块链上消息的机密性<br>• 提供不同粒度级别的访问，无需 `PKI`<br>• 确保私人患者数据的完整性、安全性和机密性 | [[33]](#C_015_c10.xhtml#r10_33)[[34]](#C_015_c10.xhtml#r10_34)[[35]](#C_015_c10.xhtml#r10_35)[[36]](#C_015_c10.xhtml#r10_36)[[37]](#C_015_c10.xhtml#r10_37)[[38]](#C_015_c10.xhtml#r10_38)[[39]](#C_015_c10.xhtml#r10_39) | 2018<br>2017<br>2018<br>2018<br>2017<br>2016 | NM<br>NM<br>NM<br>NM<br>NM<br>NM | NM<br>NM<br>NM<br>NM<br>Yes<br>NM | |
 | **药品/制药供应链管理** | • 制药供应链中的产品识别和追踪<br>• 维护制药供应链的安全性、可追溯性和可见性<br>• 药品分发过程中的追踪 | [[41]](#C_015_c10.xhtml#r10_41)[[42]](#C_015_c10.xhtml#r10_42)[[43]](#C_015_c10.xhtml#r10_43)[[44]](#C_015_c10.xhtml#r10_44)[[45]](#C_015_c10.xhtml#r10_45) | 2020<br>2016<br>2019<br>2019<br>2019 | NM<br>NM<br>NM<br>NM<br>NM | NM<br>Yes | |
-| **临床试验认证** | • 避免药物使用的不良后果<br>• 开发用于临床试验中收集和共享患者数据的平台和系统<br>• 支持临床研究中检索到的数据和文档的透明度<br>• 确保临床数据的可追溯性 | [[46]](#C_015_c10.xhtml#r10_46)[[47]](#C_015_c10.xhtml#r10_47)[[48]](#C_015_c10.xhtml#r10_48)[[49]](#C_015_c10.xhtml#r10_49)[[50]](#C_015_c10.xhtml#r10_50)[[51]](#C_015_c10.xhtml#r10_51)[[52]](#C_015_c10.xhtml#r10_52)[[53]](#C_015_c10.xhtml#r10_53)[[54]](#C_015_c10.xhtml#r10_54) | 2017<br>2018<br>2017<br>2018<br>2016<br>2017<br>2019<br>2021 | Bitcoin<br>NM<br>NM<br>NM<br>Ethereum<br>Ethereum<br>NM<br>NM | NM<br>NM<br>NM<br>NM<br>Yes<br>Yes<br>NM<br>NM | |
+| **临床试验认证** | • 避免药物使用的不良后果<br>• 开发用于临床试验中收集和共享患者数据的平台和系统<br>• 支持临床研究中检索到的数据和文档的透明度<br>• 确保临床数据的可追溯性 | [[46]](#C_015_c10.xhtml#r10_46)[[47]](#C_015_c10.xhtml#r10_47)[[48]](#C_015_c10.xhtml#r10_48)[[49]](#C_015_c10.xhtml#r10_49)[[50]](#C_015_c10.xhtml#r10_50)[[51]](#C_015_c10.xhtml#r10_51)[[52]](#C_015_c10.xhtml#r10_52)[[53]](#C_015_c10.xhtml#r10_53)[[54]](#C_015_c10.xhtml#r10_54) | 2017<br>2018<br>2017<br>2018<br>2016<br>2017<br>2019<br>2021 | `Bitcoin`<br>NM<br>NM<br>NM<br>`Ethereum`<br>`Ethereum`<br>NM<br>NM | NM<br>NM<br>NM<br>NM<br>Yes<br>Yes<br>NM<br>NM | |
 
 ### 10.3.1 患者数据管理
 
 在管理医疗记录时，患者、医生、医院、药剂师或医学分析实验室都是数据来源，很难清晰地可视化和共享所有这些数据。当患者入院时，经常会遇到这个问题。医疗专业人员并不总是能访问患者的病史，也无法完整了解患者正在服用的治疗、疾病史或家族史。理想的情况是拥有一份患者医疗数据所在位置的清单，以便快速检索。在患者同意的情况下，任何请求的医疗专业人员都可以访问该清单。因此，不仅可以访问所在机构的数据库，还可以访问网络中所有数据库中分散的所有信息来源。区块链技术以分布式安全注册表的形式提供了这样一种解决方案，它不仅允许患者查看其数据，还允许他们控制对数据的访问。因此，通过区块链技术，我们确保了各种医疗参与者使用的平台的互操作性。同样，对于急救服务，它可以在无需向患者请求的情况下访问患者数据。
 
+### 10.3.2 基于区块链的医疗系统
 
+多位研究人员已研究此问题。文献[[25]](#C_015_c10.xhtml#r10_25)中，作者提出了一个名为 `BiiMed` 的平台。该解决方案旨在实现患者电子健康记录在不同利益相关者之间的共享。得益于区块链，它确保了数据完整性和互操作性。所提架构由两部分组成：健康信息系统和 `BiiMed` 区块链。`HIS` 负责收集、存储和共享医疗数据，而 `BiiMed` 平台管理共享数据。它基于以太坊区块链和智能合约。
 
+`MedChain` [[26]](#C_015_c10.xhtml#r10_26) 是另一个遵循相同原则的平台，通过将数据不可篡改地存储在区块链中来实现共享。Azaria 等人提出的 `MedRec` 方案[[27]](#C_015_c10.xhtml#r10_27)，允许通过去中心化系统保证共享数据的完整性和机密性，该系统确保患者、医生以及医疗记录处理过程中涉及的任何其他人员能轻松访问这些数据，如图 10.3 所示。
 
-
-### 10.3.1 基于区块链的医疗系统
-
-多位研究人员已研究此问题。文献[[25]](#C_015_c10.xhtml#r10_25)中，作者提出了一个名为`BiiMed`的平台。该解决方案旨在实现患者电子健康记录在不同利益相关者之间的共享。得益于区块链，它确保了数据完整性和互操作性。所提架构由两部分组成：健康信息系统和`BiiMed`区块链。`HIS`负责收集、存储和共享医疗数据，而`BiiMed`平台管理共享数据。它基于以太坊区块链和智能合约。
-
-`MedChain` [[26]](#C_015_c10.xhtml#r10_26)是另一个遵循相同原则的平台，通过将数据不可篡改地存储在区块链中来实现共享。Azaria 等人提出的`MedRec`方案[[27]](#C_015_c10.xhtml#r10_27)，允许通过去中心化系统保证共享数据的完整性和机密性，该系统确保患者、医生以及医疗记录处理过程中涉及的任何其他人员能轻松访问这些数据，如图 10.3 所示。
-
-文献[[28]](#C_015_c10.xhtml#r10_28)的作者提出了一个名为`MeDShare`的系统。该系统允许交换医疗数据并保障电子病历安全。该系统的参与者包括医院、服务提供商和健康研究机构。它们使用`MeDShare`共享的医疗数据。数据机密性通过定制的审计控制来确保。在共享医疗信息的同一背景下，作者基于区块链开发了`Medblock`原型[[29]](#C_015_c10.xhtml#r10_29)。该原型允许安全访问电子病历。
+文献[[28]](#C_015_c10.xhtml#r10_28)的作者提出了一个名为 `MeDShare` 的系统。该系统允许交换医疗数据并保障电子病历安全。该系统的参与者包括医院、服务提供商和健康研究机构。它们使用 `MeDShare` 共享的医疗数据。数据机密性通过定制的审计控制来确保。在共享医疗信息的同一背景下，作者基于区块链开发了 `Medblock` 原型[[29]](#C_015_c10.xhtml#r10_29)。该原型允许安全访问电子病历。
 
 ![FIGURE 10.3 Management of patient medical records.](img/Fig10_03.jpg)
 
@@ -4082,17 +3772,17 @@ Fee = gasPrice × min(gasLimit, gasUsed)  (10.1)
 
 Kazmi 等人[[30]](#C_015_c10.xhtml#r10_30)利用智能合约设计了一个远程患者监测系统，并在紧急情况下向健康专家发出警报。该远程监测系统通过区块链保障患者的安全和隐私。为解决互操作性问题，作者[[31]](#C_015_c10.xhtml#r10_31)实现了一个基于区块链的系统。它允许患者与医疗服务提供者共享其临床数据。患者有权选择与其共享数据的人员。通过用户的识别和认证，确保了以安全方式访问数据。一旦识别通过，他们便可访问并更新患者数据。
 
-### 10.3.2 区块链医疗中的安全与隐私
+### 10.3.3 区块链医疗中的安全与隐私
 
-医疗行业并非普通行业，必须遵守特别严格的保密规则。要在医疗领域运行，区块链首先必须保证数据保护和患者数据匿名性。在欧洲，`MyHealthMyData`项目设计了一种兼容医疗隐私的健康区块链模型，因为没有信息直接存储在区块链上：它仅存储指向其信息的链接。作为西门子的合作伙伴，`MyHealthMyData`旨在促进临床试验中健康数据的访问和共享。如果某人希望从区块链中删除其数据，他或她将能够切断指向其信息的链接，而无需破坏链本身。不同的区块将保留在链中，但将被永久停用[[32]](#C_015_c10.xhtml#r10_32)。
+医疗行业并非普通行业，必须遵守特别严格的保密规则。要在医疗领域运行，区块链首先必须保证数据保护和患者数据匿名性。在欧洲，`MyHealthMyData` 项目设计了一种兼容医疗隐私的健康区块链模型，因为没有信息直接存储在区块链上：它仅存储指向其信息的链接。作为西门子的合作伙伴，`MyHealthMyData` 旨在促进临床试验中健康数据的访问和共享。如果某人希望从区块链中删除其数据，他或她将能够切断指向其信息的链接，而无需破坏链本身。不同的区块将保留在链中，但将被永久停用[[32]](#C_015_c10.xhtml#r10_32)。
 
-文献[[33]](#C_015_c10.xhtml#r10_33)的作者解决了安全性和患者隐私问题。他们提出了一种基于区块链不可篡改性和自主性的系统。该系统通过控制对这些敏感数据的访问，实现患者数据共享。离散小波变换和遗传算法是所提方案的基础。为确保私有数据安全，文献[[34]](#C_015_c10.xhtml#r10_34)、[[35]](#C_015_c10.xhtml#r10_35)的作者提出了一种密钥管理方案，以保障区块链上消息的机密性。在同一背景下，Zhang 和 Poslad[[36]](#C_015_c10.xhtml#r10_36)建议了一种名为`支持灵活查询的粒度访问授权 (GAA-FQ)`的访问授权模型和方案，该方案使用加密和解密算法。该方案在无需公钥基础设施(`PKI`)的情况下，提供不同粒度级别的访问权限。文献[[37]](#C_015_c10.xhtml#r10_37)中提出的签名方案是一种确保安全性和信任的解决方案。得益于多权限属性（该解决方案的核心），患者的公钥/私钥无需生成和共享。
+文献[[33]](#C_015_c10.xhtml#r10_33)的作者解决了安全性和患者隐私问题。他们提出了一种基于区块链不可篡改性和自主性的系统。该系统通过控制对这些敏感数据的访问，实现患者数据共享。离散小波变换和遗传算法是所提方案的基础。为确保私有数据安全，文献[[34]](#C_015_c10.xhtml#r10_34)、[[35]](#C_015_c10.xhtml#r10_35)的作者提出了一种密钥管理方案，以保障区块链上消息的机密性。在同一背景下，Zhang 和 Poslad[[36]](#C_015_c10.xhtml#r10_36)建议了一种名为 `支持灵活查询的粒度访问授权 (GAA-FQ)` 的访问授权模型和方案，该方案使用加密和解密算法。该方案在无需公钥基础设施（`PKI`）的情况下，提供不同粒度级别的访问权限。文献[[37]](#C_015_c10.xhtml#r10_37)中提出的签名方案是一种确保安全性和信任的解决方案。得益于多权限属性（该解决方案的核心），患者的公钥/私钥无需生成和共享。
 
-`MediBchain`是 Abdullah 等人[[38]](#C_015_c10.xhtml#r10_38)提出的一个平台。它确保私人患者数据的完整性、安全性和机密性。作者还利用加密函数解决了其他系统面临的匿名性问题。`医疗数据网关 (HGD)`是文献[[39]](#C_015_c10.xhtml#r10_39)中提出的另一种基于区块链技术的解决方案。在保护隐私的前提下共享患者数据。
+`MediBchain` 是 Abdullah 等人[[38]](#C_015_c10.xhtml#r10_38)提出的一个平台。它确保私人患者数据的完整性、安全性和机密性。作者还利用加密函数解决了其他系统面临的匿名性问题。`医疗数据网关 (HGD)` 是文献[[39]](#C_015_c10.xhtml#r10_39)中提出的另一种基于区块链技术的解决方案。在保护隐私的前提下共享患者数据。
 
-### 10.3.3 药品/医药供应链管理
+### 10.3.4 药品/医药供应链管理
 
-药品溯源和打击假冒伪劣产品是区块链和`IoMT`的另一个具体应用案例。根据世界卫生组织数据，10 个药品中就有 1 个是假冒伪劣产品。在发展中国家，这一比例高达 30%，代表着 2000 亿美元的市场。此外，2500 万假冒药品在互联网上分销，价值 4300 万欧元[[40]](#C_015_c10.xhtml#r10_40)。
+药品溯源和打击假冒伪劣产品是区块链和 `IoMT` 的另一个具体应用案例。根据世界卫生组织数据，10 个药品中就有 1 个是假冒伪劣产品。在发展中国家，这一比例高达 30%，代表着 2000 亿美元的市场。此外，2500 万假冒药品在互联网上分销，价值 4300 万欧元[[40]](#C_015_c10.xhtml#r10_40)。
 
 药品溯源是一个极其敏感的领域，急需解决方案，因为它关乎个人生命。在此背景下，区块链技术的应用带来了优势，特别是在药品分销过程中的追踪方面。针对该用例，供应链的不同参与者在区块链网络中被识别。制药公司使用唯一标识符注册其产品。转售药品的商店或药剂师可在收到药品库存时核查其是否来自合法实验室；每次药品相关信息都会在区块链中更新。
 
@@ -4104,11 +3794,7 @@ Clauson 等人[[41]](#C_015_c10.xhtml#r10_41)展示了区块链技术在医药�
 
 为维护医药供应链的安全性、可追溯性和可见性，作者[[44]](#C_015_c10.xhtml#r10_44)设计了一个私有区块链平台以打击假药。同样，Jamil 等人[[45]](#C_015_c10.xhtml#r10_45)开发了一个概念验证应用。该平台由一个 Web 应用程序组成，其作用是以去中心化方式监控医生、患者、药剂师等之间的药品档案。智能合约保证了管理流程和药品生命周期共享的机密性、安全性和透明度。
 
-### 10.3.4 临床试验认证
-
-
-
-
+### 10.3.5 临床试验认证
 
 #### 区块链在临床试验中的应用
 
@@ -4120,7 +3806,9 @@ Clauson 等人[[41]](#C_015_c10.xhtml#r10_41)展示了区块链技术在医药�
 
 文献 [[51]](#C_015_c10.xhtml#r10_51), [[52]](#C_015_c10.xhtml#r10_52) 的作者使用了 `Ethereum` 区块链平台和智能合约。结果支持临床研究期间检索到的数据和文档的透明度。在同一背景下，Zhuang 等人 [[53]](#C_015_c10.xhtml#r10_53), [[54]](#C_015_c10.xhtml#r10_54) 利用智能合约和区块链，提出了一种通过分布式数据库进行无中介临床试验的自动安全验证系统。这些数据的可追溯性通过概念验证和区块链协议得到保证 [[47]](#C_015_c10.xhtml#r10_47)。
 
-总之，区块链技术应用于医疗保健的各个领域，如 表 10.1 所示。其采用促进了生物医学/健康研究的进步。对于患者病历管理，它将这些记录存储在授权区块链的分布式账本上，从而在无人工干预的情况下确保数据在各个处理阶段的完整性。`DLT` 维护一个包含研究所需所有信息的去中心化数据库。研究人员可以完全安全地访问和操作医疗数据。区块链具有不可变性，通过禁止交易中的任何复制或修改来促进欺诈检测，并最终实现透明和安全的交易。为了防止药物造假，区块链凭借其详细的追溯能力，监控药品供应链的每一个环节。它控制药物的来源、成分及其所有权。
+
+
+总之，区块链技术应用于医疗保健的各个领域，如表 10.1 所示。其采用促进了生物医学/健康研究的进步。对于患者病历管理，它将这些记录存储在授权区块链的分布式账本上，从而在无人工干预的情况下确保数据在各个处理阶段的完整性。`DLT` 维护一个包含研究所需所有信息的去中心化数据库。研究人员可以完全安全地访问和操作医疗数据。区块链具有不可变性，通过禁止交易中的任何复制或修改来促进欺诈检测，并最终实现透明和安全的交易。为了防止药物造假，区块链凭借其详细的追溯能力，监控药品供应链的每一个环节。它控制药物的来源、成分及其所有权。
 
 ## 10.4 结论
 
@@ -4128,35 +3816,31 @@ Clauson 等人[[41]](#C_015_c10.xhtml#r10_41)展示了区块链技术在医药�
 
 ## 参考文献
 
-1.  C. Bahhar, C. Baccouche, S. Ben Othman and H. Sakli, “Real-time intelligent monitoring system based on IoT”, In: 2021 18th International Multi-Conference on Systems, Signals & Devices (SSD), 2021, pp. 93–96, Doi: [10.1109/SSD52085.2021.9429358](http://doi.org/10.1109/SSD52085.2021.9429358).
+1. C. Bahhar, C. Baccouche, S. Ben Othman and H. Sakli, “Real-time intelligent monitoring system based on IoT”, In: 2021 18th International Multi-Conference on Systems, Signals & Devices (SSD), 2021, pp. 93–96, Doi: [10.1109/SSD52085.2021.9429358](http://doi.org/10.1109/SSD52085.2021.9429358).
 
-2.  A. Zouinkhi, H. Ayadi, T. Val, B. Boussaid and M.N. Abdelkrim, “Auto-management of energy in IoT networks”, Int J Commun Syst, Vol. 33, p. e4168, 2020. Doi: [10.1002/dac.4168](http://doi.org/10.1002/dac.4168).
+2. A. Zouinkhi, H. Ayadi, T. Val, B. Boussaid and M.N. Abdelkrim, “Auto-management of energy in IoT networks”, Int J Commun Syst, Vol. 33, p. e4168, 2020. Doi: [10.1002/dac.4168](http://doi.org/10.1002/dac.4168).
 
-3.  T. Malcheand P. Maheshwary, “Internet of Things (IoT) for building smart home system”, In: Proceedings of the 2017 International Conference on I-SMAC (IoT in Social, Mobile, Analytics and Cloud) (I-SMAC), Palladam, India, 10–11 February 2017, pp. 65–70. New York: IEEE.
+3. T. Malcheand P. Maheshwary, “Internet of Things (IoT) for building smart home system”, In: Proceedings of the 2017 International Conference on I-SMAC (IoT in Social, Mobile, Analytics and Cloud) (I-SMAC), Palladam, India, 10–11 February 2017, pp. 65–70. New York: IEEE.
 
-4.  L. Minbo, Z. Zhu and C. Guangyu, “Information service system of agriculture IoT”, Automatika, Vol. 54, No. 4, pp. 415–426, 2013.
+4. L. Minbo, Z. Zhu and C. Guangyu, “Information service system of agriculture IoT”, Automatika, Vol. 54, No. 4, pp. 415–426, 2013.
 
-5.  G. George and S.M. Thampi, “Securing smart healthcare systems from vulnerability exploitation”, In: Wang G., El Saddik A., Lai X., Martinez Perez G. and Choo KK. (eds) Smart City and Informatization.iSCI 2019. Communications in Computer and Information Science, vol 1122. Springer, Singapore. [`doi.org/10.1007/978-981-15-1301-5_24`](https://doi.org/10.1007/978-981-15-1301-5_24)
+5. G. George and S.M. Thampi, “Securing smart healthcare systems from vulnerability exploitation”, In: Wang G., El Saddik A., Lai X., Martinez Perez G. and Choo KK. (eds) Smart City and Informatization.iSCI 2019. Communications in Computer and Information Science, vol 1122. Springer, Singapore. [`doi.org/10.1007/978-981-15-1301-5_24`](https://doi.org/10.1007/978-981-15-1301-5_24)
 
-6.  F.A. Almalki, S.B. Othman, F.A. Almalki and H. Sakli, “EERP-DPM: energy efficient routing protocol using dual prediction model for healthcare using IoT”, Journal of Healthcare Engineering, vol. 2021, Article ID 9988038, 15 p, 2021.
+6. F.A. Almalki, S.B. Othman, F.A. Almalki and H. Sakli, “EERP-DPM: energy efficient routing protocol using dual prediction model for healthcare using IoT”, Journal of Healthcare Engineering, vol. 2021, Article ID 9988038, 15 p, 2021.
 
-7.  Faris A. Almalki, Ben Othman Soufiene, “EPPDA: An Efficient and Privacy-Preserving Data Aggregation Scheme with Authentication and Authorization for IoT-Based Healthcare Applications”, Wireless Communications and Mobile Computing, vol. 2021, Article ID 5594159, 18 pages, 2021. [`doi.org/10.1155/2021/5594159`](https://doi.org/10.1155/2021/5594159).
+7. Faris A. Almalki, Ben Othman Soufiene, “EPPDA: An Efficient and Privacy-Preserving Data Aggregation Scheme with Authentication and Authorization for IoT-Based Healthcare Applications”, Wireless Communications and Mobile Computing, vol. 2021, Article ID 5594159, 18 pages, 2021. [`doi.org/10.1155/2021/5594159`](https://doi.org/10.1155/2021/5594159).
 
-8.  S. Trab, E. Bajic, A. Zouinkhi, Abdelkrim, M.N. and H. Chekir, “RFID IoT-enabled warehouse for safety management using product class-based storage and potential fields methods”, International Journal of Embedded Systems, Vol. 10, No. 1, pp. 71–88, 2018.
+8. S. Trab, E. Bajic, A. Zouinkhi, Abdelkrim, M.N. and H. Chekir, “RFID IoT-enabled warehouse for safety management using product class-based storage and potential fields methods”, International Journal of Embedded Systems, Vol. 10, No. 1, pp. 71–88, 2018.
 
-9.  A.H. Mohd Aman, et al, “IoMT amid COVID-19 pandemic: application, architecture, technology, and security”, Journal of Network and Computer Applications, Vol. 174, 2021. [`doi.org/10.1016/j.jnca.2020.102886`](https://doi.org/10.1016/j.jnca.2020.102886).
+9. A.H. Mohd Aman, et al, “IoMT amid COVID-19 pandemic: application, architecture, technology, and security”, Journal of Network and Computer Applications, Vol. 174, 2021. [`doi.org/10.1016/j.jnca.2020.102886`](https://doi.org/10.1016/j.jnca.2020.102886).
 
-10.  S. Nakamoto, “Bitcoin: a peer-to-peer electronic cash system”, (2008) Available at: [`bitcoin.org/bitcoin.pdf`](https://bitcoin.org/bitcoin.pdf).
+10. S. Nakamoto, “Bitcoin: a peer-to-peer electronic cash system”, (2008) Available at: [`bitcoin.org/bitcoin.pdf`](https://bitcoin.org/bitcoin.pdf).
 
-11.  B. Bhushan, C. Sahoo, P. Sinha and A. Khamparia. “Unification of blockchain and Internet of Things (BIoT): requirements, working model, challenges and future directions”, Wireless Networks, 2020. Doi: [10.1007/s11276-020-02445-6](http://doi.org/10.1007/s11276-020-02445-6).
+11. B. Bhushan, C. Sahoo, P. Sinha and A. Khamparia. “Unification of blockchain and Internet of Things (BIoT): requirements, working model, challenges and future directions”, Wireless Networks, 2020. Doi: [10.1007/s11276-020-02445-6](http://doi.org/10.1007/s11276-020-02445-6).
 
-12.  B. Bhushan, P. Sinha, K.M. Sagayam and J. Andrew. (2021). “Untangling blockchain technology: A survey on state of the art, security threats, privacy services, applications and future research directions”, Computers & Electrical Engineering, 90, p. 106897. Doi:[10.1016/j.compeleceng.2020.106897](http://doi.org/10.1016/j.compeleceng.2020.106897).
+12. B. Bhushan, P. Sinha, K.M. Sagayam and J. Andrew. (2021). “Untangling blockchain technology: A survey on state of the art, security threats, privacy services, applications and future research directions”, Computers & Electrical Engineering, 90, p. 106897. Doi:[10.1016/j.compeleceng.2020.106897](http://doi.org/10.1016/j.compeleceng.2020.106897).
 
-13.  S. Saxena, B. Bhushan and M.A. Ahad. “Blockchain based solutions to secure IoT: background, integration trends and a way forward”, Journal of Network and Computer Applications, 2021, p. 103050. Doi: [10.1016/j.jnca.2021.10305](http://doi.org/10.1016/j.jnca.2021.10305).
-
-
-
-
+13. S. Saxena, B. Bhushan and M.A. Ahad. “Blockchain based solutions to secure IoT: background, integration trends and a way forward”, Journal of Network and Computer Applications, 2021, p. 103050. Doi: [10.1016/j.jnca.2021.10305](http://doi.org/10.1016/j.jnca.2021.10305).
 
 ## 参考文献
 
@@ -4194,6 +3878,10 @@ Clauson 等人[[41]](#C_015_c10.xhtml#r10_41)展示了区块链技术在医药�
 
 30. K. Syeda, et al, “Trusted Remote Patient Monitoring using Blockchain-based Smart Contracts”, Springer Nature Switzerland AG 2020 L. Barolli et al. (Eds.): BWCCA 2019, *LNNS* 97, pp. 765–776, 2020.
 
+
+
+# 31-41 参考文献
+
 31. A. Ullah Khan, et al, “Enhanced Decentralized Management of Patient-Driven Interoperability Based on Blockchain”, Springer Nature Switzerland AG 2020. L. Barolli et al. (Eds.): BWCCA 2019, *LNNS* 97, pp. 815–827, 2020.
 
 32. A. Khatoon. “A blockchain-based smart contract system for healthcare management”, *Electronics* Vol. 9, p. 94, 2020.
@@ -4216,10 +3904,6 @@ Clauson 等人[[41]](#C_015_c10.xhtml#r10_41)展示了区块链技术在医药�
 
 41. A. Clauson, A. Breeden, C. Davidson, K. Mackey, “Leveraging blockchain technology to enhance supply chain management in healthcare: an exploration of challenges and opportunities in the health supply chain”, *Blockchain in Healthcare Today™* ISSN 2573-8240 online Doi:[10.30953/bhty.v1.20](http://doi.org/10.30953/bhty.v1.20).
 
-
-
-
-
 # 11 基于物联网的医疗保健区块链：安全与隐私问题概述
 
 Ben Othman Soufiene
@@ -4238,7 +3922,7 @@ DOI：[10.1201/9781003224075-11](http://doi.org/10.1201/9781003224075-11)
 
 ## 11.1 简介
 
-近年来，物联网的出现对科学技术产生了重大影响 [[1]](#C_016_c11.xhtml#r11_1)。物联网被定义为一个由可识别且唯一的元素组成的网络，这些元素利用 IP 连接在无需人工干预的情况下进行通信 [[1]](#C_016_c11.xhtml#r11_1)。这些项目能够独立或与其他对象协作地进行感知、控制、分析和决策 [[2]](#C_016_c11.xhtml#r11_2)。根据 IoT Analytics 的估计，到 2019 年底，联网物联网设备约有 95 亿台 [[3]](#C_016_c11.xhtml#r11_3)。物联网的概念正呈指数级演变，并日益覆盖更多领域 [[4]](#C_016_c11.xhtml#r11_4)。它将通过使生活的各个方面智能化，改变我们的生活和工作方式。通过在智能家居、智慧医疗、智慧城市、工业 4.0、无线传感器网络 (WSN)、智慧农业等领域开发新应用，物联网有潜力引入并建立一个智能世界 [[5]](#C_016_c11.xhtml#r11_5)。有兴趣的读者可参考 [[1]](#C_016_c11.xhtml#r11_1)、[[2]](#C_016_c11.xhtml#r11_2)、[[3]](#C_016_c11.xhtml#r11_3)、[[4]](#C_016_c11.xhtml#r11_4)、[[5]](#C_016_c11.xhtml#r11_5)、[[6]](#C_016_c11.xhtml#r11_6)、[[7]](#C_016_c11.xhtml#r11_7)、[[8]](#C_016_c11.xhtml#r11_8)、[[9]](#C_016_c11.xhtml#r11_9)、[[10]](#C_016_c11.xhtml#r11_10)、[[11]](#C_016_c11.xhtml#r11_11)、[[12]](#C_016_c11.xhtml#r11_12)、[[13]](#C_016_c11.xhtml#r11_13)、[[14]](#C_016_c11.xhtml#r11_14)、[[15]](#C_016_c11.xhtml#r11_15)、[[16]](#C_016_c11.xhtml#r11_16)、[[17]](#C_016_c11.xhtml#r11_17)、[[18]](#C_016_c11.xhtml#r11_18)、[[19]](#C_016_c11.xhtml#r11_19)、[[20]](#C_016_c11.xhtml#r11_20) 以深入了解物联网。
+近年来，物联网的出现对科学技术产生了重大影响 [[1]](#C_016_c11.xhtml#r11_1)。物联网被定义为一个由可识别且唯一的元素组成的网络，这些元素利用 `IP` 连接在无需人工干预的情况下进行通信 [[1]](#C_016_c11.xhtml#r11_1)。这些项目能够独立或与其他对象协作地进行感知、控制、分析和决策 [[2]](#C_016_c11.xhtml#r11_2)。根据 IoT Analytics 的估计，到 2019 年底，联网物联网设备约有 95 亿台 [[3]](#C_016_c11.xhtml#r11_3)。物联网的概念正呈指数级演变，并日益覆盖更多领域 [[4]](#C_016_c11.xhtml#r11_4)。它将通过使生活的各个方面智能化，改变我们的生活和工作方式。通过在智能家居、智慧医疗、智慧城市、工业 4.0、无线传感器网络 (`WSN`)、智慧农业等领域开发新应用，物联网有潜力引入并建立一个智能世界 [[5]](#C_016_c11.xhtml#r11_5)。有兴趣的读者可参考 [[1]](#C_016_c11.xhtml#r11_1)、[[2]](#C_016_c11.xhtml#r11_2)、[[3]](#C_016_c11.xhtml#r11_3)、[[4]](#C_016_c11.xhtml#r11_4)、[[5]](#C_016_c11.xhtml#r11_5)、[[6]](#C_016_c11.xhtml#r11_6)、[[7]](#C_016_c11.xhtml#r11_7)、[[8]](#C_016_c11.xhtml#r11_8)、[[9]](#C_016_c11.xhtml#r11_9)、[[10]](#C_016_c11.xhtml#r11_10)、[[11]](#C_016_c11.xhtml#r11_11)、[[12]](#C_016_c11.xhtml#r11_12)、[[13]](#C_016_c11.xhtml#r11_13)、[[14]](#C_016_c11.xhtml#r11_14)、[[15]](#C_016_c11.xhtml#r11_15)、[[16]](#C_016_c11.xhtml#r11_16)、[[17]](#C_016_c11.xhtml#r11_17)、[[18]](#C_016_c11.xhtml#r11_18)、[[19]](#C_016_c11.xhtml#r11_19)、[[20]](#C_016_c11.xhtml#r11_20) 以深入了解物联网。
 
 医疗保健 4.0 是物联网与现代信息通信技术的结合 [[6]](#C_016_c11.xhtml#r11_6)。智慧医疗通过将传感器和执行器集成到患者体内以进行监测和随访，在健康应用中发挥着重要作用。全球物联网医疗设备市场预计将以 4.5% 的复合年增长率增长，到 2025 年达到 4095 亿美元 [[7]](#C_016_c11.xhtml#r11_7)。物联网用于医疗保健以监测患者的生理状态。植入式/穿戴式传感器可直接从患者体内采集信息并将其传输给医生。这些采集的信息可被存储、处理，并提供给医生，使其能够随时随地通过任何连接互联网的设备（如智能手机或平板电脑）进行会诊 [[8]](#C_016_c11.xhtml#r11_8)、[[9]](#C_016_c11.xhtml#r11_9)、[[10]](#C_016_c11.xhtml#r11_10)、[[11]](#C_016_c11.xhtml#r11_11)、[[12]](#C_016_c11.xhtml#r11_12)、[[13]](#C_016_c11.xhtml#r11_13)、[[14]](#C_016_c11.xhtml#r11_14)、[[15]](#C_016_c11.xhtml#r11_15)。此外，医生可实时收到患者病情任何突然变化的警报，并采取建议患者、查询传感器以获取当前数值等行动。这项技术可在让患者与医生保持沟通的同时，使其完全脱离医院的中心化系统。采用物联网的远程医疗监控系统如图 11.1 所示。
 
@@ -4246,15 +3930,11 @@ DOI：[10.1201/9781003224075-11](http://doi.org/10.1201/9781003224075-11)
 
 **图 11.1** 基于物联网的医疗监控架构。
 
-
-
-
-
 ### 物联网医疗应用中的安全挑战
 
 物联网部署了大量小型智能设备来收集关于环境的详细信息 [10]。尽管实现了微型化并降低了制造成本，但这些设备在功率传输、数据处理、带宽、存储容量和能源方面通常资源有限。然而，传输和接收操作消耗了节点设备的大部分能量 [11]。毫不奇怪，在评估传感器网络性能时，服务寿命可能是最重要的指标，特别是因为大多数低功耗设备的寿命有限；此外，为成千上万部署在难以到达区域的这些设备持续更换电池通常是不切实际甚至不可能的 [12]。因此，能量消耗是传感器面临的一个关键挑战。为此，提出了多种方法来节约感知层面的能源资源，并克服其局限性固有的挑战 [13]。
 
-已经探讨了与物联网相关的许多其他问题，其中最重要的问题之一是安全问题 [14]。一个拥有大量互联设备的巨大网络的存在几乎肯定会暗示各种攻击和窃听场景，这可能会危及这些实体及其用户 [15]。这些联网“事物”构成的威胁不仅影响物联网系统，还影响整个生态系统，包括网站、应用程序、社交网络和服务器。在使用物联网的医疗应用中，随着我们在衣物和身体上添加更多设备，将收集更多个人信息。随着物联网设备数量呈指数级增长，技术和安全挑战也随之增加 [16]。例如，攻击可能会合理地修改药物剂量，从而导致某位患者死亡或产生灾难性的健康后果。此外，医疗设备可以通过多种通信媒介（如 Wi-Fi、Zigbee、蓝牙、6LowPAN 和 NFC）被远程利用。在这种情况下，攻击者可以轻松窃听通信信道并获取传输的数据 [17]。开发新的安全框架以防止敌对或未授权对象访问物联网系统、读取或篡改收集的数据至关重要 [18]。
+已经探讨了与物联网相关的许多其他问题，其中最重要的问题之一是安全问题 [14]。一个拥有大量互联设备的巨大网络的存在几乎肯定会暗示各种攻击和窃听场景，这可能会危及这些实体及其用户 [15]。这些联网“事物”构成的威胁不仅影响物联网系统，还影响整个生态系统，包括网站、应用程序、社交网络和服务器。在使用物联网的医疗应用中，随着我们在衣物和身体上添加更多设备，将收集更多个人信息。随着物联网设备数量呈指数级增长，技术和安全挑战也随之增加 [16]。例如，攻击可能会合理地修改药物剂量，从而导致某位患者死亡或产生灾难性的健康后果。此外，医疗设备可以通过多种通信媒介（如 `Wi-Fi`、`Zigbee`、`蓝牙`、`6LowPAN` 和 `NFC`）被远程利用。在这种情况下，攻击者可以轻松窃听通信信道并获取传输的数据 [17]。开发新的安全框架以防止敌对或未授权对象访问物联网系统、读取或篡改收集的数据至关重要 [18]。
 
 本章旨在回顾关于基于物联网的医疗应用中安全和隐私挑战及方法的当前文献。为了揭示物联网危险的根源，我们介绍并分类了物联网安全威胁类别以及防御技术，以便为读者提供必要的安全背景知识，从而更好地理解这一领域。我们呈现了物联网攻击的分类法，以及对物联网各层级安全关注点的分析。我们还根据攻击目标给出了安全需求分类法。然后，我们介绍了提高物联网安全性的解决方案。本文其余部分组织如下：我们在第 11.2 节 [Section 11.2] 中给出了针对医疗系统的当前安全和隐私攻击的完整分类法。医疗系统的安全需求分类法在下一节中提供。在第 11.4 节 [Section 11.4] 中，我们将探讨研究人员提供的一些保护医疗系统的现有方法。最后，我们在第 11.5 节 [Section 11.5] 中总结本文。
 
@@ -4279,16 +3959,19 @@ DOI：[10.1201/9781003224075-11](http://doi.org/10.1201/9781003224075-11)
 | **干扰攻击** [24] | 干扰攻击是一种 DoS 攻击，恶意节点产生噪声以干扰设备使用的无线电频率。 | 可用性 | 物理层 | | ✓ | | ✓ | | |
 | **重放攻击** [21] | 重放攻击，也称为回放攻击，由重放旧有效消息的传输并将其注入网络组成。 | 认证、完整性、不可抵赖性 | 多层 | | ✓ | | | | |
 
-
-
-
-
 ### 攻击类型对比表
 
 | 攻击类型 | 描述 | 安全属性 | 网络层级 | AA | EA | HA | IA | PA | SA |
 | :--- | :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| 伪装攻击 [[23]](#C_016_c11.xhtml#r11_23) | 恶意节点使用欺骗性身份隐藏自身，并在网络中产生虚假消息。 | 认证、不可抵赖 | 多层 |  | ✓ |  |  |  |  |
-| 幻觉攻击 [[19]](#C_016_c11.xhtml#r11_19) | 恶意节点向其邻居发送虚假交通警告消息。正常设备会遵循接收到的虚假交通消息，从而改变其行为并在网络中造成幻觉。 | 认证、完整性 | 应用层 |  |  |  |  | ✓ |  |
+| 伪装攻击 [[23]](#C_016_c11.xhtml#r11_23) | 恶意节点使用欺骗性身份隐藏自身，并在网络中产生虚假消息。 | 认证、不可抵赖 | 多层 | | ✓ | | | | |
+| 幻觉攻击 [[19]](#C_016_c11.xhtml#r11_19) | 恶意节点向其邻居发送虚假交通警告消息。正常设备会遵循接收到的虚假交通消息，从而改变其行为并在网络中造成幻觉。 | 认证、完整性 | 应用层 | | | | | ✓ | |
+
+
+
+## 11.2 物联网攻击分类
+
+| 攻击类型 | 描述 | 目标安全属性 | 网络层级 | AA | EA | HA | IA | PA | SA |
+| :--- | :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | 社交攻击 [[17]](#C_016_c11.xhtml#r11_17) | 社交攻击的主要思想是利用不道德的消息改变网络中正常设备的行为。 | 认证、完整性 | 网络层 |  | ✓ |  | ✓ |  |  |
 | 垃圾邮件攻击 [[21]](#C_016_c11.xhtml#r11_21) | 消耗网络带宽和增加网络传输延迟是垃圾邮件攻击的主要目的。 | 认证、可用性、机密性、完整性 | 网络层 |  |  |  |  | ✓ |  |
 | 恶意软件攻击 [[24]](#C_016_c11.xhtml#r11_24) | 恶意软件攻击是旨在获取访问权限或破坏网络的软件。 | 可用性、机密性 | 网络层 |  | ✓ |  | ✓ |  | ✓ |
@@ -4298,7 +3981,7 @@ DOI：[10.1201/9781003224075-11](http://doi.org/10.1201/9781003224075-11)
 
 ## 11.3 基于物联网的医疗应用中的安全需求
 
-我们根据 11.2 节 中所示的物联网攻击目的，将物联网安全需求分为三类：数据安全、通信安全和设备安全。表 11.2 总结了这些安全需求。
+我们根据 11.2 节中所示的物联网攻击目的，将物联网安全需求分为三类：数据安全、通信安全和设备安全。表 11.2 总结了这些安全需求。
 
 **表 11.2 基于物联网的医疗安全需求**
 
@@ -4319,21 +4002,31 @@ DOI：[10.1201/9781003224075-11](http://doi.org/10.1201/9781003224075-11)
 
 ### 11.4.1 基于雾计算的解决方案
 
+雾计算作为一种新范式被引入，用于扩展云计算的处理资源。在网络边缘，它提供存储、处理和网络/通信功能 [[20]](#C_016_c11.xhtml#r11_20)。雾计算由部署在靠近物联网设备并连接到云服务器的雾节点组成。由于物联网设备资源有限，雾节点可通过提供认证、隐私保护和加密来帮助保护物联网环境。文献中提供了多种利用雾计算保护基于物联网的医疗系统的安全方案。本小节概述了最新的综述。
 
+Hassen 等人 [[21]](#C_016_c11.xhtml#r11_21) 通过结合雾计算和云计算等物联网应用，提出了一种居家住院系统。该研究旨在提出一种用于冠状病毒大流行期间医疗系统的智能模型。Pham 等人 [[23]](#C_016_c11.xhtml#r11_23) 开展了另一项研究，构建了“基于云的智能家居环境”，这有助于对患者进行健康评估和监测，从而为他们提供居家医疗服务。Tuli 等人 [[24]](#C_016_c11.xhtml#r11_24) 旨在探究雾计算系统在开发名为 Health Fog 的框架中的效用，该框架用于心脏疾病的深度学习和实时分析。该研究成功结合物联网系统开发了 Health Fog 模型的系统架构。表 11.3 总结了这些工作。
 
+### 11.4.2 基于软件定义网络的解决方案
 
+由于将可编程性和智能引入网络，软件定义网络 (SDN) 是一种改变网络世界的新范式。相应地，在基于 SDN 的网络中，存在数据平面、控制平面和监控平面 [[26]](#C_016_c11.xhtml#r11_26)。这些功能平面各自在减少或保护其对应资源方面面临独特的挑战。软件定义网络使医疗机构能够利用虚拟化的优势，从而提高网络敏捷性并降低总体拥有成本。由于其设计，SDN 提供了安全优势 [[27]](#C_016_c11.xhtml#r11_27)。由于 SDN 控制器可以同时查看所有网络数据，因此更容易发现入侵者在网络流量中产生的异常行为。一旦发现新威胁，操作员可以即时设计新软件来评估和解决漏洞，而无需等待制造商专有设备的操作系统或应用软件更新。文献中提供了多种利用软件定义网络保护基于物联网的医疗系统的安全方案。在物联网应用中，SDN 可成为密钥管理 [[28]](#C_016_c11.xhtml#r11_28)、身份管理、认证、机密性和入侵检测的绝佳解决方案。作者在 [[29]](#C_016_c11.xhtml#r11_29) 中演示了一种用于物联网设备的 OpenFlow SDN 架构。该建议架构包含受管理的物联网网关，用于检测攻击和异常，以确定哪些设备出现故障以及网络中哪些节点受到影响。Aydeger 等人在 [[30]](#C_016_c11.xhtml#r11_30) 中提出了一种基于 SDN 的 MTD（移动目标防御）机制，用于防御称为 Crossfire 的特定 DDoS 攻击。表 11.3 总结了这些工作。
 
-#### 基于雾计算的解决方案
+### 11.4.3 基于区块链的解决方案
 
-雾计算作为一种新范式被引入，用于扩展云计算的处理资源。在网络边缘，它提供存储、处理和网络/通信功能 [20]。雾计算由部署在靠近物联网设备并连接到云服务器的雾节点组成。由于物联网设备资源有限，雾节点可通过提供认证、隐私保护和加密来帮助保护物联网环境。文献中提供了多种利用雾计算保护基于物联网的医疗系统的安全方案。本小节概述了最新的综述。
+物联网还涉及许多其他问题，其中最重要的一个是安全问题。一个拥有大量互联设备的庞大网络的存在，几乎必然会引出各种攻击和窃听场景，这些场景可能会危及这些实体及其用户。如前所述，由于物联网设备在处理和存储方面存在物理限制，典型的安全措施无法直接应用于物联网设备。此外，在设备或用户访问物联网服务之前，必须根据预设的安全规定，在设备/用户与物联网系统之间执行相互认证和授权。另一方面，所提出的安全措施必须考虑到物联网设备的受限资源。区块链技术可以解决这些主要问题 [[32]](#C_016_c11.xhtml#r11_32)。研究人员越来越多地转向基于区块链的安全框架，以保护医疗数据免受未授权方的侵害。为了确保基于物联网的医疗应用中的通信安全，文献 [[31]](#C_016_c11.xhtml#r11_31) 的作者提出了一种有效的多层认证协议和一种用于无线体域网 (WBAN) 的安全会话密钥生成机制。文献 [[32]](#C_016_c11.xhtml#r11_32) 的作者提出了一种基于区块链技术的医疗数据存储方案，以确保个人医疗数据的安全存储和共享。为了实现医疗应用中的安全通信，Deebak 等人 [[33]](#C_016_c11.xhtml#r11_33) 基于 ECC 和加密哈希函数提出了一种安全匿名生物识别用户认证方案 (SAB-UAS)。表 11.3 总结了这些工作。
 
-Hassen 等人 [21] 通过结合雾计算和云计算等物联网应用，提出了一种居家住院系统。该研究旨在提出一种用于冠状病毒大流行期间医疗系统的智能模型。Pham 等人 [23] 开展了另一项研究，构建了“基于云的智能家居环境”，这有助于对患者进行健康评估和监测，从而为他们提供居家医疗服务。Tuli 等人 [24] 旨在探究雾计算系统在开发名为 Health Fog 的框架中的效用，该框架用于心脏疾病的深度学习和实时分析。该研究成功结合物联网系统开发了 Health Fog 模型的系统架构。表 11.3 总结了这些工作。
+### 11.4.4 基于轻量级密码学的解决方案
 
-#### 基于软件定义网络的解决方案
+密码学解决方案是密码学提供的所有安全服务。密码学提供各种安全技术，并可在使用物联网的医疗应用中提供机密性、认证、完整性及许多其他优势。为实现这些安全服务，密码学采用不同的方法，如加密/解密方法、密钥生成方法、哈希函数 [[3]](#C_016_c11.xhtml#r11_3) 和数字签名。可采用轻量级密码技术来实现包括机密性、完整性和认证在内的关键安全需求 [[4]](#C_016_c11.xhtml#r11_4)。许多基于密码学的方法被构建出来，用于检测和阻断使用物联网的医疗应用中的攻击。文献 [[6]](#C_016_c11.xhtml#r11_6) 中，作者提出了一个名为 `MADAR` 的框架来对抗 DoS 攻击。`MADAR` 可以抵抗利用基于 ID 的签名方案和自生成假名组合来影响通信的 DoS 攻击。它还可以检测基于使用强度可变的消息特定谜题来攻击通信的 DoS 攻击。Kiho 等人 [[8]](#C_016_c11.xhtml#r11_8) 引入了一种基于群签名的密钥管理协议，以确保基于物联网的医疗系统保护中的认证。利用这一概念，拥有相同签名组的设备可以安全通信。文献 [[10]](#C_016_c11.xhtml#r11_10) 的作者使用哈希函数为基于物联网的医疗系统构建了 `HCPA-GKA` 方案。设备的组密钥管理机制分发是通过中国剩余定理 (CRT) 完成的。当设备加入和退出组时，它可以被更新。表 11.3 总结了这些工作。
 
-由于将可编程性和智能引入网络，软件定义网络 (SDN) 是一种改变网络世界的新范式。相应地，在基于 SDN 的网络中，存在数据平面、控制平面和监控平面 [26]。这些功能平面各自在减少或保护其对应资源方面面临独特的挑战。软件定义网络使医疗机构能够利用虚拟化的优势，从而提高网络敏捷性并降低总体拥有成本。由于其设计，SDN 提供了安全优势 [27]。由于 SDN 控制器可以同时查看所有网络数据，因此更容易发现入侵者在网络流量中产生的异常行为。一旦发现新威胁，操作员可以即时设计新软件来评估和解决漏洞，而无需等待制造商专有设备的操作系统或应用软件更新。文献中提供了多种利用软件定义网络保护基于物联网的医疗系统的安全方案。在物联网应用中，SDN 可成为密钥管理 [28]、身份管理、认证、机密性和入侵检测的绝佳解决方案。作者在 [29] 中演示了一种用于物联网设备的 OpenFlow SDN 架构。该建议架构包含受管理的物联网网关，用于检测攻击和异常，以确定哪些设备出现故障以及网络中哪些节点受到影响。Aydeger 等人在 [30] 中提出了一种基于 SDN 的 MTD（移动目标防御）机制，用于防御称为 Crossfire 的特定 DDoS 攻击。表 11.3 总结了这些工作。
+### 11.4.5 基于人工智能的解决方案
 
-### 表 11.3：部分物联网安全解决方案的比较
+机器学习 (ML) 是一种数据分析技术，它允许医疗系统从数据中学习并执行特定任务，如异常检测、行为分析等。机器学习主要有两类：监督学习和无监督学习。当人工手动将训练数据分类为有害或真实，然后将这些数据输入算法以开发一个包含数据“类别”的模型，并将待分析流量与之比较时，就会发生监督学习 [[38]](#C_016_c11.xhtml#r11_38)。无监督学习避免使用训练数据和人工标记，转而支持将可比较的数据片段分组到类别中，然后根据每个类别内的数据连贯性和类别间的数据模块化对其进行分类 [[39]](#C_016_c11.xhtml#r11_39)。机器学习被用于创建复杂的算法，以保护网络和系统，包括物联网设备。研究界已探讨了 ML 技术以检测针对医疗系统的攻击 [[40]](#C_016_c11.xhtml#r11_40)。Saeedi 等人在文献 [[41]](#C_016_c11.xhtml#r11_41) 中利用决策树方法检测医疗设备中的恶意攻击。Vhaduri 等人利用支持向量机 (SVM) 特性，通过卡路里消耗、平均步数和每分钟心率等多种生理和行为指标，检测对医疗设备及其获取数据的非法访问 [[42]](#C_016_c11.xhtml#r11_42)。Newaz 等人提出了 HealthGuard，这是一种基于 ML 的安全框架，用于检测互联医疗系统中的敌对行为 [[43]](#C_016_c11.xhtml#r11_43)。HealthGuard 从各种医疗设备收集生命体征，并应用 ML 算法关联患者生物过程的变化，以区分良性和恶性活动。表 11.3 总结了这些工作。
+
+### 11.4.6 基于同态加密和可搜索加密的解决方案
+
+技术的进步现在使得监测心率、体温和睡眠模式成为可能；利用 IoT 设备持续追踪运动；记录大脑活动。经典加密技术已非常成功地用于保护传输中和存储中的数据 [[44]](#C_016_c11.xhtml#r11_44)。然而，加密数据的过程也使其在计算中变得不可用。最近开发的全同态加密（FHE）技术在很大程度上改进了这一点。与需要在计算前解密数据的经典方法不同，同态方法允许数据同时被安全地存储或传输并用于计算 [[45]](#C_016_c11.xhtml#r11_45)。然而，FHE 对计算施加了严重的限制，无论是算术方面（例如，无法执行除法）还是计算方面（例如，乘法变得慢得多），导致传统统计算法不再适用。使用可搜索加密（SE），可以对存储在云服务器上的加密数据进行安全搜索。非对称 SE、对称 SE 和基于属性的 SE 是 SE 技术的示例 [[46]](#C_016_c11.xhtml#r11_46)。文献中提供了多种利用同态加密和 SE 保护基于 IoT 的医疗系统的安全方案。Almalki 等人 [[8]](#C_016_c11.xhtml#r11_8) 提出了 EPPDA：一种带有认证的高效隐私保护数据聚合方案，用于基于 IoT 的医疗应用。EPPDA 在数据聚合和转发过程中验证数据完整性，以便在验证和授权阶段尽早检测到虚假数据。在另一项工作中，Helen 等人 [[46]](#C_016_c11.xhtml#r11_46) 强调了用于 WBAN 系统的增强型基于 MAC 的安全延迟感知医疗监测系统（E-MHMS）。该解决方案确保了安全高效的数据聚合，其中数据分为三类：关键数据、近关键数据和普通数据。首先，基站（BS）向所有授权节点发送密钥。Mahender 等人 [[48]](#C_016_c11.xhtml#r11_48) 阐述了一项名为“托管免身份基聚合签加密方案以保障数据传输（EF-IDASC）”的新贡献，以确保医疗物联网（IoMT）上的隐私保护访问控制。表 11.3 总结了这些工作。
+
+## 表 11.3：部分物联网安全解决方案的比较
 
 | 解决方案 (参考文献) | 挑战 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -4381,28 +4074,7 @@ Hassen 等人 [21] 通过结合雾计算和云计算等物联网应用，提出�
 | [48] | | + | − | − | − | + | + | − |
 | [49] | | ++ | + | + | − | + | − | + |
 
-**图例：** ++ 好；+ 一般；− 差（有限）；−− 极差。
-
-## 基于区块链的解决方案
-
-
-
-
-物联网还涉及许多其他问题，其中最重要的一个是安全问题。一个拥有大量互联设备的庞大网络的存在，几乎必然会引出各种攻击和窃听场景，这些场景可能会危及这些实体及其用户。如前所述，由于物联网设备在处理和存储方面存在物理限制，典型的安全措施无法直接应用于物联网设备。此外，在设备或用户访问物联网服务之前，必须根据预设的安全规定，在设备/用户与物联网系统之间执行相互认证和授权。另一方面，所提出的安全措施必须考虑到物联网设备的受限资源。区块链技术可以解决这些主要问题 [32]。研究人员越来越多地转向基于区块链的安全框架，以保护医疗数据免受未授权方的侵害。为了确保基于物联网的医疗应用中的通信安全，文献 [31] 的作者提出了一种有效的多层认证协议和一种用于无线体域网 (WBAN) 的安全会话密钥生成机制。文献 [32] 的作者提出了一种基于区块链技术的医疗数据存储方案，以确保个人医疗数据的安全存储和共享。为了实现医疗应用中的安全通信，Deebak 等人 [33] 基于 ECC 和加密哈希函数提出了一种安全匿名生物识别用户认证方案 (SAB-UAS)。表 11.3 总结了这些工作。
-
-### 11.4.4 基于轻量级密码学的解决方案
-
-密码学解决方案是密码学提供的所有安全服务。密码学提供各种安全技术，并可在使用物联网的医疗应用中提供机密性、认证、完整性及许多其他优势。为实现这些安全服务，密码学采用不同的方法，如加密/解密方法、密钥生成方法、哈希函数 [3] 和数字签名。可采用轻量级密码技术来实现包括机密性、完整性和认证在内的关键安全需求 [4]。许多基于密码学的方法被构建出来，用于检测和阻断使用物联网的医疗应用中的攻击。文献 [6] 中，作者提出了一个名为 `MADAR` 的框架来对抗 DoS 攻击。`MADAR` 可以抵抗利用基于 ID 的签名方案和自生成假名组合来影响通信的 DoS 攻击。它还可以检测基于使用强度可变的消息特定谜题来攻击通信的 DoS 攻击。Kiho 等人 [8] 引入了一种基于群签名的密钥管理协议，以确保基于物联网的医疗系统保护中的认证。利用这一概念，拥有相同签名组的设备可以安全通信。文献 [10] 的作者使用哈希函数为基于物联网的医疗系统构建了 `HCPA-GKA` 方案。设备的组密钥管理机制分发是通过中国剩余定理 (CRT) 完成的。当设备加入和退出组时，它可以被更新。表 11.3 总结了这些工作。
-
-### 11.4.5 基于人工智能的解决方案
-
-机器学习 (ML) 是一种数据分析技术，它允许医疗系统从数据中学习并执行特定任务，如异常检测、行为分析等。机器学习主要有两类：监督学习和无监督学习。当人工手动将训练数据分类为有害或真实，然后将这些数据输入算法以开发一个包含数据“类别”的模型，并将待分析流量与之比较时，就会发生监督学习 [38]。无监督学习避免使用训练数据和人工标记，转而支持将可比较的数据片段分组到类别中，然后根据每个类别内的数据连贯性和类别间的数据模块化对其进行分类 [39]。机器学习被用于创建复杂的算法，以保护网络和系统，包括物联网设备。研究界已探讨了 ML 技术以检测针对医疗系统的攻击 [40]。Saeedi 等人在文献 [41] 中利用决策树方法检测医疗设备中的恶意攻击。Vhaduri 等人利用支持向量机 (SVM) 特性，通过卡路里消耗、平均步数和每分钟心率等多种生理和行为指标，检测对医疗设备及其获取数据的非法访问 [42]。Newaz 等人提出了 HealthGuard，这是一种基于 ML 的安全框架，用于检测互联医疗系统中的敌对行为 [43]。HealthGuard 从各种医疗设备收集生命体征，并应用 ML 算法关联患者生物过程的变化，以区分良性和恶性活动。表 11.3 总结了这些工作。
-
-### 11.4.6 基于同态加密和可搜索加密的解决方案
-
-
-
-技术的进步现在使得监测心率、体温和睡眠模式成为可能；利用 IoT 设备持续追踪运动；记录大脑活动。经典加密技术已非常成功地用于保护传输中和存储中的数据 [[44]](#C_016_c11.xhtml#r11_44)。然而，加密数据的过程也使其在计算中变得不可用。最近开发的全同态加密（FHE）技术在很大程度上改进了这一点。与需要在计算前解密数据的经典方法不同，同态方法允许数据同时被安全地存储或传输并用于计算 [[45]](#C_016_c11.xhtml#r11_45)。然而，FHE 对计算施加了严重的限制，无论是算术方面（例如，无法执行除法）还是计算方面（例如，乘法变得慢得多），导致传统统计算法不再适用。使用可搜索加密（SE），可以对存储在云服务器上的加密数据进行安全搜索。非对称 SE、对称 SE 和基于属性的 SE 是 SE 技术的示例 [[46]](#C_016_c11.xhtml#r11_46)。文献中提供了多种利用同态加密和 SE 保护基于 IoT 的医疗系统的安全方案。Almalki 等人 [[8]](#C_016_c11.xhtml#r11_8) 提出了 EPPDA：一种带有认证的高效隐私保护数据聚合方案，用于基于 IoT 的医疗应用。EPPDA 在数据聚合和转发过程中验证数据完整性，以便在验证和授权阶段尽早检测到虚假数据。在另一项工作中，Helen 等人 [[46]](#C_016_c11.xhtml#r11_46) 强调了用于 WBAN 系统的增强型基于 MAC 的安全延迟感知医疗监测系统（E-MHMS）。该解决方案确保了安全高效的数据聚合，其中数据分为三类：关键数据、近关键数据和普通数据。首先，基站（BS）向所有授权节点发送密钥。Mahender 等人 [[48]](#C_016_c11.xhtml#r11_48) 阐述了一项名为“托管免身份基聚合签加密方案以保障数据传输（EF-IDASC）”的新贡献，以确保医疗物联网（IoMT）上的隐私保护访问控制。表 11.3 总结了这些工作。
+**图例**：++ 好；+ 一般；− 差（有限）；−− 极差。
 
 ## 11.5 结论
 
@@ -4410,36 +4082,35 @@ Hassen 等人 [21] 通过结合雾计算和云计算等物联网应用，提出�
 
 ## 参考文献
 
-1.  Goyal S., Sharma N., Bhushan B., Shankar A., Sagayam M. (2021) IoT enabled technology in secured healthcare: applications, challenges and future directions. In: Hassanien A. E., Khamparia A., Gupta D., Shankar K., Slowik A. (eds) Cognitive Internet of Medical Things for Smart Healthcare. Studies in Systems, Decision and Control, vol 311. Springer, Cham. Doi:[10.1007/978-3-030-55833-8_2](http://doi.org/10.1007/978-3-030-55833-8_2).
-
-2.  Bhushan, B., & Sahoo, G. (2020). Requirements, protocols, and security challenges in wireless sensor networks: an industrial perspective. Handbook of Computer Networks and Cyber Security, 683–713. [`doi.org/978-3-030-22277-2_27`](https://doi.org/978-3-030-22277-2_27).
-
-3.  Othman, S. B., Bahattab, A. A., Trad, A., & Youssef, H. (2019). LSDA: lightweight secure data aggregation scheme in healthcare using IoT. 10th International Conference on Information Systems and Technologies, Lecce, Italy, Dec 28, 2019–Dec 30, 2019, Tunisia. [`doi.org/10.1145/3447568.3448530`](https://doi.org/10.1145/3447568.3448530).
-
-4.  Othman, S. B., Bahattab, A. A., Trad, A. et al. (2015). Confidentiality and integrity for data aggregation in WSN using homomorphic encryption. Wireless Pers. Commun. 80, 867–889. Doi:[10.1007/s11277-014-2061-z](http://doi.org/10.1007/s11277-014-2061-z).
-
-5.  Soufiene, B. O., Bahattab, A. A., Trad, A., & Youssef, H. (2019). RESDA: robust and efficient secure data aggregation scheme in healthcare using the IoT. 2019 International Conference on Internet of Things, Embedded Systems and Communications (IINTEC),Tunis, Tunisia, pp. 209–213, Doi:[10.1109/IINTEC48298.2019.9112125](http://doi.org/10.1109/IINTEC48298.2019.9112125).
-
-6.  Onesimu, J. A., Karthikeyan, J. & Sei, Y. (2021). An efficient clustering-based anonymization scheme for privacy-preserving data collection in IoT based healthcare services. Peer-to-Peer Net. Appl. 14, 1629–1649. Doi:[10.1007/s12083-021-01077-7](http://doi.org/10.1007/s12083-021-01077-7).
-
-7.  Almalki, F. A., & Soufiene, B. O. (2021). EPPDA: an efficient and privacy-preserving data aggregation scheme with authentication and authorization for IoT-based healthcare applications. Wireless Commun. Mobile Comput. 2021, Article ID 5594159, 18 pages. Doi:[10.1155/2021/5594159](http://doi.org/10.1155/2021/5594159).
-
-8.  Arul, R., Al-Otaibi, Y. D., Alnumay, W. S. et al. (2021). Multi-modal secure healthcare data dissemination framework using blockchain in IoMT. Pers Ubiquit Comput. Doi:[10.1007/s00779-021-01527-2](http://doi.org/10.1007/s00779-021-01527-2).
-
-9.  Kumar, M., & Chand, S. (2020, Oct.). A secure and efficient cloud-centric internet-of-medical-things-enabled smart healthcare system with public verifiability. IEEE Int. Things J. 7(10), 10650–10659. Doi:[10.1109/JIOT.2020.3006523](http://doi.org/10.1109/JIOT.2020.3006523).
-
-10.  Almalki, F. A., Othman, S. B., Almalki, F. A., & Sakli, H. (2021). EERP-DPM: energy efficient routing protocol using dual prediction model for healthcare using IoT. J. Healthcare Eng. 2021, Article ID 9988038, 15 pages. Doi:[10.1155/2021/9988038](http://doi.org/10.1155/2021/9988038).
-
-11.  soufiene, B. o., Bahattab, A. A., Trad, A., & Youssef, H. (2020). PEERP: an priority-based energy-efficient routing protocol for reliable data transmission in healthcare using the IoT, Procedia Comput. Sci. 175, 373–378. Doi:[10.1016/j.procs.2020.07.053](http://doi.org/10.1016/j.procs.2020.07.053).
-
-12.  Goyal, S., Sharma, N., Kaushik, I., & Bhushan, B. (2021). Blockchain as a solution for security attacks in named data networking of things. In Security and Privacy Issues in IoT Devices and Sensor Networks, 211–243. Doi: [10.1016/B978-0-12-821255-4.00010-9](http://doi.org/10.1016/B978-0-12-821255-4.00010-9).
-
-13.  Saxena, S., Bhushan, B., & Ahad, M. A. (2021). Blockchain based solutions to secure IoT: background, integration trends and a way forward, J. Net. Comput. Appl. 181, 103050, Doi:[10.1016/j.jnca.2021.103050](http://doi.org/10.1016/j.jnca.2021.103050).
-
-
 
 
 ## 参考文献
+
+1. Goyal S., Sharma N., Bhushan B., Shankar A., Sagayam M. (2021) IoT enabled technology in secured healthcare: applications, challenges and future directions. In: Hassanien A. E., Khamparia A., Gupta D., Shankar K., Slowik A. (eds) Cognitive Internet of Medical Things for Smart Healthcare. Studies in Systems, Decision and Control, vol 311. Springer, Cham. Doi: [10.1007/978-3-030-55833-8_2](http://doi.org/10.1007/978-3-030-55833-8_2).
+
+2. Bhushan, B., & Sahoo, G. (2020). Requirements, protocols, and security challenges in wireless sensor networks: an industrial perspective. Handbook of Computer Networks and Cyber Security, 683–713. [`doi.org/978-3-030-22277-2_27`](https://doi.org/978-3-030-22277-2_27).
+
+3. Othman, S. B., Bahattab, A. A., Trad, A., & Youssef, H. (2019). LSDA: lightweight secure data aggregation scheme in healthcare using IoT. 10th International Conference on Information Systems and Technologies, Lecce, Italy, Dec 28, 2019–Dec 30, 2019, Tunisia. [`doi.org/10.1145/3447568.3448530`](https://doi.org/10.1145/3447568.3448530).
+
+4. Othman, S. B., Bahattab, A. A., Trad, A. et al. (2015). Confidentiality and integrity for data aggregation in WSN using homomorphic encryption. Wireless Pers. Commun. 80, 867–889. Doi: [10.1007/s11277-014-2061-z](http://doi.org/10.1007/s11277-014-2061-z).
+
+5. Soufiene, B. O., Bahattab, A. A., Trad, A., & Youssef, H. (2019). RESDA: robust and efficient secure data aggregation scheme in healthcare using the IoT. 2019 International Conference on Internet of Things, Embedded Systems and Communications (IINTEC), Tunis, Tunisia, pp. 209–213, Doi: [10.1109/IINTEC48298.2019.9112125](http://doi.org/10.1109/IINTEC48298.2019.9112125).
+
+6. Onesimu, J. A., Karthikeyan, J. & Sei, Y. (2021). An efficient clustering-based anonymization scheme for privacy-preserving data collection in IoT based healthcare services. Peer-to-Peer Net. Appl. 14, 1629–1649. Doi: [10.1007/s12083-021-01077-7](http://doi.org/10.1007/s12083-021-01077-7).
+
+7. Almalki, F. A., & Soufiene, B. O. (2021). EPPDA: an efficient and privacy-preserving data aggregation scheme with authentication and authorization for IoT-based healthcare applications. Wireless Commun. Mobile Comput. 2021, Article ID 5594159, 18 pages. Doi: [10.1155/2021/5594159](http://doi.org/10.1155/2021/5594159).
+
+8. Arul, R., Al-Otaibi, Y. D., Alnumay, W. S. et al. (2021). Multi-modal secure healthcare data dissemination framework using blockchain in IoMT. Pers Ubiquit Comput. Doi: [10.1007/s00779-021-01527-2](http://doi.org/10.1007/s00779-021-01527-2).
+
+9. Kumar, M., & Chand, S. (2020, Oct.). A secure and efficient cloud-centric internet-of-medical-things-enabled smart healthcare system with public verifiability. IEEE Int. Things J. 7(10), 10650–10659. Doi: [10.1109/JIOT.2020.3006523](http://doi.org/10.1109/JIOT.2020.3006523).
+
+10. Almalki, F. A., Othman, S. B., Almalki, F. A., & Sakli, H. (2021). EERP-DPM: energy efficient routing protocol using dual prediction model for healthcare using IoT. J. Healthcare Eng. 2021, Article ID 9988038, 15 pages. Doi: [10.1155/2021/9988038](http://doi.org/10.1155/2021/9988038).
+
+11. soufiene, B. o., Bahattab, A. A., Trad, A., & Youssef, H. (2020). PEERP: an priority-based energy-efficient routing protocol for reliable data transmission in healthcare using the IoT, Procedia Comput. Sci. 175, 373–378. Doi: [10.1016/j.procs.2020.07.053](http://doi.org/10.1016/j.procs.2020.07.053).
+
+12. Goyal, S., Sharma, N., Kaushik, I., & Bhushan, B. (2021). Blockchain as a solution for security attacks in named data networking of things. In Security and Privacy Issues in IoT Devices and Sensor Networks, 211–243. Doi: [10.1016/B978-0-12-821255-4.00010-9](http://doi.org/10.1016/B978-0-12-821255-4.00010-9).
+
+13. Saxena, S., Bhushan, B., & Ahad, M. A. (2021). Blockchain based solutions to secure IoT: background, integration trends and a way forward, J. Net. Comput. Appl. 181, 103050, Doi: [10.1016/j.jnca.2021.103050](http://doi.org/10.1016/j.jnca.2021.103050).
 
 14. Haque, A. K., Bhushan, B., & Dhiman, G. (2021). Conceptualizing smart city applications: requirements, architecture, security issues, and emerging trends. *Expert Syst.* Doi: [10.1111/exsy.12753](http://doi.org/10.1111/exsy.12753)。
 
@@ -4471,137 +4142,137 @@ Hassen 等人 [21] 通过结合雾计算和云计算等物联网应用，提出�
 
 28. Shu, Z., Wan, J., Li, D. et al. (2016). Security in software-defined networking: threats and countermeasures. *Mobile Net. Appl.* 21, 764–776. Doi: [10.1007/s11036-016-0676-x](http://doi.org/10.1007/s11036-016-0676-x)。
 
-29. Ahvar, E., Ahvar, S., Raza, S. M., Manuel Sanchez Vilchez, J., & Lee, G. M. (2021). Next generation of SDN in cloud-fog for 5G and beyond-enabled applications: opportunities and challenges. *Network*, 1, 28–49. Doi: [10.3390/network1010004](http://doi.org/10.3390/network1010004)。
-
-30. Li, Y., Su, X., Ding, A. Y., Lindgren, A., Liu, X., Prehofer, C., Riekki, J., Rahmani, R., Tarkoma, S., & Hui, P. (2020). Enhancing the Internet of Things with knowledge-driven software-defined networking technology: future perspectives. *Sensors*, 20, 3459. Doi: [10.3390/s20123459](http://doi.org/10.3390/s20123459)。
-
-31. Kamboj, P., Khare, S. & Pal, S. (2021). User authentication using blockchain based smart contract in role-based access control. *Peer-to-Peer Net. Appl.* Doi: [10.1007/s12083-021-01150-1](http://doi.org/10.1007/s12083-021-01150-1)。
-
-32. Patil, P., Sangeetha, M. & Bhaskar, V. (2021). Blockchain for IoT access control, security and privacy: a review. *Wireless Pers. Commun.* 117, 1815–1834. Doi: [10.1007/s11277-020-07947-2](http://doi.org/10.1007/s11277-020-07947-2)。
-
-33. Mubarakali, A. (2021). An efficient authentication scheme using blockchain technology for wireless sensor networks. *Wireless Pers. Commun.* Doi: [10.1007/s11277-021-08212-w](http://doi.org/10.1007/s11277-021-08212-w)。
-
-34. Ren, Y., Zhao, Q., Guan, H. et al. (2020). A novel authentication scheme based on edge computing for blockchain-based distributed energy trading system. *J. Wireless Com. Net.* 2020, 152. Doi: [10.1186/s13638-020-01762-w](http://doi.org/10.1186/s13638-020-01762-w)。
-
-35. Andola, N., Raghav Yadav, V. K. et al. (2021). SpyChain: a lightweight blockchain for authentication and anonymous authorization in IoD. *Wireless Pers. Commun.* 119, 343–362. Doi: [10.1007/s11277-021-08214-8](http://doi.org/10.1007/s11277-021-08214-8)。
-
-36. Kuzlu, M., Fair, C. & Guler, O. (2021). Role of Artificial Intelligence in the Internet of Things (IoT) cybersecurity. *Discov. Int. Things* 1, 7. Doi: [10.1007/s43926-020-00001-4](http://doi.org/10.1007/s43926-020-00001-4)。
-
-37. Meneghello, F., Calore, M., Zucchetto, D., Polese, M., & Zanella, A. (2019, Oct.). IoT: Internet of Threats? a survey of practical security vulnerabilities in real IoT devices. *IEEE Int. Things J.* 6(5), 8182–8201. Doi: [10.1109/JIOT.2019.2935189](http://doi.org/10.1109/JIOT.2019.2935189)。
-
-38. Farivar, F., Haghighi, M. S., Jolfaei, A., & Alazab, M. (2020, Apr.). Artificial Intelligence for detection, estimation, and compensation of malicious attacks in nonlinear cyber-physical systems and industrial IoT. *IEEE Trans. Indus. Inform.* 16(4), 2716–2725. Doi: [10.1109/TII.2019.2956474](http://doi.org/10.1109/TII.2019.2956474)。
-
-39. Wang, S., & Qiao, Z. (2019). Robust pervasive detection for adversarial samples of Artificial Intelligence in IoT environments. *IEEE Access*, 7, 88693–88704. Doi: [10.1109/ACCESS.2019.2919695](http://doi.org/10.1109/ACCESS.2019.2919695)。
-
-40. Liang, F., Hatcher, W. G., Liao, W., Gao, W., & Yu, W. (2019). Machine learning for security and the Internet of Things: the good, the bad, and the ugly. *IEEE Access*, 7, 158126–158147. Doi: [10.1109/ACCESS.2019.2948912](http://doi.org/10.1109/ACCESS.2019.2948912)。
 
 
+# 29. Ahvar, E., Ahvar, S., Raza, S. M., Manuel Sanchez Vilchez, J., & Lee, G. M. (2021). Next generation of SDN in cloud-fog for 5G and beyond-enabled applications: opportunities and challenges. *Network*, 1, 28–49. Doi: [10.3390/network1010004](http://doi.org/10.3390/network1010004)。
 
+# 30. Li, Y., Su, X., Ding, A. Y., Lindgren, A., Liu, X., Prehofer, C., Riekki, J., Rahmani, R., Tarkoma, S., & Hui, P. (2020). Enhancing the Internet of Things with knowledge-driven software-defined networking technology: future perspectives. *Sensors*, 20, 3459. Doi: [10.3390/s20123459](http://doi.org/10.3390/s20123459)。
 
+# 31. Kamboj, P., Khare, S. & Pal, S. (2021). User authentication using blockchain based smart contract in role-based access control. *Peer-to-Peer Net. Appl.* Doi: [10.1007/s12083-021-01150-1](http://doi.org/10.1007/s12083-021-01150-1)。
+
+# 32. Patil, P., Sangeetha, M. & Bhaskar, V. (2021). Blockchain for IoT access control, security and privacy: a review. *Wireless Pers. Commun.* 117, 1815–1834. Doi: [10.1007/s11277-020-07947-2](http://doi.org/10.1007/s11277-020-07947-2)。
+
+# 33. Mubarakali, A. (2021). An efficient authentication scheme using blockchain technology for wireless sensor networks. *Wireless Pers. Commun.* Doi: [10.1007/s11277-021-08212-w](http://doi.org/10.1007/s11277-021-08212-w)。
+
+# 34. Ren, Y., Zhao, Q., Guan, H. et al. (2020). A novel authentication scheme based on edge computing for blockchain-based distributed energy trading system. *J. Wireless Com. Net.* 2020, 152. Doi: [10.1186/s13638-020-01762-w](http://doi.org/10.1186/s13638-020-01762-w)。
+
+# 35. Andola, N., Raghav Yadav, V. K. et al. (2021). SpyChain: a lightweight blockchain for authentication and anonymous authorization in IoD. *Wireless Pers. Commun.* 119, 343–362. Doi: [10.1007/s11277-021-08214-8](http://doi.org/10.1007/s11277-021-08214-8)。
+
+# 36. Kuzlu, M., Fair, C. & Guler, O. (2021). Role of Artificial Intelligence in the Internet of Things (IoT) cybersecurity. *Discov. Int. Things* 1, 7. Doi: [10.1007/s43926-020-00001-4](http://doi.org/10.1007/s43926-020-00001-4)。
+
+# 37. Meneghello, F., Calore, M., Zucchetto, D., Polese, M., & Zanella, A. (2019, Oct.). IoT: Internet of Threats? a survey of practical security vulnerabilities in real IoT devices. *IEEE Int. Things J.* 6(5), 8182–8201. Doi: [10.1109/JIOT.2019.2935189](http://doi.org/10.1109/JIOT.2019.2935189)。
+
+# 38. Farivar, F., Haghighi, M. S., Jolfaei, A., & Alazab, M. (2020, Apr.). Artificial Intelligence for detection, estimation, and compensation of malicious attacks in nonlinear cyber-physical systems and industrial IoT. *IEEE Trans. Indus. Inform.* 16(4), 2716–2725. Doi: [10.1109/TII.2019.2956474](http://doi.org/10.1109/TII.2019.2956474)。
+
+# 39. Wang, S., & Qiao, Z. (2019). Robust pervasive detection for adversarial samples of Artificial Intelligence in IoT environments. *IEEE Access*, 7, 88693–88704. Doi: [10.1109/ACCESS.2019.2919695](http://doi.org/10.1109/ACCESS.2019.2919695)。
+
+# 40. Liang, F., Hatcher, W. G., Liao, W., Gao, W., & Yu, W. (2019). Machine learning for security and the Internet of Things: the good, the bad, and the ugly. *IEEE Access*, 7, 158126–158147. Doi: [10.1109/ACCESS.2019.2948912](http://doi.org/10.1109/ACCESS.2019.2948912)。
 
 # 12 利用区块链技术实现个人健康记录的有效管理
 
 **Jacek Klich**  
+
 克拉科夫经济大学  
+
 DOI: [10.1201/9781003224075-12](http://doi.org/10.1201/9781003224075-12)
 
 ## 12.1 引言
 
-正如本书所述，区块链技术（BT）在医疗保健领域得到广泛应用。它被视为应对医疗保健系统结构性变革的适当回应，这些变革由远程医疗、远程诊疗和移动健康（mHealth）的快速发展等因素推动。BT 允许以安全、可靠、可信、可追溯、防篡改、透明和去中心化的方式提供医疗保健服务（Ahmad et al. 2021）。Radanović 和 Likić（2018）确定了 BT 在医疗保健领域的六大应用：质量控制、药品供应链管理、公共卫生、健康保险和采购政策、医学教育、生物医学研究，以及电子健康记录（EHRs），后者是本章的主题。
+正如本书所述，区块链技术（`BT`）在医疗保健领域得到广泛应用。它被视为应对医疗保健系统结构性变革的适当回应，这些变革由远程医疗、远程诊疗和移动健康（`mHealth`）的快速发展等因素推动。`BT` 允许以安全、可靠、可信、可追溯、防篡改、透明和去中心化的方式提供医疗保健服务（Ahmad et al. 2021）。Radanović 和 Likić（2018）确定了 `BT` 在医疗保健领域的六大应用：质量控制、药品供应链管理、公共卫生、健康保险和采购政策、医学教育、生物医学研究，以及电子健康记录（`EHRs`），后者是本章的主题。
 
-区块链还对医疗保健行业和医疗保健系统产生了重大影响，这一点在最近的系统性文献综述中有记载（Hussien et al. 2021）。这种影响可以从第四次工业革命的角度进行分析，因为 BT 是其重要组成部分（Kimani et al. 2020）。换句话说，有必要从整体上审视 BT 与健康之间的关系。
+区块链还对医疗保健行业和医疗保健系统产生了重大影响，这一点在最近的系统性文献综述中有记载（Hussien et al. 2021）。这种影响可以从第四次工业革命的角度进行分析，因为 `BT` 是其重要组成部分（Kimani et al. 2020）。换句话说，有必要从整体上审视 `BT` 与健康之间的关系。
 
 ### 12.1.1 动机
 
-这种关系复杂且多维，可在众多领域和不同层面观察到。世界经济论坛（WEF）及其战略情报创建的交互式地图（称为转型地图）非常生动地展示了这种关系的复杂性。它们确定了 BT 对医疗保健系统影响的领域和范围，并在三张地图上展示了它们的相互关联性。第一张以区块链为核心组成部分（出发点）的地图确定了八个直接受 BT 影响的领域/因素，例如*区块链与数据利用*、*区块链与加密货币气候影响*、*智能合约与自动化*、*区块链与数字身份*、*去中心化治理与新模式*、*代币化与数字资产*、*区块链、安全与互操作性*，以及*区块链政策、监管与法律*。
+这种关系复杂且多维，可在众多领域和不同层面观察到。世界经济论坛（`WEF`）及其战略情报创建的交互式地图（称为转型地图）非常生动地展示了这种关系的复杂性。它们确定了 `BT` 对医疗保健系统影响的领域和范围，并在三张地图上展示了它们的相互关联性。第一张以区块链为核心组成部分（出发点）的地图确定了八个直接受 `BT` 影响的领域/因素，例如`区块链与数据利用`、`区块链与加密货币气候影响`、`智能合约与自动化`、`区块链与数字身份`、`去中心化治理与新模式`、`代币化与数字资产`、`区块链、安全与互操作性`，以及`区块链政策、监管与法律`。
 
-*区块链与数据利用*类别进而关联到十个领域/现象，其中两个，即*精准医疗*和*健康与医疗保健的未来*代表了医疗保健系统的组成部分。
+`区块链与数据利用`类别进而关联到十个领域/现象，其中两个，即`精准医疗`和`健康与医疗保健的未来`代表了医疗保健系统的组成部分。
 
-正如第二张地图所示，*健康与医疗保健的未来*直接关联到五个领域/因素：*医疗保健系统的可持续性*、*医疗保健技术*、*流行病的准备与应对*、*普及健康获取*和*健康维护*。
+正如第二张地图所示，`健康与医疗保健的未来`直接关联到五个领域/因素：`医疗保健系统的可持续性`、`医疗保健技术`、`流行病的准备与应对`、`普及健康获取`和`健康维护`。
 
-第三张交互式地图聚焦于*精准医疗*。在此，*精准医疗*直接关联到九个领域/因素：*避免差异*、*伦理与合法性*、*多组学科学*、*精准预防方法*、*数据驱动行动*、*探索 DNA 的新途径*、*精准医疗的成本*、*重新定义健康与疾病*，以及*为精准医疗做准备*。
+第三张交互式地图聚焦于`精准医疗`。在此，`精准医疗`直接关联到九个领域/因素：`避免差异`、`伦理与合法性`、`多组学科学`、`精准预防方法`、`数据驱动行动`、`探索 DNA 的新途径`、`精准医疗的成本`、`重新定义健康与疾病`，以及`为精准医疗做准备`。
 
 ### 12.1.2 主要贡献
 
-WEF 转型地图上展示的 BT 对医疗保健影响的详尽阐述具有双重目的。首先，它阐释了该问题的复杂性，以及区块链与健康和医疗保健系统之间多维和多边的关系；其次，旨在指出本章的增值贡献。就后者而言，可以观察到*区块链、安全与互操作性*既未关联到*精准医疗*，也未关联到*健康与医疗保健的未来*，而这两者是医疗保健系统的关键要素。本章详细阐述了这一缺失的环节，因为安全性和互操作性是 PHR 所关注的最重要问题。因此，可以得出结论，本章为上述 WEF 模型做出了贡献。
+`WEF` 转型地图上展示的 `BT` 对医疗保健影响的详尽阐述具有双重目的。首先，它阐释了该问题的复杂性，以及区块链与健康和医疗保健系统之间多维和多边的关系；其次，旨在指出本章的增值贡献。就后者而言，可以观察到`区块链、安全与互操作性`既未关联到`精准医疗`，也未关联到`健康与医疗保健的未来`，而这两者是医疗保健系统的关键要素。本章详细阐述了这一缺失的环节，因为安全性和互操作性是 `PHR` 所关注的最重要问题。因此，可以得出结论，本章为上述 `WEF` 模型做出了贡献。
 
 ### 12.1.3 章节安排
 
-本章旨在确定近期出版物中指出的将 BT 实施到 PHR 中的关键挑战。主要发现呈现在三个领域：技术发展、法律挑战和社会挑战。这些发现为反思 BT 在 PHR 中的未来搭建了平台。研究结果为预测 PHR 背景下区块链发展的未来方向奠定了基础。这伴随着对 BT 在 PHR 中有效实施的关键成功因素的识别。结论位于本章末尾。
+本章旨在确定近期出版物中指出的将 `BT` 实施到 `PHR` 中的关键挑战。主要发现呈现在三个领域：技术发展、法律挑战和社会挑战。这些发现为反思 `BT` 在 `PHR` 中的未来搭建了平台。研究结果为预测 `PHR` 背景下区块链发展的未来方向奠定了基础。这伴随着对 `BT` 在 `PHR` 中有效实施的关键成功因素的识别。结论位于本章末尾。
 
 ## 12.2 文献综述
 
-
-
-
-
 ### PHRs as Constitutive Elements of Healthcare Systems
 
-PHRs can be perceived as constitutive elements of healthcare systems. Although an effective flow of information is essential in every sector of the economy, it has double importance in healthcare which is virtually based on the exchange of information between health professionals and patients and where quick access to reliable information in many cases means life. Because the medical information gets in volume and comes from diversified sources, this leads to the development of digitized platforms. Researching on them, Flaumenhaft and Ben-Assuli (2018) distinguish between the PHR and the electronic medical/health record (EMR/EHR).
+`PHRs` can be perceived as constitutive elements of healthcare systems. Although an effective flow of information is essential in every sector of the economy, it has double importance in healthcare which is virtually based on the exchange of information between health professionals and patients and where quick access to reliable information in many cases means life. Because the medical information gets in volume and comes from diversified sources, this leads to the development of digitized platforms. Researching on them, Flaumenhaft and Ben-Assuli (2018) distinguish between the `PHR` and the electronic medical/health record (`EMR`/`EHR`).
 
 #### Electronic Health Records (EHR)
 
-The EHR is usually defined as a repository of patient data kept in a digital form by different healthcare providers. An EHR consists of a retrospective, current, and also prospective information regarding the patient’s medical condition. The information usually includes demographic characteristics, documentation of encounters with healthcare providers (i.e., primary physician, community clinic, and hospital), or a patient’s health history, including immunization plans, diagnosis, laboratory reports, etc. The European Commission to foster the cross-border exchange of medical information defined EHR as consisting of at least five components: Patient Summary, ePrescription/eDispensation, Laboratory results, Medical imaging and reports, and Hospital discharge reports (Commission Recommendation on a European Electronic Health Record exchange format).
+The `EHR` is usually defined as a repository of patient data kept in a digital form by different healthcare providers. An `EHR` consists of a retrospective, current, and also prospective information regarding the patient’s medical condition. The information usually includes demographic characteristics, documentation of encounters with healthcare providers (i.e., primary physician, community clinic, and hospital), or a patient’s health history, including immunization plans, diagnosis, laboratory reports, etc. The European Commission to foster the cross-border exchange of medical information defined `EHR` as consisting of at least five components: Patient Summary, ePrescription/eDispensation, Laboratory results, Medical imaging and reports, and Hospital discharge reports (Commission Recommendation on a European Electronic Health Record exchange format).
 
 #### Personal Health Records (PHR)
 
-The notion of PHR is older than EHR because personal health information in paper-based records has been kept for decades (if not centuries). Over the last few decades, PHR has undergone a radical change because of the fast development of digitalization and health information technology. There is no clear consensus regarding the exact definition of PHR so one can find various definitions in the literature (Flaumenhaft and Ben-Assuli 2018).
+The notion of `PHR` is older than `EHR` because personal health information in paper-based records has been kept for decades (if not centuries). Over the last few decades, `PHR` has undergone a radical change because of the fast development of digitalization and health information technology. There is no clear consensus regarding the exact definition of `PHR` so one can find various definitions in the literature (Flaumenhaft and Ben-Assuli 2018).
+
+
 
 In this chapter, PHR is understood as a private application where data comes from multiply sources (including EHR from various healthcare providers) accessed through the Internet and entered by the patient and is freely and easily accessible by patients 24/7. PHR’s goal is to offer individual patients free and full access to their personal health information and to allow them to exercise control over this information. This means that PHR is driven by the patient who may access, provide, manage, and share his/her personal health information. One may maintain that PHR is a patient-centred tool leveraging patients’ engagement and involvement. It also allows the self-management of ongoing healthcare. PHR – like EHR – may include medical history and related information but also information generated and collected by patients themselves such as weight, health, and lifestyle habits such as diet, exercise, activity logs, and stress levels. PHR may contain alerts and reminders for assisting in disease management and monitoring, especially for chronic diseases like diabetes (where glucose levels monitoring and data storage are essential) (Chen et al. 2021; Sheela and Priya 2022). The latter functions are gaining in importance leveraged by better access to broadband Internet, implementation of 3G, 4G, and 5G systems, a growing number of biomedical sensors, various mobile devices (especially smartphones and related applications), and development of mHealth (Wang et al. 2020a). Taking into account the current stage of development of digitalization as well as in communication technologies, one may consider PHR as an electronic PHR (ePHR) and, therefore, use these two terms interchangeably.
 
-#### ePHR Architecture Models
+## ePHR Architecture Models
 
 The administration and disposal of health records depend largely on the chosen architecture of the place health records are stored. Following Alsahafi and Gay (2018) typology, the architecture of ePHR can be grouped into three models:
 
 1.  **Standalone or web-based ePHR**: Patients are responsible for creating and maintaining their health information; thus, all administrative decisions are in their hands.
+
 2.  **Tethered ePHR**: The executive power of patients/consumers is smaller because they are only granted access to the information stored by a healthcare provider.
+
 3.  **Integrated/Unified ePHR**: This model responds to the growing number of medical data because it enables the gathering and viewing of health information from multiple sources. As such, it could be used regionally as well as at the national level (Alsahafi and Gay 2018).
 
-#### Comparing EHR and PHR
+## Comparing EHR and PHR
 
 Comparing EHR to PHR one may indicate that EHR is structured, keyed, kept, and managed by healthcare providers. It may only contain information from a single healthcare provider. Opposite to EHR, PHR is kept and managed by the patient and might encompass health information from different sources, mainly healthcare providers, but also – in the growing scale – monitoring devices (mHealth) and the Internet at large.
 
-### 12.2.1 Method
+## 12.2.1 Method
 
 To review, assess, and synthesize publications proposing to utilize the blockchain to PHRs, a structured literature search on the topic was used. Databases such as ScienceDirect, EBSCOhost (including Health Source – Consumer Edition and MEDLINE), OECD iLibrary, Open Knowledge Repository, Scopus, and Web of Science were searched and a combination of the following terms: PHRs, benefits, healthcare, challenges, security, and trust was used. Although the time frame used in the search was 2019–2021, a few earlier publications were also analysed. The study selection process was performed in two steps. In the first step, after the elimination of duplications (the results of a search came from six databases indicated above), the titles were checked against the goal of the chapter. Then, in the second step, abstracts of all publications chosen in the first step were studied and compared with the chapter’s goal. Finally, 86 publications were selected for analysis. As occurred later, not all of them matched with the topic and goals of the chapter.
 
-### 12.2.2 Results
+## 12.2.2 Results
 
 The results will not be presented in a formal academic manner as in the case of a classic systematic review on BT in healthcare (Agbo et al. 2019), i.e., without tables and graphs. Also, the structure will not mirror the standard style. Consequently, the findings are presented on two levels: general and specific.
 
-#### 12.2.2.1 General Observations
+### 12.2.2.1 General Observations
 
 General observations can be presented in just three points:
 
 *   Widespread EHR adoption originates, among others, from substantial investment and increased financial incentives to implement EHRs even in mid-income countries.
+
 *   Gaining in importance are also PHRs. Their rising value is leveraged by fast mobile health (mHealth) development and the growing number of various sensory devices.
 
+### 区块链在 EHR 和 PHR 中的实施获得积极评价
 
-
-
-
-##### 区块链在 EHR 和 PHR 中的实施获得积极评价
-
-绝大多数出版物对区块链在电子健康记录（EHR）和个人健康记录（PHR）中的实施给予了积极评价。区块链带来的益处包括：
+绝大多数出版物对区块链在电子健康记录（`EHR`）和个人健康记录（`PHR`）中的实施给予了积极评价。区块链带来的益处包括：
 
 *   **访问控制**（Hasselgrena et al. 2020; McGhin et al. 2019; Tandona et al. 2020; Dagher et al. 2018; Nguyen et al. 2021; Singh et al. 2021; Ogundoyin and Kamil 2021; Wang et al. 2021）
+
 *   **互操作性**（Gordon and Catalini 2018; Sreenivasan and Chacko 2020; Margheri et al. 2020）
+
 *   **安全性**（Tariq et al. 2020; Shi et al. 2020; Tseng et al. 2021; Gimenez-Aguilar et al. 2021; Shamshad et al. 2020）
+
 *   **隐私保护**（Hussien et al. 2021; Agbo et al. 2019; Tandona et al. 2020; Sookhak et al. 2021; Saxena and Verma 2020; Antwi et al. 2021; Mohanta et al. 2019; Soni and Singh 2021; Axon et al. 2018; Feng et al. 2019; Badr et al. 2018; Al Omar et al. 2019; Ul Hassan et al. 2020; Attarian and Hashemi 2021; Hathaliya and Tanwar 2020; Bhavin et al. 2021; Jeet and Kang 2020）
 
 Abu-elezz 等人（2020）提出了源自区块链技术（BT）益处的其他分类，区分了与患者相关的益处和与组织相关的益处。个性化医疗、安全与授权、患者健康数据追踪、患者健康状态监测属于第一类；而健康信息交换、药品供应链、临床试验、医疗保险管理属于第二类（Abu-elezz et al. 2020）。
 
 值得注意的是，总体上探讨区块链局限性的出版物数量有限（Jeet and Kang 2020; Abu-elezz et al. 2020; Negro-Calduch et al. 2021），特别是针对 PHR 方面的。这一问题将在下文第三小节进一步展开。
 
-#### 12.2.2.2 具体观察
+### 12.2.2.2 具体观察
 
 基于 Malhotra 等人（2021）提出的区块链采用战略风险类型学（并对此进行进一步阐述），可以确定三个领域，我们综述中的更详细发现可归入其中。它们是技术、法律和社会问题。下文将*法律*和*社会*问题称为“挑战”，因为报告相关发现几乎自动引导我们采取未来必要的行动来解决已识别的问题。
 
-##### 12.2.2.2.1 技术发展
+#### 12.2.2.2.1 技术发展
 
 BT 持续发展，因此多篇出版物在这方面提出了新的改进和想法。这些新提案名称各异。在下文引用的文章中，可以找到“新模型”、“新系统”、“新架构”、“新框架”、“新概念”、“新机制”、“新方案”、“新结构”或“新平台”。
 
-**新模型**
+##### 新模型
 
 首先从“新模型”说起，Chen 等人（2021）提出了他们所谓的“完整的医疗信息系统模型”以及基于物联网（IoT）的数据收集系统。该系统拥有基于云服务器和代理重加密算法的匿名医疗数据共享方案。这有助于提高私人医疗数据共享的安全性。
 
@@ -4611,7 +4282,7 @@ Kanwa 等人（2020）承认数据发布中隐私与效用之间始终存在权�
 
 最后一个被评审的模型由 Mohsin 等人（2019）提出，是一种结合射频识别和指静脉（FV）生物特征特征的混合生物特征模式模型，旨在提高安全性。评估结果显示，高抗性验证框架可防范欺骗攻击和暴力攻击。该模型优于基准。
 
-**新系统**
+##### 新系统
 
 转向新系统，首先可参考 Chelladura 等人（2021）提出的系统。这是一个以患者为中心的系统，旨在掌握完整性管理。该系统针对注册、健康记录创建和存储、安全存储、更新权限、紧急访问、数据共享权限和查看权限合同启动智能合约。文章展示了 BT 如何进一步发展。
 
@@ -4623,20 +4294,15 @@ Shuaib 等人（2022）基于伊斯坦布尔拜占庭容错（IBFT）共识算�
 
 Hussein 等人（2018）开发的下一个新系统主要旨在保护患者隐私和安全。该系统由离散小波变换和遗传算法技术支持。它仅在确认用户的加密密钥和身份后允许请求数据。作者坚称该系统健壮、高效、免疫且可扩展。
 
-
-
-
-
-##### 12.2.2.2.2 法律挑战
+#### 12.2.2.2.2 法律挑战
 
 与区块链技术新技术发展的丰富文献相反，关于区块链技术在医疗保健领域应用的法律和社会决定因素的文献相对较少。关于电子健康记录（`EHR`）和个人健康记录（`PHR`）中区块链技术使用法律法规的出版物数量有限。
 
 《通用数据保护条例》（`GDPR`），作为欧盟国家的基础法规，在文献中得到了深入讨论。在 `GDPR 第 4 条第 5 款` 中可以找到假名化的定义。问题是 `GDPR` 是否通过“假名化”一词扩大了个人数据的范围。Mourby 等人（2018）认为，“假名化”不会扩大个人数据的范畴。他们坚持认为，假名化的含义并非旨在确定数据是否属于个人数据。他们还主张，所有符合 `GDPR 第 4 条第 5 款` 定义的数据均为个人数据。这进而引出了关于该个人数据保护的问题。
 
+
+
 在持续讨论的话题中，有效的数据保护是一个核心议题。该问题之所以复杂，主要是因为它在各个层面（地区和国际）均受到监管，且指导敏感健康记录安全与隐私的法规在不同地区和国家之间存在显著差异。这些法规的例子包括上文提到的《健康保险流通与责任法案》（`HIPAA`）和 `GDPR`。Shuaib 等人（2021a）在基于区块链的 `EHR` 系统遵循 `HIPAA` 和 `GDPR` 的背景下分析了这两项法规。正如预期的那样，作者得出结论：存在许多差距和不一致之处。
-
-
-
 
 Pool 等人（2020）通过系统文献检索的结果显示，数据保护的成败及其影响取决于情境因果机制。情境因素包括系统、用户、任务、服务和地理要素；因果机制包括未经授权的访问、设备盗窃、丢失和共享、缺乏网络卫生意识、以及数据保护顾虑（导致失败的因素），还有建立信任的活动、安全合规的平台、感知到的数据保护（导致成功的因素）。他们的结论是可以预见且颇为平庸的：他们认为，要使移动健康干预有效，必须减轻并补救数据泄露。
 
@@ -4648,15 +4314,13 @@ BT 为医疗信息财产权的讨论引入了一个非常有趣的线索，为�
 
 上述出版物及其探讨的问题，可以置于 Malgieria 和 Custers（2018）提出的更广泛框架中。他们注意到，数据驱动经济建立在数字身份的商品化之上。他们赞同 Schneider 和 Scheibling 的观点，即个人数据代表货币价值，但个人似乎并未充分意识到其数据中的货币价值，且倾向于低估其经济力量。作者探讨了欧盟立法如何应对个人数据财产化和货币化这一新兴问题。他们提出了量化个人数据价值的模型。他们表明个人数据的货币价值是可以量化的，因此财产权的价值也可以估算。他们研究中最引人入胜的结论是：他们的模型与欧盟数据保护法不兼容。这反过来又引发了关于欧盟立法可能修改的问题。
 
-这种悲观评估与 Nir Kshetri（2021）对供应链中使用区块链的法律法规所做的负面评估不谋而合。他描述了影响 BT 在供应链中使用和吸引力的法规，并展示了某些国家薄弱的执法和无法无天如何使区块链项目的实施过程变得困难。后者意味着不断增长的 PHR 资源代表着不断增加的市场价值（以货币衡量），因此，个人医疗记录的财产权和所有者权利（*ius utendi, fruendi at abutendi*）将必须被精确定义并高效执行。
+这种悲观评估与 Nir Kshetri（2021）对供应链中使用区块链的法律法规所做的负面评估不谋而合。他描述了影响 BT 在供应链中使用和吸引力的法规，并展示了某些国家薄弱的执法和无法无天如何使区块链项目的实施过程变得困难。后者意味着不断增长的 PHR 资源代表着不断增加的市场价值（以货币衡量），因此，个人医疗记录的财产权和所有者权利（`ius utendi, fruendi at abutendi`）将必须被精确定义并高效执行。
 
-##### 12.2.2.2.3 社会挑战
+### 12.2.2.2.3 社会挑战
 
-正如引言所述，BT 以多种方式影响着社会（进而——*ipso facto*——影响我们每个人）。有趣的是，旨在研究 BT 影响的出版物，数量上不及专注于 BT 技术方面的出版物。
+正如引言所述，BT 以多种方式影响着社会（进而——`ipso facto`——影响我们每个人）。有趣的是，旨在研究 BT 影响的出版物，数量上不及专注于 BT 技术方面的出版物。
 
 在探讨 BT 社会层面的出版物中，有两类值得特别关注。一类由医疗专业人员组成，主要是医生（及其对数字化和 EHR 的态度），另一类是患者。
-
-
 
 第一组在 Eric Topol（2012）所著、2012 年出版的书中有所描述，他是一名医学博士。Topol 书中最引人注目的是（考虑到这是由一名执业医生撰写的）他对美国医疗系统实施 EHR（电子健康记录）准备情况的批判性评估。正如我们所了解到的：“在 2009 年接受调查的 3,000 多家美国医院中，只有 1.5% 拥有完全电子化的健康记录和健康信息技术（HIT）系统，而且这些主要局限于大城市的大型教学医院”（Topol 2012，143）。考虑到美国医疗系统高度碎片化：“美国 65 岁或以上的普通人每年平均从四个机构的七位医生那里接受护理”（Topol 2012，144），整合 IT 系统是一项巨大的挑战。此外，“……数百家公司、医院和医生诊所开发了专有的、互不连通的 EHR 软件。综合来看，我们面临的是指数级的碎片化”（Topol 2012，144）。EHR 的发展可能有所帮助，但 Eric Topol 倾向于电子 PHR（个人健康记录）。物联网和大数据的快速发展支持了这一选择。Topol 对医疗系统日益增长的数字化以及 EHR 感到某种程度的不适，因为个体医患关系正在受损。医生花在打字（编写病历）上的精力比关注患者的更多。最终，医生和患者都感到不适（Topol 2012，150）。人们可能会质疑上述观点，认为那已是近十年前的事，医院的 IT 基础设施和医生的态度都可能发生实质性变化。遗憾的是，没有证据支持这一点。恰恰相反，医生（以及医院和其他医疗服务提供者）相当不愿意与患者共享医疗信息，甚至更不愿意对病历进行任何更改。Chen 等人（2019）的研究结果支持了这一点。作者表明，一旦数据被录入系统，EHR 中的大多数数据保持不变。这种抵触情绪在多大程度上适用于 BT（区块链技术）的使用仍不得而知。
 
@@ -4682,24 +4346,21 @@ Avram 等人（2018）进行了另一项关于患者偏好的实证研究，他�
 
 *   存入并从医疗服务提供者管理的来源/数据库（即 EHR）以外的各种来源/数据库获取的健康信息，将在 PHR 中占据越来越大的份额。这与上述第 2 点的评论一致，也是其结果。人们可以再次强调，物联网的发展将导致关于健康状况良好人群的个人数据量不断增长。
 
-
-
-
 *   虽然安全和隐私问题已由 BT 成功解决，但在这方面仍需进一步改进。虽然 BT 允许个人医疗记录的安全传输和存储，但它并不能保证完全的保护。这反过来意味着，安全和隐私问题始终将是重中之重，迫使人们持续精通 BT 和其他旨在保障安全和隐私保护的技术。
 
 *   患者将更加意识到他们所拥有和管理的医疗信息的市场价值。这反过来可能导致创建平台，用于交易来自 `PHR` 的信息。问题不是“会不会”，而是“何时”。即使 `PHR` 信息的供给适中（假设个人不太愿意出售数据），市场的需求方也会使这种选择变得可行。与此并行的可能是非官方的、未登记的、且极有可能是非法的交易。
 
 ## 12.4 在 PHR 中有效实施 BT 的关键成功因素
 
-正如 Radanović 和 Likić 正确总结的那样：“……学术文献关于区块链在医疗保健系统中潜在用途的研究仍相当缺乏” (Radanović and Likić 2018, 589)。这在一定程度上是因为 BT 仍处于*初生状态*并快速发展。因此，首要任务是深入了解这一现象，这意味着要持续监测 BT 的发展。第二是研究 BT 在医疗保健领域（总体上）和 PHR 领域（特别是）的实施过程。正如 Balasubramanian 等人总结的：“……迄今为止，尚未做出全面的、基于证据的努力来了解该行业（即医疗保健，JK）对区块链采用的准备程度” (Balasubramanian et al. 2021, 1)。Kouhizadeh 等人 (2021) 也持有此类评估，他们调查了区块链采用的障碍。
+正如 Radanović 和 Likić 正确总结的那样：“……学术文献关于区块链在医疗保健系统中潜在用途的研究仍相当缺乏” (Radanović and Likić 2018, 589)。这在一定程度上是因为 BT 仍处于`初生状态`并快速发展。因此，首要任务是深入了解这一现象，这意味着要持续监测 BT 的发展。第二是研究 BT 在医疗保健领域（总体上）和 PHR 领域（特别是）的实施过程。正如 Balasubramanian 等人总结的：“……迄今为止，尚未做出全面的、基于证据的努力来了解该行业（即医疗保健，JK）对区块链采用的准备程度” (Balasubramanian et al. 2021, 1)。Kouhizadeh 等人 (2021) 也持有此类评估，他们调查了区块链采用的障碍。
 
-上述活动的共同分母是**知识**，因此，关于尖端技术成果和有效实施实践的充分、更实用的知识，可被视为将 BT 引入医疗保健领域的第一个关键成功因素。
+上述活动的共同分母是`知识`，因此，关于尖端技术成果和有效实施实践的充分、更实用的知识，可被视为将 BT 引入医疗保健领域的第一个关键成功因素。
 
-第二个关键成功因素可称为国家和国际（参见欧盟）层面的**清晰、全面的法律制度**。正如本章所述，BT 实施的一个障碍是区块链法规和法律方面缺乏清晰度 (Balasubramanian et al. 2021)。
+第二个关键成功因素可称为国家和国际（参见欧盟）层面的`清晰、全面的法律制度`。正如本章所述，BT 实施的一个障碍是区块链法规和法律方面缺乏清晰度 (Balasubramanian et al. 2021)。
 
-第三个关键成功因素是**充足的资源**（人力和资本），因为 BT 需要大量投资。
+第三个关键成功因素是`充足的资源`（人力和资本），因为 BT 需要大量投资。
 
-最后但同样重要的是对在医疗保健领域实施 BT 的**政治和社会接受与支持**。
+最后但同样重要的是对在医疗保健领域实施 BT 的`政治和社会接受与支持`。
 
 ## 12.5 结论
 
@@ -4721,75 +4382,71 @@ Avram 等人（2018）进行了另一项关于患者偏好的实证研究，他�
 
 7.  Amour, L., Quiniou, M., Tucci-Piergiovanni, S., Bourak, H., and Souihi, S. 2021. uTakeCare: unlock full decentralization of personal data for a respectful decontainment in the context of COVID-19: toward a digitally empowered anonymous citizenship. In Data Science for COVID-19. Volume One: Computational Perspectives, eds U. Kose, D. Gupta, V.H.C. de Albuquerque, and A. Khanna, 231–253. San Diego, CA: Academic Press.
 
-8.  Antwi, M., Adnane, A., Ahmad, F., Hussain, R., ur Rehman, M.H., and Kerrache, C.A. 2021. The case of hyperledger fabric as a blockchain solution for healthcare applications. Blockchain: Research and Applications 2(1):100012. Doi:[10.1016/j.bcra.2021.100012](http://doi.org/10.1016/j.bcra.2021.100012).
-
-9.  Attarian, R., and Hashemi, S. 2021. An anonymity communication protocol for security and privacy of clients in IoT-based mobile health transactions. Computer Networks 190: 107976. Doi:[10.1016/j.comnet.2021.107976](http://doi.org/10.1016/j.comnet.2021.107976).
-
-10.  Avram, R., Marquis-Gravel, G., Simard, F. et al. 2018. Understanding the patient perspective on research access to national health records databases for conduct of randomized registry trials.International Journal of Cardiology 262: 110–116. Doi:[10.1016/j.ijcard.2017.12.074](http://doi.org/10.1016/j.ijcard.2017.12.074).
-
-11.  Axon, L., Goldsmith, M., and Creese, S. 2018. Privacy requirements in cybersecurity applications of blockchain. Advances in Computers 111: 229–278. Doi:[10.1016/bs.adcom.2018.03.004](http://doi.org/10.1016/bs.adcom.2018.03.004).
-
-
-
 
 
 ## 参考文献
 
-12. Badr, S., Gomaa, I., and Abd-Elrahman, E. 2018. Multi-tier blockchain framework for IoT-EHRs systems. *Procedia Computer Science* 141: 159–166. Doi:[10.1016/j.procs.2018.10.162](http://doi.org/10.1016/j.procs.2018.10.162)。
+8. Antwi, M., Adnane, A., Ahmad, F., Hussain, R., ur Rehman, M.H., and Kerrache, C.A. 2021. The case of hyperledger fabric as a blockchain solution for healthcare applications. *Blockchain: Research and Applications* 2(1):100012. Doi:[10.1016/j.bcra.2021.100012](http://doi.org/10.1016/j.bcra.2021.100012).
 
-13. Balasubramanian, S., Shukla, V., Sethi, J.S., Islam, N., and Saloum, R. 2021. A readiness assessment framework for Blockchain adoption: a healthcare case study. *Technological Forecasting and Social Change* 165: 120536. Doi:[10.1016/j.techfore.2020.120536](http://doi.org/10.1016/j.techfore.2020.120536)。
+9. Attarian, R., and Hashemi, S. 2021. An anonymity communication protocol for security and privacy of clients in IoT-based mobile health transactions. *Computer Networks* 190: 107976. Doi:[10.1016/j.comnet.2021.107976](http://doi.org/10.1016/j.comnet.2021.107976).
 
-14. Bandara, E., Liang, X., Foytik, P. et al. 2021. A blockchain empowered and privacy preserving digital contact tracing platform. *Information Processing & Management* 58(4): 102572. Doi:[10.1016/j.ipm.2021.102572](http://doi.org/10.1016/j.ipm.2021.102572)。
+10. Avram, R., Marquis-Gravel, G., Simard, F. et al. 2018. Understanding the patient perspective on research access to national health records databases for conduct of randomized registry trials. *International Journal of Cardiology* 262: 110–116. Doi:[10.1016/j.ijcard.2017.12.074](http://doi.org/10.1016/j.ijcard.2017.12.074).
 
-15. Bataineh, A.S., Mizouni, R., Bentahar, J., and El Barachi, M. 2020. Toward monetizing personal data: a two-sided market analysis. *Future Generation Computer Systems* 111:435–459. Doi:[10.1016/j.future.2019.11.009](http://doi.org/10.1016/j.future.2019.11.009)。
+11. Axon, L., Goldsmith, M., and Creese, S. 2018. Privacy requirements in cybersecurity applications of blockchain. *Advances in Computers* 111: 229–278. Doi:[10.1016/bs.adcom.2018.03.004](http://doi.org/10.1016/bs.adcom.2018.03.004).
 
-16. Bebortta, S., and Senapati, D. 2021. A secure blockchain-based solution for harnessing the future of smart healthcare. In *IoT-Based Data Analytics for the Healthcare Industry Techniques and Applications Intelligent Data-Centric Systems*, eds S. K. Singh, R. S. Singh, A.K. Pandey, S.S. Udmale, and A. Chaudhary, 167–191. San Diego, CA: Academic Press。
+12. Badr, S., Gomaa, I., and Abd-Elrahman, E. 2018. Multi-tier blockchain framework for IoT-EHRs systems. *Procedia Computer Science* 141: 159–166. Doi:[10.1016/j.procs.2018.10.162](http://doi.org/10.1016/j.procs.2018.10.162).
 
-17. Benil, T., and Jasper, J. 2020. Cloud based security on outsourcing using blockchain in E-health systems. *Computer Networks* 178: 107344. Doi:[10.1016/j.comnet.2020.107344](http://doi.org/10.1016/j.comnet.2020.107344)。
+13. Balasubramanian, S., Shukla, V., Sethi, J.S., Islam, N., and Saloum, R. 2021. A readiness assessment framework for Blockchain adoption: a healthcare case study. *Technological Forecasting and Social Change* 165: 120536. Doi:[10.1016/j.techfore.2020.120536](http://doi.org/10.1016/j.techfore.2020.120536).
 
-18. Bhavin, M., Tanwar, S., Sharma, N., Tyagi, S., and Kumar, N. 2021. Blockchain and quantum blind signature-based hybrid scheme for healthcare 5.0 applications. *Journal of Information Security and Applications* 56: 102673. Doi:[10.1016/j.jisa.2020.102673](http://doi.org/10.1016/j.jisa.2020.102673)。
+14. Bandara, E., Liang, X., Foytik, P. et al. 2021. A blockchain empowered and privacy preserving digital contact tracing platform. *Information Processing & Management* 58(4): 102572. Doi:[10.1016/j.ipm.2021.102572](http://doi.org/10.1016/j.ipm.2021.102572).
 
-19. Chelladura, U., Pandian, S., and Ramasamy, K. 2021. A blockchain based patient centric EHR storage and integrity management for e-health systems. *Health Policy and Technology*. Journal Pre-proof. Doi:[10.1016/j.hlpt.2021.100513](http://doi.org/10.1016/j.hlpt.2021.100513)。
+15. Bataineh, A.S., Mizouni, R., Bentahar, J., and El Barachi, M. 2020. Toward monetizing personal data: a two-sided market analysis. *Future Generation Computer Systems* 111:435–459. Doi:[10.1016/j.future.2019.11.009](http://doi.org/10.1016/j.future.2019.11.009).
 
-20. Chen, L., Lee, W-K., Chang, C-C., Choo, K-K.R., and Zhang, N. 2019. Blockchain based searchable encryption for electronic health record sharing. *Future Generation Computer Systems* 95: 420–429. Doi:[10.1016/j.future.2019.01.018](http://doi.org/10.1016/j.future.2019.01.018)。
+16. Bebortta, S., and Senapati, D. 2021. A secure blockchain-based solution for harnessing the future of smart healthcare. In *IoT-Based Data Analytics for the Healthcare Industry Techniques and Applications Intelligent Data-Centric Systems*, eds S. K. Singh, R. S. Singh, A.K. Pandey, S.S. Udmale, and A. Chaudhary, 167–191. San Diego, CA: Academic Press.
 
-21. Chen, M., Malook, T., Rehman, A.U. et al. 2021. Blockchain-enabled healthcare system for detection of diabetes. *Journal of Information Security and Applications* 58: 102771. Doi:[10.1016/j.jisa.2021.102771](http://doi.org/10.1016/j.jisa.2021.102771)。
+17. Benil, T., and Jasper, J. 2020. Cloud based security on outsourcing using blockchain in E-health systems. *Computer Networks* 178: 107344. Doi:[10.1016/j.comnet.2020.107344](http://doi.org/10.1016/j.comnet.2020.107344).
 
-22. Chen, Z., Xu, W., Wang, B., and Yu, H. 2021. A blockchain-based preserving and sharing system for medical data privacy. *Future Generation Computer Systems* 124:338–350. Doi:[10.1016/j.future.2021.05.023](http://doi.org/10.1016/j.future.2021.05.023)。关于欧洲电子健康记录交换格式的委员会建议 (C(2019)800) 2019 年 2 月 6 日。[`digital-strategy.ec.europa.eu/en/library/recommendation-european-electronic-health-record-exchange-format`](https://digital-strategy.ec.europa.eu) (访问于 2021 年 6 月 18 日)。
+18. Bhavin, M., Tanwar, S., Sharma, N., Tyagi, S., and Kumar, N. 2021. Blockchain and quantum blind signature-based hybrid scheme for healthcare 5.0 applications. *Journal of Information Security and Applications* 56: 102673. Doi:[10.1016/j.jisa.2020.102673](http://doi.org/10.1016/j.jisa.2020.102673).
 
-23. Dagher, G.G., Mohler, J., Milojkovic, M., and Marella, P.B. 2018. Ancile: privacy-preserving framework for access control and interoperability of electronic health records using blockchain technology. *Sustainable Cities and Society* 39: 283–297. Doi:[10.1016/j.scs.2018.02.014](http://doi.org/10.1016/j.scs.2018.02.014)。
+19. Chelladura, U., Pandian, S., and Ramasamy, K. 2021. A blockchain based patient centric EHR storage and integrity management for e-health systems. *Health Policy and Technology*. Journal Pre-proof. Doi:[10.1016/j.hlpt.2021.100513](http://doi.org/10.1016/j.hlpt.2021.100513).
 
-24. Esmaeilzadeh, P. 2021. How does IT identity affect individuals’ use behaviors associated with personal health devices (PHDs)? An empirical study. *Information & Management* 58(1): 103313. Doi:[10.1016/j.im.2020.103313](http://doi.org/10.1016/j.im.2020.103313)。
+20. Chen, L., Lee, W-K., Chang, C-C., Choo, K-K.R., and Zhang, N. 2019. Blockchain based searchable encryption for electronic health record sharing. *Future Generation Computer Systems* 95: 420–429. Doi:[10.1016/j.future.2019.01.018](http://doi.org/10.1016/j.future.2019.01.018).
 
-25. Feng, Q., He, D., Zeadally, S., Khan, M.K., and Kumar, N. 2019. A survey on privacy protection in blockchain system. *Journal of Network and Computer Applications* 126: 45–58. Doi:[10.1016/j.jnca.2018.10.020](http://doi.org/10.1016/j.jnca.2018.10.020)。
+21. Chen, M., Malook, T., Rehman, A.U. et al. 2021. Blockchain-enabled healthcare system for detection of diabetes. *Journal of Information Security and Applications* 58: 102771. Doi:[10.1016/j.jisa.2021.102771](http://doi.org/10.1016/j.jisa.2021.102771).
 
-26. Flaumenhaft, Y., and Ben-Assuli, O. 2018. Personal health records, global policy and regulation review. *Health Policy* 122: 815–826. Doi:[10.1016/j.healthpol.2018.05.002](http://doi.org/10.1016/j.healthpol.2018.05.002)。
+22. Chen, Z., Xu, W., Wang, B., and Yu, H. 2021. A blockchain-based preserving and sharing system for medical data privacy. *Future Generation Computer Systems* 124:338–350. Doi:[10.1016/j.future.2021.05.023](http://doi.org/10.1016/j.future.2021.05.023). 关于欧洲电子健康记录交换格式的委员会建议 (C(2019)800) 2019 年 2 月 6 日。[`digital-strategy.ec.europa.eu/en/library/recommendation-european-electronic-health-record-exchange-format`](https://digital-strategy.ec.europa.eu) (访问于 2021 年 6 月 18 日)。
 
-27. Gimenez-Aguilar, M., de Fuentes, J.M., Gonzalez-Manzano, L., and Arroyo, D. 2021. Achieving cybersecurity in blockchain-based systems: a survey. *Future Generation Computer Systems* 124: 91–118. Doi:[10.1016/j.future.2021.05.007](http://doi.org/10.1016/j.future.2021.05.007)。
+23. Dagher, G.G., Mohler, J., Milojkovic, M., and Marella, P.B. 2018. Ancile: privacy-preserving framework for access control and interoperability of electronic health records using blockchain technology. *Sustainable Cities and Society* 39: 283–297. Doi:[10.1016/j.scs.2018.02.014](http://doi.org/10.1016/j.scs.2018.02.014).
 
-28. Gordon, W.J., and Catalini, C. 2018. Blockchain technology for healthcare: facilitating the transition to patient-driven interoperability. *Computational and Structural Biotechnology Journal* 16: 224–230. Doi:[10.1016/j.csbj.2018.06.003](http://doi.org/10.1016/j.csbj.2018.06.003)。
+24. Esmaeilzadeh, P. 2021. How does IT identity affect individuals’ use behaviors associated with personal health devices (PHDs)? An empirical study. *Information & Management* 58(1): 103313. Doi:[10.1016/j.im.2020.103313](http://doi.org/10.1016/j.im.2020.103313).
 
-29. Hardin, T., and Kotz, D. 2021. Amanuensis: information provenance for health-data systems. *Information Processing & Management* 58(2): 102460. Doi:[10.1016/j.ipm.2020.102460](http://doi.org/10.1016/j.ipm.2020.102460)。
+25. Feng, Q., He, D., Zeadally, S., Khan, M.K., and Kumar, N. 2019. A survey on privacy protection in blockchain system. *Journal of Network and Computer Applications* 126: 45–58. Doi:[10.1016/j.jnca.2018.10.020](http://doi.org/10.1016/j.jnca.2018.10.020).
 
-30. Hasselgrena, A., Kralevska, K., Gligoroski, D., Pedersen, S.A., and Faxvaag, A. 2020. Blockchain in healthcare and health sciences -a scoping Review. *International Journal of Medical Informatics* 134: 104040. Doi:[10.1016/j.ijmedinf.2019.104040](http://doi.org/10.1016/j.ijmedinf.2019.104040)。
+26. Flaumenhaft, Y., and Ben-Assuli, O. 2018. Personal health records, global policy and regulation review. *Health Policy* 122: 815–826. Doi:[10.1016/j.healthpol.2018.05.002](http://doi.org/10.1016/j.healthpol.2018.05.002).
 
-31. Hathaliya, J.J., and Tanwar, S. 2020. An exhaustive survey on security and privacy issues in Healthcare 4.0. *Computer Communications* 153: 311–335. Doi:[10.1016/j.comcom.2020.02.018](http://doi.org/10.1016/j.comcom.2020.02.018)。
+27. Gimenez-Aguilar, M., de Fuentes, J.M., Gonzalez-Manzano, L., and Arroyo, D. 2021. Achieving cybersecurity in blockchain-based systems: a survey. *Future Generation Computer Systems* 124: 91–118. Doi:[10.1016/j.future.2021.05.007](http://doi.org/10.1016/j.future.2021.05.007).
 
-32. Heister, S., and Yuthas, K. 2020. The blockchain and how it can influence conceptions of the self. *Technology in Society* 60: 101218. Doi:[10.1016/j.techsoc.2019.101218](http://doi.org/10.1016/j.techsoc.2019.101218)。
+28. Gordon, W.J., and Catalini, C. 2018. Blockchain technology for healthcare: facilitating the transition to patient-driven interoperability. *Computational and Structural Biotechnology Journal* 16: 224–230. Doi:[10.1016/j.csbj.2018.06.003](http://doi.org/10.1016/j.csbj.2018.06.003).
 
-33. Huang, H., Sun, X., Xiao, F., Zhu, P., and Wang, W. 2021. Blockchain-based eHealth system for auditable EHRs manipulation in cloud environments. *Journal of Parallel and Distributed Computing* 148: 46–57. Doi:[10.1016/j.jpdc.2020.10.002](http://doi.org/10.1016/j.jpdc.2020.10.002)。
+29. Hardin, T., and Kotz, D. 2021. Amanuensis: information provenance for health-data systems. *Information Processing & Management* 58(2): 102460. Doi:[10.1016/j.ipm.2020.102460](http://doi.org/10.1016/j.ipm.2020.102460).
 
-34. Hussein, A.F., Kumar, N.A., Ramirez-Gonzalez, G., Abdulhay, E., Tavares, J.M.R.S., and de Albuquerque, V.H. 2018. A medical records managing and securing blockchain based system supported by a Genetic Algorithm and Discrete Wavelet Transform. *Cognitive Systems Research* 52: 1–11. Doi:[10.1016/j.cogsys.2018.05.004](http://doi.org/10.1016/j.cogsys.2018.05.004)。
+30. Hasselgrena, A., Kralevska, K., Gligoroski, D., Pedersen, S.A., and Faxvaag, A. 2020. Blockchain in healthcare and health sciences -a scoping Review. *International Journal of Medical Informatics* 134: 104040. Doi:[10.1016/j.ijmedinf.2019.104040](http://doi.org/10.1016/j.ijmedinf.2019.104040).
 
-35. Hussien, H.M., Yasin, S.M, Udzir, N.I., Ninggal, M.I.H., and Salman, S. 2021. Blockchain technology in the healthcare industry: trends and opportunities. *Journal of Industrial Information Integration* 22: 100217. Doi:[10.1016/j.jii.2021.100217](http://doi.org/10.1016/j.jii.2021.100217)。
+31. Hathaliya, J.J., and Tanwar, S. 2020. An exhaustive survey on security and privacy issues in Healthcare 4.0. *Computer Communications* 153: 311–335. Doi:[10.1016/j.comcom.2020.02.018](http://doi.org/10.1016/j.comcom.2020.02.018).
+
+32. Heister, S., and Yuthas, K. 2020. The blockchain and how it can influence conceptions of the self. *Technology in Society* 60: 101218. Doi:[10.1016/j.techsoc.2019.101218](http://doi.org/10.1016/j.techsoc.2019.101218).
+
+33. Huang, H., Sun, X., Xiao, F., Zhu, P., and Wang, W. 2021. Blockchain-based eHealth system for auditable EHRs manipulation in cloud environments. *Journal of Parallel and Distributed Computing* 148: 46–57. Doi:[10.1016/j.jpdc.2020.10.002](http://doi.org/10.1016/j.jpdc.2020.10.002).
+
+34. Hussein, A.F., Kumar, N.A., Ramirez-Gonzalez, G., Abdulhay, E., Tavares, J.M.R.S., and de Albuquerque, V.H. 2018. A medical records managing and securing blockchain based system supported by a Genetic Algorithm and Discrete Wavelet Transform. *Cognitive Systems Research* 52: 1–11. Doi:[10.1016/j.cogsys.2018.05.004](http://doi.org/10.1016/j.cogsys.2018.05.004).
+
+35. Hussien, H.M., Yasin, S.M, Udzir, N.I., Ninggal, M.I.H., and Salman, S. 2021. Blockchain technology in the healthcare industry: trends and opportunities. *Journal of Industrial Information Integration* 22: 100217. Doi:[10.1016/j.jii.2021.100217](http://doi.org/10.1016/j.jii.2021.100217).
+
+
+
+## 参考文献
 
 36. Jeet, R., and Kang, S.S. (2020). Investigating the progress of human e-healthcare systems with understanding the necessity of using emerging blockchain technology. *Materials Today: Proceedings*, In Press. Available online 19 November 2020. Doi:[10.1016/j.matpr.2020.10.083](http://doi.org/10.1016/j.matpr.2020.10.083)。
-
-
-
-
-
-## 参考文献
 
 37. Kanwa, T., Anjuma, A., Malik, S.U.R., 等. 2020. 利用具有多个敏感属性的多数据集实现电子健康记录稳健隐私保护的方法. *Computers & Security* 105: 102224. Doi:[10.1016/j.cose.2021.102224](http://doi.org/10.1016/j.cose.2021.102224).
 
@@ -4843,12 +4500,6 @@ Avram 等人（2018）进行了另一项关于患者偏好的实证研究，他�
 
 62. Shi, S., Hea, D., Li, L., Kumar, N., Khane, M.K., 和 Choof, K-K.R. 2020. 区块链在保障电子健康记录系统安全与隐私方面的应用：一项综述. *Computers & Security* 97: 101966. Doi:[10.1016/j.cose.2020.101966](http://doi.org/10.1016/j.cose.2020.101966).
 
-
-
-
-
-## 参考文献
-
 63. Shuaib, K., Abdella, J., Sallabi, F., and Serhani, M.A. 2022. Secure decentralized electronic health records sharing system based on blockchains. *Journal of King Saud University - Computer and Information Sciences*. In Press. Available online 14 May 2021. Doi:[10.1016/j.jksuci.2021.05.002](http://doi.org/10.1016/j.jksuci.2021.05.002).
 
 64. Shuaib, M., Alam, S., Alam, M.S., and Nasir, M.S. 2021a. Compliance with HIPAA and GDPR in blockchain-based electronic health record. *Materials Today: Proceedings*. In Press. Available online 24 March 2021. Doi:[10.1016/j.matpr.2021.03.059](http://doi.org/10.1016/j.matpr.2021.03.059).
@@ -4863,23 +4514,27 @@ Avram 等人（2018）进行了另一项关于患者偏好的实证研究，他�
 
 69. Sreenivasan, M., and Chacko, A. M. 2020. Interoperability issues in EHR systems: research directions. In *Data Analytics in Biomedical Engineering and Healthcare*, eds K. C. Lee, P. Samui, S. Sekhar Roy, and V. Kumar, 13–28, San Diego, CA: Academic Press.
 
-70. Tandona, A., Dhir, A., Islam, A.K.M.N., and Mäntymäki, M. 2020. Blockchain in healthcare: a systematic literature review, synthesizing framework and future research agenda. *Computers in Industry* 122: 103290. Doi:[10.1016/j.compind.2020.103290](http://doi.org/10.1016/j.compind.2020.103290).
 
-71. Tariq, N., Qamar, A., Asim, M., and Khan, F.A. 2020. Blockchain and smart healthcare security: a survey. *Procedia Computer Science* 175: 615–620. Doi:[10.1016/j.procs.2020.07.089](http://doi.org/10.1016/j.procs.2020.07.089).
+
+# 参考文献
+
+70. Tandona, A., Dhir, A., Islam, A.K.M.N., and Mäntymäki, M. 2020. Blockchain in healthcare: a systematic literature review, synthesizing framework and future research agenda. *Computers in Industry* 122: 103290. Doi: [10.1016/j.compind.2020.103290](http://doi.org/10.1016/j.compind.2020.103290).
+
+71. Tariq, N., Qamar, A., Asim, M., and Khan, F.A. 2020. Blockchain and smart healthcare security: a survey. *Procedia Computer Science* 175: 615–620. Doi: [10.1016/j.procs.2020.07.089](http://doi.org/10.1016/j.procs.2020.07.089).
 
 72. Topol, E. 2012. *The Creative Destruction of Medicine. How the Digital Revolution Will Create Better Health Care*. New York: Basic Books.
 
-73. Tseng, F-M., Palma Gil, E.I.N., and Lu, L.Y.Y. 2021. Developmental trajectories of blockchain research and its major subfields. *Technology in Society* 66: 101606. Doi:[10.1016/j.techsoc.2021.101606](http://doi.org/10.1016/j.techsoc.2021.101606).
+73. Tseng, F-M., Palma Gil, E.I.N., and Lu, L.Y.Y. 2021. Developmental trajectories of blockchain research and its major subfields. *Technology in Society* 66: 101606. Doi: [10.1016/j.techsoc.2021.101606](http://doi.org/10.1016/j.techsoc.2021.101606).
 
-74. Ul Hassan, M., Rehmani, M.H., and Chen, J. 2020. Differential privacy in blockchain technology: a futuristic approach. *Journal of Parallel and Distributed Computing* 145: 50–74. Doi:[10.1016/j.jpdc.2020.06.003](http://doi.org/10.1016/j.jpdc.2020.06.003).
+74. Ul Hassan, M., Rehmani, M.H., and Chen, J. 2020. Differential privacy in blockchain technology: a futuristic approach. *Journal of Parallel and Distributed Computing* 145: 50–74. Doi: [10.1016/j.jpdc.2020.06.003](http://doi.org/10.1016/j.jpdc.2020.06.003).
 
-75. Wang, J., Han, K., Alexandridis, A. et al. 2020a. A blockchain-based eHealthcare system interoperating with WBANs. *Future Generation Computer Systems* 110: 675–685. Doi:[10.1016/j.future.2019.09.049](http://doi.org/10.1016/j.future.2019.09.049).
+75. Wang, J., Han, K., Alexandridis, A. et al. 2020a. A blockchain-based eHealthcare system interoperating with WBANs. *Future Generation Computer Systems* 110: 675–685. Doi: [10.1016/j.future.2019.09.049](http://doi.org/10.1016/j.future.2019.09.049).
 
-76. Wang, W., Huang, H., Xue, L., Li, Q., Malekian, R., and Zhang, Y. 2021. Blockchain-assisted handover authentication for intelligent telehealth in multi-server edge computing environment. *Journal of Systems Architecture* 115: 102024. Doi:[10.1016/j.sysarc.2021.102024](http://doi.org/10.1016/j.sysarc.2021.102024).
+76. Wang, W., Huang, H., Xue, L., Li, Q., Malekian, R., and Zhang, Y. 2021. Blockchain-assisted handover authentication for intelligent telehealth in multi-server edge computing environment. *Journal of Systems Architecture* 115: 102024. Doi: [10.1016/j.sysarc.2021.102024](http://doi.org/10.1016/j.sysarc.2021.102024).
 
-77. Wang, Z., Luo, N., and Zhou, P. 2020b. GuardHealth: blockchain empowered secure data management and graph convolutional network enabled anomaly detection in smart healthcare. *Journal of Parallel and Distributed Computing* 142: 1–12 Doi:[10.1016/j.jpdc.2020.03.004](http://doi.org/10.1016/j.jpdc.2020.03.004).
+77. Wang, Z., Luo, N., and Zhou, P. 2020b. GuardHealth: blockchain empowered secure data management and graph convolutional network enabled anomaly detection in smart healthcare. *Journal of Parallel and Distributed Computing* 142: 1–12 Doi: [10.1016/j.jpdc.2020.03.004](http://doi.org/10.1016/j.jpdc.2020.03.004).
 
-78. Xie, H., Zhang, Z., Zhang, Q., Wei, S., and Hu, C. 2021. HBRSS: providing high-secure data communication and manipulation in insecure cloud environments. *Computer Communications* 174: 1–12. Doi:[10.1016/j.comcom.2021.03.018](http://doi.org/10.1016/j.comcom.2021.03.018).
+78. Xie, H., Zhang, Z., Zhang, Q., Wei, S., and Hu, C. 2021. HBRSS: providing high-secure data communication and manipulation in insecure cloud environments. *Computer Communications* 174: 1–12. Doi: [10.1016/j.comcom.2021.03.018](http://doi.org/10.1016/j.comcom.2021.03.018).
 
 # 13 医疗系统区块链中的互操作性、匿名性和隐私问题
 
@@ -4909,10 +4564,6 @@ DOI: [10.1201/9781003224075-13](http://doi.org/10.1201/9781003224075-13)
 *   本文展示了区块链应对医疗生态系统的贡献及其与追踪和监控的相关性。
 *   本文审视了医疗保健和制药行业的各种关键挑战及其利用区块链的解决方案。
 
-
-
-
-
 ### 摘要
 
 *   本文介绍了区块链可在制药供应链行业中处理的各种方法。
@@ -4924,20 +4575,17 @@ DOI: [10.1201/9781003224075-13](http://doi.org/10.1201/9781003224075-13)
 
 由于医疗保健行业的快速发展，生活质量得到了提高，因此具有重要的社会意义。医疗保健领域解决实际健康问题，进而有助于提高生活质量 [9]。通过使用计算机执行任务，如共享一致信息、临床培训与诊断协作、计算机化医疗记录系统以及大数据分析，医疗保健系统已取得显著进步 [10, 11, 12]。
 
-医疗保健系统已发展壮大，并帮助制药行业变得更具竞争力，克服了诸多挑战 [13]。为了更好地管理医疗记录，用户（如医生、社工和护士）可为患者提供更高质量的护理。通过计算机，可采用多种方法来帮助组织和管理患者护理所需的信息 [11,13,14]。
+医疗保健系统已发展壮大，并帮助制药行业变得更具竞争力，克服了诸多挑战 [13]。为了更好地管理医疗记录，用户（如医生、社工和护士）可为患者提供更高质量的护理。通过计算机，可采用多种方法来帮助组织和管理患者护理所需的信息 [11, 13, 14]。
 
 计算机中预先存储的数据可提供关于患者状况的重要医疗信息。这些数据可被组织并用于调查疫情以及不同地区的医疗设施。不同领域的研究人员利用这些数据来理解现象并克服特定挑战 [11]。由于这些信息涉及患者的个人信息，必须严格保密。患者个人信息泄露给公众可能会对医疗机构的声誉产生负面影响 [11]。为避免不道德或尴尬的情况，必须保护患者的临床信息，防止其被泄露。
 
-区块链技术激励了各种研究人员和专业人士寻找解决方案，以创建更安全、更可靠的医疗保健系统 [12,15,16]。除了区块链的不可篡改性、透明性和可靠性外，其他因素还能缓解医疗保健中与患者数据相关的隐私和完整性问题 [15,17]。基于区块链的医疗保健系统仍面临需克服的困难 [18]。由于网络的核心特性未被明确规定，很难追踪信息可访问性背后的相互关联 [19]。控制和管理药品分销是区块链的众多应用方式之一，这可通过在供应链的所有阶段实施区块链来实现 [20, 21, 22]。除了打击假冒药品外，区块链还有助于防止药品转移和盗窃 [21]。值得注意的是，根据 Dash 等人 [23] 的研究，国际商业机器公司 (IBMC) 的一项研究表明，约 16% 的医疗管理人员计划在其工作环境中将区块链作为解决方案实施。此外，56% 以上的医疗高管计划优先实施区块链。总而言之，区块链可在各种医疗领域场景中发挥作用并受到追捧 [24]。有必要分析其后续的优势、劣势、机会和威胁。具体而言，该技术揭示了许多可为未来技术带来隐私和安全的关键点 [25]。Babenko 等人 [25] 通过提供简要的系统性领域评估、所调查的实施搜索约束的简要讨论以及一些与该主题相关的工作，简要讨论了这些系统的优缺点。物联网 (IoT) 技术结合区块链在医疗保健领域也得到非常有效的应用。Cai 等人 [26] 讨论了去中心化应用 (DApps) 在特定加密货币中的众多分发场景，并检查了区块链的一些基本特征。它提供了与医疗保健相关的当前区块链工作的深度分析。相比之下，本研究提供了区块链在各种场所实施的全面概述，并描述了其可能性。
+区块链技术激励了各种研究人员和专业人士寻找解决方案，以创建更安全、更可靠的医疗保健系统 [12, 15, 16]。除了区块链的不可篡改性、透明性和可靠性外，其他因素还能缓解医疗保健中与患者数据相关的隐私和完整性问题 [15, 17]。基于区块链的医疗保健系统仍面临需克服的困难 [18]。由于网络的核心特性未被明确规定，很难追踪信息可访问性背后的相互关联 [19]。控制和管理药品分销是区块链的众多应用方式之一，这可通过在供应链的所有阶段实施区块链来实现 [20, 21, 22]。除了打击假冒药品外，区块链还有助于防止药品转移和盗窃 [21]。值得注意的是，根据 Dash 等人 [23] 的研究，国际商业机器公司 (IBMC) 的一项研究表明，约 16% 的医疗管理人员计划在其工作环境中将区块链作为解决方案实施。此外，56% 以上的医疗高管计划优先实施区块链。总而言之，区块链可在各种医疗领域场景中发挥作用并受到追捧 [24]。有必要分析其后续的优势、劣势、机会和威胁。具体而言，该技术揭示了许多可为未来技术带来隐私和安全的关键点 [25]。Babenko 等人 [25] 通过提供简要的系统性领域评估、所调查的实施搜索约束的简要讨论以及一些与该主题相关的工作，简要讨论了这些系统的优缺点。物联网 (IoT) 技术结合区块链在医疗保健领域也得到非常有效的应用。Cai 等人 [26] 讨论了去中心化应用 (DApps) 在特定加密货币中的众多分发场景，并检查了区块链的一些基本特征。它提供了与医疗保健相关的当前区块链工作的深度分析。相比之下，本研究提供了区块链在各种场所实施的全面概述，并描述了其可能性。
 
 ## 13.3 区块链技术的作用
 
-一项名为区块链的先进技术于 2008 年左右随加密货币启动 [27,28]。最近，区块链在医疗保健、政府、金融、交通和其他领域执行一些精确任务。利用这项新技术，用户资产可被更高效、更安全地记录 [18]。Rouhani 等人 [29] 调查表明，它也可被理解为一种基于分布式账本理念的点对点 (P2P) 网络，并可被视为一种去中心化技术。区块链数据结构通过将每个区块与指向创世区块的加密哈希指针相链接，按时间顺序链接区块。因此，默克尔树 (MT) 将区块内的交易分组并分发到各节点 [30]。
+一项名为区块链的先进技术于 2008 年左右随加密货币启动 [27, 28]。最近，区块链在医疗保健、政府、金融、交通和其他领域执行一些精确任务。利用这项新技术，用户资产可被更高效、更安全地记录 [18]。Rouhani 等人 [29] 调查表明，它也可被理解为一种基于分布式账本理念的点对点 (P2P) 网络，并可被视为一种去中心化技术。区块链数据结构通过将每个区块与指向创世区块的加密哈希指针相链接，按时间顺序链接区块。因此，默克尔树 (MT) 将区块内的交易分组并分发到各节点 [30]。
 
-比特币、莱特币和以太坊等加密货币已向公众开放 [28]。这些理念促成了其他类型加密货币和基于区块链技术的发展。Hoy 等人 [31] 将先进的区块链技术分类为区块链 1.0、2.0 和 3.0。区块链的第一阶段以比特币等加密货币的到来为特征（Berentsen [28]），并伴随着简单资产转移系统的出现而同时推出。随着区块链 2.0 的出现，创新协议（智能合约）变得可见 [32]，并发现了新的使用方式，如贷款、房地产基金和其他投资。区块链的演进阶段是区块链 3.0，它适用于金融和社会的其他领域，如科学、制药和艺术。去中心化、不可篡改性、分布式账本、透明性、隐私性和智能合约是区块链的特征 [33,34]。
-
-
-
+比特币、莱特币和以太坊等加密货币已向公众开放 [28]。这些理念促成了其他类型加密货币和基于区块链技术的发展。Hoy 等人 [31] 将先进的区块链技术分类为区块链 1.0、2.0 和 3.0。区块链的第一阶段以比特币等加密货币的到来为特征（Berentsen [28]），并伴随着简单资产转移系统的出现而同时推出。随着区块链 2.0 的出现，创新协议（智能合约）变得可见 [32]，并发现了新的使用方式，如贷款、房地产基金和其他投资。区块链的演进阶段是区块链 3.0，它适用于金融和社会的其他领域，如科学、制药和艺术。去中心化、不可篡改性、分布式账本、透明性、隐私性和智能合约是区块链的特征 [33, 34]。
 
 加密货币（如 `bitcoin` 和 `Ethereum`）的出现增加了人们对区块链和智能账本研究的兴趣。区块链技术以一种可靠且绝对的方式累积和共享分布式数据，无需中介即可进行数据共享。它不需要交易确认集中化 [35, 36]。在区块链中，透明性使得跨网络访问基于账本的交易变得更加简单；网络可以连接来自多个节点的不同算力，因此其计算速度极快 [37]。区块链包含各种技术和设施。简述如下。
 
@@ -4971,31 +4619,31 @@ DOI: [10.1201/9781003224075-13](http://doi.org/10.1201/9781003224075-13)
 
 ### 13.3.4 制药领域的区块链：挑战与机遇
 
-
-
-
-
 #### 医疗保健领域的区块链挑战
 
 区块链是一个多学科概念，这使其更适合应用于多个领域，尽管区块链存在多种局限性和挑战 [18]。目前正在进行多项研究，以减弱或克服这些因素的影响。在医疗保健领域，区块链技术面临诸多挑战，其中一些如下所述。
 
 ##### 13.3.4.1 吞吐量
 
+
+
+## 医疗保健系统中的挑战
+
 在医疗保健系统中，吞吐量问题发生的概率始终很高，因为数据交易和节点的数量不断增加，这增加了网络管道中的检查负担，最终导致网络瓶颈。吞吐量是嵌入区块链的医疗保健系统中的常见问题，因为网络需要快速访问；如果无法提供，这可能会对本可挽救生命的分析产生不利影响 [31]。
 
-##### 13.3.4.2 延迟
+### 13.3.4.2 延迟
 
 系统中的延迟可能被证明是有害的，因为验证一个区块可能需要 10 分钟，这可能是对系统发动成功攻击的理想时间窗口 [45]。任何医疗检查的延迟都可能极大地影响其结果，这迫使医疗保健系统必须定期进行评估。
 
-##### 13.3.4.3 安全性
+### 13.3.4.3 安全性
 
 如果任何对象或实体控制了网络 51% 的算力，安全性就会受到威胁 [45]。安全性是医疗保健系统的一个基本方面，它们必须时刻重视，因为安全的丧失将导致信誉的丧失。
 
-##### 13.3.4.4 资源消耗
+### 13.3.4.4 资源消耗
 
 在系统中嵌入区块链所需的巨大能量导致投资者严重的资源损失。该技术的能耗主要源于挖矿过程。对投资者而言，区块链的真正威胁在于需要监控多台设备并保持定期供电。然而，这项技术也可能给现有系统带来沉重负担，并对已在使用的资源构成真正威胁。管理嵌入成本是组织面临的最大问题之一 [46]。
 
-##### 13.3.4.5 中心化
+### 13.3.4.5 中心化
 
 区块链的架构并非中心化，但某些方法试图使矿工中心化，这降低了网络的可靠性。中心化使网络变得脆弱，因为中心节点可能遭受攻击，其所有信息均可通过网络攻击被窃取。
 
@@ -5019,27 +4667,13 @@ DOI: [10.1201/9781003224075-13](http://doi.org/10.1201/9781003224075-13)
 
 通常，一个人一生中会访问多家医疗服务提供者，因此该人的医疗数据分散在许多提供者的系统中。在大量情况下，数据由提供者以其自己的方式保留，且他们经常使数据轨迹碎片化，最终降低了患者访问数据的便利性。从医疗保健领域获得的大数据通常以三种方式分类：大体量、多样性和高速度。这三大基本类别具有非均匀性、众多变量，并要求实时数据分析。获取的数据通常难以访问、不受监管，或分散在各个系统中，难以理解、使用和共享 [53]。
 
-
-
-
-
-# 数据共享与互操作性
+### 13.4.2 数据共享与互操作性
 
 患者的病历仍存储在纸质文档和分散的位置中，这最终导致医疗行业在快速发展的世界中变得极其低效。这些纸质记录不适合同步护理，也无法减少常见的医疗错误 [47]。如今，医疗数据的收集通过数字方式在各个节点进行。有必要检索收集到的数据，以便在不使流程复杂化的前提下充分利用这些数据。医疗行业面临着一个关键挑战：无法高效且以合理的资源支出存储和共享大数据 [54]。在跨各种系统操作时，实现数据可移植性和分布式数据兼容性至关重要 [55]。
 
 对于需要关于数据一致性的身份验证和同意的数据，区块链技术是完美的选择。区块链可更好地用于保护具有多个访问点的大数据，且多方可访问。关键且必要的数据通过区块链变得不可攻破 [56]。医疗行业面临的问题是记录保存和收集持续稳定增长的业务往来，对此区块链是一个坚实的解决方案。
 
 开放消费者交易能发现区块链更大的用武之地，在这些场景中，旧数据的重要性微乎其微，且数据稳步持续增长 [57]。数据记录包含基因信息和个人医疗史，这些被考虑应用区块链以提供高标准的安全性。医疗机构可实施区块链来存储患者病史的特定信息，并帮助医生通过提供给他们的网络访问这些数据 [58]。
-
-### 13.4.2 数据共享与互操作性
-
-低效的可交换性引发了两类问题。第一个常见问题是患者识别困难，当医疗机构不允许与另一个网络交换信息时就会出现此问题。其次，信息阻断发生的原因是患者不得不重复进行许多检测和体检 [59]。只有当患者的统一识别标识符和反信息阻断法律在基础层面被引入时，高效的医疗系统才能成为日常实践。此外，可交换性至关重要，特别是在冠状病毒等流行病期间。这场大流行的突然爆发揭示了医疗系统的现状，并暴露了对强健的数据共享基础设施的迫切需求。
-
-强健的基础设施有助于简化患者与机构之间的沟通，缓解可管理的数据流动，避免公共卫生威胁。拜访一位可能非其家庭医生的医生时，患者必须能轻松访问其病历。此外，优化医疗数据流将允许医生进行远程监测和远程医疗咨询，使患者能让其家庭医生知晓其医疗史 [60]。在当前，随着冠状病毒感染者数量激增，包含患者体征、症状及风险数据在内的宝贵且透明的数据变得最为重要。
-
-当前医疗系统缺乏可交换性的问题在这次大流行中凸显得更加明显 [60]。中心化 IT 系统以数字方式保存医疗史，但使共享变得困难。申请、发送、获取和汇总患者医疗信息既耗时、费力，又昂贵。由于监管限制、患者记录碎片化和后端系统不协调，医疗数据管理行业开发解决方案的速度较慢。由于医疗数据存储系统缺乏联盟，数据传输、恢复和调查变得困难。因此，患者与其医疗记录交互的能力受限，因为大多数数据存放在孤岛数据库中 [54]。
-
-将区块链技术引入医疗领域，可显著提高医疗信息共享效率，并终结行业内缺乏可交换性的问题。哈希标识（ID）可作为使用授权医疗区块链的患者的唯一标识符。ID 的哈希值使其具有唯一性，并确保用户的真实性。患者将选择其医疗服务提供者，并向其披露各自的解密密钥。健康生态系统将变得更安全、私密和互操作，并以患者为中心 [61]。精确、当前且包容的医疗记录将使患者和提供者受益匪浅。
 
 ### 13.4.3 数据安全与管理
 
@@ -5049,18 +4683,17 @@ DOI: [10.1201/9781003224075-13](http://doi.org/10.1201/9781003224075-13)
 
 基于区块链的系统可为医疗数据的安全和管理提供多重优势 [66]。它保护私人数据不被滥用，并能遏制威胁。除了使数据不可篡改外，区块链还对其进行加密，使其无法解密。每笔交易由唯一的私有标识密钥发起。交易由仅用户知晓的私有标识密钥授权。因此，与当今的数据访问技术不同，医疗服务提供者只有在直接访问区块链记录时，才被允许访问患者的医疗信息 [55]。医疗机构可通过改善提供者间的数据协作，提供具有成本效益的护理。
 
+准确的诊断结果有助于疾病的成功治疗。患者可以使用区块链与其选择的服务提供者共享信息，同时保持其信息的安全可靠。凭证证明谁拥有医疗记录。它们充当防止伪造的安全检查 [67]。Business Intelligence and Strategy Research (BIS) 的一项最新研究表明，到 2025 年，医疗保健行业通过实施区块链每年可节省高达 1000 亿美元 [68]。除了在数据泄露、运营、IT、挪用欺诈和保险欺诈方面的节省外，这些节省还将提高整体生活质量。报告显示，到 2025 年可能产生约 60 亿美元的收入 [68]。
+
+## 13.5 医疗供应链
+
+医疗保健中的供应链物流涉及多个程序、不同的团队，以及医疗服务提供者日常使用的药品、手术包和各种其他产品的流动。通过探索医疗行业供应链中的漏洞，医疗管理者可以提出减少这些漏洞的措施。通过识别薄弱环节并将资源集中在目标健康结果上，可以增加全球健康投资。医疗供应链提供许多好处，例如改进流程、高效利用资源、员工服务和有效的患者治疗。为了实现这些目标，医院应使用集成供应链，以确保医院运营和部门在供应链内完全连接。供应链的一个例子是有助于集成制造过程中所有不同步骤的后端计算机程序。供应链实施确保药品和产品在正确的时间可用，库存最小化，患者获得最大程度的护理，并且所有部门协调一致，以最大程度减少人为和药物错误。
+
+### 13.5.1 区块链在供应链中的应用
+
+区块链技术允许制药公司在每个过渡点从源头追踪原材料、材料或化合物直到患者 [69]。医疗保健和健康相关的供应链也可以利用区块链来保护制药研究数据和信息。区块链通过增强识别医疗产品来源和真实性的能力来提高供应链安全性 [70, 71, 72]。此外，区块链允许我们追踪和检测与制药治疗相关的全方位困难，这些困难在最近几十年变得更加普遍。制药行业数据通过基于区块链的技术以更受信任的方式共享。此外，`Modum.io` 是一家拥有传感器和区块链技术的瑞士公司，可提高供应链生产力 [73]。`MODSense` 系统确保记录温度的准确读数，并确保利益相关者在运输过程中接收特定产品的实际处理信息 [73]。除了医疗用品、疫苗运输、临床试验、药物样本和易腐食品外，区块链解决方案还可惠及广泛的其他产品。
 
 
-
-Accurate diagnosis results lead to successful treatment of diseases. Patients can use blockchain to share their information with their chosen service providers while keeping their information safe and reliable. Credentials prove who owns the medical records. They act as a security check against forgery 67. A recent study by Business Intelligence and Strategy Research (BIS) states that the healthcare industry can save up to $100 billion per year by 2025 through the implementation of blockchain 68. In addition to savings in data breaches, operations, IT, misappropriation fraud, and insurance fraud, these savings will improve the overall quality of life. The report indicates that approximately $6 billion in revenue could be generated by 2025 68.
-
-## 13.5 Healthcare Supply Chain
-
-Supply chain logistics in healthcare involve multiple procedures, different teams, and the flow of medicines, surgical kits, and various other products used daily by healthcare providers. By exploring vulnerabilities in the healthcare industry supply chain, healthcare managers can propose measures to reduce these vulnerabilities. By identifying weak links and focusing resources on targeted health outcomes, global health investments can be increased. The healthcare supply chain offers numerous benefits, such as improved processes, efficient resource utilization, staff service, and effective patient treatment. To achieve these goals, hospitals should use integrated supply chains to ensure that hospital operations and departments are fully connected within the supply chain. An example of a supply chain is a backend computer program that helps integrate all the different steps in the manufacturing process. Supply chain implementation ensures that medicines and products are available at the right time, inventory is minimized, patients receive maximum care, and all departments coordinate to minimize human and medication errors.
-
-### 13.5.1 Blockchain for Supply Chain
-
-Blockchain technology allows pharmaceutical companies to track raw materials, materials, or compounds from the source at every transition point to the patient 69. Healthcare and health-related supply chains can also leverage blockchain to protect pharmaceutical research data and information. Blockchain improves supply chain security by enhancing the ability to identify the source and authenticity of medical products 70, 71, 72. Furthermore, blockchain allows us to track and detect the full range of difficulties associated with pharmaceutical treatments, which have become more prevalent in recent decades. Pharmaceutical industry data is shared in a more trusted manner through blockchain-based technology. Additionally, [Modum.io](http://Modum.io), a Swiss company with sensor and blockchain technology, improves supply chain productivity 73. The `MODSense` system ensures accurate readings of recorded temperatures and ensures stakeholders receive actual handling information for specific products during transport 73. Besides medical supplies, vaccine transport, clinical trials, drug samples, and perishable foods, blockchain solutions can benefit a wide range of other products.
 
 The pharmaceutical supply chain claims that the solution achieves a higher level of efficiency and safety by identifying product locations faster than ever before 74. As an authenticating agent for sharing data and information, blockchain has the potential to convince supply chain managers to adopt this technology for supply chain management. Blockchain research related to supply chain management is still in its infancy; therefore, investigating the possible applications of this technology warrants further discussion. Companies must quantitatively demonstrate what advantages can be gained before implementing blockchain-enabled supply chains in the industry. In this regard, trust in blockchain still relies on trust in partner companies. Data sent to the blockchain by companies can still be pre-forged or tampered with. For blockchain to provide high performance, accurate or non-forged data regarding demand and inventory must be shared among participants in the supply chain.
 
@@ -5073,8 +4706,6 @@ Blockchain technology facilitates information transactions across a decentralize
 Ingraham et al. 75 outlined healthcare problems and described a blockchain-based approach, although without providing details or examples. Nageswar et al. 76 discussed how blockchain technology can be used for the pharmaceutical supply chain. Dindarian et al. 77 designed a traceability system using Ethereum as an anti-counterfeiting tool. The proposed solution used smart contracts but lacked implementation or evaluation, making its contribution unclear. Stevens et al. 78 developed an integrated, secure drug traceability system—Drug Ledger (`DL`)—which simulates real transactions managing the supply chain while maintaining the identity and confidentiality of stakeholders' traceability information without compromising system security.
 
 Using the data structure of Unspent Transaction Outputs (`UTXOs`), including packaging, repackaging, and unpacking, `DL` completes its workflow. Research indicates that the `UTXO` data structure is prone to bugs, has high storage costs, and low state space utilization 79. Jamil et al. 80 proposed a solution using Hyperledger technology to track drugs in the healthcare supply chain, a more efficient system with slightly increased latency but improved throughput and less capital lock-up. However, their solution has not undergone systematic testing and has only been applied in a small-scale environment.
-
-
 
 超级账本技术未能为可扩展性提供合适的解决方案[81]。McKee 等人[82]对其分析方法也有类似的担忧。随着比特币的发展，私有区块链被开发出来，用于哈希特定数据以保障交易安全。由于每条区块链都维护着自己的永久记录，因此无法操纵与每个产品关联的私钥。该系统的创建旨在防止产品转移过程中的任何错误，并确保整个供应链的完全透明。
 
@@ -5114,9 +4745,6 @@ Using the data structure of Unspent Transaction Outputs (`UTXOs`), including pac
 
 5.  Ramasamy, L. K., & Kadry, S. (2021). Combination of blockchain and IIOT. Blockchain in the Industrial Internet of Things. Doi:[10.1088/978-0-7503-3663-5ch7](http://doi.org/10.1088/978-0-7503-3663-5ch7).
 
-
-
-
 ## 参考文献
 
 6.  Haque, A. K., Bhushan, B., & Dhiman, G. (2021). Conceptualizing smart city applications: requirements, architecture, security issues, and emerging trends. *Expert Systems*. Doi: [10.1111/exsy.12753](http://doi.org/10.1111/exsy.12753).
@@ -5127,59 +4755,57 @@ Using the data structure of Unspent Transaction Outputs (`UTXOs`), including pac
 
 9.  Roman-Belmonte, J. M., De la Corte-Rodriguez, H., & Rodriguez-Merchan, E. C. (2018). How blockchain technology can change medicine. *Postgraduate Medicine*, 130(4), 420–427. Doi: [10.1080/00325481.2018.1472996](http://doi.org/10.1080/00325481.2018.1472996).
 
-10.  Khan, I. R., & Baig, M. A. (2021). Managing medical supply chain using blockchain technology. *Blockchain for Healthcare Systems*, 149–158. Doi: [10.1201/9781003141471-10](http://doi.org/10.1201/9781003141471-10).
-
-11.  Sosa García, J. O. (2020). Atención de pacientes Con covid-19 en el consultorio médico. *Revista Conamed*, 25(S1), 4–14. Doi: [10.35366/97343](http://doi.org/10.35366/97343).
-
-12.  Xia, Q., Sifah, E. B., Asamoah, K. O., Gao, J., Du, X., & Guizani, M. (2017). MeDShare: trust-less medical data sharing among cloud service providers via blockchain. *IEEE Access*, 5, 14757–14767. Doi: [10.1109/access.2017.2730843](http://doi.org/10.1109/access.2017.2730843).
-
-13.  Maji, U., Mandal, R., Bhattacharya, S., & Priya, S. (2021). An IoT-based remote health monitoring system for smart healthcare. *Research Anthology on Telemedicine Efficacy, Adoption, and Impact on Healthcare Delivery*, 455–473. Doi: [10.4018/978-1-7998-8052-3.ch024](http://doi.org/10.4018/978-1-7998-8052-3.ch024).
-
-14.  Bell, L., Buchanan, W. J., Cameron, J., & Lo, O. (2018). Applications of blockchain within healthcare. *Blockchain in Healthcare Today*, 1. Doi: [10.30953/bhty.v1.8](http://doi.org/10.30953/bhty.v1.8).
-
-15.  Al Omar, A., Rahman, M. S., Basu, A., & Kiyomoto, S. (2017). MediBchain: a blockchain based privacy preserving platform for healthcare data. *Security, Privacy, and Anonymity in Computation, Communication, and Storage*, 534–543. Doi: [10.1007/978-3-319-72395-2_49](http://doi.org/10.1007/978-3-319-72395-2_49).
-
-16.  Dubovitskaya, A., Xu, Z., Ryu, S., Schumacher, M., & Wang, F. (2017). How blockchain could empower ehealth: an application for radiation oncology. *Data Management and Analytics for Medicine and Healthcare*, 3–6. Doi: [10.1007/978-3-319-67186-4_1](http://doi.org/10.1007/978-3-319-67186-4_1).
-
-17.  Mackey, T., Bekki, H., Matsuzaki, T., & Mizushima, H. (2019). Examining the potential of blockchain technology to meet the needs of 21st-century Japanese health care: viewpoint on use cases and policy *(Preprint)*. Doi: [10.2196/preprints.13649](http://doi.org/10.2196/preprints.13649).
-
-18.  Swan, M. (2018). Blockchain economic networks: economic network theory—systemic risk and blockchain technology. *Business Transformation through Blockchain*, 3–45. Doi: [10.1007/978-3-319-98911-2_1](http://doi.org/10.1007/978-3-319-98911-2_1).
-
-19.  Feng, Q., He, D., Zeadally, S., Khan, M. K., & Kumar, N. (2019). A survey on privacy protection in blockchain system. *Journal of Network and Computer Applications*, 126, 45–58. Doi: [10.1016/j.jnca.2018.10.020](http://doi.org/10.1016/j.jnca.2018.10.020).
-
-20.  Kshetri, N. (2018). 1 Blockchain’s roles in meeting key supply chain management objectives. *International Journal of Information Management*, 39, 80–89. Doi: [10.1016/j.ijinfomgt.2017.12.005](http://doi.org/10.1016/j.ijinfomgt.2017.12.005).
-
-21.  Mackey, T. K., & Nayyar, G. (2017). A review of existing and emerging digital technologies to combat the global trade in fake medicines. *Expert Opinion on Drug Safety*, 16(5), 587–602. Doi: [10.1080/14740338.2017.1313227](http://doi.org/10.1080/14740338.2017.1313227).
-
-22.  Cundell, D. R. (2017). Culturing the empathic health professional: challenges and opportunities. *Healthcare Transformation*, 2(2), 71–83. Doi: [10.1089/heat.2017.29043.drc](http://doi.org/10.1089/heat.2017.29043.drc).
-
-23.  Dash, S., Gantayat, P. K., & Das, R. K. (2021). Blockchain technology in Healthcare: opportunities and challenges. *Intelligent Systems Reference Library*, 97–111. Doi: [10.1007/978-3-030-69395-4_6](http://doi.org/10.1007/978-3-030-69395-4_6).
-
-24.  Dujak, D., & Sajter, D. (2018). Blockchain applications in supply chain. *Smart Supply Network*, 21–46. Doi: [10.1007/978-3-319-91668-2_2](http://doi.org/10.1007/978-3-319-91668-2_2).
-
-25.  Babenko, K. (2020). SWOT-analysis of the territory as a prerequisite for the a strategic vision formation of its economic development. *Ekonomika Ta Derzhava*, 6, 126. Doi: [10.32702/2306-6806.2020.6.126](http://doi.org/10.32702/2306-6806.2020.6.126).
-
-26.  Cai, W., Wang, Z., Ernst, J. B., Hong, Z., Feng, C., & Leung, V. C. (2018). Decentralized applications: the blockchain-empowered software system. *IEEE Access*, 6, 53019–53033. Doi: [10.1109/access.2018.2870644](http://doi.org/10.1109/access.2018.2870644).
-
-27.  Buckley, J. J. (2018). Theory of the fuzzy controller: a brief survey. *Cybernetics and Applied Systems*, 293–307. Doi: [10.1201/9781482277180-15](http://doi.org/10.1201/9781482277180-15).
-
-28.  Biswal, A., & Bhushan, B. (2019). Blockchain for Internet of Things: architecture, consensus advancements, challenges and application areas. *2019 5th International Conference on Computing, Communication, Control and Automation (ICCUBEA)*. Doi: [10.1109/iccubea47591.2019.9129181](http://doi.org/10.1109/iccubea47591.2019.9129181).
-
-29.  Rouhani, S., & Deters, R. (2021). Data trust framework using blockchain technology and adaptive transaction validation. *IEEE Access*, 9, 90379–90391. Doi: [10.1109/access.2021.3091327](http://doi.org/10.1109/access.2021.3091327).
-
-30.  Kumar, A., Abhishek, K., Bhushan, B., & Chakraborty, C. (2021). Secure access control for manufacturing sector with application of ethereum blockchain. *Peer-to-Peer Networking and Applications*. Doi: [10.1007/s12083-021-01108-3](http://doi.org/10.1007/s12083-021-01108-3).
-
-31.  Hoy, M. B. (2017). An introduction to the blockchain and its implications for libraries and medicine. *Medical Reference Services Quarterly*, 36(3), 273–279. Doi: [10.1080/02763869.2017.1332261](http://doi.org/10.1080/02763869.2017.1332261).
-
-32.  Su, H., Guo, B., Lu, J., & Suo, X. (2021). Fully decentralized application model by peer-to-peer smart contract of blockchain. Doi: [10.36227/techrxiv.14074469.v1](http://doi.org/10.36227/techrxiv.14074469.v1).
-
-33.  Preethi, D., Khare, N., & Tripathy, B. K. (2020). Security and privacy issues in blockchain technology. *Blockchain Technology and the Internet of Things*, 245–263. Doi: [10.1201/9781003022688-11](http://doi.org/10.1201/9781003022688-11).
-
-
-
 
 
 ## 参考文献
+
+10. Khan, I. R., & Baig, M. A. (2021). Managing medical supply chain using blockchain technology. *Blockchain for Healthcare Systems*, 149–158. Doi: [10.1201/9781003141471-10](http://doi.org/10.1201/9781003141471-10).
+
+11. Sosa García, J. O. (2020). Atención de pacientes Con covid-19 en el consultorio médico. *Revista Conamed*, 25(S1), 4–14. Doi: [10.35366/97343](http://doi.org/10.35366/97343).
+
+12. Xia, Q., Sifah, E. B., Asamoah, K. O., Gao, J., Du, X., & Guizani, M. (2017). MeDShare: trust-less medical data sharing among cloud service providers via blockchain. *IEEE Access*, 5, 14757–14767. Doi: [10.1109/access.2017.2730843](http://doi.org/10.1109/access.2017.2730843).
+
+13. Maji, U., Mandal, R., Bhattacharya, S., & Priya, S. (2021). An IoT-based remote health monitoring system for smart healthcare. *Research Anthology on Telemedicine Efficacy, Adoption, and Impact on Healthcare Delivery*, 455–473. Doi: [10.4018/978-1-7998-8052-3.ch024](http://doi.org/10.4018/978-1-7998-8052-3.ch024).
+
+14. Bell, L., Buchanan, W. J., Cameron, J., & Lo, O. (2018). Applications of blockchain within healthcare. *Blockchain in Healthcare Today*, 1. Doi: [10.30953/bhty.v1.8](http://doi.org/10.30953/bhty.v1.8).
+
+15. Al Omar, A., Rahman, M. S., Basu, A., & Kiyomoto, S. (2017). MediBchain: a blockchain based privacy preserving platform for healthcare data. *Security, Privacy, and Anonymity in Computation, Communication, and Storage*, 534–543. Doi: [10.1007/978-3-319-72395-2_49](http://doi.org/10.1007/978-3-319-72395-2_49).
+
+16. Dubovitskaya, A., Xu, Z., Ryu, S., Schumacher, M., & Wang, F. (2017). How blockchain could empower ehealth: an application for radiation oncology. *Data Management and Analytics for Medicine and Healthcare*, 3–6. Doi: [10.1007/978-3-319-67186-4_1](http://doi.org/10.1007/978-3-319-67186-4_1).
+
+17. Mackey, T., Bekki, H., Matsuzaki, T., & Mizushima, H. (2019). Examining the potential of blockchain technology to meet the needs of 21st-century Japanese health care: viewpoint on use cases and policy *(Preprint)*. Doi: [10.2196/preprints.13649](http://doi.org/10.2196/preprints.13649).
+
+18. Swan, M. (2018). Blockchain economic networks: economic network theory—systemic risk and blockchain technology. *Business Transformation through Blockchain*, 3–45. Doi: [10.1007/978-3-319-98911-2_1](http://doi.org/10.1007/978-3-319-98911-2_1).
+
+19. Feng, Q., He, D., Zeadally, S., Khan, M. K., & Kumar, N. (2019). A survey on privacy protection in blockchain system. *Journal of Network and Computer Applications*, 126, 45–58. Doi: [10.1016/j.jnca.2018.10.020](http://doi.org/10.1016/j.jnca.2018.10.020).
+
+20. Kshetri, N. (2018). 1 Blockchain’s roles in meeting key supply chain management objectives. *International Journal of Information Management*, 39, 80–89. Doi: [10.1016/j.ijinfomgt.2017.12.005](http://doi.org/10.1016/j.ijinfomgt.2017.12.005).
+
+21. Mackey, T. K., & Nayyar, G. (2017). A review of existing and emerging digital technologies to combat the global trade in fake medicines. *Expert Opinion on Drug Safety*, 16(5), 587–602. Doi: [10.1080/14740338.2017.1313227](http://doi.org/10.1080/14740338.2017.1313227).
+
+22. Cundell, D. R. (2017). Culturing the empathic health professional: challenges and opportunities. *Healthcare Transformation*, 2(2), 71–83. Doi: [10.1089/heat.2017.29043.drc](http://doi.org/10.1089/heat.2017.29043.drc).
+
+23. Dash, S., Gantayat, P. K., & Das, R. K. (2021). Blockchain technology in Healthcare: opportunities and challenges. *Intelligent Systems Reference Library*, 97–111. Doi: [10.1007/978-3-030-69395-4_6](http://doi.org/10.1007/978-3-030-69395-4_6).
+
+24. Dujak, D., & Sajter, D. (2018). Blockchain applications in supply chain. *Smart Supply Network*, 21–46. Doi: [10.1007/978-3-319-91668-2_2](http://doi.org/10.1007/978-3-319-91668-2_2).
+
+25. Babenko, K. (2020). SWOT-analysis of the territory as a prerequisite for the a strategic vision formation of its economic development. *Ekonomika Ta Derzhava*, 6, 126. Doi: [10.32702/2306-6806.2020.6.126](http://doi.org/10.32702/2306-6806.2020.6.126).
+
+26. Cai, W., Wang, Z., Ernst, J. B., Hong, Z., Feng, C., & Leung, V. C. (2018). Decentralized applications: the blockchain-empowered software system. *IEEE Access*, 6, 53019–53033. Doi: [10.1109/access.2018.2870644](http://doi.org/10.1109/access.2018.2870644).
+
+27. Buckley, J. J. (2018). Theory of the fuzzy controller: a brief survey. *Cybernetics and Applied Systems*, 293–307. Doi: [10.1201/9781482277180-15](http://doi.org/10.1201/9781482277180-15).
+
+28. Biswal, A., & Bhushan, B. (2019). Blockchain for Internet of Things: architecture, consensus advancements, challenges and application areas. *2019 5th International Conference on Computing, Communication, Control and Automation (ICCUBEA)*. Doi: [10.1109/iccubea47591.2019.9129181](http://doi.org/10.1109/iccubea47591.2019.9129181).
+
+29. Rouhani, S., & Deters, R. (2021). Data trust framework using blockchain technology and adaptive transaction validation. *IEEE Access*, 9, 90379–90391. Doi: [10.1109/access.2021.3091327](http://doi.org/10.1109/access.2021.3091327).
+
+30. Kumar, A., Abhishek, K., Bhushan, B., & Chakraborty, C. (2021). Secure access control for manufacturing sector with application of ethereum blockchain. *Peer-to-Peer Networking and Applications*. Doi: [10.1007/s12083-021-01108-3](http://doi.org/10.1007/s12083-021-01108-3).
+
+31. Hoy, M. B. (2017). An introduction to the blockchain and its implications for libraries and medicine. *Medical Reference Services Quarterly*, 36(3), 273–279. Doi: [10.1080/02763869.2017.1332261](http://doi.org/10.1080/02763869.2017.1332261).
+
+32. Su, H., Guo, B., Lu, J., & Suo, X. (2021). Fully decentralized application model by peer-to-peer smart contract of blockchain. Doi: [10.36227/techrxiv.14074469.v1](http://doi.org/10.36227/techrxiv.14074469.v1).
+
+33. Preethi, D., Khare, N., & Tripathy, B. K. (2020). Security and privacy issues in blockchain technology. *Blockchain Technology and the Internet of Things*, 245–263. Doi: [10.1201/9781003022688-11](http://doi.org/10.1201/9781003022688-11).
 
 34. Wang, H., Zheng, Z., Xie, S., Dai, H. N., & Chen, X. (2018). Blockchain challenges and opportunities: a survey. *International Journal of Web and Grid Services*, 14(4), 352. DOI: [10.1504/ijwgs.2018.10016848](http://doi.org/10.1504/ijwgs.2018.10016848).
 
@@ -5194,6 +4820,10 @@ Using the data structure of Unspent Transaction Outputs (`UTXOs`), including pac
 39. Barbieri, S. F., & Fortes Villas Boas, P. J. (2021). Blockchain in health technology assessment: a low cost solution in developing and transition countries using multichain. *Anais Online Do “Health Technology Research in Brazil: Challenges for the New Decade”*. DOI: [10.17648/htbr-2021-125080](http://doi.org/10.17648/htbr-2021-125080).
 
 40. Saxena, S., Bhushan, B., & Ahad, M. A. (2021). Blockchain based solutions to secure IoT: background, integration trends and a way forward. *Journal of Network and Computer Applications*, 103050. DOI: [10.1016/j.jnca.2021.103050](http://doi.org/10.1016/j.jnca.2021.103050).
+
+
+
+## 参考文献
 
 41. Bhushan, B., Sinha, P., Sagayam, K. M., & Andrew, J. (2021). Untangling blockchain technology: a survey on state of the art, security threats, privacy services, applications and future research directions. *Computers & Electrical Engineering*, 90, 106897. DOI: [10.1016/j.compeleceng.2020.106897](http://doi.org/10.1016/j.compeleceng.2020.106897).
 
@@ -5235,37 +4865,37 @@ Using the data structure of Unspent Transaction Outputs (`UTXOs`), including pac
 
 60. Oyeniran, O. I., & Chia, T. (2020). Novel coronavirus disease 2019 (COVID-19) outbreak in Nigeria: how effective are government interventions? *Ethics, Medicine and Public Health*, 14, 100515. DOI: [10.1016/j.jemep.2020.100515](http://doi.org/10.1016/j.jemep.2020.100515).
 
+61. Paranjape, K., Parker, M., Houlding, D., & Car, J. (2019). 医疗机构中区块链的实施考量。*Blockchain in Healthcare Today*, 2. DOI: [10.30953/bhty.v2.114](http://doi.org/10.30953/bhty.v2.114)。
+
+62. Rangel, A. (2019). 企业为何需要采用“需知原则”安全策略。*Computer Fraud & Security*, 2019(12), 9–12. DOI: [10.1016/s1361-3723(19)30127-7](http://doi.org/10.1016/s1361-3723(19)30127-7)。
+
+63. Lynch, J. (2017). 患者获取健康记录。*Health Records in Court*, 125–134. DOI: [10.1201/9781315382982-13](http://doi.org/10.1201/9781315382982-13)。
+
+64. Thompson, E. C. (2020). HIPAA 安全规则与网络安全运营。*Designing a HIPAA-Compliant Security Operations Center*, 23–36. DOI: [10.1007/978-1-4842-5608-4_2](http://doi.org/10.1007/978-1-4842-5608-4_2)。
+
+65. Chauhan, A. (2017). 青年晴雨表报告 -2017。*SSRN Electronic Journal*. DOI: [10.2139/ssrn.3333308](http://doi.org/10.2139/ssrn.3333308)。
+
+66. Bouras, M. A., Lu, Q., Zhang, F., Wan, Y., Zhang, T., & Ning, H. (2020). 用于电子健康身份隐私的分布式账本技术：现状与未来展望。*Sensors*, 20(2), 483. DOI: [10.3390/s20020483](http://doi.org/10.3390/s20020483)。
+
+67. Oliver, S. (2000). 革新我们生成新知识的方式：对图书馆员、医疗专业人员、服务使用者和研究人员的挑战。*Health Libraries Review*, 17(1), 22–25. DOI: [10.1046/j.1365-2532.2000.00256.x](http://doi.org/10.1046/j.1365-2532.2000.00256.x)。
+
+68. Shukla, R., Thok, K., Alam, I., & Singh, R. (2020). 纳米植物药市场：全球机会分析与行业预测。*Nanophytomedicine*, 19–31. DOI: [10.1007/978-981-15-4909-0_2](http://doi.org/10.1007/978-981-15-4909-0_2)。
+
+69. Motsi-Omoijiade, I., & Kharlamov, A. (2021). 医疗应用与用例中的区块链。*Blockchain and Public Law*, 157–190. DOI: [10.4337/9781839100796.00015](http://doi.org/10.4337/9781839100796.00015)。
+
+70. Bocek, T., Rodrigues, B. B., Strasser, T., & Stiller, B. (2017). 无处不在的区块链——制药供应链中的区块链用例。*2017 IFIP/IEEE Symposium on Integrated Network and Service Management (IM)*. DOI: [10.23919/inm.2017.7987376](http://doi.org/10.23919/inm.2017.7987376)。
+
+71. Kshetri, N. (2021). 医疗与制药行业供应链。*Blockchain and Supply Chain Management*, 115–137. DOI: [10.1016/b978-0-323-89934-5.00008-8](http://doi.org/10.1016/b978-0-323-89934-5.00008-8)。
+
+72. Abelseth, B. (2018). 区块链追踪与大麻监管：开发许可型区块链网络以追踪加拿大的大麻供应链。*Dalhousie Journal of Interdisciplinary Management*, 14. DOI: [10.5931/djim.v14i0.7869](http://doi.org/10.5931/djim.v14i0.7869)。
+
+73. Muniandi, G. (2021). 列车控制系统中基于区块链的应答器数据安全。*IET Blockchain*. DOI: [10.1049/blc2.12003](http://doi.org/10.1049/blc2.12003)。
+
+74. Hofmann, E., Strewe, U. M., & Bosia, N. (2017). 导论——为何要关注区块链驱动的供应链金融？*Supply Chain Finance and Blockchain Technology*, 1–6. DOI: [10.1007/978-3-319-62371-9_1](http://doi.org/10.1007/978-3-319-62371-9_1)。
 
 
 
-
-61. Paranjape, K., Parker, M., Houlding, D., & Car, J. (2019). 医疗机构中区块链的实施考量。*Blockchain in Healthcare Today*, 2. Doi: [10.30953/bhty.v2.114](http://doi.org/10.30953/bhty.v2.114)。
-
-62. Rangel, A. (2019). 企业为何需要采用“需知原则”安全策略。*Computer Fraud & Security*, 2019(12), 9–12. Doi: [10.1016/s1361-3723(19)30127-7](http://doi.org/10.1016/s1361-3723\(19\)30127-7)。
-
-63. Lynch, J. (2017). 患者获取健康记录。*Health Records in Court*, 125–134. Doi: [10.1201/9781315382982-13](http://doi.org/10.1201/9781315382982-13)。
-
-64. Thompson, E. C. (2020). HIPAA 安全规则与网络安全运营。*Designing a HIPAA-Compliant Security Operations Center*, 23–36. Doi: [10.1007/978-1-4842-5608-4\_2](http://doi.org/10.1007/978-1-4842-5608-4_2)。
-
-65. Chauhan, A. (2017). 青年晴雨表报告 -2017。*SSRN Electronic Journal*. Doi: [10.2139/ssrn.3333308](http://doi.org/10.2139/ssrn.3333308)。
-
-66. Bouras, M. A., Lu, Q., Zhang, F., Wan, Y., Zhang, T., & Ning, H. (2020). 用于电子健康身份隐私的分布式账本技术：现状与未来展望。*Sensors*, 20(2), 483. Doi: [10.3390/s20020483](http://doi.org/10.3390/s20020483)。
-
-67. Oliver, S. (2000). 革新我们生成新知识的方式：对图书馆员、医疗专业人员、服务使用者和研究人员的挑战。*Health Libraries Review*, 17(1), 22–25. Doi: [10.1046/j.1365-2532.2000.00256.x](http://doi.org/10.1046/j.1365-2532.2000.00256.x)。
-
-68. Shukla, R., Thok, K., Alam, I., & Singh, R. (2020). 纳米植物药市场：全球机会分析与行业预测。*Nanophytomedicine*, 19–31. Doi: [10.1007/978-981-15-4909-0\_2](http://doi.org/10.1007/978-981-15-4909-0_2)。
-
-69. Motsi-Omoijiade, I., & Kharlamov, A. (2021). 医疗应用与用例中的区块链。*Blockchain and Public Law*, 157–190. Doi: [10.4337/9781839100796.00015](http://doi.org/10.4337/9781839100796.00015)。
-
-70. Bocek, T., Rodrigues, B. B., Strasser, T., & Stiller, B. (2017). 无处不在的区块链——制药供应链中的区块链用例。*2017 IFIP/IEEE Symposium on Integrated Network and Service Management (IM)*. Doi: [10.23919/inm.2017.7987376](http://doi.org/10.23919/inm.2017.7987376)。
-
-71. Kshetri, N. (2021). 医疗与制药行业供应链。*Blockchain and Supply Chain Management*, 115–137. Doi: [10.1016/b978-0-323-89934-5.00008-8](http://doi.org/10.1016/b978-0-323-89934-5.00008-8)。
-
-72. Abelseth, B. (2018). 区块链追踪与大麻监管：开发许可型区块链网络以追踪加拿大的大麻供应链。*Dalhousie Journal of Interdisciplinary Management*, 14. Doi: [10.5931/djim.v14i0.7869](http://doi.org/10.5931/djim.v14i0.7869)。
-
-73. Muniandi, G. (2021). 列车控制系统中基于区块链的应答器数据安全。*IET Blockchain*. Doi: [10.1049/blc2.12003](http://doi.org/10.1049/blc2.12003)。
-
-74. Hofmann, E., Strewe, U. M., & Bosia, N. (2017). 导论——为何要关注区块链驱动的供应链金融？*Supply Chain Finance and Blockchain Technology*, 1–6. Doi: [10.1007/978-3-319-62371-9\_1](http://doi.org/10.1007/978-3-319-62371-9_1)。
+# 75-86 参考文献
 
 75. Ingraham, A., & St. Clair, J. (2020). 医疗信息技术的第四次工业革命：释放区块链赋能解决方案价值的关键业务组件。*Blockchain in Healthcare Today*. Doi: [10.30953/bhty.v3.139](http://doi.org/10.30953/bhty.v3.139)。
 
@@ -5273,7 +4903,7 @@ Using the data structure of Unspent Transaction Outputs (`UTXOs`), including pac
 
 77. Dindarian, A., & Chakravarthy, S. (2019). 第 7 章. 利用区块链技术实现电子废弃物的可追溯性。*Issues in Environmental Science and Technology*, 188–212. Doi: [10.1039/9781788018784-00188](http://doi.org/10.1039/9781788018784-00188)。
 
-78. Stevens, S. K. (2019). 追溯管辖可追溯性的食品安全法律法规：食品安全与可追溯性监管简史。*Food Traceability*, 13–26. Doi: [10.1007/978-3-030-10902-8\_2](http://doi.org/10.1007/978-3-030-10902-8_2)。
+78. Stevens, S. K. (2019). 追溯管辖可追溯性的食品安全法律法规：食品安全与可追溯性监管简史。*Food Traceability*, 13–26. Doi: [10.1007/978-3-030-10902-8_2](http://doi.org/10.1007/978-3-030-10902-8_2)。
 
 79. Pérez-Solà, C., Delgado-Segura, S., Navarro-Arribas, G., & Herrera-Joancomartí, J. (2019). 又一代币归零：基于 UTXO 的加密货币中“尘埃”的分析。*Royal Society Open Science*, 6(1), 180817. Doi: [10.1098/rsos.180817](http://doi.org/10.1098/rsos.180817)。
 
@@ -5283,11 +4913,11 @@ Using the data structure of Unspent Transaction Outputs (`UTXOs`), including pac
 
 82. McKee, E. D., Makela, E. F., & Scassa, E. T. (2018). 法律与“共享经济”：监管在线市场平台。[`www.jstor.org/stable/10.2307/j.ctv5vdczv?refreqid=search-gateway`](http://www.jstor.org/)。
 
-83. Uddin, M. (2021). 区块链医药账本：基于 Hyperledger Fabric 的制药行业假药药品追溯系统。*International Journal of Pharmaceutics*, 597, 120235. Doi: [10.1016/j.ijpharm.2021.120235](http://doi.org/10.1016/j.ijpharm.2021.120235)。
+83. Uddin, M. (2021). 区块链医药账本：基于 `Hyperledger Fabric` 的制药行业假药药品追溯系统。*International Journal of Pharmaceutics*, 597, 120235. Doi: [10.1016/j.ijpharm.2021.120235](http://doi.org/10.1016/j.ijpharm.2021.120235)。
 
-84. Le Gear, A. (2020). 一种支持合规数字证券发行的区块链解决方案。*Progress in IS*, 113–131. Doi: [10.1007/978-3-030-44337-5\_6](http://doi.org/10.1007/978-3-030-44337-5_6)。
+84. Le Gear, A. (2020). 一种支持合规数字证券发行的区块链解决方案。*Progress in IS*, 113–131. Doi: [10.1007/978-3-030-44337-5_6](http://doi.org/10.1007/978-3-030-44337-5_6)。
 
-85. Dias, D., & Benet, J. (2016). 基于 IPFS 的分布式 Web 应用，教程。*Lecture Notes in Computer Science*, 616–619. Doi: [10.1007/978-3-319-38791-8\_60](http://doi.org/10.1007/978-3-319-38791-8_60)。
+85. Dias, D., & Benet, J. (2016). 基于 IPFS 的分布式 Web 应用，教程。*Lecture Notes in Computer Science*, 616–619. Doi: [10.1007/978-3-319-38791-8_60](http://doi.org/10.1007/978-3-319-38791-8_60)。
 
 86. Satpathy, A. (2020). 云-雾-IoT 互联网络的演进。*Cloud Network Management*, 3–14. Doi: [10.1201/9780429288630-1](http://doi.org/10.1201/9780429288630-1)。
 
@@ -5317,32 +4947,24 @@ DOI: [10.1201/9781003224075-14](http://doi.org/10.1201/9781003224075-14)
 
 ## 14.1 介绍
 
-
-
-
-
 ### 药品篡改与基于区块链的药品追踪
 
-药品篡改已成为当今的主要关注点，它对公共卫生构成恶性威胁，对人类健康和医疗效果产生不利影响。根据世界卫生组织（WHO）的数据[[1]](#C_019_c14.xhtml#r14_1)，篡改药品是伪造产品来源和身份的结果。据世卫组织数据显示，发展中国家 15%的药品和发达国家 1.5%–2.5%的药品遭到篡改[[2]](#C_019_c14.xhtml#r14_2)。篡改药品对所有制药利益相关者产生不利影响，包括全球的医院、药房、批发分销商、全球卫生项目和监管机构。这些药品对人类致命。在有远见的制药供应链（PSC）背后，存在着一个巨大的非法药品市场，这些市场通过改变成分、将过期库存混入新库存中来生产虚假和受污染的药品。之所以存在这个过程，仅仅是因为缺乏在供应链每个环节追踪和验证药品真实性的技术。新冠疫情期间假瑞德西韦注射液的流通，就是近期造成人员伤亡的假冒药品案例[[3]](#C_019_c14.xhtml#r14_3)。
+药品篡改已成为当今的主要关注点，它对公共卫生构成恶性威胁，对人类健康和医疗效果产生不利影响。根据世界卫生组织（WHO）的数据[[1]](#C_019_c14.xhtml#r14_1)，篡改药品是伪造产品来源和身份的结果。据世卫组织数据显示，发展中国家 15% 的药品和发达国家 1.5%–2.5% 的药品遭到篡改[[2]](#C_019_c14.xhtml#r14_2)。篡改药品对所有制药利益相关者产生不利影响，包括全球的医院、药房、批发分销商、全球卫生项目和监管机构。这些药品对人类致命。在有远见的制药供应链（PSC）背后，存在着一个巨大的非法药品市场，这些市场通过改变成分、将过期库存混入新库存中来生产虚假和受污染的药品。之所以存在这个过程，仅仅是因为缺乏在供应链每个环节追踪和验证药品真实性的技术。新冠疫情期间假瑞德西韦注射液的流通，就是近期造成人员伤亡的假冒药品案例[[3]](#C_019_c14.xhtml#r14_3)。
 
-更容易受到非正规药品影响的地区有亚太地区、埃及和拉丁美洲。40%的药品制造和使用导致每年 170 万人死亡[[4]](#C_019_c14.xhtml#r14_4)。在欧洲地区，基于假冒药品的案件总数比去年增加了一倍[[5]](#C_019_c14.xhtml#r14_5)。欧洲一位杰出研究人员刚刚发布的一份报告强调，假冒药品行业现在被认为是一项更有利可图、更赚钱的生意，因为合法药品销售更加困难，其预估收入损失约占行业药品销售额的 8%，每年达 160 亿欧元[[6]](#C_019_c14.xhtml#r14_6)。通过网上药店和非法分销渠道购买和获取药品的增长，使得在供应链网络系统中确保产品安全变得极具挑战性。同样，供应链网络中针对库存的有限数据透明度不足，给非正规行为进入市场提供了更多机会[[7]](#C_019_c14.xhtml#r14_7)。药品检测是辨别药品真伪和合法性的能力，确保所有利益相关者能在供应链系统的每个阶段检测和追踪每笔交易。美国《药品供应链安全法》（DSCSA）[[8]](#C_019_c14.xhtml#r14_8)等法规要求所有药品供应链利益相关者采取可靠措施以实现更好的产品追踪；DSCSA 的实际实施将以渐进分阶段的方式在 2025 年前完成。通过在线访问 PSC 的日益增长的需求，为造假者提供了更多造假途径，未经授权的经销商分销药品也是药品造假的一个附加因素[[9]](#C_019_c14.xhtml#r14_9)。缺乏透明度和可追溯性也为药品造假者提供了可乘之机。
+更容易受到非正规药品影响的地区有亚太地区、埃及和拉丁美洲。40% 的药品制造和使用导致每年 170 万人死亡[[4]](#C_019_c14.xhtml#r14_4)。在欧洲地区，基于假冒药品的案件总数比去年增加了一倍[[5]](#C_019_c14.xhtml#r14_5)。欧洲一位杰出研究人员刚刚发布的一份报告强调，假冒药品行业现在被认为是一项更有利可图、更赚钱的生意，因为合法药品销售更加困难，其预估收入损失约占行业药品销售额的 8%，每年达 160 亿欧元[[6]](#C_019_c14.xhtml#r14_6)。通过网上药店和非法分销渠道购买和获取药品的增长，使得在供应链网络系统中确保产品安全变得极具挑战性。同样，供应链网络中针对库存的有限数据透明度不足，给非正规行为进入市场提供了更多机会[[7]](#C_019_c14.xhtml#r14_7)。药品检测是辨别药品真伪和合法性的能力，确保所有利益相关者能在供应链系统的每个阶段检测和追踪每笔交易。美国《药品供应链安全法》（DSCSA）[[8]](#C_019_c14.xhtml#r14_8)等法规要求所有药品供应链利益相关者采取可靠措施以实现更好的产品追踪；DSCSA 的实际实施将以渐进分阶段的方式在 2025 年前完成。通过在线访问 PSC 的日益增长的需求，为造假者提供了更多造假途径，未经授权的经销商分销药品也是药品造假的一个附加因素[[9]](#C_019_c14.xhtml#r14_9)。缺乏透明度和可追溯性也为药品造假者提供了可乘之机。
 
 区块链技术是以分布式方式排列的区块链，旨在确保其所持有数据的安全性、真实性、透明度和可追溯性。存储在区块链上的数据是不可篡改的[[10]](#C_019_c14.xhtml#r14_10)；它凭借银行、教育、物流、交通管理、身份管理、电子健康记录管理、能源、贸易等应用覆盖了生活的几乎所有领域[[11]](#C_019_c14.xhtml#r14_11)。区块链在追踪 PSC 以根除篡改药品方面大有可为。区块链技术能够创建一个用于分配共享数据存储的平台，并在利益相关者不同的供应链系统之间共享交易数据，确保信息可供授权群体获取、不可更改、透明，并通过不同的加密技术保持安全[[12]](#C_019_c14.xhtml#r14_12)，[[13]](#C_019_c14.xhtml#r14_13)。因此，为制药系统供应链中的追踪、查找和管理真实性提供前瞻性方法至关重要。我们研究工作的主要贡献如下：
 
 *   本文探讨了制药行业如何从基于区块链的供应链药品追踪系统中受益的原因。
 *   本文揭示了使用基于区块链的药品配送解决方案相较于现有解决方案所带来的所有重要优势。
-*   本文重点介绍了三种用于制药行业药品供应或使用追踪的基于区块链的架构，分别为 `Hyperledger fabric`、`Hyperledger besu` 和 `Ethereum`。
+*   本文重点介绍了三种用于制药行业药品供应或使用追踪的基于区块链的架构，分别为 `Hyperledger Fabric`、`Hyperledger Besu` 和 `Ethereum`。
 *   本文检测、评估并反驳了一些可能阻碍基于区块链的解决方案在药品正确使用和配送中有效实施的挑战性问题。
 
-本文其余部分安排如下：第 14.2 节 概述区块链技术，包括其特性和本质，并探讨了区块链类别的比较。此外，第 14.3 节 概述制药行业的药品追踪。另外，第 14.4 节 阐述三种基于区块链的药品追踪系统及其药品追踪流程。而且，针对一些参数对三种讨论的基于区块链的药品追踪架构进行了比较。第 14.5 节 阐述与区块链采用技术相关的一些挑战或局限性，这些问题需要被描述以促进药品追踪。最后，第 14.6 节 给出结论并展望未来研究方向。
+本文其余部分安排如下：第 14.2 节概述区块链技术，包括其特性和本质，并探讨了区块链类别的比较。此外，第 14.3 节概述制药行业的药品追踪。另外，第 14.4 节阐述三种基于区块链的药品追踪系统及其药品追踪流程。而且，针对一些参数对三种讨论的基于区块链的药品追踪架构进行了比较。第 14.5 节阐述与区块链采用技术相关的一些挑战或局限性，这些问题需要被描述以促进药品追踪。最后，第 14.6 节给出结论并展望未来研究方向。
 
 ## 14.2 区块链概述
 
 区块链是区块的链条，每个区块包含关于交易的信息。区块链的副本共享给网络中的每台计算机/节点，这确保了存储数据的透明度。区块链网络由一组计算机组成，它们在单一协议下运行，以将更新的区块添加到现有链中[[14]](#C_019_c14.xhtml#r14_14)，[[15]](#C_019_c14.xhtml#r14_15)。因此，区块链的区块网络是一个分布式系统，它存储了所有过去执行交易的信息，并选择一个协议来验证交易、裁决交易流程，并确定网络及其所有参与者的所有工作。因此，该网络被称为分布式网络，在该网络中，每笔交易的数据都存储在其中工作的每个特定区块上[[16]](#C_019_c14.xhtml#r14_16)。
-
-
-
-
 
 ### 区块链网络类型与药品追踪概述
 
@@ -5354,7 +4976,7 @@ DOI: [10.1201/9781003224075-14](http://doi.org/10.1201/9781003224075-14)
 
 **私有链**在单一实体控制的受限环境中运行。只有拥有加入网络权限的节点才能加入私有链网络；因此，它也被称为**许可链**。**Hyperledger** 和 **Ripple (XRP)** 是私有链广为人知的例子。
 
-**联盟链**兼具公有链和私有链的特性。来自多个组织的成员在联盟链网络上协作 [18]。现有节点控制联盟链中的共识机制。三种区块链的区别如 表 14.1 所示。
+**联盟链**兼具公有链和私有链的特性。来自多个组织的成员在联盟链网络上协作 [18]。现有节点控制联盟链中的共识机制。三种区块链的区别如表 14.1 所示。
 
 ##### 表 14.1 区块链类别的差异
 
@@ -5383,7 +5005,7 @@ PSC 包含存储、包装、拆包、重新包装等多个流程，以及供应�
 
 **图 14.1** 药品供应链利益相关者之间的关系。
 
-区块链技术允许授权的私有网络追踪 PSC 中的事件，并提供每笔交易的时间密封历史记录。事件样本包括执行者、所有者、交易时间、地点及相关利益相关者 [24]。这保持了药品的可靠性、完整性、有效性、透明度和安全性。该方法减少了药品供应链系统中的障碍，实现了互不信任的利益相关者之间的协作，并创建了一个安全且防篡改的分布式药品追踪系统 [25]。这些优势通过共享知识交换，为跨越多个国家和药品监管机构提供了标准化和指导性监管，以获得由食品药品监督管理局（FDA）和欧洲药品管理局（EMA）等众多监管机构支持的切实可行的解决方案。在下一部分中，将对 PSC 中产品追踪的三种区块链架构进行比较和解释。制药行业对基于区块链技术解释的广泛接受，明显建立在涉及主要利益相关者的一些当前项目基础之上，如 表 14.2 所示。
+区块链技术允许授权的私有网络追踪 PSC 中的事件，并提供每笔交易的时间密封历史记录。事件样本包括执行者、所有者、交易时间、地点及相关利益相关者 [24]。这保持了药品的可靠性、完整性、有效性、透明度和安全性。该方法减少了药品供应链系统中的障碍，实现了互不信任的利益相关者之间的协作，并创建了一个安全且防篡改的分布式药品追踪系统 [25]。这些优势通过共享知识交换，为跨越多个国家和药品监管机构提供了标准化和指导性监管，以获得由食品药品监督管理局（FDA）和欧洲药品管理局（EMA）等众多监管机构支持的切实可行的解决方案。在下一部分中，将对 PSC 中产品追踪的三种区块链架构进行比较和解释。制药行业对基于区块链技术解释的广泛接受，明显建立在涉及主要利益相关者的一些当前项目基础之上，如表 14.2 所示。
 
 ### 表 14.2 基于区块链的药品可追溯性及初始参与者
 
@@ -5391,14 +5013,12 @@ PSC 包含存储、包装、拆包、重新包装等多个流程，以及供应�
 | :--- | :--- | :--- |
 | SAP multi-chain Merck, Ameri-source, Bergen, GSK, Amgen, Boehringer Ingellheim, McKesson, Novo Nordisk | Authentication of copies along with tracing of profitable revenues | Multi-chain |
 | IBM, KPMG, Merck, Walmart ID Logiq | Proper tracking and authentication of intelligent medication management on a regular basis | Hyperledger private platform |
+
+
+
 | Indiana university health, Wakemed health, and hospitals | Tracking of special medicine inside as well as outside of providers or networks | Private platform |
-
-
-
-
-
+|---|---|---|
 | 账本领域 | 加州大学洛杉矶分校医疗 | 提供对额外或伪造副本的检测和解决方案 | Hyperledger |
-|---|---|---|---|
 | Medi Ledger-AmerisourceBergen, McKesson, 药物制造商 Genentech, Pizer, Gilead | 有利收入的认证和验证系统 | 许可型企业以太坊 |
 | Trace Link 25 个以上参与者（生产商、供应商等） | 包含数字追溯和互操作性的解决方案 | Hyperledger |
 
@@ -5422,9 +5042,6 @@ PSC 包含存储、包装、拆包、重新包装等多个流程，以及供应�
 
 ### 14.4.2 基于 Hyperledger Besu 区块链的架构
 
-
-
-
 为了生成一个具有私有访问权限的许可区块链以供 PSC 使用，基于 Hyperledger Besu 区块链的架构允许使用关联网络账户来创建特定组织及其用户。Hyperledger Besu 利用固有的基于基础设施的公钥进行数字签名，并对业务交易/事务进行认证；每个节点的地址用于中间节点的唯一识别。为了区分存储过程、管理过程和业务逻辑，建议结合使用 EthSigner 与基于 Hyperledger Besu 区块链的架构，作为钱包服务的第三方供应商。交易被接受后，EthSigner 平台将使用存储的私钥生成签名，并通过一个完全合法的签名向以太坊客户端广播业务交易，以便将其添加到区块链中[36, 37, 38]。
 
 为了保护股东之间的交易隐私，架构使用了像 Orion 这样的私有交易管理器（PTM）。符合企业以太坊联盟（EEA）客户端规范的 PTM，允许智能合约中的通用企业逻辑仅对远程且受限数量的参与者可见，从而使每笔业务交易及与这些智能合约相关的状态也保持私密。Orion 是 Hyperledger Besu 的原生 PTM，属于一种 PTM[39]。最后，为了授予不同用户及其个人账户在系统中的准入权，它提供了链上和链下权限。授权系统启用节点和账本权限以供访问，并将网络访问限制为仅特定节点和账户。此外，Hyperledger Besu 的权限功能允许实时暂停账户、拒绝访问受损的智能合约，并根据所需的群组详细信息限制操作[40]（图 14.3 展示了基于 Hyperledger Besu 区块链的架构）。
@@ -5447,8 +5064,6 @@ PSC 包含存储、包装、拆包、重新包装等多个流程，以及供应�
 
 #### 14.4.3.1 基于以太坊架构的药品追踪流程
 
-
-
 智能合约将通过持有者 ID 等特性实现，并包含最近合约持有者的以太坊位置[46]。关键点在于持有者 ID 是主要位置而非映射，因为批次智能药品合约只能有一个持有者 ID，每当持有权发生变更，交易/动作就会被释放并存储在区块链中，这些动作用于追踪药品批次的初始信息[47]。智能合约代表特定的一批药品，还包含批次名称、批次价值、总箱数、每箱价格及其实物照片等其他特征[48]。此外，三个必需的认证属性映射允许在智能合约内访问生产商、供应商和药剂师等服务。智能合约具有多种角色，执行药品批次的生产流程和销售流程[49]。此外，生成的药品批次信息包含作为输入参数的药品批次活动详情，包括批次名称、批次价值、总箱数、每箱价格及其实物照片。而且，生产商可选择将照片上传至 IPFS，IPFS 照片的哈希函数将被存储并通过另一属性检索。智能合约与 IPFS 的连接比例为 1:1，因为每个药品批次一次只能上传一张照片到 IPFS[50]。
 
 ### 14.4.4 Hyperledger Fabric、Hyperledger Besu 和 Ethereum 架构的比较
@@ -5459,29 +5074,29 @@ PSC 包含存储、包装、拆包、重新包装等多个流程，以及供应�
 
 **表 14.3** 上述三种架构的比较
 
-| 类别 | | Hyperledger Fabric [53] | | Hyperledger Besu [53] | | Ethereum [53] |
-| --- | --- | --- | --- | --- | --- | --- |
-| 网络配置复杂度 | | 高 | | 低 | | 开箱即用，非常简单 |
-| 网络部署 | | 使用 Docker 和 Docker Compose | | 可使用 Docker 和 Docker Compose | | 公开可用，设置可选 |
-| 存储选项 | | LevelDB, CouchDB | | 文件存储 | | 文件存储 |
-| 多账本 | | 是 | | 否 | | 否 |
-| 运行成本 | | 取决于动态账本大小 | | 取决于动态账本大小 | | 取决于动态账本大小 |
-| 尺寸 | | 1–4 GB | | 1–8 GB | | 4TB, 350 GB 全节点, 10 GB 轻节点 |
-| 交易 | | 独特的执行-排序-验证方法 | | 排序-执行方法 | | 排序-执行方法 |
-| 共识协议 | | Kafka, Raft | | IBFT PoA 和 Clique | | Ethash PoW |
-| 成本 | | 仅运行成本 | | 除运行成本外需额外成本 | | 除运行成本外需额外成本 |
-| TLS 支持 | | 是 | | 是 | | 是 |
-| 数据隐私 | | 是 | | 是 | | 否 |
-| 用户和节点 | | 有组织 | | 有组织 | | 无组织 |
-| 管理与生成标识 | | 基于 PKI | | 基于公钥 | | 基于公钥 |
-| 智能合约执行平台 | | 隔离于 Docker 内部 | | EVM | | EVM |
-| 语言 | | Java, Go, Node.js | | 特定领域语言 | | 特定领域语言 |
-| 智能合约生命周期 | | 需反复安装 | | 不可变 | | 不可变 |
-| 代币化 | | 无原生支持 | | 原生支持 | | 原生支持 |
-| 密码学 | | 可插拔 | | Secp256k1 | | Secp256k1 |
-| 贡献者 | | ~220 | | ~70 | | ~475 |
-| 模式 | | 私有, 许可制 | | 半私有 | | 公开 |
-| 成熟度 | | 高水平 | | 中等 | | 高水平 |
+| 类别 | Hyperledger Fabric [53] | Hyperledger Besu [53] | Ethereum [53] |
+|---|---|---|---|
+| 网络配置复杂度 | 高 | 低 | 开箱即用，非常简单 |
+| 网络部署 | 使用 Docker 和 Docker Compose | 可使用 Docker 和 Docker Compose | 公开可用，设置可选 |
+| 存储选项 | LevelDB, CouchDB | 文件存储 | 文件存储 |
+| 多账本 | 是 | 否 | 否 |
+| 运行成本 | 取决于动态账本大小 | 取决于动态账本大小 | 取决于动态账本大小 |
+| 尺寸 | 1–4 GB | 1–8 GB | 4TB, 350 GB 全节点, 10 GB 轻节点 |
+| 交易 | 独特的执行-排序-验证方法 | 排序-执行方法 | 排序-执行方法 |
+| 共识协议 | Kafka, Raft | IBFT PoA 和 Clique | Ethash PoW |
+| 成本 | 仅运行成本 | 除运行成本外需额外成本 | 除运行成本外需额外成本 |
+| TLS 支持 | 是 | 是 | 是 |
+| 数据隐私 | 是 | 是 | 否 |
+| 用户和节点 | 有组织 | 有组织 | 无组织 |
+| 管理与生成标识 | 基于 PKI | 基于公钥 | 基于公钥 |
+| 智能合约执行平台 | 隔离于 Docker 内部 | EVM | EVM |
+| 语言 | Java, Go, Node.js | 特定领域语言 | 特定领域语言 |
+| 智能合约生命周期 | 需反复安装 | 不可变 | 不可变 |
+| 代币化 | 无原生支持 | 原生支持 | 原生支持 |
+| 密码学 | 可插拔 | Secp256k1 | Secp256k1 |
+| 贡献者 | ~220 | ~70 | ~475 |
+| 模式 | 私有, 许可制 | 半私有 | 公开 |
+| 成熟度 | 高水平 | 中等 | 高水平 |
 
 ## 14.5 讨论与开放挑战
 
@@ -5535,9 +5150,6 @@ PSC 包含存储、包装、拆包、重新包装等多个流程，以及供应�
 
 8.  Gjini, E. and Wertheimer, A. I. (2016). Review of drug quality and security act of 2013: the drug supply chain security act (DSCSA). Innovations in Pharmacy, 7(3). doi: [10.24926/iip.v7i3.462](http://doi.org/10.24926/iip.v7i3.462).
 
-
-
-
 ## 参考文献
 
 9.  Dhiman, T., Gulyani, V. 和 Bhushan, B. (2020). 区块链技术的应用、分类与系统需求。*SSRN 电子期刊*。doi: [10.2139/ssrn.3600745](http://doi.org/10.2139/ssrn.3600745)。
@@ -5584,19 +5196,17 @@ PSC 包含存储、包装、拆包、重新包装等多个流程，以及供应�
 
 30.  Blockchain based warehouse supply chain management using hyperledger fabric and hyperledger composer. (2020). *International Journal of Innovative Technology and Exploring Engineering*, 9(3S), 147–151. Doi: [10.35940/ijitee.c1033.0193s20](http://doi.org/10.35940/ijitee.c1033.0193s20)。
 
-31.  Baliga, A., Solanki, N., Verekar, S., Pednekar, A., Kamat, P. 和 Chatterjee, S. (2018). Hyperledger Fabric 的性能表征。*2018 年加密谷区块链技术会议 (CVCBT)*。doi: [10.1109/cvcbt.2018.00013](http://doi.org/10.1109/cvcbt.2018.00013)。
-
-32.  Seo, J. 和 Cho, Y. (2020). 基于 Hyperledger Fabric 区块链的医学图像共享系统。*2020 年第 22 届先进通信技术国际会议 (ICACT)*。doi: [10.23919/icact48636.2020.9061384](http://doi.org/10.23919/icact48636.2020.9061384)。
-
-33.  Kumar S. N., and Dakshayini, M. (2020). 基于区块链技术的 Hyperledger Fabric 安全共享健康数据。*2020 年区块链实施主流化国际会议 (ICOMBI)*。doi: [10.23919/icombi48604.2020.9203442](http://doi.org/10.23919/icombi48604.2020.9203442)。
-
-34.  Park, W., Hwang, D. 和 Kim, K. (2018). 一种面向 Hyperledger Fabric 区块链的基于 TOTP 的双因素认证方案。*2018 年第十届泛在与未来网络国际会议 (ICUFN)*，2018，pp. 817–819。doi: [10.1109/ICUFN.2018.8436784](http://doi.org/10.1109/ICUFN.2018.8436784)。
 
 
+# 参考文献
 
+31. Baliga, A., Solanki, N., Verekar, S., Pednekar, A., Kamat, P. 和 Chatterjee, S. (2018). Hyperledger Fabric 的性能表征。*2018 年加密谷区块链技术会议 (CVCBT)*。doi: [10.1109/cvcbt.2018.00013](http://doi.org/10.1109/cvcbt.2018.00013)。
 
+32. Seo, J. 和 Cho, Y. (2020). 基于 Hyperledger Fabric 区块链的医学图像共享系统。*2020 年第 22 届先进通信技术国际会议 (ICACT)*。doi: [10.23919/icact48636.2020.9061384](http://doi.org/10.23919/icact48636.2020.9061384)。
 
-## 参考文献
+33. Kumar S. N., and Dakshayini, M. (2020). 基于区块链技术的 Hyperledger Fabric 安全共享健康数据。*2020 年区块链实施主流化国际会议 (ICOMBI)*。doi: [10.23919/icombi48604.2020.9203442](http://doi.org/10.23919/icombi48604.2020.9203442)。
+
+34. Park, W., Hwang, D. 和 Kim, K. (2018). 一种面向 Hyperledger Fabric 区块链的基于 TOTP 的双因素认证方案。*2018 年第十届泛在与未来网络国际会议 (ICUFN)*，2018，pp. 817–819。doi: [10.1109/ICUFN.2018.8436784](http://doi.org/10.1109/ICUFN.2018.8436784)。
 
 35. Hua, S., Zhang, S., Pi, B., Sun, J., Yamashita, K. and Nomura, Y. (2020) Hyperledger Fabric 配置的合理性探讨与分析。*2020 IEEE 国际区块链与加密货币会议 (ICBC)*，2020，第 1–3 页。doi: [10.1109/ICBC48266.2020.9169444](http://doi.org/10.1109/ICBC48266.2020.9169444)。
 
@@ -5668,9 +5278,6 @@ DOI: [10.1201/9781003224075-15](http://doi.org/10.1201/9781003224075-15)
 
 ## 15.1 介绍
 
-
-
-
 ### 工业 4.0 与医疗 4.0：安全分析与区块链解决方案
 
 工业 4.0 通过提供利用低延迟、高吞吐量和实时监控技术的服务，彻底改变了人类社会。医疗 4.0 从工业 4.0 分支而来，使医疗系统更加完善，因为它包含了物联网、人工智能、嵌入式系统以及各种其他近期技术。这些技术帮助医疗 4.0 变得更加高效、精准，并能为各种疾病提供预防措施。医疗 4.0 的异构特性吸引对手为获取经济利益和其他破坏意图而实施恶意活动 [1]。因此，保护和保障医疗 4.0 的安全以限制对手至关重要。此外，当需要保证医疗 4.0 网络中终端用户的信息可用性时，安全实施成为主要关注点 [2]。以下小节解释了为分析医疗 4.0 组件、关键信息、漏洞及其解决方案而讨论的各种要素。
@@ -5698,16 +5305,19 @@ DOI: [10.1201/9781003224075-15](http://doi.org/10.1201/9781003224075-15)
 
 ### 15.2.1 医疗的演变
 
-
-
-
 #### 医疗保健的演进：从 1.0 到 4.0
+
+
+
+# 医疗保健 4.0 与区块链技术
+
+## 医疗保健的演进
 
 医疗保健新概念的出现推动了孤岛式信息技术（IT）的引入，从而彻底变革了医疗保健行业。这一出现被称为 **医疗保健 1.0** [14]。随着网络技术的引入以及电子健康记录（EHR）与医学影像的整合，医疗保健进一步演进。这一时期被称为 **医疗保健 2.0** [15]。在医疗保健 2.0 之后，2000 年见证了基因组数据的发展，以及可穿戴设备和植入式设备的兴起，还有患者联网的电子健康记录。然而，由于大型医疗网络中的数据不兼容性以及医疗服务提供者的抵制，**医疗保健 3.0** 中 IT 项目的接受很少带来严肃的社会进步。
 
 目前，在医疗保健和科学领域，正在观察到一个被称为 **医疗保健 4.0** 的医疗保健与科学新时代。医疗保健 4.0 的目的是通过融合物联网和新兴技术以进行信息收集和处理，来实施工业 4.0 的原则。举几个应用例子，医疗保健 4.0 支持增强 AI 的利用，并利用区块链保障患者病历安全。对先进方法整合的关注使医疗保健更具前瞻性和可定制性 [16, 17]。医生可获得的信息量增加是医疗保健 4.0 提供的一项优势。此外，该优势可延伸至利用区块链进行数据的提取、计算和存储。数据处理可允许患者和医生随时随地接收信息。更好的洞察力可允许进行各种分析，用于临床反应估算以及构建和升级检测新疾病的方法 [18]。医疗保健 4.0 使信息能够被高效利用，并可能识别发展领域，赋能人类见证进一步的进步。它正通过一个高效且聚焦的服务计费系统，推动整个医疗保健行业向基于价值的系统转型，该系统在促进效率的同时决定结果。表 15.1 展示了从医疗保健 1.0 到医疗保健 4.0 的方法和技术进步。
 
-##### 表 15.1：医疗保健从 1.0 到 4.0 的重大变化
+### 表 15.1：医疗保健从 1.0 到 4.0 的重大变化
 
 | 方面 | 医疗保健 1.0 | 医疗保健 2.0 | 医疗保健 3.0 | 医疗保健 4.0 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -5716,7 +5326,7 @@ DOI: [10.1201/9781003224075-15](http://doi.org/10.1201/9781003224075-15)
 | **数据共享** | • 组织内部 | • 一组医疗服务机构内部 | • 国家范围内 | • 全球医疗服务存储网络 |
 | **所用关键创新** | • 监管框架和实验室信息管理系统 (`LIMS`) | • 云计算和电子数据交换 | • 可穿戴设备、电子病历、大数据 | • 数据分析、AI、区块链 |
 
-### 15.2.2 医疗保健 4.0 的驱动因素
+## 15.2.2 医疗保健 4.0 的驱动因素
 
 有若干特征促进了更好医疗保健的发展。
 
@@ -5726,177 +5336,156 @@ DOI: [10.1201/9781003224075-15](http://doi.org/10.1201/9781003224075-15)
 
 审视上述方面，当前的医疗保健系统似乎强调通过赋能和组织医疗领域来提供优质护理。它们能以同情和尊重高效地照顾人们。医疗保健 4.0 推动了医疗保健的重大变革，涉及多个国家发生的数据转型。医疗保健 4.0 中设计的方法因私营部门的参与而导致成本更低、数据通信更快，并使小城镇的医生和患者能够从医疗保健 4.0 的优势中受益。总之，关注点转移到了资源整合和综合护理的结合上。
 
-### 15.2.3 医疗保健 4.0 及其核心技术
+## 15.2.3 医疗保健 4.0 及其核心技术
 
 利用信息通信技术（ICT）推进医疗保健始于互联网，当时首次引入了关于公共卫生和疾病的论坛。随后是组织赋能的和 IoT-EHR 框架的出现，它们结合了信息逻辑。ICT 现在已经减少了 EHR 的开放性，同时结合了基于移动端和基于云的协同项目。如今，我们见证了医疗保健 4.0 的开放性，它根据持续的信息协调收集了所有的机制化手段。医疗保健 4.0 的主要目标是将患者、临床服务提供者与临床设备、中心和急诊诊所联系起来。医疗服务提供者利用网络提供实时协调服务。以下要点解释了医疗保健 4.0 带来的 ICT 进展。
 
-*   **IoT**：IoT 将临床设备连接到网络，并包括与 X 光机和其他临床设备相关的临床测试项目 [22]。这种 IoT 被称为健康设施网络，更具体地说是 **医疗健康物联网** 。
+*   **IoT**：IoT 将临床设备连接到网络，并包括与 X 光机和其他临床设备相关的临床测试项目 [22]。这种 IoT 被称为健康设施网络，更具体地说是 **医疗健康物联网**。
 *   **互联网服务提供商**：它们通过专用设备、系统和连接确保人们的福祉。它们作为软件服务提供，在人或最终用户与互联网之间具有精确的接口，被称为 **服务互联网** [23]。
 *   **临床网络物理系统 (CPS)**：医疗 CPS 通过在行政支持下持续监测健康，被认为能在现实世界和数字世界中实现成功的通信 [24]。
 *   **健康云**：大型云框架使用软件工具用于健康应用 [25]。这可以通过云上用户与应用程序之间的交互来提高医疗保健 4.0 的效率。
 *   **健康雾**：健康雾（或边缘）区域有利于临床设备和系统与医疗保健的频繁加速协作 [26]。
 *   **海量数据分析**：医疗保健系统中的大量数据每天都在增加。因此，管理层很难以高效的方式进行管理 [27]。ICT 有助于提供有效的数据分析，特别是针对大数据。
 
-
-
-
-
-### 15.2.4 医疗保健 4.0 应用
+## 15.2.4 医疗保健 4.0 应用
 
 有多种医疗保健系统已善用高质量的 ICT（信息与通信技术）来实现医疗保健发展目标。设计和提交应用程序以实现医疗保健 4.0 的核心功能，需要对其提供的技能和资产有清晰的认识。此外，还需要技术技能和设计要素，以高效地开发和使用它们。医疗保健 4.0 考量每一项协同创新、仪器、硬件、人员和编程，以传递一流的医疗保健福利，例如定制资产的应用。根据特定功能，医疗保健 4.0 中的应用可分为四大类：患者服务、医疗服务、医疗管理系统和资源管理应用。现有的医疗保健应用程序可协助不同的已识别用途。然而，以下章节的讨论提供了医疗保健 4.0 中应用类型的摘要。
 
 *   **面向患者的应用**：有效的医疗保健系统应能确保版权、更好的质量以及体验。提供患者医疗信息的医疗保健 4.0 应用程序因特定医疗保健应用程序的目的而异 [30]。
-
 *   **面向医疗专业人员的应用**：除患者外，参与医疗保健项目并贡献其服务的人员，可从医疗保健 4.0 应用中获益良多。这些项目有助于提升他们的工作技能、执行重复性任务，并在未来工作中融入高质量和快速的服务。
-
 *   **面向资源管理的应用**：医疗保健系统通常规模庞大，包含数百、甚至数千项资产。这包括基础设施建设和相关服务，如水、能源、火灾报警系统以及供暖通风与空调（HVAC）和其他设施 [31]。
-
 *   **面向医疗管理系统的应用**：在医疗保健领域存在不同的方法论，有助于医疗保健 4.0 中的质量管理、控制、安排和熟练度。这些方法有助于进一步增强医疗保健框架的活力 [32]。
 
-## 15.3 区块链
+# 15.3 区块链
 
 顾名思义，区块链是指以一种能够使用公共账本存储交易、并使用加密方法单独验证每笔交易的方式链接在一起的区块。所有挖矿节点对一笔交易进行签名。每个区块由区块体和区块头组成。它们使用引用哈希来存储交易信息。引用哈希所属的区块称为哈希区块，根区块称为创世区块。
 
-### 15.3.1 区块链的类型
+## 15.3.1 区块链的类型
 
 基于认证方案和控制方法，区块链系统可分为三大类：私有链、公有链和联盟链。下面小节将对其进行讨论。
 
-#### 15.3.1.1 私有链
+### 15.3.1.1 私有链
 
 允许个人或群体使用去中心化网络私下共享数据的区块链，称为私有链。Puthal 等人 [33] 指出，私有链需要专门的团队或个人来控制挖矿过程，以限制未授权用户的访问。
 
-#### 15.3.1.2 公有链
+### 15.3.1.2 公有链
 
 允许个人使用去中心化平台进行挖矿，而无需特定权限的区块链，称为公有链或无许可链。共识机制在允许节点包含相互矛盾的多个区块方面发挥着关键作用 [34]。由于参与者在挖矿前未知且节点可自由操作，公有链容易遭受女巫攻击 [35]。然而，可使用工作量证明（PoW）来克服这一问题，根据该高效共识机制，对手必须掌握 51% 的算力才能控制一笔交易 [35]。
 
-#### 15.3.1.3 联盟链
+### 15.3.1.3 联盟链
 
 联盟链是指私有链和公有链的混合体，其中一些专门人员负责共识和区块验证。当控制节点签名并批准时，矿工区块得到验证，挖矿使用多重签名方案进行。然而，篡改攻击使联盟链变得脆弱，因为一组节点可能恶意行事，从而损害其不可篡改和不可逆的特性 [36,37]。
 
-### 15.3.2 区块链架构
+## 15.3.2 区块链架构
 
 架构定义了区块链的工作性质。区块链由六层组成，详见下面的小节。
 
-#### 15.3.2.1 数据层
+### 15.3.2.1 数据层
 
 Wang 等人 [38,39] 指出，数据层负责操作从社会空间、物理空间以及网络空间收集的各类数据。数据区块通过该层进行时间戳标记和封装，有助于追踪区块链数据。默克尔树是区块链账本的另一个组成部分，它以哈希二叉树的形式存储交易并维护数据完整性。
 
-#### 15.3.2.2 网络层
+### 15.3.2.2 网络层
 
 它在区块链中验证、转发和分发交易。区块链网络拓扑的构建方式类似于点对点（P2P）网络，参与者拥有平等的特权。一旦创建交易，它会被广播到所有相邻节点以进行验证。如果发现交易无效，则将其丢弃。基于非对称密钥加密方法的数字签名机制用于验证交易的真实性 [40]。
 
-#### 15.3.2.3 共识层
+### 15.3.2.3 共识层
 
 由于区块链是去中心化的，需要一种协议来确保节点间达成共识，以克服缺乏中央权威的问题。著名的共识算法之一是 PoW，其中节点使用哈希函数通过其他节点来简化验证过程。其他共识算法包括权益证明（PoS） [41] 和实用拜占庭容错（PBFT） [42]。
 
-#### 15.3.2.4 激励层
+### 15.3.2.4 激励层
 
 该层将分配方法和经济激励的发行集成到网络中。基于网络中各个节点的贡献，发行并分发经济激励（即数字货币）给相应节点。然而，该层是可选的，并作为节点参与数据验证的驱动力。
 
-#### 15.3.2.5 合约层
-
-
-
-
+### 15.3.2.5 合约层
 
 该层利用特定算法、脚本和智能合约来实现复杂的区块链交易。智能合约是指一组经过加密签名的规则，用于表达逻辑以及制定和控制参与者的权利。其本质是自执行的，并由网络中的每个节点进行验证。为了实现交易逻辑，每个区块链系统都有自己的编程语言；例如，比特币使用非图灵完备语言，而以太坊使用图灵完备语言 [43]。
 
-#### 15.3.2.6 应用层
+### 15.3.2.6 应用层
 
 该层位于客户端，一旦客户端应用程序发起交易即开始起作用。它由业务应用程序组成，包括物联网、数字身份等。客户端应用程序使用软件开发工具包（SDK）或命令行界面（CLI）来实现区块链网络中节点间的通信。应用层借助一些特定框架、应用程序编程接口（API）和脚本，促进最终用户与区块链网络之间的交互。执行层是其子层，包含待执行的实际代码。
 
-### 15.3.3 共识协议
+## 15.3.3 共识协议
 
 共识协议负责确保分布式区块链网络中各节点各自的区块链账本达成共识。下面小节介绍了一些重要的共识协议。
 
-#### 15.3.3.1 工作量证明
+### 15.3.3.1 工作量证明
 
 PoW 是一种基于证明的算法，用于识别节点，并允许其将新挖出的区块添加到现有链的末尾，前提是提供必要的证明 [44]。该算法解决了决定哪些节点可以将交易打包进区块的模糊性问题。
 
-#### 15.3.3.2 权益证明
+### 15.3.3.2 权益证明
 
 PoS 是一种算法，要求矿工在区块链中拥有足够的权益，这也有助于缓解区块链网络中可能出现的可疑活动 [45]。它高度强调能源效率。
 
-#### 15.3.3.3 委托权益证明
+### 15.3.3.3 委托权益证明
 
 与 PoS 的直接方式不同，委托权益证明（DPoS）采用民主方式，由利益相关者选举代表来验证区块 [46]。与 PoS 相比，它能实现更快的区块生成和交易快速确认。然而，代表可能会自我投票并操纵其他参与者投票。
 
-#### 15.3.3.4 燃烧证明
+### 15.3.3.4 燃烧证明
 
 燃烧证明（PoB）方案用于带验证的加密货币销毁。两个重要功能构成了 PoB：一个用于生成加密货币地址的功能，和一个用于检查该地址是否真正不可花费的验证功能。PoB 遵循币销毁策略，导致区块链中使用的币减少，从而提高币值。PoB 具有三个显著特性：抗审查性、绑定性和不可花费性。
 
-#### 15.3.3.5 经过时间证明
+### 15.3.3.5 经过时间证明
 
 根据经过时间证明（PoET），每个节点生成一个随机数以估算生成区块前的等待时间。它不涉及所有用户的失效；而是在链内选举一位领导者来创建新区块。每个节点都有一个关联的随机定时器。如果同一节点反复被选为领导者，PoET 能高效追踪恶意用户。
 
-#### 15.3.3.6 容量证明
+### 15.3.3.6 容量证明
 
 容量证明（PoC）方案倾向于利用节点的硬盘空间，而非随机生成 nonce 值。因此，与 PoW 协议相比，它的计算强度较低。根据 PoC，拥有更多磁盘空间的节点有资格拥有更多权益。
 
-#### 15.3.3.7 实用拜占庭容错
+### 15.3.3.7 实用拜占庭容错
 
 当网络中两个通信节点即使在存在少数恶意节点的情况下也能安全达成共识时，这种状况称为拜占庭容错（BFT）。因此，PBFT 是一种复制算法，其中节点与一个主节点按顺序排列，其他节点作为备份。通过投票验证数据的完整性和来源。PBFT 存在三个阶段：预准备、准备和提交。
 
-#### 15.3.3.8 权威证明
+### 15.3.3.8 权威证明
 
 该协议解决了 PoW 中出现的某些能源消耗和依赖问题，并用于私有区块链。Li 等人 [47] 指出，受信节点被授予利用多数标准形成共识和创建新区块的权限。链中的“N”个受信节点称为权威节点，假设 N 个节点中至少有 (N/2) + 1 个是诚实的。
 
-## 15.4 医疗健康 4.0 中的网络安全
+# 15.4 医疗健康 4.0 中的网络安全
 
 如果一项技术包含敏感私密数据、异构结构和复杂合规要求，网络安全问题就会日益凸显。医疗健康 4.0 是最新技术的结合体，包括物联网和人工智能，它们以最高效的方式驱动医疗健康运作。医疗健康的异构性使得数据库、网络、前端更容易受到网络攻击。医疗健康中使用各种设备，如闭路电视（CCTV）和传感器，它们不具备自我更新能力 [48]。这使得它们容易受到制造后网络世界出现的攻击。下面小节深入关注使医疗健康更易受网络攻击的各种关键参数。
 
-### 15.4.1 网络漏洞与攻击
+## 15.4.1 网络漏洞与攻击
 
 网络是医疗健康 4.0 的骨干。所有设备以互联模式协同工作。医疗健康中的这些设备从现场传感器或设备获取第一手输入，后者进一步从周围环境接收输入。由于各种设备缺乏补丁更新功能，医疗健康网络变得脆弱。这导致网络易受各种基于网络的攻击，如拒绝服务（DoS）、干扰、节点篡改（NT）、睡眠剥夺、欺骗和泛洪。它可能影响前端设备，如路由器、交换机、闭路电视摄像头、传感器，或医疗健康的内部计算设备，如 Web 服务器和数据库服务器。以下列举的要点进一步解释了基于网络的攻击。
 
-*   DoS 攻击可关闭医疗健康 4.0 的网络，使医疗健康系统中的员工、管理员和患者无法访问。这种攻击会瘫痪流量或使其对预期用户不可用。DoS 攻击要么泛洪网络，要么使其崩溃。缓冲区溢出攻击、互联网控制消息协议泛洪和 SYN 泛洪是 DoS 用来泛洪医疗健康网络的三种主要攻击。此外，崩溃是由于网络或网络设备中存在的漏洞导致的 DoS 攻击结果 [49]。当以分布式方式执行时，即多个设备攻击单个网络，这种攻击会变得更具毁灭性。
+*   **DoS 攻击**可关闭医疗健康 4.0 的网络，使医疗健康系统中的员工、管理员和患者无法访问。这种攻击会瘫痪流量或使其对预期用户不可用。DoS 攻击要么泛洪网络，要么使其崩溃。缓冲区溢出攻击、互联网控制消息协议泛洪和 SYN 泛洪是 DoS 用来泛洪医疗健康网络的三种主要攻击。此外，崩溃是由于网络或网络设备中存在的漏洞导致的 DoS 攻击结果 [49]。当以分布式方式执行时，即多个设备攻击单个网络，这种攻击会变得更具毁灭性。
+*   **干扰攻击**是另一种基于网络的攻击，主要针对无线网络系统 [50]。由于医疗健康 4.0 包含各种无线通信，且主要用于传感器，这种攻击在医疗健康 4.0 系统中变得突出。存在各种类型的干扰攻击，如欺骗性干扰器 [51] 和随机干扰器，它们可影响医疗健康 4.0 网络中的无线通信。
+*   **NT** 在医疗健康 4.0 中极有可能发生，因为它是通过物理手段实施的。医疗健康 4.0 的许多网络设备和现场传感器无人看管，攻击者可轻松访问。攻击者可用其受感染的节点（路由器、集线器、交换机等）替换真实节点。
 
-*   干扰攻击是另一种基于网络的攻击，主要针对无线网络系统 [50]。由于医疗健康 4.0 包含各种无线通信，且主要用于传感器，这种攻击在医疗健康 4.0 系统中变得突出。存在各种类型的干扰攻击，如欺骗性干扰器 [51] 和随机干扰器，它们可影响医疗健康 4.0 网络中的无线通信。
-
-*   NT 在医疗健康 4.0 中极有可能发生，因为它是通过物理手段实施的。医疗健康 4.0 的许多网络设备和现场传感器无人看管，攻击者可轻松访问。攻击者可用其受感染的节点（路由器、集线器、交换机等）替换真实节点。
-
-
-
-
-
-#### 拒绝睡眠攻击
+### 拒绝睡眠攻击
 
 拒绝睡眠攻击针对的是以电池作为工作电源的设备 [52]。这些电池的续航时间有限；耗尽后需要充电。当电池充电时，设备会进入睡眠模式。该攻击阻止设备切换到睡眠模式，从而导致设备永久关机。
 
-### 15.4.2 基于策略检查的漏洞与攻击
+## 15.4.2 基于策略检查的漏洞与攻击
 
 策略在最大程度减少由弱密码、弱认证机制、弱互联网协议 (IP) 扫描和过滤机制触发的攻击方面发挥着重要作用。以下要点详细解释了这些参数。
 
 *   **用户认证** 是医疗 4.0 中至关重要的一环，因为其涉及个人性质的数据。用户可以确保其身份得到安全认证，尤其是在医疗领域。医疗数据由医护人员、患者和其他工作人员访问。这要求在危急情况下保证用户能紧急访问数据。确保用户认证的方法是使用生物识别安全技术，这是验证用户身份最高效的机制之一。它可以在医疗 4.0 中得到有效应用。此外，生物识别数据可以从医疗领域或医疗部门使用的设备中获取 [53]。密码管理系统应在策略中得到周全考虑，以便限制通过暴力破解和其他社会工程学攻击绕过认证。
-
 *   **设备认证** 是另一个关键参数，即个人设备或服务器在从传感器接收医疗数据前，需要验证身份 [54]。这至关重要，因为错误的数据或任何通信故障在监测和诊断患者健康时可能导致严重问题。因此，在医疗 4.0 中，认证方法应以高度安全的方式实施，并能确保个人医疗数据的完整性和机密性。在医疗 4.0 中，不应留有任何数据被篡改的可能性，以防止医疗部门医护人员、患者和工作人员的个人信息泄露。
 
-### 15.4.3 传感器、物理漏洞与攻击
+## 15.4.3 传感器、物理漏洞与攻击
 
 在医疗 4.0 中，保护医疗数据是最高优先级的任务。因此，数据获取的源头必须是安全的。传感器负责数据收集。因此，在传感器层面实施安全至关重要。可能的安全措施强调在个人设备上执行最大量的计算，并在数据交换过程中减少开销。以下是建立传感器级安全的解决方案。
 
 *   **传感器** 由于是物理实体，面临被对手窃取和篡改的风险。这在实施医疗 4.0 时对医疗部门构成威胁。因此，设计一个防篡改系统，不允许任何第三方访问医疗数据，显得尤为重要。
-
 *   **定位** 是传感器安全的另一个因素 [55]，即识别传感器在人体上的位置。然而，识别传感器在人体上的位置对医护人员至关重要，因此无法省略。在这样的场景下，设备可能会频繁偏离网络范围。解决定位问题的一个方案是设计一个实时系统，以检测医疗 4.0 网络中的入侵，能够高效上报恶意活动并提醒用户。
-
 *   安全也可以通过 **自愈方法** 来保障。自愈方法可以检测医疗 4.0 网络中的攻击，并自行应用安全措施。然而，每种攻击的诊断方式可能不同；因此，自愈方法应据此设计 [56]。
 
-*   医疗 4.0 包含 **空中下载技术** 用于更新医疗 4.0 网络中大量 IoT 节点 [57]。然而，这可能导致攻击者节点感知更新并冒充合法节点。因此，需要设计严格的安全机制，使医疗 4.0 网络中的任何恶意节点无法利用其他合法节点并影响医疗 4.0 系统。
 
+
+## 医疗 4.0 的挑战
+
+*   医疗 4.0 包含**空中下载技术**用于更新医疗 4.0 网络中大量 IoT 节点 [57]。然而，这可能导致攻击者节点感知更新并冒充合法节点。因此，需要设计严格的安全机制，使医疗 4.0 网络中的任何恶意节点无法利用其他合法节点并影响医疗 4.0 系统。
 *   由于传感器是物理设备，它们可能引入故障并在网络中表现异常，从而影响医疗 4.0 中的数据和通信。因此，确保数据传输前后的安全极为重要。即，需要妥善解决向后和向前兼容性问题 [58]。为此，可使用空中下载技术来分发相关更新。
 
 ## 15.5 利用区块链实现医疗 4.0 的隐私与安全
 
-在当前形势下，患者记录和相关医疗数据已实现数字化，且数据量与日俱增。此外，数据分布在多个设备上，由云服务器提供支持，不再局限于单一设备。专用 IoT 设备和传感器负责收集和处理数据 [59]。此外，还有多个信息来源，如 **电子健康记录 (EHRs)**，用于向所需用户提供医疗信息 [60]。大量患者数据集包含敏感和个人信息。因此，确保医疗领域的隐私和安全至关重要，且相关方法需要得到有效实施。保障医疗数据安全的合适方法之一是使用 **区块链**。区块链支持不可篡改性和信息可辨识性。然而，如果结合加密方法，区块链可以在网络中为医疗数据提供更强的安全性和一致性 [61]。与区块链中数据保护相关的困难如下所述。
+在当前形势下，患者记录和相关医疗数据已实现数字化，且数据量与日俱增。此外，数据分布在多个设备上，由云服务器提供支持，不再局限于单一设备。专用 IoT 设备和传感器负责收集和处理数据 [59]。此外，还有多个信息来源，如**电子健康记录 (EHRs)**，用于向所需用户提供医疗信息 [60]。大量患者数据集包含敏感和个人信息。因此，确保医疗领域的隐私和安全至关重要，且相关方法需要得到有效实施。保障医疗数据安全的合适方法之一是使用**区块链**。区块链支持不可篡改性和信息可辨识性。然而，如果结合加密方法，区块链可以在网络中为医疗数据提供更强的安全性和一致性 [61]。与区块链中数据保护相关的困难如下所述。
 
 *   **身份安全**：保护患者或用户的身份及敏感信息。
 *   **交易安全**：保障信息的安全交换，并确保经过授权和认证的交易（查看或修改数据）。
 
-
-
-
-
-任何用户的身份都可能是敏感的，绝不能暴露给未经授权或非法的系统或个人。具体而言，在医疗 4.0 中，患者的个人数据可能包含个人入伍编号以及患者用于在私营机构分期付款的信用卡卡号等信息。因此，保护医疗领域用户的身份是重中之重，绝不能忽视。有助于实施和确保身份安全的策略之一是零知识证明 [62]。其他强大的安全程序包括同态加密、zk-SNARKs（源自零知识证明）、可信执行环境（`TEE`）和差分保护 [63, 64, 65, 66]。`TEE` 可作为选择性技术之一，用于保障医疗服务中的隐私保护并强化医疗 4.0 框架。除了安全程序，严格的数据隐私法律也能为医疗 4.0 数据提供显著保护。《医疗保险流通与责任法案》（`HIPAA`）规则凭借特定特性，有助于结合区块链提升医疗 4.0 网络的安全性；实现安全数据共享、提供改进的医疗服务、提升公共规范并保护个人医疗信息。`HIPAA` 安全规则涵盖业务伙伴（`BA`）、医疗 4.0、清算机构（`CH`）以及知名医疗服务的属性。在类似保护法律法规的帮助下，区块链创新可确保医疗 4.0 中患者个人数据的质量和安全 [67]。
+任何用户的身份都可能是敏感的，绝不能暴露给未经授权或非法的系统或个人。具体而言，在医疗 4.0 中，患者的个人数据可能包含个人入伍编号以及患者用于在私营机构分期付款的信用卡卡号等信息。因此，保护医疗领域用户的身份是重中之重，绝不能忽视。有助于实施和确保身份安全的策略之一是零知识证明 [62]。其他强大的安全程序包括同态加密、`zk-SNARKs`（源自零知识证明）、可信执行环境（`TEE`）和差分保护 [63, 64, 65, 66]。`TEE` 可作为选择性技术之一，用于保障医疗服务中的隐私保护并强化医疗 4.0 框架。除了安全程序，严格的数据隐私法律也能为医疗 4.0 数据提供显著保护。《医疗保险流通与责任法案》（`HIPAA`）规则凭借特定特性，有助于结合区块链提升医疗 4.0 网络的安全性；实现安全数据共享、提供改进的医疗服务、提升公共规范并保护个人医疗信息。`HIPAA` 安全规则涵盖业务伙伴（`BA`）、医疗 4.0、清算机构（`CH`）以及知名医疗服务的属性。在类似保护法律法规的帮助下，区块链创新可确保医疗 4.0 中患者个人数据的质量和安全 [67]。
 
 除了身份，医疗领域的数据交易也需要得到保护和保障。需要建立安全的通信环境，以便医疗 4.0 网络内的信息交换不被泄露或受恶意活动影响。区块链在交易安全方面也大有裨益。医疗记录去中心化共享是一种探究在医疗 4.0 网络中为数据和用户实施安全程序这一理念的设计 [68]。此外，警报和预警也能促进网络安全。即当检测到未经授权的进入或入侵时，网络必须做好抵御准备。确保医疗 4.0 网络安全的另一种方法是在基于区块链的存储中生成信息访问日志。因此，可以直接从相应的区块链组织访问信息。此外，区块链还能为大数据提供一致的质量保证和安全性 [69]。再者，在强有力的法律基础帮助下，也能适当实现信息保护。遵守《通用数据保护条例》（`GDPR`）等数据保护法，也是确保医疗 4.0 交易安全的一项贡献 [70]。植入水印以强化版权也是这些法律的补充，意味着区块链中的信息不可篡改 [71,72]。除了法律，医疗领域的安全和隐私问题还可通过零知识确认和基于属性的加密方法来缓解。一些更新的安全措施包括使用基于区块链的差分安全，以进一步增强和提升医疗 4.0 框架对网络攻击的抵抗力 [73,74]。必须强调的是，信息保护在健康领域至关重要，区块链创新有助于强化医疗 4.0 的安全性。
 
@@ -5908,25 +5497,19 @@ PoS 是一种算法，要求矿工在区块链中拥有足够的权益，这也�
 
 ## 参考文献
 
-1.  Surati, S., Patel, S., & Surati, K. (2020). Background and research challenges for FC for healthcare 4.0. Fog Computing for Healthcare 4.0 Environments, 37–53. Doi:[10.1007/978-3-030-46197-3\_2](http://doi.org/10.1007/978-3-030-46197-3_2).
+1.  Surati, S., Patel, S., & Surati, K. (2020). Background and research challenges for FC for healthcare 4.0. *Fog Computing for Healthcare 4.0 Environments*, 37–53. Doi: [10.1007/978-3-030-46197-3_2](http://doi.org/10.1007/978-3-030-46197-3_2).
 
-2.  Hathaliya, J. J., Tanwar, S., Tyagi, S., & Kumar, N. (2019). Securing electronics healthcare records in healthcare 4.0: a biometric-based approach. Computers & Electrical Engineering,76, 398–410. Doi:[10.1016/j.compeleceng.2019.04.017](http://doi.org/10.1016/j.compeleceng.2019.04.017).
+2.  Hathaliya, J. J., Tanwar, S., Tyagi, S., & Kumar, N. (2019). Securing electronics healthcare records in healthcare 4.0: a biometric-based approach. *Computers & Electrical Engineering*, 76, 398–410. Doi: [10.1016/j.compeleceng.2019.04.017](http://doi.org/10.1016/j.compeleceng.2019.04.017).
 
-3.  Azad, C., Bhushan, B., Sharma, R., Shankar, A., Singh, K. K., & Khamparia, A. (2021). Prediction model using SMOTE, genetic algorithm and decision tree (`PMSGD`) for classification of diabetes mellitus. Multimedia Systems. Doi:[10.1007/s00530-021-00817-2](http://doi.org/10.1007/s00530-021-00817-2).
+3.  Azad, C., Bhushan, B., Sharma, R., Shankar, A., Singh, K. K., & Khamparia, A. (2021). Prediction model using SMOTE, genetic algorithm and decision tree (`PMSGD`) for classification of diabetes mellitus. *Multimedia Systems*. Doi: [10.1007/s00530-021-00817-2](http://doi.org/10.1007/s00530-021-00817-2).
 
-4.  Khamparia, A., Singh, P. K., Rani, P., Samanta, D., Khanna, A., & Bhushan, B. (2020). An internet of health things‐driven deep learning framework for detection and classification of skin cancer using transfer learning. Transactions on Emerging Telecommunications Technologies. Doi: [10.1002/ett.3963](http://doi.org/10.1002/ett.3963).
+4.  Khamparia, A., Singh, P. K., Rani, P., Samanta, D., Khanna, A., & Bhushan, B. (2020). An internet of health things‐driven deep learning framework for detection and classification of skin cancer using transfer learning. *Transactions on Emerging Telecommunications Technologies*. Doi: [10.1002/ett.3963](http://doi.org/10.1002/ett.3963).
 
-5.  Parfett, A., Townley, S., & Allerfeldt, K. (2020). Ai-based healthcare: a new dawn or apartheid revisited? AI & Society. Doi:[10.1007/s00146-020-01120-w](http://doi.org/10.1007/s00146-020-01120-w).
+5.  Parfett, A., Townley, S., & Allerfeldt, K. (2020). Ai-based healthcare: a new dawn or apartheid revisited? *AI & Society*. Doi: [10.1007/s00146-020-01120-w](http://doi.org/10.1007/s00146-020-01120-w).
 
-6.  Alshehri, F., & Muhammad, G. (2021). A comprehensive survey of the Internet of Things (`IoT`) and ai-based smart healthcare. IEEE Access, 9, 3660–3678. Doi:[10.1109/access.2020.3047960](http://doi.org/10.1109/access.2020.3047960).
+6.  Alshehri, F., & Muhammad, G. (2021). A comprehensive survey of the Internet of Things (`IoT`) and ai-based smart healthcare. *IEEE Access*, 9, 3660–3678. Doi: [10.1109/access.2020.3047960](http://doi.org/10.1109/access.2020.3047960).
 
-7.  Goyal, S., Sharma, N., Bhushan, B., Shankar, A., & Sagayam, M. (2020). `IoT` enabled technology in secured healthcare: applications, challenges and future directions. Cognitive Internet of Medical Things for Smart Healthcare, 25–48. Doi: [10.1007/978-3-030-55833-8\_2](http://doi.org/10.1007/978-3-030-55833-8_2).
-
-
-
-
-
-## 参考文献
+7.  Goyal, S., Sharma, N., Bhushan, B., Shankar, A., & Sagayam, M. (2020). `IoT` enabled technology in secured healthcare: applications, challenges and future directions. *Cognitive Internet of Medical Things for Smart Healthcare*, 25–48. Doi: [10.1007/978-3-030-55833-8_2](http://doi.org/10.1007/978-3-030-55833-8_2).
 
 8.  **Kumar**, A., Krishnamurthi, R., Nayyar, A., Sharma, K., Grover, V., & Hossain, E. (2020). A novel smart healthcare design, simulation, and implementation using healthcare 4.0 processes. *IEEE Access*, 8, 118433–118471. Doi: [10.1109/access.2020.3004790](http://doi.org/10.1109/access.2020.3004790).
 
@@ -5954,37 +5537,35 @@ PoS 是一种算法，要求矿工在区块链中拥有足够的权益，这也�
 
 20.  **Bender**, J. L., Feldman-Stewart, D., Tong, C., Lee, K., Brundage, M., Pai, H., Robinson, J., & Panzarella, T. (2019). Health-related internet use among men with prostate cancer in Canada: cancer registry survey study. *Journal of Medical Internet Research*, 21(11). Doi: [10.2196/14241](http://doi.org/10.2196/14241).
 
-21.  **Yang**, L. (2020). Construction of integrated health care and elderly care Talent training system for health care and elderly care major in higher vocational education under combination of medical treatment and endowment. *2020 International Symposium on Advances in Informatics, Electronics, and Education (ISAIEE)*. Doi: [10.1109/isaiee51769.2020.00059](http://doi.org/10.1109/isaiee51769.2020.00059).
-
-22.  **Chander**, B. (2020). Wireless body sensor networks for patient health monitoring. *Advances in Healthcare Information Systems and Administration*, 132–154. Doi: [10.4018/978-1-7998-0261-7.ch006](http://doi.org/10.4018/978-1-7998-0261-7.ch006).
-
-23.  **Cardoso**, J., Voigt, K., & Winkler, M. Service engineering for the Internet of services. *Proceedings of the 18th International Conference on Enterprise Information Systems*. Berlin, Germany: Springer, 2008, pp. 15–27.
-
-24.  **Rana**, M. M., & Bo, R. (2019). IoT‐based cyber‐physical communication architecture: challenges and research directions. *IET Cyber-Physical Systems: Theory & Applications*, 5(1), 25–30. Doi: [10.1049/iet-cps.2019.0028](http://doi.org/10.1049/iet-cps.2019.0028).
-
-25.  **Kumar**, S., Srivastava, R., Pathak, S., & Kumar, B. (2020). Cloud-based computer-assisted diagnostic solutions for e-health. *Intelligent Data Security Solutions for e-Health Applications*, 219–235. Doi: [10.1016/b978-0-12-819511-6.00012-1](http://doi.org/10.1016/b978-0-12-819511-6.00012-1).
-
-26.  **Ahmad**, M., Amin, M. B., Hussain, S., Kang, B. H., Cheong, T., & Lee, S. (2016). Health fog: a novel framework for health and wellness applications. *The Journal of Supercomputing*, 72(10), 3677–3695. Doi: [10.1007/s11227-016-1634-x](http://doi.org/10.1007/s11227-016-1634-x).
-
-27.  **Bora**, D. J. (2019). Big data analytics in healthcare: a critical analysis. *Big Data Analytics for Intelligent Healthcare Management*, 43–57. Doi: [10.1016/b978-0-12-818146-1.00003-9](http://doi.org/10.1016/b978-0-12-818146-1.00003-9).
-
-28.  **Yu**, T., Wang, X., & Zhu, Y. (2019). Blockchain technology for the 5G-enabled Internet of Things systems: principle, applications and challenges. *5G-Enabled Internet of Things*, 301–321. Doi: [10.1201/9780429199820-14](http://doi.org/10.1201/9780429199820-14).
-
-29.  **Al-Jaroodi**, J., & Mohamed, N. (2019). Blockchain in industries: a survey. *IEEE Access*, 7, 36500–36515. Doi: [10.1109/access.2019.2903554](http://doi.org/10.1109/access.2019.2903554).
-
-30.  **Xu**, J., & Xu, L. (2017). Sensor system and health monitoring. *Integrated System Health Management*, 55–99. Doi: [10.1016/b978-0-12-812207-5.00002-x](http://doi.org/10.1016/b978-0-12-812207-5.00002-x).
-
-31.  **Gong**, H., Jones, E. S., Alden, R. E., Frye, A. G., Colliver, D., & Ionel, D. M. (2020). Demand response of HVACS in large residential communities based on experimental developments. *2020 IEEE Energy Conversion Congress and Exposition (ECCE)*. Doi: [10.1109/ecce44975.2020.9235465](http://doi.org/10.1109/ecce44975.2020.9235465).
-
-32.  **Betcheva**, L., Erhun, F., & Jiang, H. (2020). Healthcare supply chains. *The Oxford Handbook of Supply Chain Management*. Doi: [10.1093/oxfordhb/9780190066727.013.13](http://doi.org/10.1093/oxfordhb/9780190066727.013.13).
-
-33.  **Puthal**, D., Malik, N., Mohanty, S. P., Kougianos, E., & Das, G. (2018). Everything you wanted to know about the blockchain: its promise, components, processes, and problems. *IEEE Consumer Electronics Magazine*, 7(4), 6–14. Doi: [10.1109/mce.2018.2816299](http://doi.org/10.1109/mce.2018.2816299).
-
-
-
 
 
 ## 参考文献
+
+21. **Yang**, L. (2020). Construction of integrated health care and elderly care Talent training system for health care and elderly care major in higher vocational education under combination of medical treatment and endowment. *2020 International Symposium on Advances in Informatics, Electronics, and Education (ISAIEE)*. Doi: [10.1109/isaiee51769.2020.00059](http://doi.org/10.1109/isaiee51769.2020.00059).
+
+22. **Chander**, B. (2020). Wireless body sensor networks for patient health monitoring. *Advances in Healthcare Information Systems and Administration*, 132–154. Doi: [10.4018/978-1-7998-0261-7.ch006](http://doi.org/10.4018/978-1-7998-0261-7.ch006).
+
+23. **Cardoso**, J., Voigt, K., & Winkler, M. Service engineering for the Internet of services. *Proceedings of the 18th International Conference on Enterprise Information Systems*. Berlin, Germany: Springer, 2008, pp. 15–27.
+
+24. **Rana**, M. M., & Bo, R. (2019). IoT‐based cyber‐physical communication architecture: challenges and research directions. *IET Cyber-Physical Systems: Theory & Applications*, 5(1), 25–30. Doi: [10.1049/iet-cps.2019.0028](http://doi.org/10.1049/iet-cps.2019.0028).
+
+25. **Kumar**, S., Srivastava, R., Pathak, S., & Kumar, B. (2020). Cloud-based computer-assisted diagnostic solutions for e-health. *Intelligent Data Security Solutions for e-Health Applications*, 219–235. Doi: [10.1016/b978-0-12-819511-6.00012-1](http://doi.org/10.1016/b978-0-12-819511-6.00012-1).
+
+26. **Ahmad**, M., Amin, M. B., Hussain, S., Kang, B. H., Cheong, T., & Lee, S. (2016). Health fog: a novel framework for health and wellness applications. *The Journal of Supercomputing*, 72(10), 3677–3695. Doi: [10.1007/s11227-016-1634-x](http://doi.org/10.1007/s11227-016-1634-x).
+
+27. **Bora**, D. J. (2019). Big data analytics in healthcare: a critical analysis. *Big Data Analytics for Intelligent Healthcare Management*, 43–57. Doi: [10.1016/b978-0-12-818146-1.00003-9](http://doi.org/10.1016/b978-0-12-818146-1.00003-9).
+
+28. **Yu**, T., Wang, X., & Zhu, Y. (2019). Blockchain technology for the 5G-enabled Internet of Things systems: principle, applications and challenges. *5G-Enabled Internet of Things*, 301–321. Doi: [10.1201/9780429199820-14](http://doi.org/10.1201/9780429199820-14).
+
+29. **Al-Jaroodi**, J., & Mohamed, N. (2019). Blockchain in industries: a survey. *IEEE Access*, 7, 36500–36515. Doi: [10.1109/access.2019.2903554](http://doi.org/10.1109/access.2019.2903554).
+
+30. **Xu**, J., & Xu, L. (2017). Sensor system and health monitoring. *Integrated System Health Management*, 55–99. Doi: [10.1016/b978-0-12-812207-5.00002-x](http://doi.org/10.1016/b978-0-12-812207-5.00002-x).
+
+31. **Gong**, H., Jones, E. S., Alden, R. E., Frye, A. G., Colliver, D., & Ionel, D. M. (2020). Demand response of HVACS in large residential communities based on experimental developments. *2020 IEEE Energy Conversion Congress and Exposition (ECCE)*. Doi: [10.1109/ecce44975.2020.9235465](http://doi.org/10.1109/ecce44975.2020.9235465).
+
+32. **Betcheva**, L., Erhun, F., & Jiang, H. (2020). Healthcare supply chains. *The Oxford Handbook of Supply Chain Management*. Doi: [10.1093/oxfordhb/9780190066727.013.13](http://doi.org/10.1093/oxfordhb/9780190066727.013.13).
+
+33. **Puthal**, D., Malik, N., Mohanty, S. P., Kougianos, E., & Das, G. (2018). Everything you wanted to know about the blockchain: its promise, components, processes, and problems. *IEEE Consumer Electronics Magazine*, 7(4), 6–14. Doi: [10.1109/mce.2018.2816299](http://doi.org/10.1109/mce.2018.2816299).
 
 34. Haque, A. K., Bhushan, B., & Dhiman, G. (2021). 智慧城市应用概念化：需求、架构、安全问题与新兴趋势。*Expert Systems*。Doi: [10.1111/exsy.12753](http://doi.org/10.1111/exsy.12753)。
 
@@ -6028,6 +5609,10 @@ PoS 是一种算法，要求矿工在区块链中拥有足够的权益，这也�
 
 54. Chen, F., Tang, Y., Cheng, X., Xie, D., Wang, T., & Zhao, C. (2021). 面向医疗网络物理系统的基于区块链的高效设备认证协议。*Security and Communication Networks*, 2021, 1–13。Doi: [10.1155/2021/5580939](http://doi.org/10.1155/2021/5580939)。
 
+
+
+## 参考文献
+
 55. Tondwalkar, A., & Vinayakray-Jani, P. (2016). 基于隐写术的无线设备安全定位及其在传感器网络中的应用。*Procedia Computer Science*, 78, 610–616。Doi: [10.1016/j.procs.2016.02.107](http://doi.org/10.1016/j.procs.2016.02.107)。
 
 56. Lin, H., Chen, C., Wang, J., Qi, J., Jin, D., Kalbarczyk, Z. T., & Iyer, R. K. (2018). 面向电力系统运行的自愈抗攻击 PMU 网络。*IEEE Transactions on Smart Grid*, 9(3), 1551–1565。Doi: [10.1109/tsg.2016.2593021](http://doi.org/10.1109/tsg.2016.2593021)。
@@ -6037,12 +5622,6 @@ PoS 是一种算法，要求矿工在区块链中拥有足够的权益，这也�
 58. Breiter, M., & Nowak, R. M. (2019). 支持向后和向前兼容性的新 C++ 序列化库。*Photonics Applications in Astronomy, Communications, Industry, and High-Energy Physics Experiments*。Doi: [10.1117/12.2536387](http://doi.org/10.1117/12.2536387)。
 
 59. Moussa, M., & Demurjian, S. A. (2017). 面向医疗大数据隐私的差分隐私方法。*Privacy and Security Policies in Big Data*, 191–213。Doi: [10.4018/978-1-5225-2486-1.ch009](http://doi.org/10.4018/978-1-5225-2486-1.ch009)。
-
-
-
-
-
-## 参考文献
 
 60. Correa-de-Araujo, R. (2017). Enhancing data access and utilization: federal big data initiative and relevance to health disparities research. *Big Data-Enabled Nursing*, 227–251. Doi: [10.1007/978-3-319-53300-1_12](http://doi.org/10.1007/978-3-319-53300-1_12)。
 
@@ -6056,7 +5635,7 @@ PoS 是一种算法，要求矿工在区块链中拥有足够的权益，这也�
 
 65. Philip, J., & Raju, M. (2020). Security impact of trusted execution environment in rich execution environment based systems. *Indian Journal of Computer Science*, 5(4&5), 26. Doi: [10.17010/ijcs/2020/v5/i4-5/154785](http://doi.org/10.17010/ijcs/2020/v5/i4-5/154785)。
 
-66. Joseph, M., Mao, J., Neel, S., & Roth, A. (2019). The role of interactivity in local differential privacy. *2019 IEEE 60th Annual Symposium on Foundations of Computer Science (FOCS). * Doi: [10.1109/focs.2019.00015](http://doi.org/10.1109/focs.2019.00015)。
+66. Joseph, M., Mao, J., Neel, S., & Roth, A. (2019). The role of interactivity in local differential privacy. *2019 IEEE 60th Annual Symposium on Foundations of Computer Science (FOCS).* Doi: [10.1109/focs.2019.00015](http://doi.org/10.1109/focs.2019.00015)。
 
 67. Oyeleye, O. A. (2021). The HIPAA privacy rule, COVID-19, and nurses’ privacy rights. *Nursing*, 51(2), 11–14. Doi: [10.1097/01.nurse.0000731892.59941.a9](http://doi.org/10.1097/01.nurse.0000731892.59941.a9)。
 
@@ -6070,7 +5649,7 @@ PoS 是一种算法，要求矿工在区块链中拥有足够的权益，这也�
 
 72. Madaan, G., Bhushan, B., & Kumar, R. (2020). Blockchain-based cyberthreat mitigation systems for smart vehicles and industrial automation. *Studies in Big Data Multimedia Technologies in the Internet of Things Environment*, 13–32. Doi: [10.1007/978-981-15-7965-3_2](http://doi.org/10.1007/978-981-15-7965-3_2)。
 
-73. Mironov, I. (2017). Rényi differential privacy. *2017 IEEE 30th Computer Security Foundations Symposium (CSF). * Doi: [10.1109/csf.2017.11](http://doi.org/10.1109/csf.2017.11)。
+73. Mironov, I. (2017). Rényi differential privacy. *2017 IEEE 30th Computer Security Foundations Symposium (CSF).* Doi: [10.1109/csf.2017.11](http://doi.org/10.1109/csf.2017.11)。
 
 74. Khedekar, V. B., Hiremath, S. S., Sonawane, P. M., & Rajput, D. S. (2020). Protection to personal data using decentralizing privacy of blockchain. *Transforming Businesses with Bitcoin Mining and Blockchain Applications*, 173–194. Doi: [10.4018/978-1-7998-0186-3.ch010](http://doi.org/10.4018/978-1-7998-0186-3.ch010)。
 
@@ -6089,12 +5668,6 @@ PoS 是一种算法，要求矿工在区块链中拥有足够的权益，这也�
 *   **区块链** 2–5, 10–13, 23–26, 41, 46–50, 53–58, 62–64, 67–71, 80–82, 87, 154, 158–164, 166–168, 171–172, 176–193, 201–211, 218, 226, 233–243, 247, 254–268, 277–291, 300–301, 304–307, 310–312
 
 *   **聚类** 62, 63, 66–72, 77–80
-
-
-
-
-
-## 索引
 
 *   **共识** 2, 4–5, 12–13, 24–25, 41, 46–49, 62, 70–71, 155, 158, 159, 162, 176, 178–179, 182–183, 186–187, 202, 204, 235, 239, 257–258, 278–279, 283, 288–289, 304–307
 
@@ -6134,12 +5707,6 @@ PoS 是一种算法，要求矿工在区块链中拥有足够的权益，这也�
 
 *   **不可篡改性** 4, 41, 47, 49, 54, 108, 171, 182, 188, 191, 201–202, 204, 208, 210, 255–256, 279–280
 
-
-
-
-
-## 索引
-
 *   **物联网** 2–3, 21, 45, 69, 87, 123, 149, 154, 156–157, 200, 215, 228, 238, 256, 298
 
 *   **入侵者** 2, 7–10, 223, 258
@@ -6160,25 +5727,14 @@ PoS 是一种算法，要求矿工在区块链中拥有足够的权益，这也�
 
 *   **供应链管理** 176, 185, 191, 208, 233
 
+
+
 *   **时间戳** 3, 5, 48, 56, 62–63, 71, 73, 77–78, 80, 177–179, 181, 185
-
 *   **可追溯性** 119, 162, 201–202, 205–206, 208–210, 239–240, 254, 265–266, 268, 277, 279–281, 284
-
 *   **交易流程** 3, 4, 62, 79–80, 190, 203, 289
-
 *   **交易** 3, 24, 25, 41, 46–49, 55, 57, 62–64, 82, 158, 176, 177–189, 192, 201–204, 209, 242, 254, 256–258, 262, 264–267, 278–279, 282–285, 287, 304–306, 311
-
-
-
-
-
 *   **治疗** 88, 93, 97, 100, 103–104, 109, 155–156, 159–160, 162, 163, 165, 200, 205, 207, 210, 263–265, 276, 287, 299, 302
-
 *   **验证器** 24–29, 35–36, 40, 204
-
 *   **验证过程** 49, 244
-
 *   **漏洞** 9, 22, 169, 183, 192, 223, 308–309, 312
-
 *   **可穿戴设备** 90, 156, 164, 166, 169
-

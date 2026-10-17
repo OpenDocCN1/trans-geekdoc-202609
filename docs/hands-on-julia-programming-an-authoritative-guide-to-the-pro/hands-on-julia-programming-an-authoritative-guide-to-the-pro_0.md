@@ -1,20 +1,7 @@
-## Julia 编程实用指南：面向生产就绪系统的权威指南
 
+# Julia 编程实用指南：面向生产就绪系统的权威指南
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 前言
+## 前言
 
 我在 Julia 语言早期就认识了 Sambit。事实上，我们最初的电子邮件交流集中在 Julia 为了成为一门对数据科学家和程序员有用的语言所需要的所有改进上。在过去的几年里，Julia 持续发展，并于 2018 年发布了 Julia 1.0。那些年里，Sambit 为多个 Julia 包做出了多项贡献，Julia 社区对此始终心存感激。然而，仅靠代码不足以建立社区。拥有高质量的文档和书籍来帮助程序员学习一门新语言同样重要。《实战 Julia 编程》为这门年轻、现代且呈指数级增长的语言做出了宝贵贡献。
 
@@ -30,24 +17,24 @@ CEO
 
 *Julia Computing Inc.*
 
-# 献给
+## 献给
 
 *我的父母*
 
-# 作者简介
+## 作者简介
 
 **Sambit Kumar Dash** 是一位成就卓著的业务经理，专注于技术，拥有将技术产品创意变为现实的 20 多年产品与业务管理、架构、研发经验。
 
 他在文档技术、计算机安全、人工智能和自然语言处理方面拥有深厚的技术和产品知识。他构思并开发了一个用 Julia 语言编写的 PDF 阅读器库。该库可在 GitHub 上查看（**[`github.com/sambitdash/PDFIO.jl`](https://github.com/sambitdash/PDFIO.jl)**）。他热衷于开发新技术，在文档技术、计算机安全、虚拟化和人机界面方面拥有八项专利申请。他目前正通过其初创公司 Lenatics Solutions Private Limited，利用 AI 和机器学习开发法律分析产品。
 
-## 教育背景
+### 教育背景
 
 - B.Tech.（机械工程）IIT Kharagpur
 - M.Tech.（机器人工程）IIT Kanpur
 - PGSEM (MBA) IIM Bangalore
 - MBL, NLSIU Bangalore
 
-# 审稿人简介
+## 审稿人简介
 
 **Daniel Molina Cabrera** 目前是西班牙格拉纳达大学计算机科学副教授。他是人工智能领域的知名研究者，特别是在大规模全局优化方面，曾在 2010 年和 2018 年赢得两项国际竞赛。直到 2019 年，他一直担任 IEEE CIS 大规模优化任务组主席。他在国际科学期刊上发表了 32 多篇研究论文，引用次数超过 4800 次。他在编程方面也拥有多年经验，特别是在自动化和 Web（作为后端开发者）以及 Python 和 Julia 等高级语言方面。在这两种语言中，他都开发了多个注册包，如 `DaemonMode.jl`。他一直是自由软件社区和开放知识的一部分，开发软件以使研究更轻松，如 **tacolab.org**，并在 PythonES 和 JuliaCon 2021 等技术会议上发表过演讲。
 
@@ -55,7 +42,7 @@ CEO
 
 **Tanmay Mohapatra** (**[`github.com/tanmaykm`](https://github.com/tanmaykm)**) 撰写并贡献了多个用于并行和云计算的 Julia 包。他目前在 Julia Computing Inc. 担任首席软件工程师。
 
-# 致谢
+## 致谢
 
 首先，我要感谢我的父母和妻子，感谢他们在本书创作过程中给予我的支持。对于我以写作为由推迟的无数家庭活动和事件，向他们致歉。
 
@@ -65,15 +52,11 @@ Tanmay Mohapatra 向我介绍了 Julia 编程语言，并就多个章节提供�
 
 特别感谢 BPB Publications。特别是 Nrip Jain，感谢他们在创作和出版本书过程中的支持、建议和协助。
 
-# 序言
+## 序言
 
 四年前，我开始为我的创业项目寻找技术；当时只有 Python 和 R 可供选择。Go 语言正在崛起，但当时在 AI 社区并不流行。Julia 语言的 1.0 版本尚未发布。围绕其功效声称普遍存在怀疑态度。
 
-
-
-
-
-# 前言
+## 前言
 
 我是从 Tanmay 那里听说 Julia 的。他并没有向我推销这门语言，只是希望我了解一下。仅仅将其视为一个开源项目。我喜欢这门语言。它拥有简洁的语法。所宣称的性能基准测试令人印象深刻；且有扎实的理论基础作为支撑。我面临的挑战是缺乏一致的包管理或环境。简而言之，没有 `pip` 或 `conda` 可供查找。作为一名 90 年代末和 21 世纪初的开发者，我精通面向对象编程。因此，像 Python 这样的语言非常适合我。Julia 不符合那种模型。为了获得在高性能环境中编程的能力——无需为生产环境重写代码——这点代价微不足道。
 
@@ -87,13 +70,13 @@ Tanmay Mohapatra 向我介绍了 Julia 编程语言，并就多个章节提供�
 
 非常感谢你选择本书。希望你能像我通过本书向你介绍 Julia 一样，享受学习 Julia 的乐趣。
 
-# 下载代码包和彩色图片
+## 下载代码包和彩色图片
 
 请访问以下链接下载本书的**代码包**和**彩色图片**：
 
 <https://rebrand.ly/96ae0c>
 
-# 勘误表
+## 勘误表
 
 我们在 BPB Publications 为我们的工作感到无比自豪，并遵循最佳实践以确保内容的准确性，为订阅者提供沉浸式的阅读体验。我们的读者是我们的镜子，我们利用他们的反馈来反思并改进出版过程中可能发生的人为错误。为了让我们保持质量，并帮助我们联系到可能因任何不可预见的错误而遇到困难的读者，请写信给我们：
 
@@ -105,7 +88,7 @@ BPB Publications 全家高度赞赏您的支持、建议和反馈。
 
 在 <http://www.bpbonline.com>，您还可以阅读免费技术文章合集，订阅一系列免费通讯，并获得 BPB 书籍和电子书的独家折扣和优惠。
 
-# BPB 正在寻找像您这样的作者
+## BPB 正在寻找像您这样的作者
 
 如果您有兴趣成为 BPB 的作者，请访问 <http://www.bpbonline.com/> 并立即申请。我们已与数千名像您一样的开发者和技术专业人士合作，帮助他们与全球技术社区分享见解。您可以提交一般申请，申请我们正在招募作者的特定热门主题，或提交您自己的想法。
 
@@ -113,29 +96,19 @@ BPB Publications 全家高度赞赏您的支持、建议和反馈。
 
 我们还在 <https://github.com/bpbpublications> 提供了来自我们丰富图书和视频目录的其他代码包。去看看吧！
 
-# 盗版
+## 盗版
 
 如果您在互联网上以任何形式发现我们作品的非法副本，如果您能向我们提供位置地址或网站名称，我们将不胜感激。请联系 <business@bpbonline.com> 并附上相关材料链接。
 
-# 如果您有兴趣成为作者
+## 如果您有兴趣成为作者
 
 如果您在某个主题上有专长，并有兴趣撰写或为书籍做贡献，请访问 <http://www.bpbonline.com/>。
 
-# 评论
+## 评论
 
 请留下评论。一旦您阅读并使用了本书，为什么不在购买网站上留下评论呢？潜在读者可以看到并利用您的公正意见做出购买决定，我们 BPB 可以了解您对我们产品的看法，我们的作者也能看到您对他们书籍的反馈。谢谢！
 
 有关 BPB 的更多信息，请访问 <http://www.bpbonline.com/>。
-
-
-
-
-
-
-
-
-
-
 
 # Julia 入门指南
 
@@ -165,15 +138,15 @@ Julia 的设计初衷是服务于希望将贡献直接应用于生产代码的�
 
 就整个代码生成基础设施而言，Julia 平台是自给自足的。如果您安装平台用于常规开发工作，无需安装任何额外组件。不过，它与 `Emacs`、`vi` 和 `Sublime`[11] 等编辑器有集成。基于 `Atom` 和 `Microsoft Code` (VS Code) 实现了功能齐全且托管的 IDE。您可以使用这些 IDE 进行功能导航、行调试、显示交互式绘图等。工具链与源代码控制 (如 `GitHub`、`GitLab` 等 Git 衍生工具)、覆盖率工具 (`CoverAll.io`、`CodeCov`)、持续集成系统 (`GitHub Actions`) 等无缝集成。
 
-
-
-
-
 # Julia 生态系统与社区
 
 任何不可扩展的平台在当今世界都是不完整的。Julia 深谙这一需求，提供了完整的包开发和管理生态系统。你可以使用 `JuliaHub`[¹] 搜索所需的包并将其部署到你的环境中。目前约有 4500+ 个包，与 `Python`、`R`、`MATLAB` 等其他平台相比，这个数量相当有限。然而，对于一门在 2018 年 10 月才达到稳定接口 **版本 1.0** 的语言来说，这个数字显示了持续增强平台生态系统的兴趣。虽然某些功能可能在 Julia 中不存在，但考虑等效的 C/C++ 或 Java 二进制文件，并使用原生接口将它们与你的 Julia 代码集成并不难。Julia 包基础设施基于 `git`，这使得人们开发自己的私有仓库变得非常容易。此外，完整的包和环境管理系统 `Pkg` 提供了独立的环境，从而保持了包之间的兼容性。
 
 ## 云原生应用开发
+
+
+
+# Julia 编程语言概述
 
 当你开始使用 Julia 时，你会意识到该系统非常适合基于云的应用程序开发。Julia 将在后端系统中用于计算层，而将渲染和连接管理接口留给定义良好的应用程序和 Web 服务器。虽然一些基于 Web 的应用程序服务器是用 Julia 开发的，但它们大多处于实验阶段。大多数用 Julia 编写的代码都以源代码形式保存，适合 JIT 编译。因此，静态编译代码不是 Julia 中最常见的部署实践，尽管通过某些包[²] 可以实现这种灵活性。作为一个基于服务器的平台，Julia 及其包集合可以轻松部署在 AWS、Azure 等云平台上，或作为 `Docker` 包交付。
 
@@ -208,20 +181,26 @@ Julia 大约在十年前构想出来，但在 2012 年作为一个开源项目�
 本章阐述 Julia 语言背后的基本原理和历史，提供初始安装和配置过程，并在章节末尾展示一些简单的示例。
 
 [¹]: 文中引用标记 12
+
 [²]: 文中引用标记 13
+
 [³]: 文中引用标记 14
+
 [⁴]: 文中引用标记 15
+
 [⁵]: 文中引用标记 16
+
 [⁶]: 文中引用标记 17
+
 [⁷]: 文中引用标记 18
+
 [⁸]: 文中引用标记 19
+
 [⁹]: 文中引用标记 20
+
 [¹⁰]: 文中引用标记 21
+
 [¹¹]: 文中引用标记 22
-
-
-
-
 
 # Julia 数据类型与控制流概述
 
@@ -280,10 +259,6 @@ Julia 提供了某些标准数据类型，如 `Array`、`Dict` 和 `Set`。虽�
 # 性能优化
 
 性能是科学计算的关键，对 Julia 而言是基本设计考量之一 23。因此，极度关注确保 Julia 中编写的每段代码都能轻松计时，并可检查任何可能导致性能损失的异常。Julia 提供了性能改进的通用指南，提供了许多分析性能瓶颈和针对标准进行基准测试的工具。在本章中，我们将回顾许多有助于提高代码性能的工具。
-
-
-
-
 
 # 集成开发环境 (IDE)
 
@@ -345,24 +320,33 @@ Julia 平台在持续演进。因此，在学习本书时，建议使用最新�
 Julia 二进制文件只是 `.tar.gz` 包，可以轻松安装在用户的主目录中。我们建议按照以下说明在主目录中进行简单安装。
 
 1.  打开一个带有 bash shell 的终端。
+
 2.  使用以下命令创建一个 `julia-versions` 目录并进入该目录：
+
     ```
     $ mkdir ~/julia-versions
     $ cd ~/julia-versions
     ```
+
 3.  现在解压下载到 Julia-versions 文件夹中的包。
+
     ```
     $ tar -xvzf julia-x.y.z-linux-x86_64.tar.gz
     ```
+
 4.  现在切换到主目录并创建一个指向已安装 Julia 版本的符号链接。
+
     ```
     $ cd
     $ ln -s ~/julia-versions/julia-x.y.z julia
     ```
+
 5.  通过以下命令将 Julia bin 目录添加到 bash 启动脚本 (`.bashrc` 或 `.bash_profile`) 的 `PATH` 变量中：
+
     ```
     $ export PATH="/home/user/julia/bin:$PATH"
     ```
+
 6.  重新启动 bash shell。
 
 ## Windows 安装
@@ -370,10 +354,15 @@ Julia 二进制文件只是 `.tar.gz` 包，可以轻松安装在用户的主目
 Julia 为 Windows 平台提供了安装程序。用户无需管理员权限即可启动安装程序。以下是在 Windows 平台上的推荐步骤：
 
 1.  点击安装程序可执行文件以启动它。
+
 2.  浏览到您想要安装 Julia 的路径：
+
     ![](img/n4upl4fndqb.jpeg)
+
     **图 1.1：** Julia Windows 安装程序
+
     默认路径为：`%LOCALAPPDATA%\Programs\Julia x.y.z`
+
 3.  按照链接中描述的步骤，将 Julia bin 目录：`%LOCALAPPDATA%\Programs\Julia x.y.z\bin` 添加到环境变量中：<https://julialang.org/downloads/platform/#windows>
 
 # 验证安装
@@ -382,11 +371,9 @@ Julia 为 Windows 平台提供了安装程序。用户无需管理员权限即�
 
 ![](img/n4upl4fndqc.jpeg)
 
-
-
-
-
 让我们在 REPL 提示符下尝试几个实验。
+
+
 
 ```
 julia> 2 + 2
@@ -425,7 +412,7 @@ Info: running `/home/sambit/anaconda3/bin/jupyter notebook`
 
 命令结束时，将打开一个新的浏览器窗口，显示如下截图所示的 Jupyter：
 
-![**图 1.2：** 从 Julia REPL 启动的 Jupyter 浏览器窗口使用 GUI 创建一个以 *Julia 1.6.0* 为内核的新笔记本，如下所示：![](img/n4upl4fndqe.jpeg)
+![图 1.2：从 Julia REPL 启动的 Jupyter 浏览器窗口使用 GUI 创建一个以 *Julia 1.6.0* 为内核的新笔记本，如下所示：](img/n4upl4fndqe.jpeg)
 
 **图 1.3：** 创建一个带有 Julia 1.6.0 内核的新笔记本
 
@@ -477,8 +464,9 @@ Julia 是一门非常强大的语言。虽然它是为数据科学应用而设�
 
 # 练习
 
-1.  在你选择的机器上安装 Julia 并启动 REPL。
-2.  安装 IJulia 和 Jupyter。确保你可以在 Jupyter 笔记本中运行 Julia 代码。
+1. 在你选择的机器上安装 Julia 并启动 REPL。
+
+2. 安装 IJulia 和 Jupyter。确保你可以在 Jupyter 笔记本中运行 Julia 代码。
 
 ---
 
@@ -506,7 +494,7 @@ Julia 是一门非常强大的语言。虽然它是为数据科学应用而设�
 
 [11] JuliaEditorSupport, GitHub Repositories, [`github.com/JuliaEditorSupport`](https://github.com/JuliaEditorSupport)
 
-[12] JuliaHub, [`juliahub.com/ui/Home`](https://juliahub.com/ui/Home)
+[12] JuliaHub, [`juliahub.com/ui/Home`](https://https://juliahub.com/ui/Home)
 
 [13] PackageCompiler, [`github.com/JuliaLang/PackageCompiler.jl`](https://github.com/JuliaLang/PackageCompiler.jl)
 
@@ -525,10 +513,6 @@ Julia 是一门非常强大的语言。虽然它是为数据科学应用而设�
 [20] This annual conference is being organized from 2014. JuliaCon, 2020, [`juliacon.org/2020/`](https://juliacon.org/2020/)
 
 [21] The Julia Community, [`julialang.org/community/`](https://julialang.org/community/)
-
-
-
-
 
 ## 参考文献与资源
 
@@ -594,21 +578,19 @@ Julia Seasons of Contribution, <https://julialang.org/jsoc/>
 
 The Julia Community, <https://julialang.org/community/>
 
-
-
-
-
 # Julia 语言概述与优势
 
 ## 年度会议
 
-JuliaCon 自 2014 年起每年举办一次。2020 年会详情请访问 **[`juliacon.org/2020/`](https://juliacon.org/2020/)**。
+JuliaCon 自 2014 年起每年举办一次。2020 年会详情请访问 [`juliacon.org/2020/`](https://juliacon.org/2020/)。
 
 ## 核心优势：开放性与社区贡献
 
 使用像 Julia 这样相对较新的编程语言最大的优势在于其灵活性：开发者可以深入代码内部理解实现细节，通过提交 Issue 建议变更，提交 PR 并积极贡献生态系统。对于有意愿和能力贡献代码、推动期望变更的开发者来说，这绝对是一个值得深入探索的领域。
 
-对于学生而言，参与 Julia 贡献可通过 *Google Summer of Code* 赞助项目获得资助，从而满足职业实习需求。如果你是一名喜欢深入一线实战的开发者，Julia 提供了一个既可工作又可贡献的平台。社区对新手程序员的贡献极其包容鼓励，这也是快速学习和深入理解系统的捷径。
+
+
+对于学生而言，参与 Julia 贡献可通过 `Google Summer of Code` 赞助项目获得资助，从而满足职业实习需求。如果你是一名喜欢深入一线实战的开发者，Julia 提供了一个既可工作又可贡献的平台。社区对新手程序员的贡献极其包容鼓励，这也是快速学习和深入理解系统的捷径。
 
 ## 面向研究者的设计理念
 
@@ -619,14 +601,14 @@ Julia 专为研究人员设计，旨在让他们的贡献直接进入生产代�
 - **多重分发**：提供类似面向对象系统的简易多态设计。
 - **递归与迭代**：像大多数函数式语言一样，在需要时鼓励递归编程，同时完全支持迭代编程。缺乏原生尾调用优化支持可视为一个小瓶颈。
 - **数学表达支持**：原生支持 Unicode 变量和集合论表达式，帮助研究人员在 Julia 中编写完整的数学表达式。
-- **文档系统**：许多社区研究人员结合 LaTeX 文档管理系统开发应用，以便以可导出出版格式展示研究成果。部分社区成果已发表于各类研究出版物。
-- **交互模式**：`IJulia` 和 `Jupyter` 等交互模式提供了易于原型开发的环境，控制台 **REPL** 同样可用。
+- **文档系统**：许多社区研究人员结合 `LaTeX` 文档管理系统开发应用，以便以可导出出版格式展示研究成果。部分社区成果已发表于各类研究出版物。
+- **交互模式**：`IJulia` 和 `Jupyter` 等交互模式提供了易于原型开发的环境，控制台 `REPL` 同样可用。
 
 ## 云原生与部署特性
 
 Julia 非常适合基于云的应用开发。它在后端系统中作为计算层运行，将渲染和连接管理接口留给定义良好的应用程序和 Web 服务器。虽然存在一些基于 Julia 的 Web 应用服务器，但大多处于实验阶段。
 
-大多数 Julia 代码以源代码形式保存，适合 JIT 编译。因此，静态编译代码并非 Julia 中最常见的部署实践，尽管通过特定包（如 `PackageCompiler`）可实现该灵活性。作为服务端平台，Julia 及其包集合可轻松部署于 AWS、Azure 等云平台，或作为 *Docker* 镜像交付。
+大多数 Julia 代码以源代码形式保存，适合 JIT 编译。因此，静态编译代码并非 Julia 中最常见的部署实践，尽管通过特定包（如 `PackageCompiler`）可实现该灵活性。作为服务端平台，Julia 及其包集合可轻松部署于 AWS、Azure 等云平台，或作为 `Docker` 镜像交付。
 
 ## 语言演进与竞争格局
 
@@ -642,7 +624,7 @@ Julia 2012 年首次亮相，是“新来的小伙子”。但正如你将看到
 任何不可扩展的平台在今天都是不完整的。Julia 深谙此道，提供了完整的包开发和管理生态系统。
 
 - **JuliaHub**：可用于搜索所需包并部署到环境中（参考文献 12）。
-- **包数量**：约 4500+ 个包，相比 *Python*、*R*、*MATLAB* 等平台数量有限。但考虑到 Julia 于 2018 年 10 月发布稳定的 *version 1.0*，这一数字显示出持续增强生态系统的浓厚兴趣。
+- **包数量**：约 4500+ 个包，相比 `Python`、`R`、`MATLAB` 等平台数量有限。但考虑到 Julia 于 2018 年 10 月发布稳定的 `version 1.0`，这一数字显示出持续增强生态系统的浓厚兴趣。
 - **外部集成**：若功能缺失，可轻松集成等效的 C/C++ 或 Java 二进制文件，通过原生接口与 Julia 代码交互。
 - **基础设施**：包基础设施基于 `git`，极易开发私有仓库。
 - **环境管理**：完整的包和环境管理系统 `Pkg` 提供独立环境，确保包间兼容性。
@@ -669,9 +651,6 @@ Julia 作为开源项目集合开发。我们强调“开源项目集合”这�
 
 - **Julia 语言核心**：采用 **MIT License** (参考文献 14)，在使用和扩展源代码方面提供极大灵活性，也便于将完整 Julia 或其衍生版包含在其他应用开发中。
 - **生态包**：大多数 Julia 包遵循类似许可方案。请在商业授权产品中使用前，务必审查相关包的许可灵活性 (参考文献 15)。
-
-
-
 
 # Julia 平台优势与企业级特性
 
@@ -703,9 +682,6 @@ Julia 是作为一个**开源项目集合**进行开发的。我们坚持使用�
 
 Julia 语言还维护所有主要版本（如 1.0）作为**长期支持（LTS）**版本，以满足企业支持需求。最重要的是，Julia 由 **Julia Computing Inc.** 支持，这是一家提供工具、支持 Julia 并积极参与 Julia 编程社区活动的企业。对 Julia Computing 工具感兴趣的企业可以从他们那里获得各种支持计划。Julia 语言的所有创始成员目前均受雇于 Julia Computing。
 
-
-
-
 # Julia 社区与类型系统概述
 
 ## 社区生态
@@ -734,7 +710,7 @@ Julia 语言还维护所有主要版本（如 1.0）作为**长期支持（LTS�
 
 ## 变量、常量与字面量
 
-动态类型编程语言通常不以拥有完善的类型系统而闻名。在 Python 中数据类型是可选的。人们使用各种包（如 NumPy）来定义数值数据类型。Julia 的类型系统是动态的，并且几乎总是在变量实例化时推断。数据类型在代码段执行或 Julia 代码**即时编译**（`JIT`）之前就已知晓。简而言之，Julia 原生支持数据类型，这些类型可以在任何变量或字面量使用前被定义或推断。在深入探讨数据类型之前，让我们先了解一些关于变量、常量和字面量的知识。
+动态类型编程语言通常不以拥有完善的类型系统而闻名。在 Python 中数据类型是可选的。人们使用各种包（如 `NumPy`）来定义数值数据类型。Julia 的类型系统是动态的，并且几乎总是在变量实例化时推断。数据类型在代码段执行或 Julia 代码**即时编译**（`JIT`）之前就已知晓。简而言之，Julia 原生支持数据类型，这些类型可以在任何变量或字面量使用前被定义或推断。在深入探讨数据类型之前，让我们先了解一些关于变量、常量和字面量的知识。
 
 ### 变量
 
@@ -823,9 +799,6 @@ julia> ICONSTANT=5
 WARNING: redefinition of constant ICONSTANT. This may fail, cause incorrect answers, or produce other errors.
 5
 ```
-
-
-
 
 # Julia 常量、字面量与基础类型
 
@@ -951,6 +924,8 @@ Julia 语言内置了许多类型，更多类型定义于 Julia 标准库中，�
 
 `Nothing` 是值 `nothing` 的类型。在 C/C++ 等语言中，`void` 等类似值常用于类似目的。但在 Julia 中，`nothing` 不是关键字。
 
+
+
 ```julia
 julia> typeof(nothing)
 Nothing
@@ -1038,8 +1013,6 @@ true
 稍后我们将详细探讨此概念。值得注意的是，一个类型只能从一个抽象类型派生。中缀运算符 `isa` 用于判断某对象是否为特定类型，该类型可以是具体类型或抽象类型。以下是 Julia 数值类型的类型层级图：
 
 ![](img/n4upl4fndrd.jpeg)
-
-
 
 **图 2.1：** 数值类型层级
 
@@ -1198,18 +1171,15 @@ julia> typeof(a.member)
 String
 ```
 
-
-
-
-`<strong>a.member</strong>` 曾为 `<strong>Int64</strong>` 类型，现在变为 `<strong>String</strong>` 类型。Julia 会将此类未指定的类型推定为 `<strong>Any</strong>`。在无法确定类型的场景下，Julia 会将类型推定为 `<strong>Any</strong>`。从性能角度来看，使用 `<strong>Any</strong>` 是不可取的。每次访问 `<strong>Any</strong>` 类型的对象时，都会发生一次额外的重定向以访问实际对象。`Any` 类型对象的大小无法提前得知。它将是一个指针，指向内存中实际对象驻留的另一位置：
+`a.member` 曾为 `Int64` 类型，现在变为 `String` 类型。Julia 会将此类未指定的类型推定为 `Any`。在无法确定类型的场景下，Julia 会将类型推定为 `Any`。从性能角度来看，使用 `Any` 是不可取的。每次访问 `Any` 类型的对象时，都会发生一次额外的重定向以访问实际对象。`Any` 类型对象的大小无法提前得知。它将是一个指针，指向内存中实际对象驻留的另一位置：
 
 ![](img/n4upl4fndre.jpeg)
 
 **图 2.2：** (a) 成员定义为 Any (b) 成员定义为 Float32
 
-将 `<strong>Any</strong>` 作为类型会引入不必要的间接寻址，因此可能效率低下。有时类型不一定影响算法，但会引入不同的数据位宽。例如，前文在数值数据类型背景下介绍的 `<strong>Rational</strong>` 数据类型，其分子和分母可以是任意整数数据类型，如 `<strong>Int8</strong>`、`<strong>Int16</strong>`、`<strong>Int32</strong>`、`<strong>Int64</strong>` 或 `<strong>Int128</strong>`。`<strong>Rational</strong>` 数据类型的定义如下 6：
+将 `Any` 作为类型会引入不必要的间接寻址，因此可能效率低下。有时类型不一定影响算法，但会引入不同的数据位宽。例如，前文在数值数据类型背景下介绍的 `Rational` 数据类型，其分子和分母可以是任意整数数据类型，如 `Int8`、`Int16`、`Int32`、`Int64` 或 `Int128`。`Rational` 数据类型的定义如下 6：
 
-`<strong>:</strong>`
+`:`
 
 ```
 struct Rational{T<:Integer} <: Real
@@ -1218,7 +1188,7 @@ struct Rational{T<:Integer} <: Real
 end
 ```
 
-该类型的两个属性 `<strong>num</strong>` 和 `<strong>den</strong>` 均为 `<strong>T</strong>` 类型，其中 `<strong>T</strong>` 是 Integer 的子类型。`<strong>Rational</strong>` 是 Real 的子类型。以下是关于参数化数据类型的一些观察。
+该类型的两个属性 `num` 和 `den` 均为 `T` 类型，其中 `T` 是 Integer 的子类型。`Rational` 是 Real 的子类型。以下是关于参数化数据类型的一些观察。
 
 ```
 julia> Rational{Any}
@@ -1235,7 +1205,7 @@ julia> Rational{Int32} <: Rational{Integer}
 false
 ```
 
-理解这种行为尤为重要。尽管 `<strong>Int32</strong>` 是 Integer 的子类型，但参数化表示 `<strong>Rational{Int32}</strong>` 并不是 `<strong>Rational{Integer}</strong>` 的子类型。然而 `<strong>Rational{Int32}</strong>` 是 Rational 的子类型。
+理解这种行为尤为重要。尽管 `Int32` 是 Integer 的子类型，但参数化表示 `Rational{Int32}` 并不是 `Rational{Integer}` 的子类型。然而 `Rational{Int32}` 是 Rational 的子类型。
 
 正如具体数据类型一样，抽象数据类型也可以被参数化。
 
@@ -1250,7 +1220,7 @@ julia> struct Square{T<:AbstractFloat} <: Shape{T}
        end
 ```
 
-可以使用上述方案为 `<strong>Float32</strong>` 或 `<strong>Float64</strong>` 开发两套功能。为 `<strong>Rectangle{Float32}</strong>` 生成的类型与 `<strong>Rectangle{Float64}</strong>` 不同，它们在实例化具体类型时于编译期间生成。
+可以使用上述方案为 `Float32` 或 `Float64` 开发两套功能。为 `Rectangle{Float32}` 生成的类型与 `Rectangle{Float64}` 不同，它们在实例化具体类型时于编译期间生成。
 
 虽然类型参数化是 Julia 语言一项非常有用的特性，但参数化也可以针对整数值进行。
 
@@ -1265,7 +1235,7 @@ julia> p = Point{Float32, 2}([1f0, 2f0])
 Point{Float32,2}(Float32[1.0, 2.0])
 ```
 
-正如所见，类型中使用的 `<strong>N</strong>` 是一个作为类型参数使用的整数。
+正如所见，类型中使用的 `N` 是一个作为类型参数使用的整数。
 
 ## 类型操作
 
@@ -1285,7 +1255,7 @@ Rational{Int64}
 
 #### 别名
 
-类型本身是 `<strong>DataType</strong>` 类型的实例。
+类型本身是 `DataType` 类型的实例。
 
 ```
 julia> typeof(Int)
@@ -1303,6 +1273,8 @@ else
     const UInt = UInt32
 end
 ```
+
+
 
 `<strong>Int</strong>` 对象与 `<strong>Int64</strong>` 进行比较，如果它们相同，则 `<strong>UInt</strong>` 初始化为 `<strong>UInt64</strong>`，否则初始化为 `<strong>UInt32</strong>`。因此 `<strong>UInt</strong>` 根据机器架构充当 `<strong>UInt64</strong>` 或 `<strong>UInt32</strong>` 的别名。
 
@@ -1358,7 +1330,7 @@ julia> a = A(1, 2)
 A(1, 2.0)
 ```
 
-其次，数据总是会在 REPL 中打印。要禁止在 REPL 中打印数据，可以在语句末尾加上分号 (;)。
+其次，数据总是会在 REPL 中打印。要禁止在 REPL 中打印数据，可以在语句末尾加上分号 (`;`)。
 
 ```
 julia> a;
@@ -1375,7 +1347,7 @@ julia> a; b
 2.0
 ```
 
-用分号分隔行时，仅打印最后一个表达式的输出，本例中即为 b。
+用分号分隔行时，仅打印最后一个表达式的输出，本例中即为 `b`。
 
 ```
 julia> nothing
@@ -1392,7 +1364,7 @@ julia> a; nothing
 
 ### 使用 show 自定义显示
 
-默认情况下，要在 REPL 上显示输出，会在数据类型上调用关联的 show 方法。
+默认情况下，要在 REPL 上显示输出，会在数据类型上调用关联的 `show` 方法。
 
 ```
 julia> struct A
@@ -1408,9 +1380,6 @@ julia> a
 a1: 1 a2: 2.0
 ```
 
-
-
-
 `show` 用于在任何类型的输出设备上显示数据，而 `print` 只能用于输出文本表示形式。当没有引入特定的 `print` 例程时，调用 `print` 时内部会使用 `show`。
 
 ```
@@ -1418,7 +1387,7 @@ julia> print(a)
 a1: 1 a2: 2.0
 ```
 
-# 
+### string
 
 此函数可用于将任何类型转换为其字符串表示形式。当未提供合适的转换方法时，会在内部调用 `print` 函数以获取数据类型的文本表示形式。
 
@@ -1429,11 +1398,11 @@ julia> string(a)
 
 在前面的代码中可以清楚地看到 `print` 或底层 `show` 的用法。此外，`String` 中额外的行尾可以归因于 `println` 的使用，它会在语句后添加一个 EOL（行尾符）。
 
-# 
+## 总结
 
 尽管 Julia 是一门动态类型语言，但类型是该语言的基础。它们在 JIT 编译期间被推断，并在很大程度上促成了 Julia 语言的性能提升。虽然我们在本章中简要概述了数据类型，但随着我们学习函数和方法，数据类型的很大一部分将被揭示出来。通过数据类型使用多重分发接口是语言基础的重要组成部分，我们也将对此进行介绍。
 
-# 
+## 练习
 
 1.  是否有为半精度浮点数（`Float16`）定义的字面量？如何初始化它们？
 
@@ -1447,63 +1416,61 @@ julia> string(a)
 
 ---
 
-1 Julia 文档（手册 --> 变量） **[`docs.julialang.org/en/v1/manual/variables/`](https://docs.julialang.org/en/v1/manual/variables/)**
+### 参考文献
 
-2 LLVM 项目是模块化且可复用的编译器和工具链技术的集合。该工具提供了一种中间语言，有助于以平台中立的方式编写编译器。 **[`llvm.org/`](https://llvm.org/)**
+1.  Julia 文档（手册 --> 变量） [`docs.julialang.org/en/v1/manual/variables/`](https://docs.julialang.org/en/v1/manual/variables/)
 
-3 基本类型，Julia 文档， **[`docs.julialang.org/en/v1/manual/types/#Primitive-Types`](https://docs.julialang.org/en/v1/manual/types/#Primitive-Types)**
+2.  LLVM 项目是模块化且可复用的编译器和工具链技术的集合。该工具提供了一种中间语言，有助于以平台中立的方式编写编译器。 [`llvm.org/`](https://llvm.org/)
 
-4 有理数是分数的一种表示，具有整数分子和整数分母。它们是实数。然而，有理数在计算中相对较少使用。分数大多表示为浮点数。
+3.  基本类型，Julia 文档， [`docs.julialang.org/en/v1/manual/types/#Primitive-Types`](https://docs.julialang.org/en/v1/manual/types/#Primitive-Types)
 
-5 大多数基于对象的语言都有成员属性和方法。方法提供了多态的灵活性。然而，Julia 类型没有任何成员方法。当使用具有不同函数参数的函数来模拟多态行为时，它们被称为方法。对于大多数实际用途，函数和方法是相似的。这是一个方法 `f()` 的示例：
+4.  有理数是分数的一种表示，具有整数分子和整数分母。它们是实数。然而，有理数在计算中相对较少使用。分数大多表示为浮点数。
 
-```
-f(x) = 2x
-f(x, y) = x*y
-```
+5.  大多数基于对象的语言都有成员属性和方法。方法提供了多态的灵活性。然而，Julia 类型没有任何成员方法。当使用具有不同函数参数的函数来模拟多态行为时，它们被称为方法。对于大多数实际用途，函数和方法是相似的。这是一个方法 `f()` 的示例：
 
-6 代码示例取自 Julia 语言 GitHub 仓库中的 `base/rational.jl`。未包含一些高级表达式。
+    ```
+    f(x) = 2x
+    f(x, y) = x*y
+    ```
 
-有理数除法运算符，写作 `<<numerator>>//<<denominator>>`。
+6.  代码示例取自 Julia 语言 GitHub 仓库中的 `base/rational.jl`。未包含一些高级表达式。
 
-8 Julia GitHub 仓库
+7.  有理数除法运算符，写作 `<<numerator>>//<<denominator>>`。
 
-按位相等，通常意味着两个对象是同一个。此运算符不能被重载。类型也是对象。
+8.  Julia GitHub 仓库
 
-Julia GitHub 仓库
+9.  按位相等，通常意味着两个对象是同一个。此运算符不能被重载。类型也是对象。
 
-有理数是分数的一种表示，具有整数分子和整数分母。它们是实数。然而，有理数在计算中相对较少使用。分数大多表示为浮点数。
+10. Julia GitHub 仓库
 
-基本类型，Julia 文档， **[`docs.julialang.org/en/v1/manual/types/#Primitive-Types`](https://docs.julialang.org/en/v1/manual/types/#Primitive-Types)**
+11. 有理数是分数的一种表示，具有整数分子和整数分母。它们是实数。然而，有理数在计算中相对较少使用。分数大多表示为浮点数。
 
-代码示例取自 Julia 语言 GitHub 仓库中的 `base/rational.jl`。未包含一些高级表达式。
+12. 基本类型，Julia 文档， [`docs.julialang.org/en/v1/manual/types/#Primitive-Types`](https://docs.julialang.org/en/v1/manual/types/#Primitive-Types)
 
-大多数基于对象的语言都有成员属性和方法。方法提供了多态的灵活性。然而，Julia 类型没有任何成员方法。当使用具有不同函数参数的函数来模拟多态行为时，它们被称为方法。对于大多数实际用途，函数和方法是相似的。这是一个方法 `f()` 的示例：
+13. 代码示例取自 Julia 语言 GitHub 仓库中的 `base/rational.jl`。未包含一些高级表达式。
 
-```
-f(x) = 2x
-f(x, y) = x*y
-```
+14. 大多数基于对象的语言都有成员属性和方法。方法提供了多态的灵活性。然而，Julia 类型没有任何成员方法。当使用具有不同函数参数的函数来模拟多态行为时，它们被称为方法。对于大多数实际用途，函数和方法是相似的。这是一个方法 `f()` 的示例：
 
-LLVM 项目是模块化且可复用的编译器和工具链技术的集合。该工具提供了一种中间语言，有助于以平台中立的方式编写编译器。 **[`llvm.org/`](https://llvm.org/)**
+    ```
+    f(x) = 2x
+    f(x, y) = x*y
+    ```
 
-Julia 文档（手册 --> 变量） **[`docs.julialang.org/en/v1/manual/variables/`](https://docs.julialang.org/en/v1/manual/variables/)**
+15. LLVM 项目是模块化且可复用的编译器和工具链技术的集合。该工具提供了一种中间语言，有助于以平台中立的方式编写编译器。 [`llvm.org/`](https://llvm.org/)
 
-可以看出，变量名不能以数字开头。变量名可以包含 Unicode 字符。变量命名有诸多限制，作者建议查阅 Julia 文档[1] 以详细了解变量命名规则。Julia 中的关键字不能用作变量。Julia 的关键字很少。其中一些包括：`baremodule`、`begin`、`break`、`catch`、`const`、`continue`、`do`、`else`、`elseif`、`end`、`export`、`false`、`finally`、`for`、`function`、`global`、`if`、`import`、`let`、`local`、`macro`、`module`、`quote`、`return`、`struct`、`true`、`try`、`using`、`while`。Julia 还有多词关键字（`mutable struct`、`abstract type` 等）和中缀运算符关键字（`in`、`isa` 等）。作者建议详细查阅语言文档中的关键字以获得详尽的理解。
+16. Julia 文档（手册 --> 变量） [`docs.julialang.org/en/v1/manual/variables/`](https://docs.julialang.org/en/v1/manual/variables/)
 
-基本类型是 LLVM[2] 支持的数据类型。Julia 将代码编译为 LLVM 等价形式，随后再编译为原生 CPU 机器码，以 **JIT** 方式执行。因此，将 LLVM 类型引入 Julia 是非常合乎逻辑的。这些基本类型是位值。以下是 Julia[3] 中定义的一组基本类型。
+17. 可以看出，变量名不能以数字开头。变量名可以包含 Unicode 字符。变量命名有诸多限制，作者建议查阅 Julia 文档[1] 以详细了解变量命名规则。Julia 中的关键字不能用作变量。Julia 的关键字很少。其中一些包括：`baremodule`、`begin`、`break`、`catch`、`const`、`continue`、`do`、`else`、`elseif`、`end`、`export`、`false`、`finally`、`for`、`function`、`global`、`if`、`import`、`let`、`local`、`macro`、`module`、`quote`、`return`、`struct`、`true`、`try`、`using`、`while`。Julia 还有多词关键字（`mutable struct`、`abstract type` 等）和中缀运算符关键字（`in`、`isa` 等）。作者建议详细查阅语言文档中的关键字以获得详尽的理解。
 
-基本类型是 LLVM[2] 支持的数据类型。Julia 将代码编译为 LLVM 等价形式，随后再编译为原生 CPU 机器码，以 **JIT** 方式执行。因此，将 LLVM 类型引入 Julia 是非常合乎逻辑的。这些基本类型是位值。以下是 Julia[3] 中定义的一组基本类型。
+18. 基本类型是 LLVM[2] 支持的数据类型。Julia 将代码编译为 LLVM 等价形式，随后再编译为原生 CPU 机器码，以 **JIT** 方式执行。因此，将 LLVM 类型引入 Julia 是非常合乎逻辑的。这些基本类型是位值。以下是 Julia[3] 中定义的一组基本类型。
 
-与其他实例对象一样，它们可以被比较和赋值。这是来自 `base/boot.jl` 的代码片段。[8]
+19. 基本类型是 LLVM[2] 支持的数据类型。Julia 将代码编译为 LLVM 等价形式，随后再编译为原生 CPU 机器码，以 **JIT** 方式执行。因此，将 LLVM 类型引入 Julia 是非常合乎逻辑的。这些基本类型是位值。以下是 Julia[3] 中定义的一组基本类型。
 
-Julia 中的复合类型具有成员属性，没有成员函数或方法。Julia 的多重分发架构用于使函数针对特定类型表现得像方法[5]，但它们与面向对象语言中的方法并不相同。有一类特殊的函数可以成为类型的成员。它们被称为 **构造函数**。当我们讨论函数时，将详细回顾构造函数。复合类型中成员的类型信息并不总是需要指定。
+20. 与其他实例对象一样，它们可以被比较和赋值。这是来自 `base/boot.jl` 的代码片段。[8]
 
+21. Julia 中的复合类型具有成员属性，没有成员函数或方法。Julia 的多重分发架构用于使函数针对特定类型表现得像方法[5]，但它们与面向对象语言中的方法并不相同。有一类特殊的函数可以成为类型的成员。它们被称为 **构造函数**。当我们讨论函数时，将详细回顾构造函数。复合类型中成员的类型信息并不总是需要指定。
 
-
-
-
-# Rational4 和 Complex 数据类型
+## Rational4 和 Complex 数据类型
 
 `Rational4` 和 `Complex` 数据类型虽然属于数值类型，但并非原始类型。它们是使用复合数据类型创建的，我们将在用户定义类型部分回顾这些内容。
 
@@ -1527,7 +1494,7 @@ Julia 中的复合类型具有成员属性，没有成员函数或方法。Julia
 
 在本章中，读者将能够理解复合语句。我们将讨论分支与控制流，如 `if…else`，循环如 `while` 和 `for`，以及异常处理。控制流是编程逻辑的核心，有助于构建复杂的应用程序。
 
-# 复合语句
+## 复合语句
 
 位于 `begin` 和 `end` 块之间的任何一组语句都被视为一个大的复合执行单元。
 
@@ -1563,11 +1530,11 @@ julia> z = begin x=1; y=2; x+y end
 3
 ```
 
-# 条件语句
+## 条件语句
 
 条件语句是任何编程语言的核心。它们为代码中定义分支提供了途径，也是迭代编程的基础。带有局部 `goto` 的分支足以模拟编程语言中的任何迭代模型。
 
-## `if…else`
+### if…else
 
 `if…else` 是 Julia 中最常见的条件执行形式。典型的 if 条件如下所示：
 
@@ -1626,7 +1593,7 @@ julia> str = i > 1 ? "Greater": "Less"
 ERROR: syntax: space required before colon in "?" expression
 ```
 
-## `switch…case` 替代方案
+### switch…case 替代方案
 
 `switch…case` 表达式通常用于需要大量比较作为多重分支操作的情况。C/C++ 中的示例 `switch…case` 语句可能如下所示：
 
@@ -1664,7 +1631,7 @@ julia> if val == 1
 "three"
 ```
 
-### `else if` 对比 `elseif`
+#### else if 对比 elseif
 
 让我们看看以下代码片段：
 
@@ -1680,12 +1647,6 @@ julia> if val == 1
        else if val >= 5
 ERROR: syntax: use "elseif" instead of "else if"
 ```
-
-
-
-
-
-# Julia 控制流：条件分支与循环
 
 ## if-elseif-else 结构化分支
 
@@ -1708,17 +1669,19 @@ julia> if val == 1
 "three"
 ```
 
-可以看到，`<strong>else if</strong>` 是语法错误。因此，由于 `<strong>elseif</strong>` 和跟在 `<strong>else</strong>` 表达式后面的 `<strong>if</strong>`，不会产生任何歧义。
+
+
+可以看到，`else if` 是语法错误。因此，由于 `elseif` 和跟在 `else` 表达式后面的 `if`，不会产生任何歧义。
 
 ## @goto 和 @label 非结构化跳转
 
-结构化分支（如 `<strong>if…elseif…else</strong>`）是编程语言中条件执行的首选模式。然而，一些语言拥有额外的 `<strong>goto</strong>` 语句，用于将执行分支跳转到代码中的特定位置。Julia 通过宏 `<strong>@goto</strong>` 和 `<strong>@label</strong>` 提供了此类功能。它们有以下限制：
+结构化分支（如 `if…elseif…else`）是编程语言中条件执行的首选模式。然而，一些语言拥有额外的 `goto` 语句，用于将执行分支跳转到代码中的特定位置。Julia 通过宏 `@goto` 和 `@label` 提供了此类功能。它们有以下限制：
 
-1.  它们被限制在特定的代码块内。`<strong>@goto</strong>` 只能跳转到同一代码块作用域内的 `<strong>@label</strong>`。
+1.  它们被限制在特定的代码块内。`@goto` 只能跳转到同一代码块作用域内的 `@label`。
 2.  它们不能跨函数使用。不过，异常非常适合用于执行栈中的跨函数场景。
 3.  它们影响代码的可读性。因此，通常不在大多数结构化编程语言中使用。
 
-结构化分支与迭代的结合，使得非结构化跳转在大多数 Julia 程序中变得多余。以下代码使用 `<strong>@goto</strong>` 和 `<strong>@label</strong>` 计算 1 到 10 的连续整数和：
+结构化分支与迭代的结合，使得非结构化跳转在大多数 Julia 程序中变得多余。以下代码使用 `@goto` 和 `@label` 计算 1 到 10 的连续整数和：
 
 ```julia
 julia> begin
@@ -1753,7 +1716,7 @@ julia> s
 
 ## for 循环迭代执行
 
-虽然我们通过非结构化跳转和 goto 实现了代码的迭代执行，但作为高级语言，Julia 提供了特定的语言结构来辅助迭代执行。最常见的是 `<strong>for</strong>` 和 `<strong>while</strong>`，我们将在接下来回顾它们。
+虽然我们通过非结构化跳转和 goto 实现了代码的迭代执行，但作为高级语言，Julia 提供了特定的语言结构来辅助迭代执行。最常见的是 `for` 和 `while`，我们将在接下来回顾它们。
 
 ```julia
 julia> s = 0;
@@ -1766,7 +1729,7 @@ julia> s
 55
 ```
 
-在前面的代码片段中，我们从 1 枚举到 10 并将值加到 `s` 上。在 `for` 循环中，参数 `i` 被赋值为一个步长为 1 的 `Range` 对象 `1:10`。这也可以写成 `1:1:10`，表示 `<strong>&lt;initial value&gt;:&lt;step size&gt;:&lt;final value&gt;</strong>`。现在如果我们修改代码，只加奇数值：
+在前面的代码片段中，我们从 1 枚举到 10 并将值加到 `s` 上。在 `for` 循环中，参数 `i` 被赋值为一个步长为 1 的 `Range` 对象 `1:10`。这也可以写成 `1:1:10`，表示 `<initial value>:<step size>:<final value>`。现在如果我们修改代码，只加奇数值：
 
 ```julia
 julia> s = 0;
@@ -1813,7 +1776,7 @@ julia> s
 37
 ```
 
-在这种情况下，`<strong>continue</strong>` 用于跳过所有能被 3 整除的数字，使其不加到 `s` 上。`<strong>continue</strong>` 确保表达式后续的代码块被排除在计算之外，而迭代器保持活跃；而在代码中使用 `<strong>break</strong>` 将终止循环。
+在这种情况下，`continue` 用于跳过所有能被 3 整除的数字，使其不加到 `s` 上。`continue` 确保表达式后续的代码块被排除在计算之外，而迭代器保持活跃；而在代码中使用 `break` 将终止循环。
 
 ```julia
 julia> s = 0;
@@ -1834,7 +1797,7 @@ julia> s
 
 ### 遍历通用序列与多重迭代
 
-不仅是 `<strong>Range</strong>` 对象，`<strong>for</strong>` 还可以用于其他具有迭代器的序列对象。我们将在后面的章节查看迭代器接口时更详细地讨论这一点。这是一个使用 `<strong>for…in</strong>` 语法的示例：
+不仅是 `Range` 对象，`for` 还可以用于其他具有迭代器的序列对象。我们将在后面的章节查看迭代器接口时更详细地讨论这一点。这是一个使用 `for…in` 语法的示例：
 
 ```julia
 julia> for i in [5 10 15]
@@ -1845,7 +1808,7 @@ julia> for i in [5 10 15]
 15
 ```
 
-单个 `<strong>for</strong>` 循环可以迭代多个 `<strong>Range</strong>` 对象。其效果将是迭代这些范围的笛卡尔积，左侧指定的为外层循环。
+单个 `for` 循环可以迭代多个 `Range` 对象。其效果将是迭代这些范围的笛卡尔积，左侧指定的为外层循环。
 
 ```julia
 julia> for i=1:3, j=1:2
@@ -1873,11 +1836,7 @@ julia> for i=1:3, j=1:i
 (3, 3)
 ```
 
-这里的 `<strong>for</strong>` 循环是单个循环，遇到 `<strong>break</strong>` 语句时会终止。`<strong>break</strong>` 不会像嵌套 `<strong>for</strong>` 循环那样仅终止内层循环。
-
-
-
-
+这里的 `for` 循环是单个循环，遇到 `break` 语句时会终止。`break` 不会像嵌套 `for` 循环那样仅终止内层循环。
 
 # Julia 控制流：循环与异常处理
 
@@ -2037,12 +1996,9 @@ Int64
 - 异常仅用于处理**异常状况**；常规控制流请用 `if...else` 等结构。
 - 异常处理有显著性能开销，请谨慎使用，仅在必要时启用。
 
-
-
-
 当资源正在使用时，异常情况可能会强制突然退出函数执行；在这种情况下，资源无法被回收。`finally` 子句确保代码在正常执行和异常条件下都能执行，从而确保资源被回收。在示例中，即使发生异常，文件句柄 `f` 也会被关闭，就像没有异常时一样。
 
-```
+```julia
 julia> f = open("file")
 julia> try
            b = read(f)
@@ -2055,7 +2011,7 @@ julia> try
 
 如此精细的架构中，异常对象增加了什么价值？它们会影响执行速度，因为每次发生栈展开时，都需要验证异常对象。它们提供的主要优势之一是能够追踪发生异常的栈位置。因此，可以获得错误传播的追踪。其次，异常对象的形成提供了提供关于错误的充足信息的能力。
 
-```
+```julia
 julia> sqrt(-1)
 ERROR: DomainError with -1.0:
 sqrt will only return a complex result if called with a complex argument. Try sqrt(Complex(x)).
@@ -2071,7 +2027,7 @@ Stacktrace:
 
 `DomainError` 有两个属性。`val` 属性代表导致错误的值，`msg` 属性详细说明消息细节。你可以通过创建 `Exception` 抽象类型的子类型来定义自己的异常。
 
-```
+```julia
 julia> struct MyException <: Exception
            params1
            params2
@@ -2084,7 +2040,7 @@ julia> struct MyException <: Exception
 
 栈追踪是从异常处理中获得的非常重要的信息集。函数 `catch_backtrace()` 报告引发异常时刻的栈追踪，而 `stacktrace()` 函数提供对其的解读。
 
-```
+```julia
 julia> try
            sqrt(-1)
        catch e
@@ -2115,15 +2071,17 @@ Julia 将并行编程作为语言/平台特性的一部分予以支持。并行�
 
 ## 总结
 
+
+
 Julia 提供了多种控制流架构，以辅助分支、迭代编程、并行执行和异常处理。可以被视为分支策略一部分的一个方面是递归编程，由于 Julia 函数的多重分派架构，它受益匪浅。在下一章中，我们将探讨 Julia 函数和方法。分支和控制流作为编程语言的基本概念；我们将结合函数和方法回顾其中一些概念。
 
 # 练习
 
-1.  使用非结构化分支实现 `do…while` 条件并添加 10 个数字。
-2.  编写一个循环，将 51 到 100 之间能被 5 整除的数字相加。
-3.  正如所讨论的，当使用未定义变量时会显示错误消息。那也是异常处理场景吗？如果是，使用的是什么类型的异常。
-4.  `continue` 和 `break` 有什么区别？结合示例讨论。
-5.  在单个 `for` 循环中迭代多个范围或迭代器有什么局限性？为什么应该利用多个 `for` 循环进行迭代？
+1. 使用非结构化分支实现 `do...while` 条件并添加 10 个数字。
+2. 编写一个循环，将 51 到 100 之间能被 5 整除的数字相加。
+3. 正如所讨论的，当使用未定义变量时会显示错误消息。那也是异常处理场景吗？如果是，使用的是什么类型的异常。
+4. `continue` 和 `break` 有什么区别？结合示例讨论。
+5. 在单个 `for` 循环中迭代多个范围或迭代器有什么局限性？为什么应该利用多个 `for` 循环进行迭代？
 
 ---
 
@@ -2131,7 +2089,7 @@ Julia 提供了多种控制流架构，以辅助分支、迭代编程、并行�
 
 `file` 必须存在于当前工作目录中。你可以使用函数 `pwd()` 查看当前工作目录。
 
-Java 和其他语言也有类似的结构。然而，此类表达式在 Julia 中不存在。关于在 Julia 中包含或排除类似结构，已经进行了大量辩论。虽然这是一种简洁的表示，但已知 `switch…case` 结构存在两个重大问题：回退到下一个 case 需要特定的 `break` 语句；其次，C/C++ 的 switch 语句仅适用于整数类型。
+Java 和其他语言也有类似的结构。然而，此类表达式在 Julia 中不存在。关于在 Julia 中包含或排除类似结构，已经进行了大量辩论。虽然这是一种简洁的表示，但已知 `switch...case` 结构存在两个重大问题：回退到下一个 case 需要特定的 `break` 语句；其次，C/C++ 的 switch 语句仅适用于整数类型。
 
 [`github.com/JuliaLang/julia/issues/18285`](https://github.com/JuliaLang/julia/issues/18285)
 
@@ -2158,8 +2116,6 @@ Java 和其他语言也有类似的结构。然而，此类表达式在 Julia �
 ## 动机
 
 没有生产应用程序是在单个文件中通过一系列程序语句开发的。大多数程序员倾向于将程序分离成小的可执行单元。这解决了两个问题。首先，它创建了可从大型程序中的各个地方多次调用的可复用单元。其次，小单元可以轻松进行单元测试。因此，它们提高了代码可靠性。在本章中，我们将尝试以编程方式求解 8 皇后问题，并在此过程中理解 Julia 中的函数。
-
-
 
 这是算法和人工智能领域的一个经典问题。目标是在棋盘上放置尽可能多的皇后，使得没有皇后能攻击到另一个。下图展示了一种可能的排列。然而，这个解并不唯一。我们将编写一个程序来求解八皇后问题的一种排列：
 
@@ -2200,7 +2156,7 @@ julia> attacks(1, 2, 4, 6)
 false
 ```
 
-`function…end` 是定义函数的分隔符。`return` 语句用于从函数返回最终输出。一个函数可以有多条 `return` 语句。前面的函数有多条返回语句，均返回 `Bool` 值。
+`function...end` 是定义函数的分隔符。`return` 语句用于从函数返回最终输出。一个函数可以有多条 `return` 语句。前面的函数有多条返回语句，均返回 `Bool` 值。
 
 # 运算符与简化写法
 
@@ -2230,7 +2186,7 @@ julia> attacks(x1, y1, x2, y2) =
 attacks (generic function with 1 method)
 ```
 
-Julia 通过在 `begin…end` 之间指定复杂的复合表达式，提供了表示它们的灵活性。然而，对于超过单条语句的 Julia 短函数形式，这不被视为良好的实践。虽然以下是一个有效的 Julia 函数，但作为风格指南，它是不推荐的。
+Julia 通过在 `begin...end` 之间指定复杂的复合表达式，提供了表示它们的灵活性。然而，对于超过单条语句的 Julia 短函数形式，这不被视为良好的实践。虽然以下是一个有效的 Julia 函数，但作为风格指南，它是不推荐的。
 
 ```julia
 julia> attacks(x1, y1, x2, y2) = begin
@@ -2285,9 +2241,6 @@ Closest candidates are:
 报告错误称该函数仅定义为接受 4 个参数或输入参数。然而，该函数可以接受任何类型作为数据输入。这之所以可能，是因为参数类型是 `Any`，考虑到函数定义中未指定参数类型。
 
 输入参数是可选的。以下是一个没有输入参数的函数：
-
-
-
 
 # Julia 函数进阶：可变参数、返回值与类型稳定性
 
@@ -2481,11 +2434,9 @@ julia> typeof(a), typeof(b)
 
 ## 多返回值
 
+
+
 多数语言要求函数仅返回单值，Julia 亦然。但可利用 `Tuple` 类型返回多值。下文将扩展 `attacks` 函数，使其除返回 `Bool` 外，同时返回路径相交的原因。
-
-
-
-
 
 ## Julia 代码示例：`attacks_with_reason` 函数
 
@@ -2633,10 +2584,6 @@ Final Positions: (4, 2, 7, 3, 6, 8, 5, 1)
 
 让我们看看为任意自然数计算累积和的代码。
 
-
-
-
-
 ```julia
 function mycumsum(n)
     if n <= 0
@@ -2678,7 +2625,7 @@ julia> mycumsum(10)
 
 **图 4.4：** 每当调用递归函数时，都会创建一个新帧。计算按前向方向进行。由于最后一次函数调用已包含计算结果，因此无需展开栈来聚合结果。展开栈仅用于传递返回值和回收资源。
 
-因此，函数调用可以被一条跳转指令所替代。一些函数式编程语言（如 *Lisp* 或 *Lua*）能以编程方式识别此类条件并消除栈帧的创建。这一过程称为**尾调用优化**（`TCO`）。在函数式编程中，递归比迭代编程更受重视。栈帧的创建会消耗内存。因此，深度递归函数调用可能导致栈溢出。与 Lisp 不同，Julia 没有原生支持 TCO[³]。
+因此，函数调用可以被一条跳转指令所替代。一些函数式编程语言（如 `Lisp` 或 `Lua`）能以编程方式识别此类条件并消除栈帧的创建。这一过程称为**尾调用优化**（`TCO`）。在函数式编程中，递归比迭代编程更受重视。栈帧的创建会消耗内存。因此，深度递归函数调用可能导致栈溢出。与 Lisp 不同，Julia 没有原生支持 TCO[³]。
 
 ![](img/n4upl4fndqq.jpeg)
 
@@ -2737,7 +2684,7 @@ Shape Type:Triangle Area:6.0
 
 [⁴]: 参考链接占位符。
 
-在典型的面向对象语言中，方法与对象相关联。根据对象类型调用特定函数。这种方法分发称为**单分发接口**。然而，支持多重分发接口的语言不会将函数与特定类型关联。它们根据对象的运行时类型解析到相关的方法接口，并调用最相关的方法。`area` 方法既不是 `Rectangle` 类型的方法，也不是 `Triangle` 类型的方法。相反，它们根据对象类型从多重分发查找表中查找。这种架构在 *Lisp* 等语言中也可见。
+在典型的面向对象语言中，方法与对象相关联。根据对象类型调用特定函数。这种方法分发称为**单分发接口**。然而，支持多重分发接口的语言不会将函数与特定类型关联。它们根据对象的运行时类型解析到相关的方法接口，并调用最相关的方法。`area` 方法既不是 `Rectangle` 类型的方法，也不是 `Triangle` 类型的方法。相反，它们根据对象类型从多重分发查找表中查找。这种架构在 `Lisp` 等语言中也可见。
 
 ## 构造函数
 
@@ -2778,10 +2725,7 @@ Rectangle(1.0f0, 4.0f0)
 
 构造函数可以接受任意 `Real` 数字作为参数，并确保不允许非正值作为参数的一部分。假设我们要创建两个额外的构造函数来构建正方形。
 
-
-
-
-```
+```julia
 RectangleA(a=1.0)=RectangleA(a, a)
 
 julia> RectangleA()
@@ -2797,7 +2741,7 @@ julia> methods(RectangleA)
 
 我们用一条语句创建了两个构造函数，因为另一个是由于默认参数而创建的。现在可以看到创建了 3 个构造函数。其中两个是外部构造函数，在类型定义之外声明。一个是内部构造函数，在类型定义内部声明。创建内部构造函数是为了确保强制执行构造约束。外部构造函数主要用于提供便利性和构造灵活性。当未提供构造函数时，会提供一个默认构造函数来初始化类型的属性。在前面的 `RectangleA` 示例中，当未定义其他内部构造函数时，将创建以下默认内部构造函数：
 
-```
+```julia
 RectangleA(h::Float32, w::Float32)=new(h, w)
 ```
 
@@ -2811,33 +2755,37 @@ RectangleA(h::Float32, w::Float32)=new(h, w)
 
 在[前一节]中，当我们讨论参数化数据类型时，并未详细阐述它们对函数和调度接口或构造函数的影响。在我们创建的以下 `RectangleB` 类型中，我们希望将任意 Real 类型用作 Rectangle 属性的参数化类型。
 
-```
+```julia
 struct RectangleB{T <: Real}
     w::T
     h::T
 end
 ```
 
-```
+```julia
 julia> RectangleB(2//3, 1//4)
 RectangleB{Rational{Int64}}(2//3, 1//4)
 ```
 
-```
+```julia
 julia> RectangleB(1f0, 2f0)
 RectangleB{Float32}(1.0f0, 2.0f0)
 ```
 
-```
+```julia
 julia> RectangleB(2//3, 1f0)
 ERROR: MethodError: no method matching RectangleB(::Rational{Int64}, ::Float32)
 Closest candidates are:
   RectangleB(::T, ::T) where T<:Real at REPL[6]:2
 ```
 
+
+
+# 默认构造函数与类型转换
+
 默认构造函数 `RectangleB(::T, ::T)` where `T<:Real` 被创建了，但 `T` 只能是一个特定类型。它不能同时是 `Rational{Int64}` 和 `Float32`。
 
-```
+```julia
 julia> RectangleB{Int}('a', 1f0)
 RectangleB{Int64}(97, 1)
 ```
@@ -2848,50 +2796,50 @@ RectangleB{Int64}(97, 1)
 
 让我们创建两个名为 `aspect_ratio` 和 `area` 的方法。长宽比是矩形中宽度与高度的比率。面积是矩形中高度与宽度的乘积。我们在前面的示例中已经看到了 `area` 方法的实现。
 
-```
-area(r::RectangleB)=r.w*r.h
-```
-
-```
-aspect_ratio(r::RectangleB)=r.w/r.h
+```julia
+area(r::RectangleB) = r.w * r.h
 ```
 
+```julia
+aspect_ratio(r::RectangleB) = r.w / r.h
 ```
+
+```julia
 r, r1, r2 = RectangleB(1//2, 2//3), RectangleB(1.5, 0.5), RectangleB(1, 2)
 ```
 
-```
+```julia
 julia> area(r), area(r1), area(r2)
 (1//3, 0.75, 2)
 ```
 
-```
+```julia
 julia> aspect_ratio(r), aspect_ratio(r1), aspect_ratio(r2)
 (3//4, 3.0, 0.5)
 ```
 
 虽然 `area` 函数根据 Rectangle 的参数化类型返回了 `Rational{Int}` 和 `Int` 值，但在 `aspect_ratio` 函数中似乎忽略了这一点。运算符 (`/`) 显式地是浮点除法运算符。Julia 中的有理数或除法运算符是 (`//`)。让我们为 `aspect_ratio` 引入两个专门针对整数和有理数类型的额外方法。
 
-```
-aspect_ratio(r::RectangleB{T}) where T<:Union{Integer, Rational} = r.w//r.h
+```julia
+aspect_ratio(r::RectangleB{T}) where T<:Union{Integer, Rational} = r.w // r.h
 
 julia> aspect_ratio(r), aspect_ratio(r1), aspect_ratio(r2)
 (3//4, 3.0, 1//2)
 ```
 
-显然，`Rational` 和 `Integer` 类型的方法被调度到了新方法，而其余数值类型（如 Float64）则被调度到了旧方法。`T<:Union{Integer, Rational}` 本质上意味着该类型可以派生自 Integer 类型，也可以是 Rational 类型。Union 在 Julia 中被广泛用于表示类型是其中一种类型的情况。也可以像以下示例那样使用 3 个方法，而不使用 Union。
+显然，`Rational` 和 `Integer` 类型的方法被调度到了新方法，而其余数值类型（如 `Float64`）则被调度到了旧方法。`T<:Union{Integer, Rational}` 本质上意味着该类型可以派生自 `Integer` 类型，也可以是 `Rational` 类型。`Union` 在 Julia 中被广泛用于表示类型是其中一种类型的情况。也可以像以下示例那样使用 3 个方法，而不使用 `Union`。
 
-```
-aspect_ratio(r::RectangleB{T}) where T<:Integer = r.w//r.h
+```julia
+aspect_ratio(r::RectangleB{T}) where T<:Integer = r.w // r.h
 ```
 
-```
-aspect_ratio(r::RectangleB{T}) where T<:Rational = r.w//r.h
+```julia
+aspect_ratio(r::RectangleB{T}) where T<:Rational = r.w // r.h
 ```
 
 从子类型关系如何流向参数化类型的角度来理解调度规则非常重要。
 
-```
+```julia
 julia> RectangleB{Rational{Int}} <: RectangleB{Rational}
 false
 julia> RectangleB{Rational{Int}} <: RectangleB
@@ -2906,10 +2854,10 @@ true
 
 让我们看看以下一些示例：
 
-```
-julia> 1f0+2
+```julia
+julia> 1f0 + 2
 3.0f0
-julia> 1f0+2.0
+julia> 1f0 + 2.0
 3.0
 ```
 
@@ -2919,7 +2867,7 @@ julia> 1f0+2.0
 
 初始化任何值的典型方法是通过构造函数。例如，你可以通过指定 `Int(1.0)` 将整数浮点值 1.0 转换为 `Int`。但 `Int(1.5)` 将抛出 `InexactError`。在大多数情况下，这需要由程序员显式调用来执行。但有时转换需要通过隐式调用来执行。在这种情况下，会调用 `convert(T, x)`。
 
-```
+```julia
 julia> function f()
            i::Int = 0
            i = 1.5
@@ -2928,7 +2876,7 @@ julia> function f()
 f (generic function with 1 method)
 ```
 
-```
+```julia
 julia> f()
 ERROR: InexactError: Int64(1.5)
 Stacktrace:
@@ -2938,19 +2886,16 @@ Stacktrace:
  [4] top-level scope at REPL[89]:1
 ```
 
+`i` 是一个被定义为 `Int` 类型的变量。现在当值 `1.5` 被赋给它时，会调用 `convert` 方法，该方法抛出一个 `InexactError`。对于数值类型，`convert` 方法会调用 `T(x)` 或构造函数，在本例中即为 `Int64(1.5)`。一个更详尽的情况在前面的 `RectangleB` 示例中展示过。
 
-
-
-`<strong>i</strong>` 是一个被定义为 `<strong>Int</strong>` 类型的变量。现在当值 `<strong>1.5</strong>` 被赋给它时，会调用 `convert` 方法，该方法抛出一个 `<strong>InexactError</strong>`。对于数值类型，`convert` 方法会调用 `<strong>T(x)</strong>` 或构造函数，在本例中即为 `<strong>Int64(1.5)</strong>`。一个更详尽的情况在前面的 `<strong>RectangleB</strong>` 示例中展示过。
-
-```
+```julia
 julia> RectangleB{Int}('a', 1.0)
 RectangleB{Int64}(97, 1)
 ```
 
-在这种情况下，由于提供了 `<strong>RectangleB{Int}</strong>` 作为构造函数，`<strong>convert(Int, 'a')</strong>` 和 `<strong>convert(Int, 1.0)</strong>` 会被隐式调用，从而将 `<strong>Char</strong>` 和 `<strong>Float64</strong>` 转换为 `<strong>Int</strong>`。
+在这种情况下，由于提供了 `RectangleB{Int}` 作为构造函数，`convert(Int, 'a')` 和 `convert(Int, 1.0)` 会被隐式调用，从而将 `Char` 和 `Float64` 转换为 `Int`。
 
-```
+```julia
 julia> RectangleB{Int}("abc", 1.0)
 ERROR: MethodError: Cannot `convert` an object of type String to an object of type Int64
 Closest candidates are:
@@ -2959,11 +2904,11 @@ Closest candidates are:
   convert(::Type{T}, ::Ptr) where T<:Integer at pointer.jl:23
 ```
 
-由于不存在从 `<strong>String</strong>` 到 `<strong>Int</strong>` 的 `convert` 方法，导致构造函数调用失败。
+由于不存在从 `String` 到 `Int` 的 `convert` 方法，导致构造函数调用失败。
 
-## 让我们再次看看 `<strong>RectangleP</strong>` 类型。
+## 让我们再次看看 `RectangleP` 类型。
 
-```
+```julia
 struct RectangleP{T <: Real}
     w::T
     h::T
@@ -2972,7 +2917,7 @@ end
 
 当未指定构造函数时，会定义一个默认构造函数，其形式如下：
 
-```
+```julia
 struct RectangleP{T<:Real}
     w::T
     h::T
@@ -2980,16 +2925,16 @@ struct RectangleP{T<:Real}
 end
 ```
 
-```
+```julia
 julia> RectangleP(1, 2.0)
 ERROR: MethodError: no method matching Rectangle(::Int64, ::Float64)
 Closest candidates are:
   RectangleP(::T, ::T) where T<:Real at REPL[96]:4
 ```
 
-`<strong>RectangleP(1, 2.0) 正在失败。有办法解决这个问题吗？</strong>`
+`RectangleP(1, 2.0)` 正在失败。有办法解决这个问题吗？
 
-```
+```julia
 function RectangleP(w::T1, h::T2) where {T1<:Real, T2<:Real}
     w1, h1 = promote(w, h)
     return RectangleP(w1, h1)
@@ -2999,9 +2944,9 @@ julia> RectangleP(1, 2.0)
 RectangleP{Float64}(1.0, 2.0)
 ```
 
-我们定义了一个支持两个参数的外部构造函数。这些参数可以源自 `<strong>Real</strong>` 但彼此不同。我们在参数上调用 `<strong>promote</strong>` 方法以获取提升后的函数参数，随后用这些提升后的参数创建 `<strong>RectangleP</strong>`。这里可以理解为，在 `<strong>Int</strong>` 和 `<strong>Float64</strong>` 的提升中，`<strong>Float64</strong>` 将是提升后的类型。这种行为将在以下示例中变得清晰。假设我们要找到能分别放入两个 `<strong>RectangleP</strong>` 对象内部的最小尺寸 `<strong>RectangleP</strong>`。
+我们定义了一个支持两个参数的外部构造函数。这些参数可以源自 `Real` 但彼此不同。我们在参数上调用 `promote` 方法以获取提升后的函数参数，随后用这些提升后的参数创建 `RectangleP`。这里可以理解为，在 `Int` 和 `Float64` 的提升中，`Float64` 将是提升后的类型。这种行为将在以下示例中变得清晰。假设我们要找到能分别放入两个 `RectangleP` 对象内部的最小尺寸 `RectangleP`。
 
-```
+```julia
 julia> function minrect(r1::RectangleP, r2::RectangleP)
            w = r1.w < r2.w ? r1.w : r2.w
            h = r1.h < r2.h ? r1.h : r2.h
@@ -3014,15 +2959,15 @@ julia> minrect(RectangleP(1, 2), RectangleP(3.0, 4.0))
 RectangleP{Int64}(1, 2)
 ```
 
-虽然前面的代码没有错误，但你可以注意到一个异常：函数根据输入数据返回 `<strong>RectangleP{Float64}</strong>` 或 `<strong>RectangleP{Int}</strong>`。从类型稳定性的角度来看，这绝对是不可取的。当 `<strong>RectangleP{Float64}</strong>` 和 `<strong>RectangleP{Int}</strong>` 发生交互时，我们可以创建一个 `<strong>Base.promote_rule</strong>`，以便发生正确的提升。
+虽然前面的代码没有错误，但你可以注意到一个异常：函数根据输入数据返回 `RectangleP{Float64}` 或 `RectangleP{Int}`。从类型稳定性的角度来看，这绝对是不可取的。当 `RectangleP{Float64}` 和 `RectangleP{Int}` 发生交互时，我们可以创建一个 `Base.promote_rule`，以便发生正确的提升。
 
-```
+```julia
 Base.promote_rule(::Type{RectangleP{T}}, ::Type{RectangleP{S}}) where {T<:Real, S<:Real} = RectangleP{promote_type(S, T)}
 
 Base.convert(::Type{RectangleP{T}}, x::RectangleP{S}) where {T<:Real, S<:Real} = S === T ? x : RectangleP(T(x.w), T(x.h))
 ```
 
-```
+```julia
 function minrect(tr1::RectangleP, tr2::RectangleP)
     r1, r2 = promote(tr1, tr2)
     w = r1.w < r2.w ? r1.w : r2.w
@@ -3031,12 +2976,12 @@ function minrect(tr1::RectangleP, tr2::RectangleP)
 end
 ```
 
-```
+```julia
 julia> minrect(RectangleP(1, 2), RectangleP(3.0, 4.0))
 RectangleP{Float64}(1.0, 2.0)
 ```
 
-为了保持一致性，我们必须确保提升发生在一致的类型上。由于 `<strong>Float64</strong>` 与 `<strong>Int64</strong>` 的提升结果是 `<strong>Float64</strong>`，我们希望确保 `<strong>RectangleP{Float64}</strong>` 和 `<strong>RectangleP{Int}</strong>` 之间的提升结果为 `<strong>RectangleP{Float64}</strong>`。其次，我们创建一个 convert 方法，用于从 `<strong>RectangleP{S}</strong>` 转换到 `<strong>RectangleP{T}</strong>`。当在 `<strong>minrect</strong>` 中调用 `promote` 时，`<strong>promote_rule</strong>` 和 convert 方法会在内部被调用。数据被转换为 `<strong>RectangleP{Float64}</strong>`。因此，最终的返回类型将是 `<strong>RectangleP{Float64}</strong>`。
+为了保持一致性，我们必须确保提升发生在一致的类型上。由于 `Float64` 与 `Int64` 的提升结果是 `Float64`，我们希望确保 `RectangleP{Float64}` 和 `RectangleP{Int}` 之间的提升结果为 `RectangleP{Float64}`。其次，我们创建一个 convert 方法，用于从 `RectangleP{S}` 转换到 `RectangleP{T}`。当在 `minrect` 中调用 `promote` 时，`promote_rule` 和 convert 方法会在内部被调用。数据被转换为 `RectangleP{Float64}`。因此，最终的返回类型将是 `RectangleP{Float64}`。
 
 ## 函数是 Julia 的核心
 
@@ -3044,15 +2989,15 @@ RectangleP{Float64}(1.0, 2.0)
 
 # 练习
 
-1.  在八皇后谜题中，我们只得到了一个解。还有其他可能的解吗？扩展代码以找到所有可能的解。
+1. 在八皇后谜题中，我们只得到了一个解。还有其他可能的解吗？扩展代码以找到所有可能的解。
 
-2.  随着棋盘尺寸的增加，求解 N 皇后谜题所需的时间会增加。作者在他的环境中发现，求解棋盘尺寸为 30 时的等待时间极高。在你的环境中是多少？如何使程序更高效以降低该限制？
+2. 随着棋盘尺寸的增加，求解 N 皇后谜题所需的时间会增加。作者在他的环境中发现，求解棋盘尺寸为 30 时的等待时间极高。在你的环境中是多少？如何使程序更高效以降低该限制？
 
-3.  由于 Julia 不支持尾调用优化，栈溢出的可能性可能很大。你认为如何克服栈溢出？
+3. 由于 Julia 不支持尾调用优化，栈溢出的可能性可能很大。你认为如何克服栈溢出？
 
-4.  当显式指定参数类型时，Julia 构造函数的表现会有所不同。为什么会这样？
+4. 当显式指定参数类型时，Julia 构造函数的表现会有所不同。为什么会这样？
 
-5.  内部构造函数和外部构造函数有什么区别？外部构造函数是必需的吗？
+5. 内部构造函数和外部构造函数有什么区别？外部构造函数是必需的吗？
 
 ---
 
@@ -3064,25 +3009,21 @@ RectangleP{Float64}(1.0, 2.0)
 
 [3] Julia GitHub Issue 4964 ([`github.com/JuliaLang/julia/issues/4964`](https://github.com/JuliaLang/julia/issues/4964))
 
-
-
-
-
-4 维基百科关于多重分派的文章 (`https://en.wikipedia.org/wiki/Multiple_dispatch`)
+[4] 维基百科关于多重分派的文章 ([`https://en.wikipedia.org/wiki/Multiple_dispatch`](https://en.wikipedia.org/wiki/Multiple_dispatch))
 
 `1//5` 是 Julia 中分数的一种表示形式。
 
-# 4
+# 尾调用优化
 
-因此，函数调用可以被替换为跳转指令。一些函数式编程语言，如 *Lisp* 或 *Lua*，会以编程方式识别此类条件并消除栈帧的创建。此过程称为**尾调用优化** (`TCO`)。在函数式编程中，递归比迭代编程更受重视。栈帧的创建会消耗内存。因此，深层的递归函数调用可能导致栈溢出。与 Lisp 不同，Julia 没有原生支持 TCO3。
+因此，函数调用可以被替换为跳转指令。一些函数式编程语言，如 `Lisp` 或 `Lua`，会以编程方式识别此类条件并消除栈帧的创建。此过程称为**尾调用优化** (`TCO`)。在函数式编程中，递归比迭代编程更受重视。栈帧的创建会消耗内存。因此，深层的递归函数调用可能导致栈溢出。与 `Lisp` 不同，Julia 没有原生支持 TCO。
 
-# 1
+# 运算符与符号
 
-Julia 拥有一套精心设计的运算符和符号，它们可以是 Unicode 集合的一部分。借助内联运算符，你可以像编写数学方程一样编写表达式。我们将保持一个简化的观点，即运算符在 Julia 中就是函数。不过，建议读者查阅 Julia 文档（**https://docs.julialang.org/en/v1/manual/mathematical-operations/**）以详细了解运算符的优先级和结合性。
+Julia 拥有一套精心设计的运算符和符号，它们可以是 Unicode 集合的一部分。借助内联运算符，你可以像编写数学方程一样编写表达式。我们将保持一个简化的观点，即运算符在 Julia 中就是函数。不过，建议读者查阅 Julia 文档 ([`https://docs.julialang.org/en/v1/manual/mathematical-operations/`](https://docs.julialang.org/en/v1/manual/mathematical-operations/)) 以详细了解运算符的优先级和结合性。
 
-Julia Github Issue 4964（**https://github.com/JuliaLang/julia/issues/4964**）
+Julia Github Issue 4964 ([`https://github.com/JuliaLang/julia/issues/4964`](https://github.com/JuliaLang/julia/issues/4964))
 
-维基百科关于多重分派的文章 (`https://en.wikipedia.org/wiki/Multiple_dispatch`)
+维基百科关于多重分派的文章 ([`https://en.wikipedia.org/wiki/Multiple_dispatch`](https://en.wikipedia.org/wiki/Multiple_dispatch))
 
 # 集合
 
@@ -3103,11 +3044,15 @@ Julia Github Issue 4964（**https://github.com/JuliaLang/julia/issues/4964**）
 
 ## 学习目标
 
+
+
+# 数据结构：数组、元组、字典和集合
+
 在本章中，读者将能够学习数组、元组、字典和集合。集合为某些算法的解决方案提供了基础。它们实现了一个迭代器框架，可帮助遍历集合的各个元素。生成器和推导式提供按需的类集合接口，也可用于迭代。
 
 ## 简介
 
-1975 年，*Niklaus Wirth*——一位著名的计算机科学家和编程语言 PASCAL 的作者——撰写了《算法 + 数据结构 = 程序》1 一书；明确强调了数据结构和算法在编程中的重要性。几乎没有任何现代编程语言不提供对数据结构的内置支持。Julia 也不例外。许多数据结构定义在 Julia 核心语言中，而大量数据结构则定义在诸如 `DataStructures.jl` 之类的包中。在本章中，我们的重点将是语言中定义的、无需使用任何额外包即可使用的数据结构。举几个例子：
+1975 年，*Niklaus Wirth*——一位著名的计算机科学家和编程语言 PASCAL 的作者——撰写了《算法 + 数据结构 = 程序》一书；明确强调了数据结构和算法在编程中的重要性。几乎没有任何现代编程语言不提供对数据结构的内置支持。Julia 也不例外。许多数据结构定义在 Julia 核心语言中，而大量数据结构则定义在诸如 `DataStructures.jl` 之类的包中。在本章中，我们的重点将是语言中定义的、无需使用任何额外包即可使用的数据结构。举几个例子：
 
 1.  元组
 2.  数组
@@ -3127,7 +3072,7 @@ Julia Github Issue 4964（**https://github.com/JuliaLang/julia/issues/4964**）
 
 以下是一些示例：
 
-```
+```julia
 julia> a = (1, "string", 1.0)
 (1, "string", 1.0)
 julia> typeof(a)                                          # 异构
@@ -3152,7 +3097,7 @@ julia> c
 
 `NTuple{N, T}` 是一个包含 `N` 个类型为 `T` 元素的 `Tuple` 的参数化定义。
 
-```
+```julia
 julia> NTuple{3, Int}
 Tuple{Int64,Int64,Int64}
 ```
@@ -3163,14 +3108,14 @@ Tuple{Int64,Int64,Int64}
 
 当你想要创建一个具有特定模式的 `N` 个参数的 `Tuple` 时，可以使用 `ntuple` 函数。
 
-```
+```julia
 julia> a = ntuple(x->4, 10)
 (4, 4, 4, 4, 4, 4, 4, 4, 4, 4)
 julia> typeof(a)
 NTuple{10,Int64}
 ```
 
-```
+```julia
 julia> a = ntuple(i->i*1.0, 10)
 (1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0)
 julia> typeof(a)
@@ -3181,7 +3126,7 @@ NTuple{10,Float64}
 
 `Tuple` 可用作项目的集合。这意味着它们可以被迭代，并将拥有集合典型的函数，如 `length`。
 
-```
+```julia
 julia> length(a)
 10
 julia> for i=1:length(a)
@@ -3203,14 +3148,14 @@ julia> for i=1:length(a)
 
 在 `NTuple` 类型中一个相关的观察是，它有一个整数类型的参数。同样的适用于任何可变或不可变类型。让我们创建一个可用于 2 维或 3 维的 `Point` 类型。
 
-```
+```julia
 struct Point{N}
     data::NTuple{N, Float32}
     Point(d…)=new{length(d)}(d)
 end
 ```
 
-```
+```julia
 const Point2D = Point{2}
 const Point3D = Point{3}
 
@@ -3220,7 +3165,7 @@ function dist(p1::Point2D, p2::Point2D)
 end
 ```
 
-```
+```julia
 function dist(p1::Point3D, p2::Point3D)
     dx, dy, dz = (p1.data[1] - p2.data[1],
                   p1.data[2] - p2.data[2],
@@ -3229,15 +3174,12 @@ function dist(p1::Point3D, p2::Point3D)
 end
 ```
 
-```
+```julia
 julia> dist(Point(1, 2), Point(3, 4))
 2.828427f0
 julia> dist(Point(1, 2, 3), Point(3, 4, 5))
 3.4641016f0
 ```
-
-
-
 
 在前面的示例中，我们可以将 `Point2D` 和 `Point3D` 定义为 `Point{N}` 的别名。我们为这两种类型定义了两个 `dist` 函数，并确保了基于整数值 2 或 3 的分发可用。`Point{2}` 和 `Point{3}` 是两种截然不同的类型。以 `NTuple` 作为集合类型，让我们尝试拥有一个适用于 `Point{N}` 的 `dist` 方法。
 
@@ -3307,7 +3249,7 @@ end
 *   如果不是这样，我们通过翻转参数来调用该方法。从而确保第一个参数的维度小于第二个（N1 < N2）。
 *   我们通过为更高维度填充零来创建一个与 `p2` 维度相同的 `temporary point`（`tp`），并调用 `dist(tp, p2)`。
 
-## 
+## 值类型与多重分发
 
 让我们看看以下代码的控制流：
 
@@ -3353,7 +3295,7 @@ Called from 1
 *   仅为 `MyVal{1}` 定义了一个特化的方法 `f`。
 *   现在 `f(MyVal(2))` 调用了通用方法，而 `f(MyVal(1))` 调用了特定方法。
 
-## 
+## 单例类型
 
 当一个类型没有属性时，只为它创建一个对象。这样的对象称为 `singletons`。创建的值类型也是一个单例，因为该类型没有属性。
 
@@ -3366,18 +3308,18 @@ false
 
 `MyVal{1}` 与 `MyVal{2}` 是不同的类型。因此，作为初始化一部分创建的对象是两个不同的对象。虽然值参数在 Julia 中是可能的，但它可能不是最优性能的方法。Julia 原生提供了一个类型 `Val{N}`，符合建议的原则。我们将在 Julia 性能管理章节进一步讨论这一点。
 
-**注意**：不仅是 `Integer` 类型，甚至 `Symbol` 也可以用作值类型参数。
+> **注意**：不仅是 `Integer` 类型，甚至 `Symbol` 也可以用作值类型参数。
 
 ```julia
 julia> MyVal(:a)
 MyVal{:a}()
 ```
 
-## 
+## 范围
 
 有时我们需要连续的数字或具有固定步长的数字，无论是增加还是减少。这些被称为 **ranges**（范围）。以下是一些示例：
 
-## 
+### UnitRange
 
 ```julia
 julia> a=1:5
@@ -3399,7 +3341,7 @@ julia> for i=a
 5
 ```
 
-## 
+### StepRange
 
 ```julia
 julia> b=1:2:5
@@ -3415,8 +3357,6 @@ julia> for i=b
 ```
 
 `b` 是一个步长为 2 的 `StepRange`。
-
-## 
 
 ```julia
 julia> c=5:-1:1
@@ -3443,9 +3383,6 @@ julia> d=1:2.1:6.0
 julia> typeof(d)
 StepRangeLen{Float64,Base.TwicePrecision{Float64},Base.TwicePrecision{Float64}}
 ```
-
-
-
 
 # 数组基础
 
@@ -3529,6 +3466,8 @@ end
 ## 数组构造函数
 
 以下是一些示例构造函数：
+
+
 
 ```julia
 julia> Array{Int}(undef, 1, 2)
@@ -3619,10 +3558,6 @@ julia> Matrix{Int}(undef, 3, 3)
 
 虽然构造函数是初始化数组的一种方式，但还有其他便捷方法，我们将在接下来回顾。
 
-
-
-
-
 # Julia 数组与关联集合操作
 
 ## 创建填充数组
@@ -3658,6 +3593,7 @@ julia> zb = zeros(Bool, (8, 8))
 julia> sizeof(zb)
 64
 ```
+
 可以看到，一个 `Bool` 变量占用 1 字节存储空间，因此该数组需要 64 字节的数据空间。
 
 ```julia
@@ -3863,14 +3799,11 @@ julia> get(d, "e", 0)
 0
 ```
 
+当键是 `Dict` 的一部分时，将返回与该键关联的值。然而，当键不可用时，将返回函数中指定的默认值。
 
+大多数情况下，`Dict{K,V}` 对象的使用方式类似于数组，键作为索引。使用 `getindex` 或其别名 `[]` 从字典中获取值。与 `get` 方法不同，当键在字典中未找到时，`getindex` 会抛出 `ErrorException`。
 
-
-当键是 `<strong>Dict</strong>` 的一部分时，将返回与该键关联的值。然而，当键不可用时，将返回函数中指定的默认值。
-
-大多数情况下，`<strong>Dict{K,V}</strong>` 对象的使用方式类似于数组，键作为索引。使用 `<strong>getindex</strong>` 或其别名 `[]` 从字典中获取值。与 `get` 方法不同，当键在字典中未找到时，`<strong>getindex</strong>` 会抛出 `ErrorException`。
-
-```
+```julia
 julia> getindex(d, "e")
 ERROR: KeyError: key "e" not found
 Stacktrace:
@@ -3885,9 +3818,9 @@ Stacktrace:
  [2] top-level scope at REPL[23]:1
 ```
 
-`<strong>get!(dict, key, value)</strong>` 方法类似于 `<strong>get(dict, key, defval)</strong>` 方法，但会在键不可用时将键及其值插入字典。在前面的示例中：
+`get!(dict, key, value)` 方法类似于 `get(dict, key, defval)` 方法，但会在键不可用时将键及其值插入字典。在前面的示例中：
 
-```
+```julia
 julia> get!(d, "a", 0)
 4
 julia> get!(d, "e", 0)
@@ -3900,20 +3833,20 @@ Dict{String,Int64} with 4 entries:
   "a" => 4
 ```
 
-**注意：** 在 Julia 中，有一个通用约定，即在会修改参数值的函数名称末尾添加感叹号（`!`）。由于 `<strong>get!(dict, key, value)</strong>` 方法会改变对象 `<strong>dict</strong>`，因此在末尾添加了感叹号。
+**注意：** 在 Julia 中，有一个通用约定，即在会修改参数值的函数名称末尾添加感叹号（`!`）。由于 `get!(dict, key, value)` 方法会改变对象 `dict`，因此在末尾添加了感叹号。
 
 ---
 
-就像 `get` 方法一样，`<strong>setindex!</strong>` 方法或作为左值使用的别名 `[]`。
+就像 `get` 方法一样，`setindex!` 方法或作为左值使用的别名 `[]`。
 
-```
+```julia
 julia> d["e"] = 10
 10
 ```
 
 或者不太常见的用法：
 
-```
+```julia
 julia> setindex!(d, 11, "e")
 Dict{String,Int64} with 4 entries:
   "c" => 2
@@ -3924,13 +3857,13 @@ Dict{String,Int64} with 4 entries:
 
 ---
 
-为了使 `<strong>Dict{K,V}</strong>` 正常工作，应实现 `<strong>hash(k::K, h::Int)</strong>`。该函数为 `<strong>k</strong>` 的每个实例返回一个唯一的整数。这种唯一性确保 `<strong>Dict{K,V}</strong>` 中只存储一个键。
+为了使 `Dict{K,V}` 正常工作，应实现 `hash(k::K, h::Int)`。该函数为 `k` 的每个实例返回一个唯一的整数。这种唯一性确保 `Dict{K,V}` 中只存储一个键。
 
 ---
 
-`<strong>Set</strong>` 是一种集合，其中每个元素只能存在一个实例。`<strong>Set</strong>` 中元素的顺序并不重要。以下示例突出了一些 `<strong>Set</strong>` 方法。
+`Set` 是一种集合，其中每个元素只能存在一个实例。`Set` 中元素的顺序并不重要。以下示例突出了一些 `Set` 方法。
 
-```
+```julia
 julia> s = Set([2 3 4 5 1 2 3])
 Set{Int64} with 5 elements:
   4
@@ -3951,7 +3884,7 @@ Set{Int64} with 5 elements:
   8
 ```
 
-```
+```julia
 julia> union(s, t)
 Set{Int64} with 8 elements:
   7
@@ -3988,7 +3921,7 @@ Set{Int64} with 8 elements:
   1
 ```
 
-`<strong>union!</strong>` 的工作方式类似于 `union`，但会更新第一个参数。就像 `<strong>union</strong>` 一样，`<strong>symdiff</strong>` 和 `<strong>setdiff</strong>` 方法分别定义用于对称差集和差集。`<strong>issubset</strong>` 方法提供一个集合与另一个集合的子集关系。
+`union!` 的工作方式类似于 `union`，但会更新第一个参数。就像 `union` 一样，`symdiff` 和 `setdiff` 方法分别定义用于对称差集和差集。`issubset` 方法提供一个集合与另一个集合的子集关系。
 
 ---
 
@@ -3996,9 +3929,9 @@ Set{Int64} with 8 elements:
 
 ---
 
-经典的 Julia `<strong>for</strong>` 循环将索引变量映射到范围对象并对其进行迭代。
+经典的 Julia `for` 循环将索引变量映射到范围对象并对其进行迭代。
 
-```
+```julia
 julia> for i=5:-2:1
             println(i)
         end
@@ -4009,7 +3942,13 @@ julia> for i=5:-2:1
 
 循环不限于范围对象。也可以使用其他类型的集合。以下是一些示例：
 
-```
+
+
+# Julia 中的迭代框架与自定义迭代器
+
+我们已经看到了一些使用 `for` 循环迭代序列和集合的示例。之所以能够实现这一点，是因为所有这些类型都实现了迭代框架。如果你要编写自定义迭代器，可能需要实现这个框架。虽然此处强调了一些基本概念，但建议你阅读 Julia 文档 3 以获取相关细节。
+
+```julia
 julia> b = [1.0 2 3; 4 5 6; 7 8 9];
 julia> for i=b
             println(i)
@@ -4025,9 +3964,9 @@ julia> for i=b
 9.0
 ```
 
-除了 `<strong>for…=</strong>`，也可以使用 `<strong>for…in</strong>`。这种 for 循环的表示法与前一种类似，只是语法看起来更适合集合。让我们看看针对字典对象的用法。
+除了 `for…=`，也可以使用 `for…in`。这种 for 循环的表示法与前一种类似，只是语法看起来更适合集合。让我们看看针对字典对象的用法。
 
-```
+```julia
 julia> for p in d
             println(p)
         end
@@ -4037,9 +3976,9 @@ julia> for p in d
 "d" => 3
 ```
 
-`<strong>Dict{K,V}</strong>` 元素作为 `<strong>Pair{K,V}</strong>` 存储，默认打印为：`k => v`。
+`Dict{K,V}` 元素作为 `Pair{K,V}` 存储，默认打印为：`k => v`。
 
-```
+```julia
 julia> for (k, v) in d
             println("Key:", k," Value:", v)
         end
@@ -4053,7 +3992,7 @@ Key:d Value:3
 
 让我们看一个以数组为输入并返回所有值的平方作为数组的函数。
 
-```
+```julia
 function collect_square(v)
     a = similar(v)
     for i=1:length(v)
@@ -4071,7 +4010,7 @@ julia> collect_square(1:4)
 
 如果我们要扩展此函数，使其返回计算任意函数后的值而不是平方，可以按以下方式扩展：
 
-```
+```julia
 function collect_function(f::Function, v)
     a = similar(v)
     for i=1:length(v)
@@ -4087,9 +4026,9 @@ julia> collect_function(x->x³, 1:4)
  64
 ```
 
-调用同一方法的另一种方法是 `<strong>function…do</strong>` 表示法，如下所示。
+调用同一方法的另一种方法是 `function…do` 表示法，如下所示。
 
-```
+```julia
 julia> collect_function(1:4) do x
             return x³
         end
@@ -4100,9 +4039,9 @@ julia> collect_function(1:4) do x
  64
 ```
 
-`<strong>map</strong>` 是一个具有类似表示法的函数。它将集合的每个元素值映射并对每个元素应用一个函数，将函数求值的结果作为集合返回。
+`map` 是一个具有类似表示法的函数。它将集合的每个元素值映射并对每个元素应用一个函数，将函数求值的结果作为集合返回。
 
-```
+```julia
 julia> map(1:4) do x
             return x³
         end
@@ -4111,45 +4050,6 @@ julia> map(1:4) do x
  8
  27
  64
-```
-
-
-
-
-# Julia 中的迭代框架与自定义迭代器
-
-我们已经看到了一些使用 `for` 循环迭代序列和集合的示例。之所以能够实现这一点，是因为所有这些类型都实现了迭代框架。如果你要编写自定义迭代器，可能需要实现这个框架。虽然此处强调了一些基本概念，但建议你阅读 Julia 文档 3 以获取相关细节。
-
-```
-julia> v = collect(3:2:10)
-4-element Vector{Int64}:
- 3
- 5
- 7
- 9
-julia> for i=v
-           println(i)
-       end
-3
-5
-7
-9
-```
-
-同样的操作可以用以下形式编写：
-
-```
-julia> next = iterate(v)
-(3, 2)
-julia> while next !== nothing
-           value, state = next
-           println(value)
-           next = iterate(v, state)
-       end
-3
-5
-7
-9
 ```
 
 ## 核心迭代方法
@@ -4168,21 +4068,21 @@ julia> while next !== nothing
 
 `IteratorSize(IterType)` 是一个辅助方法，用于说明迭代器是否具有长度或形状。根据此方法，集合迭代器必须定义 `size` 和/或 `length` 方法。
 
-```
+```julia
 julia> Base.IteratorSize(Vector{Int})
 Base.HasShape{1}()
 ```
 
 `IteratorEltype(IterType)` 是一个辅助方法，用于决定迭代器是否具有特定的元素类型。
 
-```
+```julia
 julia> Base.IteratorEltype(Vector{Int})
 Base.HasEltype()
 ```
 
 `eltype(IterType)` 返回 `iterate` 方法第一个参数的类型。
 
-```
+```julia
 julia> eltype(Vector{Int})
 Int64
 ```
@@ -4193,13 +4093,13 @@ Int64
 
 我们创建一个 `Squares` 类型，它将提供一个数字平方序列，直到存储在该类型中的值。
 
-```
+```julia
 struct Squares
     value::Int
 end
 ```
 
-```
+```julia
 Base.iterate(s::Squares) = s.value <= 0 ? nothing : (1, 2)
 
 Base.iterate(s::Squares, state) = s.value < state ? nothing :
@@ -4215,7 +4115,7 @@ julia> for i=Squares(3)
 
 虽然前面的代码适用于简单的 `for` 循环，但尝试使用 `collect` 创建数组将无法工作。
 
-```
+```julia
 julia> collect(Squares(3))
 ERROR: MethodError: no method matching length(::Squares)
 …
@@ -4223,7 +4123,7 @@ ERROR: MethodError: no method matching length(::Squares)
 
 因此我们添加一个 `length` 方法来实现相同功能。
 
-```
+```julia
 julia> Base.length(s::Squares)=s.value
 julia> collect(Squares(3))
 3-element Vector{Any}:
@@ -4234,7 +4134,7 @@ julia> collect(Squares(3))
 
 虽然数组已正确填充，但类型却是 `Any`。定义 `eltype(IteratorType)` 方法将确保创建具有正确类型的 `Array`。
 
-```
+```julia
 Base.eltype(::Type{Squares})=Int
 
 julia> eltype(Squares)
@@ -4247,13 +4147,13 @@ julia> collect(Squares(3))
  9
 ```
 
-**注意：** `Type{Squares}` 是一种特殊类型，其唯一的实例对象是 `Squares`。这是必需的，因为 `eltype` 是类型本身的函数，而不是类型实例的函数。
+> **注意**：`Type{Squares}` 是一种特殊类型，其唯一的实例对象是 `Squares`。这是必需的，因为 `eltype` 是类型本身的函数，而不是类型实例的函数。
 
 ## 推导式与生成器
 
 在 Julia 中，数组和集合广泛用于科学计算。语言提供对数组创建和操作的便捷访问显得尤为重要。推导式提供了创建此类数组的便利性。
 
-```
+```julia
 julia> [i*i for i=1:3]
 3-element Vector{Int64}:
  1
@@ -4268,7 +4168,7 @@ julia> [i*j for i=1:3, j=1:3]
 
 在前面的示例中，推导式被用来创建一维和多维数组。以下是一个索引可能依赖于另一个索引的示例。
 
-```
+```julia
 julia> [i*j for i=1:3 for j=i:3]
 6-element Vector{Int64}:
  1
@@ -4281,7 +4181,7 @@ julia> [i*j for i=1:3 for j=i:3]
 
 推导式会计算完整的数组，有时也需要一种延迟执行的迭代器，即仅在需要时计算值，而不是一次性计算所有元素。这些被称为**生成器**。
 
-```
+```julia
 julia> gen=(i*j for i=1:3 for j=i:3)
 Base.Iterators.Flatten{Base.Generator{UnitRange{Int64},var"#6#7"}}(Base.Generator{UnitRange{Int64},var"#6#7"}(var"#6#7"(), 1:3))
 julia> for v=gen
@@ -4314,10 +4214,6 @@ julia> for v=gen
 ____________________________________
 
 1 Wirth, Nicklaus, Algorithms + Data Structures = Programs, Prentice-Hall, 1976.
-
-
-
-
 
 # Julia 数组与数据结构
 
@@ -4475,7 +4371,7 @@ julia> size(a, 3)
 
 数组使用类型为 `A[I_1, I_2, …, I_n]` 的表达式进行索引。`I_i` 是索引，可以是我们将在本节探讨的各种类型。
 
-### 标量索引
+## 标量索引
 
 索引表达式最简单的形式可以是标量或数字。以下是一些示例：
 
@@ -4497,9 +4393,11 @@ julia> a[1, 2, 1, 1]
 5
 ```
 
-### 范围索引
+## 范围索引
 
 索引表达式也可以是范围。`Colon(:)` 具有特殊含义，表示该维度的所有索引。
+
+
 
 ```julia
 julia> a[:, 1, 1, 1]
@@ -4529,14 +4427,11 @@ julia> a[1:2:3, 1:2:3, 1, 1]
  3 11
 ```
 
-
-
-
 # 索引表达式与维度
 
 当索引表达式为向量或非标量时，会向输出引入额外的维度。以下是一些示例：
 
-```
+```julia
 julia> a[1:2:3, 1:2:3, [1], [1]]
 2×2×1×1 Array{Int64,4}:
 [:, :, 1, 1] =
@@ -4546,7 +4441,7 @@ julia> a[1:2:3, 1:2:3, [1], [1]]
 
 如前面的示例所示，创建的是一个 `2×2×1×1` 的数组，而不是 `2×2` 的数组。默认情况下，索引向量被假定为具有行向量的一维结构。
 
-```
+```julia
 julia> a[1:2:3, [1; 3], 1, 1]
 2×2 Matrix{Int64}:
  1   9
@@ -4559,7 +4454,7 @@ julia> a[1:2:3, [1, 3], 1, 1]
 
 当索引不按行顺序排列时，输出将无法在此情况下合并为 `2×2` 矩阵：
 
-```
+```julia
 julia> b = a[1:2:3, [1 3], 1, 1]
 2×1×2 Array{Int64,3}:
 [:, :, 1] =
@@ -4572,7 +4467,7 @@ julia> b = a[1:2:3, [1 3], 1, 1]
 
 生成了一个 `2×1×2` 的矩阵。同样，通过提供多维索引，可以创建更复杂的矩阵。
 
-```
+```julia
 julia> a[:, [2], [1], [1]]
 4×1×1×1 Array{Int64,4}:
 [:, :, 1, 1] =
@@ -4593,7 +4488,7 @@ julia> a[[1 2; 3 4], [2], [1], [1]]
 
 我们在上一章讨论过，数组以行优先的方式存储在连续的内存位置中，索引作为底层数据的覆盖层进行操作。底层数据可以作为单个整数索引访问。这种索引方式称为 `linear indexing`（线性索引）。
 
-```
+```julia
 julia> a = reshape(collect(1:6), (2, 3))
 2×3 Matrix{Int64}:
  1  3  5
@@ -4606,7 +4501,7 @@ julia> a[1, 3]
 
 存在一个名为 `LinearIndices` 的类型，有助于创建这种映射。
 
-```
+```julia
 julia> LinearIndices(a)
 2×3 LinearIndices{2,Tuple{Base.OneTo{Int64},Base.OneTo{Int64}}}:
  1  3  5
@@ -4617,7 +4512,7 @@ julia> LinearIndices(a)
 
 笛卡尔索引是一个数字元组，作为数组的维度来表示一个元素。
 
-```
+```julia
 julia> A = reshape(collect(1:6), 3, 2)
 3×2 Matrix{Int64}:
  1  4
@@ -4636,7 +4531,7 @@ julia> ci = CartesianIndices(A)
 
 布尔索引更像是作用于数据的过滤器。
 
-```
+```julia
 julia> x = reshape(collect(1:16), 4, 4)
 4×4 Matrix{Int64}:
  1  5   9  13
@@ -4660,7 +4555,7 @@ julia> x[filter]
 
 虽然逻辑索引似乎仅用于选取过滤器值为 `true` 的特定值，但结合范围索引可以观察到有趣的变化。例如，以下示例完整选取了第 2 行和第 3 行。
 
-```
+```julia
 julia> x[[false, true, true, false], :]
 2×4 Matrix{Int64}:
  2  6  10  14
@@ -4671,7 +4566,7 @@ julia> x[[false, true, true, false], :]
 
 我们处理的大多数索引示例都与从数组中提取信息有关，即所谓的 `l-valued expressions`（左值表达式）。然而，类似的表达式也可用于为数组元素赋值。
 
-```
+```julia
 julia> a = reshape(collect(1:24), 4, 3, 2, 1);
 julia> a[:, 2, 1, 1] = fill(25, 4)
 4-element Vector{Int64}:
@@ -4697,7 +4592,7 @@ julia> a
 
 为了方便在集合中遍历，有时会使用 `begin` 和 `end` 等专用关键字作为索引。甚至可以将这些索引与某些数值运算结合使用。前面数组的元素可以按如下方式访问：
 
-```
+```julia
 julia> a[begin, :, 2, 1], a[begin+1, :, 2, 1]
 ([13, 17, 21], [14, 18, 22])
 
@@ -4714,7 +4609,7 @@ julia> a[end, :, 2, 1], a[end-1, :, 2, 1]
 - `firstindex(X)`：提供使用表达式 `X[begin]` 时的索引。`firstindex(X, dim)` 也可用于特定维度 `dim`。
 - `lastindex(X)`：提供使用表达式 `X[end]` 时的索引。与 `firstindex` 类似，`lastindex` 也可以接受维度作为参数。
 
-```
+```julia
 julia> firstindex(a)
 1
 julia> lastindex(a)
@@ -4733,7 +4628,7 @@ julia> lastindex(a, 4)
 
 切片是通过指定索引来使用数组的一部分。以下是一些示例：
 
-```
+```julia
 julia> a = reshape(collect(1:9), 3, 3)
 3×3 Matrix{Int64}:
  1  4  7
@@ -4756,9 +4651,6 @@ julia> a[1, 2:3]
 ```
 
 虽然大多数示例都很简单，但我们想引起您对 `a[1, :]` 和 `a[1, 2:3]` 的注意。这两者本应是行矩阵。然而，Julia 会返回一个一维向量。
-
-
-
 
 # Julia 数组切片、视图与广播操作
 
@@ -4979,10 +4871,6 @@ julia> map(+, a, b)
 
 数组上的归约操作类似于汇总。类似于数据库聚合和 `GROUP BY` 子句，可以沿行和列对数组进行聚合。将数组元素映射到特定函数并按行和列归约结果是相当常见的结果。就像 `broadcast`、`map` 和 `reduce` 方法一样，确保中间分配最小化。
 
-
-
-
-
 # Julia 数组操作与抽象数组
 
 ## Reduce、Foldl 与 Foldr
@@ -5023,6 +4911,8 @@ julia> reduce(=>, [1, 2, 3, 4])
 ```
 
 通过将操作符（`=>`）替换为操作符（`-`），可以观察到结果的差异。
+
+
 
 ```julia
 julia> foldl(-, [1, 2, 3, 4])
@@ -5072,9 +4962,13 @@ julia> mapslices(sum, a, dims=[1, 2])
 到目前为止，我们观察到数组有两个不同的操作。首先，它提供数据存储的容器；其次，它提供访问和修改数据的各种方法。迭代、索引和切片可以被视为数据的各种访问方法。具体类型如 `Array{T,N}` 满足这两种需求，但在存储要求上是僵化的。例如，一个只有对角线元素的矩阵只需要 `N` 个元素来存储数据。一个三对角矩阵，其对角线及平行于对角线的前后元素被定义，只需要 `3N-2` 个元素来存储数据。使用 `Array{T,2}` 或 `Matrix` 存储此类数据将是浪费的，因为需要 `N*N` 的存储空间。`AbstractArray{T,N}` 是一个用于解决此类需求的接口。以下是派生类型预期实现的一些功能，以便它们能与其他数组类型无缝协作。
 
 1.  `size` 接口，提供数组在所有已定义维度上的大小。
+
 2.  索引接口 `getindex` 和 `setindex!`，用于访问和修改数组数据。
+
 3.  迭代器接口，使数组表现得像一个集合。
+
 4.  `similar` 接口，在需要时将专用数组转换为等效的 `Array{T,N}` 类型。
+
 5.  `axes` 方法，支持非标准索引（如从 0 开始索引等）。
 
 虽然我们建议读者查阅 Julia 文档[1]以获得完整理解，但我们通过示例代码展示一些实现以便于理解。
@@ -5158,9 +5052,6 @@ struct SparseVector{Tv, Ti<:Integer} <:
 end
 ```
 
-
-
-
 `nzval` 是存储所有非零值的向量，而 `nzind` 是这些值的索引位置，其中 `n` 是稀疏向量的长度。
 
 ```julia
@@ -5202,7 +5093,9 @@ findnz(R)
 进一步推广稀疏向量的概念，可以通过为第二维度添加一个向量来存储矩阵。然而，为了更好的存储管理，通常采用以下方法。
 
 1.  列索引按递增顺序存储在一个向量中。
+
 2.  行索引存储在第二个向量中，当列索引发生冲突时，按递增顺序存储。
+
 3.  值存储在一个单独的向量中，用于相同的目的。
 
 这个概念称为**压缩稀疏列**（`CSC`）。虽然该格式存储效率极高，但不利于插入或修改，因为任何插入都可能需要将向量中的所有值向右移动。
@@ -5270,7 +5163,9 @@ using LinearAlgebra
 Julia 线性代数模块可以被认为包含 3 个不同的部分。
 
 1.  Julia 原生的基本矩阵和向量运算
+
 2.  LAPACK 函数
+
 3.  BLAS 函数
 
 基础模块包含矩阵运算，如转置（`tr`）、求逆（`inv`）、点积（`dot`）等。还有进一步的方法，如奇异值分解（`svd`）、下三角和上三角分解等。还有一个特征模块，提供各种矩阵类型的特征值计算。我们将不在这里深入探讨这些概念。不过，我们建议读者查阅语言文档 3。在后续章节中，我们将根据需要有选择地介绍其中一些方法。
@@ -5282,32 +5177,22 @@ Julia 线性代数模块可以被认为包含 3 个不同的部分。
 # 练习
 
 1.  使用 `Vector` 实现一个二叉堆。
+
 2.  通过 `@view` 宏创建的 View 类型中，数组索引是如何转换的？是否可能存在一个数组，其某一维度中的某些索引是无效的？
+
 3.  使用 `AbstractMatrix` 接口创建一个 `MyTridiagonal` 矩阵，并与其维度之一大小相同的行矩阵进行广播加法（`+`）运算。
+
 4.  如果要表示一个对角矩阵，应该使用 `SparseMatrixCSC` 吗？为什么这样做不是个好主意？
+
 5.  Julia 是否提供矩阵 LU 分解的线性代数方法？如果有，请通过示例展示其应用。
 
 ---
 
-1 抽象数组接口，Julia 文档，[`docs.julialang.org/en/v1/manual/interfaces/#man-interface-array`](https://docs.julialang.org/en/v1/manual/interfaces/#man-interface-array)
+1. 抽象数组接口，Julia 文档，[`docs.julialang.org/en/v1/manual/interfaces/#man-interface-array`](https://docs.julialang.org/en/v1/manual/interfaces/#man-interface-array)
 
-2 稀疏数组，Julia 文档，[`docs.julialang.org/en/v1/stdlib/SparseArrays/#Sparse-Arrays`](https://docs.julialang.org/en/v1/stdlib/SparseArrays/#Sparse-Arrays)
+2. 稀疏数组，Julia 文档，[`docs.julialang.org/en/v1/stdlib/SparseArrays/#Sparse-Arrays`](https://docs.julialang.org/en/v1/stdlib/SparseArrays/#Sparse-Arrays)
 
-3 线性代数，Julia 语言文档，[`docs.julialang.org/en/v1/stdlib/LinearAlgebra/`](https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/)
-
-稀疏数组是我们之前讨论的 `AbstractArray` 概念的扩展。稀疏数组的本质是减少数组所需的总体存储。在许多数值应用中，任意行和列组合的大多数值可以是 0，而非零值仅出现在特定位置。例如，对角矩阵仅在对角线元素上有数据。稀疏数组更进一步，允许将值存储在一个向量中，并用一个或多个索引向量存储值的位置 2。
-
-
-
-基础模块包含矩阵运算，如转置（`tr`）、求逆（`inv`）、点积（`dot`）等。还有进一步的方法，如奇异值分解（`svd`）、下三角和上三角分解等。还有一个特征值模块，提供各种矩阵类型的特征值计算。我们将不在这里深入探讨这些概念。不过，我们建议读者查阅语言文档 3。在后面的章节中，我们将根据需要有选择地介绍其中一些方法。
-
-虽然我们建议读者通读 Julia 文档 1 以全面理解该概念，但我们将通过示例代码展示一些实现，以便于理解。
-
-**参考资料**
-
-*   线性代数，Julia 语言文档，[`docs.julialang.org/en/v1/stdlib/LinearAlgebra/`](https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/)
-*   抽象数组接口，Julia 文档，[`docs.julialang.org/en/v1/manual/interfaces/#man-interface-array`](https://docs.julialang.org/en/v1/manual/interfaces/#man-interface-array)
-*   稀疏数组，Julia 文档，[`docs.julialang.org/en/v1/stdlib/SparseArrays/#Sparse-Arrays`](https://docs.julialang.org/en/v1/stdlib/SparseArrays/#Sparse-Arrays)
+3. 线性代数，Julia 语言文档，[`docs.julialang.org/en/v1/stdlib/LinearAlgebra/`](https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/)
 
 # Julia 中的文本处理
 
@@ -5318,10 +5203,15 @@ Julia 线性代数模块可以被认为包含 3 个不同的部分。
 在本章中，我们将涵盖以下主题：
 
 *   背景
+
 *   字符串
+
 *   字符串方法
+
 *   编码
+
 *   字符数组
+
 *   自定义字符串
 
 ## 学习成果
@@ -5354,7 +5244,13 @@ Julia 线性代数模块可以被认为包含 3 个不同的部分。
 
 ### ASCII
 
-7 位字符表示法，旨在表示英语中所有可打印字符，以及用于设备间通信（如串行或并行通信通道）的少数不可打印字符。ASCII 的设计使得大写和小写字母分别分组在特定范围内；同样，所有数字也分组在一个范围内。这使得编程和识别字符变得容易。这是 EBCDIC 所缺乏的。与此同时，字节已成为微处理器中的计算单元，这留出了 1 位空间来容纳额外的 128 个字符。**美国国家标准学会（ANSI）** 考虑了常用的额外非英语字符，并试图将其中 128 个作为 ANSI 字符代码纳入。微软和苹果等操作系统供应商推出了自己的字符编码，如 Windows-1252 编码或 Mac Roman 编码等。它们本质上都支持 ASCII 规范中字符代码 0 到 127 的通用部分，但为各自的便利，在字符代码 128 到 255 中添加了独特的字符集。这导致了在跨各种操作系统和设备显示和转换文档时出现了一种“编码战争”。业界开始使用*高位 ASCII 或扩展 ASCII* 这一术语，它本质上是指字符代码 128–255，这部分因标准而异。
+
+
+# 字符编码与 Julia 字符串处理
+
+## ASCII 与早期编码
+
+7 位字符表示法，旨在表示英语中所有可打印字符，以及用于设备间通信（如串行或并行通信通道）的少数不可打印字符。ASCII 的设计使得大写和小写字母分别分组在特定范围内；同样，所有数字也分组在一个范围内。这使得编程和识别字符变得容易。这是 EBCDIC 所缺乏的。与此同时，字节已成为微处理器中的计算单元，这留出了 1 位空间来容纳额外的 128 个字符。`美国国家标准学会（ANSI）` 考虑了常用的额外非英语字符，并试图将其中 128 个作为 ANSI 字符代码纳入。微软和苹果等操作系统供应商推出了自己的字符编码，如 `Windows-1252` 编码或 `Mac Roman` 编码等。它们本质上都支持 ASCII 规范中字符代码 0 到 127 的通用部分，但为各自的便利，在字符代码 128 到 255 中添加了独特的字符集。这导致了在跨各种操作系统和设备显示和转换文档时出现了一种“编码战争”。业界开始使用`高位 ASCII 或扩展 ASCII` 这一术语，它本质上是指字符代码 128–255，这部分因标准而异。
 
 ### ISO-8859
 
@@ -5362,19 +5258,17 @@ ISO-8859 是一组编码，为代码段 1–15 定义了字符，每个代码段
 
 ### C 字符串
 
-20 世纪 70 年代末推出的“C”语言对文本使用了一个非常简单的范式。任何二进制 8 位字节数组都是一个字符串。数组的最后一个字节必须以字符代码 (0) 或 NULL 结尾。这种被称为以 NULL 结尾的字符串或 C 字符串的概念，确保了代码解释保持在字符串操作之外。C 语言本身在语言内部完全忽略编码解释来实现所有字符串方法，并期望程序员在他们开发的应用程序或系统中处理它。由于缺乏更好的术语，一些计算机系统（如 GNU Linux）称之为 C 编码。在某些系统（如 UNIX）中，C 编码是系统的默认编码。
+20 世纪 70 年代末推出的“C”语言对文本使用了一个非常简单的范式。任何二进制 8 位字节数组都是一个字符串。数组的最后一个字节必须以字符代码 (0) 或 NULL 结尾。这种被称为以 NULL 结尾的字符串或 `C 字符串` 的概念，确保了代码解释保持在字符串操作之外。C 语言本身在语言内部完全忽略编码解释来实现所有字符串方法，并期望程序员在他们开发的应用程序或系统中处理它。由于缺乏更好的术语，一些计算机系统（如 GNU Linux）称之为 `C 编码`。在某些系统（如 UNIX）中，`C 编码` 是系统的默认编码。
 
-
-
-随着计算机的普及，计算不再局限于特定区域变得显而易见。其次，数据交换要求数据能在任何可用的计算系统中呈现。第三，随着存储和内存价格下降，表示文本所需的内存可超越单字节限制。一群来自各组织和学术界的计算机科学家与语言学家在 Unicode Consortium（Unicode 联盟）旗下共同推出了 **Universal Coded Character Set**（**UCS**，通用编码字符集）。1991 年首批引入的字符集包含约 7000 个字符，采用 2 字节表示，称为 UCS-2。但随着更多语言加入规范，字符迅速增长，随即决定采用 4 字节表示，称为 UCS-4。实际上，Unicode 规范定义了 16 个码位平面，每个大小为 65536（2¹⁶），但仅少数值被实际使用。技术上讲，32 位中仅 20 位用于实际用途。然而，许多计算机系统在操作系统中实现了宽字符：Windows 通过 Windows NT 开发了原生 16 位操作系统，并停止了旧版 Windows 95 代码库。在 90 年代末和千禧年初，代码需通过宏分别编译 8 位和 16 位版本。
+随着计算机的普及，计算不再局限于特定区域变得显而易见。其次，数据交换要求数据能在任何可用的计算系统中呈现。第三，随着存储和内存价格下降，表示文本所需的内存可超越单字节限制。一群来自各组织和学术界的计算机科学家与语言学家在 `Unicode Consortium（Unicode 联盟）` 旗下共同推出了 `Universal Coded Character Set（UCS，通用编码字符集）`。1991 年首批引入的字符集包含约 7000 个字符，采用 2 字节表示，称为 `UCS-2`。但随着更多语言加入规范，字符迅速增长，随即决定采用 4 字节表示，称为 `UCS-4`。实际上，Unicode 规范定义了 16 个码位平面，每个大小为 65536（2¹⁶），但仅少数值被实际使用。技术上讲，32 位中仅 20 位用于实际用途。然而，许多计算机系统在操作系统中实现了宽字符：Windows 通过 `Windows NT` 开发了原生 16 位操作系统，并停止了旧版 `Windows 95` 代码库。在 90 年代末和千禧年初，代码需通过宏分别编译 8 位和 16 位版本。
 
 ## 宽字符与 UTF-8 的诞生
 
-世界另一端正忙于重写操作系统内核以支持宽字符。甚至一些类 UNIX 系统也将宽字符实现为 4 字节。Ken Thompson 提出了一个新颖想法：复用 C 语言编码作为 Unicode 字符的基础。但 C 编码或 C 字符串无法直接用于 UCS-2 和 UCS-4，因为它们包含整字节的 NULL 数据，而 C 语言以 0 作为字符串终止符。例如，UCS-2 中字符 ‘a’ 为 U+0061，其前导字节为 0。
+世界另一端正忙于重写操作系统内核以支持宽字符。甚至一些类 UNIX 系统也将宽字符实现为 4 字节。`Ken Thompson` 提出了一个新颖想法：复用 C 语言编码作为 Unicode 字符的基础。但 `C 编码` 或 `C 字符串` 无法直接用于 `UCS-2` 和 `UCS-4`，因为它们包含整字节的 NULL 数据，而 C 语言以 0 作为字符串终止符。例如，`UCS-2` 中字符 ‘a’ 为 `U+0061`，其前导字节为 0。
 
 他希望 Unicode 字符以如下方式表示：
 
-1.  ASCII 字符在新编码中保持有效，即 0x00-0x7F 范围内的字符无需转换。
+1.  ASCII 字符在新编码中保持有效，即 `0x00-0x7F` 范围内的字符无需转换。
 2.  值 ≥ 128 的字符必须用多字节表示。
 3.  新编码必须有前导字节指示后续读取的字节数。
 4.  歧义时，选择字节数最少的编码。
@@ -5387,7 +5281,7 @@ ISO-8859 是一组编码，为代码段 1–15 定义了字符，每个代码段
 
 **Figure 7.1:** UTF-8 Representation of the Unicode Characters
 
-该表示称为 **UTF-8**。超出 21 位的编码如何处理？目前 Unicode 规范未使用超过 21 位信息，但该方案可容纳高达 36 位信息，覆盖整个 UCS-4 范围。类似地，还引入了 **UTF-16**，以 2 字节为单位扩展字符码；也存在 **UTF-32** 转换方案。
+该表示称为 `UTF-8`。超出 21 位的编码如何处理？目前 Unicode 规范未使用超过 21 位信息，但该方案可容纳高达 36 位信息，覆盖整个 `UCS-4` 范围。类似地，还引入了 `UTF-16`，以 2 字节为单位扩展字符码；也存在 `UTF-32` 转换方案。
 
 ## Julia 对 Unicode 的原生支持
 
@@ -5482,8 +5376,6 @@ julia> for c in s
 J
 u
 ```
-
-
 
 # Julia 字符串操作
 
@@ -5703,14 +5595,13 @@ julia> lowercasefirst("Julia")
 julia> str = "Introduction to Julia";
 ```
 
-
-
-
 # 字符串搜索与替换
 
 ## 基础搜索函数
 
 `findfirst` 和 `findnext` 协助在 `String` 对象中搜索模式序列。`findlast` 提供模式的最后一次出现位置。
+
+
 
 ```julia
 julia> r = findfirst("o", "Introduction to Julia");
@@ -5880,9 +5771,6 @@ julia> isspace('\n'), isspace('\r'), isspace(' '), isspace('\x20')
 (true, true, true, true)
 ```
 
-
-
-
 在处理字符串和编码的过程中，我们意识到某些函数提供了单个字符的属性。因此，将 `String` 转换为字符数组对我们来说非常重要。我们将在下一节中探讨这一点。
 
 ## 将字符串转换为字符数组
@@ -5967,9 +5855,13 @@ julia> eltype(s), eltype(s16)
 # 练习
 
 1.  编写一个方法来验证字节序列是否为 UTF-8 编码流。为之做出所有必要的假设。
+
 2.  编写一个方法来匹配句子中的闭合括号与打开括号。可以使用什么正则表达式？注意：括号可以嵌套。
+
 3.  实现一种字符串类型，其元素可以表示所有 ISO-8859-1 字符。
+
 4.  编写一个方法来匹配回文字符串。
+
 5.  `String("abc") === String("abc")` 会返回 `true` 还是 `false`？通过查看 Julia 语言源代码仓库中的实现来解释该行为。
 
 ______
@@ -5980,18 +5872,11 @@ ______
 
 3 Stringapalooza，Issue 16107，Julia GitHub 仓库 [`github.com/JuliaLang/julia/issues/16107`](https://github.com/JuliaLang/julia/issues/16107)
 
-
-
-
 # `LegacyStrings.jl` 中 `ASCIIString` 的 GitHub 仓库
 
 [`github.com/JuliaStrings/LegacyStrings.jl/blob/master/src/ascii.jl`](https://github.com/JuliaStrings/LegacyStrings.jl/blob/master/src/ascii.jl)
 
-正则表达式是一种模式匹配语言结构，使计算机程序员能够定义可匹配文本字符串的复杂模式。这些模式在编译器设计和分词器等方面被大量使用。一些常用的用于正则表达式（regex）模式匹配的 UNIX 应用程序有 `lex`、`grep` 和 `egrep`。像 PERL、Python 和 R 等编程语言也提供了比 `grep` 支持的标准语法更丰富的扩展 regex 语法支持。**PERL 兼容正则表达式**（**PCRE**）库 2 已集成到 Julia 中。因此，Julia 对 regex 的支持与其他任何语言一样强大。虽然我们在此展示了一些 regex 示例，但这并非专门介绍 regex 所有细微差别的章节。我们建议读者从该主题的其他权威文献中很好地掌握 regex。
 
-该架构进一步扩展，以定义一个抽象的 `AbstractString` 类型，该类型将 `AbstractChar` 视为元素类型。Julia 在 1.0 版本之前的实现中有许多此类实现，如 `ASCIIString`、`UTF8String` 等，它们本质上提供了一些常用编码方案的基础 3。许多经典字符串类型在功能上已合并到 `String` 类型中，一些被移至一个名为 `LegacyStrings.jl` 的可选包中。虽然使用该包没有显著优势，但对于有兴趣尝试并实现自己字符串类型的人来说，它们可以作为很好的参考资料。如果您有兴趣实现自己的字符串类型，请确保已实现 `AbstractString` 和 `AbstractChar` 接口。抽象类型没有太多要求，只是期望您在需要时能更轻松地实现与 `String` 和 `Char` 对象的相互转换。
-
-一个句子可能包含来自多种语言的符号和字符。例如，数学符号和希腊语表达式可用于英语句子中。最后，文本通常被用作实体的最后手段表示，这些实体可能没有替代表达形式，就像文本关键字的情况一样。虽然 Julia 符号非常符合最后一种场景，但文本也用于许多此类情况 1。在本章中，我们将尝试深入探讨前面讨论的所有方面的细节。文本用途的多样性带来了许多表示挑战，我们必须从概念上理解 Julia 语言的设计。虽然文本结构可能达到文档结构和表示的复杂程度，但我们将讨论范围限制在字符串的概念上。
 
 除了上述方法外，`AbstractString` 的派生类型还需要实现所有迭代和索引方法，如 `iterate`、`getindex`、`nextind`、`prevind`、`lastindex`、`firstindex` 以及一些集合相关的方法，如 `length` 等 4。
 
@@ -6007,13 +5892,13 @@ PERL 兼容正则表达式，维基百科，[`en.wikipedia.org/wiki/Perl_Compati
 
 Julia 受 Lisp 影响很大，并附带一个 Lisp 变体解释器（`FemtoLisp`）用于其部分内部解析。因此，它理所当然地采用了元编程，这是 Lisp 衍生语言最灵活的特性之一。我们将在本章中回顾 Julia 是如何采用元编程的。
 
-## 本章将涵盖以下主题：
+## 本章将涵盖以下主题
 
-*   背景
-*   宏
-*   自定义字符串字面量
-*   生成函数
-*   常用宏
+* 背景
+* 宏
+* 自定义字符串字面量
+* 生成函数
+* 常用宏
 
 ## 学习目标
 
@@ -6021,7 +5906,7 @@ Julia 受 Lisp 影响很大，并附带一个 Lisp 变体解释器（`FemtoLisp`
 
 # 背景
 
-元编程 1 本质上利用数据生成可在应用程序相同上下文中执行的代码。一些语言会在编译期间进行此类代码生成；一些则将其视为执行的一部分。虽然代码生成并注入执行单元的阶段可能因语言内部架构而异，但所有语言都会在后处理之前先生成基础语言的代码。这是一个来自 C/C++ 的示例：
+元编程本质上利用数据生成可在应用程序相同上下文中执行的代码。一些语言会在编译期间进行此类代码生成；一些则将其视为执行的一部分。虽然代码生成并注入执行单元的阶段可能因语言内部架构而异，但所有语言都会在后处理之前先生成基础语言的代码。这是一个来自 C/C++ 的示例：
 
 ```
 #define twice(x) 2*(x)
@@ -6041,7 +5926,7 @@ int y = 2*(2);
 }
 ```
 
-您可以看到预处理器将 twice 宏替换为代码中的值。一旦运行预处理器，新生成的代码将在 C 编译器中编译。让我们看看 C++ 语言中相同代码的模板元编程：
+您可以看到预处理器将 `twice` 宏替换为代码中的值。一旦运行预处理器，新生成的代码将在 C 编译器中编译。让我们看看 C++ 语言中相同代码的模板元编程：
 
 ```
 template <typename T>
@@ -6055,10 +5940,6 @@ int y = twice(2);
 ```
 
 通过预处理器运行不会实质性地改变代码。而且，人们很可能会认为这不是元编程。但这也是一种形式的元编程。在编译时，函数 `twice<T>` 的模板类型将被解析，并生成 `twice<int>()` 函数。基于模板的元编程在 Julia 中受支持，我们已经在函数和方法章节中看到了这一点。Julia 能够将任何文本字符串转换并内部化为可在程序上下文中执行的代码。虽然对某些人来说这听起来令人兴奋，但也可能引发对安全性的担忧。这一概念与 Lisp 类语言执行宏非常相似。
-
-
-
-
 
 # 抽象语法树 (AST)
 
@@ -6082,11 +5963,11 @@ Expr
 
 我们获取了一个可以作为 Julia 表达式的有效字符串。我们用 Julia 解析器对其进行了解析，输出以内部字符串格式返回。内部字符串格式的类型为 `Expr`。`dump` 方法提供了表达式的 AST。从 AST 中可以得出以下信息：
 
-1.  `ex` 的类型是 `Expr`。
-2.  `ex.head` 是一个调用符号。
-3.  `ex.args` 有 3 个元素。
-4.  `args[1]` 是符号 `+`，将由 call 调用。
-5.  `args[2]` 和 `[3]` 是函数调用的参数。
+1. `ex` 的类型是 `Expr`。
+2. `ex.head` 是一个调用符号。
+3. `ex.args` 有 3 个元素。
+4. `args[1]` 是符号 `+`，将由 `call` 调用。
+5. `args[2]` 和 `[3]` 是函数调用的参数。
 
 让我们对表达式求值，应该得到 `2`。
 
@@ -6140,8 +6021,8 @@ Expr
 
 这里生成的 `Expr` 在 AST 中有两个部分：
 
-1.  第一部分：对变量的赋值。
-2.  第二部分：对运算符 `+` 的调用，其结果是赋值的右值。
+1. 第一部分：对变量的赋值。
+2. 第二部分：对运算符 `+` 的调用，其结果是赋值的右值。
 
 ```
 julia> dump(ex)
@@ -6208,9 +6089,9 @@ end
 
 多行表达式包含在 `quote…end` 块之间。正如你所见，添加了行号表达式以跟踪行号，用于行调试目的。表达式的 dump 将显示 AST 的更详细视图。较长的 AST 具有以下特征：
 
-1.  它以类型为 block 的 `head` 属性开始。
-2.  行节点和后续表达式作为 `args` 数组的一部分可用。
-3.  行包含行号部分和文件部分，设置表达式的上下文。
+1. 它以类型为 block 的 `head` 属性开始。
+2. 行节点和后续表达式作为 `args` 数组的一部分可用。
+3. 行包含行号部分和文件部分，设置表达式的上下文。
 
 ```
 julia> dump(ex)
@@ -6266,9 +6147,6 @@ julia> eval(ex)
 julia> z
 1
 ```
-
-
-
 
 创建了一个值为 `1` 的新变量 `z`，并从上一节中获取了值为 `5` 的 `x`。因此，表达式 `ex` 的求值结果为 `7`。
 
@@ -6453,7 +6331,9 @@ RegexMatch("aca")
 
 表达式 `r"…"` 等同于调用宏 `@r_str()`。让我们为大写字符串创建一个自定义表达式。
 
-```
+
+
+```julia
 julia> struct CapsString
            s::String
            CapsString(s::String)=new(uppercase(s))
@@ -6469,7 +6349,7 @@ CapsString("THIS IS UPPER CASE STRING")
 
 Julia 中使用多重分派架构来调用函数和方法。然而，有时可能希望创建比语言支持的更复杂的分派模型并自行构建。生成函数在这些场景中提供帮助。让我们考虑一个简单的分派场景。
 
-```
+```julia
 julia> f(x::Integer) = x²;
 julia> f(x) = x;
 julia> f(4)
@@ -6478,50 +6358,48 @@ julia> f("John")
 "John"
 ```
 
+在前面的示例中，使用标准调度规则，`f(4)` 将调用 `f(::Integer)`，而 `f("John")` 将调用 `f(x)`。如果必须构建自定义调度规则，可以使用 `@generated` 宏来创建函数，如下所示：
 
-
-在前面的示例中，使用标准调度规则，`<strong>f(4)</strong>` 将调用 `<strong>f(::Integer)</strong>`，而 `<strong>f("John")</strong>` 将调用 `<strong>f(x)</strong>`。如果必须构建自定义调度规则，可以使用 `<strong>@generated</strong>` 宏来创建函数，如下所示：
-
-```
+```julia
 julia> @generated function genf(x)
-if x <: Integer
-return :(x²)
-else
-return :x
-end
-end
+           if x <: Integer
+               return :(x²)
+           else
+               return :x
+           end
+       end
 genf (generic function with 1 method)
 ```
 
-在前面的函数中，仅在生成的函数中使用了 `<strong>x</strong>` 的类型。`<strong>x</strong>` 的值被忽略。该函数返回一个表达式，该表达式是基于自定义调度过程所期望的函数行为。
+在前面的函数中，仅在生成的函数中使用了 `x` 的类型。`x` 的值被忽略。该函数返回一个表达式，该表达式是基于自定义调度过程所期望的函数行为。
 
-```
+```julia
 julia> genf(4)
 16
 julia> genf("John")
 "John"
 ```
 
-当这些方法被调用时，带有 `Integer` 参数的函数会被编译并缓存。后续对 `<strong>genf(3)</strong>` 的调用将调用已编译的表达式，效率可能更高。关于生成宏的更详细示例，建议参阅 Julia 文档 2。
+当这些方法被调用时，带有 `Integer` 参数的函数会被编译并缓存。后续对 `genf(3)` 的调用将调用已编译的表达式，效率可能更高。关于生成宏的更详细示例，建议参阅 Julia 文档 [2]。
 
-**注意：**
-
-*   **函数的缓存生成是非确定性的。因此，与生成器一起使用的函数不得有副作用。它们也不应修改全局变量。**
-*   **生成函数用于难以消除歧义的复杂调度规则。对于标准场景，使用语言默认的调度规则始终更高效。**
+> **注意：**
+>
+> *   **函数的缓存生成是非确定性的。因此，与生成器一起使用的函数不得有副作用。它们也不应修改全局变量。**
+> *   **生成函数用于难以消除歧义的复杂调度规则。对于标准场景，使用语言默认的调度规则始终更高效。**
 
 # Julia 内置宏
 
-Julia 有许多内置宏，用于简化某些任务。我们在前几章中已经接触过它们，如 `<strong>@view</strong>`、`<strong>@goto</strong>`、`<strong>@label</strong>` 等。在本节中，我们将了解其中的一些宏并欣赏其实现。
+Julia 有许多内置宏，用于简化某些任务。我们在前几章中已经接触过它们，如 `@view`、`@goto`、`@label` 等。在本节中，我们将了解其中的一些宏并欣赏其实现。
 
-# 宏的内部变量
+## 宏的内部变量
 
-每个宏都可以访问变量 `<strong>__source__</strong>`（包含文件名、行号）和 `<strong>__module__</strong>`（包含定义该宏的模块名称）。
+每个宏都可以访问变量 `__source__`（包含文件名、行号）和 `__module__`（包含定义该宏的模块名称）。
 
-```
+```julia
 julia> macro test()
-println(__module__)
-println(__source__)
-end
+           println(__module__)
+           println(__source__)
+       end
 @test (macro with 1 method)
 
 julia> @test
@@ -6529,32 +6407,32 @@ Main
 #= In[6]:1 =#
 ```
 
-这些变量用于开发一些实用的位置宏，如 `<strong>@__FILE__</strong>`、`<strong>@__LINE__</strong>` 和 `<strong>@__DIR__</strong>`。
+这些变量用于开发一些实用的位置宏，如 `@__FILE__`、`@__LINE__` 和 `@__DIR__`。
 
-```
+```julia
 function macro_usage()
-println("Dir:", @__DIR__, " file:", @__FILE__, " Line no:", @__LINE__)
+    println("Dir:", @__DIR__, " file:", @__FILE__, " Line no:", @__LINE__)
 end
 
 julia> macro_usage()
 Dir:C:\mydir\GitHub\HOPJ\Chapter-8 file:In[9] Line no:2
 ```
 
-**注意：** 当代码在 REPL 或 IJulia 上下文中使用时，`<strong>@__FILE__</strong>` **宏不返回文件名。它返回命令标识符。**
+> **注意：** 当代码在 REPL 或 IJulia 上下文中使用时，`@__FILE__` 宏不返回文件名。它返回命令标识符。
 
-# @eval 宏
+## @eval 宏
 
-当需要生成大量样板代码时，可以有效地使用 `<strong>@eval</strong>`。
+当需要生成大量样板代码时，可以有效地使用 `@eval`。
 
-```
+```julia
 julia> struct MyNumber
-v::Float64
-end
+           v::Float64
+       end
 ```
 
-假设我们想在这些数字上定义所有数学方法，如 `<strong>sin</strong>`、`<strong>cos</strong>` 和 `<strong>tan</strong>`。代码可能如下所示：
+假设我们想在这些数字上定义所有数学方法，如 `sin`、`cos` 和 `tan`。代码可能如下所示：
 
-```
+```julia
 Base.sin(m::MyNumber)=Base.sin(m.v)
 Base.cos(m::MyNumber)=Base.cos(m.v)
 Base.tan(m::MyNumber)=Base.tan(m.v)
@@ -6562,29 +6440,29 @@ Base.tan(m::MyNumber)=Base.tan(m.v)
 
 可以通过以下表达式避免重复代码：
 
-```
+```julia
 julia> for op in [:sin, :cos, :tan]
-eval(quote
-Base.$op(m::MyNumber)=Base.$op(m.v)
-end)
-end
+           eval(quote
+               Base.$op(m::MyNumber)=Base.$op(m.v)
+           end)
+       end
 ```
 
-`<strong>eval(quote…end)</strong>` 是许多 Julia 应用程序中常用的表达式。同一功能以宏 `<strong>@eval</strong>` 表示，表达式如下所示：
+`eval(quote…end)` 是许多 Julia 应用程序中常用的表达式。同一功能以宏 `@eval` 表示，表达式如下所示：
 
-```
+```julia
 julia> for op in [:sin, :cos, :tan]
-@eval Base.$op(m::MyNumber)=Base.$op(m.v)
-end
+           @eval Base.$op(m::MyNumber)=Base.$op(m.v)
+       end
 ```
 
-# @assert 宏
+## @assert 宏
 
-`<strong>@assert</strong>` 是一个宏，用于验证表达式的真值，如果表达式评估为 `<strong>false</strong>`，则抛出 `<strong>AssertionError</strong>`。C/C++ 等其他语言也有类似的宏。在某些语言中，断言验证仅在调试模式下执行代码时生效，在优化的发布模式代码中会被忽略。Julia 也建议仅将 `<strong>assert</strong>` 宏用于调试操作。因此，不应将其用作程序逻辑。`<strong>assert</strong>` 的最简单形式如下，完整代码可见 Julia GitHub 仓库 3：
+`@assert` 是一个宏，用于验证表达式的真值，如果表达式评估为 `false`，则抛出 `AssertionError`。C/C++ 等其他语言也有类似的宏。在某些语言中，断言验证仅在调试模式下执行代码时生效，在优化的发布模式代码中会被忽略。Julia 也建议仅将 `assert` 宏用于调试操作。因此，不应将其用作程序逻辑。`assert` 的最简单形式如下，完整代码可见 Julia GitHub 仓库 [3]：
 
-```
+```julia
 macro myassert(ex, msg)
-return :($(ex) ? nothing : throw(AssertionError($msg)))
+    return :($(ex) ? nothing : throw(AssertionError($msg)))
 end
 
 julia> @myassert 1==0 "1 is not same as 0"
@@ -6594,55 +6472,52 @@ Stacktrace:
 …
 ```
 
-实际的 `<strong>assert</strong>` 宏不限制传递给它的参数数量，但仅将第一个消息作为有效消息。如果没有消息，则将 `<strong>ex</strong>` 作为消息。
+实际的 `assert` 宏不限制传递给它的参数数量，但仅将第一个消息作为有效消息。如果没有消息，则将 `ex` 作为消息。
 
-```
+```julia
 macro myassert(ex, msgs...)
-msg = isempty(msgs) ? ex : msgs[1]
-msg = msg isa AbstractString ? String(msg) : string(msg)
-return :($(ex) ? nothing : throw(AssertionError($msg)))
+    msg = isempty(msgs) ? ex : msgs[1]
+    msg = msg isa AbstractString ? String(msg) : string(msg)
+    return :($(ex) ? nothing : throw(AssertionError($msg)))
 end
 
 julia> @myassert 1==0
 AssertionError: 1 == 0
-
 Stacktrace:
 [1] top-level scope at In[34]:10
 …
 ```
 
-最终代码与前面的代码略有不同，因为它解决了简单示例代码未处理的一些错误条件。将 `<strong>assert</strong>` 定义为宏是恰当的，因为 `<strong>ex</strong>` 参数在 Julia 中可以是任何表达式。
+最终代码与前面的代码略有不同，因为它解决了简单示例代码未处理的一些错误条件。将 `assert` 定义为宏是恰当的，因为 `ex` 参数在 Julia 中可以是任何表达式。
 
-# @time 宏
+## @time 宏
 
-`<strong>@time</strong>` 宏用于计算执行代码块的耗时和内存分配。
+`@time` 宏用于计算执行代码块的耗时和内存分配。
 
-```
+```julia
 julia> @time begin
-sleep(0.3)
-1+1
-end
+           sleep(0.3)
+           1+1
+       end
 0.310595 seconds (15 allocations: 672 bytes)
 2
 ```
 
-`<strong>@time</strong>` 宏的一部分实现如下代码所示：
+`@time` 宏的一部分实现如下代码所示：
 
-```
+```julia
 macro mytime(ex)
-return quote
-local elapsedtime = time_ns()
-local val = $(ex)
-elapsedtime = time_ns() - elapsedtime
-println("Elapsed time: ", elapsedtime/1e9)
-val
-end
+    return quote
+        local elapsedtime = time_ns()
+        local val = $(ex)
+        elapsedtime = time_ns() - elapsedtime
+        println("Elapsed time: ", elapsedtime/1e9)
+        val
+    end
 end
 ```
 
-`<strong>val</strong>` 在 `<strong>elapsedtime</strong>` 之前计算。因此，两者都需要存储在局部变量中。由于返回值是一个带引用的表达式。如果变量 `<strong>val</strong>` 和 `<strong>elapsedtime</strong>` 没有显式定义为局部变量，则会覆盖全局作用域中的 `<strong>val</strong>` 和 `<strong>elapsedtime</strong>` 变量。这仅适用于从宏返回的 `<strong>Expr</strong>`，不影响宏中使用的变量（如前一个示例中的 `<strong>msg</strong>`）。
-
-
+`val` 在 `elapsedtime` 之前计算。因此，两者都需要存储在局部变量中。由于返回值是一个带引用的表达式。如果变量 `val` 和 `elapsedtime` 没有显式定义为局部变量，则会覆盖全局作用域中的 `val` 和 `elapsedtime` 变量。这仅适用于从宏返回的 `Expr`，不影响宏中使用的变量（如前一个示例中的 `msg`）。
 
 元编程在 Julia 中非常精细，且可能相当复杂。我们探讨了几种场景，并理解了如何在使用 Julia 开发应用程序时利用它们。我们还理解了宏的概念以及如何有效地使用它们。初次接触元编程的人可能会觉得这个概念很复杂。随着经验的积累和实践，你将能更好地领会这些概念。在下一章中，我们将介绍 Julia 语言的标准库以及这些库提供的一些功能。
 
@@ -6664,17 +6539,11 @@ end
 
 [3] Julia GitHub Repository, [`github.com/JuliaLang/julia/blob/788b2c77c10c2160f4794a4d4b6b81a95a90940c/base/error.jl#L189-L209`](https://github.com/JuliaLang/julia/blob/788b2c77c10c2160f4794a4d4b6b81a95a90940c/base/error.jl#L189-L209)
 
-当调用这些方法时，带有 `Integer` 参数的函数会被编译并缓存。对 `genf(3)` 的后续调用将执行已编译的表达式，效率可能更高。关于生成宏的更详尽示例，建议您参阅 Julia 文档[²]。
-
-`@assert` 是一个验证表达式真值的宏，如果表达式求值为 `false`，则抛出 `AssertionError`。C/C++ 等其他语言也有类似的宏。在某些语言中，断言验证仅在代码以调试模式执行时生效，在优化后的发布模式代码中会被忽略。Julia 也建议仅将 `assert` 宏用于调试操作。因此，它不应被用作程序逻辑。`assert` 的最简形式如下，完整代码可见 Julia GitHub 仓库[³]：
-
-元编程[¹] 本质上是利用数据生成可在应用程序相同上下文中执行的代码。某些语言会在编译期间进行此类代码生成；某些语言则将其视为执行的一部分。虽然代码生成并注入执行单元的阶段可能因语言内部架构而异，但所有语言都会在后处理之前，先生成基础语言的代码。以下是一个来自 C/C++ 的示例。
-
 # Julia 标准库
 
 Julia 是一个精细的编程系统。编程系统提供的功能超越了基础编程语言。大多数现代语言都提供完整的运行时编程系统，它们与底层操作系统无缝协作，给开发者一种跨平台的体验。
 
-# 章节概览
+## 章节概览
 
 本章将涵盖以下主题：
 
@@ -6691,15 +6560,15 @@ Julia 是一个精细的编程系统。编程系统提供的功能超越了基�
 
 阅读本章后，读者将能够理解 Julia 的代码是如何组织为模块的。我们将回顾一些常用方法，帮助用户访问文件、文件系统以及使用 I/O 框架。我们将回顾多线程和异步编程。我们将回顾与操作系统的交互。
 
-# 背景
+## 背景
 
 提供精细的运行时环境已成为当今大多数编程语言的基本范式。Java 可能是这一理念的早期采用者之一。随后，Perl、Python、Ruby、R、SPSS 等大多数编程语言都延续了类似的理念。例如，当 C/C++ 编程在开发者中最流行时，Windows 等操作系统会在发布新版本时随附 C/C++ 语言的 Windows 运行时库。程序员会将其与应用程序代码集成，以实现适当的互操作性和兼容性。现在人们期望随编程语言发布的运行时能确保与操作系统的此类兼容性。这将确保应用程序开发者不必过多担心操作系统内部的细微差别及其跨版本的行为变化。鉴于此背景，在 Julia 编程系统中期望同样的特性也是合乎逻辑的。
 
 > **注意：** `stdlib`。`stdlib` 只是 Julia 的库之一。本章的范围涵盖随语言运行时发布的所有 Julia 语言组件，包括 `stdlib`。
-
+>
 > **我们将提供库的概念概览，并建议读者在 Julia 文档中查找详细信息。**
 
-## 模块与命名空间
+### 模块与命名空间
 
 Julia 是一个庞大的编程环境。它拥有核心语言，并为许多操作系统功能提供了抽象子系统。我们将在后续章节讨论其中一些。这需要层次化的组织和避免命名空间冲突，因为两个同名函数可能位于两个不同的命名空间中，服务于两个完全不同的目的。例如，`Line` 的 `length` 与一维 `Array` 的 `length` 目的截然不同。
 
@@ -6742,11 +6611,7 @@ julia> names(m2)
 2-element Array{Symbol,1}:
 ```
 
-
-
-# Julia 模块与命名空间
-
-## 模块定义与导出
+### 模块定义与导出
 
 可以看到，模块名 `m1` 和 `m2` 分别在各自的模块命名空间中定义。然而，只有函数 `f` 在模块 `m1` 的命名空间中可用，而函数 `g` 在模块 `m2` 的命名空间中可用。`names()` 函数仅报告从模块导出的符号。现在让我们在代码中使用函数 `f`。
 
@@ -6784,6 +6649,8 @@ Stacktrace:
  [2] include_string(::Function, ::Module, ::String, ::String) at .\loading.jl:1091
  …
 ```
+
+
 
 只有 `f` 能够被调用，因为 `m1` 仅导出了函数 `f`。函数 `g` 未被导出，因此该符号无法被调用。这里第二点值得注意的是 `using` 语句中 `m1` 前的点号 (`.`)。该模块定义在当前环境中，`m1` 是当前模块的成员模块，而非最高层级模块。`.m1` 明确了模块的层级关系。
 
@@ -6850,11 +6717,10 @@ x                            8 bytes Int64
 在上表中：
 
 *   变量 `ans` 可能在 REPL 环境中报告，因为它存储了在 REPL 屏幕上最后打印的值。
+
 *   `Core` 模块包含核心语言特性，没有它们系统根本无法运行。像 `String`、`Int` 等数据类型定义在 `Core` 模块中。
+
 *   `Base` 模块也包含语言特性。但在某种意义上，它们可被视为比 `Core` 模块更外围的功能。例如，文件输入/输出 (`IO`) 定义在 `Base` 模块中。虽然 IO 是系统的基本特性，但可以构建不直接使用 IO 的应用程序。然而，许多内部系统组件可能需要 IO 来实现其功能。
-
-
-
 
 因此，可以将 `Base`、`Core` 和 `Main` 视为 Julia 的构建模块。我们定义的模块 `m1` 和 `m2` 作为 `Main` 模块的子模块出现。它们将根据需要选择性使用。我们将在后续章节中探讨这些内容。
 
@@ -6897,7 +6763,7 @@ Directory of C:\Users\HOPJ\Chapter-9
 Process(`cmd /c dir`, ProcessExited(0))
 ```
 
-`Cmd` 对象通过使用反引号（` `）引用外部命令来创建。`Cmd` 对象也有显式的构造函数[¹]。
+`Cmd` 对象通过使用反引号（` `）引用外部命令来创建。`Cmd` 对象也有显式的构造函数[^1]。
 
 有时需要根据操作系统类型执行特定操作。此外，某些代码可能特定于某个操作系统，在其他平台上不存在，从而导致编译错误。在这种情况下，可以将此类代码放在 `@static` 宏中。这样，不适用于当前操作系统的代码将不会被检查。
 
@@ -6934,7 +6800,9 @@ julia> pwd()
 在前面的示例中：
 
 1. 我们通过 `pwd` 方法查询并缓存了当前工作目录。
+
 2. 我们使用 `cd()` 更改了目录。
+
 3. 我们将目录改回缓存的值。
 
 可以使用 `readdir()` 获取目录列表。不过，它可能不是最有用的，因为它无法让你知道报告的数组元素是目录还是文件。默认情况下，`readdir()` 列出当前工作目录。
@@ -6983,11 +6851,6 @@ julia> fs = stat("Chapter-9 Standard Libraries.ipynb")
 StatStruct(mode=0o100666, size=21901)
 ```
 
-[¹]: 参考文献链接：`#iesbkwfi.html#n4upl4fndmr`
-
-
-
-
 `isdir`、`isfile` 和 `islink` 可以返回 `true`，分别表示某个名称是目录、普通文件或符号链接。`mkdir()` 和 `rmdir()` 等函数可以创建和删除目录。简而言之，Julia 提供了精细的方法来操作文件，就像使用系统调用或 Shell 命令一样。
 
 # Julia 并行编程
@@ -7009,8 +6872,11 @@ Julia 在并行编程方面提供了灵活性，支持异步计算、多线程�
 Julia 的异步编程模型可以从上图中理解：
 
 1. 新创建的任务通过 `schedule` 方法被添加到调度器的可运行任务队列中。
+
 2. 当任务正在执行时，它可以调用 `yield` 并将控制权交还给调度器，以调度下一个可运行的任务。
+
 3. 任务可以在条件上 `wait`，并移动到该条件的等待队列中。
+
 4. 当条件满足时，可以在该条件上调用 `notify`，这会将分配给该条件的所有任务移动到调度器的可运行队列中。
 
 任务不是函数。它们可以轻松切换，因为不需要像函数那样重新创建栈帧。调度器如何决定挑选哪个任务取决于 Julia 运行时的架构。例如，具有多线程执行可用性的调度器可能能够挑选多个任务进行执行。同样，条件也是另一个系统相关的实体。例如，条件可以是文件被锁定、设备忙碌，或通道已满或为空。
@@ -7090,6 +6956,12 @@ end
 
 结果分批打印，一旦通道填满，生产者就会等待。同样，一旦通道变空，消费者就会等待。
 
+[^1]: 参考文献链接：`#iesbkwfi.html#n4upl4fndmr`
+
+
+
+## 通道操作示例
+
 ```text
 Adding 1 to channel
 Adding 2 to channel
@@ -7133,7 +7005,7 @@ end
 
 锁在多线程场景中尤为关键，因为任务可能同时访问资源。
 
-### 多线程
+## 多线程
 
 Julia 进程启动时为单线程。但是，可以使用命令 `julia -t <no_of_threads>` 或 `julia --threads <no_of_threads>` 启动多线程。也可以通过将环境变量 `JULIA_NUM_THREADS` 设置为所需的线程数来实现相同效果。通过 `julia -t 4` 启动 Julia 后，以下代码提供 Julia 环境中活动线程的数量。
 
@@ -7143,8 +7015,6 @@ julia> Threads.nthreads()
 ```
 
 `@spawn` 将使用任何可用的线程并在其上运行任务。
-
-
 
 # Julia 多线程与分布式计算
 
@@ -7195,7 +7065,7 @@ Step: 75
 
 ## 线程同步
 
-当程序中执行多个线程时，跨线程同步可能是一个问题。锁是解决这些需求的有用编程范式。`Threads.Conditions()` 是线程安全的条件对象，必须用于线程安全。第二个问题是低级原子操作。Julia 支持部分 LLVM 定义的低级原子操作。最后，终结器和垃圾回收可能会受到多线程程序的影响。建议用户查阅多线程手册以更好地理解该主题 3。
+当程序中执行多个线程时，跨线程同步可能是一个问题。锁是解决这些需求的有用编程范式。`Threads.Conditions()` 是线程安全的条件对象，必须用于线程安全。第二个问题是低级原子操作。Julia 支持部分 LLVM 定义的低级原子操作。最后，终结器和垃圾回收可能会受到多线程程序的影响。建议用户查阅多线程手册以更好地理解该主题。
 
 ![分布式计算架构](img/n4upl4fndrg.jpeg)
 
@@ -7213,7 +7083,7 @@ Julia 的分布式架构包含前几章讨论的异步编程和多线程编程�
 8.  许多远程连接可能不需要知道运行工作负载的机器的具体细节。它们使用带有 `:Any` 参数的 `@spawnat` 等宏，以便可以在任何一台机器上启动工作负载。因此返回的 `Future` 对象将能够通过适当的 SSH 连接进行通信，以与另一台物理机器上的正确工作进程通信。
 9.  同样，所有工作进程要运行的代码必须对它们可用。一种选择是将其部署为包，使包在所有进程中可用。但包需要在每个单独的进程中通过 `using` 单独选择。
 
-虽然 Julia 提供了详尽的分布式架构，但为简洁起见并减少文本复杂性，我们将讨论保持在最低限度。不过，建议感兴趣的读者参考 Julia 文档手册中的多进程和分布式计算章节 4。
+虽然 Julia 提供了详尽的分布式架构，但为简洁起见并减少文本复杂性，我们将讨论保持在最低限度。不过，建议感兴趣的读者参考 Julia 文档手册中的多进程和分布式计算章节。
 
 ## 输入与输出 (I/O)
 
@@ -7262,7 +7132,7 @@ ERROR: InterruptException:
 …
 ```
 
-您可以使用 *Ctrl-C*；这将引发中断异常并退出 `read` 方法，但您的 `String` 无法被读取 5。这是使用 `readline` 方法的完美场景。`readline` 将读取一行，直到获得 `end of line` (`EOL`) 字符。
+您可以使用 *Ctrl-C*；这将引发中断异常并退出 `read` 方法，但您的 `String` 无法被读取。这是使用 `readline` 方法的完美场景。`readline` 将读取一行，直到获得 `end of line` (`EOL`) 字符。
 
 ```julia
 julia> readline(stdin)
@@ -7282,9 +7152,6 @@ julia> for line in eachline(stdin)
 2nd line
 2nd line
 ```
-
-
-
 
 与读取类似，写入也要求终端支持将输出显示为文本。
 
@@ -7472,9 +7339,7 @@ julia> @async while isopen(c)
        end
 ```
 
-
-
-# 客户端发送请求代码（前台任务）
+### 客户端发送请求代码（前台任务）
 
 ```julia
 for i = 1:5
@@ -7483,9 +7348,15 @@ end
 ```
 
 服务器响应：Client Msg id: 1
+
+
+
 服务器响应：Client Msg id: 2
+
 服务器响应：Client Msg id: 3
+
 服务器响应：Client Msg id: 4
+
 服务器响应：Client Msg id: 5
 
 ```julia
@@ -7494,17 +7365,17 @@ close(c)
 
 该示例代码可视为包含三个部分。
 
-## 1. 服务器在后台运行并监听 3000 端口。
+## 1. 服务器在后台运行并监听 3000 端口
 
 1. 一旦客户端连接到 3000 端口，服务器接受连接并获取一个套接字，以便通过该连接响应客户端。
 2. 服务器生成另一个并行任务，以便客户端和服务器可以通过它进行通信，而主服务器任务则持续监听 3000 端口，无限期地等待下一个客户端进行通信。
 3. 在新任务中，服务器读取客户端请求，附加自己的消息，并将其写回套接字供客户端读取。
 
-## 2. 客户端连接到 3000 端口上的服务器。
+## 2. 客户端连接到 3000 端口上的服务器
 
 1. 连接成功后，它持续读取服务器写入套接字的任何内容，并写入 `stdout`。
 
-## 3. 客户端通过前台任务向服务器发送请求。
+## 3. 客户端通过前台任务向服务器发送请求
 
 通信任务完成后，客户端可以 `close` 与服务器的连接。服务器将继续在后台运行，等待其他客户端连接。
 
@@ -7525,7 +7396,7 @@ str = String(take!(io))
 
 反向场景是内存映射。文件可以映射到内存地址。文件中的数据可以像访问内存位置一样被访问。内存映射通常能提高对文件数据的访问速度，在大块数据可能无法放入计算机内存的情况下也很有帮助。映射内存可用作进程间通信的共享内存。内存映射函数定义在标准库模块 `Mmap` 中。
 
-### 步骤 1：创建一个我们想要进行内存映射的文件。
+### 步骤 1：创建一个我们想要进行内存映射的文件
 
 ```julia
 A = fill(10, (5, 20))
@@ -7537,7 +7408,7 @@ open("mmap.bin", "w+") do f
 end
 ```
 
-### 步骤 2：对文件进行内存映射并读取值，确保正确数据已填充。
+### 步骤 2：对文件进行内存映射并读取值，确保正确数据已填充
 
 ```julia
 using Mmap
@@ -7653,7 +7524,7 @@ e = 2.7182818284590…
 
 标准库拥有许多额外模块，可为程序员提供实用函数。我们在此概述几个常用模块。
 
-## `Dates` 模块
+# `Dates` 模块
 
 `Dates` 模块提供面向用户展示的日期和时间功能。虽然我们在前面章节中看到了有助于调试和分析 `code` 的 `@time` 宏，但 `Date` 和 `DateTime` 类型以用户展示格式表示时间。例如，`Date` 能够按日、月、年展示，而 `DateTime` 还可额外按时、分、秒展示。然而，这些表示不包含任何时区信息。任何需要将时区与日期和时间结合使用的人都需要使用 `TimeZones.jl` 包。`Date` 和 `DateTime` 内部均以逝去的 `Int64` 跟踪时间，且均为不可变类型。例如，函数 `now` 将当前时间作为 `DateTime` 对象报告。
 
@@ -7697,8 +7568,6 @@ Date(2020)
 ```julia
 d = Date(t)
 ```
-
-
 
 # Julia 日期时间与日志记录
 
@@ -7768,7 +7637,7 @@ julia> year(now())
 
 ### 调整器
 
-Julia 提供了许多称为 **adjustors** 的有趣函数，有助于计算特定日期。例如，查找下一个感恩节（11 月的第 4 个周四）可基于以下代码：
+Julia 提供了许多称为 `adjustors` 的有趣函数，有助于计算特定日期。例如，查找下一个感恩节（11 月的第 4 个周四）可基于以下代码：
 
 ```julia
 julia> tonext(today()) do d
@@ -7850,8 +7719,6 @@ julia> @info "Current logger is same as global logger" current_logger() == globa
 
 由于局部记录器在 `with_logger` 块内覆盖了当前记录器，因此当前记录器不同于全局记录器。然而，在 `with_logger` 块外部，`current_logger()` 与 `global_logger()` 相同。`SimpleLogger` 提供了一个非常简单的接口，用于覆盖日志流和要在记录器中显示的消息级别。日志事件还可以包含模块、消息标识符、文件、行号、日志消息显示的最大次数以及作为日志一部分显示的异常。
 
-
-
 任何有兴趣实现自己记录器的人都可以创建 `AbstractLogger` 类型的子类型，并实现 `AbstractLogger` 所需的方法。详细信息记录在 Julia 文档的 `Logging` 模块 6 中。
 
 # 统计
@@ -7913,7 +7780,9 @@ julia> rand(1:4, (2, 3))
 
 `rand()` 方法生成特定类型、数据范围或任何所需形状或输出的均匀随机数。给定一个预分配的数组，`rand!()` 函数可以用新的随机值填充同一个数组。与 `rand` 方法类似，`randn` 方法用正态分布填充随机数，而 `randexp` 用指数分布填充数据。
 
-`rand` 方法的第一个参数是可选的，称为随机引擎（`rng`）。Julia 使用 *Mersenne Twister* 库进行随机数生成。可以用足够的熵初始化自己的 *Mersenne Twister*，使得随机数生成器生成的伪随机序列足够安全。不提供引擎将使用作为 Julia 运行时一部分初始化的引擎。Julia 还提供了随机排列、随机子序列和随机循环排列等方法。
+
+
+`rand` 方法的第一个参数是可选的，称为随机引擎（`rng`）。Julia 使用 `Mersenne Twister` 库进行随机数生成。可以用足够的熵初始化自己的 `Mersenne Twister`，使得随机数生成器生成的伪随机序列足够安全。不提供引擎将使用作为 Julia 运行时一部分初始化的引擎。Julia 还提供了随机排列、随机子序列和随机循环排列等方法。
 
 # 标准库总结
 
@@ -7921,25 +7790,25 @@ Julia 中的标准库对于访问操作系统和满足开发者日常编程需�
 
 # 练习
 
-1.  模块能否定义在另一个模块内部？如果可以，其函数将如何被导出到外部？
+1. 模块能否定义在另一个模块内部？如果可以，其函数将如何被导出到外部？
 
-2.  编写一个命令，从 Julia REPL 启动命令提示符窗口或 Unix 终端窗口。这与在 REPL 中使用分号（`;`）切换到 Shell 模式有何不同？查看 Julia 源代码以了解 REPL 是如何实现相同功能的。
+2. 编写一个命令，从 Julia REPL 启动命令提示符窗口或 Unix 终端窗口。这与在 REPL 中使用分号（`;`）切换到 Shell 模式有何不同？查看 Julia 源代码以了解 REPL 是如何实现相同功能的。
 
-3.  遍历一个目录并列出所有 PDF 文件。PDF 文件的文件扩展名为 `".pdf"`。
+3. 遍历一个目录并列出所有 PDF 文件。PDF 文件的文件扩展名为 `".pdf"`。
 
-4.  读取一个文本文件并在行与行之间增加额外的行间距后重写它。
+4. 读取一个文本文件并在行与行之间增加额外的行间距后重写它。
 
-5.  编写一个函数，给出从今天起 n 天后的日期。
+5. 编写一个函数，给出从今天起 n 天后的日期。
 
-6.  给定一个数字 `Vector`，将元素按随机顺序重新排列。
+6. 给定一个数字 `Vector`，将元素按随机顺序重新排列。
 
 ---
 
 # 参考文献
 
-1 Running External Programs, Julia Documentation, [`docs.julialang.org/en/v1/manual/running-external-programs/#Running-External-Programs`](https://docs.julialang.org/en/v1/manual/running-external-programs/#Running-External-Programs)
+1. Running External Programs, Julia Documentation, [`docs.julialang.org/en/v1/manual/running-external-programs/#Running-External-Programs`](https://docs.julialang.org/en/v1/manual/running-external-programs/#Running-External-Programs)
 
-2 你可以如下所示启动 Julia：`$ JULIA_NUM_THREADS=4 julia`。如果你正在使用 IJulia，可以遵循以下步骤。
+2. 你可以如下所示启动 Julia：`$ JULIA_NUM_THREADS=4 julia`。如果你正在使用 IJulia，可以遵循以下步骤。
 
 ```julia
 ENV["JULIA_NUM_THREADS"] = 4
@@ -7947,27 +7816,25 @@ using IJulia
 notebook()
 ```
 
-3 Multi-Threading, Julia Documentation Manuals, [`docs.julialang.org/en/v1/manual/multi-threading/`](https://docs.julialang.org/en/v1/manual/multi-threading/)
+3. Multi-Threading, Julia Documentation Manuals, [`docs.julialang.org/en/v1/manual/multi-threading/`](https://docs.julialang.org/en/v1/manual/multi-threading/)
 
-4 Multiprocessing and Distributed Computing, Julia Documentation Manual, [`docs.julialang.org/en/v1/manual/distributed-computing/`](https://docs.julialang.org/en/v1/manual/distributed-computing/)
+4. Multiprocessing and Distributed Computing, Julia Documentation Manual, [`docs.julialang.org/en/v1/manual/distributed-computing/`](https://docs.julialang.org/en/v1/manual/distributed-computing/)
 
-5 另一种方法是在输入提供后的新行上使用 `ctrl-D`，或连续 2 次 `ctrl-D` 字符来通知输入结束。
+5. 另一种方法是在输入提供后的新行上使用 `ctrl-D`，或连续 2 次 `ctrl-D` 字符来通知输入结束。
 
-6 Logging, Standard Libraries, Julia Documentation, [`docs.julialang.org/en/v1/stdlib/Logging/`](https://docs.julialang.org/en/v1/stdlib/Logging/)
+6. Logging, Standard Libraries, Julia Documentation, [`docs.julialang.org/en/v1/stdlib/Logging/`](https://docs.julialang.org/en/v1/stdlib/Logging/)
 
-Julia 进程启动时为单线程。但是，可以通过使用命令 `julia -t <no_of_threads>` 或 `julia --threads <no_of_threads>` 以多线程启动。也可以通过将环境变量 `JULIA_NUM_THREADS` 设置为所需的线程数来实现相同目的 2。通过使用 `julia -t 4` 启动 Julia，以下代码提供 Julia 环境中活动线程的数量。
+Julia 进程启动时为单线程。但是，可以通过使用命令 `julia -t <no_of_threads>` 或 `julia --threads <no_of_threads>` 以多线程启动。也可以通过将环境变量 `JULIA_NUM_THREADS` 设置为所需的线程数来实现相同目的。通过使用 `julia -t 4` 启动 Julia，以下代码提供 Julia 环境中活动线程的数量。
 
+当程序中执行多个线程时，跨线程同步可能是一个问题。锁是解决这些需求的有用编程范式。`Threads.Conditions()` 是线程安全的条件对象，必须用于线程安全。第二个问题是低级原子操作。Julia 支持部分 LLVM 定义的低级原子操作。最后，终结器和垃圾回收可能会受到多线程程序的影响。我们建议用户查阅多线程手册，以更好地理解该主题。
 
+`Cmd` 对象是通过使用反引号（`）引用外部命令来创建的。`Cmd` 对象也有显式的构造函数。
 
-当程序中执行多个线程时，跨线程同步可能是一个问题。锁是解决这些需求的有用编程范式。`Threads.Conditions()` 是线程安全的条件对象，必须用于线程安全。第二个问题是低级原子操作。Julia 支持部分 LLVM 定义的低级原子操作。最后，终结器和垃圾回收可能会受到多线程程序的影响。我们建议用户查阅多线程手册，以更好地理解该主题 3。
+任何有兴趣实现自己记录器的人都可以创建 `AbstractLogger` 类型的子类型，并实现 `AbstractLogger` 所需的方法。详细信息记录在 Julia 文档的 `Logging` 模块中。
 
-`Cmd` 对象是通过使用反引号（`）引用外部命令来创建的。`Cmd` 对象也有显式的构造函数 1。
+虽然 Julia 提供了精心设计的分布式架构，但为了简洁起见并减少其给文本带来的复杂性，我们将把讨论保持在最低限度。不过，建议感兴趣的读者参考 Julia 文档手册中的多进程和分布式计算章节。
 
-任何有兴趣实现自己记录器的人都可以创建 `AbstractLogger` 类型的子类型，并实现 `AbstractLogger` 所需的方法。详细信息记录在 Julia 文档的 `Logging` 模块中 6。
-
-虽然 Julia 提供了精心设计的分布式架构，但为了简洁起见并减少其给文本带来的复杂性，我们将把讨论保持在最低限度。不过，建议感兴趣的读者参考 Julia 文档手册中的多进程和分布式计算章节 4。
-
-你可以使用 `ctrl-C`；这将引发一个中断异常并退出 `read` 方法，但你的 `String` 将无法被读取 5。这是使用 `readline` 方法的绝佳时机。`readline` 将读取一行，直到遇到 `行尾` (`EOL`) 字符。
+你可以使用 `ctrl-C`；这将引发一个中断异常并退出 `read` 方法，但你的 `String` 将无法被读取。这是使用 `readline` 方法的绝佳时机。`readline` 将读取一行，直到遇到 `行尾` (`EOL`) 字符。
 
 # 编程是一门比科学更宏大的艺术
 
@@ -7975,11 +7842,11 @@ Julia 进程启动时为单线程。但是，可以通过使用命令 `julia -t 
 
 # 本章将涵盖以下主题
 
-*   背景
-*   可维护性指南
-*   函数式编程原则
-*   常用模式
-*   为开源做贡献
+* 背景
+* 可维护性指南
+* 函数式编程原则
+* 常用模式
+* 为开源做贡献
 
 # 在本章中，读者将能够了解 Julia 代码该如何编写
 
@@ -7993,13 +7860,13 @@ Julia 进程启动时为单线程。但是，可以通过使用命令 `julia -t 
 
 # 软件行业经典的需求分类之一 1 是 FURPS
 
-1.  功能性
-2.  易用性
-3.  可靠性
-4.  性能
-5.  可支持性
+1. 功能性
+2. 易用性
+3. 可靠性
+4. 性能
+5. 可支持性
 
-这里特别关注可支持性，因为良好的支持要求代码可读。编码约定有助于满足更大范围开发人员的需求。我们将查看 Julia 文档中建议的风格指南 2。
+这里特别关注可支持性，因为良好的支持要求代码可读。编码约定有助于满足更大范围开发人员的需求。我们将查看 Julia 文档中建议的风格指南。
 
 ## 1. 使用函数
 
@@ -8009,7 +7876,7 @@ Julia 进程启动时为单线程。但是，可以通过使用命令 `julia -t 
 
 这个概念可以通过以下代码轻松解释：
 
-```
+```julia
 julia> addone(x) = x + one(x);
 julia> addone(5), addone(5.0), addone(5f0)
 (6, 6.0, 6.0f0)
@@ -8021,7 +7888,7 @@ Julia 有许多像 `one()` 和 `zero()` 这样的方法，它们利用操作数�
 
 当函数参数期望特定类型时，必须指定该类型。这确保了运行时错误不会进一步传播，也不需要额外的断言。
 
-```
+```julia
 calc1() = 2, 1
 calc2() = 1.1, 1.2
 myvalidate(x::Int, y::Int) = x == y
@@ -8033,7 +7900,7 @@ MethodError: no method matching myvalidate(::Float64, ::Float64)
 
 虽然 `calc1()` 是正确类型的计算，但 `calc2()` 肯定是错误的，而 `myvalidate()` 确保错误被局部化。其次，如果需要任何显式类型转换，必须由调用者执行，而不是被调用者。
 
-```
+```julia
 function myvalidate2(x, y)
     xi, yi = Int(x), Int(y)
     return xi == yi
@@ -8048,9 +7915,9 @@ false
 
 在参数值被修改的地方，函数名应有清晰的感叹号指示符。这一点将在后续章节中进一步阐明。
 
-```
+```julia
 function double!(v::Vector)
-    for i=firstindex(v):lastindex(v)
+    for i = firstindex(v):lastindex(v)
         v[i] *= 2
     end
     return v
@@ -8070,14 +7937,10 @@ julia> double!([1,2,3])
 
 Julia 编码者习惯于特定的命名约定。以下是一些：
 
-*   类型以大写字母开头，可以采用驼峰命名法：`MyType`、`AbstractArray{T}` 等。
-*   模块名遵循与常规类型相同的约定。
-*   函数必须全小写。
-    *   简单的谓词采用合并单词：`beginswith`、`isequal`、`haskey` 等。
-
-
-
-
+* 类型以大写字母开头，可以采用驼峰命名法：`MyType`、`AbstractArray{T}` 等。
+* 模块名遵循与常规类型相同的约定。
+* 函数必须全小写。
+    * 简单的谓词采用合并单词：`beginswith`、`isequal`、`haskey` 等。
 
 # 代码风格指南
 
@@ -8085,16 +7948,16 @@ Julia 编码者习惯于特定的命名约定。以下是一些：
 
 以下是一些常用的实践：
 
-*   当函数或 lambda 作为参数时，最好将它们分配在参数列表的开头，这样可以使用 `function…do` 语法编写。
+* 当函数或 lambda 作为参数时，最好将它们分配在参数列表的开头，这样可以使用 `function…do` 语法编写。
 
-    ```julia
-    mymap(f, arr) = f.(arr)
-    julia> mymap([1, 2, 3]) do x
-        2x
-    end
-    ```
+```julia
+mymap(f, arr) = f.(arr)
+julia> mymap([1, 2, 3]) do x
+    2x
+end
+```
 
-*   类似地，`Vararg` 参数出现在函数参数的末尾。`IO` 参数通常是函数的第一个参数。`::Type{T}` 类型的参数构成函数的第一个参数。
+* 类似地，`Vararg` 参数出现在函数参数的末尾。`IO` 参数通常是函数的第一个参数。`::Type{T}` 类型的参数构成函数的第一个参数。
 
 ## 8. 审慎使用静态参数
 
@@ -8251,23 +8114,23 @@ function F(x)
 end
 ```
 
-
-
-
-
 ## 代码格式指南
 
 ### 5. 行字符长度限制
 
 这因项目而异。Julia GitHub 仓库倾向于将字符限制设置为 92 个字符。一些项目也建议 120 个字符，甚至有些不设限制。然而，限制有助于使代码保持一致和可读。作者倾向于 80 个字符，因为如果你在 1080p 显示器上使用像 emacs 这样的编辑器，可以并排编辑两个文件。无论决定何种值，所有贡献者都必须遵守。
 
-请参考 Julia 语言的代码格式指南 4 以更好地理解其他一些格式相关的建议。其他一些组织和个人也提出了他们自己的风格 5, 6，在社区中也相当流行。
+请参考 Julia 语言的代码格式指南以更好地理解其他一些格式相关的建议。其他一些组织和个人也提出了他们自己的风格，在社区中也相当流行。
 
 ## 函数式编程
 
-函数式编程并非新事物。事实上，它是由于 Alonzo Church 对 Lambda 演算 7 的研究而出现的最古老的编程形式。甚至在 *Von Neumann* 计算机概念成为主流之前——即计算机拥有内存，状态机根据采取的每一步动作对其进行转换。内存在代码执行的每一步都被跟踪。这种顺序编程风格被称为**命令式编程**。
 
-### 遍历列表示例
+
+# 函数式编程并非新事物
+
+函数式编程并非新事物。事实上，它是由于 Alonzo Church 对 Lambda 演算的研究而出现的最古老的编程形式。甚至在 `Von Neumann` 计算机概念成为主流之前——即计算机拥有内存，状态机根据采取的每一步动作对其进行转换。内存在代码执行的每一步都被跟踪。这种顺序编程风格被称为**命令式编程**。
+
+## 遍历列表示例
 
 让我们遍历一个列表并打印所有值。
 
@@ -8298,7 +8161,7 @@ foreach(println, a)
 
 解释该代码最接近的英文陈述是：遍历数组并将所有值打印到 `stdout`。这是一种声明式编程风格。Julia 为你提供了命令式编程的所有构造，同时也提供了声明式编程的灵活性。虽然声明式编程风格是函数式编程的核心，但还有其他一些属性。
 
-### 数学函数与不可变性
+## 数学函数与不可变性
 
 数学上函数的定义是一种映射。你从函数的定义域输入一个参数，获得的输出是映射到函数值域中一个值的映射：
 
@@ -8320,7 +8183,7 @@ julia> a
 
 前面的 `pop!()` 方法改变了数组状态并引入了副作用。当函数依赖于其状态可变的全局变量时，副作用会变得更难追踪，因为函数不再对相同的输入返回相同的输出。
 
-### 高阶函数
+## 高阶函数
 
 高阶函数表现得像函数的函数。它们本质上可以被视为函数的函数：
 
@@ -8340,17 +8203,17 @@ julia> h(3)
 
 如果 `h` 是一个以 `f` 作为参数的函数呢？这些函数类型在数学中很常见。函数的导数就是这种关系。我们之前多次见过的 `map()` 函数也接受一个函数作为参数。这些本质上都是高阶函数。它们有助于声明式编程。
 
-### 性能考量
+## 性能考量
 
 在无副作用函数一节中，我们讨论了不可变性。`String` 和 `struct` 类型也是不可变的。因此，无副作用的函数在操作字符串或 `struct` 数据类型集合时可能会分配额外的临时内存。大量的小分配可能会成为性能损耗。使用 `map`、`reduce` 或 `mapreduce` 可以帮助最小化临时空间分配，使不可变函数更高效。
 
-我们讨论了函数式编程的几个方面。有兴趣通过多种编程语言简明地理解函数式编程概念的读者可以参考 *Functional Thinking*8。读者自然会想知道应该遵循命令式风格还是函数式风格。在这方面 Julia 是一种相当灵活的语言。虽然在许多地方你会发现声明式程序、递归函数、推导式或类似特性，但 Julia 并不强制规定任何特定的编程风格。该语言提供了同样有用的构造来进行命令式编程。有时不可变性可能导致中间变量分配增加，影响代码性能。在这种情况下，使用有副作用的函数可能是理想的选择。
+我们讨论了函数式编程的几个方面。有兴趣通过多种编程语言简明地理解函数式编程概念的读者可以参考 `Functional Thinking`。读者自然会想知道应该遵循命令式风格还是函数式风格。在这方面 Julia 是一种相当灵活的语言。虽然在许多地方你会发现声明式程序、递归函数、推导式或类似特性，但 Julia 并不强制规定任何特定的编程风格。该语言提供了同样有用的构造来进行命令式编程。有时不可变性可能导致中间变量分配增加，影响代码性能。在这种情况下，使用有副作用的函数可能是理想的选择。
 
-## 函数式编程模式
+# 函数式编程模式
 
-在上一节中，我们访问了函数式编程的基础知识，并了解了它们与 Julia 编程的相关性。然而，函数式编程原则在任何语言中的应用都可能因语言能力而异。在本节中，我们将看一些常用模式及其在 Julia 中的实现方式。关于此主题的详细论述请参阅 *Hands-On Design Patterns and Best Practices with Julia*9。
+在上一节中，我们访问了函数式编程的基础知识，并了解了它们与 Julia 编程的相关性。然而，函数式编程原则在任何语言中的应用都可能因语言能力而异。在本节中，我们将看一些常用模式及其在 Julia 中的实现方式。关于此主题的详细论述请参阅 `Hands-On Design Patterns and Best Practices with Julia`。
 
-### 接口定义
+## 接口定义
 
 Julia 中的任何函数定义都可以充当接口。假设我们想创建一个 2D 几何模块，并规定 2D 形状必须拥有计算面积和包围盒的方法。接口可能如下所示：
 
@@ -8369,25 +8232,14 @@ end
 ```julia
 julia> module geom
        area(x) = throw(Base.MethodError(area, (x,)))
-```
+       bbox(x) = throw(Base.MethodError(bbox, (x,)))
 
+       struct Rectangle
+           x; y; w; h
+       end
 
-
-
-
-# Julia 几何模块设计与 Traits 模式
-
-## 初始实现与问题
-
-```julia
-bbox(x) = throw(Base.MethodError(bbox, (x,)))
-
-struct Rectangle
-    x; y; w; h
-end
-
-export Rectangle, area, bbox
-end
+       export Rectangle, area, bbox
+       end
 
 Main.geom
 
@@ -8401,21 +8253,21 @@ ERROR: MethodError: no method matching area(::Rectangle)
 …
 ```
 
-## 尝试 1：默认实现作为软接口
+### 尝试 1：默认实现作为软接口
 
 默认实现可以是一个返回输入的恒等函数，从而使接口充当软接口。
 
 ```julia
 julia> module geom1
-area(x) = identity(x)
-bbox(x) = identity(x)
+       area(x) = identity(x)
+       bbox(x) = identity(x)
 
-struct Rectangle
-    x; y; w; h
-end
+       struct Rectangle
+           x; y; w; h
+       end
 
-export Rectangle, area, bbox
-end
+       export Rectangle, area, bbox
+       end
 
 julia> r = geom1.Rectangle(0, 0, 10, 20)
 Main.geom1.Rectangle(0, 0, 10, 20)
@@ -8424,20 +8276,20 @@ julia> geom1.area(r)
 Main.geom1.Rectangle(0, 0, 10, 20)
 ```
 
-## 尝试 2：基于继承的接口强制
+### 尝试 2：基于继承的接口强制
 
 函数 `area` 和 `bbox` 对泛型类型 `Any` 不承载任何含义。强制 `Rectangle`、`Triangle` 或 `Circle` 等形状遵循接口的一种方法是让它们派生自 `Shape` 超类型。
 
 ```julia
 julia> module geom2
-abstract type Shape end
-area(x::Shape) = nothing
-bbox(x::Shape) = nothing
+       abstract type Shape end
+       area(x::Shape) = nothing
+       bbox(x::Shape) = nothing
 
-struct Rectangle <: Shape
-    x; y; w; h
-end
-end
+       struct Rectangle <: Shape
+           x; y; w; h
+       end
+       end
 
 julia> r = geom2.Rectangle(0, 0, 10, 20)
 Main.geom2.Rectangle(0, 0, 10, 20)
@@ -8449,44 +8301,44 @@ julia> geom2.area(r)
 
 ```julia
 julia> module geom2
-…
-struct Polygon <: Shape
-    pts::Vector{Tuple{Any, Any}}
-end
-…
-end
+       …
+       struct Polygon <: Shape
+           pts::Vector{Tuple{Any, Any}}
+       end
+       …
+       end
 ```
 
 假设考虑直线不闭合的形状，会得到 `PolyLine` 类型。对于开放形状，不存在面积概念，因此 `area()` 函数应抛出错误。通常，良好的面向对象设计要求 `isa` 关系在各方面都完备。`Polygon` 和 `PolyLine` 都必须表现出 `Shape` 的所有属性。如果 `area(::PolyLine)` 抛出错误，`PolyLine isa Shape` 关系将受损。因此有人建议引入 `OpenShape` 和 `ClosedShape` 作为抽象类型。`area()` 函数仅对 `ClosedShape` 存在。以下是可能的实现：
 
 ```julia
 julia> module geom3
-abstract type Shape end
-bbox(x::Shape) = nothing
+       abstract type Shape end
+       bbox(x::Shape) = nothing
 
-abstract type OpenShape end
-struct PolyLine <: OpenShape
-    pts::Vector{Tuple{Any, Any}}
-end
+       abstract type OpenShape end
+       struct PolyLine <: OpenShape
+           pts::Vector{Tuple{Any, Any}}
+       end
 
-abstract type ClosedShape end
-area(x::ClosedShape) = nothing
+       abstract type ClosedShape end
+       area(x::ClosedShape) = nothing
 
-struct Rectangle <: ClosedShape
-    x; y; w; h
-end
+       struct Rectangle <: ClosedShape
+           x; y; w; h
+       end
 
-struct Polygon <: ClosedShape
-    pts::Vector{Tuple{Any, Any}}
-end
-end
+       struct Polygon <: ClosedShape
+           pts::Vector{Tuple{Any, Any}}
+       end
+       end
 ```
 
 如果想引入 `Circle` 和 `Arc`，它们都是不包含直线的形状。若再引入 `LinearShape` 和 `NonLinearShape` 等新抽象类型，由于 Julia 不支持多重继承，无法很好地扩展。最终会创建 `NonLinearClosedShape` 容纳 `Circle`，`NonLinearOpenShape` 容纳 `Arc` 等人为类型。虽然继承自抽象类型是强制接口的好方法，但受单继承限制，对于大量分类可能不切实际。此时可行的解决方案是 **Traits（特征）**。
 
 ## Traits 模式设计
 
-Traits 由 Julia 贡献者 *Tim Holy* 提出，旨在区分功能差异与 `isa` 关系。这些功能区分称为 **Holy Traits** 或简称 Traits。针对 `geom` 模块，可按以下概念简化设计：
+Traits 由 Julia 贡献者 `Tim Holy` 提出，旨在区分功能差异与 `isa` 关系。这些功能区分称为 **Holy Traits** 或简称 Traits。针对 `geom` 模块，可按以下概念简化设计：
 
 1. 所有几何形状派生自抽象类型 `Shape`。
 2. 所有形状有包围盒，可通过 `bbox(::Shape)` 获取。
@@ -8556,10 +8408,6 @@ julia> geom4.area(geom4.Polygon([(0, 0), (10, 0), (10, 20), (0, 20)]))
 area(::HasArea, Main.geom4.Polygon) method must be implemented
 …
 ```
-
-
-
-
 
 # Julia 中的 Traits、组合与开源贡献
 
@@ -8632,6 +8480,10 @@ end
 
 ## 数据封装与访问器
 
+
+
+# Julia 中的类型属性与数据封装
+
 Julia 中的类型属性是公开且透明的，几乎无法实现数据封装。然而，有时需要数据隐藏，此时会使用访问器方法（getter 和 setter）来访问此类变量。一个可能的原因是在设置值前进行数据验证。
 
 ```julia
@@ -8659,9 +8511,9 @@ end
 
 `w()` 和 `w!()` 分别作为 getter 和 setter 方法；而以下划线（`_`）开头的 `_w` 属性是一种约定，指示该属性不应被直接访问。
 
-## 开源贡献的价值
+# 开源贡献的价值
 
-10–15 年前，应届毕业生会寻找各类组织或在职员工寻求实战项目。这些学生中许多人几乎没有编程接触经历，只是从各类辅导或培训班学会了编码，对真实系统毫无理解。毫无疑问，他们作为软件专业人士很难找到机会。如今，如果有此类学生询问，我会建议她查看 *GitHub*、*GitLab* 或其他开源仓库以进行贡献。当然，主动编码的学习曲线可能很陡峭，但很快会意识到，优秀的编码很大程度上在于阅读他人代码，而不仅仅是从头开发代码。这对希望转型学习新技能的资深开发者同样有帮助。
+10–15 年前，应届毕业生会寻找各类组织或在职员工寻求实战项目。这些学生中许多人几乎没有编程接触经历，只是从各类辅导或培训班学会了编码，对真实系统毫无理解。毫无疑问，他们作为软件专业人士很难找到机会。如今，如果有此类学生询问，我会建议她查看 `GitHub`、`GitLab` 或其他开源仓库以进行贡献。当然，主动编码的学习曲线可能很陡峭，但很快会意识到，优秀的编码很大程度上在于阅读他人代码，而不仅仅是从头开发代码。这对希望转型学习新技能的资深开发者同样有帮助。
 
 如今很难找到不使用任何开源代码的组织。同时，在组织中工作的人很少为开源做贡献。我们认为为开源做贡献具有显著价值，既有利于组织也有利于个人：
 
@@ -8671,13 +8523,9 @@ end
 *   **消除未知恐惧**：大多数组织难以使用第三方开源软件，因为他们认为这很难用，且项目可能缺乏好的维护者。参与贡献能让你消除对项目的一些未知因素。你可以与项目活跃人员互动，在需要时联系他们。
 *   **回馈**：作为组织，你可能使用了开源技术。通过积极贡献直接回馈，是金钱支付之外的另一种选择。
 
-## Julia 社区的贡献流程
+# Julia 社区的贡献流程
 
 Julia 是接受贡献最开放的社区之一。任何人都可以通过 GitHub **pull requests (PR)** 向代码库提交内容。审查者会审查 PR 的正确性并将其合并到代码库中。这可能需要多次迭代来更新代码。代码会接受算法和逻辑正确性的检查，编码和风格指南也被赋予同等重要性。不仅是核心语言，还可以为 4000+ 个正在积极开发的包做贡献。
-
-
-
-
 
 # 编程指南
 
@@ -8691,9 +8539,7 @@ Julia 是接受贡献最开放的社区之一。任何人都可以通过 GitHub 
 4.  什么是硬接口和软接口？请举例说明两者。
 5.  引入你自己的整数类型，使其能以罗马数字的形式读取和写入。使用委托模式来增强你的实现。你可以参考 Julia 包 `RomanNumerals.jl`。
 
----
-
-## 参考资料
+# 参考资料
 
 1.  FURPS, Wikipedia, [`en.wikipedia.org/wiki/FURPS`](https://en.wikipedia.org/wiki/FURPS)
 2.  Style Guide, Julia Documentation, [`docs.julialang.org/en/v1/manual/style-guide/`](https://docs.julialang.org/en/v1/manual/style-guide/)
@@ -8706,21 +8552,21 @@ Julia 是接受贡献最开放的社区之一。任何人都可以通过 GitHub 
 9.  Tom Kwong, Stefan Karpinski, Hands-On Design Patterns and Best Practices with Julia, Packt Publishing, January 2020
 10. Lazy.jl, [`github.com/MikeInnes/Lazy.jl`](https://github.com/MikeInnes/Lazy.jl)
 
-## Julia 中的函数式编程
+# Julia 中的函数式编程
 
 我们讨论了函数式编程的几个方面。有兴趣通过多种编程语言简明地理解函数式编程概念的读者可以参考 *Functional Thinking* [8]。读者很自然地会想知道应该遵循命令式风格还是函数式风格。在这方面，Julia 是一种相当灵活的语言。虽然在很多地方你会发现声明式程序、递归函数、推导式或类似特性，但 Julia 并不强制规定任何特定的编程风格。该语言提供了同样有用的构造来进行命令式编程。有时不可变性可能导致中间变量分配增加，从而影响代码性能。在这种情况下，使用有副作用的函数可能是理想的选择。
 
-## 设计模式与最佳实践
+# 设计模式与最佳实践
 
 在上一节中，我们了解了函数式编程的基础知识，并探讨了它们与 Julia 编程的相关性。然而，函数式编程原则在任何语言中的应用都可能因语言能力而异。在本节中，我们将介绍几种常用模式及其在 Julia 中的实现方式。关于该主题的详细论述，请参阅 *Hands-On Design Patterns and Best Practices with Julia* [9]。
 
 请参考 Julia 语言的代码格式化指南 [4]，以更好地理解其他一些与格式化相关的建议。其他一些组织和个人也提出了他们自己的风格 [5, 6]，这些风格在社区中也相当流行。
 
-### 括号的使用
+## 括号的使用
 
 除非确实需要打破 Julia 中正常的运算符优先级 [3]，否则不常用大括号。
 
-```
+```julia
 if a == 0 && b == 0
     # Do something
 end
@@ -8728,7 +8574,7 @@ end
 
 **优于：**
 
-```
+```julia
 if (a == 0) && (b == 0)
     # Do something
 end
@@ -8736,21 +8582,17 @@ end
 
 因此，建议使用最少的括号，仅在绝对必要时使用。
 
-## 函数式编程史
+# 函数式编程史
 
 函数式编程并非新事物。事实上，它是由于阿隆佐·丘奇对 Lambda 演算 [7] 的研究而出现的最古老的编程形式。甚至在冯·诺依曼计算机概念成为主流之前——即计算机拥有内存，状态机根据采取的每一步动作对其进行转换。内存在代码执行的每一步都被跟踪。这种顺序编程风格被称为**命令式编程**。
 
-## 委托模式
+# 委托模式
 
 `Square` 对象拥有一个 `Rectangle` 实例作为其属性。因此，`Rectangle` 对象已定义的 `bbox` 和 `area` 可用于 `Square` 对象。`Lazy.jl` [10] 包定义了一些额外的宏（如 `@forward`）来辅助委托。
 
-## FURPS 分类
+# FURPS 分类
 
 软件行业中经典的需求分类之一 [1] 是 FURPS：
-
-
-
-
 
 # 可维护性与性能
 
@@ -8832,16 +8674,9 @@ julia> mean(m1-m), std(m1-m)
 [²]: 参考脚注 2
 [³]: 参考脚注 3
 
-
-
-
 计算机科学家通常将最大精力集中在完善问题的这一部分。精心挑选的算法能为问题带来的收益，往往是对不合适的算法进行任何程度的微调都无法比拟的。每当代码性能不佳时，最好审视核心设计，了解是否采用了正确的算法。在设计阶段关注性能可大幅降低返工成本。例如，`binary search`（二分查找）的复杂度为 `O(log n)`，而数组搜索的复杂度为线性时间，即 `O(n)`。直观上似乎二分查找将始终优于线性搜索。但考虑到现代处理器缓存和数组内存管理的效率，对较小的数组使用线性搜索可能更高效 4。B 树是基于磁盘存储的数据库索引的首选；而二叉树可能是内存数据库的首选数据结构。必须结合整个系统的性能来选择合适的数据结构，而不仅仅考虑理论上的渐近时间复杂度或最坏情况性能。
 
-## 
-
 在整个代码库中进行绝对的性能优化于事无补。过度优化的代码难以理解，最终可能变成为特定平台量身定制的代码。Julia 建议编写可读性强且使用适当算法的代码，将代码生成和底层针对特定目标的优化留给 JIT 编译器和 LLVM 工具集。它提供了有助于分析代码性能并找出性能瓶颈的工具。从程序员的角度来看，编写可在跨平台保持高性能的通用高层代码，始终优于特定平台的修复方案。如果代码库中必须进行优化，最好将其局限于一小组函数中。
-
-## 
 
 大多数开始优化代码的人都难以确定他们的目标性能应是什么。他们能达到设定的目标吗？这本质上是将你的结果与行业基准进行比较。Julia 采取了极端的立场，将性能基准测试对标至最接近 C 语言编译代码的性能。C 语言编译代码是裸机可执行文件，且 C 运行时非常轻量级。它被预加载，因为许多操作系统使用相同的运行时。Julia 可能没有与基于 C 的系统相对应的比较基准。
 
@@ -8851,38 +8686,42 @@ Julia 运行时需要在程序首次执行时加载，并在执行完成时退�
 
 **图 11.1：** Julia 与竞争平台对比 6
 
+
+
+# Julia 性能优化指南
+
 可以看到，在许多任务中，Julia 的表现优于竞争对手，且非常接近原生 C 语言的性能。性能优化是任何编程语言都相当复杂的主题。我们无法对性能优化的每一个可能方面做到面面俱到。我们将仅回顾一些有助于编写优化代码的工具和指南。
 
-## 
+## 基准测试
 
-基准测试是将预期性能与已知目标进行比较。`BenchmarkTool.jl` 包可以帮助开发者测量执行 Julia 代码所花费的时间和分配的内存。让我们对之前看到的基于表查找的正弦函数计算方案进行基准测试，看看是否真的有显著收益。我们将利用 Julia `BenchmarkTools.jl` 库提供的工具来测量时间周期和内存分配。
+基准测试是将预期性能与已知目标进行比较。`BenchmarkTools.jl` 包可以帮助开发者测量执行 Julia 代码所花费的时间和分配的内存。让我们对之前看到的基于表查找的正弦函数计算方案进行基准测试，看看是否真的有显著收益。我们将利用 Julia `BenchmarkTools.jl` 库提供的工具来测量时间周期和内存分配。
 
 `sin(x)` 函数假设变量 `x` 为弧度。然而，我们将有一个 `sindeg(x)` 函数，其中 `x` 为角度。我们还将评估 Julia Base 中可用的 `sin(x)` 函数是否为我们应该使用的，还是应采用我们之前讨论的表查找方案进行近似。
 
-```
-julia> using BenchmarkTools;
-julia> deg2rad(x) = pi/180.0*x;
-julia> sindeg = sin ∘ deg2rad;
-julia> cosdeg = cos ∘ deg2rad;
+```julia
+julia> using BenchmarkTools
+julia> deg2rad(x) = pi/180.0*x
+julia> sindeg = sin ∘ deg2rad
+julia> cosdeg = cos ∘ deg2rad
 julia> @benchmark sindeg(52.0)
 BenchmarkTools.Trial:
-memory estimate:  16 bytes
-allocs estimate:  1
---------------
-minimum time:      94.110 ns (0.00% GC)
-median time:       95.795 ns (0.00% GC)
-mean time:         104.901 ns (1.20% GC)
-maximum time:      19.238 μs (0.00% GC)
---------------
-samples:           10000
-evals/sample:      951
+  memory estimate:  16 bytes
+  allocs estimate:  1
+  --------------
+  minimum time:      94.110 ns (0.00% GC)
+  median time:       95.795 ns (0.00% GC)
+  mean time:         104.901 ns (1.20% GC)
+  maximum time:      19.238 μs (0.00% GC)
+  --------------
+  samples:           10000
+  evals/sample:      951
 ```
 
 `@benchmark` 将多次运行代码；聚合多个样本的性能并报告结果统计信息。最小时间是更好的估计，因为它受系统开销或噪声最小。`@btime` 报告类似 `@time` 的结果，报告在多次样本运行中单次函数调用的内存分配和最小耗时。我们将在大多数示例中使用 `@btime`。95ns 是我们希望通过新实现达到的时长。我们能做得更好吗？
 
 我们创建了一个备忘录查找表，包含 0 到 90 度之间的 6 个中间值，每个间隔 15 度。对于区间范围内的值，我们使用 `sin(A + δ)` 表达式，并采用我们之前看到的 `sin δ` 和 `cos δ` 的近似值。
 
-```
+```julia
 struct MemoLookup
     n
     lookup
@@ -8895,7 +8734,7 @@ struct MemoLookup
 end
 ```
 
-```
+```julia
 step(m::MemoLookup) = 90/m.n
 m = MemoLookup(6)
 function sindegmemo(m::MemoLookup, x)
@@ -8914,36 +8753,28 @@ end
 
 现在我们将对函数 `sindegmemo` 进行基准测试。
 
-```
+```julia
 julia> @benchmark sindegmemo($m, 52)
 BenchmarkTools.Trial:
-memory estimate:  208 bytes
-allocs estimate:  13
---------------
-minimum time:      1.170 μs (0.00% GC)
+  memory estimate:  208 bytes
+  allocs estimate:  13
+  --------------
+  minimum time:      1.170 μs (0.00% GC)
+  median time:       1.280 μs (0.00% GC)
+  mean time:         1.438 μs (0.00% GC)
+  maximum time:      23.120 μs (0.00% GC)
+  --------------
+  samples:           10000
+  evals/sample:      10
 ```
-
-
-
-**中位时间：1.280 μs (0.00% GC)**
-
-**平均时间：1.438 μs (0.00% GC)**
-
-**最大时间：23.120 μs (0.00% GC)**
-
-**--------------**
-
-**样本数：10000**
-
-**每样本评估次数：10**
 
 该代码比之前计算的要慢。计算过程中需要 13 次内存分配和 208 字节的额外内存。什么可以解释这些分配？微小但频繁的内存分配块可能是显著的性能开销。
 
-# 代码生成调试工具
+## 代码生成调试工具
 
 这些是调试工具，可提供对代码生成各阶段代码的洞察。这些工具命名为 `@code_XXX`，其中 `xxx` 代表特定阶段。Julia 的代码翻译分阶段进行。代码被翻译成抽象语法树，然后翻译成 LLVM 代码，最后生成最终的原生输出。不同的宏帮助我们窥探代码生成过程的各个阶段。Julia 内部并不使用它们进行实际的代码生成。
 
-## 类型稳定性分析
+### 类型稳定性分析
 
 我们在讨论函数及其返回值时已经看到了一些类型稳定性的示例。我们知道不确定的类型会导致低效的代码。让我们评估一下前面基准测试部分提供的代码是否具有无法确定性推断的类型。
 
@@ -9060,9 +8891,6 @@ Body::Any
 │   %27 = (%26 * sinx)::Any
 ```
 
-
-
-
 # 性能优化：从类型稳定到参数化类型与边界检查消除
 
 ## 类型稳定性分析
@@ -9097,8 +8925,9 @@ m = MemoLookup(6)
 执行 `@code_warntype sindegmemo(m, 52.0)` 检查类型推断结果：
 
 **Variables**
+
 - `#self#::Core.Compiler.Const(sindegmemo, false)`
-- `m::MemoLookup2`
+- `m::MemoLookup`
 - `x@_3::Float64`
 - `s::Float64`
 - `lookup::Array{Float64,2}`
@@ -9109,6 +8938,7 @@ m = MemoLookup(6)
 - `Body::Float64`
 
 **Body 片段**
+
 ```
 …
 │   %4  = Main.step(m)::Float64
@@ -9137,13 +8967,13 @@ m = MemoLookup(6)
 
 ```julia
 julia> @btime sindegmemo($m, 52.0)
-19.257 ns (0 allocations: 0 bytes)
-0.788218944092369
+  19.257 ns (0 allocations: 0 bytes)
+  0.788218944092369
 ```
 
 性能显著提升：从 `1170ns` 降至 `19ns`。但回顾之前编写的 `sindeg(x)` 函数，其执行时间为 `95ns`。`sindeg(x)` 是否构建得当？
 
-## `@code_warntype` 深度检查
+### `@code_warntype` 深度检查
 
 检查 `sindeg(52.0)` 的类型推断转储：
 
@@ -9152,11 +8982,13 @@ julia> @code_warntype sindeg(52.0)
 ```
 
 **Variables**
+
 - `#self#::Core.Compiler.Const(Base.var"#62#63"{typeof(sin),typeof(deg2rad)}(sin, deg2rad), false)`
 - `x::Tuple{Float64}`
 - `Body::Float64`
 
 **Body**
+
 ```
 1 — %1 = Core.getfield(#self#, :f)::Core.Compiler.Const(sin, false)
 │   %2 = Core.getfield(#self#, :g)::Core.Compiler.Const(deg2rad, false)
@@ -9171,8 +9003,8 @@ julia> @code_warntype sindeg(52.0)
 julia> sindeg(x) = sin(deg2rad(x))
 
 julia> @btime sindeg(x)
-2.799 ns (0 allocations: 0 bytes)
-0.49999999999999994
+  2.799 ns (0 allocations: 0 bytes)
+  0.49999999999999994
 ```
 
 性能相当于 Julia 内置函数 `sind(x)`（计算角度为度数时的正弦值）。
@@ -9198,6 +9030,8 @@ const m3 = MemoLookupP{6}()
 ```
 
 定义接受 `MemoLookupP` 的新 `sindegmemo` 函数：
+
+
 
 ```julia
 function sindegmemo(m::MemoLookupP, x::Float64)
@@ -9260,30 +9094,23 @@ function sindegmemo(m::MemoLookupP, x::Float64)
 end
 ```
 
+```julia
+julia> @btime sindegmemo($m3, 60.0)
+2.699 ns (0 allocations: 0 bytes)
+0.8660254037844386
 
+julia> @btime sindegmemo($m3, 22.0)
+3.799 ns (0 allocations: 0 bytes)
+0.3748975477461437
+```
 
-
-`<strong>end</strong>`
-
-`<strong>julia&gt; @btime sindegmemo($m3, 60.0)</strong>`
-
-`<strong>2.699 ns (0 allocations: 0 bytes)</strong>`
-
-`<strong>0.8660254037844386</strong>`
-
-`<strong>julia&gt; @btime sindegmemo($m3, 22.0)</strong>`
-
-`<strong>3.799 ns (0 allocations: 0 bytes)</strong>`
-
-`<strong>0.3748975477461437</strong>`
-
-我们已经非常接近 `sind(x)` 的性能，但尚未完全达到 9。一个显而易见的问题是，为什么输入为 60° 时 `sindegmemo` 的表现比输入为 22° 时更好？
+我们已经非常接近 `sind(x)` 的性能，但尚未完全达到。一个显而易见的问题是，为什么输入为 60° 时 `sindegmemo` 的表现比输入为 22° 时更好？
 
 # 性能分析
 
 在我们迄今分析的示例中，我们知道某个特定函数存在我们想要克服的性能瓶颈。在许多大型应用程序中，这种先验知识是不太可能具备的。例如，某个文字处理器打开文件并在屏幕上渲染内容的速度很慢。这背后可能有许多因素。文件读取可能很慢，文档中的某个特定功能在计算上很复杂，或者文件太大，读取所有数据并将数据缓存在内存中可能成为瓶颈。性能分析有助于识别此类场景。以特定的固定间隔（例如每毫秒），统计分析器会查看代码执行栈，并记录栈的状态，如查询期间执行所在的行号和函数。运行完成后，它们会关联所有此类数据，并报告遇到特定函数的次数，以及为到达该函数而被调用的所有函数的回溯跟踪。
 
-Julia 拥有内置的统计分析器。`Profiler` 位于名为 `Profile` 的模块中。我们将使用此工具来分析函数 `profile_test`10 的性能。
+Julia 拥有内置的统计分析器。`Profiler` 位于名为 `Profile` 的模块中。我们将使用此工具来分析函数 `profile_test` 的性能。
 
 ```julia
 using Profile
@@ -9357,7 +9184,7 @@ julia> ]add ProfileView
 
 ## 备忘录模式
 
-当一个纯函数被多次调用时，它应产生相同的输出。与其反复计算结果，如果我们能缓存该值，就能减少计算开销。这个过程称为 `memoization`（备忘录模式/记忆化）。在备忘录模式的语境下，最常见的例子之一是斐波那契数列 11。斐波那契数列最适合用以下代码进行递归描述：
+当一个纯函数被多次调用时，它应产生相同的输出。与其反复计算结果，如果我们能缓存该值，就能减少计算开销。这个过程称为 `memoization`（备忘录模式/记忆化）。在备忘录模式的语境下，最常见的例子之一是斐波那契数列。斐波那契数列最适合用以下代码进行递归描述：
 
 ```julia
 fib(n) = n < 3 ? 1 : fib(n-1) + fib(n-2)
@@ -9418,27 +9245,16 @@ end
 julia> fib(5)
 Calling fib: 5
 Calling fib: 4
+Calling fib: 3
+Calling fib: 2
+Calling fib: 1
 ```
 
-
-
-
-
-# Julia 中的备忘录模式与全局变量
-
-## 备忘录模式示例
-
-**Calling fib: 3**
-
-**Calling fib: 2**
-
-**Calling fib: 1**
-
-**julia> @btime fib(20)**
-
-**85.758 ns (0 allocations: 0 bytes)**
-
-**6765**
+```julia
+julia> @btime fib(20)
+85.758 ns (0 allocations: 0 bytes)
+6765
+```
 
 `fib(5)` 仅被调用了 5 次，而 `fib(20)` 耗时仅 86ns；这几乎只是从字典中读取并相加所需的时间。我们能否将这一概念泛化为适用于任何备忘任务的通用形式？
 
@@ -9455,14 +9271,14 @@ function memoize(f)
 end
 ```
 
-`memoize(f)` 是一个高阶函数，可对函数及其参数进行备忘，以便后续检索值。`memo` 字典通过闭包 12 被 `memoize` 返回的匿名函数访问。有了这样的 `memoize` 函数，你可以按如下方式定义 `fib(n)` 方法：
+`memoize(f)` 是一个高阶函数，可对函数及其参数进行备忘，以便后续检索值。`memo` 字典通过闭包被 `memoize` 返回的匿名函数访问。有了这样的 `memoize` 函数，你可以按如下方式定义 `fib(n)` 方法：
 
 ```julia
 fib(n) = n < 3 ? 1 : fib(n-1) + fib(n-2)
 fib! = memoize(fib)
 ```
 
-然而，`Memoize.jl` 包 13 提供了一个 `@memoize` 宏，可帮助指定函数是否支持备忘。
+然而，`Memoize.jl` 包提供了一个 `@memoize` 宏，可帮助指定函数是否支持备忘。
 
 ```julia
 julia> Pkg.add("Memoize")
@@ -9498,7 +9314,7 @@ julia> @btime 10 + $GLOBAL_VAR
 仅仅在函数中包装全局变量就带来了显著的开销；但为什么呢？让我们考虑一下全局常量而非变量的情况。
 
 ```julia
-julia> const GLOBAL_CONST = 20;
+julia> const GLOBAL_CONST = 20
 julia> add_to_global_const(x) = x + GLOBAL_CONST
 julia> @btime add_to_global_const(3)
 0.001 ns (0 allocations: 0 bytes)
@@ -9562,6 +9378,8 @@ let _x = Ref(5)
 end
 ```
 
+
+
 我们建议读者查看 `add_to_global_var` 的 LLVM 位码。由于全局变量没有类型推断，函数将不得不假设类型为 `Any`，并在每次使用时解决类型冲突。
 
 ## 性能调优总结
@@ -9570,34 +9388,30 @@ Julia 系统专为高性能计算设计。我们在本章中看到了此类实�
 
 # 练习
 
-1.  选择一个你喜欢的函数，对其运行 `@code_warntype`。尝试识别类型稳定性问题，并修复它们以消除类型不稳定。
+1. 选择一个你喜欢的函数，对其运行 `@code_warntype`。尝试识别类型稳定性问题，并修复它们以消除类型不稳定。
 
-2.  考虑推导式 `f() = [x*x for x = 1:10000]`。使用 `@btime` 为其计时，并与以下代码进行比较：
+2. 考虑推导式 `f() = [x*x for x = 1:10000]`。使用 `@btime` 为其计时，并与以下代码进行比较：
 
-   ```julia
-   function g()
-       y = Vector{Int}(undef, 10000)
-       for i in 1:10000
-           y[i] = i*i
-       end
-   end
-   ```
+```julia
+function g()
+    y = Vector{Int}(undef, 10000)
+    for i in 1:10000
+        y[i] = i*i
+    end
+end
+```
 
-   你如何解释这种差异？
+你如何解释这种差异？
 
-3.  为什么 `BenchmarkTools.jl` 的 `@btime` 比 `Base.@time` 更受推荐？你将如何对有副作用的函数使用 `@btime`？
+3. 为什么 `BenchmarkTools.jl` 的 `@btime` 比 `Base.@time` 更受推荐？你将如何对有副作用的函数使用 `@btime`？
 
-4.  有哪些 `@code_XXX` 宏？为什么它们用于性能分析？
+4. 有哪些 `@code_XXX` 宏？为什么它们用于性能分析？
 
-5.  Julia 性能分析建议仅在代码已使用多次并涵盖所有相关数据类型后进行。众所周知 Julia 启动较慢。你认为原因是什么？
+5. Julia 性能分析建议仅在代码已使用多次并涵盖所有相关数据类型后进行。众所周知 Julia 启动较慢。你认为原因是什么？
 
 ---
 
-1 Brian W. Kernighan and Rob Pike, The Practice of Programming, Chapter 7, Addison-Wesley, 1999
-
-
-
-
+[1] Brian W. Kernighan and Rob Pike, The Practice of Programming, Chapter 7, Addison-Wesley, 1999
 
 # 参考文献
 
@@ -9615,7 +9429,7 @@ Julia 系统专为高性能计算设计。我们在本章中看到了此类实�
 
 [8] 此代码取自 Julia 1.5.3 版本。相关代码如下：
 
-```
+```julia
 ∘(f, g) = (x…) -> f(g(x…))
 ```
 
@@ -9640,12 +9454,10 @@ Julia 系统专为高性能计算设计。我们在本章中看到了此类实�
 在单线程的单处理器上运行多个应用程序并非真正的同时多任务处理。操作系统根据计划抢占任务，让处理器一次执行一个任务。用户会感觉所有任务都在同时运行，而实际上它们只是在很短的时间间隔内执行，然后切换到下一个任务。在基于**图形用户界面 (GUI)** 的应用程序中，用户界面对用户输入的响应性被赋予了高于将其他后台任务执行完成的重要性。在单处理器系统上运行长时间计算密集型任务的多任务应用程序中，惯常的做法是间歇性地处理 UI 事件以保持 UI 响应。这在 Windows 系统中称为**空闲循环处理**[³]。这里最优响应时间优先于原始执行速度。因此，代码的纯执行速度可能并非所有代码优化项目的目标。
 
 [¹]: Tom Kwong, Stefan Karpinski, Hands-On Design Patterns and Best Practices with Julia, Packt Publishing, 2020, Chapter 6
+
 [²]: Voyager 1 just left the solar system using less computing power than your iPhone, Washington Post, [`www.washingtonpost.com/news/the-switch/wp/2013/09/12/voyager-1-just-left-the-solar-system-using-less-computing-power-than-your-iphone/`](https://www.washingtonpost.com/news/the-switch/wp/2013/09/12/voyager-1-just-left-the-solar-system-using-less-computing-power-than-your-iphone/), September 13, 2013
+
 [³]: Ideal Loop Processing, Microsoft MSDN Documentation, Visual Studio 2019, [`docs.microsoft.com/en-us/cpp/mfc/idle-loop-processing?view=msvc-160`](https://docs.microsoft.com/en-us/cpp/mfc/idle-loop-processing?view=msvc-160)
-
-
-
-
 
 # 背景
 
@@ -9683,7 +9495,7 @@ Brian W. Kernighan and Rob Pike, The Practice of Programming, Chapter 7, Addison
 
 此代码来自 Julia 1.5.3 版本。相关代码如下：
 
-```
+```julia
 ∘(f, g) = (x…) -> f(g(x…))
 ```
 
@@ -9699,6 +9511,8 @@ Julia Micro-Benchmarks, [`julialang.org/benchmarks/`](https://julialang.org/benc
 
 IDE 和基于 GUI 的行调试工具是当今应用程序开发的常用工具。虽然函数式程序员倾向于偏好可独立验证的短小代码单元，但调试仍然是任何编程环境中备受追捧的工具。Julia 拥有功能相当完善的基于 GUI 的 IDE 和调试环境。
 
+
+
 # 章节概览
 
 在本章中，我们将涵盖以下主题：
@@ -9711,18 +9525,15 @@ IDE 和基于 GUI 的行调试工具是当今应用程序开发的常用工具�
 
 ## 学习目标
 
-在本章中，读者将能够了解知名编辑器在渲染 Julia 代码方面的能力。有几个知名的 **集成开发环境 (IDE)** 为 Julia 开发提供支持。程序调试是一项有用的技能，IDE 有助于逐行调试代码。我们将在本章中探讨一些有助于调试的技术。
+在本章中，读者将能够了解知名编辑器在渲染 Julia 代码方面的能力。有几个知名的**集成开发环境 (IDE)**为 Julia 开发提供支持。程序调试是一项有用的技能，IDE 有助于逐行调试代码。我们将在本章中探讨一些有助于调试的技术。
 
+REPL 是在为原型设计尝试简单代码片段时的绝佳工具。然而，生产级代码开发需要编写、调试和验证大量代码。虽然普通工程师每天可能只编写 20 行以下的代码，但维护中的代码行数却非常庞大[^1]。除非你拥有信息丰富的可视化手段，否则维护此类代码是不切实际的。虽然大多数代码是作为纯文本编写的，但源代码编辑要求编辑器理解语言的某些方面。
 
+1.  **语法高亮**：程序员在编辑代码时使用各种缩进方案；例如：制表符与空格、括号等定界符的匹配、诸如`function…end`或`try…end`之类的关键字。高亮也是动态的；在输入时，相关的匹配括号会被高亮显示。输入时自动插入匹配括号是编辑器提供帮助的另一个方面。高亮可以采用多种颜色文本，将字体更改为粗体或斜体。一些编辑器为用户提供了定义自己高亮方案的灵活性。
 
+2.  **声明或定义到用处的匹配**：当使用某个函数时，程序员希望查看该函数的定义以了解其工作原理。在较旧的编辑器中，引用标签是作为编译过程的一部分，通过`ctags`或`etags`等工具生成的。这些标签被加载到编辑器中，以便跳转到函数的引用位置。一些集成开发平台（如 Visual Studio）会在代码编译过程中生成标签，以便能够追踪函数的调用者和被调用者图谱。
 
-REPL 是在为原型设计尝试简单代码片段时的绝佳工具。然而，生产级代码开发需要编写、调试和验证大量代码。虽然普通工程师每天可能只编写 20 行以下的代码，但维护中的代码行数却非常庞大 1。除非你拥有信息丰富的可视化手段，否则维护此类代码是不切实际的。虽然大多数代码是作为纯文本编写的，但源代码编辑要求编辑器理解语言的某些方面。
-
-1.  **语法高亮**：程序员在编辑代码时使用各种缩进方案；例如：制表符与空格、括号等定界符的匹配、诸如 `function…end` 或 `try…end` 之类的关键字。高亮也是动态的；在输入时，相关的匹配括号会被高亮显示。输入时自动插入匹配括号是编辑器提供帮助的另一个方面。高亮可以采用多种颜色文本，将字体更改为粗体或斜体。一些编辑器为用户提供了定义自己高亮方案的灵活性。
-
-2.  **声明或定义到用处的匹配**：当使用某个函数时，程序员希望查看该函数的定义以了解其工作原理。在较旧的编辑器中，引用标签是作为编译过程的一部分，通过 `ctags` 或 `etags` 等工具生成的。这些标签被加载到编辑器中，以便跳转到函数的引用位置。一些集成开发平台（如 Visual Studio）会在代码编译过程中生成标签，以便能够追踪函数的调用者和被调用者图谱。
-
-3.  **文档引用**：开发者希望在使用函数前查看其文档。虽然像文学编程 2 这样的集成文档生成系统已经存在了几十年，但函数的帮助查找功能因 Javadoc 与 IDE 的集成而变得特别有用且普及。Visual Studio 和许多针对 Python 语言的 IDE 提供了类似的功能。
+3.  **文档引用**：开发者希望在使用函数前查看其文档。虽然像文学编程[^2]这样的集成文档生成系统已经存在了几十年，但函数的帮助查找功能因 Javadoc 与 IDE 的集成而变得特别有用且普及。Visual Studio 和许多针对 Python 语言的 IDE 提供了类似的功能。
 
 4.  **代码与数据捆绑**：代码执行期间使用的数据（如用户界面或字符串资源）可以使用 IDE 创建，并作为编译和链接过程的一部分嵌入到可执行文件中。代码和数据按特定的目录结构组织，并维护在称为项目或解决方案文件的元数据中。这些元数据确保代码在 IDE 中的一致性组织。
 
@@ -9730,11 +9541,11 @@ REPL 是在为原型设计尝试简单代码片段时的绝佳工具。然而，
 
 6.  **测试执行与调试**：构建完成的代码可以立即运行，无论是否有额外输入，以验证代码。集成测试套件还针对修改后的代码提供完整的单元测试验证。能够设置断点并逐行调试代码执行，同时验证变量的值，是 IDE 最重要的功能之一。
 
-7.  **源代码控制**：许多 IDE 提供与源代码控制的集成。代码可以从远程仓库检出、修改，再签入到最终的远程仓库。一些高级 IDE 甚至提供开发者之间私有工作区的共享，以实现协作式应用程序开发 ^(\[3,4\]).
+7.  **源代码控制**：许多 IDE 提供与源代码控制的集成。代码可以从远程仓库检出、修改，再签入到最终的远程仓库。一些高级 IDE 甚至提供开发者之间私有工作区的共享，以实现协作式应用程序开发[^3][^4]。
 
 8.  **部署**：随着云部署成为大多数生产部署的标准，最终输出需要集成到运维框架中。例如，最终代码需要打包成可部署的容器或虚拟机模板，以便推送到私有云或公有云。这是 DevOps 框架的一部分，开发和运维在此获得统一视图，从而降低成本和管理开销。
 
-Julia 是一个相对较新的平台。在 Julia 作为一门语言流行之前，上述所有组件的生态系统就已经存在。开发者希望看到 Julia 能与他们最熟悉的工具无缝配合使用。在 UNIX 环境的文本编辑器世界里，`vi` 与 `emacs`5 之间几乎存在着狂热的追随之争。GitHub 下的 JuliaEditorSupport6 组织维护着与多个知名编辑器的集成，功能水平各异；这些编辑器包括 *Vim*、*Emacs*、*Sublime*、*Atom*、*Notepad++* 和 *Eclipse*。其中一些集成处于活跃状态，而许多因缺乏关注和使用而已弃用。针对 *Atom* 的 Julia IDE 正在 *Juno*7 项目下开发，针对微软 **Visual Studio Code** (**VS Code**)8 的也在开发中。
+Julia 是一个相对较新的平台。在 Julia 作为一门语言流行之前，上述所有组件的生态系统就已经存在。开发者希望看到 Julia 能与他们最熟悉的工具无缝配合使用。在 UNIX 环境的文本编辑器世界里，`vi`与`emacs`[^5]之间几乎存在着狂热的追随之争。GitHub 下的 JuliaEditorSupport[^6]组织维护着与多个知名编辑器的集成，功能水平各异；这些编辑器包括*Vim*、*Emacs*、*Sublime*、*Atom*、*Notepad++*和*Eclipse*。其中一些集成处于活跃状态，而许多因缺乏关注和使用而已弃用。针对*Atom*的 Julia IDE 正在*Juno*[^7]项目下开发，针对微软**Visual Studio Code** (**VS Code**)[^8]的也在开发中。
 
 ## 编辑器集成
 
@@ -9742,56 +9553,54 @@ Julia 是一个相对较新的平台。在 Julia 作为一门语言流行之前�
 
 ## vi 和 vim
 
-`vi` 作为最古老的多行文本编辑器之一，在 UNIX 社区占据了重要的心智份额。`vi` 的扩展版本 `vim` 才是该编辑器最流行的变体：
+`vi`作为最古老的多行文本编辑器之一，在 UNIX 社区占据了重要的心智份额。`vi`的扩展版本`vim`才是该编辑器最流行的变体：
 
 ![](img/n4upl4fndq4.jpeg)
 
 **图 12.1：** 使用 julia-vim 进行语法高亮
 
-`vim` 的 Julia 插件名为 `julia-vim`，是一个 *GitHub* 项目 9，可安装在 Mac OS X、UNIX 和 Windows 操作系统的 `vim` 环境中 10。该插件是一组 vim 脚本，提供以下功能：
+`vim`的 Julia 插件名为`julia-vim`，是一个*GitHub*项目[^9]，可安装在 Mac OS X、UNIX 和 Windows 操作系统的`vim`环境中[^10]。该插件是一组 vim 脚本，提供以下功能：
 
 *   Julia 代码、文档和链接的语法高亮。
-*   与 `ctags` 集成以实现导航。
+*   与`ctags`集成以实现导航。
 *   沿代码块移动，匹配代码正则表达式或匹配的括号等。
 *   LaTeX 到 Unicode 的替换，用于将 Julia 变量和参数指定为 Unicode 字符。
-*   虽然有些人使用带有 vim 的终端模拟来使用 Julia REPL，但这本身并不属于该插件的一部分 11。
-*   `vim` 集成没有工作区或项目的概念来将 Julia 代码组织为包。
+*   虽然有些人使用带有 vim 的终端模拟来使用 Julia REPL，但这本身并不属于该插件的一部分[^11]。
+*   `vim`集成没有工作区或项目的概念来将 Julia 代码组织为包。
 
 ## Emacs
 
-它是 UNIX 平台上最流行的编辑器之一，与 `vi` 齐名。与专注于文本编辑的 vi 不同，`Emacs` 的开发更像是一个程序员的开发环境。它集成了终端、构建系统、源代码控制、电子邮件、互联网浏览器等。虽然最初是作为基于文本的系统启动的，但现在它集成到大多数 GUI 中，并在 Windows、UNIX 和 Mac OS X 操作系统上同样良好地运行。它还附带了一个类 LISP 的脚本接口（Emacs Lisp）用于开发定制解决方案。因此，你会看到它与 Julia 的集成要详尽和成熟得多。Emacs 还拥有像 `GNU elpa` 和 `melpa` 这样的包管理系统，用于查找和使用所需的各种包：
+它是 UNIX 平台上最流行的编辑器之一，与`vi`齐名。与专注于文本编辑的 vi 不同，`Emacs`的开发更像是一个程序员的开发环境。它集成了终端、构建系统、源代码控制、电子邮件、互联网浏览器等。虽然最初是作为基于文本的系统启动的，但现在它集成到大多数 GUI 中，并在 Windows、UNIX 和 Mac OS X 操作系统上同样良好地运行。它还附带了一个类 LISP 的脚本接口（Emacs Lisp）用于开发定制解决方案。因此，你会看到它与 Julia 的集成要详尽和成熟得多。Emacs 还拥有像`GNU elpa`和`melpa`这样的包管理系统，用于查找和使用所需的各种包：
 
 ![](img/n4upl4fndq5.jpeg)
 
 **图 12.2：** julia-emacs 运行演示
 
-
-
-显示了将 Julia 作为主模式、Git 集成为次模式的 `<strong>julia-emacs</strong>` 界面。函数和常量显示为菜单项，有助于在文件内快速导航。Emacs 集成还允许在加载 `<strong>julia-emacs</strong>` 的同时加载 REPL，从而加载一个用于求值和调试的环境。Julia 还与一个名为 Emacs Speaks Statistics 的包集成，该包支持 R、S-plus、SAS 和 Stata 等其他语言。该包提供 Julia 代码块的细粒度求值，以及 Emacs 代码片段的求值，用于快速原型设计。这有助于在继续开发代码的同时，独立调试和测试小块代码：
+显示了将 Julia 作为主模式、Git 集成为次模式的**julia-emacs**界面。函数和常量显示为菜单项，有助于在文件内快速导航。Emacs 集成还允许在加载**julia-emacs**的同时加载 REPL，从而加载一个用于求值和调试的环境。Julia 还与一个名为 Emacs Speaks Statistics 的包集成，该包支持 R、S-plus、SAS 和 Stata 等其他语言。该包提供 Julia 代码块的细粒度求值，以及 Emacs 代码片段的求值，用于快速原型设计。这有助于在继续开发代码的同时，独立调试和测试小块代码：
 
 ![](img/n4upl4fndq6.jpeg)
 
 **图 12.3：** Julia 源代码和 ESS 求值缓冲区结果并排显示
 
-虽然 Julia 与 `<strong>emacs</strong>` 的集成在功能上比 `<strong>vim</strong>` 深得多，但某些平台（如 Windows）可能无法通过 REPL 提供良好的终端体验。
+虽然 Julia 与**emacs**的集成在功能上比**vim**深得多，但某些平台（如 Windows）可能无法通过 REPL 提供良好的终端体验。
 
-正如 `<strong>vi</strong>` 和 `<strong>emacs</strong>` 是 UNIX 世界中最流行的编辑器一样，*Notepad++* 一直是 Windows 操作系统中流行的编辑器，没有直接移植到 Unix 或 Mac OS X 操作系统 12。但它不应与 `<strong>notepad.exe</strong>` 混淆，后者随 Windows 操作系统默认附带，仅提供最基本的文本编辑功能。*Notepad++* 是一个相对高级的文本编辑器，具有完整的插件功能，可用于编程和增强编辑器渲染体验。它还可以通过 **User Defined Languages** (**UDL**) 自定义语言语法高亮。UDL 是一种在 XML 文件中提供特定语法结构的更简便方法，可用于有效识别和渲染文件：
+正如`vi`和`emacs`是 UNIX 世界中最流行的编辑器一样，*Notepad++*一直是 Windows 操作系统中流行的编辑器，没有直接移植到 Unix 或 Mac OS X 操作系统[^12]。但它不应与**notepad.exe**混淆，后者随 Windows 操作系统默认附带，仅提供最基本的文本编辑功能。*Notepad++*是一个相对高级的文本编辑器，具有完整的插件功能，可用于编程和增强编辑器渲染体验。它还可以通过**User Defined Languages** (**UDL**)自定义语言语法高亮。UDL 是一种在 XML 文件中提供特定语法结构的更简便方法，可用于有效识别和渲染文件：
 
 ![](img/n4upl4fndq7.jpeg)
 
 **图 12.4：** Julia-NotepadPlusPlus UDL 实际效果
 
-Julia 的 UDL 可在 GitHub 项目 `<strong>Julia-NotepadPlusPlus</strong>`13 中获取。
+Julia 的 UDL 可在 GitHub 项目**Julia-NotepadPlusPlus**[^13]中获取。
 
-`<strong>IDEs</strong>` 是完整的开发平台，有助于管理工作区、项目，并充当编辑器、构建、测试、调试和部署工具。虽然行业中有许多流行的标准 IDE，但 Julia 与 *Atom* 和 *Microsoft Visual Studio Code* 拥有最详尽的集成，我们将在后续章节中探讨。Julia 还与 *IntelliJ*14 有进行中的集成工作，并与 Eclipse15 有已归档的集成。
+**IDEs**是完整的开发平台，有助于管理工作区、项目，并充当编辑器、构建、测试、调试和部署工具。虽然行业中有许多流行的标准 IDE，但 Julia 与*Atom*和*Microsoft Visual Studio Code*拥有最详尽的集成，我们将在后续章节中探讨。Julia 还与*IntelliJ*[^14]有进行中的集成工作，并与 Eclipse[^15]有已归档的集成。
 
-Atom 是一个基于 Electron 框架的 HTML 5 富客户端应用程序，基于 JavaScript、HTML 和 CSS。它利用 *NodeJS* 和 *Chromium* 浏览器的组件进行渲染。虽然 Atom 是最常用的应用程序之一，但跨平台框架上发布了近千个应用程序，为其提供了坚实的基础：
+Atom 是一个基于 Electron 框架的 HTML 5 富客户端应用程序，基于 JavaScript、HTML 和 CSS。它利用*NodeJS*和*Chromium*浏览器的组件进行渲染。虽然 Atom 是最常用的应用程序之一，但跨平台框架上发布了近千个应用程序，为其提供了坚实的基础：
 
 ![](img/n4upl4fndq8.jpeg)
 
 **图 12.5：** 带有目录、代码、REPL 视图的 Juno IDE
 
-作为 Julia 与 *Atom* 集成骨干的 Juno IDE，也是 Julia PRO16（Julia Computing 的商业产品）的首选编辑器。然而，随着 Microsoft VS Code 集成的出现，部分关注点正慢慢从该编辑器转移 17：
+作为 Julia 与*Atom*集成骨干的 Juno IDE，也是 Julia PRO[^16]（Julia Computing 的商业产品）的首选编辑器。然而，随着 Microsoft VS Code 集成的出现，部分关注点正慢慢从该编辑器转移[^17]：
 
 ![](img/n4upl4fndq9.jpeg)
 
@@ -9804,9 +9613,9 @@ Juno 标签页聚合了大量 Julia 集成功能，如：
 *   格式化代码
 *   调试完整代码或代码块
 
-Microsoft Visual Studio 是 Microsoft 生态系统中几乎所有软件开发的知名前端。然而，随着 Microsoft 试图在云基础设施市场确立主导地位，推出不受 Windows 生态系统束缚的工具变得必要。Microsoft 于 2015 年推出 Visual Studio Code 以满足此类需求。VS Code 使用基于 Electron 框架的开源代码库开发，可在 Windows、Linux 和 Mac OS X 平台上使用 18。可以发现 VS Code 的体验与 Atom 相似：
+Microsoft Visual Studio 是 Microsoft 生态系统中几乎所有软件开发的知名前端。然而，随着 Microsoft 试图在云基础设施市场确立主导地位，推出不受 Windows 生态系统束缚的工具变得必要。Microsoft 于 2015 年推出 Visual Studio Code 以满足此类需求。VS Code 使用基于 Electron 框架的开源代码库开发，可在 Windows、Linux 和 Mac OS X 平台上使用[^18]。可以发现 VS Code 的体验与 Atom 相似：
 
-*   与 *Git* 和 *GitHub* 集成
+*   与*Git*和*GitHub*集成
 *   用于项目文件夹和文件、运行时输出及结果的各种面板
 *   启动 Julia 以运行和调试的能力
 *   与 Julia 绘图输出集成，等等：
@@ -9815,17 +9624,17 @@ Microsoft Visual Studio 是 Microsoft 生态系统中几乎所有软件开发的
 
 **图 12.7：** 带有 Julia 扩展的 VS Code
 
-你可以在安装了 Julia 扩展的 VS Code 中打开示例代码中的文件 `<strong>plot.jl</strong>`。如果通过右键点击运行该文件，你将看到以下屏幕，绘图结果直接显示在代码旁边：
+你可以在安装了 Julia 扩展的 VS Code 中打开示例代码中的文件**plot.jl**。如果通过右键点击运行该文件，你将看到以下屏幕，绘图结果直接显示在代码旁边：
 
 ![](img/n4upl4fndrb.jpeg)
 
 **图 12.8：** VS Code UI 中显示的 Julia 绘图
 
-可以看出，*Atom* 和 *VS Code* 都是有用且重要的开发工具。目前，开发重心更多地倾向于 *VS Code*。我们建议从业者在决定选择哪一个之前，先同时接触这两种 IDE。
+可以看出，*Atom*和*VS Code*都是有用且重要的开发工具。目前，开发重心更多地倾向于*VS Code*。我们建议从业者在决定选择哪一个之前，先同时接触这两种 IDE。
 
-一则轶事 19 称，Grace Hopper 团队的成员在计算机电路中发现并移除了一个实体 Bug，从而修复了一个无法运行的程序。在计算机程序中查找故障并修复它的科学因此被称为 `<strong>debugging</strong>`。调试可能是一个令人沮丧且充满挑战的过程，特别是当代码不是由试图修复它的开发人员编写时。同时，对于新程序员来说，这是从他人代码中学习并了解外界各种编程风格的最有益经历。程序员约有 35%–50% 的生产时间和 50%–75% 的软件成本花在调试上 20。虽然工具减少了在单个调试任务上花费的时间，但总体用于此类活动的时间保持不变。虽然该研究强调了增强学习行为，但也发现调试需要有效掌握工具知识。
+一则轶事[^19]称，Grace Hopper 团队的成员在计算机电路中发现并移除了一个实体 Bug，从而修复了一个无法运行的程序。在计算机程序中查找故障并修复它的科学因此被称为**debugging**。调试可能是一个令人沮丧且充满挑战的过程，特别是当代码不是由试图修复它的开发人员编写时。同时，对于新程序员来说，这是从他人代码中学习并了解外界各种编程风格的最有益经历。程序员约有 35%–50% 的生产时间和 50%–75% 的软件成本花在调试上[^20]。虽然工具减少了在单个调试任务上花费的时间，但总体用于此类活动的时间保持不变。虽然该研究强调了增强学习行为，但也发现调试需要有效掌握工具知识。
 
-在大多数情况下，我们知道程序将经历哪些状态转换，但可能无法准确预测所有状态。打印或日志消息是在中间步骤传达可能输出的好方法。甚至 `<strong>assert</strong>` 宏也是验证预期假设的好方法。虽然这些验证正确行为的过程比较粗糙，但它们仍然是最常用的调试步骤。
+在大多数情况下，我们知道程序将经历哪些状态转换，但可能无法准确预测所有状态。打印或日志消息是在中间步骤传达可能输出的好方法。甚至**assert**宏也是验证预期假设的好方法。虽然这些验证正确行为的过程比较粗糙，但它们仍然是最常用的调试步骤。
 
 单元测试是将代码中的 Bug 降到最低的另一个好方法。Julia 拥有一个详尽的单元测试框架，我们将在下一章回顾。作为一种良好的实践，单元测试必须确保以下几点：
 
@@ -9835,9 +9644,6 @@ Microsoft Visual Studio 是 Microsoft 生态系统中几乎所有软件开发的
 *   如果函数是纯函数且无副作用，上一步将提高测试功效。在这种情况下，需要管理的内部状态较少，且之前结果的残留不会影响测试用例。
 
 REPL 是另一个很好的调试工具。然而，要使此类工具有效，必须练习将小块代码编写进可复用的函数中。纯函数会让效果更好。当一种语言拥有过多特性时，程序员更难掌握其所有语法和语义。出错的可能性大幅增加。在这种情况下，在实际使用前在 REPL 中独立测试小块代码具有重要价值。让我们看看之前的斐波那契数列代码。
-
-
-
 
 `fib(n) = n < 3 ? 1 : fib(n-1) + fib(n-2)`
 
@@ -9854,9 +9660,9 @@ julia> fib(0)
 1
 ```
 
-递归函数之所以终止，是因为对于所有 `n < 3` 的值都存在终止条件。根本问题在于斐波那契数列对于负数 `n` 是否有效。拥有一个小型纯函数并在 REPL 中验证它，使得确保代码正常运行并将其引入实际代码变得更加容易。在 IDE 中运行代码片段是实现相同结果的另一种方式。
+递归函数之所以终止，是因为对于所有`n < 3`的值都存在终止条件。根本问题在于斐波那契数列对于负数`n`是否有效。拥有一个小型纯函数并在 REPL 中验证它，使得确保代码正常运行并将其引入实际代码变得更加容易。在 IDE 中运行代码片段是实现相同结果的另一种方式。
 
-虽然前述方法是测试和使用小块代码的一些较简单途径，但它们不同于用于原生二进制文件的 `gdb` 等工具所采用的行调试。Julia 拥有一个功能齐全的命令行调试器 21。
+虽然前述方法是测试和使用小块代码的一些较简单途径，但它们不同于用于原生二进制文件的`gdb`等工具所采用的行调试。Julia 拥有一个功能齐全的命令行调试器[^21]。
 
 ## 行调试
 
@@ -9872,11 +9678,11 @@ julia> fib(0)
 
 **图 12.9：** 在 VS Code 中调试的 Julia 源代码
 
-读者可以使用 VS Code 或 Atom 在 IDE 中打开文件 `fibonacci.jl` 并调试代码。
+读者可以使用 VS Code 或 Atom 在 IDE 中打开文件`fibonacci.jl`并调试代码。
 
 ## Revise.jl 与运行时限制
 
-无论程序员多么熟练，她都希望能快速尝试脑海中的想法，体验结果，修复更改，然后继续处理下一块代码。Julia 的运行时是预加载的。随着你将更多数据结构、模块和包加载到系统中，旧的符号和代码块会被加载到运行时中。如果不影响运行时其他地方的整体工作，可能无法修改已定义的符号。例如，在 REPL 中更改函数定义很简单。但是，不允许添加或删除 `struct` 数据类型的属性。当修改包时，后续使用 `using <<module>>` 命令不会重新加载它。为克服这些限制，可以使用 `Revise.jl`22 包。该包可以自动加载，并能作为代码-运行-修复开发周期的一部分更新符号。我们建议读者查阅该包文档以获得详细了解。
+无论程序员多么熟练，她都希望能快速尝试脑海中的想法，体验结果，修复更改，然后继续处理下一块代码。Julia 的运行时是预加载的。随着你将更多数据结构、模块和包加载到系统中，旧的符号和代码块会被加载到运行时中。如果不影响运行时其他地方的整体工作，可能无法修改已定义的符号。例如，在 REPL 中更改函数定义很简单。但是，不允许添加或删除`struct`数据类型的属性。当修改包时，后续使用`using <<module>>`命令不会重新加载它。为克服这些限制，可以使用`Revise.jl`[^22]包。该包可以自动加载，并能作为代码-运行-修复开发周期的一部分更新符号。我们建议读者查阅该包文档以获得详细了解。
 
 ## 总结
 
@@ -9892,49 +9698,49 @@ julia> fib(0)
 
 ---
 
-1 Sage McEnery, How much computer code has been written?, 18th July 2020, **[`medium.com/modern-stack/how-much-computer-code-has-been-written-c8c03100f459`](https://medium.com/modern-stack/how-much-computer-code-has-been-written-c8c03100f459)** 最后访问：2021 年 1 月 23 日。
+[^1]: Sage McEnery, How much computer code has been written?, 18th July 2020, [`medium.com/modern-stack/how-much-computer-code-has-been-written-c8c03100f459`](https://medium.com/modern-stack/how-much-computer-code-has-been-written-c8c03100f459) 最后访问：2021 年 1 月 23 日。
 
-2 D. E. Knuth, Literate Programming, The Computer Journal, September 1983
-
-3 IBM Rational ClearCase, **[`www.ibm.com/support/knowledgecenter/SSSH27_9.1/com.ibm.rational.clearcase.help.ic.doc/topics/c_product_ovw.htm`](https://www.ibm.com/support/knowledgecenter/SSSH27_9.1/com.ibm.rational.clearcase.help.ic.doc/topics/c_product_ovw.htm)**
-
-4 Microsoft Visual Studio Teams Services, **[`visualstudio.microsoft.com/vs/features/collaborate/`](https://visualstudio.microsoft.com/vs/features/collaborate/)**
-
-5 Editor War, **[`en.wikipedia.org/wiki/Editor_war`](https://en.wikipedia.org/wiki/Editor_war)**
-
-6 Julia Editor Support, **[`github.com/JuliaEditorSupport`](https://github.com/JuliaEditorSupport)**
-
-7 The Juno Project, **[`junolab.org/`](https://junolab.org/)**
-
-8 Julia for VS Code **[`www.julia-vscode.org/`](https://www.julia-vscode.org/)**
-
-9 `julia-vim`, **[`github.com/JuliaEditorSupport/julia-vim`](https://github.com/JuliaEditorSupport/julia-vim)**
-
-10 Installation Guideline `julia-vim`, **[`github.com/JuliaEditorSupport/julia-vim/blob/master/INSTALL.md`](https://github.com/JuliaEditorSupport/julia-vim/blob/master/INSTALL.md)**
-
-11 Julia-vim tutorial for newbies, Julia Discourse Post, **[`discourse.julialang.org/t/julia-vim-tutorial-for-newbies/36636/6`](https://discourse.julialang.org/t/julia-vim-tutorial-for-newbies/36636/6)**
-
-12 Some attempts have been made to run `Notepad++` in Linux using Wine emulator. Editors like `Sublime Text` have Julia integrations as well.
-
-13 `Julia-NotepadPlusPlus`, Git Hub Repository, **[`github.com/JuliaEditorSupport/julia-NotepadPlusPlus`](https://github.com/JuliaEditorSupport/julia-NotepadPlusPlus)**
-
-14 `julia-intellij`, GitHub Project, **[`github.com/JuliaEditorSupport/julia-intellij`](https://github.com/JuliaEditorSupport/julia-intellij)**
-
-15 juliaDT, GitHub Project, **[`github.com/JuliaEditorSupport/JuliaDT`](https://github.com/JuliaEditorSupport/JuliaDT)**
-
-16 Julia PRO, **[`juliacomputing.com/products/juliapro/`](https://juliacomputing.com/products/juliapro/)**
-
-17 Julia client for Atom is entering maintenance mode, **[`atom.io/packages/julia-client`](https://atom.io/packages/julia-client)** 最后访问：2021 年 1 月 27 日
-
-18 Visual Studio Code, **[`code.visualstudio.com/`](https://code.visualstudio.com/)**
-
-19 Anecdotes, Grace Hopper, Wikipedia, **[`en.wikipedia.org/wiki/Grace_Hopper`](https://en.wikipedia.org/wiki/Grace_Hopper)**
-
-20 Devon H. O'Dell, The Debugging Mindset, acmqueue, Jan-Feb 2017
+[^2]: D. E. Knuth, Literate Programming, The Computer Journal, September 1983
 
 
 
+# 参考文献
 
+3. IBM Rational ClearCase, [`www.ibm.com/support/knowledgecenter/SSSH27_9.1/com.ibm.rational.clearcase.help.ic.doc/topics/c_product_ovw.htm`](https://www.ibm.com/support/knowledgecenter/SSSH27_9.1/com.ibm.rational.clearcase.help.ic.doc/topics/c_product_ovw.htm)
+
+4. Microsoft Visual Studio Teams Services, [`visualstudio.microsoft.com/vs/features/collaborate/`](https://visualstudio.microsoft.com/vs/features/collaborate/)
+
+5. Editor War, [`en.wikipedia.org/wiki/Editor_war`](https://en.wikipedia.org/wiki/Editor_war)
+
+6. Julia Editor Support, [`github.com/JuliaEditorSupport`](https://github.com/JuliaEditorSupport)
+
+7. The Juno Project, [`junolab.org/`](https://junolab.org/)
+
+8. Julia for VS Code [`www.julia-vscode.org/`](https://www.julia-vscode.org/)
+
+9. `julia-vim`, [`github.com/JuliaEditorSupport/julia-vim`](https://github.com/JuliaEditorSupport/julia-vim)
+
+10. Installation Guideline `julia-vim`, [`github.com/JuliaEditorSupport/julia-vim/blob/master/INSTALL.md`](https://github.com/JuliaEditorSupport/julia-vim/blob/master/INSTALL.md)
+
+11. Julia-vim tutorial for newbies, Julia Discourse Post, [`discourse.julialang.org/t/julia-vim-tutorial-for-newbies/36636/6`](https://discourse.julialang.org/t/julia-vim-tutorial-for-newbies/36636/6)
+
+12. Some attempts have been made to run `Notepad++` in Linux using Wine emulator. Editors like `Sublime Text` have Julia integrations as well.
+
+13. `Julia-NotepadPlusPlus`, Git Hub Repository, [`github.com/JuliaEditorSupport/julia-NotepadPlusPlus`](https://github.com/JuliaEditorSupport/julia-NotepadPlusPlus)
+
+14. `julia-intellij`, GitHub Project, [`github.com/JuliaEditorSupport/julia-intellij`](https://github.com/JuliaEditorSupport/julia-intellij)
+
+15. juliaDT, GitHub Project, [`github.com/JuliaEditorSupport/JuliaDT`](https://github.com/JuliaEditorSupport/JuliaDT)
+
+16. Julia PRO, [`juliacomputing.com/products/juliapro/`](https://juliacomputing.com/products/juliapro/)
+
+17. Julia client for Atom is entering maintenance mode, [`atom.io/packages/julia-client`](https://atom.io/packages/julia-client) 最后访问：2021 年 1 月 27 日
+
+18. Visual Studio Code, [`code.visualstudio.com/`](https://code.visualstudio.com/)
+
+19. Anecdotes, Grace Hopper, Wikipedia, [`en.wikipedia.org/wiki/Grace_Hopper`](https://en.wikipedia.org/wiki/Grace_Hopper)
+
+20. Devon H. O'Dell, *The Debugging Mindset*, acmqueue, Jan-Feb 2017
 
 # 参考文献
 
@@ -9948,13 +9754,13 @@ julia> fib(0)
 
 ## 编辑器集成
 
-**vim** 的 Julia 插件，称为 **julia-vim**，是一个 *GitHub* 项目，可安装在 Mac OS X、UNIX 和 Windows 操作系统的 **vim** 设置中。该插件是一组 vim 脚本，提供以下功能：
+`vim` 的 Julia 插件，称为 `julia-vim`，是一个 *GitHub* 项目，可安装在 Mac OS X、UNIX 和 Windows 操作系统的 `vim` 设置中。该插件是一组 vim 脚本，提供以下功能：
 
 无论程序员多么熟练，她都希望尝试脑海中的想法，快速体验结果，修复更改，然后继续处理下一块代码。Julia 的运行时是预加载的。随着你向系统加载更多数据结构、模块和包，旧的符号和代码块会被加载到运行时中。如果不影响运行时其他地方的整体工作，可能无法修改已定义的符号。例如，在 REPL 中更改函数定义很简单。但是，不允许添加或删除 `struct` 数据类型的属性。当修改包时，后续使用 `<<module>>` 命令不会加载它。为克服这些限制，可以使用 `Revise.jl` 包。该包可以自动加载，并可作为代码-运行-修复开发周期的一部分更新符号。我们建议读者查阅包文档以获得详细了解。
 
-虽然前述方法是测试和使用小块代码的一些较简单途径，但它们不同于使用 **gdb** 等工具对原生二进制文件进行的行调试。Julia 拥有一个功能齐全的命令行调试器。
+虽然前述方法是测试和使用小块代码的一些较简单途径，但它们不同于使用 `gdb` 等工具对原生二进制文件进行的行调试。Julia 拥有一个功能齐全的命令行调试器。
 
-Julia 是一个相对较新的平台。在 Julia 作为一门语言流行之前，所有前述组件的生态系统就已存在。开发人员希望看到 Julia 能与他们最熟悉的工具无缝配合使用。在 UNIX 环境的文本编辑器世界中，**vi** 与 **emacs** 之间几乎存在狂热般的追随之争。*GitHub* 下的 JuliaEditorSupport 组织维护着与多个知名编辑器的集成，能力水平各异；其中一些编辑器包括 *Vim*、*Emacs*、*Sublime*、*Atom*、*Notepad++* 和 *Eclipse*。一些集成处于活跃状态，而由于缺乏关注和使用，许多已被弃用。*Atom* 的 Julia IDE 正在 *Juno* 项目下开发，Microsoft **Visual Studio Code** (**VS Code**) 也是如此。
+Julia 是一个相对较新的平台。在 Julia 作为一门语言流行之前，所有前述组件的生态系统就已存在。开发人员希望看到 Julia 能与他们最熟悉的工具无缝配合使用。在 UNIX 环境的文本编辑器世界中，`vi` 与 `emacs` 之间几乎存在狂热般的追随之争。*GitHub* 下的 JuliaEditorSupport 组织维护着与多个知名编辑器的集成，能力水平各异；其中一些编辑器包括 *Vim*、*Emacs*、*Sublime*、*Atom*、*Notepad++* 和 *Eclipse*。一些集成处于活跃状态，而由于缺乏关注和使用，许多已被弃用。*Atom* 的 Julia IDE 正在 *Juno* 项目下开发，Microsoft **Visual Studio Code** (**VS Code**) 也是如此。
 
 Julia client for Atom 正进入维护模式，[`atom.io/packages/julia-client`](https://atom.io/packages/julia-client) 最后访问：2021 年 1 月 27 日
 
@@ -9982,10 +9788,6 @@ Tim Holy, Kristoffer Carlsson, Sebastian Pfitzner, Keno Fischer, *A Julia interp
 
 `Revise.jl`, 在运行中的 Julia 会话中自动更新函数定义, [`github.com/timholy/Revise.jl`](https://github.com/timholy/Revise.jl)
 
-
-
-
-
 # 开发环境与工具
 
 REPL 是原型设计时尝试简单代码片段的绝佳工具。然而，生产级代码开发需要编写、调试和验证大量代码。虽然普通工程师每天可能只编写 20 行左右的代码，但维护的代码行数却非常庞大。除非拥有信息丰富的可视化工具，否则难以维护此类代码。虽然大多数代码以纯文本形式编写，但源代码编辑要求编辑器理解语言的某些特性。
@@ -9995,9 +9797,13 @@ REPL 是原型设计时尝试简单代码片段的绝佳工具。然而，生产
 # 参考文献
 
 1. Sage McEnery, *How much computer code has been written?*, 18th July 2020, [`medium.com/modern-stack/how-much-computer-code-has-been-written-c8c03100f459`](https://medium.com/modern-stack/how-much-computer-code-has-been-written-c8c03100f459) (last accessed: 23rd Jan 2021).
+
 2. D. E. Knuth, *Literate Programming*, The Computer Journal, September 1983.
+
 3. IBM Rational ClearCase, [`www.ibm.com/support/knowledgecenter/SSSH27_9.1/com.ibm.rational.clearcase.help.ic.doc/topics/c_product_ovw.htm`](https://www.ibm.com/support/knowledgecenter/SSSH27_9.1/com.ibm.rational.clearcase.help.ic.doc/topics/c_product_ovw.htm)
+
 4. Microsoft Visual Studio Teams Services, [`visualstudio.microsoft.com/vs/features/collaborate/`](https://visualstudio.microsoft.com/vs/features/collaborate/)
+
 5. Editor War, [`en.wikipedia.org/wiki/Editor_war`](https://en.wikipedia.org/wiki/Editor_war)
 
 ## IDE 与编辑器生态
@@ -10008,19 +9814,21 @@ Juno IDE 是 Julia 与 Atom 集成的核心，也是 Julia Computing 商业产�
 
 **IDE** 是完整的开发平台，有助于管理工作区、项目，并充当编辑器、构建、测试、调试和部署工具。虽然业界有许多标准 IDE，但 Julia 与 Atom 和 Microsoft Visual Studio Code (VS Code) 的集成最为完善，我们将在后续章节中探讨。Julia 还与 IntelliJ 有进行中的集成工作，并有已归档的 Eclipse 集成。
 
-Julia 是一个相对较新的平台。所有前序组件的生态系统在 Julia 作为语言流行之前就已存在。开发者希望 Julia 能与他们最熟悉的工具无缝配合。在 UNIX 环境的文本编辑器世界中，vi 与 emacs 拥有近乎狂热的追随者。GitHub 下的 JuliaEditorSupport 组织维护着与多款知名编辑器（如 Vim、Emacs、Sublime、Atom、Notepad++ 和 Eclipse）的不同层级集成。部分集成处于活跃状态，但许多因缺乏关注和使用而已弃用。Julia IDE 正在 Atom 的 Juno 项目和 Microsoft Visual Studio Code (VS Code) 下开发。
+Julia 是一个相对较新的平台。所有前序组件的生态系统在 Julia 作为语言流行之前就已存在。开发者希望 Julia 能与他们最熟悉的工具无缝配合。在 UNIX 环境的文本编辑器世界中，`vi` 与 `emacs` 拥有近乎狂热的追随者。*GitHub* 下的 JuliaEditorSupport 组织维护着与多款知名编辑器（如 *Vim*、*Emacs*、*Sublime*、*Atom*、*Notepad++* 和 *Eclipse*）的不同层级集成。部分集成处于活跃状态，但许多因缺乏关注和使用而已弃用。Julia IDE 正在 *Atom* 的 *Juno* 项目和 Microsoft **Visual Studio Code** (**VS Code**) 下开发。
 
 ### Vim 集成
 
-用于 vim 的 Julia 插件 julia-vim 是一个 GitHub 项目，可安装在 Mac OS X、UNIX 和 Windows 操作系统的 vim 环境中。该插件是一组 vim 脚本，提供以下功能：
+用于 `vim` 的 Julia 插件 `julia-vim` 是一个 *GitHub* 项目，可安装在 Mac OS X、UNIX 和 Windows 操作系统的 `vim` 环境中。该插件是一组 vim 脚本，提供以下功能：
 
-*   虽然有人使用终端模拟器配合 vim 来使用 Julia REPL，但这并非插件本身的功能。
+*   虽然有人使用终端模拟器配合 `vim` 来使用 Julia REPL，但这并非插件本身的功能。
 
 ### Notepad++ 集成
 
-正如 vi 和 emacs 是 UNIX 世界最流行的编辑器，Notepad++ 在 Windows 操作系统中广受欢迎，且无直接移植到 Unix 或 Mac OS X 系统。切勿将其与 Windows 系统默认自带、仅具备基本文本编辑功能的 notepad.exe 混淆。Notepad++ 是一款相对高级的文本编辑器，拥有完整的插件功能以编程和增强编辑器渲染体验。它还支持通过 **用户定义语言 (UDL)** 自定义语言语法高亮。UDL 通过 XML 文件提供特定语法结构的简易方式，可用于有效识别和渲染文件。
 
-Julia 的 UDL 可在 GitHub 项目 Julia-NotepadPlusPlus 中获取。
+
+正如 `vi` 和 `emacs` 是 UNIX 世界最流行的编辑器，`Notepad++` 在 Windows 操作系统中广受欢迎，且无直接移植到 Unix 或 Mac OS X 系统。切勿将其与 Windows 系统默认自带、仅具备基本文本编辑功能的 `notepad.exe` 混淆。`Notepad++` 是一款相对高级的文本编辑器，拥有完整的插件功能以编程和增强编辑器渲染体验。它还支持通过**用户定义语言 (UDL)**自定义语言语法高亮。UDL 通过 XML 文件提供特定语法结构的简易方式，可用于有效识别和渲染文件。
+
+Julia 的 UDL 可在 GitHub 项目 `Julia-NotepadPlusPlus` 中获取。
 
 ## 相关链接
 
@@ -10048,9 +9856,6 @@ Julia 的 UDL 可在 GitHub 项目 Julia-NotepadPlusPlus 中获取。
 *   环境
 *   包架构
 
-
-
-
 在本章中，读者将能够了解如何为生产用途打包代码。你也可以在包中使用其他语言构建的二进制文件。为你的包添加单元测试和持续集成框架，并设置一致的环境，以便在不同的安装中执行，确保跨包维护正确的版本依赖。
 
 # 学习任何编程语言的最佳方式
@@ -10059,7 +9864,7 @@ Julia 的 UDL 可在 GitHub 项目 Julia-NotepadPlusPlus 中获取。
 
 # 模块、包和项目
 
-你将在多处讨论中看到术语 module（模块）、package（包）和 project（项目）的用法。虽然这些概念相关，但每个术语都有特定的特征。
+你将在多处讨论中看到术语 `module`（模块）、`package`（包）和 `project`（项目）的用法。虽然这些概念相关，但每个术语都有特定的特征。
 
 ## 模块
 
@@ -10085,10 +9890,13 @@ Julia 中的任何代码都可以构成一个项目。项目没有特定的定�
 
 *   **Git 仓库**：Julia 包可以是 Git 仓库。其部署机制基于 Git 库与 Julia 的集成。因此，创建后，包默认可以推送到 GitHub2。包也可以部署在本地目录中。
 *   **文件夹结构**：包按定义良好的文件夹结构组织：
+
     ![](img/n4upl4fndrp.jpeg)
+
     **图 13.1：** PDFIO 包的文件夹结构
+
     虽然 `src` 和 `test` 文件夹几乎存在于所有包中，但 `deps`、`docs` 和 `data` 等文件夹可能在某些包中缺失。同样，非公开的包可能没有 `LICENCE.md` 文件。
-*   **环境**：包拥有其固有的环境元数据文件 `Project.toml` 和 `Manifest.toml`。这确保了部署时，它们维护着一致的库依赖。
+*   **环境**：包拥有其固有的环境元数据文件 `Project.toml` 和 `Manifest.toml`。这确保了部署时，它们维护着一组一致的库依赖。
 *   **模块**：包被包裹在最高层级的模块内。该模块即包的名称，定义在 `src` 文件夹下名为 `<ModuleName>.jl` 的文件中。不过，你也可以在最高层级模块内定义子模块。
 
 # 带 UI 的 N 皇后示例
@@ -10098,7 +9906,9 @@ Julia 中的任何代码都可以构成一个项目。项目没有特定的定�
 1.  **UI 渲染 API**：浏览器是最容易渲染的，我们将前往 JuliaHub4 搜索几个可用选项。这些都是相当不错的包选项，如：`Electron`、`Blink` 等。我们建议使用 `WebIO`，因为它是一个聚合器，可以在 Blink、Jupyter、Julia REPL 或 Atom IDE 的自定义窗口等所有前端进行渲染 5。
 2.  **添加包**：既然你决定使用 WebIO，可以使用命令 `add WebIO` 将其添加到项目中。
 3.  **添加相关前端**：如果你决定使用 Jupyter 渲染 UI，请确保添加 `IJulia` 包。如果你想使用基于 Electron 的 Blink 作为前端，则需要将 Blink 添加到项目中：
+
     ![](img/n4upl4fndrq.jpeg)
+
     **图 13.2：** 使用 WebIO 和 Blink 进行示例渲染
 
 起始代码位于文件夹 `Chapter-13/NQueens` 中。提供了两个选项，一个使用 Jupyter notebook，另一个使用 REPL。你可以使用以下命令在 REPL 中启动应用程序：
@@ -10123,13 +9933,11 @@ IJulia = "7073ff75-c697-5162-941a-fcdaad2a7d2a"
 WebIO = "0f1e0344-ec1d-5b48-a673-e5cf874b6c29"
 ```
 
-这些都是你的应用程序所依赖的包。然而，在内部，这些包也依赖其他包。如果你打开 `Manifest.toml`，将能看到项目实际上所依赖的所有那些包及其版本。通常，提供 `Project.toml` 是为了设置环境。当调用 instantiate 命令时，它会分析 `Project.toml` 并计算所有依赖关系，如果 `Manifest.toml` 不存在则创建它。随后，它会安装所有所需的包（如果它们尚不可用）。从而确保环境已设置好以启动应用程序。
+这些都是你的应用程序所依赖的包。然而，在内部，这些包也依赖其他包。如果你打开 `Manifest.toml`，将能看到项目实际上所依赖的所有那些包及其版本。通常，提供 `Project.toml` 是为了设置环境。当调用 `instantiate` 命令时，它会分析 `Project.toml` 并计算所有依赖关系，如果 `Manifest.toml` 不存在则创建它。随后，它会安装所有所需的包（如果它们尚不可用）。从而确保环境已设置好以启动应用程序。
 
 # 创建一个简单的包
 
 我们看了一个项目示例，其中已定义了一些依赖项，我们想在另一台机器上复制该环境并扩展代码以添加用户界面。在本示例中，我们将创建一个简单的包，并了解如何在其生命周期中进行开发。为了获得最佳体验，我们建议你使用 REPL 执行本节内容。
-
-
 
 当两点之间的距离小于某个称为 `point coincident tolerance`（点重合公差）的微小值时，这两点被称为重合点。[⁶] 鉴于上述条件，我们如何判断三个这样的点是共线的或构成一条直线？
 
@@ -10158,68 +9966,67 @@ WebIO = "0f1e0344-ec1d-5b48-a673-e5cf874b6c29"
 3.  使用命令：`generate PointLib`。
 4.  将创建一个名为 PointLib 的新目录，包含以下文件：
 
-    ```
-    shell> tree /F[⁸]
-    Folder PATH listing
-    Volume serial number is E285-F8B9
-    C:.
-    │   Project.toml
-    └───src
-            PointLib.jl
-    ```
+```
+shell> tree /F[⁸]
+Folder PATH listing
+Volume serial number is E285-F8B9
+C:.
+│   Project.toml
+└───src
+        PointLib.jl
+```
 
 5.  `Project.toml` 将包含以下元数据：
 
-    ```
-    shell> more Project.toml
-    name = "PointLib"
-    uuid = "7de1f589-fb91-4994-b265-ccfc43c44ada"
-    authors = ["Sambit Kumar Dash <sambitdash@gmail.com>"]
-    version = "0.1.0"
-    ```
+```
+shell> more Project.toml
+name = "PointLib"
+uuid = "7de1f589-fb91-4994-b265-ccfc43c44ada"
+authors = ["Sambit Kumar Dash <sambitdash@gmail.com>"]
+version = "0.1.0"
+```
 
 6.  `src/PointLib.jl` 是包的代码入口点，将包含以下代码。一个与包名匹配的默认模块。一个作为示例代码的 greet 函数。
 
-    ```julia
-    module PointLib
-    greet() = print("Hello World!")
-    end # module
-    ```
+```julia
+module PointLib
+greet() = print("Hello World!")
+end # module
+```
 
 7.  使用 `cd("PointLib")` 进入该文件夹，并使用命令 `]activate .`。activate 后面的点 (`.`) 确保在当前目录中激活环境。这会将提示符更改为 `(PointLib) pkg>`，确认正在使用 `PointLib/Project.toml` 中定义的环境。
-
 8.  向 `PointLib` 包添加 `LinearAlgebra` 库。根据注册表更新情况，这可能需要一些时间。
 
-    ```
-    (PointLib) pkg> add LinearAlgebra
-     Updating registry at `D:\Users\sambi\.julia\registries\General`
-    Resolving package versions…
-     Updating `C:\Users\sambi\PointLib\Project.toml`
-    [37e2e46d] + LinearAlgebra
-     Updating `C:\Users\sambi\PointLib\Manifest.toml`
-    [8f399da3] + Libdl
-    [37e2e46d] + LinearAlgebra
-    ```
+```
+(PointLib) pkg> add LinearAlgebra
+ Updating registry at `D:\Users\sambi\.julia\registries\General`
+Resolving package versions…
+ Updating `C:\Users\sambi\PointLib\Project.toml`
+[37e2e46d] + LinearAlgebra
+ Updating `C:\Users\sambi\PointLib\Manifest.toml`
+[8f399da3] + Libdl
+[37e2e46d] + LinearAlgebra
+```
 
-    `Project.toml` 将包含一个依赖项条目。并将创建一个新文件 `Manifest.toml`，用于解析所需的完整包列表。例如，`LinearAlgebra` 需要 `Libdl`，该信息将更新在 `Manifest.toml` 中。
+`Project.toml` 将包含一个依赖项条目。并将创建一个新文件 `Manifest.toml`，用于解析所需的完整包列表。例如，`LinearAlgebra` 需要 `Libdl`，该信息将更新在 `Manifest.toml` 中。
 
-    ```
-    shell> more Project.toml
-    name = "PointLib"
-    uuid = "7de1f589-fb91-4994-b265-ccfc43c44ada"
-    authors = ["Sambit Kumar Dash <sambitdash@gmail.com>"]
-    version = "0.1.0"
-    [deps]
-    LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+```
+shell> more Project.toml
+name = "PointLib"
+uuid = "7de1f589-fb91-4994-b265-ccfc43c44ada"
+authors = ["Sambit Kumar Dash <sambitdash@gmail.com>"]
+version = "0.1.0"
+[deps]
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 
-    shell> more Manifest.toml
-    # This file is machine-generated - editing it directly is not advised
-    [[Libdl]]
-    uuid = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
-    [[LinearAlgebra]]
-    deps = ["Libdl"]
-    uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
-    ```
+shell> more Manifest.toml
+# This file is machine-generated - editing it directly is not advised
+[[Libdl]]
+uuid = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
+[[LinearAlgebra]]
+deps = ["Libdl"]
+uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+```
 
 因此，我们得到了一个用于开发所需功能的包，也可以将其添加到源代码控制中，以便更好地维护和共享代码。Git 管理的包可以通过 Julia 包管理器进行分发。
 
@@ -10279,28 +10086,27 @@ end # module
     或
     在 `PointLib` 文件夹中执行以下 `git` 命令：
 
-    ```bash
-    echo "# PointLib.jl" >> README.md
-    git init
-    git add .[¹⁰]
-    git commit -m "first commit"
-    # U 为 GitHub 用户名
-    git remote add origin https://github.com/U/PointLib.jl.git
-    git push -u origin master
-    ```
 
 
+```bash
+echo "# PointLib.jl" >> README.md
+git init
+git add .
+git commit -m "first commit"
+# U 为 GitHub 用户名
+git remote add origin https://github.com/U/PointLib.jl.git
+git push -u origin master
+```
 
-
-您的最终结果可能类似于项目 `sambitdash/PointLib.jl`11。
+您的最终结果可能类似于项目 `sambitdash/PointLib.jl`。
 
 # 测试框架集成
 
 除非代码经过彻底测试，且测试用例频繁运行以检测新增代码带来的回归问题，否则代码永远不算合格。Julia 包应当包含单元测试用例以满足此类需求。可以通过以下步骤集成测试框架：
 
-1.  使用 `cd("PointLib")` 进入 `PointLib` 文件夹。
+1. 使用 `cd("PointLib")` 进入 `PointLib` 文件夹。
 
-2.  现在编辑 `Project.toml` 以添加**粗体**所示代码，从而添加 Test 包。
+2. 现在编辑 `Project.toml` 以添加如下代码，从而添加 `Test` 包。
 
     ```toml
     name = "PointLib"
@@ -10315,7 +10121,7 @@ end # module
     test = ["Test"]
     ```
 
-3.  `test/runtests.jl` 包含该包的测试用例。我们向该文件添加以下代码：
+3. `test/runtests.jl` 包含该包的测试用例。我们向该文件添加以下代码：
 
     ```julia
     using Test
@@ -10329,7 +10135,7 @@ end # module
                       Point2D(20, 3ϵ()))
     ```
 
-4.  现在在包模式下使用命令 `]test` 运行测试。
+4. 现在在包模式下使用命令 `]test` 运行测试。
 
     ```
     (PointLib) pkg> test
@@ -10354,7 +10160,7 @@ end # module
     Testing PointLib tests passed
     ```
 
-5.  当测试失败时，您可能会看到如下错误信息。
+5. 当测试失败时，您可能会看到如下错误信息。
 
     ```
     Test Failed at C:\Users\sambi\PointLib\test\runtests.jl:5
@@ -10438,10 +10244,6 @@ Testing PointLib tests passed
 
 报告必须仔细阅读，因为函数声明行不会被执行，本就不应被执行。然而，`greet()` 函数未被执行；这清楚地表明测试用例不足。可以使用 `Codecov.io` 等测试覆盖率工具来可视化覆盖率结果，我们将在后面的章节中介绍。
 
-
-
-
-
 # Julia 包文档开发
 
 文档并非包管理的核心功能。然而，要使包对受众有用，文档起着重要作用。因此，我们在此讨论如何为 Julia 包开发和传播文档。
@@ -10456,8 +10258,11 @@ module PointLib
     Point2D
 
     ``` 
+
     x: Float64 x-cordinates
+
     y: Float64 y-cordinates
+
     ```
     """
     struct Point2D
@@ -10492,15 +10297,22 @@ Sample module to show how packages are built
 按照惯例，文档在包下的 `docs` 文件夹中创建。在我们的示例中：
 
 1. 我们将创建一个 `PointLib/docs` 文件夹。
+
 2. 进入该文件夹并启动 Julia。
+
 3. 我们需要通过命令 `]activate` 实例化项目。这会将包模式提示符更改为 `(docs) pkg>`。
+
 4. 在包模式下，我们需要使用以下命令：
+
    ```julia
    (docs) pkg> add ..
    (docs) pkg> add Documenter
    ```
+
    `add ..` 命令将添加未在 Julia 注册表中注册但文档交叉引用所需的 `PointLib` 包。
+
 5. 在 `docs` 文件夹中，我们将创建一个包含以下内容的 `make.jl` 文件：
+
    ```julia
    if Base.HOME_PROJECT[] !== nothing
        # JuliaLang/julia/pull/28625
@@ -10520,200 +10332,233 @@ Sample module to show how packages are built
        repo = "github.com/sambitdash/PointLib.jl.git",
    )
    ```
+
 6. `makedocs` 方法中引用的页面在 `PointLib/docs/src` 目录中查找。用户必须创建此目录。并且应将以下文件放置在 `src` 目录中。
+
 7. `README.md` 文件包含项目的标准 README。
+
 8. `index.md` 文件包含 API 参考。相关文档字符串将从源代码中提取并插入到参考位置。`index.md` 包含代码 ```` ```@docs <methods or types> ``` ````，文档字符串将在构建过程中嵌入其中。
 
    ```markdown
+
    # Reference
+
    This page has references to all the exported types and functions.
+
    ## Types
+
    ```@docs
    Point2D
    ```
+
    ## Functions
+
    ```@docs
    ϵ
    iscollinear
    ```
+
    ```
 
-
-
-
-# 9. 使用 Documenter.jl 构建文档
+# 使用 Documenter.jl 构建文档
 
 现在，在 docs 目录下运行 `make.jl`。您将在 build 目录中看到 HTML 模式下的文档。
 
 ```julia
+
 julia> include("make.jl")
+
 Info: SetupBuildDirectory: 正在设置构建目录。
+
 [Info: Doctest: 正在运行文档测试。
+
 [Info: ExpandTemplates: 正在扩展 Markdown 模板。
+
 [Info: CrossReferences: 正在构建交叉引用。
+
 [Info: CheckDocument: 正在运行文档检查。
+
 ┌ Warning: 2 个文档字符串未包含在手册中：
+
 │     PointLib.PointLib
+
 │     PointLib.greet :: Tuple{}
+
 │ 这些是受检查模块中的文档字符串（通过 modules 关键字配置）
+
 │ 未包含在 @docs 或 @autodocs 块中。
+
 └ @ Documenter.DocChecks D:\Users\sambi\.julia\packages\Documenter\FuXcO\src\DocChecks.jl:69
+
 [Info: Populate: 正在填充索引。
+
 [Info: RenderDocument: 正在渲染文档。
+
 [Info: HTMLWriter: 正在渲染 HTML 页面。
+
 ┌ Warning: Documenter 无法自动检测构建环境，跳过部署。
+
 └ @ Documenter D:\Users\sambi\.julia\packages\Documenter\FuXcO\src\deployconfig.jl:75
 ```
+
+
 
 在流程结束时，我们将看到 *Reference API* 页面已填充在 `build/index.html` 页面中：
 
 ![
-
 **图 13.4：** PointLib 的示例 API 参考
+]
 
-文档可以使用像 GitHub Actions 这样的持续集成工具部署到 GitHub Pages。
+文档可以使用像 `GitHub Actions` 这样的持续集成工具部署到 `GitHub Pages`。
 
 ## 10. 为源代码控制做准备
 
 然而，在继续之前，请确保您已将所有源文件添加到源代码控制中。
 
-1.  向您的包 `PointLib` 添加一个包含 `docs/build/*` 的 `.gitignore` 文件。此文件夹作为 Documenter 的输出被创建，无需同步到源代码控制。
-2.  运行 `git add .`，以便将所有其他源文件添加到您的仓库中。
-3.  现在使用 `git commit` 命令或您习惯的任何其他 GUI 工具提交您的源代码。
-4.  将您的更改推送到 GitHub 仓库以完全更新它。
+1. 向您的包 `PointLib` 添加一个包含 `docs/build/*` 的 `.gitignore` 文件。此文件夹作为 `Documenter` 的输出被创建，无需同步到源代码控制。
+2. 运行 `git add .`，以便将所有其他源文件添加到您的仓库中。
+3. 现在使用 `git commit` 命令或您习惯的任何其他 GUI 工具提交您的源代码。
+4. 将您的更改推送到 `GitHub` 仓库以完全更新它。
 
 现在所有源代码都已在源代码控制中，您将希望确保触发持续集成工作流，以便在创建文档的同时进行自动化测试。文档也必须发布到预定义的位置。
 
 # 使用 GitHub Actions 进行持续集成
 
-市场上有许多持续集成平台。GitHub Actions 是 GitHub 环境中使用最广泛的框架之一。我们将使用 GitHub Actions 来自动化 Julia 项目的测试、覆盖率和文档创建任务的执行。
+市场上有许多持续集成平台。`GitHub Actions` 是 `GitHub` 环境中使用最广泛的框架之一。我们将使用 `GitHub Actions` 来自动化 `Julia` 项目的测试、覆盖率和文档创建任务的执行。
 
-1.  GitHub Actions 位于一个名为 `.github/workflows` 的文件夹中，以 yaml 文件的形式存在。我们将创建一个名为 `ci.yml` 的文件并研究集成框架的各个方面。
-2.  **事件**：yaml 文件的第一部分是触发 action 的事件。
+1. `GitHub Actions` 位于一个名为 `.github/workflows` 的文件夹中，以 `yaml` 文件的形式存在。我们将创建一个名为 `ci.yml` 的文件并研究集成框架的各个方面。
+2. **事件**：`yaml` 文件的第一部分是触发 action 的事件。
 
-    ```yaml
-    name: CI
-    on:
-      push:
-        branches: [master]
-        tags: ["*"]
-    ```
+```yaml
+name: CI
 
-3.  **作业**：接下来我们指定作为 action 触发一部分运行的作业。作业的 id 可以是任何名称，如 `myjob`。我们使用 `test` 和 `doc` 来表示我们想要执行的两类作业。
-4.  **测试作业**：测试作业所做的远不止运行单元测试。它们有助于设置环境、检出代码、运行相关的单元测试，并将覆盖率结果提交到 `codecov.io` 以进行可视化。
-5.  **设置操作环境**：
+on:
+  push:
+    branches: [master]
+    tags: ["*"]
+```
 
-    ```yaml
-    jobs:
-      test:
-        name: Julia ${{matrix.version}} - ${{matrix.os}} - ${{matrix.arch}} - ${{github.event_name}}
-        runs-on: ${{matrix.os}}
-        strategy:
-          fail-fast: false
-          matrix:
-            version:
-              - '1.0'
-              - '1' # 自动扩展到最新的稳定 1.x 版本 Julia
-              - nightly
-            os:
-              - ubuntu-latest
-            arch:
-              - x64
-            include:
-              # 仅使用最新 Julia 测试 macOS 和 Windows
-              - os: macOS-latest
-                arch: x64
-                version: 1
-              - os: windows-latest
-                arch: x64
-                version: 1
-    ```
+3. **作业**：接下来我们指定作为 action 触发一部分运行的作业。作业的 id 可以是任何名称，如 `myjob`。我们使用 `test` 和 `doc` 来表示我们想要执行的两类作业。
+4. **测试作业**：测试作业所做的远不止运行单元测试。它们有助于设置环境、检出代码、运行相关的单元测试，并将覆盖率结果提交到 `codecov.io` 以进行可视化。
+5. **设置操作环境**：
 
-    您可以选择指定操作系统版本、Julia 版本，也可以指定特定操作系统与 Julia 版本的细粒度组合。最好选取一个示例 `ci.yml` 并根据需要进行修改，而不是从头编写。
+```yaml
+jobs:
+  test:
+    name: Julia ${{matrix.version}} - ${{matrix.os}} - ${{matrix.arch}} - ${{github.event_name}}
+    runs-on: ${{matrix.os}}
+    strategy:
+      fail-fast: false
+      matrix:
+        version:
+          - '1.0'
+          - '1' # 自动扩展到最新的稳定 1.x 版本 Julia
+          - nightly
+        os:
+          - ubuntu-latest
+        arch:
+          - x64
+        include:
+          # 仅使用最新 Julia 测试 macOS 和 Windows
+          - os: macOS-latest
+            arch: x64
+            version: 1
+          - os: windows-latest
+            arch: x64
+            version: 1
+```
 
-6.  **步骤**：测试作业要执行的步骤如下：
+您可以选择指定操作系统版本、`Julia` 版本，也可以指定特定操作系统与 `Julia` 版本的细粒度组合。最好选取一个示例 `ci.yml` 并根据需要进行修改，而不是从头编写。
 
-    ```yaml
-    steps:
-      - uses: actions/checkout@v2
-      - uses: julia-actions/setup-julia@v1
-        with:
-          version: ${{matrix.version}}
-          arch: ${{matrix.arch}}
-      - uses: actions/cache@v1
-        env:
-          cache-name: cache-artifacts
-        with:
-          path: ~/.julia/artifacts
-          key: ${{runner.os}}-test-${{env.cache-name}}-${{hashFiles('**/Project.toml')}}
-          restore-keys: |
-            ${{runner.os}}-test-${{env.cache-name}}-
-            ${{runner.os}}-test-
-            ${{runner.os}}-
-      - uses: julia-actions/julia-buildpkg@v1
-      - uses: julia-actions/julia-runtest@v1
-      - uses: julia-actions/julia-processcoverage@v1
-      - uses: codecov/codecov-action@v1
-        with:
-          file: lcov.info
-    ```
+6. **步骤**：测试作业要执行的步骤如下：
 
-    步骤不必在 steps 部分定义。相反，它们是从 GitHub Actions 和 Julia Actions 项目中开发的几个预定义脚本中获取的。这使得步骤具有声明性。
+```yaml
+steps:
+  - uses: actions/checkout@v2
+  - uses: julia-actions/setup-julia@v1
+    with:
+      version: ${{matrix.version}}
+      arch: ${{matrix.arch}}
+  - uses: actions/cache@v1
+    env:
+      cache-name: cache-artifacts
+    with:
+      path: ~/.julia/artifacts
+      key: ${{runner.os}}-test-${{env.cache-name}}-${{hashFiles('**/Project.toml')}}
+      restore-keys: |
+        ${{runner.os}}-test-${{env.cache-name}}-
+        ${{runner.os}}-test-
+        ${{runner.os}}-
+  - uses: julia-actions/julia-buildpkg@v1
+  - uses: julia-actions/julia-runtest@v1
+  - uses: julia-actions/julia-processcoverage@v1
+  - uses: codecov/codecov-action@v1
+    with:
+      file: lcov.info
+```
 
-7.  **文档作业**：调用 `makedocs` 并作为文档构建过程的一部分创建文档，这是我们之前见过的。
+步骤不必在 `steps` 部分定义。相反，它们是从 `GitHub Actions` 和 `Julia Actions` 项目中开发的几个预定义脚本中获取的。这使得步骤具有声明性。
 
-    ```yaml
-    docs:
-      name: Documentation
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v2
-        - uses: julia-actions/setup-julia@v1
-          with:
-            version: '1'
-        - run: |
-            julia --project=docs -e '
-            using Pkg
-            Pkg.develop(PackageSpec(path=pwd()))
-            Pkg.instantiate()'
-        - run: julia --project=docs docs/make.jl
-          env:
-            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-            DOCUMENTER_KEY: ${{secrets.DOCUMENTER_KEY}}
-    ```
+7. **文档作业**：调用 `makedocs` 并作为文档构建过程的一部分创建文档，这是我们之前见过的。
 
-8.  部署后，文档需要作为 GitHub Pages 显示。您需要使用以下代码创建一对密钥：
+```yaml
+docs:
+  name: Documentation
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v2
+    - uses: julia-actions/setup-julia@v1
+      with:
+        version: '1'
+    - run: |
+        julia --project=docs -e '
+        using Pkg
+        Pkg.develop(PackageSpec(path=pwd()))
+        Pkg.instantiate()'
+    - run: julia --project=docs docs/make.jl
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        DOCUMENTER_KEY: ${{secrets.DOCUMENTER_KEY}}
+```
 
-    ```julia
-    julia> using DocumenterTools
-    julia> DocumenterTools.genkeys()
-    Info: 将下面的公钥添加到 https://github.com/$USER/$REPO/settings/keys 并授予读/写权限：
-    …
-    [Info: 添加一个名为 'DOCUMENTER_KEY' 的安全环境变量到 https://travis-ci.com/$USER/$REPO/settings (如果使用 Travis CI 部署) 或 https://github.com/$USER/$REPO/settings/secrets (如果使用 GitHub Actions 部署)，值为：
-    …
-    ```
+8. 部署后，文档需要作为 `GitHub Pages` 显示。您需要使用以下代码创建一对密钥：
 
-    您需要将公钥添加到 `keys` 部分。您可以使用 DOCUMENTER 作为标题。现在将私钥添加到 GitHub GUI 中项目设置的 `secrets` 部分，名称为 `DOCUMENTER_KEY`。
+```julia
+julia> using DocumenterTools
+julia> DocumenterTools.genkeys()
+Info: 将下面的公钥添加到 https://github.com/$USER/$REPO/settings/keys 并授予读/写权限：
+…
+[Info: 添加一个名为 'DOCUMENTER_KEY' 的安全环境变量到 https://travis-ci.com/$USER/$REPO/settings (如果使用 Travis CI 部署) 或 https://github.com/$USER/$REPO/settings/secrets (如果使用 GitHub Actions 部署)，值为：
+…
+```
 
-    **gh-pages 分支：** GitHub Pages 通常从与 master 分支分离的单独分支填充。这被称为 `gh-pages` 分支。该分支是从 master 分离创建的。命令可以从 `PointLib` 目录运行。由于代码运行是为了创建一个分离分支，请确保在继续之前已将所有代码更改提交到 master 分支。
+您需要将公钥添加到 `keys` 部分。您可以使用 `DOCUMENTER` 作为标题。现在将私钥添加到 `GitHub` GUI 中项目设置的 `secrets` 部分，名称为 `DOCUMENTER_KEY`。
 
-    以下是手动创建 `gh-pages` 分支的命令：
+**gh-pages 分支**：`GitHub Pages` 通常从与 `master` 分支分离的单独分支填充。这被称为 `gh-pages` 分支。该分支是从 `master` 分离创建的。命令可以从 `PointLib` 目录运行。由于代码运行是为了创建一个分离分支，请确保在继续之前已将所有代码更改提交到 `master` 分支。
 
-    ```bash
-    # 创建 gh-pages 分支
-    git checkout --orphan gh-pages
-    git rm -rf .
-    touch README.md
-    git add README.md
-    git commit -m 'initial gh-pages commit'
-    git push origin gh-pages
-    ```
+以下是手动创建 `gh-pages` 分支的命令：
 
-9.  配置带有 GitHub Pages 的 gh-pages 分支：在 PointLib 设置页面的 `GitHub Pages` 部分，您可以将 `gh-pages` 配置为网页的来源：
+```bash
+# 创建 gh-pages 分支
+git checkout --orphan gh-pages
+git rm -rf .
+touch README.md
+git add README.md
+git commit -m 'initial gh-pages commit'
+git push origin gh-pages
+```
 
-    ![    **图 13.5：** GitHub Pages 配置为 gh-pages 分支 10. 所有配置就绪后，下一次推送到 GitHub 仓库时，GitHub Actions 将被触发，运行结果可从项目的 `Actions` 选项卡报告：    ![](img/n4upl4fndrx.jpeg)
+9. 配置带有 `GitHub Pages` 的 `gh-pages` 分支：在 `PointLib` 设置页面的 `GitHub Pages` 部分，您可以将 `gh-pages` 配置为网页的来源：
 
-    **图 13.6：** Actions 选项卡显示作业状态和每个步骤的详细信息
+![
+**图 13.5：** GitHub Pages 配置为 gh-pages 分支
+]
+
+10. 所有配置就绪后，下一次推送到 `GitHub` 仓库时，`GitHub Actions` 将被触发，运行结果可从项目的 `Actions` 选项卡报告：
+
+![
+**图 13.6：** Actions 选项卡显示作业状态和每个步骤的详细信息
+]
 
 11. 最终文档将可从以下位置访问：`https://<USER>.github.io/PointLib.jl/dev/`
 
@@ -10721,83 +10566,85 @@ Info: SetupBuildDirectory: 正在设置构建目录。
 
 前面我们已经看到了如何为测试用例生成覆盖率数据。我们可以使用像 `codecov.io` 这样的工具查看可视化结果，并希望在成功的测试运行结束时更新它们。
 
-1.  进入 `PointLib.jl` 的设置并将其标记为公开包。
-2.  使用 GitHub 凭据登录 **[`codecov.io`](https://codecov.io)**。确保您的包 `PointLib.jl` 在您的个人资料中显示为列出的包。如果尚未配置，您将需要使用用户界面为该包设置 codecov。
-3.  等待持续集成被触发并完成。
-4.  如果您登录 **[`codecov.io`](https://codecov.io)**，您将看到带有丰富多彩可视化的代码覆盖率统计：
+1. 进入 `PointLib.jl` 的设置并将其标记为公开包。
+2. 使用 `GitHub` 凭据登录 **[`codecov.io`](https://codecov.io)**。确保您的包 `PointLib.jl` 在您的个人资料中显示为列出的包。如果尚未配置，您将需要使用用户界面为该包设置 `codecov`。
+3. 等待持续集成被触发并完成。
+4. 如果您登录 **[`codecov.io`](https://codecov.io)**，您将看到带有丰富多彩可视化的代码覆盖率统计：
 
-    ![](img/n4upl4fndry.jpeg)
-
-    **图 13.7：** 测试用例未覆盖 `greet()` 而覆盖了 `ϵ()`。由 codecov.io 报告
+![
+**图 13.7：** 测试用例未覆盖 `greet()` 而覆盖了 `ϵ()`。由 codecov.io 报告
+]
 
 因此，我们生成了包代码，创建了测试用例，创建了相关文档。我们在每次测试运行时将覆盖率数据更新到可视化工具，并将文档作为持续集成的一部分部署到 `GitHub Pages`。这确保了源代码的每次更改都能在适当的测试用例运行中得到反映，在覆盖率工具的帮助下确保为新引入的功能添加测试用例，并保持文档是最新的。
 
 # 构建步骤和二进制依赖
 
-当部署包时，会运行一个可选的预部署构建步骤，以下载包外部的数据文件、执行构建过程或将构建的二进制文件放在正确的位置等。某些构建步骤可能相当复杂；我们将以 PDFIO 包为例，看看其中执行的一些构建步骤。
+当部署包时，会运行一个可选的预部署构建步骤，以下载包外部的数据文件、执行构建过程或将构建的二进制文件放在正确的位置等。某些构建步骤可能相当复杂；我们将以 `PDFIO` 包为例，看看其中执行的一些构建步骤。
 
-*   `PDFIO` 依赖于来自 OpenSSL 库的二进制库 `zlib` 和 `libcrypto`。
-*   这些库可能在操作系统中可用。库的名称可能因操作系统或发行版而异。Julia 提供 `library_dependency` 工具来解决此类问题。
-*   采取的行动可能因操作系统而异。
-    *   **Windows**：从特定 URL 下载预构建的二进制文件。
-    *   **非 Windows**：从源代码构建库并部署到特定位置，以便只有 PDFIO 可以使用它们。
+* `PDFIO` 依赖于来自 `OpenSSL` 库的二进制库 `zlib` 和 `libcrypto`。
+* 这些库可能在操作系统中可用。库的名称可能因操作系统或发行版而异。`Julia` 提供 `library_dependency` 工具来解决此类问题。
+* 采取的行动可能因操作系统而异。
+    * **Windows**：从特定 URL 下载预构建的二进制文件。
+    * **非 Windows**：从源代码构建库并部署到特定位置，以便只有 `PDFIO` 可以使用它们。
 
 该过程可能相当复杂，但在解决所有可能的构建和部署需求方面具有高度灵活性。
 
-然而，如果您仔细查看 `PDFIO` 的 `build.jl` 第 3 行，对于 Julia 1.3 或更高版本，构建步骤会被完全忽略。这之所以成为可能，是因为 Julia 社区现在为许多知名的二进制库提供预构建的二进制文件，并用像 `<libraryname>_jll` 这样的包名进行封装。
+然而，如果您仔细查看 `PDFIO` 的 `build.jl` 第 3 行，对于 `Julia 1.3` 或更高版本，构建步骤会被完全忽略。这之所以成为可能，是因为 `Julia` 社区现在为许多知名的二进制库提供预构建的二进制文件，并用像 `<libraryname>_jll` 这样的包名进行封装。
 
 `PDFIO` 依赖于：
 
-*   OpenSSL_jll
-*   Zlib_jll
+* `OpenSSL_jll`
+* `Zlib_jll`
 
 这些包是使用一个名为 *BinaryBuilder* 的构建模板生成工具构建的。如果您需要预构建的二进制文件，可以参考 *JuliaBinaryWrappers* 组织并查找您感兴趣的仓库，或在项目 `JuliaPackaging/Yggdrasil` 中提交 issue。您也可以使用 `BinaryBuilder` 模板构建二进制文件并为该项目做贡献。
 
 # 调用 C 和 Fortran 代码
 
-在 Julia 中使用原生二进制库要求 Julia 和原生库之间具有兼容的 `应用程序二进制接口` (`ABI`)。最常见的二进制文件具有 C 兼容接口，可从 Julia 访问。此类函数可以使用关键字 `ccall()` 调用。
+在 `Julia` 中使用原生二进制库要求 `Julia` 和原生库之间具有兼容的 `应用程序二进制接口` (`ABI`)。最常见的二进制文件具有 `C` 兼容接口，可从 `Julia` 访问。此类函数可以使用关键字 `ccall()` 调用。
 
 ```julia
 _zlibVersion() = ccall((:zlibVersion, libz), Ptr{Cstring}, ())
 ```
 
-库 `libz` 有一个名为 `zlibVersion` 的方法符号，它没有输入参数，但返回一个指向 `Cstring` 的指针。`Cstring` 是 C 风格字符串的表示，即字节数组。
+库 `libz` 有一个名为 `zlibVersion` 的方法符号，它没有输入参数，但返回一个指向 `Cstring` 的指针。`Cstring` 是 `C` 风格字符串的表示，即字节数组。
 
-或者，C 中的函数可以使用宏 `@cfunction` 调用 Julia 函数作为回调。建议感兴趣的读者查阅关于调用 C 和 Fortran 代码的手册。调用约定要求正确设置类型映射，以便能够在 C 中使用 Julia 中分配的对象，反之亦然。
+或者，`C` 中的函数可以使用宏 `@cfunction` 调用 `Julia` 函数作为回调。建议感兴趣的读者查阅关于调用 `C` 和 `Fortran` 代码的手册。调用约定要求正确设置类型映射，以便能够在 `C` 中使用 `Julia` 中分配的对象，反之亦然。
 
-`CXX.jl` 可用于将 C++ 代码与 Julia 集成。同样，`PyCall.jl` 提供 Python 库与 Julia 的集成。`JavaCall.jl` 提供从 Julia 调用 Java 代码的方法。
+`CXX.jl` 可用于将 `C++` 代码与 `Julia` 集成。同样，`PyCall.jl` 提供 `Python` 库与 `Julia` 的集成。`JavaCall.jl` 提供从 `Julia` 调用 `Java` 代码的方法。
 
 # 包环境：Project.toml 和 Manifest.toml
 
-项目环境由文件 `Project.toml` 和 `Manifest.toml` 控制。`Project.toml` 包含包名、UUID、版本和直接依赖。每个依赖可能进一步依赖其他包。依赖包可能依赖于特定版本的包。
+项目环境由文件 `Project.toml` 和 `Manifest.toml` 控制。`Project.toml` 包含包名、`UUID`、版本和直接依赖。每个依赖可能进一步依赖其他包。依赖包可能依赖于特定版本的包。
 
-![](img/n4upl4fndrz.jpeg)
-
+![
 **图 13.8：** 包 A 依赖 B 的 v1。A 依赖 F，而 F 需要 B 的版本 3。因此，B 的 v3 将是 A 最终使用的包
+]
 
-在上面的示例中，假设包具有完美的向前兼容性。因此，包的任何更高版本都可以提供该包较低版本的所有功能。情况并不总是如此。有时，包会指定其依赖包的版本范围。在这种情况下，必须决定最有用或兼容的包版本。`A.jl` 的 `Project.toml` 将列出 `B.jl`、`C.jl` 和 `F.jl` 的依赖。然而，`Manifest.toml` 将在解析特定版本后计算得出，并将包含 `B.jl v3`、`C.jl v1`、`D.jl v1`、`E.jl v1`、`F.jl v2` 的信息。每当您需要复现环境时，共享 `Project.toml` 和 `Manifest.toml` 会有所帮助。然而，在大多数源代码控制 (Git) 的包中，只签入 `Project.toml`，因为 `Manifest.toml` 保持灵活，可根据环境中的其他包进行更新。虽然我们意识到包具有版本信息，但我们迄今为止尚未讨论包管理器如何知道包的位置。此类信息保存在中央注册表中。
+在上面的示例中，假设包具有完美的向前兼容性。因此，包的任何更高版本都可以提供该包较低版本的所有功能。情况并不总是如此。有时，包会指定其依赖包的版本范围。在这种情况下，必须决定最有用或兼容的包版本。`A.jl` 的 `Project.toml` 将列出 `B.jl`、`C.jl` 和 `F.jl` 的依赖。然而，`Manifest.toml` 将在解析特定版本后计算得出，并将包含 `B.jl v3`、`C.jl v1`、`D.jl v1`、`E.jl v1`、`F.jl v2` 的信息。每当您需要复现环境时，共享 `Project.toml` 和 `Manifest.toml` 会有所帮助。然而，在大多数源代码控制 (`Git`) 的包中，只签入 `Project.toml`，因为 `Manifest.toml` 保持灵活，可根据环境中的其他包进行更新。虽然我们意识到包具有版本信息，但我们迄今为止尚未讨论包管理器如何知道包的位置。此类信息保存在中央注册表中。
 
 # Julia 包注册表
 
-包是交付功能的核心单元。一旦您开发了这样的包，自然希望将其推广给外部世界，以便能够访问和使用它。传达包信息的最佳方式是使其可供所有人使用，并通过交付生态系统进行分发。GitHub 是实现这一目标的非常有用的机制。高质量的文档充当最低限度的广告媒介。第二部分是通过 Julia 的包注册表使其可用。Julia 包生态系统拥有超过 4000 个包。这些包大多是托管在 GitHub 或 GitLab 等公共 Git 仓库中的 Git 包。注册包会被分析并变得易于搜索，文档会发布到 JuliaHub 以便于访问和云部署。每个 Julia 安装都有一个本地注册表，它会定期或在请求包更新时按需与 Julia 全局注册表同步：
+包是交付功能的核心单元。一旦您开发了这样的包，自然希望将其推广给外部世界，以便能够访问和使用它。传达包信息的最佳方式是使其可供所有人使用，并通过交付生态系统进行分发。`GitHub` 是实现这一目标的非常有用的机制。高质量的文档充当最低限度的广告媒介。第二部分是通过 `Julia` 的包注册表使其可用。`Julia` 包生态系统拥有超过 4000 个包。这些包大多是托管在 `GitHub` 或 `GitLab` 等公共 `Git` 仓库中的 `Git` 包。注册包会被分析并变得易于搜索，文档会发布到 `JuliaHub` 以便于访问和云部署。每个 `Julia` 安装都有一个本地注册表，它会定期或在请求包更新时按需与 `Julia` 全局注册表同步：
 
-![](img/n4upl4fndr0.jpeg)
-
+![
 **图 13.9：** Julia 注册表的运作。本地注册表拥有未向全局注册表注册的包的信息。然而，它会为所有已注册的包进行同步
+]
 
-假设在上面的示例中，我们在本地系统上开发 `A.jl` 包。因此，关于 `A.jl` 的信息目前仅在本地注册表中可用。它依赖于包 `F.jl`，后者在 GitHub 上但未向 Julia 注册表注册。当您使用 GitHub URL 而非注册包名添加包时，这是可能的。
+假设在上面的示例中，我们在本地系统上开发 `A.jl` 包。因此，关于 `A.jl` 的信息目前仅在本地注册表中可用。它依赖于包 `F.jl`，后者在 `GitHub` 上但未向 `Julia` 注册表注册。当您使用 `GitHub URL` 而非注册包名添加包时，这是可能的。
 
 ```julia
 (dir) pkg> add https://github.com/user_name/F.jl
 ```
 
+
+
 然而，关于 B、C、D 和 E 包的信息都在全局云注册表中可用。注册表拥有关于包的以下信息：
 
-1.  包的版本
-2.  包的位置：这可以是带有版本标签的 Git 地址或文件系统路径
-3.  包对其他包的依赖：即通常在 `Project.toml` 文件中找到的信息。
+1. 包的版本
+2. 包的位置：这可以是带有版本标签的 Git 地址或文件系统路径
+3. 包对其他包的依赖：即通常在 `Project.toml` 文件中找到的信息。
 
-位置和依赖按包的每个版本存储。例如，如果您想在 `A.jl` 中使用 `C.jl` 时修改它，您将需要制作一个开发副本。这是使用 develop 或 `dev` 命令完成的。
+位置和依赖按包的每个版本存储。例如，如果您想在 `A.jl` 中使用 `C.jl` 时修改它，您将需要制作一个开发副本。这是使用 `develop` 或 `dev` 命令完成的。
 
 ```julia
 (A) pkg> dev C
@@ -10827,11 +10674,11 @@ Julia 中的包管理非常详尽。然而，我们只是通过概览触及了�
 
 # 练习
 
-1.  选择一个您想解决的实际问题。研究您想如何解决该问题的设计。Julia 中是否有解决该问题的所有功能？您是否知道有任何原生库可以解决此类问题？创建您的项目并开始构建您的解决方案。
-2.  一旦您构建了解决方案并使其达到合理的形状，将其注册为 Julia 生态系统的包。其他人使用它真的需要注册包吗？
-3.  您开发的 `PointLib` 包中是否有足够的测试用例？如何扩展测试用例？添加一些相关的用例，并确保添加了更好的用例。
-4.  `PointLib` 中的 `iscollinear` 函数接受三个点作为参数。是否有办法将其扩展到 N 个点，其中 N 大于 3？
-5.  开发一个项目，利用您已有的 PointLib。
+1. 选择一个您想解决的实际问题。研究您想如何解决该问题的设计。Julia 中是否有解决该问题的所有功能？您是否知道有任何原生库可以解决此类问题？创建您的项目并开始构建您的解决方案。
+2. 一旦您构建了解决方案并使其达到合理的形状，将其注册为 Julia 生态系统的包。其他人使用它真的需要注册包吗？
+3. 您开发的 `PointLib` 包中是否有足够的测试用例？如何扩展测试用例？添加一些相关的用例，并确保添加了更好的用例。
+4. `PointLib` 中的 `iscollinear` 函数接受三个点作为参数。是否有办法将其扩展到 N 个点，其中 N 大于 3？
+5. 开发一个项目，利用您已有的 PointLib。
 
 ---
 
@@ -10839,15 +10686,15 @@ Julia 中的包管理非常详尽。然而，我们只是通过概览触及了�
 
 [1] 作者开发了一个 PDF 读取库 (PDFIO) 作为他的第一个实际 Julia 项目。虽然第一个项目可能有一定的局限性和不足，但它提供了一个从错误中学习并从社区用户和贡献者那里获得反馈的绝佳机会。
 
-Dash, Sambit Kumar, PDFIO: PDF Reader Library for native Julia, The Journal of Open Source, Nov. 2019, **[`doi.org/10.21105%2Fjoss.01453`](https://doi.org/10.21105%2Fjoss.01453)**
+Dash, Sambit Kumar, PDFIO: PDF Reader Library for native Julia, The Journal of Open Source, Nov. 2019, [`doi.org/10.21105%2Fjoss.01453`](https://doi.org/10.21105%2Fjoss.01453)
 
 [2] 与其他 Git 仓库（如 GitLab 或任何私有仓库）的集成也存在。
 
 [3] 启动代码可在关联目录 Chaper-13/NQueens 中找到。
 
-[4] Packages, JuliaHub, **[`juliahub.com/ui/Packages`](https://juliahub.com/ui/Packages)**。还有其他一些可以搜索 Julia 包的位置。 **[`julialang.org/packages/`](https://julialang.org/packages/)**
+[4] Packages, JuliaHub, [`juliahub.com/ui/Packages`](https://juliahub.com/ui/Packages)。还有其他一些可以搜索 Julia 包的位置。 [`julialang.org/packages/`](https://julialang.org/packages/)
 
-[5] VS Code IDE 不受支持。 **[`github.com/JuliaGizmos/WebIO.jl/issues/168`](https://github.com/JuliaGizmos/WebIO.jl/issues/168)**
+[5] VS Code IDE 不受支持。 [`github.com/JuliaGizmos/WebIO.jl/issues/168`](https://github.com/JuliaGizmos/WebIO.jl/issues/168)
 
 [6] 浮点数本质上是不精确的。您无法在有限的二进制系统中精确表示 0.1。它将是无限级数：0.000110011… 这类似于十进制浮点系统中 ⅓ 表示为 0.333…。因此，大多数浮点比较都在容差范围内进行，而不是判断相等。当 –ε < a-b < ε 时，您说 a = b，其中 a 和 b 是浮点数。这里将其扩展到 CAD 系统中的二维。
 
@@ -10855,45 +10702,45 @@ Dash, Sambit Kumar, PDFIO: PDF Reader Library for native Julia, The Journal of O
 
 [8] `trees` 命令仅在 Windows 中可用。对于 Linux 和 Mac OS X，可以使用 `ls –lR`。
 
-[9] Revise.jl, GitHub Repository, **[`github.com/timholy/Revise.jl`](https://github.com/timholy/Revise.jl)**
+[9] Revise.jl, GitHub Repository, [`github.com/timholy/Revise.jl`](https://github.com/timholy/Revise.jl)
 
 [10] `git add .` 将整个目录及其内容添加到 Git 仓库。如果您想排除某些文件，请有选择地将它们从同步中移除。
 
-[11] `sambitdash/PointLib.jl` 是供参考的示例项目副本。这不是解决方案。读者应开发自己的个人仓库并进行扩展。 **[`github.com/sambitdash/PointLib.jl`](https://github.com/sambitdash/PointLib.jl)**
+[11] `sambitdash/PointLib.jl` 是供参考的示例项目副本。这不是解决方案。读者应开发自己的个人仓库并进行扩展。 [`github.com/sambitdash/PointLib.jl`](https://github.com/sambitdash/PointLib.jl)
 
-[12] Documenter.jl: A Documentation Generator for Julia, GitHub Repository, **[`github.com/JuliaDocs/Documenter.jl`](https://github.com/JuliaDocs/Documenter.jl)**
+[12] Documenter.jl: A Documentation Generator for Julia, GitHub Repository, [`github.com/JuliaDocs/Documenter.jl`](https://github.com/JuliaDocs/Documenter.jl)
 
-[13] 与其从头编写 ci.yml，不如查看 `Example.jl` 包中包含的一个： **[`github.com/JuliaLang/Example.jl`](https://github.com/JuliaLang/Example.jl)**
+[13] 与其从头编写 ci.yml，不如查看 `Example.jl` 包中包含的一个： [`github.com/JuliaLang/Example.jl`](https://github.com/JuliaLang/Example.jl)
 
-[14] GitHub Actions Scripts, **[`github.com/actions`](https://github.com/actions)**
+[14] GitHub Actions Scripts, [`github.com/actions`](https://github.com/actions)
 
-[15] Julia Actions, **[`github.com/julia-actions`](https://github.com/julia-actions)**
+[15] Julia Actions, [`github.com/julia-actions`](https://github.com/julia-actions)
 
 [16] 您可以暂时向您的包添加 `DocumenterTools` 包，并在生成密钥对后从包依赖中移除该包。
 
-[17] **[`gist.github.com/skratchdot/1ef433c666066389201a`](https://gist.github.com/skratchdot/1ef433c666066389201a)**
+[17] [`gist.github.com/skratchdot/1ef433c666066389201a`](https://gist.github.com/skratchdot/1ef433c666066389201a)
 
 [18] Codecov 为 GitHub 公共包提供免费集成。此外，公共仓库无需配置任何仓库密钥。
 
-[19] 构建步骤在文件 `deps/build.jl` 中描述，可通过包模式命令 `build` 调用。该文件可从以下链接引用： **[`github.com/sambitdash/PDFIO.jl/blob/v0.1.12/deps/build.jl`](https://github.com/sambitdash/PDFIO.jl/blob/v0.1.12/deps/build.jl)**
+[19] 构建步骤在文件 `deps/build.jl` 中描述，可通过包模式命令 `build` 调用。该文件可从以下链接引用： [`github.com/sambitdash/PDFIO.jl/blob/v0.1.12/deps/build.jl`](https://github.com/sambitdash/PDFIO.jl/blob/v0.1.12/deps/build.jl)
 
-[20] 高级用户请参考 `BinDeps` 包以获取更多详情。 **[`github.com/JuliaPackaging/BinDeps.jl`](https://github.com/JuliaPackaging/BinDeps.jl)**
+[20] 高级用户请参考 `BinDeps` 包以获取更多详情。 [`github.com/JuliaPackaging/BinDeps.jl`](https://github.com/JuliaPackaging/BinDeps.jl)
 
-[21] BinaryBuilder, GitHub Repository, **[`github.com/JuliaPackaging/BinaryBuilder.jl`](https://github.com/JuliaPackaging/BinaryBuilder.jl)**
+[21] BinaryBuilder, GitHub Repository, [`github.com/JuliaPackaging/BinaryBuilder.jl`](https://github.com/JuliaPackaging/BinaryBuilder.jl)
 
-[22] JuliaBinaryWrappers, GitHub Organization, **[`github.com/JuliaBinaryWrappers/`](https://github.com/JuliaBinaryWrappers/)**
+[22] JuliaBinaryWrappers, GitHub Organization, [`github.com/JuliaBinaryWrappers/`](https://github.com/JuliaBinaryWrappers/)
 
-[23] Yggdrasil, GitHub Repository, **[`github.com/JuliaPackaging/Yggdrasil/`](https://github.com/JuliaPackaging/Yggdrasil/)**
+[23] Yggdrasil, GitHub Repository, [`github.com/JuliaPackaging/Yggdrasil/`](https://github.com/JuliaPackaging/Yggdrasil/)
 
-[24] `Inflate.jl`, `PDFIO` GitHub Repository, **[`github.com/sambitdash/PDFIO.jl/blob/v0.1.12/src/Inflate.jl`](https://github.com/sambitdash/PDFIO.jl/blob/v0.1.12/src/Inflate.jl)**
+[24] `Inflate.jl`, `PDFIO` GitHub Repository, [`github.com/sambitdash/PDFIO.jl/blob/v0.1.12/src/Inflate.jl`](https://github.com/sambitdash/PDFIO.jl/blob/v0.1.12/src/Inflate.jl)
 
-[25] Calling C and Fortran Code, Julia Documentation Manuals, **[`docs.julialang.org/en/v1/manual/calling-c-and-fortran-code/`](https://docs.julialang.org/en/v1/manual/calling-c-and-fortran-code/)**
+[25] Calling C and Fortran Code, Julia Documentation Manuals, [`docs.julialang.org/en/v1/manual/calling-c-and-fortran-code/`](https://docs.julialang.org/en/v1/manual/calling-c-and-fortran-code/)
 
-[26] `Cxx.jl`, GitHub Repository, **[`github.com/JuliaInterop/Cxx.jl`](https://github.com/JuliaInterop/Cxx.jl)**
+[26] `Cxx.jl`, GitHub Repository, [`github.com/JuliaInterop/Cxx.jl`](https://github.com/JuliaInterop/Cxx.jl)
 
-[27] `PyCall.jl`, GitHub Repository, **[`github.com/JuliaPy/PyCall.jl`](https://github.com/JuliaPy/PyCall.jl)**
+[27] `PyCall.jl`, GitHub Repository, [`github.com/JuliaPy/PyCall.jl`](https://github.com/JuliaPy/PyCall.jl)
 
-[28] `JavaCall.jl`, GitHub Repository, **[`github.com/JuliaInterop/JavaCall.jl`](https://github.com/JuliaInterop/JavaCall.jl)**
+[28] `JavaCall.jl`, GitHub Repository, [`github.com/JuliaInterop/JavaCall.jl`](https://github.com/JuliaInterop/JavaCall.jl)
 
 # 第 14 章：在云端部署 Julia 应用程序
 
@@ -10901,10 +10748,10 @@ Dash, Sambit Kumar, PDFIO: PDF Reader Library for native Julia, The Journal of O
 
 ## 本章我们将学习以下主题：
 
-*   云环境
-*   部署 Julia
-*   Kubernetes
-*   公共云基础设施
+* 云环境
+* 部署 Julia
+* Kubernetes
+* 公共云基础设施
 
 您将大致了解如何将 Julia 应用程序作为 Web 服务部署在 Docker 容器中，然后使用 Julia 命令将容器带到 Kubernetes 服务进行部署和编排。您还可以使用 Julia 命令作为集成平台来管理 *AWS*、*Azure* 和 *Google Cloud* 服务。因此，您可以将 Julia 用作许多云部署活动的客户端接口。
 
@@ -10926,11 +10773,11 @@ Julia 是为科学计算设计的环境。它广泛用于基于服务器的计�
 
 如果您查看任何 Julia 包的 GitHub Actions，您会意识到大多数都遵循以下高级步骤：
 
-1.  **安装 Julia**：根据平台和操作系统，需要下载并安装正确的二进制文件。
-2.  **设置 Julia**：安装需要配置在路径中，以便相关用户可以使用。
-3.  检出要测试的包。
-4.  **实例化包环境**：这可能会安装运行应用程序所需的所有依赖包。
-5.  启动环境并测试包。
+1. **安装 Julia**：根据平台和操作系统，需要下载并安装正确的二进制文件。
+2. **设置 Julia**：安装需要配置在路径中，以便相关用户可以使用。
+3. 检出要测试的包。
+4. **实例化包环境**：这可能会安装运行应用程序所需的所有依赖包。
+5. 启动环境并测试包。
 
 虽然大多数这些可以通过自定义脚本实现，但考虑到工作的重复性和部署平台的广泛多样性，这可能并不理想。基于 Docker 的包被视为部署交付的事实标准。然而，自己维护此类镜像可能很困难。Julia 的自定义包管理参考实现 `PkgServer` 是一个了解使用 Docker 脚本部署完整服务器配置的好包。在下面的示例中，我们将看看更简单的示例，并将 `NQueens` 问题作为服务暴露。
 
@@ -10948,14 +10795,15 @@ process(
 )
 
 const apiclnt = APIInvoker("tcp://127.0.0.1:9999")
+
 run_http(apiclnt, 8888)
 ```
 
 这只是暴露 `queens(N)` 函数的相关代码片段。让我们详细看看：
 
-*   服务器应用程序在端口 8888 上监听 HTTP 请求。
-*   当它收到有效的 REST 请求时，它使用 JMQ 传输和 JSON 格式通过 `APIInvoker` 调用。
-*   在端口 9999 上运行的 `APIResponder` 在启动相关函数并将返回值转换为 JSON 格式后进行响应。
+* 服务器应用程序在端口 8888 上监听 HTTP 请求。
+* 当它收到有效的 REST 请求时，它使用 JMQ 传输和 JSON 格式通过 `APIInvoker` 调用。
+* 在端口 9999 上运行的 `APIResponder` 在启动相关函数并将返回值转换为 JSON 格式后进行响应。
 
 客户端将连接到 REST 端点并获取皇后的位置并在画布上渲染。客户端代码的相关部分如下所示：
 
@@ -10989,19 +10837,28 @@ $ docker pull julia
 所需的额外包可以在名为 `Dockerfile` 的配置文件中更新。我们现在将服务器代码部署到 Docker 容器中。示例 DockerFile 如下所示：
 
 ```dockerfile
+```
+
+
+
 FROM julia:latest
+
 COPY Project.toml server.jl nqueens/
+
 WORKDIR nqueens
+
 RUN julia -e "using Pkg; pkg\"activate .\"; pkg\"instantiate\"; "
+
 CMD julia server.jl
+
 ```
 
 让我们讨论前面的代码行：
 
-1.  我们采用基础 Julia Docker 容器。
-2.  将 `Project.toml` 和 `server.jl` 复制到工作目录。
-3.  我们使用 Julia 包管理更新容器。
-4.  最后，我们设置容器运行时要启动的命令。
+1. 我们采用基础 Julia Docker 容器。
+2. 将 `Project.toml` 和 `server.jl` 复制到工作目录。
+3. 我们使用 Julia 包管理更新容器。
+4. 最后，我们设置容器运行时要启动的命令。
 
 您可以使用以下命令构建 Docker 镜像：
 
@@ -11015,128 +10872,147 @@ $ sudo docker build –t queens .
 
 虽然 Docker 是容器管理的事实标准，但 Kubernetes 是云部署最常用的编排平台。云原生计算基金会认证了 90 多个支持 Kubernetes 的平台以符合 API 标准。一些知名的产品如下：
 
-*   亚马逊网络服务的 **弹性 Kubernetes 服务 (EKS)**
-*   微软 Azure 的 **Azure Kubernetes 服务 (AKS)**
-*   Google 的 **Google Kubernetes Engine (GKE)**
+* 亚马逊网络服务的 **弹性 Kubernetes 服务 (EKS)**
+* 微软 Azure 的 **Azure Kubernetes 服务 (AKS)**
+* Google 的 **Google Kubernetes Engine (GKE)**
 
 因此，使用 Docker 创建的 Julia 容器可以使用 Kubernetes 在几乎所有知名的云平台上进行编排。`Kuber` 包提供了管理 Kubernetes 编排环境的 Julia API。关于在 Azure AKS 上使用 Kuber 编排容器的教程已经可用。该教程提供了创建新节点、启动它们的方法，并提供了删除和清理资源的步骤。各种 Kubernetes 节点和 Pod 的指标也可以从 Julia 查询。我们将尝试使用以下步骤将我们之前创建的容器部署到 **Azure Kubernetes 服务 (AKS)**：
 
 我们需要安装 Azure **命令行界面 (CLI)**。这适用于 Windows、Mac OS X 和 Linux。
 
-1.  使用管理员登录和以下命令登录 Azure 环境：
-    ```bash
-    $ az login
-    ```
-2.  使用以下命令在 Azure 门户中创建资源组：
-    ```bash
-    az group create --name HOJP --location centralindia
-    ```
-    您也可以使用门户执行相同操作。
-3.  在 HOJP 资源组中创建 Kubernetes 集群，如下所示：
-    ```bash
-    $ az aks create --resource-group HOJP --name hojpcluster --node-count 1 --enable-addons monitoring --generate-ssh-keys
-    ```
-    对于这个实验性集群，我们仅使用一个节点。
-4.  我们需要使用以下命令缓存凭据以供将来使用：
-    ```bash
-    $ az aks get-credentials --resource-group HOJP --name hojpcluster
-    ```
-5.  此外，我们需要 AKS 客户端进行某些操作，必须使用以下命令安装它：
-    ```bash
-    $ sudo az aks install-cli
-    ```
-    您将能够使用 `kubectl` 执行许多 Kubernetes 命令。
-6.  `kubectl proxy` 对于通过 Web 服务连接到 Azure Kubernetes 服务很有用。
-7.  您需要将 Docker 容器安装到 AKS 中。镜像必须驻留在 AKS 环境中，并必须在 Azure 容器注册表中注册，以便它们可以被拉取到容器中。您可以使用以下命令执行此操作：
-    ```bash
-    $ az acr create -n hojpreg -g HOJP --sku Standard
-    ```
-8.  注册表可能需要身份验证才能推送和拉取镜像。一种为注册表提供 Azure 管理员访问权限的方法是将注册表附加到集群。但这不建议用于真正的生产 Azure 部署。
-    ```bash
-    $ az aks update -n hojpcluster -g HOJP --attach-acr hojpreg
-    ```
-9.  现在您可以使用以下命令创建 Docker 镜像并将其推送到 Azure 容器注册表：
-    ```bash
-    $ docker build . -f Dockerfile -t hojpreg.azurecr.io/kubqueens
-    $ docker push hojpreg.azurecr.io/kubqueens
-    ```
-    考虑到您的网络连接，这可能需要一些时间。镜像大小可能有几百兆字节。
+1. 使用管理员登录和以下命令登录 Azure 环境：
+```bash
+$ az login
+```
+
+2. 使用以下命令在 Azure 门户中创建资源组：
+```bash
+az group create --name HOJP --location centralindia
+```
+您也可以使用门户执行相同操作。
+
+3. 在 HOJP 资源组中创建 Kubernetes 集群，如下所示：
+```bash
+$ az aks create --resource-group HOJP --name hojpcluster --node-count 1 --enable-addons monitoring --generate-ssh-keys
+```
+对于这个实验性集群，我们仅使用一个节点。
+
+4. 我们需要使用以下命令缓存凭据以供将来使用：
+```bash
+$ az aks get-credentials --resource-group HOJP --name hojpcluster
+```
+
+5. 此外，我们需要 AKS 客户端进行某些操作，必须使用以下命令安装它：
+```bash
+$ sudo az aks install-cli
+```
+您将能够使用 `kubectl` 执行许多 Kubernetes 命令。
+
+6. `kubectl proxy` 对于通过 Web 服务连接到 Azure Kubernetes 服务很有用。
+
+7. 您需要将 Docker 容器安装到 AKS 中。镜像必须驻留在 AKS 环境中，并必须在 Azure 容器注册表中注册，以便它们可以被拉取到容器中。您可以使用以下命令执行此操作：
+```bash
+$ az acr create -n hojpreg -g HOJP --sku Standard
+```
+
+8. 注册表可能需要身份验证才能推送和拉取镜像。一种为注册表提供 Azure 管理员访问权限的方法是将注册表附加到集群。但这不建议用于真正的生产 Azure 部署。
+```bash
+$ az aks update -n hojpcluster -g HOJP --attach-acr hojpreg
+```
+
+9. 现在您可以使用以下命令创建 Docker 镜像并将其推送到 Azure 容器注册表：
+```bash
+$ docker build . -f Dockerfile -t hojpreg.azurecr.io/kubqueens
+
+$ docker push hojpreg.azurecr.io/kubqueens
+```
+考虑到您的网络连接，这可能需要一些时间。镜像大小可能有几百兆字节。
 
 ### 使用 Kuber.jl 部署
 
 现在镜像已在 AKS 注册表中注册，我们将使用 `Kuber` 包部署服务，如下所示：
 
-1.  启动一个通过代理连接 AKS 的上下文：
-    ```julia
-    using Kuber
-    ctx = Kuber.KuberContext()
-    ```
-2.  从 kubqueens 镜像获取由一个或多个容器服务的 Pod，如下所示：
-    ```julia
-    kubqueens_pod = kuber_obj(ctx, """
-    {
-    "kind": "Pod",
-    "metadata":{
-    "name": "kubqueens-pod",
-    "namespace": "default",
-    "labels": {
-    "name": "kubqueens-pod"
-    }
-    },
-    "spec": {
-    "containers": [{
-    "name": "kubqueens",
-    "image": "hojpreg.azurecr.io/kubqueens",
-    "ports": [{"containerPort": 8888}]
-    }]
-    }
-    }""")
-    ```
-3.  创建一个负载均衡器服务，以便容器可以通过公共 URL 暴露。
-    ```julia
-    kubqueens_service = kuber_obj(ctx, """
-    {
-    "kind": "Service",
-    "metadata": {
-    "name": "kubqueens-service",
-    "namespace": "default",
-    "labels": {"name": "kubqueens-service"}
-    },
-    "spec": {
-    "type": "LoadBalancer",
-    "ports": [{"port": 8888}],
-    "selector": {"name": "kubqueens-pod"}
-    }
-    }""")
-    ```
-4.  两个对象都必须附加到上下文以将它们部署到 AKS 集群，如下所示：
-    ```julia
-    put!(ctx, kubqueens_pod);
-    put!(ctx, kubqueens_service);
-    ```
-5.  现在等待负载均衡器启动：
-    ```julia
-    while true
-        println("waiting for loadbalancer to be configured…")
-        status = get(ctx, :Service, "kubqueens-service").status
-        if nothing !== status.loadBalancer.ingress &&
-            !isempty(status.loadBalancer.ingress)
-            println(status.loadBalancer.ingress[1])
-            break
-        end
-        sleep(5)
+1. 启动一个通过代理连接 AKS 的上下文：
+```julia
+using Kuber
+
+ctx = Kuber.KuberContext()
+```
+
+2. 从 kubqueens 镜像获取由一个或多个容器服务的 Pod，如下所示：
+```julia
+kubqueens_pod = kuber_obj(ctx, """
+
+{
+"kind": "Pod",
+"metadata":{
+"name": "kubqueens-pod",
+"namespace": "default",
+"labels": {
+"name": "kubqueens-pod"
+}
+},
+"spec": {
+"containers": [{
+"name": "kubqueens",
+"image": "hojpreg.azurecr.io/kubqueens",
+"ports": [{"containerPort": 8888}]
+}]
+}
+}""")
+```
+
+3. 创建一个负载均衡器服务，以便容器可以通过公共 URL 暴露。
+```julia
+kubqueens_service = kuber_obj(ctx, """
+
+{
+"kind": "Service",
+"metadata": {
+"name": "kubqueens-service",
+"namespace": "default",
+"labels": {"name": "kubqueens-service"}
+},
+"spec": {
+"type": "LoadBalancer",
+"ports": [{"port": 8888}],
+"selector": {"name": "kubqueens-pod"}
+}
+}""")
+```
+
+4. 两个对象都必须附加到上下文以将它们部署到 AKS 集群，如下所示：
+```julia
+put!(ctx, kubqueens_pod);
+put!(ctx, kubqueens_service);
+```
+
+5. 现在等待负载均衡器启动：
+```julia
+while true
+    println("waiting for loadbalancer to be configured…")
+    status = get(ctx, :Service, "kubqueens-service").status
+    if nothing !== status.loadBalancer.ingress &&
+        !isempty(status.loadBalancer.ingress)
+        println(status.loadBalancer.ingress[1])
+        break
     end
-    ```
-6.  我们可以通过使用公共 IP 地址访问 REST 端点来访问 AKS 部署的服务，如下所示：
-    ```bash
-    C:\>curl http://<public_IP>:8888/webqueens/8
-    {"data":[4,2,7,3,6,8,5,1],"code":0}
-    ```
-    您也可以使用前面提到的客户端代码连接到 AKS 并渲染 UI。完整的 Kubernetes 编排器代码可以在 `Chapter-14/kubernetes/kubserver.jl` 中看到。可以通过调用 `delete!` 方法轻松移除服务，如下所示：
-    ```julia
-    delete!(ctx, kubqueens_service)
-    delete!(ctx, kubqueens_pod)
-    ```
+    sleep(5)
+end
+```
+
+6. 我们可以通过使用公共 IP 地址访问 REST 端点来访问 AKS 部署的服务，如下所示：
+```bash
+C:\>curl http://<public_IP>:8888/webqueens/8
+{"data":[4,2,7,3,6,8,5,1],"code":0}
+```
+您也可以使用前面提到的客户端代码连接到 AKS 并渲染 UI。完整的 Kubernetes 编排器代码可以在 `Chapter-14/kubernetes/kubserver.jl` 中看到。可以通过调用 `delete!` 方法轻松移除服务，如下所示：
+```julia
+delete!(ctx, kubqueens_service)
+delete!(ctx, kubqueens_pod)
+```
+
+
 
 ## 公共云提供商：AWS、Azure 和 GCP
 
@@ -11144,7 +11020,7 @@ $ sudo docker build –t queens .
 
 ### AWS.jl
 
-虽然我们可以使用 Kubernetes 编排工作负载，但原生平台提供细粒度的控制，并能跨更大的服务堆栈使用。它们不局限于基于容器的工作负载。Julia 使用包 `AWS` 提供了管理基于 AWS 服务的广泛覆盖。在所有公共云基础设施中，AWS 对 Julia 的集成迄今为止是最全面的。这很大程度上归功于使用 *GitHub Action* 的自动化代码生成，该操作每天 UTC 时间上午 6:00 执行。它查询 *GitHub* 仓库 `aws-sdk-js` 以获取基于 REST 的 API。此操作为 Julia 中的 AWS 服务生成包装函数。文档也从 AWS 文档中提取并作为 Juliadocs 展示。这确保了源代码可以适应 AWS API 和文档的所有变更。API 通常设计为两类：
+虽然我们可以使用 Kubernetes 编排工作负载，但原生平台提供细粒度的控制，并能跨更大的服务堆栈使用。它们不局限于基于容器的工作负载。Julia 使用包 `AWS` 提供了管理基于 AWS 服务的广泛覆盖。在所有公共云基础设施中，AWS 对 Julia 的集成迄今为止是最全面的。这很大程度上归功于使用 `GitHub Action` 的自动化代码生成，该操作每天 UTC 时间上午 6:00 执行。它查询 `GitHub` 仓库 `aws-sdk-js` 以获取基于 REST 的 API。此操作为 Julia 中的 AWS 服务生成包装函数。文档也从 AWS 文档中提取并作为 Juliadocs 展示。这确保了源代码可以适应 AWS API 和文档的所有变更。API 通常设计为两类：
 
 *   低级 API
 *   高级 API
@@ -11175,39 +11051,39 @@ $ sudo docker build –t queens .
 
 # 参考文献
 
-[1] Running a JuliaHub job script from your local Julia IDE, **[`docs.juliahub.com/run_tutorials/basics/`](https://docs.juliahub.com/run_tutorials/basics/)**
+[1] Running a JuliaHub job script from your local Julia IDE, [`docs.juliahub.com/run_tutorials/basics/`](https://docs.juliahub.com/run_tutorials/basics/)
 
-[2] JuliaHub, **[`docs.juliahub.com/`](https://docs.juliahub.com/)**
+[2] JuliaHub, [`docs.juliahub.com/`](https://docs.juliahub.com/)
 
-[3] PkgServer, **[`github.com/JuliaPackaging/PkgServer.jl`](https://github.com/JuliaPackaging/PkgServer.jl)**
+[3] PkgServer, [`github.com/JuliaPackaging/PkgServer.jl`](https://github.com/JuliaPackaging/PkgServer.jl)
 
-[4] JuliaWebAPI, Julia package for deploying APIs, **[`github.com/JuliaWeb/JuliaWebAPI.jl`](https://github.com/JuliaWeb/JuliaWebAPI.jl)**
+[4] JuliaWebAPI, Julia package for deploying APIs, [`github.com/JuliaWeb/JuliaWebAPI.jl`](https://github.com/JuliaWeb/JuliaWebAPI.jl)
 
 [5] The complete code is available at Chapter-14/server/server.jl
 
 [6] The complete code is available at Chapter-14/client/client.jl
 
-[7] Docker Hub, **[`hub.docker.com/`](https://hub.docker.com/)**
+[7] Docker Hub, [`hub.docker.com/`](https://hub.docker.com/)
 
 [8] `docker network ls` and `docker network inspect` can be utilized to find the container IP address.
 
-[9] SimpleContainerGenerator, create container images for using Julia packages (especially useful in environments without Internet access), **[`github.com/bcbi/SimpleContainerGenerator.jl`](https://github.com/bcbi/SimpleContainerGenerator.jl)**
+[9] SimpleContainerGenerator, create container images for using Julia packages (especially useful in environments without Internet access), [`github.com/bcbi/SimpleContainerGenerator.jl`](https://github.com/bcbi/SimpleContainerGenerator.jl)
 
-[10] Software Conformance (Certified Kubernetes), Cloud Native Computing Foundation, **[`www.cncf.io/certification/software-conformance/`](https://www.cncf.io/certification/software-conformance/)**
+[10] Software Conformance (Certified Kubernetes), Cloud Native Computing Foundation, [`www.cncf.io/certification/software-conformance/`](https://www.cncf.io/certification/software-conformance/)
 
-[11] Kuber, Julia Kubernetes Client, **[`github.com/JuliaComputing/Kuber.jl`](https://github.com/JuliaComputing/Kuber.jl)**
+[11] Kuber, Julia Kubernetes Client, [`github.com/JuliaComputing/Kuber.jl`](https://github.com/JuliaComputing/Kuber.jl)
 
-[12] Tanmay Mohapatra, Kubernetes in Julia with Kuber.jl, **[`juliacomputing.com/blog/2018/12/kuber/`](https://juliacomputing.com/blog/2018/12/kuber/)**
+[12] Tanmay Mohapatra, Kubernetes in Julia with Kuber.jl, [`juliacomputing.com/blog/2018/12/kuber/`](https://juliacomputing.com/blog/2018/12/kuber/)
 
-[13] Kuber.jl, Julia Kubernetes Client, **[`github.com/JuliaComputing/Kuber.jl`](https://github.com/JuliaComputing/Kuber.jl)**
+[13] Kuber.jl, Julia Kubernetes Client, [`github.com/JuliaComputing/Kuber.jl`](https://github.com/JuliaComputing/Kuber.jl)
 
-[14] AWS, Julia interface to AWS, **[`github.com/JuliaCloud/AWS.jl`](https://github.com/JuliaCloud/AWS.jl)**
+[14] AWS, Julia interface to AWS, [`github.com/JuliaCloud/AWS.jl`](https://github.com/JuliaCloud/AWS.jl)
 
-[15] aws-sdk-js, AWS SDK for JavaScript in the browser and Node.js, **[`github.com/aws/aws-sdk-js`](https://github.com/aws/aws-sdk-js)**
+[15] aws-sdk-js, AWS SDK for JavaScript in the browser and Node.js, [`github.com/aws/aws-sdk-js`](https://github.com/aws/aws-sdk-js)
 
-[16] Azure, Julia interface to Azure API, **[`github.com/JuliaComputing/Azure.jl`](https://github.com/JuliaComputing/Azure.jl)**
+[16] Azure, Julia interface to Azure API, [`github.com/JuliaComputing/Azure.jl`](https://github.com/JuliaComputing/Azure.jl)
 
-[17] GoogleCloud, Google Cloud APIs for Julia, **[`github.com/JuliaCloud/GoogleCloud.jl`](https://github.com/JuliaCloud/GoogleCloud.jl)**
+[17] GoogleCloud, Google Cloud APIs for Julia, [`github.com/JuliaCloud/GoogleCloud.jl`](https://github.com/JuliaCloud/GoogleCloud.jl)
 
 # 第 15 章：数据分析与可视化
 
@@ -11236,9 +11112,12 @@ Julia 是一个为科学计算和从事数据中心应用的人员设计的系�
 启动 Julia REPL 并执行以下命令：
 
 ```julia
-julia> cd("<sample_code>\\Chapter-15")
+cd("<sample_code>\\Chapter-15")
+
 (@v1.5) pkg> activate .
+
 Activating environment at `Chapter-15\Project.toml`
+
 (Chapter-15) pkg> instantiate
 ```
 
@@ -11250,9 +11129,11 @@ Julia 在概念上倾向于使用类似驱动程序的架构来解决一类问�
 
 ```julia
 using FileIO
+
 using ImageShow
 
 tiff = joinpath(pathof(FileIO), "..", "..", "test", "files", "magic2.tiff")
+
 image = load(tiff)
 ```
 
@@ -11278,7 +11159,9 @@ save("magic2.jpg", image)
 using LightXML
 
 xdoc = parse_file("books.xml")
+
 xroot = root(xdoc)
+
 println("Root Name: ", name(xroot))
 ```
 
@@ -11292,6 +11175,7 @@ julia> for c in child_nodes(xroot)
                println("Element Name: ", name(e))
            end
        end
+
 Node type:3
 Node type:1
 Element Name: book
@@ -11305,11 +11189,15 @@ Node type:3
 
 ```julia
 julia> using EzXML;
+
 julia> doc = readxml("books.xml");
+
 julia> validate(doc);
+
 julia> for author in nodecontent.(findall("//author/text()", doc))
            println(author)
        end
+
 Giada De Laurentiis
 J K. Rowling
 ```
@@ -11318,8 +11206,11 @@ J K. Rowling
 
 ```julia
 julia> using LibExpat
+
 julia> esm = xp_parse(read("books.xml", String));
+
 julia> authors = LibExpat.find(esm, "//author")
+
 2-element Array{ETree,1}:
  <author>Giada De Laurentiis</author>
  <author>J K. Rowling</author>
@@ -11333,8 +11224,11 @@ julia> authors = LibExpat.find(esm, "//author")
 
 ```julia
 julia> doc = parsehtml("<h1> Hello, world! </h1>")
+
 HTML Document:
+
 <!DOCTYPE >
+
 HTMLElement{:HTML}:<HTML>
 <head></head>
 <body>
@@ -11349,6 +11243,7 @@ Hello, world!
 
 ```julia
 julia> for elem in PreOrderDFS(doc.root) println(hasmethod(tag, (typeof(elem),)) ? tag(elem) : elem) end
+
 HTML
 head
 body
@@ -11360,6 +11255,7 @@ Hello, world!
 
 ```julia
 julia> doc.root[2][1][1]
+
 HTML Text: ` Hello, world! `
 ```
 
@@ -11369,18 +11265,15 @@ HTML Text: ` Hello, world! `
 
 `PDFIO` 是牢记 PDF 规范而开发的。虽然目前作为读取器 API 开发，但其意图也一直是将其扩展为写入器以写入 PDF 内容。因此，API 中使用的 PDF 对象可以紧密映射到规范。与 `FileIO` 的文件加载机制不同，`PDFIO` 利用对象句柄来存储对象引用，这些引用可以稍后访问以在需要时获取文件信息。对于许多程序员来说，加载 PDF 文件中的所有文本可能就足够了。使用 `PDFIO` 实现此目的的代码块如下：
 
-```julia
+
+
 julia> using PDFIO
+
 julia> """
+
 ```
-
-
-
-
 `getPDFText(src, out) -> Dict`
-
-
-
+```
 
 # PDFIO API
 
@@ -11419,7 +11312,7 @@ Dict{String,Union{CDDate, String, CosObject}} with 1 entry:
 
 ### Microsoft Office 文档
 
-Microsoft Office 文档是常见的文档形式。虽然文档格式是一个名为 **Office Open XML** (**OOXML**) 的开放标准[⁹]，最初由 Microsoft 支持，但庞大的规范给文档消费者直接在其应用程序中使用它们带来了重大挑战。基于 *Apache Tika*、*Apache POI* 和 *Apache FOP* 编写的 Taro[¹⁰] 提供了基于 JavaCall 的与 Julia 的集成。同一系统还支持 PDF 文件的读取和写入。界面相当简单，具有以下功能：
+Microsoft Office 文档是常见的文档形式。虽然文档格式是一个名为 **Office Open XML** (**OOXML**) 的开放标准[⁹]，最初由 Microsoft 支持，但庞大的规范给文档消费者直接在其应用程序中使用它们带来了重大挑战。基于 `Apache Tika`、`Apache POI` 和 `Apache FOP` 编写的 `Taro`[¹⁰] 提供了基于 `JavaCall` 的与 Julia 的集成。同一系统还支持 PDF 文件的读取和写入。界面相当简单，具有以下功能：
 
 - 从 Word 文档中提取文本
 - 访问 Excel 文档的表格数据
@@ -11451,7 +11344,7 @@ julia> df = DataFrame(Taro.readxl(xlsxfile, "Sheet1", "B2:F8"))
 │ 6   │ missing│ 6.0    │ 6.0    │ 1.0    │      │
 ```
 
-我们将在后面的章节讨论 `DataFrames`[¹¹]。就我们的理解而言，它们有助于轻松访问表格数据。由于 MS Excel 用于表格数据，因此已经开发了许多用于此目的的包。其中之一是 `XLSX.jl`[¹²]。该包用纯 Julia 编写，不需要配置 Java 的开销。`XLSX.jl` 是使用 ECMA-376 标准编写的。这也使其能够灵活地使用类似 WorkSheet、Cell IDs 等文件结构来访问 MS Excel 文件。
+我们将在后面的章节讨论 `DataFrames`[¹¹]。就我们的理解而言，它们有助于轻松访问表格数据。由于 MS Excel 用于表格数据，因此已经开发了许多用于此目的的包。其中之一是 `XLSX.jl`[¹²]。该包用纯 Julia 编写，不需要配置 Java 的开销。`XLSX.jl` 是使用 ECMA-376 标准编写的。这也使其能够灵活地使用类似 `WorkSheet`、`Cell IDs` 等文件结构来访问 MS Excel 文件。
 
 ```julia
 julia> using XLSX
@@ -11502,7 +11395,7 @@ julia> DataFrame(XLSX.readtable("df-test.xlsx", "Sheet1")…)
 
 **图 15.1：** 作为数字矩阵的图像 (a) H 和 W 为图像的高度和宽度，C 为通道数。例如，RGBA 图像将有 4 个通道。(b) 同一图像处于交织模式，像素分量水平依次放置。因此得到一个 2-D 矩阵而不是 3-D 数组。
 
-虽然内存似乎按 2 维或 3 维排列，但实际并非如此。这意味着在图像中所有红色分量在一起，随后是绿色强度值，依此类推。图像文件格式不一定以这种方式存储数据。它们应用多种变换并压缩数据，将其作为数字二进制流存储。然而，几乎所有图像应用在消费或渲染图像前，都会将数据转换为上述排列之一。在 FileIO 部分，我们加载了一个 tiff 文件，创建的图像对象类型为 `Array{ColorTypes.Gray{FixedPointNumbers.Normed{UInt8,8}},2}`。如果我们暂且不考虑复杂的类型，它只是一个 2 维数组。由于灰度图像只有一个分量，因此分量类型的第三个维度不相关。类型 `ColorTypes.Gray{FixedPointNumbers.Normed{UInt8,8}}` 本身就相当复杂。传统上，图像分量被归一化为 0.0 到 1.0 的浮点值。由于浮点数需要更大的存储空间，可以用一个字节的数据表示，其中 0 映射到 0.0，255 映射到 1.0；因此是数字的定点表示。在一个字节的数据中，甚至所有 8 位可能不都被一个值消耗。可能只使用 4 位。因此，一个字节可用于存储两个像素强度。`ImageCore`[¹³] 包有许多此类图像表示，建议读者参考以了解各种图像格式。您也可以使用 JuliaImages[¹⁴] 进行图像处理。OpenCV 库提供了一个教程[¹⁵]，用于与 Julia 前端集成。
+虽然内存似乎按 2 维或 3 维排列，但实际并非如此。这意味着在图像中所有红色分量在一起，随后是绿色强度值，依此类推。图像文件格式不一定以这种方式存储数据。它们应用多种变换并压缩数据，将其作为数字二进制流存储。然而，几乎所有图像应用在消费或渲染图像前，都会将数据转换为上述排列之一。在 FileIO 部分，我们加载了一个 tiff 文件，创建的图像对象类型为 `Array{ColorTypes.Gray{FixedPointNumbers.Normed{UInt8,8}},2}`。如果我们暂且不考虑复杂的类型，它只是一个 2 维数组。由于灰度图像只有一个分量，因此分量类型的第三个维度不相关。类型 `ColorTypes.Gray{FixedPointNumbers.Normed{UInt8,8}}` 本身就相当复杂。传统上，图像分量被归一化为 0.0 到 1.0 的浮点值。由于浮点数需要更大的存储空间，可以用一个字节的数据表示，其中 0 映射到 0.0，255 映射到 1.0；因此是数字的定点表示。在一个字节的数据中，甚至所有 8 位可能不都被一个值消耗。可能只使用 4 位。因此，一个字节可用于存储两个像素强度。`ImageCore`[¹³] 包有许多此类图像表示，建议读者参考以了解各种图像格式。您也可以使用 `JuliaImages`[¹⁴] 进行图像处理。OpenCV 库提供了一个教程[¹⁵]，用于与 Julia 前端集成。
 
 # 表格数据
 
@@ -11536,7 +11429,6 @@ julia> Tables.columnnames(df)
  :H3
  :H4
  :H5
-
 julia> cols = Tables.columns(df);
 julia> cols[:H1]
 6-element Array{Any,1}:
@@ -11584,15 +11476,17 @@ julia> x = 1:10; y = rand(10); z = rand(10);
 julia> plot(x, [y, z])
 ```
 
+
+
 您将看到如下内容渲染在新窗口中（REPL 的情况）或 Jupyter 屏幕上（图 15.3）。
 
 **图 15.3：** 多系列数据的绘图。
 
-然而，向 plot 函数传递 3 个参数（如 `plot(x, y, z)`）可以绘制数据的 3-D 图（图 15.4）。
+然而，向 `plot` 函数传递 3 个参数（如 `plot(x, y, z)`）可以绘制数据的 3-D 图（图 15.4）。
 
 **图 15.4：** 一个 3-D 图。
 
-`Plots`[¹⁸] 是一个抽象绘图聚合库，它利用 `GR`、`pyplot`、`Plotly` 等其他包来渲染图表。这些也被称为 `backends`（后端）。GR 是用于绘图的最快库之一，在大多数 Julia 安装中作为默认值使用，而 `pyplot (matplotlib)` 是功能最丰富的后端。Plots 将函数转换为相关后端并显示结果。建议读者阅读 Plots 文档和教程以获得更好的理解和使用场景。
+`Plots` 是一个抽象绘图聚合库，它利用 `GR`、`pyplot`、`Plotly` 等其他包来渲染图表。这些也被称为 `backends`（后端）。`GR` 是用于绘图的最快库之一，在大多数 Julia 安装中作为默认值使用，而 `pyplot (matplotlib)` 是功能最丰富的后端。`Plots` 将函数转换为相关后端并显示结果。建议读者阅读 `Plots` 文档和教程以获得更好的理解和使用场景。
 
 ## 总结
 
@@ -11600,12 +11494,12 @@ julia> plot(x, [y, z])
 
 # 练习
 
-1.  假设您想使用 `FileIO` 接口读取并从 PDF 文件中提取文本内容。您将如何实现此功能？您可以在实现中使用 PDFIO 提取文本内容。
-2.  使用 Taro 编辑 Microsoft Excel 文件。
-3.  使用 `matplotlib` 渲染示例，而不是 `GR`。
-4.  JuliaDB 提供持久数据集。在您的应用程序中使用 JuliaDB 来持久化应用程序所需的数据。
-5.  为您拥有的 Julia 安装设置 OpenCV 绑定。
-6.  使用 `XLSX.jl` 从 Microsoft Excel 文件读取表格数据并在您的应用程序中使用该数据。
+1. 假设您想使用 `FileIO` 接口读取并从 PDF 文件中提取文本内容。您将如何实现此功能？您可以在实现中使用 `PDFIO` 提取文本内容。
+2. 使用 `Taro` 编辑 Microsoft Excel 文件。
+3. 使用 `matplotlib` 渲染示例，而不是 `GR`。
+4. `JuliaDB` 提供持久数据集。在您的应用程序中使用 `JuliaDB` 来持久化应用程序所需的数据。
+5. 为您拥有的 Julia 安装设置 OpenCV 绑定。
+6. 使用 `XLSX.jl` 从 Microsoft Excel 文件读取表格数据并在您的应用程序中使用该数据。
 
 ---
 
@@ -11667,7 +11561,7 @@ julia> plot(x, [y, z])
 
 让我们看看这句话："Can you pass me the can?" 这里的同形异义词 *can* 代表两种不同的含义。因此，单词仅仅存在于句子中是不够的，除非周围的上下文也被捕获。同音词会使情况变得更糟。由于 NLP 中文本和语音相关技术很多时候是相似的，将标记表示为中间形式绝对增加了显著的好处。经典句子："Tell me a tale about a tail" 将为发音相似的语音标记生成实质上不同的特征。越来越多的研究集中在从语言模型中获取表示，并将其作为任务模型的输入。
 
-Julia 包生态系统为所有四个管道任务[¹]提供了解决方案。一个贯穿管道的包是 `TextAnalysis`[²]。我们将详细讨论它。还有其他包我们也会涉及。不过，可以使用像 `Flux` 这样的建模工具来实际开发特定任务的模型。我们将在下一章详细讨论 Flux。
+Julia 包生态系统为所有四个管道任务提供了解决方案。一个贯穿管道的包是 `TextAnalysis`。我们将详细讨论它。还有其他包我们也会涉及。不过，可以使用像 `Flux` 这样的建模工具来实际开发特定任务的模型。我们将在下一章详细讨论 `Flux`。
 
 ## 预处理
 
@@ -11680,16 +11574,19 @@ Julia 包生态系统为所有四个管道任务[¹]提供了解决方案。一�
 
 每种文档类型都有特定用途。例如，`NGramDocument` 不能用于单词序列重要的操作。根据定义，序列标注要求数据以正确的语言序列呈现。然而，N-gram 在垃圾邮件分类中非常有用，其中文档中单词的存在足以区分 HAM（好文档）和 SPAM。文档可以作为一组处理；也称为语料库。
 
-通常，语料库中的文档将具有相似的属性；因此可以对语料库应用通用转换。`TextAnalysis` 有一个 `Corpus` 类型，能有效捕捉这一概念。`CorpusLoader`[³] 包可以下载标准文本语料库并按需惰性加载。
+通常，语料库中的文档将具有相似的属性；因此可以对语料库应用通用转换。`TextAnalysis` 有一个 `Corpus` 类型，能有效捕捉这一概念。`CorpusLoader` 包可以下载标准文本语料库并按需惰性加载。
 
 ### 分词
 
-分词是将文档细分为有用文本块的过程。文档可以在段落、句子、单词甚至字符级别进行分词。`MultiresolutionIterator`[⁴] 包提供了一个迭代器框架来访问这种级别的分词。然而，有一个 `WordTokenizer`[⁵] 包提供了各种分词单词和句子的方法。每种分词方案都有特定的局限性，需要审慎使用。
+分词是将文档细分为有用文本块的过程。文档可以在段落、句子、单词甚至字符级别进行分词。`MultiresolutionIterator` 包提供了一个迭代器框架来访问这种级别的分词。然而，有一个 `WordTokenizers` 包提供了各种分词单词和句子的方法。每种分词方案都有特定的局限性，需要审慎使用。
 
 ```julia
 using WordTokenizers
+
 s1 = """This is a multi-line text. And the sentence splitter
+
 may not do a great job on this. But if no line ending
+
 is provided it works like a charm. Even keeps Dr. Smith intact."""
 
 split_sentences(s1)
@@ -11727,8 +11624,10 @@ split_sentences(s2)
 
 ```julia
 s3 = "I won't be able to attend the meeting. This isn't possible."
+
 set_tokenizer(poormans_tokenize);
 println("Poorman: \t", tokenize(s3))
+
 set_tokenizer(nltk_word_tokenize);
 println("NLTK: \t", tokenize(s3))
 ```
@@ -11762,6 +11661,7 @@ educ valu person
 
 ```julia
 using LinearAlgebra
+
 doc1 = StringDocument("Educate to add value to a person")
 doc2 = StringDocument("Education is valued for a person")
 doc3 = StringDocument("Education is valuable asset for a human")
@@ -11772,7 +11672,7 @@ update_lexicon!(c)
 
 这产生输出：`("educ add valu person", "educ valu person", "educ valuabl asset human")`。
 
-现在，我们可以计算文档术语矩阵并将其转换以获得 `tf-idf` 或词频-逆文档频率。`tf-idf` 特别有用，因为它找出一个术语的频率，但惩罚所有文档中最常用的单词；因此是文档的一个有用特征。如果您使用余弦相似度矩阵[⁶]，您会发现 `doc1` 和 `doc2` 比 `doc3` 更相似。`educ` 作为词干被忽略，因为它存在于所有文档中。
+现在，我们可以计算文档术语矩阵并将其转换以获得 `tf-idf` 或词频-逆文档频率。`tf-idf` 特别有用，因为它找出一个术语的频率，但惩罚所有文档中最常用的单词；因此是文档的一个有用特征。如果您使用余弦相似度矩阵，您会发现 `doc1` 和 `doc2` 比 `doc3` 更相似。`educ` 作为词干被忽略，因为它存在于所有文档中。
 
 ```julia
 tfm = tf_idf(dtm(c))
@@ -11788,20 +11688,29 @@ cs ./ (d * d')
  0.0        0.0       1.0
 ```
 
+
+
 ### 嵌入
 
-虽然 `tf-idf` 是一种有用的表示，独热向量也是，但它们有特定的局限性。它们是稀疏的，且考虑文档中单词的计数。它们不考虑单词的局部上下文。例如，单词 *Apple* 可以指水果或科技公司。因此，周围的单词对于识别同形异义词的相关上下文至关重要。
+虽然 `tf-idf` 是一种有用的表示，独热向量也是，但它们有特定的局限性。它们是稀疏的，且考虑文档中单词的计数。它们不考虑单词的局部上下文。例如，单词 `Apple` 可以指水果或科技公司。因此，周围的单词对于识别同形异义词的相关上下文至关重要。
 
-文本嵌入提供稠密的固定大小的词到向量转换，考虑了单词及其与其他单词的关联或关系。因此，它们比经典 NLP 技术具有更好的上下文信息。在某种意义上，它们已成为当今事实上的代表性语言模型。`Embeddings`[⁷] 包提供了各种语言中常用的嵌入。我们将在下面的示例中使用最简单、最古老的 `Word2Vec` 嵌入。
+文本嵌入提供稠密的固定大小的词到向量转换，考虑了单词及其与其他单词的关联或关系。因此，它们比经典 NLP 技术具有更好的上下文信息。在某种意义上，它们已成为当今事实上的代表性语言模型。`Embeddings` 包提供了各种语言中常用的嵌入。我们将在下面的示例中使用最简单、最古老的 `Word2Vec` 嵌入。
 
 ```julia
 using Embeddings
+
 const et = load_embeddings(Word2Vec)
+
 const w2idx = Dict((w => i for (i, w) in enumerate(et.vocab)))
+
 embedding(w) = et.embeddings[:, w2idx[w]]
+
 res = embedding("king") - embedding("man") + embedding("woman")
+
 cosdist = vec(sum(res .* et.embeddings, dims=1))
+
 ids = partialsortperm(cosdist, 1:5, rev=true)
+
 [(et.vocab[ii], cosdist[ii]) for ii in ids]
 ```
 
@@ -11824,43 +11733,57 @@ ids = partialsortperm(cosdist, 1:5, rev=true)
 
 ```julia
 using LinearAlgebra
+
 doc1 = StringDocument("Educate to add value to a person")
+
 doc2 = StringDocument("Education is valued for a person")
+
 doc3 = StringDocument("Education is valuable asset for a human")
+
 c = Corpus([doc1, doc2, doc3])
+
 prepare!(c, strip_case | strip_stopwords | stem_words)
+
 update_lexicon!(c)
+
 println((c[1].text, c[2].text, c[3].text))
+
 lsa(c)
 ```
 
-直观上可以看到第三个文档与其他两个大致不同。此外，`educ` 作为一个常见词干存在于所有文档中，不贡献于任何特定主题分类的归属。`SVD` 输出将验证结果中显示的类似发现。
-
 ```
 ("educ add valu person", "educ valu person", "educ valuabl asset human")
+
 SVD{Float64,Float64,Array{Float64,2}}
+
 U factor:
 3×3 Array{Float64,2}:
  0.0  -0.931471  -0.363815
  0.0  -0.363815   0.931471
  1.0   0.0        0.0
+
 singular values:
 3-element Array{Float64,1}:
  0.47571307544817304
  0.3266291290597002
  0.16072253690428198
+
 Vt factor:
 3×7 Array{Float64,2}:
  -3.63e-17  0.57735  0.0  0.57735  4.92e-17  4.92e-17  0.57735
  -0.783248  0.0      0.0  0.0      -0.439615  -0.439615  0.0
  -0.62171   0.0      0.0  0.0       0.55384   0.55384   0.0
+
  # add      asset    educ human    person     valu      valuabl
 ```
+
+直观上可以看到第三个文档与其他两个大致不同。此外，`educ` 作为一个常见词干存在于所有文档中，不贡献于任何特定主题分类的归属。`SVD` 输出将验证结果中显示的类似发现。
 
 相同的发现也将在 LDA 结果中重现。
 
 ```julia
 m = DocumentTermMatrix(c)
+
 lda(m, 2, 2000, 0.1, 0.1)
 ```
 
@@ -11884,9 +11807,13 @@ lda(m, 2, 2000, 0.1, 0.1)
 
 ```julia
 using TextAnalysis
+
 m = NaiveBayesClassifier([:g1, :g2])
+
 fit!(m, "Education is valued for a person", :g1)
+
 fit!(m, "Education is valuable asset for a human", :g2)
+
 predict(m, "Education is valued for a man")
 ```
 
@@ -11900,10 +11827,11 @@ Dict{Symbol,Float64} with 2 entries:
 
 ## 抽取式摘要
 
-虽然不完全是预处理步骤，但 Julia 中的摘要基于 `TextRank`[⁸] 算法，这是从 `PageRank` 算法修改而来的。拥有最多不同单词的句子排名较高或作为领导者，其他句子链接到它们。链接的句子以一定概率从领导者处跟随。此练习作为模拟进行多个深度。被跟随次数最多的句子排名较高，并作为摘要的一部分。文本处理管道第一段的摘要可能如下所示：
+虽然不完全是预处理步骤，但 Julia 中的摘要基于 `TextRank` 算法，这是从 `PageRank` 算法修改而来的。拥有最多不同单词的句子排名较高或作为领导者，其他句子链接到它们。链接的句子以一定概率从领导者处跟随。此练习作为模拟进行多个深度。被跟随次数最多的句子排名较高，并作为摘要的一部分。文本处理管道第一段的摘要可能如下所示：
 
 ```julia
 s = "Research in the text analysis space has been so rapid… real life use cases and there may be certain tasks that are overlapping."
+
 summary = *(summarize(StringDocument(s), ns=4)…)
 ```
 
@@ -11934,14 +11862,19 @@ julia> rouge_n(ref, summary, 1, avg=true)
 
 ## 命名实体识别
 
-`TextModels`[⁹] 包抽象出一些建模任务，并为它们提供预定义模型。其中一个模型是 **命名实体识别** (`NER`) 标注。这类问题也称为 **端到端序列标注**[¹⁰]。**词性标注** (`POS`) 是另一个类似的问题。虽然我们将快速浏览示例代码，但详细模型已在论文中讨论。由于名字在句子中很常见，在 NLU 任务中识别它们至关重要，以便执行后续操作，如在聊天机器人中；例如，问候某人或为她的航空旅行查找订票目的地等。
+`TextModels` 包抽象出一些建模任务，并为它们提供预定义模型。其中一个模型是 **命名实体识别** (`NER`) 标注。这类问题也称为 **端到端序列标注**。**词性标注** (`POS`) 是另一个类似的问题。虽然我们将快速浏览示例代码，但详细模型已在论文中讨论。由于名字在句子中很常见，在 NLU 任务中识别它们至关重要，以便执行后续操作，如在聊天机器人中；例如，问候某人或为她的航空旅行查找订票目的地等。
 
 ```julia
 using TextModels
+
 ner = NERTagger()
+
 s1 = "Kumar is from Bangalore and works for Julia Computing."
+
 println(ner(s1))
+
 s2 = "Julia language is easy to learn."
+
 println(ner(s2))
 ```
 
@@ -11950,18 +11883,20 @@ println(ner(s2))
 ["PER", "O", "O", "O", "O", "O", "O"]
 ```
 
-虽然第一句能轻松识别人名、地点和组织，但第二句中的 Julia 被映射为人名。NER 标注中会有一些误识别，尽管通常在大多数情况下匹配得相当合理。其次，NER API 仅支持 5 类实体：人名(PER)、地点(LOC)、组织(ORG)、杂项(MISC) 和其他(O)。第三，该模型还通过 CNN 嵌入捕获子词信息（详细解释请参阅论文）。
+
+
+虽然第一句能轻松识别人名、地点和组织，但第二句中的 `Julia` 被映射为人名。NER 标注中会有一些误识别，尽管通常在大多数情况下匹配得相当合理。其次，NER API 仅支持 5 类实体：人名(`PER`)、地点(`LOC`)、组织(`ORG`)、杂项(`MISC`) 和其他(`O`)。第三，该模型还通过 `CNN` 嵌入捕获子词信息（详细解释请参阅论文）。
 
 ## ULMFiT
 
-**通用语言模型微调** (**ULMFiT**)[¹¹] 用于文本分类，最初用于文本分类任务。然而，学到的相同权重可被重新用于其他下游文本任务。`TextModels` 包对此有实现，可用于一些高级文本处理任务。模型使用分四步：
+**通用语言模型微调** (`ULMFiT`) 用于文本分类，最初用于文本分类任务。然而，学到的相同权重可被重新用于其他下游文本任务。`TextModels` 包对此有实现，可用于一些高级文本处理任务。模型使用分四步：
 
-1.  数据加载和预处理
-2.  语言模型预训练
-3.  微调语言模型
-4.  为下游任务微调分类器
+1. 数据加载和预处理
+2. 语言模型预训练
+3. 微调语言模型
+4. 为下游任务微调分类器
 
-也可以向模型添加特定目的的 dropout 作为层。我们建议读者查阅 `TextModels` 文档，以详细了解和使用 ULMFiT 模型。
+也可以向模型添加特定目的的 `dropout` 作为层。我们建议读者查阅 `TextModels` 文档，以详细了解和使用 `ULMFiT` 模型。
 
 ## 总结
 
@@ -11969,76 +11904,76 @@ println(ner(s2))
 
 # 练习
 
-1.  词干提取与词形还原有什么区别？使用其中一个相比另一个有什么好处？为什么词形还原比词干提取更难实现？
-2.  TF-IDF 作为语言表示已使用很长时间。为什么它不用于大规模语言模型？您是否仍然看到 TF-IDF 的应用？它有哪些优势？
-3.  有许多著名的嵌入可用于 NLP 任务。Word2vec 和 GLOVE 是相当流行的嵌入。然而，它们有特定的局限性。其中一些是什么？
-4.  NER 标注以特定方式对单词进行分词。是否可以将分词器修改为其他方式？您能找到一个您想使用不同分词方案的用例吗？
-5.  在您的实际用例中使用 ULMFit。您在这样做时面临哪些挑战？
+1. 词干提取与词形还原有什么区别？使用其中一个相比另一个有什么好处？为什么词形还原比词干提取更难实现？
+2. `TF-IDF` 作为语言表示已使用很长时间。为什么它不用于大规模语言模型？您是否仍然看到 `TF-IDF` 的应用？它有哪些优势？
+3. 有许多著名的嵌入可用于 NLP 任务。`Word2vec` 和 `GLOVE` 是相当流行的嵌入。然而，它们有特定的局限性。其中一些是什么？
+4. NER 标注以特定方式对单词进行分词。是否可以将分词器修改为其他方式？您能找到一个您想使用不同分词方案的用例吗？
+5. 在您的实际用例中使用 `ULMFit`。您在这样做时面临哪些挑战？
 
 ---
 
 [¹]: 建议读者观看视频：Ayush Kaushal, Natural Language Processing in Julia, JuliaCon 2020, <https://www.youtube.com/watch?v=hHCi8ojazqk>
-[²]: TextAnalysis，文本分析的 Julia 包， <https://github.com/JuliaText/TextAnalysis.jl>
-[³]: CorpusLoader，各种 NLP 语料库的多种加载器， <https://github.com/JuliaText/CorpusLoaders.jl>
-[⁴]: MultiResolutionsIterators，用于处理迭代器的迭代器的工具……， <https://github.com/oxinabox/MultiResolutionIterators.jl>
-[⁵]: WordTokenizers，用于自然语言处理和其他相关任务的高性能分词器， <https://github.com/JuliaText/WordTokenizers.jl>
+[²]: `TextAnalysis`，文本分析的 Julia 包， <https://github.com/JuliaText/TextAnalysis.jl>
+[³]: `CorpusLoader`，各种 NLP 语料库的多种加载器， <https://github.com/JuliaText/CorpusLoaders.jl}
+[⁴]: `MultiResolutionsIterators`，用于处理迭代器的迭代器的工具……， <https://github.com/oxinabox/MultiResolutionIterators.jl}
+[⁵]: `WordTokenizers`，用于自然语言处理和其他相关任务的高性能分词器， <https://github.com/JuliaText/WordTokenizers.jl}
 [⁶]: `cos_similarity` 方法已在 `TextAnalysis` 包的主分支中可用，但本书使用了 v0.7.2 发布版本。
-[⁷]: Embeddings，加载各种词嵌入的函数和数据依赖， <https://github.com/JuliaText/Embeddings.jl>
+[⁷]: `Embeddings`，加载各种词嵌入的函数和数据依赖， <https://github.com/JuliaText/Embeddings.jl}
 [⁸]: Rada Mihalcea and Paul Tarau, 2004: TextRank: Bringing Order into Texts, Department of Computer Science University of North Texas, <https://web.eecs.umich.edu/~mihalcea/papers/mihalcea.emnlp04.pdf>
-[⁹]: TextModels，基于神经网络的自然语言处理模型， <https://github.com/JuliaText/TextModels.jl>
+[⁹]: `TextModels`，基于神经网络的自然语言处理模型， <https://github.com/JuliaText/TextModels.jl}
 [¹⁰]: Xuezhe Ma and Eduard Hovy, End-to-end Sequence Labeling via Bi-directional LSTM-CNNs-CRF, 2016, Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), <http://dx.doi.org/10.18653/v1/P16-1101>
 [¹¹]: Jeremy Howard and Sebastian Ruder, Universal Language Model Fine-tuning for Text Classification, ACL 2018, <https://www.aclweb.org/anthology/P18-1031.pdf>
 
 # 第 17 章：使用 Flux 进行深度学习
 
-在上一章中，我们学习了 NLP 任务的包。我们在某些任务中使用了神经计算。在本章中，我们将使用神经网络原语对 Flux 进行建模。我们假设您对深度学习有基本的理解，并正在探索如何使用 Julia 进行建模。本章不旨在作为深度学习的介绍。
+在上一章中，我们学习了 NLP 任务的包。我们在某些任务中使用了神经计算。在本章中，我们将使用神经网络原语对 `Flux` 进行建模。我们假设您对深度学习有基本的理解，并正在探索如何使用 Julia 进行建模。本章不旨在作为深度学习的介绍。
 
 ## 涵盖主题
 
 - 深度学习
-- 什么是 Flux？
+- 什么是 `Flux`？
 - 模型动物园
 - 神经网络类型
     - 全连接
-    - CNN
-    - RNN
+    - `CNN`
+    - `RNN`
 
 ## 学习目标
 
-在本章中，读者将能够通过示例理解全连接、**卷积神经网络** (**CNN**) 和 **循环神经网络** (**RNN**)。示例选自 Flux 包的模型动物园样本。这将帮助用户理解建模框架，并帮助他们构建复杂模型或理解用 Flux 构建的模型。
+在本章中，读者将能够通过示例理解全连接、**卷积神经网络** (`CNN`) 和 **循环神经网络** (`RNN`)。示例选自 `Flux` 包的模型动物园样本。这将帮助用户理解建模框架，并帮助他们构建复杂模型或理解用 `Flux` 构建的模型。
 
 ## 深度学习
 
 数字代理帮助我们更好或更快地完成任务；例如聊天机器人助手。学习过程提高了此类代理的效率。当代理学习时，随着时间的推移，它要么更快、要么更准确地执行相同任务。**人工神经网络** (`ANN`) 是用于解决许多分类问题的此类学习技术。
 
-给定一组输入，我们想知道哪一组属于它。手写黑白图像的 MNIST 数据集是一个很好的例子。
+给定一组输入，我们想知道哪一组属于它。手写黑白图像的 `MNIST` 数据集是一个很好的例子。
 
-**图 17.1：** 来自 MNIST 数据集[²] 的样本图像[¹]。图像被分类为它们代表的数字。数据集包含 60,000 个训练图像和 10,000 个测试图像。图像为黑白，大小为 。手写数据来自近 500 位不同的书写者。
+**图 17.1：** 来自 `MNIST` 数据集[²] 的样本图像[¹]。图像被分类为它们代表的数字。数据集包含 60,000 个训练图像和 10,000 个测试图像。图像为黑白，大小为 。手写数据来自近 500 位不同的书写者。
 
-此处的示例是监督学习的情况，其中提供了输入和输出类。系统将使用 ANN 进行训练。它将从数据集预测值，并将与图 17.2 进行比较。
+此处的示例是监督学习的情况，其中提供了输入和输出类。系统将使用 `ANN` 进行训练。它将从数据集预测值，并将与图 17.2 进行比较。
 
-**图 17.2：** 数字 2 的输入图像作为二进制值向量进入神经网络。它与每个连接的权重 wij 相乘。所有值在进入中间层时相加。ANN 在传递到输出层之前可以有多个中间层。输出层具有与预期输出类相同数量的节点。本例中为 10 个。应用非线性激活函数将值转换为更接近 0 或 1 的二进制值。
+**图 17.2：** 数字 2 的输入图像作为二进制值向量进入神经网络。它与每个连接的权重 `wij` 相乘。所有值在进入中间层时相加。`ANN` 在传递到输出层之前可以有多个中间层。输出层具有与预期输出类相同数量的节点。本例中为 10 个。应用非线性激活函数将值转换为更接近 0 或 1 的二进制值。
 
-这可以用以下数学方程解释。非线性激活函数 (σ)[³] 可应用于每一层。
+这可以用以下数学方程解释。非线性激活函数 (`σ`)[³] 可应用于每一层。
 
 **图 17.2 方程** (参见图像)。
 
-如上所示，神经网络主要是值的加权和。我们有兴趣找到最适合将输入 X 拟合到输出 Y 的权重值。激活函数为系统引入了所需的非线性。在输出层，激活函数 (`softmax`) 将较小的值推向零，较大的值推向 1。`softmax`、`sigmoid` 和 `tanh` 是分类任务中常用的激活函数。
+如上所示，神经网络主要是值的加权和。我们有兴趣找到最适合将输入 `X` 拟合到输出 `Y` 的权重值。激活函数为系统引入了所需的非线性。在输出层，激活函数 (`softmax`) 将较小的值推向零，较大的值推向 1。`softmax`、`sigmoid` 和 `tanh` 是分类任务中常用的激活函数。
 
 系统运作以找到使损失最小化的最佳 值。使用梯度下降的反向传播是更新权重[⁴] 的最常用技术。我们将不在此详述神经网络概念，但期望读者参考更权威的文本，以获得该主题所需的详尽数学处理。然而，本章的重点将是向读者介绍 `Flux`[⁵] 包，它为深度学习或其他机器学习应用提供了详尽的建模原语。
 
 ## 什么是 Flux？
 
-Flux 是一个设计用于建模机器学习问题的平台。建模能力可被认为类似于 *Tensorflow*[⁶] 或 *PyTorch*。Flux 利用许多标准 Julia 能力，如宏、带有 `Zygote` 的 **自动微分** (`AD`)、带有 `CUDA` 包的 GPU 计算。它还利用 `DataLoader` 来惰性加载和批处理计算所需的数据。虽然 Flux 看起来像一个简单的包，但它有许多有趣的宏用法，可作为理解高级 Julia 编程的良好示例代码。
+`Flux` 是一个设计用于建模机器学习问题的平台。建模能力可被认为类似于 *Tensorflow*[⁶] 或 *PyTorch*。`Flux` 利用许多标准 Julia 能力，如宏、带有 `Zygote` 的 **自动微分** (`AD`)、带有 `CUDA` 包的 GPU 计算。它还利用 `DataLoader` 来惰性加载和批处理计算所需的数据。虽然 `Flux` 看起来像一个简单的包，但它有许多有趣的宏用法，可作为理解高级 Julia 编程的良好示例代码。
 
-我们将尝试使用 Flux 解决一个线性回归问题。让我们看看以下方程组。我们采用一个线性方程，添加一点高斯噪声来模拟我们的数据集。这是数据科学中非常常见的技术，用于模拟人工数据以解决一些简单任务或展示依赖真实世界数据的概念。
+我们将尝试使用 `Flux` 解决一个线性回归问题。让我们看看以下方程组。我们采用一个线性方程，添加一点高斯噪声来模拟我们的数据集。这是数据科学中非常常见的技术，用于模拟人工数据以解决一些简单任务或展示依赖真实世界数据的概念。
 
 ```julia
 x = 5 * rand(100)
 y = 3 * x .+ 4 .+ randn(100);
 ```
 
-**图 17.3：** x 和 y 的绘图。y1 表示原始数据的散点图。y2 是方程的线图，y3 是线性回归线的线图。
+**图 17.3：** `x` 和 `y` 的绘图。`y1` 表示原始数据的散点图。`y2` 是方程的线图，`y3` 是线性回归线的线图。
 
 回归方程的系数使用公式计算（参见图像）。
 
@@ -12046,6 +11981,7 @@ y = 3 * x .+ 4 .+ randn(100);
 
 ```julia
 using Statistics
+
 xy = x .* y
 xm = mean(x)
 ym = mean(y)
@@ -12065,6 +12001,7 @@ ac, bc
 
 ```julia
 using Flux
+
 a, b = rand(1), rand(1)
 ps = params([a, b])
 model(x) = a .* x .+ b
@@ -12084,6 +12021,7 @@ end
 ```julia
 data = zip(x, y)
 opt = Descent(0.02)
+
 for d in data
     gs = Flux.gradient(ps) do
         loss(d...)
@@ -12095,11 +12033,11 @@ end
 
 模型、损失函数、优化器和数据获取技术可能因问题而异。
 
-**图 17.4：** x 和 y 的绘图。y1 表示原始数据的散点图。y2 是 Flux 模型输出的散点图。y3 是线性回归线的线图。
+**图 17.4：** `x` 和 `y` 的绘图。`y1` 表示原始数据的散点图。`y2` 是 `Flux` 模型输出的散点图。`y3` 是线性回归线的线图。
 
 模型输出是线性回归方程的近似。模型可能无法找到确切的最优值，因为随机梯度下降只是沿参数空间中损失函数梯度的搜索技术。可能需要更好的收敛策略来确保搜索达到最优值。以下图像显示了优化一次运行的结果。此处省略了绘图细节。然而，完整代码可在 Jupyter 笔记本 `Chapter-17/Chapter-17 Deep Learning.ipynb` 中获得。
 
-**图 17.5：** 随机梯度下降搜索沿着由参数 a 和 b 参考的损失函数创建的表面的梯度进行。因此获得的最佳结果仍远离从分析方法计算出的绝对最优值。
+**图 17.5：** 随机梯度下降搜索沿着由参数 `a` 和 `b` 参考的损失函数创建的表面的梯度进行。因此获得的最佳结果仍远离从分析方法计算出的绝对最优值。
 
 ## 模型动物园
 
@@ -12107,19 +12045,19 @@ end
 
 ## 神经网络类型
 
-在深度学习中，我们讨论了 ANN。然而，ANN 有各种类型。类型大致基于计算单元或节点如何相互交互，或节点的拓扑结构。我们将通过从模型动物园改编的示例讨论三类神经网络。
+在深度学习中，我们讨论了 `ANN`。然而，`ANN` 有各种类型。类型大致基于计算单元或节点如何相互交互，或节点的拓扑结构。我们将通过从模型动物园改编的示例讨论三类神经网络。
 
-- 全连接 (Dense) 网络
-- 卷积网络 (CNN)
-- 循环网络 (RNN)
+- 全连接 (`Dense`) 网络
+- 卷积网络 (`CNN`)
+- 循环网络 (`RNN`)
 
 ### 全连接网络
 
-我们解决如图 17.1 所示的 MNIST 手写数字分类问题。我们使用类似于图 17.2 的全连接 ANN 层，具有以下细节：
+我们解决如图 17.1 所示的 `MNIST` 手写数字分类问题。我们使用类似于图 17.2 的全连接 `ANN` 层，具有以下细节：
 
 - 具有 784 个节点的输入层
-- 具有 32 个节点和 ReLU 激活的中间层
-- 具有 10 个节点和 softmax 激活的输出层
+- 具有 32 个节点和 `ReLU` 激活的中间层
+- 具有 10 个节点和 `softmax` 激活的输出层
 
 使用全连接层的一个缺点是参数数量。由于节点全连接，总参数数量将为：784 × 32 + 32 × 10 = 25,408 个参数。我们建议您查看随附 Jupyter 笔记本中的完整代码。
 
@@ -12172,17 +12110,17 @@ function train(; kws...)
 end
 ```
 
-高亮部分是 `Flux` 中实际的训练代码。数据按批次加载到模型中。使用 `ADAM` 作为优化器，在每批计算后更新梯度。您还需要使用优化器设置学习率。进度将使用 `evalcb` 回调间歇性报告。`train!` 函数仅接受一个回调作为输入，并在每批后调用它。训练将执行 `args.epochs` 次。这意味着整个训练数据将被用于训练模型 10 次。`logitcrossentropy` 用作损失函数。运行结束时，经过 10 个 epoch 可达到 91.77% 的分类准确率。MNIST 数据集的最先进准确率接近 99.9%。虽然我们不热衷于尝试最先进的准确率，但我们将看看 CNN，这是图像处理常用的网络。
+高亮部分是 `Flux` 中实际的训练代码。数据按批次加载到模型中。使用 `ADAM` 作为优化器，在每批计算后更新梯度。您还需要使用优化器设置学习率。进度将使用 `evalcb` 回调间歇性报告。`train!` 函数仅接受一个回调作为输入，并在每批后调用它。训练将执行 `args.epochs` 次。这意味着整个训练数据将被用于训练模型 10 次。`logitcrossentropy` 用作损失函数。运行结束时，经过 10 个 epoch 可达到 91.77% 的分类准确率。`MNIST` 数据集的最先进准确率接近 99.9%。虽然我们不热衷于尝试最先进的准确率，但我们将看看 `CNN`，这是图像处理常用的网络。
 
 ### 卷积网络 (CNN)
 
-CNN 基本源于经典卷积和图像处理特征工程的概念。图像处理工程师会设计卷积核并将其应用于图像以从图像中提取特征。例如，使用 Sobel 滤波器进行边缘提取。神经网络可用作自动计算滤波器参数[⁹] 的手段；从而成为 CNN 模型的基础。
+`CNN` 基本源于经典卷积和图像处理特征工程的概念。图像处理工程师会设计卷积核并将其应用于图像以从图像中提取特征。例如，使用 `Sobel` 滤波器进行边缘提取。神经网络可用作自动计算滤波器参数[⁹] 的手段；从而成为 `CNN` 模型的基础。
 
-**图 17.6：** 一个卷积核将在图像两侧各截断一个像素。您可以使用填充，使这种缩减不受影响。卷积核实际上是 3 维的，这给输出图像引入了额外的通道。如果一个 3 通道图像与一个 3×3×8 的卷积核卷积，将需要 3×3×3×8 个参数。这些参数是相同的，并应用于像素的每个位置。参数共享减少了 CNN 中使用的总体参数。
+**图 17.6：** 一个卷积核将在图像两侧各截断一个像素。您可以使用填充，使这种缩减不受影响。卷积核实际上是 3 维的，这给输出图像引入了额外的通道。如果一个 3 通道图像与一个 3×3×8 的卷积核卷积，将需要 3×3×3×8 个参数。这些参数是相同的，并应用于像素的每个位置。参数共享减少了 `CNN` 中使用的总体参数。
 
-虽然 CNN 重用参数，但卷积核在多个分辨率下应用。例如，maxpool 操作取图像的 2×2 像素网格，并用最高像素值替换这 4 个像素。由于这种子采样，maxpool 操作将图像的宽度和高度减半。
+虽然 `CNN` 重用参数，但卷积核在多个分辨率下应用。例如，`maxpool` 操作取图像的 2×2 像素网格，并用最高像素值替换这 4 个像素。由于这种子采样，`maxpool` 操作将图像的宽度和高度减半。
 
-`getdata` 函数与之前看到的非常相似，只是我们取更小的图像批次 (CNN 中为 128)，并引入一个额外维度，使图像大小为 28×28×1。模型设计为原语层。
+`getdata` 函数与之前看到的非常相似，只是我们取更小的图像批次 (`CNN` 中为 128)，并引入一个额外维度，使图像大小为 28×28×1。模型设计为原语层。
 
 ```julia
 function build_model(args; imgsize = (28,28,1), nclasses = 10)
@@ -12191,32 +12129,41 @@ function build_model(args; imgsize = (28,28,1), nclasses = 10)
     Conv((3, 3), imgsize[3]=>4, relu),
     #Output: 26x26x4 Params: 3x3x1x4=36
     BatchNorm(4),
-    Conv((3, 3), 4=>4, relu),
-    #Output: 24x24x4 Params: 3x3x4x4=144
-    BatchNorm(4),
-    MaxPool((2,2)), #Output: 12x12x4
-    Dropout(0.1),
-    Conv((3, 3), 4=>8, relu),
-    #Output: 10x10x8 Params: 3x3x4x8=288
-    BatchNorm(8),
-    Conv((3, 3), 8=>8, relu),
-    #Output: 8x8x8 Params: 3x3x8x8=576
-    BatchNorm(8),
-    MaxPool((2,2)), #Output: 4x4x8
-    Dropout(0.1),
-    Conv((3, 3), 8=>32, pad=(1, 1), relu),
-    #Output: 4x4x32 Params: 3x3x8x32=2304
-    BatchNorm(32),
-    Conv((3, 3), 32=>nclasses, relu),
-    #Output: 2x2x10 Params: 3x3x32x10=2880
-    BatchNorm(10),
-    AdaptiveMeanPool((1, 1)), #Output: 1x1x10
-    flatten #Output: 10
-    )
+```
+
+
+
+### 模型架构定义
+
+```julia
+Conv((3, 3), 4=>4, relu),
+# Output: 24x24x4 Params: 3x3x4x4=144
+BatchNorm(4),
+MaxPool((2,2)), # Output: 12x12x4
+Dropout(0.1),
+Conv((3, 3), 4=>8, relu),
+# Output: 10x10x8 Params: 3x3x4x8=288
+BatchNorm(8),
+Conv((3, 3), 8=>8, relu),
+# Output: 8x8x8 Params: 3x3x8x8=576
+BatchNorm(8),
+MaxPool((2,2)), # Output: 4x4x8
+Dropout(0.1),
+Conv((3, 3), 8=>32, pad=(1, 1), relu),
+# Output: 4x4x32 Params: 3x3x8x32=2304
+BatchNorm(32),
+Conv((3, 3), 32=>nclasses, relu),
+# Output: 2x2x10 Params: 3x3x32x10=2880
+BatchNorm(10),
+AdaptiveMeanPool((1, 1)), # Output: 1x1x10
+flatten # Output: 10
+)
 end
 ```
 
-它是卷积、批量归一化、最大池化和 dropout 的层。`Flux` 提供简单的层，如原语，以非常类似于 *Keras* 等框架的方式建模 DNN 层。模型本身表现得像一个可调用对象。因此，您可以像 `model(x)` 这样调用以获得预测值。
+它是卷积、批量归一化、最大池化和 dropout 的层。`Flux` 提供简单的层，如原语，以非常类似于 `Keras` 等框架的方式建模 DNN 层。模型本身表现得像一个可调用对象。因此，您可以像 `model(x)` 这样调用以获得预测值。
+
+### 训练代码
 
 训练代码与前一个类似，增加了在达到 99% 测试准确率后停止执行的功能。为提供最大测试准确率的运行保存模型。加载保存的模型以打印测试结果。
 
@@ -12258,13 +12205,13 @@ s[t] = tanh(U * x[t] + W * s[t-1])
 o[t] = softmax(V * s[t])
 ```
 
-在求解 RNN 参数时，网络按时间尺度展开，如图所示。由于序列可以是任意大小，要么将它们视为一个大尺寸序列，用空输入填充有限的大序列，要么使用序列结束标记来结束序列。通常，对展开的网络进行反向传播。状态参数存储在宽度为 H 的向量中。U、W 和 V 向量独立于时间。虽然它们作为反向传播步骤的一部分被更新，但更新的值将用于后续的前向传递。
+在求解 RNN 参数时，网络按时间尺度展开，如图所示。由于序列可以是任意大小，要么将它们视为一个大尺寸序列，用空输入填充有限的大序列，要么使用序列结束标记来结束序列。通常，对展开的网络进行反向传播。状态参数存储在宽度为 H 的向量中。`U`、`W` 和 `V` 向量独立于时间。虽然它们作为反向传播步骤的一部分被更新，但更新的值将用于后续的前向传递。
 
 在我们尝试解决的问题中，我们采用 5 种语言的字符序列并将它们输入循环网络。我们想推断字符序列代表的语言。由于我们使用字符序列并忽略所有重音和大小写敏感字符，我们的词汇量大小为 39。输出类别数为 5 (`:en`, `:fr`, `:it`, `:da` 和 `:es`)。因此矩阵将具有以下维度：
 
-- U - 5 × 39
-- W - 5 × 5
-- V - 5 × 5 (V 在 `Flux RNNCell` 中被忽略)
+- `U` - 5 × 39
+- `W` - 5 × 5
+- `V` - 5 × 5 (`V` 在 `Flux RNNCell` 中被忽略)
 
 虽然 RNN 是一个有用的工具，但可能不是大序列的最佳选择。随着序列变长，梯度可能消失，反向传播可能无法有效更新权重。因此，网络会慢慢遗忘序列中较早的输入。**长短期记忆** (`LSTM`)[¹¹] 和 **门控循环单元** (`GRU`) 等网络提供额外的门来选择性地忽略输入、输出或之前的状态值。我们使用 LSTM 为语言标识器建模。模型可能如下所示。完整代码可从相关的 Jupyter 笔记本获得。
 
@@ -12278,32 +12225,34 @@ function model(x, scanner)
 end
 ```
 
-`build_model` 创建一个扫描器，扫描字符序列并产生输出序列。然而，我们只对序列的最后一个值感兴趣，并将其用于损失计算。训练约 5 个 epoch 后获得的最佳测试准确率为 0.78。虽然对于这样一个简单的模型这很合理，但最先进水平在 8 种语言的 USENET 组上接近 99.8%[¹²]。此外，就像其他原语一样，RNN、LSTM 或 GRU 可以堆叠成层以形成复杂的深度网络。它们也可以与 CNN 和 Dense 网络堆叠。Transformers[¹³] 是有用的序列建模原语，广泛用于语言建模。BERT 和 GPT 是一些著名的基于 Transformer 的架构。
+
+
+`build_model` 创建一个扫描器，扫描字符序列并产生输出序列。然而，我们只对序列的最后一个值感兴趣，并将其用于损失计算。训练约 5 个 epoch 后获得的最佳测试准确率为 0.78。虽然对于这样一个简单的模型这很合理，但最先进水平在 8 种语言的 USENET 组上接近 99.8%[¹²]。此外，就像其他原语一样，`RNN`、`LSTM` 或 `GRU` 可以堆叠成层以形成复杂的深度网络。它们也可以与 `CNN` 和 `Dense` 网络堆叠。`Transformers`[¹³] 是有用的序列建模原语，广泛用于语言建模。`BERT` 和 `GPT` 是一些著名的基于 `Transformer` 的架构。
 
 ## 总结
 
-`ANN` 如今在工业中被广泛使用。应用目前可见于所有可能的领域。我们快速回顾了作为模型动物园一部分提供的示例。虽然示例提供了关于 Flux 建模能力的一些见解，但您需要进一步探索深度学习理论的细节，并尝试使用 Flux 解决实际问题，才能有效地构建模型。
+`ANN` 如今在工业中被广泛使用。应用目前可见于所有可能的领域。我们快速回顾了作为模型动物园一部分提供的示例。虽然示例提供了关于 `Flux` 建模能力的一些见解，但您需要进一步探索深度学习理论的细节，并尝试使用 `Flux` 解决实际问题，才能有效地构建模型。
 
 # 练习
 
-1.  在全连接网络的示例中，softmax 未用作最后一层的激活函数。然而，这已通过某种替代方式得到适应。您能识别出来吗？
-2.  什么是批量归一化？为什么它在 CNN 中使用？
-3.  我们看到 CNN 与 2-D 卷积核和图像一起使用。CNN 可以用于文本吗？您必须引入什么样的变化才能将它们用于文本？
-4.  计算基于 LSTM 的语言识别问题所需的参数。参数数量的增加是否合理？
-5.  回顾语言识别模型的综述论文，并使用 Flux 实现其中一个模型，使其在测试集上提供 99% 或更高的准确率。
+1.  在全连接网络的示例中，`softmax` 未用作最后一层的激活函数。然而，这已通过某种替代方式得到适应。您能识别出来吗？
+2.  什么是批量归一化？为什么它在 `CNN` 中使用？
+3.  我们看到 `CNN` 与 2-D 卷积核和图像一起使用。`CNN` 可以用于文本吗？您必须引入什么样的变化才能将它们用于文本？
+4.  计算基于 `LSTM` 的语言识别问题所需的参数。参数数量的增加是否合理？
+5.  回顾语言识别模型的综述论文，并使用 `Flux` 实现其中一个模型，使其在测试集上提供 99% 或更高的准确率。
 
 ---
 
 [¹]: Seung-Hwan Lim, Steven Robert Young, and Robert Patton, An analysis of image storage systems for scalable training of deep neural networks, The Seventh workshop on Big Data Benchmarks, Performance Optimization, and Emerging Hardware (in conjunction with ASPLOS'16), 2016.
 [²]: Lecun et al., THE MNIST DATABASE of handwritten digits, <http://yann.lecun.com/exdb/mnist/index.html>
-[³]: 非线性函数的选择取决于问题。在 CNN 中，线性整流单元，*LU(x) = x if x > 0 else 0*，常用作激活函数。
+[³]: 非线性函数的选择取决于问题。在 `CNN` 中，线性整流单元，`LU(x) = x if x > 0 else 0`，常用作激活函数。
 [⁴]: Goodfellow et al., The Deep Learning Book, page 200, <https://www.deeplearningbook.org/contents/mlp.html#pf25>
 [⁵]: Flux, The Elegant Machine Learning Stack, <https://fluxml.ai/>
 [⁶]: TensorFlow, Julia 的 TensorFlow 包装器，该包处于最低维护模式，没有添加新功能，并绑定到较旧版本的 `libtensorflow` <https://github.com/malmaud/TensorFlow.jl>
 [⁷]: model-zoo, Do not feed the models, <https://github.com/FluxML/model-zoo>
 [⁸]: `Metalhead.jl`, Flux 的计算机视觉模型, <https://github.com/FluxML/Metalhead.jl>
 [⁹]: Dan Ciresan, Ueli Meier, Jurgen Schmidhuber, Multi-column Deep Neural Networks for Image Classification, Technical Report No. IDSIA-04-12
-[¹⁰]: 要详细了解 RNN 概念，您可以参考 Denny Britz 于 2015 年 9 月的博客文章：<http://www.wildml.com/2015/09/recurrent-neural-networks-tutorial-part-1-introduction-to-rnns/>
+[¹⁰]: 要详细了解 `RNN` 概念，您可以参考 Denny Britz 于 2015 年 9 月的博客文章：<http://www.wildml.com/2015/09/recurrent-neural-networks-tutorial-part-1-introduction-to-rnns/>
 [¹¹]: Christpher Olah, Understanding LSTM Networks, August 2015. <http://colah.github.io/posts/2015-08-Understanding-LSTMs/>
 [¹²]: Tommi Jauhiainen et al, Automatic language identification in texts: a survey, JAIR, May 2019, <https://doi.org/10.1613/jair.1.11675>
 [¹³]: Transformers, Transformer 模型的 Julia 实现, <https://github.com/chengchingwen/Transformers.jl/>
@@ -12320,20 +12269,20 @@ end
   - functions 55
   - operators
 - abstract array types, 122
-- AbstractChar
-- AbstractString, 145
-- Abstract Syntax Trees (AST) 149, 150
+- `AbstractChar`
+- `AbstractString`, 145
+- Abstract Syntax Trees (`AST`) 149, 150
 - abstract type 28
 - accessor method 218
 - Amazon Web Services 304, 305
-- American National Standard Institute (ANSI) 129
-- American Standard Code for Information Interchange (ASCII) 129
+- American National Standard Institute (`ANSI`) 129
+- American Standard Code for Information Interchange (`ASCII`) 129
 - anonymous function 57
-- Any type, 33
+- `Any` type, 33
 - area method 71
 - array 85
 - array inner product
-- Artificial Neural Networks (ANN)
+- Artificial Neural Networks (`ANN`)
 - aspect_ratio method 71
 - assignment
 - associative collection
@@ -12346,8 +12295,8 @@ end
   - lock 178
   - task 176
 - Atom, 256
-- Automated Differentiation (AD) 340
-- Azure Kubernetes Services (AKS)
+- Automated Differentiation (`AD`) 340
+- Azure Kubernetes Services (`AKS`)
   - about 301
   - orchestrating, from Julia 302–304
 
@@ -12355,12 +12304,12 @@ end
 
 - backends 321
 - benchmarking 226–229
-- Binary Coded Decimal Interchange Code (EBCDIC) 129
+- Binary Coded Decimal Interchange Code (`EBCDIC`) 129
 - binary dependencies
   - about 289
   - native binaries, using 290
 - bit type
-- Bool 27
+- `Bool` 27
 - broadcast
   - about, 117
   - performance 118
@@ -12370,7 +12319,7 @@ end
 
 - C encoding
 - character array 143
-- character (Char)
+- character (`Char`)
 - characters, 129
 - cloud environment 296
 - code generation tools
@@ -12380,13 +12329,13 @@ end
   - parametric data types 235, 236
   - type stability 229, 231, 233, 234
 - code-run-fix, 262
-- Command Line Interface (CLI) 301
-- Comma separated values (CSV) 186
+- Command Line Interface (`CLI`) 301
+- Comma separated values (`CSV`) 186
 - compound statements
   - about 40
   - begin end 40
 - comprehensions 101, 102
-- compressed sparse column (CSC) 124
+- compressed sparse column (`CSC`) 124
 - conditional statements
   - about 40
   - if else 40, 41
@@ -12400,12 +12349,12 @@ end
 - continuous integration
   - about 283–287
   - code coverage, visualizing 288
-- convolutional network (CNN) 346–349
+- convolutional network (`CNN`) 346–349
 - custom string literals 158, 159
 - custom strings
   - about
-  - AbstractChar
-  - AbstractString, 145
+  - `AbstractChar`
+  - `AbstractString`, 145
 
 **D**
 
@@ -12430,7 +12379,7 @@ end
   - binary I/O 184
   - file I/O 184–186
   - text I/O, 183
-- Defined Languages (UDL) 254
+- Defined Languages (`UDL`) 254
 - delegation, 218
 - dict object
   - about 92, 93
@@ -12442,7 +12391,7 @@ end
 - documentation
   - about 278, 279
   - configuring 279–283
-- Document Object Models (DOM) 309
+- Document Object Models (`DOM`) 309
 
 **E**
 
@@ -12452,7 +12401,7 @@ end
   - Notepad++ 253, 254
   - vim (vi) 250
 - efficiency 125
-- Elastic Kubernetes Services (EKS) 301
+- Elastic Kubernetes Services (`EKS`) 301
 - emacs 251–253
 - encoding
   - about 129, 141, 142
@@ -12506,15 +12455,15 @@ end
 
 **G**
 
-- Gated Recurrent Units (GRU) 350
+- Gated Recurrent Units (`GRU`) 350
 - generated functions 159, 160
 - generators 101, 102
 - GitHub
   - registration 273
 - Git Repositories 265
-- Google Clouds Platform (GCP) 305
-- Google Kubernetes Engine (GKE) 301
-- Graphical User Interfaces (GUI) 222
+- Google Clouds Platform (`GCP`) 305
+- Google Kubernetes Engine (`GKE`) 301
+- Graphical User Interfaces (`GUI`) 222
 
 **H**
 
@@ -12540,7 +12489,7 @@ end
   - special indices
   - vectors 110, 111
 - inline evaluation 152
-- Input and Output (I/O)
+- Input and Output (`I/O`)
   - about
   - default streams
   - delimited files 186
@@ -12554,11 +12503,11 @@ end
   - splatting
   - variable number of arguments 58, 59
 - integral type 27
-- integrated development environment (IDE)
+- integrated development environment (`IDE`)
   - about, 254
   - Atom, 256
-  - Visual Studio Code (VS Code), 258
-- Interactive Julia (IJulia) 16
+  - Visual Studio Code (`VS Code`), 258
+- Interactive Julia (`IJulia`) 16
 - interface
   - about, 114, 211, 212
   - holy traits 214–216
@@ -12581,13 +12530,13 @@ end
 **J**
 
 - Julia
-  - Azure Kubernetes Services (AKS), orchestrating 302–304
+  - Azure Kubernetes Services (`AKS`), orchestrating 302–304
   - deploying, 298
   - Docker container 299, 300
   - REST-based web services 298, 299
 - Julia built-in types
   - about 26
-  - character (Char)
+  - character (`Char`)
   - nothing 26
   - numeric type 27
   - string
@@ -12657,7 +12606,7 @@ end
 - Jupyter
   - about 16
   - configuring 17
-- Just-in-Time (JIT) compilation,
+- Just-in-Time (`JIT`) compilation,
 
 **K**
 
@@ -12665,13 +12614,13 @@ end
 
 **L**
 
-- Latent Dirichlet Allocation (LDA)
-- Latent Semantic Analysis (LSA)
+- Latent Dirichlet Allocation (`LDA`)
+- Latent Semantic Analysis (`LSA`)
 - linear algebra 125, 126
 - linear index 111
 - literals
-- Long Short Term Memory (LSTM) 350
-- long-term support (LTS) 6
+- Long Short Term Memory (`LSTM`) 350
+- long-term support (`LTS`) 6
 - l-valued expressions
 
 **M**
@@ -12706,14 +12655,14 @@ end
 **N**
 
 - Naïve Bayes Classifier 332
-- Named Entity Recognition (NER), 335
+- Named Entity Recognition (`NER`), 335
 - nested quotes 154–156
 - network
 - neural network, types
   - about
-  - convolutional network (CNN) 346–349
+  - convolutional network (`CNN`) 346–349
   - fully connected network –346
-  - recurrent neural network (RNN) 349–351
+  - recurrent neural network (`RNN`) 349–351
 - notable modules
   - about 191
   - dates 191–193
@@ -12722,12 +12671,12 @@ end
   - statistics 196
 - Notepad++ 253, 254
 - N-queens, 268
-- NTuple 79
+- `NTuple` 79
 - numeric type
   - about 27
   - abstract type 28
   - bit type
-  - Bool 27
+  - `Bool` 27
   - floating point numbers 27
   - integral type 27
   - primitive type
@@ -12735,7 +12684,7 @@ end
 
 **O**
 
-- Office Open XML (OOXML) 313
+- Office Open XML (`OOXML`) 313
 - open source
   - about 219
   - contributing, to Julia 220
@@ -12773,7 +12722,7 @@ end
 - parametric data type
   - about 33, 34, 71
   - dispatch interface 71, 72
-- Part of Speech (POS)
+- Part of Speech (`POS`)
 - patterns
   - about 211
   - accessor method 218
@@ -12800,8 +12749,8 @@ end
 - public cloud infrastructures
   - about 304
   - Amazon Web Services 304
-  - Google Clouds Platform (GCP) 305
-- pull requests (PR) 220
+  - Google Clouds Platform (`GCP`) 305
+- pull requests (`PR`) 220
 
 **R**
 
@@ -12811,9 +12760,9 @@ end
   - StepRange
   - UnitRange
 - rational and complex type
-- Read-Eval-Print Loop (REPL) 15, 16
-- Recall Oriented Understudy for Gisting Evaluation (ROUGE)
-- recurrent neural network (RNN) 349–351
+- Read-Eval-Print Loop (`REPL`) 15, 16
+- Recall Oriented Understudy for Gisting Evaluation (`ROUGE`)
+- recurrent neural network (`RNN`) 349–351
 - recursion
   - about –64
   - code, computing 65–67
@@ -12848,7 +12797,7 @@ end
 - sparse vector storage
 - special indices
 - stack traces 51
-- standard library (stdlib) 186
+- standard library (`stdlib`) 186
 - StepRange
 - string, 132, 133
 - string method
@@ -12867,7 +12816,7 @@ end
 **T**
 
 - tabular data 317–319
-- Tail Call Optimization (TCO) 67
+- Tail Call Optimization (`TCO`) 67
 - test automation
   - about 274–276
   - coverage 276–278
@@ -12899,7 +12848,7 @@ end
   - as collection 79
   - integers type parameter 80, 81
   - integer type parameter
-  - NTuple 79
+  - `NTuple` 79
   - value parameter, 83
 - tuples 25
 - type interaction
@@ -12914,8 +12863,8 @@ end
   - in Julia 132
 - Unicode transformation 131, 132
 - UnitRange
-- Universal Coded Character Set (UCS)
-- Universal Language Model Fine Tuning (ULMFiT) 335
+- Universal Coded Character Set (`UCS`)
+- Universal Language Model Fine Tuning (`ULMFiT`) 335
 - user-defined types
   - about
   - members
@@ -12929,37 +12878,45 @@ end
   - definition, versus initialization 23
 - vectors 110, 111
 - vim (vi) 250
-- Visual Studio Code (VS Code) 250, 258
+- Visual Studio Code (`VS Code`) 250, 258
 
 **W**
 
 - walkdir() method 173
 - word stems 328
 
-
-
-
 **表达式：** `iscollinear(Point2D(0, 0), Point2D(10, 0), Point2D(20, 3 * ϵ()))`
 
 **3 L(pA::Point2D, pB::Point2D, pC::Point2D) =**
 
-`deps = ["Libdl"]`
+```
+deps = ["Libdl"]
+```
 
-`git add .`
+```
+git add .
+```
 
-`L(pA::Point2D, pB::Point2D, pC::Point2D) =`
+```
+L(pA::Point2D, pB::Point2D, pC::Point2D) =
+```
 
-递归函数会终止，因为对于所有 `n < 3` 的值都存在终止条件。根本问题在于斐波那契数列对于负数 `n` 值是否有效。拥有一个微小的纯函数并在 REPL 中验证它，使得确保代码正常运行并将其引入实际代码变得更加容易。在 IDE 中运行部分代码是实现相同结果的另一种方式。
+递归函数会终止，因为对于所有 `n < 3` 的值都存在终止条件。根本问题在于斐波那契数列对于负数 `n` 值是否有效。拥有一个微小的纯函数并在 `REPL` 中验证它，使得确保代码正常运行并将其引入实际代码变得更加容易。在 `IDE` 中运行部分代码是实现相同结果的另一种方式。
 
-然而，无论程序员多么熟练，她都希望尝试脑海中的想法，快速体验结果，修复更改，然后继续处理下一块代码。Julia 的运行时是预加载的。随着你将更多数据结构、模块和包加载到系统中，旧的符号和代码块会被加载到运行时中。如果不影响运行时在其他地方的整体工作，可能无法修改已定义的符号。例如，在 REPL 中更改函数定义很简单。但是，不允许添加或移除 `struct` 数据类型的属性。当修改包时，在后续使用 `using <<module>>` 命令时不会重新加载它。为克服这些限制，可以使用 `Revise.jl` 包。该包可以自动加载，并能在开发的代码-运行-修复周期中更新符号。我们建议读者查阅该包文档以获得详细了解。
+然而，无论程序员多么熟练，她都希望尝试脑海中的想法，快速体验结果，修复更改，然后继续处理下一块代码。Julia 的运行时是预加载的。随着你将更多数据结构、模块和包加载到系统中，旧的符号和代码块会被加载到运行时中。如果不影响运行时在其他地方的整体工作，可能无法修改已定义的符号。例如，在 `REPL` 中更改函数定义很简单。但是，不允许添加或移除 `struct` 数据类型的属性。当修改包时，在后续使用 `using <<module>>` 命令时不会重新加载它。为克服这些限制，可以使用 `Revise.jl` 包。该包可以自动加载，并能在开发的代码-运行-修复周期中更新符号。我们建议读者查阅该包文档以获得详细了解。
 
-用于 `vim` 的 Julia 插件，称为 `julia-vim`，是一个 *GitHub* 项目，可安装在 Mac OS X、UNIX 和 Windows 操作系统的 `vim` 设置中。该插件是一组 vim 脚本，提供以下功能：
+用于 `vim` 的 Julia 插件，称为 `julia-vim`，是一个 `GitHub` 项目，可安装在 Mac OS X、UNIX 和 Windows 操作系统的 `vim` 设置中。该插件是一组 vim 脚本，提供以下功能：
 
-Julia 是一个相对较新的平台。在 Julia 作为一种语言流行之前，所有上述组件的生态系统就已存在。开发者希望看到 Julia 能与他们最熟悉的工具无缝协作。在 UNIX 环境的文本编辑器世界中，`vi` 与 `emacs` 近乎拥有狂热的追随者。*GitHub* 下的 JuliaEditorSupport 组织维护着与多个知名编辑器的集成，功能水平各异；其中一些编辑器包括 *Vim*、*Emacs*、*Sublime*、*Atom*、*Notepad++* 和 *Eclipse*。一些集成处于活跃状态，而许多因缺乏关注和使用而已弃用。Julia IDE 正在为 *Atom* 开发，项目名为 *Juno*，以及微软的 **Visual Studio Code** (**VS Code**)。
+Julia 是一个相对较新的平台。在 Julia 作为一种语言流行之前，所有上述组件的生态系统就已存在。开发者希望看到 Julia 能与他们最熟悉的工具无缝协作。在 UNIX 环境的文本编辑器世界中，`vi` 与 `emacs` 近乎拥有狂热的追随者。`GitHub` 下的 JuliaEditorSupport 组织维护着与多个知名编辑器的集成，功能水平各异；其中一些编辑器包括 `Vim`、`Emacs`、`Sublime`、`Atom`、`Notepad++` 和 `Eclipse`。一些集成处于活跃状态，而许多因缺乏关注和使用而已弃用。Julia `IDE` 正在为 `Atom` 开发，项目名为 `Juno`，以及微软的 **Visual Studio Code** (**VS Code**)。
 
-[图示说明：显示带有 Julia 主模式的 `julia-emacs` 界面，而 Git 集成显示为次要模式。] 函数和常量作为菜单项显示，有助于在文件内快速导航。Emacs 集成进一步允许 REPL 与 `julia-emacs` 一起加载，从而加载一个用于评估和调试的环境。Julia 还与一个名为 Emacs Speaks Statistics 的包集成，该包支持 R、S-plus、SAS 和 Stata 等其他语言。该包提供 Julia 代码块的细粒度评估，以及部分 Emacs 代码用于快速原型设计。这有助于在继续开发代码的同时，独立调试和测试小块代码：
+[图示说明：显示带有 Julia 主模式的 `julia-emacs` 界面，而 Git 集成显示为次要模式。] 函数和常量作为菜单项显示，有助于在文件内快速导航。Emacs 集成进一步允许 `REPL` 与 `julia-emacs` 一起加载，从而加载一个用于评估和调试的环境。Julia 还与一个名为 Emacs Speaks Statistics 的包集成，该包支持 R、S-plus、SAS 和 Stata 等其他语言。该包提供 Julia 代码块的细粒度评估，以及部分 Emacs 代码用于快速原型设计。这有助于在继续开发代码的同时，独立调试和测试小块代码：
 
 *   现在等待负载均衡器启动：
+
+```
+```
+
+
 
 ```
 while true
@@ -12973,25 +12930,25 @@ while true
 end
 ```
 
-虽然我们可以使用 Kubernetes 编排工作负载，但原生平台提供细粒度的控制，并能跨更大的服务栈使用。它们不局限于基于容器的工作负载。Julia 通过 AWS 包提供了对管理基于 AWS 服务的广泛覆盖。在所有公共云基础设施中，AWS 是 Julia 集成最全面的。这很大程度上归功于使用 *GitHub* Action 进行自动代码生成，该操作每天 UTC 时间上午 6:00 执行一次。它查询 *GitHub* 仓库 `aws-sdk-js` 仓库以获取基于 REST 的 API。此操作为 Julia 中的 AWS 服务生成包装函数。文档也从 AWS 文档中提取并呈现为 Juliadocs。这确保来源能够适应 AWS API 和文档的所有变更。API 通常设计为两类：
+虽然我们可以使用 Kubernetes 编排工作负载，但原生平台提供细粒度的控制，并能跨更大的服务栈使用。它们不局限于基于容器的工作负载。Julia 通过 AWS 包提供了对管理基于 AWS 服务的广泛覆盖。在所有公共云基础设施中，AWS 是 Julia 集成最全面的。这很大程度上归功于使用 `GitHub` Action 进行自动代码生成，该操作每天 UTC 时间上午 6:00 执行一次。它查询 `GitHub` 仓库 `aws-sdk-js` 仓库以获取基于 REST 的 API。此操作为 Julia 中的 AWS 服务生成包装函数。文档也从 AWS 文档中提取并呈现为 Juliadocs。这确保来源能够适应 AWS API 和文档的所有变更。API 通常设计为两类：
 
-正如 `vi` 和 `emacs` 是 UNIX 世界中最流行的编辑器，*Notepad++* 一直是 Windows 操作系统中流行的编辑器，没有直接移植到 Unix 或 Mac OS X 操作系统。然而，它不应与 `notepad.exe` 混淆，后者随 Windows 操作系统默认附带，仅具备最基本的文本编辑功能。*Notepad++* 是一个相对高级的文本编辑器，拥有完整的插件功能，可对编程和增强编辑器渲染体验进行编程。它还可以通过 **用户定义语言** (**UDL**) 自定义语言语法高亮。UDL 是在 XML 文件中提供特定语法结构的一种更简单方法，可用于有效识别和渲染文件：
+正如 `vi` 和 `emacs` 是 UNIX 世界中最流行的编辑器，`Notepad++` 一直是 Windows 操作系统中流行的编辑器，没有直接移植到 Unix 或 Mac OS X 操作系统。然而，它不应与 `notepad.exe` 混淆，后者随 Windows 操作系统默认附带，仅具备最基本的文本编辑功能。`Notepad++` 是一个相对高级的文本编辑器，拥有完整的插件功能，可对编程和增强编辑器渲染体验进行编程。它还可以通过**用户定义语言 (UDL)** 自定义语言语法高亮。UDL 是在 XML 文件中提供特定语法结构的一种更简单方法，可用于有效识别和渲染文件：
 
-作为 Julia 与 *Atom* 集成骨干的 Juno IDE，也是 Julia Computing 商业产品 Julia PRO 的首选编辑器。然而，随着微软 VS Code 集成的出现，部分关注点正慢慢从该编辑器转移：
+作为 Julia 与 `Atom` 集成骨干的 Juno IDE，也是 Julia Computing 商业产品 Julia PRO 的首选编辑器。然而，随着微软 VS Code 集成的出现，部分关注点正慢慢从该编辑器转移：
 
 你可以在安装了 Julia 扩展的 VS Code 中打开示例代码中的文件 `plot.jl`。如果你通过右键点击运行该文件，将能看到以下屏幕，绘图显示在代码旁边：
 
 `using TextAnalysis`
 
-**奇异值：**
+### 奇异值
 
 虽然 `tf-idf` 是一种有用的表示，独热向量也是如此，但它们有特定的局限性。它们是稀疏的，且考虑文档中词语的计数。它们不考虑词语的局部上下文。例如，*Apple* 一词可以指水果，也可以指科技公司。因此，周围的词语对于识别同音词的相关上下文至关重要。
 
 ```
-$docker pull julia
+$ docker pull julia
 ```
 
-*   **弹性 Kubernetes 服务** (**EKS**) 由 Amazon Web Services 提供
+*   **弹性 Kubernetes 服务 (EKS)** 由 Amazon Web Services 提供
 *   `kubectl proxy` 对于通过 Web 服务连接到 Azure Kubernetes 服务很有用。
 
 现在，这两个句子都变得更容易比较了。让我们看看一种称为 `cos_similarity` 的相似度度量。在这样做之前，我们使用语料库来简化字符串。
@@ -12999,10 +12956,6 @@ $docker pull julia
 词标记化也是类似的。简陋的词标记器表现得有些不完美。
 
 通常，语料库中的文档将具有相似的属性；因此可以对语料库应用通用转换。`TextAnalysis` 有一个 `Corpus` 类型，能有效捕捉这一概念。`CorpusLoader` 包可以下载标准文本语料库，并按需惰性加载。
-
-
-
-
 
 让我们看看这句话：`Can you pass me the can?` 这里的同形异义词 `can` 代表两种不同的含义。因此，句子中单词的存在本身是不够的，除非同时捕获了周围的上下文。同音词会让情况变得更糟。由于 NLP 中文本和语音相关技术往往相似，将标记表示为中间形式绝对会增加显著的益处。经典句子：`Tell me a tale about a tail` 将为发音相似的音位标记生成截然不同的特征向量。越来越多的研究集中于从语言模型中提取表示，并将其作为输入用于任务模型。
 
@@ -13031,7 +12984,7 @@ getPDFText(src, out) -> Dict
 高亮部分来自顶层函数 `profile_test`。最大时间花费在第 5 行，因为在总共 413 次采样中，该行被采样了 264 次。你可以使用 `ProfileView` 包获得更好的输出可视化。可以使用以下命令安装该包：
 
 ```
-julia>]add ProfileView
+julia> ]add ProfileView
 ```
 
 ```
@@ -13058,9 +13011,6 @@ julia> s[begin], s[begin+2], s[end-1], s[end]
 ```
 
 `split()` 示例使用逗号 (`,`) 作为分隔符，并将分割部分的数量限制为 2。与 `split` 从左侧分割字符串非常相似，`rsplit` 从右侧分割字符串。
-
-
-
 
 基础模块包含矩阵运算，如转置（`tr`）、求逆（`inv`）、点积（`dot`）等。还有其他方法，如奇异值分解（`svd`）、下三角和上三角分解等。还有一个特征值模块，提供各种矩阵类型的特征值计算。我们将不在这里深入探讨这些概念。不过，我们建议读者查阅语言文档。在后续章节中，我们将根据需要有选择地介绍其中一些方法。
 
@@ -13099,7 +13049,7 @@ julia> s = "\u2200 x \u2203 y"
 
 上述表示称为 **UTF-8**。那超过 21 位的编码呢？到目前为止，Unicode 规范并未使用超过 21 位的信息，但该方案最多可容纳 36 位的信息，覆盖整个 UCS-4 范围。与 UTF-8 类似，UTF-16 也被引入，它考虑将字符代码一次扩展为 2 字节字符。还有 UTF-32 转换方案。
 
-随着计算机的普及，很明显计算不再能局限于特定区域。其次，数据交换也要求数据能在任何可用的计算系统中呈现。第三，表示文本所需的内存可以超过一个字节，因为计算机中的存储和内存都变得更便宜了。不再需要对字符进行单字节限制。来自各种组织和学术界的计算机科学家和语言学家在 Unicode Consortium（Unicode 联盟）的旗下聚集在一起，推出了 **通用编码字符集**（**UCS**）。1991 年推出的第一组字符包含约 7000 个字符，采用称为 UCS-2 的 2 字节字符表示。然而，随着更多语言被添加到规范中，字符数量很快开始增长。于是决定在称为 UCS-4 的表示中为每个字符采用 4 个字节。实际上，Unicode 规范定义了 16 个代码平面，每个平面大小为 65536 (2¹⁶)，但实际上只使用了少数值。从技术上讲，32 位中只有 20 位真正用于实际目的。然而，许多计算机系统继续在操作系统中实现宽字符，Windows 通过 Windows NT 开发了原生 16 位操作系统，并停止了旧的 Windows 95 代码库。在 90 年代末和千禧年初，代码需要通过使用宏分别为 8 位和 16 位版本进行编译。
+随着计算机的普及，很明显计算不再能局限于特定区域。其次，数据交换也要求数据能在任何可用的计算系统中呈现。第三，表示文本所需的内存可以超过一个字节，因为计算机中的存储和内存都变得更便宜了。不再需要对字符进行单字节限制。来自各种组织和学术界的计算机科学家和语言学家在 Unicode Consortium（Unicode 联盟）的旗下聚集在一起，推出了**通用编码字符集 (UCS)**。1991 年推出的第一组字符包含约 7000 个字符，采用称为 UCS-2 的 2 字节字符表示。然而，随着更多语言被添加到规范中，字符数量很快开始增长。于是决定在称为 UCS-4 的表示中为每个字符采用 4 个字节。实际上，Unicode 规范定义了 16 个代码平面，每个平面大小为 65536 (2¹⁶)，但实际上只使用了少数值。从技术上讲，32 位中只有 20 位真正用于实际目的。然而，许多计算机系统继续在操作系统中实现宽字符，Windows 通过 Windows NT 开发了原生 16 位操作系统，并停止了旧的 Windows 95 代码库。在 90 年代末和千禧年初，代码需要通过使用宏分别为 8 位和 16 位版本进行编译。
 
 ```
 julia> s1 = "abc"
@@ -13154,10 +13104,7 @@ julia> ci = CartesianIndices(A)
  CartesianIndex(3, 1)  CartesianIndex(3, 2)
 ```
 
-": " 只有一个条目，它重复 4 次以便与其他被广播的集合映射保持一致。
-
-
-
+`: ` 只有一个条目，它重复 4 次以便与其他被广播的集合映射保持一致。
 
 虽然大多数示例都相当直观，但我们想引起您对 `a[1, :]` 和 `a[1, 2:3]` 的注意。这两者本应是行矩阵。然而，Julia 会返回一个一维向量。
 
@@ -13173,27 +13120,34 @@ Base.size(m::MyIdentity) = (m.l, m.l)
 
 ```
 julia> foldl(=>, [1, 2, 3, 4])
+```
+
+
+
 ((1 => 2) => 3) => 4
+
+```julia
 julia> foldr(=>, [1, 2, 3, 4])
 1 => (2 => (3 => 4))
+
 julia> reduce(=>, [1, 2, 3, 4])
 ((1 => 2) => 3) => 4
 ```
 
 您将对使用 Docker 容器将 Julia 应用程序作为 Web 服务部署有一个很好的了解，然后也可以将容器移至 Kubernetes 服务，使用 Julia 命令进行部署和编排。您还可以使用 Julia 命令作为集成平台来管理 `AWS`、`Azure` 和 `Google Cloud` 服务。因此，您可以将 Julia 用作许多云部署活动的客户端接口。
 
-*   **实例化包环境**：这可能会安装运行应用程序所需的所有依赖包。
+* **实例化包环境**：这可能会安装运行应用程序所需的所有依赖包。
 
 这只是供您从中暴露 `queens(N)` 函数的相关代码片段。让我们详细了解一下：
 
-```
+```julia
 # create gh-pages branch
 ```
 
 因此，我们生成了包代码、创建了测试用例、创建了相关文档。我们在每次测试运行时将覆盖率数据更新到可视化工具，并将文档部署到 `GitHub Pages`，作为持续集成的一部分。这确保了源代码中的每次更改都能在适当的测试用例运行中得到反映，确保在覆盖率工具的帮助下为新引入的功能添加测试用例，并保持文档最新。
 
-*   最终文档可从以下位置访问：`https://<USER>.github.io/PointLib.jl/dev/`
-*   运行 `git add .`，以便将所有其他源文件添加到您的仓库中。
+* 最终文档可从以下位置访问：`https://<USER>.github.io/PointLib.jl/dev/`
+* 运行 `git add .`，以便将所有其他源文件添加到您的仓库中。
 
 位置和依赖项按包版本存储。例如，如果您想在 `A.jl` 中使用 `C.jl` 时对其进行修改，您将需要制作一个开发副本。这是使用 `develop` 或 `dev` 命令完成的。
 
@@ -13201,7 +13155,7 @@ julia> reduce(=>, [1, 2, 3, 4])
 
 构造函数可以接受任何 `Real` 数字作为参数，并确保不允许非正值作为参数的一部分。假设我们要创建两个额外的构造函数来构造正方形。
 
-```
+```julia
 julia> a = collect(1:16)
 16-element Vector{Int64}:
  1
@@ -13209,19 +13163,21 @@ julia> a = collect(1:16)
  3
  …
  16
+
 julia> b = reshape(a, (4, 4))
 4×4 Matrix{Int64}:
  1  5  9  13
  2  6  10  14
  3  7  11  15
  4  8  12  16
+
 julia> c = reshape(b, (2, 8))
 2×8 Matrix{Int64}:
  1  3  5  7  9  11  13  15
  2  4  6  8  10  12  14  16
 ```
 
-```
+```julia
 julia> vcat([1 2; 3 4], [5 6; 7 8], [9 10; 11 12])
 6×2 Matrix{Int64}:
   1   2
@@ -13234,25 +13190,28 @@ julia> vcat([1 2; 3 4], [5 6; 7 8], [9 10; 11 12])
 
 如此精心设计的异常对象架构增加了什么价值？它们会影响执行速度，因为每次发生栈展开时，都需要验证异常对象。它们提供的主要优势之一是能够跟踪异常发生时的堆栈。因此，可以获得错误传播的追踪。其次，异常对象的形成提供了提供关于错误的足够信息的能力。
 
-```
+```julia
 julia> d = Dict("a"=>1, "c"=>2, "b"=>3)
 Dict{String,Int64} with 3 entries:
   "c" => 2
   "b" => 3
   "a" => 1
+
 julia> d["b"]
 3
+
 julia> d["a"] = 5
 5
+
 julia> println(d)
 Dict("c" => 2,"b" => 3,"a" => 5)
 ```
 
-*   浏览到您想要安装 Julia 的路径：![](img/n4upl4fndqb.jpeg)
+* 浏览到您想要安装 Julia 的路径：![](img/n4upl4fndqb.jpeg)
 
-    **图 1.1：** Julia Windows 安装程序
+  **图 1.1：** Julia Windows 安装程序
 
-    默认路径为：`%LOCALAPPDATA%\Programs\Julia x.y.z`
+  默认路径为：`%LOCALAPPDATA%\Programs\Julia x.y.z`
 
 命令结束时，将打开一个新的浏览器窗口，显示 Jupyter，如下面的屏幕截图所示：
 
@@ -13265,9 +13224,6 @@ Dict("c" => 2,"b" => 3,"a" => 5)
 字符串用于信息的文本表示；当没有其他结构能有效表示数据时，数据可以作为字符串呈现。Julia 字符串遵循 Unicode 规范，并使用 UTF-8 编码。但是，可以轻松地转换为其他编码。字符串也可以被视为字符的集合。在本章中，我们将介绍适用于字符串的方法及其应用。非标准字符串可以为自定义应用程序开发，同时它们继续支持 String 框架。正则表达式是另一个广泛用于文本模式匹配的重要概念。Julia 使用 PCRE 引擎进行正则表达式处理。最后，我们将了解如何为对象创建格式化输出，以输出到终端或文件系统。
 
 `Nothing` 默认不标记输出。当分号用作语句结束时，其行为类似于在分号末尾添加 `nothing`。因此不会打印任何输出。
-
-
-
 
 ## 代码示例：`collect_function`
 
@@ -13416,7 +13372,6 @@ julia> begin
 
 ```julia
 julia> s = 0;
-
 julia> for i = 1:2:10
            println(i)
            s = s + i
@@ -13426,7 +13381,6 @@ julia> for i = 1:2:10
 5
 7
 9
-
 julia> s
 25
 ```
@@ -13485,10 +13439,6 @@ area(x::T) where {T <: Shape} = area(HasAreaTrait(T), x)
 
 最后，我们必须确保 `area` 函数正确利用了 trait。
 
-
-
-
-
 # 函数式编程与 Julia 语言特性
 
 我们讨论了函数式编程的几个方面。对于有兴趣通过多种编程语言简洁地理解函数式编程概念的读者，可以参考 *Functional Thinking*。读者自然会想知道应该遵循命令式风格还是函数式风格。在这方面，Julia 是一种相当灵活的语言。虽然在许多地方你会发现声明式程序、递归函数、推导式或类似特性，但 Julia 并不强制规定任何特定的编程风格。该语言提供了同样有用的构造来进行命令式编程。有时不可变性可能导致中间变量分配增加，从而影响代码性能。在这种情况下，使用有副作用的函数可能是理想的选择。
@@ -13520,21 +13470,20 @@ attacks (generic function with 1 method)
 
 ### 设计准则
 
-*   **不要重载** `Base` **中针对定义良好的数据类型的方法**：以下代码将阐明这一想法。
+* **不要重载** `Base` **中针对定义良好的数据类型的方法**：以下代码将阐明这一想法。
 
-    ```julia
-    module MyModule
-    Base.:(*)(x::Symbol, y::Symbol) =
-    Symbol(string(x)*string(y))
-    end
-    ```
+```julia
+module MyModule
+Base.:(*)(x::Symbol, y::Symbol) = Symbol(string(x)*string(y))
+end
+```
 
-    ```julia
-    julia> :a*:b
-    :ab
-    ```
+```julia
+julia> :a*:b
+:ab
+```
 
-    前述代码不仅限于 `MyModule`。加载 `MyModule` 后，可以从任何地方访问它。这可能有风险，因为人们可能无意中更改了未由自己定义的类型的行为。与经典的面向对象语言不同，Julia 在数据隐藏、私有和公共区分方面相对灵活。因此，这些准则对于更好的系统设计是必要的。
+前述代码不仅限于 `MyModule`。加载 `MyModule` 后，可以从任何地方访问它。这可能有风险，因为人们可能无意中更改了未由自己定义的类型的行为。与经典的面向对象语言不同，Julia 在数据隐藏、私有和公共区分方面相对灵活。因此，这些准则对于更好的系统设计是必要的。
 
 ## 函数定义形式
 
@@ -13570,14 +13519,23 @@ julia> queens(8)
 (1, 5, 8, 2, 4, 7, 3)
 (1, 5, 8, 2, 7)
 (1, 5, 8, 2, 7, 3)
-(1, 5, 8, 2, 7, 3, 6)
-(1, 5, 8, 6)
-(1, 5, 8, 6, 3)
-(1, 5, 8, 6, 3, 7)
-(1, 5, 8, 6, 3, 7, 2)
-(1, 5, 8, 6, 3, 7, 2, 4)
-Final Positions: (4, 2, 7, 3, 6, 8, 5, 1)
 ```
+
+
+
+(1, 5, 8, 2, 7, 3, 6)
+
+(1, 5, 8, 6)
+
+(1, 5, 8, 6, 3)
+
+(1, 5, 8, 6, 3, 7)
+
+(1, 5, 8, 6, 3, 7, 2)
+
+(1, 5, 8, 6, 3, 7, 2, 4)
+
+Final Positions: (4, 2, 7, 3, 6, 8, 5, 1)
 
 要观察可变参数作为递归一部分的行为，可以在函数调用开头添加一条 `println` 语句。
 
@@ -13621,10 +13579,6 @@ Julia 中的分布式架构具有前几章讨论的与异步编程以及多线�
 
 **Step: 1**
 
-
-
-
-
 ## 回馈
 
 作为一个组织，您可能已经使用了开源技术。通过积极贡献直接回馈，是货币支付的一种替代方式。
@@ -13641,13 +13595,12 @@ Julia 运行时需要在程序首次执行时加载，并在执行完成时退�
 
 ```
 0.97246       0.245371
-
 1.00337       -0.0176268
 ```
 
 计算机科学家通常最专注于完善问题的这一部分。精心挑选的算法能为问题带来的收益，往往是任何针对不合适算法的调优所无法比拟的。每当代码性能不佳时，最好审视核心设计，了解是否采用了正确的算法。在设计阶段关注性能可显著降低返工成本。例如，*二分查找的复杂度为 O(log n)，而数组查找的复杂度为线性时间或 O(n)*。直观上似乎二分查找将始终优于线性查找。但考虑到现代处理器缓存和数组内存管理的效率，对较小的数组使用线性查找可能更高效。虽然 B 树是基于磁盘存储的数据库索引的选择；二叉树可能是内存数据库的首选数据结构。必须考虑完整的系统性能来选择合适的数据结构，而不仅仅是理论上的渐近时间复杂度或最坏情况性能。
 
-在本章中，读者将能够编写性能更好的代码。我们将了解基准测试工具并理解如何分析代码。Julia 代码生成是一个分阶段的过程，我们可以查看生成各阶段的代码，以此理解所进行的优化。最后，我们将回顾一些有助于用户编写高性能代码的模式和风格。
+在本章中，读者将能够编写性能更好的代码。我们将了解基准测试工具并理解如何分析代码。 Julia 代码生成是一个分阶段的过程，我们可以查看生成各阶段的代码，以此理解所进行的优化。最后，我们将回顾一些有助于用户编写高性能代码的模式和风格。
 
 在单线程的单处理器上运行多个应用程序并非真正的同时多任务处理。操作系统根据调度抢占任务，让处理器一次执行一个任务。用户感觉所有任务都在同时运行，而实际上它们只是在极短的时间间隔内执行并切换到下一个任务。在基于**图形用户界面 (GUI)** 的应用程序中，用户界面对用户输入的响应能力被赋予了高于后台任务完成执行的优先级。在单处理器系统上运行长时间计算密集型任务的多任务应用程序中，惯例做法是间歇性地处理 UI 事件以保持 UI 响应。这在 Windows 系统中称为**空闲循环处理**。这里优先考虑最佳响应时间而非原始执行速度。因此，单纯的代码执行速度可能并非所有代码优化项目的目标。
 
@@ -13665,7 +13618,7 @@ Julia 运行时需要在程序首次执行时加载，并在执行完成时退�
 
 当使用 `$$e` 代替 `$e` 时，将计算 `eval(eval(:e))`，因此计算出的值 3 被放置在 `quote…end` 之间。
 
-```
+```julia
 julia> macro sayhello(x::Int)
 ```
 
@@ -13689,12 +13642,9 @@ julia> macro sayhello(x::Int)
 
 随机数在数据科学中被广泛用于初始化数据。它们也可用于为各种概率分布创建样本。加密安全的随机数也是加密和解密算法的要求。以下是一些示例：
 
-
-
-
 由于局部记录器在 `with_logger` 代码块内覆盖了当前记录器，因此当前记录器不同于全局记录器。然而，在 `with_logger` 代码块外部，`current_logger()` 与 `global_logger()` 相同。`SimpleLogger` 提供了一个非常简单的接口，用于覆盖日志流以及要在记录器中显示的消息级别。日志事件还可以包含模块、消息标识符、文件、行号、日志消息显示的最大次数以及作为日志一部分显示的异常。
 
-```
+```julia
 julia> p = Month(3) + Day(10) + Hour(15)
 ```
 
@@ -13710,7 +13660,7 @@ julia> p = Month(3) + Day(10) + Hour(15)
 
 可以看出，变量名不能以数字开头。变量名可以包含 Unicode 字符。变量命名有诸多限制，作者建议查阅 Julia 文档以详细了解变量命名规范。Julia 中的关键字不能用作变量。Julia 的关键字很少。其中一些包括：`baremodule`、`begin`、`break`、`catch`、`const`、`continue`、`do`、`else`、`elseif`、`end`、`export`、`false`、`finally`、`for`、`function`、`global`、`if`、`import`、`let`、`local`、`macro`、`module`、`quote`、`return`、`struct`、`true`、`try`、`using`、`while`。Julia 还有多词关键字（如 `mutable struct`、`abstract type` 等）和中缀运算符关键字（如 `in`、`isa` 等）。作者建议详细查阅语言文档中的关键字以获得更详尽的理解。
 
-```
+```julia
 julia> typeof(1.0), typeof(1e0), typeof(1.e4) (Float64, Float64, Float64)
 ```
 

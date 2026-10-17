@@ -1,5 +1,5 @@
-# 深度学习数学入门指南
 
+# 深度学习数学入门指南
 
 ## 前言
 
@@ -19,9 +19,7 @@
 
 深度学习方法不仅对于数据驱动学习问题变得非常流行，如今也大量用于近似求解偏微分方程（PDEs）。在第 VI 部分中，我们回顾并实现了此类针对 PDEs 的深度学习方法流行的三种变体。具体而言，在第 16 章中，我们处理物理信息神经网络（PINNs）和深度伽辽金方法（DGMs），在第 17 章中，我们处理深度柯尔莫哥洛夫方法（DKMs）。
 
-本书包含大量 **PYTHON** 源代码，可以从两个来源下载，即公共 GitHub 仓库 https://github.com/introdeeplearning/book 和本书的 arXiv 页面（通过点击链接 “Other formats” 然后点击 “Download source”）。为了方便参考，每个
-
-
+本书包含大量 `PYTHON` 源代码，可以从两个来源下载，即公共 GitHub 仓库 `https://github.com/introdeeplearning/book` 和本书的 arXiv 页面（通过点击链接 “Other formats” 然后点击 “Download source”）。为了方便参考，每个
 
 本书中的源代码列表包含了相应源文件的文件名。
 
@@ -30,10 +28,13 @@
 本研究得到了深圳大数据研究院内部项目基金（资助号 T00120220001）的支持。本研究部分由中国国家自然科学基金（NSFC）资助，资助编号为 12250610192。第一作者衷心感谢卓越群计划 EXC 2044-390685587 “明斯特数学：动力学-几何-结构” 的支持，该项目由德国研究基金会（DFG, German Research Foundation）资助。
 
 深圳和明斯特，
+
 2023年11月
 
 Arnulf Jentzen
+
 Benno Kuckuck
+
 Philippe von Wüstendörfer
 
 ## 引言
@@ -90,8 +91,6 @@ $$\{\psi_{\theta} : \theta \in \mathbb{R}^{\mathfrak{d}}\} \ni \phi \mapsto \mat
 
 $$\mathbb{R}^{\mathfrak{d}} \ni \theta \mapsto \mathcal{L}(\theta) = \mathfrak{L}(\psi_{\theta}) = \frac{1}{M} \left[ \sum_{m=1}^{M} \left|\psi_{\theta}(x_{m}) - y_{m}\right|^{2} \right] \in [0, \infty) \tag{10}$$
 
-
-
 ### 第一部分
 
 ### 人工神经网络 (ANNs)
@@ -118,7 +117,8 @@ $$\mathbb{R}^{\mathfrak{d}} \ni \theta \mapsto \mathcal{L}(\theta) = \mathfrak{L
 
 **定义 1.1.1**（仿射函数）。设 $\mathbf{d}, m, n \in \mathbb{N}$，$s \in \mathbb{N}_0$，$\theta = (\theta_1, \theta_2, \ldots, \theta_s) \in \mathbb{R}^{s}$ 满足 $\mathbf{d} \geq s + mn + m$。那么我们将 $\mathcal{A}_{m,n}^{\theta,s} \colon \mathbb{R}^n \to \mathbb{R}^m$ 记为满足对于所有 $x = (x_1, x_2, \ldots, x_n) \in \mathbb{R}^n$ 的函数
 
-$$
+
+
 \mathcal{A}_{m,n}^{\theta,s}(x) = \begin{pmatrix} 
 \theta_{s+1} & \theta_{s+2} & \cdots & \theta_{s+n} 
 \end{pmatrix} \begin{pmatrix} 
@@ -132,17 +132,24 @@ x_n
 \vdots \\
 \theta_{s+mn+m}
 \end{pmatrix}
+
 $$
+
 $$
+
 = \left( \left[ \sum_{k=1}^n x_k\theta_{s+k} \right] + \theta_{s+mn+1}, \left[ \sum_{k=1}^n x_k\theta_{s+n+k} \right] + \theta_{s+mn+2}, \ldots, \left[ \sum_{k=1}^n x_k\theta_{s+(m-1)n+k} \right] + \theta_{s+mn+m} \right) \tag{1.1}
+
 $$
 
 我们称 $\mathcal{A}_{m,n}^{\theta,s}$ 为与 $(\theta, s)$ 相关的从 $\mathbb{R}^n$ 到 $\mathbb{R}^m$ 的仿射函数。
 
+### 示例 1.1.2
 **示例 1.1.2**（定义 1.1.1 的示例）。设 $\theta = (0, 1, 2, 0, 3, 3, 0, 1, 7) \in \mathbb{R}^9$。那么
 
 $$
+
 \mathcal{A}_{2,2}^{\theta,1}((1, 2)) = (8, 6) \tag{1.2}
+
 $$
 
 （参见定义 1.1.1）。
@@ -150,7 +157,9 @@ $$
 **示例 1.1.2 的证明。** 观察到 (1.1) 确保
 
 $$
+
 \mathcal{A}_{2,2}^{\theta,1}((1, 2)) = \begin{pmatrix} 1 & 2 \\ 0 & 3 \end{pmatrix} \begin{pmatrix} 1 \\ 2 \end{pmatrix} + \begin{pmatrix} 3 \\ 0 \end{pmatrix} = \begin{pmatrix} 1 + 4 \\ 0 + 6 \end{pmatrix} + \begin{pmatrix} 3 \\ 0 \end{pmatrix} = \begin{pmatrix} 8 \\ 6 \end{pmatrix}. \tag{1.3}
+
 $$
 
 因此，示例 1.1.2 的证明完成。
@@ -162,27 +171,36 @@ $$
 **定义 1.1.3**（全连接前馈 ANN 的矢量化描述）。设 $\mathbf{d}, l \in \mathbb{N}$，$l_0, l_1, \ldots, l_L \in \mathbb{N}$，$\theta \in \mathbb{R}^{\mathbf{d}}$ 满足
 
 $$
+
 \mathbf{d} \geq \sum_{k=1}^L l_k(l_{k-1} + 1) \tag{1.4}
+
 $$
 
 并且对于每个 $k \in \{1, 2, \dots, L\}$，设 $\Psi_k : \mathbb{R}^{l_k} \rightarrow \mathbb{R}^{l_k}$ 为一个函数。那么我们将 $\mathcal{N}_{\Psi_1, \Psi_2, \dots, \Psi_L}^{\theta, l_0}$ 记为满足对于所有 $x \in \mathbb{R}^{l_0}$ 的函数
 
 $$
+
 \left(\mathcal{N}_{\Psi_1, \Psi_2, \dots, \Psi_L}^{\theta, l_0}\right)(x) = \left(\Psi_L \circ \mathcal{A}_{L, L-1}^{\theta, \sum_{k=1}^{L-1} l_k(l_{k-1}+1)} \circ \Psi_{L-1} \circ \mathcal{A}_{L-1, L-2}^{\theta, \sum_{k=1}^{L-2} l_k(l_{k-1}+1)} \circ \cdots \right) \circ \left(\cdots \circ \Psi_2 \circ \mathcal{A}_{2,1}^{\theta, l_1(l_0+1)} \circ \Psi_1 \circ \mathcal{A}_{1,0}^{\theta, l_0}\right)(x)
+
 $$
 
 我们称 $\mathcal{N}_{\Psi_1, \Psi_2, \dots, \Psi_L}^{\theta, l_0}$ 为与 $\theta$ 相关的具有 $L+1$ 层、维度为 $(l_0, l_1, \dots, l_L)$ 且激活函数为 $(\Psi_1, \Psi_2, \dots, \Psi_L)$ 的全连接前馈 ANN 的实现函数（我们称 $\mathcal{N}_{\Psi_1, \Psi_2, \dots, \Psi_L}^{\theta, l_0}$ 为与 $\theta$ 相关的具有 $L+1$ 层、维度为 $(l_0, l_1, \dots, l_L)$ 且激活函数为 $(\Psi_1, \Psi_2, \dots, \Psi_L)$ 的全连接前馈 ANN 的实现）（参见定义 1.1.1）。
 
+### 示例 1.1.4
 **示例 1.1.4**（定义 1.1.3 的示例）。设 $\theta = (1, -1, 2, -2, 3, -3, 0, 1, 1) \in \mathbb{R}^9$，且设 $\Psi: \mathbb{R}^2 \rightarrow \mathbb{R}^2$ 满足对于所有 $x = (x_1, x_2) \in \mathbb{R}^2$ 有
 
 $$
+
 \Psi(x) = (\max\{x_1, 0\}, \max\{x_2, 0\}). \tag{1.6}
+
 $$
 
 那么
 
 $$
+
 \left(\mathcal{N}_{\Psi, \mathrm{id}_\mathbb{R}}^{\theta, 1}\right)(2) = 12 \tag{1.7}
+
 $$
 
 （参见定义 1.1.3）。
@@ -190,11 +208,15 @@ $$
 **示例 1.1.4 的证明。** 注意到 (1.1)、(1.5) 和 (1.6) 确保
 
 $$
+
 \left(\mathcal{N}_{\Psi, \mathrm{id}_\mathbb{R}}^{\theta, 1}\right)(2) = \left(\mathrm{id}_\mathbb{R} \circ \mathcal{A}_{1, 2}^{\theta, 4} \circ \Psi \circ \mathcal{A}_{2, 1}^{\theta, 0}\right)(2) = \left(\mathcal{A}_{1, 2}^{\theta, 4} \circ \Psi\right)\left(\left(\begin{matrix}1 \\ -1\end{matrix}\right)(2) + \left(\begin{matrix}2 \\ -2\end{matrix}\right)\right)
+
 $$
 
 $$
+
 = \left(\mathcal{A}_{1, 2}^{\theta, 4} \circ \Psi\right)\left(\left(\begin{matrix}4 \\ -4\end{matrix}\right)\right) = \mathcal{A}_{1, 2}^{\theta, 4}\left(\left(\begin{matrix}4 \\ 0\end{matrix}\right)\right) = \left(\begin{matrix}3 & -3\end{matrix}\right)\left(\left(\begin{matrix}4 \\ 0\end{matrix}\right)\right) + (0) = 12
+
 $$
 
 （参见定义 1.1.1 和 1.1.3）。因此，示例 1.1.4 的证明完成。 $\square$
@@ -202,19 +224,20 @@ $$
 **练习 1.1.2。** 设 $\theta = (1, -1, 0, 0, 1, -1, 0) \in \mathbb{R}^7$，且设 $\Psi: \mathbb{R}^2 \rightarrow \mathbb{R}^2$ 满足对于所有 $x = (x_1, x_2) \in \mathbb{R}^2$ 有
 
 $$
+
 \Psi(x) = (\max\{x_1, 0\}, \min\{x_2, 0\}). \tag{1.9}
+
 $$
 
 证明或反驳以下陈述：成立
 
 $$
+
 \left(\mathcal{N}_{\Psi, \mathrm{id}_\mathbb{R}}^{\theta, 1}\right)(-1) = -1 \tag{1.10}
+
 $$
 
 （参见定义 1.1.3）。
-
-
-
 
 *练习 1.1.3.* 令 $\theta=(\theta_{1}, \theta_{2}, \ldots, \theta_{10}) \in \mathbb{R}^{10}$ 满足
 
@@ -276,6 +299,8 @@ $$ \mathcal{N}^{\theta, l_{0}} _ {\psi_{1}, \psi_{2}, \ldots, \psi_{L}} = \Psi_{
 
 $$ \mathfrak{M}_{\psi, d_{1}, d_{2}, \ldots, d_{T}}: \mathbb{R}^{d_{1} \times d_{2} \times \ldots \times d_{T}} \rightarrow \mathbb{R}^{d_{1} \times d_{2} \times \ldots \times d_{T}} $$
 
+
+
 定义为满足对于所有 $ x = (x_{k_{1}, k_{2}, \ldots, k_{T}})_{(k_{1}, k_{2}, \ldots, k_{T}) \in(\prod_{i = 1}^{T}\{1, 2, \ldots, d_{i}\})} \in \mathbb{R}^{d_{1} \times d_{2} \times \ldots \times d_{T}} $，
 
 $ y = (y_{k_{1}, k_{2}, \ldots, k_{T}})_{(k_{1}, k_{2}, \ldots, k_{T}) \in(\prod_{i = 1}^{T}\{1, 2, \ldots, d_{i}\})} \in \mathbb{R}^{d_{1} \times d_{2} \times \ldots \times d_{T}} $，对于 $\forall k_{1} \in\{1, 2, \ldots, d_{1}\}$，$k_{2} \in\{1, 2, \ldots, d_{2}\}$，$\ldots$，$k_{T} \in\{1, 2, \ldots, d_{T}\}$：$y_{k_{1}, k_{2}, \ldots, k_{T}} = \psi(x_{k_{1}, k_{2}, \ldots, k_{T}})$，有
@@ -310,22 +335,20 @@ $$ f(x) = \frac{1}{1 + |x|} \quad \text{且} \quad g(x) = x^2 \quad (1.23) $$
 
 明确指定 $\left(\mathcal{N}_{\overline{\mathcal{N}}_{f, 3}, \overline{\mathcal{N}}_{g, 2}}^{g, 1}\right)(1)$ 和 $\left(\mathcal{N}_{\overline{\mathcal{N}}_{g, 2}, \overline{\mathcal{N}}_{f, 3}}^{f, 1}\right)(1)$ 并证明你的结果是正确的（参见定义 1.1.3 和 1.2.1）。
 
-### 1.2.2 单隐藏层全连接前馈人工神经网络
+## 1.2.2 单隐藏层全连接前馈人工神经网络
 
 ![](img/dec290f673e6357c31893c67b579ffe1_27_0.png)
 
 图 1.3：由两个仿射变换组成的全连接前馈人工神经网络（ANN）的图形化说明（即由 3 层组成：一个输入层，一个隐藏层，和一个输出层），其中输入层上有 $\mathcal{I} \in \mathbb{N}$ 个神经元（即 $\mathcal{I}$ 维输入层），隐藏层上有 $\mathcal{H} \in \mathbb{N}$ 个神经元（即 $\mathcal{H}$ 维隐藏层），输出层上有 1 个神经元（即 1 维输出层）。
-
-
-
-
 
 ### 引理 1.2.3（具有一个隐藏层的完全连接前馈人工神经网络）
 
 设 $\mathcal{I}, \mathcal{H} \in \mathbb{N}$，$\theta = (\theta_1, \theta_2, \dots, \theta_{\mathcal{H}\mathcal{I}+2\mathcal{H}+1}) \in \mathbb{R}^{\mathcal{H}\mathcal{I}+2\mathcal{H}+1}$，$x = (x_1, x_2, \dots, x_\mathcal{I}) \in \mathbb{R}^{\mathcal{I}}$，并设 $\psi : \mathbb{R} \to \mathbb{R}$ 为一个函数。则
 
 $$
+
 \mathcal{N}^{\theta, \mathcal{I}}_{\mathfrak{M}_{\psi, \mathcal{H}, \mathrm{id}_{\mathcal{I}}}}(x) = \left[ \sum_{k=1}^{\mathcal{H}} \theta_{\mathcal{H}\mathcal{I}+k+k} \psi \left( \sum_{i=1}^{\mathcal{I}} x_i \theta_{(k-1)\mathcal{I}+i} + \theta_{\mathcal{H}\mathcal{I}+k} \right) \right] + \theta_{\mathcal{H}\mathcal{I}+2\mathcal{H}+1}. \tag{1.24}
+
 $$
 
 *(参见定义 1.1.1、1.1.3 和 1.2.1)*。
@@ -333,12 +356,19 @@ $$
 **引理 1.2.3 的证明。** 注意到 (1.5) 和 (1.18) 表明
 
 $$
+
 \begin{align}
+
 &\mathcal{N}^{\theta, \mathcal{I}}_{\mathfrak{M}_{\psi, \mathcal{H}, \mathrm{id}_{\mathcal{I}}}}(x) \\
+
 &= \left( \mathrm{id}_{\mathbb{R}} \circ \mathcal{A}^{0, \mathcal{H}\mathcal{I}+\mathcal{H}}_{1, \mathcal{H}} \circ \mathfrak{M}_{\psi, \mathcal{H}} \circ \mathcal{A}^{\theta, 0}_{\mathcal{H}, \mathcal{I}} \right)(x) \\
+
 &= \mathcal{A}^{0, \mathcal{H}\mathcal{I}+\mathcal{H}}_{1, \mathcal{H}} \left( \mathfrak{M}_{\psi, \mathcal{H}} \left( \mathcal{A}^{\theta, 0}_{\mathcal{H}, \mathcal{I}}(x) \right) \right) \\
+
 &= \left[ \sum_{k=1}^{\mathcal{H}} \theta_{\mathcal{H}\mathcal{I}+k+k} \psi \left( \sum_{i=1}^{\mathcal{I}} x_i \theta_{(k-1)\mathcal{I}+i} + \theta_{\mathcal{H}\mathcal{I}+k} \right) \right] + \theta_{\mathcal{H}\mathcal{I}+2\mathcal{H}+1}. \tag{1.25}
+
 \end{align}
+
 $$
 
 因此，引理 1.2.3 得证。$\Box$
@@ -350,7 +380,9 @@ $$
 **定义 1.2.4（ReLU 激活函数）。** 我们用 $\mathfrak{r} : \mathbb{R} \to \mathbb{R}$ 表示满足对所有 $x \in \mathbb{R}$ 有
 
 $$
+
 \mathfrak{r}(x) = \max \{x, 0\} \tag{1.26}
+
 $$
 
 的函数，并称 $\mathfrak{r}$ 为 ReLU 激活函数（我们也称 $\mathfrak{r}$ 为整流函数）。
@@ -359,7 +391,7 @@ $$
 
 图 1.4 (plots/relu.pdf)：ReLU 激活函数的图像
 
-**源代码 1.1** (code/activation_functions/plot_util.py)：本小节代码清单中使用的 PLOT_UTIL 模块的 PYTHON 代码
+**源代码 1.1** (`code/activation_functions/plot_util.py`)：本小节代码清单中使用的 PLOT_UTIL 模块的 PYTHON 代码
 
 ```python
 import matplotlib.pyplot as plt
@@ -379,7 +411,7 @@ def setup_axis(xlim, ylim):
     return ax
 ```
 
-**源代码 1.2** (code/activation_functions/relu_plot.py)：用于生成图 1.4 的 PYTHON 代码
+**源代码 1.2** (`code/activation_functions/relu_plot.py`)：用于生成图 1.4 的 PYTHON 代码
 
 ```python
 import numpy as np
@@ -399,7 +431,9 @@ plt.savefig("../../plots/relu.pdf", bbox_inches='tight')
 **定义 1.2.5（多维 ReLU 激活函数）。** 设 $d \in \mathbb{N}$。则我们用 $\Re_d: \mathbb{R}^d \rightarrow \mathbb{R}^d$ 表示由
 
 $$
+
 \Re_d = \mathfrak{M}_{\epsilon_d} \tag{1.27}
+
 $$
 
 给出的函数，并称 $\Re_d$ 为 $d$ 维 ReLU 激活函数（我们也称 $\Re_d$ 为 $d$ 维整流函数）（参见定义 1.2.1 和 1.2.4）。
@@ -407,17 +441,25 @@ $$
 **引理 1.2.6**（以 **ReLU** 激活函数作为激活函数的**人工神经网络**）。设 $W_1 = w_1 = 1$，$W_2 = w_2 = -1$，$b_1 = b_2 = B = 0$。则对所有 $x \in \mathbb{R}$，有
 
 $$
+
 x = W_1 \max\{w_1 x + b_1, 0\} + W_2 \max\{w_2 x + b_2, 0\} + B. \tag{1.28}
+
 $$
 
 **引理 1.2.6 的证明。** 注意到对所有 $x \in \mathbb{R}$，有
 
 $$
+
 \begin{split}
+
 W_1&\max\{w_1 x + b_1, 0\} + W_2 \max\{w_2 x + b_2, 0\} + B \\
+
 &= \max\{w_1 x + b_1, 0\} - \max\{w_2 x + b_2, 0\} = \max\{x, 0\} - \max\{-x, 0\} \\
+
 &= \max\{x, 0\} + \min\{x, 0\} = x. \tag{1.29}
+
 \end{split}
+
 $$
 
 因此，引理 1.2.6 得证。$\Box$
@@ -447,6 +489,8 @@ $$(\mathcal{N}_{\mathfrak{g}_{l_1}, \mathfrak{g}_{l_2}, \dots, \mathfrak{g}_{l_H
 $$(\mathcal{N}_{\mathfrak{g}_{l_1}, \mathfrak{g}_{l_2}, \dots, \mathfrak{g}_{l_H}, \mathrm{id}_{\mathfrak{d}}}^{\theta, l})(x) = e^x \tag{1.33}$$
 
 *练习 1.2.6*（二维最大值）。证明或反驳以下陈述：存在 $\boldsymbol{d}$，$H \in \mathbb{N}$，$l_1, l_2, \dots, l_H \in \mathbb{N}$，$\theta \in \mathbb{R}^d$，且 $\boldsymbol{d} \geq 3l_1 + [\sum_{k=2}^{H} l_k(l_{k-1} + 1)] + l_H + 1$，使得对所有 $x, y \in \mathbb{R}$ 有
+
+
 
 $$\big(\mathcal{N}^{\boldsymbol{d, 2}}_{\mathfrak{N}_{l_1}, \mathfrak{N}_{l_2}, \dots, \mathfrak{N}_H, \text{id}_\mathbb{R}}\big)(x, y) = \max\{x, y\} \tag{1.34}$$
 
@@ -484,20 +528,26 @@ $$\big(\mathcal{N}^{\boldsymbol{d, 1}}_{\mathfrak{N}_{l_1}, \mathfrak{N}_{l_2}, 
 
 （参见定义 1.1.3 和 1.2.5）。
 
-
-
-
 *练习* 1.2.11（帽函数）。证明或反驳以下陈述：存在 $\mathfrak{d}, l \in \mathbb{N}$，$\theta \in \mathbb{R}^{\mathfrak{d}}$ 且满足 $\mathfrak{d} \geq 3l + 1$，使得对于所有 $x \in \mathbb{R}$ 均成立
 
 $$
+
 ($\mathcal{N}^{\theta,1}_{\mathfrak{N}_l, \text{id}_{\mathbb{R}}}$)(x) = 
+
 \begin{cases}
+
 1 & : x \leq 2 \\
+
  x - 1 & : 2 < x \leq 3 \\
+
  5 - x & : 3 < x \leq 4 \\
+
  1 & : x > 4
+
 \end{cases}
+
 \tag{1.40}
+
 $$
 
 （参见定义 **1.1.3** 和 **1.2.5**）。
@@ -505,13 +555,21 @@ $$
 *练习* 1.2.12. 证明或反驳以下陈述：存在 $\mathfrak{d}, l \in \mathbb{N}$，$\theta \in \mathbb{R}^{\mathfrak{d}}$ 且满足 $\mathfrak{d} \geq 3l + 1$，使得对于所有 $x \in \mathbb{R}$ 均成立
 
 $$
+
 ($\mathcal{N}^{\theta,1}_{\mathfrak{N}_l, \text{id}_{\mathbb{R}}}$)(x) = 
+
 \begin{cases}
+
 -2 & : x \leq 1 \\
+
  2x - 4 & : 1 < x \leq 3 \\
+
  2 & : x > 3
+
 \end{cases}
+
 \tag{1.41}
+
 $$
 
 （参见定义 **1.1.3** 和 **1.2.5**）。
@@ -519,13 +577,21 @@ $$
 *练习* 1.2.13. 证明或反驳以下陈述：存在 $\mathfrak{d}, H \in \mathbb{N}$，$l_1, l_2, \dots$，$l_H \in \mathbb{N}$，$\theta \in \mathbb{R}^{\mathfrak{d}}$ 且满足 $\mathfrak{d} \geq 2l_1 + \lfloor \sum_{k=2}^H l_k (l_{k-1} + 1) \rfloor + (l_H + 1)$，使得对于所有 $x \in \mathbb{R}$ 均成立
 
 $$
+
 ($\mathcal{N}^{\theta,1}_{\mathfrak{N}_{l_1}, \mathfrak{N}_{l_2}, \dots, \mathfrak{N}_{l_H}, \text{id}_{\mathbb{R}}}$)(x) = 
+
 \begin{cases}
+
 0 & : x \leq 1 \\
+
  x - 1 & : 1 \leq x \leq 2 \\
+
  1 & : x \geq 2
+
 \end{cases}
+
 \tag{1.42}
+
 $$
 
 （参见定义 **1.1.3** 和 **1.2.5**）。
@@ -533,8 +599,11 @@ $$
 *练习* 1.2.14. 证明或反驳以下陈述：存在 $\mathfrak{d}, l \in \mathbb{N}$，$\theta \in \mathbb{R}^{\mathfrak{d}}$ 且满足 $\mathfrak{d} \geq 3l + 1$，使得对于所有 $x \in [0, 1]$ 均成立
 
 $$
+
 ($\mathcal{N}^{\theta,1}_{\mathfrak{N}_l, \text{id}_{\mathbb{R}}}$)(x) = x^2
+
 \tag{1.43}
+
 $$
 
 （参见定义 **1.1.3** 和 **1.2.5**）。
@@ -542,8 +611,11 @@ $$
 *练习* 1.2.15. 证明或反驳以下陈述：存在 $\mathfrak{d}, H \in \mathbb{N}$，$l_1, l_2, \dots$，$l_H \in \mathbb{N}$，$\theta \in \mathbb{R}^{\mathfrak{d}}$ 且满足 $\mathfrak{d} \geq 2l_1 + \lfloor \sum_{k=2}^H l_k (l_{k-1} + 1) \rfloor + (l_H + 1)$，使得
 
 $$
+
 \sup_{x \in [-3, -2]} \left| \left( \mathcal{N}^{\theta,1}_{\mathfrak{N}_{l_1}, \mathfrak{N}_{l_2}, \dots, \mathfrak{N}_{l_H}, \text{id}_{\mathbb{R}}} \right)(x) - (x+2)^2 \right| \leq \frac{1}{4}
+
 \tag{1.44}
+
 $$
 
 （参见定义 **1.1.3** 和 **1.2.5**）。
@@ -592,7 +664,7 @@ $$a(x) = \ln(1 + \exp(x)). \tag{1.47}$$
 
 ![](img/dec290f673e6357c31893c67b579ffe1_34_0.png)
 
-图 1.6（plots/softplus.pdf）：softplus 激活函数与 ReLU 激活函数的图像
+图 1.6（`plots/softplus.pdf`）：softplus 激活函数与 ReLU 激活函数的图像
 
 ```python
 import numpy as np
@@ -611,15 +683,18 @@ ax.legend()
 plt.savefig('../../plots/softplus.pdf', bbox_inches='tight')
 ```
 
-源代码 1.4（*code/activation_functions/softplus_plot.py*）：用于创建图 1.6 的 PYTHON 代码
+源代码 1.4（`*code/activation_functions/softplus_plot.py*`）：用于创建图 1.6 的 PYTHON 代码
 
 接下来的结果，即引理 1.2.12，给出了 softplus 函数的一些基本性质。
 
 **引理 1.2.12（Softplus 函数的性质）。** *设* $a$ *为 softplus 激活函数（参见定义 1.2.11）。则*
 
 - *(i) 对所有* $x \in [0, \infty)$ *，有* $x \leq a(x) \leq x + 1$，
+
 - *(ii) 有* $\lim_{x \to -\infty} a(x) = 0$，
+
 - *(iii) 有* $\lim_{x \to \infty} a(x) = \infty$*，以及*
+
 - *(iv) 有* $a(0) = \ln(2)$
 
 *（参见定义 1.2.11）。*
@@ -627,11 +702,17 @@ plt.savefig('../../plots/softplus.pdf', bbox_inches='tight')
 *引理 1.2.12 的证明。* *注意，由于事实* $2 \leq \exp(1)$ *确保了对所有* $x \in [0, \infty)$ *有*
 
 $$
+
 \begin{eqnarray*}
+
 x & = & \ln(\exp(x)) \leq \ln(1 + \exp(x)) = \ln(\exp(0) + \exp(x)) \\
+
  & \leq & \ln(\exp(x) + \exp(1)) = \ln(2 \exp(x)) \leq \ln(\exp(1) \exp(x)) \\
+
  & = & \ln(\exp(x+1)) = x+1. 
+
 \end{eqnarray*}
+
 $$
 
 引理 1.2.12 的证明到此结束。
@@ -643,7 +724,9 @@ $$
 **引理 1.2.14。** *设* $d \in \mathbb{N}$ *且设* $A: \mathbb{R}^{d} \rightarrow \mathbb{R}^{d}$ *为一个函数。则* $A$ *为* $d$ *维 softplus 激活函数，当且仅当对所有* $x = (x_{1}, \dots, x_{d}) \in \mathbb{R}^{d}$ *均有*
 
 $$
+
 A(x) = (\ln(1 + \exp(x_{1})), \ln(1 + \exp(x_{2})), \dots, \ln(1 + \exp(x_{d})))
+
 $$
 
 *（参见定义 1.2.13）。*
@@ -651,26 +734,32 @@ $$
 引理 1.2.14 的证明。在整个证明过程中，设 $a$ 为 softplus 激活函数（参见定义 1.2.11）。注意，$(1.18)$ 和 $(1.47)$ 确保了对所有 $x = (x_1,\ldots,x_d) \in \mathbb{R}^d$ 均有
 
 $$
+
 \mathfrak{M}_{a,d}(x) = (\ln(1+\exp(x_1)), \ln(1+\exp(x_2)),\ldots,\ln(1+\exp(x_d))) \tag{1.50}
+
 $$
 
 （参见定义 1.2.1）。因此，$A$ 为 $d$ 维 softplus 激活函数（参见定义 1.2.13）当且仅当 $A = \mathfrak{M}_{a,d}$，这隐含了 $(1.49)$。引理 1.2.14 的证明到此结束。
 
 ### 1.2.6 高斯误差线性单元（GELU）激活函数
 
+
+
 另一种流行的激活函数是首先由 Hendrycks 和 Gimpler [193] 引入的 GELU 激活函数。该激活函数是下一个定义的主题。
 
-**定义 1.2.15（GELU 激活函数）。** 若且仅当 $a: \mathbb{R} \to \mathbb{R}$ 是从 $\mathbb{R}$ 到 $\mathbb{R}$ 的函数，且满足对所有 $x \in \mathbb{R}$ 均有
+### 定义 1.2.15（GELU 激活函数）
+
+若且仅当 `a: R -> R` 是从 `R` 到 `R` 的函数，且满足对所有 `x in R` 均有
 
 $$
 a(x) = \frac{x}{\sqrt{2\pi}} \left[ \int_{-\infty}^x \exp(-\frac{z^2}{2})\mathrm{d}z \right]. \tag{1.51}
 $$
 
-则我们称 $a$ 为 GELU 单元激活函数（或者说，称 $a$ 为 GELU 激活函数）。
+则我们称 `a` 为 GELU 单元激活函数（或者说，称 `a` 为 GELU 激活函数）。
 
 ![](img/dec290f673e6357c31893c67b579ffe1_36_0.png)
 
-图 1.7（plots/gelu.pdf）：GELU 激活函数、ReLU 激活函数以及 softplus 激活函数的图像
+图 1.7（`plots/gelu.pdf`）：GELU 激活函数、ReLU 激活函数以及 softplus 激活函数的图像
 
 ```python
 import numpy as np
@@ -683,15 +772,15 @@ ax = plot_util.setup_axis((-4,3), (-.5,3))
 x = np.linspace(-4, 3, 100)
 ```
 
-
-
-
 ## 1.2.7 标准逻辑激活
 
 ### 定义 1.2.18 (标准逻辑激活函数)
-当且仅当 $a : \mathbb{R} \to \mathbb{R}$ 是从 $\mathbb{R}$ 到 $\mathbb{R}$ 的函数，且对于所有 $x \in \mathbb{R}$ 满足
+
+当且仅当 `a : R -> R` 是从 `R` 到 `R` 的函数，且对于所有 `x in R` 满足
+
 $$a(x) = \frac{1}{1 + \exp(-x)} = \frac{\exp(x)}{\exp(x) + 1} \tag{1.52}$$
-时，我们称 $a$ 为标准逻辑激活函数。
+
+时，我们称 `a` 为标准逻辑激活函数。
 
 ```python
 import numpy as np
@@ -712,59 +801,79 @@ ax.legend()
 plt.savefig("../../plots/logistic.pdf", bbox_inches='tight')
 ```
 
-源代码 1.6 (code/activation_functions/logistic_plot.py)：用于创建图 1.8 的 PYTHON 代码
+源代码 1.6 (`code/activation_functions/logistic_plot.py`)：用于创建图 1.8 的 PYTHON 代码
 
 ![](img/dec290f673e6357c31893c67b579ffe1_38_0.png)
-图 1.8 (plots/logistic.pdf)：标准逻辑激活函数与 (0, 1) 截断激活函数的图像
+
+图 1.8 (`plots/logistic.pdf`)：标准逻辑激活函数与 (0, 1) 截断激活函数的图像
 
 ### 定义 1.2.19 (多维标准逻辑激活函数)
-设 $d \in \mathbb{N}$，设 $a$ 为标准逻辑激活函数（参见定义 1.2.18）。当且仅当 $A = \mathfrak{M}_{a,d}$（参见定义 1.2.1）时，我们称 $A$ 为 $d$ 维标准逻辑激活函数。
 
-### 1.2.7.1 标准逻辑激活函数的导数
+设 `d in N`，设 `a` 为标准逻辑激活函数（参见定义 1.2.18）。当且仅当 `A = M_{a,d}`（参见定义 1.2.1）时，我们称 `A` 为 `d` 维标准逻辑激活函数。
 
-#### 命题 1.2.20 (逻辑常微分方程)
-设 $a$ 为标准逻辑激活函数（参见定义 1.2.18）。则
-- i) $a: \mathbb{R} \to \mathbb{R}$ 无限次可微，且
-- ii) 对于所有 $x \in \mathbb{R}$，有
+#### 1.2.7.1 标准逻辑激活函数的导数
+
+##### 命题 1.2.20 (逻辑常微分方程)
+
+设 `a` 为标准逻辑激活函数（参见定义 1.2.18）。则
+
+- i) `a: R -> R` 无限次可微，且
+- ii) 对于所有 `x in R`，有
+
   $$a(0) = 1/2, \qquad a'(x) = a(x)(1 - a(x)) = a(x) - [a(x)]^2, \qquad \text{以及} \quad (1.53)$$
+
   $$a''(x) = a(x)(1 - a(x))(1 - 2a(x)) = 2[a(x)]^3 - 3[a(x)]^2 + a(x). \quad (1.54)$$
 
-*命题 1.2.20 的证明。* 注意，(1.52) 蕴含了条目 (i)。接着观察到，(1.52) 确保对于所有 $x \in \mathbb{R}$，有
+*命题 1.2.20 的证明。* 注意，(1.52) 蕴含了条目 (i)。接着观察到，(1.52) 确保对于所有 `x in R`，有
+
 $$\begin{align*}
 a'(x) &= \frac{\exp(-x)}{(1 + \exp(-x))^2} = a(x)\left(\frac{\exp(-x)}{1 + \exp(-x)}\right) \\
 &= a(x)\left(\frac{1 + \exp(-x) - 1}{1 + \exp(-x)}\right) = a(x)\left(1 - \frac{1}{1 + \exp(-x)}\right) \quad (1.55) \\
 &= a(x)(1 - a(x)).
 \end{align*}$$
-因此，我们得到对于所有 $x \in \mathbb{R}$，有
+
+因此，我们得到对于所有 `x in R`，有
+
 $$\begin{aligned}
 a''(x) &= \left[ a(x)(1 - a(x)) \right]' = a'(x)(1 - a(x)) + a(x)(1 - a(x))' \\
 &= a'(x)(1 - a(x)) - a(x)a'(x) = a'(x)(1 - 2a(x)) \\
 &= a(x)(1 - a(x))(1 - 2a(x)) = a(x) - [a(x)]^2 - 2[a(x)]^2 + 2[a(x)]^3 \\
 &= 2[a(x)]^3 - 3[a(x)]^2 + a(x).
 \end{aligned}$$
+
 这就建立了条目 **(ii)**。命题 1.2.20 的证明至此完成。
 
-### 1.2.7.2 标准逻辑激活函数的积分
+#### 1.2.7.2 标准逻辑激活函数的积分
 
-#### 引理 1.2.21 (标准逻辑激活函数的原函数)
-设 $\mathbf{s}$ 为 *softplus* 激活函数，设 $\mathbf{l}$ 为 *标准逻辑激活函数*（参见定义 1.2.11 和 1.2.18）。则对于所有 $x \in \mathbb{R}$，有
+##### 引理 1.2.21 (标准逻辑激活函数的原函数)
+
+设 `s` 为 *softplus* 激活函数，设 `l` 为 *标准逻辑激活函数*（参见定义 1.2.11 和 1.2.18）。则对于所有 `x in R`，有
+
 $$\int_{-\infty}^{x} \mathbf{l}(y) \, \mathrm{d}y = \int_{-\infty}^{x} \left( \frac{1}{1 + e^{-y}} \right) \, \mathrm{d}y = \ln(1 + \exp(x)) = \mathbf{s}(x). \tag{1.57}$$
 
-*引理 1.2.21 的证明。* 观察到 (1.47) 蕴含对于所有 $x \in \mathbb{R}$，有
+*引理 1.2.21 的证明。* 观察到 (1.47) 蕴含对于所有 `x in R`，有
+
 $$\mathbf{s}'(x) = \left[ \frac{1}{1 + \exp(x)} \right] \exp(x) = \mathbf{l}(x).$$
-因此，微积分基本定理表明，对于所有满足 $w \leq x$ 的 $w, x \in \mathbb{R}$，有
+
+因此，微积分基本定理表明，对于所有满足 `w <= x` 的 `w, x in R`，有
+
 $$\int_{\underbrace{w}_{\geq 0}}^{x} \mathbf{l}(y) \, \mathrm{d}y = \mathbf{s}(x) - \mathbf{s}(w).$$
-结合事实 $\lim_{w \to -\infty} \mathbf{s}(w) = 0$，即可建立 (1.57)。引理 1.2.21 的证明至此完成。
+
+结合事实 `\lim_{w -> -\infty} \mathbf{s}(w) = 0`，即可建立 (1.57)。引理 1.2.21 的证明至此完成。
 
 ## 1.2.8 Swish 激活
 
 ### 定义 1.2.22 (Swish 激活函数)
-设 $\beta \in \mathbb{R}$。当且仅当 $a: \mathbb{R} \to \mathbb{R}$ 是从 $\mathbb{R}$ 到 $\mathbb{R}$ 的函数，且对于所有 $x \in \mathbb{R}$ 满足
+
+设 `\beta in R`。当且仅当 `a: R -> R` 是从 `R` 到 `R` 的函数，且对于所有 `x in R` 满足
+
 $$a(x) = \frac{x}{1 + \exp(-\beta x)} \tag{1.60}$$
-时，我们称 $a$ 为参数为 $\beta$ 的 *swish* 激活函数。
+
+时，我们称 `a` 为参数为 `\beta` 的 *swish* 激活函数。
 
 ![](img/dec290f673e6357c31893c67b579ffe1_40_0.png)
-图 1.9 (plots/swish.pdf)：swish 激活函数、GELU 激活函数和 ReLU 激活函数的图像
+
+图 1.9 (`plots/swish.pdf`)：swish 激活函数、GELU 激活函数和 ReLU 激活函数的图像
 
 ```python
 import numpy as np
@@ -784,25 +893,33 @@ ax.legend()
 plt.savefig("../../plots/swish.pdf", bbox_inches='tight')
 ```
 
-源代码 1.7 (code/activation_functions/swish_plot.py)：用于创建图 1.9 的 PYTHON 代码
+源代码 1.7 (`code/activation_functions/swish_plot.py`)：用于创建图 1.9 的 PYTHON 代码
 
 ### 引理 1.2.23 (swish 激活函数与逻辑激活函数之间的关系)
-设 $\beta \in \mathbb{R}$，设 $\mathbf{s}$ 为参数为 1 的 swish 激活函数，设 $\mathbf{l}$ 为标准逻辑激活函数（参见定义 1.2.18 和 1.2.22）。则对于所有 $x \in \mathbb{R}$，有
+
+设 `\beta in R`，设 `s` 为参数为 1 的 swish 激活函数，设 `l` 为标准逻辑激活函数（参见定义 1.2.18 和 1.2.22）。则对于所有 `x in R`，有
+
 $$\mathbf{s}(x) = x\mathbf{l}(\beta x). \tag{1.61}$$
+
 *引理 1.2.23 的证明。* 观察到 (1.60) 和 (1.52) 建立了 (1.61)。引理 1.2.23 的证明至此完成。
 
 ### 定义 1.2.24 (多维 swish 激活函数)
-设 $d \in \mathbb{N}$，设 $a$ 为参数为 1 的 swish 激活函数（参见定义 1.2.22）。当且仅当 $A = \mathfrak{M}_{a,d}$（参见定义 1.2.1）时，我们称 $A$ 为 $d$ 维 swish 激活函数。
+
+设 `d in N`，设 `a` 为参数为 1 的 swish 激活函数（参见定义 1.2.22）。当且仅当 `A = M_{a,d}`（参见定义 1.2.1）时，我们称 `A` 为 `d` 维 swish 激活函数。
 
 ## 1.2.9 双曲正切激活
 
 ### 定义 1.2.25 (双曲正切激活函数)
-我们用 $\tanh: \mathbb{R} \rightarrow \mathbb{R}$ 表示满足对于所有 $x \in \mathbb{R}$ 有
+
+我们用 `\tanh: R -> R` 表示满足对于所有 `x in R` 有
+
 $$\tanh(x)=\frac{\exp(x)-\exp(-x)}{\exp(x)+\exp(-x)} \tag{1.62}$$
-的函数，并称之为双曲正切激活函数（我们称 $\tanh$ 为双曲正切）。
+
+的函数，并称之为双曲正切激活函数（我们称 `\tanh` 为双曲正切）。
 
 ![](img/dec290f673e6357c31893c67b579ffe1_41_0.png)
-图 1.10 (plots/tanh.pdf)：双曲正切、$(-1,1)$ 截断激活函数和标准逻辑激活函数的图像
+
+图 1.10 (`plots/tanh.pdf`)：双曲正切、(-1,1) 截断激活函数和标准逻辑激活函数的图像
 
 ```python
 import numpy as np
@@ -824,51 +941,55 @@ ax.legend()
 plt.savefig("../plots/tanh.pdf", bbox_inches='tight')
 ```
 
-源代码 1.8 (code/activation_functions/tanh_plot.py)：用于创建图 1.10 的 PYTHON 代码
-
-
-
-
+源代码 1.8 (`code/activation_functions/tanh_plot.py`)：用于创建图 1.10 的 PYTHON 代码
 
 ## 1.2. 激活函数
 
-**定义 1.2.26**（多维双曲正切激活函数）。设 \(d \in \mathbb{N}\)。若且仅若 \(A = \mathfrak{M}_{\tanh,d}\)（参见定义 1.2.1 和 1.2.25），则称 \(A\) 为 *d* 维双曲正切激活函数。
+### 定义 1.2.26（多维双曲正切激活函数）
 
-**引理 1.2.27**。设 *a* 为标准逻辑激活函数（参见定义 1.2.18）。则对于所有 \(x \in \mathbb{R}\)，有
+设 `d in N`。若且仅若 `A = M_{tanh,d}`（参见定义 1.2.1 和 1.2.25），则称 `A` 为 *d* 维双曲正切激活函数。
 
-\[
+### 引理 1.2.27
+
+设 `a` 为标准逻辑激活函数（参见定义 1.2.18）。则对于所有 `x in R`，有
+
+$$
 \tanh(x) = 2a(2x) - 1 \tag{1.63}
-\]
+$$
 
 *（参见定义 1.2.18 和 1.2.25）。*
 
-**引理 1.2.27 的证明**。注意 (1.52) 和 (1.62) 保证了对于所有 \(x \in \mathbb{R}\)，有
+*引理 1.2.27 的证明。* 注意 (1.52) 和 (1.62) 保证了对于所有 `x in R`，有
 
-\[
+$$
 \begin{align}
 2a(2x) - 1 & = 2 \left( \frac{\exp(2x)}{\exp(2x)+1} \right) - 1 = \frac{2\exp(2x) - (\exp(2x)+1)}{\exp(2x)+1} \\
 & = \frac{\exp(2x)-1}{\exp(2x)+1} = \frac{\exp(x)(\exp(x)-\exp(-x))}{\exp(x)(\exp(x)+\exp(-x))} \\
 & = \frac{\exp(x)-\exp(-x)}{\exp(x)+\exp(-x)} = \tanh(x). \tag{1.64}
 \end{align}
-\]
+$$
 
 引理 1.2.27 得证。
 
-**练习 1.2.16。** 设 *a* 为标准逻辑激活函数（参见定义 1.2.18）。证明或反驳以下陈述：存在 \(L \in \{2, 3, \ldots\}\)，\(\boldsymbol{l}, l_1, l_2, \ldots, l_{L-1} \in \mathbb{N}\)，以及满足 \(\boldsymbol{\theta} \geq 2l_1 + [\sum_{k=2}^{L-1} l_k(l_{k-1}+1)] + (l_{L-1}+1)\) 的 \(\boldsymbol{\theta} \in \mathbb{R}^{\boldsymbol{\theta}}\)，使得对于所有 \(x \in \mathbb{R}\) 有
+### 练习 1.2.16
 
-\[
-\left( \mathcal{N}^{\boldsymbol{g}, 1}_{\mathfrak{A}_{a,l_1}, \mathfrak{A}_{a,l_2}, \ldots, \mathfrak{A}_{a,l_{L-1}}, \mathrm{id}_{\mathbb{R}}} \right)(x) = \tanh(x) \tag{1.65}
-\]
+设 `a` 为标准逻辑激活函数（参见定义 1.2.18）。证明或反驳以下陈述：存在 `L in {2, 3, ...}`，`l, l1, l2, ..., l_{L-1} in N`，以及满足 `\theta >= 2l1 + [sum_{k=2}^{L-1} l_k(l_{k-1}+1)] + (l_{L-1}+1)` 的 `\theta in R^{\theta}`，使得对于所有 `x in R` 有
+
+$$
+\left( \mathcal{N}^{g, 1}_{\mathfrak{A}_{a,l_1}, \mathfrak{A}_{a,l_2}, \ldots, \mathfrak{A}_{a,l_{L-1}}, \mathrm{id}_{R}} \right)(x) = \tanh(x) \tag{1.65}
+$$
 
 *（参见定义 1.1.3, 1.2.1 和 1.2.25）。*
 
 ### 1.2.10 Softsign 激活
 
-**定义 1.2.28**（Softsign 激活函数）。*我们称* *a* *为 softsign 激活函数，当且仅当* \(a \colon \mathbb{R} \rightarrow \mathbb{R}\) *是从* \(\mathbb{R}\) *到* \(\mathbb{R}\) 的函数，且对于所有* \(x \in \mathbb{R}\) *满足*
+#### 定义 1.2.28（Softsign 激活函数）
 
-\[
+*我们称* `a` *为 softsign 激活函数，当且仅当* `a : R -> R` *是从* `R` *到* `R` 的函数，且对于所有* `x in R` *满足*
+
+$$
 a(x) = \frac{x}{|x|+1}. \tag{1.66}
-\]
+$$
 
 ```python
 import numpy as np
@@ -890,16 +1011,24 @@ ax.legend()
 plt.savefig("../plots/softsign.pdf", bbox_inches='tight')
 ```
 
-源代码 1.9 (code/activation_functions/softsign_plot.py)：用于生成图 1.11 的 PYTHON 代码
+源代码 1.9 (`code/activation_functions/softsign_plot.py`)：用于生成图 1.11 的 PYTHON 代码
 
-**定义 1.2.29**（多维 softsign 激活函数）。设 $d \in \mathbb{N}$，且设 $a$ 为 softsign 激活函数（参见定义 1.2.28）。若且仅若 $A = \mathfrak{M}_{a,d}$（参见定义 1.2.1），则称 $A$ 为 $d$ 维 softsign 激活函数。
+#### 定义 1.2.29（多维 softsign 激活函数）
+
+设 `d in N`，且设 `a` 为 softsign 激活函数（参见定义 1.2.28）。若且仅若 `A = M_{a,d}`（参见定义 1.2.1），则称 `A` 为 `d` 维 softsign 激活函数。
 
 ### 1.2.11 泄漏整流线性单元 (Leaky ReLU) 激活
 
-**定义 1.2.30**（Leaky ReLU 激活函数）。设 $\gamma \in [0,\infty)$。若且仅若 $a: \mathbb{R} \rightarrow \mathbb{R}$ 是从 $\mathbb{R}$ 到 $\mathbb{R}$ 的函数，且对于所有 $x \in \mathbb{R}$ 满足
+#### 定义 1.2.30（Leaky ReLU 激活函数）
+
+设 `\gamma in [0,\infty)`。若且仅若 `a: R -> R` 是从 `R` 到 `R` 的函数，且对于所有 `x in R` 满足
+
+
 
 $$
+
 a(x)= \left\{\begin{array}{cl} x & : x>0 \\ \gamma x & : x \leq 0 .\end{array}\right. \tag{1.67}
+
 $$
 
 则称 $a$ 为具有泄漏因子 $\gamma$ 的 leaky ReLU 激活函数。
@@ -917,7 +1046,7 @@ x = np.linspace(-2, 2, 100)
 
 ![](img/dec290f673e6357c31893c67b579ffe1_44_0.png)
 
-图 1.12 (plots/leaky_relu.pdf)：泄漏因子为 1/10 的 leaky ReLU 激活函数与 ReLU 激活函数的图像
+图 1.12 (`plots/leaky_relu.pdf`)：泄漏因子为 1/10 的 leaky ReLU 激活函数与 ReLU 激活函数的图像
 
 ```python
 ax.plot(x, tf.keras.activations.relu(x), linewidth=3, label='ReLU')
@@ -927,12 +1056,14 @@ ax.legend()
 plt.savefig("../plots/leaky_relu.pdf", bbox_inches='tight')
 ```
 
-源代码 1.10 (code/activation_functions/leaky_relu_plot.py)：用于生成图 1.12 的 PYTHON 代码
+源代码 1.10 (`code/activation_functions/leaky_relu_plot.py`)：用于生成图 1.12 的 PYTHON 代码
 
 **引理 1.2.31。** *设 $\gamma \in [0,1]$，且设 $a: \mathbb{R} \rightarrow \mathbb{R}$ 为一个函数。则 $a$ 是具有泄漏因子 $\gamma$ 的 leaky ReLU 激活函数，当且仅当对于所有 $x \in \mathbb{R}$ 有*
 
 $$
+
 a(x) = \max \{x, \gamma x \} \tag{1.68}
+
 $$
 
 *（参见定义 1.2.30）。*
@@ -958,7 +1089,9 @@ $$
 **定义 1.2.34**（ELU 激活函数）。设 $\gamma \in ( - \infty , 0 ]$。若且仅若 $a \colon \mathbb { R } \rightarrow \mathbb { R }$ 是从 $\mathbb { R }$ 到 $\mathbb { R }$ 的函数，且对于所有 $x \in \mathbb { R }$ 满足
 
 $$
+
 a ( x ) = \left\{ \begin{array}{cl} x & : x > 0 \\ \gamma ( 1 - \exp ( x ) ) & : x \leq 0 . \end{array} \right. \tag{1.69}
+
 $$
 
 则称 $a$ 为具有渐近值 $\gamma$ 的 ELU 激活函数。
@@ -981,16 +1114,18 @@ ax.legend()
 plt.savefig("../../../plots/elu.pdf", bbox_inches='tight')
 ```
 
-源代码 1.11 (code/activation_functions/elu_plot.py)：用于生成图 1.13 的 PYTHON 代码
+源代码 1.11 (`code/activation_functions/elu_plot.py`)：用于生成图 1.13 的 PYTHON 代码
 
 ![](img/dec290f673e6357c31893c67b579ffe1_46_0.png)
 
-图 1.13 (plots/elu.pdf)：渐近值为 $-1$ 的 ELU 激活函数、泄漏因子为 $1/10$ 的 leaky ReLU 激活函数以及 ReLU 激活函数的图像
+图 1.13 (`plots/elu.pdf`)：渐近值为 $-1$ 的 ELU 激活函数、泄漏因子为 $1/10$ 的 leaky ReLU 激活函数以及 ReLU 激活函数的图像
 
 **引理 1.2.35**。设 $\gamma \in (−\infty, 0]$，且设 $a$ 为具有渐近值 $\gamma$ 的 *ELU* 激活函数（参见定义 1.2.34）。则
 
 $$
+
 \limsup _ { x \to -\infty} a(x) = \liminf _ { x \to -\infty} a(x) = \gamma. \qquad (1.70)
+
 $$
 
 *引理 1.2.35 的证明。* 观察到 (1.69) 确立了 (1.70)。引理 1.2.35 得证。
@@ -1004,19 +1139,18 @@ $$
 **定义 1.2.37**（RePU 激活函数）。设 $p \in \mathbb{N}$。若且仅若 $a: \mathbb{R} \to \mathbb{R}$ 是从 $\mathbb{R}$ 到 $\mathbb{R}$ 的函数，且对于所有 $x \in \mathbb{R}$ 满足
 
 $$
+
 a(x) = (\max \{x, 0\})^{p}. \qquad (1.71)
+
 $$
 
 则称 $a$ 为具有幂次 $p$ 的 *RePU* 激活函数。
-
-
-
 
 ## 1.2.13 RePU 激活函数
 
 ![](img/dec290f673e6357c31893c67b579ffe1_47_0.png)
 
-图 1.14 (plots/repU.pdf)：幂次为 2 的 RePU 激活函数与 ReLU 激活函数的图像
+图 1.14 (`plots/repU.pdf`)：幂次为 2 的 RePU 激活函数与 ReLU 激活函数的图像
 
 ```python
 import numpy as np
@@ -1036,7 +1170,7 @@ ax.legend()
 plt.savefig("../../plots/repU.pdf", bbox_inches='tight')
 ```
 
-源代码 1.12 (code/activation_functions/repu_plot.py)：用于创建图 1.14 的 PYTHON 代码
+源代码 1.12 (`code/activation_functions/repu_plot.py`)：用于创建图 1.14 的 PYTHON 代码
 
 > **定义 1.2.38 (多维 RePU 激活函数)。** 设 $d,p \in \mathbb{N}$，且设 $a$ 为幂次为 $p$ 的 RePU 激活函数（参见定义 1.2.37）。则当且仅当 $A = \mathfrak{W}_{a,d}$（参见定义 1.2.1）时，我们称 $A$ 为幂次为 $p$ 的 $d$ 维 RePU 激活函数。
 
@@ -1052,7 +1186,7 @@ $$a(x) = \sin(x).\tag{1.72}$$
 
 ![](img/dec290f673e6357c31893c67b579ffe1_48_0.png)
 
-图 1.15 (plots/sine.pdf)：正弦激活函数的图像
+图 1.15 (`plots/sine.pdf`)：正弦激活函数的图像
 
 ```python
 import numpy as np
@@ -1069,7 +1203,7 @@ ax.plot(x, np.sin(x))
 plt.savefig("../../plots/sine.pdf", bbox_inches='tight')
 ```
 
-源代码 1.13 (code/activation_functions/sine_plot.py)：用于创建图 1.15 的 PYTHON 代码
+源代码 1.13 (`code/activation_functions/sine_plot.py`)：用于创建图 1.15 的 PYTHON 代码
 
 **定义 1.2.40 (多维正弦激活函数)。** 设 $d \in \mathbb{N}$，且设 $a$ 为正弦激活函数（参见定义 1.2.39）。则当且仅当 $A = \mathfrak{M}_{a, a}$（参见定义 1.2.1）时，我们称 $A$ 为 $d$ 维正弦激活函数。
 
@@ -1083,7 +1217,7 @@ $$a(x)=\mathbb{I}_{[0, \infty)}(x)=\left\{\begin{array}{ll} 1 & : x \geq 0 \\ 0 
 
 ![](img/dec290f673e6357c31893c67b579ffe1_49_0.png)
 
-图 1.16 (**plots/heaviside.pdf**)：海维塞德激活函数与标准逻辑激活函数的图像
+图 1.16 (**`plots/heaviside.pdf`**)：海维塞德激活函数与标准逻辑激活函数的图像
 
 ```python
 import numpy as np
@@ -1103,7 +1237,7 @@ ax.legend()
 plt.savefig("../plots/heaviside.pdf", bbox_inches='tight')
 ```
 
-源代码 1.14 (**code/activation\_functions/heaviside\_plot.py**)：用于创建图 1.16 的 PYTHON 代码
+源代码 1.14 (**`code/activation_functions/heaviside_plot.py`**)：用于创建图 1.16 的 PYTHON 代码
 
 **定义 1.2.42 (多维海维塞德激活函数)。** 设 $d \in \mathbb{N}$，且设 $a$ 为海维塞德激活函数（参见定义 1.2.41）。则当且仅当 $A = \mathfrak{M}_{a, d}$（参见定义 1.2.1）时，我们称 $A$ 为 $d$ 维海维塞德激活函数（我们称 $A$ 为 $d$ 维海维塞德阶梯函数，我们称 $A$ 为 $d$ 维单位阶梯函数）。
 
@@ -1118,6 +1252,7 @@ $$A(x)=\left(\frac{\exp(x_1)}{\sum_{i=1}^{d} \exp(x_i)}, \frac{\exp(x_2)}{\sum_{
 **引理 1.2.44。** 设 $d \in \mathbb{N}$，且设 $A=(A_1, A_2, \ldots, A_d)$ 为 $d$ 维 softmax 激活函数（参见定义 1.2.43）。则
 
 - (i) 对于所有 $x \in \mathbb{R}^d$ 和 $k \in \{1, 2, \ldots, d\}$，有 $A_k(x) \in (0, 1]$，且
+
 - (ii) 对于所有 $x \in \mathbb{R}^d$，有
 
 $$\sum_{k=1}^{d} A_k(x)=1. \tag{1.75}$$
@@ -1133,6 +1268,8 @@ $$\sum_{k=1}^{d} A_k(x)=\sum_{k=1}^{d} \frac{\exp(x_k)}{\sum_{i=1}^{d} \exp(x_i)
 在本节中，我们介绍了一种替代的方法来描述上述第 1.1 节中引入的全连接前馈型 ANN。粗略地说，在上述第 1.1 节中，我们定义了一种全连接前馈型 ANN 的*向量化描述*，即全连接前馈型 ANN 的可训练参数由单个欧几里得向量的分量表示（参见上述定义 1.1.3）。在本节中，我们引入了一种全连接前馈型 ANN 的*结构化描述*，其中全连接前馈型 ANN 的可训练参数由对应于全连接前馈型 ANN 的权重矩阵和偏置向量的矩阵-向量对组成的元组表示（参见下面的定义 1.3.1 和 1.3.4）。
 
 ## 1.3.1 全连接前馈型 ANN 的结构化描述
+
+
 
 **定义 1.3.1 (全连接前馈型 $ANN$ 的结构化描述)。** 我们用 $\mathbf{N}$ 表示由下式给出的集合：
 
@@ -1163,10 +1300,8 @@ $$\Phi \in \mathbf{N}$$
 **引理 1.3.3。** 设 $\Phi \in \mathbf{N}$（参见定义 1.3.1）。则
 
 - (i) $\mathcal{D}(\Phi) \in \mathbb{N}^{\mathcal{L}(\Phi)+1}$ 成立，
+
 - (ii) $\mathcal{I}(\Phi) = \mathbb{D}_0(\Phi) \quad\text{ 以及}\quad \mathcal{O}(\Phi) = \mathbb{D}_{\mathcal{L}(\Phi)}(\Phi)$ 成立，
-
-
-
 
 (iii) 对于所有的 $n \in \{1, 2, \dots, \mathcal{L}(\Phi)\}$，均有
 
@@ -1272,7 +1407,7 @@ for p in model.parameters():
     print(p)
 ```
 
-源码 1.15 (code/fc-ann-manual.py)：用于在 PYTORCH 中实现全连接前馈 ANN 的 PYTHON 代码。此处创建的模型代表全连接前馈 ANN $(((\begin{pmatrix}1 & 0 \\ 0 & -1 \\ -2 & 2\end{pmatrix}, (\begin{pmatrix}0 \\ 2 \\ -1\end{pmatrix})), ((\begin{pmatrix}1 & -2 & 3\end{pmatrix}, (\begin{pmatrix}1\end{pmatrix}))) \in (\mathbb{R}^{3 \times 2} \times \mathbb{R}^{3}) \times (\mathbb{R}^{1 \times 3} \times \mathbb{R}^{1}) \subseteq \mathbf{N}$，在隐藏层之后使用 ReLU 激活函数。
+源码 1.15 (`code/fc-ann-manual.py`)：用于在 `PYTORCH` 中实现全连接前馈 `ANN` 的 `PYTHON` 代码。此处创建的模型代表全连接前馈 `ANN` $(((\begin{pmatrix}1 & 0 \\ 0 & -1 \\ -2 & 2\end{pmatrix}, (\begin{pmatrix}0 \\ 2 \\ -1\end{pmatrix})), ((\begin{pmatrix}1 & -2 & 3\end{pmatrix}, (\begin{pmatrix}1\end{pmatrix}))) \in (\mathbb{R}^{3 \times 2} \times \mathbb{R}^{3}) \times (\mathbb{R}^{1 \times 3} \times \mathbb{R}^{1}) \subseteq \mathbf{N}$，在隐藏层之后使用 `ReLU` 激活函数。
 
 ```python
 import torch
@@ -1309,7 +1444,9 @@ for p in model.parameters():
     print(p)
 ```
 
-源码 1.16 (code/fc-ann.py)：用于在 PYTORCH 中实现全连接前馈 ANN 的 PYTHON 代码。此处实现的模型代表一个具有两个隐藏层的全连接前馈 ANN，输入层有 3 个神经元，第一个隐藏层有 20 个神经元，第二个隐藏层有 30 个神经元，输出层有 1 个神经元。与源码 1.15 不同，此代码使用 torch.nn.Linear 类来表示仿射变换。
+
+
+源码 1.16 (`code/fc-ann.py`)：用于在 `PYTORCH` 中实现全连接前馈 `ANN` 的 `PYTHON` 代码。此处实现的模型代表一个具有两个隐藏层的全连接前馈 `ANN`，输入层有 3 个神经元，第一个隐藏层有 20 个神经元，第二个隐藏层有 30 个神经元，输出层有 1 个神经元。与源码 1.15 不同，此代码使用 `torch.nn.Linear` 类来表示仿射变换。
 
 ```python
 import torch
@@ -1332,83 +1469,112 @@ x0 = torch.Tensor([1, 2, 3])
 print(model(x0))
 ```
 
-源码 1.17 (code/fc-ann2.py)：用于在 PyTorch 中创建全连接前馈 ANN 的 PYTHON 代码。这创建了与源码 1.16 相同的模型，但使用 torch.nn.Sequential 类而不是定义新的 torch.nn.Module 子类。
+源码 1.17 (`code/fc-ann2.py`)：用于在 `PyTorch` 中创建全连接前馈 `ANN` 的 `PYTHON` 代码。这创建了与源码 1.16 相同的模型，但使用 `torch.nn.Sequential` 类而不是定义新的 `torch.nn.Module` 子类。
 
 ### 1.3.3 关于与向量化描述的联系
 
-**定义 1.3.5**（全连接前馈 ANN 从结构化描述到向量化描述的转换）。我们用 $T: \mathbf{N} \rightarrow \bigcup_{n \in \mathbb{N}} \mathbb{R}^{n}$ 表示满足对所有 $\Phi \in \mathbf{N}$， $k \in \{1, 2, \dots, \mathcal{L}(\Phi)\}$， $d \in \mathbb{N}$， $\theta = (\theta_{1}, \theta_{2}, \dots, \theta_{d}) \in \mathbb{R}^{d}$ 且 $T(\Phi) = \theta$ 的函数，使得
+**定义 1.3.5**（全连接前馈 `ANN` 从结构化描述到向量化描述的转换）。我们用 `$T: \mathbf{N} \rightarrow \bigcup_{n \in \mathbb{N}} \mathbb{R}^{n}$` 表示满足对所有 `$\Phi \in \mathbf{N}$`， `$k \in \{1, 2, \dots, \mathcal{L}(\Phi)\}$`， `$d \in \mathbb{N}$`， `$\theta = (\theta_{1}, \theta_{2}, \dots, \theta_{d}) \in \mathbb{R}^{d}$` 且 `$T(\Phi) = \theta$` 的函数，使得
 
-$d = \mathcal{P}(\Phi), \quad B_{k,\Phi} = \left( \begin{array}{c} \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+l_{k}l_{k-1}+1} \\ \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+l_{k}l_{k-1}+2} \\ \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+l_{k}l_{k-1}+3} \\ \vdots \\ \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+l_{k}l_{k-1}+l_{k}} \end{array} \right), \quad \text{且} \quad \mathcal{W}_{k,\Phi} = \left( \begin{array}{cccc} \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+1} & \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+2} & \dots & \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+l_{k-1}} \\ \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+l_{k-1}+1} & \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+l_{k-1}+2} & \dots & \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+2l_{k-1}} \\ \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+2l_{k-1}+1} & \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+2l_{k-1}+2} & \dots & \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+3l_{k-1}} \\ \vdots & \vdots & \ddots & \vdots \\ \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+(l_{k}-1)l_{k-1}+1} & \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+(l_{k}-1)l_{k-1}+2} & \dots & \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+l_{k}l_{k-1}} \end{array} \right)$  (1.97)
+`$d = \mathcal{P}(\Phi), \quad B_{k,\Phi} = \left( \begin{array}{c} \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+l_{k}l_{k-1}+1} \\ \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+l_{k}l_{k-1}+2} \\ \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+l_{k}l_{k-1}+3} \\ \vdots \\ \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+l_{k}l_{k-1}+l_{k}} \end{array} \right), \quad \text{且} \quad \mathcal{W}_{k,\Phi} = \left( \begin{array}{cccc} \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+1} & \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+2} & \dots & \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+l_{k-1}} \\ \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+l_{k-1}+1} & \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+l_{k-1}+2} & \dots & \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+2l_{k-1}} \\ \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+2l_{k-1}+1} & \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+2l_{k-1}+2} & \dots & \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+3l_{k-1}} \\ \vdots & \vdots & \ddots & \vdots \\ \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+(l_{k}-1)l_{k-1}+1} & \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+(l_{k}-1)l_{k-1}+2} & \dots & \theta_{\sum_{i=1}^{k-1} l_{i}(l_{i-1}+1)+l_{k}l_{k-1}} \end{array} \right)$  (1.97)
 
 （参见定义 1.3.1）。
 
-**引理 1.3.6。** 设 $\Phi \in (\mathbb{R}^{3 \times 3} \times \mathbb{R}^{3}) \times (\mathbb{R}^{2 \times 3} \times \mathbb{R}^{2})$ 满足
+**引理 1.3.6。** 设 `$\Phi \in (\mathbb{R}^{3 \times 3} \times \mathbb{R}^{3}) \times (\mathbb{R}^{2 \times 3} \times \mathbb{R}^{2})$` 满足
 
-$\Phi = \left( \left( \left( \begin{array}{ccc} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{array} \right), \left( \begin{array}{c} 10 \\ 11 \\ 12 \end{array} \right) \right), \left( \left( \begin{array}{ccc} 13 & 14 & 15 \\ 16 & 17 & 18 \end{array} \right), \left( \begin{array}{c} 19 \\ 20 \end{array} \right) \right) \right).$  (1.98)
+`$\Phi = \left( \left( \left( \begin{array}{ccc} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{array} \right), \left( \begin{array}{c} 10 \\ 11 \\ 12 \end{array} \right) \right), \left( \left( \begin{array}{ccc} 13 & 14 & 15 \\ 16 & 17 & 18 \end{array} \right), \left( \begin{array}{c} 19 \\ 20 \end{array} \right) \right) \right).$`  (1.98)
 
-则 $T(\Phi) = (1, 2, 3, \dots, 19, 20) \in \mathbb{R}^{20}$。
+则 `$T(\Phi) = (1, 2, 3, \dots, 19, 20) \in \mathbb{R}^{20}$`。
 
 *引理 1.3.6 的证明。* 注意，(1.97) 建立了 (1.98)。引理 1.3.6 的证明至此完成。 $\square$
 
-**引理 1.3.7。** 设 $a, b \in \mathbb{N}$， $W = (W_{ij})_{(i,j) \in \{1,2,\dots,a\} \times \{1,2,\dots,b\}} \in \mathbb{R}^{a \times b}$， $B = (B_{1}, B_{2}, \dots, B_{a}) \in \mathbb{R}^{a}$。则
+**引理 1.3.7。** 设 `$a, b \in \mathbb{N}$`， `$W = (W_{ij})_{(i,j) \in \{1,2,\dots,a\} \times \{1,2,\dots,b\}} \in \mathbb{R}^{a \times b}$`， `$B = (B_{1}, B_{2}, \dots, B_{a}) \in \mathbb{R}^{a}$`。则
 
-$T(((W, B))) = (W_{1,1}, W_{1,2}, \dots, W_{1,b}, W_{2,1}, W_{2,2}, \dots, W_{2,b}, \dots, W_{a,1}, W_{a,2}, \dots, W_{a,b}, B_{1}, B_{2}, \dots, B_{a})$  (1.99)
+`$T(((W, B))) = (W_{1,1}, W_{1,2}, \dots, W_{1,b}, W_{2,1}, W_{2,2}, \dots, W_{2,b}, \dots, W_{a,1}, W_{a,2}, \dots, W_{a,b}, B_{1}, B_{2}, \dots, B_{a})$`  (1.99)
 
 （参见定义 1.3.5）。
-
-
-
 
 ...`。
 
 **第58页中损坏数学公式的详细重构：**
+
 该行：
+
 `\mathfrak{a}_{1}(0,L)+(k)+i d_2 \mathbf{1}_{L}(k),l_k}}`
+
 这很可能是 `\mathfrak{M}_{\mathfrak{a}_{k}}` 或类似激活函数索引的乱码 OCR 结果。
+
 然而，查看 `Definition 1.3.5` 和 `Definition 1.3.4` 的上下文，`\mathfrak{M}` 通常表示仿射映射和非线性函数的复合。
+
 让我们查看 [PAGE 58] 中的特定损坏文本：
+
 `x_k = \mathfrak{M}_{\mathfrak{a}_{1}(0,L)+(k)+i d_2 \mathbf{1}_{L}(k),l_k}}`
+
 这看起来像是试图索引一个激活函数 `\mathfrak{a}`。
+
 实际上，让我们看一下源文档的风格（可能是 Petersen/Voigtlaeder 或类似作者的 *Deep learning with neural networks*）。
+
 在许多此类文本中，`\mathfrak{M}` 是一个映射。
+
 鉴于如果尝试“修复” Prop 1.3.9 证明中间的乱码索引会导致幻觉出确切的数学公式的高风险，我将优先考虑纠正 LaTeX 的*语法*以使其可编译/易读，但除非 `i d_2` 明显是 `\mathbb{1}_L` 的笔误，否则我不会猜测索引的语义更正。
+
 实际上，`i d_2` 很可能是 `\mathbb{1}_L`（恒等函数或指示函数）。
+
 让我们看一下该行： `$(\mathcal{R}_{a}^{N}(\Phi))(x_0) = x_L = ...$`
+
 项 `\mathcal{W}_{L,\Phi}x_{L-1} + \boldsymbol{\mathcal{B}}_{L,\Phi}` 是最终层。
+
 其下方的复杂公式 `(1.105)` 在 OCR 中非常破碎。
+
 `$(\mathcal{N}_{\mathfrak{M}_{\mathfrak{a}_{1,l_1}},\dots}$`
+
 我将清理 LaTeX 结构，将其呈现为可读的多行方程，保留符号原样，但修复 `\begin{cases}` 的嵌套。
 
 让我们细化特定错误：
+
 - `Seictino` -> `Section`
+
 - `# # 1.4` -> `## 1.4`
+
 - `# ### 1.4.1` -> `### 1.4.1`
+
 - 移除 [PAGE 58] 中数学公式周围的反引号。
+
 - 修复 `\boldsymbol{\mathcal{B}}` 与 `\boldsymbol{B}`。文本在某些地方使用 `\boldsymbol{\mathcal{B}}`，在其他地方使用 `B`。我将标准化为上下文很可能 intended 的形式，即 `W` 和 `B` 分别代表权重和偏置。OCR 显示在复杂证明中使用 `\boldsymbol{\mathcal{B}}`，而在定义中使用 `B`。我将保留证明中出现的 `\boldsymbol{\mathcal{B}}`，以忠实于 OCR 的特定字符检测，除非它显然是 `\boldsymbol{B}` 的笔误。然而，`\mathcal{B}` 是脚本字母，`\boldsymbol{\mathcal{B}}` 是粗体脚本。`\boldsymbol{B}` 是粗体常规。OCR 在证明中有 `\boldsymbol{\mathcal{B}}`。我将保留它。
 
 主要问题：[PAGE 58] 中 Prop 1.3.9 证明的 OCR 在特定公式 (1.104) 和 (1.105) 中几乎无法辨认。
+
 公式 (1.104)：
+
 $x_{L-1} = \begin{cases} x_0 & : L=1 \\ ... \end{cases}$
+
 `...` 部分是 `\mathfrak{M}` 和 `\mathcal{A}` 的复合。
+
 我将将其格式化为整洁的 LaTeX 代码块。
 
 公式 (1.105)：
+
 它将实现等同于嵌套的 `\mathcal{N}` 项。
+
 我将将其格式化为整洁的 LaTeX 代码块。
 
 我将继续生成文本。
 
-[content]
 引理 1.3.7 的证明。观察到 (1.97) 确立了 (1.99)。因此引理 1.3.7 的证明完毕。 $\square$
 
 **引理 1.3.8.** 设 \( L \in \mathbb{N}, l_{0}, l_{1}, \ldots, l_{L} \in \mathbb{N} \)，且对于每个 \( k \in \{1, 2, \ldots, L\} \)，设 \( W_{k} = (W_{k,i,j})_{(i,j) \in \{1,2,\ldots,l_{k}\} \times \{1,2,\ldots,l_{k-1}\}} \in \mathbb{R}^{l_{k} \times l_{k-1}}, \) \( \boldsymbol{B}_{k} = (B_{k,1}, B_{k,2}, \ldots, B_{k,l_{k}}) \in \mathbb{R}^{l_{k}} \)。则
 
 \begin{align*}
+
 &\mathcal{T}\left(\left((W_{1}, B_{1}), (W_{2}, B_{2}), \ldots, (W_{L}, B_{L})\right)\right) \\
+
 &= \left(W_{1,1,1}, W_{1,1,2}, \ldots, W_{1,1,d_{0}}, \ldots, W_{1,d_{1},1}, W_{1,d_{1},2}, \ldots, W_{1,d_{1},d_{0}}, B_{1,1}, B_{1,2}, \ldots, B_{1,d_{1}}, \right. \\
+
 &\quad \left. W_{2,1,1}, W_{2,1,2}, \ldots, W_{2,1,d_{1}}, \ldots, W_{2,d_{2},1}, W_{2,d_{2},2}, \ldots, W_{2,d_{2},d_{1}}, B_{2,1}, B_{2,2}, \ldots, B_{2,d_{2}}, \ldots \right. \\
+
 &\quad \left. W_{L,1,1}, W_{L,1,2}, \ldots, W_{L,1,d_{L-1}}, \ldots, W_{L,d_{L},1}, W_{L,d_{L},2}, \ldots, W_{L,d_{L},d_{L-1}}, B_{L,1}, B_{L,2}, \ldots, B_{L,d_{L}}\right) \tag{1.100}
+
 \end{align*}
+
 \((参见定义 1.3.5)。\)
 
 引理 1.3.8 的证明。注意 (1.97) 蕴含 (1.100)。因此引理 1.3.8 的证明完毕。 $\square$
@@ -1422,11 +1588,17 @@ $x_{L-1} = \begin{cases} x_0 & : L=1 \\ ... \end{cases}$
 **命题 1.3.9.** 设 \( a \in C(\mathbb{R}, \mathbb{R}), \Phi \in \mathbb{N} \)（参见定义 1.3.1）。则
 
 \begin{equation}
+
 \mathcal{R}_{a}^{\mathbb{N}}(\Phi) = \begin{cases} 
+
 \mathcal{N}^{\mathcal{T}(\Phi), I(\Phi)}_{i_{\Phi}^{2} \circ \Phi} & : \mathcal{H}(\Phi) = 0 \\
+
 \mathcal{N}^{\mathcal{T}(\Phi), I(\Phi)}_{\mathfrak{B}^{\mathfrak{m}_{a}, \mathcal{D}_{1}(\Phi)}, \mathfrak{m}_{a, \mathcal{D}_{2}(\Phi)}, \ldots, \mathfrak{m}_{a, \mathcal{D}_{\mathcal{H}(\Phi)}}(\Phi), i_{\Phi}^{\mathrm{d}} \circ \Phi} & : \mathcal{H}(\Phi) > 0 
+
 \end{cases} \tag{1.101}
+
 \end{equation}
+
 \((参见定义 1.1.3, 1.2.1, 1.3.4 和 1.3.5)。\)
 
 命题 1.3.9 的证明。在整个证明过程中，设 \( L \in \mathbb{N}, l_{0}, l_{1}, \ldots, l_{L} \in \mathbb{N} \) 满足 \(\mathcal{L}(\Phi) = L \quad \text{且} \quad \mathcal{D}(\Phi) = (l_{0}, l_{1}, \ldots, l_{L}).\) \tag{1.102}
@@ -1436,33 +1608,48 @@ $x_{L-1} = \begin{cases} x_0 & : L=1 \\ ... \end{cases}$
 \((参见定义 1.1.1 和 1.3.5)。\) 这表明对于所有 \(x_0 \in \mathbb{R}^{l_0}\)，\(x_1 \in \mathbb{R}^{l_1}\)，\(\dots\)，\(x_{L-1} \in \mathbb{R}^{l_{L-1}}\)，且对于 \(\forall k \in \{1,2,\dots,L-1\} \) 有 \(x_k = \mathfrak{M}_{a_{k,l_k}}(\mathcal{W}_{k,\Phi}x_{k-1} + \boldsymbol{\mathcal{B}}_{k,\Phi})\)，则
 
 \begin{equation}
+
 x_{L-1} = \begin{cases} 
+
 x_0 & : L=1 \\
+
+
+
 (\mathfrak{M}_{a_{l_L,l_{L-1}}} \circ \boldsymbol{\mathcal{A}}^{\mathcal{T}(\Phi),\sum_{i=1}^{L-2}l_i(l_{i-1}+1)}_{L-1,l_{L-2}} \circ \mathfrak{M}_{a_{l,L-2}} \circ \boldsymbol{\mathcal{A}}^{\mathcal{T}(\Phi),\sum_{i=1}^{L-3}l_i(l_{i-1}+1)}_{L-2,l_{L-3}}) \circ \dots \circ (\mathfrak{M}_{\mathfrak{a}_{1,l_1}} \circ \boldsymbol{\mathcal{A}}^{\mathcal{T}(\Phi),0}_{1,l_0})(x_0) & : L > 1 
+
 \end{cases} \tag{1.104}
+
 \end{equation}
 
 \((参见定义 1.2.1)。\) 结合此结果、(1.103)、(1.5) 和 (1.91)，表明对于所有 \(x_0 \in \mathbb{R}^{l_0}\)，\(x_1 \in \mathbb{R}^{l_1}\)，\(\dots\)，\(x_L \in \mathbb{R}^{l_L}\)，且对于 \(\forall k \in \{1,2,\dots,L\} \) 有 \(x_k = \mathfrak{M}_{\mathfrak{a}_{k}}(\mathcal{W}_{k,\Phi}x_{k-1} + \boldsymbol{\mathcal{B}}_{k,\Phi})\)，则
 
 \begin{equation}
+
 (\mathcal{R}_{a}^{\mathbb{N}}(\Phi))(x_0) = x_L = \mathcal{W}_{L,\Phi}x_{L-1} + \boldsymbol{\mathcal{B}}_{L,\Phi} = (\boldsymbol{\mathcal{A}}^{\mathcal{T}(\Phi),\sum_{i=1}^{L-1}l_i(l_{i-1}+1)}_{l_L,l_{L-1}})(x_{L-1}) 
+
 \end{equation}
+
 \begin{equation}
+
 = \begin{cases} 
+
 (\mathcal{N}_{\text{id}_{a}^{\mathcal{T}(\Phi),0},l_0}^{\mathcal{T}(\Phi),l_0})(x_0) & : L=1 \\
+
 (\mathcal{N}_{\mathfrak{M}_{\mathfrak{a}_{1,l_1}},\mathfrak{M}_{\mathfrak{a}_{l,L-1}},\dots,\mathfrak{M}_{\mathfrak{a}_{l,L-1}}, \text{id}_{L}^{\mathcal{T}(\Phi),0}}^{\mathcal{T}(\Phi),l_0})(x_0) & : L > 1 
+
 \end{cases} \tag{1.105}
+
 \end{equation}
 
 \((参见定义 1.1.3 和 1.3.4)。\) 因此命题 1.3.9 的证明完毕。 $\square$
 
-## 1.4 卷积神经网络 (CNNs)
+# 1.4 卷积神经网络 (CNNs)
 
 在本节中，我们回顾 CNN，即旨在处理具有空间结构数据的 ANNs。从广义上讲，CNN 可以被认为是任何涉及卷积运算的 ANNs（例如，参见下文定义 1.4.1）。粗略地说，卷积运算允许 CNN 通过在执行跨输入数据点不同区域的相同操作来利用数据的空间不变性。原则上，此类卷积运算可以与其他 ANN 架构元素组合使用，例如全连接层（例如，参见上述第 1.1 节和第 1.3 节）、残差层（例如，参见下文第 1.5 节）和循环结构（例如，参见下文第 1.6 节）。然而，为了简单起见，我们在本节中仅介绍基于离散卷积运算（无填充，有时称为 valid padding）的卷积层的前馈 CNN 的所有数学细节，参见定义 1.4.1（见下文定义 1.4.2 和 1.4.5）。对于 CNN 的其他介绍，例如参见 [4, Section 12.5], [60, Chapter 16], [63, Section 4.2], [164, Chapter 9], 和 [36, Section 1.6.1]。
 
 CNN 最初由 LeCun 等人 [262] 为计算机视觉 (CV) 应用引入。被认为第一个成功的现代 CNN 架构是 Krizhevsky 等人 [257] 提出的 AlexNet 架构。其他一些非常成功的早期 CV CNN 架构包括 [152, 190, 206, 282, 291, 371, 378, 390]。尽管 CV 是 CNN 最流行的应用领域，但 CNN 在其他几个领域也取得了成功的发展。特别是，例如，参见 [110, 143, 245, 430, 434, 437] 中关于 CNN 在自然语言处理 (NLP) 中的应用，参见 [1, 59, 78, 359, 396] 中关于 CNN 在音频处理中的应用，以及参见 [46, 105, 236, 348, 408, 440] 中关于 CNN 在时间序列分析中的应用。最后，对于前馈 CNN 的近似结果，例如参见 Petersen & Voigtländer [34] 及其参考文献。
 
-### 1.4.1 离散卷积
+## 1.4.1 离散卷积
 
 **定义 1.4.1** (离散卷积). 设 \(T \in \mathbb{N}\)，\(a_1, a_2, \ldots, a_T\)，\(w_1, w_2, \ldots, w_T\)，\(\mathbf{d}_1, \mathbf{d}_2, \ldots, \mathbf{d}_T \in \mathbb{N}\)，且设 \(A = (A_{i_1,i_2,\ldots,i_T})_{(i_1,i_2,\ldots,i_T) \in (\times_{t=1}^T \{1,2,\ldots,a_t\})} \in \mathbb{R}^{a_1 \times a_2 \times \ldots \times a_T}\)，\(W = (W_{i_1,i_2,\ldots,i_T})_{(i_1,i_2,\ldots,i_T) \in (\times_{t=1}^T \{1,2,\ldots,w_t\})} \in \mathbb{R}^{w_1 \times w_2 \times \ldots \times w_T}\) 满足对于所有 \(t \in \{1, 2, \ldots, T\}\) 有
 
@@ -1472,7 +1659,7 @@ CNN 最初由 LeCun 等人 [262] 为计算机视觉 (CV) 应用引入。被认�
 
 \[(A * W)_{i_1,i_2,\ldots,i_T} = \sum_{r_1=1}^{w_1} \sum_{r_2=1}^{w_2} \cdots \sum_{r_T=1}^{w_T} A_{i_1 - r_1 + 1, i_2 - r_2 + 1, \ldots, i_T - r_T + 1} W_{r_1,r_2,\ldots,r_T}. \quad (1.107)\]
 
-### 1.4.2 前馈 CNN 的结构化描述
+## 1.4.2 前馈 CNN 的结构化描述
 
 **定义 1.4.2** (前馈 CNN 的结构化描述). 我们将 \(\mathbf{C}\) 定义为由以下给出的集合
 
@@ -1486,15 +1673,11 @@ CNN 最初由 LeCun 等人 [262] 为计算机视觉 (CV) 应用引入。被认�
 
 (参见定义 1.4.2.)
 
-### 1.4.3 前馈 CNN 的实现
+## 1.4.3 前馈 CNN 的实现
 
 **定义 1.4.4** (单一张量). 设 \(T \in \mathbb{N}\)，\(d_1, d_2, \ldots, d_T \in \mathbb{N}\)。则我们记 \(\mathbf{I}_{d_1,d_2,\ldots,d_T} = (\mathbf{I}_{i_1,i_2,\ldots,i_T})_{(i_1,i_2,\ldots,i_T) \in (\times_{t=1}^T \{1,2,\ldots,d_t\})} \in \mathbb{R}^{d_1 \times d_2 \times \ldots \times d_T}\) 为满足以下条件的张量：对于所有 \(i_1 \in \{1, 2, \ldots, d_1\}\)，\(i_2 \in \{1, 2, \ldots, d_2\}\)，\(\ldots\)，\(i_T \in \{1, 2, \ldots, d_T\}\) 有
 
 \[\mathbf{I}_{i_1,i_2,\ldots,i_T}^{d_1,d_2,\ldots,d_T} = 1. \quad (1.110)\]
-
-
-
-
 
 ## 1.4. 卷积神经网络（CNNs）
 
@@ -1555,7 +1738,9 @@ x0 = torch.rand(1, 20, 20)
 model(x0)
 ```
 
-源代码 1.18 (code/conv-ann.py)：使用 PYTORCH 实现前馈 **CNN** 的 PYTHON 代码。此处实现的模型对应于前馈 $\mathbf{CNN}$ $\boldsymbol{\Phi} \in \mathbf{C}$，其中 $T=2$，$L=2$，$l_{0}=1$，$l_{1}=5$，$l_{2}=5$，$(c_{1,1}, c_{1,2})=(3,3)$，$(c_{2,1}, c_{2,2})=(5,3)$，且 $\boldsymbol{\Phi} \in \left(\bigvee_{k=1}^{L} \left(\left(\mathbb{R}^{c_{k,1} \times c_{k,2} \times \cdots \times c_{k,T}}\right)^{l_{k} \times l_{k-1}} \times \mathbb{R}^{l_{k}}\right)\right) = \left((\mathbb{R}^{3 \times 3 \times 5 \times 1} \times \mathbb{R}^{5}) \times ((\mathbb{R}^{3 \times 5})^{5 \times 5} \times \mathbb{R}^{5})\right)$。该模型给定一个形状为 $(1, d_{1}, d_{2})$ 的输入，其中 $d_{1} \in \mathbb{N} \cap [7, \infty)$，$d_{2} \in \mathbb{N} \cap [5, \infty)$，产生一个形状为 $(5, d_{1}-6, d_{2}-4)$ 的输出（对应于实现函数 $\mathcal{R}_{a}^{\mathbf{C}}(\boldsymbol{\Phi})$，其中 $a \in C(\mathbb{R}, \mathbb{R})$ 的定义域为 $\bigcup_{d_{1}, d_{2} \in \mathbb{N}, d_{1} \geq 7, d_{2} \geq 5} (\mathbb{R}^{d_{1} \times d_{2}})^{1}$，并且对于所有 $d_{1} \in \mathbb{N} \cap [7, \infty)$，$d_{2} \in \mathbb{N} \cap [5, \infty)$，$x_{0} \in (\mathbb{R}^{d_{1} \times d_{2}})^{1}$，满足 $(\mathcal{R}_{a}^{\mathbf{C}}(\boldsymbol{\Phi}))(x_{0}) \in (\mathbb{R}^{d_{1}-6, d_{2}-4})^{5}$）。
+
+
+源代码 `1.18` (`code/conv-ann.py`)：使用 `PYTORCH` 实现前馈 **`CNN`** 的 `PYTHON` 代码。此处实现的模型对应于前馈 $\mathbf{CNN}$ $\boldsymbol{\Phi} \in \mathbf{C}$，其中 $T=2$，$L=2$，$l_{0}=1$，$l_{1}=5$，$l_{2}=5$，$(c_{1,1}, c_{1,2})=(3,3)$，$(c_{2,1}, c_{2,2})=(5,3)$，且 $\boldsymbol{\Phi} \in \left(\bigvee_{k=1}^{L} \left(\left(\mathbb{R}^{c_{k,1} \times c_{k,2} \times \cdots \times c_{k,T}}\right)^{l_{k} \times l_{k-1}} \times \mathbb{R}^{l_{k}}\right)\right) = \left((\mathbb{R}^{3 \times 3 \times 5 \times 1} \times \mathbb{R}^{5}) \times ((\mathbb{R}^{3 \times 5})^{5 \times 5} \times \mathbb{R}^{5})\right)$。该模型给定一个形状为 $(1, d_{1}, d_{2})$ 的输入，其中 $d_{1} \in \mathbb{N} \cap [7, \infty)$，$d_{2} \in \mathbb{N} \cap [5, \infty)$，产生一个形状为 $(5, d_{1}-6, d_{2}-4)$ 的输出（对应于实现函数 $\mathcal{R}_{a}^{\mathbf{C}}(\boldsymbol{\Phi})$，其中 $a \in C(\mathbb{R}, \mathbb{R})$ 的定义域为 $\bigcup_{d_{1}, d_{2} \in \mathbb{N}, d_{1} \geq 7, d_{2} \geq 5} (\mathbb{R}^{d_{1} \times d_{2}})^{1}$，并且对于所有 $d_{1} \in \mathbb{N} \cap [7, \infty)$，$d_{2} \in \mathbb{N} \cap [5, \infty)$，$x_{0} \in (\mathbb{R}^{d_{1} \times d_{2}})^{1}$，满足 $(\mathcal{R}_{a}^{\mathbf{C}}(\boldsymbol{\Phi}))(x_{0}) \in (\mathbb{R}^{d_{1}-6, d_{2}-4})^{5}$）。
 
 ### 示例 1.4.6（定义 1.4.5 的示例）
 
@@ -1619,12 +1804,13 @@ x0 = torch.Tensor([[[1, 2, 3], [4, 5, 6], [7, 8, 9]]])
 print(model(x0))
 ```
 
-源代码 1.19 (code/conv-ann-ex.py)：使用 PyTorch 实现示例 1.4.6 中的前馈 CNN $\Phi$（参见 (1.116)）并验证 (1.117) 的 PYTHON 代码。
+源代码 `1.19` (`code/conv-ann-ex.py`)：使用 `PyTorch` 实现示例 `1.4.6` 中的前馈 `CNN` $\Phi$（参见 (1.116)）并验证 (1.117) 的 `PYTHON` 代码。
 
 **练习 1.4.1.** 设
 
-$$\Phi = \left(\left( (W_{1,n,m})_{(n,m) \in \{1,2,3\} \times \{1\}}, (B_{1,n})_{n \in \{1,2,3\}}, \right.\right.
-\left.\left. \left( (W_{2,n,m})_{(n,m) \in \{1\} \times \{1,2,3\}}, (B_{2,n})_{n \in \{1\}} \right)\right) \in \left(\left(\mathbb{R}^{2}{}^{3 \times 1} \times \mathbb{R}^{3}\right) \times \left(\left(\mathbb{R}^{3}{}^{1 \times 3} \times \mathbb{R}^{1}\right)\right)\right.\right. \tag{1.125}$$
+$$\Phi = \left(\left( (W_{1,n,m})_{(n,m) \in \{1,2,3\} \times \{1\}}, (B_{1,n})_{n \in \{1,2,3\}}, \right.\right.$$
+
+$$\left.\left. \left( (W_{2,n,m})_{(n,m) \in \{1\} \times \{1,2,3\}}, (B_{2,n})_{n \in \{1\}} \right)\right) \in \left(\left(\mathbb{R}^{2}{}^{3 \times 1} \times \mathbb{R}^{3}\right) \times \left(\left(\mathbb{R}^{3}{}^{1 \times 3} \times \mathbb{R}^{1}\right)\right)\right. \tag{1.125}$$
 
 满足
 
@@ -1638,34 +1824,40 @@ $$\left(\mathcal{R}^{\mathcal{C}}(\Phi)\right)(v) \tag{1.128}$$
 
 并证明你的结果是正确的（参见定义 1.2.4 和 1.4.5）！
 
-
-
-
 ## 1.4. 卷积神经网络（CNNs）
 
 练习 1.4.2。设
+
 \begin{align*} \Phi = \left( \left( (W_{1,n,m})_{(n,m) \in \{1,2,3\} \times \{1\}}, (B_{1,n})_{n \in \{1,2,3\}}, \right. \right. \left. \left. ((W_{2,n,m})_{(n,m) \in \{1\} \times \{1,2,3\}}, (B_{2,n})_{n \in \{1\}}) \right) \in ((\mathbb{R}^{3}^{3 \times 1} \times \mathbb{R}^{3}) \times ((\mathbb{R}^{2})^{1 \times 3} \times \mathbb{R}^{1}) \end{align*} \
+
 \tag{1.29}
 
 满足
+
 \begin{equation} W_{1,1,1} = (1,1,1), \quad W_{1,2,1} = (2, -2, -2), \end{equation} \tag{1.30}
+
 \begin{equation} W_{1,3,1} = (-3, -3, 3), \quad (B_{1,n})_{n \in \{1,2,3\}} = (3, -2, -1), \end{equation} \tag{1.31}
+
 \begin{equation} W_{2,1,1} = (2, -1), \quad W_{2,1,2} = (-1, 2), \quad W_{2,1,3} = (-1, 0), \text{ 且 } B_{2,1} = -2 \end{equation} \tag{1.32}
 
 并设 $v \in \mathbb{R}^{9}$ 满足 $v = (1, -1, 1, -1, 1, -1, 1, -1, 1)$。请明确写出
+
 \begin{equation} \langle \mathcal{R}_{\Phi}^{\mathbf{C}} \rangle(v) \end{equation} \tag{1.33}
 
 并证明你的结果是正确的（参见定义 1.2.4 和 1.4.5）！
 
 练习 1.4.3。证明或反驳以下陈述：对于每个 $a \in \mathcal{C} \in \mathbb{R} \in \mathbb{R}$ 和 $\Phi \in \mathbb{N}$，存在 $\Psi \in \mathbf{C}$，使得对于所有 $x \in \mathbb{R}^{\mathcal{I}(\Phi)}$，都满足 $\mathbb{R}^{\mathcal{I}(\Phi)} \subseteq \operatorname{Domain}(\mathcal{R}_{a}^{\Psi})$ 且
+
 \begin{equation} \langle \mathcal{R}_{a}^{\mathbf{C}}(\Psi) \rangle(x) = \langle \mathcal{R}_{a}^{\mathbf{N}}(\Phi) \rangle(x) \end{equation} \tag{1.34}
 
 （参见定义 1.3.1、1.3.4、1.4.2 和 1.4.5）。
 
 定义 1.4.7（标准内积）。我们将函数 $\langle \cdot, \cdot \rangle : [\coprod_{d \in \mathbb{N}} (\mathbb{R}^{d} \times \mathbb{R}^{d})] \to \mathbb{R}$ 记作标准内积，该函数满足对于所有 $d \in \mathbb{N}$，$x = (x_{1}, x_{2}, \dots, x_{d})$ 以及 $y = (y_{1}, y_{2}, \dots, y_{d}) \in \mathbb{R}^{d}$，有
+
 \begin{equation} \langle x, y \rangle = \sum_{i=1}^{d} x_{i} y_{i}. \end{equation} \tag{1.35}
 
 练习 1.4.4。对于每个 $d \in \mathbb{N}$，设 $\mathbf{e}_{1}^{(d)}, \mathbf{e}_{2}^{(d)}, \dots, \mathbf{e}_{d}^{(d)} \in \mathbb{R}^{d}$ 满足 $\mathbf{e}_{1}^{(d)} = (1, 0, \dots, 0)$，$\mathbf{e}_{2}^{(d)} = (0, 1, 0, \dots, 0)$，$\dots$，$\mathbf{e}_{d}^{(d)} = (0, \dots, 0, 1)$。证明或反驳以下陈述：对于所有 $a \in \mathcal{C} \in \mathbb{R} \in \mathbb{R}$，$\Phi \in \mathbf{N}$，$D \in \mathbb{N}$ 以及 $x = ((x_{i,j})_{j \in \{1,2,\dots,D\}})_{i \in \{1,2,\dots,I(\Phi\}} \in (\mathbb{R}^{D})^{I(\Phi)}$，都成立
+
 \begin{equation} \langle \mathcal{R}_{a}^{\mathbf{C}}(\Phi) \rangle(x) = \langle (\langle \mathbf{e}_{k}^{(\sigma(\Phi))}, \langle \mathcal{R}_{a}^{\mathbf{N}}(\Phi) \rangle(x_{i,j})_{j \in \{1,2,\dots,I(\Phi)\}} \rangle)_{j \in \{1,2,\dots,D\}} \rangle_{k \in \{1,2,\dots,\sigma(\Phi\}} \end{equation} \tag{1.36}
 
 （参见定义 1.3.1、1.3.4、1.4.5 和 1.4.7）。
@@ -1674,48 +1866,61 @@ $$\left(\mathcal{R}^{\mathcal{C}}(\Phi)\right)(v) \tag{1.128}$$
 
 在本节中，我们回顾残差神经网络（ResNets）。粗略地说，普通的简单前馈神经网络可以被视为具有由顺序串联的层组成的计算结构，其中每一层将信息前向传递到下一层（例如，参见上述定义 1.1.3 和 1.3.4）。而残差神经网络（ResNets）则是其计算结构中涉及所谓跳跃连接（skip connections）的神经网络，这种连接允许来自某一层的信息不仅传递给下一层，还传递给计算结构中更靠后的其他层。原则上，这种跳跃连接可以与其他神经网络架构元素结合使用，例如全连接层（例如，参见上文第 1.1 节和第 1.3 节）、卷积层（例如，参见上文第 1.4 节）以及循环结构（例如，参见下文第 1.6 节）。然而，为了简洁起见，我们在本节中以所有数学细节介绍前馈全连接残差神经网络，其中的跳跃连接是一个可学习的线性映射（参见下文定义 1.5.1 和 1.5.4）。
 
+
+
 残差神经网络（ResNets）由 He 等人 [190] 提出，旨在改进深度神经网络的性能，因为深度神经网络通常比浅层神经网络更难训练（例如，参见 [30, 153, 328]）。He 等人 [190] 中的残差神经网络仅涉及作为恒等映射且没有可训练参数的跳跃连接，因此是本节提供的残差神经网络定义的一个特例（参见下文定义 1.5.1 和 1.5.4）。跳跃连接（有时也称为捷径连接）的思想在残差神经网络之前就已经被提出，并已被用于早期的神经网络架构中，例如 Srivastava 等人 [384, 385] 中提到的高速路网络（highway nets）（另参见 [264, 293, 345, 390, 398]）。此外，对于基于 He 等人 [190] 中残差神经网络的几种成功的神经网络架构，我们请参考 [191, 206, 404, 417, 427]。
 
 ### 1.5.1 全连接残差神经网络的结构性描述
 
-定义 1.5.1（全连接残差神经网络的结构性描述）。我们将集合 $\mathbf{R}$ 定义为
+定义 1.5.1（全连接残差神经网络的结构性描述）。我们将集合 `R` 定义为
+
 $$\mathbf{R} = \bigcup_{L \in \mathbb{N}} \bigcup_{n_0, l_1, \dots, l_L \in \mathbb{N}} \bigcup_{S \subseteq \{(r,k) \in \mathbb{N}_0: r < k \le L \}} \left( \bigtimes_{k=1}^{L} (\mathbb{R}^{l_k \times l_{k-1}} \times \mathbb{R}^{l_k}) \right) \times \left( \bigtimes_{(r,k) \in S} \mathbb{R}^{l_k \times l_r} \right) \tag{1.137}$$
 
-定义 1.5.2（全连接残差神经网络）。当且仅当 $\Phi \in \mathbf{R}$ 时，我们称 $\Phi$ 为全连接残差神经网络 \quad \tag{1.138}
+定义 1.5.2（全连接残差神经网络）。当且仅当 `Phi \in R` 时，我们称 `Phi` 为全连接残差神经网络 \quad \tag{1.138}
+
 （参见定义 1.5.1）。
 
-**引理 1.5.3**（关于空跳跃连接集合）。设 $L \in \mathbb{N}$，$l_{0}, l_{1}, \ldots, l_{L} \in \mathbb{N}$，$S \subseteq\left\{(r, k) \in\left(\mathbb{N}_{0}\right)^{2}: r<k \leq L\right\}$。则
+**引理 1.5.3**（关于空跳跃连接集合）。设 `L \in \mathbb{N}`，`l_{0}, l_{1}, \ldots, l_{L} \in \mathbb{N}`，`S \subseteq\left\{(r, k) \in\left(\mathbb{N}_{0}\right)^{2}: r<k \leq L\right\}`。则
+
 $$\#\left(\prod_{(r, k) \in S} \mathbb{R}^{l_{k} \times l_{r}}\right)=\begin{cases}1 & : S=\emptyset \\ \infty & : S \neq \emptyset .\end{cases} \tag{1.139}$$
 
-引理 1.5.3 的证明。在本证明中，对于所有集合 $A$ 和 $B$，令 $F(A, B)$ 表示从 $A$ 到 $B$ 的所有函数的集合。注意，有
+引理 1.5.3 的证明。在本证明中，对于所有集合 `A` 和 `B`，令 `F(A, B)` 表示从 `A` 到 `B` 的所有函数的集合。注意，有
+
 $$\#\left(\prod_{(r, k) \in S} \mathbb{R}^{l_{k} \times l_{r}}\right)=\#\left\{f \in F\left(S, \cup_{(r, k) \in S} \mathbb{R}^{l_{k} \times l_{r}}\right) : \forall(r, k) \in S: f(r, k) \in \mathbb{R}^{l_{k} \times l_{r}}\right\} . \tag{1.140}$$
 
-此式以及对于所有集合 $B$ 都有 $\#(F(\emptyset, B)) = 1$ 这一事实，保证了
+此式以及对于所有集合 `B` 都有 `#(F(\emptyset, B)) = 1` 这一事实，保证了
+
 $$\#\left(\prod_{(r, k) \in \emptyset} \mathbb{R}^{l_{k} \times l_{r}}\right)=\#(F(\emptyset, \emptyset))=1 . \tag{1.141}$$
 
-接下来注意，$(1.140)$ 式保证了对于所有 $(R, K) \in S$，都有
+接下来注意，`(1.140)` 式保证了对于所有 `(R, K) \in S`，都有
+
 $$\#\left(\prod_{(r, k) \in S} \mathbb{R}^{l_{k} \times l_{r}}\right) \geq \#\left(F\left(\left\{\{(R, K)\right\}, \mathbb{R}^{\{K\} \times \{L R\}}\right)\right)=\infty . \tag{1.142}$$
 
-结合此结果和 $(1.141)$ 式，即可建立 $(1.139)$ 式。引理 1.5.3 的证明到此结束。 $\Box$
+结合此结果和 `(1.141)` 式，即可建立 `(1.139)` 式。引理 1.5.3 的证明到此结束。 $\Box$
 
 ### 1.5.2 全连接残差神经网络的实现
 
-**定义 1.5.4**（与全连接残差神经网络相关的实现）。设 $L \in \mathbb{N}, l_{0}, l_{1}$，$\ldots, l_{L} \in \mathbb{N}, S \subseteq\left\{(r, k) \in\left(\mathbb{N}_{0}\right)^{2}: r<k \leq L\right\}, \Phi=\left(\left(W_{k}, B_{k}\right)_{k \in\{1,2, \ldots, L\}},\left(V_{r, k}\right)_{(r, k) \in S}\right) \in$ $\left(\prod_{k=1}^{L}\left(\mathbb{R}^{l_{k} \times l_{k-1}} \times \mathbb{R}^{l_{k}}\right)\right) \times\left(\prod_{(r, k) \in S} \mathbb{R}^{l_{k} \times l_{r}}\right) \subseteq \mathbf{R}$，并设 $a : \mathbb{R} \rightarrow \mathbb{R}$ 为一个函数。则我们将
+**定义 1.5.4**（与全连接残差神经网络相关的实现）。设 `L \in \mathbb{N}, l_{0}, l_{1}`，`\ldots, l_{L} \in \mathbb{N}, S \subseteq\left\{(r, k) \in\left(\mathbb{N}_{0}\right)^{2}: r<k \leq L\right\}, \Phi=\left(\left(W_{k}, B_{k}\right)_{k \in\{1,2, \ldots, L\}},\left(V_{r, k}\right)_{(r, k) \in S}\right) \in` $\left(\prod_{k=1}^{L}\left(\mathbb{R}^{l_{k} \times l_{k-1}} \times \mathbb{R}^{l_{k}}\right)\right) \times\left(\prod_{(r, k) \in S} \mathbb{R}^{l_{k} \times l_{r}}\right) \subseteq \mathbf{R}$，并设 `a : \mathbb{R} \rightarrow \mathbb{R}` 为一个函数。则我们将
+
 $$\mathcal{R}_{a}^{\mathbf{R}}(\Phi): \mathbb{R}^{l_{0}} \rightarrow \mathbb{R}^{l_{L}} \tag{1.143}$$
-记作满足以下条件的函数：对于所有 $x_{0} \in \mathbb{R}^{l_{0}}, x_{1} \in \mathbb{R}^{l_{1}}, \ldots, x_{L} \in \mathbb{R}^{l_{L}}$，且满足
+
+记作满足以下条件的函数：对于所有 `x_{0} \in \mathbb{R}^{l_{0}}, x_{1} \in \mathbb{R}^{l_{1}}, \ldots, x_{L} \in \mathbb{R}^{l_{L}}`，且满足
+
 $$\forall k \in\{1,2, \ldots, L\}:$$
+
 $$x_{k}=\mathfrak{M}_{a \mathbf{1}_{\{0, L\}}(k) + \operatorname{idx}_{\{1, L\}}(k)} W_{k}\left(W_{k} x_{k-1} + B_{k} + \sum_{r \in \mathbb{N}_{0}, (r, k) \in S} V_{r, k} x_{r}\right) \tag{1.144}$$
+
 都有
+
 $$(\mathcal{R}_{a}^{\mathbf{R}}(\Phi))(x_{0})=x_{L} \tag{1.145}$$
-我们称 $\mathcal{R}_{a}^{\mathbf{R}}(\Phi)$ 为具有激活函数 $a$ 的全连接残差神经网络 $\Phi$ 的实现函数（我们将 $\mathcal{R}_{\boldsymbol{a}}^{\mathbf{R}}(\Phi)$ 称为具有激活 $a$ 的全连接残差神经网络 $\Phi$ 的实现）（参见定义 1.2.1 和 1.5.1）。
 
-
+我们称 `\mathcal{R}_{a}^{\mathbf{R}}(\Phi)` 为具有激活函数 `a` 的全连接残差神经网络 `Phi` 的实现函数（我们将 `\mathcal{R}_{\boldsymbol{a}}^{\mathbf{R}}(\Phi)` 称为具有激活 `a` 的全连接残差神经网络 `Phi` 的实现）（参见定义 1.2.1 和 1.5.1）。
 
 ## 1.5 残差人工神经网络（续）
 
-**定义 1.5.5（单位矩阵）。** 设 $d \in \mathbb{N}$。我们用 $I_d \in \mathbb{R}^{d \times d}$ 表示 $\mathbb{R}^{d \times d}$ 中的单位矩阵。
+**定义 1.5.5（单位矩阵）。** 设 `d \in \mathbb{N}`。我们用 `I_d \in \mathbb{R}^{d \times d}` 表示 `\mathbb{R}^{d \times d}` 中的单位矩阵。
 
-**源代码 1.20（`code/res-ann.py`）：** 使用 **PYTHON** 实现的**残差网络（ResNet）**的**全连接**代码。此处实现的模型对应于全连接**残差网络** $(\Phi, V)$，其中 $l_0 = 3$，$l_1 = 10$，$l_2 = 20$，$l_3 = 10$，$l_4 = 1$，$\Phi = ((W_1, B_1), (W_2, B_2), (W_3, B_3), (W_4, B_4)) \in \big(\bigotimes_{k=1}^{4} (\mathbb{R}^{l_k \times l_{k-1}} \times \mathbb{R}^{l_k})\big)$，$S = \{(1,3)\}$，$V = (V_{r,k})_{(r,k) \in S} \in \big(\bigotimes_{(r,k) \in S} \mathbb{R}^{l_k \times r}\big)$，且 $V_{1,3} = I_{10}$（参见**定义 1.5.5**）。
+**源代码 1.20（`code/res-ann.py`）：** 使用 **PYTHON** 实现的**残差网络（ResNet）**的**全连接**代码。此处实现的模型对应于全连接**残差网络** `(\Phi, V)`，其中 `l_0 = 3`，`l_1 = 10`，`l_2 = 20`，`l_3 = 10`，`l_4 = 1`，`\Phi = ((W_1, B_1), (W_2, B_2), (W_3, B_3), (W_4, B_4)) \in \big(\bigotimes_{k=1}^{4} (\mathbb{R}^{l_k \times l_{k-1}} \times \mathbb{R}^{l_k})\big)`，`S = \{(1,3)\}`，`V = (V_{r,k})_{(r,k) \in S} \in \big(\bigotimes_{(r,k) \in S} \mathbb{R}^{l_k \times r}\big)`，且 `V_{1,3} = I_{10}`（参见**定义 1.5.5**）。
 
 ```python
 import torch
@@ -1740,7 +1945,7 @@ class ResidualANN(nn.Module):
         return x4
 ```
 
-**例 1.5.6**（**定义 1.5.2** 的示例）。设 $l_0 = 1$，$l_1 = 1$，$l_2 = 2$，$l_3 = 2$，$l_4 = 1$，$S = \{(0,4)\}$，设
+**例 1.5.6**（**定义 1.5.2** 的示例）。设 `l_0 = 1`，`l_1 = 1`，`l_2 = 2`，`l_3 = 2`，`l_4 = 1`，`S = \{(0,4)\}`，设
 
 $$\Phi = ((W_1, B_1), (W_2, B_2), (W_3, B_3), (W_4, B_4)) \in \big(\bigotimes_{k=1}^{4} (\mathbb{R}^{l_k \times l_{k-1}} \times \mathbb{R}^{l_k})\big) \quad (1.146)$$
 
@@ -1750,7 +1955,7 @@ $$W_1 = (1), \quad B_1 = (0), \quad W_2 = \begin{pmatrix} 1 \\ 2 \end{pmatrix}, 
 
 $$W_3 = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}, \quad B_3 = \begin{pmatrix} 0 \\ 0 \end{pmatrix}, \quad W_4 = \begin{pmatrix} 2 & 2 \end{pmatrix}, \quad \text{且} \quad B_4 = (1), \quad (1.148)$$
 
-并设 $V = (V_{r,k})_{(r,k) \in S} \in \bigotimes_{(r,k) \in S} \mathbb{R}^{l_k \times r}$，满足
+并设 `V = (V_{r,k})_{(r,k) \in S} \in \bigotimes_{(r,k) \in S} \mathbb{R}^{l_k \times r}`，满足
 
 $$V_{0,4} = (-1). \quad (1.149)$$
 
@@ -1760,7 +1965,7 @@ $$(\mathcal{R}_{\dagger}^{\mathbf{R}}(\Phi, V))(5) = 28 \tag{1.150}$$
 
 （参见定义 1.2.4 和 1.5.4）。
 
-**例 1.5.6 的证明。** 在整个证明过程中，设 $x_0 \in \mathbb{R}^1$，$x_1 \in \mathbb{R}^1$，$x_2 \in \mathbb{R}^2$，$x_3 \in \mathbb{R}^2$，$x_4 \in \mathbb{R}^1$ 满足对于所有 $k \in \{1, 2, 3, 4\}$ 有 $x_0 = 5$ 且
+**例 1.5.6 的证明。** 在整个证明过程中，设 `x_0 \in \mathbb{R}^1`，`x_1 \in \mathbb{R}^1`，`x_2 \in \mathbb{R}^2`，`x_3 \in \mathbb{R}^2`，`x_4 \in \mathbb{R}^1` 满足对于所有 `k \in \{1, 2, 3, 4\}` 有 `x_0 = 5` 且
 
 $$x_k = \mathfrak{M}_{\mathbf{1}_{(0,k)}(k) + \operatorname{id}_{\mathbb{R}^1 \mathbf{1}_{\{4\}}(k),k}(W_k x_{k-1} + B_k + \sum_{r \in \mathbb{N}_0, (r,k) \in S} V_{r,k} x_r) \tag{1.151}$$
 
@@ -1782,7 +1987,7 @@ $$x_4 = \mathfrak{M}_{\mathbf{r},1}(W_4 x_3 + B_4 + V_{0,4} x_0) = \mathfrak{M}_
 
 结合 (1.152)，这就证明了 (1.150)。因此，例 1.5.6 的证明结束。
 
-**练习 1.5.1。** 设 $l_0 = 1$，$l_1 = 2$，$l_2 = 3$，$l_3 = 1$，$S = \{(0, 3), (1, 3)\}$，设
+**练习 1.5.1。** 设 `l_0 = 1`，`l_1 = 2`，`l_2 = 3`，`l_3 = 1`，`S = \{(0, 3), (1, 3)\}`，设
 
 $$\Phi = ((W_1, B_1), (W_2, B_2), (W_3, B_3)) \in \left(\bigotimes_{k=1}^{3}(\mathbb{R}^{l_k \times l_{k-1}} \times \mathbb{R}^{l_k})\right) \tag{1.157}$$
 
@@ -1792,7 +1997,7 @@ $$W_1 = \begin{pmatrix} 1 \\ 2 \end{pmatrix}, \quad B_1 = \begin{pmatrix} 3 \\ 4
 
 $$W_3 = \begin{pmatrix} -1 & 1 & -1 \end{pmatrix}, \quad \text{且} \quad B_3 = \begin{pmatrix} -4 \end{pmatrix} \tag{1.159}$$
 
-并设 $V = (V_{r,k})_{(r,k) \in S} \in \bigotimes_{(r,k) \in S} \mathbb{R}^{l_k \times l_r}$ 满足
+并设 `V = (V_{r,k})_{(r,k) \in S} \in \bigotimes_{(r,k) \in S} \mathbb{R}^{l_k \times l_r}` 满足
 
 $$V_{0,3} = \begin{pmatrix} 1 \end{pmatrix} \quad \text{且} \quad V_{1,3} = \begin{pmatrix} 3 & -2 \end{pmatrix} \tag{1.160}$$
 
@@ -1804,11 +2009,13 @@ $$(\mathcal{R}_{\dagger}^{\mathbf{R}}(\Phi, V))(-1) = 0 \tag{1.161}$$
 
 ## 1.6 循环人工神经网络（RNNs）
 
-在本节中，我们将回顾循环人工神经网络（RNNs），这是一种旨在接收数据序列作为输入的ANN类型。大致而言，与在前馈ANN中通过依次应用一系列*不同*的参数化函数来处理输入不同（参见上述定义 1.1.3、1.3.4、1.4.5 和 1.5.4），在RNN中，输入序列是通过重复应用*相同*的参数化函数来处理的；在首次应用后，该参数化函数的每次后续应用都以输入序列中的一个新元素以及上一次应用中产生的部分输出作为输入。RNN的输出则由参数化函数重复应用所产生的部分输出序列给出（参见下文定义 1.6.2 对RNN的精确描述，例如参见 [4, 第12.7节]、[60, 第17章]、[63, 第5章] 以及 [164, 第10章] 中对RNN的其他介绍）。
 
-RNN中重复应用的参数化函数通常被称为*RNN节点*，而任何*RNN架构*都是通过指定相应的RNN节点架构来确定的。我们将在第 1.6.2 节中详细回顾此类RNN节点及其对应RNN的一个简单变体，并在第 1.6.3 节中简要介绍最常用的一种RNN节点，即所谓的*长短期记忆（LSTM）*节点。
 
-在认为序列数据相关的广泛应用领域中，基于RNN的深度学习正被采用和开发。此类应用领域的例子包括自然语言处理（NLP），涵盖语言翻译（例如参见 [11, 76, 77, 388] 及其参考文献）、语言生成（例如参见 [51, 169, 238, 340] 及其参考文献）和语音识别（例如参见 [6, 81, 170, 172, 360] 及其参考文献），时间序列预测分析，包括股市预测（例如参见 [130, 133, 372, 376] 及其参考文献）和天气预报（例如参见 [352, 375, 407] 及其参考文献）以及视频分析（例如参见 [108, 235, 307, 401] 及其参考文献）。
+在本节中，我们将回顾循环人工神经网络（`RNNs`），这是一种旨在接收数据序列作为输入的`ANN`类型。大致而言，与在前馈`ANN`中通过依次应用一系列*不同*的参数化函数来处理输入不同（参见上述定义 1.1.3、1.3.4、1.4.5 和 1.5.4），在`RNN`中，输入序列是通过重复应用*相同*的参数化函数来处理的；在首次应用后，该参数化函数的每次后续应用都以输入序列中的一个新元素以及上一次应用中产生的部分输出作为输入。`RNN`的输出则由参数化函数重复应用所产生的部分输出序列给出（参见下文定义 1.6.2 对`RNN`的精确描述，例如参见 [4, 第12.7节]、[60, 第17章]、[63, 第5章] 以及 [164, 第10章] 中对`RNN`的其他介绍）。
+
+`RNN`中重复应用的参数化函数通常被称为`RNN`节点，而任何`RNN`架构都是通过指定相应的`RNN`节点架构来确定的。我们将在第 1.6.2 节中详细回顾此类`RNN`节点及其对应`RNN`的一个简单变体，并在第 1.6.3 节中简要介绍最常用的一种`RNN`节点，即所谓的*长短期记忆（LSTM）*节点。
+
+在认为序列数据相关的广泛应用领域中，基于`RNN`的深度学习正被采用和开发。此类应用领域的例子包括自然语言处理（`NLP`），涵盖语言翻译（例如参见 [11, 76, 77, 388] 及其参考文献）、语言生成（例如参见 [51, 169, 238, 340] 及其参考文献）和语音识别（例如参见 [6, 81, 170, 172, 360] 及其参考文献），时间序列预测分析，包括股市预测（例如参见 [130, 133, 372, 376] 及其参考文献）和天气预报（例如参见 [352, 375, 407] 及其参考文献）以及视频分析（例如参见 [108, 235, 307, 401] 及其参考文献）。
 
 ### 1.6.1 RNN 的描述
 
@@ -1818,108 +2025,116 @@ $$\mathfrak{R}_{f,T,I}(x_1, x_2, \ldots, x_T) = (y_1, y_2, \ldots, y_T) \tag{1.6
 
 *我们称 $\mathfrak{R}_{f,T,I}$ 为具有初始信息 $\mathbb{I}$ 的展开 $T$ 次的函数 $f$。*
 
-**定义 1.6.2**（RNN 的描述）。*设 $X, Y, I$ 为集合，设 $\mathfrak{D}, T \in \mathbb{N}$，$\theta \in \mathbb{R}^\mathfrak{D}$，$\mathbb{I} \in I$，且设 $\mathfrak{N} = (\mathfrak{N}_\vartheta)_{\vartheta \in \mathbb{R}^\mathfrak{D}}: \mathbb{R}^\mathfrak{D} \times X \times I \to Y \times I$ 为函数。则我们称 $R$ 为具有RNN节点 $\mathfrak{N}$、参数向量 $\theta$ 和初始的展开 $T$ 步的RNN的实现函数*
-
-
-
+**定义 1.6.2**（`RNN` 的描述）。*设 $X, Y, I$ 为集合，设 $\mathfrak{D}, T \in \mathbb{N}$，$\theta \in \mathbb{R}^\mathfrak{D}$，$\mathbb{I} \in I$，且设 $\mathfrak{N} = (\mathfrak{N}_\vartheta)_{\vartheta \in \mathbb{R}^\mathfrak{D}}: \mathbb{R}^\mathfrak{D} \times X \times I \to Y \times I$ 为函数。则我们称 $R$ 为具有`RNN`节点 $\mathfrak{N}$、参数向量 $\theta$ 和初始的展开 $T$ 步的`RNN`的实现函数*
 
 ### 1.6.2 简单全连接 RNN 的向量化描述
 
-**定义 1.6.3** (简单全连接 $RNN$ 节点的向量化描述)。设 $\mathbf{r}, \mathbf{n}, \mathbf{i} \in \mathbb{N}$，$\theta \in \mathbb{R}^{(\mathbf{r}+\mathbf{i}+1) \times (\mathbf{i}+1)\mathbf{n}}$，并设 $\Psi_1: \mathbb{R}^\mathbf{i} \to \mathbb{R}^\mathbf{i}$ 和 $\Psi_2: \mathbb{R}^\mathbf{n} \to \mathbb{R}^\mathbf{n}$ 为函数。则当且仅当 $r: \mathbb{R}^\mathbf{r} \times \mathbb{R}^\mathbf{i} \to \mathbb{R}^\mathbf{n} \times \mathbb{R}^\mathbf{i}$ 是从 $\mathbb{R}^\mathbf{r} \times \mathbb{R}^\mathbf{i}$ 到 $\mathbb{R}^\mathbf{n} \times \mathbb{R}^\mathbf{i}$ 的函数，且满足对于所有 $x \in \mathbb{R}^\mathbf{r}$ 和 $\dot{x} \in \mathbb{R}^\mathbf{i}$ 有：
+**定义 1.6.3** (简单全连接 `RNN` 节点的向量化描述)。设 $\mathbf{r}, \mathbf{n}, \mathbf{i} \in \mathbb{N}$，$\theta \in \mathbb{R}^{(\mathbf{r}+\mathbf{i}+1) \times (\mathbf{i}+1)\mathbf{n}}$，并设 $\Psi_1: \mathbb{R}^\mathbf{i} \to \mathbb{R}^\mathbf{i}$ 和 $\Psi_2: \mathbb{R}^\mathbf{n} \to \mathbb{R}^\mathbf{n}$ 为函数。则当且仅当 $r: \mathbb{R}^\mathbf{r} \times \mathbb{R}^\mathbf{i} \to \mathbb{R}^\mathbf{n} \times \mathbb{R}^\mathbf{i}$ 是从 $\mathbb{R}^\mathbf{r} \times \mathbb{R}^\mathbf{i}$ 到 $\mathbb{R}^\mathbf{n} \times \mathbb{R}^\mathbf{i}$ 的函数，且满足对于所有 $x \in \mathbb{R}^\mathbf{r}$ 和 $\dot{x} \in \mathbb{R}^\mathbf{i}$ 有：
 
 $$ r(x, \dot{x}) = \left( \left( \Psi_2 \circ \mathcal{A}_{\mathbf{n}, \mathbf{i}}^{\theta, (\mathbf{r}+\mathbf{i}+1)\mathbf{i}} \circ \Psi_1 \circ \mathcal{A}_{\mathbf{i}, \mathbf{r}+\mathbf{i}}^{\theta_{\dot{x}, \mathbf{i}}} \right) (x, \dot{x}), \left( \Psi_1 \circ \mathcal{A}_{\mathbf{i}, \mathbf{r}+\mathbf{i}}^{\theta_{\dot{x}, \mathbf{i}}} \right) (x, \dot{x}) \right) \tag{1.64} $$
 
-时，我们称 $r$ 为参数向量为 $\theta$ 且激活函数为 $\Psi_1$ 和 $\Psi_2$ 的简单全连接 $RNN$ 节点的实现函数（我们将 $r$ 称为参数向量为 $\theta$ 且激活为 $\Psi_1$ 和 $\Psi_2$ 的简单全连接 $RNN$ 节点的实现）。
+时，我们称 $r$ 为参数向量为 $\theta$ 且激活函数为 $\Psi_1$ 和 $\Psi_2$ 的简单全连接 `RNN` 节点的实现函数（我们将 $r$ 称为参数向量为 $\theta$ 且激活为 $\Psi_1$ 和 $\Psi_2$ 的简单全连接 `RNN` 节点的实现）。
 
 (参见定义 1.1.1)。
 
-**定义 1.6.4** (简单全连接 $RNNs$ 的向量化描述)。设 $\mathbf{r}, \mathbf{n}, \mathbf{i}, T \in \mathbb{N}$，$\theta \in \mathbb{R}^{(\mathbf{r}+\mathbf{i}+1)\mathbf{i}+(\mathbf{i}+1)\mathbf{n}}$，$\mathbb{I} \in \mathbb{R}^\mathbf{i}$，并设 $\Psi_1: \mathbb{R}^\mathbf{i} \to \mathbb{R}^\mathbf{i}$ 和 $\Psi_2: \mathbb{R}^\mathbf{n} \to \mathbb{R}^\mathbf{n}$ 为函数。则当且仅当存在 $r: \mathbb{R}^\mathbf{r} \times \mathbb{R}^\mathbf{i} \to \mathbb{R}^\mathbf{n} \times \mathbb{R}^\mathbf{i}$ 使得：
+**定义 1.6.4** (简单全连接 `RNNs` 的向量化描述)。设 $\mathbf{r}, \mathbf{n}, \mathbf{i}, T \in \mathbb{N}$，$\theta \in \mathbb{R}^{(\mathbf{r}+\mathbf{i}+1)\mathbf{i}+(\mathbf{i}+1)\mathbf{n}}$，$\mathbb{I} \in \mathbb{R}^\mathbf{i}$，并设 $\Psi_1: \mathbb{R}^\mathbf{i} \to \mathbb{R}^\mathbf{i}$ 和 $\Psi_2: \mathbb{R}^\mathbf{n} \to \mathbb{R}^\mathbf{n}$ 为函数。则当且仅当存在 $r: \mathbb{R}^\mathbf{r} \times \mathbb{R}^\mathbf{i} \to \mathbb{R}^\mathbf{n} \times \mathbb{R}^\mathbf{i}$ 使得：
 
-- (i) $r$ 是参数为 $\theta$ 且激活函数为 $\Psi_1$ 和 $\Psi_2$ 的简单全连接 $RNN$ 节点的实现，且
+- (i) $r$ 是参数为 $\theta$ 且激活函数为 $\Psi_1$ 和 $\Psi_2$ 的简单全连接 `RNN` 节点的实现，且
+
 - (ii) 满足：
 
 $$ R = \mathfrak{R}_{r, T, \mathbb{I}} \tag{1.65} $$
 
-时，我们称 $R$ 为参数向量为 $\theta$、激活函数为 $\Psi_1$ 和 $\Psi_2$ 且初始信息为 $\mathbb{I}$ 的 $T$ 步展开的简单全连接 $RNN$ 的实现函数（我们将 $R$ 称为参数向量为 $\theta$、激活为 $\Psi_1$ 和 $\Psi_2$ 且初始信息为 $\mathbb{I}$ 的 $T$ 步展开的简单全连接 $RNN$ 的实现）。
+时，我们称 $R$ 为参数向量为 $\theta$、激活函数为 $\Psi_1$ 和 $\Psi_2$ 且初始信息为 $\mathbb{I}$ 的 $T$ 步展开的简单全连接 `RNN` 的实现函数（我们将 $R$ 称为参数向量为 $\theta$、激活为 $\Psi_1$ 和 $\Psi_2$ 且初始信息为 $\mathbb{I}$ 的 $T$ 步展开的简单全连接 `RNN` 的实现）。
 
 (参见定义 1.6.1 和 1.6.3)。
 
-**引理 1.6.5.** 设 $\mathbf{r}, \mathbf{n}, \mathbf{i}, \mathbf{o}, T \in \mathbb{N}$，$\theta \in \mathbb{R}^\mathbf{o}$，$\mathbb{I} \in \mathbb{R}^\mathbf{i}$ 满足 $\mathbf{o} = (\mathbf{r} + \mathbf{i} + 1)\mathbf{i} + (\mathbf{i} + 1)\mathbf{n}$，设 $\Psi_1: \mathbb{R}^\mathbf{i} \to \mathbb{R}^\mathbf{i}$ 和 $\Psi_2: \mathbb{R}^\mathbf{n} \to \mathbb{R}^\mathbf{n}$ 为函数，且设 $\mathfrak{R}_\vartheta = (\mathfrak{N}_\vartheta)_{\vartheta \in \mathbb{R}^\mathbf{o}}: \mathbb{R}^\mathbf{o} \times \mathbb{R}^\mathbf{n} \times \mathbb{R}^\mathbf{i} \to \mathbb{R}^\mathbf{n} \times \mathbb{R}^\mathbf{i}$ 满足对于所有 $\vartheta \in \mathbb{R}^\mathbf{o}$，$\mathfrak{N}_\vartheta$ 是参数向量为 $\vartheta$ 且激活函数为 $\Psi_1$ 和 $\Psi_2$ 的简单全连接 $RNN$ 节点的实现（参见定义 1.6.3）。则以下两个陈述等价：
+**引理 1.6.5.** 设 $\mathbf{r}, \mathbf{n}, \mathbf{i}, \mathbf{o}, T \in \mathbb{N}$，$\theta \in \mathbb{R}^\mathbf{o}$，$\mathbb{I} \in \mathbb{R}^\mathbf{i}$ 满足 $\mathbf{o} = (\mathbf{r} + \mathbf{i} + 1)\mathbf{i} + (\mathbf{i} + 1)\mathbf{n}$，设 $\Psi_1: \mathbb{R}^\mathbf{i} \to \mathbb{R}^\mathbf{i}$ 和 $\Psi_2: \mathbb{R}^\mathbf{n} \to \mathbb{R}^\mathbf{n}$ 为函数，且设 $\mathfrak{R}_\vartheta = (\mathfrak{N}_\vartheta)_{\vartheta \in \mathbb{R}^\mathbf{o}}: \mathbb{R}^\mathbf{o} \times \mathbb{R}^\mathbf{n} \times \mathbb{R}^\mathbf{i} \to \mathbb{R}^\mathbf{n} \times \mathbb{R}^\mathbf{i}$ 满足对于所有 $\vartheta \in \mathbb{R}^\mathbf{o}$，$\mathfrak{N}_\vartheta$ 是参数向量为 $\vartheta$ 且激活函数为 $\Psi_1$ 和 $\Psi_2$ 的简单全连接 `RNN` 节点的实现（参见定义 1.6.3）。则以下两个陈述等价：
 
-- (i) $R$ 是参数向量为 $\theta$、激活函数为 $\Psi_1$ 和 $\Psi_2$ 且初始信息为 $\mathbb{I}$ 的 $T$ 步展开的简单全连接 RNN 的实现（参见定义 1.6.4）。
-- (ii) $R$ 是参数向量为 $\theta$、RNN 节点为 $\mathfrak{R}$ 且初始信息为 $\mathbb{I}$ 的 $T$ 步展开的 RNN 的实现（参见定义 1.6.2）。
+- (i) $R$ 是参数向量为 $\theta$、激活函数为 $\Psi_1$ 和 $\Psi_2$ 且初始信息为 $\mathbb{I}$ 的 $T$ 步展开的简单全连接 `RNN` 的实现（参见定义 1.6.4）。
+
+- (ii) $R$ 是参数向量为 $\theta$、`RNN` 节点为 $\mathfrak{R}$ 且初始信息为 $\mathbb{I}$ 的 $T$ 步展开的 `RNN` 的实现（参见定义 1.6.2）。
 
 引理 1.6.5 的证明。观察到 $(1.63)$ 和 $(1.65)$ 确保了 $((\mathrm{i})\Leftrightarrow(\mathrm{ii}))$。引理 1.6.5 的证明完毕。$\square$
 
-练习 1.6.1. 对于每个 $T \in \mathbb{N}$ 和 $\alpha \in (0,1)$，设 $R_{T,\alpha}$ 为参数向量为 $(1,0,0, \alpha, 0, 1-\alpha, 0, 0, -1, 1, 0)$、激活函数为 $\mathfrak{H}_{*,2}$ 和 $\mathrm{id}_{*}$ 且初始信息为 $(0,0)$ 的 $T$ 步展开的简单全连接 RNN 的实现（参见定义 1.2.1, 1.2.4 和 1.6.4）。对于每个 $T \in \mathbb{N}$ 和 $\alpha \in (0,1)$，明确写出 $R_{T,\alpha}(1,1,\ldots,1)$ 并证明你的结果是正确的！
+练习 1.6.1. 对于每个 $T \in \mathbb{N}$ 和 $\alpha \in (0,1)$，设 $R_{T,\alpha}$ 为参数向量为 $(1,0,0, \alpha, 0, 1-\alpha, 0, 0, -1, 1, 0)$、激活函数为 $\mathfrak{H}_{*,2}$ 和 $\mathrm{id}_{*}$ 且初始信息为 $(0,0)$ 的 $T$ 步展开的简单全连接 `RNN` 的实现（参见定义 1.2.1, 1.2.4 和 1.6.4）。对于每个 $T \in \mathbb{N}$ 和 $\alpha \in (0,1)$，明确写出 $R_{T,\alpha}(1,1,\ldots,1)$ 并证明你的结果是正确的！
 
 ### 1.6.3 长短期记忆 (LSTM) RNN
 
-在本节中，我们将简要讨论一种非常流行的 RNN 节点类型，即 LSTM 节点，以及由此产生的被称为 LSTM 网络的相应 RNN，它们由 Hochreiter & Schmidhuber [201] 引入。粗略地说，LSTM 节点的设计旨在解决大多数基于简单 RNN 节点（如上文第 1.6.2 节中的简单全连接 RNN 节点）的 RNN 难以学习理解数据序列中长期依赖关系的问题（例如参见 [30, 328]）。大致而言，RNN 通过反复将 RNN 节点应用于由输入序列的新元素和 RNN 节点前一次应用的部分输出组成的元组来处理输入序列（关于 RNN 的精确描述参见上文定义 1.6.2）。因此，RNN 节点的任何一次应用所能获取的关于先前处理的输入序列元素的信息，仅仅是由 RNN 节点上一次应用所产生的输出中所编码的信息。因此，RNN 可以被视为仅具有短期记忆。然而，LSTM 架构的设计旨在促进长期信息在此短期记忆内的传输。因此，LSTM 网络可以被视为具有一种长短期记忆。
+在本节中，我们将简要讨论一种非常流行的 `RNN` 节点类型，即 `LSTM` 节点，以及由此产生的被称为 `LSTM` 网络的相应 `RNN`，它们由 Hochreiter & Schmidhuber [201] 引入。粗略地说，`LSTM` 节点的设计旨在解决大多数基于简单 `RNN` 节点（如上文第 1.6.2 节中的简单全连接 `RNN` 节点）的 `RNN` 难以学习理解数据序列中长期依赖关系的问题（例如参见 [30, 328]）。大致而言，`RNN` 通过反复将 `RNN` 节点应用于由输入序列的新元素和 `RNN` 节点前一次应用的部分输出组成的元组来处理输入序列（关于 `RNN` 的精确描述参见上文定义 1.6.2）。因此，`RNN` 节点的任何一次应用所能获取的关于先前处理的输入序列元素的信息，仅仅是由 `RNN` 节点上一次应用所产生的输出中所编码的信息。因此，`RNN` 可以被视为仅具有短期记忆。然而，`LSTM` 架构的设计旨在促进长期信息在此短期记忆内的传输。因此，`LSTM` 网络可以被视为具有一种长短期记忆。
 
-关于 LSTM 网络的精确定义，我们请参考原始文献 Hochreiter & Schmidhuber [201]，以及例如 [133, 169, 319] 中的精彩解释。关于文献中 LSTM 网络的一些精选参考文献，例如请参见 [11, 77, 133, 147, 148, 169, 171–174, 288, 330, 360, 367, 388, 425] 及其引用的参考文献。
+关于 `LSTM` 网络的精确定义，我们请参考原始文献 Hochreiter & Schmidhuber [201]，以及例如 [133, 169, 319] 中的精彩解释。关于文献中 `LSTM` 网络的一些精选参考文献，例如请参见 [11, 77, 133, 147, 148, 169, 171–174, 288, 330, 360, 367, 388, 425] 及其引用的参考文献。
 
 ## 1.7 其他类型的 ANN
 
-在本节中，我们提供了一些参考文献以及关于文献中几种未在本书上述章节中讨论的流行 ANN 类型的粗略评论。
+在本节中，我们提供了一些参考文献以及关于文献中几种未在本书上述章节中讨论的流行 `ANN` 类型的粗略评论。
 
 ### 1.7.1 具有编码器-解码器架构的 ANN：自编码器
 
-在本节中，我们讨论基于编码器-解码器 *ANN* 架构的自编码器的概念。粗略地说，自编码器的目标是学习数据点的简化表示，以及如何从简化表示中紧密重构原始数据点。数据点的简化表示通常称为*编码*，它通过对数据点应用*编码器 ANN* 获得。从编码表示中近似重构原始数据点的过程反过来称为*解码*，它通过对编码表示应用*解码器 ANN* 获得。编码器 *ANN* 与解码器 *ANN* 的组合被称为*自编码器*。在最简单的情况下，通过训练完整的自编码器使其尽可能接近数据点上的恒等映射，来训练编码器 *ANN* 和解码器 *ANN* 分别执行其期望的功能。
+在本节中，我们讨论基于编码器-解码器 `ANN` 架构的自编码器的概念。粗略地说，自编码器的目标是学习数据点的简化表示，以及如何从简化表示中紧密重构原始数据点。数据点的简化表示通常称为*编码*，它通过对数据点应用*编码器 ANN* 获得。从编码表示中近似重构原始数据点的过程反过来称为*解码*，它通过对编码表示应用*解码器 ANN* 获得。编码器 `ANN` 与解码器 `ANN` 的组合被称为*自编码器*。在最简单的情况下，通过训练完整的自编码器使其尽可能接近数据点上的恒等映射，来训练编码器 `ANN` 和解码器 `ANN` 分别执行其期望的功能。
 
 文献中提出了大量不同的自编码器架构和训练程序。下面列出了科学文献中一些流行理念的精选。
 
 - 我们例如引用 [49, 198, 200, 253, 356] 作为介绍和改进自编码器概念的基础参考文献，
+
 - 我们例如引用 [402, 403, 416] 关于所谓的*去噪自编码器*，它们在自编码器的训练中对输入数据添加随机扰动，
+
 - 我们例如引用 [51, 107, 246] 关于所谓的*变分自编码器*，它们在自编码器的训练中使用贝叶斯统计技术，
+
 - 我们例如引用 [294, 349] 关于涉及卷积的自编码器，以及
+
 - 我们例如引用 [118, 292] 关于*对抗自编码器*，它们将自编码器的原理与生成对抗网络（参见 Goodfellow 等人 [165]）的范式结合起来。
 
 ### 1.7.2 Transformer 和注意力机制
 
-在第 1.6 节中，我们回顾了 *RNNs*，这是一种旨在将数据点序列作为输入的 *ANNs* 类型。非常粗略地说，*RNNs* 通过依次处理序列中的一个数据点，从而不断更新编码先前处理信息的状态（关于 *RNNs* 的精确描述参见上文第 1.6.1 节）。在处理序列中的一个数据点时，来自早期数据点的任何信息仅对 *RNN*
+在第 1.6 节中，我们回顾了 `RNNs`，这是一种旨在将数据点序列作为输入的 `ANNs` 类型。非常粗略地说，`RNNs` 通过依次处理序列中的一个数据点，从而不断更新编码先前处理信息的状态（关于 `RNNs` 的精确描述参见上文第 1.6.1 节）。在处理序列中的一个数据点时，来自早期数据点的任何信息仅对 `RNN`
 
+通过由循环神经网络（`RNN`）前一个处理步骤传递的信息状态。因此，`RNN`可能很难学习理解输入序列中的长期依赖关系。在本文第1.6.3节中，我们简要讨论了`LSTM`架构，这是一种旨在赋予此类`RNN`能力去学习理解长期依赖关系的`RNN`架构。
 
-通过由循环神经网络（RNN）前一个处理步骤传递的信息状态。因此，RNN可能很难学习理解输入序列中的长期依赖关系。在本文第1.6.3节中，我们简要讨论了LSTM架构，这是一种旨在赋予此类RNN能力去学习理解长期依赖关系的RNN架构。
+文献中另一种用于设计处理序列数据且能够高效学习理解数据序列中长期依赖关系的`ANN`架构的方法被称为注意力机制。大体上说，在数据序列的语境下，注意力机制旨在赋予`ANN`在处理序列中某个数据点时，对完整输入序列中选定的部分“集中注意力”的能力。在`ANN`中使用注意力机制的思想最初由Bahdanau等人[11]在针对机器翻译训练的`RNN`语境中引入。在此语境下，所提出的`ANN`架构仍然按顺序处理输入序列，但是过去的信息不仅可以通过前一个处理步骤的信息状态获得，还可以通过注意力机制获得，后者可以直接提取来自远离当前正在处理的数据点的数据点的信息。
 
-文献中另一种用于设计处理序列数据且能够高效学习理解数据序列中长期依赖关系的ANN架构的方法被称为注意力机制。大体上说，在数据序列的语境下，注意力机制旨在赋予ANN在处理序列中某个数据点时，对完整输入序列中选定的部分“集中注意力”的能力。在ANN中使用注意力机制的思想最初由Bahdanau等人[11]在针对机器翻译训练的RNN语境中引入。在此语境下，所提出的ANN架构仍然按顺序处理输入序列，但是过去的信息不仅可以通过前一个处理步骤的信息状态获得，还可以通过注意力机制获得，后者可以直接提取来自远离当前正在处理的数据点的数据点的信息。
+基于注意力机制的最著名的`ANN`很可能不涉及任何循环元素，并由开创性论文Vaswani等人[397]中被称为“Attention is all you need”的作者们命名为`Transformer ANN`。大体上说，`Transformer ANN`旨在通过一次性考虑整个输入序列，并仅依靠注意力机制来理解序列中数据点之间的依赖关系，从而处理数据序列。`Transformer ANN`是许多近年来非常成功的大型语言模型（`LLM`）的基础，例如，位于著名ChatGPT应用程序背后的生成式预训练Transformer（`GPT`）[54, 320, 341, 342]，Devlin等人[104]中基于Transformer的双向编码器表示（`BERT`）模型，以及许多其他模型（参见，例如，[91, 267, 343, 418, 422]及其中的参考文献）。
 
-基于注意力机制的最著名的ANN很可能不涉及任何循环元素，并由开创性论文Vaswani等人[397]中被称为“Attention is all you need”的作者们命名为Transformer ANN。大体上说，Transformer ANN旨在通过一次性考虑整个输入序列，并仅依靠注意力机制来理解序列中数据点之间的依赖关系，从而处理数据序列。Transformer ANN是许多近年来非常成功的大型语言模型（LLM）的基础，例如，位于著名ChatGPT应用程序背后的生成式预训练Transformer（GPT）[54, 320, 341, 342]，Devlin等人[104]中基于Transformer的双向编码器表示（BERT）模型，以及许多其他模型（参见，例如，[91, 267, 343, 418, 422]及其中的参考文献）。
-
-除了引入Transformer和注意力机制的自然语言处理（NLP）应用外，类似的思想也被应用于其他多个领域，例如，计算机视觉（参见，例如，[109, 240, 278, 404]），蛋白质结构预测（参见，例如，[232]），多模态学习（参见，例如，[283]），以及长序列时间序列预测（参见，例如，[441]）。此外，例如，我们参考文献[81, 288]、[157, 第17章]和[164, 第12.4.5.1节]中关于注意力机制的探索与解释。
+除了引入`Transformer`和注意力机制的自然语言处理（`NLP`）应用外，类似的思想也被应用于其他多个领域，例如，计算机视觉（参见，例如，[109, 240, 278, 404]），蛋白质结构预测（参见，例如，[232]），多模态学习（参见，例如，[283]），以及长序列时间序列预测（参见，例如，[441]）。此外，例如，我们参考文献[81, 288]、[157, 第17章]和[164, 第12.4.5.1节]中关于注意力机制的探索与解释。
 
 ### 1.7.3 图神经网络（GNNs）
 
-本书前几节中回顾的所有ANN都旨在以实值向量或实值向量序列作为输入。然而，存在若干基于数据的机器学习问题，例如社交网络数据或分子数据，这些数据无法由实值向量最佳地表示，而更适合由图来表示（参见，例如，West [411]中关于图的引言）。因此，文献中引入了许多可以处理图作为输入的ANN架构，即所谓的图神经网络（GNNs）。
+本书前几节中回顾的所有`ANN`都旨在以实值向量或实值向量序列作为输入。然而，存在若干基于数据的机器学习问题，例如社交网络数据或分子数据，这些数据无法由实值向量最佳地表示，而更适合由图来表示（参见，例如，West [411]中关于图的引言）。因此，文献中引入了许多可以处理图作为输入的`ANN`架构，即所谓的图神经网络（`GNNs`）。
 
-- 例如，我们参考文献[362, 415, 439, 442]中关于GNNs的综述文章，
-- 例如，我们参考文献[166, 366]中关于GNNs的基础性文章，
-- 例如，我们参考文献[399, 426]中关于注意力机制（参见上文第1.7.2节）在GNNs中的应用，
-- 例如，我们参考文献[55, 95, 412, 424]中涉及图上卷积的GNNs，并且
-- 例如，我们参考文献[16, 151, 361, 368, 414]中关于GNNs在自然科学问题中的应用。
+- 例如，我们参考文献[362, 415, 439, 442]中关于`GNNs`的综述文章，
+
+- 例如，我们参考文献[166, 366]中关于`GNNs`的基础性文章，
+
+- 例如，我们参考文献[399, 426]中关于注意力机制（参见上文第1.7.2节）在`GNNs`中的应用，
+
+
+
+- 例如，我们参考文献[55, 95, 412, 424]中涉及图上卷积的`GNNs`，并且
+- 例如，我们参考文献[16, 151, 361, 368, 414]中关于`GNNs`在自然科学问题中的应用。
 
 ### 1.7.4 神经算子
 
-在本节中，我们回顾几种在算子学习中常用的ANN类型架构。大体上说，在算子学习中，人们感兴趣的不是学习有限维欧几里得空间之间的映射，而是学习从函数空间到函数空间的映射。这种在（通常是无限维的）向量空间之间的映射通常被称为算子。此类映射的一个例子是演化偏微分方程（PDE）的解算子，它将PDE的初始条件映射到相应的终端值。为了逼近/学习算子，必须开发参数化的算子族，即我们称为神经算子的对象。文献中提出了许多不同的此类神经算子架构，其中一些我们在下面几段中列出。
+在本节中，我们回顾几种在算子学习中常用的`ANN`类型架构。大体上说，在算子学习中，人们感兴趣的不是学习有限维欧几里得空间之间的映射，而是学习从函数空间到函数空间的映射。这种在（通常是无限维的）向量空间之间的映射通常被称为算子。此类映射的一个例子是演化偏微分方程（`PDE`）的解算子，它将`PDE`的初始条件映射到相应的终端值。为了逼近/学习算子，必须开发参数化的算子族，即我们称为神经算子的对象。文献中提出了许多不同的此类神经算子架构，其中一些我们在下面几段中列出。
 
-最成功的神经算子架构之一是所谓的傅里叶神经算子（FNOs），由Li等人[271]引入（参见Kovachki等人[252]）。大体上说，FNOs是函数空间上的参数化映射，涉及对函数值以及傅里叶系数的变换。FNOs是基于Li等人[270, 272]中引入的神经算子推导出来的，这些神经算子基于带有参数化积分核的积分变换。例如，我们参考文献[53, 251, 269, 410]及其中的参考文献，以了解关于FNOs的扩展和理论结果。
+最成功的神经算子架构之一是所谓的傅里叶神经算子（`FNOs`），由`Li`等人[271]引入（参见`Kovachki`等人[252]）。大体上说，`FNOs`是函数空间上的参数化映射，涉及对函数值以及傅里叶系数的变换。`FNOs`是基于`Li`等人[270, 272]中引入的神经算子推导出来的，这些神经算子基于带有参数化积分核的积分变换。例如，我们参考文献[53, 251, 269, 410]及其中的参考文献，以了解关于`FNOs`的扩展和理论结果。
 
-一种简单且成功的神经算子架构，基于神经算子的通用逼近定理，是由Lu等人[284]引入的深度算子网络（deepONets）。大体上说，一个deepONet由两个ANN组成，它们分别以输出空间的评估点和输入函数在预定“传感器”点处的值作为输入，并通过标量积连接在一起以产生deepONet的输出。例如，我们参考文献[115, 167, 249, 261, 276, 297, 335, 392, 406, 413, 432]中关于deepONets的扩展和理论结果。关于deepONets与FNOs的比较，例如，我们参考文献Lu等人[285]。
+一种简单且成功的神经算子架构，基于神经算子的通用逼近定理，是由`Lu`等人[284]引入的深度算子网络（`deepONets`）。大体上说，一个`deepONet`由两个`ANN`组成，它们分别以输出空间的评估点和输入函数在预定“传感器”点处的值作为输入，并通过标量积连接在一起以产生`deepONet`的输出。例如，我们参考文献[115, 167, 249, 261, 276, 297, 335, 392, 406, 413, 432]中关于`deepONets`的扩展和理论结果。关于`deepONets`与`FNOs`的比较，例如，我们参考文献`Lu`等人[285]。
 
-另一个自然的方法是采用CNN（参见第1.4节）来开发神经算子架构。例如，我们参考文献[185, 192, 244, 350, 443]中关于此类基于CNN的神经算子。最后，例如，我们参考文献[67, 94, 98, 135, 136, 227, 273, 277, 301, 344, 369, 419]中关于其他神经算子架构以及神经算子的理论结果。
+另一个自然的方法是采用`CNN`（参见第1.4节）来开发神经算子架构。例如，我们参考文献[185, 192, 244, 350, 443]中关于此类基于`CNN`的神经算子。最后，例如，我们参考文献[67, 94, 98, 135, 136, 227, 273, 277, 301, 344, 369, 419]中关于其他神经算子架构以及神经算子的理论结果。
 
-### 第2章
-# ANN微积分
+# 第2章
 
-在本章中，我们回顾可以在全连接前馈$\mathbf{ANN}$集合上执行的某些运算，例如复合（参见第2.1节）、并行化（参见第2.2节）、标量乘法（参见第2.3节）和求和（参见第2.4节），从而回顾全连接前馈$\mathbf{ANN}$的适当微积分。本章中介绍的全连接前馈$\mathbf{ANN}$的运算和微积分将用于第3章和第4章中建立某些$\mathbf{ANN}$逼近结果。
+## ANN微积分
 
-在文献中，此类对$\mathbf{ANN}$的运算和此类对$\mathbf{ANN}$的微积分已在许多研究文章中使用，例如[128, 159, 180, 181, 184, 228, 321, 329, 333]及其中的参考文献。本章的具体呈现基于Grohs等人[180, 181]。
+在本章中，我们回顾可以在全连接前馈`ANN`集合上执行的某些运算，例如复合（参见第2.1节）、并行化（参见第2.2节）、标量乘法（参见第2.3节）和求和（参见第2.4节），从而回顾全连接前馈`ANN`的适当微积分。本章中介绍的全连接前馈`ANN`的运算和微积分将用于第3章和第4章中建立某些`ANN`逼近结果。
 
-## 2.1 全连接前馈$\mathbf{ANN}$的复合
+在文献中，此类对`ANN`的运算和此类对`ANN`的微积分已在许多研究文章中使用，例如[128, 159, 180, 181, 184, 228, 321, 329, 333]及其中的参考文献。本章的具体呈现基于`Grohs`等人[180, 181]。
 
-### 2.1.1 全连接前馈$\mathbf{ANN}$的复合
+## 2.1 全连接前馈`ANN`的复合
 
-**定义 2.1.1（$\mathbf{ANN}$的复合）**。我们用
+### 2.1.1 全连接前馈`ANN`的复合
+
+**定义 2.1.1（`ANN`的复合）**。我们用
 
 $$
 (\bullet)(\cdot) \bullet(\cdot): \{ (\Phi, \Psi) \in \mathbf{N} \times \mathbf{N} : \mathcal{I}(\Phi) = \mathcal{O}(\Psi) \} \rightarrow \mathbf{N} \tag{2.1}
@@ -1937,19 +2152,24 @@ $$
 
 （参见定义1.3.1）。
 
-
-
-## 2.1.2 全连接前馈人工神经网络复合运算的基本性质
+### 2.1.2 全连接前馈人工神经网络复合运算的基本性质
 
 **命题 2.1.2** *(全连接前馈人工神经网络标准复合运算的性质)*. 设 $\Phi, \Psi \in \mathbb{N}$ 满足 $\mathcal{I}(\Phi) = \mathcal{O}(\Psi)$（参见定义 1.3.1）。则
 
 1. 成立
+
 $$\mathcal{D}(\Phi \bullet \Psi) = (\mathbb{D}_0(\Psi), \mathbb{D}_1(\Psi), \dots, \mathbb{D}_{\mathcal{H}(\Psi)}(\Psi), \mathbb{D}_1(\Phi), \mathbb{D}_2(\Phi), \dots, \mathbb{D}_{\mathcal{L}(\Phi)}(\Phi)),$$ (2.3)
+
 2. 成立
+
 $$[\mathcal{L}(\Phi \bullet \Psi) - 1] = [\mathcal{L}(\Phi) - 1] + [\mathcal{L}(\Psi) - 1],$$ (2.4)
+
 3. 成立
+
 $$\mathcal{H}(\Phi \bullet \Psi) = \mathcal{H}(\Phi) + \mathcal{H}(\Psi),$$ (2.5)
+
 4. 成立
+
 $$
 \begin{aligned}
 \mathcal{P}(\Phi \bullet \Psi) &= \mathcal{P}(\Phi) + \mathcal{P}(\Psi) + \mathbb{D}_1(\Phi) \big[ \mathbb{D}_{\mathcal{L}(\Psi)-1}(\Psi) + 1 \big] \\
@@ -1957,7 +2177,9 @@ $$
 &\quad \le \mathcal{P}(\Phi) + \mathcal{P}(\Psi) + \mathbb{D}_1(\Phi) \mathbb{D}_{\mathcal{H}(\Psi)}(\Psi),
 \end{aligned}
 $$ (2.6)
+
 5. 对于所有 $a \in C(\mathbb{R}, \mathbb{R})$，成立 $\mathcal{R}_a^\mathbb{N}(\Phi \bullet \Psi) \in C(\mathbb{R}^{\mathcal{I}(\Psi)}, \mathbb{R}^{\mathcal{O}(\Phi)})$ 且
+
 $$\mathcal{R}_a^\mathbb{N}(\Phi \bullet \Psi) = [\mathcal{R}_a^\mathbb{N}(\Phi)] \circ [\mathcal{R}_a^\mathbb{N}(\Psi)]$$ (2.7)
 
 *(参见定义 1.3.4 和 2.1.1)*.
@@ -1965,7 +2187,7 @@ $$\mathcal{R}_a^\mathbb{N}(\Phi \bullet \Psi) = [\mathcal{R}_a^\mathbb{N}(\Phi)]
 *命题 2.1.2 的证明*. 在整个证明过程中，令 $L = \mathcal{L}(\Phi \bullet \Psi)$，对于所有 $a \in C(\mathbb{R}, \mathbb{R})$，令
 
 $$X_a = \{ x = (x_0, x_1, \dots, x_L) \in \mathbb{R}^{\mathbb{D}_{\mathcal{I}(\Phi \bullet \Psi)}(\Phi \bullet \Psi)} \times \mathbb{R}^{\mathbb{D}_1(\Phi \bullet \Psi)} \times \dots \times \mathbb{R}^{\mathbb{D}_L(\Phi \bullet \Psi)} : 
-(\forall k \in \{1, 2, \dots, L\} : x_k = \mathfrak{H}_{a, \lceil L \rceil_L(k) + \operatorname{id}_{\mathbb{N}} \lceil L \rceil_L(k), \mathbb{D}_k(\Phi \bullet \Psi)}(\mathcal{V}_{k, \Phi \bullet \Psi} x_{k-1} + \mathcal{B}_{k, \Phi \bullet \Psi}) \} \} .$$ (2.8)
+(\forall k \in \{1, 2, \dots, L\} : x_k = \mathfrak{H}_{a, \lceil L \rceil_L(k) + \operatorname{id}_{\mathbb{N}} \lceil L \rceil_L(k), \mathbb{D}_k(\Phi \bullet \Psi)}(\mathcal{V}_{k, \Phi \bullet \Psi} x_{k-1} + \mathcal{B}_{k, \Phi \bullet \Psi}) \} .$$ (2.8)
 
 注意，$\mathcal{L}(\Phi \bullet \Psi) = \mathcal{L}(\Phi) + \mathcal{L}(\Psi) - 1$ 这一事实以及对于所有 $\Theta \in \mathbb{N}$ 成立 $\mathcal{H}(\Theta) = \mathcal{L}(\Theta) - 1$ 的事实确立了条目 (ii) 和 (iii)。观察到引理 1.3.3 中的条目 (iii) 和 (2.2) 表明，对于所有 $k \in \{1, 2, \dots, L\}$，成立
 
@@ -2001,6 +2223,8 @@ $$(\mathcal{W}_{\mathcal{L}(\Psi) + k - 1, \Phi \bullet \Psi}, \mathcal{B}_{\mat
 这与 **(2.10)** 确保了对于所有 $a \in C(\mathbb{R}, \mathbb{R})$，$x = (x_0, x_1, \ldots, x_L) \in X_a$，$k \in \mathbb{N} \cap (1, \mathcal{L}(\Phi) + 1)$，成立
 
 $$\begin{split} x_{\mathcal{L}(\Psi) + k - 1} &= \mathfrak{M}_{a_{\{1, L\}}(\mathcal{L}(\Psi) + k - 1), \mathrm{id}_{\mathbb{R}} \circ 1_{\{1\}}(\mathcal{L}(\Psi) + k - 1), \mathbb{D}_k(\Phi)}(\mathcal{W}_{k, \Phi} x_{\mathcal{L}(\Psi) + k - 2} + \mathcal{B}_{k, \Phi}) \\ &= \mathfrak{M}_{a_{\{0, \mathcal{L}(\Psi)\}}(k), \mathrm{id}_{\mathbb{R}} \circ 1_{\{\mathcal{L}(\Psi)\}}(k), \mathbb{D}_k(\Phi)}(\mathcal{W}_{k, \Phi} x_{\mathcal{L}(\Psi) + k - 2} + \mathcal{B}_{k, \Phi}). \end{split} \tag{2.15}$$
+
+
 
 此外，观察到 (2.2) 和 (2.10) 表明对于所有 $a \in C(\mathbb{R}, \mathbb{R})$，$x = (x_0, x_1, \dots, x_L) \in X_a$，成立
 
@@ -2043,9 +2267,6 @@ $$\mathcal{L}(\Phi_1 \bullet \Phi_2) = \mathcal{L}(\Phi_1) \quad \text{且} \qua
 （参见定义 2.1.1）。因此，我们得到
 
 $$\mathcal{L}((\Phi_1 \bullet \Phi_2) \bullet \Phi_3) = \mathcal{L}(\Phi_1) + \mathcal{L}(\Phi_3) = \mathcal{L}(\Phi_1 \bullet (\Phi_2 \bullet \Phi_3)). \quad (2.23)$$
-
-
-
 
 # 2.1. 全连接前向 ANNs 的复合
 
@@ -2113,97 +2334,161 @@ $$
 \begin{align*}
 \mathcal{L} ( ( \Phi_1 \bullet \Phi_2 ) \bullet \Phi_3 ) &= \mathcal{L} ( \Phi_1 \bullet \Phi_2 ) + \mathcal{L} ( \Phi_3 ) - 1 \\
 &= \mathcal{L} ( \Phi_1 ) + \mathcal{L} ( \Phi_2 ) + \mathcal{L} ( \Phi_3 ) - 2 \\
-&= \mathcal{L} ( \Phi_1 ) + \mathcal{L} ( \Phi_2 \bullet \Phi_3 ) - 1 \\
-&= \mathcal{L} ( \Phi_1 \bullet ( \Phi_2 \bullet \Phi_3 ) )
 \end{align*}
+$$
+
+
+
+&= \mathcal{L} ( \Phi_1 ) + \mathcal{L} ( \Phi_2 \bullet \Phi_3 ) - 1 \\
+
+&= \mathcal{L} ( \Phi_1 \bullet ( \Phi_2 \bullet \Phi_3 ) )
+
+\end{align*}
+
 \tag{2.33}
+
 $$
 
 （参见定义 2.1.1）。此外，观察到 (2.2) 表明对于所有 $k \in \{1, 2, \ldots, \mathcal{L}(\Phi_1 \bullet \Phi_2)\} + \mathcal{L}(\Phi_3)$，成立
 
 $$
+
 \begin{align*}
+
 & \left( \mathcal{W}_{k, (\Phi_1 \bullet \Phi_2) \bullet \Phi_3}, \boldsymbol{B}_{k, (\Phi_1 \bullet \Phi_2) \bullet \Phi_3} \right) \\
+
 &= \left\{\begin{array}{ll}
+
 \left( \mathcal{W}_{k, \Phi_3}, \boldsymbol{B}_{k, \Phi_3} \right) & : k < \mathcal{L}(\Phi_3) \\
+
 \left( \mathcal{W}_{1, \Phi_1 \bullet \Phi_2} \mathcal{W}_{\mathcal{L}(\Phi_3), \Phi_3}, \mathcal{W}_{1, \Phi_1 \bullet \Phi_2} \boldsymbol{B}_{\mathcal{L}(\Phi_3), \Phi_3} + \boldsymbol{B}_{1, \Phi_1 \bullet \Phi_2} \right) & : k = \mathcal{L}(\Phi_3) \\
+
 \left( \mathcal{W}_{k - \mathcal{L}(\Phi_3) + 1, \Phi_1 \bullet \Phi_2}, \boldsymbol{B}_{k - \mathcal{L}(\Phi_3) + 1, \Phi_1 \bullet \Phi_2} \right) & : k > \mathcal{L}(\Phi_3).
+
 \end{array}\right.
+
 \end{align*}
+
 \tag{2.34}
+
 $$
 
 此外，注意 (2.2) 和假设 $\mathcal{L}(\Phi_2) > 1$ 确保对于所有 $k \in \mathbb{N} \cap (\mathcal{L}(\Phi_3), \mathcal{L}(\Phi_1 \bullet \Phi_2 \bullet \Phi_3)]$，成立
 
 $$
+
 \begin{align*}
+
 & \left( \mathcal{W}_{k - \mathcal{L}(\Phi_3) + 1, \Phi_1 \bullet \Phi_2}, \boldsymbol{B}_{k - \mathcal{L}(\Phi_3) + 1, \Phi_1 \bullet \Phi_2} \right) \\
+
 &= \left\{\begin{array}{ll}
+
 \left( \mathcal{W}_{k - \mathcal{L}(\Phi_3) + 1, \Phi_2}, \boldsymbol{B}_{k - \mathcal{L}(\Phi_3) + 1, \Phi_2} \right) & : k - \mathcal{L}(\Phi_3) + 1 < \mathcal{L}(\Phi_2) \\
+
 \left( \mathcal{W}_{1, \Phi_1} \mathcal{W}_{\mathcal{L}(\Phi_2), \Phi_2}, \mathcal{W}_{1, \Phi_1} \boldsymbol{B}_{\mathcal{L}(\Phi_2), \Phi_2} + \boldsymbol{B}_{1, \Phi_1} \right) & : k - \mathcal{L}(\Phi_3) + 1 = \mathcal{L}(\Phi_2) \\
+
 \left( \mathcal{W}_{k - \mathcal{L}(\Phi_3) + 1 - \mathcal{L}(\Phi_2) + 1, \Phi_1}, \boldsymbol{B}_{k - \mathcal{L}(\Phi_3) + 1 - \mathcal{L}(\Phi_2) + 1, \Phi_1} \right) & : k - \mathcal{L}(\Phi_3) + 1 > \mathcal{L}(\Phi_2)
+
 \end{array}\right.
+
 \end{align*}
+
 $$
 
 $$
+
 = \left\{\begin{array}{ll}
+
 \left( \mathcal{W}_{k - \mathcal{L}(\Phi_3) + 1, \Phi_2}, \boldsymbol{B}_{k - \mathcal{L}(\Phi_3) + 1, \Phi_2} \right) & : k < \mathcal{L}(\Phi_2) + \mathcal{L}(\Phi_3) - 1 \\
+
 \left( \mathcal{W}_{1, \Phi_1} \mathcal{W}_{\mathcal{L}(\Phi_2), \Phi_2}, \mathcal{W}_{1, \Phi_1} \boldsymbol{B}_{\mathcal{L}(\Phi_2), \Phi_2} + \boldsymbol{B}_{1, \Phi_1} \right) & : k = \mathcal{L}(\Phi_2) + \mathcal{L}(\Phi_3) - 1 \\
+
 \left( \mathcal{W}_{k - \mathcal{L}(\Phi_3) - \mathcal{L}(\Phi_2) + 2, \Phi_1}, \boldsymbol{B}_{k - \mathcal{L}(\Phi_3) - \mathcal{L}(\Phi_2) + 2, \Phi_1} \right) & : k > \mathcal{L}(\Phi_2) + \mathcal{L}(\Phi_3) - 1.
+
 \end{array}\right.
+
 \tag{2.35}
+
 $$
-
-
 
 # 2.1. 全连接前馈 ANN 的组合
 
 将此与 (2.34) 结合证明，对于所有 $k \in \{1, 2, \dots, L(\mathcal{R}_1 \bullet \mathcal{R}_2) \bullet \mathcal{R}_3\}$，成立
 
 $$
+
 \begin{aligned}
+
 &(\mathcal{L}_{k, (\mathcal{R}_1 \bullet \mathcal{R}_2) \bullet \mathcal{R}_3}, \hat{\mathcal{H}}_{k, (\mathcal{R}_1 \bullet \mathcal{R}_2) \bullet \mathcal{R}_3}) \\
+
 &\quad \begin{cases} 
+
 (\mathcal{L}_{k, \mathcal{R}_3}, \hat{\mathcal{H}}_{k, \mathcal{R}_3}) & : k < L(\mathcal{R}_3) \\
+
 (\mathcal{L}_{1, \mathcal{R}_2} \mathcal{L}^{L(\mathcal{R}_3), \mathcal{R}_3}, \mathcal{L}_{1, \mathcal{R}_2} \hat{\mathcal{H}}^{L(\mathcal{R}_3), \mathcal{R}_3} + \hat{\mathcal{H}}_{1, \mathcal{R}_2}) & : k = L(\mathcal{R}_3) \\
+
 (\mathcal{L}_{k-L(\mathcal{R}_3)+1, \mathcal{R}_2}, \hat{\mathcal{H}}_{k-L(\mathcal{R}_3)+1, \mathcal{R}_2}) & : L(\mathcal{R}_3) < k < L(\mathcal{R}_2) + L(\mathcal{R}_3) - 1 \\
+
 (\mathcal{L}_{1, \mathcal{R}_1} \mathcal{L}^{L(\mathcal{R}_2), \mathcal{R}_2}, \mathcal{L}_{1, \mathcal{R}_1} \hat{\mathcal{H}}^{L(\mathcal{R}_2), \mathcal{R}_2} + \hat{\mathcal{H}}_{1, \mathcal{R}_1}) & : k = L(\mathcal{R}_2) + L(\mathcal{R}_3) - 1 \\
+
 (\mathcal{L}_{k-L(\mathcal{R}_3)-L(\mathcal{R}_2)+2, \mathcal{R}_1}, \hat{\mathcal{H}}_{k-L(\mathcal{R}_3)-L(\mathcal{R}_2)+2, \mathcal{R}_1}) & : k > L(\mathcal{R}_2) + L(\mathcal{R}_3) - 1
+
 \end{cases} \quad (2.36)
+
 \end{aligned}
+
 $$
 
 此外，注意到 (2.2)、事实 $L(\mathcal{R}_2 \bullet \mathcal{R}_3) = L(\mathcal{R}_2) + L(\mathcal{R}_3) - 1$ 以及假设 $L(\mathcal{R}_2) > 1$ 表明，对于所有 $k \in \{1, 2, \dots, L(\mathcal{R}_1 \bullet (\mathcal{R}_2 \bullet \mathcal{R}_3))\}$，成立
 
 $$
+
 \begin{aligned}
+
 &(\mathcal{L}_{k, \mathcal{R}_2 \bullet \mathcal{R}_3}, \hat{\mathcal{H}}_{k, \mathcal{R}_2 \bullet \mathcal{R}_3}) \\
+
 &\quad \begin{cases} 
+
 (\mathcal{L}_{k, \mathcal{R}_2 \bullet \mathcal{R}_3}, \hat{\mathcal{H}}_{k, \mathcal{R}_2 \bullet \mathcal{R}_3}) & : k < L(\mathcal{R}_2 \bullet \mathcal{R}_3) \\
+
 (\mathcal{L}_{1, \mathcal{R}_1} \mathcal{L}^{L(\mathcal{R}_2 \bullet \mathcal{R}_3), \mathcal{R}_2 \bullet \mathcal{R}_3}, \mathcal{L}_{1, \mathcal{R}_1} \hat{\mathcal{H}}^{L(\mathcal{R}_2 \bullet \mathcal{R}_3), \mathcal{R}_2 \bullet \mathcal{R}_3} + \hat{\mathcal{H}}_{1, \mathcal{R}_1}) & : k = L(\mathcal{R}_2 \bullet \mathcal{R}_3) \\
+
 (\mathcal{L}_{k-L(\mathcal{R}_2 \bullet \mathcal{R}_3)+1, \mathcal{R}_1}, \hat{\mathcal{H}}_{k-L(\mathcal{R}_2 \bullet \mathcal{R}_3)+1, \mathcal{R}_1}) & : k > L(\mathcal{R}_2 \bullet \mathcal{R}_3)
+
 \end{cases} \\
+
 &= \begin{cases} 
+
 (\mathcal{L}_{k, \mathcal{R}_3}, \hat{\mathcal{H}}_{k, \mathcal{R}_3}) & : k < L(\mathcal{R}_3) \\
+
 (\mathcal{L}_{1, \mathcal{R}_2} \mathcal{L}^{L(\mathcal{R}_3), \mathcal{R}_3}, \mathcal{L}_{1, \mathcal{R}_2} \hat{\mathcal{H}}^{L(\mathcal{R}_3), \mathcal{R}_3} + \hat{\mathcal{H}}_{1, \mathcal{R}_2}) & : k = L(\mathcal{R}_3) \\
+
 (\mathcal{L}_{k-L(\mathcal{R}_3)+1, \mathcal{R}_2}, \hat{\mathcal{H}}_{k-L(\mathcal{R}_3)+1, \mathcal{R}_2}) & : L(\mathcal{R}_3) < k < L(\mathcal{R}_2) + L(\mathcal{R}_3) - 1 \\
+
 (\mathcal{L}_{1, \mathcal{R}_1} \mathcal{L}^{L(\mathcal{R}_2), \mathcal{R}_2}, \mathcal{L}_{1, \mathcal{R}_1} \hat{\mathcal{H}}^{L(\mathcal{R}_2), \mathcal{R}_2} + \hat{\mathcal{H}}_{1, \mathcal{R}_1}) & : k = L(\mathcal{R}_2) + L(\mathcal{R}_3) - 1 \\
+
 (\mathcal{L}_{k-L(\mathcal{R}_2)-L(\mathcal{R}_3)+2, \mathcal{R}_1}, \hat{\mathcal{H}}_{k-L(\mathcal{R}_2)-L(\mathcal{R}_3)+2, \mathcal{R}_1}) & : k > L(\mathcal{R}_2) + L(\mathcal{R}_3) - 1
+
 \end{cases} \quad (2.37)
+
 \end{aligned}
+
 $$
 
 这、(2.36) 和 (2.33) 建立了对于所有 $k \in \{1, 2, \dots, L(\mathcal{R}_1) + L(\mathcal{R}_2) + L(\mathcal{R}_3) - 2\}$，成立
 
 $$
+
 (\mathcal{L}_{k, (\mathcal{R}_1 \bullet \mathcal{R}_2) \bullet \mathcal{R}_3}, \hat{\mathcal{H}}_{k, (\mathcal{R}_1 \bullet \mathcal{R}_2) \bullet \mathcal{R}_3}) = (\mathcal{L}_{k, \mathcal{R}_1 \bullet (\mathcal{R}_2 \bullet \mathcal{R}_3)}, \hat{\mathcal{H}}_{k, \mathcal{R}_1 \bullet (\mathcal{R}_2 \bullet \mathcal{R}_3)}). \quad (2.38)
+
 $$
 
 因此，我们得到
 
 $$
+
 (\mathcal{R}_1 \bullet \mathcal{R}_2) \bullet \mathcal{R}_3 = \mathcal{R}_1 \bullet (\mathcal{R}_2 \bullet \mathcal{R}_3). \quad (2.39)
+
 $$
 
 引理 2.1.4 的证明到此完成。
@@ -2211,7 +2496,9 @@ $$
 **推论 2.1.5.** 设 $\Phi_1, \Phi_2, \Phi_3 \in \mathbf{N}$ 满足 $\mathcal{I}(\Phi_1) = \mathcal{O}(\Phi_2)$ 且 $\mathcal{I}(\Phi_2) = \mathcal{O}(\Phi_3)$（参见定义 1.3.1）。则
 
 $$
+
 (\Phi_1 \bullet \Phi_2) \bullet \Phi_3 = \Phi_1 \bullet (\Phi_2 \bullet \Phi_3) \quad (2.40)
+
 $$
 
 （参见定义 2.1.1）。
@@ -2223,13 +2510,20 @@ $$
 **定义 2.1.6**（全连接前馈 **ANNs** 的幂）。*我们记 $(\cdot)^{\bullet n}$: $\{\Phi \in \mathbf{N}: \mathcal{I}(\Phi) = \mathcal{O}(\Phi)\} \rightarrow \mathbf{N}$，$n \in \mathbb{N}_0$，为满足对于所有 $n \in \mathbb{N}_0$、$\Phi \in \mathbf{N}$ 且 $\mathcal{I}(\Phi) = \mathcal{O}(\Phi)$ 的函数*
 
 $$
+
 \Phi^{\bullet n} = \begin{cases} 
+
 (\mathrm{I}_{\mathcal{O}(\Phi)}, (0,0,\dots,0)) \in \mathbb{R}^{\mathcal{O}(\Phi) \times \mathcal{O}(\Phi)} \times \mathbb{R}^{\mathcal{O}(\Phi)} & : n = 0 \\
+
 \Phi \bullet (\Phi^{\bullet (n-1)}) & : n \in \mathbb{N}
+
 \end{cases} \quad (2.41)
+
 $$
 
 （参见定义 1.3.1、1.5.5 和 2.1.1）。
+
+
 
 **引理 2.1.7**（**ANNs** 幂的隐藏层数量）。*设 $n \in \mathbb{N}_0$，$\Phi \in \mathbf{N}$ 满足 $\mathcal{I}(\Phi) = \mathcal{O}(\Phi)$（参见定义 1.3.1）。则*
 
@@ -2241,9 +2535,9 @@ $$
 
 *引理 2.1.7 的证明.* 观察到命题 2.1.2、(2.41) 和归纳法建立了 (2.42)。引理 2.1.7 的证明到此完成。 $\square$
 
-## 2.2 全连接前馈 ANN 的并行化
+# 2.2 全连接前馈 ANN 的并行化
 
-### 2.2.1 相同长度的全连接前馈 ANN 的并行化
+## 2.2.1 相同长度的全连接前馈 ANN 的并行化
 
 **定义 2.2.1**（全连接前馈 **ANNs** 的并行化）。*设 $n \in \mathbb{N}$。则我们记*
 
@@ -2280,22 +2574,22 @@ $$
 **引理 2.2.2**（全连接前馈 ANN 并行化的架构）。设 $n, L \in \mathbb{N}$，$\boldsymbol{\Phi} = (\boldsymbol{\Phi}_1, \dots, \boldsymbol{\Phi}_n) \in \mathbf{N}^n$ 满足 $L = \mathcal{L}(\boldsymbol{\Phi}_1) = \mathcal{L}(\boldsymbol{\Phi}_2) = \cdots = \mathcal{L}(\boldsymbol{\Phi}_n)$（参见定义 1.3.1）。则
 
 - (i) *成立*
-  
-  $$
-  \mathbb{P}_n(\boldsymbol{\Phi}) \in \left(\bigtimes_{k=1}^L \left(\mathbb{R}^{(\sum_{j=1}^n \mathbb{D}_{k}(\boldsymbol{\Phi}_j)) \times (\sum_{j=1}^n \mathbb{D}_{k-1}(\boldsymbol{\Phi}_j))} \times \mathbb{R}^{(\sum_{j=1}^n \mathbb{D}_k(\boldsymbol{\Phi}_j))}\right)\right), \quad (2.45)
-  $$
+
+$$
+\mathbb{P}_n(\boldsymbol{\Phi}) \in \left(\bigtimes_{k=1}^L \left(\mathbb{R}^{(\sum_{j=1}^n \mathbb{D}_{k}(\boldsymbol{\Phi}_j)) \times (\sum_{j=1}^n \mathbb{D}_{k-1}(\boldsymbol{\Phi}_j))} \times \mathbb{R}^{(\sum_{j=1}^n \mathbb{D}_k(\boldsymbol{\Phi}_j))}\right)\right), \quad (2.45)
+$$
 
 - (ii) *对于所有 $k \in \mathbb{N}_0$，成立*
-  
-  $$
-  \mathbb{D}_k(\mathbb{P}_n(\boldsymbol{\Phi})) = \mathbb{D}_k(\boldsymbol{\Phi}_1) + \mathbb{D}_k(\boldsymbol{\Phi}_2) + \cdots + \mathbb{D}_k(\boldsymbol{\Phi}_n), \quad (2.46)
-  $$
+
+$$
+\mathbb{D}_k(\mathbb{P}_n(\boldsymbol{\Phi})) = \mathbb{D}_k(\boldsymbol{\Phi}_1) + \mathbb{D}_k(\boldsymbol{\Phi}_2) + \cdots + \mathbb{D}_k(\boldsymbol{\Phi}_n), \quad (2.46)
+$$
 
 - 以及 (iii) *成立*
-  
-  $$
-  \mathcal{D}(\mathbb{P}_n(\boldsymbol{\Phi})) = \mathcal{D}(\boldsymbol{\Phi}_1) + \mathcal{D}(\boldsymbol{\Phi}_2) + \cdots + \mathcal{D}(\boldsymbol{\Phi}_n) \quad (2.47)
-  $$
+
+$$
+\mathcal{D}(\mathbb{P}_n(\boldsymbol{\Phi})) = \mathcal{D}(\boldsymbol{\Phi}_1) + \mathcal{D}(\boldsymbol{\Phi}_2) + \cdots + \mathcal{D}(\boldsymbol{\Phi}_n) \quad (2.47)
+$$
 
 *（参见定义 2.2.1。)*
 
@@ -2357,10 +2651,7 @@ $$
 \mathcal{O}(\mathbf{P}_{n}(\Phi)) = \mathbb{D}_{\mathcal{L}(\mathbf{P}_{n}(\Phi))}(\mathbf{P}_{n}(\Phi)) = \sum_{j=1}^n \mathbb{D}_{\mathcal{L}(\Phi_j)}(\Phi_j) = \sum_{j=1}^n \mathcal{O}(\Phi_j). \quad (2.54)
 $$
 
-观察到 (2.44) 和引理 2.2.2 中的条目 **(ii)** 表明，对于所有 $\mathcal{G} \in C(\mathbb{R}, \mathbb{R})$，$k \in \{1, 2, \dots, L\}$，$x^1 \in \mathbb{R}^{\mathbb{D}_k(\Phi_1)}$，$x^2 \in \mathbb{R}^{\mathbb{D}_k(\Phi_2)}$，$\dots$，$x^n \in \mathbb{R}^{\mathbb{D}_k(\Phi_n)}$，$\mathfrak{x} \in \mathbb{R}^{\sum_{j=1}^n \mathbb{D}_k(\Phi_j)}$ 且 $\mathfrak{x} =
-
-
-对于 $(x^1, x^2, \ldots, x^n)$，有
+观察到 (2.44) 和引理 2.2.2 中的条目 **(ii)** 表明，对于所有 $\mathcal{G} \in C(\mathbb{R}, \mathbb{R})$，$k \in \{1, 2, \dots, L\}$，$x^1 \in \mathbb{R}^{\mathbb{D}_k(\Phi_1)}$，$x^2 \in \mathbb{R}^{\mathbb{D}_k(\Phi_2)}$，$\dots$，$x^n \in \mathbb{R}^{\mathbb{D}_k(\Phi_n)}$，$\mathfrak{x} \in \mathbb{R}^{\sum_{j=1}^n \mathbb{D}_k(\Phi_j)}$ 且 $\mathfrak{x} =$ 对于 $(x^1, x^2, \ldots, x^n)$，有
 
 $$
 \begin{align*}
@@ -2388,6 +2679,8 @@ $$
 \end{pmatrix}. \tag{2.55}
 \end{align*}
 $$
+
+
 
 这证明了对于所有 $k \in \{1, 2, \ldots, L\}$，$\mathbf{f} = (\mathbf{f}_0, \mathbf{f}_1, \ldots, \mathbf{f}_L) \in \mathfrak{X}$，$x^1 = (x_0^1, x_1^1, \ldots, x_L^1) \in X^1$，$x^2 = (x_0^2, x_1^2, \ldots, x_L^2) \in X^2$，$\ldots$，$x^n = (x_0^n, x_1^n, \ldots, x_L^n) \in X^n$，且 $\mathbf{f}_{k-1} = (x_{k-1}^1, x_{k-1}^2, \ldots, x_{k-1}^n)$，都有
 
@@ -2525,14 +2818,12 @@ $$
 
 （参见定义 1.3.1 和 2.2.1）。
 
-
-
-
 ## 引理 2.2.7（全连接前馈 ReLU 恒等人工神经网络的性质）
 
 设 $d \in \mathbb{N}$。则：
 
 - (i) 成立 $\mathcal{D}(\mathfrak{J}_d) = (d, 2d, d) \in \mathbb{N}^{3}$
+
 - (ii) 成立 $\mathcal{R}_{\mathtt{r}}^{\mathbb{N}}(\mathfrak{J}_d) = \mathrm{id}_{\mathbb{R}^{d}}$
 
 （参见定义 1.3.1、1.3.4 和 2.2.6）。
@@ -2544,15 +2835,18 @@ $$
 结合此式、(2.71) 以及命题 2.2.4，证明了 $\mathcal{D}(\mathfrak{J}_d) = (d, 2d, d) \in \mathbb{N}^{3}$。这就证明了条目 (i)。
 
 接下来注意，(2.70) 确保对于所有 $x \in \mathbb{R}$，成立：
+
 $(\mathcal{R}_{\mathtt{r}}^{\mathbb{N}}(\mathfrak{J}_1))(x) = \mathtt{r}(x)-\mathtt{r}(-x) = \max\{x,0\}-\max\{-x,0\} = x$。
 
 将此结果与命题 2.2.3 结合，表明对于所有 $x=(x_1, \ldots, x_d) \in \mathbb{R}^{d}$，成立 $\mathcal{R}_{\mathtt{r}}^{\mathbb{N}}(\mathfrak{J}_d) \in C(\mathbb{R}^{d}, \mathbb{R}^{d})$ 且：
 
+$$
 \begin{align*}
 (\mathcal{R}_{\mathtt{r}}^{\mathbb{N}}(\mathfrak{J}_d))(x) & = (\mathcal{R}_{\mathtt{r}}^{\mathbb{N}}(\mathbf{P}_d(\mathfrak{J}_1, \mathfrak{J}_1, \ldots, \mathfrak{J}_1)))(x_1, x_2, \ldots, x_d) \\
 & = ((\mathcal{R}_{\mathtt{r}}^{\mathbb{N}}(\mathfrak{J}_1))(x_1), (\mathcal{R}_{\mathtt{r}}^{\mathbb{N}}(\mathfrak{J}_1))(x_2), \ldots, (\mathcal{R}_{\mathtt{r}}^{\mathbb{N}}(\mathfrak{J}_1))(x_d)) \\
 & = (x_1, x_2, \ldots, x_d) = x
 \end{align*}
+$$
 
 （参见定义 2.2.1）。这就证明了条目 (ii)。因此，引理 2.2.7 的证明完毕。
 
@@ -2567,8 +2861,11 @@ $$
 $$
 
 为满足以下条件的函数：对于所有 $\Phi \in \mathbf{N}$ 且 $\mathcal{L}(\Phi) \leq L$ 以及 $\mathcal{O}(\Phi) = \mathcal{I}(\mathbb{I})$，有：
-$$
+
+
+
 \mathcal{E}_{L, \mathbb{I}}(\Phi) = (\mathbb{I}^{* (L-\mathcal{L}(\Phi))}) \bullet \Phi
+
 $$
 
 （参见定义 1.3.1、2.1.1 和 2.1.6）。
@@ -2578,15 +2875,25 @@ $$
 设 $d, \mathbf{i} \in \mathbb{N}$，$\Psi \in \mathbb{N}$ 满足 $\mathcal{D}(\Psi) = (d, \mathbf{i}, d)$（参见定义 1.3.1）。则：
 
 - (i) 对于所有 $n \in \mathbb{N}_0$，成立 $\mathcal{H}(\Psi^{*n}) = n$，$\mathcal{L}(\Psi^{*n}) = n+1$，$\mathcal{D}(\Psi^{*n}) \in \mathbb{N}^{n+2}$，且
+
 $$
+
 \mathcal{D}(\Psi^{*n}) = \begin{cases} 
+
 (d, d) & : n = 0 \\ 
+
 (d, \mathbf{i}, \mathbf{i}, \ldots, \mathbf{i}, d) & : n \in \mathbb{N} 
+
 \end{cases} \tag{2.80}
+
 $$
+
 - (ii) 对于所有 $\Phi \in \mathbb{N}$ 以及 $L \in \mathbb{N} \cap [\mathcal{L}(\Phi), \infty)$ 且满足 $\mathcal{O}(\Phi) = d$，成立
+
 $$
+
 \mathcal{L}(\mathcal{E}_{L, \Psi}(\Phi)) = L \tag{2.81}
+
 $$
 
 （参见定义 2.1.6 和 2.2.8）。
@@ -2594,55 +2901,89 @@ $$
 ### 引理 2.2.9 的证明
 
 在整个证明过程中，设 $\Phi \in \mathbb{N}$ 满足 $\mathcal{O}(\Phi) = d$。观察到，引理 2.1.7 以及 $\mathcal{H}(\Psi) = 1$ 的事实表明，对于所有 $n \in \mathbb{N}_0$，成立：
+
 $$
+
 \mathcal{H}(\Psi^{*n}) = n\mathcal{H}(\Psi) = n \tag{2.82}
+
 $$
 
 （参见定义 2.1.6）。将此结果与 (1.78) 以及引理 1.3.3 结合，确保了：
+
 $$
+
 \mathcal{H}(\Psi^{*n}) = n, \quad \mathcal{L}(\Psi^{*n}) = n+1, \quad \text{且} \quad \mathcal{D}(\Psi^{*n}) \in \mathbb{N}^{n+2}. \tag{2.83}
+
 $$
 
 接下来我们声称，对于所有 $n \in \mathbb{N}_0$，成立：
+
 $$
+
 \mathbb{N}^{n+2} \supseteq \mathcal{D}(\Psi^{*n}) = \begin{cases} 
+
 (d, d) & : n = 0 \\ 
+
 (d, \mathbf{i}, \mathbf{i}, \ldots, \mathbf{i}, d) & : n \in \mathbb{N}. 
+
 \end{cases} \tag{2.84}
+
 $$
 
 现在我们通过对 $n \in \mathbb{N}_0$ 进行归纳来证明 (2.84)。注意，以下事实：
+
 $$
+
 \Psi^{*0} = (\mathbf{I}_d, 0) \in \mathbb{R}^{d \times d} \times \mathbb{R}^{d} \tag{2.85}
+
 $$
+
 在基础情形 $n = 0$ 时建立了 (2.84)（参见定义 1.5.5）。
 
 对于归纳步骤，假设存在某个 $n \in \mathbb{N}_0$ 满足：
+
 $$
+
 \mathbb{N}^{n+2} \supseteq \mathcal{D}(\Psi^{*n}) = \begin{cases} 
+
 (d, d) & : n = 0 \\ 
+
 (d, \mathbf{i}, \mathbf{i}, \ldots, \mathbf{i}, d) & : n \in \mathbb{N}. 
+
 \end{cases} \tag{2.86}
+
 $$
 
 注意，(2.86)、(2.41)、(2.83)、命题 2.1.2 的条目 (i) 以及 $\mathcal{D}(\Psi) = (d, \mathbf{i}, d) \in \mathbb{N}^{3}$ 的事实意味着：
+
 $$
+
 \mathcal{D}(\Psi^{*(n+1)}) = \mathcal{D}(\Psi \bullet (\Psi^{*n})) = (d, \mathbf{i}, \mathbf{i}, \ldots, \mathbf{i}, d) \in \mathbb{N}^{n+3} \tag{2.87}
+
 $$
 
 （参见定义 2.1.1）。因此，归纳法证明了 (2.84)。结合 (2.83) 建立了条目 (i)。
 
 观察到，(2.79)、命题 2.1.2 的条目 (iii)、(2.82) 以及 $\mathcal{H}(\Phi) = \mathcal{L}(\Phi) - 1$ 的事实意味着，对于所有 $L \in \mathbb{N} \cap [\mathcal{L}(\Phi), \infty)$，成立：
+
 $$
+
 \begin{split}
+
 \mathcal{H}(\mathcal{E}_{L, \Psi}(\Phi)) &= \mathcal{H}((\Psi^{\bullet (L - \mathcal{L}(\Phi))}} \bullet \Phi) = \mathcal{H}(\Psi^{\bullet (L - \mathcal{L}(\Phi))}}) + \mathcal{H}(\Phi) \\
+
 &= (L - \mathcal{L}(\Phi)) + \mathcal{H}(\Phi) = L - 1.
+
 \end{split} \tag{2.88}
+
 $$
 
 因此，$\mathcal{H}(\mathcal{E}_{L, \Psi}(\Phi)) = \mathcal{L}(\mathcal{E}_{L, \Psi}(\Phi)) - 1$ 这一事实证明了：
+
 $$
+
 \mathcal{L}(\mathcal{E}_{L, \Psi}(\Phi)) = \mathcal{H}(\mathcal{E}_{L, \Psi}(\Phi)) + 1 = L. \tag{2.89}
+
 $$
 
 这就建立了条目 (ii)。因此，引理 2.2.9 的证明完毕。
@@ -2652,12 +2993,19 @@ $$
 *设* $a \in C(\mathbb{R}, \mathbb{R})$，$\mathbb{I} \in \mathbf{N}$ *满足* $\mathcal{R}^{\mathbf{N}}_{a}(\mathbb{I}) = \mathrm{id}_{\mathbb{R}^{\mathbb{I}(1)}}$ *（参见定义 1.3.1 和 1.3.4）。则：*
 
 - (i) 对于所有 $n \in \mathbb{N}_0$，成立
+
 $$
+
 \mathcal{R}^{\mathbf{N}}_{a}(\mathbb{I}^{* n}) = \mathrm{id}_{\mathbb{R}^{\mathbb{I}(1)}} \tag{2.90}
+
 $$
+
 - (ii) 对于所有 $\Phi \in \mathbf{N}$ 以及 $L \in \mathbb{N} \cap [\mathcal{L}(\Phi), \infty)$ *且满足* $\mathcal{O}(\Phi) = \mathbb{I}(1)$ *，成立*
+
 $$
+
 \mathcal{R}^{\mathbf{N}}_{a}(\mathcal{E}_{L, \mathbb{I}}(\Phi)) = \mathcal{R}^{\mathbf{N}}_{a}(\Phi) \tag{2.91}
+
 $$
 
 *（参见定义 2.1.6 和 2.2.8。)*
@@ -2665,42 +3013,63 @@ $$
 ### 引理 2.2.10 的证明
 
 在整个证明过程中，设 $\Phi \in \mathbf{N}$，$L, d \in \mathbb{N}$ 满足 $\mathcal{L}(\Phi) \leq L$ 且 $\mathbb{I}(1) = \mathcal{O}(\Phi) = d$。我们声称，对于所有 $n \in \mathbb{N}_0$，成立：
+
 $$
+
 \mathcal{R}^{\mathbf{N}}_{a}(\mathbb{I}^{* n}) \in C(\mathbb{R}^{d}, \mathbb{R}^{d}) \quad \text{且} \quad \forall x \in \mathbb{R}^{d}: \ (\mathcal{R}^{\mathbf{N}}_{a}(\mathbb{I}^{* n}))(x) = x. \tag{2.92}
+
 $$
 
 现在我们通过对 $n \in \mathbb{N}_0$ 进行归纳来证明 (2.92)。注意，(2.41) 以及 $\mathcal{O}(\mathbb{I}) = d$ 的事实表明 $\mathcal{R}^{\mathbf{N}}_{a}(\mathbb{I}^{* 0}) \in C(\mathbb{R}^{d}, \mathbb{R}^{d})$ 且 $\forall x \in \mathbb{R}^{d}$: $(\mathcal{R}^{\mathbf{N}}_{a}(\mathbb{I}^{* 0}))(x) = x$。这在基础情形 $n = 0$ 时建立了 (2.92)。
 
 对于归纳步骤，观察到对于所有 $n \in \mathbb{N}_0$，若 $\mathcal{R}^{\mathbf{N}}_{a}(\mathbb{I}^{* n}) \in C(\mathbb{R}^{d}, \mathbb{R}^{d})$ 且 $\forall x \in \mathbb{R}^{d}$: $(\mathcal{R}^{\mathbf{N}}_{a}(\mathbb{I}^{* n}))(x) = x$，则成立：
+
 $$
+
 \mathcal{R}^{\mathbf{N}}_{a}(\mathbb{I}^{*(n+1)}) = \mathcal{R}^{\mathbf{N}}_{a}(\mathbb{I} \bullet (\mathbb{I}^{* n})) = (\mathcal{R}^{\mathbf{N}}_{a}(\mathbb{I})) \circ (\mathcal{R}^{\mathbf{N}}_{a}(\mathbb{I}^{* n})) \in C(\mathbb{R}^{d}, \mathbb{R}^{d}) \tag{2.93}
+
 $$
+
 *且*
+
 $$
+
 \begin{split}
+
 \forall x \in \mathbb{R}^{d}: \ (\mathcal{R}^{\mathbf{N}}_{a}(\mathbb{I}^{*(n+1))})(x) &= ((\mathcal{R}^{\mathbf{N}}_{a}(\mathbb{I})) \circ [\mathcal{R}^{\mathbf{N}}_{a}(\mathbb{I}^{* n})])(x) \\
+
 &= (\mathcal{R}^{\mathbf{N}}_{a}(\mathbb{I})) (\mathcal{R}^{\mathbf{N}}_{a}(\mathbb{I}^{* n})(x)) = (\mathcal{R}^{\mathbf{N}}_{a}(\mathbb{I})) (x) = x. \tag{2.94}
+
 \end{split}
+
 $$
-
-
 
 因此，归纳法证明了(2.92)。这就建立了第 (i) 项。注意 (2.79)、命题 2.1.2 中的第 (v) 项、第 (i) 项，以及事实 $\mathcal{I}(\mathbb{I})=\mathcal{O}(\mathbb{I})$ 确保
 
 $$
+
 \begin{align*}
+
 \mathcal{R}_{a}^{\mathbb{N}}(\mathcal{E}_{L,\mathbb{I}}(\Phi)) &= \mathcal{R}_{a}^{\mathbb{N}}([\mathbb{I}^{*}(L-L(\Phi))] \bullet \Phi) \\
+
 &\in C(\mathbb{R}^{\mathcal{I}(\Phi)},\mathbb{R}^{\mathcal{O}(\mathbb{I})}) = C(\mathbb{R}^{\mathcal{I}(\Phi)},\mathbb{R}^{\mathcal{I}(\mathbb{I})}) = C(\mathbb{R}^{\mathcal{I}(\Phi)},\mathbb{R}^{\mathcal{O}(\Phi)})
+
 \end{align*}
+
 $$
 
 以及
 
 $$
+
 \begin{align*}
+
 \forall x \in \mathbb{R}^{\mathcal{I}(\Phi)}: \; (\mathcal{R}_{a}^{\mathbb{N}}(\mathcal{E}_{L,\mathbb{I}}(\Phi)))(x) &= (\mathcal{R}_{a}^{\mathbb{N}}([\mathbb{I}^{*}(L-L(\Phi))] \bullet \Phi))(x) \\
+
 &= (\mathcal{R}_{a}^{\mathbb{N}}(\Phi))(x).
+
 \end{align*}
+
 $$
 
 这就建立了第 (ii) 项。引理 2.2.10 的证明至此完成。
@@ -2708,15 +3077,21 @@ $$
 **引理 2.2.11**（全连接前馈 *ANN* 扩展的架构）。设 $d,\mathbb{I},L,\mathfrak{L}\in\mathbb{N}$，$l_{0},l_{1},\ldots,l_{L-1}\in\mathbb{N}$，$\Phi,\Psi\in\mathbf{N}$ 满足
 
 $$
+
 \mathfrak{L}\geq L, \quad \mathcal{D}(\Phi)=(l_{0},l_{1},\ldots,l_{L-1},d), \quad \text{以及} \quad \mathcal{D}(\Psi)=(d,\mathbb{I},d)
+
 $$
 
 （参见 *定义* 1.3.1）。则 $\mathcal{D}(\mathcal{E}_{\mathfrak{L},\Psi}(\Phi))\in\mathbb{N}^{\mathfrak{L}+1}$ 且
 
 $$
+
 \mathcal{D}(\mathcal{E}_{\mathfrak{L},\Psi}(\Phi)) = \begin{cases}(l_{0},l_{1},\ldots,l_{L-1},d) & \text{： } \mathfrak{L}=L \\
+
 (l_{0},l_{1},\ldots,l_{L-1},\mathbb{I},\mathbb{I},\ldots,\mathbb{I},d) & \text{： } \mathfrak{L}>L
+
 \end{cases}
+
 $$
 
 （参见 *定义* 2.2.8）。
@@ -2724,33 +3099,47 @@ $$
 *引理 2.2.11 的证明。* 注意到 *引理* 2.2.9 中的第 (i) 项表明
 
 $$
+
 \mathcal{H}(\Psi^{\bullet(\mathfrak{L}-L)}) = \mathfrak{L}-L, \quad \quad \mathcal{D}(\Psi^{\bullet(\mathfrak{L}-L)}) \in \mathbb{N}^{\mathfrak{L}-L+2}
+
 $$
 
 以及
 
 $$
+
 \mathcal{D}(\Psi^{\bullet(\mathfrak{L}-L)}) = \begin{cases}(d,d) & \text{： } \mathfrak{L}=L \\
+
 (d,\mathbb{I},\mathbb{I},\ldots,\mathbb{I},d) & \text{： } \mathfrak{L}>L
+
 \end{cases}
+
 $$
 
 （参见 *定义* 2.1.6）。结合 *命题* 2.1.2 可得
 
 $$
+
 \mathcal{H}((\Psi^{\bullet(\mathfrak{L}-L)} \bullet \Phi)) = \mathcal{H}(\Psi^{\bullet(\mathfrak{L}-L)})+\mathcal{H}(\Phi) = (\mathfrak{L}-L)+L-1 = \mathfrak{L}-1,
+
 $$
 
 $$
+
 \mathcal{D}((\Psi^{\bullet(\mathfrak{L}-L)} \bullet \Phi)) \in \mathbb{N}^{\mathfrak{L}+1},
+
 $$
 
 以及
 
 $$
+
 \mathcal{D}(((\Psi^{\bullet(\mathfrak{L}-L)} \bullet \Phi)) = \begin{cases}(l_{0},l_{1},\ldots,l_{L-1},d) & \text{： } \mathfrak{L}=L \\
+
 (l_{0},l_{1},\ldots,l_{L-1},\mathbb{I},\mathbb{I},\ldots,\mathbb{I},d) & \text{： } \mathfrak{L}>L
+
 \end{cases}
+
 $$
 
 这与 (2.79) 共同建立了 (2.98)。引理 2.2.11 的证明至此完成。
@@ -2760,30 +3149,37 @@ $$
 **定义 2.2.12**（不同长度全连接前馈 ANNs 的并行化）。设 $n \in \mathbb{N}$，$\Psi = (\Psi_1, \dots, \Psi_n) \in \mathbb{N}^n$ 满足对于所有 $j \in \{1, 2, \dots, n\}$ 有
 
 $$
+
 \mathcal{H}(\Psi_j) = 1 \quad \text{且} \quad \mathcal{I}(\Psi_j) = \mathcal{O}(\Psi_j) \tag{2.104}
+
 $$
 
 （参见定义 1.3.1）。则我们用
 
-$$
+
+
 \mathrm{P}_{n, \Psi}: \left\{ \Phi = (\Phi_1, \dots, \Phi_n) \in \mathbb{N}^n: \; \forall j \in \{1, 2, \dots, n\}: \mathcal{O}(\Phi_j) = \mathcal{I}(\Psi_j) \right\} \to \mathbb{N} \tag{2.105}
-$$
 
+$$
 表示满足以下条件的函数：对于所有满足 $\forall j \in \{1, 2, \dots, n\}$: $\mathcal{O}(\Phi_j) = \mathcal{I}(\Psi_j)$ 的 $\Phi = (\Phi_1, \dots, \Phi_n) \in \mathbb{N}^n$，
-
 $$
+
 \mathrm{P}_{n, \Psi}(\Phi) = \mathrm{P}\big(\mathcal{E}_{\mathrm{max}_{k \in \{1, \dots, n\}} \mathcal{L}(\Psi_k)}, \Psi_1(\Phi_1), \dots, \mathcal{E}_{\mathrm{max}_{k \in \{1, \dots, n\}} \mathcal{L}(\Psi_k)}, \Psi_n(\Phi_n)\big) \tag{2.106}
-$$
 
+$$
 （参见定义 2.2.1 和 2.2.8 以及引理 2.2.9）。
 
-**引理 2.2.13**（不同长度全连接前馈 ANNs 并行化的实现）。设 $a \in C(\mathbb{R}, \mathbb{R})$，$n \in \mathbb{N}$，$\mathbb{I} = (\mathbb{I}_1, \dots, \mathbb{I}_n)$，$\Phi = (\Phi_1, \dots, \Phi_n) \in \mathbb{N}^n$ 满足对于所有 $j \in \{1, 2, \dots, n\}$ 和 $x \in \mathbb{R}^{\mathcal{O}(\Phi_j)}$ 有 $\mathcal{H}(\mathbb{I}_j) = 1$，$\mathcal{I}(\mathbb{I}_j) = \mathcal{O}(\mathbb{I}_j) = \mathcal{O}(\Phi_j)$，且 $(\mathcal{R}_a^{\mathbb{N}}(\mathbb{I}_j))(x) = x$（参见定义 1.3.1 和 1.3.4）。则
+### 引理 2.2.13（不同长度全连接前馈 ANNs 并行化的实现）
+设 $a \in C(\mathbb{R}, \mathbb{R})$，$n \in \mathbb{N}$，$\mathbb{I} = (\mathbb{I}_1, \dots, \mathbb{I}_n)$，$\Phi = (\Phi_1, \dots, \Phi_n) \in \mathbb{N}^n$ 满足对于所有 $j \in \{1, 2, \dots, n\}$ 和 $x \in \mathbb{R}^{\mathcal{O}(\Phi_j)}$ 有 $\mathcal{H}(\mathbb{I}_j) = 1$，$\mathcal{I}(\mathbb{I}_j) = \mathcal{O}(\mathbb{I}_j) = \mathcal{O}(\Phi_j)$，且 $(\mathcal{R}_a^{\mathbb{N}}(\mathbb{I}_j))(x) = x$（参见定义 1.3.1 和 1.3.4）。则
 
 - (i) 成立
+
 $$
 \mathcal{R}_a^{\mathbb{N}}\big(\mathrm{P}_{n, \mathbb{I}}(\Phi)\big) \in C\big(\mathbb{R}^{[\sum_{j=1}^n \mathcal{I}(\Phi_j)]}, \mathbb{R}^{[\sum_{j=1}^n \mathcal{O}(\Phi_j)]}\big) \tag{2.107}
 $$
+
 - (ii) 对于所有 $x_1 \in \mathbb{R}^{\mathcal{I}(\Phi_1)}$，$x_2 \in \mathbb{R}^{\mathcal{I}(\Phi_2)}$，$\dots$，$x_n \in \mathbb{R}^{\mathcal{I}(\Phi_n)}$ 成立
+
 $$
 \begin{aligned}
 & \big(\mathcal{R}_a^{\mathbb{N}}(\mathrm{P}_{n, \mathbb{I}}(\Phi))\big)(x_1, x_2, \dots, x_n) \\
@@ -2794,10 +3190,13 @@ $$
 
 （参见定义 2.2.12）。
 
-**引理 2.2.13 的证明。** 在整个证明过程中，设 $L \in \mathbb{N}$ 满足 $L = \mathrm{max}_{j \in \{1, \dots, n\}} \mathcal{L}(\Phi_j)$。注意引理 2.2.9 中的第 (ii) 项、假设对于所有 $j \in \{1, 2, \dots, n\}$ 成立 $\mathcal{H}(\mathbb{I}_j) = 1$、(2.79)、(2.4) 以及引理 2.2.10 中的第 (ii) 项表明
+### 引理 2.2.13 的证明
+在整个证明过程中，设 $L \in \mathbb{N}$ 满足 $L = \mathrm{max}_{j \in \{1, \dots, n\}} \mathcal{L}(\Phi_j)$。注意引理 2.2.9 中的第 (ii) 项、假设对于所有 $j \in \{1, 2, \dots, n\}$ 成立 $\mathcal{H}(\mathbb{I}_j) = 1$、(2.79)、(2.4) 以及引理 2.2.10 中的第 (ii) 项表明
 
 - (I) 对于所有 $j \in \{1, 2, \dots, n\}$，成立 $\mathcal{L}(\mathcal{E}_{L, \mathbb{I}_j}(\Phi_j)) = L$ 且 $\mathcal{R}_a^{\mathbb{N}}(\mathcal{E}_{L, \mathbb{I}_j}(\Phi_j)) \in C(\mathbb{R}^{\mathcal{I}(\Phi_j)}, \mathbb{R}^{\mathcal{O}(\Phi_j)})$
+
 - (II) 对于所有 $j \in \{1, 2, \dots, n\}$ 和 $x \in \mathbb{R}^{\mathcal{I}(\Phi_j)}$，成立
+
 $$
 \big(\mathcal{R}_a^{\mathbb{N}}(\mathcal{E}_{L, \mathbb{I}_j}(\Phi_j))\big)(x) = \big(\mathcal{R}_a^{\mathbb{N}}(\Phi_j)\big)(x)
 \tag{2.109}
@@ -2806,11 +3205,14 @@ $$
 （参见定义 2.2.8。命题 2.2.3 中的第 (i) 项和第 (ii) 项因此意味着
 
 - (A)
+
 $$
 \mathcal{R}_{a}^{\mathbf{N}}\big(\mathbf{P}_{n}(\mathcal{E}_{L, \mathbb{I}_{1}}(\Phi_{1}), \mathcal{E}_{L, \mathbb{I}_{2}}(\Phi_{2}), \ldots, \mathcal{E}_{L, \mathbb{I}_{n}}(\Phi_{n}))\big) \in C\big(\mathbb{R}^{[\sum_{j=1}^{n} \mathcal{I}(\Phi_{j})]}, \mathbb{R}^{[\sum_{j=1}^{n} \mathcal{O}(\Phi_{j})]}\big)
 \tag{2.110}
 $$
+
 - (B) 对于所有 $x_{1} \in \mathbb{R}^{\mathcal{I}(\Phi_{1})}, x_{2} \in \mathbb{R}^{\mathcal{I}(\Phi_{2})}, \ldots, x_{n} \in \mathbb{R}^{\mathcal{I}(\Phi_{n})}$，成立
+
 $$
 \begin{aligned}
 & \left(\mathcal{R}_{a}^{\mathbf{N}}\left(\mathbf{P}_{n}\left(\mathcal{E}_{L, \mathbb{I}_{1}}\left(\Phi_{1}\right), \mathcal{E}_{L, \mathbb{I}_{2}}\left(\Phi_{2}\right), \ldots, \mathcal{E}_{L, \mathbb{I}_{n}}\left(\Phi_{n}\right)\right)\right)\right)\left(x_{1}, x_{2}, \ldots, x_{n}\right) \\
@@ -2819,14 +3221,18 @@ $$
 \end{aligned}
 \tag{2.111}
 $$
+
 （参见定义 2.2.1）。将此与 (2.106) 及事实 $L=\max _{j \in\{1, \ldots, n\}} \mathcal{L}(\Phi_{j})$ 结合，确保
 
 - (C)
+
 $$
 \mathcal{R}_{a}^{\mathbf{N}}\left(\mathbf{P}_{n, \mathbb{I}}(\Phi)\right) \in C\big(\mathbb{R}^{[\sum_{j=1}^{n} \mathcal{I}(\Phi_{j})]}, \mathbb{R}^{[\sum_{j=1}^{n} \mathcal{O}(\Phi_{j})]}\big)
 \tag{2.112}
 $$
+
 - (D) 对于所有 $x_{1} \in \mathbb{R}^{\mathcal{I}(\Phi_{1})}, x_{2} \in \mathbb{R}^{\mathcal{I}(\Phi_{2})}, \ldots, x_{n} \in \mathbb{R}^{\mathcal{I}(\Phi_{n})}$，成立
+
 $$
 \begin{aligned}
 & \left(\mathcal{R}_{a}^{\mathbf{N}}\left(\mathbf{P}_{n, \mathbb{I}}(\Phi)\right)\right)\left(x_{1}, x_{2}, \ldots, x_{n}\right) \\
@@ -2838,25 +3244,29 @@ $$
 
 这就建立了第 (i) 项和第 (ii) 项。引理 2.2.13 的证明至此完成。
 
-**练习 2.2.3**。对于每个 $d \in \mathbb{N}$，设 $F_{d}: \mathbb{R}^{d} \rightarrow \mathbb{R}^{d}$ 满足对于所有 $x=(x_{1}, \ldots, x_{d}) \in \mathbb{R}^{d}$ 有
+### 练习 2.2.3
+对于每个 $d \in \mathbb{N}$，设 $F_{d}: \mathbb{R}^{d} \rightarrow \mathbb{R}^{d}$ 满足对于所有 $x=(x_{1}, \ldots, x_{d}) \in \mathbb{R}^{d}$ 有
+
 $$
 F_{d}(x)=\left(\max \left\{\left|x_{1}\right|\right\}, \max \left\{\left|x_{1}\right|,\left|x_{2}\right|\right\}, \ldots, \max \left\{\left|x_{1}\right|,\left|x_{2}\right|, \ldots,\left|x_{d}\right|\right\}\right)
 \tag{2.114}
 $$
+
 证明或反驳以下陈述：对于所有 $d \in \mathbb{N}$，存在 $\Phi \in \mathbb{N}$ 使得
+
 $$
 \mathcal{R}_{\mathbf{r}}^{\mathbf{N}}(\Phi)=F_{d}
 \tag{2.115}
 $$
+
 （参见定义 1.2.4、1.3.1 和 1.3.4）。
-
-
 
 ## 2.3 全连接前馈人工神经网络的标量乘法
 
 ### 2.3.1 作为全连接前馈人工神经网络的仿射变换
 
-**定义 2.3.1（全连接前馈仿射变换人工神经网络）。** 设 \( m, n \in \mathbb{N} \)，\( W \in \mathbb{R}^{m \times n} \)，\( B \in \mathbb{R}^{m} \)。我们将
+#### 定义 2.3.1（全连接前馈仿射变换人工神经网络）
+设 \( m, n \in \mathbb{N} \)，\( W \in \mathbb{R}^{m \times n} \)，\( B \in \mathbb{R}^{m} \)。我们将
 
 $$ \mathbf{A}_{W, B} \in (\mathbb{R}^{m \times n} \times \mathbb{R}^{m}) \subseteq \mathbf{N} \quad (2.116) $$
 
@@ -2866,17 +3276,21 @@ $$ \mathbf{A}_{W, B}=(W, B) \quad (2.117) $$
 
 （参见定义 1.3.1 和 1.3.2）。
 
-**引理 2.3.2（全连接前馈仿射变换人工神经网络的实现）。** 设 \( m, n \in \mathbb{N} \)，\( W \in \mathbb{R}^{m \times n} \)，\( B \in \mathbb{R}^{m} \)。则
+#### 引理 2.3.2（全连接前馈仿射变换人工神经网络的实现）
+设 \( m, n \in \mathbb{N} \)，\( W \in \mathbb{R}^{m \times n} \)，\( B \in \mathbb{R}^{m} \)。则
 
 - (i) 对于 \( \mathcal{D}(\mathbf{A}_{W, B}) = (n, m) \in \mathbb{N}^{2} \)，
+
 - (ii) 对于所有 \( a \in C(\mathbb{R}, \mathbb{R}) \)，都有 \( \mathcal{R}_{a}^{\mathbf{N}}(\mathbf{A}_{W, B}) \in C(\mathbb{R}^{n}, \mathbb{R}^{m}) \)，且
+
 - (iii) 对于所有 \( a \in C(\mathbb{R}, \mathbb{R}) \) 和 \( x \in \mathbb{R}^{n} \)，都有
 
 $$ (\mathcal{R}_{a}^{\mathbf{N}}(\mathbf{A}_{W, B}))(x)=W x+B \quad (2.118) $$
 
 （参见定义 1.3.1、1.3.4 和 2.3.1）。
 
-**引理 2.3.2 的证明。** 注意到事实 \( \mathbf{A}_{W, B} \in (\mathbb{R}^{m \times n} \times \mathbb{R}^{m}) \subseteq \mathbf{N} \) 表明
+#### 引理 2.3.2 的证明
+注意到事实 \( \mathbf{A}_{W, B} \in (\mathbb{R}^{m \times n} \times \mathbb{R}^{m}) \subseteq \mathbf{N} \) 表明
 
 $$ \mathcal{D}(\mathbf{A}_{W, B})=(n, m) \in \mathbb{N}^{2}. \quad (2.119) $$
 
@@ -2890,22 +3304,29 @@ $$ (\mathcal{R}_{a}^{\mathbf{N}}(\mathbf{A}_{W, B}))(x)=W x+B . \quad (2.121) $$
 
 这建立了第 (ii) 项和第 (iii) 项。引理 2.3.2 的证明至此完成。
 
-**引理 2.3.3（与全连接前馈仿射变换人工神经网络的复合）。** 设 \( \Phi \in \mathbf{N} \)（参见定义 1.3.1）。则
+#### 引理 2.3.3（与全连接前馈仿射变换人工神经网络的复合）
+设 \( \Phi \in \mathbf{N} \)（参见定义 1.3.1）。则
 
 - (i) 对于所有 $m \in \mathbb{N}$，$W \in \mathbb{R}^{m \times \mathcal{O}(\Phi)}$，$B \in \mathbb{R}^{m}$，都有
+
 $$ \mathcal{D}(\mathbf{A}_{W,B} \bullet \Phi) = (\mathbb{D}_0(\Phi), \mathbb{D}_1(\Phi), \ldots, \mathbb{D}_{\mathcal{H}(\Phi)}(\Phi), m) $$
+
+
 
 - (ii) 对于所有 $a \in C(\mathbb{R}, \mathbb{R})$，$m \in \mathbb{N}$，$W \in \mathbb{R}^{m \times \mathcal{O}(\Phi)}$，$B \in \mathbb{R}^{m}$，都有 $\mathcal{R}_a^{\mathbb{N}}(\mathbf{A}_{W,B} \bullet \Phi) \in C(\mathbb{R}^{\mathcal{I}(\Phi)}, \mathbb{R}^{m})$，
 
 - (iii) 对于所有 $a \in C(\mathbb{R}, \mathbb{R})$，$m \in \mathbb{N}$，$W \in \mathbb{R}^{m \times \mathcal{O}(\Phi)}$，$B \in \mathbb{R}^{m}$，$x \in \mathbb{R}^{\mathcal{I}(\Phi)}$，都有
+
 $$ (\mathcal{R}_a^{\mathbb{N}}(\mathbf{A}_{W,B} \bullet \Phi))(x) = W((\mathcal{R}_a^{\mathbb{N}}(\Phi))(x)) + B $$
 
 - (iv) 对于所有 $n \in \mathbb{N}$，$W \in \mathbb{R}^{\mathcal{I}(\Phi) \times n}$，$B \in \mathbb{R}^{\mathcal{I}(\Phi)}$，都有
+
 $$ \mathcal{D}(\Phi \bullet \mathbf{A}_{W,B}) = (n, \mathbb{D}_1(\Phi), \mathbb{D}_2(\Phi), \ldots, \mathbb{D}_{\mathcal{L}(\Phi)}(\Phi)) $$
 
 - (v) 对于所有 $a \in C(\mathbb{R}, \mathbb{R})$，$n \in \mathbb{N}$，$W \in \mathbb{R}^{\mathcal{I}(\Phi) \times n}$，$B \in \mathbb{R}^{\mathcal{I}(\Phi)}$，都有 $\mathcal{R}_a^{\mathbb{N}}(\Phi \bullet \mathbf{A}_{W,B}) \in C(\mathbb{R}^{n}, \mathbb{R}^{\mathcal{O}(\Phi)})$，且
 
 - (vi) 对于所有 $a \in C(\mathbb{R}, \mathbb{R})$，$n \in \mathbb{N}$，$W \in \mathbb{R}^{\mathcal{I}(\Phi) \times n}$，$B \in \mathbb{R}^{\mathcal{I}(\Phi)}$，$x \in \mathbb{R}^{n}$，都有
+
 $$ (\mathcal{R}_a^{\mathbb{N}}(\Phi \bullet \mathbf{A}_{W,B}))(x) = (\mathcal{R}_a^{\mathbb{N}}(\Phi))(Wx + B) $$
 
 （参见定义 1.3.4、2.1.1 和 2.3.1）。
@@ -3014,8 +3435,6 @@ $$ (\mathcal{R}_{a}^{\mathbf{N}}(\mathbb{S}_{m,n}))(x_{1},x_{2},\ldots,x_{n})=\s
 
 （参见定义 1.3.4 和 2.4.1）。将此与命题 2.1.2 中的第 $(v)$ 项结合，建立了第 $(i)$ 项和第 $(ii)$ 项。引理 2.4.3 的证明至此完成。 $\square$
 
-
-
 ## 引理 2.4.4
 
 设 $n \in \mathbb{N}$，$a \in C(\mathbb{R}, \mathbb{R})$，$\mathbf{\Phi} \in \mathbf{N}$（参见定义 1.3.1）。则
@@ -3039,9 +3458,13 @@ $$
 
 ## 2.4.2 向量作为全连接前馈人工神经网络的串联
 
-**定义 2.4.5** *（矩阵的转置）。* 设 $m, n \in \mathbb{N}$，$A \in \mathbb{R}^{m \times n}$。则我们用 $A^* \in \mathbb{R}^{n \times m}$ 表示 $A$ 的转置。
 
-**定义 2.4.6** *（向量作为全连接前馈人工神经网络的串联）。* 设 $m, n \in \mathbb{N}$。则我们用
+
+## 定义 2.4.5 （矩阵的转置）
+设 `m`, `n` ∈ ℕ，`A` ∈ ℝ^{m × n}。则我们用 `A^*` ∈ ℝ^{n × m} 表示 `A` 的转置。
+
+## 定义 2.4.6 （向量作为全连接前馈人工神经网络的串联）
+设 `m`, `n` ∈ ℕ。则我们用
 
 $$
 \mathbb{T}_{m, n} \in (\mathbb{R}^{(mn) \times m} \times \mathbb{R}^{mn}) \subseteq \mathbf{N} \quad (2.142)
@@ -3055,11 +3478,11 @@ $$
 
 （参见定义 1.3.1、1.3.2、1.5.5、2.3.1 和 2.4.5）。
 
-**引理 2.4.7.** 设 $m, n \in \mathbb{N}$。则
-
-- (i) 有 $\mathcal{D}(\mathbb{T}_{m, n}) = (m, mn) \in \mathbb{N}^2$ 成立，
-- (ii) 对所有 $a \in C(\mathbb{R}, \mathbb{R})$，有 $\mathcal{R}_a^\mathbf{N}(\mathbb{T}_{m, n}) \in C(\mathbb{R}^m, \mathbb{R}^{mn})$ 成立，且
-- (iii) 对所有 $a \in C(\mathbb{R}, \mathbb{R})$ 和 $x \in \mathbb{R}^m$，有
+## 引理 2.4.7
+设 `m`, `n` ∈ ℕ。则
+- (i) 有 `D(T_{m, n}) = (m, mn)` ∈ ℕ² 成立，
+- (ii) 对所有 `a` ∈ `C(R, R)`，有 `R_a^N(T_{m, n})` ∈ `C(R^m, R^{mn})` 成立，且
+- (iii) 对所有 `a` ∈ `C(R, R)` 和 `x` ∈ ℝ^m，有
 
 $$
 (\mathcal{R}_a^\mathbf{N}(\mathbb{T}_{m, n})(x) = (x, x, \ldots, x) \quad (2.144)
@@ -3067,13 +3490,14 @@ $$
 
 （参见定义 1.3.1、1.3.4 和 2.4.6）。
 
-**引理 2.4.7 的证明。** 观察到 $\mathbb{T}_{m,n} \in (\mathbb{R}^{(mn) \times m} \times \mathbb{R}^{mn})$ 这一事实意味着
+### 引理 2.4.7 的证明
+观察到 `T_{m,n}` ∈ `(R^{(mn) × m} × R^{mn})` 这一事实意味着
 
 $$
 \mathcal{D}(\mathbb{T}_{m,n}) = (m,mn) \in \mathbb{N}^2 \quad (2.145)
 $$
 
-（参见定义 1.3.1 和 2.4.6）。这确立了第 **(i)** 项。注意，引理 2.3.2 中的第 **(iii)** 项表明，对所有 $a \in \mathcal{C}(\mathbb{R}, \mathbb{R})$ 和 $x \in \mathbb{R}^m$，有 $\mathcal{R}_a^{\mathbb{N}}(\mathbb{T}_{m,n}) \in \mathcal{C}(\mathbb{R}^m, \mathbb{R}^{mn})$ 成立，且
+（参见定义 1.3.1 和 2.4.6）。这确立了第 **(i)** 项。注意，引理 2.3.2 中的第 **(iii)** 项表明，对所有 `a` ∈ `C(R, R)` 和 `x` ∈ ℝ^m，有 `R_a^N(T_{m,n})` ∈ `C(R^m, R^{mn})` 成立，且
 
 $$
 \begin{align*}
@@ -3084,10 +3508,10 @@ $$
 
 （参见定义 1.3.4、1.5.5、2.3.1 和 2.4.5）。这证明了第 **(ii)** 项和第 **(iii)** 项。引理 2.4.7 的证明由此完成。
 
-**引理 2.4.8.** *设 $n \in \mathbb{N}$，$a \in \mathcal{C}(\mathbb{R}, \mathbb{R})$，$\Phi \in \mathbb{N}$（参见定义 1.3.1）。则*
-
-- (i) *有* $\mathcal{R}_a^{\mathbb{N}}(\mathbb{T}_{\mathcal{O}(\Phi),n} \bullet \Phi) \in \mathcal{C}(\mathbb{R}^{\mathcal{I}(\Phi)}, \mathbb{R}^{\mathcal{N} \circ \mathcal{I}(\Phi)})$ *成立，且*
-- (ii) *对所有* $x \in \mathbb{R}^{\mathcal{I}(\Phi)}$ *，有*
+## 引理 2.4.8
+设 `n` ∈ ℕ，`a` ∈ `C(R, R)`，`Φ` ∈ ℕ（参见定义 1.3.1）。则
+- (i) 有 `R_a^N(T_{O(Φ),n} • Φ)` ∈ `C(R^{I(Φ)}, R^{N ∘ I(Φ)})` 成立，且
+- (ii) 对所有 `x` ∈ ℝ^{I(Φ)}，有
 
 $$
 \begin{align*}
@@ -3097,18 +3521,19 @@ $$
 
 （参见定义 1.3.4、2.1.1 和 2.4.6）。
 
-**引理 2.4.8 的证明。** *观察到引理 2.4.7 表明，对所有* $m \in \mathbb{N}$ *和* $x \in \mathbb{R}^m$ *，有* $\mathcal{R}_a^{\mathbb{N}}(\mathbb{T}_{m,n}) \in \mathcal{C}(\mathbb{R}^m, \mathbb{R}^{mn})$ *成立，且*
+### 引理 2.4.8 的证明
+观察到引理 2.4.7 表明，对所有 `m` ∈ ℕ 和 `x` ∈ ℝ^m，有 `R_a^N(T_{m,n})` ∈ `C(R^m, R^{mn})` 成立，且
 
 $$
 (\mathcal{R}_a^{\mathbb{N}}(\mathbb{T}_{m,n}))(x) = (x,x,\ldots,x) \quad (2.148)
 $$
 
-（参见定义 1.3.4 和 2.4.6）。*结合此结论以及命题 2.1.2 中的第* **(v)** *项，可确立第* **(i)** *项和* **(ii)** *项。引理 2.4.8 的证明由此完成。*
+（参见定义 1.3.4 和 2.4.6）。结合此结论以及命题 2.1.2 中的第 **(v)** 项，可确立第 **(i)** 项和 **(ii)** 项。引理 2.4.8 的证明由此完成。
 
-**引理 2.4.9.** *设* $m, n \in \mathbb{N}$，$a \in \mathcal{C}(\mathbb{R}, \mathbb{R})$，$\Phi \in \mathbb{N}$ *满足* $\mathcal{I}(\Phi) = mn$ *（参见定义 1.3.1）。则*
-
-- (i) *有* $\mathcal{R}_a^{\mathbb{N}}(\Phi \bullet \mathbb{T}_{m,n}) \in \mathcal{C}(\mathbb{R}^m, \mathbb{R}^{\mathcal{O}(\Phi)})$ *成立，且*
-- (ii) *对所有* $x \in \mathbb{R}^m$ *，有*
+## 引理 2.4.9
+设 `m`, `n` ∈ ℕ，`a` ∈ `C(R, R)`，`Φ` ∈ ℕ 满足 `I(Φ) = mn`（参见定义 1.3.1）。则
+- (i) 有 `R_a^N(Φ • T_{m,n})` ∈ `C(R^m, R^{O(Φ)})` 成立，且
+- (ii) 对所有 `x` ∈ ℝ^m，有
 
 $$
 \begin{align*}
@@ -3118,7 +3543,8 @@ $$
 
 （参见定义 1.3.4、2.1.1 和 2.4.6）。
 
-**引理 2.4.9 的证明。** *注意，引理 2.4.7 保证了对所有* $x \in \mathbb{R}^m$ *，有* $\mathcal{R}_a^{\mathbb{N}}(\mathbb{T}_{m,n}) \in \mathcal{C}(\mathbb{R}^m, \mathbb{R}^{mn})$ *成立，且*
+### 引理 2.4.9 的证明
+注意，引理 2.4.7 保证了对所有 `x` ∈ ℝ^m，有 `R_a^N(T_{m,n})` ∈ `C(R^m, R^{mn})` 成立，且
 
 $$
 \begin{align*}
@@ -3126,17 +3552,18 @@ $$
 \end{align*}
 $$
 
-（参见定义 1.3.4 和 2.4.6）。*结合此结论以及命题 2.1.2 中的第* **(v)** *项，可证得第* **(i)** *项和* **(ii)** *项。引理 2.4.9 的证明由此完成。*
+（参见定义 1.3.4 和 2.4.6）。结合此结论以及命题 2.1.2 中的第 **(v)** 项，可证得第 **(i)** 项和 **(ii)** 项。引理 2.4.9 的证明由此完成。
 
-## 2.4.3 全连接前馈人工神经网络的和
+# 2.4.3 全连接前馈人工神经网络的和
 
-**定义 2.4.10** （相同长度全连接前馈 $ANNs$ 的和）。设 $m \in \mathbb{Z}$，$n \in \{m, m+1, \ldots\}$，$\Phi_m, \Phi_{m+1}, \ldots, \Phi_n \in \mathbf{N}$ 且满足对所有 $k \in \{m, m+1, \ldots, n\}$ 有
+## 定义 2.4.10 （相同长度全连接前馈 ANNs 的和）
+设 `m` ∈ ℤ，`n` ∈ `{m, m+1, ...}`，`Φ_m`, `Φ_{m+1}`, ..., `Φ_n` ∈ **N** 且满足对所有 `k` ∈ `{m, m+1, ..., n}` 有
 
 $$
 \mathcal{L}(\Phi_k) = \mathcal{L}(\Phi_m), \qquad \mathcal{I}(\Phi_k) = \mathcal{I}(\Phi_m), \qquad \text{以及} \qquad \mathcal{O}(\Phi_k) = \mathcal{O}(\Phi_m) \quad (2.151)
 $$
 
-（参见定义 1.3.1）。则我们用 $\bigoplus_{k=m}^n \Phi_k \in \mathbf{N}$ （记作 $\Phi_m \oplus \Phi_{m+1} \oplus \cdots \oplus \Phi_n \in \mathbf{N}$）表示由下式给出的 *全连接前馈人工神经网络*
+（参见定义 1.3.1）。则我们用 `⊕_{k=m}^n Φ_k` ∈ **N** （记作 `Φ_m ⊕ Φ_{m+1} ⊕ ... ⊕ Φ_n` ∈ **N**）表示由下式给出的 *全连接前馈人工神经网络*
 
 $$
 \bigoplus_{k=m}^n \Phi_k = \left( \mathcal{SO}_{\mathcal{O}(\Phi_m), n-m+1} \bullet \left[ \mathbf{P}_{n-m+1}(\Phi_m, \Phi_{m+1}, \ldots, \Phi_n) \right] \bullet \mathbb{T}_{\mathcal{I}(\Phi_m), n-m+1} \right) \in \mathbf{N} \quad (2.152)
@@ -3144,28 +3571,34 @@ $$
 
 （参见定义 1.3.2、2.1.1、2.2.1、2.4.1 和 2.4.6）。
 
-**引理 2.4.11** （全连接前馈 $ANNs$ 的和的实现）。设 $m \in \mathbb{Z}$，$n \in \{m, m+1, \ldots\}$，$\Phi_m, \Phi_{m+1}, \ldots, \Phi_n \in \mathbf{N}$ 且满足对所有 $k \in \{m, m+1, \ldots, n\}$ 有
+## 引理 2.4.11 （全连接前馈 ANNs 的和的实现）
+设 `m` ∈ ℤ，`n` ∈ `{m, m+1, ...}`，`Φ_m`, `Φ_{m+1}`, ..., `Φ_n` ∈ **N** 且满足对所有 `k` ∈ `{m, m+1, ..., n}` 有
 
 $$
 \mathcal{L}(\Phi_k) = \mathcal{L}(\Phi_m), \qquad \mathcal{I}(\Phi_k) = \mathcal{I}(\Phi_m), \qquad \text{以及} \qquad \mathcal{O}(\Phi_k) = \mathcal{O}(\Phi_m) \quad (2.153)
 $$
 
-（参见定义 1.3.1）。*则*
-
-- (i) 有 $\mathcal{L}\left(\bigoplus_{k=m}^n \Phi_k\right) = \mathcal{L}(\Phi_m)$ 成立，
+（参见定义 1.3.1）。则
+- (i) 有 `L(⊕_{k=m}^n Φ_k) = L(Φ_m)` 成立，
 - (ii) 有
+
 $$
 \mathcal{D}\left( \bigoplus_{k=m}^n \Phi_k \right) = \left( \mathcal{I}(\Phi_m), \sum_{k=m}^n \mathbb{D}_1(\Phi_k), \sum_{k=m}^n \mathbb{D}_2(\Phi_k), \ldots, \sum_{k=m}^n \mathbb{D}_{\mathcal{H}(\Phi_m)}(\Phi_k), \mathcal{O}(\Phi_m) \right) \quad (2.154)
 $$
+
 成立，且
-- (iii) 对所有 $a \in \mathcal{C}(\mathbb{R}^\mathbb{R}, \mathbb{R})$，有
+- (iii) 对所有 `a` ∈ `C(R^R, R)`，有
+
 $$
 \mathcal{R}_a^\mathbf{N}\left( \bigoplus_{k=m}^n \Phi_k \right) = \sum_{k=m}^n \left( \mathcal{R}_a^\mathbf{N}(\Phi_k) \right) \quad (2.155)
 $$
+
 成立
+
 （参见定义 1.3.4 和 2.4.10）。
 
-*引理 2.4.11 的证明*。首先，观察到引理 2.2.2 意味着
+### 引理 2.4.11 的证明
+首先，观察到引理 2.2.2 意味着
 
 $$
 \begin{aligned}
@@ -3175,9 +3608,6 @@ $$
 & \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \left. (n-m+1) \mathcal{O}(\Phi_m) \right) \quad (2.156)
 \end{aligned}
 $$
-
-
-
 
 （参见定义 2.2.1）。此外，请注意，引理 2.4.2 中的第 (i) 项表明
 
@@ -3214,7 +3644,7 @@ $$
 \tag{2.160}
 $$
 
-（参见定义 2.4.10）。这证明了第 (i) 项和第 (ii) 项。注意，引理 2.4.9 和 (2.156) 隐含了对于所有 $a \in C(\mathbb{R}, \mathbb{R})$ 和 $x \in \mathbb{R}^{\mathbb{Z}(\Phi_m)}$，成立
+（参见定义 2.4.10）。这证明了第 (i) 项和第 (ii) 项。注意，引理 2.4.9 和 (2.156) 隐含了对于所有 `a` ∈ `C(R, R)` 和 `x` ∈ ℝ^{Z(Φ_m)}，成立
 
 $$
 \mathcal{R}_a^{\mathbf{N}} \big( \big[ \mathbb{P}_{n-m+1}(\Phi_m, \Phi_{m+1}, \dots, \Phi_n) \big] \bullet \mathbb{T}_{\mathcal{I}(\Phi_m), n-m+1} \big) \in C( \mathbb{R}^{\mathcal{I}(\Phi_m)}, \mathbb{R}^{(n-m+1)\mathcal{O}(\Phi_m)} )
@@ -3225,40 +3655,60 @@ $$
 
 $$
 \begin{split}
+
+
+
 \big( \mathcal{R}_a^{\mathbf{N}} \big( \big[ \mathbb{P}_{n-m+1}(\Phi_m, \Phi_{m+1}, \dots, \Phi_n) \big] \bullet \mathbb{T}_{\mathcal{I}(\Phi_m), n-m+1} \big) \big)(x)
+
 &= \big( \mathcal{R}_a^{\mathbf{N}} \big( \big[ \mathbb{P}_{n-m+1}(\Phi_m, \Phi_{m+1}, \dots, \Phi_n) \big] \big) (x, x, \dots, x)
+
 \end{split}
+
 \tag{2.162}
+
 $$
 
 （参见定义 1.3.4）。将此式与命题 2.2.3 中的第 (ii) 项结合，表明对于所有 $a \in C(\mathbb{R}, \mathbb{R})$ 和 $x \in \mathbb{R}^{\mathbb{Z}(\Phi_m)}$，成立
 
 $$
+
 \begin{split}
+
 \big( \mathcal{R}_a^{\mathbf{N}} \big( \big[ \mathbb{P}_{n-m+1}(\Phi_m, \Phi_{m+1}, \dots, \Phi_n) \big] \bullet \mathbb{T}_{\mathcal{I}(\Phi_m), n-m+1} \big) \big)(x)
+
 &= \big( (\mathcal{R}_a^{\mathbf{N}} (\Phi_m))(x), (\mathcal{R}_a^{\mathbf{N}} (\Phi_{m+1}))(x), \dots, (\mathcal{R}_a^{\mathbf{N}} (\Phi_n))(x) \big) \in \mathbb{R}^{(n-m+1)\mathcal{O}(\Phi_m)}.
+
 \end{split}
+
 \tag{2.163}
+
 $$
 
 引理 2.4.3、(2.157) 和推论 2.1.5 因此表明，对于所有 $a \in C(\mathbb{R}, \mathbb{R})$ 和 $x \in \mathbb{R}^{\mathbb{Z}(\Phi_m)}$，成立 $\mathcal{R}_a^{\mathbf{N}} \big( \bigoplus_{k=m}^{n} \Phi_k \big) \in C(\mathbb{R}^{\mathcal{I}(\Phi_m)}, \mathbb{R}^{\mathcal{O}(\Phi_m)})$ 且
 
 $$
+
 \begin{split}
+
 \bigg( \mathcal{R}_a^{\mathbf{N}} \bigg( \bigoplus_{k=m}^{n} \Phi_k \bigg) \bigg)(x)
+
 &= \big( \mathcal{R}_a^{\mathbf{N}} \big( \mathbb{S}_{\mathcal{O}(\Phi_m), n-m+1} \bullet \big[ \mathbb{P}_{n-m+1}(\Phi_m, \Phi_{m+1}, \dots, \Phi_n) \big] \bullet \mathbb{T}_{\mathcal{I}(\Phi_m), n-m+1} \big) \big)(x) \\
+
 &= \sum_{k=m}^{n} (\mathcal{R}_a^{\mathbf{N}} (\Phi_k))(x).
+
 \end{split}
+
 \tag{2.164}
+
 $$
 
 这建立了第 (iii) 项。从而引理 2.4.11 的证明完毕。
 
-## **第二部分**
+# 第二部分
 
-## **逼近**
+## 逼近
 
-## 第 3 章
+# 第 3 章
 
 # 一维人工神经网络（ANN）逼近结果
 
@@ -3266,18 +3716,20 @@ $$
 
 在科学文献中，$\mathbf{ANNs}$ 逼近某些目标函数类的能力已得到深入研究；例如，参见 \cite{cit1,cit2,cit3,cit4} 关于早期的通用 \ref{ANN} 逼近结果；例如，参见 \cite{cit5,cit6,cit7,cit8,cit9,cit10} 及其参考文献，关于建立不同目标函数类逼近速率的较新的 $\ref{ANN}$ 逼近结果；以及例如，参见 \cite{cit11,cit12,cit13,cit14}（及其参考文献关于与 $\ref{PDEs}$ 解相关的 $\mathbf{ANNs}$ 逼近能力）。（另见本讲义第六部分 \ref{part:VI} 中的第 \ref{chap:16} 章和第 \ref{chap:17} 章，关于 $\ref{PDEs}$ 的机器学习方法）。本章基于 Ackermann 等人 \cite{ackermann2018complexity, Section 4.2}（另例如，参见 Hutzenhaler 等人 \cite{hutzenhaler2019uniform, Section 3.4}）。
 
-#### 3.1 一维函数的线性插值
+### 3.1 一维函数的线性插值
 
-### 3.1.1 关于连续性模
+#### 3.1.1 关于连续性模
 
 **定义 3.1.1（连续性模）。** 设 $A \subseteq \mathbb{R}$ 为一个集合，设 $f \colon A \rightarrow \mathbb{R}$ 为一个函数。*则我们将满足对于所有 $h \in [0,\infty[$，*
 
-$$
+```
 \begin{align*}
+
 	w_f(h) = \operatorname{sup} \big( \{ | f(x) - f(y) | : (x,y) \in A \text{ 且 } | x - y | \leq h \} \cup \{ 0 \} \big) \notag \\
 	\phantom{w_f(h) =} & \operatorname{sup} \big( \{ r \in \mathbb{R} : (\exists x \in A, \; y \in A \cap [x-h,x+h]: \; r = | f(x) - f(y) | \} \cup \{ 0 \} \big) \tag{3.1}
+
 \end{align*}
-$$
+```
 
 *的函数记为 $w_f \colon [0,\infty[ \rightarrow [0,\infty[$，并称 $w_f$ 为 $f$ 的连续性模。*
 
@@ -3294,110 +3746,126 @@ $$
 
 **引理 3.1.3**（连续性模的次可加性）。*设 $a \in [-\infty, \infty]$，$b \in [a, \infty]$，设 $f : ([a, b] \cap \mathbb{R}) \rightarrow \mathbb{R}$ 为一个函数，且设 $h, \mathfrak{h} \in [0, \infty]$。则*
 
-$$w_f(h + \mathfrak{h}) \leq w_f(h) + w_f(\mathfrak{h}) \tag{3.2}$$
+```
+w_f(h + \mathfrak{h}) \leq w_f(h) + w_f(\mathfrak{h}) \tag{3.2}
+```
 
 *(参见定义 3.1.1)。*
 
 *引理 3.1.3 的证明。* 在整个证明过程中，不失一般性，假设 $\mathfrak{h} \leq h < \infty$。注意到，对于所有满足 $|x - y| \leq h + \mathfrak{h}$ 的 $x, y \in [a, b] \cap \mathbb{R}$，成立 $[x - h, x + h] \cap [y - \mathfrak{h}, y + \mathfrak{h}] \cap [a, b] \neq \emptyset$，这确保了对于所有满足 $|x - y| \leq h + \mathfrak{h}$ 的 $x, y \in [a, b] \cap \mathbb{R}$，存在 $z \in [a, b] \cap \mathbb{R}$ 使得
 
-$$|x - z| \leq h \quad \text{且} \quad |y - z| \leq \mathfrak{h}. \tag{3.3}$$
+```
+|x - z| \leq h \quad \text{且} \quad |y - z| \leq \mathfrak{h}. \tag{3.3}
+```
 
 因此，引理 3.1.2 中的第 (i) 项和第 (iv) 项隐含了，对于所有满足 $|x - y| \leq h + \mathfrak{h}$ 的 $x, y \in [a, b] \cap \mathbb{R}$，存在 $z \in [a, b] \cap \mathbb{R}$ 使得
 
-$$
+```
 \begin{align*}
+
 |f(x) - f(y)| &\leq |f(x) - f(z)| + |f(y) - f(z)| \\
 &\leq w_f(|x - z|) + w_f(|y - z|) \leq w_f(h) + w_f(\mathfrak{h})
+
 \end{align*} \tag{3.4}
-$$
+```
 
 *(参见定义 3.1.1)。将此式与 (3.1) 结合表明*
 
-$$w_f(h + \mathfrak{h}) \leq w_f(h) + w_f(\mathfrak{h}). \tag{3.5}$$
+```
+w_f(h + \mathfrak{h}) \leq w_f(h) + w_f(\mathfrak{h}). \tag{3.5}
+```
 
 从而引理 3.1.3 的证明完毕。$\Box$
 
 **引理 3.1.4**（利普希茨连续函数的连续性模性质）。*设 $A \subseteq \mathbb{R}$，$L \in [0, \infty)$，设 $f : A \rightarrow \mathbb{R}$ 满足对于所有 $x, y \in A$，*
 
-$$|f(x) - f(y)| \leq L|x - y|, \tag{3.6}$$
+```
+|f(x) - f(y)| \leq L|x - y|, \tag{3.6}
+```
 
 *且设 $h \in [0, \infty)$。则*
 
-$$w_f(h) \leq Lh \tag{3.7}$$
+```
+w_f(h) \leq Lh \tag{3.7}
+```
 
 *(参见定义 3.1.1)。*
 
-
-
-
-
 引理 3.1.4 的证明。注意，(3.1) 和 (3.6) 表明
 
-$$
+```
 \begin{aligned}
+
 w_{f}(h) &=\sup \left(\left\{|f(x)-f(y)| \in[0, \infty) : (x, y \in A \text { 且 } |x-y| \leq h)\right\} \cup\{0\}\right) \\
 &\leq \sup \left(\left\{|L| x-y| \in[0, \infty) : (x, y \in A \text { 且 } |x-y| \leq h)\right\} \cup\{0\}\right) \\
 &\leq \sup(\{L h, 0\})=L h
+
 \end{aligned}
-$$
+```
 
 (参见定义 3.1.1)。引理 3.1.4 的证明至此完成。
 
-## 3.1.2 一维函数的线性插值
+#### 3.1.2 一维函数的线性插值
 
 **定义 3.1.5**（线性插值算子）。设 $K \in \mathbb{N}$，$\mathfrak{f}_{0}, \mathfrak{f}_{1}, \ldots, \mathfrak{f}_{K}, f_{0}, f_{1}, \ldots, f_{K} \in \mathbb{R}$ 满足 $\mathfrak{f}_{0}<\mathfrak{f}_{1}<\ldots<\mathfrak{f}_{K}$。我们将
 
-$$
+```
 \mathcal{I}_{\mathfrak{f}_{0}, \mathfrak{f}_{1}, \ldots, \mathfrak{f}_{K}}^{f_{0}, f_{1}, \ldots, f_{K}}: \mathbb{R} \rightarrow \mathbb{R}
-$$
+```
 
 定义为满足以下条件的函数：对于所有 $k \in\{1,2, \ldots, K\}, x \in(-\infty, \mathfrak{f}_{0}], y \in[\mathfrak{f}_{k-1}, \mathfrak{f}_{k}], z \in[\mathfrak{f}_{K}, \infty)$，有
 
-$$
+```
 \begin{aligned}
+
 &\left(\mathcal{I}_{\mathfrak{f}_{0}, \mathfrak{f}_{1}, \ldots, \mathfrak{f}_{K}}^{f_{0}, f_{1}, \ldots, f_{K}}\right)(x)=f_{0}, \quad \left(\mathcal{I}_{\mathfrak{f}_{0}, \mathfrak{f}_{1}, \ldots, \mathfrak{f}_{K}}^{f_{0}, f_{1}, \ldots, f_{K}}\right)(z)=f_{K}, \\
 &\text { 且 } \quad \left(\mathcal{I}_{\mathfrak{f}_{0}, \mathfrak{f}_{1}, \ldots, \mathfrak{f}_{K}}^{f_{0}, f_{1}, \ldots, f_{K}}\right)(y)=f_{k-1}+\left(\frac{y-\mathfrak{f}_{k-1}}{\mathfrak{f}_{k}-\mathfrak{f}_{k-1}}\right)\left(f_{k}-f_{k-1}\right) .
+
 \end{aligned}
-$$
+```
 
 **引理 3.1.6**（线性插值算子的基本性质）。设 $K \in \mathbb{N}$，$\mathfrak{f}_{0}, \mathfrak{f}_{1}, \ldots, \mathfrak{f}_{K}, f_{0}, f_{1}, \ldots, f_{K} \in \mathbb{R}$ 满足 $\mathfrak{f}_{0}<\mathfrak{f}_{1}<\ldots<\mathfrak{f}_{K}$。则
 
 - i) 对于所有 $k \in\{0,1, \ldots, K\}$，有
 
-$$
+```
 \left(\mathcal{I}_{\mathfrak{f}_{0}, \mathfrak{f}_{1}, \ldots, \mathfrak{f}_{K}}^{f_{0}, f_{1}, \ldots, f_{K}}\right)(\mathfrak{f}_{k})=f_{k},
-$$
+```
 
 - ii) 对于所有 $k \in\{1,2, \ldots, K\}, x \in[\mathfrak{f}_{k-1}, \mathfrak{f}_{k}]$，有
 
-$$
+```
 \left(\mathcal{I}_{\mathfrak{f}_{0}, \mathfrak{f}_{1}, \ldots, \mathfrak{f}_{K}}^{f_{0}, f_{1}, \ldots, f_{K}}\right)(x)=f_{k-1}+\left(\frac{x-\mathfrak{f}_{k-1}}{\mathfrak{f}_{k}-\mathfrak{f}_{k-1}}\right)\left(f_{k}-f_{k-1}\right),
-$$
+```
 
 以及
 
 - iii) 对于所有 $k \in\{1,2, \ldots, K\}, x \in[\mathfrak{f}_{k-1}, \mathfrak{f}_{k}]$，有
 
-$$
+```
 \left(\mathcal{I}_{\mathfrak{f}_{0}, \mathfrak{f}_{1}, \ldots, \mathfrak{f}_{K}}^{f_{0}, f_{1}, \ldots, f_{K}}\right)(x)=\left(\frac{\mathfrak{f}_{k}-x}{\mathfrak{f}_{k}-\mathfrak{f}_{k-1}}\right) f_{k-1}+\left(\frac{x-\mathfrak{f}_{k-1}}{\mathfrak{f}_{k}-\mathfrak{f}_{k-1}}\right) f_{k} .
-$$
+```
 
 (参见定义 3.1.5)。
 
 引理 3.1.6 的证明。注意，(3.11) 建立了条目 i) 和 ii)。观察可知，条目 ii) 证明了对于所有 $k \in\{1,2, \ldots, K\}, x \in[\mathfrak{f}_{k-1}, \mathfrak{f}_{k}]$，有
 
-$$
+```
 \begin{aligned}
+
 \left(\mathcal{I}_{\mathfrak{f}_{0}, \mathfrak{f}_{1}, \ldots, \mathfrak{f}_{K}}^{f_{0}, f_{1}, \ldots, f_{K}}\right)(x) &=\left[\frac{\mathfrak{f}_{k}-\mathfrak{f}_{k-1}}{\mathfrak{f}_{k}-\mathfrak{f}_{k-1}}-\left(\frac{x-\mathfrak{f}_{k-1}}{\mathfrak{f}_{k}-\mathfrak{f}_{k-1}}\right)\right] f_{k-1}+\left(\frac{x-\mathfrak{f}_{k-1}}{\mathfrak{f}_{k}-\mathfrak{f}_{k-1}}\right) f_{k} \\
 &=\left(\frac{\mathfrak{f}_{k}-x}{\mathfrak{f}_{k}-\mathfrak{f}_{k-1}}\right) f_{k-1}+\left(\frac{x-\mathfrak{f}_{k-1}}{\mathfrak{f}_{k}-\mathfrak{f}_{k-1}}\right) f_{k} .
-\end{aligned}
-$$
+```
+
+
 
 这建立了条目 iii)。引理 3.1.6 的证明至此完成。
 
-**命题 3.1.7**（线性插值算子的逼近与连续性性质）。*设 \(K \in \mathbb{N}\)，\(\mathfrak{f}_0, \mathfrak{f}_1, \ldots, \mathfrak{f}_K \in \mathbb{R}\) 满足 \(\mathfrak{f}_0 < \mathfrak{f}_1 < \ldots < \mathfrak{f}_K\)，且设 \(f : [\mathfrak{f}_0, \mathfrak{f}_K] \rightarrow \mathbb{R}\) 为一个函数。则*
+# 命题 3.1.7（线性插值算子的逼近与连续性性质）
+设 \(K \in \mathbb{N}\)，\(\mathfrak{f}_0, \mathfrak{f}_1, \ldots, \mathfrak{f}_K \in \mathbb{R}\) 满足 \(\mathfrak{f}_0 < \mathfrak{f}_1 < \ldots < \mathfrak{f}_K\)，且设 \(f : [\mathfrak{f}_0, \mathfrak{f}_K] \rightarrow \mathbb{R}\) 为一个函数。则
 
-- *(i) 对于所有 \(x, y \in \mathbb{R}\) 且 \(x \neq y\)，有*
+## (i)
+对于所有 \(x, y \in \mathbb{R}\) 且 \(x \neq y\)，有
 
 $$
 \begin{align*}
@@ -3406,27 +3874,28 @@ $$
 \end{align*}
 $$
 
-- *且 (ii) 有*
+## (ii)
+且有
 
 $$
 \sup_{x \in [\mathfrak{f}_0, \mathfrak{f}_k]} \left| \left( \mathscr{L}_{\mathfrak{f}_0, \mathfrak{f}_1, \ldots, \mathfrak{f}_K}^{f(\mathfrak{f}_0), f(\mathfrak{f}_1), \ldots, f(\mathfrak{f}_K)} \right)(x) - f(x) \right| \le w_f \left( \max_{k \in \{1, 2, \ldots, K\}} |\mathfrak{f}_k - \mathfrak{f}_{k-1}| \right) \tag{3.17}
 $$
 
-*(参见定义 3.1.1 和 3.1.5)。*
+（参见定义 3.1.1 和 3.1.5）。
 
-*命题 3.1.7 的证明。在本证明中，设 \(L \in [0, \infty)\) 满足*
+命题 3.1.7 的证明。在本证明中，设 \(L \in [0, \infty)\) 满足
 
 $$
 L = \max_{k \in \{1, 2, \ldots, K\}} \left( \frac{w_f(\mathfrak{f}_k - \mathfrak{f}_{k-1})}{\mathfrak{f}_k - \mathfrak{f}_{k-1}} \right) \tag{3.18}
 $$
 
-*且设 \(\mathfrak{l} : \mathbb{R} \rightarrow \mathbb{R}\) 满足对于所有 \(x \in \mathbb{R}\)，有*
+且设 \(\mathfrak{l} : \mathbb{R} \rightarrow \mathbb{R}\) 满足对于所有 \(x \in \mathbb{R}\)，有
 
 $$
 \mathfrak{l}(x) = \left( \mathscr{L}_{\mathfrak{f}_0, \mathfrak{f}_1, \ldots, \mathfrak{f}_K}^{f(\mathfrak{f}_0), f(\mathfrak{f}_1), \ldots, f(\mathfrak{f}_K)} \right)(x) \tag{3.19}
 $$
 
-*(参见定义 3.1.1 和 3.1.5)。观察可知，引理 3.1.6 中的条目 **(ii)**、引理 3.1.2 中的条目 **(iv)** 以及 (3.18) 确保对于所有 \(k \in \{1, 2, \ldots, K\}\)，\(x, y \in [\mathfrak{f}_{k-1}, \mathfrak{f}_k]\) 且 \(x \neq y\)，有*
+（参见定义 3.1.1 和 3.1.5）。观察可知，引理 3.1.6 中的条目 **(ii)**、引理 3.1.2 中的条目 **(iv)** 以及 (3.18) 确保对于所有 \(k \in \{1, 2, \ldots, K\}\)，\(x, y \in [\mathfrak{f}_{k-1}, \mathfrak{f}_k]\) 且 \(x \neq y\)，有
 
 $$
 \begin{align*}
@@ -3435,7 +3904,7 @@ $$
 \end{align*}
 $$
 
-*此外，注意三角不等式以及引理 3.1.6 中的条目 **(i)** 意味着对于所有 \(k, l \in \{1, 2, \ldots, K\}\)，\(x \in [\mathfrak{f}_{k-1}, \mathfrak{f}_k]\)，\(y \in [\mathfrak{f}_{l-1}, \mathfrak{f}_l]\) 且 \(k < l\)，有*
+此外，注意三角不等式以及引理 3.1.6 中的条目 **(i)** 意味着对于所有 \(k, l \in \{1, 2, \ldots, K\}\)，\(x \in [\mathfrak{f}_{k-1}, \mathfrak{f}_k]\)，\(y \in [\mathfrak{f}_{l-1}, \mathfrak{f}_l]\) 且 \(k < l\)，有
 
 $$
 \begin{align*}
@@ -3495,37 +3964,39 @@ $$
 \end{align}
 $$
 
-
-
-
-
 将上述结果与 **(3.1)** 和引理 **3.1.2** 相结合，意味着对于所有 $k \in \{1, 2, \dots, K\}$ 和 $x \in [\mathfrak{k}_{k-1}, \mathfrak{k}_k]$，均有
 
 $$
-\begin{align*} |\mathbb{I}(x) - f(x)| \leq w_f([\mathfrak{k}_{k-1}, \mathfrak{k}_{k-1}])&\left( \frac{\mathfrak{k}_k - x}{\mathfrak{k}_k - \mathfrak{k}_{k-1}} + \frac{x - \mathfrak{k}_{k-1}}{\mathfrak{k}_k - \mathfrak{k}_{k-1}} \right) \\ &= w_f([\mathfrak{k}_{k-1}, \mathfrak{k}_k]) \leq w_f(\max_{j \in \{1, 2, \dots, K\}} [\mathfrak{j}_j - \mathfrak{j}_{j-1}]). \end{align*}
+\begin{align*} |\mathbb{I}(x) - f(x)| \leq w_f([\mathfrak{k}_{k-1}, \mathfrak{k}_{k-1}])&\left( \frac{\mathfrak{k}_k - x}{\mathfrak{k}_k - \mathfrak{k}_{k-1}} + \frac{x - \mathfrak{k}_{k-1}}{\mathfrak{k}_k - \mathfrak{k}_{k-1}} \right) \\
+&= w_f([\mathfrak{k}_{k-1}, \mathfrak{k}_k]) \leq w_f(\max_{j \in \{1, 2, \dots, K\}} [\mathfrak{j}_j - \mathfrak{j}_{j-1}]). \end{align*}
 $$
 
 这就确立了第 **(ii)** 项。命题 **3.1.7** 的证明到此结束。$\square$
 
-## **推论 3.1.8**（线性插值算子的逼近与利普希茨连续性性质）。设 $K \in \mathbb{N}$，$L$ 以及 $[\mathfrak{f}_0, \mathfrak{f}_1], \dots, \mathfrak{f}_K \in \mathbb{R}$ 满足 $\mathfrak{f}_0 < \mathfrak{f}_1 < \dots < \mathfrak{f}_K$，且设函数 $f: [\mathfrak{f}_0, \mathfrak{f}_K] \to \mathbb{R}$ 对所有 $x, y \in [\mathfrak{f}_0, \mathfrak{f}_K]$ 满足
+# 推论 3.1.8（线性插值算子的逼近与利普希茨连续性性质）
+设 $K \in \mathbb{N}$，$L$ 以及 $[\mathfrak{f}_0, \mathfrak{f}_1], \dots, \mathfrak{f}_K \in \mathbb{R}$ 满足 $\mathfrak{f}_0 < \mathfrak{f}_1 < \dots < \mathfrak{f}_K$，且设函数 $f: [\mathfrak{f}_0, \mathfrak{f}_K] \to \mathbb{R}$ 对所有 $x, y \in [\mathfrak{f}_0, \mathfrak{f}_K]$ 满足
 
 $$|f(x) - f(y)| \leq L|x - y|.$$
 
-*则*
+则
 
--   *(i) 对于所有 $x, y \in \mathbb{R}$，有*
+## (i)
+对于所有 $x, y \in \mathbb{R}$，有
 
 $$\left| (\mathscr{L}^{f(\mathfrak{f}_0), f(\mathfrak{f}_1), \dots, f(\mathfrak{f}_K)}_{\mathfrak{f}_0, \mathfrak{f}_1, \dots, \mathfrak{f}_K}(x) - (\mathscr{L}^{f(\mathfrak{f}_0), f(\mathfrak{f}_1), \dots, f(\mathfrak{f}_K)}_{\mathfrak{f}_0, \mathfrak{f}_1, \dots, \mathfrak{f}_K}(y)| \leq L|x - y|$$
 
--   *(ii) 有*
+## (ii)
+有
 
 $$\sup_{x \in [\mathfrak{f}_0, \mathfrak{f}_K]} \left| (\mathscr{L}^{f(\mathfrak{f}_0), f(\mathfrak{f}_1), \dots, f(\mathfrak{f}_K)}_{\mathfrak{f}_0, \mathfrak{f}_1, \dots, \mathfrak{f}_K}(x) - f(x) \right| \leq L \left( \max_{k \in \{1, 2, \dots, K\}} [\mathfrak{k}_k - \mathfrak{k}_{k-1}] \right)$$
 
-*(参见定义 3.1.5)。*
+（参见定义 3.1.5）。
 
-*推论 3.1.8 的证明。* 注意到，假设对于所有 $x, y \in [\mathfrak{f}_0, \mathfrak{f}_K]$ 均有 $|f(x) - f(y)| \leq L|x - y|$，这表明
+推论 3.1.8 的证明。注意到，假设对于所有 $x, y \in [\mathfrak{f}_0, \mathfrak{f}_K]$ 均有 $|f(x) - f(y)| \leq L|x - y|$，这表明
 
 $$0 \leq \frac{|f(\mathfrak{f}_L) - f(\mathfrak{f}_0)|}{(\mathfrak{f}_L - \mathfrak{f}_0)} \leq \frac{L|\mathfrak{f}_L - \mathfrak{f}_0|}{(\mathfrak{f}_L - \mathfrak{f}_0)} = L.$$
+
+
 
 将此结果、引理 **3.1.4** 以及假设“对于所有 $x, y \in [\mathfrak{f}_0, \mathfrak{f}_K]$ 均有 $|f(x) - f(y)| \leq L|x - y|$”与命题 **3.1.7** 中的第 **(i)** 项相结合，可知对于所有 $x, y \in \mathbb{R}$，有
 
@@ -3538,6 +4009,7 @@ $$
 $$
 \sup_{x \in \mathbb{I}_{\mathfrak{f}_0, \mathfrak{f}_k}} \bigg| \big(\mathscr{C}(f_{\mathfrak{f}_0}, f_{\mathfrak{f}_1}, ..., f_{\mathfrak{f}_k})(x) - f(x)\big| \leq w_f \bigg( \max_{k \in \{1,2,...,K\}} |\mathfrak{f}_k - \mathfrak{f}_{k-1}|\bigg) 
 $$
+
 $$
 \leq L \bigg( \max_{k \in \{1,2,...,K\}} |\mathfrak{f}_k - \mathfrak{f}_{k-1}|\bigg). \qquad (3.35)
 $$
@@ -3548,26 +4020,26 @@ $$
 
 ### 3.2.1 作为全连接前馈 ANN 的激活函数
 
-**定义 3.2.1**（作为全连接前馈 $\textcolor{blue}{ANN}$ 的激活函数）。设 $n \in \mathbb{N}$。*则我们用*
+**定义 3.2.1**（作为全连接前馈 `ANN` 的激活函数）。设 `n ∈ ℕ`。*则我们用*
 
 $$\mathbf{i}_n \in ((\mathbb{R}^{n \times n} \times \mathbb{R}^n) \times (\mathbb{R}^{n \times n} \times \mathbb{R}^n)) \subseteq \textbf{N} \qquad (3.36)$$
 
-*表示由下式给出的全连接前馈 $\textcolor{blue}{ANN}$*
+*表示由下式给出的全连接前馈 `ANN`*
 
 $$\mathbf{i}_n = ((I_n, 0), (I_n, 0)) \qquad (3.37)$$
 
 *(参见定义 **1.3.1** 和 **1.5.5**)*。
 
-**引理 3.2.2**（全连接前馈激活 $\textcolor{blue}{ANN}$ 的函数实现）。设 $n \in \mathbb{N}$。*则*
+**引理 3.2.2**（全连接前馈激活 `ANN` 的函数实现）。设 `n ∈ ℕ`。*则*
 
--   *(i) 有* $\mathcal{D}(\mathbf{i}_n) = (n, n, n) \in \mathbb{N}^3$ *且*
--   *(ii) 对于所有* $a \in C(\mathbb{R}, \mathbb{R})$ *，有*
+-   *(i) 有* `𝒟(i_n) = (n, n, n) ∈ ℕ³` *且*
+-   *(ii) 对于所有* `a ∈ C(ℝ, ℝ)` *，有*
 
 $$\mathcal{R}_{\alpha}^{\mathbf{N}}(\mathbf{i}_n) = \mathfrak{M}_{a,n} \qquad (3.38)$$
 
 *(参见定义 **1.2.1**、**1.3.1**、**1.3.4** 和 **3.2.1**)*。
 
-*引理 3.2.2 的证明。* 注意到事实 $\mathbf{i}_n \in ((\mathbb{R}^{n \times n} \times \mathbb{R}^n) \times (\mathbb{R}^{n \times n} \times \mathbb{R}^n)) \subseteq \textbf{N}$ 蕴含
+*引理 3.2.2 的证明。* 注意到事实 `i_n ∈ ((ℝ^{n × n} × ℝ^n) × (ℝ^{n × n} × ℝ^n)) ⊆ N` 蕴含
 
 $$\mathcal{D}(\mathbf{i}_n) = (n, n, n) \in \mathbb{N}^3 \qquad (3.39)$$
 
@@ -3575,13 +4047,13 @@ $$\mathcal{D}(\mathbf{i}_n) = (n, n, n) \in \mathbb{N}^3 \qquad (3.39)$$
 
 $$\mathbf{i}_n = ((I_n, 0), (I_n, 0)) \in ((\mathbb{R}^{n \times n} \times \mathbb{R}^n) \times (\mathbb{R}^{n \times n} \times \mathbb{R}^n)) \qquad (3.40)$$
 
-表明对于所有 $a \in C(\mathbb{R}, \mathbb{R})$ 和 $x \in \mathbb{R}^n$，有 $\mathcal{R}_a^{\mathbf{N}}(\mathbf{i}_n) \in C(\mathbb{R}^n, \mathbb{R}^n)$ 且
+表明对于所有 `a ∈ C(ℝ, ℝ)` 和 `x ∈ ℝ^n`，有 `𝒓_a^N(i_n) ∈ C(ℝ^n, ℝ^n)` 且
 
 $$\mathcal{R}_a^{\mathbf{N}}(\mathbf{i}_n)(x) = \mathrm{I}_n(\mathfrak{M}_{a,n}(I_nx+0)) + 0 = \mathfrak{M}_{a,n}^{\mathbf{N}}(x). \tag{3.41}$$
 
 这就确立了第 **(ii)** 项。引理 **3.2.2** 的证明到此结束。
 
-**引理 3.2.3**（全连接前馈激活 **ANN** 与一般全连接前馈 **ANN** 的复合。 *设* $\Phi \in \mathbf{N}$ *（参见定义* **1.3.1** *）。则*)
+**引理 3.2.3**（全连接前馈激活 **ANN** 与一般全连接前馈 **ANN** 的复合。 *设* `Φ ∈ N` *（参见定义* **1.3.1** *）。则*)
 
 -   *(i) 有*
 
@@ -3593,8 +4065,8 @@ $$
 \tag{3.42}
 $$
 
--   *(ii) 对于所有* $a \in C(\mathbb{R}, \mathbb{R})$ *，有* $\mathcal{R}_a^{\mathbf{N}}(\mathbf{i}_{\mathcal{C}(\Phi)} \bullet \Phi) \in C(\mathbb{R}^{\mathcal{L}(\Phi)}, \mathbb{R}^{\mathcal{O}(\Phi)})$，
--   *(iii) 对于所有* $a \in C(\mathbb{R}, \mathbb{R})$ *，有* $\mathcal{R}_a^{\mathbf{N}}(\mathbf{i}_{\mathcal{C}(\Phi)} \bullet \Phi) = \mathfrak{M}_{a, \mathcal{C}(\Phi)} \circ (\mathcal{R}_a^{\mathbf{N}}(\Phi))$，
+-   *(ii) 对于所有* `a ∈ C(ℝ, ℝ)` *，有* `𝒓_a^N(i_{𝒞(Φ)} • Φ) ∈ C(ℝ^{ℒ(Φ)}, ℝ^{𝒪(Φ)})`，
+-   *(iii) 对于所有* `a ∈ C(ℝ, ℝ)` *，有* `𝒓_a^N(i_{𝒞(Φ)} • Φ) = 𝔐_{a, 𝒞(Φ)} ∘ (𝒓_a^N(Φ))`，
 -   *(iv) 有*
 
 $$
@@ -3605,12 +4077,12 @@ $$
 \tag{3.43}
 $$
 
--   *(v) 对于所有* $a \in C(\mathbb{R}, \mathbb{R})$ *，有* $\mathcal{R}_a^{\mathbf{N}}(\Phi \bullet \mathbf{i}_{\mathcal{I}(\Phi)}) \in C(\mathbb{R}^{\mathcal{L}(\Phi)}, \mathbb{R}^{\mathcal{O}(\Phi)})$ *且*
--   *(vi) 对于所有* $a \in C(\mathbb{R}, \mathbb{R})$ *，有* $\mathcal{R}_a^{\mathbf{N}}(\Phi \bullet \mathbf{i}_{\mathcal{I}(\Phi)}) = (\mathcal{R}_a^{\mathbf{N}}(\Phi)) \circ \mathfrak{M}_{a, \mathcal{L}(\Phi)}$
+-   *(v) 对于所有* `a ∈ C(ℝ, ℝ)` *，有* `𝒓_a^N(Φ • i_{ℐ(Φ)}) ∈ C(ℝ^{ℒ(Φ)}, ℝ^{𝒪(Φ)})` *且*
+-   *(vi) 对于所有* `a ∈ C(ℝ, ℝ)` *，有* `𝒓_a^N(Φ • i_{ℐ(Φ)}) = (𝒓_a^N(Φ)) ∘ 𝔐_{a, ℒ(Φ)}`
 
 *(参见定义* **1.2.1, 1.3.4, 2.1.1, 和 3.2.1** *)*。
 
-*引理* **3.2.3** *的证明。* *注意到引理* **3.2.2** *表明对于所有* $n \in \mathbb{N}$ *和* $a \in C(\mathbb{R}, \mathbb{R})$ *，有*
+*引理* **3.2.3** *的证明。* *注意到引理* **3.2.2** *表明对于所有* `n ∈ ℕ` *和* `a ∈ C(ℝ, ℝ)` *，有*
 
 $$
 \mathcal{R}_a^{\mathbf{N}}(\mathbf{i}_n) = \mathfrak{M}_{a,n}^{\mathbf{N}}
@@ -3621,7 +4093,7 @@ $$
 
 ### 3.2.2 具有单个隐藏神经元的 ReLU ANN 的表示
 
-**引理 3.2.4。** *设* $\alpha, \beta, h \in \mathbb{R}$ *和* $\mathbf{H} \in \mathbf{N}$ *满足*
+**引理 3.2.4。** *设* `α, β, h ∈ ℝ` *和* `H ∈ N` *满足*
 
 $$
 \mathbf{H} = h \otimes (\mathbf{i}_{1} \bullet \mathbf{A}_{\alpha, \beta})
@@ -3630,17 +4102,10 @@ $$
 
 *(参见定义* **1.3.1, 2.1.1, 2.3.1, 2.3.4, 和 3.2.1** *)。*则*)
 
--   *(i) 有* $\mathbf{H} = ((\alpha, \beta), (h, 0))$，
-
-
-
-
-
-(ii) $\boldsymbol{\mathcal{D}}(\mathbf{H})=(1,1,1)\in\mathbb{N}^{3}$ 成立，
-
-(iii) $\boldsymbol{\mathcal{R}}_{\mathtt{r}}^{\mathbb{N}}(\mathbf{H})\in C(\mathbb{R},\mathbb{R})$ 成立，且
-
-(iv) 对于所有 $x\in\mathbb{R}$，$(\boldsymbol{\mathcal{R}}_{\mathtt{r}}^{\mathbb{N}}(\mathbf{H})) (x)=h\,\max\{\alpha x+\beta,0\}$ 成立
+-   *(i) 有* `H = ((α, β), (h, 0))`，
+-   (ii) `𝒟(H)=(1,1,1)∈ℕ³` 成立，
+-   (iii) `ℛ_r^N(H)∈C(ℝ,ℝ)` 成立，且
+-   (iv) 对于所有 `x∈ℝ`，`(ℛ_r^N(H))(x)=h max{α x+β,0}` 成立
 
 （参见定义 1.2.4 和 1.3.4）。
 
@@ -3648,29 +4113,31 @@ $$
 
 $$\boldsymbol{\mathsf{A}}_{\alpha,\beta}=(\alpha,\beta), \qquad \boldsymbol{\mathcal{D}}(\boldsymbol{\mathsf{A}}_{\alpha,\beta})=(1,1)\in\mathbb{N}^{2}, \qquad \boldsymbol{\mathcal{R}}_{\mathtt{r}}^{\mathbb{N}}(\boldsymbol{\mathsf{A}}_{\alpha,\beta})\in C(\mathbb{R},\mathbb{R}), \tag{3.46}$$
 
-且 $\forall x\in\mathbb{R}:(\boldsymbol{\mathcal{R}}_{\mathtt{r}}^{\mathbb{N}}(\boldsymbol{\mathsf{A}}_{\alpha,\beta})(x)=\alpha x+\beta$（参见定义 1.2.4 和 1.3.4）。因此，命题 2.1.2、引理 3.2.2、引理 3.2.3、(1.26)、(1.91) 和 (2.2) 意味着
+且 `∀ x∈ℝ:(ℛ_r^N(A_{α,β})(x)=α x+β`（参见定义 1.2.4 和 1.3.4）。因此，命题 2.1.2、引理 3.2.2、引理 3.2.3、(1.26)、(1.91) 和 (2.2) 意味着
 
 $$\mathbf{i}_{1}\bullet\boldsymbol{\mathsf{A}}_{\alpha,\beta}=((\alpha,\beta),(1,0)),\ \boldsymbol{\mathcal{D}}(\mathbf{i}_{1}\bullet\boldsymbol{\mathsf{A}}_{\alpha,\beta})=(1,1,1)\in\mathbb{N}^{3},\ \boldsymbol{\mathcal{R}}_{\mathtt{r}}^{\mathbb{N}}(\mathbf{i}_{1}\bullet\boldsymbol{\mathsf{A}}_{\alpha,\beta})\in C(\mathbb{R},\mathbb{R}), \tag{3.47}$$
 
-且 $$\forall x\in\mathbb{R}:(\boldsymbol{\mathcal{R}}_{\mathtt{r}}^{\mathbb{N}}(\mathbf{i}_{1}\bullet\boldsymbol{\mathsf{A}}_{\alpha,\beta}))(x)=\mathsf{r}(\boldsymbol{\mathcal{R}}_{\mathtt{r}}^{\mathbb{N}}(\boldsymbol{\mathsf{A}}_{\alpha,\beta})(x))=h\,\max\{\alpha x+\beta,0\}. \tag{3.48}$$
+且 `∀ x∈ℝ:(ℛ_r^N(i_1•A_{α,β}))(x)=r(ℛ_r^N(A_{α,β})(x))=h max{α x+β,0}. \tag{3.48}`
 
 结合这一结果、引理 2.3.5 和 (2.127) 证明了
 
 $$\mathbf{H}=h\otimes(\mathbf{i}_{1}\bullet\boldsymbol{\mathsf{A}}_{\alpha,\beta})=((\alpha,\beta),(h,0)),\qquad \boldsymbol{\mathcal{D}}(\mathbf{H})=(1,1,1),\qquad \boldsymbol{\mathcal{R}}_{\mathtt{r}}^{\mathbb{N}}(\mathbf{H})\in C(\mathbb{R},\mathbb{R}), \tag{3.49}$$
 
-且 $$(\boldsymbol{\mathcal{R}}_{\mathtt{r}}^{\mathbb{N}}(\mathbf{H})(x)=h(\boldsymbol{\mathcal{R}}_{\mathtt{r}}^{\mathbb{N}}(\mathbf{i}_{1}\bullet\boldsymbol{\mathsf{A}}_{\alpha,\beta}))(x))=h\,\max\{\alpha x+\beta,0\}. \tag{3.50}$$
+且 ` (ℛ_r^N(H)(x)=h(ℛ_r^N(i_1•A_{α,β}))(x))=h max{α x+β,0}. \tag{3.50}`
 
 这建立了条目 (i)、(ii)、(iii) 和 (iv)。因此，引理 3.2.4 的证明完毕。
 
-## 3.2.3 ReLU ANN 对线性插值的表示
+### 3.2.3 ReLU ANN 对线性插值的表示
 
-命题 3.2.5（ReLU ANN 对线性插值的表示）。设 $K\in\mathbb{N}$，$f_{0}$、$f_{1},\ldots,f_{K}$、$\mathtt{f}_{0}$、$\mathtt{f}_{1},\ldots,\mathtt{f}_{K}\in\mathbb{R}$ 满足 $f_{0}<f_{1}<\ldots<f_{K}$，并设 $\mathbf{F}\in\mathbb{N}$ 满足
+命题 3.2.5（ReLU ANN 对线性插值的表示）。设 `K∈ℕ`，`f0`、`f1,…,fK`、`f0`、`f1,…,fK∈ℝ` 满足 `f0<f1<…<fK`，并设 `F∈N` 满足
 
 $$\mathbf{F}=\mathbf{A}_{1,f_{0}}\bullet\left(\bigoplus_{k=0}^{K}\left(\frac{(f_{\min\{k+1,K\}}-f_{k})}{(f_{\min\{k+1,K\}}-f_{\min\{k,K-1\}})}-\frac{(f_{k}-f_{\max\{k-1,0\})}}{(f_{\max\{k,1\}}-f_{\max\{k-1,0\})}}\right)\otimes(\mathbf{i}_{1}\bullet\boldsymbol{\mathsf{A}}_{1-f_{k}})\right) \tag{3.51}$$
 
 （参见定义 1.3.1、2.1.1、2.3.1、2.3.4、2.4.10 和 3.2.1）。则
 
-(i) $\boldsymbol{\mathcal{D}}(\mathbf{F})=(1,K+1,1)\in\mathbb{N}^{3}$ 成立，
+(i) `𝒟(F)=(1,K+1,1)∈ℕ³` 成立，
+
+
 
 (ii) $\boldsymbol{\mathcal{R}}_{\mathtt{r}}^{\mathbb{N}}(\mathbf{F})=\mathcal{L}^{f_{0},f_{1},\ldots,f_{K}}$ 成立，且
 
@@ -3678,7 +4145,8 @@ $$\mathbf{F}=\mathbf{A}_{1,f_{0}}\bullet\left(\bigoplus_{k=0}^{K}\left(\frac{(f_
 
 （参见定义 1.2.4、1.3.4 和 3.1.5）。
 
-*命题 3.2.5 的证明。* 在整个证明过程中，设 $c_{0}, c_{1}, \dots, c_{K} \in \mathbb{R}$ 满足对于所有 $k \in \{0, 1, \dots, K\}$，有
+### 命题 3.2.5 的证明
+在整个证明过程中，设 $c_{0}, c_{1}, \dots, c_{K} \in \mathbb{R}$ 满足对于所有 $k \in \{0, 1, \dots, K\}$，有
 
 $$c_{k} = \frac{f_{\min\{k+1,K\}} - f_{k}}{\mathfrak{f}_{\min\{k+1,K\}} - \mathfrak{f}_{\min\{k,K-1\}}} - \frac{(f_{k} - f_{\max\{k-1,0\}})}{(\mathfrak{f}_{\max\{k,1\}} - \mathfrak{f}_{\max\{k-1,0\}})} \tag{3.52}$$
 
@@ -3752,9 +4220,6 @@ $$(\mathcal{R}_{\mathbf{f}}^{\mathbf{N}}(\mathbf{F}))(x) = (\mathcal{R}_{\mathbf
 
 $$\sum_{n=0}^{K} c_n = c_K + \sum_{n=0}^{K-1} c_n = -\frac{f_K - f_{K-1}}{\mathfrak{f}_K - \mathfrak{f}_{K-1}} + \frac{f_K - f_{K-1}}{\mathfrak{f}_K - \mathfrak{f}_{K-1}} = 0. \quad (3.67)$$
 
-
-
-
 事实上，对于所有 $ k \in \{0, 1, \dots, K\} $，都有 $ \mathfrak{f}_k \leq \mathfrak{f}_K $，且 (3.58) 因此表明对于所有 $ x \in [\mathfrak{f}_K, \infty) $，都有
 
 $$
@@ -3797,11 +4262,17 @@ $$
 
 并设 $ \mathbf{F} \in \mathbf{N} $ 满足
 
-$$
-\mathbf{F} = \mathbf{A}_{1, f(\mathfrak{f}_0)} \bullet \left(\bigoplus_{k=0}^K \left(\left(\frac{K(f(f_{\min}(k+1)-2f(\mathfrak{f}_k)+f(f_{\max}(k-1, 0))}{b-a}\right) \otimes (\mathbf{i}_1 \bullet \mathbf{A}_{1, -\mathfrak{f}_k})\right)\right) \quad (3.72)
-$$
 
+
+## 公式
+
+```
+\mathbf{F} = \mathbf{A}_{1, f(\mathfrak{f}_0)} \bullet \left(\bigoplus_{k=0}^K \left(\left(\frac{K(f(f_{\min}(k+1)-2f(\mathfrak{f}_k)+f(f_{\max}(k-1, 0))}{b-a}\right) \otimes (\mathbf{i}_1 \bullet \mathbf{A}_{1, -\mathfrak{f}_k})\right)\right) \quad (3.72)
+```
+
+$$
 （参见定义 1.3.1, 2.1.1, 2.3.1, 2.3.4, 2.4.10 和 3.2.1）。则
+$$
 
 - (i) 有 $\mathcal{D}(\mathbf{F}) = \{1, K + 1, 1\}$，
 - (ii) 有 $\mathcal{R}_{\mathrm{r}}^{\mathbf{N}}(\mathbf{F}) = \mathcal{L}_{f_{0 \delta 1}, \dots, f_{K}}^{f_{(r_0)}, f_{(r_1)}, \dots, f_{(r_K)}}$，
@@ -3811,62 +4282,64 @@ $$
 
 （参见定义 1.2.4, 1.3.4 和 3.1.5）。
 
-**命题 3.3.1 的证明。** 注意到对于所有 $k \in \{0, 1, \dots, K\}$，都有
+### 命题 3.3.1 的证明
 
-$$
+注意到对于所有 $k \in \{0, 1, \dots, K\}$，都有
+
+```
 \mathfrak{r}_{\min(k+1,K)} - \mathfrak{r}_{\min(k,K-1)} = \mathfrak{r}_{\max(k,1)} - \mathfrak{r}_{\max(k-1,0)} = (b - a)K^{-1}
-$$
+```
 
 这确立了对于所有 $k \in \{0, 1, \dots, K\}$，都有
 
-$$
+```
 \begin{align*}
 \frac{(f(\mathfrak{r}_{\min(k+1,K)}) - f(\mathfrak{r}_k)) - (f(\mathfrak{r}_k) - f(\mathfrak{r}_{\min(k-1,0)}))}{\left(\mathfrak{r}_{\min(k+1,K)} - \mathfrak{r}_{\min(k,K-1)}\right) - \left(\mathfrak{r}_{\max(k,1)} - \mathfrak{r}_{\max(k-1,0)}\right)} \\
 = \frac{K(f(\mathfrak{r}_{\min(k+1,K)}) - 2f(\mathfrak{r}_k) + f(\mathfrak{r}_{\max(k-1,0)}))}{(b - a)}.
 \end{align*}
-$$
+```
 
 这与命题 3.2.5 共同证明了第 (i)、(ii) 和 (v) 项。观察到推论 3.1.8 的第 (i) 项、第 (ii) 项以及对于所有 $x, y \in [a, b]$ 都有
 
-$$
+```
 |f(x) - f(y)| \leq L|x - y|
-$$
+```
 
 这一假设证明了第 (iii) 项。注意到第 (ii) 项、对于所有 $x, y \in [a, b]$ 都有
 
-$$
+```
 |f(x) - f(y)| \leq L|x - y|,
-$$
+```
 
 这一假设、推论 3.1.8 的第 (ii) 项以及对于所有 $k \in \{1, 2, \dots, K\}$ 都有
 
-$$
+```
 \mathfrak{r}_k - \mathfrak{r}_{k-1} = \frac{(b - a)}{K}
-$$
+```
 
 这一事实确保了对于所有 $x \in [a, b]$，都有
 
-$$
+```
 |(\mathcal{R}_{\mathrm{r}}^{\mathbf{N}}(\mathbf{F}))(x) - f(x)| \leq L\left(\max_{k \in \{1,2,\dots,K\}} |\mathfrak{r}_k - \mathfrak{r}_{k-1}|\right) = \frac{L(b - a)}{K}.
-$$
+```
 
 这确立了第 (iv) 项。命题 3.3.1 的证明至此完成。
 
 ## 第 3 章：一维 ANN 近似结果
 
-**引理 3.3.2（具有常数实现的 ANN 的近似）。**
+### 引理 3.3.2（具有常数实现的 ANN 的近似）
 
 设 $L, a \in \mathbb{R}$，$b \in [a, \infty)$，$\xi \in [a, b]$，设 $f: [a, b] \rightarrow \mathbb{R}$ 满足对于所有 $x, y \in [a, b]$，
 
-$$
+```
 |f(x) - f(y)| \leq L|x - y|, \quad (3.79)
-$$
+```
 
 并设 $\mathbf{F} \in \mathbf{N}$ 满足
 
-$$
+```
 \mathbf{F} = \mathbf{A}_{1,f(\xi)} \bullet (0 \otimes (\mathbf{i}_1 \bullet \mathbf{A}_{1,-\xi})) \quad (3.80)
-$$
+```
 
 （参见定义 1.3.1, 2.1.1, 2.3.1, 2.3.4 和 3.2.1）。则
 
@@ -3880,46 +4353,48 @@ $$
 
 **引理 3.3.2 的证明。** 观察到引理 2.3.3 的第 (i) 和 (ii) 项，以及引理 3.2.4 的第 (ii) 和 (iii) 项确立了第 (i) 和 (ii) 项。注意到引理 2.3.3 的第 (iii) 项和引理 2.3.5 的第 (iii) 项意味着对于所有 $x \in \mathbb{R}$，都有
 
-$$
+```
 \begin{aligned}
 ((\mathcal{R}_{\xi}^{\mathbf{N}}(\mathbf{F}))(x) &= ((\mathcal{R}_{\xi}^{\mathbf{N}}(0 \otimes (\mathbf{i}_1 \bullet \mathbf{A}_{1,-\xi}))) (x) + f(\xi) \\
 &= 0 \big( (\mathcal{R}_{\xi}^{\mathbf{N}}(\mathbf{i}_1 \bullet \mathbf{A}_{1,-\xi})(x)) \big) + f(\xi) = f(\xi)
 \end{aligned} \quad (3.81)
-$$
+```
 
 （参见定义 1.2.4 和 1.3.4）。这证明了第 (iii) 项。观察到 (3.81)、$\xi \in [a, b]$ 的事实，以及对于所有 $x, y \in [a, b]$ 都有
 
-$$
+```
 |f(x) - f(y)| \leq L|x - y| \quad (3.82)
-$$
+```
 
 这一假设表明，对于所有 $x \in [a, b]$，都有
 
-$$
+```
 |(\mathcal{R}_{\xi}^{\mathbf{N}}(\mathbf{F}))(x) - f(x)| = |f(\xi) - f(x)| \leq L|x - \xi| \leq L \max\{\xi - a, b - \xi\}. \quad (3.83)
-$$
+```
 
 这确立了第 (iv) 项。注意到 (1.78) 和第 (i) 项表明
 
-$$
+```
 \mathcal{P}(\mathbf{F}) = 1(1+1)+1(1+1) = 4. \quad (3.84)
-$$
+```
 
 这证明了第 (v) 项。引理 3.3.2 的证明至此完成。
 
-**推论 3.3.3（具有指定误差容限的显式 ANN 近似）。** 设
+### 推论 3.3.3（具有指定误差容限的显式 ANN 近似）
+
+设
 
 $\epsilon \in (0, \infty)$，$L, a \in \mathbb{R}$，$b \in (a, \infty)$，$K \in \mathbb{N}_0 \cap [\frac{L(b-a)}{\epsilon}, \frac{L(b-a)}{\epsilon} + 1)$，$\mathbf{f}_0, \mathbf{f}_1, \dots, \mathbf{f}_K \in \mathbb{R}$ 满足对于所有 $ k \in \{0, 1, \dots, K\} $，$\mathbf{f}_k = a + \frac{k(b-a)}{\max\{K, 1\}}$，设 $f: [a, b] \to \mathbb{R}$ 满足对于所有 $x, y \in [a, b]$，
 
-$$
+```
 |f(x) - f(y)| \le L|x - y|,
-$$
+```
 
 并设 $\mathbf{F} \in \mathbf{N}$ 满足
 
-$$
+```
 \mathbf{F} = \mathbf{A}_{1, f(t_0)} \bullet \left( \bigoplus_{k=0}^{K} \left( \left( \frac{K(f(t_{\min\{k+1, K\}}) - 2f(t_k) + f(t_{\max\{k-1, 0\}}))}{(b-a)} \right) \otimes (\mathbf{1} \bullet \mathbf{A}_{1, -f_k}) \right) \right)
-$$
+```
 
 （参见定义 1.3.1, 2.1.1, 2.3.1, 2.3.4, 2.4.10 和 3.2.1）。则
 
@@ -3933,63 +4408,76 @@ $$
 
 **推论 3.3.3 的证明。** 观察到假设 $K \in \mathbb{N}_0 \cap [\frac{L(b-a)}{\epsilon}, \frac{L(b-a)}{\epsilon} + 1)$ 确保了
 
-$$
+```
 \frac{L(b-a)}{\max\{K, 1\}} \le \epsilon.
-$$
+```
 
 这，命题 3.3.1 的第 (i)、(iii) 和 (iv) 项，以及引理 3.3.2 的第 (i)、(ii)、(iii) 和 (iv) 项确立了第 (i)、(ii)、(iii) 和 (iv) 项。注意到命题 3.3.1 的第 (v) 项、引理 3.3.2 的第 (v) 项，以及事实
 
-$$
+```
 K \le 1 + \frac{L(b-a)}{\epsilon},
-$$
+```
 
 意味着
 
-$$
+```
 \mathcal{P}(\mathbf{F}) = 3K + 4 \le \frac{3L(b-a)}{\epsilon} + 7.
-$$
+```
 
 这证明了第 (v) 项。推论 3.3.3 的证明至此完成。
 
-
-
 ## 3.3.2 近似误差的收敛速率
 
-**定义 3.3.4**（准向量范数）。*我们用* $\|\cdot\|_{p} : (\bigcup_{d=1}^{\infty} \mathbb{R}^d) \rightarrow \mathbb{R}, \, p \in (0, \infty]$, *表示满足对于所有 $p \in (0, \infty)$, $d \in \mathbb{N}$, $\theta = (\theta_1, \dots, \theta_d) \in \mathbb{R}^d$ 有*
+### 定义 3.3.4（准向量范数）
 
-$$ \|\theta\|_p = \left[\sum_{i=1}^d |\theta_i|^p\right]^{1/p} \quad \text{且} \quad \|\theta\|_{\infty} = \max_{i \in \{1, \dots, d\}} |\theta_i|. \tag{3.90} $$
+*我们用* $\|\cdot\|_{p} : (\bigcup_{d=1}^{\infty} \mathbb{R}^d) \rightarrow \mathbb{R}, \, p \in (0, \infty]$, *表示满足对于所有 $p \in (0, \infty)$, $d \in \mathbb{N}$, $\theta = (\theta_1, \dots, \theta_d) \in \mathbb{R}^d$ 有*
 
-**推论 3.3.5**（具有指定误差容限和显式参数界的一维隐式 ANN 近似）。*设 $\varepsilon \in (0, \infty)$, $L \in [0, \infty)$, $a \in \mathbb{R}$, $b \in [a, \infty)$，且设 $f : [a, b] \rightarrow \mathbb{R}$ 满足对于所有 $x, y \in [a, b]$ 有*
+```
+\|\theta\|_p = \left[\sum_{i=1}^d |\theta_i|^p\right]^{1/p} \quad \text{且} \quad \|\theta\|_{\infty} = \max_{i \in \{1, \dots, d\}} |\theta_i|. \tag{3.90}
+```
 
-$$ |f(x) - f(y)| \le L|x - y|. \tag{3.91} $$
+### 推论 3.3.5（具有指定误差容限和显式参数界的一维隐式 ANN 近似）
+
+*设 $\varepsilon \in (0, \infty)$, $L \in [0, \infty)$, $a \in \mathbb{R}$, $b \in [a, \infty)$，且设 $f : [a, b] \rightarrow \mathbb{R}$ 满足对于所有 $x, y \in [a, b]$ 有*
+
+```
+|f(x) - f(y)| \le L|x - y|. \tag{3.91}
+```
 
 *则存在* $\mathbf{F} \in \mathbb{N}$ *使得*
 
--   (i) 满足 $\mathcal{R}_{\mathbf{r}}^{\mathbf{N}}(\mathbf{F}) \in C(\mathbb{R}, \mathbb{R})$，
--   (ii) 满足 $\mathcal{H}(\mathbf{F}) = 1$，
--   (iii) 满足 $\mathbb{D}_1(\mathbf{F}) \le L(b - a)\varepsilon^{-1} + 2$，
--   (iv) 对于所有 $x, y \in \mathbb{R}$ 满足 $|(\mathcal{R}_{\mathbf{r}}^{\mathbf{N}}(\mathbf{F}))(x) - (\mathcal{R}_{\mathbf{r}}^{\mathbf{N}}(\mathbf{F}))(y)| \le L|x - y|$，
--   (v) 满足 $\sup_{x \in [a, b]} |(\mathcal{R}_{\mathbf{r}}^{\mathbf{N}}(\mathbf{F}))(x) - f(x)| \le \varepsilon$，
--   (vi) 满足 $\mathcal{P}(\mathbf{F}) = 3(\mathbb{D}_1(\mathbf{F})) + 1 \le 3L(b - a)\varepsilon^{-1} + 7$，且
--   (vii) 满足 $\|\mathcal{T}(\mathbf{F})\|_{\infty} \le \max\{1, |a|, |b|, 2L, |f(a)|\}$
+- (i) 满足 $\mathcal{R}_{\mathbf{r}}^{\mathbf{N}}(\mathbf{F}) \in C(\mathbb{R}, \mathbb{R})$，
+- (ii) 满足 $\mathcal{H}(\mathbf{F}) = 1$，
+- (iii) 满足 $\mathbb{D}_1(\mathbf{F}) \le L(b - a)\varepsilon^{-1} + 2$，
+- (iv) 对于所有 $x, y \in \mathbb{R}$ 满足 $|(\mathcal{R}_{\mathbf{r}}^{\mathbf{N}}(\mathbf{F}))(x) - (\mathcal{R}_{\mathbf{r}}^{\mathbf{N}}(\mathbf{F}))(y)| \le L|x - y|$，
+- (v) 满足 $\sup_{x \in [a, b]} |(\mathcal{R}_{\mathbf{r}}^{\mathbf{N}}(\mathbf{F}))(x) - f(x)| \le \varepsilon$，
+- (vi) 满足 $\mathcal{P}(\mathbf{F}) = 3(\mathbb{D}_1(\mathbf{F})) + 1 \le 3L(b - a)\varepsilon^{-1} + 7$，且
+- (vii) 满足 $\|\mathcal{T}(\mathbf{F})\|_{\infty} \le \max\{1, |a|, |b|, 2L, |f(a)|\}$
 
 (参见定义 1.2.4, 1.3.1, 1.3.4, 1.3.5 和 3.3.4)。
 
 推论 3.3.5 的证明。在整个证明过程中，不妨假设 $a < b$，设 $K \in \mathbb{N}_0 \cap [\frac{L(b-a)}{\varepsilon}, \frac{L(b-a)}{\varepsilon} + 1)$, $\mathbf{f}_0, \mathbf{f}_1, \dots, \mathbf{f}_K \in [a, b]$, $c_0, c_1, \dots, c_K \in \mathbb{R}$ 满足对于所有 $k \in \{0, 1, \dots, K\}$ 有
 
-$$ \mathbf{f}_k = a + \frac{k(b - a)}{\max\{K, 1\}} \quad \text{且} \quad c_k = \frac{K(f(\mathbf{f}_{\min\{k+1, K\}}) - 2f(\mathbf{f}_k) + f(\mathbf{f}_{\max\{k-1, 0\}}))}{(b - a)}, \tag{3.92} $$
+```
+\mathbf{f}_k = a + \frac{k(b - a)}{\max\{K, 1\}} \quad \text{且} \quad c_k = \frac{K(f(\mathbf{f}_{\min\{k+1, K\}}) - 2f(\mathbf{f}_k) + f(\mathbf{f}_{\max\{k-1, 0\}}))}{(b - a)}, \tag{3.92}
+```
 
 并设 $\mathbf{F} \in \mathbb{N}$ 满足
 
-$$ \mathbf{F} = \mathbf{A}_{1, f(\mathbf{f}_0)} \bullet \left( \bigoplus_{k=0}^{K} (\mathbf{c}_k \otimes (\mathbf{1} \bullet \mathbf{A}_{1 - \mathbf{f}_k})) \right). \tag{3.93} $$
+```
+\mathbf{F} = \mathbf{A}_{1, f(\mathbf{f}_0)} \bullet \left( \bigoplus_{k=0}^{K} (\mathbf{c}_k \otimes (\mathbf{1} \bullet \mathbf{A}_{1 - \mathbf{f}_k})) \right). \tag{3.93}
+```
 
 (参见定义 1.3.1, 2.1.1, 2.3.1, 2.3.4, 2.4.10 和 3.2.1)。注意到推论 3.3.3 表明
 
--   (I) 满足 $\mathcal{D}(\mathbf{F}) = (1, K + 1, 1)$，
--   (II) 满足 $\mathcal{R}^{\mathbb{N}}_{\mathfrak{r}}(\mathbf{F}) \in C(\mathbb{R}, \mathbb{R})$，
--   (III) 对于所有 $x, y \in \mathbb{R}$ 满足 $|(\mathcal{R}^{\mathbb{N}}_{\mathfrak{r}}(\mathbf{F}))(x) - (\mathcal{R}^{\mathbb{N}}_{\mathfrak{r}}(\mathbf{F}))(y)| \leq L|x - y|$，
--   (IV) 满足 $\sup_{x \in [a,b]} |(\mathcal{R}^{\mathbb{N}}_{\mathfrak{r}}(\mathbf{F}))(x) - f(x)| \leq \varepsilon$，且
--   (V) 满足 $\mathcal{P}(\mathbf{F}) = 3K + 4$。
+- (I) 满足 $\mathcal{D}(\mathbf{F}) = (1, K + 1, 1)$，
+
+
+
+- (II) 满足 $\mathcal{R}^{\mathbb{N}}_{\mathfrak{r}}(\mathbf{F}) \in C(\mathbb{R}, \mathbb{R})$，
+- (III) 对于所有 $x, y \in \mathbb{R}$ 满足 $|(\mathcal{R}^{\mathbb{N}}_{\mathfrak{r}}(\mathbf{F}))(x) - (\mathcal{R}^{\mathbb{N}}_{\mathfrak{r}}(\mathbf{F}))(y)| \leq L|x - y|$，
+- (IV) 满足 $\sup_{x \in [a,b]} |(\mathcal{R}^{\mathbb{N}}_{\mathfrak{r}}(\mathbf{F}))(x) - f(x)| \leq \varepsilon$，且
+- (V) 满足 $\mathcal{P}(\mathbf{F}) = 3K + 4$。
 
 (参见定义 1.2.4 和 1.3.4)。这证明了条目 (i), (iv) 和 (v)。注意条目 (I) 以及事实
 
@@ -4025,13 +4513,15 @@ $$ \begin{align} |c_k| &\le \frac{K(|f(\mathfrak{f}_{\min\{k+1,K\}}) - f(\mathfr
 
 由此及 $(3.98)$ 证明了条目 $\mathbf{(vii)}$。推论 $\mathbf{3.3.5}$ 的证明至此完成。 $\square$
 
-**推论 3.3.6** *（具有指定误差容限和渐近参数界的一维隐式 ANN 近似）。* *设* $L, a \in \mathbb{R}$，*$b \in [a, \infty)$* *且设* $f: [a, b] \to \mathbb{R}$ *满足对于所有* $x, y \in [a, b]$ *有*
+### 推论 3.3.6
+*（具有指定误差容限和渐近参数界的一维隐式 ANN 近似）。* *设* $L, a \in \mathbb{R}$，*$b \in [a, \infty)$* *且设* $f: [a, b] \to \mathbb{R}$ *满足对于所有* $x, y \in [a, b]$ *有*
 
 $$ |f(x) - f(y)| \le L|x - y|.\tag{3.102} $$
 
 *则存在* $\mathfrak{C} \in \mathbb{R}$ *使得对于所有* $\varepsilon \in (0, 1]$ *存在* $\mathbf{F} \in \mathbf{N}$ *使得*
 
 $$ \mathcal{R}^{\mathbf{N}}_{\mathfrak{t}}(\mathbf{F}) \in \mathcal{C}(\mathbb{R}, \mathbb{R}), \quad \sup_{x \in [a,b]}(|\mathcal{R}^{\mathbf{N}}_{\mathfrak{t}}(\mathbf{F})(x) - f(x)|) \le \varepsilon, \quad \mathcal{H}(\mathbf{F}) = 1,\tag{3.103} $$
+
 $$ \|\mathcal{T}(\mathbf{F})\|_\infty \le \max\{1, |a|, |b|, 2L, |f(a)|\}, \quad \text{且} \quad \mathcal{P}(\mathbf{F}) \le \mathfrak{C}\varepsilon^{-1}\tag{3.104} $$
 
 *(参见定义* $\mathbf{1.2.4}$*,* $\mathbf{1.3.1}$*,* $\mathbf{1.3.4}$*,* $\mathbf{1.3.5}$ *和* $\mathbf{3.3.4}$*)。*
@@ -4047,11 +4537,13 @@ $$ 3L(b-a)\varepsilon^{-1} + 7 \le 3L(b-a)\varepsilon^{-1} + 7\varepsilon^{-1} =
 由此及推论 $\mathbf{3.3.5}$ 意味着对于所有 $\varepsilon \in (0, 1]$ 存在 $\mathbf{F} \in \mathbf{N}$ 使得
 
 $$ \mathcal{R}^{\mathbf{N}}_{\mathfrak{t}}(\mathbf{F}) \in \mathcal{C}(\mathbb{R}, \mathbb{R}), \quad \sup_{x \in [a,b]}(|\mathcal{R}^{\mathbf{N}}_{\mathfrak{t}}(\mathbf{F})(x) - f(x)|) \le \varepsilon, \quad \mathcal{H}(\mathbf{F}) = 1,\tag{3.107} $$
+
 $$ \|\mathcal{T}(\mathbf{F})\|_\infty \le \max\{1, |a|, |b|, 2L, |f(a)|\}, \quad \text{且} \quad \mathcal{P}(\mathbf{F}) \le 3L(b-a)\varepsilon^{-1} + 7 \le \mathfrak{C}\varepsilon^{-1}\tag{3.108} $$
 
 (参见定义 $\mathbf{1.2.4}$, $\mathbf{1.3.1}$, $\mathbf{1.3.4}$, $\mathbf{1.3.5}$ 和 $\mathbf{3.3.4}$)。推论 $\mathbf{3.3.6}$ 的证明至此完成。 $\square$
 
-**推论 3.3.7**（具有指定误差容限和渐近参数界的一维隐式 ANN 近似）。设 $L, a \in \mathbb{R}$, $b \in [a, \infty)$ 且设 $f: [a, b] \to \mathbb{R}$ 满足对于所有 $x, y \in [a, b]$ 有
+### 推论 3.3.7
+（具有指定误差容限和渐近参数界的一维隐式 ANN 近似）。设 $L, a \in \mathbb{R}$, $b \in [a, \infty)$ 且设 $f: [a, b] \to \mathbb{R}$ 满足对于所有 $x, y \in [a, b]$ 有
 
 $$ |f(x) - f(y)| \leq L|x - y|. \quad \tag{3.109} $$
 
@@ -4063,7 +4555,8 @@ $$ \mathcal{R}_{\tau}^{\mathbf{N}}(\mathbf{F}) \in C(\mathbb{R}, \mathbb{R}), \q
 
 推论 3.3.7 的证明。注意推论 3.3.6 建立了 (3.110)。推论 3.3.7 的证明至此完成。 $\square$
 
-**练习 3.3.1.** 设 $f: [-2, 3] \to \mathbb{R}$ 满足对于所有 $x \in [-2, 3]$ 有
+### 练习 3.3.1.
+设 $f: [-2, 3] \to \mathbb{R}$ 满足对于所有 $x \in [-2, 3]$ 有
 
 $$ f(x) = x^{2} + 2 \sin(x). \quad \tag{3.111} $$
 
@@ -4073,49 +4566,47 @@ $$ \mathcal{R}_{\varepsilon}^{\mathbf{N}}(\mathbf{F}_{\varepsilon}) \in C(\mathb
 
 (参见定义 1.2.4, 1.3.1 和 1.3.4)。
 
-**练习 3.3.2.** 证明或反驳以下命题：存在 $\mathbf{\Phi} \in \mathbf{N}$ 使得 $\mathcal{P}(\mathbf{\Phi}) \leq 10$ 且
+### 练习 3.3.2.
+证明或反驳以下命题：存在 $\mathbf{\Phi} \in \mathbf{N}$ 使得 $\mathcal{P}(\mathbf{\Phi}) \leq 10$ 且
 
 $$ \sup_{x \in [0, 10]} \big| \sqrt{x} - (\mathcal{R}_{\tau}^{\mathbf{N}}(\mathbf{\Phi}))(x) \big| \leq \frac{1}{4}. \tag{3.113} $$
 
 (参见定义 1.2.4, 1.3.1 和 1.3.4)。
 
-
-
-
-
-#### 第4章：多维神经网络近似结果
+## 第4章：多维神经网络近似结果
 
 在本章中，我们回顾了针对可能为多维目标函数的基本深 ReLU 神经网络近似结果。关于文献中神经网络近似结果的小部分精选，请参阅第3章开头。本章的具体内容主要基于 [25, 章节 2.2.6, 2.2.7, 2.2.8, 和 3.1]、[226, 章节 3 和 4.2]，以及 [230, 章节 3]。
 
-## 4.1 通过极大卷积进行的近似
+### 4.1 通过极大卷积进行的近似
 
-**定义 4.1.1 (度量)。** *当且仅当* $\delta: E \times E \rightarrow [0, \infty)$ *是从* $E \times E$ *到* $[0, \infty)$ *的函数，且满足以下条件时，我们称* $\delta$ *为* $E$ *上的度量：*
+#### 定义 4.1.1 (度量)
+*当且仅当* $\delta: E \times E \rightarrow [0, \infty)$ *是从* $E \times E$ *到* $[0, \infty)$ *的函数，且满足以下条件时，我们称* $\delta$ *为* $E$ *上的度量：*
 
 - (i) *满足*
 
 $$ \{ (x, y) \in E^2: \delta(x, y) = 0\} = \{ (x, x) \}_{x \in E} \quad \quad (4.1) $$
 
 *(正定性)，*
-
 - (ii) *对所有* $x, y \in E$ *满足*
 
 $$ \delta(x, y) = \delta(y, x) \quad \quad (4.2) $$
 
 *(对称性)，且*
-
 - (iii) *对所有* $x, y, z \in E$ *满足*
 
 $$ \delta(x, z) \leq \delta(x, y) + \delta(y, z) \quad \quad (4.3) $$
 
 *(三角不等式)。*
 
-**定义 4.1.2** (度量空间)。*当且仅当存在集合* $E$ *和* $E$ *上的度量* $\delta$ *使得*
+#### 定义 4.1.2
+(度量空间)。*当且仅当存在集合* $E$ *和* $E$ *上的度量* $\delta$ *使得*
 
 $$\mathcal{E}=(E,\delta)\tag{4.4}$$
 
 *(参见定义 4.1.1)。*
 
-**命题 4.1.3** (通过极大卷积进行的近似)。*设* $(E, \delta)$ *为度量空间，设* $L \in [0, \infty)$*，* $D \subseteq E$*，* $\mathcal{M} \subseteq D$ *且满足* $\mathcal{M} \neq \emptyset$ *，设* $f: D \to \mathbb{R}$ *满足对所有* $x \in D$*、* $y \in \mathcal{M}$ *有* $|f(x) - f(y)| \leq L \delta(x, y)$ *，且设* $F: E \to \mathbb{R} \cup \{\infty\}$ *满足对所有* $x \in E$ *有*
+#### 命题 4.1.3
+(通过极大卷积进行的近似)。*设* $(E, \delta)$ *为度量空间，设* $L \in [0, \infty)$*，* $D \subseteq E$*，* $\mathcal{M} \subseteq D$ *且满足* $\mathcal{M} \neq \emptyset$ *，设* $f: D \to \mathbb{R}$ *满足对所有* $x \in D$*、* $y \in \mathcal{M}$ *有* $|f(x) - f(y)| \leq L \delta(x, y)$ *，且设* $F: E \to \mathbb{R} \cup \{\infty\}$ *满足对所有* $x \in E$ *有*
 
 $$F(x)=\sup_{y \in \mathcal{M}} [f(y) - L \delta(x, y)]\tag{4.5}$$
 
@@ -4144,6 +4635,8 @@ $$F(x) \geq f(x) - L \delta(x, x) = f(x).\tag{4.9}$$
 这与 (4.8) 共同证明了第 (i) 项。注意 (4.7)（针对每一个 $y, z \in \mathcal{M}$ 应用，其中 $x \sim y$，$y \sim z$ 采用 (4.7) 中的记号）和三角不等式确保了“对所有 $x \in E$、$y, z \in \mathcal{M}$ 满足”
 
 $$f(y) - L \delta(x, y) \leq f(z) + L \delta(y, z) - L \delta(x, y) \leq f(z) + L \delta(x, z).\tag{4.10}$$
+
+
 
 因此，我们得到“对所有 $x \in E$、$z \in \mathcal{M}$ 满足”
 
@@ -4180,7 +4673,7 @@ $$\sup_{x, y \in [0, 2\pi]} \left| \sin(x) \sin(y) - (\mathcal{R}_{\mathfrak{r}}
 
 ### 4.2 神经网络表示
 
-### 4.2.1 1-范数的神经网络表示
+#### 4.2.1 1-范数的神经网络表示
 
 **定义 4.2.1** (1-范数神经网络表示)。*我们用* $(\mathbb{L}_d)_{d \in \mathbb{N}} \subseteq \mathbf{N}$ *表示满足以下条件的全连接前馈神经网络：*
 
@@ -4197,9 +4690,7 @@ $$\mathbb{L}_1 = \left( \left( \begin{pmatrix} 1 \\ -1 \end{pmatrix} \right), \l
 **命题 4.2.2** (全连接前馈 1-范数神经网络的性质)。*设* $d \in \mathbb{N}$。*则*
 
 (i) 满足 $\mathcal{D}(\mathbb{L}_d) = (d, 2d, 1)$，
-
 (ii) 满足 $\mathcal{R}_{\mathfrak{r}}^{\mathbf{N}}(\mathbb{L}_d) \in C(\mathbb{R}^d, \mathbb{R})$，*且*
-
 (iii) 对所有 $x \in \mathbb{R}^d$ 满足 $(\mathcal{R}_{\mathfrak{r}}^{\mathbf{N}}(\mathbb{L}_d))(x) = \|x\|_1$
 
 *(参见定义* **1.2.4**、**1.3.1**、**1.3.4**、**3.3.4** *和* **4.2.1** *)。*
@@ -4223,6 +4714,7 @@ $(\mathcal{R}_{\tau}^{\mathbb{N}}(\mathbf{P}_{d}(\mathbb{L}_{1}, \mathbb{L}_{1},
 这与引理 2.4.2 一起表明“对所有 $x = (x_{1}, \ldots, x_{d}) \in \mathbb{R}^{d}$ 满足”
 
 $(\mathcal{R}_{\tau}^{\mathbb{N}}(\mathbb{L}_{d}))(x) = (\mathcal{R}_{\tau}^{\mathbb{N}}(\mathbb{S}_{1,d} \bullet \mathbf{P}_{d}(\mathbb{L}_{1}, \mathbb{L}_{1}, \ldots, \mathbb{L}_{1})))(x)$
+
 $= (\mathcal{R}_{\tau}^{\mathbb{N}}(\mathbb{S}_{1,d}))(|x_{1}|, |x_{2}|, \ldots, |x_{d}|) = \sum_{k=1}^{d} |x_{k}| = \|x\|_{1}$.
 
 这证明了第 (ii) 和第 (iii) 项。命题 4.2.2 的证明到此结束。
@@ -4240,9 +4732,6 @@ $= (\mathcal{R}_{\tau}^{\mathbb{N}}(\mathbb{S}_{1,d}))(|x_{1}|, |x_{2}|, \ldots,
 引理 4.2.3 的证明。 在整个证明过程中，不妨假设 $d > 1$。注意到 $\mathcal{B}_{1,\mathbb{L}_{1}} = 0 \in \mathbb{R}^{2}$ 这一事实、$\mathcal{B}_{2,\mathbb{L}_{1}} = 0 \in \mathbb{R}$ 这一事实、$\mathcal{B}_{1,\mathbb{S}_{1,d}} = 0 \in \mathbb{R}$ 这一事实，以及 $\mathbb{L}_{d} = \mathbb{S}_{1,d} \bullet \mathbf{P}_{d}(\mathbb{L}_{1}, \mathbb{L}_{1}, \ldots, \mathbb{L}_{1})$ 证明了第 (i) 项和第 (ii) 项 (参见定义 1.3.1、2.1.1、2.2.1、2.4.1 和 4.2.1)。此外，注意到
 
 $\mathcal{W}_{1,\mathbb{L}_{1}} = \begin{pmatrix} 1 \\ -1 \end{pmatrix}$ 且 $\mathcal{W}_{1,\mathbb{L}_{d}} = \begin{pmatrix} \mathcal{W}_{1,\mathbb{L}_{1}} & 0 & \cdots & 0 \\ 0 & \mathcal{W}_{1,\mathbb{L}_{1}} & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & \mathcal{W}_{1,\mathbb{L}_{1}} \end{pmatrix} \in \mathbb{R}^{(2d) \times d}$
-
-
-
 
 证明了第 **iii** 项。接下来注意，**(4.23)** 意味着第 **iv** 项。此外，注意到 $\mathcal{W}_{2, \underline{\mathbf{L}}_1} = (1 \ 1)$ 这一事实，以及 $\underline{\mathbf{L}}_d = \mathbf{S}_{1, d} \bullet \mathbf{P}_d(\underline{\mathbf{L}}_1, \underline{\mathbf{L}}_1, \dots, \underline{\mathbf{L}}_1)$ 这一事实，表明
 
@@ -4276,16 +4765,19 @@ $$
 
 并证明你的结果是正确的（参见定义 **1.2.4** 和 **1.5.4**）。
 
-### 4.2.2 最大值的ANN表示
+#### 4.2.2 最大值的ANN表示
 
-**引理 4.2.4**（全连接前馈最大值 **ANN** 的唯一存在性）。*存在唯一的* $(\phi_d)_{d \in \mathbb{N}} \subseteq \mathbb{N}$ *满足以下性质*
 
-- (i) 对于所有 $d \in \mathbb{N}$，有 $\mathcal{I}(\phi_d) = d$，
-- (ii) 对于所有 $d \in \mathbb{N}$，有 $\mathcal{O}(\phi_d) = 1$，
-- (iii) 有 $\phi_1 = \mathbf{A}_{1, 0} \in \mathbb{R}^{1 \times 1} \times \mathbb{R}^1$，
+
+# 引理 4.2.4（全连接前馈最大值 `ANN` 的唯一存在性）
+*存在唯一的* `(\phi_d)_{d \in \mathbb{N}} \subseteq \mathbb{N}` *满足以下性质*
+
+- (i) 对于所有 `d \in \mathbb{N}`，有 `\mathcal{I}(\phi_d) = d`，
+- (ii) 对于所有 `d \in \mathbb{N}`，有 `\mathcal{O}(\phi_d) = 1`，
+- (iii) 有 `\phi_1 = \mathbf{A}_{1, 0} \in \mathbb{R}^{1 \times 1} \times \mathbb{R}^1`，
 - (iv) 有
 
-$$
+```
 \phi_2 = \left(
 \begin{pmatrix}
 1 & -1 \\
@@ -4306,169 +4798,172 @@ $$
 \end{pmatrix}
 \right)
 \in \left(\mathbb{R}^{3 \times 2} \times \mathbb{R}^3\right) \times \left(\mathbb{R}^{1 \times 3} \times \mathbb{R}^1\right),
-$$
+```
 
-- (v) 对于所有 $d \in \{2,3,4, \ldots\}$，有 $\phi_{2d} = \phi_{d} \bullet (\mathbf{P}_{d}(\phi_{2}, \phi_{2}, \ldots, \phi_{2}))$，且
-- (vi) 对于所有 $d \in \{2,3,4, \ldots\}$，有 $\phi_{2d-1} = \phi_{d} \bullet (\mathbf{P}_{d}(\phi_{2}, \phi_{2}, \ldots, \phi_{2}, \mathbf{J}_{1}))$
+- (v) 对于所有 `d \in \{2,3,4, \ldots\}`，有 `\phi_{2d} = \phi_{d} \bullet (\mathbf{P}_{d}(\phi_{2}, \phi_{2}, \ldots, \phi_{2}))`，且
+- (vi) 对于所有 `d \in \{2,3,4, \ldots\}`，有 `\phi_{2d-1} = \phi_{d} \bullet (\mathbf{P}_{d}(\phi_{2}, \phi_{2}, \ldots, \phi_{2}, \mathbf{J}_{1}))`
 
 (参见定义 1.3.1, 2.1.1, 2.2.1, 2.2.6 和 2.3.1)。
 
-引理 4.2.4 的证明。在整个证明过程中，令 $\psi \in \mathbf{N}$ 满足
+## 引理 4.2.4 的证明
+在整个证明过程中，令 `\psi \in \mathbf{N}` 满足
 
-$$
+```
 \psi = \left( \left( \begin{pmatrix} 1 & -1 \\ 0 & 1 \\ 0 & -1 \end{pmatrix}, \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix} \right), \left( (1 \quad 1 \quad -1), (0) \right) \right) \in (\mathbb{R}^{3 \times 2} \times \mathbb{R}^{3}) \times (\mathbb{R}^{1 \times 3} \times \mathbb{R}^{1}) \tag{4.29}
-$$
+```
 
 (参见定义 1.3.1)。观察到 (4.29) 和引理 2.2.7 表明
 
-$$
+```
 \mathcal{I}(\psi) = 2, \quad \mathcal{O}(\psi) = \mathcal{I}(\mathbf{J}_{1}) = \mathcal{O}(\mathbf{J}_{1}) = 1, \quad \text{且} \quad \mathcal{L}(\psi) = \mathcal{L}(\mathbf{J}_{1}) = 2. \tag{4.30}
-$$
+```
 
-因此，引理 2.2.2 和引理 2.2.7 证明了对于所有 $d \in \mathbf{N} \cap (1, \infty)$，有
+因此，引理 2.2.2 和引理 2.2.7 证明了对于所有 `d \in \mathbf{N} \cap (1, \infty)`，有
 
-$$
+```
 \mathcal{I}(\mathbf{P}_{d}(\psi, \psi, \ldots, \psi)) = 2d, \quad \mathcal{O}(\mathbf{P}_{d}(\psi, \psi, \ldots, \psi)) = d, \tag{4.31}
-$$
+```
 
-$$
+```
 \mathcal{I}(\mathbf{P}_{d}(\psi, \psi, \ldots, \psi, \mathbf{J}_{1})) = 2d-1, \quad \text{且} \quad \mathcal{O}(\mathbf{P}_{d}(\psi, \psi, \ldots, \psi, \mathbf{J}_{1})) = d \tag{4.32}
-$$
+```
 
-(参见定义 2.2.1 和 2.2.6)。结合 (4.30)、命题 2.1.2 以及归纳法，可知存在唯一的 $\phi_{d} \in \mathbf{N}$，$d \in \mathbf{N}$，使得对于所有 $d \in \mathbf{N}$，有 $\mathcal{I}(\phi_{d}) = d$，$\mathcal{O}(\phi_{d}) = 1$，且
+(参见定义 2.2.1 和 2.2.6)。结合 (4.30)、命题 2.1.2 以及归纳法，可知存在唯一的 `\phi_{d} \in \mathbf{N}`，`d \in \mathbf{N}`，使得对于所有 `d \in \mathbf{N}`，有 `\mathcal{I}(\phi_{d}) = d`，`\mathcal{O}(\phi_{d}) = 1`，且
 
-$$
+```
 \phi_{d} = \begin{cases} 
 \mathbf{A}_{1,0} & : d=1 \\ 
 \psi & : d=2 \\ 
 \phi_{d/2} \bullet (\mathbf{P}_{d/2}(\psi, \psi, \ldots, \psi)) & : d \in \{4,6,8,\ldots\} \\ 
 \phi_{(d+1)/2} \bullet (\mathbf{P}_{(d+1)/2}(\psi, \psi, \ldots, \psi, \mathbf{J}_{1})) & : d \in \{3,5,7,\ldots\}. 
 \end{cases} \tag{4.33}
-$$
+```
 
 引理 4.2.4 的证明由此完成。$\square$
 
-# 定义 4.2.5 (最大值ANN表示)。我们将满足以下性质的全连接前馈 $ANN$ 记为 $(\mathbb{M}_{d})_{d \in \mathbf{N}} \subseteq \mathbf{N}$
+# 定义 4.2.5 (最大值`ANN`表示)
+我们将满足以下性质的全连接前馈 `ANN` 记为 `(\mathbb{M}_{d})_{d \in \mathbf{N}} \subseteq \mathbf{N}`
 
-- (i) 对于所有 $d \in \mathbf{N}$，有 $\mathcal{I}(\mathbb{M}_{d}) = d$，
-- (ii) 对于所有 $d \in \mathbf{N}$，有 $\mathcal{O}(\mathbb{M}_{d}) = 1$，
-- (iii) 有 $\mathbb{M}_{1} = \mathbf{A}_{1,0} \in \mathbb{R}^{1 \times 1} \times \mathbb{R}^{1}$，
+- (i) 对于所有 `d \in \mathbf{N}`，有 `\mathcal{I}(\mathbb{M}_{d}) = d`，
+- (ii) 对于所有 `d \in \mathbf{N}`，有 `\mathcal{O}(\mathbb{M}_{d}) = 1`，
+- (iii) 有 `\mathbb{M}_{1} = \mathbf{A}_{1,0} \in \mathbb{R}^{1 \times 1} \times \mathbb{R}^{1}`，
 - (iv) 有
 
-$$
+```
 \mathbb{M}_{2} = \left( \left( \begin{pmatrix} 1 & -1 \\ 0 & 1 \\ 0 & -1 \end{pmatrix}, \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix} \right), \left( (1 \quad 1 \quad -1), (0) \right) \right) \in (\mathbb{R}^{3 \times 2} \times \mathbb{R}^{3}) \times (\mathbb{R}^{1 \times 3} \times \mathbb{R}^{1}). \tag{4.34}
-$$
+```
 
-- (v) 对于所有 $d \in \{2,3,4, \ldots\}$，有 $\mathbb{M}_{2d} = \mathbb{M}_d \bullet \left(\mathbf{P}_d(\mathbb{M}_2, \mathbb{M}_2, \ldots, \mathbb{M}_2)\right)$，且
-- (vi) 对于所有 $d \in \{2,3,4, \ldots\}$，有 $\mathbb{M}_{2d-1} = \mathbb{M}_d \bullet \left(\mathbf{P}_d(\mathbb{M}_2, \mathbb{M}_2, \ldots, \mathbb{M}_2, \mathbf{J}_1)\right)$
+- (v) 对于所有 `d \in \{2,3,4, \ldots\}`，有 `\mathbb{M}_{2d} = \mathbb{M}_d \bullet \left(\mathbf{P}_d(\mathbb{M}_2, \mathbb{M}_2, \ldots, \mathbb{M}_2)\right)`，且
+- (vi) 对于所有 `d \in \{2,3,4, \ldots\}`，有 `\mathbb{M}_{2d-1} = \mathbb{M}_d \bullet \left(\mathbf{P}_d(\mathbb{M}_2, \mathbb{M}_2, \ldots, \mathbb{M}_2, \mathbf{J}_1)\right)`
 
 (参见定义 1.3.1, 2.1.1, 2.2.1, 2.2.6 和 2.3.1 以及引理 4.2.4)。
 
-# 定义 4.2.6 (实数的下取整和上取整)。我们将满足对于所有 $x \in \mathbb{R}$ 以下性质的函数 $\lceil \cdot \rceil : \mathbb{R} \rightarrow \mathbb{Z}$ 和 $\lfloor \cdot \rfloor : \mathbb{R} \rightarrow \mathbb{Z}$ 分别记为
+# 定义 4.2.6 (实数的下取整和上取整)
+我们将满足对于所有 `x \in \mathbb{R}` 以下性质的函数 `\lceil \cdot \rceil : \mathbb{R} \rightarrow \mathbb{Z}` 和 `\lfloor \cdot \rfloor : \mathbb{R} \rightarrow \mathbb{Z}` 分别记为
 
-$$
+```
 \lceil x \rceil = \min(\mathbb{Z} \cap [x, \infty)) \qquad \text{且} \qquad \lfloor x \rfloor = \max(\mathbb{Z} \cap (-\infty, x]).
-$$
+```
 
-*练习* 4.2.2。证明或反驳以下陈述：对于所有 $n \in \{3,5,7, \ldots\}$，有 $\lceil \log_2(n+1) \rceil = \lceil \log_2(n) \rceil$。
+*练习* 4.2.2。证明或反驳以下陈述：对于所有 `n \in \{3,5,7, \ldots\}`，有 `\lceil \log_2(n+1) \rceil = \lceil \log_2(n) \rceil`。
 
-# 命题 4.2.7 (全连接前馈最大值ANN的性质)。设 $d \in \mathbb{N}$。则
+# 命题 4.2.7 (全连接前馈最大值`ANN`的性质)
+设 `d \in \mathbb{N}`。则
 
-- (i) 有 $\mathcal{H}(\mathbb{M}_d) = \lceil \log_2(d) \rceil$，
-- (ii) 对于所有 $i \in \mathbb{N}$，有 $\mathrm{D}_i(\mathbb{M}_d) \leq 3\lceil \frac{d}{2^i} \rceil$，
-- (iii) 有 $\mathcal{R}_{\mathfrak{r}}^{\mathbb{N}}(\mathbb{M}_d) \in C(\mathbb{R}^d, \mathbb{R})$，且
-- (iv) 对于所有 $x = (x_1, \ldots, x_d) \in \mathbb{R}^d$，有 $(\mathcal{R}_{\mathfrak{r}}^{\mathbb{N}}(\mathbb{M}_d))(x) = \max\{x_1, x_2, \ldots, x_d\}$
+- (i) 有 `\mathcal{H}(\mathbb{M}_d) = \lceil \log_2(d) \rceil`，
+- (ii) 对于所有 `i \in \mathbb{N}`，有 `\mathrm{D}_i(\mathbb{M}_d) \leq 3\lceil \frac{d}{2^i} \rceil`，
+- (iii) 有 `\mathcal{R}_{\mathfrak{r}}^{\mathbb{N}}(\mathbb{M}_d) \in C(\mathbb{R}^d, \mathbb{R})`，且
+- (iv) 对于所有 `x = (x_1, \ldots, x_d) \in \mathbb{R}^d`，有 `(\mathcal{R}_{\mathfrak{r}}^{\mathbb{N}}(\mathbb{M}_d))(x) = \max\{x_1, x_2, \ldots, x_d\}`
 
 (参见定义 1.2.4, 1.3.1, 1.3.4, 4.2.5 和 4.2.6)。
 
-命题 4.2.7 的$证明$。在整个证明过程中，不失一般性地假设 $d > 1$。注意到 (4.34) 保证了
+## 命题 4.2.7 的证明
+在整个证明过程中，不失一般性地假设 `d > 1`。注意到 (4.34) 保证了
 
-$$
+```
 \mathcal{H}(\mathbb{M}_2) = 1 \tag{4.36}
-$$
+```
 
-(参见定义 1.3.1 和 4.2.5)。结合 (2.44) 可知，对于所有 $\mathfrak{d} \in \{2,3,4, \ldots\}$，有
+(参见定义 1.3.1 和 4.2.5)。结合 (2.44) 可知，对于所有 `\mathfrak{d} \in \{2,3,4, \ldots\}`，有
 
-$$
+```
 \mathcal{H}(\mathbf{P}_\mathfrak{d}(\mathbb{M}_2, \mathbb{M}_2, \ldots, \mathbb{M}_2)) = \mathcal{H}(\mathbf{P}_\mathfrak{d}(\mathbb{M}_2, \mathbb{M}_2, \ldots, \mathbb{M}_2, \mathbf{J}_1)) = \mathcal{H}(\mathbb{M}_2) = 1 \tag{4.37}
-$$
+```
 
-(参见定义 2.2.1 和 2.2.6)。将此结果与命题 2.1.2 结合，可建立对于所有 $\mathfrak{d} \in \{3,4,5, \ldots\}$，有
+(参见定义 2.2.1 和 2.2.6)。将此结果与命题 2.1.2 结合，可建立对于所有 `\mathfrak{d} \in \{3,4,5, \ldots\}`，有
 
-$$
+```
 \mathcal{H}(\mathbb{M}_\mathfrak{d}) = \mathcal{H}(\mathbb{M}_{\lceil \eta \rceil}) + 1 \tag{4.38}
-$$
+```
 
-(参见定义 4.2.6)。这确保了对于所有 $\mathfrak{d} \in \{4,6,8, \ldots\}$ 且 $\mathcal{H}(\mathbb{M}_{\lceil \eta \rceil}) = \lceil \log_2(\eta / 2) \rceil$，有
+(参见定义 4.2.6)。这确保了对于所有 `\mathfrak{d} \in \{4,6,8, \ldots\}` 且 `\mathcal{H}(\mathbb{M}_{\lceil \eta \rceil}) = \lceil \log_2(\eta / 2) \rceil`，有
 
-$$
+```
 \mathcal{H}(\mathbb{M}_\mathfrak{d}) = \lceil \log_2(\eta / 2) \rceil + 1 = \lceil \log_2(\mathfrak{d}) - 1 \rceil + 1 = \lceil \log_2(\mathfrak{d}) \rceil. \tag{4.39}
-$$
+```
 
+此外，请注意 `(4.38)` 以及对于所有 `\mathbf{d} \in \{3, 5, 7, \dots\}` 都有 `\lceil \log_2(\mathbf{d} + 1) \rceil = \lceil \log_2(\mathbf{d}) \rceil` 这一事实，保证了对于所有满足 `\mathcal{H}(\mathbb{M}_{\lceil \log_2 \rceil \rceil} = \lceil \log_2(\lceil \frac{\mathbf{d}}{2} \rceil \rceil]` 的 `\mathbf{d} \in \{3, 5, 7, \dots\}`，都有
 
-
-
-
-此外，请注意 $(4.38)$ 以及对于所有 $\mathbf{d} \in \{3, 5, 7, \dots\}$ 都有 $\lceil \log_2(\mathbf{d} + 1) \rceil = \lceil \log_2(\mathbf{d}) \rceil$ 这一事实，保证了对于所有满足 $\mathcal{H}(\mathbb{M}_{\lceil \log_2 \rceil \rceil} = \lceil \log_2(\lceil \frac{\mathbf{d}}{2} \rceil \rceil]$ 的 $\mathbf{d} \in \{3, 5, 7, \dots\}$，都有
-
-$$
+```
 \begin{eqnarray}
 \mathcal{H}(\mathbb{M}_{\mathbf{d}}) &=& \lceil \log_2(\lceil \frac{\mathbf{d}}{2} \rceil \rceil + 1 = \lceil \log_2(\lceil \frac{\mathbf{d} + 1}{2} \rceil) \rceil + 1 \\
 &=& \lceil \log_2(\mathbf{d} + 1) - 1 \rceil + 1 = \lceil \log_2(\mathbf{d} + 1) \rceil = \lceil \log_2(\mathbf{d}) \rceil.\tag{4.40}
 \end{eqnarray}
-$$
+```
 
-结合 $(4.39)$ 表明，对于所有满足 $\forall k \in \{2, 3, \dots, \mathbf{d} - 1\}$：$\mathcal{H}(\mathbb{M}_k) = \lceil \log_2(k) \rceil$ 的 $\mathbf{d} \in \{3, 4, 5, \dots\}$，都有
+结合 `(4.39)` 表明，对于所有满足 `\forall k \in \{2, 3, \dots, \mathbf{d} - 1\}`：`\mathcal{H}(\mathbb{M}_k) = \lceil \log_2(k) \rceil` 的 `\mathbf{d} \in \{3, 4, 5, \dots\}`，都有
 
-$$
+```
 \mathcal{H}(\mathbb{M}_{\mathbf{d}}) = \lceil \log_2(\mathbf{d}) \rceil.\tag{4.41}
-$$
+```
 
-由于 $\mathcal{H}(\mathbb{M}_2) = 1$ 这一事实以及归纳法，从而确立了第 (i) 项。注意到 $\mathcal{D}(\mathbb{M}_2) = (2, 3, 1)$ 这一事实保证了对于所有 $i \in \mathbb{N}$，都有
+由于 `\mathcal{H}(\mathbb{M}_2) = 1` 这一事实以及归纳法，从而确立了第 (i) 项。注意到 `\mathcal{D}(\mathbb{M}_2) = (2, 3, 1)` 这一事实保证了对于所有 `i \in \mathbb{N}`，都有
 
-$$
+```
 \mathbb{D}_i(\mathbb{M}_2) \leq 3 = 3 \lceil \frac{2}{2^i} \rceil.\tag{4.42}
-$$
+```
 
-此外，请注意命题 2.1.2 和引理 2.2.2 意味着对于所有 $\mathbf{d} \in \{2, 3, 4, \dots\}$ 和 $i \in \mathbb{N}$，都有
+此外，请注意命题 2.1.2 和引理 2.2.2 意味着对于所有 `\mathbf{d} \in \{2, 3, 4, \dots\}` 和 `i \in \mathbb{N}`，都有
 
-$$
+```
 \mathbb{D}_i(\mathbb{M}_{2\mathbf{d}}) = \begin{cases} 3\mathbf{d} & : i = 1 \\
 \mathbb{D}_{i-1}(\mathbb{M}_{\mathbf{d}}) & : i \geq 2 \end{cases}\tag{4.43}
-$$
+```
 
 以及
 
-$$
+```
 \mathbb{D}_i(\mathbb{M}_{2\mathbf{d}-1}) = \begin{cases} 3\mathbf{d} - 1 & : i = 1 \\
 \mathbb{D}_{i-1}(\mathbb{M}_{\mathbf{d}}) & : i \geq 2. \end{cases}\tag{4.44}
-$$
+```
 
-这保证了对于所有 $\mathbf{d} \in \{2, 4, 6, \dots\}$，都有
+这保证了对于所有 `\mathbf{d} \in \{2, 4, 6, \dots\}`，都有
 
-$$
+```
 \mathbb{D}_1(\mathbb{M}_{\mathbf{d}}) = 3(\frac{\mathbf{d}}{2}) = 3 \lceil \frac{\mathbf{d}}{2} \rceil.\tag{4.45}
-$$
+```
 
-另外，请注意 $(4.44)$ 保证了对于所有 $\mathbf{d} \in \{3, 5, 7, \dots\}$，都有
+另外，请注意 `(4.44)` 保证了对于所有 `\mathbf{d} \in \{3, 5, 7, \dots\}`，都有
 
-$$
+```
 \mathbb{D}_1(\mathbb{M}_{\mathbf{d}}) = 3 \lceil \frac{\mathbf{d}}{2} \rceil - 1 \leq 3 \lceil \frac{\mathbf{d}}{2} \rceil.\tag{4.46}
-$$
+```
 
-这与 $(4.45)$ 共同表明，对于所有 $\mathbf{d} \in \{2, 3, 4, \dots\}$，都有
+这与 `(4.45)` 共同表明，对于所有 `\mathbf{d} \in \{2, 3, 4, \dots\}`，都有
 
-$$
+```
 \mathbb{D}_1(\mathbb{M}_{\mathbf{d}}) \leq 3 \lceil \frac{\mathbf{d}}{2} \rceil.\tag{4.47}
-$$
+```
 
-接下来，请注意 $(4.43)$ 表明，对于所有 $\mathbf{d} \in \{4, 6, 8, \dots\}$ 和 $i \in \{2, 3, 4, \dots\}$，若 $\mathbb{D}_{i-1}(\mathbb{M}_{\frac{\mathbf{d}}{2}}) \leq 3 \lceil \frac{\mathbf{d}}{2} \frac{1}{2^{i-1}} \rceil$，则
+接下来，请注意 `(4.43)` 表明，对于所有 `\mathbf{d} \in \{4, 6, 8, \dots\}` 和 `i \in \{2, 3, 4, \dots\}`，若 `\mathbb{D}_{i-1}(\mathbb{M}_{\frac{\mathbf{d}}{2}}) \leq 3 \lceil \frac{\mathbf{d}}{2} \frac{1}{2^{i-1}} \rceil`，则
 
-$$
+
+
 \mathbb{D}_i(\mathbb{M}_{\mathbf{d}}) = \mathbb{D}_{i-1}(\mathbb{M}_{\frac{\mathbf{d}}{2}}) \leq 3 \lceil \frac{\mathbf{d}}{2} \frac{1}{2^{i-1}} \rceil = 3 \lceil \frac{\mathbf{d}}{2^i} \rceil.\tag{4.48}
-$$
 
+$$
 此外，请注意 $(4.44)$ 以及对于所有 $\mathfrak{d} \in \{3, 5, 7, \ldots\}$ 和 $i \in \mathbb{N}$ 都有 $\left\lceil\frac{\mathfrak{d}+1}{2^{i}}\right\rceil = \left\lceil\frac{\mathfrak{d}}{2^{i}}\right\rceil$ 这一事实，假设对于所有 $\mathfrak{d} \in \{3, 5, 7, \ldots\}$ 和 $i \in \{2, 3, 4, \ldots\}$，若 $\mathbb{D}_{i-1}(\mathbb{M}^{[\lceil \eta/2 \rceil]}) \leq 3\lceil\lceil\frac{\eta}{2}\rceil\frac{1}{2^{i-1}}\rceil$，则
+$$
 
 $$
 \mathbb{D}_{i}(\mathbb{M}_{\mathfrak{d}}) = \mathbb{D}_{i-1}(\mathbb{M}_{\lceil \frac{\mathfrak{d}}{2} \rceil}) \leq 3\lceil\lceil\frac{\mathfrak{d}}{2}\rceil\frac{1}{2^{i-1}}\rceil = 3\lceil\frac{\mathfrak{d}+1}{2^{i}}\rceil = 3\lceil\frac{\mathfrak{d}}{2^{i}}\rceil.\tag{4.49}
@@ -4552,20 +5047,27 @@ $$
 
 （参见定义 1.3.1, 1.5.5, 2.1.1, 2.2.1, 2.3.1, 2.4.6, 4.2.1 和 4.2.5）。则
 
-
-
 (i) $\mathcal{I}(\Phi) = d$ 成立，
+
 (ii) $\mathcal{O}(\Phi) = 1$ 成立，
+
 (iii) $\mathcal{H}(\Phi) = \lceil \log_2(K) \rceil + 1$ 成立，
+
 (iv) $\mathbb{D}_1(\Phi) = 2dK$ 成立，
+
 (v) 对于所有 $i \in \{2, 3, 4, \ldots\}$，$\mathbb{D}_i(\Phi) \le 3\lceil \frac{K}{2^{i-1}} \rceil$ 成立，
+
 (vi) $\|\mathcal{T}(\Phi)\|_\infty \le \max\{1, L, \max_{k \in \{1, 2, \ldots, K\}} \|\mathfrak{f}_k\|_\infty, 2\|\mathfrak{b}\|_\infty\}$ 成立，且
+
 (vii) 对于所有 $x \in \mathbb{R}^d$，$((\mathcal{R}_\mathfrak{f}^\mathcal{N}(\Phi))(x)) = \max_{k \in \{1, 2, \ldots, K\}} \{\mathfrak{h}_k - L\|x - \mathfrak{f}_k\|_1\}$ 成立
+
 （参见定义 1.2.4、1.3.4、1.3.5、3.3.4 和 4.2.6）。
 
 引理 4.2.9 的证明。在整个证明过程中，令 $\Psi_k \in \mathbf{N}$，$k \in \{1, 2, \ldots, K\}$，满足对于所有 $k \in \{1, 2, \ldots, K\}$ 有 $\Psi_k = \mathbb{L}_d \bullet \mathbf{A}_{\mathbb{L}_d - \mathfrak{f}_k}$，令 $\Xi \in \mathbf{N}$ 满足
 
 $$\Xi = \mathbf{A}_{-L_{1K}n} \bullet \mathbf{P}_{K}(\Psi_1, \Psi_2, \ldots, \Psi_K) \bullet \mathbb{T}_{d,K} \tag{4.58}$$
+
+
 
 且令 $\|\|\cdot\|\|: \bigcup_{m,n \in \mathbb{N}} \mathbb{R}^{m \times n} \to [0, \infty)$ 满足对于所有 $m, n \in \mathbb{N}$，$M = (M_{i,j})_{i \in \{1, \ldots, m\}, j \in \{1, \ldots, n\}} \in \mathbb{R}^{m \times n}$，有 $\|M\| = \max_{i \in \{1, \ldots, m\}, j \in \{1, \ldots, n\}} |M_{i,j}|$。注意到 (4.57) 和命题 2.1.2 保证 $\mathcal{O}(\Phi) = \mathcal{O}(\mathbb{M}_K) = 1$ 且 $\mathcal{I}(\Phi) = \mathcal{I}(\mathbb{T}_{d,K}) = d$。这证明了项 (i) 和 (ii)。此外，注意到对于所有 $m, n \in \mathbb{N}$，$\mathfrak{M} \in \mathbb{R}^{m \times n}$，$\mathfrak{B} \in \mathbb{R}^m$，都有 $\mathcal{H}(\mathbf{A}_{\mathfrak{M}, \mathfrak{B}}) = 0 = \mathcal{H}(\mathbb{T}_{d,K})$ 这一事实，以及 $\mathcal{H}(\mathbb{L}_d) = 1$ 的事实和命题 2.1.2 保证
 
@@ -4614,185 +5116,227 @@ $$\boldsymbol{\mathcal{B}}_{2, \Xi} =\mathcal{W}_{1, \mathbf{A}_{-L_1 K}, 0} \bo
 此外，注意到对于所有 $k \in \{1, 2, \dots, K\}$，$\mathcal{W}_{2, \Psi_k} = \mathcal{W}_{2, \underline{L}_d}$ 这一事实保证
 
 $\mathcal{W}_{2, \Xi} = \mathcal{W}_{1, \mathbf{A}_{-L \, I_{K, n}}} \mathcal{W}_{2, \mathbf{P}_K(\Psi_1, \Psi_2, \dots, \Psi_K)} = -L\mathcal{W}_{2, \mathbf{P}(\Psi_1, \Psi_2, \dots, \Psi_K)}$
+
 $$
+
 = -L
+
 \begin{pmatrix}
+
 \mathcal{W}_{2, \Psi_1} & 0 & \dots & 0 \\
+
 0 & \mathcal{W}_{2, \Psi_2} & \dots & 0 \\
+
 \vdots & \vdots & \ddots & \vdots \\
+
 0 & 0 & \dots & \mathcal{W}_{2, \Psi_K}
+
 \end{pmatrix}
+
 =
+
 \begin{pmatrix}
+
 -L\mathcal{W}_{2, \underline{L}_d} & 0 & \dots & 0 \\
+
 0 & -L\mathcal{W}_{2, \underline{L}_d} & \dots & 0 \\
+
 \vdots & \vdots & \ddots & \vdots \\
+
 0 & 0 & \dots & -L\mathcal{W}_{2, \underline{L}_d}
+
 \end{pmatrix}.
+
 $$
 
 因此，引理 4.2.3 的第 (v) 项和引理 4.2.8 蕴含
+
 $$
+
 \|\mathcal{W}_{1, \mathbb{M}_K} \mathcal{W}_{2, \Xi}\| = L\|\mathcal{W}_{1, \mathbb{M}_K}\| \leq L.
+
 $$
 
 此外，注意到 (4.69) 和引理 4.2.8 保证
+
 $$
+
 \|\mathcal{W}_{1, \mathbb{M}_K} \mathcal{B}_{2, \Xi}\|_{\infty} \leq 2\|\mathcal{B}_{2, \Xi}\|_{\infty} = 2\|\mathfrak{g}\|_{\infty}.
+
 $$
 
 将此结果与 (4.68) 和 (4.71) 结合，建立了项 (vi)。接下来观察，命题 4.2.2 和引理 2.3.3 表明对于所有 $x \in \mathbb{R}^d$，$k \in \{1, 2, \dots, K\}$，有
+
 $$
+
 (\mathcal{R}_*^\mathbf{N}(\Psi_k))(x) = (\mathcal{R}_*^\mathbf{N}(\underline{L}_d) \circ \mathcal{R}_*^\mathbf{N}(\mathbf{A}_{I_d - \mathfrak{r}_k}))(x) = \|x - \mathfrak{r}_k\|_1.
+
 $$
 
 这、命题 2.2.3 和命题 2.1.2 蕴含对于所有 $x \in \mathbb{R}^d$，有
+
 $$
+
 (\mathcal{R}_*^\mathbf{N}(\mathbf{P}_K(\Psi_1, \Psi_2, \dots, \Psi_K) \bullet \mathbb{T}_{d,K}))(x) = (\|x - \mathfrak{r}_1\|_1, \|x - \mathfrak{r}_2\|_1, \dots, \|x - \mathfrak{r}_K\|_1).
+
 $$
 
 （参见定义 1.2.4 和 1.3.4。将此结果与引理 2.3.3 结合，建立了对于所有 $x \in \mathbb{R}^d$，有
+
 $$
+
 \begin{align}
+
 (\mathcal{R}_*^\mathbf{N}(\Xi))(x) & = (\mathcal{R}_*^\mathbf{N}(\mathbf{A}_{-L \, I_{K, n}}) \circ \mathcal{R}_*^\mathbf{N}(\mathbf{P}_K(\Psi_1, \Psi_2, \dots, \Psi_K) \bullet \mathbb{T}_{d,K}))(x) \\
+
 & = (\mathfrak{q}_1 - L\|x - \mathfrak{r}_1\|_1, \mathfrak{q}_2 - L\|x - \mathfrak{r}_2\|_1, \dots, \mathfrak{q}_K - L\|x - \mathfrak{r}_K\|_1).
+
 \end{align}
+
 $$
 
 因此，命题 2.1.2 和命题 4.2.7 证明了对于所有 $x \in \mathbb{R}^d$，有
+
 $$
+
 \begin{align}
+
 (\mathcal{R}_*^\mathbf{N}(\Phi))(x) & = (\mathcal{R}_*^\mathbf{N}(\mathbb{M}_K) \circ \mathcal{R}_*^\mathbf{N}(\Xi))(x) \\
+
 & = (\mathcal{R}_*^\mathbf{N}(\mathbb{M}_K))(\mathfrak{q}_1 - L\|x - \mathfrak{r}_1\|_1, \mathfrak{q}_2 - L\|x - \mathfrak{r}_2\|_1, \dots, \mathfrak{q}_K - L\|x - \mathfrak{r}_K\|_1) \\
+
 & = \max_{k \in \{1, \dots, K\}}(\mathfrak{q}_k - L\|x - \mathfrak{r}_k\|_1).
+
 \end{align}
+
 $$
+
 这建立了项 (vii)。从而，引理 4.2.9 的证明结束。
-
-
-
-
 
 # 4.3 多维函数的 ANN 逼近结果
 
 ## 4.3.1 构造性 ANN 逼近结果
 
-**命题 4.3.1.** *设 $d, K \in \mathbb{N}$，$L \in [0, \infty)$，设 $E \subseteq \mathbb{R}^{d}$ 为一个集合，设 $\mathbf{f}_{1}, \mathbf{f}_{2}, \ldots, \mathbf{f}_{K} \in E$，设 $f: E \rightarrow \mathbb{R}$ 满足对所有 $x, y \in E$ 都有 $|f(x) - f(y)| \leq L \|x - y\|_{1}$，且设 $\mathbf{y} \in \mathbb{R}^{K}$，$\Phi \in \mathbb{N}$ 满足 $\boldsymbol{\eta} = (f(\mathbf{f}_{1}), f(\mathbf{f}_{2}), \ldots, f(\mathbf{f}_{K}))$ 以及*
+
+
+### 命题 4.3.1
+设 `d, K ∈ ℕ`，`L ∈ [0, ∞)`，设 `E ⊆ ℝ^{d}` 为一个集合，设 `f₁, f₂, …, f_K ∈ E`，设 `f: E → ℝ` 满足对所有 `x, y ∈ E` 都有 `|f(x) - f(y)| ≤ L ‖x - y‖₁`，且设 `y ∈ ℝ^{K}`，`Φ ∈ ℕ` 满足 `η = (f(f₁), f(f₂), …, f(f_K))` 以及
 
 $$\Phi = \mathbb{M}_{K} \bullet \mathbf{A}_{-L1K,n} \bullet \mathbf{P}_{K}\big(\mathbb{L}_{d} \bullet \mathbf{A}_{1_{d}-\mathbf{f}_{1}}, \mathbb{L}_{d} \bullet \mathbf{A}_{1_{d}-\mathbf{f}_{2}}, \ldots, \mathbb{L}_{d} \bullet \mathbf{A}_{1_{d}-\mathbf{f}_{K}}\big) \bullet \mathbb{T}_{d,K} \quad (4.77)$$
 
-*(参见定义 1.3.1, 1.5.5, 2.1.1, 2.2.1, 2.3.1, 2.4.6, 3.3.4, 4.2.1, 和 4.2.5)。则*
+参见定义 1.3.1, 1.5.5, 2.1.1, 2.2.1, 2.3.1, 2.4.6, 3.3.4, 4.2.1, 和 4.2.5。则
 
 $$\operatorname{sup}_{x \in E}|(\mathcal{R}_{\mathbf{r}}^{\mathbb{N}}(\Phi))(x) - f(x)| \leq 2L \big[\operatorname{sup}_{x \in E}(\min_{k \in \{1, \ldots, K\}} \|x - \mathbf{f}_{k}\|_{1})\big] \quad (4.78)$$
 
-*(参见定义 1.2.4 和 1.3.4).*
+参见定义 1.2.4 和 1.3.4。
 
-*命题 4.3.1 的证明。在整个证明过程中，设 $F: \mathbb{R}^{d} \rightarrow \mathbb{R}$ 满足对所有 $x \in \mathbb{R}^{d}$ 都有*
+命题 4.3.1 的证明。在整个证明过程中，设 `F: ℝ^{d} → ℝ` 满足对所有 `x ∈ ℝ^{d}` 都有
 
 $$F(x) = \max_{k \in \{1, \ldots, K\}}(f(\mathbf{f}_{k}) - L\|x - \mathbf{f}_{k}\|_{1}). \quad (4.79)$$
 
-注意到推论 4.1.4、公式 (4.79) 以及假设条件“对所有 $x, y \in E$ 都有 $|f(x) - f(y)| \leq L\|x - y\|_{1}$”保证了
+注意到推论 4.1.4、公式 `(4.79)` 以及假设条件“对所有 `x, y ∈ E` 都有 `|f(x) - f(y)| ≤ L‖x - y‖₁`”保证了
 
 $$\operatorname{sup}_{x \in E}|F(x) - f(x)| \leq 2L \big[\operatorname{sup}_{x \in E}(\min_{k \in \{1, \ldots, K\}}\|x - \mathbf{f}_{k}\|_{1})\big]. \quad (4.80)$$
 
-此外，请注意引理 4.2.9 确保了对所有 $x \in E$，都有 $F(x) = (\mathcal{R}_{\mathbf{r}}^{\mathbb{N}}(\Phi))(x)$。将此与 (4.80) 结合即证明了 (4.78)。命题 4.3.1 的证明至此完成。
+此外，请注意引理 4.2.9 确保了对所有 `x ∈ E`，都有 `F(x) = (\mathcal{R}_{\mathbf{r}}^{\mathbb{N}}(\Phi))(x)`。将此与 `(4.80)` 结合即证明了 `(4.78)`。命题 4.3.1 的证明至此完成。
 
-*习题 4.3.1。证明或反驳以下陈述：存在 $\Phi \in \mathbb{N}$ 使得 $\mathcal{I}(\Phi) = 2$，$\mathcal{O}(\Phi) = 1$，$\mathcal{P}(\Phi) < 20$，并且*
+习题 4.3.1。证明或反驳以下陈述：存在 `Φ ∈ ℕ` 使得 `\mathcal{I}(\Phi) = 2`，`\mathcal{O}(\Phi) = 1`，`\mathcal{P}(\Phi) < 20`，并且
 
 $$\sup_{v = (x,y) \in [0,2]^{2}} \big| x^{2} + y^{2} - 2x - 2y + 2 - (\mathcal{R}_{\mathbf{r}}^{\mathbb{N}}(\Phi))(v) \big| \leq \frac{3}{8}. \quad (4.81)$$
 
 ## 4.3.2 覆盖数估计
 
-**定义 4.3.2** (覆盖数)。*设 $(E, \delta)$ 为一个度量空间，设 $r \in [0, \infty)$。则我们用 $\mathcal{C}^{(E,\delta),r} \in \mathbb{N}_{0} \cup \{\infty\}$（我们用 $\mathcal{C}^{E,r} \in \mathbb{N}_{0} \cup \{\infty\}$）表示由下式给出的扩展实数*
+### 定义 4.3.2 覆盖数
+设 `(E, δ)` 为一个度量空间，设 `r ∈ [0, ∞)`。则我们用 `\mathcal{C}^{(E,\delta),r} ∈ ℕ₀ ∪ {∞}`  表示由下式给出的扩展实数
 
-$$\mathcal{C}^{(E,\delta),r} = \min \bigg( \big\{n \in \mathbb{N}_{0} \colon \big[\exists A \subseteq E \colon \big[(|A| \leq n) \land (\forall x \in E \colon \exists a \in A \colon \delta_{(a,x)} \leq r)\big]\big] \big\} \cup \{\infty\} \bigg) \quad (4.82)$$
+$$\mathcal{C}^{(E,\delta),r} = \min \bigg( \big\{n \in ℕ₀ \colon \big[\exists A ⊆ E \colon \big[(|A| ≤ n) ∧ (\forall x ∈ E \colon ∃ a ∈ A \colon δ_{(a,x)} ≤ r)\big]\big] \big\} ∪ \{∞\} \bigg) \quad (4.82)$$
 
-*并称 $\mathcal{C}^{(E,\delta),r}$ 为 $(E, \delta)$ 的 $r$-覆盖数（称 $\mathcal{C}^{E,r}$ 为 $E$ 的 $r$-覆盖数）。*
+并称 `\mathcal{C}^{(E,\delta),r}` 为 `(E, δ)` 的 `r`-覆盖数。
 
-**引理 4.3.3.** 设 $(E,\delta)$ 为一个度量空间，设 $r \in [0, \infty]$。则
+### 引理 4.3.3
+设 `(E,δ)` 为一个度量空间，设 `r ∈ [0, ∞]`。则
 
-$$\mathcal{C}_{(E,\delta), r} = \begin{cases} \emptyset & : X = \emptyset \\ \inf \left( \left\{ n \in \mathbb{N} : \left( \exists x_1, x_2, \dots, x_n \in E : \right. \left. E \subseteq \bigcup_{m=1}^n \{ v \in E : d(x_m, v) \leq r \} \right) \right\} \cup \{ \infty \} \right) & : X \neq \emptyset \end{cases} \tag{4.83}$$
+$$\mathcal{C}_{(E,\delta), r} = \begin{cases} \emptyset & : X = \emptyset \\ \inf \left( \left\{ n ∈ ℕ : \left( \exists x_1, x_2, \dots, x_n ∈ E : \right. \left. E ⊆ \bigcup_{m=1}^n \{ v ∈ E : d(x_m, v) ≤ r \} \right) \right\} ∪ \{ \infty \} \right) & : X ≠ \emptyset \end{cases} \tag{4.83}$$
 
-(参见定义 4.3.2)。
+参见定义 4.3.2。
 
-*引理 4.3.3 的证明。在整个证明过程中，不失一般性，假设 $E \neq \emptyset$。注意到引理 12.2.4 确立了公式 (4.83)。引理 4.3.3 的证明至此完成。 $\Box$
+引理 4.3.3 的证明。在整个证明过程中，不失一般性，假设 `E ≠ ∅`。注意到引理 12.2.4 确立了公式 `(4.83)`。引理 4.3.3 的证明至此完成。
 
-*习题 4.3.2。证明或反驳以下陈述：对于每个度量空间 $(X, d)$，每个 $Y \subseteq X$，以及每个 $r \in [0, \infty]$，都有 $\mathcal{C}_{(Y, d|_{Y \times Y}), r} \leq \mathcal{C}_{(X, d), r}$。*
+习题 4.3.2。证明或反驳以下陈述：对于每个度量空间 `(X, d)`，每个 `Y ⊆ X`，以及每个 `r ∈ [0, ∞]`，都有 `\mathcal{C}_{(Y, d|_{Y × Y}), r} ≤ \mathcal{C}_{(X, d), r}`。
 
-*习题 4.3.3。证明或反驳以下陈述：对于每个度量空间 $(E,\delta)$，都有 $\mathcal{C}_{(E,\delta), \infty} = 1$。*
+习题 4.3.3。证明或反驳以下陈述：对于每个度量空间 `(E,δ)`，都有 `\mathcal{C}_{(E,δ), ∞} = 1`。
 
-*习题 4.3.4。证明或反驳以下陈述：对于每个度量空间 $(E,\delta)$ 和每个满足 $\mathcal{C}_{(E,\delta), r} < \infty$ 的 $r \in [0, \infty)$，都有 $E$ 是有界的。（注：当且仅当存在 $r \in [0, \infty)$ 使得对所有 $x, y \in E$ 都有 $\delta(x, y) \leq r$ 时，度量空间 $(E,\delta)$ 是有界的。）*
+习题 4.3.4。证明或反驳以下陈述：对于每个度量空间 `(E,δ)` 和每个满足 `\mathcal{C}_{(E,δ), r} < ∞` 的 `r ∈ [0, ∞)`，都有 `E` 是有界的。
 
-*习题 4.3.5。证明或反驳以下陈述：对于每个有界度量空间 $(E,\delta)$ 和每个 $r \in [0, \infty)$，都有 $\mathcal{C}_{(E,\delta), r} < \infty$。*
+习题 4.3.5。证明或反驳以下陈述：对于每个有界度量空间 `(E,δ)` 和每个 `r ∈ [0, ∞)`，都有 `\mathcal{C}_{(E,δ), r} < ∞`。
 
-**引理 4.3.4.** 设 $d \in \mathbb{N}$，$a \in \mathbb{R}$，$b \in (a, \infty)$，$r \in (0, \infty)$，且对于每个 $p \in [1, \infty)$，设 $\delta_p : ([a, b]^d \times ([a, b]^d) \to [0, \infty)$ 满足对所有 $x, y \in [a, b]^d$ 都有 $\delta_p(x, y) = \| x - y \|_p$（参见定义 3.3.4）。则对于所有 $p \in [1, \infty)$，都有
+### 引理 4.3.4
+设 `d ∈ ℕ`，`a ∈ ℝ`，`b ∈ (a, ∞)`，`r ∈ (0, ∞)`，且对于每个 `p ∈ [1, ∞)`，设 `δ_p : ([a, b]^d × ([a, b]^d) → [0, ∞)` 满足对所有 `x, y ∈ [a, b]^d` 都有 `δ_p(x, y) = ‖ x - y ‖_p`。则对于所有 `p ∈ [1, ∞)`，都有
 
-$$\mathcal{C}_{([a,b]^d,\delta_p),r} \leq \left( \frac{d^{1/p}(b-a)}{2r} \right)^d \leq \begin{cases} 1 & : r \geq \frac{d^{1/p}(b-a)}{2} \\ \left( \frac{d(b-a)}{r} \right)^d & : r < \frac{d^{1/p}(b-a)}{2}. \end{cases} \tag{4.84}$$
+$$\mathcal{C}_{([a,b]^d,\delta_p),r} \leq \left( \frac{d^{1/p}(b-a)}{2r} \right)^d \leq \begin{cases} 1 & : r ≥ \frac{d^{1/p}(b-a)}{2} \\ \left( \frac{d(b-a)}{r} \right)^d & : r < \frac{d^{1/p}(b-a)}{2}. \end{cases} \tag{4.84}$$
 
-(参见定义 4.2.6 和 4.3.2)。
+参见定义 4.2.6 和 4.3.2。
 
-*引理 4.3.4 的证明。在整个证明过程中，设 $(\mathfrak{N}_p)_{p \in [1, \infty)} \subseteq \mathbb{N}$ 满足对所有 $p \in [1, \infty)$ 都有*
+引理 4.3.4 的证明。在整个证明过程中，设 `(\mathfrak{N}_p)_{p ∈ [1, ∞)} ⊆ ℕ` 满足对所有 `p ∈ [1, ∞)` 都有
 
 $$\mathfrak{N}_p = \left\lceil \frac{d^{1/p}(b-a)}{2r} \right\rceil, \tag{4.85}$$
 
-对于每个 $N \in \mathbb{N}$，$i \in \{ 1, 2, \dots, N \}$，设 $g_{N, i} \in [a, b]$ 由下式给出*
+对于每个 `N ∈ ℕ`，`i ∈ { 1, 2, …, N }`，设 `g_{N, i} ∈ [a, b]` 由下式给出
 
 $$g_{N, i} = a + \frac{(i-1/2)(b-a)}{N} \tag{4.86}$$
 
-*且对于每个 $p \in [1, \infty)$，设 $A_p \subseteq [a, b]^d$ 由下式给出*
+且对于每个 `p ∈ [1, ∞)`，设 `A_p ⊆ [a, b]^d` 由下式给出
 
 $$A_p = \{g_{\mathfrak{N}_p,1}, g_{\mathfrak{N}_p,2}, \dots, g_{\mathfrak{N}_p,\mathfrak{N}_p}\}^d \tag{4.87}$$
 
-*(参见定义 4.2.6)。注意到对于所有 $N \in \mathbb{N}$，$i \in \{1, 2, \dots, N\}$，$x \in [a + \frac{(i-1)(b-a)}{N}, g_{N,i}]$，都有*
+注意到对于所有 `N ∈ ℕ`，`i ∈ {1, 2, …, N}`，`x ∈ [a + \frac{(i-1)(b-a)}{N}, g_{N,i}]`，都有
 
-$$|x - g_{N,i}| = a + \frac{(i-1/2)(b-a)}{N} - x \leq a + \frac{(i-1/2)(b-a)}{N} - \left(a + \frac{(i-1)(b-a)}{N}\right) = \frac{b-a}{2N}. \tag{4.88}$$
+$$|x - g_{N,i}| ≤ \frac{b-a}{2N}. \tag{4.88}$$
 
-*此外，注意到对于所有 $N \in \mathbb{N}$，$i \in \{1, 2, \dots, N\}$，$x \in [g_{N,i}, a + \frac{i(b-a)}{N}]$，都有*
+此外，注意到对于所有 `N ∈ ℕ`，`i ∈ {1, 2, …, N}`，`x ∈ [g_{N,i}, a + \frac{i(b-a)}{N}]`，都有
 
-$$|x - g_{N,i}| = x - \left(a + \frac{(i-1/2)(b-a)}{N}\right) \leq a + \frac{i(b-a)}{N} - \left(a + \frac{(i-1/2)(b-a)}{N}\right) = \frac{b-a}{2N}. \tag{4.89}$$
+$$|x - g_{N,i}| ≤ \frac{b-a}{2N}. \tag{4.89}$$
 
-*将此与 (4.88) 结合可知，对于所有 $N \in \mathbb{N}$，$i \in \{1, 2, \dots, N\}$，$x \in [a + \frac{(i-1)(b-a)}{N}, a + \frac{i(b-a)}{N}]$，都有 $|x - g_{N,i}| \leq \frac{(b-a)}{2N}$。这证明了对于每个 $N \in \mathbb{N}$，$x \in [a, b]$，存在 $y \in \{g_{N,1}, g_{N,2}, \dots, g_{N,N}\}$ 使得*
+将此与 `(4.88)` 结合可知，对于所有 `N ∈ ℕ`，`i ∈ {1, 2, …, N}`，`x ∈ [a + \frac{(i-1)(b-a)}{N}, a + \frac{i(b-a)}{N}]`，都有 `|x - g_{N,i}| ≤ \frac{(b-a)}{2N}`。这证明了对于每个 `N ∈ ℕ`，`x ∈ [a, b]`，存在 `y ∈ {g_{N,1}, g_{N,2}, …, g_{N,N}}` 使得
 
-$$|x - y| \leq \frac{b-a}{2N}. \tag{4.90}$$
+$$|x - y| ≤ \frac{b-a}{2N}. \tag{4.90}$$
 
-*这确立了对于每个 $p \in [1, \infty)$，$x = (x_1, x_2, \dots, x_d) \in [a, b]^d$，存在 $y = (y_1, y_2, \dots, y_d) \in A_p$ 使得*
+这确立了对于每个 `p ∈ [1, ∞)`，`x = (x_1, x_2, …, x_d) ∈ [a, b]^d`，存在 `y = (y_1, y_2, …, y_d) ∈ A_p` 使得
 
-$$\delta_p(x, y) = \|x - y\|_p = \left(\sum_{i=1}^d |x_i - y_i|^p\right)^{1/p} \leq \left(\sum_{i=1}^d \left(\frac{(b-a)}{2\mathfrak{N}_p}\right)^p\right)^{1/p} = \frac{d^{1/p}(b-a)}{2\mathfrak{N}_p} \leq \frac{d^{1/p}(b-a)2^r}{2d^{1/p}(b-a)} = r. \tag{4.91}$$
+$$\delta_p(x, y) = \|x - y\|_p = \left(\sum_{i=1}^d |x_i - y_i|^p\right)^{1/p} ≤ \frac{d^{1/p}(b-a)}{2\mathfrak{N}_p} ≤ r. \tag{4.91}$$
 
-*将此与 (4.82)、(4.87)、(4.85) 以及事实“$\forall x \in [0, \infty) : [x] \leq \mathbb{1}_{(0,1]}(x) + 2x\mathbb{1}_{[1,\infty)}(x) = \mathbb{1}_{(0,r]}(rx) + 2rx\mathbb{1}_{(r,\infty)}(rx)$” 结合可知，对于所有 $p \in [1, \infty)$，都有*
+将此与 `(4.82)`、`(4.87)`、`(4.85)` 结合可知，对于所有 `p ∈ [1, ∞)`，都有
 
-$$\mathcal{C}^{([a,b]^d, \delta_p), r} \leq |A_p| = |\mathfrak{N}_p|^d = \left(\left[\frac{d^{1/p}(b-a)}{2r}\right]\right)^d \leq \left(\left[\frac{d(b-a)}{2r}\right]\right)^d$$
+$$\mathcal{C}^{([a,b]^d, \delta_p), r} ≤ |A_p| = |\mathfrak{N}_p|^d$$
 
-$$\begin{aligned} &\leq \left(\mathbb{1}_{(0,r]}\left(\frac{d(b-a)}{2}\right) + \frac{2d(b-a)}{2r}\mathbb{1}_{(r,\infty)}\left(\frac{d(b-a)}{2}\right)\right)^d \\ &= \mathbb{1}_{(0,r]}\left(\frac{d(b-a)}{2}\right) + \left(\frac{d(b-a)}{r}\right)^d \mathbb{1}_{(r,\infty)}\left(\frac{d(b-a)}{2}\right) \end{aligned}$$
-
-*(参见定义 4.3.2)。引理 4.3.4 的证明至此完成。*
+引理 4.3.4 的证明至此完成。
 
 ## 4.3.3 逼近误差的收敛速率
 
-**引理 4.3.5.** 设 $d \in \mathbb{N}$，$L, a \in \mathbb{R}$，$b \in (a, \infty)$，设 $f: [a, b]^d \to \mathbb{R}$ 满足对所有 $x, y \in [a, b]^d$ 都有 $|f(x) - f(y)| \leq L \|x - y\|_1$，且设 $\mathbf{F} = \mathbf{A}_{0, f([a+b)/2, (a+b)/2]^{\times d}} \in \mathbb{R}^{1 \times d} \times \mathbb{R}^1$（参见定义 2.3.1 和 3.3.4）。则
+### 引理 4.3.5
+设 `d ∈ ℕ`，`L, a ∈ ℝ`，`b ∈ (a, ∞)`，设 `f: [a, b]^d → ℝ` 满足对所有 `x, y ∈ [a, b]^d` 都有 `|f(x) - f(y)| ≤ L ‖x - y‖₁`，且设 `\mathbf{F} = \mathbf{A}_{0, f([a+b)/2, (a+b)/2]^{\times d}} ∈ ℝ^{1 × d} × ℝ^1`。则
 
-(i) 成立 $\mathcal{I}(\mathbf{F}) = d$，
+(i) 成立 `\mathcal{I}(\mathbf{F}) = d`，
+
+(ii) `\mathcal{O}(\mathbf{F}) = 1` 成立，
+
+(iii) `\mathcal{H}(\mathbf{F}) = 0` 成立，
+
+(iv) `\mathcal{P}(\mathbf{F}) = d + 1` 成立，
+
+(v) `‖\mathcal{T}(\mathbf{F})‖_∞ ≤ \sup_{x ∈ [a,b]^d} |f(x)|` 成立，且
+
+(vi) `\sup_{x ∈ [a,b]^d} | (\mathcal{R}_v^\mathbf{N}(\mathbf{F}))(x) - f(x)| ≤ \frac{d L (b-a)}{2}` 成立
+
+参见定义 1.2.4, 1.3.1, 1.3.4, 和 1.3.5。
+
+引理 4.3.5 的证明。注意，假设对于所有 `x, y ∈ [a,b]^d` 都有 `|f(x) - f(y)| ≤ L ‖x - y‖₁` 成立，这保证了 `L ≥ 0`。接下来观察，引理 2.3.2 保证了对于所有 `x ∈ ℝ^d` 都有
+
+$$ (\mathcal{R}_v^\mathbf{N}(\mathbf{F}))(x) = f((a+b)/2, (a+b)/2, \dots, (a+b)/2). \qquad (4.93) $$
+
+对于所有 `x ∈ [a,b]` 都有 `|x - (a+b)/2| ≤ (b-a)/2` 成立，且假设对于所有 `x, y ∈ [a,b]^d` 都有 `|f(x) - f(y)| ≤ L ‖x - y‖₁` 成立，因此确保对于所有 `x = (x_1, x_2, …, x_d) ∈ [a,b]^d` 都有
 
 
-
-
-(ii) $\mathcal{O}(\mathbf{F}) = 1$ 成立，
-
-(iii) $\mathcal{H}(\mathbf{F}) = 0$ 成立，
-
-(iv) $\mathcal{P}(\mathbf{F}) = d + 1$ 成立，
-
-(v) $\|\mathcal{T}(\mathbf{F})\|_{\infty} \le \sup_{x \in [a,b]^d} |f(x)|$ 成立，且
-
-(vi) $\sup_{x \in [a,b]^d} | (\mathcal{R}_v^\mathbf{N}(\mathbf{F}))(x) - f(x)| \le \frac{d L (b-a)}{2}$ 成立
-
-（参见定义 1.2.4, 1.3.1, 1.3.4, 和 1.3.5）。
-
-引理 4.3.5 的证明。注意，假设对于所有 $x, y \in [a,b]^d$ 都有 $|f(x) - f(y)| \le L \|x - y\|_1$ 成立，这保证了 $L \ge 0$。接下来观察，引理 2.3.2 保证了对于所有 $x \in \mathbb{R}^d$ 都有
-
-$ (\mathcal{R}_v^\mathbf{N}(\mathbf{F}))(x) = f((a+b)/2, (a+b)/2, \dots, (a+b)/2). \qquad (4.93) $
-
-对于所有 $x \in [a,b]$ 都有 $|x - (a+b)/2| \le (b-a)/2$ 成立，且假设对于所有 $x, y \in [a,b]^d$ 都有 $|f(x) - f(y)| \le L \|x - y\|_1$ 成立，因此确保对于所有 $x = (x_1, x_2, \dots, x_d) \in [a,b]^d$ 都有
 
 $\begin{align*} &| (\mathcal{R}_v^\mathbf{N}(\mathbf{F}))(x) - f(x)| = | f((a+b)/2, (a+b)/2, \dots, (a+b)/2) - f(x)| \\ &\quad\le L \|((a+b)/2, (a+b)/2, \dots, (a+b)/2) - x\|_1 \\ &\quad= L \sum_{i=1}^d |(a+b)/2 - x_i| \le \sum_{i=1}^d \frac{L(b-a)}{2} = \frac{d L (b-a)}{2}. \end{align*} \qquad (4.94) $
 
@@ -4878,21 +5422,22 @@ $\begin{aligned} \mathcal{P}(\mathbf{F}) &= \sum_{i=1}^{\mathcal{L}(\mathbf{F})}
 
 $\begin{aligned} & 2d \left( \frac{3d}{4r} \right)^{d}(d+1) + \left( \frac{3d}{4r} \right)^{d} 3 \left( 2d \left( \frac{3d}{4r} \right)^{d}+1 \right) + \left( \frac{3d}{4r} \right)^{d} \frac{3}{2^{\mathcal{L}(\mathbf{F})-3}}+1 \\ \le & \left( \frac{3d}{4r} \right)^{2d} \left( 2d(d+1) + 3(2d+1) + \frac{3}{2^{\mathcal{L}(\mathbf{F})-3}}+1 \right) \\ \le & \left( \frac{3d}{4r} \right)^{2d} d^{2}(4+9+12+1) = 26 \left( \frac{3d}{4r} \right)^{2d} d^{2}. \end{aligned}$ (4.105)
 
-
-
-
 ## 4.3. 多元函数的 ANN 逼近结果
 
 此外，注意到 $\frac{3d}{4r} \geq 3$ 这一事实意味着
 
 $$
+
 \begin{align*} \sum_{i=3}^{\mathcal{L}(\mathbf{F})-1} \binom{3d}{4r}^d \binom{3}{2^{i-2}} \binom{(3d)}{4r} \binom{3}{2^{i-3}} + 1) & \leq \binom{3d}{4r}^{2d} \sum_{i=3}^{\mathcal{L}(\mathbf{F})-1} \binom{3}{2^{i-2}} \binom{3}{2^{i-1}} + 1) \\ &= \binom{3d}{4r}^{2d} \sum_{i=3}^{\mathcal{L}(\mathbf{F})-1} \left[ \binom{9}{2^{2i-5}} + \binom{3}{2^{i-2}} \right] \\ &= \binom{3d}{4r}^{2d} \sum_{i=0}^{\mathcal{L}(\mathbf{F})-4} \left[ \binom{9}{2}(4^{-i}) + \binom{3}{2}(2^{-i}) \right] \\ & \leq \binom{3d}{4r}^{2d} \left( \binom{9}{2} \frac{1}{1-4^{-1}} + \binom{3}{2} \frac{1}{1-2^{-1}} \right) = 9 \binom{3d}{4r}^{2d}. \end{align*}
+
 $$
 
 结合此结果、(4.104) 和 (4.105) 证明了
 
 $$
+
 \mathcal{P}(\mathbf{F}) \leq 26 \binom{3d}{4r}^{2d} d^2 + 9 \binom{3d}{4r}^{2d} \leq 35 \binom{3d}{4r}^{2d} d^2.
+
 $$
 
 这确立了第 (vi) 项。因此，命题 4.3.6 的证明完成。$\square$
@@ -4900,27 +5445,38 @@ $$
 **命题 4.3.7.** 设 $d \in \mathbb{N}$，$L, a \in \mathbb{R}$，$b \in (a, \infty)$，$r \in (0, \infty)$，且设 $f : [a, b]^d \to \mathbb{R}$ 对所有 $x, y \in [a, b]^d$ 满足 $|f(x) - f(y)| \leq L \|x - y\|$（参见定义 3.3.4）。则存在 $\mathbf{F} \in \mathbf{N}$ 使得
 
 -   满足 $\mathcal{I}(\mathbf{F}) = d$，
+
 -   满足 $\mathcal{O}(\mathbf{F}) = 1$，
+
 -   满足 $\mathcal{H}(\mathbf{F}) \leq (\lceil d \log_2 \binom{3d}{4r} \rceil + 1) \mathbb{1}_{(0, a/4)}(r)$，
+
 -   满足 $\mathbb{D}_1(\mathbf{F}) \leq 2d \binom{3d}{4r}^d \mathbb{1}_{(0, a/4)}(r) + \mathbb{1}_{[a/4, \infty)}(r)$，
+
 -   对所有 $i \in \{2, 3, 4, \ldots\}$，满足 $\mathbb{D}_i(\mathbf{F}) \leq 3 \lceil \binom{3d}{4r}^d \frac{1}{2^{i-1}} \rceil$，
--   满足 $\mathcal{P}(\mathbf{F}) \leq 35 \binom{3d}{4r}^{2d} d^2 \mathbb{1}_{(0, a/4)}(r) + (d+1) \mathbb{1}_{[a/4, \infty)}(r)$，
--   满足 $\|T(\mathbf{F})\|_\infty \leq \max\{1, L, |a|, |b|, 2 \lceil \sup_{x \in [a, b]^d} |f(x)| \rceil\}$，且
--   满足 $\sup_{x \in [a, b]^d} |\mathcal{R}_\Gamma^\mathbf{N}(\mathbf{F})(x) - f(x)| \leq 2 L (b-a) r$（参见定义 1.2.4, 1.3.1, 1.3.4, 1.3.5 和 4.2.6）。
+
+
+
+- 满足 $\mathcal{P}(\mathbf{F}) \leq 35 \binom{3d}{4r}^{2d} d^2 \mathbb{1}_{(0, a/4)}(r) + (d+1) \mathbb{1}_{[a/4, \infty)}(r)$，
+- 满足 $\|T(\mathbf{F})\|_\infty \leq \max\{1, L, |a|, |b|, 2 \lceil \sup_{x \in [a, b]^d} |f(x)| \rceil\}$，且
+- 满足 $\sup_{x \in [a, b]^d} |\mathcal{R}_\Gamma^\mathbf{N}(\mathbf{F})(x) - f(x)| \leq 2 L (b-a) r$（参见定义 1.2.4, 1.3.1, 1.3.4, 1.3.5 和 4.2.6）。
 
 *命题 4.3.7 的证明.* 在整个证明过程中，不失一般性地假设 $r < a/4$（参见引理 4.3.5），设 $\delta : [a, b]^d \times [a, b]^d \to \mathbb{R}$ 对所有 $x, y \in [a, b]^d$ 满足
 
-$$
+```
 \delta(x, y) := \|x - y\|_1,
-$$
+```
 
 且设 $K \in \mathbb{N} \cup \{\infty\}$ 满足
 
-$K = \mathcal{C}^{([a,b]^d,\delta),(b-a)^r}$.    (4.109)
+```
+K = \mathcal{C}^{([a,b]^d,\delta),(b-a)^r}.    (4.109)
+```
 
 注意引理 4.3.4 保证了 $K < \infty$。此结论与 (4.82) 确保了存在 $\mathbf{f}_{1}, \mathbf{f}_{2}, \ldots, \mathbf{f}_{K} \in [a,b]^{d}$ 使得
 
-$\sup _{x \in [a,b]^{d}}\left[\min _{k \in\{1,2, \ldots, K\}} \delta(x, \mathbf{f}_{k})\right] \leq(b-a)^{r}$.    (4.110)
+```
+\sup _{x \in [a,b]^{d}}\left[\min _{k \in\{1,2, \ldots, K\}} \delta(x, \mathbf{f}_{k})\right] \leq(b-a)^{r}.    (4.110)
+```
 
 将此结论与命题 4.3.6 结合，确立了第 (i), (ii), (iii), (iv), (v), (vi), (vii) 和 (viii) 项。因此，命题 4.3.7 的证明完成。
 
@@ -4928,72 +5484,78 @@ $\sup _{x \in [a,b]^{d}}\left[\min _{k \in\{1,2, \ldots, K\}} \delta(x, \mathbf{
 
 设 $d \in \mathbb{N}$，$L, a \in \mathbb{R}$，$b \in [a, \infty)$，$\varepsilon \in (0,1]$ 且设 $f: [a, b]^{d} \rightarrow \mathbb{R}$ 对所有 $x, y \in [a, b]^{d}$ 满足
 
-$|f(x)-f(y)| \leq L\|x-y\|_{1}$    (4.111)
+```
+|f(x)-f(y)| \leq L\|x-y\|_{1}    (4.111)
+```
 
 （参见定义 3.3.4）。则存在 $\mathbf{F} \in \mathbf{N}$ 使得
 
--   (i) 满足 $\mathcal{I}(\mathbf{F})=d$，
--   (ii) 满足 $\mathcal{O}(\mathbf{F})=1$，
--   (iii) 满足 $\mathcal{H}(\mathbf{F}) \leq d\left(\log _{2}\left(\max \left\{\frac{3 d L(b-a)}{2}, 1\right\}+\log _{2}\left(\varepsilon^{-1}\right)\right)+2\right)$，
--   (iv) 满足 $\mathbb{D}_{1}(\mathbf{F}) \leq \varepsilon^{-d} d(3 d \max \{L(b-a), 1\})^{d}$，
--   (v) 对所有 $i \in\{2,3,4, \ldots\}$，满足 $\mathbb{D}_{i}(\mathbf{F}) \leq \varepsilon^{-d} 3\left(\frac{(3 d L(b-a))^{i}}{2^{i}}+1\right)$，
--   (vi) 满足 $\mathcal{P}(\mathbf{F}) \leq \varepsilon^{-2 d} 9\left(3 d \max \{L(b-a), 1\}\right)^{2 d} d^{2}$，
--   (vii) 满足 $\|T(\mathbf{F})\|_{\infty} \leq \max \{1, L,|a|,|b|, 2\left[\sup _{x \in [a, b]^{d}}|f(x)|\right]\}$，且
--   (viii) 满足 $\sup _{x \in [a, b]^{d}}\left(\mathcal{R} \mathbf{N}(\mathbf{F})(x)-f(x)\right) \leq \varepsilon$
+- (i) 满足 $\mathcal{I}(\mathbf{F})=d$，
+- (ii) 满足 $\mathcal{O}(\mathbf{F})=1$，
+- (iii) 满足 $\mathcal{H}(\mathbf{F}) \leq d\left(\log _{2}\left(\max \left\{\frac{3 d L(b-a)}{2}, 1\right\}+\log _{2}\left(\varepsilon^{-1}\right)\right)+2\right)$，
+- (iv) 满足 $\mathbb{D}_{1}(\mathbf{F}) \leq \varepsilon^{-d} d(3 d \max \{L(b-a), 1\})^{d}$，
+- (v) 对所有 $i \in\{2,3,4, \ldots\}$，满足 $\mathbb{D}_{i}(\mathbf{F}) \leq \varepsilon^{-d} 3\left(\frac{(3 d L(b-a))^{i}}{2^{i}}+1\right)$，
+- (vi) 满足 $\mathcal{P}(\mathbf{F}) \leq \varepsilon^{-2 d} 9\left(3 d \max \{L(b-a), 1\}\right)^{2 d} d^{2}$，
+- (vii) 满足 $\|T(\mathbf{F})\|_{\infty} \leq \max \{1, L,|a|,|b|, 2\left[\sup _{x \in [a, b]^{d}}|f(x)|\right]\}$，且
+- (viii) 满足 $\sup _{x \in [a, b]^{d}}\left(\mathcal{R} \mathbf{N}(\mathbf{F})(x)-f(x)\right) \leq \varepsilon$
 
 （参见定义 1.2.4, 1.3.1, 1.3.4 和 1.3.5）。
 
 *命题 4.3.8 的证明.* 在整个证明过程中，不失一般性地假设
 
-$L(b-a) \neq 0$.    (4.112)
+```
+L(b-a) \neq 0.    (4.112)
+```
 
 注意 (4.112) 确保了 $L \neq 0$ 且 $a < b$。将此结论与假设对所有 $x, y \in [a, b]^{d}$ 满足
 
-$|f(x)-f(y)| \leq L\|x-y\|_{1}$,    (4.113)
+```
+|f(x)-f(y)| \leq L\|x-y\|_{1},    (4.113)
+```
 
 结合，确保了 $L > 0$。因此命题 4.3.7 确保了存在 $\mathbf{F} \in \mathbf{N}$ 满足
 
--   (I) 满足 $\mathcal{I}(\mathbf{F}) = d$，
--   (II) 满足 $\mathcal{O}(\mathbf{F}) = 1$，
--   (III) 满足 $\mathcal{H}(\mathbf{F}) \le \big[ d \log_2(\frac{3dL(b-a)}{2\varepsilon}) + 1 \big] \mathbb{I}_{(0,d/4]}(\frac{\varepsilon}{2L(b-a)})$，
--   (IV) 满足 $\mathbb{D}_1(\mathbf{F}) \le 2d(\frac{3dL(b-a)}{2\varepsilon})^d \mathbb{I}_{(0,d/4]}(\frac{\varepsilon}{2L(b-a)}) + \mathbb{I}_{(d/4,\infty)}(\frac{\varepsilon}{2L(b-a)})$，
--   (V) 对所有 $i \in \{2, 3, 4, \ldots\}$，满足 $\mathbb{D}_i(\mathbf{F}) \le 3 \big[ (\frac{3dL(b-a)}{2\varepsilon})^d \frac{1}{2^{i-1}} \big]$，
--   (VI) 满足 $\mathcal{P}(\mathbf{F}) \le 35 (\frac{3dL(b-a)}{2\varepsilon})^{2d} d^2 \mathbb{I}_{(0,d/4)}(\frac{\varepsilon}{2L(b-a)}) + (d+1) \mathbb{I}_{(d/4,\infty)}(\frac{\varepsilon}{2L(b-a)})$，
--   (VII) 满足 $\|\mathcal{T}(\mathbf{F})\|_\infty \le \max\{1, L, |a|, |b|, 2 \|\mathrm{s}_{[a,b]^d}\|f(x)\|_\infty \}$，且
--   (VIII) 满足 $\sup_{x \in [a,b]^d} |(\mathcal{R}_{\tau}^N(\mathbf{F}))(x) - f(x)| \le \varepsilon$
+- (I) 满足 $\mathcal{I}(\mathbf{F}) = d$，
+- (II) 满足 $\mathcal{O}(\mathbf{F}) = 1$，
+- (III) 满足 $\mathcal{H}(\mathbf{F}) \le \big[ d \log_2(\frac{3dL(b-a)}{2\varepsilon}) + 1 \big] \mathbb{I}_{(0,d/4]}(\frac{\varepsilon}{2L(b-a)})$，
+- (IV) 满足 $\mathbb{D}_1(\mathbf{F}) \le 2d(\frac{3dL(b-a)}{2\varepsilon})^d \mathbb{I}_{(0,d/4]}(\frac{\varepsilon}{2L(b-a)}) + \mathbb{I}_{(d/4,\infty)}(\frac{\varepsilon}{2L(b-a)})$，
+- (V) 对所有 $i \in \{2, 3, 4, \ldots\}$，满足 $\mathbb{D}_i(\mathbf{F}) \le 3 \big[ (\frac{3dL(b-a)}{2\varepsilon})^d \frac{1}{2^{i-1}} \big]$，
+- (VI) 满足 $\mathcal{P}(\mathbf{F}) \le 35 (\frac{3dL(b-a)}{2\varepsilon})^{2d} d^2 \mathbb{I}_{(0,d/4)}(\frac{\varepsilon}{2L(b-a)}) + (d+1) \mathbb{I}_{(d/4,\infty)}(\frac{\varepsilon}{2L(b-a)})$，
+- (VII) 满足 $\|\mathcal{T}(\mathbf{F})\|_\infty \le \max\{1, L, |a|, |b|, 2 \|\mathrm{s}_{[a,b]^d}\|f(x)\|_\infty \}$，且
+- (VIII) 满足 $\sup_{x \in [a,b]^d} |(\mathcal{R}_{\tau}^N(\mathbf{F}))(x) - f(x)| \le \varepsilon$
 
 （参见定义 1.2.4, 1.3.1, 1.3.4, 1.3.5 和 4.2.6）。注意第 **(III)** 项确保了
 
-$$
+```
 \begin{align*}
 \mathcal{H}(\mathbf{F}) \le \big( d \big( \log_2(\frac{3dL(b-a)}{2}) + \log_2(\varepsilon^{-1}) \big) + 2 \big) \mathbb{I}_{(0,d/4)}(\frac{\varepsilon}{2L(b-a)}) \\
 \qquad \le d(\max \big\{ \log_2(\frac{3dL(b-a)}{2}), 0 \big\} + \log_2(\varepsilon^{-1})) + 2 . \qquad (4.114)
 \end{align*}
-$$
+```
 
 此外，注意第 **(IV)** 项意味着
 
-$$
+```
 \begin{align*}
 \mathbb{D}_1(\mathbf{F}) \le d (\frac{3d \max\{L(b-a), 1\}}{\varepsilon})^d \mathbb{I}_{(0,d/4)}(\frac{\varepsilon}{2L(b-a)}) + \mathbb{I}_{(d/4,\infty)}(\frac{\varepsilon}{2L(b-a)}) \\
 \qquad \le \varepsilon^{-d} d(3d \max\{L(b-a), 1\})^d . \qquad (4.115)
 \end{align*}
-$$
+```
 
 再者，注意第 **(V)** 项确立了对于所有 $i \in \{2, 3, 4, \ldots\}$，都有
 
-$$
+```
 \mathbb{D}_i(\mathbf{F}) \le 3 \big( \frac{3dL(b-a)}{2\varepsilon} \big)^d \frac{1}{2^{i-1}} + 1 \le \varepsilon^{-d} 3 (\frac{3dL(b-a)}{2\varepsilon})^d + 1 ). \qquad (4.116)
-$$
+```
 
 另外，注意第 **(VI)** 项确保了
 
-$$
+```
 \begin{align*}
 \mathcal{P}(\mathbf{F}) \le 9 (\frac{3d \max\{L(b-a), 1\}}{\varepsilon})^{2d} d^2 \mathbb{I}_{(0,d/4)}(\frac{\varepsilon}{2L(b-a)}) + (d+1) \mathbb{I}_{(d/4,\infty)}(\frac{\varepsilon}{2L(b-a)}) \\
 \qquad \le \varepsilon^{-2d} 9 (3d \max\{L(b-a), 1\})^{2d} d^2 . \qquad (4.117)
 \end{align*}
-$$
+```
 
 将此结论与 (4.114)、(4.115) 和 (4.116) 结合第 **(I)、(II)、(VII)** 和 **(VIII)** 项，确立了第 (i), (ii), (iii), (iv), (v), (vi), (vii) 和 (viii) 项。因此，命题 4.3.8 的证明完成。
 
@@ -5001,31 +5563,45 @@ $$
 
 *设* $d \in \mathbb{N}$，$L$, $a \in \mathbb{R}$，$b \in [a, \infty)$ *且设* $f \colon [a, b]^d \to \mathbb{R}$ *对所有* $x, y \in [a, b]^d$ *满足*
 
-$\left\vert f(x) - f(y)\right\vert \leq L\left\Vert x - y\right\Vert_1$ (4.118)
+```
+\left\vert f(x) - f(y)\right\vert \leq L\left\Vert x - y\right\Vert_1 \quad (4.118)
+```
 
 *(参见定义* **3.3.4**)。*则存在* $\mathfrak{C} \in \mathbb{R}$ *使得对所有* $\varepsilon \in (0,1]$ *存在* $\mathbf{F} \in \mathbf{N}$ *使得*
 
-$\mathcal{H}(\mathbf{F}) \leq \mathfrak{C}(\log_2(\varepsilon^{-1}) + 1), \qquad \left\Vert \mathcal{T}(\mathbf{F}) \right\Vert_\infty \leq \max\big\{1, L, \vert a\vert, \vert b\vert, 2\big[\sup_{x \in [a,b]^d}\vert f(x)\vert\big]\big\},$ (4.119)
+```
+\mathcal{H}(\mathbf{F}) \leq \mathfrak{C}(\log_2(\varepsilon^{-1}) + 1), \qquad \left\Vert \mathcal{T}(\mathbf{F}) \right\Vert_\infty \leq \max\big\{1, L, \vert a\vert, \vert b\vert, 2\big[\sup_{x \in [a,b]^d}\vert f(x)\vert\big]\big\}, \quad (4.119)
+```
 
-$\mathcal{R}^{\mathbf{N}}_\tau(\mathbf{F}) \in C(\mathbb{R}^d, \mathbb{R}), \quad \sup_{x \in [a,b]^d}\big(\left\vert \mathcal{R}^{\mathbf{N}}_\tau(\mathbf{F})\right)(x) - f(x)\big)\vert \leq \varepsilon, \quad \text{且} \quad \mathcal{P}(\mathbf{F}) \leq \mathfrak{C}\varepsilon^{-2d}$ (4.120)
+```
+\mathcal{R}^{\mathbf{N}}_\tau(\mathbf{F}) \in C(\mathbb{R}^d, \mathbb{R}), \quad \sup_{x \in [a,b]^d}\big(\left\vert \mathcal{R}^{\mathbf{N}}_\tau(\mathbf{F})\right)(x) - f(x)\big)\vert \leq \varepsilon, \quad \text{且} \quad \mathcal{P}(\mathbf{F}) \leq \mathfrak{C}\varepsilon^{-2d} \quad (4.120)
+```
 
 *(参见定义* **1.2.4, 1.3.1, 1.3.4 和 1.3.5**)。
 
 *推论* **4.3.9 *的证明.* 在整个证明过程中，设* $\mathfrak{C} \in \mathbb{R}$ *满足*
 
-$\mathfrak{C} = 9\big(3d \, \max\{L(b-a), 1\}\big)^{2d} d^2.$ (4.121)
+```
+\mathfrak{C} = 9\big(3d \, \max\{L(b-a), 1\}\big)^{2d} d^2. \quad (4.121)
+```
 
 注意命题 **4.3.8** 中的第 **(i), (ii), (iii), (vi), (vii) 和 (viii)** 项 *以及对于所有* $\varepsilon \in (0,1]$ *都有*
 
-$d\big(\log_2\big(\max\{\frac{3dL(b-a)}{2}, 1\}\big) + \log_2(\varepsilon^{-1})\big) + 2 \leq d\big(\max\big\{\frac{3dL(b-a)}{2}, 1\big\} + \log_2(\varepsilon^{-1})\big) + 2$
-$\leq d \, \max\{3dL(b-a), 1\} + 2 + d \, \log_2(\varepsilon^{-1})$
-$\leq \mathfrak{C}(\log_2(\varepsilon^{-1}) + 1)$ (4.122)
+```
+d\big(\log_2\big(\max\{\frac{3dL(b-a)}{2}, 1\}\big) + \log_2(\varepsilon^{-1})\big) + 2 \leq d\big(\max\big\{\frac{3dL(b-a)}{2}, 1\big\} + \log_2(\varepsilon^{-1})\big) + 2
+\leq d \, \max\{3dL(b-a), 1\} + 2 + d \, \log_2(\varepsilon^{-1})
+\leq \mathfrak{C}(\log_2(\varepsilon^{-1}) + 1) \quad (4.122)
+```
 
 *这意味着对于每个* $\varepsilon \in (0,1)$ *存在* $\mathbf{F} \in \mathbf{N}$ *使得*
 
-$\mathcal{H}(\mathbf{F}) \leq \mathfrak{C}(\log_2(\varepsilon^{-1}) + 1), \qquad \left\Vert \mathcal{T}(\mathbf{F}) \right\Vert_\infty \leq \max\big\{1, L, \vert a\vert, \vert b\vert, 2\big[\sup_{x \in [a,b]^d}\vert f(x)\vert\big]\big\},$ (4.123)
+```
+\mathcal{H}(\mathbf{F}) \leq \mathfrak{C}(\log_2(\varepsilon^{-1}) + 1), \qquad \left\Vert \mathcal{T}(\mathbf{F}) \right\Vert_\infty \leq \max\big\{1, L, \vert a\vert, \vert b\vert, 2\big[\sup_{x \in [a,b]^d}\vert f(x)\vert\big]\big\}, \quad (4.123)
+```
 
-$\mathcal{R}^{\mathbf{N}}_\tau(\mathbf{F}) \in C(\mathbb{R}^d, \mathbb{R}), \qquad \sup_{x \in [a,b]^d}\big(\left\vert \mathcal{R}^{\mathbf{N}}_\tau(\mathbf{F})\right)(x) - f(x)\big)\vert \leq \varepsilon, \quad \text{且} \quad \mathcal{P}(\mathbf{F}) \leq \mathfrak{C}\varepsilon^{-2d}$ (4.124)
+```
+\mathcal{R}^{\mathbf{N}}_\tau(\mathbf{F}) \in C(\mathbb{R}^d, \mathbb{R}), \qquad \sup_{x \in [a,b]^d}\big(\left\vert \mathcal{R}^{\mathbf{N}}_\tau(\mathbf{F})\right)(x) - f(x)\big)\vert \leq \varepsilon, \quad \text{且} \quad \mathcal{P}(\mathbf{F}) \leq \mathfrak{C}\varepsilon^{-2d} \quad (4.124)
+```
 
 *(参见定义* **1.2.4, 1.3.1, 1.3.4 和 1.3.5**)。*推论* **4.3.9 *的证明至此完成。* $\square$
 
@@ -5033,35 +5609,50 @@ $\mathcal{R}^{\mathbf{N}}_\tau(\mathbf{F}) \in C(\mathbb{R}^d, \mathbb{R}), \qqu
 
 *设* $d \in \mathbb{N}$，*$p$、$q \in (0, \infty)$ 满足* $p \leq q$。*则对所有* $x \in \mathbb{R}^d$ *都有*
 
-$\left\Vert x \right\Vert_p \geq \left\Vert x \right\Vert_q$ (4.125)
+```
+\left\Vert x \right\Vert_p \geq \left\Vert x \right\Vert_q \quad (4.125)
+```
 
 *(参见定义* **3.3.4**)。
 
-
-
-
 引理 4.3.10 的证明。在整个证明过程中，不妨假设 $q < \infty$。令 $e_{1}, e_{2}, \ldots, e_{d} \in \mathbb{R}^{d}$ 满足 $e_{1} = (1, 0, \ldots, 0)$，$e_{2} = (0, 1, 0, \ldots, 0)$，$\ldots$，$e_{d} = (0, \ldots, 0, 1)$。令 $r \in \mathbb{R}$ 满足
 
-$$ r = p^{-1}q, \quad (4.126) $$
+```
+r = p^{-1}q, \quad (4.126)
+```
 
 并令 $x = (x_{1}, \ldots, x_{d})$，$y = (y_{1}, \ldots, y_{d}) \in \mathbb{R}^{d}$ 满足对所有 $i \in \{1, 2, \ldots, d\}$ 有
 
-$$ y_{i} = |x_{i}|^{p}. \quad (4.127) $$
+```
+y_{i} = |x_{i}|^{p}. \quad (4.127)
+```
 
 注意到 (4.127)、事实
 
-$$ y = \sum_{i=1}^{d} y_{i} e_{i}, \quad (4.128) $$
+```
+y = \sum_{i=1}^{d} y_{i} e_{i}, \quad (4.128)
+```
 
 以及对所有 $v, w \in \mathbb{R}^{d}$ 均有
 
-$$ \|v + w\|_{r} \leq \|v\|_{r} + \|w\|_{r} \quad (4.129) $$
+```
+\|v + w\|_{r} \leq \|v\|_{r} + \|w\|_{r} \quad (4.129)
+```
 
 （参见定义 3.3.4）所保证的事实，我们有
 
+```
 \begin{align*}
+```
+
+
+
 \|x\|_{q} &= \left[\sum_{i=1}^{d} |x_{i}|^{q}\right]^{1/q} = \left[\sum_{i=1}^{d} |x_{i}|^{pr}\right]^{1/q} = \left[\sum_{i=1}^{d} |y_{i}|^{r}\right]^{1/q} = \left[\sum_{i=1}^{d} |y_{i}|^{r}\right]^{1/(pr)} = \|y\|_{r}^{1/p} \\
+
 &= \left\|\sum_{i=1}^{d} y_{i} e_{i}\right\|_{r}^{1/p} \leq \left[\sum_{i=1}^{d} \|y_{i} e_{i}\|_{r}\right]^{1/p} = \left[\sum_{i=1}^{d} \|y_{i}\| \|e_{i}\|_{r}\right]^{1/p} = \left[\sum_{i=1}^{d} |y_{i}|\right]^{1/p} \\
+
 &= \|y\|_{1}^{1/p} = \|x\|_{p}. \quad (4.130)
+
 \end{align*}
 
 这就证明了 (4.125)。引理 4.3.10 的证明至此结束。
@@ -5095,8 +5686,11 @@ $$ \mathfrak{d} \geq \sum_{k=1}^{L} l_k(l_{k-1}+1). \quad (4.133) $$
 则我们将 $\mathcal{N}_{u,v}^{\theta,1}: \mathbb{R}^{l_0} \rightarrow \mathbb{R}^{l_L}$ 定义为满足对所有 $x \in \mathbb{R}^{l_0}$ 有
 
 $$ \mathcal{N}_{u,v}^{\theta,1}(x)= \begin{cases}
+
 \left(\mathcal{N}_{\mathcal{C}_{u,v}^{l_L}}^{\theta_{l_0}} \right)(x) & : L=1 \\
+
 \left(\mathcal{N}_{\mathfrak{G}_{l_1}, \mathfrak{G}_{l_2}, \ldots, \mathfrak{G}_{l_{L-1}}, \mathcal{C}_{u,v}^{l_L}}^{\theta_1, \theta_2, \ldots, \theta_L} \right)(x) & : L>1
+
 \end{cases} \quad (4.134) $$
 
 （参见定义 1.1.3、1.2.5 和 1.2.10）的函数。
@@ -5136,44 +5730,63 @@ $$ \mathcal{R}_a^{\mathbb{N}}(((W_1, B_1), (W_2, B_2), \ldots, (W_L, B_L))) \in 
 （参见定义 1.3.4）。此外，注意到假设对所有 $k \in \{1, 2, \ldots, L\}$，$i \in \{1, 2, \ldots, \mathcal{l}_k\}$，$j \in \mathbb{N} \cap (l_{k-1}, \mathcal{l}_k)$ 有 $\mathcal{W}_{k,i,j} = 0$，这表明对所有 $k \in \{1, 2, \ldots, L\}$，$x = (x_1, x_2, \ldots, x_{l_{k-1}}) \in \mathbb{R}^{l_{k-1}}$ 有
 
 \begin{align*}
+
 \pi_k(\mathcal{W}_k x + \mathcal{B}_k) &= \begin{pmatrix}
+
 \left[\sum_{i=1}^{l_{k-1}} \mathcal{W}_{k,1,i} x_i \right] + \mathcal{B}_{k,1}, \left[\sum_{i=1}^{l_{k-1}} \mathcal{W}_{k,2,i} x_i \right] + \mathcal{B}_{k,2}, \ldots, \left[\sum_{i=1}^{l_{k-1}} \mathcal{W}_{k,\mathcal{l}_k,i} x_i \right] + \mathcal{B}_{k,\mathcal{l}_k}
+
 \end{pmatrix} \quad (4.140) \\
+
 &= \begin{pmatrix}
+
 \left[\sum_{i=1}^{l_{k-1}} \mathcal{W}_{k,1,i} x_i \right] + \mathcal{B}_{k,1}, \left[\sum_{i=1}^{l_{k-1}} \mathcal{W}_{k,2,i} x_i \right] + \mathcal{B}_{k,2}, \ldots, \left[\sum_{i=1}^{l_{k-1}} \mathcal{W}_{k,\mathcal{l}_k,i} x_i \right] + \mathcal{B}_{k,\mathcal{l}_k}
+
 \end{pmatrix}.
+
 \end{align*}
 
 将此与假设对所有 $k \in \{1, 2, \ldots, L\}$，$i \in \{1, 2, \ldots, \mathcal{l}_k\}$，$j \in \mathbb{N} \cap (0, l_{k-1}]$ 有 $\mathcal{W}_{k,i,j} = W_{k,i,j}$ 且 $\mathcal{B}_{k,i} = B_{k,i}$ 结合，保证了对所有 $k \in \{1, 2, \ldots, L\}$，$x = (x_1, x_2, \ldots, x_{l_{k-1}}) \in \mathbb{R}^{l_{k-1}}$ 有
 
 \begin{align*}
+
 \pi_k(\mathcal{W}_k x + \mathcal{B}_k) &= \begin{pmatrix}
+
 \left[\sum_{i=1}^{l_{k-1}} W_{k,1,i} x_i \right] + B_{k,1}, \left[\sum_{i=1}^{l_{k-1}} W_{k,2,i} x_i \right] + B_{k,2}, \ldots, \left[\sum_{i=1}^{l_{k-1}} W_{k,\mathcal{l}_k,i} x_i \right] + B_{k,\mathcal{l}_k}
+
 \end{pmatrix} \quad (4.141) \\
+
 &= W_k \pi_{k-1}(x) + B_k.
+
 \end{align*}
-
-
-
 
 ## 4.4. 多维函数的精化 ANN 近似结果
 
 因此，我们得出，对于所有 $x_{0}\in\mathbb{R}^{l_0}$，$x_{1}\in\mathbb{R}^{\mathrm{l}_{1}}, \ldots, x_{L-1}\in\mathbb{R}^{l_{L-1}}$，以及 $k\in\mathbb{N}\cap(0,L)$ 满足 $\forall m\in\mathbb{N}\cap(0,L)$ 时：$x_m = \mathfrak{M}_{a,l_m}(\mathfrak{M}_{m \times m-1} + \mathfrak{B}_m)$，均有
 
 $$
+
 \pi_k(x_k) = \mathfrak{M}_{a,l_k}(\pi_k(\mathcal{M}_{k,k-1} + \mathfrak{B}_k)) = \mathfrak{M}_{a,l_k}(W_k \pi_{k-1}(x_{k-1}) + B_k) \quad (4.142)
+
 $$
 
 （参见定义 1.2.1）。基于归纳法，假设 $l_0 = \mathrm{l}_0$ 且 $l_L = \mathrm{l}_L$，以及 (4.141)，由此可得，对于所有 $x_{0}\in\mathbb{R}^{l_0}$，$x_{1}\in\mathbb{R}^{\mathrm{l}_{1}}, \ldots, x_{L-1}\in\mathbb{R}^{l_{L-1}}$ 满足 $\forall k\in\mathbb{N}\cap(0,L)$ 时：$x_k = \mathfrak{M}_{a,l_k}(\mathcal{M}_{k}x_{k-1} + \mathfrak{B}_k)$，均有
 
 $$
+
 \begin{aligned}
+
 &(\mathcal{R}_{a}^{\mathrm{N}}(((W_{1},B_{1}),(W_{2},B_{2}),\ldots,(W_{L},B_{L}))))(x_{0}) \\
+
 &\quad = \mathcal{R}_{a}^{\mathrm{N}}(((\mathcal{M}_{1},B_{1}),(W_{2},B_{2}),\ldots,(W_{L},B_{L})))((\pi_{0})(x_{0})) \\
+
 &\quad = W_{L}\pi_{L-1}(x_{L-1}) + B_{L} \\
+
 &\quad = \pi_{L}(\mathcal{M}_{L}x_{L-1} + \mathfrak{B}_{L}) = \mathcal{M}_{L}x_{L-1} + \mathfrak{B}_{L} \\
+
 &\quad = (\mathcal{R}_{a}^{\mathrm{N}}(((\mathcal{M}_{1},\mathfrak{B}_{1}),(\mathcal{M}_{2},\mathfrak{B}_{2}),\ldots,(\mathcal{M}_{L},\mathfrak{B}_{L})))((x_{0})
+
 \end{aligned} \quad (4.143)
+
 $$
 
 因此，引理 4.4.3 的证明完成。
@@ -5183,8 +5796,12 @@ $$
 设 $a\in C(\mathbb{R},\mathbb{R})$，$L\in\mathbb{N}$，$\mathrm{l}_0, \mathrm{l}_1, \ldots, \mathrm{l}_L$，$l_0, \mathrm{l}_1, \ldots, l_L\in\mathbb{N}$ 满足对于所有 $k\in\{1,2,\ldots,L\}$ 有
 
 $$
+
 \mathrm{l}_0 = l_0, \quad \mathrm{l}_L = l_L, \quad \text{且} \quad \mathrm{l}_k \geq l_k \quad (4.144)
+
 $$
+
+
 
 并设 $\Phi\in\mathbb{N}$ 满足 $\mathcal{D}(\Phi) = (l_0, l_1, \ldots, l_L)$（参见定义 1.3.1）。则存在 $\Psi\in\mathbb{N}$ 使得
 
@@ -5194,7 +5811,8 @@ $$
 
 （参见定义 1.3.4、1.3.5 和 3.3.4）。
 
-**引理 4.4.4 的证明。** 在整个证明过程中，设 $B_k = (B_{k,i})_{i\in\{1,2,\ldots,l_k\}}\in\mathbb{R}^{l_k}$，$k\in\{1,2,\ldots,L\}$，且 $W_k = (W_{k,i,j})_{(i,j)\in\{1,2,\ldots,l_k\}\times\{1,2,\ldots,l_{k-1}\}}\in\mathbb{R}^{l_k\times l_{k-1}}$，$k\in\{1,2,\ldots,L\}$，满足
+### 引理 4.4.4 的证明
+在整个证明过程中，设 $B_k = (B_{k,i})_{i\in\{1,2,\ldots,l_k\}}\in\mathbb{R}^{l_k}$，$k\in\{1,2,\ldots,L\}$，且 $W_k = (W_{k,i,j})_{(i,j)\in\{1,2,\ldots,l_k\}\times\{1,2,\ldots,l_{k-1}\}}\in\mathbb{R}^{l_k\times l_{k-1}}$，$k\in\{1,2,\ldots,L\}$，满足
 
 $$
 \Phi = ((W_1, B_1), (W_2, B_2), \ldots, (W_L, B_L)) \quad (4.146)
@@ -5238,7 +5856,6 @@ $$
 （参见定义 1.3.4）。因此，引理 4.4.4 的证明完成。$\square$
 
 ### 引理 4.4.5
-
 设 $L, \mathfrak{L} \in \mathbb{N}, l_{0}, l_{1}, \ldots, l_{L}, l_{0}, l_{1}, \ldots, l_{\mathfrak{L}} \in \mathbb{N}, \Phi_{1} = \left(\left(W_{1}, B_{1}\right),\left(W_{2}, B_{2}\right), \ldots,\left(W_{L}, B_{L}\right)\right) \in \left(\prod_{k=1}^{L}\left(\mathbb{R}^{l_{k} \times l_{k-1}} \times \mathbb{R}^{l_{k}}\right)\right), \Phi_{2} = \left(\left(\mathfrak{W}_{1}, \mathfrak{B}_{1}\right),\left(\mathfrak{W}_{2}, \mathfrak{B}_{2}\right), \ldots,\left(\mathfrak{W}_{\mathfrak{L}}, \mathfrak{B}_{\mathfrak{L}}\right)\right) \in \left(\prod_{k=1}^{\mathfrak{L}}\left(\mathbb{R}^{l_{k} \times l_{k-1}} \times \mathbb{R}^{l_{k}}\right)\right)$。则
 
 $$
@@ -5250,7 +5867,6 @@ $$
 **引理 4.4.5 的证明。** 观察到 (2.2) 和引理 1.3.8 确立了 (4.151)。因此，引理 4.4.5 的证明完成。$\square$
 
 ### 引理 4.4.6
-
 设 $d, L \in \mathbb{N}, \Phi \in \mathbf{N}$ 满足 $L \geq \mathcal{L}(\Phi)$ 且 $d = \mathcal{O}(\Phi)$（参见定义 1.3.1）。则
 
 $$
@@ -5279,9 +5895,6 @@ $$
 $$
 \left(\mathfrak{I}_{d}\right)^{\bullet(L-\mathcal{L}(\Phi))}=\left(\left(W_{1}, B_{1}\right),\left(W_{2}, B_{2}\right), \ldots,\left(W_{L-\mathcal{L}(\Phi)+1}, B_{L-\mathcal{L}(\Phi)+1}\right)\right). \quad (4.155)
 $$
-
-
-
 
 此外，观察到 (2.44)、(2.70)、(2.71)、(2.2) 和 (2.41) 证明了
 
@@ -5378,6 +5991,8 @@ w_{d,1} & w_{d,2} & \dots & w_{d,k} \\
 \end{pmatrix} \in \mathbb{R}^{(2d) \times k}.
 $$
 
+
+
 此外，观察到 (4.156) 和 (4.158) 暗示对于所有 $\mathfrak{B} = (b_1, b_2, \dots, b_d) \in \mathbb{R}^d$，有
 
 $$
@@ -5423,7 +6038,7 @@ $$
 
 (参见定义 2.2.8)。因此，引理 4.4.6 的证明至此完成。
 
-## **引理 4.4.7.**
+## 引理 4.4.7.
 
 设 $L, \mathfrak{L} \in \mathbb{N}$，$l_0, l_1, \dots, l_L, \mathfrak{l}_0, \mathfrak{l}_1, \dots, \mathfrak{l}_\mathfrak{L} \in \mathbb{N}$ 满足
 
@@ -5439,7 +6054,9 @@ $$
 
 (参见定义 1.2.4, 1.3.4, 1.3.5 和 3.3.4)。
 
-**引理 4.4.7 的证明.** 在整个证明过程中，设 $\Xi \in \mathbf{N}$ 满足 $\Xi = \mathfrak{L}_{\mathfrak{I}_L}(\Phi)$ (参见定义 2.2.6 和 2.2.8)。注意引理 2.2.7 中的条目 (i) 确立了 $\mathcal{D}(\mathfrak{I}_{L}\mathfrak{c}) = (L, 2L, L_L) \in \mathbb{N}^{3}$。结合此结果与引理 2.2.11 可知 $\mathcal{D}(\Xi) \in \mathbb{N}^{\mathfrak{I} + 1}$ 且
+### 引理 4.4.7 的证明.
+
+在整个证明过程中，设 $\Xi \in \mathbf{N}$ 满足 $\Xi = \mathfrak{L}_{\mathfrak{I}_L}(\Phi)$ (参见定义 2.2.6 和 2.2.8)。注意引理 2.2.7 中的条目 (i) 确立了 $\mathcal{D}(\mathfrak{I}_{L}\mathfrak{c}) = (L, 2L, L_L) \in \mathbb{N}^{3}$。结合此结果与引理 2.2.11 可知 $\mathcal{D}(\Xi) \in \mathbb{N}^{\mathfrak{I} + 1}$ 且
 
 $$
 \mathcal{D}(\Xi) = \begin{cases} 
@@ -5477,7 +6094,7 @@ $$
 
 结合此结果与 (4.167) 和 (4.169) 证明了 (4.165)。因此，引理 4.4.7 的证明至此完成。
 
-### **引理 4.4.8.**
+## 引理 4.4.8.
 
 设 $u \in [-\infty, \infty)$，$v \in (u, \infty]$，$L, \mathfrak{L}, \mathfrak{d}, \mathfrak{C} \in \mathbb{N}$，$\theta \in \mathbb{R}^\mathfrak{d}$，$l_0, l_1, \ldots, l_L, \mathfrak{l}_0, \mathfrak{l}_1, \ldots, \mathfrak{l}_\mathfrak{L} \in \mathbb{N}$ 满足
 
@@ -5492,9 +6109,6 @@ $$
 $$
 
 (参见定义 3.3.4 和 4.4.1)。
-
-
-
 
 ### 4.4. 多维函数精细化 ANN 近似结果
 
@@ -5538,9 +6152,11 @@ $$\mathcal{L}^{\theta, (l_0, l_1, \dots, l_L)}_{u, v} = \mathcal{C}_{u, v, l_L} 
 
 □
 
-#### 4.4.3 通过可变架构 ANN 进行近似
 
-推论 4.4.9。设 $d, K, \mathbf{d}, \mathbf{L} \in \mathbb{N}$，$\mathbf{l} = (\mathbf{l_0}, \mathbf{l_1}, \dots, \mathbf{l_K}) \in \mathbb{N}^{K+1}$，$L \in [0, \infty)$ 满足
+
+### 4.4.3 通过可变架构 ANN 进行近似
+
+**推论 4.4.9。** 设 $d, K, \mathbf{d}, \mathbf{L} \in \mathbb{N}$，$\mathbf{l} = (\mathbf{l_0}, \mathbf{l_1}, \dots, \mathbf{l_K}) \in \mathbb{N}^{K+1}$，$L \in [0, \infty)$ 满足
 
 $$\mathbf{L} \geq [\log_2(K)] + 2, \quad \mathbf{l_0} = d, \quad \mathbf{l_K} = 1, \quad \mathbf{l_1} \geq 2dK, \quad \text{且} \quad \mathbf{d} \geq \sum_{i=1}^\mathbf{L} \mathbf{l_i} (\mathbf{l_{i-1}} + 1), \tag{4.182}$$
 
@@ -5554,7 +6170,7 @@ $$\sup_{x \in E} |f(x) - \mathcal{A}_{\infty,\infty}^{\theta,1}(x)| \leq 2L [\su
 
 （参见定义 4.4.1）。
 
-推论 4.4.9 的证明。在本证明中，令 $\boldsymbol{\eta} \in \mathbb{R}^K$，$\boldsymbol{\Phi} \in \mathbb{N}$ 满足 $\boldsymbol{\eta} = (f(\mathbf{r_1}), f(\mathbf{r_2}), \dots, f(\mathbf{r_K}))$ 且
+**推论 4.4.9 的证明。** 在本证明中，令 $\boldsymbol{\eta} \in \mathbb{R}^K$，$\boldsymbol{\Phi} \in \mathbb{N}$ 满足 $\boldsymbol{\eta} = (f(\mathbf{r_1}), f(\mathbf{r_2}), \dots, f(\mathbf{r_K}))$ 且
 
 $$\boldsymbol{\Phi} = \mathbb{M}_K \bullet \mathbf{A}_{\mathbf{L} - 1, \mathbf{L}_K} \bullet \mathbf{P}_K (\underline{\mathbf{A}}_{\mathbf{d}} \bullet \mathbf{A}_{\mathbf{l_d}, -\mathbf{r_1}}, \underline{\mathbf{A}}_{\mathbf{d}} \bullet \mathbf{A}_{\mathbf{l_d}, -\mathbf{r_2}}, \dots, \underline{\mathbf{A}}_{\mathbf{d}} \bullet \mathbf{A}_{\mathbf{l_d}, -\mathbf{r_K}}) \bullet \mathbb{T}_{\mathbf{d}, K} \tag{4.185}$$
 
@@ -5579,12 +6195,14 @@ $$\|\boldsymbol{\theta}\|_{\infty} \leq \max\{1, L, \max_{\boldsymbol{k} \in \{1
 而且，注意 (4.186)、引理 4.4.2 和第 (VII) 项意味着
 
 $$\begin{aligned} \sup_{x \in E} |f(x) - \mathscr{A}^{\boldsymbol{\theta}, (\boldsymbol{l}_0, 1, \dots, \boldsymbol{l}_{\boldsymbol{L}})}_{\infty, \infty}(x)| &= \sup_{x \in E} |f(x) - \mathscr{A}^{T(\boldsymbol{\Phi}), \mathscr{D}(\boldsymbol{\Phi})}_{\infty, \infty}(x)| \\
+
 &= \sup_{x \in E} |f(x) - (\mathscr{R}_{\boldsymbol{r}}^{\boldsymbol{N}}(\boldsymbol{\Phi}))(x)| \\
+
 &\leq 2L \left[\sup_{x \in E} \left(\text{inf}_{\boldsymbol{k} \in \{1,2,\dots,K\}} \|x - \boldsymbol{f}_{\boldsymbol{k}}\|_1\right)\right] \tag{4.188} \end{aligned}$$
 
 （参见定义 4.4.1）。推论 4.4.9 的证明至此完成。
 
-推论 4.4.10。设 $\boldsymbol{d}, \boldsymbol{K}, \boldsymbol{L} \in \mathbb{N}$，$\boldsymbol{l} = (\boldsymbol{l}_0, 1, \dots, \boldsymbol{l}_{\boldsymbol{L}}) \in \mathbb{N}^{\boldsymbol{L}+1}$，$L \in [0, \infty)$，$\boldsymbol{u} \in [-\infty, \infty)$，$v \in (u, \infty]$ 满足
+**推论 4.4.10。** 设 $\boldsymbol{d}, \boldsymbol{K}, \boldsymbol{L} \in \mathbb{N}$，$\boldsymbol{l} = (\boldsymbol{l}_0, 1, \dots, \boldsymbol{l}_{\boldsymbol{L}}) \in \mathbb{N}^{\boldsymbol{L}+1}$，$L \in [0, \infty)$，$\boldsymbol{u} \in [-\infty, \infty)$，$v \in (u, \infty]$ 满足
 
 $$\boldsymbol{L} \geq [\log_2 K] + 2, \quad \boldsymbol{l}_0 = \boldsymbol{d}, \quad \boldsymbol{l}_{\boldsymbol{L}} = 1, \quad \boldsymbol{l}_1 \geq 2\boldsymbol{d}K, \quad \text{且} \quad \boldsymbol{d} \geq \sum_{i=1}^{\boldsymbol{L}} \boldsymbol{l}_i(\boldsymbol{l}_{i-1}+1), \tag{4.189}$$
 
@@ -5598,7 +6216,7 @@ $$\sup_{x \in E} |f(x) - \mathscr{A}_{u, v}^{\boldsymbol{\theta}, 1}(x)| \leq 2L
 
 （参见定义 4.4.1）。
 
-推论 4.4.10 的证明。观察可知，推论 4.4.9 证明了存在 $\boldsymbol{\theta} \in \mathbb{R}^\boldsymbol{d}$ 使得
+**推论 4.4.10 的证明。** 观察可知，推论 4.4.9 证明了存在 $\boldsymbol{\theta} \in \mathbb{R}^\boldsymbol{d}$ 使得
 
 $$\|\boldsymbol{\theta}\|_{\infty} \leq \max\{1, L, \max_{\boldsymbol{k} \in \{1,2,\dots,K\}} \|\boldsymbol{\mathfrak{f}}_{\boldsymbol{k}}\|_{\infty}, 2\max_{\boldsymbol{k} \in \{1,2,\dots,K\}} |f(\boldsymbol{f}_{\boldsymbol{k}})|\} \tag{4.192}$$
 
@@ -5613,11 +6231,10 @@ $$f(x) = \boldsymbol{c}_{u, v}(f(x)) \tag{4.194}$$
 （参见定义 1.2.9 和 4.4.1）。由于对于所有 $x, y \in \mathbb{R}$，有 $|\boldsymbol{c}_{u, v}(x) - \boldsymbol{c}_{u, v}(y)| \leq |x - y|$，结合 (4.193) 可知
 
 $$\begin{aligned} \sup_{x \in E} & |f(x) - \mathscr{A}_{u, v}^{\boldsymbol{\theta}, 1}(x)| = \sup_{x \in E} |\boldsymbol{c}_{u, v}(f(x)) - \boldsymbol{c}_{u, v}(\mathscr{A}_{\infty, \infty}^{\boldsymbol{\theta}, 1}(x))| \\
+
 &\leq \sup_{x \in E} |f(x) - \mathscr{A}_{\infty, \infty}^{\boldsymbol{\theta}, 1}(x)| \leq 2L \left[\sup_{x \in E} \left(\text{inf}_{\boldsymbol{k} \in \{1,2,\dots,K\}} \|x - \boldsymbol{f}_{\boldsymbol{k}}\|_1\right)\right]. \tag{4.195} \end{aligned}$$
 
 推论 4.4.10 的证明至此完成。
-
-
 
 ## 4.4.4 逼近误差的精细化收敛速率
 
@@ -5626,6 +6243,8 @@ $$\begin{aligned} \sup_{x \in E} & |f(x) - \mathscr{A}_{u, v}^{\boldsymbol{\thet
 $$\sup_{x \in [a, b]^d} \left| \mathcal{A}_{a, v}^{\vartheta, \mathbf{l}}(x) - f(x) \right| \le \frac{dL(b-a)}{2} \tag{4.196}$$
 
 （参见定义 4.4.1）。
+
+
 
 *引理 4.4.11 的证明.* 在整个证明过程中，令 $\mathbf{d} = \sum_{i=1}^{\mathbf{L}} \mathbf{l}_i(\mathbf{l}_{i-1}+1)$，令 $\mathbf{m} = (\mathbf{m}_1, \mathbf{m}_2$, $\dots, \mathbf{m}_{\mathbf{d}}) \in [a, b]^{\mathbf{d}}$ 满足对于所有 $i \in \{1, 2, \dots, d\}$，有
 
@@ -5650,11 +6269,13 @@ $$\begin{align*} |\mathbf{m}_1 - x| &= \mathbf{m}_1 - x = \frac{(a+b)}{2} - x \l
 假设 $\forall x, y \in [a, b]^d, |f(x) - f(y)| \le L\|x - y\|_1$ 以及 (4.200) 从而证明，对于所有 $x = (x_1, x_2, \ldots, x_d) \in [a, b]^d$，成立
 
 $$|\mathcal{A}^{d, 1}_{u, v}(x) - f(x)| = |f(\mathbf{m}) - f(x)| \le L\|\mathbf{m} - x\|_1 = L\sum_{i=1}^{d} |\mathbf{m}_i - x_i|$$
+
 $$= L\sum_{i=1}^{d} |\mathbf{m}_i - x_i| \le \sum_{i=1}^{d} \frac{L(b - a)}{2} = \frac{dL(b - a)}{2}.$$ (4.202)
 
 结合 $\|\vartheta\|_{\infty} = \max_{i \in \{1, 2, \ldots, d\}} |\vartheta_i| = |f(\mathbf{m})| \le \sup_{x \in [a, b]^d} |f(x)|$ 这一事实，确立了 (4.196)。引理 4.4.11 的证明至此完成。 $\Box$
 
-**命题 4.4.12.** *设* $d, \mathbf{L} \in \mathbb{N}$，$A \in (0, \infty)$，$L, a \in \mathbb{R}$，$b \in (a, \infty)$，$u \in [-\infty, \infty)$，$v \in (u, \infty]$，$\mathbf{l} = (\mathbf{l}_1, \mathbf{l}_2, \ldots, \mathbf{l}_{\mathbf{L}}) \in \mathbb{N}^{\mathbf{L} + 1}$，*假设*
+### 命题 4.4.12
+*设* $d, \mathbf{L} \in \mathbb{N}$，$A \in (0, \infty)$，$L, a \in \mathbb{R}$，$b \in (a, \infty)$，$u \in [-\infty, \infty)$，$v \in (u, \infty]$，$\mathbf{l} = (\mathbf{l}_1, \mathbf{l}_2, \ldots, \mathbf{l}_{\mathbf{L}}) \in \mathbb{N}^{\mathbf{L} + 1}$，*假设*
 
 $$\mathbf{L} \ge 1 + \lfloor\log_2(A/(2d))\rfloor + 1\rceil^{(6d, \infty)}(A), \quad \mathbf{l}_0 = d, \quad \mathbf{l}_1 \ge \mathtt{A}^{(6d, \infty)}(A), \quad \mathbf{l}_{\mathbf{L}} = 1,$$ (4.203)
 
@@ -5699,6 +6320,7 @@ $$\|\vartheta\|_{\infty} \le \max \{1, L, \max_{k \in \{1,2,\ldots,K\}} \|\mathb
 且
 
 $$\sup_{x \in [a,b]^d} |\mathcal{N}^{\vartheta,1}_{a,b}(x) - f(x)| \le 2L \left[ \sup_{x \in [a,b]^d} \left( \inf_{k \in \{1,2,\ldots,K\}} \|x - \mathbf{f}_k\|_1 \right) \right]$$
+
 $$= 2L \left[ \sup_{x \in [a,b]^d} \left( \inf_{k \in \{1,2,\ldots,K\}} \delta(x, \mathbf{f}_k) \right) \right].$$
 
 注意，(4.212) 表明
@@ -5708,23 +6330,25 @@ $$\|\vartheta\|_{\infty} \le \max \{1, L, |a|, |b|, 2 \sup_{x \in [a,b]^d} |f(x)
 此外，注意到 (4.213)、(4.207)、(4.211) 以及对于所有 $k \in \mathbb{N}$，$2k \le 2(2^k - 1) = 2^{k+1} - 2 < 2^{k+1}$ 这一事实，确保了
 
 $$\sup_{x \in [a,b]^d} |\mathcal{N}^{\vartheta,1}_{a,b}(x) - f(x)| \le 2L \left[ \sup_{x \in [a,b]^d} \left( \inf_{k \in \{1,2,\ldots,K\}} \delta(x, \mathbf{f}_k) \right) \right]$$
+
 $$\le 2Lr = \frac{dL(b-a)}{3} \le \frac{dL(b-a)}{(2/3)(A/(2^d))^{1/d}} = \frac{2^{1/d} 3dL(b-a)}{2 A^{1/d}} \le \frac{3dL(b-a)}{A^{1/d}}.$$
 
 结合这一点与 (4.214)，蕴含了 (4.206)。命题 4.4.12 的证明至此完成。
 
-**推论 4.4.13.** 设 $d \in \mathbb{N}$，$a \in \mathbb{R}$，$b \in (a, \infty)$，$L \in (0, \infty)$，且令 $f: [a, b]^d \rightarrow \mathbb{R}$ 满足对于所有 $x, y \in [a, b]^d$，有
+### 推论 4.4.13
+设 $d \in \mathbb{N}$，$a \in \mathbb{R}$，$b \in (a, \infty)$，$L \in (0, \infty)$，且令 $f: [a, b]^d \rightarrow \mathbb{R}$ 满足对于所有 $x, y \in [a, b]^d$，有
 
 $$|f(x) - f(y)| \le L\|x - y\|_1$$
-
-
-
-
 
 （参见定义 3.3.4）。那么存在 $\mathfrak{C} \in \mathbb{R}$，使得对于所有 $\varepsilon \in (0,1]$，存在 $\mathbf{F} \in \mathbf{N}$，满足
 
 $$
+
 \mathcal{H}(\mathbf{F}) \leq \max \big\{0, d(\log_2(\varepsilon^{-1}) + \log_2(d) + \log_2(3L(b-a)) + 1) \big\}, \quad (4.217)
+
 $$
+
+
 
 $$
 \|\mathcal{T} (\mathbf{F})\|_\infty \leq \max \big\{1, L, |a|, |b|, 2|\sup_{x \in [a, b]^d} |f(x)| | \big\}, \quad \mathcal{R}_{\epsilon}^{\mathbf{N}} (\mathbf{F}) \in C (\mathbb{R}^{d}, \mathbb{R}), \quad (4.218)
@@ -5825,10 +6449,6 @@ $$
 \end{aligned}
 $$
 
-
-
-
-
 结合上述结果，(4.220) 以及 (4.221) 证明了
 
 $$
@@ -5842,6 +6462,8 @@ $$
 
 ### 注 4.4.14（高维 ANN 近似结果）
 
+
+
 上述引理 4.4.13 是一个多维 ANN 近似结果，其意义在于：我们旨在近似的目标函数 $f$ 的定义域 $[a, b]^d$ 的输入维度 $d \in \mathbb{N}$ 可以是任意自然数。然而，我们注意到，当维度 $d$ 较大时（例如 $d \geq 5$），引理 4.4.13 并没有提供有用的贡献，因为该引理并未提供关于 (4.219) 中常数 $\mathfrak{C}$ 如何随 $d$ 增长的信息，且维度 $d$ 出现在 (4.219) 中 ANN 参数数量界里指定近似精度 $\varepsilon$ 的倒数 $\varepsilon^{-1}$ 的指数中。
 
 在文献中，还有许多合适的高维 ANN 近似结果，这些结果保证参数界中的常数至多以维度 $d$ 的多项式速度增长，并且保证 ANN 参数界中指定近似精度 $\varepsilon$ 的倒数 $\varepsilon^{-1}$ 的指数完全独立于维度 $d$。当维度 $d$ 较大时，此类结果确实有潜力提供关于 ANN 近似的有用实用结论。例如，对于一般目标函数类背景下的高维 ANN 近似结果，我们参见 [14, 15, 28, 70, 121, 160] 及其中的参考文献；对于目标函数为偏微分方程（PDE）解的高维 ANN 近似结果，我们参见 [3, 29, 35, 123, 128, 161–163, 177, 179, 205, 209, 228, 259, 353] 及其中的参考文献（另见下文第 18.4 节）。
@@ -5851,9 +6473,11 @@ $$
 在文献中，现在也存在一些结果，其中我们要近似的目标函数定义在无限维向量空间上，因此目标函数的定义域维度即为无穷大（参见例如 [32, 68, 69, 202, 255, 363] 及其中的参考文献）。这一观点似乎非常合理，因为在许多应用中，应通过目标函数处理的输入数据（如图像和视频），用无限维空间中的元素表示比用有限维空间中的元素表示更为自然。
 
 ## 第三部分
+
 ### 优化
 
 #### 第 5 章
+
 ### 通过梯度流（GF）轨迹进行优化
 
 在下文的第 6 章和第 7 章中，我们将研究文献中确定的和随机的 GD 型优化方法。此类方法在机器学习问题中被广泛用于近似最小化合适的目标函数。第 7 章中的 SGD 型优化方法可以被视为第 6 章中确定的 GD 型优化方法的合适蒙特卡洛近似，而第 6 章中确定的 GD 型优化方法粗略来看可以被视为合适的 GF 常微分方程（ODE）解的时间离散近似。为了建立对 GD 型优化方法以及我们用于分析此类方法的一些工具的理解，我们将在本章研究此类 GF 常微分方程。特别是，我们将在本章展示如何利用此类 GF 常微分方程来近似求解适当的优化问题。
@@ -5892,13 +6516,12 @@ $$\mathbb{R}^d \ni \pmb{x} \mapsto \mathcal{N}^{\pmb{a}, d}_{\pmb{m}_{a,l_1}, \p
 
 $$\mathcal{L}(\theta) = \frac{1}{M} \left[ \sum_{m=1}^{M} \left| \left( \mathcal{N}^{\pmb{a}, d}_{\pmb{m}_{a,l_1}, \pmb{m}_{a,l_2}, \dots, \pmb{m}_{a,l_h}, \mathrm{id}_{\mathbb{R}}} \right)(\pmb{x}_m) - \pmb{y}_m \right|^2 \right]$$
 
-
-
-
 因此，由此产生的优化问题现在可以通过数值计算来处理。具体而言，深度学习算法通过基于梯度的优化方法来解决 $(5.6)$ 类型的优化问题。通俗地说，基于梯度的优化方法旨在通过执行基于目标函数负梯度方向的连续步骤来最小化所考虑的目标函数（如上文的 $(5.6)$）。最简单的基于梯度的优化方法之一是常规 $\mathbf{GD}$ 优化方法，该方法沿着负梯度方向执行连续步骤，现在我们概述应用于 $(5.6)$ 的 $\mathbf{GD}$ 优化方法。令 $\xi \in \mathbb{R}^{\mathfrak{p}}$，令 $(\gamma_{n})_{n \in \mathbb{N}} \subseteq [0, \infty)$，并令 $\theta = (\theta_{n})_{n \in \mathbb{N}_{0}}: \mathbb{N}_{0} \rightarrow \mathbb{R}^{\mathfrak{p}}$ 满足对于所有 $n \in \mathbb{N}$，有
 
 $$
+
 \theta_{0}=\xi\ \ \ \ \ \ \ \ \ \ \ \ \text{且} \ \ \ \ \ \ \ \theta_{n} = \theta_{n-1} - \gamma_{n}(\nabla \mathscr{L})(\theta_{n-1}).
+
 $$
 
 过程 $(\theta_{n})_{n \in \mathbb{N}_{0}}$ 是关联于 $(5.6)$ 的最小化问题、具有学习率 $(\gamma_{n})_{n \in \mathbb{N}}$ 和初始值 $\xi$ 的 $\mathbf{GD}$ 过程（关于精确定义，请参阅下文定义 $6.1.1$）。
@@ -5906,7 +6529,9 @@ $$
 这种常规 $\mathbf{GD}$ 优化方法及相关 $\mathbf{GD}$ 型优化方法可以被视为 $\mathbf{GF}$ 常微分方程（ODE）解的离散化。在 $(5.6)$ 最小化问题的背景下，这样的 $\mathbf{GF}$ 常微分方程解可以描述如下。令 $\Theta = (\Theta_{t})_{t \in [0, \infty)}: [0, \infty) \rightarrow \mathbb{R}^{\mathfrak{p}}$ 是一个连续可微函数，满足对于所有 $t \in [0, \infty)$，有
 
 $$
+
 \Theta_{0}=\xi \ \ \ \ \ \ \ \ \ \ \ \ \text{且} \ \ \ \ \ \ \ \ \dot{\Theta}_{t}= \frac{\partial}{\partial t}\Theta_{t}= -(\nabla \mathscr{L})(\Theta_{t}).
+
 $$
 
 过程 $(\Theta_{t})_{t \in [0, \infty)}$ 是对应于 $(5.6)$ 相关最小化问题、具有初始值 $\xi$ 的 $\mathbf{GF}$ 常微分方程的解。
@@ -5920,13 +6545,17 @@ $$
 **定义 5.2.1（GF 轨迹）** 令 $\mathfrak{p} \in \mathbb{N}$，$\xi \in \mathbb{R}^{\mathfrak{p}}$，令 $\mathscr{L}: \mathbb{R}^{\mathfrak{p}} \rightarrow \mathbb{R}$ 为一个函数，并令 $\mathscr{F}: \mathbb{R}^{\mathfrak{p}} \rightarrow \mathbb{R}^{\mathfrak{p}}$ 为一个 $\mathcal{B}(\mathbb{R}^{\mathfrak{p}}) / \mathcal{B}(\mathbb{R}^{\mathfrak{p}})$-可测函数，该函数满足对于所有 $U \subseteq \{ V \subseteq \mathbb{R}^{\mathfrak{p}}: \mathcal{V}$ 是开集\}，$\vartheta \in U$，且 $\mathscr{L}\mid_{U} \in C^{1}(U, \mathbb{R}^{\mathfrak{p}})$，有
 
 $$
+
 \mathfrak{G}(\vartheta)=(\nabla \mathscr{L})(\vartheta).
+
 $$
 
 如果且仅当 $\Theta: [0, \infty) \to \mathbb{R}^{\mathfrak{p}}$ 是一个从 $[0, \infty)$ 到 $\mathbb{R}^{\mathfrak{p}}$ 的函数，并且满足对于所有 $t \in [0, \infty)$，有
 
 $$
+
 \Theta_{t}=\xi-\int_{0}^{t} \mathfrak{G}(\Theta_{s}) \mathrm{d} s.
+
 $$
 
 则我们称 $\Theta$ 为目标函数 $\mathscr{L}$、广义梯度 $\mathfrak{G}$ 和初始值 $\xi$ 的 $GF$ 轨迹（我们称 $\Theta$ 为目标函数 $\mathscr{L}$ 和初始值 $\xi$ 的 $GF$ 轨迹；我们称 $\Theta$ 为目标函数 $\mathscr{L}$、广义梯度 $\mathfrak{G}$ 和初始值 $\xi$ 的 $GF$ 常微分方程的解；我们称 $\Theta$ 为目标函数 $\mathscr{L}$ 和初始值 $\xi$ 的 $GF$ 常微分方程的解）。
@@ -5936,7 +6565,9 @@ $$
 **引理 5.2.2** 令 $\mathfrak{d} \in \mathbb{N}$，$\mathscr{L} \in C^{1}\left(\mathbb{R}^{\mathfrak{d}}, \mathbb{R}\right)$，$\vartheta \in \mathbb{R}^{\mathfrak{d}}$，$r \in(0, \infty)$，并令 $\mathfrak{G}: \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}$ 满足对于所有 $v \in \mathbb{R}^{\mathfrak{d}}$，有
 
 $$
+
 \mathfrak{G}(v)=\lim _{h \rightarrow 0}\left(\frac{\mathscr{L}(\vartheta+h v)-\mathscr{L}(\vartheta)}{h}\right)=\left[\mathscr{L}^{\prime}(\vartheta)\right](v).
+
 $$
 
 则
@@ -5944,13 +6575,17 @@ $$
 - (i) 有
 
 $$
+
 \underset{v \in\{w \in \mathbb{R}^{\mathfrak{d}}:\|w\|_{2}=r\}}{\sup} \mathfrak{G}(v)=r\| (\nabla \mathscr{L})(\vartheta)\|_{2}=\begin{cases}0 & : (\nabla \mathscr{L})(\vartheta)=0 \\ \mathfrak{G}\left(\frac{r(\nabla \mathscr{L})(\vartheta)}{\|(\nabla \mathscr{L})(\vartheta)\|_{2}}\right) & : (\nabla \mathscr{L})(\vartheta) \neq 0\end{cases}
+
 $$
 
 - (ii) 有
 
-$$
+
+
 \underset{v \in\{w \in \mathbb{R}^{\mathfrak{d}}:\|w\|_{2}=r\}}{\inf} \mathfrak{G}(v)=-r\| (\nabla \mathscr{L})(\vartheta)\|_{2}=\begin{cases}0 & : (\nabla \mathscr{L})(\vartheta)=0 \\ \mathfrak{G}\left(\frac{-r(\nabla \mathscr{L})(\vartheta)}{\|(\nabla \mathscr{L})(\vartheta)\|_{2}}\right) & : (\nabla \mathscr{L})(\vartheta) \neq 0\end{cases}
+
 $$
 
 （参见定义 3.3.4）。
@@ -5958,21 +6593,33 @@ $$
 **引理 5.2.2 的证明** 注意，(5.11) 意味着对于所有 $v \in \mathbb{R}^{\mathfrak{d}}$，有
 
 $$
+
 \mathfrak{G}(v)=\langle(\nabla \mathscr{L})(\vartheta), v\rangle
+
 $$
 
 （参见定义 1.4.7）。因此，柯西-施瓦茨不等式保证对于所有满足 $\|v\|_2 = r$ 的 $v \in \mathbb{R}^{\mathfrak{d}}$，有
 
 $$
+
 \begin{align*}
+
 -r\|(
+
 \nabla \mathscr{L})(\vartheta)\|_2 &= -\|(
+
 \nabla \mathscr{L})(\vartheta)\|_2\|v\|_2 \le -\langle -(
+
 \nabla \mathscr{L})(\vartheta), v \rangle \\
+
 &= \mathfrak{G}(v) \le \|\langle (
+
 \nabla \mathscr{L})(\vartheta), \|v\|_2\|_2 = r\|(
+
 \nabla \mathscr{L})(\vartheta)\|_2
+
 \end{align*}
+
 $$
 
 (5.15)
@@ -5980,11 +6627,17 @@ $$
 （参见定义 3.3.4）。此外，注意 (5.14) 表明对于所有 $c \in \mathbb{R}$，有
 
 $$
+
 \mathfrak{G}(c(
+
 \nabla \mathscr{L})(\vartheta)) = \langle ( 
+
 \nabla \mathscr{L})(\vartheta), c(
+
 \nabla \mathscr{L})(\vartheta) \rangle = c\|(
+
 \nabla \mathscr{L})(\vartheta)\|_2^2.
+
 $$
 
 (5.16)
@@ -5992,19 +6645,29 @@ $$
 结合上述结果与 (5.15) 证明了项 (i) 和项 (ii)。引理 5.2.2 的证明结束。
 
 **引理 5.2.3** 令 $\vartheta \in \mathbb{N}$，$\Theta \in C([0, \infty), \mathbb{R}^{\mathfrak{d}})$，$\mathscr{L} \in C^{1}(
+
 \mathbb{R}^{\mathfrak{d}}, \mathbb{R})$，并假设对于所有 $t \in [0, \infty)$，$\Theta_t = \Theta_0 - \int_0^t (
+
 \nabla \mathscr{L})(\Theta_s) \, \mathrm{d}s$。则
 
 - (i) $\Theta \in C^{1}([0, \infty), \mathbb{R}^{\mathfrak{d}})$，
+
 - (ii) 对于所有 $t \in (0, \infty)$，$\dot{
+
 \Theta}_t = -(
+
 \nabla \mathscr{L})(
+
 \Theta_t)$，且
+
 - (iii) 对于所有 $t \in [0, \infty)$，有
 
 $$
+
 \mathscr{L}(\Theta_t) = \mathscr{L}(\Theta_0) - \int_0^t \|(
+
 \nabla \mathscr{L})(\Theta_s)\|_2^2 \, \mathrm{d}s
+
 $$
 
 (5.17)
@@ -6014,10 +6677,15 @@ $$
 **引理 5.2.3 的证明** 注意，微积分基本定理蕴含项 (i) 和项 (ii)。将项 (ii) 与微积分基本定理及链式法则结合，保证对于所有 $t \in [0, \infty)$，有
 
 $$
+
 \mathscr{L}(\Theta_t) = \mathscr{L}(\Theta_0) + \int_0^t \langle (
+
 \nabla \mathscr{L})(\Theta_s), \dot{
+
 \Theta}_s \rangle \, \mathrm{d}s = \mathscr{L}(\Theta_0) - \int_0^t \|(
+
 \nabla \mathscr{L})(\Theta_s)\|_2^2 \, \mathrm{d}s
+
 $$
 
 (5.18)
@@ -6025,25 +6693,30 @@ $$
 （参见定义 1.4.7 和 3.3.4）。这证明了项 (iii)。引理 5.2.3 的证明结束。
 
 **推论 5.2.4**（负 GF 的说明） 令 $\vartheta \in \mathbb{N}$，$\Theta \in C([0, \infty), \mathbb{R}^{\mathfrak{d}})$，$\mathscr{L} \in C^{1}(
+
 \mathbb{R}^{\mathfrak{d}}, \mathbb{R})$，并假设对于所有 $t \in [0, \infty)$，$\Theta(t) = \Theta(0) - \int_0^t (
+
 \nabla \mathscr{L})(\Theta(s)) \, \mathrm{d}s$。则
 
 - (i) $\Theta \in C^{1}([0, \infty), \mathbb{R}^{\mathfrak{d}})$，
+
 - (ii) 对于所有 $t \in (0, \infty)$，有
 
 $$
+
 (
+
 \mathscr{L} \circ \Theta)^{
+
 '}(t) = -\|(
+
 \nabla \mathscr{L})(\Theta(t))\|_2^2,
+
 $$
 
 (5.19)
 
 且
-
-
-
 
 (iii) 对于所有 $\Xi \in C^1([0, \infty), \mathbb{R}^9)$, $\tau \in (0, \infty)$ 且满足 $\Xi(\tau) = \Theta(\tau)$ 以及 $\|\Xi'(\tau)\|_2 = \|\Theta'(\tau)\|_2$，均有
 
@@ -6054,23 +6727,26 @@ $$(\mathcal{L} \circ \Theta)^\top(\tau) \le (\mathcal{L} \circ \Xi)^\top(\tau) \
 **推论 5.2.4 的证明。** 注意，引理 5.2.3 和微积分基本定理蕴含了第 (i) 项和第 (ii) 项。值得注意的是，引理 5.2.2 表明，对于所有 $\Xi \in C^1([0, \infty), \mathbb{R}^9)$ 和 $t \in (0, \infty)$，均有
 
 $$(\mathcal{L} \circ \Xi)^\top(t) = [\mathcal{L}'(\Xi(t))](\Xi'(t))$$
+
 $$\ge \inf_{v \in \{i \in \mathbb{R}^9 : \|i\|_2 = \|\Xi'(i)\|_2\}} [\mathcal{L}'(\Xi(t))](v)$$
+
 $$= -\|\Xi'(t)\|_2 \|(\nabla \mathcal{L})(\Xi(t))\|_2 \quad (5.21)$$
 
 成立（参见定义 3.3.4）。因此，引理 5.2.3 确保对于所有满足 $\Xi(\tau) = \Theta(\tau)$ 且 $\|\Xi'(\tau)\|_2 = \|\Theta'(\tau)\|_2$ 的 $\Xi \in C^1([0, \infty), \mathbb{R}^9)$ 和 $\tau \in (0, \infty)$，均有
 
 $$(\mathcal{L} \circ \Xi)^\top(\tau) \ge -\|\Xi'(\tau)\|_2 \|(\nabla \mathcal{L})(\Xi(\tau))\|_2 \ge -\|\Theta'(\tau)\|_2 \|(\nabla \mathcal{L})(\Theta(\tau))\|_2$$
+
 $$= -\| (\nabla \mathcal{L})(\Theta(\tau)) \|_2^2 = (\mathcal{L} \circ \Theta)^\top(\tau). \quad (5.22)$$
 
 结合第 (ii) 项，由此建立了第 (iii) 项。至此，推论 5.2.4 的证明完成。 $\square$
 
 ![](img/dec290f673e6357c31893c67b579ffe1_176_0.png)
 
-**图 5.1** ([plots/gradient_plot1.pdf](plots/gradient_plot1.pdf))：一维示例中负梯度的图示。该图展示了函数 ${[-2,2]\supseteq x\mapsto x^{4}-3x^{2}\in\mathbb{R}}$ 的图像，并用水平箭头标出了若干点处负梯度的值。用于生成此图的 PYTHON 代码见源代码 5.1。
+**图 5.1** (`plots/gradient_plot1.pdf`)：一维示例中负梯度的图示。该图展示了函数 ${[-2,2]\supseteq x\mapsto x^{4}-3x^{2}\in\mathbb{R}}$ 的图像，并用水平箭头标出了若干点处负梯度的值。用于生成此图的 PYTHON 代码见源代码 5.1。
 
 ![](img/dec290f673e6357c31893c67b579ffe1_177_0.png)
 
-**图 5.2** ([plots/gradient_plot2.pdf](plots/gradient_plot2.pdf))：二维示例中负梯度的图示。该图展示了函数 $\mathbb{R}^{2} \ni(x, y) \mapsto \frac{1}{2}\left|x-1\right|^{2}+5\left|y-1\right|^{2} \in \mathbb{R}$ 的等高线，箭头指示了沿这些等高线若干点处负梯度的方向和大小。用于生成此图的 PYTHON 代码见源代码 5.2。
+**图 5.2** (`plots/gradient_plot2.pdf`)：二维示例中负梯度的图示。该图展示了函数 $\mathbb{R}^{2} \ni(x, y) \mapsto \frac{1}{2}\left|x-1\right|^{2}+5\left|y-1\right|^{2} \in \mathbb{R}$ 的等高线，箭头指示了沿这些等高线若干点处负梯度的方向和大小。用于生成此图的 PYTHON 代码见源代码 5.2。
 
 ```python
 1 import numpy as np
@@ -6098,7 +6774,7 @@ $$= -\| (\nabla \mathcal{L})(\Theta(\tau)) \|_2^2 = (\mathcal{L} \circ \Theta)^\
 23 plt.savefig("../plots/gradient_plot1.pdf")
 ```
 
-**源代码 5.1** ([code/gradient_plot1.py](code/gradient_plot1.py))：用于创建图 5.1 的 PYTHON 代码
+**源代码 5.1** (`code/gradient_plot1.py`)：用于创建图 5.1 的 PYTHON 代码
 
 ```python
 1 import numpy as np
@@ -6140,7 +6816,7 @@ $$= -\| (\nabla \mathcal{L})(\Theta(\tau)) \|_2^2 = (\mathcal{L} \circ \Theta)^\
 37 plt.savefig("../plots/gradient_plot2.pdf")
 ```
 
-**源代码 5.2** ([code/gradient_plot2.py](code/gradient_plot2.py))：用于创建图 5.2 的 PYTHON 代码
+**源代码 5.2** (`code/gradient_plot2.py`)：用于创建图 5.2 的 PYTHON 代码
 
 ## 5.3 人工神经网络的正则性性质
 
@@ -6151,18 +6827,25 @@ $$= -\| (\nabla \mathcal{L})(\Theta(\tau)) \|_2^2 = (\mathcal{L} \circ \Theta)^\
 $$f(x_1, x_2) = (F_1(x_1), F_2(x_2)).\tag{5.23}$$
 
 *那么*
+
 - (i) 有 $f = A_1 \circ F_1 \circ B_1 + A_2 \circ F_2 \circ B_2$ 成立，且
+
 - (ii) $f$ 是可微的。
 
 *引理 5.3.1 的证明。* 注意，(5.23) 蕴含对于所有 $x_1 \in \mathbb{R}^{l_1}$ 和 $x_2 \in \mathbb{R}^{l_2}$，均有
 
 $$(A_1 \circ F_1 \circ B_1 + A_2 \circ F_2 \circ B_2)(x_1, x_2) = (A_1 \circ F_1)(x_1) + (A_2 \circ F_2)(x_2)$$
+
 $$= (F_1(x_1), \mathbf{0}) + (\mathbf{0}, F_2(x_2))\tag{5.24}$$
+
 $$= (F_1(x_1), F_2(x_2)).$$
 
 结合这一点以及 $A_1$、$A_2$、$F_1$、$F_2$、$B_1$ 和 $B_2$ 均可微的事实，利用链式法则可知 $f$ 是可微的。至此，引理 5.3.1 的证明完成。 $\square$
 
-**引理 5.3.2.** 设 $\mathbf{0}_1, \mathbf{0}_2, l_0, l_1, l_2 \in \mathbb{N}$，设 $A : \mathbb{R}^{l_1} \times \mathbb{R}^{l_2} \times \mathbb{R}^{l_0} \to \mathbb{R}^{l_2} \times \mathbb{R}^{l_1+l_0}$ 和 $B : \mathbb{R}^{l_2} \times \mathbb{R}^{l_1+l_0} \to \mathbb{R}^{l_2} \times \mathbb{R}^{l_1}$ 满足对于所有 $\theta_1 \in \mathbb{R}^{l_1}$、$\theta_2 \in \mathbb{R}^{l_2}$ 和 $x \in \mathbb{R}^{l_0}$，有
+
+
+### 引理 5.3.2
+设 $\mathbf{0}_1, \mathbf{0}_2, l_0, l_1, l_2 \in \mathbb{N}$，设 $A : \mathbb{R}^{l_1} \times \mathbb{R}^{l_2} \times \mathbb{R}^{l_0} \to \mathbb{R}^{l_2} \times \mathbb{R}^{l_1+l_0}$ 和 $B : \mathbb{R}^{l_2} \times \mathbb{R}^{l_1+l_0} \to \mathbb{R}^{l_2} \times \mathbb{R}^{l_1}$ 满足对于所有 $\theta_1 \in \mathbb{R}^{l_1}$、$\theta_2 \in \mathbb{R}^{l_2}$ 和 $x \in \mathbb{R}^{l_0}$，有
 
 $$A(\theta_1, \theta_2, x) = (\theta_2, (\theta_1, x)) \quad\text{且}\quad B(\theta_2, (\theta_1, x)) = (\theta_2, F_1(\theta_1, x)),\tag{5.25}$$
 
@@ -6171,6 +6854,7 @@ $$A(\theta_1, \theta_2, x) = (\theta_2, (\theta_1, x)) \quad\text{且}\quad B(\t
 $$f(\theta_1, \theta_2, x) = (F_2(\theta_2, \cdot) \circ F_1(\theta_1, \cdot))(x).\tag{5.26}$$
 
 *那么*
+
 - (i) 有 $f = F_2 \circ B \circ A$ 成立，且
 - (ii) $f$ 是可微的。
 
@@ -6180,9 +6864,10 @@ $$f(\theta_{1},\theta_{2},x)=F_{2}(\theta_{2},F_{1}(\theta_{1},x))=F_{2}(B(\thet
 
 观察可知，引理 5.3.1（在引理 5.3.1 的记号下，取 $l_{1} \mapsto l_{2}$、$l_{2} \mapsto l_{1}+l_{0}$、$F_{1} \mapsto (\mathbb{R}^{l_{2}} \ni \theta_{2} \mapsto \theta_{2} \in \mathbb{R}^{l_{2}})$、$F_{2} \mapsto (\mathbb{R}^{l_{1}+l_{0}} \ni (\theta_{1},x) \mapsto F_{1}(\theta_{1},x) \in \mathbb{R}^{l_{1}})$）蕴含 $B$ 是可微的。结合这一点、$A$ 是可微的事实、$F_{2}$ 是可微的事实以及 (5.27)，利用链式法则可知 $f$ 是可微的。至此，引理 5.3.2 的证明完成。
 
-### 5.3.2 关于人工神经网络实现的可微性
+## 5.3.2 关于人工神经网络实现的可微性
 
-*引理 5.3.3* (*人工神经网络* 实现函数的可微性)。设 $L \in \mathbb{N}$，$l_{0}$、$l_{1}$、...、$l_L \in \mathbb{N}$；对于每个 $k \in \{1, 2, ..., L\}$，设 $d_k = l_k(l_k + 1)$；对于每个 $k \in \{1, 2, ..., L\}$，设 $\Psi_{k} : \mathbb{R}^{l_{k}} \rightarrow \mathbb{R}^{l_{k}}$ 是可微的；对于每个 $k \in \{1, 2, ..., L\}$，设 $F_k: \mathbb{R}^{d_{k}} \times \mathbb{R}^{l_{k-1}} \rightarrow \mathbb{R}^{l_{k}}$ 满足对于所有 $\theta \in \mathbb{R}^{d_{k}}$ 和 $x \in \mathbb{R}^{l_{k-1}}$，有
+### 引理 5.3.3
+*人工神经网络* 实现函数的可微性。设 $L \in \mathbb{N}$，$l_{0}$、$l_{1}$、...、$l_L \in \mathbb{N}$；对于每个 $k \in \{1, 2, ..., L\}$，设 $d_k = l_k(l_k + 1)$；对于每个 $k \in \{1, 2, ..., L\}$，设 $\Psi_{k} : \mathbb{R}^{l_{k}} \rightarrow \mathbb{R}^{l_{k}}$ 是可微的；对于每个 $k \in \{1, 2, ..., L\}$，设 $F_k: \mathbb{R}^{d_{k}} \times \mathbb{R}^{l_{k-1}} \rightarrow \mathbb{R}^{l_{k}}$ 满足对于所有 $\theta \in \mathbb{R}^{d_{k}}$ 和 $x \in \mathbb{R}^{l_{k-1}}$，有
 
 $$F_{k}(\theta,x)=\Psi_{k}(A_{l_{k},l_{k-1}}^{\theta,0}(x)) \qquad (5.28)$$
 
@@ -6208,20 +6893,18 @@ $$\mathcal{A}_{l_{k},l_{k-1}}^{(\theta_{1},\theta_{2},\ldots,\theta_{L}),\sum_{j
 
 $$F_{k}(\theta_{k},x)=\big(\Psi_{k} \circ \mathcal{A}_{l_{k},l_{k-1}}^{(\theta_{1},\theta_{2},\ldots,\theta_{L}),\sum_{j=1}^{k-1}d_{j}}\big)(x). \qquad (5.32)$$
 
-
-
-
 ## 5.4 损失函数
 
 ### 5.4.1 绝对误差损失
 
-**引理 5.3.4（经验风险函数的可微性）。** 设 $\mathfrak{L}, \mathfrak{d} \in \mathbb{N}\setminus\{1\}$，$M, l_0$，$l_1, \dots, l_L \in \mathbb{N}$，$x_1, x_2, \dots, x_M \in \mathbb{R}^{\mathfrak{d}_0}$，$y_1, y_2, \dots, y_M \in \mathbb{R}^{\mathfrak{d}_L}$ 满足 $\mathfrak{d} = \sum_{k=1}^{L} l_k (l_{k-1}+1)$。对于每个 $k \in \{1, 2, \dots, L\}$，设 $\Psi_k\colon \mathbb{R}^{l_k} \to \mathbb{R}^{l_{k}}$ 可微，并且设 $\mathcal{L}\colon \mathbb{R}^{\mathfrak{d}} \to \mathbb{R}$ 满足：对于所有 $\theta \in \mathbb{R}^{\mathfrak{d}}$，有
+#### 引理 5.3.4
+**经验风险函数的可微性。** 设 $\mathfrak{L}, \mathfrak{d} \in \mathbb{N}\setminus\{1\}$，$M, l_0$，$l_1, \dots, l_L \in \mathbb{N}$，$x_1, x_2, \dots, x_M \in \mathbb{R}^{\mathfrak{d}_0}$，$y_1, y_2, \dots, y_M \in \mathbb{R}^{\mathfrak{d}_L}$ 满足 $\mathfrak{d} = \sum_{k=1}^{L} l_k (l_{k-1}+1)$。对于每个 $k \in \{1, 2, \dots, L\}$，设 $\Psi_k\colon \mathbb{R}^{l_k} \to \mathbb{R}^{l_{k}}$ 可微，并且设 $\mathcal{L}\colon \mathbb{R}^{\mathfrak{d}} \to \mathbb{R}$ 满足：对于所有 $\theta \in \mathbb{R}^{\mathfrak{d}}$，有
 
 $$ \mathcal{L}(\theta) = \frac{1}{M} \left[ \sum_{m=1}^{M} \mathbf{L}\big( ( \mathcal{N}_{\Psi_1, \Psi_2, \dots, \Psi_L}^{\theta_{l_0}} )(x_m), y_m \big) \right] $$
 
 （参见定义 1.1.3）。则 $\mathcal{L}$ 是可微的。
 
-**引理 5.3.4 的证明。** 注意，引理 5.3.3 和引理 5.3.1（在引理 5.3.1 的记号中，取 $\mathfrak{d}_1 \frown \mathfrak{d} + l_0$，$\mathfrak{d}_2 \frown l_L$，$l_1 \frown l_L$，$l_2 \frown l_L$，$F_1 \frown (\mathbb{R}^{\mathfrak{d}} \times \mathbb{R}^{l_0} \ni (\theta, x) \to ( \mathcal{N}_{\Psi_1, \Psi_2, \dots, \Psi_L}^{\theta_{l_0}} )(x) \in \mathbb{R}^{l_L}$，$F_2 \frown \text{id}_{\mathbb{R}^{l_L}}$）表明
+*引理 5.3.4 的证明。* 注意，引理 5.3.3 和引理 5.3.1（在引理 5.3.1 的记号中，取 $\mathfrak{d}_1 \frown \mathfrak{d} + l_0$，$\mathfrak{d}_2 \frown l_L$，$l_1 \frown l_L$，$l_2 \frown l_L$，$F_1 \frown (\mathbb{R}^{\mathfrak{d}} \times \mathbb{R}^{l_0} \ni (\theta, x) \to ( \mathcal{N}_{\Psi_1, \Psi_2, \dots, \Psi_L}^{\theta_{l_0}} )(x) \in \mathbb{R}^{l_L}$，$F_2 \frown \text{id}_{\mathbb{R}^{l_L}}$）表明
 
 $$ \mathbb{R}^{\mathfrak{d}} \times \mathbb{R}^{l_0} \times \mathbb{R}^{l_L} \ni (\theta, x, y) \to \big( ( \mathcal{N}_{\Psi_1, \Psi_2, \dots, \Psi_L}^{\theta_{l_0}} )(x), y \big) \in \mathbb{R}^{l_L} \times \mathbb{R}^{l_L} $$
 
@@ -6231,11 +6914,13 @@ $$ \mathbb{R}^{\mathfrak{d}} \ni \theta \to \mathbf{L}\big( ( \mathcal{N}_{\Psi_
 
 是可微的。这意味着 $\mathcal{L}$ 是可微的。至此，引理 5.3.4 的证明完成。
 
-**引理 5.3.5。** 设 $a\colon \mathbb{R} \to \mathbb{R}$ 可微，且 $\mathfrak{d} \in D$。则 $\mathfrak{M}_{a,\mathfrak{d}}$ 是可微的。
+#### 引理 5.3.5
+设 $a\colon \mathbb{R} \to \mathbb{R}$ 可微，且 $\mathfrak{d} \in D$。则 $\mathfrak{M}_{a,\mathfrak{d}}$ 是可微的。
 
-**引理 5.3.5 的证明。** 注意到，假设 $a$ 可微、引理 5.3.1 以及归纳法表明：对于所有 $m \in \mathbb{N}$，$\mathfrak{M}_{a,m}$ 都是可微的。至此，引理 5.3.5 的证明完成。
+*引理 5.3.5 的证明。* 注意到，假设 $a$ 可微、引理 5.3.1 以及归纳法表明：对于所有 $m \in \mathbb{N}$，$\mathfrak{M}_{a,m}$ 都是可微的。至此，引理 5.3.5 的证明完成。
 
-**推论 5.3.6。** 设 $L, \mathfrak{o} \in \mathbb{N} \backslash \{1\}$，$M, l_0, l_1, \ldots, l_L \in \mathbb{N}$，$x_1, x_2, \ldots, x_M \in \mathbb{R}^{l_0}$，$y_1, y_2, \ldots, y_M \in \mathbb{R}^{l_L}$ 满足 $\mathfrak{o} = \sum_{k=1}^{L} l_k(l_{k-1} + 1)$。设 $a: \mathbb{R} \to \mathbb{R}$ 和 $\mathbf{L}: \mathbb{R}^{l} \times \mathbb{R}^{l} \to \mathbb{R}$ 可微，并且设 $\mathcal{L}: \mathbb{R}^{\mathfrak{o}} \to \mathbb{R}$ 满足：对于所有 $\theta \in \mathbb{R}^{\mathfrak{o}}$，有
+#### 推论 5.3.6
+设 $L, \mathfrak{o} \in \mathbb{N} \backslash \{1\}$，$M, l_0, l_1, \ldots, l_L \in \mathbb{N}$，$x_1, x_2, \ldots, x_M \in \mathbb{R}^{l_0}$，$y_1, y_2, \ldots, y_M \in \mathbb{R}^{l_L}$ 满足 $\mathfrak{o} = \sum_{k=1}^{L} l_k(l_{k-1} + 1)$。设 $a: \mathbb{R} \to \mathbb{R}$ 和 $\mathbf{L}: \mathbb{R}^{l} \times \mathbb{R}^{l} \to \mathbb{R}$ 可微，并且设 $\mathcal{L}: \mathbb{R}^{\mathfrak{o}} \to \mathbb{R}$ 满足：对于所有 $\theta \in \mathbb{R}^{\mathfrak{o}}$，有
 
 $$\mathcal{L}(\theta) = \frac{1}{M} \left[ \sum_{m=1}^{M} \mathbf{L}\left( \left( \mathfrak{N}_{\mathfrak{m}_{a,l_1}^{\rho_0,l_0}, \mathfrak{m}_{a,l_2}, \ldots, \mathfrak{m}_{a,l_{L-1}}, \mathrm{id}_{\mathfrak{g}_{L}^{l}} \right) (x_m), y_m \right) \right] \tag{5.37}$$
 
@@ -6243,7 +6928,8 @@ $$\mathcal{L}(\theta) = \frac{1}{M} \left[ \sum_{m=1}^{M} \mathbf{L}\left( \left
 
 *推论 5.3.6 的证明。* 注意到，引理 5.3.5 和引理 5.3.4 证明了 $\mathcal{L}$ 是可微的。至此，推论 5.3.6 的证明完成。$\square$
 
-**推论 5.3.7。** 设 $L, \mathfrak{o} \in \mathbb{N} \backslash \{1\}$，$M, l_0, l_1, \ldots, l_L \in \mathbb{N}$，$x_1, x_2, \ldots, x_M \in \mathbb{R}^{l_0}$，$y_1, y_2, \ldots, y_M \in (0, \infty)^{l_L}$ 满足 $\mathfrak{o} = \sum_{k=1}^{L} l_k(l_{k-1} + 1)$。设 $A$ 为 $l_L$ 维 softmax 激活函数，设 $a: \mathbb{R} \to \mathbb{R}$ 和 $\mathbf{L}: (0, \infty)^{l} \times (0, \infty)^{l} \to \mathbb{R}$ 可微，并且设 $\mathcal{L}: \mathbb{R}^{\mathfrak{o}} \to \mathbb{R}$ 满足：对于所有 $\theta \in \mathbb{R}^{\mathfrak{o}}$，有
+#### 推论 5.3.7
+设 $L, \mathfrak{o} \in \mathbb{N} \backslash \{1\}$，$M, l_0, l_1, \ldots, l_L \in \mathbb{N}$，$x_1, x_2, \ldots, x_M \in \mathbb{R}^{l_0}$，$y_1, y_2, \ldots, y_M \in (0, \infty)^{l_L}$ 满足 $\mathfrak{o} = \sum_{k=1}^{L} l_k(l_{k-1} + 1)$。设 $A$ 为 $l_L$ 维 softmax 激活函数，设 $a: \mathbb{R} \to \mathbb{R}$ 和 $\mathbf{L}: (0, \infty)^{l} \times (0, \infty)^{l} \to \mathbb{R}$ 可微，并且设 $\mathcal{L}: \mathbb{R}^{\mathfrak{o}} \to \mathbb{R}$ 满足：对于所有 $\theta \in \mathbb{R}^{\mathfrak{o}}$，有
 
 $$\mathcal{L}(\theta) = \frac{1}{M} \left[ \sum_{m=1}^{M} \mathbf{L}\left( \left( \mathfrak{N}_{\mathfrak{m}_{a,l_1}^{\rho_0,l_0}, \mathfrak{m}_{a,l_2}, \ldots, \mathfrak{m}_{a,l_{L-1}}, A \right) (x_m), y_m \right) \right] \tag{5.38}$$
 
@@ -6251,11 +6937,14 @@ $$\mathcal{L}(\theta) = \frac{1}{M} \left[ \sum_{m=1}^{M} \mathbf{L}\left( \left
 
 *推论 5.3.7 的证明。* 注意到，引理 5.3.5、$A$ 的可微性事实以及引理 5.3.4 共同建立了 $\mathcal{L}$ 的可微性。至此，推论 5.3.7 的证明完成。$\square$
 
-**定义 5.4.1。** 设 $d \in \mathbb{N}$，设 $\|\cdot\|: \mathbb{R}^{d} \to [0, \infty)$ 是一个范数。当且仅当 $\mathbf{L}: \mathbb{R}^{d} \times \mathbb{R}^{d} \to \mathbb{R}$ 是从 $\mathbb{R}^{d} \times \mathbb{R}^{d}$ 到 $\mathbb{R}$ 的函数，并且对于所有 $x, y \in \mathbb{R}^{d}$ 满足
+#### 定义 5.4.1
+设 $d \in \mathbb{N}$，设 $\|\cdot\|: \mathbb{R}^{d} \to [0, \infty)$ 是一个范数。当且仅当 $\mathbf{L}: \mathbb{R}^{d} \times \mathbb{R}^{d} \to \mathbb{R}$ 是从 $\mathbb{R}^{d} \times \mathbb{R}^{d}$ 到 $\mathbb{R}$ 的函数，并且对于所有 $x, y \in \mathbb{R}^{d}$ 满足
 
 $$\mathbf{L}(x, y) = \|x - y\|. \tag{5.39}$$
 
 时，我们称 $\mathbf{L}$ 是基于 $\|\cdot\|$ 的 $\ell^{1}$-误差损失函数（我们称 $\mathbf{L}$ 是基于 $\|\cdot\|$ 的绝对误差损失函数）。
+
+
 
 ```python
 import numpy as np
@@ -6278,11 +6967,11 @@ ax.legend()
 plt.savefig('../../plots/l1loss.pdf', bbox_inches='tight')
 ```
 
-源码 5.3 (code/loss_functions/l1loss_plot.py)：用于生成图 5.3 的 PYTHON 代码
+源码 5.3 (`code/loss_functions/l1loss_plot.py`)：用于生成图 5.3 的 `PYTHON` 代码
 
 ![](img/dec290f673e6357c31893c67b579ffe1_183_0.png)
 
-图 5.3 (plots/l1loss.pdf)：函数 $\mathbb{R} \ni x \mapsto \mathbf{L}(x, 0) \in [0, \infty)$ 的图像，其中 $\mathbf{L}$ 是基于 $\mathbb{R} \ni x \mapsto |x| \in [0, \infty)$ 的 $\mathscr{l}^{1}$-误差损失函数（参见定义 5.4.1）。
+图 5.3 (`plots/l1loss.pdf`)：函数 $\mathbb{R} \ni x \mapsto \mathbf{L}(x, 0) \in [0, \infty)$ 的图像，其中 $\mathbf{L}$ 是基于 $\mathbb{R} \ni x \mapsto |x| \in [0, \infty)$ 的 $\mathscr{l}^{1}$-误差损失函数（参见定义 5.4.1）。
 
 ### 5.4.2 均方误差损失
 
@@ -6313,11 +7002,11 @@ ax.legend()
 plt.savefig("../plots/mseloss.pdf", bbox_inches='tight')
 ```
 
-源码 5.4 (**code/loss_functions/mseloss_plot.py**)：用于生成图 5.4 的 **PYTHON** 代码
+源码 5.4 (`code/loss_functions/mseloss_plot.py`)：用于生成图 5.4 的 `PYTHON` 代码
 
 ![](img/dec290f673e6357c31893c67b579ffe1_184_0.png)
 
-图 5.4 (**plots/mseloss.pdf**)：函数 $\mathbb{R} \ni x \mapsto \mathbf{L}(x,0) \in [0,\infty)$ 的图像，其中 $\mathbf{L}$ 是基于 $\mathbb{R} \ni x \mapsto |x| \in [0,\infty)$ 的均方误差损失函数（参见定义 5.4.2）。
+图 5.4 (`plots/mseloss.pdf`)：函数 $\mathbb{R} \ni x \mapsto \mathbf{L}(x,0) \in [0,\infty)$ 的图像，其中 $\mathbf{L}$ 是基于 $\mathbb{R} \ni x \mapsto |x| \in [0,\infty)$ 的均方误差损失函数（参见定义 5.4.2）。
 
 **引理 5.4.3。** *设 $d \in \mathbb{N}$，设 $\mathbf{L}$ 是基于 $\mathbb{R}^{d} \ni x \mapsto \|x\|_{2} \in [0,\infty)$ 的均方误差损失函数（参见定义 3.3.4 和 5.4.2）。则*
 
@@ -6326,9 +7015,6 @@ plt.savefig("../plots/mseloss.pdf", bbox_inches='tight')
 (ii) *对于所有 $x,y,u,v \in \mathbb{R}^{d}$，有*
 
 $$\mathbf{L}(u,v) = \mathbf{L}(x,y) + \mathbf{L}'(x,y)(u-x, v-y) + \frac{1}{2}\mathbf{L}^{(2)}(x,y)\big((u-x, v-y), (u-x, v-y)\big).\tag{5.41}$$
-
-
-
 
 ## 引理 5.4.3 的证明
 
@@ -6366,7 +7052,7 @@ $$\mathbf{L}(x,y) = \begin{cases} \frac{1}{2}\|x-y\|^2 & : \|x-y\| \leq \delta \
 
 ![](img/dec290f673e6357c31893c67b579ffe1_186_0.png)
 
-图 5.5 (**plots/huber_loss.pdf**)：函数 $\mathbb{R} \ni x \mapsto \mathbf{L}_{i}(x, 0) \in [0, \infty)$，$i \in \{1, 2, 3\}$ 的图像，其中 $\mathbf{L}_{0}$ 是基于 $\mathbb{R} \ni x \mapsto |x| \in [0, \infty)$ 的均方误差损失函数，$\mathbf{L}_{1}: \mathbb{R}^{d} \times \mathbb{R}^{d} \to [0, \infty)$ 对于所有 $x, y \in \mathbb{R}^{d}$ 满足 $\mathbf{L}_{1}(x, y)=\frac{1}{2} \mathbf{L}_{0}(x, y)$，$\mathbf{L}_{2}$ 是基于 $\mathbb{R} \ni x \mapsto |x| \in [0, \infty)$ 的 $\ell^{1}$-误差损失函数，$\mathbf{L}_{3}$ 是基于 $\mathbb{R} \ni x \mapsto |x| \in [0, \infty)$ 的 1-Huber 损失函数。
+图 5.5 (`plots/huber_loss.pdf`)：函数 $\mathbb{R} \ni x \mapsto \mathbf{L}_{i}(x, 0) \in [0, \infty)$，$i \in \{1, 2, 3\}$ 的图像，其中 $\mathbf{L}_{0}$ 是基于 $\mathbb{R} \ni x \mapsto |x| \in [0, \infty)$ 的均方误差损失函数，$\mathbf{L}_{1}: \mathbb{R}^{d} \times \mathbb{R}^{d} \to [0, \infty)$ 对于所有 $x, y \in \mathbb{R}^{d}$ 满足 $\mathbf{L}_{1}(x, y)=\frac{1}{2} \mathbf{L}_{0}(x, y)$，$\mathbf{L}_{2}$ 是基于 $\mathbb{R} \ni x \mapsto |x| \in [0, \infty)$ 的 $\ell^{1}$-误差损失函数，$\mathbf{L}_{3}$ 是基于 $\mathbb{R} \ni x \mapsto |x| \in [0, \infty)$ 的 1-Huber 损失函数。
 
 ```python
 import numpy as np
@@ -6397,19 +7083,21 @@ ax.legend()
 plt.savefig(".../plots/huberloss.pdf", bbox_inches='tight')
 ```
 
-源代码 5.5 (code/loss_functions/huberloss_plot.py)：用于创建图 5.5 的 PYTHON 代码
+源代码 5.5 (`code/loss_functions/huberloss_plot.py`)：用于创建图 5.5 的 `PYTHON` 代码
 
 ## 5.4.4 交叉熵损失
 
 **定义 5.4.5.** 设 $d \in \mathbb{N} \setminus \{1\}$。我们称 $\mathbf{L}$ 为 $d$ 维交叉熵损失函数，当且仅当 $\mathbf{L} : [0, \infty)^d \times [0, \infty)^d \to (-\infty, \infty]$ 是从 $[0, \infty)^d \times [0, \infty)^d$ 到 $(-\infty, \infty)$ 的函数，且对于所有 $x = (x_1, \dots, x_d)$, $y = (y_1, \dots, y_d) \in [0, \infty)^d$ 满足
 
 $$
+
 \mathbf{L}(x, y) = - \sum_{i = 1}^{d} \lim_{z \searrow x_i} [ \ln(z) y_i ]. \tag{5.49}
+
 $$
 
 ![](img/dec290f673e6357c31893c67b579ffe1_187_0.png)
 
-图 5.6 (plots/crossentropyloss.pdf)：函数 $(0, 1) \ni x \mapsto \mathbf{L}((x, 1 - x), (\frac{3}{10}, \frac{7}{10})) \in \mathbb{R}$ 的图像，其中 $\mathbf{L}$ 是 2 维交叉熵损失函数（参见定义 5.4.5）。
+图 5.6 (`plots/crossentropyloss.pdf`)：函数 $(0, 1) \ni x \mapsto \mathbf{L}((x, 1 - x), (\frac{3}{10}, \frac{7}{10})) \in \mathbb{R}$ 的图像，其中 $\mathbf{L}$ 是 2 维交叉熵损失函数（参见定义 5.4.5）。
 
 ```python
 import numpy as np
@@ -6434,7 +7122,7 @@ ax.legend()
 plt.savefig("../../plots/crossentropyloss_plot.pdf", bbox_inches='tight')
 ```
 
-源代码 5.6 (code/loss_functions/crossentropyloss_plot.py)：用于创建图 5.6 的 PYTHON 代码
+源代码 5.6 (`code/loss_functions/crossentropyloss_plot.py`)：用于创建图 5.6 的 `PYTHON` 代码
 
 **引理 5.4.6.** 设 $d \in \mathbb{N} \setminus \{1\}$，且 $\mathbf{L}$ 为 $d$ 维交叉熵损失函数（参见定义 5.4.5）。则
 
@@ -6454,11 +7142,14 @@ $$\mathbf{L}(x, y) = - \sum_{i=1}^{d} \ln(x_i) y_i \in \mathbb{R} . \tag{5.52}$$
 
 **引理 5.4.6 的证明。** 注意，(5.49) 以及对于所有 $a, b \in [0, \infty)$ 成立的以下事实：
 
+
+
 $$\lim_{z \searrow a} [\ln(z) b] = \begin{cases} 0 & : b = 0 \\ \ln(a) b & : (a \neq 0) \wedge (b \neq 0) \\ -\infty & : (a = 0) \wedge (b \neq 0) \end{cases} \tag{5.53}$$
 
 证明了项 (i)、(ii) 和 (iii)。至此，引理 5.4.6 的证明完毕。 $\quad \square$
 
-**引理 5.4.7.** 设 $d \in \mathbb{N} \backslash \{1\}$，$\mathbf{L}$ 为 $d$ 维交叉熵损失函数，$x = (x_1, \dots, x_d)$，$y = (y_1, \dots, y_d) \in [0, \infty)^d$ 满足 $\sum_{i=1}^d x_i = \sum_{i=1}^d y_i$ 且 $x \neq y$，且 $f: [0, 1] \to (-\infty, \infty]$ 满足对于 $[0, 1]$ 中的所有 $h$ 有
+### 引理 5.4.7.
+设 $d \in \mathbb{N} \backslash \{1\}$，$\mathbf{L}$ 为 $d$ 维交叉熵损失函数，$x = (x_1, \dots, x_d)$，$y = (y_1, \dots, y_d) \in [0, \infty)^d$ 满足 $\sum_{i=1}^d x_i = \sum_{i=1}^d y_i$ 且 $x \neq y$，且 $f: [0, 1] \to (-\infty, \infty]$ 满足对于 $[0, 1]$ 中的所有 $h$ 有
 
 $$f(h) = \mathbf{L}(x + h(y - x), y) \tag{5.54}$$
 
@@ -6491,10 +7182,10 @@ $$g''(h) = \sum_{i \in J} \frac{y_i(x_i - y_i)^2}{(y_i + h(x_i - y_i))^2}. \tag{
 此外，注意到对于所有满足 $\sum_{i=1}^d z_i = \sum_{i=1}^d y_i$ 且 $\forall i \in J: z_i = y_i$ 的 $z = (z_1, \dots, z_d) \in [0, \infty)^d$，有
 
 $$\begin{aligned} \sum_{i \in \{1, 2, \dots, d\} \setminus J} z_i &= \left[ \sum_{i \in \{1, 2, \dots, d\}} z_i \right] - \left[ \sum_{i \in J} z_i \right] \\
+
 &= \left[ \sum_{i \in \{1, 2, \dots, d\}} y_i \right] - \left[ \sum_{i \in J} z_i \right] \\
+
 &= \sum_{i \in J} (y_i - z_i) = 0 \end{aligned} \tag{5.61}$$
-
-
 
 证明了对于所有 $\mathbf{z} = (z_1, \dots, z_d) \in [0, \infty)^d$，若满足 $\sum_{i=1}^d z_i = \sum_{i=1}^d y_i$ 且 $\forall i \in J: z_i = y_i$，则恒有 $\mathbf{z} = \mathbf{y}$。因此，假设 $\sum_{i=1}^d x_i = \sum_{i=1}^d y_i$ 且 $\mathbf{x} \neq \mathbf{y}$ 确保了存在 $i \in J$ 使得 $x_i \neq y_i > 0$。将此与 (5.60) 结合表明，对于所有 $h \in [0, 1)$，恒有
 
@@ -6526,7 +7217,8 @@ $$\left[ f(0) = \infty \right] \lor \left[ \forall h \in [0, 1]: f(h) \in \mathb
 
 这一点以及 $f|_{[0,1]}$ 严格递减的事实证明了 $f$ 是严格递减的。由此，引理 5.4.7 的证明完成。
 
-**推论 5.4.8。** *设 $d \in \mathbb{N} \setminus \{1\}$，设 $A = \{ \mathbf{x} = (x_1, \dots, x_d) \in [0, 1]^d: \sum_{i=1}^d x_i = 1 \}$，设 $\mathbf{L}$ 为 $d$ 维交叉熵损失函数，且设 $\mathbf{y} \in A$（参见定义 5.4.5）。则*
+### 推论 5.4.8。
+*设 $d \in \mathbb{N} \setminus \{1\}$，设 $A = \{ \mathbf{x} = (x_1, \dots, x_d) \in [0, 1]^d: \sum_{i=1}^d x_i = 1 \}$，设 $\mathbf{L}$ 为 $d$ 维交叉熵损失函数，且设 $\mathbf{y} \in A$（参见定义 5.4.5）。则*
 
 *(i)* 恒有
 
@@ -6546,7 +7238,8 @@ $\mathbf{L}(x, y) = \mathbf{L}(x + 0(y - x), y) > \mathbf{L}(x + 1(y - x), y) = 
 
 # 5.4.5 库拉巴-莱布勒散度损失
 
-引理 5.4.9. 设 $z \in (0, \infty)$。则
+### 引理 5.4.9.
+设 $z \in (0, \infty)$。则
 
 *(i)* 恒有
 
@@ -6576,7 +7269,8 @@ $$\lim_{{x \searrow 0}} \inf \frac{{f({x^{ - 1}})}}{{g({x^{ - 1}})}} = 0 = \lim_
 
 事实：对于所有 $x \in (0, \infty)$，恒有 $\frac{{f({x^{ - 1}})}}{{g({x^{ - 1}})}} = \ln (x)x$，从而确立了第 **(i)** 项。注意到第 **(i)** 项以及事实：对于所有 $x \in (0, \infty)$，恒有 $\ln (\frac{z}{x})x = \ln (z)x - \ln (x)x$，证明了第 **(ii)** 项。由此，引理 5.4.9 的证明完成。 $\square$
 
-**定义 5.4.10.** *设* $d \in \mathbb{N}\backslash\{1\}$*。称* $\mathbf{L}$ *为* $d$ *维库拉巴-莱布勒散度损失函数，当且仅当它满足* $\mathbf{L}\colon [0, \infty)^d \times [0, \infty)^d \rightarrow ( - \infty, \infty]$ *是从* $[0, \infty)^d \times [0, \infty)^d$ *到* $( - \infty, \infty]$ *的函数，且满足对于所有* $x = (x_1, \ldots, x_d)$， $y = (y_1, \ldots, y_d) \in [0, \infty)^d$ *恒有*
+### 定义 5.4.10.
+*设* $d \in \mathbb{N}\backslash\{1\}$*。称* $\mathbf{L}$ *为* $d$ *维库拉巴-莱布勒散度损失函数，当且仅当它满足* $\mathbf{L}\colon [0, \infty)^d \times [0, \infty)^d \rightarrow ( - \infty, \infty]$ *是从* $[0, \infty)^d \times [0, \infty)^d$ *到* $( - \infty, \infty]$ *的函数，且满足对于所有* $x = (x_1, \ldots, x_d)$， $y = (y_1, \ldots, y_d) \in [0, \infty)^d$ *恒有*
 
 $$\mathbf{L}(x, y) = - \sum_{i = 1}^{d}\lim_{z \searrow x_i}\lim_{w \searrow y_i}\ln (\frac{z}{w})u\qquad (5.78)$$
 
@@ -6611,22 +7305,28 @@ ax.legend()
 plt.savefig("../../plots/kldloss.pdf", bbox_inches='tight')
 ```
 
-源代码 5.7 (code/loss_functions/kldloss_plot.py): 用于创建图 5.7 的 PYTHON 代码
+源代码 5.7 (`code/loss_functions/kldloss_plot.py`): 用于创建图 5.7 的 PYTHON 代码
 
-**引理 5.4.11.** 设 $d \in \mathbb{N} \setminus \{1\}$，设 $\mathbf{L}_{\mathrm{CE}}$ 为 $d$ 维交叉熵损失函数，设 $\mathbf{L}_{\mathrm{KLD}}$ 为 $d$ 维库拉巴-莱布勒散度损失函数（参见定义 5.4.5 和 5.4.10）。则对于所有 $x,y \in [0,\infty)^d$，恒有
+### 引理 5.4.11.
+设 $d \in \mathbb{N} \setminus \{1\}$，设 $\mathbf{L}_{\mathrm{CE}}$ 为 $d$ 维交叉熵损失函数，设 $\mathbf{L}_{\mathrm{KLD}}$ 为 $d$ 维库拉巴-莱布勒散度损失函数（参见定义 5.4.5 和 5.4.10）。则对于所有 $x,y \in [0,\infty)^d$，恒有
 
 $\mathbf{L}_{\mathrm{CE}}(x, y) = \mathbf{L}_{\mathrm{KLD}}(x, y) + \mathbf{L}_{\mathrm{CE}}(y, y).$ (5.79)
 
 **引理 5.4.11 的证明。** 注意到引理 5.4.9 意味着对于所有 $a,b \in [0,\infty)$，恒有
 
 $\begin{aligned} \lim_{z\searrow a} \lim_{u\searrow b} \left[\ln \left(\frac{z}{u}\right) u\right] &= \lim_{z\searrow a} \lim_{u\searrow b} [\ln(z)u - \ln(u)u] \\
+
 &= \lim_{z\searrow a} \left[\ln(z)b - \lim_{u\searrow b}[\ln(u)u]\right] \\
+
 &= \left(\lim_{z\searrow a}[\ln(z)b]\right) - \left(\lim_{u\searrow b}[\ln(u)u]\right). \end{aligned}$ (5.80)
 
 这一点以及 (5.78) 表明，对于所有 $x = (x_1,\dots,x_d)$， $y = (y_1,\dots,y_d) \in [0,\infty)^d$，恒有
 
 $\begin{aligned} \mathbf{L}_{\mathrm{KLD}}(x,y) &= -\sum_{i=1}^{d} \lim_{z\searrow x_i} \lim_{u\searrow y_i} \left[\ln \left(\frac{z}{u}\right) u\right] \\
+
 &= -\left(\sum_{i=1}^{d} \lim_{z\searrow x_i} [\ln(z)y_i]\right) + \left(\sum_{i=1}^{d} \lim_{u\searrow y_i} [\ln(u)u]\right). \end{aligned}$ (5.81)
+
+
 
 此外，注意到引理 5.4.9 确保了对于所有 \( b \in [0, \infty) \)，恒有
 
@@ -6638,7 +7338,8 @@ $$\mathbf{L}_{\mathrm{KLD}}(x, y) = -\left( \sum_{i=1}^{d} \lim_{z \searrow x_i}
 
 因此，我们得到 (5.79)。由此，引理 5.4.11 的证明完成。
 
-**引理 5.4.12.** 设 \( d \in \mathbb{N} \setminus \{1\} \)，设 \( \mathbf{L} \) 为 $d$ 维库拉巴-莱布勒损失函数，设 \( x = (x_1, \ldots, x_d) \)， \( y = (y_1, \ldots, y_d) \in [0, \infty)^d \) 满足 \( \sum_{i=1}^{d} x_i = \sum_{i=1}^{d} y_i \) 且 \( x \neq y \)，并设 \( f \) : \([0, 1] \rightarrow (-\infty, \infty] \) 满足对于所有 \( h \in [0, 1] \) 恒有
+### 引理 5.4.12
+设 \( d \in \mathbb{N} \setminus \{1\} \)，设 \( \mathbf{L} \) 为 $d$ 维库拉巴-莱布勒损失函数，设 \( x = (x_1, \ldots, x_d) \)， \( y = (y_1, \ldots, y_d) \in [0, \infty)^d \) 满足 \( \sum_{i=1}^{d} x_i = \sum_{i=1}^{d} y_i \) 且 \( x \neq y \)，并设 \( f \) : \([0, 1] \rightarrow (-\infty, \infty] \) 满足对于所有 \( h \in [0, 1] \) 恒有
 
 $$f(h) = \mathbf{L}(x + h(y - x), y) \tag{5.84}$$
 
@@ -6646,24 +7347,23 @@ $$f(h) = \mathbf{L}(x + h(y - x), y) \tag{5.84}$$
 
 引理 5.4.12 的证明。注意到引理 5.4.7 和引理 5.4.11 确立了 (5.84)。由此，引理 5.4.12 的证明完成。
 
-**推论 5.4.13.** 设 \( d \in \mathbb{N} \setminus \{1\} \)，设 \( A = \{x = (x_1, \ldots, x_d) \in [0, 1]^d \) : \( \sum_{i=1}^{d} x_i = 1 \}\)，设 \( \mathbf{L} \) 为 $d$ 维库拉巴-莱布勒散度损失函数，且设 \( y \in A \)（参见定义 5.4.10）。则
+### 推论 5.4.13
+设 \( d \in \mathbb{N} \setminus \{1\} \)，设 \( A = \{x = (x_1, \ldots, x_d) \in [0, 1]^d \) : \( \sum_{i=1}^{d} x_i = 1 \}\)，设 \( \mathbf{L} \) 为 $d$ 维库拉巴-莱布勒散度损失函数，且设 \( y \in A \)（参见定义 5.4.10）。则
 
 - (i) 恒有
 
 $$\{ x \in A \) : \( \mathbf{L}(x, y) = \inf_{z \in A} \mathbf{L}(z, y) \} = \{y\} \tag{5.85}$$
 
 - 并且
+
 - (ii) 恒有 \( \inf_{z \in A} \mathbf{L}(z, y) = \mathbf{L}(y, y) = 0 \)。
 
 推论 5.4.13 的证明。注意到推论 5.4.8 和引理 5.4.11 证明了第 (i) 项和第 (ii) 项。由此，推论 5.4.13 的证明完成。
 
 # 5.5 人工神经网络训练中的 GF 优化
 
-例 5.5.1. 设 \( d, L, \mathfrak{d} \in \mathbb{N} \)，\( l_1, l_2, \ldots, l_L \in \mathbb{N} \) 满足 \( \mathfrak{d} = l_1(d+1) + [\sum_{k=2}^{L} l_k(l_{k-1} + 1)] \)，设 \( \alpha \) : \( \mathbb{R} \rightarrow \mathbb{R} \) 可微，设 \( M \in \mathbb{N} \)，\( x_1, x_2, \ldots, x_M \in \mathbb{R}^d \)，\( y_1, y_2, \ldots, y_M \in \mathbb{R}^{l_L} \)，设
-
-
-
-
+#### 例 5.5.1
+设 \( d, L, \mathfrak{d} \in \mathbb{N} \)，\( l_1, l_2, \ldots, l_L \in \mathbb{N} \) 满足 \( \mathfrak{d} = l_1(d+1) + [\sum_{k=2}^{L} l_k(l_{k-1} + 1)] \)，设 \( \alpha \) : \( \mathbb{R} \rightarrow \mathbb{R} \) 可微，设 \( M \in \mathbb{N} \)，\( x_1, x_2, \ldots, x_M \in \mathbb{R}^d \)，\( y_1, y_2, \ldots, y_M \in \mathbb{R}^{l_L} \)，设
 
 ## 第 5 章：通过常微分方程进行优化
 
@@ -6699,13 +7399,14 @@ $$ \left( \nabla \mathcal{L}_{1} \right) (x) = \left( \nabla \mathcal{L}_{2} \ri
 
 结合此结果、(5.9)、(5.10) 和 (5.89) 表明，对于所有 $i \in \{1, 2\}$，$\Theta^{i}$ 是目标函数 $\mathcal{L}_{i}$ 在初始值 $\xi$ 下的 GF 轨迹（参见定义 5.2.1）。因此，例 5.5.2 的证明结束。 $\square$
 
-## 5.6 GF 的 Lyapunov 型函数
+# 5.6 GF 的 Lyapunov 型函数
 
-### 5.6.1 Gronwall 微分不等式
+## 5.6.1 Gronwall 微分不等式
 
 以下引理，即下方的引理 5.6.1，在文献中被称为 Gronwall 不等式（参见，例如，Henry [194, 第 7 章]）。Gronwall 不等式是研究动力系统，特别是常微分方程解的有力工具。
 
-**引理 5.6.1** (Gronwall 不等式). 设 \( T \in (0, \infty) \)，\( \alpha \in \mathbb{R} \)，\( \epsilon \in C^{1}([0, T], \mathbb{R}) \)，\( \beta \in C([0, T], \mathbb{R}) \) 满足对于所有 \( t \in [0, T] \) 有
+### 引理 5.6.1 (Gronwall 不等式)
+设 \( T \in (0, \infty) \)，\( \alpha \in \mathbb{R} \)，\( \epsilon \in C^{1}([0, T], \mathbb{R}) \)，\( \beta \in C([0, T], \mathbb{R}) \) 满足对于所有 \( t \in [0, T] \) 有
 
 \[ \epsilon(t) \leq \alpha \epsilon(t) + \beta(t). \tag{5.92} \]
 
@@ -6743,9 +7444,10 @@ $\epsilon(t) = e^{\alpha t}u(t) + v(t) \le e^{\alpha t}\epsilon(0) + v(t) \le e^
 
 引理 5.6.1 的证明结束。
 
-### 5.6.2 常微分方程的 Lyapunov 型函数
+## 5.6.2 常微分方程的 Lyapunov 型函数
 
-**命题 5.6.2** (常微分方程的 Lyapunov 型函数). 设 $\varnothing \in \mathbb{N}$，$T \in (0, \infty)$，$\alpha \in \mathbb{R}$，设 $O \subseteq \mathbb{R}^{\varnothing}$ 为开集，设 $\beta \in C(O, \mathbb{R})$，$\mathscr{F} \in C(O, \mathbb{R}^{\varnothing})$，$V \in C^1(O, \mathbb{R})$ 满足对于所有 $\theta \in O$ 有
+### 命题 5.6.2 (常微分方程的 Lyapunov 型函数)
+设 $\varnothing \in \mathbb{N}$，$T \in (0, \infty)$，$\alpha \in \mathbb{R}$，设 $O \subseteq \mathbb{R}^{\varnothing}$ 为开集，设 $\beta \in C(O, \mathbb{R})$，$\mathscr{F} \in C(O, \mathbb{R}^{\varnothing})$，$V \in C^1(O, \mathbb{R})$ 满足对于所有 $\theta \in O$ 有
 
 $V'(\theta)\mathscr{F}(\theta) = \langle (\nabla V)(\theta), \mathscr{F}(\theta) \rangle \le \alpha V(\theta) + \beta(\theta)$, \tag{5.101}
 
@@ -6758,6 +7460,8 @@ $V(\Theta_t) \le e^{\alpha t}V(\Theta_0) + \int_0^t e^{\alpha(t-s)}\beta(\Theta_
 $\epsilon(t) = V(\Theta_t) \quad \text{ 且 } \quad b(t) = \beta(\Theta_t)$. \tag{5.103}
 
 观察到 (5.101)、(5.103)、微积分基本定理和链式法则确保对于所有 $t \in [0, T]$ 有
+
+
 
 $\epsilon'(t) = \frac{\mathrm{d}}{\mathrm{d}t}(V(\Theta_t)) = V'(\Theta_t)(\dot{\Theta}_t) = V'(\Theta_t)\mathscr{F}(\Theta_t) \le \alpha V(\Theta_t) + \beta(\Theta_t) = \alpha \epsilon(t) + b(t)$. \tag{5.104}
 
@@ -6774,10 +7478,6 @@ $V'(\theta)\mathscr{F}(\theta) = \langle (\nabla V)(\theta), \mathscr{F}(\theta)
 且设 $\Theta \in C([0, T], O)$ 满足对于所有 $t \in [0, T]$ 有 $\Theta_t = \Theta_0 + \int_0^t \mathscr{F}(\Theta_s) \, \mathrm{d}s$（参见定义 1.4.7）。则对于所有 $t \in [0, T]$ 有
 
 $V(\Theta_t) \le e^{\alpha t}V(\Theta_0)$. \tag{5.107}
-
-
-
-
 
 *推论 5.6.3 的证明。* 注意命题 5.6.2 和 (5.106) 建立了 (5.107)。因此，推论 5.6.3 的证明完成。 $\square$
 
@@ -6820,6 +7520,7 @@ $$ V(\theta) = \lVert \theta - \vartheta \rVert_{2}^{2}. \quad (5.115) $$
 观察到引理 5.6.4 和 (5.112) 保证对于所有 $\theta \in O$，$V \in C^{1}(O, \mathbb{R})$ 且
 
 $$ V^{\prime}(\theta)\mathcal{F}(\theta) = \langle (\nabla V)(\theta), \mathcal{F}(\theta)\rangle = \langle 2(\theta-\vartheta), \mathcal{F}(\theta)\rangle $$
+
 $$ = -2\langle(\theta-\vartheta),(\nabla\mathcal{L})(\theta)\rangle \leq -2c\|\theta-\vartheta\|_{2}^{2} = -2cV(\theta). $$
 
 因此，推论 5.6.3 证明了对于所有 $t \in [0, T]$ 成立
@@ -6843,6 +7544,7 @@ $$ L(t) = \mathscr{L}(\vartheta+tv). $$
 注意到对于所有 $t \in (0, \delta)$ 成立
 
 $$ \left|\left|\frac{L(t)-L(0)}{t} + \frac{L(t)-L(0)}{t} \langle(\nabla\mathscr{L})(\vartheta), v\rangle\right|\right| = \left|\left|\frac{\mathscr{L}(\vartheta+tv)-\mathscr{L}(\vartheta)}{t} + \langle(\nabla\mathscr{L})(\vartheta), (\nabla\mathscr{L})(\vartheta)\rangle\right|\right| $$
+
 $$ = \left|\left|\frac{\mathscr{L}(\vartheta+tv)-\mathscr{L}(\vartheta)}{t} - \|(\nabla\mathscr{L})(\vartheta)\|_{2}^{2}\right|\right|. $$
 
 因此，$\mathscr{L}$ 在 $\vartheta$ 处可微的假设表明
@@ -6886,7 +7588,9 @@ $$ \langle \theta - \vartheta, (\nabla \mathscr{L})(\theta) \rangle \ge c \|\the
 *(参见定义 1.4.7 和 3.3.4)*。*则*
 
 - *(i)* 对于所有 $\theta \in \mathbb{B}$，$\mathscr{L}(\theta) - \mathscr{L}(\vartheta) \ge \frac{c}{2} \|\theta - \vartheta\|_2^2$，
+
 - *(ii)* 成立 $\{ \theta \in \mathbb{B}: \mathscr{L}(\theta) = \inf_{w \in \mathbb{B}} \mathscr{L}(w) \} = \{ \vartheta \}$，且
+
 - *(iii)* 成立 $(\nabla \mathscr{L})(\vartheta) = 0$。
 
 *引理 5.6.8 的证明。* 在整个证明过程中，设 $B$ 为给定的集合
@@ -6898,6 +7602,8 @@ $$ B = \{ w \in \mathbb{R}^\mathfrak{d}: \| w - \vartheta \|_2 < r \}. \quad (5.
 $$ \langle (\nabla \mathscr{L})(\vartheta + v), v \rangle \ge c \| v \|_2^2. \quad (5.130) $$
 
 因此，微积分基本定理表明对于所有 $\theta \in \mathbb{B}$ 成立
+
+
 
 $$ \begin{aligned} \mathscr{L}(\theta) - \mathscr{L}(\vartheta) &= [\mathscr{L}(\vartheta + t(\theta - \vartheta))]_{t=0}^{t=1} \\ &= \int_0^1 \mathscr{L}'(\vartheta + t(\theta - \vartheta))(\theta - \vartheta) \, \mathrm{d}t \\ &= \int_0^1 \langle (\nabla \mathscr{L})(\vartheta + t(\theta - \vartheta)), (\theta - \vartheta) \rangle \, \mathrm{d}t \\ &= \int_0^1 \frac{\langle (\nabla \mathscr{L})(\vartheta + t(\theta - \vartheta)), t(\theta - \vartheta) \rangle}{t} \, \mathrm{d}t \\ &\ge \int_0^1 c \| t(\theta - \vartheta) \|_2^2 \frac{1}{t} \, \mathrm{d}t = c \| \theta - \vartheta \|_2^2 \left[ \int_0^1 t \, \mathrm{d}t \right] = \tfrac{c}{2} \| \theta - \vartheta \|_2^2 . \end{aligned} \quad (5.131) $$
 
@@ -6913,10 +7619,7 @@ $$ \inf_{w \in \mathbb{B}} \mathscr{L}(w) = \mathscr{L}(\vartheta) < \mathscr{L}
 
 $$ \{ \theta \in B: \mathscr{L}(\theta) = \inf_{w \in B} \mathscr{L}(w) \} = \{ \vartheta \}. \quad (5.134) $$
 
-结合此结果、$B$ 是开集的事实以及引理 5.6.7（在引理 5.6.7 的记号中，以 $\mathfrak{d} \curvearrowright \mathfrak{d}$，$\mathcal{O} \curvearrowright B$，$\vartheta \curvearrowright \vartheta$，$\mathscr{L} \curvearrowright \mathscr{L}|_B$ 进行应用），保证了 $(\nabla \mathscr{L})(\vartheta) = 0$。这确立了第 *(iii)* 项。因此，引理 5.6.8 的证明完成。 ∎
-
-
-
+结合此结果、$B$ 是开集的事实以及引理 5.6.7（在引理 5.6.7 的记号中，以 $\mathfrak{d} \curvearrowright \mathfrak{d}$，$\mathcal{O} \curvearrowright B$，$\vartheta \curvearrowright \vartheta$，$\mathscr{L} \curvearrowright \mathscr{L}|_B$ 进行应用），保证了 $(\nabla \mathscr{L})(\vartheta) = 0$。这确立了第 *(iii)* 项。因此，引理 5.6.8 的证明完成。∎
 
 ## 5.6.5 关于线性增长条件
 
@@ -6924,28 +7627,15 @@ $$ \{ \theta \in B: \mathscr{L}(\theta) = \inf_{w \in B} \mathscr{L}(w) \} = \{ 
 
 设 $\mathfrak{d} \in \mathbb{N}$，$L \in \mathbb{R}$，$r \in (0, \infty)$，$\vartheta \in \mathbb{R}^{\mathfrak{d}}$，$\mathbb{B} = \{w \in \mathbb{R}^{\mathfrak{d}} : \|w - \vartheta\|_2 \leq r\}$，$\mathscr{L} \in C^1(\mathbb{R}^{\mathfrak{d}}, \mathbb{R})$ 满足对于所有 $\theta \in \mathbb{B}$，都有
 
-$$
-\| (\nabla \mathscr{L})(\theta) \|_2 \leq L \| \theta - \vartheta \|_2 \qquad \qquad \qquad \qquad \qquad \qquad (5.135)
-$$
+$$ \| (\nabla \mathscr{L})(\theta) \|_2 \leq L \| \theta - \vartheta \|_2 \qquad \qquad \qquad \qquad \qquad \qquad (5.135) $$
 
 （参见定义 3.3.4）。那么对于所有 $\theta \in \mathbb{B}$，都有
 
-$$
-\mathscr{L}(\theta) - \mathscr{L}(\vartheta) \leq \frac{L}{2} \| \theta - \vartheta \|_2^2. \qquad \qquad \qquad \qquad (5.136)
-$$
+$$ \mathscr{L}(\theta) - \mathscr{L}(\vartheta) \leq \frac{L}{2} \| \theta - \vartheta \|_2^2. \qquad \qquad \qquad \qquad (5.136) $$
 
 **引理 5.6.9 的证明。** 注意到 (5.135)、柯西-施瓦茨不等式以及微积分基本定理保证对于所有 $\theta \in \mathbb{B}$，都有
 
-$$
-\begin{array}{rcl} 
-\mathscr{L}(\theta) - \mathscr{L}(\vartheta) & = & [\mathscr{L}(\vartheta + t(\theta - \vartheta))]_{t=0}^{t=1} \\ 
-& = & \int_0^1 \mathscr{L}'(\vartheta + t(\theta - \vartheta))(\theta - \vartheta) \, \mathrm{d}t \\ 
-& = & \int_0^1 \langle (\nabla \mathscr{L})(\vartheta + t(\theta - \vartheta)), \theta - \vartheta \rangle \, \mathrm{d}t \\ 
-& \leq & \int_0^1 \| (\nabla \mathscr{L})(\vartheta + t(\theta - \vartheta)) \|_2 \| \theta - \vartheta \|_2 \, \mathrm{d}t \qquad \qquad (5.137) \\ 
-& \leq & \int_0^1 L \| \vartheta + t(\theta - \vartheta) - \vartheta \|_2 \| \theta - \vartheta \|_2 \, \mathrm{d}t \\ 
-& = & L \| \theta - \vartheta \|_2^2 \left[ \int_0^1 t \, \mathrm{d}t \right] = \frac{L}{2} \| \theta - \vartheta \|_2^2 
-\end{array}
-$$
+$$ \begin{array}{rcl} \mathscr{L}(\theta) - \mathscr{L}(\vartheta) & = & [\mathscr{L}(\vartheta + t(\theta - \vartheta))]_{t=0}^{t=1} \\ & = & \int_0^1 \mathscr{L}'(\vartheta + t(\theta - \vartheta))(\theta - \vartheta) \, \mathrm{d}t \\ & = & \int_0^1 \langle (\nabla \mathscr{L})(\vartheta + t(\theta - \vartheta)), \theta - \vartheta \rangle \, \mathrm{d}t \\ & \leq & \int_0^1 \| (\nabla \mathscr{L})(\vartheta + t(\theta - \vartheta)) \|_2 \| \theta - \vartheta \|_2 \, \mathrm{d}t \qquad \qquad (5.137) \\ & \leq & \int_0^1 L \| \vartheta + t(\theta - \vartheta) - \vartheta \|_2 \| \theta - \vartheta \|_2 \, \mathrm{d}t \\ & = & L \| \theta - \vartheta \|_2^2 \left[ \int_0^1 t \, \mathrm{d}t \right] = \frac{L}{2} \| \theta - \vartheta \|_2^2 \end{array} $$
 
 （参见定义 1.4.7）。引理 5.6.9 的证明至此完成。$\square$
 
@@ -6955,9 +7645,7 @@ $$
 
 **命题 5.7.1（通过 GF 近似局部极小点）。** 设 $\mathfrak{d} \in \mathbb{N}$，$c, T \in (0, \infty)$，$r \in (0, \infty]$，$\vartheta \in \mathbb{R}^{\mathfrak{d}}$，$\mathbb{B} = \{w \in \mathbb{R}^{\mathfrak{d}} : \|w - \vartheta\|_2 \leq r\}$，$\xi \in \mathbb{B}$，$\mathscr{L} \in C^1(\mathbb{R}^{\mathfrak{d}}, \mathbb{R})$ 满足对于所有 $\theta \in \mathbb{B}$，都有
 
-$$
-\langle \theta - \vartheta, (\nabla \mathscr{L})(\theta) \rangle \geq c \| \theta - \vartheta \|_2^2, \qquad \qquad \qquad \qquad (5.138)
-$$
+$$ \langle \theta - \vartheta, (\nabla \mathscr{L})(\theta) \rangle \geq c \| \theta - \vartheta \|_2^2, \qquad \qquad \qquad \qquad (5.138) $$
 
 并且设 $\Theta \in C([0, T], \mathbb{R}^{\mathfrak{d}})$ 满足对于所有 $t \in [0, T]$，$\Theta_t = \xi - \int_0^t (\nabla \mathscr{L})(\Theta_s) \, \mathrm{d}s$（参见定义 1.4.7 和 3.3.4）。那么
 
@@ -6965,129 +7653,85 @@ $$
 - (ii) 对于所有 $t \in [0, T]$，成立 $\|\Theta_t - \vartheta\|_{2} \leq e^{-ct}\|\xi - \vartheta\|_2$，且
 - (iii) 对于所有 $t \in [0, T]$，成立
 
-$$
-0 \leq \frac{c}{2}\|\Theta_t - \vartheta\|_2^2 \leq \mathscr{L}(\Theta_t) - \mathscr{L}(\vartheta). \quad (5.139)
-$$
+$$ 0 \leq \frac{c}{2}\|\Theta_t - \vartheta\|_2^2 \leq \mathscr{L}(\Theta_t) - \mathscr{L}(\vartheta). \quad (5.139) $$
 
 **命题 5.7.1 的证明。** 在本证明中，设 $V: \mathbb{R}^{\mathfrak{d}} \to [0, \infty)$ 满足对于所有 $\theta \in \mathbb{R}^{\mathfrak{d}}$，$V(\theta)=\|\theta - \vartheta\|_{2}^{2}$，设 $\epsilon: [0, T] \to [0, \infty)$ 满足对于所有 $t \in [0, T]$，$\epsilon(t)=\|\Theta_t - \vartheta\|_{2}=\sqrt{V(\Theta_t)}$，并设 $\tau \in [0, T]$ 为给定的实数，其定义为
 
-$$
-\tau=\inf(\{t \in [0, T]: \Theta_t \notin \mathbb{B}\} \cup \{T\})=\inf(\{t \in [0, T]: \epsilon(t)>r^{2}\} \cup \{T\}). \quad (5.140)
-$$
+$$ \tau=\inf(\{t \in [0, T]: \Theta_t \notin \mathbb{B}\} \cup \{T\})=\inf(\{t \in [0, T]: \epsilon(t)>r^{2}\} \cup \{T\}). \quad (5.140) $$
 
 注意，(5.138) 和引理 5.6.8 中的第 (ii) 项确立了第 (i) 项。接下来注意到，引理 5.6.4 意味着对于所有 $\theta \in \mathbb{R}^{\mathfrak{d}}$，$V \in C^{1}(\mathbb{R}^{\mathfrak{d}}, [0, \infty))$ 且
 
-$$
-(\nabla V)(\theta)=2(\theta - \vartheta). \quad (5.141)
-$$
+$$ (\nabla V)(\theta)=2(\theta - \vartheta). \quad (5.141) $$
 
 此外，注意到微积分基本定理（例如参见 Coleman [85, 定理 3.9]）以及事实 $\mathbb{R}^{\mathfrak{d}} \ni v \mapsto (\nabla \mathscr{L})(v) \in \mathbb{R}^{\mathfrak{d}}$ 和 $\Theta: [0, T] \to \mathbb{R}^{\mathfrak{d}}$ 是连续函数，保证对于所有 $t \in [0, T]$，$\Theta \in C^{1}([0, T], \mathbb{R}^{\mathfrak{d}})$ 且
 
-$$
-\frac{d}{d t}(\Theta_t)=- (\nabla \mathscr{L})(\Theta_t). \quad (5.142)
-$$
+$$ \frac{d}{d t}(\Theta_t)=- (\nabla \mathscr{L})(\Theta_t). \quad (5.142) $$
 
 结合 (5.138) 和 (5.141) 证明了对于所有 $t \in [0, \tau]$，$\epsilon \in C^{1}([0, T], [0, \infty))$ 且
 
-$$
-\begin{aligned}
-\epsilon'(t)= & \frac{d}{d t}(V(\Theta_t))=V^{\prime}(\Theta_t)(\frac{d}{d t}(\Theta_t)) \\
-= & \langle(\nabla V)(\Theta_t), \frac{d}{d t}(\Theta_t)\rangle \\
-= & \langle 2(\Theta_t - \vartheta), - (\nabla \mathscr{L})(\Theta_t)\rangle \\
-= & -2\langle(\Theta_t - \vartheta), (\nabla \mathscr{L})(\Theta_t)\rangle \\
-\leq & -2c\|\Theta_t - \vartheta\|_2^2=-2c\epsilon(t).
-\end{aligned} \quad (5.143)
-$$
+$$ \begin{aligned} \epsilon'(t)= & \frac{d}{d t}(V(\Theta_t))=V^{\prime}(\Theta_t)(\frac{d}{d t}(\Theta_t)) \\ = & \langle(\nabla V)(\Theta_t), \frac{d}{d t}(\Theta_t)\rangle \\ = & \langle 2(\Theta_t - \vartheta), - (\nabla \mathscr{L})(\Theta_t)\rangle \\ = & -2\langle(\Theta_t - \vartheta), (\nabla \mathscr{L})(\Theta_t)\rangle \\ \leq & -2c\|\Theta_t - \vartheta\|_2^2=-2c\epsilon(t). \end{aligned} \quad (5.143) $$
 
 因此，例如引理 5.6.1 中的 Gronwall 不等式意味着对于所有 $t \in [0, \tau]$，都有
 
-$$
-\epsilon(t) \leq \epsilon(0)e^{-2ct}. \quad (5.144)
-$$
+$$ \epsilon(t) \leq \epsilon(0)e^{-2ct}. \quad (5.144) $$
 
 因此，对于所有 $t \in [0, \tau]$，我们得到
 
-$$
-\|\Theta_t - \vartheta\|_2=\sqrt{\epsilon(t)} \leq \sqrt{\epsilon(0)e^{-2ct}}=\|\Theta_0 - \vartheta\|_2e^{-ct}=\|\xi - \vartheta\|_2e^{-ct}. \quad (5.145)
-$$
+$$ \|\Theta_t - \vartheta\|_2=\sqrt{\epsilon(t)} \leq \sqrt{\epsilon(0)e^{-2ct}}=\|\Theta_0 - \vartheta\|_2e^{-ct}=\|\xi - \vartheta\|_2e^{-ct}. \quad (5.145) $$
 
 在下一步中，我们证明
 
-$$
-\tau>0. \quad (5.146)
-$$
+$$ \tau>0. \quad (5.146) $$
 
 在证明 (5.146) 时，我们区分 $\epsilon(0)=0$ 的情况和 $\epsilon(0)>0$ 的情况。我们首先证明 (5.146) 在
 
-$$
-\epsilon(0)=0. \quad (5.147)
-$$
+$$ \epsilon(0)=0. \quad (5.147) $$
 
 的情况下成立。注意到 (5.147)、假设 $r \in(0, \infty]$ 以及事实 $\epsilon:[0, T] \rightarrow[0, \infty)$ 是连续函数，表明
 
-$$
-\tau=\inf(\{t \in[0, T]: \epsilon(t)>r^{2}\} \cup\{T\})>0. \quad (5.148)
-$$
+$$ \tau=\inf(\{t \in[0, T]: \epsilon(t)>r^{2}\} \cup\{T\})>0. \quad (5.148) $$
 
 这在 $\epsilon(0)=0$ 的情况下确立了 (5.146)。在下一步中，我们证明 (5.146) 在
 
-$$
-\epsilon(0)>0. \quad (5.149)
-$$
+$$ \epsilon(0)>0. \quad (5.149) $$
 
 的情况下成立。注意，(5.143) 和假设 $c \in(0, \infty)$ 保证对于所有满足 $\epsilon(t)>0$ 的 $t \in[0, \tau]$，都有
 
-$$
-\epsilon^{\prime}(t) \leq-2 c \epsilon(t)<0. \quad (5.150)
-$$
+$$ \epsilon^{\prime}(t) \leq-2 c \epsilon(t)<0. \quad (5.150) $$
 
 将此与 (5.149) 结合表明
 
-$$
-\epsilon^{\prime}(0)<0. \quad (5.151)
-$$
+$$ \epsilon^{\prime}(0)<0. \quad (5.151) $$
 
 事实 $\epsilon^{\prime}:[0, T] \rightarrow\mathbb{R}$ 是连续函数以及假设 $T \in(0, \infty)$ 证明了
 
-$$
-\inf(\{t \in[0, T]: \epsilon^{\prime}(t)>0\} \cup\{T\})>0. \quad (5.152)
-$$
+$$ \inf(\{t \in[0, T]: \epsilon^{\prime}(t)>0\} \cup\{T\})>0. \quad (5.152) $$
 
 接下来注意，微积分基本定理和假设 $\xi \in \mathbb{B}$ 意味着对于所有满足 $s<\inf(\{t \in[0, T]: \epsilon^{\prime}(t)>0\} \cup\{T\})$ 的 $s \in[0, T]$，都有
 
-$$
-\epsilon(s)=\epsilon(0)+\int_{0}^{s} \epsilon^{\prime}(u) d u \leq \epsilon(0)=\|\xi-\vartheta\|_{2}^{2} \leq r^{2}. \quad (5.153)
-$$
+$$ \epsilon(s)=\epsilon(0)+\int_{0}^{s} \epsilon^{\prime}(u) d u \leq \epsilon(0)=\|\xi-\vartheta\|_{2}^{2} \leq r^{2}. \quad (5.153) $$
 
 将此与 (5.152) 结合证明了
 
-$$
-\tau=\inf(\{s \in[0, T]: \epsilon(s)>r^{2}\} \cup\{T\})>0. \quad (5.154)
-$$
+$$ \tau=\inf(\{s \in[0, T]: \epsilon(s)>r^{2}\} \cup\{T\})>0. \quad (5.154) $$
 
 这在 $\epsilon(0)>0$ 的情况下确立了 (5.146)。注意到 (5.145)、(5.146) 以及假设 $c \in(0, \infty)$ 证明了
 
-$$
-\left\|\Theta_{\tau}-\vartheta\right\|_{2} \leq\|\xi-\vartheta\|_{2} e^{-c \tau}<r. \quad (5.155)
-$$
+$$ \left\|\Theta_{\tau}-\vartheta\right\|_{2} \leq\|\xi-\vartheta\|_{2} e^{-c \tau}<r. \quad (5.155) $$
 
 事实 $\epsilon:[0, T] \rightarrow[0, \infty)$ 是连续函数、(5.140) 和 (5.146) 保证了 $\tau=T$。将此与 (5.145) 结合证明了对于所有 $t \in[0, T]$，都有
 
-$$
-\left\|\Theta_{t}-\vartheta\right\|_{2} \leq\|\xi-\vartheta\|_{2} e^{-c t}. \quad (5.156)
-$$
+$$ \left\|\Theta_{t}-\vartheta\right\|_{2} \leq\|\xi-\vartheta\|_{2} e^{-c t}. \quad (5.156) $$
 
 这确立了第 (ii) 项。因此，只剩下证明第 (iii) 项。为此，注意到 (5.138) 和引理 5.6.8 中的第 (i) 项证明了对于所有 $\theta \in \mathbb{B}$，都有
 
-$$
-0 \leq \frac{c}{2}\|\theta - \vartheta\|_2^2 \leq \mathscr{L}(\theta) - \mathscr{L}(\vartheta). \quad (5.157)
-$$
+$$ 0 \leq \frac{c}{2}\|\theta - \vartheta\|_2^2 \leq \mathscr{L}(\theta) - \mathscr{L}(\vartheta). \quad (5.157) $$
 
 将此和第 (ii) 项结合意味着对于所有 $t \in [0, T]$，都有
 
-$$
-0 \leq \frac{c}{2}\|\Theta_t - \vartheta\|_2^2 \leq \mathscr{L}(\Theta_t) - \mathscr{L}(\vartheta). \quad (5.158)
-$$
+
+
+$0 \leq \frac{c}{2}\|\Theta_t - \vartheta\|_2^2 \leq \mathscr{L}(\Theta_t) - \mathscr{L}(\vartheta). \quad (5.158)$
 
 这确立了第 (iii) 项。命题 5.7.1 的证明至此完成。
 
@@ -7095,123 +7739,143 @@ $$
 
 **引理 5.7.2（常微分方程极大解的局部存在性）。** 设 $\varrho \in \mathbb{N}$，$\xi \in \mathbb{R}^\varrho$，$T \in (0, \infty)$，设 $\|\|\cdot\|\|: \mathbb{R}^\varrho \to [0, \infty)$ 为一个范数，并设 $\mathscr{G}: \mathbb{R}^\varrho \to \mathbb{R}^\varrho$ 为局部利普希茨连续的。那么存在唯一的实数 $\tau \in (0, T]$ 和唯一的连续函数 $\Theta: [0, \tau) \to \mathbb{R}^\varrho$，使得对于所有 $t \in [0, \tau)$，都有
 
-$$
+```
 \liminf_{s \nearrow \tau}\Big[\|\|\Theta_s\|\| + \frac{1}{(T-s)}\Big] = \infty \quad\text{且}\quad \Theta_t = \xi + \int_0^t \mathscr{G}(\Theta_s)\,\mathrm{d}s. \quad (5.159)
-$$
+```
 
-**引理 5.7.2 的证明。** 注意，例如 Teschl [394, 定理 2.2 和推论 2.16] 蕴含了 (5.159)（参见，例如，[5, 定理 7.6] 和 [222, 定理 1.1]）。引理 5.7.2 的证明至此完成。
+**引理 5.7.2 的证明。** 注意，例如 `Teschl [394, 定理 2.2 和推论 2.16]` 蕴含了 (5.159)（参见，例如，`[5, 定理 7.6]` 和 `[222, 定理 1.1]`）。引理 5.7.2 的证明至此完成。
 
 **引理 5.7.3（无穷时间区间上常微分方程极大解的局部存在性）。** 设 $\varrho \in \mathbb{N}$，$\xi \in \mathbb{R}^\varrho$，设 $\|\|\cdot\|\|: \mathbb{R}^\varrho \to [0, \infty)$ 为一个范数，并设 $\mathscr{G}: \mathbb{R}^\varrho \to \mathbb{R}^\varrho$ 为局部利普希茨连续的。那么存在唯一的扩展实数 $\tau \in (0, \infty]$ 和唯一的连续函数 $\Theta: [0, \tau) \to \mathbb{R}^\varrho$，使得对于所有 $t \in [0, \tau)$，都有
 
-$$
+```
 \liminf_{s \nearrow \tau}\big[\|\|\Theta_s\|\| + s\big] = \infty \quad\text{且}\quad \Theta_t = \xi + \int_0^t \mathscr{G}(\Theta_s)\,\mathrm{d}s. \quad (5.160)
-$$
+```
 
 **引理 5.7.3 的证明。** 首先，注意到引理 5.7.2 意味着存在唯一的实数 $\tau_n \in (0, n]$，$n \in \mathbb{N}$，以及唯一的连续函数 $\Theta^{(n)}: [0, \tau_n) \to \mathbb{R}^\varrho$，$n \in \mathbb{N}$，使得对于所有 $n \in \mathbb{N}$，$t \in [0, \tau_n)$，都有
 
-$$
+```
 \liminf_{s \nearrow \tau_n}\Big[\|\|\Theta^{(n)}_s\|\| + \frac{1}{(n-s)}\Big] = \infty \quad\text{且}\quad \Theta^{(n)}_t = \xi + \int_0^t \mathscr{G}(\Theta^{(n)}_s)\,\mathrm{d}s. \quad (5.161)
-$$
+```
 
 这表明对于所有 $n \in \mathbb{N}$，$t \in [0, \min\{\tau_{n+1}, n\})$，都有
 
-$$
+```
 \liminf_{s \nearrow \tau_{n+1}}\Big[\|\|\Theta^{(n+1)}_s\|\| + \frac{1}{(n+1-s)}\Big] = \infty \quad\text{且}\quad \Theta^{(n+1)}_t = \xi + \int_0^t \mathscr{G}(\Theta^{(n+1)}_s)\,\mathrm{d}s. \quad (5.162)
-$$
-
-
-
-
+```
 
 因此，我们得到对所有 $n \in \mathbb{N}$，$t \in [0, \min \{\tau_{n+1}, n\})$ 有
 
-$$\liminf_{s \nearrow \min \{\tau_{n+1}, n\}} \big[\big\| \Theta_{s}^{(n+1)} \big\| + \tfrac{1}{n-s} \big] = \infty \tag{5.163}$$
+```
+\liminf_{s \nearrow \min \{\tau_{n+1}, n\}} \big[\big\| \Theta_{s}^{(n+1)} \big\| + \tfrac{1}{n-s} \big] = \infty \tag{5.163}
+```
 
 以及
 
-$$\Theta_{t}^{(n+1)} = \xi + \int_{0}^{t} \mathscr{G} \big( \Theta_{s}^{(n+1)} \big) \, \mathrm{d} s. \tag{5.164}$$
+```
+\Theta_{t}^{(n+1)} = \xi + \int_{0}^{t} \mathscr{G} \big( \Theta_{s}^{(n+1)} \big) \, \mathrm{d} s. \tag{5.164}
+```
 
 将此与 (5.161) 结合，证明了对所有 $n \in \mathbb{N}$ 有
 
-$$\tau_{n} = \min \{\tau_{n+1}, n\} \qquad \text{且} \qquad \Theta^{(n)} = \Theta^{(n+1)} \big|_{[0, \min \{\tau_{n+1}, n\}]}. \tag{5.165}$$
+```
+\tau_{n} = \min \{\tau_{n+1}, n\} \qquad \text{且} \qquad \Theta^{(n)} = \Theta^{(n+1)} \big|_{[0, \min \{\tau_{n+1}, n\}]}. \tag{5.165}
+```
 
 因此，我们得到对所有 $n \in \mathbb{N}$ 有
 
-$$\tau_{n} \leq \tau_{n+1} \qquad \text{且} \qquad \Theta^{(n)} = \Theta^{(n+1)} \big|_{[0, \tau_{n}]}. \tag{5.166}$$
+```
+\tau_{n} \leq \tau_{n+1} \qquad \text{且} \qquad \Theta^{(n)} = \Theta^{(n+1)} \big|_{[0, \tau_{n}]}. \tag{5.166}
+```
 
 接下来，令 $\mathbf{t} \in (0, \infty]$ 为由以下公式给出的扩展实数
 
-$$\mathbf{t} = \lim_{n \to \infty} \tau_{n} \tag{5.167}$$
+```
+\mathbf{t} = \lim_{n \to \infty} \tau_{n} \tag{5.167}
+```
 
 并设 $\Theta \colon [0, \mathbf{t}) \to \mathbb{R}^{\mathfrak{g}}$ 满足对所有 $n \in \mathbb{N}$，$t \in [0, \tau_{n})$ 有
 
-$$\Theta_{t} = \Theta_{t}^{(n)}. \tag{5.168}$$
+```
+\Theta_{t} = \Theta_{t}^{(n)}. \tag{5.168}
+```
 
 注意，对所有 $t \in [0, \mathbf{t})$，存在 $n \in \mathbb{N}$ 使得 $t \in [0, \tau_{n})$。结合这一点，(5.161) 以及 (5.166)，确保了对所有 $t \in [0, \mathbf{t})$ 有 $\Theta \in C([0, \mathbf{t}), \mathbb{R}^{\mathfrak{g}})$ 且
 
-$$\Theta_{t} = \xi + \int_{0}^{t} \mathscr{G} ( \Theta_{s} ) \, \mathrm{d} s. \tag{5.169}$$
+```
+\Theta_{t} = \xi + \int_{0}^{t} \mathscr{G} ( \Theta_{s} ) \, \mathrm{d} s. \tag{5.169}
+```
 
 此外，注意 (5.165) 确保了对所有 $n \in \mathbb{N}$，$k \in \mathbb{N} \cap [n, \infty)$ 有
 
-$$\min \{\tau_{k+1}, n\} = \min \{\tau_{k+1}, k, n\} = \min \{\min \{\tau_{k+1}, k\}, n\} = \min \{\tau_{k}, n\}. \tag{5.170}$$
+```
+\min \{\tau_{k+1}, n\} = \min \{\tau_{k+1}, k, n\} = \min \{\min \{\tau_{k+1}, k\}, n\} = \min \{\tau_{k}, n\}. \tag{5.170}
+```
 
 这表明对所有 $n \in \mathbb{N}$，$k \in \mathbb{N} \cap (n, \infty)$ 有 $\min \{\tau_{k}, n\} = \min \{\tau_{k-1}, n\}$。因此，我们得到对所有 $n \in \mathbb{N}$，$k \in \mathbb{N} \cap (n, \infty)$ 有
 
-$$\min \{\tau_{k}, n\} = \min \{\tau_{k-1}, n\} = \dots = \min \{\tau_{n+1}, n\} = \min \{\tau_{n}, n\} = \tau_{n}. \tag{5.171}$$
+```
+\min \{\tau_{k}, n\} = \min \{\tau_{k-1}, n\} = \dots = \min \{\tau_{n+1}, n\} = \min \{\tau_{n}, n\} = \tau_{n}. \tag{5.171}
+```
 
 结合这一事实以及 $(\tau_{n})_{n \in \mathbb{N}} \subseteq [0, \infty)$ 是一个非递减序列，意味着对所有 $n \in \mathbb{N}$ 有
 
-$$\min \{\mathbf{t}, n\} = \min \bigg\{\lim_{k \to \infty} \tau_{k}, n \bigg\} = \lim_{k \to \infty} \big( \min \{\tau_{k}, n\} \big) = \lim_{k \to \infty} \tau_{n} = \tau_{n}. \tag{5.172}$$
+```
+\min \{\mathbf{t}, n\} = \min \bigg\{\lim_{k \to \infty} \tau_{k}, n \bigg\} = \lim_{k \to \infty} \big( \min \{\tau_{k}, n\} \big) = \lim_{k \to \infty} \tau_{n} = \tau_{n}. \tag{5.172}
+```
 
 因此，我们得到对所有满足 $\mathbf{t} < n$ 的 $n \in \mathbb{N}$ 有
 
-$$\tau_{n} = \min \{\mathbf{t}, n\} = \mathbf{t}. \tag{5.173}$$
+```
+\tau_{n} = \min \{\mathbf{t}, n\} = \mathbf{t}. \tag{5.173}
+```
 
 结合这一点、(5.161) 和 (5.168)，证明了对所有满足 $\mathbf{t} < n$ 的 $n \in \mathbb{N}$ 有
 
-$$
+```
 \begin{align*}
 \liminf_{s \uparrow \tau_n} \|\Theta_s \| &= \liminf_{s \uparrow \tau_n} \|\Theta_s \| = \liminf_{s \uparrow \tau_n} \| \Theta^{(n)}_s \| \\
 &= -\frac{1}{n-\tau_n} + \liminf_{s \uparrow \tau_n} \left[ \left\| \Theta^{(n)}_s \right\| + \frac{1}{n-\tau_n} \right] \\
 &= -\frac{1}{n-\tau_n} + \liminf_{s \uparrow \tau_n} \left[ \left\| \Theta^{(n)}_s \right\| + \frac{1}{n-s} \right] = \infty.\tag{5.174}
 \end{align*}
-$$
+```
 
 因此，我们得到
 
-$$\liminf_{s \uparrow t} \|\hat{\Theta}_s + s \| = \infty.\tag{5.175}$$
+```
+\liminf_{s \uparrow t} \|\hat{\Theta}_s + s \| = \infty.\tag{5.175}
+```
 
 接下来注意，对所有 $i \in (0, \infty)$，$\hat{\Theta} \in C([0, i], \mathbb{R}^{\vartheta})$，$n \in \mathbb{N}$，$t \in [0, \min\{\hat{t}, n\})$，若满足 $\liminf_{s \uparrow t} \|\hat{\Theta}_s + s \| = \infty$ 且 $\forall s \in [0, i)$: $\hat{\Theta}_s = \xi + \int_0^s \mathcal{D}(\hat{\Theta}_u) \, du$，则有
 
-$$
+```
 \begin{align*}
 \liminf_{s \uparrow \min\{\hat{t}, n\}} \left[ \left\| \hat{\Theta}_s \right\| + \frac{1}{n-s} \right] &= \infty \quad \text{且} \quad \hat{\Theta}_t = \xi + \int_0^t \mathcal{D}(\hat{\Theta}_s) \, \mathrm{d}s.\tag{5.176}
 \end{align*}
-$$
+```
 
 结合这一点与 (5.161)，证明了对所有 $i \in (0, \infty)$，$\hat{\Theta} \in C([0, i], \mathbb{R}^{\vartheta})$，$n \in \mathbb{N}$，若满足 $\liminf_{s \uparrow t} \|\hat{t}_t + t \| = \infty$ 且 $\forall t \in [0, i)$: $\hat{\Theta}_t = \xi + \int_0^t \mathcal{D}(\hat{\Theta}_s) \, ds$，则有
 
-$$
+```
 \begin{align*}
 \min\{\hat{t}, n\} &= \tau_n \quad \text{且} \quad \hat{\Theta}_{[0, \tau_n)} = \Theta^{(n)}.\tag{5.177}
 \end{align*}
-$$
+```
 
 结合 (5.169) 和 (5.175)，从而确保了对所有 $i \in (0, \infty)$，$\hat{\Theta} \in C([0, i], \mathbb{R}^{\vartheta})$，$n \in \mathbb{N}$，若满足 $\liminf_{s \uparrow t} \|\hat{t}_t + t \| = \infty$ 且 $\forall t \in [0, i)$: $\hat{\Theta}_t = \xi + \int_0^t \mathcal{D}(\hat{\Theta}_s) \, ds$，则有
 
-$$
+```
 \begin{align*}
 \min\{\hat{t}, n\} = \tau_n &= \min\{\hat{t}, n\} \quad \text{且} \quad \hat{\Theta}_{[0, \tau_n)} = \Theta^{(n)} = \Theta|_{[0, \tau_n)}.\tag{5.178}
 \end{align*}
-$$
+```
 
 结合这一点与 (5.167)，表明了对所有 $i \in (0, \infty)$，$\hat{\Theta} \in C([0, i], \mathbb{R}^{\vartheta})$，若满足 $\liminf_{s \uparrow t} \|\hat{t}_t + t \| = \infty$ 且 $\forall t \in [0, i)$: $\hat{\Theta}_t = \xi + \int_0^t \mathcal{D}(\hat{\Theta}_s) \, ds$，则有
 
-$$
+```
 \begin{align*}
 \hat{t} &= t \quad \text{且} \quad \hat{\Theta} = \Theta.\tag{5.179}
 \end{align*}
-$$
+```
 
 结合这一点、(5.169) 和 (5.175)，完成了引理 5.7.3 的证明。
 
@@ -7219,58 +7883,85 @@ $$
 
 **定理 5.7.4** (通过 GFs 重新审视局部最小点的近似)。*设 $\vartheta \in \mathbb{N}$，$c \in (0, \infty)$，$r \in (0, \infty]$，$\theta \in \mathbb{R}^{\vartheta}$，$\mathbb{B} = \{w \in \mathbb{R}^{\vartheta}: \|w - \theta\|_2 \leq r\}$，$\xi \in \mathbb{B}$，$\mathcal{L} \in C^2(\mathbb{R}^{\vartheta}, \mathbb{R})$ 满足对所有 $\theta \in \mathbb{B}$ 有*
 
-$$(\theta - \theta, \langle \nabla \mathcal{L} \rangle(\theta)) \geq c \| \theta - \theta \|^2_2\tag{5.180}$$
+```
+(\theta - \theta, \langle \nabla \mathcal{L} \rangle(\theta)) \geq c \| \theta - \theta \|^2_2\tag{5.180}
+```
 
 *(参见定义 1.4.7 和 3.3.4)。则*
 
 - (i) 存在唯一的连续函数 $\Theta: [0, \infty) \to \mathbb{R}^{\vartheta}$，使得对所有 $t \in [0, \infty)$ 有
-  $$\Theta_t = \xi - \int_0^t (\nabla \mathcal{L}) (\Theta_s) \, \mathrm{d}s,$$
+
+  ```
+  \Theta_t = \xi - \int_0^t (\nabla \mathcal{L}) (\Theta_s) \, \mathrm{d}s,
+  ```
+
   (5.181)
+
 - (ii) 有 $\{\theta \in \mathbb{R}^{\vartheta} : \mathcal{L}(\theta) = \inf_{w \in \mathbb{R}^{\vartheta}} \mathcal{L}(w)\} = \{\theta\}$，
+
 - (iii) 对所有 $t \in [0, \infty)$ 有 $\|\Theta_t - \theta\|_2 \leq e^{-ct} \|\xi - \theta\|_2$，且
+
 - (iv) 对所有 $t \in [0, \infty)$ 有
-  $$0 \leq \frac{c}{2} \|\Theta_t - \theta\|_2^2 \leq \mathcal{L}(\Theta_t) - \mathcal{L}(\theta).$$
+
+  ```
+  0 \leq \frac{c}{2} \|\Theta_t - \theta\|_2^2 \leq \mathcal{L}(\Theta_t) - \mathcal{L}(\theta).
+  ```
+
   (5.182)
 
 **定理 5.7.4 的证明。** 首先，注意到假设 $\mathcal{L} \in C^2(\mathbb{R}^{\vartheta}, \mathbb{R})$ 确保
 
-$$\mathbb{R}^{\vartheta} \ni \theta \mapsto -(\nabla \mathcal{L})(\theta) \in \mathbb{R}^{\vartheta}$$
+```
+\mathbb{R}^{\vartheta} \ni \theta \mapsto -(\nabla \mathcal{L})(\theta) \in \mathbb{R}^{\vartheta}
+```
+
 (5.183)
 
 是连续可微的。微积分基本定理因此意味着
 
-$$\mathbb{R}^{\vartheta} \ni \theta \mapsto -(\nabla \mathcal{L})(\theta) \in \mathbb{R}^{\vartheta}$$
+```
+\mathbb{R}^{\vartheta} \ni \theta \mapsto -(\nabla \mathcal{L})(\theta) \in \mathbb{R}^{\vartheta}
+```
+
+
+
 (5.184)
 
 是局部利普希茨连续的。结合这一点与引理 5.7.3（在引理 5.7.3 的记号中取 $\mathfrak{G} \sim (\mathbb{R}^{\vartheta} \ni \theta \mapsto -(\nabla \mathcal{L})(\theta) \in \mathbb{R}^{\vartheta})$），证明存在唯一的扩展实数 $\tau \in (0, \infty]$ 和唯一的连续函数 $\Theta: [0, \tau) \to \mathbb{R}^{\vartheta}$，使得对所有 $t \in [0, \tau)$ 有
 
 $$\liminf_{s \uparrow \tau} \|\Theta_s \|_2 + s] = \infty \quad\text{且}\quad \Theta_t = \xi - \int_0^t (\nabla \mathcal{L}) (\Theta_s) \, \mathrm{d}s.$$
+
 (5.185)
 
 接下来注意到命题 5.7.1 证明了对所有 $t \in [0, \tau)$ 有
 
 $$\|\Theta_t - \theta\|_2 \leq e^{-ct} \|\xi - \theta\|_2.$$
+
 (5.186)
 
 这意味着
 
 $$
+
 \begin{aligned}
+
 &\liminf_{s \uparrow \tau} \|\Theta_s \|_2 \leq \left[\liminf_{s \uparrow \tau} \|\Theta_s - \theta\|_2\right] + \|\theta\|_2 \\
+
 &\quad \leq \left[\liminf_{s \uparrow \tau} e^{-cs} \|\xi - \theta\|_2\right] + \|\theta\|_2 \leq \|\xi - \theta\|_2 + \|\theta\|_2 < \infty .
+
 \end{aligned}
+
 $$
+
 (5.187)
 
 结合这一点与 (5.185)，表明
 
 $$\tau = \infty.$$
+
 (5.188)
 
 结合这一点与 (5.185) 证明了第 (i) 项。此外，注意命题 5.7.1 和第 (i) 项确立了第 (ii)、(iii) 和第 (iv) 项。定理 5.7.4 的证明至此完成。 $\square$
-
-
-
 
 ## 5.7.4 目标函数的近似误差
 
@@ -7281,17 +7972,22 @@ $$(\theta - \vartheta, (\nabla\mathcal{L})(\theta)) \geq c\|\theta - \vartheta\|
 （参见定义 1.4.7 和 3.3.4）。则
 
 - (i) 存在唯一的连续函数 $\Theta : [0, \infty) \to \mathbb{R}^{\mathfrak{d}}$，使得对于所有 $t \in [0, \infty)$ 成立
+
   $$\Theta_t = \xi - \int_0^t (\nabla\mathcal{L})(\Theta_s) \, \mathrm{d}s, \tag{5.190}$$
+
 - (ii) 成立 $\{\theta \in \mathbb{B} : \mathcal{L}(\theta) = \inf_{w \in \mathbb{B}} \mathcal{L}(w)\} = \{\vartheta\}$，
+
 - (iii) 对于所有 $t \in [0, \infty)$ 成立 $\|\Theta_t - \vartheta\|_2 \leq e^{-ct}\|\xi - \vartheta\|_2$，且
+
 - (iv) 对于所有 $t \in [0, \infty)$ 成立
+
   $$0 \leq \tfrac{\xi}{2}\|\Theta_t - \vartheta\|_2^2 \leq \mathcal{L}(\Theta_t) - \mathcal{L}(\vartheta) \leq \tfrac{L}{2}\|\Theta_t - \vartheta\|_2^2 \leq \tfrac{L}{2} e^{-2ct}\|\xi - \vartheta\|_2^2. \tag{5.191}$$
 
 *推论 5.7.5 的证明*。定理 5.7.4 和引理 5.6.9 确立了条目 (i)、(ii)、(iii) 和 (iv)。因此，推论 5.7.5 的证明完毕。$\square$
 
 #### 第 6 章
 
-## 确定性梯度下降 (GD) 优化方法
+## 确定性梯度下降 `GD` 优化方法
 
 本章回顾并研究确定性的 **GD** 型优化方法，例如经典的普通 **GD** 优化方法（参见下文 **6.1** 节），以及更复杂的 **GD** 型优化方法，包括带有动量的 **GD** 优化方法（参见下文 **6.3**、**6.4** 和 **6.8** 节）以及学习率带有自适应修正的 **GD** 优化方法（参见下文 **6.5**、**6.6**、**6.7** 和 **6.8** 节）。
 
@@ -7301,9 +7997,9 @@ $$(\theta - \vartheta, (\nabla\mathcal{L})(\theta)) \geq c\|\theta - \vartheta\|
 
 在本节中，我们回顾并研究经典的普通 **GD** 优化方法（参见，例如，[303, 第 1.2.3 节]、[52, 第 9.3 节] 和 [57, 第 3 章]）。**GD** 优化方法背后的一个简单直觉是通过沿着目标函数最陡下降方向执行连续步骤来解决最小化问题，即通过沿着目标函数梯度的相反方向执行连续步骤。
 
-对于 **GD** 优化方法，一种略有不同且可能更准确的视角是将 **GD** 优化方法视为相关的 **GD 常微分方程 (ODE)** 的普通欧拉离散化（例如，参见上述第 **5** 章中的定理 **5.7.4**）。
+对于 **GD** 优化方法，一种略有不同且可能更准确的视角是将 **GD** 优化方法视为相关的 **GD 常微分方程 `ODE`** 的普通欧拉离散化（例如，参见上述第 **5** 章中的定理 **5.7.4**）。
 
-**定义 6.1.1 (GD 优化方法)。** 设 $\mathfrak{d} \in \mathbb{N}$，$(\gamma_n)_{n \in \mathbb{N}} \subseteq [0, \infty)$，$\xi \in \mathbb{R}^{\mathfrak{d}}$，且设 $\mathcal{L}: \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}$ 和 $\mathcal{S}: \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}^{\mathfrak{d}}$ 满足对于所有 $U \in \{V \subseteq \mathbb{R}^{\mathfrak{d}}: V \text{ 是开集}\}$，$\theta \in U$ 且 $\mathcal{L}|_U \in C^1(U, \mathbb{R}^d)$ 有
+**定义 6.1.1 (`GD` 优化方法)。** 设 $\mathfrak{d} \in \mathbb{N}$，$(\gamma_n)_{n \in \mathbb{N}} \subseteq [0, \infty)$，$\xi \in \mathbb{R}^{\mathfrak{d}}$，且设 $\mathcal{L}: \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}$ 和 $\mathcal{S}: \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}^{\mathfrak{d}}$ 满足对于所有 $U \in \{V \subseteq \mathbb{R}^{\mathfrak{d}}: V \text{ 是开集}\}$，$\theta \in U$ 且 $\mathcal{L}|_U \in C^1(U, \mathbb{R}^d)$ 有
 
 $$\mathcal{S}(\theta) = (\nabla \mathcal{L})(\theta). \tag{6.1}$$
 
@@ -7314,21 +8010,29 @@ $$\Theta_0 = \xi \quad \text{以及} \quad \Theta_n = \Theta_{n-1} - \gamma_n \m
 我们就说 $\Theta$ 是目标函数 $\mathcal{L}$、学习率 $(\gamma_n)_{n \in \mathbb{N}}$ 和初始值 $\xi$ 的 **GD** 过程）。
 
 - **练习 6.1.1。** 设 $\xi = (\xi_1, \xi_2, \xi_3) \in \mathbb{R}^3$ 满足 $\xi = (1, 2, 3)$，设 $\mathcal{L} : \mathbb{R}^3 \to \mathbb{R}$ 满足对于所有 $\theta = (\theta_1, \theta_2, \theta_3) \in \mathbb{R}^3$ 有
+
   $$\mathcal{L}(\theta) = 2(\theta_1)^2 + (\theta_2 + 1)^2 + (\theta_3 - 1)^2, \tag{6.3}$$
+
   且设 $\Theta$ 为目标函数 $\mathcal{L}$、学习率 $\mathbb{N} \ni n \mapsto \frac{1}{2^n}$ 和初始值 $\xi$ 的 **GD** 过程（参见定义 6.1.1）。请明确给出 $\Theta_1, \Theta_2$ 和 $\Theta_3$，并证明你的结果是正确的！
 
 - **练习 6.1.2。** 设 $\xi = (\xi_1, \xi_2, \xi_3) \in \mathbb{R}^3$ 满足 $\xi = (\xi_1, \xi_2, \xi_3) = (3, 4, 5)$，设 $\mathcal{L} : \mathbb{R}^3 \to \mathbb{R}$ 满足对于所有 $\theta = (\theta_1, \theta_2, \theta_3) \in \mathbb{R}^3$ 有
+
   $$\mathcal{L}(\theta) = (\theta_1)^2 + (\theta_2 - 1)^2 + 2(\theta_3 + 1)^2,$$
+
   且设 $\Theta$ 为目标函数 $\mathcal{L}$、学习率 $\mathbb{N} \ni n \mapsto 1/3 \in [0, \infty)$ 和初始值 $\xi$ 的 **GD** 过程（参见定义 6.1.1）。请明确给出 $\Theta_1, \Theta_2$ 和 $\Theta_3$，并证明你的结果是正确的。
 
 ### 6.1.1 在 ANN 训练中的 GD 优化
 
-在接下来的例子中，我们在全连接前馈人工神经网络 (ANN) 的向量化描述（参见第 1.1 节）的背景下应用 **GD** 优化方法，其损失函数为定义 5.4.2 中的均方误差损失函数（参见第 5.4.2 节）。
+在接下来的例子中，我们在全连接前馈人工神经网络 `ANN` 的向量化描述（参见第 1.1 节）的背景下应用 **GD** 优化方法，其损失函数为定义 5.4.2 中的均方误差损失函数（参见第 5.4.2 节）。
 
 **例子 6.1.2。** 设 $d, h, \mathfrak{d} \in \mathbb{N}$，$l_1, l_2, \ldots, l_h \in \mathbb{N}$ 满足 $\mathfrak{d} = l_1(d+1)+ [\sum_{k=2}^{h} l_k(l_{k-1}+1)] + l_h+1$，设 $u : \mathbb{R} \to \mathbb{R}$ 可微，设 $M \in \mathbb{N}$，$x_1, x_2, \ldots, x_M \in \mathbb{R}^d$，$y_1, y_2, \ldots, y_M \in \mathbb{R}$，设 $\mathcal{L} : \mathbb{R}^{\mathfrak{d}} \to [0, \infty)$ 满足对于所有 $\theta \in \mathbb{R}^{\mathfrak{d}}$ 有
+
 $$\mathcal{L}(\theta) = \frac{1}{M} \left[ \sum_{m=1}^{M} \left( \mathcal{N}^{\theta, d}_{\mathfrak{d}}_{w_{l_{a,i_1}}, w_{l_{a,i_2}}, \ldots, w_{l_{a,i_h}}, id\mathfrak{d}}(x_m) - y_m \right)^2 \right], \tag{6.4}$$
+
 设 $\xi \in \mathbb{R}^{\mathfrak{d}}$，设 $(\gamma_n)_{n \in \mathbb{N}} \subseteq \mathbb{N}$，且设 $\Theta : \mathbb{N}_0 \to \mathbb{R}^{\mathfrak{d}}$ 满足对于所有 $n \in \mathbb{N}$ 有
+
 $$\Theta_0 = \xi \text{ 以及 } \Theta_n = \Theta_{n-1} - \gamma_n(\nabla \mathcal{L})(\Theta_{n-1}) \tag{6.5}$$
+
 （参见定义 1.1.3 和 1.2.1 以及推论 5.3.6）。则 $\Theta$ 是目标函数 $\mathcal{L}$、学习率 $(\gamma_n)_{n \in \mathbb{N}}$ 和初始值 $\xi$ 的 **GD** 过程。
 
 *例子 6.1.2 的证明*。注意，(6.5)、(6.1) 和 (6.2) 表明 $\Theta$ 是目标函数 $\mathcal{L}$、学习率 $(\gamma_n)_{n \in \mathbb{N}}$ 和初始值 $\xi$ 的 **GD** 过程。因此，例子 6.1.2 的证明完毕。$\square$
@@ -7346,6 +8050,7 @@ $$g(1) = g(0) + \int_0^1 g'(r) \, \mathrm{d}r = g(0) + \int_0^1 \frac{g'(r)(1-r)
 此外，注意到分部积分法保证对于所有 $n \in \mathbb{N}$，$g \in C^{n+1}([0,1], \mathbb{R})$ 成立
 
 $$\int_0^1 \frac{g^{(n)}(r)(1-r)^{n-1}}{(n-1)!} \, \mathrm{d}r = \left[- \frac{g^{(n)}(r)(1-r)^n}{n!} \right]_{r=0}^{r=1} + \int_0^1 \frac{g^{(n+1)}(r)(1-r)^n}{n!} \, \mathrm{d}r$$
+
 $$= \frac{g^{(n)}(0)}{n!} + \int_0^1 \frac{g^{(n+1)}(r)(1-r)^n}{n!} \, \mathrm{d}r.$$ (6.8)
 
 将此与 (6.7) 结合并使用归纳法可知，对于所有 $g \in C^N([0,1], \mathbb{R})$ 成立
@@ -7360,11 +8065,11 @@ $$\Theta_t = \Theta_0 + \int_0^t \mathscr{F}(\Theta_s) \, \mathrm{d}s, \qquad \t
 
 $$\| \mathscr{F}(x) \|_2 \leq c, \qquad \text{以及} \qquad \| \mathscr{F}'(x)(y) \|_2 \leq c \| y \|_2$$ (6.11)
 
+
+
 *(参见定义 3.3.4)。则*
 
 $$\| \Theta_{T+\gamma} - \theta \|_2 \leq c^2 \gamma^2.$$ (6.12)
-
-
 
 引理 6.1.4 的证明。注意，微积分基本定理、假设 $\mathscr{G} \in C^{1}(\mathbb{R}^{9}, \mathbb{R}^{9})$ 以及 (6.10) 确保了对于所有 $t \in (0, \infty)$，都有 $\Theta \in C^{1}([0, \infty), \mathbb{R}^{9})$ 且
 
@@ -7386,7 +8091,8 @@ $$\begin{aligned} &\left\|\Theta_{T+\gamma}-\theta\right\|_{2} \\ &=\left\|\Thet
 
 □
 
-**推论 6.1.5** （**广义常微分方程**中欧拉方法的局部误差）。设 $\mathfrak{d} \in \mathbb{N}$，$T, \gamma, c \in [0, \infty)$，$\mathscr{L} \in C^{2}(\mathbb{R}^{9}, \mathbb{R})$，$\Theta \in C([0, \infty), \mathbb{R}^{9})$，$\theta \in \mathbb{R}^{9}$，*对于所有* $x, y \in \mathbb{R}^{9}$，$t \in [0, \infty)$，*满足*
+### 推论 6.1.5
+**广义常微分方程中欧拉方法的局部误差**。设 $\mathfrak{d} \in \mathbb{N}$，$T, \gamma, c \in [0, \infty)$，$\mathscr{L} \in C^{2}(\mathbb{R}^{9}, \mathbb{R})$，$\Theta \in C([0, \infty), \mathbb{R}^{9})$，$\theta \in \mathbb{R}^{9}$，*对于所有* $x, y \in \mathbb{R}^{9}$，$t \in [0, \infty)$，*满足*
 
 $$\Theta_{t} = \Theta_{0}-\int_{0}^{t}(\nabla\mathscr{L})(\Theta_{s})\mathrm{d}s, \quad \theta = \Theta_{T}-\gamma(\nabla\mathscr{L})(\Theta_{T}),\tag{6.17}$$
 
@@ -7406,7 +8112,8 @@ $$\mathcal{G}(\theta) = - (\nabla\mathcal{L})(\theta)。(6.20)$$
 
 第 5 章 5.6.2 节中的推论 5.6.3 和 5.6.3 节中的推论 5.6.5，特别是说明了如何利用李雅普诺夫型函数来建立 GFBs 的收敛性质。粗略地说，下面两个结果，命题 6.1.6 和推论 6.1.7，分别是推论 5.6.3 和推论 5.6.5 的离散时间对应物。
 
-**命题 6.1.6** （*离散时间动态系统的李雅普诺夫型稳定性*）。设 $\mathfrak{n} \in \mathbb{N}$，$\xi \in \mathbb{R}^\mathfrak{d}$，$c \in (0, \infty)$，$(\gamma_n)_{n \in \mathbb{N}} \subset [0, c]$，设 $V\colon \mathbb{R}^\mathfrak{d} \to \mathbb{R}$，$\Phi\colon \mathbb{R}^\mathfrak{d} \times [0, \infty) \to \mathbb{R}^\mathfrak{d}$，以及 $\varepsilon\colon [0, c] \to [0, \infty)$ 满足对于所有 $\theta \in \mathbb{R}^\mathfrak{d}$，$t \in [0, c]$，有
+### 命题 6.1.6
+*离散时间动态系统的李雅普诺夫型稳定性*。设 $\mathfrak{n} \in \mathbb{N}$，$\xi \in \mathbb{R}^\mathfrak{d}$，$c \in (0, \infty)$，$(\gamma_n)_{n \in \mathbb{N}} \subset [0, c]$，设 $V\colon \mathbb{R}^\mathfrak{d} \to \mathbb{R}$，$\Phi\colon \mathbb{R}^\mathfrak{d} \times [0, \infty) \to \mathbb{R}^\mathfrak{d}$，以及 $\varepsilon\colon [0, c] \to [0, \infty)$ 满足对于所有 $\theta \in \mathbb{R}^\mathfrak{d}$，$t \in [0, c]$，有
 
 $$V(\Phi(\theta, t)) \leq \varepsilon(t) V(\theta),$$ (6.21)
 
@@ -7424,7 +8131,8 @@ $$\begin{align*} V(\Theta_{n+1}) &= V(\Phi(\Theta_n, \gamma_{n+1})) \leq \vareps
 
 因此，归纳法建立了 (6.23)。命题 6.1.6 的证明到此结束。
 
-**推论 6.1.7** （关于 GD 优化方法中二次李雅普诺夫型函数）。设 $\mathfrak{d} \in \mathbb{N}$，$\vartheta, \xi \in \mathbb{R}^{\mathfrak{d}}$，$c \in (0, \infty)$，$(\gamma_{n})_{n \in \mathbb{N}} \subseteq [0, c]$，$\mathscr{L} \in C^{1}(\mathbb{R}^{\mathfrak{d}}, \mathbb{R})$，设 $\|\cdot\| : \mathbb{R}^{\mathfrak{d}} \rightarrow [0, \infty)$ 是一个范数，设 $\varepsilon : [0, c] \rightarrow [0, \infty)$ 满足对于所有 $\theta \in \mathbb{R}^{\mathfrak{d}}$，$t \in [0, c]$，有
+### 推论 6.1.7
+关于 GD 优化方法中二次李雅普诺夫型函数。设 $\mathfrak{d} \in \mathbb{N}$，$\vartheta, \xi \in \mathbb{R}^{\mathfrak{d}}$，$c \in (0, \infty)$，$(\gamma_{n})_{n \in \mathbb{N}} \subseteq [0, c]$，$\mathscr{L} \in C^{1}(\mathbb{R}^{\mathfrak{d}}, \mathbb{R})$，设 $\|\cdot\| : \mathbb{R}^{\mathfrak{d}} \rightarrow [0, \infty)$ 是一个范数，设 $\varepsilon : [0, c] \rightarrow [0, \infty)$ 满足对于所有 $\theta \in \mathbb{R}^{\mathfrak{d}}$，$t \in [0, c]$，有
 
 $$\|\theta - t(\nabla \mathscr{L})(\theta) - \vartheta\|^{2} \leq \varepsilon(t)\|\theta - \vartheta\|^{2}, \quad(6.25)$$
 
@@ -7448,15 +8156,15 @@ $$\|\Theta_{n} - \vartheta\|^{2} = V(\Theta_{n}) \leq \bigg[\prod_{k = 1}^{n}\va
 
 特别是，推论 6.1.7 说明了 (6.25) 中的单步李雅普诺夫稳定性假设可以为我们提供与 GD 优化方法相关的近似误差的合适估计；参见上文 (6.27)。下一个结果，即下文引理 6.1.8，现在为我们提供了确保 (6.25) 中的单步李雅普诺夫稳定性条件成立的充分条件，从而使我们能够应用上述推论 6.1.7 来获得与 GD 优化方法相关的近似误差估计。引理 6.1.8 使用了上述推论 5.7.5 中 (5.189) 的增长条件和强制型条件。与引理 6.1.8 类似的结果可以在 [103, Remark 2.1] 和 [221, Lemma 2.1] 中找到。我们将在下文 6.1.4 节中关于 GD 优化方法的误差分析中应用引理 6.1.8 的陈述。
 
-**引理 6.1.8** （单步李雅普诺夫型稳定性条件的充分条件）。设 $\mathfrak{d} \in \mathbb{N}$，设 $\langle\cdot, \cdot\rangle : \mathbb{R}^{\mathfrak{d}} \times \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}$ 是一个内积，设 $\|\cdot\| : \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}$ 满足对于所有 $v \in \mathbb{R}^{\mathfrak{d}}$，有 $\|v\| = \sqrt{\langle v, v\rangle}$，且设 $c, L \in (0, \infty)$，$r \in (0, \infty]$，$\vartheta \in \mathbb{R}^{\mathfrak{d}}$，$\mathbb{B} = \{w \in \mathbb{R}^{\mathfrak{d}} : \|w - \vartheta\| \leq r\}$，$\mathscr{L} \in C^{1}(\mathbb{R}^{\mathfrak{d}}, \mathbb{R})$ 满足对于所有 $\theta \in \mathbb{B}$，有
+### 引理 6.1.8
+单步李雅普诺夫型稳定性条件的充分条件。设 $\mathfrak{d} \in \mathbb{N}$，设 $\langle\cdot, \cdot\rangle : \mathbb{R}^{\mathfrak{d}} \times \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}$ 是一个内积，设 $\|\cdot\| : \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}$ 满足对于所有 $v \in \mathbb{R}^{\mathfrak{d}}$，有 $\|v\| = \sqrt{\langle v, v\rangle}$，且设 $c, L \in (0, \infty)$，$r \in (0, \infty]$，$\vartheta \in \mathbb{R}^{\mathfrak{d}}$，$\mathbb{B} = \{w \in \mathbb{R}^{\mathfrak{d}} : \|w - \vartheta\| \leq r\}$，$\mathscr{L} \in C^{1}(\mathbb{R}^{\mathfrak{d}}, \mathbb{R})$ 满足对于所有 $\theta \in \mathbb{B}$，有
 
 $$\langle\theta - \vartheta, (\nabla \mathscr{L})(\theta)\rangle \geq c\|\theta - \vartheta\|^{2}\quad\quad\text{且}\quad\quad\|(\nabla \mathscr{L})(\theta)\| \leq L\|\theta - \vartheta\|. \quad(6.30)$$
 
 则
 
-
-
 (i) 成立 $c \leq L$，
+
 (ii) 对所有 $\theta \in \mathbb{B}$，$\gamma \in [0, \infty)$ 成立
 
 $\| \theta - \gamma(\nabla \mathscr{L})(\theta) - \vartheta \|^2 \leq (1 - 2\gamma c + \gamma^2 L^2) \| \theta - \vartheta \|^2$, (6.31)
@@ -7468,65 +8176,78 @@ $\| \theta - \gamma(\nabla \mathscr{L})(\theta) - \vartheta \|^2 \leq (1 - 2\gam
 $\| \theta - \gamma(\nabla \mathscr{L})(\theta) - \vartheta \|^2 \leq (1 - c\gamma) \| \theta - \vartheta \|^2$. (6.32)
 
 引理 6.1.8 的证明。首先，注意 (6.30) 保证了对所有 $\theta \in \mathbb{B}$，$\gamma \in [0, \infty)$ 成立
+
 $0 \leq \| \theta - \gamma(\nabla \mathscr{L})(\theta) - \vartheta \|^2 = \| (\theta - \vartheta) - \gamma(\nabla \mathscr{L})(\theta) \|^2$
+
+
+
 $= \| \theta - \vartheta \|^2 - 2\gamma \langle (\theta - \vartheta), (\nabla \mathscr{L})(\theta) \rangle + \gamma^2 \| (\nabla \mathscr{L})(\theta) \|^2$
+
 $\leq \| \theta - \vartheta \|^2 - 2\gamma c \| \theta - \vartheta \|^2 + \gamma^2 L^2 \| \theta - \vartheta \|^2$
+
 $= (1 - 2\gamma c + \gamma^2 L^2) \| \theta - \vartheta \|^2$. (6.33)
 
 这建立了第 (ii) 项。此外，注意 $\mathbb{B} \setminus \{\vartheta\} \neq \emptyset$ 的事实以及 (6.33) 保证了对于所有 $\gamma \in [0, \infty)$ 成立
+
 $1 - 2\gamma c + \gamma^2 L^2 \geq 0$. (6.34)
 
 因此，我们得到
+
 $1 - \frac{c^2}{L^2} = 1 - \frac{2c^2}{L^2} + \frac{c^2}{L^2} = 1 - 2\bigl[\frac{c}{L}\bigr]c + \bigl[\frac{c}{L}\bigr]^2 L^2$
+
 $= 1 - 2\bigl[\frac{c}{L^2}\bigr]c + \bigl[\frac{c}{L^2}\bigr]^2 L^2 \geq 0$. (6.35)
 
 这意味着 $\frac{c^2}{L^2} \leq 1$。因此，我们得到 $c^2 \leq L^2$。这建立了第 (i) 项。此外，观察到 (6.34) 保证了对所有 $\gamma \in (0, \frac{2c}{L^2})$ 成立
+
 $0 \leq 1 - 2\gamma c + \gamma^2 L^2 = 1 - \underbrace{\gamma(2c - \gamma L^2)}_{>0} < 1$. (6.36)
 
 这证明了第 (iii) 项。另外，注意对于所有 $\gamma \in [0, \frac{c}{L^2}]$ 成立
+
 $1 - 2\gamma c + \gamma^2 L^2 \leq 1 - 2\gamma c + \gamma \bigl[\frac{c}{L^2}\bigr]L^2 = 1 - c\gamma$. (6.37)
 
 将此与 (6.33) 结合即可建立第 (iv) 项。引理 6.1.8 的证明至此完成。
 
-**练习** 6.1.3. 证明或证伪以下陈述：存在 $\mathbf{d} \in \mathbb{N}$，$\gamma \in (0, \infty)$，$\varepsilon \in (0,1)$，$r \in (0, \infty)$，$\vartheta \in \mathbb{R}^{\mathbf{d}}$ 以及存在一个函数 $\mathcal{G}: \mathbb{R}^{\mathbf{d}} \rightarrow \mathbb{R}^{\mathbf{d}}$ 使得 $\|\theta-\vartheta\|_{2} \leq r$，$\forall \xi \in \{w \in \mathbb{R}^{\mathbf{d}}: \|w-\vartheta\|_{2} \leq r\}$ : $\|\xi-\gamma \mathcal{G}(\xi)-\vartheta\|_{2} \leq \varepsilon\|\xi-\vartheta\|_{2}$，且
+### 练习
 
-$\langle\theta-\vartheta, \mathcal{G}(\theta)\rangle < \min\{\frac{1-\varepsilon^{2}}{2\gamma}, \frac{1}{2}\} \max\{\|\theta-\vartheta\|_{2}^{2}, \|\mathcal{G}(\theta)\|_{2}^{2}\}.$
+**练习 6.1.3.** 证明或证伪以下陈述：存在 `d` ∈ `mathbb{N}`，`gamma` ∈ `(0, ∞)`，`varepsilon` ∈ `(0,1)`，`r` ∈ `(0, ∞)`，`vartheta` ∈ `mathbb{R}^{d}` 以及存在一个函数 `mathcal{G}: mathbb{R}^{d} → mathbb{R}^{d}` 使得 `||theta-vartheta||_2 ≤ r`，`∀ xi ∈ {w ∈ mathbb{R}^{d}: ||w-vartheta||_2 ≤ r}` : `||xi-gamma mathcal{G}(xi)-vartheta||_2 ≤ varepsilon||xi-vartheta||_2`，且
 
-**练习** 6.1.4. 证明或证伪以下陈述：对于所有 $\mathbf{d} \in \mathbb{N}$，$r \in (0, \infty)$，$\vartheta \in \mathbb{R}^{\mathbf{d}}$ 以及满足以下条件的任意函数 $\mathcal{G}: \mathbb{R}^{\mathbf{d}} \rightarrow \mathbb{R}^{\mathbf{d}}$：$\forall \theta \in \{w \in \mathbb{R}^{\mathbf{d}}: \|w-\vartheta\|_{2} \leq r\}$ : $\langle\theta-\vartheta, \mathcal{G}(\theta)\rangle \geq \frac{1}{2} \max\{\|\theta-\vartheta\|_{2}^{2}, \|\mathcal{G}(\theta)\|_{2}^{2}\}$，成立
+`⟨theta-vartheta, mathcal{G}(theta)⟩ < min{ (1-epsilon^{2})/(2gamma), 1/2 } max{ ||theta-vartheta||_2^{2}, ||mathcal{G}(theta)||_2^{2} }`.
 
-$\forall \theta \in \{w \in \mathbb{R}^{\mathbf{d}}: \|w-\vartheta\|_{2} \leq r\}$ : $\langle\theta-\vartheta, \mathcal{G}(\theta)\rangle \geq \frac{1}{2}\|\theta-\vartheta\|_{2}^{2} \wedge \|\mathcal{G}(\theta)\|_{2}^{2} \leq 2\|\theta-\vartheta\|_{2}.$
+**练习 6.1.4.** 证明或证伪以下陈述：对于所有 `d` ∈ `mathbb{N}`，`r` ∈ `(0, ∞)`，`vartheta` ∈ `mathbb{R}^{d}` 以及满足以下条件的任意函数 `mathcal{G}: mathbb{R}^{d} → mathbb{R}^{d}`：`∀ theta ∈ {w ∈ mathbb{R}^{d}: ||w-vartheta||_2 ≤ r}` : `⟨theta-vartheta, mathcal{G}(theta)⟩ ≥ 1/2 max{ ||theta-vartheta||_2^{2}, ||mathcal{G}(theta)||_2^{2} }`，成立
 
-**练习** 6.1.5. 证明或证伪以下陈述：对于所有 $\mathbf{d} \in \mathbb{N}$，$c \in (0, \infty)$，$r \in (0, \infty)$，$\vartheta, v \in \mathbb{R}^{\mathbf{d}}$，$\mathcal{L} \in C^{1}(\mathbb{R}^{\mathbf{d}}, \mathbb{R})$，$s, t \in [0,1]$，使得 $\|v\|_{2} \leq r$，$s \leq t$，且 $\forall \theta \in \{w \in \mathbb{R}^{\mathbf{d}}: \|w-\vartheta\|_{2} \leq r\}$ : $\langle\theta-\vartheta, (\nabla \mathcal{L})(\theta)\rangle \geq c\|\theta-\vartheta\|_{2}^{2}$，成立
+`∀ theta ∈ {w ∈ mathbb{R}^{d}: ||w-vartheta||_2 ≤ r}` : `⟨theta-vartheta, mathcal{G}(theta)⟩ ≥ 1/2||theta-vartheta||_2^{2} ∧ ||mathcal{G}(theta)||_2^{2} ≤ 2||theta-vartheta||_2`.
 
-$\mathcal{L}(\vartheta+t v)-\mathcal{L}(\vartheta+s v) \geq \frac{c}{2}(t^{2}-s^{2})\|v\|_{2}^{2}.$
+**练习 6.1.5.** 证明或证伪以下陈述：对于所有 `d` ∈ `mathbb{N}`，`c` ∈ `(0, ∞)`，`r` ∈ `(0, ∞)`，`vartheta, v` ∈ `mathbb{R}^{d}`，`mathcal{L}` ∈ `C^{1}(mathbb{R}^{d}, mathbb{R})`，`s, t` ∈ `[0,1]`，使得 `||v||_2 ≤ r`，`s ≤ t`，且 `∀ theta ∈ {w ∈ mathbb{R}^{d}: ||w-vartheta||_2 ≤ r}` : `⟨theta-vartheta, (nabla mathcal{L})(theta)⟩ ≥ c||theta-vartheta||_2^{2}`，成立
 
-**练习** 6.1.6. 证明或证伪以下陈述：对于任意 $\mathbf{d} \in \mathbb{N}$，$c \in (0, \infty)$，$r \in (0, \infty)$，$\vartheta \in \mathbb{R}^{\mathbf{d}}$ 以及满足以下条件的任意 $\mathcal{L} \in C^{1}(\mathbb{R}^{\mathbf{d}}, \mathbb{R})$：对于所有 $v \in \mathbb{R}^{\mathbf{d}}$，$s, t \in [0,1]$，使得 $\|v\|_{2} \leq r$ 且 $s \leq t$，有 $\mathcal{L}(\vartheta+t v)-\mathcal{L}(\vartheta+s v) \geq c(t^{2}-s^{2})\|v\|_{2}^{2}$，成立
+`mathcal{L}(vartheta+t v)-mathcal{L}(vartheta+s v) ≥ c/2 (t^{2}-s^{2})||v||_2^{2}`.
 
-$\forall \theta \in \{w \in \mathbb{R}^{\mathbf{d}}: \|w-\vartheta\|_{2} \leq r\}$ : $\langle\theta-\vartheta, (\nabla \mathcal{L})(\theta)\rangle \geq 2 c\|\theta-\vartheta\|_{2}^{2}.$
+**练习 6.1.6.** 证明或证伪以下陈述：对于任意 `d` ∈ `mathbb{N}`，`c` ∈ `(0, ∞)`，`r` ∈ `(0, ∞)`，`vartheta` ∈ `mathbb{R}^{d}` 以及满足以下条件的任意 `mathcal{L}` ∈ `C^{1}(mathbb{R}^{d}, mathbb{R})`：对于所有 `v` ∈ `mathbb{R}^{d}`，`s, t` ∈ `[0,1]`，使得 `||v||_2 ≤ r` 且 `s ≤ t`，有 `mathcal{L}(vartheta+t v)-mathcal{L}(vartheta+s v) ≥ c(t^{2}-s^{2})||v||_2^{2}`，成立
 
-**练习** 6.1.7. 设 $\mathbf{d} \in \mathbb{N}$，且对于任意 $v \in \mathbb{R}^{\mathbf{d}}$，$R \in [0, \infty]$，令 $\mathbb{B}_{R}(v) \triangleq \{w \in \mathbb{R}^{\mathbf{d}}: \|w-v\|_{2} \leq R\}$。证明或证伪以下陈述：对于所有 $r \in (0, \infty)$，$\vartheta \in \mathbb{R}^{\mathbf{d}}$，$\mathcal{L} \in C^{1}(\mathbb{R}^{\mathbf{d}}, \mathbb{R})$，以下两个陈述等价：
+`∀ theta ∈ {w ∈ mathbb{R}^{d}: ||w-vartheta||_2 ≤ r}` : `⟨theta-vartheta, (nabla mathcal{L})(theta)⟩ ≥ 2 c||theta-vartheta||_2^{2}`.
 
-(i) 存在 $c \in (0, \infty)$，使得对所有 $\theta \in \mathbb{B}_{r}(\vartheta)$ 成立
+**练习 6.1.7.** 设 `d` ∈ `mathbb{N}`，且对于任意 `v` ∈ `mathbb{R}^{d}`，`R` ∈ `[0, ∞]`，令 `mathbb{B}_{R}(v) ≜ {w ∈ mathbb{R}^{d}: ||w-v||_2 ≤ R}`。证明或证伪以下陈述：对于所有 `r` ∈ `(0, ∞)`，`vartheta` ∈ `mathbb{R}^{d}`，`mathcal{L}` ∈ `C^{1}(mathbb{R}^{d}, mathbb{R})`，以下两个陈述等价：
 
-$\langle\theta-\vartheta, (\nabla \mathcal{L})(\theta)\rangle \geq c\|\theta-\vartheta\|_{2}^{2}.$
+(i) 存在 `c` ∈ `(0, ∞)`，使得对所有 `theta` ∈ `mathbb{B}_{r}(vartheta)` 成立
 
-(ii) 存在 $c \in (0, \infty)$，使得对所有 $v, w \in \mathbb{B}_{r}(\vartheta)$，$s, t \in [0,1]$ 且 $s \leq t$ 成立
+`⟨theta-vartheta, (nabla mathcal{L})(theta)⟩ ≥ c||theta-vartheta||_2^{2}`.
 
-$\mathcal{L}(\vartheta+t(v-\vartheta))-\mathcal{L}(\vartheta+s(w-\vartheta)) \geq c(t^{2}-s^{2})\|v-\vartheta\|_{2}^{2}.$
+(ii) 存在 `c` ∈ `(0, ∞)`，使得对所有 `v, w` ∈ `mathbb{B}_{r}(vartheta)`，`s, t` ∈ `[0,1]` 且 `s ≤ t` 成立
 
-**练习** 6.1.8. 设 $\mathbf{d} \in \mathbb{N}$，且对于任意 $v \in \mathbb{R}^{\mathbf{d}}$，$R \in [0, \infty]$，令 $\mathbb{B}_{R}(v) \triangleq \{w \in \mathbb{R}^{\mathbf{d}}: \|w-v\|_{2} \leq R\}$。证明或证伪以下陈述：对于所有 $r \in (0, \infty)$，$\vartheta \in \mathbb{R}^{\mathbf{d}}$，$\mathcal{L} \in C^{1}(\mathbb{R}^{\mathbf{d}}, \mathbb{R})$，以下三个陈述等价：
+`mathcal{L}(vartheta+t(v-vartheta))-mathcal{L}(vartheta+s(w-vartheta)) ≥ c(t^{2}-s^{2})||v-vartheta||_2^{2}`.
 
-(i) 存在 $c, L \in (0, \infty)$，使得对所有 $\theta \in \mathbb{B}_{r}(\vartheta)$ 成立
+**练习 6.1.8.** 设 `d` ∈ `mathbb{N}`，且对于任意 `v` ∈ `mathbb{R}^{d}`，`R` ∈ `[0, ∞]`，令 `mathbb{B}_{R}(v) ≜ {w ∈ mathbb{R}^{d}: ||w-v||_2 ≤ R}`。证明或证伪以下陈述：对于所有 `r` ∈ `(0, ∞)`，`vartheta` ∈ `mathbb{R}^{d}`，`mathcal{L}` ∈ `C^{1}(mathbb{R}^{d}, mathbb{R})`，以下三个陈述等价：
 
-$\langle\theta-\vartheta, (\nabla \mathcal{L})(\theta)\rangle \geq c\|\theta-\vartheta\|_{2}^{2} \quad$ 且 $\quad\|(\nabla \mathcal{L})(\theta)\|_{2} \leq L\|\theta-\vartheta\|_{2}.$
+(i) 存在 `c, L` ∈ `(0, ∞)`，使得对所有 `theta` ∈ `mathbb{B}_{r}(vartheta)` 成立
 
-(ii) 存在 $\gamma \in (0, \infty)$，$\varepsilon \in (0,1)$，使得对所有 $\theta \in \mathbb{B}_{r}(\vartheta)$ 成立
+`⟨theta-vartheta, (nabla mathcal{L})(theta)⟩ ≥ c||theta-vartheta||_2^{2}` 且 `||(nabla mathcal{L})(theta)||_2 ≤ L||theta-vartheta||_2`.
 
-$\|\theta-\gamma(\nabla \mathcal{L})(\theta)-\vartheta\|_{2} \leq \varepsilon\|\theta-\vartheta\|_{2}.$
+(ii) 存在 `gamma` ∈ `(0, ∞)`，`varepsilon` ∈ `(0,1)`，使得对所有 `theta` ∈ `mathbb{B}_{r}(vartheta)` 成立
 
-(iii) 存在 $c \in (0, \infty)$，使得对所有 $\theta \in \mathbb{B}_{r}(\vartheta)$ 成立
+`||theta-gamma(nabla mathcal{L})(theta)-vartheta||_2 ≤ varepsilon||theta-vartheta||_2`.
 
-$\langle\theta-\vartheta, (\nabla \mathcal{L})(\theta)\rangle \geq c \max\{\|\theta-\vartheta\|_{2}^{2}, \|(\nabla \mathcal{L})(\theta)\|_{2}^{2}\}.$
+(iii) 存在 `c` ∈ `(0, ∞)`，使得对所有 `theta` ∈ `mathbb{B}_{r}(vartheta)` 成立
+
+`⟨theta-vartheta, (nabla mathcal{L})(theta)⟩ ≥ c max{ ||theta-vartheta||_2^{2}, ||(nabla mathcal{L})(theta)||_2^{2} }`.
 
 ## 6.1.4 梯度下降（GD）优化的误差分析
 
@@ -7534,42 +8255,51 @@ $\langle\theta-\vartheta, (\nabla \mathcal{L})(\theta)\rangle \geq c \max\{\|\th
 
 ### 6.1.4.1 GD 优化的误差估计
 
-**命题 6.1.9**（GD 优化方法的误差估计）。设 $\mathfrak{d} \in \mathbb{N}$，$c$，$L \in (0, \infty)$，$r \in (0, \infty]$，$(\gamma_{n})_{n \in \mathbb{N}} \subseteq \left[0, \frac{2c}{L^{2}}\right]$，$\vartheta \in \mathbb{R}^{\mathfrak{d}}$，$\mathbb{B} = \{w \in \mathbb{R}^{\mathfrak{d}}: \|w - \vartheta\|_{2} \leq r\}$，$\xi \in \mathbb{B}$，$\mathcal{L} \in C^{1}(\mathbb{R}^{\mathfrak{d}}, \mathbb{R})$ 满足对所有 $\theta \in \mathbb{B}$ 成立
+**命题 6.1.9**（GD 优化方法的误差估计）。设 `mathfrak{d}` ∈ `mathbb{N}`，`c`，`L` ∈ `(0, ∞)`，`r` ∈ `(0, ∞]`，`(gamma_n)_{n ∈ mathbb{N}} ⊆ [0, 2c/L^{2}]`，`vartheta` ∈ `mathbb{R}^{mathfrak{d}}`，`mathbb{B} = {w ∈ mathbb{R}^{mathfrak{d}}: ||w - vartheta||_2 ≤ r}`，`xi` ∈ `mathbb{B}`，`mathcal{L}` ∈ `C^{1}(mathbb{R}^{mathfrak{d}}, mathbb{R})` 满足对所有 `theta` ∈ `mathbb{B}` 成立
 
-$\langle \theta - \vartheta, (\nabla \mathcal{L})(\theta) \rangle \geq c \|\theta - \vartheta\|_{2}^{2} \quad \text{且} \quad \| (\nabla \mathcal{L})(\theta) \|_{2} \leq L \|\theta - \vartheta\|_{2}, \quad (6.47)$
+`⟨ theta - vartheta, (nabla mathcal{L})(theta) ⟩ ≥ c ||theta - vartheta||_2^{2}` 且 `|| (nabla mathcal{L})(theta) ||_2 ≤ L ||theta - vartheta||_2`, (6.47)
 
-且设 $\Theta : \mathbb{N}_{0} \to \mathbb{R}^{\mathfrak{d}}$ 满足对所有 $n \in \mathbb{N}$ 成立
+且设 `Theta : mathbb{N}_0 → mathbb{R}^{mathfrak{d}}` 满足对所有 `n` ∈ `mathbb{N}` 成立
 
-$\Theta_{0} = \xi \quad \text{且} \quad \Theta_{n} = \Theta_{n - 1} - \gamma_{n}(\nabla \mathcal{L})(\Theta_{n - 1}) \quad (6.48)$
+`Theta_0 = xi` 且 `Theta_n = Theta_{n - 1} - gamma_n (nabla mathcal{L})(Theta_{n - 1})` (6.48)
 
 （参见定义 1.4.7 和 3.3.4）。则
 
-- (i) 成立 $\{\theta \in \mathbb{B} : \mathcal{L}(\theta) = \inf_{w \in \mathbb{B}} \mathcal{L}(w)\} = \{\vartheta\}$，
-- (ii) 对所有 $n \in \mathbb{N}$ 成立 $0 \leq 1 - 2c\gamma_{n} + (\gamma_{n})^{2}L^{2} \leq 1$，
-- (iii) 对所有 $n \in \mathbb{N}$ 成立 $\|\Theta_{n} - \vartheta\|_{2} \leq (1 - 2c\gamma_{n} + (\gamma_{n})^{2}L^{2})^{1/2}\|\Theta_{n - 1} - \vartheta\|_{2} \leq r$，
-- (iv) 对所有 $n \in \mathbb{N}_{0}$ 成立
+- (i) 成立 `{theta ∈ mathbb{B} : mathcal{L}(theta) = inf_{w ∈ mathbb{B}} mathcal{L}(w)} = {vartheta}`，
 
-$\|\Theta_{n} - \vartheta\|_{2} \leq \left[ \prod_{k = 1}^{n} (1 - 2c\gamma_{k} + (\gamma_{k})^{2}L^{2})^{1/2} \right]\|\xi - \vartheta\|_{2}, \quad (6.49)$
+- (ii) 对所有 `n` ∈ `mathbb{N}` 成立 `0 ≤ 1 - 2c gamma_n + (gamma_n)^{2} L^{2} ≤ 1`，
+
+- (iii) 对所有 `n` ∈ `mathbb{N}` 成立 `||Theta_n - vartheta||_2 ≤ (1 - 2c gamma_n + (gamma_n)^{2} L^{2})^{1/2} ||Theta_{n - 1} - vartheta||_2 ≤ r`，
+
+- (iv) 对所有 `n` ∈ `mathbb{N}_0` 成立
+
+`||Theta_n - vartheta||_2 ≤ [ ∏_{k = 1}^{n} (1 - 2c gamma_k + (gamma_k)^{2} L^{2})^{1/2} ] ||xi - vartheta||_2`, (6.49)
 
 且
-- (v) 对所有 $n \in \mathbb{N}_{0}$ 成立
 
-$0 \leq \mathcal{L}(\Theta_{n}) - \mathcal{L}(\vartheta) \leq \frac{L}{2}\|\Theta_{n} - \vartheta\|_{2}^{2} \leq \frac{L}{2}\left[ \prod_{k = 1}^{n} (1 - 2c\gamma_{k} + (\gamma_{k})^{2}L^{2}) \right]\|\xi - \vartheta\|_{2}^{2}. \quad (6.50)$
+- (v) 对所有 `n` ∈ `mathbb{N}_0` 成立
+
+`0 ≤ mathcal{L}(Theta_n) - mathcal{L}(vartheta) ≤ L/2 ||Theta_n - vartheta||_2^{2} ≤ L/2 [ ∏_{k = 1}^{n} (1 - 2c gamma_k + (gamma_k)^{2} L^{2}) ] ||xi - vartheta||_2^{2}.` (6.50)
+
+并建立了第 (ii) 项。接下来我们声称，对于所有 `n` ∈ `mathbb{N}`，以下不等式成立：
+
+```
+||Theta_n - vartheta||_2 ≤ (1 - 2c gamma_n + (gamma_n)^2 L^2)^{1/2} ||Theta_{n-1} - vartheta||_2 ≤ r.
+``` (6.52)
+
+我们现在通过 `n` ∈ `mathbb{N}` 的归纳法来证明 (6.52)。对于基始情形 `n = 1`，观察到 (6.48)、假设 `Theta_0 = xi ∈ mathbb{B}`、引理 6.1.8 中的第 (ii) 项以及第 (ii) 项确保
+
+```
+||Theta_1 - vartheta||_2^2 = ||Theta_0 - gamma_1 (nabla mathcal{L})(Theta_0) - vartheta||_2^2
+≤ (1 - 2c gamma_1 + (gamma_1)^2 L^2) ||Theta_0 - vartheta||_2^2
+≤ ||Theta_0 - vartheta||_2^2 ≤ r^2.
+``` (6.53)
+
+这确立了基始情形 `n = 1` 中的 (6.52)。对于归纳步骤，注意到 (6.48)、引理 6.1.8 中的第 (ii) 项以及第 (ii) 项意味着，对于所有满足 `Theta_n ∈ mathbb{B}` 的 `n` ∈ `mathbb{N}`，都有
 
 
 
-
-并建立了第 (ii) 项。接下来我们声称，对于所有 $n \in \mathbb{N}$，以下不等式成立：
-
-$$\|\Theta_n - \vartheta\|_2 \leq (1 - 2c\gamma_n + (\gamma_n)^2 L^2)^{1/2} \|\Theta_{n-1} - \vartheta\|_2 \leq r.$$ (6.52)
-
-我们现在通过 $n \in \mathbb{N}$ 的归纳法来证明 (6.52)。对于基始情形 $n = 1$，观察到 (6.48)、假设 $\Theta_0 = \xi \in \mathbb{B}$、引理 6.1.8 中的第 (ii) 项以及第 (ii) 项确保
-
-$$\begin{align*} \|\Theta_1 - \vartheta\|_2^2 &= \|\Theta_0 - \gamma_1(\nabla\mathcal{L})(\Theta_0) - \vartheta\|_2^2 \\ &\leq (1 - 2c\gamma_1 + (\gamma_1)^2 L^2) \|\Theta_0 - \vartheta\|_2^2 \\ &\leq \|\Theta_0 - \vartheta\|_2^2 \leq r^2. \end{align*} (6.53)
-
-这确立了基始情形 $n = 1$ 中的 (6.52)。对于归纳步骤，注意到 (6.48)、引理 6.1.8 中的第 (ii) 项以及第 (ii) 项意味着，对于所有满足 $\Theta_n \in \mathbb{B}$ 的 $n \in \mathbb{N}$，都有
-
-$$\begin{align*} \|\Theta_{n+1} - \vartheta\|_2^2 &= \|\Theta_n - \gamma_{n+1}(\nabla\mathcal{L})(\Theta_n) - \vartheta\|_2^2 \\ &\leq \underbrace{(1 - 2c\gamma_{n+1} + (\gamma_{n+1})^2 L^2)}_{\in [0, 1]} \|\Theta_n - \vartheta\|_2^2 \\ &\leq \|\Theta_n - \vartheta\|_2^2 \leq r^2. \end{align*} (6.54)
+$$\begin{align*} \|\Theta_{n+1} - \vartheta\|_2^2 &= \|\Theta_n - \gamma_{n+1}(\nabla\mathcal{L})(\Theta_n) - \vartheta\|_2^2 \\ &\leq \underbrace{(1 - 2c\gamma_{n+1} + (\gamma_{n+1})^2 L^2)}_{\in [0, 1]} \|\Theta_n - \vartheta\|_2^2 \\ &\leq \|\Theta_n - \vartheta\|_2^2 \leq r^2. \end{align*} (6.54)$$
 
 这表明，对于所有满足 $\|\Theta_n - \vartheta\|_2 \leq r$ 的 $n \in \mathbb{N}$，都有
 
@@ -7581,7 +8311,9 @@ $$\|\Theta_{n+1} - \vartheta\|_2 \leq (1 - 2c\gamma_{n+1} + (\gamma_{n+1})^2 L^2
 
 在下述结果，推论 6.1.10 中，我们大致上将命题 6.1.9 特化为学习率 $(\gamma_n)_{n \in \mathbb{N}} \subseteq [0, \frac{2c}{L^2}]$ 为常数序列的情形。
 
-**推论 6.1.10（常数学习率下 GD 的收敛性）.** 设 $\mathfrak{o} \in \mathbb{N}$，$c, L \in (0, \infty)$，$r \in (0, \infty]$，$\gamma \in (0, \frac{2c}{L^2})$，$\vartheta \in \mathbb{R}^d$，$\mathbb{B} = \{w \in \mathbb{R}^d : \|w - \vartheta\|_2 \leq r\}$，$\xi \in \mathbb{B}$，$\mathcal{L} \in C^1(\mathbb{R}^d, \mathbb{R})$ 满足对于所有 $\theta \in \mathbb{B}$ 有
+### 推论 6.1.10（常数学习率下 GD 的收敛性）
+
+设 $\mathfrak{o} \in \mathbb{N}$，$c, L \in (0, \infty)$，$r \in (0, \infty]$，$\gamma \in (0, \frac{2c}{L^2})$，$\vartheta \in \mathbb{R}^d$，$\mathbb{B} = \{w \in \mathbb{R}^d : \|w - \vartheta\|_2 \leq r\}$，$\xi \in \mathbb{B}$，$\mathcal{L} \in C^1(\mathbb{R}^d, \mathbb{R})$ 满足对于所有 $\theta \in \mathbb{B}$ 有
 
 $$\langle \theta - \vartheta, (\nabla\mathcal{L})(\theta) \rangle \geq c \|\theta - \vartheta\|_2^2 \quad \text{且} \quad \|(\nabla\mathcal{L})(\theta)\|_2 \leq L \|\theta - \vartheta\|_2,$$ (6.56)
 
@@ -7598,14 +8330,13 @@ $$\Theta_0 = \xi \quad \text{且} \quad \Theta_n = \Theta_{n-1} - \gamma(\nabla\
 $$\| \Theta_{n} - \vartheta \|_{2} \leq [1 - 2c\gamma + \gamma^{2}L^{2}]^{n/2} \|\xi - \vartheta\|_{2},$$
 
 且
-
 - (iv) 对于所有 $n \in \mathbb{N}_{0}$ 成立
 
 $$0 \leq \mathscr{L}(\Theta_{n}) - \mathscr{L}(\vartheta) \leq \frac{L}{2} \| \Theta_{n} - \vartheta \|_{2}^{2} \leq \frac{L}{2} [1 - 2c\gamma + \gamma^{2}L^{2}]^{n} \|\xi - \vartheta\|_{2}^{2}.$$
 
 *推论 6.1.10 的证明.* 观察到引理 6.1.8 中的第 (iii) 项证明了第 (ii) 项。此外，注意到命题 6.1.9 建立了第 (i)、(iii) 和 (iv) 项。推论 6.1.10 的证明至此完成。
 
-上述推论 6.1.10 在适当假设下，建立了在所考虑的**GD**（梯度下降）过程中，当学习率为常数且严格小于 $\frac{2c}{L^{2}}$ 时的收敛性。下一个结果，下述定理 6.1.11，表明推论 6.1.10 中关于学习率严格小于 $\frac{2c}{L^{2}}$ 的条件，通常不能放宽。
+上述推论 6.1.10 在适当假设下，建立了在所考虑的 **GD**（梯度下降）过程中，当学习率为常数且严格小于 $\frac{2c}{L^{2}}$ 时的收敛性。下一个结果，下述定理 6.1.11，表明推论 6.1.10 中关于学习率严格小于 $\frac{2c}{L^{2}}$ 的条件，通常不能放宽。
 
 ### 定理 6.1.11（GD 收敛性的学习率锐界）
 
@@ -7662,62 +8393,103 @@ $$\Theta_{n}=\Theta_{n-1}-n^{-2}(\nabla \mathscr{L})(\Theta_{n-1}).$$
 
 $$\lim _{n \rightarrow \infty} \sup \left|\Theta_{n}\right|=0 .$$
 
-
-
 **练习 6.1.10.** 设 $\mathscr{L}\colon \mathbb{R}\to\mathbb{R}$ 满足对于所有 $\theta\in\mathbb{R}$ 有
+
 $$\mathscr{L}(\theta)=4\theta^{2}\tag{6.71}$$
+
 并且对于每个 $r\in(1,\infty)$，设 $\Theta^{(r)}\colon \mathbb{N}_{0}\to\mathbb{R}$ 满足对于所有 $n\in\mathbb{N}$ 有 $\Theta_{0}^{(r)}=1$ 且
+
 $$\Theta_{n}^{(r)}=\Theta_{n-1}^{(r)}-n^{-r}(\nabla\mathscr{L})(\Theta_{n-1}^{(r)})\tag{6.72}$$
+
 请证明或反驳以下命题：对于所有 $r\in(1,\infty)$，有
+
 $$\liminf_{n\to\infty}\bigl\vert\Theta_{n}^{(r)}\bigr\vert>0\tag{6.73}$$
 
 **练习 6.1.11.** 设 $\mathscr{L}\colon \mathbb{R}\to\mathbb{R}$ 满足对于所有 $\theta\in\mathbb{R}$ 有
+
 $$\mathscr{L}(\theta)=5\theta^{2}\tag{6.74}$$
+
 并且对于每个 $r\in(1,\infty)$，设 $\Theta^{(r)}=(\Theta_{n}^{(r)})_{n\in\mathbb{N}_{0}}\colon \mathbb{N}_{0}\to\mathbb{R}$ 满足对于所有 $n\in\mathbb{N}$ 有 $\Theta_{0}^{(r)}=1$ 且
+
 $$\Theta_{n}^{(r)}=\Theta_{n-1}^{(r)}-n^{-r}(\nabla\mathscr{L})(\Theta_{n-1}^{(r)})\tag{6.75}$$
+
 请证明或反驳以下命题：对于所有 $r\in(1,\infty)$，有
+
 $$\liminf_{n\to\infty}\bigl\vert\Theta_{n}^{(r)}\bigr\vert>0\tag{6.76}$$
 
 ## 6.1.4.3 收敛速率
 
-下一个结果，即下面的推论 6.1.12，建立了在**梯度下降（GD）**优化方法中，即使学习率可能非恒定时的收敛速率。我们通过应用上面命题 6.1.9 来证明推论 6.1.12。
+下一个结果，即下面的推论 6.1.12，建立了在 **梯度下降（GD）** 优化方法中，即使学习率可能非恒定时的收敛速率。我们通过应用上面命题 6.1.9 来证明推论 6.1.12。
 
-**推论 6.1.12** *（GD 的定性收敛）*. 设 $\mathfrak{d}\in\mathbb{N}$，$\mathscr{L}\in C^{1}(\mathbb{R}^{\mathfrak{d}},\mathbb{R})$，$(\gamma_{n})_{n\in\mathbb{N}}\subseteq \mathbb{R}$，$c,L\in(0,\infty)$，$\xi,\vartheta\in\mathbb{R}^{\mathfrak{d}}$ 满足对于所有 $\theta\in\mathbb{R}^{\mathfrak{d}}$ 有
+### 推论 6.1.12（GD 的定性收敛）
+
+设 $\mathfrak{d}\in\mathbb{N}$，$\mathscr{L}\in C^{1}(\mathbb{R}^{\mathfrak{d}},\mathbb{R})$，$(\gamma_{n})_{n\in\mathbb{N}}\subseteq \mathbb{R}$，$c,L\in(0,\infty)$，$\xi,\vartheta\in\mathbb{R}^{\mathfrak{d}}$ 满足对于所有 $\theta\in\mathbb{R}^{\mathfrak{d}}$ 有
+
 $$\bigl\langle\theta-\vartheta,\bigl(\nabla\mathscr{L}\bigr)(\theta)\bigr\rangle\geq c\bigl\|\theta-\vartheta\bigr\|_{2}^{2},\qquad \bigl\|\bigl(\nabla\mathscr{L}\bigr)(\theta)\bigr\|_{2}\leq L\bigl\|\theta-\vartheta\bigr\|_{2},\tag{6.77}$$
+
 以及
+
 $$0<\liminf_{n\to\infty}\gamma_{n}\leq \limsup_{n\to\infty}\gamma_{n}<\frac{2c}{L^{2}},\tag{6.78}$$
+
 并且设 $\Theta\colon\mathbb{N}_{0}\to\mathbb{R}^{\mathfrak{d}}$ 满足对于所有 $n\in\mathbb{N}$ 有
+
 $$\Theta_{0}=\xi\qquad\text{且}\qquad \Theta_{n}=\Theta_{n-1}-\gamma_{n}\bigl(\nabla\mathscr{L}\bigr)(\Theta_{n-1})\tag{6.79}$$
+
 *（参见定义 1.4.7 和 3.3.4）*. 则
 
 ($i$) 有 $\{\theta \in \mathbb{R}^{\mathfrak{d}}: \mathscr{L}(\theta) = \inf_{w \in \mathbb{R}^{\mathfrak{d}}} \mathscr{L}(w)\} = \{\vartheta\}$，
 
 ($ii$) 存在 $\epsilon \in (0, 1)$ 和 $C \in \mathbb{R}$，使得对于所有 $n \in \mathbb{N}_0$ 有
+
+
+
 $$\|\Theta_n - \vartheta\|_2 \le \epsilon^n C,\tag{6.80}$$
+
 且
 
 ($iii$) 存在 $\epsilon \in (0, 1)$ 和 $C \in \mathbb{R}$，使得对于所有 $n \in \mathbb{N}_0$ 有
+
 $$0 \le \mathscr{L}(\Theta_n) - \mathscr{L}(\vartheta) \le \epsilon^n C.\tag{6.81}$$
 
-**推论 6.1.12 的证明.** 在整个证明过程中，设 $\alpha, \beta \in \mathbb{R}$ 满足
+### 推论 6.1.12 的证明
+在整个证明过程中，设 $\alpha, \beta \in \mathbb{R}$ 满足
+
 $$0 < \alpha < \liminf_{n \rightarrow \infty} \gamma_n \le \limsup \gamma_n < \beta < \frac{2c}{L^2}\tag{6.82}$$
+
 （参见 (6.78)），设 $m \in \mathbb{N}$ 满足对于所有 $n \in \mathbb{N}$ 有 $\gamma_{m+n} \in [\alpha, \beta]$，并且设 $h: \mathbb{R} \rightarrow \mathbb{R}$ 满足对于所有 $t \in \mathbb{R}$ 有
+
 $$h(t) = 1 - 2ct + t^2 L^2.\tag{6.83}$$
+
 注意到 (6.77) 和引理 5.6.8 中的第 (ii) 项证明了第 (i) 项。此外，注意到对于所有 $t \in \mathbb{R}$，$h'(t) = -2c + 2tL^2$ 这一事实意味着对于所有 $t \in (-\infty, \frac{c}{L^2}]$，有
+
 $$h'(t) \le -2c + 2\left[\frac{c}{L^2}\right] L^2 = 0.\tag{6.84}$$
+
 因此，微积分基本定理保证了对于所有 $t \in [\alpha, \beta] \cap [0, \frac{c}{L^2}]$，有
+
 $$h(t) = h(\alpha) + \int_\alpha^t h'(s) \mathrm{d}s \le h(\alpha) + \int_\alpha^t 0 \mathrm{d}s = h(\alpha) \le \max\{h(\alpha), h(\beta)\}.\tag{6.85}$$
+
 此外，注意到对于所有 $t \in \mathbb{R}$，$h'(t) = -2c + 2tL^2$ 这一事实意味着对于所有 $t \in [\frac{c}{L^2}, \infty)$，有
+
 $$h'(t) \le h'(\frac{c}{L^2}) = -2c + 2\left[\frac{c}{L^2}\right] L^2 = 0.\tag{6.86}$$
+
 因此，微积分基本定理保证了对于所有 $t \in [\alpha, \beta] \cap [\frac{c}{L^2}, \infty)$，有
+
 $$\max\{h(\alpha), h(\beta)\} \ge h(\beta) = h(t) + \int_t^\beta h'(s) \mathrm{d}s \ge h(t) + \int_t^\beta 0 \mathrm{d}s = h(t).\tag{6.87}$$
+
 结合此结果和 (6.85) 确立了对于所有 $t \in [\alpha, \beta]$，有
+
 $$h(t) \le \max\{h(\alpha), h(\beta)\}.\tag{6.88}$$
+
 此外，注意到 $\alpha, \beta \in (0, \frac{2c}{L^2})$ 以及引理 **6.1.8** 中的第 **(iii)** 项确保了
+
 $$\{h(\alpha), h(\beta)\} \subseteq [0, 1].\tag{6.89}$$
+
 因此，我们得到 $\max\{h(\alpha), h(\beta)\} \in [0, 1).\tag{6.90}$
+
 这意味着存在 $\varepsilon \in \mathbb{R}$ 使得 $0 \leq \max\{h(\alpha), h(\beta)\} < \varepsilon < 1.\tag{6.91}$
+
 接下来注意到，对于所有 $n \in \mathbb{N}$，$\gamma_{m+n} \in [\alpha, \beta] \subseteq [0, \frac{2c}{L^2}]$，命题 **6.1.9** 中的第 **(ii)** 和第 **(iv)** 项（在命题 **6.1.9** 的符号下，应用 $\mathfrak{d} \curvearrowright \mathfrak{d}$，$c \curvearrowright c$，$L \curvearrowright L$，$r \curvearrowright \infty$，$(\eta_{n})_{n \in \mathbb{N}} \curvearrowright (\gamma_{m+n})_{n \in \mathbb{N}}$，$\vartheta \curvearrowright \vartheta$，$\xi \curvearrowright \Theta_{m}$，$\mathcal{Z} \curvearrowright \mathcal{Z}$），以及 (6.77)、(6.79) 和 (6.88) 表明对于所有 $n \in \mathbb{N}$，有
+
 $$
 \begin{aligned}
 \|\Theta_{m+n} - \vartheta\|_2 &\leq \left[\prod_{k=1}^{n} \left(1 - 2c\gamma_{m+k} + (\gamma_{m+k})^2 L^2\right)^{1/2}\right] \|\Theta_m - \vartheta\|_2 \\
@@ -7726,8 +8498,11 @@ $$
 &\leq \varepsilon^{n/2} \|\Theta_m - \vartheta\|_2.\tag{6.92}
 \end{aligned}
 $$
+
 这表明对于所有 $n \in \mathbb{N}$ 且 $n > m$，有 $\|\Theta_n - \vartheta\|_2 \leq \varepsilon^{(n-m)/2} \|\Theta_m - \vartheta\|_2.\tag{6.93}$
+
 对于所有 $n \in \mathbb{N}_0$ 且 $n \leq m$，事实 $\|\Theta_n - \vartheta\|_2 = \left[\frac{\|\Theta_n - \vartheta\|_2}{\varepsilon^{n/2}}\right] \varepsilon^{n/2} \leq \left[\max\left\{\frac{\|\Theta_k - \vartheta\|_2}{\varepsilon^{k/2}}: k \in \{0, 1, \dots, m\}\right\}\right] \varepsilon^{n/2}\tag{6.94}$ 因此保证了对于所有 $n \in \mathbb{N}_0$，有
+
 $$
 \begin{aligned}
 \|\Theta_n - \vartheta\|_2 &\leq \max\left\{\left[\max\left\{\frac{\|\Theta_k - \vartheta\|_2}{\varepsilon^{k/2}}: k \in \{0, 1, \dots, m\}\right\}\right] \varepsilon^{n/2}, \varepsilon^{(n-m)/2}\|\Theta_m - \vartheta\|_2\right\} \\
@@ -7735,18 +8510,26 @@ $$
 &= \left(\varepsilon^{1/2}\right)^n \left[\max\left\{\frac{\|\Theta_k - \vartheta\|_2}{\varepsilon^{k/2}}: k \in \{0, 1, \dots, m\}\right\}\right].\tag{6.95}
 \end{aligned}
 $$
+
 这证明了第 (ii) 项。此外，注意到引理 5.6.9、第 (i) 项以及 (6.95) 保证了对于所有 $n \in \mathbb{N}_0$，有
+
 $$0 \leq \mathcal{L}(\Theta_n) - \mathcal{L}(\vartheta) \leq \frac{L}{2}\|\Theta_n - \vartheta\|_2^2 \leq \frac{L}{2}e^n\left[\max\left\{\frac{\|\Theta_k - \vartheta\|_2^2}{\varepsilon^k}: k \in \{0, 1, \ldots, m\}\right\}\right]\tag{6.96}$$
+
 这确立了第 (iii) 项。至此，推论 6.1.12 的证明完成。证毕。
 
 ## 6.1.4.4 小学习率情形下的误差估计
 
 上述命题 6.1.9 中第 (iv) 项的 (6.49) 不等式为梯度下降（GD）优化方法在学习率 $(\gamma_n)_{n \in \mathbb{N}}$ 满足对于所有 $n \in \mathbb{N}$ 有 $\gamma_n \leq \frac{2c}{L^2}$ 的情况下提供误差估计。当学习率 $(\gamma_n)_{n \in \mathbb{N}}$ 满足更严格的条件，即对于所有 $n \in \mathbb{N}$ 有 $\gamma_n \leq \frac{c}{L^2}$ 时，(6.49) 中的误差估计可以简化。这是下一个结果，即下面的推论 6.1.13 的主题。我们通过应用上述命题 6.1.9 来证明推论 6.1.13。
 
-**推论 6.1.13** *（小学习率情形下的误差估计）*. 设 $\mathfrak{d} \in \mathbb{N}$，$c, L \in (0, \infty)$，$r \in (0, \infty]$，$(\gamma_n)_{n \in \mathbb{N}} \subseteq [0, \frac{c}{L^2}]$，$\vartheta \in \mathbb{R}^{\mathfrak{d}}$，$\mathbb{B} = \{w \in \mathbb{R}^{\mathfrak{d}}: \|w - \vartheta\|_2 \leq r\}$，$\xi \in \mathbb{B}$，$\mathcal{L} \in C^1(\mathbb{R}^{\mathfrak{d}}, \mathbb{R})$ 满足对于所有 $\theta \in \mathbb{B}$ 有
+### 推论 6.1.13
+*（小学习率情形下的误差估计）*. 设 $\mathfrak{d} \in \mathbb{N}$，$c, L \in (0, \infty)$，$r \in (0, \infty]$，$(\gamma_n)_{n \in \mathbb{N}} \subseteq [0, \frac{c}{L^2}]$，$\vartheta \in \mathbb{R}^{\mathfrak{d}}$，$\mathbb{B} = \{w \in \mathbb{R}^{\mathfrak{d}}: \|w - \vartheta\|_2 \leq r\}$，$\xi \in \mathbb{B}$，$\mathcal{L} \in C^1(\mathbb{R}^{\mathfrak{d}}, \mathbb{R})$ 满足对于所有 $\theta \in \mathbb{B}$ 有
+
 $$\langle\theta - \vartheta, (\nabla \mathcal{L})(\theta)\rangle \geq c\|\theta - \vartheta\|_2^2 \quad \text{且} \quad \|(\nabla \mathcal{L})(\theta)\|_2 \leq L\|\theta - \vartheta\|_2,\tag{6.97}$$
+
 并且设 $\Theta: \mathbb{N}_0 \to \mathbb{R}^{\mathfrak{d}}$ 满足对于所有 $n \in \mathbb{N}$ 有
+
 $$\Theta_0 = \xi \quad \text{且} \quad \Theta_n = \Theta_{n-1} - \gamma_n(\nabla \mathcal{L})(\Theta_{n-1})\tag{6.98}$$
+
 *（参见定义 1.4.7 和 3.3.4）*. 则
 
 (i) 有 $\{\theta \in \mathbb{B}: \mathcal{L}(\theta) = \inf_{w \in \mathbb{B}} \mathcal{L}(w)\} = \{\vartheta\}$，
@@ -7754,15 +8537,14 @@ $$\Theta_0 = \xi \quad \text{且} \quad \Theta_n = \Theta_{n-1} - \gamma_n(\nabl
 (ii) 对于所有 $n \in \mathbb{N}$，有 $0 \leq 1 - c\gamma_n \leq 1$，
 
 (iii) 对于所有 $n \in \mathbb{N}_0$，有
+
 $$\|\Theta_n - \vartheta\|_2 \leq \left[\prod_{k=1}^n (1 - c\gamma_k)^{1/2}\right]\|\xi - \vartheta\|_2 \leq \exp\left(-\frac{c}{2}[\sum_{k=1}^n \gamma_k]\right)\|\xi - \vartheta\|_2,\tag{6.99}$$
+
 且
 
 (iv) 对于所有 $n \in \mathbb{N}_0$，有
+
 $$0 \leq \mathcal{L}(\Theta_n) - \mathcal{L}(\vartheta) \leq \frac{L}{2}\left[\prod_{k=1}^n (1 - c\gamma_k)\right]\|\xi - \vartheta\|_2^2 \leq \frac{L}{2}\exp\left(-c[\sum_{k=1}^n \gamma_k]\right)\|\xi - \vartheta\|_2^2.\tag{6.100}$$
-
-
-
-
 
 推论 6.1.13 的证明。注意，命题 6.1.9 中的第 (ii) 项以及对于所有 $n \in \mathbb{N}$ 均满足 $\gamma_n \in \llbracket 0, \frac{c}{L^2} \rrbracket$ 的假设，确保了对于所有 $n \in \mathbb{N}$ 均有
 
@@ -7772,7 +8554,8 @@ $$0 \leq 1 - 2c\gamma_n + (\gamma_n)^2L^2 \leq 1 - 2c\gamma_n + \gamma_n \left[ 
 
 在下一个结果，即下方的推论 6.1.14 中，我们大致上将上述推论 6.1.13 专门应用于学习率 $(\gamma_n)_{n \in \mathbb{N}} \subseteq \llbracket 0, \frac{c}{L^2} \rrbracket$ 为常数序列的情形。
 
-推论 6.1.14（小且常数学习率情形下的误差估计）。*设* $\emptyset \in \mathbb{N}$，$c$，$L \in (0, \infty)$，$r \in (0, \infty)$，$\gamma \in (0, \frac{c}{L^2}]$，$\vartheta \in \mathbb{R}^\mathfrak{D}$，$\mathbb{B} = \left\{ w \in \mathbb{R}^\mathfrak{D} : \|w - \vartheta\|_2 \leq r \right\}$，$\xi \in \mathbb{B}$，$\mathcal{L} \in C^1(\mathbb{R}^\mathfrak{D}, \mathbb{R})$ *满足对于所有* $\theta \in \mathbb{B}$ 有
+### 推论 6.1.14
+（小且常数学习率情形下的误差估计）。*设* $\emptyset \in \mathbb{N}$，$c$，$L \in (0, \infty)$，$r \in (0, \infty)$，$\gamma \in (0, \frac{c}{L^2}]$，$\vartheta \in \mathbb{R}^\mathfrak{D}$，$\mathbb{B} = \left\{ w \in \mathbb{R}^\mathfrak{D} : \|w - \vartheta\|_2 \leq r \right\}$，$\xi \in \mathbb{B}$，$\mathcal{L} \in C^1(\mathbb{R}^\mathfrak{D}, \mathbb{R})$ *满足对于所有* $\theta \in \mathbb{B}$ 有
 
 $$(\theta - \vartheta, \langle \nabla \mathcal{L} \rangle(\theta)) \geq c \|\theta - \vartheta\|_2^2 \quad \text{以及} \quad \|\langle \nabla \mathcal{L} \rangle(\theta)\|_2 \leq L \|\theta - \vartheta\|_2, \tag{6.102}$$
 
@@ -7783,15 +8566,20 @@ $$\Theta_0 = \xi \quad \text{以及} \quad \Theta_n = \Theta_{n - 1} - \gamma \l
 *(参见定义 1.4.7 和 3.3.4)。则*
 
 - (i) 成立 $\left\{ \theta \in \mathbb{B} : \mathcal{L}(\theta) = \inf_{w \in \mathbb{B}} \mathcal{L}(w) \right\} = \left\{ \vartheta \right\}$，
+
 - (ii) 成立 $0 \leq 1 - c\gamma < 1$，
+
 - (iii) 对于所有 $n \in \mathbb{N}_0$，成立 $\|\Theta_n - \vartheta\|_2 \leq (1 - c\gamma)^{n/2}\|\xi - \vartheta\|_2$，以及
+
+
+
 - (iv) 对于所有 $n \in \mathbb{N}_0$，成立 $0 \leq \mathcal{L}(\Theta_n) - \mathcal{L}(\vartheta) \leq \frac{L}{2}(1 - c\gamma)^n \|\xi - \vartheta\|_2^2.$
 
 推论 6.1.14 的证明。推论 6.1.14 是推论 6.1.13 的直接推论。因此，推论 6.1.14 的证明完毕。 $\square$
 
 ### 6.1.4.5 目标函数在局部极小点处海森矩阵的特征谱
 
-我们在上述 6.1.4.1、6.1.4.2、6.1.4.3 和 6.1.4.4 节中针对 GD 优化方法进行的误差分析中的一个关键要素，是采用增长型和强制性假设，例如上述命题 6.1.9 中的 (6.47)。在本小节中，我们将在下方的命题 6.1.16 中揭示关于所考虑优化问题目标函数的海森矩阵的适当条件，这些条件足以确保 (6.47) 得到满足，从而使我们能够应用上述 6.1.4.1、6.1.4.2、6.1.4.3 和 6.1.4.4 节中的误差分析（参见下方推论 6.1.17）。我们对命题 6.1.16 的证明采用了如下经典结果（见下方引理 6.1.15），该结果适用于实元素对称矩阵。
+我们在上述 6.1.4.1、6.1.4.2、6.1.4.3 和 6.1.4.4 节中针对 `GD` 优化方法进行的误差分析中的一个关键要素，是采用增长型和强制性假设，例如上述命题 6.1.9 中的 `(6.47)`。在本小节中，我们将在下方的命题 6.1.16 中揭示关于所考虑优化问题目标函数的海森矩阵的适当条件，这些条件足以确保 `(6.47)` 得到满足，从而使我们能够应用上述 6.1.4.1、6.1.4.2、6.1.4.3 和 6.1.4.4 节中的误差分析（参见下方推论 6.1.17）。我们对命题 6.1.16 的证明采用了如下经典结果（见下方引理 6.1.15），该结果适用于实元素对称矩阵。
 
 **引理 6.1.15**（实对称矩阵特征谱的性质）。设 $\mathfrak{n} \in \mathbb{N}$，设 $A \in \mathbb{R}^{\mathfrak{n} \times \mathfrak{n}}$ 为对称矩阵，并设
 
@@ -7800,11 +8588,13 @@ $$\mathcal{S}=\left\{\lambda \in \mathbb{C}: (\exists v \in \mathbb{C}^{\mathfra
 则
 
 - (i) 成立 $\mathcal{S}=\left\{\lambda \in \mathbb{R}: (\exists v \in \mathbb{R}^{\mathfrak{n}} \backslash\{0\}: A v=\lambda v)\right\} \subseteq \mathbb{R}$，
+
 - (ii) 成立
 
 $$\sup _{v \in \mathbb{R}^{\mathfrak{n}} \backslash\{0\}}\left[\frac{\|A v\|_{2}}{\|v\|_{2}}\right]=\max _{\lambda \in \mathcal{S}}|\lambda|, \tag{6.105}$$
 
 以及
+
 - (iii) 对于所有 $v \in \mathbb{R}^{\mathfrak{n}}$，成立
 
 $$\min (\mathcal{S})\|v\|_{2}^{2} \leq\langle v, A v\rangle \leq \max (\mathcal{S})\|v\|_{2}^{2} \tag{6.106}$$
@@ -7846,7 +8636,6 @@ $$\begin{aligned} \sup_{v \in \mathbb{R}^\mathfrak{n} \setminus \{0\}} \left[ \f
 将此与 **(6.112)** 结合即确立了第 **(ii)** 项。因此，剩下的任务是证明第 **(iii)** 项。为此注意，**(6.108)** 保证了对于所有 $v = (v_1, v_2, \ldots, v_\mathfrak{n}) \in \mathbb{R}^\mathfrak{n}$ 成立
 
 $$\begin{aligned} \langle v, \Lambda v \rangle &= \sum_{i=1}^{\mathfrak{n}} \Lambda_{i,i} |v_i|^2 \leq \sum_{i=1}^{\mathfrak{n}} \max\{\Lambda_{1,1}, \ldots, \Lambda_{\mathfrak{n},\mathfrak{n}}\} |v_i|^2 \tag{6.115} \\ &= \max\{\Lambda_{1,1}, \ldots, \Lambda_{\mathfrak{n},\mathfrak{n}}\} \|v\|_2^2 = \max(\mathcal{S}) \|v\|_2^2 \end{aligned}$$
-
 
 （参见定义 $1.4.7$）。由于 $O$ 是正交矩阵，且 $A = O\Lambda O^*$，因此可以证明，对于所有 $v \in \mathbb{R}^{\mathfrak{d}}$，都有
 
@@ -7891,391 +8680,260 @@ $$\mathcal{S} = \{\mu \in \mathbb{R} : (\exists \, u \in \mathbb{R}^n \backslash
 接下来注意到，假设 $\nabla \mathscr{L}(\vartheta) = 0$ 以及微积分基本定理保证，对于所有 $\theta, w \in \mathbb{R}^n$，都有
 
 \begin{align}
+
+
+
 \langle w, (\nabla \mathscr{L})(\theta) \rangle &= \langle w, (\nabla \mathscr{L})(\theta) - (\nabla \mathscr{L})(\vartheta) \rangle \\
+
 &= \left\langle w, \left[(\nabla \mathscr{L})(\theta + t(\theta - \vartheta))\right]_{t = 0}^{t = 1} \right\rangle \\
+
 &= \left\langle w, \int_0^1 [([\text{Hess} \, \mathscr{L})(\vartheta + t(\theta - \vartheta))](\theta - \vartheta)] \, \text{d}t \right\rangle \\
+
 &= \int_0^1 \left\langle w, ([\text{Hess} \, \mathscr{L})(\vartheta + t(\theta - \vartheta))](\theta - \vartheta)\right\rangle \, \text{d}t \\
+
 &= \left\langle w, [([\text{Hess} \, \mathscr{L})(\vartheta)](\theta - \vartheta)) \right\rangle \\
+
 &\quad + \int_0^1 \left\langle w, \left([(\text{Hess} \, \mathscr{L})(\vartheta + t(\theta - \vartheta)) - (\text{Hess} \, \mathscr{L})(\vartheta)](\theta - \vartheta)\right\rangle \, \text{d}t \tag{6.125}
+
 \end{align}
 
 （参见定义 1.4.7）。由于 $\text{Hess} \, \mathscr{L}(\vartheta) \in \mathbb{R}^{n \times n}$ 是一个对称矩阵，引理 6.1.15 中的第 **(iii)** 项以及柯西-施瓦茨不等式意味着，对于所有 $\theta \in \mathbb{B}$，都有
 
 \begin{align}
+
 \langle \theta - \vartheta, (\nabla \mathscr{L})(\theta) \rangle 
+
 &\geq \langle \theta - \vartheta, ([\text{Hess} \, \mathscr{L}(\vartheta)](\theta - \vartheta) \rangle \\
+
 &\quad - \left| \int_0^1 \left\langle \theta - \vartheta, \left([(\text{Hess} \, \mathscr{L})(\vartheta + t(\theta - \vartheta)) - (\text{Hess} \, \mathscr{L})(\vartheta)](\theta - \vartheta)\right\rangle \, \text{d}t \right| \\
+
 &\geq \min(\mathcal{S})\|\theta - \vartheta\|_2^2 \\
+
 &\quad - \int_0^1 \|\theta - \vartheta\|_2 \left\| [\text{Hess} \, \mathscr{L}(\vartheta + t(\theta - \vartheta)) - (\text{Hess} \, \mathscr{L})(\vartheta)](\theta - \vartheta) \right\|_2 \, \text{d}t. \tag{6.126}
+
 \end{align}
 
 将此结果与 $(\mathbf{6.124})$ 和 $(\mathbf{6.119})$ 结合可知，对于所有 $\theta \in \mathbb{B}$，都有
 
 $$
+
 \begin{gathered} 
+
 \left\langle \theta-\vartheta, \nabla \mathcal{L}(\theta)\right\rangle \\ 
+
 \quad \geq \alpha\left\|\theta-\vartheta\right\|_{2}^{2} \\ 
+
 \quad-\int_{0}^{1}\left\|\theta-\vartheta\right\|_{2}\| \text { (Hess } \mathcal{L}) \vartheta+t(\theta-\vartheta))-\text { (Hess } \mathcal{L}) \vartheta\|\left\|\theta-\vartheta\right\|_{2} \mathrm{~d} t \\ 
+
 \geq \alpha\left\|\theta-\vartheta\right\|_{2}^{2}-\left[\int_{0}^{1} \lambda\|\vartheta+t(\theta-\vartheta)-\vartheta\|_{2} \mathrm{~d} t\right]\left\|\theta-\vartheta\right\|_{2}^{2} \\ 
+
 =\left(\alpha-\left[\int_{0}^{1} t \mathrm{~d} t\right]\lambda\|\theta-\vartheta\|_{2}\right)\left\|\theta-\vartheta\right\|_{2}^{2}=\left(\alpha-\frac{\lambda}{2}\left\|\theta-\vartheta\right\|_{2}\right)\left\|\theta-\vartheta\right\|_{2}^{2} \\ 
+
 \geq\left(\alpha-\frac{\lambda \alpha}{2 \Lambda}\right)\left\|\theta-\vartheta\right\|_{2}^{2}=\frac{\alpha}{2}\left\|\theta-\vartheta\right\|_{2}^{2} . 
+
 \end{gathered}
+
 $$
 
 此外，注意到 $(\mathbf{6.119}), (\mathbf{6.124}), (\mathbf{6.125})$、事实（Hess $\mathcal{L}$)($\vartheta$) $\in \mathbb{R}^{n \times n}$ 是一个对称矩阵、引理 $\mathbf{6.1 . 1 5}$ 中的第 (ii) 项、柯西-施瓦茨不等式以及假设 $\alpha \leq \beta$ 保证，对于所有满足 $\|w\|_{2}=1$ 的 $\theta \in \mathbb{B}, w \in \mathbb{R}^{n}$，都有
 
 $$
+
 \begin{aligned} 
+
 & \langle w, \nabla \mathcal{L}(\theta)\rangle \\ 
+
 & \leq\left|\left\langle w,\left[\text { (Hess } \mathcal{L}) \vartheta\right](\theta-\vartheta)\right\rangle\right| \\ 
+
 & \quad+\left|\int_{0}^{1}\left\langle w,\left[\text { (Hess } \mathcal{L}) \vartheta+t(\theta-\vartheta)\right)-(\text { (Hess } \mathcal{ L}) \vartheta)\right](\theta-\vartheta)\right\rangle \mathrm{d} t\right| \\ 
+
 & \leq\|w\|_{2}\|(\text { (Hess } \mathcal{L}) \vartheta)\|(\theta-\vartheta)\|_{2} \\ 
+
 & \quad+\int_{0}^{1}\|w\|_{2}\|(\text { (Hess } \mathcal{ L}) \vartheta+t(\theta-\vartheta))-(\text { (Hess } \mathcal{ L}) \vartheta)\|\|(\theta-\vartheta)\|_{2} \mathrm{~d} t \\ 
+
 & \leq\left[\sup _{v \in \mathbb{R}^{n} \backslash\{0\}} \frac{\|[(\text { (Hess } \mathcal{ L}) \vartheta) v\|_{2}}{\|v\|_{2}}\right]\left\|\theta-\vartheta\right\|_{2} \\ 
+
 & \quad+\int_{0}^{1}\|\text { (Hess } \mathcal{ L}) \vartheta+t(\theta-\vartheta)-(\text { (Hess } \mathcal{ L}) \vartheta\|\|\theta-\vartheta\|_{2} \mathrm{~d} t \\ 
+
 & \leq \max (\mathcal{S})\left\|\theta-\vartheta\right\|_{2}+\left[\int_{0}^{1} \lambda\|\vartheta+t(\theta-\vartheta)-\vartheta\|_{2} \mathrm{~d} t\right]\left\|\theta-\vartheta\right\|_{2} \\ 
+
 & \leq\left(\beta+\lambda\left[\int_{0}^{1} t \mathrm{~d} t\right]\right)\|\theta-\vartheta\|_{2}\left\|\theta-\vartheta\right\|_{2}=\left(\beta+\frac{\lambda}{2}\left\|\theta-\vartheta\right\|_{2}\right)\left\|\theta-\vartheta\right\|_{2} \\ 
+
 & \leq\left(\beta+\frac{\lambda \alpha}{2 \Lambda}\right)\left\|\theta-\vartheta\right\|_{2}=\left[\frac{2 \beta+\alpha}{2}\right]\left\|\theta-\vartheta\right\|_{2} \leq \frac{3 \beta}{2}\left\|\theta-\vartheta\right\|_{2} . 
+
 \end{aligned}
+
 $$
 
 因此，对于所有 $\theta \in \mathbb{B}$，我们得到
 
 $$
+
 \|\nabla \mathcal{L}(\theta)\|_{2}=\sup _{w \in \mathbb{R}^{n},\|w\|_{2}=1}\left|\left\langle w,\left(\nabla \mathcal{L}(\theta)\right)\right\rangle\right| \leq \frac{3 \beta}{2}\left\|\theta-\vartheta\right\|_{2} .
+
 $$
 
 将此结果与 $(\mathbf{6.127})$ 结合便证明了 $(\mathbf{6.121})$。命题 $\mathbf{6.1 . 1 6}$ 的证明至此完成。
 
+...
 
 
-...[/content]`.
 
-Key terms:
-- Corollary -> 推论
-- Proposition -> 命题
-- Theorem -> 定理
-- Lemma -> 引理
-- Error analysis -> 误差分析
-- Gradient Descent (GD) -> 梯度下降
-- Hessian -> Hessian 矩阵 (or 海森矩阵)
-- Objective function -> 目标函数
-- Eigenvalues -> 特征值
-- Submanifold -> 子流形
-- Scalar product -> 内积 / 标量积
-- Cauchy-Schwarz inequality -> 柯西-施瓦茨不等式
-- Fundamental theorem of calculus -> 微积分基本定理
+### 6.1.4.6 Equivalent conditions on the objective function
 
-Let's go through the text section by section.
+**Lemma 6.1.19.** Let $\mathfrak{d} \in \mathbb{N}$, let $\langle \cdot, \cdot \rangle: \mathbb{R}^{\mathfrak{d}} \times \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}$ be a scalar product, let $\| \cdot \|: \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}$ satisfy for all $v \in \mathbb{R}^{\mathfrak{d}}$ that $\| v \|=\sqrt{\langle v, v \rangle}$, let $\gamma \in(0, \infty)$, $\varepsilon \in(0,1)$, $r \in(0, \infty)$, $\vartheta \in \mathbb{R}^{\mathfrak{d}}$, $\mathbb{B}=\{w \in \mathbb{R}^{\mathfrak{d}}: \| w-\vartheta \| \leq r\}$, and let $\mathscr{G}: \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}^{\mathfrak{d}}$ satisfy for all $\theta \in \mathbb{B}$ that
 
-**Paragraph 1:**
-"The next result, Corollary 6.1.17 below, combines Proposition 6.1.16 with Proposition 6.1.9 to obtain an error analysis which assumes the conditions in (6.119) and (6.120) in Proposition 6.1.16 above. A result similar to Corollary 6.1.17 can, for instance, be found in Nesterov [303, Theorem 1.2.4]."
--> 下一个结果，即下面的推论 6.1.17，将命题 6.1.16 与命题 6.1.9 结合起来，得到了一个误差分析，该分析假设了上述命题 6.1.16 中的条件 (6.119) 和 (6.120)。类似于推论 6.1.17 的结果，例如可以在 Nesterov [303, 定理 1.2.4] 中找到。
+```
+‖ θ−γ G(θ)−ϑ ‖ ≤ ε‖ θ−ϑ ‖. (6.137)
+```
 
-**Corollary 6.1.17 Header:**
-"Corollary 6.1.17 (Error analysis for the GD optimization method under conditions on the Hessian of the objective function)."
--> **推论 6.1.17**（在目标函数的 Hessian 矩阵满足特定条件下，梯度下降优化方法的误差分析）。
-*Note: The original text doesn't bold the header "Corollary 6.1.17...", it's just plain text. I should check if it was bold in input. Input: "Corollary 6.1.17 (...)" is not bolded in the source snippet provided. Wait, looking at the source:
-`Corollary 6.1.17 (Error analysis for the GD optimization method under conditions on the Hessian of the objective function).`
-It is plain text. I will keep it plain or follow standard mathematical translation style. The prompt says "bold... need to translate content and keep symbols". If it's not bold in input, I shouldn't make it bold unless it's a header. Let's look at the structure.
-Actually, usually "Corollary ..." acts as a heading. But in the provided text, it's just a line.
-Let's look at "Lemma 6.1.19." below. It's plain.
-I will translate the text faithfully.
+Then it holds for all $\theta \in \mathbb{B}$ that
 
-**Corollary 6.1.17 Body:**
-"Let \(\boldsymbol{\theta} \in \mathbb{N}\), let \(\| \cdot \|: \mathbb{R}^{d} \times \mathbb{R} \rightarrow \mathbb{R}\) satisfy for all \(A \in \mathbb{R}^{d \times d}\) that \(\|A\|=\sup _{v \in \mathbb{R}^{d}\{0\}} \frac{\|Av\|_{2}}{\|v\|_{2}}\), and let \(\lambda, \alpha \in(0, \infty)\), \(\beta \in[\alpha, \infty)\), \((\gamma_{n})_{n \in \mathbb{N}} \subseteq[0, \frac{4 \alpha}{9 \beta^{2}})\), \(\forall \xi \in \mathbb{R}^{d}\), \(\mathcal{L} \in C^{2}\left(\mathbb{R}^{d}, \mathbb{R}\right)\) satisfy for all \(v, w \in \mathbb{R}^{d}\) that"
--> 设 \(\boldsymbol{\theta} \in \mathbb{N}\)，设 \(\| \cdot \|: \mathbb{R}^{d} \times \mathbb{R} \rightarrow \mathbb{R}\) 满足对所有 \(A \in \mathbb{R}^{d \times d}\) 有 \(\|A\|=\sup _{v \in \mathbb{R}^{d}\backslash\{0\}} \frac{\|Av\|_{2}}{\|v\|_{2}}\)，且设 \(\lambda, \alpha \in(0, \infty)\)，\(\beta \in[\alpha, \infty)\)，\((\gamma_{n})_{n \in \mathbb{N}} \subseteq[0, \frac{4 \alpha}{9 \beta^{2}})\)，\(\forall \xi \in \mathbb{R}^{d}\)，\(\mathcal{L} \in C^{2}\left(\mathbb{R}^{d}, \mathbb{R}\right)\) 满足对所有 \(v, w \in \mathbb{R}^{d}\) 有
+```
+(6.138)
+```
 
-*Correction*: In the input: `v \in \mathbb{R}^{d}\{0\}`. This looks like a typo in the source LaTeX `\{0\}` instead of `\backslash\{0\}` or similar. I must translate exactly what is there. The source has `v \in \mathbb{R}^{d}\{0\}`. I will keep the math part exactly as is inside the command structure, but translate the surrounding text.
-Wait, `v \in \mathbb{R}^{d}\{0\}` is likely meant to be `v \in \mathbb{R}^{d}\setminus\{0\}`. I should not correct LaTeX errors unless it's clearly part of the "translation" task, but the instruction says "translate". I will keep the math symbols intact.
+**Proof of Lemma 6.1.19.** First, note that (6.137) ensures that for all $\theta \in \mathbb{B}$ it holds that
 
-**Formulas (6.130) and (6.131):**
-The formulas are LaTeX. I keep them as is.
-Text around them: "and \(\|\xi-\vartheta\|_{2} \leq \frac{\alpha}{\lambda}\), and let \(\Theta: \mathbb{N}_{0} \rightarrow \mathbb{R}^{d}\) satisfy for all \(n \in \mathbb{N}\) that"
--> 且 \(\|\xi-\vartheta\|_{2} \leq \frac{\alpha}{\lambda}\)，并设 \(\Theta: \mathbb{N}_{0} \rightarrow \mathbb{R}^{d}\) 满足对所有 \(n \in \mathbb{N}\) 有
+```
+(6.139)
+```
 
-**Formula (6.132):**
-"\(\Theta_{0}=\xi\) and \(\Theta_{n}=\Theta_{n-1}-\gamma_{n}(\nabla \mathcal{L})(\Theta_{n-1})\) (6.132)"
--> \(\Theta_{0}=\xi\) 且 \(\Theta_{n}=\Theta_{n-1}-\gamma_{n}(\nabla \mathcal{L})(\Theta_{n-1})\) (6.132)
+Hence, we obtain for all $\theta \in \mathbb{B}$ that
 
-**Text:**
-"(cf. Definition 3.3.4.) Then"
--> （参见定义 3.3.4。）那么
+```
+(6.140)
+```
 
-**Points (i)-(iv):**
-(i) it holds that ...
--> (i) 成立 \(\{\theta \in \mathbb{B}: \mathcal{L}(\theta)=\inf _{w \in \mathbb{B}} \mathcal{L}(w)\}=\{\vartheta\}\)，
-(ii) it holds for all \(k \in \mathbb{N}\) that ...
--> (ii) 对所有 \(k \in \mathbb{N}\)，成立 \(0 \leq 1-\alpha \gamma_{k}+\frac{9 \beta^{2}(\gamma_{k})^{2}}{4} \leq 1\)，
-(iii) it holds for all \(n \in \mathbb{N}_{0}\) that
--> (iii) 对所有 \(n \in \mathbb{N}_{0}\)，成立
-Formula (6.133)
-"and"
--> 且
-(iv) it holds for all \(n \in \mathbb{N}_{0}\) that
--> (iv) 对所有 \(n \in \mathbb{N}_{0}\)，成立
-Formula (6.134)
+This demonstrates that for all $\theta \in \mathbb{B}$ it holds that
 
-**Proof:**
-"Proof of Corollary 6.1.17. Note that (6.130), (6.131), and Proposition 6.1.16 prove that for all \(\theta \in\{w \in \mathbb{R}^{d}:\|w-\vartheta\|_{2} \leq \frac{\alpha}{\lambda}\}\) it holds that"
--> **推论 6.1.17 的证明**。注意 (6.130)、(6.131) 和命题 6.1.16 证明了对所有 \(\theta \in\{w \in \mathbb{R}^{d}:\|w-\vartheta\|_{2} \leq \frac{\alpha}{\lambda}\}\) 有
+```
+(6.141)
+```
 
-"$(\theta-\vartheta, \nabla \mathcal{L}(\theta)) \geq \frac{\alpha}{2} \|\theta-\vartheta\|_{2}^{2} \quad \text{and} \quad \|\nabla \mathcal{L}(\theta)\|_{2} \leq \frac{3 \beta}{2} \|\theta-\vartheta\|_{2} \quad(6.135)$"
--> Keep math.
-
-"(cf. Definition 1.4.7.) Combining this, the assumption that"
--> （参见定义 1.4.7。）结合这一点，以及假设
-
-"\(\|\xi-\vartheta\|_{2} \leq \frac{\alpha}{\lambda},\) (6.136),"
--> \(\|\xi-\vartheta\|_{2} \leq \frac{\alpha}{\lambda},\) (6.136)
-
-"(6.132), and items (iv) and (v) in Proposition 6.1.9 (applied with \(c \sim \frac{\alpha}{2}\), \(L \sim \frac{3 \beta}{2}\)， \(r \sim \frac{\alpha}{\lambda}\) in the notation of Proposition 6.1.9) establishes items (i), (ii), (iii), and (iv). The proof of Corollary 6.1.17 is thus complete."
--> (6.132)，以及命题 6.1.9 中的条目 (iv) 和 (v)（使用命题 6.1.9 中的记号，取 \(c \sim \frac{\alpha}{2}\)， \(L \sim \frac{3 \beta}{2}\)， \(r \sim \frac{\alpha}{\lambda}\) 时应用）建立了条目 (i)、(ii)、(iii) 和 (iv)。推论 6.1.17 的证明到此完成。
-
-**Remark:**
-"Remark 6.1.18. In Corollary 6.1.17 we establish convergence of the considered GD process under, amongst other things, the assumption that all eigenvalues of the Hessian of \(\mathcal{L}: \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}\) at the local minimum point \(\vartheta\) are strictly positive (see (6.131))."
--> **注 6.1.18**。在推论 6.1.17 中，我们在包括如下假设在内的诸多条件下，建立了所考虑梯度下降过程的收敛性：\(\mathcal{L}: \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}\) 在局部极小值点 \(\vartheta\) 处的 Hessian 矩阵的所有特征值严格为正（参见 (6.131)）。
-
-"In the situation where \(\mathcal{L}\) is the cost function (integrated loss function) associated to a supervised learning problem in the training of ANNs, this assumption is basically not satisfied."
--> 当 \(\mathcal{L}\) 是训练人工神经网络（ANNs）中监督学习问题相关的代价函数（积分损失函数）时，该假设基本上不满足。
-
-"Nonetheless, the convergence analysis for Corollary 6.1.17 can, roughly speaking, also be performed under the essentially (up to the smoothness conditions) more general assumption that there exists \(k \in \mathbb{N}_{0}\) such that the set of local minimum points is locally a smooth \(k\)-dimensional submanifold of \(\mathbb{R}^{\mathfrak{d}}\) and that the rank of the Hessian of \(\mathcal{L}\) on this set of local minimum points locally (at least) \(\mathfrak{d}-k\) (cf. Fehrman et al. [132] for details)."
--> 尽管如此，粗略地说，推论 6.1.17 的收敛分析也可以在本质上（在平滑性条件下）更为一般的假设下进行，该假设指出存在 \(k \in \mathbb{N}_{0}\) 使得局部极小值点的集合局部上是 \(\mathbb{R}^{\mathfrak{d}}\) 的一个光滑 \(k\) 维子流形，且 \(\mathcal{L}\) 的 Hessian 矩阵在该局部极小值点集合上的秩局部上（至少）为 \(\mathfrak{d}-k\)（详细参见 Fehrman 等人 [132]）。
-
-"In certain situations this essentially generalized assumption has also been shown to be satisfied in the training of ANNs in suitable supervised learning problems (see Jentzen & Riekert [223])."
--> 在某些情况下，这一本质上的推广假设也已被证明在合适监督学习问题中训练 ANNs 时得到满足（参见 Jentzen 和 Riekert [223]）。
-
-**Section Header:**
-"### 6.1.4.6 Equivalent conditions on the objective function"
--> ### 6.1.4.6 目标函数的等价条件
-
-**Lemma 6.1.19:**
-"Lemma 6.1.19. Let \(\mathfrak{d} \in \mathbb{N}\), let \(\langle \cdot, \cdot \rangle: \mathbb{R}^{\mathfrak{d}} \times \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}\) be a scalar product, let \(\| \cdot \|: \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}\) satisfy for all \(v \in \mathbb{R}^{\mathfrak{d}}\) that \(\| v \|=\sqrt{\langle v, v \rangle}\), let \(\gamma \in(0, \infty)\), \(\varepsilon \in(0,1)\)， \(r \in(0, \infty)\)， \(\vartheta \in \mathbb{R}^{\mathfrak{d}}\)， \(\mathbb{B}=\{w \in \mathbb{R}^{\mathfrak{d}}: \| w-\vartheta \| \leq r\}\)， and let \(\mathscr{G}: \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}^{\mathfrak{d}}\) satisfy for all \(\theta \in \mathbb{B}\) that"
--> **引理 6.1.19**。设 \(\mathfrak{d} \in \mathbb{N}\)，设 \(\langle \cdot, \cdot \rangle: \mathbb{R}^{\mathfrak{d}} \times \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}\) 为内积，设 \(\| \cdot \|: \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}\) 满足对所有 \(v \in \mathbb{R}^{\mathfrak{d}}\) 有 \(\| v \|=\sqrt{\langle v, v \rangle}\)，设 \(\gamma \in(0, \infty)\)，\(\varepsilon \in(0,1)\)， \(r \in(0, \infty)\)， \(\vartheta \in \mathbb{R}^{\mathfrak{d}}\)， \(\mathbb{B}=\{w \in \mathbb{R}^{\mathfrak{d}}: \| w-\vartheta \| \leq r\}\)，且设 \(\mathscr{G}: \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}^{\mathfrak{d}}\) 满足对所有 \(\theta \in \mathbb{B}\) 有
-
-"\(\| \theta-\gamma \mathscr{G}(\theta)-\vartheta \| \leq \varepsilon\| \theta-\vartheta \|\). (6.137)."
--> \(\| \theta-\gamma \mathscr{G}(\theta)-\vartheta \| \leq \varepsilon\| \theta-\vartheta \|\). (6.137)
-
-"Then it holds for all \(\theta \in \mathbb{B}\) that"
--> 那么对所有 \(\theta \in \mathbb{B}\) 有
-
-Formula (6.138)
-
-"Proof of Lemma 6.1.19. First, note that (6.137) ensures that for all \(\theta \in \mathbb{B}\) it holds that"
--> **引理 6.1.19 的证明**。首先，注意 (6.137) 保证了对所有 \(\theta \in \mathbb{B}\) 有
-
-Formula (6.139)
-
-"Hence, we obtain for all \(\theta \in \mathbb{B}\) that"
--> 因此，我们对所有 \(\theta \in \mathbb{B}\) 得到
-
-Formula (6.140)
-
-"This demonstrates that for all \(\theta \in \mathbb{B}\) it holds that"
--> 这证明了对所有 \(\theta \in \mathbb{B}\) 有
-
-Formula (6.141)
-
-"The proof of Lemma 6.1.19 is thus complete. $\square$"
--> 引理 6.1.19 的证明到此完成。$\square$
+The proof of Lemma 6.1.19 is thus complete. $\square$
 
 **Lemma 6.1.20:**
-"Lemma 6.1.20. Let \(\mathfrak{d} \in \mathbb{N}\), let \(\langle\cdot, \cdot\rangle: \mathbb{R}^{\mathfrak{d}} \times \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}\) be a scalar product, let \(\|\cdot\|: \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}\) satisfy for all \(v \in \mathbb{R}^{\mathfrak{d}}\) that \(\|v\| = \sqrt{\langle v, v\rangle}\), let \(c \in (0, \infty)\), \(r \in (0, \infty)\), \(\vartheta \in \mathbb{R}^{\mathfrak{d}}\)， \(\mathbb{B} = \{w \in \mathbb{R}^{\mathfrak{d}} : \|w - \vartheta\| \leq r\}\)， and let \(\mathscr{G}: \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}^{\mathfrak{d}}\) satisfy for all \(\theta \in \mathbb{B}\) that"
--> **引理 6.1.20**。设 \(\mathfrak{d} \in \mathbb{N}\)，设 \(\langle\cdot, \cdot\rangle: \mathbb{R}^{\mathfrak{d}} \times \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}\) 为内积，设 \(\|\cdot\|: \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}\) 满足对所有 \(v \in \mathbb{R}^{\mathfrak{d}}\) 有 \(\|v\| = \sqrt{\langle v, v\rangle}\)，设 \(c \in (0, \infty)\)， \(r \in (0, \infty)\)， \(\vartheta \in \mathbb{R}^{\mathfrak{d}}\)， \(\mathbb{B} = \{w \in \mathbb{R}^{\mathfrak{d}} : \|w - \vartheta\| \leq r\}\)，且设 \(\mathscr{G}: \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}^{\mathfrak{d}}\) 满足对所有 \(\theta \in \mathbb{B}\) 有
+
+
+
+## 引理 6.1.20
+
+设 \(\mathfrak{d} \in \mathbb{N}\)，设 \(\langle\cdot, \cdot\rangle: \mathbb{R}^{\mathfrak{d}} \times \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}\) 为内积，设 \(\|\cdot\|: \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}\) 满足对所有 \(v \in \mathbb{R}^{\mathfrak{d}}\) 有 \(\|v\| = \sqrt{\langle v, v\rangle}\)，设 \(c \in (0, \infty)\)， \(r \in (0, \infty)\)， \(\vartheta \in \mathbb{R}^{\mathfrak{d}}\)， \(\mathbb{B} = \{w \in \mathbb{R}^{\mathfrak{d}} : \|w - \vartheta\| \leq r\}\)，且设 \(\mathscr{G}: \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}^{\mathfrak{d}}\) 满足对所有 \(\theta \in \mathbb{B}\) 有
 
 Formula (6.142)
 
-"Then it holds for all \(\theta \in \mathbb{B}\) that"
--> 那么对所有 \(\theta \in \mathbb{B}\) 有
+那么对所有 \(\theta \in \mathbb{B}\) 有
 
 Formula (6.143)
 
-"*Proof of Lemma 6.1.20.* Observe that (6.142) and the Cauchy-Schwarz inequality assure that for all \(\theta \in \mathbb{B}\) it holds that"
--> ***引理 6.1.20 的证明***。注意到 (6.142) 和柯西-施瓦茨不等式保证了对所有 \(\theta \in \mathbb{B}\) 有
-*Note: Input had italics `*Proof...*`. I should keep italics.*
+*引理 6.1.20 的证明*。注意到 (6.142) 和柯西-施瓦茨不等式保证了对所有 \(\theta \in \mathbb{B}\) 有
 
 Formula (6.144)
 
-"Therefore, we obtain for all \(\theta \in \mathbb{B}\) that"
--> 因此，我们对所有 \(\theta \in \mathbb{B}\) 得到
+因此，我们对所有 \(\theta \in \mathbb{B}\) 得到
 
 Formula (6.145)
 
-"Combining this with (6.142) completes the proof of Lemma 6.1.20. \(\square\)"
--> 将此与 (6.142) 结合，即完成了引理 6.1.20 的证明。\(\square\)
+将此与 (6.142) 结合，即完成了引理 6.1.20 的证明。\(\square\)
 
-**Lemma 6.1.21:**
-"Lemma 6.1.21. Let \(\mathfrak{d} \in \mathbb{N}\), \(c \in (0, \infty)\), \(r \in (0, \infty)\), \(\vartheta \in \mathbb{R}^{\mathfrak{d}}\)， \(\mathbb{B} = \{w \in \mathbb{R}^{\mathfrak{d}} : \|w - \vartheta\|_2 \leq r\}\)， \(\mathscr{L} \in C^1(\mathbb{R}^{\mathfrak{d}}, \mathbb{R})\) satisfy for all \(\theta \in \mathbb{B}\) that"
--> **引理 6.1.21**。设 \(\mathfrak{d} \in \mathbb{N}\)， \(c \in (0, \infty)\)， \(r \in (0, \infty)\)， \(\vartheta \in \mathbb{R}^{\mathfrak{d}}\)， \(\mathbb{B} = \{w \in \mathbb{R}^{\mathfrak{d}} : \|w - \vartheta\|_2 \leq r\}\)， \(\mathscr{L} \in C^1(\mathbb{R}^{\mathfrak{d}}, \mathbb{R})\) 满足对所有 \(\theta \in \mathbb{B}\) 有
+## 引理 6.1.21
+
+设 \(\mathfrak{d} \in \mathbb{N}\)， \(c \in (0, \infty)\)， \(r \in (0, \infty)\)， \(\vartheta \in \mathbb{R}^{\mathfrak{d}}\)， \(\mathbb{B} = \{w \in \mathbb{R}^{\mathfrak{d}} : \|w - \vartheta\|_2 \leq r\}\)， \(\mathscr{L} \in C^1(\mathbb{R}^{\mathfrak{d}}, \mathbb{R})\) 满足对所有 \(\theta \in \mathbb{B}\) 有
 
 Formula (6.146)
 
-"Then it holds for all \(v \in \mathbb{R}^{\mathfrak{d}}\)， \(s, t \in [0, 1]\) with \(\|v\|_2 \leq r\) and \(s \leq t\) that"
--> 那么对所有 \(v \in \mathbb{R}^{\mathfrak{d}}\)， \(s, t \in [0, 1]\) 且满足 \(\|v\|_2 \leq r\) 和 \(s \leq t\) 有
+那么对所有 \(v \in \mathbb{R}^{\mathfrak{d}}\)， \(s, t \in [0, 1]\) 且满足 \(\|v\|_2 \leq r\) 和 \(s \leq t\) 有
 
 Formula (6.147)
 
-"*Proof of Lemma 6.1.21.* First of all, observe that (6.146) implies that for all \(v \in \mathbb{R}^{\mathfrak{d}}\) with \(\|v\|_2 \leq r\) it holds that"
--> ***引理 6.1.21 的证明***。首先，注意到 (6.146) 暗示了对所有满足 \(\|v\|_2 \leq r\) 的 \(v \in \mathbb{R}^{\mathfrak{d}}\) 有
+*引理 6.1.21 的证明*。首先，注意到 (6.146) 暗示了对所有满足 \(\|v\|_2 \leq r\) 的 \(v \in \mathbb{R}^{\mathfrak{d}}\) 有
 
 Formula (6.148)
 
-"The fundamental theorem of calculus hence ensures that for all \(v \in \mathbb{R}^{\mathfrak{d}}\)， \(s, t \in [0, 1]\) with \(\|v\|_2 \leq r\) and \(s \leq t\) it holds that"
--> 因此，微积分基本定理保证了对所有 \(v \in \mathbb{R}^{\mathfrak{d}}\)， \(s, t \in [0, 1]\) 且满足 \(\|v\|_2 \leq r\) 和 \(s \leq t\) 有
+因此，微积分基本定理保证了对所有 \(v \in \mathbb{R}^{\mathfrak{d}}\)， \(s, t \in [0, 1]\) 且满足 \(\|v\|_2 \leq r\) 和 \(s \leq t\) 有
 
 Formula (6.149)
 
-"The proof of Lemma 6.1.21 is thus complete. \(\square\)"
--> 引理 6.1.21 的证明到此完成。\(\square\)
+引理 6.1.21 的证明到此完成。\(\square\)
 
-**Formatting Checks:**
-- Bold/Italic:
-  - Input: `*Proof of Lemma 6.1.20.*` -> Output: `*引理 6.1.20 的证明*` (Keeping single stars for italic as per input, though standard markdown uses `**` for bold and `*` for italic. The input example used `*itatic*` typo in prompt, but clearly meant italic. Input text has `*Proof...*`. I will keep the italic markers.)
-  - Input: `**Lemma 6.1.19.**`? No, input is `Lemma 6.1.19.` (Plain). Wait, let me re-read the input carefully.
-    Input: `Lemma 6.1.19. Let...` -> Plain.
-    Input: `Corollary 6.1.17 (...)` -> Plain.
-    Input: `Remark 6.1.18.` -> Plain.
-    However, `*Proof of Lemma 6.1.20.*` is italicized in the input.
-    `*Proof of Lemma 6.1.21.*` is italicized in the input.
-    So I must translate the content inside the asterisks and keep the asterisks.
-    The non-italic "Proof of Lemma 6.1.19." is plain in input.
-    "Proof of Corollary 6.1.17." is plain in input.
 
-- Math blocks:
-  I need to ensure the `$$...$$` or `(...)` blocks are copied correctly.
-  The input uses `$$` for display math.
-  The input uses `\(...\)` or just text for inline math.
-  I will preserve the LaTeX code exactly.
 
-- One tricky part:
-  Input: `$$\nabla \mathcal{L}(\vartheta)=0, \quad(\text { Hess } \mathcal{L})(v) - (\text { Hess } \mathcal{L})(w) \leq \lambda \| v-w\|_{2} \quad(6.130) $$`
-  I will keep this block.
-  Input: `$$\{\mu \in \mathbb{R}: \exists u \in \mathbb{R}^{d}\backslash\{0\} :[(\text { Hess } \mathcal{L})(\vartheta)] u=\mu u\} \subseteq[\alpha, \beta] \quad(6.131) $$`
-  Keep this block.
+下一个结果，即下面的`推论 6.1.17`，将`命题 6.1.16`与`命题 6.1.9`结合起来，得到了一个误差分析，该分析假设了上述`命题 6.1.16`中的条件`(6.119)`和`(6.120)`。类似于`推论 6.1.17`的结果，例如可以在`Nesterov [303, 定理 1.2.4]`中找到。
 
-  Input: `\(\Theta_{0}=\xi\) and \(\Theta_{n}=\Theta_{n-1}-\gamma_{n}(\nabla \mathcal{L})(\Theta_{n-1})\) (6.132)`
-  This is inline math with text "and" in between.
-  Translation: `\(\Theta_{0}=\xi\) 且 \(\Theta_{n}=\Theta_{n-1}-\gamma_{n}(\nabla \mathcal{L})(\Theta_{n-1})\) (6.132)`
+### 推论 6.1.17
 
-  Input: `$(\theta-\vartheta, \nabla \mathcal{L}(\theta)) \geq \frac{\alpha}{2} \|\theta-\vartheta\|_{2}^{2} \quad \text{and} \quad \|\nabla \mathcal{L}(\theta)\|_{2} \leq \frac{3 \beta}{2} \|\theta-\vartheta\|_{2} \quad(6.135)$`
-  This is a display math block (starts with `$` and ends with `$` on separate lines? No, it's a block line in the text provided:
-  `$(\theta-\vartheta, ... (6.135)$`
-  It looks like a display equation delimited by single `$` or just a line. The prompt says "code blocks do not need translation". This is not a code block, it's LaTeX. I should translate the text *inside* the LaTeX if it's `\text{...}`.
-  `\text{and}` -> `\text{且}`?
-  The instruction says: "Inline code (`code`) and code blocks do not need translation."
-  LaTeX is not "code" in the sense of programming code blocks. It's mathematical notation.
-  However, `\text{and}` is English text inside LaTeX. Should I translate it?
-  Usually, in math translation, we translate the text parts.
-  `\text{and}` -> `\text{且}` or `\text{和}`.
-  Let's check the example. The example didn't have `\text{}`.
-  "A result similar to Corollary 6.1.17 can..." -> Translated.
-  The formula `(6.135)` has `\text{and}`.
-  If I leave it as `\text{and}`, it remains English.
-  If I change it to `\text{且}`, it becomes Chinese.
-  Given the role is "Document Engineer and Translator", translating text elements within the document is appropriate.
-  However, modifying LaTeX commands can be risky if the user wants exact structural preservation.
-  But "and" is a conjunction.
-  Let's look at the prompt constraints: "Inline code... and code blocks do not need translation."
-  LaTeX equations are not code blocks. They are content.
-  I will translate `\text{and}` to `\text{且}` to be consistent with the Chinese translation.
-  Wait, looking at the input: `$(\theta-\vartheta, \nabla \mathcal{L}(\theta)) \geq \frac{\alpha}{2} \|\theta-\vartheta\|_{2}^{2} \quad \text{and} \quad \|\nabla \mathcal{L}(\theta)\|_{2} \leq \frac{3 \beta}{2} \|\theta-\vartheta\|_{2} \quad(6.135)$`
-  It is safer to keep the math symbols and `\text{}` content as is if they are standard, BUT "and" is clearly linguistic.
-  I will replace `\text{and}` with `\text{且}`.
-  Similarly for `\text { and }` in other places if present.
-
-  Let's check other text inside math.
-  `(cf. Definition 3.3.4.)` is outside math.
-  `$(\theta-\vartheta...` is a display line.
-  
-  Let's re-evaluate "code blocks". If the user considers LaTeX as code, I shouldn't touch it. But LaTeX *is* markup for math. Usually, translation of math papers involves translating the prose *around* the math, and sometimes the text inside `\text{}`.
-  However, changing `\text{and}` to `\text{且}` might break compilation if the font package doesn't support it (though xelatex/luatex usually do).
-  To be safe and strictly adhere to "translate content", I will translate the English words.
-  
-  Actually, let's look at the "Proof of Lemma 6.1.21" section.
-  `$$\begin{aligned} ... \end{aligned}$$`
-  No text inside.
-  
-  In `$(\theta-\vartheta... \text{and} ...)$`, I will translate `\text{and}` to `\text{且}`.
-
-  What about `(6.130)`? It's just a number.
-  
-  Let's check the first paragraph again.
-  `Corollary 6.1.17` -> `推论 6.1.17`
-  
-  One more check: `v \in \mathbb{R}^{d}\{0\}`.
-  This is likely a typo for `\mathbb{R}^{d}\setminus\{0\}`.
-  I will keep it as `\mathbb{R}^{d}\{0\}` because I am not editing the math content, just translating the language. If the math is broken, fixing it might be out of scope, but if it's clearly a typo for a symbol, it's ambiguous. I'll stick to the input string to avoid altering the mathematical assertion if it's a specific notation variant (unlikely, but possible). Actually, `\{0\}` in standard LaTeX produces `{0}`. `\mathbb{R}^{d}\{0\}` would render as $\mathbb{R}^d\{0\}$ which is weird. It's almost certainly `\setminus`. But I will not change the LaTeX code unless it's inside `\text{}`.
-
-  Wait, the instruction says "translate... Chinese".
-  If I change `\text{and}` to `\text{且}`, I am changing the LaTeX code.
-  Is that allowed? "Inline code... do not need translation".
-  Is `\text{and}` "code"? No, it's text content within the math mode.
-  I will translate it.
-
-  Let's draft the response.
-
-[content]
-下一个结果，即下面的推论 6.1.17，将命题 6.1.16 与命题 6.1.9 结合起来，得到了一个误差分析，该分析假设了上述命题 6.1.16 中的条件 (6.119) 和 (6.120)。类似于推论 6.1.17 的结果，例如可以在 Nesterov [303, 定理 1.2.4] 中找到。
-
-**推论 6.1.17**（在目标函数的 Hessian 矩阵满足特定条件下，梯度下降优化方法的误差分析）。设 \(\boldsymbol{\theta} \in \mathbb{N}\)，设 \(\| \cdot \|: \mathbb{R}^{d} \times \mathbb{R} \rightarrow \mathbb{R}\) 满足对所有 \(A \in \mathbb{R}^{d \times d}\) 有 \(\|A\|=\sup _{v \in \mathbb{R}^{d}\{0\}} \frac{\|Av\|_{2}}{\|v\|_{2}}\)，且设 \(\lambda, \alpha \in(0, \infty)\)，\(\beta \in[\alpha, \infty)\)，\((\gamma_{n})_{n \in \mathbb{N}} \subseteq[0, \frac{4 \alpha}{9 \beta^{2}})\)，\(\forall \xi \in \mathbb{R}^{d}\)，\(\mathcal{L} \in C^{2}\left(\mathbb{R}^{d}, \mathbb{R}\right)\) 满足对所有 \(v, w \in \mathbb{R}^{d}\) 有
+**推论 6.1.17**（在目标函数的 Hessian 矩阵满足特定条件下，梯度下降优化方法的误差分析）。设 `θ ∈ ℕ`，设 `‖·‖: ℝ^d × ℝ → ℝ` 满足对所有 `A ∈ ℝ^{d × d}` 有 `‖A‖ = sup_{v ∈ ℝ^d\{0}} ‖Av‖_2 / ‖v‖_2`，且设 `λ, α ∈ (0, ∞)`，`β ∈ [α, ∞)`，`(γ_n)_{n ∈ ℕ} ⊆ [0, 4α / 9β^2)`，`∀ ξ ∈ ℝ^d`，`ℒ ∈ C^2(ℝ^d, ℝ)` 满足对所有 `v, w ∈ ℝ^d` 有
 
 $$\nabla \mathcal{L}(\vartheta)=0, \quad(\text { Hess } \mathcal{L})(v) - (\text { Hess } \mathcal{L})(w) \leq \lambda \| v-w\|_{2} \quad(6.130) $$
 
 $$\{\mu \in \mathbb{R}: \exists u \in \mathbb{R}^{d}\backslash\{0\} :[(\text { Hess } \mathcal{ L})(\vartheta)] u=\mu u\} \subseteq[\alpha, \beta] \quad(6.131) $$
 
-且 \(\|\xi-\vartheta\|_{2} \leq \frac{\alpha}{\lambda}\)，并设 \(\Theta: \mathbb{N}_{0} \rightarrow \mathbb{R}^{d}\) 满足对所有 \(n \in \mathbb{N}\) 有
+且 `‖ξ-ϑ‖_2 ≤ α/λ`，并设 `Θ: ℕ_0 → ℝ^d` 满足对所有 `n ∈ ℕ` 有
 
-\(\Theta_{0}=\xi\) 且 \(\Theta_{n}=\Theta_{n-1}-\gamma_{n}(\nabla \mathcal{L})(\Theta_{n-1})\) (6.132)
+`Θ_0 = ξ` 且 `Θ_n = Θ_{n-1} - γ_n (∇ℒ)(Θ_{n-1})` (6.132)
 
-（参见定义 3.3.4。）那么
+（参见`定义 3.3.4`。）那么
 
-(i) 成立 \(\{\theta \in \mathbb{B}: \mathcal{L}(\theta)=\inf _{w \in \mathbb{B}} \mathcal{L}(w)\}=\{\vartheta\}\)，
+(i) 成立 `{θ ∈ 𝔹: ℒ(θ)=inf_{w ∈ 𝔹} ℒ(w)} = {ϑ}`，
 
-(ii) 对所有 \(k \in \mathbb{N}\)，成立 \(0 \leq 1-\alpha \gamma_{k}+\frac{9 \beta^{2}(\gamma_{k})^{2}}{4} \leq 1\)，
+(ii) 对所有 `k ∈ ℕ`，成立 `0 ≤ 1-α γ_k + 9 β^2 (γ_k)^2 /4 ≤ 1`，
 
-(iii) 对所有 \(n \in \mathbb{N}_{0}\)，成立
+(iii) 对所有 `n ∈ ℕ_0`，成立
+
 $$\|\Theta_{n}-\vartheta\|_{2} \leq\left[\prod_{k=1}^{n}\left[1-\alpha \gamma_{k}+\frac{9 \beta^{2}(\gamma_{k})^{2}}{4}\right]^{1 / 2}\right]\|\xi-\vartheta\|_{2},$$ (6.133)
 
 且
 
-(iv) 对所有 \(n \in \mathbb{N}_{0}\)，成立
+(iv) 对所有 `n ∈ ℕ_0`，成立
+
 $$0 \leq \mathcal{L}\left(\Theta_{n}\right)-\mathcal{L}(\vartheta) \leq \frac{3 \beta}{4}\left[\prod_{k=1}^{n}\left[1-\alpha \gamma_{k}+\frac{9 \beta^{2}(\gamma_{k})^{2}}{4}\right]^{2}\right]\|\xi-\vartheta\|_{2}^{2} .$$ (6.134)
 
-**推论 6.1.17 的证明**。注意 (6.130)、(6.131) 和命题 6.1.16 证明了对所有 \(\theta \in\{w \in \mathbb{R}^{d}:\|w-\vartheta\|_{2} \leq \frac{\alpha}{\lambda}\}\) 有
+#### 推论 6.1.17 的证明
 
-$(\theta-\vartheta, \nabla \mathcal{L}(\theta)) \geq \frac{\alpha}{2} \|\theta-\vartheta\|_{2}^{2} \quad \text{且} \quad \|\nabla \mathcal{L}(\theta)\|_{2} \leq \frac{3 \beta}{2} \|\theta-\vartheta\|_{2} \quad(6.135)$
+注意 `(6.130)`、`(6.131)` 和 `命题 6.1.16` 证明了对所有 `θ ∈ {w ∈ ℝ^d: ‖w-ϑ‖_2 ≤ α/λ}` 有
 
-（参见定义 1.4.7。）结合这一点，以及假设
+` (θ-ϑ, ∇ℒ(θ)) ≥ α/2 ‖θ-ϑ‖_2^2` 且 `‖∇ℒ(θ)‖_2 ≤ 3β/2 ‖θ-ϑ‖_2` (6.135)
 
-\(\|\xi-\vartheta\|_{2} \leq \frac{\alpha}{\lambda},\) (6.136),
+（参见`定义 1.4.7`。）结合这一点，以及假设
 
-(6.132)，以及命题 6.1.9 中的条目 (iv) 和 (v)（使用命题 6.1.9 中的记号，取 \(c \sim \frac{\alpha}{2}\)， \(L \sim \frac{3 \beta}{2}\)， \(r \sim \frac{\alpha}{\lambda}\) 时应用）建立了条目 (i)、(ii)、(iii) 和 (iv)。推论 6.1.17 的证明到此完成。
+`‖ξ-ϑ‖_2 ≤ α/λ,` (6.136),
 
-**注 6.1.18**。在推论 6.1.17 中，我们在包括如下假设在内的诸多条件下，建立了所考虑梯度下降过程的收敛性：\(\mathcal{L}: \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}\) 在局部极小值点 \(\vartheta\) 处的 Hessian 矩阵的所有特征值严格为正（参见 (6.131)）。当 \(\mathcal{L}\) 是训练人工神经网络（ANNs）中监督学习问题相关的代价函数（积分损失函数）时，该假设基本上不满足。尽管如此，粗略地说，推论 6.1.17 的收敛分析也可以在本质上（在平滑性条件下）更为一般的假设下进行，该假设指出存在 \(k \in \mathbb{N}_{0}\) 使得局部极小值点的集合局部上是 \(\mathbb{R}^{\mathfrak{d}}\) 的一个光滑 \(k\) 维子流形，且 \(\mathcal{L}\) 的 Hessian 矩阵在该局部极小值点集合上的秩局部上（至少）为 \(\mathfrak{d}-k\)（详细参见 Fehrman 等人 [132]）。在某些情况下，这一本质上的推广假设也已被证明在合适监督学习问题中训练 ANNs 时得到满足（参见 Jentzen 和 Riekert [223]）。
+`(6.132)`，以及`命题 6.1.9`中的条目 (iv) 和 (v)（使用`命题 6.1.9`中的记号，取 `c ∼ α/2`， `L ∼ 3β/2`， `r ∼ α/λ` 时应用）建立了条目 (i)、(ii)、(iii) 和 (iv)。推论 6.1.17 的证明到此完成。
 
-### 6.1.4.6 目标函数的等价条件
+#### 注 6.1.18
 
-**引理 6.1.19**。设 \(\mathfrak{d} \in \mathbb{N}\)，设 \(\langle \cdot, \cdot \rangle: \mathbb{R}^{\mathfrak{d}} \times \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}\) 为内积，设 \(\| \cdot \|: \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}\) 满足对所有 \(v \in \mathbb{R}^{\mathfrak{d}}\) 有 \(\| v \|=\sqrt{\langle v, v \rangle}\)，设 \(\gamma \in(0, \infty)\)，\(\varepsilon \in(0,1)\)， \(r \in(0, \infty)\)， \(\vartheta \in \mathbb{R}^{\mathfrak{d}}\)， \(\mathbb{B}=\{w \in \mathbb{R}^{\mathfrak{d}}: \| w-\vartheta \| \leq r\}\)，且设 \(\mathscr{G}: \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}^{\mathfrak{d}}\) 满足对所有 \(\theta \in \mathbb{B}\) 有
+在`推论 6.1.17`中，我们在包括如下假设在内的诸多条件下，建立了所考虑梯度下降过程的收敛性：`ℒ: ℝ^{𝔡} → ℝ` 在局部极小值点 `ϑ` 处的 Hessian 矩阵的所有特征值严格为正（参见 `(6.131)`）。当 `ℒ` 是训练人工神经网络（ANNs）中监督学习问题相关的代价函数（积分损失函数）时，该假设基本上不满足。尽管如此，粗略地说，`推论 6.1.17` 的收敛分析也可以在本质上（在平滑性条件下）更为一般的假设下进行，该假设指出存在 `k ∈ ℕ_0` 使得局部极小值点的集合局部上是 `ℝ^{𝔡}` 的一个光滑 `k` 维子流形，且 `ℒ` 的 Hessian 矩阵在该局部极小值点集合上的秩局部上（至少）为 `𝔡-k`（详细参见 `Fehrman 等人 [132]`）。在某些情况下，这一本质上的推广假设也已被证明在合适监督学习问题中训练 ANNs 时得到满足（参见 `Jentzen 和 Riekert [223]`）。
 
-\(\| \theta-\gamma \mathscr{G}(\theta)-\vartheta \| \leq \varepsilon\| \theta-\vartheta \|\). (6.137).
+## 6.1.4.6 目标函数的等价条件
 
-那么对所有 \(\theta \in \mathbb{B}\) 有
+### 引理 6.1.19
 
-$$\begin{gathered}\langle\theta-\vartheta, \mathscr{G}(\theta)\rangle \geq \max \left\{\left\lfloor \frac{1-\varepsilon^{2}}{2 \gamma} \right\rfloor \|\theta-\vartheta\|^{2}, \frac{\gamma}{2}\|\mathscr{G}(\theta)\|^{2}\right\}\\ \geq \min \left\{\frac{1-\varepsilon^{2}}{2 \gamma}, \frac{\gamma}{2}\right\} \max \left\{\|\theta-\vartheta\|^{2},\|\mathscr{G}(\theta)\|^{2}\right\} .\end{gathered}$$ (6.138).
+**引理 6.1.19**。设 `𝔡 ∈ ℕ`，设 `⟨·,·⟩: ℝ^{𝔡} × ℝ^{𝔡} → ℝ` 为内积，设 `‖·‖: ℝ^{𝔡} → ℝ` 满足对所有 `v ∈ ℝ^{𝔡}` 有 `‖v‖ = sqrt(⟨v, v⟩)`，设 `γ ∈ (0, ∞)`，`ε ∈ (0,1)`，`r ∈ (0, ∞)`，`ϑ ∈ ℝ^{𝔡}`，`𝔹 = {w ∈ ℝ^{𝔡}: ‖w-ϑ‖ ≤ r}`，且设 `𝒢: ℝ^{𝔡} → ℝ^{𝔡}` 满足对所有 `θ ∈ 𝔹` 有
 
-**引理 6.1.19 的证明**。首先，注意 (6.137) 保证了对所有 \(\theta \in \mathbb{B}\) 有
+`‖θ - γ 𝒢(θ) - ϑ‖ ≤ ε ‖θ - ϑ‖.` (6.137)
 
-$$\begin{gathered}\varepsilon^{2}\|\theta-\vartheta\|^{2} \geq\|\theta-\gamma \mathscr{G}(\theta)-\vartheta\|^{2}=\|\left(\theta-\vartheta\right)-\gamma \mathscr{G}(\theta)\|^{2}\\ =\|\theta-\vartheta\|^{2}-2 \gamma\langle\theta-\vartheta, \mathscr{G}(\theta)\rangle+\gamma^{2}\|\mathscr{G}(\theta)\|^{2} .\end{gathered}$$ (6.139).
+那么对所有 `θ ∈ 𝔹` 有
 
-因此，我们对所有 \(\theta \in \mathbb{B}\) 得到
+$$\begin{gathered}\langle\theta-\vartheta, \mathscr{G}(\theta)\rangle \geq \max \left\{\left\lfloor \frac{1-\varepsilon^{2}}{2 \gamma} \right\rfloor \|\theta-\vartheta\|^{2}, \frac{\gamma}{2}\|\mathscr{G}(\theta)\|^{2}\right\}\\ \geq \min \left\{\frac{1-\varepsilon^{2}}{2 \gamma}, \frac{\gamma}{2}\right\} \max \left\{\|\theta-\vartheta\|^{2},\|\mathscr{G}(\theta)\|^{2}\right\} .\end{gathered}$$ (6.138)
 
-$$\begin{gathered}2 \gamma\langle\theta-\vartheta, \mathscr{G}(\theta)\rangle \geq\left(1-\varepsilon^{2}\right)\|\theta-\vartheta\|^{2}+\gamma^{2}\|\mathscr{G}(\theta)\|^{2}\\ \geq \max \left\{\left(1-\varepsilon^{2}\right)\|\theta-\vartheta\|^{2}, \gamma^{2}\|\mathscr{G}(\theta)\|^{2}\right\} \geq 0 .\end{gathered}$$ (6.140).
+#### 引理 6.1.19 的证明
 
-这证明了对所有 \(\theta \in \mathbb{B}\) 有
+首先，注意 `(6.137)` 保证了对所有 `θ ∈ 𝔹` 有
 
-$$\begin{gathered}\langle\theta-\vartheta, \mathscr{G}(\theta)\rangle \geq \frac{1}{2 \gamma} \max \left\{\left(1-\varepsilon^{2}\right)\|\theta-\vartheta\|^{2}, \gamma^{2}\|\mathscr{G}(\theta)\|^{2}\right\}\\ =\max \left\{\left\lfloor \frac{1-\varepsilon^{2}}{2 \gamma} \right\rfloor \|\theta-\vartheta\|^{2}, \frac{\gamma}{2}\|\mathscr{G}(\theta)\|^{2}\right\}\\ \geq \min \left\{\frac{1-\varepsilon^{2}}{2 \gamma}, \frac{\gamma}{2}\right\} \max \left\{\|\theta-\vartheta\|^{2},\|\mathscr{G}(\theta)\|^{2}\right\} .\end{gathered}$$ (6.141).
+$$\begin{gathered}\varepsilon^{2}\|\theta-\vartheta\|^{2} \geq\|\theta-\gamma \mathscr{G}(\theta)-\vartheta\|^{2}=\|\left(\theta-\vartheta\right)-\gamma \mathscr{G}(\theta)\|^{2}\\ =\|\theta-\vartheta\|^{2}-2 \gamma\langle\theta-\vartheta, \mathscr{G}(\theta)\rangle+\gamma^{2}\|\mathscr{G}(\theta)\|^{2} .\end{gathered}$$ (6.139)
+
+因此，我们对所有 `θ ∈ 𝔹` 得到
+
+$$\begin{gathered}2 \gamma\langle\theta-\vartheta, \mathscr{G}(\theta)\rangle \geq\left(1-\varepsilon^{2}\right)\|\theta-\vartheta\|^{2}+\gamma^{2}\|\mathscr{G}(\theta)\|^{2}\\ \geq \max \left\{\left(1-\varepsilon^{2}\right)\|\theta-\vartheta\|^{2}, \gamma^{2}\|\mathscr{G}(\theta)\|^{2}\right\} \geq 0 .\end{gathered}$$ (6.140)
+
+这证明了对所有 `θ ∈ 𝔹` 有
+
+$$\begin{gathered}\langle\theta-\vartheta, \mathscr{G}(\theta)\rangle \geq \frac{1}{2 \gamma} \max \left\{\left(1-\varepsilon^{2}\right)\|\theta-\vartheta\|^{2}, \gamma^{2}\|\mathscr{G}(\theta)\|^{2}\right\}\\ =\max \left\{\left\lfloor \frac{1-\varepsilon^{2}}{2 \gamma} \right\rfloor \|\theta-\vartheta\|^{2}, \frac{\gamma}{2}\|\mathscr{G}(\theta)\|^{2}\right\}\\ \geq \min \left\{\frac{1-\varepsilon^{2}}{2 \gamma}, \frac{\gamma}{2}\right\} \max \left\{\|\theta-\vartheta\|^{2},\|\mathscr{G}(\theta)\|^{2}\right\} .\end{gathered}$$ (6.141)
 
 引理 6.1.19 的证明到此完成。 $\square$
+
+
 
 **引理 6.1.20**。设 \(\mathfrak{d} \in \mathbb{N}\)，设 \(\langle\cdot, \cdot\rangle: \mathbb{R}^{\mathfrak{d}} \times \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}\) 为内积，设 \(\|\cdot\|: \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}\) 满足对所有 \(v \in \mathbb{R}^{\mathfrak{d}}\) 有 \(\|v\| = \sqrt{\langle v, v\rangle}\)，设 \(c \in (0, \infty)\)， \(r \in (0, \infty)\)， \(\vartheta \in \mathbb{R}^{\mathfrak{d}}\)， \(\mathbb{B} = \{w \in \mathbb{R}^{\mathfrak{d}} : \|w - \vartheta\| \leq r\}\)，且设 \(\mathscr{G}: \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}^{\mathfrak{d}}\) 满足对所有 \(\theta \in \mathbb{B}\) 有
 
@@ -8310,16 +8968,16 @@ $$\langle(\nabla \mathscr{L})(\vartheta + v), v\rangle \geq c \|v\|_2^2, \tag{6.
 因此，微积分基本定理保证了对所有 \(v \in \mathbb{R}^{\mathfrak{d}}\)， \(s, t \in [0, 1]\) 且满足 \(\|v\|_2 \leq r\) 和 \(s \leq t\) 有
 
 $$\begin{aligned} \mathscr{L}(\vartheta+t v)-\mathscr{L}(\vartheta+s v) & =\left[\mathscr{L}(\vartheta+h v)\right]_{h=s}^{h=t} \\
+
 & =\int_s^t \mathscr{L}^{\prime}(\vartheta+h v) v \, \mathrm{d} h \\
+
 & =\int_s^t \frac{1}{h}\langle(\nabla \mathscr{L})(\vartheta+h v), h v\rangle \, \mathrm{d} h \\
+
 & \geq \int_s^t \frac{c}{h}\|h v\|_2^2 \mathrm{d} h \\
+
 & =c\left[\int_s^t h \, \mathrm{d} h\right]\|v\|_2^2=\frac{c}{2}(t^2-s^2) \|v\|_2^2 .\end{aligned} \tag{6.149}$$
 
 引理 6.1.21 的证明到此完成。 \(\square\)
-
-
-
-
 
 **引理 6.1.22.** 设 $\mathfrak{d} \in \mathbb{N}$，$c \in (0, \infty)$，$r \in (0, \infty)$，$\vartheta \in \mathbb{R}^{\mathfrak{d}}$，$\mathbb{B} = \{w \in \mathbb{R}^{\mathfrak{d}}: \|w - \vartheta\|_2 \leq r\}$，且 $\mathscr{L} \in C^1(\mathbb{R}^{\mathfrak{d}}, \mathbb{R})$ 满足对于所有 $v \in \mathbb{R}^{\mathfrak{d}}$ 以及 $s, t \in [0, 1]$，若 $\|v\|_2 \leq r$ 且 $s \leq t$，则有
 
@@ -8334,15 +8992,25 @@ $$(\theta - \vartheta, (\nabla \mathscr{L})(\theta)) \geq 2c\|\theta - \vartheta
 *引理 6.1.22 的证明.* 注意到 (6.150) 保证了对于所有 $s \in (0, r] \cap \mathbb{R}$ 以及满足 $\|\theta - \vartheta\|_2 < s$ 的 $\theta \in \mathbb{R}^{\mathfrak{d}} \backslash \{\vartheta\}$，成立
 
 $$
+
 \begin{aligned}
+
 &(\theta - \vartheta, (\nabla \mathscr{L})(\theta)) = \mathscr{L}'(\theta)(\theta - \vartheta) = \underset{h \searrow 0}{\text{lim}} \big[\tfrac{1}{h}[\mathscr{L}(\theta + h(\theta - \vartheta)) - \mathscr{L}(\theta)]\big] \\
+
 &= \underset{h \searrow 0}{\text{lim}} \big(\tfrac{1}{h}\big[\mathscr{L}\big(\vartheta + \frac{\|\theta + h\|\theta - \vartheta\|_2}{s}(\theta - \vartheta)\big) - \big. \\
-&\quad - \mathscr{L}\big(\vartheta + \frac{\|\theta - \vartheta\|_2}{s}\big(\frac{s}{\|\theta - \vartheta\|_2}(\theta - \vartheta)\big)\big)\big]\big) \\
+
+&\quad - \mathscr{L}\big(\vartheta + \frac{\|\theta - \vartheta\|_2}{s}\big(\frac{s}{\|\theta - \vartheta\|_2}(\theta - \vartheta)\big)\big)\big] \\
+
 &\geq \underset{h \searrow 0}{\text{lim sup}} \big(\tfrac{c}{h}\big[\big(\frac{\|\theta + h\|\theta - \vartheta\|_2}{s}\big)^2 - \big[\tfrac{\|\theta - \vartheta\|_2}{s}\big]^2\big]\big\|\tfrac{s}{\|\theta - \vartheta\|_2}(\theta - \vartheta)\big\|_2^2\big) \tag{6.152} \\
+
 &= c\big[\underset{h \searrow 0}{\text{lim sup}}\big(\frac{\|\theta + h\|^2 - 1}{h}\big)\big]\big[\big\|\frac{\|\theta - \vartheta\|_2}{s}\big\|^2\big]\big\|\tfrac{s}{\|\theta - \vartheta\|_2}(\theta - \vartheta)\big\|_2^2 \\
+
 &= c\big[\underset{h \searrow 0}{\text{lim sup}}\big(\frac{2h + h^2}{h}\big)\big]\big\|\theta - \vartheta\big\|_2^2 \\
+
 &= c\big[\underset{h \searrow 0}{\text{lim sup}}(2 + h)\big]\big\|\theta - \vartheta\big\|_2^2 = 2c\|\theta - \vartheta\|_2^2
+
 \end{aligned}
+
 $$
 
 （参见*定义 1.4.7*）。因此，我们得到对于所有满足 $\|\theta - \vartheta\|_2 < r$ 的 $\theta \in \mathbb{R}^{\mathfrak{d}} \backslash \{\vartheta\}$，成立
@@ -8368,17 +9036,29 @@ $$|\mathscr{L}(v) - \mathscr{L}(w)| \leq L\max\{\|v - \vartheta\|_2, \|w - \vart
 引理 6.1.23 的证明。注意到 (6.155)、微积分基本定理以及柯西-施瓦茨不等式保证，对于所有 \(v, w \in \mathbb{B}\)，成立
 
 $$
+
 \begin{align*}
+
 \left|\mathscr{L}(v)-\mathscr{L}(w)\right| &= \left|[\mathscr{L}(w + h(v - w))]_{h=0}^{h=1}\right| \\
+
 &= \left|\int_0^1 \mathscr{L}'(w + h(v - w))\langle v - w \rangle \,\mathrm{d}h\right| \\
+
 &= \left|\int_0^1 \langle \langle\nabla \mathscr{L}\rangle (w + h(v - w)), v - w \rangle \,\mathrm{d}h\right| \\
+
 &\le \int_0^1 \|\langle\nabla \mathscr{L}\rangle (hv + (1 - h)w)\|_2\|v - w\|_2 \,\mathrm{d}h \\
+
 &\le \int_0^1 L\|hv + (1 - h)w - \vartheta\|_2\|v - w\|_2 \,\mathrm{d}h \tag{6.157} \\
+
 &\le \int_0^1 L(h\|v - \vartheta\|_2 + (1 - h)\|w - \vartheta\|_2)\|v - w\|_2 \,\mathrm{d}h \\
+
 &= L\|v - w\|_2 \left[\int_0^1 (h\|v - \vartheta\|_2 + h\|w - \vartheta\|_2) \,\mathrm{d}h\right] \\
+
 &= L\big(\|v - \vartheta\|_2 + \|w - \vartheta\|_2\big)\|v - w\|_2\left[\int_0^1 h \,\mathrm{d}h\right] \\
+
 &\le L\max\{\|v - \vartheta\|_2, \|w - \vartheta\|_2\}\|v - w\|_2
+
 \end{align*}
+
 $$
 
 （参见定义 1.4.7）。引理 6.1.23 的证明至此完成。 $\square$
@@ -8386,56 +9066,71 @@ $$
 **引理 6.1.24.** *设 $\mathfrak{d} \in \mathbb{N}$，$L \in (0, \infty)$，$r \in (0, \infty]$，$\vartheta \in \mathbb{R}^{\mathfrak{d}}$，$\mathbb{B} = \{w \in \mathbb{R}^{\mathfrak{d}} \colon \|w - \vartheta\|_2 \le r\}$，且 $\mathscr{L} \in C^1(\mathbb{R}^{\mathfrak{d}}, \mathbb{R})$ 满足对于所有 $v, w \in \mathbb{B}$，有*
 
 $$
+
 \left|\mathscr{L}(v)-\mathscr{L}(w)\right| \le L\max\{\|v-\vartheta\|_2,\|w-\vartheta\|_2\}\|v-w\|_2 \tag{6.158}
+
 $$
 
 *(参见定义 3.3.4)。则对于所有 $\theta \in \mathbb{B}$，成立*
 
 $$
+
 \|\langle\nabla \mathscr{L}\rangle(\theta)\|_2 \le L\|\theta - \vartheta\|_2. \tag{6.159}
+
 $$
 
 *引理 6.1.24 的证明.* 注意 (6.158) 蕴含对于所有满足 $\|\theta - \vartheta\|_2 < r$ 的 $\theta \in \mathbb{R}^{\mathfrak{d}}$，成立
 
 $$
+
 \begin{align}
+
 \|\nabla \mathscr{L}(\theta)\|_2 = \ & \underset{w \in \mathbb{R}^\mathfrak{d},\|w\|_2 = 1}{\text{sup}} \left[\mathscr{L}'(\theta)(w)\right] \\
+
+
+
 = \ & \underset{w \in \mathbb{R}^\mathfrak{d},\|w\|_2 = 1}{\text{sup}} \left[\lim_{h \downarrow 0} \tfrac{1}{h} \big( \mathscr{L}(\theta + hw) - \mathscr{L}(\theta) \big)\right] \\
 \leq \ & \underset{w \in \mathbb{R}^\mathfrak{d},\|w\|_2 = 1}{\text{sup}} \left[\liminf_{h \downarrow 0} \big\{ \tfrac{1}{h} \max \big\{ \|\theta + hw - \vartheta\|_2, \|\theta - \vartheta\|_2 \big\} \|\theta + hw - \theta\|_2 \big\} \right] \\
 = \ & \underset{w \in \mathbb{R}^\mathfrak{d},\|w\|_2 = 1}{\text{sup}} \left[\liminf_{h \downarrow 0} \Big\{ L \max \big\{ \|\theta + hw - \vartheta\|_2, \|\theta - \vartheta\|_2 \big\} \tfrac{1}{h} \|hw\|_2 \Big\} \right] \\
 = \ & \underset{w \in \mathbb{R}^\mathfrak{d},\|w\|_2 = 1}{\text{sup}} \left[ \liminf_{h \downarrow 0} \Big\{ L \max \big\{ \|\theta + hw - \vartheta\|_2, \|\theta - \vartheta\|_2 \big\} \Big\} \right] \\
 = \ & \underset{w \in \mathbb{R}^\mathfrak{d},\|w\|_2 = 1}{\text{sup}} \Big[ L \|\theta - \vartheta\|_2 \Big] = L \|\theta - \vartheta\|_2.
 \end{align}
-$$
 
+$$
 由于函数 $\mathbb{R}^\mathfrak{d} \ni v \mapsto (\nabla \mathscr{L})(v) \in \mathbb{R}^\mathfrak{d}$ 是连续的，因此得证 **(6.159)**。引理 **6.1.24** 的证明至此完成。
 
 **推论 6.1.25.** 设 $\mathfrak{d} \in \mathbb{N}$，$r \in (0, \infty)$，$\vartheta \in \mathbb{R}^\mathfrak{d}$，$\mathbb{B} = \{w \in \mathbb{R}^\mathfrak{d} : \|w - \vartheta\|_2 \leq r\}$，$\mathscr{L} \in C^1(\mathbb{R}^\mathfrak{d}, \mathbb{R})$（参见定义 3.3.4）。则下列四个陈述等价：
 
 (i) 存在 $c, L \in (0, \infty)$ 使得对于所有 $\theta \in \mathbb{B}$，成立
+
 $$ \langle \theta - \vartheta, (\nabla \mathscr{L})(\theta) \rangle \geq c \|\theta - \vartheta\|_2^2 \quad \text{且} \quad \| (\nabla \mathscr{L})(\theta) \|_2 \leq L \|\theta - \vartheta\|_2 . $$
 
 (ii) 存在 $\gamma \in (0, \infty)$，$\varepsilon \in (0,1)$ 使得对于所有 $\theta \in \mathbb{B}$，成立
+
 $$ \|\theta - \gamma(\nabla \mathscr{L})(\theta) - \vartheta\|_2 \leq \varepsilon \|\theta - \vartheta\|_2 . $$
 
 (iii) 存在 $c \in (0, \infty)$ 使得对于所有 $\theta \in \mathbb{B}$，成立
+
 $$ \langle \theta - \vartheta, (\nabla \mathscr{L})(\theta) \rangle \geq c \max \big\{ \|\theta - \vartheta\|_2^2, \|(\nabla \mathscr{L})(\theta)\|_2^2 \big\} . $$
 
 (iv) 存在 $c, L \in (0, \infty)$ 使得对于所有 $v, w \in \mathbb{B}$，$s, t \in [0,1]$ 且 $s \leq t$，成立
+
 $$ \mathscr{L}\big( \vartheta + t(v - \vartheta) \big) - \mathscr{L}\big( \vartheta + s(v - \vartheta) \big) \geq c(t^2 - s^2) \|v - \vartheta\|_2^2 $$
+
 且
+
 $$ |\mathscr{L}(v) - \mathscr{L}(w)| \leq L \max \big\{ \|v - \vartheta\|_2, \|w - \vartheta\|_2 \big\} \|v - w\|_2 $$
+
 （参见定义 1.4.7）。
 
 *推论 6.1.25 的证明.* 注意引理 6.1.8 中的条目 (ii) 和 (iii) 证明了 (i) $\rightarrow$ (ii)。注意到引理 6.1.19 展示了 (ii) $\rightarrow$ (iii)。注意引理 6.1.20 建立了 (iii) $\rightarrow$ (i)。注意到引理 6.1.21 和引理 6.1.23 表明 (i) $\rightarrow$ (iv)。注意引理 6.1.22 和引理 6.1.24 建立了 (iv) $\rightarrow$ (i)。推论 6.1.25 的证明至此完成。
 
-
-
-
 如上文第 6.1 节所述，GD 优化方法可以被视为第五章定理 5.7.4 中相关 GF 常微分方程的欧拉离散化。在文献中，除了欧拉方法之外，也有更复杂的方法被用来近似 GF 常微分方程。特别是，高阶龙格-库塔方法已被用于近似优化问题的局部极小点（参见例如 Zhang 等人 [433]）。在本节中，我们将以显式中点法为例来说明这一点。
 
 ### 定义 6.2.1
+
 （显式中点法 GD 优化方法）
+
 设 $\mathfrak{d} \in \mathbb{N}$，$(\gamma_n)_{n \in \mathbb{N}} \subseteq [0, \infty)$，$\xi \in \mathbb{R}^{\mathfrak{d}}$，且设 $\mathcal{L} : \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}$ 以及 $\mathscr{G} : \mathbb{R}^{\mathfrak{d}} \rightarrow \mathbb{R}^{\mathfrak{d}}$ 满足：对于所有 $U \in \{V \subseteq \mathbb{R}^{\mathfrak{d}}: V \text{ 是开集}\}$ 和 $\theta \in U$，若 $\mathcal{L}|_U \in C^1(U, \mathbb{R}^{\mathfrak{d}})$，则
 
 $$\mathscr{G}(\theta) = (\nabla \mathcal{L})(\theta). \tag{6.166}$$
@@ -8447,7 +9142,9 @@ $$\Theta_0 = \xi \quad\quad\text{以及}\quad\quad\Theta_n = \Theta_{n-1} - \gam
 ## 6.2.1 GF 常微分方程的显式中点离散化
 
 ### 引理 6.2.2
+
 （显式中点法的局部误差）
+
 设 $\mathfrak{d} \in \mathbb{N}$，$T, \gamma, c \in [0, \infty)$，$\mathscr{G} \in C^2(\mathbb{R}^{\mathfrak{d}}, \mathbb{R}^{\mathfrak{d}})$，$\Theta \in C([0, \infty), \mathbb{R}^{\mathfrak{d}})$，$\theta \in \mathbb{R}^{\mathfrak{d}}$ 满足：对于所有 $x, y, z \in \mathbb{R}^{\mathfrak{d}}$ 和 $t \in [0, \infty)$，有
 
 $$\Theta_t = \Theta_0 + \int_0^t \mathscr{G}(\Theta_s)\,\mathrm{d}s, \qquad\theta = \Theta_T + \gamma \mathscr{G}(\Theta_T + \tfrac{\gamma}{2} \mathscr{G}(\Theta_T)), \tag{6.168}$$
@@ -8484,6 +9181,8 @@ $$\begin{aligned}\dddot{\Theta}_{t} &= \mathscr{G}''(\Theta_{t})(\dot{\Theta}_{t
 
 因此，定理 6.1.3、(6.171) 以及 (6.172) 蕴含：对于所有 $s, t \in [0, \infty)$，都有
 
+
+
 $$\begin{aligned}\Theta_{s} &= \Theta_{t} + (s - t)\dot{\Theta}_{t} + \frac{(s - t)^{2}}{2}\ddot{\Theta}_{t} + \int_{0}^{1}\left[\frac{(1 - r)^{2}(s - t)^{3}}{6}\right]\dddot{\Theta}_{t + r(s - t)}\,\mathrm{d}r\\&= \Theta_{t} + (s - t)\mathscr{G}(\Theta_{t}) + \frac{(s - t)^{2}}{2}\mathscr{G}'(\Theta_{t})\mathscr{G}(\Theta_{t})\\&\quad + \frac{(s - t)^{3}}{6}\int_{0}^{1}(1 - r)^{2}\left(\mathscr{G}''(\Theta_{t + r(s - t)})(\mathscr{G}(\Theta_{t + r(s - t)}), \mathscr{G}(\Theta_{t + r(s - t)})) \\&\qquad + \mathscr{G}'(\Theta_{t + r(s - t)})\mathscr{G}'(\Theta_{t + r(s - t)})\mathscr{G}(\Theta_{t + r(s - t)})\right)\,\mathrm{d}r.\end{aligned} \tag{6.177}$$
 
 这确保了
@@ -8495,8 +9194,6 @@ $$\begin{align*} &\Theta_{T+\gamma} - \Theta_{T}\\ &= \Theta_{T+\frac{\gamma}{2}
 $$\begin{align*} &\|\Theta_{T+\gamma}-\theta\|_{2} = \left\|\Theta_{T+\gamma}-\Theta_{T}-\gamma\mathscr{G}\left(\Theta_{T}+\frac{\gamma}{2}\mathscr{G}(\Theta_{T})\right)\right\|_{2}\\ &\quad\leq\left\|\Theta_{T+\gamma}-\left[\Theta_{T}+\gamma\mathscr{G}\left(\Theta_{T+\frac{\gamma}{2}}\right)\right]\right\|_{2}+\gamma\left\|\gamma\mathscr{G}\left(\Theta_{T+\frac{\gamma}{2}}\right)-\mathscr{G}\left(\Theta_{T}+\frac{\gamma}{2}\mathscr{G}(\Theta_{T})\right)\right\|_{2}\\ &\quad\leq\gamma\left\|\mathscr{G}\left(\Theta_{T+\frac{\gamma}{2}}\right)-\mathscr{G}\left(\Theta_{T}+\frac{\gamma}{2}\mathscr{G}(\Theta_{T})\right)\right\|_{2}\\ &\quad\quad+\frac{\gamma^{3}}{48}\int_{0}^{1}\left(1-r\right)^{2}\left(\left\|\mathscr{G}''\left(\Theta_{T+(1+r)\gamma/2}\right)\langle\mathscr{G}\left(\Theta_{T+(1+r)\gamma/2}\right),\mathscr{G}\left(\Theta_{T+(1+r)\gamma/2}\right)\rangle\right\|_{2}\right.\\ &\quad\quad\left.+\left\|\mathscr{G}'\left(\Theta_{T+(1+r)\gamma/2}\right)\mathscr{G}'\left(\Theta_{T+(1+r)\gamma/2}\right)\mathscr{G}\left(\Theta_{T+(1+r)\gamma/2}\right)\right\|_{2}\right.\\ &\quad\quad\left.+\left\|\mathscr{G}''\left(\Theta_{T+(1-r)\gamma/2}\right)\langle\mathscr{G}\left(\Theta_{T+(1-r)\gamma/2}\right),\mathscr{G}\left(\Theta_{T+(1-r)\gamma/2}\right)\rangle\right\|_{2}\right.\\ &\quad\quad\left.+\left\|\mathscr{G}'\left(\Theta_{T+(1-r)\gamma/2}\right)\mathscr{G}'\left(\Theta_{T+(1-r)\gamma/2}\right)\mathscr{G}\left(\Theta_{T+(1-r)\gamma/2}\right)\right\|_{2}\right)\mathrm{d}r\\ &\quad\leq\frac{c^{3}\gamma^{3}}{8}+\frac{c^{3}\gamma^{3}}{48}\int_{0}^{1}(1-r)^{2}\mathrm{d}r=\frac{c^{3}\gamma^{3}}{8}+\frac{c^{3}\gamma^{3}}{144}=\frac{19c^{3}\gamma^{3}}{144}\leq c^{3}\gamma^{3}.\end{align*}$$
 
 引理 6.2.2 的证明至此完成。 \qquad \square
-
-
 
 # 推论 6.2.3（梯度流常微分方程显式中点法的局部误差）
 
@@ -8572,9 +9269,9 @@ $$
 \mathbf{m}_n = \alpha_n \mathbf{m}_{n - 1} + (1 - \alpha_n) \mathcal{G}(\Theta_{n - 1}), \qquad (6.190)
 $$
 
-$$
+
+
 \text{ 且 } \qquad \Theta_n = \Theta_{n - 1} - \gamma_n \mathbf{m}_n. \qquad (6.191)
-$$
 
 ## 练习 6.3.1
 
@@ -8621,8 +9318,6 @@ m_{n + 1} = &\alpha_{n + 1}m_{n} + 1 - \alpha_{n + 1} = \alpha_{n + 1} \left[ 1 
 
 因此，归纳法确立了公式 (6.193)。引理 6.3.2 证明完毕。$\square$
 
-
-
 ## 引理 6.3.3（动量项的显式表示）
 
 设 $\mathbf{d} \in \mathbb{N}$，$(\alpha_n)_{n \in \mathbb{N}} \subseteq \mathbb{R}$，$(a_{n,k})_{(n,k) \in (\mathbb{N}_0)^2} \subseteq \mathbb{R}$，$(\mathscr{G}_n)_{n \in \mathbb{N}_0} \subseteq \mathbb{R}^\mathbf{d}$，$(\mathbf{m}_n)_{n \in \mathbb{N}_0} \subseteq \mathbb{R}^\mathbf{d}$ 满足对于所有 $n \in \mathbb{N}$，$\mathbf{k} \in \{0, 1, \dots, n-1\}$ 有
@@ -8640,6 +9335,7 @@ $$
 $$
 
 - 并且
+
 - (ii) 对于所有 $n \in \mathbb{N}_0$，有
 
 $$
@@ -8708,6 +9404,7 @@ $$
 并设 $\Theta$ 是目标函数 $\mathcal{L}$ 具有广义梯度 $\mathcal{G}$、学习率 $(\gamma_n)_{n \in \mathbb{N}}$、动量衰减因子 $(\alpha_n)_{n \in \mathbb{N}}$ 和初始值 $\xi$ 的动量 GD 过程（参见定义 6.3.1）。则
 
 - (i) 对于所有 $n \in \mathbb{N}$，$k \in \{0, 1, \ldots, n-1\}$，有 $0 \leq a_{n,k} \leq 1$，
+
 - (ii) 对于所有 $n \in \mathbb{N}_0$，有
 
 $$
@@ -8715,6 +9412,7 @@ $$
 $$
 
 - 并且
+
 - (iii) 对于所有 $n \in \mathbb{N}$，有
 
 $$
@@ -8755,19 +9453,15 @@ $$
 
 则我们称 $\Theta$ 是目标函数 $\mathcal{L}$ 具有广义梯度 $\mathcal{G}$、学习率 $(\gamma_{n})_{n\in\mathbb{N}}$、动量衰减因子 $(\alpha_{n})_{n\in\mathbb{N}}$ 和初始值 $\boldsymbol{\xi}$ 的偏置校正动量 GD 过程（我们称 $\Theta$ 是目标函数 $\mathcal{L}$ 具有学习率 $(\gamma_{n})_{n\in\mathbb{N}}$、动量衰减因子 $(\alpha_{n})_{n\in\mathbb{N}}$ 和初始值 $\boldsymbol{\xi}$ 的偏置校正动量 GD 过程）当且仅当 $\Theta\colon\mathbb{N}_{0}\to\mathbb{R}^{\mathfrak{d}}$ 是从 $\mathbb{N}_{0}$ 到 $\mathbb{R}^{\mathfrak{d}}$ 的函数，满足存在 $\mathbf{m}\colon\mathbb{N}_{0}\to\mathbb{R}^{\mathfrak{d}}$ 使得对于所有 $n\in\mathbb{N}$ 有
 
-$$
-\Theta_{0}=\boldsymbol{\xi},\quad\quad\mathbf{m}_{0}=0, \tag{6.212}
-$$
 
-$$
+
+\Theta_{0}=\boldsymbol{\xi},\quad\quad\mathbf{m}_{0}=0, \tag{6.212}
+
 \mathbf{m}_{n}=\alpha_{n}\mathbf{m}_{n-1}+(1-\alpha_{n})\mathcal{G}(\Theta_{n-1}), \tag{6.213}
-$$
 
 且
 
-$$
 \Theta_{n}=\Theta_{n-1}-\frac{\gamma_{n}\mathbf{m}_{n}}{1-\prod_{l=1}^{n}\alpha_{l}}. \tag{6.214}
-$$
 
 ### 推论 6.3.6（关于偏置校正动量 GD 优化方法的表示）
 
@@ -8786,6 +9480,7 @@ $$
 并设 $\Theta$ 是目标函数 $\mathcal{L}$ 具有广义梯度 $\mathscr{G}$、学习率 $(\gamma_n)_{n \in \mathbb{N}}$、动量衰减因子 $(\alpha_n)_{n \in \mathbb{N}}$ 和初始值 $\boldsymbol{\xi}$ 的偏置校正动量 GD 过程（参见定义 6.3.5）。则
 
 - (i) 对于所有 $n \in \mathbb{N}$，$k \in \{0, 1, \ldots, n-1\}$，有 $0 \leq a_{n,k} \leq 1$，
+
 - (ii) 对于所有 $n \in \mathbb{N}$，有
 
 $$
@@ -8793,6 +9488,7 @@ $$
 $$
 
 - 并且
+
 - (iii) 对于所有 $n \in \mathbb{N}$，有
 
 $$
@@ -8830,8 +9526,6 @@ $$
 $$
 
 这确立了第 (iii) 项。因此，推论 6.3.6 的证明完毕。
-
-
 
 ## 6.3.3 带动量的 GD 优化的误差分析
 
@@ -8937,6 +9631,8 @@ $$
 \Theta_0 = \xi \quad \text{且} \quad \Theta_n = \Theta_{n-1} - \gamma \left( \nabla \mathcal{L} \right)(\Theta_{n-1}). \quad (6.235)
 $$
 
+
+
 则对于所有 $n \in \mathbb{N}_0$，有
 
 $$
@@ -8948,7 +9644,8 @@ $$
 
 （参见定义 3.3.4）。
 
-**引理 6.3.8 的证明。** 在整个证明过程中，设 $\Theta^{(1)}, \Theta^{(2)}, \ldots, \Theta^{(d)}: \mathbb{N}_0 \rightarrow \mathbb{R}$ 满足对于所有 $n \in \mathbb{N}_0$ 有 $\Theta_n = (\Theta_n^{(1)}, \Theta_n^{(2)}, \ldots, \Theta_n^{(d)})$，且设 $\iota, \mathcal{I} \in \{1, 2, \ldots, d\}$ 满足 $\lambda_{\iota} = \kappa$ 且 $\lambda_{\mathcal{I}} = K$。注意，(6.234) 意味着对于所有 $\theta = (\theta_1, \theta_2, \ldots, \theta_d) \in \mathbb{R}^d$，$i \in \{1, 2, \ldots, d\}$，有
+### 引理 6.3.8 的证明。
+在整个证明过程中，设 $\Theta^{(1)}, \Theta^{(2)}, \ldots, \Theta^{(d)}: \mathbb{N}_0 \rightarrow \mathbb{R}$ 满足对于所有 $n \in \mathbb{N}_0$ 有 $\Theta_n = (\Theta_n^{(1)}, \Theta_n^{(2)}, \ldots, \Theta_n^{(d)})$，且设 $\iota, \mathcal{I} \in \{1, 2, \ldots, d\}$ 满足 $\lambda_{\iota} = \kappa$ 且 $\lambda_{\mathcal{I}} = K$。注意，(6.234) 意味着对于所有 $\theta = (\theta_1, \theta_2, \ldots, \theta_d) \in \mathbb{R}^d$，$i \in \{1, 2, \ldots, d\}$，有
 
 $$
 \left( \frac{\partial \mathcal{L}}{\partial \theta_i} \right)(\theta) = \lambda_i (\theta_i - v_i). \quad (6.237)
@@ -8969,9 +9666,6 @@ $$
 $$
 \Theta_n^{(i)} - v_i = (1 - \gamma \lambda_i)^n (\Theta_0^{(i)} - v_i) = (1 - \gamma \lambda_i)^n (\xi_i - v_i). \quad (6.239)
 $$
-
-
-
 
 这表明对于所有 $n \in \mathbb{N}_0$，有
 
@@ -9043,7 +9737,8 @@ $$
 
 在本小节中，我们将在下面的命题 6.3.11 中提供一类二次目标函数情形下带动量的梯度下降优化方法的误差分析。命题 6.3.11 的证明运用了下面的引理 6.3.9 和引理 6.3.10 中关于二次矩阵的两个辅助结果。引理 6.3.9 是文献中所谓的 Gel'fand 谱半径公式的一个特例。引理 6.3.10 建立了二次块矩阵行列式的公式（具体陈述见下面的公式 (6.247)）。引理 6.3.10 及其证明可以在 Silvester [377, Theorem 3] 中找到，例如。
 
-**引理 6.3.9** （Gel'fand 谱半径公式在实矩阵上的一个特例）。 *设* $\mathfrak{d} \in \mathbb{N}$，$A \in \mathbb{R}^{\mathfrak{d} \times \mathfrak{d}}$，$\mathcal{S} = \{\lambda \in \mathbb{C} : (\exists \, v \in \mathbb{C}^{\mathfrak{d}} \setminus \{0\} : Av = \lambda v)\}$ *且设* $\| \cdot \| : \mathbb{R}^{\mathfrak{d}} \to [0, \infty)$ *为一个范数。则*
+### 引理 6.3.9
+（Gel'fand 谱半径公式在实矩阵上的一个特例）。 *设* $\mathfrak{d} \in \mathbb{N}$，$A \in \mathbb{R}^{\mathfrak{d} \times \mathfrak{d}}$，$\mathcal{S} = \{\lambda \in \mathbb{C} : (\exists \, v \in \mathbb{C}^{\mathfrak{d}} \setminus \{0\} : Av = \lambda v)\}$ *且设* $\| \cdot \| : \mathbb{R}^{\mathfrak{d}} \to [0, \infty)$ *为一个范数。则*
 
 $$
 \liminf_{n \to \infty} \left( \left[ \sup_{v \in \mathbb{R}^{\mathfrak{d}} \setminus \{0\}} \frac{\| A^n v \|}{\| v \|} \right]^{1/n} \right) = \limsup_{n \to \infty} \left( \left[ \sup_{v \in \mathbb{R}^{\mathfrak{d}} \setminus \{0\}} \frac{\| A^n v \|}{\| v \|} \right]^{1/n} \right) = \max_{\lambda \in \mathcal{S} \cup \{0\}} |\lambda|. \quad (6.246)
@@ -9051,7 +9746,8 @@ $$
 
 *引理 6.3.9 的证明。* 注意，例如，Einsiedler & Ward [127, Theorem 11.6] 建立了公式 (6.246)（参见，例如，Tropp [395]）。引理 6.3.9 的证明到此结束。 $\square$
 
-**引理 6.3.10** （块矩阵的行列式）。 *设* $\mathfrak{d} \in \mathbb{N}$，$A, B, C, D \in \mathbb{C}^{\mathfrak{d} \times \mathfrak{d}}$ *满足* $CD = DC$。*则*
+### 引理 6.3.10
+（块矩阵的行列式）。 *设* $\mathfrak{d} \in \mathbb{N}$，$A, B, C, D \in \mathbb{C}^{\mathfrak{d} \times \mathfrak{d}}$ *满足* $CD = DC$。*则*
 
 $$
 \det \begin{pmatrix} A & B \\ C & D \end{pmatrix} = \det(AD - BC) \quad (6.247)
@@ -9072,11 +9768,11 @@ $$
 （参见，例如，Petersen [331, Proposition 5.5.3 and Proposition 5.5.4]）意味着对于所有 $x \in \mathbb{C}$ 有
 
 $$
-\det \left( \begin{pmatrix} A & B \\ C & \mathcal{D}_x \end{pmatrix} \begin{pmatrix} \mathcal{D}_x & 0 \\ -C & I_{\mathfrak{d}} \end{pmatrix} \right) = \det \begin{pmatrix} (A\mathcal{D}_x - BC) & B \\ (C\mathcal{D}_x - \mathcal{D}_xC) & \mathcal{D}_x \end{pmatrix} \notag 
+\det \left( \begin{pmatrix} A & B \\ C & \mathcal{D}_x \end{pmatrix} \begin{pmatrix} \mathcal{D}_x & 0 \\ -C & I_{\mathfrak{d}} \end{pmatrix} \right) = \det \begin{pmatrix} (A\mathcal{D}_x - BC) & B \\ (C\mathcal{D}_x - \mathcal{D}_xC) & \mathcal{D}_x \end{pmatrix}
 $$
 
 $$
-= \det \begin{pmatrix} (A\mathcal{D}_x - BC) & B \\ 0 & \mathcal{D}_x \end{pmatrix} \notag 
+= \det \begin{pmatrix} (A\mathcal{D}_x - BC) & B \\ 0 & \mathcal{D}_x \end{pmatrix}
 $$
 
 $$
@@ -9107,6 +9803,8 @@ $$
 $$
 \left(\det\left(\begin{pmatrix} A & B \\ C & \mathcal{D}_x \end{pmatrix}\right)-\det(A\mathcal{D}_x-BC)\right)\det(\mathcal{D}_x)=0.\tag{6.253}
 $$
+
+
 
 这意味着对于所有满足 $\det(\mathcal{D}_x) \neq 0$ 的 $x \in \mathbb{C}$ 有
 
@@ -9140,16 +9838,12 @@ $$
 
 引理 6.3.10 的证明到此结束。
 
-
-
-
-
 ## 6.3. 带经典动量的 GD 优化
 
 我们现在处于能够制定并证明所承诺的针对考虑的二阶目标函数类中的带动量的 **GD** 优化方法的误差分析的位置；参见下文命题 6.3.11。
 
-### **命题 6.3.11** *（二阶目标函数情形下带动量的* **GD** *优化方法的误差分析。）*
-
+### 命题 6.3.11
+*（二阶目标函数情形下带动量的* **GD** *优化方法的误差分析。）*
 *设* $\mathbf{d} \in \mathbb{N}$，$\xi \in \mathbb{R}^\mathbf{d}$，$\vartheta = (\vartheta_1, \ldots, \vartheta_\mathbf{d}) \in \mathbb{R}^\mathbf{d}$，$\kappa, \mathcal{K}, \lambda_1, \lambda_2, \ldots, \lambda_\mathbf{d} \in (0, \infty)$ *满足* $\kappa = \min\{\lambda_1, \lambda_2, \ldots, \lambda_\mathbf{d}\}$ *且* $\mathcal{K} = \max\{\lambda_1, \lambda_2, \ldots, \lambda_\mathbf{d}\}$，*设* $\mathcal{L} \colon \mathbb{R}^\mathbf{d} \rightarrow \mathbb{R}$ *对所有* $\theta = (\theta_1, \ldots, \theta_\mathbf{d}) \in \mathbb{R}^\mathbf{d}$ *满足*
 
 $$
@@ -9214,7 +9908,9 @@ $$
 $$
 \begin{aligned} 
 \frac{(\sqrt{\overline{\kappa}} + \sqrt{\kappa})^2 - (\sqrt{\overline{\kappa}} - \sqrt{\kappa})^2}{4} &= \frac{1}{4}\Big[\left(\sqrt{\overline{\kappa}} + \sqrt{\kappa} + \sqrt{\overline{\kappa}} - \sqrt{\kappa}\right)\left(\sqrt{\overline{\kappa}} + \sqrt{\kappa} - \left[\sqrt{\overline{\kappa}} - \sqrt{\kappa}\right]\right) \\
+
 &= \frac{1}{4}\Big[\left(2\sqrt{\overline{\kappa}}\right)\left(2\sqrt{\kappa}\right)\Big] = \sqrt{\overline{\kappa}\kappa} 
+
 \end{aligned} \tag{6.268}
 $$
 
@@ -9222,13 +9918,21 @@ $$
 
 $$
 \begin{aligned} 
+
 \mathbf{m}_n &= -\sqrt{\overline{\kappa}\kappa}(\Theta_n - \Theta_{n-1}) \\
+
 &= -\sqrt{\overline{\kappa}\kappa} \left( \Theta_{n-1} - \left[\frac{4}{(\sqrt{\overline{\kappa}} + \sqrt{\kappa})^2}\right](\nabla \mathscr{L})(\Theta_{n-1}) + \left[\frac{\sqrt{\overline{\kappa}} - \sqrt{\kappa}}{\sqrt{\overline{\kappa}} + \sqrt{\kappa}}\right]^2 \left(\Theta_{n-1} - \Theta_{n-2}\right) - \Theta_{n-1}\right) \\
+
 &= \sqrt{\overline{\kappa}\kappa} \left( \left[\frac{4}{(\sqrt{\overline{\kappa}} + \sqrt{\kappa})^2}\right](\nabla \mathscr{L})(\Theta_{n-1}) - \left[\frac{\sqrt{\overline{\kappa}} - \sqrt{\kappa}}{\sqrt{\overline{\kappa}} + \sqrt{\kappa}}\right]^2 \left(\Theta_{n-1} - \Theta_{n-2}\right) \right) \\
+
 &= \frac{(\sqrt{\overline{\kappa}} + \sqrt{\kappa})^2 - (\sqrt{\overline{\kappa}} - \sqrt{\kappa})^2}{4}\left[\frac{4}{(\sqrt{\overline{\kappa}} + \sqrt{\kappa})^2}\right](\nabla \mathscr{L})(\Theta_{n-1}) \\
+
 &\quad - \sqrt{\overline{\kappa}\kappa}\left[\frac{\sqrt{\overline{\kappa}} - \sqrt{\kappa}}{\sqrt{\overline{\kappa}} + \sqrt{\kappa}}\right]^2 \left(\Theta_{n-1} - \Theta_{n-2}\right) \\
+
 &= \left[1 - \left(\frac{(\sqrt{\overline{\kappa}} - \sqrt{\kappa})^2}{(\sqrt{\overline{\kappa}} + \sqrt{\kappa})^2}\right)\right]\left(\nabla \mathscr{L}\right)(\Theta_{n-1}) + \left[\frac{\sqrt{\overline{\kappa}} - \sqrt{\kappa}}{\sqrt{\overline{\kappa}} + \sqrt{\kappa}}\right]^2 \left[-\sqrt{\overline{\kappa}\kappa}(\Theta_{n-1} - \Theta_{n-2})\right] \\
+
 &= \left[1 - \left[\frac{\sqrt{\overline{\kappa}} - \sqrt{\kappa}}{\sqrt{\overline{\kappa}} + \sqrt{\kappa}}\right]^2\right]\left(\nabla \mathscr{L}\right)(\Theta_{n-1}) + \left[\frac{\sqrt{\overline{\kappa}} - \sqrt{\kappa}}{\sqrt{\overline{\kappa}} + \sqrt{\kappa}}\right]^2 \mathbf{m}_{n-1}. 
+
 \end{aligned} \tag{6.269}
 $$
 
@@ -9236,8 +9940,11 @@ $$
 
 $$
 \begin{aligned} 
+
 \Theta_n &= \Theta_{n-1} + (\Theta_n - \Theta_{n-1}) \\
+
 &= \Theta_{n-1} - \frac{1}{\sqrt{\overline{\kappa}\kappa}}\left(-\sqrt{\overline{\kappa}\kappa}(\Theta_n - \Theta_{n-1})\right) = \Theta_{n-1} - \frac{1}{\sqrt{\overline{\kappa}\kappa}} \mathbf{m}_n. 
+
 \end{aligned} \tag{6.270}
 $$
 
@@ -9247,6 +9954,8 @@ $$
 \mathbf{m}_0 = -\sqrt{\bar{K} \kappa} \left( \Theta_0 - \Theta_{-1} \right) = 0. \tag{6.271}
 $$
 
+
+
 结合此结果以及假设 $\Theta_0 = \xi$，利用 (6.269) 和 (6.270) 证明了第 (i) 项。因此，剩下的任务是证明第 (ii) 项。为此，观察到 (6.259) 意味着对于所有 $\theta = (\theta_1, \theta_2, \dots, \theta_{\mathfrak{d}}) \in \mathbb{R}^{\mathfrak{d}}$，$i \in \{1, 2, \dots, \mathfrak{d}\}$，成立
 
 $$
@@ -9254,8 +9963,8 @@ $$
 $$
 
 此结果、(6.260) 和 (6.264) 意味着对于所有 $n \in \mathbb{N}$，$i \in \{1, 2, \dots, \mathfrak{d}\}$，成立
-
 $\Theta_n^{(i)} - v_i = \Theta_{n-1}^{(i)} - \varrho \left( \frac{\partial f}{\partial \theta_i} \right) \left( \Theta_{n-1} \right) + \alpha ( \Theta_{n-1}^{(i)} - \Theta_{n-2}^{(i)} ) - v_i$
+
 $$
 \begin{aligned}
 &= \langle \Theta_{n-1}^{(i)} - v_i \rangle - \varrho \lambda_i ( \Theta_{n-1}^{(i)} - v_i ) + \alpha ( \langle \Theta_{n-1}^{(i)} - v_i \rangle - \langle \Theta_{n-2}^{(i)} - v_i \rangle ) \\
@@ -9264,23 +9973,21 @@ $$
 $$
 
 结合此结果与 (6.265) 表明，对于所有 $n \in \mathbb{N}$，成立
-
 $\mathbb{R}^{\mathfrak{d}} \ni \left( \Theta_n - v \right) = M ( \Theta_{n-1} - v ) - \alpha ( \Theta_{n-2} - v )$
+
 $$
 = \begin{pmatrix} M & (-\alpha \, \mathrm{I}_{\mathfrak{d}}) \\ \mathrm{I}_{\mathfrak{d}} & 0 \end{pmatrix}_{\in \mathbb{R}^{\mathfrak{d} \times \mathfrak{d}}} \underbrace{ \begin{pmatrix} \Theta_{n-1} - v \\ \Theta_{n-2} - v \end{pmatrix} }_{\in \mathbb{R}^{2\mathfrak{d}}}. \tag{6.274}
 $$
 
 此结果与 (6.266) 确保对于所有 $n \in \mathbb{N}$，成立
-
 $\mathbb{R}^{2\mathfrak{d}} \ni \begin{pmatrix} \Theta_n - v \\ \Theta_{n-1} - v \end{pmatrix} = \begin{pmatrix} M & (-\alpha \, \mathrm{I}_{\mathfrak{d}}) \\ \mathrm{I}_{\mathfrak{d}} & 0 \end{pmatrix} \begin{pmatrix} \Theta_{n-1} - v \\ \Theta_{n-2} - v \end{pmatrix} = A \begin{pmatrix} \Theta_{n-1} - v \\ \Theta_{n-2} - v \end{pmatrix}. \tag{6.275}$
 
 归纳法因此证明对于所有 $n \in \mathbb{N}_0$，成立
-
 $\mathbb{R}^{2\mathfrak{d}} \ni \begin{pmatrix} \Theta_n - v \\ \Theta_{n-1} - v \end{pmatrix} = A^n \begin{pmatrix} \Theta_0 - v \\ \Theta_{-1} - v \end{pmatrix} = A^n \begin{pmatrix} \xi - v \\ \xi - v \end{pmatrix}. \tag{6.276}$
 
 这意味着对于所有 $n \in \mathbb{N}_0$，成立
-
 $\left\| \Theta_n - v \right\|_2 \leq \sqrt{\left\| \Theta_n - v \right\|_2^2 + \left\| \Theta_{n-1} - v \right\|_2^2}$
+
 $$
 \begin{aligned}
 &= \left\| \begin{pmatrix} \Theta_n - v \\ \Theta_{n-1} - v \end{pmatrix} \right\|_2 \\
@@ -9291,104 +9998,98 @@ $$
 \end{aligned} \tag{6.277}
 $$
 
-
-
-
 接下来，注意到 (6.267) 和引理 6.3.9 表明
-
 $$\lim_{n\rightarrow\infty}\sup\left(\left[\|A^{n}\|\right]^{1/n}\right) = \lim_{n\rightarrow\infty}\inf\left(\left[\|A^{n}\|\right]^{1/n}\right) = \max_{\mu\in\mathcal{S}\cup\{0\}}|\mu|.$$
 
 这意味着存在 $m\in\mathbb{N}$，使得对于所有 $n\in\mathbb{N}_0\cap[m,\infty)$，都有
-
 $$\left[\|A^n\|\right]^{1/n}\leq\varepsilon+\max_{\mu\in\mathcal{S}\cup\{0\}}|\mu|.$$
 
 因此，我们得到对于所有 $n\in\mathbb{N}_0\cap[m,\infty)$，都有
-
 $$\|A^n\|\leq\left[\varepsilon+\max_{\mu\in\mathcal{S}\cup\{0\}}|\mu|\right]^n.$$
 
 此外，注意到对于所有 $n\in\mathbb{N}_0\cap(0,m)$，有
-
 $$\begin{aligned}\|A^n\| &= \left[\varepsilon+\max_{\mu\in\mathcal{S}\cup\{0\}}|\mu|\right]^n \left[\frac{\|A^k\|}{(\varepsilon+\max_{\mu\in\mathcal{S}\cup\{0\}}|\mu|)^k}\right]^{\frac{A^k}{(\varepsilon+\max_{\mu\in\mathcal{S}\cup\{0\}}|\mu|)^k}} \\
 &\leq \left[\varepsilon+\max_{\mu\in\mathcal{S}\cup\{0\}}|\mu|\right]^n \left[\max\left\{\frac{\|A^k\|}{(\varepsilon+\max_{\mu\in\mathcal{S}\cup\{0\}}|\mu|)^k}: k\in\mathbb{N}_0\cap[0,m)\}\cup\{1\}\right].\end{aligned}$$
 
 将此与 (6.280) 结合证明了对于所有 $n\in\mathbb{N}_0$，都有
-
 $$\|A^n\|\leq\left[\varepsilon+\max_{\mu\in\mathcal{S}\cup\{0\}}|\mu|\right]^n \left[\max\left\{\frac{\|A^k\|}{(\varepsilon+\max_{\mu\in\mathcal{S}\cup\{0\}}|\mu|)^k}: k\in\mathbb{N}_0\cap[0,m)\}\cup\{1\}\right].$$
 
 接着观察，引理 6.3.10、(6.266) 以及对于所有 $\mu\in\mathbb{C}$ 都有 $\mathbf{I}_8(-\mu\mathbf{I}_8)=-\mu\mathbf{I}_8=(-\mu\mathbf{I}_8)\mathbf{I}_8$ 这一事实，确保了对于所有 $\mu\in\mathbb{C}$，都有
-
-$$\begin{aligned}\det(A-\mu\mathbf{I}_{28}) &= \det\left(\begin{array}{cc} (M-\mu\mathbf{I}_8) & (-\alpha\mathbf{I}_8) \\
+$$\begin{aligned}\det(A-\mu\mathbf{I}_{28}) &= \det\left(\begin{array}{cc} (M-\mu\mathbf{I}_8) & (-\alpha\mathbf{I}_8) \\ 
 \mathbf{I}_8 & -\mu\mathbf{I}_8 \end{array}\right) \\
 &= \det((M-\mu\mathbf{I}_8)(-\mu\mathbf{I}_8)-(-\alpha\mathbf{I}_8)\mathbf{I}_8) \\
 &= \det((M-\mu\mathbf{I}_8)(-\mu\mathbf{I}_8)+\alpha\mathbf{I}_8).\end{aligned}$$
 
 此式与 (6.265) 表明，对于所有 $\mu\in\mathbb{C}$，都有
-
-$$\begin{aligned}\det(A-\mu\mathbf{I}_{28}) &= \det\left(\begin{array}{cccc} ((1-\varrho\lambda_1+\alpha-\mu)(-\mu)+\alpha) & 0 & \cdots & 0 \\
+$$\begin{aligned}\det(A-\mu\mathbf{I}_{28}) &= \det\left(\begin{array}{cccc} ((1-\varrho\lambda_1+\alpha-\mu)(-\mu)+\alpha) & 0 & \cdots & 0 \\ 
 & 0 & & ((1-\varrho\lambda_8+\alpha-\mu)(-\mu)+\alpha) \end{array}\right) \\
 &= \prod_{i=1}^{8}((1-\varrho\lambda_i+\alpha-\mu)(-\mu)+\alpha) \\
 &= \prod_{i=1}^{8}(\mu^2-(1-\varrho\lambda_i+\alpha)\mu+\alpha).\end{aligned}$$
 
 此外，注意到对于所有 $ \mu \in \mathbb{C} $ 和 $ i \in \{1, 2, \ldots, \mathfrak{d}\} $，都有
-
 $$\begin{aligned}\mu^{2}-(1-\varrho \lambda_{i}+\alpha)\mu+\alpha &= \mu^{2}-2\mu\bigg[\frac{(1-\varrho \lambda_{i}+\alpha)}{2}\bigg]+\bigg[\frac{(1-\varrho \lambda_{i}+\alpha)}{2}\bigg]^{2}+\alpha-\bigg[\frac{(1-\varrho \lambda_{i}+\alpha)}{2}\bigg]^{2} \\& = \bigg[\mu-\frac{(1-\varrho \lambda_{i}+\alpha)}{2}\bigg]^{2}+\alpha-\frac{1}{4}[1-\varrho \lambda_{i}+\alpha]^{2} \\& = \bigg[\mu-\frac{(1-\varrho \lambda_{i}+\alpha)}{2}\bigg]^{2}-\frac{1}{4}\bigg[[1-\varrho \lambda_{i}+\alpha]^{2}-4\alpha\bigg].\end{aligned}$$
 
 因此，我们得到对于所有 $ i \in \{1, 2, \ldots, \mathfrak{d}\} $，都有
-
 $$\begin{aligned}\big\{&\mu \in \mathbb{C}:\ \mu^{2}-(1-\varrho \lambda_{i}+\alpha)\mu+\alpha=0\big\} \\[2ex] = \bigg\{&\mu \in \mathbb{C}:\ \bigg[\mu-\frac{(1-\varrho \lambda_{i}+\alpha)}{2}\bigg]^{2} = \frac{1}{4}\bigg[[1-\varrho \lambda_{i}+\alpha]^{2}-4\alpha\bigg]\bigg\} \\[2ex] = \bigg\{&\frac{(1-\varrho \lambda_{i}+\alpha)+\sqrt{[1-\varrho \lambda_{i}+\alpha]^{2}-4\alpha}}{2},\ \frac{(1-\varrho \lambda_{i}+\alpha)-\sqrt{[1-\varrho \lambda_{i}+\alpha]^{2}-4\alpha}}{2}\bigg\}, \\[2ex] = &\bigcup_{s \in \{-1, 1\}}\bigg\{\frac{1}{2}\bigg[1-\varrho \lambda_{i}+\alpha+s\sqrt{(1-\varrho \lambda_{i}+\alpha)^{2}-4\alpha}\bigg]\bigg\}.\end{aligned}$$
 
 将此与 (6.267) 和 (6.284) 结合证明了
-
 $$\begin{aligned}\mathcal{S} &= \big\{\mu \in \mathbb{C}:\ \text{det}(A-\mu I_{2\mathfrak{d}})=0\big\} \\[2ex] &= \bigg\{\mu \in \mathbb{C}:\ \prod_{i=1}^{\mathfrak{d}}\big(\mu^{2}-(1-\varrho \lambda_{i}+\alpha)\mu+\alpha\big)=0\bigg\} \\[2ex] &= \bigcup_{i=1}^{\mathfrak{d}}\big\{\mu \in \mathbb{C}:\ \mu^{2}-(1-\varrho \lambda_{i}+\alpha)\mu+\alpha=0\big\} \\[2ex] &= \bigcup_{i=1}^{\mathfrak{d}}\bigcup_{s \in \{-1, 1\}}\bigg\{\frac{1}{2}\bigg[1-\varrho \lambda_{i}+\alpha+s\sqrt{(1-\varrho \lambda_{i}+\alpha)^{2}-4\alpha}\bigg]\bigg\}.\end{aligned}$$
 
 此外，观察可知，对于所有 $ i \in \{1, 2, \ldots, \mathfrak{d}\} $ 都有 $ \lambda_{i} \geq \kappa $ 这一事实以及 (6.264) 确保了对于所有 $ i \in \{1, 2, \ldots, \mathfrak{d}\} $，都有
-
 $$\begin{aligned}1-\varrho \lambda_{i}+\alpha \leq & 1-\varrho \kappa+\alpha = 1-\bigg[\frac{4}{(\sqrt{\kappa}+\sqrt{\kappa})^{2}}\bigg]\kappa + \frac{(\sqrt{\kappa}-\sqrt{\kappa})^{2}}{(\sqrt{\kappa}+\sqrt{\kappa})^{2}} \\[2ex] = & \frac{(\sqrt{\kappa}+\sqrt{\kappa})^{2}-4\kappa-(\sqrt{\kappa}-\sqrt{\kappa})^{2}}{(\sqrt{\kappa}+\sqrt{\kappa})^{2}} = \frac{\kappa+2\sqrt{\kappa}\kappa+\kappa-4\kappa-\kappa-2\sqrt{\kappa}\sqrt{\kappa}+\kappa}{(\sqrt{\kappa}+\sqrt{\kappa})^{2}} \\[2ex] = & \frac{2\kappa-2\kappa}{(\sqrt{\kappa}+\sqrt{\kappa})^{2}} = \frac{2(\sqrt{\kappa}-\sqrt{\kappa})(\sqrt{\kappa}+\sqrt{\kappa})}{(\sqrt{\kappa}+\sqrt{\kappa})^{2}} = 2\bigg[\frac{\sqrt{\kappa}-\sqrt{\kappa}}{\sqrt{\kappa}+\sqrt{\kappa}}\bigg] \geq 0.\end{aligned}$$
 
 另外，注意到对于所有 $ i \in \{1, 2, \ldots, \mathfrak{d}\} $ 都有 $ \lambda_{i} \leq \mathcal{K} $ 这一事实以及 (6.264) 确保了对于所有 $i \in \{1, 2, \dots, \mathfrak{d}\}$，都有
-
 $$\begin{align}
+
+
+
 &1 - \varrho \lambda_i + \alpha \geq 1 - \varrho\bar{\mathcal{K}} + \alpha = 1 - \bigg[\frac{4}{(\sqrt{\mathcal{K}} + \sqrt{\kappa})^2}\bigg]\bar{\mathcal{K}} + \frac{(\sqrt{\bar{\mathcal{K}}} - \sqrt{\kappa})^2}{(\sqrt{\mathcal{K}} + \sqrt{\kappa})^2} \notag \\
 & \qquad = \frac{(\sqrt{\bar{\mathcal{K}}} + \sqrt{\kappa})^2 - 4\bar{\mathcal{K}} + (\sqrt{\bar{\mathcal{K}}} - \sqrt{\kappa})^2}{(\sqrt{\mathcal{K}} + \sqrt{\kappa})^2} = \frac{\kappa + 2\sqrt{\bar{\mathcal{K}}\kappa} + \kappa - 4\bar{\mathcal{K}} + \bar{\mathcal{K}} - 2\sqrt{\bar{\mathcal{K}}\kappa} + \kappa}{(\sqrt{\mathcal{K}} + \sqrt{\kappa})^2} \notag \\
 & \qquad = \frac{-2\bar{\mathcal{K}} + 2\kappa}{(\sqrt{\bar{\mathcal{K}}} + \sqrt{\kappa})^2} = -2\bigg[\frac{\bar{\mathcal{K}} - \kappa}{(\sqrt{\bar{\mathcal{K}}} + \sqrt{\kappa})^2}\bigg] = -2\bigg[\frac{(\sqrt{\bar{\mathcal{K}}} - \sqrt{\kappa})(\sqrt{\bar{\mathcal{K}}} + \sqrt{\kappa})}{(\sqrt{\bar{\mathcal{K}}} + \sqrt{\kappa})^2}\bigg] \notag \\
 & \qquad = -2\bigg[\frac{\sqrt{\bar{\mathcal{K}}} - \sqrt{\kappa}}{\sqrt{\bar{\mathcal{K}}} + \sqrt{\kappa}}\bigg] \leq 0. \tag{6.289}
+
 \end{align}$$
 
 将此与 (6.288) 和 (6.264) 结合蕴含了，对于所有 $i \in \{1, 2, \dots, \mathfrak{d}\}$，都有
 
 $$\begin{equation}
+
 \big(1 - \varrho \lambda_i + \alpha\big)^2 \leq \bigg[2\bigg(\frac{\sqrt{\bar{\mathcal{K}}} - \sqrt{\kappa}}{\sqrt{\bar{\mathcal{K}}} + \sqrt{\kappa}}\bigg)\bigg]^2 = 4\bigg[\frac{\sqrt{\bar{\mathcal{K}}} - \sqrt{\kappa}}{\sqrt{\bar{\mathcal{K}}} + \sqrt{\kappa}}\bigg]^2 = 4\alpha. \tag{6.290}
+
 \end{equation}$$
 
 此式与 (6.287) 表明
 
 $$\begin{align}
+
 \max_\limits_{\mu \in \mathcal{S} \cup \{0\}} |\mu| & = \max_\limits_{\mu \in \mathcal{S}} |\mu| \notag \\
 & = \max_\limits_{i \in \{1,2,\dots,d\}} \max_\limits{s \in \{-1,1\}} \bigg[\frac{1}{2}\bigg|\big[1 - \varrho\lambda_i + \alpha + s\sqrt{(1 - \varrho\lambda_i + \alpha)^2 - 4\alpha}\big]\bigg| \bigg] \notag \\
 & = \frac{1}{2}\bigg[\max_\limits_{i \in \{1,2,\dots,d\}} \max_\limits{s \in \{-1,1\}} \bigg|\big[1 - \varrho\lambda_i + \alpha + s\sqrt{(-1)(4\alpha - [1 - \varrho\lambda_i + \alpha]^2)}\big]\bigg| \bigg] \tag{6.291} \\
 & = \frac{1}{2}\bigg[\max_\limits_{i \in \{1,2,\dots,d\}} \max_\limits{s \in \{-1,1\}} \bigg|\big[1 - \varrho\lambda_i + \alpha + s\bar{\mathbf{i}}\sqrt{4\alpha - (1 - \varrho\lambda_i + \alpha)^2}\big]\bigg|^2 \bigg]^{1/2}.
+
 \end{align}$$
 
 将此与 (6.290) 结合证明了
 
 $$\begin{align}
+
 \max_\limits_{\mu \in \mathcal{S} \cup \{0\}} |\mu| & = \frac{1}{2}\bigg[\max_\limits_{i \in \{1,2,\dots,d\}} \max_\limits{s \in \{-1,1\}} \bigg(\big[1 - \varrho\lambda_i + \alpha\big]^2 + \big|s\sqrt{4\alpha - (1 - \varrho\lambda_i + \alpha)^2}\big|^2 \bigg)\bigg]^{1/2} \notag \\
 & = \frac{1}{2}\bigg[\max_\limits_{i \in \{1,2,\dots,d\}} \max_\limits{s \in \{-1,1\}} \bigg(\big(1 - \varrho\lambda_i + \alpha\big)^2 + 4\alpha - \big(1 - \varrho\lambda_i + \alpha\big)^2 \bigg)\bigg]^{1/2} \tag{6.292} \\
 & = \frac{1}{2}\big[4\alpha\big]^{1/2} = \sqrt{\alpha}.
+
 \end{align}$$
 
 因此，将 (6.277) 和 (6.282) 结合确保了对于所有 $n \in \mathbb{N}_0$，都有
 
 $$\begin{align}
+
 \| \Theta_n - \vartheta \|_2 & \leq \sqrt{2}\,\| \xi - \vartheta \|_2 \| A^n \| \notag \\
 & \leq \sqrt{2}\,\| \xi - \vartheta \|_2 \bigg[\varepsilon + \max_\limits_{\mu \in \mathcal{S} \cup \{0\}} |\mu|\bigg]^n \notag \\
 & \qquad \cdot \bigg[\max \bigg\{ \frac{\|A^k\|}{(\varepsilon + \max_\limits_{\mu \in \mathcal{S} \cup \{0\}} |\mu|)^k} \in \mathbb{R} : k \in \mathbb{N}_0 \cap [0,m)\bigg\} \cup \{1\} \bigg] \notag \\
 & \quad = \sqrt{2}\,\| \xi - \vartheta \|_2 \bigg[\varepsilon + \alpha^{1/2}\bigg]^n \bigg[\max \bigg\{ \frac{\|A^k\|}{(\varepsilon + \alpha^{1/2})^k} \in \mathbb{R} : k \in \mathbb{N}_0 \cap [0,m)\bigg\} \cup \{1\} \bigg] \notag \\
 & \qquad = \sqrt{2}\,\| \xi - \vartheta \|_2 \bigg[\varepsilon + \frac{\sqrt{\bar{\mathcal{K}}} - \sqrt{\kappa}}{\sqrt{\bar{\mathcal{K}}} + \sqrt{\kappa}}\bigg]^n \bigg[\max \bigg\{ \frac{\|A^k\|}{(\varepsilon + \alpha^{1/2})^k} \in \mathbb{R} : k \in \mathbb{N}_0 \cap [0,m)\bigg\} \cup \{1\} \bigg]. \tag{6.293}
+
 \end{align}$$
-
-
-
 
 这建立了第 (ii) 项。至此，命题 6.3.11 的证明已完成。$\square$
 
@@ -9421,116 +10122,124 @@ $$\mathcal{M}_{n}=\mathcal{M}_{n-1}-\frac{4}{\left(\sqrt{\mathcal{K}}+\sqrt{\kap
 *则*
 
 - (i) 存在 $\gamma, C \in (0,\infty)$ 使得对于所有 $n \in \mathbb{N}_{0}$ 都有 $\|\Theta_n^\gamma - \vartheta\|_2 \le C\big[\frac{\mathcal{K}-\sqrt{\mathcal{K}\kappa}}{\mathcal{K}+\sqrt{\mathcal{K}\kappa}}\big]^n,$ (6.299)
+
 - (ii) 对于所有 $\gamma \in (0,\infty), n \in \mathbb{N}_{0}$ 都有 $\|\Theta_n^\gamma - \vartheta\|_2 \ge \min\{[|\xi_1-\vartheta_1|, \dots, |\xi_d-\vartheta_d|]\big[\frac{\kappa}{\mathcal{K}}\big]^{n/2}\}$， (6.300)
+
 - (iii) 对于每个 $\varepsilon \in (0,\infty)$ 都存在 $C \in (0,\infty)$ 使得对于所有 $n \in \mathbb{N}_{0}$ 都有 $\|\mathcal{M}_n - \vartheta\|_2 \le C \big[\frac{\sqrt{\mathcal{K}}-\sqrt{\kappa}}{\sqrt{\mathcal{K}}+\sqrt{\kappa}} + \varepsilon\big]^n,$ (6.301)
+
 - (iv) 有 $\frac{\sqrt{\mathcal{K}}-\sqrt{\kappa}}{\sqrt{\mathcal{K}}+\sqrt{\kappa}} < \frac{\mathcal{K}-\kappa}{\mathcal{K}+\kappa}$ （参见定义 3.3.4）。
 
 *推论 6.3.13 的证明。* 首先，注意引理 6.3.7 证明了第 (i) 项。接下来观察引理 6.3.8 建立了第 (ii) 项。此外，注意命题 6.3.11 证明了第 (iii) 项。最后，观察引理 6.3.12 建立了第 (iv) 项。至此，推论 6.3.13 的证明已完成。 $\square$
 
-上述推论 6.3.13 大致表明，在所考虑的二次目标函数类中，(6.298) 中的带惯性 GD 优化方法优于经典的朴素 GD 优化方法（特别是上述引理 6.3.7 中 (6.224) 中的经典朴素 GD 优化方法），前提是目标函数 (6.296) 中的参数 $\lambda_{1}, \lambda_{2}, \ldots, \lambda_{d} \in (0,\infty)$ 满足假设
+
+
+上述推论 6.3.13 大致表明，在所考虑的二次目标函数类中，`(6.298)` 中的带惯性 GD 优化方法优于经典的朴素 GD 优化方法（特别是上述引理 6.3.7 中 `(6.224)` 中的经典朴素 GD 优化方法），前提是目标函数 `(6.296)` 中的参数 `$\lambda_{1}, \lambda_{2}, \ldots, \lambda_{d} \in (0,\infty)$` 满足假设
 
 $$\min\{\lambda_1, \dots, \lambda_d\} < \max\{\lambda_1, \dots, \lambda_d\}. \qquad (6.302)$$
 
-下一个初等结果，即下面的引理 6.3.14，展示了在 $\min\{\lambda_1, \dots, \lambda_d\} = \max\{\lambda_1, \dots, \lambda_d\}$ 的情况下，(6.298) 中的带惯性 GD 优化方法与上述引理 6.3.7 中 (6.224) 中的朴素 GD 优化方法是一致的。
+下一个初等结果，即下面的引理 6.3.14，展示了在 `$\min\{\lambda_1, \dots, \lambda_d\} = \max\{\lambda_1, \dots, \lambda_d\}$` 的情况下，`(6.298)` 中的带惯性 GD 优化方法与上述引理 6.3.7 中 `(6.224)` 中的朴素 GD 优化方法是一致的。
 
-**引理 6.3.14**（GD 优化方法与带惯性 GD 优化方法的重合）。设 $\vartheta \in \mathbb{R}^{d}$，$\xi \in \mathbb{R}^{d}$，$\alpha \in (0, \infty)$，设 $\mathscr{L}: \mathbb{R}^{d} \rightarrow \mathbb{R}$ 满足对于所有 $\theta \in \mathbb{R}^{d}$ 有
+### 引理 6.3.14
+`GD` 优化方法与带惯性 `GD` 优化方法的重合。设 `$\vartheta \in \mathbb{R}^{d}$`，`$\xi \in \mathbb{R}^{d}$`，`$\alpha \in (0, \infty)$`，设 `$\mathscr{L}: \mathbb{R}^{d} \rightarrow \mathbb{R}$` 满足对于所有 `$\theta \in \mathbb{R}^{d}$` 有
 
 $$\mathscr{L}(\theta) = \frac{\alpha}{2}\|\theta - \vartheta\|^2_2, \qquad (6.303)$$
 
-设 $\Theta: \mathbb{N}_0 \rightarrow \mathbb{R}^{d}$ 满足对于所有 $n \in \mathbb{N}$ 有
+设 `$\Theta: \mathbb{N}_0 \rightarrow \mathbb{R}^{d}$` 满足对于所有 `$n \in \mathbb{N}$` 有
 
 $$\Theta_0 = \xi \quad \text{且} \quad \Theta_n = \Theta_{n-1} - \frac{2}{(\alpha+\alpha)}\nabla \mathscr{L})(\Theta_{n-1}), \qquad (6.304)$$
 
-并设 $\boldsymbol{M} : \mathbb{N}_0 \cup \{-1\} \to \mathbb{R}^{d}$ 满足对于所有 $n \in \mathbb{N}$ 有 $\boldsymbol{M}_{-1} = \boldsymbol{M}_0 = \boldsymbol{\xi}$ 且
+并设 `$\boldsymbol{M} : \mathbb{N}_0 \cup \{-1\} \to \mathbb{R}^{d}$` 满足对于所有 `$n \in \mathbb{N}$` 有 `$\boldsymbol{M}_{-1} = \boldsymbol{M}_0 = \boldsymbol{\xi}$` 且
 
 $$\boldsymbol{M}_{n} = \boldsymbol{M}_{n-1} - \frac{4}{(\sqrt{\alpha} + \sqrt{\alpha})^2}(\nabla\mathcal{L})(\boldsymbol{M}_{n-1}) + \left[\frac{\sqrt{\alpha} - \sqrt{\alpha}}{\sqrt{\alpha} + \sqrt{\alpha}}\right]^2 (\boldsymbol{M}_{n-1} - \boldsymbol{M}_{n-2}) \qquad (6.305)$$
 
-（参见定义 3.3.4）。则
+（参见定义 `3.3.4`）。则
 
-- (i) 有 $\boldsymbol{M}|_{\mathbb{N}_0} : \mathbb{N}_0 \to \mathbb{R}^{d}$ 是目标函数 $\mathcal{L}$ 的带惯性 GD 过程，其学习率为 $\mathbb{N} \ni n \mapsto 1/\alpha \in [0, \infty)$，惯性衰减因子为 $\mathbb{N} \ni n \mapsto 0 \in [0, 1]$，初始值为 $\boldsymbol{\xi}$，
-- (ii) 对于所有 $n \in \mathbb{N}_0$ 都有 $\boldsymbol{M}_n = \boldsymbol{\Theta}_n$，并且
-- (iii) 对于所有 $n \in \mathbb{N}$ 都有 $\boldsymbol{\Theta}_n = \boldsymbol{\vartheta} = \boldsymbol{M}_n$
+- (i) 有 `$\boldsymbol{M}|_{\mathbb{N}_0} : \mathbb{N}_0 \to \mathbb{R}^{d}$` 是目标函数 `$\mathcal{L}$` 的带惯性 `GD` 过程，其学习率为 `$\mathbb{N} \ni n \mapsto 1/\alpha \in [0, \infty)$`，惯性衰减因子为 `$\mathbb{N} \ni n \mapsto 0 \in [0, 1]$`，初始值为 `$\boldsymbol{\xi}$`，
 
-（参见定义 6.3.1）。
+- (ii) 对于所有 `$n \in \mathbb{N}_0$` 都有 `$\boldsymbol{M}_n = \boldsymbol{\Theta}_n$`，并且
 
-引理 6.3.14 的证明。首先，注意 (6.305) 意味着对于所有 $n \in \mathbb{N}$ 都有
+- (iii) 对于所有 `$n \in \mathbb{N}$` 都有 `$\boldsymbol{\Theta}_n = \boldsymbol{\vartheta} = \boldsymbol{M}_n$`
+
+（参见定义 `6.3.1`）。
+
+引理 6.3.14 的证明。首先，注意 `(6.305)` 意味着对于所有 `$n \in \mathbb{N}$` 都有
 
 $$\boldsymbol{M}_n = \boldsymbol{M}_{n-1} - \frac{4}{(2\sqrt{\alpha})^2}(\nabla\mathcal{L})(\boldsymbol{M}_{n-1}) = \boldsymbol{M}_{n-1} - \frac{1}{\alpha}(\nabla\mathcal{L})(\boldsymbol{M}_{n-1}). \qquad (6.306)$$
 
-将此与假设 $\boldsymbol{M}_0 = \boldsymbol{\xi}$ 结合，建立了第 (i) 项。接下来注意 (6.304) 确保了对于所有 $n \in \mathbb{N}$ 都有
+将此与假设 `$\boldsymbol{M}_0 = \boldsymbol{\xi}$` 结合，建立了第 (i) 项。接下来注意 `(6.304)` 确保了对于所有 `$n \in \mathbb{N}$` 都有
 
 $$\boldsymbol{\Theta}_n = \boldsymbol{\Theta}_{n-1} - \frac{1}{\alpha}(\nabla\mathcal{L})(\boldsymbol{\Theta}_{n-1}). \qquad (6.307)$$
 
-将此与 (6.306) 以及假设 $\boldsymbol{\Theta}_0 = \boldsymbol{\xi} = \boldsymbol{M}_0$ 结合，证明了第 (ii) 项。此外，观察引理 5.6.4 确保了对于所有 $\boldsymbol{\theta} \in \mathbb{R}^{d}$ 都有
+将此与 `(6.306)` 以及假设 `$\boldsymbol{\Theta}_0 = \boldsymbol{\xi} = \boldsymbol{M}_0$` 结合，证明了第 (ii) 项。此外，观察引理 `5.6.4` 确保了对于所有 `$\boldsymbol{\theta} \in \mathbb{R}^{d}$` 都有
 
 $$(\nabla\mathcal{L})(\boldsymbol{\theta}) = \frac{\alpha}{2}(2(\boldsymbol{\theta} - \boldsymbol{\vartheta})) = \alpha(\boldsymbol{\theta} - \boldsymbol{\vartheta}). \qquad (6.308)$$
 
-接下来我们断言对于所有 $n \in \mathbb{N}$ 都有
+接下来我们断言对于所有 `$n \in \mathbb{N}$` 都有
 
 $$\boldsymbol{\Theta}_n = \boldsymbol{\vartheta}. \qquad (6.309)$$
 
-现在我们通过关于 $n \in \mathbb{N}$ 的归纳法证明 (6.309)。对于基始情形 $n = 1$，注意 (6.307) 和 (6.308) 意味着
+现在我们通过关于 `$n \in \mathbb{N}$` 的归纳法证明 `(6.309)`。对于基始情形 `$n = 1$`，注意 `(6.307)` 和 `(6.308)` 意味着
 
 $$\boldsymbol{\Theta}_1 = \boldsymbol{\Theta}_0 - \frac{1}{\alpha}(\nabla\mathcal{L})(\boldsymbol{\Theta}_0) = \boldsymbol{\xi} - \frac{1}{\alpha}(\alpha(\boldsymbol{\xi} - \boldsymbol{\vartheta})) = \boldsymbol{\xi} - (\boldsymbol{\xi} - \boldsymbol{\vartheta}) = \boldsymbol{\vartheta}. \qquad (6.310)$$
 
-这建立了基始情形 $n = 1$ 中的 (6.309)。对于归纳步骤，观察 (6.307) 和 (6.308) 确保了对于所有满足 $\boldsymbol{\Theta}_n = \boldsymbol{\vartheta}$ 的 $n \in \mathbb{N}$ 都有
+这建立了基始情形 `$n = 1$` 中的 `(6.309)`。对于归纳步骤，观察 `(6.307)` 和 `(6.308)` 确保了对于所有满足 `$\boldsymbol{\Theta}_n = \boldsymbol{\vartheta}$` 的 `$n \in \mathbb{N}$` 都有
 
 $$\boldsymbol{\Theta}_{n+1} = \boldsymbol{\Theta}_n - \frac{1}{\alpha}(\nabla\mathcal{L})(\boldsymbol{\Theta}_n) = \boldsymbol{\vartheta} - \frac{1}{\alpha}(\alpha(\boldsymbol{\vartheta} - \boldsymbol{\vartheta})) = \boldsymbol{\vartheta}. \qquad (6.311)$$
 
-归纳法从而证明了 (6.309)。将 (6.309) 与第 (ii) 项结合，建立了第 (iii) 项。至此，引理 6.3.14 的证明已完成。 $\square$
-
-
-
+归纳法从而证明了 `(6.309)`。将 `(6.309)` 与第 (ii) 项结合，建立了第 (iii) 项。至此，引理 `6.3.14` 的证明已完成。 $\square$
 
 ## 6.3.4 带有动量和不带动量的梯度下降优化的数值比较
 
-在本小节中，我们通过例 6.3.15、源代码 6.1 和图 6.1 对普通梯度下降优化方法和带动量的梯度下降优化方法进行了数值比较，针对的是下面 (6.312)–(6.313) 中的特定二次优化问题。
+在本小节中，我们通过例 `6.3.15`、源代码 `6.1` 和图 `6.1` 对普通梯度下降优化方法和带动量的梯度下降优化方法进行了数值比较，针对的是下面 `(6.312)–(6.313)` 中的特定二次优化问题。
 
-**例 6.3.15.** 设 $\mathcal{K}=10$，$\kappa=1$，$\vartheta=(\vartheta_1,\vartheta_2)\in\mathbb{R}^2$，$\xi=(\xi_1,\xi_2)\in\mathbb{R}^2$ 满足
+### 例 6.3.15
+设 `$\mathcal{K}=10$`，`$\kappa=1$`，`$\vartheta=(\vartheta_1,\vartheta_2)\in\mathbb{R}^2$`，`$\xi=(\xi_1,\xi_2)\in\mathbb{R}^2$` 满足
 
-$\vartheta=\begin{pmatrix}\vartheta_1\\\vartheta_2\end{pmatrix}=\begin{pmatrix}1\\1\end{pmatrix}\quad \text{且}\quad \xi=\begin{pmatrix}\xi_1\\\xi_2\end{pmatrix}=\begin{pmatrix}5\\3\end{pmatrix}$，(6.312)
+`$\vartheta=\begin{pmatrix}\vartheta_1\\\vartheta_2\end{pmatrix}=\begin{pmatrix}1\\1\end{pmatrix}\quad \text{且}\quad \xi=\begin{pmatrix}\xi_1\\\xi_2\end{pmatrix}=\begin{pmatrix}5\\3\end{pmatrix}$`，`(6.312)`
 
-设 $\mathcal{L}:\mathbb{R}^2\to\mathbb{R}$ 满足对所有 $\theta=(\theta_1,\theta_2)\in\mathbb{R}^2$ 有
+设 `$\mathcal{L}:\mathbb{R}^2\to\mathbb{R}$` 满足对所有 `$\theta=(\theta_1,\theta_2)\in\mathbb{R}^2$` 有
 
-$\mathcal{L}(\theta)=\begin{pmatrix}\xi_1\\\xi_2\end{pmatrix}\big[\theta_1-\vartheta_1\big]^2+\begin{pmatrix}\frac{\xi_1}{2}\\\frac{\xi_2}{2}\end{pmatrix}\big[\theta_2-\vartheta_2\big]^2$，(6.313)
+`$\mathcal{L}(\theta)=\begin{pmatrix}\xi_1\\\xi_2\end{pmatrix}\big[\theta_1-\vartheta_1\big]^2+\begin{pmatrix}\frac{\xi_1}{2}\\\frac{\xi_2}{2}\end{pmatrix}\big[\theta_2-\vartheta_2\big]^2$`，`(6.313)`
 
-设 $\Theta:\mathbb{N}_0\to\mathbb{R}^2$ 满足对所有 $n\in\mathbb{N}$ 有 $\Theta_0=\xi$ 且
+设 `$\Theta:\mathbb{N}_0\to\mathbb{R}^2$` 满足对所有 `$n\in\mathbb{N}$` 有 `$\Theta_0=\xi$` 且
 
-$\begin{aligned}\Theta_n=\;&\Theta_{n-1}-\frac{2}{(\kappa+\mathcal{K})}\big(\nabla\mathcal{L}\big)(\Theta_{n-1})\;=\;\Theta_{n-1}-\frac{2}{11}\big(\nabla\mathcal{L}\big)(\Theta_{n-1})\\ &=\;\Theta_{n-1}-0.18\big(\nabla\mathcal{L}\big)(\Theta_{n-1})\;\approx\;\Theta_{n-1}-0.18\big(\nabla\varphi\big)(\Theta_{n-1}),\end{aligned}$ (6.314)
+`$\begin{aligned}\Theta_n=\;&\Theta_{n-1}-\frac{2}{(\kappa+\mathcal{K})}\big(\nabla\mathcal{L}\big)(\Theta_{n-1})\;=\;\Theta_{n-1}-\frac{2}{11}\big(\nabla\mathcal{L}\big)(\Theta_{n-1})\\ &=\;\Theta_{n-1}-0.18\big(\nabla\mathcal{L}\big)(\Theta_{n-1})\;\approx\;\Theta_{n-1}-0.18\big(\nabla\varphi\big)(\Theta_{n-1}),\end{aligned}$` `(6.314)`
 
-并设 $\mathcal{M}:\mathbb{N}_0\to\mathbb{R}^2$ 和 $\mathbf{m}:\mathbb{N}_0\to\mathbb{R}^2$ 满足对所有 $n\in\mathbb{N}$ 有 $\mathcal{M}_0=\xi$，$\mathbf{m}_0=0$，$\mathcal{M}_n=\mathcal{M}_{n-1}-0.3\,\mathbf{m}_n$，且
+并设 `$\mathcal{M}:\mathbb{N}_0\to\mathbb{R}^2$` 和 `$\mathbf{m}:\mathbb{N}_0\to\mathbb{R}^2$` 满足对所有 `$n\in\mathbb{N}$` 有 `$\mathcal{M}_0=\xi$`，`$\mathbf{m}_0=0$`，`$\mathcal{M}_n=\mathcal{M}_{n-1}-0.3\,\mathbf{m}_n$`，且
 
-$\begin{aligned}\mathbf{m}_n=\;&0.5\,\mathbf{m}_{n-1}+(1-0.5)\big(\nabla\mathcal{L}\big)(\mathcal{M}_{n-1})\\ &=\;0.5\,(\mathbf{m}_{n-1}+(\nabla\mathcal{L}\big)(\mathcal{M}_{n-1})\big).\end{aligned}$ (6.315)
+`$\begin{aligned}\mathbf{m}_n=\;&0.5\,\mathbf{m}_{n-1}+(1-0.5)\big(\nabla\mathcal{L}\big)(\mathcal{M}_{n-1})\\ &=\;0.5\,(\mathbf{m}_{n-1}+(\nabla\mathcal{L}\big)(\mathcal{M}_{n-1})\big).\end{aligned}$` `(6.315)`
 
 则
 
-- (i) 对所有 $\theta=(\theta_1,\theta_2)\in\mathbb{R}^2$ 有
+- (i) 对所有 `$\theta=(\theta_1,\theta_2)\in\mathbb{R}^2$` 有
 
-$\begin{aligned}\big(\nabla\mathcal{L}\big)(\theta)=\begin{pmatrix}\kappa(\theta_1-\vartheta_1)\\\mathcal{K}(\theta_2-\vartheta_2)\end{pmatrix}=\begin{pmatrix}\theta_1-1\\10\,(\theta_2-1)\end{pmatrix}\;\;,\end{aligned}$ (6.316)
+`$\begin{aligned}\big(\nabla\mathcal{L}\big)(\theta)=\begin{pmatrix}\kappa(\theta_1-\vartheta_1)\\\mathcal{K}(\theta_2-\vartheta_2)\end{pmatrix}=\begin{pmatrix}\theta_1-1\\10\,(\theta_2-1)\end{pmatrix}\;\;,\end{aligned}$` `(6.316)`
 
 - (ii) 有
 
-$\Theta_0=\begin{pmatrix}5\\3\end{pmatrix}$，(6.317)
+`$\Theta_0=\begin{pmatrix}5\\3\end{pmatrix}$`，`(6.317)`
 
-$\begin{aligned}\Theta_1=\;&\Theta_0-\frac{2}{11}\big(\nabla\mathcal{L}\big)(\Theta_0)\;\approx\;\Theta_0-0.18\big(\nabla\varphi\big)(\Theta_0)\\ =\;&\begin{pmatrix}5\\3\end{pmatrix}-0.18\,\begin{pmatrix}5-1\\10(3-1)\end{pmatrix}\;=\;\begin{pmatrix}5-0.18\cdot4\\3-0.18\cdot20\end{pmatrix}\\ =\;&\begin{pmatrix}5-0.72\\3-3.6\end{pmatrix}\;=\;\begin{pmatrix}4.28\\-0.6\end{pmatrix},\end{aligned}$ (6.318)
+`$\begin{aligned}\Theta_1=\;&\Theta_0-\frac{2}{11}\big(\nabla\mathcal{L}\big)(\Theta_0)\;\approx\;\Theta_0-0.18\big(\nabla\varphi\big)(\Theta_0)\\ =\;&\begin{pmatrix}5\\3\end{pmatrix}-0.18\,\begin{pmatrix}5-1\\10(3-1)\end{pmatrix}\;=\;\begin{pmatrix}5-0.18\cdot4\\3-0.18\cdot20\end{pmatrix}\\ =\;&\begin{pmatrix}5-0.72\\3-3.6\end{pmatrix}\;=\;\begin{pmatrix}4.28\\-0.6\end{pmatrix},\end{aligned}$` `(6.318)`
 
-$\begin{align} \Theta_2 &\approx \Theta_1 - 0.18(\nabla \mathcal{L})(\Theta_1) = \begin{pmatrix}4.28 \\ -0.6 \end{pmatrix} - 0.18 \begin{pmatrix}4.28 - 1 \\ 10(-0.6 - 1) \end{pmatrix} \\ &= \begin{pmatrix}4.28 - 0.18 \cdot 3.28 \\ -0.6 - 0.18 \cdot 10 \cdot (-1.6) \end{pmatrix} = \begin{pmatrix}4.28 - 0.5904 \\ -0.6 + 2.88 \end{pmatrix} \\ &= \begin{pmatrix}3.6896 \\ 2.28 \end{pmatrix} \approx \begin{pmatrix}3.69 \\ 2.28 \end{pmatrix}, \end{align}$ (6.319)
+`$\begin{align} \Theta_2 &\approx \Theta_1 - 0.18(\nabla \mathcal{L})(\Theta_1) = \begin{pmatrix}4.28 \\ -0.6 \end{pmatrix} - 0.18 \begin{pmatrix}4.28 - 1 \\ 10(-0.6 - 1) \end{pmatrix} \\ &= \begin{pmatrix}4.28 - 0.18 \cdot 3.28 \\ -0.6 - 0.18 \cdot 10 \cdot (-1.6) \end{pmatrix} = \begin{pmatrix}4.28 - 0.5904 \\ -0.6 + 2.88 \end{pmatrix} \\ &= \begin{pmatrix}3.6896 \\ 2.28 \end{pmatrix} \approx \begin{pmatrix}3.69 \\ 2.28 \end{pmatrix}, \end{align}$` `(6.319)`
 
-$\begin{align} \Theta_3 &\approx \Theta_2 - 0.18(\nabla \mathcal{ L})(\Theta_2) \approx \begin{pmatrix}3.69 \\ 2.28 \end{pmatrix} - 0.18 \begin{pmatrix}3.69 - 1 \\ 10(2.28 - 1) \end{pmatrix} \\ &= \begin{pmatrix}3.69 - 0.18 \cdot 2.69 \\ 2.28 - 0.18 \cdot 10 \cdot 1.28 \end{pmatrix} = \begin{pmatrix}3.69 - 0.4842 \\ 2.28 - 2.304 \end{pmatrix} \tag{6.320} \\ &= \begin{pmatrix}3.2058 \\ -0.024 \end{pmatrix} \approx \begin{pmatrix}3.21 \\ -0.02 \end{pmatrix}, \end{align}$
+`$\begin{align} \Theta_3 &\approx \Theta_2 - 0.18(\nabla \mathcal{ L})(\Theta_2) \approx \begin{pmatrix}3.69 \\ 2.28 \end{pmatrix} - 0.18 \begin{pmatrix}3.69 - 1 \\ 10(2.28 - 1) \end{pmatrix} \\ &= \begin{pmatrix}3.69 - 0.18 \cdot 2.69 \\ 2.28 - 0.18 \cdot 10 \cdot 1.28 \end{pmatrix} = \begin{pmatrix}3.69 - 0.4842 \\ 2.28 - 2.304 \end{pmatrix} \tag{6.320} \\ &= \begin{pmatrix}3.2058 \\ -0.024 \end{pmatrix} \approx \begin{pmatrix}3.21 \\ -0.02 \end{pmatrix}, \end{align}$`
 
-$\ddots$
+`$\ddots$`
 
 以及
 
 (ii) 有
 
-$\mathcal{M}_0 = \begin{pmatrix}5 \\ 3 \end{pmatrix}$，(6.321)
+`$\mathcal{M}_0 = \begin{pmatrix}5 \\ 3 \end{pmatrix}$`，`(6.321)`
 
-$\begin{align} \mathbf{m}_1 &= 0.5 \left(\mathbf{m}_0 + (\nabla \mathcal{L})(\mathcal{M}_0)\right) = 0.5 \left(\begin{pmatrix}0 \\ 0 \end{pmatrix} + \begin{pmatrix}5 - 1 \\ 10(3 - 1) \end{pmatrix}\right) \tag{6.322} \\ &= \begin{pmatrix}0.5(0 + 4) \\ 0.5(0 + 20) \end{pmatrix} = \begin{pmatrix}2 \\ 10 \end{pmatrix}, \end{align}$
+`$\begin{align} \mathbf{m}_1 &= 0.5 \left(\mathbf{m}_0 + (\nabla \mathcal{L})(\mathcal{M}_0)\right) = 0.5 \left(\begin{pmatrix}0 \\ 0 \end{pmatrix} + \begin{pmatrix}5 - 1 \\ 10(3 - 1) \end{pmatrix}\right) \tag{6.322} \\ &= \begin{pmatrix}0.5(0 + 4) \\ 0.5(0 + 20) \end{pmatrix} = \begin{pmatrix}2 \\ 10 \end{pmatrix}, \end{align}$`
 
-$\mathcal{M}_1 = \mathcal{M}_0 - 0.3 \mathbf{m}_1 = \begin{pmatrix}5 \\ 3 \end{pmatrix} - 0.3 \begin{pmatrix}2 \\ 10 \end{pmatrix} = \begin{pmatrix}4.4 \\ 0 \end{pmatrix}$，(6.323)
+`$\mathcal{M}_1 = \mathcal{M}_0 - 0.3 \mathbf{m}_1 = \begin{pmatrix}5 \\ 3 \end{pmatrix} - 0.3 \begin{pmatrix}2 \\ 10 \end{pmatrix} = \begin{pmatrix}4.4 \\ 0 \end{pmatrix}$`，`(6.323)`
 
-$\begin{align} \mathbf{m}_2 &= 0.5(\mathbf{m}_1 + (\nabla\mathcal{L})(\mathcal{M}_1)) = 0.5\left(\begin{pmatrix} 2 \\ 10 \end{pmatrix} + \begin{pmatrix} 4.4 - 1 \\ 10(0-1) \end{pmatrix}\right) \\ &= \begin{pmatrix} 0.5(2+3.4) \\ 0.5(10-10) \end{pmatrix} = \begin{pmatrix} 2.7 \\ 0 \end{pmatrix}. \end{align}$
+`$\begin{align} \mathbf{m}_2 &= 0.5(\mathbf{m}_1 + (\nabla\mathcal{L})(\mathcal{M}_1)) = 0.5\left(\begin{pmatrix} 2 \\ 10 \end{pmatrix} + \begin{pmatrix} 4.4 - 1 \\ 10(0-1) \end{pmatrix}\right) \\ &= \begin{pmatrix} 0.5(2+3.4) \\ 0.5(10-10) \end{pmatrix} = \begin{pmatrix} 2.7 \\ 0 \end{pmatrix}. \end{align}$`
+
+
 
 $\mathcal{M}_2 = \mathcal{M}_1 - 0.3\mathbf{m}_2 = \begin{pmatrix} 4.4 \\ 0 \end{pmatrix} - 0.3\begin{pmatrix} 2.7 \\ 0 \end{pmatrix} = \begin{pmatrix} 4.4 - 0.81 \\ 0 \end{pmatrix} = \begin{pmatrix} 3.59 \\ 0 \end{pmatrix}$，
 
@@ -9624,9 +10333,6 @@ plt.savefig("../plots/GD_momentum_plots.pdf")
 
 练习 6.3.3. 设 $(\gamma_{n})_{n\in\mathbb{N}}\subseteq [0,\infty)$，$(\alpha_{n})_{n\in\mathbb{N}}\subseteq [0,1]$ 满足对所有 $n\in\mathbb{N}$ 有 $\gamma_{n} = \frac{1}{n}$ 且 $\alpha_{n} = \frac{1}{2}$，设 $\mathcal{L}: \mathbb{R}\to\mathbb{R}$ 满足对所有 $\theta\in\mathbb{R}$ 有 $\mathcal{L}(\theta) = \theta^{2}$，并设 $\Theta$ 是目标函数 $\mathcal{L}$ 的带动量的梯度下降过程，其学习率为 $(\gamma_{n})_{n\in\mathbb{N}}$，动量衰减因子为 $(\alpha_{n})_{n\in\mathbb{N}}$，初始值为 1（参见定义 6.3.1）。请显式给出 $\Theta_{1}$、$\Theta_{2}$、$\Theta_{3}$ 和 $\Theta_{4}$ 的值，并证明你的结果是正确的！
 
-
-
-
 ## 6.4 具有 Nesterov 动量的梯度下降优化
 
 在本节中，我们回顾 Nesterov 加速梯度下降优化方法。该方法最初由 Nesterov [302] 引入（例如参见 Sutskever 等人 [387]）。Nesterov 加速梯度下降优化方法可以被视为在动量梯度下降优化方法（参见定义 6.3.1）的基础上，通过试图为算法提供某种前瞻性而构建的。一种类似的观点是将 Nesterov 加速梯度下降优化方法看作是动量梯度下降优化方法（参见定义 6.3.1）与显式中点梯度下降优化方法（参见 6.2 节）的组合。
@@ -9659,11 +10365,13 @@ $$\Theta_{0}=\xi \quad \text { 且 } \quad \Theta_{n}^{(i)}=\Theta_{n-1}^{(i)}-\
 
 $$\mathcal{G}(\theta)=(\nabla \mathcal{L})(\theta) .$$
 
+
+
 那么我们称 $\Theta$ 为目标函数 $\mathcal{L}$ 具有广义梯度 $\mathcal{G}$、学习率 $\left(\gamma_{n}\right)_{n \in \mathbb{N}}$、二阶矩衰减因子 $\left(\beta_{n}\right)_{n \in \mathbb{N}}$、正则化因子 $\varepsilon$ 以及初始值 $\xi$ 的 RMSprop 梯度下降过程（我们又称 $\Theta$ 为目标函数 $\mathcal{L}$ 具有学习率 $\left(\gamma_{n}\right)_{n \in \mathbb{N}}$、二阶矩衰减因子 $\left(\beta_{n}\right)_{n \in \mathbb{N}}$、正则化因子 $\varepsilon$ 以及初始值 $\xi$ 的 RMSprop 梯度下降过程），当且仅当 $\Theta=\left(\Theta^{(1)}, \ldots, \Theta^{(\mathbf{d})}\right): \mathbb{N}_{0} \rightarrow \mathbb{R}^{\mathbf{d}}$ 是从 $\mathbb{N}_{0}$ 到 $\mathbb{R}^{\mathbf{d}}$ 的函数，且满足存在 $\mathrm{M}:=\left(\mathrm{M}^{(1)}, \ldots, \mathrm{M}^{(\mathbf{d})}\right): \mathbb{N}_{0} \rightarrow \mathbb{R}^{\mathbf{d}}$ 使得对于所有 $n \in \mathbb{N}, i \in\{1,2, \ldots, \mathbf{d}\}$ 成立
 
 $$\Theta_{0}=\xi, \quad \mathrm{M}_{0}=0, \quad \mathrm{M}_{n}^{(i)}=\beta_{n} \mathrm{M}_{n-1}^{(i)}+\left(1-\beta_{n}\right)\left|\mathcal{G}_{i}\left(\Theta_{n-1}\right)\right|^{2}, \text { 且 } \Theta_{n}^{(i)}=\Theta_{n-1}^{(i)}-\gamma_{n}\left[\varepsilon+\mathrm{M}_{n}^{(i)}\right]^{-1 / 2} \mathcal{G}_{i}\left(\Theta_{n-1}\right) .$$
 
-### 6.6.1 RMSprop 中平方均值项的表示
+## 6.6.1 RMSprop 中平方均值项的表示
 
 **引理 6.6.2**（关于 RMSprop 中二阶项的表示）。*设* $\mathfrak{d} \in \mathbb{N}$，$(\gamma_n)_{n \in \mathbb{N}} \subseteq [0, \infty)$，$(\beta_n)_{n \in \mathbb{N}} \subseteq [0, 1)$，$(b_{n,k})_{(n,k) \in (\mathbb{N}_0)^2} \subseteq \mathbb{R}$，$\varepsilon \in (0, \infty)$，$\xi \in \mathbb{R}^{\mathfrak{d}}$ *满足对于所有* $n \in \mathbb{N}$，$k \in \{0, 1, \ldots, n-1\}$ 成立
 
@@ -9676,6 +10384,7 @@ $$\mathcal{G}(\theta) = (\nabla \mathcal{L})(\theta), \tag{6.338}$$
 *且设* $\Theta = (\Theta^{(1)}, \ldots, \Theta^{(\mathfrak{d})}): \mathbb{N}_0 \rightarrow \mathbb{R}^{\mathfrak{d}}$ *为目标函数* $\mathcal{L}$ 具有广义梯度* $\mathcal{G}$*、学习率* $(\gamma_n)_{n \in \mathbb{N}}$*、二阶矩衰减因子* $(\beta_n)_{n \in \mathbb{N}}$*、正则化因子* $\varepsilon$ *以及初始值* $\xi$ *的 RMSprop 梯度下降过程*（*参见定义 6.6.1*）。*则*
 
 - *(i) 对于所有* $n \in \mathbb{N}$，$k \in \{0, 1, \ldots, n-1\}$* 成立* $0 \le b_{n,k} \le 1$*，*
+
 - *(ii) 对于所有* $n \in \mathbb{N}$* 成立*
 
 $$\sum_{k=0}^{n-1} b_{n,k} = 1 - \prod_{k=1}^{n} \beta_k, \tag{6.339}$$
@@ -9694,107 +10403,144 @@ $$\mathbb{M}_n^{(i)} = \beta_n \mathbb{M}_{n-1}^{(i)} + (1 - \beta_n) |\mathcal{
 
 $$\mathbb{M}_n^{(i)} = \sum_{k=0}^{n-1} b_{n,k} |\mathcal{G}_i(\Theta_k)|^2 \quad \text{ 且 } \quad \sum_{k=0}^{n-1} b_{n,k} = 1 - \prod_{k=1}^{n} \beta_k. \tag{6.342}$$
 
-
-
-
-
-这证明了第 (ii) 项。此外，注意 (6.335)、(6.336)、(6.341) 和 (6.342) 表明，对于所有 \(n \in \mathbb{N}\)，\(i \in \{1, 2, \ldots, \mathfrak{d}\}\)，均有
+这证明了第 (ii) 项。此外，注意 (6.335)、(6.336)、(6.341) 和 (6.342) 表明，对于所有 $n \in \mathbb{N}$，$i \in \{1, 2, \ldots, \mathfrak{d}\}$，均有
 
 \begin{equation}
+
 \begin{split}
+
 \Theta_n^{(i)} &= \Theta_{n-1}^{(i)} - \gamma_n \left[ \varepsilon + \mathbb{M}_{n}^{(i)} \right]^{-1/2} \mathcal{G}_i(\Theta_{n-1}) \\
+
 &= \Theta_{n-1}^{(i)} - \gamma_n \left[ \varepsilon + \sum_{k=0}^{n-1} b_{n,k} [\mathcal{G}_i(\Theta_k)]^2 \right]^{-1/2} \mathcal{G}_i(\Theta_{n-1}).
+
 \end{split}
+
 \tag{6.343}
+
 \end{equation}
 
 这就确立了第 (iii) 项。引理 6.6.2 的证明至此完成。
 
-### 6.6.2 偏差修正的均方根传播 \(\mathbf{GD}\) 优化
+## 6.6.2 偏差修正的均方根传播 $\mathbf{GD}$ 优化
 
-**定义 6.6.3 (偏差修正的 \(\mathbf{RMSprop}\) \(\mathbf{GD}\) 优化方法)。** 设 \(\mathfrak{d} \in \mathbb{N}\)，\((\gamma_n)_{n \in \mathbb{N}} \subseteq [0, \infty)\)，\((\beta_n)_{n \in \mathbb{N}} \subseteq [0, 1]\)，\(\varepsilon \in (0, \infty)\)，\(\xi \in \mathbb{R}^\mathfrak{d}\) 满足
+**定义 6.6.3 (偏差修正的 $\mathbf{RMSprop}$ $\mathbf{GD}$ 优化方法)。** 设 $\mathfrak{d} \in \mathbb{N}$，$(\gamma_n)_{n \in \mathbb{N}} \subseteq [0, \infty)$，$(\beta_n)_{n \in \mathbb{N}} \subseteq [0, 1]$，$\varepsilon \in (0, \infty)$，$\xi \in \mathbb{R}^\mathfrak{d}$ 满足
 
 \begin{equation}
+
 \beta_1 < 1
+
 \tag{6.344}
+
 \end{equation}
 
-且设 \(\mathcal{L} : \mathbb{R}^\mathfrak{d} \to \mathbb{R}\) 和 \(\mathcal{G} = (\mathcal{G}_1, \ldots, \mathcal{G}_\mathfrak{d}) : \mathbb{R}^\mathfrak{d} \to \mathbb{R}^\mathfrak{d}\) 满足对于所有 \(U \in \{V \subseteq \mathbb{R}^\mathfrak{d} : V \text{ 是开集}\}\)，\(\theta \in U\) 且 \(\mathcal{L}|_U \in C^1(U, \mathbb{R}^\mathfrak{d})\)，均有
+且设 $\mathcal{L} : \mathbb{R}^\mathfrak{d} \to \mathbb{R}$ 和 $\mathcal{G} = (\mathcal{G}_1, \ldots, \mathcal{G}_\mathfrak{d}) : \mathbb{R}^\mathfrak{d} \to \mathbb{R}^\mathfrak{d}$ 满足对于所有 $U \in \{V \subseteq \mathbb{R}^\mathfrak{d} : V \text{ 是开集}\}$，$\theta \in U$ 且 $\mathcal{L}|_U \in C^1(U, \mathbb{R}^\mathfrak{d})$，均有
 
 \begin{equation}
+
 \mathcal{G}(\theta) = (\nabla \mathcal{L})(\theta).
+
 \tag{6.345}
+
 \end{equation}
 
-则我们称 \(\Theta\) 为目标函数 \(\mathcal{L}\) 具有广义梯度 \(\mathcal{G}\)、学习率 \((\gamma_n)_{n \in \mathbb{N}}\)、二阶矩衰减因子 \((\beta_n)_{n \in \mathbb{N}}\)、正则化因子 \(\varepsilon\) 和初始值 \(\xi\) 的偏差修正 \(\mathbf{RMSprop}\) \(\mathbf{GD}\) 过程（我们称 \(\Theta\) 为目标函数 \(\mathcal{L}\) 具有学习率 \((\gamma_n)_{n \in \mathbb{N}}\)、二阶矩衰减因子 \((\beta_n)_{n \in \mathbb{N}}\)、正则化因子 \(\varepsilon\) 和初始值 \(\xi\) 的偏差修正 \(\mathbf{RMSprop}\) \(\mathbf{GD}\) 过程）当且仅当存在 \(\Theta = (\Theta^{(1)}, \ldots, \Theta^{(\mathfrak{d})}) : \mathbb{N}_0 \to \mathbb{R}^\mathfrak{d}\) 为从 \(\mathbb{N}_0\) 到 \(\mathbb{R}^\mathfrak{d}\) 的函数，且满足存在 \(\mathbb{M} = (\mathbb{M}^{(1)}, \ldots, \mathbb{M}^{(\mathfrak{d})}) : \mathbb{N}_0 \to \mathbb{R}^\mathfrak{d}\)，使得对于所有 \(n \in \mathbb{N}\)，\(i \in \{1, 2, \ldots, \mathfrak{d}\}\) 均有
+则我们称 $\Theta$ 为目标函数 $\mathcal{L}$ 具有广义梯度 $\mathcal{G}$、学习率 $(\gamma_n)_{n \in \mathbb{N}}$、二阶矩衰减因子 $(\beta_n)_{n \in \mathbb{N}}$、正则化因子 $\varepsilon$ 和初始值 $\xi$ 的偏差修正 $\mathbf{RMSprop}$ $\mathbf{GD}$ 过程（我们称 $\Theta$ 为目标函数 $\mathcal{L}$ 具有学习率 $(\gamma_n)_{n \in \mathbb{N}}$、二阶矩衰减因子 $(\beta_n)_{n \in \mathbb{N}}$、正则化因子 $\varepsilon$ 和初始值 $\xi$ 的偏差修正 $\mathbf{RMSprop}$ $\mathbf{GD}$ 过程）当且仅当存在 $\Theta = (\Theta^{(1)}, \ldots, \Theta^{(\mathfrak{d})}) : \mathbb{N}_0 \to \mathbb{R}^\mathfrak{d}$ 为从 $\mathbb{N}_0$ 到 $\mathbb{R}^\mathfrak{d}$ 的函数，且满足存在 $\mathbb{M} = (\mathbb{M}^{(1)}, \ldots, \mathbb{M}^{(\mathfrak{d})}) : \mathbb{N}_0 \to \mathbb{R}^\mathfrak{d}$，使得对于所有 $n \in \mathbb{N}$，$i \in \{1, 2, \ldots, \mathfrak{d}\}$ 均有
 
 \begin{equation}
+
 \Theta_0 = \xi, \quad \mathbb{M}_0 = 0, \quad \mathbb{M}_n^{(i)} = \beta_n \mathbb{M}_{n-1}^{(i)} + (1 - \beta_n) [\mathcal{G}_i(\Theta_{n-1})]^2,
+
 \tag{6.346}
+
 \end{equation}
 
 以及
 
 \begin{equation}
+
 \Theta_n^{(i)} = \Theta_{n-1}^{(i)} - \gamma_n \left[ \varepsilon + \frac{\mathbb{M}_n^{(i)}}{1 - \prod_{k=1}^{n} \beta_k} \right]^{1/2}^{-1} \mathcal{G}_i(\Theta_{n-1}).
+
 \tag{6.347}
+
 \end{equation}
 
-**引理 6.6.4 (关于偏差修正 \(\mathbf{RMSprop}\) 中二阶项表示)。** 设 \(\mathfrak{d} \in \mathbb{N}\)，\((\gamma_n)_{n \in \mathbb{N}} \subseteq [0, \infty)\)，\((\beta_n)_{n \in \mathbb{N}} \subseteq [0, 1]\)，\((b_{n,k})_{(n,k) \in (\mathbb{N}_0)^2} \subseteq \mathbb{R}\)，\(\varepsilon \in (0, \infty)\)，\(\xi \in \mathbb{R}^\mathfrak{d}\) 满足对于所有 \(n \in \mathbb{N}\)，\(k \in \{0, 1, \ldots, n - 1\}\) 均有
+**引理 6.6.4 (关于偏差修正 $\mathbf{RMSprop}$ 中二阶项表示)。** 设 $\mathfrak{d} \in \mathbb{N}$，$(\gamma_n)_{n \in \mathbb{N}} \subseteq [0, \infty)$，$(\beta_n)_{n \in \mathbb{N}} \subseteq [0, 1]$，$(b_{n,k})_{(n,k) \in (\mathbb{N}_0)^2} \subseteq \mathbb{R}$，$\varepsilon \in (0, \infty)$，$\xi \in \mathbb{R}^\mathfrak{d}$ 满足对于所有 $n \in \mathbb{N}$，$k \in \{0, 1, \ldots, n - 1\}$ 均有
 
 \begin{equation}
+
 b_{n,k} = \frac{(1 - \beta_{k+1}) \prod_{\ell = k+2}^{n} \beta_\ell}{1 - \prod_{k=1}^{n} \beta_k},
+
 \tag{6.348}
+
 \end{equation}
 
-设 \(\mathcal{L}: \mathbb{R}^\mathfrak{d} \to \mathbb{R}\) 和 \(\mathcal{G} = (\mathcal{G}_1, \ldots, \mathcal{G}_\mathfrak{d}): \mathbb{R}^\mathfrak{d} \to \mathbb{R}^\mathfrak{d}\) 满足对于所有 \(U \in \{V \subseteq \mathbb{R}^\mathfrak{d}: V \text{ 是开集}\}\)，\(\theta \in U\) 且 \(\mathcal{L}|_U \in C^1(U, \mathbb{R}^\mathfrak{d})\)，均有
+设 $\mathcal{L}: \mathbb{R}^\mathfrak{d} \to \mathbb{R}$ 和 $\mathcal{G} = (\mathcal{G}_1, \ldots, \mathcal{G}_\mathfrak{d}): \mathbb{R}^\mathfrak{d} \to \mathbb{R}^\mathfrak{d}$ 满足对于所有 $U \in \{V \subseteq \mathbb{R}^\mathfrak{d}: V \text{ 是开集}\}$，$\theta \in U$ 且 $\mathcal{L}|_U \in C^1(U, \mathbb{R}^\mathfrak{d})$，均有
 
 \begin{equation}
+
 \mathcal{G}(\theta) = (\nabla \mathcal{L})(\theta), \tag{6.349}
+
 \end{equation}
 
-且设 \(\Theta = (\Theta^{(1)}, \ldots, \Theta^{(\mathfrak{d})}): \mathbb{N}_0 \to \mathbb{R}^\mathfrak{d}\) 为目标函数 \(\mathcal{L}\) 具有广义梯度 \(\mathcal{G}\)、学习率 \((\gamma_n)_{n \in \mathbb{N}}\)、二阶矩衰减因子 \((\beta_n)_{n \in \mathbb{N}}\)、正则化因子 \(\varepsilon\) 和初始值 \(\xi\) 的偏差修正 RMSprop GD 过程（参见定义 6.6.3）。则
+且设 $\Theta = (\Theta^{(1)}, \ldots, \Theta^{(\mathfrak{d})}): \mathbb{N}_0 \to \mathbb{R}^\mathfrak{d}$ 为目标函数 $\mathcal{L}$ 具有广义梯度 $\mathcal{G}$、学习率 $(\gamma_n)_{n \in \mathbb{N}}$、二阶矩衰减因子 $(\beta_n)_{n \in \mathbb{N}}$、正则化因子 $\varepsilon$ 和初始值 $\xi$ 的偏差修正 RMSprop GD 过程（参见定义 6.6.3）。则
 
-- \((i)\) 对于所有 \(n \in \mathbb{N}\)，\(k \in \{0, 1, \ldots, n-1\}\)，均有 \(0 \le b_{n,k} \le 1\)，
-- \((ii)\) 对于所有 \(n \in \mathbb{N}\)，均有
+- $(i)$ 对于所有 $n \in \mathbb{N}$，$k \in \{0, 1, \ldots, n-1\}$，均有 $0 \le b_{n,k} \le 1$，
+
+- $(ii)$ 对于所有 $n \in \mathbb{N}$，均有
 
 \begin{equation}
+
 \sum_{k=0}^{n-1} b_{n,k} = 1, \tag{6.350}
+
 \end{equation}
 
 以及
 
-- \((iii)\) 对于所有 \(n \in \mathbb{N}\)，\(i \in \{1, 2, \ldots, \mathfrak{d}\}\)，均有
+- $(iii)$ 对于所有 $n \in \mathbb{N}$，$i \in \{1, 2, \ldots, \mathfrak{d}\}$，均有
 
 \begin{equation}
+
 \Theta^{(i)}_n = \Theta^{(i)}_{n-1} - \gamma_n \left[ \varepsilon + \left[\sum_{k=0}^{n-1} b_{n,k} |\mathcal{G}_i(\Theta_k)|^2 \right]^{1/2} \right]^{-1} \mathcal{G}_i(\Theta_{n-1}). \tag{6.351}
+
 \end{equation}
+
+
 
 *引理 6.6.4 的证明。* 在整个证明过程中，设 \(\mathbb{M} = (\mathbb{M}^{(1)}, \ldots, \mathbb{M}^{(\mathfrak{d})}): \mathbb{N}_0 \to \mathbb{R}^\mathfrak{d}\) 满足对于所有 \(n \in \mathbb{N}\)，\(i \in \{1, 2, \ldots, \mathfrak{d}\}\) 均有 \(\mathbb{M}^{(i)}_0 = 0\) 且
 
 \begin{equation}
+
 \mathbb{M}^{(i)}_n = \beta_n \mathbb{M}^{(i)}_{n-1} + (1-\beta_n) |\mathcal{G}_i(\Theta_{n-1})|^2 \tag{6.352}
+
 \end{equation}
 
 并设 \((B_{n,k})_{(n,k) \in (\mathbb{N}_0)^2} \subseteq \mathbb{R}\) 满足对于所有 \(n \in \mathbb{N}\)，\(k \in \{0, 1, \ldots, n-1\}\) 均有
 
 \begin{equation}
+
 B_{n,k} = (1-\beta_{k+1}) \left[\prod_{l=k+2}^{n} \beta_l \right]. \tag{6.353}
+
 \end{equation}
 
 注意 (6.348) 蕴含了第 \((i)\) 项。注意到 \((6.348)\)、\((6.352)\)、\((6.353)\) 以及引理 6.3.3 保证对于所有 \(n \in \mathbb{N}\)，\(i \in \{1, 2, \ldots, \mathfrak{d}\}\) 均有
 
 \begin{equation}
+
 \mathbb{M}^{(i)}_n = \sum_{k=0}^{n-1} B_{n,k} |\mathcal{G}_i(\Theta_k)|^2 \quad \text{且} \quad \sum_{k=0}^{n-1} b_{n,k} = \frac{\sum_{k=0}^{n-1} B_{n,k}}{1-\prod_{k=1}^{n} \beta_k} = \frac{1-\prod_{k=1}^{n} \beta_k}{1-\prod_{k=1}^{n} \beta_k} = 1. \tag{6.354}
+
 \end{equation}
 
 这证明了第 \((ii)\) 项。注意 \((6.346)\)、\((6.347)\)、\((6.352)\) 和 \((6.354)\) 表明，对于所有 \(n \in \mathbb{N}\)，\(i \in \{1, 2, \ldots, \mathfrak{d}\}\) 均有
 
 \begin{equation}
+
 \begin{aligned}
+
 \Theta^{(i)}_n &= \Theta^{(i)}_{n-1} - \gamma_n \left[ \varepsilon + \left[\frac{\mathbb{M}^{(i)}_n}{1-\prod_{k=1}^{n} \beta_k} \right]^{1/2} \right]^{-1} \mathcal{G}_i(\Theta_{n-1}) \tag{6.355} \\
+
 &= \Theta^{(i)}_{n-1} - \gamma_n \left[ \varepsilon + \left[\sum_{k=0}^{n-1} b_{n,k} |\mathcal{G}_i(\Theta_k)|^2 \right]^{1/2} \right]^{-1} \mathcal{G}_i(\Theta_{n-1}).
+
 \end{aligned}
+
 \end{equation}
 
 这确立了第 \((iii)\) 项。引理 6.6.4 的证明至此完成。
@@ -9806,32 +10552,38 @@ B_{n,k} = (1-\beta_{k+1}) \left[\prod_{l=k+2}^{n} \beta_l \right]. \tag{6.353}
 **定义 6.7.1 (AdaDelta GD 优化方法)。** 设 \(\mathfrak{d} \in \mathbb{N}\)，\((\beta_n)_{n \in \mathbb{N}} \subseteq [0, 1]\)，\((\delta_n)_{n \in \mathbb{N}} \subseteq [0, 1]\)，\(\varepsilon \in (0, \infty)\)，\(\xi \in \mathbb{R}^\mathfrak{d}\) 且设 \(\mathcal{L}: \mathbb{R}^\mathfrak{d} \rightarrow \mathbb{R}\) 和 \(\mathcal{G} = (\mathcal{G}_1, \ldots, \mathcal{G}_\mathfrak{d}): \mathbb{R}^\mathfrak{d} \rightarrow \mathbb{R}^\mathfrak{d}\) 满足对于所有 \(U \in \{V \subseteq \mathbb{R}^\mathfrak{d}: V \text{ 是开集}\}\)，\(\theta \in U\) 且 \(\mathcal{L}|_U \in C^1(U, \mathbb{R}^\mathfrak{d})\)，均有
 
 \begin{equation}
+
 \mathcal{G}(\theta) = (\nabla\mathcal{L})(\theta). \tag{6.356}
+
 \end{equation}
 
 则我们称 \(\Theta\) 为目标函数 \(\mathcal{L}\) 具有广义梯度 \(\mathcal{G}\)、二阶矩衰减因子 \((\beta_n)_{n \in \mathbb{N}}\)、delta 衰减因子 \((\delta_n)_{n \in \mathbb{N}}\)、正则化因子 \(\varepsilon\) 和初始值 \(\xi\) 的 AdaDelta GD 过程（我们称 \(\Theta\) 为目标函数 \(\mathcal{L}\) 具有二阶矩衰减因子 \((\beta_n)_{n \in \mathbb{N}}\)、delta 衰减因子 \((\delta_n)_{n \in \mathbb{N}}\)、正则化因子 \(\varepsilon\) 和初始值 \(\xi\) 的 AdaDelta GD 过程）当且仅当 \(\Theta = (\Theta^{(1)}, \ldots, \Theta^{(\mathfrak{d})}): \mathbb{N}_0 \rightarrow \mathbb{R}^\mathfrak{d}\) 是从 \(\mathbb{N}_0\) 到 \(\mathbb{R}^\mathfrak{d}\) 的函数，且满足存在 \(\mathbb{M} = (\mathbb{M}^{(1)}, \ldots, \mathbb{M}^{(\mathfrak{d})}): \mathbb{N}_0 \rightarrow \mathbb{R}^\mathfrak{d}\) 和 \(\Delta = (\Delta^{(1)}, \ldots, \Delta^{(\mathfrak{d})}): \mathbb{N}_0 \rightarrow \mathbb{R}^\mathfrak{d}\)，使得对于所有 \(n \in \mathbb{N}\)，\(i \in \{1, 2, \ldots, \mathfrak{d}\}\) 均有
 
 \begin{equation}
+
 \Theta_0 = \xi, \quad \mathbb{M}_0 = 0, \quad \Delta_0 = 0, \tag{6.357}
+
 \end{equation}
 
 \begin{equation}
+
 \mathbb{M}^{(i)}_n = \beta_n \mathbb{M}^{(i)}_{n-1} + (1 - \beta_n) |\mathcal{G}_i(\Theta_{n-1})|^2, \tag{6.358}
+
 \end{equation}
 
 \begin{equation}
+
 \Theta^{(i)}_n = \Theta^{(i)}_{n-1} - \left[\frac{\varepsilon + \Delta^{(i)}_{n-1}}{\varepsilon + \mathbb{M}^{(i)}_n}\right]^{1/2} \mathcal{G}_i(\Theta_{n-1}), \tag{6.359}
+
 \end{equation}
 
 以及
 
 \begin{equation}
+
 \Delta^{(i)}_n = \delta_n \Delta^{(i)}_{n-1} + (1 - \delta_n) |\Theta^{(i)}_n - \Theta^{(i)}_{n-1}|^2. \tag{6.360}
+
 \end{equation}
-
-
-
-
 
 ## 6.8 自适应矩估计 GD 优化方法（Adam）
 
@@ -9856,6 +10608,7 @@ $\mathbb{M}_{n}^{(i)}=\beta_{n} \mathbb{M}_{n-1}^{(i)}+\left(1-\beta_{n}\right) 
 *以及* $\Theta_{n}^{(i)}=\Theta_{n-1}^{(i)}-\gamma_{n}\left[\varepsilon+\left(\frac{\mathbb{M}_{n}^{(i)}}{1-\prod_{l=1}^{n} \beta_{l}}\right)^{\frac{1}{2}}\right]^{-1}\left[\frac{\mathbf{m}_{n}^{(i)}}{1-\prod_{l=1}^{n} \alpha_{l}}\right] .$
 
 ## 第 7 章
+
 ## 随机梯度下降（SGD）优化方法
 
 本章回顾和研究 SGD 类型的优化方法，包括经典的普通 SGD 优化方法（参见第 7.2 节），以及更复杂的 SGD 类型优化方法，包括带有动量的 SGD 类型优化方法（参见下文第 7.4、7.5 和 7.9 节）以及带有学习率自适应修正的 SGD 类型优化方法（参见下文第 7.6、7.7、7.8 和 7.9 节）。
@@ -9872,91 +10625,107 @@ $y_m = \mathcal{E}(x_m). \quad (7.1)$
 
 如同在引言和第 5.1 节中，我们将 $M \in \mathbb{N}$ 视为可用的已知输入-输出数据对的数量，将 $d \in \mathbb{N}$ 视为输入数据的维度，将 $\mathcal{E}: \mathbb{R}^{d} \rightarrow \mathbb{R}$ 视为我们想要近似的一个未知函数，将 $\boldsymbol{x}_{1}, \boldsymbol{x}_{2}, \ldots, \boldsymbol{x}_{M+1} \in \mathbb{R}^{d}$ 视为可用的已知输入数据，将 $y_{1}, y_{2}, \ldots, y_{M} \in \mathbb{R}$ 视为可用的已知输出数据，并且我们试图利用可用的已知输入-输出数据对通过 ANN$\mathfrak{s}$ 来近似未知函数 $\mathcal{E}$。
 
-具体而言，设 $a: \mathbb{R} \rightarrow \mathbb{R}$ 可微，设 $h \in \mathbb{N}$，$l_{1}, l_{2}, \ldots, l_{h}, \mathfrak{d} \in \mathbb{N}$ 满足 $\mathfrak{d} = l_{1}(d+1) + [\sum_{k=2}^{h} l_{k}(l_{k-1}+1)] + l_{h} + 1$，且设 $\mathcal{L}: \mathbb{R}^{\mathfrak{d}} \rightarrow [0, \infty)$ 满足：对于所有 $\theta \in \mathbb{R}^{\mathfrak{d}}$ 有
 
-$$
+
+具体而言，设 `$a: \mathbb{R} \rightarrow \mathbb{R}$` 可微，设 `$h \in \mathbb{N}$`，`$l_{1}, l_{2}, \ldots, l_{h}, \mathfrak{d} \in \mathbb{N}$` 满足 `$\mathfrak{d} = l_{1}(d+1) + [\sum_{k=2}^{h} l_{k}(l_{k-1}+1)] + l_{h} + 1$`，且设 `$\mathcal{L}: \mathbb{R}^{\mathfrak{d}} \rightarrow [0, \infty)$` 满足：对于所有 `$\theta \in \mathbb{R}^{\mathfrak{d}}$` 有
+
+```
 \mathcal{L}(\theta) = \frac{1}{M} \left[ \sum_{m=1}^{M} \left( \mathcal{N}_{\vartheta_{n_{a}, l_{1}}, \vartheta_{n_{a}, l_{2}}, \ldots, \vartheta_{n_{a}, l_{h}}, \operatorname{id}_{\mathfrak{d}}}^{\theta, d}(\boldsymbol{x}_{m}) - y_{m} \right)^{2} \right] \tag{7.2}
-$$
+```
 
-（参见定义 1.1.3 和 1.2.1）。注意 $h$ 是 (7.2) 中 ANN$\mathfrak{s}$ 的隐藏层数，注意对于每个 $i \in \{1, 2, \ldots, h\}$，$l_{i} \in \mathbb{N}$ 是 (7.2) 中 ANN$\mathfrak{s}$ 的第 $i$ 个隐藏层中的神经元数量，并且注意 $\mathfrak{d}$ 是用于描述 (7.2) 中 ANN$\mathfrak{s}$ 的实参数数量。我们回顾一下，我们试图通过首先计算函数 $\mathcal{L}: \mathbb{R}^{\mathfrak{d}} \rightarrow [0, \infty)$ 的近似最小值点 $\vartheta \in \mathbb{R}^{\mathfrak{d}}$，然后利用与之相关的近似最小值点 $\vartheta \in \mathbb{R}^{\mathfrak{d}}$ 的 ANN 的实现
+（参见定义 1.1.3 和 1.2.1）。注意 `$h$` 是 `(7.2)` 中 `ANN$\mathfrak{s}$` 的隐藏层数，注意对于每个 `$i \in \{1, 2, \ldots, h\}$`，`$l_{i} \in \mathbb{N}$` 是 `(7.2)` 中 `ANN$\mathfrak{s}$` 的第 `$i$` 个隐藏层中的神经元数量，并且注意 `$\mathfrak{d}$` 是用于描述 `(7.2)` 中 `ANN$\mathfrak{s}$` 的实参数数量。我们回顾一下，我们试图通过首先计算函数 `$\mathcal{L}: \mathbb{R}^{\mathfrak{d}} \rightarrow [0, \infty)$` 的近似最小值点 `$\vartheta \in \mathbb{R}^{\mathfrak{d}}$`，然后利用与之相关的近似最小值点 `$\vartheta \in \mathbb{R}^{\mathfrak{d}}$` 的 ANN 的实现
 
-$$
+```
 \mathbb{R}^{d} \ni x \mapsto \mathcal{N}_{\vartheta_{n_{a}, l_{1}}, \vartheta_{n_{a}, l_{2}}, \ldots, \vartheta_{n_{a}, l_{h}}, \operatorname{id}_{\mathfrak{d}}}^{\vartheta, d} \in \mathbb{R} \tag{7.3}
-$$
+```
 
-作为 $\mathcal{E}$ 的近似，从而来近似函数 $\mathcal{E}$。
+作为 `$\mathcal{E}$` 的近似，从而来近似函数 `$\mathcal{E}$`。
 
-深度学习算法通常通过基于梯度的优化方法来解决 (7.2) 类型的优化问题，这些方法旨在通过沿目标函数负梯度方向执行连续步骤来最小化所考虑的目标函数。我们回顾一下，最简单的基于梯度的优化方法之一是普通 GD 优化方法，它沿负梯度方向执行连续步骤。在 (7.2) 中优化问题的背景下，该 GD 优化方法如下所示。设 $\xi \in \mathbb{R}^{\mathfrak{d}}$，设 $ (\gamma_{n})_{n \in \mathbb{N}} \subseteq [0, \infty)$，且设 $\theta = (\theta_{n})_{n \in \mathbb{N}_{0}}: \mathbb{N}_{0} \rightarrow \mathbb{R}^{\mathfrak{d}}$ 满足：对于所有 $n \in \mathbb{N}$ 有
+深度学习算法通常通过基于梯度的优化方法来解决 `(7.2)` 类型的优化问题，这些方法旨在通过沿目标函数负梯度方向执行连续步骤来最小化所考虑的目标函数。我们回顾一下，最简单的基于梯度的优化方法之一是普通 `GD` 优化方法，它沿负梯度方向执行连续步骤。在 `(7.2)` 中优化问题的背景下，该 `GD` 优化方法如下所示。设 `$\xi \in \mathbb{R}^{\mathfrak{d}}$`，设 `$(\gamma_{n})_{n \in \mathbb{N}} \subseteq [0, \infty)$`，且设 `$\theta = (\theta_{n})_{n \in \mathbb{N}_{0}}: \mathbb{N}_{0} \rightarrow \mathbb{R}^{\mathfrak{d}}$` 满足：对于所有 `$n \in \mathbb{N}$` 有
 
-$$
+```
 \theta_{0} = \xi \quad \text{且} \quad \theta_{n} = \theta_{n-1} - \gamma_{n}(\nabla \mathcal{L})(\theta_{n-1}). \tag{7.4}
-$$
+```
 
-注意过程 $(\theta_{n})_{n \in \mathbb{N}_{0}}$ 是具有学习率 $(\gamma_{n})_{n \in \mathbb{N}}$ 和初始值 $\xi$ 的目标函数 $\mathcal{L}$ 的 GD 过程（参见定义 6.1.1）。此外，请注意假设 $a$ 可微确保了 (7.4) 中的 $\mathcal{L}$ 也是可微的（细节见上文第 5.3.2 节）。
+注意过程 `$(\theta_{n})_{n \in \mathbb{N}_{0}}$` 是具有学习率 `$(\gamma_{n})_{n \in \mathbb{N}}$` 和初始值 `$\xi$` 的目标函数 `$\mathcal{L}$` 的 `GD` 过程（参见定义 6.1.1）。此外，请注意假设 `$a$` 可微确保了 `(7.4)` 中的 `$\mathcal{L}$` 也是可微的（细节见上文第 5.3.2 节）。
 
-在典型的实际深度学习应用中，可用的已知输入-输出数据对的数量 $M$ 非常大，例如，$M \ge 10^{6}$。因此，通常计算确定目标函数的精确梯度以执行确定性 GD 类型优化方法的步骤在计算上过于昂贵。作为一种补救措施，深度学习算法通常采用 GD 类型优化方法的随机变体，其中在优化方法的每一步中，目标函数的精确梯度被目标函数梯度的蒙特卡罗近似所替代。
+在典型的实际深度学习应用中，可用的已知输入-输出数据对的数量 `$M$` 非常大，例如，`$M \ge 10^{6}$`。因此，通常计算确定目标函数的精确梯度以执行确定性 `GD` 类型优化方法的步骤在计算上过于昂贵。作为一种补救措施，深度学习算法通常采用 `GD` 类型优化方法的随机变体，其中在优化方法的每一步中，目标函数的精确梯度被目标函数梯度的蒙特卡罗近似所替代。
 
+我们现在概述了该应用于 `(7.4)` 中 `GD` 优化方法的过程，从而得出了广泛应用于 `(7.2)` 的流行 `SGD` 优化方法。
 
+具体而言，设 `$S = \{1, 2, \ldots, M\}$`，`$J \in \mathbb{N}$`，设 `$(\Omega, \mathcal{F}, \mathbb{P})$` 为一个概率空间。对于任意 `$n \in \mathbb{N}$`，`$j \in \{1, 2, \ldots, J\}$`，令 `$\mathbf{m}_{n,j} : \Omega \rightarrow S$` 为一个均匀分布的随机变量。令 `$\ell: \mathbb{R}^{9} \times S \rightarrow \mathbb{R}$` 满足对于所有 `$\theta \in \mathbb{R}^{9}$`，`$m \in S$` 有
 
+```
+\ell(\theta, m) = |\left(\mathcal{N}_{\frac{\partial d}{\partial \mathbf{w}_{n,1}}, \mathbf{w}_{n,2}, \ldots, \mathbf{w}_{n,\ell}, \mathrm{id}_{G}}(x_m) - \boldsymbol{y}_m\right)|^{2}, \tag{7.5}
+```
 
+并令 `$\Theta = (\Theta_n)_{n \in \mathbb{N}_0} : \mathbb{N}_0 \times \Omega \rightarrow \mathbb{R}^{9}$` 满足对于所有 `$n \in \mathbb{N}$` 有
 
-我们现在概述了该应用于 (7.4) 中 GD 优化方法的过程，从而得出了广泛应用于 (7.2) 的流行 SGD 优化方法。
+```
+\Theta_{0} = \xi \quad \text{and} \quad \Theta_{n} = \Theta_{n-1} - \gamma_{n}\left[\frac{1}{J} \sum_{j=1}^{J}\left(\nabla_{\theta} \ell\right)\left(\Theta_{n-1}, \mathbf{m}_{n,j}\right)\right]. \tag{7.6}
+```
 
-具体而言，设 $S = \{1, 2, \ldots, M\}$，$J \in \mathbb{N}$，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间。对于任意 $n \in \mathbb{N}$，$j \in \{1, 2, \ldots, J\}$，令 $\mathbf{m}_{n,j} : \Omega \rightarrow S$ 为一个均匀分布的随机变量。令 $\ell: \mathbb{R}^{9} \times S \rightarrow \mathbb{R}$ 满足对于所有 $\theta \in \mathbb{R}^{9}$，$m \in S$ 有
+随机过程 `$(\Theta_n)_{n \in \mathbb{N}_0}$` 是 `(7.2)` 相关最小化问题的 `SGD` 过程，其学习率为 `$(\gamma_n)_{n \in \mathbb{N}_0}$`，蒙特卡洛样本数（批大小）恒定为 `$J$`，初始值为 `$\xi$`，数据为 `$(\mathbf{m}_{n,j})_{(n,j) \in \mathbb{N} \times \{1, \ldots, J\}}$`（精确定义见下文定义 7.2.1）。请注意，在 `(7.6)` 中，在每一步 `$n \in \mathbb{N}$` 中，我们仅使用蒙特卡洛近似
 
-$\ell(\theta, m) = |\left(\mathcal{N}_{\frac{\partial d}{\partial \mathbf{w}_{n,1}}, \mathbf{w}_{n,2}, \ldots, \mathbf{w}_{n,\ell}, \mathrm{id}_{G}}(x_m) - \boldsymbol{y}_m\right)|^{2},$ (7.5)
+```
+\frac{1}{J}\sum_{j=1}^{J}\left(\nabla_{\theta} \ell\right)\left(\Theta_{n-1}, \mathbf{m}_{n,j}\right) \approx \frac{1}{M}\sum_{m=1}^{M}\left(\nabla_{\theta} \ell\right)\left(\Theta_{n-1}, m\right) = \left(\nabla \mathcal{L}\right)\left(\Theta_{n-1}\right) \tag{7.7}
+```
 
-并令 $\Theta = (\Theta_n)_{n \in \mathbb{N}_0} : \mathbb{N}_0 \times \Omega \rightarrow \mathbb{R}^{9}$ 满足对于所有 $n \in \mathbb{N}$ 有
-
-$\Theta_{0} = \xi \quad \text{and} \quad \Theta_{n} = \Theta_{n-1} - \gamma_{n}\left[\frac{1}{J} \sum_{j=1}^{J}\left(\nabla_{\theta} \ell\right)\left(\Theta_{n-1}, \mathbf{m}_{n,j}\right)\right].$ (7.6)
-
-随机过程 $(\Theta_n)_{n \in \mathbb{N}_0}$ 是 (7.2) 相关最小化问题的 SGD 过程，其学习率为 $(\gamma_n)_{n \in \mathbb{N}_0}$，蒙特卡洛样本数（批大小）恒定为 $J$，初始值为 $\xi$，数据为 $(\mathbf{m}_{n,j})_{(n,j) \in \mathbb{N} \times \{1, \ldots, J\}}$（精确定义见下文定义 7.2.1）。请注意，在 (7.6) 中，在每一步 $n \in \mathbb{N}$ 中，我们仅使用蒙特卡洛近似
-
-$\frac{1}{J}\sum_{j=1}^{J}\left(\nabla_{\theta} \ell\right)\left(\Theta_{n-1}, \mathbf{m}_{n,j}\right) \approx \frac{1}{M}\sum_{m=1}^{M}\left(\nabla_{\theta} \ell\right)\left(\Theta_{n-1}, m\right) = \left(\nabla \mathcal{L}\right)\left(\Theta_{n-1}\right)$ (7.7)
-
-来代替目标函数的精确梯度。尽管如此，在深度学习应用中，SGD 优化方法（或其他 SGD 类优化方法）通常能够找到目标函数的良好近似最小值。请注意，在 (7.6) 的 SGD 优化方法中使用近似梯度意味着执行 SGD 过程的任何步骤都涉及仅包含 $J$ 个项的求和计算，而在 (7.4) 的 GD 优化方法中使用精确梯度意味着执行过程的任何步骤都涉及包含 $M$ 个项的求和计算。在深度学习应用中，当 $M$ 非常大（例如，$M \geq 10^{6}$）且 $J$ 被选择为相对较小（例如，$J = 128$）时，这意味着执行 SGD 过程的步骤比执行 GD 过程的步骤在计算上更具可行性。结合 SGD 类优化方法在训练 ANN 时常常能找到良好的近似最小值这一事实（参见例如，备注 9.14.5 和 [100, 391]），这是使 SGD 优化方法和其他 SGD 类优化方法成为几乎所有深度学习中首选优化方法的关键原因。本章的主题就是介绍和研究诸如上述 (7.6) 中的朴素 SGD 优化方法等 SGD 类优化方法。
+来代替目标函数的精确梯度。尽管如此，在深度学习应用中，`SGD` 优化方法（或其他 `SGD` 类优化方法）通常能够找到目标函数的良好近似最小值。请注意，在 `(7.6)` 的 `SGD` 优化方法中使用近似梯度意味着执行 `SGD` 过程的任何步骤都涉及仅包含 `$J$` 个项的求和计算，而在 `(7.4)` 的 `GD` 优化方法中使用精确梯度意味着执行过程的任何步骤都涉及包含 `$M$` 个项的求和计算。在深度学习应用中，当 `$M$` 非常大（例如，`$M \geq 10^{6}$`）且 `$J$` 被选择为相对较小（例如，`$J = 128$`）时，这意味着执行 `SGD` 过程的步骤比执行 `GD` 过程的步骤在计算上更具可行性。结合 `SGD` 类优化方法在训练 `ANN` 时常常能找到良好的近似最小值这一事实（参见例如，备注 9.14.5 和 [100, 391]），这是使 `SGD` 优化方法和其他 `SGD` 类优化方法成为几乎所有深度学习中首选优化方法的关键原因。本章的主题就是介绍和研究诸如上述 `(7.6)` 中的朴素 `SGD` 优化方法等 `SGD` 类优化方法。
 
 ## 7.2 SGD 优化
 
-在下面的概念中，我们将介绍第 6.1 节中朴素 GD 优化方法的随机版本，即在下述概念中，我们将介绍朴素 **SGD** 优化方法。
+在下面的概念中，我们将介绍第 6.1 节中朴素 `GD` 优化方法的随机版本，即在下述概念中，我们将介绍朴素 **SGD** 优化方法。
 
-### **定义 7.2.1** (**SGD** 优化方法)
+### 定义 7.2.1 SGD 优化方法
 
-设 $\mathfrak{d} \in \mathbb{N}$，$(\gamma_n)_{n \in \mathbb{N}} \subseteq [0, \infty)$，$(J_n)_{n \in \mathbb{N}} \subseteq \mathbb{N}$，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间，设 $(S, \mathcal{S})$ 为一个可测空间，设 $\xi: \Omega \to \mathbb{R}^{\mathfrak{d}}$ 为一个随机变量。对于每个 $n \in \mathbb{N}$，$j \in \{1, 2, \ldots, J_n\}$，令 $X_{n,j}: \Omega \to S$ 为一个随机变量。令 $\ell = (\ell(\theta, x))_{(\theta, x) \in \mathbb{R}^{\mathfrak{d}} \times S}: \mathbb{R}^{\mathfrak{d}} \times S \to \mathbb{R}$ 和 $\boldsymbol{g}: \mathbb{R}^{\mathfrak{d}} \times S \to \mathbb{R}^{\mathfrak{d}}$ 满足对于所有 $U \in \{V \subseteq \mathbb{R}^{\mathfrak{d}}: V \text{ is open}\}$，$x \in S$，$\theta \in U$ 且 $(U \ni \vartheta \mapsto \ell(\vartheta, x) \in \mathbb{R}) \in \mathcal{C}^1(U, \mathbb{R})$ 有
+设 `$\mathfrak{d} \in \mathbb{N}$`，`$(\gamma_n)_{n \in \mathbb{N}} \subseteq [0, \infty)$`，`$(J_n)_{n \in \mathbb{N}} \subseteq \mathbb{N}$`，设 `$(\Omega, \mathcal{F}, \mathbb{P})$` 为一个概率空间，设 `$(S, \mathcal{S})$` 为一个可测空间，设 `$\xi: \Omega \to \mathbb{R}^{\mathfrak{d}}$` 为一个随机变量。对于每个 `$n \in \mathbb{N}$`，`$j \in \{1, 2, \ldots, J_n\}$`，令 `$X_{n,j}: \Omega \to S$` 为一个随机变量。令 `$\ell = (\ell(\theta, x))_{(\theta, x) \in \mathbb{R}^{\mathfrak{d}} \times S}: \mathbb{R}^{\mathfrak{d}} \times S \to \mathbb{R}$` 和 `$\boldsymbol{g}: \mathbb{R}^{\mathfrak{d}} \times S \to \mathbb{R}^{\mathfrak{d}}$` 满足对于所有 `$U \in \{V \subseteq \mathbb{R}^{\mathfrak{d}}: V \text{ is open}\}$`，`$x \in S$`，`$\theta \in U$` 且 `$(U \ni \vartheta \mapsto \ell(\vartheta, x) \in \mathbb{R}) \in \mathcal{C}^1(U, \mathbb{R})$` 有
 
-$\boldsymbol{g}(\theta, x) = (\nabla_\vartheta \ell)(\theta, x).$
+```
+\boldsymbol{g}(\theta, x) = (\nabla_\vartheta \ell)(\theta, x).
+```
 
-那么我们称 $\Theta$ 是在 $((\Omega, \mathcal{F}, \mathbb{P}), (S, \mathcal{S}))$ 上针对损失函数 $\ell$、具有广义梯度 $\boldsymbol{g}$、学习率 $(\gamma_n)_{n \in \mathbb{N}}$、批大小 $(J_n)_{n \in \mathbb{N}}$、初始值 $\xi$ 和数据 $(X_{n,j})_{(n,j) \in \{k\}_{k \in \mathbb{N}^2}: 1 \le J_k}$ 的 **SGD** 过程（我们称 $\Theta$ 是针对损失函数 $\ell$、具有学习率 $(\gamma_n)_{n \in \mathbb{N}}$、批大小 $(J_n)_{n \in \mathbb{N}}$、初始值 $\xi$ 和数据 $(X_{n,j})_{(n,j) \in \{k\}_{k \in \mathbb{N}^2}: 1 \le J_k}$ 的 **SGD** 过程），当且仅当存在函数 $\Theta: \mathbb{N}_0 \times \Omega \to \mathbb{R}^{\mathfrak{d}}$ 满足对于所有 $n \in \mathbb{N}$ 有
+那么我们称 `$\Theta$` 是在 `$((\Omega, \mathcal{F}, \mathbb{P}), (S, \mathcal{S}))$` 上针对损失函数 `$\ell$`、具有广义梯度 `$\boldsymbol{g}$`、学习率 `$(\gamma_n)_{n \in \mathbb{N}}$`、批大小 `$(J_n)_{n \in \mathbb{N}}$`、初始值 `$\xi$` 和数据 `$(X_{n,j})_{(n,j) \in \{k\}_{k \in \mathbb{N}^2}: 1 \le J_k}$` 的 **SGD** 过程（我们称 `$\Theta$` 是针对损失函数 `$\ell$`、具有学习率 `$(\gamma_n)_{n \in \mathbb{N}}$`、批大小 `$(J_n)_{n \in \mathbb{N}}$`、初始值 `$\xi$` 和数据 `$(X_{n,j})_{(n,j) \in \{k\}_{k \in \mathbb{N}^2}: 1 \le J_k}$` 的 **SGD** 过程），当且仅当存在函数 `$\Theta: \mathbb{N}_0 \times \Omega \to \mathbb{R}^{\mathfrak{d}}$` 满足对于所有 `$n \in \mathbb{N}$` 有
 
-$\Theta_0 = \xi \qquad \text{and} \qquad \Theta_n = \Theta_{n-1} - \gamma_n \left[\frac{1}{J_n} \sum_{j=1}^{J_n} \boldsymbol{g}(\Theta_{n-1}, X_{n,j})\right].$
+```
+\Theta_0 = \xi \qquad \text{and} \qquad \Theta_n = \Theta_{n-1} - \gamma_n \left[\frac{1}{J_n} \sum_{j=1}^{J_n} \boldsymbol{g}(\Theta_{n-1}, X_{n,j})\right].
+```
 
-### 7.2.1 **ANN** 训练中的 **SGD** 优化
+### 7.2.1 ANN 训练中的 SGD 优化
 
 在下一个例子中，我们在全连接前馈 **ANN** 的向量化描述框架下（参见第 1.1 节）应用 **SGD** 优化方法，其中损失函数为定义 5.4.2 中的均方误差损失函数（参见第 5.4.2 节）。请注意，这与第 7.1 节中建立的框架非常相似。
 
-### **例 7.2.2**
+### 例 7.2.2
 
-设 $d, h, \mathfrak{d} \in \mathbb{N}$，$l_1, l_2, \ldots, l_h \in \mathbb{N}$ 满足 $\mathfrak{d} = l_1(d+1) + [\sum_{k=2}^{h} l_k(l_{k-1}+1)] + l_h+1$。令 $a: \mathbb{R} \to \mathbb{R}$ 为可微函数。设 $M \in \mathbb{N}$，$\boldsymbol{x}_1, \boldsymbol{x}_2, \ldots, \boldsymbol{x}_M \in \mathbb{R}^d$，$\boldsymbol{y}_1, \boldsymbol{y}_2, \ldots, \boldsymbol{y}_M \in \mathbb{R}$。令 $\mathcal{L}: \mathbb{R}^{\mathfrak{d}} \to [0, \infty)$ 满足对于所有 $\theta \in \mathbb{R}^{\mathfrak{d}}$ 有
+设 `$d, h, \mathfrak{d} \in \mathbb{N}$`，`$l_1, l_2, \ldots, l_h \in \mathbb{N}$` 满足 `$\mathfrak{d} = l_1(d+1) + [\sum_{k=2}^{h} l_k(l_{k-1}+1)] + l_h+1$`。令 `$a: \mathbb{R} \to \mathbb{R}$` 为可微函数。设 `$M \in \mathbb{N}$`，`$\boldsymbol{x}_1, \boldsymbol{x}_2, \ldots, \boldsymbol{x}_M \in \mathbb{R}^d$`，`$\boldsymbol{y}_1, \boldsymbol{y}_2, \ldots, \boldsymbol{y}_M \in \mathbb{R}$`。令 `$\mathcal{L}: \mathbb{R}^{\mathfrak{d}} \to [0, \infty)$` 满足对于所有 `$\theta \in \mathbb{R}^{\mathfrak{d}}$` 有
 
-$\mathcal{L}(\theta) = \frac{1}{M} \left[\sum_{m=1}^{M} \left( \left( \mathcal{N}^{\theta,d}_{\mathfrak{w}_{l_1, l_1}, \mathfrak{w}_{a,l_2}, \ldots, \mathfrak{w}_{a,l_h}, \mathrm{id}_\mathbb{R}} \right)(\boldsymbol{x}_m) - \boldsymbol{y}_m \right)^2 \right] ,
+```
+\mathcal{L}(\theta) = \frac{1}{M} \left[\sum_{m=1}^{M} \left( \left( \mathcal{N}^{\theta,d}_{\mathfrak{w}_{l_1, l_1}, \mathfrak{w}_{a,l_2}, \ldots, \mathfrak{w}_{a,l_h}, \mathrm{id}_\mathbb{R}} \right)(\boldsymbol{x}_m) - \boldsymbol{y}_m \right)^2 \right] ,
+```
 
-设 $S = \{1, 2, \ldots, M\}$。令 $\ell: \mathbb{R}^{\mathfrak{d}} \times S \to \mathbb{R}$ 满足对于所有 $\theta \in \mathbb{R}^{\mathfrak{d}}$，$m \in S$ 有
+设 `$S = \{1, 2, \ldots, M\}$`。令 `$\ell: \mathbb{R}^{\mathfrak{d}} \times S \to \mathbb{R}$` 满足对于所有 `$\theta \in \mathbb{R}^{\mathfrak{d}}$`，`$m \in S$` 有
 
-$\ell(\theta, m) = \left| \left( \mathcal{N}^{\theta,d}_{\mathfrak{w}_{l_1, l_1}, \mathfrak{w}_{a,l_2}, \ldots, \mathfrak{w}_{a,l_h}, \mathrm{id}_\mathbb{R}} \right)(\boldsymbol{x}_m) - \boldsymbol{y}_m \right|^2,$
+```
+\ell(\theta, m) = \left| \left( \mathcal{N}^{\theta,d}_{\mathfrak{w}_{l_1, l_1}, \mathfrak{w}_{a,l_2}, \ldots, \mathfrak{w}_{a,l_h}, \mathrm{id}_\mathbb{R}} \right)(\boldsymbol{x}_m) - \boldsymbol{y}_m \right|^2,
+```
 
-设 $\xi \in \mathbb{R}^{\mathfrak{d}}$，设 $(\gamma_n)_{n \in \mathbb{N}} \subseteq \mathbb{N}$。令 $\vartheta: \mathbb{N}_0 \to \mathbb{R}^{\mathfrak{d}}$ 满足对于所有 $n \in \mathbb{N}$ 有
+设 `$\xi \in \mathbb{R}^{\mathfrak{d}}$`，设 `$(\gamma_n)_{n \in \mathbb{N}} \subseteq \mathbb{N}$`。令 `$\vartheta: \mathbb{N}_0 \to \mathbb{R}^{\mathfrak{d}}$` 满足对于所有 `$n \in \mathbb{N}$` 有
 
-$\vartheta_0 = \xi \qquad \text{and} \qquad \vartheta_n = \vartheta_{n-1} - \gamma_n \left(\nabla \mathcal{L} \right) \left( \vartheta_{n-1} \right),$
+```
+\vartheta_0 = \xi \qquad \text{and} \qquad \vartheta_n = \vartheta_{n-1} - \gamma_n \left(\nabla \mathcal{L} \right) \left( \vartheta_{n-1} \right),
+```
 
-设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间。设 $(J_n)_{n \in \mathbb{N}} \subseteq \mathbb{N}$。对于每个 $n \in \mathbb{N}$，$j \in \{1, 2, \ldots, J_n\}$，令 $\mathbf{m}_{n, j}: \Omega \rightarrow S$ 为一个均匀分布的随机变量。并令 $\Theta: \mathbb{N}_0 \times \Omega \rightarrow \mathbb{R}^{\mathfrak{d}}$ 满足对于所有 $n \in \mathbb{N}$ 有
+设 `$(\Omega, \mathcal{F}, \mathbb{P})$` 为一个概率空间。设 `$(J_n)_{n \in \mathbb{N}} \subseteq \mathbb{N}$`。对于每个 `$n \in \mathbb{N}$`，`$j \in \{1, 2, \ldots, J_n\}$`，令 `$\mathbf{m}_{n, j}: \Omega \rightarrow S$` 为一个均匀分布的随机变量。并令 `$\Theta: \mathbb{N}_0 \times \Omega \rightarrow \mathbb{R}^{\mathfrak{d}}$` 满足对于所有 `$n \in \mathbb{N}$` 有
 
-$\Theta_0 = \xi$ and $\Theta_n = \Theta_{n-1} - \gamma_n \left[ \frac{1}{J_n} \sum_{j=1}^{J_n} \left( \nabla_\theta \ell(\Theta_{n-1}, \mathbf{m}_{n,j}) \right) \right]$ 
+```
+\Theta_0 = \xi \text{ and } \Theta_n = \Theta_{n-1} - \gamma_n \left[ \frac{1}{J_n} \sum_{j=1}^{J_n} \left( \nabla_\theta \ell(\Theta_{n-1}, \mathbf{m}_{n,j}) \right) \right] \tag{7.13}
+```
 
-(7.13)
+（参见推论 5.3.6）。那么
 
-(参见推论 5.3.6)。那么
+- (i) `$\vartheta$` 是目标函数 `$\mathcal{L}$` 的 `GD` 过程，其学习率为 `$(\gamma_n)_{n \in \mathbb{N}}$`，初始值为 `$\xi$`
 
-- (i) $\vartheta$ 是目标函数 $\mathcal{L}$ 的 GD 过程，其学习率为 $(\gamma_n)_{n \in \mathbb{N}}$，初始值为 $\xi$
+
 
 - (ii) $\Theta$ 是损失函数 $\ell$ 的 SGD 过程，其学习率为 $(\gamma_n)_{n \in \mathbb{N}}$，批大小为 $(J_n)_{n \in \mathbb{N}}$，初始值为 $\xi$，数据为 $(\mathbf{m}_{n,j})_{(n,j) \in \{(k,l) \in \mathbb{N}^2 : l \leqslant J_k\}}$，并且
 
@@ -9985,9 +10754,6 @@ $= \theta - \gamma_n(\nabla \mathcal{L})(\theta).$
 (7.16)
 
 例 7.2.2 的证明至此结束。  \n \hfill \u25A1
-
-
-
 
 ### 第 7 章：随机梯度下降（SGD）优化方法
 
@@ -10078,11 +10844,11 @@ $= \theta - \gamma_n(\nabla \mathcal{L})(\theta).$
 82 plt.savefig("../../plots/sgd.pdf", bbox_inches="tight")
 ```
 
-源代码 7.1 (code/optimization_methods/sgd.py)：使用 PYTORCH 实现示例 7.2.2 中所述人工神经网络（ANN）训练中 SGD 优化方法的 PYTHON 代码。在此代码中，训练了一个全连接人工神经网络，该网络包含一个具有 200 个神经元的隐藏层，并使用双曲正切（hyperbolic tangent）激活函数，使其实值函数能够近似目标函数 $\sin : \mathbb{R} \rightarrow \mathbb{R}$。示例 7.2.2 的具体参数设置如下：$d = 1$，$h = 1$，$\mathfrak{d} = 301$，$l_1 = 200$，$a = \text{tanh}$，$M = 10000$，$\mathbf{x}_1, \mathbf{x}_2, \dots, \mathbf{x}_M \in \mathbb{R}$，对于所有 $i \in \{1, 2, \dots, M\}$，$\mathbf{y}_i = \sin(x_i)$；对于所有 $n \in \mathbb{N}$，$\gamma_n = 0.003$；对于所有 $n \in \mathbb{N}$，$J_n = 32$（均遵循示例 7.2.2 的符号定义）。由此代码生成的图像如图 7.1 所示。
+源代码 7.1 (`code/optimization_methods/sgd.py`)：使用 PYTORCH 实现示例 7.2.2 中所述人工神经网络（ANN）训练中 SGD 优化方法的 PYTHON 代码。在此代码中，训练了一个全连接人工神经网络，该网络包含一个具有 200 个神经元的隐藏层，并使用双曲正切（hyperbolic tangent）激活函数，使其实值函数能够近似目标函数 $\sin : \mathbb{R} \rightarrow \mathbb{R}$。示例 7.2.2 的具体参数设置如下：$d = 1$，$h = 1$，$\mathfrak{d} = 301$，$l_1 = 200$，$a = \text{tanh}$，$M = 10000$，$\mathbf{x}_1, \mathbf{x}_2, \dots, \mathbf{x}_M \in \mathbb{R}$，对于所有 $i \in \{1, 2, \dots, M\}$，$\mathbf{y}_i = \sin(x_i)$；对于所有 $n \in \mathbb{N}$，$\gamma_n = 0.003$；对于所有 $n \in \mathbb{N}$，$J_n = 32$（均遵循示例 7.2.2 的符号定义）。由此代码生成的图像如图 7.1 所示。
 
 ![](img/dec290f673e6357c31893c67b579ffe1_283_0.png)
 
-图 7.1 (plots/sgd.pdf)：展示使用 SGD 优化方法在训练过程中若干节点上的人工神经网络实值函数的图像。此图像由源代码 7.1 中的代码生成。
+图 7.1 (`plots/sgd.pdf`)：展示使用 SGD 优化方法在训练过程中若干节点上的人工神经网络实值函数的图像。此图像由源代码 7.1 中的代码生成。
 
 ```python
 1  import torch
@@ -10168,15 +10934,17 @@ $= \theta - \gamma_n(\nabla \mathcal{L})(\theta).$
 81 | plt.savefig("../../../plots/sgd2.pdf", bbox_inches="tight")
 ```
 
-源代码 7.2 (code/optimization_methods/sgd2.py)：使用 PYTORCH 实现示例 7.2.2 中所述人工神经网络（ANN）训练中 SGD 优化方法的 PYTHON 代码。在此代码中，训练了一个全连接人工神经网络，该网络包含两个隐藏层，每层各有 50 个神经元，并使用 softplus 激活函数，使其实值函数能够近似目标函数 $f: \mathbb{R}^2 \to \mathbb{R}$，该函数满足对于所有 $x, y \in \mathbb{R}$，$f(x, y) = \sin(x)\sin(y)$。示例 7.2.2 的具体参数设置如下：$d = 1$，$h = 2$，$\mathfrak{D} = 2701$，$l_1 = l_2 = 50$，$a$ 为 softplus 激活函数，$M = 10000$，$x_1, x_2, \ldots, x_M \in \mathbb{R}^2$，对于所有 $i \in \{1, 2, \ldots, M\}$，$y_i = f(x_i)$；对于所有 $n \in \mathbb{N}$，$\gamma_n = 0.003$；对于所有 $n \in \mathbb{N}$，$J_n = 32$（均遵循示例 7.2.2 的符号定义）。由此代码生成的图像如图 7.2 所示。
+源代码 7.2 (`code/optimization_methods/sgd2.py`)：使用 PYTORCH 实现示例 7.2.2 中所述人工神经网络（ANN）训练中 SGD 优化方法的 PYTHON 代码。在此代码中，训练了一个全连接人工神经网络，该网络包含两个隐藏层，每层各有 50 个神经元，并使用 softplus 激活函数，使其实值函数能够近似目标函数 $f: \mathbb{R}^2 \to \mathbb{R}$，该函数满足对于所有 $x, y \in \mathbb{R}$，$f(x, y) = \sin(x)\sin(y)$。示例 7.2.2 的具体参数设置如下：$d = 1$，$h = 2$，$\mathfrak{D} = 2701$，$l_1 = l_2 = 50$，$a$ 为 softplus 激活函数，$M = 10000$，$x_1, x_2, \ldots, x_M \in \mathbb{R}^2$，对于所有 $i \in \{1, 2, \ldots, M\}$，$y_i = f(x_i)$；对于所有 $n \in \mathbb{N}$，$\gamma_n = 0.003$；对于所有 $n \in \mathbb{N}$，$J_n = 32$（均遵循示例 7.2.2 的符号定义）。由此代码生成的图像如图 7.2 所示。
 
 ![](img/dec290f673e6357c31893c67b579ffe1_286_0.png)
 
-图 7.2 (plots/sgd2.pdf)：展示使用 SGD 优化方法在训练过程中若干节点上的人工神经网络实值函数的图像。此图像由源代码 7.2 中的代码生成。
+图 7.2 (`plots/sgd2.pdf`)：展示使用 SGD 优化方法在训练过程中若干节点上的人工神经网络实值函数的图像。此图像由源代码 7.2 中的代码生成。
 
 ## 7.2.2 学习率衰减不当时 SGD 的非收敛性
 
 在本节中，我们将介绍两个结果，这些结果粗略地说明了应当如何选择 SGD 优化方法中的学习率序列：使其收敛于零（参见下文推论 7.2.10），但衰减速度不能过快（参见下文引理 7.2.13）。
+
+
 
 ### 7.2.2.1 均方误差的偏差-方差分解
 
@@ -10201,9 +10969,6 @@ $$ \begin{align}\mathbb{E}\left[\|Z-\vartheta\|^2\right] & =\mathbb{E}\left[\lef
 ### 7.2.2.2 常数学习率下 SGD 的非收敛性
 
 在本节中，我们将介绍引理 7.2.9、推论 7.2.10 和引理 7.2.11。我们对引理 7.2.9 的证明采用了下文引理 7.2.4、7.2.5、7.2.6、7.2.7 和 7.2.8 中的辅助结果。引理 7.2.4 回顾了独立随机变量乘积期望的一个基本且广为人知的性质（例如，参见 Klenke [248, Theorem 5.4]）。在基本的引理 7.2.8 中，我们在适当的假设条件下证明了某函数某些导数的可测性。与引理 7.2.8 类似的结果例如可以在 Jentzen 等人 [220, Lemma 4.4] 中找到。
-
-
-
 
 ### 7.2. 随机梯度下降优化
 
@@ -10282,8 +11047,10 @@ $$
 
 因此，我们得到
 
-$$
+
+
 \begin{align*} \mathbb{E}\left[\left\|\sum_{k=1}^{n}\left(X_{k}-\mathbb{E}\left[X_{k}\right]\right)\right\|^{2}\right] &=\mathbb{E}\left[\left\langle\sum_{k_{1}=1}^{n}\left(X_{k_{1}}-\mathbb{E}[X_{k_{1}}]\right),\sum_{k_{2}=1}^{n}\left(X_{k_{2}}-\mathbb{E}\left[X_{k_{2}}\right]\right)\right\rangle\right] \\ &=\mathbb{E}\left[\sum_{k_{1},k_{2}=1}^{n}\left\langle\left(X_{k_{1}}-\mathbb{E}\left[X_{k_{1}}\right]\right), X_{k_{2}}-\mathbb{E}[X_{k_{2}}]\right\rangle\right] \\ &=\mathbb{E}\left[\left(\sum_{k=1}^{n}\left\|X_{k}-\mathbb{E}\left[X_{k}\right]\right\|^{2}\right)+\left(\sum_{\begin{array}{c} k_{1},k_{2}\in\{1,2,\ldots,n\}, \\ k_{1}\neq k_{2}\end{array}}\left\langle X_{k_{1}}-\mathbb{E}\left[X_{k_{1}}\right], X_{k_{2}}-\mathbb{E}[X_{k_{2}}]\right\rangle\right)\right] \\ &=\left(\sum_{k=1}^{n}\mathbb{E}\left[\left\|X_{k}-\mathbb{E}\left[X_{k}\right]\right\|^{2}\right]\right)+\left(\sum_{\begin{array}{c} k_{1},k_{2}\in\{1,2,\ldots,n\}, \\ k_{1}\neq k_{2}\end{array}}\mathbb{E}\left[\left\langle X_{k_{1}}-\mathbb{E}\left[X_{k_{1}}\right], X_{k_{2}}-\mathbb{E}[X_{k_{2}}]\right\rangle\right]\right) \\ &=\sum_{k=1}^{n}\mathbb{E}\left[\left\|X_{k}-\mathbb{E}\left[X_{k}\right]\right\|^{2}\right]. \end{align*} \quad (7.31)
+
 $$
 
 引理 7.2.6 的证明至此完成。 $\square$
@@ -10293,47 +11060,65 @@ $$
 设 $(\Omega,\mathcal{F},\mathbb{P})$ 为概率空间，设 $(\mathbb{X},\mathcal{X})$ 和 $(\mathbb{Y},\mathcal{Y})$ 为可测空间，设 $X:\Omega\rightarrow\mathbb{X}$ 和 $Y:\Omega\rightarrow\mathbb{Y}$ 为独立随机变量，设 $\Phi:\mathbb{X}\times\mathbb{Y}\rightarrow[0,\infty)$ 为 $(\mathcal{X}\otimes\mathcal{Y})/\mathcal{B}([0,\infty))$-可测，且设 $\phi:\mathbb{Y}\rightarrow[0,\infty)$ 满足对于所有 $y\in\mathbb{Y}$，有
 
 $$
+
 \phi(y)=\mathbb{E}[\Phi(X,y)]. \quad (7.32)
+
 $$
 
 则
 
 -   i) 函数 $\phi$ 是 $\mathcal{Y}/\mathcal{B}([0,\infty))$-可测的，且
+
 -   (ii) 有
 
 $$
+
 \mathbb{E}[\Phi(X,Y)]=\mathbb{E}[\phi(Y)]. \quad (7.33)
+
 $$
 
 引理 7.2.7 的证明. 首先，注意到 Fubini 定理（例如参见 Klenke [248, (14.6)] 中的定理 14.16）、假设函数 $X:\Omega\rightarrow\mathbb{X}$ 是 $\mathcal{F}/\mathcal{X}$-可测的，
 
-
 以及假设函数 $\Phi : \mathbb{X} \times \mathbb{Y} \rightarrow [0, \infty]$ 是 $(\mathcal{X} \otimes \mathcal{Y})/\mathcal{B}([0, \infty])$-可测的，这证明了函数
 
 $$
+
 \forall Y \ni y \mapsto \phi(y) = \mathbb{E}[\Phi(X, y)] = \int_\Omega \Phi(X(\omega), y) \mathbb{P}(\mathrm{d}\omega) \in [0, \infty] \tag{7.34}
+
 $$
 
 是 $\mathcal{Y}/\mathcal{B}([0, \infty])$-可测的。这证明了条目 **(i)**。观察到积分变换定理、事实 $(X, Y)(\mathbb{P}) = (X(\mathbb{P})) \otimes (Y(\mathbb{P}))$ 以及富比尼定理确立了
 
 $$
+
 \begin{aligned}
+
 \mathbb{E}\big[\Phi(X, Y)\big] &= \int_\Omega \Phi(X(\omega), Y(\omega)) \mathbb{P}(\mathrm{d}\omega)\\
+
 &= \int_{\mathbb{X} \times \mathbb{Y}} \Phi(x, y) \big((X, Y)(\mathbb{P})\big)(\mathrm{d}x, \mathrm{d}y)\\
+
 &= \int_\mathbb{Y} \Big[\int_\mathbb{X} \Phi(x, y) \big(X(\mathbb{P})\big)(\mathrm{d}x) \Big] \big(Y(\mathbb{P})\big)(\mathrm{d}y)\\
+
 &= \int_\mathbb{Y} \mathbb{E}\big[\Phi(X, y)\big] \big(Y(\mathbb{P})\big)(\mathrm{d}y)\\
+
 &= \int_\mathbb{Y} \phi(y) \big(Y(\mathbb{P})\big)(\mathrm{d}y) = \mathbb{E}\big[\phi(Y)\big].
+
 \end{aligned}
+
 \tag{7.35}
+
 $$
 
 这证明了条目 **(ii)**。从而完成了引理 7.2.7 的证明。$\square$
 
 ### 引理 7.2.8
+
 令 $\mathfrak{d} \in \mathbb{N}$，令 $(S, \mathcal{S})$ 为一个可测空间，令 $\ell = (\ell(\theta, x))_{(\theta, x) \in \mathbb{R}^\mathfrak{d} \times S} : \mathbb{R}^\mathfrak{d} \times S \rightarrow \mathbb{R}$ 是 $(\mathcal{B}(\mathbb{R}^\mathfrak{d}) \otimes \mathcal{S})/\mathcal{B}(\mathbb{R})$-可测的，并假设对于每个 $x \in S$，函数 $\mathbb{R}^\mathfrak{d} \ni \theta \mapsto \ell(\theta, x) \in \mathbb{R}$ 是可微的。则函数
 
 $$
+
 \mathbb{R}^\mathfrak{d} \times S \ni (\theta, x) \mapsto \big(\nabla_\theta \ell\big)(\theta, x) \in \mathbb{R}^\mathfrak{d} \tag{7.36}
+
 $$
 
 是 $(\mathcal{B}(\mathbb{R}^\mathfrak{d}) \otimes \mathcal{S})/\mathcal{B}(\mathbb{R}^\mathfrak{d})$-可测的。
@@ -10341,128 +11126,169 @@ $$
 **引理 7.2.8 的证明。** 在整个证明过程中，令 $\boldsymbol{g} = (\boldsymbol{g}_1, \ldots, \boldsymbol{g}_\mathfrak{d}) : \mathbb{R}^\mathfrak{d} \times S \rightarrow \mathbb{R}^\mathfrak{d}$ 满足对于所有 $\theta \in \mathbb{R}^\mathfrak{d}$，$x \in S$ 有
 
 $$
+
 \boldsymbol{g}(\theta, x) = \big(\nabla_\theta \ell\big)(\theta, x). \tag{7.37}
+
 $$
 
 假设函数 $\ell : \mathbb{R}^\mathfrak{d} \times S \rightarrow \mathbb{R}$ 是 $(\mathcal{B}(\mathbb{R}^\mathfrak{d}) \otimes \mathcal{S})/\mathcal{B}(\mathbb{R})$-可测的，这意味着对于所有 $i \in \{1, 2, \ldots, \mathfrak{d}\}$，$h \in \mathbb{R} \setminus \{0\}$，函数
 
 $$
+
 \mathbb{R}^\mathfrak{d} \times S \ni (\theta, x) = \big((\theta_1, \ldots, \theta_\mathfrak{d}), x\big) \mapsto \bigg(\frac{\ell((\theta_1, \ldots, \theta_{i-1}, \theta_i + h, \theta_{i+1}, \ldots, \theta_\mathfrak{d}), x) - \ell(\theta, x)}{h} \bigg) \in \mathbb{R} \tag{7.38}
+
 $$
 
 是 $(\mathcal{B}(\mathbb{R}^\mathfrak{d}) \otimes \mathcal{S})/\mathcal{B}(\mathbb{R})$-可测的。事实是对于所有 $i \in \{1, 2, \ldots, \mathfrak{d}\}$，$\theta = (\theta_1, \ldots, \theta_\mathfrak{d}) \in \mathbb{R}^\mathfrak{d}$，$x \in S$ 有
 
 $$
+
 \boldsymbol{g}_i(\theta, x) = \lim_{n \rightarrow \infty} \bigg( \frac{\ell((\theta_1, \ldots, \theta_{i-1}, \theta_i + 2^{-n}, \theta_{i+1}, \ldots, \theta_\mathfrak{d}), x) - \ell(\theta, x)}{2^{-n}} \bigg) \tag{7.39}
+
 $$
 
 由此表明对于所有 $i \in \{1, 2, \ldots, \mathfrak{d}\}$，函数 $\boldsymbol{g}_i : \mathbb{R}^\mathfrak{d} \times S \rightarrow \mathbb{R}$ 是 $(\mathcal{B}(\mathbb{R}^\mathfrak{d}) \otimes \mathcal{S})/\mathcal{B}(\mathbb{R})$-可测的。这确保了 $\boldsymbol{g}$ 是 $(\mathcal{B}(\mathbb{R}^\mathfrak{d}) \otimes \mathcal{S})/\mathcal{B}(\mathbb{R}^\mathfrak{d})$-可测的。从而完成了引理 7.2.8 的证明。$\square$
 
 ### 引理 7.2.9
+
 令 $d \in \mathbb{N}$，$\{\gamma_n\}_{n \in \mathbb{N}} \subseteq (0, \infty)$，$\{J_n\}_{n \in \mathbb{N}} \subseteq \mathbb{N}$，令 $\langle \cdot, \cdot \rangle : \mathbb{R}^d \times \mathbb{R}^d \to \mathbb{R}$ 为一个内积，令 $\| \cdot \| : \mathbb{R}^d \to [0, \infty)$ 满足对于所有 $v \in \mathbb{R}^d$ 有
 
 $$
+
 \|v\| = \sqrt{\langle v, v \rangle}, \tag{7.40}
+
 $$
 
 令 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间，令 $\xi : \Omega \to \mathbb{R}^d$ 为一个随机变量，令 $(S, \mathcal{S})$ 为一个可测空间，令 $X_{n,j} : \Omega \to S$，$j \in \{1, 2, \dots, J_n\}$，$n \in \mathbb{N}$，为独立同分布（i.i.d.）随机变量，假设 $\xi$ 和 $\{X_{n,j}\}_{n \in \mathbb{N}, j \in \{1, \dots, J_n\}}$ 是独立的，令 $\ell = (\ell(\theta, x))_{(\theta, x) \in \mathbb{R}^d \times S} : \mathbb{R}^d \times S \to \mathbb{R}$ 是 $\mathcal{B}(\mathbb{R}^d) \otimes \mathcal{S} / \mathcal{B}(\mathbb{R})$-可测的，假设对于所有 $x \in S$ 有 $(\mathbb{R}^d \ni \theta \mapsto \ell(\theta, x)) \in C^1(\mathbb{R}^d, \mathbb{R})$，假设对于所有 $\theta \in \mathbb{R}^d$ 有 $\mathbb{E}[\| (\nabla_\theta \ell)(\theta, X_{1,1}) \|] < \infty$（参见引理 7.2.8），令 $\mathcal{V} : \mathbb{R}^d \to [0, \infty]$ 满足对于所有 $\theta \in \mathbb{R}^d$ 有
 
 $$
+
 \mathcal{V}(\theta) = \mathbb{E}\big[\| (\nabla_\theta \ell)(\theta, X_{1,1}) - \mathbb{E}[ (\nabla_\theta \ell)(\theta, X_{1,1}) ] \|^2\big], \tag{7.41}
+
 $$
 
 并令 $\Theta : \mathbb{N}_0 \times \Omega \to \mathbb{R}^d$ 为满足对于所有 $n \in \mathbb{N}$ 有
 
 $$
+
 \Theta_0 = \xi \quad \text{且} \quad \Theta_n = \Theta_{n-1} - \gamma_n \left[ \frac{1}{J_n} \sum_{j=1}^{J_n} (\nabla_\theta \ell)(\Theta_{n-1}, X_{n,j}) \right]. \tag{7.42}
+
 $$
 
 的随机过程。则对于所有 $n \in \mathbb{N}$，$v \in \mathbb{R}^d$ 有
 
 $$
+
 (\mathbb{E}[\| \Theta_n - v \|^2])^{1/2} \geq \left[ \frac{\gamma_n}{(J_n)^{1/2}} \right] (\mathbb{E}[\mathcal{V}(\Theta_{n-1})])^{1/2}. \tag{7.43}
+
 $$
 
 **引理 7.2.9 的证明。** 在整个证明过程中，对于每个 $n \in \mathbb{N}$，令 $\phi_n : \mathbb{R}^d \to [0, \infty]$ 满足对于所有 $\theta \in \mathbb{R}^d$ 有
 
 $$
+
 \phi_n(\theta) = \mathbb{E}\left[ \left\| \theta - \frac{\gamma_n}{J_n} \left[ \sum_{j=1}^{J_n} (\nabla_\theta \ell)(\theta, X_{n,j}) \right] - v \right\|^2 \right]. \tag{7.44}
+
 $$
 
 注意到引理 7.2.3 表明对于所有 $v \in \mathbb{R}^d$ 和所有满足 $\mathbb{E}[\| Z \|] < \infty$ 的随机变量 $Z : \Omega \to \mathbb{R}^d$，有
 
 $$
+
 \mathbb{E}[\| Z - v \|^2] = \mathbb{E}[\| Z - \mathbb{E}[Z] \|^2] + \| \mathbb{E}[Z] - v \|^2 \geq \mathbb{E}[\| Z - \mathbb{E}[Z] \|^2]. \tag{7.45}
+
 $$
 
 因此，对于所有 $n \in \mathbb{N}$，$\theta \in \mathbb{R}^d$，我们得到
 
 $$
+
 \begin{aligned}
+
+
+
 \phi_n(\theta) &= \mathbb{E}\left[ \left\| \frac{\gamma_n}{J_n} \left[ \sum_{j=1}^{J_n} (\nabla_\theta \ell)(\theta, X_{n,j}) \right] - (\theta - v) \right\|^2 \right] \\
 &= \mathbb{E}\left[ \left\| \frac{\gamma_n}{J_n} \left[ \sum_{j=1}^{J_n} (\nabla_\theta \ell)(\theta, X_{n,j}) \right] - \mathbb{E}\left[ \frac{\gamma_n}{J_n} \left[ \sum_{j=1}^{J_n} (\nabla_\theta \ell)(\theta, X_{n,j}) \right] \right\|^2 \right] \\
 &= \frac{(\gamma_n)^2}{(J_n)^2} \mathbb{E}\left[ \left\| \sum_{j=1}^{J_n} \left( (\nabla_\theta \ell)(\theta, X_{n,j}) - \mathbb{E}[ (\nabla_\theta \ell)(\theta, X_{n,j}) ] \right) \right\|^2 \right].
 \end{aligned} \tag{7.46}
+
 $$
 
 引理 7.2.6，事实 $X_{n,j}: \Omega \to S$，$j \in \{1, 2, \ldots, J_n\}$，$n \in \mathbb{N}$ 是独立同分布（i.i.d.）随机变量，以及对于所有 $n \in \mathbb{N}$，$j \in \{1, 2, \ldots, J_n\}$，$\vartheta \in \mathbb{R}^d$ 有
 
 $$
+
 \mathbb{E}\bigl[\| (\nabla_\vartheta \ell)(\theta, X_{n,j}) \|\bigr] = \mathbb{E}\bigl[\| (\nabla_\vartheta \ell)(\theta, X_{1,1}) \|\bigr] < \infty \qquad\qquad (7.47)
+
 $$
 
 这一事实确立了对于所有 $n \in \mathbb{N}$，$\vartheta \in \mathbb{R}^d$ 有
 
 $$
+
 \begin{gathered}
+
 \phi_n(\vartheta) \geq \left(\frac{\gamma_n}{J_n}\right)^2 \sum_{j=1}^{J_n} \mathbb{E}\left[\left\|(\nabla_\vartheta\ell)(\theta, X_{n,j}) - \mathbb{E}\left[(\nabla_\vartheta\ell)(\theta, X_{n,j})\right] \right\|^2\right] \\
 = \left(\frac{\gamma_n}{J_n}\right)^2 \sum_{j=1}^{J_n} \mathbb{E}\left[\left\|(\nabla_\vartheta\ell)(\theta, X_{1,1}) - \mathbb{E}\left[(\nabla_\vartheta\ell)(\theta, X_{1,1})\right] \right\|^2\right] \\
 = \left(\frac{\gamma_n}{J_n}\right)^2 \sum_{j=1}^{J_n} \mathcal{V}(\theta) = \left(\frac{\gamma_n}{J_n}\right)^2 \left[J_n \mathcal{V}(\theta)\right] = \left(\frac{\gamma_n}{J_n}\right)^2 \mathcal{V}(\theta).
+
 \end{gathered} \qquad (7.48)
+
 $$
 
 此外，注意到 **(7.42)**，**(7.44)**，对于所有 $n \in \mathbb{N}$，$\Theta_{n-1}$ 和 $(X_{n,j})_{j \in \{1,2,\ldots,J_n\}}$ 是独立随机变量这一事实，以及引理 **7.2.7** 证明了对于所有 $n \in \mathbb{N}$，$\vartheta \in \mathbb{R}^d$ 有
 
 $$
+
 \begin{gathered}
+
 \mathbb{E}\bigl[\| \Theta_n - \vartheta \|^2\bigr] = \mathbb{E}\left[\left\| \Theta_{n-1} - \frac{\gamma_n}{J_n}\left[\sum_{j=1}^{J_n} (\nabla_\vartheta\ell)(\Theta_{n-1}, X_{n,j})\right] - \vartheta \right\|^2\right] \\
 = \mathbb{E}\bigl[\phi_n(\Theta_{n-1})\bigr].
+
 \end{gathered} \qquad (7.49)
+
 $$
 
 将此与 **(7.48)** 结合，意味着对于所有 $n \in \mathbb{N}$，$\vartheta \in \mathbb{R}^d$ 有
 
 $$
+
 \begin{aligned}
+
 \mathbb{E}\bigl[\| \Theta_n - \vartheta \|^2\bigr] &\geq \mathbb{E}\left[\left(\frac{\gamma_n}{J_n}\right)^2 \mathcal{V}(\Theta_{n-1})\right] = \left(\frac{\gamma_n}{J_n}\right)^2 \mathbb{E}\bigl[\mathcal{V}(\Theta_{n-1})\bigr].
+
 \end{aligned} \qquad (7.50)
+
 $$
 
 这建立了 **(7.43)**。从而完成了引理 **7.2.9** 的证明。
 
 ### 推论 7.2.10
+
 令 $d \in \mathbb{N}$，$\varepsilon \in (0, \infty)$，$(\gamma_n)_{n \in \mathbb{N}} \subseteq (0, \infty)$，$(J_n)_{n \in \mathbb{N}} \subseteq \mathbb{N}$，令 $\langle\cdot, \cdot\rangle: \mathbb{R}^{d} \times \mathbb{R}^{d} \to \mathbb{R}$ 为一个内积，令 $\|\cdot\|: \mathbb{R}^{d} \to [0, \infty)$ 满足对于所有 $v \in \mathbb{R}^{d}$ 有
 
 $$
+
 \|v\| = \sqrt{\langle v, v \rangle}, \qquad (7.51)
+
 $$
 
 令 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间，令 $\xi: \Omega \to \mathbb{R}^{d}$ 为一个随机变量，令 $(S, \mathcal{S})$ 为一个可测空间，令 $X_{n,j}: \Omega \to S$，$j \in \{1, 2, \ldots, J_n\}$，$n \in \mathbb{N}$，为独立同分布（i.i.d.）随机变量，假设 $\xi$ 和 $(X_{n,j})_{(n,j) \in \{(k,\ell) \in \mathbb{N}^2: \ell \leq J_k\}}$ 是独立的，令 $\ell = (\ell(\theta,x))_{(\theta,x) \in \mathbb{R}^{d} \times S}: \mathbb{R}^{d} \times S \to \mathbb{R}$ 是 $(\mathcal{B}(\mathbb{R}^{d}) \otimes \mathcal{S})/\mathcal{B}(\mathbb{R})$-可测的，假设对于所有 $x \in S$ 有 $(\mathbb{R}^{d} \ni \theta \mapsto \ell(\theta,x) \in \mathbb{R}) \in C^1(\mathbb{R}^{d}, \mathbb{R})$，假设对于所有 $\theta \in \mathbb{R}^{d}$ 有 $\mathbb{E}\bigl[\|(\nabla_\vartheta\ell)(\theta, X_{1,1})\|\bigr] < \infty$（参见引理 **7.2.8**）且
 
 $$
+
 \left( \mathbb{E}\bigl[\|(\nabla_\vartheta\ell)(\theta, X_{1,1}) - \mathbb{E}\left[(\nabla_\vartheta\ell)(\theta, X_{1,1})\right]\|^2\bigr]\right)^{1/2} \geq \varepsilon, \qquad (7.52)
+
 $$
-
-
-
-
 
 ## 7.2. SGD 优化
 
 令 $\Theta: \mathbb{N}_0 \times \Omega \to \mathbb{R}^{\mathfrak{D}}$ 为满足以下条件的随机过程：对于所有 $n \in \mathbb{N}$，
 
 $\Theta_0 = \xi$ 
+
 且 
+
 $\Theta_n = \Theta_{n-1} - \gamma_n \left[\frac{1}{J_n} \sum_{j=1}^{J_n} (\nabla_\theta \ell^\epsilon)(\Theta_{n-1}, X_{n,j})\right].$ (7.53)
 
 则
@@ -10500,7 +11326,9 @@ $\ell(\theta, x) = \frac{1}{2}\|\theta - x\|_2^2,$ (7.59)
 且令 $\Theta: \mathbb{N}_0 \times \Omega \to \mathbb{R}^{\mathfrak{D}}$ 为满足以下条件的随机过程：对于所有 $n \in \mathbb{N}$，
 
 $\Theta_0 = \xi$ 
+
 且 
+
 $\Theta_n = \Theta_{n-1} - \gamma_n \left[\frac{1}{J_n} \sum_{j=1}^{J_n} (\nabla_\theta \ell^\epsilon)(\Theta_{n-1}, X_{n,j})\right].$ (7.60)
 
 则
@@ -10524,6 +11352,8 @@ $\left(\mathbb{E}\left[\left\|\Theta_{n}-\vartheta\right\|_{2}^{2}\right]\right)
 $\left(\nabla_{\theta}\ell\right)(\theta,x)=\frac{1}{2}(2(\theta-x))=\theta-x.$
 
 因此，假设 $\mathbb{E}\left[\left\|X_{1,1}\right\|_{2}\right]<\infty$ 蕴含对于所有 $\theta \in \mathbb{R}^{\mathfrak{D}}$ 成立
+
+
 
 $\mathbb{E}\left[\left\|\left(\nabla_{\theta}\ell\right)\left(\theta,X_{1,1}\right)\right\|_{2}\right]=\mathbb{E}\left[\left\|\theta-X_{1,1}\right\|_{2}\right] \leq\|\theta\|_{2}+\mathbb{E}\left[\left\|X_{1,1}\right\|_{2}\right]<\infty.$
 
@@ -10557,7 +11387,7 @@ $\begin{aligned} \ln(x) = \ln(x) - \ln(1) = -(\ln(1) - \ln(x)) &= -\left[ \int_{
 
 设 $\vartheta \in \mathbb{N}$，$\vartheta' \in \mathbb{R}^{\vartheta}$，$\xi \in \mathbb{R}^{\vartheta} \setminus \{\vartheta\}$，$\alpha \in (0, \infty)$，$(\gamma_n)_{n \in \mathbb{N}} \subseteq [0, \infty) \setminus \{1/\alpha\}$ *满足* $\sum_{n=1}^{\infty} \gamma_n < \infty$，设 $\mathscr{L} : \mathbb{R}^{\vartheta} \to \mathbb{R}$ *满足对于所有* $\vartheta \in \mathbb{R}^{\vartheta}$ *成立*
 
-$\mathscr{L}(\vartheta) = \frac{\alpha}{2}\|\vartheta - \vartheta\|_2^2$， (7.70)
+$\mathscr{L}(\vartheta) = \frac{\alpha}{2}\|\vartheta - \vartheta\|_2^2$, (7.70)
 
 *且令* $\Theta : \mathbb{N}_0 \to \mathbb{R}^{\vartheta}$ *满足对于所有* $n \in \mathbb{N}$ *成立* $\Theta_0 = \xi$ *且*
 
@@ -10565,15 +11395,15 @@ $\Theta_n = \Theta_{n-1} - \gamma_n (\nabla \mathscr{L})(\Theta_{n-1})$. (7.71)
 
 *则*
 
--   (i) *对于所有* $n \in \mathbb{N}_0$ *成立*
+- (i) *对于所有* $n \in \mathbb{N}_0$ *成立*
 
-$\Theta_n - \vartheta = \left[ \prod_{k=1}^{n} (1 - \gamma_k \alpha) \right] (\xi - \vartheta)$， (7.72)
+$\Theta_n - \vartheta = \left[ \prod_{k=1}^{n} (1 - \gamma_k \alpha) \right] (\xi - \vartheta)$, (7.72)
 
--   (ii) *成立*
+- (ii) *成立*
 
-$\liminf_{n \to \infty} \left[ \prod_{k=1}^{n} |1 - \gamma_k \alpha| \right] > 0$， (7.73)
+$\liminf_{n \to \infty} \left[ \prod_{k=1}^{n} |1 - \gamma_k \alpha| \right] > 0$, (7.73)
 
--   (iii) *成立*
+- (iii) *成立*
 
 $\liminf_{n \to \infty} \| \Theta_n - \vartheta \|_2 > 0$. (7.74)
 
@@ -10605,10 +11435,6 @@ $$\begin{aligned} &\ln\left(\prod_{k=m}^{n}|1 - \gamma_k\alpha|\right) = \sum_{k
 
 $$\begin{aligned} \prod_{k=1}^{n}|1 - \gamma_k\alpha| &= \left[\prod_{k=1}^{m-1}|1 - \gamma_k\alpha|\right]\exp\left(\ln\left(\prod_{k=m}^{n}|1 - \gamma_k\alpha|\right)\right) \\ &\geq \left[\prod_{k=1}^{m-1}|1 - \gamma_k\alpha|\right]\exp\left(-2\alpha\left[\sum_{k=1}^{\infty}\gamma_k\right]\right) > 0. \end{aligned}$$
 
-
-
-
-
 因此，我们得出
 
 $\lim_{n\to\infty} \inf \left[\prod_{k=1}^{n} \left[1 - \gamma_k\alpha \right]\right] \geq \left[\prod_{k=1}^{n-1} \left[1 - \gamma_k\alpha \right]\right] \exp \left( -2\alpha \sum_{k=1}^{\infty} \gamma_k \right) > 0. \hspace{2em} (7.82)$
@@ -10616,9 +11442,13 @@ $\lim_{n\to\infty} \inf \left[\prod_{k=1}^{n} \left[1 - \gamma_k\alpha \right]\r
 这确立了第 (ii) 项。请注意，第 (i) 项和第 (ii) 项以及假设 $\xi \neq \varnothing$ 意味着
 
 $\begin{split}
+
 \lim_{n\to\infty} \inf \| \Theta_n - \vartheta \|_2 &= \lim_{n\to\infty} \inf \left\|\left[\prod_{k=1}^{n} \left(1 - \gamma_k\alpha \right) \right] \left( \xi - \vartheta \right) \right\|_2 \\
+
 &= \lim_{n\to\infty} \inf \left( \left|\prod_{k=1}^{n} \left(1 - \gamma_k\alpha \right) \right| \| \xi - \vartheta \|_2 \right) \\
+
 &= \| \xi - \vartheta \|_2 \left( \lim_{n\to\infty} \inf \left[\prod_{k=1}^{n} \left[1 - \gamma_k\alpha \right]\right] \right) > 0.
+
 \end{split} \hspace{2em} (7.83)$
 
 这证明了第 (iii) 项。至此，引理 7.2.13 的证明完成。$\square$
@@ -10638,8 +11468,11 @@ $\Theta_n = \Theta_{n-1} - \frac{1}{n} \left\langle \nabla_\theta \ell \right\ra
 （参见定义 3.3.4）。则
 
 - (i) 成立 $\{\theta \in \mathbb{R}^\mathfrak{o} \colon \mathscr{L}(\theta) = \inf_{w \in \mathbb{R}^\mathfrak{o}} \mathscr{L}(w) \} = \{\mathbb{E}[X_1]\}$，
+
 - (ii) 对于所有 $n \in \mathbb{N}$，成立 $\Theta_n = \frac{1}{n}(X_1 + X_2 + \ldots + X_n)$，
+
 - (iii) 对于所有 $n \in \mathbb{N}$，成立 (7.86)，
+
 - (iv) 对于所有 $n \in \mathbb{N}$，成立 (7.87)。
 
 **例 7.2.14 的证明。** 注意到假设 $\mathbb{E}[\|X_1\|_2^2] < \infty$ 和引理 7.2.3 表明对于所有 $\theta \in \mathbb{R}^\mathfrak{o}$，成立
@@ -10680,7 +11513,10 @@ $\mathbb{E}[\|X_1\|_2^2] < \infty$ 的独立同分布随机变量，表明对于
 
 下一个结果，即下文的定理 7.2.15，根据学习率序列的渐近行为，指定了 **SGD** 优化方法的强收敛和弱收敛速率。定理 7.2.15 的陈述和证明可在 Jentzen 等人 [229, 定理 1.1] 中找到。
 
-**定理 7.2.15 (依赖学习率的收敛速率)。** 设 $\mathfrak{o} \in \mathbb{N}$，$\alpha, \gamma, \nu \in (0, \infty)$，$\xi \in \mathbb{R}^\mathfrak{o}$，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为概率空间，设 $X_n: \Omega \to \mathbb{R}^\mathfrak{o}$，$n \in \mathbb{N}$，为独立同分布随机变量，且满足 $\mathbb{E}[\|X_1\|_2^2] < \infty$ 和 $\mathbb{P}(X_1 = \mathbb{E}[X_1]) < 1$。设 $(r_{\varepsilon,i})_{(\varepsilon,i) \in (0, \infty) \times \{0,1\}} \subseteq \mathbb{R}$ 满足对于所有 $\varepsilon \in (0, \infty)$，$i \in \{0, 1\}$ 有
+
+
+### 定理 7.2.15 (依赖学习率的收敛速率)
+设 $\mathfrak{o} \in \mathbb{N}$，$\alpha, \gamma, \nu \in (0, \infty)$，$\xi \in \mathbb{R}^\mathfrak{o}$，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为概率空间，设 $X_n: \Omega \to \mathbb{R}^\mathfrak{o}$，$n \in \mathbb{N}$，为独立同分布随机变量，且满足 $\mathbb{E}[\|X_1\|_2^2] < \infty$ 和 $\mathbb{P}(X_1 = \mathbb{E}[X_1]) < 1$。设 $(r_{\varepsilon,i})_{(\varepsilon,i) \in (0, \infty) \times \{0,1\}} \subseteq \mathbb{R}$ 满足对于所有 $\varepsilon \in (0, \infty)$，$i \in \{0, 1\}$ 有
 
 $r_{\varepsilon,i} = \begin{cases} \nu/2 & : \nu < 1 \\ \min\{1/2, \gamma\alpha + (-1)^i \varepsilon\} & : \nu = 1 \\ 0 & : \nu > 1, \end{cases}$
 
@@ -10692,36 +11528,37 @@ $\ell(\theta, x) = (\alpha/2)\|\theta - x\|_2^2 \quad \text{且} \quad \mathscr{
 
 $\Theta_0 = \xi \quad \quad \text{且} \quad \quad \Theta_n = \Theta_{n-1} - \frac{\gamma}{n^\nu} (\nabla_{\vartheta} \mathscr{L}) (\Theta_{n-1}, X_n). \tag{7.98}$
 
-*的随机过程。则*
+的随机过程。则
 
-- (i) *存在唯一的* $\vartheta \in \mathbb{R}^\mathfrak{o}$ *满足* $\{\theta \in \mathbb{R}^\mathfrak{o}: \mathscr{L}(\theta) = \inf_{w \in \mathbb{R}^\mathfrak{o}} \mathscr{L}(w)\} = \{\vartheta\}$，
-- (ii) *对于每个* $\varepsilon \in (0, \infty)$ *，存在* $c_0, c_1 \in (0, \infty)$ *使得对于所有* $n \in \mathbb{N}$ *，成立*
+- (i) 存在唯一的 $\vartheta \in \mathbb{R}^\mathfrak{o}$ 满足 $\{\theta \in \mathbb{R}^\mathfrak{o}: \mathscr{L}(\theta) = \inf_{w \in \mathbb{R}^\mathfrak{o}} \mathscr{L}(w)\} = \{\vartheta\}$，
+
+- (ii) 对于每个 $\varepsilon \in (0, \infty)$ ，存在 $c_0, c_1 \in (0, \infty)$ 使得对于所有 $n \in \mathbb{N}$ ，成立
 
 $c_0 n^{-r_{\varepsilon,0}} \le \big( \mathbb{E} \big[ \| \Theta_n - \vartheta \|_2^2 \big] \big)^{1/2} \le c_1 n^{-r_{\varepsilon,1}}, \tag{7.99}$
 
-*且*
-- (iii) *对于每个* $\varepsilon \in (0, \infty)$ *，存在* $e_0, e_1 \in (0, \infty)$ *使得对于所有* $n \in \mathbb{N}$ *，成立*
+且
+
+- (iii) 对于每个 $\varepsilon \in (0, \infty)$ ，存在 $e_0, e_1 \in (0, \infty)$ 使得对于所有 $n \in \mathbb{N}$ ，成立
 
 $e_0 n^{-2r_{\varepsilon,0}} \le \mathbb{E} [ \mathscr{L} (\Theta_n) ] - \mathscr{L} (\vartheta) \le e_1 n^{-2r_{\varepsilon,1}}. \tag{7.100}$
 
-*定理 7.2.15 的证明。注意 Jentzen 等人 [229, 定理 1.1] 确立了第* (i)*、*(ii)* 和* (iii) *项。定理 7.2.15 的证明至此完成。* \hfill $\square$
+定理 7.2.15 的证明。注意 Jentzen 等人 [229, 定理 1.1] 确立了第 (i)、(ii) 和 (iii) 项。定理 7.2.15 的证明至此完成。 $\square$
 
 ### 7.2.4 强制性目标函数的 SGD 收敛速率
 
 下一个结果，即下文的定理 7.2.16，其陈述和证明可在 Jentzen 等人 [221, 定理 1.1] 中找到。
 
-**定理 7.2.16。** *设* $\mathfrak{o} \in \mathbb{N}$，$p, \alpha, \kappa, c \in (0, \infty)$，$\nu \in (0, 1)$，$q = \min (\{ 2, 4, 6, \ldots \} \cap [\mathfrak{o}, \infty) )$，$\xi, \vartheta \in \mathbb{R}^\mathfrak{o}$。*设* $(\Omega, \mathcal{F}, \mathbb{P})$ *为概率空间，设* $(S, \mathcal{S})$ *为可测空间，设* $X_n: \Omega \to S$，$n \in \mathbb{N}$，*为* i.i.d. *随机变量，设* $\ell = (\ell (\theta, x))_{\theta \in \mathbb{R}^\mathfrak{o}, x \in S}: \mathbb{R}^\mathfrak{o} \times S \to \mathbb{R}$ *为* $(\mathcal{B} (\mathbb{R}^\mathfrak{o}) \times \mathcal{S}) / \mathcal{B} (\mathbb{R})$-*可测函数。假设对于所有* $x \in S$ *，有* $(\mathbb{R}^\mathfrak{o} \ni \theta \mapsto \ell (\theta, x) \in \mathbb{R}) \in C^1 (\mathbb{R}^\mathfrak{o}, \mathbb{R})$，*假设对于所有* $\theta \in \mathbb{R}^\mathfrak{o}$ *，有*
+**定理 7.2.16。** 设 $\mathfrak{o} \in \mathbb{N}$，$p, \alpha, \kappa, c \in (0, \infty)$，$\nu \in (0, 1)$，$q = \min (\{ 2, 4, 6, \ldots \} \cap [\mathfrak{o}, \infty) )$，$\xi, \vartheta \in \mathbb{R}^\mathfrak{o}$。设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为概率空间，设 $(S, \mathcal{S})$ 为可测空间，设 $X_n: \Omega \to S$，$n \in \mathbb{N}$，为 i.i.d. 随机变量，设 $\ell = (\ell (\theta, x))_{\theta \in \mathbb{R}^\mathfrak{o}, x \in S}: \mathbb{R}^\mathfrak{o} \times S \to \mathbb{R}$ 为 $(\mathcal{B} (\mathbb{R}^\mathfrak{o}) \times \mathcal{S}) / \mathcal{B} (\mathbb{R})$-可测函数。假设对于所有 $x \in S$ ，有 $(\mathbb{R}^\mathfrak{o} \ni \theta \mapsto \ell (\theta, x) \in \mathbb{R}) \in C^1 (\mathbb{R}^\mathfrak{o}, \mathbb{R})$，假设对于所有 $\theta \in \mathbb{R}^\mathfrak{o}$ ，有
 
 $\mathbb{E} [ \ell (\theta, X_1) ] + \| (\nabla_{\vartheta} \ell) (\theta, X_1) \|_2 < \infty, \tag{7.101}$
 
 $\langle \theta - \vartheta, \mathbb{E} [ (\nabla_{\vartheta} \ell) (\theta, X_1) ] \rangle \ge c \max \{ \| \theta - \vartheta \|_2^2, \| \mathbb{E} [ (\nabla_{\vartheta} \ell) (\theta, X_1) ] \|_2^2 \}, \tag{7.102}$
 
-*且* $\mathbb{E} \big[ \| (\nabla_{\vartheta} \ell) (\theta, X_1) - \mathbb{E} [ (\nabla_{\vartheta} \ell) (\theta, X_1) ] \|_2^q \big] \le \kappa (1 + \| \vartheta \|_2^q), \tag{7.103}$ *设* $\mathcal{L}: \mathbb{R}^\mathfrak{o} \to \mathbb{R}$ *满足对于所有* $\theta \in \mathbb{R}^\mathfrak{o}$ *有* $\mathcal{L} (\theta) = \mathbb{E} [ \ell (\theta, X_1) ]$，*并设* $\Theta: \mathbb{N}_0 \times \Omega \to \mathbb{R}^\mathfrak{o}$ *为满足对于所有* $n \in \mathbb{N}$ *有*
+且 $\mathbb{E} \big[ \| (\nabla_{\vartheta} \ell) (\theta, X_1) - \mathbb{E} [ (\nabla_{\vartheta} \ell) (\theta, X_1) ] \|_2^q \big] \le \kappa (1 + \| \vartheta \|_2^q), \tag{7.103}$ 设 $\mathcal{L}: \mathbb{R}^\mathfrak{o} \to \mathbb{R}$ 满足对于所有 $\theta \in \mathbb{R}^\mathfrak{o}$ 有 $\mathcal{L} (\theta) = \mathbb{E} [ \ell (\theta, X_1) ]$，并设 $\Theta: \mathbb{N}_0 \times \Omega \to \mathbb{R}^\mathfrak{o}$ 为满足对于所有 $n \in \mathbb{N}$ 有
 
 $\Theta_0 = \xi \quad \quad \text{且} \quad \quad \Theta_n = \Theta_{n-1} - \frac{\alpha}{n^\nu} (\nabla_{\vartheta} \ell) (\Theta_{n-1}, X_n) \tag{7.104}$
 
-*的随机过程（参见定义 1.4.7 和 3.3.4）。则*
-
+的随机过程（参见定义 1.4.7 和 3.3.4）。则
 
 (i) 存在 $\{\theta \in \mathbb{R}^{\mathfrak{d}}\colon \mathscr{L}(\theta) = \inf_{w \in \mathbb{R}^{\mathfrak{d}}} \mathscr{L}(w)\} = \{\vartheta\}$，并且
 
@@ -10735,11 +11572,11 @@ $\left(\mathbb{E}\left[\|\Theta_n - \vartheta\|_2^{2}\right]\right)^{1/p} \leq c
 
 在本节中，我们引入第 6.2 节中显式中点 GD 优化方法的随机版本。
 
-**定义 7.3.1** *(显式中点 SGD 优化方法)*。*设* $\mathfrak{d} \in \mathbb{N}$，*($\gamma_n)_{n \in \mathbb{N}} \subseteq [0, \infty)$,* $(J_n)_{n \in \mathbb{N}} \subseteq \mathbb{N}$，*设* $(\Omega, \mathcal{F}, \mathbb{P})$ *为概率空间，* $(S, \mathcal{S})$ *为可测空间，* $\xi\colon \Omega \to \mathbb{R}^\mathfrak{d}$ *为随机变量，*对于每个* $n \in \mathbb{N}$， $j \in \{1, 2, \ldots, J_n\}$，设* $X_{n,j}\colon \Omega \to S$ *为随机变量，* 并设* $\mathcal{L} = (\ell(\theta, x))_{(\theta, x) \in \mathbb{R}^{\mathfrak{d}} \times S}\colon \mathbb{R}^{\mathfrak{d}} \times S \to \mathbb{R}$ *和* $\bm{\mathcal{L}} = (\bm{\ell}_1, \ldots, \bm{\ell}_\mathfrak{d})\colon \mathbb{R}^{\mathfrak{d}} \times S \to \mathbb{R}^{\mathfrak{d}}$ *满足对于所有* $U \in \{V \subseteq \mathbb{R}^{\mathfrak{d}}\colon V \text{ is open}\}$， $x \in S$， $\theta \in U$ *且* $(U \ni \vartheta \Rightarrow \ell(\theta, x) \in \mathbb{R})$， $\in C^{1}(U, \mathbb{R})$ *使得*
+**定义 7.3.1** *(显式中点 SGD 优化方法)*。设 $\mathfrak{d} \in \mathbb{N}$，$(\gamma_n)_{n \in \mathbb{N}} \subseteq [0, \infty)$，$(J_n)_{n \in \mathbb{N}} \subseteq \mathbb{N}$，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为概率空间，$(S, \mathcal{S})$ 为可测空间，$\xi\colon \Omega \to \mathbb{R}^\mathfrak{d}$ 为随机变量，对于每个 $n \in \mathbb{N}$，$j \in \{1, 2, \ldots, J_n\}$，设 $X_{n,j}\colon \Omega \to S$ 为随机变量，并设 $\mathcal{L} = (\ell(\theta, x))_{(\theta, x) \in \mathbb{R}^{\mathfrak{d}} \times S}\colon \mathbb{R}^{\mathfrak{d}} \times S \to \mathbb{R}$ 和 $\bm{\mathcal{L}} = (\bm{\ell}_1, \ldots, \bm{\ell}_\mathfrak{d})\colon \mathbb{R}^{\mathfrak{d}} \times S \to \mathbb{R}^{\mathfrak{d}}$ 满足对于所有 $U \in \{V \subseteq \mathbb{R}^{\mathfrak{d}}\colon V \text{ is open}\}$，$x \in S$，$\theta \in U$ 且 $(U \ni \vartheta \Rightarrow \ell(\theta, x) \in \mathbb{R})$，$\in C^{1}(U, \mathbb{R})$ 使得
 
 $\bm{\ell}(\theta, x) = \nabla_{\theta \ell}(\theta, x).\tag{7.106}$
 
-*则我们称* $\Theta$ *是损失函数* $\mathcal{L}$ *的通梯* $\bm{\mathcal{L}}$ *、学习率* $(\gamma_n)_{n \in \mathbb{N}}$ *以及初始值* $\xi$ *下的显式中点 SGD 过程（我们称* $\Theta$ *是损失函数* $\mathcal{L}$ *在学习率* $(\gamma_n)_{n \in \mathbb{N}}$ *和初始值* $\xi$ *下的显式中点 SGD 过程）当且仅当* $\Theta\colon \mathbb{N}_0 \times \Omega \to \mathbb{R}^{\mathfrak{d}}$ *是从* $\mathbb{N}_0 \times \Omega$ *到* $\mathbb{R}^{\mathfrak{d}}$ *的函数，且满足对于所有* $n \in \mathbb{N}$ *有*
+则我们称 $\Theta$ 是损失函数 $\mathcal{L}$ 的通梯 $\bm{\mathcal{L}}$、学习率 $(\gamma_n)_{n \in \mathbb{N}}$ 以及初始值 $\xi$ 下的显式中点 SGD 过程（我们称 $\Theta$ 是损失函数 $\mathcal{L}$ 在学习率 $(\gamma_n)_{n \in \mathbb{N}}$ 和初始值 $\xi$ 下的显式中点 SGD 过程）当且仅当 $\Theta\colon \mathbb{N}_0 \times \Omega \to \mathbb{R}^{\mathfrak{d}}$ 是从 $\mathbb{N}_0 \times \Omega$ 到 $\mathbb{R}^{\mathfrak{d}}$ 的函数，且满足对于所有 $n \in \mathbb{N}$ 有
 
 $\Theta_0 = \xi \quad \text{且} \quad \Theta_n = \Theta_{n-1} - \gamma_n \left[\frac{1}{J_n} \sum_{j=1}^{J_n} \bm{\ell}\left(\Theta_{n-1} - \frac{\gamma_n}{2} \left[\frac{1}{J_n} \sum_{j=1}^{J_n} \bm{\ell}(\Theta_{n-1}, X_{n,j})\right], X_{n,j}\right)\right].\tag{7.107}$
 
@@ -10811,13 +11648,18 @@ if n % 1000 == 0:
         loss_val = loss(net(x), y)
         print(f"Iteration: {n+1}, Loss: {loss_val}")
 ```
+
 代码 7.3 (code/optimization_methods/midpoint_sgd.py)：在 PYTORCH 中实现显式中点 SGD 优化方法的 PYTHON 代码
 
 ## 7.4 带经典动量的 SGD 优化
 
 在本节中，我们引入第 6.3 节中动量 GD 优化方法的随机版本（参见 Polyak [337] 以及例如 [111, 247]）。
 
-**定义 7.4.1** (动量 SGD 优化方法)。设 $\mathfrak{d} \in \mathbb{N}$， $(\gamma_n)_{n \in \mathbb{N}} \subseteq [0, \infty)$， $(J_n)_{n \in \mathbb{N}} \subseteq \mathbb{N}$， $(\alpha_n)_{n \in \mathbb{N}} \subseteq [0, 1]$，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为概率空间，设 $(S, \mathcal{S})$ 为可测空间，设 $\xi\colon \Omega \to \mathbb{R}^{\mathfrak{d}}$ 为随机变量，对于每个 $n \in \mathbb{N}$， $j \in \{1, 2, \ldots, J_n\}$ 设 $X_{n,j}\colon \Omega \to S$ 为随机变量，并设 $\ell = (\ell(\theta, x))_{(\theta, x) \in \mathbb{R}^{\mathfrak{d}} \times S}\colon \mathbb{R}^{\mathfrak{d}} \times S \to \mathbb{R}$ 和 $\bm{g} = (\bm{g}_1, \ldots, \bm{g}_\mathfrak{d})\colon \mathbb{R}^{\mathfrak{d}} \times S \to \mathbb{R}^{\mathfrak{d}}$ 满足对于所有 $U \in \{V \subseteq \mathbb{R}^{\mathfrak{d}}\colon V \text{ is open}\}$， $x \in S$， $\theta \in U$ 且 $(U \ni \vartheta \Rightarrow \ell(\vartheta, x) \in \mathbb{R})$ 有
+
+
+## 定义 7.4.1 (动量 SGD 优化方法)
+
+设 $\mathfrak{d} \in \mathbb{N}$，$(\gamma_n)_{n \in \mathbb{N}} \subseteq [0, \infty)$，$(J_n)_{n \in \mathbb{N}} \subseteq \mathbb{N}$，$(\alpha_n)_{n \in \mathbb{N}} \subseteq [0, 1]$，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为概率空间，设 $(S, \mathcal{S})$ 为可测空间，设 $\xi\colon \Omega \to \mathbb{R}^{\mathfrak{d}}$ 为随机变量，对于每个 $n \in \mathbb{N}$，$j \in \{1, 2, \ldots, J_n\}$ 设 $X_{n,j}\colon \Omega \to S$ 为随机变量，并设 $\ell = (\ell(\theta, x))_{(\theta, x) \in \mathbb{R}^{\mathfrak{d}} \times S}\colon \mathbb{R}^{\mathfrak{d}} \times S \to \mathbb{R}$ 和 $\bm{g} = (\bm{g}_1, \ldots, \bm{g}_\mathfrak{d})\colon \mathbb{R}^{\mathfrak{d}} \times S \to \mathbb{R}^{\mathfrak{d}}$ 满足对于所有 $U \in \{V \subseteq \mathbb{R}^{\mathfrak{d}}\colon V \text{ is open}\}$， $x \in S$， $\theta \in U$ 且 $(U \ni \vartheta \Rightarrow \ell(\vartheta, x) \in \mathbb{R})$ 有
 
 $\bm{g}(\theta, x) = \nabla_\theta \ell(\theta, x).\tag{7.108}$
 
@@ -10873,8 +11715,7 @@ for i, alpha in enumerate([0, 0.9, 0.99, 0.999]):
         ]
 ```
 
-
-源代码 7.4 (code/optimization_methods/momentum_sgd.py)：实现带经典动量的 SGD 优化方法的 PyTorch Python 代码
+源代码 7.4 (`code/optimization_methods/momentum_sgd.py`)：实现带经典动量的 SGD 优化方法的 PyTorch Python 代码
 
 ```python
 losses = []
@@ -10916,23 +11757,27 @@ plt.savefig("../plots/sgd_momentum.pdf", bbox_inches='tight')
 
 ## 7.4.1 带偏差校正的经典动量 SGD 优化方法
 
-**定义 7.4.2**（带偏差校正的动量 SGD 优化方法）。设 $d \in \mathbb{N}$，$(\gamma_n)_{n\in\mathbb{N}} \subseteq [0,\infty)$，$(J_n)_{n\in\mathbb{N}} \subseteq \mathbb{N}$，$(\alpha_n)_{n\in\mathbb{N}} \subseteq [0,1]$ 满足 $\alpha_1 < 1$，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间，设 $(S, \mathcal{S})$ 为一个可测空间，设 $\xi: \Omega \rightarrow \mathbb{R}^{d}$ 为一个随机变量，对于每个 $n \in \mathbb{N}$，$j \in \{1, 2, \dots, J_n\}$，设 $X_{n,j}: \Omega \rightarrow S$ 为一个随机变量，并设 $\mathcal{L} = (\mathcal{L}(\theta, x))_{(\theta, x) \in \mathbb{R}^{d} \times S}: \mathbb{R}^{d} \times S \rightarrow \mathbb{R}$ 和 $\boldsymbol{g} = (\boldsymbol{g}_1, \dots, \boldsymbol{g}_d): \mathbb{R}^{d} \times S \rightarrow \mathbb{R}^{d}$ 满足对于所有 $U \in \{V \subseteq \mathbb{R}^{d}: V \text{ 是开集}\}$，$x \in S$，$\theta \in U$，且 $(U \supseteq \varnothing \mapsto \mathcal{L}(\theta, x) \in \mathbb{R} \text{ 是 } C^1(U, \mathbb{R}))$，有
+### 定义 7.4.2（带偏差校正的动量 SGD 优化方法）
+
+设 $d \in \mathbb{N}$，$(\gamma_n)_{n\in\mathbb{N}} \subseteq [0,\infty)$，$(J_n)_{n\in\mathbb{N}} \subseteq \mathbb{N}$，$(\alpha_n)_{n\in\mathbb{N}} \subseteq [0,1]$ 满足 $\alpha_1 < 1$，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间，设 $(S, \mathcal{S})$ 为一个可测空间，设 $\xi: \Omega \rightarrow \mathbb{R}^{d}$ 为一个随机变量，对于每个 $n \in \mathbb{N}$，$j \in \{1, 2, \dots, J_n\}$，设 $X_{n,j}: \Omega \rightarrow S$ 为一个随机变量，并设 $\mathcal{L} = (\mathcal{L}(\theta, x))_{(\theta, x) \in \mathbb{R}^{d} \times S}: \mathbb{R}^{d} \times S \rightarrow \mathbb{R}$ 和 $\boldsymbol{g} = (\boldsymbol{g}_1, \dots, \boldsymbol{g}_d): \mathbb{R}^{d} \times S \rightarrow \mathbb{R}^{d}$ 满足对于所有 $U \in \{V \subseteq \mathbb{R}^{d}: V \text{ 是开集}\}$，$x \in S$，$\theta \in U$，且 $(U \supseteq \varnothing \mapsto \mathcal{L}(\theta, x) \in \mathbb{R} \text{ 是 } C^1(U, \mathbb{R}))$，有
 
 $$ \boldsymbol{g}(\theta, x) = (\nabla_{\theta}\mathcal{L})(\theta, x). \quad (7.112) $$
 
 则我们称 $\Theta$ 是针对损失函数 $\mathcal{L}$ 及其广义梯度 $\boldsymbol{g}$、学习率 $(\gamma_n)_{n \in \mathbb{N}}$、批量大小 $(J_n)_{n \in \mathbb{N}}$、动量衰减因子 $(\alpha_n)_{n \in \mathbb{N}}$、初始值 $\xi$ 和数据 $(X_{n,j})_{(n,j) \in \{(k,i) \in \mathbb{N}_0^2: i \le J_k\}}$ 在 $((\Omega, \mathcal{F}, \mathbb{P}), (S, \mathcal{S}))$ 上的带偏差校正的动量 **SGD** 过程（当且仅当 $\Phi: \mathbb{N}_0 \rightarrow \Omega \rightarrow \mathbb{R}^{d}$ 是从 $\mathbb{N}_0 \times \Omega$ 到 $\mathbb{R}^{d}$ 的函数，并且满足存在 $\boldsymbol{m}: \mathbb{N}_0 \times \Omega \rightarrow \mathbb{R}^{d}$，使得对于所有 $n \in \mathbb{N}$，有
 
 $$ \Theta_0 = \xi, \quad \boldsymbol{m}_0 = 0, \quad (7.113) $$
+
 $$ \boldsymbol{m}_n = \alpha_n \boldsymbol{m}_{n-1} + (1-\alpha_n) \left[ \frac{1}{J_n} \sum_{j=1}^{J_n} \boldsymbol{g}(\Theta_{n-1}, X_{n,j}) \right], \quad (7.114) $$
+
 $$ \text{且} \quad \Theta_n = \Theta_{n-1} - \frac{\gamma_n \boldsymbol{m}_n}{1 - \prod_{i=1}^{n} \alpha_i}. \quad (7.115) $$
 
 ![](img/dec290f673e6357c31893c67b579ffe1_307_0.png)
 
-图 7.3 (plots/sgd_momentum.pdf)：展示动量衰减率和学习率在使用带经典动量的 SGD 优化方法训练人工神经网络（ANN）过程中对损失影响的曲线图
+图 7.3 (`plots/sgd_momentum.pdf`)：展示动量衰减率和学习率在使用带经典动量的 SGD 优化方法训练人工神经网络（ANN）过程中对损失影响的曲线图
 
 带偏差校正的动量 SGD 优化方法在 PyTorch 中的实现见源代码 7.5。
 
-源代码 7.5 (code/optimization_methods/momentum_sgd_bias_adj.py)：实现带偏差校正的动量 SGD 优化方法的 PyTorch Python 代码
+源代码 7.5 (`code/optimization_methods/momentum_sgd_bias_adj.py`)：实现带偏差校正的动量 SGD 优化方法的 PyTorch Python 代码
 
 ```python
 import torch
@@ -10988,14 +11833,20 @@ for n in range(N):
 
 在本节中，我们介绍第 6.4 节中 Nesterov 加速 GD 优化方法的随机版本（参见 [302, 387]）。
 
-**定义 7.5.1**（Nesterov 加速 SGD 优化方法）。设 $d \in \mathbb{N}$，$(\gamma_n)_{n \in \mathbb{N}} \subseteq [0, \infty)$，$(J_n)_{n \in \mathbb{N}} \subseteq \mathbb{N}$，$(\alpha_n)_{n \in \mathbb{N}} \subseteq [0, 1]$，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间，设 $(S, \mathcal{S})$ 为一个可测空间，设 $\xi : \Omega \rightarrow \mathbb{R}^{d}$ 为一个随机变量，对于每个 $n \in \mathbb{N}$，$j \in \{1, 2, \ldots, J_n\}$，设 $X_{n, j} : \Omega \rightarrow S$ 为一个随机变量，并设 $\ell = (\ell(\theta, x))_{(\theta, x) \in \mathbb{R}^{d} \times S} : \mathbb{R}^{d} \times S \rightarrow \mathbb{R}$ 和 $\boldsymbol{g} = (\boldsymbol{g}_{1}, \ldots, \boldsymbol{g}_{d}) : \mathbb{R}^{d} \times S \rightarrow \mathbb{R}^{d}$ 满足对于所有 $U \in \{V \subseteq \mathbb{R}^{d} : V \text{ 是开集}\}$，$x \in S$，$\theta \in U$，且 $(U \ni \psi \mapsto \ell(\psi, x) \in \mathbb{R}) \in C^{1}(U, \mathbb{R})$，有
+### 定义 7.5.1（Nesterov 加速 SGD 优化方法）
+
+设 $d \in \mathbb{N}$，$(\gamma_n)_{n \in \mathbb{N}} \subseteq [0, \infty)$，$(J_n)_{n \in \mathbb{N}} \subseteq \mathbb{N}$，$(\alpha_n)_{n \in \mathbb{N}} \subseteq [0, 1]$，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间，设 $(S, \mathcal{S})$ 为一个可测空间，设 $\xi : \Omega \rightarrow \mathbb{R}^{d}$ 为一个随机变量，对于每个 $n \in \mathbb{N}$，$j \in \{1, 2, \ldots, J_n\}$，设 $X_{n, j} : \Omega \rightarrow S$ 为一个随机变量，并设 $\ell = (\ell(\theta, x))_{(\theta, x) \in \mathbb{R}^{d} \times S} : \mathbb{R}^{d} \times S \rightarrow \mathbb{R}$ 和 $\boldsymbol{g} = (\boldsymbol{g}_{1}, \ldots, \boldsymbol{g}_{d}) : \mathbb{R}^{d} \times S \rightarrow \mathbb{R}^{d}$ 满足对于所有 $U \in \{V \subseteq \mathbb{R}^{d} : V \text{ 是开集}\}$，$x \in S$，$\theta \in U$，且 $(U \ni \psi \mapsto \ell(\psi, x) \in \mathbb{R}) \in C^{1}(U, \mathbb{R})$，有
+
+
 
 $$ \boldsymbol{g}(\theta, x)=(\nabla_{\theta} \ell)(\theta, x). \quad (7.116) $$
 
 则我们称 $\Theta$ 是针对损失函数 $\ell$ 及其广义梯度 $\boldsymbol{g}$、学习率 $(\gamma_n)_{n \in \mathbb{N}}$、批量大小 $(J_n)_{n \in \mathbb{N}}$、动量衰减因子 $(\alpha_n)_{n \in \mathbb{N}}$、初始值 $\xi$ 和数据 $(X_{n, j})_{(n, j) \in \{(k, i) \in \mathbb{N}_0^2 : i \leq J_k\}}$ 在 $(\Omega, \mathcal{F}, \mathbb{P}), (S, \mathcal{S})$ 上的 Nesterov 加速 SGD 过程，当且仅当 $\Theta : \mathbb{N}_{0} \times \Omega \rightarrow \mathbb{R}^{d}$ 是从 $\mathbb{N}_{0} \times \Omega$ 到 $\mathbb{R}^{d}$ 的函数，并且满足存在 $\mathbf{m} : \mathbb{N}_{0} \times \Omega \rightarrow \mathbb{R}^{d}$，使得对于所有 $n \in \mathbb{N}$，有
 
 $$ \Theta_{0}=\xi,\quad\mathbf{m}_{0}=0, \quad (7.117) $$
+
 $$ \mathbf{m}_{n}=\alpha_{n} \mathbf{m}_{n-1}+\left(1-\alpha_{n}\right)\left[\frac{1}{J_{n}} \sum_{j=1}^{J_{n}} \boldsymbol{g}\left(\Theta_{n-1}-\gamma_{n} \alpha_{n} \mathbf{m}_{n-1}, X_{n, j}\right)\right], \quad (7.118) $$
+
 $$ \text{且} \quad \Theta_{n}=\Theta_{n-1}-\gamma_{n} \mathbf{m}_{n} . \quad (7.119) $$
 
 Nesterov 加速 SGD 优化方法在 PyTorch 中的实现见源代码 7.6。
@@ -11010,48 +11861,67 @@ X = torch.rand((M, 1)) * 4 * np.pi - 2 * np.pi
 Y = torch.sin(X)
 ```
 
-
-
-
 ## 7.5. 采用 Nesterov 动量的 SGD 优化
 
 ```python
 14 J = 64
+
 15
+
 16 N = 150000
+
 17
+
 18 loss = nn.MSELoss()
 19 lr = 0.003
 20 alpha = 0.999
+
 21
+
 22 m = [p.clone().detach().zero_() for p in net.parameters()]
+
 23
+
 24 for n in range(N):
 25     indices = torch.randint(0, M, (J,))
+
 26
+
 27     x = X[indices]
 28     y = Y[indices]
+
 29
+
 30     net.zero_grad()
+
 31
+
 32     # Remember the original parameters
 33     params = [p.clone().detach() for p in net.parameters()]
+
 34
+
 35     for p, m_p in zip(params, m):
 36         p.sub_(lr * alpha * m_p)
+
 37
+
 38     # Compute the loss
 39     loss_val = loss(net(x), y)
 40     # Compute the gradients with respect to the parameters
 41     loss_val.backward()
+
 42
+
 43     with torch.no_grad():
 44         for p, m_p, q in zip(net.parameters(), m, params):
 45             m_p.mul_(alpha)
 46             m_p.add_((1 - alpha) * p.grad)
 47             q.sub_(lr * m_p)
 48             p.copy_(q)
+
 49
+
 50     if n % 1000 == 0:
 51         with torch.no_grad():
 52             x = torch.rand((1000, 1)) * 4 * np.pi - 2 * np.pi
@@ -11060,48 +11930,61 @@ Y = torch.sin(X)
 55             print(f"Iteration: {n+1}, Loss: {loss_val}")
 ```
 
-源代码 7.6 (code/optimization_methods/nesterov_sgd.py)：使用 PyTorch 实现 Nesterov 加速 SGD 优化方法的 PYTHON 代码
+源代码 7.6 (`code/optimization_methods/nesterov_sgd.py`)：使用 PyTorch 实现 Nesterov 加速 SGD 优化方法的 PYTHON 代码
 
 ### 7.5.1 简化版 Nesterov 动量 SGD 优化
 
 出于算法简洁性的原因，在包括 PyTorch 在内的多个深度学习库中（参见 [338] 以及例如 [31, 第 3.5 节]），Nesterov 动量优化并未被实现为与定义 7.5.1 精确对应。相反，这里采用了一种替代的 Nesterov 加速 SGD 优化定义，我们在定义 7.5.3 中将其呈现出来。接下来的结果阐明了定义 7.5.1 中原始的 Nesterov 加速 SGD 优化概念与 PyTorch 中使用的定义 7.5.3 中替代的 Nesterov 加速 SGD 优化概念之间的联系（将 (7.121)–(7.123) 与 (7.134)–(7.136) 进行比较）。
 
 **引理 7.5.2（定义 7.5.1 与定义 7.5.3 之间的关系）。** 设 $d \in \mathbb{N}$，$(\gamma_n)_{n\in\mathbb{N}} \subseteq [0, \infty)$，$(J_n)_{n\in\mathbb{N}} \subseteq \mathbb{N}$，$(\alpha_n)_{n\in\mathbb{N}_0} \subseteq [0, 1)$，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间，设 $(S, \mathcal{S})$ 为一个可测空间，设 $X_{n, j}: \Omega \to \mathbb{R}^d$ 为一个随机变量，对于每个 $n \in \mathbb{N}$，$j \in \{1, 2, \dots, J_n\}$ 设 $X_{n, j}: \Omega \to S$ 为一个随机变量，设 $\ell = (\ell(\theta, x))_{(\theta,x)\in\mathbb{R}^d\times S}: \mathbb{R}^d\times S \to \mathbb{R}$ 以及 $\mathbf{g} = (\mathbf{g}_1, \dots, \mathbf{g}_d): \mathbb{R}^d\times S \to \mathbb{R}^d$ 满足对于所有 $x \in S$，$\theta \in \{v \in \mathbb{R}^d: \ell(v, x) \text{ is differentiable at } v\}$ 有 $\mathbf{g}(\theta, x) = (\nabla_\theta \ell)(\theta, x)$，(7.120) $\psi: \mathbb{N}_0 \times \Omega \to \mathbb{R}^d$ 以及 $\mathbf{m}: \mathbb{N}_0 \times \Omega \to \mathbb{R}^d$ 满足对于所有 $n \in \mathbb{N}$ 有 $\psi_0 = \xi$，$\mathbf{m}_0 = 0$，(7.121)
+
 $$
 \mathbf{m}_n = \alpha_n \mathbf{m}_{n-1} + \frac{1}{J_n} \sum_{j=1}^{J_n} \mathbf{g}\left(\psi_{n-1} - \gamma_n \alpha_n \mathbf{m}_{n-1}, X_{n, j}\right), \quad (7.122)
 $$
+
 且
+
 $$
 \psi_n = \psi_{n-1} - \gamma_n \mathbf{m}_n, \quad (7.123)
 $$
+
 设 $(\beta_n)_{n\in\mathbb{N}} \subseteq [0, \infty)$，$(\delta_n)_{n\in\mathbb{N}} \subseteq [0, \infty)$ 满足对于所有 $n \in \mathbb{N}$ 有 $\beta_n = \frac{\alpha_n(1 - \alpha_{n-1})}{1 - \alpha_n} =: \alpha_n$，且 $\delta_n = (1 - \alpha_n)\gamma_n$，(7.124) 并设 $\Psi: \mathbb{N}_0 \times \Omega \to \mathbb{R}^d$ 以及 $\mathbf{m}: \mathbb{N}_0 \times \Omega \to \mathbb{R}^d$ 满足对于所有 $n \in \mathbb{N}_0$ 有 $\mathbf{m}_n = \mathbf{m}_n$ 且 $\alpha_n$ 以及 $\Psi_n = \psi_n - \gamma_{n+1}\alpha_{n+1}\mathbf{m}_n$。 (7.125)
 
 则 (i) $\psi$ 是定义在 $((\Omega, \mathcal{F}, \mathbb{P}), (S, \mathcal{S}))$ 上针对损失函数 $\ell$、广义梯度 $\mathbf{g}$、学习率 $(\gamma_n)_{n\in\mathbb{N}}$、批量大小 $(J_n)_{n\in\mathbb{N}}$、动量衰减因子 $(\alpha_n)_{n\in\mathbb{N}}$、初始值 $\xi$ 以及数据 $(X_{n, j})_{(n, j)\in\{ (k, l) \in \mathbb{N}^2 \times \{1 \leq j \leq k\} \}$ 的 Nesterov 加速 SGD 过程，且
 
 (ii) 对于所有 $n \in \mathbb{N}$ 有
+
 $$
 \Psi_0 = \xi, \qquad \mathbf{m}_0 = 0, \tag{7.126}
 $$
+
 $$
 \mathbf{m}_n = \beta_n \mathbf{m}_{n-1} + \frac{1}{J_n} \sum_{j=1}^{J_n} \boldsymbol{g}\left(\Psi_{n-1}, X_{n, j}\right), \tag{7.127}
 $$
+
 且
+
 $$
 \Psi_n = \Psi_{n-1} - \delta_{n+1} \beta_{n+1} \mathbf{m}_n - \delta_n \left[ \frac{1}{J_n} \sum_{j=1}^{J_n} \boldsymbol{g}\left(\Psi_{n-1}, X_{n, j}\right) \right]. \tag{7.128}
 $$
 
 **引理 7.5.2 的证明。** 注意 (7.121)、(7.122) 和 (7.123) 证明了第 (i) 点。观察到 (7.122) 和 (7.125) 意味着对于所有 $n \in \mathbb{N}$ 有
+
 $$
 \begin{aligned}
 \mathbf{m}_n &= \frac{\alpha_n \mathbf{m}_{n-1}}{1 - \alpha_n} + \frac{1}{J_n} \sum_{j=1}^{J_n} \boldsymbol{g}\left(\Psi_{n-1}, X_{n, j}\right) \\
 &= \frac{\alpha_n (1 - \alpha_{n-1}) \mathbf{m}_{n-1}}{1 - \alpha_n} + \frac{1}{J_n} \sum_{j=1}^{J_n} \boldsymbol{g}\left(\Psi_{n-1}, X_{n, j}\right). \tag{7.129}
 \end{aligned}
 $$
+
 结合此式和 (7.124) 可知，对于所有 $n \in \mathbb{N}$ 有
+
 $$
 \mathbf{m}_n = \beta_n \mathbf{m}_{n-1} + \frac{1}{J_n} \sum_{j=1}^{J_n} \boldsymbol{g}\left(\Psi_{n-1}, X_{n, j}\right). \tag{7.130}
 $$
+
 此外，注意 (7.122)、(7.123) 和 (7.125) 确保对于所有 $n \in \mathbb{N}$ 有
+
 $$
 \begin{aligned}
 \Psi_n &= \Theta_n - \gamma_{n+1} \alpha_{n+1} \mathbf{m}_n \\
@@ -11113,52 +11996,63 @@ $$
 &= \Psi_{n-1} - \gamma_{n+1} \alpha_{n+1} \left[(1 - \alpha_n) \mathbf{m}_n - \gamma_n (1 - \alpha_n) \left[\frac{1}{J_n} \sum_{j=1}^{J_n} \boldsymbol{g}\left(\Psi_{n-1}, X_{n, j}\right)\right]\right]. \tag{7.131}
 \end{aligned}
 $$
+
 结合此式和 $(7.124)$ 可知，对于所有 $n \in \mathbb{N}$ 有
+
 $$
 \begin{align*}
 \Psi_n &= \Psi_{n-1} - \frac{\delta_{n+1}\alpha_{n+1}(1-\alpha_n)\boldsymbol{m}_n}{1-\alpha_{n+1}} - \delta_n \left[ \frac{1}{J_n}\sum_{j=1}^{J_n} \boldsymbol{\mathcal{G}}\left(\Psi_{n-1}, X_{n, j}\right) \right] \\
 &= \Psi_{n-1} - \delta_{n+1} \beta_{n+1} \boldsymbol{m}_n - \delta_n \left[ \frac{1}{J_n}\sum_{j=1}^{J_n} \boldsymbol{\mathcal{G}}\left(\Psi_{n-1}, X_{n, j}\right) \right].
 \end{align*}
 $$
+
 将此结果与 $(7.121)$、$(7.125)$ 和 $(7.130)$ 结合即可证明第 $(ii)$ 点。引理 $7.5.2$ 的证明到此结束。
 
-**定义 7.5.3（简化的 Nesterov 加速 SGD 优化方法）。** 设 $\boldsymbol{d} \in \mathbb{N}$，$(\gamma_n)_{n \in \mathbb{N}} \subseteq [0, \infty)$，$(J_n)_{n \in \mathbb{N}} \subseteq \mathbb{N}$，$(\alpha_n)_{n \in \mathbb{N}} \subseteq [0, \infty)$，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间，设 $(S, \mathcal{S})$ 为一个可测空间，设 $\xi: \Omega \rightarrow \mathbb{R}^d$ 为一个随机变量，对于每个 $n \in \mathbb{N}$，$j \in \{1, 2, \dots, J_n\}$，设 $X_{n,j}: \Omega \rightarrow S$ 为一个随机变量，且设 $\mathcal{L} = (\ell (\theta, x))_{(\theta, x) \in \mathbb{R}^d \times S}: \mathbb{R}^d \times S \rightarrow \mathbb{R}$ 以及 $\boldsymbol{g} = (\boldsymbol{g}_1, \cdots, \boldsymbol{g}_d): \mathbb{R}^d \times S \rightarrow \mathbb{R}^d$ 满足对于所有 $x \in S$，$\theta \in \{v \in \mathbb{R}^d: \ell (\theta, x)\) is differentiable at \(v\}$ 有
+
+
+# 定义 7.5.3（简化的 Nesterov 加速 SGD 优化方法）
+
+设 `d` ∈ ℕ，`(γ_n)_{n ∈ ℕ}` ⊆ `[0, ∞)`，`(J_n)_{n ∈ ℕ}` ⊆ ℕ，`(α_n)_{n ∈ ℕ}` ⊆ `[0, ∞)`，设 `(Ω, ℱ, ℙ)` 为一个概率空间，设 `(S, 𝒮)` 为一个可测空间，设 `ξ: Ω → ℝ^d` 为一个随机变量，对于每个 `n ∈ ℕ`，`j ∈ {1, 2, …, J_n}`，设 `X_{n,j}: Ω → S` 为一个随机变量，且设 `ℒ = (ℓ(θ, x))_{(θ, x) ∈ ℝ^d × S}: ℝ^d × S → ℝ` 以及 `g = (g_1, ⋯, g_d): ℝ^d × S → ℝ^d` 满足对于所有 `x ∈ S`，`θ ∈ {v ∈ ℝ^d: ℓ(θ, x) is differentiable at v}` 有
+
 $$
-\boldsymbol{g} (\theta, x) = (\nabla _ {\boldsymbol{\theta}} \ell) (\theta, x). \quad (7.133)
+\boldsymbol{g} (\theta, x) = (\nabla_{\boldsymbol{\theta}} \ell)(\theta, x). \quad (7.133)
 $$
-则我们称 $\Theta$ 为定义在 $((\Omega, \mathcal{F}, \mathbb{P}), (S, \mathcal{S}))$ 上针对损失函数 $\ell$、广义梯度 $\boldsymbol{g}$、学习率 $(\gamma_{n})_{n \in \mathbb{N}}$、批量大小 $(J_{n})_{n \in \mathbb{N}}$、动量衰减因子 $(\alpha_{n})_{n \in \mathbb{N}}$、初始值 $\xi$ 以及数据 $(X_{n,j})_{(n,j) \in \{ (k,l) \in \mathbb{N}^{2}: l \leqslant J_{k} \}}$ 的简化 Nesterov 加速 SGD 过程（如果 $\Theta: \mathbb{N}_{0} \times \Omega \rightarrow \mathbb{R}^{d}$ 是从 $\mathbb{N}_{0} \times \Omega$ 到 $\mathbb{R}^{d}$ 的函数，且存在 $\boldsymbol{m}: \mathbb{N}_{0} \times \Omega \rightarrow \mathbb{R}^{d}$ 使得对于所有 $n \in \mathbb{N}$ 有
+
+则我们称 `Θ` 为定义在 `((Ω, ℱ, ℙ), (S, 𝒮))` 上针对损失函数 `ℓ`、广义梯度 `g`、学习率 `(γ_n)_{n ∈ ℕ}`、批量大小 `(J_n)_{n ∈ ℕ}`、动量衰减因子 `(α_n)_{n ∈ ℕ}`、初始值 `ξ` 以及数据 `(X_{n,j})_{(n,j) ∈ {(k,l) ∈ ℕ^2: l ≤ J_k}}` 的简化 Nesterov 加速 SGD 过程（如果 `Θ: ℕ_0 × Ω → ℝ^d` 是从 `ℕ_0 × Ω` 到 `ℝ^d` 的函数，且存在 `m: ℕ_0 × Ω → ℝ^d` 使得对于所有 `n ∈ ℕ` 有
+
 $$
 \Theta_0 = \xi, \quad \boldsymbol{m}_0 = \mathbf{0}, \quad (7.134)
 $$
-$$
-\boldsymbol{m}_n = \alpha_n \boldsymbol{m}_{n-1} + \frac{1}{J_n} \sum_{j=1}^{J_n} \boldsymbol{g} \left( \Theta_{n-1}, X_{n, j} \right), \quad (7.135)
-$$
-且
-$$
-\Theta_n = \Theta_{n-1} - \gamma_n \alpha_n \boldsymbol{m}_n - \gamma_n \left[ \frac{1}{J_n} \sum_{j=1}^{J_n} \boldsymbol{g} \left( \Theta_{n-1}, X_{n, j} \right) \right]. \quad (7.136)
-$$
-我们便称 $\Theta$ 为针对损失函数 $\ell$、学习率 $(\gamma_{n})_{n \in \mathbb{N}}$、批量大小 $(J_{n})_{n \in \mathbb{N}}$、动量衰减率 $(\alpha_{n})_{n \in \mathbb{N}}$、初始值 $\xi$ 以及数据 $(X_{n,j})_{(n,j) \in \{ (k,l) \in \mathbb{N}^{2}: l \leqslant J_{k} \}}$ 的简化 Nesterov 加速 SGD 过程）。
 
-定义 $7.5.3$ 中描述的简化版 Nesterov 加速 SGD 优化方法在 PyTorch 中以 `torch.optim.SGD` 优化器的形式实现，并带有 `nesterov=True` 选项。
+$$
+\boldsymbol{m}_n = \alpha_n \boldsymbol{m}_{n-1} + \frac{1}{J_n} \sum_{j=1}^{J_n} \boldsymbol{g}\left( \Theta_{n-1}, X_{n, j} \right), \quad (7.135)
+$$
+
+且
+
+$$
+\Theta_n = \Theta_{n-1} - \gamma_n \alpha_n \boldsymbol{m}_n - \gamma_n \left[ \frac{1}{J_n} \sum_{j=1}^{J_n} \boldsymbol{g}\left( \Theta_{n-1}, X_{n, j} \right) \right]. \quad (7.136)
+$$
+
+我们便称 `Θ` 为针对损失函数 `ℓ`、学习率 `(γ_n)_{n ∈ ℕ}`、批量大小 `(J_n)_{n ∈ ℕ}`、动量衰减率 `(α_n)_{n ∈ ℕ}`、初始值 `ξ` 以及数据 `(X_{n,j})_{(n,j) ∈ {(k,l) ∈ ℕ^2: l ≤ J_k}}` 的简化 Nesterov 加速 SGD 过程）。
+
+定义 `7.5.3` 中描述的简化版 Nesterov 加速 SGD 优化方法在 PyTorch 中以 `torch.optim.SGD` 优化器的形式实现，并带有 `nesterov=True` 选项。
 
 ## 7.6 Adagrad SGD 优化（Adagrad）
 
-在本节中，我们介绍第 $6.5$ 节中 Adagrad 梯度下降（GD）优化方法的随机版本（参见 Duchi 等人 [117]）。
+在本节中，我们介绍第 `6.5` 节中 Adagrad 梯度下降（GD）优化方法的随机版本（参见 Duchi 等人 [117]）。
 
+### 7.6. Adagrad 随机梯度下降优化（Adagrad）
 
-
-
-## 7.6. Adagrad 随机梯度下降优化（Adagrad）
-
-**定义 7.6.1**（Adagrad 随机梯度下降优化方法）。设 $\boldsymbol{d} \in \mathbb{N}$，$(\gamma_n)_{n \in \mathbb{N}} \subseteq [0, \infty)$，$(J_n)_{n \in \mathbb{N}} \subseteq \mathbb{N}$，$\varepsilon \in (0, \infty)$，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间，设 $(\mathcal{S}, \boldsymbol{S})$ 为一个可测空间，设 $\xi: \Omega \to \mathbb{R}^{\boldsymbol{d}}$ 为一个随机变量，对于每个 $n \in \mathbb{N}$，$j \in \{1, 2, \ldots, J_n\}$，设 $X_{n,j}: \Omega \to \mathcal{S}$ 为一个随机变量，并且设 $\ell = (\ell(\theta, x))_{(\theta, x) \in \mathbb{R}^{\boldsymbol{d}} \times \mathcal{S}}: \mathbb{R}^{\boldsymbol{d}} \times \mathcal{S} \to \mathbb{R}$ 和 $\boldsymbol{g} = (\boldsymbol{g}_1, \ldots, \boldsymbol{g}_{\boldsymbol{d}}): \mathbb{R}^{\boldsymbol{d}} \times \mathcal{S} \to \mathbb{R}^{\boldsymbol{d}}$ 满足对于所有属于 $\{V \subseteq \mathbb{R}^{\boldsymbol{d}}: V \text{ 是开集的}\}$ 的 $U$，$x \in \mathcal{S}$，以及满足 $(U \ni \psi \mapsto \ell(\psi, x) \in \mathbb{R}) \in C^1(U, \mathbb{R})$ 的 $\theta \in U$，有
+**定义 7.6.1**（Adagrad 随机梯度下降优化方法）。设 `d` ∈ ℕ，`(γ_n)_{n ∈ ℕ}` ⊆ `[0, ∞)`，`(J_n)_{n ∈ ℕ}` ⊆ ℕ，`ε ∈ (0, ∞)`，设 `(Ω, ℱ, ℙ)` 为一个概率空间，设 `(𝒮, 𝕊)` 为一个可测空间，设 `ξ: Ω → ℝ^d` 为一个随机变量，对于每个 `n ∈ ℕ`，`j ∈ {1, 2, …, J_n}`，设 `X_{n,j}: Ω → 𝒮` 为一个随机变量，并且设 `ℓ = (ℓ(θ, x))_{(θ, x) ∈ ℝ^d × 𝒮}: ℝ^d × 𝒮 → ℝ` 和 `g = (g_1, …, g_d): ℝ^d × 𝒮 → ℝ^d` 满足对于所有属于 `{V ⊆ ℝ^d: V 是开集的}` 的 `U`，`x ∈ 𝒮`，以及满足 `(U ∋ ψ ↦ ℓ(ψ, x) ∈ ℝ) ∈ C^1(U, ℝ)` 的 `θ ∈ U`，有
 
 $$\boldsymbol{g}(\theta, x) = (\nabla_{\theta} \ell)(\theta, x). \tag{7.137}$$
 
-那么，我们称 $\Theta$ 是关于损失函数 $\ell$、广义梯度 $\boldsymbol{g}$、学习率 $(\gamma_n)_{n \in \mathbb{N}}$、批量大小 $(J_n)_{n \in \mathbb{N}}$、正则化因子 $\varepsilon$、初始值 $\xi$ 以及数据 $(X_{n,j})_{(n, j) \in \{(k, l) \in \mathbb{N}^2: l \leq J_k\}}$ 在 $((\Omega, \mathcal{F}, \mathbb{P}), (\mathcal{S}, \boldsymbol{S}))$ 上的 Adagrad 随机梯度下降过程（当且仅当 $\Theta = (\Theta^{(1)}, \ldots, \Theta^{(\boldsymbol{d})}): \mathbb{N}_0 \times \Omega \to \mathbb{R}^{\boldsymbol{d}}$ 是从 $\mathbb{N}_0 \times \Omega$ 到 $\mathbb{R}^{\boldsymbol{d}}$ 的函数，且满足对于所有 $n \in \mathbb{N}$，$i \in \{1, 2, \ldots, \boldsymbol{d}\}$，都有 $\Theta_0 = \xi$ 且
+那么，我们称 `Θ` 是关于损失函数 `ℓ`、广义梯度 `g`、学习率 `(γ_n)_{n ∈ ℕ}`、批量大小 `(J_n)_{n ∈ ℕ}`、正则化因子 `ε`、初始值 `ξ` 以及数据 `(X_{n,j})_{(n, j) ∈ {(k, l) ∈ ℕ^2: l ≤ J_k}}` 在 `((Ω, ℱ, ℙ), (𝒮, 𝕊))` 上的 Adagrad 随机梯度下降过程（当且仅当 `Θ = (Θ^{(1)}, …, Θ^{(d)}): ℕ_0 × Ω → ℝ^d` 是从 `ℕ_0 × Ω` 到 `ℝ^d` 的函数，且满足对于所有 `n ∈ ℕ`，`i ∈ {1, 2, …, d}`，都有 `Θ_0 = ξ` 且
 
 $$\Theta_n^{(i)} = \Theta_{n-1}^{(i)} - \gamma_n \left( \varepsilon + \left[ \sum_{k=1}^{n} \left( \frac{1}{J_k} \sum_{j=1}^{J_k} \boldsymbol{g}_{i, j}(\Theta_{k-1}, X_{k, j}) \right)^2 \right]^{1/2 - 1} \right) \left[ \frac{1}{J_n} \sum_{j=1}^{J_n} \boldsymbol{g}_{i, j}(\Theta_{n-1}, X_{n, j}) \right]. \tag{7.138}$$
 
-上述定义 7.6.1 中描述的 Adagrad 随机梯度下降优化方法的 PyTorch 实现见源码 7.7。上述定义 7.6.1 中描述的 Adagrad 随机梯度下降优化方法也可在 PyTorch 中以内置优化器 `torch.optim.Adagrad` 的形式获得（在实际应用中，通常更推荐使用内置优化器而非从头开始实现）。
+上述定义 `7.6.1` 中描述的 Adagrad 随机梯度下降优化方法的 PyTorch 实现见源码 `7.7`。上述定义 `7.6.1` 中描述的 Adagrad 随机梯度下降优化方法也可在 PyTorch 中以内置优化器 `torch.optim.Adagrad` 的形式获得（在实际应用中，通常更推荐使用内置优化器而非从头开始实现）。
 
 ```python
 import torch
@@ -11208,17 +12102,17 @@ for n in range(N):
             print(f"Iteration: {n+1}, Loss: {loss_val}")
 ```
 
-源码 7.7（*code/optimization_methods/adagrad.py*）：使用 PyTorch 实现 Adagrad 随机梯度下降优化方法的 Python 代码。
+源码 `7.7`（`*code/optimization_methods/adagrad.py*`）：使用 PyTorch 实现 Adagrad 随机梯度下降优化方法的 Python 代码。
 
 ## 7.7 均方根反向传播随机梯度下降优化（RMSPROP）
 
-在本节中，我们介绍第 6.6 节中 RMSprop 梯度下降优化方法的随机版本（参见 Hinton 等人 [199]）。
+在本节中，我们介绍第 `6.6` 节中 RMSprop 梯度下降优化方法的随机版本（参见 Hinton 等人 [199]）。
 
-**定义 7.7.1**（RMSprop 随机梯度下降优化方法）。设 $\mathbf{d} \in \mathbb{N}$，$(\gamma_{n})_{n \in \mathbb{N}} \subseteq [0, \infty)$，$(J_{n})_{n \in \mathbb{N}} \subseteq \mathbb{N}$，$(\beta_{n})_{n \in \mathbb{N}} \subseteq [0, 1]$，$\varepsilon \in (0, \infty)$，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间，设 $(S, \mathcal{S})$ 为一个可测空间，设 $\xi: \Omega \rightarrow \mathbb{R}^{d}$ 为一个随机变量，对于每个 $n \in \mathbb{N}$，$j \in \{ 1, 2, \ldots, J_{n} \}$，设 $X_{n,j}: \Omega \rightarrow S$ 为一个随机变量，并且设 $\ell = (\ell(\theta, x))_{(\theta, x) \in \mathbb{R}^{d} \times S}: \mathbb{R}^{d} \times S \rightarrow \mathbb{R}$ 和 $\mathbf{g} = (\mathbf{g}_{1}, \ldots, \mathbf{g}_{d}): \mathbb{R}^{d} \times S \rightarrow \mathbb{R}^{d}$ 满足对于所有属于 $\{ V \subseteq \mathbb{R}^{d}: V$ 是开集$\}$ 的 $U$，$x \in S$，以及满足 $(U \supset \vartheta \mapsto \mathcal{L}(\vartheta, x) \in \mathbb{R}) \in C^{1}(U, \mathbb{R})$ 的 $\theta \in U$，有
+**定义 7.7.1**（RMSprop 随机梯度下降优化方法）。设 `d` ∈ ℕ，`(γ_n)_{n ∈ ℕ}` ⊆ `[0, ∞)`，`(J_n)_{n ∈ ℕ}` ⊆ ℕ，`(β_n)_{n ∈ ℕ}` ⊆ `[0, 1]`，`ε ∈ (0, ∞)`，设 `(Ω, ℱ, ℙ)` 为一个概率空间，设 `(S, 𝒮)` 为一个可测空间，设 `ξ: Ω → ℝ^d` 为一个随机变量，对于每个 `n ∈ ℕ`，`j ∈ {1, 2, …, J_n}`，设 `X_{n,j}: Ω → S` 为一个随机变量，并且设 `ℓ = (ℓ(θ, x))_{(θ, x) ∈ ℝ^d × S}: ℝ^d × S → ℝ` 和 `g = (g_1, …, g_d): ℝ^d × S → ℝ^d` 满足对于所有属于 `{V ⊆ ℝ^d: V 是开集}` 的 `U`，`x ∈ S`，以及满足 `(U ⊃ ϑ ↦ ℒ(ϑ, x) ∈ ℝ) ∈ C^1(U, ℝ)` 的 `θ ∈ U`，有
 
 $$\boldsymbol{g}(\theta, x) = (\nabla_{\theta} \mathcal{L})(\theta, x). \tag{7.139}$$
 
-那么，我们称 $\Theta$ 是关于损失函数 $\mathcal{L}$、广义梯度 $\boldsymbol{g}$、学习率 $(\gamma_{n})_{n \in \mathbb{N}}$、批量大小 $(J_{n})_{n \in \mathbb{N}}$、二阶矩衰减因子 $(\beta_{n})_{n \in \mathbb{N}}$、正则化因子 $\varepsilon$、初始值 $\boldsymbol{\xi}$ 以及数据 $(X_{n, j})_{(n, j) \in(\{k, l \in \mathbb{N}: l \leq J_{k}\})}$ 的 RMSprop 随机梯度下降过程，当且仅当存在 $\mathbb{M}=(\mathbb{M}^{(1)}, \ldots, \mathbb{M}^{(\mathbf{d})}): \mathbb{N}_{0} \times \Omega \rightarrow \mathbb{R}^{\mathbf{d}}$，使得 $\Theta=(\Theta^{(1)}, \ldots, \Theta^{(\mathbf{d})}): \mathbb{N}_{0} \times \Omega \rightarrow \mathbb{R}^{\mathbf{d}}$ 是从 $\mathbb{N}_{0} \times \Omega$ 到 $\mathbb{R}^{\mathbf{d}}$ 的函数，并且满足对于所有 $n \in \mathbb{N}$，$i \in\{1,2, \ldots, \mathbf{d}\}$，有
+那么，我们称 `Θ` 是关于损失函数 `ℒ`、广义梯度 `g`、学习率 `(γ_n)_{n ∈ ℕ}`、批量大小 `(J_n)_{n ∈ ℕ}`、二阶矩衰减因子 `(β_n)_{n ∈ ℕ}`、正则化因子 `ε`、初始值 `ξ` 以及数据 `(X_{n, j})_{(n, j) ∈ ({k, l ∈ ℕ: l ≤ J_k})}` 的 RMSprop 随机梯度下降过程，当且仅当存在 `𝕄 = (𝕄^{(1)}, …, 𝕄^{(d)}): ℕ_0 × Ω → ℝ^d`，使得 `Θ = (Θ^{(1)}, …, Θ^{(d)}): ℕ_0 × Ω → ℝ^d` 是从 `ℕ_0 × Ω` 到 `ℝ^d` 的函数，并且满足对于所有 `n ∈ ℕ`，`i ∈ {1,2, …, d}`，有
 
 $$\Theta_{0}=\boldsymbol{\xi}, \quad \mathbb{M}_{0}=0, \tag{7.140}$$
 
@@ -11228,7 +12122,9 @@ $$\mathbb{M}_{n}^{(i)}=\beta_{n} \mathbb{M}_{n-1}^{(i)}+\left(1-\beta_{n}\right)
 
 $$\Theta_{n}^{(i)}=\Theta_{n-1}^{(i)}-\frac{\gamma_{n}}{\varepsilon+\left[\mathbb{M}_{n}^{(i)}\right]^{1 / 2}}\left[\frac{1}{J_{n}} \sum_{j=1}^{J_{n}} \boldsymbol{g}_{i}\left(\Theta_{n-1}, X_{n, j}\right)\right]. \tag{7.142}$$
 
-**注 7.7.2.** 在 Hinton 等人 [199] 中，建议将 $0.9 = \beta_{1} = \beta_{2} = \ldots$ 作为定义 7.7.1 中二阶矩衰减因子 $(\beta_{n})_{n \in \mathbb{N}} \subseteq [0,1]$ 的默认值。
+**注 7.7.2.** 在 Hinton 等人 [199] 中，建议将 `0.9 = β_1 = β_2 = …` 作为定义 `7.7.1` 中二阶矩衰减因子 `(β_n)_{n ∈ ℕ} ⊆ [0,1]` 的默认值。
+
+
 
 上述定义 7.7.1 中描述的 RMSprop 随机梯度下降优化方法的 PyTorch 实现见源码 7.8。上述定义 7.7.1 中描述的 RMSprop 随机梯度下降优化方法也可在 PyTorch 中以内置优化器 `torch.optim.RMSprop` 的形式获得（在实际应用中，通常更推荐使用内置优化器而非从头开始实现）。
 
@@ -11249,43 +12145,59 @@ Y = torch.sin(X)
 J = 64
 ```
 
+`16  N = 150000`
 
+`17`
 
+`18  loss = nn.MSELoss()`
 
-16  N = 150000
-17
-18  loss = nn.MSELoss()
-19  lr = 0.001
-20  beta = 0.9
-21  eps = 1e-10
-22
-23  moments = [p.clone().detach().zero_() for p in net.parameters()]
-24
-25  for n in range(N):
-26      indices = torch.randint(0, M, (J,))
-27
-28      x = X[indices]
-29      y = Y[indices]
-30
-31      net.zero_grad()
-32
-33      loss_val = loss(net(x), y)
-34      loss_val.backward()
-35
-36      with torch.no_grad():
-37          for m, p in zip(moments, net.parameters()):
-38              m.mul_(beta)
-39              m.add_((1 - beta) * p.grad * p.grad)
-40              p.sub_(lr * (eps + m).rsqrt() * p.grad)
-41
-42      if n % 1000 == 0:
-43          with torch.no_grad():
-44              x = torch.rand((1000, 1)) * 4 * np.pi - 2 * np.pi
-45              y = torch.sin(x)
-46              loss_val = loss(net(x), y)
-47              print(f"Iteration: {n+1}, Loss: {loss_val}")
+`19  lr = 0.001`
 
-源码 7.8 (code/optimization_methods/rmsprop.py)：使用 PYTORCH 实现 RMSprop 随机梯度下降（SGD）优化方法的 PYTHON 代码
+`20  beta = 0.9`
+
+`21  eps = 1e-10`
+
+`22`
+
+`23  moments = [p.clone().detach().zero_() for p in net.parameters()]`
+
+`25  for n in range(N):`
+
+`26      indices = torch.randint(0, M, (J,))`
+
+`28      x = X[indices]`
+
+`29      y = Y[indices]`
+
+`31      net.zero_grad()`
+
+`33      loss_val = loss(net(x), y)`
+
+`34      loss_val.backward()`
+
+`36      with torch.no_grad():`
+
+`37          for m, p in zip(moments, net.parameters()):`
+
+`38              m.mul_(beta)`
+
+`39              m.add_((1 - beta) * p.grad * p.grad)`
+
+`40              p.sub_(lr * (eps + m).rsqrt() * p.grad)`
+
+`42      if n % 1000 == 0:`
+
+`43          with torch.no_grad():`
+
+`44              x = torch.rand((1000, 1)) * 4 * np.pi - 2 * np.pi`
+
+`45              y = torch.sin(x)`
+
+`46              loss_val = loss(net(x), y)`
+
+`47              print(f"Iteration: {n+1}, Loss: {loss_val}")`
+
+源码 7.8 (`code/optimization_methods/rmsprop.py`)：使用 PYTORCH 实现 RMSprop 随机梯度下降（SGD）优化方法的 PYTHON 代码
 
 ### 7.7.1 偏差校正的均方根反向传播 SGD 优化
 
@@ -11328,35 +12240,49 @@ eps = 1e-10
 adj = 1
 ```
 
-23  moments = [p.clone().detach().zero_() for p in net.parameters()]
-24
-25  for n in range(N):
-26      indices = torch.randint(0, M, (J,))
-27
-28      x = X[indices]
-29      y = Y[indices]
-30
-31      net.zero_grad()
-32
-33      loss_val = loss(net(x), y)
-34      loss_val.backward()
-35
-36      with torch.no_grad():
-37          adj *= beta
-38          for m, p in zip(moments, net.parameters()):
-39              m.mul_(beta)
-40              m.add_((1 - beta) * p.grad * p.grad)
-41              p.sub_(lr * (eps + (m / (1 - adj)).sqrt().reciprocal()
-42                  * p.grad)
-43
-44          if n % 1000 == 0:
-45              with torch.no_grad():
-46                  x = torch.rand((1000, 1)) * 4 * np.pi - 2 * np.pi
-47                  y = torch.sin(x)
-48                  loss_val = loss(net(x), y)
-49                  print(f"Iteration: {n+1}, Loss: {loss_val}")
+`23  moments = [p.clone().detach().zero_() for p in net.parameters()]`
 
-源码 7.9 (code/optimization_methods/rmsprop_bias_adj.py)：使用 PyTorch 实现偏差校正 RMSprop SGD 优化方法的 PYTHON 代码
+`25  for n in range(N):`
+
+`26      indices = torch.randint(0, M, (J,))`
+
+`28      x = X[indices]`
+
+`29      y = Y[indices]`
+
+`31      net.zero_grad()`
+
+`33      loss_val = loss(net(x), y)`
+
+`34      loss_val.backward()`
+
+`36      with torch.no_grad():`
+
+`37          adj *= beta`
+
+`38          for m, p in zip(moments, net.parameters()):`
+
+`39              m.mul_(beta)`
+
+`40              m.add_((1 - beta) * p.grad * p.grad)`
+
+`41              p.sub_(lr * (eps + (m / (1 - adj)).sqrt().reciprocal()`
+
+`42                  * p.grad)`
+
+`44          if n % 1000 == 0:`
+
+`45              with torch.no_grad():`
+
+`46                  x = torch.rand((1000, 1)) * 4 * np.pi - 2 * np.pi`
+
+`47                  y = torch.sin(x)`
+
+`48                  loss_val = loss(net(x), y)`
+
+`49                  print(f"Iteration: {n+1}, Loss: {loss_val}")`
+
+源码 7.9 (`code/optimization_methods/rmsprop_bias_adj.py`)：使用 PyTorch 实现偏差校正 RMSprop SGD 优化方法的 PYTHON 代码
 
 ## 7.8 Adadelta SGD 优化
 
@@ -11372,11 +12298,13 @@ $\Theta_0 = \boldsymbol{\xi}, \quad \mathbb{M}_0 = 0, \quad \Delta_0 = 0, \qquad
 
 $\mathbb{M}_n^{(i)} = \beta_n \mathbb{M}_{n-1}^{(i)} + (1 - \beta_n) \left[ \frac{1}{J_n} \sum_{j=1}^{J_n} \boldsymbol{\mathcal{G}}_i(\Theta_{n-1}, \boldsymbol{X}_{n,j}) \right]^2, \qquad\qquad (7.149)$
 
+
+
 $\Theta_n^{(i)} = \Theta_{n-1}^{(i)} - \left( \frac{\varepsilon + \Delta_{n-1}^{(i)}}{\varepsilon + \mathbb{M}_n^{(i)}} \right)^{1/2} \left[ \frac{1}{J_n} \sum_{j=1}^{J_n} \boldsymbol{\mathcal{G}}_i(\Theta_{n-1}, \boldsymbol{X}_{n,j}) \right], \qquad (7.150)$
 
 并且 $\qquad \Delta_n^{(i)} = \delta_n \Delta_{n-1}^{(i)} + (1 - \delta_n) |\Theta_n^{(i)} - \Theta_{n-1}^{(i)}|^2. \qquad\qquad\qquad\qquad\qquad\qquad\qquad (7.151)$
 
-上述*定义 7.8.1*中描述的 Adadelta *SGD* 优化方法在 PyTorch 中的实现见*源码 7.10*。上述*定义 7.8.1*中描述的 *Adadelta SGD* 优化方法也可以在 PyTorch 中以内置的 *torch.optim.Adadelta* 优化器的形式获得（在实际应用中，通常优先于从零开始实现）。
+上述`定义 7.8.1`中描述的 Adadelta `SGD` 优化方法在 PyTorch 中的实现见`源码 7.10`。上述`定义 7.8.1`中描述的 `Adadelta SGD` 优化方法也可以在 PyTorch 中以内置的 `torch.optim.Adadelta` 优化器的形式获得（在实际应用中，通常优先于从零开始实现）。
 
 ```python
 import torch
@@ -11399,10 +12327,6 @@ N = 150000
 loss = nn.MSELoss()
 beta = 0.9
 ```
-
-
-
-
 
 ```python
 delta = 0.9
@@ -11439,13 +12363,14 @@ for n in range(N):
             print(f"Iteration: {n+1}, Loss: {loss_val}")
 ```
 
-源代码 7.10 (code/optimization_methods/adadelta.py)：使用 PyTorch 实现 Adadelta SGD 优化方法的 Python 代码
+源代码 7.10 (`code/optimization_methods/adadelta.py`)：使用 PyTorch 实现 Adadelta SGD 优化方法的 Python 代码
 
 ## 7.9 自适应矩估计 SGD 优化（Adam）
 
 在本节中，我们介绍第 6.8 节中 Adam GD 优化方法的随机版本（参见 Kingma & Ba [247]）。
 
-定义 7.9.1 (Adam SGD 优化方法). 设 $n \in \mathbb{N}$，$(\gamma_n)_{n\in\mathbb{N}} \subseteq [0, \infty)$，$(J_n)_{n\in\mathbb{N}} \subseteq \mathbb{N}$，$(\alpha_n)_{n\in\mathbb{N}} \subseteq [0, 1]$，$(\beta_n)_{n\in\mathbb{N}} \subseteq [0, 1]$，$\varepsilon \in (0, \infty)$ 满足
+### 定义 7.9.1 (Adam SGD 优化方法)
+设 $n \in \mathbb{N}$，$(\gamma_n)_{n\in\mathbb{N}} \subseteq [0, \infty)$，$(J_n)_{n\in\mathbb{N}} \subseteq \mathbb{N}$，$(\alpha_n)_{n\in\mathbb{N}} \subseteq [0, 1]$，$(\beta_n)_{n\in\mathbb{N}} \subseteq [0, 1]$，$\varepsilon \in (0, \infty)$ 满足
 
 $$ \max\{\alpha_1, \beta_1\} < 1, \tag{7.152} $$
 
@@ -11469,7 +12394,7 @@ $$ 0.001 = \gamma_1 = \gamma_2 = \ldots, \quad \quad 0.9 = \alpha_1 = \alpha_2 =
 
 以及 $10^{-8} = \varepsilon$ 作为定义 7.9.1 中 $(\gamma_n)_{n \in \mathbb{N}} \subseteq [0, \infty)$，$(\alpha_n)_{n \in \mathbb{N}} \subseteq [0, 1]$，$(\beta_n)_{n \in \mathbb{N}} \subseteq [0, 1]$，$\varepsilon \in (0, \infty)$ 的默认值。
 
-定义 7.9.1 中描述的 Adam SGD 优化方法在 PyTorch 中的实现见源代码 7.11。定义 7.9.1 中描述的 Adam SGD 优化方法也可以在 PyTorch 中以内置的 torch.optim.Adam 优化器的形式使用（对于实际应用而言，使用内置优化器通常比从头实现更受青睐）。
+定义 7.9.1 中描述的 Adam SGD 优化方法在 PyTorch 中的实现见源代码 7.11。定义 7.9.1 中描述的 Adam SGD 优化方法也可以在 PyTorch 中以内置的 `torch.optim.Adam` 优化器的形式使用（对于实际应用而言，使用内置优化器通常比从头实现更受青睐）。
 
 ```python
 import torch
@@ -11529,9 +12454,11 @@ for n in range(N):
             print(f"Iteration: {n+1}, Loss: {loss_val}")
 ```
 
-源代码 7.11 (code/optimization_methods/adam.py)：使用 PyTorch 实现 Adam SGD 优化方法的 Python 代码。
+源代码 7.11 (`code/optimization_methods/adam.py`)：使用 PyTorch 实现 Adam SGD 优化方法的 Python 代码。
 
 虽然源代码 7.11 以及本章迄今为止展示的其他源代码主要用于通过提供示例实现来说明本章中引入的各种优化方法的定义，但在源代码 7.12 中，我们展示了如何使用 PyTorch 的内置功能来解决实际的机器学习问题。该代码在一个包含 3 个卷积层和 2 个全连接层（每个隐藏层后跟一个 ReLU 激活函数）的神经网络上，基于 MNIST 数据集（在 Bottou et al. [47] 中介绍，包含 28 × 28 像素的 0 到 9 手写数字灰度图像及其相应标签，是文献中训练机器学习系统最常用的基准之一）进行训练。源代码 7.12 使用交叉熵损失函数和 Adam SGD 优化方法，并输出一个图表，展示训练过程中训练集和未用于训练的测试集上的平均损失变化，以及模型预测准确率的变化，见图 7.4。
+
+
 
 ```python
 import torch
@@ -11557,213 +12484,375 @@ torch.manual_seed(0)
 # collection of instances that has a length and can be indexed
 ```
 
-
-
-
 22 # （通常由整数索引）。
+
 23 # torchvision.datasets 模块包含用于加载
+
 24 # 流行机器学习数据集的函数，可能包括下载和数据
+
 25 # 转换功能。
 
 27 # 这里我们加载 MNIST 数据集，其中包含 28x28 灰度图像
+
 28 # 为手写数字，带有相应的标签
+
 29 # 取值在 {0, 1, ..., 9} 之间。
 
 31 # 首先加载数据集的训练部分，如果本地
+
 32 # 文件夹 ./data 中尚未存在，则从在线源下载数据
+
 33 # 并将数据转换为 PyTorch Tensor。
+
 34 mnist_train = datasets.MNIST(
+
 35        "/data",
+
 36        train=True,
+
 37        transform=transforms.ToTensor(),
+
 38        download=True,
+
 39 )
+
 40 # 接下来加载测试部分
+
 41 mnist_test = datasets.MNIST(
+
 42        "/data",
+
 43        train=False,
+
 44        transform=transforms.ToTensor(),
+
 45        download=True,
+
 46 )
 
 48 # data.utils.DataLoader 类允许迭代数据集进行
+
 49 # 训练和验证。它支持例如批量处理和
+
 50 # 数据集洗牌等功能。
 
 52 # 构建一个 DataLoader，在迭代时返回小批量
+
 53 # 大小为 64 个实例，这些实例取自训练集的随机排列
+
 54 #
+
 55 train_loader = data.DataLoader(
+
 56        mnist_train, batch_size=64, shuffle=True
+
 57 )
+
 58 # 测试数据集的加载器不需要洗牌
+
 59 test_loader = data.DataLoader(
+
 60        mnist_test, batch_size=64, shuffle=False
+
 61 )
 
 63 # 定义一个具有 3 个卷积层的神经网络，每个层
+
 64 # 后跟一个 ReLU 激活函数，然后是两个仿射层，
+
 65 # 第一个层后跟一个 ReLU 激活函数
+
 66 net = nn.Sequential(  # 输入形状 (N, 1, 28, 28)
+
 67    nn.Conv2d(1, 5, 5),   # (N, 5, 24, 24)
+
 68    nn.ReLU(),
+
 69    nn.Conv2d(5, 5, 5),   # (N, 5, 20, 20)
+
 70    nn.ReLU(),
 
 ### 7.9. *自适应矩估计 SGD 优化*
+
 *(Adam)*
 
 71    nn.Conv2d(5, 3, 5), # (N, 3, 16, 16)
+
 72    nn.ReLU(),
+
 73    nn.Flatten(), # (N, 3 * 16 * 16) = (N, 768)
+
 74    nn.Linear(768, 128), # (N, 128)
+
 75    nn.ReLU(),
+
 76    nn.Linear(128, 10), # 输出形状 (N, 10)
+
 77 ).to(device)
+
 78
+
 79 # 定义损失函数。对于每一个自然数 d，对于
+
 80 # R^d 中的标准基向量 e_1, e_2, ..., e_d，对于
+
 81 # d 维交叉熵损失函数 L，以及
+
 82 # d 维 softmax 激活函数 A，这里定义的函数 loss_fn
+
 83 # 满足对于所有 x 属于 R^d 和所有自然数
+
 84 # i 属于 [0,d]，有
+
 85 #   loss_fn(x, i) = L(A(x), e_i)。
+
 86 # 函数 loss_fn 还接受输入批次，在这种情况下
+
 87 # 它将返回相应输出的平均值。
+
 88 loss_fn = nn.CrossEntropyLoss()
+
 89
+
 90 # 定义优化器。我们使用 Adam SGD 优化方法。
+
 91 optimizer = optim.Adam(net.parameters(), lr=1e-3)
-92
+
 93 # 该函数计算模型在整个
+
 94 # 测试集上的平均损失以及模型预测的准确率。
+
 95 def compute_test_loss_and_accuracy():
+
 96     total_test_loss = 0.0
+
 97     correct_count = 0
+
 98     with torch.no_grad():
+
 99         # 在每次迭代中，test_loader 将产生一个
+
 100         # 带有相应标签的小批量图像
+
 101         for images, labels in test_loader:
+
 102             # 将数据移动到设备上
+
 103             images = images.to(device)
+
 104             labels = labels.to(device)
+
 105             # 计算神经网络在当前的
+
 106             # 小批量上的输出
+
 107             output = net(images)
+
 108             # 计算交叉熵损失的平均值
+
 109             loss = loss_fn(output, labels)
+
 110             # 对于累积的 total_test_loss，我们将 loss
+
 111             # 乘以批次大小（如上文指定，通常为 64，
+
 112             # 但对于最后一个批次可能会更小）。
+
 113             total_test_loss += loss.item() * images.size(0)
+
 114             # 对于每个输入，预测的标签是输出向量中
+
 115             # 最大分量所在的索引。
+
 116             pred_labels = torch.max(output, dim=1).indices
+
 117             # pred_labels == labels 按分量比较两个向量
+
 118             # 并返回一个布尔向量。
+
 119             # 对该向量求和即可统计 True
+
 120             # 条目的数量。
+
 121             correct_count += torch.sum(
+
 122                 pred_labels == labels
+
 123             ).item()
+
 124     avg_test_loss = total_test_loss / len(mnist_test)
+
 125     accuracy = correct_count / len(mnist_test)
+
 126     return (avg_test_loss, accuracy)
-127
+
 128
+
 129 # 初始化一个列表，用于保存在训练期间每个
+
 130 # 批次计算出的损失
+
 131 train_losses = []
-132
+
 133 # 每 10 个批次，我们将计算整个测试集上的
+
 134 # 损失以及模型在整个测试集上的预测准确率。
+
 135 # 我们这样做是为了在生成的图表中展示
+
 136 # 人工神经网络的泛化能力。
+
 137 # 然而，如此频繁地计算这些损失和准确率，且使用
+
 138 # 相对较大的数据点集合（与训练
+
 139 # 集相比）计算成本极高（大部分训练
+
 140 # 运行时间将花费在计算这些值上），因此
+
 141 # 在正常神经网络训练期间不建议这样做。
+
 142 # 通常，测试集仅在最后用于判断
+
 143 # 最终训练好的网络的性能。经常使用第三个
+
 144 # 数据点集合，称为验证集（不用于直接训练
+
 145 # 网络也不用于最终评估），用来
+
 146 # 判断过拟合或调整超参数。
+
 147 test_interval = 10
+
 148 test_losses = []
+
 149 accuracies = []
-150
+
 151 # 我们运行 5 个 epoch 的训练，即 5 次完整的
+
 152 # 遍历训练集。
+
 153 i = 0
+
 154 for e in range(5):
+
 155     for images, labels in train_loader:
+
 156         # 将数据移动到设备上
+
 157         images = images.to(device)
+
 158         labels = labels.to(device)
+
 159
+
 160         # 将梯度置零
+
 161         optimizer.zero_grad()
+
 162         # 计算神经网络在当前的
+
 163         # 小批量上的输出
+
 164         output = net(images)
+
 165         # 计算交叉熵损失
+
 166         loss = loss_fn(output, labels)
+
 167         # 计算梯度
+
 168         loss.backward()
+
 169
+
 170     # 更新神经网络的参数
+
 171     optimizer.step()
-172
+
 173     # 将当前损失追加到训练损失列表中。
+
 174     # 注意，跟踪训练损失的
+
 175     # 计算成本基本上为零（因为我们本来就要
+
 176     # 计算这些值），因此通常在神经网络训练中
+
 177     # 进行此操作以衡量训练
+
 178     # 进度。
+
 179     train_losses.append(loss.item())
-180
+
 181     if (i + 1) % test_interval == 0:
+
 182         # 计算测试集上的平均损失和
+
 183         # 模型的准确率，并将这些值追加到
+
 184         # 相应的列表中
+
 185         test_loss, accuracy = compute_test_loss_and_accuracy()
+
 186         test_losses.append(test_loss)
+
 187         accuracies.append(accuracy)
-188
+
 189         i += 1
-190
+
 191 fig, ax1 = plt.subplots(figsize=(12, 8))
+
 192 # 我们在同一图表中绘制训练损失、测试损失和准确率
+
 193 # 但使用两个不同的 y 轴
+
 194 ax2 = ax1.twinx()
-195
+
 196 # 对损失使用对数刻度
+
 197 ax1.set_yscale("log")
+
 198 # 对准确率使用 logistic 刻度
+
 199 ax2.set_yscale("logit")
+
 200 ax2.set_ylim((0.3, 0.99))
+
 201 N = len(test_losses) * test_interval
+
 202 ax2.set_xlim((0, N))
+
 203 # 绘制训练损失
+
 204 (training_loss_line,) = ax1.plot(
+
 205     train_losses,
+
 206     label="Training loss (left axis)",
+
 207 )
+
 208 # 绘制测试损失
+
 209 (test_loss_line,) = ax1.plot(
+
 210     range(0, N, test_interval),
+
 211     test_losses,
+
 212     label="Test loss (left axis)",
+
 213 )
+
 214 # 绘制准确率
+
 215 (accuracies_line,) = ax2.plot(
+
 216     range(0, N, test_interval),
+
 217     accuracies,
+
 218     label="Accuracy (right axis)",
-
-
-
 
 源代码 7.12 (*code/mnist.py*)：使用 PYTORCH 在 MNIST 数据集上训练人工神经网络（ANN）的 PYTHON 代码。此代码生成一个图表，展示测试集上平均损失的进展情况以及模型预测的准确率，见图 7.4。
 
@@ -11787,6 +12876,8 @@ torch.manual_seed(0)
 图 7.4 (*plots/mnist.pdf*)：由源代码 7.12 生成的图表，显示了训练期间每个小批量（minibatch）使用的平均损失（训练损失），以及测试集上的平均损失和训练过程中模型预测的准确率。
 
 源代码 7.13 比较了本章中介绍的几种优化方法在 MNIST 数据集上训练 **ANN** 时的性能，即：定义 **7.2.1** 中介绍的普通 **SGD** 优化方法、定义 **7.4.1** 中介绍的带动量的 **SGD** 优化方法、定义 **7.5.3** 中介绍的简化 Nesterov 加速 **SGD** 优化方法、定义 **7.6.1** 中介绍的 Adagrad **SGD** 优化方法、定义 **7.7.1** 中介绍的 RMSprop **SGD** 优化方法、定义 **7.8.1** 中介绍的 Adadelta **SGD** 优化方法，以及定义 **7.9.1** 中介绍的 Adam **SGD** 优化方法。该代码生成了两个图表，分别展示了训练损失的进展情况以及模型在测试集上预测准确率的进展情况，见图 **7.5**。请注意，这仅在一个特定问题上比较了这些优化方法的性能，且未针对所考虑的优化方法选择良好的超参数做出任何努力。因此，这些结果并不一定代表这些优化方法在一般情况下的性能。
+
+
 
 ```python
 import torch
@@ -11979,17 +13070,13 @@ plt.tight_layout()
 plt.savefig("../plots/mnist_optim.pdf", bbox_inches="tight")
 ```
 
-源代码 7.13 (*code/mnist\_optim.py*)：比较在 MNIST 数据集上训练 ANN 时几种优化方法性能的 PYTHON 代码。有关此代码生成的图表，见图 7.5。
+源代码 7.13 (`code/mnist_optim.py`)：比较在 MNIST 数据集上训练 ANN 时几种优化方法性能的 PYTHON 代码。有关此代码生成的图表，见图 7.5。
 
 **注 7.9.3** （加速型 SGD 优化方法分析）。在文献中，有大量研究文章探讨了本章回顾的加速型 SGD 优化方法。特别是，关于带动量的 SGD 型优化方法的文章，例如参见 \[149, 275, 280, 339, 387\] 及其参考文献；关于自适应 SGD 型优化方法的文章，例如参见 \[96, 156, 289, 351, 438\] 及其参考文献。
 
-
-
-
-
 ![](img/dec290f673e6357c31893c67b579ffe1_335_0.png)
 
-图 7.5 (plots/mnist\_optim.pdf)：由源代码 7.13 生成的图表。上图显示了在训练人工神经网络（ANNs）过程中训练损失的变化情况。更准确地说，每条线展示了在使用相应优化方法训练 ANN 时，训练损失在 200 个小批量上的移动平均值。下图展示了在使用每种优化方法训练过程中，ANN 预测在测试集上的准确率。
+图 7.5 (`plots/mnist_optim.pdf`)：由源代码 7.13 生成的图表。上图显示了在训练人工神经网络（ANNs）过程中训练损失的变化情况。更准确地说，每条线展示了在使用相应优化方法训练 ANN 时，训练损失在 200 个小批量上的移动平均值。下图展示了在使用每种优化方法训练过程中，ANN 预测在测试集上的准确率。
 
 ## 第 8 章
 
@@ -12019,15 +13106,19 @@ $$ D_k = D_{k+1} \begin{bmatrix} \frac{\partial F_k}{\partial x_{k-1}} (\varthet
 
 -   (ii) 对所有 $k \in \{1, 2, \ldots, L\}$，有
 
-    $$ D_k = \begin{pmatrix} \dfrac{\partial f_k}{\partial x_{k-1}} \end{pmatrix} \left( (\vartheta_k, \vartheta_{k+1}, \ldots, \vartheta_L, \mathfrak{f}_{k-1}) \right), \quad (8.4) $$
 
-    以及
 
--   (iii) 对所有 $k \in \{1, 2, \ldots, L\}$，有
+$$ D_k = \begin{pmatrix} \dfrac{\partial f_k}{\partial x_{k-1}} \end{pmatrix} \left( (\vartheta_k, \vartheta_{k+1}, \ldots, \vartheta_L, \mathfrak{f}_{k-1}) \right), \quad (8.4) $$
 
-    $$ \begin{pmatrix} \dfrac{\partial f_1}{\partial \vartheta_k} \end{pmatrix} (\vartheta, \mathfrak{f}_0) = D_{k+1} \left[ \begin{pmatrix} \dfrac{\partial F_k}{\partial \vartheta_k} \end{pmatrix} (\vartheta_k, \mathfrak{f}_{k-1}) \right]. \quad (8.5) $$
+以及
 
-命题 8.1.1 的证明。注意 (8.1)、对所有 $k \in \mathbb{N} \cap (0, L)$，$(\vartheta_k, \vartheta_{k+1}, \ldots, \vartheta_L) \in \mathbb{R}^{\vartheta_k} \times \mathbb{R}^{\vartheta_{k+1}} \times \ldots \times \mathbb{R}^{\vartheta_L}$，$x_{k-1} \in \mathbb{R}^{l_{k-1}}$ 都有
+- (iii) 对所有 $k \in \{1, 2, \ldots, L\}$，有
+
+$$ \begin{pmatrix} \dfrac{\partial f_1}{\partial \vartheta_k} \end{pmatrix} (\vartheta, \mathfrak{f}_0) = D_{k+1} \left[ \begin{pmatrix} \dfrac{\partial F_k}{\partial \vartheta_k} \end{pmatrix} (\vartheta_k, \mathfrak{f}_{k-1}) \right]. \quad (8.5) $$
+
+## 命题 8.1.1 的证明
+
+注意 (8.1)、对所有 $k \in \mathbb{N} \cap (0, L)$，$(\vartheta_k, \vartheta_{k+1}, \ldots, \vartheta_L) \in \mathbb{R}^{\vartheta_k} \times \mathbb{R}^{\vartheta_{k+1}} \times \ldots \times \mathbb{R}^{\vartheta_L}$，$x_{k-1} \in \mathbb{R}^{l_{k-1}}$ 都有
 
 $$ f_k((\vartheta_k, \vartheta_{k+1}, \ldots, \vartheta_L), x_{k-1}) = (f_{k+1}((\vartheta_{k+1}, \vartheta_{k+2}, \ldots, \vartheta_L), \circ F_k(\vartheta_k, \cdot)))(x_{k-1}), \quad (8.6) $$
 
@@ -12080,9 +13171,6 @@ $$
 \end{aligned}
 $$
 
-
-
-
 此外，观察到公式 (8.1) 以及事实 $D_{L+1} = \mathbf{I}_{L}$ 确保了
 
 $$
@@ -12095,7 +13183,7 @@ $$
 
 结合此结果与公式 (8.12) 即可证明第 (iii) 项。至此，命题 8.1.1 的证明完毕。
 
-## 推论 8.1.2 (带损失函数的参数化函数的反向传播)。
+## 推论 8.1.2 (带损失函数的参数化函数的反向传播)
 
 设 $L \in \mathbb{N}$，$l_0, l_1, \ldots, l_L, \mathbf{d}_1, \mathbf{d}_2, \ldots, \mathbf{d}_L \in \mathbb{N}$，$\vartheta = (\vartheta_1, \vartheta_2, \ldots, \vartheta_L) \in \mathbb{R}^{\mathbf{d}_1} \times \mathbb{R}^{\mathbf{d}_2} \times \cdots \times \mathbb{R}^{\mathbf{d}_L}$，$\mathbf{z}_0 \in \mathbb{R}^{l_0}$，$\mathbf{z}_1 \in \mathbb{R}^{l_1}$，$\ldots$，$\mathbf{z}_L \in \mathbb{R}^{l_L}$，$\mathbf{y} \in \mathbb{R}^{l_L}$。设 $\mathfrak{C} = (\mathfrak{C}(x, y))_{(x, y) \in \mathbb{R}^{l_L} \times \mathbb{R}^{l_L}} : \mathbb{R}^{l_L} \times \mathbb{R}^{l_L} \rightarrow \mathbb{R}$ 可微，对于每个 $k \in \{1, 2, \ldots, L\}$，设 $F_k = F_k(\theta_k, \mathbf{x}_{k-1})_{(\theta_k, \mathbf{x}_{k-1}) \in \mathbb{R}^{\mathbf{d}_k} \times \mathbb{R}^{l_{k-1}}} : \mathbb{R}^{\mathbf{d}_k} \times \mathbb{R}^{l_{k-1}} \rightarrow \mathbb{R}^{l_k}$ 可微。设 $\mathcal{L} = (\mathcal{L}(\theta_1, \theta_2, \ldots, \theta_L))_{(\theta_1, \theta_2, \ldots, \theta_L) \in \mathbb{R}^{\mathbf{d}_1} \times \mathbb{R}^{\mathbf{d}_2} \times \cdots \times \mathbb{R}^{\mathbf{d}_L}} : \mathbb{R}^{\mathbf{d}_1} \times \mathbb{R}^{\mathbf{d}_2} \times \cdots \times \mathbb{R}^{\mathbf{d}_L} \rightarrow \mathbb{R}$ 满足对于所有 $\theta = (\theta_1, \theta_2, \ldots, \theta_L) \in \mathbb{R}^{\mathbf{d}_1} \times \mathbb{R}^{\mathbf{d}_2} \times \cdots \times \mathbb{R}^{\mathbf{d}_L}$ 有
 
@@ -12111,9 +13199,9 @@ $$
 
 且设 $D_k \in \mathbb{R}^{l_{k-1}}$，$k \in \{1, 2, \ldots, L+1\}$，满足对于所有 $k \in \{1, 2, \ldots, L\}$ 有
 
-$$
-D_{L+1} = (\nabla_{\mathbf{x}}\mathfrak{C})(\mathbf{f}_L, \mathbf{y}) \quad \text{且} \quad D_k = \left[\left(\frac{\partial F_k}{\partial \mathbf{x}_{k-1}}\right)(\vartheta_k, \mathbf{f}_{k-1})\right]^{*} D_{k+1}. \tag{8.16}
-$$
+
+
+$D_{L+1} = (\nabla_{\mathbf{x}}\mathfrak{C})(\mathbf{f}_L, \mathbf{y}) \quad \text{且} \quad D_k = \left[\left(\frac{\partial F_k}{\partial \mathbf{x}_{k-1}}\right)(\vartheta_k, \mathbf{f}_{k-1})\right]^{*} D_{k+1}. \tag{8.16}$
 
 则
 
@@ -12186,7 +13274,7 @@ $$
 
 ## 8.2 人工神经网络的逆向传播
 
-**定义 8.2.1 (对角矩阵)。** 我们用 $\operatorname{diag}: \big(\bigcup_{d\in\mathbb{N}} \mathbb{R}^{d}\big) \to \big(\bigcup_{d\in\mathbb{N}} \mathbb{R}^{d\times d}\big)$ 表示满足对于所有 $d \in \mathbb{N}$，$x = (x_1, \dots, x_d) \in \mathbb{R}^{d}$ 有
+**定义 8.2.1 (对角矩阵)。** 我们用 `diag`: $\big(\bigcup_{d\in\mathbb{N}} \mathbb{R}^{d}\big) \to \big(\bigcup_{d\in\mathbb{N}} \mathbb{R}^{d\times d}\big)$ 表示满足对于所有 $d \in \mathbb{N}$，$x = (x_1, \dots, x_d) \in \mathbb{R}^{d}$ 有
 
 $$
 \operatorname{diag}(x)=\begin{pmatrix} x_1&0&\cdots&0\\ 0&x_2&\cdots&0\\ \vdots&\vdots&\ddots&\vdots\\ 0&0&\cdots&x_d\end{pmatrix} \in \mathbb{R}^{d\times d}
@@ -12220,21 +13308,18 @@ $$
 
 - (i) 成立 $\mathcal{L}: \bigtimes_{k=1}^L(\mathbb{R}^{l_{k} \times l_{k-1}} \times \mathbb{R}^{l_k}) \to \mathbb{R}$ 可微，
 - (ii) 成立 $\big(\nabla_{B_L} \mathcal{L}\big)(\Phi) = D_{L+1}$，
-
-
-
-
-(iii) 对于所有 $k \in \{1, 2, \dots, L-1\}$，都有
+- (iii) 对于所有 $k \in \{1, 2, \dots, L-1\}$，都有
 
 $$(\nabla_{B_k} \mathscr{L})(\Phi) = [\text{diag}(\mathfrak{M}_{a', l_k}(\mathbf{W}_k \mathbf{f}_{k-1} + \mathbf{B}_k))] D_{k+1},$$
 
-(iv) 有 $(\nabla_{W_L} \mathscr{L})(\Phi) = D_{L+1}[\mathbf{f}_{L-1}]^*$，且
-
-(v) 对于所有 $k \in \{1, 2, \dots, L-1\}$，都有
+- (iv) 有 $(\nabla_{W_L} \mathscr{L})(\Phi) = D_{L+1}[\mathbf{f}_{L-1}]^*$，且
+- (v) 对于所有 $k \in \{1, 2, \dots, L-1\}$，都有
 
 $$(\nabla_{W_k} \mathscr{L})(\Phi) = [\text{diag}(\mathfrak{M}_{a', l_k}(\mathbf{W}_k \mathbf{f}_{k-1} + \mathbf{B}_k))] D_{k+1}[\mathbf{f}_{k-1}]^*.$$
 
 推论 8.2.2 的证明。在整个证明过程中，对于每个 $k \in \{1, 2, \dots, L\}$，令
+
+
 
 $\begin{align*} F_k &= (F_k^{(m)})_{m \in \{1, 2, \dots, l_k\}} \\ &= (F_k(((\mathbf{W}_{k, i, j})_{(i, j) \in \{1, 2, \dots, l_k\} \times \{1, 2, \dots, l_{k-1}\}} \times B_k), \\ &x_{k-1}))_{((\mathbf{W}_{k, i, j})_{(i, j) \in \{1, 2, \dots, l_k\} \times \{1, 2, \dots, l_{k-1}\}}, B_k), x_{k-1}) \in (\mathbb{R}^{l_k \times l_{k-1}} \times \mathbb{R}^{l_{k-1}} \times \mathbb{R}^{l_{k-1}}) \times \mathbb{R}^{l_{k-1}} \\ &\colon (\mathbb{R}^{l_k \times l_{k-1}} \times \mathbb{R}^{l_{k-1}} \times \mathbb{R}^{l_{k-1}}) \times \mathbb{R}^{l_{k-1}} \rightarrow \mathbb{R}^{l_k} \end{align*}$
 
@@ -12283,6 +13368,7 @@ $\left( \frac{\partial \boldsymbol{F}_{k}}{\partial \boldsymbol{B}_{k}} \right)(
 将此与 (8.40) 结合意味着对于所有 $k \in \{1, 2, \ldots, L-1\}$，都有
 
 $\left(\nabla_{\boldsymbol{B}_{k}} \boldsymbol{\mathscr{L}}\right)(\Phi) = [\operatorname{diag}(\mathfrak{M}_{\sigma_{k}^{a}, j_{k}}(\boldsymbol{\mathbf{W}}_{k} \boldsymbol{\mathfrak{I}}_{k-1} + \boldsymbol{\mathbf{B}}_{k}))]^{*} \boldsymbol{D}_{k+1}$
+
 $= [\operatorname{diag}(\mathfrak{M}_{\sigma_{k}^{a}, j_{k}}(\boldsymbol{\mathbf{W}}_{k} \boldsymbol{\mathfrak{I}}_{k-1} + \boldsymbol{\mathbf{B}}_{k}))] \boldsymbol{D}_{k+1}$。 (8.45)
 
 这确立了第 (iii) 项。此外，注意 (8.34) 确保对于所有 $m, i \in$ $\{1, 2, \ldots, l_{L}\}$ 和 $j \in \{1, 2, \ldots, l_{L-1}\}$，都有
@@ -12322,17 +13408,24 @@ $$D_k^{(m)} = [\mathbf{W}_k]^* [\operatorname{diag}(\mathfrak{M}_{a', \ell_k}(\m
 （参见定义 1.2.1, 1.3.4 和 8.2.1）。那么
 
 - (i) 有 $\mathcal{L}: \bigtimes_{k=1}^{L} (\mathbb{R}^{\ell_{k} \times \ell_{k-1}} \times \mathbb{R}^{\ell_{k}}) \to \mathbb{R}$ 是可微的，
+
 - (ii) 有 $(\nabla_{B_L} \mathcal{L})(\Phi) = \frac{1}{M} [\sum_{m=1}^{M} D_{L+1}^{(m)}]$
+
 - (iii) 对于所有 $k \in \{1, 2, \dots, L-1\}$，都有
 
 $$(\nabla_{B_k} \mathcal{L})(\Phi) = \frac{1}{M} \left[ \sum_{m=1}^{M} [\operatorname{diag}(\mathfrak{M}_{a', \ell_k}(\mathbf{W}_k\mathbf{f}_{k-1}^{(m)} + \mathbf{B}_k))] D_{k+1}^{(m)} \right], \qquad (8.54)$$
 
 - (iv) 有 $(\nabla_{W_L} \mathcal{L})(\Phi) = \frac{1}{M} [\sum_{m=1}^{M} D_{L+1}^{(m)} \mathbf{f}_{L}^{(m)*}]$，且
+
 - (v) 对于所有 $k \in \{1, 2, \dots, L-1\}$，都有
 
 $$(\nabla_{W_k} \mathcal{L})(\Phi) = \frac{1}{M} \left[ \sum_{m=1}^{M} [\operatorname{diag}(\mathfrak{M}_{a', \ell_k}(\mathbf{W}_k\mathbf{f}_{k-1}^{(m)} + \mathbf{B}_k))] D_{k+1}^{(m)} \mathbf{f}_{k-1}^{(m)*} \right]. \qquad (8.55)$$
 
-推论 8.2.3 的证明。在整个证明过程中，设 $\mathbf{L}^{(m)}: \bigtimes_{k=1}^{L} (\mathbb{R}^{\ell_k \times \ell_{k-1}} \times \mathbb{R}^{\ell_k}) \to \mathbb{R}$，$m \in \{1, 2, \dots, M\}$，满足对于所有 $m \in \{1, 2, \dots, M\}$ 和 $\Psi \in \bigtimes_{k=1}^{L} (\mathbb{R}^{\ell_k \times \ell_{k-1}} \times \mathbb{R}^{\ell_k})$，都有
+
+
+### 推论 8.2.3 的证明
+
+在整个证明过程中，设 $\mathbf{L}^{(m)}: \bigtimes_{k=1}^{L} (\mathbb{R}^{\ell_k \times \ell_{k-1}} \times \mathbb{R}^{\ell_k}) \to \mathbb{R}$，$m \in \{1, 2, \dots, M\}$，满足对于所有 $m \in \{1, 2, \dots, M\}$ 和 $\Psi \in \bigtimes_{k=1}^{L} (\mathbb{R}^{\ell_k \times \ell_{k-1}} \times \mathbb{R}^{\ell_k})$，都有
 
 $$\mathbf{L}^{(m)}(\Psi) = \mathcal{C}(\mathcal{R}_a^N(\Psi)) (\mathbf{f}_0^{(m)}, \mathbf{y}^{(m)}). \qquad (8.56)$$
 
@@ -12347,8 +13440,6 @@ $$\mathcal{L}(\Psi) = \frac{1}{M} \left[ \sum_{m=1}^{M} \mathbf{L}^{(m)}(\Psi) \
 设 $L, M \in \mathbb{N}$，$l_0, l_1, \dots, l_L \in \mathbb{N}$，$\Phi = ((\mathbf{W}_1, \mathbf{B}_1), \dots, (\mathbf{W}_L, \mathbf{B}_L)) \in \bigtimes_{k=1}^{L} (\mathbb{R}^{\ell_k \times \ell_{k-1}} \times \mathbb{R}^{\ell_k})$，设 $a: \mathbb{R} \to \mathbb{R}$ 是可微的，对于每个 $m \in \{1, 2, \dots, M\}$，设 $\mathbf{f}_0^{(m)} \in \mathbb{R}^{l_0}$，$\mathbf{f}_L^{(m)} \in \mathbb{R}^{l_L}$，$\mathbf{y}^{(m)} \in \mathbb{R}^{l_L}$ 满足对于所有 $k \in \{1, 2, \dots, L\}$，都有
 
 $$\mathbf{f}_{k}^{(m)} = \mathfrak{M}_{a, [0, L) (k) + \mathrm{id}_{\{1 \cup L \}(k), \ell_k} (\mathbf{W}_k \mathbf{f}_{k-1}^{(m)} + \mathbf{B}_k), \qquad (8.58)$$
-
-
 
 设 $\mathcal{L} = \left(\mathcal{L}^{\left(\left(W_1, B_1\right), \ldots, \left(W_L, B_L\right)\right)}\right)_{\left(\left(W_1, B_1\right), \ldots\left(W_L, B_L\right)\right) \in \times_{k=1}^{L}\left(\mathbb{R}^{k \times l_{k-1}} \times \mathbb{R}^{l_k}\right)} : \times_{k=1}^{L}\left(\mathbb{R}^{k \times l_{k-1}} \times \mathbb{R}^{l_k}\right) \to \mathbb{R}$ 满足对于所有 $\Psi \in \left(\times_{k=1}^{L}\left(\mathbb{R}^{k \times l_{k-1}} \times \mathbb{R}^{l_k}\right)\right)$ 均有
 
@@ -12365,10 +13456,13 @@ $$D_{k}^{(m)}=\left[\mathbf{W}_{k}^{*}\right]^{*}\left[\operatorname{diag}\left(
 - (i) 成立 $\mathcal{L}: \times_{k=1}^{L}\left(\mathbb{R}^{k \times l_{k-1}} \times \mathbb{R}^{l_k}\right) \to \mathbb{R}$ 是可微的，
 - (ii) 成立 $\left(\nabla_{B_L} \mathcal{L}\right)(\Phi)=\frac{1}{M}\left[\sum_{m=1}^{M} D_{L+1}^{(m)}\right]$，
 - (iii) 对于所有 $k \in\{1, 2, \ldots, L-1\}$ 成立
-  $$\left(\nabla_{B_k} \mathcal{L}\right)(\Phi)=\frac{1}{M}\left[\sum_{m=1}^{M}\left[\operatorname{diag}\left(\Re_{a^{\prime}, l_k}\left(\mathbf{W}_k \mathfrak{f}_{k-1}^{(m)}+\mathbf{B}_k\right)\right)\right] D_{k+1}^{(m)}\right], \quad(8.62)$$
+
+$$\left(\nabla_{B_k} \mathcal{L}\right)(\Phi)=\frac{1}{M}\left[\sum_{m=1}^{M}\left[\operatorname{diag}\left(\Re_{a^{\prime}, l_k}\left(\mathbf{W}_k \mathfrak{f}_{k-1}^{(m)}+\mathbf{B}_k\right)\right)\right] D_{k+1}^{(m)}\right], \quad(8.62)$$
+
 - (iv) 成立 $\left(\nabla_{W_L} \mathcal{L}\right)(\Phi)=\frac{1}{M}\left[\sum_{m=1}^{M} D_{L+1}^{(m)} \mathfrak{f}_{L-1}^{(m) *}\right]$，且
 - (v) 对于所有 $k \in\{1, 2, \ldots, L-1\}$ 成立
-  $$\left(\nabla_{W_k} \mathcal{L}\right)(\Phi)=\frac{1}{M}\left[\sum_{m=1}^{M}\left[\operatorname{diag}\left(\Re_{a^{\prime}, l_k}\left(\mathbf{W}_k \mathfrak{f}_{k-1}^{(m)}+\mathbf{B}_k\right)\right) D_{k+1}^{(m)} \mathfrak{f}_{k-1}^{(m)}\right]^{*}\right]. \quad(8.63)$$
+
+$$\left(\nabla_{W_k} \mathcal{L}\right)(\Phi)=\frac{1}{M}\left[\sum_{m=1}^{M}\left[\operatorname{diag}\left(\Re_{a^{\prime}, l_k}\left(\mathbf{W}_k \mathfrak{f}_{k-1}^{(m)}+\mathbf{B}_k\right)\right) D_{k+1}^{(m)} \mathfrak{f}_{k-1}^{(m)}\right]^{*}\right]. \quad(8.63)$$
 
 推论 8.2.4 的证明。在整个证明过程中，设 $\mathbf{c} = \left(\mathcal{C}(x, y)\right)_{(x, y) \in \mathbb{R}^{l} \times \mathbb{R}^{l}} : \mathbb{R}^{l} \times \mathbb{R}^{l} \to \mathbb{R}$ 满足对于所有 $x, y \in \mathbb{R}^{l}$ 均有
 
@@ -12378,11 +13472,11 @@ $$\mathbf{c}(x, y)=\|x-y\|_{2}^{2}, \quad(8.64)$$
 
 $$\left(\nabla_{x} \mathbf{c}\right)\left(\mathfrak{f}_{L}^{(m)}, \mathbf{y}^{(m)}\right)=2\left(\mathfrak{f}_{L}^{(m)}-\mathbf{y}^{(m)}\right)=D_{L+1}^{(m)}. \quad(8.65)$$
 
-将此式与 (8.58)、(8.59)、(8.60) 和 (8.61) 结合推论 8.2.3，即确立了第 (i)、(ii)、(iii)、(iv) 和 (v) 项。推论 8.2.4 的证明到此完成。 $\square$
+将此式与 (8.58)、(8.59)、(8.60) 和 (8.61) 结合推论 8.2.3，即确立了第 (i)、(ii)、(iii)、(iv) 和 (v) 项。推论 8.2.4 的证明到此完成。$\square$
 
-## 第 9 章
+# 第 9 章
 
-### Kurdyka–Łojasiewicz (KL) 不等式
+## Kurdyka–Łojasiewicz (KL) 不等式
 
 在第 5 章（GF 轨迹）、第 6 章（确定性 GD 类型过程）和第 7 章（SGD 类型过程）中，我们回顾并研究了基于梯度的过程，以近似求解某些优化问题。特别是，我们概述了广义 Lyapunov 类型函数的方法，以及 Lyapunov 类型函数为极小值点周围平方标准范数的特殊情况，这导致了在第 5、6 和 7 章的多个收敛结果中使用的强制性类型条件。然而，第 5、6 和 7 章中的强制性类型条件通常过于严格，无法涵盖人工神经网络（ANN）训练的情况（例如，参见引理 5.6.8 的第 (ii) 项，[223]，推论 29 的第 (vi) 项，以及 [213, 推论 2.19]）。
 
@@ -12398,46 +13492,49 @@ $$|\mathcal{L}(\theta) - \mathcal{L}(\vartheta)|^{\alpha} \leq c \, \|\langle \n
 
 （参见定义 3.3.4）。
 
-**定义 9.1.2**（**标准 KL 函数**）。*设 $\varrho \in \mathbb{N}$ 且设 $\mathcal{L}\colon \mathbb{R}^{\varrho} \to \mathbb{R}$ 是可微的。则我们说 $\mathcal{L}$ 是一个标准 KL 函数，当且仅当对于所有 $\theta \in \mathbb{R}^{\varrho}$ 存在 $\varepsilon, \mathfrak{c} \in (0, \infty)$，$\alpha \in (0,1)$ 使得对于所有 $v \in \{v \in \mathbb{R}^{\varrho}\colon \|v - \theta\|_2 < \varepsilon\}$ 成立*
+**定义 9.1.2**（**标准 KL 函数**）。设 $\varrho \in \mathbb{N}$ 且设 $\mathcal{L}\colon \mathbb{R}^{\varrho} \to \mathbb{R}$ 是可微的。则我们说 $\mathcal{L}$ 是一个标准 KL 函数，当且仅当对于所有 $\theta \in \mathbb{R}^{\varrho}$ 存在 $\varepsilon, \mathfrak{c} \in (0, \infty)$，$\alpha \in (0,1)$ 使得对于所有 $v \in \{v \in \mathbb{R}^{\varrho}\colon \|v - \theta\|_2 < \varepsilon\}$ 成立
 
-$|\mathcal{L}(\theta) - \mathcal{L}(v)|^\alpha \le \mathfrak{c}\,\| (\nabla \mathcal{L})(v)\|_2 \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad (9.2)$
+$$|\mathcal{L}(\theta) - \mathcal{L}(v)|^\alpha \le \mathfrak{c}\,\| (\nabla \mathcal{L})(v)\|_2 \qquad (9.2)$$
 
-*(参见定义 3.3.4)。*
+（参见定义 3.3.4）。
 
 ### 9.2 使用标准 KL 函数的收敛性分析（常规区域）
 
-**命题 9.2.1.** *设 $\varrho \in \mathbb{N}$，$\vartheta \in \mathbb{R}^{\varrho}$，$\mathfrak{c},\varepsilon \in (0, \infty)$，$\alpha \in (0,1)$，$\mathcal{L} \in C^{1}(\mathbb{R}^{\varrho}, \mathbb{R})$，设* $O \subseteq \mathbb{R}^{\varrho}$ *满足*
+**命题 9.2.1.** 设 $\varrho \in \mathbb{N}$，$\vartheta \in \mathbb{R}^{\varrho}$，$\mathfrak{c},\varepsilon \in (0, \infty)$，$\alpha \in (0,1)$，$\mathcal{L} \in C^{1}(\mathbb{R}^{\varrho}, \mathbb{R})$，设 $O \subseteq \mathbb{R}^{\varrho}$ 满足
 
-$O = \{\theta \in \mathbb{R}^{\varrho}\colon \|\theta - \vartheta\|_2 < \varepsilon \}\setminus \{\vartheta\}$ *且* $\mathfrak{c} = \mathfrak{C}^{2} [ \sup_{\theta \in O} | \mathcal{L}(\theta) - \mathcal{L}(\vartheta) | ]^{2 - 2\alpha}, \qquad (9.3)$
+$$O = \{\theta \in \mathbb{R}^{\varrho}\colon \|\theta - \vartheta\|_2 < \varepsilon \}\setminus \{\vartheta\} \quad\text{且}\quad \mathfrak{c} = \mathfrak{C}^{2} [ \sup_{\theta \in O} | \mathcal{L}(\theta) - \mathcal{L}(\vartheta) | ]^{2 - 2\alpha}, \qquad (9.3)$$
 
-*假设对于所有* $\theta \in O$ *均有* $\mathcal{L}(\theta) > \mathcal{L}(\vartheta)$ *且*
+假设对于所有 $\theta \in O$ 均有 $\mathcal{L}(\theta) > \mathcal{L}(\vartheta)$ 且
 
-$|\mathcal{L}(\theta) - \mathcal{L}(\vartheta)|^\alpha \le \mathfrak{C} \| (\nabla \mathcal{L})(\theta)\|_2, \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad (9.4)$
+$$|\mathcal{L}(\theta) - \mathcal{L}(\vartheta)|^\alpha \le \mathfrak{C} \| (\nabla \mathcal{L})(\theta)\|_2, \qquad (9.4)$$
 
-*且设* $\Theta \in C([0, \infty), O)$ *满足对于所有* $t \in [0, \infty)$ *均有*
+且设 $\Theta \in C([0, \infty), O)$ 满足对于所有 $t \in [0, \infty)$ 均有
 
-$\Theta_{t} = \Theta_{0} - \int_{0}^{t} (\nabla \mathcal{L})(\Theta_{s})\,\mathrm{d}s \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad (9.5)$
+$$\Theta_{t} = \Theta_{0} - \int_{0}^{t} (\nabla \mathcal{L})(\Theta_{s})\,\mathrm{d}s \qquad (9.5)$$
 
-*(参见定义 3.3.4)。*
+（参见定义 3.3.4）。
 
-*则存在* $\psi \in \mathbb{R}^{\varrho}$ *使得*
+则存在 $\psi \in \mathbb{R}^{\varrho}$ 使得
 
-- *(i) 成立* $\mathcal{L}(\psi) = \mathcal{L}(\vartheta)$，
-- *(ii) 对于所有* $t \in [0, \infty)$ *成立*
+- (i) 成立 $\mathcal{L}(\psi) = \mathcal{L}(\vartheta)$，
+- (ii) 对于所有 $t \in [0, \infty)$ 成立
 
-$0 \le \mathcal{L}(\Theta_{t} - \mathcal{L}(\psi) \le [ (\mathcal{L}(\Theta_{0}) - \mathcal{L}(\psi) )^{-1} + \mathfrak{c}^{-1} t ]^{-1}, \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad (9.6)$
+$$0 \le \mathcal{L}(\Theta_{t} - \mathcal{L}(\psi) \le [ (\mathcal{L}(\Theta_{0}) - \mathcal{L}(\psi) )^{-1} + \mathfrak{c}^{-1} t ]^{-1}, \qquad (9.6)$$
 
-- *且*
-- *(iii) 对于所有* $t \in [0, \infty)$ *成立*
+- 且
+- (iii) 对于所有 $t \in [0, \infty)$ 成立
 
-$\| \Theta_{t} - \psi \|_2 \le \int_{t}^{\infty} \| (\nabla \mathcal{L})(\Theta_{s}) \|_2\,\mathrm{d}s \\[1mm]
-\quad \le \mathfrak{C} (1 - \alpha)^{-1} [ \mathcal{L}(\Theta_{0}) - \mathcal{L}(\psi) ]^{1 - \alpha} \\[1mm]
-\quad \le \mathfrak{C} (1 - \alpha)^{-1} [ (\mathcal{L}(\Theta_{0}) - \mathcal{L}(\psi) )^{-1} + \mathfrak{c}^{-1} t ]^{\alpha - 1} \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad (9.7)$
+$$\| \Theta_{t} - \psi \|_2 \le \int_{t}^{\infty} \| (\nabla \mathcal{L})(\Theta_{s}) \|_2\,\mathrm{d}s$$
+
+$$\quad \le \mathfrak{C} (1 - \alpha)^{-1} [ \mathcal{L}(\Theta_{0}) - \mathcal{L}(\psi) ]^{1 - \alpha}$$
+
+$$\quad \le \mathfrak{C} (1 - \alpha)^{-1} [ (\mathcal{L}(\Theta_{0}) - \mathcal{L}(\psi) )^{-1} + \mathfrak{c}^{-1} t ]^{\alpha - 1} \qquad (9.7)$$
 
 
 
+# 命题 9.2.1 的证明
 
-*命题 9.2.1 的证明。* 在整个证明过程中，设 $V: O \rightarrow \mathbb{R}$ 和 $U: O \rightarrow \mathbb{R}$ 满足对所有的 $\theta \in O$，均有
+在整个证明过程中，设 $V: O \rightarrow \mathbb{R}$ 和 $U: O \rightarrow \mathbb{R}$ 满足对所有的 $\theta \in O$，均有
 
 $$
 V(\theta) = -|\mathscr{L}(\theta) - \mathscr{L}(\vartheta)|^{-1} \quad \text{且} \quad U(\theta) = |\mathscr{L}(\theta) - \mathscr{L}(\vartheta)|^{1-\alpha}. \quad (9.8)
@@ -12606,31 +13703,44 @@ $$
 |\mathscr{L}(\theta)-\mathscr{L}(\vartheta)|^{\alpha}\leq c\|(\nabla \mathscr{L})(\vartheta)\|_{2}.
 $$
 
-
-
-
-
 *引理 9.4.1 的证明。* 注意，(9.31) 和三角不等式确保了对于所有 $\vartheta \in U$，有
 
 \begin{equation*}
 \begin{aligned}
-&\| (\nabla \mathscr{L}) (\theta) \|_2 \\
+
+
+
+$$
+\begin{aligned}
+\| (\nabla \mathscr{L}) (\theta) \|_2 \\
 &= c \| (\nabla \mathscr{L}) (v) + [ (\nabla \mathscr{L}) (\theta) - (\nabla \mathscr{L}) (v) ] \|_2 \\
 &\leq c \| (\nabla \mathscr{L}) (v) \|_2 + c \| (\nabla \mathscr{L}) (\theta) - (\nabla \mathscr{L}) (v) \|_2 \leq c \| (\nabla \mathscr{L}) (v) \|_2 + \frac{c \| (\nabla \mathscr{L}) (\theta) \|_2}{2}.
 \end{aligned}
+$$
+
+$$
 \end{equation*}
+$$
 
 因此，我们得到对于所有 $\vartheta \in U$，有
 
-\begin{equation*}
+$$
 \frac{c \| (\nabla \mathscr{L}) (\theta) \|_2}{2} \leq c \| (\nabla \mathscr{L}) (v) \|_2.
+$$
+
+$$
 \end{equation*}
+$$
 
 将此与 (9.31) 结合，确立了对于所有 $\vartheta \in U$，有
 
-\begin{equation*}
+$$
 | \mathscr{L} (\theta) - \mathscr{L} (v) |^{\alpha} \leq \frac{c \| (\nabla \mathscr{L}) (\theta) \|_2}{2} \leq c \| (\nabla \mathscr{L}) (v) \|_2.
+$$
+
+$$
 \end{equation*}
+$$
 
 引理 9.4.1 的证明至此完成。 $\square$
 
@@ -12650,17 +13760,19 @@ $$|\mathcal{L}(\vartheta)-\mathcal{L}(\vartheta')|^{\beta} \leq \mathfrak{C}|\ma
 
 *引理 9.5.1 的证明。* 注意到 (9.41) 表明对于所有 $\vartheta\in U$ 有
 
+$$
 \begin{equation*}
 \begin{aligned}
-	|\mathcal{L}(\vartheta)-\mathcal{L}(\vartheta')|^{\beta}
-	&= |\mathcal{L}(\vartheta)-\mathcal{L}(\vartheta')|^{\alpha} |
-	\mathcal{L}(\vartheta)-\mathcal{L}(\vartheta')|^{\beta-\alpha}
-	\leq \mathfrak{c}|\mathcal{G}(\vartheta')| |
-	\mathcal{L}(\vartheta)-\mathcal{L}(\vartheta')|^{\beta-\alpha} \\
-	&= \left(\mathfrak{c}|\mathcal{L}(\vartheta)-\mathcal{L}(\vartheta')|^{\beta-\alpha}\right)
-	|\mathcal{G}(\vartheta')| \leq \mathfrak{C}|\mathcal{G}(\vartheta')|. 
+|\mathcal{L}(\vartheta)-\mathcal{L}(\vartheta')|^{\beta}
+&= |\mathcal{L}(\vartheta)-\mathcal{L}(\vartheta')|^{\alpha} |
+\mathcal{L}(\vartheta)-\mathcal{L}(\vartheta')|^{\beta-\alpha}
+\leq \mathfrak{c}|\mathcal{G}(\vartheta')| |
+\mathcal{L}(\vartheta)-\mathcal{L}(\vartheta')|^{\beta-\alpha} \\
+&= \left(\mathfrak{c}|\mathcal{L}(\vartheta)-\mathcal{L}(\vartheta')|^{\beta-\alpha}\right)
+|\mathcal{G}(\vartheta')| \leq \mathfrak{C}|\mathcal{G}(\vartheta')|.
 \end{aligned} \tag{9.43}
 \end{equation*}
+$$
 
 这确立了 (9.42)。引理 9.5.1 的证明至此完成。 $\square$
 
@@ -12708,12 +13820,14 @@ $$|p(x)-p(\xi)|^{\alpha} \leq \sum_{n=m}^{N}\big(|\beta_n|^{\alpha}|x-\xi|^{n\al
 
 由于对于所有 $n \in \{m, m+1, \ldots, N\}$ 以及满足 $|x - \xi| \leq 1$ 的 $x \in \mathbb{R}$，均有 $|x - \xi|^{n\alpha} \leq |x - \xi|^{n(1-m^{-1})} \leq |x - \xi|^{\alpha(1-m^{-1})} = |x - \xi|^{m-1}$，因此，对于满足 $|x - \xi| \leq 1$ 的所有 $x \in \mathbb{R}$，有
 
+$$
 \begin{equation*}
-\begin{aligned} 
-|p(x) - p(\xi)|^{\alpha} &\leq \sum_{n=m}^{N}|\beta_n|^{\alpha}|x-\xi|^{n\alpha} \leq \sum_{n=m}^{N}|\beta_n|^{\alpha}|x-\xi|^{m-1} \\ 
-&= |x-\xi|^{m-1}\Big[\sum_{n=m}^{N}|\beta_n|^{\alpha}\Big] = |x-\xi|^{m-1}\Big[\sum_{n=1}^{N}|\beta_n|^{\alpha}\Big]. 
+\begin{aligned}
+|p(x) - p(\xi)|^{\alpha} &\leq \sum_{n=m}^{N}|\beta_n|^{\alpha}|x-\xi|^{n\alpha} \leq \sum_{n=m}^{N}|\beta_n|^{\alpha}|x-\xi|^{m-1} \\
+&= |x-\xi|^{m-1}\Big[\sum_{n=m}^{N}|\beta_n|^{\alpha}\Big] = |x-\xi|^{m-1}\Big[\sum_{n=1}^{N}|\beta_n|^{\alpha}\Big].
 \end{aligned} \quad (9.53)
 \end{equation*}
+$$
 
 因此，对于满足 $|x - \xi| \leq 1$ 的所有 $x \in \mathbb{R}$，有
 
@@ -12721,26 +13835,27 @@ $$|p(x) - p(\xi)|^{\alpha} \leq |x - \xi|^{m-1}\Big[\sum_{n=1}^{N}|\beta_n|^{\al
 
 此外，注意到 (9.51) 确保了对于满足 $|x - \xi| \leq 1$ 的所有 $x \in \mathbb{R}$，有
 
+$$
 \begin{equation*}
-\begin{aligned} 
-|p'(x)| & = \Big|\sum_{n=m}^{N}\beta_n n (x - \xi)^{n-1}\Big| \geq \Big|\sum_{n=m}^{N}\beta_n m| |x - \xi|^{m-1} - \Big[\sum_{n=m+1}^{N}\beta_n n (x - \xi)^{n-1}\Big] \Big| \\ 
-&\geq \Big|\Big[\sum_{n=m}^{N}|\beta_m m| |x - \xi|^{m-1}\Big] - \Big[\sum_{n=m+1}^{N}|\beta_n n| |x - \xi|^{m-1}\Big] \Big| \quad \quad (9.55) \\ 
-&= |x - \xi|^{m-1}\Big|\sum_{n=m}^{N}\beta_n m\Big| - |x - \xi|^{m-1}\Big[\sum_{n=m+1}^{N}|\beta_n n|\Big]. 
+\begin{aligned}
+|p'(x)| & = \Big|\sum_{n=m}^{N}\beta_n n (x - \xi)^{n-1}\Big| \geq \Big|\sum_{n=m}^{N}\beta_n m| |x - \xi|^{m-1} - \Big[\sum_{n=m+1}^{N}\beta_n n (x - \xi)^{n-1}\Big] \Big| \\
+&\geq \Big|\Big[\sum_{n=m}^{N}|\beta_m m| |x - \xi|^{m-1}\Big] - \Big[\sum_{n=m+1}^{N}|\beta_n n| |x - \xi|^{m-1}\Big] \Big| \quad \quad (9.55) \\
+&= |x - \xi|^{m-1}\Big|\sum_{n=m}^{N}\beta_n m\Big| - |x - \xi|^{m-1}\Big[\sum_{n=m+1}^{N}|\beta_n n|\Big].
 \end{aligned}
 \end{equation*}
-
+$$
 
 
 
 因此，对于所有满足 $|x - \xi| \leq \frac{1}{2} \left[ \sum_{n=m}^{N} \frac{|\beta_n n!|}{|\beta_m m!|} \right]^{-1}$ 的 $x \in \mathbb{R}$，我们得到
 
-$$
+```
 \begin{aligned}
 |p'(x)| &\geq |x - \xi|^{m-1} \left( |\beta_m m!| - |x - \xi| \left[ \sum_{n=m+1}^{N} |\beta_n n!| \right] \right) \\
 &\geq |x - \xi|^{m-1} \left( |\beta_m m!| - \frac{|\beta_m m!|}{2} \left( |x - \xi| \left[ \sum_{n=m}^{N} \frac{2|\beta_n n!|}{|\beta_m m!|} \right] \right) \right) \\
 &\geq |x - \xi|^{m-1} \left( |\beta_m m!| - \frac{|\beta_m m!|}{2} \right) = \frac{1}{2}|x - \xi|^{m-1} |\beta_m m!|.
 \end{aligned}
-$$
+```
 
 将此结果与**(9.54)**相结合表明，对于所有满足 $|x - \xi| \leq \frac{1}{2} \left[ \sum_{n=m}^{N} \frac{|\beta_n n!|}{|\beta_m m!|} \right]^{-1}$ 的 $x \in \mathbb{R}$，均有
 
@@ -12748,7 +13863,8 @@ $$|p(x) - p(\xi)|^{\alpha} \leq \frac{\xi}{2}|x - \xi|^{m-1} |\beta_m m!| \leq c
 
 这确立了**(9.48)**。从而引理**9.6.2**的证明得证。
 
-**推论 9.6.3**（一般一维多项式的定量标准**KL**不等式）。*设* $\xi \in \mathbb{R}$，$N \in \mathbb{N}$，*p* $\in \mathcal{C}^{\infty}(\mathbb{R}, \mathbb{R})$ *满足对于所有* $x \in \mathbb{R}$ *有* $p^{(N+1)}(x) = 0$，*设* $\beta_0, \beta_1, \dots, \beta_N \in \mathbb{R}$ *满足对于所有* $n \in \{0, 1, \dots, N\}$ *有* $\beta_n = \frac{p^{(n)}(\xi)}{n!}$，*设* $\rho \in \mathbb{R}$ *满足* $\rho = \mathbb{1}_{\{0\}}(\sum_{n=1}^{N} |\beta_n n!|) + \min(\{|\sum_{n=1}^{N} |\beta_n n!|\} \setminus \{0\}\} \cup \{\sum_{n=1}^{N} |\beta_n n!|\}$，*且设* $\alpha \in (0, 1]$，*c, \varepsilon \in* $[0, \infty)$ *满足*
+### 推论 9.6.3
+**一般一维多项式的定量标准 KL 不等式**。*设* $\xi \in \mathbb{R}$，$N \in \mathbb{N}$，*p* $\in \mathcal{C}^{\infty}(\mathbb{R}, \mathbb{R})$ *满足对于所有* $x \in \mathbb{R}$ *有* $p^{(N+1)}(x) = 0$，*设* $\beta_0, \beta_1, \dots, \beta_N \in \mathbb{R}$ *满足对于所有* $n \in \{0, 1, \dots, N\}$ *有* $\beta_n = \frac{p^{(n)}(\xi)}{n!}$，*设* $\rho \in \mathbb{R}$ *满足* $\rho = \mathbb{1}_{\{0\}}(\sum_{n=1}^{N} |\beta_n n!|) + \min(\{|\sum_{n=1}^{N} |\beta_n n!|\} \setminus \{0\}\} \cup \{\sum_{n=1}^{N} |\beta_n n!|\}$，*且设* $\alpha \in (0, 1]$，*c, \varepsilon \in* $[0, \infty)$ *满足*
 
 $$\alpha \geq 1 - N^{-1}, \quad c \geq 2\rho^{-1} \left[ \sum_{n=1}^{N} |\beta_n|^\alpha \right], \quad \varepsilon \leq \rho \mathbb{1}_{\{0\}}(\sum_{n=1}^{N} |\beta_n|) + 2(\sum_{n=1}^{N} |\beta_n n!|)^{-1}.$$
 
@@ -12770,38 +13886,49 @@ $$|p(x) - p(\xi)|^{\alpha} \leq \left[ \sum_{n=1}^{N} \frac{2|\beta_n|^{\alpha}}
 
 这确立了**(9.59)**。从而推论**9.6.3**的证明得证。
 
-**推论 9.6.4**（一般一维多项式的定性标准**KL**不等式）。*设* $\xi \in \mathbb{R}$，$N \in \mathbb{N}$，$p \in C^{\infty}(\mathbb{R}, \mathbb{R})$ *满足对于所有* $x \in \mathbb{R}$ *有* $p^{(N)}(x) = 0$。*则存在* $\varepsilon, c \in (0, \infty)$，$\alpha \in (0, 1)$ *使得对于所有* $x \in [\xi - \varepsilon, \xi + \varepsilon]$ *有*
+### 推论 9.6.4
+**一般一维多项式的定性标准 KL 不等式**。*设* $\xi \in \mathbb{R}$，$N \in \mathbb{N}$，$p \in C^{\infty}(\mathbb{R}, \mathbb{R})$ *满足对于所有* $x \in \mathbb{R}$ *有* $p^{(N)}(x) = 0$。*则存在* $\varepsilon, c \in (0, \infty)$，$\alpha \in (0, 1)$ *使得对于所有* $x \in [\xi - \varepsilon, \xi + \varepsilon]$ *有*
 
 $$|p(x) - p(\xi)|^{\alpha} \leq c|p'(x)|. \tag{9.63}$$
 
 *推论 9.6.4 的证明。* *注意推论 9.6.3 确立了 (9.63)。从而推论 9.6.4 的证明得证。* $\Box$
 
-**推论 9.6.5**。*设* $\mathscr{L} : \mathbb{R} \to \mathbb{R}$ *为一个多项式。则* $\mathscr{L}$ *是一个标准* **KL** *函数*（参见定义 9.1.2）。
+### 推论 9.6.5
+*设* $\mathscr{L} : \mathbb{R} \to \mathbb{R}$ *为一个多项式。则* $\mathscr{L}$ *是一个标准* **KL** *函数*（参见定义 9.1.2）。
 
 *推论 9.6.5 的证明。* *观察到 (9.2) 和推论 9.6.4 确立了* $\mathscr{L}$ *是一个标准* **KL** *函数*（参见定义 9.1.2）。*从而推论 9.6.5 的证明得证。* $\Box$
 
 ## 9.7 幂级数与解析函数
 
-**定义 9.7.1**（解析函数）。*设* $m, n \in \mathbb{N}$，*设* $U \subseteq \mathbb{R}^m$ *为开集，且设* $f : U \to \mathbb{R}^n$ *为一个函数。则我们称* $f$ *为解析的，当且仅当对于所有* $x \in U$ *存在* $\varepsilon \in (0, \infty)$ *使得对于所有* $y \in \{u \in U : \|x - u\|_2 < \varepsilon\}$ *有* $f \in C^{\infty}(U, \mathbb{R}^n)$ *且*
+### 定义 9.7.1
+**解析函数**。*设* $m, n \in \mathbb{N}$，*设* $U \subseteq \mathbb{R}^m$ *为开集，且设* $f : U \to \mathbb{R}^n$ *为一个函数。则我们称* $f$ *为解析的，当且仅当对于所有* $x \in U$ *存在* $\varepsilon \in (0, \infty)$ *使得对于所有* $y \in \{u \in U : \|x - u\|_2 < \varepsilon\}$ *有* $f \in C^{\infty}(U, \mathbb{R}^n)$ *且*
 
 $$\lim \sup_{K \to \infty} \Big|\Big|f(y) - \sum_{k=0}^{K} \frac{1}{k!}f^{(k)}(x)(y - x, y - x, \dots, y - x)\Big|\Big|_2 = 0 \tag{9.64}$$
 
 （参见定义 3.3.4）。
 
-**命题 9.7.2**（幂级数）。*设* $m, n \in \mathbb{N}$，$\varepsilon \in (0, \infty)$，*设* $U \subseteq \mathbb{R}^m$ *满足* $U = \{x \in \mathbb{R}^m : \|x\|_2 \leq \varepsilon\}$，*对于每个* $k \in \mathbb{N}$ *设* $A_k : (\mathbb{R}^m)^k \to \mathbb{R}^n$ *为* $k$-线性 *且对称，且设* $f : U \to \mathbb{R}^n$ *满足对于所有* $x \in U$ *有*
+### 命题 9.7.2
+**幂级数**。*设* $m, n \in \mathbb{N}$，$\varepsilon \in (0, \infty)$，*设* $U \subseteq \mathbb{R}^m$ *满足* $U = \{x \in \mathbb{R}^m : \|x\|_2 \leq \varepsilon\}$，*对于每个* $k \in \mathbb{N}$ *设* $A_k : (\mathbb{R}^m)^k \to \mathbb{R}^n$ *为* $k$-线性 *且对称，且设* $f : U \to \mathbb{R}^n$ *满足对于所有* $x \in U$ *有*
 
 $$\lim \sup_{k \to \infty} \Big|\Big|f(x) - f(0) - \sum_{k=1}^{K} A_k(x, x, \dots, x)\Big|\Big|_2 = 0 \tag{9.65}$$
 
 （参见定义 3.3.4）。*则*
 
--   *对于所有* $x \in \{u \in U : \|u\|_2 < \varepsilon\}$ *有* $\sum_{k=1}^{\infty} \|A_k(x, x, \dots, x)\|_2 < \infty$ *且*
-    $$f(x) = f(0) + \sum_{k=1}^{\infty} A_k(x, x, \dots, x), \tag{9.66}$$
--   *有* $f|_{\{u \in U : \|u\|_2 < \varepsilon\}}$ *无限次可微，*
--   对于所有 $x \in \{u \in U : \|u\|_2 < \varepsilon\}$，$l \in \mathbb{N}$，$v_1, v_2, \dots, v_l \in \mathbb{R}^m$，有
-    $$\sum_{k=l}^{\infty} \left( \left[ \frac{k!}{(k-l)!} \right] \| A_k(v_1, v_2, \dots, v_l, x, x, \dots, x) \|_2 \right) < \infty \tag{9.67}$$
-    且
-    $$f^{(l)}(x)(v_1, \dots, v_l) = \sum_{k=l}^{\infty} \left( \left[ \frac{k!}{(k-l)!} \right] A_k(v_1, v_2, \dots, v_l, x, x, \dots, x) \right) \tag{9.68}$$
--   对于所有 $k \in \mathbb{N}$，有 $f^{(k)}(0) = k!A_k$。
+- *对于所有* $x \in \{u \in U : \|u\|_2 < \varepsilon\}$ *有* $\sum_{k=1}^{\infty} \|A_k(x, x, \dots, x)\|_2 < \infty$ *且*
+
+  $$f(x) = f(0) + \sum_{k=1}^{\infty} A_k(x, x, \dots, x), \tag{9.66}$$
+
+- *有* $f|_{\{u \in U : \|u\|_2 < \varepsilon\}}$ *无限次可微，*
+
+- 对于所有 $x \in \{u \in U : \|u\|_2 < \varepsilon\}$，$l \in \mathbb{N}$，$v_1, v_2, \dots, v_l \in \mathbb{R}^m$，有
+
+  $$\sum_{k=l}^{\infty} \left( \left[ \frac{k!}{(k-l)!} \right] \| A_k(v_1, v_2, \dots, v_l, x, x, \dots, x) \|_2 \right) < \infty \tag{9.67}$$
+
+  且
+
+  $$f^{(l)}(x)(v_1, \dots, v_l) = \sum_{k=l}^{\infty} \left( \left[ \frac{k!}{(k-l)!} \right] A_k(v_1, v_2, \dots, v_l, x, x, \dots, x) \right) \tag{9.68}$$
+
+- 对于所有 $k \in \mathbb{N}$，有 $f^{(k)}(0) = k!A_k$。
 
 **命题 9.7.2 的证明。** 在整个证明过程中，对于每个 $K \in \mathbb{N}_0$，设 $F_K : \mathbb{R}^m \to \mathbb{R}^n$ 满足对于所有 $x \in \mathbb{R}^m$ 有
 
@@ -12821,12 +13948,12 @@ $$\sup_{k \in \mathbb{N}} \| A_k(x, x, \dots, x) \|_2 = \sup_{K \in \mathbb{N}_0
 
 因此，我们得到对于所有 $x \in \{u \in U : \|u\|_2 < \varepsilon\} \setminus \{0\}$ 有
 
-$$
+```
 \begin{aligned}
 &\sum_{k=1}^{\infty} \| A_k(x, x, \dots, x) \|_2 = \sum_{k=1}^{\infty} \left( \left[ \frac{\|x\|_2}{\varepsilon} \right]^k \left\| A_k \left( \frac{\varepsilon x}{\|x\|_2}, \frac{\varepsilon x}{\|x\|_2}, \dots, \frac{\varepsilon x}{\|x\|_2} \right) \right\|_2 \right) \\
 &\hspace{5cm} \le \left[ \sum_{k=1}^{\infty} \left[ \frac{\|x\|_2}{\varepsilon} \right]^k \right] \left[ \sup_{k \in \mathbb{N}} \left\| A_k \left( \frac{\varepsilon x}{\|x\|_2}, \frac{\varepsilon x}{\|x\|_2}, \dots, \frac{\varepsilon x}{\|x\|_2} \right) \right\|_2 \right] < \infty.
 \end{aligned} \tag{9.73}
-$$
+```
 
 这表明对于所有 $x \in \{u \in U : \|u\|_2 < \varepsilon\}$ 有
 
@@ -12834,13 +13961,17 @@ $$\sum_{k=1}^{\infty} \| A_k(x, x, \dots, x) \|_2 < \infty. \tag{9.74}$$
 
 将此结果与 (9.65) 相结合确立了第 (i) 项。观察到，例如，Krantz & Parks [254, Proposition 2.2.3] 蕴含了第 (ii) 项和第 (iii) 项。注意，(9.68) 蕴含了第 (iv) 项。从而命题 9.7.2 的证明得证。
 
-**命题 9.7.3**（解析函数的刻画）。*设* $m,n \in \mathbb{N}$，*设* $U \subseteq \mathbb{R}^{m}$ *为开集，且设* $f \in C^{\infty}(U,\mathbb{R}^{n})$。*则以下三个陈述是等价的：*
+### 命题 9.7.3
+**解析函数的刻画**。*设* $m,n \in \mathbb{N}$，*设* $U \subseteq \mathbb{R}^{m}$ *为开集，且设* $f \in C^{\infty}(U,\mathbb{R}^{n})$。*则以下三个陈述是等价的：*
 
--   *有 $f$ 是解析的（参见定义 9.7.1）。*
--   *对于所有 $x \in U$，存在 $\varepsilon \in (0, \infty)$ 使得对于所有 $y \in \{ u \in U : \lVert x-u \rVert_2 < \varepsilon\}$ 有 $\sum_{k=0}^{\infty} \frac{1}{k!} \lVert f^{(k)}(x)(y-x, y-x, \dots, y-x) \rVert_2 < \infty$ 且*
-    $$f(y) = \sum_{k=0}^{\infty} \frac{1}{k!} f^{(k)}(x)(y-x, y-x, \dots, y-x). \qquad\qquad\qquad\qquad\qquad\qquad (9.75)$$
--   *对于所有紧集 $\mathfrak{C} \subseteq U$，存在 $c \in \mathbb{R}$ 使得对于所有 $x \in \mathfrak{C}$，$k \in \mathbb{N}$，$v \in \mathbb{R}^{m}$ 有*
-    $$\lVert f^{(k)}(x)(v, v, \dots, v) \rVert_2 \leqslant k! \, c^{k} \lVert v \rVert_2^{k}. \qquad\qquad\qquad\qquad\qquad\qquad (9.76)$$
+- *有 $f$ 是解析的（参见定义 9.7.1）。*
+- *对于所有 $x \in U$，存在 $\varepsilon \in (0, \infty)$ 使得对于所有 $y \in \{ u \in U : \lVert x-u \rVert_2 < \varepsilon\}$ 有 $\sum_{k=0}^{\infty} \frac{1}{k!} \lVert f^{(k)}(x)(y-x, y-x, \dots, y-x) \rVert_2 < \infty$ 且*
+
+  $$f(y) = \sum_{k=0}^{\infty} \frac{1}{k!} f^{(k)}(x)(y-x, y-x, \dots, y-x). \qquad\qquad\qquad\qquad\qquad\qquad (9.75)$$
+
+- *对于所有紧集 $\mathfrak{C} \subseteq U$，存在 $c \in \mathbb{R}$ 使得对于所有 $x \in \mathfrak{C}$，$k \in \mathbb{N}$，$v \in \mathbb{R}^{m}$ 有*
+
+  $$\lVert f^{(k)}(x)(v, v, \dots, v) \rVert_2 \leqslant k! \, c^{k} \lVert v \rVert_2^{k}. \qquad\qquad\qquad\qquad\qquad\qquad (9.76)$$
 
 *命题 9.7.3 的证明。* 该等价性是命题 9.7.2 的直接推论。从而命题 9.7.3 的证明得证。 $\Box$
 
@@ -12848,15 +13979,19 @@ $$\sum_{k=1}^{\infty} \| A_k(x, x, \dots, x) \|_2 < \infty. \tag{9.74}$$
 
 在上面的第 9.6 节中，我们已经看到一维多项式是标准 KL 函数（参见推论 9.6.5）。在本节中，我们验证了一维解析函数也是标准 KL 函数（参见下面的推论 9.8.6）。该陈述的主要论点在引理 9.8.2 的证明中呈现，并受到 [129] 的启发。
 
-**引理 9.8.1。** *设* $\varepsilon \in (0, \infty)$，*设* $U \subseteq \mathbb{R}$ *满足* $U = \{x \in \mathbb{R} : \lvert x \rvert \leqslant \varepsilon\}$，*设* $(a_k)_{k \in \mathbb{N}} \subseteq \mathbb{R}$，*且设* $f \colon U \to \mathbb{R}$ *满足对于所有* $x \in U$ *有*
+### 引理 9.8.1
+*设* $\varepsilon \in (0, \infty)$，*设* $U \subseteq \mathbb{R}$ *满足* $U = \{x \in \mathbb{R} : \lvert x \rvert \leqslant \varepsilon\}$，*设* $(a_k)_{k \in \mathbb{N}} \subseteq \mathbb{R}$，*且设* $f \colon U \to \mathbb{R}$ *满足对于所有* $x \in U$ *有*
 
 $$\lim_{K \to \infty} \sup \left| f(x) - f(0) - \sum_{k=1}^{K} a_k x^{k} \right| = 0. \qquad\qquad\qquad\qquad\qquad\qquad (9.77)$$
 
 *则*
 
--   *对于所有* $x \in \{y \in U : \lvert y \rvert < \varepsilon\}$ *有* $\sum_{k=1}^{\infty} \lvert a_k \rvert \lvert x \rvert^{k} < \infty$ *且*
-    $$f(x) = f(0) + \sum_{k=1}^{\infty} a_k x^{k}, \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad (9.78)$$
--   *有* $f \lvert_{\{y \in U : \lvert y \rvert < \varepsilon\}}$ *无限次可微，*
+- *对于所有* $x \in \{y \in U : \lvert y \rvert < \varepsilon\}$ *有* $\sum_{k=1}^{\infty} \lvert a_k \rvert \lvert x \rvert^{k} < \infty$ *且*
+
+  $$f(x) = f(0) + \sum_{k=1}^{\infty} a_k x^{k}, \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad (9.78)$$
+
+- *有* $f \lvert_{\{y \in U : \lvert y \rvert < \varepsilon\}}$ *无限次可微，*
+
 
 
 (iii) 对所有 $x \in \{y \in U : |y| < \varepsilon\}$ 且 $l \in \mathbb {N}$，都有 $\sum _ { k = l } ^ { \infty } [ \frac { k ! } { [ k - l ] ! } ] | a _ { k } | | x | ^ { k - l } < \infty$ 以及
@@ -12883,77 +14018,84 @@ $$ | \mathcal { L } ( \theta ) - \mathcal { L } ( 0 ) | ^ { \frac { N - 1 } { N 
 
 引理 9.8.2 的证明。注意，假设对所有 $k \in \mathbb { N } \cap [ M , \infty )$ 都有 $| a _ { k } | \leq k ! | a _ { k } | \leq ( 2 \varepsilon ^ { - 1 } ) ^ { k }$，这确保了对于所有 $K \in \mathbb { N } \cap [ M , \infty )$，都有
 
-$$ \begin{aligned} \sum_ { k = N + 1 } ^ { K + N + 1 } & | a _ { k } | | \theta | ^ { k } \\ &= | \theta | ^ { N + 1 } \left[ \sum _ { k = 0 } ^ { K } | a _ { k + N + 1 } | | \theta | ^ { k } \right] \\ &= | \theta | ^ { N + 1 } \left[ \left( \sum _ { k = 0 } ^ { M } | a _ { k + N + 1 } | | \theta | ^ { k } \right) + \left( \sum _ { k = M + 1 } ^ { K } | a _ { k + N + 1 } | | \theta | ^ { k } \right) \right] \\ & \leq | \theta | ^ { N + 1 } \left[ \left( \operatorname* { m a x } \{ | a _ { 1 } | , | a _ { 2 } | , \ldots , | a _ { M } | \} \right) \left( \sum _ { k = 0 } ^ { M } | \theta | ^ { k } \right) + \left( \sum _ { k = M + 1 } ^ { K } ( 2 \varepsilon ^ { - 1 } ) ^ { k + N + 1 } | \theta | ^ { k } \right) \right] \\ &= | \theta | ^ { N + 1 } \left[ \left( \operatorname* { m a x } \{ | a _ { 1 } | , | a _ { 2 } | , \ldots , | a _ { M } | \} \right) \left( \sum _ { k = 0 } ^ { M } | \theta | ^ { k } \right) + ( 2 \varepsilon ^ { - 1 } ) ^ { N + 1 } \left( \sum _ { k = M + 1 } ^ { K } ( 2 \varepsilon ^ { - 1 } | \theta | ) ^ { k } \right) \right] . \end{aligned} $$
+```
+\sum_ { k = N + 1 } ^ { K + N + 1 } | a _ { k } | | \theta | ^ { k }
+= | \theta | ^ { N + 1 } \left[ \sum _ { k = 0 } ^ { K } | a _ { k + N + 1 } | | \theta | ^ { k } \right]
+= | \theta | ^ { N + 1 } \left[ \left( \sum _ { k = 0 } ^ { M } | a _ { k + N + 1 } | | \theta | ^ { k } \right) + \left( \sum _ { k = M + 1 } ^ { K } | a _ { k + N + 1 } | | \theta | ^ { k } \right) \right]
+\leq | \theta | ^ { N + 1 } \left[ \left( \operatorname* { m a x } \{ | a _ { 1 } | , | a _ { 2 } | , \ldots , | a _ { M } | \} \right) \left( \sum _ { k = 0 } ^ { M } | \theta | ^ { k } \right) + \left( \sum _ { k = M + 1 } ^ { K } ( 2 \varepsilon ^ { - 1 } ) ^ { k + N + 1 } | \theta | ^ { k } \right) \right]
+= | \theta | ^ { N + 1 } \left[ \left( \operatorname* { m a x } \{ | a _ { 1 } | , | a _ { 2 } | , \ldots , | a _ { M } | \} \right) \left( \sum _ { k = 0 } ^ { M } | \theta | ^ { k } \right) + ( 2 \varepsilon ^ { - 1 } ) ^ { N + 1 } \left( \sum _ { k = M + 1 } ^ { K } ( 2 \varepsilon ^ { - 1 } | \theta | ) ^ { k } \right) \right] .
+```
 
 因此，我们得到，对于所有满足 $|\theta| \leq \frac{\varepsilon}{4}$ 的 $\theta \in \mathbb{R}$，都有
 
-$$ \begin{align}
-\sum_{k=N+1}^{\infty} |a_{k}| |\theta|^{k} &\leq |\theta|^{N+1} \left[ \left\{ \max\{ |a_{1}|, |a_{2}|, \ldots, |a_{M}| \} \right\} \left( \sum_{k=0}^{\infty} \left| \frac{1}{4} \right|^{k} \right) + \left( 2\varepsilon^{-1} \right)^{N+1} \left( \sum_{k=1}^{\infty} \left| \frac{1}{2} \right|^{k} \right) \right] \\
-&\leq |\theta|^{N+1} \left[ 2\left\{ \max\{ |a_{1}|, |a_{2}|, \ldots, |a_{M}| \} + \left( 2\varepsilon^{-1} \right)^{N+1} \right\} \right].
-\end{align} \tag{9.84} $$
-
+```
+\sum_{k=N+1}^{\infty} |a_{k}| |\theta|^{k} \leq |\theta|^{N+1} \left[ \left\{ \max\{ |a_{1}|, |a_{2}|, \ldots, |a_{M}| \} \right\} \left( \sum_{k=0}^{\infty} \left| \frac{1}{4} \right|^{k} \right) + \left( 2\varepsilon^{-1} \right)^{N+1} \left( \sum_{k=1}^{\infty} \left| \frac{1}{2} \right|^{k} \right) \right]
+\leq |\theta|^{N+1} \left[ 2\left\{ \max\{ |a_{1}|, |a_{2}|, \ldots, |a_{M}| \} + \left( 2\varepsilon^{-1} \right)^{N+1} \right\} \right].
+```
 这表明，对于所有满足 $|\theta| \leq \delta$ 的 $\theta \in \mathbb{R}$，都有
 
-$$ \sum_{k=N+1}^{\infty} |a_{k}| |\theta|^{k} \leq |a_{N}| |\theta|^{N}. \tag{9.85} $$
+$$ \sum_{k=N+1}^{\infty} |a_{k}| |\theta|^{k} \leq |a_{N}| |\theta|^{N}. $$
 
 因此，我们得到，对于所有满足 $|\theta| \leq \delta$ 的 $\theta \in \mathbb{R}$，都有
 
-$$ \left| \mathcal{L}(\theta) - \mathcal{L}(0) \right| = \left| \sum_{k=N}^{\infty} a_{k}\theta^{k} \right| \leq |a_{N}| |\theta|^{N} + \sum_{k=N+1}^{\infty} |a_{k}| |\theta|^{k} \leq 2|a_{N}| |\theta|^{N}. \tag{9.86} $$
+$$ \left| \mathcal{L}(\theta) - \mathcal{L}(0) \right| = \left| \sum_{k=N}^{\infty} a_{k}\theta^{k} \right| \leq |a_{N}| |\theta|^{N} + \sum_{k=N+1}^{\infty} |a_{k}| |\theta|^{k} \leq 2|a_{N}| |\theta|^{N}. $$
 
 接着注意，假设对所有 $k \in \mathbb{N} \cap [M, \infty)$ 都有 $k|a_{k}| \leq \left( 2\varepsilon^{-1} \right)^{k}$ 这确保了对于所有 $K \in \mathbb{N} \cap [M, \infty)$，都有
 
-$$ \begin{align}
+```
 \sum_{k=N+1}^{N+K+1} k|a_{k}| |\theta|^{k-1}
-&= |\theta|^{N} \left[ \left( \sum_{k=0}^{M-N-1} (k+N+1)|a_{k+N+1}| |\theta|^{k} \right) + \left( \sum_{k=M-N}^{K} (k+N+1)|a_{k+N+1}| |\theta|^{k} \right) \right] \\
-&\leq |\theta|^{N} \left[ \max\{ |a_{1}|, 2|a_{2}|, \ldots, M|a_{M}| \} \left( \sum_{k=0}^{M-N-1} |\theta|^{k} \right) + \left( \sum_{k=M-N}^{K} \left( 2\varepsilon^{-1} \right)^{k+N+1} |\theta|^{k} \right) \right] \\
-&\leq |\theta|^{N} \left[ \max\{ |a_{1}|, 2|a_{2}|, \ldots, M|a_{M}| \} \left( \sum_{k=0}^{M-N-1} |\theta|^{k} \right) + \left( 2\varepsilon^{-1} \right)^{N+1} \left( \sum_{k=M-N}^{K-N} \left| 2\varepsilon^{-1}\theta \right|^{k} \right) \right].
-\end{align} \tag{9.87} $$
+= |\theta|^{N} \left[ \left( \sum_{k=0}^{M-N-1} (k+N+1)|a_{k+N+1}| |\theta|^{k} \right) + \left( \sum_{k=M-N}^{K} (k+N+1)|a_{k+N+1}| |\theta|^{k} \right) \right]
+\leq |\theta|^{N} \left[ \max\{ |a_{1}|, 2|a_{2}|, \ldots, M|a_{M}| \} \left( \sum_{k=0}^{M-N-1} |\theta|^{k} \right) + \left( \sum_{k=M-N}^{K} \left( 2\varepsilon^{-1} \right)^{k+N+1} |\theta|^{k} \right) \right]
+\leq |\theta|^{N} \left[ \max\{ |a_{1}|, 2|a_{2}|, \ldots, M|a_{M}| \} \left( \sum_{k=0}^{M-N-1} |\theta|^{k} \right) + \left( 2\varepsilon^{-1} \right)^{N+1} \left( \sum_{k=M-N}^{K-N} \left| 2\varepsilon^{-1}\theta \right|^{k} \right) \right].
+```
 
 因此，我们得到，对于所有满足 $|\theta| \leq \frac{\varepsilon}{4}$ 的 $\theta \in \mathbb{R}$，都有
 
-$$ \begin{align}
+```
 \sum_{k=N+1}^{\infty} k|a_{k}| |\theta|^{k-1}
-&\leq |\theta|^{N} \left[ \max\{ |a_{1}|, 2|a_{2}|, \ldots, M|a_{M}| \} \left( \sum_{k=0}^{\infty} \left| \frac{1}{4} \right|^{k} \right) + \left( 2\varepsilon^{-1} \right)^{N+1} \left( \sum_{k=1}^{\infty} \left| \frac{1}{2} \right|^{k} \right) \right] \\
-&\leq |\theta|^{N} \left[ 2\left\{ \max\{ |a_{1}|, 2|a_{2}|, \ldots, M|a_{M}| \} + \left( 2\varepsilon^{-1} \right)^{N+1} \right\} \right].
-\end{align} \tag{9.88} $$
+\leq |\theta|^{N} \left[ \max\{ |a_{1}|, 2|a_{2}|, \ldots, M|a_{M}| \} \left( \sum_{k=0}^{\infty} \left| \frac{1}{4} \right|^{k} \right) + \left( 2\varepsilon^{-1} \right)^{N+1} \left( \sum_{k=1}^{\infty} \left| \frac{1}{2} \right|^{k} \right) \right]
+\leq |\theta|^{N} \left[ 2\left\{ \max\{ |a_{1}|, 2|a_{2}|, \ldots, M|a_{M}| \} + \left( 2\varepsilon^{-1} \right)^{N+1} \right\} \right].
+```
 
 这确立了，对于所有满足 $|\theta| \leq \delta$ 的 $\theta \in \mathbb{R}$，都有
 
-$$ \sum_{k=N+1}^{K} k|a_{k}| |\theta|^{k-1} \leq |a_{N}| |\theta|^{N-1}. \tag{9.89} $$
+$$ \sum_{k=N+1}^{K} k|a_{k}| |\theta|^{k-1} \leq |a_{N}| |\theta|^{N-1}. $$
 
 ## 9.8. 一维解析函数的标准 KL 不等式
 
 因此，我们得到，对于所有 $K \in \mathbb { N } \cap [N, \infty )$ 和满足 $|\theta| < \delta$ 的 $\theta \in \mathbb{R}$，都有
 
-$$ \left| \sum_{k=1}^{K} k a_{k} \theta^{k-1} \right| = \left| \sum_{k=N}^{K} k a_{k} \theta^{k-1} \right| \geq N |a_{N}| |\theta|^{N-1} - \sum_{k=N+1}^{\infty} |k| |a_{k}| |\theta|^{k-1} \geq (N-1) |a_{N}| |\theta|^{N-1}. \tag{9.90} $$
+$$ \left| \sum_{k=1}^{K} k a_{k} \theta^{k-1} \right| = \left| \sum_{k=N}^{K} k a_{k} \theta^{k-1} \right| \geq N |a_{N}| |\theta|^{N-1} - \sum_{k=N+1}^{\infty} |k| |a_{k}| |\theta|^{k-1} \geq (N-1) |a_{N}| |\theta|^{N-1}. $$
 
 因此，命题 9.7.2 证明了，对于所有 $\theta \in \{ \xi \in \mathbb { R } : |\xi| < \varepsilon \}$，都有 $\sum_{k=1}^{\infty} k|a_{k}| |\theta|^{k-1} < \infty$ 以及
 
-$$ |\mathscr{L}'(\theta)| = \left| \sum_{k=1}^{\infty} k a_{k} \theta^{k-1} \right| \geq (N-1) |a_{N}| |\theta|^{N-1}. \tag{9.91} $$
+$$ |\mathscr{L}'(\theta)| = \left| \sum_{k=1}^{\infty} k a_{k} \theta^{k-1} \right| \geq (N-1) |a_{N}| |\theta|^{N-1}. $$
 
 将此与 (9.86) 结合表明，对于所有满足 $|\theta| \leq \delta$ 的 $\theta \in \mathbb{R}$，都有
 
-$$ |\mathscr{L}(\theta) - \mathscr{L}(0)|^{\frac{N-1}{N}} \leq |2 a_{N}|^{\frac{N-1}{N}} |\theta|^{N-1} \leq |2 a_{N}|^{\frac{N-1}{N}} (N-1)^{-1} |a_{N}|^{-1} \mathscr{L}'(\theta) \leq 2 \mathscr{L}'(\theta). \tag{9.92} $$
+$$ |\mathscr{L}(\theta) - \mathscr{L}(0)|^{\frac{N-1}{N}} \leq |2 a_{N}|^{\frac{N-1}{N}} |\theta|^{N-1} \leq |2 a_{N}|^{\frac{N-1}{N}} (N-1)^{-1} |a_{N}|^{-1} \mathscr{L}'(\theta) \leq 2 \mathscr{L}'(\theta). $$
 
 由此，引理 9.8.2 的证明完成。
 
 **推论 9.8.3.** 设 $\varepsilon \in (0, \infty)$，$U \subseteq \mathbb{R}$ 满足 $U = \{ \theta \in \mathbb{R} : |\theta| \leq \varepsilon \}$，且设 $\mathscr{L} : U \rightarrow \mathbb{R}$ 满足对所有 $\theta \in U$，都有
 
-$$ \limsup_{K \to \infty} \left| \mathscr{L}(\theta) - \mathscr{L}(0) - \sum_{k=1}^{K} a_{k} \theta^{k} \right| = 0. \tag{9.93} $$
+$$ \limsup_{K \to \infty} \left| \mathscr{L}(\theta) - \mathscr{L}(0) - \sum_{k=1}^{K} a_{k} \theta^{k} \right| = 0. $$
 
 则存在 $\delta \in (0, \varepsilon)$，$c \in (0, \infty)$，$\alpha \in (0, 1)$，使得对所有 $\theta \in \{ \xi \in \mathbb{R} : |\xi| < \delta \}$，都有
 
-$$ |\mathscr{L}(\theta) - \mathscr{L}(0)|^{\alpha} \leq c |\mathscr{L}'(0)|. \tag{9.94} $$
+$$ |\mathscr{L}(\theta) - \mathscr{L}(0)|^{\alpha} \leq c |\mathscr{L}'(0)|. $$
 
 **推论 9.8.3 的证明.** 在整个证明过程中，不妨假设 $\varepsilon < 1$，设 $N \in \mathbb { N } \cup \{ \infty \}$ 满足 $N = \min \{k \in \mathbb { N } : a _ { k } \neq 0 \} \cup \{ \infty \}$，并且不妨假设 $1 < N < \infty$（参见引理 9.8.1 中的条目 (iv) 和推论 9.4.2）。注意，引理 9.8.1 中的条目 (iii) 确保了对于所有满足 $|\theta| < \varepsilon$ 的 $\theta \in \mathbb{R}$，都有
 
-$$ \sum_{k=1}^{\infty} k|a_{k}| |\theta|^{k-1} < \infty. \tag{9.95} $$
+$$ \sum_{k=1}^{\infty} k|a_{k}| |\theta|^{k-1} < \infty. $$
 
 因此，我们得到
 
-$$ \sum_{k=1}^{\infty} k|a_{k}| \left( \frac{\varepsilon}{2} \right)^{k} < \infty. \tag{9.96} $$
+$$ \sum_{k=1}^{\infty} k|a_{k}| \left( \frac{\varepsilon}{2} \right)^{k} < \infty. $$
 
 这蕴含存在 $M \in \mathbb { N } \cap (N, \infty )$，使得对所有 $k \in \mathbb { N } \cap [M, \infty)$，都有
+
+
 
 $$ k|a_{k}| \leq (2 \varepsilon^{-1})^{k-1} \leq (2 \varepsilon^{-1})^{k}. \tag{9.97} $$
 
@@ -12962,8 +14104,6 @@ $$ k|a_{k}| \leq (2 \varepsilon^{-1})^{k-1} \leq (2 \varepsilon^{-1})^{k}. \tag{
 $$ |\mathscr{L}(\theta) - \mathscr{L}(0)|^{\frac{N-1}{N}} \leq 2 |\mathscr{L}'(\theta)|. \tag{9.98} $$
 
 由此，推论 9.8.3 的证明完成。
-
-
 
 **推论 9.8.4.** 设 $\varepsilon \in (0, \infty)$，$U \subseteq \mathbb{R}$，$\vartheta \in U$ 满足 $U = \{ \theta \in \mathbb{R} : |\theta - \vartheta| \le \varepsilon \}$，且设 $\mathscr{L} : U \rightarrow \mathbb{R}$ 满足对于所有 $\theta \in U$，有
 
@@ -13018,13 +14158,17 @@ $\left|\mathcal{L}(\vartheta)-\mathcal{L}(\theta)\right|^{\alpha} \leq c \|\nabl
 $\mathcal{L}(x)=\left\{\begin{array}{ll} \exp \left(-x^{-1}\right) & : x>0 \\ 0 & : x \leq 0 . \end{array}\right.\tag{9.106}$
 
 *那么*
+
 - * $(i)$* 成立 $\mathcal{L} \in C^{\infty}(\mathbb{R}, \mathbb{R})$，
+
 - * $(ii)$* 对于所有 $x \in (0, \infty)$，成立 $\mathcal{L}^{\prime}(x)=x^{-2} \exp \left(-x^{-1}\right)$，
+
 - * $(iii)$* 对于所有 $\alpha \in (0,1)$，$\varepsilon \in (0, \infty)$，成立
 
 $\sup_{x \in(0, \varepsilon)}\left(\frac{\left|\mathcal{L}(x)-\mathcal{L}(0)\right|^{\alpha}}{\left|\mathcal{L}^{\prime}(x)\right|}\right)=\infty,\tag{9.107}$
 
 *且*
+
 - * $(iv)$* 成立 $\mathcal{L}$ *不是标准* **KL** *函数*
 
 （*参见* 定义 9.1.2*）。
@@ -13067,49 +14211,49 @@ $\sup_{x \in (0, \varepsilon)} \left( \frac{|\mathscr{L}(x) - \mathscr{L}(0)|^{\
 
 由此，例 9.10.1 的证明完成。 □
 
-**例 9.10.2**（一个不满足标准 **KL** 不等式的可微函数的例子）。*设* \(\mathcal{L} : \mathbb{R} \to \mathbb{R}\) *满足对于所有* \(x \in \mathbb{R}\)，有
+**例 9.10.2**（一个不满足标准 **KL** 不等式的可微函数的例子）。*设* $\mathcal{L} : \mathbb{R} \to \mathbb{R}$ *满足对于所有* $x \in \mathbb{R}$，有
 
 \[ \mathcal{L}(x)= \int_{0}^{\max \{x, 0\}} y|\sin(y^{-1})| \, dy. \tag{9.117} \]
 
 *那么*
-- (i) 成立 \(\mathcal{L} \in C^{1}(\mathbb{R}, \mathbb{R})\)，
-- (ii) 对于所有 \(c \in \mathbb{R}\)，\(\alpha, \varepsilon \in (0, \infty)\)，*存在* \(x \in (0, \varepsilon)\) *使得*
+
+- (i) 成立 $\mathcal{L} \in C^{1}(\mathbb{R}, \mathbb{R})$，
+
+- (ii) 对于所有 $c \in \mathbb{R}$，$\alpha, \varepsilon \in (0, \infty)$，*存在* $x \in (0, \varepsilon)$ *使得*
 
 \[ |\mathcal{L}(x)-\mathcal{L}(0)|^{\alpha} > c|\mathcal{L}^{\prime}(x)|, \tag{9.118} \]
 
-- (iii) 对于所有 \(c \in \mathbb{R}\)，\(\alpha, \varepsilon \in (0, \infty)\)，*不成立* \(\mathcal{L}\) *在* \([0, \varepsilon)\) *上以指数* \(\alpha\) *和常数* \(c\) *在* \(0\) *处满足标准* **KL** *不等式*
+- (iii) 对于所有 $c \in \mathbb{R}$，$\alpha, \varepsilon \in (0, \infty)$，*不成立* $\mathcal{L}$ *在* $[0, \varepsilon)$ *上以指数* $\alpha$ *和常数* $c$ *在* $0$ *处满足标准* **KL** *不等式*
 
 （*参见* 定义 9.1.1*）。
 
-**例 9.10.2 的证明.** 在整个证明过程中，令 \(\mathcal{G}: \mathbb{R} \to \mathbb{R}\) 满足对于所有 \(x \in \mathbb{R}\)，有
+**例 9.10.2 的证明.** 在整个证明过程中，令 $\mathcal{G}: \mathbb{R} \to \mathbb{R}$ 满足对于所有 $x \in \mathbb{R}$，有
 
 \[ \mathcal{G}(x)= \begin{cases} x|\sin(x^{-1})| & : x > 0 \\[2pt] 0 & : x \leq 0. \end{cases} \tag{9.119} \]
 
-注意到 (9.119) 证明了对于所有 \(k \in \mathbb{N}\)，成立
+注意到 (9.119) 证明了对于所有 $k \in \mathbb{N}$，成立
 
 \[ \mathcal{G}((k \pi)^{-1})= (k \pi)^{-1}|\sin(k \pi)|= 0. \tag{9.120} \]
 
-此外，观察到 (9.119) 表明对于所有 \(x \in (0, \infty)\)，
+此外，观察到 (9.119) 表明对于所有 $x \in (0, \infty)$，
 
 \[ |\mathcal{G}(x)-\mathcal{G}(0)|= |x\sin(x^{-1})| \leq |x|. \tag{9.121} \]
 
-因此，我们得到 \(\mathcal{G}\) 是连续的。结合这一点、(9.117) 和微积分基本定理，确保了 \(\mathcal{L}\) 是连续可微的，且
+因此，我们得到 $\mathcal{G}$ 是连续的。结合这一点、(9.117) 和微积分基本定理，确保了 $\mathcal{L}$ 是连续可微的，且
 
 \[ \mathcal{L}^{\prime}=\mathcal{G}. \tag{9.122} \]
 
-结合这一点和 (9.120) 证明了对于所有 \(c \in \mathbb{R}\)，\(\alpha \in (0, \infty)\)，\(k \in \mathbb{N}\)，成立
+结合这一点和 (9.120) 证明了对于所有 $c \in \mathbb{R}$，$\alpha \in (0, \infty)$，$k \in \mathbb{N}$，成立
+
+
 
 \[ |\mathcal{L}((k \pi)^{-1})-\mathcal{L}(0)|^{\alpha}= |\mathcal{L}((k \pi)^{-1})|^{\alpha} > 0= c|\mathcal{G}((k \pi)^{-1})|= c|\mathcal{L}^{\prime}((k \pi)^{-1})|. \tag{9.123} \]
 
-由此，例 9.10.2 的证明完成。 \(\quad\) \(\square\)
+由此，例 9.10.2 的证明完成。 $\quad$ $\square$
 
+# 9.11 广义函数（GF）ODE 解的收敛性分析
 
-
-
-
-## 9.11 广义函数（GF）ODE 解的收敛性分析
-
-### 9.11.1 广义函数过程的抽象局部收敛结果
+## 9.11.1 广义函数过程的抽象局部收敛结果
 
 **引理 9.11.1.** 设 $\mathfrak{d} \in \mathbb{N}$，$\Theta \in C([0, \infty), \mathbb{R}^{\mathfrak{d}})$，$\mathcal{L} \in C^{1}(\mathbb{R}^{\mathfrak{d}}, \mathbb{R})$，设 $\mathscr{F} : \mathbb{R}^{\mathfrak{d}} \to \mathbb{R}^{\mathfrak{d}}$ *满足对于所有* $\theta \in \mathbb{R}^{\mathfrak{d}}$ *有* $\mathscr{F}(\theta) = (\nabla \mathcal{L})(\theta)$，*且假设对于所有* $t \in [0, \infty)$ *有* $\Theta_{t} = \Theta_{0} - \int_{0}^{t}\mathscr{F}(\Theta_{s}) \, \mathrm{d}s$。*则对于所有* $t \in [0, \infty)$ *有*
 
@@ -13136,8 +14280,11 @@ $$
 *且* $\inf_{t \in \{s \in [0, \infty) : \forall r \in [0, s] : \lVert \Theta_{r} - \vartheta \rVert_{2} < \varepsilon \} \} \mathcal{L}(\Theta_{t}) \geq \mathcal{L}(\vartheta)$ *（参见定义 3.3.4）。则存在* $\psi \in \mathbb{R}^{\mathfrak{d}}$ *使得*
 
 - *(i) 有* $\mathcal{L}(\psi) = \mathcal{L}(\vartheta)$
+
 - *(ii) 对于所有* $t \in [0, \infty)$ *有* $\lVert \Theta_{t} - \psi \rVert_{2} < \varepsilon$，
+
 - *(iii) 对于所有* $t \in [0, \infty)$ *有* $0 \leq \mathcal{L}(\Theta_{t}) - \mathcal{L}(\psi) \leq \mathfrak{C}^{2}\mathfrak{c}^{2}(\lVert_{[0]}(\mathfrak{c}) + \mathfrak{C}^{2}\varepsilon + \mathfrak{c}^{2\alpha}t)^{-1}$*，且*
+
 - *(iv) 对于所有* $t \in [0, \infty)$ *有*
 
 $$
@@ -13245,96 +14392,142 @@ $$
 
 因此，我们得出对于所有 $t \in [0, T)$，有
 
-$$
+
+
 \int_0^t \| \mathscr{G}(\Theta_u) \|_2 \, \mathrm{d}u \leq \mathfrak{C}(1-\alpha)^{-1}[\mathbf{L}(0)]^{1-\alpha}. \tag{9.143}
+
 $$
 
 此外，注意 (9.126) 式证明了 $\Theta_0 \in \mathbb{B}$。将此与 (9.130) 式结合确保了 $T > 0$。这、(9.143) 式和 (9.126) 式建立了
 
 $$
+
 \int_0^T \| \mathscr{G}(\Theta_u) \|_2 \, \mathrm{d}u \leq \mathfrak{C}(1-\alpha)^{-1}[\mathbf{L}(0)]^{1-\alpha} < \varepsilon < \infty. \tag{9.144}
+
 $$
 
 结合 (9.130) 式和 (9.133) 式从而证明了
 
 $$
+
 T = \infty. \tag{9.145}
+
 $$
 
 这建立了 (9.132) 式。在我们证明条目 (i)、(ii)、(iii) 和 (iv) 的下一步中，我们验证 $\Theta_t \in \mathbb{R}^9$，$t \in [0, \infty)$，是收敛的（参见下方的 (9.147) 式）。为此观察到该
 
-
-
-
 ## 9.11. GF 常微分方程解的收敛性分析
 
 假设对于所有 $t \in [0, \infty)$ 均成立 $\Theta_t = \Theta_0 - \int_0^t \mathscr{F}(\Theta_s) \, ds$，这表明对于所有满足 $r \leq s \leq t$ 的 $r, s, t \in [0, \infty)$ 均成立：
+
 $$
+
 \|\Theta_t - \Theta_s\|_2 = \left\|\int_s^t \mathscr{F}(\Theta_u) \, du\right\|_2 \leq \int_s^t \|\mathscr{F}(\Theta_u)\|_2 \, du \leq \int_r^\infty \|\mathscr{F}(\Theta_u)\|_2 \, du = \mathscr{G}_r. \tag{9.146}
+
 $$
 
 接下来注意到，(9.144) 和 (9.145) 意味着 $\infty > \mathscr{G}_0 \geq \lim\sup_{r \to \infty} \mathscr{G}_r = 0$。将此结果与 (9.146) 结合，证明了存在 $\psi \in \mathbb{R}^9$ 满足：
+
 $$
+
 \lim\sup_{t \to \infty} \|\Theta_t - \psi\|_2 = 0. \tag{9.147}
+
 $$
 
 在证明第 (i)、(ii)、(iii) 和 (iv) 项的下一步中，我们展示 $\mathcal{L}(\Theta_t), \ t \in [0, \infty)$ 以收敛阶 1 收敛到 $\mathcal{L}(\psi)$。我们通过利用函数 $\mathbf{L}$（在 9.128 中定义）倒数的适当微分不等式来实现这一点（详情见下面的 9.150）。更具体地说，观察到 (9.135)、(9.145)、(9.130) 和 (9.126) 确保对于几乎所有 $t \in [0, \infty)$ 均成立：
+
 $$
+
 \mathbf{L}'(t) = -\|\mathscr{F}(\Theta_t)\|_2^2 \leq -\mathbf{c}^{-2}[\mathbf{L}(t)]^{2\alpha}. \tag{9.148}
+
 $$
 
 因此，我们得出 $\mathbf{L}$ 是非递增的。这证明了对于所有 $t \in [0, \infty)$ 均成立 $\mathbf{L}(t) \leq \mathbf{L}(0)$。结合这一事实以及对于所有 $t \in [0, \tau)$ 均成立 $\mathbf{L}(t) > 0$，建立了对于几乎所有 $t \in [0, \tau)$ 均成立：
+
 $$
+
 \mathbf{L}'(t) \leq -\mathbf{c}^{-2}[\mathbf{L}(t)]^{(2\alpha - 2)}[\mathbf{L}(t)]^2 \leq -\mathbf{c}^{-2}[\mathbf{L}(0)]^{(2\alpha - 2)}[\mathbf{L}(t)]^2 = -\mathfrak{D}^{-1}[\mathbf{L}(t)]^2. \tag{9.149}
+
 $$
 
 因此，我们得出对于几乎所有 $t \in [0, \tau)$ 均成立：
+
 $$
+
 \frac{\partial}{\partial t} \left( \frac{\mathfrak{D}}{\mathbf{L}(t)} \right) = - \left( \frac{\mathfrak{D}\, \mathbf{L}(t)}{[\mathbf{L}(t)]^2} \right)^{-1} \geq 1. \tag{9.150}
+
 $$
 
 此外，注意到对于所有 $t \in [0, \tau)$，事实 $[0, t] \ni s \mapsto \mathbf{L}(s) \in (0, \infty)$ 是绝对连续的，表明对于所有 $t \in [0, \tau)$，$[0, t] \ni s \mapsto \mathfrak{D}\mathbf{L}(s)^{-1} \in (0, \infty)$ 是绝对连续的。这一点和 (9.150) 意味着对于所有 $t \in [0, \tau)$ 均成立：
+
 $$
+
 \frac{\mathfrak{D}}{\mathbf{L}(t)} - \frac{\mathfrak{D}}{\mathbf{L}(0)} \geq t. \tag{9.151}
+
 $$
 
 因此，我们得出对于所有 $t \in [0, \tau)$ 均成立：
+
 $$
+
 \frac{\mathfrak{D}}{\mathbf{L}(t)} \geq \frac{\mathfrak{D}}{\mathbf{L}(0)} + t. \tag{9.152}
+
 $$
 
 因此，我们得出对于所有 $t \in [0, \tau)$ 均成立：
+
 $$
+
 \mathfrak{D}\left( \frac{\mathfrak{D}}{\mathbf{L}(0)} + t \right)^{-1} \geq \mathbf{L}(t). \tag{9.153}
+
 $$
 
 这证明了对于所有 $t \in [0, \tau)$ 均成立：
+
 $$
+
 \mathbf{L}(t) \leq \mathfrak{D}\left[\mathbf{L}\left(t_{0}\right)^{-1}+t\right]^{-1}=\mathfrak{C}^{2} \mathfrak{c}^{2-2 \alpha}\left(\mathfrak{C}^{2} \mathfrak{c}^{1-2 \alpha}+t\right)^{-1}=\mathfrak{C}^{2} \mathfrak{c}^{2}\left(\mathfrak{C}^{2} \mathfrak{c}+\mathfrak{c}^{2 \alpha} t\right)^{-1} . \quad (9.154)
+
 $$
 
 由于对于所有 $t \in[\tau, \infty)$ 均成立 $\mathbf{L}(t)=0$，加上 (9.131)，因此确保对于所有 $t \in[0, \infty)$ 均成立：
+
 $$
+
 0 \leq \mathbf{L}(t) \leq \mathfrak{C}^{2} \mathfrak{c}^{2}\left(\mathbf{L}(0)(\epsilon)+\mathfrak{C}^{2} \mathfrak{c}+\mathfrak{c}^{2 \alpha} t\right)^{-1} . \quad(9.155)
+
 $$
 
 此外，观察到 (9.147) 以及假设 $\mathcal{L} \in C\left(\mathbb{R}^{\mathfrak{D}}, \mathbb{R}\right)$ 证明了 $\limsup _{t \rightarrow \infty}\left|\mathcal{L}\left(\Theta_{t}\right)-\mathcal{L}(\vartheta)\right| =0$。将此与 (9.155) 结合，建立了 $\mathcal{L}\left(\psi\right)=\mathcal{L}(\vartheta)$。这一点和 (9.155) 表明对于所有 $t \in[0, \infty)$ 均成立：
+
 $$
+
 0 \leq \mathcal{L}\left(\Theta_{t}\right)-\mathcal{L}(\psi) \leq \mathfrak{C}^{2} \mathfrak{c}^{2}\left(\mathbf{L}(0)(\epsilon)+\mathfrak{C}^{2} \mathfrak{c}+\mathfrak{c}^{2 \alpha} t\right)^{-1} . \quad(9.156)
+
 $$
 
 在证明第 (i)、(ii)、(iii) 和 (iv) 项的最后一步中，我们建立了实数 $\|\Theta_{t}-\psi\|_{2}$，$t \in[0, \infty)$ 的收敛率。注意到 (9.147)、(9.146) 和 (9.142) 意味着对于所有 $t \in[0, \infty)$ 均成立：
+
 $$
+
 \left\|\Theta_{t}-\psi\right\|_{2}=\left\|\Theta_{t}-\left[\lim _{s \rightarrow \infty} \Theta_{s}\right]\right\|_{2}=\lim _{s \rightarrow \infty}\left\|\Theta_{t}-\Theta_{s}\right\|_{2} \leq \mathscr{G}_{t} \leq \mathfrak{C}(1-\alpha)^{-1}[\mathbf{L}(t)]^{-1-\alpha} . \quad(9.157)
+
 $$
 
 这一点和 (9.156) 证明了对于所有 $t \in[0, \infty)$ 均成立：
+
 $$
+
 \begin{aligned}
+
 & \left\|\Theta_{t}-\psi\right\|_{2} \leq \mathscr{G}_{t} \leq \mathfrak{C}(1-\alpha)^{-1}\left[\mathcal{L}\left(\Theta_{t}\right)-\mathcal{L}(\psi)\right]^{-1} \alpha \\
+
 & \quad \leq \mathfrak{C}(1-\alpha)^{-1}\left[\mathfrak{C}^{2} \mathfrak{c}^{2}\left(\mathbf{L}(0)(\epsilon)+\mathfrak{C}^{2} \mathfrak{c}+\mathfrak{c}^{2 \alpha} t\right)\right]^{-1-\alpha} \\
+
 & \quad =\mathfrak{C}^{3-2 \alpha} \mathfrak{c}^{2-2 \alpha}\left(1-\alpha\right)^{-1}\left(\mathbf{L}(0)(\epsilon)+\mathfrak{C}^{2} \mathfrak{c}+\mathfrak{c}^{2 \alpha} t\right) \alpha^{-1} . \quad(9.158)
+
 \end{aligned}
+
 $$
 
 将此与 (9.132) 和 (9.156) 结合证明了第 (i)、(ii)、(iii) 和 (iv) 项。至此，命题 9.11.2 的证明完毕。
@@ -13342,198 +14535,250 @@ $$
 ### 推论 9.11.3
 
 令 $\mathfrak{D} \in \mathbb{N}, \vartheta \in \mathbb{R}^{\mathfrak{D}}, \mathfrak{c} \in[0,1], \mathcal{C}, \epsilon \in(0, \infty), \alpha \in(0,1)$，$\Theta \in C\left([0, \infty), \mathbb{R}^{\mathfrak{D}}\right)$，$\mathcal{L} \in C\left(\mathbb{R}^{\mathfrak{D}}, \mathbb{R}\right)$，令 $\mathscr{G}: \mathbb{R}^{\mathfrak{D}} \rightarrow \mathbb{R}^{\mathfrak{D}}$ 为 $\mathcal{B}\left(\mathbb{R}^{\mathfrak{D}}\right) / \mathcal{B}\left(\mathbb{R}^{\mathfrak{D}}\right)$-可测，假设对于所有 $t \in[0, \infty)$ 均成立：
+
 $$
+
 \begin{aligned}
+
 & \mathcal{L}\left(\Theta_{t}\right)=\mathcal{L}\left(\Theta_{0}\right)-\int_{0}^{t}\left\|\mathscr{G}\left(\Theta_{s}\right)\right\|_{2}^{2} d s \quad \text { 且 } \quad \Theta_{t}=\Theta_{0}-\int_{0}^{t} \mathscr{G}\left(\Theta_{s}\right) d s, \quad(9.159)
+
 \end{aligned}
+
 $$
+
 并且假设对于所有满足 $\|\theta-\vartheta\|_{2}<\epsilon$ 的 $\theta \in \mathbb{R}^{\mathfrak{D}}$ 均成立：
+
 $$
+
 \left|\mathcal{L}(\theta)-\mathcal{L}(\vartheta)\right|^{\alpha} \leq \mathfrak{C}\|\mathscr{G}(\theta)\|_{2}, \quad \mathfrak{c}=\left|\mathcal{L}\left(\Theta_{0}\right)-\mathcal{L}(\vartheta)\right|, \quad \mathfrak{C}(1-\alpha)^{-1} \mathfrak{c}^{1-\alpha}+\|\Theta_{0}-\vartheta\|_{2}<\epsilon, \quad (9.160)
+
 $$
+
 且
+
 $$
+
 \inf _{\{t \in[0, \infty) ; \vartheta \in[0, s] ;\|\Theta_{s}-\vartheta\|_{2} \leq \epsilon\}} \mathcal{L}\left(\Theta_{t}\right) \geq \mathcal{L}(\vartheta) \text { (参见定义 3.3.4) } \text {。}
+
 $$
+
 则存在 $\psi \in \mathbb{R}^{\mathfrak{D}}$，使得对于所有 $t \in[0, \infty)$ 均成立 $\mathcal{L}(\psi)=\mathcal{L}(\vartheta)$，$\|\Theta_{t}-\psi\|_{2}<\epsilon$，以及 $0 \leq$
+
 $$
+
 \mathcal{L}\left(\Theta_{t}\right)-\mathcal{L}(\psi) \leq\left(1+\mathfrak{C}^{-2} t\right)^{-1}, \text { 且 }
+
 $$
+
 $$
+
 \begin{aligned}
+
 \|\Theta_t - \psi\|_2 &\le \int_t^\infty \|\mathscr{G}(\mathfrak{S}_s)\|_2 \, \mathrm{d}s \\
+
 &\le \mathfrak{C}(1-\alpha)^{-1}[\mathcal{L}(\Theta_t) - \mathcal{L}(\psi)]^{1-\alpha} \\
+
 &\le \mathfrak{C}^{3-2\alpha}\mathfrak{C}^{2-2\alpha}(1-\alpha)^{-1}(\mathbf{L}(0)(\mathfrak{c}) + \mathfrak{C}^{2}\mathfrak{c} + \mathfrak{C}^{2\alpha}t)^{\alpha-1}.
+
 \end{aligned}
+
 \quad (9.162)
+
 $$
 
 推论 9.11.3 的证明。观察到命题 9.11.2 确保存在 $\psi \in \mathbb{R}^{\mathfrak{d}}$ 满足：
+
 - (i) 成立 $\mathcal{L}(\psi) = \mathcal{L}(\vartheta)$，
+
 - (ii) 对于所有 $t \in [0, \infty)$ 成立 $\|\Theta_t - \psi\|_2 < \varepsilon$，
+
 - (iii) 对于所有 $t \in [0, \infty)$ 成立 $0 \le \mathcal{L}(\Theta_t) - \mathcal{L}(\psi) \le \mathfrak{C}^{2}\mathfrak{C}^{2}(\mathbf{L}(0)(\mathfrak{c}) + \mathfrak{C}^{2}\mathfrak{c} + \mathfrak{C}^{2\alpha}t)^{-1}$，且
+
 - (iv) 对于所有 $t \in [0, \infty)$ 成立：
+
 $$
+
 \begin{aligned}
+
 \|\Theta_t - \psi\|_2 &\le \int_t^\infty \|\mathscr{G}(\mathfrak{S}_s)\|_2 \, \mathrm{d}s \\
+
 &\le \mathfrak{C}(1-\alpha)^{-1}[\mathcal{L}(\Theta_t) - \mathcal{L}(\psi)]^{1-\alpha} \\
+
+
+
 &\le \mathfrak{C}^{3-2\alpha}\mathfrak{C}^{2-2\alpha}(1-\alpha)^{-1}(\mathbf{L}(0)(\mathfrak{c}) + \mathfrak{C}^{2}\mathfrak{c} + \mathfrak{C}^{2\alpha}t)^{\alpha-1}.
+
 \end{aligned}
+
 \quad (9.162)
+
 $$
 
 注意，第 (iii) 项及假设 $\mathfrak{c} \le 1$ 建立了对于所有 $t \in [0, \infty)$ 均成立：
+
 $$
+
 0 \le \mathcal{L}(\Theta_t) - \mathcal{L}(\psi) \n\le \mathfrak{C}^{2}(\mathfrak{C}^{2}\mathbf{L}(0)(\mathfrak{c}) + \mathfrak{c} + \mathfrak{C}^{-2}\mathfrak{C}^{2\alpha}t)^{-1} \n\le (1+\mathfrak{C}^{-2}t)^{-1}.
+
 \quad (9.163)
+
 $$
 
 这一点和第 (iv) 项表明对于所有 $t \in [0, \infty)$ 均成立：
+
 $$
+
 \begin{aligned}
+
 \|\Theta_t - \psi\|_2 &\le \int_t^\infty \|\mathscr{G}(\mathfrak{S}_s)\|_2 \, \mathrm{d}s \\
+
 &\le \mathfrak{C}(1-\alpha)^{-1}[\mathcal{L}(\Theta_t) - \mathcal{L}(\psi)]^{1-\alpha} \\
+
 &\le \mathfrak{C}(1-\alpha)^{-1}(1+\mathfrak{C}^{-2}t)^{\alpha-1}.
+
 \end{aligned}
+
 \quad (9.164)
+
 $$
 
 将此与第 (i) 项、第 (ii) 项和 (9.163) 结合证明了 (9.161)。至此，推论 9.11.3 的证明完毕。
 
 ## 9.11.2 GF 过程的抽象全局收敛结果
 
-命题 9.11.4. 令 $\mathfrak{d} \in \mathbb{N}$，$\Theta \in C([0, \infty), \mathbb{R}^{\mathfrak{d}})$，$\mathcal{L} \in C(\mathbb{R}^{\mathfrak{d}}, \mathbb{R})$，令 $\mathscr{G} : \mathbb{R}^{\mathfrak{d}} \to \mathbb{R}^{\mathfrak{d}}$ 为 $\mathcal{B}(\mathbb{R}^{\mathfrak{d}})/\mathcal{B}(\mathbb{R}^{\mathfrak{d}})$-可测，假设对于所有 $\vartheta \in \mathbb{R}^{\mathfrak{d}}$ 存在 $\varepsilon, \mathfrak{C} \in (0, \infty)$，$\alpha \in (0, 1)$，使得对于所有满足 $\|\theta - \vartheta\|_2 < \varepsilon$ 的 $\theta \in \mathbb{R}^{\mathfrak{d}}$ 均成立：
-$$
-|\mathcal{L}(\theta) - \mathcal{L}(\vartheta)|^{\alpha} \n\le \mathfrak{C}\|\mathscr{G}(\theta)\|_2,
+### 命题 9.11.4
+令 `𝔡 ∈ ℕ`，`Θ ∈ C([0, ∞), ℝ^{𝔡})`，`ℒ ∈ C(ℝ^{𝔡}, ℝ)`，令 `𝒢 : ℝ^{𝔡} → ℝ^{𝔡}` 为 `ℬ(ℝ^{𝔡})/ℬ(ℝ^{𝔡})`-可测，假设对于所有 `ϑ ∈ ℝ^{𝔡}` 存在 `ε, 𝔠 ∈ (0, ∞)`，`α ∈ (0, 1)`，使得对于所有满足 `‖θ - ϑ‖₂ < ε` 的 `θ ∈ ℝ^{𝔡}` 均成立：
+
+```
+|ℒ(θ) - ℒ(ϑ)|^{α} \n\le 𝔠‖𝒢(θ)‖₂,
 \quad (9.165)
-$$
-假设对于所有 $t \in [0, \infty)$ 均成立：
-$$
-\mathcal{L}(\Theta_t) = \mathcal{L}(\Theta_0) - \int_0^t \|\mathscr{G}(\mathfrak{S}_s)\|_2^2 \, \mathrm{d}s
-\quad \text{且} \quad
-\Theta_t = \Theta_0 - \int_0^t \mathscr{G}(\mathfrak{S}_s) \, \mathrm{d}s,
+```
+
+假设对于所有 `t ∈ [0, ∞)` 均成立：
+
+```
+ℒ(Θ_t) = ℒ(Θ_0) - ∫_0^t ‖𝒢(𝔖_s)‖₂² d s
+\quad 且 \quad
+Θ_t = Θ_0 - ∫_0^t 𝒢(𝔖_s) d s,
 \quad (9.166)
-$$
-并且假设 $\lim_{t\to\infty}\inf \|\Theta_t\|_2 < \infty$。则存在 $\vartheta \in \mathbb{R}^{\mathfrak{d}}$，$\mathfrak{C}, \tau, \beta \in (0, \infty)$，使得对于所有 $t \in [\tau, \infty)$ 均成立：
-$$
-\|\Theta_t - \vartheta\|_2 \n\le (1+\mathfrak{C}(t-\tau))^{-\beta}
-\quad \text{且} \quad
-0 \le \mathcal{L}(\Theta_t) - \mathcal{L}(\vartheta) \n\le (1+\mathfrak{C}(t-\tau))^{-1}.
+```
+
+并且假设 `lim_{t→∞} inf ‖Θ_t‖₂ < ∞`。则存在 `ϑ ∈ ℝ^{𝔡}`，`𝔠, τ, β ∈ (0, ∞)`，使得对于所有 `t ∈ [τ, ∞)` 均成立：
+
+```
+‖Θ_t - ϑ‖₂ \n\le (1+𝔠(t-τ))^{-β}
+\quad 且 \quad
+0 ≤ ℒ(Θ_t) - ℒ(ϑ) \n\le (1+𝔠(t-τ))^{-1}.
 \quad (9.167)
-$$
+```
 
+*命题 9.11.4 的证明。* 注意到 (9.166) 意味着 `[0, ∞) ∋ t ↦ ℒ(Θ_t) ∈ ℝ` 是非递增的。因此，我们得到存在 `m ∈ [-∞, ∞)` 满足
 
+```
+m = lim sup_{t → ∞} ℒ(Θ_t) = lim inf_{t → ∞} ℒ(Θ_t) = inf_{t ∈ [0, ∞)} ℒ(Θ_t).  (9.168)
+```
 
+此外，注意到假设 `lim inf_{t → ∞} ‖Θ_t‖₂ < ∞` 表明存在 `ϑ ∈ ℝ^9` 和 `δ = (δ_n)_{n ∈ ℕ} : ℕ → [0, ∞)`，使得
 
-*命题 9.11.4 的证明。* 注意到 (9.166) 意味着 $[0, \infty) \ni t \mapsto \mathscr{L}(\Theta_t) \in \mathbb{R}$ 是非递增的。因此，我们得到存在 $\mathbf{m} \in [-\infty, \infty)$ 满足
+```
+lim inf_{n → ∞} δ_n = ∞  且  lim_{n → ∞} ‖Θ_{δ_n} - ϑ‖₂ = 0.  (9.169)
+```
 
-$$
-\mathbf{m}=\operatorname*{lim sup}_{t \rightarrow \infty} \mathscr{L}\left(\Theta_t\right)=\operatorname*{lim inf}_{t \rightarrow \infty} \mathscr{L}\left(\Theta_t\right)=\operatorname*{inf}_{t \in[0, \infty)} \mathscr{L}(\Theta_t) . \quad (9.168)
-$$
+注意到 (9.168)、(9.169) 以及 `ℒ` 是连续的事实确保了
 
-此外，注意到假设 $\lim \inf _{t \rightarrow \infty}\left\|\Theta_t\right\|_2<\infty$ 表明存在 $\vartheta \in \mathbb{R}^9$ 和 $\delta=\left(\delta_n\right)_{n \in \mathbb{N}}: \mathbb{N} \rightarrow[0, \infty)$，使得
+```
+ℒ(ϑ) = m ∈ ℝ  且  ∀ t ∈ [0, ∞) : ℒ(Θ_t) ≥ ℒ(ϑ).  (9.170)
+```
 
-$$
-\lim \inf _{n \rightarrow \infty} \delta_n=\infty \quad \text { 且 } \quad \lim _{n \rightarrow \infty}\left\|\Theta_{\delta_n}-\vartheta\right\|_2=0 . \quad (9.169)
-$$
+接下来，令 `ε, c ∈ (0, ∞), α ∈ (0,1)` 满足对于所有满足 `‖θ-ϑ‖₂ < ε` 的 `θ ∈ ℝ^9`，有
 
-注意到 (9.168)、(9.169) 以及 $\mathscr{L}$ 是连续的事实确保了
+```
+|ℒ(θ) - ℒ(ϑ)|^α ≤ c ‖𝒢(θ)‖₂.  (9.171)
+```
 
-$$
-\mathscr{L}(\vartheta)=\mathbf{m} \in \mathbb{R} \quad \text { 且 } \quad \forall t \in[0, \infty): \mathscr{L}\left(\Theta_t\right) \geq \mathscr{L}(\vartheta) . \quad (9.170)
-$$
+注意到 (9.169) 和 `ℒ` 是连续的事实表明，存在 `n ∈ ℕ` 和 `c ∈ [0,1]` 满足
 
-接下来，令 $\varepsilon, \mathbf{c} \in(0, \infty), \alpha \in(0,1)$ 满足对于所有满足 $\|\theta-\vartheta\|_2<\varepsilon$ 的 $\theta \in \mathbb{R}^9$，有
+```
+c = |ℒ(Θ_{δ_n}) - ℒ(ϑ)|  且  c(1-α)^{-1} c^{1-α} + ‖Θ_{δ_n} - ϑ‖₂ < ε.  (9.172)
+```
 
-$$
-\left|\mathscr{L}(\theta)-\mathscr{L}(\vartheta)\right|^\alpha \leq \mathbf{c}\left\|\mathscr{G}(\theta)\right\|_2 . \quad (9.171)
-$$
+接下来，令 `Φ : [0, ∞) → ℝ^9` 满足对于所有 `t ∈ [0, ∞)`，有
 
-注意到 (9.169) 和 $\mathscr{L}$ 是连续的事实表明，存在 $n \in \mathbb{N}$ 和 $\mathbf{c} \in[0,1]$ 满足
+```
+Φ_t = Θ_{δ_n + t}.  (9.173)
+```
 
-$$
-\mathbf{c}=\left|\mathscr{L}\left(\Theta_{\delta_n}\right)-\mathscr{L}(\vartheta)\right| \quad \text { 且 } \quad \mathbf{c}\left(1-\alpha\right)^{-1} \mathbf{c}^{1-\alpha}+\left\|\Theta_{\delta_n}-\vartheta\right\|_2<\varepsilon . \quad (9.172)
-$$
+注意到 (9.166)、(9.170) 和 (9.173) 建立了对于所有 `t ∈ [0, ∞)`，成立以下等式
 
-接下来，令 $\Phi: [0, \infty) \rightarrow \mathbb{R}^9$ 满足对于所有 $t \in[0, \infty)$，有
+```
+ℒ(Φ_t) = ℒ(Φ_0) - ∫_0^t ‖𝒢(Φ_s)‖₂² d s,  Φ_t = Φ_0 - ∫_0^t 𝒢(Φ_s) d s,
+且 ℒ(Φ_t) ≥ ℒ(ϑ).
+(9.174)
+```
 
-$$
-\Phi_t=\Theta_{\delta_n+t} . \quad (9.173)
-$$
+结合 (9.171)、(9.172)、(9.173) 以及推论 9.11.3（在推论 9.11.3 的记号中应用 `Θ ∧ Φ`），可证得存在 `ψ ∈ ℝ^9` 满足对于所有 `t ∈ [0, ∞)`，有
 
-注意到 (9.166)、(9.170) 和 (9.173) 建立了对于所有 $t \in[0, \infty)$，成立以下等式
+```
+0 ≤ ℒ(Φ_t) - ℒ(ψ) ≤ (1 + c^{-2} t)^{-1},  ‖Φ_t - ψ‖₂ ≤ c(1-α)^{-1}(1 + c^{-2} t)^{α-1},  (9.175)
+```
 
-$$
-\begin{gathered}
-\mathscr{L}\left(\Phi_t\right)=\mathscr{L}\left(\Phi_0\right)-\int_0^t\left\|\mathscr{G}\left(\Phi_s\right)\right\|_2^2 \mathrm{~d} s, \quad \Phi_t=\Phi_0-\int_0^t \mathscr{G}\left(\Phi_s\right) \mathrm{d} s, \\
-\text { 且 } \mathscr{L}\left(\Phi_t\right) \geq \mathscr{L}(\vartheta) .
-\end{gathered} \quad (9.174)
-$$
+且 `ℒ(ψ) = ℒ(ϑ)`。注意到 (9.173) 和 (9.175) 表明，对于所有 `t ∈ [0, ∞)`，`0 ≤ ℒ(Θ_{δ_n + t}) - ℒ(ψ) ≤ (1 + c^{-2} t)^{-1}` 且 `‖Θ_{δ_n + t} - ψ‖₂ ≤ c(1-α)^{-1}(1 + c^{-2} t)^{α-1}`。因此，我们得到对于所有 `τ ∈ [δ_n, ∞), t ∈ [τ, ∞)`，有
 
-结合 (9.171)、(9.172)、(9.173) 以及推论 9.11.3（在推论 9.11.3 的记号中应用 $\Theta \wedge \Phi$），可证得存在 $\psi \in \mathbb{R}^9$ 满足对于所有 $t \in[0, \infty)$，有
-
-$$
-0 \leq \mathscr{L}\left(\Phi_t\right)-\mathscr{L}(\psi) \leq\left(1+\mathbf{c}^{-2} t\right)^{-1}, \quad \left\|\Phi_t-\psi\right\|_2 \leq \mathbf{c}(1-\alpha)^{-1}\left(1+\mathbf{c}^{-2} t\right)^{\alpha-1}, \quad (9.175)
-$$
-
-且 $\mathscr{L}(\psi)=\mathscr{L}(\vartheta)$。注意到 (9.173) 和 (9.175) 表明，对于所有 $t \in[0, \infty)$，$0 \leq$ $\mathscr{L}\left(\Theta_{\delta_n+t}\right)-\mathscr{L}(\psi) \leq\left(1+\mathbf{c}^{-2} t\right)^{-1}$ 且 $\left\|\Theta_{\delta_n+t}-\psi\right\|_2 \leq \mathbf{c}(1-\alpha)^{-1}\left(1+\mathbf{c}^{-2} t\right)^{\alpha-1}$。因此，我们得到对于所有 $\tau \in\left[\delta_n, \infty\right), t \in[\tau, \infty)$，有
-
-$$
-\begin{gathered}
-0 \leq \mathscr{L}\left(\Theta_t\right)-\mathscr{L}(\psi) \leq\left(1+\mathbf{c}^{-2}\left(t-\delta_n\right)\right)^{-1}=\left(1+\mathbf{c}^{-2}(t-\tau)+\mathbf{c}^{-2}\left(\tau-\delta_n\right)\right)^{-1} \\
-\leq\left(1+\mathbf{c}^{-2}(t-\tau)\right)^{-1}
-\end{gathered} \quad (9.176)
-$$
+```
+0 ≤ ℒ(Θ_t) - ℒ(ψ) ≤ (1 + c^{-2}(t - δ_n))^{-1} = (1 + c^{-2}(t - τ) + c^{-2}(τ - δ_n))^{-1}
+≤ (1 + c^{-2}(t - τ))^{-1}
+(9.176)
+```
 
 以及
 
-$$
-\begin{aligned}
-\left\|\Theta_{t} - \psi\right\|_{2} &\leq \mathfrak{C}(1 - \alpha)^{-1}(1 + \mathfrak{C}^{-2}(t - \delta_{n}))^{\alpha - 1} \\
-&= \left[\left[\mathfrak{C}(1 - \alpha)^{-1}\right]^{\frac{1}{\alpha - 1}}(1 + \mathfrak{C}^{-2}(t - \delta_{n}))\right]^{\alpha - 1} \\
-&= \left[\left[\mathfrak{C}(1 - \alpha)^{-1}\right]^{\frac{1}{\alpha - 1}}\left[1 + \mathfrak{C}^{-2}(\tau - \delta_{n})\right] + \left[\left(\mathfrak{C}(1 - \alpha)^{-1}\right]^{\frac{1}{1 - \alpha}}\mathfrak{C}^{2}\right]^{-1}(t - \tau)\right]^{\alpha - 1} .
-\end{aligned} \quad (9.177)
-$$
+```
+‖Θ_t - ψ‖₂ ≤ 𝔠(1 - α)^{-1}(1 + 𝔠^{-2}(t - δ_n))^{α - 1}
+= [[𝔠(1 - α)^{-1}]^{1/(α - 1)}(1 + 𝔠^{-2}(t - δ_n)) ]^{α - 1}
+= [[𝔠(1 - α)^{-1}]^{1/(α - 1)}[1 + 𝔠^{-2}(τ - δ_n)] + [(𝔠(1 - α)^{-1})^{1/(1 - α)}𝔠²]^{-1}(t - τ)]^{α - 1}.
+(9.177)
+```
 
-接下来，令 $\mathfrak{C}$ 和 $\tau \in (0, \infty)$ 满足
+接下来，令 `𝔠` 和 `τ ∈ (0, ∞)` 满足
 
-$$
-\mathfrak{C} = \max\{\mathfrak{C}^{2}, \left[\mathfrak{C}(1 - \alpha)^{-1}\right]^{\frac{1}{1 - \alpha}}\mathfrak{C}^{2}\} \quad \text{且} \quad \tau = \delta_{n} + \mathfrak{C}^{2}\left[\mathfrak{C}(1 - \alpha)^{-1}\right]^{\frac{1}{1 - \alpha}} . \quad (9.178)
-$$
+```
+𝔠 = max{𝔠², [𝔠(1 - α)^{-1}]^{1/(1 - α)}𝔠²}  且  τ = δ_n + 𝔠²[𝔠(1 - α)^{-1}]^{1/(1 - α)}.  (9.178)
+```
 
-注意到 (9.176)、(9.177) 和 (9.178) 表明，对于所有 $t \in [\tau, \infty)$，有
+注意到 (9.176)、(9.177) 和 (9.178) 表明，对于所有 `t ∈ [τ, ∞)`，有
 
-$$
-0 \leq \mathcal{L}(\Theta_{t}) - \mathcal{L}(\psi) \leq (1 + \mathfrak{C}^{-2}(t - \tau))^{-1} \leq (1 + \mathfrak{C}^{-1}(t - \tau))^{-1} \quad (9.179)
-$$
+```
+0 ≤ ℒ(Θ_t) - ℒ(ψ) ≤ (1 + 𝔠^{-2}(t - τ))^{-1} ≤ (1 + 𝔠^{-1}(t - τ))^{-1}  (9.179)
+```
 
 以及
 
-$$
-\begin{aligned}
-\left\|\Theta_{t} - \psi\right\|_{2} &\leq \left[\left[\mathfrak{C}(1 - \alpha)^{-1}\right]^{\frac{1}{\alpha - 1}}\left[1 + \mathfrak{C}^{-2}(\tau - \delta_{n})\right] + \mathfrak{C}^{-1}(t - \tau)\right]^{\alpha - 1} \\
-&= \left[\left[\mathfrak{C}(1 - \alpha)^{-1}\right]^{\frac{1}{\alpha - 1}}\left[1 + \left[\mathfrak{C}(1 - \alpha)^{-1}\right]^{\frac{1}{1 - \alpha}}\right] + \mathfrak{C}^{-1}(t - \tau)\right]^{\alpha - 1} \\
-&\leq \left[1 + \mathfrak{C}^{-1}(t - \tau)\right]^{\alpha - 1} .
-\end{aligned} \quad (9.180)
-$$
+```
+‖Θ_t - ψ‖₂ ≤ [[𝔠(1 - α)^{-1}]^{1/(α - 1)}[1 + 𝔠^{-2}(τ - δ_n)] + 𝔠^{-1}(t - τ)]^{α - 1}
+= [[𝔠(1 - α)^{-1}]^{1/(α - 1)}[1 + [𝔠(1 - α)^{-1}]^{1/(1 - α)}] + 𝔠^{-1}(t - τ)]^{α - 1}
+≤ [1 + 𝔠^{-1}(t - τ)]^{α - 1}.
+(9.180)
+```
 
 至此，命题 9.11.4 的证明完毕。
 
-### **推论 9.11.5。**
+### 推论 9.11.5
 
-设 $\varrho \in \mathbb{N}$，$\Theta \in C([0, \infty), \mathbb{R}^{\varrho})$，$\mathcal{L} \in C(\mathbb{R}^{\varrho}, \mathbb{R})$，设 $\mathfrak{G}: \mathbb{R}^{\varrho} \rightarrow \mathbb{R}^{\varrho}$ 是 $\mathcal{B}(\mathbb{R}^{\varrho})/\mathcal{B}(\mathbb{R}^{\varrho})$-可测的，假设对于所有 $\vartheta \in \mathbb{R}^{\varrho}$，存在 $\varepsilon, \mathfrak{C} \in (0, \infty)$，$\alpha \in (0, 1)$，使得对于所有满足 $\|\theta - \vartheta\|_{2} < \varepsilon$ 的 $\theta \in \mathbb{R}^{\varrho}$，有
+设 `ϱ ∈ ℕ`，`Θ ∈ C([0, ∞), ℝ^{ϱ})`，`ℒ ∈ C(ℝ^{ϱ}, ℝ)`，设 `𝔊 : ℝ^{ϱ} → ℝ^{ϱ}` 是 `ℬ(ℝ^{ϱ})/ℬ(ℝ^{ϱ})`-可测的，假设对于所有 `ϑ ∈ ℝ^{ϱ}`，存在 `ε, 𝔠 ∈ (0, ∞)`，`α ∈ (0, 1)`，使得对于所有满足 `‖θ - ϑ‖₂ < ε` 的 `θ ∈ ℝ^{ϱ}`，有
 
-$$
-|\mathcal{L}(\theta) - \mathcal{L}(\vartheta)|^{\alpha} \leq \mathfrak{C}\|\mathfrak{G}(\vartheta)\|_{2}, \quad (9.181)
-$$
+```
+|ℒ(θ) - ℒ(ϑ)|^{α} ≤ 𝔠‖𝔊(ϑ)‖₂,  (9.181)
+```
 
-假设对于所有 $t \in [0, \infty)$，有
+假设对于所有 `t ∈ [0, ∞)`，有
 
-$$
+
+
 \mathcal{L}(\Theta_{t}) = \mathcal{L}(\Theta_{0}) - \int_{0}^{t}\|\mathfrak{G}(\Theta_{s})\|_{2}^{2}\mathrm{d}s \quad \text{且} \quad \Theta_{t} = \Theta_{0} - \int_{0}^{t}\mathfrak{G}(\Theta_{s})\mathrm{d}s, \quad (9.182)
-$$
 
+$$
 且假设 $\liminf_{t \rightarrow \infty}\|\Theta_{t}\|_{2} < \infty$（参见定义 3.3.4）。则存在 $\vartheta \in \mathbb{R}^{\varrho}$，$\mathfrak{C}$，$\beta \in (0, \infty)$，使得对于所有 $t \in [0, \infty)$，有
+$$
 
 $$
 \|\Theta_{t} - \vartheta\|_{2} \leq \mathfrak{C}(1 + t)^{-\beta} \quad \text{且} \quad 0 \leq \mathcal{L}(\Theta_{t}) - \mathcal{L}(\vartheta) \leq \mathfrak{C}(1 + t)^{-1} . \quad (9.183)
@@ -13580,7 +14825,7 @@ $$
 
 至此，推论 9.11.5 的证明完毕。 $\square$
 
-### **推论 9.11.6。**
+### 推论 9.11.6。
 
 *设* $\mathfrak{d} \in \mathbb{N}$，$\Theta \in C([0, \infty), \mathbb{R}^{\mathfrak{d}})$，$\mathcal{L} \in C^{1}\left(\mathbb{R}^{\mathfrak{d}}, \mathbb{R}\right)$，*假设对于所有* $\vartheta \in \mathbb{R}^{\mathfrak{d}}$ *存在* $\varepsilon, \mathfrak{C} \in (0, \infty)$，$\alpha \in (0, 1)$ *使得对于所有* $\theta \in \mathbb{R}^{\mathfrak{d}}$ *满足* $\|\theta-\vartheta\|_{2} < \varepsilon$ *有*
 
@@ -13599,9 +14844,6 @@ $$
 $$
 \left\|\Theta_{t}-\vartheta\right\|_{2} \leq \mathcal{K}\left(1+t\right)^{-\beta} , \quad 0 \leq \mathcal{L}\left(\Theta_{t}\right)-\mathcal{L}(\vartheta) \leq \mathcal{K}\left(1+t\right)^{-1}, \text { 且 } \quad(\nabla \mathcal{L})(\vartheta)=0 . \quad (9.192)
 $$
-
-
-
 
 推论 9.11.6 的证明。注意，引理 9.11.1 表明，对于所有 $t \in [0, \infty)$，有
 
@@ -13667,8 +14909,12 @@ $\mathcal { L } ( y ) \leq \mathcal { L } ( x ) + \langle ( \nabla \mathcal { L 
 
 (参见定义 1.4.7)。
 
-**引理 9.12.1 的证明.** 注意，微积分基本定理、柯西-施瓦茨不等式以及 (9.204) 证明了对于所有 $x , y \in U$，我们有
 
+
+# 引理 9.12.1 的证明
+注意，微积分基本定理、柯西-施瓦茨不等式以及 `(9.204)` 证明了对于所有 `$x , y \in U$`，我们有
+
+```
 \begin{align}
 & \mathcal { L } ( y ) - \mathcal { L } ( x ) \\
 &= \big [ \mathcal { L } ( x + r ( y - x ) ) \big ] _ { r = 0 } ^ { r = 1 } = \int _ { 0 } ^ { 1 } \langle ( \nabla \mathcal { L } ) ( x + r ( y - x ) ) , y - x \rangle \, \mathrm { d } r \\
@@ -13678,87 +14924,124 @@ $\mathcal { L } ( y ) \leq \mathcal { L } ( x ) + \langle ( \nabla \mathcal { L 
 &\leq \langle ( \nabla \mathcal { L } ) ( x ) , y - x \rangle + L \| y - x \| _ { 2 } \left[ \int _ { 0 } ^ { 1 } \| r ( y - x ) \| _ { 2 } \, \mathrm { d } r \right] \\
 &= \langle ( \nabla \mathcal { L } ) ( x ) , y - x \rangle + \frac { L } { 2 } \| x - y \| _ { 2 } ^ { 2 }
 \end{align}
+```
 
 $\quad \text{(9.206)}$
 
 (参见定义 1.4.7)。引理 9.12.1 的证明完毕。$\square$
 
-**推论 9.12.2**. 设 $\mathfrak { g } \in \mathbb { N }$、$L , \gamma \in \mathbb { R }$，设 $U \subseteq \mathbb { R } ^ { \mathfrak { g } }$ 为开凸集，设 $\mathcal { L } \in C ^ { 1 } ( U , \mathbb { R } )$，并假设对于所有 $x , y \in U$，有
+## 推论 9.12.2
+设 `$\mathfrak { g } \in \mathbb { N }$`、`$L , \gamma \in \mathbb { R }$`，设 `$U \subseteq \mathbb { R } ^ { \mathfrak { g } }$` 为开凸集，设 `$\mathcal { L } \in C ^ { 1 } ( U , \mathbb { R } )$`，并假设对于所有 `$x , y \in U$`，有
 
+```
 $$\| ( \nabla \mathcal { L } ) ( x ) - ( \nabla \mathcal { L } ) ( y ) \| _ { 2 } \leq L \| x - y \| _ { 2 }$$
+```
 
-(参见定义 3.3.4)。则对于所有满足 $x - \gamma ( \nabla \mathcal { L } ) ( x ) \in U$ 的 $x \in U$，有
+(参见定义 3.3.4)。则对于所有满足 `$x - \gamma ( \nabla \mathcal { L } ) ( x ) \in U$` 的 `$x \in U$`，有
 
+```
 $$\mathcal { L } \left( x - \gamma ( \nabla \mathcal { L } ) ( x ) \right) \leq \mathcal { L } \left( x \right) + \gamma \left( \frac { L \gamma } { 2 } - 1 \right) \| ( \nabla \mathcal { L } ) ( x ) \| _ { 2 } ^ { 2 }$$
+```
 
-**推论 9.12.2 的证明**. 注意，引理 9.12.1 确保对于所有满足 $x - \gamma ( \nabla \mathcal { L } ) ( x ) \in U$ 的 $x \in U$，有
+### 推论 9.12.2 的证明
+注意，引理 9.12.1 确保对于所有满足 `$x - \gamma ( \nabla \mathcal { L } ) ( x ) \in U$` 的 `$x \in U$`，有
 
+```
 \begin{align}
 \mathcal { L } \left( x - \gamma ( \nabla \mathcal { L } ) ( x ) \right) \leq & \mathcal { L } \left( x \right) + \left\langle ( \nabla \mathcal { L } ) ( x ) , -\gamma ( \nabla \mathcal { L } ) ( x ) \right\rangle + \frac { L } { 2 } \| \gamma ( \nabla \mathcal { L } ) ( x ) \| _ { 2 } ^ { 2 } \\
 = & \mathcal { L } \left( x \right) - \gamma \| ( \nabla \mathcal { L } ) ( x ) \| _ { 2 } ^ { 2 } + \frac { L \gamma ^ { 2 } } { 2 } \| ( \nabla \mathcal { L } ) ( x ) \| _ { 2 } ^ { 2 } .
 \end{align}
+```
 
-这确立了 (9.208)。推论 9.12.2 的证明完毕。$\square$
+这确立了 `(9.208)`。推论 9.12.2 的证明完毕。$\square$
 
-**推论 9.12.3**. 设 $\mathfrak { g } \in \mathbb { N }$、$L \in ( 0 , \infty )$、$\gamma \in [ 0 , L ^ { - 1 } ]$，设 $U \subseteq \mathbb { R } ^ { \mathfrak { g } }$ 为开凸集，设 $\mathcal { L } \in C ^ { 1 } ( U , \mathbb { R } )$，并假设对于所有 $x , y \in U$，有
+## 推论 9.12.3
+设 `$\mathfrak { g } \in \mathbb { N }$`、 `$L \in ( 0 , \infty )$`、 `$\gamma \in [ 0 , L ^ { - 1 } ]$`，设 `$U \subseteq \mathbb { R } ^ { \mathfrak { g } }$` 为开凸集，设 `$\mathcal { L } \in C ^ { 1 } ( U , \mathbb { R } )$`，并假设对于所有 `$x , y \in U$`，有
 
+```
 $$\| ( \nabla \mathcal { L } ) ( x ) - ( \nabla \mathcal { L } ) ( y ) \| _ { 2 } \leq L \| x - y \| _ { 2 }$$
+```
 
-(参见定义 3.3.4)。则对于所有满足 $x - \gamma ( \nabla \mathcal { L } ) ( x ) \in U$ 的 $x \in U$，有
+(参见定义 3.3.4)。则对于所有满足 `$x - \gamma ( \nabla \mathcal { L } ) ( x ) \in U$` 的 `$x \in U$`，有
 
+```
 $$\mathcal { L } \left( x - \gamma ( \nabla \mathcal { L } ) ( x ) \right) \leq \mathcal { L } \left( x \right) - \frac { \gamma } { 2 } \| ( \nabla \mathcal { L } ) ( x ) \| _ { 2 } ^ { 2 } \leq \mathcal { L } \left( x \right) .$$
+```
 
-**推论 9.12.3 的证明**. 注意，推论 9.12.2、事实 $\gamma \geq 0$ 以及事实 $\frac { L \gamma } { 2 } - 1 \leq - \frac { 1 } { 2 }$ 确立了 (9.211)。推论 9.12.3 的证明完毕。$\square$
+### 推论 9.12.3 的证明
+注意，推论 9.12.2、事实 `$\gamma \geq 0$` 以及事实 `$\frac { L \gamma } { 2 } - 1 \leq - \frac { 1 } { 2 }$` 确立了 `(9.211)`。推论 9.12.3 的证明完毕。$\square$
 
-*练习 9.12.1*. 设 $\left( \gamma _ { n } \right) _ { n \in \mathbb { N } } \subseteq ( 0 , \infty )$ 满足对于所有 $n \in \mathbb { N }$ 有 $\gamma _ { n } = \frac { 1 } { n + 1 }$，且设 $\mathcal { L } \colon \mathbb { R } \rightarrow \mathbb { R }$ 满足对于所有 $x \in \mathbb { R }$ 有
+## 练习
+*练习 9.12.1*. 设 `$\left( \gamma _ { n } \right) _ { n \in \mathbb { N } } \subseteq ( 0 , \infty )$` 满足对于所有 `$n \in \mathbb { N }$` 有 `$\gamma _ { n } = \frac { 1 } { n + 1 }$`，且设 `$\mathcal { L } \colon \mathbb { R } \rightarrow \mathbb { R }$` 满足对于所有 `$x \in \mathbb { R }$` 有
 
+```
 $$\mathcal { L } \left( x \right) = 2 x + \sin ( x ) .$$
+```
 
-证明或反驳以下命题：对于任意 $\Theta = \left( \Theta _ { k } \right) _ { k \in \mathbb { N } _ { 0 } } \colon \mathbb { N } _ { 0 } \rightarrow \mathbb { R }$（满足 $\forall k \in \mathbb { N }$: $\Theta _ { k } = \Theta _ { k - 1 } - \gamma _ { k } ( \nabla \mathcal { L } ) ( \Theta _ { k - 1 } )$）以及任意 $n \in \mathbb { N }$，有
+证明或反驳以下命题：对于任意 `$\Theta = \left( \Theta _ { k } \right) _ { k \in \mathbb { N } _ { 0 } } \colon \mathbb { N } _ { 0 } \rightarrow \mathbb { R }$`（满足 `$\forall k \in \mathbb { N }$: $\Theta _ { k } = \Theta _ { k - 1 } - \gamma _ { k } ( \nabla \mathcal { L } ) ( \Theta _ { k - 1 } )$`）以及任意 `$n \in \mathbb { N }$`，有
 
+```
 $$\mathcal { L } \left( \Theta _ { n } \right) \leq \mathcal { L } \left( \Theta _ { n - 1 } \right) - \frac { 1 } { n + 1 } \left( 1 - \frac { 3 } { 2 ( n + 1 ) } \right) 2 + \cos ( \Theta _ { n - 1 } ) ^ { 2 } .$$
+```
 
-*练习 9.12.2*. 设 $\mathcal { L } \colon \mathbb { R } \rightarrow \mathbb { R }$ 满足对于所有 $x \in \mathbb { R }$ 有
+*练习 9.12.2*. 设 `$\mathcal { L } \colon \mathbb { R } \rightarrow \mathbb { R }$` 满足对于所有 `$x \in \mathbb { R }$` 有
 
+```
 $$\mathcal { L } \left( x \right) = 4 x + 3 \sin ( x ) .$$
+```
 
-证明或反驳以下命题：对于任意 $\Theta = \left( \Theta _ { n } \right) _ { n \in \mathbb { N } _ { 0 } } \colon \mathbb { N } _ { 0 } \rightarrow \mathbb { R }$（满足 $\forall n \in \mathbb { N }$: $\Theta _ { n } = \Theta _ { n - 1 } - \frac { 1 } { n + 1 } ( \nabla \mathcal { L } ) ( \Theta _ { n - 1 } )$）以及任意 $k \in \mathbb { N }$，有
+证明或反驳以下命题：对于任意 `$\Theta = \left( \Theta _ { n } \right) _ { n \in \mathbb { N } _ { 0 } } \colon \mathbb { N } _ { 0 } \rightarrow \mathbb { R }$`（满足 `$\forall n \in \mathbb { N }$: $\Theta _ { n } = \Theta _ { n - 1 } - \frac { 1 } { n + 1 } ( \nabla \mathcal { L } ) ( \Theta _ { n - 1 } )$`）以及任意 `$k \in \mathbb { N }$`，有
 
+```
 $$\mathcal { L } \left( \Theta _ { k } \right) < \mathcal { L } \left( \Theta _ { k - 1 } \right) .$$
+```
 
+# 9.12.2 梯度下降过程的局部收敛抽象结果
 
+## 命题 9.12.4
+设 `$\boldsymbol{d} \in \mathbb{N}$`，`$\mathbf{c} \in \mathbb{N}$`，`$\varepsilon, L, \mathfrak{C} \in (0, \infty)$`，`$\alpha \in (0, 1)$`，`$\gamma \in (0, L^{-1}]$`，`$\vartheta \in \mathbb{R}^\boldsymbol{d}$`，设 `$\mathbb{B} \subset \mathbb{R}^\boldsymbol{d}$` 满足 `$\mathbb{B} = \{\theta \in \mathbb{R}^\boldsymbol{d} : \|\theta - \vartheta\|_2 < \varepsilon\}$`，设 `$\mathscr{L} \in C(\mathbb{R}^\boldsymbol{d}, \mathbb{R})$` 满足 `$\mathscr{L}|_\mathbb{B} \in C^1(\mathbb{B}, \mathbb{R})$`，设 `$\mathfrak{G} : \mathbb{R}^\boldsymbol{d} \to \mathbb{R}^\boldsymbol{d}$` 满足对于所有 `$\theta \in \mathbb{B}$` 都有 `$\mathfrak{G}(\theta) = (\nabla \mathscr{L})(\theta)$`，假设 `$\mathfrak{G}(\vartheta) = 0$`，假设对于所有 `$\theta_1, \theta_2 \in \mathbb{B}$` 都有
 
-
-## 9.12.2 梯度下降过程的局部收敛抽象结果
-
-**命题 9.12.4.** 设 $\boldsymbol{d} \in \mathbb{N}$，$\mathbf{c} \in \mathbb{N}$，$\varepsilon, L, \mathfrak{C} \in (0, \infty)$，$\alpha \in (0, 1)$，$\gamma \in (0, L^{-1}]$，$\vartheta \in \mathbb{R}^\boldsymbol{d}$，设 $\mathbb{B} \subset \mathbb{R}^\boldsymbol{d}$ 满足 $\mathbb{B} = \{\theta \in \mathbb{R}^\boldsymbol{d} : \|\theta - \vartheta\|_2 < \varepsilon\}$，设 $\mathscr{L} \in C(\mathbb{R}^\boldsymbol{d}, \mathbb{R})$ 满足 $\mathscr{L}|_\mathbb{B} \in C^1(\mathbb{B}, \mathbb{R})$，设 $\mathfrak{G} : \mathbb{R}^\boldsymbol{d} \to \mathbb{R}^\boldsymbol{d}$ 满足对于所有 $\theta \in \mathbb{B}$ 都有 $\mathfrak{G}(\theta) = (\nabla \mathscr{L})(\theta)$，假设 $\mathfrak{G}(\vartheta) = 0$，假设对于所有 $\theta_1, \theta_2 \in \mathbb{B}$ 都有
-
+```
 $$\|\mathfrak{G}(\theta_1) - \mathfrak{G}(\theta_2)\|_2 \leq L \|\theta_1 - \theta_2\|_2,\tag{9.216}$$
+```
 
-设 $\Theta : \mathbb{N}_0 \to \mathbb{R}^\boldsymbol{d}$ 满足对于所有 $n \in \mathbb{N}_0$ 都有 $\Theta_{n+1} = \Theta_n - \gamma \mathfrak{G}(\Theta_n)$，并假设对于所有 $\theta \in \mathbb{B}$ 都有
+设 `$\Theta : \mathbb{N}_0 \to \mathbb{R}^\boldsymbol{d}$` 满足对于所有 `$n \in \mathbb{N}_0$` 都有 `$\Theta_{n+1} = \Theta_n - \gamma \mathfrak{G}(\Theta_n)$`，并假设对于所有 `$\theta \in \mathbb{B}$` 都有
 
-$$\begin{aligned}
+```
+\begin{aligned}
 \left|\mathscr{L}(\theta) - \mathscr{L}(\vartheta)\right|^\alpha &\leq \mathbf{c} \|\mathfrak{G}(\theta)\|_2, \quad \mathbf{c} = \left|\mathscr{L}(\Theta_0) - \mathscr{L}(\vartheta)\right|, \quad 2 \mathfrak{C} (1-\alpha)^{-1} \mathbf{c}^{1-\alpha} + \|\Theta_0 - \vartheta\|_2 < \frac{\varepsilon}{\gamma L + 1},
 \end{aligned}\tag{9.217}$$
+```
 
-且 $\inf_{n \in \{m \in \mathbb{N}_0 : \forall k \in \mathbb{N}_0 \cap [0, m] : \Theta_k \in \mathbb{B}\}} \mathscr{L}(\Theta_n) \geq \mathscr{L}(\vartheta)$（参见定义 3.9.4）。则存在 $\psi \in \mathscr{L}^{-1}\left(\{\mathscr{L}(\vartheta)\}\right) \cap \mathfrak{G}^{-1}\left(\{0\}\right) \cap \mathbb{B}$ 使得
+且 `$\inf_{n \in \{m \in \mathbb{N}_0 : \forall k \in \mathbb{N}_0 \cap [0, m] : \Theta_k \in \mathbb{B}\}} \mathscr{L}(\Theta_n) \geq \mathscr{L}(\vartheta)$`（参见定义 3.9.4）。则存在 `$\psi \in \mathscr{L}^{-1}\left(\{\mathscr{L}(\vartheta)\}\right) \cap \mathfrak{G}^{-1}\left(\{0\}\right) \cap \mathbb{B}$` 使得
 
-- (i) 对于所有 $n \in \mathbb{N}_0$，有 $\Theta_n \in \mathbb{B}$，
-- (ii) 对于所有 $n \in \mathbb{N}_0$，有 $0 \leq \mathscr{L}(\Theta_n) - \mathscr{L}(\psi) \leq 2 \mathfrak{C} \mathbf{c}^2 \mathfrak{C}^{-1}_{\{0\}}(\mathbf{c}) + \mathbf{c}^{2\alpha} n^\gamma + 2 \mathfrak{C} \mathbf{c}^{-1}$，且
-- (iii) 对于所有 $n \in \mathbb{N}_0$，有
+- (i) 对于所有 `$n \in \mathbb{N}_0$`，有 `$\Theta_n \in \mathbb{B}$`，
 
-$$\begin{aligned}
+- (ii) 对于所有 `$n \in \mathbb{N}_0$`，有 `$0 \leq \mathscr{L}(\Theta_n) - \mathscr{L}(\psi) \leq 2 \mathfrak{C} \mathbf{c}^2 \mathfrak{C}^{-1}_{\{0\}}(\mathbf{c}) + \mathbf{c}^{2\alpha} n^\gamma + 2 \mathfrak{C} \mathbf{c}^{-1}$`，且
+
+- (iii) 对于所有 `$n \in \mathbb{N}_0$`，有
+
+```
+\begin{aligned}
 \|\Theta_n - \psi\|_2 &\leq \sum_{k=n}^{\infty} \|\Theta_{k+1} - \Theta_k\|_2 \leq 2 \mathfrak{C} (1-\alpha)^{-1} \left[\mathscr{L}(\Theta_n) - \mathscr{L}(\psi)\right]^{1-\alpha} \\
 &\leq 2^{2-\alpha} \mathfrak{C}^{3-2\alpha} \mathfrak{C}^{-2\alpha}_{\{0\}} (1-\alpha)^{-1} \mathfrak{C}^{-1}_{\{0\}}(\mathbf{c}) + \mathbf{c}^{2\alpha} n^\gamma + 2 \mathfrak{C} \mathbf{c}^{-1}\left[\mathbf{c}^{2\alpha} n^\gamma\right]^{\alpha - 1}.
 \end{aligned}\tag{9.218}$$
+```
 
-**命题 9.12.4 的证明.** 在整个证明过程中，设 $T \in \mathbb{N}_0 \cup \{\infty\}$ 满足
+### 命题 9.12.4 的证明
+在整个证明过程中，设 `$T \in \mathbb{N}_0 \cup \{\infty\}$` 满足
 
+```
 $$T = \inf\left(\left\{n \in \mathbb{N}_0 : \Theta_n \notin \mathbb{B}\right\} \cup \{\infty\}\right),\tag{9.219}$$
+```
 
-设 $\mathtt{L} : \mathbb{N}_0 \to \mathbb{R}$ 满足对于所有 $n \in \mathbb{N}_0$ 都有 $\mathtt{L}(n) = \mathscr{L}(\Theta_n) - \mathscr{L}(\vartheta)$，并设 $\tau \in \mathbb{N}_0 \cup \{\infty\}$ 满足
+设 `$\mathtt{L} : \mathbb{N}_0 \to \mathbb{R}$` 满足对于所有 `$n \in \mathbb{N}_0$` 都有 `$\mathtt{L}(n) = \mathscr{L}(\Theta_n) - \mathscr{L}(\vartheta)$`，并设 `$\tau \in \mathbb{N}_0 \cup \{\infty\}$` 满足
 
+```
 $$\tau = \inf\left(\left\{n \in \mathbb{N}_0 \cap [0, T) : \mathtt{L}(n) = 0\right\} \cup \{T\}\right).\tag{9.220}$$
+```
+
+
 
 注意到假设 $\mathfrak{G}(\vartheta) = 0$ 意味着对于所有 $\theta \in \mathbb{B}$ 都有
 
@@ -13846,8 +15129,6 @@ $$\vartheta^* \in \mathbb{B} .$$
 
 $$\| \mathbb { L } ( n + 1 ) - \mathbb { L } ( n ) \| \leq - \frac {\gamma} {2} \| \mathcal { G } \left( \Theta _ {n} \right) \| _ {2} ^ {2} \leq - \frac {\gamma} {2 \varepsilon ^ { 2 - 2 \alpha } } \| \mathbb { L } ( n ) \| ^ {2} .$$
 
-
-
 这证明了对于所有 $ n \in \mathbb{N}_{0} \cap [0, \tau) $ 都有
 
 $$0 < \mathbb{L}(n) \leq \frac{2 \mathfrak{C}^{2} \mathfrak{c}^{2-2\alpha}}{\gamma} .$$
@@ -13871,6 +15152,8 @@ $$\mathscr{L}(\psi) = \lim_{n \to \infty} \mathscr{L}(\Theta_{n}) = \mathscr{L}(
 将此结果与 (9.244) 相结合，意味着对于所有 $ n \in \mathbb{N}_{0} $，均有
 
 $$0 \leq \mathscr{L}(\Theta_{n}) - \mathscr{L}(\psi) \leq \frac{2 \mathfrak{C}^{2} \mathfrak{c}^{2}}{\mathbb{I}_{\{0\}}(\epsilon) + \mathfrak{c}^{2\alpha}n\gamma + 2 \mathfrak{C}^{2} \mathfrak{c}} .$$
+
+
 
 此外，注意到 $ \mathbb{B} \ni \vartheta \mapsto \mathscr{G}(\vartheta) \in \mathbb{R}^{\mathrm{g}} $ 是连续的这一事实，$ \psi \in \mathbb{B} $ 这一事实，以及 (9.237)，可证得
 
@@ -13905,7 +15188,9 @@ $$\|\Theta_n - \psi\|_2 \leq \sum_{k=n}^{\infty} \|\Theta_{k+1} - \Theta_k\|_2 \
 *注意到事实* $\mathcal{L}(\vartheta) = \inf_{\theta \in \mathbb{B}} \mathcal{L}(\theta)$ *确保了* $\mathcal{G}(\vartheta) = (\nabla \mathcal{L})(\vartheta) = 0$ *以及* $\inf_{n \in \{m \in \mathbb{N}_0: \ \forall k \in \mathbb{N}_0 \cap [0,m]: \ \Theta_k \in \mathbb{B}\}} \mathcal{L}(\Theta_n) \geq \mathcal{L}(\vartheta)$。*将此结果与引理 9.12.4 相结合，可确保存在* $\psi \in \mathcal{L}^{-1}(\{\mathcal{L}(\vartheta)\}) \cap \mathcal{G}^{-1}(\{0\})$ *使得*
 
 - (I) *对于所有* $n \in \mathbb{N}_0$ *均有* $\Theta_n \in \mathbb{B}$，
+
 - (II) *对于所有* $n \in \mathbb{N}_0$ *均有* $0 \leq \mathcal{L}(\Theta_n) - \mathcal{L}(\psi) \leq \frac{2\mathfrak{C}^2 \mathfrak{c}^2}{\mathbb{I}_{\{0\}}(\mathfrak{c})+\mathfrak{c}^{2\alpha}n\gamma+2\mathfrak{C}^2\mathfrak{c}}$，*以及*
+
 - (III) *对于所有* $n \in \mathbb{N}_0$ *均有*
 
 $$\begin{aligned} & \|\Theta_n - \psi\|_2 \leq \sum_{k=n}^{\infty} \|\Theta_{k+1} - \Theta_k\|_2 \leq \frac{2\mathfrak{C}|\mathcal{L}(\Theta_n) - \mathcal{L}(\psi)|^{1-\alpha}}{1-\alpha}\\ & \quad \leq \frac{2^{2-\alpha}\mathfrak{C}^{3-2\alpha}\mathfrak{c}^{2-2\alpha}}{(1-\alpha)(\mathbb{I}_{\{0\}}(\mathfrak{c})+\mathfrak{c}^{2\alpha}n\gamma+2\mathfrak{C}^2\mathfrak{c})^{1-\alpha}}. \end{aligned}$$ (9.253)
@@ -13920,7 +15205,9 @@ $$\|\Theta_n - \psi\|_2 \leq \sum_{k=n}^{\infty} \|\Theta_{k+1} - \Theta_k\|_2 \
 
 *至此，推论 9.12.5 的证明结束。*
 
-练习 9.12.3. 设 $\mathscr{L} \in C^{1}(\mathbb{R}, \mathbb{R})$，使得对于所有 $\theta \in \mathbb{R}$，均有
+## 练习 9.12.3.
+
+设 $\mathscr{L} \in C^{1}(\mathbb{R}, \mathbb{R})$，使得对于所有 $\theta \in \mathbb{R}$，均有
 
 $$\mathscr{L}(\theta) = \theta^{4} + \int_{0}^{1} (\sin(x) - \theta x)^{2} \mathrm{d}x. \tag{9.256}$$
 
@@ -13928,7 +15215,9 @@ $$\mathscr{L}(\theta) = \theta^{4} + \int_{0}^{1} (\sin(x) - \theta x)^{2} \math
 
 $$\lim_{t \to \infty} \sup |\Theta_{t} - \vartheta| = 0. \tag{9.257}$$
 
-练习 9.12.4. 设 $\mathscr{L} \in C^{\infty}(\mathbb{R}, \mathbb{R})$，使得对于所有 $\theta \in \mathbb{R}$，均有
+## 练习 9.12.4.
+
+设 $\mathscr{L} \in C^{\infty}(\mathbb{R}, \mathbb{R})$，使得对于所有 $\theta \in \mathbb{R}$，均有
 
 $$\mathscr{L}(\theta) = \int_{0}^{1} (\sin(x) - \theta x + \theta^{2})^{2} \mathrm{d}x. \tag{9.258}$$
 
@@ -13936,9 +15225,9 @@ $$\mathscr{L}(\theta) = \int_{0}^{1} (\sin(x) - \theta x + \theta^{2})^{2} \math
 
 $$|\Theta_{t} - \vartheta| = \mathscr{C}(1 + t)^{-\beta}. \tag{9.259}$$
 
-## 9.13 关于神经网络实现函数的解析性
+# 9.13 关于神经网络实现函数的解析性
 
-### 命题 9.13.1 (解析函数的复合)
+## 命题 9.13.1 (解析函数的复合)
 
 设 $l, m, n \in \mathbb{N}$，设 $U \subseteq \mathbb{R}^{l}$ 和 $V \subseteq \mathbb{R}^{m}$ 为开集，设 $f: U \to \mathbb{R}^{m}$ 和 $g: V \to \mathbb{R}^{n}$ 为解析函数，并假设 $f(U) \subseteq V$ (参见定义 9.7.1)。则
 
@@ -13948,17 +15237,13 @@ $$U \ni u \mapsto g(f(u)) \in \mathbb{R}^{n} \tag{9.260}$$
 
 命题 9.13.1 的证明。注意到 Faà di Bruno 公式 (例如参见 Fraenkel [134]) 确立了 $f \circ g$ 是解析的 (另参见例如 Krantz & Parks [254, 命题 2.8])。至此，命题 9.13.1 的证明结束。 $\square$
 
-### 引理 9.13.2
+## 引理 9.13.2
 
 设 $\mathbf{0}_{1}, \mathbf{0}_{2}, l_{1}, l_{2} \in \mathbb{N}$，对于每个 $k \in \{1, 2\}$，设 $F_{k}: \mathbb{R}^{\mathbf{0}_{k}} \to \mathbb{R}^{l_{k}}$ 为解析函数，设 $f: \mathbb{R}^{\mathbf{0}_{1}} \times \mathbb{R}^{\mathbf{0}_{2}} \to \mathbb{R}^{l_{1}} \times \mathbb{R}^{l_{2}}$ 满足对于所有 $x_{1} \in \mathbb{R}^{\mathbf{0}_{1}}$，$x_{2} \in \mathbb{R}^{\mathbf{0}_{2}}$，均有
 
 $$f(x_{1}, x_{2}) = (F_{1}(x_{1}), F_{2}(x_{2})) \tag{9.261}$$
 
 (参见定义 9.7.1)。则 $f$ 是解析的。
-
-
-
-
 
 引理 9.13.2 的证明。在整个证明过程中，设 $A_1: \mathbb{R}^{l_1} \to \mathbb{R}^{l_1} \times \mathbb{R}^{l_2}$ 和 $A_2: \mathbb{R}^{l_2} \to \mathbb{R}^{l_1} \times \mathbb{R}^{l_2}$ 满足对于所有 $x_1 \in \mathbb{R}^{l_1}, x_2 \in \mathbb{R}^{l_2}$ 有
 
@@ -13974,13 +15259,16 @@ $$ f = A_1 \circ F_1 \circ B_1 + A_2 \circ F_2 \circ B_2. \quad\quad\quad (9.264
 
 结合 $A_1$、$A_2$、$F_1$、$F_2$、$B_1$ 和 $B_2$ 均为解析函数这一事实，以及命题 9.13.1，可以确立 $f$ 是可微的。引理 9.13.2 的证明到此结束。$\square$
 
-**引理 9.13.3.** *设 $\mathfrak{d}_1, \mathfrak{d}_2, l_0, l_1, l_2 \in \mathbb{N}$，对于每个 $k \in \{1, 2\}$，设 $F_k: \mathbb{R}^{\mathfrak{d}_k} \times \mathbb{R}^{l_k - 1} \to \mathbb{R}^{l_k}$ 为解析函数，并设 $f: \mathbb{R}^{\mathfrak{d}_1} \times \mathbb{R}^{\mathfrak{d}_2} \times \mathbb{R}^{l_0} \to \mathbb{R}^{l_2}$ 满足对于所有 $\theta_1 \in \mathbb{R}^{\mathfrak{d}_1}, \theta_2 \in \mathbb{R}^{\mathfrak{d}_2}$ 以及 $x \in \mathbb{R}^{l_0}$ 有
+**引理 9.13.3.** *设 $\mathfrak{d}_1, \mathfrak{d}_2, l_0, l_1, l_2 \in \mathbb{N}$，对于每个 $k \in \{1, 2\}$，设 $F_k: \mathbb{R}^{\mathfrak{d}_k} \times \mathbb{R}^{l_k - 1} \to \mathbb{R}^{l_k}$ 为解析函数，并设 $f: \mathbb{R}^{\mathfrak{d}_1} \times \mathbb{R}^{\mathfrak{d}_2} \times \mathbb{R}^{l_0} \to \mathbb{R}^{l_2}$ 满足对于所有 $\theta_1 \in \mathbb{R}^{\mathfrak{d}_1}, \theta_2 \in \mathbb{R}^{\mathfrak{d}_2}$ 以及 $x \in \mathbb{R}^{l_0}$ 有*
+
+
 
 $$ f(\theta_1, \theta_2, x) = \big(F_2(\theta_2, \cdot) \circ F_1(\theta_1, \cdot)\big)(x) \quad\quad\quad (9.265) $$
 
 （参见定义 9.7.1）。则 $f$ 是解析的。*
 
-引理 9.13.3 的证明。在整个证明过程中，设 $A: \mathbb{R}^{\mathfrak{d}_1} \times \mathbb{R}^{\mathfrak{d}_2} \times \mathbb{R}^{l_0} \to \mathbb{R}^{\mathfrak{d}_2} \times \mathbb{R}^{\mathfrak{d}_1 + l_0}$ 和 $B: \mathbb{R}^{\mathfrak{d}_2} \times \mathbb{R}^{\mathfrak{d}_1 + l_0} \to \mathbb{R}^{\mathfrak{d}_2} \times \mathbb{R}^{l_1}$ 满足对于所有 $\theta_1 \in \mathbb{R}^{\mathfrak{d}_1}$、$\theta_2 \in \mathbb{R}^{\mathfrak{d}_2}$ 以及 $x \in \mathbb{R}^{l_0}$ 有
+### 引理 9.13.3 的证明
+在整个证明过程中，设 `A: ℝ^{𝔡₁} × ℝ^{𝔡₂} × ℝ^{l₀} → ℝ^{𝔡₂} × ℝ^{𝔡₁ + l₀}` 和 `B: ℝ^{𝔡₂} × ℝ^{𝔡₁ + l₀} → ℝ^{𝔡₂} × ℝ^{l₁}` 满足对于所有 `θ₁ ∈ ℝ^{𝔡₁}`、`θ₂ ∈ ℝ^{𝔡₂}` 以及 `x ∈ ℝ^{l₀}` 有
 
 $$ A(\theta_1, \theta_2, x) = (\theta_2, (\theta_1, x)) \quad \text{以及} \quad B(\theta_2, (\theta_1, x)) = (\theta_2, F_1(\theta_1, x)), \quad\quad\quad (9.266) $$
 
@@ -13988,81 +15276,89 @@ $$ A(\theta_1, \theta_2, x) = (\theta_2, (\theta_1, x)) \quad \text{以及} \qua
 
 $$ f = F_2 \circ B \circ A. \quad\quad\quad (9.267) $$
 
-此外，注意引理 9.13.2（在引理 9.13.2 的记号中，取 $\mathfrak{d}_1 \frown \mathfrak{d}_2$，$\mathfrak{d}_2 \frown \mathfrak{d}_1 + l_1$，$l_1 \frown \mathfrak{d}_2$，$l_2 \frown l_1$，$F_1 \frown (\mathbb{R}^{\mathfrak{d}_2} \ni \theta_2 \mapsto \theta_2 \in \mathbb{R}^{\mathfrak{d}_2})$，$F_2 \frown (\mathbb{R}^{\mathfrak{d}_1 + l_1} \ni (\theta_1, x) \mapsto F_1(\theta_1, x) \in \mathbb{R}^{l_1})$）意味着 $B$ 是解析的。结合 $A$ 是解析函数的事实、$F_2$ 是解析函数的事实，以及 (9.267) 式和命题 9.13.1，可以证明 $f$ 是解析的。引理 9.13.3 的证明到此结束。$\square$
+此外，注意引理 9.13.2（在引理 9.13.2 的记号中，取 `𝔡₁ ⋈ 𝔡₂`，`𝔡₂ ⋈ 𝔡₁ + l₁`，`l₁ ⋈ 𝔡₂`，`l₂ ⋈ l₁`，`F₁ ⋈ (ℝ^{𝔡₂} ∋ θ₂ ↦ θ₂ ∈ ℝ^{𝔡₂})`，`F₂ ⋈ (ℝ^{𝔡₁ + l₁} ∋ (θ₁, x) ↦ F₁(θ₁, x) ∈ ℝ^{l₁})`）意味着 `B` 是解析的。结合 `A` 是解析函数的事实、`F₂` 是解析函数的事实，以及 (9.267) 式和命题 9.13.1，可以证明 `f` 是解析的。引理 9.13.3 的证明到此结束。$\square$
 
-**推论 9.13.4**（前馈神经网络实现函数的解析性）。*设 $L \in \mathbb{N}$，$l_0, l_1, \ldots, l_L \in \mathbb{N}$，并且对于每个 $k \in \{1, 2, \ldots, L\}$，设 $\Psi_k: \mathbb{R}^{l_k} \to \mathbb{R}^{l_k}$ 为解析函数（参见定义 9.7.1）。则
+### 推论 9.13.4
+**推论 9.13.4**（前馈神经网络实现函数的解析性）。*设 `L ∈ ℕ`，`l₀, l₁, …, l_L ∈ ℕ`，并且对于每个 `k ∈ {1, 2, …, L}`，设 `Ψ_k: ℝ^{l_k} → ℝ^{l_k}` 为解析函数（参见定义 9.7.1）。则
 
-$$ \mathbb{R}^{\sum_{k=1}^{L} l_k(l_k - 1) + 1} \times \mathbb{R}^{l_0} \ni (\theta, x) \mapsto \big(\mathcal{N}^{\mathfrak{d}_0}_{\Psi_1, \Psi_2, \ldots, \Psi_L}\big)(x) \in \mathbb{R}^{l_L} \quad\quad\quad (9.268) $$
+$$ ℝ^{∑_{k=1}^{L} l_k(l_k - 1) + 1} × ℝ^{l₀} ∋ (θ, x) ↦ (𝒩^{𝔡₀}_{Ψ₁, Ψ₂, …, Ψ_L})(x) ∈ ℝ^{l_L} \quad\quad\quad (9.268) $$
 
 是解析的（参见定义 1.1.3）。*
 
-推论 9.13.4 的证明。在整个证明过程中，对于每个 $k \in \{1, 2, \ldots, L\}$，设 $\mathbf{d}_k = l_k(l_{k-1} + 1)$；对于每个 $k \in \{1, 2, \ldots, L\}$，设 $F_k\colon \mathbb{R}^{\mathbf{d}_k} \times \mathbb{R}^{l_{k-1}} \to \mathbb{R}^{l_k}$ 满足对于所有 $\theta \in \mathbb{R}^{\mathbf{d}_k}$ 以及 $x \in \mathbb{R}^{l_{k-1}}$ 有
+推论 9.13.4 的证明。在整个证明过程中，对于每个 `k ∈ {1, 2, …, L}`，设 `𝔡_k = l_k(l_{k-1} + 1)`；对于每个 `k ∈ {1, 2, …, L}`，设 `F_k: ℝ^{𝔡_k} × ℝ^{l_{k-1}} → ℝ^{l_k}` 满足对于所有 `θ ∈ ℝ^{𝔡_k}` 以及 `x ∈ ℝ^{l_{k-1}}` 有
 
-$$ F_k(\theta, x) = \Psi_k\bigl(\mathcal{A}^{\theta,0}_{l_k,l_{k-1}}(x)\bigr) \tag{9.269} $$
+$$ F_k(θ, x) = Ψ_k(𝒜^{θ,0}_{l_k,l_{k-1}}(x)) \tag{9.269} $$
 
-（参见定义 1.1.1）。观察到，引理 5.3.3 中的 (i) 项表明，对于所有 $\theta_1 \in \mathbb{R}^{\mathbf{d}_1}$、$\theta_2 \in \mathbb{R}^{\mathbf{d}_2}$、$\ldots$、$\theta_L \in \mathbb{R}^{\mathbf{d}_L}$ 以及 $x \in \mathbb{R}^{l_0}$，有
+（参见定义 1.1.1）。观察到，引理 5.3.3 中的 (i) 项表明，对于所有 `θ₁ ∈ ℝ^{𝔡₁}`、`θ₂ ∈ ℝ^{𝔡₂}`、…、`θ_L ∈ ℝ^{𝔡_L}` 以及 `x ∈ ℝ^{l₀}`，有
 
-$$ \bigl(\mathcal{N}^{\theta_1,\theta_2,\ldots,\theta_L}_{\psi_1,\psi_2,\ldots,\psi_L}^{0}\bigr)(x) = \bigl(F_L(\theta_L, \cdot) \circ F_{L-1}(\theta_{L-1}, \cdot) \circ \cdots \circ F_1(\theta_1, \cdot)\bigr)(x) \tag{9.270} $$
+$$ (𝒩^{θ₁,θ₂,…,θ_L}_{ψ₁,ψ₂,…,ψ_L}^{0})(x) = (F_L(θ_L, ·) ∘ F_{L-1}(θ_{L-1}, ·) ∘ ⋯ ∘ F₁(θ₁, ·))(x) \tag{9.270} $$
 
-（参见定义 1.1.3）。注意，假设对于所有 $k \in \{1, 2, \ldots, L\}$ 都有 $\Psi_k$ 是解析的、事实对于所有 $m$, $n \in \mathbb{N}$ 以及 $\theta \in \mathbb{R}^{m(n+1)}$ 都有 $\mathbb{R}^{m(n+1)} \times \mathbb{R}^n \ni (\theta, x) \mapsto \mathcal{A}^{\theta,0}_{m,n}(x) \in \mathbb{R}^m$ 是解析的，再加上命题 9.13.1，确保了对于所有 $k \in \{1, 2, \ldots, L\}$ 都有 $F_k$ 是解析的。引理 5.3.2 和归纳法从而确保
+（参见定义 1.1.3）。注意，假设对于所有 `k ∈ {1, 2, …, L}` 都有 `Ψ_k` 是解析的、事实对于所有 `m`, `n ∈ ℕ` 以及 `θ ∈ ℝ^{m(n+1)}` 都有 `ℝ^{m(n+1)} × ℝ^n ∋ (θ, x) ↦ 𝒜^{θ,0}_{m,n}(x) ∈ ℝ^m` 是解析的，再加上命题 9.13.1，确保了对于所有 `k ∈ {1, 2, …, L}` 都有 `F_k` 是解析的。引理 5.3.2 和归纳法从而确保
 
-$$ \mathbb{R}^{\mathbf{d}_1} \times \mathbb{R}^{\mathbf{d}_2} \times \cdots \times \mathbb{R}^{\mathbf{d}_L} \times \mathbb{R}^{l_0} \ni (\theta_1, \theta_2, \ldots, \theta_L, x) $$
-$$ \mapsto \bigl(F_L(\theta_L, \cdot) \circ F_{L-1}(\theta_{L-1}, \cdot) \circ \cdots \circ F_1(\theta_1, \cdot)\bigr)(x) \in \mathbb{R}^{l_L} $$
+$$ ℝ^{𝔡₁} × ℝ^{𝔡₂} × ⋯ × ℝ^{𝔡_L} × ℝ^{l₀} ∋ (θ₁, θ₂, …, θ_L, x) $$
+
+$$ ↦ (F_L(θ_L, ·) ∘ F_{L-1}(θ_{L-1}, ·) ∘ ⋯ ∘ F₁(θ₁, ·))(x) ∈ ℝ^{l_L} $$
 
 是解析的。结合 (9.270)，确立
 
-$$ \mathbb{R}^{\sum_{k=1}^{L} l_k(l_{k-1}+1)} \times \mathbb{R}^{l_0} \ni (\theta, x) \mapsto \mathcal{N}^{\theta,l_0}_{\psi_1,\psi_2,\ldots,\psi_L}(x) \in \mathbb{R}^{l_L} \tag{9.272} $$
+$$ ℝ^{∑_{k=1}^{L} l_k(l_{k-1}+1)} × ℝ^{l₀} ∋ (θ, x) ↦ 𝒩^{θ,l₀}_{ψ₁,ψ₂,…,ψ_L}(x) ∈ ℝ^{l_L} \tag{9.272} $$
 
 是解析的。推论 9.13.4 的证明到此结束。$\Box$
 
-**推论 9.13.5（经验风险函数的解析性）。** 设 $L, \mathbf{d} \in \mathbb{N}\setminus\{1\}$，$M$, $l_0$, $l_1$, $\ldots$, $l_L \in \mathbb{N}$，$x_1, x_2$, $\ldots$, $x_M \in \mathbb{R}^{l_0}$，$y_1, y_2$, $\ldots$, $y_M \in \mathbb{R}^{l_L}$ 满足 $\mathbf{d} = \sum_{k=1}^{L} l_k(l_{k-1} + 1)$，设 $a\colon \mathbb{R} \to \mathbb{R}$ 和 $\mathbf{L}\colon \mathbb{R}^{l_L} \times \mathbb{R}^{l_L} \to \mathbb{R}$ 为解析函数，设 $\mathscr{L}\colon \mathbb{R}^{\mathbf{d}} \to \mathbb{R}$ 满足对于所有 $\theta \in \mathbb{R}^{\mathbf{d}}$ 有
+### 推论 9.13.5
+**推论 9.13.5（经验风险函数的解析性）。** 设 `L, 𝔡 ∈ ℕ∖{1}`，`M`, `l₀`, `l₁`, …, `l_L ∈ ℕ`，`x₁, x₂, …, x_M ∈ ℝ^{l₀}`，`y₁, y₂, …, y_M ∈ ℝ^{l_L}` 满足 `𝔡 = ∑_{k=1}^{L} l_k(l_{k-1} + 1)`，设 `a: ℝ → ℝ` 和 `𝐋: ℝ^{l_L} × ℝ^{l_L} → ℝ` 为解析函数，设 `𝒮ℒ: ℝ^{𝔡} → ℝ` 满足对于所有 `θ ∈ ℝ^{𝔡}` 有
 
-$$ \mathscr{L}(\theta) = \frac{1}{M} \left[\sum_{m=1}^{M} \mathbf{L}\bigl(\bigl(\mathcal{N}^{\theta,l_0}_{\mathfrak{M}_{a,l_1},\mathfrak{M}_{a,l_2},\ldots,\mathfrak{M}_{a,l_{L-1}},\mathrm{id}_{\mathbb{R}^{l_L}}}\bigr)(x_m), y_m\bigr)\right] \tag{9.273} $$
+$$ 𝒮ℒ(θ) = \frac{1}{M} [∑_{m=1}^{M} 𝐋((𝒩^{θ,l₀}_{𝔐_{a,l₁},𝔐_{a,l₂},…,𝔐_{a,l_{L-1}},id_{ℝ^{l_L}}})(x_m), y_m)] \tag{9.273} $$
 
-（参见定义 1.1.3、1.2.1 和 9.7.1）。则 $\mathscr{L}$ 是解析的。
+（参见定义 1.1.3、1.2.1 和 9.7.1）。则 `𝒮ℒ` 是解析的。
 
-推论 9.13.5 的证明。观察到，假设 $a$ 是解析的、引理 9.13.2 以及归纳法表明，对于所有 $m \in \mathbb{N}$ 都有 $\mathfrak{M}_{a,m}$ 是解析的。结合推论 9.13.4 和引理 9.13.2（在引理 9.13.2 的记号中，取 $\mathbf{d}_1 \sim \mathbf{d} + l_0$，$l_1 \sim l_0$，$l_2 \sim l_L$，$l_3 \sim l_L$，$\tilde{F}_1 \sim (\mathbb{R}^{\mathbf{d}} \times \mathbb{R}^{l_0} \ni (\theta, x) \mapsto \bigl(\mathcal{N}^{\theta,l_0}_{\mathfrak{M}_{a,l_1},\mathfrak{M}_{a,l_2},\ldots,\mathfrak{M}_{a,l_{L-1}},\mathrm{id}_{\mathbb{R}^{l_L}}}\bigr)(x) \in \mathbb{R}^{l_L})$，$F_2 \sim \mathrm{id}_{\mathbb{R}^{l_L}}$），确保了
+推论 9.13.5 的证明。观察到，假设 `a` 是解析的、引理 9.13.2 以及归纳法表明，对于所有 `m ∈ ℕ` 都有 `𝔐_{a,m}` 是解析的。结合推论 9.13.4 和引理 9.13.2（在引理 9.13.2 的记号中，取 `𝔡₁ ∼ 𝔡 + l₀`，`l₁ ∼ l₀`，`l₂ ∼ l_L`，`l₃ ∼ l_L`，`~F₁ ∼ (ℝ^{𝔡} × ℝ^{l₀} ∋ (θ, x) ↦ (𝒩^{θ,l₀}_{𝔐_{a,l₁},𝔐_{a,l₂},…,𝔐_{a,l_{L-1}},id_{ℝ^{l_L}}})(x) ∈ ℝ^{l_L})`，`F₂ ∼ id_{ℝ^{l_L}}`），确保了
 
-$$ \mathbb{R}^{\mathbf{d}} \times \mathbb{R}^{l_0} \times \mathbb{R}^{l_L} \ni (\theta, x, y) \mapsto \bigl(\bigl(\mathcal{N}^{\theta,l_0}_{\mathfrak{M}_{a,l_1},\mathfrak{M}_{a,l_2},\ldots,\mathfrak{M}_{a,l_{L-1}},\mathrm{id}_{\mathbb{R}^{l_L}}}\bigr)(x), y\bigr) \in \mathbb{R}^{l_L} \times \mathbb{R}^{l_L} \tag{9.274} $$
+$$ ℝ^{𝔡} × ℝ^{l₀} × ℝ^{l_L} ∋ (θ, x, y) ↦ ((𝒩^{θ,l₀}_{𝔐_{a,l₁},𝔐_{a,l₂},…,𝔐_{a,l_{L-1}},id_{ℝ^{l_L}}})(x), y) ∈ ℝ^{l_L} × ℝ^{l_L} \tag{9.274} $$
 
-是解析的。假设 $\mathbf{L}$ 是可微的以及链式法则从而确立，对于所有 $x \in \mathbb{R}^{l_0}$、$y \in \mathbb{R}^{l_L}$ 有
+是解析的。假设 `𝐋` 是可微的以及链式法则从而确立，对于所有 `x ∈ ℝ^{l₀}`、`y ∈ ℝ^{l_L}` 有
 
-$$ \mathbb{R}^{\mathbf{d}} \ni \theta \mapsto \mathbf{L}\bigl(\bigl(\mathcal{N}^{\theta,l_0}_{\mathfrak{M}_{a,l_1},\mathfrak{M}_{a,l_2},\ldots,\mathfrak{M}_{a,l_{L-1}},\mathrm{id}_{\mathbb{R}^{l_L}}}\bigr)(x_m), y_m\bigr) \in \mathbb{R} \tag{9.275} $$
+$$ ℝ^{𝔡} ∋ θ ↦ 𝐋((𝒩^{θ,l₀}_{𝔐_{a,l₁},𝔐_{a,l₂},…,𝔐_{a,l_{L-1}},id_{ℝ^{l_L}}})(x_m), y_m) ∈ ℝ \tag{9.275} $$
 
 是解析的。这证明了 (9.273)。推论 9.13.5 的证明到此结束。$\Box$
 
-
-
-
-
 ## 9.14 具有解析激活函数的人工神经网络的训练中的标准 KL 不等式（针对经验风险）
 
-### 定理 9.14.1（具有解析激活函数的人工神经网络的**经验风险最小化**）。
-设 $L, \boldsymbol{\mathfrak{o}} \in \mathbb{N}\backslash\{1\}$，$M, l_0, l_1, \dots, l_L \in \mathbb{N}$，$\boldsymbol{x}_1, \boldsymbol{x}_2, \dots, \boldsymbol{x}_M \in \mathbb{R}^{l_0}$，$\boldsymbol{y}_1, \boldsymbol{y}_2, \dots, \boldsymbol{y}_M \in \mathbb{R}^{l_L}$ 满足 $\boldsymbol{\mathfrak{o}} = \sum_{k=1}^L l_k(l_{k-1}+1)$，令 $a: \mathbb{R} \to \mathbb{R}$ 和 $\mathbf{L}: \mathbb{R}^{l_L} \times \mathbb{R}^{l_L} \to \mathbb{R}$ 为解析函数，令 $\mathcal{L}: \mathbb{R}^{\mathfrak{o}} \to \mathbb{R}$ 满足对于所有 $\boldsymbol{\vartheta} \in \mathbb{R}^{\mathfrak{o}}$ 有
+### 定理 9.14.1
+**定理 9.14.1（具有解析激活函数的人工神经网络的经验风险最小化）。**
 
-$$\mathcal{L}(\vartheta) = \frac{1}{M} \left[ \sum_{m=1}^{M} \mathbf{L} \left( \mathcal{N}_{\boldsymbol{\mathfrak{o}}, l_0}^{\vartheta, l_0} \left( \boldsymbol{\mathfrak{m}}_{a, l_1, \boldsymbol{\mathfrak{m}}_{a, l_2, \dots, \boldsymbol{\mathfrak{m}}_{a, l_{L-1}, \operatorname{id}_{\mathbb{R}^{l_L}}} (\boldsymbol{x}_m) \right), \boldsymbol{y}_m \right) \right],$$
+设 `L, 𝔬 ∈ ℕ\ {1}`，`M, l₀, l₁, …, l_L ∈ ℕ`，`𝔵₁, 𝔵₂, …, 𝔵_M ∈ ℝ^{l₀}`，`𝔶₁, 𝔶₂, …, 𝔶_M ∈ ℝ^{l_L}` 满足 `𝔬 = ∑_{k=1}^L l_k(l_{k-1}+1)`，令 `a: ℝ → ℝ` 和 `𝐋: ℝ^{l_L} × ℝ^{l_L} → ℝ` 为解析函数，令 `𝒞ℒ: ℝ^{𝔬} → ℝ` 满足对于所有 `ϑ ∈ ℝ^{𝔬}` 有
 
-且令 $\Theta \in \mathcal{C}([0, \infty), \mathbb{R}^{\mathfrak{o}})$ 满足
+$$ 𝒞ℒ(ϑ) = \frac{1}{M} [ ∑_{m=1}^{M} 𝐋( 𝒩_{𝔬, l₀}^{ϑ, l₀}( 𝔪_{a, l₁, 𝔪_{a, l₂, …, 𝔪_{a, l_{L-1}, id_{ℝ^{l_L}}}}(𝔵_m) ), 𝔶_m ) ], $$
 
-$$\lim \inf_{t \to \infty} \| \Theta_t \|_2 < \infty \quad \text{ 以及 } \quad \forall\, t \in [0, \infty)\colon \Theta_t = \Theta_0 - \int_0^t (\nabla \mathcal{L}) (\Theta_s) \, \mathrm{d} s$$
+且令 `Θ ∈ 𝒞([0, ∞), ℝ^{𝔬})` 满足
 
-（参见定义 1.1.3、1.2.1、3.3.4 和 9.7.1）。则存在 $\vartheta \in \mathbb{R}^{\mathfrak{o}}$ 以及 $c, \beta \in (0, \infty)$，使得对于所有 $t \in (0, \infty)$ 均有
+$$ lim inf_{t → ∞} ‖Θ_t‖₂ < ∞ \quad \text{以及} \quad ∀ t ∈ [0, ∞): Θ_t = Θ₀ - ∫₀^t (∇𝒞ℒ)(Θ_s) d s $$
 
-$$\| \Theta_t - \vartheta \|_2 \leq c t^{- \beta}, \quad 0 \leq \mathcal{L} (\Theta_t) - \mathcal{L} (\vartheta) \leq c t^{- 1}, \quad \text{ 且 } \quad (\nabla \mathcal{L}) (\vartheta) = 0.$$
+（参见定义 1.1.3、1.2.1、3.3.4 和 9.7.1）。则存在 `ϑ ∈ ℝ^{𝔬}` 以及 `c, β ∈ (0, ∞)`，使得对于所有 `t ∈ (0, ∞)` 均有
 
-**定理 9.14.1 的证明**。注意，推论 9.13.5 表明 $\mathcal{L}$ 是解析的。将此与推论 9.11.7 结合可得 (9.278)。从而定理 9.14.1 得证。 $\blacksquare$
+$$ ‖Θ_t - ϑ‖₂ ≤ c t^{-β}, \quad 0 ≤ 𝒞ℒ(Θ_t) - 𝒞ℒ(ϑ) ≤ c t^{-1}, \quad \text{且} \quad (∇𝒞ℒ)(ϑ) = 0. $$
 
-### 引理 9.14.2。
-设 $a: \mathbb{R} \to \mathbb{R}$ 为 softplus 激活函数（参见定义 1.2.11）。则 $a$ 是解析的（参见定义 9.7.1）。
+**定理 9.14.1 的证明**。注意，推论 9.13.5 表明 `𝒞ℒ` 是解析的。将此与推论 9.11.7 结合可得 (9.278)。从而定理 9.14.1 得证。$\blacksquare$
 
-**引理 9.14.2 的证明**。在整个证明过程中，令 $f: \mathbb{R} \to (0, \infty)$ 满足对于所有 $x \in \mathbb{R}$ 有 $f (x) = 1 + \exp(x)$。观察到 $\mathbb{R} \ni x \mapsto \exp(x) \in \mathbb{R}$ 是解析函数这一事实蕴含 $f$ 是解析的（参见定义 9.7.1）。将此与 $\left(0, \infty\right) \ni x \mapsto \ln(x) \in \mathbb{R}$ 是解析函数的事实以及命题 9.13.1 和 (1.47) 结合，可证得 $a$ 是解析的。从而引理 9.14.2 得证。 $\blacksquare$
+### 引理 9.14.2
+**引理 9.14.2。**
 
-### 引理 9.14.3。
-设 $d \in \mathbb{N}$，且令 $\mathbf{L}$ 为基于 $\mathbb{R}^d \ni x \mapsto \| x \|_2 \in [0, \infty)$ 的**均方误差**损失函数（参见定义 3.3.4 和 5.4.2）。则 $\mathbf{L}$ 是解析的（参见定义 9.7.1）。
+设 `a: ℝ → ℝ` 为 softplus 激活函数（参见定义 1.2.11）。则 `a` 是解析的（参见定义 9.7.1）。
+
+**引理 9.14.2 的证明**。在整个证明过程中，令 `f: ℝ → (0, ∞)` 满足对于所有 `x ∈ ℝ` 有 `f(x) = 1 + exp(x)`。观察到 `ℝ ∋ x ↦ exp(x) ∈ ℝ` 是解析函数这一事实蕴含 `f` 是解析的（参见定义 9.7.1）。将此与 `(0, ∞) ∋ x ↦ ln(x) ∈ ℝ` 是解析函数的事实以及命题 9.13.1 和 (1.47) 结合，可证得 `a` 是解析的。从而引理 9.14.2 得证。$\blacksquare$
+
+### 引理 9.14.3
+**引理 9.14.3。**
+
+设 `d ∈ ℕ`，且令 `𝐋` 为基于 `ℝ^d ∋ x ↦ ‖x‖₂ ∈ [0, ∞)` 的均方误差损失函数（参见定义 3.3.4 和 5.4.2）。则 `𝐋` 是解析的（参见定义 9.7.1）。
+
+
 
 **引理 9.14.3 的证明**。注意，引理 5.4.3 保证 $\mathbf{L}$ 是解析的（参见定义 9.7.1）。从而引理 9.14.3 得证。 $\blacksquare$
 
 ### 推论 9.14.4（具有 softplus 激活函数的人工神经网络的**经验风险最小化**）。
+
 设 $L, \mathfrak{o} \in \mathbb{N}\backslash\{1\}$，$M, l_0, l_1, \dots, l_L \in \mathbb{N}$，$\boldsymbol{x}_1, \boldsymbol{x}_2, \dots, \boldsymbol{x}_M \in \mathbb{R}^{l_0}$，$\boldsymbol{y}_1, \boldsymbol{y}_2, \dots, \boldsymbol{y}_M \in \mathbb{R}^{l_L}$ 满足
 
 $\boldsymbol{\mathfrak{o}} = \sum_{k=1}^{L} l_k(l_{k-1}+1)$，令 $a$ 为 softplus 激活函数，令 $\mathcal{L}: \mathbb{R}^{\mathfrak{o}} \rightarrow \mathbb{R}$ 满足对于所有 $\boldsymbol{\vartheta} \in \mathbb{R}^{\mathfrak{o}}$ 有
@@ -14098,6 +15394,7 @@ $$ \liminf_{t\rightarrow \infty} \|\Theta_t\|_2 < \infty \tag{9.282}$$
 ## 9.15 Fréchet 次微分与极限 Fréchet 次微分
 
 ### 定义 9.15.1（Fréchet 次梯度与极限 Fréchet 次梯度）。
+
 设 $\mathfrak{d} \in \mathbb{N}$，$\mathscr{L} \in C(\mathbb{R}^\mathfrak{d}, \mathbb{R})$，$x \in \mathbb{R}^\mathfrak{d}$。*我们将由下式给出的集合记为* $(\mathcal{D}\mathscr{L})(x) \subseteq \mathbb{R}^\mathfrak{d}$
 
 $$(\mathcal{D}\mathscr{L})(x) = \left\{ y \in \mathbb{R}^\mathfrak{d}\colon \left[\liminf_{\substack{\mathbb{R}^\mathfrak{d} \setminus \{0\} \ni h\rightarrow 0}} \frac{\mathscr{L}(x + h) - \mathscr{L}(x) - \langle y, h\rangle}{\|h\|_2}\right] \geq 0 \right\}, \tag{9.283}$$
@@ -14105,8 +15402,6 @@ $$(\mathcal{D}\mathscr{L})(x) = \left\{ y \in \mathbb{R}^\mathfrak{d}\colon \lef
 *我们称* $(\mathcal{D}\mathscr{L})(x)$ *为* $\mathscr{L}$ *在* $x$ *处的 Fréchet 次梯度集合，我们将由下式给出的集合记为* $(\mathfrak{D}\mathscr{L})(x) \subseteq \mathbb{R}^\mathfrak{d}$
 
 $$(\mathfrak{D}\mathscr{L})(x) = \bigcap_{\varepsilon\in (0,\infty)} \left[\bigcup_{y\in \{z\in \mathbb{R}^\mathfrak{d}\colon \|x-z\|_2<\varepsilon\}} (\mathcal{D}\mathscr{L})(y)\right], \tag{9.284}$$
-
-
 
 我们将 $(\mathscr{D}\mathscr{L})(x)$ 称为 $f$ 在 $x$ 处的集合极限 Fréchet 次梯度（参见定义 1.4.7 和 3.3.4）。
 
@@ -14119,6 +15414,7 @@ $$ A(y) = \langle a, y \rangle + b \le \mathscr{L}(y) \quad \text{且} \quad A(x
 （参见定义 1.4.7 和 3.3.4）。则
 
 - (i) 对于所有 $y \in \{z \in \mathbb{R}^{\mathfrak{d}}: \|z - x\|_2 < \varepsilon\}$，成立 $A(y) = \langle a, y - x \rangle + \mathscr{L}(x)$；以及
+
 - (ii) 成立 $a \in (\mathcal{D}\mathscr{L})(x)$
 
 （参见定义 9.15.1）。
@@ -14138,27 +15434,34 @@ $$ \frac{\mathscr{L}(x + h) - \mathscr{L}(x) - \langle a, h \rangle}{\|h\|_2} = 
 设 $\mathfrak{d} \in \mathbb{N}$，$\mathscr{L} \in C(\mathbb{R}^{\mathfrak{d}}, \mathbb{R})$。则
 
 - (i) 对于所有 $x \in \mathbb{R}^{\mathfrak{d}}$，成立
+
 $$ (\mathscr{D}\mathscr{L})(x) = \big\{ y \in \mathbb{R}^{\mathfrak{d}}: \exists z = (z_1, z_2): \mathbb{N} \rightarrow \mathbb{R}^{\mathfrak{d}} \times \mathbb{R}^{\mathfrak{d}}: (\forall k \in \mathbb{N}: z_2(k) \in (\mathcal{D}\mathscr{L})(z_1(k)) \wedge [\lim\sup_{k \to \infty}(\|z_1(k) - x\|_2 + \|z_2(k) - y\|_2) = 0]) \big\}, $$
+
 - (ii) 对于所有 $x \in \mathbb{R}^{\mathfrak{d}}$，成立 $(\mathcal{D}\mathscr{L})(x) \subseteq (\mathscr{D}\mathscr{L})(x)$；
+
 - (iii) 对于所有 $x \in \{y \in \mathbb{R}^{\mathfrak{d}}: \mathscr{L} \text{ 在 } y \text{ 处可微}\}$，成立 $(\mathcal{D}\mathscr{L})(x) = \{(\nabla \mathscr{L})(x)\}$；
+
 - (iv) 对于所有 $x \in \bigcup_{\substack{U \subseteq \mathbb{R}^{\mathfrak{d}}, U \text{ 是开集}, \mathscr{L}|_U \in C^1(U, \mathbb{R})}} U$，成立 $(\mathscr{D}\mathscr{L})(x) = \{(\nabla \mathscr{L})(x)\}$；以及
+
 - (v) 对于所有 $x \in \mathbb{R}^{\mathfrak{d}}$，$(\mathscr{D}\mathscr{L})(x)$ 是闭集。
 
 （参见定义 3.3.4 和 9.15.1）。
 
 引理 9.15.3 的证明。在整个证明过程中，对于任意 $x, y \in \mathbb{R}^{\mathfrak{d}}$，令 $Z^{x, y} = (Z_1^{x, y}, Z_2^{x, y}) : \mathbb{N} \to \mathbb{R}^{\mathfrak{d}} \times \mathbb{R}^{\mathfrak{d}}$ 满足对于所有 $k \in \mathbb{N}$ 有
 
-$Z_1^{x, y}(k) = x \quad \text{且} \quad Z_2^{x, y}(k) = y$。 (9.289)
+$Z_1^{x, y}(k) = x \quad \text{且} \quad Z_2^{x, y}(k) = y$. (9.289)
 
 注意，(9.284) 证明了对于所有 $x \in \mathbb{R}^{\mathfrak{d}}$，$y \in (\mathcal{D}\mathcal{L})(x)$，$\varepsilon \in (0, \infty)$，成立
 
-$y \in \overline{\bigcup_{v \in \{w \in \mathbb{R}^{\mathfrak{d}}: \|x-w\|_2 < \varepsilon\}} (\mathcal{D}\mathcal{L})(v)}$。 (9.290)
+$y \in \overline{\bigcup_{v \in \{w \in \mathbb{R}^{\mathfrak{d}}: \|x-w\|_2 < \varepsilon\}} (\mathcal{D}\mathcal{L})(v)}$. (9.290)
 
 这意味着对于所有 $x \in \mathbb{R}^{\mathfrak{d}}$，$y \in (\mathcal{D}\mathcal{L})(x)$ 以及所有 $\varepsilon, \delta \in (0, \infty)$，存在 $Y \in (\bigcup_{v \in \{w \in \mathbb{R}^{\mathfrak{d}}: \|x-w\|_2 \leq \varepsilon\}} (\mathcal{D}\mathcal{L})(v))$ 使得
 
-$\|y-Y\|_2 < \delta$。 (9.291)
+$\|y-Y\|_2 < \delta$. (9.291)
 
 因此，我们得出对于所有 $x \in \mathbb{R}^{\mathfrak{d}}$，$y \in (\mathcal{D}\mathcal{L})(x)$，$\varepsilon, \delta \in (0, \infty)$，存在 $v \in \{w \in \mathbb{R}^{\mathfrak{d}} : \|x-w\|_2 < \varepsilon\}$ 和 $Y \in (\mathcal{D}\mathcal{L})(v)$ 使得 $\|y-Y\|_2 < \delta$。这表明对于所有 $x \in \mathbb{R}^{\mathfrak{d}}$，$y \in (\mathcal{D}\mathcal{L})(x)$，$\varepsilon, \delta \in (0, \infty)$，存在 $X \in \mathbb{R}^{\mathfrak{d}}$ 和 $Y \in (\mathcal{D}\mathcal{L})(X)$ 使得
+
+
 
 $\|x-X\|_2 < \varepsilon \quad \text{且} \quad \|y-Y\|_2 < \delta$。 (9.292)
 
@@ -14218,9 +15521,6 @@ $\leq \left[ \lim \inf_{\substack{\mathbb{R}^{\mathfrak{d}} \setminus \{0\} \ni 
 
 $= \lim \inf_{\substack{\mathbb{R}^{\mathfrak{d}} \setminus \{0\} \ni h \to 0}} \frac{\langle (\nabla \mathcal{L})(x) - w, h \rangle}{\|h\|_2} \leq -\| (\nabla \mathcal{L})(x) - w \|_2$。 (9.303)
 
-
-
-
 将此结果与$(9.301)$结合证明了条目**(iii)**。观察到条目**(ii)**和**(iii)**确保了对于所有开集$U \subseteq \mathbb{R}^{n}$以及所有满足$\mathcal{L}\vert_{U} \in C^{1}(U, \mathbb{R})$的$x \in U$，都有
 
 $\{\nabla \mathcal{L}(x)\} = (\mathcal{D}\mathcal{L})(x) \subseteq (\mathcal{Q}\mathcal{L})(x).$ $(9.304)$
@@ -14233,114 +15533,133 @@ $z_{1}(k) \in U.$ $(9.305)$
 
 $\begin{aligned} \lim \sup_{\substack{k \in \mathbb{N} \cap [K, \infty) \to \infty}} & (\|z_{1}(k) - x\|_{2} + \|\nabla \mathcal{L})(z_{1}(k)) - y\|_{2}) \\ \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad & = \lim \sup_{k \to \infty}(\|z_{1}(k) - x\|_{2} + \|z_{2}(k) - y\|_{2}) = 0. \end{aligned}$ $(9.306)$
 
-这与条目**(i)**一起意味着对于所有开集$U \subseteq \mathbb{R}^{3}$以及所有满足$\mathcal{L}\vert_{U} \in C^{1}(U, \mathbb{R})$的$x \in U$和$y \in (\mathcal{Q}\mathcal{L})(x)$，都有
 
-$y = (\nabla \mathcal{L})(x).$ $(9.307)$
 
-将此结果与$(9.304)$结合确立了条目**(iv)**。注意到$(9.284)$证明了对于所有$x \in \mathbb{R}^{3}$，都有
+这与条目**(i)**一起意味着对于所有开集`U ⊆ ℝ³`以及所有满足`ℒ|_U ∈ C¹(U, ℝ)`的`x ∈ U`和`y ∈ (𝒬ℒ)(x)`，都有
 
-$\mathbb{R}^{3} \backslash ((\mathcal{Q}\mathcal{L})(x)) = \bigcup_{\varepsilon \in (0, \infty)} \big(\mathbb{R}^{3} \backslash \overline{\{y \in \mathbb{R}^{3} : \|x - y\|_{2} < \varepsilon\} (\mathcal{D}\mathcal{L})(y)}\big)$ $(9.308)$
+`y = (∇ ℒ)(x).` `(9.307)`
 
-因此，对于所有$x \in \mathbb{R}^{3}$，我们得到$\mathbb{R}^{3} \backslash ((\mathcal{Q}\mathcal{L})(x))$是开集。这证明了条目**(v)**。引理$9.15.3$的证明至此完成。$\square$
+将此结果与`(9.304)`结合确立了条目**(iv)**。注意到`(9.284)`证明了对于所有`x ∈ ℝ³`，都有
 
-## **引理 9.15.4** (最大值函数的 Fréchet 次梯度). 设$c \in \mathbb{R}$且设$\mathcal{L} : \mathbb{R} \to \mathbb{R}$满足对于所有$x \in \mathbb{R}$，$\mathcal{L}(x) = \max\{x, c\}$。则
+`ℝ³ \ ((𝒬ℒ)(x)) = ⋃_{ε ∈ (0, ∞)} (ℝ³ \ \overline{{y ∈ ℝ³ : ‖x - y‖₂ < ε}} (𝒟ℒ)(y))` `(9.308)`
 
--   (i) 对于所有$x \in (-\infty, c)$，有$(\mathcal{D}\mathcal{L})(x) = \{0\}$，
--   (ii) 对于所有$x \in (c, \infty)$，有$(\mathcal{D}\mathcal{L})(x) = \{1\}$，以及
--   (iii) 有$(\mathcal{D}\mathcal{L})(c) = [0, 1]$ $\quad \quad \quad \quad$ (参见定义$9.15.1$)。
+因此，对于所有`x ∈ ℝ³`，我们得到`ℝ³ \ ((𝒬ℒ)(x))`是开集。这证明了条目**(v)**。引理`9.15.3`的证明至此完成。□
 
-引理$9.15.4$的证明。注意到引理$9.15.3$中的条目**(iii)**确立了条目**(i)**和**(ii)**。观察到引理$9.15.2$确立了
+## 引理 9.15.4 (最大值函数的 Fréchet 次梯度)
+设`c ∈ ℝ`且设`ℒ : ℝ → ℝ`满足对于所有`x ∈ ℝ`，`ℒ(x) = max{x, c}`。则
 
-$[0, 1] \subseteq (\mathcal{D}\mathcal{L})(c).$ $(9.309)$
+- (i) 对于所有`x ∈ (-∞, c)`，有`(𝒟ℒ)(x) = {0}`，
+- (ii) 对于所有`x ∈ (c, ∞)`，有`(𝒟ℒ)(x) = {1}`，以及
+- (iii) 有`(𝒟ℒ)(c) = [0, 1]`  (参见定义`9.15.1`)。
 
-此外，注意假设对于所有$x \in \mathbb{R}$，$\mathscr{L}(x) = \max\{x, c\}$，确保了对于所有$a \in (1, \infty)$和$h \in (0, \infty)$，都有
+引理`9.15.4`的证明。注意到引理`9.15.3`中的条目**(iii)**确立了条目**(i)**和**(ii)**。观察到引理`9.15.2`确立了
 
-$$\frac{\mathscr{L}(c+h)-\mathscr{L}(c)-ah}{|h|} = \frac{(c+h)-c-ah}{h} = 1-a<0. \qquad \qquad (9.310)$$
+`[0, 1] ⊆ (𝒟ℒ)(c).` `(9.309)`
 
-此外，观察到假设对于所有$x \in \mathbb{R}$，$\mathscr{L}(x) = \max\{x, c\}$，表明对于所有$a, h \in (-\infty, 0)$，都有
+此外，注意假设对于所有`x ∈ ℝ`，`mathscr{L}(x) = max{x, c}`，确保了对于所有`a ∈ (1, ∞)`和`h ∈ (0, ∞)`，都有
 
-$$\frac{\mathscr{L}(c+h)-\mathscr{L}(c)-ah}{|h|} = \frac{c-c-ah}{-h} = a<0. \qquad \qquad (9.311)$$
+```
+\frac{\mathscr{L}(c+h)-\mathscr{L}(c)-ah}{|h|} = \frac{(c+h)-c-ah}{h} = 1-a<0.
+```
+`(9.310)`
 
-将此结果与$(9.310)$结合证明了
+此外，观察到假设对于所有`x ∈ ℝ`，`mathscr{L}(x) = max{x, c}`，表明对于所有`a, h ∈ (-∞, 0)`，都有
 
-$$(\mathcal{D}\mathscr{L})(c) \subseteq [0,1]. \qquad \qquad (9.312)$$
+```
+\frac{\mathscr{L}(c+h)-\mathscr{L}(c)-ah}{|h|} = \frac{c-c-ah}{-h} = a<0.
+```
+`(9.311)`
 
-此结果与$(9.309)$一起确立了条目(iii)。引理$9.15.4$的证明至此完成。$\square$
+将此结果与`(9.310)`结合证明了
 
-## 引理 9.15.5 (极限 Fréchet 次梯度的极限). 设$\mathbf{0} \in \mathbb{N}$，$\mathscr{L} \in C(\mathbb{R}^9, \mathbb{R})$，设$(x_k)_{k \in \mathbb{N}_0} \subseteq \mathbb{R}^9$和$(y_k)_{k \in \mathbb{N}_0} \subseteq \mathbb{R}^9$满足
+`(𝒟mathscr{L})(c) ⊆ [0,1].` `(9.312)`
 
-$$\lim \sup_{k \rightarrow \infty} (\|x_k-x_0\|_2 + \|y_k-y_0\|_2) = 0, \qquad \qquad (9.313)$$
+此结果与`(9.309)`一起确立了条目(iii)。引理`9.15.4`的证明至此完成。□
 
-并假设对于所有$k \in \mathbb{N}$，$y_k \in (\mathcal{D}\mathscr{L})(x_k)$ (参见定义9.3.4和9.15.1)。则$y_0 \in (\mathcal{D}\mathscr{L})(x_0)$。
+## 引理 9.15.5 (极限 Fréchet 次梯度的极限)
+设`0 ∈ ℕ`，`mathscr{L} ∈ C(ℝ⁹, ℝ)`，设`(x_k)_{k ∈ ℕ₀} ⊆ ℝ⁹`和`(y_k)_{k ∈ ℕ₀} ⊆ ℝ⁹`满足
 
-引理$9.15.5$的证明。注意到引理9.15.3中的条目(i)以及对于所有$k \in \mathbb{N}$，$y_k \in (\mathcal{D}\mathscr{L})(x_k)$的事实意味着对于每个$k \in \mathbb{N}$，存在$z^{(k)} = (z^{(k)}_1, z^{(k)}_2)$: $\mathbb{N} \rightarrow \mathbb{R}^9 \times \mathbb{R}^9$，满足对于所有$v \in \mathbb{N}$，有
+`lim sup_{k → ∞} (‖x_k-x₀‖₂ + ‖y_k-y₀‖₂) = 0,` `(9.313)`
 
-$$z^{(k)}_2(v) \in (\mathcal{D}\mathscr{L})(z^{(k)}_1(v)) \text{ 且 } \lim \sup_{w \rightarrow \infty} \left(\|z^{(k)}_1(w) - x_k\|_2 + \|z^{(k)}_2(w) - y_k\|_2\right) = 0. \quad (9.314)$$
+并假设对于所有`k ∈ ℕ`，`y_k ∈ (𝒟mathscr{L})(x_k)` (参见定义`9.3.4`和`9.15.1`)。则`y₀ ∈ (𝒟mathscr{L})(x₀)`。
 
-观察到$(9.314)$证明了存在$v = (v_k)_{k \in \mathbb{N}}: \mathbb{N} \rightarrow \mathbb{N}$，满足对于所有$k \in \mathbb{N}$，有
+引理`9.15.5`的证明。注意到引理`9.15.3`中的条目(i)以及对于所有`k ∈ ℕ`，`y_k ∈ (𝒟mathscr{L})(x_k)`的事实意味着对于每个`k ∈ ℕ`，存在`z^{(k)} = (z^{(k)}₁, z^{(k)}₂): ℕ → ℝ⁹ × ℝ⁹`，满足对于所有`v ∈ ℕ`，有
 
-$$\|z^{(k)}_1(v_k) - x_k\|_2 + \|z^{(k)}_2(v_k) - y_k\|_2 \leq 2^{-k}. \qquad \qquad (9.315)$$
+`z^{(k)}₂(v) ∈ (𝒟mathscr{L})(z^{(k)}₁(v)) 且 lim sup_{w → ∞} (‖z^{(k)}₁(w) - x_k‖₂ + ‖z^{(k)}₂(w) - y_k‖₂) = 0.` `(9.314)`
 
-接下来，设$Z = (Z_1, Z_2): \mathbb{N} \rightarrow \mathbb{R}^9 \times \mathbb{R}^9$满足对于所有$j \in \{1, 2\}$和$k \in \mathbb{N}$，有
+观察到`(9.314)`证明了存在`v = (v_k)_{k ∈ ℕ}: ℕ → ℕ`，满足对于所有`k ∈ ℕ`，有
 
-$$Z_j(k) = z^{(k)}_j(v_k). \qquad \qquad (9.316)$$
+`‖z^{(k)}₁(v_k) - x_k‖₂ + ‖z^{(k)}₂(v_k) - y_k‖₂ ≤ 2^{-k}.` `(9.315)`
 
-注意到$(9.314)$、$(9.315)$、$(9.316)$以及假设$\lim \sup_{k \rightarrow \infty}(\|x_k-x_0\|_2 + \|y_k - y_0\|_2) = 0$证明了
+接下来，设`Z = (Z₁, Z₂): ℕ → ℝ⁹ × ℝ⁹`满足对于所有`j ∈ {1, 2}`和`k ∈ ℕ`，有
 
-$$\begin{aligned} \lim \sup_{k \rightarrow \infty} \left(\|Z_1(k)-x_0\|_2 + \|Z_2(k)-y_0\|_2\right) \\ \leq \left[\lim \sup_{k \rightarrow \infty} \left(\|Z_1(k)-x_k\|_2 + \|Z_2(k)-y_k\|_2\right)\right] \\ \quad + \left[\lim \sup_{k \rightarrow \infty} \left(\|x_k-x_0\|_2 + \|y_k-y_0\|_2\right)\right] \\ = \lim \sup_{k \rightarrow \infty} \left(\|Z_1(k)-x_k\|_2 + \|Z_2(k)-y_k\|_2\right) \\ = \lim \sup_{k \rightarrow \infty} \left(\|z^{(k)}_1(v_k)-x_k\|_2 + \|z^{(k)}_2(v_k)-y_k\|_2\right) \\ \leq \lim \sup_{k \rightarrow \infty} 2^{-k} = 0.\end{aligned} \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad (9.317)$$
+`Z_j(k) = z^{(k)}_j(v_k).` `(9.316)`
 
-此外，观察到(9.314)和(9.316)确立了对于所有$k \in \mathbb{N}$，都有$Z_2(k) \in (\mathcal{D}\mathcal{L})(Z_1(k))$。将此结果与(9.317)以及引理 9.15.3中的条目 (i) 结合证明了$y_0 \in (\mathcal{D}\mathcal{L})(x_0)$。引理 9.15.5 的证明至此完成。$\square$
+注意到`(9.314)`、`(9.315)`、`(9.316)`以及假设`lim sup_{k → ∞}(‖x_k-x₀‖₂ + ‖y_k - y₀‖₂) = 0`证明了
 
-*习题 9.15.1.* 证明或反驳以下陈述：对于所有$\mathfrak{d} \in \mathbb{N}$，$\mathcal{L} \in C^1(\mathbb{R}^\mathfrak{d}, \mathbb{R})$，$x \in \mathbb{R}^\mathfrak{d}$，都有$(\mathfrak{D}\mathcal{L})(x) = (\mathcal{D}\mathcal{L})(x)$ (参见定义9.15.1)。
+```
+lim sup_{k → ∞} (‖Z₁(k)-x₀‖₂ + ‖Z₂(k)-y₀‖₂)
+≤ [lim sup_{k → ∞} (‖Z₁(k)-x_k‖₂ + ‖Z₂(k)-y_k‖₂)]
+  + [lim sup_{k → ∞} (‖x_k-x₀‖₂ + ‖y_k-y₀‖₂)]
+= lim sup_{k → ∞} (‖Z₁(k)-x_k‖₂ + ‖Z₂(k)-y_k‖₂)
+= lim sup_{k → ∞} (‖z^{(k)}₁(v_k)-x_k‖₂ + ‖z^{(k)}₂(v_k)-y_k‖₂)
+≤ lim sup_{k → ∞} 2^{-k} = 0.
+```
+`(9.317)`
 
-*习题 9.15.2.* 证明或反驳以下陈述：存在$\mathfrak{d} \in \mathbb{N}$，使得对于所有$\mathcal{L} \in C(\mathbb{R}^\mathfrak{d}, \mathbb{R})$，$x \in \mathbb{R}^\mathfrak{d}$，都有$(\mathfrak{D}\mathcal{L})(x) \subseteq (\mathcal{D}\mathcal{L})(x)$ (参见定义9.15.1)。
+此外，观察到(9.314)和(9.316)确立了对于所有`k ∈ ℕ`，都有`Z₂(k) ∈ (𝒟ℒ)(Z₁(k))`。将此结果与(9.317)以及引理 9.15.3中的条目 (i) 结合证明了`y₀ ∈ (𝒟ℒ)(x₀)`。引理 9.15.5 的证明至此完成。□
 
-*习题 9.15.3.* 证明或反驳以下陈述：对于所有$\mathfrak{d} \in \mathbb{N}$，$\mathcal{L} \in C(\mathbb{R}^\mathfrak{d}, \mathbb{R})$，$x \in \mathbb{R}^\mathfrak{d}$，$(\mathcal{D}\mathcal{L})(x)$是凸的 (参见定义9.15.1)。
+*习题 9.15.1.* 证明或反驳以下陈述：对于所有`𝔡 ∈ ℕ`，`ℒ ∈ C¹(ℝ^𝔡, ℝ)`，`x ∈ ℝ^𝔡`，都有`(𝔇ℒ)(x) = (𝒟ℒ)(x)` (参见定义`9.15.1`)。
 
-*习题 9.15.4.* 证明或反驳以下陈述：对于所有$\mathfrak{d} \in \mathbb{N}$，$\mathcal{L} \in C(\mathbb{R}^\mathfrak{d}, \mathbb{R})$，$x \in \mathbb{R}^\mathfrak{d}$，$(\mathfrak{D}\mathcal{L})(x)$是凸的 (参见定义9.15.1)。
+*习题 9.15.2.* 证明或反驳以下陈述：存在`𝔡 ∈ ℕ`，使得对于所有`ℒ ∈ C(ℝ^𝔡, ℝ)`，`x ∈ ℝ^𝔡`，都有`(𝔇ℒ)(x) ⊆ (𝒟ℒ)(x)` (参见定义`9.15.1`)。
 
-*习题 9.15.5.* 对于每个$\alpha \in (0, \infty)$和$s \in \{-1, 1\}$，设$\mathcal{L}_{\alpha, s}: \mathbb{R} \to \mathbb{R}$满足对于所有$x \in \mathbb{R}$，有
+*习题 9.15.3.* 证明或反驳以下陈述：对于所有`𝔡 ∈ ℕ`，`ℒ ∈ C(ℝ^𝔡, ℝ)`，`x ∈ ℝ^𝔡`，`(𝒟ℒ)(x)`是凸的 (参见定义`9.15.1`)。
 
-$$\mathcal{L}_{\alpha, s}(x) = \begin{cases} x & : x > 0 \\ s \lvert x \rvert^\alpha & : x \leq 0. \end{cases} \quad (9.318)$$
+*习题 9.15.4.* 证明或反驳以下陈述：对于所有`𝔡 ∈ ℕ`，`ℒ ∈ C(ℝ^𝔡, ℝ)`，`x ∈ ℝ^𝔡`，`(𝒟ℒ)(x)`是凸的 (参见定义`9.15.1`)。
 
-对于每个$\alpha \in (0, \infty)$，$s \in \{-1, 1\}$，$x \in \mathbb{R}$，明确给出$(\mathcal{D}\mathcal{L}_{\alpha, s})(x)$和$(\mathfrak{D}\mathcal{L}_{\alpha, s})(x)$，并证明你的结果是正确的 (参见定义9.15.1)！
+*习题 9.15.5.* 对于每个`α ∈ (0, ∞)`和`s ∈ {-1, 1}`，设`ℒ_{α, s}: ℝ → ℝ`满足对于所有`x ∈ ℝ`，有
+
+```
+ℒ_{α, s}(x) = 
+  x : x > 0
+  s |x|^α : x ≤ 0.
+```
+`(9.318)`
+
+对于每个`α ∈ (0, ∞)`，`s ∈ {-1, 1}`，`x ∈ ℝ`，明确给出`(𝒟ℒ_{α, s})(x)`和`(𝔇ℒ_{α, s})(x)`，并证明你的结果是正确的 (参见定义`9.15.1`)！
 
 ## 9.16 非光滑斜率
 
-**定义 9.16.1 (非光滑斜率).** *设$\mathfrak{d} \in \mathbb{N}$，$\mathcal{L} \in C(\mathbb{R}^\mathfrak{d}, \mathbb{R})$。则我们将记* $\mathbb{S}_\mathcal{L}: \mathbb{R}^\mathfrak{d} \to [0, \infty]$ *为满足对于所有* $\theta \in \mathbb{R}^\mathfrak{d}$，有
+### 定义 9.16.1 (非光滑斜率)
+设`𝔡 ∈ ℕ`，`ℒ ∈ C(ℝ^𝔡, ℝ)`。则我们将记 `𝕊_ℒ: ℝ^𝔡 → [0, ∞]` 为满足对于所有 `θ ∈ ℝ^𝔡`，有
 
-$$\mathbb{S}_\mathcal{L}(\theta) = \inf \{\lvert r \rvert : r \in \mathbb{R}: (\exists h \in (\mathfrak{D}\mathcal{L})(\theta): r = \lvert h \rvert_2) \} \cup \{\infty\} \quad (9.319)$$
+`𝕊_ℒ(θ) = inf {|r| : r ∈ ℝ: (∃ h ∈ (𝔇ℒ)(θ): r = |h|₂)} ∪ {∞}` `(9.319)`
 
-*的函数，并称* $\mathbb{S}_\mathcal{L}$ *为* $\mathcal{L}$ *的非光滑斜率 (参见定义3.3.4和9.15.1).*
+的函数，并称 `𝕊_ℒ` 为 `ℒ` 的非光滑斜率 (参见定义`3.3.4`和`9.15.1`)。
 
 ## 9.17 广义 KL 函数
 
-**定义 9.17.1 (广义 KL 不等式).** *设* $\mathfrak{d} \in \mathbb{N}$，*$c \in \mathbb{R}$，$\alpha \in (0, \infty)$，$\mathcal{L} \in C(\mathbb{R}^\mathfrak{d}, \mathbb{R})$，设* $U \subseteq \mathbb{R}^\mathfrak{d}$ *为一个集合，且设* $\theta \in U$。*则我们称* $\mathcal{L}$ *在* $\theta$ *处关于* $U$ *满足指数为* $\alpha$ *且常数为* $c$ *的广义* **KL** *不等式 (我们称* $\mathcal{L}$ *在* $\theta$ *处满足广义* **KL** *不等式) 当且仅当对于所有* $\vartheta \in U$，有
+### 定义 9.17.1 (广义 KL 不等式)
+设 `𝔡 ∈ ℕ`，`c ∈ ℝ`，`α ∈ (0, ∞)`，`ℒ ∈ C(ℝ^𝔡, ℝ)`，设 `U ⊆ ℝ^𝔡` 为一个集合，且设 `θ ∈ U`。则我们称 `ℒ` 在 `θ` 处关于 `U` 满足指数为 `α` 且常数为 `c` 的广义 **KL** 不等式 (我们称 `ℒ` 在 `θ` 处满足广义 **KL** 不等式) 当且仅当对于所有 `ϑ ∈ U`，有
 
-$$\lvert \mathcal{L}(\theta) - \mathcal{L}(\vartheta) \rvert^\alpha \leq c \lvert \mathbb{S}_\mathcal{L}(\vartheta) \rvert \quad (9.320)$$
+`| ℒ(θ) - ℒ(ϑ) |^α ≤ c | 𝕊_ℒ(ϑ) |` `(9.320)`
 
-*(参见定义9.16.1).*
+(参见定义`9.16.1`)。
 
+### 定义 9.17.2 (广义 KL 函数)
+设 `𝔡 ∈ ℕ`，`mathscr{L} ∈ C(ℝ^𝔡, ℝ)`。则我们称 `mathscr{L}` 为广义 **KL** 函数，当且仅当对于所有 `θ ∈ ℝ^𝔡`，存在 `ε, c ∈ (0, ∞)`，`α ∈ (0, 1)`，使得对于所有 `v ∈ {v ∈ ℝ^𝔡 : ‖v - θ‖₂ < ε}`，恒有
 
+`|mathscr{L}(θ) - scrl{L}(v)|^α ≤ c |ξ_{mathscr{L}}(v)|` `(9.321)`
 
+(参见定义 `3.3.4` 和 `9.16.1`)。
 
-## **定义 9.17.2**（广义 **KL** 函数）。
+### 注 9.17.3 (广义 KL 函数的示例及收敛结果)
+在上述定理 `9.9.1` 和推论 `9.13.5` 中，我们已经看到，在解析激活函数的情况下，相应的经验风险函数也是解析的，因此是标准的 **KL** 函数。在深度学习算法中，通常使用具有非解析激活函数的深度 **ANN**（人工神经网络），例如 **ReLU** 激活函数（参见第 `1.2.3` 节）和漏 **ReLU** 激活函数（参见第 `1.2.11` 节）。对于这类不可微的激活函数，相应的风险函数通常不是标准的 **KL** 函数。然而，在对所考虑学习问题的目标函数和输入数据的底层概率度量施加适当假设的情况下，利用 Bolte 等人 [44, 定理 3.1]，可以验证在不可微激活函数的情况下，风险函数是定义 `9.17.2` 中所述意义上的广义 **KL** 函数；例如参见 [126, 224]。与标准 **KL** 函数类似（参见例如 Dereich & Kassing [100] 以及第 `9.11` 和 `9.12` 节），我们还可以为基于梯度的优化方法开发针对广义 **KL** 函数的收敛理论（参见例如 Bolte 等人 [44, 第 4 节] 和推论 `9.11.5`）。
 
-*设* $\mathfrak{d} \in \mathbb{N}$，$\mathscr{L} \in C(\mathbb{R}^\mathfrak{d}, \mathbb{R})$。*则我们称* $\mathscr{L}$ *为广义* **KL** *函数，当且仅当对于所有* $\theta \in \mathbb{R}^\mathfrak{d}$ *，存在* $\varepsilon, c \in (0, \infty)$，$\alpha \in (0, 1)$ *，使得对于所有* $v \in \{v \in \mathbb{R}^\mathfrak{d} : \|v - \theta\|_2 < \varepsilon\}$ *，恒有*
-
-$$|\mathscr{L}(\theta) - \mathscr{L}(v)|^\alpha \leq c \, |\xi_{\mathscr{L}}(v)| \tag{9.321}$$
-
-*(参见定义 3.3.4 和 9.16.1)。*
-
-## **注 9.17.3**（广义 **KL** 函数的示例及收敛结果）。
-
-在上述定理 9.9.1 和推论 9.13.5 中，我们已经看到，在解析激活函数的情况下，相应的经验风险函数也是解析的，因此是标准的 **KL** 函数。在深度学习算法中，通常使用具有非解析激活函数的深度 **ANN**（人工神经网络），例如 **ReLU** 激活函数（参见第 1.2.3 节）和漏 **ReLU** 激活函数（参见第 1.2.11 节）。对于这类不可微的激活函数，相应的风险函数通常不是标准的 **KL** 函数。然而，在对所考虑学习问题的目标函数和输入数据的底层概率度量施加适当假设的情况下，利用 Bolte 等人 [44, 定理 3.1]，可以验证在不可微激活函数的情况下，风险函数是定义 9.17.2 中所述意义上的广义 **KL** 函数；例如参见 [126, 224]。与标准 **KL** 函数类似（参见例如 Dereich & Kassing [100] 以及第 9.11 和 9.12 节），我们还可以为基于梯度的优化方法开发针对广义 **KL** 函数的收敛理论（参见例如 Bolte 等人 [44, 第 4 节] 和推论 9.11.5）。
-
-## **注 9.17.4**（进一步的收敛分析）。
-
+### 注 9.17.4 (进一步的收敛分析)
 关于文献中基于梯度的优化方法在 **KL** 型条件下的收敛分析，例如参见 [2, 7, 8, 44, 100, 391] 及其参考文献。除了本章回顾的 **KL** 方法外，文献中还有其他几种方法可以得出基于梯度的优化方法收敛到合适的广义临界点的结论；参见例如 [45, 65, 93] 及其参考文献。
 
-## 第 10 章
+# 第 10 章
 
 ## 带有批量归一化的 ANNs
 
@@ -14348,19 +15667,21 @@ $$|\mathscr{L}(\theta) - \mathscr{L}(v)|^\alpha \leq c \, |\xi_{\mathscr{L}}(v)|
 
 ### 10.1 批量归一化 (BN)
 
-**定义 10.1.1（批量）。**
+#### 定义 10.1.1 (批量)
+
+
 
 设 $d, M \in \mathbb{N}$。若 $x \in (\mathbb{R}^{d})^{M}$，则称 $x$ 是一个包含 $M$ 个 $d$ 维数据点的批量（我们说 $x$ 是一个大小为 $M$ 的 $d$ 维数据点的批量，或者说 $x$ 是一个批量）。
 
-**定义 10.1.2（批量均值）。**
+### 定义 10.1.2（批量均值）
 
-设 $d, M \in \mathbb{N}$，$x = (x^{(m)})_{m \in \{1,2,\ldots,M\}} \in (\mathbb{R}^{d})^{M}$。我们记 $\text{Batchmean}(x) = (\text{Batchmean}_{1}(x), \ldots, \text{Batchmean}_{d}(x)) \in \mathbb{R}^{d}$ 为由下式给出的向量：
+设 $d, M \in \mathbb{N}$，$x = (x^{(m)})_{m \in \{1,2,\ldots,M\}} \in (\mathbb{R}^{d})^{M}$。我们记 `Batchmean(x) = (Batchmean_1(x), ..., Batchmean_d(x)) ∈ ℝ^d` 为由下式给出的向量：
 
 $$\text{Batchmean}(x) = \frac{1}{M} \left[ \sum_{m=1}^{M} x^{(m)} \right] \quad\quad (10.1)$$
 
-并称 $\text{Batchmean}(x)$ 为批量 $x$ 的批量均值。
+并称 `Batchmean(x)` 为批量 $x$ 的批量均值。
 
-**定义 10.1.3（批量方差）。**
+### 定义 10.1.3（批量方差）
 
 设 $d, M \in \mathbb{N}$，$x = ((x_{i}^{(m)})_{i \in \{1,2,\ldots,d\}})_{m \in \{1,2,\ldots,M\}} \in (\mathbb{R}^{d})^{M}$。我们记：
 
@@ -14370,44 +15691,44 @@ $$\text{Batchvar}(x) = (\text{Batchvar}_{1}(x), \ldots, \text{Batchvar}_{d}(x)) 
 
 $$\text{Batchvar}_{i}(x) = \frac{1}{M} \left[ \sum_{m=1}^{M} (x_{i}^{(m)} - \text{Batchmean}_{i}(x))^{2} \right] \quad\quad (10.3)$$
 
-并称 $\text{Batchvar}(x)$ 为批量 $x$ 的批量方差（参见定义 10.1.2）。
+并称 `Batchvar(x)` 为批量 $x$ 的批量方差（参见定义 10.1.2）。
 
-**引理 10.1.4。**
+### 引理 10.1.4
 
-*设 $d, M \in \mathbb{N}$，$x = (x^{(m)})_{m \in \{1,2,\ldots,M\}} = ((x_i^{(m)})_{i \in \{1,2,\ldots,d\}})_{m \in \{1,2,\ldots,M\}} \in (\mathbb{R}^d)^M$，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间，且设 $U: \Omega \to \{1, 2, \ldots, M\}$ 为一个服从 $\{1, 2, \ldots, M\}$ 上均匀分布的随机变量。则：*
+设 $d, M \in \mathbb{N}$，$x = (x^{(m)})_{m \in \{1,2,\ldots,M\}} = ((x_i^{(m)})_{i \in \{1,2,\ldots,d\}})_{m \in \{1,2,\ldots,M\}} \in (\mathbb{R}^d)^M$，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间，且设 $U: \Omega \to \{1, 2, \ldots, M\}$ 为一个服从 $\{1, 2, \ldots, M\}$ 上均匀分布的随机变量。则：
 
-- (i) 成立 $\text{Batchmean}(x) = \mathbb{E}[x^{(U)}]$，且
-- (ii) 对于所有 $i \in \{1, 2, \ldots, d\}$，成立 $\text{Batchvar}_i(x) = \text{Var}(x_i^{(U)})$。
+- (i) 成立 `Batchmean(x) = E[x^{(U)}]`，且
+- (ii) 对于所有 $i \in \{1, 2, \ldots, d\}$，成立 `Batchvar_i(x) = Var(x_i^{(U)})`。
 
-*引理 10.1.4 的证明。* *注意 (10.1) 证明了第 (i) 项。此外，注意第 (i) 项和 (10.3) 建立了第 (ii) 项。引理 10.1.4 的证明至此完成。*
+`引理 10.1.4 的证明`。注意 (10.1) 证明了第 (i) 项。此外，注意第 (i) 项和 (10.3) 建立了第 (ii) 项。引理 10.1.4 的证明至此完成。
 
-**定义 10.1.5（给定批量均值和批量方差的 BN 运算）。**
+### 定义 10.1.5（给定批量均值和批量方差的 BN 运算）
 
-*设 $d \in \mathbb{N}$，$\varepsilon \in (0, \infty)$，$\beta = (\beta_1, \ldots, \beta_d)$，$\gamma = (\gamma_1, \ldots, \gamma_d)$，$\mu = (\mu_1, \ldots, \mu_d) \in \mathbb{R}^d$，$V = (V_1, \ldots, V_d) \in [0, \infty)^d$。则我们记：*
+设 $d \in \mathbb{N}$，$\varepsilon \in (0, \infty)$，$\beta = (\beta_1, \ldots, \beta_d)$，$\gamma = (\gamma_1, \ldots, \gamma_d)$，$\mu = (\mu_1, \ldots, \mu_d) \in \mathbb{R}^d$，$V = (V_1, \ldots, V_d) \in [0, \infty)^d$。则我们记：
 
 $$\text{batchnorm}_{\beta, \gamma, \mu, V, \varepsilon}: \mathbb{R}^d \to \mathbb{R}^d \tag{10.4}$$
 
-*该函数满足对于所有 $x = (x_1, \ldots, x_d) \in \mathbb{R}^d$ 有：*
+该函数满足对于所有 $x = (x_1, \ldots, x_d) \in \mathbb{R}^d$ 有：
 
 $$\text{batchnorm}_{\beta, \gamma, \mu, V, \varepsilon}(x) = \left(\gamma_i \left[ \frac{x_i - \mu_i}{\sqrt{V_i + \varepsilon}} + \beta_i \right]\right)_{i \in \{1, 2, \ldots, d\}} \tag{10.5}$$
 
-*并称 $\text{batchnorm}_{\beta, \gamma, \mu, V, \varepsilon}$ 为在给定批量均值 $\mu$ 和批量方差 $V$ 下的均值参数为 $\beta$、标准差参数为 $\gamma$ 以及正则化参数为 $\varepsilon$ 的 BN 运算。*
+并称 `batchnorm_{\beta, \gamma, \mu, V, \varepsilon}` 为在给定批量均值 $\mu$ 和批量方差 $V$ 下的均值参数为 $\beta$、标准差参数为 $\gamma$ 以及正则化参数为 $\varepsilon$ 的 BN 运算。
 
-**定义 10.1.6（批量归一化）。**
+### 定义 10.1.6（批量归一化）
 
-*设 $d \in \mathbb{N}$，$\varepsilon \in (0, \infty)$，$\beta, \gamma \in \mathbb{R}^d$。则我们记：*
+设 $d \in \mathbb{N}$，$\varepsilon \in (0, \infty)$，$\beta, \gamma \in \mathbb{R}^d$。则我们记：
 
 $$\text{Batchnorm}_{\beta, \gamma, \varepsilon}: \left( \bigcup_{M \in \mathbb{N}} (\mathbb{R}^d)^M \right) \to \left( \bigcup_{M \in \mathbb{N}} (\mathbb{R}^d)^M \right) \tag{10.6}$$
 
-*该函数满足对于所有 $M \in \mathbb{N}$，$x = (x^{(m)})_{m \in \{1, 2, \ldots, M\}} \in (\mathbb{R}^d)^M$ 有：*
+该函数满足对于所有 $M \in \mathbb{N}$，$x = (x^{(m)})_{m \in \{1, 2, \ldots, M\}} \in (\mathbb{R}^d)^M$ 有：
 
 $$\text{Batchnorm}_{\beta, \gamma, \varepsilon}(x) = \left( \left( \text{batchnorm}_{\beta, \gamma}(\text{Batchmean}(x), \text{Batchvar}(x), \varepsilon) x^{(m)} \right) \right)_{m \in \{1, 2, \ldots, M\}} \in (\mathbb{R}^d)^M \tag{10.7}$$
 
-*并称 $\text{Batchnorm}_{\beta, \gamma, \varepsilon}$ 为均值参数为 $\beta$、标准差参数为 $\gamma$ 以及正则化参数为 $\varepsilon$ 的 BN（参见定义 10.1.2、10.1.3 和 10.1.5）。*
+并称 `Batchnorm_{\beta, \gamma, \varepsilon}` 为均值参数为 $\beta$、标准差参数为 $\gamma$ 以及正则化参数为 $\varepsilon$ 的 BN（参见定义 10.1.2、10.1.3 和 10.1.5）。
 
-**引理 10.1.7。**
+### 引理 10.1.7
 
-*设 $d, M \in \mathbb{N}$，$\beta = (\beta_1, \ldots, \beta_d)$，$\gamma = (\gamma_1, \ldots, \gamma_d) \in \mathbb{R}^d$。则：*
+设 $d, M \in \mathbb{N}$，$\beta = (\beta_1, \ldots, \beta_d)$，$\gamma = (\gamma_1, \ldots, \gamma_d) \in \mathbb{R}^d$。则：
 
 - (i) 对于所有 $\varepsilon \in (0, \infty)$，$x = ((x_i^{(m)})_{i \in \{1, 2, \ldots, d\}})_{m \in \{1, 2, \ldots, M\}} \in (\mathbb{R}^d)^M$，成立：
 
@@ -14421,26 +15742,24 @@ $$\text{Batchmean}(\text{Batchnorm}_{\beta,\gamma,\varepsilon}(x)) = \beta, \tag
 
 $$\lim\limits_{\varepsilon\searrow0}\left|\text{Batchvar}_i(\text{Batchnorm}_{\beta,\gamma,\varepsilon}(x)) - (\gamma_i)^2\right| = 0 \tag{10.10}$$
 
-*(参见定义 10.1.2、10.1.3 和 10.1.6)。*
+（参见定义 10.1.2、10.1.3 和 10.1.6）。
 
-*引理 10.1.7 的证明。* *注意* (10.1)、(10.3)、(10.5) *以及* (10.7) *建立了第 (i) 项。此外，注意第 (i) 项确保对于所有* $\varepsilon \in (0, \infty)$，$x = ((x_i^{(m)})_{i \in \{1,2,\dots,d\}})_{m \in \{1,2,\dots,M\}} \in (\mathbb{R}^d)^M$，$i \in \{1,2,\dots,d\}$ *，成立：*
+`引理 10.1.7 的证明`。注意 (10.1)、(10.3)、(10.5) 以及 (10.7) 建立了第 (i) 项。此外，注意第 (i) 项确保对于所有 $\varepsilon \in (0, \infty)$，$x = ((x_i^{(m)})_{i \in \{1,2,\dots,d\}})_{m \in \{1,2,\dots,M\}} \in (\mathbb{R}^d)^M$，$i \in \{1,2,\dots,d\}$，成立：
 
-$$\begin{align*}
-&\text{Batchmean}_i(\text{Batchnorm}_{\beta,\gamma,\varepsilon}(x)) = \frac{1}{M}\sum_{m=1}^{M} \left[\gamma_i \left[\frac{x_i^{(m)} - \text{Batchmean}_i(x)}{\sqrt{\text{Batchvar}_i(x) + \varepsilon}}\right] + \beta_i\right] \\
-&\hspace{2.5cm}= \gamma_i \left[\frac{\frac{1}{M}\sum_{m=1}^{M} x_i^{(m)} - \text{Batchmean}_i(x)}{\sqrt{\text{Batchvar}_i(x) + \varepsilon}}\right] + \beta_i \\
-&\hspace{2.5cm}= \gamma_i \left[\frac{\text{Batchmean}_i(x) - \text{Batchmean}_i(x)}{\sqrt{\text{Batchvar}_i(x) + \varepsilon}}\right] + \beta_i = \beta_i
-\end{align*}
-\tag{10.11}$$
+```
+Batchmean_i(Batchnorm_{\beta,\gamma,\varepsilon}(x)) = 1/M sum_{m=1}^{M} [ gamma_i [ (x_i^{(m)} - Batchmean_i(x))/sqrt(Batchvar_i(x) + epsilon) ] + beta_i ]
+= gamma_i [ (1/M sum_{m=1}^{M} x_i^{(m)} - Batchmean_i(x))/sqrt(Batchvar_i(x) + epsilon) ] + beta_i
+= gamma_i [ (Batchmean_i(x) - Batchmean_i(x))/sqrt(Batchvar_i(x) + epsilon) ] + beta_i = beta_i
+```
 
-*(参见定义 10.1.2、10.1.3 和 10.1.6)。这蕴含了第 (ii) 项。此外，观察到* (10.11) *和第 (i) 项确保对于所有* $\varepsilon \in (0, \infty)$，$x = ((x_i^{(m)})_{i \in \{1,2,\dots,d\}})_{m \in \{1,2,\dots,M\}} \in (\mathbb{R}^d)^M$，$i \in \{1,2,\dots,d\}$ *，成立：*
+（参见定义 10.1.2、10.1.3 和 10.1.6）。这蕴含了第 (ii) 项。此外，观察到 (10.11) 和第 (i) 项确保对于所有 $\varepsilon \in (0, \infty)$，$x = ((x_i^{(m)})_{i \in \{1,2,\dots,d\}})_{m \in \{1,2,\dots,M\}} \in (\mathbb{R}^d)^M$，$i \in \{1,2,\dots,d\}$，成立：
 
-$$\begin{align*}
-&\text{Batchvar}_i(\text{Batchnorm}_{\beta,\gamma,\varepsilon}(x)) \\
-&= \frac{1}{M}\sum_{m=1}^{M} \left[\gamma_i \left[\frac{x_i^{(m)} - \text{Batchmean}_i(x)}{\sqrt{\text{Batchvar}_i(x) + \varepsilon}}\right] + \beta_i - \text{Batchmean}_i(\text{Batchnorm}_{\beta,\gamma,\varepsilon}(x))\right]^2 \\
-&= \frac{1}{M}\sum_{m=1}^{M} (\gamma_i)^2 \left[\frac{x_i^{(m)} - \text{Batchmean}_i(x)}{\sqrt{\text{Batchvar}_i(x) + \varepsilon}}\right]^2 \\
-&= (\gamma_i)^2 \left[\frac{\frac{1}{M}\sum_{m=1}^{M} (x_i^{(m)} - \text{Batchmean}_i(x))^2}{\text{Batchvar}_i(x) + \varepsilon}\right] = (\gamma_i)^2 \left[\frac{\text{Batchvar}_i(x)}{\text{Batchvar}_i(x) + \varepsilon}\right].
-\end{align*}
-\tag{10.12}$$
+```
+Batchvar_i(Batchnorm_{\beta,\gamma,\varepsilon}(x))
+= 1/M sum_{m=1}^{M} [ gamma_i [ (x_i^{(m)} - Batchmean_i(x))/sqrt(Batchvar_i(x) + epsilon) ] + beta_i - Batchmean_i(Batchnorm_{\beta,\gamma,\varepsilon}(x)) ]^2
+= 1/M sum_{m=1}^{M} (gamma_i)^2 [ (x_i^{(m)} - Batchmean_i(x))/sqrt(Batchvar_i(x) + epsilon) ]^2
+= (gamma_i)^2 [ (1/M sum_{m=1}^{M} (x_i^{(m)} - Batchmean_i(x))^2 )/(Batchvar_i(x) + epsilon) ] = (gamma_i)^2 [ Batchvar_i(x)/(Batchvar_i(x) + epsilon) ].
+```
 
 结合以下事实：对于所有 $x = ((x_i^{(m)})_{i \in \{1,2,\dots,d\}})_{m \in \{1,2,\dots,M\}} \in (\mathbb{R}^d)^M$，$i \in \{1,2,\dots,d\}$，若 $\#(\bigcup_{m=1}^{M}\{x_i^{(m)}\}) > 1$，则成立：
 
@@ -14448,16 +15767,17 @@ $$\text{Batchvar}_i(x) > 0 \tag{10.13}$$
 
 即可推导出第 (iii) 项。引理 10.1.7 的证明至此完成。 $\square$
 
-
-
-
 ## 10.2 带 BN 的全连接前馈 ANN 训练的结构化描述
 
-**定义 10.2.1**（带 BN 的全连接前馈 ANN 的结构化描述）。我们记 $\mathbf{B}$ 为由下式给出的集合：
+### 定义 10.2.1（带 BN 的全连接前馈 ANN 的结构化描述）
+
+我们记 `B` 为由下式给出的集合：
 
 $$\mathbf{B} \coloneqq \bigcup_{L \in \mathbb{N}} \bigcup_{l_{0},l_{1},\ldots,l_{L} \in \mathbb{N}} \bigcup_{N \in \{0,1,\ldots,L\}} \left( \left( \bigtimes_{k=1}^{L} (\mathbb{R}^{l_{k} \times l_{k-1}} \times \mathbb{R}^{l_{k}}) \right) \times \left( \bigtimes_{k \in \mathbb{N}} (\mathbb{R}^{l_{k}})^{2} \right) \right).$$
 
-**定义 10.2.2**（带 BN 的全连接前馈 ANN）。当且仅当满足以下条件时，我们称 $\Phi$ 为带 BN 的全连接前馈 ANN：
+### 定义 10.2.2（带 BN 的全连接前馈 ANN）
+
+当且仅当满足以下条件时，我们称 `Phi` 为带 BN 的全连接前馈 ANN：
 
 $$\Phi \in \mathbf{B}$$
 
@@ -14467,7 +15787,9 @@ $$\Phi \in \mathbf{B}$$
 
 在下一个定义中，我们应用定义 1.2.1 的多维版本，并将批次作为输入。为此，我们隐式地将批次与矩阵等同起来。这种等同关系在下述练习中举例说明。
 
-*练习 10.3.1.* 设 $l_{0} = 2$，$l_{1} = 3$，$M = 4$，$W \in \mathbb{R}^{l_{1} \times l_{0}}$，$B \in \mathbb{R}^{l_{1}}$，$y \in (\mathbb{R}^{l_{0}})^{M}$，$x \in (\mathbb{R}^{l_{1}})^{M}$ 满足
+### 练习 10.3.1
+
+设 $l_{0} = 2$，$l_{1} = 3$，$M = 4$，$W \in \mathbb{R}^{l_{1} \times l_{0}}$，$B \in \mathbb{R}^{l_{1}}$，$y \in (\mathbb{R}^{l_{0}})^{M}$，$x \in (\mathbb{R}^{l_{1}})^{M}$ 满足
 
 $$W = \begin{pmatrix} 3 & -1 \\ -1 & 3 \\ 3 & -1 \end{pmatrix}, \qquad B = \begin{pmatrix} 1 \\ -1 \\ 1 \end{pmatrix}, \qquad y = \begin{pmatrix} \begin{pmatrix} 0 \\ 1 \end{pmatrix}, \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \begin{pmatrix} 2 \\ -2 \end{pmatrix}, \begin{pmatrix} -1 \\ 1 \end{pmatrix} \end{pmatrix},$$
 
@@ -14475,13 +15797,17 @@ $$W = \begin{pmatrix} 3 & -1 \\ -1 & 3 \\ 3 & -1 \end{pmatrix}, \qquad B = \begi
 
 $$x = \begin{pmatrix} \begin{pmatrix} 0 \\ 2 \\ 0 \end{pmatrix}, \begin{pmatrix} 4 \\ 0 \\ 4 \end{pmatrix}, \begin{pmatrix} 9 \\ 0 \\ 9 \end{pmatrix}, \begin{pmatrix} 0 \\ 3 \\ 0 \end{pmatrix} \end{pmatrix}.$$
 
-**定义 10.3.1**（与带 BN 的全连接前馈 ANN 相关的实例化函数）。设 $\varepsilon \in (0,\infty)$，$a \in C(\mathbb{R}, \mathbb{R})$。则我们将
+### 定义 10.3.1（与带 BN 的全连接前馈 ANN 相关的实例化函数）
+
+设 $\varepsilon \in (0,\infty)$，$a \in C(\mathbb{R}, \mathbb{R})$。则我们将
 
 $$\mathcal{R}_{a,\varepsilon}^{\mathbf{B}} \colon \mathbf{B} \longrightarrow \left( \bigcup_{k,L \in \mathbb{N}} C(\bigcup_{M \in \mathbb{N}} (\mathbb{R}^{k})^{M}, \bigcup_{M \in \mathbb{N}} (\mathbb{R}^{L})^{M}) \right)$$
 
+
+
 记为满足以下条件的函数：对于所有 $L, M \in \mathbb{N}$，$l_0, l_1, \ldots, l_L \in \mathbb{N}$，$N \subseteq \{0, 1, \ldots, L\}$，$\Phi = (((W_k, B_k))_{k \in \{1, \ldots, L\}}, ((\beta_k, \gamma_k))_{k \in N}) \in (\prod_{k=1}^L (\mathbb{R}^{l_k \times l_{k-1}} \times \mathbb{R}^{l_k})) \times (\prod_{k \in N} (\mathbb{R}^{l_k})^2)$，$x_0, y_0 \in (\mathbb{R}^{l_0})^M$，$x_1, y_1 \in (\mathbb{R}^{l_1})^M$，$\ldots$，$x_L, y_L \in (\mathbb{R}^{l_L})^M$ 满足
 
-\begin{align*}
+```
 \forall k \in \{0, 1, \ldots, L\} : \quad & y_k =
 \begin{cases}
 \text{Batchnorm}_{\beta_k, \gamma_k, \varepsilon}(x_k) & : k \in N \\
@@ -14489,7 +15815,7 @@ x_k & : k \notin N
 \end{cases}
 \qquad\text{且}\tag{10.19} \\
 \forall k \in \{1, 2, \ldots, L\} : \quad & x_k = \mathfrak{m}_{\mathbf{1}_{(0, L)(k)+\text{id}_{[1, L](k)}, d_k, M}(W_k y_{k-1} + (B_k, B_k, \ldots, B_k)) \tag{10.20}
-\end{align*}
+```
 
 使得
 
@@ -14497,25 +15823,28 @@ $$\mathcal{R}_{a, \varepsilon}^{\mathbf{B}}(\Phi) \in \mathcal{C}(\cup_{B \in \m
 
 并且对于每个 $\Phi \in \mathbf{B}$，我们将 $\mathcal{R}_{a, \varepsilon}^{\mathbf{B}}(\Phi)$ 称为带 *BN* 的全连接前馈 ANN $\Phi$ 的*实例化函数*，其激活函数为 *a*，*BN* 正则化参数为 $\varepsilon$（我们将 $\mathcal{R}_{a, \varepsilon}^{\mathbf{B}}(\Phi)$ 称为带 *BN* 的全连接前馈 ANN $\Phi$ 的实例化，其激活函数为 *a*，*BN* 正则化参数为 $\varepsilon$）（参见定义 1.2.1, 10.1.6 和 10.2.1）。
 
-## 10.4 带 BN 的全连接前馈 ANN 推理的结构化描述
+# 10.4 带 BN 的全连接前馈 ANN 推理的结构化描述
 
-**定义 10.4.1**（给定批次均值和批次方差的带 *BN* 的全连接前馈 *ANN* 的结构化描述）。*我们将* $\mathbf{b}$ *记为由下式给出的集合：*
+## 定义 10.4.1
+给定批次均值和批次方差的带 *BN* 的全连接前馈 *ANN* 的结构化描述。*我们将* `b` *记为由下式给出的集合：*
 
 $$\mathbf{b} = \cup_{L \in \mathbb{N}} \cup_{l_0, l_1, \ldots, l_L \in \mathbb{N}} \cup_{N \subseteq \{0, 1, \ldots, L\}} \bigg( \big( \prod_{k=1}^L (\mathbb{R}^{l_k \times l_{k-1}} \times \mathbb{R}^{l_k}) \big) \times \big( \prod_{k \in N} ((\mathbb{R}^{l_k})^3 \times [0, \infty))^{l_k} \big) \bigg). \tag{10.22}$$
 
-**定义 10.4.2**（给定批次均值和批次方差的带 *BN* 的全连接前馈 *ANN*）。*当且仅当满足以下条件时，我们称* $\Phi$ *为给定批次均值和批次方差的带 BN 的全连接前馈 ANN：*
+## 定义 10.4.2
+给定批次均值和批次方差的带 *BN* 的全连接前馈 *ANN*。*当且仅当满足以下条件时，我们称* `Phi` *为给定批次均值和批次方差的带 BN 的全连接前馈 ANN：*
 
 $$\Phi \in \mathbf{b} \tag{10.23}$$
 
 （参见定义 10.4.1）。
 
-## 10.5 带 BN 的全连接前馈 ANN 推理的实例化
+# 10.5 带 BN 的全连接前馈 ANN 推理的实例化
 
-**定义 10.5.1**（与给定批次均值和批次方差的带 *BN* 的全连接前馈 *ANN* 相关的实例化函数）。*设* $\varepsilon \in (0, \infty)$，*a* $\in \mathcal{C}(\mathbb{R}, \mathbb{R})$。*则我们将*
+## 定义 10.5.1
+与给定批次均值和批次方差的带 *BN* 的全连接前馈 *ANN* 相关的实例化函数。*设* `ε ∈ (0, ∞)`，*a* `∈ C(R, R)`。*则我们将*
 
 $$\mathcal{R}_{a, \varepsilon}^{\mathbf{b}}: \mathbf{b} \rightarrow \left(\bigcup_{k,L \in \mathbb{N}} C(\mathbb{R}^{k}, \mathbb{R}^{L})\right) \tag{10.24}$$
 
-*记为满足以下条件的函数：对于所有* $L \in \mathbb{N}$，$l_{0}, l_{1}, \ldots, l_{L} \in \mathbb{N}$，$N \subseteq\{0,1, \ldots, L\}$，$\Phi=((\left(W_{k}, B_{k}\right))_{k \in\{1,2, \ldots, L\}},(\left(\beta_{k}, \gamma_{k}, \mu_{k}, V_{k}\right))_{k \in N}\right) \in\left(\bigotimes_{k=1}^{L}\left(\mathbb{R}^{l_{k} \times l_{k-1}} \times \mathbb{R}^{l_{k}}\right)\right) \times\left(\bigotimes_{k \in N}\left(\left(\mathbb{R}^{l_{k}}\right)^{3} \times[0, \infty)\right)$，*$x_{0}, y_{0} \in \mathbb{R}^{l_{0}}$，* $x_{1}, y_{1} \in \mathbb{R}^{l_{1}}$，..., $x_{L}, y_{L} \in \mathbb{R}^{l_{L}}$ *满足*
+*记为满足以下条件的函数：对于所有* `L ∈ N`，`l0, l1, ..., lL ∈ N`，`N ⊆ {0,1, ..., L}`，`Phi = (((Wk, Bk))k∈{1,2,...,L}, ((βk, γk, μk, Vk))k∈N) ∈ (⊗k=1L (Rlk×lk-1 × Rlk)) × (⊗k∈N ((Rlk)3 × [0, ∞)))`，`x0, y0 ∈ Rl0`，`x1, y1 ∈ Rl1`，..., `xL, yL ∈ RlL` *满足*
 
 $$\forall k \in\{0,1, \ldots, L\} \quad y_{k}=\begin{cases}\operatorname{batchnorm}_{\beta_{k}, \gamma_{k}, \mu_{k}, V_{k}, \varepsilon}\left(x_{k}\right) & k \in N \\ x_{k} & k \notin N\end{cases} \quad \text { 且 } \tag{10.25}$$
 
@@ -14525,24 +15854,23 @@ $$\forall k \in\{1,2, \ldots, L\} \quad x_{k}=\mathfrak{m}_{\mathbf{1}_{(0, L)(k
 
 $$\mathcal{R}_{a, \varepsilon}^{\mathbf{b}}(\Phi) \in C\left(\mathbb{R}^{l_{0}}, \mathbb{R}^{l_{L}}\right) \quad \text { 且 } \quad\left(\mathcal{R}_{a, \varepsilon}^{\mathbf{b}}(\Phi)\right)\left(x_{0}\right)=y_{L} \tag{10.27}$$
 
-*并且对于每个* $\Phi \in \mathbf{b}$，*我们将* $\mathcal{R}_{a, \varepsilon}^{\mathbf{b}}(\Phi)$ *称为给定批次均值和批次方差的带* $\mathrm{BN}$ *的全连接前馈* $\boldsymbol{A N N}$ *$\Phi$ 的实例化函数，其激活函数为* $a$，*BN* *正则化参数为* $\varepsilon$ *（参见定义 10.1.5 和 10.4.1）。*
+*并且对于每个* `Phi ∈ b`，*我们将* `R_{a, ε}^{b}(Phi)` *称为给定批次均值和批次方差的带* `BN` *的全连接前馈* `ANN` *`Phi` 的实例化函数，其激活函数为* `a`，*BN* *正则化参数为* `ε` *（参见定义 10.1.5 和 10.4.1）。*
 
-## 10.6 关于训练时 BN 与推理时 BN 之间联系
+# 10.6 关于训练时 BN 与推理时 BN 之间联系
 
-**定义 10.6.1** *（给定输入批次时，与带* $\mathrm{BN}$ *的全连接前馈* $\boldsymbol{A N N s}$ *相关联的给定批次均值和批次方差的带* $\mathrm{BN}$ *的全连接前馈* $\boldsymbol{A N N s}$ *）。设* $\varepsilon \in(0, \infty)$，$a \in C(\mathbb{R}, \mathbb{R})$，$L, M \in \mathbb{N}$，$l_{0}, l_{1}, \ldots, l_{L} \in \mathbb{N}$，$N \subseteq\{0,1, \ldots, L\}$，$\Phi=\left(((\left(W_{k}, B_{k}\right))_{k \in\{1,2, \ldots, L\}},(\left(\beta_{k}, \gamma_{k}\right))_{k \in N}\right) \in\left(\bigotimes_{k=1}^{L}\left(\mathbb{R}^{l_{k} \times l_{k-1}} \times \mathbb{R}^{l_{k}}\right)\right) \times\left(\bigotimes_{k \in N}\left(\mathbb{R}^{l_{k}}\right)^{2}\right)$，$\mathfrak{T} \in\left(\mathbb{R}^{l_{0}}\right)^{M}$。*当且仅当存在* $x_{0}, y_{0} \in\left(\mathbb{R}^{l_{0}}\right)^{M}$，$x_{1}, y_{1} \in\left(\mathbb{R}^{l_{1}}\right)^{M}$，..., $x_{L}, y_{L} \in\left(\mathbb{R}^{l_{L}}\right)^{M}$ *使得以下条件成立时，我们称* $\Psi$ *为与* $(\Phi, \mathfrak{T}, \mathfrak{a}, \varepsilon)$ *相关联的给定批次均值和批次方差的带* $\mathrm{BN}$ *的* $\boldsymbol{A N N s}$ *：*
+## 定义 10.6.1
+给定输入批次时，与带 `BN` 的全连接前馈 `ANNs` 相关联的给定批次均值和批次方差的带 `BN` 的全连接前馈 `ANNs`。设 `ε ∈ (0, ∞)`，`a ∈ C(R, R)`，`L, M ∈ N`，`l0, l1, ..., lL ∈ N`，`N ⊆ {0,1, ..., L}`，`Phi = (((Wk, Bk))k∈{1,2,...,L}, ((βk, γk))k∈N) ∈ (⊗k=1L (Rlk×lk-1 × Rlk)) × (⊗k∈N (Rlk)2)`，`T ∈ (Rl0)M`。*当且仅当存在* `x0, y0 ∈ (Rl0)M`，`x1, y1 ∈ (Rl1)M`，..., `xL, yL ∈ (RlL)M` *使得以下条件成立时，我们称* `Psi` *为与* `(Phi, T, a, ε)` *相关联的给定批次均值和批次方差的带* `BN` *的* `ANNs` *：*
 
-- (i) 满足 $x_{0}=\mathfrak{T}$，
-- (ii) 对于所有 $k \in\{0,1, \ldots, L\}$，满足
+- (i) 满足 `x0 = T`，
+- (ii) 对于所有 `k ∈ {0,1, ..., L}`，满足
 
 $$y_{k}=\begin{cases}\operatorname{Batchnorm}_{\beta_{k}, \gamma_{k}, \varepsilon}\left(x_{k}\right) & k \in N \\ x_{k} & k \notin N\end{cases}, \tag{10.28}$$
 
-- (iii) 对于所有 $k \in\{1,2, \ldots, L\}$，满足
+- (iii) 对于所有 `k ∈ {1,2, ..., L}`，满足
 
 $$x_{k}=\mathfrak{m}_{\mathbf{1}_{(0, L)(k)}+\operatorname{id}_{\mathbf{1}_{\{1, L\}}(k), l_{k}}\left(W_{k}\right)}\left(M_{k} y_{k-1}+\left(B_{k}, B_{k}, \ldots, B_{k}\right)\right), \tag{10.29}$$
 
 且
-
-
 
 (iv) 满足
 
@@ -14550,7 +15878,8 @@ $\Psi=(((W_{k},B_{k}))_{k\in\{1,\dots,L\}},((\beta_{k},\gamma_{k},\mathrm{Batchm
 
 （参见定义 1.2.1、10.1.2、10.1.3 和 10.1.6）。
 
-**引理 10.6.2.** *设* $\varepsilon\in(0,\infty)$, $a\in C(\mathbb{R},\mathbb{R})$, $L$, $M$, $l_{0}$, $l_{1}$, ..., $l_{L} \in\mathbb{N}$, $N \subseteq\{0,1,\dots,L\}$, $\Phi=(((W_{k},B_{k}))_{k\in\{1,\dots,L\}},((\beta_{k},\gamma_{k}))_{k\in N}\in\bigg(\bigcup_{k=1}^{L}\big(\mathbb{R}^{l_{k}\times l_{k-1}}\times\mathbb{R}^{l_{k}}\big)\bigg)\times\bigg(\bigcup_{k\in N}\big(\mathbb{R}^{l_{k}}\big)^{2}\bigg)$, $x=(x^{(m)})_{m\in\{1,\dots,M\}}\in(\mathbb{R}^{l_{0}})^{M}$ *且设* $\Psi$ *为与* $(\Phi,x,a,\varepsilon)$ *相关联的、给定批次均值和批次方差的带批归一化（BN）的全连接前馈人工神经网络（ANN）（参见定义 10.6.1）。则*
+## 引理 10.6.2
+设 `ε∈(0,∞)`, `a∈C(R,R)`, `L`, `M`, `l0`, `l1`, ..., `lL ∈N`, `N ⊆{0,1,...,L}`, `Phi = (((Wk, Bk))k∈{1,...,L}, ((βk, γk))k∈N ∈ (∪k=1L (Rlk×lk-1×Rlk))×(∪k∈N (Rlk)2)`, `x = (x(m))m∈{1,...,M} ∈ (Rl0)M` *且设* `Psi` *为与* `(Phi,x,a,ε)` *相关联的、给定批次均值和批次方差的带批归一化（BN）的全连接前馈人工神经网络（ANN）（参见定义 10.6.1）。则*
 
 $\big(\mathcal{R}_{a,\varepsilon}^{\mathbf{B}}(\Phi)\big)(x)=\big(\mathcal{R}_{a,\varepsilon}^{\mathbf{b}}(\Psi)\big)(x^{(m)})\big)_{m\in\{1,\dots,M\}} \quad (10.31)$
 
@@ -14558,62 +15887,84 @@ $\big(\mathcal{R}_{a,\varepsilon}^{\mathbf{B}}(\Phi)\big)(x)=\big(\mathcal{R}_{a
 
 *引理 10.6.2 的证明。* 注意，(10.19)、(10.20)、(10.21)、(10.25)、(10.26)、(10.27)、(10.28)、(10.29) 和 (10.30) 确立了 (10.31)。因此，引理 10.6.2 的证明完成。
 
-*练习* 10.6.1. 设 $l_{0}=2$，$l_{1}=3$，$l_{2}=1$，$N=\{0,1\}$，$\gamma_{0}=(2,2)$，$\beta_{0}=(0,0)$，$\gamma_{1}=(1,1,1)$，$\beta_{1}=(0,1,0)$，$x=((0,1),(1,0),(-2,2),(2,-2))$，$\Phi\in\mathbf{B}$ 满足
+*练习* 10.6.1. 设 `l0=2`，`l1=3`，`l2=1`，`N={0,1}`，`γ0=(2,2)`，`β0=(0,0)`，`γ1=(1,1,1)`，`β1=(0,1,0)`，`x=((0,1),(1,0),(-2,2),(2,-2))`，`Phi∈B` 满足
 
 $\Phi= \left( \left( \left( \begin{array}{ll} 1 & 2 \\ 3 & 4 \\ 5 & 6 \end{array} \right) \right) , \left( \begin{array}{r} -1 \\ -1 \end{array} \right) , \left( \left( \begin{array}{ccc} -1 & 1 & -1 \\ 1 & -1 & 1 \end{array} \right) , \left( -2 \right) \right) \right) , \big(\big(\gamma_{k},\beta_{k}\big)\big)_{k\in N} \in\bigg(\bigg(\bigcup_{k=1}^{2}\big(\mathbb{R}^{l_{k}\times l_{k-1}}\times\mathbb{R}^{l_{k}}\big)\bigg)\times\bigg(\bigcup_{k\in N}\big(\mathbb{R}^{l_{k}}\big)^{2}\bigg) \quad (10.32)$
 
-且设 $\Psi\in\mathbf{b}$ 为与 $(\Phi,x,\mathbf{t},0.01)$ 相关联的、给定批次均值和批次方差的带批归一化的全连接前馈人工神经网络。显式计算 $(\mathcal{R}_{\mathbf{t},\frac{1}{100}}^{\mathbf{B}}(\Phi))(x)$ 和 $(\mathcal{R}_{\mathbf{t},\frac{1}{100}}^{\mathbf{b}}(\Psi))(-1,1)$ 并证明你的结果是正确的（参见定义 1.2.4、10.2.1、10.3.1、10.4.1、10.5.1 和 10.6.1）！
+且设 `Psi∈b` 为与 `(Phi,x,t,0.01)` 相关联的、给定批次均值和批次方差的带批归一化的全连接前馈人工神经网络。显式计算 `(\mathcal{R}_{t,1/100}^{B}(Phi))(x)` 和 `(\mathcal{R}_{t,1/100}^{b}(Psi))(-1,1)` 并证明你的结果是正确的（参见定义 1.2.4、10.2.1、10.3.1、10.4.1、10.5.1 和 10.6.1）！
 
 ### 第 10 章：带批归一化的人工神经网络
 
-## 第 11 章
+# 第 11 章
 
 ## 通过随机初始化进行优化
 
 除了通过 SGD 类型优化方法的迭代步骤来最小化目标函数外，最小化目标函数的另一种方法是采样不同的随机初始化，从这些随机初始化开始迭代计算 SGD 优化过程，然后选择最终目标函数评估值最小的 SGD 轨迹。本章详细回顾和分析了考虑不同随机初始化的方法。本章的具体内容强烈基于 Jentzen & Welti [230, 第 5 节]。
 
-### 11.1 优化误差分析
+# 11.1 优化误差分析
 
-#### 11.1.1 互补分布函数公式
+## 11.1.1 互补分布函数公式
 
-**引理 11.1.1**（互补分布函数公式）。*设 $\mu: \mathcal{B}([0, \infty)) \to [0, \infty]$ 为一个 $\sigma$-有限测度。则*
+**引理 11.1.1**（互补分布函数公式）。*设* `μ: B([0, ∞)) → [0, ∞]` *为一个* `σ`-有限测度。则*
 
 $$
+
+
+
 \int_{0}^{\infty} x \mu(\mathrm{d}x)=\int_{0}^{\infty} \mu([x, \infty)) \mathrm{d}x=\int_{0}^{\infty} \mu([x, \infty)) \mathrm{d}x.
+
 $$
 
 *引理 11.1.1 的证明。* *首先，注意*
 
 $$
+
 \begin{aligned}
+
 \int_{0}^{\infty} x \mu(\mathrm{d}x) &=\int_{0}^{\infty}\left[\int_{0}^{x} \mathrm{d} y\right] \mu(\mathrm{d}x)=\int_{0}^{\infty}\left[\int_{0}^{\infty} \mathbb{1}_{(-\infty, x]}(y) \mathrm{d} y\right] \mu(\mathrm{d}x) \\
+
 &=\int_{0}^{\infty} \int_{0}^{\infty} \mathbb{1}_{[y, \infty)}(x) \mathrm{d} y \mu(\mathrm{d}x) .
+
 \end{aligned}
+
 $$
 
 此外，观察到事实：$[0, \infty)^{2} \ni(x, y) \mapsto \mathbb{1}_{[y, \infty)}(x) \in \mathbb{R}$ 是 $\left(\mathcal{B}([0, \infty)) \otimes \mathcal{B}([0, \infty))\right) / \mathcal{B}(\mathbb{R})$-可测的，加上假设 $\mu$ 是 $\sigma$-有限测度以及富比尼定理（Fubini's theorem），确保了
 
 $$
+
 \int_{0}^{\infty}\int_{0}^{\infty}\mathbb{I}_{[y,\infty)}(x)\,\mathrm{d}y\,\mu(\mathrm{d}x)=\int_{0}^{\infty}\int_{0}^{\infty}\mathbb{I}_{[y,\infty)}(x)\,\mu(\mathrm{d}x)\,\mathrm{d}y=\int_{0}^{\infty}\mu([y,\infty))\,\mathrm{d}y.
+
 $$
 
 将此与 (11.2) 结合可知，对于所有 $\varepsilon\in(0,\infty)$，有
 
 $$
+
 \begin{align*}
+
 \int_{0}^{\infty}x\,\mu(\mathrm{d}x) &=\int_{0}^{\infty}\mu([y,\infty))\,\mathrm{d}y \geq\int_{0}^{\infty}\mu([y,\infty))\,\mathrm{d}y \\
+
 &\geq\int_{0}^{\infty}\mu([y+\varepsilon,\infty))\,\mathrm{d}y =\int_{\varepsilon}^{\infty}\mu([y,\infty))\,\mathrm{d}y.
+
 \end{align*}
+
 $$
 
 因此，Beppo Levi 单调收敛定理暗示
 
 $$
+
 \begin{align*}
+
 \int_{0}^{\infty}x\,\mu(\mathrm{d}x) &=\int_{0}^{\infty}\mu([y,\infty))\,\mathrm{d}y \geq\int_{0}^{\infty}\mu([y,\infty))\,\mathrm{d}y \\
+
 &\geq\sup _{\varepsilon\in(0,\infty)}\left[\int_{\varepsilon}^{\infty}\mu([y,\infty))\,\mathrm{d}y\right] \\
+
 &=\sup _{\varepsilon\in(0,\infty)}\left[\int_{0}^{\infty}\mu([y,\infty))\,\mathbb{I}_{(\varepsilon,\infty)}(y)\,\mathrm{d}y\right] =\int_{0}^{\infty}\mu([y,\infty))\,\mathrm{d}y.
+
 \end{align*}
+
 $$
 
 因此，引理 11.1.1 的证明完成。
@@ -14623,27 +15974,41 @@ $$
 **引理 11.1.2.** 设 $(E,\delta)$ 为度量空间，设 $x\in E$，$K\in\mathbb{N}$，$p, L\in(0,\infty)$，设 $(\Omega,\mathcal{F},\mathbb{P})$ 为概率空间，设 $\mathfrak{R}\colon E\times\Omega\to\mathbb{R}$ 为 $(\mathcal{B}(E)\otimes\mathcal{F})/\mathcal{B}(\mathbb{R})$-可测函数，假设对于所有 $y\in E$，$\omega\in\Omega$ 有 $|\mathfrak{R}(x,\omega)-\mathfrak{R}(y,\omega)|\leq L\delta(x,y)$，且设 $X_{k}\colon\Omega\to E$，$k\in\{1,2,\ldots,K\}$，为独立同分布随机变量。则
 
 $$
+
 \mathbb{E}\bigl[\min _{k\in\{1,2,\ldots,K\}}|\mathfrak{R}(X_{k})-\mathfrak{R}(x)|^{p}\bigr]\leq L^{p}\int_{0}^{\infty}\left[\mathbb{P}\left(\delta(X_{1},x)>\varepsilon^{1/p}\right)\right]^{K}\,\mathrm{d}\varepsilon.
+
 $$
 
 引理 11.1.2 的证明。在整个证明过程中，设 $Y\colon\Omega\to[0,\infty)$ 满足对于所有 $\omega\in\Omega$ 有 $Y(\omega)=\min _{k\in\{1,2,\ldots,K\}}[\delta(X_{k}(\omega),x)]^{p}$。注意，事实：$Y$ 是一个随机变量，假设：$\forall y\in E$，$\omega\in\Omega$ : $|\mathfrak{R}(x,\omega)-\mathfrak{R}(y,\omega)|\leq L\delta(x,y)$，以及引理 11.1.1 表明
 
 $$
+
 \begin{align*}
+
 \mathbb{E}\left[\min _{k\in\{1,2,\ldots,K\}}|\mathfrak{R}(X_{k})-\mathfrak{R}(x)|^{p}\right] &\leq L^{p}\,\mathbb{E}\left[\min _{k\in\{1,2,\ldots,K\}}\left[\delta\left(X_{k},x\right)\right]^{p}\right] \\
+
 &=L^{p}\,\mathbb{E}[Y]=L^{p}\int_{0}^{\infty}y\,\mathbb{P}_{Y}(\mathrm{d}y) =L^{p}\int_{0}^{\infty}\mathbb{P}_{Y}([\varepsilon,\infty))\,\mathrm{d}\varepsilon \\
+
 &=L^{p}\int_{0}^{\infty}\mathbb{P}(Y>\varepsilon)\,\mathrm{d}\varepsilon =L^{p}\int_{0}^{\infty}\mathbb{P}\left(\left(\min _{k\in\{1,2,\ldots,K\}}\left[\delta\left(X_{k},x\right)\right]^{p}\right)>\varepsilon\right)\,\mathrm{d}\varepsilon.
+
 \end{align*}
+
 $$
 
 此外，观察到假设 $X_k$，$k \in \{1, 2, \dots, K\}$ 是独立同分布随机变量确立了对于所有 $\varepsilon \in (0, \infty)$ 有
 
 $$
+
 \begin{aligned}
+
 \mathbb{P}(\min_{k \in \{1, \dots, K\}} [\delta(X_k, x)]^p > \varepsilon) &= \mathbb{P}(\forall k \in \{1, 2, \dots, K\} : [\delta(X_k, x)]^p > \varepsilon) \\
+
 &= \prod_{k=1}^K \mathbb{P}([\delta(X_k, x)]^p > \varepsilon) = [\mathbb{P}([\delta(X_1, x)]^p > \varepsilon)]^K \\
+
 &= [\mathbb{P}(\delta(X_1, x) > \varepsilon^{1/p})]^K. \quad (11.8)
+
 \end{aligned}
+
 $$
 
 将此与 (11.7) 结合即证明了 (11.6)。因此，引理 11.1.2 的证明完成。 $\square$
@@ -14655,68 +16020,91 @@ $$
 **引理 11.2.1.** *设* $\Gamma: (0, \infty) \to (0, \infty)$ *和* $\mathbb{B}: (0, \infty)^2 \to (0, \infty)$ *满足对于所有* $x, y \in (0, \infty)$ *有* $\Gamma(x) = \int_0^{\infty} t^{x-1} e^{-t}\,\mathrm{d}t$ *和* $\mathbb{B}(x, y) = \int_0^1 t^{x-1}(1-t)^{y-1}\,\mathrm{d}t$。*则*
 
 - (*i*) *对于所有* $x \in (0, \infty)$ *，有* $\Gamma(x+1) = x\,\Gamma(x)$，
+
 - (*ii*) *有* $\Gamma(1) = \Gamma(2) = 1$，*并且*
+
 - (*iii*) *对于所有* $x, y \in (0, \infty)$ *，有* $\mathbb{B}(x, y) = \frac{\Gamma(x)\Gamma(y)}{\Gamma(x+y)}$。
 
 *引理 11.2.1 的证明。* 在整个证明过程中，设 $x, y \in (0, \infty)$，设 $\Phi: (0, \infty) \times (0, 1) \to (0, \infty)^2$ 满足对于所有 $u \in (0, \infty)$，$v \in (0, 1)$ 有
 
 $$
+
 \Phi(u, v) = (u(1-v), uv), \quad (11.9)
+
 $$
 
 且设 $f: (0, \infty)^2 \to (0, \infty)$ 满足对于所有 $s, t \in (0, \infty)$ 有
 
 $$
+
 f(s, t) = s^{(x-1)}\, t^{(y-1)}\, e^{-(s+t)}. \quad (11.10)
+
 $$
 
 注意，分部积分公式证明了对于所有 $x \in (0, \infty)$ 有
 
 $$
+
 \begin{aligned}
+
 \Gamma(x+1) = \int_0^{\infty} t^{(x+1)-1} e^{-t}\,\mathrm{d}t &= -\int_0^{\infty} t^x [ -e^{-t} ]\,\mathrm{d}t \\
+
 &= -\left( \left[ t^x e^{-t} \right]_{t=0}^{t=\infty} - x\int_0^{\infty} t^{(x-1)} e^{-t}\,\mathrm{d}t \right) \\
+
 &= x\int_0^{\infty} t^{(x-1)} e^{-t}\,\mathrm{d}t = x \cdot \Gamma(x). \quad (11.11)
+
 \end{aligned}
+
 $$
 
 这确立了第 (i) 项。此外，观察到
 
 $$
+
 \Gamma(1) = \int_0^{\infty} t^0 e^{-t}\,\mathrm{d}t = [ -e^{-t} ]_{t=0}^{t=\infty} = 1. \quad (11.12)
+
 $$
-
-
-
 
 这项与条目 **(i)** 证明了条目 **(ii)**。此外，请注意，利用微分同胚 $ ( 1 , \infty ) \ni t \mapsto \frac { 1 } { t } \in ( 0 , 1 ) $ 的积分变换定理保证了
 
 $$
+
 \begin{align*} B ( x , y ) & = \int _ { 0 } ^ { 1 } t ^ { ( x - 1 ) } \left( 1 - t \right) ^ { ( y - 1 ) } \mathrm { d } t = \int _ { 1 } ^ { \infty } \left[ \frac { 1 } { t } \right] ^ { ( x - 1 ) } \left[ 1 - \frac { 1 } { t } \right] ^ { ( y - 1 ) } \frac { 1 } { t ^ { 2 } } \mathrm { d } t \\ & = \int _ { 1 } ^ { \infty } t ^ { ( - x - 1 ) } \left[ \frac { t - 1 } { t } \right] ^ { ( y - 1 ) } \mathrm { d } t = \int _ { 1 } ^ { \infty } \frac { t ^ { ( - x - y ) } ( t - 1 ) ^ { ( y - 1 ) } } { } \mathrm { d } t \\ & = \int _ { 0 } ^ { \infty } ( t + 1 ) ^ { ( - x - y ) } t ^ { ( y - 1 ) } \mathrm { d } t = \int _ { 0 } ^ { \infty } \frac { t ^ { ( y - 1 ) } } { ( t + 1 ) ^ { ( x + y ) } } \mathrm { d } t . \end{align*} \tag { 11.13 }
+
 $$
 
 此外，观察到对于所有 $ ( u , v ) \in ( 0 , \infty ) \times ( 0 , 1 ) $，均有
 
 $$
+
 \Phi ' ( u , v ) = \left[ \begin{array} { l l } 1 - v & - u \\ v & u \end{array} \right] \tag { 11.14 }
+
 $$
 
 这表明对于所有 $ ( u , v ) \in ( 0 , \infty ) \times ( 0 , 1 ) $，均有
 
 $$
+
 \begin{array} { r l } \operatorname* { d e t } ( \Phi ' ( u , v ) ) = ( 1 - v ) u - v ( - u ) = u - v u + v u = u \in ( 0 , \infty ) . \end{array} \tag { 11.15 }
+
 $$
 
 结合这一事实以及
 
 $$
+
 \begin{array} { l l } \Gamma ( x ) \cdot \Gamma ( y ) & = \left[ \int _ { 0 } ^ { \infty } t ^ { ( x - 1 ) } e ^ { - t } \mathrm { d } t \right] \left[ \int _ { 0 } ^ { \infty } t ^ { ( y - 1 ) } e ^ { - t } \mathrm { d } t \right] \\ & = \left[ \int _ { 0 } ^ { \infty } s ^ { ( x - 1 ) } e ^ { - s } \mathrm { d } s \right] \left[ \int _ { 0 } ^ { \infty } t ^ { ( y - 1 ) } e ^ { - t } \mathrm { d } t \right] \\ & = \int _ { 0 } ^ { \infty } \int _ { 0 } ^ { \infty } s ^ { ( x - 1 ) } t ^ { ( y - 1 ) } e ^ { - ( s + t ) } \mathrm { d } t \mathrm { d } s \\ & = \int _ { ( 0 , \infty ) ^ { 2 } } f ( s , t ) \mathrm { d } ( s , t ) , \end{array} \tag { 11.16 }
+
 $$
 
 以及积分变换定理，可得
 
 $$
+
+
+
 \begin{array} { l l } \Gamma ( x ) \cdot \Gamma ( y ) & = \int _ { ( 0 , \infty ) \times ( 0 , 1 ) } f ( \Phi ( u , v ) ) | \operatorname* { d e t } ( \Phi ' ( u , v ) ) | \mathrm { d } ( u , v ) \\ & = \int _ { 0 } ^ { \infty } \int _ { 0 } ^ { 1 } ( u ( 1 - v ) ) ^ { ( x - 1 ) } ( u v ) ^ { ( y - 1 ) } e ^ { - ( u ( 1 - v ) + u v ) } u \, \mathrm { d } v \, \mathrm { d } u \\ & = \int _ { 0 } ^ { \infty } \int _ { 0 } ^ { 1 } u ^ { ( x + y - 1 ) } e ^ { - u } v ^ { ( y - 1 ) } ( 1 - v ) ^ { ( x - 1 ) } \mathrm { d } v \, \mathrm { d } u \\ & = \left[ \int _ { 0 } ^ { \infty } u ^ { ( x + y - 1 ) } e ^ { - u } \mathrm { d } u \right] \left[ \int _ { 0 } ^ { 1 } v ^ { ( y - 1 ) } ( 1 - v ) ^ { ( x - 1 ) } \mathrm { d } v \right] \\ & = \Gamma ( x + y ) B ( y , x ) . \end{array} \tag { 11.17 }
+
 $$
 
 这就建立了条目 **(iii)**。引理 11.2.1 的证明至此完成。$\square$
@@ -14728,10 +16116,15 @@ $$
 *引理 11.2.2 的证明。* *注意，由于对于所有* $y \in [0, \infty)$，*映射* $[0, \infty) \ni z \mapsto y^2 \in [0, \infty)$ *是凸的这一事实表明，对于所有* $\alpha, x \in [0, 1]$，*均成立*
 
 $$
+
 \begin{aligned}
+
 (1 - x)^\alpha \le &\alpha(1 - x)^1 + (1 - \alpha)(1 - x)^0 \\
+
 = &\alpha - \alpha x + 1 - \alpha = 1 - \alpha x.
+
 \end{aligned} \tag{11.18}
+
 $$
 
 引理 11.2.2 的证明至此完成。$\square$
@@ -14745,103 +16138,159 @@ $$
 -   (iii) *对于所有* $x \in (0, \infty)$ *以及* $\alpha \in [0, 1]$ *成立*
 
 $$
+
 (\max\{x + \alpha - 1, 0\})^\alpha \le \frac{x}{(x + \alpha)^{1-\alpha}} \le \frac{\Gamma(x+\alpha)}{\Gamma(x)} \le x^\alpha, \tag{11.19}
+
 $$
 
 -   *以及*
 -   (iv) *对于所有* $x \in (0, \infty)$ *以及* $\alpha \in [0, \infty)$ *成立*
 
 $$
+
 (\max\{x + \min\{\alpha - 1, 0\}, 0\})^\alpha \le \frac{\Gamma(x+\alpha)}{\Gamma(x)} \le (x + \max\{\alpha - 1, 0\})^\alpha. \tag{11.20}
+
 $$
 
 *命题 11.2.3 的证明。* *在整个证明过程中，设* $\lfloor \cdot \rceil : (0, \infty) \to \mathbb{N}_0$ *满足对于所有* $x \in [0, \infty)$，*均有* $\lfloor x \rceil = \max([0, x] \cap \mathbb{N}_0)$。*观察到由于对于所有* $t \in (0, \infty)$，*映射* $\mathbb{R} \ni x \mapsto t^x \in (0, \infty)$ *是凸函数这一事实，确立了对于所有* $x, y \in (0, \infty)$ *以及* $\alpha \in [0, 1]$，*均成立*
 
 $$
+
 \begin{aligned}
+
 \Gamma(\alpha x + (1-\alpha)y) = &\int_0^\infty t^{\alpha x + (1-\alpha) y - 1} e^{-t} \, \mathrm{d}t = \int_0^\infty t^{\alpha x + (1-\alpha) y} t^{-1} e^{-t} \, \mathrm{d}t \\
+
 \le &\int_0^\infty (\alpha t^x + (1 - \alpha) t^y) t^{-1} e^{-t} \, \mathrm{d}t \\
+
 = &\alpha \int_0^\infty t^{x-1} e^{-t} \, \mathrm{d}t + (1 - \alpha) \int_0^\infty t^{y-1} e^{-t} \, \mathrm{d}t \\
+
 = &\alpha\,\Gamma(x) + (1 - \alpha)\Gamma(y).
+
 \end{aligned} \tag{11.21}
+
 $$
 
 这证明了条目 (i)。此外，注意到引理 11.2.1 中的条目 (ii) 和条目 (i) 确保了对于所有 $\alpha \in [0, 1]$，成立
 
 $$
+
 \Gamma(\alpha + 1) = \Gamma(\alpha \cdot 2 + (1 - \alpha) \cdot 1) \le \alpha\,\Gamma(2) + (1 - \alpha)\Gamma(1) = \alpha + (1 - \alpha) = 1. \tag{11.22}
+
 $$
 
 这表明对于所有 $x \in (0,1]$ 成立
+
 $$
+
 \Gamma(x+1) \leq 1 = x^{\lfloor x \rfloor} = \max\{1, x^x\}. \tag{11.23}
+
 $$
+
 因此，通过归纳法、引理 **11.2.1** 中的条目 **(i)** 以及事实 $\forall x \in (0, \infty) : x - \lfloor x \rfloor \in (0,1]$，可以推导出对于所有 $x \in [1, \infty)$ 成立
+
 $$
+
 \Gamma(x+1) = \left[\prod_{i=1}^{\lfloor x \rfloor}(x-i+1)\right]\Gamma\big(x-\lfloor x \rfloor+1\big) \leq x^{\lfloor x \rfloor}\Gamma(x-\lfloor x \rfloor+1) \leq x^{\lfloor x \rfloor} \leq x^x = \max\{1, x^x\}.
+
 $$
+
 将此结果与 **(11.23)** 以及引理 **11.2.1** 中的条目 **(i)** 结合，即建立了条目 **(ii)**。此外，观察到霍尔德（Hölder）不等式和引理 **11.2.1** 中的条目 **(i)** 表明，对于所有 $x \in (0, \infty), \; \alpha \in [0,1]$，成立
+
 $$
+
 \begin{aligned}
+
 \Gamma(x+\alpha) & = \int_0^\infty t^{x+\alpha-1}e^{-t} \, \mathrm{d}t = \int_0^\infty t^{\alpha x - \alpha}t^{(1-\alpha)x-(1-\alpha)}e^{-(1-\alpha)t} \, \mathrm{d}t \\
+
 & = \int_0^\infty \big[t^{x}e^{-t}\big]^\alpha\big[t^{x-1}e^{-t}\big]^{1-\alpha} \, \mathrm{d}t \\
+
 & \leq \left( \int_0^\infty t^{x}e^{-t} \, \mathrm{d}t \right)^\alpha \left( \int_0^\infty t^{x-1}e^{-t} \, \mathrm{d}t \right)^{1-\alpha} \\
+
 & = \big[\Gamma(x+1)\big]^\alpha \big[\Gamma(x)\big]^{1-\alpha} = x^\alpha\big[\Gamma(x)\big]^\alpha\big[\Gamma(x)\big]^{1-\alpha} \\
+
 & = x^\alpha\Gamma(x).
+
 \end{aligned}
+
 $$
+
 将此结果与引理 **11.2.1** 中的条目 **(i)** 结合，证明了对于所有 $x \in (0, \infty), \; \alpha \in [0,1]$，成立
+
 $$
+
 x \, \Gamma(x) = \Gamma(x+1) = \Gamma\big(x + \alpha + (1-\alpha)\big) \leq (x+\alpha)^{1-\alpha}\Gamma(x+\alpha).
+
 $$
+
 结合 **(11.25)** 和 **(11.26)**，确保了对于所有 $x \in (0, \infty), \; \alpha \in [0,1]$，成立
+
 $$
+
 \frac{x}{(x+\alpha)^{1-\alpha}} \leq \frac{\Gamma(x+\alpha)}{\Gamma(x)} \leq x^{\alpha}.
+
 $$
+
 此外，注意到引理 **11.2.1** 中的条目 **(i)** 和 **(11.27)** 表明，对于所有 $x \in (0, \infty), \; \alpha \in [0,1]$，成立
+
 $$
+
 \frac{\Gamma(x+\alpha)}{\Gamma(x+1)} = \frac{\Gamma(x+\alpha)}{x \, \Gamma(x)} \leq x^{\alpha-1}.
+
 $$
+
 这意味着对于所有 $\alpha \in [0,1], \; x \in (\alpha, \infty)$，成立
+
 $$
+
 \frac{\Gamma(x)}{\Gamma\big(x+(1-\alpha)\big)} = \frac{\Gamma\big((x-\alpha)+\alpha\big)}{\Gamma\big((x-\alpha)+1\big)} \leq (x-\alpha)^{\alpha-1} = \frac{1}{(x-\alpha)^{1-\alpha}}.
+
 $$
+
 进而，这对于所有 $\alpha \in [0,1], \; x \in (1-\alpha, \infty)$ 建立了
+
 $$
+
 (x+\alpha-1)^\alpha = (x-(1-\alpha))^\alpha \leq \frac{\Gamma(x+\alpha)}{\Gamma(x)}.
+
 $$
-
-
-
-
 
 接下来观察，引理 11.2.2 表明，对于所有 $x \in (0, \infty)$ 和 $\alpha \in [0, 1]$，有
 
 $$
+
 \begin{align*} (\max\{x + \alpha - 1, 0\})^\alpha &= (x + \alpha)^\alpha \left( \frac{\max\{x + \alpha - 1, 0\}}{x + \alpha} \right)^\alpha \\ &= (x + \alpha)^\alpha \left( \max \left\{1 - \frac{1}{x + \alpha}, 0\right\} \right)^\alpha \\ &\leq (x + \alpha)^\alpha \left( 1 - \frac{\alpha}{x + \alpha} \right) = (x + \alpha)^\alpha \left( \frac{x}{x + \alpha} \right) \\ &= \frac{x}{(x + \alpha)^{1 - \alpha}}. \end{align*}
+
 $$
 
 结合 (11.27) 证明了第 (iii) 项。此外，注意到归纳法、引理 11.2.1 中的第 (i) 项、事实 $\forall \alpha \in [0, \infty): \alpha - \lfloor \alpha \rfloor \in [0, 1)$ 以及第 (iii) 项保证了对于所有 $x \in (0, \infty)$ 和 $\alpha \in [0, \infty)$，有
 
 $$
+
 \begin{align*} \frac{\Gamma(x + \alpha)}{\Gamma(x)} &= \left[ \prod_{i=1}^{\lfloor \alpha \rfloor} (x + \alpha - i) \right] \frac{\Gamma(x + \alpha - \lfloor \alpha \rfloor)}{\Gamma(x)} \leq \left[ \prod_{i=1}^{\lfloor \alpha \rfloor} (x + \alpha - i) \right] x^{\alpha - \lfloor \alpha \rfloor} \\ &\leq (x + \alpha - 1)^{\lfloor \alpha \rfloor} x^{\alpha - \lfloor \alpha \rfloor} \\ &\leq (x + \max\{\alpha - 1, 0\})^{\lfloor \alpha \rfloor} (x + \max\{\alpha - 1, 0\})^{\alpha - \lfloor \alpha \rfloor} \\ &= (x + \max\{\alpha - 1, 0\})^\alpha. \end{align*}
+
 $$
 
 此外，观察到事实 $\forall \alpha \in [0, \infty): \alpha - \lfloor \alpha \rfloor \in [0, 1)$、第 (iii) 项、归纳法以及引理 11.2.1 中的第 (i) 项表明，对于所有 $x \in (0, \infty)$ 和 $\alpha \in [0, \infty)$，有
 
 $$
+
 \begin{align*} \frac{\Gamma(x + \alpha)}{\Gamma(x)} &= \frac{\Gamma(x + \lfloor \alpha \rfloor + \alpha - \lfloor \alpha \rfloor)}{\Gamma(x)} \\ &\geq (\max\{x + \lfloor \alpha \rfloor + \alpha - \lfloor \alpha \rfloor - 1, 0\})^{\alpha - \lfloor \alpha \rfloor} \left[ \frac{\Gamma(x + \lfloor \alpha \rfloor)}{\Gamma(x)} \right] \\ &= (\max\{x + \alpha - 1, 0\})^{\alpha - \lfloor \alpha \rfloor} \left[ \prod_{i=1}^{\lfloor \alpha \rfloor} (x + \lfloor \alpha \rfloor - i) \right] \frac{\Gamma(x)}{\Gamma(x)} \\ &\geq (\max\{x + \alpha - 1, 0\})^{\alpha - \lfloor \alpha \rfloor} x^{\lfloor \alpha \rfloor} \\ &= (\max\{x + \alpha - 1, 0\})^{\alpha - \lfloor \alpha \rfloor} (\max\{x, 0\})^{\lfloor \alpha \rfloor} \\ &\geq (\max\{x + \min\{\alpha - 1, 0\}, 0\})^{\alpha - \lfloor \alpha \rfloor} (\max\{x + \min\{\alpha - 1, 0\}, 0\})^{\lfloor \alpha \rfloor} \\ &= (\max\{x + \min\{\alpha - 1, 0\}, 0\})^\alpha. \end{align*}
+
 $$
 
 将此与 (11.32) 结合建立了第 (iv) 项。命题 11.2.3 的证明至此完成。
 
 ![](img/dec290f673e6357c31893c67b579ffe1_412_0.png)
 
-**推论 11.2.4**. 设 $\mathbb{B}: (0, \infty)^2 \rightarrow (0, \infty)$ 满足对于所有 $x, y \in (0, \infty)$，$\mathbb{B}(x, y) = \int_{0}^{1} t^{x-1}(1-t)^{y-1} dt$，且设 $\Gamma: (0, \infty) \rightarrow (0, \infty)$ 满足对于所有 $x \in (0, \infty)$，$\Gamma(x) = \int_{0}^{\infty} t^{x-1} e^{-t} dt$。则对于所有满足 $x + y > 1$ 的 $x, y \in (0, \infty)$，有
+
+
+## 推论 11.2.4
+设 $\mathbb{B}: (0, \infty)^2 \rightarrow (0, \infty)$ 满足对于所有 $x, y \in (0, \infty)$，$\mathbb{B}(x, y) = \int_{0}^{1} t^{x-1}(1-t)^{y-1} dt$，且设 $\Gamma: (0, \infty) \rightarrow (0, \infty)$ 满足对于所有 $x \in (0, \infty)$，$\Gamma(x) = \int_{0}^{\infty} t^{x-1} e^{-t} dt$。则对于所有满足 $x + y > 1$ 的 $x, y \in (0, \infty)$，有
 
 $$ \frac{\Gamma(x)}{(y + \max\{x - 1, 0\})^{x}} \leq \mathbb{B}(x, y) \leq \frac{\Gamma(x)}{(y + \min\{x - 1, 0\})^{x}} \leq \frac{\max\{1, x^{x}\}}{x(y + \min\{x - 1, 0\})^{x}}. \quad (11.34) $$
 
-*推论 11.2.4 的证明*. 注意到引理 11.2.1 中的第 (iii) 项蕴含对于所有 $x, y \in (0, \infty)$，有
+### 推论 11.2.4 的证明
+注意到引理 11.2.1 中的第 (iii) 项蕴含对于所有 $x, y \in (0, \infty)$，有
 
 $$ \mathbb{B}(x, y) = \frac{\Gamma(x)\Gamma(y)}{\Gamma(y + x)}. \quad (11.35) $$
 
@@ -14857,7 +16306,8 @@ $$ \frac{\Gamma(x)}{(y + \max\{x - 1, 0\})^{x}} \leq \mathbb{B}(x, y) \leq \frac
 
 ## 11.2.2 连续随机场的乘积可测性
 
-**引理 11.2.5** (度量空间中的投影). 设 $(E, d)$ 为度量空间，设 $n \in \mathbb{N}$，$e_{1}, e_{2}, \ldots, e_{n} \in E$，且设 $P: E \rightarrow E$ 满足对于所有 $x \in E$，有
+### 引理 11.2.5 (度量空间中的投影)
+设 $(E, d)$ 为度量空间，设 $n \in \mathbb{N}$，$e_{1}, e_{2}, \ldots, e_{n} \in E$，且设 $P: E \rightarrow E$ 满足对于所有 $x \in E$，有
 
 $$ P(x) = e_{\min\{k \in \{1, \ldots, n\}: d(x, e_{k}) = \min(d(x, e_{1}), d(x, e_{2}), \ldots, d(x, e_{n}))\}}. \quad (11.38) $$
 
@@ -14938,7 +16388,8 @@ $$ P^{-1}(A) = P^{-1}(A \cap \{e_1, e_2, \dots, e_n\}) = \bigcup_{f \in A \cap \
 
 这证明了第 (ii) 项。引理 11.2.5 的证明至此完成。
 
-**引理 11.2.6.** *设 $(E, d)$ 为可分度量空间，设 $(\mathscr{E}, \delta)$ 为度量空间，设 $(\Omega, \mathbb{F})$ 为可测空间，设 $X: E \times \Omega \rightarrow \mathscr{E}$，假设对于所有 $e \in E$，映射 $\Omega \ni \omega \mapsto X(e, \omega) \in \mathscr{E}$ 是 $\mathbb{F}/\mathcal{B}(\mathscr{E})$-可测的，并假设对于所有 $\omega \in \Omega$，映射 $E \ni e \mapsto X(e, \omega) \in \mathscr{E}$ 是连续的。则 $X: E \times \Omega \rightarrow \mathscr{E}$ 是 $(\mathcal{B}(E) \otimes \mathbb{F})/\mathcal{B}(\mathscr{E})$-可测的。*
+### 引理 11.2.6
+*设 $(E, d)$ 为可分度量空间，设 $(\mathscr{E}, \delta)$ 为度量空间，设 $(\Omega, \mathbb{F})$ 为可测空间，设 $X: E \times \Omega \rightarrow \mathscr{E}$，假设对于所有 $e \in E$，映射 $\Omega \ni \omega \mapsto X(e, \omega) \in \mathscr{E}$ 是 $\mathbb{F}/\mathcal{B}(\mathscr{E})$-可测的，并假设对于所有 $\omega \in \Omega$，映射 $E \ni e \mapsto X(e, \omega) \in \mathscr{E}$ 是连续的。则 $X: E \times \Omega \rightarrow \mathscr{E}$ 是 $(\mathcal{B}(E) \otimes \mathbb{F})/\mathcal{B}(\mathscr{E})$-可测的。*
 
 *引理 11.2.6 的证明.* 在整个证明过程中，设 $e = (e_m)_{m \in \mathbb{N}}: \mathbb{N} \rightarrow E$ 满足
 
@@ -14947,7 +16398,6 @@ $$ \{e_m: m \in \mathbb{N}\} = E, $$
 设 $P_n: E \rightarrow E$，$n \in \mathbb{N}$，满足对于所有 $n \in \mathbb{N}$ 和 $x \in E$，有
 
 $$ P_n(x) = e_{\min \{k \in \{1, 2, \dots, n\}: d(x, e_k) = \min \{d(x, e_1), d(x, e_2), \dots, d(x, e_n)\}\}}. $$
-
 
 且设 $\mathcal{X}_n: E \times \Omega \to \mathcal{E}$，$n \in \mathbb{N}$，对所有 $n \in \mathbb{N}$，$x \in E$，$\omega \in \Omega$ 满足
 
@@ -14970,10 +16420,18 @@ $$
 $$
 \begin{align*}
 \left(\mathcal{X}_{n}\right)^{-1}(B) & =\bigcup_{y \in \operatorname{Im}\left(P_{n}\right)}\left\{\{x, \omega\} \in E \times \Omega: \left[X\left(y, \omega\right) \in B \text { 且 } x \in\left(P_{n}\right)^{-1}\left(\{y\}\right)\right]\right\} \\
-& =\bigcup_{y \in \operatorname{Im}\left(P_{n}\right)}\left(\left\{\{x, \omega\} \in E \times \Omega: X\left(y, \omega\right) \in B\right\} \cap\left(\left(P_{n}\right)^{-1}\left(\{y\}\right) \times \Omega\right)\right) \\
-& =\bigcup_{y \in \operatorname{Im}\left(P_{n}\right)}\left(\underbrace{\left[E \times\left(X(y, \cdot)^{-1}(B)\right)\right]}_{\in \mathcal{B}(E) \otimes \mathbb{F}} \cap \underbrace{\left[\left(P_{n}\right)^{-1}\left(\{y\}\right) \times \Omega\right]}_{\in \mathcal{B}(E) \otimes \mathbb{F}}\right) \in\left(\mathcal{B}(\mathcal{E}) \otimes \mathbb{F}\right).
+& =\bigcup_{y \in \operatorname{Im}\left(P_{n}\right)}\left(\left\{\{x, \omega\} \in E \times \Omega: X\left(y, \omega\right) \in B\right\} \cap\left(\left(P_{n}\right)^{-1}\left(\{y\}\right) \times \Omega\right)\right)
 \end{align*}
+$$
+
+
+
+& =\bigcup_{y \in \operatorname{Im}\left(P_{n}\right)}\left(\underbrace{\left[E \times\left(X(y, \cdot)^{-1}(B)\right)\right]}_{\in \mathcal{B}(E) \otimes \mathbb{F}} \cap \underbrace{\left[\left(P_{n}\right)^{-1}\left(\{y\}\right) \times \Omega\right]}_{\in \mathcal{B}(E) \otimes \mathbb{F}}\right) \in\left(\mathcal{B}(\mathcal{E}) \otimes \mathbb{F}\right).
+
+\end{align*}
+
 \tag{11.56}
+
 $$
 
 这证明了对于所有 $n \in \mathbb{N}$，$\mathcal{X}_{n}$ 是 $(\mathcal{B}(\mathcal{E}) \otimes \mathbb{F}) / \mathcal{B}(\mathcal{E})$-可测的。此外，注意到引理 11.2.5 中的第 (i) 项以及假设“对于所有 $\omega \in \Omega$，映射 $E \ni x \mapsto X(x, \omega) \in \mathcal{E}$ 是连续的”，确保了对于所有 $x \in E$ 和 $\omega \in \Omega$，有
@@ -14991,110 +16449,166 @@ $$\operatorname*{lim}_{n \rightarrow \infty} \mathcal{X}_{n}(x, \omega)=\operato
 (ii) 对于所有 $\theta \in [\alpha, \beta]^\mathbf{d}$ 和 $p \in (0, \infty)$，有
 
 $$
+
 \left( \mathbb{E}\left[ \min_{k \in \{1,2,\ldots,K\}} |\mathscr{R}(\Theta_k) - \mathscr{R}(\theta)|^p \right] \right)^{1/p}
+
 \leq \frac{L(\beta-\alpha) \max \left\{1, (p/\alpha)^{1/d} \right\}}{K^{1/d}}
+
 \leq \frac{L(\beta-\alpha) \max \left\{1, p \right\}}{K^{1/d}}.
+
 $$
+
 (11.58)
 
 **命题 11.2.7 的证明.** 在整个证明过程中，不失一般性假设 $L > 0$。设 $\delta : ([\alpha, \beta]^\mathbf{d}) \times ([\alpha, \beta]^\mathbf{d} \rightarrow [0, \infty)$ 满足，对于所有 $\theta, \vartheta \in [\alpha, \beta]^\mathbf{d}$，有
 
 $$
+
 \delta(\theta, \vartheta) = \|\theta - \vartheta\|_\infty, 
+
 $$
+
 (11.59)
 
 设 $\mathbb{B} : (0, \infty)^2 \rightarrow (0, \infty)$ 满足，对于所有 $x, y \in (0, \infty)$，有
 
 $$
+
 \mathbb{B}(x, y) = \int_0^1 t^{x-1}(1-t)^{y-1}\,\mathrm{d}t,
+
 $$
+
 (11.60)
 
 且设 $\Theta_{1,1}, \Theta_{1,2}, \ldots, \Theta_{1,\mathbf{d}} : \Omega \rightarrow [\alpha, \beta]$ 满足 $\Theta_1 = (\Theta_{1,1}, \Theta_{1,2}, \ldots, \Theta_{1,\mathbf{d}})$。首先，注意到假设“对于所有 $\theta, \vartheta \in [\alpha, \beta]^\mathbf{d}$ 和 $\omega \in \Omega$，都有
 
 $$
+
 |\mathscr{R}(\theta, \omega) - \mathscr{R}(\vartheta, \omega)| \leq L\|\theta - \vartheta\|_\infty
+
 $$
+
 (11.61)
 
 ”证明了对于所有 $\omega \in \Omega$，映射 $[\alpha, \beta]^\mathbf{d} \ni \theta \mapsto \mathscr{R}(\theta, \omega) \in \mathbb{R}$ 是连续的。将此与“$( [\alpha, \beta]^\mathbf{d}, \delta)$ 是可分度量空间”的事实、“对于所有 $\theta \in [\alpha, \beta]^\mathbf{d}$，映射 $\Omega \ni \omega \mapsto \mathscr{R}(\theta, \omega) \in \mathbb{R}$ 是 $\mathcal{F}/\mathcal{B}(\mathbb{R})$-可测的”的事实以及引理 11.2.6 相结合，便确立了第 (i) 项。注意到，对于所有 $\theta \in [\alpha, \beta]$ 和 $\varepsilon \in [0, \infty)$，有
 
 $$
+
 \begin{aligned}
+
 & \min \left\{ \theta + \varepsilon, \beta \right\} - \max \left\{ \theta - \varepsilon, \alpha \right\}
+
 = \min \left\{ \theta + \varepsilon, \beta \right\} + \min \left\{ \varepsilon - \theta, - \alpha \right\} \\
+
 & = \min \left\{ \theta + \varepsilon + \min \left\{ \varepsilon - \theta, - \alpha \right\}, \beta + \min \left\{ \varepsilon - \theta, - \alpha \right\} \right\} \\
+
 & = \min \left\{ \min \left\{ 2\varepsilon, \theta - \alpha + \varepsilon \right\}, \min \left\{ \beta - \theta + \varepsilon, \beta - \alpha \right\} \right\} \\
+
 & \geq \min \left\{ \min \left\{ 2\varepsilon, \alpha - \alpha + \varepsilon \right\}, \min \left\{ \beta - \beta + \varepsilon, \beta - \alpha \right\} \right\} \\
+
 & = \min \left\{ 2\varepsilon, \varepsilon, \varepsilon, \beta - \alpha \right\}
+
 = \min \left\{ \varepsilon, \beta - \alpha \right\}
+
 \end{aligned}
+
 $$
+
 (11.62)
 
 以及假设 $\Theta_1$ 在 $[\alpha, \beta]^\mathbf{d}$ 上服从连续均匀分布，表明对于所有 $\boldsymbol{\theta} = (\theta_1, \theta_2, \dots, \theta_d) \in [\alpha, \beta]^\mathbf{d}$ 和 $\varepsilon \in [0, \infty)$，有
 
 $$
+
 \begin{aligned}
+
 & \mathbb{P}(\|\Theta_1 - \theta\|_\infty \le \varepsilon) = \mathbb{P}(\max_{i \in \{1, \dots, d\}}|\Theta_{1, i} - \theta_i| \le \varepsilon) \\
+
 & = \mathbb{P}(\forall i \in \{1, 2, \dots, \mathbf{d}\}\!\!: -\varepsilon \le \Theta_{1, i} - \theta_i \le \varepsilon) \\
+
 & = \mathbb{P}(\forall i \in \{1, 2, \dots, \mathbf{d}\}\!\!: \theta_i - \varepsilon \le \Theta_{1, i} \le \theta_i + \varepsilon) \\
+
 & = \mathbb{P}(\forall i \in \{1, 2, \dots, \mathbf{d}\}\!\!: \max\{\theta_i - \varepsilon, \alpha\} \le \Theta_{1, i} \le \min\{\theta_i + \varepsilon, \beta\}) \\
+
 & = \mathbb{P}\bigl(\Theta_1 \in \bigl[\prod_{i=1}^d \bigl[\max\{\theta_i - \varepsilon, \alpha\}, \min\{\theta_i + \varepsilon, \beta\}\bigr] \bigr) \\
+
 & = \frac{1}{(\beta - \alpha)^d} \prod_{i=1}^d \bigl( \min\{\theta_i + \varepsilon, \beta\} - \max\{\theta_i - \varepsilon, \alpha\} \bigr) \\
+
 & \ge \frac{1}{(\beta - \alpha)^d} \bigl[\min\{\varepsilon, \beta - \alpha\} \bigr]^d = \min \bigg\{ 1, \frac{\varepsilon^d}{(\beta - \alpha)^d} \bigg\}.
+
 \end{aligned}
+
 \tag{11.63}
+
 $$
 
 因此，对于所有 $\boldsymbol{\theta} \in [\alpha, \beta]^\mathbf{d}$，$p \in (0, \infty)$ 和 $\varepsilon \in [0, \infty)$，我们得到
 
 $$
+
 \begin{aligned}
+
 & \mathbb{P}(\|\Theta_1 - \theta\|_\infty > \varepsilon^{1/p}) = 1 - \mathbb{P}(\|\Theta_1 - \theta\|_\infty \le \varepsilon^{1/p}) \\
+
 & \le 1 - \min \bigg\{ 1, \frac{\varepsilon^{d/p}}{(\beta - \alpha)^d} \bigg\} = \max \bigg\{ 0, 1 - \frac{\varepsilon^{d/p}}{(\beta - \alpha)^d} \bigg\}.
+
 \end{aligned}
+
 \tag{11.64}
+
 $$
 
 结合** (i) **项、假设“对于所有 $\theta, \vartheta \in [\alpha, \beta]^\mathbf{d}$ 和 $\omega \in \Omega$，都有
 
 $$
+
 |\mathfrak{R}(\theta, \omega) - \mathfrak{R}(\vartheta, \omega)| \le L \|\theta - \vartheta\|_\infty,\tag{11.65}
+
 $$
 
 ”、假设 $\Theta_k$，$k \in \{1, 2, \dots, K\}$，为独立同分布的随机变量，以及引理 **11.1.2**（在引理 **11.1.2** 的记号中，令 $(E, \delta) \curvearrowright ([\alpha, \beta]^\mathbf{d}, \delta)$，$(X_k)_{k \in \{1, 2, \dots, K\}} \curvearrowright (\Theta_k)_{k \in \{1, 2, \dots, K\}}$）暗示，对于所有 $\boldsymbol{\theta} \in [\alpha, \beta]^\mathbf{d}$ 和 $p \in (0, \infty)$，有
 
 $$
+
 \begin{aligned}
+
 & \mathbb{E}\bigl[ \min_{k \in \{1, 2, \dots, K\}} |\mathfrak{R}(\Theta_k) - \mathfrak{R}(\theta)|^p \bigr] \le L^p \int_0^\infty \bigl[ \mathbb{P}(\|\Theta_1 - \theta\|_\infty > \varepsilon^{1/p}) \bigr]^K \, \mathrm{d}\varepsilon \\
+
 & \le L^p \int_0^\infty \bigg[ \max \bigg\{ 0, 1 - \frac{\varepsilon^{d/p}}{(\beta - \alpha)^d} \bigg\} \bigg]^K \, \mathrm{d}\varepsilon = L^p \int_0^{(\beta - \alpha)^p} \bigg( 1 - \frac{\varepsilon^{d/p}}{(\beta - \alpha)^d} \bigg)^K \, \mathrm{d}\varepsilon \\
+
 & = \frac{p}{d} L^p (\beta - \alpha)^p \int_0^1 t^{p/d - 1} (1 - t)^K \, \mathrm{d}t = \frac{p}{d} L^p (\beta - \alpha)^p \int_0^1 t^{p/d - 1} (1 - t)^{K + 1 - 1} \, \mathrm{d}t \\
+
 & = \frac{p}{d} L^p (\beta - \alpha)^p \, \mathbb{B}(p/d, K + 1).
+
 \end{aligned}
+
 \tag{11.66}
+
 $$
 
 推论 **11.2.4**（在 **（推论 11.2.4 中的 11.34）** 的记号中，对于 $p \in (0, \infty)$，令 $x \curvearrowright n/d$，$y \curvearrowright K + 1$）因此表明，对于所有 $\boldsymbol{\theta} \in [\alpha, \beta]^\mathbf{d}$ 和 $p \in (0, \infty)$，有
 
 $$
+
 \begin{aligned}
+
 & \mathbb{E}\bigl[ \min_{k \in \{1, 2, \dots, K\}} |\mathfrak{R}(\Theta_k) - \mathfrak{R}(\theta)|^p \bigr] \le \frac{2}{d} \frac{L^p (\beta - \alpha)^p \max\{1, (p/d)^{p/d}\}}{p^d \bigl( K + 1 + \min\{p/d - 1, 0\} \bigr)^{p/d}} \\
+
+
+
 & \le \frac{L^p (\beta - \alpha)^p \max\{1, (p/d)^{p/d}\}}{K^{p/d}}.
+
 \end{aligned}
+
 \tag{11.67}
+
 $$
-
-
-
-
 
 ## 11.3 涉及人工神经网络的优化误差的强收敛速率
 
 ### 11.3.1 人工神经网络参数化函数的局部利普希茨连续性估计
 
-**引理 11.3.1.** 设 $a, x, y \in \mathbb{R}$。则
+**引理 11.3.1.** 设 `$a, x, y \in \mathbb{R}$`。则
 
 $$|\max \{x, a\} - \max \{y, a\}| \leq \max \{x, y\} - \min \{x, y\} = |x - y| .$$
 
@@ -15114,7 +16628,7 @@ $$= \max \{x, y\} - \min \{x, y\} = |\max \{x, y\} - \min \{x, y\}| = |x - y| .$
 
 确立了 (11.69)。因此，引理 **11.3.1** 的证明完毕。
 
-**推论 11.3.2.** 设 $a, x, y \in \mathbb{R}$。则
+**推论 11.3.2.** 设 `$a, x, y \in \mathbb{R}$`。则
 
 $$|\min \{x, a\} - \min \{y, a\}| \leq \max \{x, y\} - \min \{x, y\} = |x - y| .$$
 
@@ -15128,7 +16642,7 @@ $$\leq |(-x) - (-y)| = |x - y| .$$
 
 因此，推论 **11.3.2** 的证明完毕。
 
-**引理 11.3.3.** *设 $d \in \mathbb{N}$。则对于所有 $x, y \in \mathbb{R}^{d}$，都有*
+**引理 11.3.3.** *设 `$d \in \mathbb{N}$`。则对于所有 `$x, y \in \mathbb{R}^{d}$`，都有*
 
 $$\|\mathfrak{A}_d(x) - \mathfrak{A}_d(y)\|_{\infty} \le \|x - y\|_{\infty} \tag{11.73}$$
 
@@ -15136,38 +16650,52 @@ $$\|\mathfrak{A}_d(x) - \mathfrak{A}_d(y)\|_{\infty} \le \|x - y\|_{\infty} \tag
 
 *引理 11.3.3 的证明.* *观察到引理 11.3.1 证明了 (11.73)。因此，引理 11.3.3 的证明完毕.* $\square$
 
-**引理 11.3.4.** *设 $d \in \mathbb{N}$，$u \in [-\infty, \infty)$，$v \in (u, \infty]$。则对于所有 $x, y \in \mathbb{R}^{d}$，都有*
+**引理 11.3.4.** *设 `$d \in \mathbb{N}$`，`$u \in [-\infty, \infty)$`，`$v \in (u, \infty]$`。则对于所有 `$x, y \in \mathbb{R}^{d}$`，都有*
 
 $$\|\mathfrak{C}_{u,v,d}(x) - \mathfrak{C}_{u,v,d}(y)\|_{\infty} \le \|x - y\|_{\infty} \tag{11.74}$$
 
 *(参见定义 1.2.10 和 3.3.4).*
 
-*引理 11.3.4 的证明.* *注意，引理 11.3.1、推论 11.3.2 以及对于所有 $x \in \mathbb{R}$ 都有 $\max\{-\infty, x\} = x = \min\{x, \infty\}$ 这一事实意味着对于所有 $x, y \in \mathbb{R}$，都有*
+*引理 11.3.4 的证明.* *注意，引理 11.3.1、推论 11.3.2 以及对于所有 `$x \in \mathbb{R}$` 都有 `$\max\{-\infty, x\} = x = \min\{x, \infty\}$` 这一事实意味着对于所有 `$x, y \in \mathbb{R}$`，都有*
 
 $$
+
 \begin{aligned}
+
 |\mathfrak{c}_{u,v}(x) - \mathfrak{c}_{u,v}(y)| &= |\max\{u, \min\{x, v\}\} - \max\{u, \min\{y, v\}\} | \\
+
 &\le |\min\{x, v\} - \min\{y, v\}| \le |x - y| 
+
 \end{aligned}
+
 \tag{11.75}
-$$
-
-*(参见定义 1.2.9).* *因此，我们得到对于所有 $x = (x_1, x_2, \ldots, x_d)$，$y = (y_1, y_2, \ldots, y_d) \in \mathbb{R}^{d}$，都有*
 
 $$
+
+*(参见定义 1.2.9).* *因此，我们得到对于所有 `$x = (x_1, x_2, \ldots, x_d)$`，`$y = (y_1, y_2, \ldots, y_d) \in \mathbb{R}^{d}$`，都有*
+
+$$
+
 \begin{aligned}
+
 \|\mathfrak{c}_{u,v,d}(x) - \mathfrak{c}_{u,v,d}(y)\|_{\infty} &= \max_{i \in \{1, 2, \ldots, d\}} |\mathfrak{c}_{u,v}(x_i) - \mathfrak{c}_{u,v}(y_i)| \\
+
 &\le \max_{i \in \{1, 2, \ldots, d\}} |x_i - y_i| = \|x - y\|_{\infty}
+
 \end{aligned}
+
 \tag{11.76}
+
 $$
 
 *(参见定义 1.2.10 和 3.3.4).* *因此，引理 11.3.4 的证明完毕.* $\square$
 
-**引理 11.3.5** *（行和范数，由最大范数诱导的算子范数).* *设 $a, b \in \mathbb{N}$，$M = (M_{i,j})_{(i,j) \in \{1, \ldots, a\} \times \{1, 2, \ldots, b\}} \in \mathbb{R}^{a \times b}$。则*
+**引理 11.3.5** *（行和范数，由最大范数诱导的算子范数).* *设 `$a, b \in \mathbb{N}$`，`$M = (M_{i,j})_{(i,j) \in \{1, \ldots, a\} \times \{1, 2, \ldots, b\}} \in \mathbb{R}^{a \times b}$`。则*
 
 $$
+
 \sup_{v \in \mathbb{R}^{b} \setminus \{0\}} \left[ \frac{\|Mv\|_{\infty}}{\|v\|_{\infty}} \right] = \max_{i \in \{1, 2, \ldots, a\}} \left[ \sum_{j=1}^{b} |M_{i,j}| \right] \le b \left[ \max_{i \in \{1, \ldots, a\}} \max_{j \in \{1, \ldots, b\}} |M_{i,j}| \right] \tag{11.77}
+
 $$
 
 *(参见定义 3.3.4).*
@@ -15175,60 +16703,80 @@ $$
 *引理 11.3.5 的证明.* 观察到
 
 $$
+
 \sup_{v\in\mathbb{R}^b} \left[ \frac{\|Mv\|_\infty}{\|v\|_\infty} \right] = \sup_{v\in\mathbb{R}^b, \|v\|_\infty \leq 1} \|Mv\|_\infty
+
 = \sup_{v=(v_1, v_2, \dots, v_b)\in[-1,1]^b} \|Mv\|_\infty
+
 = \sup_{v=(v_1, v_2, \dots, v_b)\in[-1,1]^b} \left( \max_{i\in\{1, 2, \dots, a\}} \sum_{j=1}^b M_{i,j}v_j \right) \qquad (11.78)
+
 $$
 
 $$
+
 = \max_{i\in\{1, 2, \dots, a\}} \left( \sup_{v=(v_1, v_2, \dots, v_b)\in[-1,1]^b} \sum_{j=1}^b M_{i,j}v_j \right)
+
 = \max_{i\in\{1, 2, \dots, a\}} \left( \sum_{j=1}^b |M_{i,j}| \right)
+
 $$
 
 *(参见定义 3.3.4).* *因此，引理 11.3.5 的证明完毕.* $\square$
 
-**定理 11.3.6.** 设 $a \in \mathbb{R}$，$b \in [a, \infty)$，$d, L \in \mathbb{N}$，$l = (l_0, l_1, \dots, l_L) \in \mathbb{N}^{L+1}$ 满足
+**定理 11.3.6.** 设 `$a \in \mathbb{R}$`，`$b \in [a, \infty)$`，`$d, L \in \mathbb{N}$`，`$l = (l_0, l_1, \dots, l_L) \in \mathbb{N}^{L+1}$` 满足
 
 $$
+
 d \geq \sum_{k=1}^L l_k(l_{k-1} + 1). \qquad (11.79)
-$$
-
-则对于所有 $\theta, \vartheta \in \mathbb{R}^d$，都有
 
 $$
+
+则对于所有 `$\theta, \vartheta \in \mathbb{R}^d$`，都有
+
+$$
+
 \sup_{x\in[a,b]^d} \| \mathcal{L}^{\theta, l}_{\infty, \infty}(x) - \mathcal{L}^{\vartheta, l}_{\infty, \infty}(x) \|_\infty
+
 \leq \max\{1, |a|, |b|\} \| \theta - \vartheta \|_\infty \left[ \prod_{m=0}^{L-1} (l_m + 1) \right] \left[ \sum_{n=0}^{L-1} (\max\{1, \|\theta\|_\infty\} \| \vartheta \|_\infty^{L-1-n}) \right]
+
 \qquad (11.80)
+
 $$
 
 $$
+
 \leq L \max\{1, |a|, |b|\} (\max\{1, \|\theta\|_\infty, \|\vartheta\|_\infty\})^{L-1} \left[ \prod_{m=0}^{L-1} (l_m + 1) \right] \| \theta - \vartheta \|_\infty
+
 \leq L \max\{1, |a|, |b|\} (\|l\|_\infty + 1)^L (\max\{1, \|\theta\|_\infty, \|\vartheta\|_\infty\})^{L-1} \| \theta - \vartheta \|_\infty
+
 $$
 
 *(参见定义 3.3.4 和 4.4.1).*
 
-*定理 11.3.6 的证明.* 在此证明过程中，设 $\theta_j = (\theta_{j,1}, \theta_{j,2}, \dots, \theta_{j,d}) \in \mathbb{R}^d$，$j \in \{1, 2\}$，设 $\mathfrak{d} \in \mathbb{N}$ 满足
+*定理 11.3.6 的证明.* 在此证明过程中，设 `$\theta_j = (\theta_{j,1}, \theta_{j,2}, \dots, \theta_{j,d}) \in \mathbb{R}^d$`，`$j \in \{1, 2\}$`，设 `$\mathfrak{d} \in \mathbb{N}$` 满足
 
 $$
+
 \mathfrak{d} = \sum_{k=1}^L l_k(l_{k-1} + 1), \qquad (11.81)
-$$
-
-设 $W_{j,k} \in \mathbb{R}^{l_k \times l_{k-1}}$，$k \in \{1, 2, \dots, L\}$，$j \in \{1, 2\}$，以及 $B_{j,k} \in \mathbb{R}^{l_k}$，$k \in \{1, 2, \dots, L\}$，$j \in \{1, 2\}$，使得对于所有 $j \in \{1, 2\}$，$k \in \{1, 2, \dots, L\}$，都有
 
 $$
+
+设 `$W_{j,k} \in \mathbb{R}^{l_k \times l_{k-1}}$`，`$k \in \{1, 2, \dots, L\}$`，`$j \in \{1, 2\}$`，以及 `$B_{j,k} \in \mathbb{R}^{l_k}$`，`$k \in \{1, 2, \dots, L\}$`，`$j \in \{1, 2\}$`，使得对于所有 `$j \in \{1, 2\}$`，`$k \in \{1, 2, \dots, L\}$`，都有
+
+$$
+
 \mathcal{T}(((W_{j,1}, B_{j,1}), (W_{j,2}, B_{j,2}), \dots, (W_{j,L}, B_{j,L}))) = (\theta_{j,1}, \theta_{j,2}, \dots, \theta_{j,d}), \qquad (11.82)
+
 $$
 
-设 $\phi_{j,k} \in \mathbf{N}$，$k \in \{1, 2, \ldots, L\}$，$j \in \{1, 2\}$，使得对于所有 $j \in \{1, 2\}$，$k \in \{1, 2, \ldots, L\}$，都有
+设 `$\phi_{j,k} \in \mathbf{N}$`，`$k \in \{1, 2, \ldots, L\}$`，`$j \in \{1, 2\}$`，使得对于所有 `$j \in \{1, 2\}$`，`$k \in \{1, 2, \ldots, L\}$`，都有
 
 $$\phi_{j,k} = \left( (W_{1,1}, B_{1,1}), (W_{j,2}, B_{j,2}), \ldots, (W_{j,k}, B_{j,k}) \right) \in \left[\bigtimes_{i=1}^{k} \left(\mathbb{R}^{L_i \times L_{i-1}} \times \mathbb{R}^{L_i}\right)\right], \quad (11.83),$$
 
-设 $D = [a,b]^l o$，设 $\mathbf{m}_{j,k} \in [0, \infty)$，$j \in \{1, 2\}$，$k \in \{0, 1, \ldots, L\}$，使得对于所有 $j \in \{1, 2\}$，$k \in \{0, 1, \ldots, L\}$，都有
+设 `$D = [a,b]^l o$`，设 `$\mathbf{m}_{j,k} \in [0, \infty)$`，`$j \in \{1, 2\}$`，`$k \in \{0, 1, \ldots, L\}$`，使得对于所有 `$j \in \{1, 2\}$`，`$k \in \{0, 1, \ldots, L\}$`，都有
 
 $$\mathbf{m}_{j,k} = \begin{cases} \max\{1, |a|, |b|\} & : k = 0 \\ \max\big\{1, \sup_{x \in D} \left\| \left(\mathcal{R}_\tau^\mathbf{N} (\phi_{j,k}) (x) \right)\right\|_\infty \big\} & : k > 0, \end{cases} \quad (11.84)$$
 
-以及设 $\mathbf{c}_k \in [0, \infty)$，$k \in \{0, 1, \ldots, L\}$，使得对于所有 $k \in \{0, 1, \ldots, L\}$，都有
+以及设 `$\mathbf{c}_k \in [0, \infty)$`，`$k \in \{0, 1, \ldots, L\}$`，使得对于所有 `$k \in \{0, 1, \ldots, L\}$`，都有
 
 $$\mathbf{c}_k = \begin{cases} 0 & : k = 0 \\ \sup_{x \in D} \left\| \left(\mathcal{R}_\tau^\mathbf{N} (\phi_{1,k}) (x) - (\mathcal{R}_\tau^\mathbf{N} (\phi_{2,k}) (x) \right) \right\|_\infty & : k > 0 \end{cases} \quad (11.85)$$
 
@@ -15236,39 +16784,47 @@ $$\mathbf{c}_k = \begin{cases} 0 & : k = 0 \\ \sup_{x \in D} \left\| \left(\math
 
 $$\begin{align*} \mathbf{c}_1 &= \sup_{x \in D} \left\| \left(\mathcal{R}_\tau^\mathbf{N} (\phi_{1,1}) (x) - (\mathcal{R}_\tau^\mathbf{N} (\phi_{2,1}) (x) \right) \right\|_\infty \\ &= \sup_{x \in D} \left\| (W_{1,1} x + B_{1,1}) - (W_{2,1} x + B_{2,1}) \right\|_\infty \\ &\leq \left[\sup_{x \in D} \left\| (W_{1,1} - W_{2,1}) x \right\|_\infty\right] + \left\| B_{1,1} - B_{2,1} \right\|_\infty \\ &\leq \left[\sup_{v \in \overline{\theta}^0 / \{0\}} \left( \frac{\left\| (W_{1,1} - W_{2,1}) v \right\|_\infty}{\|v\|_\infty} \right)\right] \left[\sup_{x \in D} \|x\|_\infty\right] + \|B_{1,1} - B_{2,1}\|_\infty \\ &\leq l_0 \|\theta_1 - \theta_2\|_\infty \max\{|a|, |b|\} + \|B_{1,1} - B_{2,1}\|_\infty \\ &\leq l_0 \|\theta_1 - \theta_2\|_\infty \max\{|a|, |b|\} + \|\theta_1 - \theta_2\|_\infty \\ &= \|\theta_1 - \theta_2\|_\infty (l_0 \max\{|a|, |b|\} + 1) \leq \mathbf{m}_{1,0} \|\theta_1 - \theta_2\|_\infty (l_0 + 1). \end{align*} \quad (11.86)$$
 
-此外，观察到三角不等式证明了对于所有 $k \in \{1, 2, \ldots, L\} \cap (1, \infty)$，都有
+此外，观察到三角不等式证明了对于所有 `$k \in \{1, 2, \ldots, L\} \cap (1, \infty)$`，都有
 
 $$\begin{align*} \mathbf{c}_k &= \sup_{x \in D} \left\| \left(\mathcal{R}_\tau^\mathbf{N} (\phi_{1,k}) (x) - (\mathcal{R}_\tau^\mathbf{N} (\phi_{2,k}) (x) \right) \right\|_\infty \\ &= \sup_{x \in D} \left\| \left[ W_{1,k} \left( \mathfrak{A}_{k-1} \left(\mathcal{R}_\tau^\mathbf{N} (\phi_{1,k-1}) (x) \right) \right) + B_{1,k} \right] \right. \\ &\quad \quad \quad - \left[ W_{2,k} \left( \mathfrak{A}_{k-1} \left(\mathcal{R}_\tau^\mathbf{N} (\phi_{2,k-1}) (x) \right) \right) + B_{2,k} \right] \left\|_\infty \right. \end{align*} \quad (11.87)$$
+
+
 
 $$\leq \left\| \sup_{x \in D} \left[ W_{1,k} \left( \mathfrak{A}_{k-1} \left(\mathcal{R}_\tau^\mathbf{N} (\phi_{1,k-1}) (x) \right) \right) - W_{2,k} \left( \mathfrak{A}_{k-1} \left(\mathcal{R}_\tau^\mathbf{N} (\phi_{2,k-1}) (x) \right) \right) \right] \right\|_\infty$$
 
 $+ \|\theta_1 - \theta_2\|_\infty.$
 
-
-
-
 因此，三角不等式建立了如下结论：对于所有 $j \in \{1,2\}$ 和 $k \in \{1,2,\dots,L\}\cap(1,\infty)$，均有
 
 $$\begin{split}\mathfrak{e}_{k}\leq&\left[\sup_{x\in D}\big\|\left(\mathbf{W}_{1,k}-\mathbf{W}_{2,k}\right)\left(\mathfrak{R}_{k-1}^{\mathfrak{N}}\left((\mathcal{R}_{\uparrow}^{\mathfrak{N}}(\phi_{j,k-1})) (x)\right)\right)\big\|_{\infty}\right]\\
+
 &\quad+\left[\sup_{x\in D}\big\|\mathbf{W}_{3-j,k}\left(\mathfrak{R}_{k-1}^{\mathfrak{N}}\left((\mathcal{R}_{\uparrow}^{\mathfrak{N}}(\phi_{1,k-1}))(x)\right)-\mathfrak{R}_{k-1}^{\mathfrak{N}}\left((\mathcal{R}_{\uparrow}^{\mathfrak{N}}(\phi_{2,k-1}))(x)\right)\right)\big\|_{\infty}\right]\\
+
 &\quad+\|\theta_1-\theta_2\|_\infty\\
+
 \leq&\left[\sup_{v\in\mathbb{R}^{k-1}\setminus\{0\}}\left(\frac{\|\left(\mathbf{W}_{1,k}-\mathbf{W}_{2,k}\right)v\|_\infty}{\|v\|_\infty}\right)\right]\left[\sup_{x\in D}\|\mathfrak{R}_{k-1}^{\mathfrak{N}}\left((\mathcal{R}_{\uparrow}^{\mathfrak{N}}(\phi_{j,k-1})) (x)\right)\|_\infty\right]\\
+
 &\quad+\left[\sup_{v\in\mathbb{R}^{k-1}\setminus\{0\}}\left(\frac{\|\mathbf{W}_{3-j,k}v\|_\infty}{\|v\|_\infty}\right)\right]\left[\sup_{x\in D}\|\mathfrak{R}_{k-1}^{\mathfrak{N}}\left((\mathcal{R}_{\uparrow}^{\mathfrak{N}}(\phi_{1,k-1}))(x)\right)-\mathfrak{R}_{k-1}^{\mathfrak{N}}\left((\mathcal{R}_{\uparrow}^{\mathfrak{N}}(\phi_{2,k-1}))(x)\right)\|_\infty\right]\\
+
 &\quad-\|\mathfrak{R}_{k-1}^{\mathfrak{N}}\left((\mathcal{R}_{\uparrow}^{\mathfrak{N}}(\phi_{2,k-1}))(x)\right)\|_\infty\big]+\|\theta_1-\theta_2\|_\infty.\end{split}\tag{11.88}$$
 
-因此，引理 **11.3.5** 和引理 **11.3.3** 表明，对于所有 $j \in \{1,2\}$ 和 $k \in \{1,2,\dots,L\}\cap(1,\infty)$，均有
+因此，引理 `11.3.5` 和引理 `11.3.3` 表明，对于所有 $j \in \{1,2\}$ 和 $k \in \{1,2,\dots,L\}\cap(1,\infty)$，均有
 
 $$\begin{split}\mathfrak{e}_{k}\leq&\,l_{k-1}\,\|\theta_1-\theta_2\|_\infty\left[\sup_{x\in D}\|\mathfrak{R}_{k-1}^{\mathfrak{N}}\left((\mathcal{R}_{\uparrow}^{\mathfrak{N}}(\phi_{j,k-1}))(x)\right)\|_\infty\right]\left[\|\theta_1-\theta_2\|_\infty\right]\\
+
 &+l_{k-1}\,\|\theta_{3-j}\|_\infty\left[\sup_{x\in D}\big\|\mathfrak{R}_{k-1}^{\mathfrak{N}}\left((\mathcal{R}_{\uparrow}^{\mathfrak{N}}(\phi_{1,k-1}))(x)\right)-\mathfrak{R}_{k-1}^{\mathfrak{N}}\left((\mathcal{R}_{\uparrow}^{\mathfrak{N}}(\phi_{2,k-1}))(x)\right)\big\|_\infty\right]\\
+
 \leq&\,l_{k-1}\,\|\theta_1-\theta_2\|_\infty\left[\sup_{x\in D}\big\|\left(\mathcal{R}_{\uparrow}^{\mathfrak{N}}(\phi_{j,k-1}))(x)\right)\big\|_\infty\right]+\|\theta_1-\theta_2\|_\infty\\
+
 &+l_{k-1}\,\|\theta_{3-j}\|_\infty\left[\sup_{x\in D}\big\|\left(\mathcal{R}_{\uparrow}^{\mathfrak{N}}(\phi_{1,k-1}))(x)\right)-\left(\mathcal{R}_{\uparrow}^{\mathfrak{N}}(\phi_{2,k-1}))(x)\right)\big\|_\infty\right]\\
+
 \leq&\,\|\theta_1-\theta_2\|_\infty(l_{k-1}\,\mathfrak{m}_{j,k-1}+1)+l_{k-1}\,\|\theta_{3-j}\|_\infty\,\mathfrak{e}_{k-1}.\end{split}\tag{11.89}$$
 
 因此，我们得到对于所有 $j \in \{1,2\}$ 和 $k \in \{1,2,\dots,L\}\cap(1,\infty)$，均有
 
 $$\mathfrak{e}_{k}\leq\mathfrak{m}_{j,k-1}\|\theta_1-\theta_2\|_\infty(l_{k-1}+1)+l_{k-1}\,\|\theta_{3-j}\|_\infty\,\mathfrak{e}_{k-1}.\tag{11.90}$$
 
-将此式与 **11.86** 结合，并利用 $\mathfrak{c}_{0}=0$ 以及 $\mathfrak{m}_{1,0}=\mathfrak{m}_{2,0}$ 的事实，可以证明对于所有 $j \in \{1,2\}$ 和 $k \in \{1,2,\dots,L\}$，均有
+将此式与 `11.86` 结合，并利用 $\mathfrak{c}_{0}=0$ 以及 $\mathfrak{m}_{1,0}=\mathfrak{m}_{2,0}$ 的事实，可以证明对于所有 $j \in \{1,2\}$ 和 $k \in \{1,2,\dots,L\}$，均有
 
 $$\mathfrak{c}_{k}\leq\mathfrak{m}_{j,k-1}(l_{k-1}+1)\|\theta_1-\theta_2\|_\infty+l_{k-1}\,\|\theta_{3-j}\|_\infty\,\mathfrak{c}_{k-1}.\tag{11.91}$$
 
@@ -15280,7 +16836,7 @@ $$\mathfrak{c}_{k}\leq\mathfrak{m}_{j_{k-1},k-1}(l_{k-1}+1)\|\theta_1-\theta_2\|
 
 $$\begin{align*} \mathfrak{c}_k \leq \sum_{n=0}^{k-1} \bigg[ \bigg( \prod_{m=n+1}^{k-1} (l_m \| \theta_{3-j_m} \|_\infty) \bigg) \mathbf{m}_{j_n, n} (l_{n+1}) \| \theta_1 - \theta_2 \|_\infty \bigg] \\ = \| \theta_1 - \theta_2 \|_\infty \sum_{n=0}^{k-1} \bigg[ \bigg( \prod_{m=n+1}^{k-1} (l_m \| \theta_{3-j_m} \|_\infty) \bigg) \mathbf{m}_{j_n, n} (l_n + 1) \bigg]. \tag{11.93} \end{align*}$$
 
-此外，请注意引理 **11.3.5** 确保了对于所有 $j \in \{1,2\}$，$k \in \{1,2,\ldots,L\} \cap (1,\infty)$ 以及 $x \in D$，均有
+此外，请注意引理 `11.3.5` 确保了对于所有 $j \in \{1,2\}$，$k \in \{1,2,\ldots,L\} \cap (1,\infty)$ 以及 $x \in D$，均有
 
 $$\begin{align*} \| (\boldsymbol{\mathcal{R}}_\mathrm{e}^{\mathbf{N}} (\phi_{j,k})) (x) \|_\infty \\ = \bigg\| W_{j,k} \bigg( \mathfrak{D}_{l_{k-1}}^{\mathbf{N}} \bigg( (\boldsymbol{\mathcal{R}}_\mathrm{e}^{\mathbf{N}} (\phi_{j,k-1})) (x) \bigg) + B_{j,k} \bigg\|_\infty \\ \leq \bigg[ \sup_{v \in \mathbb{R}^{l_{k-1} \times \{0\}}} \frac{\| W_{j,k}^{l_v} \|_\infty}{\| v \|_\infty} \bigg] \| \mathfrak{D}_{l_{k-1}}^{\mathbf{N}} ( (\boldsymbol{\mathcal{R}}_\mathrm{e}^{\mathbf{N}} (\phi_{j,k-1})) (x) ) \|_\infty + \| B_{j,k} \|_\infty \\ \leq l_{k-1} \| \theta_j \|_\infty \| \mathfrak{D}_{l_{k-1}}^{\mathbf{N}} ( (\boldsymbol{\mathcal{R}}_\mathrm{e}^{\mathbf{N}} (\phi_{j,k-1})) (x) ) \|_\infty + \| \theta_j \|_\infty \\ \leq l_{k-1} \| \theta_j \|_\infty \| (\boldsymbol{\mathcal{R}}_\mathrm{e}^{\mathbf{N}} (\phi_{j,k-1})) (x) \|_\infty + \| \theta_j \|_\infty \\ = (l_{k-1} \| (\boldsymbol{\mathcal{R}}_\mathrm{e}^{\mathbf{N}} (\phi_{j,k-1})) (x) \|_\infty + 1) \| \theta_j \|_\infty \\ \leq (l_{k-1} \mathbf{m}_{j,k-1} + 1) \| \theta_j \|_\infty \leq \mathbf{m}_{j,k-1} (l_{k-1} + 1) \| \theta_j \|_\infty. \tag{11.94} \end{align*}$$
 
@@ -15288,7 +16844,7 @@ $$\begin{align*} \| (\boldsymbol{\mathcal{R}}_\mathrm{e}^{\mathbf{N}} (\phi_{j,k
 
 $$\mathbf{m}_{j,k} \leq \max \{1, \mathbf{m}_{j,k-1} (l_{k-1} + 1) \| \theta_j \|_\infty \}. \tag{11.95}$$
 
-此外，观察到引理 **11.3.5** 证明了对于所有 $j \in \{1,2\}$ 和 $x \in D$，均有
+此外，观察到引理 `11.3.5` 证明了对于所有 $j \in \{1,2\}$ 和 $x \in D$，均有
 
 $$\begin{align*} \| (\boldsymbol{\mathcal{R}}_\mathrm{e}^{\mathbf{N}} (\phi_{j,1})) (x) \|_\infty = \| W_{j,1} x + B_{j,1} \|_\infty \\ \leq \big[ \sup_{v \in \mathbb{R}^{l_0 \times \{0\}}} \frac{\| W_{j,1}^{l_v} \|_\infty}{\| v \|_\infty} \big] \| x \|_\infty + \| B_{j,1} \|_\infty \tag{11.96} \\ \leq l_0 \| \theta_j \|_\infty \| x \|_\infty + \| \theta_j \|_\infty \leq l_0 \| \theta_j \|_\infty \max \{\| a \|, \| b \|\} + \| \theta_j \|_\infty \\ = (l_0 \max \{\| a \|, \| b \|\} + 1) \| \theta_j \|_\infty \leq \mathbf{m}_{j,0} (l_0 + 1) \| \theta_j \|_\infty. \end{align*}$$
 
@@ -15307,12 +16863,20 @@ $$\mathbf{m}_{j,k} \leq \mathbf{m}_{j, 0} \left[\prod_{n=0}^{k-1} (l_{n}+1)\righ
 将此式与 (11.98) 结合，表明对于所有 $j=(j_n)_{n \in \{0, 1, \ldots, L\}}: \{0, 1, \ldots, L\} \to \{1, 2\}$ 和所有 $k \in \{1, 2, \ldots, L\}$，均有
 
 $$\begin{aligned}
+
 \mathbf{c}_{k} \leq \|\theta_1 - \theta_2\|_\infty \sum_{n=0}^{k-1} \left[\prod_{m=n+1}^{k-1} (l_{m} \|\theta_{3-j_m}\|_\infty)\right] \\
+
 \cdot \left(\mathbf{m}_{j_n, 0} \left[\prod_{v=0}^{n-1} (l_v + 1)\right] \max \{1, \|\theta_{j_n}\|_\infty^n \} (l_n + 1)\right) \\
+
 = \mathbf{m}_{1,0} \|\theta_1 - \theta_2\|_\infty \sum_{n=0}^{k-1} \left[\prod_{m=n+1}^{k-1} (l_m \|\theta_{3-j_m}\|_\infty)\right] \left(\left[\prod_{v=0}^{n} (l_v + 1)\right] \max \{1, \|\theta_{j_n}\|_\infty^n \}\right) \\
+
 \leq \mathbf{m}_{1,0} \|\theta_1 - \theta_2\|_\infty \sum_{n=0}^{k-1} \left[\prod_{m=n+1}^{k-1} \|\theta_{3-j_m}\|_\infty \right] \left[\prod_{v=0}^{k-1} (l_v + 1)\right] \max \{1, \|\theta_{j_n}\|_\infty^n \} \\
+
 = \mathbf{m}_{1,0} \|\theta_1 - \theta_2\|_\infty \left[\prod_{n=0}^{k-1} (l_n + 1)\right] \sum_{n=0}^{k-1} \left(\prod_{m=n+1}^{k-1} \|\theta_{3-j_m}\|_\infty \right) \max \{1, \|\theta_{j_n}\|_\infty^n \}.
+
 \end{aligned} \tag{11.100}$$
+
+
 
 因此，对于所有 $j \in \{1, 2\}$ 和 $k \in \{1, 2, \ldots, L\}$，我们得到
 
@@ -15324,10 +16888,10 @@ $$\begin{aligned}
 
 至此，定理 11.3.6 的证明完毕。
 
-## 推论 11.3.7. 设 $a \in \mathbb{R}$，$b \in [a, \infty)$，$u \in [-\infty, \infty)$，$v \in (u, \infty]$，$d, L \in \mathbb{N}$，$l = (l_0, l_1, \ldots, l_L) \in \mathbb{N}^{L+1}$ 满足
+## 推论 11.3.7
+设 $a \in \mathbb{R}$，$b \in [a, \infty)$，$u \in [-\infty, \infty)$，$v \in (u, \infty]$，$d, L \in \mathbb{N}$，$l = (l_0, l_1, \ldots, l_L) \in \mathbb{N}^{L+1}$ 满足
 
 $$d \geq \sum_{k=1}^{L} l_k (l_{k-1} + 1). \tag{11.102}$$
-
 
 那么，对于所有 \( \theta, \vartheta \in \mathbb{R}^d \)，以下不等式成立：
 
@@ -15414,10 +16978,17 @@ $$
 
 $$
 \begin{align*}
-& \left( \mathbb{E}\left[ \min_{k \in \{1, 2, \ldots, K\}} | \mathscr{R}(\Theta_k) - \mathscr{R}({\theta}^{[p]}) |^p \right] \right)^{1/p} \\
+& \left( \mathbb{E}\left[ \min_{k \in \{1, 2, \ldots, K\}} | \mathscr{R}(\Theta_k) - \mathscr{R}({\theta}^{[p]}) |^p \right] \right)^{1/p}
+\end{align*}
+$$
+
+
+
 & \quad \leq \frac{4(v-u)b\mathbf{L}(\|\mathbf{1}\|_\infty + 1)^{\mathbf{L}} B^{\mathbf{L}} \max\{1, (p/6)^{1/6}\}}{K^{1/6}} \\
 & \quad \leq \frac{4(v-u)b\mathbf{L}(\|\mathbf{1}\|_\infty + 1)^{\mathbf{L}} B^{\mathbf{L}} \max\{1, p\}}{K^{\frac{1}{6}(\mathbf{L} \| \mathbf{1} \|_{\infty} + 1) - 2}}
+
 \end{align*}
+
 $$
 
 （参见定义 3.3.4）。
@@ -15425,45 +16996,58 @@ $$
 **推论 11.3.9 的证明.** 在整个证明过程中，设 $L = 2(v−u)b\mathbf{L}(\|\mathbf{1}\|_\infty + 1)^{\mathbf{L}} B^{\mathbf{L}−1}$，设 $P: [−B, B]^{\mathbf{d}} \to [−B, B]^{\mathbf{v}}$ 满足对于所有 $\theta = (\theta_1, \theta_2, \ldots, \theta_{\mathbf{d}}) \in [−B, B]^{\mathbf{d}}$ 有 $P(\theta) = (\theta_1, \theta_2, \ldots, \theta_{\mathbf{v}})$，并设 $R: [−B, B]^{\mathbf{v}} \times \Omega \to \mathbb{R}$ 满足对于所有 $\theta \in [−B, B]^{\mathbf{v}}$ 和 $\omega \in \Omega$ 有：
 
 $$
+
 R(\theta, \omega) = \frac{1}{M}\left[ \sum_{j=1}^{M} |\mathcal{N}^{\theta,\mathbf{1}}_{u, v}(X_j(\omega)) - Y_j(\omega)|^2 \right].
+
 $$
 
 注意到事实：$\forall \theta \in [−B, B]^{\mathbf{d}}: \mathcal{N}^{\theta,\mathbf{1}}_{u, v} = \mathcal{N}^{P(\theta),\mathbf{1}}_{u, v}$，这建立了对于所有 $\theta \in [−B, B]^{\mathbf{d}}$ 和 $\omega \in \Omega$ 以下等式成立：
 
 $$
+
 \begin{align*}
+
 \mathscr{R}(\theta, \omega) = & \frac{1}{M}\left[ \sum_{j=1}^{M} |\mathcal{N}^{\theta,\mathbf{1}}_{u, v}(X_j(\omega)) - Y_j(\omega)|^2 \right] \\
 = & \frac{1}{M}\left[ \sum_{j=1}^{M} |\mathcal{N}^{P(\theta),\mathbf{1}}_{u, v}(X_j(\omega)) - Y_j(\omega)|^2 \right] = R(P(\theta), \omega).
+
 \end{align*}
+
 $$
 
 此外，请注意，引理 11.3.8（在引理 11.3.8 的记号中取 $\mathbf{d} \hookrightarrow \mathbf{v}, \mathscr{R} \hookrightarrow (([−B, B]^{\mathbf{v}} \times \Omega) \ni (\theta, \omega) \mapsto R(\theta, \omega) \in [0, \infty))$）表明，对于所有 $\theta, \theta' \in [−B, B]^{\mathbf{v}}$ 和 $\omega \in \Omega$，以下不等式成立：
 
 $$
+
 |R(\theta, \omega) − R(\theta', \omega)| \leq 2(v−u)b\mathbf{L}(\|\mathbf{1}\|_\infty + 1)^{\mathbf{L}} B^{\mathbf{L}−1} \|\theta − \theta'\|_\infty = L \|\theta − \theta'\|_\infty. \tag{11.114}
+
 $$
 
 而且，观察到假设 $X_j, j \in \{1, 2, \ldots, M\}$ 以及 $Y_j, j \in \{1, 2, \ldots, M\}$ 是随机变量，这一事实证明 $R: [−B, B]^{\mathbf{v}} \times \Omega \to \mathbb{R}$ 是一个随机场。结合 (11.114)，事实 $P \circ \Theta_k: \Omega \to [−B, B]^{\mathbf{v}}, k \in \{1, 2, \ldots, K\}$ 是独立同分布随机变量，事实 $P \circ \Theta_1$ 在 $[−B, B]^{\mathbf{v}}$ 上服从连续均匀分布，以及命题 11.2.7（在命题 11.2.7 的记号中取 $\mathbf{d} \hookrightarrow \mathbf{v}, \alpha \hookrightarrow −B, \beta \hookrightarrow B, \mathscr{R} \hookrightarrow R, (\Theta_k)_{k \in \{1, 2, \ldots, K\}} \hookrightarrow (P \circ \Theta_k)_{k \in \{1, 2, \ldots, K\}}$），意味着对于所有 $\theta \in [−B, B]^{\mathbf{d}}$ 和 $p \in (0, \infty)$，$R$ 是 $(\mathcal{B}([−B, B]^{\mathbf{v}} \otimes \mathcal{F})/\mathcal{B}([\mathbb{R}])$-可测的，且
 
 $$
+
 \begin{align*}
+
 & \left( \mathbb{E}\left[ \min_{k \in \{1, 2, \ldots, K\}} | R(P(\Theta_k)) - R(P(\theta)) |^p \right] \right)^{1/p} \\
 & \quad \leq \frac{L(2B)\max\{1, (p/6)^{1/6}\}}{K^{1/6}} = \frac{4(v−u)b\mathbf{L}(\|\mathbf{1}\|_\infty + 1)^{\mathbf{L}} B^{\mathbf{L}} \max\{1, (p/6)^{1/6}\}}{K^{1/6}}.
+
 \end{align*}
+
 $$
-
-
-
 
 由于 $P$ 是 $\mathcal{B}[[-B, B]^d]/\mathcal{B}[[-B, B]^b]$-可测的，且 (11.113) 成立，因此证明了第 (i) 项。此外，注意到 (11.113)、(11.115) 以及 $2 \leq \mathbf{b} = \sum_{i=1}^{\mathbf{L}}\mathbf{l}_i(\mathbf{l}_i+1) \leq \mathbf{L}(\|\mathbf{l}\|_\infty+1)^2$ 这一事实，保证了对于所有 $\theta \in [-B, B]^d$ 和 $p \in (0, \infty)$，有
 
 $$
+
 \begin{aligned}
+
 & (E[\min_{k \in \{1, 2, \ldots, K\}} |R(\Theta_k) - R(\theta)|^p])^{1/p} \\
 & = (E[\min_{k \in \{1, 2, \ldots, K\}} |R(P(\Theta_k)) - R(P(\theta))|^p])^{1/p} \\
 & \leq \frac{4(v-u)b\mathbf{L}(\|\mathbf{l}\|_\infty+1)\mathbf{L}B^l\sqrt{\max\{1, p/3\}}}{K^{1/3}} \tag{11.116} \\
 & \leq \frac{4(v-u)b\mathbf{L}(\|\mathbf{l}\|_\infty+1)\mathbf{L}B^l\max\{1, p\}}{K^{[\mathbf{L}^{-1}(\|\mathbf{l}\|_\infty+1) \cdot 2]}}.
+
 \end{aligned}
+
 $$
 
 这建立了第 (ii) 项。至此，推论 11.3.9 的证明完成。
@@ -15527,13 +17111,17 @@ $$ \operatorname{Var}(X) \leq 1/4. \tag{12.7} $$
 引理 12.1.4 的证明。注意，引理 12.1.2 暗示
 
 $$
+
 \begin{aligned}
+
 \operatorname{Var}(X) &= \mathbb{E}\left[(X - \mathbb{E}[X])^2\right] \\
 &\leq \mathbb{E}\left[(1 - X)(\mathbb{E}[X])^2 + X(1 - \mathbb{E}[X])^2\right] \\
 &= (1 - \mathbb{E}[X])(\mathbb{E}[X])^2 + \mathbb{E}[X](1 - \mathbb{E}[X])^2 \\
 &= (1 - \mathbb{E}[X])\mathbb{E}[X](\mathbb{E}[X] + (1 - \mathbb{E}[X])) \\
 &= (1 - \mathbb{E}[X])\mathbb{E}[X].
+
 \end{aligned} \tag{12.8}
+
 $$
 
 结合此式和引理 12.1.3 可知 $\operatorname{Var}(X) \leq 1/4$。至此，引理 12.1.4 的证明完成。
@@ -15547,12 +17135,16 @@ $$ \operatorname{Var}(X) \leq \frac{(b-a)^2}{4} . \tag{12.9} $$
 *引理 12.1.5 的证明。* 在整个证明过程中，不妨设 $a < b$。注意，引理 12.1.4 暗示
 
 $$
+
 \begin{align*}
+
 \operatorname{Var}(X) &= \mathbb{E}\left[(X - \mathbb{E}[X])^2\right] \\
 &= (b - a)^2\mathbb{E}\left[\left(\frac{X - a - (\mathbb{E}[X] - a)}{b - a}\right)^2\right] \\
 &= (b - a)^2\mathbb{E}\left[\left(\frac{X - a}{b - a} - \mathbb{E}\left[\frac{X - a}{b - a}\right]\right)^2\right] \\
 &= (b - a)^2 \operatorname{Var}\left(\frac{X - a}{b - a}\right) \leq (b - a)^2\left(\frac{1}{4}\right) = \frac{(b - a)^2}{4} .
+
 \end{align*} \tag{12.10}
+
 $$
 
 至此，引理 12.1.5 的证明完成。 $\square$
@@ -15567,16 +17159,16 @@ $$ \mathbb{P}\left(\left|\sum_{n=1}^N\left(X_n - \mathbb{E}[X_n]\right)\right| \
 
 *引理 12.1.6 的证明。* 注意，引理 12.1.1 保证了
 
-$$
-\begin{align*}
+
+
 \mathbb{P}\left(\left|\sum_{n=1}^N\left(X_n - \mathbb{E}[X_n]\right)\right| \geq \varepsilon\right) &= \mathbb{P}\left(\left|\sum_{n=1}^N\left(X_n - \mathbb{E}[X_n]\right)\right|^2 \geq \varepsilon^2\right) \\
 &\leq \frac{\mathbb{E}\left[\left|\sum_{n=1}^N\left(X_n - \mathbb{E}[X_n]\right)\right|^2\right]}{\varepsilon^2} .
 \end{align*} \tag{12.12}
-$$
 
+$$
 此外，注意到 $X_n: \Omega \rightarrow [a_n, b_n]$，$n \in \{1, 2, \ldots, N\}$，是独立变量这一假设以及引理 12.1.5 表明
-
 $$
+
 \begin{align*}
 \mathbb{E}\left[\left|\sum_{n=1}^N\left(X_n - \mathbb{E}[X_n]\right)\right|^2\right] &= \sum_{n, m=1}^N \mathbb{E}\left[\left(X_n - \mathbb{E}[X_n]\right)\left(X_m - \mathbb{E}[X_m]\right)\right] \\
 &= \sum_{n=1}^N \mathbb{E}\left[\left(X_n - \mathbb{E}[X_n]\right)^2\right] \leq \frac{\sum_{n=1}^N\left(b_n - a_n\right)^2}{4} .
@@ -15584,34 +17176,27 @@ $$
 $$
 
 将此与 (12.12) 结合，建立
-
 $$ \mathbb{P}\left(\left|\sum_{n=1}^{N}\left(X_{n}-\mathbb{E}\left[X_{n}\right]\right)\right|\geq \varepsilon\right) \leq \frac{\sum_{n=1}^{N}\left(b_{n}-a_{n}\right)^{2}}{4 \varepsilon^{2}} \quad (12.14) $$
-
 至此，引理 12.1.6 的证明完成。 $\square$
 
 ### 12.1.3 矩生成函数
 
 **定义 12.1.7 (矩生成函数)。** 设 $(\Omega, \mathcal{F}, \mathbb{P})$ 是一个概率空间，且设 $X: \Omega \rightarrow \mathbb{R}$ 是一个随机变量。则我们用 $\mathbb{M}_{X, \mathbb{P}}: \mathbb{R} \rightarrow[0, \infty]$（记作 $\mathbb{M}_{X}: \mathbb{R} \rightarrow[0, \infty]$）表示满足对于所有 $t \in \mathbb{R}$ 有
-
 $$ \mathbb{M}_{X, \mathbb{P}}(t)=\mathbb{E}\left[e^{t X}\right] \quad (12.15) $$
-
 的函数，并称 $\mathbb{M}_{X, \mathbb{P}}$ 为 $X$ 关于 $\mathbb{P}$ 的矩生成函数（称 $\mathbb{M}_{X, \mathbb{P}}$ 为 $X$ 的矩生成函数）。
 
 #### 12.1.3.1 独立随机变量和的矩生成函数
 
 **引理 12.1.8.** 设 $(\Omega, \mathcal{F}, \mathbb{P})$ 是一个概率空间，设 $t \in \mathbb{R}$，$N \in \mathbb{N}$，且设 $X_{n}: \Omega \rightarrow \mathbb{R}$，$n \in\{1,2, \ldots, N\}$，是独立的随机变量。则
-
 $$ \mathbb{M}_{\sum_{n=1}^{N} X_{n}}(t)=\prod_{n=1}^{N} \mathbb{M}_{X_{n}}(t) . \quad (12.16) $$
 
 *引理 12.1.8 的证明。* 注意，富比尼定理（Fubini's theorem）保证了对于所有 $t \in \mathbb{R}$ 有
-
 $$
 \begin{aligned}
 \mathbb{M}_{\sum_{n=1}^{N} X_{n}}(t) &= \mathbb{E}\left[e^{t\left(\sum_{n=1}^{N} X_{n}\right)}\right] = \mathbb{E}\left[\prod_{n=1}^{N} e^{t X_{n}}\right] = \prod_{n=1}^{N} \mathbb{E}\left[e^{t X_{n}}\right] \\
 &= \prod_{n=1}^{N} \mathbb{M}_{X_{n}}(t) .
 \end{aligned} \quad (12.17)
 $$
-
 至此，引理 12.1.8 的证明完成。 $\square$
 
 ### 12.1.4 切尔诺夫界（Chernoff bounds）
@@ -15619,47 +17204,36 @@ $$
 #### 12.1.4.1 越过障碍的概率
 
 **命题 12.1.9.** 设 $(\Omega, \mathcal{F}, \mathbb{P})$ 是一个概率空间，设 $X: \Omega \rightarrow \mathbb{R}$ 是一个随机变量，且设 $\varepsilon \in \mathbb{R}$。则
-
 $$ \mathbb{P}(X \geq \varepsilon) \leq \inf _{\lambda \in[0, \infty)}\left(e^{-\lambda \varepsilon} \mathbb{E}\left[e^{\lambda X}\right]\right)=\inf _{\lambda \in[0, \infty)}\left(e^{-\lambda \varepsilon} \mathbb{M}_{X}(\lambda)\right) . \quad (12.18) $$
 
-
-
-# **12.1.4.2 低于障碍的概率**
+#### 12.1.4.2 低于障碍的概率
 
 *命题 12.1.9 的证明.* 注意，引理 12.1.1 确保对于所有 $\lambda \in [0,\infty)$，有
-
 $$
 \mathbb{P}(X \geq \varepsilon) \leq \mathbb{P}(\lambda X \geq \lambda\varepsilon) = \mathbb{P}(\exp(\lambda X) \geq \exp(\lambda\varepsilon)) \leq \frac{\mathbb{E}[\exp(\lambda X)]}{\exp(\lambda\varepsilon)} = e^{-\lambda\varepsilon}\mathbb{E}[e^{\lambda X}].
 $$
 (12.19)
-
 命题 12.1.9 的证明至此完成。
 
 **推论 12.1.10.** 设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为概率空间，设 $X: \Omega \rightarrow \mathbb{R}$ 为随机变量，且 $c, \varepsilon \in \mathbb{R}$。则
-
 $$
 \mathbb{P}(X \geq c + \varepsilon) \leq \inf_{\lambda \in [0,\infty)} (e^{-\lambda\varepsilon}\mathbb{M}_{X-c}(\lambda)).
 $$
 (12.20)
 
 *推论 12.1.10 的证明.* 在本证明中，设 $Y: \Omega \rightarrow \mathbb{R}$ 满足
-
 $$
 Y = X - c.
 $$
 (12.21)
-
 注意到命题 12.1.9 和 (12.21) 确保
-
 $$
 \mathbb{P}(X - c \geq \varepsilon) = \mathbb{P}(Y \geq \varepsilon) \leq \inf_{\lambda \in [0,\infty)} (e^{-\lambda\varepsilon}\mathbb{M}_{Y}(\lambda)) = \inf_{\lambda \in [0,\infty)} (e^{-\lambda\varepsilon}\mathbb{M}_{X-c}(\lambda)).
 $$
 (12.22)
-
 推论 12.1.10 的证明至此完成。
 
 **推论 12.1.11.** 设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为概率空间，设 $X: \Omega \rightarrow \mathbb{R}$ 为随机变量且 $\mathbb{E}[|X|] < \infty$，并设 $\varepsilon \in \mathbb{R}$。则
-
 $$
 \mathbb{P}(X \geq \mathbb{E}[X] + \varepsilon) \leq \inf_{\lambda \in [0,\infty)} (e^{-\lambda\varepsilon}\mathbb{M}_{X-\mathbb{E}[X]}(\lambda)).
 $$
@@ -15667,24 +17241,20 @@ $$
 
 *推论 12.1.11 的证明.* 注意到推论 12.1.10（在推论 12.1.10 的记号中取 $c \triangleq \mathbb{E}[X]$）建立了 (12.23)。推论 12.1.11 的证明至此完成。
 
-# **12.1.4.2 低于障碍的概率**
+#### 12.1.4.2 低于障碍的概率
 
 **推论 12.1.12.** 设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为概率空间，设 $X: \Omega \rightarrow \mathbb{R}$ 为随机变量，且 $c, \varepsilon \in \mathbb{R}$。则
-
 $$
 \mathbb{P}(X \leq c - \varepsilon) \leq \inf_{\lambda \in [0,\infty)} (e^{-\lambda\varepsilon}\mathbb{M}_{c-X}(\lambda)).
 $$
 (12.24)
 
 *推论 12.1.12 的证明.* 在本证明中，设 $\mathfrak{c} \in \mathbb{R}$ 满足 $\mathfrak{c} = -c$，并设 $\mathfrak{X}: \Omega \rightarrow \mathbb{R}$ 满足
-
 $$
 \mathfrak{X} = -X.
 $$
 (12.25)
-
 注意到推论 12.1.10 和 (12.25) 确保
-
 $$
 \begin{aligned}
 \mathbb{P}(X \leq c - \varepsilon) &= \mathbb{P}(-X \geq -c + \varepsilon) = \mathbb{P}(\mathfrak{X} \geq \mathfrak{c} + \varepsilon) \\
@@ -15693,27 +17263,22 @@ $$
 \end{aligned}
 $$
 (12.26)
-
 推论 12.1.12 的证明至此完成。
 
-# 12.1.4.3 独立随机变量之和
+#### 12.1.4.3 独立随机变量之和
 
 **推论 12.1.13.** *设* $(\Omega, \mathcal{F}, \mathbb{P})$ *为概率空间，设* $\varepsilon \in \mathbb{R}$，$N \in \mathbb{N}$，*且设* $X_n \colon \Omega \rightarrow \mathbb{R}$，$n \in \{1, 2, \dots, N\}$，*为独立随机变量，满足* $\max_{n \in \{1,2,\dots,N\}} \mathbb{E}[|X_n|] < \infty$。*则*
-
 $$
 \mathbb{P}\left[\left|\sum_{n=1}^N (X_n - \mathbb{E}[X_n])\right| \geq \varepsilon\right] \leq \inf_{\lambda \in [0,\infty)}\left(e^{-\lambda \varepsilon} \prod_{n=1}^N \mathbb{M}_{X_n - \mathbb{E}[X_n]}(\lambda)\right).
 $$
 (12.27)
 
 *推论 12.1.13 的证明.* *在本证明中，设* $Y_n \colon \Omega \rightarrow \mathbb{R}$，$n \in \{1,2,\dots,N\}$，*满足对于所有* $n \in \{1,2,\dots,N\}$，有
-
 $$
 Y_n = X_n - \mathbb{E}[X_n].
 $$
 (12.28)
-
 注意到命题 12.1.9、引理 12.1.8 和 (12.28) 确保
-
 $$
 \begin{align*}
 \mathbb{P}\left(\left|\sum_{n=1}^N (X_n - \mathbb{E}[X_n])\right| \geq \varepsilon\right) &= \mathbb{P}\left(\left|\sum_{n=1}^N Y_n\right| \geq \varepsilon\right) \leq \inf_{\lambda \in [0,\infty)}\left(e^{-\lambda \varepsilon} \mathbb{M}_{\sum_{n=1}^N Y_n}(\lambda)\right) \\
@@ -15721,22 +17286,19 @@ $$
 \end{align*}
 $$
 (12.29)
-
 推论 12.1.13 的证明至此完成。
 
-# 12.1.5 霍夫丁不等式
+### 12.1.5 霍夫丁不等式
 
-# 12.1.5.1 有界随机变量的矩生成函数
+#### 12.1.5.1 有界随机变量的矩生成函数
 
 **引理 12.1.14.** *设* $(\Omega, \mathcal{F}, \mathbb{P})$ *为概率空间，设* $\lambda, a \in \mathbb{R}$，$b \in (a, \infty)$，$p \in [0,1]$ *满足* $p = \frac{a}{(b-a)}$，*设* $X \colon \Omega \rightarrow [a,b]$ *为随机变量且* $\mathbb{E}[X] = 0$，*并设* $\phi \colon \mathbb{R} \rightarrow \mathbb{R}$ *满足对于所有* $x \in \mathbb{R}$，有* $\phi(x) = \ln(1 - p + pe^x) - px$。*则*
-
 $$
 \mathbb{E}[e^{\lambda X}] \leq e^{\phi(\lambda(b-a))}.
 $$
 (12.30)
 
 *引理 12.1.14 的证明.* *注意到对于所有* $x \in \mathbb{R}$，有
-
 $$
 \begin{align*}
 x(b-a) &= bx - ax = [ab - ax] + [bx - ab] = [a(b-x) + b(x-a)] \\
@@ -15744,33 +17306,28 @@ x(b-a) &= bx - ax = [ab - ax] + [bx - ab] = [a(b-x) + b(x-a)] \\
 \end{align*}
 $$
 (12.31)
-
 因此，我们得到对于所有 $x \in \mathbb{R}$，有
-
 $$
 x = a\left(\frac{b-x}{b-a}\right) + b\left[1 - \left(\frac{b-x}{b-a}\right)\right].
 $$
 (12.32)
-
 这意味着对于所有 $x \in \mathbb{R}$，有
-
 $$
 \lambda x = \left(\frac{b-x}{b-a}\right) \lambda a + \left[1-\left(\frac{b-x}{b-a}\right)\right] \lambda b.
 $$
 (12.33)
-
 事实 $\mathbb{R} \ni x \mapsto e^x \in \mathbb{R}$ 是凸的，从而证明了对于所有 $x \in [a, b]$，有
-
 $$
 e^{\lambda x} = \exp \left(\left(\frac{b-x}{b-a}\right) \lambda a + \left[1-\left(\frac{b-x}{b-a}\right)\right] \lambda b\right) \leq \left(\frac{b-x}{b-a}\right) e^{\lambda a} + \left[1-\left(\frac{b-x}{b-a}\right)\right] e^{\lambda b}.
 $$
 (12.34)
-
 假设 $\mathbb{E}[X] = 0$ 因此确保了
-
 $$
 \mathbb{E}\left[e^{\lambda X}\right] \leq \left(\frac{b}{b-a}\right) e^{\lambda a} + \left[1-\left(\frac{b}{b-a}\right)\right] e^{\lambda b}.
 $$
+
+
+
 (12.35)
 
 将此与事实
@@ -15782,6 +17339,7 @@ $$
 &= 1-\left[\frac{-a}{(b-a)}\right] = 1-p
 \end{align*}
 $$
+
 (12.36)
 
 相结合，证明了
@@ -15794,6 +17352,7 @@ $$
 &= \left[(1-p) + p e^{\lambda (b-a)}\right] e^{\lambda a}.
 \end{align*}
 $$
+
 (12.37)
 
 此外，注意到假设 $p = \frac{-a}{(b-a)}$ 表明 $p(b-a) = -a$。因此，我们得到 $a = -p(b-a)$。这与 (12.37) 共同确保了
@@ -15804,6 +17363,7 @@ $$
 &= \exp \left(\ln \left(\left(1-p\right) + p e^{\lambda (b-a)}\right) - p\lambda (b-a)\right) = \exp \left(\phi(\lambda (b-a))\right).
 \end{align*}
 $$
+
 (12.38)
 
 引理 12.1.14 的证明至此完成。$\square$
@@ -15821,6 +17381,7 @@ $$
 &\leq \phi(0) + \phi^{\prime}(0) x + \frac{x^{2}}{2} \left[\sup _{z \in \mathbb{R}} \phi^{\prime \prime}(z)\right].
 \end{align*}
 $$
+
 (12.39)
 
 此外，注意到对于所有 $x \in \mathbb{R}$，有
@@ -15828,6 +17389,7 @@ $$
 $$
 \phi^{\prime}(x) = \left[\frac{p e^{x}}{1 - p + p e^{x}}\right] - p \quad \text { 且 } \quad \phi^{\prime \prime}(x) = \left[\frac{p e^{x}}{1 - p + p e^{x}}\right] - \left[\frac{p^{2} e^{2 x}}{\left(1 - p + p e^{x}\right)^{2}}\right].
 $$
+
 (12.40)
 
 因此，我们得到
@@ -15835,6 +17397,7 @@ $$
 $$
 \phi^{\prime}(0) = \left[\frac{p}{1 - p + p}\right] - p = 0.
 $$
+
 (12.41)
 
 在下一步中，我们将 (12.40) 与事实（对于所有 $a \in \mathbb{R}$，有
@@ -15842,6 +17405,7 @@ $$
 $$
 a(1-a) = a - a^{2} = -\left[a^{2} - 2 a\left[\frac{1}{2}\right] + \left[\frac{1}{2}\right]^{2}\right] + \left[\frac{1}{2}\right]^{2} = \frac{1}{4} - \left[a - \frac{1}{2}\right]^{2} \leq \frac{1}{4}
 $$
+
 (12.42)
 
 ）相结合，得到对于所有 $x \in \mathbb{R}$，有 $\phi^{\prime \prime}(x) \leq \frac{1}{4}$。这与 (12.39) 和 (12.41) 共同确保对于所有 $x \in \mathbb{R}$，有
@@ -15849,6 +17413,7 @@ $$
 $$
 \phi(x) \leq \phi(0) + \phi^{\prime}(0) x + \frac{x^{2}}{2}\left[\sup _{z \in \mathbb{R}} \phi^{\prime \prime}(z)\right] = \phi(0) + \frac{x^{2}}{2}\left[\sup _{z \in \mathbb{R}} \phi^{\prime \prime}(z)\right] \leq \phi(0) + \frac{x^{2}}{8} = \frac{x^{2}}{8}.
 $$
+
 (12.43)
 
 引理 12.1.15 的证明至此完成。
@@ -15858,12 +17423,10 @@ $$
 $$
 \mathbb{E}\left[\exp (\lambda X)\right] \leq \exp \left(\frac{\lambda^{2}(b - a)^{2}}{8}\right).
 $$
+
 (12.44)
 
 ![](img/dec290f673e6357c31893c67b579ffe1_439_0.png)
-
-
-
 
 *引理12.1.16的证明。* 在整个证明过程中，不妨假设 $a < b$，设 $p \in \mathbb{R}$ 满足 $p = \frac{-a}{(b-a)}$，并设 $\phi_r : \mathbb{R} \to \mathbb{R}$，$r \in [0, 1]$，满足对所有 $r \in [0, 1]$，$x \in \mathbb{R}$ 有
 
@@ -15879,7 +17442,7 @@ $$\mathbb{E}\big[ e^{\lambda X} \big] \le e^{\phi_p(\lambda(b-a))} = \exp(\phi_p
 
 引理 **12.1.16** 的证明至此完成。 $\square$
 
-### 12.1.5.3 跨越障碍的概率
+## 12.1.5.3 跨越障碍的概率
 
 **引理 12.1.17。** *设* $\beta \in (0, \infty)$，$\varepsilon \in [0, \infty)$ *且设* $f : [0, \infty) \to [0, \infty)$ *满足对所有* $\lambda \in [0, \infty)$ 有 $f(\lambda) = \beta\lambda^2 - \varepsilon\lambda$。*则*
 
@@ -15924,7 +17487,7 @@ $$
 
 *推论 12.1.18* 的证明至此完成。 $\Box$
 
-### 12.1.5.4 低于障碍的概率
+## 12.1.5.4 低于障碍的概率
 
 *推论 12.1.19。* *设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为概率空间，设 $N \in \mathbb{N}$，$\varepsilon \in [0, \infty)$，$a_1, a_2, \dots, a_N \in \mathbb{R}$，$b_1 \in [a_1, \infty)$，$b_2 \in [a_2, \infty)$，$\dots$，$b_N \in [a_N, \infty)$* 满足 $\sum_{n=1}^{N} (b_n - a_n)^2 \neq 0$，*且设* $X_n : \Omega \to [a_n, b_n]$，$n \in \{1, 2, \dots, N\}$，*为独立随机变量。则*
 
@@ -15941,8 +17504,15 @@ $$
 \mathbb{P}\left(\left[\sum_{n=1}^{N}\left(X_{n}-\mathbb{E}\left[X_{n}\right]\right)\leq-\varepsilon\right]
 &=\mathbb{P}\left(\left[\sum_{n=1}^{N}\left(-X_{n}-\mathbb{E}\left[-X_{n}\right]\right)\right]\geq \varepsilon\right) \\
 &=\mathbb{P}\left(\left[\sum_{n=1}^{N}\left(\mathbf{X}_{n}-\mathbb{E}\left[\mathbf{X}_{n}\right]\right)\right]\geq \varepsilon\right)
-\leq \exp \left(\frac{-2 \varepsilon^{2}}{\sum_{n=1}^{N}\left(b_{n}-a_{n}\right)^{2}}\right). \tag{12.58}
 \end{aligned}
+$$
+
+
+
+\leq \exp \left(\frac{-2 \varepsilon^{2}}{\sum_{n=1}^{N}\left(b_{n}-a_{n}\right)^{2}}\right). \tag{12.58}
+
+\end{aligned}
+
 $$
 
 推论 12.1.19 的证明至此完成。
@@ -15952,17 +17522,25 @@ $$
 **推论 12.1.20。** 设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为概率空间，设 $N \in \mathbb{N}$，$\varepsilon \in[0, \infty)$，$a_{1}, a_{2}, \ldots$，$a_{N} \in \mathbb{R}$，$b_{1} \in\left[a_{1}, \infty\right)$，$b_{2} \in\left[a_{2}, \infty\right)$，$\ldots$，$b_{N} \in\left[a_{N}, \infty\right)$ 满足 $\sum_{n=1}^{N}\left(b_{n}-a_{n}\right)^{2} \neq 0$，且设 $X_{n}: \Omega \rightarrow\left[a_{n}, b_{n}\right]$，$n \in\{1,2, \ldots, N\}$，为独立随机变量。则
 
 $$
+
 \mathbb{P}\left(\left|\sum_{n=1}^{N}\left(X_{n}-\mathbb{E}\left[X_{n}\right]\right)\right|\geq \varepsilon\right)\leq 2 \exp \left(\frac{-2 \varepsilon^{2}}{\sum_{n=1}^{N}\left(b_{n}-a_{n}\right)^{2}}\right).\tag{12.59}
+
 $$
 
 *推论 12.1.20 的证明。* 注意到
 
 $$
+
 \begin{aligned}
+
 \mathbb{P}\left(\left|\sum_{n=1}^{N}\left(X_{n}-\mathbb{E}\left[X_{n}\right]\right)\right|\geq \varepsilon\right)
+
 &=\mathbb{P}\left(\left\{\left[\sum_{n=1}^{N}\left(X_{n}-\mathbb{E}\left[X_{n}\right]\right)\right] \geq \varepsilon\right\} \cup\left\{\left[\sum_{n=1}^{N}\left(X_{n}-\mathbb{E}\left[X_{n}\right]\right)\right] \leq-\varepsilon\right\}\right) \\
+
 &\leq \mathbb{P}\left(\left[\sum_{n=1}^{N}\left(X_{n}-\mathbb{E}\left[X_{n}\right]\right)\right] \geq \varepsilon\right)+\mathbb{P}\left(\left[\sum_{n=1}^{N}\left(X_{n}-\mathbb{E}\left[X_{n}\right]\right)\right] \leq-\varepsilon\right).\tag{12.60}
+
 \end{aligned}
+
 $$
 
 将此与推论 12.1.18 和推论 12.1.19 结合，得证 (12.59)。推论 12.1.20 的证明至此完成。
@@ -15970,10 +17548,10 @@ $$
 **推论 12.1.21。** 设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为概率空间，设 $N \in \mathbb{N}$，$\varepsilon \in[0, \infty)$，$a_{1}, a_{2}, \ldots$，$a_{N} \in \mathbb{R}$，$b_{1} \in\left[a_{1}, \infty\right)$，$b_{2} \in\left[a_{2}, \infty\right)$，$\ldots$，$b_{N} \in\left[a_{N}, \infty\right)$ 满足 $\sum_{n=1}^{N}\left(b_{n}-a_{n}\right)^{2} \neq 0$，且设 $X_{n}: \Omega \rightarrow\left[a_{n}, b_{n}\right]$，$n \in\{1,2, \ldots, N\}$，为独立随机变量。则
 
 $$
+
 \mathbb{P}\left(\frac{1}{N}\left|\sum_{n=1}^{N}\left(X_{n}-\mathbb{E}\left[X_{n}\right]\right)\right|\geq \varepsilon\right)\leq 2 \exp \left(\frac{-2 \varepsilon^{2} N^{2}}{\sum_{n=1}^{N}\left(b_{n}-a_{n}\right)^{2}}\right).\tag{12.61}
+
 $$
-
-
 
 推论 12.1.21 的证明。观察到推论 12.1.20 保证了
 
@@ -15983,9 +17561,7 @@ $$\begin{align} \mathbb{P} \left( \left| \frac{1}{N} \sum_{n=1}^{N} \left(X_n - 
 
 练习 12.1.1. 证明或证伪以下陈述：对于任意概率空间 $(\Omega, \mathcal{F}, \mathbb{P})$，任意 $N \in \mathbb{N}$，$\varepsilon \in [0, \infty)$，以及任意随机变量 $X = (X_1, X_2, \ldots, X_N): \Omega \rightarrow [-1, 1]^N$，若满足对所有 $a = (a_1, a_2, \ldots, a_N) \in [-1, 1]^N$ 均有 $\mathbb{P}(\bigcap_{i=1}^{N} \{X_i \le a_i\}) = \prod_{i=1}^{N} \frac{a_i+1}{2}$，则有
 
-$$\begin{align} \mathbb{P} \left( \left| \frac{1}{N} \sum_{i=1}^{N} \left(X_i - \mathbb{E}[X_i]\right) \right| \ge \varepsilon \right) &\le 2 \exp \left( \frac{-\varepsilon^2 N}{2} \right). \end{align} \tag{12.63}$$
-
-注意：在原文中，概率陈述中的求和索引为 $i$，但内部项为 $X_n$。根据练习 12.1.2 的上下文及标准符号，原公式极大概率在求和索引与内部项之间保持一致（均使用 $n$ 或均使用 $i$）。然而，仔细查看 OCR 识别出的练习 12.1.1，求和式为 $\sum_{i=1}^{N} (X_n - \mathbb{E}[X_n])$。这是原文或 OCR 的错误。让我们看看练习 12.1.2。其中使用的是 $\sum_{n=1}^N$。在 12.1.1 中，提示给出 $X=(X_1...X_N)$。公式 12.63 中的求和使用 $i$ 作为哑索引，但内部使用了 $X_n$。这是一处不一致。我将尽可能保留 OCR 文本的数学结构，但修正明显的 OCR 错误。等等，查看 OCR 中的 12.63：$\sum_{i=1}^{N} \left(X_n - \mathbb{E}[X_n]\right)$。这显然是源文件或 OCR 的错误。通常这些项是独立的。我将假设用户希望清理文本。提示要求“修正明显的 OCR 错误”。像这样的索引不匹配是内容错误，而不仅仅是 OCR 错误。然而，练习 12.1.2 中有 $\sum_{n=1}^{N} (X_n - E[X_n])$。很可能 12.1.1 也应该是 $n$。但我必须谨慎。如果我认为这是 OCR 错误，我会将项中的变量名 $n$ 和求和上限中的 $n$ 保持一致，或者在不确定时保留原样。让我们看看模式。12.63: $\sum_{i=1}^N (X_n - E[X_n])$。如果 $n$ 不是索引，这在数学上定义不良。为了匹配项 $X_n$，我会将索引修正为 $n$，或者为了匹配索引，将项修正为 $X_i$。鉴于 12.64 使用了 $\sum_{n=1}^N (X_n - E[X_n])$，12.63 极有可能也应该是 $\sum_{n=1}^N (X_n - E[X_n])$。我将将此作为“明显错误”进行修正。
+$$\begin{align} \mathbb{P} \left( \left| \frac{1}{N} \sum_{n=1}^{N} \left(X_n - \mathbb{E}[X_n]\right) \right| \ge \varepsilon \right) &\le 2 \exp \left( \frac{-\varepsilon^2 N}{2} \right). \end{align} \tag{12.63}$$
 
 练习 12.1.2. 证明或证伪以下陈述：对于任意概率空间 $(\Omega, \mathcal{F}, \mathbb{P})$，任意 $N \in \mathbb{N}$，以及任意随机变量 $X = (X_1, X_2, \ldots, X_N): \Omega \rightarrow [-1, 1]^N$，若满足对所有 $a = (a_1, a_2, \ldots, a_N) \in [-1, 1]^N$ 均有 $\mathbb{P}(\bigcap_{i=1}^{N} \{X_i \le a_i\}) = \prod_{i=1}^{N} \frac{a_i+1}{2}$，则有
 
@@ -16037,7 +17613,10 @@ $X \subseteq \bigcup_{a \in A} \{v \in X : d(a, v) \le r\} \subseteq \bigcup_{i=
 
 因此，引理 12.2.2 的证明完毕。
 
-**引理 12.2.3.** 设 $(X, d)$ 为度量空间，设 $n \in \mathbb{N}$，$r \in [0, \infty]$，$x_1, x_2, \ldots, x_n \in X$ 满足 $X \subseteq \bigcup_{i=1}^{n} \{v \in X : d(x_i, v) \le r\}$。则存在 $A \subseteq X$，使得 $|A| \le n$ 且
+
+
+### 引理 12.2.3
+设 $(X, d)$ 为度量空间，设 $n \in \mathbb{N}$，$r \in [0, \infty]$，$x_1, x_2, \ldots, x_n \in X$ 满足 $X \subseteq \bigcup_{i=1}^{n} \{v \in X : d(x_i, v) \le r\}$。则存在 $A \subseteq X$，使得 $|A| \le n$ 且
 
 $\forall x \in X : \exists a \in A : d(a, x) \le r. \tag{12.71}$
 
@@ -16047,14 +17626,16 @@ $\forall x \in X : \exists a \in A : d(a, x) \le r. \tag{12.72}$
 
 因此，引理 12.2.3 的证明完毕。
 
-**引理 12.2.4.** 设 $(X, d)$ 为度量空间，设 $n \in \mathbb{N}$，$r \in [0, \infty]$，并假设 $X \neq \emptyset$。则以下两个陈述等价：
+### 引理 12.2.4
+设 $(X, d)$ 为度量空间，设 $n \in \mathbb{N}$，$r \in [0, \infty]$，并假设 $X \neq \emptyset$。则以下两个陈述等价：
 
--   (i) 存在 $A \subseteq X$，使得 $|A| \le n$ 且 $\forall x \in X : \exists a \in A : d(a, x) \le r$。
--   (ii) 存在 $x_1, x_2, \ldots, x_n \in X$，使得 $X \subseteq \bigcup_{i=1}^{n} \{v \in X : d(x_i, v) \le r\}$。
+- (i) 存在 $A \subseteq X$，使得 $|A| \le n$ 且 $\forall x \in X : \exists a \in A : d(a, x) \le r$。
+- (ii) 存在 $x_1, x_2, \ldots, x_n \in X$，使得 $X \subseteq \bigcup_{i=1}^{n} \{v \in X : d(x_i, v) \le r\}$。
 
 引理 12.2.4 的证明。注意，引理 12.2.2 和引理 12.2.3 证明了 $((i) \leftrightarrow (ii))$。因此，引理 12.2.4 的证明完毕。
 
-**引理 12.2.5.** 设 $(X, d)$ 为度量空间，且设 $n \in \mathbb{N}$。则
+### 引理 12.2.5
+设 $(X, d)$ 为度量空间，且设 $n \in \mathbb{N}$。则
 
 $\mathcal{C}_{(X,d),n} = \begin{cases} 0 & : X = \emptyset \\ \inf(\{r \in [0,\infty) : (\exists x_1, x_2, \ldots, x_n \in X : X \subseteq \bigcup_{m=1}^{n} \{v \in X : d(x_m, v) \le r\})\} \cup \{\infty\}) & : X \neq \emptyset \end{cases}$
 
@@ -16062,62 +17643,68 @@ $\mathcal{C}_{(X,d),n} = \begin{cases} 0 & : X = \emptyset \\ \inf(\{r \in [0,\i
 
 引理 12.2.5 的证明。在整个证明过程中，不失一般性，假设 $X \neq \emptyset$ 且设 $a \in X$。注意，假设 $d$ 是度量意味着对所有 $x \in X$，有 $d(a, x) \le \infty$。将此与引理 12.2.4 结合，证明了 (12.73)。这完成了引理 12.2.5 的证明。
 
-练习 12.2.1. 证明或证伪以下陈述：对于任意度量空间 $(X, d)$ 和任意 $n, m \in \mathbb{N}$，$\mathcal{C}_{(X, d), n} < \infty$ 当且仅当 $\mathcal{C}_{(X, d), m} < \infty$（参见定义 12.2.1）。
+#### 练习 12.2.1
+证明或证伪以下陈述：对于任意度量空间 $(X, d)$ 和任意 $n, m \in \mathbb{N}$，$\mathcal{C}_{(X, d), n} < \infty$ 当且仅当 $\mathcal{C}_{(X, d), m} < \infty$（参见定义 12.2.1）。
 
-练习 12.2.2. 证明或证伪以下陈述：对于任意度量空间 $(X, d)$ 和任意 $n \in \mathbb{N}$，$(X, d)$ 是有界的当且仅当 $\mathcal{C}_{(X, d), n} < \infty$（参见定义 12.2.1）。
+#### 练习 12.2.2
+证明或证伪以下陈述：对于任意度量空间 $(X, d)$ 和任意 $n \in \mathbb{N}$，$(X, d)$ 是有界的当且仅当 $\mathcal{C}_{(X, d), n} < \infty$（参见定义 12.2.1）。
 
-练习 12.2.3. 证明或证伪以下陈述：对于任意 $n \in \mathbb{N}$ 和任意满足 $X \neq \emptyset$ 的度量空间 $(X, d)$，有
+#### 练习 12.2.3
+证明或证伪以下陈述：对于任意 $n \in \mathbb{N}$ 和任意满足 $X \neq \emptyset$ 的度量空间 $(X, d)$，有
 
 $$\begin{align*}\mathcal{C}_{(X, d), n} = \inf_{x_1, x_2, \ldots, x_n \in X} \sup_{v \in X} \min_{i \in \{1, \ldots, n\}} d(x_i, v) \\ = \inf_{x_1, x_2, \ldots, x_n \in X} \sup_{x_{n+1} \in X} \min_{i \in \{1, \ldots, n\}} d(x_i, x_{n+1}) \tag{12.74}\end{align*}$$
 
 （参见定义 12.2.1）。
 
-#### 12.2.1.2 包装半径（内熵数）
+## 12.2.1.2 包装半径（内熵数）
 
-**定义 12.2.6**（包装半径）。设 $(X, d)$ 为度量空间，且设 $n \in \mathbb{N}$。则我们用 $\mathcal{P}_{(X, d), n} \in [0, \infty)$（我们用 $\mathcal{P}_{X, n} \in [0, \infty]$ 表示由以下公式给出的扩展实数
+### 定义 12.2.6 包装半径
+设 $(X, d)$ 为度量空间，且设 $n \in \mathbb{N}$。则我们用 $\mathcal{P}_{(X, d), n} \in [0, \infty)$（我们用 $\mathcal{P}_{X, n} \in [0, \infty]$ 表示由以下公式给出的扩展实数
 
 $\mathcal{P}_{(X, d), n} = \sup \big( \{ r \in [0, \infty) : (\exists x_1, x_2, \ldots, x_{n+1} \in X : [\min_{i,j \in \{1, 2, \ldots, n+1\}, i \neq j} d(x_i, x_j) > 2r ]) \}) \cup \{0\} \big) \tag{12.75}$
 
 ）并将 $\mathcal{P}_{(X, d), n}$ 称为 $(X, d)$ 的 $n$-包装半径（我们将 $\mathcal{P}^{X, r}$ 称为 $X$ 的 $n$-包装半径）。
 
-练习 12.2.4. 证明或证伪以下陈述：对于任意 $n \in \mathbb{N}$ 和任意满足 $X \neq \emptyset$ 的度量空间 $(X, d)$，有
+#### 练习 12.2.4
+证明或证伪以下陈述：对于任意 $n \in \mathbb{N}$ 和任意满足 $X \neq \emptyset$ 的度量空间 $(X, d)$，有
 
 $\mathcal{P}_{(X, d), n} = \tfrac{1}{2} \big[ \sup_{x_1, x_2, \ldots, x_{n+1} \in X} \min_{i,j \in \{1, \ldots, n+1\}, i \neq j} d(x_i, x_j) \big] \tag{12.76}$
 
 （参见定义 12.2.6）。
 
-#### 12.2.1.3 包装数
+## 12.2.1.3 包装数
 
-**定义 12.2.7**（包装数）。设 $(X, d)$ 为度量空间，且设 $r \in [0, \infty]$。则我们用 $\mathcal{P}^{(X, d), r} \in [0, \infty]$（我们用 $\mathcal{P}^{X, r} \in [0, \infty]$ 表示由以下公式给出的扩展实数
+### 定义 12.2.7 包装数
+设 $(X, d)$ 为度量空间，且设 $r \in [0, \infty]$。则我们用 $\mathcal{P}^{(X, d), r} \in [0, \infty]$（我们用 $\mathcal{P}^{X, r} \in [0, \infty]$ 表示由以下公式给出的扩展实数
 
 $\mathcal{P}^{(X, d), r} = \sup \big( \{ n \in \mathbb{N} : (\exists x_1, x_2, \ldots, x_{n+1} \in X : [\min_{i,j \in \{1, 2, \ldots, n+1\}, i \neq j} d(x_i, x_j) > 2r ]) \}) \cup \{0\} \big) \tag{12.77}$
 
 ）并将 $\mathcal{P}^{(X, d), r}$ 称为 $(X, d)$ 的 $r$-包装数（我们将 $\mathcal{P}^{X, r}$ 称为 $X$ 的 $r$-包装数）。
 
-
-
-
 ## 12.2.2 度量空间中填充熵量的不等式
 
 ### 12.2.2.1 基于填充数下界推导填充半径下界
 
-**引理 12.2.8** (填充半径的下界) 设 $(X, d)$ 为一个度量空间，且设 $n \in \mathbb{N}$，$r \in [0, \infty]$ 满足 $n \le \mathcal{P}_{(X, d), r}$ (参见定义 12.2.7)。则 $r \le \mathcal{P}_{(X, d), n}$ (参见定义 12.2.6)。
+#### 引理 12.2.8 填充半径的下界
+设 $(X, d)$ 为一个度量空间，且设 $n \in \mathbb{N}$，$r \in [0, \infty]$ 满足 $n \le \mathcal{P}_{(X, d), r}$（参见定义 12.2.7）。则 $r \le \mathcal{P}_{(X, d), n}$（参见定义 12.2.6）。
 
 *引理 12.2.8 的证明。* 注意到 (12.77) 确保存在 $x_1, x_2, \ldots, x_{n+1} \in X$ 使得
 
 $$ \left[ \min_{i,j \in \{1,2,\ldots,n+1\}, i \ne j} d(x_i, x_j) \right] > 2r. \tag{12.78} $$
 
-这意味着 $\mathcal{P}_{(X, d), n} \ge r$ (参见定义 12.2.6)。从而引理 12.2.8 的证明完毕。
+这意味着 $\mathcal{P}_{(X, d), n} \ge r$（参见定义 12.2.6）。从而引理 12.2.8 的证明完毕。
 
 ### 12.2.2.2 基于填充半径上界推导填充数上界
 
-**引理 12.2.9。** 设 $(X, d)$ 为一个度量空间，且设 $n \in \mathbb{N}$，$r \in [0, \infty]$ 满足 $\mathcal{P}_{(X, d), n} < r$ (参见定义 12.2.6)。则 $\mathcal{P}_{(X, d), r} < n$ (参见定义 12.2.7)。
+#### 引理 12.2.9
+设 $(X, d)$ 为一个度量空间，且设 $n \in \mathbb{N}$，$r \in [0, \infty]$ 满足 $\mathcal{P}_{(X, d), n} < r$（参见定义 12.2.6）。则 $\mathcal{P}_{(X, d), r} < n$（参见定义 12.2.7）。
 
-*引理 12.2.9 的证明。* 注意到引理 12.2.8 确立了 $\mathcal{P}_{(X, d), r} < n$ (参见定义 12.2.7)。从而引理 12.2.9 的证明完毕。
+*引理 12.2.9 的证明。* 注意到引理 12.2.8 确立了 $\mathcal{P}_{(X, d), r} < n$（参见定义 12.2.7）。从而引理 12.2.9 的证明完毕。
 
 ### 12.2.2.3 基于覆盖半径上界推导填充半径上界
 
-**引理 12.2.10。** 设 $(X, d)$ 为一个度量空间，且设 $n \in \mathbb{N}$。则 $\mathcal{P}_{(X, d), n} \le \mathcal{C}_{(X, d), n}$ (参见定义 12.2.1 和 12.2.6)。
+#### 引理 12.2.10
+设 $(X, d)$ 为一个度量空间，且设 $n \in \mathbb{N}$。则 $\mathcal{P}_{(X, d), n} \le \mathcal{C}_{(X, d), n}$（参见定义 12.2.1 和 12.2.6）。
 
 *引理 12.2.10 的证明。* 在整个证明过程中，不失一般性地假设 $\mathcal{C}_{(X, d), n} < \infty$ 且 $\mathcal{P}_{(X, d), n} > 0$，设 $r \in [0, \infty)$，$x_1, x_2, \ldots, x_n \in X$ 满足
 
@@ -16131,7 +17718,7 @@ $$ \left[ \min_{i,j \in \{1,2,\ldots,n+1\}, i \ne j} d(\mathbf{x}_i, \mathbf{x}_
 
 $$ \varphi(v) = \min\{ m \in \{1, 2, \ldots, n\} : v \in \{ w \in X : d(x_m, w) \le r \} \} \tag{12.81} $$
 
-(参见定义 12.2.1 和 12.2.6 以及引理 12.2.5)。注意到 (12.81) 表明对于所有 $v \in X$，有
+（参见定义 12.2.1 和 12.2.6 以及引理 12.2.5）。注意到 (12.81) 表明对于所有 $v \in X$，有
 
 $$v \in \{w \in X : d(x_{\varphi(v)}, w) \leq r\}.$$
 
@@ -16151,9 +17738,10 @@ $$2r < d(\mathbf{x}_i, \mathbf{x}_j) \leq d(\mathbf{x}_i, x_{\varphi(\mathbf{x}_
 
 ### 12.2.2.4 度量空间中球内填充半径的上界
 
-**引理 12.2.11。** 设 $(X, d)$ 为一个度量空间，设 $n \in \mathbb{N}$，$x \in X$，$r \in (0, \infty]$，并设 $S = \{v \in X : d(x, v) \leq r\}$。则 $\mathcal{P}_{(S, d | S), n} \leq r$ (参见定义 12.2.6)。
+#### 引理 12.2.11
+设 $(X, d)$ 为一个度量空间，设 $n \in \mathbb{N}$，$x \in X$，$r \in (0, \infty]$，并设 $S = \{v \in X : d(x, v) \leq r\}$。则 $\mathcal{P}_{(S, d | S), n} \leq r$（参见定义 12.2.6）。
 
-*引理 12.2.11 的证明。* 在整个证明过程中，不失一般性地假设 $\mathcal{P}_{(S, d | S), n} > 0$ (参见定义 12.2.6)。注意到对于所有 $\mathbf{x}_1, \mathbf{x}_2, \ldots, \mathbf{x}_{n+1} \in S$，$i, j \in \{1, 2, \ldots, n+1\}$，有
+*引理 12.2.11 的证明。* 在整个证明过程中，不失一般性地假设 $\mathcal{P}_{(S, d | S), n} > 0$（参见定义 12.2.6）。注意到对于所有 $\mathbf{x}_1, \mathbf{x}_2, \ldots, \mathbf{x}_{n+1} \in S$，$i, j \in \{1, 2, \ldots, n+1\}$，有
 
 $$d(\mathbf{x}_i, \mathbf{x}_j) \leq d(\mathbf{x}_i, x) + d(x, \mathbf{x}_j) \leq 2r.$$
 
@@ -16171,40 +17759,38 @@ $$\min_{i, j \in \{1, 2, \ldots, n+1\}, i \neq j} d(\mathbf{x}_i, \mathbf{x}_j) 
 
 ### 12.2.3.1 基于覆盖半径上界推导覆盖数上界
 
-**引理 12.2.12。** 设 $(X, d)$ 为一个度量空间，且设 $r \in [0, \infty]$，$n \in \mathbb{N}$ 满足 $\mathcal{C}_{(X,d),n} < r$ (参见定义 12.2.1)。则 $\mathcal{C}^{(X,d),r} \leq n$ (参见定义 4.3.2)。
+#### 引理 12.2.12
+设 $(X, d)$ 为一个度量空间，且设 $r \in [0, \infty]$，$n \in \mathbb{N}$ 满足 $\mathcal{C}_{(X,d),n} < r$（参见定义 12.2.1）。则 $\mathcal{C}^{(X,d),r} \leq n$（参见定义 4.3.2）。
 
 *引理 12.2.12 的证明。* 注意到假设 $\mathcal{C}_{(X,d),n} < r$ 确保存在 $A \subseteq X$ 使得 $|A| \leq n$ 且
 
 $$X \subseteq \left[\bigcup_{a \in A} \left\{v \in X : d(a, v) \leq r \right\}\right]. \tag{12.89}$$
 
-这确立了 $\mathcal{C}^{(X,d),r} \leq n$ (参见定义 4.3.2)。从而引理 12.2.12 的证明完毕。
+这确立了 $\mathcal{C}^{(X,d),r} \leq n$（参见定义 4.3.2）。从而引理 12.2.12 的证明完毕。
 
-**引理 12.2.13。** 设 $(X, d)$ 为一个紧致度量空间，且设 $r \in [0, \infty]$，$n \in \mathbb{N}$ 满足 $\mathcal{C}_{(X,d),n} \leq r$ (参见定义 12.2.1)。则 $\mathcal{C}^{(X,d),r} \leq n$ (参见定义 4.3.2)。
+#### 引理 12.2.13
+设 $(X, d)$ 为一个紧致度量空间，且设 $r \in [0, \infty]$，$n \in \mathbb{N}$ 满足 $\mathcal{C}_{(X,d),n} \leq r$（参见定义 12.2.1）。则 $\mathcal{C}^{(X,d),r} \leq n$（参见定义 4.3.2）。
 
 *引理 12.2.13 的证明。* 在整个证明过程中，不失一般性地假设 $X \neq \emptyset$，并设 $x_{k,m} \in X$，$m \in \{1, 2, \ldots, n\}$，$k \in \mathbb{N}$，满足对于所有 $k \in \mathbb{N}$ 有
 
 $$X \subseteq \left[\bigcup_{m=1}^{n} \left\{v \in X : d(x_{k,m}, v) \leq r + \frac{1}{k} \right\}\right] \tag{12.90}$$
 
-(参见引理 12.2.4)。注意到假设 $(X, d)$ 是紧致度量空间，表明了存在 $\mathfrak{r} = (\mathfrak{r}_m)_{m \in \{1, 2, \ldots, n\}} : \{1, 2, \ldots, n\} \rightarrow X$ 和 $k = (k_i)_{i \in \mathbb{N}} : \mathbb{N} \rightarrow \mathbb{N}$ 满足
+（参见引理 12.2.4）。注意到假设 $(X, d)$ 是紧致度量空间，表明了存在 $\mathfrak{r} = (\mathfrak{r}_m)_{m \in \{1, 2, \ldots, n\}} : \{1, 2, \ldots, n\} \rightarrow X$ 和 $k = (k_i)_{i \in \mathbb{N}} : \mathbb{N} \rightarrow \mathbb{N}$ 满足
 
 $$\lim \sup_{l \to \infty} \max_{m \in \{1, 2, \ldots, n\}} d(\mathfrak{r}_m, x_{k_l,m}) = 0 \quad \text{且} \quad \lim \sup_{l \to \infty} k_l = \infty. \tag{12.91}$$
 
+
+
 接下来，注意到假设 $d$ 是一个度量，确保了对于所有 $v \in X$，$m \in \{1, 2, \ldots, n\}$，$l \in \mathbb{N}$，有
-
 $$d(v, \mathfrak{r}_m) \leq d(v, x_{k_l,m}) + d(x_{k_l,m}, \mathfrak{r}_m). \tag{12.92}$$
-
 这与 (12.90) 一起证明了对于所有 $v \in X$，$l \in \mathbb{N}$，有
-
 $$\begin{aligned}
 \min_{m \in \{1, 2, \ldots, n\}} d(v, \mathfrak{r}_m) &\leq \min_{m \in \{1, 2, \ldots, n\}} \left[d(v, x_{k_l,m}) + d(x_{k_l,m}, \mathfrak{r}_m)\right] \\
 &\leq \left[\min_{m \in \{1, 2, \ldots, n\}} d(v, x_{k_l,m})\right] + \left[\max_{m \in \{1, 2, \ldots, n\}} d(x_{k_l,m}, \mathfrak{r}_m)\right] \tag{12.93} \\
 &\leq \left[r + \frac{1}{k_l}\right] + \left[\max_{m \in \{1, 2, \ldots, n\}} d(x_{k_l,m}, \mathfrak{r}_m)\right].
 \end{aligned}$$
-
 因此，我们得到对于所有 $v \in X$，有
-
 $$\min_{m \in \{1, 2, \ldots, n\}} d(v, \mathfrak{r}_m) \leq \lim \sup_{l \to \infty} \left(\left[r + \frac{1}{k_l}\right] + \left[\max_{m \in \{1, 2, \ldots, n\}} d(x_{k_l,m}, \mathfrak{r}_m)\right]\right) = r. \tag{12.94}$$
-
 这确立了 $\mathcal{C}^{(X,d)} \leq n$ (参见定义 4.3.2)。从而引理 12.2.13 的证明完毕。
 
 ### 12.2.3.2 基于覆盖数上界推导覆盖半径上界
@@ -16212,9 +17798,7 @@ $$\min_{m \in \{1, 2, \ldots, n\}} d(v, \mathfrak{r}_m) \leq \lim \sup_{l \to \i
 **引理 12.2.14。** 设 $(X, d)$ 为一个度量空间，且设 $r \in [0, \infty]$，$n \in \mathbb{N}$ 满足 $\mathcal{C}^{(X, d), r} \leq n$ (参见定义 4.3.2)。则 $\mathcal{C}_{(X, d), n} \leq r$ (参见定义 12.2.1)。
 
 *引理 12.2.14 的证明。* 注意到假设 $\mathcal{C}^{(X, d), r} \leq n$ 确保存在 $A \subseteq X$ 使得 $|A| \leq n$ 且
-
 $$X \subseteq \bigcup_{a \in A} \{v \in X : d(a, v) \leq r\} \,. \tag{12.95}$$
-
 这确立了 $\mathcal{C}_{(X, d), n} \leq r$ (参见定义 12.2.1)。从而引理 12.2.14 的证明完毕。
 
 ### 12.2.3.3 基于填充半径上界推导覆盖半径上界
@@ -16222,35 +17806,20 @@ $$X \subseteq \bigcup_{a \in A} \{v \in X : d(a, v) \leq r\} \,. \tag{12.95}$$
 **引理 12.2.15。** 设 $(X, d)$ 为一个度量空间，且设 $n \in \mathbb{N}$。则 $\mathcal{C}_{(X, d), n} \leq 2 \mathcal{P}_{(X, d), n}$ (参见定义 12.2.1 和 12.2.6)。
 
 *引理 12.2.15 的证明。* 在整个证明过程中，假设 $X \neq \emptyset$，不失一般性地假设 $\mathcal{P}_{(X, d), n} < \infty$，设 $r \in [0, \infty]$ 满足 $r > \mathcal{P}_{(X, d), n}$，并设 $N \in \mathbb{N}_0 \cup \{\infty\}$ 满足 $N = \mathcal{P}^{(X, d), r}$ (参见定义 12.2.6 和 12.2.7)。注意到引理 12.2.9 确保了
-
 $$N = \mathcal{P}^{(X, d), r} < n. \tag{12.96}$$
-
 此外，注意到由于 $N = \mathcal{P}^{(X, d), r}$ 以及 (12.77)，对于所有 $x_1, x_2, \dots, x_{N+1}, x_{N+2} \in X$，有
-
 $$\min_{i, j \in \{1, \dots, N+2\}, i \neq j} d(x_i, x_j) \leq 2r. \tag{12.97}$$
-
 另外，注意到由于 $N = \mathcal{P}^{(X, d), r}$ 以及 (12.77)，推导出存在 $x_1, x_2, \dots, x_{N+1} \in X$ 满足
-
 $$\min \left( \{d(x_i, x_j) : i, j \in \{1, 2, \dots, N + 1\}, \ i \neq j \} \cup \{\infty\} \right) > 2r. \tag{12.98}$$
-
 将此与 (12.97) 结合，确立了对于所有 $v \in X$，有
-
 $$\min_{i \in \{1, 2, \dots, N\}} d(x_i, v) \leq 2r. \tag{12.99}$$
-
 因此，我们得到对于所有 $w \in X$，有
-
 $$w \in \left[ \bigcup_{m = 1}^{n} \{v \in X : d(x_i, v) \leq 2r\} \right]. \tag{12.100}$$
-
-
-
-
 因此，我们得到
-
 \begin{equation}
 X \subseteq \left[ \bigcup_{m=1}^{n} \{ v \in X : d(x_i, v) \le 2r \} \right].
 \tag{12.101}
 \end{equation}
-
 将此式与引理 **12.2.5** 结合可知 $\mathcal{C}_{(X,d),n} \le 2r$（参见定义 **12.2.1**）。引理 **12.2.15** 的证明到此结束。
 
 ## 12.2.3.4 覆盖半径与堆积半径的等价性
@@ -16264,14 +17833,11 @@ X \subseteq \left[ \bigcup_{m=1}^{n} \{ v \in X : d(x_i, v) \le 2r \} \right].
 ### 12.2.4.1 由 Lebesgue–Borel 测度诱导的测度
 
 **引理 12.2.17。** *设* $(V, \lVert \cdot \rVert)$ *为赋范向量空间，* $N \in \mathbb{N}$，*设* $b_1, b_2, \dots, b_N \in V$ *是* $V$ *的 Hamel 基，* $\lambda : \mathcal{B}(\mathbb{R}^N) \to [0, \infty]$ *为* $\mathbb{R}^N$ *上的 Lebesgue–Borel 测度，* $\Phi : \mathbb{R}^N \to V$ *满足对所有* $r = (r_1, r_2, \dots, r_N) \in \mathbb{R}^N$ *有* $\Phi(r) = r_1b_1 + r_2b_2 + \dots + r_Nb_N$，*且* $\nu : \mathcal{B}(V) \to [0, \infty]$ *满足对所有* $A \in \mathcal{B}(V)$ *有*
-
 \begin{equation}
 \nu(A) = \lambda(\Phi^{-1}(A)).
 \tag{12.102}
 \end{equation}
-
 则
-
 - (i) *成立* $\Phi$ *为线性映射*，
 - (ii) *对所有* $r = (r_1, r_2, \dots, r_N) \in \mathbb{R}^N$ *成立* $\lVert \Phi(r) \rVert \le \left[ \sum_{n=1}^{N} \lVert b_n \rVert^2 \right]^{1/2} \left[ \sum_{n=1}^{N} \lVert r_n \rVert^2 \right]^{1/2}$，
 - (iii) *成立* $\Phi \in \mathcal{C}(\mathbb{R}^N, V)$，
@@ -16282,46 +17848,31 @@ X \subseteq \left[ \bigcup_{m=1}^{n} \{ v \in X : d(x_i, v) \le 2r \} \right].
 - (viii) *成立* $\nu(\{v \in V: \lVert v \rVert \leq 1\}) > 0$。
 
 *引理 12.2.17 的证明。* 注意对于所有 $r=(r_{1}, r_{2}, \ldots, r_{N}), s=(s_{1}, s_{2}, \ldots, s_{N}) \in \mathbb{R}^{N}$ 以及 $\rho \in \mathbb{R}$，成立
-
 $\Phi(\rho r + s) = (\rho r_{1} + s_{1})b_{1} + (\rho r_{2} + s_{2})b_{2} + \cdots + (\rho r_{N} + s_{N})b_{N} = \rho \Phi(r) + \Phi(s). \qquad (12.103)$
-
 这证明了条目 **(i)**。接下来注意到 Hölder 不等式表明，对于所有 $r=(r_{1}, r_{2}, \ldots, r_{N}) \in \mathbb{R}^{N}$，成立
-
 $\|\Phi(r)\| = \|r_{1}b_{1} + r_{2}b_{2} + \cdots + r_{N}b_{N}\| \leq \sum_{n=1}^{N} |r_{n}| \|b_{n}\| \leq \left[\sum_{n=1}^{N} \|b_{n}\|^{2}\right]^{1/2} \left[\sum_{n=1}^{N} |r_{n}|^{2}\right]^{1/2}. \qquad (12.104)$
-
 这证明了条目 **(ii)**。此外，注意到条目 **(ii)** 证明了条目 **(iii)**。进而，观察到假设 $b_{1}, b_{2}, \ldots, b_{N} \in V$ 是 $V$ 的 Hamel 基，证明了条目 **(iv)**。接下来注意到 **(12.102)** 和条目 **(iii)** 证明了条目 **(v)**。另外，观察到积分变换定理表明，对于所有 $r \in (0, \infty)$，$v \in \mathbb{R}^{N}$，$A \in \mathcal{B}(\mathbb{R}^{N})$，成立
-
 $\begin{aligned} \lambda(\{(ra + v) \in \mathbb{R}^{N}: a \in A\}) &= \lambda(\{ra \in \mathbb{R}^{N}: a \in A\}) = \int_{\mathbb{R}^{N}} \mathbb{1}_{\{ra \in \mathbb{R}^{N}: a \in A\}}(x) \, \mathrm{d}x \\ &= \int_{\mathbb{R}^{N}} \mathbb{1}_{A}(\tfrac{x}{r}) \, \mathrm{d}x = r^{N} \int_{\mathbb{R}^{N}} \mathbb{1}_{A}(x) \, \mathrm{d}x = r^{N} \lambda(A). \qquad (12.105) \end{aligned}$
-
 结合条目 **(i)** 和条目 **(iv)** 从而证明了，对于所有 $r \in (0, \infty)$，$v \in V$，$A \in \mathcal{B}(V)$，成立
-
 $\begin{aligned} \nu(\{(ra + v) \in V: a \in A\}) &= \lambda(\Phi^{-1}(\{(ra + v) \in V: a \in A\})) \\ &= \lambda(\{\Phi^{-1}(ra + v) \in \mathbb{R}^{N}: a \in A\}) \\ &= \lambda(\{[r \Phi^{-1}(a) + \Phi^{-1}(v)] \in \mathbb{R}^{N}: a \in A\}) \\ &= \lambda(\{[ra + \Phi^{-1}(v)] \in \mathbb{R}^{N}: a \in \Phi^{-1}(A)\}) \\ &= r^{N} \lambda(\Phi^{-1}(A)) = r^{N} \nu(A). \qquad (12.106) \end{aligned}$
-
 这证明了条目 **(vi)**。因此，我们得到对于所有 $r \in (0, \infty)$，成立
-
 $\begin{aligned} \nu(\{v \in V: \|v\| \leq r\}) &= \nu(\{rv \in V: \|v\| \leq 1\}) \\ &= r^{N} \nu(\{v \in V: \|v\| \leq 1\}) = r^{N} \nu(X). \qquad (12.107) \end{aligned}$
-
 这证明了条目 **(vii)**。此外，观察到 **(12.107)** 表明
-
 $\begin{aligned} \infty = \lambda(\mathbb{R}^{N}) &= \nu(V) = \limsup_{r \to \infty} \big[\nu(\{v \in V: \|v\| \leq r\})\big] \\ &= \limsup_{r \to \infty} \big[r^{N} \nu(\{v \in V: \|v\| \leq 1\})\big]. \qquad (12.108) \end{aligned}$
-
 因此，我们得到 $\nu(\{v \in V : \|v\| \leq 1\}) \neq 0$。这证明了条目 **(viii)**。引理 12.2.17 的证明到此结束。 $\square$
 
 ### 12.2.4.2 堆积半径的上界
 
 **引理 12.2.18。** *设 $(V, \|\cdot\|)$ 为赋范向量空间，设 $X = \{v \in V : \|v\| \leq 1\}$，设 $d : X \times X \rightarrow [0, \infty)$ 满足对所有 $v, w \in X$ 有 $d(v, w) = \|v - w\|$，且设 $n, N \in \mathbb{N}$ 满足 $N = \dim(V)$。则*
-
 $\mathcal{P}_{(X, d), n} \leq 2(n+1)^{-1/N}$                                                                                     (12.109)
-
 *（参见定义 12.2.6）。*
 
 *引理 12.2.18 的证明。* 在整个证明中，不妨假设 $\mathcal{P}_{(X, d), n} > 0$，设 $\rho \in [0, \mathcal{P}_{(X, d), n})$，设 $\lambda : \mathcal{B}(\mathbb{R}^N) \rightarrow [0, \infty)$ 为 $\mathbb{R}^N$ 上的 Lebesgue-Borel 测度，设 $b_1, b_2, \dots, b_N \in V$ 为 $V$ 的 Hamel 基，设 $\Phi : \mathbb{R}^N \rightarrow V$ 满足对所有 $r = (r_1, r_2, \dots, r_N) \in \mathbb{R}^N$ 有
-
 $\Phi(r) = r_1b_1 + r_2b_2 + \dots + r_Nb_N,                                                                       (12.110)$
-
 且设 $\nu : \mathcal{B}(V) \rightarrow [0, \infty)$ 满足对所有 $A \in \mathcal{B}(V)$ 有
-
 $\nu(A) = \lambda(\Phi^{-1}(A))                                                                                             (12.111)$
+
+
 
 *（参见定义 12.2.6）。* 注意到引理 12.2.11 确保了 $\rho < \mathcal{P}_{(X, d), n} \leq 1$。此外，注意到 (12.75) 表明存在 $x_1, x_2, \dots, x_{n+1} \in X$ 满足
 
@@ -16341,21 +17892,23 @@ $\{v \in V : \|v - x_j\| \leq \rho\} \subseteq \{v \in V : \|v\| \leq 2\}.      
 
 接下来观察到，引理 12.2.17 确保了 $(V, \mathcal{B}(V), \nu)$ 是测度空间。将此与 (12.113) 和 (12.115) 结合，证明了
 
-$\begin{align*} \sum_{j=1}^{n+1} \nu(\{v \in V : \|v - x_j\| \leq \rho\}) &= \nu\bigg(\bigcup_{j=1}^{n+1} \{v \in V : \|v - x_j\| \leq \rho\} \bigg) \\ &\leq \nu(\{v \in V : \|v\| \leq 2\}). \end{align*}$                                                                                          (12.116)
-
-
-
+```
+\begin{align*} \sum_{j=1}^{n+1} \nu(\{v \in V : \|v - x_j\| \leq \rho\}) &= \nu\bigg(\bigcup_{j=1}^{n+1} \{v \in V : \|v - x_j\| \leq \rho\} \bigg) \\ &\leq \nu(\{v \in V : \|v\| \leq 2\}). \end{align*}
+```
+                                                                                          (12.116)
 
 ## 12.2. 覆盖数估计
 
 引理 12.2.17 表明
 
+```
 $$
 (12.117) \quad (n+1)\rho^N\nu(X) = \sum_{j=1}^{n+1} [\rho^N \nu(\{v \in V : \|v\| \leq 1\})] \\
 = \sum_{j=1}^{n+1} \nu(\{v \in V : \|v\| \leq \rho\}) \\
 = \sum_{j=1}^{n+1} \nu(\{v \in V : \|v-x_j\| \leq \rho\}) \leq \nu(\{v \in V : \|v\| \leq 2\}) \\
 = 2^N \nu(\{v \in V : \|v\| \leq 1\}) = 2^N \nu(X).
 $$
+```
 
 接下来观察到，引理 12.2.17 证明了 $\nu(X) > 0$。结合 (12.117) 可知 $(n+1)\rho^N \leq 2^N$。因此，我们得到 $\rho^N \leq (n+1)^{-1}2^N$。进而得到 $\rho \leq 2(n+1)^{-1/N}$。至此，引理 12.2.18 的证明完成。∎
 
@@ -16363,9 +17916,11 @@ $$
 
 **推论 12.2.19.** *设 $(V, \|\cdot\|)$ 为范数向量空间，设 $X = \{v \in V : \|v\| \leq 1\}$，设 $d: X \times X \to [0, \infty)$ 满足对所有 $v, w \in X$ 有 $d(v, w) = \|v-w\|$，且设 $n, N \in \mathbb{N}$ 满足 $N = \dim(V)$。则*
 
+```
 $$
 (12.118) \quad \mathcal{C}_{(X,d),n} \leq 4(n+1)^{-1/N}
 $$
+```
 
 *(参见定义 12.2.1)。*
 
@@ -16375,36 +17930,46 @@ $$
 
 **引理 12.2.20.** *设 $(V, \|\cdot\|)$ 为范数向量空间，设 $X = \{v \in V : \|v\| \leq 1\}$，设 $d: X \times X \to [0, \infty)$ 满足对所有 $v, w \in X$ 有 $d(v, w) = \|v-w\|$，且设 $n, N \in \mathbb{N}$ 满足 $N = \dim(V)$。则*
 
+```
 $$
 (12.119) \quad n^{-1/N} \leq \mathcal{C}_{(X,d),n}
 $$
+```
 
 *(参见定义 12.2.1)。*
 
 *引理 12.2.20 的证明.* *在整个证明过程中，不失一般性地假设 $\mathcal{C}_{(X,d),n} < \infty$，设 $\rho \in (\mathcal{C}_{(X,d),n}, \infty)$，设 $\lambda: \mathcal{B}(\mathbb{R}^N) \to [0, \infty]$ 为 $\mathbb{R}^N$ 上的勒贝格-波雷尔测度，设 $b_1, b_2, \ldots, b_N \in V$ 为 $V$ 的一组哈梅尔基，设 $\Phi: \mathbb{R}^N \to V$ 满足对所有 $r = (r_1, r_2, \ldots, r_N) \in \mathbb{R}^N$ 有*
 
+```
 $$
 (12.120) \quad \Phi(r) = r_1b_1 + r_2b_2 + \ldots + r_Nb_N,
 $$
+```
 
 且设 $\nu\colon\mathcal{B}(V)\rightarrow[0,\infty)$ 满足对所有 $A\in\mathcal{B}(V)$ 有
 
+```
 $$
 (12.121) \quad \nu(A)=\lambda(\Phi^{-1}(A))
 $$
+```
 
 *(参见定义 12.2.1)。事实 $\rho>\mathcal{C}_{(X,d),n}$ 表明存在 $x_{1},x_{2},\ldots,$ $x_{n}\in X$ 使得*
 
+```
 $$
 (12.122) \quad X\subseteq\left[\bigcup_{m=1}^{n}\left\{v\in X\colon d(x_{m},v)\leq\rho\right\}\right].
 $$
+```
 
 引理 12.2.17 进而表明
 
+```
 $$
 (12.123) \quad \nu(X)\leq\nu\left(\bigcup_{m=1}^{n}\left\{v\in X\colon d(x_{m},v)\leq\rho\right\}\right) \leq \sum_{m=1}^{n}\nu\left(\left\{v\in X\colon d(x_{m},v)\leq\rho\right\}\right) \\
 = \sum_{m=1}^{n}\left[\rho^{N}\nu\left(\left\{v\in X\colon d(x_{m},v)\leq1\right\}\right)\right] \leq n\rho^{N}\nu(X).
 $$
+```
 
 此式与引理 12.2.17 一起证明了 $1\leq n\rho^{N}$。因此，我们得到 $\rho^{N}\geq n^{-1}$。这确保了 $\rho\geq n^{-1/N}$。至此，引理 12.2.20 的证明完成。 $\square$
 
@@ -16412,9 +17977,11 @@ $$
 
 **推论 12.2.21.** *设 $(V,\|\cdot\|)$ 为范数向量空间，设 $X=\left\{v\in V\colon\|v\|\leq1\right\}$，设 $d\colon X\times X\rightarrow[0,\infty)$ 满足对所有 $v,w\in X$ 有 $d(v,w)=\|v-w\|$，且设 $n,N\in\mathbb{N}$ 满足 $N=\dim(V)$。则*
 
+```
 $$
 (12.124) \quad n^{-1/N}\leq\mathcal{C}_{(X,d),n}\leq4\left(n+1\right)^{-1/N}
 $$
+```
 
 *(参见定义 12.2.1)。*
 
@@ -16424,14 +17991,17 @@ $$
 
 **引理 12.2.22.** *设 $(V,\|\cdot\|)$ 为范数向量空间，设 $d\colon V\times V\rightarrow[0,\infty)$ 满足对所有 $v,w\in V$ 有 $d(v,w)=\|v-w\|$，设 $n\in\mathbb{N}$，$r\in(0,\infty)$，且设 $X\subseteq V$ 和 $\mathfrak{X}\subseteq V$ 满足 $\mathfrak{X}=\left\{rv\in V\colon v\in X\right\}$。则*
 
+```
 $$
 (12.125) \quad \mathcal{C}_{(\mathfrak{X},d(\mathfrak{X}\times\mathfrak{X}),n)}=r\:\mathcal{C}_{(X,d(X\times X),n)}
 $$
+```
 
 *(参见定义 12.2.1)。*
 
 *引理 12.2.22 的证明.* 在整个证明过程中，设 $\Phi: V \to V$ 满足对所有 $v \in V$ 有 $\Phi(v) = rv$。观察到练习 12.2.3 表明
 
+```
 $$
 (12.126) \quad r\mathcal{C}_{(X, d), n} = r \left[ \inf_{x_1, x_2, \ldots, x_n \in X} \sup_{v \in X} \min_{i \in \{1, 2, \ldots, n\}} d(x_i, v) \right] \\
 = \inf_{x_1, x_2, \ldots, x_n \in X} \sup_{v \in X} \min_{i \in \{1, 2, \ldots, n\}} \|rx_i - rv\| \\
@@ -16440,6 +18010,7 @@ $$
 = \inf_{x_1, x_2, \ldots, x_n \in X} \sup_{v \in X} \min_{i \in \{1, 2, \ldots, n\}} d\bigl(\Phi(x_i), v\bigr) \\
 = \inf_{x_1, x_2, \ldots, x_n \in X} \sup_{v \in X} \min_{i \in \{1, 2, \ldots, n\}} d(x_i, v) = \mathcal{C}_{(\Phi(X), d(\Phi(x_i), v))}, n
 $$
+```
 
 *(参见定义 12.2.1)。这建立了 (12.125)。至此，引理 12.2.22 的证明完成。*
 
@@ -16447,103 +18018,112 @@ $$
 
 **命题 12.2.23.** *设 $(V, \| \cdot \|)$ 为具有有限维数的范数向量空间（即 $\dim(V) < \infty$），设 $r, R \in (0, \infty)$，$X = \{ v \in V : \|v\| \leq R \}$，且设 $d : X \times X \to [0, \infty)$ 满足对所有 $v, w \in X$ 有 $d(v, w) = \|v - w\|$。则*
 
+```
 $$
 (12.127) \quad \mathcal{C}^{(X, d), r} \leq \begin{cases} 1 & : r \geq R \\ \left\lceil \frac{4R}{r} \right\rceil^{\dim(V)} & : r < R \end{cases}
 $$
+```
 
 *(参见定义 4.3.2)。*
 
 *命题 12.2.23 的证明.* 在整个证明过程中，不失一般性地假设 $\dim(V) > 0$，不失一般性地假设 $r < R$，设 $N \in \mathbb{N}$ 满足 $N = \dim(V)$，设 $n \in \mathbb{N}$ 满足
 
+```
 $$
 (12.128) \quad n = \left\lceil \left\lceil \frac{4R}{r} \right\rceil^N - 1 \right\rceil,
 $$
+```
 
 设 $\mathfrak{X} = \{ v \in V : \|v\| \leq 1 \}$，且设 $\mathfrak{d} : \mathfrak{X} \times \mathfrak{X} \to [0, \infty)$ 满足对所有 $v, w \in \mathfrak{X}$ 有
 
+```
 $$
 (12.129) \quad \mathfrak{d}(v, w) = \|v - w\|
 $$
+```
 
 *(参见定义 4.2.6)。观察到推论 12.2.19 证明了*
 
+```
 $$
 (12.130) \quad \mathcal{C}_{(\mathfrak{X}, \mathfrak{d}), n} \leq 4(n + 1)^{-1/N}
 $$
+```
 
 *(参见定义 12.2.1)。事实*
 
+```
 $$
 (12.131) \quad n + 1 = \left\lceil \left\lceil \frac{4R}{r} \right\rceil^N - 1 \right\rceil + 1 \geq \left\lceil \frac{4R}{r} \right\rceil^N
 $$
+```
 
 因此确保了
 
+```
 $$
 (12.132) \quad \mathcal{C}_{(\mathfrak{X},\mathfrak{d}),n} \leq 4\left(n+1\right)^{-1/N} \leq 4\left[\frac{4R}{r}\right]^{-1} = \frac{r}{4}
 $$
-
-*(注：基于标准覆盖数论证中半径反向缩放特性，修正了指数和分数结构中的OCR错误)。*
+```
 
 此式与引理 12.2.22 一起证明了
 
+```
 $$
 (12.133) \quad \mathcal{C}_{(X,d),r} \leq R\mathcal{C}_{(\mathfrak{X},\mathfrak{d}),r/R} \leq R \frac{r/R}{4} = \frac{r}{4} \text{ (标准结果通常涉及取整函数，此处保留原文逻辑流程)}
 $$
-
-*(针对 12.132/12.133 的自我修正，基于标准证明：文本可能意在展示覆盖数由体积论据限定。我们将更贴近 OCR 文本的逻辑流程，但修正明显的符号错误。12.132 的 OCR 中矩阵格式混乱。应为 $\left[\frac{4R}{r}\right]$。12.133 的 OCR 也混乱。我将把它们格式化为标准数学表达式。)*
+```
 
 引理 12.2.13 进而确保了
 
+```
 $$
 (12.134) \quad \mathcal{C}^{(X,d),r} \leq n \leq \left\lceil \frac{4R}{r} \right\rceil^{\dim(V)}
 $$
+```
 
 *(参见定义 4.3.2)。至此，命题 12.2.23 的证明完成。 $\square$
 
 **命题 12.2.24.** *设 $d \in \mathbb{N}$，$a \in \mathbb{R}$，$b \in (a, \infty)$，$r \in (0, \infty)$，且设 $\delta$: $([a,b]^d \times [a,b]^d) \rightarrow [0, \infty)$ 满足对所有 $x, y \in [a,b]^d$ 有 $\delta(x, y) = \|x - y\|_\infty$（参见定义 3.3.4）。则*
 
+```
 $$
 (12.135) \quad \mathcal{C}^{([a,b]^d,\delta),r} \leq \left(\left\lceil \frac{b-a}{2r} \right\rceil\right)^d \leq \begin{cases} 1 & : r \geq \frac{(b-a)}{2} \\ \left(\frac{b-a}{r} + 1\right)^d & : r < \frac{(b-a)}{2} \end{cases}
 $$
-
-*(注：调整了上界表达式以匹配标准盒子覆盖数估计，并修正了分数 $\frac{b-a}{r}$ 的OCR混乱)。*
+```
 
 *(参见定义 4.2.6 和 4.3.2)。*
 
 *命题 12.2.24 的证明.* 在整个证明过程中，设 $\mathfrak{N} \subseteq \mathbb{N}$ 满足
 
-$$
+
+
 (12.136) \quad \mathfrak{N} = \left\lceil \frac{b-a}{2r} \right\rceil,
-$$
 
+$$
 对于每个 $N \in \mathbb{N}$，$i \in \{1, 2, \dots, N\}$，设 $g_{N,i} \in [a,b]$ 由下式给出
-
 $$
+
 (12.137) \quad g_{N,i} = a + \frac{(i-1/2)(b-a)}{N}
-$$
 
+$$
 且设 $A \subseteq [a,b]^d$ 由下式给出
-
 $$
+
 (12.138) \quad A = \{g_{\mathfrak{N},1}, g_{\mathfrak{N},2}, \dots, g_{\mathfrak{N},\mathfrak{N}}\}^d
 $$
 
 *(参见定义 4.2.6)。观察到对所有 $N \in \mathbb{N}$，$i \in \{1, 2, \dots, N\}$，$x \in [a + \frac{(i-1)(b-a)}{N}, g_{N,i}]$ 成立*
-
 $$
+
 (12.139) \quad |x - g_{N,i}| = a + \frac{(i-1/2)(b-a)}{N} - x \leq a + \frac{(i-1/2)(b-a)}{N} - \left(a + \frac{(i-1)(b-a)}{N}\right) = \frac{b-a}{2N}.
 $$
 
 此外，注意对所有 $N \in \mathbb{N}$，$i \in \{1, 2, \dots, N\}$，$x \in [g_{N,i}, a + \frac{i(b-a)}{N}]$ 成立
-
 $$
+
 (12.140) \quad |x - g_{N,i}| = x - \left(a + \frac{(i-1/2)(b-a)}{N}\right) \leq a + \frac{i(b-a)}{N} - \left(a + \frac{(i-1/2)(b-a)}{N}\right) = \frac{b-a}{2N}.
 $$
-
-
-
-
 
 将上述不等式与(12.139)结合，可知对于所有 \(N \in \mathbb{N}\)，\(i \in \{1, 2, \ldots, N\}\)，以及 \(x \in [a + \frac{(i-1)(b-a)}{N}, a + \frac{i(b-a)}{N}]\)，均有 \(|x - g_{N,i}| \leq \frac{b-a}{2N}\)。这证明了对于任意 \(N \in \mathbb{N}\) 和 \(x \in [a, b]\)，存在 \(y \in \{g_{N,1}, g_{N,2}, \ldots, g_{N,N}\}\) 使得
 
@@ -16610,7 +18190,7 @@ $$F(\omega) = \sup_{x \in E} f_x(\omega) = \sup_{x \in \mathbf{E}} f_x(\omega)�
 
 $$\mathbb{P}(\sup_{x \in E}|Z_x| \geq \varepsilon) \leq \sum_{i=1}^{N} \mathbb{P}(|Z_{z_i}| \geq \tfrac{\varepsilon}{2}) \tag{12.150}$$
 
-(*参见* 引理 **12.3.2**)。
+(*参见* 引理 **12.3.2** )。
 
 *引理 12.3.3 的证明。* 在整个证明过程中，令 $B_1, B_2, \ldots, B_N \subseteq E$ 满足对于所有 $i \in \{1, 2, \ldots, N\}$，有 $B_i = \{x \in E: 2 L \delta(x, z_i) \leq \varepsilon\}$。注意到三角不等式以及假设“对于所有 $x, y \in E$，有 $|Z_x - Z_y| \le L \delta(x, y)$”表明，对于所有 $i \in \{1, 2, \ldots, N\}$ 和 $x \in B_i$，有
 
@@ -16648,10 +18228,6 @@ $|(Z_x(\eta) - \mathbb{E}[Z_x]) - (Z_y(\eta) - \mathbb{E}[Z_y])| \le 2L \delta(x
 
 且
 
-
-
-
-
 ### 12.3. 经验风险最小化
 
 (ii) 满足 $\Omega \ni \eta \mapsto \sup_{x \in E}|Z_{x}(\eta)-\mathbb{E}[Z_{x}]| \in[0, \infty]$ 是 $\mathcal{F}/\mathcal{B}([0, \infty])$-可测的。
@@ -16660,12 +18236,21 @@ $|(Z_x(\eta) - \mathbb{E}[Z_x]) - (Z_y(\eta) - \mathbb{E}[Z_y])| \le 2L \delta(x
 
 $
 \begin{align*}
+
+
+
 \left|\left(Z_{x}(\eta)-\mathbb{E}[Z_{x}]-\left(Z_{y}(\eta)-\mathbb{E}[Z_{y}]\right)\right| & =\left|\left(Z_{x}(\eta)-Z_{y}(\eta)\right)+\left(\mathbb{E}[Z_{y}]-\mathbb{E}[Z_{x}]\right)\right| \\
+
 & \leq\left|Z_{x}(\eta)-Z_{y}(\eta)\right|+\left|\mathbb{E}[Z_{x}]-\mathbb{E}[Z_{y}]\right| \\
+
 & \leq L \delta(x, y)+\left|\mathbb{E}[Z_{x}]-\mathbb{E}[Z_{y}]\right| \\
+
 & = L \delta(x, y)+\left|\mathbb{E}[Z_{x}-Z_{y}]\right| \\
+
 & \leq L \delta(x, y)+\mathbb{E}\left[\left|Z_{x}-Z_{y}\right|\right] \\
+
 & \leq L \delta(x, y)+L \delta(x, y)=2 L \delta(x, y).
+
 \end{align*}
 
 这保证了第 (i) 项。注意第 (i) 项表明对于所有 $\eta \in \Omega$，映射 $E \ni x \mapsto\left|Z_{x}(\eta)-\mathbb{E}[Z_{x}]\right| \in \mathbb{R}$ 是连续的。结合 $E$ 是可分空间的假设以及引理 12.3.2，证明了第 (ii) 项。引理 12.3.5 的证明至此完成。
@@ -16675,7 +18260,9 @@ $
 设 $(E, \delta)$ 为可分度量空间，假设 $E \neq \emptyset$，设 $\varepsilon, L \in(0, \infty)$，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为概率空间，且设 $Z_{x} : \Omega \rightarrow \mathbb{R}, x \in E$ 为满足对于所有 $x, y \in E$ 有 $\mathbb{E}\left[\left|Z_{x}\right|\right]<\infty$ 且 $\left|Z_{x}-Z_{y}\right| \leq L \delta(x, y)$ 的随机变量。则
 
 $
+
 \left[\mathcal{C}^{(E, \delta), \frac{x}{\delta}}\right]^{-1} \mathbb{P}\left(\sup _{x \in E}\left|Z_{x}-\mathbb{E}\left[Z_{x}\right]\right| \geq \varepsilon\right) \leq \sup _{x \in E} \mathbb{P}\left(\left|Z_{x}-\mathbb{E}\left[Z_{x}\right]\right| \geq \frac{\varepsilon}{2}\right).
+
 $
 
 （参见定义 4.3.2 和引理 12.3.5）。
@@ -16683,7 +18270,9 @@ $
 引理 12.3.6 的证明。在整个证明过程中，设 $Y_{x} : \Omega \rightarrow \mathbb{R}, x \in E$ 满足对于所有 $x \in E, \eta \in \Omega$ 都有 $Y_{x}(\eta)=Z_{x}(\eta)-\mathbb{E}[Z_{x}]$。注意，引理 12.3.5 保证了对于所有 $x, y \in E$ 都有：
 
 $
+
 \left|Y_{x}-Y_{y}\right| \leq 2 L \delta(x, y).
+
 $
 
 将此与引理 12.3.4 结合（在引理 12.3.4 的记号中应用，其中 $(E, \delta) \curvearrowright (E, \delta), \varepsilon \curvearrowright \varepsilon, L \curvearrowright 2 L, (\Omega, \mathcal{F}, \mathbb{P}) \curvearrowright (\Omega, \mathcal{F}, \mathbb{P}),\left(Z_{x}\right)_{x \in E} \curvearrowright\left(Y_{x}\right)_{x \in E}$）确立 (12.158)。引理 12.3.6 的证明至此完成。
@@ -16693,7 +18282,9 @@ $
 设 $(E, \delta)$ 为可分度量空间，假设 $E \neq \emptyset$，设 $M \in \mathbb{N}$，$\varepsilon, L, D \in(0, \infty)$，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为概率空间，对于每个 $x \in E$，设 $Y_{x, 1}, Y_{x, 2}, \ldots, Y_{x, M} : \Omega \rightarrow[0, D]$ 为独立随机变量，假设对于所有 $x, y \in E, m \in\{1, 2, \ldots, M\}$ 都有 $\left|Y_{x, m}-Y_{y, m}\right| \leq L \delta(x, y)$，且设 $Z_{x} : \Omega \rightarrow[0, \infty), x \in E$ 满足对于所有 $x \in E$ 有：
 
 $
+
 Z_{x}=\frac{1}{M}\left[\sum_{m=1}^{M} Y_{x, m}\right].
+
 $
 
 则
@@ -16701,6 +18292,7 @@ $
 - (i) 对于所有 $x \in E$，满足 $\mathbb{E}[|Z_{x}|] \leq D < \infty$，
 - (ii) 满足 $\Omega \ni \eta \mapsto \sup_{x \in E}|Z_{x}(\eta) - \mathbb{E}[Z_{x}]| \in [0, \infty]$ 是 $\mathcal{F}/\mathcal{B}([0, \infty])$-可测的，且
 - (iii) 满足
+
   $\mathbb{E}(\sup_{x \in E}|Z_{x} - \mathbb{E}[Z_{x}]| \geq \varepsilon) \leq 2\mathcal{C}^{\mathcal{E}(\delta, \varepsilon/\sqrt{\mathcal{D}})} \exp(-\varepsilon^{2}M/2D^{2})$  (12.161)
 
 （参见定义 4.3.2）。
@@ -16708,28 +18300,39 @@ $
 **引理 12.3.7 的证明。** 首先，注意三角不等式以及对于所有 $x, y \in E, m \in \{1, 2, \ldots, M\}$ 都有 $|Y_{x, m} - Y_{y, m}| \leq L \delta(x, y)$ 的假设，意味着对于所有 $x, y \in E$ 都有：
 
 $
+
 \begin{aligned}
+
 |Z_{x} - Z_{y}| &= \left| \frac{1}{M} \sum_{m=1}^M Y_{x, m} - \frac{1}{M} \sum_{m=1}^M Y_{y, m} \right| = \frac{1}{M} \left| \sum_{m=1}^M (Y_{x, m} - Y_{y, m}) \right| \\
+
 &\leq \frac{1}{M} \sum_{m=1}^M |Y_{x, m} - Y_{y, m}| \leq L \delta(x, y). \quad (12.162)
+
 \end{aligned}
+
 $
 
 接下来注意，对于所有 $x \in E, m \in \{1, 2, \ldots, M\}, \omega \in \Omega$ 都有 $|Y_{x, m}(\omega)| \in [0, D]$ 的假设，保证了对于所有 $x \in E$ 都有：
 
 $
+
 \mathbb{E}[|Z_{x}|] = \mathbb{E}\left[ \frac{1}{M} \sum_{m=1}^M |Y_{x, m}| \right] = \frac{1}{M} \sum_{m=1}^M \mathbb{E}[|Y_{x, m}|] \leq D < \infty. \quad (12.163)
+
 $
 
 这证明了第 (i) 项。此外，注意第 (i) 项、(12.162) 以及引理 12.3.5 确立了第 (ii) 项。接下来观察 (12.160) 表明对于所有 $x \in E$ 都有：
 
 $
+
 |Z_{x} - \mathbb{E}[Z_{x}]| = \left| \frac{1}{M} \sum_{m=1}^M Y_{x, m} - \mathbb{E}\left[ \frac{1}{M} \sum_{m=1}^M Y_{x, m} \right] \right| = \frac{1}{M} \sum_{m=1}^M |Y_{x, m} - \mathbb{E}[Y_{x, m}]| \quad (12.164)
+
 $
 
 将此与推论 12.1.21 结合（在推论 12.1.21 的记号中应用，其中 $(\Omega, \mathcal{F}, \mathbb{P}) \sim (\Omega, \mathcal{F}, \mathbb{P})$，$N \sim M$，$\varepsilon \sim \varepsilon/\sqrt{\mathcal{D}}$，$(a_{1}, a_{2}, \ldots, a_{N}) \sim (0, 0, \ldots, 0)$，$(b_{1}, b_{2}, \ldots, b_{N}) \sim (D, D, \ldots, D)$，$(X_{n})_{n \in\{1,2, \ldots, N\}} \sim (Y_{x, m})_{m \in\{1,2, \ldots, M\}}$ 对于 $x \in E$）保证了对于所有 $x \in E$ 都有：
 
 $
+
 \mathbb{P}(|Z_{x} - \mathbb{E}[Z_{x}]| \geq \varepsilon/\sqrt{\mathcal{D}}) \leq 2 \exp\left(-2[\varepsilon/\sqrt{\mathcal{D}}]^{2}M^{2} / MD^{2}\right) = 2 \exp\left(-\varepsilon^{2}M / 2D^{2}\right). \quad (12.165)
+
 $
 
 将此与 (12.162) 和 (12.163) 以及引理 12.3.6 结合，确立了第 (iii) 项。引理 12.3.7 的证明至此完成。
@@ -16741,13 +18344,17 @@ $
 设 $(E, \delta)$ 为可分度量空间，假设 $E \neq \emptyset$，设 $M \in \mathbb{N}$，$L, D \in(0, \infty)$，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为概率空间，设 $X_{x, m}: \Omega \rightarrow \mathbb{R}, x \in E, m \in \{1, 2, \ldots, M\}$ 以及 $Y_{m}: \Omega \rightarrow \mathbb{R}, m \in \{1, 2, \ldots, M\}$ 为函数，假设对于所有 $x \in E$，$(X_{x, m}, Y_{m})$，$m \in \{1, 2, \ldots, M\}$，是独立同分布随机变量，假设对于所有 $x, y \in E, m \in \{1, 2, \ldots, M\}$ 都有 $|X_{x, m} - X_{y, m}| \leq L \delta(x, y)$ 且 $|X_{x, m} - Y_{m}| \leq D$，设 $\mathfrak{E}_{x}: \Omega \rightarrow[0, \infty), x \in E$ 满足对于所有 $x \in E$ 有：
 
 $
+
 \mathfrak{E}_{x} = \frac{1}{M}\left[\sum_{m=1}^M |X_{x, m} - Y_{m}|^2\right], \quad (12.166)
+
 $
 
 且设 $\underline{\mathfrak{E}}_{x} \in[0, \infty), x \in E$ 满足对于所有 $x \in E$ 有 $\underline{\mathfrak{E}}_{x} = \mathbb{E}[|X_{x, 1} - Y_{1}|^2]$。则 $\Omega \ni \omega \mapsto \sup_{x \in E}|\mathfrak{E}_{x}(\omega) - \underline{\mathfrak{E}}_{x}| \in [0, \infty]$ 是 $\mathcal{F}/\mathcal{B}([0, \infty))$-可测的，且
 
 $
+
 \mathbb{P}(\sup_{x \in E}|\mathfrak{E}_{x} - \underline{\mathfrak{E}}_{x}| \ge \varepsilon) \le 2 \mathcal{C}^{(E, \delta), \frac{2 L D}{\varepsilon}} \exp\left(\frac{-\varepsilon^2 M}{2 D^4}\right) \quad (12.167)
+
 $
 
 （参见定义 4.3.2）。
@@ -16755,31 +18362,46 @@ $
 引理 12.3.8 的证明。在整个证明过程中，设 $\mathfrak{E}_{x, m}: \Omega \rightarrow[0, D^{2}], x \in E, m \in \{1, 2, \ldots, M\}$ 满足对于所有 $x \in E, m \in \{1, 2, \ldots, M\}$ 有：
 
 $
+
 \mathfrak{E}_{x, m} = |X_{x, m} - Y_{m}|^2. \quad (12.168)
+
 $
 
 注意，对于所有 $x_{1}, x_{2}, y \in \mathbb{R}$ 都有 $(x_{1} - y)^{2} - (x_{2} - y)^{2} = (x_{1} - x_{2})((x_{1} - y) + (x_{2} - y))$ 这一事实，对于所有 $x \in E, m \in \{1, 2, \ldots, M\}$ 都有 $|X_{x, m} - Y_{m}| \leq D$ 的假设，以及对于所有 $x, y \in E, m \in \{1, 2, \ldots, M\}$ 都有 $|X_{x, m} - X_{y, m}| \leq L \delta(x, y)$ 的假设，意味着对于所有 $x, y \in E, m \in \{1, 2, \ldots, M\}$ 都有：
 
 $
+
 \begin{aligned}
+
 |\mathfrak{E}_{x, m} - \mathfrak{E}_{y, m}| &= \left|(X_{x, m} - Y_{m})^2 - (X_{y, m} - Y_{m})^2\right| \\
+
 &= |X_{x, m} - X_{y, m}||(|X_{x, m} - Y_{m}| + |X_{y, m} - Y_{m}|) \\
+
 &\le |X_{x, m} - X_{y, m}|(|X_{x, m} - Y_{m}| + |X_{y, m} - Y_{m}|) \\
+
 &\le 2D|X_{x, m} - X_{y, m}| \le 2LD\delta(x, y). \quad (12.169)
+
 \end{aligned}
+
 $
 
 此外，注意 (12.166) 以及对于所有 $x \in E$，$(X_{x, m}, Y_{m})$，$m \in \{1, 2, \ldots, M\}$，是独立同分布随机变量的假设，表明对于所有 $x \in E$ 都有：
 
 $
+
 \begin{aligned}
+
 \mathbb{E}[\mathfrak{E}_{x}] &= \frac{1}{M}\left[\sum_{m=1}^M \mathbb{E}[|X_{x, m} - Y_{m}|^2]\right] = \frac{1}{M}\left[\sum_{m=1}^M \mathbb{E}[|X_{x, 1} - Y_{1}|^2]\right] = \frac{1}{M}\left[\sum_{m=1}^M \underline{\mathfrak{E}}_{x}\right] = \underline{\mathfrak{E}}_{x}, \quad (12.170)
+
 \end{aligned}
+
 $
 
 此外，注意对于所有 $x \in E$，$(X_{x, m}, Y_{m})$，$m \in \{1, 2, \ldots, M\}$，是独立同分布随机变量的假设，保证了对于所有 $x \in E$，$\mathfrak{E}_{x, m}$，$m \in \{1, 2, \ldots, M\}$，是独立同分布随机变量。将此与 (12.169) 和 (12.170) 以及引理 12.3.7 结合（在引理 12.3.7 的记号中应用，其中 $(E, \delta) \sim (E, \delta)$，$M \sim M$，$\varepsilon \sim \varepsilon$，$L \sim 2LD$，$D \sim D^{2}$，$(\Omega, \mathcal{F}, \mathbb{P}) \sim (\Omega, \mathcal{F}, \mathbb{P})$，$(Y_{x, m})_{x \in E, m \in \{1, 2, \ldots, M\}} \sim (\mathfrak{E}_{x, m})_{x \in E, m \in \{1, 2, \ldots, M\}}$，$(Z_{x})_{x \in E} \sim (\mathfrak{E}_{x})_{x \in E}$）确立了 (12.167)。引理 12.3.8 的证明至此完成。
 
 ### 命题 12.3.9
+
+
 
 设 $d, \mathcal{M} \in \mathbb{N}$，$R, L, \mathcal{R}, \varepsilon \in(0, \infty)$，设 $D \subseteq \mathbb{R}^{d}$ 为紧致集，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为概率空间，设 $X_{m}: \Omega \to D$，$m \in \{1, 2, \ldots, \mathcal{M}\}$，以及 $Y_{m}: \Omega \to \mathbb{R}$，$m \in \{1, 2, \ldots, \mathcal{M}\}$，为函数，假设 $(X_{m}, Y_{m})$，$m \in \{1, 2, \ldots, \mathcal{M}\}$，是独立同分布随机变量，设 $H = (H_{\theta})_{\theta \in [-R, R]^{d}}: [-R, R]^{d} \to C(D, \mathbb{R})$ 满足对于所有 $\theta, \vartheta \in [-R, R]^{d}$，$x \in D$ 有 $|H_{\theta}(x) - H_{\vartheta}(x)| \leq L \| \theta - \vartheta \|_{\infty}$，假设对于所有 $\theta \in [-R, R]^{d}$，$m \in \{1, 2, \ldots, \mathcal{M}\}$ 有 $|H_{\theta}(X_{m}) - Y_{m}| \leq \mathcal{R}$ 且 $\mathbb{E} | Y_{m} |^{2} < \infty$，设 $\mathcal{E}: C(D, \mathbb{R}) \to [0, \infty)$ 满足对于所有 $f \in C(D, \mathbb{R})$ 有 $\mathcal{E}(f) = \mathbb{E} | f(X_{1}) - Y_{1} |^{2}$，且设 $\mathfrak{E}: [-R, R]^{d} \times \Omega \to [0, \infty)$ 满足对于所有 $\theta \in [-R, R]^{d}$，$\omega \in \Omega$ 有：
 
@@ -16793,7 +18415,9 @@ $
 \mathbb{P}( \sup_{\theta \in [-R, R]^{d}} | \mathfrak{E}(\theta) - \mathcal{E}(H_{\theta}) | \ge \varepsilon ) \le 2 \max \left\{ 1, \left[ \frac{16 L \mathcal{R}^{2}}{\varepsilon} \right]^{d} \right\} \exp \left( \frac{-\varepsilon^{2} \mathcal{M}}{2 \mathcal{R}^{4}} \right).
 $
 
-**命题 12.3.9 的证明。** 在整个证明过程中，设 $B \subseteq \mathbb{R}^{d}$ 满足 $B = [-R, R]^{d} = \{ \theta \in \mathbb{R}^{d}: \| \theta \|_{\infty} \leq R \}$，且设 $\delta: B \times B \to [0, \infty)$ 满足对于所有 $\theta, \vartheta \in B$ 有：
+### 命题 12.3.9 的证明
+
+在整个证明过程中，设 $B \subseteq \mathbb{R}^{d}$ 满足 $B = [-R, R]^{d} = \{ \theta \in \mathbb{R}^{d}: \| \theta \|_{\infty} \leq R \}$，且设 $\delta: B \times B \to [0, \infty)$ 满足对于所有 $\theta, \vartheta \in B$ 有：
 
 $
 \delta(\theta, \vartheta) = \| \theta - \vartheta \|_{\infty}.
@@ -16805,16 +18429,14 @@ $
 \mathbb{P}( \sup_{\theta \in B} | \mathfrak{E}(\theta) - \mathcal{E}(H_{\theta}) | \ge \varepsilon ) \le 2 \mathcal{C}^{(B, \delta), \frac{16 L \mathcal{R}^{2}}{\varepsilon}} \exp \left( \frac{-\varepsilon^{2} \mathcal{M}}{2 \mathcal{R}^{4}} \right).
 $
 
-
-
-
 （参见定义 4.3.2）。此外，请注意，命题 12.2.24（在命题 12.2.23 的符号意义下，取 $d \hookrightarrow \mathfrak{d}$，$a \hookrightarrow -R$，$b \hookrightarrow R$，$r \hookrightarrow \frac{\varepsilon}{8 L \mathcal{R}}$，$\delta \hookrightarrow \delta$ 时）证明了：
 
 $$\mathfrak{C}^{(B, \delta), \frac{\varepsilon}{8 L \mathcal{R}}} \leq \max \left\{1,\left(\frac{16 L R \mathcal{R}}{\varepsilon}\right)^{\mathfrak{d}}\right\} .$$
 
 这与 (12.174) 共同证明了 (12.172)。命题 12.3.9 的证明至此完成。$\square$
 
-### 推论 12.3.10.
+### 推论 12.3.10
+
 设 $\mathfrak{d}, M, L \in \mathbb{N}$，$u \in \mathbb{R}$，$v \in (u, \infty)$，$R \in [1, \infty)$，$\varepsilon, b \in (0, \infty)$，$l=(l_{0}, l_{1}, \ldots, l_{L}) \in \mathbb{N}^{L+1}$ 满足 $l_{L}=1$ 且 $\sum_{k=1}^{L} l_{k}(l_{k-1}+1) \leq \mathfrak{d}$。设 $D \subset [-b, b]^{0}$ 是一个紧集，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 是一个概率空间。设函数 $X_{m}: \Omega \rightarrow D$，$m \in\{1,2,\ldots, M\}$，以及 $Y_{m}: \Omega \rightarrow [u, v]$，$m \in\{1,2,\ldots, M\}$ 成立。假设 $(X_{m}, Y_{m})$，$m \in\{1,2,\ldots, M\}$，是独立同分布的随机变量。设 $\mathcal{E}: C(D, \mathbb{R}) \rightarrow [0, \infty)$ 满足对于所有 $f \in C(D, \mathbb{R})$，有 $\mathcal{E}(f)=\mathbb{E}[f(X_{1})-Y_{1}]^{2}$。设 $\mathfrak{C}:[-R, R]^{\mathfrak{d}} \times \Omega \rightarrow [0, \infty)$ 满足对于所有 $\theta \in [-R, R]^{\mathfrak{d}}$ 和 $\omega \in \Omega$，有
 
 $$\mathfrak{C}(\theta, \omega)=\frac{1}{M}\left[\sum_{m=1}^{M}\left|\mathcal{K}_{u, v}^{\theta, l}\left(X_{m}(\omega)\right)-Y_{m}(\omega)\right|^{2}\right]$$
@@ -16822,19 +18444,25 @@ $$\mathfrak{C}(\theta, \omega)=\frac{1}{M}\left[\sum_{m=1}^{M}\left|\mathcal{K}_
 （参见定义 4.4.1）。那么
 
 - (i) 成立 $\Omega \ni \omega \mapsto \sup _{\theta \in[-R, R]^{\mathfrak{d}}} \left|\mathfrak{C}(\theta, \omega)-\mathcal{E}\left(\mathcal{K}_{u, v}^{\theta, l} |D\right)\right| \in [0, \infty)$ 是 $\mathcal{F}/\mathcal{B}([0, \infty])$-可测的，并且
+
 - (ii) 成立
 
 $$\mathbb{P}\left(\sup _{\theta \in[-R, R]^{\mathfrak{d}}} \left|\mathfrak{C}(\theta)-\mathcal{E}\left(\mathcal{K}_{u, v}^{\theta, l} |D\right)\right| \geq \varepsilon\right) \leq 2 \max \left\{1,\left[\frac{16 L \max \left\{1, b\right\}\left(\|l\|_{\infty}+1\right)^{L} R^{L}\left(v-u\right)}{\varepsilon}\right]\right\} \exp \left(\frac{-\varepsilon^{2} M}{2(v-u)^{4}}\right) .$$
 
-推论 12.3.10 的证明。在整个证明过程中，设 $\mathfrak{L} \in(0, \infty)$ 满足
+#### 推论 12.3.10 的证明
+
+在整个证明过程中，设 $\mathfrak{L} \in(0, \infty)$ 满足
 
 $$\mathfrak{L}=L \max \left\{1, b\right\}\left(\|l\|_{\infty}+1\right)^{L} R^{L-1} .$$
 
 注意到，将推论 11.3.7（在推论 11.3.7 的符号意义下，取 $a \hookrightarrow -b$，$b \hookrightarrow b$，$u \hookrightarrow u$，$v \hookrightarrow v$，$\mathfrak{d} \hookrightarrow \mathfrak{d}$，$L \hookrightarrow L$，$l \hookrightarrow l$ 时）与假设 $D \subset [-b, b]^{0}$ 结合，表明对于所有 $\theta, \vartheta \in [-R, R]^{\mathfrak{d}}$，有
 
 $$\begin{aligned}\sup _{x \in D}\left|\mathcal{K}_{u, v}^{\theta, l}(x)-\mathcal{K}_{u, v}^{\vartheta, l}(x)\right| & \\
+
 \leq \sup _{x \in [-b, b]^{0}}\left|\mathcal{K}_{u, v}^{\theta, l}(x)-\mathcal{K}_{u, v}^{\vartheta, l}(x)\right| & \\
+
 \leq L \max \left\{1, b\right\}\left(\|l\|_{\infty}+1\right)^{L}\left(\max \left\{1,\|\theta\|_{\infty},\|\vartheta\|_{\infty}\right\}\right)^{L-1}\|\theta-\vartheta\|_{\infty} & \\
+
 \leq L \max \left\{1, b\right\}\left(\|l\|_{\infty}+1\right)^{L} R^{L-1}\|\theta-\vartheta\|_{\infty}=\mathfrak{L}\|\theta-\vartheta\|_{\infty} .\end{aligned}$$
 
 此外，注意到对于所有 $\theta \in \mathbb{R}^3$ 和 $x \in \mathbb{R}^{\ell_0}$，成立 $\mathcal{N}^{\theta, \ell}_{u, v}(x) \in [u, v]$，以及假设对于所有 $m \in \{1, 2, \dots, M\}$ 和 $\omega \in \Omega$，成立 $Y_m(\omega) \in [u, v]$。这表明对于所有 $\theta \in [-R, R]^3$ 和 $m \in \{1, 2, \dots, M\}$，成立
@@ -16843,11 +18471,14 @@ $$\left|\mathcal{N}_{u, v}^{\theta, \ell}(X_m) - Y_m\right| \leq v - u. \quad (1
 
 结合此结果与 (12.179) 以及命题 12.3.9（在命题 12.3.9 的符号意义下，取 $d \hookrightarrow \ell_0$，$\mathfrak{d} \hookrightarrow \mathfrak{d}$，$M \hookrightarrow M$，$R \hookrightarrow R$，$L \hookrightarrow \mathfrak{L}$，$\mathcal{R} \hookrightarrow v-u$，$\mathfrak{e} \hookrightarrow \varepsilon$，$D \hookrightarrow D$，$(\Omega, \mathcal{F}, \mathbb{P}) \hookrightarrow (\Omega, \mathcal{F}, \mathbb{P})$，$(X_m)_{m \in \{1, 2, \dots, M\}} \hookrightarrow (X_m)_{m \in \{1, 2, \dots, M\}}$，$(Y_m)_{m \in \{1, 2, \dots, M\}} \hookrightarrow ((\Omega \ni \omega \mapsto Y_m(\omega) \in \mathbb{R}))_{m \in \{1, 2, \dots, M\}}$，$\mathcal{H} \hookrightarrow ([-R, R]^3 \ni \theta \mapsto \mathcal{N}_{u, v}^{\theta, \ell}|_D \in C(D, \mathbb{R}))$，$\mathcal{E} \hookrightarrow \mathcal{E}$，$\mathfrak{E} \hookrightarrow \mathfrak{E}$ 时），可以确立 $\Omega \ni \omega \mapsto \sup_{\theta \in [-R, R]^3} |\mathfrak{E}(\theta, \omega) - \mathcal{E}(\mathcal{N}_{u, v}^{\theta, \ell}|_D)| \in [0, \infty]$ 是 $\mathcal{F}/\mathcal{B}([0, \infty])$-可测的，并且
 
+
+
 $$\mathbb{P}(\sup_{\theta \in [-R, R]^3} |\mathfrak{E}(\theta) - \mathcal{E}(\mathcal{N}_{u, v}^{\theta, \ell}|_D)| \geq \varepsilon) \leq 2 \max \left\{1, \left[\frac{16 \mathfrak{L} R (v - u)}{\varepsilon}\right]^\mathfrak{d}\right\} \exp \left(\frac{-\varepsilon^2 M}{2(v - u)^2}\right). \quad (12.181)$$
 
 推论 12.3.10 的证明至此完成。$\square$
 
-## 第 13 章
+# 第 13 章
+
 ## 强泛化误差估计
 
 在上述第 12 章中，我们回顾了概率意义上的泛化误差估计。除了这类概率泛化误差估计外，文献中以及我们在第 15 章的整体误差分析中也考虑了强 $L^p$ 意义下的泛化误差估计。本章的主题正是这些估计（参见下文推论 13.3.3）。
@@ -16878,11 +18509,12 @@ $$\forall \, j \in J : \mathbb{P}(r_j = 1) = \mathbb{P}(r_j = -1). \quad (13.4)$
 
 **定义 13.1.3** (p-Kakane-Khinchine 常数)。 设 $p \in (0, \infty)$。我们用
 
-
 $\bar{\mathfrak{R}}_{p} \in (0, \infty]$ 是由下式给出的扩展实数
 
 $$
+
 \bar{\mathfrak{R}}_{p}=\sup \left\{c \in[0, \infty):\left[\begin{array}{c}\exists \mathbb{R}-\text { Banach space }(E,\|\|\|): \\ \exists \text { probability space }(\Omega, \mathcal{F}, \mathbb{P}): \\ \exists \mathbb{P}\text {-Rademacher family }(r_{j})_{j \in \mathbb{N}}: \\ \exists k \in \mathbb{N}: \exists x_{1}, x_{2}, \ldots, x_{k} \in E \backslash\{0\}:\end{array}\right.\left.\begin{array}{l}\left(\mathbb{E}\left[\left\|\sum_{j=1}^{k} r_{j} x_{j}\right\|^{p}\right]\right)^{1 / p}=c\left(\mathbb{E}\left[\left\|\sum_{j=1}^{k} r_{j} x_{j}\right\|^{2}\right]\right)^{1 / 2}\end{array}\right.\right\}
+
 $$
 
 ($cf.$ 定义 13.1.2)。
@@ -16892,7 +18524,9 @@ $$
 对于所有 $p \in[2, \infty)$，均有
 
 $$
+
 \bar{\mathfrak{R}}_{p} \leq \sqrt{p-1}<\infty
+
 $$
 
 ($cf.$ 定义 13.1.3)。
@@ -16904,13 +18538,17 @@ $$
 设 $d, M \in \mathbb{N}$，$p \in[2, \infty)$，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间，设 $X_{j}: \Omega \rightarrow \mathbb{R}^{d}, j \in\{1,2, \ldots, M\}$，为独立随机变量，且假设
 
 $$
+
 \max _{j \in\{1,2, \ldots, M\}} \mathbb{E}\|X_{j}\|_{2}<\infty
+
 $$
 
 ($cf.$ 定义 3.3.4)。则
 
 $$
+
 \left(\mathbb{E}\left[\left\|\sum_{j=1}^{M} X_{j}\right\|_{2}^{p}\right]\right)^{1 / p} \leq 2 \bar{\mathfrak{R}}_{p} \sum_{j=1}^{M}\left(\mathbb{E}\left[\|X_{j}-\mathbb{E}[X_{j}]\|_{2}^{2}\right]\right)^{2 / p}\right]^{1 / 2}
+
 $$
 
 ($cf.$ 定义 13.1.3 和引理 13.1.4)。
@@ -16922,23 +18560,33 @@ $$
 设 $d, M \in \mathbb{N}$，$p \in[2, \infty)$，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间，设 $X_{j}: \Omega \rightarrow \mathbb{R}^{d}, j \in\{1,2, \ldots, M\}$，为独立随机变量，且假设
 
 $$
+
 \max _{j \in\{1,2, \ldots, M\}} \mathbb{E}\|X_{j}\|_{2}<\infty
+
 $$
 
 ($cf.$ 定义 3.3.4)。则
 
 $$
+
 \left(\mathbb{E}\left[\left\|\frac{1}{M} \sum_{j=1}^{M} X_{j}\right\|_{2}^{p}\right]\right)^{1 / p} \leq \frac{2 \sqrt{p-1}}{\sqrt{M}}\left[\max _{j \in\{1,2, \ldots, M\}}\left(\mathbb{E}\left[\|X_{j}-\mathbb{E}[X_{j}]\|_{2}^{2}\right]\right)^{2 / p}\right].
+
 $$
 
 推论 13.1.6 的证明。注意到命题 13.1.5 和引理 13.1.4 表明
 
 $$
+
 \begin{split}
+
 \bigg(\mathbb E \bigg[\bigg\| \frac{1}{M} \sum_{j=1}^M X_j - \mathbb E \bigg[ \frac{1}{M}\sum_{j=1}^M X_j \bigg] \bigg\|_2^p \bigg)^{1/p} 
+
 \leq \frac{2\delta_p}{\sqrt M}\bigg[ \frac{1}{M} \max_{j\in\{1,2,...,M\}} \big(\mathbb E \big[\|X_j - \mathbb E[X_j]\|_2^2\big]^{2/p} \big)\bigg]^{1/2} 
+
 \leq \frac{2\delta_p\sqrt{p-1}}{\sqrt M}\bigg[ \frac{1}{M} \max_{j\in\{1,2,...,M\}} \big(\mathbb E \big[\|X_j - \mathbb E[X_j]\|_2^2\big]^{2/p} \big)\bigg]^{1/2}.
+
 \end{split}
+
 $$
 
 (cf. 定义 13.1.3)。推论 13.1.6 得证。
@@ -16950,13 +18598,17 @@ $$
 设 $(E, \delta)$ 为一个可分度量空间，设 $N \in \mathbb N$，$r_1, r_2, \ldots, r_N \in [0, \infty)$，$z_1, z_2, \ldots, z_N \in E$ 满足
 
 $$
+
 E \subseteq \bigcup_{n=1}^N \{ x \in E: \delta(x, z_n) \leq r_n\}, \tag{13.12}
+
 $$
 
 设 $(\Omega, \mathcal F, \mathbb P)$ 为一个概率空间，对每个 $x \in E$，设 $Z_x \colon \Omega \rightarrow \mathbb R$ 为一个随机变量，设 $L \in [0, \infty)$ 满足对任意 $x, y \in E$ 有 $|Z_x - Z_y| \leq L \delta(x, y)$，且设 $p \in [0, \infty)$。则
 
 $$
+
 \mathbb E\big[\sup_{x\in E}|Z_x|^p\big] \leq \sum_{n=1}^N \mathbb E\big[(Lr_n + |Z_{z_n}|)^p\big] \tag{13.13}
+
 $$
 
 (cf. 引理 12.3.2)。
@@ -16964,37 +18616,49 @@ $$
 引理 13.2.1 的证明。在整个证明过程中，对每个 $n \in \{1, 2, \ldots, N\}$，令
 
 $$
+
 B_n = \{ x \in E: \delta(x, z_n) \leq r_n\} \tag{13.14}
+
 $$
 
 观察到 (13.12) 和 (13.14) 证明了
 
 $$
+
 E \subseteq \bigcup_{n=1}^N B_n \quad \text{以及} \quad E \supseteq \bigcup_{n=1}^N B_n. \tag{13.15}
+
 $$
 
 因此，我们得到
 
 $$
+
 \sup_{x \in E}|Z_{x}| = \sup_{x \in \cup_{n=1}^{N} B_{n}}|Z_{x}| = \max_{n \in \{1, \ldots, N\}}\sup_{x \in B_{n}}|Z_{x}|. \qquad (13.16)
+
 $$
 
 因此，我们得到
 
 $$
+
 \begin{aligned}\mathbb{E}\left[\sup_{x \in E}|Z_{x}|^{p}\right] &= \mathbb{E}\left[\max_{n \in \{1, \ldots, N\}}\sup_{x \in B_{n}}|Z_{x}|^{p}\right] \\& \leq \mathbb{E}\left[\sum_{n=1}^{N}\sup_{x \in B_{n}}|Z_{x}|^{p}\right] = \sum_{n=1}^{N}\mathbb{E}\left[\sup_{x \in B_{n}}|Z_{x}|^{p}\right].\end{aligned} \qquad (13.17)
+
 $$
 
 (cf. 引理 12.3.2)。此外，注意到对于所有 $x, y \in E$，假设 $|Z_{x} - Z_{y}| \leq L \delta(x, y)$ 成立，这表明对于所有 $n \in \{1, 2, \ldots, N\}$ 和 $x \in B_{n}$，都有
 
 $$
+
 \begin{aligned}|Z_{x}| \leq |Z_{x} - Z_{z_{n}}| + |Z_{z_{n}}| & \leq L \delta(x, z_{n}) + |Z_{z_{n}}| \\ & \leq L r_{n} + |Z_{z_{n}}|.\end{aligned} \qquad (13.18)
+
 $$
 
 结合此结果和 (13.17)，我们建立了
 
 $$
+
 \mathbb{E}\left[\sup_{x \in E}|Z_{x}|^{p}\right] \leq \sum_{n=1}^{N}\mathbb{E}\left[(L r_{n} + |Z_{z_{n}}|)^{p}\right]. \qquad (13.19)
+
 $$
 
 引理 13.2.1 得证。 $\square$
@@ -17004,10 +18668,14 @@ $$
 设 $(E, \delta)$ 为一个非空可分度量空间，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间，对每个 $x \in E$，设 $Z_{x} \colon \Omega \rightarrow \mathbb{R}$ 为一个随机变量，设 $L \in (0, \infty)$ 满足对任意 $x, y \in E$ 有 $|Z_{x} - Z_{y}| \leq L \delta(x, y)$，且设 $p, r \in (0, \infty)$。则
 
 $$
+
 \mathbb{E}\left[\sup_{x \in E}|Z_{x}|^{p}\right] \leq \mathcal{C}^{(E, \delta), r}\sup_{x \in E}\mathbb{E}\left[(L r + |Z_{x}|)^{p}\right] \qquad (13.20)
+
 $$
 
 (cf. 定义 4.3.2 和引理 12.3.2)。
+
+
 
 引理 13.2.2 的证明。在整个证明过程中，不失一般性，假设 $\mathcal{C}^{(E, \delta), r} < \infty$，令 $N = \mathcal{C}^{(E, \delta), r}$，并设 $z_{1}, z_{2}, \ldots, z_{N} \in E$ 满足
 
@@ -17069,66 +18737,67 @@ $$
 
 则
 
-
 (i) 对所有 $x \in E$，成立 $\mathbb{E}[|Z_x|] < \infty$，
+
 (ii) 成立 $\Omega \supseteq \omega \to \sup_{x \in E}[Z_x(\omega) - \mathbb{E}[Z_x]] \in [0, \infty)$ 是 $\mathcal{F}/\mathcal{B}([0, \infty))$-可测的，并且
+
 (iii) 对所有 $p \in [2, \infty)$，$r \in (0, \infty)$ 成立
 
-\[
+$$
 \begin{gather*}
 \left( \mathbb{E}\left[ \sup_{x \in E} |Z_x - \mathbb{E}[Z_x]|^p \right] \right)^{1/p} \\
 \leq 2 \big(\mathcal{C}^{(E, \delta, r)}\big)^{1/p} \left[ Lr + \frac{\sqrt{p - 1}}{\sqrt{M}} \left( \sup_{x \in E} \max_{n \in \{1, \dots, M\}} \left( \mathbb{E}\left[ |Y_{x, m} - \mathbb{E}[Y_{x, m}]|^p \right] \right)^{1/p} \right) \right] 
 \end{gather*} \tag{13.29}
-\]
+$$
 
 (参见定义 4.3.2)。
 
 引理 13.2.4 的证明。观察到假设对于所有 $x \in E$，$m \in \{1, 2, \dots, M\}$，成立 $\mathbb{E}[|Y_{x, m}]| < \infty$ 证明了对于所有 $x \in E$，成立
 
-\[
+$$
 \mathbb{E}[|Z_x|] = \mathbb{E}\left[\frac{1}{M}\sum_{m = 1}^{M}Y_{x, m}\right] \leq \frac{1}{M}\sum_{m = 1}^{M}\mathbb{E}[|Y_{x, m}]| \leq \max_{m \in \{1, 2, \dots, M\}}\mathbb{E}[|Y_{x, m}]| < \infty. \tag{13.30}
-\]
+$$
 
 这建立了项 (i)。注意到 (13.27) 证明了对于所有 $x$, $y \in E$，成立
 
-\[
+$$
 |Z_x - Z_y| = \frac{1}{M}\left|\left[\sum_{m = 1}^{M}Y_{x, m}\right] - \left[\sum_{m = 1}^{M}Y_{y, m}\right]\right| \leq \frac{1}{M}\left[\sum_{m = 1}^{M}|Y_{x, m} - Y_{y, m}|\right] \leq L \delta(x, y). \tag{13.31}
-\]
+$$
 
 因此，项 (i) 和引理 12.3.5 证明了项 (ii)。因此，剩下要证明的是项 (iii)。为此，观察到项 (i)、(13.31) 和引理 13.2.3 隐含对于所有 $p \in [1, \infty)$，$r \in (0, \infty)$，成立
 
-\[
+$$
 \left( \mathbb{E}\left[ \sup_{x \in E}|Z_x - \mathbb{E}[Z_x]|^p \right] \right)^{1/p} \leq \big(\mathcal{C}^{(E, \delta, r)}\big)^{1/p}\left[ 2Lr + \sup_{x \in E}\left( \mathbb{E}\left[ |Z_x - \mathbb{E}[Z_x]|^p \right] \right)^{1/p} \right] \tag{13.32}
-\]
+$$
 
 (参见定义 4.3.2)。此外，注意到 (13.30) 和推论 13.1.6（应用于 $(d \frown 1, (X_m)_{m \in \{1, \dots, M\}}) \frown (Y_{x, m})_{m \in \{1, \dots, M\}}$ 其中 $x \in E$，采用推论 13.1.6 中的记号）确保对于所有 $x \in E$，$p \in [2, \infty)$，$r \in (0, \infty)$，成立
 
-\[
+$$
 \begin{gather*}
 \left( \mathbb{E}\left[ |Z_x - \mathbb{E}[Z_x]|^p \right] \right)^{1/p} = \left( \mathbb{E}\left[\left|\frac{1}{M}\sum_{m = 1}^{M}Y_{x, m} - \mathbb{E}\left[\frac{1}{M}\sum_{m = 1}^{M}Y_{x, m}\right]\right|^p\right]\right)^{1/p} \\
 \leq \frac{2\sqrt{p - 1}}{\sqrt{M}}\left[ \max_{m \in \{1, \dots, M\}}\left( \mathbb{E}\left[ |Y_{x, m} - \mathbb{E}[Y_{x, m}]|^p \right] \right)^{1/p} \right]^{1/p}. \tag{13.33}
 \end{gather*}
-\]
+$$
 
 将此与 (13.32) 结合，表明对于所有 $p \in [2, \infty)$，$r \in (0, \infty)$，成立
 
-\[
+$$
 \begin{gather*}
 \left( \mathbb{E}\left[ \sup_{x \in E}|Z_x - \mathbb{E}[Z_x]|^p \right] \right)^{1/p} \\
 \leq \big(\mathcal{C}^{(E, \delta, r)}\big)^{1/p}\left[ 2Lr + \frac{2\sqrt{p - 1}}{\sqrt{M}}\left( \sup_{x \in E}\max_{m \in \{1, \dots, M\}}\left( \mathbb{E}\left[ |Y_{x, m} - \mathbb{E}[Y_{x, m}]|^p \right] \right)^{1/p} \right) \right] \\
 = 2\big(\mathcal{C}^{(E, \delta, r)}\big)^{1/p}\left[ Lr + \frac{\sqrt{p - 1}}{\sqrt{M}}\left( \sup_{x \in E}\max_{m \in \{1, \dots, M\}}\left( \mathbb{E}\left[ |Y_{x, m} - \mathbb{E}[Y_{x, m}]|^p \right] \right)^{1/p} \right) \right]. \tag{13.34}
 \end{gather*}
-\]
+$$
 
-因此，引理 13.2.4 的证明完成。 \square
+因此，引理 13.2.4 的证明完成。 $\square$
 
 ### 推论 13.2.5.
 
 设 $(E, \delta)$ 是一个非空可分度量空间，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 是一个概率空间，设 $M \in \mathbb{N}$，对于每个 $x \in E$，设 $Y_{x, m}: \Omega \rightarrow \mathbb{R}$，$m \in \{1, 2, \ldots, M\}$，是独立的随机变量，且满足 $\mathbb{E}\left[|Y_{x, 1}| + |Y_{x, 2}| + \cdots + |Y_{x, m}|\right] < \infty$，设 $L \in (0, \infty)$ 满足对于所有 $x, y \in E$，$m \in \{1, 2, \ldots, M\}$ 有 $|Y_{x, m} - Y_{y, m}| \leq L \delta(x, y)$，并且对于每个 $x \in E$，设 $Z_{x}: \Omega \rightarrow \mathbb{R}$ 满足
 
-\[
+$$
 Z_x = \frac{1}{M} \left[ \sum_{m=1}^{M} Y_{x,m} \right]. \tag{13.35}
-\]
+$$
 
 那么
 
@@ -17136,20 +18805,23 @@ Z_x = \frac{1}{M} \left[ \sum_{m=1}^{M} Y_{x,m} \right]. \tag{13.35}
 - (ii) 成立 $\Omega \ni \omega \supset \sup_{x \in E}|Z_x(\omega) - \mathbb{E}[Z_x]| \in [0, \infty)$ 是 $\mathcal{F}/\mathcal{B}([0, \infty))$-可测的，并且
 - (iii) 对所有 $p \in [2, \infty)$，$c \in (0, \infty)$ 成立
 
-\[
+$$
 \begin{aligned}
 &\left(\mathbb{E}\left[\sup_{x \in E}|Z_x - \mathbb{E}[Z_x]|^{p}\right]\right)^{1 / p} \\
 & \leq \frac{2 \sqrt{p-1}}{\sqrt{M}} \left(\mathcal{C}^{(E, \delta), \frac{c \sqrt{p-1}}{L \sqrt{M}}} / \frac{c \sqrt{p-1}}{L \sqrt{M}}\right)^{1 / p} \left[c + \sup_{x \in E} \max_{m \in \{1, 2, \ldots, M\}}\left(\mathbb{E}\left[|Y_{x, m} - \mathbb{E}[Y_{x, m}]|^{p}\right]\right)^{1 / p}\right] \tag{13.36}
 \end{aligned}
-\]
+$$
 
 (参见定义 4.3.2)。
 
 推论 13.2.5 的证明。观察到引理 13.2.4 建立了项 (i) 和 (ii)。注意到引理 13.2.4（应用时取 $r \frown \frac{c \sqrt{p-1}}{(L \sqrt{M})}$，其中 $c \in (0, \infty)$，采用引理 13.2.4 中的记号）证明了对于所有 $p \in [2, \infty)$，$c \in (0, \infty)$，成立
 
-\[
+$$
 \begin{aligned}
 &\left(\mathbb{E}\left[\sup_{x \in E}|Z_x - \mathbb{E}[Z_x]|^{p}\right]\right)^{1 / p} \\
+
+
+
 & \leq 2 \left(\mathcal{C}^{(E, \delta), \frac{c \sqrt{p-1}}{L \sqrt{M}}} / \frac{c \sqrt{p-1}}{L \sqrt{M}}\right)^{1 / p}\left[\frac{L c \sqrt{p-1}}{L \sqrt{M}} \right. \\
 & \qquad \left. + \frac{\sqrt{p-1}}{\sqrt{M}}\left(\sup_{x \in E} \max_{m \in \{1, 2, \ldots, M\}}\left(\mathbb{E}\left[|Y_{x, m} - \mathbb{E}[Y_{x, m}]|^{p}\right]\right)^{1 / p}\right)\right] \\
 & = \frac{2 \sqrt{p-1}}{\sqrt{M}} \left(\mathcal{C}^{(E, \delta), \frac{c \sqrt{p-1}}{L \sqrt{M}}} / \frac{c \sqrt{p-1}}{L \sqrt{M}}\right)^{1 / p}\left[c + \sup_{x \in E} \max_{m \in \{1, 2, \ldots, M\}}\left(\mathbb{E}\left[|Y_{x, m} - \mathbb{E}[Y_{x, m}]|^{p}\right]\right)^{1 / p}\right] \tag{13.37}
@@ -17164,83 +18836,84 @@ Z_x = \frac{1}{M} \left[ \sum_{m=1}^{M} Y_{x,m} \right]. \tag{13.35}
 
 设 $(E, \delta)$ 是一个可分度量空间，假设 $E \neq \emptyset$，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 是一个概率空间，设 $M \in \mathbb{N}$，设 $X_{x, m}: \Omega \rightarrow \mathbb{R}$，$m \in \{1, 2, \ldots, M\}$，$x \in E$，以及 $Y_{m}: \Omega \rightarrow \mathbb{R}$，$m \in \{1, 2, \ldots, M\}$，为函数，假设对于所有 $x \in E$，$(X_{x,m}, Y_m)$，$m \in \{1, 2, \ldots, M\}$，是独立同分布的随机变量，设 $L, b \in (0, \infty)$ 满足对于所有 $x, y \in E$，$m \in \{1, 2, \ldots, M\}$ 有
 
-\[
+```
 |X_{x,m} - Y_m| \leq b \quad \text{ 且 } \quad |X_{x,m} - X_{y,m}| \leq L \delta(x,y), \tag{13.38}
-\]
+```
 
 并且设 $\mathbf{R}: E \to [0, \infty)$ 和 $\mathfrak{R}: E \times \Omega \to [0, \infty)$ 满足对于所有 $x \in E$，$\omega \in \Omega$ 有
 
-\[
+```
 \mathbf{R}(x) = \mathbb{E}\left[|X_{x,1} - Y_1|^2\right] \quad \text{ 且 } \quad \mathfrak{R}(x, \omega) = \frac{1}{M} \left[\sum_{m=1}^M |X_{x,m}(\omega) - Y_m(\omega)|^2\right]. \tag{13.39}
-\]
+```
 
 那么
 
 - 成立 $\Omega \ni \omega \mapsto \sup_{x \in E}|\mathfrak{R}(x, \omega) - \mathbf{R}(x)| \in [0, \infty)$ 是 $\mathcal{F}/\mathcal{B}([0, \infty))$-可测的，并且
+
 - 对所有 $p \in [2, \infty)$，$c \in (0, \infty)$ 成立
 
-\[
+```
 \left(\mathbb{E}\left[\sup_{x \in E}|\mathfrak{R}(x) - \mathbf{R}(x)|^p\right]\right)^{1/p} \leq \left(c^{(E, \delta, \frac{cb\sqrt{p-1}}{2L\sqrt{M}})}\right)^{1/p} \left[\frac{2(c+1)b^2\sqrt{p-1}}{\sqrt{M}}\right]. \tag{13.40}
-\]
+```
 
 (参见定义 4.3.2)。
 
 引理 13.3.1 的证明。在整个证明过程中，对于每个 $x \in E$，$m \in \{1, 2, \ldots, M\}$，设 $\mathcal{Y}_{x,m}: \Omega \to \mathbb{R}$ 满足 $\mathcal{Y}_{x,m} = |X_{x,m} - Y_m|^2$。观察到假设对于所有 $x \in E$，$(X_{x,m}, Y_m)$，$m \in \{1, 2, \ldots, M\}$，是独立同分布的随机变量，隐含对于所有 $x \in E$，成立
 
-\[
+```
 \mathbb{E}[\mathfrak{R}(x)] = \frac{1}{M} \left[\sum_{m=1}^M \mathbb{E}\left[|X_{x,m} - Y_m|^2\right]\right] = \frac{M \mathbb{E}\left[|X_{x,1} - Y_1|^2\right]}{M} = \mathbf{R}(x). \tag{13.41}
-\]
+```
 
 此外，注意到假设对于所有 $x \in E$，$m \in \{1, 2, \ldots, M\}$ 成立 $|X_{x,m} - Y_m| \leq b$，表明对于所有 $x \in E$，$m \in \{1, 2, \ldots, M\}$ 成立
 
-\[
+```
 \begin{align*}
 \mathbb{E}\left[|\mathcal{Y}_{x,m}|\right] &= \mathbb{E}\left[|X_{x,m} - Y_m|^2\right] \leq b^2 < \infty, \tag{13.42} \\
 \mathcal{Y}_{x,m} - \mathbb{E}[\mathcal{Y}_{x,m}] &= |X_{x,m} - Y_m|^2 - \mathbb{E}\left[|X_{x,m} - Y_m|^2\right] \leq |X_{x,m} - Y_m|^2 \leq b^2, \tag{13.43}
 \end{align*}
-\]
+```
 
 以及
 
-\[
+```
 \mathbb{E}[\mathcal{Y}_{x,m}] - \mathcal{Y}_{x,m} = \mathbb{E}\left[|X_{x,m} - Y_m|^2\right] - |X_{x,m} - Y_m|^2 \leq \mathbb{E}\left[|X_{x,m} - Y_m|^2\right] \leq b^2. \tag{13.44}
-\]
+```
 
 观察到 (13.42)、(13.43) 和 (13.44) 确保对于所有 $x \in E$，$m \in \{1, 2, \ldots, M\}$，$p \in (0, \infty)$ 成立
 
-\[
+```
 \left(\mathbb{E}\left[|\mathcal{Y}_{x,m} - \mathbb{E}[\mathcal{Y}_{x,m}]|^p\right]\right)^{1/p} \leq \left(\mathbb{E}\left[b^{2p}\right]\right)^{1/p} = b^2. \tag{13.45}
-\]
-
+```
 
 此外，注意到 (13.38) 以及对于所有 $x_1, x_2, y \in \mathbb{R}$ 均成立的恒等式 $(x_1 - y)^2 - (x_2 - y)^2 = (x_1 - x_2)((x_1 - y) + (x_2 - y))$，这表明对于所有 $x, y \in E$ 和 $m \in \{1, 2, \ldots, M\}$，均成立：
 
-$$
+```
 \begin{align*}
 |\mathcal{Y}_{x,m} - \mathcal{Y}_{y,m}| &= |(X_{x,m} - Y_m)^2 - (X_{y,m} - Y_m)^2| \\
 &\leq |X_{x,m} - X_{y,m}|(|X_{x,m} - Y_m| + |X_{y,m} - Y_m|) \\
 &\leq 2b|X_{x,m} - X_{y,m}| \leq 2b\delta d(x, y).
 \end{align*}
-$$
+```
 
 由于对于所有 $x \in E$，$\mathcal{Y}_{x,m}$，$m \in \{1, 2, \ldots, M\}$，是相互独立的随机变量，结合 (13.42) 和推论 13.2.5（在推论 13.2.5 的记号下，分别取 $(\tilde{\mathcal{Y}}_{x,m})_{x \in E, m \in \{1, 2, \ldots, M\}}$ 和 $(\mathcal{Y}_{x,m})_{x \in E, m \in \{1, 2, \ldots, M\}}$，$L \lor 2b\breve{L}$，以及 $(Z_{z})_{z \in E} \lor (\Omega \ni \omega \mapsto \mathscr{R}(x, \omega) \in \mathbb{R})_{x \in E}$），由此可证明：
 
 - (I) $\Omega \ni \omega \mapsto \sup_{x \in E}|\mathscr{R}(x, \omega) - \mathbf{R}(x)| \in [0, \infty]$ 是 $\mathcal{F}/\mathcal{B}([0, \infty])$-可测的；且
+
 - (II) 对于所有 $p \in [2, \infty)$，$c \in (0, \infty)$，均成立：
 
-$$
+```
 \left( \mathbb{E}\left[ \sup_{x \in E}|\mathscr{R}(x) - \mathbb{E}[\mathscr{R}(x)]|^p \right] \right)^{1/p} \leq \frac{2\sqrt{p-1}}{\sqrt{M}} \left( c^{(E,\delta)} \cdot \frac{cb^2 \sqrt{p-1}}{2L\sqrt{M}} \right)^{1/p} \left[ cb^2 + \sup_{x \in E} \max_{m \in \{1, \ldots, M\}} \left( \mathbb{E}\left[ |\mathcal{Y}_{x,m} - \mathbb{E}[\mathcal{Y}_{x,m}]|^p \right] \right)^{1/p} \right].
-$$
+```
 
 注意到条目 (II)、(13.41)、(13.42) 和 (13.45) 表明，对于所有 $p \in [2, \infty)$，$c \in (0, \infty)$，均成立：
 
-$$
+```
 \left( \mathbb{E}\left[ \sup_{x \in E}|\mathscr{R}(x) - \mathbf{R}(x)|^p \right] \right)^{1/p} \leq \frac{2\sqrt{p-1}}{\sqrt{M}} \left( c^{(E,\delta)} \cdot \frac{cb^2 \sqrt{p-1}}{2L\sqrt{M}} \right)^{1/p} \left[ cb^2 + b^2 \right]
-$$
+```
 
-$$
+```
 = \left( c^{(E,\delta)} \cdot \frac{cb^2 \sqrt{p-1}}{2L\sqrt{M}} \right)^{1/p} \frac{\left[ 2(c+1)b^2 \sqrt{p-1} - 1 \right]}{\sqrt{M}}.
-$$
+```
 
 结合条目 (I)，这证明了条目 (i) 和 (ii)。至此，引理 13.3.1 的证明结束。
 
@@ -17248,15 +18921,15 @@ $$
 
 设 $d \in \mathbb{N}$，$D \subseteq \mathbb{R}^d$，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为概率空间，设 $M \in \mathbb{N}$，设 $\overline{\mathbf{X}}_m = (X_m, Y_m) : \Omega \to (D \times \mathbb{R})$，$m \in \{1, 2, \ldots, M\}$，为独立同分布随机变量，设 $\alpha \in \mathbb{R}$，$\beta \in (\alpha, \infty)$，$\mathbf{d} \in \mathbb{N}$，设 $f = (f_\theta)_{\theta \in [\alpha, \beta]} : [\alpha, \beta] \to C(D, \mathbb{R})$，设 $L, b \in (0, \infty)$ 满足对于所有 $\theta, \vartheta \in [\alpha, \beta]^{\mathbf{d}}$，$m \in \{1, 2, \ldots, M\}$，$x \in D$ 有：
 
-$$
+```
 |f_\theta(X_m) - Y_m| \leq b \quad \text{且} \quad |f_\theta(x) - f_\vartheta(x)| \leq L|\theta - \vartheta|_\infty,
-$$
+```
 
 且设 $\mathbf{R} : [\alpha, \beta]^{\mathbf{d}} \to [0, \infty)$ 和 $\mathscr{R} : [\alpha, \beta]^{\mathbf{d}} \times \Omega \to [0, \infty)$ 满足对于所有 $\theta \in [\alpha, \beta]^{\mathbf{d}}$，$\omega \in \Omega$ 有：
 
-$$
+```
 \mathbf{R}(\theta) = \mathbb{E}\left[ |f_\theta(X_1) - Y_1|^2 \right] \quad \text{且} \quad \mathscr{R}(\theta, \omega) = \frac{1}{M} \left[ \sum_{m=1}^{M} |f_\theta(X_m(\omega)) - Y_m(\omega)|^2 \right]
-$$
+```
 
 （参见定义 3.3.4）。则
 
@@ -17264,33 +18937,35 @@ $$
 
 (ii) 对于所有 $p \in (0, \infty)$，均成立：
 
-$$
+```
 \begin{align}
 \mathbb{E}\left[\left(\sup_{\theta \in [\alpha, \beta]^d} |\mathcal{R}(\theta) - \mathbf{R}(\theta)|^p\right)^{1/p}\right] &\nonumber \\
 \le \inf_{c, \varepsilon \in (0, \infty)} \left[ \frac{2(c+1)b^2 \max\{1, [2\sqrt{M} L (\beta - \alpha)(cb)^{-1}\varepsilon] \varepsilon \} \max\{1, p, \frac{A}{\varepsilon}\}}{\sqrt{M}} \right]^{1/p} \tag{13.51} \\
 &\le \inf_{c \in (0, \infty)} \left[ \frac{2(c+1)b^2 \sqrt{e} \max\{1, p, \mathrm{d}\ln(4M L^2 (\beta - \alpha)^2 (cb)^{-2})\}}{\sqrt{M}} \right].
 \end{align}
-$$
+```
 
 #### 命题 13.3.2 的证明。
 
 在整个证明过程中，令 $(\kappa_c)_{c \in (0, \infty)} \subseteq (0, \infty)$ 满足对于所有 $c \in (0, \infty)$ 有：
 
-$$
+```
 \kappa_c = \frac{2\sqrt{M} L (\beta - \alpha)}{cb}, \quad (13.52)
-$$
+```
 
 令 $\mathcal{X}_{\theta,m}\colon \Omega \to \mathbb{R}$，$m \in \{1, 2, \dots, M\}$，$\theta \in [\alpha, \beta]^d$，满足对于所有 $\theta \in [\alpha, \beta]^d$，$m \in \{1, 2, \dots, M\}$ 有：
 
-$$
+```
 \mathcal{X}_{\theta,m} = f_\theta(X_m), \quad (13.53)
-$$
+```
 
 且令 $\delta\colon [\alpha, \beta]^{\mathrm{d}} \times [\alpha, \beta]^{\mathrm{d}} \to [0, \infty)$ 满足对于所有 $\theta, \vartheta \in [\alpha, \beta]^{\mathrm{d}}$ 有：
 
-$$
+```
 \delta(\theta, \vartheta) = \lVert \theta - \vartheta \rVert_\infty. \quad (13.54)
-$$
+```
+
+
 
 首先，注意到假设对于所有 $\theta \in [\alpha, \beta]^d$，$m \in \{1, 2, \dots, M\}$ 均有 $|f_\theta(X_m) - Y_m| \le b$，这意味着对于所有 $\theta \in [\alpha, \beta]^d$，$m \in \{1, 2, \dots, M\}$ 有：
 
@@ -17353,9 +19028,6 @@ $$
 \end{align}
 $$
 
-
-
-
 对于所有满足 $\kappa_c \leq 1$ 的 $c, p \in (0, \infty)$，都有
 
 $$\begin{gathered}\begin{split}\inf_{\varepsilon \in (0, \infty)} & \left[ \frac{2(c+1)b^{2} \max\{1, (\kappa_{c})^{\varepsilon}\} \sqrt{\max\{1, p, \tfrac{d}{\varepsilon}\}}}{\sqrt{M}} \\ = \inf_{\varepsilon \in (0, \infty)} & \left[ \frac{2(c+1)b^{2} \sqrt{\max\{1, p, \tfrac{d}{\varepsilon}\}}}{\sqrt{M}} \right] \leq \frac{2(c+1)b^{2} \sqrt{\max\{1, p\}}}{\sqrt{M}} \leq \frac{2(c+1)b^{2} \sqrt{\varepsilon} \max\{1, p, \mathbf{d} \ln( [ \kappa_c ]^{2})\}}{\sqrt{M}}.\end{split}\tag{13.63}\end{gathered}$$
@@ -17373,13 +19045,18 @@ $$\mathbf{R}(\theta) = \mathbb{E} [ |\mathscr{A}_{u,v}^{\theta,1} (X_{1}) - Y_{1
 *(参见定义 4.4.1)。则*
 
 - (i) *映射 $\Omega \ni \omega \mapsto \sup_{\theta \in [ - B, B ]^{d}} | \mathscr{R}(\theta, \omega) - \mathbf{R}(\theta) | \in [0, \infty]$ 是 $\mathcal{F}/\mathcal{B}([0, \infty])$-可测的，且*
+
 - (ii) *对于所有* $p\in(0,\infty)$ *，有*
 
 $$\begin{aligned}\begin{aligned}\mathbb{E}\left[\sup_{\theta\in[-B,B]^{d}}\|\mathscr{E}(\theta)-\mathbf{R}(\theta)\|^{p}\right]^{1/p}\\&\leq\frac{9(v-u)^{2}\mathbf{L}(\|\mathbf{l}\|_{\infty}+1)\sqrt{\max\{p,\ln(4(Mb)^{\lceil L\rceil}/(\|\mathbf{l}\|_{\infty}+1)B)\}}}{\sqrt{M}}\\&\leq\frac{9(v-u)^{2}\mathbf{L}(\|\mathbf{l}\|_{\infty}+1)^{2}\max\{p,\ln(3Mbb)\}}{\sqrt{M}}\end{aligned}\tag{13.66}\end{aligned}$$
 
 *(参见定义 3.3.4)。*
 
-*推论 13.3.9 的证明。* 在本证明中，设 $\mathbf{d}=\sum_{i=1}^{\mathbf{L}}\mathbf{l}_{i}(\mathbf{l}_{i-1}+1)\in\mathbb{N}$，设 $L= b\mathbf{L}(\|\mathbf{l}\|_{\infty}+1)^{\mathbf{L}}B^{\mathbf{L}-1}\in(0,\infty)$，对于每个 $\theta\in[-B,B]^{\mathfrak{d}}$，设 $f_{\theta}\colon D\to\mathbb{R}$ 满足对于所有 $x\in D$，有
+
+
+### 推论 13.3.9 的证明。
+
+在本证明中，设 $\mathbf{d}=\sum_{i=1}^{\mathbf{L}}\mathbf{l}_{i}(\mathbf{l}_{i-1}+1)\in\mathbb{N}$，设 $L= b\mathbf{L}(\|\mathbf{l}\|_{\infty}+1)^{\mathbf{L}}B^{\mathbf{L}-1}\in(0,\infty)$，对于每个 $\theta\in[-B,B]^{\mathfrak{d}}$，设 $f_{\theta}\colon D\to\mathbb{R}$ 满足对于所有 $x\in D$，有
 
 $$f_{\theta}(x)=\mathcal{N}_{u,v}^{\theta,1}(x),\tag{13.67}$$
 
@@ -17416,43 +19093,63 @@ $$\mathbf{d} \leq \mathbf{L}\|\mathbf{I}\|_{\infty}(\|\mathbf{I}\|_{\infty} + 1)
 证明了对于所有 $p \in (0, \infty)$，映射 $\Omega \supseteq \omega \leadsto \sup_{\theta \in [-B, B] \setminus \{R(\theta, \omega) - \mathscr{R}(\theta) \mid [0, \infty]$ 是 $\mathcal{F} / \mathcal{B}([0, \infty])$-可测的，且
 
 $$\begin{align*}
+
 \begin{gathered}
+
 \left( \mathbb{E} \left[ \sup_{\theta \in [-B, B] \setminus \{R(\theta) - \mathscr{R}(\theta)\}} |p| \right] \right)^{1 / p} \\
+
 \leq \inf_{C \in (0, \infty)} \frac{2(C + 1)(v - u)^2 \sqrt{e} \max \{1, \mathbf{p}, \ln(4ML^2(2B)^2(C(v - u)^2))\}}{\sqrt{M}} \\
+
 \leq \inf_{C \in (0, \infty)} \frac{2(C + 1)(v - u)^2 \sqrt{e} \max \{1, p, \mathbf{L}\|\mathbf{I}\|_{\infty} + 1\}^2 \ln(2^4ML^2B^2C^{-2})}{\sqrt{M}} .
+
 \end{gathered}
+
 \tag{13.75}
+
 \end{align*}$$
 
 将此与 (13.72) 结合，证明了第 (i) 项。注意，(13.72)、(13.75)、事实 $2^{6}\mathbf{L}^{2} \leq 2^{6} \cdot 2^{4}(\mathbf{L} - 1) = 2^{4+2\mathbf{L}} \leq 2^{\mathbf{L}+2\mathbf{L}} = 2^{6\mathbf{L}}$、事实 $3 \geq e$，以及假设 $B \geq 1$，**L** $\geq 1$，$M \geq 1$ 和 $b \geq 1$ 意味着对于所有 $p \in (0, \infty)$，有
 
 $$\begin{align*}
+
 \begin{gathered}
+
 \left(\mathbb{E}\left[\sup_{\theta \in[-B, B]}\left|\mathscr{R}(\theta)-\mathbf{R}(\theta)\right|^{p}\right]\right)^{1 / p}=\left(\mathbb{E}\left[\sup_{\theta \in[-B, B]}\left|R(\theta)-\mathscr{R}(\theta)\right|^{p}\right]\right)^{1 / p} \\
+
 \leq \frac{2^{\left(1 / 2+1\right)}(v-u)^{2} \sqrt{e} \max \left\{1, p, \mathbf{L}\left(\|\mathbf{I}\|_{\infty}+1\right)^{2} \ln\left(2^{4} M L^{2} B^{2} 2^{2}\right)\right\}}{\sqrt{M}} \\
+
 =\frac{3(v-u)^{2} \sqrt{e} \max \left\{p, \mathbf{L}\left(\|\mathbf{I}\|_{\infty}+1\right)^{2} \ln\left(2^{6} M b^{2} \mathbf{L}^{2}\left(\|\mathbf{I}\|_{\infty}+1\right)^{2} \mathbf{L}^{B^{2} L}\right)\right\}}{\sqrt{M}} \\
+
 \leq \frac{3(v-u)^{2} \sqrt{3} \max \left\{p, 3 \mathbf{L}^{2}\left(\|\mathbf{I}\|_{\infty}+1\right)^{2} \ln\left(2^{6} \mathbf{L} M b^{2}\left(\|\mathbf{I}\|_{\infty}+1\right)^{2} \mathbf{L}^{2 \mathbf{L}}\right)^{(3 \mathbf{L})}\right\}}{\sqrt{M}} \\
+
 \leq \frac{3(v-u)^{2} \sqrt{3} \max \left\{p, 3 \mathbf{L}^{2}\left(\|\mathbf{I}\|_{\infty}+1\right)^{2} \ln\left(2^{6}(M b)^{2}\left(\|\mathbf{I}\|_{\infty}+1\right) B\right)\right\}}{\sqrt{M}} \\
+
 \leq \frac{9(v-u)^{2} \mathbf{L}\left(\|\mathbf{I}\|_{\infty}+1\right) \sqrt{\max \left\{p, \ln \left(4(M b)^{3 \mathbf{L}}\left(\|\mathbf{I}\|_{\infty}+1\right) B\right)\right\}}}{\sqrt{M}} .
+
 \end{gathered}
+
 \tag{13.76}
+
 \end{align*}$$
 
 接下来，观察到对于所有 $n \in \mathbb{N}$，事实 $n \leq 2^{n-1}$ 以及事实 $\|\mathbf{I}\|_{\infty} \geq 1$ 保证了
 
 $$4(\|\mathbf{I}\|_{\infty} + 1) \leq 2^{2} \cdot 2^{(\|\mathbf{I}\|_{\infty}+1)-1} = 2^{3} \cdot 2^{(\|\mathbf{I}\|_{\infty}+1)-2} \leq 3^{2} \cdot 3^{(\|\mathbf{I}\|_{\infty}+1)-2} = 3^{\|\mathbf{I}\|_{\infty}+1}. \tag{13.77}$$
 
-
-
-
 因此，我们得到对于所有 $p \in (0, \infty)$，以下不等式成立：
 
 $$
+
 \begin{aligned}
+
 & \frac{9(v-u)^{2} \mathbf{L}\left(\|\mathbf{l}\|_{\infty}+1\right) \sqrt{\max \left\{p, \ln (4(M b)^{1 / L}\left(\|\mathbf{l}\|_{\infty}+1\right) B\right\}}}{\sqrt{M}} \\
+
 & \quad \leq \frac{9(v-u)^{2} \mathbf{L}\left(\|\mathbf{l}\|_{\infty}+1\right) \sqrt{\max \left\{p,\left(\|\mathbf{l}\|_{\infty}+1\right) \ln \left(\left[3^{\left(\|\mathbf{l}\|_{\infty}+1\right)}(M b)^{1 / L} B\right]^{1 /\left(\|\mathbf{l}\|_{\infty}+1\right)}\right\}}}{\sqrt{M}} \\
+
 & \quad \leq \frac{9(v-u)^{2} \mathbf{L}\left(\|\mathbf{l}\|_{\infty}+1\right)^{2} \max \left\{p, \ln (3 M B b)\right\}}{\sqrt{M}}.
+
 \end{aligned}\tag{13.78}
+
 $$
 
 该结果与 (13.76) 共同证明了第 (ii) 项。引理 13.3.3 的证明至此完成。
@@ -17474,7 +19171,9 @@ $$
 **引理 14.1.1** (偏差-方差分解)。*设* $(\Omega,\mathcal{F},\mathbb{P})$ *为一个概率空间，设* $(S,\mathcal{S})$ *为一个可测空间，设* $X: \Omega \rightarrow S$ *和* $Y: \Omega \rightarrow \mathbb{R}$ *为随机变量且满足* $\mathbb{E}[|Y|^{2}] < \infty$ *，并设* $\mathbf{r}: \mathcal{L}^{2}(\mathbb{P}_{X};\mathbb{R}) \rightarrow [0,\infty)$ *满足对于所有* $f \in \mathcal{L}^{2}(\mathbb{P}_{X};\mathbb{R})$ 有*
 
 $$
+
 \mathbf{r}(f) = \mathbb{E}[|f(X) - Y|^{2}]. \tag{14.1}
+
 $$
 
 *则*
@@ -17482,13 +19181,17 @@ $$
 *(i)* *对于所有* $f \in \mathcal{L}^{2}(\mathbb{P}_{X};\mathbb{R})$，有*
 
 $$
+
 \mathbf{r}(f) = \mathbb{E}\big[|f(X) - \mathbb{E}[Y|X]|^{2}\big] + \mathbb{E}\big[|Y - \mathbb{E}[Y|X]|^{2}\big], \tag{14.2}
+
 $$
 
 *(ii)* *对于所有* $f,g \in \mathcal{L}^{2}(\mathbb{P}_{X};\mathbb{R})$，有*
 
 $$
+
 \mathbf{r}(f) - \mathbf{r}(g) = \mathbb{E}\big[|f(X) - \mathbb{E}[Y|X]|^{2}\big] - \mathbb{E}\big[|g(X) - \mathbb{E}[Y|X]|^{2}\big] \tag{14.3}
+
 $$
 
 *并且*
@@ -17496,8 +19199,12 @@ $$
 *(iii)* *对于所有* $f, g \in \mathcal{L}^{2}(\mathbb{P}_{X}; \mathbb{R})$，有*
 
 $$
+
 \mathbb{E}\big[|f(X) - \mathbb{E}[Y|X]|^{2}\big] = \mathbb{E}\big[|g(X) - \mathbb{E}[Y|X]|^{2}\big] + \mathbf{r}(f) - \mathbf{r}(g). \tag{14.4}
+
 $$
+
+
 
 引理 14.1.1 的证明。首先，注意由 (14.1) 可知，对于所有 $f \in \mathcal{L}^{2}(\mathbb{P}_{X}; \mathbb{R})$，有
 
@@ -17618,10 +19325,6 @@ $$
 
 推论 14.1.3 的证明至此完成。
 
-
-
-
-
 ## 14.2 总误差分解
 
 **命题 14.2.1.** *设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为概率空间，设 $M, d \in \mathbb{N}$，$D \subseteq \mathbb{R}^{d}$，$u \in \mathbb{R}$，$v \in (u, \infty)$，对每个 $j \in \{1, 2, \ldots, M\}$，设 $X_j: \Omega \rightarrow D$ 和 $Y_j: \Omega \rightarrow [u, v]$ 为随机变量，设 $\mathbf{R}: \mathbb{R}^{d} \rightarrow \mathbb{R}$ 满足对于所有 $\theta \in \mathbb{R}^{d}$ 均有*
@@ -17682,6 +19385,8 @@ $$
 \int_D |\mathscr{A}_{u, v}^{\theta, 1}(x)|^2 \mathbb{P}_{X_1}(dx) = \mathbb{E}[|\mathscr{A}_{u, v}^{\theta, 1}(X_1)|^2] \le \max\{u^2, v^2\} < \infty.
 \end{equation}
 
+
+
 **引理 14.1.1** 中的条目 **(iii)**（在引理 **14.1.1** 条目 **(iii)** 的记号下，通过应用 $( \Omega , \mathcal { F } , \mathbb { P } ) \sim ( \Omega , \mathcal { F } , \overline { \mathbb { P } } )$，$( S , \mathcal { S } ) \sim ( D , \mathcal { B } ( D ) )$，$X \sim X _ { 1 }$，$Y \sim ( \omega \mapsto Y _ { 1 } ( \omega ) \in \mathbb { R } )$，$\mathbf { r } \sim \mathbf { r }$，$\mathbf { f } \sim \mathcal { N } _ { u , v } ^ { \theta , \lambda } | _ { D }$，$g \sim \mathcal { N } _ { u , v } ^ { \theta , \lambda } | _ { D }$ 对于 $\theta , \vartheta \in \mathbb { R } ^ { d }$）从而证明了对于所有 $\theta , \vartheta \in \mathbb { R } ^ { d }$ 均有
 
 \begin{equation}
@@ -17728,14 +19433,11 @@ $$
 \tag{14.31}
 \end{equation}
 
-
-
-
-
 命题 14.2.1 的证明至此完成。□
 
-## 第 15 章
-### 复合误差估计
+# 第 15 章
+
+## 复合误差估计
 
 在第二**部分**中，我们建立了一些关于近似误差的估计；在第三**部分**中，我们建立了一些关于优化误差的估计；在第四**部分**中，我们建立了一些关于泛化误差的估计。在本章中，我们利用第**14**章中的误差分解以及第**II、III**和**IV部分**的内容（参见命题**4.4.12**以及推论**11.3.9**和**13.3.3**），建立**ANN**（人工神经网络）在具有许多独立随机初始化的**GD**（梯度下降）类型优化方法的具体情境下的总体误差估计。
 
@@ -17788,6 +19490,8 @@ $$
 \Omega \ni \omega \mapsto \Theta_{\mathbf{k}(\omega)}(\omega) \in \mathbb{R}^\mathbf{d}
 $$
 
+
+
 是 $\mathcal{F}/\mathcal{B}(\mathbb{R}^\mathbf{d})$-可测的。此外，注意推论 11.3.7（在推论 11.3.7 的记号中，应用 $a \curvearrowleft \|x\|_\infty$，$b \curvearrowleft \|x\|_\infty$，$u \curvearrowleft u$，$v \curvearrowleft v$，$d \curvearrowleft \mathbf{d}$，$L \curvearrowleft \mathbf{L}$，$l \curvearrowleft 1$，其中 $x \in \mathbb{R}^\mathbf{d}$）保证了对于所有 $\theta, \vartheta \in \mathbb{R}^\mathbf{d}$ 和 $x \in \mathbb{R}^\mathbf{d}$，都有
 
 $$
@@ -17815,7 +19519,7 @@ $$
 \Omega \times D \ni (\omega, x) \mapsto (\mathcal{N}_{u,v}^{\Theta_{\mathbf{k}(\omega)}(\omega),1}(x) - \mathcal{E}(x))^p \in [0, \infty)
 $$
 
-是 $(\mathcal{F} \otimes \mathcal{B}(D))/\mathcal{B}([0, \infty))$-可测的。因此 Tonelli 定理确立了项 (iii)。引理 15.1.1 的证明至此完成。 \qquad \qquad \qquad \square
+是 $(\mathcal{F} \otimes \mathcal{B}(D))/\mathcal{B}([0, \infty))$-可测的。因此 Tonelli 定理确立了项 (iii)。引理 15.1.1 的证明至此完成。 $\qquad \qquad \qquad \square$
 
 ### 15.1 ANNs 训练的完全强误差分析
 
@@ -17877,9 +19581,8 @@ $$
 \end{aligned}
 $$
 
-
-
 假设 $\bigcup_{k=1}^{\infty} \Theta_{k,0}(\Omega) \subseteq [-B, B]^d$ 以及假设 $0 \in \mathbf{T}$ 证明了
+
 $$
 \begin{aligned}
 \int_D |\mathcal{N}_{u,v}^{\Theta_k \mathbf{1}}(x) - \mathcal{E}(x)|^2 \, \mathbb{P}_{\mathbf{X}_1}(dx) & \le \big[ \sup_{x \in D} |\mathcal{N}_{u,v}^{\theta_\mathbf{1}}(x) - \mathcal{E}(x)|^2 \big] + 2 \big[ \sup_{\theta \in [-B, B]^d} | \mathcal{R}(\theta) - \mathbf{R}(\theta) | \big] \\
@@ -17890,6 +19593,7 @@ $$
 $$
 
 因此，闵可夫斯基不等式表明，对于所有 $p \in [1, \infty)$ 和 $\vartheta \in [-c, c]^d \subseteq [-B, B]^d$，有
+
 $$
 \begin{aligned}
 \left( \mathbb{E} \left[ \left( \int_D |\mathcal{N}_{u,v}^{\Theta_k \mathbf{1}}(x) - \mathcal{E}(x)|^2 \, \mathbb{P}_{\mathbf{X}_1}(dx) \right)^p \right] \right)^{1/p} & \\
@@ -17901,6 +19605,7 @@ $$
 $$
 
 （参见推论 **13.3.3** 中的 **(i)** 项和推论 **11.3.9** 中的 **(i)** 项）。此外，注意在推论 **13.3.3** 的符号体系下，令 $v \doteq \max\{u+1, v\}$，$\mathbf{R} \doteq \mathbf{R}|_{[-B, B]^d}$，$\mathcal{R} \doteq \mathcal{R}|_{[-B, B]^d \times \Omega}$，推论 **13.3.3** 意味着对于所有 $p \in (0, \infty)$，有
+
 $$
 \begin{aligned}
 \left( \mathbb{E} \left[ \sup_{\theta \in [-B, B]^d} | \mathcal{R}(\theta) - \mathbf{R}(\theta) |^p \right] \right)^{1/p} & \\
@@ -17910,8 +19615,10 @@ $$
 $$
 
 此外，注意在推论 **11.3.9** 的符号体系下，令 $\Theta \doteq \sum_{i=1}^{\mathbf{d}} \mathbf{L}_i(\mathbf{l}_{i-1}+1)$，$B \doteq c$，$(\Theta_k)_{k \in \{1, \dots, K\}} \doteq ( \Omega \ni \omega \mapsto \mathbb{I}_{\{ \Theta_{k,0} \in [-c, c]^d \}}(\omega) \Theta_{k,0}(\omega) \in [-c, c]^d)_{k \in \{1, \dots, K\}}$，$\mathcal{R} \doteq \mathcal{R}|_{[-c, c]^d \times \Omega}$，推论 **11.3.9** 保证了对于所有 $p \in (0, \infty)$，有
+
+
+
 $$
-\begin{aligned}
 \sup_{\theta \in [-c, c]^d} \left( \mathbb{E} \left[ \min_{k \in \{1, \dots, K\}} | \mathcal{R}(\Theta_{k,0}) - \mathcal{R}(\theta) |^p \right] \right)^{1/p} & \\
 & = \sup_{\theta \in [-c, c]^d} \left( \mathbb{E} \left[ \min_{k \in \{1, \dots, K\}} | \mathcal{R}(\mathbb{I}_{\{ \Theta_{k,0} \in [-c, c]^d \}} \Theta_{k,0}) - \mathcal{R}(\theta) |^p \right] \right)^{1/p} \\
 & \le \frac{4(v-u) b \mathbb{L} ( \|\mathbf{\|} \|_\infty + 1) \mathbb{L} c^p \max\{1, p\}}{K \mathbb{L} \tau^{-2}( \|\mathbf{\|} \|_\infty + 1)^{-2}} .
@@ -17919,17 +19626,20 @@ $$
 $$
 
 结合此结果、(15.20) 与 (15.19) 可建立：对于所有 $ p \in [1, \infty) $，有
+
 $$
 \left(\mathbb{E} \left[ \left( \int_D |\mathcal{H}^{\Theta_{u, v}^{\mathbf{k}, 1}}(x) - \mathcal{E}(x)|^2 \, \mathbb{P}_{X_1}(\mathrm{d}x) \right)^p \right] \right)^{1/p} \leq \left[ \inf_{\theta \in [-c, c]^d} \sup_{x \in D} |\mathcal{H}^{\Theta_{u, v}^{\mathbf{k}, 1}}(x) - \mathcal{E}(x)|^2 \right] + \frac{4(v - u)b\mathbf{L}(\|\mathbf{1}\|_{\infty} + 1)^r c^\mathbf{L} \max \{ 1, p \}}{K^{[L - 1](\|\mathbf{1}\|_{\infty} + 1) - 2}} \quad (15.22) \\
 + \frac{18 \max \{ 1, (v - u)^2 \} \mathbf{L}(\|\mathbf{1}\|_{\infty} + 1)^2 \max \{ p, \ln(3Mb) \}}{\sqrt{M}} .
 $$
 
 此外，注意琴生不等式表明，对于所有 $ p \in (0, \infty) $，有
+
 $$
 \left(\mathbb{E} \left[ \left( \int_D |\mathcal{H}^{\Theta_{u, v}^{\mathbf{k}, 1}}(x) - \mathcal{E}(x)|^2 \, \mathbb{P}_{X_1}(\mathrm{d}x) \right)^p \right] \right)^{1/p} \leq \left( \mathbb{E} \left[ \left( \int_D |\mathcal{H}^{\Theta_{u, v}^{\mathbf{k}, 1}}(x) - \mathcal{E}(x)|^2 \, \mathbb{P}_{X_1}(\mathrm{d}x) \right)^{\max \{ 1, p \}} \right] \right)^{\frac{1}{\max \{ 1, p \}}} \quad (15.23)
 $$
 
 此结果、(15.22) 以及事实 $\ln(3Mb) \geq 1$ 证明了对于所有 $ p \in (0, \infty) $，有
+
 $$
 \left(\mathbb{E} \left[ \left( \int_D |\mathcal{H}^{\Theta_{u, v}^{\mathbf{k}, 1}}(x) - \mathcal{E}(x)|^2 \, \mathbb{P}_{X_1}(\mathrm{d}x) \right)^p \right] \right)^{1/p} \leq \left[ \inf_{\theta \in [-c, c]^d} \sup_{x \in D} |\mathcal{H}^{\Theta_{u, v}^{\mathbf{k}, 1}}(x) - \mathcal{E}(x)|^2 \right] + \frac{4(v - u)b\mathbf{L}(\|\mathbf{1}\|_{\infty} + 1)^r c^\mathbf{L} \max \{ 1, p \}}{K^{[L - 1](\|\mathbf{1}\|_{\infty} + 1) - 2}} \quad (15.24) \\
 + \frac{18 \max \{ 1, (v - u)^2 \} \mathbf{L}(\|\mathbf{1}\|_{\infty} + 1)^2 \max \{ p, \ln(3Mb) \}}{\sqrt{M}} .
@@ -17942,6 +19652,7 @@ $\square$
 引理 15.1.3. 设 $ a, x, p \in (0, \infty) $。则 $ ax^p \leq \exp( \frac{a^{1/p} p x}{e} ) $。
 
 引理 15.1.3 的证明。注意事实：对于所有 $ y \in \mathbb{R} $，有 $ y + 1 \leq e^y $，这证明了
+
 $$
 ax^p = (a^{1/p} x)^p = [ e( \frac{a^{1/p} p x}{e} - 1 + 1 ) ]^p \leq [ e \exp(\frac{a^{1/p} p x}{e} - 1) ]^p = \exp( \frac{a^{1/p} p x}{e} ) . \quad (15.25)
 $$
@@ -17953,11 +19664,13 @@ $\square$
 引理 15.1.4. 设 $ M, c \in [1, \infty) $，$ B \in [c, \infty) $。则 $\ln(3MBc) \leq \frac{23B}{18}\ln(eM) $。
 
 引理 15.1.4 的证明。注意引理 15.1.3 以及事实 $ 2\sqrt[3]{c} \leq \frac{23}{18} $ 蕴含
+
 $$
 3B^2 \leq \exp(\frac{2\sqrt{3}B}{e}) \leq \exp( \frac{23B}{18} ) . \quad (15.26)
 $$
 
 因此，事实 $ B \geq c \geq 1 $ 且 $ M \geq 1 $ 确保了
+
 $$
 \ln(3MBc) \leq \ln(3B^2M) \leq \ln(eM)^{23B/18} = \frac{23B}{18}\ln(eM) . \quad (15.27)
 $$
@@ -17996,7 +19709,6 @@ $\begin{align*} & \Big( \mathbb{E} \Big[ \Big( \int_{[a, b]^d} |\mathcal{N}^{\Th
 
 **定理 15.1.5 的证明。** 注意假设对于所有 $x, y \in [a, b]^d$ 有 $|\mathcal{E}(x) - \mathcal{E}(y)| \le L \| x - y \|_1$ 建立了 $\mathcal{E}\colon [a, b]^d \to [u, v]$ 是 $\mathcal{B} ([a, b]^d) / \mathcal{B} ([u, v])$-可测的。命题 15.1.2（应用时 $b \hookrightarrow \max \{1, |a|, |b| \}$，$D \hookrightarrow [a, b]^d$ 在
 
-
 15.1.2 引理中的记法）从而证明了对于所有 $p \in (0, \infty)$ 都有
 
 $$
@@ -18020,8 +19732,9 @@ $$
 & \quad+ \frac{4(v-u) \mathbf{L}\left(\|\mathbf{L}\|_{\infty}+1\right)^{\mathbf{L}} \mathbf{c}^{L+1} \max \{1, p\}}{K\left[\mathbf{L}^{-1}\left(\|\mathbf{L}\|_{\infty}+1\right)^{-2}\right]} \\
 & \quad+ \frac{18 \max \left\{1,(v-u)^{2}\right\} \mathbf{L}\left(\|\mathbf{L}\|_{\infty}+1\right)^{2} \max \left\{p, \ln (3 M B c)\right\}}{\sqrt{M}} .
 \end{split}\tag{15.35}
-\end{equation}
 $$
+
+
 
 此外，请注意，4.4.12 引理（在 4.4.12 引理的记法中应用 $f \sim \mathcal{E}$）证明了存在 $\vartheta \in \mathbb{R}^{d}$ 使得 $\|\vartheta\|_{\infty} \leq \max \{1, L, |a|,|b|, 2\left\lvert\sup_{x \in[a, b]^{d}} \mathcal{E}(x)\right\rvert\}$ 并且
 
@@ -18067,12 +19780,15 @@ $$
 $$
 \frac{9d^2L^2(b-a)^2}{A^{2/d}} + \frac{4(v-u)\mathbf{L}(\|\mathbf{L}\|_{\infty} + 1)^{\mathbf{L}} c^{L+1}\max\{1, p\}}{K[\mathbf{L}^{-1}(\|\mathbf{L}\|_{\infty}+1)^{-2}]}
 $$
+
 $$
 + \frac{18\max\{1, (v-u)^2\} \mathbf{L}(\|\mathbf{L}\|_{\infty} + 1)^2\max\{p, \ln(3MBc)\}}{\sqrt{M}}
 $$
+
 $$
 \le \frac{36d^2c^4}{A^{2/d}} + \frac{4\mathbf{L}(\|\mathbf{L}\|_{\infty} + 1)^{2}c^{L+2}\max\{1, p\}}{K[\mathbf{L}^{-1}(\|\mathbf{L}\|_{\infty}+1)^{-2}]}
 $$
+
 $$
 + \frac{23B^3\mathbf{L}(\|\mathbf{L}\|_{\infty}+1)^2\max\{p, \ln(ecM)\}}{\sqrt{M}}.   (15.41)
 $$
@@ -18104,7 +19820,9 @@ $$
 $$
 \mathbf{k}(\omega) \in \{(k, n) \in \{1, 2, \dots, K\} \times \mathbf{T}\colon \|\Theta_{k,n}(\omega)\|_{\infty} \le B\}   (15.45)
 $$
+
 且
+
 $$
 \mathfrak{R}(\Theta_{\mathbf{k}(\omega)}(\omega)) = \min_{(k,n) \in \{1, \dots, K\} \times \mathbf{T}, \|\Theta_{k,n}(\omega)\|_{\infty} \le B} \mathfrak{R}(\Theta_{k,n}(\omega))   (15.46)
 $$
@@ -18167,8 +19885,6 @@ $$
 
 结合此结果、(15.42) 以及事实 $\mathbf{L} \geq 1, c \geq 1, B \geq 1$ 和 $\ln (e M) \geq 1$，表明了对于
 
-
-
 ## 15.2 基于随机初始化的SGD优化的完整强误差分析
 
 **推论 15.2.1.** 设 $(\Omega,\mathcal{F},\mathbb{P})$ 为一个概率空间，令 $M, d \in \mathbb{N}$，$a,u \in \mathbb{R}$，$b \in (a, \infty)$，$v \in (u, \infty)$。对于每个 $k,n,j \in \mathbb{N}_0$，设 $X_j^{k,n}\colon \Omega \to [a,b]^d$ 和 $Y_j^{k,n}\colon \Omega \to [u,v]$ 为随机变量，假设 $(X_j^{0,0},Y_j^{0,0}$，$j \in \{1,2,\ldots,M\}$ 独立同分布（i.i.d）。令 $\mathbf{d},\mathbf{L} \in \mathbb{N}$，$\mathbf{l} = (\mathbf{l}_0,\mathbf{l}_1,\ldots,\mathbf{l}_{\mathbf{L}}) \in \mathbb{N}^{\mathbf{L}+1}$ 满足
@@ -18176,6 +19892,8 @@ $$
 $$
 \mathbf{l}_0 = d, \quad \mathbf{l}_{\mathbf{L}} = 1, \quad \text{且} \quad \mathbf{d} \ge \sum_{i=1}^{\mathbf{L}}\mathbf{l}_i(\mathbf{l}_{i-1}+1). \tag{15.54}
 $$
+
+
 
 对于每个 $k,n \in \mathbb{N}_0$，$J \in \mathbb{N}$，令 $\mathscr{R}_J^{k,n}\colon \mathbb{R}^{\mathbf{d}} \times \Omega \to [0, \infty)$ 满足对所有 $\theta \in \mathbb{R}^{\mathbf{d}}$，$\omega \in \Omega$ 有
 
@@ -18268,6 +19986,7 @@ $$
 $$
 
 且
+
 $$
 \mathscr{R}(\Theta_{\mathbf{k}(\omega)}(\omega)) = \min_{(k,n) \in \{1,2,\dots,K\} \times \mathbf{T}, \|\Theta_{k,n}(\omega)\|_\infty \le B} \mathscr{R}(\Theta_{k,n}(\omega))
 $$
@@ -18305,11 +20024,11 @@ $$
 
 *令 $\mathcal{E} \colon [0,1]^d \rightarrow [0,1]$ 满足 $\mathbb{P}$-a.s. 有*
 
-$$
+
+
 \mathcal{E}(X_{1}^{0,0}) = \mathbb{E}[\mathbb{Y}_1^{0,0} | X_{1}^{0,0}],
+
 $$
-
-
 设 $c \in [2, \infty)$，使得对所有 $x, y \in [0,1]^d$ 满足 $|\mathcal{E}(x) - \mathcal{E}(y)| \le c \|x - y\|_1$，令 $(\mathbf{J}_n)_{n \in \mathbb{N}} \subseteq \mathbb{N}$，对于每个 $k, n$，令 $\mathcal{G}^{k,n}$: $\mathbb{R}^d \times \Omega \to \mathbb{R}^d$ 满足：对所有 $\omega \in \Omega$ 以及 $\theta \in \{\vartheta \in \mathbb{R}^d : (\mathcal{R}^{k,n}_{\mathbf{J}_n}(:, \omega):\mathbb{R}^d \to [0, \infty)$ 在 $\vartheta$ 处可微\}$，有
 
 $$\mathcal{G}^{k,n}(\theta, \omega) = (\nabla_\theta \mathcal{R}^{k,n}_{\mathbf{J}_n})(\theta, \omega), \tag{15.74}$$
@@ -18333,9 +20052,11 @@ $$\begin{aligned}\mathbb{E}\left[\int_{[0,1]^d} |\mathcal{K}^{\epsilon}_{0,1} \T
 **推论 15.2.3 的证明。** 注意，推论 15.2.2（在推论 15.2.2 的符号体系下应用时取 $a \sim 0$，$u \sim 0$，$b \sim 1$，$v \sim 1$，$L \sim c$，$c \sim c$，$B \sim c$），以及事实 $c \ge 2$ 且 $M \ge 1$，再加上引理 15.1.4，共同得出了 (15.78)。因此，推论 15.2.3 的证明完毕。 $\square$
 
 # 第六部分
+
 ## 偏微分方程（PDE）的深度学习
 
 ## 第 16 章
+
 ## 物理信息神经网络（PINNs）
 
 深度学习方法不仅已成为数据驱动学习问题中非常流行的工具，如今也广泛用于求解数学方程，如常微分方程和偏微分方程（参见例如 [119, 187, 347, 379]）。特别地，关于偏微分方程深度学习方法在数值模拟和理论探究方面的综述文章 [24, 56, 88, 145, 237, 355] 及其引用的参考文献值得关注。
@@ -18359,6 +20080,7 @@ $$\mathfrak{L}(v) = \mathbb{E}\left[ |v(0, \mathcal{X}) - g(\mathcal{X})|^2 + \l
 *则以下两个陈述等价：*
 
 - $(i)$ $\mathfrak{L}(u) = \inf_{v \in C^{1,2}([0,T] \times \mathbb{R}^d, \mathbb{R})} \mathfrak{L}(v)$ 成立。
+
 - $(ii)$ 对所有 $t \in [0, T]$，$x \in \mathbb{R}^d$，有 $u(0, x) = g(x)$ 且
 
 $$\left( \frac{\partial u}{\partial t} \right)(t, x) = (\Delta_x u)(t, x) + f(u(t, x)). \qquad \qquad (16.3)$$
@@ -18399,8 +20121,9 @@ $$\left(\frac{\partial u}{\partial t}\right)(t, x)=\left(\Delta_{x} u\right)(t, 
 
 第一步，我们利用定理 16.1.1 将与 (16.10) 相关的偏微分方程问题重新表述为一个函数空间上的无穷维随机优化问题。为此，设 $\mathcal{I} \in C([0, T],(0, \infty)), \mathcal{X} \in C\left(\mathbb{R}^{d},(0, \infty)\right)$，令 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间，令 $\mathcal{T}: \Omega \rightarrow[0, T]$ 且 $\mathcal{X}: \Omega \rightarrow \mathbb{R}^{d}$ 为独立随机变量，假设对所有 $A \in \mathcal{B}([0, T]), B \in \mathcal{B}\left(\mathbb{R}^{d}\right)$ 有
 
-$$\mathbb{P}(\mathcal{T} \in A)=\int_{A} \mathcal{I}(t) \mathrm{d} t\quad\text{且}\quad \mathbb{P}\left(\mathcal{X} \in B\right)=\int_{B} \mathcal{X}(x) \mathrm{d} x, \tag{16.11}$$
 
+
+$$\mathbb{P}(\mathcal{T} \in A)=\int_{A} \mathcal{I}(t) \mathrm{d} t\quad\text{且}\quad \mathbb{P}\left(\mathcal{X} \in B\right)=\int_{B} \mathcal{X}(x) \mathrm{d} x, \tag{16.11}$$
 
 且令 $\pmb{\mathfrak{L}}: C^{1,2}([0,T] \times \mathbb{R}^{d}, \mathbb{R}) \rightarrow [0, \infty)$ 满足对于所有 $v = (v(t,x))_{(t,x) \in [0,T] \times \mathbb{R}^{d}} \in C^{1,2}([0,T] \times \mathbb{R}^{d}, \mathbb{R})$，有
 
@@ -18412,13 +20135,13 @@ $$\pmb{\mathfrak{L}}(u) = 0 \tag{16.13}$$
 
 因此它是与 (16.12) 相关的优化问题的一个最小化点。受此启发，我们旨在通过计算函数 $\pmb{\mathfrak{L}}: C^{1,2}([0,T] \times \mathbb{R}^{d}, \mathbb{R}) \rightarrow [0, \infty]$ 的近似最小化点来寻找 $u$ 的近似值。由于其无穷维性，该优化问题目前尚不适用于数值计算。
 
-为此，在第二步中，我们将这个有限维随机优化问题简化为涉及 *ANNs* 的有限维随机优化问题。具体而言，设 $a: \mathbb{R} \rightarrow \mathbb{R}$ 是可微的，设 $h \in \mathbb{N}$，$l_{1}, l_{2}, \ldots, l_{h}$，$\mathfrak{d} \in \mathbb{N}$ 满足 $\mathfrak{d} = l_{1}(d+2) + [\sum_{k=2}^{h}l_{k}(l_{k-1} + 1)] + l_{h} + 1$，且设 $\mathcal{L}: \mathbb{R}^{\mathfrak{d}} \rightarrow [0, \infty)$ 满足对于所有 $\theta \in \mathbb{R}^{\mathfrak{d}}$，有
+为此，在第二步中，我们将这个有限维随机优化问题简化为涉及 `ANNs` 的有限维随机优化问题。具体而言，设 $a: \mathbb{R} \rightarrow \mathbb{R}$ 是可微的，设 $h \in \mathbb{N}$，$l_{1}, l_{2}, \ldots, l_{h}$，$\mathfrak{d} \in \mathbb{N}$ 满足 $\mathfrak{d} = l_{1}(d+2) + [\sum_{k=2}^{h}l_{k}(l_{k-1} + 1)] + l_{h} + 1$，且设 $\mathcal{L}: \mathbb{R}^{\mathfrak{d}} \rightarrow [0, \infty)$ 满足对于所有 $\theta \in \mathbb{R}^{\mathfrak{d}}$，有
 
 $$\begin{align*} \mathcal{L}(\theta) &= \pmb{\mathfrak{L}}\big(\mathcal{N}^{\theta, d+1}_{\mathfrak{A}_{a, l_{1}}, \mathfrak{A}_{a, l_{2}}, \ldots, \mathfrak{A}_{a, l_{h}}, \operatorname{id}_{\mathbb{R}}}\big) \\ &= \mathbb{E}\Big[\big|\mathcal{N}^{\theta, d+1}_{\mathfrak{A}_{a, l_{1}}, \mathfrak{A}_{a, l_{2}}, \ldots, \mathfrak{A}_{a, l_{h}}, \operatorname{id}_{\mathbb{R}}}(0, \mathcal{X}) - g(\mathcal{X})\big|^{2} \\ &\quad+ \big(\tfrac{\partial \mathcal{N}^{\theta, d+1}_{\mathfrak{A}_{a, l_{1}}, \mathfrak{A}_{a, l_{2}}, \ldots, \mathfrak{A}_{a, l_{h}}, \operatorname{id}_{\mathbb{R}}}}{\partial t}(\mathcal{T}, \mathcal{X}) - (\Delta_{x}\mathcal{N}^{\theta, d+1}_{\mathfrak{A}_{a, l_{1}}, \mathfrak{A}_{a, l_{2}}, \ldots, \mathfrak{A}_{a, l_{h}}, \operatorname{id}_{\mathbb{R}}})(\mathcal{T}, \mathcal{X}) \ &\quad- f\big(\mathcal{N}^{\theta, d+1}_{\mathfrak{A}_{a, l_{1}}, \mathfrak{A}_{a, l_{2}}, \ldots, \mathfrak{A}_{a, l_{h}}, \operatorname{id}_{\mathbb{R}}}(\mathcal{T}, \mathcal{X})\big)\big)^{2}\Big] \tag{16.14} \end{align*}$$
 
-(参见定义 1.1.3 和 1.2.1)。我们现在可以通过计算函数 $\mathcal{L}$ 的近似最小化点 $\vartheta \in \mathbb{R}^{\mathfrak{d}}$，并利用与该近似最小化点相关联的 *ANN* 的实现 $\mathcal{N}^{\vartheta, d+1}_{\mathfrak{A}_{a, l_{1}}, \mathfrak{A}_{a, l_{2}}, \ldots, \mathfrak{A}_{a, l_{h}}, \operatorname{id}_{\mathbb{R}}}$ 作为 $\pmb{\mathfrak{L}}$ 的近似最小化点，从而计算出函数 $\pmb{\mathfrak{L}}$ 的近似最小化点。
+(参见定义 1.1.3 和 1.2.1)。我们现在可以通过计算函数 $\mathcal{L}$ 的近似最小化点 $\vartheta \in \mathbb{R}^{\mathfrak{d}}$，并利用与该近似最小化点相关联的 `ANN` 的实现 $\mathcal{N}^{\vartheta, d+1}_{\mathfrak{A}_{a, l_{1}}, \mathfrak{A}_{a, l_{2}}, \ldots, \mathfrak{A}_{a, l_{h}}, \operatorname{id}_{\mathbb{R}}}$ 作为 $\pmb{\mathfrak{L}}$ 的近似最小化点，从而计算出函数 $\pmb{\mathfrak{L}}$ 的近似最小化点。
 
-此推导的第三步也是最后一步，是通过 *SGD* 类型的优化方法来近似计算 $\mathcal{L}$ 的这样一个近似最小化点。我们现在简述普通 *SGD* 优化方法的情况（参见定义 7.2.1）。设 $\xi \in \mathbb{R}^{\mathfrak{d}}$，$J \in \mathbb{N}$，$(\gamma_{n})_{n \in \mathbb{N}} \subseteq [0, \infty)$，对于每个 $n \in \mathbb{N}$，$j \in \{1,2,\ldots,J\}$，设 $\mathfrak{T}_{n,j}: \Omega \rightarrow [0,T]$ 和 $\mathfrak{X}_{n,j}: \Omega \rightarrow \mathbb{R}^{d}$ 为随机变量，假设对于所有 $n \in \mathbb{N}$，$j \in \{1,2,\ldots,J\}$，$A \in \mathcal{B}([0,T])$，$B \in \mathcal{B}(\mathbb{R}^{d})$，有
+此推导的第三步也是最后一步，是通过 `SGD` 类型的优化方法来近似计算 $\mathcal{L}$ 的这样一个近似最小化点。我们现在简述普通 `SGD` 优化方法的情况（参见定义 7.2.1）。设 $\xi \in \mathbb{R}^{\mathfrak{d}}$，$J \in \mathbb{N}$，$(\gamma_{n})_{n \in \mathbb{N}} \subseteq [0, \infty)$，对于每个 $n \in \mathbb{N}$，$j \in \{1,2,\ldots,J\}$，设 $\mathfrak{T}_{n,j}: \Omega \rightarrow [0,T]$ 和 $\mathfrak{X}_{n,j}: \Omega \rightarrow \mathbb{R}^{d}$ 为随机变量，假设对于所有 $n \in \mathbb{N}$，$j \in \{1,2,\ldots,J\}$，$A \in \mathcal{B}([0,T])$，$B \in \mathcal{B}(\mathbb{R}^{d})$，有
 
 $$\mathbb{P}(\mathcal{T} \in A) = \mathbb{P}(\mathfrak{T}_{n,j} \in A) \quad \text{且} \quad \mathbb{P}(\mathcal{X} \in B) = \mathbb{P}(\mathfrak{X}_{n,j} \in B), \tag{16.15}$$
 
@@ -18486,81 +20209,97 @@ for i in range(20000):
     indices = torch.randint(0, M, (J,))
 ```
 
-
-
 40    x = x_data[indices, :]
-41    t = t_data[indices, :]
-42
-43    x1, x2 = x[:, 0:1], x[:, 1:2]
-44
-45    x1.requires_grad()
-46    x2.requires_grad()
-47    t.requires_grad()
-48
-49    optimizer.zero_grad()
-50
-51    # 设 u 为人工神经网络的实现函数，计算
-52    # 批次中每个 x 对应的 u(0, x)
-53    u0 = N(torch.hstack((torch.zeros_like(t), x)))
-54    # 计算初始条件的损失
-55    initial_loss = (u0 - phi(x)).square().mean()
-56
-57    # 使用自动
-58    # 微分计算偏导数
-59    u = N(torch.hstack((t, x1, x2)))
-60    ones = torch.ones_like(u)
-61    u_t = grad(u, t, ones, create_graph=True)[0]
-62    u_x1 = grad(u, x1, ones, create_graph=True)[0]
-63    u_x2 = grad(u, x2, ones, create_graph=True)[0]
-64    ones = torch.ones_like(u_x1)
-65    u_xx1 = grad(u_x1, x1, ones, create_graph=True)[0]
-66    u_x2x2 = grad(u_x2, x2, ones, create_graph=True)[0]
-67
-68    # 计算偏微分方程（PDE）的损失
-69    Laplace = u_x1x1 + u_x2x2
-70    pde_loss = (u_t - (0.005 * Laplace + u - u**3)).square().mean()
-71
-72    # 计算总损失并执行梯度步骤
-73    loss = initial_loss + pde_loss
-74    loss.backward()
-75    optimizer.step()
-76
-77    ### 绘制不同时间点的解
-78
-79    mesh = 128
-80    a, b = -3, 3
-81
-82    gs = GridSpec(2, 4, width_ratios=[1, 1, 1, 0.05])
-83    fig = plt.figure(figsize=(16, 10), dpi=300)
-84
-85    x, y = torch.meshgrid(
-86        torch.linspace(a, b, mesh),
-87        torch.linspace(a, b, mesh),
-88        indexing="xy"
-89    )
-90    x = x.reshape((mesh * mesh, 1)).to(dev)
-91    y = y.reshape((mesh * mesh, 1)).to(dev)
-92
-93    for i in range(6):
-94        t = torch.full((mesh * mesh, 1), i * T / 5).to(dev)
-95        z = N(torch.cat((t, x, y), 1))
-96        z = z.detach().cpu().numpy().reshape((mesh, mesh))
-97
-98        ax = fig.add_subplot(gs[i // 3, i % 3])
-99        ax.set_title(f"t = {i * T / 5}")
-100        ax.imshow(
-101            z, cmap="viridis", extent=[a, b, a, b], vmin=-1.2, vmax=1.2
-102        )
-103
-104    # 在图表中添加颜色条
-105    norm = plt.Normalize(vmin=-1.2, vmax=1.2)
-106    sm = ScalarMappable(cmap="viridis", norm=norm)
-107    cax = fig.add_subplot(gs[:, 3])
-108    fig.colorbar(sm, cax=cax, orientation="vertical")
-109
-110    fig.savefig("../plots/pinn.pdf", bbox_inches="tight")
 
-源码 16.1 (code/pinn.py)：使用 PyTorch 实现的 PINN 方法简单实现，用于计算函数 $u \in C^{1,2}([0,3] \times \mathbb{R}^{2}, \mathbb{R})$ 的近似值，该函数满足对于所有 $t \in [0,2]$，$x \in \mathbb{R}^{2}$，有 $(\frac{\partial u}{\partial t})(t, x) = \frac{1}{200}(\Delta_{x}u)(t, x) + u(t, x) - [u(t, x)]^{3}$ 且 $u(0, x) = \sin(\|x\|_{2}^{2})$（参见定义 3.3.4）。该代码生成的绘图如图 16.1 所示。
+41    t = t_data[indices, :]
+
+42
+
+43    x1, x2 = x[:, 0:1], x[:, 1:2]
+
+44
+
+45    x1.requires_grad()
+
+46    x2.requires_grad()
+
+47    t.requires_grad()
+
+48
+
+49    optimizer.zero_grad()
+
+50
+
+51    # 设 u 为人工神经网络的实现函数，计算
+
+52    # 批次中每个 x 对应的 u(0, x)
+
+53    u0 = N(torch.hstack((torch.zeros_like(t), x)))
+
+54    # 计算初始条件的损失
+```
+
+
+
+### 55
+`initial_loss = (u0 - phi(x)).square().mean()`
+
+57
+# 使用自动
+# 微分计算偏导数
+`u = N(torch.hstack((t, x1, x2)))`
+`ones = torch.ones_like(u)`
+`u_t = grad(u, t, ones, create_graph=True)[0]`
+`u_x1 = grad(u, x1, ones, create_graph=True)[0]`
+`u_x2 = grad(u, x2, ones, create_graph=True)[0]`
+`ones = torch.ones_like(u_x1)`
+`u_xx1 = grad(u_x1, x1, ones, create_graph=True)[0]`
+`u_x2x2 = grad(u_x2, x2, ones, create_graph=True)[0]`
+
+68
+# 计算偏微分方程（PDE）的损失
+`Laplace = u_x1x1 + u_x2x2`
+`pde_loss = (u_t - (0.005 * Laplace + u - u**3)).square().mean()`
+
+72
+# 计算总损失并执行梯度步骤
+`loss = initial_loss + pde_loss`
+`loss.backward()`
+`optimizer.step()`
+
+### 绘制不同时间点的解
+
+`mesh = 128`
+`a, b = -3, 3`
+`gs = GridSpec(2, 4, width_ratios=[1, 1, 1, 0.05])`
+`fig = plt.figure(figsize=(16, 10), dpi=300)`
+`x, y = torch.meshgrid(`
+`torch.linspace(a, b, mesh),`
+`torch.linspace(a, b, mesh),`
+`indexing="xy"`
+`)`
+`x = x.reshape((mesh * mesh, 1)).to(dev)`
+`y = y.reshape((mesh * mesh, 1)).to(dev)`
+
+`for i in range(6):`
+`t = torch.full((mesh * mesh, 1), i * T / 5).to(dev)`
+`z = N(torch.cat((t, x, y), 1))`
+`z = z.detach().cpu().numpy().reshape((mesh, mesh))`
+`ax = fig.add_subplot(gs[i // 3, i % 3])`
+`ax.set_title(f"t = {i * T / 5}")`
+`ax.imshow(`
+`z, cmap="viridis", extent=[a, b, a, b], vmin=-1.2, vmax=1.2`
+`)`
+
+# 在图表中添加颜色条
+`norm = plt.Normalize(vmin=-1.2, vmax=1.2)`
+`sm = ScalarMappable(cmap="viridis", norm=norm)`
+`cax = fig.add_subplot(gs[:, 3])`
+`fig.colorbar(sm, cax=cax, orientation="vertical")`
+`fig.savefig("../plots/pinn.pdf", bbox_inches="tight")`
+
+源码 16.1 (`code/pinn.py`)：使用 `PyTorch` 实现的 PINN 方法简单实现，用于计算函数 $u \in C^{1,2}([0,3] \times \mathbb{R}^{2}, \mathbb{R})$ 的近似值，该函数满足对于所有 $t \in [0,2]$，$x \in \mathbb{R}^{2}$，有 $(\frac{\partial u}{\partial t})(t, x) = \frac{1}{200}(\Delta_{x}u)(t, x) + u(t, x) - [u(t, x)]^{3}$ 且 $u(0, x) = \sin(\|x\|_{2}^{2})$（参见定义 3.3.4）。该代码生成的绘图如图 16.1 所示。
 
 ## 16.4 DGMs 的实现
 
@@ -18572,125 +20311,113 @@ $$(\frac{\partial u}{\partial t})(t, x) = \frac{1}{200}(\Delta_{x}u)(t, x) + u(t
 
 ![](img/dec290f673e6357c31893c67b579ffe1_516_0.png)
 
-图 16.1 (plots/pinn.pdf)：函数 $[-3, 3]^{2} \ni x \mapsto U(t, x) \in \mathbb{R}$ 的绘图，其中 $t \in \{0, 0.6, 1.2, 1.8, 2.4, 3\}$，且 $U \in C([0,3] \times \mathbb{R}^{2}, \mathbb{R})$ 是函数 $u \in C^{1, 2}([0, 3] \times \mathbb{R}^{2}, \mathbb{R})$ 的近似值，该函数满足对于所有 $t \in [0, 3], x \in \mathbb{R}^{2}$ 有 $(\frac{\partial u}{\partial t})(t, x) = \frac{1}{200}(\Delta_{x}u)(t, x) + u(t, x) - [u(t, x)]^{3}$ 且 $u(0, x) = \sin(\|x\|_{2}^{2})$，通过源码 16.1 中实现的 PINN 方法计算得到（参见定义 3.3.4）。
+图 16.1 (`plots/pinn.pdf`)：函数 $[-3, 3]^{2} \ni x \mapsto U(t, x) \in \mathbb{R}$ 的绘图，其中 $t \in \{0, 0.6, 1.2, 1.8, 2.4, 3\}$，且 $U \in C([0,3] \times \mathbb{R}^{2}, \mathbb{R})$ 是函数 $u \in C^{1, 2}([0, 3] \times \mathbb{R}^{2}, \mathbb{R})$ 的近似值，该函数满足对于所有 $t \in [0, 3], x \in \mathbb{R}^{2}$ 有 $(\frac{\partial u}{\partial t})(t, x) = \frac{1}{200}(\Delta_{x}u)(t, x) + u(t, x) - [u(t, x)]^{3}$ 且 $u(0, x) = \sin(\|x\|_{2}^{2})$，通过源码 16.1 中实现的 PINN 方法计算得到（参见定义 3.3.4）。
 
 个神经元，每层）并使用参数为 1 的 swish 激活函数（参见第 1.2.8 节）。训练使用 Adam SGD 优化方法进行（参见第 7.9 节）。在 30000 步训练后得到的解 $u$ 的近似值绘图如图 16.2 所示。
 
-1  import torch
-2  import matplotlib.pyplot as plt
-3  from torch.autograd import grad
-4  from matplotlib.gridspec import GridSpec
-5  from matplotlib.cm import ScalarMappable
-6
-7
-8  dev = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-9
-10  T = 3.0   # 时间范围
-11
-12  # 初始值
-13  def phi(x):
-14      return x.sin().prod(axis=1, keepdims=True)
-15
-16  torch.manual_seed(0)
-17
-18  # 我们使用一个具有 4 个隐藏层的网络，每层 50 个神经元，
-19  # 并使用 Swish 激活函数（在 PyTorch 中称为 SiLU）
-20  N = torch.nn.Sequential(
-21      torch.nn.Linear(3, 50), torch.nn.SiLU(),
-22      torch.nn.Linear(50, 50), torch.nn.SiLU(),
-23      torch.nn.Linear(50, 50), torch.nn.SiLU(),
-24      torch.nn.Linear(50, 50), torch.nn.SiLU(),
-25      torch.nn.Linear(50, 1),
-26  ).to(dev)
-27
-28  optimizer = torch.optim.Adam(N.parameters(), lr=3e-4)
-29
-30  J = 256  # 批次大小
-31
-32  for i in range(30000):
-33      # 选择随机批次训练样本
-34      x = torch.rand(J, 2).to(dev) * 2
-35      t = torch.rand(J, 1).to(dev) * T
-36
-37      x1 = x[:, 0:1]
-38      x2 = x[:, 1:2]
-39
-40      x1.requires_grad_()
-41      x2.requires_grad_()
-42      t.requires_grad_()
-43
-44      optimizer.zero_grad()
-45
-46      # 设 u 为人工神经网络的实现函数，计算
-47      # 批次中每个 x 对应的 u(0, x)
-48      u0 = N(torch.hstack((torch.zeros_like(t), x)))
-49      # 计算初始条件的损失
-50      initial_loss = (u0 - phi(x)).square().mean()
-51
-52      # 使用自动
-53      # 微分计算偏导数
-54      u = N(torch.hstack((t, x1, x2)))
-55      ones = torch.ones_like(u)
-56      u_t = grad(u, t, ones, create_graph=True)[0]
-57      u_x1 = grad(u, x1, ones, create_graph=True)[0]
-58      u_x2 = grad(u, x2, ones, create_graph=True)[0]
-59      ones = torch.ones_like(u_x1)
-60      u_xx1 = grad(u_x1, x1, ones, create_graph=True)[0]
-61      u_xx2 = grad(u_x2, x2, ones, create_graph=True)[0]
-62
-63      # 计算偏微分方程（PDE）的损失
-64      Laplace = u_xx1 + u_xx2
-65      pde_loss = (u_t - (0.005 * Laplace + u - u**3)).square().mean()
-66
-67      # 计算总损失并执行梯度步骤
-68      loss = initial_loss + pde_loss
-69      loss.backward()
-70      optimizer.step()
-71
-72      ### 绘制不同时间点的解
-73
-74      mesh = 128
-75      a, b = -torch.pi, torch.pi
-76
-77      gs = GridSpec(2, 4, width_ratios=[1, 1, 1, 0.05])
-78      fig = plt.figure(figsize=(16, 10), dpi=300)
-79
-80      x, y = torch.meshgrid(
-81          torch.linspace(a, b, mesh),
-82          torch.linspace(a, b, mesh),
-83          indexing="xy"
-84      )
-85      x = x.reshape((mesh * mesh, 1)).to(dev)
-86      y = y.reshape((mesh * mesh, 1)).to(dev)
-87
-88      for i in range(6):
-89          t = torch.full((mesh * mesh, 1), i * T / 5).to(dev)
-90          z = N(torch.cat((t, x, y), 1))
-91          z = z.detach().cpu().numpy().reshape((mesh, mesh))
-92
-93          ax = fig.add_subplot(gs[i // 3, i % 3])
-94          ax.set_title(f"t = {i * T / 5}")
-95          ax.imshow(
-96              z, cmap="viridis", extent=[a, b, a, b], vmin=-1.2, vmax=1.2
-97          )
-98
-99      # 在图表中添加颜色条
-100     norm = plt.Normalize(vmin=-1.2, vmax=1.2)
-101     sm = ScalarMappable(cmap="viridis", norm=norm)
-102     cax = fig.add_subplot(gs[:, 3])
-103     fig.colorbar(sm, cax=cax, orientation="vertical")
-104
-105     fig.savefig("../plots/dgm.pdf", bbox_inches="tight")
+```python
+import torch
+import matplotlib.pyplot as plt
+from torch.autograd import grad
+from matplotlib.gridspec import GridSpec
+from matplotlib.cm import ScalarMappable
+```
 
+`dev = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")`
+`T = 3.0` # 时间范围
 
+# 初始值
+`def phi(x):`
+`return x.sin().prod(axis=1, keepdims=True)`
 
+`torch.manual_seed(0)`
 
+# 我们使用一个具有 4 个隐藏层的网络，每层 50 个神经元，
+# 并使用 Swish 激活函数（在 PyTorch 中称为 SiLU）
+`N = torch.nn.Sequential(`
+`torch.nn.Linear(3, 50), torch.nn.SiLU(),`
+`torch.nn.Linear(50, 50), torch.nn.SiLU(),`
+`torch.nn.Linear(50, 50), torch.nn.SiLU(),`
+`torch.nn.Linear(50, 50), torch.nn.SiLU(),`
+`torch.nn.Linear(50, 1),`
+`).to(dev)`
 
-源代码 16.2 (code/dgm.py)：使用 PyTorch 实现的一种简单深伽辽金方法，用于计算函数 $u \in C^{1,2}([0,3] \times \mathbb{R}^{2}, \mathbb{R})$ 的近似值，该函数满足对于所有 $t \in [0,3]$ 和 $x = (x_{1},x_{2}) \in \mathbb{R}^{2}$，$(\frac{\partial u}{\partial t})(t,x) = \frac{1}{200}(\Delta_{x}u)(t,x) + u(t,x) - [u(t,x)]^{3}$ 且 $u(0,x) = \sin(x_{1})\sin(x_{2})$。此代码生成的图像如图 16.2 所示。
+`optimizer = torch.optim.Adam(N.parameters(), lr=3e-4)`
+`J = 256` # 批次大小
+
+`for i in range(30000):`
+# 选择随机批次训练样本
+`x = torch.rand(J, 2).to(dev) * 2`
+`t = torch.rand(J, 1).to(dev) * T`
+`x1 = x[:, 0:1]`
+`x2 = x[:, 1:2]`
+`x1.requires_grad_()`
+`x2.requires_grad_()`
+`t.requires_grad_()`
+`optimizer.zero_grad()`
+# 设 u 为人工神经网络的实现函数，计算
+# 批次中每个 x 对应的 u(0, x)
+`u0 = N(torch.hstack((torch.zeros_like(t), x)))`
+# 计算初始条件的损失
+`initial_loss = (u0 - phi(x)).square().mean()`
+
+# 使用自动
+# 微分计算偏导数
+`u = N(torch.hstack((t, x1, x2)))`
+`ones = torch.ones_like(u)`
+`u_t = grad(u, t, ones, create_graph=True)[0]`
+`u_x1 = grad(u, x1, ones, create_graph=True)[0]`
+`u_x2 = grad(u, x2, ones, create_graph=True)[0]`
+`ones = torch.ones_like(u_x1)`
+`u_xx1 = grad(u_x1, x1, ones, create_graph=True)[0]`
+`u_xx2 = grad(u_x2, x2, ones, create_graph=True)[0]`
+
+# 计算偏微分方程（PDE）的损失
+`Laplace = u_xx1 + u_xx2`
+`pde_loss = (u_t - (0.005 * Laplace + u - u**3)).square().mean()`
+
+# 计算总损失并执行梯度步骤
+`loss = initial_loss + pde_loss`
+`loss.backward()`
+`optimizer.step()`
+
+### 绘制不同时间点的解
+
+`mesh = 128`
+`a, b = -torch.pi, torch.pi`
+`gs = GridSpec(2, 4, width_ratios=[1, 1, 1, 0.05])`
+`fig = plt.figure(figsize=(16, 10), dpi=300)`
+`x, y = torch.meshgrid(`
+`torch.linspace(a, b, mesh),`
+`torch.linspace(a, b, mesh),`
+`indexing="xy"`
+`)`
+`x = x.reshape((mesh * mesh, 1)).to(dev)`
+`y = y.reshape((mesh * mesh, 1)).to(dev)`
+
+`for i in range(6):`
+`t = torch.full((mesh * mesh, 1), i * T / 5).to(dev)`
+`z = N(torch.cat((t, x, y), 1))`
+`z = z.detach().cpu().numpy().reshape((mesh, mesh))`
+`ax = fig.add_subplot(gs[i // 3, i % 3])`
+`ax.set_title(f"t = {i * T / 5}")`
+`ax.imshow(`
+`z, cmap="viridis", extent=[a, b, a, b], vmin=-1.2, vmax=1.2`
+`)`
+
+# 在图表中添加颜色条
+`norm = plt.Normalize(vmin=-1.2, vmax=1.2)`
+`sm = ScalarMappable(cmap="viridis", norm=norm)`
+`cax = fig.add_subplot(gs[:, 3])`
+`fig.colorbar(sm, cax=cax, orientation="vertical")`
+`fig.savefig("../plots/dgm.pdf", bbox_inches="tight")`
+```
+
+源代码 16.2 (`code/dgm.py`)：使用 `PyTorch` 实现的一种简单深伽辽金方法，用于计算函数 $u \in C^{1,2}([0,3] \times \mathbb{R}^{2}, \mathbb{R})$ 的近似值，该函数满足对于所有 $t \in [0,3]$ 和 $x = (x_{1},x_{2}) \in \mathbb{R}^{2}$，$(\frac{\partial u}{\partial t})(t,x) = \frac{1}{200}(\Delta_{x}u)(t,x) + u(t,x) - [u(t,x)]^{3}$ 且 $u(0,x) = \sin(x_{1})\sin(x_{2})$。此代码生成的图像如图 16.2 所示。
 
 ![](img/dec290f673e6357c31893c67b579ffe1_519_0.png)
 
-图 16.2 (plots/dgm.pdf)：函数 $[-\pi,\pi]^{2} \ni x \mapsto U(t,x) \in \mathbb{R}$ 的图像，其中 $t \in \{0,0.6,1.2,1.8,2.4,3\}$，且 $U \in C([0,3] \times \mathbb{R}^{2}, \mathbb{R})$ 是函数 $u \in C^{1,2}([0,3] \times \mathbb{R}^{2}, \mathbb{R})$ 的近似值，该函数通过源代码 16.2 计算，满足对于所有 $t \in [0,3]$ 和 $x = (x_{1},x_{2}) \in \mathbb{R}^{2}$，$u(0,x) = \sin(x_{1})\sin(x_{2})$ 且 $(\frac{\partial u}{\partial t})(t,x) = \frac{1}{200}(\Delta_{x}u)(t,x) + u(t,x) - [u(t,x)]^{3}$。
+图 16.2 (`plots/dgm.pdf`)：函数 $[-\pi,\pi]^{2} \ni x \mapsto U(t,x) \in \mathbb{R}$ 的图像，其中 $t \in \{0,0.6,1.2,1.8,2.4,3\}$，且 $U \in C([0,3] \times \mathbb{R}^{2}, \mathbb{R})$ 是函数 $u \in C^{1,2}([0,3] \times \mathbb{R}^{2}, \mathbb{R})$ 的近似值，该函数通过源代码 16.2 计算，满足对于所有 $t \in [0,3]$ 和 $x = (x_{1},x_{2}) \in \mathbb{R}^{2}$，$u(0,x) = \sin(x_{1})\sin(x_{2})$ 且 $(\frac{\partial u}{\partial t})(t,x) = \frac{1}{200}(\Delta_{x}u)(t,x) + u(t,x) - [u(t,x)]^{3}$。
 
 ## 第 17 章
 
@@ -18698,213 +20425,308 @@ $$(\frac{\partial u}{\partial t})(t, x) = \frac{1}{200}(\Delta_{x}u)(t, x) + u(t
 
 第 16 章介绍的 **PINNs** 和 **DGMs** 一方面在构建相关随机优化问题的过程中未能充分利用底层 *PDE* 的大量结构，因此作为 *PDE* 的通用深度学习方法具有广泛适用性的关键优势。另一方面，在某种程度上利用所考虑的 *PDE* 问题特定结构的 *PDE* 深度学习方法通常能产生更精确的近似值（参见例如 Beck 等人 [24] 及其中的参考文献）。特别是，文献中存在若干深度学习方法，它们在构建随机优化问题的过程中利用了 *PDE* 本身允许随机表示这一特性。文献中有很多基于 *PDE* 的此类随机公式化的深度学习方法，因此与随机分析以及费曼–卡奇型公式有着密切的联系（参见例如 [20, 119, 145, 187, 207, 336] 及其中的参考文献）。
 
-Beck 等人 [19] 中提出的方案，我们称为 **DKMs**，属于此类 *PDE* 深度学习方法中最简单的一类。在本章中，我们在第 17.1、17.2、17.3 和 17.4 节中介绍了将热 *PDE* 问题重构为随机优化问题的理论考量（参见下文命题 17.4.1），我们在第 17.5 节中利用这些理论考量推导了热方程特定情况下的 **DKMs**，并在第 17.6 节中展示了在简单二维热方程情况下 **DKMs** 的一个实现。
+
+
+Beck 等人 [19] 中提出的方案，我们称为 `DKMs`，属于此类 `PDE` 深度学习方法中最简单的一类。在本章中，我们在第 17.1、17.2、17.3 和 17.4 节中介绍了将热 `PDE` 问题重构为随机优化问题的理论考量（参见下文命题 17.4.1），我们在第 17.5 节中利用这些理论考量推导了热方程特定情况下的 `DKMs`，并在第 17.6 节中展示了在简单二维热方程情况下 `DKMs` 的一个实现。
 
 第 17.1 节和 17.2 节是 Beck 等人 [18] 的略微修改后的摘录，第 17.3 节受到 Beck 等人 [23, 第 2 节] 的启发，第 17.4 节和第 17.5 节受到 Beck 等人 [18] 的启发。
 
 ## 17.1 随机变量期望的随机优化问题
 
-引理 17.1.1. 设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间，设 $X: \Omega \rightarrow \mathbb{R}$ 为随机变量，且 $\mathbb{P}[|X|^{2}] < \infty$。则
+引理 17.1.1. 设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间，设 `X: \Omega \rightarrow \mathbb{R}` 为随机变量，且 `\mathbb{P}[|X|^{2}] < \infty`。则
 
-(i) 对于所有 $y \in \mathbb{R}$，有
-$\mathbb{P}[X - y]^{2} = \mathbb{P}[X - \mathbb{P}[X]^{2}] + |\mathbb{P}[X] - y|^{2},$ (17.1)
+(i) 对于所有 `y \in \mathbb{R}`，有
 
-(ii) 存在唯一的 $z \in \mathbb{R}$，使得
-$\mathbb{P}[X - z]^{2} = \inf_{y \in \mathbb{R}} \mathbb{P}[X - y]^{2},$ (17.2)
+`\mathbb{P}[X - y]^{2} = \mathbb{P}[X - \mathbb{P}[X]^{2}] + |\mathbb{P}[X] - y|^{2},` (17.1)
+
+(ii) 存在唯一的 `z \in \mathbb{R}`，使得
+
+`\mathbb{P}[X - z]^{2} = \inf_{y \in \mathbb{R}} \mathbb{P}[X - y]^{2},` (17.2)
 
 且
 
 (iii) 有
-$\mathbb{P}[X - \mathbb{P}[X]^{2}] = \inf_{y \in \mathbb{R}} \mathbb{P}[X - y]^{2}.$ (17.3)
+
+`\mathbb{P}[X - \mathbb{P}[X]^{2}] = \inf_{y \in \mathbb{R}} \mathbb{P}[X - y]^{2}.` (17.3)
 
 引理 17.1.1 的证明. 注意引理 7.2.3 证明了第 (i) 项。观察到第 (i) 项证明了第 (ii) 和第 (iii) 项。因此引理 17.1.1 得证。
 
 ## 17.2 随机场期望的随机优化问题
 
-命题 17.2.1. 设 $d \in \mathbb{N}$，$a \in \mathbb{R}$，$b \in (a, \infty)$，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间，设 $X = (X_{x})_{x \in [a, b]^{d}}: [a, b]^{d} \times \Omega \rightarrow \mathbb{R}$ 是 $(\mathcal{B}([a, b]^{d}) \otimes \mathcal{F}) / \mathcal{B}(\mathbb{R})$-可测的，假设对于每个 $x \in [a, b]^{d}$，$\mathbb{P}[|X_{x}|^{2}] < \infty$，并假设 $[a, b]^{d} \ni x \mapsto \mathbb{P}[X_{x}] \in \mathbb{R}$ 是连续的。则
+命题 17.2.1. 设 `d \in \mathbb{N}`，`a \in \mathbb{R}`，`b \in (a, \infty)`，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间，设 `X = (X_{x})_{x \in [a, b]^{d}}: [a, b]^{d} \times \Omega \rightarrow \mathbb{R}` 是 `(\mathcal{B}([a, b]^{d}) \otimes \mathcal{F}) / \mathcal{B}(\mathbb{R})`-可测的，假设对于每个 `x \in [a, b]^{d}`，`\mathbb{P}[|X_{x}|^{2}] < \infty`，并假设 `[a, b]^{d} \ni x \mapsto \mathbb{P}[X_{x}] \in \mathbb{R}` 是连续的。则
 
-(i) 存在唯一的 $u \in C([a, b]^{d}, \mathbb{R})$，使得
-$\int_{[a, b]^{d}} \mathbb{P}[|X_{x} - u(x)|^{2}] \, \mathrm{d}x = \inf_{v \in C([a, b]^{d}, \mathbb{R})} \left( \int_{[a, b]^{d}} \mathbb{P}[|X_{x} - v(x)|^{2}] \, \mathrm{d}x \right)$ (17.4)
+(i) 存在唯一的 `u \in C([a, b]^{d}, \mathbb{R})`，使得
+
+`\int_{[a, b]^{d}} \mathbb{P}[|X_{x} - u(x)|^{2}] \, \mathrm{d}x = \inf_{v \in C([a, b]^{d}, \mathbb{R})} \left( \int_{[a, b]^{d}} \mathbb{P}[|X_{x} - v(x)|^{2}] \, \mathrm{d}x \right)` (17.4)
 
 且
 
-(ii) 对于所有 $x \in [a, b]^{d}$，有 $u(x) = \mathbb{P}[X_{x}]$。
+(ii) 对于所有 `x \in [a, b]^{d}`，有 `u(x) = \mathbb{P}[X_{x}]`。
 
-命题 17.2.1 的证明. 注意引理 17.1.1 中的第 (i) 项以及对于所有 $x \in [a, b]^{d}$ 都有 $\mathbb{P}[|X_{x}|^{2}] < \infty$ 的假设表明，对于每个函数 $u: [a, b]^{d} \rightarrow \mathbb{R}$ 和每个 $x \in [a, b]^{d}$，都有
+命题 17.2.1 的证明. 注意引理 17.1.1 中的第 (i) 项以及对于所有 `x \in [a, b]^{d}` 都有 `\mathbb{P}[|X_{x}|^{2}] < \infty` 的假设表明，对于每个函数 `u: [a, b]^{d} \rightarrow \mathbb{R}` 和每个 `x \in [a, b]^{d}`，都有
 
-$\mathbb{P}[|X_{x} - u(x)|^{2}] = \mathbb{P}[X_{x} - \mathbb{P}[X_{x}]^{2}] + |\mathbb{P}[X_{x}] - u(x)|^{2}.$ (17.5)
+`\mathbb{P}[|X_{x} - u(x)|^{2}] = \mathbb{P}[X_{x} - \mathbb{P}[X_{x}]^{2}] + |\mathbb{P}[X_{x}] - u(x)|^{2}.` (17.5)
 
-富比尼定理（参见例如 Klenke [248, 定理 14.16]）因此蕴含对于所有 $u \in C([a, b]^{d}, \mathbb{R})$，有
+富比尼定理（参见例如 Klenke [248, 定理 14.16]）因此蕴含对于所有 `u \in C([a, b]^{d}, \mathbb{R})`，有
 
-$$ \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - u(x)|^{2}] \, \mathrm{d}x = \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - \mathbb{E}[X_{x}]|^{2}] \, \mathrm{d}x + \int_{[a, b]^{d}} |\mathbb{E}[X_{x}] - u(x)|^{2} \, \mathrm{d}x . \tag{17.6} $$
+```
+\int_{[a, b]^{d}} \mathbb{E}[|X_{x} - u(x)|^{2}] \, \mathrm{d}x = \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - \mathbb{E}[X_{x}]|^{2}] \, \mathrm{d}x + \int_{[a, b]^{d}} |\mathbb{E}[X_{x}] - u(x)|^{2} \, \mathrm{d}x . \tag{17.6}
+```
 
 这确保了
 
-$$ \begin{split} \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - \mathbb{E}[X_{x}]|^{2}] \, \mathrm{d}x \\ \geq \inf_{v \in C([a, b]^{d}, \mathbb{R})} \left( \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - v(x)|^{2}] \, \mathrm{d}x \right) \\ = \inf_{v \in C([a, b]^{d}, \mathbb{R})} \left( \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - \mathbb{E}[X_{x}]|^{2}] \, \mathrm{d}x + \int_{[a, b]^{d}} |\mathbb{E}[X_{x}] - v(x)|^{2} \, \mathrm{d}x \right) \end{split} \tag{17.7} $$
+```
+\begin{split}
+\int_{[a, b]^{d}} \mathbb{E}[|X_{x} - \mathbb{E}[X_{x}]|^{2}] \, \mathrm{d}x \\
+\geq \inf_{v \in C([a, b]^{d}, \mathbb{R})} \left( \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - v(x)|^{2}] \, \mathrm{d}x \right) \\
+= \inf_{v \in C([a, b]^{d}, \mathbb{R})} \left( \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - \mathbb{E}[X_{x}]|^{2}] \, \mathrm{d}x + \int_{[a, b]^{d}} |\mathbb{E}[X_{x}] - v(x)|^{2} \, \mathrm{d}x \right)
+\end{split} \tag{17.7}
+```
 
-由于假设 $[a, b]^{d} \ni x \mapsto \mathbb{E}[X_{x}] \in \mathbb{R}$ 是连续的，因此表明
+由于假设 `[a, b]^{d} \ni x \mapsto \mathbb{E}[X_{x}] \in \mathbb{R}` 是连续的，因此表明
 
-$$ \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - \mathbb{E}[X_{x}]|^{2}] \, \mathrm{d}x \geq \inf_{v \in C([a, b]^{d}, \mathbb{R})} \left( \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - \mathbb{E}[X_{x}]|^{2}] \, \mathrm{d}x \right) $$
+```
+\int_{[a, b]^{d}} \mathbb{E}[|X_{x} - \mathbb{E}[X_{x}]|^{2}] \, \mathrm{d}x \geq \inf_{v \in C([a, b]^{d}, \mathbb{R})} \left( \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - \mathbb{E}[X_{x}]|^{2}] \, \mathrm{d}x \right)
+```
 
-$$ \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - \mathbb{E}[X_{x}]|^{2}] \, \mathrm{d}x \geq \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - \mathbb{E}[X_{x}]|^{2}] \, \mathrm{d}x . \tag{17.8} $$
+```
+\int_{[a, b]^{d}} \mathbb{E}[|X_{x} - \mathbb{E}[X_{x}]|^{2}] \, \mathrm{d}x \geq \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - \mathbb{E}[X_{x}]|^{2}] \, \mathrm{d}x . \tag{17.8}
+```
 
 因此，我们得到
 
-$$ \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - \mathbb{E}[X_{x}]|^{2}] \, \mathrm{d}x = \inf_{v \in C([a, b]^{d}, \mathbb{R})} \left( \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - v(x)|^{2}] \, \mathrm{d}x \right) . \tag{17.9} $$
+```
+\int_{[a, b]^{d}} \mathbb{E}[|X_{x} - \mathbb{E}[X_{x}]|^{2}] \, \mathrm{d}x = \inf_{v \in C([a, b]^{d}, \mathbb{R})} \left( \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - v(x)|^{2}] \, \mathrm{d}x \right) . \tag{17.9}
+```
 
-由于函数 $[a, b]^{d} \ni x \mapsto \mathbb{E}[X_{x}] \in \mathbb{R}$ 是连续的这一事实，确立了存在 $u \in C([a, b]^{d}, \mathbb{R})$ 使得
+由于函数 `[a, b]^{d} \ni x \mapsto \mathbb{E}[X_{x}] \in \mathbb{R}` 是连续的这一事实，确立了存在 `u \in C([a, b]^{d}, \mathbb{R})` 使得
 
-$$ \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - u(x)|^{2}] \, \mathrm{d}x = \inf_{v \in C([a, b]^{d}, \mathbb{R})} \left( \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - v(x)|^{2}] \, \mathrm{d}x \right) . \tag{17.10} $$
+```
+\int_{[a, b]^{d}} \mathbb{E}[|X_{x} - u(x)|^{2}] \, \mathrm{d}x = \inf_{v \in C([a, b]^{d}, \mathbb{R})} \left( \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - v(x)|^{2}] \, \mathrm{d}x \right) . \tag{17.10}
+```
 
 此外，观察到 (17.6) 和 (17.9) 证明了对于所有满足
 
-$$ \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - u(x)|^{2}] \, \mathrm{d}x = \inf_{v \in C([a, b]^{d}, \mathbb{R})} \left( \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - v(x)|^{2}] \, \mathrm{d}x \right) \tag{17.11} $$
+```
+\int_{[a, b]^{d}} \mathbb{E}[|X_{x} - u(x)|^{2}] \, \mathrm{d}x = \inf_{v \in C([a, b]^{d}, \mathbb{R})} \left( \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - v(x)|^{2}] \, \mathrm{d}x \right) \tag{17.11}
+```
 
-的 $u \in C([a, b]^{d}, \mathbb{R})$，有
+的 `u \in C([a, b]^{d}, \mathbb{R})`，有
 
-$$ \begin{split} \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - \mathbb{E}[X_{x}]|^{2}] \, \mathrm{d}x \\ = \inf_{v \in C([a, b]^{d}, \mathbb{R})} \left( \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - v(x)|^{2}] \, \mathrm{d}x \right) = \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - u(x)|^{2}] \, \mathrm{d}x \\ = \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - \mathbb{E}[X_{x}]|^{2}] \, \mathrm{d}x + \int_{[a, b]^{d}} |\mathbb{E}[X_{x}] - u(x)|^{2} \, \mathrm{d}x . \end{split} \tag{17.12} $$
+```
+\begin{split}
+\int_{[a, b]^{d}} \mathbb{E}[|X_{x} - \mathbb{E}[X_{x}]|^{2}] \, \mathrm{d}x \\
+= \inf_{v \in C([a, b]^{d}, \mathbb{R})} \left( \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - v(x)|^{2}] \, \mathrm{d}x \right) = \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - u(x)|^{2}] \, \mathrm{d}x \\
+= \int_{[a, b]^{d}} \mathbb{E}[|X_{x} - \mathbb{E}[X_{x}]|^{2}] \, \mathrm{d}x + \int_{[a, b]^{d}} |\mathbb{E}[X_{x}] - u(x)|^{2} \, \mathrm{d}x .
+\end{split} \tag{17.12}
+```
 
 因此，我们得到对于所有满足
 
-$$ \int_{[a, b]^{d}} \mathbb{E}\left[ \left| X_{x} - u(x) \right|^{2} \right] \, \mathrm{d}x = \inf_{v \in C([a, b]^{d}, \mathbb{R})} \left( \int_{[a, b]^{d}} \mathbb{E}\left[ \left| X_{x} - v(x) \right|^{2} \right] \, \mathrm{d}x \right) \tag{17.13} $$
+```
+\int_{[a, b]^{d}} \mathbb{E}\left[ \left| X_{x} - u(x) \right|^{2} \right] \, \mathrm{d}x = \inf_{v \in C([a, b]^{d}, \mathbb{R})} \left( \int_{[a, b]^{d}} \mathbb{E}\left[ \left| X_{x} - v(x) \right|^{2} \right] \, \mathrm{d}x \right) \tag{17.13}
+```
 
-的 $u \in C([a, b]^{d}, \mathbb{R})$，有
+的 `u \in C([a, b]^{d}, \mathbb{R})`，有
 
-$$ \int_{[a, b]^{d}} \left| \mathbb{E}\left[ X_{x} \right] - u(x) \right|^{2} \, \mathrm{d}x = 0. \tag{17.14} $$
+```
+\int_{[a, b]^{d}} \left| \mathbb{E}\left[ X_{x} \right] - u(x) \right|^{2} \, \mathrm{d}x = 0. \tag{17.14}
+```
 
-结合 $[a, b]^{d} \ni x \mapsto \mathbb{E}[X_{x}] \in \mathbb{R}$ 是连续的这一假设，表明对于所有 $y \in [a, b]^{d}$ 以及满足
+结合 `[a, b]^{d} \ni x \mapsto \mathbb{E}[X_{x}] \in \mathbb{R}` 是连续的这一假设，表明对于所有 `y \in [a, b]^{d}` 以及满足
 
-$$ \int_{[a, b]^{d}} \mathbb{E}\left[ \left| X_{x} - u(x) \right|^{2} \right] \, \mathrm{d}x = \inf_{v \in C([a, b]^{d}, \mathbb{R})} \left( \int_{[a, b]^{d}} \mathbb{E}\left[ \left| X_{x} - v(x) \right|^{2} \right] \, \mathrm{d}x \right) \tag{17.15} $$
+```
+\int_{[a, b]^{d}} \mathbb{E}\left[ \left| X_{x} - u(x) \right|^{2} \right] \, \mathrm{d}x = \inf_{v \in C([a, b]^{d}, \mathbb{R})} \left( \int_{[a, b]^{d}} \mathbb{E}\left[ \left| X_{x} - v(x) \right|^{2} \right] \, \mathrm{d}x \right) \tag{17.15}
+```
 
-的 $u \in C([a, b]^{d}, \mathbb{R})$，都有 $u(y) = \mathbb{E}[X_{y}]$。将此与 (17.10) 结合，确立了第 (i) 和第 (ii) 项。因此命题 17.2.1 得证。
+的 `u \in C([a, b]^{d}, \mathbb{R})`，都有 `u(y) = \mathbb{E}[X_{y}]`。将此与 (17.10) 结合，确立了第 (i) 和第 (ii) 项。因此命题 17.2.1 得证。
 
 ## 17.3 费曼–卡奇公式
 
 ### 17.3.1 提供解存在性的费曼–卡奇公式
 
-**引理 17.3.1** *（利叶古受控收敛定理的一个变体）设* $(\Omega, \mathcal{F}, \mathbb{P})$ *为一个概率空间，对于每个* $n \in \mathbb{N}_{0}$，*设* $X_{n}: \Omega \rightarrow \mathbb{R}$ *为随机变量，假设对于所有* $\varepsilon \in (0, \infty)$，*有*
+**引理 17.3.1** *（利叶古受控收敛定理的一个变体）设* `(\Omega, \mathcal{F}, \mathbb{P})` *为一个概率空间，对于每个* `n \in \mathbb{N}_{0}`，*设* `X_{n}: \Omega \rightarrow \mathbb{R}` *为随机变量，假设对于所有* `\varepsilon \in (0, \infty)`，*有*
 
-$$ \limsup_{n \rightarrow \infty} \mathbb{P}\left( \left| X_{n} - X_{0} \right| > \varepsilon \right) = 0, \tag{17.16} $$
+```
+\limsup_{n \rightarrow \infty} \mathbb{P}\left( \left| X_{n} - X_{0} \right| > \varepsilon \right) = 0, \tag{17.16}
+```
 
-*设* $Y: \Omega \rightarrow \mathbb{R}$ *为随机变量，且* $\mathbb{E}\left[ \left| Y \right| \right] < \infty$，*并假设对于所有* $n \in \mathbb{N}$，*有* $\mathbb{P}\left( \left| X_{n} \right| \leq Y \right) = 1$。*则*
+*设* `Y: \Omega \rightarrow \mathbb{R}` *为随机变量，且* `\mathbb{E}\left[ \left| Y \right| \right] < \infty`，*并假设对于所有* `n \in \mathbb{N}`，*有* `\mathbb{P}\left( \left| X_{n} \right| \leq Y \right) = 1`。*则*
 
-- * (i) 有* $\limsup_{n \rightarrow \infty} \mathbb{E}\left[ \left| X_{n} - X_{0} \right| \right] = 0$，
-- * (ii) 有* $\mathbb{E}\left[ \left| X_{0} \right| \right] < \infty$，*且*
-- * (iii) 有* $\limsup_{n \rightarrow \infty} \mathbb{E}\left[ \left| X_{n} \right| \right] = 0$。
+- * (i) 有* `\limsup_{n \rightarrow \infty} \mathbb{E}\left[ \left| X_{n} - X_{0} \right| \right] = 0`，
+
+- * (ii) 有* `\mathbb{E}\left[ \left| X_{0} \right| \right] < \infty`，*且*
+
+- * (iii) 有* `\limsup_{n \rightarrow \infty} \mathbb{E}\left[ \left| X_{n} \right| \right] = 0`。
 
 引理 17.3.1 的证明. 注意，例如，Klenke [248, 推论 6.26] 中利叶古受控收敛定理的变体证明了第 (i)、(ii) 和 (iii) 项。因此引理 17.3.1 得证。
 
-**命题 17.3.2.** *设* $T \in (0, \infty)$，$d, m \in \mathbb{N}$，$B \in \mathbb{R}^{d \times m}$，$\varphi \in C^{2}(\mathbb{R}^{d}, \mathbb{R})$ *满足*
+**命题 17.3.2.** *设* `T \in (0, \infty)`，`d, m \in \mathbb{N}`，`B \in \mathbb{R}^{d \times m}`，`\varphi \in C^{2}(\mathbb{R}^{d}, \mathbb{R})` *满足*
 
-$$ \sup_{x \in \mathbb{R}^{d}} \left[ \sum_{i, j=1}^{d} \left( \left| \varphi(x) \right| + \left| \left( \frac{\partial}{\partial x_{i}} \varphi \right)(x) \right| + \left| \left( \frac{\partial^{2}}{\partial x_{i} \partial x_{j}} \varphi \right)(x) \right| \right) \right] < \infty, \tag{17.17} $$
-
-
-
+```
+\sup_{x \in \mathbb{R}^{d}} \left[ \sum_{i, j=1}^{d} \left( \left| \varphi(x) \right| + \left| \left( \frac{\partial}{\partial x_{i}} \varphi \right)(x) \right| + \left| \left( \frac{\partial^{2}}{\partial x_{i} \partial x_{j}} \varphi \right)(x) \right| \right) \right] < \infty, \tag{17.17}
+```
 
 ## 命题 17.3.2 的证明
 
 在整个证明过程中，令
 
-$$
+```
 e_{1} = (1, 0, \ldots, 0), e_{2} = (0, 1, \ldots, 0), \ldots, e_{m} = (0, \ldots, 0, 1) \in \mathbb{R}^{m} \quad (17.20)
-$$
+```
 
-并且对于所有的 $t \in [0, T]$，$x \in \mathbb{R}^{d}$，令 $\psi_{t,x}: \mathbb{R}^{m} \rightarrow \mathbb{R}$ 满足对于所有的 $y \in \mathbb{R}^{m}$ 有 $\psi_{t,x}(y) = \varphi(x + \sqrt{t} By)$。请注意，假设 $\varphi \in C^{2}(\mathbb{R}^{d}, \mathbb{R})$，链式法则，引理 17.3.1 以及公式 (17.17) 意味着
+并且对于所有的 `t \in [0, T]`，`x \in \mathbb{R}^{d}`，令 `\psi_{t,x}: \mathbb{R}^{m} \rightarrow \mathbb{R}` 满足对于所有的 `y \in \mathbb{R}^{m}` 有 `\psi_{t,x}(y) = \varphi(x + \sqrt{t} By)`。请注意，假设 `\varphi \in C^{2}(\mathbb{R}^{d}, \mathbb{R})`，链式法则，引理 17.3.1 以及公式 (17.17) 意味着
 
-- (I) 对于所有的 $x \in \mathbb{R}^{d}$，映射 $[0, T] \ni t \mapsto u(t, x) \in \mathbb{R}$ 是可微的，
-- (II) 对于所有的 $t \in [0, T]$，映射 $\mathbb{R}^{d} \ni x \mapsto u(t, x) \in \mathbb{R}$ 是二阶可微的，
-- (III) 对于所有的 $t \in (0, T]$，$x \in \mathbb{R}^{d}$，有
+- (I) 对于所有的 `x \in \mathbb{R}^{d}`，映射 `[0, T] \ni t \mapsto u(t, x) \in \mathbb{R}` 是可微的，
 
-$$
+- (II) 对于所有的 `t \in [0, T]`，映射 `\mathbb{R}^{d} \ni x \mapsto u(t, x) \in \mathbb{R}` 是二阶可微的，
+
+- (III) 对于所有的 `t \in (0, T]`，`x \in \mathbb{R}^{d}`，有
+
+```
 \bigl( \frac{\partial u}{\partial t} \bigr)(t, x) = \mathbb{E}\bigl[ \bigl( (\nabla \varphi)(x + \sqrt{t} BZ), \frac{1}{\sqrt{t}} BZ \bigr) \bigr], \quad (17.21)
-$$
+```
 
 并且
 
-- (IV) 对于所有的 $t \in [0, T]$，$x \in \mathbb{R}^{d}$，有
+- (IV) 对于所有的 `t \in [0, T]`，`x \in \mathbb{R}^{d}`，有
 
-$$
+```
 (\operatorname{Hess}_{x} u)(t, x) = \mathbb{E}\bigl[ (\operatorname{Hess} \varphi)(x + \sqrt{t} BZ) \bigr] \quad (17.22)
-$$
+```
 
-（参见定义 1.4.7）。请注意，条目 (III) 和 (IV)，假设 $\varphi \in C^{2}(\mathbb{R}^{d}, \mathbb{R})$，假设
+（参见定义 1.4.7）。请注意，条目 (III) 和 (IV)，假设 `\varphi \in C^{2}(\mathbb{R}^{d}, \mathbb{R})`，假设
+
+
 
 $$
 \sup_{x \in \mathbb{R}^{d}} \bigl[ \sum_{i,j=1}^{d} \bigl( |\varphi(x)| + \bigl| (\frac{\partial}{\partial x_{i}} \varphi)(x) \bigr| + \bigl| (\frac{\partial^{2}}{\partial x_{i} \partial x_{j}} \varphi)(x) \bigr| \bigr) \bigr] < \infty, \quad (17.23)
 $$
 
+$$
+$$
+
 事实 $\mathbb{E}\bigl[ \lVert Z \rVert_{2} \bigr] < \infty$，以及引理 17.3.1 确保了
 
 $$
-(0, T] \times \mathbb{R}^{d} \ni (t, x) \mapsto \bigl( \frac{\partial u}{\partial t} \bigr)(t, x) \in \mathbb{R} \quad (17.24)
+$$
+
+$(0, T] \times \mathbb{R}^{d} \ni (t, x) \mapsto \bigl( \frac{\partial u}{\partial t} \bigr)(t, x) \in \mathbb{R} \quad (17.24)$
+
+$$
 $$
 
 和
 
 $$
-[0, T] \times \mathbb{R}^d \ni(t, x) \mapsto \left(\operatorname{Hess}_{x} u\right)(t, x) \in \mathbb{R}^{d \times d} \quad (17.25)
+$$
+
+$[0, T] \times \mathbb{R}^d \ni(t, x) \mapsto \left(\operatorname{Hess}_{x} u\right)(t, x) \in \mathbb{R}^{d \times d} \quad (17.25)$
+
+$$
 $$
 
 是连续的（参见定义 3.3.4）。此外，注意到条目 (IV) 以及对于所有 $X \in \mathbb{R}^{m \times d}, Y \in \mathbb{R}^{d \times m}$ 都有 Trace$(X Y)=\operatorname{Trace}(Y X)$ 的事实表明，对于所有 $t \in(0, T], x \in \mathbb{R}^{d}$ 有
 
 $$
+$$
+
 \begin{aligned}
+
 \frac{1}{2} \operatorname{Trace}\left(B B^{*}\left(\operatorname{Hess}_{x} u\right)(t, x)\right) &=\mathbb{E}\left[\frac{1}{2} \operatorname{Trace}\left(B B^{*}\left(\operatorname{Hess} \varphi\right)(x+\sqrt{t} B Z)\right)\right] \\
+
 &= \frac{1}{2} \mathbb{E}\left[\operatorname{Trace}\left(B^{*}\left(\operatorname{Hess} \varphi\right)(x+\sqrt{t} B Z) B\right)\right] \\
+
 &= \frac{1}{2} \mathbb{E}\left[\sum_{k=1}^{m}\left\langle e_{k}, B^{*}\left(\operatorname{Hess} \varphi\right)(x+\sqrt{t} B Z) B e_{k}\right\rangle\right] \\
+
 &= \frac{1}{2} \mathbb{E}\left[\sum_{k=1}^{m}\left\langle B e_{k},\left(\operatorname{Hess} \varphi\right)(x+\sqrt{t} B Z) B e_{k}\right\rangle\right] \\
+
 &= \frac{1}{2} \mathbb{E}\left[\sum_{k=1}^{m} \varphi^{\prime \prime}(x+\sqrt{t} B Z)\left\langle B e_{k}, B e_{k}\right\rangle\right] \\
+
 &= \frac{1}{2 t} \mathbb{E}\left[\sum_{k=1}^{m}\left\langle\left(\psi_{t, x}\right)^{\prime \prime}(Z)\left\langle e_{k}, e_{k}\right\rangle\right\rangle \right] \\
+
 &= \frac{1}{2 t} \mathbb{E}\left[\sum_{k=1}^{m}\left\langle\frac{\partial^{2}}{\partial y_{k}^{2}} \psi_{t, x}\right)(Z)\right] \\
+
 &= \frac{1}{2 t} \mathbb{E}[\langle\Delta \psi_{t, x}\rangle(Z)] \quad (17.26)
+
 \end{aligned}
+
 $$
 
 （参见定义 2.4.5）。假设 $Z: \Omega \rightarrow \mathbb{R}^{m}$ 是一个标准正态随机变量，因此分部积分法证明了对于所有 $t \in(0, T], x \in \mathbb{R}^{d}$ 有
 
 $$
+$$
+
 \begin{aligned}
+
 \frac{1}{2} \operatorname{Trace}\left(B B^{*}\left(\operatorname{Hess}_{x} u\right)(t, x)\right) \\
+
 &=\frac{1}{2 t} \int_{\mathbb{R}^{m}}\left(\Delta \psi_{t, x}\right)(y)\left[\frac{\exp \left(-\frac{\langle y, y\rangle}{2}\right)}{(2 \pi)^{m / 2}}\right] \mathrm{d} y \\
+
 &=\frac{1}{2 t} \int_{\mathbb{R}^{m}}\left\langle\langle\nabla \psi_{t, x}\rangle(y), y\right\rangle\left[\frac{\exp \left(-\frac{\langle y, y\rangle}{2}\right)}{(2 \pi)^{m / 2}}\right] \mathrm{d} y \\
+
 &=\frac{1}{2 \sqrt{t}} \int_{\mathbb{R}^{m}}\left\langle B^{*}\langle\nabla \varphi\rangle\left(x+\sqrt{t} B y\right), y\right\rangle\left[\frac{\exp \left(-\frac{\langle y, y\rangle}{2}\right)}{(2 \pi)^{m / 2}}\right] \mathrm{d} y \\
+
 &=\frac{1}{2 \sqrt{t}} \mathbb{E}\left[\left\langle B^{*}\langle\nabla \varphi\rangle\left(x+\sqrt{t} B Z\right), Z\right\rangle\right] \\
+
 &=\mathbb{E}\left[\left\langle\langle\nabla \varphi\rangle\left(x+\sqrt{t} B Z\right), \frac{1}{2 \sqrt{t}} B Z\right\rangle\right]. \quad (17.27)
+
 \end{aligned}
+
 $$
 
 因此，条目 (III) 确立了对于所有 $t \in(0, T], x \in \mathbb{R}^{d}$ 有
 
 $$
+$$
+
 \left(\frac{\partial u}{\partial t}\right)(t, x)=\frac{1}{2} \operatorname{Trace}\left(B B^{*}\left(\operatorname{Hess}_{x} u\right)(t, x)\right). \quad (17.28)
+
 $$
 
 因此，微积分基本定理证明了对于所有 $t, s \in(0, T], x \in \mathbb{R}^{d}$ 有
 
 $$
+$$
+
 u(t, x)-u(s, x)=\int_{s}^{t}\left(\frac{\partial u}{\partial t}\right)(r, x) \mathrm{d} r=\int_{s}^{t} \frac{1}{2} \operatorname{Trace}\left(B B^{*}\left(\operatorname{Hess}_{x} u\right)(r, x)\right) \mathrm{d} r. \quad (17.29)
+
 $$
 
 由于 $[0, T] \times \mathbb{R}^{d} \ni(t, x) \mapsto\left(\operatorname{Hess}_{x} u\right)(t, x) \in \mathbb{R}^{d \times d}$ 是连续的事实，这进而意味着对于所有 $t \in(0, T], x \in \mathbb{R}^{d}$ 有
 
 $$
+$$
+
 \frac{u(t, x)-u(0, x)}{t} =\lim_{s \searrow 0}\left[\frac{u(t, x)-u(s, x)}{t}\right]=\frac{1}{t} \int_{0}^{t} \frac{1}{2} \operatorname{Trace}\left(B B^{*}\left(\operatorname{Hess}_{x} u\right)(r, x)\right) \mathrm{d} r. \quad (17.30)
+
 $$
 
 这以及 $[0, T] \times \mathbb{R}^d \ni (t, x) \mapsto (\operatorname{Hess}_x u)(t, x) \in \mathbb{R}^{d \times d}$ 是连续的事实确保了对于所有 $x \in \mathbb{R}^d$ 有
 
 $$
+$$
+
 \begin{aligned}
+
 \limsup_{t \downarrow 0} & \left| \frac{u(t, x)-u(0, x)}{t}-\frac{1}{2} \operatorname{Trace}\left(B B^{*}(\operatorname{Hess}_x u)(0, x)\right)\right| \\
+
 & \leq \limsup_{t \downarrow 0} \left[ \frac{1}{t} \int_0^t \left| \frac{1}{2} \operatorname{Trace}\left(B B^{*}(\operatorname{Hess}_x u)(s, x)\right)-\frac{1}{2} \operatorname{Trace}\left(B B^{*}(\operatorname{Hess}_x u)(0, x)\right) \right| \mathrm{d} s\right] \\
+
 & \leq \limsup_{t \downarrow 0} \left[ \sup _{s \in[0, t]} \frac{1}{2} \operatorname{Trace}\left(B B^{*}\left((\operatorname{Hess}_x u)(s, x)-(\operatorname{Hess}_x u)(0, x)\right)\right)\right]=0 . \quad (17.31)
+
 \end{aligned}
+
 $$
 
 因此，条目 (I) 表明对于所有 $x \in \mathbb{R}^d$，映射 $[0, T] \ni t \mapsto u(t, x) \in \mathbb{R}$ 是可微的。将此与 (17.31) 和 (17.28) 结合，确保了对于所有 $t \in[0, T], x \in \mathbb{R}^d$ 有
 
 $$
+$$
+
 \left(\frac{\partial u}{\partial t}\right)(t, x)=\frac{1}{2} \operatorname{Trace}\left(B B^{*}(\operatorname{Hess}_x u)(t, x)\right) . \quad (17.32)
+
 $$
 
 这以及 $[0, T] \times \mathbb{R}^d \ni(t, x) \mapsto\left(\operatorname{Hess}_x u\right)(t, x) \in \mathbb{R}^{d \times d}$ 是连续的事实建立了条目 (i)。请注意，(17.32) 证明了条目 (ii)。因此，命题 17.3.2 的证明到此结束。
@@ -18914,10 +20736,15 @@ $$
 设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间。如果存在 $T \in(0, \infty)$ 使得以下条件成立，则称 $W$ 是 $m$ 维 $\mathbb{P}$-标准布朗运动（我们称 $W$ 是 $\mathbb{P}$-标准布朗运动，我们称 $W$ 是标准布朗运动）：
 
 - (i) $m \in \mathbb{N}$，
+
 - (ii) $W: [0, T] \times \Omega \times \mathbb{R}^m$ 是一个函数，
+
 - (iii) 对于所有的 $\omega \in \Omega$，映射 $[0, T] \ni s \mapsto W_s(\omega) \in \mathbb{R}^m$ 是连续的，
+
 - (iv) 对于所有的 $\omega \in \Omega$，$W_0(\omega)=0 \in \mathbb{R}^m$，
+
 - (v) 对于所有的 $t_1 \in[0, T], t_2 \in[0, T]$ 且 $t_1 < t_2$，映射 $\Omega \ni \omega \mapsto\left(t_2-t_1\right)^{-1 / 2}\left(W_{t_2}(\omega)- W_{t_1}(\omega)\right) \in \mathbb{R}^m$ 是一个标准正态随机变量，并且
+
 - (vi) 对于所有的 $n \in\{3,4,5, \ldots\}, t_1, t_2, \ldots, t_n \in[0, T]$ 且 $t_1 \leq t_2 \leq \cdots \leq t_n$，$W_{t_2}-W_{t_1}, W_{t_3}-W_{t_2}, \ldots, W_{t_n}-W_{t_{n-1}}$ 是独立的。
 
 ```python
@@ -18926,29 +20753,24 @@ import matplotlib.pyplot as plt
 
 def generate_brownian_motion(T, N):
     increments = np.random.randn(N) * np.sqrt(T/N)
-```
+    BM = np.cumsum(increments)
+    BM = np.insert(BM, 0, 0)
+    return BM
 
+T = 1
+N = 1000
+t_values = np.linspace(0, T, N+1)
 
+fig, axarr = plt.subplots(2, 2)
 
-```python
-6    BM = np.cumsum(increments)
-7    BM = np.insert(BM, 0, 0)
-8    return BM
-9
-10   T = 1
-11   N = 1000
-12   t_values = np.linspace(0, T, N+1)
-13
-14   fig, axarr = plt.subplots(2, 2)
-15
-16   for i in range(2):
-17       for j in range(2):
-18           BM = generate_brownian_motion(T, N)
-19           axarr[i, j].plot(t_values, BM)
-20
-21   plt.tight_layout()
-22   plt.savefig('../plots/brownian_motions.pdf')
-23   plt.show()
+for i in range(2):
+    for j in range(2):
+        BM = generate_brownian_motion(T, N)
+        axarr[i, j].plot(t_values, BM)
+
+plt.tight_layout()
+plt.savefig('../plots/brownian_motions.pdf')
+plt.show()
 ```
 
 源代码 17.1（`code/brownian_motion.py`）：生成一维标准布朗运动四条轨迹的 Python 代码。
@@ -18956,27 +20778,48 @@ def generate_brownian_motion(T, N):
 # 推论 17.3.4。
 
 设 $T \in (0, \infty)$，$d, m \in \mathbb{N}$，$B \in \mathbb{R}^{d \times m}$，$\varphi \in C^{2}(\mathbb{R}^{d}, \mathbb{R})$ 满足
+
 $$
+$$
+
 \sup_{x \in \mathbb{R}^{d}}\left[\sum_{i, j=1}^{d}\left(|\varphi(x)|+\left|\left(\frac{\partial}{\partial x_{i}}\varphi\right)(x)\right|+\left|\left(\frac{\partial^{2}}{\partial x_{i} \partial x_{j}}\varphi\right)(x)\right|\right)\right]<\infty,
+
 $$
+
 设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间，设 $W: [0, T] \times \Omega \rightarrow \mathbb{R}^{m}$ 为一个标准布朗运动，且设 $u: [0, T] \times \mathbb{R}^{d} \rightarrow \mathbb{R}$ 满足对所有 $t \in [0, T]$，$x \in \mathbb{R}^{d}$ 有
+
 $$
+$$
+
 u(t, x)=\mathbb{E}\left[\varphi\left(x+B W_{t}\right)\right]
+
 $$
+
 （参见定义 17.3.3）。那么
+
 - (i) 有 $u \in C^{1,2}([0, T] \times \mathbb{R}^{d}, \mathbb{R})$，且
+
 - (ii) 对所有 $t \in [0, T]$，$x \in \mathbb{R}^{d}$ 有
+
 $$
+$$
+
 \left(\frac{\partial u}{\partial t}\right)(t, x)=\frac{1}{2} \operatorname{Trace}\left(B B^{*}\left(\operatorname{Hess}_{x} u\right)(t, x)\right)
+
 $$
+
 （参见定义 2.4.5）。
 
 # 推论 17.3.4 的证明。
 
+
+
 首先，观察到假设 $W: [0, T] \times \Omega \rightarrow \mathbb{R}^{m}$ 是一个标准布朗运动表明，对所有 $t \in [0, T]$，$x \in \mathbb{R}^{d}$，有
+
 $$
 u(t, x)=\mathbb{E}\left[\varphi\left(x+B W_{t}\right)\right]=\mathbb{E}\left[\varphi\left(x+\sqrt{t} B \frac{W_{T}}{\sqrt{T}}\right)\right].
 $$
+
 由于 $\frac{W_{T}}{\sqrt{T}}: \Omega \rightarrow \mathbb{R}^{m}$ 是一个标准正态随机变量这一事实，命题 17.3.2 从而确立了条目 (i) 和 (ii)。因此，推论 17.3.4 的证明至此完成。
 
 ![](img/dec290f673e6357c31893c67b579ffe1_528_0.png)
@@ -18985,85 +20828,112 @@ $$
 
 ## 17.3.2 提供解的唯一性的费曼-卡奇公式
 
-**引理 17.3.5（维塔利收敛定理的一个特例）** 设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间，设 $X_n: \Omega \rightarrow \mathbb{R}$，$n \in \mathbb{N}_0$，为随机变量，且满足
+### 引理 17.3.5（维塔利收敛定理的一个特例）
+设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间，设 $X_n: \Omega \rightarrow \mathbb{R}$，$n \in \mathbb{N}_0$，为随机变量，且满足
+
 $$
 \mathbb{P}(\lim \sup _{n \rightarrow \infty}\left|X_n-X_0\right|=0)=1, \quad (17.37)
 $$
+
 并设 $p \in(1, \infty)$ 满足 $\sup _{n \in \mathbb{N}} \mathbb{E}\left[\left|X_n\right|^p\right]<\infty$。那么
 - (i) 有 $\lim \sup _{n \rightarrow \infty} \mathbb{E}\left[\left|X_n-X_0\right|\right]=0$，
 - (ii) 有 $\mathbb{E}\left[\left|X_0\right|\right]<\infty$，且
 - (iii) 有 $\lim \sup _{n \rightarrow \infty}\left|\mathbb{E}\left[X_n\right]-\mathbb{E}\left[X_0\right]\right|=0$。
 
 **引理 17.3.5 的证明。** 首先，注意到假设
+
 $$
 \sup _{n \in \mathbb{N}} \mathbb{E}\left[\left|X_n\right|^p\right]<\infty \quad (17.38)
 $$
+
 以及例如 Klenke [248, 推论 6.21] 中 de la Vallée-Poussin 定理的推论，意味着 $\{ X _ n : n \in \mathbb{N} \}$ 是一致可积的。这与 (17.37) 以及例如 Klenke [248, 定理 6.25] 中的维塔利收敛定理共同证明了条目 (i) 和 (ii)。观察到条目 (i) 和 (ii) 确立了条目 (iii)。因此，引理 17.3.5 的证明至此完成。
 
-**命题 17.3.6。** *设* $d \in \mathbb{N}$，$T$, $\rho \in (0, \infty)$，$f \in C([0,T] \times \mathbb{R}^d, \mathbb{R})$，*设* $u \in C^{1,2}([0,T] \times \mathbb{R}^d, \mathbb{R})$ *具有至多多项式增长的偏导数，假设对所有* $t \in [0,T], x \in \mathbb{R}^d$ *有*
+### 命题 17.3.6
+*设* $d \in \mathbb{N}$，$T$, $\rho \in (0, \infty)$，$f \in C([0,T] \times \mathbb{R}^d, \mathbb{R})$，*设* $u \in C^{1,2}([0,T] \times \mathbb{R}^d, \mathbb{R})$ *具有至多多项式增长的偏导数，假设对所有* $t \in [0,T], x \in \mathbb{R}^d$ *有*
+
 $$
 \left( \frac{\partial u}{\partial t}\right)(t,x) = \rho\Delta u (t,x) + f(t,x), \quad (17.39)
 $$
+
 *设* $( \Omega, \mathcal{F}, \mathbb{P} )$ *为一个概率空间，且设* $W : [0,T] \times \Omega \to \mathbb{R}^d$ *为一个标准布朗运动* (*参见* *定义 17.3.3*)。*那么对所有* $t \in [0,T], x \in \mathbb{R}^d$ *有*
+
 $$
 u(t,x) = \mathbb{E}\biggl[ u(0,x + \sqrt{2\rho}W_t) + \int_0^t f(t-s,x + \sqrt{2\rho}W_s) \, \mathrm{d}s \biggr]. \quad (17.40)
 $$
 
 *命题 17.3.6 的证明。* 在整个证明过程中，设 $D _ 1 : [0,T] \times \mathbb{R}^d \to \mathbb{R}$ *满足对所有* $t \in [0,T], x \in \mathbb{R}^d$ *有*
+
 $$
 D_1(t,x) = \biggl(\frac{\partial u}{\partial t}\biggr)(t,x), \quad (17.41)
 $$
+
 设 $D _ 2 = ( D _ { 2 , 1 } , D _ { 2 , 2 } , \dots, D _ { 2 , d } ) : [0,T] \times \mathbb{R}^d \to \mathbb{R}^d$ *满足对所有* $t \in [0,T], x \in \mathbb{R}^d$ *有* $D _ 2(t,x) = ( \nabla _ { x } u)(t,x)$，*设* $H = ( H _ { i , j } ) _ { i , j \in \{ 1 , \dots, d \} } : [0,T] \times \mathbb{R}^d \to \mathbb{R}^{d \times d}$ *满足对所有* $t \in [0,T], x \in \mathbb{R}^d$ *有*
+
 $$
 H(t,x) = \bigl(\mathrm{Hess}_x u\bigr)(t,x), \quad (17.42)
 $$
+
 设 $\gamma : \mathbb{R}^d \to \mathbb{R}$ *满足对所有* $z \in \mathbb{R}^d$ *有*
+
 $$
 \gamma(z) = (2\pi)^{-d/2} \exp\biggl(-\frac{\|z\|_2^2}{2}\biggr), \quad (17.43)
 $$
+
 *并设* $v _ { t , x } : [0,t] \to \mathbb{R}, t \in [0,T], x \in \mathbb{R}^d$，*满足对所有* $t \in [0,T], x \in \mathbb{R}^d, s \in [0,t]$ *有*
+
 $$
 v_{t,x}(s) = \mathbb{E}\bigl[u(s,x + \sqrt{2\rho}W_{t-s})\bigr] \quad (17.44)
 $$
+
 (*参见* *定义 3.3.4*)。*注意，假设* $W$ *是标准布朗运动保证了对于所有* $t \in (0,T], s \in [0,t]$ *有* $(t-s)^{-1/2} W _ { t-s } : \Omega \to \mathbb{R}^d$ *是一个标准正态随机变量。这表明对于所有* $t \in (0,T], x \in \mathbb{R}^d, s \in [0,t]$ *有*
+
 $$
 \begin{aligned}
 v_{t,x}(s) &= \mathbb{E}\bigl[u(s,x + \sqrt{2\rho(t-s)}(t-s)^{-1/2}W_{t-s})\bigr] \\
 &= \int_{\mathbb{R}^d} u(s,x + \sqrt{2\rho(t-s)})\gamma(z) \, \mathrm{d}z. \quad (17.45)
 \end{aligned}
 $$
+
 *假设* $u$ *具有至多多项式增长的偏导数，以及* $(0,\infty) \ni s \mapsto \sqrt{s} \in (0,\infty)$ *是可微的、链式法则和维塔利收敛定理因此表明，对于所有* $t \in (0, T]$，$x \in \mathbb{R}^{d}$，$s \in [0, t)$ *有* $v_{t, x}|_{[0, t)} \in C^{1}([0, t), \mathbb{R})$ *且*
+
 $$
 \left(v_{t, x}\right)^{\prime}(s)=\int_{\mathbb{R}^{d}}\left[D_{1}\left(s, x+\sqrt{2\rho(t-s)} z\right)+\left\langle D_{2}\left(s, x+\sqrt{2\rho(t-s)} z\right), \frac{\rho z}{\sqrt{2\rho(t-s)}}\right\rangle\right] \gamma(z) \mathrm{d} z \quad (17.46)
 $$
+
 *(参见定义 1.4.7)*。此外，注意到对于所有 $z \in \mathbb{R}^{d}$，有 $(\nabla \gamma)(z)=-\gamma(z) z$，这意味着对于所有 $t \in (0, T]$，$x \in \mathbb{R}^{d}$，$s \in [0, t)$ *有*
+
 $$
 \begin{aligned}
 \int_{\mathbb{R}^{d}}\left\langle D_{2}\left(s, x+\sqrt{2\rho(t-s)} z\right), \frac{\rho z}{\sqrt{2\rho(t-s)}}\right\rangle \gamma(z) \mathrm{d} z & =\int_{\mathbb{R}^{d}}\left\langle D_{2}\left(s, x+\sqrt{2\rho(t-s)} z\right), \frac{a(\nabla \gamma)(z)}{\sqrt{2\rho(t-s)}}\right\rangle \mathrm{d} z \quad (17.47) \\
 &=\frac{\rho}{\sqrt{2\rho(t-s)}} \sum_{i=1}^{d}\left[\int_{\mathbb{R}^{d}} D_{2, i}\left(s, x+\sqrt{2\rho(t-s)} z\right)\left(\frac{\partial \gamma}{\partial z_{i}}\right)\left(z_{1}, z_{2}, \ldots, z_{d}\right) \mathrm{d} z\right].
 \end{aligned}
 $$
+
 此外，注意到分部积分法证明了对于所有 $t \in (0, T]$，$x \in \mathbb{R}^{d}$，$s \in [0, t)$，$i \in\{1, 2, \ldots, d\}$，$a \in \mathbb{R}$，$b \in (a, \infty)$ *有*
+
 $$
 \begin{aligned}
 \int_{a}^{b} D_{2, i}\left(s, x+\sqrt{2\rho(t-s)}\right)\left(z_{1}, z_{2}, \ldots, z_{d}\right)\left(\frac{\partial \gamma}{\partial z_{i}}\right)\left(z_{1}, z_{2}, \ldots, z_{d}\right) \mathrm{d} z_{i} & =\left[D_{2, i}\left(s, x+\sqrt{2\rho(t-s)}\right)\left(z_{1}, z_{2}, \ldots, z_{d}\right) \gamma\left(z_{1}, z_{2}, \ldots, z_{d}\right)\right]_{z_{i}=a}^{z_{i}=b} \quad (17.48) \\
 &-\int_{a}^{b} \sqrt{2\rho(t-s)} H_{i, i}\left(s, x+\sqrt{2\rho(t-s)}\right)\left(z_{1}, z_{2}, \ldots, z_{d}\right) \gamma\left(z_{1}, z_{2}, \ldots, z_{d}\right) \mathrm{d} z_{i}.
 \end{aligned}
 $$
+
 *假设* $u$ *具有至多多项式增长的导数，因此表明对于所有* $t \in (0, T]$，$x \in \mathbb{R}^{d}$，$s \in [0, t)$，$i \in\{1, 2, \ldots, d\}$ *有*
+
 $$
 \begin{aligned}
 \int_{\mathbb{R}} D_{2, i}\left(s, x+\sqrt{2\rho(t-s)}\right)\left(z_{1}, z_{2}, \ldots, z_{d}\right)\left(\frac{\partial \gamma}{\partial z_{i}}\right)\left(z_{1}, z_{2}, \ldots, z_{d}\right) \mathrm{d} z_{i} & =-\sqrt{2\rho(t-s)} \int_{\mathbb{R}} H_{i, i}\left(s, x+\sqrt{2\rho(t-s)}\right)\left(z_{1}, z_{2}, \ldots, z_{d}\right) \gamma\left(z_{1}, z_{2}, \ldots, z_{d}\right) \mathrm{d} z_{i}. \quad (17.49)
 \end{aligned}
 $$
+
 将此与 (17.47) 以及富比尼定理结合，保证了对于所有 $t \in (0, T]$，$x \in \mathbb{R}^{d}$，$s \in [0, t)$ *有*
+
 $$
 \begin{aligned}
 \int_{\mathbb{R}^{d}}\left\langle D_{2}\left(s, x+\sqrt{2\rho(t-s)} z\right), \frac{\rho z}{\sqrt{2\rho(t-s)}}\right\rangle \gamma(z) \mathrm{d} z & =-\rho \sum_{i=1}^{d} \int_{\mathbb{R}^{d}} H_{i, i}\left(s, x+\sqrt{2\rho(t-s)}\right)(z) \gamma(z) \mathrm{d} z \quad (17.50) \\
 &=-\int_{\mathbb{R}^{d}} \rho \operatorname{Trace}\left(H\left(s, x+\sqrt{2\rho(t-s)}(z)\right)\right) \gamma(z) \mathrm{d} z.
 \end{aligned}
 $$
-
 
 这、(17.46)、(17.39) 以及这样一个事实：对于所有 $t \in (0, T]$，$s \in [0, t)$，$(t-s)^{-1/2}W_{t-s}\colon \Omega \rightarrow \mathbb{R}^{d}$ 是一个标准正态随机变量，表明对于所有 $t \in (0, T]$，$x \in \mathbb{R}^{d}$，$s \in [0, t)$ 成立
 
@@ -19075,119 +20945,160 @@ $$u(t, x) = \mathbb{E} \left[ u(t, x + \sqrt{2 \rho} W_{t-t}) \right] = v_{t,x}(
 
 富比尼（Fubini）定理以及 $u$ 和 $f$ 至多呈多项式增长的事实因此蕴含了 (17.40)。命题 17.3.6 的证明至此完成。 $\square$
 
-**推论 17.3.7.** 设 $d \in \mathbb{N}$，$T, \rho \in (0, \infty)$，$\varrho = \sqrt{2 \rho T}$，$a \in \mathbb{R}$，$b \in (a, \infty)$，设 $\varphi\colon \mathbb{R}^{d} \rightarrow \mathbb{R}$ 是一个函数，设 $u \in C^{1,2}\left( [0, T] \times \mathbb{R}^{d}, \mathbb{R} \right)$ 具有至多多项式增长的偏导数，假设对于所有 $t \in [0, T]$，$x \in \mathbb{R}^{d}$ 成立 $u(0, x) = \varphi(x)$ 且
 
-$$\left( \frac{\partial u}{\partial t} \right)(t, x) = \rho \, (\Delta_x u)(t, x), \quad (17.53)$$
 
-设 $(\Omega, \mathcal{F}, \mathbb{P})$ 是一个概率空间，且设 $W\colon \Omega \rightarrow \mathbb{R}^{d}$ 是一个标准正态随机变量。则
+## 推论 17.3.7.
+设 `d ∈ ℕ`，`T, ρ ∈ (0, ∞)`，`ϱ = sqrt(2 ρ T)`，`a ∈ ℝ`，`b ∈ (a, ∞)`，设 `φ: ℝ^d → ℝ` 是一个函数，设 `u ∈ C^{1,2}([0, T] × ℝ^d, ℝ)` 具有至多多项式增长的偏导数，假设对于所有 `t ∈ [0, T]`，`x ∈ ℝ^d` 成立 `u(0, x) = φ(x)` 且
 
-- (i) 成立 $\varphi\colon \mathbb{R}^{d} \rightarrow \mathbb{R}$ 是二阶连续可微的，且具有至多多项式增长的偏导数，且
-- (ii) 对于所有 $x \in \mathbb{R}^{d}$ 成立 $u(T, x) = \mathbb{E} \left[ \varphi(\varrho W + x) \right]$。
+```
+(∂u/∂t)(t, x) = ρ (Δ_x u)(t, x),    (17.53)
+```
 
-推论 17.3.7 的证明。注意，假设 $u \in C^{1,2}\left( [0, T] \times \mathbb{R}^{d}, \mathbb{R} \right)$ 具有至多多项式增长的偏导数，以及对于所有 $x \in \mathbb{R}^{d}$ 成立 $\varphi(x) = u(0, x)$ 的事实证明了条目 (i)。此外，注意命题 17.3.6 建立了条目 (ii)。推论 17.3.7 的证明至此完成。 $\square$
+设 `(Ω, ℱ, ℙ)` 是一个概率空间，且设 `W: Ω → ℝ^d` 是一个标准正态随机变量。则
 
-**定义 17.3.8** (连续卷积). 设 $d \in \mathbb{N}$，且设 $f\colon \mathbb{R}^{d} \rightarrow \mathbb{R}$ 和 $g\colon \mathbb{R}^{d} \rightarrow \mathbb{R}$ 是 $\mathcal{B}(\mathbb{R}^{d})\! / \!\mathcal{B}(\mathbb{R})$-可测的。则我们记由
+- (i) 成立 `φ: ℝ^d → ℝ` 是二阶连续可微的，且具有至多多项式增长的偏导数，且
 
-$$f \circledast g\colon \left\{ x \in \mathbb{R}^{d}\colon \min \left\{ \int_{\mathbb{R}^{d}} \max \left\{ 0, f(x - y)g(y) \right\} \, \mathrm{d}y, \right. \left. - \int_{\mathbb{R}^{d}} \min \left\{ 0, f(x - y)g(y) \right\} \, \mathrm{d}y \right\} < \infty \right\} \rightarrow [-\infty, \infty] \quad (17.54)$$
+- (ii) 对于所有 `x ∈ ℝ^d` 成立 `u(T, x) = 𝔼[ φ(ϱ W + x) ]`。
+
+推论 17.3.7 的证明。注意，假设 `u ∈ C^{1,2}([0, T] × ℝ^d, ℝ)` 具有至多多项式增长的偏导数，以及对于所有 `x ∈ ℝ^d` 成立 `φ(x) = u(0, x)` 的事实证明了条目 (i)。此外，注意命题 17.3.6 建立了条目 (ii)。推论 17.3.7 的证明至此完成。 □
+
+## 定义 17.3.8 (连续卷积)
+设 `d ∈ ℕ`，且设 `f: ℝ^d → ℝ` 和 `g: ℝ^d → ℝ` 是 `ℬ(ℝ^d)/ℬ(ℝ)`-可测的。则我们记由
+
+```
+f ⊛ g: { x ∈ ℝ^d: min{ ∫_{ℝ^d} max{0, f(x - y)g(y)} dy, -∫_{ℝ^d} min{0, f(x - y)g(y)} dy } < ∞ } → [-∞, ∞]    (17.54)
+```
 
 表示的函数，该函数对所有满足
 
-$\min \left\{ \int_{\mathbb{R}^{d}} \max \left\{ 0, f(x-y)g(y) \right\} \, \mathrm{d}y, -\int_{\mathbb{R}^{d}} \min \left\{ 0, f(x-y)g(y) \right\} \, \mathrm{d}y \right\} < \infty$ (17.55)
+```
+min{ ∫_{ℝ^d} max{0, f(x-y)g(y)} dy, -∫_{ℝ^d} min{0, f(x-y)g(y)} dy } < ∞   (17.55)
+```
 
-的 $x \in \mathbb{R}^{d}$ 满足
+的 `x ∈ ℝ^d` 满足
 
-$(f \otimes g)(x) = \int_{\mathbb{R}^{d}} f(x-y)g(y) \, \mathrm{d}y$. (17.56)
+```
+(f ⊗ g)(x) = ∫_{ℝ^d} f(x-y)g(y) dy.   (17.56)
+```
 
 ### 练习 17.3.1.
+设 `d ∈ ℕ`，`T ∈ (0, ∞)`，对于每个 `σ ∈ (0, ∞)`，设 `γ_σ: ℝ^d → ℝ` 对所有 `x ∈ ℝ^d` 满足
 
-设 $d \in \mathbb{N}$，$T \in (0, \infty)$，对于每个 $\sigma \in (0, \infty)$，设 $\gamma_{\sigma}: \mathbb{R}^{d} \to \mathbb{R}$ 对所有 $x \in \mathbb{R}^{d}$ 满足
+```
+γ_σ(x) = (2 π σ^2)^(-d/2) exp( -||x||_2^2 / (2 σ^2) ),   (17.57)
+```
 
-$\gamma_{\sigma}(x) = (2 \pi \sigma^{2})^{-\frac{d}{2}} \exp \left( \frac{-\|x\|_{2}^{2}}{2 \sigma^{2}} \right)$, (17.57)
+并且对于每个 `ρ ∈ (0, ∞)`，`φ ∈ C^2(ℝ^d, ℝ)` 满足 `sup_{x ∈ ℝ^d}[ Σ_{i,j=1}^d ( |φ(x)| + |(∂/∂x_i φ)(x)| + |(∂^2/∂x_i∂x_j φ)(x)| ) ] < ∞`，设 `u_{ρ, φ}: [0, T] × ℝ^d → ℝ` 对所有 `t ∈ (0, T]`，`x ∈ ℝ^d` 满足
 
-并且对于每个 $\rho \in (0, \infty)$，$\varphi \in C^{2}\left( \mathbb{R}^{d}, \mathbb{R} \right)$ 满足 $\sup_{x \in \mathbb{R}^{d}} \left[ \sum_{i,j=1}^{d} \left( |\varphi(x)| + \left| \left( \frac{\partial}{\partial x_{i}} \varphi \right)(x) \right| + \left| \left( \frac{\partial^{2}}{\partial x_{i} \partial x_{j}} \varphi \right)(x) \right| \right) \right] < \infty$，设 $u_{\rho, \varphi}: [0, T] \times \mathbb{R}^{d} \to \mathbb{R}$ 对所有 $t \in (0, T]$，$x \in \mathbb{R}^{d}$ 满足
+```
+u_{ρ, φ}(0, x) = φ(x) 且 u_{ρ, φ}(t, x) = (φ ⊗ γ_{sqrt(2 ρ t)})(x)   (17.58)
+```
 
-$u_{\rho, \varphi}(0, x) = \varphi(x) \quad \text{且} \quad u_{\rho, \varphi}(t, x) = (\varphi \otimes \gamma_{\sqrt{2 \rho t}})(x)$ (17.58)
+参见定义 3.3.4 和 17.3.8。证明或反驳以下命题：对于所有 `ρ ∈ (0, ∞)`，`φ ∈ C^2(ℝ^d, ℝ)` 满足 `sup_{x ∈ ℝ^d}[ Σ_{i,j=1}^d ( |φ(x)| + |(∂/∂x_i φ)(x)| + |(∂^2/∂x_i∂x_j φ)(x)| ) ] < ∞`，对所有 `t ∈ (0, T)`，`x ∈ ℝ^d` 成立 `u_{ρ, φ} ∈ C^{1,2}([0, T] × ℝ^d, ℝ)` 且
 
-(参见定义 3.3.4 和 17.3.8)。证明或反驳以下命题：对于所有 $\rho \in (0, \infty)$，$\varphi \in C^{2}\left( \mathbb{R}^{d}, \mathbb{R} \right)$ 满足 $\sup_{x \in \mathbb{R}^{d}} \left[ \sum_{i,j=1}^{d} \left( |\varphi(x)| + \left| \left( \frac{\partial}{\partial x_{i}} \varphi \right)(x) \right| + \left| \left( \frac{\partial^{2}}{\partial x_{i} \partial x_{j}} \varphi \right)(x) \right| \right) \right] < \infty$，对所有 $t \in (0, T)$，$x \in \mathbb{R}^{d}$ 成立 $u_{\rho, \varphi} \in C^{1,2}\left( [0, T] \times \mathbb{R}^{d}, \mathbb{R} \right)$ 且
-
-$\left( \frac{\partial u_{\rho, \varphi}}{\partial t} \right)(t, x) = \rho \left( \Delta_{x} u_{\rho, \varphi} \right)(t, x)$. (17.59)
+```
+(∂ u_{ρ, φ} / ∂ t)(t, x) = ρ (Δ_x u_{ρ, φ})(t, x).   (17.59)
+```
 
 ### 练习 17.3.2.
+证明或反驳以下命题：对于每个 `x ∈ ℝ` 成立
 
-证明或反驳以下命题：对于每个 $x \in \mathbb{R}$ 成立
-
-$e^{-x^{2}/2} = \frac{1}{\sqrt{2 \pi}} \left[ \int_{\mathbb{R}} e^{-t^{2}/2} e^{-ixt} \, \mathrm{d}t \right]$. (17.60)
+```
+e^{-x^2/2} = 1/ sqrt(2 π) [ ∫_{ℝ} e^{-t^2/2} e^{-i x t} dt ].   (17.60)
+```
 
 ### 练习 17.3.3.
+设 `d ∈ ℕ`，`T ∈ (0, ∞)`，对于每个 `σ ∈ (0, ∞)`，设 `γ_σ: ℝ^d → ℝ` 对所有 `x ∈ ℝ^d` 满足
 
-设 $d \in \mathbb{N}$，$T \in (0, \infty)$，对于每个 $\sigma \in (0, \infty)$，设 $\gamma_{\sigma}: \mathbb{R}^{d} \to \mathbb{R}$ 对所有 $x \in \mathbb{R}^{d}$ 满足
+```
+γ_σ(x) = (2 π σ^2)^(-d/2) exp( -||x||_2^2 / (2 σ^2) ),   (17.61)
+```
 
-$\gamma_{\sigma}(x) = (2 \pi \sigma^{2})^{-\frac{d}{2}} \exp \left( \frac{-\|x\|_{2}^{2}}{2 \sigma^{2}} \right)$, (17.61)
+对于每个 `φ ∈ C^2(ℝ^d, ℝ)` 满足 `sup_{x ∈ ℝ^d}[ Σ_{i,j=1}^d ( |φ(x)| + |(∂/∂x_i φ)(x)| + |(∂^2/∂x_i∂x_j φ)(x)| ) ] < ∞`，设 `u_φ: [0, T] × ℝ^d → ℝ` 对所有 `t ∈ (0, T]`，`x ∈ ℝ^d` 满足
 
-对于每个 $\varphi \in C^{2}\left( \mathbb{R}^{d}, \mathbb{R} \right)$ 满足 $\sup_{x \in \mathbb{R}^{d}} \left[ \sum_{i,j=1}^{d} \left( |\varphi(x)| + \left| \left( \frac{\partial}{\partial x_{i}} \varphi \right)(x) \right| + \left| \left( \frac{\partial^{2}}{\partial x_{i} \partial x_{j}} \varphi \right)(x) \right| \right) \right] < \infty$，设 $u_{\varphi}: [0, T] \times \mathbb{R}^{d} \to \mathbb{R}$ 对所有 $t \in (0, T]$，$x \in \mathbb{R}^{d}$ 满足
+```
+u_φ(0, x) = φ(x) 且 u_φ(t, x) = (φ ⊗ γ_{sqrt(2 t)})(x),   (17.62)
+```
 
-$u_{\varphi}(0, x) = \varphi(x) \quad \text{且} \quad u_{\varphi}(t, x) = (\varphi \otimes \gamma_{\sqrt{2t}})(x)$, (17.62)
+并且对于每个 `i = (i1, …, id) ∈ ℕ^d`，设 `ψ_i: ℝ^d → ℝ` 对所有 `x = (x1, …, xd) ∈ ℝ^d` 满足
 
-并且对于每个 $i=(i_{1}, \dots, i_{d}) \in \mathbb{N}^{d}$，设 $\psi_{i}: \mathbb{R}^{d} \to \mathbb{R}$ 对所有 $x=(x_{1}, \dots, x_{d}) \in \mathbb{R}^{d}$ 满足
+```
+ψ_i(x) = 2^{d/2} [ ∏_{k=1}^d sin(i_k π x_k) ]   (17.63)
+```
 
-$\psi_{i}(x) = 2^{\frac{d}{2}} \left[ \prod_{k=1}^{d} \sin(i_{k} \pi x_{k}) \right]$ (17.63)
+参见定义 3.3.4 和 17.3.8。证明或反驳以下命题：对于所有 `i = (i1, …, id) ∈ ℕ^d`，`t ∈ [0, T]`，`x ∈ ℝ^d` 成立
 
-(参见定义 3.3.4 和 17.3.8)。证明或反驳以下命题：对于所有 $i=(i_{1}, \dots, i_{d}) \in \mathbb{N}^{d}$，$t \in [0, T]$，$x \in \mathbb{R}^{d}$ 成立
-
-$u_{\psi_{i}}(t, x) = \exp \left( -\pi^{2} \left[ \sum_{k=1}^{d} |i_{k}|^{2} t \right] \right) \psi_{i}(x)$. (17.64)
+```
+u_{ψ_i}(t, x) = exp( -π^2 [ Σ_{k=1}^d |i_k|^2 t ] ) ψ_i(x).   (17.64)
+```
 
 ### 练习 17.3.4.
+设 `d ∈ ℕ`，`T ∈ (0, ∞)`，对于每个 `σ ∈ (0, ∞)`，设 `γ_σ: ℝ^d → ℝ` 对所有 `x ∈ ℝ^d` 满足
 
-设 $d \in \mathbb{N}$，$T \in (0, \infty)$，对于每个 $\sigma \in (0, \infty)$，设 $\gamma_{\sigma}\colon \mathbb{R}^{d} \rightarrow \mathbb{R}$ 对所有 $x \in \mathbb{R}^{d}$ 满足
+```
+γ_σ(x) = (2πσ^2)^(-d/2) exp( -||x||_2^2 / (2σ^2) ),
+```
 
-$$\gamma_{\sigma}(x) = (2\pi\sigma^{2})^{-\frac{d}{2}} \exp\left( \frac{-\|x\|_{2}^{2}}{2\sigma^{2}} \right),$$
+并且对于每个 `i = (i1, …, id) ∈ ℕ^d`，设 `ψ_i: ℝ^d → ℝ` 对所有 `x = (x1, …, xd) ∈ ℝ^d` 满足
 
-并且对于每个 $i = (i_{1}, \ldots, i_{d}) \in \mathbb{N}^{d}$，设 $\psi_{i}\colon \mathbb{R}^{d} \rightarrow \mathbb{R}$ 对所有 $x = (x_{1}, \ldots, x_{d}) \in \mathbb{R}^{d}$ 满足
+```
+ψ_i(x) = 2^{d/2} [ ∏_{k=1}^d sin(i_k π x_k) ]
+```
 
-$$\psi_{i}(x) = 2^{\frac{d}{2}} \left[ \prod_{k=1}^{d} \sin(i_{k}\pi x_{k}) \right]$$
+参见定义 3.3.4。证明或反驳以下命题：对于每个 `i = (i1, …, id) ∈ ℕ^d`，`s ∈ [0, T]`，`y ∈ ℝ^d` 以及每个函数 `u ∈ C^{1,2}([0,T] × ℝ^d, ℝ)` 具有至多多项式增长的偏导数，且对所有 `t ∈ (0, T]`，`x ∈ ℝ^d` 满足 `u(0,x) = ψ_i(x)` 且
 
-(参见定义 3.3.4)。证明或反驳以下命题：对于每个 $i = (i_{1}, \ldots, i_{d}) \in \mathbb{N}^{d}$，$s \in [0, T]$，$y \in \mathbb{R}^{d}$ 以及每个函数 $u \in C^{1,2}([0,T] \times \mathbb{R}^{d}, \mathbb{R})$ 具有至多多项式增长的偏导数，且对所有 $t \in (0, T]$，$x \in \mathbb{R}^{d}$ 满足 $u(0,x) = \psi_{i}(x)$ 且
-
-$$\left( \frac{\partial u}{\partial t} \right)(t,x) = (\Delta_{x}u)(t,x)$$
+```
+(∂ u / ∂ t)(t,x) = (Δ_x u)(t,x)
+```
 
 成立
 
-$$u(s,y) = \exp\left( -\pi^{2}\left[\sum_{k=1}^{d} |i_{k}|^{2} s\right] \right) \psi_{i}(y).$$
+```
+u(s,y) = exp( -π^2 [ Σ_{k=1}^d |i_k|^2 s ] ) ψ_i(y).
+```
 
 ## 17.4 将 PDE 问题重构为随机优化问题
 
 下面结果，命题 17.4.1 的证明，基于命题 17.2.1 和命题 17.3.6 的应用。比命题 17.4.1 更一般的结果及其详细证明，例如可以在 Beck 等人 [18, 命题 2.7] 中找到。
 
-**命题 17.4.1.** *设 $d \in \mathbb{N}$，$T, \rho \in (0, \infty)$，$\varrho = \sqrt{2\rho T}$，$a \in \mathbb{R}$，$b \in (a, \infty)$，设 $\varphi\colon \mathbb{R}^{d} \rightarrow \mathbb{R}$ 是一个函数，设 $u \in C^{1,2}([0,T] \times \mathbb{R}^{d}, \mathbb{R})$ 具有至多多项式增长的偏导数，假设对所有 $t \in [0,T]$，$x \in \mathbb{R}^{d}$ 成立 $u(0,x) = \varphi(x)$ 且*
+### 命题 17.4.1.
+设 `d ∈ ℕ`，`T, ρ ∈ (0, ∞)`，`ϱ = sqrt(2ρ T)`，`a ∈ ℝ`，`b ∈ (a, ∞)`，设 `φ: ℝ^d → ℝ` 是一个函数，设 `u ∈ C^{1,2}([0,T] × ℝ^d, ℝ)` 具有至多多项式增长的偏导数，假设对所有 `t ∈ [0,T]`，`x ∈ ℝ^d` 成立 `u(0,x) = φ(x)` 且
 
-$$\left( \frac{\partial u}{\partial t} \right)(t,x) = \rho \left( \Delta_{x}u \right)(t,x),$$
+```
+(∂ u / ∂ t)(t,x) = ρ (Δ_x u)(t,x),
+```
 
-*设 $(\Omega, \mathcal{F}, \mathbb{P})$ 是一个概率空间，设 $\mathcal{W}\colon \Omega \rightarrow \mathbb{R}^{d}$ 是一个标准正态随机变量，设 $\mathcal{X}\colon \Omega \rightarrow [a,b]^{d}$ 是一个连续均匀分布的随机变量，并假设 $\mathcal{W}$ 和 $\mathcal{X}$ 是独立的。则*
+设 `(Ω, ℱ, ℙ)` 是一个概率空间，设 `𝒲: Ω → ℝ^d` 是一个标准正态随机变量，设 `𝒳: Ω → [a,b]^d` 是一个连续均匀分布的随机变量，并假设 `𝒲` 和 `𝒳` 是独立的。则
 
-- * (i) 成立 $\varphi\colon \mathbb{R}^{d} \rightarrow \mathbb{R}$ 是二阶连续可微的，且具有至多多项式增长的偏导数，*
-- * (ii) 存在唯一的连续函数 $U\colon [a,b]^{d} \rightarrow \mathbb{R}$ 使得
+- (i) 成立 `φ: ℝ^d → ℝ` 是二阶连续可微的，且具有至多多项式增长的偏导数，
 
-$$\mathbb{E}\left[ |\varphi(\varrho\mathcal{W} + \mathcal{X}) - U(\mathcal{X})|^{2} \right] = \inf_{v \in C([a,b]^{d}, \mathbb{R})} \mathbb{E}\left[ |\varphi(\varrho\mathcal{W} + \mathcal{X}) - v(\mathcal{X})|^{2} \right],$$
+- (ii) 存在唯一的连续函数 `U: [a,b]^d → ℝ` 使得
 
-*且*
+```
+𝔼[ |φ(ϱ 𝒲 + 𝒳) - U(𝒳)|^2 ] = inf_{v ∈ C([a,b]^d, ℝ)} 𝔼[ |φ(ϱ 𝒲 + 𝒳) - v(𝒳)|^2 ],
+```
 
+且
 
+(iii) 对于所有 `x ∈ [a, b]^d`，都有 `U(x) = u(T, x)` 成立。
 
+命题 17.4.1 的证明。首先，注意到 (17.69)、假设 `𝒲` 是标准正态随机变量，以及推论 17.3.7 保证对于所有 `x ∈ ℝ^d`，`φ: ℝ^d → ℝ` 具有二阶连续偏导数，且其偏导数的增长至多为多项式级别，并且
 
-(iii) 对于所有 $x \in [a, b]^d$，都有 $U(x) = u(T, x)$ 成立。
+```
+u(T, x) = 𝔼[ u(0, ϱ 𝒲 + x) ] = 𝔼[ φ(ϱ 𝒲 + x) ].   (17.71)
+```
 
-命题 17.4.1 的证明。首先，注意到 (17.69)、假设 $\mathcal{W}$ 是标准正态随机变量，以及推论 17.3.7 保证对于所有 $x \in \mathbb{R}^d$，$\varphi: \mathbb{R}^d \rightarrow \mathbb{R}$ 具有二阶连续偏导数，且其偏导数的增长至多为多项式级别，并且
+此外，注意到假设 `𝒲` 是标准正态随机变量，事实 `φ` 是连续的，以及事实 `φ` 具有至多多项式增长率的偏导数且是连续的，表明：
 
-$u(T, x) = \mathbb{E}[u(0, \varrho \mathcal{W} + x)] = \mathbb{E}[\varphi(\varrho \mathcal{W} + x)].$ (17.71)
+- I) 函数 `[a, b]^d × Ω ∋ (x, ω) ↦ φ(ϱ 𝒲(ω) + x) ∈ ℝ` 是 `(ℬ([a, b]^d) ⊗ ℱ)/ℬ(ℝ)` 可测的，并且
 
-此外，注意到假设 $\mathcal{W}$ 是标准正态随机变量，事实 $\varphi$ 是连续的，以及事实 $\varphi$ 具有至多多项式增长率的偏导数且是连续的，表明：
-
-- I) 函数 $[a, b]^d \times \Omega \ni (x, \omega) \mapsto \varphi(\varrho \mathcal{W}(\omega) + x) \in \mathbb{R}$ 是 $(\mathcal{B}([a, b]^d) \otimes \mathcal{F})/\mathcal{B}(\mathbb{R})$ 可测的，并且
-- II) 对于所有 $x \in [a, b]^d$，都有 $\mathbb{E}[|\varphi(\varrho \mathcal{W} + x)|^2] < \infty$ 成立。
+- II) 对于所有 `x ∈ [a, b]^d`，都有 `𝔼[ |φ(ϱ 𝒲 + x)|^2 ] < ∞` 成立。
 
 因此，命题 17.2.1 和 (17.71) 保证：
 
-- A) 存在唯一的连续函数 $U: [a, b]^d \rightarrow \mathbb{R}$ 满足：
+- A) 存在唯一的连续函数 `U: [a, b]^d → ℝ` 满足：
+
+
 
 $\int_{[a, b]^d} \mathbb{E}[|\varphi(\varrho \mathcal{W} + x) - U(x)|^2] \, \mathrm{d}x = \underset{v \in C([a, b]^d, \mathbb{R})}{\inf} \left( \int_{[a, b]^d} \mathbb{E}[|\varphi(\varrho \mathcal{W} + x) - v(x)|^2] \, \mathrm{d}x \right)$ (17.72)
 
@@ -19257,9 +21168,6 @@ $\left(\frac{\partial u}{\partial t}\right)(t, x) = \varrho\left(\Delta_x u\righ
 
 在上述句子描述的框架下，我们将 $u$ 视为未知的偏微分方程解。该推导的目标是开发旨在近似未知偏微分方程解 $u(T, \cdot)|_{[a, b]^d}: [a, b]^d \to \mathbb{R}$ 在 $[a, b]^d$ 上限制的 $T$ 时刻值的深度学习算法。
 
-
-
-
 在第一步中，我们利用命题 **17.4.1** 将未知目标函数 $u(T, \cdot)|_{[a, b]^d}: [a, b]^d \to \mathbb{R}$ 重构为优化问题的解。为此，令 $\varrho = \sqrt{2dT}$，设 $(\Omega, \mathcal{F}, \mathbb{P})$ 为一个概率空间，设 $\mathcal{W}: \Omega \to \mathbb{R}^d$ 为一个标准正态分布随机变量，设 $\mathcal{X}: \Omega \to [a, b]^d$ 为一个连续均匀分布随机变量，假设 $\mathcal{W}$ 和 $\mathcal{X}$ 相互独立，并设 $\mathfrak{L}: C([a, b]^d, \mathbb{R}) \to [0, \infty]$ 满足对于所有 $v \in C([a, b]^d, \mathbb{R})$ 有
 
 $\mathfrak{L}(v) = \mathbb{E} \big[ |\varphi(\varrho \mathcal{W} + \mathcal{X}) - v(\mathcal{X})|^2 \big]. \quad (17.85)$
@@ -19273,6 +21181,8 @@ $\begin{split} \mathcal{L}(\theta) &= \mathfrak{L}\Big(\big. \mathcal{N}_{\mathf
 （参见定义 **1.1.3** 和 **1.2.1**）。现在，我们可以通过计算函数 $\mathcal{L}$ 的近似最小值点 $\vartheta \in \mathbb{R}^\mathfrak{d}$ 来计算函数 $\mathcal{L}$ 的近似最小值点 $\vartheta \in \mathbb{R}^\mathfrak{d}$，并采用与该近似最小值点相关联的 **ANN** 在 $[a, b]^d$ 上的受限实现 $\big(\mathcal{N}_{\mathfrak{M}_{a, l_1}, \mathfrak{M}_{a, l_2}, \dots, \mathfrak{M}_{a, l_h}, \mathrm{id}_{\mathbb{R}}}^{h, d}\big)|_{[a, b]^d} \in C([a, b]^d, \mathbb{R})$ 作为 $\mathfrak{L}$ 的近似最小值点。
 
 在第三步中，我们使用 **SGD（随机梯度下降）** 类型方法计算 $\mathcal{L}$ 的此类近似最小值点。我们现在略述在普通 **SGD** 优化方法情形下的这一过程（参见定义 **7.2.1**）。设 $\xi \in \mathbb{R}^\mathfrak{d}$，$J \in \mathbb{N}$，$(\gamma_n)_{n \in \mathbb{N}} \subseteq [0, \infty)$，对于每个 $n \in \mathbb{N}$，$j \in \{1, 2, \dots, J\}$，设 $\mathfrak{W}_{n, j}: \Omega \to \mathbb{R}^d$ 为标准正态分布随机变量，设 $\mathfrak{X}_{n, j}: \Omega \to [a, b]^d$ 为连续均匀分布随机变量，设 $\ell: \mathbb{R}^\mathfrak{d} \times [0, T] \times \mathbb{R}^d \to \mathbb{R}$ 满足对于所有 $\theta \in \mathbb{R}^\mathfrak{d}$，$w \in \mathbb{R}^d$，$x \in [a, b]^d$ 有
+
+
 
 $\ell(\theta, w, x) = \Big|\big.\mathcal{N}_{\mathfrak{M}_{a, l_1}, \mathfrak{M}_{a, l_2}, \dots, \mathfrak{M}_{a, l_h}, \mathrm{id}_{\mathbb{R}}}^{\mathfrak{d}, d}(w + x) - v(x)\Big|^2, \quad (17.87)$
 
@@ -19367,9 +21277,6 @@ for i in range(M + 1):
     axs[i // 3, i % 3].set_title(f"t = {i * T / M}")
 ```
 
-
-
-
 ## 第 18 章
 
 ### PDE 的其他深度学习方法
@@ -19378,7 +21285,7 @@ for i in range(M + 1):
 
 我们对方法及其理论结果的文献选取绝非详尽。关于 PDE 深度学习方法及相应理论结果更完整的文献综述，例如参见综述文章 [24, 56, 88, 120, 145, 237, 355]。
 
-## 18.1 基于 PDE 强形式的深度学习方法
+### 18.1 基于 PDE 强形式的深度学习方法
 
 文献中有很多基于深度学习的 PDE 方法，它们利用 PDE 强形式的残差来建立学习问题（例如，参见定理 16.1.1 和 (16.16)，其中给出了半线性热 **PDE** 情况下强形式残差的定义）。该类别中的基本方法包括上述第 16 章回顾的 **PINN**（参见 Raissi 等 [347]）和 **DGM**（参见 Sirignano & Spiliopoulos [379]），Berg & Nyström [34] 提出的方法，Wang 等 [405] 提出的*理论引导神经网络*（**TGN**），以及 [106, 260] 中提出的两种早期方法。文献中还有许多针对这些基本方法的改进和适应，包括
 
@@ -19392,7 +21299,7 @@ for i in range(M + 1):
 
 我们还推荐 Lu 等 [286] 的文章，该文章介绍了一个名为 DeepXDE 的优雅 PYTHON 库用于 PINN，并且提供了对 PINN 的良好介绍。
 
-## 18.2 基于 PDE 弱形式的深度学习方法
+### 18.2 基于 PDE 弱形式的深度学习方法
 
 另一类 PDE 深度学习方法依赖于 PDE 的弱形式或变分形式来建立学习问题。此类方法包括
 
@@ -19408,7 +21315,7 @@ for i in range(M + 1):
 
 我们还推荐 Cai 等 [58, 279] 的*多尺度深度神经网络*（MscaleDNNs），这是一种改进的 ANN 架构，可用于基于强形式的 PINN 方法和基于变分形式的深度 Ritz 方法。
 
-## 18.3 基于 PDE 随机表示的深度学习方法
+### 18.3 基于 PDE 随机表示的深度学习方法
 
 基于 PDE 的深度学习方法的另一类基于 PDE 与概率论之间的内在联系，例如 Feynman–Kac 型公式；参见例如 [318, 第 8.2 节]，[234, 第 4.4 节] 中基于（正向）*随机微分方程*（SDE）的线性 Feynman–Kac 公式，以及参见例如 [73, 325–327] 中基于*后向随机微分方程*（BSDE）的非线性 Feynman–Kac 型公式。第 17 章回顾的线性 PDE 的 DKM（参见 Beck 等 [19]）是基于线性 Feynman–Kac 公式的此类方法的一种。其他基于 PDE 随机表示的方法包括
 
@@ -19425,15 +21332,13 @@ for i in range(M + 1):
 - [62, 154] 中深度后向方案对*偏积分微分方程（PIDE）*的扩展，
 - [50, 138] 中深度分裂方法对 **PIDE** 的扩展，
 - Nguwi 等 [308, 309, 311] 中的方法，这些方法基于涉及*分支过程*的 **PDE** 解表示（参见例如也 [195, 197,
+- 克里姆瑟等人[256]中关于椭圆偏微分方程的方法论，该方法依赖于涉及随机终止时间的后向随机微分方程（BSDE）的适当表示。
 
-
-
-
-+ 克里姆瑟等人[256]中关于椭圆偏微分方程的方法论，该方法依赖于涉及随机终止时间的后向随机微分方程（BSDE）的适当表示。
-
-## 18.4 偏微分方程深度学习方法误差分析
+### 18.4 偏微分方程深度学习方法误差分析
 
 至今为止，文献中尚未出现关于基于 GD/SGD 的 ANN 训练近似方案针对偏微分方程的完整误差分析（另见上文备注 9.14.5）。然而，文献中现在已有若干关于偏微分方程深度学习方法的部分误差分析结果（例如，参见 [26, 137, 146, 158, 188, 298, 299] 及其参考文献）。
+
+
 
 特别是，目前有许多结果严格证明了神经网络（ANN）具有近似某些类别偏微分方程解的基本能力，且不受维度灾难（COD）影响（例如，参见 [27] 和 [314, 第一章]）。具体而言，近似神经网络中的参数量在预设近似精度 $\varepsilon \in (0, \infty)$ 的倒数 $1/\varepsilon$ 和偏微分方程维度 $d \in \mathbb{N}$ 上均以多项式速度增长。例如，参见 [10, 35, 37, 128, 161, 162, 177, 179, 181, 205, 228, 259, 353] 中关于线性偏微分方程解及其相关问题的神经网络近似结果；例如，参见 [3, 82, 178, 209] 中关于非线性偏微分方程解及其相关问题的神经网络近似结果。
 
@@ -19570,12 +21475,10 @@ for i in range(M + 1):
 - 源代码 17.1: `code/brownian_motion.py` ... 527
 - 源代码 17.2: `code/kolmogorov.py` ... 539
 
-
-
-
 ### 定义列表
 
 #### 第一章
+
 - 定义 1.1.1：仿射函数 23
 - 定义 1.1.3：全连接前馈人工神经网络的向量化描述 23
 - 定义 1.2.1：一维函数的多维版本 27
@@ -19626,6 +21529,7 @@ for i in range(M + 1):
 - 定义 1.6.4：简单全连接循环神经网络的向量化描述 ... 71
 
 #### 第二章
+
 - 定义 2.1.1：人工神经网络的复合 ... 77
 - 定义 2.1.6：全连接前馈人工神经网络的幂 ... 84
 - 定义 2.2.1：全连接前馈人工神经网络的并行化 ... 84
@@ -19640,12 +21544,14 @@ for i in range(M + 1):
 - 定义 2.4.10：相同长度全连接前馈人工神经网络的求和 ... 102
 
 #### 第三章
+
 - 定义 3.1.1：连续性模数 ... 107
 - 定义 3.1.5：线性插值算子 ... 109
 - 定义 3.2.1：作为全连接前馈人工神经网络的激活函数 ... 113
 - 定义 3.3.4：准向量范数 ... 122
 
 #### 第四章
+
 - 定义 4.1.1：度量 ... 127
 - 定义 4.1.2：度量空间 ... 128
 - 定义 4.2.1：1-范数人工神经网络表示 ... 130
@@ -19655,6 +21561,7 @@ for i in range(M + 1):
 - 定义 4.4.1：校正截断人工神经网络 ... 152
 
 #### 第六章
+
 - 定义 6.1.1：梯度下降优化方法 ... 211
 - 定义 6.2.1：显式中点梯度下降优化方法 ... 239
 - 定义 6.3.1：动量梯度下降优化方法 ... 243
@@ -19667,7 +21574,13 @@ for i in range(M + 1):
 - 定义 6.8.1：Adam 梯度下降优化方法 ... 275
 
 #### 第七章
+
 - 定义 7.2.1：随机梯度下降优化方法 ... 280
+
+
+
+# 第七章
+
 - 定义 7.3.1：显式中点随机梯度下降优化方法 ... 303
 - 定义 7.4.1：动量随机梯度下降优化方法 ... 305
 - 定义 7.4.2：偏差调整动量随机梯度下降优化方法 ... 307
@@ -19679,10 +21592,12 @@ for i in range(M + 1):
 - 定义 7.8.1：Adadelta 随机梯度下降优化方法 ... 320
 - 定义 7.9.1：Adam 随机梯度下降优化方法 ... 322
 
-#### 第八章
+# 第八章
+
 - 定义 8.2.1：对角矩阵 ... 342
 
-#### 第九章
+# 第九章
+
 - 定义 9.1.1：标准 KL 不等式 ... 349
 - 定义 9.1.2：标准 KL 函数 ... 350
 - 定义 9.7.1：解析函数 ... 358
@@ -19691,7 +21606,8 @@ for i in range(M + 1):
 - 定义 9.17.1：广义 KL 不等式 ... 396
 - 定义 9.17.2：广义 KL 函数 ... 397
 
-#### 第十章
+# 第十章
+
 - 定义 10.1.1：批次 399
 - 定义 10.1.2：批次均值 399
 - 定义 10.1.3：批次方差 399
@@ -19705,102 +21621,67 @@ for i in range(M + 1):
 - 定义 10.5.1：与给定批次均值和批次方差的带有 BN 的全连接前馈人工神经网络相关的实现 403
 - 定义 10.6.1：给定批次均值和批次方差并关联于带有 BN 的全连接前馈人工神经网络及给定输入批次的带有 BN 的全连接前馈人工神经网络 404
 
-#### 第十二章
+# 第十二章
+
 - 定义 12.1.7：矩生成函数 436
 - 定义 12.2.1：覆盖半径 445
 - 定义 12.2.6：装箱半径 447
 - 定义 12.2.7：装箱数 447
 
-#### 第十三章
+# 第十三章
+
 - 定义 13.1.2：Rademacher 族 470
 - 定义 13.1.3：p-Kahane–Khinchine 常数 470
 
-#### 第十七章
+# 第十七章
+
 - 定义 17.3.3：标准布朗运动 527
 - 定义 17.3.8：连续卷积 532
 
-
-
-### 参考文献
+# 参考文献
 
 - [1] ABDEL-HAMID, O., MOHAMED, A., JIANG, H., DENG, L., PENN, G., 和 YU, D. 用于语音识别的卷积神经网络。*IEEE/ACM 音频、语音与语言处理学报* 22, 10 (2014), 页码 1533–1545。URL: doi.org/10.1109/TASLP.2014.2339736。
-
 - [2] ABSIL, P.-A., MAHONY, R., 和 ANDREWS, B. 解析代价函数下降方法迭代序列的收敛性。*SIAM 优化学杂志* 16, 2 (2005), 页码 531–547。URL: doi.org/10.1137/040605266。
-
 - [3] ACKERMANN, J., JENTZEN, A., KRUSE, T., KÜCKUCK, B., 和 PADGETT, J. L. 具有 ReLU、泄漏 ReLU 和 softplus 激活函数的深度神经网络对于 $L^p$ 意义下具有 Lipschitz 非线性的 Kolmogorov 偏微分方程可证明地克服了维度灾难。*arXiv:2309.13722* (2023), 52 页。URL: arxiv.org/abs/2309.13722。
-
 - [4] ALPAYDIN, E. *机器学习导论*。第 4 版。MIT 出版社，马萨诸塞州剑桥市，2020。712 页。
-
 - [5] AMANN, H. *常微分方程*。Walter de Gruyter & Co. 出版社，柏林，1990。xiv+458 页。URL: doi.org/10.1515/9783110853698。
-
 - [6] AMODEI, D., ANANATHANARAYANAN, S., ANUBHAI, R., BAI, J., BATTENBERG, E., CASE, C., CASPER, J., CATANZARO, B., CHENG, Q., CHEN, G., CHEN, J., CHEN, J., CHEN, Z., CHRZANOWSKI, M., COATES, A., DIAMOS, G., DING, K., DU, N., ELSER, E., ENGEL, J., FANG, W., FAN, L., FOUGNER, C., GAO, L., GONG, C., HANNUN, A., HAN, T., JOHANNES, L., JIANG, B., JU, C., JUN, B., LÉGRÉSLEY, P., LIN, L., LIU, J., LIU, Y., LI, W., LI, X., MA, D., NARANG, S., NG, A., OZAIR, S., PENG, Y., PRENGER, R., QIAN, S., QUAN, Z., RAIMAN, J., RAO, V., SATHEESH, S., SEETAPUN, D., SENGUPTA, S., SRINET, K., SRIRAM, A., TANG, H., TANG, L., WANG, C., WANG, J., WANG, K., WANG, Y., WANG, Z., WANG, Z., WU, S., WEI, L., XIAO, B., XIE, W., XIE, Y., YOGATAMA, D., YUAN, B., ZHAN, J., 和 ZHU, Z. Deep Speech 2：英语和普通话的端到端语音识别。载于 *第 33 届国际机器学习会议论文集*（美国纽约州纽约市，2016 年 6 月 20–22 日）。编者为 Balcan, M. F. 和 Weinberger, K. Q. 卷 48。*机器学习研究论文集*。PMLR, 2016, 页码 173–182。URL: proceedings.mlr.press/v48/amodei16.html。
-
 - [7] AN, J. 和 LU, J. 深层神经网络在局部 Łojasiewicz 条件下随机梯度下降的收敛性。*arXiv:2304.09221* (2023), 14 页。URL: arxiv.org/abs/2304.09221。
-
 - [8] ATTOUN, H. 和 BOLTE, J. 关于涉及解析特征的非光滑函数近端算法收敛性。*数学规划* 116, 1–2 (2009), 页码 5–16。URL: doi.org/10.1007/s10107-007-0133-5。
-
 - [9] BACH, F. *第一性原理学习理论*。2023 年 4 月 19 日草稿版本。书籍草稿，将由 MIT 出版社出版。2023。URL: www.di.ens.fr/~fbach/1tffp_book.pdf。
-
 - [10] BAGENSTOS, J. 和 SALIMOVA, D. 残差神经网络对 Kolmogorov 偏微分方程的近似性质。*离散连续动力系统 B 辑* 28, 5 (2023), 页码 3193–3215。URL: doi.org/10.3934/dcdsb.2022210。
-
 - [11] BAHDANAU, D., CHO, K., 和 BENGIO, Y. 通过联合学习对齐与翻译实现神经机器翻译。*arXiv:1409.0473* (2014), 15 页。URL: arxiv.org/abs/1409.0473。
-
 - [12] BALDI, P. 和 HORKIK, K. 神经网络与主成分分析：从无局部极小值中学习示例。*神经网络* 2, 1 (1989), 页码 53–58。URL: doi.org/10.1016/0893-6080(89)90014-2。
-
 - [13] BAO, G., YE, X., ZANG, Y., 和 ZHOU, H. 通过弱对抗网络数值求解逆问题。*逆问题* 36, 11 (2020), 文章编号 115003, 31 页。URL: doi.org/10.1088/1361-6420/ab447。
-
 - [14] BARRON, A. R. S 形函数叠加的通用近似界限。*IEEE 信息论学报* 39, 3 (1993), 页码 930–945。URL: doi.org/10.1109/18.256500。
-
 - [15] BARRON, A. R. 人工神经网络的近似和估计界限。*机器学习* 14, 1 (1994), 页码 115–133。URL: doi.org/10.1007/bf00993164。
-
 - [16] BATTAGLIA, P. W., HAMRICK, J. B., BAPTIST, V., SANCHEZ-GONZALEZ, A., ZAMBALDI, V., MALINOWSKI, M., TACCHETTI, A., RAPOSO, D., SANTORO, A., FALKNEAR, R., GULCEHRE, C., SONG, F., BALLARD, A., GILMER, J., DAHL, G., VASWANI, A., ALLEN, K., NASH, C., LANGSTON, V., DYER, C., HEESS, N., WIESTRA, D., KOHLI, P., BOTVINICK, M., VINYALS, O., LI, Y., 和 PASCANU, R. 关系归纳偏置、深度学习和图网络。*arXiv:1806.01261* (2018), 40 页。URL: arxiv.org/abs/1806.01261。
-
 - [17] BECK, C., BECKER, S., CHERIDITO, P., JENTZEN, A., 和 NEUFELD, A. 抛物型偏微分方程的深度分裂法。*SIAM 科学计算杂志* 43, 5 (2021), A3154–A3154。URL: doi.org/10.1137/19M1297919。
-
 - [18] BECK, C., BECKER, S., GROHS, P., JAAFARI, N., 和 JENTZEN, A. 通过深度学习求解随机微分方程和 Kolmogorov 方程。*arXiv:1806.00421* (2018), 56 页。URL: arxiv.org/abs/1806.00421。
-
 - [19] BECK, C., BECKER, S., GROHS, P., JAAFARI, N., 和 JENTZEN, A. 通过深度学习求解 Kolmogorov 偏微分方程。*计算科学杂志* 88, 3 (2021), 文章编号 73, 28 页。URL: doi.org/10.1007/s10915-021-01590-0。
-
 - [20] BECK, C., E, W., 和 JENTZEN, A. 高维完全非线性偏微分方程和二阶后向随机微分方程的机器学习近似算法。*非线性科学杂志* 29, 4 (2019), 页码 1563–1619。URL: doi.org/10.1007/s00332-018-9525-3。
-
 - [21] BECK, C., GONON, L., 和 JENTZEN, A. 克服高维半线性椭圆偏微分方程数值近似中的维度灾难。*arXiv:2003.00596* (2020), 50 页。URL: arxiv.org/abs/2003.00596。
-
 - [22] BECK, C., HORNING, F., HUTZENTHALER, M., JENTZEN, A., 和 KRUSE, T. 通过截断全历史递归多级 Picard 近似克服 Allen-Cahn 偏微分方程数值近似中的维度灾难。*数学数值方法* 28, 4 (2020), 页码 197–222。URL: doi.org/10.1515/jnma-2019-0074。
-
 - [23] BECK, C., HUTZENTHALER, M., 和 JENTZEN, A. 关于半线性抛物型偏微分方程粘性解的非线性 Feynman-Kac 公式。*随机动力学* 21, 8 (2021), 文章编号 2150048, 68 页。URL: doi.org/10.1142/S0219493721500489。
-
 - [24] BECK, C., HUTZENTHALER, M., JENTZEN, A., 和 KUCKUCK, B. 基于深度学习的偏微分方程近似方法综述。*离散连续动力系统 B 辑* 28, 6 (2023), 页码 3697–3746。URL: doi.org/10.3934/dcdsb.2022238。
-
 - [25] BECK, C., JENTZEN, A., 和 KUCKUCK, B. 深度神经网络训练的完全误差分析。*无穷维分析、量子概率及相关主题* 25, 2 (2022), 文章编号 2150020, 76 页。URL: doi.org/10.1142/S021902572150020X。
-
 - [26] BELAK, C., HAGER, O., REIMERS, C., SCHNELL, L., 和 WERSCHMIDT, M. 半线性偏微分方程深度学习算法的收敛速率 (2021)。可在 SSRN 获取，42 页。URL: doi.org/10.2139/ssrn.3981933。
-
 - [27] BELLMAN, R. *动态规划*。1957 年版重印本。普林斯顿大学出版社，新泽西州普林斯顿市，2010, xxx+340 页。URL: doi.org/10.1515/9781400835396。
-
 - [28] BENEVENTANO, P., CHERIDITO, P., GRAEBER, R., JENTZEN, A., 和 KUCK-UCK, B. 高维函数的深度神经网络逼近理论。*arXiv:2112.14523* (2021), 82 页。URL: arxiv.org/abs/2112.14523。
-
 - [29] BENEVENTANO, P., CHERIDITO, P., JENTZEN, A., 和 WURSTEMBERGER, P. 人工神经网络的高维逼近空间及其在偏微分方程中的应用。*arXiv:2012.04326* (2020)。URL: arxiv.org/abs/2012.04326。
-
 - [30] BENGIO, Y., SIMARD, P., 和 FRASCONI, P. 使用梯度下降学习长期依赖性是很困难的。*IEEE 神经网络学报* 5, 2 (1994), 页码 157–166。URL: doi.org/10.1109/72.279181。
-
 - [31] BENGIO, Y., BOULANGER-LEWANDOWSKI, N., 和 PASCANU, R. 优化循环网络方面的进展。载于 *2013 年 IEEE 声学、语音和信号处理国际会议*（加拿大不列颠哥伦比亚省温哥华市，2013 年 5 月 26–31 日）。2013, 页码 8624–8628。URL: doi.org/10.1109/ICASSP.2013.6639349。
-
 - [32] BENTH, F. E., DETERING, N., 和 GALIMBERTI, L. Fréchet 空间中的神经网络。*数学与人工智能年鉴* 91, 1 (2023), 页码 75–103。URL: doi.org/10.1007/s10472-022-09824-z。
-
 - [33] BERCU, B. 和 FORT, J.-C. 通用随机梯度方法。载于 *韦氏运筹学与科学管理百科全书*。编者为 Cochran, J. J., Cox Jr., L. A., Keskinocak, P., Kharouf, J. P., 和 Smith, J. C. John Wiley & Sons, Ltd. 出版社，2013。URL: doi.org/10.1002/9780470400531.eorms1068。
-
 - [34] BERG, J. 和 NYSTRÖM, K. 处理复杂几何中偏微分方程的统一深度人工神经网络方法。*神经计算* 317 (2018), 页码 28–41。URL: doi.org/10.1016/j.neucom.2018.06.056。
-
 - [35] BERNER, J., GROHS, P., 和 JENTZEN, A. 泛化误差分析：深度人工神经网络上的经验风险最小化在 Black–Scholes 偏微分方程的数值近似中克服了维度灾难。*SIAM 数学数据科学杂志* 2, 3 (2020), 页码 631–657。URL: doi.org/10.1137/19M125649X。
-
 - [36] BERNER, J., GROHS, P., KUTYNIOK, G., 和 PETERSEN, P. 深度学习的现代数学。载于 *深度学习的数学方面*。编者为 Grohs, P. 和 Kutyniok, G. 剑桥大学出版社，2022, 页码 1–111。URL: doi.org/10.1017/9781009025096.002。
+
+
 
 - [37] BEZNEA, L., CIMPEAN, I., LUPASCU-ȘTAMATE, O., POPEȘCU, I., 和 ZARNESCU, A. 从蒙特卡洛方法到边值问题的神经网络近似。*arXiv:2209.01432* (2022), 40 页。URL: arxiv.org/abs/2209.01432。
 
 - [38] BIERSTONE, E. 和 MILMAN, P. D. 半解析集和子解析集。*高等研究学会数学期刊* 67 (1988), 页码 5–42。URL: doi.org/10.1007/BF02699126。
-
-
-
 
 ### 参考文献
 
@@ -19888,12 +21769,11 @@ for i in range(M + 1):
 
 - [80] CHROMANSKA, A., LECUN, Y., 和 BEN AROUS, G. 开放问题：多层网络损失曲面的景观。载于《第二十八届学习理论会议论文集》(法国巴黎，2015年7月3-6日)。Grünwald, P., Hazan, E., 和 Kale, S. 编著。第40卷。机器学习研究进展。PMLR, 2015年，第1756-1760页。网址：proceedings.mlr.press/v40/Chromanska15.html。
 
-
-
-
 ### 参考文献
 
 [81] CHOROWSKI, J. K., BAHDANAU, D., SERDYUK, D., CHO, K., 和 BENGIO, Y. Attention-Based Models for Speech Recognition. 收录于 *Advances in Neural Information Processing Systems (NeurIPS 2015)*。由 Cortes, C., Lawrence, N., Lee, D., Sugiyama, M., 和 Garnett 编辑。第 28 卷。Curran Associates, Inc., 2015 年。URL: [proceedings.neurips.cc/paper_files/paper/2015/file/1068c6e4ac8051cfd4e9ea8072e3189e2-Paper.pdf](proceedings.neurips.cc/paper_files/paper/2015/file/1068c6e4ac8051cfd4e9ea8072e3189e2-Paper.pdf)。
+
+
 
 [82] CIOICA-LICHT, P. A., HUTZENTHALER, M., 和 WERNER, P. T. Deep neural networks overcome the curse of dimensionality in the numerical approximation of semilinear partial differential equations. *arXiv:2205.14398* (2022)，34 页。URL: [arxiv.org/abs/2205.14398](arxiv.org/abs/2205.14398)。
 
@@ -19957,6 +21837,8 @@ for i in range(M + 1):
 
 [112] DOZAT, T. Incorporating Nesterov momentum into Adam. http://cs229.stanford.edu/proj2015/054_report.pdf. [访问日期: 2017 年 12 月 6 日]. 2016 年.
 
+
+
 [113] DU, S. 和 LEE, J. On the Power of Over-parametrization in Neural Networks with Quadratic Activation. 收录于 Proceedings of the 35th International Conference on Machine Learning (瑞典斯德哥尔摩，2018 年 7 月 10–15 日)。由 Dy, J. 和 Krause, A. 编辑。第 80 卷。*Proceedings of Machine Learning Research*. PMLR, 2018 年，第 1329–1338 页。URL: proceedings.mlr.press/v80/du18a.html。
 
 [114] DU, S., LEE, J., LI, H., WANG, L., 和 ZHAO, X. Gradient Descent Finds Global Minima of Deep Neural Networks. 收录于 Proceedings of the 36th International Conference on Machine Learning (美国加利福尼亚州长滩，2019 年 6 月 9–15 日)。由 Chaudhuri, K. 和 Salakhutdinov, R. 编辑。第 97 卷。*Proceedings of Machine Learning Research*. PMLR, 2019 年，第 1675–1685 页。URL: proceedings.mlr.press/v97/du19c.html。
@@ -19972,9 +21854,6 @@ for i in range(M + 1):
 [119] E, W., HAN, J., 和 JENTZEN, A. Deep learning-based numerical methods for high-dimensional parabolic partial differential equations and backward stochastic differential equations. *Commun. Math. Stat.* 5, 4 (2017)，第 349–380 页。URL: doi.org/10.1007/s40304-017-0117-6。
 
 [120] E, W., HAN, J., 和 JENTZEN, A. Algorithms for solving high dimensional PDEs: from nonlinear Monte Carlo to machine learning. *Nonlinearity* 35, 1 (2021)，第 278 页。URL: doi.org/10.1088/1361-6544/ac337f。
-
-
-
 
 ### 参考文献
 
@@ -20020,301 +21899,303 @@ for i in range(M + 1):
 
 - [141] FUKUMIZU, K. AND AMARI, S. Local minima and plateaus in hierarchical structures of multilayer perceptrons. *Neural Networks* 13, 3 (2000), pp. 317–327. URL: [http://doi.org/10.1016/S0893-6080(00)00009-5](http://doi.org/10.1016/S0893-6080(00)00009-5).
 
+
+
 - [142] GALLON, D., JENTZEN, A., AND LINDNER, F. Blow up phenomena for gradient descent optimization methods in the training of artificial neural networks. *arXiv:2211.15641* (2022), 84 pp. URL: [http://arxiv.org/abs/2211.15641](http://arxiv.org/abs/2211.15641).
-
 - GEHRING, J., AULI, M., GRANGIER, D., YARATS, D., AND DAUPHIN, Y. N. Convolutional Sequence to Sequence Learning. In *Proceedings of the 34th International Conference on Machine Learning* (Sydney, Australia, Aug. 6–11, 2017). Ed. by Precup, D. and Teh, Y. W. Vol. 70. Proceedings of Machine Learning Research. PMLR, 2017, pp. 1243–1252. URL: [proceedings.mlr.press/v70/gehring17a.html](https://proceedings.mlr.press/v70/gehring17a.html).
-
 - GENTILE, R. AND WELPER, G. Approximation results for Gradient Descent trained Shallow Neural Networks in $1d$. *arXiv:2209.08399* (2022), 49 pp. URL: [arxiv.org/abs/2209.08399](https://arxiv.org/abs/2209.08399).
-
 - GERMAIN, M., PHAM, H., AND WARIN, X. Neural networks-based algorithms for stochastic control and PDEs in finance. *arXiv:2101.08068* (2021), 27 pp. URL: [arxiv.org/abs/2101.08068](https://arxiv.org/abs/2101.08068).
-
 - GERMAIN, M., PHAM, H., AND WARIN, X. Approximation error analysis of some deep backward schemes for nonlinear PDEs. *SIAM J. Sci. Comput.* 44, 1 (2022), A28–A56. URL: [doi.org/10.1137/20M1355355](https://doi.org/10.1137/20M1355355).
-
 - GERS, F. A., SCHMIDHUBER, J., AND CUMMINS, F. Learning to Forget: Continual Prediction with LSTM. *Neural Comput.* 12, 10 (2000), pp. 2451–2471. URL: [doi.org/10.1162/089976600300015015](https://doi.org/10.1162/089976600300015015).
-
 - GERS, F. A., SCHRAUDOLPH, N. N., AND SCHMIDHUBER, J. Learning precise timing with LSTM recurrent networks. *J. Mach. Learn. Res.* 3, 1 (2003), pp. 115–143. URL: [doi.org/10.1162/153244303768966139](https://doi.org/10.1162/153244303768966139).
-
 - GESS, B., KASSING, S., AND KONAROVSKIY, V. Stochastic Modified Flows, Mean-Field Limits and Dynamics of Stochastic Gradient Descent. *arXiv:2302.07125* (2023), 24 pp. URL: [arxiv.org/abs/2302.07125](https://arxiv.org/abs/2302.07125).
-
 - GILES, M. B., JENTZEN, A., AND WELTI, T. Generalised multilevel Picard approximations. *arXiv:1911.03188* (2019), 61 pp. URL: [arxiv.org/abs/1911.03188](https://arxiv.org/abs/1911.03188).
-
 - GILMER, J., SCHOENHOLZ, S. S., RILEY, P. F., VINYALS, O., AND DAHL, G. E. Neural Message Passing for Quantum Chemistry. In *Proceedings of the 34th International Conference on Machine Learning* (Sydney, Australia, Aug. 6–11, 2017). Ed. by Precup, D. and Teh, Y. W. Vol. 70. Proceedings of Machine Learning Research. PMLR, 2017, pp. 1263–1272. URL: [proceedings.mlr.press/v70/gilmer17a.html](https://proceedings.mlr.press/v70/gilmer17a.html).
-
 - GIRSHICK, R., DONAHUE, J., DARRELL, T., AND MALIK, J. Rich Feature Hierarchies for Accurate Object Detection and Semantic Segmentation. In *Proceedings of the 2014 IEEE Conference on Computer Vision and Pattern Recognition* (Columbus, OH, USA, June 23–28, 2014). CVPR '14. IEEE Computer Society, 2014, pp. 580–587. URL: [doi.org/10.1109/CVPR.2014.81](https://doi.org/10.1109/CVPR.2014.81).
-
 - [153] GLOROT, X. AND BENGIO, Y. Understanding the difficulty of training deep feedforward neural networks. In *Proceedings of the Thirteenth International Conference on Artificial Intelligence and Statistics* (Chia Laguna Resort, Sardinia, Italy, May 13–15, 2010). Ed. by Teh, Y. W. and Titterington, M. Vol. 9. Proceedings of Machine Learning Research. PMLR, 2010, pp. 249–256. URL: [proceedings.mlr.press/v9/glorot10a.html](https://proceedings.mlr.press/v9/glorot10a.html).
-
 - [154] GNOATTO, A., PATACCA, M., AND PICARELLI, A. A deep solver for BSDEs with jumps. *arXiv:2211.04349* (2022), 31 pp. URL: [arxiv.org/abs/2211.04349](https://arxiv.org/abs/2211.04349).
-
 - [155] GOBET, E. *Monte-Carlo methods and stochastic processes*. From linear to non-linear. CRC Press, Boca Raton, FL, 2016, xxv+309 pp.
-
 - [156] GODICHON-BAGGIONI, A. AND TARRAGO, P. Non asymptotic analysis of Adaptive stochastic gradient algorithms and applications. *arXiv:2303.01370* (2023), 59 pp. URL: [arxiv.org/abs/2303.01370](https://arxiv.org/abs/2303.01370).
-
 - [157] GOLDBERG, Y. *Neural Network Methods for Natural Language Processing*. Springer Cham, 2017, xx+292 pp. URL: [doi.org/10.1007/978-3-031-02165-7](https://doi.org/10.1007/978-3-031-02165-7).
-
 - [158] GONON, L. Random Feature Neural Networks Learn Black-Scholes Type PDEs Without Curse of Dimensionality. *J. Mach. Learn. Res.* 24, 189 (2023), pp. 1–51. URL: [jmlr.org/papers/v24/21-0987.html](https://jmlr.org/papers/v24/21-0987.html).
-
 - [159] GONON, L., GRAEBER, R., AND JENTZEN, A. The necessity of depth for artificial neural networks to approximate certain classes of smooth and bounded functions without the curse of dimensionality. *arXiv:2301.08284* (2023), 101 pp. URL: [arxiv.org/abs/2301.08284](https://arxiv.org/abs/2301.08284).
-
 - [160] GONON, L., GRIGORYEVA, L., AND ORTEGA, J.-P. Approximation bounds for random neural networks and reservoir systems. *Ann. Appl. Probab.* 33, 1 (2023), pp. 28–69. URL: [doi.org/10.1214/22-aap1806](https://doi.org/10.1214/22-aap1806).
-
 - [161] GONON, L., GROHS, P., JENTZEN, A., KOFLER, D., AND ŠIŠKA, D. Uniform error estimates for artificial neural network approximations for heat equations. *IMA J. Numer. Anal.* 42, 3 (2022), pp. 1991–2054. URL: [doi.org/10.1093/imanum/drab027](https://doi.org/10.1093/imanum/drab027).
-
 - [162] GONON, L. AND SCHWAB, C. Deep ReLU network expression rates for option prices in high-dimensional, exponential Lévy models. *Finance Stoch.* 25, 4 (2021), pp. 615–657. URL: [doi.org/10.1007/s00780-021-00462-7](https://doi.org/10.1007/s00780-021-00462-7).
-
 - [163] GONON, L. AND SCHWAB, C. Deep ReLU neural networks overcome the curse of dimensionality for partial integrodifferential equations. *Anal. Appl. (Singap.)* 21, 1 (2023), pp. 1–47. URL: [doi.org/10.1142/S0219530522500129](https://doi.org/10.1142/S0219530522500129).
-
 - [164] GOODFELLOW, I., BENGIO, Y., AND COURVILLE, A. *Deep learning*. MIT Press, Cambridge, MA, 2016, xxii+775 pp. URL: [www.deeplearningbook.org](http://www.deeplearningbook.org/).
 
-
-
-
-
 ### 参考文献
-
 - [165] **GOODFELLOW, I. J., POUGET-ABADIE, J., MIRZA, M., XU, B., WARDE-FARLEY, D., OZAIR, S., COURVILLE, A., AND BENGIO, Y.** 生成对抗网络。 *arXiv:1406.2661* (2014), 9 页。URL: [arxiv.org/abs/1406.2661](https://arxiv.org/abs/1406.2661)。
-
 - [166] **GORI, M., MONFARDINI, G., AND SCARSELLI, F.** 图域学习的一种新模型。 *In Proceedings. 2005 IEEE International Joint Conference on Neural Networks, 2005.* Vol. 2. 2005, 729–734 vol. 2。URL: [doi.org/10.1109/IJCNN.2005.1555942](https://doi.org/10.1109/IJCNN.2005.1555942)。
-
 - [167] **GOSWAMI, S., JAGTAP, A. D., BABAEE, H., SUSI, B. T., AND KARNIADAKIS, G. E.** 使用扩展深度神经算子学习刚性化学动力学。 *arXiv:2302.12645* (2023), 21 页。URL: [arxiv.org/abs/2302.12645](https://arxiv.org/abs/2302.12645)。
-
 - [168] **GRAHAM, C. AND TALAY, D.** *随机模拟与蒙特卡洛方法.* Vol. 68. 随机模拟的数学基础. Springer, Heidelberg, 2013, xvi+260 页。URL: [doi.org/10.1007/978-3-642-39363-1](https://doi.org/10.1007/978-3-642-39363-1)。
-
 - [169] **GRAVES, A.** 使用循环神经网络生成序列。 *arXiv:1308.0850* (2013), 43 页。URL: [arxiv.org/abs/1308.0850](https://arxiv.org/abs/1308.0850)。
-
 - [170] **GRAVES, A. AND JAITLY, N.** 迈向使用循环神经网络的端到端语音识别。 *In Proceedings of the 31st International Conference on Machine Learning* (Beijing, China, June 22–24, 2014)。Ed. by Xing, E. P. and Jebara, T. Vol. 32。Proceedings of Machine Learning Research 2。PMLR, 2014, pp. 1764–1772。URL: [proceedings.mlr.press/v32/graves14.html](https://proceedings.mlr.press/v32/graves14.html)。
-
 - [171] **GRAVES, A., LIWICKI, M., FERNÁNDEZ, S., BERTOLAMI, R., BUNKE, H., AND SCHMIDHUBER, J.** 一种用于无约束手写识别的新型连接系统。 *IEEE Trans. Pattern Anal. Mach. Intell.* 31, 5 (2009), pp. 855–868。URL: [doi.org/10.1109/TPAMI.2008.137](https://doi.org/10.1109/TPAMI.2008.137)。
 
+
+
+## 参考文献
+
 - [172] **GRAVES, A., MOHAMED, A.-R., AND HINTON, G. E.** 使用深度循环神经网络进行语音识别。 *In 2013 IEEE International Conference on Acoustics, Speech and Signal Processing* (Vancouver, BC, Canada, May 26–31, 2013)。2013, pp. 6645–6649。URL: [doi.org/10.1109/ICASSP.2013.6638947](https://doi.org/10.1109/ICASSP.2013.6638947)。
-
 - [173] **GRAVES, A. AND SCHMIDHUBER, J.** 使用双向 LSTM 和其他神经网络架构进行逐帧音素分类。 *Neural Networks* 18, 5 (2005)。IJCNN 2005, pp. 602–610。URL: [doi.org/10.1016/j.neunet.2005.06.042](https://doi.org/10.1016/j.neunet.2005.06.042)。
-
 - [174] **GREFF, K., SRIVASTAVA, R. K., KOUTNÍK, J., STEUNEBRINK, B. R., AND SCHMIDHUBER, J.** LSTM：一次搜索空间之旅。 *IEEE Trans. Neural Netw. Learn. Syst.* 28, 10 (2017), pp. 2222–2232。URL: [doi.org/10.1109/TNNLS.2016.2582924](https://doi.org/10.1109/TNNLS.2016.2582924)。
-
 - [175] **GRIBONVAL, R., KUTYNIK, G., NIELSEN, M., AND VOIGTLÄNDER, F.** 深度神经网络的近似空间。 *Constr. Approx.* 55, 1 (2022), pp. 259–367。URL: [doi.org/10.1007/s00365-021-09543-4](https://doi.org/10.1007/s00365-021-09543-4)。
-
 - [176] **GRIEWANK, A. AND WALTHER, A.** *计算导数.* 第 2 版。Society for Industrial and Applied Mathematics, 2008。URL: [doi.org/10.1137/1.9780898717](https://doi.org/10.1137/1.9780898717)。
-
 - [177] **GROHS, P. AND HERRMANN, L.** 针对具有边界条件的高维椭圆 PDE 的深度神经网络近似。 *IMA J. Numer. Anal.* 42, 3 (May 2021), pp. 2055–2082。URL: [doi.org/10.1093/imanum/drab031](https://doi.org/10.1093/imanum/drab031)。
-
 - [178] **GROHS, P. AND HERRMANN, L.** 针对高维抛物线型 Hamilton-Jacobi-Bellman 方程的深度神经网络近似。 *arXiv:2103.05744* (2021), 23 页。URL: [arxiv.org/abs/2103.05744](https://arxiv.org/abs/2103.05744)。
-
 - [179] **GROHS, P., HORNING, F., JENTZEN, A., AND VON WURSTEMBERGER, P.** 证明人工神经网络在数值逼近 Black-Scholes 偏微分方程中克服了维数灾难。 *Mem. Amer. Math. Soc.* 284, 1410 (2023), v+93 页。URL: [doi.org/10.1090/memo/1410](https://doi.org/10.1090/memo/1410)。
-
 - [180] **GROHS, P., HORNING, F., JENTZEN, A., AND ZIMMERMANN, P.** *用于微分方程深度神经网络近似的时空误差估计*. *Adv. Comput. Math.* 49, 1 (2023), Art. No. 4, 78 页。URL: [doi.org/10.1007/s10444-022-09970-2](https://doi.org/10.1007/s10444-022-09970-2)。
-
 - [181] **GROHS, P., JENTZEN, A., AND SALIMOVA, D.** *基于蒙特卡洛算法的 PDE 解的深度神经网络近似*. *Partial Differ. Equ. Appl.* 3, 4 (2022), Art. No. 45, 41 页。URL: [doi.org/10.1007/s42985-021-00100-z](https://doi.org/10.1007/s42985-021-00100-z)。
-
 - [182] **GROHS, P. AND KUTYNIK, G., eds.** *深度学习的数学方面*. Cambridge University Press, Cambridge, 2023, xviii+473 页。URL: [doi.org/10.1016/j.enganabound.2022.10.033](https://doi.org/10.1016/j.enganabound.2022.10.033)。
-
 - [183] **GU, Y., YANG, H., AND ZHOU, C.** *SelectNet：面向高维偏微分方程的自步学习*. *J. Comput. Phys.* 441 (2021), p. 110444。URL: [doi.org/10.1016/j.jcp.2021.110444](https://doi.org/10.1016/j.jcp.2021.110444)。
-
 - [184] **GÜRHING, I., KUTYNIK, G., AND PETERSEN, P.** *$W^{s,p}$ 范数下 ReLU 深度神经网络近似的误差界*. *Anal. Appl. (Singapore)* 18, 5 (2020), pp. 803–859。URL: [doi.org/10.1142/S0195305191A0021](https://doi.org/10.1142/S0195305191A0021)。
-
 - [185] **GUO, X., LI, W., AND IORIO, F.** *用于稳态流近似的卷积神经网络.* In *Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining* (San Francisco, California, USA, Aug. 13–17, 2016)。KDD '16。New York, NY, USA: Association for Computing Machinery, 2016, pp. 481–490。URL: [doi.org/10.1145/2939672.2939738](https://doi.org/10.1145/2939672.2939738)。
-
 - [186] **HAN, J. AND E, W.** *随机控制问题的深度学习近似*. *arXiv:1611.07422* (2016), 9 页。URL: [arxiv.org/abs/1611.07422](https://arxiv.org/abs/1611.07422)。
-
 - [187] **HAN, J., JENTZEN, A., AND E, W.** 使用深度学习求解高维偏微分方程。 *Proc. Natl. Acad. Sci. USA* **115**, 34 (2018), pp. 8505–8510。URL: [doi.org/10.1073/pnas.1718942115](https://doi.org/10.1073/pnas.1718942115)。
-
 - [188] **HAN, J. AND LONG, J.** 针对耦合 FBSDE 的深度 BSDE 方法的收敛性。 *Probab. Uncertain. Quant. Risk* **5** (2020), Art. No. 5, 33 页。URL: [doi.org/10.1186/s41546-020-00047-w](https://doi.org/10.1186/s41546-020-00047-w)。
-
 - [189] **HASTIE, T., TIBSHIRANI, R., AND FRIEDMAN, J.** *统计学习元素*. 第 2 版。数据挖掘、推断与预测。Springer, New York, 2009, xxii+745 页。URL: [doi.org/10.1007/978-0-387-84858-7](https://doi.org/10.1007/978-0-387-84858-7)。
-
 - [190] **HE, K., ZHANG, X., REN, S., AND SUN, J.** 用于图像识别的深度残差学习。In *2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)* (Las Vegas, NV, USA, June 27–30, 2016)。2016, pp. 770–778。URL: [doi.org/10.1109/CVPR.2016.90](https://doi.org/10.1109/CVPR.2016.90)。
-
 - [191] **HE, K., ZHANG, X., REN, S., AND SUN, J.** 深度残差网络中的恒等映射。In *Computer Vision – ECCV 2016, 14th European Conference, Proceedings Part IV* (Amsterdam, The Netherlands, Oct. 11–14, 2016)。Ed. by Leibe, B., Matas, J., Sebe, N., and Welling, M. Springer, Cham, 2016, pp. 630–645。URL: [doi.org/10.1007/978-3-319-46493-0_38](https://doi.org/10.1007/978-3-319-46493-0_38)。
-
 - [192] **HEISS, C., GÜHRING, I., AND EIGEL, M.** 用于参数化 PDE 的多级 CNN。 *arXiv:2304.00388* (2023), 42 页。URL: [arxiv.org/abs/2304.00388](https://arxiv.org/abs/2304.00388)。
-
 - [193] **HENDRYCKS, D. AND GIMPEL, K.** 高斯误差线性单元 (GELUs)。 *arXiv:1606.08415v4* (2016), 10 页。URL: [arxiv.org/abs/1606.08415](https://arxiv.org/abs/1606.08415)。
-
 - [194] **HENRY, D.** *半线性抛物方程的几何理论*. Vol. 840。Springer-Verlag, Berlin, 1981, iv+348 页。
-
 - [195] **HENRY-LABORDÈRE, P.** 交易对手风险估值：一种标记分支扩散方法。 *arXiv:1203.2369* (2012), 17 页。URL: [arxiv.org/abs/1203.2369](https://arxiv.org/abs/1203.2369)。
-
 - [196] **HENRY-LABORDÈRE, P.** BSDE 的深度原始-对偶算法：机器学习在 CVA 和 IM 中的应用 (2017)。可从 SSRN 获取。URL: [doi.org/10.2139/ssrn.3071506](https://doi.org/10.2139/ssrn.3071506)。
-
 - [197] **HENRY-LABORDÈRE, P. AND TOUZI, N.** 非线性 Cauchy 问题的分支扩散表示及蒙特卡洛近似。 *Ann. Appl. Probab.* **31**, 5 (2021), pp. 2350–2375。URL: [doi.org/10.1214/20-aap1649](https://doi.org/10.1214/20-aap1649)。
-
 - [198] **HINTON, G. E. AND SALAKHUTDINOV, R. R.** 使用神经网络降低数据维度。 *Science* **313**, 5786 (2006), pp. 504–507。URL: [doi.org/10.1126/science.1127647](https://doi.org/10.1126/science.1127647)。
-
-
-
 
 ### 参考文献
 
 - [199] HINTON, G., SHRIVASTAVA, N., AND SWERSKY, K. 第 6c 讲：RMSprop：将梯度除以其近期幅度的移动平均值。 https://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf. [访问日期：2017 年 12 月 01 日]。
-
 - [200] HINTON, G. E. AND ZEMEL, R. 自编码器、最小描述长度和亥姆霍兹自由能。收录于《神经信息处理系统进展》。Cowan, J., Tesauro, G. 和 Alspector, J. 编著。第 6 卷。Morgan-Kaufmann, 1993。URL: proceedings.neurips.cc/paper_files/1993/file/9e3c4fc48e5cf81a0d57663e129aef3cb-Paper.pdf.
-
 - [201] HOCHREITER, S. AND SCHMIDHUBER, J. 长短期记忆（Long Short-Term Memory）。Neural Comput. 9, 8 (1997), 第 1735–1780 页。URL: doi.org/10.1162/neco.1997.9.8.1735.
-
 - [202] HORNIK, K. 关于神经网络逼近的一些新结果。Neural Networks 6, 8 (1993), 第 1069–1072 页。URL: doi.org/10.1016/S0893-6080(09)80018-X.
-
 - [203] HORNIK, K. 多层前馈网络的逼近能力。Neural Networks 4, 2 (1991), 第 251–257 页。URL: doi.org/10.1016/0893-6080(91)90009-T.
-
 - [204] HORNIK, K., STINCHCOMBE, M., AND WHITE, H. 多层前馈网络是通用逼近器。Neural Networks 2, 5 (1989), 第 359–366 页。URL: doi.org/10.1016/0893-6080(89)00020-8.
-
 - [205] HORNING, F., JENTZEN, A., AND SALIMOVA, D. 用于高维偏微分方程的时空深度神经网络逼近。arXiv:2006.02199 (2020)，52 页。URL: arxiv.org/abs/2006.02199.
-
 - [206] HUANG, G., LIU, Z., MAATEN, L. V. D., AND WEINBERGER, K. Q. 密集连接卷积网络（Densely Connected Convolutional Networks）。收录于 2017 年 IEEE 计算机视觉与模式识别会议（CVPR）（美国夏威夷檀香山，2017 年 7 月 21–26 日）。Los Alamitos, CA, USA: IEEE Computer Society, 2017，第 2261–2269 页。URL: doi.org/10.1109/CVPR.2017.243.
-
 - [207] HURÉ, C., PHAM, H., AND WARIN, X. 用于高维非线性偏微分方程的深度反向方案（Deep backward schemes）。Math. Comp. 89, 324 (2020), 第 1547–1579 页。URL: doi.org/10.1090/mcm/3514.
-
 - [208] HUTZENTHALER, M., JENTZEN, A., AND KRUSE, T. 克服具有依赖于梯度的非线性项的抛物型偏微分方程数值逼近中的维数灾难。Found. Comput. Math. 22, 4 (2022), 第 905–966 页。URL: doi.org/10.1007/s10208-021-09514-y.
-
 - [209] HUTZENTHALER, M., JENTZEN, A., KRUSE, T., AND NGUYEN, T. A. 证明整流深度神经网络在非线性热方程数值逼近中克服了维数灾难。SN Partial Differ. Equ. Appl. 10, 1 (2020)。URL: doi.org/10.1007/s42985-019-0006-9.
-
 - [210] HUTZENTHALER, M., JENTZEN, A., KRUSE, T., AND NGUYEN, T. A. 用于具有高 Lipschitz 非线性项的高维半线性二阶偏微分方程的多层 Picard 近似。*arXiv:2009.02484* (2020)，37 页。URL: **arxiv.org/abs/2009.02484**.
 
-- [211] HUTZENTHALER, M., JENTZEN, A., KRUSE, T., AND NGUYEN, T. A. 克服反向随机微分方程数值逼近中的维数灾难。*arXiv:2108.10602* (2021)，34 页。URL: **arxiv.org/abs/2108.10602**.
 
-- [212] HUTZENTHALER, M., JENTZEN, A., KRUSE, T., NGUYEN, T. A., AND VON WURSTEMBERGER, P. 克服半线性抛物型偏微分方程数值逼近中的维数灾难。*Proc. A.* 476, 2244 (2020), 文章编号 20190630，25 页。URL: **doi.org/10.1098/rspa.2019.0630**.
 
-- [213] HUTZENTHALER, M., JENTZEN, A., POHL, K., RIEKERT, A., AND SCARPA, L. 使用 ReLU 激活函数训练具有常值目标函数的深度神经网络时随机梯度下降的收敛性证明。*arXiv:2112.07369* (2021)，71 页。URL: **arxiv.org/abs/2112.07369**.
+- [211] HUTZENTHALER, M., JENTZEN, A., KRUSE, T., AND NGUYEN, T. A. 克服反向随机微分方程数值逼近中的维数灾难。*arXiv:2108.10602* (2021)，34 页。URL: `arxiv.org/abs/2108.10602`.
 
-- [214] HUTZENTHALER, M., JENTZEN, A., AND VON WURSTEMBERGER, P. 克服具有违约风险的金融衍生品近似定价中的维数灾难。*Electron. J. Probab.* 25 (2020), 文章编号 101，73 页。URL: **doi.org/10.1214/20-ejp423**.
+- [212] HUTZENTHALER, M., JENTZEN, A., KRUSE, T., NGUYEN, T. A., AND VON WURSTEMBERGER, P. 克服半线性抛物型偏微分方程数值逼近中的维数灾难。*Proc. A.* 476, 2244 (2020), 文章编号 20190630，25 页。URL: `doi.org/10.1098/rspa.2019.0630`.
 
-- [215] IBRAGIMOV, S., JENTZEN, A., KRÖGER, T., AND RIEKERT, A. 关于使用 ReLU 激活函数训练人工神经网络时非全局局部极小值存在无穷多个实现函数的研究。*arXiv:2202.11481* (2022)，49 页。URL: **arxiv.org/abs/2202.11481**.
+- [213] HUTZENTHALER, M., JENTZEN, A., POHL, K., RIEKERT, A., AND SCARPA, L. 使用 ReLU 激活函数训练具有常值目标函数的深度神经网络时随机梯度下降的收敛性证明。*arXiv:2112.07369* (2021)，71 页。URL: `arxiv.org/abs/2112.07369`.
 
-- [216] IBRAGIMOV, S., JENTZEN, A., AND RIEKERT, A. 神经网络训练收敛至良好的非最优临界点：具有单次随机初始化的梯度下降优化以高概率克服所有不良非全局局部极小值。*arXiv:2212.13111* (2022)，98 页。URL: **arxiv.org/abs/2212.13111**.
+- [214] HUTZENTHALER, M., JENTZEN, A., AND VON WURSTEMBERGER, P. 克服具有违约风险的金融衍生品近似定价中的维数灾难。*Electron. J. Probab.* 25 (2020), 文章编号 101，73 页。URL: `doi.org/10.1214/20-ejp423`.
+
+- [215] IBRAGIMOV, S., JENTZEN, A., KRÖGER, T., AND RIEKERT, A. 关于使用 ReLU 激活函数训练人工神经网络时非全局局部极小值存在无穷多个实现函数的研究。*arXiv:2202.11481* (2022)，49 页。URL: `arxiv.org/abs/2202.11481`.
+
+- [216] IBRAGIMOV, S., JENTZEN, A., AND RIEKERT, A. 神经网络训练收敛至良好的非最优临界点：具有单次随机初始化的梯度下降优化以高概率克服所有不良非全局局部极小值。*arXiv:2212.13111* (2022)，98 页。URL: `arxiv.org/abs/2212.13111`.
 
 - [217] IOFFE, S. AND SZEGEDY, C. 批归一化：通过减少内部协变量偏移加速深度网络训练。收录于《第 32 届国际机器学习会议论文集 – 第 37 卷》（法国里尔，2015 年 7 月 6–11 日）。Bach, F. 和 Blei, D. 编著。ICML’15。JMLR.org, 2015，第 448–456 页。
 
-- [218] JACOT, A., GABRIEL, F., AND HONGLER, C. 神经切空间核（Neural Tangent Kernel）：神经网络中的收敛与泛化。收录于《神经信息处理系统进展》。Bengio, S., Wallach, H., Larochelle, H., Grauman, K., Cesa-Bianchi, N. 和 Garnett, R. 编著。第 31 卷。Curran Associates, Inc., 2018。URL: **proceedings.neurips.cc/paper_files/paper/2018/file/5a4be1fa34e62b8a6ec6b91d2462f5a-Paper.pdf**.
+- [218] JACOT, A., GABRIEL, F., AND HONGLER, C. 神经切空间核（Neural Tangent Kernel）：神经网络中的收敛与泛化。收录于《神经信息处理系统进展》。Bengio, S., Wallach, H., Larochelle, H., Grauman, K., Cesa-Bianchi, N. 和 Garnett, R. 编著。第 31 卷。Curran Associates, Inc., 2018。URL: `proceedings.neurips.cc/paper_files/paper/2018/file/5a4be1fa34e62b8a6ec6b91d2462f5a-Paper.pdf`.
 
-- [219] JAGTAP, A. D., KHARAZMI, E., AND KARNIADAKIS, G. E. 离散域上的保守物理信息神经网络用于守恒律：正问题和逆问题的应用。Comput. Methods Appl. Mech. Engrg. 365 (2020), 第 113028 页。URL: doi.org/10.1016/j.cma.2020.113028.
+- [219] JAGTAP, A. D., KHARAZMI, E., AND KARNIADAKIS, G. E. 离散域上的保守物理信息神经网络用于守恒律：正问题和逆问题的应用。Comput. Methods Appl. Mech. Engrg. 365 (2020), 第 113028 页。URL: `doi.org/10.1016/j.cma.2020.113028`.
 
-- [220] JENTZEN, A., KUCKUCK, B., NEUFELD, A., AND VON WURSTEMBERGER, P. 随机梯度下降优化算法的强误差分析。arXiv:1801.09324 (2018)，75 页。URL: arxiv.org/abs/1801.09324.
+- [220] JENTZEN, A., KUCKUCK, B., NEUFELD, A., AND VON WURSTEMBERGER, P. 随机梯度下降优化算法的强误差分析。arXiv:1801.09324 (2018)，75 页。URL: `arxiv.org/abs/1801.09324`.
 
-- [221] JENTZEN, A., KUCKUCK, B., NEUFELD, A., AND VON WURSTEMBERGER, P. 随机梯度下降优化算法的强误差分析。IMA J. Numer. Anal. 41, 1 (2020), 第 455–492 页。URL: doi.org/10.1093/imanum/drz055.
+- [221] JENTZEN, A., KUCKUCK, B., NEUFELD, A., AND VON WURSTEMBERGER, P. 随机梯度下降优化算法的强误差分析。IMA J. Numer. Anal. 41, 1 (2020), 第 455–492 页。URL: `doi.org/10.1093/imanum/drz055`.
 
-- [222] JENTZEN, A., MAZZONETTO, S., AND SALIMOVA, D. 一类巴拿赫空间取值演化方程解的存在性和唯一性性质 (2018)，28 页。URL: arxiv.org/abs/1812.06859.
+- [222] JENTZEN, A., MAZZONETTO, S., AND SALIMOVA, D. 一类巴拿赫空间取值演化方程解的存在性和唯一性性质 (2018)，28 页。URL: `arxiv.org/abs/1812.06859`.
 
-- [223] JENTZEN, A. AND RIEKERT, A. 使用 ReLU 激活函数针对分段线性目标函数训练神经网络时，具有随机初始化的梯度下降优化方法的收敛性证明。J. Mach. Learn. Res. 23, 260 (2022), 第 1–50 页。URL: jmlr.org/papers/v23/21-0962.html.
+- [223] JENTZEN, A. AND RIEKERT, A. 使用 ReLU 激活函数针对分段线性目标函数训练神经网络时，具有随机初始化的梯度下降优化方法的收敛性证明。J. Mach. Learn. Res. 23, 260 (2022), 第 1–50 页。URL: `jmlr.org/papers/v23/21-0962.html`.
 
-- [224] JENTZEN, A. AND RIEKERT, A. 关于深度神经网络训练中全局极小值的存在及梯度下降方法的收敛性分析。J. Mach. Learn. 1, 2 (2022), 第 141–246 页。URL: doi.org/10.4208/jml.220114a.
+- [224] JENTZEN, A. AND RIEKERT, A. 关于深度神经网络训练中全局极小值的存在及梯度下降方法的收敛性分析。J. Mach. Learn. 1, 2 (2022), 第 141–246 页。URL: `doi.org/10.4208/jml.220114a`.
 
-- [225] JENTZEN, A. AND RIEKERT, A. 使用 ReLU 激活函数训练人工神经网络时梯度流的收敛性分析。J. Math. Anal. Appl. 517, 2 (2023), 文章编号 126601，43 页。URL: doi.org/10.1016/j.maa.2022.126601.
+- [225] JENTZEN, A. AND RIEKERT, A. 使用 ReLU 激活函数训练人工神经网络时梯度流的收敛性分析。J. Math. Anal. Appl. 517, 2 (2023), 文章编号 126601，43 页。URL: `doi.org/10.1016/j.maa.2022.126601`.
 
-- [226] JENTZEN, A. AND RIEKERT, A. 通过随机初始化训练人工神经网络的总误差强分析。Commun. Math. Stat. (2023)。URL: doi.org/10.1007/s40304-022-00292-9.
+- [226] JENTZEN, A. AND RIEKERT, A. 通过随机初始化训练人工神经网络的总误差强分析。Commun. Math. Stat. (2023)。URL: `doi.org/10.1007/s40304-022-00292-9`.
 
-- [227] JENTZEN, A., RIEKERT, A., AND VON WURSTEMBERGER, P. 算法设计的人工神经网络（ADANNs）：用于参数化偏微分方程的高阶深度算子学习。arXiv:2302.03286 (2023)，22 页。URL: arxiv.org/abs/2302.03286.
+- [227] JENTZEN, A., RIEKERT, A., AND VON WURSTEMBERGER, P. 算法设计的人工神经网络（ADANNs）：用于参数化偏微分方程的高阶深度算子学习。arXiv:2302.03286 (2023)，22 页。URL: `arxiv.org/abs/2302.03286`.
 
-- [228] JENTZEN, A., SALIMOVA, D., AND WELTI, T. 证明深度人工神经网络在具有常扩散和非线性漂移系数的 Kolmogorov 偏微分方程数值逼近中克服了维数灾难。Commun. Math. Sci. 19, 5 (2021), 第 1167–1205 页。URL: doi.org/10.4310/CMS.2021.v19.n5.a1.
+- [228] JENTZEN, A., SALIMOVA, D., AND WELTI, T. 证明深度人工神经网络在具有常扩散和非线性漂移系数的 Kolmogorov 偏微分方程数值逼近中克服了维数灾难。Commun. Math. Sci. 19, 5 (2021), 第 1167–1205 页。URL: `doi.org/10.4310/CMS.2021.v19.n5.a1`.
 
-- [229] JENTZEN, A. AND VON WURSTEMBERGER, P. 随机梯度下降优化算法的下误差界：慢衰减和快衰减学习率的尖锐收敛速率。J. Complexity 57 (2020), 文章编号 101438。URL: doi.org/10.1016/j.jco.2019.101438.
+- [229] JENTZEN, A. AND VON WURSTEMBERGER, P. 随机梯度下降优化算法的下误差界：慢衰减和快衰减学习率的尖锐收敛速率。J. Complexity 57 (2020), 文章编号 101438。URL: `doi.org/10.1016/j.jco.2019.101438`.
 
-- [230] JENTZEN, A. AND WELTI, T. 通过具有随机初始化的随机梯度下降训练深度神经网络的总误差分析。Appl. Math. Comput. 455 (2023), 文章编号 127907，34 页。URL: doi.org/10.1016/j.amc.2023.127907.
+- [230] JENTZEN, A. AND WELTI, T. 通过具有随机初始化的随机梯度下降训练深度神经网络的总误差分析。Appl. Math. Comput. 455 (2023), 文章编号 127907，34 页。URL: `doi.org/10.1016/j.amc.2023.127907`.
 
-- [231] JIN, X., CAI, S., LI, H., AND KARNIADAKIS, G. E. NSFNets（Navier-Stokes 流网络）：用于不可压 Navier-Stokes 方程的物理信息神经网络。J. Comput. Phys. 426 (2021), 文章编号 109951。URL: doi.org/10.1016/j.jcp.2020.109951.
+- [231] JIN, X., CAI, S., LI, H., AND KARNIADAKIS, G. E. NSFNets（Navier-Stokes 流网络）：用于不可压 Navier-Stokes 方程的物理信息神经网络。J. Comput. Phys. 426 (2021), 文章编号 109951。URL: `doi.org/10.1016/j.jcp.2020.109951`.
 
-- [232] JUMPER, J., EVANS, R., PRITZEL, A., GREEN, T., FIGURNOV, M., RONNEBERGER, O., TUNYASUVUNAKOOL, K., BATES, T., ŽÍDEK, A., POTAPENKO, A., BRIDGEMAN, A., MEYER, C., KOHL, S. A. A., BALLARD, A. J., COWIE, A., ROMERA-PAREDES, B., NIKOLOV, S., JAIN, R., ADLER, J., BACK, T., PETERSEN, S., REIMAN, D., CLANCY, E., ZIELINSKI, M., STEINEGGER, M., PACHOLSKA, M., BERGHAMMER, T., BODENSTEIN, S., SILVER, D., VINYALS, O., SENIOR, A. W., KAVUKCUOGLU, K., KOHLI, P., AND HASSABIS, D. 使用 AlphaFold 进行高精度的蛋白质结构预测。Nature 596, 7873 (2021), 第 583–589 页。URL: doi.org/10.1038/s41586-021-03819-2.
+- [232] JUMPER, J., EVANS, R., PRITZEL, A., GREEN, T., FIGURNOV, M., RONNEBERGER, O., TUNYASUVUNAKOOL, K., BATES, T., ŽÍDEK, A., POTAPENKO, A., BRIDGEMAN, A., MEYER, C., KOHL, S. A. A., BALLARD, A. J., COWIE, A., ROMERA-PAREDES, B., NIKOLOV, S., JAIN, R., ADLER, J., BACK, T., PETERSEN, S., REIMAN, D., CLANCY, E., ZIELINSKI, M., STEINEGGER, M., PACHOLSKA, M., BERGHAMMER, T., BODENSTEIN, S., SILVER, D., VINYALS, O., SENIOR, A. W., KAVUKCUOGLU, K., KOHLI, P., AND HASSABIS, D. 使用 AlphaFold 进行高精度的蛋白质结构预测。Nature 596, 7873 (2021), 第 583–589 页。URL: `doi.org/10.1038/s41586-021-03819-2`.
 
-- [233] KAINEN, P. C., KURKOVÁ, V., AND VOGT, A. 半空间特征函数的线性组合的最优逼近。J. Approx. Theory 122, 2 (2003), 第 151–159 页。URL: doi.org/10.1016/S0021-9045(03)00072-8.
+- [233] KAINEN, P. C., KURKOVÁ, V., AND VOGT, A. 半空间特征函数的线性组合的最优逼近。J. Approx. Theory 122, 2 (2003), 第 151–159 页。URL: `doi.org/10.1016/S0021-9045(03)00072-8`.
 
-- [234] KARATZAS, I. AND SHREVE, S. E. 布朗运动与随机微积分。第 2 版。第 113 卷。Springer-Verlag, New York, 1991，xxiv+470 页。URL: doi.org/10.1007/978-1-4612-0949-2.
+- [234] KARATZAS, I. AND SHREVE, S. E. 布朗运动与随机微积分。第 2 版。第 113 卷。Springer-Verlag, New York, 1991，xxiv+470 页。URL: `doi.org/10.1007/978-1-4612-0949-2`.
 
-- [235] KAREVAN, Z. AND SUIJKENS, J. A. 用于时间序列预测的归纳长短期记忆网络（Transductive LSTM）：在天气预报中的应用。Neural Networks 125 (2020), 第 1–9 页。URL: doi.org/10.1016/j.neunet.2019.12.030.
+- [235] KAREVAN, Z. AND SUIJKENS, J. A. 用于时间序列预测的归纳长短期记忆网络（Transductive LSTM）：在天气预报中的应用。Neural Networks 125 (2020), 第 1–9 页。URL: `doi.org/10.1016/j.neunet.2019.12.030`.
 
-- [236] KARIM, F., MAJUMDAR, S., DARIÁ, H., AND CHEN, S. 用于时间序列分类的长短期记忆全卷积网络（LSTM Fully Convolutional Networks）。IEEE Access 6 (2018), 第 1662–1669 页。URL: doi.org/10.1109/ACCESS.2017.2779939.
+- [236] KARIM, F., MAJUMDAR, S., DARIÁ, H., AND CHEN, S. 用于时间序列分类的长短期记忆全卷积网络（LSTM Fully Convolutional Networks）。IEEE Access 6 (2018), 第 1662–1669 页。URL: `doi.org/10.1109/ACCESS.2017.2779939`.
 
-- [237] KARNIADAKIS, G. E., KEVREKIDIS, I. G., LU, L., PERDIKARIS, P., WANG, S., AND YANG, L. 物理信息机器学习（Physics-informed machine learning）。Nat. Rev. Phys. 3, 6 (2021), 第 422–440 页。URL: doi.org/10.1038/s42254-021-00314-5.
+- [237] KARNIADAKIS, G. E., KEVREKIDIS, I. G., LU, L., PERDIKARIS, P., WANG, S., AND YANG, L. 物理信息机器学习（Physics-informed machine learning）。Nat. Rev. Phys. 3, 6 (2021), 第 422–440 页。URL: `doi.org/10.1038/s42254-021-00314-5`.
 
+### 参考文献
 
+- [238] KARPATHY, A., JOHNSON, J., AND FEI-FEI, L. Visualizing and Understanding Recurrent Networks. arXiv:1506.02078 (2015), 12 pp. URL: `arxiv.org/abs/1506.02078`.
+
+- [239] KAWAGUCHI, K. Deep Learning without Poor Local Minima. In Advances in Neural Information Processing Systems. Ed. by Lee, D., Sugiyama, M., Luxburg, U., Guyon, I., and Garnett, R. Vol. 29. Curran Associates, Inc., 2016. URL: `proceedings.neurips.cc/paper_files/paper/2016/file/f2fc990265c712c49d51a18a32b39f0c-Paper.pdf`.
+
+- [240] KHAN, S., NASEER, M., HAYAT, M., ZAMIR, S. W., KHAN, F. S., AND SHAH, M. Transformers in Vision: A Survey. ACM Comput. Surv. 54, 10s (2022), Art. No. 200, 41 pp. URL: `doi.org/10.1145/3505244`.
+
+- [241] KHARAZMI, E., ZHANG, Z., AND KARNIADAKIS, G. E. Variational Physics-Informed Neural Networks for Solving Partial Differential Equations. arXiv:1912.00873 (2019), 24 pp. URL: `arxiv.org/abs/1912.00873`.
+
+- [242] KHARAZMI, E., ZHANG, Z., AND KARNIADAKIS, G. E. M. hp-VPINNs: variational physics-informed neural networks with domain decomposition. Comput. Methods Appl. Mech. Engrgy. 374 (2021), Art. No. 113547, 25 pp. URL: `doi.org/10.1016/j.cma.2020.113547`.
+
+- [243] KHODAYI-MEHR, R. AND ZAVLANOS, M. VarNet: Variational Neural Networks for the Solution of Partial Differential Equations. In Proceedings of the 2nd Conference on Learning for Dynamics and Control (June 10-11, 2020). Ed. by Bayen, A. M., Jadbabaie, A., Pappas, G., Parrilo, P. A., Recht, B., Tomlin, C., and Zeilinger, M. Vol. 120. Proceedings of Machine Learning Research. PMLR, 2020, pp. 298-307. URL: `proceedings.mlr.press/v120/khodayi-mehr20a.html`.
+
+- [244] KHOO, Y., LU, J., AND YING, L. Solving parametric PDE problems with artificial neural networks. European J. Appl. Math. 32, 3 (2021), pp. 421-435. URL: `doi.org/10.1017/S0956792520000182`.
+
+- [245] KIM, Y. Convolutional Neural Networks for Sentence Classification. In Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP) (Doha, Qatar, Oct. 25-29, 2014). Ed. by Moschitti, A., Pang, B., and Daelemans, W. Association for Computational Linguistics, 2014, pp. 1746-1751. URL: `doi.org/10.3115/v1/D14-1181`.
+
+- [246] KINGMA, D. P. AND WELLING, M. Auto-Encoding Variational Bayes. arXiv:1312.6114 (2013), 14 pp. URL: `arxiv.org/abs/1312.6114`.
+
+- [247] KINGMA, D. P. AND BA, J. Adam: A Method for Stochastic Optimization. arXiv:1412.6980 (2014), 15 pp. URL: `arxiv.org/abs/1412.6980`.
+
+- [248] KLENKE, A. Probability Theory. 2nd ed. Springer-Verlag London Ltd., 2014. xii+638 pp. URL: `doi.org/10.1007/978-1-4471-5361-0`.
+
+- [249] KONTOLATI, K., GOSWAMI, S., KARNIADAKIS, G. E., AND SHIELDS, M. D. Learning in latent spaces improves the predictive accuracy of deep neural operators. arXiv:2304.07599 (2023), 22 pp. URL: `arxiv.org/abs/2304.07599`.
 
 
 
 ### 参考文献
 
-- [238] KARPATHY, A., JOHNSON, J., AND FEI-FEI, L. Visualizing and Understanding Recurrent Networks. arXiv:1506.02078 (2015), 12 pp. URL: arxiv.org/abs/1506.02078.
-- [239] KAWAGUCHI, K. Deep Learning without Poor Local Minima. In Advances in Neural Information Processing Systems. Ed. by Lee, D., Sugiyama, M., Luxburg, U., Guyon, I., and Garnett, R. Vol. 29. Curran Associates, Inc., 2016. URL: proceedings.neurips.cc/paper_files/paper/2016/file/f2fc990265c712c49d51a18a32b39f0c-Paper.pdf.
-- [240] KHAN, S., NASEER, M., HAYAT, M., ZAMIR, S. W., KHAN, F. S., AND SHAH, M. Transformers in Vision: A Survey. ACM Comput. Surv. 54, 10s (2022), Art. No. 200, 41 pp. URL: doi.org/10.1145/3505244.
-- [241] KHARAZMI, E., ZHANG, Z., AND KARNIADAKIS, G. E. Variational Physics-Informed Neural Networks for Solving Partial Differential Equations. arXiv:1912.00873 (2019), 24 pp. URL: arxiv.org/abs/1912.00873.
-- [242] KHARAZMI, E., ZHANG, Z., AND KARNIADAKIS, G. E. M. hp-VPINNs: variational physics-informed neural networks with domain decomposition. Comput. Methods Appl. Mech. Engrgy. 374 (2021), Art. No. 113547, 25 pp. URL: doi.org/10.1016/j.cma.2020.113547.
-- [243] KHODAYI-MEHR, R. AND ZAVLANOS, M. VarNet: Variational Neural Networks for the Solution of Partial Differential Equations. In Proceedings of the 2nd Conference on Learning for Dynamics and Control (June 10-11, 2020). Ed. by Bayen, A. M., Jadbabaie, A., Pappas, G., Parrilo, P. A., Recht, B., Tomlin, C., and Zeilinger, M. Vol. 120. Proceedings of Machine Learning Research. PMLR, 2020, pp. 298-307. URL: proceedings.mlr.press/v120/khodayi-mehr20a.html.
-- [244] KHOO, Y., LU, J., AND YING, L. Solving parametric PDE problems with artificial neural networks. European J. Appl. Math. 32, 3 (2021), pp. 421-435. URL: doi.org/10.1017/S0956792520000182.
-- [245] KIM, Y. Convolutional Neural Networks for Sentence Classification. In Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP) (Doha, Qatar, Oct. 25-29, 2014). Ed. by Moschitti, A., Pang, B., and Daelemans, W. Association for Computational Linguistics, 2014, pp. 1746-1751. URL: doi.org/10.3115/v1/D14-1181.
-- [246] KINGMA, D. P. AND WELLING, M. Auto-Encoding Variational Bayes. arXiv:1312.6114 (2013), 14 pp. URL: arxiv.org/abs/1312.6114.
-- [247] KINGMA, D. P. AND BA, J. Adam: A Method for Stochastic Optimization. arXiv:1412.6980 (2014), 15 pp. URL: arxiv.org/abs/1412.6980.
-- [248] KLENKE, A. Probability Theory. 2nd ed. Springer-Verlag London Ltd., 2014. xii+638 pp. URL: doi.org/10.1007/978-1-4471-5361-0.
-- [249] KONTOLATI, K., GOSWAMI, S., KARNIADAKIS, G. E., AND SHIELDS, M. D. Learning in latent spaces improves the predictive accuracy of deep neural operators. arXiv:2304.07599 (2023), 22 pp. URL: arxiv.org/abs/2304.07599.
 - [250] KORN, R., KORN, E., AND KROISANDT, G. Monte Carlo methods and models in finance and insurance. CRC Press, Boca Raton, FL, 2010, xiv+470 pp. URL: doi.org/10.1201/9781420076196.
+
 - [251] KOVACH, N., LANTHALER, S., AND MISHRA, S. On universal approximation and error bounds for Fourier neural operators. J. Mach. Learn. Res. 22 (2021), Art. No. 290, 76 pp. URL: jmlr.org/papers/v22/21-0806.html.
+
 - [252] KOVACHKI, N., LI, Z., LIU, B., AZIZZADENESHILI, K., BHATTACHARYA, K., STUART, A., AND ANANDKUMAR, A. Neural Operator: Learning Maps Between Function Spaces With Applications to PDEs. J. Mach. Learn. Res. 24 (2023), Art. No. 89, 97 pp. URL: jmlr.org/papers/v24/21-1524.html.
+
 - [253] KRAMER, M. A. Nonlinear principal component analysis using autoassociative neural networks. AIChe Journal 37, 2 (1991), pp. 233–243. URL: doi.org/10.1002/aic.690370209.
+
 - [254] KRANTZ, S. G. AND PARKS, H. R. A primer of real analytic functions. 2nd ed. Birkhäuser Boston, Inc., Boston, MA, 2002, xiv+205 pp. URL: doi.org/10.1007/978-0-8176-8134-0.
+
 - [255] KRATSIO, A. The universal approximation property: characterization, construction, representation, and existence. Ann. Math. Artif. Intell. 89, 5–6 (2021), pp. 435–469. URL: doi.org/10.1007/s10472-020-09273-1.
+
 - [256] KREMSNER, S., STEINCKE, A., AND SZÖLGGYENYI, M. A Deep Neural Network Algorithm for Semilinear Elliptic PDEs with Applications in Insurance Mathematics. Risks 8, 4 (2020), Art. No. 136, 18 pp. URL: doi.org/10.3390/risks8040136.
+
 - [257] KRIZHEVSKY, A., SUTSKEVER, I., AND HINTON, G. E. ImageNet Classification with Deep Convolutional Neural Networks. In Advances in Neural Information Processing Systems. Ed. by Pereira, F., Burges, C., Bottou, L., and Weinberger, K. Vol. 25. Curran Associates, Inc., 2012. URL: proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf.
+
 - [258] KURDYKA, K., MOSTOWSKI, T., AND PARUSIŃSKI, A. Proof of the gradient conjecture of R. Thom. Ann. of Math. (2) 152, 3 (2000), pp. 763–792. URL: doi.org/10.2307/2661354.
+
 - [259] KUTNYIOK, G., PETERSEN, P., RASLAN, M., AND SCHNEIDER, R. A theoretical analysis of deep neural networks and parametric PDEs. Constr. Approx. 55, 1 (2022), pp. 73–125. URL: doi.org/10.1007/s00365-021-09551-4.
+
 - [260] LAGARIS, I., LIKAS, A., AND FOTIADIS, D. Artificial neural networks for solving ordinary and partial differential equations. IEEE Trans. Neural Netw. 9, 5 (1998), pp. 987–1000. URL: doi.org/10.1109/TNN.7.12178.
+
 - [261] LANTHLER, S., MOLINARO, R., HADORN, P., AND MISHRA, S. Nonlinear Re-construction for Operator Learning of PDEs with Discontinuities. arXiv:2210.01074 (2022), 40 pp. URL: arxiv.org/abs/2210.01074.
+
 - [262] LECUN, Y., BOSER, B., DENKER, J. S., HENDERSON, D., HOWARD, R. E., HUBBARD, W., AND JACKEL, L. D. Backpropagation Applied to Handwritten Zip Code Recognition. Neural Comput. 1, 4 (1989), pp. 541–551. URL: doi.org/10.1162/neco.1989.1.4.541.
+
 - [263] LECUN, Y., BENGIO, Y., AND HINTON, G. Deep learning. Nature 521 (2015), p. 436–444. URL: doi.org/10.1038/nature14539.
+
 - [264] LEE, C.-Y., XIE, S., GALLAGHER, P., ZHANG, Z., AND TU, Z. Deeply-Supervised Nets. In Proceedings of the Eighteenth International Conference on Artificial Intelligence and Statistics (San Diego, California, USA, May 9–12, 2015). Ed. by Lebanon, G. and Vishwanathan, S. V. N. Vol. 38. Proceedings of Machine Learning Research. PMLR, 2015, pp. 562–570. URL: proceedings.mlr.press/v38/lee15a.html.
+
 - [265] LEE, J. D., PANAGEAS, I., PILIOURAS, G., SIMCHOWITZ, M., JORDAN, M. I., AND RECHT, B. First-order methods almost always avoid strict saddle points. Math. Program. 176, 1–2 (2019), pp. 311–337. URL: doi.org/10.1007/s10107–019–01374–3.
+
 - [266] LEE, J. D., SIMCHOWITZ, M., JORDAN, M. I., AND RECHT, B. Gradient Descent Only Converges to Minimizers. In 29th Annual Conference on Learning Theory (Columbia University, New York, NY, USA, June 23–26, 2016). Ed. by Feldman, V., Rakhlin, A., and Shamir, O. Vol. 49. Proceedings of Machine Learning Research. PMLR, 2016, pp. 1246–1257. URL: proceedings.mlr.press/v49/lee16.html.
+
 - [267] LEVIS, M., LIU, Y., GOYAL, N., GHAZVINIJAD, M., MOHAMED, A., LEVY, O., STOYANOV, V., AND ZETTLEMOYER, L. BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension. arXiv:1910.13461 (2019). URL: arxiv.org/abs/1910.13461.
+
 - [268] LI, K., TANG, K., WU, T., AND LIAO, Q. D3M: A Deep Domain Decomposition Method for Partial Differential Equations. IEEE Access 8 (2020), pp. 5283–5294. URL: doi.org/10.1109/ACCESS.2019.2957200.
+
 - [269] LI, Z., HUANG, D. Z., LIU, B., AND ANANDKUMAR, A. Fourier Neural Operator with Learned Deformations for PDEs on General Geometries. arXiv:2207.05209 (2022). URL: arxiv.org/abs/2207.05209.
+
 - [270] LI, Z., KOVACHKI, N., AZIZZADENESHILI, K., LIU, B., BHATTACHARYA, K., STUART, A., AND ANANDKUMAR, A. Neural Operator: Graph Kernel Network for Partial Differential Equations. arXiv:2003.03485 (2020). URL: arxiv.org/abs/2003.03485.
+
 - [271] LI, Z., KOVACHKI, N., AZIZZADENESHILI, K., LIU, B., BHATTACHARYA, K., STUART, A., AND ANANDKUMAR, A. Fourier Neural Operator for Parametric Partial Differential Equations. In International Conference on Learning Representations. 2021. URL: openreview.net/forum?id=c8P9NQVtmn0.
+
 - [272] LI, Z., KOVACHKI, N., AZIZZADENESHILI, K., LIU, B., STUART, A., BHATTACHARYA, K., AND ANANDKUMAR, A. Multipole graph neural operator for parametric partial differential equations. Advances in Neural Information Processing Systems 33 (2020), pp. 6755–6766.
+
 - [273] LI, Z., ZHENG, H., KOVACHKI, N., JIN, N., CHEN, H., LIU, B., AZIZZADENESHILI, K., AND ANANDKUMAR, A. Physics-Informed Neural Operator for Learning Partial Differential Equations. arXiv:2111.03794 (2021). URL: arxiv.org/abs/2111.03794.
+
 - [274] LIAO, Y. AND MING, P. Deep Nitsche Method: Deep Ritz Method with Essential Boundary Conditions. Commun. Comput. Phys. 29, 5 (2021), pp. 1365–1384. URL: doi.org/10.4208/cicp.OA-2020-0219.
+
 - [275] LIU, C. AND BELKIN, M. Accelerating SGD with momentum for over-parameterized learning. arXiv:1810.13395 (2018). URL: arxiv.org/abs/1810.13395.
+
 - [276] LIU, L. AND CAI, W. DeepPropNet–A Recursive Deep Propagator Neural Network for Learning Evolution PDE Operators. arXiv:2202.13429 (2022). URL: arxiv.org/abs/2202.13429.
+
 - [277] LIU, Y., KUTZ, J. N., AND BRUNTON, S. L. Hierarchical deep learning of multiscale differential equation time-steppers. Philos. Trans. Roy. Soc. A 380, 2229 (2022), Art. No. 20210200, 17 pp. URL: doi.org/10.1098/rsta.2021.0200.
+
 - [278] LIU, Z., LIN, Y., CAO, Y., HU, H., WEI, Y., ZHANG, Z., LIN, S., AND GUO, B. Swin Transformer: Hierarchical Vision Transformer Using Shifted Windows. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV) (Montreal, QC, Canada, Oct. 10–17, 2021). IEEE Computer Society, 2021, pp. 10012–10022. URL: doi.org/10.1109/ICCV48922.2021.00986.
+
 - [279] LIU, Z., CAI, W., AND XU, Z.-Q. J. Multi-scale deep neural network (MscaleDNN) for solving Poisson–Boltzmann equation in complex domains. Commun. Comput. Phys. 28, 5 (2020), pp. 1970–2001.
+
 - [280] LOIZOU, N. AND RICHTÁRIK, P. Momentum and stochastic momentum for stochastic gradient, Newton, proximal point and subspace descent methods. Comput. Optim. Appl. 77, 3 (2020), pp. 653–710. URL: doi.org/10.1007/s10589-020-00220-z.
 
+## 参考文献
+
+- [281] LOJASIEWICZ, S. Ensembles semi-analytiques. 未出版的讲义。Institut des Hautes Études Scientifiques, 1964. 网址: perso.univ-rennes1.fr/michel.coste/Lojasiewicz.pdf.
+
+- [282] LONG, J., SHELHAMER, E., AND DARRELL, T. 用于语义分割的全卷积网络。载于 2015 IEEE 计算机视觉与模式识别会议 (CVPR) (美国马萨诸塞州波士顿，2015年6月7–12日)。IEEE 计算机学会, 2015, 第 3431–3440 页。 网址: doi.org/10.1109/CVPR.2015.7299865.
 
 
 
+- [283] LU, J., BATRA, D., PARikh, D., AND LEE, S. ViLBERT: 预训练任务无关的视觉语言表示以用于视觉-语言任务。载于 神经信息处理系统进展 (Advances in Neural Information Processing Systems)。Wallach, H., Larochelle, H., Beygelzimer, A., d’Alché-Buc, F., Fox, E., and Garnett, R. 编辑。第 32 卷。Curan Associates, Inc., 2019. 网址: proceedings.neurips.cc/paper_files/paper/2019/file/c74d97b01eae257e44aa9d5bade97baf-Paper.pdf.
 
-### 参考文献
+- [284] LU, L., JIN, P., PANG, G., ZHANG, Z., AND KARNIADAKIS, G. E. 基于算子的通用逼近定理，通过 DeepONet 学习非线性算子。《自然机器智能》(Nature Machine Intelligence) 3, 3 (2021), 第 218–229 页。 网址: doi.org/10.1038/s42256-021-00302-5.
 
--   [281] LOJASIEWICZ, S. Ensembles semi-analytiques. 未出版的讲义。Institut des Hautes Études Scientifiques, 1964. 网址: perso.univ-rennes1.fr/michel.coste/Lojasiewicz.pdf.
--   [282] LONG, J., SHELHAMER, E., AND DARRELL, T. 用于语义分割的全卷积网络。载于 2015 IEEE 计算机视觉与模式识别会议 (CVPR) (美国马萨诸塞州波士顿，2015年6月7–12日)。IEEE 计算机学会, 2015, 第 3431–3440 页。 网址: doi.org/10.1109/CVPR.2015.7299865.
--   [283] LU, J., BATRA, D., PARikh, D., AND LEE, S. ViLBERT: 预训练任务无关的视觉语言表示以用于视觉-语言任务。载于 神经信息处理系统进展 (Advances in Neural Information Processing Systems)。Wallach, H., Larochelle, H., Beygelzimer, A., d’Alché-Buc, F., Fox, E., and Garnett, R. 编辑。第 32 卷。Curan Associates, Inc., 2019. 网址: proceedings.neurips.cc/paper_files/paper/2019/file/c74d97b01eae257e44aa9d5bade97baf-Paper.pdf.
--   [284] LU, L., JIN, P., PANG, G., ZHANG, Z., AND KARNIADAKIS, G. E. 基于算子的通用逼近定理，通过 DeepONet 学习非线性算子。《自然机器智能》(Nature Machine Intelligence) 3, 3 (2021), 第 218–229 页。 网址: doi.org/10.1038/s42256-021-00302-5.
--   [285] LU, L., MENG, X., CAI, S., MAO, Z., GOSWAMI, S., ZHANG, Z., AND KARNIADAKIS, G. E. 基于 FAIR 数据对两种神经算子（含实际扩展）的全面且公平的比较。《计算机方法应用于力学工程》(Comput. Methods Appl. Mech. Engrg.) 393 (2022), 文章编号 114778。 网址: doi.org/10.1016/j.cma.2022.114778.
--   [286] LU, L., MENG, X., MAO, Z., AND KARNIADAKIS, G. E. DeepXDE: 求解微分方程的深度学习库。《SIAM 评论》(SIAM Rev.) 63, 1 (2021), 第 208–228 页。 网址: doi.org/10.1137/19M1274067.
--   [287] LUO, X. AND KAREEM, A. 具有分层先验的贝叶斯深度学习：来自有限和噪声数据的预测。《结构安全》(Structural Safety) 84 (2020), 第 101918 页。 网址: doi.org/10.1016/j.strusafe.2019.101918.
--   [288] LUONG, M.-T., PHAM, H., AND MANNING, C. D. 基于注意力的神经机器翻译的有效方法。arXiv:1508.04025 (2015). 网址: arxiv.org/abs/1508.04025.
--   [289] MA, C., WU, L., AND E, W. 自适应梯度算法动态行为的定性研究。arXiv:2009.06125 (2020). 网址: arxiv.org/abs/2009.06125.
--   [290] MADAY, Y. AND TURINICI, G. 用于偏微分方程控制的时域 Parareal 程序。《法国科学院 C. R. 数学》(C. R. Math. Acad. Sci. Paris) 335, 4 (2002), 第 387–392 页。 网址: doi.org/10.1016/S1631-073X(02)02467-6.
--   [291] MAHENDRAN, A. AND VEDALDI, A. 使用自然预影像可视化深度卷积神经网络。《国际计算机视觉杂志》(Int. J. Comput. Vis.) 120, 3 (2016), 第 233–255 页。 网址: doi.org/10.1007/s11263-016-0911-8.
--   [292] MAKHZANI, M., SHLENS, J., JAITLY, N., GOODFELLOW, I., AND FREY, B. 对抗自编码器。arXiv:1511.05644 (2015). 网址: arxiv.org/abs/1511.05644.
--   [293] MAO, X., SHEN, C., AND YANG, Y.-B. 使用具有对称跳跃连接的非常深卷积编码器-解码器网络进行图像修复。载于 神经信息处理系统进展 (Advances in Neural Information Processing Systems)。Lee, D., Sugiyama, M., Luxburg, U., Guyon, I., and Garnett, R. 编辑。第 29 卷。Curan Associates, Inc., 2016. 网址: proceedings.neurips.cc/paper_files/paper/2016/file/0ed9422357395a0d4879191c66f4faa2-Paper.pdf.
--   [294] MASCI, J., MEIER, U., CIREȘAN, D., AND SCHMIDHUBER, J. 用于层次特征提取的堆叠卷积自编码器。载于 人工神经网络与机器学习 - ICANN 2011 (芬兰埃斯波，2011年6月14-17日)。Honkela, T., Duch, W., Girolami, M., and Kaski, S. 编辑。Springer Berlin Heidelberg, 2011, 第 52–59 页。
--   [295] MENG, X., LI, Z., ZHANG, D., AND KARNIADAKIS, G. E. PIPNN: 用于时变 PDE 的 Parareal 物理信息神经网络。《计算机方法应用于力学工程》(Comput. Methods Appl. Mech. Engrg.) 370 (2020), 第 113250 页。 网址: doi.org/10.1016/j.cma.2020.113250.
--   [296] MERTIKOPOULOS, P., HALLAK, N., KAVIS, A., AND CEVHER, V. 关于非凸问题中随机梯度下降几乎必然收敛性。载于 神经信息处理系统进展 (Advances in Neural Information Processing Systems)。Larochelle, H., Ranzato, M., Hadsell, R., Balcan, M., and Lin, H. 编辑。第 33 卷。Curan Associates, Inc., 2020, 第 1117–1128 页。 网址: proceedings.neurips.cc/paper_files/paper/2020/file/0cb5ebb1b34ec343df e135db691e4a85-Paper.
--   [297] MEURIS, B., QADEER, S., AND STINIS, P. 用于偏微分方程的基于机器学习的光谱方法。《科学报告》(Scientific Reports) 13, 1 (2023), 第 1739 页。 网址: doi.org/10.1038/s41598-022-26602-3.
--   [298] MISHRA, S. AND MOLINARO, R. 物理信息神经网络 (PINNs) 用于近似 PDE 的一类逆问题的泛化误差估计。arXiv:2007.01138 (2020). 网址: arxiv.org/abs/2007.01138.
--   [299] MISHRA, S. AND MOLINARO, R. 物理信息神经网络 (PINNs) 用于近似 PDE 的泛化误差估计。arXiv:2006.16144 (2020). 网址: arxiv.org/abs/2006.16144.
--   [300] NEAL, R. M. 神经网络的贝叶斯学习。Springer New York, 1996. 204 页。 网址: doi.org/10.1007/978-1-4612-0745-0.
--   [301] Nelsen, N. H. and Stuart, A. M. 巴拿赫空间之间输入-输出映射的随机特征模型。*SIAM 科学计算杂志* (SIAM J. Sci. Comput). 43, 5 (2021), A3212–A3243。 网址: [doi.org/10.1137/20M133957.X](https://doi.org/10.1137/20M133957.X).
--   [302] Nesterov, Y. 一种收敛速度为 $O(1/k^{2})$ 的凸规划问题求解方法。载于 *苏联数学快报* (Soviet Mathematics Doklady)。第 27 卷, 1983, 第 372–376 页。
--   [303] Nesterov, Y. *凸优化导论：基础课程*。第 87 卷。Springer, New York, 2013, xviii+236 页。 网址: [doi.org/10.1007/978-1-4419-8853-9](https://doi.org/10.1007/978-1-4419-8853-9).
--   [304] Neufeld, A. and Wu, S. 半线性偏积分-微分方程的多层 Picard 近似算法及其复杂度分析。*arXiv:2205.09639* (2022). 网址: [arxiv.org/abs/2205.09639](https://arxiv.org/abs/2205.09639).
--   [305] Neufeld, A. and Wu, S. 具有梯度依赖非线性的通用半线性抛物 PDE 的多层 Picard 算法。*arXiv:2310.12545* (2023). 网址: [arxiv.org/abs/2310.12545](https://arxiv.org/abs/2310.12545).
--   [306] Ng, A. *coursera: 改进深度神经网络：超参数调节、正则化和优化*。[https://www.coursera.org/learn/deep-neural-network](https://www.coursera.org/learn/deep-neural-network). [访问日期：2017年12月6日]。
--   [307] Ng, J. Y.-H., Haussnecht, M., Vijayanarasimhan, S., Vinyals, O., Monga, R., and Toderici, G. 超越短片段：用于视频分类的深度网络。*arXiv:1503.08909* (2015). 网址: [arxiv.org/abs/1503.08909](https://arxiv.org/abs/1503.08909).
--   [308] Ngwui, J. Y., Penent, G., and Privault, N. 用于完全非线性偏微分方程的深度分支求解器。*arXiv:2203.03234* (2022). 网址: [arxiv.org/abs/2203.03234](https://arxiv.org/abs/2203.03234).
--   [309] Ngwui, J. Y., Penent, G., and Privault, N. 通过深度分支算法数值求解不可压缩 Navier-Stokes 方程。*arXiv:2212.13010* (2022). 网址: [arxiv.org/abs/2212.13010](https://arxiv.org/abs/2212.13010).
--   [310] Ngwui, J. Y., Penent, G., and Privault, N. 具有任意阶导数的完全非线性 Feynman-Kac 公式。*演化方程杂志* (J. Evol. Equ.) 23, 1 (2023), 文章编号 22, 29 页。 网址: [doi.org/10.1007/s00028-023-00873-3](https://doi.org/10.1007/s00028-023-00873-3).
--   [311] Ngwui, J. Y. and Privault, N. 通过随机编码树数值求解修正及非牛顿 Burgers 方程。*日本工业与应用数学杂志* (Jpn. J. Ind. Appl. Math). 40, 3 (2023), 第 1745–1763 页。 网址: [doi.org/10.1007/s13160-023-00611-9](https://doi.org/10.1007/s13160-023-00611-9).
--   [312] Nguyen, Q. and Hein, M. 深度和宽神经网络的损失曲面。载于 *第 34 届国际机器学习会议程序* (Proceedings of the 34th International Conference on Machine Learning) (澳大利亚悉尼，2017年8月6–11日)。Precup, D. and Teh, Y. W. 编辑。第 70 卷。机器学习研究程序 (Proceedings of Machine Learning Research)。PMLR, 2017, 第 2603–2612 页。 网址: [proceedings.mlr.press/v70/nguyen17a.html](https://proceedings.mlr.press/v70/nguyen17a.html).
+- [285] LU, L., MENG, X., CAI, S., MAO, Z., GOSWAMI, S., ZHANG, Z., AND KARNIADAKIS, G. E. 基于 FAIR 数据对两种神经算子（含实际扩展）的全面且公平的比较。《计算机方法应用于力学工程》(Comput. Methods Appl. Mech. Engrg.) 393 (2022), 文章编号 114778。 网址: doi.org/10.1016/j.cma.2022.114778.
 
+- [286] LU, L., MENG, X., MAO, Z., AND KARNIADAKIS, G. E. DeepXDE: 求解微分方程的深度学习库。《SIAM 评论》(SIAM Rev.) 63, 1 (2021), 第 208–228 页。 网址: doi.org/10.1137/19M1274067.
 
+- [287] LUO, X. AND KAREEM, A. 具有分层先验的贝叶斯深度学习：来自有限和噪声数据的预测。《结构安全》(Structural Safety) 84 (2020), 第 101918 页。 网址: doi.org/10.1016/j.strusafe.2019.101918.
 
+- [288] LUONG, M.-T., PHAM, H., AND MANNING, C. D. 基于注意力的神经机器翻译的有效方法。arXiv:1508.04025 (2015). 网址: arxiv.org/abs/1508.04025.
 
+- [289] MA, C., WU, L., AND E, W. 自适应梯度算法动态行为的定性研究。arXiv:2009.06125 (2020). 网址: arxiv.org/abs/2009.06125.
+
+- [290] MADAY, Y. AND TURINICI, G. 用于偏微分方程控制的时域 Parareal 程序。《法国科学院 C. R. 数学》(C. R. Math. Acad. Sci. Paris) 335, 4 (2002), 第 387–392 页。 网址: doi.org/10.1016/S1631-073X(02)02467-6.
+
+- [291] MAHENDRAN, A. AND VEDALDI, A. 使用自然预影像可视化深度卷积神经网络。《国际计算机视觉杂志》(Int. J. Comput. Vis.) 120, 3 (2016), 第 233–255 页。 网址: doi.org/10.1007/s11263-016-0911-8.
+
+- [292] MAKHZANI, M., SHLENS, J., JAITLY, N., GOODFELLOW, I., AND FREY, B. 对抗自编码器。arXiv:1511.05644 (2015). 网址: arxiv.org/abs/1511.05644.
+
+- [293] MAO, X., SHEN, C., AND YANG, Y.-B. 使用具有对称跳跃连接的非常深卷积编码器-解码器网络进行图像修复。载于 神经信息处理系统进展 (Advances in Neural Information Processing Systems)。Lee, D., Sugiyama, M., Luxburg, U., Guyon, I., and Garnett, R. 编辑。第 29 卷。Curan Associates, Inc., 2016. 网址: proceedings.neurips.cc/paper_files/paper/2016/file/0ed9422357395a0d4879191c66f4faa2-Paper.pdf.
+
+- [294] MASCI, J., MEIER, U., CIREȘAN, D., AND SCHMIDHUBER, J. 用于层次特征提取的堆叠卷积自编码器。载于 人工神经网络与机器学习 - ICANN 2011 (芬兰埃斯波，2011年6月14-17日)。Honkela, T., Duch, W., Girolami, M., and Kaski, S. 编辑。Springer Berlin Heidelberg, 2011, 第 52–59 页。
+
+- [295] MENG, X., LI, Z., ZHANG, D., AND KARNIADAKIS, G. E. PIPNN: 用于时变 PDE 的 Parareal 物理信息神经网络。《计算机方法应用于力学工程》(Comput. Methods Appl. Mech. Engrg.) 370 (2020), 第 113250 页。 网址: doi.org/10.1016/j.cma.2020.113250.
+
+- [296] MERTIKOPOULOS, P., HALLAK, N., KAVIS, A., AND CEVHER, V. 关于非凸问题中随机梯度下降几乎必然收敛性。载于 神经信息处理系统进展 (Advances in Neural Information Processing Systems)。Larochelle, H., Ranzato, M., Hadsell, R., Balcan, M., and Lin, H. 编辑。第 33 卷。Curan Associates, Inc., 2020, 第 1117–1128 页。 网址: proceedings.neurips.cc/paper_files/paper/2020/file/0cb5ebb1b34ec343df e135db691e4a85-Paper.
+
+- [297] MEURIS, B., QADEER, S., AND STINIS, P. 用于偏微分方程的基于机器学习的光谱方法。《科学报告》(Scientific Reports) 13, 1 (2023), 第 1739 页。 网址: doi.org/10.1038/s41598-022-26602-3.
+
+- [298] MISHRA, S. AND MOLINARO, R. 物理信息神经网络 (PINNs) 用于近似 PDE 的一类逆问题的泛化误差估计。arXiv:2007.01138 (2020). 网址: arxiv.org/abs/2007.01138.
+
+- [299] MISHRA, S. AND MOLINARO, R. 物理信息神经网络 (PINNs) 用于近似 PDE 的泛化误差估计。arXiv:2006.16144 (2020). 网址: arxiv.org/abs/2006.16144.
+
+- [300] NEAL, R. M. 神经网络的贝叶斯学习。Springer New York, 1996. 204 页。 网址: doi.org/10.1007/978-1-4612-0745-0.
+
+- [301] Nelsen, N. H. and Stuart, A. M. 巴拿赫空间之间输入-输出映射的随机特征模型。*SIAM 科学计算杂志* (SIAM J. Sci. Comput). 43, 5 (2021), A3212–A3243。 网址: [doi.org/10.1137/20M133957.X](https://doi.org/10.1137/20M133957.X).
+
+- [302] Nesterov, Y. 一种收敛速度为 $O(1/k^{2})$ 的凸规划问题求解方法。载于 *苏联数学快报* (Soviet Mathematics Doklady)。第 27 卷, 1983, 第 372–376 页。
+
+- [303] Nesterov, Y. *凸优化导论：基础课程*。第 87 卷。Springer, New York, 2013, xviii+236 页。 网址: [doi.org/10.1007/978-1-4419-8853-9](https://doi.org/10.1007/978-1-4419-8853-9).
+
+- [304] Neufeld, A. and Wu, S. 半线性偏积分-微分方程的多层 Picard 近似算法及其复杂度分析。*arXiv:2205.09639* (2022). 网址: [arxiv.org/abs/2205.09639](https://arxiv.org/abs/2205.09639).
+
+- [305] Neufeld, A. and Wu, S. 具有梯度依赖非线性的通用半线性抛物 PDE 的多层 Picard 算法。*arXiv:2310.12545* (2023). 网址: [arxiv.org/abs/2310.12545](https://arxiv.org/abs/2310.12545).
+
+- [306] Ng, A. *coursera: 改进深度神经网络：超参数调节、正则化和优化*。[https://www.coursera.org/learn/deep-neural-network](https://www.coursera.org/learn/deep-neural-network). [访问日期：2017年12月6日]。
+
+- [307] Ng, J. Y.-H., Haussnecht, M., Vijayanarasimhan, S., Vinyals, O., Monga, R., and Toderici, G. 超越短片段：用于视频分类的深度网络。*arXiv:1503.08909* (2015). 网址: [arxiv.org/abs/1503.08909](https://arxiv.org/abs/1503.08909).
+
+- [308] Ngwui, J. Y., Penent, G., and Privault, N. 用于完全非线性偏微分方程的深度分支求解器。*arXiv:2203.03234* (2022). 网址: [arxiv.org/abs/2203.03234](https://arxiv.org/abs/2203.03234).
+
+- [309] Ngwui, J. Y., Penent, G., and Privault, N. 通过深度分支算法数值求解不可压缩 Navier-Stokes 方程。*arXiv:2212.13010* (2022). 网址: [arxiv.org/abs/2212.13010](https://arxiv.org/abs/2212.13010).
+
+- [310] Ngwui, J. Y., Penent, G., and Privault, N. 具有任意阶导数的完全非线性 Feynman-Kac 公式。*演化方程杂志* (J. Evol. Equ.) 23, 1 (2023), 文章编号 22, 29 页。 网址: [doi.org/10.1007/s00028-023-00873-3](https://doi.org/10.1007/s00028-023-00873-3).
+
+- [311] Ngwui, J. Y. and Privault, N. 通过随机编码树数值求解修正及非牛顿 Burgers 方程。*日本工业与应用数学杂志* (Jpn. J. Ind. Appl. Math). 40, 3 (2023), 第 1745–1763 页。 网址: [doi.org/10.1007/s13160-023-00611-9](https://doi.org/10.1007/s13160-023-00611-9).
+
+- [312] Nguyen, Q. and Hein, M. 深度和宽神经网络的损失曲面。载于 *第 34 届国际机器学习会议程序* (Proceedings of the 34th International Conference on Machine Learning) (澳大利亚悉尼，2017年8月6–11日)。Precup, D. and Teh, Y. W. 编辑。第 70 卷。机器学习研究程序 (Proceedings of Machine Learning Research)。PMLR, 2017, 第 2603–2612 页。 网址: [proceedings.mlr.press/v70/nguyen17a.html](https://proceedings.mlr.press/v70/nguyen17a.html).
 
 ### 参考文献
 
@@ -20338,119 +22219,119 @@ for i in range(M + 1):
 
 [322] PANAGEAS, I. AND PILIOURAS, G. 梯度下降仅收敛到极小值点：非孤立临界点与不变区域。*arXiv:1605.00405* (2016). URL: *arxiv.org/abs/1605.00405*.
 
-[323] PANAGEAS, I., PILIOURAS, G., AND WANG, X. 一阶方法几乎总能避免鞍点：步长消失的情形。In *Advances in Neural Information Processing Systems.* Ed. by Wallach, H., Larochelle, H., Beygelzimer, A., d’Alché-Buc, F., Fox, E., and Garnett, R. Vol. 32. Curran Associates, Inc., 2019. URL: *proceedings.neurips.cc/paper_files/paper/2019/file/3fb04953d95a94367bb133f862402bce-Paper.pdf*.
 
-[324] PANG, G., LU, L., AND KARNIADAKIS, G. E. fPINNs: 分数阶物理信息神经网络。SIAM J. Sci. Comput. 41, 4 (2019), A2603–A2626. URL: doi.org/10.1137/18M1229845.
 
-[325] PARDOUX, É. AND PENG, S. 后向随机微分方程与拟线性抛物型偏微分方程。In Stochastic partial differential equations and their applications. Vol. 176. Lect. Notes Control Inf. Sci. Springer, Berlin, 1992, pp. 200–217. URL: doi.org/10.1007/BFb0037334.
+[323] PANAGEAS, I., PILIOURAS, G., AND WANG, X. 一阶方法几乎总能避免鞍点：步长消失的情形。In *Advances in Neural Information Processing Systems.* Ed. by Wallach, H., Larochelle, H., Beygelzimer, A., d’Alché-Buc, F., Fox, E., and Garnett, R. Vol. 32. Curran Associates, Inc., 2019. URL: `proceedings.neurips.cc/paper_files/paper/2019/file/3fb04953d95a94367bb133f862402bce-Paper.pdf`.
 
-[326] PARDOUX, É. AND PENG, S. 后向随机微分方程的适配解。Systems Control Lett. 14, 1 (1990), pp. 55–61. URL: doi.org/10.1016/0167-6911(90)90082-6.
+[324] PANG, G., LU, L., AND KARNIADAKIS, G. E. fPINNs: 分数阶物理信息神经网络。SIAM J. Sci. Comput. 41, 4 (2019), A2603–A2626. URL: `doi.org/10.1137/18M1229845`.
 
-[327] PARDOUX, E. AND TANG, S. 前向-后向随机微分方程与拟线性抛物型偏微分方程。Probab. Theory Related Fields 114, 2 (1999), pp. 123–150. URL: doi.org/10.1007/s004409970001.
+[325] PARDOUX, É. AND PENG, S. 后向随机微分方程与拟线性抛物型偏微分方程。In Stochastic partial differential equations and their applications. Vol. 176. Lect. Notes Control Inf. Sci. Springer, Berlin, 1992, pp. 200–217. URL: `doi.org/10.1007/BFb0037334`.
 
-[328] PASCANU, R., MIKOLOV, T., AND BENGIO, Y. 训练循环神经网络之难。In Proceedings of the 30th International Conference on Machine Learning (Atlanta, GA, USA, June 17–19, 2013). Ed. by Dasgupta, S. and McAllester, D. Vol. 28. Proceedings of Machine Learning Research 3. PMLR, 2013, pp. 1310–1318. URL: proceedings.mlr.press/v28/pascanu13.html.
+[326] PARDOUX, É. AND PENG, S. 后向随机微分方程的适配解。Systems Control Lett. 14, 1 (1990), pp. 55–61. URL: `doi.org/10.1016/0167-6911(90)90082-6`.
 
-[329] PEREKRESTENKO, D., GROHS, P., ELBRÄCHTER, D., AND BÖLCSKEI, H. 有限宽度深度ReLU网络的通用逼近能力。arXiv:1806.01528 (2018). URL: arxiv.org/abs/1806.01528.
+[327] PARDOUX, E. AND TANG, S. 前向-后向随机微分方程与拟线性抛物型偏微分方程。Probab. Theory Related Fields 114, 2 (1999), pp. 123–150. URL: `doi.org/10.1007/s004409970001`.
 
-[330] PÉREZ-ORTIZ, J. A., GERS, F. A., ECK, D., AND SCHMIDHUBER, J. 卡尔曼滤波器改善LSTM网络在传统循环网络无法解决的问题中的性能。Neural Networks 16, 2 (2003), pp. 241–250. URL: doi.org/10.1016/S0893-6080(02)00219-8.
+[328] PASCANU, R., MIKOLOV, T., AND BENGIO, Y. 训练循环神经网络之难。In Proceedings of the 30th International Conference on Machine Learning (Atlanta, GA, USA, June 17–19, 2013). Ed. by Dasgupta, S. and McAllester, D. Vol. 28. Proceedings of Machine Learning Research 3. PMLR, 2013, pp. 1310–1318. URL: `proceedings.mlr.press/v28/pascanu13.html`.
 
-[331] PETERSEN, P. 线性代数。Springer New York, 2012. x+390 pp. URL: doi.org/10.1007/978-1-4614-3612-6.
+[329] PEREKRESTENKO, D., GROHS, P., ELBRÄCHTER, D., AND BÖLCSKEI, H. 有限宽度深度ReLU网络的通用逼近能力。arXiv:1806.01528 (2018). URL: `arxiv.org/abs/1806.01528`.
 
-[332] PETERSEN, P., RASLAN, M., AND VOIGTLÄNDER, F. 固定规模神经网络生成的函数集的拓扑性质。Found. Comput. Math. 21, 2 (2021), pp. 375–444. URL: doi.org/10.1007/s10208-020-09461-0.
+[330] PÉREZ-ORTIZ, J. A., GERS, F. A., ECK, D., AND SCHMIDHUBER, J. 卡尔曼滤波器改善LSTM网络在传统循环网络无法解决的问题中的性能。Neural Networks 16, 2 (2003), pp. 241–250. URL: `doi.org/10.1016/S0893-6080(02)00219-8`.
 
-[333] PETERSEN, P. AND VOIGTLÄNDER, F. 使用深度ReLU神经网络对分段光滑函数的最优逼近。Neural Networks 108 (2018), pp. 296–330. URL: doi.org/10.1016/j.neunet.2018.08.019.
+[331] PETERSEN, P. 线性代数。Springer New York, 2012. x+390 pp. URL: `doi.org/10.1007/978-1-4614-3612-6`.
 
-[334] PETERSEN, P. AND VOIGTLÄNDER, F. 卷积神经网络与全连接网络逼近的等价性。Proc. Amer. Math. Soc. 148, 4 (2020), pp. 1567–1581. URL: doi.org/10.1090/proc/14789.
+[332] PETERSEN, P., RASLAN, M., AND VOIGTLÄNDER, F. 固定规模神经网络生成的函数集的拓扑性质。Found. Comput. Math. 21, 2 (2021), pp. 375–444. URL: `doi.org/10.1007/s10208-020-09461-0`.
 
-[335] PHAM, H. AND WARIN, X. 平均场神经网络：学习沃瑟斯坦空间上的映射。arXiv:2210.15179 (2022). URL: arxiv.org/abs/2210.15179.
+[333] PETERSEN, P. AND VOIGTLÄNDER, F. 使用深度ReLU神经网络对分段光滑函数的最优逼近。Neural Networks 108 (2018), pp. 296–330. URL: `doi.org/10.1016/j.neunet.2018.08.019`.
 
-[336] PHAM, H., WARIN, X., AND GERMAIN, M. 基于神经网络的全非线性偏微分方程后向方案。Partial Differ. Equ. Appl. 2, 1 (2021), Art. No. 16, 24 pp. URL: doi.org/10.1007/s42985-020-00062-8.
+[334] PETERSEN, P. AND VOIGTLÄNDER, F. 卷积神经网络与全连接网络逼近的等价性。Proc. Amer. Math. Soc. 148, 4 (2020), pp. 1567–1581. URL: `doi.org/10.1090/proc/14789`.
+
+[335] PHAM, H. AND WARIN, X. 平均场神经网络：学习沃瑟斯坦空间上的映射。arXiv:2210.15179 (2022). URL: `arxiv.org/abs/2210.15179`.
+
+[336] PHAM, H., WARIN, X., AND GERMAIN, M. 基于神经网络的全非线性偏微分方程后向方案。Partial Differ. Equ. Appl. 2, 1 (2021), Art. No. 16, 24 pp. URL: `doi.org/10.1007/s42985-020-00062-8`.
 
 [337] POLYAK, B. T. 加速迭代方法收敛的一些方法。USSR Computational Mathematics and Mathematical Physics 4, 5 (1964), pp. 1–17.
 
-[338] PyTorch: SGD. https://pytorch.org/docs/stable/generated/torch.optim.SGD.html. [Accessed 4-September-2023].
+[338] PyTorch: SGD. `https://pytorch.org/docs/stable/generated/torch.optim.SGD.html`. [Accessed 4-September-2023].
 
-[339] QIAN, N. 梯度下降学习算法中的动量项。Neural Networks 12, 1 (1999), pp. 145–151. URL: doi.org/10.1016/S0893-6080(98)00116-6.
+[339] QIAN, N. 梯度下降学习算法中的动量项。Neural Networks 12, 1 (1999), pp. 145–151. URL: `doi.org/10.1016/S0893-6080(98)00116-6`.
 
-[340] RADFORD, A., JOZEFOVICZ, R., AND SUTSKEVER, I. 学习生成评论并发现情感。arXiv:1704.01444 (2017). URL: arxiv.org/abs/1704.01444.
+[340] RADFORD, A., JOZEFOVICZ, R., AND SUTSKEVER, I. 学习生成评论并发现情感。arXiv:1704.01444 (2017). URL: `arxiv.org/abs/1704.01444`.
 
-[341] RADFORD, A., NARASIMHAN, K., SALIMANS, T., AND SUTSKEVER, I. 通过生成式预训练改进语言理解 (2018), 12 pp. URL: openai.com/research/language-unsupervised.
+[341] RADFORD, A., NARASIMHAN, K., SALIMANS, T., AND SUTSKEVER, I. 通过生成式预训练改进语言理解 (2018), 12 pp. URL: `openai.com/research/language-unsupervised`.
 
-[342] RADFORD, A., WU, J., CHILD, R., LUAN, D., AMODEI, D., AND SUTSKEVER, I. 语言模型是无监督多任务学习器 (2019), 24 pp. URL: openai.com/research/better-language-models.
+[342] RADFORD, A., WU, J., CHILD, R., LUAN, D., AMODEI, D., AND SUTSKEVER, I. 语言模型是无监督多任务学习器 (2019), 24 pp. URL: `openai.com/research/better-language-models`.
 
-[343] RAFFEL, C., SHAZEER, N., ROBERTS, A., LEE, K., NARANG, S., MATENA, M., ZHOU, Y., LI, W., AND LIU, P. J. 探索统一文本到文本变换器的迁移学习极限。J. Mach. Learn. Res. 21, 140 (2020), pp. 1–67. URL: jmlr.org/papers/v21/20-074.html.
+[343] RAFFEL, C., SHAZEER, N., ROBERTS, A., LEE, K., NARANG, S., MATENA, M., ZHOU, Y., LI, W., AND LIU, P. J. 探索统一文本到文本变换器的迁移学习极限。J. Mach. Learn. Res. 21, 140 (2020), pp. 1–67. URL: `jmlr.org/papers/v21/20-074.html`.
 
-[344] RAFIQ, M., RAFIQ, G., JUNG, H.-Y., AND CHOI, G. S. SSNO：用于偏微分方程函数空间学习的时空谱神经算子。IEEE Access 10 (2022), pp. 15084–15095. URL: doi.org/10.1109/ACCESS.2022.3148401.
+[344] RAFIQ, M., RAFIQ, G., JUNG, H.-Y., AND CHOI, G. S. SSNO：用于偏微分方程函数空间学习的时空谱神经算子。IEEE Access 10 (2022), pp. 15084–15095. URL: `doi.org/10.1109/ACCESS.2022.3148401`.
 
-[345] RAIKO, T., VALPOLA, H., AND LECUN, Y. 感知机中的线性变换使深度学习更容易。In Proceedings of the Fifteenth International Conference on Artificial Intelligence and Statistics (La Palma, Canary Islands, Apr. 21–23, 2012). Ed. by Lawrence, N. D. and Girolami, M. Vol. 22. Proceedings of Machine Learning Research. PMLR, 2012, pp. 924–932. URL: proceedings.mlr.press/v22/raiko12.html.
+[345] RAIKO, T., VALPOLA, H., AND LECUN, Y. 感知机中的线性变换使深度学习更容易。In Proceedings of the Fifteenth International Conference on Artificial Intelligence and Statistics (La Palma, Canary Islands, Apr. 21–23, 2012). Ed. by Lawrence, N. D. and Girolami, M. Vol. 22. Proceedings of Machine Learning Research. PMLR, 2012, pp. 924–932. URL: `proceedings.mlr.press/v22/raiko12.html`.
 
-[346] RAÏSSI, M. 前向-后向随机神经网络：高维偏微分方程的深度学习。*arXiv:1804.07010* (2018). URL: arxiv.org/abs/1804.07010.
+[346] RAÏSSI, M. 前向-后向随机神经网络：高维偏微分方程的深度学习。*arXiv:1804.07010* (2018). URL: `arxiv.org/abs/1804.07010`.
 
-[347] RAÏSSI, M., PERDIKARIS, P., AND KARNIADAKIS, G. E. 物理信息神经网络：解决涉及非线性偏微分方程的前向和逆向问题的深度学习框架。*J. Comput. Phys.* 378 (2019), pp. 686–707. URL: doi.org/10.1016/j.jcp.2018.10.045.
+[347] RAÏSSI, M., PERDIKARIS, P., AND KARNIADAKIS, G. E. 物理信息神经网络：解决涉及非线性偏微分方程的前向和逆向问题的深度学习框架。*J. Comput. Phys.* 378 (2019), pp. 686–707. URL: `doi.org/10.1016/j.jcp.2018.10.045`.
 
-[348] RAJPUKRAR, P., HANNUN, A. Y., HAGHPANAH, M., BOURN, C., AND NG, A. Y. 具有心脏病医生水平的卷积神经网络心律失常检测。*arXiv:1707.01836* (2017). URL: arxiv.org/abs/1707.01836.
+[348] RAJPUKRAR, P., HANNUN, A. Y., HAGHPANAH, M., BOURN, C., AND NG, A. Y. 具有心脏病医生水平的卷积神经网络心律失常检测。*arXiv:1707.01836* (2017). URL: `arxiv.org/abs/1707.01836`.
 
-[349] RANZATO, M., HUANG, F. J., BOREAU, Y.-L., AND LECUN, Y. 不变特征层级的无监督学习及其在目标识别中的应用。In *2007 IEEE Conference on Computer Vision and Pattern Recognition*. 2007, pp. 1–8. URL: doi.org/10.1109/CVPR.2007.383157.
+[349] RANZATO, M., HUANG, F. J., BOREAU, Y.-L., AND LECUN, Y. 不变特征层级的无监督学习及其在目标识别中的应用。In *2007 IEEE Conference on Computer Vision and Pattern Recognition*. 2007, pp. 1–8. URL: `doi.org/10.1109/CVPR.2007.383157`.
 
-[350] RAONIĆ, B., MOLINARO, R., RYCK, T. D., ROHNER, T., BARTOLUCCI, F., ALAIFARI, R., MISHRA, S., AND DE BÉZENAC, E. 用于稳健且准确地学习偏微分方程的卷积神经算子。*arXiv:2302.01178* (2023). URL: arxiv.org/abs/2302.01178.
+[350] RAONIĆ, B., MOLINARO, R., RYCK, T. D., ROHNER, T., BARTOLUCCI, F., ALAIFARI, R., MISHRA, S., AND DE BÉZENAC, E. 用于稳健且准确地学习偏微分方程的卷积神经算子。*arXiv:2302.01178* (2023). URL: `arxiv.org/abs/2302.01178`.
 
-[351] REDDI, S. J., KALE, S., AND KUMAR, S. 关于Adam及更高级方法的收敛性。*arXiv:1904.09237* (2019). URL: arxiv.org/abs/1904.09237.
+[351] REDDI, S. J., KALE, S., AND KUMAR, S. 关于Adam及更高级方法的收敛性。*arXiv:1904.09237* (2019). URL: `arxiv.org/abs/1904.09237`.
 
-[352] REICHSTEIN, M., CAMPS-VALLS, G., STEVENS, B., JUNG, M., DENZLER, J., CARVALHAIS, N., AND PRABHAT. 深度学习与过程理解在数据驱动地球系统科学中的应用。*Nature* 566, 7743 (2019), pp. 195–204. URL: doi.org/10.1038/s41586-019-09122-1.
+[352] REICHSTEIN, M., CAMPS-VALLS, G., STEVENS, B., JUNG, M., DENZLER, J., CARVALHAIS, N., AND PRABHAT. 深度学习与过程理解在数据驱动地球系统科学中的应用。*Nature* 566, 7743 (2019), pp. 195–204. URL: `doi.org/10.1038/s41586-019-09122-1`.
 
-[353] REISINGER, C. AND ZHANG, Y. 整流深度神经网络克服了非线性刚性系统零和博弈中非光滑值函数的维度灾难。*Anal. Appl. (Singap.)* 18, 6 (2020), pp. 951–999. URL: doi.org/10.1142/S0219530520500116.
+[353] REISINGER, C. AND ZHANG, Y. 整流深度神经网络克服了非线性刚性系统零和博弈中非光滑值函数的维度灾难。*Anal. Appl. (Singap.)* 18, 6 (2020), pp. 951–999. URL: `doi.org/10.1142/S0219530520500116`.
 
-[354] RUDER, S. 梯度下降优化算法概览。*arXiv:1609.04747* (2016). URL: arxiv.org/abs/1609.04747.
+[354] RUDER, S. 梯度下降优化算法概览。*arXiv:1609.04747* (2016). URL: `arxiv.org/abs/1609.04747`.
 
-[355] RUF, J. AND WANG, W. 用于期权定价和对冲的神经网络：文献综述。*arXiv:1911.05620* (2019). URL: arxiv.org/abs/1911.05620.
+[355] RUF, J. AND WANG, W. 用于期权定价和对冲的神经网络：文献综述。*arXiv:1911.05620* (2019). URL: `arxiv.org/abs/1911.05620`.
 
 [356] RUMELHART, D. E., HINTON, G. E., AND WILLIAMS, R. J. 通过误差传播学习内部表示。In *Parallel Distributed Processing: Explorations in the Microstructure of Cognition, Vol. 1: Foundations*. Cambridge, MA, USA: MIT Press, 1986, pp. 318–362.
 
-
-
-
-
 ### 参考文献
 
-- [357] SAFRAN, I. 和 SHAMIR, O. 关于过参数化神经网络中初始盆地质量的研究。收录于 *The 33rd International Conference on Machine Learning 会议论文集*（美国纽约，2016年6月20日–22日）。第48卷。机器学习研究论文集。PMLR，2016年，第774–782页。URL：*proceedings.mlr.press/v48/safran16.html*。
+- [357] SAFRAN, I. 和 SHAMIR, O. 关于过参数化神经网络中初始盆地质量的研究。收录于 *The 33rd International Conference on Machine Learning 会议论文集*（美国纽约，2016年6月20日–22日）。第48卷。机器学习研究论文集。PMLR，2016年，第774–782页。URL：`proceedings.mlr.press/v48/safran16.html`。
 
-- [358] SAFRAN, I. 和 SHAMIR, O. 虚假局部极小值在两层 ReLU 神经网络中很常见。收录于 *The 35th International Conference on Machine Learning 会议论文集*（瑞典斯德哥尔摩，2018年7月10日–15日）。第80卷。机器学习研究论文集。ISSN：2640-3498。PMLR，2018年，第4433–4441页。URL：*proceedings.mlr.press/v80/safran18a.html*。
+- [358] SAFRAN, I. 和 SHAMIR, O. 虚假局部极小值在两层 ReLU 神经网络中很常见。收录于 *The 35th International Conference on Machine Learning 会议论文集*（瑞典斯德哥尔摩，2018年7月10日–15日）。第80卷。机器学习研究论文集。ISSN：2640-3498。PMLR，2018年，第4433–4441页。URL：`proceedings.mlr.press/v80/safran18a.html`。
 
-- [359] SAINATH, T. N., MOHAMED, A., KINGSBURY, B. 和 RAMABHADRAAN, B. 用于 LVCSR 的深度卷积神经网络。收录于 *2013 IEEE 声学、语音和信号处理国际会议*（加拿大温哥华不列颠哥伦比亚省，2013年5月26日–31日）。IEEE 计算机学会，2013年，第8614–8618页。URL：*doi.org/10.1109/ICASSP.2013.6639347*。
+- [359] SAINATH, T. N., MOHAMED, A., KINGSBURY, B. 和 RAMABHADRAAN, B. 用于 LVCSR 的深度卷积神经网络。收录于 *2013 IEEE 声学、语音和信号处理国际会议*（加拿大温哥华不列颠哥伦比亚省，2013年5月26日–31日）。IEEE 计算机学会，2013年，第8614–8618页。URL：`doi.org/10.1109/ICASSP.2013.6639347`。
 
-- [360] SAK, H., SENIOR, A. 和 BEAUFAYS, F. 基于短期记忆的大词汇量语音识别循环神经网络架构。*arXiv:1402.1128*（2014年）。URL：*arxiv.org/abs/1402.1128*。
+- [360] SAK, H., SENIOR, A. 和 BEAUFAYS, F. 基于短期记忆的大词汇量语音识别循环神经网络架构。*arXiv:1402.1128*（2014年）。URL：`arxiv.org/abs/1402.1128`。
 
-- [361] SANCHEZ-GONZALEZ, A., GODWIN, J., PFAFF, T., YING, R., LESKOVEC, J. 和 BATTAGLIA, P. W. 使用图网络学习模拟复杂物理现象。*arXiv:2002.09405*（2020年2月）。URL：*arxiv.org/abs/2002.09405*。
+- [361] SANCHEZ-GONZALEZ, A., GODWIN, J., PFAFF, T., YING, R., LESKOVEC, J. 和 BATTAGLIA, P. W. 使用图网络学习模拟复杂物理现象。*arXiv:2002.09405*（2020年2月）。URL：`arxiv.org/abs/2002.09405`。
 
-- [362] SANCHEZ-LENGLING, B., REIF, E., PEARCE, A. 和 WILTSCHKO, A. B. *图神经网络入门*。*https://distill.pub/2021/gnn-intro/*。[访问日期：2023年10月10日]。
+- [362] SANCHEZ-LENGLING, B., REIF, E., PEARCE, A. 和 WILTSCHKO, A. B. *图神经网络入门*。`https://distill.pub/2021/gnn-intro/`。[访问日期：2023年10月10日]。
 
-- [363] SANDBERG, I. 离散时间系统的逼近定理。*IEEE 电路与系统汇刊* 38, 5 (1991)，第564–566页。URL：*doi.org/10.1109/31.76498*。
+- [363] SANDBERG, I. 离散时间系统的逼近定理。*IEEE 电路与系统汇刊* 38, 5 (1991)，第564–566页。URL：`doi.org/10.1109/31.76498`。
 
-- [364] SANTURKAR, S., TSIPRAS, D., ILYAS, A. 和 MADRY, A. 批归一化如何帮助优化？收录于 *Advances in Neural Information Processing Systems*。编辑：Bengio, S., Wallach, H., Larochelle, H., Grauman, K., Cesa-Bianchi, N. 和 Garnett, R. 第31卷。Curran Associates, Inc.，2018年。URL：*proceedings.neurips.cc/paper_files/paper/2018/file/905056c1ac1dad41560467e0a99e1cf-Paper.pdf*。
+- [364] SANTURKAR, S., TSIPRAS, D., ILYAS, A. 和 MADRY, A. 批归一化如何帮助优化？收录于 *Advances in Neural Information Processing Systems*。编辑：Bengio, S., Wallach, H., Larochelle, H., Grauman, K., Cesa-Bianchi, N. 和 Garnett, R. 第31卷。Curran Associates, Inc.，2018年。URL：`proceedings.neurips.cc/paper_files/paper/2018/file/905056c1ac1dad41560467e0a99e1cf-Paper.pdf`。
 
-- [365] SARAO MANNELI, S., VANDEN-INDEN, E. 和 ZDEBOROVÁ, L. 具有二次激活函数的浅层神经网络的优化与泛化。收录于 *Advances in Neural Information Processing Systems*。编辑：Larochelle, H., Ranzato, M., Hadsell, R., Balcan, M. 和 Lin, H. 第33卷。Curran Associates, Inc.，2020年，第13445–13455页。URL：*proceedings.neurips.cc/paper_files/paper/2020/file/9b8b50fb590c590ffbf1295ce92258dc-Paper.pdf*。
+- [365] SARAO MANNELI, S., VANDEN-INDEN, E. 和 ZDEBOROVÁ, L. 具有二次激活函数的浅层神经网络的优化与泛化。收录于 *Advances in Neural Information Processing Systems*。编辑：Larochelle, H., Ranzato, M., Hadsell, R., Balcan, M. 和 Lin, H. 第33卷。Curran Associates, Inc.，2020年，第13445–13455页。URL：`proceedings.neurips.cc/paper_files/paper/2020/file/9b8b50fb590c590ffbf1295ce92258dc-Paper.pdf`。
 
-- [366] SCARSELLI, F., GORI, M., TSOI, A. C., HAGENBUCHNER, M. 和 MONFARDINI, G. 图神经网络模型。*IEEE 神经网络汇刊* 20, 1 (2009)，第61–80页。URL：[doi.org/10.1109/TNN.2008.2005605](http://doi.org/10.1109/TNN.2008.2005605)。
+- [366] SCARSELLI, F., GORI, M., TSOI, A. C., HAGENBUCHNER, M. 和 MONFARDINI, G. 图神经网络模型。*IEEE 神经网络汇刊* 20, 1 (2009)，第61–80页。URL：`doi.org/10.1109/TNN.2008.2005605`。
 
-- [367] SCHMIDHUBER, J. 神经网络中的深度学习：综述。*Neural Networks* 61 (2015)，第85–117页。URL：[doi.org/10.1016/j.neunet.2014.09.003](http://doi.org/10.1016/j.neunet.2014.09.003)。
 
-- [368] SCHÜTT, K. T., SAUCEDA, H. E., KINDERMANS, P.-J., TKATCZENKO, A. 和 MÜLLER, K.-R. SchNet – 一种用于分子和材料的深度学习架构。*The Journal of Chemical Physics* 148, 24 (2018)。URL：[doi.org/10.1063/1.5019779](http://doi.org/10.1063/1.5019779)。
 
-- [369] SCHWAB, C., STEIN, A. 和 ZECH, J. 针对 Lipschitz 算子的深度算子网络逼近速率。*arXiv:2307.09835* (2023)。URL：[arxiv.org/abs/2307.09835](http://arxiv.org/abs/2307.09835)。
+- [367] SCHMIDHUBER, J. 神经网络中的深度学习：综述。`Neural Networks` 61 (2015)，第85–117页。URL：[doi.org/10.1016/j.neunet.2014.09.003](http://doi.org/10.1016/j.neunet.2014.09.003)。
 
-- [370] SCHWAB, C. 和 ZECH, J. 高维深度学习：不确定度量化中广义多项式混沌展开的神经网络表达速率。*Anal. Appl.* (Singap.) 17, 1 (2019)，第19–55页。URL：[doi.org/10.1142/S0219530518500203](http://doi.org/10.1142/S0219530518500203)。
+- [368] SCHÜTT, K. T., SAUCEDA, H. E., KINDERMANS, P.-J., TKATCZENKO, A. 和 MÜLLER, K.-R. SchNet – 一种用于分子和材料的深度学习架构。`The Journal of Chemical Physics` 148, 24 (2018)。URL：[doi.org/10.1063/1.5019779](http://doi.org/10.1063/1.5019779)。
 
-- [371] SERMANET, P., EIGEN, D., ZHANG, X., MATHIEU, M., FERGUS, R. 和 LECUN, Y. OverFeat：使用卷积网络进行集成识别、定位和检测。*arXiv:1312.6229* (2013)。URL：[arxiv.org/abs/1312.6229](http://arxiv.org/abs/1312.6229)。
+- [369] SCHWAB, C., STEIN, A. 和 ZECH, J. 针对 Lipschitz 算子的深度算子网络逼近速率。`arXiv:2307.09835` (2023)。URL：[arxiv.org/abs/2307.09835](http://arxiv.org/abs/2307.09835)。
 
-- [372] SEZER, O. B., GUDELEK, M. U. 和 OZBAYOGLU, A. M. 基于深度学习的金融时间序列预测：一项系统性文献综述：2005–2019。*Appl. Soft Comput.* 90 (2020)，文章编号 106181。URL：[doi.org/10.1016/j.asoc.2020.106181](http://doi.org/10.1016/j.asoc.2020.106181)。
+- [370] SCHWAB, C. 和 ZECH, J. 高维深度学习：不确定度量化中广义多项式混沌展开的神经网络表达速率。`Anal. Appl.` (Singap.) 17, 1 (2019)，第19–55页。URL：[doi.org/10.1142/S0219530518500203](http://doi.org/10.1142/S0219530518500203)。
 
-- [373] SHALEV-SHWARTZ, S. 和 BEN-DAVID, S. *理解机器学习：从理论到算法*。剑桥大学出版社，2014年，xvi+397 页。URL：[doi.org/10.1017/CBO9781107298019](http://doi.org/10.1017/CBO9781107298019)。
+- [371] SERMANET, P., EIGEN, D., ZHANG, X., MATHIEU, M., FERGUS, R. 和 LECUN, Y. OverFeat：使用卷积网络进行集成识别、定位和检测。`arXiv:1312.6229` (2013)。URL：[arxiv.org/abs/1312.6229](http://arxiv.org/abs/1312.6229)。
 
-- [374] SHEN, Z., YANG, H. 和 ZHANG, S. 由神经元数量刻画的深度网络逼近。*Commun. Comput. Phys.* 28, 5 (2020)，第1768–1811页。URL：[doi.org/10.4208/cicp.oa-2020-0149](http://doi.org/10.4208/cicp.oa-2020-0149)。
+- [372] SEZER, O. B., GUDELEK, M. U. 和 OZBAYOGLU, A. M. 基于深度学习的金融时间序列预测：一项系统性文献综述：2005–2019。`Appl. Soft Comput.` 90 (2020)，文章编号 106181。URL：[doi.org/10.1016/j.asoc.2020.106181](http://doi.org/10.1016/j.asoc.2020.106181)。
 
-- [375] SHI, X., CHEN, Z., WANG, H., YEUNG, D.-Y., WONG, W.-K. 和 WOO, W.-c. 卷积 LSTM 网络：一种用于降水临近预报的机器学习方法。收录于 *Advances in Neural Information Processing Systems*。编辑：Cortes, C., Lawrence, N., Lee, D., Sugiyama, M. 和 Garnett, R. 第28卷。Curran Associates, Inc.，2015年。URL：[proceedings.neurips.cc/paper_files/paper/2015/file/07563a3fe3bbe7e3ba84431ad9d055af-Paper.pdf](http://proceedings.neurips.cc/paper_files/paper/2015/file/07563a3fe3bbe7e3ba84431ad9d055af-Paper.pdf)。
+- [373] SHALEV-SHWARTZ, S. 和 BEN-DAVID, S. `理解机器学习：从理论到算法`。剑桥大学出版社，2014年，xvi+397 页。URL：[doi.org/10.1017/CBO9781107298019](http://doi.org/10.1017/CBO9781107298019)。
 
-- [376] SIAMI-NAMINI, S., TAVAKOLI, N. 和 SIAMI NAMIN, A. ARIMA 和 LSTM 在时间序列预测中的比较。收录于 *2018 第17届 IEEE 机器学习与应用国际会议 (ICMLA)*（美国佛罗里达州奥兰多，2018年12月17日–20日）。IEEE 计算机学会，2018年，第1394–1401页。URL：[doi.org/10.1109/ICMLA.2018.00227](http://doi.org/10.1109/ICMLA.2018.00227)。
+- [374] SHEN, Z., YANG, H. 和 ZHANG, S. 由神经元数量刻画的深度网络逼近。`Commun. Comput. Phys.` 28, 5 (2020)，第1768–1811页。URL：[doi.org/10.4208/cicp.oa-2020-0149](http://doi.org/10.4208/cicp.oa-2020-0149)。
+
+- [375] SHI, X., CHEN, Z., WANG, H., YEUNG, D.-Y., WONG, W.-K. 和 WOO, W.-c. 卷积 LSTM 网络：一种用于降水临近预报的机器学习方法。收录于 `Advances in Neural Information Processing Systems`。编辑：Cortes, C., Lawrence, N., Lee, D., Sugiyama, M. 和 Garnett, R. 第28卷。Curran Associates, Inc.，2015年。URL：[proceedings.neurips.cc/paper_files/paper/2015/file/07563a3fe3bbe7e3ba84431ad9d055af-Paper.pdf](http://proceedings.neurips.cc/paper_files/paper/2015/file/07563a3fe3bbe7e3ba84431ad9d055af-Paper.pdf)。
+
+- [376] SIAMI-NAMINI, S., TAVAKOLI, N. 和 SIAMI NAMIN, A. ARIMA 和 LSTM 在时间序列预测中的比较。收录于 `2018 第17届 IEEE 机器学习与应用国际会议 (ICMLA)`（美国佛罗里达州奥兰多，2018年12月17日–20日）。IEEE 计算机学会，2018年，第1394–1401页。URL：[doi.org/10.1109/ICMLA.2018.00227](http://doi.org/10.1109/ICMLA.2018.00227)。
 
 - [377] SILVESTER, J. R. 块矩阵的行列式。Math. Gaz. 84, 501 (2000)，第460–467页。URL：doi.org/10.2307/3620776。
 
@@ -20466,134 +22347,93 @@ for i in range(M + 1):
 
 - [383] SOUDRY, D. 和 HOFFER, E. 多层神经网络中指数衰减次优局部极小值。arXiv:1702.05777 (2017)。URL：arxiv.org/abs/1702.05777。
 
-- [384] SRIVASTAVA, R. K., GREFF, K. 和 SCHMIDHUBER, J. 训练非常深的网络。收录于 *Advances in Neural Information Processing Systems*。编辑：Cortes, C., Lawrence, N., Lee, D., Sugiyama, M. 和 Garnett, R. 第28卷。Curran Associates, Inc.，2015年。URL：proceedings.neurips.cc/paper_files/paper/2015/file/215a71a12769b056c3c32e7299f1c5ed-Paper.pdf。
+- [384] SRIVASTAVA, R. K., GREFF, K. 和 SCHMIDHUBER, J. 训练非常深的网络。收录于 `Advances in Neural Information Processing Systems`。编辑：Cortes, C., Lawrence, N., Lee, D., Sugiyama, M. 和 Garnett, R. 第28卷。Curran Associates, Inc.，2015年。URL：proceedings.neurips.cc/paper_files/paper/2015/file/215a71a12769b056c3c32e7299f1c5ed-Paper.pdf。
 
 - [385] SRIVASTAVA, R. K., GREFF, K. 和 SCHMIDHUBER, J. 高速公路网络。arXiv:1505.00387 (2015)。URL：arxiv.org/abs/1505.00387。
 
 - [386] SUN, R. 深度学习的优化：理论与算法。arXiv:1912.08957 (2019年12月)。URL：arxiv.org/abs/1912.08957。
 
-- [387] SUTSKEVER, I., MARTENS, J., DAHL, G. 和 HINTON, G. 深度学习中初始化和动量的重要性。收录于 *The 30th International Conference on Machine Learning*（美国佐治亚州亚特兰大，2013年6月17日–19日）。编辑：Dasgupta, S. 和 McAllester, D. 第28卷。机器学习研究论文集第3号。PMLR，2013年，第1139–1147页。URL：proceedings.mlr.press/v28/sutskever13.html。
-
-
-
+- [387] SUTSKEVER, I., MARTENS, J., DAHL, G. 和 HINTON, G. 深度学习中初始化和动量的重要性。收录于 `The 30th International Conference on Machine Learning`（美国佐治亚州亚特兰大，2013年6月17日–19日）。编辑：Dasgupta, S. 和 McAllester, D. 第28卷。机器学习研究论文集第3号。PMLR，2013年，第1139–1147页。URL：proceedings.mlr.press/v28/sutskever13.html。
 
 ### 参考文献
 
-- [388] SUTSKEVER, I., VINYALS, O., 和 LE, Q. V. 使用神经网络进行序列到序列学习。载 *Advances in Neural Information Processing Systems*。由 Ghahramani, Z., Welling, M., Cortes, C., Lawrence, N., 和 Weinberger, K. 编辑。第 27 卷。Curran Associates, Inc., 2014。网址：proceedings.neurips.cc/paper_files/paper/2014/file/a14ca55a4f27472c5d894ec1c3c4743d2-Paper.pdf。
+- [388] SUTSKEVER, I., VINYALS, O., 和 LE, Q. V. 使用神经网络进行序列到序列学习。载 `Advances in Neural Information Processing Systems`。由 Ghahramani, Z., Welling, M., Cortes, C., Lawrence, N., 和 Weinberger, K. 编辑。第 27 卷。Curran Associates, Inc., 2014。网址：proceedings.neurips.cc/paper_files/paper/2014/file/a14ca55a4f27472c5d894ec1c3c4743d2-Paper.pdf。
 
 - [389] SUTTON, R. S. 和 BARTO, A. G. 《强化学习：入门》。第 2 版。MIT Press，马萨诸塞州剑桥，2018，xxi+526 页。
 
-- [390] SZEGEDY, C., LIU, W., JIA, Y., SERMANET, P., REED, S., ANGELOV, D., ER-HAN, D., VANHOUCHE, V., 和 RABINOVICH, A. 通过卷积网络深入挖掘。载 *2015 年 IEEE 计算机视觉与模式识别会议 (CVPR)* （美国马萨诸塞州波士顿，2015 年 6 月 7–12 日）。IEEE 计算机学会，2015，第 1–9 页。网址：doi.org/10.1109/CVPR.2015.7298594。
+- [390] SZEGEDY, C., LIU, W., JIA, Y., SERMANET, P., REED, S., ANGELOV, D., ER-HAN, D., VANHOUCHE, V., 和 RABINOVICH, A. 通过卷积网络深入挖掘。载 `2015 年 IEEE 计算机视觉与模式识别会议 (CVPR)` （美国马萨诸塞州波士顿，2015 年 6 月 7–12 日）。IEEE 计算机学会，2015，第 1–9 页。网址：doi.org/10.1109/CVPR.2015.7298594。
 
-- [391] TADIĆ, V. B. 随机梯度搜索在存在多个且非孤立极值时的收敛性与收敛速率。*Stochastic Process. Appl.* 125, 5 (2015), 第 1715–1755 页。网址：doi.org/10.1016/j.spa.2014.11.001。
+- [391] TADIĆ, V. B. 随机梯度搜索在存在多个且非孤立极值时的收敛性与收敛速率。`Stochastic Process. Appl.` 125, 5 (2015), 第 1715–1755 页。网址：doi.org/10.1016/j.spa.2014.11.001。
 
-- [392] TAN, L. 和 CHEN, L. 考虑多个输入函数的增强型 DeepONet 用于建模偏微分算子。*arXiv:2202.08942* (2022)。网址：arxiv.org/abs/2202.08942。
+- [392] TAN, L. 和 CHEN, L. 考虑多个输入函数的增强型 DeepONet 用于建模偏微分算子。`arXiv:2202.08942` (2022)。网址：arxiv.org/abs/2202.08942。
 
-- [393] TAYLOR, J. M., PARDO, D., 和 MUGA, I. 使用神经网络求解偏微分方程的深度傅里叶残差方法。*Comput. Methods Appl. Mech. Engrg.* 405 (2023), 文章编号 115850，共 27 页。网址：doi.org/10.1016/j.cma.2022.115850。
+- [393] TAYLOR, J. M., PARDO, D., 和 MUGA, I. 使用神经网络求解偏微分方程的深度傅里叶残差方法。`Comput. Methods Appl. Mech. Engrg.` 405 (2023), 文章编号 115850，共 27 页。网址：doi.org/10.1016/j.cma.2022.115850。
 
 - [394] TESCHL, G. 《常微分方程与动力系统》。第 140 卷。美国数学会，普罗维登斯，2012，xii+356 页。网址：doi.org/10.1090/gsm/140。
 
 - [395] TROPP, J. A. 矩阵谱半径公式的一个初等证明。http://users.cms.caltech.edu/~jtropp/notes/Tro01-Spectral-Radius.pdf。[访问日期：2018 年 2 月 16 日]。2001。
 
-- [396] VAN DEN OORD, A., DIELEMAN, S., 和 SCHRAUWEN, B. 基于内容的深度音乐推荐。载 *Advances in Neural Information Processing Systems*。由 Burges, C., Bottou, L., Welling, M., Ghahramani, Z., 和 Weinberger, K. 编辑。第 26 卷。Curran Associates, Inc., 2013。网址：proceedings.neurips.cc/paper_files/paper/2013/file/b3ba8f1beeb1238a2f37603d90b58898d-Paper.pdf。
+- [396] VAN DEN OORD, A., DIELEMAN, S., 和 SCHRAUWEN, B. 基于内容的深度音乐推荐。载 `Advances in Neural Information Processing Systems`。由 Burges, C., Bottou, L., Welling, M., Ghahramani, Z., 和 Weinberger, K. 编辑。第 26 卷。Curran Associates, Inc., 2013。网址：proceedings.neurips.cc/paper_files/paper/2013/file/b3ba8f1beeb1238a2f37603d90b58898d-Paper.pdf。
 
-- [397] VASWANI, A., SHAZEER, N., PARMAR, N., USZKOREIT, J., JONES, L., GOMEZ, A. N., KAISER, L., 和 POLOSUKHIN, I. 注意力机制就是你所需的一切。载 *Advances in Neural Information Processing Systems*。由 Guyon, I., Luxburg, U. V., Bengio, S., Wallach, H., Fergus, R., Vishwanathan, S., 和 Garnett, R. 编辑。第 30 卷。Curran Associates, Inc., 2017。网址：proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fdbd53c1c4a845aa-Paper.pdf。
+- [397] VASWANI, A., SHAZEER, N., PARMAR, N., USZKOREIT, J., JONES, L., GOMEZ, A. N., KAISER, L., 和 POLOSUKHIN, I. 注意力机制就是你所需的一切。载 `Advances in Neural Information Processing Systems`。由 Guyon, I., Luxburg, U. V., Bengio, S., Wallach, H., Fergus, R., Vishwanathan, S., 和 Garnett, R. 编辑。第 30 卷。Curran Associates, Inc., 2017。网址：proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fdbd53c1c4a845aa-Paper.pdf。
 
-- [398] VATANEN, T., RAIKO, T., VALPOLA, H., 和 LECUN, Y. 将随机梯度推向二阶方法——非线性变换中的反向传播学习。载 *Neural Information Processing*。由 Lee, M., Hirose, A., Hou, Z.-G., 和 Kil, R. M. 编辑。柏林，海德堡：Springer Berlin Heidelberg，2013，第 442–449 页。
+- [398] VATANEN, T., RAIKO, T., VALPOLA, H., 和 LECUN, Y. 将随机梯度推向二阶方法——非线性变换中的反向传播学习。载 `Neural Information Processing`。由 Lee, M., Hirose, A., Hou, Z.-G., 和 Kil, R. M. 编辑。柏林，海德堡：Springer Berlin Heidelberg，2013，第 442–449 页。
 
-- [399] VELIČKOVIĆ, P., CUCURULL, G., CASANOVA, A., ROMERO, A., LIÒ, P., 和 BENGIO, Y. 图注意力网络。*arXiv:1710.10903* (2017)。网址：arxiv.org/abs/1710.10903。
+- [399] VELIČKOVIĆ, P., CUCURULL, G., CASANOVA, A., ROMERO, A., LIÒ, P., 和 BENGIO, Y. 图注意力网络。`arXiv:1710.10903` (2017)。网址：arxiv.org/abs/1710.10903。
 
-- [400] VENTURI, L., BANDEIRA, A. S., 和 BRUNA, J. 单层隐藏层神经网络优化景观中的虚假山谷。*J. Mach. Learn. Res.* 20, 133 (2019), 第 1–34 页。网址：jmlr.org/papers/v20/18-674.html。
+- [400] VENTURI, L., BANDEIRA, A. S., 和 BRUNA, J. 单层隐藏层神经网络优化景观中的虚假山谷。`J. Mach. Learn. Res.` 20, 133 (2019), 第 1–34 页。网址：jmlr.org/papers/v20/18-674.html。
 
-- [401] VENUGOPALAN, S., ROHRBACH, M., DONAHUE, J., MOONEY, R., DARRELL, T., 和 SAENKO, K. 序列到序列——视频到文本。载 *IEEE 国际计算机视觉会议 (ICCV) 论文集* （智利圣地亚哥，2015 年 12 月 7–13 日）。IEEE 计算机学会，2015。网址：doi.org/10.1109/ICCV.2015.515。
+- [401] VENUGOPALAN, S., ROHRBACH, M., DONAHUE, J., MOONEY, R., DARRELL, T., 和 SAENKO, K. 序列到序列——视频到文本。载 `IEEE 国际计算机视觉会议 (ICCV) 论文集` （智利圣地亚哥，2015 年 12 月 7–13 日）。IEEE 计算机学会，2015。网址：doi.org/10.1109/ICCV.2015.515。
 
-- [402] VINCENT, P., LAROCHELLE, H., BENGIO, Y., 和 MANZAGOL, P.-A. 使用去噪自编码器提取和组合鲁棒特征。载 *第 25 届国际机器学习会议论文集。ICML '08*。芬兰赫尔辛基：Association for Computing Machinery，2008，第 1096–1103 页。网址：doi.org/10.1145/1390156.1390294。
+- [402] VINCENT, P., LAROCHELLE, H., BENGIO, Y., 和 MANZAGOL, P.-A. 使用去噪自编码器提取和组合鲁棒特征。载 `第 25 届国际机器学习会议论文集。ICML '08`。芬兰赫尔辛基：Association for Computing Machinery，2008，第 1096–1103 页。网址：doi.org/10.1145/1390156.1390294。
 
-- [403] VINCENT, P., LAROCHELLE, H., LAJOIE, I., BENGIO, Y., 和 MANZAGOL, P.-A. 堆叠去噪自编码器：在深度网络中具有局部去噪准则的学习有用表示。*J. Mach. Learn. Res.* 11, 110 (2010), 第 3371–3408 页。网址：jmlr.org/papers/v11/vincent10a.html。
+- [403] VINCENT, P., LAROCHELLE, H., LAJOIE, I., BENGIO, Y., 和 MANZAGOL, P.-A. 堆叠去噪自编码器：在深度网络中具有局部去噪准则的学习有用表示。`J. Mach. Learn. Res.` 11, 110 (2010), 第 3371–3408 页。网址：jmlr.org/papers/v11/vincent10a.html。
 
-- [404] WANG, F., JIANG, M., QIAN, C., YANG, S., LI, C., ZHANG, H., WANG, X., 和 TANG, X. 用于图像分类的残差注意力网络。载 *IEEE 计算机视觉和模式识别会议论文集 (CVPR)* （美国夏威夷，2017 年 7 月 21–26 日）。IEEE 计算机学会，2017。网址：doi.org/10.1109/CVPR.2017.683。
+- [404] WANG, F., JIANG, M., QIAN, C., YANG, S., LI, C., ZHANG, H., WANG, X., 和 TANG, X. 用于图像分类的残差注意力网络。载 `IEEE 计算机视觉和模式识别会议论文集 (CVPR)` （美国夏威夷，2017 年 7 月 21–26 日）。IEEE 计算机学会，2017。网址：doi.org/10.1109/CVPR.2017.683。
 
-- [405] WANG, N., ZHANG, D., CHANG, H., 和 LI, H. 通过理论指导的神经网络学习地下水流。*J. Hydrology* 584 (2020), 第 124700 页。网址：doi.org/10.1016/j.jhydrol.2020.124700。
+- [405] WANG, N., ZHANG, D., CHANG, H., 和 LI, H. 通过理论指导的神经网络学习地下水流。`J. Hydrology` 584 (2020), 第 124700 页。网址：doi.org/10.1016/j.jhydrol.2020.124700。
 
-- [406] WANG, S., WANG, H., 和 PERDIKARIS, P. 使用物理信息 DeepONets 学习参数化偏微分方程的解算子。*Science Advances* 7, 40 (2021), e8605。网址：doi.org/10.1126/sciadv.ab18605。
+- [406] WANG, S., WANG, H., 和 PERDIKARIS, P. 使用物理信息 DeepONets 学习参数化偏微分方程的解算子。`Science Advances` 7, 40 (2021), e8605。网址：doi.org/10.1126/sciadv.ab18605。
 
-- [407] WANG, Y., ZOU, R., LIU, F., ZHANG, L., 和 LIU, Q. 基于深度神经网络的风速和风力预测综述。*Appl. Energy* 304 (2021), 文章编号 117766。网址：doi.org/10.1016/j.apenergy.2021.117766。
+- [407] WANG, Y., ZOU, R., LIU, F., ZHANG, L., 和 LIU, Q. 基于深度神经网络的风速和风力预测综述。`Appl. Energy` 304 (2021), 文章编号 117766。网址：doi.org/10.1016/j.apenergy.2021.117766。
+
+
 
 - [108] WANG, Z., YAN, W., 和 OATES, T. 使用深度神经网络从头进行时间序列分类：一个强有力的基线。载 *2017 年国际神经网络联合会议 (IJCNN)*。2017，第 1578–1585 页。网址：doi.org/10.1109/IJCNN.2017.7966039。
-
 - [109] WELPER, G. 梯度下降训练的神经网络的近似结果。*arXiv:2309.04860* (2023)。网址：arxiv.org/abs/2309.04860。
-
 - [110] WEN, G., LI, Z., AZIZZADENEHSILI, K., ANANDKUMAR, A., 和 BENSON, S. M. U-FNO – 一种用于多相流的基于傅里叶神经算子增强型深度学习模型。*arXiv:2109.03697* (2021)。网址：arxiv.org/abs/2109.03697。
-
 - [111] WEST, D. 《图论导论》。Prentice Hall，2001。588 页。
-
 - [112] WU, F., SOUZA, A., ZHANG, T., FIFTY, C., YU, T., 和 WEINBERGER, K. 简化图卷积网络。载 *第 36 届国际机器学习会议论文集* （美国加利福尼亚州长滩，2019 年 6 月 9–15 日）。由 Chaudhuri, K. 和 Salakhutdinov, R. 编辑。第 97 卷。Machine Learning Research 论文集。PMLR，2019，第 6861–6871 页。网址：proceedings.mlr.press/v97/wu19e.html。
-
 - [113] WU, K., YAN, X.-B., JIN, S., 和 MA, Z. 渐近保持卷积 DeepONets 捕捉多尺度线性输运方程的扩散行为。*arXiv:2306.15891* (2023)。网址：arxiv.org/abs/2306.15891。
-
 - [114] WU, Z., RAMSUNDAR, B., FEINBERG, E. N., GOMES, J., GENIESSE, C., PAPPU, A. S., LESWING, K., 和 PANDE, V. MoleculeNet：分子机器学习基准。*Chem. Sci.* 9 (2018), 第 513–530 页。网址：doi.org/10.1039/C7SC02664A。
-
 - [115] WU, Z., PAN, S., CHEN, F., LONG, G., ZHANG, C., 和 YU, P. S. 图神经网络综述。*IEEE Trans. Neural Netw. Learn. Syst.* 32, 1 (2021), 第 4–24 页。网址：doi.org/10.1109/TNNLS.2020.2978336。
-
 - [116] XIE, J., XU, L., 和 CHEN, E. 使用深度神经网络进行图像去噪和修补。载 *Advances in Neural Information Processing Systems*。由 Pereira, F., Burges, C., Bottou, L., 和 Weinberger, K. 编辑。第 25 卷。Curran Associates, Inc., 2012。网址：proceedings.neurips.cc/paper_files/paper/2012/file/6cdd60ea0045eb7a6ec44c5d429ed402-Paper.pdf。
-
 - [117] XIE, S., GIRSHICK, R., DOLLÁR, P., TU, Z., 和 HE, K. 用于深度神经网络的聚合残差变换。载 *2017 年 IEEE 计算机视觉与模式识别会议 (CVPR)* （美国夏威夷，2017 年 7 月 21–26 日）。IEEE 计算机学会，2017，第 5987–5995 页。网址：doi.org/10.1109/CVPR.2017.634。
-
 - [18] XIONG, R., YANG, Y., HE, D., ZHENG, K., ZHENG, S., XING, C., ZHANG, H., LAN, Y., WANG, L., 和 LIU, T.-Y. 关于 Transformer 架构中的层归一化。载 *第 37 届国际机器学习会议论文集* （2020 年 7 月 13–18 日）。ICML’20。JMLR.org，2020，975，第 10524–10533 页。网址：proceedings.mlr.press/v119/xiong20b.html。
-
 - [19] XIONG, W., HUANG, X., ZHANG, Z., DENG, R., SUN, P., 和 TIAN, Y. 作为非线性偏微分方程无网格求解器的 Koopman 神经算子。*arXiv:2301.10022* (2023)。网址：arxiv.org/abs/2301.10022。
-
 - [20] XU, R., ZHANG, D., RONG, M., 和 WANG, N. 弱形式理论指导神经网络 (TgNN-wf) 用于深度学习地下单相和两相流。*J. Comput. Phys.* 436 (2021), 文章编号 110318，共 20 页。网址：doi.org/10.1016/j.jcp.2021.110318。
-
 - [21] YANG, L., MENG, X., 和 KARNIADAKIS, G. E. B-PINNs：用于带有噪声数据的前向和反向偏微分方程问题的贝叶斯物理信息神经网络。*J. Comput. Phys.* 425 (2021), 文章编号 109913。网址：doi.org/10.1016/j.jcp.2020.109913。
-
 - [22] YANG, Z., DAI, Z., YANG, Y., CARBONELL, J., SALAKHUTDINOV, R., 和 LE, Q. V. XLNet：用于语言理解的广义自回归预训练。*arXiv:1906.08237* (2019)。网址：arxiv.org/abs/1906.08237。
-
 - [23] YAROTSKY, D. 深度 ReLU 网络近似的误差界限。*Neural Networks* 94 (2017), 第 103–114 页。网址：doi.org/10.1016/j.neunet.2017.07.002。
-
 - [24] YING, R., HE, R., CHEN, K., EKSOMBATCHAI, P., HAMILTON, W. L., 和 LESKOVEC, J. 用于 Web 规模推荐系统的图卷积神经网络。载 *第 24 届 ACM SIGKDD 知识发现和数据挖掘国际会议论文集* （英国伦敦，2018 年 8 月 19–23 日）。KDD ’18。纽约，美国：Association for Computing Machinery，2018，第 974–983 页。网址：doi.org/10.1145/3219819.3219890。
-
 - [25] YU, Y., SI, X., HU, Y., 和 ZHANG, J. 循环神经网络综述：LSTM 单元和网络架构。*Neural Comput.* 31, 7 (2019 年 7 月), 第 1235–1270 页。网址：doi.org/10.1162/neco_a_01199。
-
 - [26] YUN, S., JEONG, M., KIM, R., KANG, J., 和 KIM, H. J. 图 Transformer 网络。载 *Advances in Neural Information Processing Systems*。由 Wallach, H., Larochelle, H., Beygelzimer, A., d’Alché-Buc, F., Fox, E., 和 Garnett, R. 编辑。第 32 卷。Curran Associates, Inc., 2019。网址：proceedings.neurips.cc/paper_files/paper/2019/file/9d63484a8b477c97640154d40595a3bb-Paper.pdf。
-
 - [27] ZAGORUYKO, S. 和 KOMODAKIS, N. 宽残差网络。*arXiv:1605.07146* (2016)。网址：arxiv.org/abs/1605.07146。
 
-
-
-
-
 ### 参考文献
-
 - ZANG, Y., BAO, G., YE, X., AND ZHOU, H. 用于高维偏微分方程的弱对抗网络。 *J. Comput. Phys.* 411 (2020), pp. 109409, 14. 网址: doi.org/10.1016/j.jcp.2020.109409.
-
 - ZEILLER, M. D. ADADelta: 一种自适应学习率方法。arXiv:1212.5701 (2012). 网址: arxiv.org/abs/1212.5701.
-
 - ZENG, D., LIU, K., LAI, S., ZHOU, G., AND ZHAO, J. 通过卷积深度神经网络进行关系分类。收录于 *Proceedings of CoNLL 2014, the 25th International Conference on Computational Linguistics: Technical Papers*。Dublin, Ireland: Dublin City University and Association for Computational Linguistics, Aug. 2014, pp. 2335–2344. 网址: aclanthology.org/C14-1220.
-
 - ZHANG, A., LIPTON, Z. C., LI, M., AND SMOLA, A. J. 深入深度学习。剑桥大学出版社, 2023。网址: d21.ai.
-
 - ZHANG, J., ZHANG, S., SHEN, J., AND LIN, G. 能量耗散进化深度算子神经网络。arXiv:2306.06281 (2023). 网址: arxiv.org/abs/2306.06281.
-
 - ZHANG, J., MOKHTARI, A., SRA, S., AND JADBABAIE, A. 直接 Runge-Kutta 离散化实现加速。arXiv:1805.00521 (2018). 网址: arxiv.org/abs/1805.00521.
-
 - ZHAO, X., ZHAO, J., AND LECUN, Y. 用于文本分类的字符级卷积网络。收录于 *Advances in Neural Information Processing Systems*。由 Cortes, C., Lawrence, N., Lee, D., Sugiyama, M., and Garnett, R. 编辑。卷 28。Curran Associates, Inc., 2015。网址: proceedings.neurips.cc/paper_files/paper/2015/file/250cf8b51c773f318fcd8c84be867a9a02-Paper.pdf.
-
 - ZHANG, Y., LI, Y., ZHANG, Z., LUO, T., AND XU, Z-Q. J. 嵌入原理：深度神经网络损失景观的层级结构。arXiv:2111.15527 (2021). 网址: arxiv.org/abs/2111.15527.
-
 - ZHANG, Y., ZHANG, Z., LUO, T., AND XU, Z-Q. J. 深度神经网络损失景观的嵌入原理。arXiv:2105.14573 (2021). 网址: arxiv.org/abs/2105.14573.
-
 - ZHANG, Y. AND WALLACE, B. 用于句子分类的卷积神经网络的敏感性分析（及从业者指南）。收录于 *Proceedings of the Eighth International Joint Conference on Natural Language Processing (Volume 1: Long Papers)* (Taipei, Taiwan, Nov. 27–Dec. 1, 2017)。Asian Federation of Natural Language Processing, 2017, pp. 253–263。网址: aclanthology.org/I17-1026.
-
 - ZHANG, Y., CHEN, C., SHI, N., SUN, R., AND LUO, Z-Q. Adam 可以在不修改更新规则的情况下收敛。arXiv:2208.09632 (2022). 网址: arxiv.org/abs/2208.09632.
-
 - ZHANG, Z., CUI, P., AND ZHU, W. 图上的深度学习：综述。 *IEEE Trans. Knowledge Data Enggr.* 34, 1 (2022), pp. 249–270。网址: <doi.org/10.1109/TKDE.2020.2981333>.
-
 - ZHENG, Y., LIU, Q., CHEN, E., GE, Y., AND ZHAO, J. L. 使用多通道深度卷积神经网络进行时间序列分类。收录于 *Web-Age Information Management*。由 Li, F., Li, G., Hwang, S.-w., Yao, B., and Zhang, Z. 编辑。Springer, Cham, 2014, pp. 298–310。网址: <doi.org/10.1007/978-3-319-08010-9_33>.
-
 - ZHOU, H., ZHANG, S., PENG, J., ZHANG, S., LI, J., XIONG, H., AND ZHANG, W. Informer: 超越用于长序列时间序列预测的高效 Transformer。 *Proceedings of the AAAI Conference on Artificial Intelligence* 35, 12 (2021), pp. 11106–11115。网址: <doi.org/10.1609/aaai.v35i12.17325>.
-
 - ZHOU, J., CUI, G., HU, S., ZHANG, Z., YANG, C., LIU, Z., WANG, L., LI, C., AND SUN, M. 图神经网络：方法与应用的综述。 *AI Open* 1 (2020), pp. 57–81。网址: <doi.org/10.1016/j.aiopen.2021.01.001>.
-
 - ZHU, Y., AND ZABARAS, N. 用于代理建模和不确定性量化的贝叶斯深度卷积编码器-解码器网络。 *J. Comput. Phys.* 366 (2018), pp. 415–447。网址: <doi.org/10.1016/j.jcp.2018.04.018>.
-

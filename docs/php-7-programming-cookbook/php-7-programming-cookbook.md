@@ -1,46 +1,56 @@
+
 # PHP 7 编程秘籍
-
-
-
-
 
 ## 鸣谢
 
 **作者**
+
 道格·比勒
 
 **项目协调员**
+
 苏珊娜·库廷
 
 **审阅者**
+
 萨尔瓦托雷·帕帕拉多
+
 文森佐·普罗文扎
 
 **校对**
+
 Safis Editing
 
 **索引编制者**
+
 雷卡·奈尔
 
 **委托编辑**
+
 库纳尔·帕里赫
 
 **生产协调员**
+
 梅尔温·德萨
 
 **获取编辑**
+
 柯克·德科斯塔
 
 **封面设计**
+
 梅尔温·德萨
 
 **内容发展编辑**
+
 梅林特·托马斯·马修
 
 **技术编辑**
+
 马杜尼克塔·苏尼尔·钦达克
 
 **文字编辑**
+
 Safis Editing
 
 # 前言
@@ -64,6 +74,7 @@ Safis Editing
 **卡尔·埃文斯**
 
 Nomad PHP
+
 World Wide Herd 的技术主管
 
 ## 作者简介
@@ -86,7 +97,7 @@ World Wide Herd 的技术主管
 
 # 电子书、折扣优惠及其他
 
-您知道 Packt 提供其出版的所有书籍的电子版吗？您可以下载 PDF 和 ePub 文件。您可以在 www.PacktPub.com 升级到电子书版本，作为纸质书客户，您有权获得电子书的折扣。如需更多详情，请联系 customer care@packtpub.com。
+您知道 Packt 提供其出版的所有书籍的电子版吗？您可以下载 PDF 和 ePub 文件。您可以在 www.PacktPub.com 升级到电子书版本，作为纸质书客户，您有权获得电子书的折扣。如需更多详情，请联系 `customer care@packtpub.com`。
 
 在 www.PacktPub.com，您还可以阅读一系列免费技术文章，订阅各种免费新闻通讯，并享受 Packt 书籍和电子书的独家折扣和优惠。
 
@@ -125,8 +136,6 @@ PHP 7 在开源社区中引起了轰动，打破了速度纪录，这就好比�
 第 8 章“处理日期/时间和国际化方面”帮助您应对因万维网（WWW）增长带来的激烈竞争，导致越来越多的客户希望将业务扩展到国际市场。本章将使您快速掌握国际化的所有方面，包括使用表情符号、复杂字符和翻译。此外，我们将展示如何获取和处理区域信息，包括语言设置、数字和货币格式以及日期和时间。另外，我们将介绍展示如何创建可处理重复事件的国际化日历的食谱。
 
 第 9 章“开发中间件”处理了当前开源社区中最热门的话题——中间件。顾名思义，中间件是一种软件，可以*插入*到位，为现有应用程序增加价值，而无需更改该应用程序的源代码。在本章中，我们将展示一系列食谱，实现为符合 PSR-7 标准的中间件（有关更多详细信息，请参阅*附录，定义 PSR-7 类*），执行身份验证、访问控制、缓存和路由功能。
-
-
 
 第 10 章“查看高级算法”帮助你理解，作为一名开发人员，面对如此多的程序员和公司争夺相同的业务，掌握关键的高级算法极其重要。在本章中，使用 PHP 7，你将学习 getter 和 setter、链表、冒泡排序、堆栈和二进制搜索的理论与应用。此外，本章还探讨了如何使用这些技术来实现搜索引擎，以及如何处理多维数组。
 
@@ -251,24 +260,23 @@ php -S localhost:8080
 
 ### 勘误表
 
-虽然我们已尽力确保内容的准确性，但错误仍可能发生。如果你在我们任何书籍中发现错误——可能是文本或代码中的错误——我们将不胜感激你能向我们报告。这样做可以帮助其他读者避免困扰，并帮助我们改进本书的后续版本。如果发现任何勘误，请访问 http://www.packtpub.com/submit-errata，选择你的书籍，点击 Errata Submission Form 链接，并输入你的勘误详情。一旦你的勘误得到验证，你的提交将被接受，勘误将上传到我们的网站，或添加到该书籍 Errata 部分下的现有勘误列表中。
 
-要查看以前提交的勘误，请访问 https://www.packtpub.com/books/content/support 并在搜索框中输入书名。所需信息将显示在 Errata 部分下。
+
+虽然我们已尽力确保内容的准确性，但错误仍可能发生。如果你在我们任何书籍中发现错误——可能是文本或代码中的错误——我们将不胜感激你能向我们报告。这样做可以帮助其他读者避免困扰，并帮助我们改进本书的后续版本。如果发现任何勘误，请访问 `http://www.packtpub.com/submit-errata`，选择你的书籍，点击 `Errata Submission Form` 链接，并输入你的勘误详情。一旦你的勘误得到验证，你的提交将被接受，勘误将上传到我们的网站，或添加到该书籍 Errata 部分下的现有勘误列表中。
+
+要查看以前提交的勘误，请访问 `https://www.packtpub.com/books/content/support` 并在搜索框中输入书名。所需信息将显示在 Errata 部分下。
 
 ### 盗版
 
 互联网上版权材料的盗版问题是所有媒体中持续存在的问题。在 Packt，我们非常重视版权和许可的保护。如果你在互联网上以任何形式发现我们作品的非法副本，请立即向我们提供位置地址或网站名称，以便我们可以追究补救措施。
 
-请通过 copyright@packtpub.com 联系我们，并提供疑似盗版材料的链接。
+请通过 `copyright@packtpub.com` 联系我们，并提供疑似盗版材料的链接。
 
 我们感谢你帮助保护我们的作者以及我们为你带来有价值内容的能力。
 
-
-
-
 # 问题
 
-如果您对本书的任何方面存在问题，您可以通过 questions@packtpub.com 联系我们，我们将尽力解决这些问题。
+如果您对本书的任何方面存在问题，您可以通过 `questions@packtpub.com` 联系我们，我们将尽力解决这些问题。
 
 # 1 奠定基础
 
@@ -307,10 +315,10 @@ php -S localhost:8080
 
 当在终端窗口或命令行中编译时，正常程序如下：
 
-- configure
-- make
-- make test
-- make install
+- `configure`
+- `make`
+- `make test`
+- `make install`
 
 关于配置选项（即运行 `configure` 时）的信息，请使用 **help** 选项：
 
@@ -322,9 +330,9 @@ configure --help
 
 | 错误 | 修复方法 |
 | :--- | :--- |
-| configure: error: xml2-config not found. Please check your libxml2 installation | 您只需要安装 libxml2。关于此错误，请参阅以下链接：http://superuser.com/questions/740399/how-to-fix-php-installation-when-xml2-config-is-missing |
-| configure: error: Please reinstall readline - I cannot find readline.h | 安装 libreadline-dev |
-| configure: WARNING: unrecognized options: --enable-spl, --enable-reflection, --with-libxml | 不是大问题。这些选项是默认值，不需要包含在内。更多详情，请参阅以下链接：http://jjcutrer.com/howto/linux/how-to-compile-php7-on-ubuntu-14-04 |
+| configure: error: xml2-config not found. Please check your libxml2 installation | 您只需要安装 libxml2。关于此错误，请参阅以下链接：`http://superuser.com/questions/740399/how-to-fix-php-installation-when-xml2-config-is-missing` |
+| configure: error: Please reinstall readline - I cannot find readline.h | 安装 `libreadline-dev` |
+| configure: WARNING: unrecognized options: --enable-spl, --enable-reflection, --with-libxml | 不是大问题。这些选项是默认值，不需要包含在内。更多详情，请参阅以下链接：`http://jjcutrer.com/howto/linux/how-to-compile-php7-on-ubuntu-14-04` |
 
 ### 从预编译二进制文件安装 PHP 7
 
@@ -350,7 +358,7 @@ configure --help
 
 ### 安装 *AMP 包
 
-**AMP** 指的是 **Apache**、**MySQL** 和 **PHP**（也有 **Perl** 和 **Python**）。* 指的是 Linux、Windows、Mac 等（即 LAMP、WAMP 和 MAMP）。这种方法通常是最简单的，但您对初始 PHP 安装的控制较少。另一方面，您始终可以修改 php.ini 文件并安装额外的扩展来按需自定义安装。下表总结了若干流行的 *AMP 包：
+**AMP** 指的是 **Apache**、**MySQL** 和 **PHP**（也有 **Perl** 和 **Python**）。* 指的是 Linux、Windows、Mac 等（即 LAMP、WAMP 和 MAMP）。这种方法通常是最简单的，但您对初始 PHP 安装的控制较少。另一方面，您始终可以修改 `php.ini` 文件并安装额外的扩展来按需自定义安装。下表总结了若干流行的 *AMP 包：
 
 | 包 | 在哪里找到 | 免费？ | 支持* |
 | :--- | :--- | :--- | :--- |
@@ -369,23 +377,20 @@ configure --help
 
 值得注意的是，PHP 7 在云计算平台上的安装通常遵循预编译二进制文件的安装程序。查明您的云环境使用的是 Linux、Mac 还是 Windows 虚拟机，然后按照本食谱中提到的适当程序进行操作。
 
-PHP 7 可能尚未到达您喜爱的预编译二进制文件仓库。您始终可以从源代码安装，或者考虑安装其中一个 *AMP 包（见下一节）。对于基于 Linux 的系统，替代方案是使用个人包存档（PPA）方法。然而，由于 PPA 没有经过严格的筛选过程，安全性可能是一个问题。关于 PPA 安全考量的良好讨论可以在 http://askubuntu.com/questions/35629/are-ppas-safe-to-add-to-my-system-and-what-are-some-red-flags-to-watch-out-fo 找到。
+PHP 7 可能尚未到达您喜爱的预编译二进制文件仓库。您始终可以从源代码安装，或者考虑安装其中一个 *AMP 包（见下一节）。对于基于 Linux 的系统，替代方案是使用个人包存档（PPA）方法。然而，由于 PPA 没有经过严格的筛选过程，安全性可能是一个问题。关于 PPA 安全考量的良好讨论可以在 `http://askubuntu.com/questions/35629/are-ppas-safe-to-add-to-my-system-and-what-are-some-red-flags-to-watch-out-fo` 找到。
 
 ### 参见
 
-一般安装注意事项，以及三大主要操作系统平台（Windows、Mac OS X 和 Linux）的说明，可以在 http://php.net/manual/en/install.general.php 找到。
+一般安装注意事项，以及三大主要操作系统平台（Windows、Mac OS X 和 Linux）的说明，可以在 `http://php.net/manual/en/install.general.php` 找到。
 
-MinGW 的网站是 http://www.mingw.org/。
+MinGW 的网站是 `http://www.mingw.org/`。
 
-使用 Visual Studio 编译 C 程序的说明可以在 https://msdn.microsoft.com/en-us/library/bb384838 找到。
+使用 Visual Studio 编译 C 程序的说明可以在 `https://msdn.microsoft.com/en-us/library/bb384838` 找到。
 
 测试 PHP 7 的另一种可能方法是使用虚拟机。以下是一些可能有用的工具及其链接：
 
-- Vagrant: https://github.com/rlerdorf/php7dev （php7dev 是一个预配置用于跨多个 PHP 版本测试 PHP 应用和开发扩展的 Debian 8 Vagrant 镜像）
-- Docker: https://hub.docker.com/r/codersthephen/php7/ （其中包含一个 PHP7 Docker 容器）
-
-
-
+- Vagrant: `https://github.com/rlerdorf/php7dev` （php7dev 是一个预配置用于跨多个 PHP 版本测试 PHP 应用和开发扩展的 Debian 8 Vagrant 镜像）
+- Docker: `https://hub.docker.com/r/codersthephen/php7/` （其中包含一个 PHP7 Docker 容器）
 
 ## 使用内置的 PHP Web 服务器
 
@@ -394,7 +399,6 @@ MinGW 的网站是 http://www.mingw.org/。
 ### 操作指南...
 
 - 1. 要激活 PHP Web 服务器，首先切换到将作为代码基底的目录。
-
 - 2. 然后你需要提供主机名或 IP 地址，可选地提供端口号。以下是运行本书提供的代码示例：
 
 `cd /path/to/recipes`
@@ -406,10 +410,9 @@ MinGW 的网站是 http://www.mingw.org/。
 ![](img/39390f6d56c5a83b28db083a8bd5185c_28_0.png)
 
 - 3. 随着内置 Web 服务器继续处理请求，你还会看到访问信息、HTTP 状态码和请求信息。
+- 4. 如果需要将 Web 服务器文档根目录设置为当前目录以外的其他目录，可以使用 `-t` 标志。该标志后必须跟随一个有效的目录路径。内置 Web 服务器会将此目录视为 Web 文档根目录，这在安全方面很有用。出于安全原因，一些框架（如 Zend Framework）要求 Web 文档根目录与实际源代码所在的位置不同。
 
-- 4. 如果需要将 Web 服务器文档根目录设置为当前目录以外的其他目录，可以使用 -t 标志。该标志后必须跟随一个有效的目录路径。内置 Web 服务器会将此目录视为 Web 文档根目录，这在安全方面很有用。出于安全原因，一些框架（如 Zend Framework）要求 Web 文档根目录与实际源代码所在的位置不同。
-
-以下是使用 -t 标志的示例：
+以下是使用 `-t` 标志的示例：
 
 ```
 php -S localhost:8080 -t source/chapter01
@@ -421,13 +424,13 @@ php -S localhost:8080 -t source/chapter01
 
 ### 定义测试 MySQL 数据库
 
-为了测试目的，除了书中的源代码外，我们还在 https://github.com/dbireri/pwphp7cookbook 提供了一个包含示例数据的 SQL 文件。本书示例中使用的数据库名称是 php7cookbook。
+为了测试目的，除了书中的源代码外，我们还在 `https://github.com/dbireri/pwphp7cookbook` 提供了一个包含示例数据的 SQL 文件。本书示例中使用的数据库名称是 `php7cookbook`。
 
 构建基础
 
 ### 操作指南...
 
-- 1. 定义一个 MySQL 数据库，php7cookbook。还将新数据库的权限分配给名为 cook 的用户，密码为 book。下表总结了这些设置：
+- 1. 定义一个 MySQL 数据库，`php7cookbook`。还将新数据库的权限分配给名为 `cook` 的用户，密码为 `book`。下表总结了这些设置：
 
 | 项目 | 说明 |
 | :--- | :--- |
@@ -446,13 +449,13 @@ GRANT ALL PRIVILEGES ON dbname.* to 'user'@'localhost';
 FLUSH PRIVILEGES;
 ```
 
-- 3. 将示例值导入到新数据库中。导入文件 php7cookbook.sql 位于 https://github.com/dbireri/php7cookbook/blob/master/php7cookbook.sql。
+- 3. 将示例值导入到新数据库中。导入文件 `php7cookbook.sql` 位于 `https://github.com/dbireri/php7cookbook/blob/master/php7cookbook.sql`。
 
 ## 安装 PHPUnit
 
 单元测试可以说是测试 PHP 代码最流行的方式。大多数开发者都会同意，一套完整的测试对于任何正常开发的项目来说都是必需的。然而，很少有开发者真正编写这些测试。少数幸运的开发者有一个独立的测试团队为他们编写测试！但是，在与测试团队进行几个月的拉锯战之后，那些幸运者剩下的部分往往只会发牢骚和抱怨。无论如何，一本关于 PHP 的书如果不向测试至少点个头、眨眨眼，那是不完整的。
 
-查找 **PHPUnit** 最新版本的地方是 https://phpunit.de/。PHPUnit 5.1 及以上版本支持 PHP 7。点击所需版本的链接，你将下载一个 `phpunit.phar` 文件。然后你可以使用归档执行命令，如下所示：
+查找 **PHPUnit** 最新版本的地方是 `https://phpunit.de/`。PHPUnit 5.1 及以上版本支持 PHP 7。点击所需版本的链接，你将下载一个 `phpunit.phar` 文件。然后你可以使用归档执行命令，如下所示：
 
 ```
 php phpunit.phar <command>
@@ -475,10 +478,11 @@ PHP 自动加载的最低要求是定义一个全局 `__autoload()` 函数。这
 ### 操作指南...
 
 - 1. 本例中我们将要介绍的类是 `Application\Autoload\Loader`。为了利用 PHP 命名空间和自动加载之间的关系，我们将文件命名为 `Loader.php`，并将其放置在 `/path/to/cookbook/files/Application/Autoload` 文件夹中。
-
 - 2. 我们要介绍的第一个方法只是加载一个文件。我们在运行 `require_once()` 之前使用 `file_exists()` 进行检查。这样做的原因是，如果找不到文件，`require_once()` 会产生一个无法通过 PHP 7 新的错误处理机制捕获的致命错误：
 
-```
+
+
+```php
 protected static function loadFile($file)
 {
     if (file_exists($file)) {
@@ -491,13 +495,13 @@ protected static function loadFile($file)
 
 - 3. 然后我们可以在调用程序中测试 `loadFile()` 的返回值，并在最终无法加载文件之前遍历一组替代目录，如果最终无法加载，则抛出 `Exception`。
 
-构建基础
+## 构建基础
 
 > 你会注意到这个类中的方法和属性是静态的。这使我们在注册自动加载方法时具有更大的灵活性，并且也让我们可以将 Loader 类视为 **单例**。
 
-- 接下来，我们定义调用 loadFile() 并实际执行基于命名空间类名定位文件逻辑的方法。该方法通过将 PHP 命名空间分隔符 \ 转换为适合此服务器的目录分隔符并追加 .php 来推导文件名：
+- 接下来，我们定义调用 `loadFile()` 并实际执行基于命名空间类名定位文件逻辑的方法。该方法通过将 PHP 命名空间分隔符 `\` 转换为适合此服务器的目录分隔符并追加 `.php` 来推导文件名：
 
-```
+```php
 public static function autoLoad($class)
 {
     $success = FALSE;
@@ -521,11 +525,11 @@ public static function autoLoad($class)
 }
 ```
 
-- 接下来，该方法遍历我们称为 self::$dirs 的目录数组，使用每个目录作为推导文件名的起点。如果成功，操作完成；如果不成功，作为最后手段，该方法尝试从当前目录加载文件。如果这也不成功，则会抛出 Exception。
+- 接下来，该方法遍历我们称为 `self::$dirs` 的目录数组，使用每个目录作为推导文件名的起点。如果成功，操作完成；如果不成功，作为最后手段，该方法尝试从当前目录加载文件。如果这也不成功，则会抛出 `Exception`。
 
-- 接下来，我们需要一个方法，可以向我们待测试的目录列表中添加更多目录。注意，如果提供的值是数组，则使用 array_merge()。否则，我们只是将目录字符串添加到 self::$dirs 数组中：
+- 接下来，我们需要一个方法，可以向我们待测试的目录列表中添加更多目录。注意，如果提供的值是数组，则使用 `array_merge()`。否则，我们只是将目录字符串添加到 `self::$dirs` 数组中：
 
-```
+```php
 public static function addDirs($dirs)
 {
     if (is_array($dirs)) {
@@ -533,9 +537,7 @@ public static function addDirs($dirs)
     } else {
 ```
 
-
-
-self::$dirs[] = $dirs;
+`self::$dirs[] = $dirs;`
 
 7. 接下来，我们来到最重要的部分；我们需要将我们的 `autoload()` 方法注册为 **标准 PHP 库（SPL）** 的自动加载器。这是通过使用 `spl_autoload_register()` 配合 `init()` 方法来实现的：
 
@@ -587,17 +589,17 @@ class TestClass
 <?php
 require __DIR__ . '/../Application/Autoload/Loader.php';
 Application\Autoload\Loader::init(__DIR__ . '/../');
+```
 
 接下来，获取一个尚未加载的类的实例：
 
-$test = new Application\Test\TestClass();
-echo $test->getTest();
+`$test = new Application\Test\TestClass();`
+`echo $test->getTest();`
 
 最后，尝试获取一个不存在的假类。注意，这将引发一个错误：
 
-$fake = new Application\Test\FakeClass();
-echo $fake->getTest();
-```
+`$fake = new Application\Test\FakeClass();`
+`echo $fake->getTest();`
 
 ## 扫描网站
 
@@ -785,10 +787,6 @@ public function getDomain($url)
 }
 ```
 
-
-
-
-
 ## 工作原理...
 
 首先，请继续定义前面提到的 `Application\Web\Deep` 类，以及上一道菜中定义的 `Application\Web\Hoover` 类。
@@ -820,6 +818,8 @@ $tag = strip_tags($_GET['tag']) ?? DEFAULT_TAG;
 
 一些简单的 HTML 将显示结果：
 
+
+
 ```php
 foreach ($deep->scan($url, $tag) as $item) {
     $src = $item['attributes']['src'] ?? NULL;
@@ -831,7 +831,7 @@ foreach ($deep->scan($url, $tag) as $item) {
 
 ## 参见
 
-关于生成器和 yield from 的更多信息，请参见 http://php.net/manual/en/language.generators.syntax.php 上的文章。
+关于生成器和 `yield from` 的更多信息，请参见 `http://php.net/manual/en/language.generators.syntax.php` 上的文章。
 
 ## 创建一个 PHP 5 到 PHP 7 代码转换器
 
@@ -842,6 +842,7 @@ foreach ($deep->scan($url, $tag) as $item) {
 **PHP 5 到 PHP 7 代码转换器** 做两件事：
 
 - 扫描你的代码文件并将已移除的 PHP 5 功能转换为 PHP 7 中的等价物
+
 - 在语言用法发生变化但无法重写代码的地方添加 `// WARNING` 注释
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_40_0.png)
@@ -1003,10 +1004,6 @@ function ($match) {
 '!call_user_method_array\( (.*)?, (.*)?, (.*)?\) (\b|;) !' =>
 ```
 
-
-
-
-
 ## 6. 最后，任何尝试使用带有 `/e` 修饰符的 `preg_replace()` 的调用都会被重写为使用 `preg_replace_callback()`：
 
 ```php
@@ -1035,13 +1032,17 @@ function ($match) {
 ```
 
 // 数组结束
+
 ],
 
 // 这是转换的目标
+
 $contents
 
 ); // 将结果作为字符串返回
+
 return implode('', $result);
+
 }
 
 ## 工作原理...
@@ -1076,25 +1077,31 @@ echo PHP_EOL;
 
 ## 参见
 
-有关向后不兼容更改的更多信息，请参阅 http://php.net/manual/en/migration70.incompatible.php。
+有关向后不兼容更改的更多信息，请参阅 `http://php.net/manual/en/migration70.incompatible.php`。
 
 # 2 使用 PHP 7 的高性能特性
 
 在本章中，我们将讨论并理解 PHP 5 和 PHP 7 之间的语法差异，并介绍以下食谱（示例）：
 
 - 理解抽象语法树
+
 - 理解解析过程中的差异
+
 - 理解 `foreach()` 处理中的差异
+
 - 利用 PHP 7 增强功能提高性能
+
 - 遍历大文件
+
 - 将电子表格上传到数据库
+
 - 递归目录迭代器
 
 ## 简介
 
 在本章中，我们将直接深入 PHP 7，介绍一些利用新高性能特性的食谱。然而，首先，我们将介绍一系列较小的食谱，用以说明 PHP 7 在处理参数解析、语法、`foreach()` 循环以及其他增强功能方面的差异。在深入探讨本章内容之前，让我们讨论一下 PHP 5 和 PHP 7 之间的一些基本差异。
 
-PHP 7 引入了一个新层，称为 **抽象语法树** (Abstract Syntax Tree, AST)，它有效地将解析过程与伪编译过程解耦。虽然新层对性能几乎没有影响或没有影响，但它赋予了语言一种全新的语法一致性，这是以前不可能实现的。
+PHP 7 引入了一个新层，称为 **抽象语法树** `Abstract Syntax Tree, AST`，它有效地将解析过程与伪编译过程解耦。虽然新层对性能几乎没有影响或没有影响，但它赋予了语言一种全新的语法一致性，这是以前不可能实现的。
 
 AST 的另一个好处是解引用过程。简单来说，解引用是指能够立即获取对象的属性、运行对象的方法、立即访问数组元素以及立即执行回调的能力。在 PHP 5 中，这种支持是不一致且不完整的。例如，要执行一个回调，通常首先需要将回调或匿名函数赋值给一个变量，然后再执行它。而在 PHP 7 中，你可以立即执行它。
 
@@ -1105,6 +1112,8 @@ AST 的另一个好处是解引用过程。简单来说，解引用是指能够�
 ### 实现方法...
 
 - 1. 任何返回回调的函数或方法都可以通过简单地添加括号 `( )`（带或不带参数）来立即执行。来自任何返回数组的函数或方法的元素，可以通过简单地使用方括号 `[ ]` 指明元素来立即解引用。在接下来展示的简短（但平凡）示例中，函数 `test()` 返回一个数组。该数组包含六个匿名函数。`$a` 的值为 `$t`。`$$a` 被解释为 `$test`：
+
+
 
 ```php
 function test() {
@@ -1124,16 +1133,21 @@ $t = 'test';
 echo $$a() [1] ( ) [2] (100);
 ```
 
-- 2. AST 允许我们发出 `echo ${a() [1] () [2] (100)}` 命令。这是从左到右解析的，其执行过程如下：
-    - `${a()}` 被解释为 `test()`，它返回一个数组
-    - `[1]` 引用数组元素 1，它返回一个回调
-    - `()` 执行此回调，它返回一个包含两个元素的数组
-    - `[2]` 引用数组元素 2，它返回一个回调
-    - `(100)` 执行此回调，提供一个值为 100，它返回 Level 1/2:101
+## 2. AST 允许我们发出 `echo ${a() [1] () [2] (100)}` 命令
+
+这是从左到右解析的，其执行过程如下：
+
+- `${a()}` 被解释为 `test()`，它返回一个数组
+- `[1]` 引用数组元素 1，它返回一个回调
+- `()` 执行此回调，它返回一个包含两个元素的数组
+- `[2]` 引用数组元素 2，它返回一个回调
+- `(100)` 执行此回调，提供一个值为 100，它返回 `Level 1/2:101`
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_49_0.png)
 
-- 3. 以下是一个更实质性的示例，它利用 AST 语法定义了一个数据过滤和验证类。首先，我们定义 `Application\Web\Security` 类。在构造函数中，我们构建并定义两个数组。第一个数组由过滤回调组成。第二个数组包含验证回调：
+## 3. 以下是一个更实质性的示例
+
+它利用 AST 语法定义了一个数据过滤和验证类。首先，我们定义 `Application\Web\Security` 类。在构造函数中，我们构建并定义两个数组。第一个数组由过滤回调组成。第二个数组包含验证回调：
 
 ```php
 public function __construct()
@@ -1153,13 +1167,17 @@ public function __construct()
 }
 ```
 
-- 4. 我们希望以 *开发人员友好* 的方式调用此功能。因此，如果我们想要过滤数字，那么运行类似这样的命令将是最理想的：
+## 4. 开发人员友好调用
+
+我们希望以 *开发人员友好* 的方式调用此功能。因此，如果我们想要过滤数字，那么运行类似这样的命令将是最理想的：
 
 ```php
 $security->filterDigits($item);
 ```
 
-- 5. 为了实现这一点，我们定义了魔术方法 `__call()`，它使我们能够访问不存在的方法：
+## 5. 魔术方法 `__call()`
+
+为了实现这一点，我们定义了魔术方法 `__call()`，它使我们能够访问不存在的方法：
 
 ```php
 public function __call($method, $params)
@@ -1182,7 +1200,7 @@ public function __call($method, $params)
 
 当你在 AST 所赋予的表达自由中尽情展示时，务必牢记，你最终编写的代码从长远来看可能会非常晦涩难懂。这最终将导致长期维护问题。
 
-## 工作原理...
+### 工作原理
 
 首先，我们创建一个示例文件 `chap_02_web_filtering_ast_example.php`，以利用第 1 章 *Building the Foundation* 中定义的自动加载类，获取 `Application\Web\Security` 的一个实例：
 
@@ -1211,10 +1229,6 @@ foreach ($data as $item) {
     echo 'FILTERING' . PHP_EOL;
 ```
 
-
-
-
-
 ## 参见
 
 有关 AST 的更多信息，请参阅处理 **抽象语法树** 的 RFC，可以在 <https://wiki.php.net/rfc/abstract_syntax_tree> 上查看。
@@ -1223,9 +1237,11 @@ foreach ($data as $item) {
 
 在 PHP 5 中，赋值运算符右侧的表达式是按*从右到左*的顺序解析的。在 PHP 7 中，解析始终遵循*从左到右*的顺序。
 
-## 如何操作...
+## 如何操作
 
-- 1. 变量变量是一种间接引用值的方式。在下面的示例中，首先将 `$foo` 解释为 `${$bar}`。因此，最终返回值是 `$bar` 的值，而不是 `$foo` 的直接值（那将是 `bar`）：
+### 1. 变量变量
+
+变量变量是一种间接引用值的方式。在下面的示例中，首先将 `$foo` 解释为 `${$bar}`。因此，最终返回值是 `$bar` 的值，而不是 `$foo` 的直接值：
 
 ```php
 $foo = 'bar';
@@ -1233,7 +1249,9 @@ $bar = 'baz';
 echo $$foo; // 返回   'baz';
 ```
 
-- 2. 在下一个示例中，我们有一个变量变量 `$foo`，它引用了一个具有 `bar` 键和 `baz` 子键的多维数组：
+### 2. 多维数组变量变量
+
+在下一个示例中，我们有一个变量变量 `$foo`，它引用了一个具有 `bar` 键和 `baz` 子键的多维数组：
 
 ```php
 $foo = 'bar';
@@ -1242,11 +1260,17 @@ $bar = ['bar' => ['baz' => 'bat']];
 echo $$foo['bar']['baz'];
 ```
 
-- 3. 在 PHP 5 中，解析是从右到左进行的，这意味着 PHP 引擎正在寻找一个具有 `bar` 键和 `baz` 子键的 `$foo` 数组。然后，该元素的返回值将被解释以获取最终值 `${$foo['bar'] ['baz']}`。
+### 3. PHP 5 解析
 
-- 4. 然而，在 PHP 7 中，解析始终是从左到右进行的，这意味着先解释 `$foo`（`$$foo` → `['bar']['baz']`）。
+在 PHP 5 中，解析是从右到左进行的，这意味着 PHP 引擎正在寻找一个具有 `bar` 键和 `baz` 子键的 `$foo` 数组。然后，该元素的返回值将被解释以获取最终值 `${$foo['bar'] ['baz']}`。
 
-- 5. 在下一个示例中，你可以看到，与 PHP 7 相比，PHP 5 对 `$foo->$bar['bada']` 的解释大不相同。在下面的示例中，PHP 5 首先解释 `$bar['bada']`，并将此返回值与 `$foo` 对象实例进行引用。另一方面，在 PHP 7 中，解析始终是从左到右进行的，这意味着先解释 `$foo->$bar`，并期望一个具有 `bada` 元素的数组。顺便注意，这个示例使用了 PHP 7 的*匿名类*特性：
+### 4. PHP 7 解析
+
+然而，在 PHP 7 中，解析始终是从左到右进行的，这意味着先解释 `$foo`（`$$foo` → `['bar']['baz']`）。
+
+### 5. 对象属性解析差异
+
+在下一个示例中，你可以看到，与 PHP 7 相比，PHP 5 对 `$foo->$bar['bada']` 的解释大不相同。在下面的示例中，PHP 5 首先解释 `$bar['bada']`，并将此返回值与 `$foo` 对象实例进行引用。另一方面，在 PHP 7 中，解析始终是从左到右进行的，这意味着先解释 `$foo->$bar`，并期望一个具有 `bada` 元素的数组。顺便注意，这个示例使用了 PHP 7 的*匿名类*特性：
 
 ```php
 // PHP 5:  $foo->{$bar['bada']}
@@ -1260,7 +1284,9 @@ $bar = 'baz';
 echo $foo->$bar['bada'];
 ```
 
-- 6. 最后一个示例与紧接其上的示例相同，不同之处在于期望返回值是一个回调函数，随后立即执行如下：
+### 6. 回调执行
+
+最后一个示例与紧接其上的示例相同，不同之处在于期望返回值是一个回调函数，随后立即执行如下：
 
 ```php
 // PHP 5: $foo->{$bar['bada']}()
@@ -1278,13 +1304,13 @@ $foo = new class
 echo $foo->$bar['bada']();
 ```
 
-## 工作原理...
+### 工作原理
 
 将第 1 和第 2 步中说明的代码示例放入一个单一的 PHP 文件中，你可以将其命名为 `chap_02_understanding_diffs_in_parsing.php`。首先使用 PHP 5 执行脚本，你会注意到会出现一系列错误，如下所示：
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_53_0.png)
 
-错误的原因是 PHP 5 的解析不一致，并得出了关于所请求的变量变量状态的错误结论（如前所述）。现在你可以**继续**添加其余的示例，如步骤 5 和 6 所示。如果你随后在 PHP 7 中运行此脚本，将显示出描述的结果，如下所示：
+错误的原因是 PHP 5 的解析不一致，并得出了关于所请求的变量变量状态的错误结论。现在你可以**继续**添加其余的示例，如步骤 5 和 6 所示。如果你随后在 PHP 7 中运行此脚本，将显示出描述的结果，如下所示：
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_54_0.png)
 
@@ -1296,9 +1322,9 @@ echo $foo->$bar['bada']();
 
 在某些相对不常见的情况下，`foreach()` 循环内部代码的行为在 PHP 5 和 PHP 7 之间会有所不同。首先，内部进行了大量的改进，这意味着就纯粹的速度而言，在 PHP 7 下运行 `foreach()` 循环内的处理速度要比 PHP 5 快得多。在 PHP 5 中注意到的问题包括在 `foreach()` 循环内部数组上使用 `current()` 和 `unset()`。其他问题与在操作数组本身时通过引用传递值有关。
 
-## 如何操作...
+## 如何操作
 
-- 1. 考虑以下代码块：
+### 1. 基础 unset
 
 ```php
 $a = [1, 2, 3];
@@ -1308,12 +1334,16 @@ foreach ($a as $v) {
 }
 ```
 
-- 2. 在 PHP 5 和 7 中，输出将显示如下：
-   1
-   2
-   3
+### 2. PHP 5 和 7 输出
 
-- 3. 但是，如果你在循环前添加一个赋值操作，行为就会改变：
+在 PHP 5 和 7 中，输出将显示如下：
+
+1
+2
+3
+
+### 3. 引用赋值后行为改变
+
 ```php
 $a = [1, 2, 3];
 $b = &$a;
@@ -1323,7 +1353,7 @@ foreach ($a as $v) {
 }
 ```
 
-- 4. 比较 PHP 5 和 7 的输出：
+### 4. 输出对比
 
 | PHP 5 | PHP 7 |
 | :---- | :---- |
@@ -1331,7 +1361,8 @@ foreach ($a as $v) {
 | **3** | **2** |
 | | **3** |
 
-- 5. 使用引用内部数组指针的函数在 PHP 5 中也导致了不一致的行为。查看以下代码示例：
+### 5. current() 在 foreach 中
+
 ```php
 $a = [1, 2, 3];
 foreach($a as &$v) {
@@ -1341,7 +1372,9 @@ foreach($a as &$v) {
 
 > 每个数组都有一个指向其当前元素的内部指针，从 1 开始，`current()` 返回数组中的当前元素。
 
-- 6. 注意在 PHP 7 中运行时输出是规范化的且一致的：
+### 6. 规范化输出
+
+注意在 PHP 7 中运行时输出是规范化的且一致的：
 
 | PHP 5 | PHP 7 |
 | :---- | :---- |
@@ -1349,7 +1382,7 @@ foreach($a as &$v) {
 | **2 - 3** | **2 - 1** |
 | **3 - 0** | **3 - 1** |
 
-- 7. 在按引用迭代数组完成后，在 `foreach()` 循环内部添加新元素在 PHP 5 中也是有问题的。这种行为在 PHP 7 中已变得一致。以下代码示例说明了这一点：
+### 7. 按引用迭代时添加元素
 
 ```php
 $a = [1];
@@ -1359,15 +1392,16 @@ foreach($a as &$v) {
 }
 ```
 
-- 8. 我们将观察到以下输出：
+### 8. 输出
 
 | PHP 5 | PHP 7 |
 | :---- | :---- |
 | 1 - | 1 - |
 | 2 - | 2 - |
 
-- 9. PHP 7 解决的另一个 PHP 5 的不良行为示例是，在按引用迭代数组期间使用修改数组的函数，例如 `array_push()`、`array_pop()`、`array_shift()` 和 `array_unshift()`。
-查看这个示例：
+### 9. 修改数组的函数
+
+PHP 7 解决的另一个 PHP 5 的不良行为示例是，在按引用迭代数组期间使用修改数组的函数，例如 `array_push()`、`array_pop()`、`array_shift()` 和 `array_unshift()`。
 
 ```php
 $a=[1,2,3,4];
@@ -1377,7 +1411,7 @@ foreach($a as &$v) {
 }
 ```
 
-- 10. 你将观察到以下输出：
+### 10. 输出
 
 | PHP 5 | PHP 7 |
 | :---- | :---- |
@@ -1386,7 +1420,7 @@ foreach($a as &$v) {
 | 1 | |
 | 1 | |
 
-- 11. 最后，我们有一个案例，其中你正在通过引用迭代数组，并带有嵌套的 `foreach()` 循环，该循环本身也通过引用迭代同一个数组。在 PHP 5 中，这种构造根本无法正常工作。在 PHP 7 中，这已得到修复。以下代码块演示了这种行为：
+### 11. 嵌套 foreach 引用
 
 ```php
 $a = [0, 1, 2, 3];
@@ -1398,10 +1432,7 @@ foreach ($a as &$x) {
         }
 ```
 
-
-
-
-## 工作原理...
+### 工作原理
 
 将这些代码示例添加到单个 PHP 文件中，`chap_02_foreach.php`。在命令行下以 PHP 5 运行该脚本。预期输出如下：
 
@@ -1453,9 +1484,11 @@ ed@ed:~/Desktop/Repos/php7_recipes/source/chapter02$
 
 开发人员正在利用的一个趋势是**匿名函数**的使用。处理匿名函数时的一个经典问题是，如何编写它们，使得任何对象都可以绑定到 `$this`，同时函数仍能正常工作。在 PHP 5 代码中，使用的是一种通过 `bindTo()` 的方法。在 PHP 7 中，新增了一个名为 `call()` 的方法，它提供类似的功能，但性能有了巨大的提升。
 
-## 操作方法...
+## 操作方法
 
 为了利用 `call()`，在一个冗长的循环中执行匿名函数。在本例中，我们将演示一个匿名函数，它扫描日志文件，识别 IP 地址并按其出现频率进行排序：
+
+
 
 1. 首先，我们定义一个 `Application\Web\Access` 类。在构造函数中，我们接受一个文件名作为参数。日志文件以 `SplFileObject` 打开，并赋值给 `$this->log:`
 
@@ -1571,9 +1604,13 @@ foreach ($access->frequency as $key => $value) {
 许多 PHP 7 的性能改进与新特性和函数无关。相反，它们以内部改进的形式出现，直到你开始运行程序前都是*不可见的*。以下是属于此类别的一些改进的简短列表：
 
 | 特性 | 更多信息 | 备注 |
+
 | :--- | :--- | :--- |
+
 | 快速参数解析 | [https://wiki.php.net/rfc/fast_zpp](https://wiki.php.net/rfc/fast_zpp) | 在 PHP 5 中，提供给函数的参数必须在每次函数调用时都进行解析。参数是以`string`形式传入，并以类似于`scanf()`函数的方式进行解析。在 PHP 7 中，此过程已得到优化，效率大大提高，从而带来了显著的性能提升。这种改进很难衡量，但似乎约为 6%。 |
+
 | PHP NG | [https://wiki.php.net/rfc/phpng](https://wiki.php.net/rfc/phpng) | PHP **NG (下一代)** 计划代表对 PHP 语言大部分内容的重写。它保留了现有功能，但涉及所有可想象的节省时间和提高效率的措施。数据结构已得到压缩，内存使用更加高效。例如，仅仅一个影响数组处理的更改，就带来了显著的性能提升，同时大大减少了内存使用。 |
+
 | 去除无用负载 | [https://wiki.php.net/rfc/removal_of_dead_sapis_and_exts](https://wiki.php.net/rfc/removal_of_dead_sapis_and_exts) | 约有二十多个扩展属于以下类别之一：已弃用、不再维护、依赖项不再维护，或尚未移植到 PHP 7。核心开发小组的投票决定移除“短名单”上约 2/3 的扩展。这减少了开销，并加快了 PHP 语言未来的整体开发速度。 |
 
 ## 遍历大文件
@@ -1632,10 +1669,6 @@ protected function fileIteratorByLine()
     }
 }
 ```
-
-
-
-
 
 ```php
      }
@@ -1720,7 +1753,9 @@ echo str_repeat('-', 52) . PHP_EOL;
 在将电子表格（即 CSV 文件）上传到数据库时，有三个主要考虑因素：
 
 - 遍历（可能）巨大的文件
+
 - 将每个电子表格行提取到 PHP 数组中
+
 - 将 PHP 数组插入到数据库中
 
 巨大文件的遍历将使用前述配方处理。我们将使用 `fgetcsv()` 函数将 CSV 行转换为 PHP 数组。最后，我们将使用 **PDO PHP 数据对象** 类来建立数据库连接并执行插入操作。
@@ -1766,6 +1801,8 @@ class Connection
 
 2. 然后，我们将 `Application\Iterator\LargeFile` 的实例整合进来。我们向该类添加一个新方法，旨在遍历 CSV 文件：
 
+
+
 ```php
 protected function fileIteratorCsv() {
     $count = 0;
@@ -1777,7 +1814,7 @@ protected function fileIteratorCsv() {
 }
 ```
 
-3. 我们还需要将 `Csv` 添加到允许的迭代方法列表中：
+### 3. 我们还需要将 `Csv` 添加到允许的迭代方法列表中：
 
 ```php
 const ERROR_UNABLE = 'ERROR: Unable to open file';
@@ -1867,37 +1904,34 @@ Application\Autoload\Loader::init(__DIR__ . '/../');
 
 1. 首先，我们定义一个 `Application\Iterator\Directory` 类，该类定义适当的属性和常量，并使用外部类：
 
-    ```php
-    namespace Application\Iterator;
+```php
+namespace Application\Iterator;
 
-    use Exception;
-    use RecursiveDirectoryIterator;
-    use RecursiveIteratorIterator;
-    use RecursiveRegexIterator;
-    use RegexIterator;
+use Exception;
+use RecursiveDirectoryIterator;
+use RecursiveIteratorIterator;
+use RecursiveRegexIterator;
+use RegexIterator;
 
-    class Directory
-    {
+class Directory
+{
 
-        const ERROR_UNABLE = 'ERROR: Unable to read directory';
+    const ERROR_UNABLE = 'ERROR: Unable to read directory';
 
-        protected $path;
-        protected $rdi;
-        // recursive directory iterator
-    ```
+    protected $path;
+    protected $rdi;
+    // recursive directory iterator
+```
 
 2. 构造函数基于目录路径在 `RecursiveIteratorIterator` 内部创建一个 `RecursiveDirectoryIterator` 实例：
 
-    ```php
-    public function __construct($path)
-    {
-        try {
-            $this->rdi = new RecursiveIteratorIterator(
-                new RecursiveDirectoryIterator($path),
-    ```
-
-
-
+```php
+public function __construct($path)
+{
+    try {
+        $this->rdi = new RecursiveIteratorIterator(
+            new RecursiveDirectoryIterator($path),
+```
 
 # 3
 
@@ -2032,12 +2066,10 @@ Beta\someFunction();
 ```
 
 > **最佳实践**
+>
 > 将函数库（以及类！）放入单独的文件中通常被认为是最佳实践：每个命名空间一个文件，每个文件一个类或函数库。
+>
 > 可以在单个命名空间中定义许多类或函数库。你开发到单独命名空间中的唯一原因是如果你希望促进功能的逻辑分离。
-
-
-
-
 
 ## 工作原理……
 
@@ -2100,51 +2132,55 @@ echo someInfinite(22.22, 'A', ['a' => 1, 'b' => 2]);
 
 ### 如何实现……
 
-1.  函数中的参数可以加上类型提示前缀。以下类型提示在 PHP 5 和 PHP 7 中均可用：
-    - Array
-    - Class
-    - Callable
-2.  如果调用函数时传递了错误的参数类型，则会抛出 TypeError。以下示例要求一个数组、一个 DateTime 实例以及一个匿名函数：
+1. 函数中的参数可以加上类型提示前缀。以下类型提示在 PHP 5 和 PHP 7 中均可用：
+   - Array
+   - Class
+   - Callable
 
-    ```php
-    function someTypeHint(Array $a, DateTime $t, Callable $c)
-    {
-        $message = '';
-        $message .= 'Array Count: ' . count($a) . PHP_EOL;
-        $message .= 'Date: ' . $t->format('Y-m-d') . PHP_EOL;
-        $message .= 'Callable Return: ' . $c() . PHP_EOL;
-        return $message;
-    }
-    ```
+2. 如果调用函数时传递了错误的参数类型，则会抛出 TypeError。以下示例要求一个数组、一个 DateTime 实例以及一个匿名函数：
 
-    > 你不需要为每个参数都提供类型提示。仅在传递不同数据类型会对函数的处理产生负面影响时使用此技术。例如，如果你的函数使用 `foreach()` 循环，而你未提供数组或实现了 Traversable 接口的对象，则会产生错误。
-3.  在 PHP 7 中，假设已做出适当的 `declare()` 指令，则允许**标量**（即整型、浮点型、布尔型和字符串型）类型提示。另一个函数展示了如何实现这一点。在包含该函数的代码库文件顶部，紧跟在 PHP 开始标签之后添加此 `declare()` 指令：
 
-    ```php
-    declare(strict_types=1);
-    ```
 
-4.  现在你可以定义包含标量类型提示的函数：
+```php
+function someTypeHint(Array $a, DateTime $t, Callable $c)
+{
+    $message = '';
+    $message .= 'Array Count: ' . count($a) . PHP_EOL;
+    $message .= 'Date: ' . $t->format('Y-m-d') . PHP_EOL;
+    $message .= 'Callable Return: ' . $c() . PHP_EOL;
+    return $message;
+}
+```
 
-    ```php
-    function someScalarHint (bool $b, int $i, float $f, string $s) {
-        return sprintf ("\n%20s : %5s\n%20s : %5d\n%20s " .
-                        ": %5.2f\n%20s : %20s\n\n",
-                        'Boolean', ($b ? 'TRUE' : 'FALSE') ,
-                        'Integer' , $i,
-                        'Float' , $f,
-                        'String', $s);
-    }
-    ```
+> 你不需要为每个参数都提供类型提示。仅在传递不同数据类型会对函数的处理产生负面影响时使用此技术。例如，如果你的函数使用 `foreach()` 循环，而你未提供数组或实现了 `Traversable` 接口的对象，则会产生错误。
 
-5.  在 PHP 7 中，假设已声明严格类型提示，布尔类型提示的工作方式与其他三种标量类型（即整型、浮点型和字符串型）略有不同。你可以提供任何标量作为参数，且不会抛出 TypeError！然而，一旦传入函数，传入的值会自动转换为布尔数据类型。如果你传入除标量（即数组或对象）以外的任何数据类型，则会抛出 TypeError。下面是一个定义布尔数据类型的函数示例。请注意，返回值将自动转换为布尔值：
+### 3. 在 PHP 7 中，假设已做出适当的 `declare()` 指令，则允许**标量**（即整型、浮点型、布尔型和字符串型）类型提示。另一个函数展示了如何实现这一点。在包含该函数的代码库文件顶部，紧跟在 PHP 开始标签之后添加此 `declare()` 指令：
 
-    ```php
-    function someBoolHint (bool $b)
-    {
-        return $b;
-    }
-    ```
+```php
+declare(strict_types=1);
+```
+
+### 4. 现在你可以定义包含标量类型提示的函数：
+
+```php
+function someScalarHint (bool $b, int $i, float $f, string $s) {
+    return sprintf ("\n%20s : %5s\n%20s : %5d\n%20s " .
+                    ": %5.2f\n%20s : %20s\n\n",
+                    'Boolean', ($b ? 'TRUE' : 'FALSE') ,
+                    'Integer' , $i,
+                    'Float' , $f,
+                    'String', $s);
+}
+```
+
+### 5. 在 PHP 7 中，假设已声明严格类型提示，布尔类型提示的工作方式与其他三种标量类型（即整型、浮点型和字符串型）略有不同。你可以提供任何标量作为参数，且不会抛出 `TypeError`！然而，一旦传入函数，传入的值会自动转换为布尔数据类型。如果你传入除标量（即数组或对象）以外的任何数据类型，则会抛出 `TypeError`。下面是一个定义布尔数据类型的函数示例。请注意，返回值将自动转换为布尔值：
+
+```php
+function someBoolHint (bool $b)
+{
+    return $b;
+}
+```
 
 ### 工作原理……
 
@@ -2156,7 +2192,7 @@ echo someInfinite(22.22, 'A', ['a' => 1, 'b' => 2]);
 include (__DIR__ . DIRECTORY_SEPARATOR . 'chap_03_developing_functions_type_hints_library.php');
 ```
 
-若要测试 `someTypeHint()`，请调用该函数两次，第一次使用正确的数据类型，第二次使用错误的类型。不过，这会抛出 TypeError，因此你需要将函数调用包裹在 `try { ... } catch ( ) { ... }` 块中：
+若要测试 `someTypeHint()`，请调用该函数两次，第一次使用正确的数据类型，第二次使用错误的类型。不过，这会抛出 `TypeError`，因此你需要将函数调用包裹在 `try { ... } catch ( ) { ... }` 块中：
 
 ```php
 try {
@@ -2211,7 +2247,7 @@ try {
 }
 ```
 
-如果你现在尝试相同的函数调用，但传入非标量数据类型，则会抛出 TypeError：
+如果你现在尝试相同的函数调用，但传入非标量数据类型，则会抛出 `TypeError`：
 
 ```php
 try {
@@ -2248,29 +2284,27 @@ PHP 7 允许你指定函数的返回值数据类型。然而，与标量类型�
 
 ### 如何实现……
 
-1.  本示例向你展示如何为函数返回值分配数据类型。要分配返回数据类型，首先像往常一样定义函数。在右括号之后，添加一个空格，然后依次加上数据类型和冒号：
+1. 本示例向你展示如何为函数返回值分配数据类型。要分配返回数据类型，首先像往常一样定义函数。在右括号之后，添加一个空格，然后依次加上数据类型和冒号：
 
-    ```php
-    function returnsString(DateTime $date, $format) : string
-    {
-        return $date->format($format);
-    }
-    ```
+```php
+function returnsString(DateTime $date, $format) : string
+{
+    return $date->format($format);
+}
+```
 
-    ![](img/39390f6d56c5a83b28db083a8bd5185c_85_0.png)
+![](img/39390f6d56c5a83b28db083a8bd5185c_85_0.png)
 
-    > PHP 7.1 引入了一种返回数据类型变化的形式，称为**可空类型**。你只需将 `string` 改为 `?string`。这允许函数返回 `string` 或 NULL。
-2.  无论函数内部的数据类型如何，函数返回的任何值都会作为返回值转换为声明的数据类型。注意，在此示例中，`$a`、`$b` 和 `$c` 的值被相加产生一个总和并返回。通常，我们期望返回值是数值数据类型。然而，在这种情况下，返回数据类型被声明为 `string`，这覆盖了 PHP 的类型转换过程：
+> PHP 7.1 引入了一种返回数据类型变化的形式，称为**可空类型**。你只需将 `string` 改为 `?string`。这允许函数返回 `string` 或 NULL。
 
-    ```php
-    function convertsToString($a, $b, $c) : string
-    {
-        return $a + $b + $c;
-    }
-    ```
+2. 无论函数内部的数据类型如何，函数返回的任何值都会作为返回值转换为声明的数据类型。注意，在此示例中，`$a`、`$b` 和 `$c` 的值被相加产生一个总和并返回。通常，我们期望返回值是数值数据类型。然而，在这种情况下，返回数据类型被声明为 `string`，这覆盖了 PHP 的类型转换过程：
 
-
-
+```php
+function convertsToString($a, $b, $c) : string
+{
+    return $a + $b + $c;
+}
+```
 
 3. 你还可以将类作为返回数据类型。在这个例子中，我们指定返回类型为 **DateTime**，它是 PHP **DateTime** 扩展的一部分：
 
@@ -2283,9 +2317,9 @@ function makesDateTime($year, $month, $day) : DateTime
 }
 ```
 
-**makesDateTime()** 函数可能是标量类型提示的良好候选者。如果 **$year**、**$month** 或 **$day** 不是整数，在调用 **setDate()** 时会产生一个 **Warning**（警告）。如果你使用标量类型提示，且传入了错误的数据类型，则会抛出 **TypeError**（类型错误）。虽然产生警告还是抛出 **TypeError** 其实无所谓，但抛出 **TypeError** 至少能让那些误用你代码的开发者警醒起来！
+`makesDateTime()` 函数可能是标量类型提示的良好候选者。如果 `$year`、`$month` 或 `$day` 不是整数，在调用 `setDate()` 时会产生一个 `Warning`（警告）。如果你使用标量类型提示，且传入了错误的数据类型，则会抛出 `TypeError`（类型错误）。虽然产生警告还是抛出 `TypeError` 其实无所谓，但抛出 `TypeError` 至少能让那些误用你代码的开发者警醒起来！
 
-4. 如果一个函数有返回数据类型，而你在函数代码中返回了错误的数据类型，则会在运行时抛出 **TypeError**。此函数指定了 **DateTime** 作为返回类型，但实际上返回了一个字符串。将会抛出 **TypeError**，但这不会立即发生，而是等到运行时 PHP 引擎检测到这种不一致时才会发生：
+4. 如果一个函数有返回数据类型，而你在函数代码中返回了错误的数据类型，则会在运行时抛出 `TypeError`。此函数指定了 `DateTime` 作为返回类型，但实际上返回了一个字符串。将会抛出 `TypeError`，但这不会立即发生，而是等到运行时 PHP 引擎检测到这种不一致时才会发生：
 
 ```php
 function wrongDateTime($year, $month, $day) : DateTime
@@ -2298,7 +2332,7 @@ function wrongDateTime($year, $month, $day) : DateTime
 
 ## 工作原理...
 
-首先，将前面提到的函数放入一个名为 **chap_03_developing_functions_return_types_library.php** 的库文件中。该文件需要在调用这些函数的 **chap_03_developing_functions_return_types.php** 脚本中包含：
+首先，将前面提到的函数放入一个名为 `chap_03_developing_functions_return_types_library.php` 的库文件中。该文件需要在调用这些函数的 `chap_03_developing_functions_return_types.php` 脚本中包含：
 
 ```php
 include (__DIR__ . '/chap_03_developing_functions_return_types_library.php');
@@ -2337,7 +2371,7 @@ var_dump($d);
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_87_2.png)
 
-最后，调用 *wrongDateTime*() 并传入三个整型参数：
+最后，调用 `wrongDateTime()` 并传入三个整型参数：
 
 ```php
 try {
@@ -2348,20 +2382,20 @@ try {
 }
 ```
 
-注意，在运行时抛出了 *TypeError*：
+注意，在运行时抛出了 `TypeError`：
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_88_0.png)
 
 ## 更多知识...
 
-PHP 7.1 添加了一种新的返回值类型：*void*。当你不希望从函数中返回任何值时使用它。有关更多信息，请参阅 [https://wiki.php.net/rfc/void_return_type](https://wiki.php.net/rfc/void_return_type)。
+PHP 7.1 添加了一种新的返回值类型：`void`。当你不希望从函数中返回任何值时使用它。有关更多信息，请参阅 [https://wiki.php.net/rfc/void_return_type](https://wiki.php.net/rfc/void_return_type)。
 
 ## 另请参阅
 
 有关返回类型声明的更多信息，请参阅以下文章：
 
-- [http://php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration.strict](http://php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration.strict)
-- [https://wiki.php.net/rfc/return_types](https://wiki.php.net/rfc/return_types)
+- http://php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration.strict
+- https://wiki.php.net/rfc/return_types
 
 有关可空类型的信息，请参阅此文章：
 
@@ -2369,7 +2403,7 @@ PHP 7.1 添加了一种新的返回值类型：*void*。当你不希望从函数
 
 ## 使用迭代器
 
-**迭代器**（iterator）是一种特殊的类，允许你**遍历**（traverse）*容器*或列表。这里的关键词是*遍历*。这意味着迭代器提供了遍历列表的手段，但它本身并不执行遍历。
+`迭代器`（iterator）是一种特殊的类，允许你`遍历`（traverse）*容器*或列表。这里的关键词是*遍历*。这意味着迭代器提供了遍历列表的手段，但它本身并不执行遍历。
 
 SPL 提供了丰富的通用和专用迭代器，适用于不同的上下文。例如，`ArrayIterator` 旨在允许对数组进行面向对象的遍历。`DirectoryIterator` 旨在用于文件系统扫描。
 
@@ -2402,7 +2436,9 @@ function htmlList($iterator)
 }
 ```
 
-3. 或者，你可以简单地将 ArrayIterator 实例包裹在一个简单的 foreach() 循环中：
+3. 或者，你可以简单地将 `ArrayIterator` 实例包裹在一个简单的 `foreach()` 循环中：
+
+
 
 ```php
 function htmlList($iterator)
@@ -2416,7 +2452,7 @@ function htmlList($iterator)
 }
 ```
 
-4. **CallbackFilterIterator 是为你可能正在使用的任何现有迭代器增加价值的好方法。它允许你包裹任何现有迭代器并筛选输出。在这个例子中，我们将定义 `fetchCountryName()`，它遍历一个产生国家名称列表的数据库查询。首先，我们定义一个 `ArrayIterator` 实例，该实例来自使用在*第 1 章，构建基础*中定义的 `Application\Database\Connection` 类执行的查询：**
+### 4. `CallbackFilterIterator` 是为你可能正在使用的任何现有迭代器增加价值的好方法。它允许你包裹任何现有迭代器并筛选输出。在这个例子中，我们将定义 `fetchCountryName()`，它遍历一个产生国家名称列表的数据库查询。首先，我们定义一个 `ArrayIterator` 实例，该实例来自使用在*第 1 章，构建基础*中定义的 `Application\Database\Connection` 类执行的查询：
 
 ```php
 function fetchCountryName($sql, $connection)
@@ -2430,7 +2466,7 @@ function fetchCountryName($sql, $connection)
 }
 ```
 
-5. **接下来，我们定义一个过滤方法 `nameFilterIterator()`，它接受部分国家名称作为参数，连同 `ArrayIterator` 实例：**
+### 5. 接下来，我们定义一个过滤方法 `nameFilterIterator()`，它接受部分国家名称作为参数，连同 `ArrayIterator` 实例：
 
 ```php
 function nameFilterIterator($innerIterator, $name)
@@ -2447,7 +2483,7 @@ function nameFilterIterator($innerIterator, $name)
 }
 ```
 
-6. `LimitIterator` 为你的应用程序添加了基本的分页功能。要使用此迭代器，你只需要提供父迭代器、偏移量和限制值。`LimitIterator` 将从偏移量开始，只生成整个数据集的一个子集。以第 2 步中提到的相同示例为例，我们将对来自数据库查询的结果进行分页。我们可以通过将 fetchCountryName() 方法生成的迭代器包裹在一个 `LimitIterator` 实例中轻松完成此操作：
+### 6. `LimitIterator` 为你的应用程序添加了基本的分页功能。要使用此迭代器，你只需要提供父迭代器、偏移量和限制值。`LimitIterator` 将从偏移量开始，只生成整个数据集的一个子集。以第 2 步中提到的相同示例为例，我们将对来自数据库查询的结果进行分页。我们可以通过将 `fetchCountryName()` 方法生成的迭代器包裹在一个 `LimitIterator` 实例中轻松完成此操作：
 
 ```php
 $pagination = new LimitIterator(fetchCountryName(
@@ -2456,13 +2492,13 @@ $sql, $connection), $offset, $limit);
 
 > 使用 `LimitIterator` 时要小心。它需要拥有*整个*数据集在内存中才能生效限制。因此，在遍历大型数据集时，这不是一个好工具。
 
-7. 迭代器可以*堆叠*。在这个简单示例中，一个 `ArrayIterator` 由 `FilterIterator` 处理，而 `FilterIterator` 又受到 `LimitIterator` 的限制。首先，我们设置一个 `ArrayIterator` 实例：
+### 7. 迭代器可以*堆叠*。在这个简单示例中，一个 `ArrayIterator` 由 `FilterIterator` 处理，而 `FilterIterator` 又受到 `LimitIterator` 的限制。首先，我们设置一个 `ArrayIterator` 实例：
 
 ```php
 $i = new ArrayIterator($a);
 ```
 
-8. 接下来，我们将 `ArrayIterator` 插入到 `FilterIterator` 实例中。注意，我们使用了 PHP 7 新的匿名类特性。在这种情况下，该匿名类继承自 `FilterIterator` 并重写 accept() 方法，只允许具有偶数 ASCII 码的字母通过：
+### 8. 接下来，我们将 `ArrayIterator` 插入到 `FilterIterator` 实例中。注意，我们使用了 PHP 7 新的匿名类特性。在这种情况下，该匿名类继承自 `FilterIterator` 并重写 `accept()` 方法，只允许具有偶数 ASCII 码的字母通过：
 
 ```php
 $f = new class ($i) extends FilterIterator {
@@ -2474,17 +2510,13 @@ return !(ord($current) & 1);
 };
 ```
 
-9. 最后，我们将 `FilterIterator` 实例作为参数提供给 `LimitIterator`，并提供偏移量（本例中为 2）和限制值（本例中为 6）：
+### 9. 最后，我们将 `FilterIterator` 实例作为参数提供给 `LimitIterator`，并提供偏移量（本例中为 2）和限制值（本例中为 6）：
 
 ```php
 $l = new LimitIterator($f, 2, 6);
 ```
 
-
-
-
-
-10. 然后，我们可以定义一个简单的函数来显示输出，并依次调用每个迭代器，以查看由 `range('A', 'Z')` 生成的简单数组上的结果：
+### 10. 然后，我们可以定义一个简单的函数来显示输出，并依次调用每个迭代器，以查看由 `range('A', 'Z')` 生成的简单数组上的结果：
 
 ```php
 function showElements($iterator)
@@ -2497,7 +2529,7 @@ $i = new ArrayIterator($a);
 showElements($i);
 ```
 
-11. 下面是一个变体，它通过在 ArrayIterator 之上堆叠一个 FilterIterator 来产生每隔一个字母：
+### 11. 下面是一个变体，它通过在 `ArrayIterator` 之上堆叠一个 `FilterIterator` 来产生每隔一个字母：
 
 ```php
 $f = new class ($i) extends FilterIterator {
@@ -2510,7 +2542,7 @@ $f = new class ($i) extends FilterIterator {
 showElements($f);
 ```
 
-12. 还有一个变体，它只产生 F H J L N P，这演示了一个消耗 FilterIterator 的 LimitIterator，而 FilterIterator 又消耗 ArrayIterator。这三个示例的输出如下：
+### 12. 还有一个变体，它只产生 F H J L N P，这演示了一个消耗 `FilterIterator` 的 `LimitIterator`，而 `FilterIterator` 又消耗 `ArrayIterator`。这三个示例的输出如下：
 
 ```php
 $l = new LimitIterator($f, 2, 6);
@@ -2519,9 +2551,9 @@ showElements($l);
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_92_0.png)
 
-13. 回到我们生成国家名称列表的示例，假设我们不想只遍历国家名称，而是希望遍历一个由国家名称和 ISO 代码组成的多维数组。到目前为止提到的简单迭代器是不够的。相反，我们将使用所谓的**递归**迭代器。
+### 13. 回到我们生成国家名称列表的示例，假设我们不想只遍历国家名称，而是希望遍历一个由国家名称和 ISO 代码组成的多维数组。到目前为止提到的简单迭代器是不够的。相反，我们将使用所谓的**递归**迭代器。
 
-14. 首先，我们需要定义一个方法，该方法使用前面提到的数据库连接类来从数据库中获取所有列。与之前一样，我们返回一个填充了查询数据的 ArrayIterator 实例：
+### 14. 首先，我们需要定义一个方法，该方法使用前面提到的数据库连接类来从数据库中获取所有列。与之前一样，我们返回一个填充了查询数据的 `ArrayIterator` 实例：
 
 ```php
 function fetchAllAssoc($sql, $connection)
@@ -2535,16 +2567,16 @@ function fetchAllAssoc($sql, $connection)
 }
 ```
 
-15. 乍一看，人们可能会想直接把标准的 ArrayIterator 实例包裹在 RecursiveArrayIterator 中。不幸的是，这种方法只执行**浅**层迭代，并不能给我们想要的结果：即遍历数据库查询返回的多维数组的所有元素：
+### 15. 乍一看，人们可能会想直接把标准的 `ArrayIterator` 实例包裹在 `RecursiveArrayIterator` 中。不幸的是，这种方法只执行**浅**层迭代，并不能给我们想要的结果：即遍历数据库查询返回的多维数组的所有元素：
 
 ```php
 $iterator = fetchAllAssoc($sql, $connection);
 $shallow = new RecursiveArrayIterator($iterator);
 ```
 
-16. 虽然这返回了一个迭代，其中每个项目代表数据库查询中的一行，但在本例中，我们希望提供一个能遍历查询返回的所有行中所有列的迭代。为了实现这一点，我们需要通过 RecursiveIteratorIterator 来“大费周章”（roll out the big brass）。
+### 16. 虽然这返回了一个迭代，其中每个项目代表数据库查询中的一行，但在本例中，我们希望提供一个能遍历查询返回的所有行中所有列的迭代。为了实现这一点，我们需要通过 `RecursiveIteratorIterator` 来“大费周章”（roll out the big brass）。
 
-17.  Monty Python（巨蟒）的粉丝们会为这个类名的丰富讽刺意味而欣喜，因为它唤起了对*《重复冗员部》*（The Department of Redundancy Department）的温馨回忆。恰如其分的是，这个类让我们的老朋友 RecursiveArrayIterator 类加班加点，对数组的所有层级执行**深度**迭代：
+### 17. Monty Python（巨蟒）的粉丝们会为这个类名的丰富讽刺意味而欣喜，因为它唤起了对*《重复冗员部》*（The Department of Redundancy Department）的温馨回忆。恰如其分的是，这个类让我们的老朋友 `RecursiveArrayIterator` 类加班加点，对数组的所有层级执行**深度**迭代：
 
 ```php
 $deep = new RecursiveIteratorIterator($shallow);
@@ -2556,7 +2588,7 @@ $deep = new RecursiveIteratorIterator($shallow);
 
 首先，遵循最佳实践，将上述描述的函数放入一个名为 `chap_03_developing_functions_iterators_library.php` 的包含文件中。在测试脚本中，确保包含此文件。
 
-数据源是一个名为 iso_country_codes 的表，其中包含 ISO2、ISO3 和国家名称。数据库连接可以在 config/db.config.php 文件中。你也可以包含前章中讨论的 Application\Database\Connection 类：
+数据源是一个名为 `iso_country_codes` 的表，其中包含 `ISO2`、`ISO3` 和国家名称。数据库连接可以在 `config/db.config.php` 文件中。你也可以包含前章中讨论的 `Application\Database\Connection` 类：
 
 ```php
 define('DB_CONFIG_FILE', '/../config/db.config.php');
@@ -2578,7 +2610,7 @@ $prev   = ($page > 0) ? $page - 1 : 0;
 $next   = $page + 1;
 ```
 
-现在你准备好启动数据库连接并运行一个简单的 SELECT 查询。这应该放在 try {} catch {} 块中。然后，你可以将堆叠的迭代器放在 try {} 块内：
+现在你准备好启动数据库连接并运行一个简单的 SELECT 查询。这应该放在 `try {}` `catch {}` 块中。然后，你可以将堆叠的迭代器放在 `try {}` 块内：
 
 ```php
 try {
@@ -2623,7 +2655,7 @@ Items Per Page:
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_95_0.png)
 
-最后，为了测试国家数据库查询的递归迭代，你需要包含迭代器的库文件，以及 Application\Database\Connection 类：
+最后，为了测试国家数据库查询的递归迭代，你需要包含迭代器的库文件，以及 `Application\Database\Connection` 类：
 
 ```php
 define('DB_CONFIG_FILE', '../config/db.config.php');
@@ -2631,7 +2663,7 @@ include (__DIR__ . '/chap_03_developing_functions_iterators_library.php');
 include (__DIR__ . '/Application/Database/Connection.php');
 ```
 
-与之前一样，你应该将数据库查询包裹在 try { } catch { } 块中。然后，你可以将测试递归迭代的代码放在 try { } 块内：
+与之前一样，你应该将数据库查询包裹在 `try { } catch { }` 块中。然后，你可以将测试递归迭代的代码放在 `try { }` 块内：
 
 ```php
 try {
@@ -2648,7 +2680,7 @@ try {
 }
 ```
 
-以下是 RecursiveArrayIterator 预期输出的示例：
+以下是 `RecursiveArrayIterator` 预期输出的示例：
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_96_0.png)
 
@@ -2662,15 +2694,13 @@ try {
 
 这种方法有几个优势。主要好处在于当你有一个大型容器需要遍历（即解析一个大文件）时。传统的方法是构建一个数组，然后返回该数组。这样做的问题是，你实际上使所需的内存量翻倍了！此外，性能也会受到影响，因为只有在最终数组返回后，结果才会实现。
 
-
-
-
-
 ## 如何实现...
 
 在本示例中，我们将在基于迭代器的函数库基础上进行扩展，添加一个我们自己设计的生成器。在这种情况下，我们将重复前面迭代器章节中描述的功能，在该功能中我们堆叠了 `ArrayIterator`、`FilterIterator` 和 `LimitIterator`。
 
 由于我们需要访问源数组、期望的过滤器、页码以及每页项目数，我们将适当的参数包含在单个 `filteredResultsGenerator()` 函数中。然后，我们根据页码和限制（即每页项目数）计算偏移量。接下来，我们遍历数组，应用过滤器，如果尚未达到偏移量则继续循环，如果已达到限制则中断循环：
+
+
 
 ```php
 function filteredResultsGenerator(array $array, $filter, $limit = 10, $page = 0)
@@ -2687,9 +2717,9 @@ function filteredResultsGenerator(array $array, $filter, $limit = 10, $page = 0)
 }
 ```
 
-你会注意到，这个函数与其他函数的主要区别在于 **yield** 关键字。这个关键字的作用是向 PHP 引擎发出信号，生成一个 Generator 实例并封装代码。
+你会注意到，这个函数与其他函数的主要区别在于 `yield` 关键字。这个关键字的作用是向 PHP 引擎发出信号，生成一个 Generator 实例并封装代码。
 
-## 工作原理...
+## 工作原理
 
 为了演示 `filteredResultsGenerator()` 函数的使用，我们将让你实现一个 web 应用程序，该应用程序扫描 web 页面并生成从 `HREF` 属性中悬停获取的经过过滤和分页的 URL 列表。
 
@@ -2704,7 +2734,7 @@ include ( _DIR_ . '/../Application/Web/Hover.php');
 
 然后你需要从用户那里收集输入信息，包括要扫描的 URL、用作过滤器的字符串、每页项目数以及当前页码。
 
-> **null coalesce** 运算符 (??) 非常适合从 Web 获取输入。如果未定义，它不会生成任何通知。如果未从用户输入中接收到参数，你可以提供一个默认值。
+> `null coalesce` 运算符 (`??`) 非常适合从 Web 获取输入。如果未定义，它不会生成任何通知。如果未从用户输入中接收到参数，你可以提供一个默认值。
 
 ```php
 $url    = trim(strip_tags($_GET['url'] ?? ''));
@@ -2806,9 +2836,9 @@ $list  = $vac->getAttribute($url, 'href');
 
 传统的开发方法是将类放入其自己的文件中。通常，类包含实现单一用途的逻辑。类进一步分解为自包含的函数，称为 **方法**。在类内部定义的变量称为 **属性**。建议在开发测试类时同步进行，这是 *第 13 章，最佳实践、测试和调试* 中更详细讨论的主题。
 
-### 如何实现...
+### 如何实现
 
-1. 创建一个包含类定义的文件。为了自动加载的目的，建议文件名与类名匹配。在文件顶部，在关键字 *class* 之前，添加一个 **DocBlock**。然后你可以定义属性和方法。在本示例中，我们定义一个类 *Test*。它有一个属性 `$test` 和一个方法 `getTest()`：
+1. 创建一个包含类定义的文件。为了自动加载的目的，建议文件名与类名匹配。在文件顶部，在关键字 `class` 之前，添加一个 **DocBlock**。然后你可以定义属性和方法。在本示例中，我们定义一个类 `Test`。它有一个属性 `$test` 和一个方法 `getTest()`：
 
 ```php
 <?php
@@ -2856,7 +2886,7 @@ public function setTest(string $test)
 
 每个类在关键字 class 之前都应该包含一个 **DocBlock**。在 DocBlock 中，你应该包含类目的简短描述。跳过一行，然后包含更详细的描述。你还可以包括 @tags，如 @author、@license 等。每个方法同样应该由 DocBlock 跟随，该 DocBlock 识别方法的用途，以及其传入参数和返回值。
 
-2. 可以在一个文件中定义多个类，但这不被认为是一种最佳实践。在本示例中，我们创建一个文件 NameAddress.php，定义两个类 Name 和 Address：
+2. 可以在一个文件中定义多个类，但这不被认为是一种最佳实践。在本示例中，我们创建一个文件 `NameAddress.php`，定义两个类 `Name` 和 `Address`：
 
 ```php
 <?php
@@ -2895,32 +2925,48 @@ class Address
         return $this;
     }
 }
+```
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_106_0.png)
 
-3.  类名不区分大小写。重复定义会被标记为错误。在此示例中，在文件 `TwoClass.php` 中，我们定义了两个类，`TwoClass` 和 `twoclass`：
+3. 类名不区分大小写。重复定义会被标记为错误。在此示例中，在文件 `TwoClass.php` 中，我们定义了两个类，`TwoClass` 和 `twoclass`：
 
 ```php
+
 <?php
+
 class TwoClass
+
 {
+
     public function showOne()
+
     {
+
         return 'ONE';
+
     }
+
 }
 
 // 在解析第二个类定义时会发生致命错误
+
 class twoclass
+
 {
+
     public function showTwo()
+
     {
+
         return 'TWO';
+
     }
+
 }
 ```
 
-4.  PHP 7.1 解决了关键词 `$this` 使用中不一致的行为。虽然在 PHP 7.0 和 PHP 5.x 中是允许的，但从 PHP 7.1 开始，如果将 `$this` 用于以下任何用途，现在都会产生错误：
+4. PHP 7.1 解决了关键词 `$this` 使用中不一致的行为。虽然在 PHP 7.0 和 PHP 5.x 中是允许的，但从 PHP 7.1 开始，如果将 `$this` 用于以下任何用途，现在都会产生错误：
 - 作为参数
 - 作为静态变量
 - 作为全局变量
@@ -2930,23 +2976,27 @@ class twoclass
 - 作为变量（即，`$a = 'this'; echo $sa`）
 - 通过引用间接使用
 
-5.  如果你需要创建对象实例，但不想定义一个离散的类，可以使用内置于 PHP 中的通用 `stdClass`。`stdClass` 允许你在定义类时即时定义属性，而无需定义一个继承自 `stdClass` 的离散类：
+5. 如果你需要创建对象实例，但不想定义一个离散的类，可以使用内置于 PHP 中的通用 `stdClass`。`stdClass` 允许你在定义类时即时定义属性，而无需定义一个继承自 `stdClass` 的离散类：
 `$obj = new stdClass();`
 
-6.  此设施在 PHP 中的许多不同位置都有使用。例如，当你使用 PHP 数据对象（PDO）进行数据库查询时，一种获取模式是 `PDO::FETCH_OBJ`。此模式返回 `stdClass` 的实例，其中的属性代表数据库表的列：
+6. 此设施在 PHP 中的许多不同位置都有使用。例如，当你使用 PHP 数据对象（PDO）进行数据库查询时，一种获取模式是 `PDO::FETCH_OBJ`。此模式返回 `stdClass` 的实例，其中的属性代表数据库表的列：
 `$stmt = $connection->pdo->query($sql);`
 `$row = $stmt->fetch(PDO::FETCH_OBJ);`
 
-## 工作原理...
+## 工作原理
 
 取前面代码片段中所示的 `Test` 类示例，并将代码放在名为 `Test.php` 的文件中。创建另一个名为 `chap_04_oop_defining_class_test.php` 的文件。添加以下代码：
 
 ```php
+
 require __DIR__ . '/Test.php';
 
 $test = new Test();
+
 echo $test->getTest();
+
 echo PHP_EOL;
+
 ```
 
 `$test->setTest('ABC');`
@@ -2960,14 +3010,19 @@ echo PHP_EOL;
 下一个示例要求你在单个文件 `NameAddress.php` 中定义两个类，`Name` 和 `Address`。你可以使用以下代码调用和使用这两个类：
 
 ```php
+
 require __DIR__ . '/NameAddress.php';
 
 $name = new Name();
+
 $name->setName('TEST');
+
 $addr = new Address();
+
 $addr->setAddress('123 Main Street');
 
 echo $name->getName() . ' lives at ' . $addr->getAddress();
+
 ```
 
 > 虽然 PHP 解释器不会生成错误，但通过定义多个类，文件的逻辑纯粹性受到了损害。此外，文件名与类名不匹配，这可能会影响自动加载的能力。
@@ -2985,26 +3040,36 @@ echo $name->getName() . ' lives at ' . $addr->getAddress();
 输入以下代码：
 
 ```php
+
 $obj = new stdClass();
+
 $obj->test = 'TEST';
+
 echo $obj->test;
+
 echo PHP_EOL;
 
 include (__DIR__ . './../Application/Database/Connection.php');
+
 $connection = new Application\Database\Connection(
+
     include __DIR__ . DB_CONFIG_FILE);
 
 $sql = 'SELECT * FROM iso_country_codes';
+
 $stmt = $connection->pdo->query($sql);
+
 $row = $stmt->fetch(PDO::FETCH_OBJ);
+
 var_dump($row);
+
 ```
 
 输出如下：
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_110_0.png)
 
-## 参见...
+## 参见
 
 有关 PHP 7.1 中关于关键词 `$this` 改进的更多信息，请参阅 https://wiki.php.net/rfc/this_var。
 
@@ -3012,39 +3077,59 @@ var_dump($row);
 
 开发人员使用面向对象编程（OOP）的主要原因之一是其能够重用现有代码，同时添加或覆盖功能。在 PHP 中，使用关键词 `extends` 来建立类之间的父/子关系。
 
-## 操作步骤...
+## 操作步骤
 
-1.  在子类中使用关键词 `extends` 来设置继承。在以下示例中，`Customer` 类扩展 `Base` 类。`Customer` 的任何实例都将继承可见的方法和属性，在本例中为 `$id`、`getId()` 和 `setId()`：
+1. 在子类中使用关键词 `extends` 来设置继承。在以下示例中，`Customer` 类扩展 `Base` 类。`Customer` 的任何实例都将继承可见的方法和属性，在本例中为 `$id`、`getId()` 和 `setId()`：
 
 ```php
+
 class Base
+
 {
+
     protected $id;
+
     public function getId()
+
     {
+
         return $this->id;
+
     }
+
     public function setId($id)
+
     {
+
         $this->id = $id;
+
     }
+
 }
 
 class Customer extends Base
+
 {
+
     protected $name;
+
     public function getName()
+
     {
+
         return $this->name;
-    }
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
+
+
+
+```php
+public function setName($name)
+{
+    $this->name = $name;
+}
 }
 ```
 
-2.  你可以强制任何使用你类的开发人员定义一个方法，方法是将其标记为抽象。在此示例中，`Base` 类将 `validate()` 方法定义为抽象。之所以必须是抽象的原因是因为从父类 `Base` 的角度来看，不可能确切确定子类是如何被验证的：
+2. 你可以强制任何使用你类的开发人员定义一个方法，方法是将其标记为抽象。在此示例中，`Base` 类将 `validate()` 方法定义为抽象。之所以必须是抽象的原因是因为从父类 `Base` 的角度来看，不可能确切确定子类是如何被验证的：
 
 ```php
 abstract class Base
@@ -3062,9 +3147,9 @@ abstract class Base
 }
 ```
 
-> 如果类包含一个**抽象方法**，该类本身必须声明为抽象类。
+> 如果类包含一个`抽象方法`，该类本身必须声明为抽象类。
 
-3.  PHP 仅支持单重继承。下一个示例展示了一个类 `Member`，它继承自 `Customer`。`Customer` 反过来继承自 `Base`：
+3. PHP 仅支持单重继承。下一个示例展示了一个类 `Member`，它继承自 `Customer`。`Customer` 反过来继承自 `Base`：
 
 ```php
 class Base
@@ -3079,7 +3164,6 @@ class Base
         $this->id = $id;
     }
 }
-
 class Customer extends Base
 {
     protected $name;
@@ -3092,7 +3176,6 @@ class Customer extends Base
         $this->name = $name;
     }
 }
-
 class Member extends Customer
 {
     protected $membership;
@@ -3107,7 +3190,7 @@ class Member extends Customer
 }
 ```
 
-4.  为了满足类型提示，可以使用目标类的任何子类。在以下代码片段中显示的 `test()` 函数要求一个 `Base` 类的实例作为参数。继承链中的任何类都可以作为参数接受。传递给 `test()` 的其他任何内容都会抛出 `TypeError`：
+4. 为了满足类型提示，可以使用目标类的任何子类。在以下代码片段中显示的 `test()` 函数要求一个 `Base` 类的实例作为参数。继承链中的任何类都可以作为参数接受。传递给 `test()` 的其他任何内容都会抛出 `TypeError`：
 
 ```php
 function test(Base $object)
@@ -3159,10 +3242,6 @@ class Customer extends Base
 }
 ```
 
-
-
-
-
 ## 使用 PHP 面向对象编程
 
 代码继续自上一步：
@@ -3179,7 +3258,6 @@ return ($valid == $count);
 
 ```php
 $customer = new Customer();
-
 $customer->setId(100);
 $customer->setName('Fred');
 echo "Customer [id]: {$customer->getName()}" .
@@ -3241,13 +3319,10 @@ function test(Base $object)
 ```php
 $base = new Base();
 $base->setId(100);
-
 $customer = new Customer();
 $customer->setId(101);
-
 $member = new Member();
 $member->setId(102);
-
 // 所有 3 个类都适用于 test()
 echo test($base)      . PHP_EOL;
 echo test($customer)  . PHP_EOL;
@@ -3289,7 +3364,7 @@ try {
 
 ## 使用静态属性和方法
 
-PHP 允许你在不创建类实例的情况下访问属性或方法。用于此目的的关键词是 **static**。
+PHP 允许你在不创建类实例的情况下访问属性或方法。用于此目的的关键词是 `static`。
 
 ### 操作步骤...
 
@@ -3323,7 +3398,6 @@ class Test2
         return static::$test;
     }
 }
-
 class Child extends Test2
 {
     public static $test = 'CHILD';
@@ -3440,106 +3514,165 @@ class Address
 ```php
 use Application\Entity;
 $name = new Entity\Name();
-$addr = new Entity\Address();
-$prof = new Entity\Profile();
 ```
 
+
+
+$addr = new `Entity\Address`();
+
+$prof = new `Entity\Profile`();
+
+```
 - 4. 或者，你可以明确指定所有三个类：
 
 ```php
-use Application\Entity\Name;
-use Application\Entity\Address;
-use Application\Entity\Profile;
-$name = new Name();
-$addr = new Address();
-$prof = new Profile();
-```
 
+use Application\Entity\Name;
+
+use Application\Entity\Address;
+
+use Application\Entity\Profile;
+
+$name = new Name();
+
+$addr = new Address();
+
+$prof = new Profile();
+
+```
 - 5. PHP 7 引入了一种称为 `group use` 的语法改进，大大改善了代码可读性：
 
 ```php
-use Application\Entity\ {
-    Name,
-    Address,
-    Profile
-};
-$name = new Name();
-$addr = new Address();
-$prof = new Profile();
-```
 
+use Application\Entity\ {
+
+    Name,
+
+    Address,
+
+    Profile
+
+};
+
+$name = new Name();
+
+$addr = new Address();
+
+$prof = new Profile();
+
+```
 - 6. 如第 1 章 *构建基础* 中所述，命名空间是**自动加载**过程的组成部分。此示例显示了一个演示自动加载器，它回显传入的参数，然后尝试基于命名空间和类名包含一个文件。这假设目录结构与命名空间匹配：
 
 ```php
+
 function __autoload($class)
+
 {
+
     echo "Argument Passed to Autoloader = $class\n";
+
     include __DIR__ . '/../' . str_replace(
+
         '\\', DIRECTORY_SEPARATOR, $class) . '.php';
+
 }
+
 ```
-
-
-
 
 ## 使用 PHP 面向对象编程
 
-## 工作原理...
+### 工作原理...
 
 为了说明目的，定义一个与 `Application\*` 命名空间相匹配的目录结构。创建一个基础文件夹 *Application*，以及一个子文件夹 *Entity*。你也可以根据需要包含其他子文件夹，例如在其他章节中使用的 *Database* 和 *Generic*：
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_124_0.png)
 
-接下来，在 *Application/Entity* 文件夹下创建三个实体类，每个类放在各自的文件中：*Name.php*、*Address.php* 和 *Profile.php*。这里我们仅展示 `Application\Entity\Name`。`Application\Entity\Address` 和 `Application\Entity\Profile` 的结构相同，区别在于 Address 拥有 $address 属性，而 Profile 拥有 $profile 属性，并且每个属性都有相应的 getter 和 setter 方法：
+接下来，在 *Application/Entity* 文件夹下创建三个实体类，每个类放在各自的文件中：*Name.php*、*Address.php* 和 *Profile.php*。这里我们仅展示 `Application\Entity\Name`。`Application\Entity\Address` 和 `Application\Entity\Profile` 的结构相同，区别在于 Address 拥有 `$address` 属性，而 Profile 拥有 `$profile` 属性，并且每个属性都有相应的 getter 和 setter 方法：
 
 ```php
+
 <?php
+
 declare(strict_types=1);
+
 namespace Application\Entity;
 
 /**
+
  * Name
+
  *
+
  */
+
 class Name
+
 {
+
     protected $name = '';
 
     /**
+
      * This method returns the current value of $name
+
      *
+
      * @return string $name
+
      */
+
     public function getName() : string
+
     {
+
         return $this->name;
+
     }
 
     /**
+
      * This method sets the value of $name
+
      *
+
      * @param string $name
+
      * @return name $this
+
      */
+
     public function setName(string $name)
+
     {
+
         $this->name = $name;
+
         return $this;
+
     }
+
 }
+
 ```
 
 然后，你可以使用 *第 1 章，构建基础* 中定义的自动加载器，或使用前面提到的简单自动加载器。将设置自动加载的命令放入一个文件，`chap_04_oop_namespace_example_1.php`。在此文件中，你可以指定一个 use 语句，该语句仅引用命名空间，而不引用类名。通过用命名空间的最后一部分 `Entity` 作为类名前缀，创建三个实体类 `Name`、`Address` 和 `Profile` 的实例：
 
 ```php
+
 use Application\Entity;
+
 $name = new Entity\Name();
+
 $addr = new Entity\Address();
+
 $prof = new Entity\Profile();
 
 var_dump($name);
+
 var_dump($addr);
+
 var_dump($prof);
+
 ```
 
 输出如下：
@@ -3549,17 +3682,25 @@ var_dump($prof);
 接下来，使用 **另存为** 功能将文件复制到一个名为 `chap_04_oop_namespace_example_2.php` 的新文件中。将 `use` 语句更改为以下内容：
 
 ```php
+
 use Application\Entity\Name;
+
 use Application\Entity\Address;
+
 use Application\Entity\Profile;
+
 ```
 
 现在，你只需使用类名即可创建类实例：
 
 ```php
+
 $name = new Name();
+
 $addr = new Address();
+
 $prof = new Profile();
+
 ```
 
 运行此脚本时，输出如下：
@@ -3569,39 +3710,67 @@ $prof = new Profile();
 最后，再次运行 **另存为** 并创建一个新文件，`chap_04_oop_namespace_example_3.php`。你现在可以测试在 PHP 7 中引入的**组使用（group use）** 功能：
 
 ```php
+
 use Application\Entity\{
+
     Name,
+
     Address,
+
     Profile
+
 };
 
 $name = new Name();
+
 $addr = new Address();
+
 $prof = new Profile();
+
 ```
 
 同样，当你运行这段代码时，输出将与上述输出相同：
 
 ```text
+
 Terminal
+
 Argument Passed to Autoloader = Application\Entity\Name
+
 Argument Passed to Autoloader = Application\Entity\Address
+
 Argument Passed to Autoloader = Application\Entity\Profile
+
 class Application\Entity\Name#1 () {
+
     protected $name =>
+
         string(0) ""
+
 }
+
 class Application\Entity\Address#2 () {
+
     protected $address =>
+
         string(0) ""
+
 }
+
 class Application\Entity\Profile#3 () {
+
     protected $profile =>
+
         string(0) ""
+
 }
+
 --------------------------
+
 (program exited with code: 0)
+
 Press return to continue
+
 ```
 
 ## 定义可见性
@@ -3615,39 +3784,65 @@ Press return to continue
 - 在此示例中，定义了一个包含 `protected` 属性 `$id` 的 `Base` 类。为了访问此属性，定义了公共方法 `getId()` 和 `setId()`。`protected` 方法 `generateRandId()` 可以在内部使用，并会被 `Customer` 子类继承。此方法不能在类定义外部直接调用。请注意使用新的 PHP 7 `random_bytes()` 函数来生成随机 ID。
 
 ```php
+
 class Base
+
 {
+
     protected $id;
+
     private $key = 12345;
 
     public function getId()
+
     {
+
         return $this->id;
+
     }
 
     public function setId()
+
     {
+
         $this->id = $this->generateRandId();
+
     }
 
     protected function generateRandId()
+
     {
+
         return unpack('H*', random_bytes(8))[1];
+
     }
+
 }
 
 class Customer extends Base
+
 {
+
     protected $name;
+
     public function getName()
+
     {
+
         return $this->name;
+
     }
+
     public function setName($name)
+
     {
+
         $this->name = $name;
+
     }
+
 }
+
 ```
 
 > **最佳实践**
@@ -3658,32 +3853,53 @@ class Customer extends Base
 - 下一个代码示例展示了一个 *Registry* 类，该类只能有一个实例。因为构造函数被标记为 *private*，所以创建实例的唯一方式是通过静态方法 `getInstance()`：
 
 ```php
+
 class Registry
+
 {
+
     protected static $instance = NULL;
+
     protected $registry = array();
+
     private function __construct()
+
     {
+
     }
 
     public static function getInstance()
+
     {
+
         if (!self::$instance) {
+
             self::$instance = new self();
+
         }
+
         return self::$instance;
+
     }
 
     public function __get($key)
+
     {
+
         return $this->registry[$key] ?? NULL;
+
     }
 
     public function __set($key, $value)
+
     {
+
         $this->registry[$key] = $value;
+
     }
+
 }
+
 ```
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_129_0.png)
@@ -3693,57 +3909,83 @@ class Registry
 - 通常，类常量被认为具有公共可见性级别。从 PHP 7.1 开始，你可以将类常量声明为 *protected* 或 *private*。在以下示例中，TEST_WHOLE_WORLD 类常量的行为与 PHP 5 中完全相同。接下来的两个常量 TEST_INHERITED 和 TEST_LOCAL 遵循与任何受保护或私有属性或方法相同的规则：
 
 ```php
+
 class Test
+
 {
+
     public const TEST_WHOLE_WORLD   = 'visible.everywhere';
 
     // NOTE: only works in PHP 7.1 and above
+
     protected const TEST_INHERITED = 'visible.in.child.classes';
 
     // NOTE: only works in PHP 7.1 and above
+
     private const TEST_LOCAL= 'local.to.class.Test.only';
 
     public static function getTestInherited()
+
     {
+
         return static::TEST_INHERITED;
+
     }
 
     public static function getTestLocal()
+
     {
+
         return static::TEST_LOCAL;
+
     }
+
 }
+
 ```
 
-## 工作原理...
+### 工作原理...
 
 创建文件 `chap_04_basic_visibility.php` 并定义两个类：Base 和 Customer。接下来，编写代码来创建每个类的实例：
 
 ```php
+
 $base        = new Base();
+
 $customer = new Customer();
+
 ```
 
 注意，以下代码运行正常，实际上也被认为是最佳实践：
 
 ```php
+
 $customer->setId();
+
 $customer->setName('Test');
+
 echo 'Welcome ' . $customer->getName() . PHP_EOL;
+
 echo 'Your new ID number is: ' . $customer->getId() . PHP_EOL;
+
 ```
 
-尽管 $id 是受保护的，但相应的方法 getId() 和 setId() 都是公共的，因此可以从类定义外部访问。输出如下：
+尽管 `$id` 是受保护的，但相应的方法 `getId()` 和 `setId()` 都是公共的，因此可以从类定义外部访问。输出如下：
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_130_0.png)
 
 然而，以下代码行将不会工作，因为私有和受保护的属性无法从类定义外部访问：
 
 ```php
+
 echo 'Key (does not work): ' . $base->key;
+
 echo 'Key (does not work): ' . $customer->key;
+
 echo 'Name (does not work): ' . $customer->name;
+
 echo 'Random ID (does not work): ' . $customer->generateRandId();
+
 ```
 
 以下输出显示了预期的错误：
@@ -3760,127 +4002,204 @@ echo 'Random ID (does not work): ' . $customer->generateRandId();
 
 > 接口中识别的所有方法的可见性级别均为 public。
 
-
-
-## 实现方法…
+### 实现方法…
 
 - 1. 接口中定义的方法不能包含实际的代码实现。不过，你可以指定方法参数的数据类型。
 - 2. 在本示例中，**ConnectionAwareInterface** 定义了一个方法 **setConnection()**，**该方法需要一个 Connection 实例作为参数：**
 
 ```php
+
 interface ConnectionAwareInterface
+
 {
+
     public function setConnection(Connection $connection);
+
 }
+
 ```
 
 - 3. 要使用该接口，请在定义类的起始行后添加关键字 **implements**。我们定义了两个类，**CountryList** 和 **CustomerList**，这两个类都需要通过方法 **setConnection()** 访问 **Connection** 类。为了标识这种依赖关系，这两个类都实现了 **ConnectionAwareInterface**：
 
 ```php
+
 class CountryList implements ConnectionAwareInterface
+
 {
+
     protected $connection;
 
     public function setConnection(Connection $connection)
+
     {
+
         $this->connection = $connection;
+
     }
 
     public function list()
+
     {
+
         $list = [];
+
         $stmt = $this->connection->pdo->query(
-            'SELECT iso3, name FROM iso_country_codes');
-        while ($country = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            $list[$country['iso3']] = $country['name'];
-        }
-        return $list;
-    }
+
+
+
+```php
+'SELECT iso3, name FROM iso_country_codes');
+
+while ($country = $stmt->fetch(PDO::FETCH_ASSOC)) {
+
+    $list[$country['iso3']] = $country['name'];
+
+}
+
+return $list;
+
+}
+
 }
 
 class CustomerList implements ConnectionAwareInterface
+
 {
+
     protected $connection;
 
     public function setConnection(Connection $connection)
+
     {
+
         $this->connection = $connection;
+
     }
 
     public function list()
+
     {
+
         $list = [];
+
         $stmt = $this->connection->pdo->query(
+
             'SELECT id, name FROM customer');
+
         while ($customer = $stmt->fetch(PDO::FETCH_ASSOC)) {
+
             $list[$customer['id']] = $customer['name'];
+
         }
+
         return $list;
+
     }
+
 }
 ```
 
-- 4. 接口可用于满足类型提示。下面的类 `ListFactory` 包含一个 `factory()` 方法，该方法可以初始化任何实现了 `ConnectionAwareInterface` 的类。该接口保证 `setConnection()` 方法已被定义。将类型提示设置为接口而非特定的类实例，会使工厂方法更具通用性：
+### 4. 接口可用于满足类型提示
+
+下面的类 `ListFactory` 包含一个 `factory()` 方法，该方法可以初始化任何实现了 `ConnectionAwareInterface` 的类。该接口保证 `setConnection()` 方法已被定义。将类型提示设置为接口而非特定的类实例，会使工厂方法更具通用性：
 
 ```php
 namespace Application\Generic;
 
 use PDO;
+
 use Exception;
+
 use Application\Database\Connection;
+
 use Application\Database\ConnectionAwareInterface;
 
 class ListFactory
+
 {
+
     const ERROR_AWARE = 'Class must be Connection Aware';
 
     public static function factory(ConnectionAwareInterface $class, $dbParams)
+
     {
+
         if ($class instanceof ConnectionAwareInterface) {
+
             $class->setConnection(new Connection($dbParams));
+
             return $class;
+
         } else {
+
             throw new Exception(self::ERROR_AWARE);
+
         }
+
         return FALSE;
+
     }
+
 }
 ```
 
-- 5. 如果一个类实现了多个接口，当方法签名不匹配时会发生**命名冲突**。在本示例中，有两个接口：`DateAware` 和 `TimeAware`。除了定义 `setDate()` 和 `setTime()` 方法外，它们都定义了 `setBoth()`。拥有重复的方法名本身不是问题，尽管这不被视为最佳实践。问题在于方法签名不同：
+### 5. 如果一个类实现了多个接口，当方法签名不匹配时会发生命名冲突
+
+在本示例中，有两个接口：`DateAware` 和 `TimeAware`。除了定义 `setDate()` 和 `setTime()` 方法外，它们都定义了 `setBoth()`。拥有重复的方法名本身不是问题，尽管这不被视为最佳实践。问题在于方法签名不同：
 
 ```php
 interface DateAware
+
 {
+
     public function setDate($date);
+
     public function setBoth(DateTime $dateTime);
+
 }
 
 interface TimeAware
+
 {
+
     public function setTime($time);
+
     public function setBoth($date, $time);
+
 }
 
 class DateTimeHandler implements DateAware, TimeAware
+
 {
+
     protected $date;
+
     protected $time;
 
     public function setDate($date)
+
     {
+
         $this->date = $date;
+
     }
 
     public function setTime($time)
+
     {
+
         $this->time = $time;
+
     }
 
     public function setBoth(DateTime $dateTime)
+
     {
+
         $this->date = $dateTime;
+
     }
+
 }
 ```
 
@@ -3889,7 +4208,7 @@ class DateTimeHandler implements DateAware, TimeAware
 > **最佳实践**
 > 不要定义具有重复或重叠方法定义的接口。
 
-### 工作原理…
+### 工作原理
 
 在 `Application/Database` 文件夹中，创建一个文件 `ConnectionAwareInterface.php`。插入前面步骤 2 中讨论的代码。
 
@@ -3899,9 +4218,13 @@ class DateTimeHandler implements DateAware, TimeAware
 
 ```php
 <?php
+
 define('DB_CONFIG_FILE', './../config/db.config.php');
+
 require __DIR__ . './../Application/Autoload/Loader.php';
+
 Application\Autoload\Loader::init(__DIR__ . './../');
+
 $params = include __DIR__ . DB_CONFIG_FILE;
 ```
 
@@ -3926,7 +4249,7 @@ Country List
 Afghanistan Albania Antarctica Algeria American Samoa Andorra Angola Antigua and Barbuda Azerbaijan Argentina Australia Austria Bahamas Bahrain Bangladesh Armenia Barbados Belgium Bermuda Bhutan Bolivia, Plurinational State of Bosnia and Herzegovina Botswana Bouvet Island Brazil Belize British Indian Ocean Territory Solomon Islands Virgin Islands, British Burundi Burkina Faso Bulgaria Myanmar Burundi Belarus Cambodia Cameroon Canada Cape Verde Cayman Islands Central African Republic Sri Lanka Chad Chile China Taiwan, Province of China Christmas Island Cocos (Keeling) Islands Colombia Comoros Mayotte Congo, Democratic Republic of the Congo Cook Islands Costa Rica Croatia Cuba Cyprus Czech Republic Benin Denmark Dominica Dominican Republic Ecuador El Salvador Equatorial Guinea Eritrea Estonia Faroe Islands Falkland Islands (Malvinas) South Georgia and the South Sandwich Islands Fiji Finland Aland Islands France French Guiana French Polynesia French Southern Territories Djibouti Gabon Georgia Gambia Palestine, State of Germany Ghana Gibraltar Kiribati Greece Greenland Grenada Guadeloupe Guam Guatemala Guinea Guyana Haiti Heard Island and McDonald Islands Holy See (Vatican City State) Honduras Hong Kong Hungary Iceland India Indonesia Iran, Islamic Republic of Iraq Ireland Israel Italy Cote d'Ivoire Jamaica Japan Kazakhstan Jordan Korea, Democratic People's Republic of Korea, Republic of Kuwait Kyrgyzstan Lao People's Democratic Republic Lebanon Lesotho Latvia Liberia Libya Liechtenstein Lithuania Luxembourg Macao Madagascar Malawi Malaysia Maldives Mali Malta
 ```
 
-你还可以使用工厂方法来生成 CustomerList 对象并使用它：
+你还可以使用工厂方法来生成 `CustomerList` 对象并使用它：
 
 ```php
 $list = Application\Generic\ListFactory::factory(
@@ -3934,7 +4257,7 @@ $list = Application\Generic\ListFactory::factory(
 foreach ($list->list() as $item) echo $item . ' ';
 ```
 
-这是 CustomerList 的输出：
+这是 `CustomerList` 的输出：
 
 ```text
 -----------------
@@ -3942,24 +4265,23 @@ Customer List
 -----------------
 Conrad Perry Lonnie Knapp Darrel Roman Morgan Avila Lee McCray Spencer Sanford Thomas Kirby Brian Crawford Armando Barlow Jess Rocha Felix Blevins Jose Carter Orlando Fulton Mitchell Roth Eduardo Wright Marc Ellis Joaquin Moses Morris Varjan Gene Cruz Samuel Harding Lauri Grimes Ceeleen Walker Tabitha Foster Cecelia Case Rhonda Kinney Elvira Giles Flossie Dyer Gabriela Davis Dolly Wong Krista Cortez Leta Solomon Matilda Barrera Tommie Horter Lenne Gillespie Camille Perez Graciela Joyner Penelope Molina Celeste Justice Lena Conway Katrina Freeman Jeff Valdoz Leonardo Parrish Roland Chong Raymond Sanford Wilfredo Taylor Dominick Cline Alonzo Sullivan Edmond Shepherd Omar Anthony Lonnie Eaton Peter Pugh Jesus Bright Ramiro Bentley Derrick Hendricks Hans Page Garrett Campos Todd Lindsey Denis Snyder Stan Rocha Dollie Hernandez Aileen Duncan Essie Shorti Ram Ruiz Isabel Rodriguez Ingrid Santos Jaime Noel Geneva Case Lucille Bradford Josefina Hampton Fannie Moore Sorcorr Jemenes Elba Mccall Louella Allan Jeanette Merritt Lana Burns Karyn Francis Blanca Le Renee Decker Obama C.T. Russel admin Leonard Nimoy
 -----------------
-
 (program exited with code: 0)
 Press return to continue
 ```
-
-
-
 
 如果您想检查在实现了多个接口且方法签名不同的情况下会发生什么，请将前面第 4 步中显示的代码输入到文件 `chap_04_oop_interfaces_collisions.php` 中。当您尝试运行该文件时，会生成一个错误，如下所示：
 
 ```text
 PHP Fatal error:  Declaration of DateTimeHandler::setBoth($dateTime) must be compatible with DateTimeAware::setBoth(DateTime $dateTime) in /home/aed/Repos/php7_recipes/source/chapter04/chap_04_oop_interfaces_collisions.php on line 19
+
 PHP Stack trace:
+
 PHP   1. {main}() /home/aed/Repos/php7_recipes/source/chapter04/chap_04_oop_interfaces_collisions.php:0
 
 Fatal error: Declaration of DateTimeHandler::setBoth($dateTime) must be compatible with DateTimeAware::setBoth(DateTime $dateTime) in /home/aed/Repos/php7_recipes/source/chapter04/chap_04_oop_interfaces_collisions.php on line 19
 
 Call Stack:
+
 0.0002    36324  1. {main}() /home/aed/Repos/php7_recipes/source/chapter04/chap_04_oop_interfaces_collisions.php:0
 
 ---------------------------------------------------
@@ -3967,16 +4289,20 @@ Call Stack:
 Press return to continue
 ```
 
-如果您在 TimeAware 接口中进行以下调整，就不会产生错误了：
+如果您在 `TimeAware` 接口中进行以下调整，就不会产生错误了：
 
 ```php
 interface TimeAware
 {
+
     public function setTime($time);
+
     // this will cause a problem
     public function setBoth(DateTime $dateTime);
 }
 ```
+
+
 
 ## 使用特征（Traits）
 
@@ -4003,7 +4329,6 @@ trait ListTrait
             $list[$item[$this->key]] =
                 $item[$this->value];
         }
-
         return $list;
     }
 }
@@ -4015,12 +4340,10 @@ trait ListTrait
 class CountryListUsingTrait implements ConnectionAwareInterface
 {
     use ListTrait;
-
     protected $connection;
     protected $key = 'iso3';
     protected $value = 'name';
     protected $table = 'iso_country_codes';
-
     public function setConnection(Connection $connection)
     {
         $this->connection = $connection;
@@ -4034,9 +4357,7 @@ class CountryListUsingTrait implements ConnectionAwareInterface
 
 ```php
 namespace Application\Generic;
-
 use PDO;
-
 trait ListTrait
 {
     public function list()
@@ -4060,33 +4381,26 @@ trait Test
         $this->id = $obj;
     }
 }
-
 class Base
 {
     protected $id;
-
     public function getId()
     {
         return $this->id;
     }
-
     public function setId($id)
     {
         $this->id = $id;
     }
 }
-
 class Customer extends Base
 {
     use Test;
-
     protected $name;
-
     public function getName()
     {
         return $this->name;
     }
-
     public function setName($name)
     {
         $this->name = $name;
@@ -4106,17 +4420,14 @@ class Customer extends Base
 trait Test
 {
     protected $id;
-
     public function getId()
     {
         return $this->id;
     }
-
     public function setId($id)
     {
         $this->id = $id;
     }
-
     public function setName($name)
     {
         $obj = new stdClass();
@@ -4124,18 +4435,14 @@ trait Test
         $this->name = $obj;
     }
 }
-
 class Customer
 {
     use Test;
-
     protected $name;
-
     public function getName()
     {
         return $this->name;
     }
-
     public function setName($name)
     {
         $this->name = $name;
@@ -4152,35 +4459,29 @@ trait IdTrait
 {
     protected $id;
     public $key;
-
     public function setId($id)
     {
         $this->id = $id;
     }
-
     public function setKey()
     {
         $this->key = date('YmdHis')
             . sprintf('%04d', rand(0, 9999));
     }
 }
-
 trait NameTrait
 {
     protected $name;
     public $key;
-
     public function setName($name)
     {
         $this->name = $name;
     }
-
     public function setKey()
     {
         $this->key = unpack('H*', random_bytes(10))[1];
     }
 }
-
 class Test
 {
     use IdTrait, NameTrait {
@@ -4205,10 +4506,6 @@ var_dump($customer);
 
 正如您可以从输出（如下所示）中看到，属性 `$id` 被存储为 `stdClass()` 的实例，这是在特征中定义的行为：
 
-
-
-
-
 ## 使用 PHP 面向对象编程
 
 为了说明直接定义的类方法如何覆盖 trait 方法，请将步骤 9 中提到的代码块复制到单独的文件 `chap_04_oop_trait_methods_do_not_override_class_methods.php` 中。添加以下代码行：
@@ -4230,7 +4527,6 @@ class Customer#1 (2) {
   public $id =>
   int(100)
 }
-
 --------------
 (program exited with code: 0)
 Press return to continue
@@ -4244,7 +4540,6 @@ $a->setId(100);
 $a->setName('Fred');
 $a->setKey();
 var_dump($a);
-
 $a->setKeyDate();
 var_dump($a);
 ```
@@ -4301,12 +4596,10 @@ PHP 7 引入了一个新特性：**匿名类**。与匿名函数类似，匿名�
 
     ```php
     define('MAX_COLORS', 256 ** 3);
-
     $d = new class () implements Countable {
         public $current = 0;
         public $maxRows = 16;
         public $maxCols = 64;
-
         public function cycle()
         {
             $row = '';
@@ -4327,7 +4620,6 @@ PHP 7 引入了一个新特性：**匿名类**。与匿名函数类似，匿名�
             }
             return $row;
         }
-
         public function count()
         {
             return MAX_COLORS;
@@ -4335,18 +4627,20 @@ PHP 7 引入了一个新特性：**匿名类**。与匿名函数类似，匿名�
     };
     ```
 
-4.  匿名类可以使用 traits。
 
-5.  最后一个示例是对前一个示例的修改。与其定义一个 `Test` 类，我们改为定义一个匿名类：
 
-    ```php
-    $a = new class {
-        use IdTrait, NameTrait {
-            NameTrait::setKey insteadof IdTrait;
-            IdTrait::setKey as setKeyDate;
-        }
-    };
-    ```
+4. 匿名类可以使用 traits。
+
+5. 最后一个示例是对前一个示例的修改。与其定义一个 `Test` 类，我们改为定义一个匿名类：
+
+```php
+$a = new class {
+    use IdTrait, NameTrait {
+        NameTrait::setKey insteadof IdTrait;
+        IdTrait::setKey as setKeyDate;
+    }
+};
+```
 
 ## 工作原理...
 
@@ -4432,20 +4726,17 @@ $a = new Test();
 
 在本章中，我们将涵盖以下主题：
 
--   使用 PDO 连接数据库
--   构建面向对象的 SQL 查询构建器
--   处理分页
--   定义实体以匹配数据库表
--   将实体类绑定到 RDBMS 查询
--   将二次查找嵌入到查询结果中
--   实现 jQuery DataTables PHP 查找
+- 使用 PDO 连接数据库
+- 构建面向对象的 SQL 查询构建器
+- 处理分页
+- 定义实体以匹配数据库表
+- 将实体类绑定到 RDBMS 查询
+- 将二次查找嵌入到查询结果中
+- 实现 jQuery DataTables PHP 查找
 
 ## 简介
 
 在本章中，我们将介绍一系列利用 **PHP 数据对象 (PDO)** 扩展的数据库连接食谱。诸如 **结构化查询语言 (SQL)** 生成、分页以及将对象与数据库表绑定等常见编程问题将被解决。最后，在结尾处，我们将展示处理二次查找的代码，这些查找以嵌入的匿名函数形式存在，并使用 jQuery DataTables 进行 AJAX 请求。
-
-
-
 
 ## 使用 PDO 连接数据库
 
@@ -4462,8 +4753,8 @@ PDO 分为四个主要类，如下表所示：
 
 ### 实现方法...
 
-- 1. 通过创建 `PDO` 实例来设置数据库连接。
-- 2. 您需要构造一个**数据源名称（DSN）**。DSN 中包含的信息根据所使用的数据库驱动程序而变化。例如，以下是用于连接 **MySQL** 数据库的 DSN：
+1. 通过创建 `PDO` 实例来设置数据库连接。
+2. 您需要构造一个**数据源名称（DSN）**。DSN 中包含的信息根据所使用的数据库驱动程序而变化。例如，以下是用于连接 **MySQL** 数据库的 DSN：
 
 ```php
 $params = [
@@ -4472,7 +4763,6 @@ $params = [
     'pwd'   => 'password',
     'db'    => 'php7cookbook'
 ];
-
 try {
     $dsn = sprintf('mysql:host=%s;dbname=%s',
             $params['host'], $params['db']);
@@ -4484,7 +4774,7 @@ try {
 }
 ```
 
-- 3. 另一方面，更简单的扩展 **SQLite** 仅需要以下命令：
+3. 另一方面，更简单的扩展 **SQLite** 仅需要以下命令：
 
 ```php
 $params = [
@@ -4493,7 +4783,7 @@ $params = [
 $dsn = sprintf('sqlite:' . $params['db']);
 ```
 
-- 4. 另一方面，**PostgreSQL** 直接将用户名和密码包含在 DSN 中：
+4. 另一方面，**PostgreSQL** 直接将用户名和密码包含在 DSN 中：
 
 ```php
 $params = [
@@ -4509,7 +4799,7 @@ $dsn = sprintf('pgsql:host=%s;dbname=%s;user=%s;password=%s',
     $params['pwd']);
 ```
 
-- 5. DSN 还可以包含服务器特有的指令，例如 unix_socket，如下例所示：
+5. DSN 还可以包含服务器特有的指令，例如 unix_socket，如下例所示：
 
 ```php
 $params = [
@@ -4519,7 +4809,6 @@ $params = [
     'db' => 'php7cookbook',
     'sock' => '/var/run/mysqld/mysqlq.sock'
 ];
-
 try {
     $dsn = sprintf('mysql:host=%s;dbname=%s;unix_socket=%s',
         $params['host'], $params['db'], $params['sock']);
@@ -4534,20 +4823,20 @@ try {
 
 **最佳实践**
 
-将创建 PDO 实例的语句包裹在 try {} catch {} 块中。在失败时捕获 PDOException 以获取数据库特有信息。捕获 Throwable 以处理错误或任何其他异常。为获得最佳效果，将 PDO 错误模式设置为 PDO::ERRMODE_EXCEPTION。有关错误模式的更多详情，请参见步骤 8。
+将创建 PDO 实例的语句包裹在 try {} catch {} 块中。在失败时捕获 PDOException 以获取数据库特有信息。捕获 Throwable 以处理错误或任何其他异常。为获得最佳效果，将 PDO 错误模式设置为 `PDO::ERRMODE_EXCEPTION`。有关错误模式的更多详情，请参见步骤 8。
 
-在 PHP 5 中，如果无法构建 PDO 对象（例如使用了无效参数时），该实例会被赋值为 NULL。在 PHP 7 中，会抛出 Exception。如果您将 PDO 对象的构建包裹在 try {} catch {} 块中，并且将 PDO::ATTR_ERRMODE 设置为 PDO::ERRMODE_EXCEPTION，您可以捕获并记录此类错误，而无需检测 NULL。
+在 PHP 5 中，如果无法构建 PDO 对象（例如使用了无效参数时），该实例会被赋值为 NULL。在 PHP 7 中，会抛出 Exception。如果您将 PDO 对象的构建包裹在 try {} catch {} 块中，并且将 `PDO::ATTR_ERRMODE` 设置为 `PDO::ERRMODE_EXCEPTION`，您可以捕获并记录此类错误，而无需检测 NULL。
 
-- 6. 使用 PDO::query() 发送 SQL 命令。会返回一个 PDOStatement 实例，您可以从中获取结果。在本例中，我们查找按 ID 排序的前 20 个客户：
+6. 使用 `PDO::query()` 发送 SQL 命令。会返回一个 `PDOStatement` 实例，您可以从中获取结果。在本例中，我们查找按 ID 排序的前 20 个客户：
 
 ```php
 $stmt = $pdo->query(
 'SELECT * FROM customer ORDER BY id LIMIT 20');
 ```
 
-PDO 还提供了一个便捷方法 PDO::exec()，它不返回结果迭代，仅返回受影响的行数。此方法最适合用于 ALTER TABLE、DROP TABLE 等管理操作。
+PDO 还提供了一个便捷方法 `PDO::exec()`，它不返回结果迭代，仅返回受影响的行数。此方法最适合用于 ALTER TABLE、DROP TABLE 等管理操作。
 
-- 7. 遍历 PDOStatement 实例以处理结果。将**获取模式**设置为 PDO::FETCH_NUM 或 PDO::FETCH_ASSOC，以数字数组或关联数组的形式返回结果。在本例中，我们使用 while() 循环来处理结果。当获取最后一个结果时，结果将是一个布尔值 FALSE，从而结束循环：
+7. 遍历 `PDOStatement` 实例以处理结果。将**获取模式**设置为 `PDO::FETCH_NUM` 或 `PDO::FETCH_ASSOC`，以数字数组或关联数组的形式返回结果。在本例中，我们使用 `while()` 循环来处理结果。当获取最后一个结果时，结果将是一个布尔值 FALSE，从而结束循环：
 
 ```php
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -4556,9 +4845,9 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 }
 ```
 
-PDO 获取操作涉及一个定义迭代方向（即向前或向后）的光标。PDOStatement::fetch() 的第二个参数可以是任何 PDO::FETCH_ORI_* 常量。光标方向包括 prior、first、last、absolute 和 relative。默认光标方向是 PDO::FETCH_ORI_NEXT。
+PDO 获取操作涉及一个定义迭代方向（即向前或向后）的光标。`PDOStatement::fetch()` 的第二个参数可以是任何 `PDO::FETCH_ORI_*` 常量。光标方向包括 prior、first、last、absolute 和 relative。默认光标方向是 `PDO::FETCH_ORI_NEXT`。
 
-- 8. 将获取模式设置为 PDO::FETCH_OBJ，以 stdClass 实例的形式返回结果。请注意，while() 循环利用了获取模式 PDO::FETCH_OBJ。注意，printf() 语句引用的是对象属性，这与前一个示例引用数组元素形成对比：
+8. 将获取模式设置为 `PDO::FETCH_OBJ`，以 stdClass 实例的形式返回结果。请注意，`while()` 循环利用了获取模式 `PDO::FETCH_OBJ`。注意，`printf()` 语句引用的是对象属性，这与前一个示例引用数组元素形成对比：
 
 ```php
 while ($row = $stmt->fetch(PDO::FETCH_OBJ)) {
@@ -4567,7 +4856,7 @@ while ($row = $stmt->fetch(PDO::FETCH_OBJ)) {
 }
 ```
 
-- 9. 如果您想在处理查询时创建特定类的实例，请将获取模式设置为 PDO::FETCH_CLASS。您还必须拥有类定义，并且 PDO::query() 应设置类名。如下面代码片段所示，我们定义了一个名为 Customer 的类，包含公开属性 $id、$name 和 $level。属性必须是公开的，才能使获取注入正常工作：
+9. 如果您想在处理查询时创建特定类的实例，请将获取模式设置为 `PDO::FETCH_CLASS`。您还必须拥有类定义，并且 `PDO::query()` 应设置类名。如下面代码片段所示，我们定义了一个名为 `Customer` 的类，包含公开属性 `$id`、`$name` 和 `$level`。属性必须是公开的，才能使获取注入正常工作：
 
 ```php
 class Customer
@@ -4576,11 +4865,10 @@ class Customer
     public $name;
     public $level;
 }
-
 $stmt = $pdo->query($sql, PDO::FETCH_CLASS, 'Customer');
 ```
 
-- 10. 在获取对象时，步骤 5 中显示的技术的更简单替代方法是使用 PDOStatement::fetchObject()：
+10. 在获取对象时，步骤 5 中显示的技术的更简单替代方法是使用 `PDOStatement::fetchObject()`：
 
 ```php
 while ($row = $stmt->fetchObject('Customer')) {
@@ -4589,7 +4877,7 @@ while ($row = $stmt->fetchObject('Customer')) {
 }
 ```
 
-- 11. 您还可以使用 PDO::FETCH_INTO，这基本上与 PDO::FETCH_CLASS 相同，但您需要一个活动的对象实例而不是类引用。每次通过循环迭代时，同一个对象实例都会用当前的信息集重新填充。此示例假设与步骤 5 中相同的 Customer 类，以及步骤 1 中定义的相同数据库参数和 PDO 连接：
+11. 您还可以使用 `PDO::FETCH_INTO`，这基本上与 `PDO::FETCH_CLASS` 相同，但您需要一个活动的对象实例而不是类引用。每次通过循环迭代时，同一个对象实例都会用当前的信息集重新填充。此示例假设与步骤 5 中相同的 `Customer` 类，以及步骤 1 中定义的相同数据库参数和 PDO 连接：
 
 ```php
 $cust = new Customer();
@@ -4601,9 +4889,9 @@ while ($stmt->fetch(PDO::FETCH_INTO)) {
 
 ## 与数据库交互
 
-- 12. 如果您未指定错误模式，默认 PDO 错误模式是 PDO::ERRMODE_SILENT。您可以使用 PDO::ATTR_ERRMODE 键设置错误模式，并使用 PDO::ERRMODE_WARNING 或 PDO::ERRMODE_EXCEPTION 值。错误模式可以作为 PDO 构造函数的第四个参数指定，形式为关联数组。或者，您可以对现有实例使用 PDO::setAttribute()。
+12. 如果您未指定错误模式，默认 PDO 错误模式是 `PDO::ERRMODE_SILENT`。您可以使用 `PDO::ATTR_ERRMODE` 键设置错误模式，并使用 `PDO::ERRMODE_WARNING` 或 `PDO::ERRMODE_EXCEPTION` 值。错误模式可以作为 PDO 构造函数的第四个参数指定，形式为关联数组。或者，您可以对现有实例使用 `PDO::setAttribute()`。
 
-- 13. 假设您有以下 DSN 和 SQL（在您认为这是一种新的 SQL 形式之前，请确保：此 SQL 语句将无法工作！）：
+13. 假设您有以下 DSN 和 SQL（在您认为这是一种新的 SQL 形式之前，请确保：此 SQL 语句将无法工作！）：
 
 ```php
 $params = [
@@ -4617,7 +4905,7 @@ $dsn = sprintf('mysql:host=%s;dbname=%s', $params['host'],
 $sql = 'THIS SQL STATEMENT WILL NOT WORK';
 ```
 
-- 14. 然后，如果您使用默认错误模式构建 PDO 连接，唯一表明出问题的线索是：PDO::query() 没有产生 PDOStatement 实例，而是返回了一个布尔值 FALSE：
+14. 然后，如果您使用默认错误模式构建 PDO 连接，唯一表明出问题的线索是：`PDO::query()` 没有产生 `PDOStatement` 实例，而是返回了一个布尔值 FALSE：
 
 ```php
 $pdo1 = new PDO($dsn, $params['user'], $params['pwd']);
@@ -4625,7 +4913,7 @@ $stmt = $pdo1->query($sql);
 $row = ($stmt) ? $stmt->fetch(PDO::FETCH_ASSOC) : 'No Good';
 ```
 
-- 15. 下一个示例展示了使用构造函数方法将错误模式设置为 WARNING：
+15. 下一个示例展示了使用构造函数方法将错误模式设置为 WARNING：
 
 ```php
 $pdo2 = new PDO(
@@ -4636,18 +4924,17 @@ $pdo2 = new PDO(
 );
 ```
 
-- 16. 如果您需要完全分离准备和执行阶段，请改用 PDO::prepare() 和 PDOStatement::execute()。该语句随后被发送到数据库服务器以进行预编译。然后您可以执行该语句多次，通常是在循环中。
-
-- 17. PDO::prepare() 的第一个参数可以是一个在占位符处放置实际值的 SQL 语句。然后可以向 PDOStatement::execute() 提供一组值的数组。PDO 自动提供数据库引用，有助于防止 SQL 注入。
 
 
+- 16. 如果您需要完全分离准备和执行阶段，请改用 `PDO::prepare()` 和 `PDOStatement::execute()`。该语句随后被发送到数据库服务器以进行预编译。然后您可以执行该语句多次，通常是在循环中。
 
+- 17. `PDO::prepare()` 的第一个参数可以是一个在占位符处放置实际值的 SQL 语句。然后可以向 `PDOStatement::execute()` 提供一组值的数组。`PDO` 自动提供数据库引用，有助于防止 SQL 注入。
 
 ## 最佳实践
 
 任何将外部输入（即来自表单提交）与 SQL 语句结合的应用程序都容易受到 SQL 注入攻击。所有外部输入必须先经过适当的过滤、验证以及其他消毒处理。不要将外部输入直接放入 SQL 语句中。相反，应使用占位符，并在执行阶段提供实际的（已消毒的）值。
 
--   18. 若要反向遍历结果，你可以更改**可滚动游标**的方向。或者，可能更简单的方法是，只需将 `ORDER BY` 从 `ASC` 改为 `DESC`。以下代码行创建了一个请求可滚动游标的 `PDOStatement` 对象：
+- 18. 若要反向遍历结果，你可以更改 `可滚动游标` 的方向。或者，可能更简单的方法是，只需将 `ORDER BY` 从 `ASC` 改为 `DESC`。以下代码行创建了一个请求可滚动游标的 `PDOStatement` 对象：
 
 ```php
 $dsn = sprintf('pgsql:charset=UTF8;host=%s;dbname=%s',
@@ -4661,7 +4948,7 @@ $stmt = $pdo->prepare($sql, [PDO::ATTR_CURSOR =>
       PDO::CURSOR_SCROLL]);
 ```
 
--   19. 在获取操作期间，你还需要指定游标指令。此示例获取结果集中的最后一行，然后向后滚动：
+- 19. 在获取操作期间，你还需要指定游标指令。此示例获取结果集中的最后一行，然后向后滚动：
 
 ```php
 $stmt->execute(['min' => $min, 'max' => $max]);
@@ -4676,7 +4963,7 @@ do {
         PDO::FETCH_ORI_PRIOR));
 ```
 
--   20. MySQL 和 SQLite 都不支持可滚动游标！要获得相同的结果，请尝试对前面的代码进行以下修改：
+- 20. `MySQL` 和 `SQLite` 都不支持可滚动游标！要获得相同的结果，请尝试对前面的代码进行以下修改：
 
 ```php
 $dsn = sprintf('mysql:charset=UTF8;host=%s;dbname=%s',
@@ -4697,7 +4984,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 }
 ```
 
--   21. PDO 提供了对事务的支持。借用第 9 步的代码，我们可以将 INSERT 命令序列封装到一个事务块中：
+- 21. `PDO` 提供了对事务的支持。借用第 9 步的代码，我们可以将 `INSERT` 命令序列封装到一个事务块中：
 
 ```php
 try {
@@ -4713,7 +5000,7 @@ try {
 }
 ```
 
--   22. 最后，为了保持模块化和可重用性，我们可以将 PDO 连接封装到一个单独的类 Application\Database\Connection 中。在这里，我们通过构造函数建立连接。或者，还有一个静态 factory() 方法，让我们可以生成一系列 PDO 实例：
+- 22. 最后，为了保持模块化和可重用性，我们可以将 `PDO` 连接封装到一个单独的类 `Application\Database\Connection` 中。在这里，我们通过构造函数建立连接。或者，还有一个静态 `factory()` 方法，让我们可以生成一系列 `PDO` 实例：
 
 ```php
 namespace Application\Database;
@@ -4730,7 +5017,6 @@ class Connection
                 . self::ERROR_UNABLE . PHP_EOL;
             throw new Exception($message);
         }
-
         $dsn = $this->makeDsn($config);
         try {
             $this->pdo = new PDO(
@@ -4745,7 +5031,6 @@ class Connection
             return FALSE;
         }
     }
-
     public static function factory(
         $driver, $dbname, $host, $user,
         $pwd, array $options = array()
@@ -4757,12 +5042,6 @@ class Connection
             'user'   => $user,
             'password' => $pwd
         ];
-        // 注意：原始 OCR 文本在此特定方法主体中存在不一致之处
-        // （在静态上下文中调用 $this 或缺少配置构建）。
-        // 基于“静态工厂”的上下文，它可能从参数中构建 DSN。
-        // 然而，严格遵循提供的文本，该文本在 OCR 中似乎被截断或格式错误：
-        
-        // 基于周围文本片段重建可能的意图：
         $dsn = "$driver:dbname=$dbname;host=$host"; 
         try {
             return new PDO($dsn, $user, $pwd, $options);
@@ -4770,9 +5049,10 @@ class Connection
             error_log($e->getMessage());
         }
     }
+}
 ```
 
--   23. 这个 Connection 类的一个重要组成部分是一个通用方法，可用于构建 DSN。要使其工作，我们只需要将 PDODriver 作为前缀建立，后面跟着 ": "。之后，我们只需从配置数组中追加键/值对。每个键/值对由分号分隔。我们还需要去除尾部分号，为此使用带有负值限制的 substr()：
+- 23. 这个 `Connection` 类的一个重要组成部分是一个通用方法，可用于构建 `DSN`。要使其工作，我们只需要将 `PDODriver` 作为前缀建立，后面跟着 ": "。之后，我们只需从配置数组中追加键/值对。每个键/值对由分号分隔。我们还需要去除尾部分号，为此使用带有负值限制的 `substr()`：
 
 ```php
 public function makeDsn($config)
@@ -4786,9 +5066,9 @@ public function makeDsn($config)
 }
 ```
 
-## 工作原理...
+## 工作原理
 
-首先，你可以将第 1 步中的初始连接代码复制到 chap_05_pdo_connect_mysql.php 文件中。出于说明目的，我们假设你已创建一个名为 php7cookbook 的 MySQL 数据库，用户名为 cook，密码为 book。接下来，我们使用 PDO::query() 方法向数据库发送一个简单的 SQL 语句。最后，我们使用生成的语句对象以关联数组的形式获取结果。别忘了将你的代码包裹在 try {} catch {} 块中：
+首先，你可以将第 1 步中的初始连接代码复制到 `chap_05_pdo_connect_mysql.php` 文件中。出于说明目的，我们假设你已创建一个名为 `php7cookbook` 的 `MySQL` 数据库，用户名为 `cook`，密码为 `book`。接下来，我们使用 `PDO::query()` 方法向数据库发送一个简单的 SQL 语句。最后，我们使用生成的语句对象以关联数组的形式获取结果。别忘了将你的代码包裹在 `try {} catch {}` 块中：
 
 ```php
 <?php
@@ -4823,7 +5103,7 @@ try {
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_161_0.png)
 
-向 PDO 构造函数添加选项，将错误模式设置为 EXCEPTION。现在修改 SQL 语句，并观察产生的错误消息：
+向 `PDO` 构造函数添加选项，将错误模式设置为 `EXCEPTION`。现在修改 SQL 语句，并观察产生的错误消息：
 
 ```php
 $opts = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
@@ -4835,11 +5115,11 @@ $stmt = $pdo->query('THIS SQL STATEMENT WILL NOT WORK');
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_161_1.png)
 
-占位符可以是命名占位符，也可以是位置占位符。**命名占位符**在准备好的 SQL 语句中由冒号 (:) 前缀，并在传递给 execute() 的关联数组中作为键引用。**位置占位符**在准备好的 SQL 语句中表示为问号 (?)。
+占位符可以是命名占位符，也可以是位置占位符。`命名占位符` 在准备好的 SQL 语句中由冒号 `(:)` 前缀，并在传递给 `execute()` 的关联数组中作为键引用。`位置占位符` 在准备好的 SQL 语句中表示为问号 `(?)`。
 
 ## 与数据库交互
 
-在以下示例中，使用命名占位符来表示 WHERE 子句中的值：
+在以下示例中，使用命名占位符来表示 `WHERE` 子句中的值：
 
 ```php
 try {
@@ -4866,12 +5146,11 @@ try {
 }
 ```
 
-此示例展示了在 INSERT 操作中使用位置占位符。请注意，作为第四个客户插入的数据包含潜在的 SQL 注入攻击。你还会注意到，需要了解所使用的数据库的 SQL 语法知识。在这种情况下，MySQL 列名使用反引号 (\`) 引用：
+此示例展示了在 `INSERT` 操作中使用位置占位符。请注意，作为第四个客户插入的数据包含潜在的 SQL 注入攻击。你还会注意到，需要了解所使用的数据库的 SQL 语法知识。在这种情况下，`MySQL` 列名使用反引号 (\`) 引用：
 
 ```php
 $fields = ['name', 'balance', 'email',
     'password', 'status', 'level'];
-
 $data = [
     ['Saleen', 0, 'saleen@test.com', 'password', 0, 'BEG'],
     ['Lada', 55.55, 'lada@test.com', 'password', 0, 'INT'],
@@ -4879,7 +5158,6 @@ $data = [
     ['SQL Injection', 0.00, 'bad@bad.com', 'password', 1,
      'BEG`DELETE FROM customer;--'],
 ];
-
 try {
     $dsn = sprintf('mysql:host=%s;dbname=%s',
         $params['host'], $params['db']);
@@ -4887,48 +5165,67 @@ try {
         $params['user'],
 ```
 
-
-
-
 ## 与数据库交互
 
-在本示例中，我们将变量 $min、$max 和 $level 绑定到预处理语句：
+在本示例中，我们将变量 `$min`、`$max` 和 `$level` 绑定到预处理语句：
 
 ```php
 $min    = 0;
 $max   = 0;
 $level = '';
-
 try {
   $dsn  = sprintf('mysql:host=%s;dbname=%s', $params['host'],
                 $params['db']);
   $opts = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
   $pdo  = new PDO($dsn, $params['user'], $params['pwd'], $opts);
   $sql  = 'SELECT * FROM customer '
-         . 'WHERE balance > :min '
-         . "AND balance < :max AND level = :level "
-         . "ORDER BY id LIMIT 20";
-  $stmt = $pdo->prepare($sql);
-  $stmt->bindParam('min',   $min);
-  $stmt->bindParam('max',   $max);
-  $stmt->bindParam('level', $level);
+```
 
-  $min   = 5000;
-  $max   = 10000;
-  $level = 'ADV';
-  $stmt->execute();
-  showResults($stmt, $min, $max, $level);
 
-  $min   = 0;
-  $max   = 100;
-  $level = 'BEG';
-  $stmt->execute();
-  showResults($stmt, $min, $max, $level);
+
+```php
+. 'WHERE balance > :min '
+
+. "AND balance < :max AND level = :level "
+
+. "ORDER BY id LIMIT 20";
+
+$stmt = $pdo->prepare($sql);
+
+$stmt->bindParam('min',   $min);
+
+$stmt->bindParam('max',   $max);
+
+$stmt->bindParam('level', $level);
+
+$min   = 5000;
+
+$max   = 10000;
+
+$level = 'ADV';
+
+$stmt->execute();
+
+showResults($stmt, $min, $max, $level);
+
+$min   = 0;
+
+$max   = 100;
+
+$level = 'BEG';
+
+$stmt->execute();
+
+showResults($stmt, $min, $max, $level);
 
 } catch (PDOException $e) {
+
   echo $e->getMessage();
+
 } catch (Throwable $e) {
+
   echo $e->getMessage();
+
 }
 ```
 
@@ -5063,7 +5360,6 @@ $sql = Finder::select('project')->where('priority > 9') ... etc.
 require __DIR__ . '/../Application/Autoload/Loader.php';
 Application\Autoload\Loader::init(__DIR__ . '/..');
 use Application\Database\Finder;
-
 $sql = Finder::select('project')
     ->where()
     ->like('name', '%secret%')
@@ -5072,7 +5368,6 @@ $sql = Finder::select('project')
     ->and()->not('created_at')
     ->limit(10)
     ->offset(20);
-
 echo Finder::getSql();
 ```
 
@@ -5101,7 +5396,6 @@ class Paginate
 {
     const DEFAULT_LIMIT = 20;
     const DEFAULT_OFFSET = 0;
-
     protected $sql;
     protected $page;
     protected $linesPerPage;
@@ -5116,26 +5410,21 @@ class Paginate
 public function __construct($sql, $page, $linesPerPage)
 {
     $offset = $page * $linesPerPage;
-
     switch (TRUE) {
         case (stripos($sql, 'LIMIT') && stripos($sql, 'OFFSET')):
             // no action needed
             break;
-
         case (stripos($sql, 'LIMIT')):
             $sql .= ' LIMIT ' . self::DEFAULT_LIMIT;
             break;
-
         case (stripos($sql, 'OFFSET')):
             $sql .= ' OFFSET ' . self::DEFAULT_OFFSET;
             break;
-
         default:
             $sql .= ' LIMIT ' . self::DEFAULT_LIMIT;
             $sql .= ' OFFSET ' . self::DEFAULT_OFFSET;
             break;
     }
-
     $this->sql = preg_replace('/LIMIT\s\d+.*OFFSET\s\d+/i',
         'LIMIT ' . $linesPerPage . ' OFFSET ' . $offset,
         $sql);
@@ -5148,14 +5437,9 @@ public function __construct($sql, $page, $linesPerPage)
 
 ```php
 use PDOException;
-
 public function paginate(
     Connection $connection,
 ```
-
-
-
-
 
 6. 为前一个食谱中提到的查询构建器类提供支持可能也不是个坏主意。这将使更新 LIMIT 和 OFFSET 变得更加容易。我们只需提供支持 `Application\Database\Finder`，即使用该类并修改 `__construct()` 方法，检查传入的 SQL 是否是此类的实例：
 
@@ -5226,19 +5510,30 @@ printf('%4s | %20s | %5s | %7s' . PHP_EOL,
 printf('%4s | %20s | %5s | %7s' . PHP_EOL,
     '----', str_repeat('-', 20), '-----', '--------');
 foreach ($Paginate->paginate($conn, PDO::FETCH_ASSOC,
-       ['bal' => $bal]) as $row) {
+```
+
+
+
+```php
+['bal' => $bal]) as $row) {
+
     printf('%4d | %20s | %5s | %7.2f' . PHP_EOL,
+
       $row['id'], $row['name'], $row['level'], $row['balance']);
+
 }
+
     printf('%4s | %20s | %5s | %7s' . PHP_EOL,
+
     '------', str_repeat('|-', 20), '|------', '--------');
+
 ?>
+```
 <a href="?page=<?=$page - 1; ?>&balance=<?= $bal ?>">
 << Prev </a>&nbsp;&nbsp;
 <a href="?page=<?= $page + 1; ?>&balance=<?= $bal ?>">
 Next >></a>
 </pre>
-```
 
 这是输出的第 3 页，其中余额小于 1,000：
 
@@ -5256,12 +5551,9 @@ PHP 开发者中一种非常常见的做法是创建代表数据库表的类。�
 
 ## 如何操作...
 
-1. 首先，我们将建立一系列实体类的一些共同特征。
-   这些可能包括公共属性和公共方法。我们将把这些
-   放入 `Application\Entity\Base` 类中。所有未来的实体类都将继承
-   Base。
+1. 首先，我们将建立一系列实体类的一些共同特征。这些可能包括公共属性和公共方法。我们将把这些放入 `Application\Entity\Base` 类中。所有未来的实体类都将继承 `Base`。
 
-2. 为了说明的目的，让我们假设所有实体都将有两个公共属性：$mapping（稍后讨论）和 $id（及其对应的 getter 和 setter）：
+2. 为了说明的目的，让我们假设所有实体都将有两个公共属性：`$mapping`（稍后讨论）和 `$id`（及其对应的 getter 和 setter）：
 
 ```php
 namespace Application\Entity;
@@ -5270,12 +5562,10 @@ class Base
 {
     protected $id = 0;
     protected $mapping = ['id' => 'id'];
-
     public function getId() : int
     {
         return $this->id;
     }
-
     public function setId($id)
     {
         $this->id = (int) $id;
@@ -5283,9 +5573,9 @@ class Base
 }
 ```
 
-3. 定义一个 arrayToEntity() 方法并不是个坏主意，该方法将数组转换为实体类的实例，反之亦然（entityToArray()）。这些方法实现了一个通常被称为水合（hydration）的过程。由于这些方法应该是通用的，最好将它们放在 Base 类中。
+3. 定义一个 `arrayToEntity()` 方法并不是个坏主意，该方法将数组转换为实体类的实例，反之亦然（`entityToArray()`）。这些方法实现了一个通常被称为水合（hydration）的过程。由于这些方法应该是通用的，最好将它们放在 `Base` 类中。
 
-4. 在以下方法中，$mapping 属性用于在数据库列名和对象属性名之间进行转换。arrayToEntity() 从数组中填充此对象实例的值。如果需要在活动实例之外调用该方法，我们可以将此方法定义为静态方法：
+4. 在以下方法中，`$mapping` 属性用于在数据库列名和对象属性名之间进行转换。`arrayToEntity()` 从数组中填充此对象实例的值。如果需要在活动实例之外调用该方法，我们可以将此方法定义为静态方法：
 
 ```php
 public static function arrayToEntity($data, Base $instance)
@@ -5359,24 +5649,21 @@ class Customer extends Base
 
 9. 将属性定义为 *protected* 被认为是一种最佳实践。为了访问这些属性，你需要设计 *public* 方法来 **get** 和 **set** 这些属性。这里是使用 PHP 7 将数据类型应用于返回值的好机会。
 
-10. 在下面的代码块中，我们为 $name 和 $balance 定义了 getter 和 setter。你可以想象这些其余方法是如何定义的：
+10. 在下面的代码块中，我们为 `$name` 和 `$balance` 定义了 getter 和 setter。你可以想象这些其余方法是如何定义的：
 
 ```php
 public function getName() : string
 {
     return $this->name;
 }
-
 public function setName($name)
 {
     $this->name = $name;
 }
-
 public function getBalance() : float
 {
     return $this->balance;
 }
-
 public function setBalance($balance)
 {
     $this->balance = (float) $balance;
@@ -5387,12 +5674,9 @@ public function setBalance($balance)
 
 11. 如果属性名与对应的数据库列不完全匹配，你应该考虑创建一个映射属性，即一个键/值对的数组，其中键代表数据库列名，值代表属性名。
 
-
-
-
 12. 你会发现，三个属性 `$securityQuestion`、`$confirmCode` 和 `$profileId` 并不对应其等效的列名 `security_question`、`confirm_code` 和 `profile_id`。`$mapping` 属性将确保进行适当的转换：
 
-```
+```php
 protected $mapping = [
 'id'              => 'id',
 'name'            => 'name',
@@ -5409,7 +5693,7 @@ protected $mapping = [
 
 ## 工作原理...
 
-将步骤 2、4 和 5 中的代码复制到 `Application/Entity` 文件夹中的 `Base.php` 文件。将步骤 8 到 12 中的代码复制到同样位于 `Application/Entity` 文件夹中的 `Customer.php` 文件。然后，你需要为步骤 10 中未显示的剩余属性创建 getter 和 setter：email、password、status、securityQuestion、confirmCode、profileId 和 level。
+将步骤 2、4 和 5 中的代码复制到 `Application/Entity` 文件夹中的 `Base.php` 文件。将步骤 8 到 12 中的代码复制到同样位于 `Application/Entity` 文件夹中的 `Customer.php` 文件。然后，你需要为步骤 10 中未显示的剩余属性创建 getter 和 setter：`email`、`password`、`status`、`securityQuestion`、`confirmCode`、`profileId` 和 `level`。
 
 然后，你可以创建一个调用程序 `chap_05_matching_entity_to_table.php`，它初始化第 1 章 *Building a Foundation* 中定义的自动加载器，使用 `Application\Database\Connection` 以及新创建的 `Application\Entity\Customer` 类：
 
@@ -5460,15 +5744,12 @@ var_dump($cust);
 
 - 首先，我们需要设计一个类来承载我们的查询逻辑。如果你遵循领域模型，这个类可能被称为**仓储（repository）**。或者，为了保持简单和通用，我们可以简单地将新类命名为 `Application\Database\CustomerService`。该类将接受一个 `Application\Database\Connection` 实例作为参数：
 
-```
+```php
 namespace Application\Database;
-
 use Application\Entity\Customer;
-
 class CustomerService
 {
     protected $connection;
-
     public function __construct(Connection $connection)
     {
         $this->connection = $connection;
@@ -5478,7 +5759,7 @@ class CustomerService
 
 - 现在我们将定义一个 `fetchById()` 方法，它接受一个客户 ID 作为参数，并返回单个 `Application\Entity\Customer` 实例，或者在失败时返回布尔值 **FALSE**。乍一看，简单地使用 `PDOStatement::fetchObject()` 并指定实体类作为参数似乎是显而易见的选择：
 
-```
+```php
 public function fetchById($id)
 {
     $stmt = $this->connection->pdo
@@ -5495,7 +5776,7 @@ public function fetchById($id)
 
 - `fetchById()` 方法的另一种方法是先创建对象实例，从而运行其构造函数，并将获取模式设置为 `PDO::FETCH_Into`，如下例所示：
 
-```
+```php
 public function fetchById($id)
 {
     $stmt = $this->connection->pdo
@@ -5507,13 +5788,15 @@ public function fetchById($id)
 }
 ```
 
+
+
 - 然而，这里我们又遇到了一个问题：`fetch()` 与 `fetchObject()` 不同，它无法覆盖受保护的属性；如果尝试这样做，会生成以下错误消息。这意味着我们必须要么将所有属性定义为 `public`，要么考虑另一种方法。
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_179_1.png)
 
-- 我们要考虑的另一种方法是以数组形式获取结果，并手动填充实体。尽管这种方法在性能上稍显昂贵，但它允许任何潜在的实体构造函数正确运行，并将属性安全地定义为 private 或 protected：
+- 我们要考虑的另一种方法是以数组形式获取结果，并手动填充实体。尽管这种方法在性能上稍显昂贵，但它允许任何潜在的实体构造函数正确运行，并将属性安全地定义为 `private` 或 `protected`：
 
-```
+```php
 public function fetchById($id)
 {
     $stmt = $this->connection->pdo
@@ -5527,7 +5810,7 @@ public function fetchById($id)
 
 - 要处理产生多个结果的查询，我们只需要生成一系列已填充的实体对象。在本例中，我们实现了一个 `fetchByLevel()` 方法，该方法以 `Application\Entity\Customer` 实例的形式返回给定级别的所有客户：
 
-```
+```php
 public function fetchByLevel($level)
 {
     $stmt = $this->connection->pdo->prepare(
@@ -5544,21 +5827,18 @@ public function fetchByLevel($level)
 
 - 通常，我们会在 INSERT 之后返回新完成的实体类。有一个方便的 `PDO::lastInsertId()` 方法，乍一看似乎可以做到这一点。但进一步阅读文档后发现，并非所有数据库扩展都支持此功能，且支持该功能的扩展在实现上也不一致。因此，最好有一个除了 `$id` 之外的唯一列，可用于唯一标识新客户。
 
-- 在本例中，我们选择了 email 列，因此需要实现一个 `fetchByEmail()` 服务方法：
+- 在本例中，我们选择了 `email` 列，因此需要实现一个 `fetchByEmail()` 服务方法：
 
-```
+```php
 public function fetchByEmail($email)
 {
     $stmt = $this->connection->pdo->prepare(
             Finder::select('customer')
 ```
 
-
-
-
 10. 现在，我们准备定义 `save()` 方法。我们不区分 INSERT 和 UPDATE，而是设计该方法为：如果 ID 已存在，则执行更新操作；否则执行插入操作。
 
-11. 首先，我们定义一个基本的 `save()` 方法，该方法接收一个 Customer 实体作为参数，并使用 `fetchById()` 来确定此条目是否已存在。如果存在，我们调用 `doUpdate()` 更新方法；否则，我们调用 `doInsert()` 插入方法：
+11. 首先，我们定义一个基本的 `save()` 方法，该方法接收一个 `Customer` 实体作为参数，并使用 `fetchById()` 来确定此条目是否已存在。如果存在，我们调用 `doUpdate()` 更新方法；否则，我们调用 `doInsert()` 插入方法：
 
 ```php
 public function save(Customer $cust)
@@ -5572,7 +5852,7 @@ public function save(Customer $cust)
 }
 ```
 
-12. 接下来，我们定义 `doUpdate()`，它将 Customer 实体对象的属性提取到一个数组中，构建初始 SQL 语句，并调用 `flush()` 方法，将数据推送到数据库。我们不希望更新 ID 字段，因为它是主键。此外，我们需要指定要更新哪一行，这意味着追加一个 WHERE 子句：
+12. 接下来，我们定义 `doUpdate()`，它将 `Customer` 实体对象的属性提取到一个数组中，构建初始 SQL 语句，并调用 `flush()` 方法，将数据推送到数据库。我们不希望更新 ID 字段，因为它是主键。此外，我们需要指定要更新哪一行，这意味着追加一个 WHERE 子句：
 
 ```php
 protected function doUpdate($cust)
@@ -5588,7 +5868,7 @@ protected function doUpdate($cust)
 }
 ```
 
-13. `doInsert()` 方法类似，只是初始 SQL 需要以 `INSERT INTO ...` 开头，并且需要取消设置（unset） id 数组元素。后者的原因是我们希望此属性由数据库自动生成。如果成功，我们使用新定义的 `fetchByEmail()` 方法查找新客户并返回一个完整的实例：
+13. `doInsert()` 方法类似，只是初始 SQL 需要以 `INSERT INTO ...` 开头，并且需要取消设置 `unset` id 数组元素。后者的原因是我们希望此属性由数据库自动生成。如果成功，我们使用新定义的 `fetchByEmail()` 方法查找新客户并返回一个完整的实例：
 
 ```php
 protected function doInsert($cust)
@@ -5648,7 +5928,7 @@ public function remove(Customer $cust)
 
 ## 工作原理...
 
-将步骤 1 到 5 中描述的代码复制到 Application/Database 文件夹中的 `CustomerService.php` 文件。定义一个 `chap_05_entity_to_query.php` 调用程序。让调用程序初始化自动加载器，并使用适当的类：
+将步骤 1 到 5 中描述的代码复制到 `Application/Database` 文件夹中的 `CustomerService.php` 文件。定义一个 `chap_05_entity_to_query.php` 调用程序。让调用程序初始化自动加载器，并使用适当的类：
 
 ```php
 <?php
@@ -5665,7 +5945,6 @@ use Application\Database\CustomerService;
 // get service instance
 $service = new CustomerService(new Connection(
     include __DIR__ . DB_CONFIG_FILE));
-
 echo "\nSingle Result\n";
 var_dump($service->fetchById(rand(1,79)));
 ```
@@ -5676,7 +5955,7 @@ var_dump($service->fetchById(rand(1,79)));
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_184_0.png)
 
-现在，将步骤 6 到 15 中显示的代码复制到服务类中。将要插入的数据添加到 `chap_05_entity_to_query.php` 调用程序中。然后，我们使用这些数据生成一个 Customer 实体实例：
+现在，将步骤 6 到 15 中显示的代码复制到服务类中。将要插入的数据添加到 `chap_05_entity_to_query.php` 调用程序中。然后，我们使用这些数据生成一个 `Customer` 实体实例：
 
 ```php
 // sample data
@@ -5690,7 +5969,6 @@ $data = [
     'confirm_code'        => 12345,
     'level'               => 'ADV'
 ];
-
 // create new Customer
 $cust = Customer::arrayToEntity($data, new Customer());
 ```
@@ -5741,7 +6019,7 @@ function findCustomerById($id, Connection $conn)
 }
 ```
 
-2. 接下来，我们分析 purchases 表，看看 customer 表和 product 表是如何链接的。如该表的 CREATE 语句所示，customer_id 和 product_id 外键构成了关系：
+2. 接下来，我们分析 `purchases` 表，看看 `customer` 表和 `product` 表是如何链接的。如该表的 CREATE 语句所示，`customer_id` 和 `product_id` 外键构成了关系：
 
 ```sql
 CREATE TABLE 'purchases' (
@@ -5754,9 +6032,6 @@ CREATE TABLE 'purchases' (
     'product_id' int(11) DEFAULT NULL,
     PRIMARY KEY ('id'),
 ```
-
-
-
 
 ## 操作指南...
 
@@ -5778,26 +6053,32 @@ CONSTRAINT 'FK_C3F3' FOREIGN KEY ('customer_id')
 ```php
 function findCustomerId($id, Connection $conn)
 {
-    $stmt = $conn->pdo->query(
-        'SELECT * FROM customer WHERE id = ' . (int) $id);
-    $results = $stmt->fetch(PDO::FETCH_ASSOC);
-    if ($results) {
-        $results['purchases'] =
-            // 定义次要查询
-            function ($id, $conn) {
-                $sql = 'SELECT * FROM purchases AS u '
-                    . 'JOIN products AS r '
-                    . 'ON u.product_id = r.id '
-                    . 'WHERE u.customer_id = :id '
-                    . 'ORDER BY u.date';
-                $stmt = $conn->pdo->prepare($sql);
-                $stmt->execute(['id' => $id]);
-                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                    yield $row;
-                }
-            };
-    }
-    return $results;
+```
+
+
+
+```php
+$stmt = $conn->pdo->query(
+    'SELECT * FROM customer WHERE id = ' . (int) $id
+);
+$results = $stmt->fetch(PDO::FETCH_ASSOC);
+if ($results) {
+    $results['purchases'] =
+        // 定义次要查询
+        function ($id, $conn) {
+            $sql = 'SELECT * FROM purchases AS u '
+                . 'JOIN products AS r '
+                . 'ON u.product_id = r.id '
+                . 'WHERE u.customer_id = :id '
+                . 'ORDER BY u.date';
+            $stmt = $conn->pdo->prepare($sql);
+            $stmt->execute(['id' => $id]);
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                yield $row;
+            }
+        };
+}
+return $results;
 }
 ```
 
@@ -5817,7 +6098,7 @@ $result = findCustomerId(rand(1, 79), $conn);
   </tr>
 <?php
   foreach ($result['purchases']($result['id'], $conn) as $purchase) :
-  ?>
+?>
     <tr>
       <td><?= $purchase['transaction'] ?></td>
       <td><?= $purchase['date'] ?></td>
@@ -5893,7 +6174,7 @@ foreach ($result['purchases']($result['id'], $conn) as $purchase) : ?>
 ### 操作指南...
 
 - 1. 首先，我们需要将次要查询逻辑（在上面的食谱中讨论过）分离到一个单独的 PHP 文件中。这个新脚本的目的是执行次要查询并返回一个 JSON 数组。
-- 2. 我们将新脚本命名为 `chap_05_jquery_datatables_php_lookups_ajax.php`。它查找 `$_GET` 参数 `id`。请注意，SELECT 语句非常具体地指定了提供哪些列。您还会注意到获取模式已更改为 `PDO::FETCH_NUM`。您还可能注意到最后一行将结果赋值给 JSON 编码数组中的 `data` 键。
+- 2. 我们将新脚本命名为 `chap_05_jquery_datatables_php_lookups_ajax.php`。它查找 `$_GET` 参数 `id`。请注意，`SELECT` 语句非常具体地指定了提供哪些列。您还会注意到获取模式已更改为 `PDO::FETCH_NUM`。您还可能注意到最后一行将结果赋值给 JSON 编码数组中的 `data` 键。
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_190_0.png)
 
@@ -5978,7 +6259,7 @@ function findCustomerIdById($id, Connection $conn)
 
 ## 工作原理...
 
-创建一个 `chap_05_jquery_databases_php_lookups_ajax.php` 脚本，它将响应 AJAX 请求。在其中，放置初始化自动加载和创建 Connection 实例的代码。然后，你可以添加前面食谱第 2 步中所示的代码：
+创建一个 `chap_05_jquery_databases_php_lookups_ajax.php` 脚本，它将响应 AJAX 请求。在其中，放置初始化自动加载和创建 `Connection` 实例的代码。然后，你可以添加前面食谱第 2 步中所示的代码：
 
 ```php
 <?php
@@ -6001,8 +6282,6 @@ $id = random_int(1,79);
 $result = findCustomerById($id, $conn);
 ?>
 ```
-
-
 
 
 
@@ -6071,114 +6350,105 @@ $result = findCustomerById($id, $conn);
 ### 操作方式...
 
 1. 首先，我们定义一个 `Application\Form\Generic` 类。这也将在以后作为专用表单元素的基类：
-   ```php
-   namespace Application\Form;
+```php
+namespace Application\Form;
 
-   class Generic
-   {
-       // some code ...
-   }
-   ```
+class Generic
+{
+    // some code ...
+}
+```
 2. 接下来，我们定义一些类常量，它们在表单元素生成中通常是有用的。
 3. 前三个将成为与单个表单元素主要组件关联的键。然后我们定义支持的输入类型和默认值：
-   ```php
-   const ROW = 'row';
-   const FORM = 'form';
-   const INPUT = 'input';
-   const LABEL = 'label';
-   const ERRORS = 'errors';
-   const TYPE_FORM = 'form';
-   const TYPE_TEXT = 'text';
-   const TYPE_EMAIL = 'email';
-   const TYPE_RADIO = 'radio';
-   const TYPE_SUBMIT = 'submit';
-   const TYPE_SELECT = 'select';
-   const TYPE_PASSWORD = 'password';
-   const TYPE_CHECKBOX = 'checkbox';
-   const DEFAULT_TYPE = self::TYPE_TEXT;
-   const DEFAULT_WRAPPER = 'div';
-   ```
-
+```php
+const ROW = 'row';
+const FORM = 'form';
+const INPUT = 'input';
+const LABEL = 'label';
+const ERRORS = 'errors';
+const TYPE_FORM = 'form';
+const TYPE_TEXT = 'text';
+const TYPE_EMAIL = 'email';
+const TYPE_RADIO = 'radio';
+const TYPE_SUBMIT = 'submit';
+const TYPE_SELECT = 'select';
+const TYPE_PASSWORD = 'password';
+const TYPE_CHECKBOX = 'checkbox';
+const DEFAULT_TYPE = self::TYPE_TEXT;
+const DEFAULT_WRAPPER = 'div';
+```
 4. 接下来，我们可以定义属性以及设置它们的构造函数。
 5. 在这个例子中，我们要求两个属性，`$name` 和 `$type`，因为没有这些属性无法有效地使用元素。其他构造函数参数是可选的。此外，为了基于另一个表单元素构建一个表单元素，我们提供了一种机制，其中第二个参数 `$type` 也可以是 `Application\Form\Generic` 的实例，在这种情况下，我们只需运行 getter（稍后讨论）来填充属性：
-
-   ```php
-   protected $name;
-   protected $type = self::DEFAULT_TYPE;
-   protected $label = '';
-   protected $errors = array();
-   protected $wrappers;
-   protected $attributes; // HTML form attributes
-   protected $pattern = '<input type="$$" name="$s" $s>';
-   ```
-
-   ```php
-   public function __construct($name,
-                               $type,
-                               $label = '',
-                               array $wrappers = array(),
-                               array $attributes = array(),
-                               array $errors = array())
-   {
-       $this->name = $name;
-       if ($type instanceof Generic) {
-           $this->type    = $type->getType();
-           $this->label   = $type->getLabelValue();
-           $this->errors  = $type->getErrorsArray();
-           $this->wrappers = $type->getWrappers();
-           $this->attributes = $type->getAttributes();
-       } else {
-           $this->type    = $type ?? self::DEFAULT_TYPE;
-           $this->label   = $label;
-           $this->errors  = $errors;
-           $this->attributes = $attributes;
-           if ($wrappers) {
-               $this->wrappers = $wrappers;
-           } else {
-               $this->wrappers[self::INPUT]['type'] = self::DEFAULT_WRAPPER;
-               $this->wrappers[self::LABEL]['type'] = self::DEFAULT_WRAPPER;
-               $this->wrappers[self::ERRORS]['type'] = self::DEFAULT_WRAPPER;
-           }
-       }
-       $this->attributes['id'] = $name;
-   }
-   ```
+```php
+protected $name;
+protected $type = self::DEFAULT_TYPE;
+protected $label = '';
+protected $errors = array();
+protected $wrappers;
+protected $attributes; // HTML form attributes
+protected $pattern = '<input type="$$" name="$s" $s>';
+```
+```php
+public function __construct($name,
+                            $type,
+                            $label = '',
+                            array $wrappers = array(),
+                            array $attributes = array(),
+                            array $errors = array())
+{
+    $this->name = $name;
+    if ($type instanceof Generic) {
+        $this->type    = $type->getType();
+        $this->label   = $type->getLabelValue();
+        $this->errors  = $type->getErrorsArray();
+        $this->wrappers = $type->getWrappers();
+        $this->attributes = $type->getAttributes();
+    } else {
+        $this->type    = $type ?? self::DEFAULT_TYPE;
+        $this->label   = $label;
+        $this->errors  = $errors;
+        $this->attributes = $attributes;
+        if ($wrappers) {
+            $this->wrappers = $wrappers;
+        } else {
+            $this->wrappers[self::INPUT]['type'] = self::DEFAULT_WRAPPER;
+            $this->wrappers[self::LABEL]['type'] = self::DEFAULT_WRAPPER;
+            $this->wrappers[self::ERRORS]['type'] = self::DEFAULT_WRAPPER;
+        }
+    }
+    $this->attributes['id'] = $name;
+}
+```
 
 > 请注意，`$wrappers` 有三个主要子键：`INPUT`、`LABEL` 和 `ERRORS`。这允许我们为标签、输入标签和错误定义单独的封装器。
 
 6. 在定义将产生标签、输入标签和错误的 HTML 的核心方法之前，我们应该定义一个 `getWrapperPattern()` 方法，它将产生用于标签、输入和错误显示的适当封装标签。
 7. 例如，如果封装器定义为 `<div>`，并且其属性包括 `['class' => 'label']`，此方法将返回一个看起来像这样的 `sprintf()` 格式模式：`<div class="label">%s</div>`。最终为标签产生的 HTML 将替换 `%s`。
 8. 以下是 `getWrapperPattern()` 方法可能看起来的样子：
-   ```php
-   public function getWrapperPattern($type)
-   {
-       $pattern = '<' . $this->wrappers[$type]['type'];
-       foreach ($this->wrappers[$type] as $key => $value) {
-           if ($key != 'type') {
-               $pattern .= ' ' . $key . '="' . $value . '"';
-           }
-       }
-       $pattern .= '>' . $s . '</' . $this->wrappers[$type]['type'] . '>';
-       return $pattern;
-   }
-   ```
-
+```php
+public function getWrapperPattern($type)
+{
+    $pattern = '<' . $this->wrappers[$type]['type'];
+    foreach ($this->wrappers[$type] as $key => $value) {
+        if ($key != 'type') {
+            $pattern .= ' ' . $key . '="' . $value . '"';
+        }
+    }
+    $pattern .= '>' . $s . '</' . $this->wrappers[$type]['type'] . '>';
+    return $pattern;
+}
+```
 9. 我们现在准备定义 `getLabel()` 方法。此方法只需要使用 `sprintf()` 将标签插入封装器中即可：
-   ```php
-   public function getLabel()
-   {
-       return sprintf($this->getWrapperPattern(self::LABEL),
-                      $this->label);
-   }
-   ```
-
+```php
+public function getLabel()
+{
+    return sprintf($this->getWrapperPattern(self::LABEL),
+                   $this->label);
+}
+```
 10. 为了产生核心输入标签，我们需要一种方法来组装属性。幸运的是，只要以关联数组的形式提供给构造函数，这就很容易实现。在这种情况下，我们需要做的就是定义一个 `getAttrs()` 方法，它产生由空格分隔的键值对字符串。我们使用 `trim()` 移除多余的空格并返回最终值。
 
-
-
-
-11. 如果元素包含 value 或 href 属性中的任意一个，出于安全原因，我们应当假设这些值是由用户提供的（因此是可疑的），并对它们进行转义。相应地，我们需要添加一个 if 语句来检查，然后使用 htmlspecialchars() 或 urlencode()：
-
+11. 如果元素包含 value 或 href 属性中的任意一个，出于安全原因，我们应当假设这些值是由用户提供的（因此是可疑的），并对它们进行转义。相应地，我们需要添加一个 if 语句来检查，然后使用 `htmlspecialchars()` 或 `urlencode()`：
 ```php
 public function getAttrs() 
 {
@@ -6204,25 +6474,20 @@ public function getAttrs()
     return trim($attrs);
 }
 ```
-
-12. 对于核心 input 标签，我们将逻辑拆分为两个独立的方法。主要方法 getInputOnly() 仅生成 HTML input 标签。第二个方法 getInputWithWrapper() 生成嵌入在包装器中的 input。拆分的原因是，在创建派生类（例如生成单选按钮的类）时，我们将不需要包装器：
-
+12. 对于核心 input 标签，我们将逻辑拆分为两个独立的方法。主要方法 `getInputOnly()` 仅生成 HTML input 标签。第二个方法 `getInputWithWrapper()` 生成嵌入在包装器中的 input。拆分的原因是，在创建派生类（例如生成单选按钮的类）时，我们将不需要包装器：
 ```php
 public function getInputOnly() 
 {
     return sprintf($this->pattern, $this->type, $this->name,
                     $this->getAttrs());
 }
-
 public function getInputWithWrapper() 
 {
     return sprintf($this->getWrapperPattern(self::INPUT),
                     $this->getInputOnly());
 }
 ```
-
 13. 我们现在定义一个方法来显示元素验证错误。我们假设错误将以数组形式提供。如果没有错误，我们返回空字符串。否则，错误将渲染为 `<ul><li>error 1</li><li>error 2</li></ul>`，依此类推：
-
 ```php
 public function getErrors()
 {
@@ -6236,47 +6501,43 @@ public function getErrors()
     return sprintf($this->getWrapperPattern(self::ERRORS), $html);
 }
 ```
-
 14. 对于某些属性，我们可能需要对属性的各个方面进行更有限的控制。例如，我们可能需要向现有的错误数组中添加单个错误。此外，设置单个属性也可能很有用：
-
 ```php
 public function setSingleAttribute($key, $value)
 {
     $this->attributes[$key] = $value;
 }
-
 public function addSingleError($error)
 {
     $this->errors[] = $error;
 }
 ```
-
-15. 最后，我们定义 getter 和 setter，以便我们可以检索或设置属性的值。例如，你可能注意到 $pattern 的默认值是 `<input type="%s" name="%s" $attrs>`。对于某些标签（例如 select 和 form 标签），我们需要将此属性设置为不同的值：
-
+15. 最后，我们定义 getter 和 setter，以便我们可以检索或设置属性的值。例如，你可能注意到 `$pattern` 的默认值是 `<input type="%s" name="%s" $attrs>`。对于某些标签（例如 select 和 form 标签），我们需要将此属性设置为不同的值：
 ```php
 public function setPattern($pattern)
 {
     $this->pattern = $pattern;
 }
-
 public function setType($type)
 {
     $this->type = $type;
 }
-
 public function getType()
 {
     return $this->type;
 }
-
 public function addSingleError($error)
 {
     $this->errors[] = $error;
-}
+```
+
+
+
+```
 // 为 name, label, wrappers, errors 和 attributes 定义类似的 get 和 set 方法
 ```
 
-16. 我们还需要添加方法，用于获取标签值（而不是 HTML）以及错误数组：
+### 16. 我们还需要添加方法，用于获取标签值（而不是 HTML）以及错误数组：
 
 ```php
 public function getLabelValue()
@@ -6378,7 +6639,9 @@ cellspacing="0" width="100%">
 1. 首先，创建一个继承自 `Application\Form\Generic` 的新 `Application\Form\Element\Radio` 类：
 ```php
 namespace Application\Form\Element;
+
 use Application\Form\Generic;
+
 class Radio extends Generic
 {
 // code
@@ -6391,13 +6654,12 @@ const DEFAULT_AFTER = TRUE;
 const DEFAULT_SPACER = '&nbsp;';
 const DEFAULT_OPTION_KEY = 0;
 const DEFAULT_OPTION_VALUE = 'Choose';
-
 protected $after = self::DEFAULT_AFTER;
 protected $spacer = self::DEFAULT_SPACER;
 protected $options = array();
 protected $selectedKey = DEFAULT_OPTION_KEY;
 ```
-4. 由于我们要扩展 Application\Form\Generic，我们可以选择扩展 `__construct()` 方法，或者，选择定义一个可用于设置特定选项的方法。在这个示例中，我们选择了后者。
+4. 由于我们要扩展 `Application\Form\Generic`，我们可以选择扩展 `__construct()` 方法，或者，选择定义一个可用于设置特定选项的方法。在这个示例中，我们选择了后者。
 5. 为了确保属性 `$this->options` 被填充，第一个参数（`$options`）被定义为强制性的（没有默认值）。所有其他参数都是 **可选的**。
 ```php
 public function setOptions(array $options,
@@ -6421,11 +6683,7 @@ public function getInputOnly()
     $baseId = $this->attributes['id'];
 ```
 
-
-
-
 8. 在 `foreach()` 循环中，我们检查该键是否是被选中的键。如果是，则为该单选按钮添加 `$checked` 属性。然后，我们调用父类的 `getInputOnly()` 方法以返回每个按钮的 HTML。请注意，`input` 元素的 `value` 属性是 `options` 数组的键。按钮的标签是 `options` 数组元素的值：
-
 ```php
 foreach ($this->options as $key => $value) {
     $this->attributes['id'] = $baseId . $count++;
@@ -6435,7 +6693,6 @@ foreach ($this->options as $key => $value) {
     } elseif (isset($this->attributes['checked'])) {
         unset($this->attributes['checked']);
     }
-
     if ($this->after) {
         $html = parent::getInputOnly() . $value;
     } else {
@@ -6469,7 +6726,6 @@ $statusList = [
     'T' => 'Temporary Approval',
     'A' => 'Approved'
 ];
-
 $status = new Radio('status',
     Generic::TYPE_RADIO,
     'Status',
@@ -6590,21 +6846,35 @@ protected function getOptions()
             $selected = (in_array($key, $this->selectedKey))
                         ? ' selected' : '';
         } else {
-            $selected = ($key == $this->selectedKey)
-                        ? ' selected' : '';
-        }
-        $output .= '<option value="' . $key . '"
-                   . $selected
-                   . '>'
-                   . $value
-                   . '</option>';
-    }
-    return $output;
-}
 ```
 
-- 最后，我们准备重写核心的 `getInputOnly()` 方法。
 
+
+```
+            $selected = ($key == $this->selectedKey)
+
+                        ? ' selected' : '';
+
+        }
+
+        $output .= '<option value="' . $key . '"
+
+                   . $selected
+
+                   . '>'
+
+                   . $value
+
+                   . '</option>';
+
+    }
+
+    return $output;
+
+}
+
+```
+- 最后，我们准备重写核心的 `getInputOnly()` 方法。
 - 你会发现，该方法的逻辑只需要捕获前面代码中描述的 `getSelect()` 和 `getOptions()` 方法的返回值。我们还需要添加闭合的 `</select>` 标签：
 
 ```php
@@ -6657,9 +6927,6 @@ $status2->setOptions($statusList, $checked2);
 
 最后，务必定义一个提交按钮（如本章 *创建通用表单元素生成器* 食谱所示）。
 
-
-
-
 实际的显示逻辑与单选按钮配方完全相同，只是我们需要渲染两个独立的 HTML select 实例：
 
 ```
@@ -6698,7 +6965,6 @@ $status2->setOptions($statusList, $checked2);
 
 ```
 namespace Application\Form;
-
 class Factory
 {
     protected $elements;
@@ -6711,9 +6977,7 @@ class Factory
 ```
 
 - 2. 在定义主要的表单生成方法之前，重要的是考虑我们计划接收的配置格式，以及表单生成具体将产生什么。为了说明这一点，我们假设生成将产生一个 `Factory` 实例，并带有一个 `$elements` 属性。该属性将是 `Application\Form\Generic` 或 `Application\Form\Element` 类的数组。
-
 - 3. 现在我们准备处理 `generate()` 方法。它将遍历配置数组，创建适当的 `Application\Form\Generic` 或 `Application\Form\Element\*` 对象，这些对象随后将被存储在 `$elements` 数组中。新方法将接受配置数组作为参数。将该方法定义为静态方法是方便的，这样我们可以使用不同的配置块生成所需的尽可能多的实例。
-
 - 4. 我们创建 `Application\Form\Factory` 的一个实例，然后开始遍历配置数组：
 
 ```
@@ -6753,7 +7017,6 @@ if (isset($p['options'])) {
     switch ($p['type']) {
         case Generic::TYPE_RADIO    :
 ```
-
 ```
 $form->elements[$key]->setOptions($a,$b,$c,$d);
 break;
@@ -6787,7 +7050,6 @@ return $form;
 ```
 
 - 10. 最后，我们返回表单对象并关闭方法。
-
 - 11. 接下来，我们需要在 `Application\Form\Element` 下定义一个独立的 `Form` 类：
 
 ```
@@ -6834,13 +7096,11 @@ public static function render($form, $formConfig)
     foreach ($form->getElements() as $element) {
         $contents .= sprintf($rowPattern, $element->render());
     }
-
     $formTag = new Form($formConfig['name'],
                         Generic::TYPE_FORM,
                         '',
                         array(),
                         $formConfig['attributes']);
-
     $formPattern = $form->getWrapperPattern(
         $formConfig['form_wrapper']);
     if (isset($formConfig['form_tag_inside_wrapper'])
@@ -6893,34 +7153,53 @@ $formConfig = [
                        'id'=>'statusTable',
 ```
 
-
-
-
-
 接下来，定义一个数组，用于保存将由工厂创建的每个表单元素的参数。数组的键将成为表单元素的名称，并且必须唯一：
 
 ```php
 $config = [
-'email' => [
-'class' => 'Application\Form\Generic',
-'type' => Generic::TYPE_EMAIL,
-'label' => 'Email',
-'wrappers' => $wrappers,
+
+
+
+`'email'` => [
+
+'class' => `'Application\Form\Generic'`,
+
+'type' => `Generic::TYPE_EMAIL`,
+
+'label' => `'Email'`,
+
+'wrappers' => `$wrappers`,
+
 'attributes'=> ['id'=>'email', 'maxLength'=>128,
+
 'title'=>'Enter address',
-'required'=>'', 'value'=>strip_tags($email)]
+
+'required'=>'', 'value'=>`strip_tags($email)`]
+
 ],
+
 'password' => [
-'class' => 'Application\Form\Generic',
-'type' => Generic::TYPE_PASSWORD,
-'label' => 'Password',
-'wrappers' => $wrappers,
+
+'class' => `'Application\Form\Generic'`,
+
+'type' => `Generic::TYPE_PASSWORD`,
+
+'label' => `'Password'`,
+
+'wrappers' => `$wrappers`,
+
 'attributes'=> ['id'=>'password',
+
 'title' => 'Enter your password',
+
 'required' => '']
+
 ],
+
 // etc.
+
 ];
+
 ```
 
 最后，确保生成表单：
@@ -6945,15 +7224,15 @@ $form = Factory::generate($config);
 
 ### 操作方法
 
--   1. 有一个鲜为人知的 PHP 函数 `filter_input_array()`，乍看之下似乎非常适合这项任务。然而，深入探究其功能后，很快就会发现，该函数是在早期设计的，无法满足现代对攻击防护和灵活性的要求。因此，我们将转而介绍一种基于回调数组的、更具灵活性的机制来执行过滤和验证。
+- 1. 有一个鲜为人知的 PHP 函数 `filter_input_array()`，乍看之下似乎非常适合这项任务。然而，深入探究其功能后，很快就会发现，该函数是在早期设计的，无法满足现代对攻击防护和灵活性的要求。因此，我们将转而介绍一种基于回调数组的、更具灵活性的机制来执行过滤和验证。
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_219_0.png)
 
 *过滤* 与 *验证* 的区别在于，过滤可能会删除或转换值。而验证则使用适合数据特性的标准来测试数据，并返回布尔结果。
 
--   2. 为了增加灵活性，我们将使我们的基础过滤类和验证类保持相对轻量。这意味着我们*不*定义任何具体的过滤器或验证方法。相反，我们将完全基于回调配置数组进行操作。为了确保过滤和验证结果的兼容性，我们还将定义一个特定的结果对象 `Application\Filter\Result`。
+- 2. 为了增加灵活性，我们将使我们的基础过滤类和验证类保持相对轻量。这意味着我们*不*定义任何具体的过滤器或验证方法。相反，我们将完全基于回调配置数组进行操作。为了确保过滤和验证结果的兼容性，我们还将定义一个特定的结果对象 `Application\Filter\Result`。
 
--   3. `Result` 类的主要功能是保持一个 `$item` 值，该值可以是过滤后的值或验证的布尔结果。另一个属性 `$messages` 将保存一个消息数组，这些消息是在过滤或验证操作*期间*填充的。在构造函数中，为 `$messages` 提供的值被格式化为数组。你可能会注意到这两个属性都被定义为 `public`。这是为了方便访问：
+- 3. `Result` 类的主要功能是保持一个 `$item` 值，该值可以是过滤后的值或验证的布尔结果。另一个属性 `$messages` 将保存一个消息数组，这些消息是在过滤或验证操作*期间*填充的。在构造函数中，为 `$messages` 提供的值被格式化为数组。你可能会注意到这两个属性都被定义为 `public`。这是为了方便访问：
 
 ```php
 namespace Application\Filter;
@@ -6962,7 +7241,6 @@ class Result
 {
     public $item;  // (mixed) filtered data | (bool) result of validation
     public $messages = array(); // [(string) message, (string) message ]
-
     public function __construct($item, $messages)
     {
         $this->item = $item;
@@ -6975,7 +7253,7 @@ class Result
 }
 ```
 
--   4. 我们还定义了一个方法，允许将此 `Result` 实例与另一个实例合并。这很重要，因为在某个阶段，我们将通过过滤器链处理同一个值。在这种情况下，我们希望新过滤的值覆盖现有值，但希望消息进行合并：
+- 4. 我们还定义了一个方法，允许将此 `Result` 实例与另一个实例合并。这很重要，因为在某个阶段，我们将通过过滤器链处理同一个值。在这种情况下，我们希望新过滤的值覆盖现有值，但希望消息进行合并：
 
 ```php
 public function mergeResults(Result $result)
@@ -6983,7 +7261,6 @@ public function mergeResults(Result $result)
     $this->item = $result->item;
     $this->mergeMessages($result);
 }
-
 public function mergeMessages(Result $result)
 {
     if (isset($result->messages) && is_array($result->messages)) {
@@ -6992,7 +7269,7 @@ public function mergeMessages(Result $result)
 }
 ```
 
--   5. 最后，为了完成该类的其他方法，我们添加了一个用于合并验证结果的方法。这里的关键考量是，验证链中上下任何位置的 `FALSE` 值都必须导致整个结果为 `FALSE`：
+- 5. 最后，为了完成该类的其他方法，我们添加了一个用于合并验证结果的方法。这里的关键考量是，验证链中上下任何位置的 `FALSE` 值都必须导致整个结果为 `FALSE`：
 
 ```php
 public function mergeValidationResults(Result $result)
@@ -7004,7 +7281,7 @@ public function mergeValidationResults(Result $result)
 }
 ```
 
--   6. 接下来，为了确保回调产生兼容的结果，我们将定义 `Application\Filter\CallbackInterface` 接口。请注意，我们利用 PHP 7 的数据类型特性来指定返回值的类型，以确保我们得到的是一个 `Result` 实例：
+- 6. 接下来，为了确保回调产生兼容的结果，我们将定义 `Application\Filter\CallbackInterface` 接口。请注意，我们利用 PHP 7 的数据类型特性来指定返回值的类型，以确保我们得到的是一个 `Result` 实例：
 
 ```php
 namespace Application\Filter;
@@ -7015,7 +7292,7 @@ interface CallbackInterface
 }
 ```
 
--   7. 每个回调都应引用同一组消息。因此，我们定义了一个 `Application\Filter\Messages` 类，其中包含一系列静态属性。我们提供了方法来设置所有消息或单条消息。`$messages` 属性被设为 public 以便于访问：
+- 7. 每个回调都应引用同一组消息。因此，我们定义了一个 `Application\Filter\Messages` 类，其中包含一系列静态属性。我们提供了方法来设置所有消息或单条消息。`$messages` 属性被设为 public 以便于访问：
 
 ```php
 namespace Application\Filter;
@@ -7024,17 +7301,14 @@ class Messages
 {
     const MESSAGE_UNKNOWN = 'Unknown';
     public static $messages;
-
     public static function setMessages(array $messages)
     {
         self::$messages = $messages;
     }
-
     public static function setMessage($key, $message)
     {
         self::$messages[$key] = $message;
     }
-
     public static function getMessage($key)
     {
         return self::$messages[$key] ?? self::MESSAGE_UNKNOWN;
@@ -7042,10 +7316,11 @@ class Messages
 }
 ```
 
--   8. 现在，我们可以定义 `Application\Web\AbstractFilter` 类来实现核心功能。如前所述，该类将保持相对*轻量*，我们无需担心具体的过滤器或验证器，因为它们将通过配置提供。我们使用 PHP 7 **标准 PHP 库 (SPL)** 中提供的 `UnexpectedValueException` 类，以便在某个回调未实现 `CallbackInterface` 时抛出描述性异常：
+- 8. 现在，我们可以定义 `Application\Web\AbstractFilter` 类来实现核心功能。如前所述，该类将保持相对*轻量*，我们无需担心具体的过滤器或验证器，因为它们将通过配置提供。我们使用 PHP 7 **标准 PHP 库 (SPL)** 中提供的 `UnexpectedValueException` 类，以便在某个回调未实现 `CallbackInterface` 时抛出描述性异常：
 
 ```php
 namespace Application\Filter;
+
 use UnexpectedValueException;
 
 abstract class AbstractFilter
@@ -7054,7 +7329,7 @@ abstract class AbstractFilter
 }
 ```
 
--   9. 首先，我们定义一些有用的类常量，用于保存各种*维护*值。此处显示的最后四个常量控制要显示的消息格式，以及如何描述*缺失*数据：
+- 9. 首先，我们定义一些有用的类常量，用于保存各种*维护*值。此处显示的最后四个常量控制要显示的消息格式，以及如何描述*缺失*数据：
 
 ```php
 const BAD_CALLBACK = 'Must implement CallbackInterface';
@@ -7064,7 +7339,7 @@ const DEFAULT_MESSAGE_FORMAT = '%20s : %60s';
 const DEFAULT_MISSING_MESSAGE = 'Item Missing';
 ```
 
--   10. 接下来，我们定义核心属性。`$separator` 与过滤和验证消息配合使用。`$callbacks` 表示执行过滤和验证的回调数组。`$assignments` 将数据字段映射到过滤器和/或验证器。`$missingMessage` 作为一个属性表示，以便可以被覆盖（即用于多语言网站）。最后，`$results` 是一个 `Application\Filter\Result` 对象的数组，由过滤或验证操作填充：
+- 10. 接下来，我们定义核心属性。`$separator` 与过滤和验证消息配合使用。`$callbacks` 表示执行过滤和验证的回调数组。`$assignments` 将数据字段映射到过滤器和/或验证器。`$missingMessage` 作为一个属性表示，以便可以被覆盖（即用于多语言网站）。最后，`$results` 是一个 `Application\Filter\Result` 对象的数组，由过滤或验证操作填充：
 
 ```php
 protected $separator;    // used for message display
@@ -7074,7 +7349,7 @@ protected $missingMessage;
 protected $results = array();
 ```
 
--   11. 此时，我们可以构建 `__construct()` 方法。其主要功能是设置回调和赋值数组。它还设置值或接受分隔符（用于消息显示）和缺失消息的默认值：
+- 11. 此时，我们可以构建 `__construct()` 方法。其主要功能是设置回调和赋值数组。它还设置值或接受分隔符（用于消息显示）和缺失消息的默认值：
 
 ```php
 public function __construct(array $callbacks, array $assignments, $separator = NULL, $message = NULL)
@@ -7086,26 +7361,23 @@ public function __construct(array $callbacks, array $assignments, $separator = N
 }
 ```
 
--   12. 接下来，我们定义一系列允许我们设置或移除回调的方法。请注意，我们允许获取和设置单个回调。如果你有一组通用的回调，并且只需修改其中一个，这将非常有用。你还会注意到 `setOneCall()` 会检查回调是否实现了 `CallbackInterface`。如果没有，则抛出 `UnexpectedValueException`：
+- 12. 接下来，我们定义一系列允许我们设置或移除回调的方法。请注意，我们允许获取和设置单个回调。如果你有一组通用的回调，并且只需修改其中一个，这将非常有用。你还会注意到 `setOneCall()` 会检查回调是否实现了 `CallbackInterface`。如果没有，则抛出 `UnexpectedValueException`：
 
 ```php
 public function getCallbacks()
 {
     return $this->callbacks;
 }
-
 public function getOneCallback($key)
 {
     return $this->callbacks[$key] ?? NULL;
 }
-
 public function setCallbacks(array $callbacks)
 {
     foreach ($callbacks as $key => $item) {
         $this->setOneCallback($key, $item);
     }
 }
-
 public function setOneCallback($key, $item)
 {
     if ($item instanceof CallbackInterface) {
@@ -7116,10 +7388,6 @@ public function setOneCallback($key, $item)
 }
 ```
 
-
-
-
-
 13. 处理结果的方法相当简单。为了方便，我们添加了 `getItemsAsArray()`，否则 `getResults()` 将返回一个 Result 对象数组：
 
 ```php
@@ -7127,7 +7395,6 @@ public function getResults()
 {
     return $this->results;
 }
-
 public function getItemsAsArray()
 {
     $return = array();
@@ -7151,7 +7418,6 @@ public function getMessages()
         return array();
     }
 }
-
 public function getMessageString($width = 80, $format = NULL)
 {
     if (!$format)
@@ -7178,22 +7444,18 @@ public function setMissingMessage($message)
 {
     $this->missingMessage = $message;
 }
-
 public function setSeparator($separator)
 {
     $this->separator = $separator;
 }
-
 public function getSeparator()
 {
     return $this->separator;
 }
-
 public function getAssignments()
 {
     return $this->assignments;
 }
-
 public function setAssignments(array $assignments)
 {
     $this->assignments = $assignments;
@@ -7218,12 +7480,19 @@ class Filter extends AbstractFilter
 ```php
 public function process(array $data)
 {
-    if (!isset($this->assignments) || !count($this->assignments)) {
-        return NULL;
-    }
 ```
 
-18. 否则，我们将 `$this->results` 初始化为一个 Result 对象数组，其中 `$item` 属性是 `$data` 中的原始值，而 `$messages` 属性是一个空数组：
+
+
+```php
+if (!isset($this->assignments) || !count($this->assignments)) {
+
+    return NULL;
+
+}
+```
+
+18. 否则，我们将 `$this->results` 初始化为一个 `Result` 对象数组，其中 `$item` 属性是 `$data` 中的原始值，而 `$messages` 属性是一个空数组：
 
 ```php
     foreach ($data as $key => $value) {
@@ -7231,7 +7500,7 @@ public function process(array $data)
     }
 ```
 
-19. 然后，我们创建 `$this->assignments` 的副本，并检查是否存在全局过滤器（由 '*' 键标识）。如果是，我们运行 `processGlobal()`，然后 unset  '*' 键：
+19. 然后，我们创建 `$this->assignments` 的副本，并检查是否存在全局过滤器（由 `'*'` 键标识）。如果是，我们运行 `processGlobal()`，然后 unset `'*'` 键：
 
 ```php
     $toDo = $this->assignments;
@@ -7374,10 +7643,6 @@ $config = ['filters' => [
 ];
 ```
 
-
-
-
-
 出于测试目的，我们将使用潜在客户表作为目标。不再从 `$_POST` 提供数据，而是构造一个包含**良好**数据和*不良*数据的数组：
 
 |  | **字段名** | **类型** | **允许为空？** |
@@ -7406,7 +7671,7 @@ include __DIR__ . '/chap_06_post_data_config_messages.php';
 include __DIR__ . '/chap_06_post_data_config_callbacks.php';
 ```
 
-接着，你需要定义*分配项*，它表示数据字段与过滤回调之间的映射。使用 `*` 键来定义应用于所有数据的**全局过滤器**：
+接着，你需要定义*分配项*，它表示数据字段与过滤回调之间的映射。使用 `'*'` 键来定义应用于所有数据的**全局过滤器**：
 
 ```php
 $assignments = [
@@ -7466,25 +7731,26 @@ $filter->setSeparator(PHP_EOL);
 $filter->process($goodData);
 echo $filter->getMessageString();
 var_dump($filter->getItemsAsArray());
-
 $filter->process($badData);
 echo $filter->getMessageString();
 var_dump($filter->getItemsAsArray());
 ```
 
+
+
 处理良好数据时，除了有一条消息指出浮点字段的值已从字符串转换为浮点数外，不会生成其他消息。另一方面，处理不良数据时，会产生以下输出：
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_231_0.png)
 
-你还会注意到，first_name 中的标签已被移除，且 last_name 和 city 均被截断。
+你还会注意到，`first_name` 中的标签已被移除，且 `last_name` 和 `city` 均被截断。
 
 ## 更多相关内容…
 
-filter_input_array() 函数接受两个参数：输入源（形式为用于指示 PHP 超全局变量之一的预定义常量，即 $_POST）以及一个以匹配的字段定义作为键、以过滤器或验证器作为值的数组。该函数不仅执行过滤操作，还执行验证操作。标记为 sanitize 的标志实际上是过滤器。
+`filter_input_array()` 函数接受两个参数：输入源（形式为用于指示 PHP 超全局变量之一的预定义常量，即 `$_POST`）以及一个以匹配的字段定义作为键、以过滤器或验证器作为值的数组。该函数不仅执行过滤操作，还执行验证操作。标记为 `sanitize` 的标志实际上是过滤器。
 
 ## 参见
 
-filter_input_array() 的文档和示例可在 http://php.net/manual/en/function.filter-input-array.php 找到。你可能还会想查看 http://php.net/manual/en/filter.filters.php 上可用的不同类型的过滤器。
+`filter_input_array()` 的文档和示例可在 `http://php.net/manual/en/function.filter-input-array.php` 找到。你可能还会想查看 `http://php.net/manual/en/filter.filters.php` 上可用的不同类型的过滤器。
 
 ## 链接 $_POST 验证器
 
@@ -7492,112 +7758,165 @@ filter_input_array() 的文档和示例可在 http://php.net/manual/en/function.
 
 ### 执行方法...
 
-1.  回顾上一食谱，*链接 $_POST 过滤器*。我们将使用此食谱中的所有类和配置文件，除非在此处另有说明。
-2.  首先，我们定义一个验证回调的配置数组。与上一食谱一样，每个回调都应实现 `Application\Filter\CallbackInterface`，并应返回 `Application\Filter\Result` 的实例。验证器将采用这种通用形式：
+1. 回顾上一食谱，*链接 $_POST 过滤器*。我们将使用此食谱中的所有类和配置文件，除非在此处另有说明。
+2. 首先，我们定义一个验证回调的配置数组。与上一食谱一样，每个回调都应实现 `Application\Filter\CallbackInterface`，并应返回 `Application\Filter\Result` 的实例。验证器将采用这种通用形式：
 
 ```php
 use Application\Filter\{ Result, Messages, CallbackInterface };
+
 $config = [
+
 // validator callbacks
+
 'validators' => [
+
 'key' => new class () implements CallbackInterface
+
 {
+
 public function __invoke($item, $params) : Result
+
 {
+
 // validation logic goes here
+
 return new Result($valid, $error);
+
 }
+
 },
+
 // etc.
+
 ]
+
 ];
 ```
 
-3.  接下来，我们定义一个 `Application\Filter\Validator` 类，它遍历分配项数组，并使用分配的验证回调测试每个数据项。我们让此类继承 `AbstractFilter`，以便提供前面描述的核心功能：
+3. 接下来，我们定义一个 `Application\Filter\Validator` 类，它遍历分配项数组，并使用分配的验证回调测试每个数据项。我们让此类继承 `AbstractFilter`，以便提供前面描述的核心功能：
 
 ```php
 namespace Application\Filter;
+
 class Validator extends AbstractFilter
+
 {
+
 // code
+
 }
 ```
 
-4.  在此类中，我们定义一个核心 `process()` 方法，该方法扫描数据数组并根据分配项数组应用验证器。如果此数据集没有分配的验证器，我们只需返回 `$valid` 的当前状态（即 `TRUE`）：
+4. 在此类中，我们定义一个核心 `process()` 方法，该方法扫描数据数组并根据分配项数组应用验证器。如果此数据集没有分配的验证器，我们只需返回 `$valid` 的当前状态（即 `TRUE`）：
 
 ```php
 public function process(array $data)
-{
-    $valid = TRUE;
-    if (!isset($this->assignments)
-        && count($this->assignments)) {
-        return $valid;
-    }
-```
 
-5.  否则，我们将 `$this->results` 初始化为一个由 `Result` 对象组成的数组，其中 `$item` 属性设置为 `TRUE`，且 `$messages` 属性为一个空数组：
+{
+
+    $valid = TRUE;
+
+    if (!isset($this->assignments)
+
+        && count($this->assignments)) {
+
+        return $valid;
+
+    }
+
+```
+5. 否则，我们将 `$this->results` 初始化为一个由 `Result` 对象组成的数组，其中 `$item` 属性设置为 `TRUE`，且 `$messages` 属性为一个空数组：
 
 ```php
 foreach ($data as $key => $value) {
+
     $this->results[$key] = new Result(TRUE, array());
+
 }
 ```
-
-6.  然后，我们复制一份 `$this->assignments` 并检查是否存在任何 `global` 过滤器（通过 `'*'` 键标识）。如果有，我们运行 `processGlobal()`，然后取消设置 `'*'` 键：
+6. 然后，我们复制一份 `$this->assignments` 并检查是否存在任何 `global` 过滤器（通过 `'*'` 键标识）。如果有，我们运行 `processGlobal()`，然后取消设置 `'*'` 键：
 
 ```php
 $todo = $this->assignments;
+
 if (isset($todo['*'])) {
+
     $this->processGlobalAssignment($todo['*'], $data);
+
     unset($todo['*']);
+
 }
 ```
-
-7.  最后，我们遍历剩余的分配项，调用 `processAssignment()`。这是检查分配项数组中存在的任何字段是否缺失于数据中的一个理想位置。请注意，如果任何验证回调返回 `FALSE`，我们将 `$valid` 设置为 `FALSE`：
+7. 最后，我们遍历剩余的分配项，调用 `processAssignment()`。这是检查分配项数组中存在的任何字段是否缺失于数据中的一个理想位置。请注意，如果任何验证回调返回 `FALSE`，我们将 `$valid` 设置为 `FALSE`：
 
 ```php
 foreach ($todo as $key => $assignment) {
+
     if (!isset($data[$key])) {
+
         $this->results[$key] =
+
             new Result(FALSE, $this->missingMessage);
+
     } else {
+
         $this->processAssignment(
+
             $assignment, $key, $data[$key]);
+
     }
+
     if (!$this->results[$key]->item) $valid = FALSE;
+
 }
+
 return $valid;
 ```
-
-8.  如你所回忆的，每个*分配项*都*键控*到数据字段，并且代表针对该字段的回调数组。因此，在 `processGlobalAssignment()` 中，我们需要遍历回调数组。然而，在这种情况下，因为这些*分配项*是**全局的**，我们还需要遍历**整个**数据集，并依次应用每个全局过滤器。
-
-9.  与相应的 `Application\Filter\Filter::processGlobalAssignment()` 方法相比，我们需要调用 `mergeValidationResults()`。原因是如果 `$result->item` 的值已经是 `FALSE`，我们需要确保它随后不会被 `TRUE` 值覆盖。链中返回 `FALSE` 的任何验证器都必须覆盖其他任何验证结果：
+8. 如你所回忆的，每个*分配项*都*键控*到数据字段，并且代表针对该字段的回调数组。因此，在 `processGlobalAssignment()` 中，我们需要遍历回调数组。然而，在这种情况下，因为这些*分配项*是**全局的**，我们还需要遍历**整个**数据集，并依次应用每个全局过滤器。
+9. 与相应的 `Application\Filter\Filter::processGlobalAssignment()` 方法相比，我们需要调用 `mergeValidationResults()`。原因是如果 `$result->item` 的值已经是 `FALSE`，我们需要确保它随后不会被 `TRUE` 值覆盖。链中返回 `FALSE` 的任何验证器都必须覆盖其他任何验证结果：
 
 ```php
 protected function processGlobalAssignment($assignment, $data)
+
 {
+
     foreach ($assignment as $callback) {
+
         if ($callback === NULL) continue;
+
         foreach ($data as $k => $value) {
+
             $result = $this->callbacks[$callback['key']]
+
                      ($value, $callback['params']);
+
             $this->results[$k]->mergeValidationResults($result);
+
         }
+
     }
+
 }
 ```
-
-10. 当我们定义 `processAssignment()` 时，以类似于 `processGlobalAssignment()` 的方式，我们需要执行**每个剩余分配的回调**，针对每个数据键，再次调用 `mergeValidationResults()`： 
+10. 当我们定义 `processAssignment()` 时，以类似于 `processGlobalAssignment()` 的方式，我们需要执行**每个剩余分配的回调**，针对每个数据键，再次调用 `mergeValidationResults()`：
 
 ```php
 protected function processAssignment($assignment, $key, $value)
+
 {
+
     foreach ($assignment as $callback) {
+
         if ($callback === NULL) continue;
+
         $result = $this->callbacks[$callback['key']]
+
                   ($value, $callback['params']);
+
         $this->results[$key]->mergeValidationResults($result);
+
     }
+
 }
 ```
 
@@ -7607,12 +7926,8 @@ protected function processAssignment($assignment, $key, $value)
 
 - `Application\Filter\Result`
 - `Application\Filter\CallbackInterface`
-
-
-
-
--   Application\Filter\Messages
--   Application\Filter\AbstractFilter
+- `Application\Filter\Messages`
+- `Application\Filter\AbstractFilter`
 
 你可以使用文件 `chap_06_post_data_config_messages.php`，该文件也在前面的示例中有所描述。
 
@@ -7622,16 +7937,27 @@ protected function processAssignment($assignment, $key, $value)
 
 ```php
 'validation_key' => new class () implements CallbackInterface
+
 {
+
     public function __invoke($item, $params) : Result
+
     {
+
         $error = array();
+
         $valid = /* perform validation operation on $item */;
+
         if (!$valid) {
+
             $error[] = Messages::$messages['validation_key'];
+
         }
+
         return new Result($valid, $error);
+
     }
+
 }
 ```
 
@@ -7639,9 +7965,13 @@ protected function processAssignment($assignment, $key, $value)
 
 ```php
 <?php
+
 require __DIR__ . '/../Application/Autoload/Loader.php';
+
 Application\Autoload\Loader::init(__DIR__ . '/../..');
+
 include __DIR__ . '/chap_06_post_data_config_messages.php';
+
 include __DIR__ . '/chap_06_post_data_config_callbacks.php';
 ```
 
@@ -7649,38 +7979,69 @@ include __DIR__ . '/chap_06_post_data_config_callbacks.php';
 
 ```php
 $assignments = [
+
     'first_name'      => [ ['key' => 'length',
+
                            'params' => ['min' => 1, 'max' => 128]],
+
                            ['key' => 'alnum',
+
                             'params' => ['allowWhiteSpace' => TRUE]],
+
     ],
+
     'last_name'       => [ ['key' => 'required','params' => []] ],
+
     'params'          => [ 
+
         ['key' => 'length', 'params' => ['min' => 1, 'max' => 128]],
+
         ['key' => 'alnum', 'params' => ['allowWhiteSpace' => TRUE]],
+
         ['key' => 'required', 'params' => []]
+
     ],
-    
+
     'address'           => [ ['key' => 'length',
+
                              'params'          => ['max' => 256]] ],
+
     'city'              => [ ['key' => 'length',
+
                               'params'          => ['min' => 1, 'max' => 64]] ],
+
     'state_province'    => [ ['key' => 'length',
+
                               'params'          => ['min' => 1, 'max' => 32]] ],
+
     'postal_code'       => [ ['key' => 'length',
+
                               'params'          => ['min' => 1, 'max' => 16] ],
+
                              ['key' => 'alnum',
+
                               'params'          => ['allowWhiteSpace' => TRUE]],
+
                              ['key' => 'required','params' => []] ],
+
     'phone'             => [ ['key' => 'phone', 'params' => []] ],
+
     'country'           => [ ['key' => 'in_array',
+
                               'params'          => $countries ],
+
                              ['key' => 'required','params' => []] ],
+
     'email'             => [ ['key' => 'email', 'params' => [] ],
+
                              ['key' => 'length',
+
                               'params'          => ['max' => 250] ],
+
                              ['key' => 'required','params' => [] ] ],
+
     'budget'            => [ ['key' => 'float', 'params' => []] ]
+
 ];
 ```
 
@@ -7688,12 +8049,19 @@ $assignments = [
 
 ```php
 $validator = new Application\Filter\Validator($config['validators'], $assignments);
+
 $validator->setSeparator(PHP_EOL);
+
 $validator->process($badData);
+
 echo $validator->getMessageString(40, ' %14s : %-26s' . PHP_EOL);
+
 var_dump($validator->getItemsAsArray());
+
 $validator->process($goodData);
+
 echo $validator->getMessageString(40, ' %14s : %-26s' . PHP_EOL);
+
 var_dump($validator->getItemsAsArray());
 ```
 
@@ -7701,132 +8069,210 @@ var_dump($validator->getItemsAsArray());
 
 ```text
 Bad Data:
+
     first_name : Item must contain only letters and numbers
+
     last_name : Length must be no more than 128
+
     city : Length must be no more than 64
+
     postal_code : Length must be no more than 16
+
     postal_code : Item must contain only letters and numbers
+
     phone : Phone number must be in a format [n] nn-nnn-nnnn
+
     country : Item was not found in the list of valid values
+
     email : Invalid email address
+
     address : Item Missing
+
     state_province : Item Missing
+
 array(18) (
+
     ["first_name"]=>
+
     bool(false)
+```
+
+
+
+```
     ["last_name"]=>
+
     bool(false)
+
     ["city"]=>
+
     bool(false)
+
     ["postal_code"]=>
+
     bool(false)
+
     ["phone"]=>
+
     bool(false)
+
     ["country"]=>
+
     bool(false)
+
     ["email"]=>
+
     bool(false)
+
     ["budget"]=>
+
     bool(true)
+
     ["address"]=>
+
     bool(false)
+
     ["state_province"]=>
+
     bool(false)
+
 )
 ```
 
-注意，*缺失* 的字段 *address* 和 *state_province* 验证结果为 *FALSE*，并返回缺失项的消息。
+注意，*缺失* 的字段 `address` 和 `state_province` 验证结果为 `FALSE`，并返回缺失项的消息。
 
 ## 将验证与表单绑定
 
-当表单首次渲染时，将一个表单类（例如前一个示例中描述的 *Application\Form\Factory*）与一个可以执行过滤或验证的类（例如前一个示例中描述的 *Application\Filter\**）绑定在一起的价值并不大。然而，一旦表单数据提交，这种绑定的重要性就会增加。如果表单数据未能通过验证，值可以被过滤，然后重新显示。验证错误消息可以与表单元素绑定，并渲染在表单字段旁边。
+当表单首次渲染时，将一个表单类（例如前一个示例中描述的 `Application\Form\Factory`）与一个可以执行过滤或验证的类（例如前一个示例中描述的 `Application\Filter\**`）绑定在一起的价值并不大。然而，一旦表单数据提交，这种绑定的重要性就会增加。如果表单数据未能通过验证，值可以被过滤，然后重新显示。验证错误消息可以与表单元素绑定，并渲染在表单字段旁边。
 
 ### 如何操作...
 
-1.  首先，确保实现 *Implementing a Form Factory*、*Chaining $_POST Filters* 和 *Chaining $_POST Validators* 示例中定义的类。
-2.  现在我们将注意力转向 *Application\Form\Factory* 类，并添加允许我们附加 *Application\Filter\Filter* 和 *Application\Filter\Validator* 实例的属性和 setter。我们还需要定义 `$data`，它将用于保留经过过滤和/或验证的数据：
+1. 首先，确保实现 `Implementing a Form Factory`、`Chaining $_POST Filters` 和 `Chaining $_POST Validators` 示例中定义的类。
+2. 现在我们将注意力转向 `Application\Form\Factory` 类，并添加允许我们附加 `Application\Filter\Filter` 和 `Application\Filter\Validator` 实例的属性和 setter。我们还需要定义 `$data`，它将用于保留经过过滤和/或验证的数据：
 
 ```php
+
 const DATA_NOT_FOUND = 'Data not found. Run setData()';
+
 const FILTER_NOT_FOUND = 'Filter not found. Run setFilter()';
+
 const VALIDATOR_NOT_FOUND = 'Validator not found. Run setValidator()';
 
 protected $filter;
+
 protected $validator;
+
 protected $data;
 
 public function setFilter(Filter $filter)
+
 {
+
     $this->filter = $filter;
+
 }
 
 public function setValidator(Validator $validator)
+
 {
+
     $this->validator = $validator;
+
 }
 
 public function setData($data)
+
 {
+
     $this->data = $data;
+
 }
+
 ```
 
-3.  接下来，我们定义一个 `validate()` 方法，该方法调用嵌入的 `Application\Filter\Validator` 实例的 `process()` 方法。我们检查 `$data` 和 `$validator` 是否存在。如果不存在，则抛出适当的异常，并附上指示需要先运行哪个方法的说明：
+3. 接下来，我们定义一个 `validate()` 方法，该方法调用嵌入的 `Application\Filter\Validator` 实例的 `process()` 方法。我们检查 `$data` 和 `$validator` 是否存在。如果不存在，则抛出适当的异常，并附上指示需要先运行哪个方法的说明：
 
 ```php
+
 public function validate()
+
 {
+
     if (!$this->data)
+
         throw new RuntimeException(self::DATA_NOT_FOUND);
 
     if (!$this->validator)
+
         throw new RuntimeException(self::VALIDATOR_NOT_FOUND);
+
 ```
 
-4.  在调用 `process()` 方法后，我们将验证结果消息与表单元素消息关联起来。请注意，`process()` 方法返回一个表示数据集整体验证状态的布尔值。当表单在验证失败后重新显示时，错误消息将出现在每个元素旁边：
+4. 在调用 `process()` 方法后，我们将验证结果消息与表单元素消息关联起来。请注意，`process()` 方法返回一个表示数据集整体验证状态的布尔值。当表单在验证失败后重新显示时，错误消息将出现在每个元素旁边：
 
 ```php
+
 $valid = $this->validator->process($this->data);
 
 foreach ($this->elements as $element) {
+
     if (isset($this->validator->getResults()[$element->getName()])) {
+
         $element->setErrors($this->validator->getResults()[$element->getName()]->messages);
+
     }
+
 }
+
 return $valid;
+
 ```
 
-5.  以类似的方式，我们定义一个 `filter()` 方法，该方法调用嵌入的 `Application\Filter\Filter` 实例的 `process()` 方法。与步骤 3 中描述的 `validate()` 方法一样，我们需要检查 `$data` 和 `$filter` 是否存在。如果缺失任何一项，我们抛出带有适当消息的 `RuntimeException`：
+5. 以类似的方式，我们定义一个 `filter()` 方法，该方法调用嵌入的 `Application\Filter\Filter` 实例的 `process()` 方法。与步骤 3 中描述的 `validate()` 方法一样，我们需要检查 `$data` 和 `$filter` 是否存在。如果缺失任何一项，我们抛出带有适当消息的 `RuntimeException`：
 
 ```php
+
 public function filter()
+
 {
+
     if (!$this->data)
+
         throw new RuntimeException(self::DATA_NOT_FOUND);
 
     if (!$this->filter)
+
         throw new RuntimeException(self::FILTER_NOT_FOUND);
+
 ```
 
-6.  然后我们运行 `process()` 方法，该方法生成一个由 `Result` 对象组成的数组，其中 `$item` 属性代表过滤链的最终结果。然后我们循环遍历结果，如果对应的 `$element` 键匹配，则将 `value` 属性设置为过滤后的值。我们还添加过滤过程产生的任何消息。当表单随后重新显示时，所有 `value` 属性都将显示过滤结果：
+6. 然后我们运行 `process()` 方法，该方法生成一个由 `Result` 对象组成的数组，其中 `$item` 属性代表过滤链的最终结果。然后我们循环遍历结果，如果对应的 `$element` 键匹配，则将 `value` 属性设置为过滤后的值。我们还添加过滤过程产生的任何消息。当表单随后重新显示时，所有 `value` 属性都将显示过滤结果：
 
 ```php
+
 $this->filter->process($this->data);
+
 foreach ($this->filter->getResults() as $key => $result) {
+
     if (isset($this->elements[$key])) {
+
         $this->elements[$key]->setAttribute('value', $result->item);
+
         if (isset($result->messages) && count($result->messages)) {
+
             foreach ($result->messages as $message) {
+
                 $this->elements[$key]->addSingleError($message);
+
             }
+
         }
+
     }
+
 }
+
 ```
-
-
-
-
 
 ## 工作原理……
 
@@ -7835,132 +8281,232 @@ foreach ($this->filter->getResults() as $key => $result) {
 例如，您可以定义一个 `chap_06_tying_filters_to_form_definitions.php` 文件，其中将包含表单包装器、元素和过滤器分配的代码定义。以下是一些示例：
 
 ```php
+
 <?php
+
 use Application\Form\Generic;
 
 define('VALIDATE_SUCCESS', 'SUCCESS: form submitted ok!');
+
 define('VALIDATE_FAILURE', 'ERROR: validation errors detected');
 
 $wrappers = [
+
     Generic::INPUT    => ['type' => 'td', 'class' => 'content'],
+
     Generic::LABEL    => ['type' => 'th', 'class' => 'label'],
+
     Generic::ERRORS   => ['type' => 'td', 'class' => 'error']
+
 ];
 
 $elements = [
+
     'first_name' => [
+
         'class'    => 'Application\Form\Generic',
+
         'type'     => Generic::TYPE_TEXT,
+
         'label'    => 'First Name',
+
         'wrappers' => $wrappers,
+
         'attributes'=> ['maxLength'=>128,'required'=>'']
+
     ],
+
     'last_name'  => [
+
         'class'    => 'Application\Form\Generic',
+
         'type'     => Generic::TYPE_TEXT,
+
         'label'    => 'Last Name',
+
         'wrappers' => $wrappers,
+
         'attributes'=> ['maxLength'=>128,'required'=>'']
+
     ],
+
     // etc.
+
 ];
 
 // overall form config
+
 $formConfig = [
+
     'name'        => 'prospectsForm',
+
     'attributes'  => [
+
         'method'=>'post',
+
         'action'=>'chap_06_typing_filters_to_form.php'
+
     ],
+
     'row_wrapper' => ['type' => 'tr', 'class' => 'row'],
+
     'form_wrapper' => [
+
         'type'=>'table',
+
         'class'=>'table',
+
         'id'=>'prospectsTable',
+
         'class'=>'display','cellspacing'=>'0'
+
     ],
+
     'form_tag_inside_wrapper' => FALSE,
+
 ];
 
 $assignments = [
+
     'first_name' => [ ['key' => 'length',
+
         'params' => ['min' => 1, 'max' => 128]],
+
         ['key' => 'alnum',
+
         'params' => ['allowWhiteSpace' => TRUE]],
+
         ['key' => 'required','params' => []] ],
+
     'last_name' => [ ['key' => 'length',
+
         'params' => ['min' => 1, 'max' => 128]],
+
         ['key' => 'alnum',
+
         'params' => ['allowWhiteSpace' => TRUE]],
+
         ['key' => 'required','params' => [] ] ],
+
     'address' => [ ['key' => 'length',
+
         'params' => ['max' => 256]] ],
+
     'city' => [ ['key' => 'length',
+
         'params' => ['min' => 1, 'max' => 64]] ],
+
     'state_province'=> [ ['key' => 'length',
+
         'params' => ['min' => 1, 'max' => 32]] ],
+
     'postal_code' => [ ['key' => 'length',
+
         'params' => ['min' => 1, 'max' => 16] ],
+
         ['key' => 'alnum',
+
         'params' => ['allowWhiteSpace' => TRUE]],
+
         ['key' => 'required','params' => []] ],
+
     'phone' => [ ['key' => 'phone', 'params' => []] ],
+
     'country' => [ ['key' => 'in_array',
+
         'params' => $countries ],
+
         ['key' => 'required','params' => []] ],
+
     'email' => [ ['key' => 'email', 'params' => [] ],
+
         ['key' => 'length',
+
         'params' => ['max' => 250] ],
+
         ['key' => 'required','params' => []] ],
+
     'budget' => [ ['key' => 'float', 'params' => [] ]
+
 ];
+
 ```
 
 您可以使用之前配方中描述的已存在的 `chap_06_post_data_config_callbacks.php` 和 `chap_06_post_data_config_messages.php` 文件。最后，定义一个 `chap_06_tying_filters_to_form.php` 文件，该文件设置自动加载并包含这三个配置文件：
 
 ```php
+
 <?php
+
 require __DIR__ . '/../Application/Autoload/Loader.php';
+
 Application\Autoload\Loader::init(__DIR__ . '../..');
+
 include __DIR__ . '/chap_06_post_data_config_messages.php';
+
 include __DIR__ . '/chap_06_post_data_config_callbacks.php';
+
 include __DIR__ . '/chap_06_tying_filters_to_form_definitions.php';
+
 ?>
+
 ```
 
 接下来，您可以创建表单工厂、过滤器和验证器类的实例：
 
 ```php
+
 use Application\Form\Factory;
+
 use Application\Filter\{ Validator, Filter };
+
 $form = Factory::generate($elements);
+
 $form->setFilter(new Filter($Callbacks['filters'],
+
     $Assignments['filters']));
+
 $form->setValidator(new Validator($Callbacks['validators'],
+
     $Assignments['validators']));
+
 ```
 
 然后，您可以检查是否存在 `$_POST` 数据。如果存在，则执行验证和过滤：
 
 ```php
+
 $message = '';
+
 if (isset($_POST['submit'])) {
+
     $form->setData($_POST);
+
     if ($form->validate()) {
+
         $message = VALIDATE_SUCCESS;
+
     } else {
+
         $message = VALIDATE_FAILURE;
+
     }
+
     $form->filter();
+
 }
+
 ?>
+
 ```
 
 视图逻辑非常简单：只需渲染表单即可。验证消息以及各个元素的值将作为验证和过滤过程的一部分被分配：
 
 ```php
+
 <?= $form->render($form, $formConfig); ?>
-```
+
+
 
 以下是使用错误表单数据的示例：
 
@@ -7995,84 +8541,80 @@ if (isset($_POST['submit'])) {
 
 1. 首先，我们定义一个 `Application\Parse\ConvertXml` 类。该类将持有用于从 XML 转换为 PHP 数组及反向转换的方法。我们需要 SPL 中的 `SimpleXMLElement` 和 `SimpleXMLIterator` 类：
 
-    ```php
-    namespace Application\Parse;
+```php
+namespace Application\Parse;
 
-    use SimpleXMLIterator;
-    use SimpleXMLElement;
+use SimpleXMLIterator;
 
-    class ConvertXml
-    {
-    }
-    ```
+use SimpleXMLElement;
+
+class ConvertXml
+{
+}
+```
 
 2. 接下来，我们定义一个 `xmlToArray()` 方法，该方法接受一个 `SimpleXMLIterator` 实例作为参数。它将被递归调用，并从 XML 文档生成 PHP 数组。我们利用 `SimpleXMLIterator` 遍历 XML 文档的能力，使用 `key()`、`current()`、`next()` 和 `rewind()` 方法进行导航：
 
-    ```php
-    public function xmlToArray(SimpleXMLIterator $xml) : array
-    {
-        $a = array();
-
-        for( $xml->rewind(); $xml->valid(); $xml->next() ) {
-            if(!array_key_exists($xml->key(), $a)) {
-                $a[$xml->key()] = array();
-            }
-
-            if ($xml->hasChildren()) {
-                $a[$xml->key() ][] = $this->xmlToArray($xml->current());
-            }
-            else{
-                $a[$xml->key() ] = (array) $xml->current()->attributes();
-                $a[$xml->key()][ 'value'] = strval($xml->current());
-            }
+```php
+public function xmlToArray(SimpleXMLIterator $xml) : array
+{
+    $a = array();
+    for( $xml->rewind(); $xml->valid(); $xml->next() ) {
+        if(!array_key_exists($xml->key(), $a)) {
+            $a[$xml->key()] = array();
         }
-        return $a;
+        if ($xml->hasChildren()) {
+            $a[$xml->key() ][] = $this->xmlToArray($xml->current());
+        }
+        else{
+            $a[$xml->key() ] = (array) $xml->current()->attributes();
+            $a[$xml->key()][ 'value'] = strval($xml->current());
+        }
     }
-    ```
+    return $a;
+}
+```
 
 3. 对于反向过程（同样递归调用），我们定义两个方法。第一个方法 `arrayToXml()` 设置初始的 `SimpleXMLElement` 实例，然后调用第二个方法 `phpToXml()`：
 
-    ```php
-    public function arrayToXml(array $a)
-    {
-        $xml = new SimpleXMLElement('<?xml version="1.0" standalone="yes"?><root></root>');
-        $this->phpToXml($a, $xml);
-        return $xml->asXML();
-    }
-    ```
+```php
+public function arrayToXml(array $a)
+{
+    $xml = new SimpleXMLElement('<?xml version="1.0" standalone="yes"?><root></root>');
+    $this->phpToXml($a, $xml);
+    return $xml->asXML();
+}
+```
 
 4. 请注意，在第二个方法中，我们使用 `get_object_vars()` 以防数组元素之一是对象。您还会注意到，单独的数字不能作为 XML 标签，这意味着需要在数字前添加一些文本：
 
-    ```php
-    protected function phpToXml($value, &$xml)
-    {
-        $node = $value;
-        if (is_object($node)) {
-            $node = get_object_vars($node);
-        }
-        if (is_array($node)) {
-            foreach ($node as $k => $v) {
-                if (is_numeric($k)) {
-                    $k = 'number' . $k;
-                }
-                if (is_array($v)) {
-                    $newNode = $xml->addChild($k);
-                    $this->phpToXml($v, $newNode);
-                } elseif (is_object($v)) {
-                    $newNode = $xml->addChild($k);
-                    $this->phpToXml($v, $newNode);
-                } else {
-                    $xml->addChild($k, $v);
-                }
-            }
-        } else {
-            $xml->addChild(self::UNKNOWN_KEY, $node);
-        }
+```php
+protected function phpToXml($value, &$xml)
+{
+    $node = $value;
+    if (is_object($node)) {
+        $node = get_object_vars($node);
     }
-    ```
-
-
-
+    if (is_array($node)) {
+        foreach ($node as $k => $v) {
+            if (is_numeric($k)) {
+                $k = 'number' . $k;
+            }
+            if (is_array($v)) {
+                $newNode = $xml->addChild($k);
+                $this->phpToXml($v, $newNode);
+            } elseif (is_object($v)) {
+                $newNode = $xml->addChild($k);
+                $this->phpToXml($v, $newNode);
+            } else {
+                $xml->addChild($k, $v);
+            }
+        }
+    } else {
+        $xml->addChild(self::UNKNOWN_KEY, $node);
+    }
+}
+```
 
 ## 工作原理...
 
@@ -8082,10 +8624,14 @@ if (isset($_POST['submit'])) {
 
 ```php
 require __DIR__ . '/../Application/Autoload/Loader.php';
+
 Application\Autoload\Loader::init(__DIR__ . '../');
+
 use Application\Parse\ConvertXml;
+
 $wsdl = 'http://graphical.weather.gov/xml/'
     . 'SOAP_server/ndfdXMLserver.php?wsdl';
+
 $xml = new SimpleXMLIterator($wsdl, 0, TRUE);
 $convert = new ConvertXml();
 var_dump($convert->xmlToArray($xml));
@@ -8113,7 +8659,7 @@ REST 客户端使用 **HyperText Transfer Protocol (HTTP)** 生成针对外部 W
 
 ## 操作方法...
 
-- 1. 在我们能够定义 REST 客户端适配器之前，我们需要定义通用类来表示请求和响应信息。首先，我们从一个抽象类开始，该类包含请求或响应所需的方法和属性：
+1. 在我们能够定义 REST 客户端适配器之前，我们需要定义通用类来表示请求和响应信息。首先，我们从一个抽象类开始，该类包含请求或响应所需的方法和属性：
 
 ```php
 namespace Application\Web;
@@ -8122,112 +8668,113 @@ class AbstractHttp
 {
 ```
 
-- 2. 接下来，我们定义代表 HTTP 信息的类常量：
+2. 接下来，我们定义代表 HTTP 信息的类常量：
+
 ```php
-    const METHOD_GET = 'GET';
-    const METHOD_POST = 'POST';
-    const METHOD_PUT = 'PUT';
-    const METHOD_DELETE = 'DELETE';
-    const CONTENT_TYPE_HTML = 'text/html';
-    const CONTENT_TYPE_JSON = 'application/json';
-    const CONTENT_TYPE_FORM_URL_ENCODED =
-        'application/x-www-form-urlencoded';
-    const HEADER_CONTENT_TYPE = 'Content-Type';
-    const TRANSPORT_HTTP = 'http';
-    const TRANSPORT_HTTPS = 'https';
-    const STATUS_200 = '200';
-    const STATUS_401 = '401';
-    const STATUS_500 = '500';
+const METHOD_GET = 'GET';
+const METHOD_POST = 'POST';
+const METHOD_PUT = 'PUT';
+const METHOD_DELETE = 'DELETE';
+const CONTENT_TYPE_HTML = 'text/html';
+const CONTENT_TYPE_JSON = 'application/json';
+const CONTENT_TYPE_FORM_URL_ENCODED =
+    'application/x-www-form-urlencoded';
+const HEADER_CONTENT_TYPE = 'Content-Type';
+const TRANSPORT_HTTP = 'http';
+const TRANSPORT_HTTPS = 'https';
+const STATUS_200 = '200';
+const STATUS_401 = '401';
+const STATUS_500 = '500';
 ```
 
-- 3. 然后，我们定义请求或响应所需的属性：
+3. 然后，我们定义请求或响应所需的属性：
+
 ```php
-    protected $uri;        // 例如 http://xxx.com/yyy
-    protected $method;     // 例如 GET, PUT, POST, DELETE
-    protected $headers;    // HTTP 头
-    protected $cookies;    // cookies
-    protected $metaData;   // 关于传输的信息
-    protected $transport;  // 例如 http 或 https
-    protected $data = array();
+protected $uri;        // 例如 http://xxx.com/yyy
+protected $method;     // 例如 GET, PUT, POST, DELETE
+protected $headers;    // HTTP 头
+protected $cookies;    // cookies
+protected $metaData;   // 关于传输的信息
+protected $transport;  // 例如 http 或 https
+protected $data = array();
 ```
 
-- 4. 逻辑上，应该为这些属性定义 getter 和 setter：
+4. 逻辑上，应该为这些属性定义 getter 和 setter：
+
 ```php
-    public function setMethod($method)
-    {
-        $this->method = $method;
-    }
-
-    public function getMethod()
-    {
-        return $this->method ?? self::METHOD_GET;
-    }
-
-    // 等等。
+public function setMethod($method)
+{
+    $this->method = $method;
+}
+public function getMethod()
+{
+    return $this->method ?? self::METHOD_GET;
+}
+// 等等。
 ```
 
-- 5. 某些属性需要按键访问。为此，我们定义 getXxxByKey() 和 setXxxByKey() 方法：
+5. 某些属性需要按键访问。为此，我们定义 getXxxByKey() 和 setXxxByKey() 方法：
+
 ```php
-    public function setHeaderByKey($key, $value)
-    {
-        $this->headers[$key] = $value;
-    }
-
-    public function getHeaderByKey($key)
-    {
-        return $this->headers[$key] ?? NULL;
-    }
-
-    public function getDataByKey($key)
-    {
-        return $this->data[$key] ?? NULL;
-    }
-
-    public function getMetaDataByKey($key)
-    {
-        return $this->metaData[$key] ?? NULL;
-    }
+public function setHeaderByKey($key, $value)
+{
+    $this->headers[$key] = $value;
+}
+public function getHeaderByKey($key)
+{
+    return $this->headers[$key] ?? NULL;
+}
+public function getDataByKey($key)
+{
+    return $this->data[$key] ?? NULL;
+}
+public function getMetaDataByKey($key)
+{
+    return $this->metaData[$key] ?? NULL;
+}
 ```
 
-- 在某些情况下，请求将需要参数。我们假设参数将以存储在 $data 属性中的 PHP 数组形式存在。然后我们可以使用 http_build_query() 函数构建请求 URL：
-```php
-    public function setUri($uri, array $params = NULL)
-    {
-        $this->uri = $uri;
-        $first = TRUE;
-        if ($params) {
-            $this->uri .= '?' . http_build_query($params);
-        }
-    }
+在某些情况下，请求将需要参数。我们假设参数将以存储在 `$data` 属性中的 PHP 数组形式存在。然后我们可以使用 `http_build_query()` 函数构建请求 URL：
 
-    public function getDataEncoded()
-    {
-        return http_build_query($this->getData());
+```php
+public function setUri($uri, array $params = NULL)
+{
+    $this->uri = $uri;
+    $first = TRUE;
+    if ($params) {
+        $this->uri .= '?' . http_build_query($params);
     }
+}
+public function getDataEncoded()
+{
+    return http_build_query($this->getData());
+}
 ```
 
-- 最后，我们根据原始请求设置 $transport：
+最后，我们根据原始请求设置 `$transport`：
+
 ```php
-    public function setTransport($transport = NULL)
-    {
-        if ($transport) {
-            $this->transport = $transport;
+public function setTransport($transport = NULL)
+{
+    if ($transport) {
+        $this->transport = $transport;
+    } else {
+        if (substr($this->uri, 0, 5) === self::TRANSPORT_HTTPS) {
+            $this->transport = self::TRANSPORT_HTTPS;
         } else {
-            if (substr($this->uri, 0, 5) === self::TRANSPORT_HTTPS) {
-                $this->transport = self::TRANSPORT_HTTPS;
-            } else {
-                $this->transport = self::TRANSPORT_HTTP;
-            }
+            $this->transport = self::TRANSPORT_HTTP;
         }
     }
+}
 ```
 
 ## 访问 Web 服务
 
-- 8. 在本食谱中，我们将定义一个 `Application\Web\Request` 类，该 class 可以在我们希望生成请求时接受参数，或者，在实现接受请求的服务器时，用传入的请求信息填充属性：
+8. 在本食谱中，我们将定义一个 `Application\Web\Request` 类，该 class 可以在我们希望生成请求时接受参数，或者，在实现接受请求的服务器时，用传入的请求信息填充属性：
 
 ```php
 namespace Application\Web;
+
 class Request extends AbstractHttp
 {
     public function __construct(
@@ -8236,29 +8783,27 @@ class Request extends AbstractHttp
     {
         if (!$headers) $this->headers = $_SERVER ?? array();
         else $this->headers = $headers;
-
         if (!$uri) $this->uri = $this->headers['PHP_SELF'] ?? '';
         else $this->uri = $uri;
-
         if (!$method) $this->method =
         $this->headers['REQUEST_METHOD'] ?? self::METHOD_GET;
         else $this->method = $method;
-
         if (!$data) $this->data = $_REQUEST ?? array();
         else $this->data = $data;
-
         if (!$cookies) $this->cookies = $_COOKIE ?? array();
         else $this->cookies = $cookies;
-
         $this->setTransport();
-    }
-}
 ```
 
-- 9. 现在，我们可以将注意力转向响应类。在这种情况下，我们将定义一个 `Application\Web\Received` 类。该名称反映了我们从外部 Web 服务接收数据并进行重新封装的事实：
+
+
+## 9. 响应类
+
+现在，我们可以将注意力转向响应类。在这种情况下，我们将定义一个 `Application\Web\Received` 类。该名称反映了我们从外部 Web 服务接收数据并进行重新封装的事实：
 
 ```php
 namespace Application\Web;
+
 class Received extends AbstractHttp
 {
     public function __construct(
@@ -8277,7 +8822,7 @@ class Received extends AbstractHttp
 
 ## 创建基于流的 REST 客户端
 
-我们现在准备考虑实现 REST 客户端的两种不同方式。第一种方法是使用底层 PHP I/O 层，称为 **Streams**。该层提供一系列包装器，用于访问外部流资源。默认情况下，任何 PHP 文件命令都将使用文件包装器，该包装器提供对本地文件系统的访问。我们将使用 http:// 或 https:// 包装器来实现 Application\Web\Client\Streams 适配器：
+我们现在准备考虑实现 REST 客户端的两种不同方式。第一种方法是使用底层 PHP I/O 层，称为 **Streams**。该层提供一系列包装器，用于访问外部流资源。默认情况下，任何 PHP 文件命令都将使用文件包装器，该包装器提供对本地文件系统的访问。我们将使用 `http://` 或 `https://` 包装器来实现 `Application\Web\Client\Streams` 适配器：
 
 - 首先，我们定义一个 `Application\Web\Client\Streams` 类：
 
@@ -8298,18 +8843,13 @@ public static function send(Request $request)
 {
     $data = $request->getDataEncoded();
     $received = new Received();
-
     switch ($request->getMethod()) {
-
     case Request::METHOD_GET :
-
         if ($data) {
             $request->setUri($request->getUri() . '? ' . $data);
         }
-
         $resource = fopen($request->getUri(), 'r');
         break;
-
     case Request::METHOD_POST :
         $opts = [
             $request->getTransport() =>
@@ -8323,12 +8863,10 @@ public static function send(Request $request)
         $resource = fopen($request->getUri(), 'w',
             stream_context_create($opts));
         break;
-```
-
-
-
-return self::getResults($received, $resource);
+    }
+    return self::getResults($received, $resource);
 }
+```
 
 3. 最后，我们来看一下如何检索结果并将其打包成一个 `Received` 对象。你会发现我们添加了一个机制来解码以 JSON 格式接收的数据：
 
@@ -8371,95 +8909,102 @@ protected static function getResults(Received $received, $resource) {
 现在我们将看看 REST 客户端的另一种方法，即基于 cURL 扩展的方法：
 
 1. 对于这种方法，我们假设使用相同的请求和响应类。初始类定义与之前讨论的 Streams 客户端非常相似：
-   ```php
-   namespace Application\Web\Client;
-   use Application\Web\{ Request, Received };
-   class Curl
-   {
-   ```
 
-2. 与使用 Streams 相比，send() 方法要简单得多。我们只需要定义一个选项数组，然后让 cURL 完成剩下的工作：
-   ```php
-   public static function send(Request $request)
-   {
-       $data = $request->getDataEncoded();
-       $received = new Received();
-       switch ($request->getMethod()) {
-       case Request::METHOD_GET :
-       $uri = ($data
-           ? $request->getUri() . '?' . $data
-           : $request->getUri());
-       $options = [
-           CURLOPT_URL => $uri,
-           CURLOPT_HEADER => 0,
-           CURLOPT_RETURNTRANSFER => TRUE,
-           CURLOPT_TIMEOUT => 4
-       ];
-       break;
-       ```
+```php
+namespace Application\Web\Client;
+
+use Application\Web\{ Request, Received };
+
+class Curl
+{
+```
+
+2. 与使用 Streams 相比，`send()` 方法要简单得多。我们只需要定义一个选项数组，然后让 cURL 完成剩下的工作：
+
+```php
+public static function send(Request $request)
+{
+    $data = $request->getDataEncoded();
+    $received = new Received();
+    switch ($request->getMethod()) {
+    case Request::METHOD_GET :
+    $uri = ($data
+        ? $request->getUri() . '?' . $data
+        : $request->getUri());
+    $options = [
+        CURLOPT_URL => $uri,
+        CURLOPT_HEADER => 0,
+        CURLOPT_RETURNTRANSFER => TRUE,
+        CURLOPT_TIMEOUT => 4
+    ];
+    break;
+```
 
 3. POST 需要稍有不同的 cURL 参数：
-   ```php
-   case Request::METHOD_POST :
-   $options = [
-       CURLOPT_POST => 1,
-       CURLOPT_HEADER => 0,
-       CURLOPT_URL => $request->getUri(),
-       CURLOPT_FRESH_CONNECT => 1,
-       CURLOPT_RETURNTRANSFER => 1,
-       CURLOPT_FORBID_REUSE => 1,
-       CURLOPT_TIMEOUT => 4,
-       CURLOPT_POSTFIELDS => $data
-   ];
-   break;
-   ```
+
+```php
+case Request::METHOD_POST :
+$options = [
+    CURLOPT_POST => 1,
+    CURLOPT_HEADER => 0,
+    CURLOPT_URL => $request->getUri(),
+    CURLOPT_FRESH_CONNECT => 1,
+    CURLOPT_RETURNTRANSFER => 1,
+    CURLOPT_FORBID_REUSE => 1,
+    CURLOPT_TIMEOUT => 4,
+    CURLOPT_POSTFIELDS => $data
+];
+break;
+```
 
 4. 然后我们执行一系列 cURL 函数，并将结果通过 `getResults()` 处理：
-   ```php
-   $ch = curl_init();
-   curl_setopt_array($ch, $options);
-   if (! $result = curl_exec($ch))
-   {
-       trigger_error(curl_error($ch));
-   }
-   $received->setMetaData(curl_getinfo($ch));
-   curl_close($ch);
-   return self::getResults($received, $result);
-   }
-   ```
 
-5. `getResults()` 方法将结果打包成一个 Received 对象：
-   ```php
-   protected static function getResults(Received $received, $payload)
-   {
-       $type = $received->getMetaDataByKey('content_type');
-       if ($type) {
-           switch (TRUE) {
-               case stripos($type, Received::CONTENT_TYPE_JSON) !== FALSE:
-                   $received->setData(json_decode($payload));
-                   break;
-               default :
-                   $received->setData($payload);
-                   break;
-           }
-       }
-       return $received;
-   }
-   ```
+```php
+$ch = curl_init();
+curl_setopt_array($ch, $options);
+if (! $result = curl_exec($ch))
+{
+    trigger_error(curl_error($ch));
+}
+$received->setMetaData(curl_getinfo($ch));
+curl_close($ch);
+return self::getResults($received, $result);
+}
+```
+
+5. `getResults()` 方法将结果打包成一个 `Received` 对象：
+
+```php
+protected static function getResults(Received $received, $payload)
+{
+    $type = $received->getMetaDataByKey('content_type');
+    if ($type) {
+        switch (TRUE) {
+            case stripos($type, Received::CONTENT_TYPE_JSON) !== FALSE:
+                $received->setData(json_decode($payload));
+                break;
+            default :
+                $received->setData($payload);
+                break;
+        }
+    }
+    return $received;
+}
+```
 
 ## 工作原理...
 
 请确保将所有前面的代码复制到这些类中：
 
-- Application\Web\AbstractHttp
-- Application\Web\Request
-- Application\Web\Received
-- Application\Web\Client\Streams
-- Application\Web\Client\Curl
+- `Application\Web\AbstractHttp`
+- `Application\Web\Request`
+- `Application\Web\Received`
+- `Application\Web\Client\Streams`
+- `Application\Web\Client\Curl`
 
 ## 第 7 章
 
-为了演示，你可以向 Google Maps API 发起 REST 请求，以获取两个地点之间的驾车路线。你还需要按照 https://developers.google.com/maps/documentation/directions/get-api-key 提供的说明创建一个 API 密钥，以便实现此目的。
+为了演示，你可以向 Google Maps API 发起 REST 请求，以获取两个地点之间的驾车路线。你还需要按照 `https://developers.google.com/maps/documentation/directions/get-api-key` 提供的说明创建一个 API 密钥，以便实现此目的。
 
 然后，你可以定义一个调用脚本 `chap_07_simple_rest_client_google_maps_curl.php`，使用 cURL 客户端发起请求。你也可以考虑定义一个调用脚本 `chap_07_simple_rest_client_google_maps_streams.php`，使用 Streams 客户端发起请求：
 
@@ -8494,7 +9039,6 @@ $request = new Request(
     ['origin' => $start, 'destination' => $end, 'key' => $apiKey],
     NULL
 );
-
 $received = Curl::send($request);
 $routes   = $received->getData()->routes[0];
 include __DIR__ . '/chap_07_simple_rest_client_google_maps_template.php';
@@ -8525,6 +9069,8 @@ include __DIR__ . '/chap_07_simple_rest_client_google_maps_template.php';
   <?php endforeach; ?>
 ```
 
+
+
 以下是在浏览器中看到的请求结果：
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_258_0.png)
@@ -8535,11 +9081,11 @@ include __DIR__ . '/chap_07_simple_rest_client_google_maps_template.php';
 
 ### 参见
 
-有关 Streams 的更多信息，请参阅此 PHP 文档页面 http://php.net/manual/en/book.stream.php。一个常被问到的问题是“HTTP PUT 和 POST 有什么区别？”，关于此主题的出色讨论，请参阅 http://stackoverflow.com/questions/107390/whats-the-difference-between-a-post-and-a-put-http-request。有关从 Google 获取 API 密钥的更多信息，请参阅以下网页：
+有关 Streams 的更多信息，请参阅此 PHP 文档页面 `http://php.net/manual/en/book.stream.php`。一个常被问到的问题是“HTTP PUT 和 POST 有什么区别？”，关于此主题的出色讨论，请参阅 `http://stackoverflow.com/questions/107390/whats-the-difference-between-a-post-and-a-put-http-request`。有关从 Google 获取 API 密钥的更多信息，请参阅以下网页：
 
-https://developers.google.com/maps/documentation/directions/get-api-key
+`https://developers.google.com/maps/documentation/directions/get-api-key`
 
-https://developers.google.com/maps/documentation/directions/intro#Introduction
+`https://developers.google.com/maps/documentation/directions/intro#Introduction`
 
 ## 创建简单的 REST 服务器
 
@@ -8556,13 +9102,9 @@ https://developers.google.com/maps/documentation/directions/intro#Introduction
    - `Application\Web\Request`
    - `Application\Web\Received`
 
+## 2. 我们还需要基于 AbstractHttp 定义一个正式的 `Application\Web\Response` 响应类。
 
-
-
-
-## 2. 我们还需要基于 AbstractHttp 定义一个正式的 Application\Web\Response 响应类。
-
-该类与其他类的主要区别在于，它接受 `Application\Web\Request` 的实例作为参数。主要工作是在 `__construct( )` 方法中完成的。设置 `Content-Type` 头文件和状态也很重要：
+该类与其他类的主要区别在于，它接受 `Application\Web\Request` 的实例作为参数。主要工作是在 `__construct()` 方法中完成的。设置 `Content-Type` 头文件和状态也很重要：
 
 ```php
 namespace Application\Web;
@@ -8584,7 +9126,6 @@ class Response extends AbstractHttp
             $this->setStatus($status);
         }
     }
-
     protected function processHeaders($contentType)
     {
         if (!$contentType) {
@@ -8595,12 +9136,10 @@ class Response extends AbstractHttp
                 $contentType);
         }
     }
-
     public function setStatus($status)
     {
         $this->status = $status;
     }
-
     public function getStatus()
     {
         return $this->status;
@@ -8608,7 +9147,7 @@ class Response extends AbstractHttp
 }
 ```
 
-### 现在我们可以定义 Application\Web\Rest\Server 类了。
+### 现在我们可以定义 `Application\Web\Rest\Server` 类了。
 
 你可能会惊讶于它的简单。实际工作是在相关的 API 类中完成的：
 
@@ -8616,11 +9155,9 @@ class Response extends AbstractHttp
 namespace Application\Web\Rest;
 
 use Application\Web\{ Request, Response, Received };
-
 class Server
 {
     protected $api;
-
     public function __construct(ApiInterface $api)
     {
         $this->api = $api;
@@ -8628,7 +9165,7 @@ class Server
 }
 ```
 
-### 接下来，我们定义一个 listen() 方法，作为请求的目标。
+### 接下来，我们定义一个 `listen()` 方法，作为请求的目标。
 
 服务器实现的核心是这行代码：
 
@@ -8689,7 +9226,7 @@ echo json_encode($response->getData());
 }
 ```
 
-### 8. processResponse() 方法设置头文件并确保结果被打包为 Application\Web\Response 对象：
+### 8. `processResponse()` 方法设置头文件并确保结果被打包为 `Application\Web\Response` 对象：
 
 ```php
 protected function processResponse($response)
@@ -8716,14 +9253,11 @@ protected function processResponse($response)
 
 ```php
 namespace Application\Web\Rest; 
-
 use Application\Web\{ Request, Response }; 
-
 abstract class AbstractApi implements ApiInterface 
 {
   const TOKEN_BYTE_SIZE = 16; 
   protected $registeredKeys; 
-
   abstract public function get(Request $request,
         Response $response);
   abstract public function put(Request $request,
@@ -8733,12 +9267,10 @@ abstract class AbstractApi implements ApiInterface
   abstract public function delete(Request $request,
         Response $response);
   abstract public function authenticate(Request $request); 
-
   public function __construct($registeredKeys, $tokenField)
   {
     $this->registeredKeys = $registeredKeys;
   } 
-
   public static function generateToken()
   {
     return bin2hex(random_bytes(self::TOKEN_BYTE_SIZE));
@@ -8750,9 +9282,7 @@ abstract class AbstractApi implements ApiInterface
 
 ```php
 namespace Application\Web\Rest; 
-
 use Application\Web\{ Request, Response }; 
-
 interface ApiInterface 
 {
   public function get(Request $request, Response $response); 
@@ -8765,32 +9295,28 @@ interface ApiInterface
 
 ## 访问 Web 服务
 
-### 11. 在此，我们展示一个基于 AbstractApi 的示例 API。
+### 11. 在此，我们展示一个基于 `AbstractApi` 的示例 API。
 
 此类利用了第 5 章 *Interacting with a Database* 中定义的数据库类：
 
 ```php
 namespace Application\Web\Rest;
-
 use Application\Web\{ Request, Response, Received };
 use Application\Entity\Customer;
 use Application\Database\{ Connection, CustomerService };
-
 class CustomerApi extends AbstractApi
 {
     const ERROR = 'ERROR';
     const ERROR_NOT_FOUND = 'ERROR: Not Found';
     const SUCCESS_UPDATE = 'SUCCESS: update succeeded';
     const SUCCESS_DELETE = 'SUCCESS: delete succeeded';
-    const ID_FIELD = 'id';         // field name of primary key
-    const TOKEN_FIELD = 'token';   // field used for authentication
+    const ID_FIELD = 'id';
+    const TOKEN_FIELD = 'token';
     const LIMIT_FIELD = 'limit';
     const OFFSET_FIELD = 'offset';
     const DEFAULT_LIMIT = 20;
     const DEFAULT_OFFSET = 0;
-
     protected $service;
-
     public function __construct($registeredKeys,
                                 $dbparams, $tokenField = NULL)
     {
@@ -8824,12 +9350,17 @@ if ($result) {
     $response->setData($result);
     $response->setStatus(Request::STATUS_200);
 } else {
-    $response->setData([self::ERROR_NOT_FOUND]);
-    $response->setStatus(Request::STATUS_500);
-}
 ```
 
-### 13. put() 方法用于插入客户数据：
+
+
+`$response->setData([self::ERROR_NOT_FOUND]);`
+
+`$response->setStatus(Request::STATUS_500);`
+
+}
+
+### 13. `put()` 方法用于插入客户数据：
 
 ```php
 public function put(Request $request, Response $response)
@@ -8847,7 +9378,7 @@ public function put(Request $request, Response $response)
 }
 ```
 
-### 14. post() 方法用于更新现有的客户条目：
+### 14. `post()` 方法用于更新现有的客户条目：
 
 ```php
 public function post(Request $request, Response $response)
@@ -8859,10 +9390,6 @@ public function post(Request $request, Response $response)
     $updateData = array_merge($custData, $reqData);
     $updateCust = Customer::arrayToEntity($updateData,
 ```
-
-
-
-
 
 ## 15. 顾名思义，`delete()` 方法用于删除客户条目：
 
@@ -8901,25 +9428,25 @@ public function authenticate(Request $request)
 
 定义以下类，这些类在之前的食谱中已经讨论过：
 
-- Application\Web\AbstractHttp
-- Application\Web\Request
-- Application\Web\Response
+- `Application\Web\AbstractHttp`
+- `Application\Web\Request`
+- `Application\Web\Response`
 
 然后，你可以定义本食谱中描述的以下类，如表中所示：
 
 | 类 | 在这些步骤中讨论 |
 | :--- | :--- |
-| Application\Web\Response | 2 |
-| Application\Web\Rest\Server | 3 - 8 |
-| Application\Web\Rest\AbstractApi | 9 |
-| Application\Web\Rest\ApiInterface | 10 |
-| Application\Web\Rest\CustomerApi | 11 - 16 |
+| `Application\Web\Response` | 2 |
+| `Application\Web\Rest\Server` | 3 - 8 |
+| `Application\Web\Rest\AbstractApi` | 9 |
+| `Application\Web\Rest\ApiInterface` | 10 |
+| `Application\Web\Rest\CustomerApi` | 11 - 16 |
 
 现在你可以自由开发自己的 API 类。然而，如果你选择遵循示例 `Application\Web\Rest\CustomerApi`，你也必须确保实现这些在第五章 *与数据库交互* 中涵盖的类：
 
-- Application\Entity\Customer
-- Application\Database\Connection
-- Application\Database\CustomerService
+- `Application\Entity\Customer`
+- `Application\Database\Connection`
+- `Application\Database\CustomerService`
 
 你现在可以定义一个 `chap_07_simple_rest_server.php` 脚本来调用 REST 服务器：
 
@@ -8973,80 +9500,80 @@ php -S localhost:8080 chap_07_simple_rest_server.php
 
 1. 首先要考虑的是识别 **WSDL** 文档。WSDL 是一个描述服务的 XML 文档：
 
-   ```php
-   $wsdl = 'http://graphical.weather.gov/xml/SOAP_server/'
-           . 'ndfdXMLserver.php?wsdl';
-   ```
+```php
+$wsdl = 'http://graphical.weather.gov/xml/SOAP_server/'
+        . 'ndfdXMLserver.php?wsdl';
+```
 
 2. 接下来，我们使用 WSDL 创建一个 *soap* 客户端实例：
 
-   ```php
-   $soap = new SoapClient($wsdl, array('trace' => TRUE));
-   ```
+```php
+$soap = new SoapClient($wsdl, array('trace' => TRUE));
+```
 
 3. 然后，我们可以自由地初始化一些变量，为天气预报请求做准备：
 
-   ```php
-   $units = 'm';
-   $params = '';
-   $numDays = 7;
-   $weather = '';
-   $format = '24 hourly';
-   $startTime = new DateTime();
-   ```
+```php
+$units = 'm';
+$params = '';
+$numDays = 7;
+$weather = '';
+$format = '24 hourly';
+$startTime = new DateTime();
+```
 
 4. 然后，我们可以发起一个 `LatLonListCityNames()` SOAP 请求，这在 WSDL 中被标识为一个操作，用于获取服务支持的城市列表。请求以 XML 格式返回，这建议创建一个 `SimpleXMLElement` 实例：
 
-   ```php
-   $xml = new SimpleXMLElement($soap->LatLonListCityNames());
-   ```
+```php
+$xml = new SimpleXMLElement($soap->LatLonListCityNames());
+```
 
 5. 不幸的是，城市列表及其对应的纬度和 longitude 位于不同的 XML 节点中。因此，我们使用 `array_combine()` PHP 函数创建一个关联数组，其中经纬度作为键，城市名称作为值。然后我们可以稍后使用此数组来呈现 HTML SELECT 下拉列表，使用 `asort()` 对列表进行字母排序：
 
-   ```php
-   $cityNames = explode('|', $xml->cityNameList);
-   $latLonCity = explode(' ', $xml->latLonList);
-   $cityLatLon = array_combine($latLonCity, $cityNames);
-   asort($cityLatLon);
-   ```
+```php
+$cityNames = explode('|', $xml->cityNameList);
+$latLonCity = explode(' ', $xml->latLonList);
+$cityLatLon = array_combine($latLonCity, $cityNames);
+asort($cityLatLon);
+```
 
 6. 然后，我们可以如下从 web 请求中获取城市数据：
 
-   ```php
-   $currentLatLon = (isset($_GET['city']) ? strip_tags(
-     urldecode($_GET['city'])) : '' ;
-   ```
+```php
+$currentLatLon = (isset($_GET['city']) ? strip_tags(
+  urldecode($_GET['city'])) : '' ;
+```
 
 7. 我们要发起的 SOAP 调用是 `NDFDgenByDay()`。我们可以通过检查 WSDL 来确定提供给 SOAP 服务器的参数的性质：
 
-   ```xml
-   <message name="NDFPDgenByDayRequest">
-     <part name="latitude" type="xsd:decimal"/>
-     <part name="longitude" type="xsd:decimal"/>
-     <part name="startDate" type="xsd:date"/>
-     <part name="numDays" type="xsd:integer"/>
-     <part name="Unit" type="xsd:string"/>
-     <part name="format" type="xsd:string"/>
-   </message>
-   ```
+```xml
+<message name="NDFPDgenByDayRequest">
+  <part name="latitude" type="xsd:decimal"/>
+  <part name="longitude" type="xsd:decimal"/>
+  <part name="startDate" type="xsd:date"/>
+  <part name="numDays" type="xsd:integer"/>
+  <part name="Unit" type="xsd:string"/>
+  <part name="format" type="xsd:string"/>
+</message>
+```
 
 8. 如果 `$currentLatLon` 的值已设置，我们可以处理该请求。我们将请求包裹在 `try {} catch {}` 块中，以防抛出任何异常：
 
-   ```php
-   if ($currentLatLon) {
-     list($lat, $lon) = explode(',', $currentLatLon);
-     try {
-       $weather = $soap->NDFDgenByDay($lat, $lon,
-         $startTime->format('Y-m-d'), $numDays, $unit, $format);
-     } catch (Exception $e) {
-       $weather = PHP_EOL;
-       $weather .= 'Latitude: ' . $lat . ' | Longitude: ' . $lon;
-       $weather .= 'ERROR' . PHP_EOL;
-       $weather = $e->getMessage() . PHP_EOL;
-       $weather .= $soap->__getLastResponse() . PHP_EOL;
-     }
-   }
-   ```
+```php
+if ($currentLatLon) {
+  list($lat, $lon) = explode(',', $currentLatLon);
+  try {
+    $weather = $soap->NDFDgenByDay($lat, $lon,
+      $startTime->format('Y-m-d'), $numDays, $unit, $format);
+  } catch (Exception $e) {
+    $weather = PHP_EOL;
+    $weather .= 'Latitude: ' . $lat . ' | Longitude: ' . $lon;
+    $weather .= 'ERROR' . PHP_EOL;
+    $weather = $e->getMessage() . PHP_EOL;
+    $weather .= $soap->__getLastResponse() . PHP_EOL;
+  }
+}
+```
 
 ## 工作原理...
 
@@ -9074,12 +9601,9 @@ php -S localhost:8080 chap_07_simple_rest_server.php
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_271_0.png)
 
-
-
-
 ## 参见
 
-关于 SOAP 和 REST 之间差异的良好讨论，请参考位于 [http://stackoverflow.com/questions/209905/representational-state-transfer-rest-and-simple-object-access-protocol-soap?lq=1](http://stackoverflow.com/questions/209905/representational-state-transfer-rest-and-simple-object-access-protocol-soap?lq=1) 的文章。
+关于 SOAP 和 REST 之间差异的良好讨论，请参考位于 `http://stackoverflow.com/questions/209905/representational-state-transfer-rest-and-simple-object-access-protocol-soap?lq=1` 的文章。
 
 ## 创建简单的 SOAP 服务器
 
@@ -9092,12 +9616,10 @@ php -S localhost:8080 chap_07_simple_rest_server.php
 ```php
 namespace Application\Web\Soap;
 use PDO;
-
 class ProspectsApi
 {
     protected $registerKeys;
     protected $pdo;
-
     public function __construct($pdo, $registeredKeys)
     {
         $this->pdo = $pdo;
@@ -9112,40 +9634,75 @@ class ProspectsApi
 public function get(array $request, array $response)
 {
     if (!($this->authenticate($request))) return FALSE;
-    $result = array();
-    $id = $request[self::ID_FIELD] ?? 0;
-    $email = $request[self::EMAIL_FIELD] ?? 0;
-    if ($id > 0) {
-        $result = $this->fetchById($id);
-        $response[self::ID_FIELD] = $id;
-    } elseif ($email) {
-        $result = $this->fetchByEmail($email);
-        $response[self::ID_FIELD] = $result[self::ID_FIELD] ?? 0;
-    } else {
-        $limit = $request[self::LIMIT_FIELD] ?? self::DEFAULT_LIMIT;
-        $offset = $request[self::OFFSET_FIELD] ?? self::DEFAULT_OFFSET;
-        $result = [];
-        foreach ($this->fetchAll($limit, $offset) as $row) {
-            $result[] = $row;
-        }
+```
+
+
+
+```php
+$result = array();
+
+$id = $request[self::ID_FIELD] ?? 0;
+
+$email = $request[self::EMAIL_FIELD] ?? 0;
+
+if ($id > 0) {
+
+    $result = $this->fetchById($id);
+
+    $response[self::ID_FIELD] = $id;
+
+} elseif ($email) {
+
+    $result = $this->fetchByEmail($email);
+
+    $response[self::ID_FIELD] = $result[self::ID_FIELD] ?? 0;
+
+} else {
+
+    $limit = $request[self::LIMIT_FIELD] ?? self::DEFAULT_LIMIT;
+
+    $offset = $request[self::OFFSET_FIELD] ?? self::DEFAULT_OFFSET;
+
+    $result = [];
+
+    foreach ($this->fetchAll($limit, $offset) as $row) {
+
+        $result[] = $row;
+
     }
 
-    $response = $this->processResponse($result, $response, self::SUCCESS, self::ERROR);
-    return $response;
+}
+
+$response = $this->processResponse($result, $response, self::SUCCESS, self::ERROR);
+
+return $response;
+
 }
 
 protected function processResponse($result, $response, $success_code, $error_code)
+
 {
+
     if ($result) {
+
         $response['data'] = $result;
+
         $response['code'] = $success_code;
+
         $response['status'] = self::STATUS_200;
+
     } else {
+
         $response['data'] = FALSE;
+
         $response['code'] = self::ERROR_NOT_FOUND;
+
         $response['status'] = self::STATUS_500;
+
     }
+
     return $response;
+
 }
 ```
 
@@ -9159,12 +9716,10 @@ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 xmlns:xs="http://www.w3.org/2001/XMLSchema"
 xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
-
 <wsdl:message name="getSoapIn">
 <wsdl:part name="request" type="tns:array" />
 <wsdl:part name="response" type="tns:array" />
 </wsdl:message>
-
 <wsdl:message name="getSoapOut">
 <wsdl:part name="return" type="tns:array" />
 </wsdl:message>
@@ -9198,19 +9753,15 @@ xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
 <?php
 define('DB_CONFIG_FILE', '../config/db.config.php');
 define('WSDL_FILENAME', __DIR__ . '/chap_07_wsdl.xml');
-
 if (isset($_GET['wsdl'])) {
     readfile(WSDL_FILENAME);
     exit;
 }
-
 $apiKey = include __DIR__ . '/api_key.php';
 require __DIR__ . '/../Application/Web/Soap/ProspectsApi.php';
 require __DIR__ . '/../Application/Database/Connection.php';
-
 use Application\Database\Connection;
 use Application\Web\Soap\ProspectsApi;
-
 $connection = new Application\Database\Connection(include __DIR__ . DB_CONFIG_FILE);
 $api = new Application\Web\Soap\ProspectsApi($connection->pdo, [$apiKey]);
 $server = new SoapServer(WSDL_FILENAME);
@@ -9282,55 +9833,52 @@ try {
 
 我们将以两个利用 **PHP 7** 中引入的新 **Unicode** 转义语法的食谱开始本章。之后，我们将介绍如何从浏览器数据确定 web 访问者的 **语言环境（locale）**。接下来的几个食谱将介绍创建一个语言环境类，这将允许你以特定于语言环境的形式表示数字、货币、日期和时间。最后，我们将涵盖展示如何生成国际化日历、处理重复事件以及在不使用 `gettext` 的情况下执行翻译的食谱。
 
-
-
-
 ## 在视图脚本中使用表情符号或 Emoji
 
 单词 **表情符号（emoticons）** 是 *情绪（emotion）* 和 *图标（icon）* 的组合词。**Emoji** 起源于日本，是另一个更大、被广泛使用的图标集合。这些图标就是那些在具有社交网络功能的网站上非常流行的小笑脸、微型忍者和“笑到在地上打滚”的图标。然而，在 PHP 7 之前，生成这些小东西简直是一项令人沮丧的练习。
 
 ### 如何操作...
 
-1.  首先，你需要知道你想要显示的图标的 Unicode 编码。在互联网上快速搜索一下，你就会找到几个出色的对照图表。
-    以下是 *止语（hear-no-evil）*、*不看（see-no-evil）* 和 *勿言（speak-no-evil）* 三个猴子图标的编码：
+1. 首先，你需要知道你想要显示的图标的 Unicode 编码。在互联网上快速搜索一下，你就会找到几个出色的对照图表。
+   以下是 *止语（hear-no-evil）*、*不看（see-no-evil）* 和 *勿言（speak-no-evil）* 三个猴子图标的编码：
 
-    U+1F648、U+1F649 和 U+1F64A
+   U+1F648、U+1F649 和 U+1F64A
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_280_0.png)
 
-2.  输出到浏览器的任何 Unicode 内容都必须被正确标识。这通常通过 meta 标签来实现。你应该将字符集设置为 UTF-8。以下是一个示例：
+2. 输出到浏览器的任何 Unicode 内容都必须被正确标识。这通常通过 meta 标签来实现。你应该将字符集设置为 UTF-8。以下是一个示例：
 
-    ```html
-    <head>
-        <title>PHP 7 Cookbook</title>
-        <meta http-equiv="content-type"
-        content="text/html;charset=utf-8" />
-    </head>
-    ```
+```html
+<head>
+    <title>PHP 7 Cookbook</title>
+    <meta http-equiv="content-type"
+    content="text/html;charset=utf-8" />
+</head>
+```
 
-3.  传统的方法是使用 HTML 来显示图标。因此，你可以这样做：
+3. 传统的方法是使用 HTML 来显示图标。因此，你可以这样做：
 
-    ```html
-    <table>
-        <tr>
-            <td>&#x1F648;</td>
-            <td>&#x1F649;</td>
-            <td>&#x1F64A;</td>
-        </tr>
-    </table>
-    ```
+```html
+<table>
+    <tr>
+        <td>&#x1F648;</td>
+        <td>&#x1F649;</td>
+        <td>&#x1F64A;</td>
+    </tr>
+</table>
+```
 
-4.  从 PHP 7 开始，你可以使用以下语法构建完整的 Unicode 字符：`"\u{xxxx}"`。这里有一个示例，使用的是与前一点相同的三个图标：
+4. 从 PHP 7 开始，你可以使用以下语法构建完整的 Unicode 字符：`"\u{xxxx}"`。这里有一个示例，使用的是与前一点相同的三个图标：
 
-    ```php
-    <table>
-        <tr>
-            <td><?php echo "\u{1F648}"; ?> </td>
-            <td><?php echo "\u{1F649}"; ?> </td>
-            <td><?php echo "\u{1F64A}"; ?> </td>
-        </tr>
-    </table>
-    ```
+```php
+<table>
+    <tr>
+        <td><?php echo "\u{1F648}"; ?> </td>
+        <td><?php echo "\u{1F649}"; ?> </td>
+        <td><?php echo "\u{1F64A}"; ?> </td>
+    </tr>
+</table>
+```
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_281_0.png)
 
@@ -9376,6 +9924,8 @@ try {
 </html>
 ```
 
+
+
 这是从 Firefox 中看到的输出结果：
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_282_0.png)
@@ -9390,39 +9940,39 @@ try {
 
 ### 如何操作...
 
-1.  某些语言是从右向左阅读，而不是从左向右阅读。例子包括希伯来语和阿拉伯语。在本例中，我们将展示如何使用 U+202E Unicode 字符（从右向左覆盖）来显示反向文本。以下代码行会打印出 *txtet desreveR*：
+1. 某些语言是从右向左阅读，而不是从左向右阅读。例子包括希伯来语和阿拉伯语。在本例中，我们将展示如何使用 U+202E Unicode 字符（从右向左覆盖）来显示反向文本。以下代码行会打印出 *txtet desreveR*：
 
-    ```php
-    echo "\u{202E}Reversed text";
-    echo "\u{202D}"; // returns output to left-to-right
-    ```
+```php
+echo "\u{202E}Reversed text";
+echo "\u{202D}"; // returns output to left-to-right
+```
 
-    完成时，别忘了调用从左向右覆盖字符 U+202D！
+完成时，别忘了调用从左向右覆盖字符 U+202D！
 
-2.  另一个需要考虑的因素是使用组合字符。一个例子是 ñ（n 字母上方带有波浪线 -- 悬浮在上）。它用于诸如 *mañana*（西班牙语中的早晨或明天，视语境而定）等单词中。存在一种 *组合字符*，由 Unicode 编码 U+00F1 表示。以下是其使用示例，它输出 *mañana*：
+2. 另一个需要考虑的因素是使用组合字符。一个例子是 ñ（n 字母上方带有波浪线 -- 悬浮在上）。它用于诸如 *mañana*（西班牙语中的早晨或明天，视语境而定）等单词中。存在一种 *组合字符*，由 Unicode 编码 U+00F1 表示。以下是其使用示例，它输出 *mañana*：
 
-    ```php
-    echo "ma\u{00F1}ana"; // shows mañana
-    ```
+```php
+echo "ma\u{00F1}ana"; // shows mañana
+```
 
-3.  然而，这可能会影响搜索可能性。想象一下，如果你的客户键盘上没有这个组合字符。如果他们输入 *man* 试图搜索 *mañana*，他们将无法找到结果。
+3. 然而，这可能会影响搜索可能性。想象一下，如果你的客户键盘上没有这个组合字符。如果他们输入 *man* 试图搜索 *mañana*，他们将无法找到结果。
 
-4.  能够访问 *完整 Unicode* 集提供了其他可能性。你可以不使用 *组合* 字符，而是使用原始字母 n 和 Unicode *组合* 代码的组合，后者会在字母上方放置一个悬浮的波浪线。在这个 echo 命令中，输出结果与之前相同。只有单词的形成方式不同：
+4. 能够访问 *完整 Unicode* 集提供了其他可能性。你可以不使用 *组合* 字符，而是使用原始字母 n 和 Unicode *组合* 代码的组合，后者会在字母上方放置一个悬浮的波浪线。在这个 `echo` 命令中，输出结果与之前相同。只有单词的形成方式不同：
 
-    ```php
-    echo "man\u{0303}ana"; // also shows mañana
-    ```
+```php
+echo "man\u{0303}ana"; // also shows mañana
+```
 
-5.  对于重音符号也可以应用类似的方法。考虑法语单词 *élève*（学生）。你可以使用组合字符来渲染它，或者使用 *组合* 代码将重音符号悬浮在字母上方。考虑以下两个示例。两个示例产生相同的输出，但渲染方式不同。
+5. 对于重音符号也可以应用类似的方法。考虑法语单词 *élève*（学生）。你可以使用组合字符来渲染它，或者使用 *组合* 代码将重音符号悬浮在字母上方。考虑以下两个示例。两个示例产生相同的输出，但渲染方式不同。
 
-    ```php
-    echo "\u{00E9}\u{006C}\u{00E8}\ve";
-    echo "e\u{0301}\u{006C}e\u{0300}ve";
-    ```
+```php
+echo "\u{00E9}\u{006C}\u{00E8}\ve";
+echo "e\u{0301}\u{006C}e\u{0300}ve";
+```
 
 ## 工作原理...
 
-创建一个名为 chap_08_control_and_combining_unicode.php 的文件。确保包含 meta 标签，以指示浏览器正在使用 UTF-8 字符编码：
+创建一个名为 `chap_08_control_and_combining_unicode.php` 的文件。确保包含 meta 标签，以指示浏览器正在使用 UTF-8 字符编码：
 
 ```html
 <!DOCTYPE html>
@@ -9465,77 +10015,76 @@ try {
 
 ### 如何操作...
 
-1.  为了封装区域设置功能，我们将假设有一个类，`Application\I18n\Locale`。我们将让该类继承一个现有的类，`Locale`，它是 PHP `Intl` 扩展的一部分。
+1. 为了封装区域设置功能，我们将假设有一个类，`Application\I18n\Locale`。我们将让该类继承一个现有的类，`Locale`，它是 PHP `Intl` 扩展的一部分。
 
-    > 注意
-    > **I18n** 是 **国际化（Internationalization）** 的常见缩写。（数一下字母的数量！）
+> 注意
+> **I18n** 是 **国际化（Internationalization）** 的常见缩写。（数一下字母的数量！）
 
-    ```php
-    namespace Application\I18n;
-    use Locale as PhpLocale;
-    class Locale extends PhpLocale
-    {
-        const FALLBACK_LOCALE = 'en';
-        // some code
-    }
-    ```
+```php
+namespace Application\I18n;
+use Locale as PhpLocale;
+class Locale extends PhpLocale
+{
+    const FALLBACK_LOCALE = 'en';
+    // some code
+}
+```
 
-2.  为了了解传入请求的样子，请使用 `phpinfo(INFO_VARIABLES)`。测试完成后请立即禁用此函数，因为它会向潜在的攻击者泄露过多信息：
+2. 为了了解传入请求的样子，请使用 `phpinfo(INFO_VARIABLES)`。测试完成后请立即禁用此函数，因为它会向潜在的攻击者泄露过多信息：
 
-    ```php
-    <?php phpinfo(INFO_VARIABLES); ?>
-    ```
+```php
+<?php phpinfo(INFO_VARIABLES); ?>
+```
 
-3.  区域设置信息存储在 `$_SERVER['HTTP_ACCEPT_LANGUAGE']` 中。其值将采取以下通用形式：`ll-CC,r1;q=0.n, ll-CC,r1;q=0.n`，如下表所述：
+3. 区域设置信息存储在 `$_SERVER['HTTP_ACCEPT_LANGUAGE']` 中。其值将采取以下通用形式：`ll-CC,r1;q=0.n, ll-CC,r1;q=0.n`，如下表所述：
 
-    | 缩写 | 含义 |
-    |---|---|
-    | ll | 表示语言的双字符小写代码。 |
-    | - | 在区域设置代码 ll-CC 中分隔语言和地区。 |
-    | CC | 表示地区的双字符大写代码。 |
-    | , | 分隔区域设置代码和回退 **根区域设置（root locale）** 代码（通常与语言代码相同）。 |
-    | r1 | 表示建议根区域设置的双字符小写代码。 |
-    | ; | 分隔区域设置信息和质量。如果缺失质量值，默认为 q=1（100%）概率；这是首选。 |
-    | q | 质量。 |
-    | 0.n | 0.00 到 1.0 之间的某个值。将此值乘以 100 即可得到该访问者实际上偏好此语言的百分比概率。 |
+| 缩写 | 含义 |
+|---|---|
+| ll | 表示语言的双字符小写代码。 |
+| - | 在区域设置代码 ll-CC 中分隔语言和地区。 |
+| CC | 表示地区的双字符大写代码。 |
+| , | 分隔区域设置代码和回退 **根区域设置（root locale）** 代码（通常与语言代码相同）。 |
+| r1 | 表示建议根区域设置的双字符小写代码。 |
+| ; | 分隔区域设置信息和质量。如果缺失质量值，默认为 q=1（100%）概率；这是首选。 |
+| q | 质量。 |
+| 0.n | 0.00 到 1.0 之间的某个值。将此值乘以 100 即可得到该访问者实际上偏好此语言的百分比概率。 |
 
-4.  列出的区域设置可能不止一个。例如，网站访问者的计算机上可能安装了多种语言。PHP Locale 类恰好有一个方法，`acceptFromHttp()`，它读取 `Accept-language` 头字符串并给我们所需的设置：
+4. 列出的区域设置可能不止一个。例如，网站访问者的计算机上可能安装了多种语言。PHP Locale 类恰好有一个方法，`acceptFromHttp()`，它读取 `Accept-language` 头字符串并给我们所需的设置：
 
-    ```php
-    protected $localeCode;
-    public function setLocaleCode($acceptLangHeader)
-    {
-        $this->localeCode =
-            $this->acceptFromHttp($acceptLangHeader);
-    }
-    ```
+```php
+protected $localeCode;
+public function setLocaleCode($acceptLangHeader)
+{
+    $this->localeCode =
+        $this->acceptFromHttp($acceptLangHeader);
+}
+```
 
-5.  然后我们可以定义适当的获取器。`getAcceptLanguage()` 方法返回来自 `$_SERVER['HTTP_ACCEPT_LANGUAGE']` 的值：
+5. 然后我们可以定义适当的获取器。`getAcceptLanguage()` 方法返回来自 `$_SERVER['HTTP_ACCEPT_LANGUAGE']` 的值：
 
-    ```php
-    public function getAcceptLanguage()
-    {
-        return $_SERVER['HTTP_ACCEPT_LANGUAGE'] ??
-               self::FALLBACK_LOCALE;
-    }
-    public function getLocaleCode()
-    {
-        return $this->localeCode;
-    }
-    ```
-
-
-
+```php
+public function getAcceptLanguage()
+{
+    return $_SERVER['HTTP_ACCEPT_LANGUAGE'] ??
+           self::FALLBACK_LOCALE;
+}
+public function getLocaleCode()
+{
+    return $this->localeCode;
+}
+```
 
 6. 接下来，我们定义一个构造函数，允许我们“手动”设置区域设置。否则，区域设置信息将从浏览器中获取：
+```php
 public function __construct($localeString = NULL)
 {
-if ($localeString) {
-$this->setLocaleCode($localeString);
-} else {
-$this->setLocaleCode($this->getAcceptLanguage());
+    if ($localeString) {
+        $this->setLocaleCode($localeString);
+    } else {
+        $this->setLocaleCode($this->getAcceptLanguage());
+    }
 }
-}
+```
 
 7. 现在来到重要的决策环节：如何处理这些信息！接下来的几个食谱将对此进行详细说明。
 
@@ -9551,9 +10100,9 @@ $this->setLocaleCode($this->getAcceptLanguage());
 - 预置的区域设置 fr-FR
 - 取自 RFC 2616 的字符串：da, en-gb;q=0.8, en;q=0.7
 
-将步骤 1 到 6 的代码放入名为 Locale.php 的文件中，该文件位于 Application\I18n 文件夹内。
+将步骤 1 到 6 的代码放入名为 `Locale.php` 的文件中，该文件位于 `Application\I18n` 文件夹内。
 
-接着，创建一个名为 chap_08_getting_locale_from_browser.php 的文件，该文件设置自动加载并使用新类：
+接着，创建一个名为 `chap_08_getting_locale_from_browser.php` 的文件，该文件设置自动加载并使用新类：
 
 ```php
 <?php
@@ -9568,7 +10117,7 @@ use Application\I18n\Locale;
 $locale = [NULL, 'fr-FR', 'da, en-gb;q=0.8, en;q=0.7'];
 ```
 
-最后，遍历这三个区域设置字符串，创建新类的实例。输出 getLocaleCode() 返回的值，以查看做出了何种选择：
+最后，遍历这三个区域设置字符串，创建新类的实例。输出 `getLocaleCode()` 返回的值，以查看做出了何种选择：
 
 ```php
 echo '<table>';
@@ -9603,18 +10152,18 @@ echo '</table>';
 
 ### 如何操作...
 
-在你能够以区域设置特定的方式表示数字之前，你需要确定区域设置。这可以通过使用上一个食谱中讨论的 Application\I18n\Locale 类来完成。区域设置可以手动设置，也可以从头部信息中获取。
+在你能够以区域设置特定的方式表示数字之前，你需要确定区域设置。这可以通过使用上一个食谱中讨论的 `Application\I18n\Locale` 类来完成。区域设置可以手动设置，也可以从头部信息中获取。
 
-- 接下来，我们将使用 NumberFormatter 类的 format() 方法，以区域设置特定的格式输出和解析数字。首先，我们添加一个属性，该属性将包含一个 NumberFormatter 类的实例：
+- 接下来，我们将使用 `NumberFormatter` 类的 `format()` 方法，以区域设置特定的格式输出和解析数字。首先，我们添加一个属性，该属性将包含一个 `NumberFormatter` 类的实例：
 
 ```php
 use NumberFormatter;
 protected $numberFormatter;
 ```
 
-我们最初的想法可能是考虑使用 PHP 函数 setlocale() 来生成根据区域设置格式化的数字。然而，这种遗留方法的问题是，所有内容都将基于此区域设置进行考虑。这可能会引入处理根据数据库规范存储的数据时的问题。setlocale() 的另一个问题是它基于过时的标准，包括 RFC 1766 和 ISO 639。最后，setlocale() 高度依赖操作系统的区域设置支持，这会使我们的代码缺乏可移植性。
+我们最初的想法可能是考虑使用 PHP 函数 `setlocale()` 来生成根据区域设置格式化的数字。然而，这种遗留方法的问题是，所有内容都将基于此区域设置进行考虑。这可能会引入处理根据数据库规范存储的数据时的问题。`setlocale()` 的另一个问题是它基于过时的标准，包括 RFC 1766 和 ISO 639。最后，`setlocale()` 高度依赖操作系统的区域设置支持，这会使我们的代码缺乏可移植性。
 
-- 通常，下一步将在构造函数中设置 $numberFormatter。但对于我们的 Application\I18n\Locale 类而言，这种方法的问题是会导致类结构头重脚轻，因为我们还需要进行货币和日期格式化。因此，我们添加一个 getter 方法，首先检查是否已经创建了 NumberFormatter 的实例。如果没有，则创建并返回一个实例。new NumberFormatter 的第一个参数是区域设置代码。第二个参数 NumberFormatter::DECIMAL 代表我们需要什么类型的格式化：
+- 通常，下一步将在构造函数中设置 `$numberFormatter`。但对于我们的 `Application\I18n\Locale` 类而言，这种方法的问题是会导致类结构头重脚轻，因为我们还需要进行货币和日期格式化。因此，我们添加一个 getter 方法，首先检查是否已经创建了 `NumberFormatter` 的实例。如果没有，则创建并返回一个实例。`new NumberFormatter` 的第一个参数是区域设置代码。第二个参数 `NumberFormatter::DECIMAL` 代表我们需要什么类型的格式化：
 
 ```php
 public function getNumberFormatter()
@@ -9649,7 +10198,7 @@ public function parseNumber($string)
 
 ## 工作原理...
 
-按照前面要点中的讨论，对 Application\I18n\Locale 类进行添加。然后你可以创建一个 chap_08_formatting_numbers.php 文件，该文件设置自动加载并使用此类：
+按照前面要点中的讨论，对 `Application\I18n\Locale` 类进行添加。然后你可以创建一个 `chap_08_formatting_numbers.php` 文件，该文件设置自动加载并使用此类：
 
 ```php
 <?php
@@ -9658,7 +10207,7 @@ public function parseNumber($string)
     use Application\I18n\Locale;
 ```
 
-对于这个示例，创建两个 Locale 实例，一个用于英国，另一个用于法国。你还可以指定一个大数用于测试：
+对于这个示例，创建两个 `Locale` 实例，一个用于英国，另一个用于法国。你还可以指定一个大数用于测试：
 
 ```php
 $localeFr = new Locale('fr_FR');
@@ -9667,7 +10216,7 @@ $number   = 1234567.89;
 ?>
 ```
 
-最后，你可以将 formatNumber() 和 parseNumber() 方法包裹在合适的 HTML 显示逻辑中并查看结果：
+最后，你可以将 `formatNumber()` 和 `parseNumber()` 方法包裹在合适的 HTML 显示逻辑中并查看结果：
 
 ```html
 <!DOCTYPE html>
@@ -9691,25 +10240,50 @@ $number   = 1234567.89;
     </tr>
     <tr>
       <th>UK Format</th>
+
+
+
+```html
       <td><?=$localeUk->formatNumber($number); ?></td>
+
     </tr>
+
     <tr>
+
       <th>UK Parse French Number: <?=$localeFr->formatNumber($number) ?></th>
+
       <td><?=$localeUk->parseNumber($localeFr->formatNumber($number)); ?></td>
+
     </tr>
+
     <tr>
+
       <th>UK Parse UK Number: <?=$localeUk->formatNumber($number) ?></th>
+
       <td><?=$localeUk->parseNumber($localeUk->formatNumber($number)); ?></td>
+
     </tr>
+
     <tr>
+
       <th>FR Parse FR Number: <?=$localeFr->formatNumber($number) ?></th>
+
       <td><?=$localeFr->parseNumber($localeFr->formatNumber($number)); ?></td>
+
     </tr>
+
     <tr>
+
       <th>FR Parse UK Number: <?=$localeUk->formatNumber($number) ?></th>
+
       <td><?=$localeFr->parseNumber($localeUk->formatNumber($number)); ?></td>
-    </table>
+
+    </tr>
+
+    <table>
+
   </body>
+
 </html>
 ```
 
@@ -9728,16 +10302,15 @@ $number   = 1234567.89;
 
 处理货币的技术与处理数字类似。我们甚至会使用同一个 `NumberFormatter` 类！然而，有一个主要区别，这是一个阻碍因素；为了正确格式化货币，你需要手头有货币代码。
 
-
-
-
 ## 如何做...
 
--   首要任务是让货币代码以某种格式可用。一种可能性是简单地将货币代码作为 `Application\I18n\Locale` 类的构造器参数添加：
+- 首要任务是让货币代码以某种格式可用。一种可能性是简单地将货币代码作为 `Application\I18n\Locale` 类的构造器参数添加：
 
 ```php
 const FALLBACK_CURRENCY = 'GBP';
+
 protected $currencyCode;
+
 public function __construct($localeString = NULL,
     $currencyCode = NULL)
 {
@@ -9749,10 +10322,11 @@ public function __construct($localeString = NULL,
 
 > 这种方法虽然显然稳固且可行，但往往落入所谓*折中措施或走捷径*的类别。这种方法还往往会消除全自动化，因为货币代码无法从 HTTP 头部获取。正如你从本书其他章节中可能意识到的那样，我们并不回避更复杂的解决方案，因此，俗话说，*系好安全带！*
 
--   我们首先需要建立某种查找机制，以便给定一个国家代码，就能获取其主要货币代码。为了说明这一点，我们将使用适配器（Adapter）软件设计模式。根据该模式，我们应该能够创建不同的类，这些类潜在地可以以完全不同的方式运行，但产生相同的结果。相应地，我们需要定义期望的结果。为此，我们引入了一个类，`Application\I18n\IsoCodes`。如你所见，该类具有所有相关属性，以及一种通用的构造器：
+- 我们首先需要建立某种查找机制，以便给定一个国家代码，就能获取其主要货币代码。为了说明这一点，我们将使用适配器（Adapter）软件设计模式。根据该模式，我们应该能够创建不同的类，这些类潜在地可以以完全不同的方式运行，但产生相同的结果。相应地，我们需要定义期望的结果。为此，我们引入了一个类，`Application\I18n\IsoCodes`。如你所见，该类具有所有相关属性，以及一种通用的构造器：
 
 ```php
 namespace Application\I18n;
+
 class IsoCodes
 {
     public $name;
@@ -9766,7 +10340,6 @@ class IsoCodes
     public function __construct(array $data)
 {
     $vars = get_object_vars($this);
-
     foreach ($vars as $key => $value) {
         $this->$key = $data[$key] ?? NULL;
     }
@@ -9774,7 +10347,7 @@ class IsoCodes
 }
 ```
 
--   接下来我们定义一个接口，该接口包含我们执行*国家代码到货币代码*查找所需的方法。在这种情况下，我们引入了 `Application\I18n\IsoCodesInterface`：
+- 接下来我们定义一个接口，该接口包含我们执行*国家代码到货币代码*查找所需的方法。在这种情况下，我们引入了 `Application\I18n\IsoCodesInterface`：
 
 ```php
 namespace Application\I18n;
@@ -9786,7 +10359,7 @@ interface IsoCodesInterface
 }
 ```
 
--   现在我们要准备构建一个查找适配器类，我们将其命名为 `Application\I18n\IsoCodesDb`。它实现了上述接口，并接受一个 `Application\Database\Connection` 实例（参见*第 1 章，构建基础*），用于执行查找。构造器设置所需的信息，包括连接、查找表名称以及代表 ISO2 代码的列。接口要求的查找方法随后发出一个 SQL 语句并返回一个数组，该数组随后用于构建一个 `IsoCodes` 实例：
+- 现在我们要准备构建一个查找适配器类，我们将其命名为 `Application\I18n\IsoCodesDb`。它实现了上述接口，并接受一个 `Application\Database\Connection` 实例（参见*第 1 章，构建基础*），用于执行查找。构造器设置所需的信息，包括连接、查找表名称以及代表 ISO2 代码的列。接口要求的查找方法随后发出一个 SQL 语句并返回一个数组，该数组随后用于构建一个 `IsoCodes` 实例：
 
 ```php
 namespace Application\I18n;
@@ -9819,32 +10392,30 @@ class IsoCodesDb implements IsoCodesInterface
 }
 ```
 
--   现在我们将注意力转回 `Application\I18n\Locale` 类。我们首先添加几个新的属性和类常量：
+- 现在我们将注意力转回 `Application\I18n\Locale` 类。我们首先添加几个新的属性和类常量：
 
 ```php
 const ERROR_UNABLE_TO_PARSE = 'ERROR: Unable to parse';
 const FALLBACK_CURRENCY = 'GBP';
-
 protected $currencyFormatter;
 protected $currencyLookup;
 protected $currencyCode;
 ```
 
--   我们添加了一个新方法，用于从区域设置字符串中检索国家代码。我们可以利用 `getRegion()` 方法，它来自 `PHP\Locale` 类（我们继承自该类）。以防万一需要，我们还添加了一个方法，`getCurrencyCode()`：
+- 我们添加了一个新方法，用于从区域设置字符串中检索国家代码。我们可以利用 `getRegion()` 方法，它来自 `PHP\Locale` 类（我们继承自该类）。以防万一需要，我们还添加了一个方法，`getCurrencyCode()`：
 
 ```php
 public function getCountryCode()
 {
     return $this->getRegion($this->getLocaleCode());
 }
-
 public function getCurrencyCode()
 {
     return $this->currencyCode;
 }
 ```
 
--   与数字格式化一样，我们定义了一个 `getCurrencyFormatter()`，就像之前定义 `getNumberFormatter()` 那样。注意，`$currencyFormatter` 是使用 `NumberFormatter` 定义的，但第二个参数不同：
+- 与数字格式化一样，我们定义了一个 `getCurrencyFormatter()`，就像之前定义 `getNumberFormatter()` 那样。注意，`$currencyFormatter` 是使用 `NumberFormatter` 定义的，但第二个参数不同：
 
 ```php
 public function getCurrencyFormatter()
@@ -9858,7 +10429,7 @@ public function getCurrencyFormatter()
 }
 ```
 
--   如果已定义查找类，则我们在类构造器中添加货币代码查找：
+- 如果已定义查找类，则我们在类构造器中添加货币代码查找：
 
 ```php
 public function __construct($localeString = NULL,
@@ -9878,7 +10449,7 @@ public function __construct($localeString = NULL,
 }
 ```
 
--   然后添加相应的货币格式化和解析方法。注意，与解析数字不同，解析货币如果在解析操作不成功时会返回 FALSE：
+- 然后添加相应的货币格式化和解析方法。注意，与解析数字不同，解析货币如果在解析操作不成功时会返回 FALSE：
 
 ```php
 public function formatCurrency($currency)
@@ -9886,7 +10457,6 @@ public function formatCurrency($currency)
     return $this->getCurrencyFormatter()
         ->formatCurrency($currency, $this->currencyCode);
 }
-
 public function parseCurrency($string)
 {
     $result = $this->getCurrencyFormatter()
@@ -9956,7 +10526,7 @@ $number = 1234567.89;
 
 ## 另见
 
--   最新的货币代码列表由**ISO（国际标准化组织）**维护。你可以以**XML**或**XLS**（即**Microsoft Excel**电子表格格式）获取此列表。这里是可以找到这些列表的页面：http://www.currency-iso.org/en/home/tables/table-al.html。
+- 最新的货币代码列表由**ISO（国际标准化组织）**维护。你可以以**XML**或**XLS**（即**Microsoft Excel**电子表格格式）获取此列表。这里是可以找到这些列表的页面：http://www.currency-iso.org/en/home/tables/table-al.html。
 
 ## 按区域设置格式化日期/时间
 
@@ -9964,37 +10534,40 @@ $number = 1234567.89;
 
 ## 如何做...
 
--   首先，我们需要修改 `Application\I18n\Locale`，添加使用日期格式化类的语句：
-  ```php
-  use IntlCalendar;
-  use IntlDateFormatter;
-  ```
-
-
-
-
+- 首先，我们需要修改 `Application\I18n\Locale`，添加使用日期格式化类的语句：
+```php
+use IntlCalendar;
+use IntlDateFormatter;
+```
 
 ## 处理日期/时间和国际方面
 
 2. 接下来，我们添加一个属性来表示 `IntlDateFormatter` 实例，以及一系列预定义的常量：
-
 ```php
-const DATE_TYPE_FULL = IntlDateFormatter::FULL;
-const DATE_TYPE_LONG = IntlDateFormatter::LONG;
-const DATE_TYPE_MEDIUM = IntlDateFormatter::MEDIUM;
-const DATE_TYPE_SHORT = IntlDateFormatter::SHORT;
 
-const ERROR_UNABLE_TO_PARSE = 'ERROR: Unable to parse';
-const ERROR_UNABLE_TO_FORMAT = 'ERROR: Unable to format date';
-const ERROR_ARGS_STRING_ARRAY = 'ERROR: Date must be string YYYY-mm-dd HH:ii:ss or array(y,m,d,h,i,s)';
-const ERROR_CREATE_INTL_DATE_FMT = 'ERROR: Unable to create international date formatter';
-```
+
+
+`const DATE_TYPE_FULL = IntlDateFormatter::FULL;`
+
+`const DATE_TYPE_LONG = IntlDateFormatter::LONG;`
+
+`const DATE_TYPE_MEDIUM = IntlDateFormatter::MEDIUM;`
+
+`const DATE_TYPE_SHORT = IntlDateFormatter::SHORT;`
+
+`const ERROR_UNABLE_TO_PARSE = 'ERROR: Unable to parse';`
+
+`const ERROR_UNABLE_TO_FORMAT = 'ERROR: Unable to format date';`
+
+`const ERROR_ARGS_STRING_ARRAY = 'ERROR: Date must be string YYYY-mm-dd HH:ii:ss or array(y,m,d,h,i,s)';`
+
+`const ERROR_CREATE_INTL_DATE_FMT = 'ERROR: Unable to create international date formatter';`
 
 ```php
 protected $dateFormatter;
 ```
 
-3. 之后，我们就可以定义一个方法 `getDateFormatter()`，它返回一个 `IntlDateFormatter` 实例。`$type` 的值与之前定义的 `DATE_TYPE_` 常量之一相匹配：
+### 3. 之后，我们就可以定义一个方法 `getDateFormatter()`，它返回一个 `IntlDateFormatter` 实例。`$type` 的值与之前定义的 `DATE_TYPE_` 常量之一相匹配：
 
 ```php
 public function getDateFormatter($type)
@@ -10036,7 +10609,7 @@ public function getDateFormatter($type)
 }
 ```
 
-4. 接下来我们定义一个生成区域格式化日期的方法。定义传入的 `$date` 的格式有点棘手。它不能是特定区域的，否则我们需要根据区域规则对其进行解析，结果是不可预测的。更好的策略是接受一个表示年、月、日等值的整数数组。作为后备方案，我们将接受字符串，但仅限于此格式：`YYYY-mm-dd HH:ii:ss`。时区是可选的，可以单独设置。首先我们初始化变量：
+### 4. 接下来我们定义一个生成区域格式化日期的方法。定义传入的 `$date` 的格式有点棘手。它不能是特定区域的，否则我们需要根据区域规则对其进行解析，结果是不可预测的。更好的策略是接受一个表示年、月、日等值的整数数组。作为后备方案，我们将接受字符串，但仅限于此格式：`YYYY-mm-dd HH:ii:ss`。时区是可选的，可以单独设置。首先我们初始化变量：
 
 ```php
 public function formatDate($date, $type, $timeZone = NULL)
@@ -10050,7 +10623,7 @@ public function formatDate($date, $type, $timeZone = NULL)
     $seconds = 0;
 ```
 
-5. 然后我们生成一个分解表示年、月、日等值的值列表：
+### 5. 然后我们生成一个分解表示年、月、日等值的值列表：
 
 ```php
 if (is_string($date)) {
@@ -10064,14 +10637,14 @@ if (is_string($date)) {
 }
 ```
 
-6. 接下来我们创建一个 `IntlCalendar` 实例，它将在运行 `format()` 时作为参数使用。我们使用离散的整数值设置日期：
+### 6. 接下来我们创建一个 `IntlCalendar` 实例，它将在运行 `format()` 时作为参数使用。我们使用离散的整数值设置日期：
 
 ```php
 $intDate = IntlCalendar::createInstance($timeZone, $this->getLocaleCode());
 $intDate->set($year, $month, $day, $hour, $minutes, $seconds);
 ```
 
-7. 最后，我们获取日期格式化器实例，并生成结果：
+### 7. 最后，我们获取日期格式化器实例，并生成结果：
 
 ```php
 $formatter = $this->getDateFormatter($type);
@@ -10082,7 +10655,7 @@ $result = $formatter->format($intDate);
 return $result ?? self::ERROR_UNABLE_TO_FORMAT;
 ```
 
-8. `parseDate()` 方法实际上比格式化更简单。唯一的复杂之处在于如果未指定类型该怎么做（这将是可能的情况）。我们只需要循环遍历所有可能的类型（只有四种），直到产生结果：
+### 8. `parseDate()` 方法实际上比格式化更简单。唯一的复杂之处在于如果未指定类型该怎么做（这将是可能的情况）。我们只需要循环遍历所有可能的类型（只有四种），直到产生结果：
 
 ```php
 public function parseDate($string, $type = NULL)
@@ -10116,7 +10689,6 @@ public function parseDate($string, $type = NULL)
 require __DIR__ . '/../Application/Autoload/Loader.php';
 Application\Autoload\Loader::init(__DIR__ . '/../');
 use Application\I18n\Locale;
-
 $localeFr = new Locale('fr-FR');
 $localeUs = new Locale('en_US');
 $date = '2016-02-29 17:23:58';
@@ -10146,20 +10718,17 @@ $localeUs->parseDate($localeFr->formatDate($date, Locale::DATE_TYPE_MEDIUM));
 
 ### 操作方式...
 
-1. 首先，我们需要创建一个通用类，用于保存单日的信息。最初，它只保存一个整数值 `$dayOfMonth`。稍后，在下一个食谱中，我们将扩展它以包含事件。由于该类的主要目的是产生 `$dayOfMonth`，我们将把这个值纳入其构造函数，并定义 `__invoke()` 也返回这个值：
+#### 1. 首先，我们需要创建一个通用类，用于保存单日的信息。最初，它只保存一个整数值 `$dayOfMonth`。稍后，在下一个食谱中，我们将扩展它以包含事件。由于该类的主要目的是产生 `$dayOfMonth`，我们将把这个值纳入其构造函数，并定义 `__invoke()` 也返回这个值：
 
 ```php
 namespace Application\I18n;
-
 class Day
 {
     public $dayOfMonth;
-
     public function __construct($dayOfMonth)
     {
         $this->dayOfMonth = $dayOfMonth;
     }
-
     public function __invoke()
     {
         return $this->dayOfMonth ?? '';
@@ -10167,13 +10736,11 @@ class Day
 }
 ```
 
-2. 创建一个新类，其中将包含适当的日历生成方法。它将接受 `Application\I18n\Locale` 的实例，并定义一些类常量和属性。格式代码，例如 **EEEE** 和 **MMMM**，取自 ICU 日期格式：
+#### 2. 创建一个新类，其中将包含适当的日历生成方法。它将接受 `Application\I18n\Locale` 的实例，并定义一些类常量和属性。格式代码，例如 `EEEE` 和 `MMMM`，取自 ICU 日期格式：
 
 ```php
 namespace Application\I18n;
-
 use IntlCalendar;
-
 class Calendar
 {
     const DAY_1 = 'EEEE';     // T
@@ -10186,22 +10753,19 @@ class Calendar
     const DEFAULT_ACROSS = 3;
     const HEIGHT_FULL = '150px';
     const HEIGHT_SMALL = '60px';
-
     protected $locale;
     protected $dateFormatter;
     protected $yearArray;
     protected $height;
-
     public function __construct(Locale $locale)
     {
         $this->locale = $locale;
     }
-
     // 其他方法在以下要点中讨论
 }
 ```
 
-3. 然后我们定义一个方法，从我们的区域类返回一个 `IntlDateFormatter` 实例。它存储在一个类属性中，因为它将被频繁使用：
+#### 3. 然后我们定义一个方法，从我们的区域类返回一个 `IntlDateFormatter` 实例。它存储在一个类属性中，因为它将被频繁使用：
 
 ```php
 protected function getDateFormatter()
@@ -10213,7 +10777,7 @@ protected function getDateFormatter()
 }
 ```
 
-4. 接下来我们定义一个核心方法 `buildMonthArray()`，它创建一个多维数组，其中外层键是年中的周，内层数组是代表星期几的七个元素。我们接受年份、月份和可选时区作为参数。注意，作为变量初始化的一部分，我们从月份中减去 1。这是因为 `IntlCalendar::set()` 方法期望月份为基于 0 的值，其中 0 代表一月，1 代表二月，依此类推：
+#### 4. 接下来我们定义一个核心方法 `buildMonthArray()`，它创建一个多维数组，其中外层键是年中的周，内层数组是代表星期几的七个元素。我们接受年份、月份和可选时区作为参数。注意，作为变量初始化的一部分，我们从月份中减去 1。这是因为 `IntlCalendar::set()` 方法期望月份为基于 0 的值，其中 0 代表一月，1 代表二月，依此类推：
 
 ```php
 public function buildMonthArray($year, $month, $timeZone = NULL)
@@ -10226,11 +10790,9 @@ public function buildMonthArray($year, $month, $timeZone = NULL)
 }
 ```
 
+#### 5. 然后，我们创建一个 `IntlCalendar` 实例，并使用它来确定该月有多少天：
 
-
-
-5. 然后，我们创建一个 `IntlCalendar` 实例，并使用它来确定该月有多少天：
-```
+```php
 $cal = IntlCalendar::createInstance(
     $timeZone, $this->locale()->getLocaleCode());
 $cal->set($year, $month, $day);
@@ -10238,15 +10800,17 @@ $maxDaysInMonth = $cal
     ->getActualMaximum(IntlCalendar::FIELD_DAY_OF_MONTH);
 ```
 
-6. 之后，我们使用我们的 `IntlDateFormatter` 实例来确定该月 1 日对应星期几。然后，我们将模式设置为 `w`，这将随后为我们提供周数：
-```
+#### 6. 之后，我们使用我们的 `IntlDateFormatter` 实例来确定该月 1 日对应星期几。然后，我们将模式设置为 `w`，这将随后为我们提供周数：
+
+```php
 $formatter = $this->getDateFormatter();
 $formatter->setPattern('e');
 $firstDayIsWhatDow = $formatter->format($cal);
 ```
 
-7. 现在，我们准备使用嵌套循环遍历该月的所有日期。外部的 `while()` 循环确保我们不会超出该月的结束日期。内部循环表示星期中的每一天。你会注意到，我们利用了 `IntlCalendar::get()`，它允许我们从广泛的预定义字段中检索值。此外，如果年度周数超过 52，我们还会将年度周数值调整为 0：
-```
+#### 7. 现在，我们准备使用嵌套循环遍历该月的所有日期。外部的 `while()` 循环确保我们不会超出该月的结束日期。内部循环表示星期中的每一天。你会注意到，我们利用了 `IntlCalendar::get()`，它允许我们从广泛的预定义字段中检索值。此外，如果年度周数超过 52，我们还会将年度周数值调整为 0：
+
+```php
 while ($day <= $maxDaysInMonth) {
     for ($dow = 1; $dow <= 7; $dow++) {
         $cal->set($year, $month, $day);
@@ -10255,28 +10819,47 @@ while ($day <= $maxDaysInMonth) {
         if ($weekOfYear > 52) $weekOfYear = 0;
 ```
 
+
+
 8. 然后，我们检查 `$first` 数组是否仍然设置为 TRUE。如果是，我们开始向日度中添加日期数字。否则，数组值被设置为 `NULL`。然后，我们关闭所有未关闭的语句并返回数组。请注意，我们还需要确保内部循环不会超出该月的天数，因此在外部的 `else` 子句中有一个额外的 `if()` 语句。
 
 > 请注意，我们没有仅仅存储月中日期的值，而是使用了新定义的 `Application\I18n\Day` 类。
 
-```
+```php
 if ($first) {
+
     if ($dow == $firstDayIsWhatDow) {
+
         $first = FALSE;
+
         $value = $day++;
+
     } else {
+
         $value = NULL;
+
     }
+
 } else {
+
     if ($day <= $maxDaysInMonth) {
+
         $value = $day++;
+
     } else {
+
         $value = NULL;
+
     }
+
 }
+
 $monthArray[$weekOfYear][$dow] = new Day($value);
+
 }
+
 return $monthArray;
+
 }
 ```
 
@@ -10284,7 +10867,7 @@ return $monthArray;
 
 1. 首先，是一系列小型方法，从一个基于类型提取国际化格式化的日期开始。该类型决定了我们是提供日期的完整名称、缩写还是单个字母，且都适合该语言环境：
 
-```
+```php
 protected function getDay($type, $cal)
 {
     $formatter = $this->getDateFormatter();
@@ -10295,7 +10878,7 @@ protected function getDay($type, $cal)
 
 2. 接下来，我们需要一个方法返回包含日期名称的 HTML 行，该方法调用新定义的 `getDay()` 方法。如前所述，类型决定了日期的显示方式：
 
-```
+```php
 protected function getWeekHeaderRow($type, $cal, $year, $month, $week)
 {
     $output = '<tr>';
@@ -10313,7 +10896,7 @@ protected function getWeekHeaderRow($type, $cal, $year, $month, $week)
 
 3. 之后，我们定义了一个非常简单的方法来返回一行周日期。请注意，我们利用 `Day::__invoke()`，通过 `$day()` 实现：
 
-```
+```php
 protected function getWeekDaysRow($week)
 {
     $output = '<tr style="height: ' . $this->height . ';">';
@@ -10330,7 +10913,7 @@ protected function getWeekDaysRow($week)
 
 4. 最后，是一个将较小方法组合起来为单个月份生成日历的方法。首先我们构建月份数组，但仅在 `$yearArray` 尚不可用时才执行：
 
-```
+```php
 public function calendarForMonth($year,
                                   $month,
                                   $timeZone = NULL,
@@ -10346,7 +10929,7 @@ public function calendarForMonth($year,
 
 5. 月份需要递减 1，因为 `IntlCalendar` 的月份是从 0 开始的：`Jan = 0`，`Feb = 1`，以此类推。然后，我们使用时区（如果存在）和语言环境构建一个 `IntlCalendar` 实例。接下来，我们创建一个 `IntlDateFormatter` 实例，以根据语言环境检索月份名称和其他信息：
 
-```
+```php
 $month--;
 $cal = IntlCalendar::createInstance(
         $timeZone, $this->locale->getLocaleCode());
@@ -10357,7 +10940,7 @@ $formatter->setPattern($monthType);
 
 6. 然后，我们遍历月份数组，并调用刚刚提到的较小方法来构建最终输出：
 
-```
+```php
 $this->height = ($dayType == self::DAY_FULL)
                 ? self::HEIGHT_FULL : self::HEIGHT_SMALL;
 $html = '<h1>' . $formatter->format($cal) . '</h1>';
@@ -10377,7 +10960,7 @@ return $html;
 
 7. 为了生成整年的日历，只需循环遍历 1 到 12 月即可。为了便于外部访问，我们首先定义一个方法来构建年数组：
 
-```
+```php
 public function buildYearArray($year, $timeZone = NULL)
 {
     $this->yearArray = array();
@@ -10387,16 +10970,15 @@ public function buildYearArray($year, $timeZone = NULL)
     }
     return $this->yearArray;
 }
-
 public function getYearArray()
 {
     return $this->yearArray;
 }
 ```
 
-8. 为了生成某年的日历，我们定义一个方法 calendarForYear()。如果年数组尚未构建，我们调用 buildYearArray()。我们考虑希望横向显示多少个月份日历，然后调用 calendarForMonth()：
+8. 为了生成某年的日历，我们定义一个方法 `calendarForYear()`。如果年数组尚未构建，我们调用 `buildYearArray()`。我们考虑希望横向显示多少个月份日历，然后调用 `calendarForMonth()`：
 
-```
+```php
 public function calendarForYear($year,
     $timeZone = NULL,
     $dayType = self::DAY_1,
@@ -10413,7 +10995,7 @@ public function calendarForYear($year,
         $output .= '<tr>';
         for ($x = 1; $x <= $across; $x++) {
             $output .= '<td style="vertical-align:top;'
-                . ' width=' . $width . '">' 
+                . ' width=' . $width . '">'
                 . $this->calendarForMonth($year, $month,
                     $timeZone, $dayType, $monthType,
                     $this->yearArray[$year][$month++]) . '</td>';
@@ -10427,17 +11009,16 @@ public function calendarForYear($year,
 
 ## 工作原理...
 
-首先，请确保你构建了在之前的配方中定义的 Application\Ii8n\Locale 类。之后，在 Application\Ii8n 文件夹中创建一个新文件 Calendar.php，包含本配方中描述的所有方法。
+首先，请确保你构建了在之前的配方中定义的 `Application\Ii8n\Locale` 类。之后，在 `Application\I18n` 文件夹中创建一个新文件 `Calendar.php`，包含本配方中描述的所有方法。
 
-接下来，定义一个调用程序 chap_08_html_calendar.php，该程序设置自动加载并创建 Locale 和 Calendar 实例。还要注意定义年份和月份：
+接下来，定义一个调用程序 `chap_08_html_calendar.php`，该程序设置自动加载并创建 `Locale` 和 `Calendar` 实例。还要注意定义年份和月份：
 
-```
+```php
 <?php
 require __DIR__ . '/../Application/Autoload/Loader.php';
 Application\Autoload\Loader::init(__DIR__ . '/..');
 use Application\Ii8n\Locale;
 use Application\Ii8n\Calendar;
-
 $localeFr = new Locale('fr_FR');
 $localeUs = new Locale('en_US');
 $localeTh = new Locale('th_TH');
@@ -10448,9 +11029,6 @@ $year = 2016;
 $month = 1;
 ?>
 ```
-
-
-
 
 ## 处理日期/时间以及国际化相关内容
 
@@ -10503,199 +11081,208 @@ echo $calendarEs->calendarForYear($year);
 
 - 1. 首先，创建一个表示事件的类是一个绝佳的主意。最终你很可能需要将此类中的数据存储在数据库中。但为了说明，我们将简单地定义该类，并将数据库方面留待你的想象。你会注意到，我们将使用 `DateTime` 扩展中包含的一系列非常适合事件生成的类：
 
-  ```php
-  namespace Application\Libn;
-
-  use DateTime;
-  use DatePeriod;
-  use DateInterval;
-  use InvalidArgumentException;
-
-  class Event
-  {
-      // code
-  }
-  ```
+```php
+namespace Application\Libn;
+use DateTime;
+use DatePeriod;
+use DateInterval;
+use InvalidArgumentException;
+class Event
+{
+    // code
+}
+```
 
 - 2. 接下来，我们定义一系列有用的类常量和属性。你会注意到，为了减少所需的 getter 和 setter 数量，我们将大多数属性定义为 public。间隔被定义为 `sprintf()` 格式字符串；`%d` 将被替换为某个值：
 
-  ```php
-  const INTERVAL_DAY = 'P%dD';
-  const INTERVAL_WEEK = 'P%dW';
-  const INTERVAL_MONTH = 'P%dM';
-  const FLAG_FIRST = 'FIRST';       // 1st of the month
-  const ERROR_INVALID_END = 'Need to supply either # occurrences or an end date';
-  const ERROR_INVALID_DATE = 'String i.e. YYYY-mm-dd or DateTime instance only';
-  const ERROR_INVALID_INTERVAL = 'Interval must take the form "P\d+(D | W | M)"';
-
-  public $id;
-  public $flag;
-  public $value;
-  public $title;
-  public $locale;
-  public $interval;
-  public $description;
-  public $occurrences;
-  public $nextDate;
-  protected $endDate;
-  protected $startDate;
-  ```
+```php
+const INTERVAL_DAY = 'P%dD';
+const INTERVAL_WEEK = 'P%dW';
+const INTERVAL_MONTH = 'P%dM';
+const FLAG_FIRST = 'FIRST';       // 1st of the month
+const ERROR_INVALID_END = 'Need to supply either # occurrences or an end date';
+const ERROR_INVALID_DATE = 'String i.e. YYYY-mm-dd or DateTime instance only';
+const ERROR_INVALID_INTERVAL = 'Interval must take the form "P\d+(D | W | M)"';
+public $id;
+public $flag;
+public $value;
+public $title;
+public $locale;
+public $interval;
+public $description;
+public $occurrences;
+public $nextDate;
+protected $endDate;
+protected $startDate;
+```
 
 - 3. 接下来，我们把注意力转向构造函数。我们需要收集并设置与事件相关的所有信息。变量名称不言自明。
 
-  > $value 并不那么明显。此参数最终将被替换为间隔格式字符串中的值。例如，如果用户将 $interval 选为 INTERVAL_DAY，将 $value 选为 2，则生成的间隔字符串将是 P2D，这意味着每隔一天（或每第 2 天）。
+> `$value` 并不那么明显。此参数最终将被替换为间隔格式字符串中的值。例如，如果用户将 `$interval` 选为 `INTERVAL_DAY`，将 `$value` 选为 2，则生成的间隔字符串将是 P2D，这意味着每隔一天（或每第 2 天）。
 
-  ```php
-  public function __construct($title,
+```php
+public function __construct($title,
                            $description,
-                           $startDate,
-                           $interval,
-                           $value,
-                           $occurrences = NULL,
-                           $endDate = NULL,
-                           $flag = NULL)
-  {
-  ```
+```
+
+
+
+### 构造函数参数
+
+```
+$startDate,
+
+$interval,
+
+$value,
+
+$occurrences = NULL,
+
+$endDate = NULL,
+
+$flag = NULL)
+```
+
+{
+```
 
 - 4. 然后我们初始化变量。注意，ID 是伪随机生成的，但最终可能成为数据库事件表中的主键。在这里我们使用 `md5()` 并非出于安全目的，而是为了快速生成哈希值，使 ID 具有一致的外观：
 
-  ```php
-  $this->id = md5($title . $interval . $value) . sprintf('%04d', rand(0,9999));
-  $this->flag = $flag;
-  $this->value = $value;
-  $this->title = $title;
-  $this->description = $description;
-  $this->occurrences = $occurrences;
-  ```
+```php
+$this->id = md5($title . $interval . $value) . sprintf('%04d', rand(0,9999));
+$this->flag = $flag;
+$this->value = $value;
+$this->title = $title;
+$this->description = $description;
+$this->occurrences = $occurrences;
+```
 
 - 5. 如前所述，间隔参数是用于构建正确 `DateInterval` 实例的 `sprintf()` 模式：
 
-  ```php
-  try {
-     $this->interval = new DateInterval(sprintf($interval, $value));
-  } catch (Exception $e) {
-     error_log($e->getMessage());
-     throw new InvalidArgumentException(self::ERROR_INVALID_INTERVAL);
-  }
-  ```
+```php
+try {
+   $this->interval = new DateInterval(sprintf($interval, $value));
+} catch (Exception $e) {
+   error_log($e->getMessage());
+   throw new InvalidArgumentException(self::ERROR_INVALID_INTERVAL);
+}
+```
 
-- 6. 为了初始化 $startDate，我们调用 `stringOrDate()`。然后我们通过调用 `stringOrDate()` 或 `calcEndDateFromOccurrences()` 尝试生成 $endDate 的值。如果我们既没有结束日期也没有发生次数，就会抛出异常：
+- 6. 为了初始化 `$startDate`，我们调用 `stringOrDate()`。然后我们通过调用 `stringOrDate()` 或 `calcEndDateFromOccurrences()` 尝试生成 `$endDate` 的值。如果我们既没有结束日期也没有发生次数，就会抛出异常：
 
-  ```php
-  $this->startDate = $this->stringOrDate($startDate);
-  if ($endDate) {
-      $this->endDate = $this->stringOrDate($endDate);
-  } elseif ($occurrences) {
-      $this->endDate = $this->calcEndDateFromOccurrences();
-  } else {
-      throw new InvalidArgumentException(self::ERROR_INVALID_END);
-  }
-  $this->nextDate = $this->startDate;
-  ```
+```php
+$this->startDate = $this->stringOrDate($startDate);
+if ($endDate) {
+    $this->endDate = $this->stringOrDate($endDate);
+} elseif ($occurrences) {
+    $this->endDate = $this->calcEndDateFromOccurrences();
+} else {
+    throw new InvalidArgumentException(self::ERROR_INVALID_END);
+}
+$this->nextDate = $this->startDate;
+```
 
 - 7. `stringOrDate()` 方法由几行代码组成，用于检查日期变量的数据类型，并返回 `DateTime` 实例或 `NULL`：
 
-  ```php
-  protected function stringOrDate($date)
-  {
-      if ($date === NULL) {
-          $newDate = NULL;
-      } elseif ($date instanceof DateTime) {
-          $newDate = $date;
-      } elseif (is_string($date)) {
-          $newDate = new DateTime($date);
-      } else {
-          throw new InvalidArgumentException(self::ERROR_INVALID_END);
-      }
-      return $newDate;
-  }
-  ```
+```php
+protected function stringOrDate($date)
+{
+    if ($date === NULL) {
+        $newDate = NULL;
+    } elseif ($date instanceof DateTime) {
+        $newDate = $date;
+    } elseif (is_string($date)) {
+        $newDate = new DateTime($date);
+    } else {
+        throw new InvalidArgumentException(self::ERROR_INVALID_END);
+    }
+    return $newDate;
+}
+```
 
-- 8. 如果设置了 $occurrences，我们在构造函数中调用 `calcEndDateFromOccurrences()` 方法，以便知道该事件的结束日期。我们利用了 `DatePeriod` 类，它提供基于开始日期、`DateInterval` 和发生次数的迭代：
+- 8. 如果设置了 `$occurrences`，我们在构造函数中调用 `calcEndDateFromOccurrences()` 方法，以便知道该事件的结束日期。我们利用了 `DatePeriod` 类，它提供基于开始日期、`DateInterval` 和发生次数的迭代：
 
-  ```php
-  protected function calcEndDateFromOccurrences()
-  {
-      $endDate = new DateTime('now');
-      $period = new DatePeriod(
-          $this->startDate, $this->interval, $this->occurrences);
-      foreach ($period as $date) {
-          $endDate = $date;
-      }
-      return $endDate;
-  }
-  ```
+```php
+protected function calcEndDateFromOccurrences()
+{
+    $endDate = new DateTime('now');
+    $period = new DatePeriod(
+        $this->startDate, $this->interval, $this->occurrences);
+    foreach ($period as $date) {
+        $endDate = $date;
+    }
+    return $endDate;
+}
+```
 
 - 9. 接下来我们放入一个 `__toString()` 魔术方法，它简单地回显事件的标题：
 
-  ```php
-  public function __toString()
-  {
-      return $this->title;
-  }
-  ```
+```php
+public function __toString()
+{
+    return $this->title;
+}
+```
 
 - 10. 我们还需要为 `Event` 类定义的最后一个方法是 `getNextDate()`，它在生成日历时使用：
 
-  ```php
-  public function  getNextDate(DateTime $today)
-  {
-      if ($today > $this->endDate) {
-          return FALSE;
-      }
-      $next = clone $today;
-      $next->add($this->interval);
-      return $next;
-  }
-  ```
+```php
+public function  getNextDate(DateTime $today)
+{
+    if ($today > $this->endDate) {
+        return FALSE;
+    }
+    $next = clone $today;
+    $next->add($this->interval);
+    return $next;
+}
+```
 
 - 11. 接下来，我们把注意力转向上一个食谱中描述的 `Application\I18n\Calendar` 类。经过一些小改动，我们准备好将新定义的 `Event` 类整合到日历中。首先，我们添加一个新属性 `$events` 和一个以数组形式添加事件的方法。我们使用 `Event::$id` 属性确保事件被合并而不是被覆盖：
 
-  ```php
-  protected $events = array();
-
-  public function addEvent(Event $event)
-  {
-      $this->events[$event->id] = $event;
-  }
-  ```
+```php
+protected $events = array();
+public function addEvent(Event $event)
+{
+    $this->events[$event->id] = $event;
+}
+```
 
 - 12. 接下来，我们添加一个方法 `processEvents()`，它在构建年历时将 `Event` 实例添加到 `Day` 对象中。首先，我们检查是否存在任何事件，以及 `Day` 对象是否为 `NULL`。如你可能记得，月份的某一天通常不会落在该周的第一天，因此需要将 `Day` 对象的值设置为 `NULL`。我们当然不希望将事件添加到非有效日！然后我们调用 `Event::getNextDate()` 并查看日期是否匹配。如果匹配，我们将 `Event` 存储到 `Day::$events[]` 中，并设置 `Event` 对象的下一个日期：
 
-  ```php
-  protected function processEvents($dayObj, $cal)
-  {
-      if ($this->events && $dayObj()) {
-          $calDateTime = $cal->toDateTime();
-          foreach ($this->events as $id => $eventObj) {
-              $next = $eventObj->getNextDate($eventObj->nextDate);
-          }
-      }
-  }
-  ```
+```php
+protected function processEvents($dayObj, $cal)
+{
+    if ($this->events && $dayObj()) {
+        $calDateTime = $cal->toDateTime();
+        foreach ($this->events as $id => $eventObj) {
+            $next = $eventObj->getNextDate($eventObj->nextDate);
+        }
+    }
+}
+```
 
-
-
-
-if ($next) {  
+```
+if ($next) {
     if ($callDateTime->format('Y-m-d') ==
-        $eventObj->nextDate->format('Y-m-d')) {  
-        $dayObj->events[$eventObj->id] = $eventObj;  
-        $eventObj->nextDate = $next;  
+        $eventObj->nextDate->format('Y-m-d')) {
+        $dayObj->events[$eventObj->id] = $eventObj;
+        $eventObj->nextDate = $next;
     }
 }
 return $dayObj;
+```
 
-> 请注意，我们并没有直接比较这两个对象。原因有二：首先，一个是 DateTime 实例，另一个是 IntlCalendar 实例。其次，更具说服力的原因是，在获取 DateTime 实例时可能包含了小时、分钟和秒，从而导致这两个对象之间的实际值存在差异。
+> 请注意，我们并没有直接比较这两个对象。原因有二：首先，一个是 `DateTime` 实例，另一个是 `IntlCalendar` 实例。其次，更具说服力的原因是，在获取 `DateTime` 实例时可能包含了小时、分钟和秒，从而导致这两个对象之间的实际值存在差异。
 
 1. 现在，我们需要在 `buildMonthArray()` 方法中添加对 `processEvents()` 的调用，使其看起来像这样：
 
 ```php
-while ($dow <= $maxDaysInMonth) {  
-    for ($dow = 1; $dow <= 7; $dow++) {  
-        // add this to the existing code:  
-        $dayObj = $this->processEvents(new Day($value, $cal));  
-        $monthArray[$weekOfYear][$dow] = $dayObj;  
+while ($dow <= $maxDaysInMonth) {
+    for ($dow = 1; $dow <= 7; $dow++) {
+        // add this to the existing code:
+        $dayObj = $this->processEvents(new Day($value, $cal));
+        $monthArray[$weekOfYear][$dow] = $dayObj;
     }
 }
 ```
@@ -10703,17 +11290,17 @@ while ($dow <= $maxDaysInMonth) {
 2. 最后，我们需要修改 `getWeekDaysRow()`，添加必要的代码，以便在方框内连同日期一起输出事件信息：
 
 ```php
-protected function getWeekDaysRow($type, $week)  
-{  
-    $output = '<tr style="height:' . $this->height . ';">';  
-    $width = (int) (100/7);  
-    foreach ($week as $day) {  
-        $events = '';  
-        if ($day->events) {  
-            foreach ($day->events as $single) {  
-                $events .= '<br>' . $single->title;  
-                if ($type == self::DAY_FULL) {  
-                    $events .= '<br><i>' . $single->description . '</i>';  
+protected function getWeekDaysRow($type, $week)
+{
+    $output = '<tr style="height:' . $this->height . ';">';
+    $width = (int) (100/7);
+    foreach ($week as $day) {
+        $events = '';
+        if ($day->events) {
+            foreach ($day->events as $single) {
+                $events .= '<br>' . $single->title;
+                if ($type == self::DAY_FULL) {
+                    $events .= '<br><i>' . $single->description . '</i>';
                 }
             }
         }
@@ -10734,7 +11321,6 @@ protected function getWeekDaysRow($type, $week)
 require __DIR__ . '/../Application/Autoload/Loader.php';
 Application\Autoload\Loader::init(__DIR__ . '../..');
 use Application\I18n\{ Locale, Calendar, Event };
-
 try {
 $year = 2016;
 $localeEs = new Locale('es_ES');
@@ -10810,7 +11396,6 @@ $message = $e->getMessage();
 
 ```php
 namespace Application\I18n\Translate\Adapter;
-
 interface TranslateAdapterInterface
 {
   public function translate($msgid);
@@ -10820,24 +11405,19 @@ interface TranslateAdapterInterface
 3. 接下来，我们定义一个与接口匹配的 trait。该 trait 将包含所需的实际代码。请注意，如果我们未能找到消息字符串，我们只是返回消息 ID：
 
 ```php
-namespace Application\I18n\Translate\Adapter;
-
-trait TranslateAdapterTrait
-{
-  protected $translation;
-  public function translate($msgid)
-  {
-    return $this->translation[$msgid] ?? $msgid;
-  }
-}
 ```
 
-4. 现在，我们准备好定义第一个适配器了。在本示例中，我们将使用以 .ini 文件作为翻译源的适配器开始。你首先会注意到，我们使用了之前定义的 trait。构造函数方法在不同适配器之间会有所不同。在这种情况下，我们使用 `parse_ini_file()` 生成一个键/值对数组，其中键是消息 ID。注意，我们使用 `$filePattern` 参数来替换区域设置，从而允许我们加载适当的翻译文件：
+
+
+### 4. 定义第一个适配器
+
+现在，我们准备好定义第一个适配器了。在本示例中，我们将使用以 `.ini` 文件作为翻译源的适配器开始。你首先会注意到，我们使用了之前定义的 `trait`。构造函数方法在不同适配器之间会有所不同。在这种情况下，我们使用 `parse_ini_file()` 生成一个键/值对数组，其中键是消息 ID。注意，我们使用 `$filePattern` 参数来替换区域设置，从而允许我们加载适当的翻译文件：
 
 ```php
 namespace Application\I18n\Translate\Adapter;
 
 use Exception;
+
 use Application\I18n\Locale;
 
 class Ini implements TranslateAdapterInterface
@@ -10858,7 +11438,9 @@ class Ini implements TranslateAdapterInterface
 }
 ```
 
-5. 下一个适配器 `Application\I18n\Translate\Adapter\Csv` 是相同的，只是我们打开翻译文件并使用 `fgetcsv()` 循环遍历以检索消息 ID / 消息字符串键值对。这里我们只显示构造函数的不同之处：
+### 5. CSV 适配器
+
+下一个适配器 `Application\I18n\Translate\Adapter\Csv` 是相同的，只是我们打开翻译文件并使用 `fgetcsv()` 循环遍历以检索消息 ID / 消息字符串键值对。这里我们只显示构造函数的不同之处：
 
 ```php
 public function __construct(Locale $locale, $filePattern)
@@ -10877,19 +11459,21 @@ public function __construct(Locale $locale, $filePattern)
 }
 ```
 
+### 6. 预加载的缺点
 
+这两个适配器的主要缺点在于，我们需要预加载整个翻译集。如果翻译数量庞大，这会给内存带来压力。此外，翻译文件还需要被打开和解析，这会拖慢性能。
 
+### 7. 数据库适配器
 
-
-6. 这两个适配器的主要缺点在于，我们需要预加载整个翻译集。如果翻译数量庞大，这会给内存带来压力。此外，翻译文件还需要被打开和解析，这会拖慢性能。
-
-7. 现在我们介绍第三个适配器，它执行数据库查找，从而避免了前两个适配器的问题。我们使用在开头发送到数据库的 PDO 预编译语句，且仅发送一次。然后，我们可以根据需要执行任意多次，将消息 ID 作为参数传入。您还会注意到，我们需要覆盖在 trait 中定义的 `translate()` 方法。最后，您可能已经注意到我们使用了 `PDOStatement::fetchColumn()`，因为我们只需要一个值：
+现在我们介绍第三个适配器，它执行数据库查找，从而避免了前两个适配器的问题。我们使用在开头发送到数据库的 PDO 预编译语句，且仅发送一次。然后，我们可以根据需要执行任意多次，将消息 ID 作为参数传入。您还会注意到，我们需要覆盖在 `trait` 中定义的 `translate()` 方法。最后，您可能已经注意到我们使用了 `PDOStatement::fetchColumn()`，因为我们只需要一个值：
 
 ```php
 namespace Application\I18n\Translate\Adapter;
 
 use Exception;
+
 use Application\Database\Connection;
+
 use Application\I18n\Locale;
 
 class Database implements TranslateAdapterInterface
@@ -10917,12 +11501,15 @@ class Database implements TranslateAdapterInterface
 }
 ```
 
-8. 我们现在准备定义核心的 Translation 类，该类与一个（或多个）适配器相关联。我们分配了一个类常量来表示默认区域设置，并为区域设置、适配器和文本文件模式（稍后解释）定义了属性：
+### 8. 核心 Translation 类
+
+我们现在准备定义核心的 `Translation` 类，该类与一个（或多个）适配器相关联。我们分配了一个类常量来表示默认区域设置，并为区域设置、适配器和文本文件模式（稍后解释）定义了属性：
 
 ```php
 namespace Application\I18n\Translate;
 
 use Application\I18n\Locale;
+
 use Application\I18n\Translate\Adapter\TranslateAdapterInterface;
 
 class Translation
@@ -10931,7 +11518,6 @@ class Translation
     protected $defaultLocaleCode;
     protected $adapter = array();
     protected $textFilePattern = array();
-
     public function __construct(TranslateAdapterInterface $adapter,
                            $defaultLocaleCode = NULL,
                            $textFilePattern = NULL)
@@ -10941,34 +11527,28 @@ class Translation
         } else {
             $this->defaultLocaleCode = $defaultLocaleCode;
         }
-        
         $this->adapter[$this->defaultLocaleCode] = $adapter;
         $this->textFilePattern[$this->defaultLocaleCode] = 
             $textFilePattern;
     }
-
     public function setAdapter($localeCode, TranslateAdapterInterface 
     $adapter)
     {
         $this->adapter[$localeCode] = $adapter;
     }
-
     public function setDefaultLocaleCode($localeCode)
     {
         $this->defaultLocaleCode = $localeCode;
     }
-
     public function setTextFilePattern($localeCode, $pattern)
     {
         $this->textFilePattern[$localeCode] = $pattern;
     }
-
     public function __invoke($msgId, $locale = NULL)
     {
         if ($locale === NULL) $locale = $this->defaultLocaleCode;
         return $this->adapter[$locale]->translate($msgId);
     }
-
     public function text($key, $localeCode = NULL)
     {
         if ($localeCode === NULL) $localeCode =
@@ -11010,7 +11590,7 @@ click=clic para más información
 "click","clic para más información"
 ```
 
-最后，创建一个名为 translation 的数据库表，并用相同的数据填充它。主要区别在于数据库表将包含三个字段：msgid、msgstr 和 locale_code：
+最后，创建一个名为 `translation` 的数据库表，并用相同的数据填充它。主要区别在于数据库表将包含三个字段：`msgid`、`msgstr` 和 `locale_code`：
 
 ```sql
 CREATE TABLE `translation` (
@@ -11023,14 +11603,14 @@ PRIMARY KEY (`msgid`,`locale_code`)
 
 接下来，使用本配方中显示的代码，定义前面提到的类：
 
-- Application\I18n\Translate\Adapter\TranslateAdapterInterface
-- Application\I18n\Translate\Adapter\TranslateAdapterTrait
-- Application\I18n\Translate\Adapter\Ini
-- Application\I18n\Translate\Adapter\Csv
-- Application\I18n\Translate\Adapter\Database
-- Application\I18n\Translate\Translation
+- `Application\I18n\Translate\Adapter\TranslateAdapterInterface`
+- `Application\I18n\Translate\Adapter\TranslateAdapterTrait`
+- `Application\I18n\Translate\Adapter\Ini`
+- `Application\I18n\Translate\Adapter\Csv`
+- `Application\I18n\Translate\Adapter\Database`
+- `Application\I18n\Translate\Translation`
 
-现在，您可以创建一个测试文件 `chap_08_translation_database.php` 来测试数据库翻译适配器。它应该实现自动加载，使用适当的类，并创建一个 Locale 和 Connection 实例。请注意，TEXT_FILE_PATTERN 常量是一个 `sprintf()` 模式，其中替换了区域设置代码和文件名：
+现在，您可以创建一个测试文件 `chap_08_translation_database.php` 来测试数据库翻译适配器。它应该实现自动加载，使用适当的类，并创建一个 `Locale` 和 `Connection` 实例。请注意，`TEXT_FILE_PATTERN` 常量是一个 `sprintf()` 模式，其中替换了区域设置代码和文件名：
 
 ```php
 <?php
@@ -11041,10 +11621,8 @@ Application\Autoload\Loader::init(__DIR__ . '../');
 use Application\I18n\Locale;
 use Application\I18n\Translate { Translation, Adapter\Database };
 use Application\Database\Connection;
-
 $conn = new Connection(include __DIR__ . DB_CONFIG_FILE);
 $locale = new Locale('fr_FR');
-
 $adapter = new Database($locale, $conn, 'translation');
 $translate = new Translation($adapter, $locale->getLocaleCode(), TEXT_FILE_PATTERN);
 ?>
@@ -11087,18 +11665,25 @@ $translate = new Translation($adapter, $locale->getLocaleCode(), TEXT_FILE_PATTE
 <?= $translate->text('main_page'); ?>
 </p>
 <p>
-<a href="#" ><?= $translate('click') ?></a>
-</p>
-</td>
-</tr>
-</table>
-</body>
-</html>
 ```
 
 
 
+<a href="#" ><?= $translate('click') ?></a>
 
+</p>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>
+
+```
 
 然后你可以执行其他类似的测试，替换一个新的区域设置以获取不同的语言，或者使用另一个适配器来测试不同的数据源。以下是使用 `fr_PR` 区域设置和数据库翻译适配器时输出的示例：
 
@@ -11106,19 +11691,19 @@ $translate = new Translation($adapter, $locale->getLocaleCode(), TEXT_FILE_PATTE
 
 ## 另请参阅
 
--   如需了解有关 Google 翻译 API 的更多信息，请参阅 `https://cloud.google.com/translate/v2/translating-text-with-rest`。
--   如需了解有关 Amazon Mechanical Turk 的更多信息，请参阅 `https://www.mturk.com/mturk/welcome`。如需了解有关 gettext 的更多信息，请参阅 `http://www.gnu.org/software/gettext/manual/gettext.html`。
+- 如需了解有关 Google 翻译 API 的更多信息，请参阅 `https://cloud.google.com/translate/v2/translating-text-with-rest`。
+- 如需了解有关 Amazon Mechanical Turk 的更多信息，请参阅 `https://www.mturk.com/mturk/welcome`。如需了解有关 gettext 的更多信息，请参阅 `http://www.gnu.org/software/gettext/manual/gettext.html`。
 
 # 第 9 章：开发中间件
 
 在本章中，我们将涵盖以下主题：
 
--   使用中间件进行身份验证
--   使用中间件实现访问控制
--   使用缓存提高性能
--   实现路由
--   进行跨框架系统调用
--   使用中间件跨越语言
+- 使用中间件进行身份验证
+- 使用中间件实现访问控制
+- 使用缓存提高性能
+- 实现路由
+- 进行跨框架系统调用
+- 使用中间件跨越语言
 
 ## 简介
 
@@ -11134,156 +11719,156 @@ $translate = new Translation($adapter, $locale->getLocaleCode(), TEXT_FILE_PATTE
 
 ### 如何操作...
 
-1.  我们首先定义一个 `Application\Acl\AuthenticateInterface` 类。我们使用该接口来支持适配器（Adapter）软件设计模式，通过允许使用各种适配器来使我们的 `Authenticate` 类更具通用实用性，每个适配器都可以从不同的来源（例如，从文件、使用 OAuth2 等）获取身份验证。注意使用 PHP 7 定义返回值数据类型的能力：
-    ```php
-    namespace Application\Acl;
+1. 我们首先定义一个 `Application\Acl\AuthenticateInterface` 类。我们使用该接口来支持适配器（Adapter）软件设计模式，通过允许使用各种适配器来使我们的 `Authenticate` 类更具通用实用性，每个适配器都可以从不同的来源（例如，从文件、使用 OAuth2 等）获取身份验证。注意使用 PHP 7 定义返回值数据类型的能力：
+```php
+namespace Application\Acl;
 
-    use Psr\Http\Message\{ RequestInterface, ResponseInterface };
-    interface AuthenticateInterface
-    {
-        public function login(RequestInterface $request) :
-            ResponseInterface;
-    }
-    ```
+use Psr\Http\Message\{ RequestInterface, ResponseInterface };
 
+interface AuthenticateInterface
+{
+    public function login(RequestInterface $request) :
+        ResponseInterface;
+}
+```
 ![](img/39390f6d56c5a83b28db083a8bd5185c_330_0.png)
 
 > 注意，通过定义一个需要符合 PSR-7 标准的请求并产生符合 PSR-7 标准的响应的方法，我们使此接口具有普遍适用性。
 
-2.  接下来，我们定义实现接口所要求的 `login()` 方法的适配器。我们确保使用适当的类，并定义合适的常量和属性。构造函数使用在 *第 5 章，与数据库交互* 中定义的 `Application\Database\Connection`：
-    ```php
-    namespace Application\Acl;
-    use PDO;
+2. 接下来，我们定义实现接口所要求的 `login()` 方法的适配器。我们确保使用适当的类，并定义合适的常量和属性。构造函数使用在 *第 5 章，与数据库交互* 中定义的 `Application\Database\Connection`：
+```php
+namespace Application\Acl;
 
-    use Application\Database\Connection;
-    use Psr\Http\Message\{ RequestInterface, ResponseInterface };
-    use Application\MiddleWare\{ Response, TextStream };
-    class DbTable implements AuthenticateInterface
+use PDO;
+use Application\Database\Connection;
+use Psr\Http\Message\{ RequestInterface, ResponseInterface };
+use Application\MiddleWare\{ Response, TextStream };
+class DbTable implements AuthenticateInterface
+{
+    const ERROR_AUTH = 'ERROR: authentication error';
+    protected $conn;
+    protected $table;
+    public function __construct(Connection $conn, $tableName)
     {
-        const ERROR_AUTH = 'ERROR: authentication error';
-        protected $conn;
-        protected $table;
-        public function __construct(Connection $conn, $tableName)
-        {
-            $this->conn = $conn;
-            $this->table = $tableName;
-        }
-    ```
+        $this->conn = $conn;
+        $this->table = $tableName;
+    }
+```
 
-3.  核心 `login()` 方法从请求对象中提取用户名和密码。然后我们执行直接的数据库查找。如果有匹配项，我们将用户信息存储在响应正文中，并进行 JSON 编码：
-    ```php
-    public function login(RequestInterface $request) :
-    ResponseInterface
+3. 核心 `login()` 方法从请求对象中提取用户名和密码。然后我们执行直接的数据库查找。如果有匹配项，我们将用户信息存储在响应正文中，并进行 JSON 编码：
+```php
+public function login(RequestInterface $request) :
+ResponseInterface
+{
+    $code = 401;
+    $info = FALSE;
+    $body = new TextStream(self::ERROR_AUTH);
+    $params = json_decode($request->getBody()->getContents());
+    $response = new Response();
+    $username = $params->username ?? FALSE;
+    if ($username)
     {
-        $code = 401;
-        $info = FALSE;
-        $body = new TextStream(self::ERROR_AUTH);
-        $params = json_decode($request->getBody()->getContents());
-        $response = new Response();
-        $username = $params->username ?? FALSE;
-        if ($username)
+        $sql = 'SELECT * FROM ' . $this->table
+        . ' WHERE email = ?';
+        $stmt = $this->conn->pdo->prepare($sql);
+        $stmt->execute([$username]);
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        if ($row)
         {
-            $sql = 'SELECT * FROM ' . $this->table
-            . ' WHERE email = ?';
-            $stmt = $this->conn->pdo->prepare($sql);
-            $stmt->execute([$username]);
-            $row = $stmt->fetch(PDO::FETCH_ASSOC);
-            if ($row)
+            if (password_verify($params->password,
+            $row['password']))
             {
-                if (password_verify($params->password,
-                $row['password']))
-                {
-                    unset($row['password']);
-                    $body =
-                    new TextStream(json_encode($row));
-                    $response->withBody($body);
-                    $code = 202;
-                    $info = $row;
-                }
+                unset($row['password']);
+                $body =
+                new TextStream(json_encode($row));
+                $response->withBody($body);
+                $code = 202;
+                $info = $row;
             }
         }
-        return $response->withBody($body)->withStatus($code);
     }
-    ```
+    return $response->withBody($body)->withStatus($code);
+}
+```
 
 **最佳实践**
 
 切勿以明文形式存储密码。当你需要进行密码匹配时，使用 `password_verify()`，它否定了重新生成密码哈希的需要。
 
-4.  `Authenticate` 类是一个包装器，用于实现 `AuthenticateInterface` 的适配器类。相应地，构造函数接受一个适配器类作为参数，以及一个作为键的字符串，身份验证信息存储在 `$_SESSION` 中：
-    ```php
-    namespace Application\Acl;
-    use Application\MiddleWare\ { Response, TextStream };
-    use Psr\Http\Message\ { RequestInterface, ResponseInterface };
-    class Authenticate
+4. `Authenticate` 类是一个包装器，用于实现 `AuthenticateInterface` 的适配器类。相应地，构造函数接受一个适配器类作为参数，以及一个作为键的字符串，身份验证信息存储在 `$_SESSION` 中：
+```php
+namespace Application\Acl;
+use Application\MiddleWare\ { Response, TextStream };
+use Psr\Http\Message\ { RequestInterface, ResponseInterface };
+class Authenticate
+{
+    const ERROR_AUTH = 'ERROR: invalid token';
+    const DEFAULT_KEY = 'auth';
+    protected $adapter;
+    protected $token;
+    public function __construct(
+    AuthenticationInterface $adapter, $key)
     {
-        const ERROR_AUTH = 'ERROR: invalid token';
-        const DEFAULT_KEY = 'auth';
-        protected $adapter;
-        protected $token;
-        public function __construct(
-        AuthenticationInterface $adapter, $key)
-        {
-            $this->key = $key;
-            $this->adapter = $adapter;
-        }
-    ```
+        $this->key = $key;
+        $this->adapter = $adapter;
+    }
+```
 
-5.  此外，我们提供一个带有安全令牌的登录表单，这有助于防止 **跨站点请求伪造（CSRF）** 攻击：
-    ```php
-    public function getToken()
-    {
-        $this->token = bin2hex(random_bytes(16));
-        $_SESSION['token'] = $this->token;
-        return $this->token;
-    }
-    public function matchToken($token)
-    {
-        $sessToken = $_SESSION['token'] ?? date('Ymd');
-        return ($token == $sessToken);
-    }
-    public function getLoginForm($action = NULL)
-    {
-        $action = ($action) ? 'action="' . $action . '" ' : '';
-        $output = '<form method="post" ' . $action . '>';
-        $output .= '<table><tr><th>Username</th><td>';
-        $output .= '<input type="text" name="username" /></td>';
-        $output .= '</tr><tr><th>Password</th><td>';
-        $output .= '<input type="password" name="password" />';
-        $output .= '</td></tr><tr><th>&nbsp;</th>';
-        $output .= '<td><input type="submit" /></td>';
-        $output .= '</tr></table>';
-        $output .= '<input type="token" value="';
-        $output .= $this->getToken() . '" />' ;
-        $output .= '</form>';
-        return $output;
-    }
-    ```
+5. 此外，我们提供一个带有安全令牌的登录表单，这有助于防止 **跨站点请求伪造（CSRF）** 攻击：
+```php
+public function getToken()
+{
+    $this->token = bin2hex(random_bytes(16));
+    $_SESSION['token'] = $this->token;
+    return $this->token;
+}
+public function matchToken($token)
+{
+    $sessToken = $_SESSION['token'] ?? date('Ymd');
+    return ($token == $sessToken);
+}
+public function getLoginForm($action = NULL)
+{
+    $action = ($action) ? 'action="' . $action . '" ' : '';
+    $output = '<form method="post" ' . $action . '>';
+    $output .= '<table><tr><th>Username</th><td>';
+    $output .= '<input type="text" name="username" /></td>';
+    $output .= '</tr><tr><th>Password</th><td>';
+    $output .= '<input type="password" name="password" />';
+    $output .= '</td></tr><tr><th>&nbsp;</th>';
+    $output .= '<td><input type="submit" /></td>';
+    $output .= '</tr></table>';
+    $output .= '<input type="token" value="';
+    $output .= $this->getToken() . '" />' ;
+    $output .= '</form>';
+    return $output;
+}
+```
 
-6.  最后，该类中的 `login()` 方法检查令牌是否有效。如果无效，则返回 400 响应。否则，调用适配器的 `login()` 方法：
-    ```php
-    public function login(
-    RequestInterface $request) : ResponseInterface
-    {
-        $params = json_decode($request->getBody()->getContents());
-        $token = $params->token ?? FALSE;
-        if (!( $token && $this->matchToken( $token))) {
-            $code = 400;
-            $body = new TextStream(self::ERROR_AUTH);
-            $response = new Response($code, $body);
-        } else {
-            $response = $this->adapter->login($request);
-        }
-        if ($response->getStatusCode() >= 200
-        && $response->getStatusCode() < 300) {
-            $_SESSION[$this->key] =
-            json_decode($response->getBody()->getContents());
-        } else {
-            $_SESSION[$this->key] = NULL;
-        }
-        return $response;
+6. 最后，该类中的 `login()` 方法检查令牌是否有效。如果无效，则返回 400 响应。否则，调用适配器的 `login()` 方法：
+```php
+public function login(
+RequestInterface $request) : ResponseInterface
+{
+    $params = json_decode($request->getBody()->getContents());
+    $token = $params->token ?? FALSE;
+    if (!( $token && $this->matchToken( $token))) {
+        $code = 400;
+        $body = new TextStream(self::ERROR_AUTH);
+        $response = new Response($code, $body);
+    } else {
+        $response = $this->adapter->login($request);
     }
-    ```
+    if ($response->getStatusCode() >= 200
+    && $response->getStatusCode() < 300) {
+        $_SESSION[$this->key] =
+        json_decode($response->getBody()->getContents());
+    } else {
+        $_SESSION[$this->key] = NULL;
+    }
+    return $response;
+}
+```
 
 首先，务必遵循 *附录，定义 PSR-7 类* 中定义的食谱。然后，继续定义本食谱中介绍的类，如下表所示：
 
@@ -11294,7 +11879,6 @@ $translate = new Translation($adapter, $locale->getLocaleCode(), TEXT_FILE_PATTE
 | `Application\Acl\Authenticate` | 4 - 6 |
 
 然后你可以定义一个名为 `chap_09_middleware_authenticate.php` 的调用程序，它设置自动加载并使用适当的类：
-
 ```php
 <?php
 session_start();
@@ -11303,7 +11887,6 @@ define('DB_TABLE', 'customer_09');
 define('SESSION_KEY', 'auth');
 require __DIR__ . '/../Application/Autoload/Loader.php';
 Application\Autoload\Loader::init(__DIR__ . '/..');
-
 use Application\Database\Connection;
 use Application\Acl\{ DbTable, Authenticate };
 use Application\MiddleWare\{ ServerRequest, Request, Constants,
@@ -11311,7 +11894,6 @@ use Application\MiddleWare\{ ServerRequest, Request, Constants,
 ```
 
 现在你处于设置身份验证适配器和核心类的位置：
-
 ```php
 $conn    = new Connection(include DB_CONFIG_FILE);
 $dbAuth = new DbTable($conn, DB_TABLE);
@@ -11319,7 +11901,6 @@ $auth    = new Authenticate($dbAuth, SESSION_KEY);
 ```
 
 务必初始化传入请求，并设置要发送到身份验证类的请求：
-
 ```php
 $incoming = new ServerRequest();
 $incoming->initialize();
@@ -11327,18 +11908,12 @@ $outbound = new Request();
 ```
 
 检查传入类方法以查看它是否是 `POST`。如果是，则向身份验证类传递一个请求：
-
 ```php
 if ($incoming->getMethod() == Constants::METHOD_POST) {
   $body = new TextStream(json_encode(
 ```
 
-
-
-
-
 #### 代码片段
-
 ```php
 $incoming -> getParsedBody() ;
 $response = $auth ->login($outbound -> withBody($body)) ;
@@ -11348,12 +11923,13 @@ $action = $incoming -> getServerParams() [' PHP_SELF'] ;
 ```
 
 这个玩法逻辑如下：
-
 ```php
 <? = $auth -> getLoginForm($action) ?>
 ```
 
-以下是一次无效认证尝试的输出。请注意右侧的 401 状态码。在此示例中，你可以添加响应对象的 var_dump()：
+
+
+以下是一次无效认证尝试的输出。请注意右侧的 `401` 状态码。在此示例中，你可以添加响应对象的 `var_dump()`：
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_335_0.png)
 
@@ -11373,126 +11949,124 @@ $action = $incoming -> getServerParams() [' PHP_SELF'] ;
 
 - 该过程最困难的部分可能是确定要包含在 ACL 中的哪些因素。为了说明起见，假设我们的所有用户都被分配了级别和状态。在此示例中，级别定义如下：
 
-    ```php
-    'levels' => [0, 'BEG', 'INT', 'ADV']
-    ```
+```php
+'levels' => [0, 'BEG', 'INT', 'ADV']
+```
 
-- 状态可以表明他们在会员注册流程中进行了多远。例如，状态 0 可能表明他们已启动会员注册流程，但尚未确认。状态 1 可能表明他们的电子邮件地址已确认，但尚未支付月费，等等。
+- 状态可以表明他们在会员注册流程中进行了多远。例如，状态 `0` 可能表明他们已启动会员注册流程，但尚未确认。状态 `1` 可能表明他们的电子邮件地址已确认，但尚未支付月费，等等。
 
 - 接下来，我们需要定义我们计划控制访问的资源。在这种情况下，我们将假设需要控制对该网站上一系列网页的访问。因此，我们需要定义此类资源的数组。在 ACL 中，我们可以引用键：
 
-    ```php
-    'pages' => [0 => 'sorry', 'logout' => 'logout',
-               'login'  => 'auth',
-               1 => 'page1', 2 => 'page2', 3 => 'page3',
-               4 => 'page4', 5 => 'page5', 6 => 'page6',
-               7 => 'page7', 8 => 'page8', 9 => 'page9']
-    ```
+```php
+'pages' => [0 => 'sorry', 'logout' => 'logout',
+           'login'  => 'auth',
+           1 => 'page1', 2 => 'page2', 3 => 'page3',
+           4 => 'page4', 5 => 'page5', 6 => 'page6',
+           7 => 'page7', 8 => 'page8', 9 => 'page9']
+```
 
 - 最后，最重要的配置部分是根据级别和状态对页面进行分配。配置数组中使用的通用模板可能如下所示：
 
-    ```php
-    status => ['inherits' => <key>, 'pages' => [level =>
-                [pages allowed], etc.]]
-    ```
+```php
+status => ['inherits' => <key>, 'pages' => [level =>
+            [pages allowed], etc.]]
+```
 
-- 现在我们可以定义 Acl 类。与之前一样，我们使用几个类，并定义适用于访问控制的常量和属性：
+- 现在我们可以定义 `Acl` 类。与之前一样，我们使用几个类，并定义适用于访问控制的常量和属性：
 
-    ```php
-    namespace Application\Acl;
+```php
+namespace Application\Acl;
+use InvalidArgumentException;
+use Psr\Http\Message\RequestInterface;
+use Application\MiddleWare\{ Constants, Response, TextStream };
+class Acl
+{
+    const DEFAULT_STATUS = '';
+    const DEFAULT_LEVEL = 0;
+    const DEFAULT_PAGE = 0;
+    const ERROR_ACL = 'ERROR: authorization error';
+    const ERROR_APP = 'ERROR: requested page not listed';
+    const ERROR_DEF =
+        'ERROR: must assign keys "levels", "pages" and "allowed"';
+    protected $default;
+    protected $levels;
+    protected $pages;
+    protected $allowed;
+```
 
-    use InvalidArgumentException;
-    use Psr\Http\Message\RequestInterface;
-    use Application\MiddleWare\{ Constants, Response, TextStream };
+- 在 `__construct()` 方法中，我们将分配数组分解为 `$pages`（要控制的资源）、`$levels` 和 `$allowed`（实际的分配）。如果数组未包含这三个子组件之一，则会抛出异常：
 
-    class Acl
-    {
-        const DEFAULT_STATUS = '';
-        const DEFAULT_LEVEL = 0;
-        const DEFAULT_PAGE = 0;
-        const ERROR_ACL = 'ERROR: authorization error';
-        const ERROR_APP = 'ERROR: requested page not listed';
-        const ERROR_DEF =
-            'ERROR: must assign keys "levels", "pages" and "allowed"';
-        protected $default;
-        protected $levels;
-        protected $pages;
-        protected $allowed;
-    ```
+```php
+public function __construct(array $assignments)
+{
+    $this->default = $assignments['default']
+                    ?? self::DEFAULT_PAGE;
+    $this->pages   = $assignments['pages'] ?? FALSE;
+    $this->levels  = $assignments['levels'] ?? FALSE;
+    $this->allowed = $assignments['allowed'] ?? FALSE;
+    if (!($this->pages && $this->levels && $this->allowed)) {
+        throw new InvalidArgumentException(self::ERROR_DEF);
+    }
+}
+```
 
-- 在 __construct() 方法中，我们将分配数组分解为 $pages（要控制的资源）、$levels 和 $allowed（实际的分配）。如果数组未包含这三个子组件之一，则会抛出异常：
+- 你可能已经注意到我们允许继承。在 `$allowed` 中，`inherits` 键可以设置为数组中的另一个键。如果是这样，我们需要将其值与当前检查的值合并。我们反向遍历 `$allowed`，每次循环时合并任何继承的值。顺便提一下，该方法还只隔离适用于特定状态和级别的规则：
 
-    ```php
-    public function __construct(array $assignments)
-    {
-        $this->default = $assignments['default']
-                        ?? self::DEFAULT_PAGE;
-        $this->pages   = $assignments['pages'] ?? FALSE;
-        $this->levels  = $assignments['levels'] ?? FALSE;
-        $this->allowed = $assignments['allowed'] ?? FALSE;
-        if (!($this->pages && $this->levels && $this->allowed)) {
-            throw new InvalidArgumentException(self::ERROR_DEF);
+```php
+protected function mergeInherited($status, $level)
+{
+    $allowed = $this->allowed[$status]['pages'][$level]
+                    ?? array();
+    for ($x = $status; $x > 0; $x--) {
+        $inherits = $this->allowed[$x]['inherits'];
+        if ($inherits) {
+            $subArray =
+                $this->allowed[$inherits]['pages'][$level]
+                    ?? array();
+            $allowed = array_merge($allowed, $subArray);
         }
     }
-    ```
+    return $allowed;
+}
+```
 
-- 你可能已经注意到我们允许继承。在 $allowed 中，inherits 键可以设置为数组中的另一个键。如果是这样，我们需要将其值与当前检查的值合并。我们反向遍历 $allowed，每次循环时合并任何继承的值。顺便提一下，该方法还只隔离适用于特定状态和级别的规则：
+- 在处理授权时，我们初始化几个变量，然后从原始请求 URI 中提取请求的页面。如果页面参数不存在，我们设置 `400` 代码：
 
-    ```php
-    protected function mergeInherited($status, $level)
-    {
-        $allowed = $this->allowed[$status]['pages'][$level]
-                        ?? array();
-        for ($x = $status; $x > 0; $x--) {
-            $inherits = $this->allowed[$x]['inherits'];
-            if ($inherits) {
-                $subArray =
-                    $this->allowed[$inherits]['pages'][$level]
-                        ?? array();
-                $allowed = array_merge($allowed, $subArray);
-            }
-        }
-        return $allowed;
+```php
+public function isAuthorized(RequestInterface $request)
+{
+    $code = 401;    // unauthorized
+    $text['page'] = $this->pages[$this->default];
+    $text['authorized'] = FALSE;
+    $page = $request->getUri()->getQueryParams()['page']
+    ?? FALSE;
+    if ($page === FALSE) {
+        $code = 400;    // bad request
+    } else {
+        $params = json_decode(
+            $request->getBody()->getContents());
+        $status = $params->status ?? self::DEFAULT_LEVEL;
+        $level = $params->level ?? '*';
+        $allowed = $this->mergeInherited($status, $level);
     }
-    ```
-
-- 在处理授权时，我们初始化几个变量，然后从原始请求 URI 中提取请求的页面。如果页面参数不存在，我们设置 400 代码：
-
-    ```php
-    public function isAuthorized(RequestInterface $request)
-    {
-        $code = 401;    // unauthorized
-        $text['page'] = $this->pages[$this->default];
-        $text['authorized'] = FALSE;
-        $page = $request->getUri()->getQueryParams()['page']
-        ?? FALSE;
-        if ($page === FALSE) {
-            $code = 400;    // bad request
-        } else {
-            $params = json_decode(
-                $request->getBody()->getContents());
-            $status = $params->status ?? self::DEFAULT_LEVEL;
-            $level = $params->level ?? '*';
-            $allowed = $this->mergeInherited($status, $level);
-        }
-        if (in_array($page, $allowed)) {
-            $code = 200;    // OK
-            $text['authorized'] = TRUE;
-            $text['page'] = $this->pages[$page];
-        } else {
-            $code = 401;
-        }
-        $body = new TextStream(json_encode($text));
-        return (new Response())->withStatus($code)
-        ->withBody($body);
+    if (in_array($page, $allowed)) {
+        $code = 200;    // OK
+        $text['authorized'] = TRUE;
+        $text['page'] = $this->pages[$page];
+    } else {
+        $code = 401;
     }
-    ```
+    $body = new TextStream(json_encode($text));
+    return (new Response())->withStatus($code)
+    ->withBody($body);
+}
+```
 
-    否则，我们解码请求正文内容，并获取状态和级别。然后我们处于可以调用 mergeInherited() 的位置，该方法返回此状态和级别可访问的页面数组。
+否则，我们解码请求正文内容，并获取状态和级别。然后我们处于可以调用 `mergeInherited()` 的位置，该方法返回此状态和级别可访问的页面数组。
 
-    如果请求的页面在 $allowed 数组中，我们将状态代码设置为令人愉快的 200，并返回授权设置以及与请求的页面代码对应的网页。
+如果请求的页面在 `$allowed` 数组中，我们将状态代码设置为令人愉快的 `200`，并返回授权设置以及与请求的页面代码对应的网页。
 
-    然后我们返回 JSON 编码的响应，这就完成了。
+然后我们返回 JSON 编码的响应，这就完成了。
 
 ## 工作原理...
 
@@ -11544,11 +12118,9 @@ return [
                 'login' => 'auth',
                 1 => 'page1', 2 => 'page2', 3 => 'page3',
                 4 => 'page4', 5 => 'page5', 6 => 'page6',
+```
 
-
-
-
-最后，在 public 文件夹中定义 `index.php`，用于设置自动加载，并最终调用 `Authenticate` 和 `Acl` 类。与其他食谱一样，定义配置文件，设置自动加载，并使用某些类。此外，不要忘记启动会话：
+最后，在 `public` 文件夹中定义 `index.php`，用于设置自动加载，并最终调用 `Authenticate` 和 `Acl` 类。与其他食谱一样，定义配置文件，设置自动加载，并使用某些类。此外，不要忘记启动会话：
 
 ```php
 <?php
@@ -11631,6 +12203,8 @@ $response = $acl->isAuthorized($outbound);
 
 然后你可以检查返回响应中的授权参数，并编写一个匿名函数，如果正常则包含返回页面参数，否则包含抱歉页面：
 
+
+
 ```php
 $params     = json_decode($response->getBody()->getContents());
 $isAllowed  = $params->authorized ?? FALSE;
@@ -11688,93 +12262,95 @@ php -S localhost:8080 -t public
 
 缓存软件设计模式是指存储生成耗时较长的结果。这可能表现为冗长的视图脚本或复杂的数据库查询。如果你希望改善网站访问者的用户体验，存储目标当然需要具有高性能。由于不同的安装环境会有不同的潜在存储目标，缓存机制也适合适配器模式。潜在存储目标的示例包括内存、数据库和文件系统。
 
-## 如何实现...
+### 如何实现...
 
-1.  与本章节中的其他几个食谱一样，由于存在共享常量，我们定义了一个离散的 `Application\Cache\Constants` 类：
-   ```php
-   <?php
-   namespace Application\Cache;
+1. 与本章节中的其他几个食谱一样，由于存在共享常量，我们定义了一个离散的 `Application\Cache\Constants` 类：
 
-   class Constants
-   {
-       const DEFAULT_GROUP   = 'default';
-       const DEFAULT_PREFIX  = 'CACHE_';
-       const DEFAULT_SUFFIX  = '.cache';
-       const ERROR_GET      = 'ERROR: unable to retrieve from cache';
-       // 并非显示所有常量以节省空间
-   }
-   ```
+```php
+<?php
+namespace Application\Cache;
 
-2.  由于我们正在遵循适配器设计模式，接下来定义一个接口：
-   ```php
-   namespace Application\Cache;
-   interface CacheAdapterInterface
-   {
-       public function hasKey($key);
-       public function getFromCache($key, $group);
-       public function saveToCache($key, $data, $group);
-       public function removeByKey($key);
-       public function removeByGroup($group);
-   }
-   ```
+class Constants
+{
+    const DEFAULT_GROUP   = 'default';
+    const DEFAULT_PREFIX  = 'CACHE_';
+    const DEFAULT_SUFFIX  = '.cache';
+    const ERROR_GET      = 'ERROR: unable to retrieve from cache';
+    // 并非显示所有常量以节省空间
+}
+```
 
-3.  现在，我们准备好定义第一个缓存适配器，在本例中，通过使用 MySQL 数据库。我们需要定义将持有列名以及预编译语句的属性：
-   ```php
-   namespace Application\Cache;
-   use PDO;
-   use Application\Database\Connection;
-   ```
+2. 由于我们正在遵循适配器设计模式，接下来定义一个接口：
 
-4.  构造函数允许我们提供键列名以及 `Application\Database\Connection` 实例和用于缓存的表名：
-   ```php
-   class Database implements CacheAdapterInterface
-   {
-   protected $sql;
-   protected $connection;
-   protected $table;
-   protected $dataColumnName;
-   protected $keyColumnName;
-   protected $groupColumnName;
-   protected $statementHasKey = NULL;
-   protected $statementGetFromCache = NULL;
-   protected $statementSaveToCache = NULL;
-   protected $statementRemoveByKey = NULL;
-   protected $statementRemoveByGroup = NULL;
+```php
+namespace Application\Cache;
+interface CacheAdapterInterface
+{
+    public function hasKey($key);
+    public function getFromCache($key, $group);
+    public function saveToCache($key, $data, $group);
+    public function removeByKey($key);
+    public function removeByGroup($group);
+}
+```
 
-   public function __construct(Connection $connection,
-   $table,
-   $idColumnName,
-   $keyColumnName,
-   $dataColumnName,
-   $groupColumnName = Constants::DEFAULT_GROUP)
-   {
-       $this->connection = $connection;
-       $this->setTable($table);
-       $this->setIdColumnName($idColumnName);
-       $this->setDataColumnName($dataColumnName);
-       $this->setKeyColumnName($keyColumnName);
-       $this->setGroupColumnName($groupColumnName);
-   }
-   ```
+3. 现在，我们准备好定义第一个缓存适配器，在本例中，通过使用 MySQL 数据库。我们需要定义将持有列名以及预编译语句的属性：
 
-5.  接下来的几个方法准备预编译语句，并在我们访问数据库时调用。我们不显示所有方法，但提供足够的信息让你了解其思路：
-   ```php
-   public function prepareHasKey()
-   {
-       $sql = 'SELECT `' . $this->idColumnName . '`'
-       . '`FROM ` . $this->table . '` '
-       . '`WHERE `' . $this->keyColumnName . '` = :key ';
-       $this->sql[__METHOD__] = $sql;
-       $this->statementHasKey =
-       $this->connection->pdo->prepare($sql);
-   }
-   public function prepareGetFromCache()
-   ```
+```php
+namespace Application\Cache;
+use PDO;
+use Application\Database\Connection;
+```
 
+4. 构造函数允许我们提供键列名以及 `Application\Database\Connection` 实例和用于缓存的表名：
 
+```php
+class Database implements CacheAdapterInterface
+{
+protected $sql;
+protected $connection;
+protected $table;
+protected $dataColumnName;
+protected $keyColumnName;
+protected $groupColumnName;
+protected $statementHasKey = NULL;
+protected $statementGetFromCache = NULL;
+protected $statementSaveToCache = NULL;
+protected $statementRemoveByKey = NULL;
+protected $statementRemoveByGroup = NULL;
 
+public function __construct(Connection $connection,
+$table,
+$idColumnName,
+$keyColumnName,
+$dataColumnName,
+$groupColumnName = Constants::DEFAULT_GROUP)
+{
+    $this->connection = $connection;
+    $this->setTable($table);
+    $this->setIdColumnName($idColumnName);
+    $this->setDataColumnName($dataColumnName);
+    $this->setKeyColumnName($keyColumnName);
+    $this->setGroupColumnName($groupColumnName);
+}
+```
 
-## 第9章
+5. 接下来的几个方法准备预编译语句，并在我们访问数据库时调用。我们不显示所有方法，但提供足够的信息让你了解其思路：
+
+```php
+public function prepareHasKey()
+{
+    $sql = 'SELECT `' . $this->idColumnName . '`'
+    . '`FROM ` . $this->table . '` '
+    . '`WHERE `' . $this->keyColumnName . '` = :key ';
+    $this->sql[__METHOD__] = $sql;
+    $this->statementHasKey =
+    $this->connection->pdo->prepare($sql);
+}
+public function prepareGetFromCache()
+```
+
+### 第9章
 
 ```php
 $sql = 'SELECT `' . $this->dataColumnName . '`'
@@ -11786,7 +12362,7 @@ $this->statementGetFromCache =
     $this->connection->pdo->prepare($sql);
 ```
 
-- 6. 现在我们定义一个方法，用于判断给定键的数据是否存在：
+6. 现在我们定义一个方法，用于判断给定键的数据是否存在：
 
 ```php
 public function hasKey($key)
@@ -11804,7 +12380,7 @@ public function hasKey($key)
 }
 ```
 
-- 7. 核心方法是从缓存中读取和写入数据的方法。以下是从缓存中检索数据的方法。我们只需要执行预编译语句，该语句执行带有 WHERE 子句的 SELECT，其中包含键和组：
+7. 核心方法是从缓存中读取和写入数据的方法。以下是从缓存中检索数据的方法。我们只需要执行预编译语句，该语句执行带有 WHERE 子句的 SELECT，其中包含键和组：
 
 ```php
 public function getFromCache(
@@ -11828,7 +12404,7 @@ public function getFromCache(
 }
 ```
 
-- 8. 在写入缓存时，我们首先判断该缓存键是否存在条目。如果存在，我们执行 UPDATE；否则，我们执行 INSERT：
+8. 在写入缓存时，我们首先判断该缓存键是否存在条目。如果存在，我们执行 UPDATE；否则，我们执行 INSERT：
 
 ```php
 public function saveToCache($key, $data,
@@ -11861,7 +12437,7 @@ $group = Constants::DEFAULT_GROUP)
 }
 ```
 
-- 9. 然后我们定义两个方法，分别按键或按组删除缓存。按组删除提供了一种便捷的机制，适用于需要删除大量项目的情况：
+9. 然后我们定义两个方法，分别按键或按组删除缓存。按组删除提供了一种便捷的机制，适用于需要删除大量项目的情况：
 
 ```php
 public function removeByKey($key)
@@ -11895,7 +12471,7 @@ public function removeByGroup($group)
 }
 ```
 
-- 10. 最后，我们为每个属性定义 getter 和 setter。此处未全部展示以节省空间：
+10. 最后，我们为每个属性定义 getter 和 setter。此处未全部展示以节省空间：
 
 ```php
 public function setTable($name)
@@ -11910,7 +12486,9 @@ public function getTable()
 // 等等。
 ```
 
-- 11. 文件系统缓存适配器定义了与之前相同的方法。请注意使用 md5()，并非出于安全目的，而是作为一种快速从键生成文本字符串的方式：
+11. 文件系统缓存适配器定义了与之前相同的方法。请注意使用 `md5()`，并非出于安全目的，而是作为一种快速从键生成文本字符串的方式：
+
+
 
 ```php
 namespace Application\Cache;
@@ -12007,7 +12585,7 @@ class File implements CacheAdapterInterface
 }
 ```
 
-- 12. 现在我们可以展示核心缓存机制了。在构造函数中，我们接受一个实现了 CacheAdapterInterface 的类作为参数：
+### 12. 现在我们可以展示核心缓存机制了。在构造函数中，我们接受一个实现了 `CacheAdapterInterface` 的类作为参数：
 
 ```php
 namespace Application\Cache;
@@ -12022,7 +12600,7 @@ class Core
     }
 ```
 
-- 13. 接下来是一系列包装方法，它们调用适配器中同名方法，但接受一个 Psr\Http\Message\RequestInterface 类作为参数，并返回一个 Psr\Http\Message\ResponseInterface 作为响应。我们从简单的方法开始：hasKey()。请注意如何从请求参数中提取键：
+### 13. 接下来是一系列包装方法，它们调用适配器中同名方法，但接受一个 `Psr\Http\Message\RequestInterface` 类作为参数，并返回一个 `Psr\Http\Message\ResponseInterface` 作为响应。我们从简单的方法开始：`hasKey()`。请注意如何从请求参数中提取键：
 
 ```php
 public function hasKey(RequestInterface $request)
@@ -12032,7 +12610,7 @@ public function hasKey(RequestInterface $request)
 }
 ```
 
-- 14. 要从缓存中检索信息，我们需要从请求对象中获取键和组参数，然后调用适配器中的同名方法。如果没有获得结果，我们设置 204 代码，表示请求成功但未产生内容。否则，我们设置 200（成功）代码，并遍历结果。所有内容随后被放入响应对象中并返回：
+### 14. 要从缓存中检索信息，我们需要从请求对象中获取键和组参数，然后调用适配器中的同名方法。如果没有获得结果，我们设置 204 代码，表示请求成功但未产生内容。否则，我们设置 200（成功）代码，并遍历结果。所有内容随后被放入响应对象中并返回：
 
 ```php
 public function getFromCache(RequestInterface $request)
@@ -12051,10 +12629,7 @@ public function getFromCache(RequestInterface $request)
 }
 ```
 
-
-
-
-15. 奇怪的是，写入缓存的操作几乎相同，区别在于结果被期望是一个数字（即受影响的行数）或一个布尔结果：
+### 15. 奇怪的是，写入缓存的操作几乎相同，区别在于结果被期望是一个数字（即受影响的行数）或一个布尔结果：
 
 ```php
 public function saveToCache(RequestInterface $request)
@@ -12078,7 +12653,7 @@ public function saveToCache(RequestInterface $request)
 }
 ```
 
-16. 删除方法正如预期那样，彼此非常相似：
+### 16. 删除方法正如预期那样，彼此非常相似：
 
 ```php
 public function removeByKey(RequestInterface $request)
@@ -12118,15 +12693,15 @@ public function removeByGroup(RequestInterface $request)
 
 ## 工作原理...
 
-为了演示 Acl 类的使用，你需要定义本配方中描述的类，汇总如下：
+为了演示 `Acl` 类的使用，你需要定义本配方中描述的类，汇总如下：
 
 | 类 | 涉及步骤 |
 | :--- | :--- |
-| Application\Cache\Constants | 1 |
-| Application\Cache\CacheAdapterInterface | 2 |
-| Application\Cache\Database | 3 - 10 |
-| Application\Cache\File | 11 |
-| Application\Cache\Core | 12 - 16 |
+| `Application\Cache\Constants` | 1 |
+| `Application\Cache\CacheAdapterInterface` | 2 |
+| `Application\Cache\Database` | 3 - 10 |
+| `Application\Cache\File` | 11 |
+| `Application\Cache\Core` | 12 - 16 |
 
 接下来，定义一个测试程序，你可以将其命名为 `chap_09_middleware_cache_db.php`。在这个程序中，照例为必要的文件定义常量，设置自动加载，使用相应的类，哦……还要写一个生成素数的函数（此时你很可能正在重读最后这一小段。别担心，我们可以帮你！）：
 
@@ -12220,6 +12795,8 @@ if ($status == 200) {
 }
 ```
 
+
+
 然后你可以检查结束时间，计算差值，并查看你的新素数列表：
 
 ```php
@@ -12287,9 +12864,6 @@ Difference: 0.00317278744506836
 Press return to continue
 ```
 
-
-
-
 考虑到我们这个小质数生成器并非世界上最高效的，且演示是在笔记本电脑上运行的，时间从 30 多秒缩短到了毫秒级。
 
 ## 更多内容...
@@ -12307,7 +12881,9 @@ Press return to continue
 ### 如何实现...
 
 - 最流行的方法可能是利用支持 **URL 重写** 的 web 服务器。一个例子是配置为使用 `mod_rewrite` 的 Apache web 服务器。然后你定义重写规则，允许图形文件请求以及对 CSS 和 JavaScript 的请求原样通过。否则，请求将通过路由方法进行汇总。
+
 - 另一种潜在的方法是简单地让你的 web 服务器虚拟主机定义指向一个特定的路由脚本，该脚本随后调用路由类，做出路由决策，并适当重定向。
+
 - 首先要考虑的代码是如何定义路由配置。显而易见的答案是构造一个数组，其中每个键都指向一个正则表达式，URI 路径将与该正则表达式匹配，以及某种形式的操作。以下代码片段展示了此类配置的示例。在此示例中，我们定义了三个路由：home、page 和 default。default 应该放在最后，因为它将匹配之前未匹配的任何内容。操作的执行形式是一个匿名函数，如果发生路由匹配，该函数将被执行：
 
 ```php
@@ -12457,6 +13033,8 @@ $config = [
 
 然后你可以定义一个路由器实例，将初始化后的 `ServerRequest` 实例作为第一个参数提供：
 
+
+
 ```php
 $router = new Router((new ServerRequest())
     ->initialize(), DOC_ROOT, $config);
@@ -12493,10 +13071,6 @@ if ($fn = $router->isFileOrDir()
 </html>
 ```
 
-
-
-
-
 # 第 9 章
 
 最后，还需要一个使用用户友好型路由的修订版菜单：
@@ -12510,28 +13084,28 @@ if ($fn = $router->isFileOrDir()
 <!-- etc. -->
 ```
 
-若要使用 Apache 测试该配置，请定义一个指向 /path/to/source/for/this/chapter/routing 的虚拟主机定义。此外，定义一个 `.htaccess` 文件，将任何不是文件、目录或链接的请求重定向到 index.php。或者，您也可以直接使用内置的 PHP Web 服务器。在终端窗口或命令提示符中，输入以下命令：
+若要使用 Apache 测试该配置，请定义一个指向 `/path/to/source/for/this/chapter/routing` 的虚拟主机定义。此外，定义一个 `.htaccess` 文件，将任何不是文件、目录或链接的请求重定向到 `index.php`。或者，您也可以直接使用内置的 PHP Web 服务器。在终端窗口或命令提示符中，输入以下命令：
 
 ```bash
 cd /path/to/source/for/this/chapter/routing
 php -S localhost:8080
 ```
 
-在浏览器中，请求 http://localhost:8080/home 时的输出大致如下：
+在浏览器中，请求 `http://localhost:8080/home` 时的输出大致如下：
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_363_0.png)
 
 ## 另请参阅
 
-有关使用 NGINX Web 服务器进行重写的信息，请查看此文章： http://nginx.org/en/docs/http/nginx_rewrite_module.html。市面上有许多功能强大且比此处介绍的简单路由更复杂的 PHP 路由库。这些库包括 AltOrouter (http://alto router.com/)、TreeRoute (https://github.com/baryshev/TreeRoute)、FastRoute (https:// github.com/nikic/FastRoute) 以及 Aura.Router (https://github.com/auraphp/ Aura.Router)。此外，大多数框架（例如 Zend Framework 2 或 CodeIgniter）都有自己的路由功能。
+有关使用 NGINX Web 服务器进行重写的信息，请查看此文章： `http://nginx.org/en/docs/http/nginx_rewrite_module.html`。市面上有许多功能强大且比此处介绍的简单路由更复杂的 PHP 路由库。这些库包括 `AltOrouter` (`http://alto router.com/`)、`TreeRoute` (`https://github.com/baryshev/TreeRoute`)、`FastRoute` (`https:// github.com/nikic/FastRoute`) 以及 `Aura.Router` (`https://github.com/auraphp/ Aura.Router`)。此外，大多数框架（例如 `Zend Framework 2` 或 `CodeIgniter`）都有自己的路由功能。
 
 ## 进行跨框架系统调用
 
-开发 PSR-7（以及中间件）的主要原因之一是对在框架之间进行调用的需求日益增长。值得注意的是，PSR-7 的主要文档由 PHP 框架互操作组（PHP-FIG）托管。
+开发 `PSR-7`（以及中间件）的主要原因之一是对在框架之间进行调用的需求日益增长。值得注意的是，`PSR-7` 的主要文档由 PHP 框架互操作组（`PHP-FIG`）托管。
 
-# 如何实现...
+### 如何实现...
 
-- 中间件跨框架调用的主要机制是创建一个驱动程序，该程序按顺序执行框架调用，并保持共同的请求和响应对象。请求和响应对象分别被期望表示 Psr\Http\Message\ServerRequestInterface 和 Psr\Http\Message\ResponseInterface。
+- 中间件跨框架调用的主要机制是创建一个驱动程序，该程序按顺序执行框架调用，并保持共同的请求和响应对象。请求和响应对象分别被期望表示 `Psr\Http\Message\ServerRequestInterface` 和 `Psr\Http\Message\ResponseInterface`。
 
 - 为了便于说明，我们定义一个中间件会话验证器。常量和属性反映了会话指纹（session thumbnail），这是我们用来整合网站访问者 IP 地址、浏览器和语言设置等因素的术语：
 
@@ -12559,7 +13133,7 @@ class Validator
     protected $storedTime;
 ```
 
-- 构造函数接受一个 ServerRequestInterface 实例和会话作为参数。如果会话是一个数组（例如 $_SESSION），我们会将其包装在一个类中。这样做的目的是考虑到传入的可能是会话对象（例如 Joomla 中使用的 JSession）。然后，我们使用上述提到的因素创建指纹。如果存储的指纹不可用，我们假设这是第一次访问，并存储当前指纹以及停止时间（如果设置了该参数）。我们使用 md5()，因为它是一种快速的哈希算法，不对外暴露，因此适用于此应用：
+- 构造函数接受一个 `ServerRequestInterface` 实例和会话作为参数。如果会话是一个数组（例如 `$_SESSION`），我们会将其包装在一个类中。这样做的目的是考虑到传入的可能是会话对象（例如 Joomla 中使用的 `JSession`）。然后，我们使用上述提到的因素创建指纹。如果存储的指纹不可用，我们假设这是第一次访问，并存储当前指纹以及停止时间（如果设置了该参数）。我们使用 `md5()`，因为它是一种快速的哈希算法，不对外暴露，因此适用于此应用：
 
 ```php
 public function __construct(
@@ -12584,7 +13158,7 @@ public function __construct(
 }
 ```
 
-- 虽然定义 `__invoke()` 并不是必需的，但对于独立的中间件类来说，这个魔术方法非常方便。按照惯例，我们接受 `ServerRequestInterface` 和 `ResponseInterface` 实例作为参数。在此方法中，我们仅检查当前指纹是否与存储的指纹匹配。当然，第一次时会匹配。但在后续请求中，企图进行会话劫持的攻击者很可能会被发现。此外，如果会话时间超过了停止时间（如果设置了），同样会发送 401 代码：
+- 虽然定义 `__invoke()` 并不是必需的，但对于独立的中间件类来说，这个魔术方法非常方便。按照惯例，我们接受 `ServerRequestInterface` 和 `ResponseInterface` 实例作为参数。在此方法中，我们仅检查当前指纹是否与存储的指纹匹配。当然，第一次时会匹配。但在后续请求中，企图进行会话劫持的攻击者很可能会被发现。此外，如果会话时间超过了停止时间（如果设置了），同样会发送 `401` 代码：
 
 ```php
 public function __invoke(
@@ -12618,8 +13192,11 @@ public function __invoke(
 ```
 
 - 现在我们可以将新的中间件类投入使用。至少在这一阶段，跨框架调用的主要问题总结如下。相应地，我们如何实现中间件在很大程度上取决于最后一点：
-    - 并非所有 PHP 框架都符合 PSR-7 标准
-    - 现有的 PSR-7 实现并不完整
+
+    - 并非所有 PHP 框架都符合 `PSR-7` 标准
+
+    - 现有的 `PSR-7` 实现并不完整
+
     - 所有框架都想当“老板”
 
 - 例如，请查看 **Zend Expressive** 的配置文件，它是一个自称 PSR7 中间件微框架。这里是文件 `middleware-pipeline.global.php`，它位于标准 Expressive 应用程序的 `config/autoload` 文件夹中。`dependencies` 键用于识别将在管道中激活的中间件包装类：
@@ -12669,13 +13246,9 @@ return [
 ];
 ```
 
+### 工作原理...
 
-
-
-
-## 工作原理...
-
-首先，创建步骤 2-5 中描述的 `Application\MiddleWare\Session\Validator` 测试中间件类。然后你需要前往 <https://getcomposer.org/> 并按照说明获取 Composer。将其下载到 `/path/to/source/for/this/chapter` 文件夹中。接下来，构建一个基础的 Zend Expressive 应用程序，如下所示。请注意，当提示是否使用最小骨架时，请选择“否”：
+首先，创建步骤 2-5 中描述的 `Application\MiddleWare\Session\Validator` 测试中间件类。然后你需要前往 `<https://getcomposer.org/>` 并按照说明获取 Composer。将其下载到 `/path/to/source/for/this/chapter` 文件夹中。接下来，构建一个基础的 Zend Expressive 应用程序，如下所示。请注意，当提示是否使用最小骨架时，请选择“否”：
 
 ```bash
 cd /path/to/source/for/this/chapter
@@ -12705,6 +13278,8 @@ $app->run();
 ```
 
 然后你需要创建一个封装类来调用我们的会话验证中间件。创建一个 `SessionValidateAction.php` 文件，该文件需要放置在 `/path/to/source/for/this/chapter/expressive/src/App/Action` 文件夹中。为了演示目的，将停止时间参数设置为一个较短的时间间隔。在这种情况下，`time() + 10` 为你提供 10 秒：
+
+
 
 ```php
 namespace App\Action;
@@ -12795,7 +13370,7 @@ ApplicationFactory::DISPATCH_MIDDLEWARE,
 
 ## 具体步骤...
 
-1.  在 PHP 4 的情况下，实际上是有机会的，因为它支持有限度的面向对象编程。因此，最佳方法是降低前三个配方中描述的基础 PSR-7 类的级别。篇幅有限，无法涵盖所有更改，但我们展示了一个潜在的 PHP 4 版本的 `Application\\MiddleWare\\ServerRequest`。首先要注意的是没有命名空间！因此，我们使用带下划线 `_` 的类名来代替命名空间分隔符：
+1. 在 PHP 4 的情况下，实际上是有机会的，因为它支持有限度的面向对象编程。因此，最佳方法是降低前三个配方中描述的基础 PSR-7 类的级别。篇幅有限，无法涵盖所有更改，但我们展示了一个潜在的 PHP 4 版本的 `Application\\MiddleWare\\ServerRequest`。首先要注意的是没有命名空间！因此，我们使用带下划线 `_` 的类名来代替命名空间分隔符：
 
 ```php
 class Application_MiddleWare_ServerRequest
@@ -12805,7 +13380,7 @@ implements Psr_Http_Message_ServerRequestInterface
 }
 ```
 
-2.  在 PHP 4 中，所有属性都使用关键字 `var` 标识：
+2. 在 PHP 4 中，所有属性都使用关键字 `var` 标识：
 
 ```php
 var $serverParams;
@@ -12814,7 +13389,7 @@ var $queryParams;
 // not all properties are shown
 ```
 
-3.  `initialize()` 方法几乎相同，除了像 `$this->getServerParams()['REQUEST_URI']` 这样的语法在 PHP 4 中是不允许的。因此，我们需要将其拆分到一个单独的变量中：
+3. `initialize()` 方法几乎相同，除了像 `$this->getServerParams()['REQUEST_URI']` 这样的语法在 PHP 4 中是不允许的。因此，我们需要将其拆分到一个单独的变量中：
 
 ```php
 function initialize()
@@ -12830,7 +13405,7 @@ function initialize()
 }
 ```
 
-4.  所有的 `$_XXX` 超全局变量在 PHP 4 的后期版本中都存在：
+4. 所有的 `$_XXX` 超全局变量在 PHP 4 的后期版本中都存在：
 
 ```php
 function getServerParams()
@@ -12843,7 +13418,7 @@ function getServerParams()
 // not all getXxx() methods are shown to conserve space
 ```
 
-5.  空合并运算符是在 PHP 7 中引入的。我们需要使用 `isset(XXX) ? XXX : ''` 代替：
+5. 空合并运算符是在 PHP 7 中引入的。我们需要使用 `isset(XXX) ? XXX : ''` 代替：
 
 ```php
 function getRequestMethod()
@@ -12856,7 +13431,7 @@ function getRequestMethod()
 }
 ```
 
-6.  JSON 扩展直到 PHP 5 才被引入。因此，我们需要满足于原始输入。我们也可能需要使用 `serialize()` 或 `unserialize()` 来代替 `json_encode()` 和 `json_decode()`：
+6. JSON 扩展直到 PHP 5 才被引入。因此，我们需要满足于原始输入。我们也可能需要使用 `serialize()` 或 `unserialize()` 来代替 `json_encode()` 和 `json_decode()`：
 
 ```php
 function getParsedBody()
@@ -12890,7 +13465,7 @@ function getParsedBody()
 }
 ```
 
-7.  `withXXX()` 方法在 PHP 4 中工作方式大致相同：
+7. `withXXX()` 方法在 PHP 4 中工作方式大致相同：
 
 ```php
 function withParsedBody($data)
@@ -12899,10 +13474,6 @@ function withParsedBody($data)
     return $this;
 }
 ```
-
-
-
-
 
 8. 同样，`withoutXXX()` 方法的作用也是一样的：
 
@@ -13025,7 +13596,11 @@ class GetSet
 }
 ```
 
-4. 如果你的类拥有大量的属性，为每个属性定义不同的 getter 和 setter 可能会变得繁琐。在这种情况下，你可以使用魔术方法 `__call()` 定义一种回退机制。下面的类定义了九个不同的属性。相反于定义九个 getter 和九个 setter，我们定义了一个单一的方法 `__call()`，该方法判断用法是 get 还是 set。如果是 get，它从内部数组中检索键；如果是 set，它将值存储在内部数组中。
+
+
+## 4. 如果你的类拥有大量的属性，为每个属性定义不同的 getter 和 setter 可能会变得繁琐
+
+在这种情况下，你可以使用魔术方法 `__call()` 定义一种回退机制。下面的类定义了九个不同的属性。相反于定义九个 getter 和九个 setter，我们定义了一个单一的方法 `__call()`，该方法判断用法是 get 还是 set。如果是 get，它从内部数组中检索键；如果是 set，它将值存储在内部数组中。
 
 `__call()` 方法是一个魔术方法，当应用程序调用不存在的方法时会执行此方法。
 
@@ -13059,7 +13634,7 @@ class LotsProps
 }
 ```
 
-#### 它是如何工作的……
+### 它是如何工作的……
 
 将步骤 2 中提到的代码复制到新文件 `chap_10_oop_using_getters_and_setters.php` 中。要测试该类，请添加以下内容：
 
@@ -13130,10 +13705,6 @@ echo PHP_EOL;
 
 如果你在不设置值的情况下调用 `getArrVal()`，默认值是一个空数组。设置数组值按预期工作。但是，如果你提供非数组值作为参数，数组的类型提示会导致抛出 `TypeError`，可以像这里展示的那样捕获它：
 
-
-
-
-
 ### 0. 终端
 
 ```
@@ -13155,7 +13726,7 @@ PHP  1. {main}() /home/aed/Repos/php7_recipes/source/chapter04/chap_04_oop_using
 PHP  2. GetSet->setArrVal() /home/aed/Repos/php7_recipes/source/chapter04/chap...
 ```
 
-最后，将步骤 3 中定义的 LotsProps 类放在单独的文件中，命名为 chap_10_oop_using_getters_and_setters_magic_call.php。现在添加代码来设置值。当然，会发生的情况是调用了魔术方法 `__call()`。在执行 `preg_match()` 之后，不存在属性中“set”字母之后的剩余部分将成为内部数组 `$values` 中的一个键：
+最后，将步骤 3 中定义的 `LotsProps` 类放在单独的文件中，命名为 `chap_10_oop_using_getters_and_setters_magic_call.php`。现在添加代码来设置值。当然，会发生的情况是调用了魔术方法 `__call()`。在执行 `preg_match()` 之后，不存在属性中“set”字母之后的剩余部分将成为内部数组 `$values` 中的一个键：
 
 ```php
 $a = new LotsProps();
@@ -13219,7 +13790,7 @@ return $linked;
 
 我们使用匿名函数生成新键，以提供额外的灵活性。你也会注意到我们进行了按键排序 (`ksort()`)，以便链表按键的顺序进行迭代。
 
-使用链表所需要做的只是遍历它，但生成来自主列表的结果，在本例中是 $customer：
+使用链表所需要做的只是遍历它，但生成来自主列表的结果，在本例中是 `$customer`：
 
 ```php
 foreach ($linked as $key => $link) {
@@ -13253,9 +13824,8 @@ $linked->offsetSet ($makeLink ($row), $key);
 }
 ```
 
--   我们只包括那些主列表中由 $filterCol 表示的值与 $filterVal 匹配的项目进入链表。迭代逻辑与步骤 2 中所示的相同。
-
--   最后，链表的另一种形式是双向链表。在这种情况下，列表以这样一种方式构建，即迭代可以正向或反向进行。在 PHP 的情况下，我们很幸运拥有一个 SPL 类，SplDoublyLinkedList，它巧妙地完成了这项工作。这是一个构建双向链表的函数：
+- 我们只包括那些主列表中由 `$filterCol` 表示的值与 `$filterVal` 匹配的项目进入链表。迭代逻辑与步骤 2 中所示的相同。
+- 最后，链表的另一种形式是双向链表。在这种情况下，列表以这样一种方式构建，即迭代可以正向或反向进行。在 PHP 的情况下，我们很幸运拥有一个 SPL 类，`SplDoublyLinkedList`，它巧妙地完成了这项工作。这是一个构建双向链表的函数：
 
 ```php
 function buildDoublyLinkedList(ArrayIterator $linked)
@@ -13272,14 +13842,14 @@ function buildDoublyLinkedList(ArrayIterator $linked)
 
 ## 工作原理...
 
-将第一个项目符号中显示的代码复制到文件 chap_10_linked_list_include.php 中。为了演示链表的使用，你需要一个数据源。对于此示例，你可以使用前面食谱中提到的 customer.csv 文件。它是一个 CSV 文件，具有以下列：
+将第一个项目符号中显示的代码复制到文件 `chap_10_linked_list_include.php` 中。为了演示链表的使用，你需要一个数据源。对于此示例，你可以使用前面食谱中提到的 `customer.csv` 文件。它是一个 CSV 文件，具有以下列：
 
 ```
 "id", "name", "balance", "email", "password", "status", "security_question",
 "confirm_code", "profile_id", "level"
 ```
 
-你可以向前面提到的包含文件中添加以下函数，以生成客户的主列表并显示他们的信息。请注意，我们使用第一列 id 作为主键：
+你可以向前面提到的包含文件中添加以下函数，以生成客户的主列表并显示他们的信息。请注意，我们使用第一列 `id` 作为主键：
 
 ```php
 function readCsv($fn, &$headers)
@@ -13334,7 +13904,7 @@ function printCustomer($headers, $linked, $customer)
 }
 ```
 
-然后，你可以定义一个调用程序 chap_10_linked_list_in_order.php，它包含前面定义的文件，并读取 customer.csv：
+然后，你可以定义一个调用程序 `chap_10_linked_list_in_order.php`，它包含前面定义的文件，并读取 `customer.csv`：
 
 ```php
 <?php
@@ -13344,7 +13914,9 @@ $headers = array();
 $customer = readCsv(CUSTOMER_FILE, $headers);
 ```
 
-然后，你可以定义一个将生成链表中键的匿名函数。在这个示例中，定义一个将第 1 列 (name) 分解为名字和姓氏的函数：
+然后，你可以定义一个将生成链表中键的匿名函数。在这个示例中，定义一个将第 1 列 (`name`) 分解为名字和姓氏的函数：
+
+
 
 ```php
 $makeLink = function ($row) {
@@ -13353,7 +13925,7 @@ $makeLink = function ($row) {
 };
 ```
 
-然后，你可以调用该函数来构建链表，并使用 printCustomer() 显示结果：
+然后，你可以调用该函数来构建链表，并使用 `printCustomer()` 显示结果：
 
 ```php
 $linked = buildLinkedList($customer, $makeLink);
@@ -13362,33 +13934,54 @@ echo printCustomer($headers, $linked, $customer);
 
 输出的显示方式可能如下：
 
-
-
-
 | 编号 | 姓名 | 余额 | 邮箱 | 级别 |
+
 |---|---|---|---|---|
+
 | 74 | Louella Allen | 847.65 | louella.allen@telecon.net | 高级 |
+
 | 49 | Omar Anthony | 3733.80 | omar.anthony@fastmedia.com | 中级 |
+
 | 4 | Morgan Avila | 888.88 | morgan.avila@northmedia.com | 高级 |
+
 | 9 | Armando Barlow | 6524.00 | armando.barlow@gabcable.com | 初级 |
+
 | 32 | Matilda Barrera | 478.32 | matilda.barrera@northcon.com | 中级 |
+
 | 54 | Ramiro Bentley | 565.81 | ramiro.bentley@westmedia.com | 初级 |
+
 | 11 | Felix Blevins | 130.57 | felix.blevins@southcom.net | 初级 |
+
 | 69 | Lucille Bradford | 677.58 | lucille.bradford@westmedia.com | 高级 |
+
 | 52 | Jesus Bright | 869.89 | jesus.bright@abcablenet.net | 初级 |
+
 | 76 | Lana Burns | 261.98 | lana.burns@westcon.com | 高级 |
+
 | 57 | Garrett Campos | 9.47 | garrett.campos@fastcom.net | 初级 |
+
 | 12 | Jose Carter | 56.22 | jose.carter@westcon.com | 中级 |
+
 | 24 | Cecelia Case | 592.19 | cecelia.case@southmedia.com | 中级 |
+
 | 68 | Geneva Case | 268.75 | geneva.case@westmedia.com | 初级 |
+
 | 43 | Roland Chang | 514.16 | roland.chang@southmedia.com | 中级 |
+
 | 46 | Dominick Cling | 881.77 | dominick.cling@telecon.com | 中级 |
+
 | 22 | Coleen Walker | 6595.20 | coleen.walker@fastmedia.com | 中级 |
+
 | 39 | Lena Conway | 757.22 | lena.conway@eastnet.net | 高级 |
+
 | 30 | Krista Cortez | 414.66 | krista.cortez@eastcon.com | 初级 |
+
 | 8 | Brian Crawford | 125.58 | brian.crawford@fastcom.net | 高级 |
+
 | 19 | Gene Cruz | 683.55 | gene.cruz@eastcon.com | 高级 |
+
 | 28 | Gabriela Davis | 88.87 | gabriela.davis@southmedia.net | 高级 |
+
 | 79 | Renee Decker | 447.83 | renee.decker@westcon.net | |
 
 要生成过滤后的结果，请按照步骤 4 中讨论的方法修改 `buildLinkedList()`。然后，你可以添加逻辑来检查过滤列的值是否与过滤器中的值匹配：
@@ -13424,10 +14017,12 @@ $makeLink = function ($row) {
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_390_0.png)
 
-## 操作方法...
+### 操作方法
 
 1. 我们不想实际移动数组中的值；那在资源使用方面会非常昂贵。相反，我们将使用**链表**，这在之前的食谱中已经讨论过。
+
 2. 首先，我们使用之前食谱中讨论的 `buildLinkedList()` 函数构建一个链表。
+
 3. 然后，我们定义一个新函数 `bubbleSort()`，它接受按引用传入的链表、主列表、排序字段以及表示排序顺序（升序或降序）的参数：
 
 ```php
@@ -13496,7 +14091,7 @@ return ++$iterations;
 }
 ```
 
-## 工作原理...
+### 工作原理
 
 将之前讨论的 `bubbleSort()` 函数添加到在前一个食谱中创建的 include 文件中。你可以使用前一个食谱中讨论的相同逻辑来读取客户 `.csv` 文件，生成主列表：
 
@@ -13534,7 +14129,7 @@ echo printCustomer($headers, $linked, $customer);
 
 在编程术语中，栈用于临时存储信息。检索顺序便于首先检索最新的项目。
 
-## 操作方法...
+### 操作方法
 
 1. 首先，我们定义一个类 `Application\Generic\Stack`。核心逻辑封装在一个 SPL 类 `SplStack` 中：
 
@@ -13570,10 +14165,7 @@ public function pop()
 }
 ```
 
-
-
-
-## 工作原理...
+### 工作原理
 
 堆栈的一种可能用途是存储消息。对于消息而言，通常希望优先获取最新的消息，因此堆栈是一个完美的使用场景。按照本食谱中的讨论，定义 `Application\Generic\Stack` 类。接下来，定义一个调用程序，设置自动加载并创建 *Stack* 的实例：
 
@@ -13626,9 +14218,9 @@ foreach ($stack() as $item) {
 
 > 需要注意的是，虽然二分查找的最大比较次数比顺序搜索小得多（log n + 1，其中 n 是列表中的元素数量，log 是对数），但参与搜索的列表必须先排序，这自然会降低性能。
 
-### 实现步骤…
+### 实现步骤
 
-1.  首先构建一个搜索类，`Application\Generic\Search`，它接受主列表作为参数。作为控制手段，我们还定义了一个属性 `$iterations`：
+1. 首先构建一个搜索类，`Application\Generic\Search`，它接受主列表作为参数。作为控制手段，我们还定义了一个属性 `$iterations`：
 
 ```php
 namespace Application\Generic;
@@ -13645,7 +14237,7 @@ class Search
 }
 ```
 
-2.  接下来定义一个方法 `binarySearch()`，用于设置搜索基础设施。首要任务是构建一个单独的数组 `$search`，其键是包含在搜索中的列的组合。然后按键排序：
+2. 接下来定义一个方法 `binarySearch()`，用于设置搜索基础设施。首要任务是构建一个单独的数组 `$search`，其键是包含在搜索中的列的组合。然后按键排序：
 
 ```php
 public function binarySearch(array $keys, $item)
@@ -13663,7 +14255,9 @@ public function binarySearch(array $keys, $item)
 }
 ```
 
-3.  然后将键提取到另一个数组 `$binary` 中，以便基于数字键执行二分排序。接着调用 `doBinarySearch()`，这会返回中间数组 `$search` 中的一个键，或者布尔值 `FALSE`：
+
+
+### 3. 然后将键提取到另一个数组 `$binary` 中，以便基于数字键执行二分排序。接着调用 `doBinarySearch()`，这会返回中间数组 `$search` 中的一个键，或者布尔值 `FALSE`：
 
 ```php
 $binary = array_keys($search);
@@ -13671,7 +14265,7 @@ $result = $this->doBinarySearch($binary, $item);
 return $this->primary[$search[$result]] ?? FALSE;
 ```
 
-4.  第一个 `doBinarySearch()` 初始化了一系列参数。`$iterations`、`$found`、`$loop`、`$done` 和 `$max` 都用于防止无限循环。`$upper` 和 `$lower` 代表要检查的列表切片：
+### 4. 第一个 `doBinarySearch()` 初始化了一系列参数。`$iterations`、`$found`、`$loop`、`$done` 和 `$max` 都用于防止无限循环。`$upper` 和 `$lower` 代表要检查的列表切片：
 
 ```php
 public function doBinarySearch($binary, $item)
@@ -13686,7 +14280,7 @@ public function doBinarySearch($binary, $item)
 }
 ```
 
-5.  然后实现一个 `while()` 循环并设置中点：
+### 5. 然后实现一个 `while()` 循环并设置中点：
 
 ```php
 while ($loop && !$found) {
@@ -13694,7 +14288,7 @@ while ($loop && !$found) {
 }
 ```
 
-6.  现在可以使用新的 PHP 7 **太空船运算符**，它在单次比较中给出了小于、等于或大于的结果。如果小于，将上限设置为中点。如果大于，将下限调整为中点。如果相等，我们就完成了，安然脱身：
+### 6. 现在可以使用新的 PHP 7 **太空船运算符**，它在单次比较中给出了小于、等于或大于的结果。如果小于，将上限设置为中点。如果大于，将下限调整为中点。如果相等，我们就完成了，安然脱身：
 
 ```php
 switch ($item <=> $binary[$mid]) {
@@ -13713,7 +14307,7 @@ switch ($item <=> $binary[$mid]) {
 }
 ```
 
-7.  现在进行一点循环控制。我们增加迭代次数，并确保其不超过列表的大小。如果是这样，肯定出了问题，我们需要退出。否则，我们检查上下限是否连续两次以上相同，如果是这样，则未找到搜索项。然后存储迭代次数并返回找到的（或未找到的）结果：
+### 7. 现在进行一点循环控制。我们增加迭代次数，并确保其不超过列表的大小。如果是这样，肯定出了问题，我们需要退出。否则，我们检查上下限是否连续两次以上相同，如果是这样，则未找到搜索项。然后存储迭代次数并返回找到的（或未找到的）结果：
 
 ```php
 $loop = (($iterations++ < $max) && ($done < 1));
@@ -13797,7 +14391,7 @@ array(18) {
 
 ### 实现步骤...
 
-1.  首先，我们定义一个基本类来保存搜索条件。该对象包含三个属性：键（最终代表数据库列）、运算符（LIKE、<、> 等）；以及可选的项目。项目可选的原因是，某些运算符，如 IS NOT NULL，不需要具体数据：
+1. 首先，我们定义一个基本类来保存搜索条件。该对象包含三个属性：键（最终代表数据库列）、运算符（LIKE、<、> 等）；以及可选的项目。项目可选的原因是，某些运算符，如 IS NOT NULL，不需要具体数据：
 
 ```php
 namespace Application\Database\Search;
@@ -13809,10 +14403,7 @@ class Criteria
 }
 ```
 
-
-
-
-## 2. 接下来，我们需要定义一个类 `Application\Database\Search\Engine`，并提供必要的类常量和属性。
+### 2. 接下来，我们需要定义一个类 `Application\Database\Search\Engine`，并提供必要的类常量和属性。
 
 `$columns` 和 `$mapping` 之间的区别在于，`$columns` 保存最终将出现在 HTML SELECT 字段（或等效字段）中的信息。出于安全原因，我们不希望暴露数据库列的实际名称，因此需要另一个数组 `$mapping`：
 
@@ -13836,7 +14427,7 @@ class Engine
     protected $sql = '';
 ```
 
-## 3. 接下来，我们定义一组我们愿意支持的操作符。
+### 3. 接下来，我们定义一组我们愿意支持的操作符。
 
 键代表实际的 SQL。值是将在表单中显示的内容：
 
@@ -13850,7 +14441,7 @@ protected $operators = [
 ];
 ```
 
-## 4. 构造函数接受一个数据库连接实例作为参数。
+### 4. 构造函数接受一个数据库连接实例作为参数。
 
 为了我们的目的，我们将使用在*第 5 章，与数据库交互*中定义的 `Application\Database\Connection`。我们还需要提供数据库表的名称，以及 `$columns`，这是一个任意列键和标签的数组，这些标签将出现在 HTML 表单中。这将引用 `$mapping`，其中键与 `$columns` 匹配，但值代表实际的数据库列名：
 
@@ -13865,7 +14456,7 @@ public function __construct(Connection $connection,
 }
 ```
 
-## 5. 在构造函数之后，我们提供一系列有用的 getter 和 setter：
+### 5. 在构造函数之后，我们提供一系列有用的 getter 和 setter：
 
 ```php
 public function setColumns($columns)
@@ -13881,7 +14472,7 @@ public function getColumns()
 // etc.
 ```
 
-## 6. 最关键的方法可能是构建待准备的 SQL 语句的方法。
+### 6. 最关键的方法可能是构建待准备的 SQL 语句的方法。
 
 在初始 SELECT 设置之后，我们添加 WHERE 子句，使用 `$mapping` 添加实际的数据库列名。然后我们添加操作符并实现 `switch()`，根据操作符，可能会或不会添加一个命名占位符，该占位符将代表搜索项：
 
@@ -13900,7 +14491,7 @@ public function prepareStatement(Criteria $criteria)
     }
 ```
 
-## 7. 现在核心 SELECT 已定义，我们移除末尾的 OR 关键字，并添加一个子句，使结果根据搜索列进行排序。
+### 7. 现在核心 SELECT 已定义，我们移除末尾的 OR 关键字，并添加一个子句，使结果根据搜索列进行排序。
 
 然后该语句被发送到数据库进行准备：
 
@@ -13912,7 +14503,7 @@ public function prepareStatement(Criteria $criteria)
 }
 ```
 
-## 8. 现在我们要进入主要环节，即 search() 方法。
+### 8. 现在我们要进入主要环节，即 search() 方法。
 
 我们接受一个 `Application\Database\Search\Criteria` 对象作为参数。这确保了我们至少有一个项键和操作符。为了保险起见，我们添加了一个 `if()` 语句来检查这些属性：
 
@@ -13925,7 +14516,7 @@ public function search(Criteria $Criteria)
     }
 ```
 
-## 9. 然后我们调用 prepareStatement()，并使用 try / catch 来捕获错误：
+### 9. 然后我们调用 prepareStatement()，并使用 try / catch 来捕获错误：
 
 ```php
     try {
@@ -13935,7 +14526,7 @@ public function search(Criteria $Criteria)
         }
 ```
 
-## 10. 接下来我们构建一个将提供给 execute() 的参数数组。
+### 10. 接下来我们构建一个将提供给 execute() 的参数数组。
 
 键代表在准备语句中用作占位符的数据库列名。注意，我们没有使用 `=`，而是使用了 `LIKE $value$` 构造：
 
@@ -13955,7 +14546,7 @@ public function search(Criteria $Criteria)
     }
 ```
 
-## 11. 语句被执行，并使用 `yield` 关键字返回结果，这实际上使该方法变成了一个生成器：
+### 11. 语句被执行，并使用 `yield` 关键字返回结果，这实际上使该方法变成了一个生成器：
 
 ```php
     $statement->execute($params);
@@ -13988,6 +14579,8 @@ use Application\Form\Element\Select;
 
 现在你可以定义哪些数据库列将出现在表单中，以及一个匹配的映射文件：
 
+
+
 ```php
 $dbCols = [
     'cname' => 'Customer Name',
@@ -14011,7 +14604,7 @@ $conn = new Connection(include __DIR__, DB_CONFIG_FILE);
 $engine = new Engine($conn, 'customer', $dbCols, $mapping);
 ```
 
-为了显示适当的下拉 SELECT 元素，我们基于 `Application\Form\*` 类定义包装器和元素：
+为了显示适当的下拉 `SELECT` 元素，我们基于 `Application\Form\*` 类定义包装器和元素：
 
 ```php
 $wrappers = [
@@ -14046,10 +14639,6 @@ $submitElement = new Generic('submit',
 ```
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_404_0.png)
-
-
-
-
 
 ## 探索高级算法
 
@@ -14104,11 +14693,11 @@ $result = $engine->search($criteria);
 
 ## 显示多维数组并累加总和
 
-如何正确显示来自多维数组的数据，一直是所有 Web 开发者面临的经典难题。为了说明，假设您希望显示客户列表及其购买记录。对于每位客户，您希望显示其姓名、电话号码、账户余额等。这已经代表了一个二维数组，其中 x 轴代表客户，y 轴代表该客户的数据。现在加入购买记录，你就有了第三个维度！如何在二维屏幕上表示三维模型？一种可能的解决方案是使用“隐藏”的 div 标签，配合简单的 JavaScript 可见性切换器。
+如何正确显示来自多维数组的数据，一直是所有 Web 开发者面临的经典难题。为了说明，假设您希望显示客户列表及其购买记录。对于每位客户，您希望显示其姓名、电话号码、账户余额等。这已经代表了一个二维数组，其中 x 轴代表客户，y 轴代表该客户的数据。现在加入购买记录，你就有了第三个维度！如何在二维屏幕上表示三维模型？一种可能的解决方案是使用“隐藏”的 `div` 标签，配合简单的 JavaScript 可见性切换器。
 
-## 操作方法...
+### 操作方法
 
-- 首先，我们需要从一个使用多个 **JOIN** 子句的 SQL 语句生成一个三维数组。我们将使用在**第 1 章：构建基础**中介绍的 *Application/Database/Connection* 类来构建适当的 SQL 查询。我们保留两个参数 *open*、*min* 和 *max*，以支持分页。遗憾的是，在这种情况下，我们无法简单使用 **LIMIT** 和 **OFFSET**，因为行数会根据任何给定客户的购买数量而变化。相应地，我们可以通过对 presumably（希望）是递增的客户 ID 施加限制来限制行数。为了使此正常工作，我们还需要将主 **ORDER** 设置为客户 ID：
+- 首先，我们需要从一个使用多个 `JOIN` 子句的 SQL 语句生成一个三维数组。我们将使用在*第 1 章：构建基础*中介绍的 `Application/Database/Connection` 类来构建适当的 SQL 查询。我们保留两个参数 `open`、`min` 和 `max`，以支持分页。遗憾的是，在这种情况下，我们无法简单使用 `LIMIT` 和 `OFFSET`，因为行数会根据任何给定客户的购买数量而变化。相应地，我们可以通过对 presumably（希望）是递增的客户 ID 施加限制来限制行数。为了使此正常工作，我们还需要将主 `ORDER` 设置为客户 ID：
 
 ```php
 define('ITEMS_PER_PAGE', 6);
@@ -14250,7 +14839,7 @@ $grandTotal += $row['sale_price'];
 </div>
 ```
 
-- 迄今为止的结果，不幸的是，远非整洁有序！因此，我们添加一个简单的 JavaScript 函数，根据其 id 属性切换 `<div>` 标签的可见性：
+- 迄今为止的结果，不幸的是，远非整洁有序！因此，我们添加一个简单的 JavaScript 函数，根据其 `id` 属性切换 `<div>` 标签的可见性：
 
 ```javascript
 <script type="text/javascript">
@@ -14262,11 +14851,9 @@ function showOrHide(id) {
 </script>
 ```
 
+9. 接下来，我们将 `purchases` 表包裹在一个初始不可见的 `<div>` 标签内。然后，我们可以限制初始显示的子行数，并添加一个链接以显示剩余的购买数据：
 
 
-
-
-9.  接下来，我们将 purchases 表包裹在一个初始不可见的 `<div>` 标签内。然后，我们可以限制初始显示的子行数，并添加一个链接以显示剩余的购买数据：
 
 ```html
 <div class="row" id="<?='purchase' . $key ?>"
@@ -14375,18 +14962,29 @@ string(19) "2015-09-18 03:58:26"
 当点击 **Purchases** 按钮时，初始购买信息显示出来。如果点击 **More** 链接，剩余的购买信息将显示：
 
 | **字段** | **值** |
+
 | :--- | :--- |
+
 | **余额** | 888888.00 |
+
 | **电子邮件** | Conrad.perry@fastmedia.com |
+
 | **电话** | 484-181-9811 |
+
 | **总购买额** | 3,038.90 |
 
 | **交易** | **日期** | **数量** | **价格** | **产品** |
+
 | :--- | :--- | :--- | :--- | :--- |
+
 | QJM3659 | 2016-10-27 03:27:28 | 2 | 8.40 | 花生糖 |
+
 | RLiJ437 | 2016-06-10 14:16:22 | 17 | 10.20 | 那不勒斯冰淇淋 |
+
 | ECO1192 | 2015-05-15 08:56:28 | 3 | 17.10 | 巧克力泡芙 |
+
 | ZAM6290 | 2015-10-21 23:11:22 | 18 | 72.00 | 冰淇淋蛋糕 |
+
 | ZNW5593 | 2015-09-18 03:58:26 | 15 | 75.00 | 南瓜冰淇淋 |
 
 **更多**
@@ -14402,7 +15000,7 @@ string(19) "2015-09-18 03:58:26"
 - 实现对象关系映射
 - 实现发布/订阅（Pub/Sub）设计模式
 
-# 简介
+## 简介
 
 将 **软件设计模式** 融入 **面向对象编程（OOP）** 代码的想法最初是在 1994 年著名的“四人组”（E. Gamma, R. Helm, R. Johnson, 和 J. Vlissides）撰写的开创性著作《设计模式：可复用面向对象软件的基础》（*Design Patterns: Elements of Reusable Object-Oriented Software*）中讨论的。该作品既未定义标准也未定义协议，而是识别出了一些多年来被证明有用的通用软件设计。书中讨论的模式通常被认为分为三类：创建型、结构型和行为型。
 
@@ -14424,38 +15022,40 @@ string(19) "2015-09-18 03:58:26"
 
 **注水器（Hydrator）** 模式是 **数据传输对象（Data Transfer Object）** 设计模式的一种变体。其设计原则非常简单：将数据从一个地方移动到另一个地方。在这个示例中，我们将定义类将数据从数组移动到对象。
 
-## 操作方法...
+### 操作方法...
 
-1.  首先，我们定义一个能够使用 getters 和 setters 的 Hydrator 类。在这个示例中，我们将使用 `Application\Generic\Hydrator\GetSet`：
-   ```php
-   namespace Application\Generic\Hydrator;
-   class GetSet
-   {
-       // code
-   }
-   ```
+1. 首先，我们定义一个能够使用 getters 和 setters 的 Hydrator 类。在这个示例中，我们将使用 `Application\Generic\Hydrator\GetSet`：
 
-2.  接下来，我们定义一个 `hydrate()` 方法，该方法接受数组和对象作为参数。然后它调用对象上的 `setXXX()` 方法，用数组中的值填充对象。我们使用 `get_class()` 确定对象的类，然后使用 `get_class_methods()` 获取所有方法的列表。`preg_match()` 用于匹配方法前缀及其后缀，随后假定后缀为数组键：
-   ```php
-   public static function hydrate(array $array, $object)
-   {
-       $class = get_class($object);
-       $methodList = get_class_methods($class);
+```php
+namespace Application\Generic\Hydrator;
+class GetSet
+{
+    // code
+}
+```
 
-       foreach ($methodList as $method) {
-           preg_match('/^\(set\)(.*?)\$/i', $method, $matches);
-           $prefix = $matches[1] ?? '';
-           $key     = $matches[2] ?? '';
-           $key    = strtolower(substr($key, 0, 1)) . substr($key, 1);
-           if ($prefix == 'set' && !empty($array[$key])) {
-               $object->$method($array[$key]);
-           }
-       }
-       return $object;
-   }
-   ```
+2. 接下来，我们定义一个 `hydrate()` 方法，该方法接受数组和对象作为参数。然后它调用对象上的 `setXXX()` 方法，用数组中的值填充对象。我们使用 `get_class()` 确定对象的类，然后使用 `get_class_methods()` 获取所有方法的列表。`preg_match()` 用于匹配方法前缀及其后缀，随后假定后缀为数组键：
 
-## 工作原理...
+```php
+public static function hydrate(array $array, $object)
+{
+    $class = get_class($object);
+    $methodList = get_class_methods($class);
+
+    foreach ($methodList as $method) {
+        preg_match('/^\(set\)(.*?)\$/i', $method, $matches);
+        $prefix = $matches[1] ?? '';
+        $key     = $matches[2] ?? '';
+        $key    = strtolower(substr($key, 0, 1)) . substr($key, 1);
+        if ($prefix == 'set' && !empty($array[$key])) {
+            $object->$method($array[$key]);
+        }
+    }
+    return $object;
+}
+```
+
+### 工作原理...
 
 为了演示如何使用数组到对象注水器，首先按照“操作方法...”部分所述定义 `Application\Generic\Hydrator\GetSet` 类。接下来，定义一个可用于测试该概念的实体类。为了说明这个示例，创建一个 `Application\Entity\Person` 类，具有适当的属性和方法。确保为所有属性定义 getters 和 setters。并非在此显示所有此类方法：
 
@@ -14518,15 +15118,11 @@ var_dump($b);
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_416_0.png)
 
-
-
-
-
 ## 构建对象转数组水合器
 
 本食谱是*创建数组转对象水合器*食谱的逆向操作。在这种情况下，我们需要从对象属性中提取值，并返回一个关联数组，其中键将是列名。
 
-## 操作方法...
+### 操作方法...
 
 - 1. 为了进行说明，我们将在前面食谱中定义的 `Application\Generic\Hydrator\GetSet` 类的基础上进行构建：
 
@@ -14561,7 +15157,7 @@ public static function extract($object)
 
 > 请注意，为了方便起见，我们将 `hydrate()` 和 `extract()` 定义为了静态方法。
 
-## 工作原理...
+### 工作原理...
 
 定义一个名为 `chap_11_object_to_array.php` 的调用程序，该程序设置自动加载并使用相应的类：
 
@@ -14602,11 +15198,13 @@ var_dump($a);
 
 通常，运行时条件会迫使开发人员定义执行相同任务的多种方法。传统上，这涉及一个巨大的 if/elseif/else 命令块。您要么在 if 语句内部定义大块逻辑，要么创建一系列函数或方法以启用不同的方法。策略模式试图通过让主要类封装代表解决同一问题不同方法的一系列子类来使这一过程形式化。
 
-## 操作方法...
+### 操作方法...
 
-- 1. 在这个说明中，我们将使用之前定义的 GetSet 水合器类作为一种策略。我们将定义一个主要的 `Application\Generic\Hydrator\Any` 类，该类将消耗 `Application\Generic\Hydrator\Strategy` 命名空间中的策略类，包括 `GetSet`、`PublicProps` 和 `Extending`。
 
-- 2. 我们首先定义反映可用内置策略的类常量：
+
+## 1. 在这个说明中，我们将使用之前定义的 `GetSet` 水合器类作为一种策略。我们将定义一个主要的 `Application\Generic\Hydrator\Any` 类，该类将消耗 `Application\Generic\Hydrator\Strategy` 命名空间中的策略类，包括 `GetSet`、`PublicProps` 和 `Extending`。
+
+## 2. 我们首先定义反映可用内置策略的类常量：
 
 ```php
 namespace Application\Generic\Hydrator;
@@ -14621,7 +15219,7 @@ class Any
     public $chosen;
 ```
 
-- 3. 然后我们定义一个构造函数，将所有内置策略添加到 `$strategies` 属性中：
+## 3. 然后我们定义一个构造函数，将所有内置策略添加到 `$strategies` 属性中：
 
 ```php
 public function __construct()
@@ -14632,7 +15230,7 @@ public function __construct()
 }
 ```
 
-- 4. 我们还添加了一个 `addStrategy()` 方法，允许我们在不重新编码类的情况下覆盖或添加新策略：
+## 4. 我们还添加了一个 `addStrategy()` 方法，允许我们在不重新编码类的情况下覆盖或添加新策略：
 
 ```php
 public function addStrategy($key, HydratorInterface $strategy) 
@@ -14641,7 +15239,7 @@ public function addStrategy($key, HydratorInterface $strategy)
 }
 ```
 
-- 5. `hydrate()` 和 `extract()` 方法只是调用所选策略的相应方法：
+## 5. `hydrate()` 和 `extract()` 方法只是调用所选策略的相应方法：
 
 ```php
 public function hydrate(array $array, $object)
@@ -14659,7 +15257,7 @@ public function extract($object)
 }
 ```
 
-- 6. 棘手的地方在于确定应选择哪种水合策略。为此，我们定义了 `chooseStrategy()`，该方法接受一个对象作为参数。我们首先通过获取类方法列表进行一些侦探工作。然后我们扫描该列表，查看是否存在任何 `getX()` 或 `setX()` 方法。如果存在，我们选择 `GetSet` 水合器作为所选策略：
+## 6. 棘手的地方在于确定应选择哪种水合策略。为此，我们定义了 `chooseStrategy()`，该方法接受一个对象作为参数。我们首先通过获取类方法列表进行一些侦探工作。然后我们扫描该列表，查看是否存在任何 `getX()` 或 `setX()` 方法。如果存在，我们选择 `GetSet` 水合器作为所选策略：
 
 ```php
 public function chooseStrategy($object)
@@ -14677,7 +15275,7 @@ public function chooseStrategy($object)
     }
 ```
 
-- 7. 仍然在我们的 `chooseStrategy()` 方法中，如果没有 getter 或 setter，我们接下来使用 `get_class_vars()` 来确定是否存在可用属性。如果存在，我们选择 `PublicProps` 作为我们的水合器：
+## 7. 仍然在我们的 `chooseStrategy()` 方法中，如果没有 getter 或 setter，我们接下来使用 `get_class_vars()` 来确定是否存在可用属性。如果存在，我们选择 `PublicProps` 作为我们的水合器：
 
 ```php
 if (!$strategy) {
@@ -14688,7 +15286,7 @@ if (!$strategy) {
 }
 ```
 
-- 8. 如果以上方法都失败，我们回退到 `Extending` 水合器，该水合器返回一个简单地继承对象类的新类，从而使得任何公共或受保护属性可用：
+## 8. 如果以上方法都失败，我们回退到 `Extending` 水合器，该水合器返回一个简单地继承对象类的新类，从而使得任何公共或受保护属性可用：
 
 ```php
 if (!$strategy) {
@@ -14698,9 +15296,9 @@ return $strategy;
 }
 ```
 
-- 9. 现在我们将注意力转向策略本身。首先，我们定义一个新的 `Application\Generic\Hydrator\Strategy` 命名空间。
+## 9. 现在我们将注意力转向策略本身。首先，我们定义一个新的 `Application\Generic\Hydrator\Strategy` 命名空间。
 
-- 10. 在新命名空间中，我们定义一个接口，允许我们识别任何可以被 `Application\Generic\Hydrator\Any` 消耗的策略：
+## 10. 在新命名空间中，我们定义一个接口，允许我们识别任何可以被 `Application\Generic\Hydrator\Any` 消耗的策略：
 
 ```php
 namespace Application\Generic\Hydrator\Strategy;
@@ -14711,7 +15309,7 @@ interface HydratorInterface
 }
 ```
 
-- 11. GetSet 水合器与前两个食谱中定义的完全相同，唯一的增加是它将实现新的接口：
+## 11. `GetSet` 水合器与前两个食谱中定义的完全相同，唯一的增加是它将实现新的接口：
 
 ```php
 namespace Application\Generic\Hydrator\Strategy;
@@ -14730,7 +15328,7 @@ class GetSet implements HydratorInterface
 }
 ```
 
-- 12. 下一个水合器只是读取和写入公共属性：
+## 12. 下一个水合器只是读取和写入公共属性：
 
 ```php
 namespace Application\Generic\Hydrator\Strategy;
@@ -14759,9 +15357,9 @@ class PublicProps implements HydratorInterface
 }
 ```
 
-- 13. 最后，`Extending` 是水合器的瑞士军刀，它继承对象类，从而提供对属性的直接访问。我们进一步定义魔术 getter 和 setter 以提供对属性的访问。
+## 13. 最后，`Extending` 是水合器的瑞士军刀，它继承对象类，从而提供对属性的直接访问。我们进一步定义魔术 getter 和 setter 以提供对属性的访问。
 
-- 14. `hydrate()` 方法是最困难的，因为我们假设没有定义 getter 或 setter，并且属性也没有定义为公共可见性级别。因此，我们需要定义一个继承要水合的对象的类的新类。我们通过首先定义一个将用作构建新类模板的字符串来实现这一点：
+## 14. `hydrate()` 方法是最困难的，因为我们假设没有定义 getter 或 setter，并且属性也没有定义为公共可见性级别。因此，我们需要定义一个继承要水合的对象的类的新类。我们通过首先定义一个将用作构建新类模板的字符串来实现这一点：
 
 ```php
 namespace Application\Generic\Hydrator\Strategy;
@@ -14770,12 +15368,15 @@ class Extending implements HydratorInterface
     const UNDEFINED_PREFIX = 'undefined';
 ```
 
-
-
-
-
+```php
 const TEMP_PREFIX = 'TEMP_';
+```
+
+```php
 const ERROR_EVAL = 'ERROR: unable to evaluate object';
+```
+
+```php
 public static function hydrate(array $array, $object)
 {
     $className = get_class($object);
@@ -14788,8 +15389,9 @@ public static function hydrate(array $array, $object)
         . 'class ' . $tmpClass
         . ' extends ' . $realClass . ' '
 }
+```
 
-15. 继续在 `hydrate()` 方法中，我们定义了一个 `$values` 属性，以及一个构造函数，该构造函数将待水合的数组作为参数赋值给对象。我们遍历该值数组，将值分配给属性。我们还定义了一个有用的 `getArrayCopy()` 方法，它可以在需要时返回这些值，此外还定义了一个魔术方法 `__get()` 来模拟直接属性访问：
+## 15. 继续在 `hydrate()` 方法中，我们定义了一个 `$values` 属性，以及一个构造函数，该构造函数将待水合的数组作为参数赋值给对象。我们遍历该值数组，将值分配给属性。我们还定义了一个有用的 `getArrayCopy()` 方法，它可以在需要时返回这些值，此外还定义了一个魔术方法 `__get()` 来模拟直接属性访问：
 
 ```
 . '{ '
@@ -14804,14 +15406,14 @@ public static function hydrate(array $array, $object)
 . '}
 ```
 
-16. 为了便利，我们定义了一个魔术方法 `__get()`，它模拟了直接的变量访问，就好像它们是公开的一样：
+## 16. 为了便利，我们定义了一个魔术方法 `__get()`，它模拟了直接的变量访问，就好像它们是公开的一样：
 
 ```
 . ' public function __get($key) '
 . ' { return $this->values[$key] ?? NULL; } '
 ```
 
-17. 仍然在为新类构建的模板中，我们还定义了一个魔术方法 `__call()`，它模拟了 getter 和 setter：
+## 17. 仍然在为新类构建的模板中，我们还定义了一个魔术方法 `__call()`，它模拟了 getter 和 setter：
 
 ```
 . ' public function __call($method, $params) '
@@ -14824,7 +15426,7 @@ public static function hydrate(array $array, $object)
 .     ' . substr($key, 1); '
 ```
 
-18. 继续在 `__call` 方法中，我们处理 getter 和 setter 的逻辑，然后关闭类定义。我们还添加了代码以结束命名空间：
+## 18. 继续在 `__call` 方法中，我们处理 getter 和 setter 的逻辑，然后关闭类定义。我们还添加了代码以结束命名空间：
 
 ```
 . ' if ($prefix == "get") { '
@@ -14836,7 +15438,7 @@ public static function hydrate(array $array, $object)
 . ' ' // ends namespace ' . PHP_EOL
 ```
 
-19. 最后，仍然在新类的模板中，我们在全局命名空间中添加了一个函数，用于构建并返回该类实例：
+## 19. 最后，仍然在新类的模板中，我们在全局命名空间中添加了一个函数，用于构建并返回该类实例：
 
 ```
 . 'namespace { '
@@ -14845,7 +15447,7 @@ public static function hydrate(array $array, $object)
 . '} ' // ends global namespace ' . PHP_EOL;
 ```
 
-20. 仍在 `hydrate()` 方法中，我们使用 `eval()` 执行完成的模板。然后我们运行刚刚在模板末尾定义的 `build()` 方法。注意，由于我们要填充的类的命名空间不确定，我们在全球命名空间中定义并调用 `build()`：
+## 20. 仍在 `hydrate()` 方法中，我们使用 `eval()` 执行完成的模板。然后我们运行刚刚在模板末尾定义的 `build()` 方法。注意，由于我们要填充的类的命名空间不确定，我们在全球命名空间中定义并调用 `build()`：
 
 ```
 try {
@@ -14857,9 +15459,9 @@ try {
 return \build($array);
 ```
 
-21. 定义 `extract()` 方法要容易得多，因为我们的选择极其有限。扩展一个类并使用魔术方法从数组中填充它很容易实现。反之则不然。如果我们扩展该类，我们将丢失所有的属性值，因为我们是扩展类，而不是对象实例。因此，我们唯一的选项是使用 getter 和公共属性的组合：
+## 21. 定义 `extract()` 方法要容易得多，因为我们的选择极其有限。扩展一个类并使用魔术方法从数组中填充它很容易实现。反之则不然。如果我们扩展该类，我们将丢失所有的属性值，因为我们是扩展类，而不是对象实例。因此，我们唯一的选项是使用 getter 和公共属性的组合：
 
-```
+```php
 public static function extract($object)
 {
     $array = array();
@@ -14885,7 +15487,9 @@ public static function extract($object)
 
 ## 工作原理...
 
-你可以从定义三个具有相同属性的测试类开始：firstName、lastName 等。第一个类 `Person` 应该具有受保护的属性以及 getter 和 setter。第二个类 `PublicPerson` 将具有公共属性。第三个类 `ProtectedPerson` 具有受保护的属性，但没有 getter 或 setter：
+你可以从定义三个具有相同属性的测试类开始：`firstName`、`lastName` 等。第一个类 `Person` 应该具有受保护的属性以及 getter 和 setter。第二个类 `PublicPerson` 将具有公共属性。第三个类 `ProtectedPerson` 具有受保护的属性，但没有 getter 或 setter：
+
+
 
 ```php
 <?php
@@ -14988,6 +15592,7 @@ var_dump($b);
 ![](img/39390f6d56c5a83b28db083a8bd5185c_427_0.png)
 
 > **注意**
+>
 > 注意 `id` 属性未设置，因为其可见性级别为私有。
 
 接下来，你可以定义一个具有相同值的数组。在 `Any` 实例上调用 `hydrate()`，并提供一个新的 `PublicPerson` 实例作为参数：
@@ -15008,11 +15613,11 @@ echo "\nChosen Strategy: " . $hydrator->chosen . "\n";
 var_dump($p);
 ```
 
-这是结果。注意，在这种情况下选择了 *PublicProps* 策略：
+这是结果。注意，在这种情况下选择了 `PublicProps` 策略：
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_428_0.png)
 
-最后，再次调用 `hydrate()`，但这次提供 *ProtectedPerson* 的实例作为对象参数。然后我们调用 `getFirstName()` 和 `getLastName()` 来测试魔术 getter。我们还通过直接变量访问来获取名字和姓氏：
+最后，再次调用 `hydrate()`，但这次提供 `ProtectedPerson` 的实例作为对象参数。然后我们调用 `getFirstName()` 和 `getLastName()` 来测试魔术 getter。我们还通过直接变量访问来获取名字和姓氏：
 
 ```php
 $q = $hydrator->hydrate($a, new ProtectedPerson());
@@ -15022,15 +15627,15 @@ echo "Name: {$q->firstName} {$q->lastName}\n";
 var_dump($q);
 ```
 
-这是最后的输出，显示选择了 *Extending* 策略。你还会注意到该实例是一个新的 *ProtectedPerson_TEMP* 类，并且受保护的属性已被完全填充：
+这是最后的输出，显示选择了 `Extending` 策略。你还会注意到该实例是一个新的 `ProtectedPerson_TEMP` 类，并且受保护的属性已被完全填充：
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_429_0.png)
 
-## 定义映射器
+# 定义映射器
 
 **映射器** 或 **数据映射器** 的工作方式与水合器非常相似：将数据从一种模型（无论是数组还是对象）转换为另一种模型。一个关键的差异在于，水合器是通用的，不需要预先编写对象属性名称，而映射器则相反：它需要关于两个模型属性名称的精确信息。在这个食谱中，我们将演示如何使用映射器将一个数据库表中的数据转换为另一个表。
 
-### 怎么做...
+## 怎么做...
 
 1. 我们首先定义一个 `Application\Database\Mapper\FieldConfig` 类，其中包含针对单个字段的映射指令。我们还定义了适当的类常量：
 
@@ -15044,9 +15649,6 @@ class FieldConfig
     const ERROR_DEST = 'ERROR: need to specify either '
         . 'both destTable and destCol or neither';
 ```
-
-
-
 
 2. 关键属性与相应的类常量一起定义。`$key` 用于标识该对象。`$source` 表示源数据库表中的列。`$destTable` 和 `$destCol` 表示目标数据库表和列。如果定义了 `$default`，它包含一个默认值或用于生成适当值的回调函数：
 
@@ -15204,6 +15806,8 @@ public function getDestColumns($table)
 
 12. 我们不得不做出决定：默认值（可能由回调函数提供）和源表中的哪个数据优先？我们决定首先测试默认值。如果默认值返回 NULL，则使用源数据。请注意，如果需要进一步处理，应定义回调函数作为默认值。
 
+
+
 ```php
 public function mapData($sourceData, $destTable)
 {
@@ -15226,7 +15830,7 @@ public function mapData($sourceData, $destTable)
 
 > 请注意，目标插入中会出现一些源行中不存在的列。在这种情况下，`FieldConfig` 对象的 `$source` 属性保持为 NULL，并提供一个默认值，该值可以是标量值，也可以是回调函数。
 
-13. 现在我们可以定义两个生成 SQL 的方法了。第一个方法将生成一个用于从源表读取的 SQL 语句。该语句将包含用于预处理的占位符（例如，使用 `PDO::prepare()`）：
+### 13. 现在我们可以定义两个生成 SQL 的方法了。第一个方法将生成一个用于从源表读取的 SQL 语句。该语句将包含用于预处理的占位符（例如，使用 `PDO::prepare()`）：
 
 ```php
 public function getSourceSelect($where = NULL)
@@ -15247,7 +15851,7 @@ public function getSourceSelect($where = NULL)
 }
 ```
 
-14. 另一个 SQL 生成方法生成用于特定目标表的预处理语句。请注意，占位符是前面加了":"的列名：
+### 14. 另一个 SQL 生成方法生成用于特定目标表的预处理语句。请注意，占位符是前面加了":"的列名：
 
 ```php
 public function getDestInsert($table)
@@ -15263,7 +15867,7 @@ public function getDestInsert($table)
 }
 ```
 
-## 工作原理...
+## 工作原理
 
 使用步骤 1 到 5 中显示的代码生成一个 `Application\Database\Mapper\FieldConfig` 类。将步骤 6 到 14 中显示的代码放入第二个 `Application\Database\Mapper\Mapping` 类中。
 
@@ -15307,10 +15911,6 @@ CREATE TABLE `customer_11` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_81398E09E7927C74` (`email`)
 ```
-
-
-
-
 
 ## 实现软件设计模式
 
@@ -15361,6 +15961,7 @@ INSERT INTO profile_1 ( address, city, state_province, postal_code, phone, count
 ```
 
 处理结果：
+
 - WILFREDO RICHARDS
 - WILLARD ATKINSON
 - MANUEL WHITE
@@ -15388,7 +15989,7 @@ INSERT INTO profile_1 ( address, city, state_province, postal_code, phone, count
 
 > 但请注意，我们将展示如何使用**预编译语句**来大大减轻这一缺点。
 
-### 如何做...
+### 如何做
 
 让我们看看实现对象关系映射的两种技术。
 
@@ -15413,10 +16014,6 @@ CREATE TABLE `purchases` (
 ) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=utf8
 COMMENT='Purchases';
 ```
-
-
-
-
 
 ### 基于客户实体类，以下是 `Application\Entity\Purchase` 类的可能形式。请注意，并非展示了所有的 getter 和 setter：
 
@@ -15475,6 +16072,8 @@ UNIQUE KEY `UNIQ_38C4` (`sku`)
 ```
 
 ### 基于客户实体类，以下是 `Application\Entity\Product` 类的可能形式：
+
+
 
 ```php
 namespace Application\Entity;
@@ -15552,7 +16151,7 @@ public function setProduct(Product $product)
 }
 ```
 
-请注意，在两个实体类中，我们都未修改 $mapping 数组。这是因为实现对象关系映射与实体属性名称和数据库列名称之间的映射无关。
+请注意，在两个实体类中，我们都未修改 `$mapping` 数组。这是因为实现对象关系映射与实体属性名称和数据库列名称之间的映射无关。
 
 ### 由于获取基本客户信息的核心功能仍然需要，我们只需扩展第 5 章“与数据库交互”中“将实体类绑定到 RDBMS 查询”食谱中描述的 `Application\Database\CustomerService` 类。我们可以创建一个新的 `Application\Database\CustomerOrmService_1` 类，它继承自 `Application\Database\CustomerService`：
 
@@ -15678,9 +16277,7 @@ public function fetchProductById($prodId)
 }
 ```
 
-
-
-6. 我们现在可以重构 `fetchPurchasesForCustomer()` 方法，使其嵌入一个匿名函数，该函数同时调用 `fetchPurchaseById()` 和 `fetchProductById()`，然后将生成的产品实体赋值给新找到的购买实体。在此示例中，我们执行初始查找，仅返回该客户所有购买的 ID。然后，我们在 Customer::$purchases 属性中嵌入一系列匿名函数，将购买 ID 存储为数组键，将匿名函数作为其值：
+### 我们现在可以重构 `fetchPurchasesForCustomer()` 方法，使其嵌入一个匿名函数，该函数同时调用 `fetchPurchaseById()` 和 `fetchProductById()`，然后将生成的产品实体赋值给新找到的购买实体。在此示例中，我们执行初始查找，仅返回该客户所有购买的 ID。然后，我们在 `Customer::$purchases` 属性中嵌入一系列匿名函数，将购买 ID 存储为数组键，将匿名函数作为其值：
 
 ```php
 public function fetchPurchasesForCustomer(Customer $cust)
@@ -15712,10 +16309,10 @@ public function fetchPurchasesForCustomer(Customer $cust)
 
 | 类 | 技术 #1 步骤 |
 | --- | --- |
-| Application\Entity\Purchase | 1 - 2, 7 |
-| Application\Entity\Product | 3 - 4 |
-| Application\Entity\Customer | 6, 16, + 在第 5 章 *与数据库交互* 中描述的内容。 |
-| Application\Database\CustomerOrmService_1 | 8 - 10 |
+| `Application\Entity\Purchase` | 1 - 2, 7 |
+| `Application\Entity\Product` | 3 - 4 |
+| `Application\Entity\Customer` | 6, 16, + 在第 5 章 *与数据库交互* 中描述的内容。 |
+| `Application\Database\CustomerOrmService_1` | 8 - 10 |
 
 ## 实现软件设计模式
 
@@ -15759,6 +16356,8 @@ $cust = $service->fetchByIdAndEmbedPurchases($id);
 ```
 
 显示购买信息所需的逻辑看起来像以下 HTML 代码。请注意，`Customer::getPurchases()` 返回一个 `Purchase` 实体数组。要从 `Purchase` 实体获取产品信息，在循环内部调用 `Purchase::getProduct()`，这将产生一个 `Product` 实体。然后你可以调用 `Product` 的任何 getter，在本例中为 `Product::getTitle()`：
+
+
 
 ```html
 <!-- Purchases Info -->
@@ -15861,8 +16460,6 @@ protected $data;
 protected $linked;
 protected $subscribers;
 ```
-
-
 
 ### 3. 构造函数用于初始化这些属性。我们还会加入 `__toString()`，以便在需要时快速访问该发布者的名称：
 
@@ -16084,11 +16681,17 @@ $pub->notify();
 在本章中，我们将涵盖以下主题：
 
 - 过滤 `$_POST` 数据
+
 - 验证 `$_POST` 数据
+
 - 保护 PHP 会话
+
 - 使用令牌保护表单
+
 - 构建安全的密码生成器
+
 - 使用 CAPTCHA 保护表单
+
 - 不使用 `mcrypt` 进行加密/解密
 
 ## 介绍
@@ -16102,14 +16705,20 @@ $pub->notify();
 数据过滤过程可以包含以下任何一项或全部内容：
 
 - 移除不需要的字符（即移除 `<script>` 标签）
+
 - 对数据执行转换（即把引号转换为 `&quot;`）
+
 - 加密或解密数据
 
 加密在本章的最后一个食谱中进行了讨论。除此之外，我们将展示一种基本机制，可用于过滤表单提交后到达的 `$_POST` 数据。
 
 ### 如何实现...
 
-1. 首先，你需要了解将存在于 `$_POST` 中的数据。另外，也许更重要的是，你需要了解存储表单数据的数据库表所施加的限制。作为一个例子，请查看 `prospects` 表的数据库结构：
+
+
+# 1. 首先，你需要了解将存在于 `$_POST` 中的数据
+
+另外，也许更重要的是，你需要了解存储表单数据的数据库表所施加的限制。作为一个例子，请查看 `prospects` 表的数据库结构：
 
 | COLUMN | TYPE | NULL | DEFAULT |
 |---|---|---|---|
@@ -16126,14 +16735,15 @@ $pub->notify();
 | budget | decimal(10,2) | Yes | None |
 | last_updated | datetime | Yes | None |
 
-2. 一旦你完成了对要发送和存储的数据的分析，你就可以确定需要执行何种类型的过滤，以及哪些 PHP 函数将服务于这一目的。
+# 2. 一旦你完成了对要发送和存储的数据的分析，你就可以确定需要执行何种类型的过滤，以及哪些 PHP 函数将服务于这一目的。
 
-3. 作为一个例子，如果你需要去掉用户提供的表单数据中完全可能存在的前导和尾部空白，你可以使用 PHP 的 `trim()` 函数。所有字符数据根据数据库结构都有长度限制。相应地，你可能需要考虑使用 `substr()` 以确保长度不被超过。如果你想要移除非字母字符，你可能需要考虑使用带有适当模式的 `preg_replace()`。
+# 3. 作为一个例子，如果你需要去掉用户提供的表单数据中完全可能存在的前导和尾部空白，你可以使用 PHP 的 `trim()` 函数
 
+所有字符数据根据数据库结构都有长度限制。相应地，你可能需要考虑使用 `substr()` 以确保长度不被超过。如果你想要移除非字母字符，你可能需要考虑使用带有适当模式的 `preg_replace()`。
 
+# 4. 现在我们可以将所需的 PHP 函数集组合成一个单一的回调数组
 
-
-4. 现在我们可以将所需的 PHP 函数集组合成一个单一的回调数组。下面是一个基于最终将存储在 *prospects* 表中的表单数据的过滤需求的示例：
+下面是一个基于最终将存储在 *prospects* 表中的表单数据的过滤需求的示例：
 
 ```php
 $filter = [
@@ -16156,7 +16766,9 @@ $filter = [
 ];
 ```
 
-5. 接下来，我们定义一个数组，该数组与 `$POST` 中预期的字段名称相匹配。在这个数组中，我们指定 `$filter` 数组中的键以及任何参数。注意第一个键 `*`。我们将把它用作通配符，应用于所有字段：
+# 5. 接下来，我们定义一个数组，该数组与 `$POST` 中预期的字段名称相匹配
+
+在这个数组中，我们指定 `$filter` 数组中的键以及任何参数。注意第一个键 `*`。我们将把它用作通配符，应用于所有字段：
 
 ```php
 $assignments = [
@@ -16175,11 +16787,15 @@ $assignments = [
 ];
 ```
 
-6. 然后，我们遍历数据集（即来自 `$POST` 的数据），并依次应用回调。我们首先运行分配给通配符（`*`）键的所有回调。
+# 6. 然后，我们遍历数据集（即来自 `$POST` 的数据），并依次应用回调
+
+我们首先运行分配给通配符（`*`）键的所有回调。
 
 > 实现通配符过滤器非常重要，可以避免冗余设置。在上面的示例中，我们希望为每一项应用代表 PHP 函数 `strip_tags()` 和 `trim()` 的过滤器。
 
-7. 接下来，我们运行分配给特定数据字段的所有回调。完成后，`$data` 中的所有值都将被过滤：
+# 7. 接下来，我们运行分配给特定数据字段的所有回调
+
+完成后，`$data` 中的所有值都将被过滤：
 
 ```php
 foreach ($data as $field => $item) {
@@ -16194,7 +16810,7 @@ foreach ($data as $field => $item) {
 
 ## 工作原理...
 
-将步骤 4 到 6 中显示的代码放入一个名为 `chap_12_post_data_filtering_basic.php` 的文件中。您还需要定义一个数组来模拟 `$POST` 中可能存在的数据。在这种情况下，您可以定义两个数组，一个包含良好数据，另一个包含不良数据：
+将步骤 4 到 6 中显示的代码放入一个名为 `chap_12_post_data_filtering_basic.php` 的文件中。你还需要定义一个数组来模拟 `$_POST` 中可能存在的数据。在这种情况下，你可以定义两个数组，一个包含良好数据，另一个包含不良数据：
 
 ```php
 $testData = [
@@ -16229,7 +16845,7 @@ $testData = [
 ];
 ```
 
-最后，您需要遍历过滤分配，展示良好数据和不良数据：
+最后，你需要遍历过滤分配，展示良好数据和不良数据：
 
 ```php
 foreach ($testData as $data) {
@@ -16272,23 +16888,23 @@ budget        : 0
 Press return to continue
 ```
 
-注意，姓名已被截断，标签已被移除。您还会注意到，虽然电子邮件地址经过了过滤，但它仍然不是一个有效的地址。重要的是要注意，为了正确处理数据，可能不仅需要*过滤*，还需要*验证*。
+注意，姓名已被截断，标签已被移除。你还会注意到，虽然电子邮件地址经过了过滤，但它仍然不是一个有效的地址。重要的是要注意，为了正确处理数据，可能不仅需要*过滤*，还需要*验证*。
 
 ## 另请参阅
 
 在第 6 章 *Building Scalable Websites* 中，名为 *Chaining $_POST filters* 的食谱讨论了如何将这里介绍的基本过滤概念整合到一个综合的过滤器链机制中。
 
-## 验证 $_POST 数据
+## 验证 `$_POST` 数据
 
 过滤和验证之间的主要区别在于，后者不会改变原始数据。另一个区别在于意图。验证的目的是确认数据符合根据客户需求确定的某些标准。
 
-## 如何操作...
+### 如何操作...
 
-- 1. 我们在这里介绍的基本验证机制与前面食谱中展示的相同。与过滤一样，了解要验证的数据的性质、它如何满足客户需求以及它是否符合数据库强制的标准至关重要。例如，如果数据库中列的最大宽度为 128，则验证回调可以使用 `strlen()` 来确认提交数据的长度小于或等于 128 个字符。同样，您可以使用 `ctype_alnum()` 来确认数据只包含字母和数字（视情况而定）。
+1. 我们在这里介绍的基本验证机制与前面食谱中展示的相同。与过滤一样，了解要验证的数据的性质、它如何满足客户需求以及它是否符合数据库强制的标准至关重要。例如，如果数据库中列的最大宽度为 128，则验证回调可以使用 `strlen()` 来确认提交数据的长度小于或等于 128 个字符。同样，你可以使用 `ctype_alnum()` 来确认数据只包含字母和数字（视情况而定）。
 
-- 2. 验证的另一个考虑因素是呈现适当的验证失败消息。从某种意义上说，验证过程也是一个确认过程，某人（假想中）将审查验证以确认成功或失败。如果验证失败，此人将需要知道原因。
+2. 验证的另一个考虑因素是呈现适当的验证失败消息。从某种意义上说，验证过程也是一个确认过程，某人（假想中）将审查验证以确认成功或失败。如果验证失败，此人将需要知道原因。
 
-- 3. 在这个说明中，我们将再次关注 prospects 表。现在我们可以将所需的 PHP 函数集组合成一个单一的回调数组。下面是一个基于表单数据验证需求的示例，这些数据最终将存储在 prospects 表中：
+3. 在这个说明中，我们将再次关注 `prospects` 表。现在我们可以将所需的 PHP 函数集组合成一个单一的回调数组。下面是一个基于表单数据验证需求的示例，这些数据最终将存储在 `prospects` 表中：
 
 ```php
 $validator = [
@@ -16325,9 +16941,11 @@ $validator = [
 ];
 ```
 
-> 注意，对于 alpha 和 alnum 回调，我们通过首先使用 `str_replace()` 移除空格来允许空白存在。然后我们可以调用 `ctype_alpha()` 或 `ctype_alnum()`，这将确定是否存在任何不允许的字符。
+> 注意，对于 `alpha` 和 `alnum` 回调，我们通过首先使用 `str_replace()` 移除空格来允许空白存在。然后我们可以调用 `ctype_alpha()` 或 `ctype_alnum()`，这将确定是否存在任何不允许的字符。
 
-- 4. 接下来，我们定义一个分配数组，该数组与 `$_POST` 中预期的字段名称相匹配。在这个数组中，我们指定 `$validator` 数组中的键以及任何参数：
+4. 接下来，我们定义一个分配数组，该数组与 `$_POST` 中预期的字段名称相匹配。在这个数组中，我们指定 `$validator` 数组中的键以及任何参数：
+
+
 
 ```php
 $assignments = [
@@ -16345,11 +16963,7 @@ $assignments = [
 ];
 ```
 
-
-
-
-
-### 5. 然后，我们使用嵌套的 foreach() 循环按顺序每次处理一个字段来遍历数据块。对于每个字段，我们遍历分配给该字段的回调函数：
+### 5. 然后，我们使用嵌套的 `foreach()` 循环按顺序每次处理一个字段来遍历数据块。对于每个字段，我们遍历分配给该字段的回调函数：
 
 ```php
 foreach ($data as $field => $item) {
@@ -16371,7 +16985,7 @@ foreach ($data as $field => $item) {
 
 ## 工作原理...
 
-将步骤 3 到 5 中显示的代码放入名为 `chap_12_post_data_validation_basic.php` 的文件中。你还需要定义一个模拟 $_POST 中可能存在的数据的数组。在这种情况下，你使用前一个食谱中提到的两个数组，一个包含良好数据，另一个包含不良数据。最终输出应该如下所示：
+将步骤 3 到 5 中显示的代码放入名为 `chap_12_post_data_validation_basic.php` 的文件中。你还需要定义一个模拟 `$_POST` 中可能存在的数据的数组。在这种情况下，你使用前一个食谱中提到的两个数组，一个包含良好数据，另一个包含不良数据。最终输出应该如下所示：
 
 ```text
 Processing: postal_code
@@ -16398,15 +17012,15 @@ digits : OK
 
 ### 参见
 
-- 在第 6 章“构建可扩展的网站”中，标题为“链接 $_POST 验证器”的食谱讨论了如何将与这里涵盖的基本验证概念结合到一个综合的过滤器链接机制中。
+- 在第 6 章“构建可扩展的网站”中，标题为“链接 `$_POST` 验证器”的食谱讨论了如何将与这里涵盖的基本验证概念结合到一个综合的过滤器链接机制中。
 
 ## 保护 PHP 会话
 
-PHP 会话机制相当简单。一旦使用 `session_start()` 或 `php.ini` 的 `session.autostart` 设置启动会话，PHP 引擎就会生成一个唯一标识符，默认情况下通过 cookie 将其传递给用户。在后续请求中，只要会话仍被视为活跃，用户的浏览器（或等效程序）就会再次通过 cookie 等方式呈现会话标识符以供检查。然后，PHP 引擎使用该标识符在服务器上定位适当的文件，并将存储的信息填充到 $_SESSION 中。当会话标识符成为识别回访网站访客的唯一手段时，会存在巨大的安全隐患。在本食谱中，我们将介绍几种技术，帮助你保护会话，从而极大地提高网站的整体安全性。
+PHP 会话机制相当简单。一旦使用 `session_start()` 或 `php.ini` 的 `session.autostart` 设置启动会话，PHP 引擎就会生成一个唯一标识符，默认情况下通过 cookie 将其传递给用户。在后续请求中，只要会话仍被视为活跃，用户的浏览器（或等效程序）就会再次通过 cookie 等方式呈现会话标识符以供检查。然后，PHP 引擎使用该标识符在服务器上定位适当的文件，并将存储的信息填充到 `$_SESSION` 中。当会话标识符成为识别回访网站访客的唯一手段时，会存在巨大的安全隐患。在本食谱中，我们将介绍几种技术，帮助你保护会话，从而极大地提高网站的整体安全性。
 
 ### 如何操作...
 
-1. 首先，重要的是要认识到仅将会话用作身份验证手段的危险性。试想一下，当有效用户登录你的网站时，你在 $_SESSION 中设置了一个 `loggedIn` 标志：
+1. 首先，重要的是要认识到仅将会话用作身份验证手段的危险性。试想一下，当有效用户登录你的网站时，你在 `$_SESSION` 中设置了一个 `loggedIn` 标志：
 
 ```php
 session_start();
@@ -16420,7 +17034,7 @@ if (isset($_POST['login'])) {
 }
 ```
 
-2. 在你的程序逻辑中，如果 $_SESSION['isLoggedIn'] 设置为 TRUE，则允许用户查看敏感信息：
+2. 在你的程序逻辑中，如果 `$_SESSION['isLoggedIn']` 设置为 TRUE，则允许用户查看敏感信息：
 
 ```php
 // Secret Info
@@ -16465,7 +17079,7 @@ if ($loggedIn && !$printMatch) {
 
 ## 工作原理...
 
-为了演示会话是如何容易受到漏洞影响的，编写一个简单的登录脚本，在成功登录时设置 $_SESSION['isLoggedIn'] 标志。你可以将该文件命名为 `chap_12_session_hijack.php`：
+为了演示会话是如何容易受到漏洞影响的，编写一个简单的登录脚本，在成功登录时设置 `$_SESSION['isLoggedIn']` 标志。你可以将该文件命名为 `chap_12_session_hijack.php`：
 
 ```php
 session_start();
@@ -16490,16 +17104,24 @@ if (isset($_POST['login'])) {
 然后你可以添加代码来显示一个简单的登录表单。要测试会话漏洞，请使用我们刚刚创建的 `chap_12_session_hijack.php` 文件按以下程序操作：
 
 1. 切换到包含该文件的目录。
+
 2. 运行 `php -S localhost:8080` 命令。
+
 3. 使用一个浏览器打开 URL `http://localhost:8080/<filename>`。
+
 4. 以用户 `test` 和密码 `password` 登录。
+
 5. 你应该能看到**你现在可以查看超级机密信息！！！**。
+
 6. 刷新页面：每次，你都应该看到一个新的会话标识符。
+
 7. 复制 `PHPSESSID` cookie 的值。
+
 8. 在另一个浏览器中打开同一网页。
+
 9. 通过复制 `PHPSESSID` 的值来修改浏览器发送的 cookie。
 
-为了说明起见，我们还显示 $_COOKIE 和 $_SESSION 的值，如下面的截图中使用 Vividi 浏览器所示：
+为了说明起见，我们还显示 `$_COOKIE` 和 `$_SESSION` 的值，如下面的截图中使用 Vividi 浏览器所示：
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_468_0.png)
 
@@ -16537,10 +17159,6 @@ $remotePrint = md5($_SERVER['REMOTE_ADDR']
     . $_SERVER['HTTP_USER_AGENT']
     . $_SERVER['HTTP_ACCEPT_LANGUAGE']);
 ```
-
-
-
-
 
 ## PHP 代码示例
 
@@ -16600,6 +17218,8 @@ $remotePrint = md5($_SERVER['REMOTE_ADDR']
 ## 操作方法...
 
 - 首先，为了演示问题，我们创建一个网页，模拟生成请求向数据库提交条目的被感染页面。为此说明，我们将该文件命名为 `chap_12_form_csrf_test_unprotected.html`：
+
+
 
 ```html
 <!DOCTYPE html>
@@ -16726,10 +17346,8 @@ if ($_POST['process']) {
 为了测试被感染的网页可能如何发起 CSRF 攻击，创建食谱中之前显示的以下文件：
 
 - `chap_12_form_csrf_test_unprotected.html`
+
 - `chap_12_form_unprotected.php`
-
-
-
 
 # *提升 Web 安全性*
 
@@ -16868,6 +17486,8 @@ public function special()
 
 3.  现在到了棘手的部分：生成一个难以猜测的单词。这就是 `$wordSource` 构造函数参数发挥作用的地方。它是一个网站数组，我们的词库将由此派生。相应地，我们需要一个方法，该方法从指定的源中提取唯一的单词列表，并将结果存储在一个文件中。我们接受 `$wordSource` 数组作为参数，并循环遍历每个 URL。我们使用 `md5()` 生成网站名称的哈希值，然后将其构建到一个文件名中。新生成的文件名存储在 `$sourceList` 中：
 
+
+
 ```php
 public function processSource(
     $wordSource, $minWordLength, $cacheDir)
@@ -16881,7 +17501,8 @@ public function processSource(
 }
 ```
 
-4.  如果文件不存在，或者是零字节文件，我们处理其内容。如果源是 HTML，我们只接受 `<body>` 标签内部的内容。然后我们使用 `str_word_count()` 从字符串中提取单词列表，同时使用 `strip_tags()` 移除任何标记：
+### 4.
+如果文件不存在，或者是零字节文件，我们处理其内容。如果源是 HTML，我们只接受 `<body>` 标签内部的内容。然后我们使用 `str_word_count()` 从字符串中提取单词列表，同时使用 `strip_tags()` 移除任何标记：
 
 ```php
 if (!file_exists($sourceFile) || filesize($sourceFile) == 0) {
@@ -16895,7 +17516,8 @@ if (!file_exists($sourceFile) || filesize($sourceFile) == 0) {
 }
 ```
 
-5.  然后我们删除任何过短的单词，并使用 `array_unique()` 去除重复项。最终结果存储在一个文件中：
+### 5.
+然后我们删除任何过短的单词，并使用 `array_unique()` 去除重复项。最终结果存储在一个文件中：
 
 ```php
 foreach ($list as $key => $value) {
@@ -16913,7 +17535,8 @@ foreach ($list as $key => $value) {
 }
 ```
 
-6.  接下来，我们定义一个方法，该方法将单词中的随机字母转换为大写：
+### 6.
+接下来，我们定义一个方法，该方法将单词中的随机字母转换为大写：
 
 ```php
 public function flipUpper($word)
@@ -16929,7 +17552,8 @@ public function flipUpper($word)
 }
 ```
 
-7.  最后，我们准备定义一个从我们的源中选择单词的方法。我们随机选择一个单词源，并使用 file() 函数从相应的缓存文件中读取：
+### 7.
+最后，我们准备定义一个从我们的源中选择单词的方法。我们随机选择一个单词源，并使用 `file()` 函数从相应的缓存文件中读取：
 
 ```php
 public function word()
@@ -16943,7 +17567,8 @@ public function word()
 }
 ```
 
-8.  为了避免始终生成具有相同模式的密码，我们定义一个方法，该方法允许我们将密码的各个组件放置在最终密码字符串的不同位置。算法被定义为此类中可用的方法调用的数组。因此，例如，算法 ['word', 'digits', 'word', 'special'] 最终可能看起来像 hEiL0123aUTol：
+### 8.
+为了避免始终生成具有相同模式的密码，我们定义一个方法，该方法允许我们将密码的各个组件放置在最终密码字符串的不同位置。算法被定义为此类中可用的方法调用的数组。因此，例如，算法 `['word', 'digits', 'word', 'special']` 最终可能看起来像 hEiL0123aUTol：
 
 ```php
 public function initAlgorithm()
@@ -16954,13 +17579,9 @@ public function initAlgorithm()
         ['word', 'word', 'special', 'digits'],
 ```
 
-
-
-
-
 # 工作原理……
 
-首先，你需要将前一个配方中描述的代码放入 Application\Security 文件夹中名为 PassGen.php 的文件中。现在你可以创建一个名为 chap_12_password_generate.php 的调用程序，该程序设置自动加载，使用 PassGen，并定义缓存目录的位置：
+首先，你需要将前一个配方中描述的代码放入 `Application\Security` 文件夹中名为 `PassGen.php` 的文件中。现在你可以创建一个名为 `chap_12_password_generate.php` 的调用程序，该程序设置自动加载，使用 `PassGen`，并定义缓存目录的位置：
 
 ```php
 <?php
@@ -17034,7 +17655,7 @@ class Phrase
 }
 ```
 
-- 2. 构造函数，正如你所期望的，接受各种属性的值，并分配默认值，以便在不指定任何参数的情况下创建实例。$include* 标志用于指示哪些字符集将存在于从中生成短语的基础字符串中。例如，如果你希望只有数字，则 $includeUpper 和 $includeLower 都将设置为 FALSE。$otherChars 提供了额外的灵活性。最后，$suppressChars 表示一个将被从基础字符串中移除的字符数组。默认情况下移除大写 0 和小写 1：
+- 2. 构造函数，正如你所期望的，接受各种属性的值，并分配默认值，以便在不指定任何参数的情况下创建实例。`$include*` 标志用于指示哪些字符集将存在于从中生成短语的基础字符串中。例如，如果你希望只有数字，则 `$includeUpper` 和 `$includeLower` 都将设置为 FALSE。`$otherChars` 提供了额外的灵活性。最后，`$suppressChars` 表示一个将被从基础字符串中移除的字符数组。默认情况下移除大写 0 和小写 1：
 
 ```php
 public function __construct(
@@ -17074,7 +17695,7 @@ public function setString($string)
 // other getters and setters not shown
 ```
 
-- 4. 接下来我们需要定义一个方法来初始化基础字符串。它由一系列简单的 if 语句组成，这些语句检查各种 $include* 标志，并根据情况将相应内容附加到基础字符串中。最后，我们使用 str_replace() 来移除 $suppressChars 中表示的字符：
+- 4. 接下来我们需要定义一个方法来初始化基础字符串。它由一系列简单的 if 语句组成，这些语句检查各种 `$include*` 标志，并根据情况将相应内容附加到基础字符串中。最后，我们使用 `str_replace()` 来移除 `$suppressChars` 中表示的字符：
 
 ```php
 public function initString()
@@ -17125,7 +17746,7 @@ public function generatePhrase()
 }
 ```
 
-- 6. 现在我们将注意力从短语转移到生成文本验证码的类上。为此，我们首先定义一个接口，以便将来我们可以创建额外使用 Application\Captcha\Phrase 的验证码类。注意 getImage() 将根据我们决定使用哪个类返回文本、文字艺术或实际图像：
+- 6. 现在我们将注意力从短语转移到生成文本验证码的类上。为此，我们首先定义一个接口，以便将来我们可以创建额外使用 `Application\Captcha\Phrase` 的验证码类。注意 `getImage()` 将根据我们决定使用哪个类返回文本、文字艺术或实际图像：
 
 ```php
 namespace Application\Captcha;
@@ -17138,7 +17759,7 @@ interface CaptchaInterface
 }
 ```
 
-- 7. 对于文本验证码，我们定义了一个 Application\Captcha\Reverse 类。之所以这样命名，是因为该类产生的不仅是文本，而是反向文本。__construct() 方法构建一个 Phrase 实例。注意 getImage() 返回反向的短语：
+- 7. 对于文本验证码，我们定义了一个 `Application\Captcha\Reverse` 类。之所以这样命名，是因为该类产生的不仅是文本，而是反向文本。`__construct()` 方法构建一个 `Phrase` 实例。注意 `getImage()` 返回反向的短语：
 
 ```php
 namespace Application\Captcha;
@@ -17149,14 +17770,12 @@ class Reverse implements CaptchaInterface
     const DEFAULT_LENGTH = 6;
 ```
 
-
-
-
 ## 生成图像验证码
 
 - 1. 正如你所能想象的那样，图像方法要复杂得多。短语生成过程是相同的。主要区别在于，我们不仅要将在短语印在图形上，还需要对每个字母进行不同的变形，并以随机点噪点形式引入干扰。
-
 - 我们定义了一个实现 `CaptchaInterface` 的 `Application\Captcha\Image` 类。该类的常量和属性不仅包括短语生成所需的项，还包括图像生成所需的内容：
+
+
 
 ```php
 namespace Application\Captcha;
@@ -17187,7 +17806,9 @@ class Image implements CaptchaInterface
 }
 ```
 
-- 构造函数需要接受前文步骤中描述的短语生成所需的所有参数。此外，我们还需要接受图像生成所需的参数。两个强制参数是 `$imageDir` 和 `$imageUrl`。前者是图形文件的写入位置；后者是基础 URL，我们随后会在其后拼接生成的文件名。提供 `$imageFont` 参数是为了在希望使用 TrueType 字体时使用，从而生成更安全的验证码。否则，我们只能限于使用默认字体，借用一部著名电影中的一句话来说，*那可真难看*：
+### 构造函数
+
+构造函数需要接受前文步骤中描述的短语生成所需的所有参数。此外，我们还需要接受图像生成所需的参数。两个强制参数是 `$imageDir` 和 `$imageUrl`。前者是图形文件的写入位置；后者是基础 URL，我们随后会在其后拼接生成的文件名。提供 `$imageFont` 参数是为了在希望使用 TrueType 字体时使用，从而生成更安全的验证码。否则，我们只能限于使用默认字体，借用一部著名电影中的一句话来说，*那可真难看*：
 
 ```php
 public function __construct(
@@ -17209,7 +17830,9 @@ public function __construct(
 {
 ```
 
-- 4. 接下来，仍在构造函数中，我们检查 `imagecreattruecolor` 函数是否存在。如果该函数返回 FALSE，说明 GD 扩展不可用。否则，我们将参数赋值给属性，生成短语，删除旧图像，并写出验证码图形：
+### 构造函数初始化
+
+接下来，仍在构造函数中，我们检查 `imagecreattruecolor` 函数是否存在。如果该函数返回 FALSE，说明 GD 扩展不可用。否则，我们将参数赋值给属性，生成短语，删除旧图像，并写出验证码图形：
 
 ```php
     if (!function_exists('imagecreattruecolor')) {
@@ -17244,7 +17867,9 @@ public function __construct(
 }
 ```
 
-- 5. 删除旧图像的过程至关重要；否则，我们的目录中将会充满过期的验证码图像！我们使用 `DirectoryIterator` 类扫描指定目录并检查访问时间。我们将旧图像文件计算为当前时间减去 `IMAGE_EXP_TIME` 指定值之后的时间点：
+### 删除旧图像
+
+删除旧图像的过程至关重要；否则，我们的目录中将会充满过期的验证码图像！我们使用 `DirectoryIterator` 类扫描指定目录并检查访问时间。我们将旧图像文件计算为当前时间减去 `IMAGE_EXP_TIME` 指定值之后的时间点：
 
 ```php
 public function removeOldImages() {
@@ -17259,7 +17884,9 @@ public function removeOldImages() {
 }
 ```
 
-- 6. 现在我们已经准备好进入主要环节。首先，我们将 `$imageRGB` 数组拆分为 `$red`、`$green` 和 `$blue`。我们使用核心的 `imagecreattruecolor()` 函数，按照指定的宽度和高度生成基础图形。我们使用 RGB 值为背景着色：
+### 生成 JPEG
+
+现在我们已经准备好进入主要环节。首先，我们将 `$imageRGB` 数组拆分为 `$red`、`$green` 和 `$blue`。我们使用核心的 `imagecreattruecolor()` 函数，按照指定的宽度和高度生成基础图形。我们使用 RGB 值为背景着色：
 
 ```php
 public function generateJpg()
@@ -17284,7 +17911,9 @@ public function generateJpg()
         for ($i = 0; $i < $max; $i++) {
 ```
 
-- 8. 如果指定了 `$imageFont`，我们就能以不同的尺寸和角度书写每个字符。我们还需要根据尺寸调整 x 轴（即水平方向）的值：
+### 使用 TrueType 字体
+
+如果指定了 `$imageFont`，我们就能以不同的尺寸和角度书写每个字符。我们还需要根据尺寸调整 x 轴（即水平方向）的值：
 
 ```php
             if ($this->imageFont) {
@@ -17296,7 +17925,9 @@ public function generateJpg()
                 $x += (int) ($size + rand(0, 5));
 ```
 
-- 9. 否则，我们只能局限于默认字体。我们使用最大尺寸 5，因为较小的尺寸无法阅读。我们通过交替使用 `imagechar()`（正常写入图像）和 `imagecharup()`（侧向写入）来提供低级别的扭曲效果：
+### 使用默认字体
+
+否则，我们只能局限于默认字体。我们使用最大尺寸 5，因为较小的尺寸无法阅读。我们通过交替使用 `imagechar()`（正常写入图像）和 `imagecharup()`（侧向写入）来提供低级别的扭曲效果：
 
 ```php
             } else {
@@ -17311,7 +17942,9 @@ public function generateJpg()
         } // end for ($i = 0; $i < $max; $i++)
 ```
 
-- 10. 接下来，我们需要以随机点噪点形式添加噪声。这对于使自动系统更难识别图像是必要的。同时建议你添加代码绘制几条线：
+### 添加噪声
+
+接下来，我们需要以随机点噪点形式添加噪声。这对于使自动系统更难识别图像是必要的。同时建议你添加代码绘制几条线：
 
 ```php
             $numDots = rand(10, 999);
@@ -17321,7 +17954,9 @@ public function generateJpg()
             }
 ```
 
-- 11. 然后，我们使用老搭档 `md5()` 生成随机的图像文件名，参数为日期和 0 到 9999 之间的随机数。请注意，我们可以安全地使用 `md5()`，因为我们不是试图隐藏任何机密信息；我们只是希望快速生成一个唯一的文件名。我们也会清除图像对象以节省内存：
+### 生成文件名并保存
+
+然后，我们使用老搭档 `md5()` 生成随机的图像文件名，参数为日期和 0 到 9999 之间的随机数。请注意，我们可以安全地使用 `md5()`，因为我们不是试图隐藏任何机密信息；我们只是希望快速生成一个唯一的文件名。我们也会清除图像对象以节省内存：
 
 ```php
             $this->imageFn = self::IMAGE_PREFIX
@@ -17332,7 +17967,9 @@ public function generateJpg()
             imagedestroy($im);
 ```
 
-- 12. 整个构建过程都在 `try/catch` 块中。如果抛出错误或异常，我们记录消息并采取相应措施：
+### 异常处理
+
+整个构建过程都在 `try/catch` 块中。如果抛出错误或异常，我们记录消息并采取相应措施：
 
 ```php
         } catch (\Throwable $e) {
@@ -17342,7 +17979,9 @@ public function generateJpg()
     }
 ```
 
-- 13. 最后，我们定义接口所要求的方法。请注意，`getImage()` 返回一个 HTML `<img>` 标签，可以立即显示：
+### 接口方法
+
+最后，我们定义接口所要求的方法。请注意，`getImage()` 返回一个 HTML `<img>` 标签，可以立即显示：
 
 ```php
 public function getLabel()
@@ -17362,21 +18001,20 @@ public function getPhrase()
 }
 ```
 
-## 工作原理...
+## 工作原理
 
 务必定义本食谱中讨论的类，这些类在下表中总结：
 
 | 类 | 小节 | 出现的步骤 |
 |---|---|---|
-| Application\Captcha\Phrase | 生成文本验证码 | 1 – 5 |
-| Application\Captcha\CaptchaInterface |  | 6 |
-| Application\Captcha\Reverse |  | 7 |
-| Application\Captcha\Image | 生成图像验证码 | 2 - 13 |
+| `Application\Captcha\Phrase` | 生成文本验证码 | 1 – 5 |
+| `Application\Captcha\CaptchaInterface` |  | 6 |
+| `Application\Captcha\Reverse` |  | 7 |
+| `Application\Captcha\Image` | 生成图像验证码 | 2 - 13 |
 
+## 接下来
 
-
-
-## 接下来，定义一个名为 chap_12_captcha_text.php 的调用程序，该程序实现文本验证码。
+定义一个名为 `chap_12_captcha_text.php` 的调用程序，该程序实现文本验证码。
 
 你首先需要设置自动加载并使用相应的类：
 
@@ -17429,6 +18067,8 @@ if (!empty($_POST['login'])) {
 
 如果存在验证码短语，检查它是否与存储在会话中的值匹配。如果不匹配，按照表单无效进行处理。否则，按照原本的方式处理登录。为了演示的目的，你可以使用硬编码的 username 和 password 值来模拟登录：
 
+
+
 ```php
     } else {
         if ($_POST['captcha'] == $phrase) {
@@ -17467,7 +18107,7 @@ if (!empty($_POST['login'])) {
 setCaptcha($phrase, $label, $image);
 ```
 
-最后，不要忘记视图逻辑，在此示例中，它呈现一个基本的登录表单。在 form 标签内部，你需要添加视图逻辑来显示验证码和标签：
+最后，不要忘记视图逻辑，在此示例中，它呈现一个基本的登录表单。在 `form` 标签内部，你需要添加视图逻辑来显示验证码和标签：
 
 ```html
 <tr>
@@ -17480,7 +18120,7 @@ setCaptcha($phrase, $label, $image);
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_495_0.png)
 
-为了演示如何使用图片验证码，将 `chap_12_captcha_text.php` 中的代码复制到 `chap_12_captcha_image.php`。我们定义常量来表示我们将写入验证码图像的目录位置。（请务必创建此目录！）否则，自动加载和 use 语句的结构相似。注意，我们还定义了一个 TrueType 字体。差异部分以**粗体**标出：
+为了演示如何使用图片验证码，将 `chap_12_captcha_text.php` 中的代码复制到 `chap_12_captcha_image.php`。我们定义常量来表示我们将写入验证码图像的目录位置。（请务必创建此目录！）否则，自动加载和 `use` 语句的结构相似。注意，我们还定义了一个 TrueType 字体。差异部分以**粗体**标出：
 
 ```php
 <?php
@@ -17497,7 +18137,7 @@ session_regenerate_id();
 
 > **重要！** 字体可能受到版权、商标、专利或其他知识产权法的保护。如果你使用了未授权的字体，你和你的客户可能会在法庭上承担责任！请使用开源字体，或你在 web 服务器上拥有有效许可证的字体。
 
-当然，在 `setCaptcha()` 函数中，我们使用 Image 类而不是 Reverse：
+当然，在 `setCaptcha()` 函数中，我们使用 `Image` 类而不是 Reverse：
 
 ```php
 function setCaptcha(&$phrase, &$label, &$image)
@@ -17544,15 +18184,15 @@ if (!empty($_POST['login'])) {
 
 ## 如何做...
 
-1.  如果你想知道的话，前面提出的问题解决方案是使用 `openssl`。此扩展得到良好的维护，具有现代且非常强大的加密/解密功能。
+1. 如果你想知道的话，前面提出的问题解决方案是使用 `openssl`。此扩展得到良好的维护，具有现代且非常强大的加密/解密功能。
 
-    > **重要**
-    >
-    > 为了使用任何 `openssl*` 函数，必须编译并启用 PHP 的 `openssl` 扩展！此外，你需要在 web 服务器上安装最新的 OpenSSL 包。
+> **重要**
+>
+> 为了使用任何 `openssl*` 函数，必须编译并启用 PHP 的 `openssl` 扩展！此外，你需要在 web 服务器上安装最新的 OpenSSL 包。
 
-2.  首先，你需要确定你的安装中有哪些可用的密码方法。为此，你可以使用 `openssl_get_cipher_methods()` 命令。示例包括基于**高级加密标准**（AES）、**BlowFish**（BF）、**CAMELLIA**、**CAST5**、**数据加密标准**（DES）、**Rivest 密码**（RC）（也被亲切地称为**Ron's Code**）以及 **SEED** 的算法。你会注意到，此方法显示密码方法在大写和小写中是重复的。
+2. 首先，你需要确定你的安装中有哪些可用的密码方法。为此，你可以使用 `openssl_get_cipher_methods()` 命令。示例包括基于**高级加密标准**（AES）、**BlowFish**（BF）、**CAMELLIA**、**CAST5**、**数据加密标准**（DES）、**Rivest 密码**（RC）（也被亲切地称为**Ron's Code**）以及 **SEED** 的算法。你会注意到，此方法显示密码方法在大写和小写中是重复的。
 
-3.  接下来，你需要弄清楚哪种方法最适合你的需求。下表对各种方法进行了简要总结：
+3. 接下来，你需要弄清楚哪种方法最适合你的需求。下表对各种方法进行了简要总结：
 
 | 方法 | 发布年份 | 密钥大小（位） | 密钥块大小（字节） | 备注 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -17564,7 +18204,7 @@ if (!empty($_POST['login'])) {
 | rc2 | 1987 | 8 到 1,024（默认为 64） | 8 | 由 Ron Rivest 设计（RSA 的核心创始人之一） |
 | des | 1977 | 56（+8 位奇偶校验位） | 8 | 由 IBM 开发，基于 Horst Feistel 的工作 |
 
-4.  另一个考虑因素是你首选的分组密码**操作模式**。常见的选择在下表中总结：
+4. 另一个考虑因素是你首选的分组密码**操作模式**。常见的选择在下表中总结：
 
 | 模式 | 全称 | 备注 |
 | :--- | :--- | :--- |
@@ -17572,11 +18212,8 @@ if (!empty($_POST['login'])) {
 | CBC | 密码块链接（Cipher Block Chaining） | 需要 IV；后续块即使相同，也与前一块进行 XOR 运算，从而产生更好的整体加密效果；如果 IV 是可预测的，第一块可以被解码，导致剩余消息暴露；消息必须填充为密码块大小的整数倍；仅支持解密的并行化 |
 | CFB | 密码反馈（Cipher Feedback） | CBC 的近亲，区别在于加密是以相反的方向执行的 |
 
-
-
-
-
 ## 13
+
 ## 最佳实践、测试与调试
 
 在本章中，我们将涵盖以下主题：
@@ -17691,6 +18328,8 @@ Press return to continue
 
 如果你为所选加密方法提供了错误数量的 IV 字节，将会显示一条警告消息：
 
+
+
 ```text
 Terminal
 Warning: openssl_encrypt(): IV passed is only 12 bytes long, cipher expects an IV of precisely 16 bytes, padding with \0 in /home/d/Desktop/repos/php7_recipes/source/chapter12/chap_12_openssl_encryption.php on line 10
@@ -17720,14 +18359,11 @@ Press return to continue
 
 ## 另请参阅
 
-关于为什么 mcrypt 扩展在 PHP 7.1 中被弃用的出色讨论，请参阅 https://wiki.php.net/rfc/mcrypt-viking-funeral 上的文章。关于块加密的良好描述，它构成了各种加密方法的基础，请参阅 https://en.wikipedia.org/wiki/Block_cipher 上的文章。关于 AES 的出色描述，请参阅 https://en.wikipedia.org/wiki/Advanced_Encryption_Standard。描述加密操作模式的好文章可以在 https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation 上看到。
+关于为什么 mcrypt 扩展在 PHP 7.1 中被弃用的出色讨论，请参阅 `https://wiki.php.net/rfc/mcrypt-viking-funeral` 上的文章。关于块加密的良好描述，它构成了各种加密方法的基础，请参阅 `https://en.wikipedia.org/wiki/Block_cipher` 上的文章。关于 AES 的出色描述，请参阅 `https://en.wikipedia.org/wiki/Advanced_Encryption_Standard`。描述加密操作模式的好文章可以在 `https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation` 上看到。
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_503_0.png)
 
 对于一些较新的模式，如果要加密的数据小于块大小，`openssl_decrypt()` 将不返回任何值。如果你将数据填充到至少等于块大小，问题就会消失。大多数模式都实现了内部填充，因此这不是一个问题。在一些较新的模式（即 xts）中，你可能会看到这个问题。在将代码投入生产之前，务必对短于八个字符的数据短字符串进行测试。
-
-
-
 
 ## 使用特质和接口
 
@@ -17930,9 +18566,6 @@ public function __construct(
     $logFileDir = NULL, $logFile = NULL)
 ```
 
-
-
-
 ### 3. 接下来，我们定义 `exceptionHandler()` 方法，该方法接受一个 `Exception` 对象作为参数。我们在日志文件中记录日期时间、异常类名及其消息：
 
 ```php
@@ -17948,6 +18581,9 @@ public function exceptionHandler($ex)
 
 > **最佳实践**
 >
+
+
+
 > 你应该始终使用 `try`/`catch` 来捕获异常，并尽可能让应用程序继续运行。此处描述的异常处理器仅旨在允许应用程序在未被捕获的异常发生情况下“优雅地”终止。
 
 ## 工作原理...
@@ -18114,10 +18750,6 @@ require __DIR__ . '/../../Application/Autoload/Loader.php';
 Application\Autoload\Loader::init(__DIR__ . '/..');
 ```
 
-
-
-
-
 ```php
 use Application\Error\{ Handler, ThrowsError };
 $error = new ThrowsError();
@@ -18186,20 +18818,20 @@ echo 'Application continues ... ' . PHP_EOL;
 
 2. 不过，最佳实践是使用包管理器来安装和维护 PHPUnit。为此，我们将使用一个名为 **Composer** 的包管理程序。要安装 Composer，请访问主网站 [https://getcomposer.org/](https://getcomposer.org/) 并按照下载页面上的说明操作。撰写本文时的当前操作如下。请注意，你需要用当前版本的哈希值替换 `<hash>`：
 
-   ```php
-   php -r "copy('https://getcomposer.org/installer',
-         'composer-setup.php');"
-   php -r "if (hash_file('SHA384', 'composer-setup.php')
-       === '<hash>') {
-       echo 'Installer verified';
-   } else {
-       echo 'Installer corrupt'; unlink('composer-setup.php');
-   } echo PHP_EOL;"
-   php composer-setup.php
-   php -r "unlink('composer-setup.php');"
-   ```
+```php
+php -r "copy('https://getcomposer.org/installer',
+      'composer-setup.php');"
+php -r "if (hash_file('SHA384', 'composer-setup.php')
+    === '<hash>') {
+    echo 'Installer verified';
+} else {
+    echo 'Installer corrupt'; unlink('composer-setup.php');
+} echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+```
 
-   ![](img/39390f6d56c5a83b28db083a8bd5185c_519_1.png)
+![](img/39390f6d56c5a83b28db083a8bd5185c_519_1.png)
 
 ## 最佳实践
 
@@ -18207,118 +18839,131 @@ echo 'Application continues ... ' . PHP_EOL;
 
 3. 接下来，我们使用 Composer 安装 PHPUnit。这可以通过创建一个 `composer.json` 文件来实现，该文件包含一系列指令，概述项目参数和依赖项。对这些指令的完整描述超出了本书的范围；然而，为了本食谱的目的，我们使用关键参数 require 创建一组最小指令。你还会注意到，文件的内容采用 **JavaScript Object Notation (JSON)** 格式：
 
-   ```json
-   {
-       "require-dev" : {
-           "phpunit/phpunit" : "*"
-       }
-   }
-   ```
 
-4. 要从命令行执行安装，我们运行以下命令。输出显示如下：
 
-   ```bash
-   php composer.phar install
-   ```
+```json
+{
+    "require-dev" : {
+        "phpunit/phpunit" : "*"
+    }
+}
+```
 
-   ![](img/39390f6d56c5a83b28db083a8bd5185c_520_0.png)
+### 从命令行执行安装
 
-5. PHPUnit 及其依赖项被放置在一个 vendor 文件夹中，如果该文件夹尚不存在，Composer 会创建它。调用 PHPUnit 的主要命令会建立符号链接到 vendor/bin 文件夹。如果你将此文件夹放入你的 PATH，只需运行此命令，它会检查版本并顺带确认安装成功：
+要从命令行执行安装，我们运行以下命令。输出显示如下：
 
-   ```bash
-   phpunit --version
-   ```
+```bash
+php composer.phar install
+```
+
+![](img/39390f6d56c5a83b28db083a8bd5185c_520_0.png)
+
+### PHPUnit 安装位置
+
+`PHPUnit` 及其依赖项被放置在一个 `vendor` 文件夹中，如果该文件夹尚不存在，`Composer` 会创建它。调用 `PHPUnit` 的主要命令会建立符号链接到 `vendor/bin` 文件夹。如果你将此文件夹放入你的 `PATH`，只需运行此命令，它会检查版本并顺带确认安装成功：
+
+```bash
+phpunit --version
+```
 
 ## 运行简单测试
 
-1. 为了说明目的，假设我们有一个 `chap_13_unit_test_simple.php` 文件，其中包含 `add()` 函数：
+### 测试函数
 
-   ```php
-   <?php
-   function add($a = NULL, $b = NULL)
-   {
-       return $a + $b;
-   }
-   ```
+为了说明目的，假设我们有一个 `chap_13_unit_test_simple.php` 文件，其中包含 `add()` 函数：
 
-2. 测试作为继承自 `PHPUnit\Framework\TestCase` 的类来编写。如果你正在测试一个函数库，在测试类的开头，包含含有函数定义的文件。然后，你会编写以 test 单词开头的方法，通常后面跟着你要测试的函数名称，可能还有一些额外的 CamelCase 单词来进一步描述测试。为了本食谱的目的，我们将定义一个 `SimpleTest` 测试类：
+```php
+<?php
+function add($a = NULL, $b = NULL)
+{
+    return $a + $b;
+}
+```
 
-   ```php
-   <?php
-   use PHPUnit\Framework\TestCase;
-   require_once __DIR__ . '/chap_13_unit_test_simple.php';
-   class SimpleTest extends TestCase
-   {
-       // testXXX() methods go here
-   }
-   ```
+### 编写测试类
 
-3. 断言是任何测试集的核心。**另请参阅**部分提供了完整断言列表的文档参考。断言是一个 PHPUnit 方法，它将已知值与你要测试的内容产生的值进行比较。一个例子是 `assertEquals()`，它检查第一个参数是否等于第二个。以下示例测试了一个名为 `add()` 的方法，并确认 **2** 是 `add(1,1)` 的返回值：
+测试作为继承自 `PHPUnit\Framework\TestCase` 的类来编写。如果你正在测试一个函数库，在测试类的开头，包含含有函数定义的文件。然后，你会编写以 `test` 单词开头的方法，通常后面跟着你要测试的函数名称，可能还有一些额外的 `CamelCase` 单词来进一步描述测试。为了本食谱的目的，我们将定义一个 `SimpleTest` 测试类：
 
-   ```php
-   public function testAdd()
-   {
-       $this->assertEquals(2, add(1,1));
-   }
-   ```
+```php
+<?php
+use PHPUnit\Framework\TestCase;
+require_once __DIR__ . '/chap_13_unit_test_simple.php';
+class SimpleTest extends TestCase
+{
+    // testXXX() methods go here
+}
+```
 
-4. 你还可以测试某事物*不为真*的情况。此示例断言 `1 + 1` 不等于 **3**：
+### 使用断言
 
-   ```php
-   $this->assertNotEquals(3, add(1,1));
-   ```
+断言是任何测试集的核心。**另请参阅**部分提供了完整断言列表的文档参考。断言是一个 `PHPUnit` 方法，它将已知值与你要测试的内容产生的值进行比较。一个例子是 `assertEquals()`，它检查第一个参数是否等于第二个。以下示例测试了一个名为 `add()` 的方法，并确认 **2** 是 `add(1,1)` 的返回值：
 
-5. 在测试字符串时极其有用的断言是 `assertRegExp()`。假设，为了说明目的，我们正在测试一个生成 HTML 表格的函数，该函数基于多维数组：
+```php
+public function testAdd()
+{
+    $this->assertEquals(2, add(1,1));
+}
+```
 
-   ```php
-   function table(array $a)
-   {
-       $table = '<table>';
-       foreach ($a as $row) {
-           $table .= '<tr><td>';
-           $table .= implode('</td><td>', $row);
-           $table .= '</td></tr>';
-       }
-       $table .= '</table>';
-       return $table;
-   }
-   ```
+你还可以测试某事物*不为真*的情况。此示例断言 `1 + 1` 不等于 **3**：
 
-6. 我们可以构建一个简单的测试，确认输出包含 `<table>`、一个或多个字符，然后是 `</table>`。此外，我们希望确认存在 `<td>B</td>` 元素。在编写测试时，我们构建一个测试数组，由包含字母 A–C、D–F 和 G–I 的三个子数组组成。然后将测试数组传递给函数，并对结果运行断言：
+```php
+$this->assertNotEquals(3, add(1,1));
+```
 
-   ```php
-   public function testTable()
-   {
-       $a = [range('A', 'C'),range('D', 'F'),range('G','I')];
-       $table = table($a);
-       $this->assertRegExp('!^<table>.+</table>$!', $table);
-       $this->assertRegExp('!<td>B</td>!', $table);
-   }
-   ```
+### 测试字符串输出
 
-7. 要测试一个类，只需包含定义要测试类的文件，而不是包含函数库。为了说明目的，让我们将前面显示的函数库移动到一个 Demo 类中：
+在测试字符串时极其有用的断言是 `assertRegExp()`。假设，为了说明目的，我们正在测试一个生成 `HTML` 表格的函数，该函数基于多维数组：
 
-   ```php
-   <?php
-   class Demo
-   {
-       public function add($a, $b)
-       {
-           return $a + $b;
-       }
+```php
+function table(array $a)
+{
+    $table = '<table>';
+    foreach ($a as $row) {
+        $table .= '<tr><td>';
+        $table .= implode('</td><td>', $row);
+        $table .= '</td></tr>';
+    }
+    $table .= '</table>';
+    return $table;
+}
+```
 
-       public function sub($a, $b)
-       {
-           return $a - $b;
-       }
-       // etc.
-   }
-   ```
+我们可以构建一个简单的测试，确认输出包含 `<table>`、一个或多个字符，然后是 `</table>`。此外，我们希望确认存在 `<td>B</td>` 元素。在编写测试时，我们构建一个测试数组，由包含字母 `A–C`、`D–F` 和 `G–I` 的三个子数组组成。然后将测试数组传递给函数，并对结果运行断言：
 
+```php
+public function testTable()
+{
+    $a = [range('A', 'C'),range('D', 'F'),range('G','I')];
+    $table = table($a);
+    $this->assertRegExp('!^<table>.+</table>$!', $table);
+    $this->assertRegExp('!<td>B</td>!', $table);
+}
+```
 
+### 测试类
 
+要测试一个类，只需包含定义要测试类的文件，而不是包含函数库。为了说明目的，让我们将前面显示的函数库移动到一个 `Demo` 类中：
 
-在我们的 `SimpleClassTest` 测试类中，我们引入代表 `Demo` 类的文件，而不是引入库文件。我们需要一个 `Demo` 实例才能运行测试。为此，我们使用了一个专门设计的 `setup()` 方法，该方法会在每个测试之前运行。此外，您还会注意到一个 `teardown()` 方法，它会在每个测试之后立即运行：
+```php
+<?php
+class Demo
+{
+    public function add($a, $b)
+    {
+        return $a + $b;
+    }
+
+    public function sub($a, $b)
+    {
+        return $a - $b;
+    }
+    // etc.
+}
+```
+
+在我们的 `SimpleClassTest` 测试类中，我们引入代表 `Demo` 类的文件，而不是引入库文件。我们需要一个 `Demo` 实例才能运行测试。为此，我们使用了一个专门设计的 `setUp()` 方法，该方法会在每个测试之前运行。此外，您还会注意到一个 `tearDown()` 方法，它会在每个测试之后立即运行：
 
 ```php
 <?php
@@ -18351,13 +18996,17 @@ class SimpleClassTest extends TestCase
 }
 ```
 
-> `setup()` 和 `teardown()` 之所以分别在每个测试之前和之后运行，是为了确保一个全新的测试环境。这样，一个测试的结果就不会影响另一个测试的结果。
+> `setUp()` 和 `tearDown()` 之所以分别在每个测试之前和之后运行，是为了确保一个全新的测试环境。这样，一个测试的结果就不会影响另一个测试的结果。
 
 ## 测试数据库 Model 类
 
-1. 当测试具有数据库访问权限的类（例如 Model 类）时，会有其他需要考虑的问题。主要的考虑因素是，您应该针对测试数据库而不是用于生产环境的真实数据库运行测试。最后一点是，通过使用测试数据库，您可以预先填充适当且受控的数据。`setup()` 和 `teardown()` 也可以用来添加或删除测试数据。
+### 测试数据库注意事项
 
-2. 作为一个使用数据库的类的示例，我们将定义一个类 `VisitorOps`。这个新类将包含用于添加、删除和查找访客的方法。请注意，我们还添加了一个方法，用于返回最后执行的 SQL 语句：
+当测试具有数据库访问权限的类（例如 `Model` 类）时，会有其他需要考虑的问题。主要的考虑因素是，您应该针对测试数据库而不是用于生产环境的真实数据库运行测试。最后一点是，通过使用测试数据库，您可以预先填充适当且受控的数据。`setUp()` 和 `tearDown()` 也可以用来添加或删除测试数据。
+
+### 示例类 VisitorOps
+
+作为一个使用数据库的类的示例，我们将定义一个类 `VisitorOps`。这个新类将包含用于添加、删除和查找访客的方法。请注意，我们还添加了一个方法，用于返回最后执行的 `SQL` 语句：
 
 ```php
 <?php
@@ -18429,155 +19078,163 @@ class VisitorOps
 }
 ```
 
-3. 对于涉及数据库的测试，建议使用测试数据库，而不是正在运行的生产数据库。相应地，您将需要一组额外的数据库连接参数，以便在 `setup()` 方法中用于建立数据库连接。
-4. 您可能希望建立一组一致的示例数据块。这可以在 `setup()` 方法中插入到测试数据库中。
-5. 最后，您可能会希望在每次测试之后重置测试数据库，这在 `teardown()` 方法中完成。
+对于涉及数据库的测试，建议使用测试数据库，而不是正在运行的生产数据库。相应地，您将需要一组额外的数据库连接参数，以便在 `setUp()` 方法中用于建立数据库连接。
+
+您可能希望建立一组一致的示例数据块。这可以在 `setUp()` 方法中插入到测试数据库中。
+
+最后，您可能会希望在每次测试之后重置测试数据库，这在 `tearDown()` 方法中完成。
 
 ## 使用模拟类
 
-1. 在某些情况下，测试将访问需要外部资源的复杂组件。例如，需要访问数据库的服务类。在测试套件中尽量减少数据库访问是一项最佳实践。另一个考虑因素是，我们不是测试数据库访问；我们只是测试某个特定类的功能。因此，有时有必要定义**模拟**类，这些类模仿父类的行为，但限制对外部资源的访问。
+### 模拟目的
+
+在某些情况下，测试将访问需要外部资源的复杂组件。例如，需要访问数据库的服务类。在测试套件中尽量减少数据库访问是一项最佳实践。另一个考虑因素是，我们不是测试数据库访问；我们只是测试某个特定类的功能。因此，有时有必要定义**模拟**类，这些类模仿父类的行为，但限制对外部资源的访问。
 
 > **最佳实践**
-> 将测试中的实际数据库访问限制在 Model（或等效）类中。否则，运行整套测试所需的时间可能会变得过多。
+>
+> 将测试中的实际数据库访问限制在 `Model`（或等效）类中。否则，运行整套测试所需的时间可能会变得过多。
 
-2. 在此情况下，为了说明目的，我们定义一个服务类 `VisitorService`，它使用了前面讨论的 `VisitorOps` 类：
+### 服务类示例
 
-   ```php
-   <?php
-   require_once __DIR__ . '/VisitorOps.php';
-   require_once __DIR__ . '/../Application/Database/Connection.php';
-   use Application\Database\Connection;
+在此情况下，为了说明目的，我们定义一个服务类 `VisitorService`，它使用了前面讨论的 `VisitorOps` 类：
 
-   class VisitorService
-   {
-       protected $visitorOps;
+```php
+<?php
+require_once __DIR__ . '/VisitorOps.php';
+require_once __DIR__ . '/../Application/Database/Connection.php';
+use Application\Database\Connection;
 
-       public function __construct(array $config)
-       {
-           $this->visitorOps = new VisitorOps($config);
-       }
+class VisitorService
+{
+    protected $visitorOps;
 
-       public function showAllVisitors()
-       {
-           $table = '<table>';
-           foreach ($this->visitorOps->findAll() as $row) {
-               $table .= '<tr><td>';
-               $table .= implode('</td><td>', $row);
-               $table .= '</td></tr>';
-           }
-           $table .= '</table>';
-           return $table;
-       }
-   ```
+    public function __construct(array $config)
+    {
+        $this->visitorOps = new VisitorOps($config);
+    }
 
-3. 为了测试目的，我们为 `$visitorOps` 属性添加了一个 getter 和 setter。这允许我们使用模拟类来替代真实的 `VisitorOps` 类：
+    public function showAllVisitors()
+    {
+        $table = '<table>';
+        foreach ($this->visitorOps->findAll() as $row) {
+            $table .= '<tr><td>';
+            $table .= implode('</td><td>', $row);
+            $table .= '</td></tr>';
+        }
+        $table .= '</table>';
+        return $table;
+    }
+```
 
-   ```php
-   public function getVisitorOps()
-   {
-       return $this->visitorOps;
-   }
+为了测试目的，我们为 `$visitorOps` 属性添加了一个 `getter` 和 `setter`。这允许我们使用模拟类来替代真实的 `VisitorOps` 类：
 
-   public function setVisitorOps(VisitorOps $visitorOps)
-   {
-       $this->visitorOps = $visitorOps;
-   } // VisitorService 的右花括号
-   ```
+```php
+public function getVisitorOps()
+{
+    return $this->visitorOps;
+}
 
-4. 接下来，我们定义一个模拟类 `VisitorOpsMock`，它模拟父类的功能。类常量和属性是继承的。然后我们添加模拟测试数据，以及一个 getter，以防我们稍后需要访问测试数据：
+public function setVisitorOps(VisitorOps $visitorOps)
+{
+    $this->visitorOps = $visitorOps;
+} // VisitorService 的右花括号
+```
 
-   ```php
-   <?php
-   require_once __DIR__ . '/VisitorOps.php';
+### 模拟类 VisitorOpsMock
 
-   class VisitorOpsMock extends VisitorOps
-   {
-       protected $testData;
+接下来，我们定义一个模拟类 `VisitorOpsMock`，它模拟父类的功能。类常量和属性是继承的。然后我们添加模拟测试数据，以及一个 `getter`，以防我们稍后需要访问测试数据：
 
-       public function __construct()
-       {
-           $data = array();
-           for ($x = 1; $x <= 3; $x++) {
-               $data[$x]['id'] = $x;
-               $data[$x]['email'] = $x . 'test@unlikelysource.com';
-               $data[$x]['visit_date'] = '2000-0' . $x . '-0' . $x . ' 00:00:00';
-               $data[$x]['comments'] = 'TEST ' . $x;
-               $data[$x]['name'] = 'TEST ' . $x;
-           }
-           $this->testData = $data;
-       }
+```php
+<?php
+require_once __DIR__ . '/VisitorOps.php';
 
-       public function getTestData()
-       {
-           return $this->testData;
-       }
-   ```
+class VisitorOpsMock extends VisitorOps
+{
+    protected $testData;
 
-5. 接下来，我们重写 `findAll()` 以使用 `yield` 返回测试数据，正如父类所做的那样。请注意，我们仍然构建 SQL 字符串，因为这就是父类所做的：
+    public function __construct()
+    {
+        $data = array();
+        for ($x = 1; $x <= 3; $x++) {
+            $data[$x]['id'] = $x;
+            $data[$x]['email'] = $x . 'test@unlikelysource.com';
+            $data[$x]['visit_date'] = '2000-0' . $x . '-0' . $x . ' 00:00:00';
+            $data[$x]['comments'] = 'TEST ' . $x;
+            $data[$x]['name'] = 'TEST ' . $x;
+        }
+        $this->testData = $data;
+    }
 
-   ```php
-   public function findAll()
-   {
-       $sql = 'SELECT * FROM ' . self::TABLE_NAME;
-       foreach ($this->testData as $row) {
-           yield $row;
-       }
-   }
-   ```
+    public function getTestData()
+    {
+        return $this->testData;
+    }
+```
 
-6. 为了模拟 `findByName()`，我们只需从 `$this->testData` 中返回该数组键。对于 `removeByName()`，我们从 `$this->testData` 中取消设置作为参数提供的数组键：
+接下来，我们重写 `findAll()` 以使用 `yield` 返回测试数据，正如父类所做的那样。请注意，我们仍然构建 `SQL` 字符串，因为这就是父类所做的：
 
-   ```php
-   public function findByName($id)
-   {
-       $sql = 'SELECT * FROM ' . self::TABLE_NAME;
-       $sql .= ' WHERE id = ?';
-       return $this->testData[$id] ?? FALSE;
-   }
+```php
+public function findAll()
+{
+    $sql = 'SELECT * FROM ' . self::TABLE_NAME;
+    foreach ($this->testData as $row) {
+        yield $row;
+    }
+}
+```
 
-   public function removeByName($id)
-   {
-       $sql = 'DELETE FROM ' . self::TABLE_NAME;
-       $sql .= ' WHERE id = ?';
-       if (empty($this->testData[$id])) {
-           return 0;
-       } else {
-           unset($this->testData[$id]);
-           return 1;
-       }
-   }
-   ```
+为了模拟 `findByName()`，我们只需从 `$this->testData` 中返回该数组键。对于 `removeByName()`，我们从 `$this->testData` 中取消设置作为参数提供的数组键：
+
+
+
+```php
+public function findByName($id)
+{
+    $sql = 'SELECT * FROM ' . self::TABLE_NAME;
+    $sql .= ' WHERE id = ?';
+    return $this->testData[$id] ?? FALSE;
+}
+
+public function removeByName($id)
+{
+    $sql = 'DELETE FROM ' . self::TABLE_NAME;
+    $sql .= ' WHERE id = ?';
+    if (empty($this->testData[$id])) {
+        return 0;
+    } else {
+        unset($this->testData[$id]);
+        return 1;
+    }
+}
+```
 
 7. 添加数据稍微复杂一些，因为我们需要模拟 `id` 参数可能未提供的情况，因为数据库通常会自动为我们生成此参数。为了解决这个问题，我们检查 `id` 参数。如果未设置，我们找到最大的数组键并递增：
 
-   ```php
-   public function addVisitor($data)
-   {
-       $sql = 'INSERT INTO ' . self::TABLE_NAME;
-       $sql .= ' (' . implode(',', array_keys($data)) . ')';
-       $sql .= ' VALUES ';
-       $sql .= ' (' . implode('::', array_keys($data)) . ')';
-       if (!empty($data['id'])) {
-           $id = $data['id'];
-       } else {
-           $keys = array_keys($this->testData);
-           sort($keys);
-           $id = end($keys) + 1;
-           $data['id'] = $id;
-       }
+```php
+public function addVisitor($data)
+{
+    $sql = 'INSERT INTO ' . self::TABLE_NAME;
+    $sql .= ' (' . implode(',', array_keys($data)) . ')';
+    $sql .= ' VALUES ';
+    $sql .= ' (' . implode('::', array_keys($data)) . ')';
+    if (!empty($data['id'])) {
+        $id = $data['id'];
+    } else {
+        $keys = array_keys($this->testData);
+        sort($keys);
+        $id = end($keys) + 1;
+        $data['id'] = $id;
+    }
 
-       $this->testData[$id] = $data;
-       return 1;
-   }
-   } // VisitorOpsMock 类的结束花括号
-   ```
-
-
-
+    $this->testData[$id] = $data;
+    return 1;
+}
+``` // `VisitorOpsMock` 类的结束花括号
 
 ## 使用匿名类作为模拟对象
 
 - 模拟对象的一种巧妙变体是使用新的 PHP 7 匿名类，而不是创建一个定义模拟功能的正式类。使用匿名类的优势在于你可以扩展一个现有的类，这使得对象看起来更加合法。这种方法在你只需要重写一两个方法时特别有用。
+
 - 为了演示这一点，我们将修改之前展示的 `VisitorServiceTest.php`，将其命名为 `VisitorServiceTestAnonClass.php`：
 
 ```php
@@ -18631,6 +19288,7 @@ public function setup()
 ```
 
 - 你会注意到，在 `setup()` 中，我们定义了一个扩展 `VisitorOps` 的匿名类。我们只需要重写 `findAll()` 方法。
+
 - 请注意，在 `testShowAllVisitors()` 中，当执行 `$this->visitorService->showAllVisitors()` 时，访问者服务会调用该匿名类，进而调用重写的 `findAll()`：
 
 ```php
@@ -18653,6 +19311,7 @@ public function testShowAllVisitors()
 ## 使用 Mock Builder
 
 - 另一种技术是使用 `getMockBuilder()`。虽然这种方法对生成的模拟对象没有很多精细控制，但在你只需要确认返回某个特定类的对象，并且当运行指定方法时，该方法返回某个预期值的情况下，它极其有用。
+
 - 在下面的例子中，我们复制了 `VisitorServiceTestAnonClass`；唯一的区别在于 `setup()` 中如何提供 `VisitorOps` 的实例，在这种情况下使用 `getMockBuilder()`。请注意，虽然在这个例子中没有使用 `with()`，但它用于向被模拟的方法提供受控参数：
 
 ```php
@@ -18814,12 +19473,11 @@ public function testFindById()
 
 首先，定义一个 `VisitorService` 服务类，如本小节中步骤 2 和 3 所述。接下来，定义一个 `VisitorOpsMock` 模拟类，这在步骤 4 到 7 中进行了讨论。
 
-
-
-
 ## 更多相关内容
 
 现在你已具备开发服务类测试类 `VisitorServiceTest` 的条件。请注意，你需要提供自己的数据库配置，因为使用测试数据库而非生产数据库是一种最佳实践：
+
+
 
 ```php
 <?php
@@ -18841,7 +19499,7 @@ class VisitorServiceTest extends TestCase
 }
 ```
 
-在 *setup()* 方法中，创建服务的一个实例，并用 *VisitorOpsMock* 替换原始类：
+在 `setup()` 方法中，创建服务的一个实例，并用 `VisitorOpsMock` 替换原始类：
 
 ```php
 public function setup()
@@ -18879,35 +19537,37 @@ foreach ($testData as $key => $value) {
 
 | 类别 | 断言方法 |
 | :--- | :--- |
-| 通用 | assertEquals() , assertFalse() , assertEmpty() , assertNull() , assertSame() , assertThat() , assertTrue() |
-| 数值 | assertGreaterThan() , assertGreaterThanOrEqual() , assertLessThan() , assertLessThanOrEqual() , assertNan() , assertInfinite() |
-| 字符串 | assertStringEndsWith() , assertStringEqualsFile() , assertStringStartsWith() , assertRegExp() , assertStringMatchesFormat() , assertStringMatchesFormatFile() |
-| 数组/迭代器 | assertArrayHasKey() , assertArraySubset() , assertContains() , assertContainsOnly() , assertContainsOnlyInstancesOf() , assertCount() |
-| 文件 | assertFileEquals() , assertFileExists() |
-| 对象 | assertClassHasAttribute() , assertClassHasStaticAttribute() , assertInstanceOf() , assertInternalType() , assertObjectHasAttribute() |
-| JSON | assertJsonFileEqualsJsonFile() , assertJsonStringEqualsJsonFile() , assertJsonStringEqualsJsonString() |
-| XML | assertEqualXMLStructure() , assertXmlFileEqualsXmlFile() , assertXmlStringEqualsXmlFile() , assertXmlStringEqualsXmlString() |
+| 通用 | `assertEquals()` , `assertFalse()` , `assertEmpty()` , `assertNull()` , `assertSame()` , `assertThat()` , `assertTrue()` |
+| 数值 | `assertGreaterThan()` , `assertGreaterThanOrEqual()` , `assertLessThan()` , `assertLessThanOrEqual()` , `assertNan()` , `assertInfinite()` |
+| 字符串 | `assertStringEndsWith()` , `assertStringEqualsFile()` , `assertStringStartsWith()` , `assertRegExp()` , `assertStringMatchesFormat()` , `assertStringMatchesFormatFile()` |
+| 数组/迭代器 | `assertArrayHasKey()` , `assertArraySubset()` , `assertContains()` , `assertContainsOnly()` , `assertContainsOnlyInstancesOf()` , `assertCount()` |
+| 文件 | `assertFileEquals()` , `assertFileExists()` |
+| 对象 | `assertClassHasAttribute()` , `assertClassHasStaticAttribute()` , `assertInstanceOf()` , `assertInternalType()` , `assertObjectHasAttribute()` |
+| JSON | `assertJsonFileEqualsJsonFile()` , `assertJsonStringEqualsJsonFile()` , `assertJsonStringEqualsJsonString()` |
+| XML | `assertEqualXMLStructure()` , `assertXmlFileEqualsXmlFile()` , `assertXmlStringEqualsXmlFile()` , `assertXmlStringEqualsXmlString()` |
 
 ### 参见...
 
 - 关于单元测试的优秀讨论，请查看此处：https://en.wikipedia.org/wiki/Unit_testing。
 - 有关 composer.json 文件指令的更多信息，请参见 https://getcomposer.org/doc/04-schema.md。
 - 关于断言的完整列表，请查看此 PHPUnit 文档页面：https://phpunit.de/manual/current/en/phpunit-book.html#appendixes.assertions。
-- PHPUnit 文档还详细说明了如何使用 getMockBuilder()，请参见此处：https://phpunit.de/manual/current/en/phpunit-book.html#test-doubles.mock-objects
+- PHPUnit 文档还详细说明了如何使用 `getMockBuilder()`，请参见此处：https://phpunit.de/manual/current/en/phpunit-book.html#test-doubles.mock-objects
 
 ## 编写测试套件
 
-在阅读完前面的食谱后，你也许会注意到，手动运行 phpunit 并指定测试类和 PHP 文件名很快就会变得繁琐。当处理包含几十个甚至几百个类和文件的应用程序时，这一点尤其明显。PHPUnit 项目内置了通过单条命令运行多个测试的能力。这样的测试集合被称为**测试套件**。
+在阅读完前面的食谱后，你也许会注意到，手动运行 `phpunit` 并指定测试类和 PHP 文件名很快就会变得繁琐。当处理包含几十个甚至几百个类和文件的应用程序时，这一点尤其明显。PHPUnit 项目内置了通过单条命令运行多个测试的能力。这样的测试集合被称为**测试套件**。
 
 ### 操作指南...
 
 1. 最简单的做法是将所有测试移动到一个文件夹中：
+
    ```bash
    mkdir tests
    cp *Test.php tests
    ```
 
-2. 你需要调整包含或引入外部文件的命令，以适配新的位置。示例（SimpleTest）是在前面的食谱中开发的：
+2. 你需要调整包含或引入外部文件的命令，以适配新的位置。示例 `SimpleTest` 是在前面的食谱中开发的：
+
    ```php
    <?php
    use PHPUnit\Framework\TestCase;
@@ -18918,24 +19578,28 @@ foreach ($testData as $key => $value) {
     // 等等。
    ```
 
-3. 然后你只需将目录路径作为参数运行 phpunit。PHPUnit 将自动运行该文件夹中的所有测试。在此示例中，我们假设存在一个 tests 子目录：
+3. 然后你只需将目录路径作为参数运行 `phpunit`。PHPUnit 将自动运行该文件夹中的所有测试。在此示例中，我们假设存在一个 `tests` 子目录：
+
    ```bash
    phpunit tests
    ```
 
 4. 你可以使用 `--bootstrap` 选项来指定在运行测试之前执行的文件。该选项的一个典型用途是初始化自动加载：
+
    ```bash
    phpunit --bootstrap tests_with_autoload/bootstrap.php tests
    ```
 
-5. 以下是实现自动加载的示例 bootstrap.php 文件：
+5. 以下是实现自动加载的示例 `bootstrap.php` 文件：
+
    ```php
    <?php
    require __DIR__ . '/../../Application/Autoload/Loader.php';
    Application\Autoload\Loader::init([__DIR__]);
    ```
 
-6. 另一种可能性是使用 XML 配置文件定义一组或多组测试。以下是一个仅运行 Simple* 测试的示例：
+6. 另一种可能性是使用 XML 配置文件定义一组或多组测试。以下是一个仅运行 `Simple*` 测试的示例：
+
    ```xml
    <phpunit>
        <testsuites>
@@ -18949,6 +19613,7 @@ foreach ($testData as $key => $value) {
    ```
 
 7. 这是另一个示例，它基于目录运行测试，并指定了一个引导文件：
+
    ```xml
    <phpunit bootstrap="bootstrap.php">
        <testsuites>
@@ -18992,7 +19657,7 @@ ed@ed: ~/Desktop/Repos/php7_recipes/source/chapter13$
 namespace Demo;
 ```
 
-接下来，将 `SimpleTest.php` 文件复制到 `tests_with_autoload/Simple/ClassTest.php`。（注意文件名发生了变化！）。你需要将前几行更改为以下内容：
+接下来，将 `SimpleTest.php` 文件复制到 `tests_with_autoload/Simple/ClassTest.php`。你需要将前几行更改为以下内容：
 
 ```php
 <?php
@@ -19022,10 +19687,9 @@ class ClassTest extends TestCase
 </phpunit>
 ```
 
-
 最后，切换到包含本章代码的目录。现在你可以运行一个包含引导文件的单元测试，该测试还涉及自动加载和命名空间，步骤如下：
 
-```php
+```bash
 phpunit -c tests_with_autoload/phpunit.xml
 ```
 
@@ -19043,9 +19707,9 @@ phpunit -c tests_with_autoload/phpunit.xml
 
 ### 如何操作...
 
-1.  第一步是确定测试应用程序所需的数据。另一个需要考虑的问题是，该网站是否面向国际受众，还是市场主要来自单一国家？
-2.  为了生成一致的虚假数据工具，将数据从其源转移到可用的数字格式至关重要。首选方案是一系列数据库表。另一种吸引力稍差的替代方案是 CSV 文件。
-3.  你可能需要分阶段转换数据。例如，你可以从列出国家代码和国家名称的网页中提取数据到文本文件中。
+1. 第一步是确定测试应用程序所需的数据。另一个需要考虑的问题是，该网站是否面向国际受众，还是市场主要来自单一国家？
+2. 为了生成一致的虚假数据工具，将数据从其源转移到可用的数字格式至关重要。首选方案是一系列数据库表。另一种吸引力稍差的替代方案是 CSV 文件。
+3. 你可能需要分阶段转换数据。例如，你可以从列出国家代码和国家名称的网页中提取数据到文本文件中。
 
 | 代码 | 名称 | 代码 | 名称 | 代码 | 名称 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -19068,8 +19732,8 @@ phpunit -c tests_with_autoload/phpunit.xml
 | CR | 珊瑚海群岛 | CS | 哥斯达黎加 | CT | 中非共和国 |
 | CU | 古巴 | CV | 佛得角 | CW | 库克群岛 |
 
-4.  由于这个列表很短，可以将其直接剪切并粘贴到文本文件中。
-5.  然后我们可以搜索 " " 并替换为 "\n"，这将给我们以下内容：
+4. 由于这个列表很短，可以将其直接剪切并粘贴到文本文件中。
+5. 然后我们可以搜索 " " 并替换为 "\n"，这将给我们以下内容：
 
    1. AA 阿鲁巴
    2. AC 安提瓜和巴布达
@@ -19089,8 +19753,10 @@ phpunit -c tests_with_autoload/phpunit.xml
    16. AX 阿克罗蒂里
    17. AY 南极洲
 
-6.  然后可以将其导入电子表格，进而让你导出为 CSV 文件。从那里，将其导入数据库只是件简单的事。例如，phpMyAdmin 就具备这样的功能。
-7.  为了说明起见，我们假设我们生成的数据最终将存入 prospects 表中。以下是用于创建此表的 SQL 语句：
+6. 然后可以将其导入电子表格，进而让你导出为 CSV 文件。从那里，将其导入数据库只是件简单的事。例如，phpMyAdmin 就具备这样的功能。
+7. 为了说明起见，我们假设我们生成的数据最终将存入 `prospects` 表中。以下是用于创建此表的 SQL 语句：
+
+
 
 ```sql
 CREATE TABLE `prospects` (
@@ -19112,7 +19778,9 @@ CREATE TABLE `prospects` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ```
 
-8.  现在是创建能够生成虚假数据的类的时候了。然后，我们将创建方法为上面显示的每个字段生成数据，除了 id，它是自动生成的：
+## 8. 现在是创建能够生成虚假数据的类的时候了
+
+然后，我们将创建方法为上面显示的每个字段生成数据，除了 `id`，它是自动生成的：
 
 ```php
 namespace Application\Test;
@@ -19132,7 +19800,7 @@ class FakeData
 }
 ```
 
-9.  接下来，我们定义将在过程中使用的常量和属性：
+## 9. 接下来，我们定义将在过程中使用的常量和属性
 
 ```php
 const MAX_LOOKUPS   = 10;
@@ -19155,7 +19823,9 @@ protected $files;
 protected $tables;
 ```
 
-10. 然后我们定义用于生成随机字母、街道名称和电子邮件地址的属性。你可以将这些数组视为种子，可以根据需要对其进行修改和/或扩展。例如，你可能为法国受众替换巴黎的街道名称片段：
+## 10. 然后我们定义用于生成随机字母、街道名称和电子邮件地址的属性
+
+你可以将这些数组视为种子，可以根据需要对其进行修改和/或扩展。例如，你可能为法国受众替换巴黎的街道名称片段：
 
 ```php
 protected $alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -19167,7 +19837,7 @@ protected $mail2 = ['telecom','telco','net','connect'];
 protected $mail3 = ['com','net'];
 ```
 
-11. 在构造函数中，我们接受一个用于数据库访问的 Connection 对象，以及一个映射到虚假数据的数组：
+## 11. 在构造函数中，我们接受一个用于数据库访问的 Connection 对象，以及一个映射到虚假数据的数组
 
 ```php
 public function __construct(Connection $conn, array $mapping)
@@ -19177,7 +19847,9 @@ public function __construct(Connection $conn, array $mapping)
 }
 ```
 
-12. 为了生成街道名称，与其尝试创建数据库表，使用一组种子数组来生成随机组合可能更高效。以下是这样做的示例：
+## 12. 为了生成街道名称，与其尝试创建数据库表，使用一组种子数组来生成随机组合可能更高效
+
+以下是这样做的示例：
 
 ```php
 public function getAddress($entry)
@@ -19189,7 +19861,9 @@ public function getAddress($entry)
 }
 ```
 
-13. 根据所需的真实程度，你还可以构建一个将邮政编码与城市匹配的数据库表。邮政编码也可以随机生成。以下是为英国生成邮政编码的示例：
+## 13. 根据所需的真实程度，你还可以构建一个将邮政编码与城市匹配的数据库表
+
+邮政编码也可以随机生成。以下是为英国生成邮政编码的示例：
 
 ```php
 public function getPostalCode($entry, $pattern = 1)
@@ -19204,7 +19878,9 @@ public function getPostalCode($entry, $pattern = 1)
 }
 ```
 
-14. 虚假电子邮件的生成也可以使用一组种子数组来产生随机结果。我们甚至可以编程使其接收现有的 $entry 数组，带有参数，并使用这些参数创建地址的名称部分：
+## 14. 虚假电子邮件的生成也可以使用一组种子数组来产生随机结果
+
+我们甚至可以编程使其接收现有的 `$entry` 数组，带有参数，并使用这些参数创建地址的名称部分：
 
 ```php
 public function getEmail($entry, $params = NULL)
@@ -19220,7 +19896,9 @@ public function getEmail($entry, $params = NULL)
 }
 ```
 
-15. 对于日期生成，一种方法是接受现有的 $entry 数组作为参数，带有参数。参数将是一个数组，其中第一个值是起始日期。第二个参数是从起始日期中减去的最大天数。这实际上允许你从一个范围内返回一个随机日期。注意，我们使用 `DateTime::sub()` 减去随机天数。`sub()` 需要一个 `DateInterval` 实例，我们使用 `P`、随机天数，然后使用 `'D':` 来构建它：
+## 15. 对于日期生成，一种方法是接受现有的 `$entry` 数组作为参数，带有参数
+
+参数将是一个数组，其中第一个值是起始日期。第二个参数是从起始日期中减去的最大天数。这实际上允许你从一个范围内返回一个随机日期。注意，我们使用 `DateTime::sub()` 减去随机天数。`sub()` 需要一个 `DateInterval` 实例，我们使用 `P`、随机天数，然后使用 `'D':` 来构建它：
 
 ```php
 public function getDate($entry, $params)
@@ -19232,10 +19910,9 @@ public function getDate($entry, $params)
 }
 ```
 
+## 16. 正如在本食谱开头所述，我们用于假数据生成的数据源会有所不同
 
-
-
-16. 正如在本食谱开头所述，我们用于假数据生成的数据源会有所不同。在某些情况下，如前几步所示，我们使用种子数组来构建假数据。在其他情况下，我们可能希望使用文本文件或 CSV 文件作为数据源。以下是此类方法的示例：
+在某些情况下，如前几步所示，我们使用种子数组来构建假数据。在其他情况下，我们可能希望使用文本文件或 CSV 文件作为数据源。以下是此类方法的示例：
 
 ```php
 public function getEntryFromFile($name, $type)
@@ -19249,7 +19926,9 @@ public function getEntryFromFile($name, $type)
 }
 ```
 
-17. 你会注意到，我们首先需要将文件数据拉入一个数组，该数组构成了返回值。以下是执行此操作的方法。如果指定的文件未找到，我们会抛出一个异常。文件类型被识别为我们类常量之一：`FILE_TYPE_TEXT` 或 `FILE_TYPE_CSV`。根据类型，我们使用 `fgetcsv()` 或 `fgets()`：
+## 17. 你会注意到，我们首先需要将文件数据拉入一个数组，该数组构成了返回值
+
+以下是执行此操作的方法。如果指定的文件未找到，我们会抛出一个异常。文件类型被识别为我们类常量之一：`FILE_TYPE_TEXT` 或 `FILE_TYPE_CSV`。根据类型，我们使用 `fgetcsv()` 或 `fgets()`：
 
 ```php
 public function pullFileData($name, $type)
@@ -19270,7 +19949,9 @@ public function pullFileData($name, $type)
 }
 ```
 
-18. 该过程中可能最复杂的方面是从数据库表中提取随机数据。我们接受的参数包括表名、构成主键的列名，以及一个映射数据库查找表中列名与目标列名之间关系的数组：
+## 18. 该过程中可能最复杂的方面是从数据库表中提取随机数据
+
+我们接受的参数包括表名、构成主键的列名，以及一个映射数据库查找表中列名与目标列名之间关系的数组：
 
 ```php
 public function getEntryFromTable($tableName, $idColumn, $mapping)
@@ -19317,7 +19998,7 @@ public function getEntryFromTable($tableName, $idColumn, $mapping)
 }
 ```
 
-19. 现在，我们已具备设置预编译语句并初始化若干关键变量的条件：
+## 19. 现在，我们已具备设置预编译语句并初始化若干关键变量的条件
 
 ```php
 $result = FALSE;
@@ -19326,7 +20007,9 @@ $sql = 'SELECT * FROM ' . $tableName . ' WHERE ' . $idColumn . ' = ?';
 $stmt = $this->connection->pdo->prepare($sql);
 ```
 
-20. 实际的查找过程放置在 do...while 循环中。这样做的原因是我们需要至少执行一次查询才能获得结果。只有在我们未得到结果时，才继续循环。我们在最低 ID 和最高 ID 之间生成一个随机数，然后在查询参数中使用该数字。请注意，我们还递减一个计数器以防止无限循环。这是因为如果 ID 不是连续的，我们可能会意外生成一个不存在的 ID。如果我们超过最大尝试次数且仍然没有结果，则抛出异常：
+## 20. 实际的查找过程放置在 do...while 循环中
+
+这样做的原因是我们需要至少执行一次查询才能获得结果。只有在我们未得到结果时，才继续循环。我们在最低 ID 和最高 ID 之间生成一个随机数，然后在查询参数中使用该数字。请注意，我们还递减一个计数器以防止无限循环。这是因为如果 ID 不是连续的，我们可能会意外生成一个不存在的 ID。如果我们超过最大尝试次数且仍然没有结果，则抛出异常：
 
 ```php
 do {
@@ -19342,7 +20025,7 @@ if (!$result) {
 
 注意：包裹此逻辑的 try-catch 块在第 21 步末尾闭合。
 
-21. 然后，我们使用映射数组从源表中检索值，使用在目标表中期望的键：
+## 21. 然后，我们使用映射数组从源表中检索值，使用在目标表中期望的键
 
 ```php
 } catch (PDOException $e) {
@@ -19356,7 +20039,9 @@ return $entry;
 }
 ```
 
-22. 这个类的核心是 `getRandomEntry()` 方法，它生成单个假数据数组。我们逐个遍历 `$mapping` 中的条目，并检查各种参数：
+## 22. 这个类的核心是 `getRandomEntry()` 方法，它生成单个假数据数组
+
+我们逐个遍历 `$mapping` 中的条目，并检查各种参数：
 
 ```php
 public function getRandomEntry()
@@ -19367,7 +20052,9 @@ public function getRandomEntry()
 			switch ($value['source']) {
 ```
 
-23. 源参数用于实现实际上充当策略模式的功能。我们支持四种不同的源可能性，全部定义为类常量。第一个是 `SOURCE_FILE`。在这种情况下，我们使用前面讨论的 `getEntryFromFile()` 方法：
+## 23. 源参数用于实现实际上充当策略模式的功能
+
+我们支持四种不同的源可能性，全部定义为类常量。第一个是 `SOURCE_FILE`。在这种情况下，我们使用前面讨论的 `getEntryFromFile()` 方法：
 
 ```php
 case self::SOURCE_FILE : 
@@ -19376,7 +20063,9 @@ case self::SOURCE_FILE :
 	break;
 ```
 
-24. 回调选项根据在 `$mapping` 数组中提供的回调返回一个值：
+## 24. 回调选项根据在 `$mapping` 数组中提供的回调返回一个值
+
+
 
 ```php
 case self::SOURCE_CALLBACK : 
@@ -19384,7 +20073,7 @@ case self::SOURCE_CALLBACK :
 	break;
 ```
 
-25. `SOURCE_TABLE` 选项使用 `$mapping` 中定义的数据库表作为查找。请注意，前面讨论的 `getEntryFromTable()` 能够返回一个值数组，这意味着我们需要使用 `array_merge()` 来合并结果：
+### 25. `SOURCE_TABLE` 选项使用 `$mapping` 中定义的数据库表作为查找。请注意，前面讨论的 `getEntryFromTable()` 能够返回一个值数组，这意味着我们需要使用 `array_merge()` 来合并结果：
 
 ```php
 case self::SOURCE_TABLE : 
@@ -19394,7 +20083,7 @@ case self::SOURCE_TABLE :
 	break;
 ```
 
-26. `SOURCE_METHOD` 选项（也是默认选项）使用该类中已包含的方法。我们检查是否包含参数，如果是，则将这些参数添加到方法调用中。请注意使用 `{}` 来影响插值。如果我们进行 PHP 7 的 `$this->$value['name']()` 调用，由于抽象语法树（AST）重写，它会插值为此形式：`${$this->$value}['name']()`，这不是我们想要的：
+### 26. `SOURCE_METHOD` 选项（也是默认选项）使用该类中已包含的方法。我们检查是否包含参数，如果是，则将这些参数添加到方法调用中。请注意使用 `{}` 来影响插值。如果我们进行 PHP 7 的 `$this->$value['name']()` 调用，由于抽象语法树（AST）重写，它会插值为此形式：`${$this->$value}['name']()`，这不是我们想要的：
 
 ```php
 case self::SOURCE_METHOD : 
@@ -19410,7 +20099,7 @@ return $entry;
 }
 ```
 
-27. 我们定义一个方法，循环执行 `getRandomEntry()` 以生成多行假数据。我们还添加了一个插入到目标表的选项。如果启用了此选项，我们将设置一个用于插入的预编译语句，并检查是否需要截断当前在此表中的任何数据：
+### 27. 我们定义一个方法，循环执行 `getRandomEntry()` 以生成多行假数据。我们还添加了一个插入到目标表的选项。如果启用了此选项，我们将设置一个用于插入的预编译语句，并检查是否需要截断当前在此表中的任何数据：
 
 ```php
 public function generateData(
@@ -19435,7 +20124,7 @@ public function generateData(
 	}
 ```
 
-28. 接下来，我们循环处理请求的数据行数，并执行 `getRandomEntry()`。如果请求了数据库插入，我们在 `try/catch` 块中执行预编译语句。无论如何，我们都使用 `yield` 关键字将此方法转换为生成器：
+### 28. 接下来，我们循环处理请求的数据行数，并执行 `getRandomEntry()`。如果请求了数据库插入，我们在 `try/catch` 块中执行预编译语句。无论如何，我们都使用 `yield` 关键字将此方法转换为生成器：
 
 ```php
 	for ($x = 0; $x < $howMany; $x++) {
@@ -19454,7 +20143,8 @@ public function generateData(
 ```
 
 ## 最佳实践
-如果返回的数据量巨大，最好是在数据生成时逐步输出（yield）数据，从而节省数组所需的内存。
+
+如果返回的数据量巨大，最好是在数据生成时逐步输出（`yield`）数据，从而节省数组所需的内存。
 
 ## 工作原理…
 
@@ -19471,14 +20161,15 @@ define('FIRST_NAME_FILE', __DIR__ . '../../../data/files/first_names.txt');
 define('LAST_NAME_FILE', __DIR__ . '../../../data/files/surnames.txt');
 ```
 
-
-
 require _DIR_ . '/../Application/Autoload/Loader.php';
+
 Application\Autoload\Loader::init (_DIR_ . '/../');
+
 use Application\Test\FakeData;
+
 use Application\Database\Connection;
 
-接下来，定义一个映射数组，该数组使用目标表（prospects）中的列名作为键。然后你需要为 source、name 以及其他必需参数定义子键。首先，`first_name` 和 `last_name` 都将使用文件作为数据源，`name` 指向文件名，`type` 指示文本类型的文件类型：
+接下来，定义一个映射数组，该数组使用目标表（`prospects`）中的列名作为键。然后你需要为 `source`、`name` 以及其他必需参数定义子键。首先，`first_name` 和 `last_name` 都将使用文件作为数据源，`name` 指向文件名，`type` 指示文本类型的文件类型：
 
 ```php
 $mapping = [
@@ -19536,7 +20227,7 @@ $mapping = [
          ]
 ```
 
-然后你可以定义目标表、Connection 实例，并创建 FakeData 实例。一个 foreach() 循环就足以显示指定数量的条目：
+然后你可以定义目标表、Connection 实例，并创建 FakeData 实例。一个 `foreach()` 循环就足以显示指定数量的条目：
 
 ```php
 $destTableName = 'prospects';
@@ -19577,11 +20268,11 @@ foreach ($fake->generateData(10) as $row) {
 
 ## 使用 session_start 参数自定义会话
 
-在 PHP 7 之前，为了覆盖 php.ini 中关于安全会话管理的设置，你需要使用一系列 ini_set() 命令。这种方法的令人烦恼之处在于，你还需要知道哪些设置是可用的，并且在其他应用程序中复用相同的设置也很困难。然而，从 PHP 7 开始，你可以向 session_start() 命令提供一个参数数组，从而立即设置这些值。
+在 PHP 7 之前，为了覆盖 `php.ini` 中关于安全会话管理的设置，你需要使用一系列 `ini_set()` 命令。这种方法的令人烦恼之处在于，你还需要知道哪些设置是可用的，并且在其他应用程序中复用相同的设置也很困难。然而，从 PHP 7 开始，你可以向 `session_start()` 命令提供一个参数数组，从而立即设置这些值。
 
 ### 实现方法...
 
-- 1. 我们首先开发一个 Application\Security\SessOptions 类，该类将持有会话参数，并具备启动会话的能力。我们还定义了一个类常量，以防传入无效的会话选项：
+- 1. 我们首先开发一个 `Application\Security\SessOptions` 类，该类将持有会话参数，并具备启动会话的能力。我们还定义了一个类常量，以防传入无效的会话选项：
 
 ```php
 namespace Application\Security;   
@@ -19609,6 +20300,8 @@ const SESS_OP_SAVE_HANDLER    = 'save_handler';
 
 - 4. 然后我们可以定义构造函数，它接受一个 `php.ini` 会话设置数组作为参数。我们使用 `ReflectionClass` 获取类常量列表，并对 `$options` 参数进行循环处理，以确认该设置是被允许的。还要注意 `array_flip()` 的使用，它翻转键和值，使得类常量的实际值形成数组键，而类常量的名称成为值：
 
+
+
 ```php
 protected $options;
 protected $allowed;
@@ -19629,7 +20322,7 @@ public function __construct(array $options)
 }
 ```
 
-- 5. 然后我们以另外两个方法结束；一个方法允许我们从外部访问允许的参数，另一个方法则启动会话：
+5. 然后我们以另外两个方法结束；一个方法允许我们从外部访问允许的参数，另一个方法则启动会话：
 
 ```php
 public function getAllowed()
@@ -19643,10 +20336,7 @@ public function start()
 }
 ```
 
-
-
-
-## 工作原理...
+## 工作原理
 
 将本菜谱中讨论的所有代码放入 `Application\Security` 目录下的 `SessOptions.php` 文件中。然后，你可以定义一个名为 `chap_13_session_options.php` 的调用程序来测试这个新类，该程序设置了自动加载并使用该类：
 
@@ -19657,7 +20347,7 @@ Application\Autoload\Loader::init(__DIR__ . '/../..');
 use Application\Security\SessOptions;
 ```
 
-接下来，定义一个数组，使用类的常量作为键，并根据需要设置值以管理会话。请注意，在本文中所示的示例中，会话信息存储在一个名为 session 的子目录中，你需要创建该目录：
+接下来，定义一个数组，使用类的常量作为键，并根据需要设置值以管理会话。请注意，在本文中所示的示例中，会话信息存储在一个名为 `session` 的子目录中，你需要创建该目录：
 
 ```php
 $options = [
@@ -19692,9 +20382,9 @@ total 4
 edged:~/Desktop/Repos/php7_recipes/source/chapter13$
 ```
 
-## 另请参阅...
+## 另请参阅
 
-- 有关与会话相关的 php.ini 指令的更多信息，请参见此摘要：http://php.net/manual/en/session.configuration.php
+- 有关与会话相关的 `php.ini` 指令的更多信息，请参见此摘要：http://php.net/manual/en/session.configuration.php
 
 ## 定义 PSR-7 类
 
@@ -19704,26 +20394,26 @@ edged:~/Desktop/Repos/php7_recipes/source/chapter13$
 - 开发 PSR-7 Request 类
 - 定义 PSR-7 Response 类
 
-## 简介
+### 简介
 
 **PHP 标准推荐编号 7（PSR-7）** 定义了许多接口，但没有提供实际的实现。因此，我们需要定义具体的代码实现，才能开始创建自定义中间件。
 
-## 实现 PSR-7 值对象类
+### 实现 PSR-7 值对象类
 
 为了使用 PSR-7 请求和响应，我们首先需要定义一系列值对象。这些是代表逻辑对象的类，用于基于 Web 的活动，例如 URL、文件上传以及流式请求或响应主体。
 
-### 准备工作
+#### 准备工作
 
 PSR-7 接口的源代码可以作为 `Composer` 包获取。使用 `Composer` 管理外部软件（包括 PSR-7 接口）被认为是一种最佳实践。
 
-### 具体操作方法...
+#### 具体操作方法
 
 1. 首先，请访问以下 URL 以获取 PSR-7 接口定义的最新版本：`https://github.com/php-fig/http-message`。也可以获取源代码。在撰写本文时，以下是可用的定义：
 
 | 接口 | 继承自 | 说明 | 方法处理的内容 |
 | :--- | :--- | :--- | :--- |
-| MessageInterface | | 定义了 HTTP 消息通用的方法 | 标头、消息主体（即内容）和协议 |
-| RequestInterface | MessageInterface | 表示客户端生成的请求 | URI、HTTP 方法和请求目标 |
+| `MessageInterface` | | 定义了 HTTP 消息通用的方法 | 标头、消息主体（即内容）和协议 |
+| `RequestInterface` | `MessageInterface` | 表示客户端生成的请求 | URI、HTTP 方法和请求目标 |
 
 2. 不幸的是，我们需要创建实现这些接口的具体类，才能利用 PSR-7。幸运的是，接口类通过一系列注释在内部得到了广泛的文档记录。我们将从一个包含有用常量的独立类开始：
 
@@ -19780,7 +20470,7 @@ class Constants
 
 > 完整的 HTTP 状态代码列表可以在这里找到：https://tools.ietf.org/html/rfc7231#section-6.1.
 
-3. 接下来，我们将着手处理代表由其他 PSR-7 类使用的值对象的类。首先，这里是一个代表 URI 的类。在构造函数中，我们接受一个 URI 字符串作为参数，并使用 parse_url() 函数将其分解为其组成部分：
+3. 接下来，我们将着手处理代表由其他 PSR-7 类使用的值对象的类。首先，这里是一个代表 URI 的类。在构造函数中，我们接受一个 URI 字符串作为参数，并使用 `parse_url()` 函数将其分解为其组成部分：
 
 ```php
 namespace Application\MiddleWare;
@@ -19829,7 +20519,7 @@ public function getAuthority()
 }
 ```
 
-6. **User info**（用户信息）代表用户名（如果存在）以及可选的密码。使用密码的一个例子是访问 FTP 网站，例如 ftp://username:password@website.com:/path：
+6. **User info**（用户信息）代表用户名（如果存在）以及可选的密码。使用密码的一个例子是访问 FTP 网站，例如 `ftp://username:password@website.com:/path`：
 
 ```php
 public function getUserInfo()
@@ -19859,7 +20549,7 @@ public function getHost()
 }
 ```
 
-8. **Port**（端口）是 HTTP 端口（如果存在）。你会注意到，如果端口列在我们的 STANDARD_PORTS 常量中，根据 PSR-7 的要求，返回值将是 NULL：
+8. **Port**（端口）是 HTTP 端口（如果存在）。你会注意到，如果端口列在我们的 `STANDARD_PORTS` 常量中，根据 PSR-7 的要求，返回值将是 NULL：
 
 ```php
 public function getPort()
@@ -19879,11 +20569,7 @@ public function getPort()
 }
 ```
 
-
-
-
-
-9. **路径** 是 URI 中跟随 DNS 地址的部分。根据 PSR-7，此部分必须经过编码。我们使用 `rawurlencode()` PHP 函数，因为它符合 RFC 3986 标准。然而，我们不能直接编码整个路径，因为路径分隔符（即 /）也会被编码！因此，我们需要先使用 `explode()` 将其拆分，对各个部分进行编码，然后再重新组合：
+9. **路径** 是 URI 中跟随 DNS 地址的部分。根据 PSR-7，此部分必须经过编码。我们使用 `rawurlencode()` PHP 函数，因为它符合 RFC 3986 标准。然而，我们不能直接编码整个路径，因为路径分隔符（即 `/`）也会被编码！因此，我们需要先使用 `explode()` 将其拆分，对各个部分进行编码，然后再重新组合：
 
 ```php
 public function getPath()
@@ -19896,7 +20582,7 @@ public function getPath()
 }
 ```
 
-10. 接下来，我们定义一个方法来检索 *查询* 字符串（即来自 $_GET）。这些内容也必须进行 URL 编码。首先，我们定义 `getQueryParams()`，它将查询字符串拆分为一个关联数组。请注意，为了刷新查询参数，我们提供了一个 *重置* 选项。然后，我们定义 `getQuery()`，它接受该数组并生成正确的 URL 编码字符串：
+10. 接下来，我们定义一个方法来检索 *查询* 字符串（即来自 `$_GET`）。这些内容也必须进行 URL 编码。首先，我们定义 `getQueryParams()`，它将查询字符串拆分为一个关联数组。请注意，为了刷新查询参数，我们提供了一个 *重置* 选项。然后，我们定义 `getQuery()`，它接受该数组并生成正确的 URL 编码字符串：
 
 ```php
 public function getQueryParams($reset = FALSE)
@@ -19928,7 +20614,9 @@ public function getQuery()
 }
 ```
 
-11. 之后，我们提供一个方法返回片段（即 URL 中的 #）及其后跟随的任何部分：
+11. 之后，我们提供一个方法返回片段（即 URL 中的 `#`）及其后跟随的任何部分：
+
+
 
 ```php
 public function getFragment()
@@ -19941,7 +20629,7 @@ public function getFragment()
 }
 ```
 
-12. 接下来，我们定义一系列 `withXXX()` 方法，这些方法与上述描述的 `getXXX()` 方法相对应。这些方法旨在添加、替换或删除与请求类相关的属性（方案、权威、用户信息等）。此外，这些方法返回当前实例，从而允许我们将这些方法用于一系列连续调用（通常称为流畅接口）。我们从 `withScheme()` 开始：
+### 12. 接下来，我们定义一系列 `withXXX()` 方法，这些方法与上述描述的 `getXXX()` 方法相对应。这些方法旨在添加、替换或删除与请求类相关的属性（方案、权威、用户信息等）。此外，这些方法返回当前实例，从而允许我们将这些方法用于一系列连续调用（通常称为流畅接口）。我们从 `withScheme()` 开始：
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_565_0.png)
 
@@ -19963,7 +20651,7 @@ public function withScheme($scheme)
 }
 ```
 
-13. 然后，我们对覆盖、添加或替换用户信息、主机、端口、路径、查询和片段的方法应用类似的逻辑。请注意，`withQuery()` 方法会重置查询参数数组。`withHost()`、`withPort()`、`withPath()` 和 `withFragment()` 使用相同的逻辑，但为了节省篇幅未在此展示：
+### 13. 然后，我们对覆盖、添加或替换用户信息、主机、端口、路径、查询和片段的方法应用类似的逻辑。请注意，`withQuery()` 方法会重置查询参数数组。`withHost()`、`withPort()`、`withPath()` 和 `withFragment()` 使用相同的逻辑，但为了节省篇幅未在此展示：
 
 ```php
 public function withUserInfo($user, $password = null)
@@ -19995,7 +20683,7 @@ public function withQuery($query)
 }
 ```
 
-14. 最后，我们用 `__toString()` 方法封装 `Application\Middleware\Uri` 类，当该对象在字符串上下文中使用时，它会返回由 `$uriParts` 组装成的正确 URI。我们还定义了一个便捷方法 `getUriString()`，它只是简单地调用 `__toString()`：
+### 14. 最后，我们用 `__toString()` 方法封装 `Application\Middleware\Uri` 类，当该对象在字符串上下文中使用时，它会返回由 `$uriParts` 组装成的正确 URI。我们还定义了一个便捷方法 `getUriString()`，它只是简单地调用 `__toString()`：
 
 ```php
 public function __toString()
@@ -20004,7 +20692,7 @@ public function __toString()
         ? $this->getScheme() . '://' : '';
 ```
 
-15. 如果存在权威 URI 部分，我们就添加它。权威部分包括用户信息、主机和端口。否则，我们只附加主机和端口：
+### 15. 如果存在权威 URI 部分，我们就添加它。权威部分包括用户信息、主机和端口。否则，我们只附加主机和端口：
 
 ```php
 if ($this->getAuthority()) {
@@ -20016,7 +20704,7 @@ $uri .= ($this->getPort()
 }
 ```
 
-16. 在添加路径之前，我们首先检查第一个字符是否为 `/`。如果不是，我们需要添加此分隔符。然后，如果存在查询和片段，我们就添加它们：
+### 16. 在添加路径之前，我们首先检查第一个字符是否为 `/`。如果不是，我们需要添加此分隔符。然后，如果存在查询和片段，我们就添加它们：
 
 ```php
 $path = $this->getPath();
@@ -20042,9 +20730,9 @@ public function getUriString()
 }
 ```
 
-> 注意使用了字符串解引用（即 $path[0]），这是 PHP 7 的一部分。
+> 注意使用了字符串解引用（即 `$path[0]`），这是 PHP 7 的一部分。
 
-17. 接下来，我们将注意力转向代表消息主体的类。由于主体可能有多大是未知的，PSR-7 建议将主体视为流。流是一种资源，允许以线性方式访问输入和输出源。在 PHP 中，所有文件命令都运行在 Streams 子系统之上，因此这是一个自然的选择。PSR-7 通过定义 `Psr\Http\Message\StreamInterface` 来形式化这一点，该接口定义了诸如 `read()`、`write()`、`seek()` 等方法。现在我们展示 `Application\MiddleWare\Stream`，我们可以用它来表示传入或传出请求和/或响应的主体：
+### 17. 接下来，我们将注意力转向代表消息主体的类。由于主体可能有多大是未知的，PSR-7 建议将主体视为流。流是一种资源，允许以线性方式访问输入和输出源。在 PHP 中，所有文件命令都运行在 Streams 子系统之上，因此这是一个自然的选择。PSR-7 通过定义 `Psr\Http\Message\StreamInterface` 来形式化这一点，该接口定义了诸如 `read()`、`write()`、`seek()` 等方法。现在我们展示 `Application\MiddleWare\Stream`，我们可以用它来表示传入或传出请求和/或响应的主体：
 
 ```php
 namespace Application\MiddleWare;
@@ -20060,7 +20748,7 @@ class Stream implements StreamInterface
     protected $info;
 ```
 
-18. 在构造函数中，我们使用简单的 `fopen()` 命令打开流。然后，我们使用 `stream_get_meta_data()` 获取流的信息。对于其他详细信息，我们创建一个 `SplFileInfo` 实例：
+### 18. 在构造函数中，我们使用简单的 `fopen()` 命令打开流。然后，我们使用 `stream_get_meta_data()` 获取流的信息。对于其他详细信息，我们创建一个 `SplFileInfo` 实例：
 
 ```php
 public function __construct($input, $mode = self::MODE_READ)
@@ -20073,7 +20761,7 @@ public function __construct($input, $mode = self::MODE_READ)
 
 > 我们选择 `fopen()` 而不是更现代的 `SplFileObject` 的原因是，后者不允许直接访问内部文件资源对象，因此对于此应用无用。
 
-19. 我们包含两个便捷方法，分别提供对资源的访问以及对 `SplFileInfo` 实例的访问：
+### 19. 我们包含两个便捷方法，分别提供对资源的访问以及对 `SplFileInfo` 实例的访问：
 
 ```php
 public function getStream()
@@ -20087,7 +20775,7 @@ public function getInfo()
 }
 ```
 
-20. 接下来，我们定义低级核心流式处理方法：
+### 20. 接下来，我们定义低级核心流式处理方法：
 
 ```php
 public function read($length)
@@ -20152,10 +20840,6 @@ public function detach()
     return $this->close();
 }
 ```
-
-
-
-
 
 ## 定义 PSR-7 类
 
@@ -20337,6 +21021,8 @@ public function getMetadata($key = null)
 
 最后一个介绍的类值是 `Application\Middleware\UploadedFile`。与其他类一样，我们首先定义表示文件上传各个方面的属性：
 
+
+
 ```php
 namespace Application\Middleware;
 use RuntimeException;
@@ -20479,15 +21165,11 @@ $uri->withScheme('https')
 echo $uri;
 ```
 
-
-
-
-
 以下是预期结果：
 
 ![](img/39390f6d56c5a83b28db083a8bd5185c_577_0.png)
 
-接下来，从 /path/to/source/for/this/chapter 创建一个名为 uploads 的目录。请继续定义另一个调用程序 `chap_09_middleware_value_objects_file_upload.php`，该程序设置自动加载并使用相应的类：
+接下来，从 `/path/to/source/for/this/chapter` 创建一个名为 `uploads` 的目录。请继续定义另一个调用程序 `chap_09_middleware_value_objects_file_upload.php`，该程序设置自动加载并使用相应的类：
 
 ```php
 <?php
@@ -20497,7 +21179,7 @@ Application\Autoload\Loader::init(__DIR__ . '/..');
 use Application\MiddleWare\UploadedFile;
 ```
 
-在 try...catch 块中，检查是否有任何文件被上传。如果有，循环遍历 $_FILES，并在 tmp_name 已设置的情况下创建 UploadedFile 实例。然后可以使用 moveTo() 方法将文件移动到 TARGET_DIR：
+在 try...catch 块中，检查是否有任何文件被上传。如果有，循环遍历 `$_FILES`，并在 `tmp_name` 已设置的情况下创建 `UploadedFile` 实例。然后可以使用 `moveTo()` 方法将文件移动到 `TARGET_DIR`：
 
 ```php
 try {
@@ -20518,7 +21200,7 @@ try {
 ?>
 ```
 
-在视图逻辑中，显示一个简单的文件上传表单。您也可以使用 phpinfo() 来显示关于已上传内容的信息：
+在视图逻辑中，显示一个简单的文件上传表单。您也可以使用 `phpinfo()` 来显示关于已上传内容的信息：
 
 ```html
 <form name="search" method="post"
@@ -20533,7 +21215,7 @@ try {
 <?= ($message) ? '<h1>' . $message . '</h1>' : ''; ?>
 ```
 
-接下来，如果有任何已上传的文件，您可以显示每个文件的信息。您还可以使用 getStream() 后跟 getContents() 来显示每个文件（假设您正在使用短文本文件）：
+接下来，如果有任何已上传的文件，您可以显示每个文件的信息。您还可以使用 `getStream()` 后跟 `getContents()` 来显示每个文件（假设您正在使用短文本文件）：
 
 ```html
 <?php if ($uploadedFiles) : ?>
@@ -20564,7 +21246,9 @@ try {
 ## 另请参阅
 
 - 有关 PSR 的更多信息，请查看 [PHP 标准推荐](https://en.wikipedia.org/wiki/PHP_Standard_Recommendation)
+
 - 关于 PSR-7 的具体信息，这里是官方描述： [http://www.php-fig.org/psr/psr-7/](http://www.php-fig.org/psr/psr-7/)
+
 - 有关 PHP 流的信息，请查看 [http://php.net/manual/en/book.stream.php](http://php.net/manual/en/book.stream.php)
 
 ## 开发 PSR-7 Request 类
@@ -20573,8 +21257,9 @@ PSR-7 中间件的一个关键特征是使用了 **Request** 和 **Response** �
 
 ### 如何实现…
 
-1.  首先，确保定义表示 `Uri`、`Stream` 和 `UploadedFile` 值对象的类，如前面的食谱中所述。
-2.  现在我们可以定义核心 `Application\MiddleWare\Message` 类。该类使用 `Stream` 和 `Uri` 并实现 `Psr\Http\Message\MessageInterface`。我们首先定义关键值对象的属性，包括表示消息主体（即 `StreamInterface` 实例）、版本和 HTTP 头的属性：
+1. 首先，确保定义表示 `Uri`、`Stream` 和 `UploadedFile` 值对象的类，如前面的食谱中所述。
+
+2. 现在我们可以定义核心 `Application\MiddleWare\Message` 类。该类使用 `Stream` 和 `Uri` 并实现 `Psr\Http\Message\MessageInterface`。我们首先定义关键值对象的属性，包括表示消息主体（即 `StreamInterface` 实例）、版本和 HTTP 头的属性：
 
 ```php
 namespace Application\MiddleWare;
@@ -20590,7 +21275,7 @@ class Message implements MessageInterface
     protected $httpHeaders = array();
 ```
 
-3.  接下来，我们有表示 `StreamInterface` 实例的 `getBody()` 方法。一个配套方法 `withBody()` 返回当前的 `Message` 实例，并允许我们覆盖 `body` 的当前值：
+3. 接下来，我们有表示 `StreamInterface` 实例的 `getBody()` 方法。一个配套方法 `withBody()` 返回当前的 `Message` 实例，并允许我们覆盖 `body` 的当前值：
 
 ```php
 public function getBody()
@@ -20611,7 +21296,7 @@ public function withBody(StreamInterface $body)
 }
 ```
 
-4.  PSR-7 建议将头视为不区分大小写。因此，我们定义了一个 findHeader() 方法（未被 MessageInterface 直接定义），该方法使用 stripos() 定位头：
+4. PSR-7 建议将头视为不区分大小写。因此，我们定义了一个 `findHeader()` 方法（未被 `MessageInterface` 直接定义），该方法使用 `stripos()` 定位头：
 
 ```php
 protected function findHeader($name)
@@ -20627,7 +21312,9 @@ protected function findHeader($name)
 }
 ```
 
-5.  下一个方法，未在 PSR-7 中定义，旨在填充 $httpHeaders 属性。该属性假设是一个关联数组，其中键是头，值是表示头值的字符串。如果有多个值，则以逗号分隔的附加值会被追加到字符串中。Apache 扩展有一个出色的 apache_request_headers() PHP 函数，如果在 $httpHeaders 中尚未提供头，则会产生这些头：
+
+
+### 5. 下一个方法，未在 PSR-7 中定义，旨在填充 `$httpHeaders` 属性。该属性假设是一个关联数组，其中键是头，值是表示头值的字符串。如果有多个值，则以逗号分隔的附加值会被追加到字符串中。Apache 扩展有一个出色的 `apache_request_headers()` PHP 函数，如果在 `$httpHeaders` 中尚未提供头，则会产生这些头：
 
 ```php
 protected function getHttpHeaders()
@@ -20643,7 +21330,7 @@ protected function getHttpHeaders()
 }
 ```
 
-6.  如果 apache_request_headers() 不可用（即未启用 Apache 扩展），我们提供了一个替代方案 altApacheReqHeaders()：
+### 6. 如果 `apache_request_headers()` 不可用（即未启用 Apache 扩展），我们提供了一个替代方案 `altApacheReqHeaders()`：
 
 ```php
 protected function altApacheReqHeaders()
@@ -20673,7 +21360,7 @@ protected function altApacheReqHeaders()
     }
 ```
 
-7.  实现 getHeaders()（PSR-7 中要求）现在只是一个遍历 getHttpHeaders() 方法（在第 4 步中讨论）生成的 $httpHeaders 属性的简单循环：
+### 7. 实现 `getHeaders()`（PSR-7 中要求）现在只是一个遍历 `getHttpHeaders()` 方法（在第 4 步中讨论）生成的 `$httpHeaders` 属性的简单循环：
 
 ```php
     public function getHeaders()
@@ -20684,7 +21371,7 @@ protected function altApacheReqHeaders()
     }
 ```
 
-8.  同样，我们提供了一系列 with 方法，旨在覆盖或替换头。由于可能有多个头，我们还提供一个方法向现有头集合中添加头。withoutHeader() 方法用于移除某个头实例。注意在前一步骤中提到的 findHeader() 的一致使用，以允许对头进行不区分大小写的处理：
+### 8. 同样，我们提供了一系列 `with` 方法，旨在覆盖或替换头。由于可能有多个头，我们还提供一个方法向现有头集合中添加头。`withoutHeader()` 方法用于移除某个头实例。注意在前一步骤中提到的 `findHeader()` 的一致使用，以允许对头进行不区分大小写的处理：
 
 ```php
     public function withHeader($name, $value)
@@ -20703,10 +21390,6 @@ protected function altApacheReqHeaders()
         $found = $this->findHeader($name);
         if ($found) {
 ```
-
-
-
-
 
 ### 9. 然后，我们提供了一系列有用的请求头相关方法，用于确认请求头是否存在、获取单个请求头行以及以数组形式获取请求头，符合 PSR-7 标准：
 
@@ -20757,7 +21440,7 @@ public function getHeadersAsString()
 }
 ```
 
-### 11. 仍在 Message 类中，我们现在将注意力转向版本处理。根据 PSR-7，协议版本（即 HTTP/1.1）的返回值应仅包含数字部分。出于此原因，我们还提供了 `onlyVersion()` 方法，该方法去除所有非数字字符，但允许保留句号：
+### 11. 仍在 `Message` 类中，我们现在将注意力转向版本处理。根据 PSR-7，协议版本（即 HTTP/1.1）的返回值应仅包含数字部分。出于此原因，我们还提供了 `onlyVersion()` 方法，该方法去除所有非数字字符，但允许保留句号：
 
 ```php
 public function getProtocolVersion()
@@ -20790,7 +21473,7 @@ protected function onlyVersion($version)
 }
 ```
 
-### 12. 最后，几乎是顺理成章地，我们准备好定义我们的 Request 类。然而，必须指出的是，我们需要考虑出站请求和入站请求。也就是说，我们需要一个类来表示客户端将向服务器发出的传出请求，以及服务器从客户端接收到的请求。相应地，我们提供了 `Application\MiddleWare\Request`（客户端将向服务器发出的请求）和 `Application\MiddleWare\ServerRequest`（服务器从客户端接收到的请求）。好消息是，我们的大部分工作已经完成：请注意，我们的 Request 类继承了 Message。我们还提供了表示 URL 和 HTTP 方法的属性：
+### 12. 最后，几乎是顺理成章地，我们准备好定义我们的 `Request` 类。然而，必须指出的是，我们需要考虑出站请求和入站请求。也就是说，我们需要一个类来表示客户端将向服务器发出的传出请求，以及服务器从客户端接收到的请求。相应地，我们提供了 `Application\MiddleWare\Request`（客户端将向服务器发出的请求）和 `Application\MiddleWare\ServerRequest`（服务器从客户端接收到的请求）。好消息是，我们的大部分工作已经完成：请注意，我们的 `Request` 类继承了 `Message`。我们还提供了表示 URL 和 HTTP 方法的属性：
 
 ```php
 namespace Application\Middleware;
@@ -20805,7 +21488,7 @@ class Request extends Message implements RequestInterface
     protected $uriObj; // Psr\Http\Message\UriInterface instance
 ```
 
-### 13. 构造函数中的所有属性默认为 NULL，但我们保留了立即定义相应参数的可能性。我们使用继承的 `onlyVersion()` 方法对版本进行清理。我们还定义了 `checkMethod()`，以确保提供的任何方法都在我们支持的 HTTP 方法列表中，该列表在 Constants 中定义为常量数组：
+### 13. 构造函数中的所有属性默认为 NULL，但我们保留了立即定义相应参数的可能性。我们使用继承的 `onlyVersion()` 方法对版本进行清理。我们还定义了 `checkMethod()`，以确保提供的任何方法都在我们支持的 HTTP 方法列表中，该列表在 `Constants` 中定义为常量数组：
 
 ```php
 public function __construct($uri = NULL,
@@ -20893,7 +21576,7 @@ public function withUri(UriInterface $uri, $preserveHost = false)
 }
 ```
 
-### 17. ServerRequest 类继承自 Request，并提供了额外功能，以检索处理传入请求的服务器感兴趣的信息。我们通过定义将表示从各种 PHP `$_` 超全局变量（即 `$_SERVER`、`$_POST` 等）读取的传入数据的属性开始：
+### 17. `ServerRequest` 类继承自 `Request`，并提供了额外功能，以检索处理传入请求的服务器感兴趣的信息。我们通过定义将表示从各种 PHP `$_` 超全局变量（即 `$_SERVER`、`$_POST` 等）读取的传入数据的属性开始：
 
 ```php
 namespace Application\Middleware;
@@ -20916,6 +21599,8 @@ ServerRequestInterface
 ```
 
 ### 18. 然后我们定义了一系列获取器来提取超全局变量信息。为了节省空间，我们没有展示所有内容：
+
+
 
 ```php
 public function getServerParams()
@@ -20947,16 +21632,13 @@ public function getContentType()
 }
 ```
 
-### 19. 由于上传的文件应当被表示为独立的 UploadedFile 对象（在之前的配方中介绍），我们也定义了一个方法，该方法接收 `$uploadedFileInfo` 并创建 UploadedFile 对象：
+### 19. 由于上传的文件应当被表示为独立的 `UploadedFile` 对象（在之前的配方中介绍），我们也定义了一个方法，该方法接收 `$uploadedFileInfo` 并创建 `UploadedFile` 对象：
 
 ```php
 public function getUploadedFiles()
 {
     if (!$this->uploadedFileObjs) {
 ```
-
-
-
 
 ## 附录
 
@@ -21204,9 +21886,6 @@ public function __construct($statusCode = NULL,
     $this->status['reason'] =
 ```
 
-
-
-
 ## 定义 PSR-7 类
 
 ```php
@@ -21218,48 +21897,54 @@ if ($statusCode) $this->setStatusCode();
 ```
 
 - 我们提供了一种便捷的方式来设置 HTTP 状态码，而无需关心任何头部，使用 `http_response_code()` 函数，该函数从 PHP 5.4 开始可用。由于这项工作在 PHP 7 上进行，我们可以确信该方法是存在的：
-  ```php
-  public function setStatusCode()
-  {
-      http_response_code($this->getStatusCode());
-  }
-  ```
+
+
+
+```php
+public function setStatusCode()
+{
+    http_response_code($this->getStatusCode());
+}
+```
 
 - 否则，使用以下方法获取状态码也是很有意义的：
-  ```php
-  public function getStatusCode()
-  {
-      return $this->status['code'];
-  }
-  ```
 
-- 与前面食谱中讨论的其他基于 PSR-7 的类一样，我们还定义了一个 `with` 方法，用于设置状态码并返回当前实例。注意使用 STATUS_CODES 来确认其存在性：
-  ```php
-  public function withStatus($statusCode, $reasonPhrase = '')
-  {
-      if (!isset(Constants::STATUS_CODES[$statusCode])) {
-          throw new InvalidArgumentException(
-              Constants::ERROR_INVALID_STATUS);
-      }
-      $this->status['code'] = $statusCode;
-      $this->status['reason'] = ($reasonPhrase
-          ? Constants::STATUS_CODES[$statusCode] : NULL);
-      $this->setStatusCode();
-      return $this;
-  }
-  ```
+```php
+public function getStatusCode()
+{
+    return $this->status['code'];
+}
+```
+
+- 与前面食谱中讨论的其他基于 PSR-7 的类一样，我们还定义了一个 `with` 方法，用于设置状态码并返回当前实例。注意使用 `STATUS_CODES` 来确认其存在性：
+
+```php
+public function withStatus($statusCode, $reasonPhrase = '')
+{
+    if (!isset(Constants::STATUS_CODES[$statusCode])) {
+        throw new InvalidArgumentException(
+            Constants::ERROR_INVALID_STATUS);
+    }
+    $this->status['code'] = $statusCode;
+    $this->status['reason'] = ($reasonPhrase
+        ? Constants::STATUS_CODES[$statusCode] : NULL);
+    $this->setStatusCode();
+    return $this;
+}
+```
 
 - 最后，我们定义了一个方法，返回 HTTP 状态的原因，即一段简短的文本短语，在本例中基于 RFC 7231。注意使用了 PHP 7 的空合并运算符 `??`，它返回三个可能选项中的第一个非空项：
-  ```php
-  public function getReasonPhrase()
-  {
-      return $this->status['reason']
-          ?? Constants::STATUS_CODES[$this->status['code']]
-          ?? '';
-  }
-  ```
 
-## 工作原理...
+```php
+public function getReasonPhrase()
+{
+    return $this->status['reason']
+        ?? Constants::STATUS_CODES[$this->status['code']]
+        ?? '';
+}
+```
+
+## 工作原理
 
 首先，务必定义前两个食谱中讨论的类。之后，你可以创建另一个简单的服务器程序，`chap_09_middleware_server_with_response.php`，该程序设置自动加载并使用相应的类：
 
@@ -21458,260 +22143,334 @@ php -S localhost:8080
 - Aura.Router
     - 参考链接 **342**
 
-
-
-
 ## 带关联数据的认证加密 (AEAD)
+
 480
 
 ## 权限
+
 540
 
 ## 自动加载过程
+
 101
 
 ## B
 
 ## 向后不兼容的变更
+
 参考链接 23
 
 ## 二分查找
+
 参考链接 377
 
 ### 二分查找类
+
 构建 373-377
 
 ## 分组密码
+
 参考链接 481
 
 ## BlowFish (BF)
+
 475
 
 ## 浏览器数据
+
 - 区域设置，获取 263-265
 
 ## 暴力破解攻击
+
 - 概述 455
 - 参考链接 460
 
 ## 冒泡排序
+
 构建 368-370
 
 ## 内置 PHP Web 服务器
+
 使用 6, 7
 
 ## C
 
 ## 缓存
+
 用于提升性能 323-336
 
 ## Cake PHP 框架
+
 参考链接 577
 
 ## 可调用对象
+
 26
 
 ## CAMELLIA
+
 475
 
 ## 图形验证码 (CAPTCHA)
+
 - 概述 435, 461
 - 参考链接 474
 - 用于表单保护 461
 
 ## CAST5
+
 475
 
 ## 密码分组链接 - 消息认证码 (CC-MAC)
+
 477
 
 ## 类自动加载
+
 实现 9-12
 
 ## 类
+
 - 开发 82-88
 - 扩展 88-95
 
 ## 逗号分隔值 (CSV)
+
 44
 
 ## 完全自动化公众图灵测试以区分计算机和人
+
 参见 图形验证码 (CAPTCHA)
 
 ## 复杂字符
+
 转换 260-262
 
 ## Composer
+
 参考链接 346
 
 ## composer.json 文件指令
+
 参考链接 515
 
 ## 常量可见性
+
 参考链接 109
 
 ## 上下文敏感分析器
+
 - 概述 143
 - 参考链接 146
 
 ## C 程序
+
 编译，参考链接 5
 
 ## 跨站请求伪造 (CSRF)
+
 - 概述 435, 449
 - 参考链接 455
 
 ## 跨站脚本 (XSS)
+
 444
 
 ## 密码学安全伪随机数生成器 (CSPRNG)
+
 457
 
 ## CSPRNG
+
 477
 
 ## 货币
+
 - 格式化，按区域设置 271-275
 - 处理，按区域设置 270
 
 ## 光标
+
 132
 
 ## D
 
 ## 数据库
+
 - 连接，PHP 数据对象 (PDO)
   - 使用 130-143
 - 电子表格，上传到 44-47
 
 ## 数据库表
+
 通过定义实体来表示 150-155
 
 ## 数据加密标准 (DES)
+
 475
 
 ## 数据映射器
+
 407
 
 ## 数据源名称 (DSN)
+
 130
 
 ## 数据传输对象设计模式
+
 392
 
 ## 数据类型
+
 提示 59-62
 
 ## 日期格式
+
 参考链接 280
 
 ## 日期/时间
+
 格式化，按区域设置 276-279
 
 ## Debian
+
 参考链接 3
 
 ## 解密
+
 不使用 mcrypt 475-480
 
 ## 深度迭代
+
 71
 
 ## 深度网页扫描器
+
 构建 15-17
 
 ## 委托生成器
+
 201
 
 ## 解引用过程
+
 26
 
 ## DocBlock
+
 82, 83
 
 ## Docker
+
 参考链接 5
 
 ## Doctrine
+
 参考链接 428
 
 ## 领域模型
+
 - 概述 150
 - 参考链接 155
 
 ## E
 
 ## 表情符号 (emoji)
+
 - 编码，参考链接 260
 - 使用，在视图脚本中 258-260
 
 ## 表情 (emoticons)
+
 使用，在视图脚本中 258-260
 
 ## 加密
+
 - 操作模式，参考链接 481
 - 不使用 mcrypt 475-480
 
 ## 实体
+
 定义以匹配数据库表 150-155
 
 ## 实体类
+
 - 概述 150
 - 与 RDBMS 查询链接 155-162
 
 ## 错误，配置阶段
+
 - 概述 2, 3
 - 参考链接 2, 3
 
 ## 可扩展标记语言 (XML)
+
 223
 
 ## F
 
 ## FastRoute
+
 参考链接 342
 
 ## Fedora / Red Hat
+
 参考链接 4
 
 ## 获取模式
+
 132
 
 ## fetchObject()
+
 参考链接 163
 
 ## filter_input_array()
+
 参考链接 209
 
 ## 过滤器
+
 参考链接 209
 
 ## 流式接口
+
 415
 
 ## 字体保护
+
 参考链接 475
 
+
+
 ## foreach() 处理
+
 差异 32-35
 
 ## 表单工厂
+
 实现 190-195
 
 ## 表单
-- 保护，使用 CAPTCHA 461
+
+- 保护，使用 `CAPTCHA` 461
 - 安全，使用令牌 449-455
 - 验证，连接 215-221
 
 ### 表单保护
-- CAPTCHA，使用 461
-- 图像 CAPTCHA，生成 465-474
-- 文本 CAPTCHA，生成 461-464
+
+- `CAPTCHA`，使用 461
+- 图像 `CAPTCHA`，生成 465-474
+- 文本 `CAPTCHA`，生成 461-464
 
 ## 函数式编程
+
 53
 
 ## 函数
+
 - 概述 53
 - 最佳实践 56
 - 开发 54-58
@@ -21719,142 +22478,182 @@ php -S localhost:8080
 ## G
 
 ## 生成器
+
 - 概述 75
 - 用于编写自定义迭代器 75-78
 
 ## 通用表单元素生成器
+
 - 创建 174-179
 - 工作原理 179, 180
 
 ## 获取器 (getter)
+
 - 概述 356
 - 使用 356-361
 
 ## H
 
 ## gettext
+
 - 避免在翻译中使用 297-305
 - 参考链接 305
 
 ## glob() 函数
+
 47
 
 ## GNU 编译器集合 (GCC)
+
 2
 
 ## GNU 项目
+
 2
 
 ## Google 翻译 API
+
 - 参考链接 305
 
 ## 组使用特性
+
 101, 104
 
 ## heredoc
+
 259
 
 ## 主机
+
 541
 
 ## HTML 国际化日历生成器
+
 - 创建 280-283
 - 细化国际化输出 284-288
 
 ## HTML 单选元素生成器
+
 - 创建 181-185
 
 ## HTML 选择元素生成器
+
 - 创建 185-190
 
 ## HTTP PUT
+
 - 参考链接 237
 
 ## HTTP 状态码
+
 - 参考链接 540
 
 ## 水合器
+
 151
 
 ## 水合器模式
+
 392
 
 ## 超文本传输协议 (HTTP)
+
 227
 
 ## I
 
 ## 改进
+
 - 死重，参考链接 41
 - 快速参数解析，参考链接 40
 - PHP NG，参考链接 40
 
 ## 初始化向量 (IV)
+
 476
 
 ## 接口
+
 - 使用 109-115, 484-488
 
 ## 跨框架系统调用
+
 - 执行 342-350
 
 ## 国际组件 Unicode (ICU)
+
 - 参考链接 270
 
 ## 国际化 (I18n)
+
 263
 
 ## 国际标准化组织 (ISO)
+
 - 参考链接 276
 
 ## 互联网工程任务组 (IETF)
+
 307
 
 ## IntlCalendar 字段常量
+
 - 参考链接 297
 
 ## 迭代器
+
 67-74
 
 ## J
 
 ## JavaScript 对象表示法 (JSON)
+
 498
 
 ## Joomla! 安装
+
 - 修改 346
 
 ## jQuery
+
 - 参考链接 171
 
 ## jQuery DataTables
+
 - 概述 168
 - 参考链接 171
 
 ## jQuery DataTables PHP 查询
+
 - 实现 168-171
 
 ## L
 
 ## Laravel/Lumen 框架
+
 - 参考链接 577
 
 ## 先进先出 (LIFO)
+
 371
 
 ## 延迟静态绑定
+
 - 概述 97
 - 参考链接 100
 
 ## LimitIterator 类
+
 - 参考链接 150
 
 ## 链表
+
 - 概述 368
 - 实现 362-367
 - 参考链接 367
 
 ## 区域设置
+
 - 概述 257
 - 货币，按此处理 270-275
 - 日期/时间，按此格式化 276-279
@@ -21864,40 +22663,50 @@ php -S localhost:8080
 ## M
 
 ## 魔术方法
+
 357
 
 ## 映射器
+
 - 定义 407-417
 
 ## 大规模文件
+
 - 遍历 41-44
 
 ## mcrypt
+
 - 在解密中避免使用 475-479
 - 在加密中避免使用 475-479
 - 参考链接 481
 
 ## 方法
+
 - 概述 82
 - 使用 96-100
 
 ## 中间件
+
 - 概述 307
 - 用于认证 308-314
 - 用于跨语言 350-353
 - 用于实现访问控制列表 (ACL) 机制 314-322
 
 ## MinGW
+
 - 概述 2
 - 参考链接 5
 
 ## 模拟类
+
 504
 
 ## 操作模式
+
 476
 
 ## 模式
+
 - 密码分组链接 (CBC) 476
 - 密码反馈 (CFB) 476
 - 计数器 (CTR) 477
@@ -21908,110 +22717,142 @@ php -S localhost:8080
 - XTS 477
 
 ## msgid (消息 ID)
+
 构建 298
 
 ## msgstr (消息字符串)
+
 298
 
 ## 多维数组
+
 显示 384-390
 
 ## MySQL 数据库
+
 130
 
 ## N
 
 ## 命名占位符
+
 139
 
 ## 命名空间
+
 使用 100-104
 
 ## 命名冲突
+
 112
 
 ## NGINX Web 服务器
+
 参考链接 342
 
 ## 可空类型
+
 - 概述 63
 - 参考链接 67
 
 ## 空合并运算符 (??)
+
 77
 
 ## 数字
+
 格式化，按区域设置 266-270
 
 ## O
 
 ## 对象
+
 构建为数组水合器 395, 396
 
 ## 对象水合器
+
 数组，创建 392-394
 
 ## 面向对象编程 (OOP)
+
 9, 391
 
 ## 对象关系映射
+
 - 预加载所有子信息 418-422
 - 实现 418
 - 嵌入二级查找 423-428
 
 ## 观察者
+
 434
 
 ## oclHashcat
+
 参考链接 460
 
 ## OOP SQL 查询构建器
+
 构建 143-146
 
 ## OpenSUSE
+
 参考链接 4
 
 ## 操作系统平台
+
 安全考虑，参考链接 5
 
 ## 自定义迭代器
+
 使用生成器编写 75-78
 
 ## P
 
 ## 分页
+
 - 概述 146
 - 处理 146-150
 
 ## 参数
+
 54
 
 ## 解析
+
 差异 30-32
 
 ## 密码破解方法
+
 参考链接 460
 
 ## 路径
+
 542
 
 ## 性能
+
 - 通过缓存改进 323-336
 - 通过 PHP 7 增强功能改进 36-40
 
 ## 个人软件包存档 (PPA)
+
 安全考虑，参考链接 5
 
 ## phar (PHP 存档) 文件
+
 497
 
 ## PHP
+
 转换为 XML 223-226
 
 ## PHP 5 到 PHP 7 代码转换器
+
 创建 18-23
 
 ## PHP 7
+
 - AMP 包，安装 4, 5
 - 概述 257
 - 获取，方式 1
@@ -22020,92 +22861,117 @@ php -S localhost:8080
 - 安装，从预编译二进制文件 3, 4
 
 ## php7cookbook.sql 文件
+
 参考链接 8
 
 ## PHP 7 增强功能
+
 用于改进性能 36-40
 
 ## PHP 存档
+
 8
 
 ## PHP 数据对象 (PDO)
+
 - 概述 129
-- PDO 类 130
-- PDODriver 类 130
-- PDOException 类 130
-- PDOStatement 类 130
+- `PDO` 类 130
+- `PDODriver` 类 130
+- `PDOException` 类 130
+- `PDOStatement` 类 130
 - 预定义常量，参考链接 143
 - 参考链接 143
 - 用于连接数据库 130
 
 ## phpDocumentor
+
 参考链接 255
 
 ## PHP 框架互操作性组 (PHP-FIG)
+
 342
 
 ## php.ini 会话指令
+
 参考链接 532
 
 ## PHP Locale 类
+
 参考链接 266
 
 ## PHP NG (下一代)
+
 40
 
 ## PHP RFC
+
 参考链接 480
 
 ## PHP 会话
+
 保护 443-449
 
 ## PHP 标准推荐第 7 号
+
 参见 PSR-7
 
 ## PHP 流
+
 参考链接 557
 
 ## PHPUnit
+
 - 概述 497
 - 安装 8
 - 参考链接 8, 497
 
 ## PHPUnit 测试套件
+
 参考链接 518
 
 ## 端口
+
 541
 
 ## 位置占位符
+
 139
 
 ## POST
+
 参考链接 237
 
 ## PostgreSQL
+
 131
 
 ## 预编译二进制文件
+
 3
 
 ## 属性
+
 82
 
 ## PSR
+
 参考链接 557-576
 
 ## PSR-6
+
 参考链接 336
 
 ## PSR-7
+
 - 概述 307, 537
 - 接口，参考链接 554
 - 参考链接 538
-- Request 类，开发 557-572
-- Response 类，定义 572-576
+- `Request` 类，开发 557-572
+- `Response` 类，定义 572-576
 - 值对象类，实现 537-557
 
 ## PSR-7 中间件类
+
 - Guzzle，参考链接 577
 - NegotiationMiddleware，参考链接 577
 - oauth2-server，参考链接 577
@@ -22115,6 +22981,7 @@ php -S localhost:8080
 - zend-diactoros，参考链接 577
 
 ## 发布/订阅设计模式
+
 - 概述 429
 - 实现 429-434
 - 参考链接 434
@@ -22122,31 +22989,34 @@ php -S localhost:8080
 ## Q
 
 ## 查询结果
+
 嵌入二级查找 164-167
 
 ## R
 
 ## 彩虹表
+
 455
 
 ## RDBMS 查询
+
 实体类，链接到 155-163
 
 ## 定期事件生成器
+
 构建 289-296
 
 ## 递归
+
 55
 
 ## 递归目录迭代器
+
 47-51
 
 ## 递归迭代器
+
 71
-
-
-
-
 
 ## R
 
@@ -22158,11 +23028,11 @@ php -S localhost:8080
     - 参考链接 163
 - 存储库 (repository) 156
 - 表述性状态转移 (REST) 223
-- Request 类，PSR-7
+- `Request` 类，PSR-7
     - 相关内容 557
     - 开发 557-572
 - 解析运算符 (resolution operator) 98
-- Response 类，PSR-7
+- `Response` 类，PSR-7
     - 定义 572-576
     - 参考链接 572
 - REST 客户端
@@ -22208,15 +23078,15 @@ php -S localhost:8080
 - 与 session 相关的 php.ini 指令
     - 参考链接 535
 - 会话 (sessions)
-    - 使用 session_start 自定义
+    - 使用 `session_start` 自定义
         - 参数 531-535
-- session_start 参数
+- `session_start` 参数
     - 用于自定义会话 531-535
-- set_exception_handler() 函数
+- `set_exception_handler()` 函数
     - 参考链接 493
-- setlocale()
+- `setlocale()`
     - 参考链接 270
--  setter
+- setter
     - 相关内容 356
     - 使用 356-360
 - 浅层遍历 71
@@ -22240,7 +23110,7 @@ php -S localhost:8080
 - SOAP 服务
     - 参考链接 226
 - 软件设计模式 391
--  spaceship 运算符 375
+- spaceship 运算符 375
 - 电子表格
     - 上传到数据库 44-47
 - SQL 注入 134
@@ -22354,4 +23224,3 @@ php -S localhost:8080
     - 参考链接 577
 - 零配置数据
     - 参考链接 171
-

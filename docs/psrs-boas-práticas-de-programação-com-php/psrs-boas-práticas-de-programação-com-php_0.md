@@ -1,10 +1,5 @@
+
 # PHP 编程最佳实践
-
-
-
-
-
-
 
 > 如果您想提交任何错误或建议，请访问 [`erratas.casadocodigo.com.br`](http://erratas.casadocodigo.com.br)。
 
@@ -20,7 +15,6 @@
 
 我毕业于圣保罗大学（UNIP）的计算机科学专业，自 2009 年首次接触到 `PHP` 以来，一直从事 Web 系统开发工作。从那时起，我一直致力于通过在线课程、教程、书籍和讲义来学习更多知识。我的重点一直是 Web，因为这些是处于不断演进的技术。
 
-
 当我有空闲时，我喜欢做一些能让我暂时从虚拟世界中转移注意力的事情，所以我喜欢和我的妻子出去逛逛、画画甚至唱歌（这个留到以后再说吧，好吗？哈哈）。好了，我的朋友，这就是关于我的简单介绍。
 
 # 前言
@@ -35,14 +29,10 @@
 
 如果你曾花费几个小时甚至几天时间试图理解那些不可能完成的事情，那么你就知道维护有多困难了。事实是，直到不久之前，`PHP` 还没有专注于定义标准的群体。幸运的是，2009 年出现了一个幸运的群体，叫做 **PHP-FIG**。
 
-
-
-
-
 此 PSR 旨在定义一些标准的编码元素，这些元素应确保 PHP 代码之间更高水平的互操作性。
 
 > **什么是互操作性？**
-
+>
 > 互操作性是指系统或应用程序与其他系统或应用程序进行高效通信的能力，从而实现更高水平的数据完整性。
 
 确保您的应用程序具有互操作性，可以带来更高的数据完整性；此外，当您的应用程序需要与其他应用程序通信时，它将变得更加高效。
@@ -57,7 +47,7 @@
 
 ### 规则 1
 
-PHP 文件**必须**仅使用 `<?php` 和 `<?=` 标签。这意味着不应使用任何其他类型的标签，例如 ASP 标签 `(<)` 或 PHP 脚本标签。在许多服务器中，默认情况下禁用了*短开启标签*（short open tags），这可能会导致很多麻烦，因此按照惯例，请仅使用 `<?php` 或 `<?=` 标签。
+PHP 文件**必须**仅使用 `<?php` 和 `<?=` 标签。这意味着不应使用任何其他类型的标签，例如 ASP 标签 `(<%)` 或 PHP 脚本标签。在许多服务器中，默认情况下禁用了*短开启标签*（short open tags），这可能会导致很多麻烦，因此按照惯例，请仅使用 `<?php` 或 `<?=` 标签。
 
 ### 规则 2
 
@@ -117,7 +107,7 @@ class Usuario
 命名空间（Namespaces）和类**必须**遵循 PSR-0（已弃）和 PSR-4（PSR-0 的替代者）中描述的标准。为了获得理解且高效的自动加载（autoloading），必须在文件声明中遵循与命名相同的目录结构。
 
 > **什么是自动加载（Autoloading）？**
-
+>
 > 它是一种自动加载类、接口、trait 等文件的方法，而无需开发者在代码中显式地链接这些文件。
 
 当以正确的方式（即本 PSR 规定的方式）执行时，文件的自动加载被认为是易理解且高效的。
@@ -146,11 +136,11 @@ class HomeController
 
 ### 规则 5
 
-类、接口和 trait 的文件名**必须**遵循 `StudlyCaps` 标准。这意味着每个单词的第一个字母应该大大写，如 `HomeController` 所示。
+类、接口和 trait 的文件名**必须**遵循 `StudlyCaps` 标准。这意味着每个单词的第一个字母应该大写，如 `HomeController` 所示。
 
 ### 规则 6
 
-常量**必须**使用全大写字母，并用下划线（_`）分隔。不要使用小写字母、`camelCase` 或 `snake_case` 来声明常量。允许的方法是使用所有大写字母。
+常量**必须**使用全大写字母，并用下划线（`_`）分隔。不要使用小写字母、`camelCase` 或 `snake_case` 来声明常量。允许的方法是使用所有大写字母。
 
 为了方便理解，让我们来看下面关于正确声明方式的示例：
 
@@ -203,13 +193,9 @@ public function GetNomeUsuario()
 
 ### 结论
 
-
-
-
 我们到达了 PSR-1 的最后，它向我们展示了一些必须遵循的规则，以便我们的代码更具可读性并符合开发规范。这不是一个复杂的 PSR，但值得关注它的规则，以便你能够在代码中更准确、更高效地应用它们。
 
 在接下来的章节中，我们将讨论 PSR-2，它涉及源代码的可读性规则，所以，让我们开始吧！
-
 
 ## PSR-2 (编码风格指南) - 第一部分
 
@@ -218,6 +204,7 @@ public function GetNomeUsuario()
 在接下来的节中，我们将看到具体的规则、概念以及如何将它们应用到你的项目中，以获得更美、更易读的代码。
 
 > **重要信息**
+>
 > 由于 PHP 中不断出现新功能，PSR-2 已经被**废弃**；但不用担心，替代者是 **PSR-12**，我们将在本书的后续部分介绍它。你可以继续阅读 **PSR-2**，因为其中的许多内容在 **PSR-12** 中被重用或扩展了，你可以了解它们之间的差异以及针对 PHP 7 的特定特性。
 
 ### 3.1 规则
@@ -232,11 +219,11 @@ PHP 代码**必须**遵循 PSR-1 (`Basic Code Standard`) 中建立的标准。�
 
 PHP 文件**必须**采用 UNIX 行结束符标准。你知道可用的行结束有哪些吗？如果不知道，请看下方：
 
-- **CRLF**: 回车+换行，Unicode 字符 `D` + `000A` `000`
-- **LF**: 换行，Unicode 字符 `000A`
-- **NEL**: 下一行，Unicode 字符 `0085`
-- **LS**: 行分隔符，Unicode 字符 `2028`
-- **PS**: 段落分隔符，Unicode 字符 `2029`
+- **CRLF**: 回车+换行，Unicode 字符 `U+000D` + `U+000A`
+- **LF**: 换行，Unicode 字符 `U+000A`
+- **NEL**: 下一行，Unicode 字符 `U+0085`
+- **LS**: 行分隔符，Unicode 字符 `U+2028`
+- **PS**: 段落分隔符，Unicode 字符 `U+2029`
 
 PSR-2 采用的 UNIX 标准是 `LF`。通常 IDE 已经配置为 UNIX 标准，但可以根据所选的 IDE 轻松进行更改。
 
@@ -272,7 +259,7 @@ $nome = 'Jhones S. Clementino';
         <title>Teste</title>
     </head>
     <body>
-        <h1>Olá, <?php echo $nome</</span>!</h1>
+        <h1>Olá, <?php echo $nome ?></h1>
     </body>
 </html>
 ```
@@ -299,65 +286,58 @@ $nome = 'Jhones S. Clementino';
 
 包含内容的行**不应**在内容末尾留有空格。
 
-```php
-
-```
-
-```
-
 ### 规则 8
 
-为了方便解释代码，**可以**添加空行。你可以添加空行来使代码的解释更易理解。我们来看来看该规则应用的简短示例：
+为了方便解释代码，**可以**添加空行。你可以添加空行来使代码的解释更易理解。我们来看看该规则应用的简短示例：
 
 ```php
 <?php
 
-class Usuario 
+class Usuario
 {
+
     private $nome;
-
-     private $idade;
-
-     private $sexo;
+    private $idade;
+    private $sexo;
 
     public function __construct($nome, $idade, $sexo)
     {
-          $this->nome = $nome;
-         $this->idade = $idade;         
 
-         if ($sexo == 'M') {
+        $this->nome = $nome;
+        $this->idade = $idade;
+
+        if ($sexo == 'M') {
             $this->sexo = 'Masculino';
         } elseif ($sexo == 'F') {
             $this->sexo = 'Feminino';
         }
+
     }
+
 }
 ```
 
-看应用了换行后代码变得变得多易读。现在看下面这个没有换行的示例：
+看应用了换行后代码变得多易读。现在看下面这个没有换行的示例：
 
 ```php
 <?php
 
-class Usuario 
+class Usuario
 {
     private $nome;
-
-     private $idade;
-
-     private $sexo;
-
+    private $idade;
+    private $sexo;
     public function __construct($nome, $idade, $sexo)
     {
-          $this->nome = $nome;
-         $this->idade = $idade;         
-
-         if ($sexo == 'M') {
+        $this->nome = $nome;
+        $this->idade = $idade;
+        if ($sexo == 'M') {
             $this->sexo = 'Masculino';
         } elseif ($sexo == 'F') {
             $this->sexo = 'Feminino';
         }
     }
+
 }
 ```
 
@@ -367,8 +347,10 @@ class Usuario
 
 ```php
 <?php
+
 $nome = 'Jhones';
 $sobrenome = 'S. Clementino';
+
 ```
 
 ### 规则 10
@@ -386,11 +368,9 @@ namespace App\Entity\Usuario;
 
 class Usuario
 {
-    //代码
+    // 代码
 }
 ```
-
-
 
 在这个示例中，在 `namespace` 定义之后没有添加空行，这在 PSR-2 中被认为是不规范的。因此，在继续编写代码之前，请务必留出一个空行。
 
@@ -409,7 +389,7 @@ use App\Controller\AbstractController;
 
 class UsuarioController extends AbstractController
 {
-    //Código
+    // Código
 }
 ```
 
@@ -424,13 +404,15 @@ namespace App\Controller\Usuario;
 
 class UsuarioController extends AbstractController
 {
-    //Código
+    // Código
 }
 ```
 
+
+
 这段代码是不正确的，也没有遵循 PSR-2 建立的标准，因为所有的 `use` 声明必须位于 `namespace` 定义之后。
 
-### 规则 13
+## 规则 13
 
 每个声明**只能**存在一个 `use`。每个 `use` 都应该有一个独立的声明。让我们通过一个简化解释的示例来展示正确的方法：
 
@@ -465,7 +447,7 @@ class UsuarioService extends AbstractService
 
 在单行 `use` 声明中使用多个声明并不是错误，因此这段代码可以运行。然而，你的代码将不再符合 PSR-2 标准。
 
-### 规则 14
+## 规则 14
 
 `extends` 和 `implements` 关键字**必须**声明在与类名相同的同一行中。当需要扩展一个类和/或实现一个接口时，两者都必须与类名处于同一行内，因为它们也是类定义的一部分。
 
@@ -503,13 +485,13 @@ implements ServiceInterface
 }
 ```
 
-### 规则 15
+## 规则 15
 
 当需要扩展一个类和/或实现一个接口时，两者都必须在与类名相同的同一行内，因为它们也是类定义的一部分。当需要扩展一个类和/或实现一个接口时，两者都必须与类名处于同一行内，因为它们也是类定义的一部分。当需要扩展一个类和/或实现一个接口时，两者都必须与类名处于同一行内，因为它们也是类定义的一部分。
 
 当需要扩展一个类和//实现一个接口时，两者都必须处于在同一行 o 名字 nome 类,, pois，部分 da da...... h a a est, est,,,,,,,,,,,,,,,,,,,,,,,,,..,...,.,..,,.,...........,.,, a a a a2:
 
-```:
+```php
 <?php
 
 namespace App\Service\Usuario;
@@ -525,7 +507,7 @@ implements ServiceInterface
 }
 ```
 
-### 规则 16
+## 规则 16
 
 `extends` 和 `implements` 关键字**必须**声明在与类名相同的同一行中。当需要扩展一个类和/或实现一个接口时，两者都必须与类名处于同一行内，因为它们也是类定义的一部分。
 
@@ -545,11 +527,11 @@ implements ServiceInterface
 }
 ```
 
-### 规则 17
+## 规则 17
 
 `var` 关键字**不应**用于属性定义。
 
-### 规则 18
+## 规则 18
 
 每个声明**不应**有多个属性。 houver a, a, a2:
 
@@ -567,12 +549,11 @@ class Usuario
 }
 ```
 
-### 规则 19
+## 规则 19
 
 属性名称**不应**以 `_`（下划线）开头来表示 `private` 或 `protected` 可见性。
 
-
-
+## 规则 20
 
 所有方法**都必须**定义可见性。记住，可见性会让封装更加清晰。为了方便起见，让我们来看下面的示例：
 
@@ -626,9 +607,9 @@ class Usuario
 
 需要强调的是，示例代码可以运行，但并不符合 PSR-2 的规则。
 
-### 规则 21
+## 规则 21
 
-`下划线` (`_`）**不应该**被用于指示方法的 `private` 或 `protected` 可见性。这条规则与类属性定义的规则类似。因此，不要使用`下划线`来指示方法的可见性。
+`下划线` (`_`)**不应该**被用于指示方法的 `private` 或 `protected` 可见性。这条规则与类属性定义的规则类似。因此，不要使用`下划线`来指示方法的可见性。
 
 为了说明这一点，我们来看下面的示例，它展示了定义方法的正确方式：
 
@@ -680,7 +661,7 @@ class Usuario
 
 该示例可以运行，但是不正确的，因为访问修饰符的存在是为了被使用的。因此，请尽管使用并充分利用它们，并避免使用 `_`（下划线）作为访问修饰符，否则你的代码将无法符合 PSR-2 标准，好吗？
 
-### 规则 22
+## 规则 22
 
 方法名后**不应该**存在空白符。方法的左大括号**必须**另起一行，而右大括号**必须**紧跟在方法体之后。
 
@@ -721,16 +702,15 @@ class HomeController
 
 尽管代码可以无问题地运行，但它不兼容 PSR-2 规则。
 
-### 结论
+## 结论
 
 正如你所看到的，PSR-2 提供了无数规则，而且还有更多！在下一章节中，我们将继续查看 PSR-2 的其他规则。所以请继续加油吧！
-
 
 # PSR-2 (编码风格指南) - 第二部分
 
 我们在上一节中学习了总共 22 条 PSR-2 规则，在本章节中，我们将继续查看这些规则，旨在优化源代码的风格，以便通过 PSR-2 建立的标准获得更好的可读性和理解。
 
-## 4.1 规则
+## 规则
 
 接下来我们将从上一章节停止的地方继续介绍规则。
 
@@ -839,8 +819,7 @@ abstract class AbstractService
 
 注意 `abstract` 和 `final` 关键字位于两个方法 `insert()` 和 `start()` 的可见性之前。在类中，没有需要定义的可见性，但我们可以告知它是抽象类还是最终类。
 
-
-
+错误示例：
 
 ```php
 <?php
@@ -864,13 +843,13 @@ Neste exemplo, as palavras-chave `abstract` e `final` encontram-se logo após a 
 
 Este exemplo não funcionará mais, pois não podemos definir uma classe abstrata após a palavra-chave `class`, mas sim antes.
 
-Note que nos métodos também existem as palavras `abstract` e `final` após a definição da visibilidade, e não há problemas. Porém, se você fizer desta forma, seu código não estará de acordo com a regra estabelecida.
+Note que nos métodos também existem as palavras `abstract` e `final` após a definição da visibilidade, e não há problemas. Porém, se você fizer desta forma, seu código não estará de acordo com a regra estabelecida。
 
-### Regra 26
+### 规则 26
 
-Ao declarar um método ou função, NÃO DEVE haver espaço entre o nome do método/função e o parêntese de abertura.
+Ao declarar um método ou função, NÃO DEVE haver espaço entre o nome do método/função e o parêntese de abertura。
 
-NÃO DEVE haver espaço após o parêntese de abertura e NÃO DEVE haver espaço antes do parêntese de fechamento; e na lista de parâmetros NÃO DEVE haver espaço antes de cada vírgula, mas DEVE haver um espaço após cada vírgula. Parece complexo, não é mesmo? Mas não é complicado — na verdade, é tão simples quanto definir uma variável. Veja o exemplo abaixo que demonstra a forma correta de aplicação desta regra:
+NÃO DEVE haver空格后 o parêntese de abertura e NÃO DEVE haver空格 antes do parêntese de fechamento; e na lista de parâmetros NÃO DEVE haver空格 antes de cada vírgula, mas DEVE haver um空格 após cada vírgula。Parece complexo, não é mesmo? Mas não é complicado — na verdade, é tão简单 quanto definir uma variável。Veja o exemplo abaixo que demonstra a forma correta de aplicação desta regra：
 
 ```php
 <?php
@@ -885,6 +864,8 @@ class AbstractService
     }
 }
 ```
+
+
 
 Simples, não? Note que, quando definimos o nome do método, não existe espaço antes nem depois do parêntese de abertura, não existe espaço antes da vírgula entre os parâmetros e não existe espaço antes nem depois do parêntese de fechamento.
 
@@ -966,7 +947,7 @@ class AbstractService
 }
 ```
 
-Já neste exemplo, apesar de funcionar corretamente, ele não segue a regra da PSR. Como você pode ver, não existe espaço antes do parêntese de abertura nem após o parêntese de fechamento. Outra regra quebrada é quanto às palavras-chave `elseif` e `else` que estão abaixo da chave de fechamento da estrutura anterior. O correto é que estem na mesma linha que a chave de abertura e precedidas por um único espaço. Nada de mais, não é?
+Já neste exemplo, apesar de funcionar corretamente, ele não segue a regra da PSR. Como você pode ver, não existe espaço antes do parêntese de abertura nem após o parêntese de fechamento. Outra regra quebrada é quanto às palavras-chave `elseif` e `else` que estão abaixo da chave de fechamento da estrutura anterior. O correto é que estejam na mesma linha que a chave de abertura e precedidas por um único espaço. Nada de mais, não é?
 
 **Exemplos com `switch`, `case`**
 
@@ -1054,7 +1035,7 @@ class AbstractService
 
         do {
             //Código
-        } while ($id > 0)
+        } while ($id > 0);
     }
 }
 ```
@@ -1076,14 +1057,12 @@ class AbstractService
 
         do{
             //Código
-        }while($id > 0)
+        }while($id > 0);
     }
 }
 ```
 
-
-
-
+**Exemplos com `for`**
 
 ```php
 <?php
@@ -1101,11 +1080,11 @@ class AbstractService
 }
 ```
 
-在这个示例中，应用方式与 `while` 的正确用法示例完全一致，也就是说，间距符合 PSR 规则。
+Neste exemplo, a aplicação é idêntica à do uso correto do `while`, ou seja, o espaçamento está em conformidade com as regras da PSR.
 
-请再次注意，在关键字 `for` 之后，左括号之前**必须**存在一个空格，且在右括号之后**必须**存在一个空格。
+Observe novamente que, após a palavra-chave `for`, **deve** existir um espaço antes do parêntese de abertura e **deve** existir um espaço após o parêntese de fechamento.
 
-现在我们来分析一个被认为错误且不符合 PSR 的示例：
+Agora analisamos um exemplo considerado incorreto e que não está em conformidade com a PSR:
 
 ```php
 <?php
@@ -1123,7 +1102,7 @@ class AbstractService
 }
 ```
 
-在这个示例中，代码也可以正常运行，但它不受 PSR 接受，因为它没有具备定义的间距。
+Neste exemplo, o código também funciona normalmente, mas não é aceito pela PSR, pois não possui o espaçamento definido.
 
 ## `foreach` 示例
 
@@ -1143,9 +1122,9 @@ class AbstractService
 }
 ```
 
-这个示例与用于 `for` 的应用情况类似，相同的间距规则也适用于 `foreach`。此示例具有 PSR 认为正确的间距，应该被使用。
+Este exemplo é semelhante ao aplicado ao `for`; as mesmas regras de espaçamento se aplicam ao `foreach`. Este exemplo possui o espaçamento considerado correto pela PSR e deve ser utilizado.
 
-现在我们来分析同一个示例，但由于缺少间距，它被认为是错误的：
+Agora analisamos o mesmo exemplo, mas que, devido à falta de espaçamento, é considerado incorreto:
 
 ```php
 <?php
@@ -1163,7 +1142,7 @@ class AbstractService
 }
 ```
 
-到目前为止没什么特别的，示例运行正常，但它不符合 PSR 标准。
+Até aqui nada de especial; o exemplo funciona normalmente, mas não está em conformidade com o padrão PSR.
 
 ## `try`, `catch`, `finally` 示例
 
@@ -1189,15 +1168,15 @@ class AbstractService
 }
 ```
 
-当需要使用 `try catch` 或 `try catch finally` 块时，它应该具有上一个示例所示的间距和缩进结构。
+Quando for necessário utilizar blocos `try catch` ou `try catch finally`, eles devem possuir a estrutura de espaçamento e indentação mostrada no exemplo anterior.
 
-在关键字 `try` 之后，左括号之前**必须**存在一个空格，且右括号之后**必须**存在一个空格。
+Após a palavra-chave `try`, **deve** existir um espaço antes do parêntese de abertura e **deve** existir um espaço após o parêntese de fechamento.
 
-对于每个 `catch` 块，关键字 `catch` 之后**必须**存在一个空格，且在右括号之后**必须**存在一个空格。
+Para cada bloco `catch`, **deve** existir um espaço após a palavra-chave `catch` e **deve** existir um espaço após o parêntese de fechamento.
 
-同样适用于 `finally`（如果存在）：在关键字 `finally` 之后，块左括号之前**必须**存在一个空格。
+O mesmo se aplica ao `finally` (se presente): após a palavra-chave `finally`, **deve** existir um espaço antes da chave de abertura do bloco.
 
-这个示例完全符合 PSR。我们来分析一个不符合要求的的示例：
+Este exemplo está em total conformidade com a PSR. Analisamos agora um exemplo que não atende aos requisitos:
 
 ```php
 <?php
@@ -1208,23 +1187,33 @@ class AbstractService
 {        
     protected function update($id, array $dados)
     {         
-        try{
-            //Código
-        } catch(\InvalidArgumentException $e) {
-            //Código
-        } catch(\Exception $e) {
-            //Código
-        } finally{
-            //Código
-        }
-    }
+```
+
+
+
+```php
+try {
+
+    // Código
+
+} catch (\InvalidArgumentException $e) {
+
+    // Código
+
+} catch (\Exception $e) {
+
+    // Código
+
+} finally {
+
+    // Código
+
+}
+
 }
 ```
 
 在上面的示例中，间距是错误的。
-
-
-
 
 ```php
 <?php
@@ -1238,8 +1227,8 @@ class UsuarioController
         return function ($atualizado, 
             $usuario) use ($id,
             $dados) {
-            //代码
-        }
+            // 代码
+        };
     }
 }
 ```
@@ -1252,13 +1241,11 @@ class UsuarioController
 
 起初，代码看起来可能很奇怪，但随着时间的推移，你会习惯的，甚至能记住每条规则是如何应用的。
 
-需要强调的是，`PSR-2` 已经被弃用，它的者是 `PSR-12`，我们将在本书的后续部分介绍。
+需要强调的是，`PSR-2` 已经被弃用，它的继任者是 `PSR-12`，我们将在本书的后续部分介绍。
 
 让我们继续，了解 `PSR-3` 及其规则。
 
-# 第 5 章 
-
-# PSR-3 (日志接口)
+# 第 5 章 PSR-3 (日志接口)
 
 为了提供一个简单、易用且通用的日志记录接口，`PSR-3` 允许库接收一个 `Psr\Log\LoggerInterface` 对象。通过它，可以为每个应用程序创建自定义日志。
 
@@ -1278,7 +1265,7 @@ class UsuarioController
 
 看接下来的示例，它展示了该规则的功能：
 
-```
+```php
 log('error', '发生严重错误', array $context = array());
 ```
 
@@ -1317,7 +1304,7 @@ use Psr\Log\LoggerInterface;
 
 class LogService implements LoggerInterface
 {        
-    //实现代码
+    // 实现代码
 
     public function gravarLog()
     {
@@ -1325,7 +1312,6 @@ class LogService implements LoggerInterface
         $contexto = [
             'NOME_USUARIO' => 'Jhones'
         ];
-
         $this->info($mensagem, $contexto);
     }
 }
@@ -1351,12 +1337,8 @@ class LogService implements LoggerInterface
 
 现在让我们来了解这个包的成员。它们是：
 
-
-
-
-
 *   `Psr\Log\AbstractLogger` - 此抽象类实现了 `LoggerInterface` 接口，该接口包含九个方法，其中八个与默认允许的日志级别有关，以便应用程序扩展这个已经包含所有必要方法的抽象类。
-*   `Psr\Log\LoggerTrait` -string 工作原理基本上与 `AbstractLogger` 类相同，区别在于 `Trait` 没有实现 `LoggerInterface` 接口，因为 `Traits` 无法实现接口。由于它包含了与抽象类相同的功能，结果将完全相同，因为 `LoggerTrait` 已经拥有了抽象方法 `log`。
+*   `Psr\Log\LoggerTrait` - 其工作原理基本上与 `AbstractLogger` 类相同，区别在于 `Trait` 没有实现 `LoggerInterface` 接口，因为 `Traits` 无法实现接口。由于它包含了与抽象类相同的功能，结果将完全相同，因为 `LoggerTrait` 已经拥有了抽象方法 `log`。
 *   `Psr\Log\NullLogger` - 继承自抽象类 `AbstractLogger`，负责作为一种占位符，以在应用程序没有定义任何负责记录日志的类时使用。
 *   `Psr\Log\LoggerAwareInterface` - 该接口仅有一个名为 `setLogger` 的方法，负责设置特定的日志类。
 *   `Psr\Log\LoggerAwareTrait` - 作为 `LoggerAwareInterface` 接口的实现，提供了 `setLogger` 方法以及属性 `$this->logger`。
@@ -1368,11 +1350,9 @@ class LogService implements LoggerInterface
 
 需要强调的是，PSR-3 并没有描述如何开发日志系统的具体步骤，而是为我们提供了如何在应用程序中实现它的指导方向和初始结构。
 
-# 第 6 章
+# 第 6 章 PSR-4 (自动加载器)
 
-## PSR-4 (自动加载器)
-
-为了提供一种通过文件路径加载类的标准，PSR-4 是完全互操作的，可以与任何其他类型的 PSR 配合使用。此外，PSR-4 描述了我们可以将将自动加载的文件放在哪里。
+为了提供一种通过文件路径加载类的标准，PSR-4 是完全互操作的，可以与任何其他类型的 PSR 配合使用。此外，PSR-4 描述了我们可以将自动加载的文件放在哪里。
 
 ## 6.1 规则
 
@@ -1389,7 +1369,7 @@ namespace App\Validator\Cpf;
 
 class CpfValidator
 {        
-    //代码
+    // 代码
 }
 ```
 
@@ -1426,7 +1406,7 @@ use App\Validator\Cpf\CpfValidator;
 
 class UsuarioService
 {        
-    //代码
+    // 代码
 }
 ```
 
@@ -1440,7 +1420,7 @@ class UsuarioService
 
 类的完整名称 可以 包含任何类型的大写或小写字符组合。这意味着定义包括命名空间在内的类名没有规则，你可以使用任何类型的字母组合。
 
-按照惯例，类名和命名空间采用的标准是 `StudlyCaps`，即每个单词的首字母大大写，例如：`App\Entity\Acl\PapelDeAcesso`。
+按照惯例，类名和命名空间采用的标准是 `StudlyCaps`，即每个单词的首字母大写，例如：`App\Entity\Acl\PapelDeAcesso`。
 
 ### 规则 6
 
@@ -1460,22 +1440,21 @@ class UsuarioService
                 |-CpfValidator.php
 ```
 
+
+
 注意到 `App` 目录是所有后续子目录的库，并且目录结构被转换为 `App\Validator\Cpf` 格式。
 
 ### 规则 8
 
-每个子命名空间对应根目录中的一个子目录，且目录名称必须 与子命名空间相同，尊重字母的大小写。
+每个子命名空间对应根目录中的一个子目录，且目录名称必须与子命名空间相同，尊重字母的大小写。
 
 ### 规则 9
 
-命名空间之后调类 必须 对应一个 `.php` 文件，且该文件名 必须 与类名相同，尊重字母的大小写。
+命名空间之后的类必须对应一个 `.php` 文件，且该文件名必须与类名相同，尊重字母的大小写。
 
 ### 规则 10
 
-*autoloader* 实现不应该抛出异常，不应该产生任何级别的错误，并且不应该返回任何值。*autoloader* 的唯一目标是执行自动加载，仅此而已。
-
-
-
+`autoloader` 实现不应该抛出异常，不应该产生任何级别的错误，并且不应该返回任何值。`autoloader` 的唯一目标是执行自动加载，仅此而已。
 
 我们的下一步是讨论 `PSR-6`，因此，也许你可能在问，`PSR-5` 发生了什么？在本书编写时，`PSR-5`（`PHPDoc Standard`）处于草案阶段，因此在这里不会进行介绍。我们只关注目前已通过并激活状态的 `PSRs`，好吗？太极了，那么让我们转向 `PSR-6` 吧。
 
@@ -1555,33 +1534,31 @@ class UsuarioService
 
 **项 (Items)** - 项由数据集合中的键/值对表示。
 
+缓存控制通常是必不可少的，旨在提高应用程序的性能，但这并不意味着它应该是一个可能影响其他功能的关键部分。因此，缓存中的错误**不应**导致应用程序失败。
 
+为了妥善处理源自缓存故障的错误，应用程序必须能够捕获可能发生的所有错误，但**不应**抛出接口未定义的异常。
 
-O cache control é geralmente essencial e visa aumentar o desempenho da aplicação, mas isso não significa que deva ser uma parte crítica que possa afetar as demais funcionalidades. Portanto, um erro no cache NÃO DEVE resultar em falhas na aplicação.
+它**必须**能够捕获由其他存储系统引起的任何错误或异常，且**不得**允许这些数据混合。
 
-Para o tratamento adequado de erros proven de falhas de cache, a aplicação deve ser capaz de capturar todos os erros que possam ocorrer, mas NÃO DEVE lançar exceções que não foram definidas pela interface.
+应用程序**必须**记录这些错误并进行最适当的处理。如果希望在指定键不存在的情况下删除一个或多个缓存项，这**不应**被视为错误。
 
-Ela DEVE ser capaz de capturar qualquer erro ou exceção ocasionada por outro sistema de armazenamento e NÃO DEVE permitir que esses dados se misturem.
+## 7.2 接口
 
-A aplicação DEVE registrar esses erros e fazer o tratamento mais apropriado. Se for desejado que um ou mais itens do cache sejam excluídos caso a chave especificada não exista, isso NÃO DEVE ser considerado um erro.
-
-## 7.2 Interfaces
-
-A seguir, conheceremos um pouco sobre as interfaces que fazem parte desta PSR:
+接下来，我们将了解一些构成此 PSR 的接口：
 
 ### `CacheItemInterface`
 
-O objetivo desta interface é definir um item de cache dentro da aplicação. Cada objeto item DEVE estar associado a uma chave específica, que pode ser definida de acordo com as necessidades da aplicação.
+此接口的目的是定义应用程序中的一个缓存项。每个项对象**必须**与一个特定的键关联，该键可根据应用程序的需求定义。
 
-A interface `Psr\Cache\CacheItemInterface` realiza o encapsulamento do armazenamento e a recuperação dos dados de cache, onde cada item do tipo `Cache\CacheItemInterface` armazenado no cache é gerado através de um objeto do tipo `Psr\Cache\CacheItemPoolInterface`, responsável por qualquer configuração necessária e também por associar o objeto a uma chave exclusiva.
+接口 `Psr\Cache\CacheItemInterface` 实现了缓存数据的存储和检索封装，其中每个类型为 `Cache\CacheItemInterface` 的存储在缓存中的项，都是通过一个类型为 `Psr\Cache\CacheItemPoolInterface` 的对象生成的，该对象负责任何必要的配置，并将对象关联到一个唯一键。
 
-Os objetos `Psr\Cache\CacheItemInterface` DEVEM ser capazes de armazenar e recuperar qualquer tipo de valor, como vimos anteriormente.
+对象 `Psr\Cache\CacheItemInterface` **必须**能够存储和检索任何类型的值，正如我们之前所见。
 
-A aplicação NÃO DEVE chamar os itens diretamente; eles só podem ser chamados a partir de um pool de objetos, através do método `getItem()`.
+应用程序**不得**直接调用项；它们只能通过对象池的 `getItem()` 方法调用。
 
-A aplicação NÃO DEVERIA assumir que um item criado por ela mesma seja compatível com um pool de objetos de outra biblioteca.
+应用程序**不应**假设由其自身创建的项与另一个库的对象池兼容。
 
-Veremos a seguir o modelo desta interface fornecido pelo site oficial da PSR:
+以下是 PSR 官方网站提供的此接口模型：
 
 ```php
 <?php
@@ -1601,11 +1578,11 @@ interface CacheItemInterface
 
 ### `CacheItemPoolInterface`
 
-Tem o objetivo de aceitar uma chave passada pela aplicação e retornar o objeto `Psr\Cache\CacheItemInterface` associado à chave informada.
+其目的是接受应用程序传递的键，并返回与该键关联的 `Psr\Cache\CacheItemInterface` 对象。
 
-Também é o principal ponto de interação com toda a coleção de cache. É responsabilidade da aplicação realizar toda a configuração e inicialização do pool.
+它也是与整个缓存集合交互的主要入口点。应用程序负责对池进行所有配置和初始化。
 
-Veremos a seguir o modelo desta interface:
+以下是此接口的模型：
 
 ```php
 <?php
@@ -1628,9 +1605,9 @@ interface CacheItemPoolInterface
 
 ### `CacheException`
 
-Esta interface destina-se a erros críticos que possam ocorrer, como configuração de cache, conexão com o servidor de cache, erros de credenciais, etc.
+此接口用于可能发生的关键错误，如缓存配置、缓存服务器连接、凭证错误等。
 
-Qualquer exceção lançada pela aplicação DEVE implementar esta interface.
+应用程序抛出的任何异常**必须**实现此接口。
 
 ```php
 <?php
@@ -1644,7 +1621,7 @@ interface CacheException
 
 ### `InvalidArgumentException`
 
-Esta interface estende a interface `Psr\Cache\CacheException` e é responsável por lançar uma exceção quando algum parâmetro/argumento inválido for passado para algum método.
+此接口扩展了 `Psr\Cache\CacheException` 接口，负责在向某个方法传递无效参数/论据时抛出异常。
 
 ```php
 <?php
@@ -1656,42 +1633,43 @@ interface InvalidArgumentException extends CacheException
 }
 ```
 
-### Conclusão
+### 结论
 
-Esta PSR realmente nos concede um bom direcionamento para quando formos desenvolver um sistema de cache para nossas aplicações.
-
-
-
+当我们为应用程序开发缓存系统时，此 PSR 确实为我们提供了良好的指导。
 
 ```php
-    <?php
+<?php
 
-    namespace App\Middleware\Authorization
+namespace App\Middleware\Authorization;
 
-    use Psr\Http\Message\MessageInterface;
+use Psr\Http\Message\MessageInterface;
 
-    class AuthorizationMiddleware
+class AuthorizationMiddleware
+{
+    private $mensagem;
+
+    public function __construct(MessageInterface $mensagem)
     {
-        private $mensagem;
-
-        public function __construct(MessageInterface $mensagem)
-        {
-            $this->mensagem = $mensagem;
-        }
-
-        public function defineHeaderValues()
-        {
-            $mensagem = $this->mensagem->withHeader('authorization', 'Bearer AbcDef1234@#')
-                ->withAddedHeader('authorization', 'Bearer 1234567890')
-
-            $cabecalhoString = $mensagem->getHeaderLine('authoriation');
-            //返回 'Bearer AbcDef1234@#, Bearer 1234567890'
-
-            $cabecalho = $mensagem->getHeader('authorization');
-            //返回 ['Bearer AbcDef1234@#', 'Bearer 1234567890']
-        }
+        $this->mensagem = $mensagem;
     }
+
+    public function defineHeaderValues()
+    {
+        $mensagem = $this->mensagem->withHeader('authorization', 'Bearer AbcDef1234@#')
+            ->withAddedHeader('authorization', 'Bearer 1234567890');
+
+        $cabecalhoString = $mensagem->getHeaderLine('authorization');
+
+        // 返回 'Bearer AbcDef1234@#, Bearer 1234567890'
+
+        $cabecalho = $mensagem->getHeader('authorization');
+
+        // 返回 ['Bearer AbcDef1234@#', 'Bearer 1234567890']
+    }
+}
 ```
+
+
 
 正如我们所看到的，我们为同一个请求头定义了两个值，并以两种不同的方式获取它们，一种是 `array` 形式，另一种是 `string` 形式。
 
@@ -1735,28 +1713,25 @@ HTTP 消息由起始行、请求头和正文组成，消息体的大小各异，
 
 让我们分析一个用户对特定服务器使用星号形式执行请求的示例：
 
-
-
-
-
 ```php
-    <?php
+<?php
 
-    namespace App\Middleware\Authorization
+namespace App\Middleware\Authorization;
 
-    use Psr\Http\Message\RequestInterface;
+use Psr\Http\Message\RequestInterface;
+use Psr\Http\Message\UriInterface;
 
-    class AuthorizationMiddleware
+class AuthorizationMiddleware
+{
+    private $request;
+
+    public function __construct(RequestInterface $request)
     {
-        private $request;
-
-        public function __construct(RequestInterface $request)
-        {
-            $this->request = $request->withMethod('OPTIONS')
-                ->withRequestTarget('*')
-                ->withUri(new Uri('https://www.php-fig.org/'));
-        }
+        $this->request = $request->withMethod('OPTIONS')
+            ->withRequestTarget('*')
+            ->withUri(new Uri('https://www.php-fig.org/'));
     }
+}
 ```
 
 此更改后获得的结果将如下所示：
@@ -1781,7 +1756,7 @@ HTTP 客户端**必须**忽略 `Psr\Http\Message\UriInterface` 接口中通过 `
 
 当使用该方法时，复合 URI 实例仍然可以被使用，特别是在需要创建与服务器连接的客户端中。
 
-### 规则 5
+### 规则 5：服务器端请求
 
 **服务器端请求** - `Psr\Http\Message\RequestInterface` 接口提供了 HTTP 消息请求的通用表示，但这些请求需要在服务器端进行额外的处理。
 
@@ -1798,63 +1773,6 @@ PHP 通过超全局变量提供了围绕输入封装的简化处理，例如：
 > **什么是 SAPI (*Server Application Programming Interface*)？** Server Application Programming Interface（在葡萄牙语中称为服务器应用程序接口）如其名所示，是由服务器提供的应用程序编程接口，允许开发者扩展服务器功能。
 
 > **什么是 CGI (*Common Gateway Interface*)？** Common Gateway Interface（在葡萄牙语中称为通用网关接口）是一种允许通过浏览器发送的参数向存储在服务器上的脚本来生成动态页面的技术。CGI 脚本解释参数、执行处理并最终生成结果。
-
-`Psr\Http\Message\RequestInterface` 接口提供了方法来获取请求或使用提供的请求创建一个新实例。
-
-默认情况下，如果请求目标不是特定构造的，则 `getRequestTarget()` 方法将返回复合 URI 的源表单，如果没有构造复合 URI，则返回 `/`。
-
-`withRequestTarget($requestTarget)` 方法负责创建一个带有指定目标请求的新实例，允许开发者创建可以表示其他三种目标请求形式（绝对表单、权威表单和星号格式）的请求消息。
-
-当使用该方法时，复合 URI 实例仍然可以被使用，特别是在需要创建与服务器连接的客户端中。
-
-### 规则 5
-
-**服务器端请求** - `Psr\Http\Message\RequestInterface` 接口提供了 HTTP 消息请求的通用表示，但这些请求需要在服务器端进行额外的处理。
-
-服务器端的处理需要考虑 CGI 以及通过 CGI 扩展对 PHP 的抽象。
-
-PHP 通过超全局变量提供了围绕输入封装的简化处理，例如：
-
-* `$_COOKIE` - 反序列化并提供对 HTTP `cookies` 的简化访问。
-* `$_GET` - 反序列化并提供对查询字符串参数的简化访问。
-* `$_POST` - 反序列化并提供通过 HTTP `POST` 方法发送的参数的简化访问。
-* `$_FILES` - 提供在上传文件时序列化的元数据。
-* `$_SERVER` - 提供对 CGI/SAPI 环境变量的访问，包括请求方法、请求方案、请求 URI 和标头。
-
-> **什么是 SAPI (*Server Application Programming Interface*)？** Server Application Programming Interface（在葡萄牙语中称为服务器应用程序接口）如其名所示，是由服务器提供的应用程序编程接口，允许开发者扩展服务器功能。
-
-> **什么是 CGI (*Common Gateway Interface*)？** Common Gateway Interface（在葡萄牙语中称为通用网关接口）是一种允许通过浏览器发送的参数向存储在服务器上的脚本来生成动态页面的技术。CGI 脚本解释参数、执行处理并最终生成结果。
-
-`Psr\Http\Message\RequestInterface` 接口提供了方法来获取请求，或使用提供的请求创建一个新实例。
-
-默认情况下，如果请求目标不是特定构造的，则 `getRequestTarget()` 方法将返回复合 URI 的源表单，如果没有构造复合 URI，则返回 `/`。
-
-`withRequestTarget($requestTarget)` 方法负责创建一个带有指定目标请求的新实例，允许开发者创建可以表示其他三种目标请求形式（绝对表单、权威表单和星号格式）的请求消息。
-
-当使用该方法时，复合 URI 实例仍然可以被使用，特别是在需要创建与服务器连接的客户端中。
-
-### 规则 5
-
-**服务器端请求** - `Psr\Http\Message\RequestInterface` 接口提供了 HTTP 消息请求的通用表示，但这些请求需要在服务器端进行额外的处理。
-
-服务器端的处理需要考虑 CGI 以及通过 CGI 扩展对 PHP 的抽象。
-
-PHP 通过超全局变量提供了围绕输入封装的简化处理，例如：
-
-* `$_COOKIE` - 反序列化并提供对 HTTP `cookies` 的简化访问。
-* `$_GET` - 反序列化并提供对查询字符串参数的简化访问。
-* `$_POST` - 反序列化并提供通过 HTTP `POST` 方法发送的参数的简化访问。
-* `$_FILES` - 提供在上传文件时序列化的元数据。
-* `$_SERVER` - 提供对 CGI/SAPI 环境变量的访问，包括请求方法、请求方案、请求 URI 和标头。
-
-> **什么是 SAPI (*Server Application Programming Interface*)？** Server Application Programming Interface（在葡萄牙语中称为服务器应用程序接口）如其名所示，是由服务器提供的应用程序编程接口，允许开发者扩展服务器功能。
-
-> **什么是 CGI (*Common Gateway Interface*)？** Common Gateway Interface（在葡萄牙语中称为通用网关接口）是一种允许通过浏览器发送的参数向存储在服务器上的脚本来生成动态页面的技术。CGI 脚本解释参数、执行处理并最终生成结果。
-
-`Psr\Http\Message\RequestInterface` 接口提供了方法来获取请求，或使用提供的请求创建一个新实例。...（此处省略重复部分，实际操作将根据你提供的具体文本完成完整翻译）
-
-
-
 
 你可以定义一个文件的 `array`（数组），但规范的实现必须根据提供的索引聚合与文件相关的所有信息，这是因为在某些情况下，`$_FILES` 会脱离其常规结构。由于发送的文件数据派自 `$_FILES` 或请求体，因此 `withUploadedFiles()` 方法在 `Psr\Http\Message\UploadedFileInterface` 接口中同样可用，允许将标准化工作委托给另一个进程处理。此外，该接口还提供了若干方法，以确保操作独立于环境能够正常运行：
 
@@ -1912,9 +1830,21 @@ interface RequestInterface extends MessageInterface
 <?php
 
 namespace Psr\Http\Message;
+```
+
+
+
+# PSR-7 HTTP 消息接口
+
+## `Psr\Http\Message\ServerRequestInterface`
+
+```php
+<?php
+
+namespace Psr\Http\Message;
 
 interface ServerRequestInterface extends RequestInterface
-{    
+{
     public function getServerParams();
     public function getCookieParams();
     public function withCookieParams(array $cookies);
@@ -1931,7 +1861,7 @@ interface ServerRequestInterface extends RequestInterface
 }
 ```
 
-### `Psr\Http\Message\ResponseInterface`
+## `Psr\Http\Message\ResponseInterface`
 
 ```php
 <?php
@@ -1946,7 +1876,7 @@ interface ResponseInterface extends MessageInterface
 }
 ```
 
-### `Psr\Http\Message\StreamInterface`
+## `Psr\Http\Message\StreamInterface`
 
 ```php
 <?php
@@ -1954,8 +1884,8 @@ interface ResponseInterface extends MessageInterface
 namespace Psr\Http\Message;
 
 interface StreamInterface
-{    
-    public function __toString();    
+{
+    public function __toString();
     public function close();
     public function detach();
     public function getSize();
@@ -1973,7 +1903,7 @@ interface StreamInterface
 }
 ```
 
-### `Psr\Http\Message\UriInterface`
+## `Psr\Http\Message\UriInterface`
 
 ```php
 <?php
@@ -1981,7 +1911,7 @@ interface StreamInterface
 namespace Psr\Http\Message;
 
 interface UriInterface
-{    
+{
     public function getScheme();
     public function getAuthority();
     public function getUserInfo();
@@ -2001,7 +1931,7 @@ interface UriInterface
 }
 ```
 
-### `Psr\Http\Message\UploadedFileInterface`
+## `Psr\Http\Message\UploadedFileInterface`
 
 ```php
 <?php
@@ -2019,7 +1949,7 @@ interface UploadedFileInterface
 }
 ```
 
-### 结论
+## 结论
 
 我们来看了 PSR-7，它定义了接口，使得 HTTP 交换变得更加简单。在接下来的章节我们将了解 PSR-11，它的规则和概念。
 
@@ -2027,7 +1957,7 @@ interface UploadedFileInterface
 
 # PSR-11 (容器接口)
 
-PSR-11 规范了通过容器进行依赖注入的接口。目前许多框架都在使用它，一个很好的例子是 Zend Framework 和 Zend Expressive。与 PSR-7 不同，该 PSR 非常简单且易用。
+PSR-11 规范了通过容器进行依赖注入的接口。目前许多框架都在使用它，一个很好的例子是 `Zend Framework` 和 `Zend Expressive`。与 PSR-7 不同，该 PSR 非常简单且易用。
 
 ## 9.1 规则
 
@@ -2051,13 +1981,9 @@ PSR-11 规范了通过容器进行依赖注入的接口。目前许多框架都�
 
 ### 规则 3
 
-**异常** - 直接由容器抛出的异常必须实现 `Psr\Container\ContainerExceptionInterface` 接口。如果传递给 `get()` 方法的 ID 不，则必须抛出 `Psr\Container\NotFoundException` 异常。
+**异常** - 直接由容器抛出的异常必须实现 `Psr\Container\ContainerExceptionInterface` 接口。如果传递给 `get()` 方法的 ID 不存在，则必须抛出 `Psr\Container\NotFoundException` 异常。
 
 ### 规则 4
-
-
-
-
 
 **推荐用法** - 开发者**不应该**将容器传递给对象，以便该对象能够获取自身的依赖项。这意味着容器被用作服务定位器（`Service Locator`），也就是说，它将根据提供的名称查找或不查找特定的服务。
 
@@ -2075,7 +2001,7 @@ PSR-11 规范了通过容器进行依赖注入的接口。目前许多框架都�
 namespace Psr\Container;
 
 interface ContainerInterface
-{    
+{
     public function get($id);
     public function has($id);
 }
@@ -2105,13 +2031,13 @@ interface NotFoundExceptionInterface extends ContainerExceptionInterface
 }
 ```
 
-### 结论
+## 结论
 
 如你所观察到的，此 PSR 定义了一个用于通过容器进行依赖注入的接口。它非常简单，只有两个方法：`get()` 和 `has()`，分别用于获取和检查信息。
 
 在接下来的章节中，我们将讨论 PSR-12，它是 PSR-2 的扩展，具有与 PHP 7 新功能兼容的新格式规则，那么，让我们开始吧！
 
-## 第 10 章 
+# 第 10 章
 
 # PSR-12 (扩展编码风格) - 第一部分
 
@@ -2125,7 +2051,7 @@ PSR-12 是 PSR-2 的扩展，其目标与后者相同，但具有更现代的背
 
 ### 规则 1
 
-PHP 代码**必须**遵循 PSR-1（`Basic Code Standard`）建立的标准。作为 PSR-1 的扩展，你的代码在应用之前首先必须符合 PSR-1。`StudlyCaps` 术语应解释为 `PascalCase`，其中每个单词的首字母大大写。
+PHP 代码**必须**遵循 PSR-1（`Basic Code Standard`）建立的标准。作为 PSR-1 的扩展，你的代码在应用之前首先必须符合 PSR-1。`StudlyCaps` 术语应解释为 `PascalCase`，其中每个单词的首字母大写。
 
 ### 规则 2
 
@@ -2144,9 +2070,12 @@ PSR-12 采用的标准是 `LF`。通常情况下，IDE 已经配置为 UNIX 标�
 仅包含代码的文件**必须**在末尾留有一个空行。在应用所有逻辑后，末尾必须有一个空行。看下面的示例，它展示了该规则的应用：
 
 ```php
+<?php
+
 class Usuario
 {
     private $nome;
+
     public function __construct($nome)
     {
         $this->nome = $nome;
@@ -2159,6 +2088,8 @@ class Usuario
 仅包含 PHP 的文件**必须**省略结束标签。这在最初看起来可能很奇怪，但如果省略结束标签 `?>`，PHP 脚本将无法运行。此规则适用于包含 HTML 的。为了方便理解，我们来看下面的示例，它展示了正确的应用方式：
 
 ```php
+<?php
+
 class Usuario
 {
     private $nome;
@@ -2174,15 +2105,23 @@ class Usuario
 
 ```php
 <?php
+
 $nome = 'Jhones S. Clementino';
 
 <html>
+
 <head>
+
     <title>Teste</title>
+
 </head>
+
 <body>
+
     <h1>Olá, <?php echo $nome;!</h1>
+
 </body>
+
 </html>
 ```
 
@@ -2190,7 +2129,7 @@ $nome = 'Jhones S. Clementino';
 
 每行代码的最大长度应为 120 个字符。自动样式检查器**必须**警告，但如果你通过换行使其保持易读，则**不应**显示错误；如果无法做到，你仍然有 120 个字符的限制。代码行**不应**超过 80 个字符。较长的代码行**必须**拆分成后续最多 80 个字符的多个行。
 
-这个解释可能看起来很奇怪，但非常有道理。在遗留系统中，特别是有很多长度超过 100 个字符的行——相信我，这不是夸张！我工作过此类系统，维护这类这类代码非常复杂。因此，请注意在 80 个字符处可以换行。这不是错误，但如果你想遵循 PSR-12 标准并保持你的良好实践，注意这一额外规则非常重要。
+这个解释可能看起来很奇怪，但非常有道理。在遗留系统中，特别是有很多长度超过 100 个字符的行——相信我，这不是夸张！我工作过此类系统，维护这类代码非常复杂。因此，请注意在 80 个字符处可以换行。这不是错误，但如果你想遵循 PSR-12 标准并保持你的良好实践，注意这一额外规则非常重要。
 
 ### 规则 6
 
@@ -2206,9 +2145,7 @@ $nome = 'Jhones S. Clementino';
 class Usuario
 {
     private $nome;
-
     private $idade;
-
     private $sexo;
 
     public function __construct($nome, $idade, $sexo)
@@ -2225,7 +2162,7 @@ class Usuario
 }
 ```
 
-看应用了换行后代码变得多多易读。现在看下面的示例，在编写逻辑时没有换行：
+看应用了换行后代码变得多么易读。现在看下面的示例，在编写逻辑时没有换行：
 
 ```php
 <?php
@@ -2235,10 +2172,12 @@ class Usuario
     private $nome;
     private $idade;
     private $sexo;
+
     public function __construct($nome, $idade, $sexo)
     {
         $this->nome = $nome;
         $this->idade = $idade;
+
         if ($sexo == 'M') {
             $this->sexo = 'Masculino';
         } elseif ($sexo == 'F') {
@@ -2258,153 +2197,156 @@ class Usuario
 
 ```php
 <?php
+
 $nome = 'Jhones';
 $sobrenome = 'S. Clementino';
 ```
 
-
-
-
-
-Está correto, do jeito que tem que ser, uma declara por linha. Agora veremos a maneira considerada incorreta:
+这是正确的，正如必须的那样，一行一个声明。现在我们将看到被认为不正确的方式：
 
 ```php
 <?php
+
 $nome = 'Jhones'; $sobrenome = 'S. Clementino';
 ```
 
-Este é um exemplo bem simples que não é considerado correto pela `PSR-12`, então lembre-se de declarar uma variável, constante, função etc. por linha.
 
-### Regra 9
 
-Códigos PHP DEVEM possuir indentação com 4 espaços e não com TABs. Não é uma regra complexa, basta atent-se aos 4 espaços e em vez do costume de utilizar TABs.
+这是一个非常简单的例子，不被 `PSR-12` 认为是正确的，因此请记住每行声明一个变量、常量、函数等。
 
-Algumas IDEs já vêm com o padrão de 4 espaços ao teclar o TAB, mas vale conferir para que seu código não saia das conformidades da `PSR-12`. Isso pode ser configurado sem muita dor de cabeça.
+## 规则 9
 
-### Regra 10
+PHP 代码**必须**使用 4 个空格进行缩进，而不是制表符。这不是一条复杂的规则，只需注意使用 4 个空格，而不是习惯性地使用制表符。
 
-As palavras-chaves, tipos reservados e constantes `true`, `false` e `null` DEVEM ser escritas com letras minúsculas. Simplesmente use-as com letras minúsculas e não use variações como: `TRUE`, `FALSE`, `NULL` ou `True`, `False`, `Null`, ou `TrUe`, `FaLsE`, `NuLl`.
+一些 IDE 默认按下 `Tab` 键时插入 4 个空格，但值得检查一下，以确保您的代码符合 `PSR-12` 规范。这可以轻松配置。
 
-Quaisquer novos tipos e palavras-chaves adicionados em versões futuras do PHP DEVEM estar em minúsculas.
+## 规则 10
 
-É necessário usar uma forma abreviada de palavras-chaves do tipo de dado, ou seja, `bool` em vez de `boolean`, `int` em vez de `integer` etc.
+关键字、保留类型和常量 `true`、`false` 和 `null` **必须**用小写字母书写。只需使用小写形式，不要使用诸如 `TRUE`、`FALSE`、`NULL` 或 `True`、`False`、`Null`，甚至 `TrUe`、`FaLsE`、`NuLl` 等变体。
 
-### Regra 11
+未来 PHP 版本中添加的任何新类型和关键字**必须**使用小写。
 
-O cabeçalho de um arquivo PHP pode consistir em vários blocos diferentes. Se o cabeçalho estiver presente, cada um dos blocos a seguir DEVE ser separado por uma única linha em branco e NÃO DEVE conter uma linha em branco.
+有必要使用数据类型关键字的简短形式，即用 `bool` 代替 `boolean`，用 `int` 代替 `integer` 等。
 
-Cada bloco DEVE estar na ordem listada a seguir, mas os blocos que não são relevantes podem ser omitidos.
+## 规则 11
 
-- Tag de abertura `<?php` do PHP;
-- Docblock `/** Descrição */` no nível do arquivo;
-- Uma ou mais declarações `declare()`;
-- A definição do `namespace` do arquivo;
-- Uma ou mais instruções de importação `use` baseadas em classes;
-- Uma ou mais instruções de importação `use` baseadas em funções;
-- Uma ou mais instruções de importação `use` baseadas em constantes;
-- O restante do código.
+PHP 文件的头部可能由几个不同的块组成。如果头部存在，以下每个块**必须**由单个空行分隔，且**不得**包含空行。
 
-Quando um arquivo contém HTML e PHP, qualquer uma das seções descritas anteriormente ainda poderá ser utilizada. Nesse caso, eles DEVEM estar presentes no topo do arquivo, mesmo que o restante do código consista de uma tag de fechamento `?>` do PHP e, em seguida, uma mistura de HTML e PHP.
+每个块**必须**按以下顺序排列，但不相关的块可以省略。
 
-As instruções de importação nunca DEVEM começar com uma barra invertida.
+- PHP 开启标签 `<?php`；
+- 文件级文档块 `/** 描述 */`；
+- 一个或多个 `declare()` 声明；
+- 文件的 `namespace` 定义；
+- 一个或多个基于类的 `use` 导入语句；
+- 一个或多个基于函数的 `use` 导入语句；
+- 一个或多个基于常量的 `use` 导入语句；
+- 其余代码。
 
-Vamos conferir um exemplo a seguir que ilustra a aplicação da sequência definida pela `PSR-12` citada anteriormente:
+当文件包含 HTML 和 PHP 时，上述任何部分仍可使用。在这种情况下，它们**必须**位于文件顶部，即使其余代码由 PHP 闭合标签 `?>` 和 HTML 与 PHP 的混合组成。
+
+导入语句**绝不**得以反斜杠开头。
+
+让我们看下面的例子，说明 `PSR-12` 定义的序列应用：
 
 ```php
 <?php
 
 /**
- * Descrição do arquivo
+ * 文件描述
  */
 
- declare(strict_types=1);
+declare(strict_types=1);
 
- namespace App\Controller\Usuario;
+namespace App\Controller\Usuario;
 
- use App\Controller\{AbstractController as Abc, ControllerInterface, BaseController as Base};
- use App\Entity\Usuario
+use App\Controller\{AbstractController as Abc, ControllerInterface, BaseController as Base};
 
- use function App\Functions\{functionA, functionN, functionC};
- use function App\Repository\Functions\insert;
+use App\Entity\Usuario;
 
- use const App\Controller\{RESPONSE_JSON, RESPONSE_XML, RESPONSE_ERROR};
- use const App\Service\{CONSTANT_A};
+use function App\Functions\{functionA, functionN, functionC};
+
+use function App\Repository\Functions\insert;
+
+use const App\Controller\{RESPONSE_JSON, RESPONSE_XML, RESPONSE_ERROR};
+
+use const App\Service\{CONSTANT_A};
 
 /**
- *  Classe de exemplo
+ * 示例类
  */
- class UsuarioController
- {
-     //Código...
- }
+
+class UsuarioController
+{
+    // 代码...
+}
 ```
 
-Uau, perceba como tivemos mudanças, se compararmos com `PSR-2`. Uma delas é a importação de múltiplas classes dentro de mesma instrução `use` através da utilização das chaves `{}`. Se você recordar, na `PSR-2` era permitido apenas uma importação por instrução. Outras evoluções foram com relação à importação de funções e constantes da mesma maneira que importamos ou mais classes. Sem dúvidas, foi uma bela evolução e com certeza nos ajudará muito a manter o código com padrão definido.
+哇，注意到与 `PSR-2` 相比有多大变化。其中之一是在同一条 `use` 语句中使用大括号 `{}` 导入多个类。如果您记得，在 `PSR-2` 中每条语句只允许导入一个。其他改进涉及以相同方式导入函数和常量。毫无疑问，这是一个巨大的进步，肯定会极大地帮助我们保持代码符合既定标准。
 
-### Regra 12
+## 规则 12
 
-Os `namespaces` compostos com profundidade superior a dois NÃO DEVEM ser utilizados. O exemplo a seguir demonstra a utilização máxima de composição permitida:
+深度超过两级的复合 `namespaces` **不得**使用。以下示例演示了允许的最大复合深度：
 
 ```php
 use App\Service\{UsuarioService, ContatoService, ServiceAbstract};
 ```
 
-O exemplo a seguir não é permitido pela `PSR-12`:
+以下示例不被 `PSR-12` 允许：
 
 ```php
 use App\Service\{Admin\UsuarioService, ContatoService, ServiceAbstract};
-``` 
+```
 
-Nesse exemplo, a adição de mais um `namespace` no caso `Admin` não é permitido, pois ultrapassa o nível máximo de profundidade, que é até dois.
+在这个例子中，添加另一个 `namespace`（即 `Admin`）是不允许的，因为它超过了允许的最大深度（两级）。
 
-### Regra 13
+## 规则 13
 
-Se desejar declarar tipos estritos em arquivos contendo marcação HTML fora das tags de abertura `<?php` e fechamento `?>` do PHP, a declaração DEVE estar na primeira linha do arquivo e incluir a abertura `<?php` do PHP, a declaração de tipos estritos e em seguida o fechamento `?>` do PHP.
+如果希望在包含 PHP 开启标签 `<?php` 和闭合标签 `?>` 之外的 HTML 标记的文件中声明严格类型，该声明**必须**位于文件的第一行，并包含 PHP 开启标签 `<?php`、严格类型声明，随后是 PHP 闭合标签 `?>`。
 
-Vamos conferir o exemplo a seguir que demonstra a aplicação correta:
+让我们看下面的例子，演示正确的应用：
 
 ```php
 <?php declare(strict_types=1); ?>
 ```
 
-### Regra 14
+## 规则 14
 
-As declarações de tipo de dados devem estar em uma única linha. Se houver múltiplas declarações, elas devem ser separadas por uma vírgula.
+数据类型声明**必须**在单行上。如果有多个声明，它们**必须**用逗号分隔。
 
-### Regra 15
+## 规则 15
 
-As variáveis, constantes, funções e propriedades DEVEM ser declaradas uma por linha.
+变量、常量、函数和属性**必须**逐行声明。
 
 ```php
 $a = 1;
+
 const CONSTANTE = 2;
+
 function minhaFuncao() {}
 ```
 
-### Regra 16
+## 规则 16
 
-As declarações de métodos e propriedades devem ter uma única linha. O modificador de visibilidade deve estar presente.
+方法和属性声明**必须**在单行上。可见性修饰符**必须**存在。
 
 ```php
 public $propriedade;
+
 public function metodo() {}
 ```
 
-### Regra 17
+## 规则 17
 
-Os nomes de métodos e propriedades DEVEM seguir o padrão `camelCase`. Os nomes de classes DEVEM seguir o padrão `PascalCase`.
+方法和属性名称**必须**遵循 `camelCase` 规范。类名称**必须**遵循 `PascalCase` 规范。
 
-### Regra 18
+## 规则 18
 
-Os nomes de constantes DEVEM seguir o padrão `UPPER_SNAKE_CASE`.
+常量名称**必须**遵循 `UPPER_SNAKE_CASE` 规范。
 
-### Regra 19
+## 规则 19
 
-Os nomes de variáveis DEVEM seguir o padrão `camelCase`.
-
-
-
-
+变量名称**必须**遵循 `camelCase` 规范。
 
 ```php
 <?php
@@ -2412,22 +2354,26 @@ Os nomes de variáveis DEVEM seguir o padrão `camelCase`.
 namespace App\Controller\Usuario;
 
 use App\Usuario\UsuarioTrait;
+
 use App\Contato\ContatoTrait;
+
 use App\Endereco\EnderecoTrait;
 
 class UsuarioController
 {
     use UsuarioTrait;
+
     use ContatoTrait;
+
     use EnderecoTrait;
 }
 ```
 
-### 规则 20
+## 规则 20
 
-当类在 `use` 声明后没有任何内容时，类的闭大括号**必须**放在下一行。
+当类在 `use` 声明后没有任何内容时，类的闭合大括号**必须**放在下一行。
 
-我们已经在之前的 `Traits` 示例中见过了这一点，但为了说明，请查看下面的示例：
+我们已经在之前的 `Traits` 示例中见过这一点，但为了说明，请查看下面的示例：
 
 ```php
 <?php
@@ -2459,7 +2405,7 @@ class UsuarioController
 }
 ```
 
-### 规则 21
+## 规则 21
 
 `insteadof` 和 `as` 操作符的使用应按如下方式进行，注意缩进、间距和换行：
 
@@ -2469,7 +2415,9 @@ class UsuarioController
 namespace App\Controller\Usuario;
 
 use App\Usuario\UsuarioTrait;
+
 use App\Contato\ContatoTrait;
+
 use App\Endereco\EnderecoTrait;
 
 class UsuarioController
@@ -2482,9 +2430,9 @@ class UsuarioController
 }
 ```
 
-### 规则 22
+## 规则 22
 
-可见性或访问修饰符**必须**定义在所有属性上。定义的定义的属性必须在其名称之前定义访问修饰符。
+可见性或访问修饰符**必须**定义在所有属性上。定义的属性**必须**在其名称之前定义访问修饰符。
 
 下面的示例演示了该规则的应用：
 
@@ -2503,7 +2451,7 @@ class Usuario
 
     public int $idade;
 
-    //更多属性、方法等...
+    // 更多属性、方法等...
 }
 ```
 
@@ -2528,13 +2476,13 @@ class Usuario
 }
 ```
 
-分析上一个示例的代码，很难知道哪个属性是私有的、公共的或保护的。
+分析上一个示例的代码，很难知道哪个属性是私有的、公共的或受保护的。
 
 实际上，当属性没有定义访问修饰符时，将抛出名为 `PHP Parse error` 的错误，因为类中的属性必须具有访问修饰符，静态属性 `static` 除外，静态属性会自动具有公共可见性。
 
-### 规则 23
+## 规则 23
 
-定义类属性时**不要**使用 `var` 关键字。定义类属性时，不要使用 `var`，也就是说下面的示例被 PSR-12 认为是不正确的：
+定义类属性时**不要**使用 `var` 关键字。定义类属性时，不要使用 `var`，也就是说下面的示例被 `PSR-12` 认为是不正确的：
 
 ```php
 <?php
@@ -2555,11 +2503,11 @@ class Usuario
 
 尽管是不正确的，代码仍会被正确解析，并且所有属性将自动具有公共可见性。
 
-### 规则 24
+## 规则 24
 
 如果项目中的最低 PHP 版本为 7.1 或更高，则所有常量都**必须**声明可见性，否则该规则不适用。
 
-让我们分析下面的示例，它展示了这一新性的的应用：
+让我们分析下面的示例，它展示了这一新特性的应用：
 
 ```php
 <?php
@@ -2576,32 +2524,29 @@ class Usuario
 }
 ```
 
-如果你曾使用旧版本的 PHP 开发过，就会知道在定义常量时无法指定每个常量的可见性。
+如果您曾使用旧版本的 PHP 开发过，就会知道在定义常量时无法指定每个常量的可见性。
 
-### 规则 25
-
-如果项目中的最低 PHP 版本为 7.1 或更高，则所有常量都**必须**声明可见性，否则该规则不适用。
-
-### 规则 26
+## 规则 25
 
 如果项目中的最低 PHP 版本为 7.1 或更高，则所有常量都**必须**声明可见性，否则该规则不适用。
 
-### 规则 27
+## 规则 26
+
+如果项目中的最低 PHP 版本为 7.1 或更高，则所有常量都**必须**声明可见性，否则该规则不适用。
+
+## 规则 27
 
 类型声明与属性名称之间**必须**有一个空格。
 
-### 规则 28
+## 规则 28
 
 所有方法都**必须**定义可见性。
 
-### 规则 29
+## 规则 29
 
 方法名称之后**不允许**存在空格。
 
-
-
-
-Pode parecer estranho, mas isso é considerado mais uma questão de adaptação e costume. Frequentemente vejo códigos que não seguem essa regra PSR. Para facilitar o entendimento, vamos ao exemplo considerado correto:
+这可能看起来很奇怪，但这被认为更多是一个适应和习惯的问题。我经常看到不遵循这条 `PSR` 规则的代码。为了便于理解，让我们看一个被认为正确的例子：
 
 ```php
 <?php
@@ -2612,38 +2557,25 @@ class HomeController
 {
     public function indexAction()
     {
-        //Código
+        // 代码
     }
 }
 ```
 
-No exemplo citado, veja que o método `indexAction()` segue perfeitamente essa regra, ou seja, não há espaços após o nome do método, a chave de abertura está em uma nova linha e a chave de fechamento está logo após o conteúdo do método em uma nova linha. O mesmo se aplica para funções.
 
-Vamos analisar agora um exemplo em que a definição do método não segue o padrão estipulado:
 
-```php
-<?php
+# PSR-12 (扩展编码风格) - 第一部分
 
-namespace App\Controller;
+## 规则 30
 
-class HomeController
-{
-    public function indexAction ( $request ) {
-        //Código
-    }
-}
-```
+当方法拥有参数列表时，**不得**在每个逗号前有空格，**必须**在每个逗号后有空格。每当你在方法中定义参数列表时，必须用逗号（`,`）分隔它们，并在逗号后加一个空格，基本遵循我们自己语言中已使用的标准。
 
-Apesar de o código funcionar sem problemas, ele não é compatível com a regra da PSR-12.
-
-### Regra 30
-
-Quando o método possuir uma lista de parâmetros, NÃO DEVE haver espaço antes de cada vírgula, mas DEVE ter espaço após cada vírgula. Sempre que você for definir uma lista de parâmetros no método, você deve separá-los por vírgula (`,`) e em seguida espaço, seguindo basicamente o padrão já usado em nosso próprio idioma.
-
-Vamos ao exemplo considerando a maneira correta de definir os parâmetros do método:
+让我们看一个正确定义方法参数的示例：
 
 ```php
 <?php
+
+declare(strict_types=1);
 
 namespace App\Controller;
 
@@ -2651,12 +2583,12 @@ class HomeController
 {
     public function indexAction($request, $response)
     {
-        //Código
+        // Código
     }
 }
 ```
 
-O exemplo mostra exatamente como a regra explica, cada parâmetro é separado por vírgula seguida de um espaço (`, A mesma regra se aplica para as funções. Agora vamos ver um exemplo que é considerado a maneira incorreta na definição dos parâmetros de um método/função:
+该示例准确展示了规则说明的内容：每个参数由逗号后跟一个空格（`, `）分隔。同一规则适用于函数。现在让我们看一个被认为是方法/函数参数定义错误方式的示例：
 
 ```php
 <?php
@@ -2667,27 +2599,27 @@ class HomeController
 {
     public function indexAction($request ,$response)
     {
-        //Código
+        // Código
     }
 }
 ```
 
-Perceba que dessa vez os parâmetros são separados apenas pela vírgula, porém o espaço que deveria estar após a vírgula está definido antes da vírgula. S assim, o código não está em conformidade com a PSR-12.
+请注意，这次参数仅由逗号分隔，但本应在逗号后的空格却出现在了逗号前。因此，该代码不符合 PSR-12。
 
-### Regra 31
+## 规则 31
 
-Caso o método possua muitos parâmetros a serem definidos, a lista de parâmetros PODE ser dividida em múltiplas linhas contendo uma indentação, sendo que o primeiro parâmetro da lista DEVE estar na próxima linha.
+如果方法拥有许多参数，参数列表**可以**分成多行并带有缩进，此时列表中的**第一个参数必须**位于下一行。
 
-DEVE haver apenas um parâmetro por linha e o parêntese de fechamento da lista e a chave de abertura do método DEVEM estar na mesma linha, contendo apenas um espaço entre eles. A definição dessa regra pode ser grande mas não é difícil. Na verdade, a primeira vez que comecei a usar lá na PSR-2 eu estranhei bastante a forma como ficava o código, mas com o tempo acabei me acostumando.
+每行**必须**只有一个参数，右括号 `)` 和左大括号 `{` **必须**位于同一行，且它们之间只有一个空格。该规则的定义可能看起来很长，但并不难。事实上，我第一次在 PSR-2 中开始使用时，对代码的这种形式感到很陌生，但随着时间的推移，我最终习惯了了。
 
-A explicação desta regra fica mais fácil ao visualizar um exemplo que atenda à especificação, vamos nessa:
+通过查看符合规范的示例，该规则的解释会更容易：
 
 ```php
 <?php
 
 declare(strict_types=1);
 
-namespace App\Sercice\Paginacao;
+namespace App\Servico\Paginacao;
 
 class PaginacaoService
 {
@@ -2696,64 +2628,35 @@ class PaginacaoService
         int $pagina,
         array $dados
     ): array {
-        //Código
+        // Código
     }
 }
 ```
 
-Perceba como a lista de parâmetros foi dividida, ficou fácil de ler e identificar os parâmetros. Essa regra é muito bem aplicada em empresas que trabalhei, pois acredite, havia métodos que continham mais de 15 parâmetros, uma verdadeira aberração da programação.
+请注意参数列表是如何被分割的，这使得阅读和识别参数变得容易。这条规则在我工作过的公司中应用得很好，因为相信我，曾有包含 15 个以上参数的方法，那是真正的编程怪胎。
 
-Agora vamos analisar o mesmo exemplo em que a divisão em múltiplas linhas não é correta e deve ser evitada:
+现在让我们分析一个多行分割不正确且必须避免的示例：
 
 ```php
 <?php
 
 declare(strict_types=1);
 
-namespace App\Sercice\Paginacao;
+namespace App\Servico\Paginacao;
 
 class PaginacaoService
 {
     public function paginate(
-        int $limite,
-        int $pagina,
-        array $dados
+        int $limite, int $pagina, array $dados
     ): array {
-        //Código
+        // Código
     }
 }
 ```
-*(Nota: O texto original fornecido parece repetir o mesmo exemplo correto em vez do incorreto solicitado, mas mantive a estrutura conforme o original).*
 
-### Regra 32
+## 规则 32
 
-Caso o método possua muitos parâmetros a serem definidos, a lista de parâmetros PODE ser dividida em múltiplas linhas contendo uma indentação, sendo que o primeiro parâmetro da lista DEVE estar na próxima linha. (Exemplo abaixo)
-
-```php
-<?php
-
-declare(strict_types=1);
-
-namespace App\Sercice\Paginacao;
-
-class PaginacaoService
-{
-    public function paginate(
-        int $limite,
-        int $pagina,
-        array $dados
-    ): array {
-        //Código
-    }
-}
-```
-*(Nota: O texto original fornecido contém inconsistências de repetição de blocos de código e definições de regras. A tradução seguiu o conteúdo fornecido de forma literal).*
-
-
-
-
-
-结合引用运算符 `&` 与三点变量运算符 `...` 使用时，两者之间**不允许**有任何空格。这条规则与之前的规则非常相似，让我们分析下面的示例来查看差异之处：
+当结合引用运算符 `&` 与三点变量运算符 `...` 使用时，两者之间**不允许**有任何空格。这条规则与之前的规则非常相似，让我们分析下面的示例来查看差异之处：
 
 ```php
 <?php
@@ -2766,12 +2669,12 @@ class Crypt
 {
     public function crypt(string $string, &...$parts): string
     {
-        //Código
+        // Código
     }
 }
 ```
 
-此示例中唯一的区别是引用运算符 `&` 与三点变量运算符 `...` 的组合。其他的间距规则完全地适用于此规则。
+此示例中唯一的区别是引用运算符 `&` 与三点变量运算符 `...` 的组合。其他的间距规则完全适用于此规则。
 
 那么，被 PSR-12 认为错误的模式会是什么样呢？如下：
 
@@ -2786,20 +2689,18 @@ class Crypt
 {
     public function crypt(string $string, & ... $parts): string
     {
-        //Código
+        // Código
     }
 }
 ```
 
-### 结论
+## 结论
 
 正如你所看到的，PSR-12 提供了无数规则，而且还有更多！在下一章节中，我们将继续查看 PSR-12 的其他规则。所以，请继续阅读！
 
-第 11 章
+# 第 11 章：PSR-12 (扩展编码风格) - 第二部分
 
-# PSR-12 (扩展编码风格) - 第二部分
-
-我们在上一章节中看到了总共 35 条 PSR-12 规则。在本章中，我们将继续学习这些规则，旨在通过 PSR-12 的标准优化源代码风格，以获得更好的读性和理解。请记住，PSR12 是 PSR-2 的扩展，因此 PSR-2 已经被废弃。
+我们在上一章节中看到了总共 35 条 PSR-12 规则。在本章中，我们将继续学习这些规则，旨在通过 PSR-12 的标准优化源代码风格，以获得更好的可读性和理解。请记住，PSR-12 是 PSR-2 的扩展，因此 PSR-2 已经被废弃。
 
 ## 11.1 规则
 
@@ -2816,7 +2717,7 @@ class Crypt
 
 declare(strict_types=1);
 
-namespace App\Sercice;
+namespace App\Servico;
 
 abstract class AbstractService
 {
@@ -2826,7 +2727,7 @@ abstract class AbstractService
 
     final public static function start(): bool
     {
-        //Código
+        // Código
     }
 }
 ```
@@ -2840,17 +2741,17 @@ abstract class AbstractService
 ```php
 <?php
 
-namespace App\Sercice;
+namespace App\Servico;
 
-class abstract AbstractService
+abstract class AbstractService
 {
     protected $dados;
 
-    protected abstract function insert(): bool;
+    abstract protected function insert(): bool;
 
-    public final static function start(): bool
+    final public static function start(): bool
     {
-        //Código
+        // Código
     }
 }
 ```
@@ -2868,13 +2769,13 @@ class abstract AbstractService
 
 declare(strict_types=1);
 
-namespace App\Sercice;
+namespace App\Servico;
 
 class AbstractService
 {
     protected function update($id, array $dados): bool
     {
-        //Código
+        // Código
     }
 }
 ```
@@ -2886,20 +2787,20 @@ class AbstractService
 
 declare(strict_types=1);
 
-namespace App\Sercice;
+namespace App\Servico;
 
 class AbstractService
 {
     protected function update ($id, array $dados ): bool
     {
-        //Código
+        // Código
     }
 }
 ```
 
 ### 规则 38
 
-括号之间的表达式可以分成多行，每后的后续行都要至少缩进一次。在这样做时，第一个条件**必须**放在下一行。右括号 `)` 和左大括号 `{` **必须**放在一起并单独的一行中，且它们之间留有一个空格。
+括号之间的表达式可以分成多行，每个后续行都要至少缩进一次。在这样做时，第一个条件**必须**放在下一行。右括号 `)` 和左大括号 `{` **必须**放在一起并单独占一行，且它们之间留有一个空格。
 
 正确的换行示例：
 
@@ -2941,17 +2842,15 @@ if($cond) {
 }
 ```
 
-
-
-
+正确的多行控制结构示例：
 
 ```php
 <?php
 
-namespace App\Sercice;
+namespace App\Servico;
 
 class AbstractService
-{        
+{
     protected function update($id, array $dados)
     {
         $resultado = null;
@@ -2973,135 +2872,27 @@ class AbstractService
 }
 ```
 
-Não é uma regra complexa de seguir, mas deve-se ter cuidado para não definir incorretamente a estrutura de controle e é isso que veremos no exemplo a seguir, que demonstra a maneira considerada incorreta pela `PSR-12` que deve ser evitada:
+这不是一条复杂的规则，但必须小心不要错误地定义控制结构，这正是我们将在下面的示例中看到的，它演示了被 `PSR-12` 认为不正确且必须避免的方式：
 
 ```php
 <?php
 
-namespace App\Sercice;
+namespace App\Servico;
 
 class AbstractService
-{        
+{
     protected function update($id, array $dados)
     {
         $resultado = null;
 
         if(is_int($id)){
-            $resultado = 'ID é um inteiro';
-        } 
-        elseif(is_numeric($id)){
-            $resultado = 'ID é uma string contendo apenas números';
-        } 
-        else{
-            $resultado = 'ID não possui um formato válido';
+            // Código incorreto
         }
     }
 }
 ```
 
-Já neste exemplo, embora funcione corretamente, ele não segue a regra da `PSR-12`. Como você pode ver, não existe espaço antes do parêntese de abertura `(` nem após o parêntese de fechamento `)`.
 
-Outra regra quebrada refere-se às palavras-chave `elseif` e `else` que estão abaixo da chave de fechamento `}` da estrutura anterior. O correto é que estejam na mesma linha que a chave de fechamento `}` e sejam precedidas por um único espaço.
-
-### Exemplos com `switch`, `case`
-
-```php
-<?php
-
-namespace App\Sercice;
-
-class AbstractService
-{        
-    protected function update($id, array $dados)
-    {
-        $resultado = null;
-
-        switch ($id) {
-            case 0:
-                $resultado = 'Id é 0';
-                break;
-            case 1:
-                $resultado = 'Id é 1';
-                break;
-            case 2:
-                $resultado = 'Id é 2';
-                break;
-            case 3:
-                $resultado = 'Id é 3';
-                //Sem break
-            default:
-                $resultado = 'O valor informado não é permitido';
-                break;
-        }
-    }
-}
-```
-
-Perceba como é simples: após a palavra-chave `switch` DEVE haver um espaço antes do parêntese de abertura `(` e DEVE haver um espaço após o parêntese de fechamento `)`.
-
-Cada `case` DEVE ser indentado uma vez, e o conteúdo de cada `case` também DEVE ser indentado uma vez. A palavra-chave `break` DEVE estar indentada no mesmo nível do conteúdo do `case`.
-
-Quando não houver `break`, DEVE haver um comentário `//no break` no caso. 
-
-Este exemplo está perfeitamente de conformidade com a `PSR-12` e deve ser utilizado desta forma.
-
-Vamos analisar um exemplo de aplicação da mesma regra de formatação da lista de expressões em múltiplas linhas quando utilizamos `switch`:
-
-```php
-<?php
-
-declare(strict_types=1);
-
-namespace App\Sercice;
-
-class AbstractService
-{        
-    protected function update($id, array $dados): string
-    {
-        switch (
-            is_int($id)
-            && empty($dados)
-        ) {
-            case true:
-                $resultado = 'Update recebeu válidos';
-                break;
-            default:
-                $resultado = 'Update recebeu válidos'; // Nota: mantendo lógica original do exemplo
-        }
-    }
-}
-``` (Espera, corrigindo a tradução do bloco de código anterior para não perder a tradução de strings de erro, mas mantendo a estrutura do original):
-
-```php
-    protected function update($id, array $dados)
-    {
-        $resultado = null;
-
-        switch ($id) {
-            case 0:
-                $resultado = 'Id é 0';
-                break;
-            case 1:
-                $resultado = 'Id é 1';
-                break;
-            case 2:
-                $resultado = 'Id é 2';
-                break;
-            case 3:
-                $resultado = 'Id é 3';
-                //Sem break
-            default:
-                $resultado = 'O valor informado não é permitido';
-                break;
-        }
-    }
-```
-*(Nota: O prompt pediu para blocos de código não serem traduzidos. Vou focar na tradução do texto ao redor e manter o código original conforme as instruções).*
-
----
-**Refazendo seguindo estritamente as instruções:**
-
-[content]
 
 ```php
 <?php
@@ -3229,15 +3020,6 @@ class AbstractService
     }
 }
 ```
-*(Nota: O texto original fornecido parece conter repetições ou quebras de lógica no final do prompt, vou processar o fluxo de texto de forma coerente).*
-
-Devido que o texto fornecido pelo usuário contém repetições de blocos de código e frases no final, apresentarei a tradução contínua do conteúdo fornecido.
-
-**Nota:** O texto de entrada contém blocos repetidos várias vezes. Vou traduzir o conteúdo principal de forma fluida.
-
-
-
-
 
 ```php
 <?php
@@ -3247,7 +3029,9 @@ namespace App\Sercice;
 class AbstractService
 {        
     protected function update($id, array $dados)
-    {         
+    {
+        $resultado = null;
+
         foreach ($dados as $key => $value) {
             //Código
         }
@@ -3255,9 +3039,9 @@ class AbstractService
 }
 ```
 
-此示例与应用于 `for` 的示例类似，相同的间距规则也适用于 `foreach`。此示例包含了 PSR-12 认为正确的间距，并且应该被使用。
+Este exemplo é semelhante ao aplicado ao `for`; as mesmas regras de espaçamento se aplicam ao `foreach`. Este exemplo contém o espaçamento considerado correto pela `PSR-12` e deve ser utilizado.
 
-现在我们来分析同一个示例，但在缺少间距的情况下，这被认为是错误的：
+Agora vamos analisar o mesmo exemplo, mas sem o espaçamento, o que é considerado incorreto:
 
 ```php
 <?php
@@ -3268,10 +3052,18 @@ class AbstractService
 {        
     protected function update($id, array $dados)
     {         
-        foreach($dados as $key=>$value){
-            //Código
-        }
-    }
+
+
+
+```php
+foreach($dados as $key=>$value){
+
+    //Código
+
+}
+
+}
+
 }
 ```
 
@@ -3323,12 +3115,15 @@ class AbstractService
         try{
             //Código
         }
+
         catch(\InvalidArgumentException $e){
             //Código
         }
+
         catch(\ArithmeticError|Exception $e){
             //Código
         }
+
         finally{
             //Código
         }
@@ -3353,7 +3148,6 @@ class AbstractService
 
 $i++;
 ++$j;
-
 $i--;
 --$i
 ```
@@ -3367,7 +3161,6 @@ $i--;
 
 $i ++;
 ++ $j;
-
 $i --;
 -- $i
 ```
@@ -3401,7 +3194,10 @@ class AbstractService
     {         
         (int)$id;
     }
-```## 二元运算符
+}
+```
+
+## 二元运算符
 
 所有的算术、比较、赋值、位运算、逻辑运算符**必须**在前面和后面至少有一个空格。正确示例如下：
 
@@ -3433,7 +3229,9 @@ class AbstractService
         $result=$id+$dados;
     }
 }
-```## 三元运算符
+```
+
+## 三元运算符
 
 条件运算符（简单称为三元运算符）**必须**在 `?` 和 `:` 周围至少各有一个空格。正确示例如下：
 
@@ -3481,6 +3279,7 @@ class AbstractService
         $result = $id ?: 0;
     }
 }
+```
 
 ### 规则 41
 
@@ -3531,9 +3330,6 @@ class UsuarioController
     }
 }
 ```
-
-
-
 
 上一个例子恰恰演示了不应该做的事情。不要这样缩进代码，即使它可以运行。如果你这样做，你的代码将不符合 `PSR-12`。
 
@@ -3621,7 +3417,7 @@ $closureComUmParametroEVariasVariaveis = function ($param1) use (
 };
 ```
 
-注意每个种情况是如何进行缩进和间距的。接下来来看一个示例，在该示例中，当闭合直接用于函数调用或作为方法的参数时，格式规则同样适用：
+注意每个种情况是如何进行缩进和间距的。接下来来看一个示例，在该示例中，当闭包直接用于函数调用或作为方法的参数时，格式规则同样适用：
 
 ```php
 <?php
@@ -3677,11 +3473,11 @@ $instance = new class extends AbstractClass implements
 
 起初代码看起来可能很奇怪，但随着时间的推移，你会习惯的，甚至记住每条规则是如何应用的。让我们继续前进，了解 `PSR-13` 及其规则。
 
-第 12 章
+# 第 12 章
 
 # PSR-13 (链接定义接口)
 
-此 PSR 规定了一种简单且通表示超媒体链接的方法，无论使用何种序列化格式，允许应用程序以一种或多种格式序列化带有超媒体链接的响应。
+此 PSR 规定了一种简单且通用的方式表示超媒体链接，无论使用何种序列化格式，允许应用程序以一种或多种格式序列化带有超媒体链接的响应。
 
 ## 12.1 规则
 
@@ -3711,7 +3507,7 @@ $instance = new class extends AbstractClass implements
 
 ### 规则 5
 
-链接关系被定义为字符串，在公开定义关系的情况下为简单的关键字，在私有关系的情况下为绝对 `URI`。如果使用了简单的关键字，它必须匹配 `IANA (http://www.iana.org/assignments/link-relations/link-relations.xhtml)` 中的记录。可选地，也可以可以使用来自 `http://microformats.org/wiki/existing-rel-values` 的记录。
+链接关系被定义为字符串，在公开定义关系的情况下为简单的关键字，在私有关系的情况下为绝对 `URI`。如果使用了简单的关键字，它必须匹配 `IANA (http://www.iana.org/assignments/link-relations/link-relations.xhtml)` 中的记录。可选地，也可以使用来自 `http://microformats.org/wiki/existing-rel-values` 的记录。
 
 ### 规则 6
 
@@ -3724,10 +3520,6 @@ $instance = new class extends AbstractClass implements
 不支持 `URI` 模型的序列化器必须忽略它找到的任何模型链接。
 
 ### 规则 8
-
-
-
-
 
 ## 可演化的提供者
 
@@ -3749,6 +3541,12 @@ PSR-13 允许对象像 PSR-7 对象一样进行演化。因此，包含了一个
 
 ### `Psr\Link\LinkInterface`
 
+
+
+# PSR-13 (链接)
+
+## `Psr\Link\LinkInterface`
+
 ```php
 <?php
 
@@ -3763,7 +3561,7 @@ interface LinkInterface
 }
 ```
 
-### `Psr\Link\EvolvableLinkInterface`
+## `Psr\Link\EvolvableLinkInterface`
 
 ```php
 <?php
@@ -3780,7 +3578,7 @@ interface EvolvableLinkInterface extends LinkInterface
 }
 ```
 
-### `Psr\Link\LinkProviderInterface`
+## `Psr\Link\LinkProviderInterface`
 
 ```php
 <?php
@@ -3794,7 +3592,7 @@ interface LinkProviderInterface
 }
 ```
 
-### `Psr\Link\EvolvableLinkProviderInterface`
+## `Psr\Link\EvolvableLinkProviderInterface`
 
 ```php
 <?php
@@ -3808,7 +3606,7 @@ interface EvolvableLinkProviderInterface extends LinkProviderInterface
 }
 ```
 
-### 结论
+## 结论
 
 我们到达了 PSR-13 的结尾，它定义了一组用于定义链接的接口。PSR 本身并不大，看起来有些混乱，但在实践中，当应用这些概念时，它并不复杂。
 
@@ -3887,10 +3685,6 @@ interface EvolvableLinkProviderInterface extends LinkProviderInterface
 
 ### 规则 10
 
-
-
-
-
 `Dispatcher` 是一个实现了 `EventDispatcherInterface` 接口的服务对象。它负责从 `Listener Provider` 获取用于分发事件的 `Listeners`，并带事件调用每个 `Listener`。
 
 一个 `Dispatcher`：
@@ -3917,10 +3711,6 @@ interface EvolvableLinkProviderInterface extends LinkProviderInterface
 
 `Dispatcher` 可以获取一个对象以进行注册、允许采取额外措施等，但随后它必须重建原始项。
 
-```
-
-```
-
 ### 规则 15
 
 `Listener Provider` 是一个服务对象，负责确定哪些 `Listeners` 对于特定事件是相关的并且应该被调用。它可以既确定哪些 `Listeners` 是相关的，也可以决定它们返回的顺序。
@@ -3944,7 +3734,7 @@ interface EvolvableLinkProviderInterface extends LinkProviderInterface
 
 `Listener Providers` 在确定 `Listener` 的适用性时，必须以与事件本身类型相同的方式处理父类型。在以下情况下：
 
-```
+```php
 <?php
 class A {}
 
@@ -4011,7 +3801,7 @@ interface StoppableEventInterface
 
 在下一章节中我们将讨论 PSR-15，它涉及被称为 `middlewares`（中间件）/`handlers`（处理器）的概念。让我们开始吧！
 
-第 14 章
+# 第 14 章
 
 # PSR-15 (HTTP 服务器请求处理器)
 
@@ -4046,10 +3836,6 @@ API 中的 `middlewares`（中间件）可以被视为在 HTTP 协议下工作�
 要使用此模式，中间件必须实现 `Psr\Http\Server\MiddlewareInterface` 接口。
 
 ### 规则 3
-
-
-
-
 
 生成响应 (Gerando Respostas) - **建议**任何生成响应的中间件或请求处理器都编写一个基于 PSR-7 的响应模型，实现 `Psr\Http\Message\ResponseInterface` 接口，甚至是一个能够生成 `Psr\Http\Message\ResponseInterface` 实例的 `factory`（工厂），以避免对特定 HTTP 消息实现的的依赖。
 
@@ -4103,6 +3889,8 @@ interface MiddlewareInterface
 
 # PSR-16 (缓存库通用接口)
 
+
+
 该 PSR 的目标是描述一个针对缓存项和缓存驱动的简单且可扩展的接口。实现**可以**为对象装饰比建议更多的功能，但这些实现**必须**首先完成接口定义的功能。
 
 缓存是提高任何应用程序性能的方法，使得缓存应用程序/库成为许多框架中最常见的特征之一。在这一层实现互操作性，意味着我们可以针对应用程序实现特定的缓存，并信任框架或任何其他缓存库发送到缓存中的内容。
@@ -4115,25 +3903,25 @@ interface MiddlewareInterface
 
 ### 规则 1
 
-调用库 (Chamando na Aplicação) - 真正需要使用缓存服务的应用程序或代码应实现标准接口 `Psr\SimpleCache\CacheInterface`，否则它将不知道缓存服务的存在。
+调用库 - 真正需要使用缓存服务的应用程序或代码应实现标准接口 `Psr\SimpleCache\CacheInterface`，否则它将不知道缓存服务的存在。
 
 ### 规则 2
 
-实现库 (Implementing na Aplicação) - 应用程序负责实现 PSR 建立的标准，旨在以简单的方式为任何应用程序或代码提供缓存服务。实现**必须**提供实现 `Psr\SimpleCache\CacheInterface` 接口的类。库的实现**必须**至少支持 `TTL (生存时间)` 功能。
+实现库 - 应用程序负责实现 PSR 建立的标准，旨在以简单的方式为任何应用程序或代码提供缓存服务。实现**必须**提供实现 `Psr\SimpleCache\CacheInterface` 接口的类。库的实现**必须**至少支持 `TTL (生存时间)` 功能。
 
 ### 规则 3
 
-TTL (生存时间) - 每个缓存项都有我们所说的生命周期，这个时间决定了特定项是否过期。`TTL` 由一个表示秒秒的整数定义，或由一个 `DateInterval` 对象定义。
+TTL (生存时间) - 每个缓存项都有我们所说的生命周期，这个时间决定了特定项是否过期。`TTL` 由一个表示秒数的整数定义，或由一个 `DateInterval` 对象定义。
 
 ### 规则 4
 
-过期 (Expiração) - 这是缓存过期的定义时间，通常通过在存储特定对象的时间上加上 `TTL (生存时间)` 计算得出。时间也可以通过 `DateTime` 对象添加，例如，一个 `TTL` 为 300 秒且在 09:00:00 存储的缓存项，其过期时间为 09:05:00，也就是说，它在过期之前还有 5 分钟的时间。
+过期 - 这是缓存过期的定义时间，通常通过在存储特定对象的时间上加上 `TTL (生存时间)` 计算得出。时间也可以通过 `DateTime` 对象添加，例如，一个 `TTL` 为 300 秒且在 09:00:00 存储的缓存项，其过期时间为 09:05:00，也就是说，它在过期之前还有 5 分钟的时间。
 
 应用程序**可以**在设定的过期时间之前使项失效，但在达到定义的过期时间时，应用程序**必须**将其视为已过期。如果应用程序传递一个项且没有指定 `TTL (生存时间)`，则可以使用默认的过期时间。
 
 ### 规则 5
 
-键 (Key) - 定义缓存项的键，该名称对于每个缓存项必须是唯一的。库**必须**支持 A-Z、a-z、0-9、下划线 (`_`) 和点 (`.`) 以及任何 UTF-8 编码，且键名最大为 64 个字符。
+键 - 定义缓存项的键，该名称对于每个缓存项必须是唯一的。库**必须**支持 A-Z、a-z、0-9、下划线 (`_`) 和点 (`.`) 以及任何 UTF-8 编码，且键名最大为 64 个字符。
 
 应用程序**可以**支持其他字符、编码以及更大的名称。应用程序还将负责返回未经修改的键序列。
 
@@ -4162,10 +3950,6 @@ TTL (生存时间) - 每个缓存项都有我们所说的生命周期，这个�
 *   `Null` - 空值，尽管在读取时无法与缓存缺失区分来。
 *   `Arrays` - 任何深度的索引数组、关联数组和多维数组。
 *   `Object` - 任何支持无损序列化和反序列化的对象，使得 `$object == unserialize(serialize($object))` true。对象**可以**利用 PHP 的魔术方法 `sleep()` 或 `wakeup()`。
-
-
-
-
 
 传递给应用的所有数据**必须**以传入相同的方式返回。这意味着，如果应用传递了一个值为（字符串）"10"的变量，它**必须**返回值（string）"10"，而不是整数（int）值 10。
 
@@ -4235,7 +4019,7 @@ PSR-16 定义了一个通用接口，用于简单地处理缓存并与同样处�
 
 在下一章我们将讨论 PSR-17，它通过 `HTTP Factory` 创建由 PSR-7 定义的对象。
 
-第 16 章
+## 第 16 章
 
 # PSR-18 (HTTP Client)
 
@@ -4330,10 +4114,6 @@ interface ClientExceptionInterface extends \Throwable
 
 此接口负责在请求失败时抛出异常。
 
-
-
-
-
 ```php
 <?php
 namespace Psr\Http\Client;
@@ -4366,7 +4146,7 @@ interface NetworkExceptionInterface extends ClientExceptionInterface
 
 正如我们所看到的，这是一个非常直观的 PSR，它展示了我们如何拥有一个与 PSR-7 兼容的 `HTTP` 请求发送接收通用接口，使得库更具重用性，并大幅减少了依赖的数量。
 
-# 第 17 章
+## 第 17 章
 
 # PSR-17 (HTTP 工厂)
 
@@ -4457,7 +4237,8 @@ $resource = fopen('php://temp', 'r+');
 
 该接口负责为已上传的文件创建流，即文件上传。
 
-```php<?php
+```php
+<?php
 namespace Psr\Http\Message;
 
 use Psr\Http\Message\StreamInterface;
@@ -4479,7 +4260,8 @@ interface UploadedFileFactoryInterface
 
 该接口负责为客户端和服务器请求创建 URI。
 
-```php<?php
+```php
+<?php
 namespace Psr\Http\Message;
 
 use Psr\Http\Message\UriInterface;
@@ -4492,6 +4274,8 @@ interface UriFactoryInterface
 
 # 结语
 
+
+
 尽管这个 PSR 并不大且没有规则定义，但上述描述接口具有创建 PSR-7 定义的 `HTTP` 对象的能力。在下一章中，我们将看到 PSR-18，它描述了发送和接收 `HTTP` 请求的接口。
 
 # 第 18 章
@@ -4501,4 +4285,3 @@ interface UriFactoryInterface
 正如我们在书中看到的，每个 PSR 都定义了一组规范并具有其特性。我们学习了如何通过 PSR-2 让代码更具可读性，如何通过 PSR-3 实现日志写入标准，还看到了如何通过 PSR-7 标准化我们的请求，以及许多可以让开发者生活更简单的良好实践。
 
 最后，希望你喜欢这本书，并获得了关于良好实践的卓越知识。
-

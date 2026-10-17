@@ -1,8 +1,5 @@
-## 气候危机计算建模应用
 
-
-
-
+# 气候危机计算建模应用
 
 **Utku Kose**
 
@@ -13,14 +10,9 @@
 
 *印度德里，玛哈拉贾·阿格拉森理工学院计算机科学与工程系*
 
-Utku Kose
-土耳其伊斯帕尔塔，苏莱曼·德米雷尔大学工程学院计算机工程系
-美国北达科他州大福克斯，北达科他大学
-Deepak Gupta
-印度德里，玛哈拉贾·阿格拉森理工学院计算机科学与工程系
-Jose Antonio Marmolejo-Saucedo
-墨西哥墨西哥城，墨西哥国立自治大学工程学院
-前言
+**Jose Antonio Marmolejo-Saucedo**
+
+*墨西哥墨西哥城，墨西哥国立自治大学工程学院*
 
 ## 前言
 
@@ -44,41 +36,31 @@ Utku Kose, Deepak Gupta and Jose Antonio Marmolejo-Saucedo
 
 气候是所有生物体福祉和存在的重要因素。它影响着世代的福祉和自然资源的可持续性。在历史上，气候在温度水平和天气模式方面一直处于不断变化的自然状态。但人类活动和工业革命在 20 世纪加速，导致了更多负面变化，使气候变化转变为生存危机。考虑到尤其是化石燃料的强烈使用和高科技，温室气体排放开始导致温度值持续上升。此外，今天的气候带来了更多极端事件，如风暴、龙卷风和热浪。冰川正在融化，海平面正以意想不到的水平上升。所有这些情况都是对人类、动物和栖息地的生存威胁，而它们都是可持续生活的重要组成部分。因此，气候危机已拉响红色警报，并且正在全球范围内进行激烈努力，以找到降低人类活动以及高科技影响的适当解决方案。简而言之，气候危机是一个需要全社会各领域关注的问题。在这些努力中，仍有希望建立有效的研究应用，目标是优化活动和自然资源的使用，以使未来一段时期的气候变化保持稳定。在这一点上，告知公众最新的学术科学发展并了解更多关于积极成果的信息很重要。
 
-
-
-
-
-本书 *Computational Modeling Applications for Climate Crisis* 提供了一部最新汇编，涵盖了应用于气候变化问题的建模视角。本书的动机建立在研究视角之上，这些视角考虑气候组成部分的数学方面，以便最终得出描述性或预测性结果。正如生命本身就是数学现象的混合体一样，使用替代的计算模型非常重要，这些模型有助于评估气候的动态。我们还认为，计算建模应与最新出现的技术相结合，以便增强解决方案设计的[content]
-
 本书 *Computational Modeling Applications for Climate Crisis* 提供了一部最新汇编，涵盖了应用于气候变化问题的建模视角。本书的动机建立在研究视角之上，这些视角考虑气候组成部分的数学方面，以便最终得出描述性或预测性结果。正如生命本身就是数学现象的混合体一样，使用替代的计算模型非常重要，这些模型有助于评估气候的动态。我们还认为，计算建模应与最新出现的技术相结合，以便增强解决方案设计的能力。在此背景下，本书共收录了 12 章，汇集了世界各地作者的科研成果。总的来说，本书不仅涵盖了研究性研究，还在计算建模与气候危机关系方面提供了广泛的综述性工作。详细而言，主题包括降水预测、降雨预测、零碳足迹、气象干旱和一般天气预报等具体研究问题。本书还提供了关于农业和旅游业计算建模的观点。此外，在气候变化时期，关于负责任的技术使用和可持续性的讨论也是可见的。由于人工智能揭示了针对具有挑战性问题的创新计算解决方案技术，因此部分章节也专门致力于此。这些章节包括传统机器学习、量子机器学习、深度学习、多智能体系统以及优化导向方法的运用。
 
 可以看出，涵盖生命的活跃动态正在迅速变化，这导致气候危机相应地扩大。为了应对气候危机，一种方法是借助模型解释系统参数、分析数据并开发先进技术。本书收录了最新的进展，使读者能够了解当前状况并鼓励他们思考进一步的研究机会。我们希望这部参考著作对国际读者有用，并有助于建立更美好的未来。我们要感谢所有尊敬的作者，他们使本图书项目取得成功。我们还要感谢 Dr. Jafar Alzubi 撰写的序言，其中包含关于气候变化的宝贵讨论以及对本书的赞美之词。当然，我们要特别感谢所有对气候危机研究以及应对其的替代解决方案和策略感兴趣的读者。感谢您的关注。保持警觉，并负责任！
 
-## Acknowledgement
+## 致谢
 
 Utku Kose, Deepak Gupta and Jose Antonio Marmolejo-Saucedo
 
 作为编辑，我们要感谢编辑项目经理：Himani Dwivedi，以及 Elsevier 团队在预先组织内容和出版图书方面所做的宝贵努力和大力支持。
 
-## Artificial intelligence and optimized computational modelling against climate crisis
+# 人工智能和优化计算建模应对气候危机
 
 Sachin Sharma^1, Ranu Tyagi^1 and Seshadri Mohan^2, ¹Department of Computer Science and Engineering, Graphic Era Deemed to be University, Dehradun, Uttarakhand, India, ²Systems Engineering Department, University of Arkansas at Little Rock, Little Rock, AR, United States
 
-## Abstract
+## 摘要
 
-气候危机是我们星球面临的首要沉重问题之一，应对它需要利用技术力量进行创新性行动。人工智能（AI）和优化计算建模已成为处理这一复杂问题的有前景工具。AI 可用于分析大量气候数据、识别模式并对未来气候模式做出预测。通过利用机器学习算法，研究人员可以创建更准确的气候模型，帮助政策制定者就气候行动做出明智决策。优化计算建模是应对气候危机的另一个有效工具。通过模拟气候系统及其相互作用，研究人员可以更好地理解驱动气候变化的根本机制并制定缓解其影响的策略。AI 与优化计算建模共同为理解和应对气候危机提供了有力方法。然而，其使用也存在重要挑战。这些包括数据安全、算法偏见以及利用技术做出影响人们生活的决策的伦理影响方面的担忧。AI 和优化计算建模在抗击气候变化斗争中的潜在益处是显著的。通过利用这些进展，我们将对气候危机有更深入的理解，并制定更有效的缓解其影响的策略。然而，仔细考虑其使用的伦理和社会影响并确保这些技术以负责任和公平的方式部署至关重要。
+气候危机是我们星球面临的首要沉重问题之一，应对它需要利用技术力量进行创新性行动。人工智能（`AI`）和优化计算建模已成为处理这一复杂问题的有前景工具。`AI` 可用于分析大量气候数据、识别模式并对未来气候模式做出预测。通过利用机器学习算法，研究人员可以创建更准确的气候模型，帮助政策制定者就气候行动做出明智决策。优化计算建模是应对气候危机的另一个有效工具。通过模拟气候系统及其相互作用，研究人员可以更好地理解驱动气候变化的根本机制并制定缓解其影响的策略。`AI` 与优化计算建模共同为理解和应对气候危机提供了有力方法。然而，其使用也存在重要挑战。这些包括数据安全、算法偏见以及利用技术做出影响人们生活的决策的伦理影响方面的担忧。`AI` 和优化计算建模在抗击气候变化斗争中的潜在益处是显著的。通过利用这些进展，我们将对气候危机有更深入的理解，并制定更有效的缓解其影响的策略。然而，仔细考虑其使用的伦理和社会影响并确保这些技术以负责任和公平的方式部署至关重要。
 
-## Keywords
+## 关键词
 
-Artificial intelligence; optimized computational modelling; climate crisis
+`Artificial intelligence`; `optimized computational modelling`; `climate crisis`
 
-## 1.1 Introduction
+## 1.1 引言
 
-
-
-
-
-人工智能（AI）可能是计算机科学的一个分支，涉及制造能够执行通常需要人类经验的任务的机器，例如视觉识别、语音确认、决策和方言解释（Kaack et al., 2022）。AI 系统利用算法、真实模型和计算控制来分析海量数据，从计划和设计中学习，并基于该信息做出估计或选择。气候紧急情况意味着与气候变化相关的复杂且相互关联的挑战，包括世界温度、罕见气候事件的频率和严重程度增加、海平面上升以及生物多样性的丧失（Ajagekar & You, 2022）。气候危机主要是由人类工作造成的，特别是化石燃料的燃烧、森林砍伐和农业。优化计算建模是一种用于模拟复杂系统并预测其在不同场景下行为的策略（Filho et al., 2022）。它包括创建代表系统内关键组件和见解的数值模型，并利用计算控制来模拟这些组件如何随着时间推移对不同输入和条件做出反应。AI 和优化计算建模可以用作对抗气候危机的可访问工具。通过分析来自传感器、卫星和其他来源的广泛总量数据，AI 框架可以帮助研究人员和政策制定者更好地理解气候变化如何影响不同的地区和自然系统（Entezari et al., 2023）。AI 还可以帮助识别气候数据中的计划和设计，这些计划和设计可能对个人来说并不明显，并对气候中几乎未来变化做出期望。优化计算建模可以帮助研究人员和政策制定者模拟特定政策选择或机械干预对气候的影响。这将为哪些练习最有可能对减少温室气体涌出或减少气候变化的影响产生最大影响提供指导（Rezaiy & Shabri, 2023）。总的来说，AI 和优化计算建模是有效的设备，可以帮助我们应对气候危机的挑战。通过处理这些进步的控制，我们可以开发更有效的方法来指导气候变化的影响并建立更可行的未来。
+人工智能（`AI`）可能是计算机科学的一个分支，涉及制造能够执行通常需要人类经验的任务的机器，例如视觉识别、语音确认、决策和方言解释（Kaack et al., 2022）。`AI` 系统利用算法、真实模型和计算控制来分析海量数据，从计划和设计中学习，并基于该信息做出估计或选择。气候紧急情况意味着与气候变化相关的复杂且相互关联的挑战，包括世界温度、罕见气候事件的频率和严重程度增加、海平面上升以及生物多样性的丧失（Ajagekar & You, 2022）。气候危机主要是由人类工作造成的，特别是化石燃料的燃烧、森林砍伐和农业。优化计算建模是一种用于模拟复杂系统并预测其在不同场景下行为的策略（Filho et al., 2022）。它包括创建代表系统内关键组件和见解的数值模型，并利用计算控制来模拟这些组件如何随着时间推移对不同输入和条件做出反应。`AI` 和优化计算建模可以用作对抗气候危机的可访问工具。通过分析来自传感器、卫星和其他来源的广泛总量数据，`AI` 框架可以帮助研究人员和政策制定者更好地理解气候变化如何影响不同的地区和自然系统（Entezari et al., 2023）。`AI` 还可以帮助识别气候数据中的计划和设计，这些计划和设计可能对个人来说并不明显，并对气候中几乎未来变化做出期望。优化计算建模可以帮助研究人员和政策制定者模拟特定政策选择或机械干预对气候的影响。这将为哪些练习最有可能对减少温室气体涌出或减少气候变化的影响产生最大影响提供指导（Rezaiy & Shabri, 2023）。总的来说，`AI` 和优化计算建模是有效的设备，可以帮助我们应对气候危机的挑战。通过处理这些进步的控制，我们可以开发更有效的方法来指导气候变化的影响并建立更可行的未来。
 
 ## 1.2 气候危机的概述
 
@@ -86,155 +68,155 @@ Artificial intelligence; optimized computational modelling; climate crisis
 
 ## 1.3 拟议方法
 
-AI 和优化计算角色在应对气候紧急情况中发挥着至关重要的作用。以下是这些技术可以被提出和连接的几种方式：
-* • 升级气候模型：利用 AI 通过整合机器学习算法来推进气候模型，这些算法可以分析无尽数量的气候信息。这将导致对未来气候场景的更精确预测和模拟。
-* • 早期警告系统：开发 AI 驱动的早期警告系统，用于极端气候现象，例如台风、洪水和干旱。这些系统可以帮助社区更有效地准备和应对。
-* • 智能网络：在智能系统的管理中实施 AI，以优化能源分配、减少能源损失并更有效地整合可再生能源来源。
-* • 建筑能源管理：利用 AI 通过预测分析、智能传感器和自动化控制系统来优化建筑物的能源利用。
-* • 电网整合：利用 AI 来优化可再生能源来源与电力网络的整合，平衡供需以确保稳定可靠的能源供应。
-* • 能源储存优化：利用 AI 来优化能源储存系统，预测需求模式，并有效管理能源储存资源。
-* • 优化碳捕获：应用 AI 来优化碳捕获和储存的过程，使其更高效且更具成本效益。
-* • 监测和验证：利用 AI 来监测和验证碳捕获和封存项目的有效性，确保捕获的碳安全储存。
-* • 精准农业：在农业中实施 AI 用于精确耕作，优化资源利用，减少浪费并最大限度地减少环境影响。
-* • 森林监测：利用 AI 来监测和管理森林，识别森林砍伐、评估生物多样性并识别非法采伐。
-* • 基础设施规划：利用 AI 来规划和设计能够适应气候变化影响的基础设施，例如海平面上升、极端气候事件和不断变化的降水模式。
-* • 供应链韧性：应用 AI 来评估和改善供应链对气候相关干扰的韧性。
-* • 情景分析：利用 AI 来分析不同的气候变化情景及其潜在影响，为政策制定者提供数据驱动的决策洞察。
-* • 政策优化：利用 AI 来优化政策干预并识别减缓和适应气候变化的最有效策略。
-* • 公众意识和参与：开发 AI 驱动的教育工具以提高人们对气候变化、其原因和潜在解决方案的认识。
-* • 社区参与：利用 AI 来促进社区参与和协作，以应对当地气候挑战。
+`AI` 和优化计算角色在应对气候紧急情况中发挥着至关重要的作用。以下是这些技术可以被提出和连接的几种方式：
 
-流程图包括以下步骤：
+*   升级气候模型：利用 `AI` 通过整合机器学习算法来推进气候模型，这些算法可以分析无尽数量的气候信息。这将导致对未来气候场景的更精确预测和模拟。
+*   早期警告系统：开发 `AI` 驱动的早期警告系统，用于极端气候现象，例如台风、洪水和干旱。这些系统可以帮助社区更有效地准备和应对。
+*   智能网络：在智能系统的管理中实施 `AI`，以优化能源分配、减少能源损失并更有效地整合可再生能源来源。
+*   建筑能源管理：利用 `AI` 通过预测分析、智能传感器和自动化控制系统来优化建筑物的能源利用。
+*   电网整合：利用 `AI` 来优化可再生能源来源与电力网络的整合，平衡供需以确保稳定可靠的能源供应。
+*   能源储存优化：利用 `AI` 来优化能源储存系统，预测需求模式，并有效管理能源储存资源。
+*   优化碳捕获：应用 `AI` 来优化碳捕获和储存的过程，使其更高效且更具成本效益。
+*   监测和验证：利用 `AI` 来监测和验证碳捕获和封存项目的有效性，确保捕获的碳安全储存。
+*   精准农业：在农业中实施 `AI` 用于精确耕作，优化资源利用，减少浪费并最大限度地减少环境影响。
+*   森林监测：利用 `AI` 来监测和管理森林，识别森林砍伐、评估生物多样性并识别非法采伐。
+*   基础设施规划：利用 `AI` 来规划和设计能够适应气候变化影响的基础设施，例如海平面上升、极端气候事件和不断变化的降水模式。
+*   供应链韧性：应用 `AI` 来评估和改善供应链对气候相关干扰的韧性。
+*   情景分析：利用 `AI` 来分析不同的气候变化情景及其潜在影响，为政策制定者提供数据驱动的决策洞察。
+*   政策优化：利用 `AI` 来优化政策干预并识别减缓和适应气候变化的最有效策略。
+*   公众意识和参与：开发 `AI` 驱动的教育工具以提高人们对气候变化、其原因和潜在解决方案的认识。
+*   社区参与：利用 `AI` 来促进社区参与和协作，以应对当地气候挑战。
+
+### 流程图包括以下步骤：
+
+#### `AI` 应用领域
+
+*   信息收集：从不同来源收集气候信息，包括卫星、传感器和气候监测站。
+*   信息预处理：利用 `AI` 算法对收集到的信息进行预处理和清洗，处理缺失值和异常。
+*   气候建模：应用优化的计算模型，结合 `AI` 方法以提高气候模型的精度。
+*   预测和重现：利用 `AI` 预测未来气候情景并重现气候变化的影响。
+*   早期预警框架：集成 `AI` 算法，基于气候模型预测建立极端气候现象的早期预警系统。
+*   能源效率：应用 `AI` 优化能源使用和分配。
+*   实施智能电网和构建能源管理系统。
+*   可再生能源整合：利用 `AI` 实现可再生能源源高效接入电网。
+*   碳捕获与封存：应用 `AI` 优化碳捕获过程。开发 `AI` 驱动的监测系统用于验证。
+*   自然资源管理：利用 `AI` 实现农业精准化以优化资源利用，并实施基于 `AI` 的森林监测用于生物多样性和非法活动检测。
+*   气候变化适应：利用 `AI` 规划和设计 resilient 基础设施。利用 `AI` 算法优化供应链韧性。
+*   政策和决策支持：利用 `AI` 分析气候变化情景。应用 `AI` 优化政策干预。
+*   公众意识和参与：创建 `AI` 驱动的教育工具。通过 `AI` 平台促进社区参与。
+*   反馈循环：实施反馈循环以基于真实世界数据和变化条件持续改进模型。
+
+## 拟议最优计算模型
 
 
 
+# 计算模型与算法描述
 
+The proposed optimal computational model includes a computationally scalable algorithm suitable for handling complex real-world problems. The proposed algorithm is a population-based algorithm to solve problems with continuous values. The proposed algorithm can be widely applied as an optimization algorithm to solve complex problems in various engineering fields. The proposed algorithm and meta-heuristic algorithms, such as genetic algorithms, have similar operators, including crossover, mutation, and selection. However, there are some differences between them, such as that there is no preferential local search in the genetic algorithm, while the proposed algorithm supports preferential local search using different operators. In addition, the proposed algorithm is based on mutation operation, while the genetic algorithm is based on hybridization. Like other evolutionary algorithms, the proposed algorithm starts by randomly generating an initial population of 0 without a climate crisis. Then, after initialization, the search space is expanded by mutation.
 
-## AI 应用领域
+`CC[i]` 是 `EE[j]` 的变异解向量，基于公式 (1–1) 计算：
 
-*   • 信息收集：从不同来源收集气候信息，包括卫星、传感器和气候监测站。
-*   • 信息预处理：利用 AI 算法对收集到的信息进行预处理和清洗，处理缺失值和异常。
-*   • 气候建模：应用优化的计算模型，结合 AI 方法以提高气候模型的精度。
-*   • 预测和重现：利用 AI 预测未来气候情景并重现气候变化的影响。
-*   • 早期预警框架：集成 AI 算法，基于气候模型预测建立极端气候现象的早期预警系统。
-*   • 能源效率：应用 AI 优化能源使用和分配。
-*   • 实施智能电网和构建能源管理系统。
-*   • 可再生能源整合：利用 AI 实现可再生能源源高效接入电网。
-*   • 碳捕获与封存：应用 AI 优化碳捕获过程。开发 AI 驱动的监测系统用于验证。
-*   • 自然资源管理：利用 AI 实现农业精准化以优化资源利用，并实施基于 AI 的森林监测用于生物多样性和非法活动检测。
-*   • 气候变化适应：利用 AI 规划和设计 resilient 基础设施。利用 AI 算法优化供应链韧性。
-*   • 政策和决策支持：利用 AI 分析气候变化情景。应用 AI 优化政策干预。
-*   • 公众意识和参与：创建 AI 驱动的教育工具。通过 AI 平台促进社区参与。
-*   • 反馈循环：实施反馈循环以基于真实世界数据和变化条件持续改进模型。
-
-## Proposed Optimal Computational Model
-
-The proposed optimal computational model includes a computationally scalable algorithm suitable for handling complex real-world problems. The proposed algorithm is a population-based algorithm to solve problems with continuous values. The proposed algorithm can be widely applied as an optimization algorithm to solve complex problems in various engineering fields. The proposed algorithm and meta-heuristic algorithms, such as genetic algorithms, have similar operators, including crossover, mutation, and selection. However, there are some differences between them, such as that there is no preferential local search in the genetic algorithm, while the proposed algorithm supports preferential local search using different operators. In addition, the proposed algorithm is based on mutation operation, while the genetic algorithm is based on hybridization. Like other evolutionary algorithms, the proposed algorithm starts by randomly generating an initial population of 0 without a climate crisis. Then, after initialization, the search space is expanded by mutation. `CC[i]` is the mutation solution vector of `EE[j]` calculated based on Eq. (1–1):
-
-`CC[i] = EE[j1] + O[r].(EE[j3] - EE[j2])` (1–1)
+```
+CC[i] = EE[j1] + O[r].(EE[j3] - EE[j2])  (1–1)
+```
 
 ![Equation](img/F000067si1.png)(1–1)
 
-where `O[r]` is the optimized scaling factor varying in the range \[0, 1\] and determines the length of the mutation step. `EE[j1]`, `EE[j2]`, and `EE[j3]` are solution vectors that are randomly selected, with the condition expressed by Eq. (1–2):
+其中 `O[r]` 是在范围 \[0, 1\] 内变化的优化缩放因子，决定变异步长。`EE[j1]`、`EE[j2]` 和 `EE[j3]` 是随机选择的解向量，条件由公式 (1–2) 表示：
 
-`EE[j1], EE[j2] and EE[j3] | j1 != j2 != j3 != i`
-`i = [1, 2, ..., NP]` (1–2)
+```
+EE[j1], EE[j2] and EE[j3] | j1 != j2 != j3 != i
+i = [1, 2, ..., NP]  (1–2)
+```
 
 ![Equation](img/F000067si2.png)(1–2)
 
-where `i` is the index of the current solution. The optimized trial climate vector (`C[ij]`) is produced by mixing the mutated vector and the parent vector in a crossover operation based on Eq. (1–3):
+其中 `i` 是当前解的索引。优化后的试验气候向量 (`C[ij]`) 通过交叉操作混合变异向量和父向量产生，基于公式 (1–3)：
 
-
-
-
-
-$\\begin{array}{l} {C\_{ij}{= \\text{CC}}\_{ij} A\_{k} \\leq \\text{CR},} \\\\ {or} \\\\ {C\_{ij}{= \\text{EE}}\_{ij} A\_{k} > \\text{CR},} \\\\ {k = 1,\\text{2},\\ldots\\ldots\\ldots\\ldots.., n} \\\\ \\end{array}$<mml:math><mml:mtable columnalign="left"><mml:mtr><mml:mtd><mml:msub><mml:mrow><mml:mi mathvariant="normal">C</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mo>=</mml:mo><mml:mtext>CC</mml:mtext></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mspace width=".25em"/><mml:msub><mml:mrow><mml:mi mathvariant="normal">A</mml:mi></mml:mrow><mml:mrow><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo>&#8804;</mml:mo><mml:mtext>CR</mml:mtext><mml:mo>,</mml:mo></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:mi mathvariant="normal">or</mml:mi></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:msub><mml:mrow><mml:mi mathvariant="normal">C</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mo>=</mml:mo><mml:mtext>EE</mml:mtext></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mspace width=".25em"/><mml:msub><mml:mrow><mml:mi mathvariant="normal">A</mml:mi></mml:mrow><mml:mrow><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo>&#62;</mml:mo><mml:mtext>CR</mml:mtext><mml:mo>,</mml:mo></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:mi>k</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mspace width=".25em"/><mml:mtext>2</mml:mtext><mml:mo>,</mml:mo><mml:mspace width=".25em"/><mml:mi mathvariant="normal">&#8230;</mml:mi><mml:mi mathvariant="normal">&#8230;</mml:mi><mml:mi mathvariant="normal">&#8230;</mml:mi><mml:mi mathvariant="normal">&#8230;</mml:mi><mml:mn>.</mml:mn><mml:mo>&#8230;</mml:mo><mml:mo>,</mml:mo><mml:mspace width=".25em"/><mml:mi>n</mml:mi></mml:mtd></mml:mtr></mml:mtable></mml:math> (1–3)
+```
+C_ij = CC_ij if A_k <= CR,
+or
+C_ij = EE_ij if A_k > CR,
+k = 1, 2, ..., n  (1–3)
+```
 
 ![Equation](img/F000067si3.png)(1–3)
 
-其中 `A[*k*]` 是 0 到 1 之间区间内任意选取的实数。`CR` 是交叉常数。如果 `A[*k*]` 小于或等于 `CR`，则优化后的试验气候向量 (`C[*ij*]`) 从变异解向量继承，否则，`CR` 被认为等于 `EE[*ij*]`。
+其中 `A[k]` 是在 0 到 1 之间区间内任意选取的实数。`CR` 是交叉常数。如果 `A[k]` 小于或等于 `CR`，则优化后的试验气候向量 (`C[ij]`) 从变异解向量继承，否则，`C[ij]` 被认为等于 `EE[ij]`。
 
-## 1.4 优势
+# 1.4 优势
 
 以下是对抗气候危机的人工智能和优化计算建模的优势（图 1–1）：
 
-* • 预测能力：人工智能和计算建模可以分析来自不同来源的海量信息并重建复杂框架，使我们能够对未来气候模式、气候事件和环境影响形成更精确的预期（Pekpostalci et al., 2023）。
-* • 更快的处理速度：人工智能可以实时处理大量信息，使得能够迅速应对气候模式的变化并减轻极端气候事件的影响。这也有助于识别新的气候风险并优先考虑干预措施（Alassery et al., 2022）。
-* • 改善决策：人工智能和计算建模可以为决策者提供更全面、更准确的信息，帮助他们就气候缓解和适应措施做出明智选择（Polo-Mendoza et al., 2023）。
-* • 识别趋势：人工智能可以帮助识别气候数据中的新趋势和模式，而这些对于人类来说是难以辨别的。这可以为气候变化的驱动因素提供新的见解，并有助于识别应对的新方案（Nishant et al., 2020）。
-* • 优化资源使用：计算建模可以帮助优化资源利用，例如可再生能源，以最大化效率并减少浪费。这有助于加速向低碳经济的转型（Cowls et al., 2021）。
-* • 降低成本：人工智能和计算建模可以通过优化数据收集和分析以及识别最有效的干预措施来帮助降低与气候研究和干预相关的成本（Rane, 2023）。
+* **预测能力**：人工智能和计算建模可以分析来自不同来源的海量信息并重建复杂框架，使我们能够对未来气候模式、气候事件和环境影响形成更精确的预期（Pekpostalci et al., 2023）。
+* **更快的处理速度**：人工智能可以实时处理大量信息，使得能够迅速应对气候模式的变化并减轻极端气候事件的影响。这也有助于识别新的气候风险并优先考虑干预措施（Alassery et al., 2022）。
+* **改善决策**：人工智能和计算建模可以为决策者提供更全面、更准确的信息，帮助他们就气候缓解和适应措施做出明智选择（Polo-Mendoza et al., 2023）。
+* **识别趋势**：人工智能可以帮助识别气候数据中的新趋势和模式，而这些对于人类来说是难以辨别的。这可以为气候变化的驱动因素提供新的见解，并有助于识别应对的新方案（Nishant et al., 2020）。
+* **优化资源使用**：计算建模可以帮助优化资源利用，例如可再生能源，以最大化效率并减少浪费。这有助于加速向低碳经济的转型（Cowls et al., 2021）。
+* **降低成本**：人工智能和计算建模可以通过优化数据收集和分析以及识别最有效的干预措施来帮助降低与气候研究和干预相关的成本（Rane, 2023）。
 
 ![Figure 1–1 Advantages.](img/F000067f01-01-9780443219054.jpg)
 
 图 1–1 优势。
 
-## 1.5 劣势
+# 1.5 劣势
 
 以下是对抗气候危机的人工智能和优化计算建模的劣势（图 1–2）：
 
-* • 数据偏差：人工智能模型的好坏取决于其训练数据的质量，如果数据存在偏见或不完整，模型的预测可能错误或具有误导性。这可能导致对气候变化原因和影响的错误假设。
-* • 缺乏人工输入：人工智能模型可能完全基于数据输入构建，而不考虑更广泛的背景和人类价值观。这可能导致解决方案优先考虑效率而非价值，或未能考虑社会和环境影响的全部范围。
-* • 复杂性：人工智能和计算模型可能非常复杂，使得非专业人士难以理解和评估其结果。这将使向政策制定者和公众传达研究成果变得困难（Rezaiy and Shabri, 2023）。
-* • 技术挑战：人工智能和计算建模需要大量的专业知识、系统和资源。这可能限制小型组织或发展中国家获取这些工具的能力，因为它们可能没有资源投入这些技术（Bliss et al., 2021）。
-* • 能源消耗：运行人工智能模型和模拟所需的计算能力会消耗大量能源，导致温室气体排放并加剧气候危机。
-* • 伦理问题：人工智能和计算建模会引发与隐私、透明度和责任相关的伦理问题。在气候政策的背景下，这些问题可能尤为重要，因为决策对人类社会和生态系统具有深远影响（Hernández et al., 2022）。
+* **数据偏差**：人工智能模型的好坏取决于其训练数据的质量，如果数据存在偏见或不完整，模型的预测可能错误或具有误导性。这可能导致对气候变化原因和影响的错误假设。
+* **缺乏人工输入**：人工智能模型可能完全基于数据输入构建，而不考虑更广泛的背景和人类价值观。这可能导致解决方案优先考虑效率而非价值，或未能考虑社会和环境影响的全部范围。
+* **复杂性**：人工智能和计算模型可能非常复杂，使得非专业人士难以理解和评估其结果。这将使向政策制定者和公众传达研究成果变得困难（Rezaiy and Shabri, 2023）。
+* **技术挑战**：人工智能和计算建模需要大量的专业知识、系统和资源。这可能限制小型组织或发展中国家获取这些工具的能力，因为它们可能没有资源投入这些技术（Bliss et al., 2021）。
+* **能源消耗**：运行人工智能模型和模拟所需的计算能力会消耗大量能源，导致温室气体排放并加剧气候危机。
+* **伦理问题**：人工智能和计算建模会引发与隐私、透明度和责任相关的伦理问题。在气候政策的背景下，这些问题可能尤为重要，因为决策对人类社会和生态系统具有深远影响（Hernández et al., 2022）。
 
 ![Figure 1–2 Disadvantages.](img/F000067f01-02-9780443219054.jpg)
 
 图 1–2 劣势。
 
-## 1.6 特征
+# 1.6 特征
 
 以下是对抗气候危机的人工智能和优化计算建模的特征（图 1–3）：
 
-* • 机器学习：人工智能系统可以从数据中学习，并在不被明确编程的情况下随着时间的推移提高其性能。
-* • 自然语言处理：人工智能系统可以理解和解释人类语言。
-* • 计算机视觉：人工智能系统可以分析和解释视觉数据，例如图像和视频。
-* • 机器人技术：人工智能系统可以控制机器执行物理任务，例如装配线生产和太空探索。
-* • 决策：人工智能系统可以根据数据分析和逻辑推理做出决策。
-* • 气候建模：计算模型可以模拟地球气候系统，包括大气、海洋、陆地表面和冰盖，以预测气候变化的影响（Ali & Thakkar, 2023）。
-
-
-
-
-
-可再生能源优化：AI 可用于优化可再生能源框架的规划和运行，例如风能和太阳能控制，以最大化其效率并降低成本。
-
-碳捕获与储存：计算模型可用于设计和优化碳捕获与储存框架，该框架捕获来自发电厂和其他来源的二氧化碳排放并将其储存在地下。
-
-可持续农业：AI 可帮助优化农业实践以减少温室气体排放、增加粮食生产并保护自然资源。
-
-灾害预测与管理：AI 可帮助预测和管理自然灾害的影响，例如洪水和干旱，这些灾害由于气候变化而可能在频率和严重程度上增加。
+* **机器学习**：人工智能系统可以从数据中学习，并在不被明确编程的情况下随着时间的推移提高其性能。
+* **自然语言处理**：人工智能系统可以理解和解释人类语言。
+* **计算机视觉**：人工智能系统可以分析和解释视觉数据，例如图像和视频。
+* **机器人技术**：人工智能系统可以控制机器执行物理任务，例如装配线生产和太空探索。
+* **决策**：人工智能系统可以根据数据分析和逻辑推理做出决策。
+* **气候建模**：计算模型可以模拟地球气候系统，包括大气、海洋、陆地表面和冰盖，以预测气候变化的影响（Ali & Thakkar, 2023）。
+* **可再生能源优化**：AI 可用于优化可再生能源框架的规划和运行，例如风能和太阳能控制，以最大化其效率并降低成本。
+* **碳捕获与储存**：计算模型可用于设计和优化碳捕获与储存框架，该框架捕获来自发电厂和其他来源的二氧化碳排放并将其储存在地下。
+* **可持续农业**：AI 可帮助优化农业实践以减少温室气体排放、增加粮食生产并保护自然资源。
+* **灾害预测与管理**：AI 可帮助预测和管理自然灾害的影响，例如洪水和干旱，这些灾害由于气候变化而可能在频率和严重程度上增加。
 
 ![Figure 1–3 Characteristics.](img/F000067f01-03-9780443219054.jpg)
 
 Figure 1–3 Characteristics.
 
-## 1.7 Challenges
+# 1.7 挑战
 
 以下是对抗气候危机的 人工智能 和优化计算建模的挑战（Fig. 1–4）：
 
-* 信息偏见：AI 框架依赖于大量数据来学习和做出决策，但如果数据有偏见，AI 系统的输出也会有偏见。
-* 透明度需求：许多 AI 框架是黑箱，使得难以理解其工作原理，并使识别错误或偏见变得困难。
-* 安全性和可靠性：AI 框架可能出现意外行为或犯错，导致安全问题和对其可靠性的怀疑。
-* 方向和道德：很少有控制措施规范 AI 的开发和利用，道德问题，例如隐私和歧视，必须仔细考虑。
-* 可扩展性：AI 框架可能计算密集，使得难以扩展以处理大型数据集或复杂任务。
-* 数据有限：气候数据通常不完整、不一致或错误，使得创建精确的计算模型具有挑战性。
-* 复杂性：地球气候系统复杂，存在许多令人望而生畏的因素和反馈循环，使得精确模拟困难。
-* 不确定性：气候建模涉及许多未知因素和假设，导致预测准确性存在不确定性。
-* 资源密集：计算建模需要大量的计算能力、数据存储和人力资源，使其成本高昂且难以扩展。
-* 政策实施：即使计算模型准确预测了气候变化的影响，要实施缓解这些影响的政策也需要政治意愿和开放性。
+* **信息偏见**：AI 框架依赖于大量数据来学习和做出决策，但如果数据有偏见，AI 系统的输出也会有偏见。
+* **透明度需求**：许多 AI 框架是黑箱，使得难以理解其工作原理，并使识别错误或偏见变得困难。
+* **安全性和可靠性**：AI 框架可能出现意外行为或犯错，导致安全问题和对其可靠性的怀疑。
+* **方向和道德**：很少有控制措施规范 AI 的开发和利用，道德问题，例如隐私和歧视，必须仔细考虑。
+* **可扩展性**：AI 框架可能计算密集，使得难以扩展以处理大型数据集或复杂任务。
+* **数据有限**：气候数据通常不完整、不一致或错误，使得创建精确的计算模型具有挑战性。
+* **复杂性**：地球气候系统复杂，存在许多令人望而生畏的因素和反馈循环，使得精确模拟困难。
+* **不确定性**：气候建模涉及许多未知因素和假设，导致预测准确性存在不确定性。
+* **资源密集**：计算建模需要大量的计算能力、数据存储和人力资源，使其成本高昂且难以扩展。
+* **政策实施**：即使计算模型准确预测了气候变化的影响，要实施缓解这些影响的政策也需要政治意愿和开放性。
 
 ![Figure 1–4 Challenges.](img/F000067f01-04-9780443219054.jpg)
 
 Figure 1–4 Challenges.
 
-## 1.8 Case study
+# 1.8 案例研究
 
-人工智能和优化计算建模对抗气候紧急情况的 一个例子是 DeepMind 项目，其中 Google 的 DeepMind 研究人员利用 AI 提高了风能发电预测的准确性。该项目利用机器学习算法分析来自天气预报、控制生产和其他来源的数据，以更准确地预测风速和风向。这使风电场能够调整其能源生产以匹配预测产量，减少对备用能源来源的依赖并提高风电场的整体效率。该项目在改进风能发电估计、降低成本和增加可再生能源利用方面取得了成功。该项目中使用的 AI 算法也应用于其他可再生能源来源，例如太阳能和水电。
+人工智能和优化计算建模对抗气候紧急情况的一个例子是 DeepMind 项目，其中 Google 的 DeepMind 研究人员利用 AI 提高了风能发电预测的准确性。该项目利用机器学习算法分析来自天气预报、控制生产和其他来源的数据，以更准确地预测风速和风向。这使风电场能够调整其能源生产以匹配预测产量，减少对备用能源来源的依赖并提高风电场的整体效率。该项目在改进风能发电估计、降低成本和增加可再生能源利用方面取得了成功。该项目中使用的 AI 算法也应用于其他可再生能源来源，例如太阳能和水电。
 
-另一个例子是利用计算建模来理解和预测气候变化对农业的影响。国际热带农业中心的研究人员开发了一个计算模型，模拟气候变化对世界多个地区作物产量的影响。他们展示了温度、降水、土壤质量和其他因素的就业数据，以预测作物将如何受到气候变化的影响。这些数据可以帮助农民和政策制定者在种植哪些作物、在哪里种植以及如何管理作物以减少气候变化对农业影响方面做出决策。该模型已被用于预测气候变化对中美洲咖啡生产的影响， rising 温度和变化的降水模式正在削弱该地区咖啡产业。该模型已被用于识别在变化的气候中最有可能存活的咖啡品种，并制定适应变化条件的策略。
+另一个例子是利用计算建模来理解和预测气候变化对农业的影响。国际热带农业中心的研究人员开发了一个计算模型，模拟气候变化对世界多个地区作物产量的影响。他们展示了温度、降水、土壤质量和其他因素的就业数据，以预测作物将如何受到气候变化的影响。这些数据可以帮助农民和政策制定者在种植哪些作物、在哪里种植以及如何管理作物以减少气候变化对农业影响方面做出决策。该模型已被用于预测气候变化对中美洲咖啡生产的影响，rising 温度和变化的降水模式正在削弱该地区咖啡产业。该模型已被用于识别在变化的气候中最有可能存活的咖啡品种，并制定适应变化条件的策略。
 
 总体而言，这些案例展示了 人工智能 和优化计算建模解决气候紧急情况的潜力，通过提高可再生能源生产的效率并帮助农民和政策制定者做出决策以减轻气候变化对农业的影响。
 
@@ -246,119 +228,121 @@ Siemens Gamesa 利用计算建模工具来设计和优化风电场布局。这�
 
 
 
+# Rosatom、阿里巴巴云与塔塔咨询服务：气候建模应用案例
 
+## Rosatom：北极气候适应与低碳转型
+Rosatom，俄罗斯国有原子能企业，可能启动一项综合活动，旨在利用计算建模来增强气候适应能力并应对自然挑战。
 
-Rosatom，俄罗斯国有原子活力企业，可能启动一项综合活动，旨在利用计算建模来增强气候适应能力并应对自然挑战。创建先进的计算模型以模拟原子活力方案对减少碳排放的影响。评估扩大原子活力产能的可行性和优化，以促进低碳活力转型。俄罗斯在北极地区面临气候变化带来的特殊挑战。计算模型可用于模拟冰层内气候变化，评估框架内的风险，并制定策略以在永久冻土融化和生态系统变化面前提高韧性。计算模型可用于评估将可再生活力来源（如太阳能和风能）整合到能源组合中的潜力。模拟原子与可再生活力之间的理想平衡，以实现可持续且强大的活力体系。
+*   创建先进的计算模型以模拟原子能方案对减少碳排放的影响。
+*   评估扩大原子能产能的可行性和优化，以促进低碳能源转型。
+*   俄罗斯在北极地区面临气候变化带来的特殊挑战。计算模型可用于模拟冰层内气候变化，评估基础设施内的风险，并制定策略以在永久冻土融化和生态系统变化面前提高韧性。
+*   计算模型可用于评估将可再生能源来源（如太阳能和风能）整合到能源组合中的潜力。
+*   模拟原子能与可再生能源之间的理想平衡，以实现可持续且强大的能源体系。
 
-阿里巴巴云，阿里巴巴集团的云计算部门，可能开发一个全面的气候洞察平台，利用计算建模来应对中国面临的气候挑战。利用先进的计算算法、庞大的数据集、adj. 影像和地面观测，创建高分辨率气候模型。这些模型旨在为中国各地区提供精确且本地化的气候预报。
+## 阿里巴巴云：中国高分辨率气候洞察平台
+阿里巴巴云，阿里巴巴集团的云计算部门，可能开发一个全面的气候洞察平台，利用计算建模来应对中国面临的气候挑战。
 
-塔塔咨询服务公司，印度领先的全球 IT 行政和咨询公司，可能启动一项综合计划，利用计算建模促进气候适应性和可持续发展，并开发和实施用于预测极端气候事件（如气旋、洪水和干旱）的计算模型。这些模型将利用历史数据、卫星观测和气候模拟来提升早期预警体系。利用计算建模评估气候变化对印度多个地区农业的影响。模拟不断变化的温度和降水模式，为农民和政策制定者提供可持续农业实践的见解。
+*   利用先进的计算算法、庞大的数据集、卫星影像和地面观测，创建高分辨率气候模型。
+*   这些模型旨在为中国各地区提供精确且本地化的气候预报。
 
-表 1-1 探讨了世界上污染最严重的城市的案例研究。
+## 塔塔咨询服务：印度气候适应性与可持续农业
+塔塔咨询服务公司，印度领先的全球 IT 服务和咨询公司，可能启动一项综合计划，利用计算建模促进气候适应性和可持续发展。
 
-表 1-1
+*   开发和实施用于预测极端气候事件（如气旋、洪水和干旱）的计算模型。这些模型将利用历史数据、卫星观测和气候模拟来提升早期预警体系。
+*   利用计算建模评估气候变化对印度多个地区农业的影响。模拟不断变化的温度和降水模式，为农民和政策制定者提供可持续农业实践的见解。
 
-世界上污染最严重的城市的案例研究。
+## 表 1-1 世界上污染最严重的城市的案例研究
 
-| City || Country || Population || Average AQI |
-| --- | --- | --- | --- |
-| Dammam || Saudi Arabia || 1,532,300 || 514 |
-| --- | --- | --- | --- |
-| Delhi || India || 33,807,000 || 483 |
-| Lahore || Pakistan || 14,407,000 || 371 |
-| Kolkata || India || 15,332,793 || 206 |
-| Dhaka || Bangladesh || 23,210,000 || 189 |
+| City | Country | Population | Average AQI |
+| :--- | :--- | :--- | :--- |
+| Dammam | Saudi Arabia | 1,532,300 | 514 |
+| Delhi | India | 33,807,000 | 483 |
+| Lahore | Pakistan | 14,407,000 | 371 |
+| Kolkata | India | 15,332,793 | 206 |
+| Dhaka | Bangladesh | 23,210,000 | 189 |
 
-## 1.9 机遇
+# 1.9 机遇
 
-* • 气候建模：AI 和计算建模可以帮助创建更精确和先进的地球气候框架模型，包括气候、海域和到达之间的关联。这些模型可以帮助我们更好地预测未来气候情景并指导政策和行动以减缓和适应气候变化的影响。
-* • 可再生活力：AI 可以帮助优化可再生活力体系（如太阳能和风电）的部署和运行，通过分析气候设计和预测活力需求。这将有助于使可再生活力更高效、可靠且经济有效。
-* • 农业：AI 可以帮助农户优化作物生产并减少浪费，通过提供土壤健康、天气设计和植物生长的实时数据。这可以帮助减少农业的温室气体排放并改善粮食安全。
-* • 气候风险评估：AI 可以帮助识别和评估与气候相关的风险，如海平面上升、极端天气事件和生态系统干扰。这将有助于知情决策和规划以减少这些风险并提高韧性。
-* • 碳捕获与储存：AI 可以帮助优化碳捕获与储存技术的开发和运行，这些技术可以从环境中去除二氧化碳并将其储存在地下。这可以帮助减少温室气体排放并减缓气候变化的步伐。
+*   **气候建模**：AI 和计算建模可以帮助创建更精确和先进的地球气候系统模型，包括大气、海洋和陆地之间的关联。这些模型可以帮助我们更好地预测未来气候情景并指导政策和行动以减缓和适应气候变化的影响。
+*   **可再生能源**：AI 可以帮助优化可再生能源体系（如太阳能和风电）的部署和运行，通过分析气候模式和预测能源需求。这将有助于使可再生能源更高效、可靠且经济有效。
+*   **农业**：AI 可以帮助农户优化作物生产并减少浪费，通过提供土壤健康、天气模式和植物生长的实时数据。这可以帮助减少农业的温室气体排放并改善粮食安全。
+*   **气候风险评估**：AI 可以帮助识别和评估与气候相关的风险，如海平面上升、极端天气事件和生态系统干扰。这将有助于知情决策和规划以减少这些风险并提高韧性。
+*   **碳捕获与储存**：AI 可以帮助优化碳捕获与储存技术的开发和运行，这些技术可以从环境中去除二氧化碳并将其储存在地下。这可以帮助减少温室气体排放并减缓气候变化的步伐。
 
-## 1.10 未来展望
+# 1.10 未来展望
 
 人工智能和优化计算建模在应对气候危机方面的未来前景令人鼓舞，有许多机会来提高我们对气候变化的理解，开发更高效和可持续的能源体系，并减轻气候变化对农业、自然资源和人类社区的影响。一些潜在的未来发展包括：
 
-* • 改进的预测能力：AI 和计算建模可以帮助我们更好地理解气候体系内不同变量之间的复杂关系，使我们能够对气候变化的长期影响做出更准确的预测。
-* • 提高效率和可扩展性：随着 AI 和计算建模技术的不断进步，它们将变得更高效和可扩展，使我们能够处理和分析更大数量的数据并模拟更复杂的体系。
-* • 与现实体系的更大集成：随着 AI 和计算建模变得更加先进，它们可以与现实体系（如活力网格和交通系统）更紧密地集成，以优化其效率并减少其环境影响。
-* • 更稳健的政策决策：通过为政策制定者提供有关气候变化影响以及不同减缓和适应策略有效性的更准确信息，AI 和计算建模可以帮助做出更有效的政策选择。
-* • 在保护和资源管理方面的创新应用：AI 和计算建模可用于开发更有效的保护和资源管理策略，例如识别高生物多样性价值地区或预测土地利用变化对水资源的影响。
+*   **改进的预测能力**：AI 和计算建模可以帮助我们更好地理解气候体系内不同变量之间的复杂关系，使我们能够对气候变化的长期影响做出更准确的预测。
+*   **提高效率和可扩展性**：随着 AI 和计算建模技术的不断进步，它们将变得更高效和可扩展，使我们能够处理和分析更大数量的数据并模拟更复杂的体系。
+*   **与现实体系的更大集成**：随着 AI 和计算建模变得更加先进，它们可以与现实体系（如能源网格和交通系统）更紧密地集成，以优化其效率并减少其环境影响。
+*   **更稳健的政策决策**：通过为政策制定者提供有关气候变化影响以及不同减缓和适应策略有效性的更准确信息，AI 和计算建模可以帮助做出更有效的政策选择。
+*   **在保护和资源管理方面的创新应用**：AI 和计算建模可用于开发更有效的保护和资源管理策略，例如识别高生物多样性价值地区或预测土地利用变化对水资源的影响。
 
-## 1.11 结论
+# 1.11 结论
 
 AI 和优化计算建模具有巨大的潜力来应对气候危机，通过提高我们对复杂气候体系的理解，开发更有效和经济的能源体系，并减轻气候变化对农业、自然资源和人类社区的影响。然而，这些技术面临着重大挑战，如数据偏见、透明度需求、数据有限、复杂性和不稳定性。要充分发挥 AI 和计算建模在应对气候紧急情况方面的潜力，必须解决这些挑战和道德考虑，并确保这些技术以负责任和可持续的方式开发和使用。这需要研究人员、政策制定者和公众之间的合作，以确保 AI 和计算建模以道德和负责任的方式开发和使用。随着持续的创新和进步，AI 和计算建模可以让我们更好地了解气候变化的影响并制定有效的减缓和适应策略，推动我们走向更可持续和更强大的未来。
 
-## References
+# References
 
-* Ajagekar and You, 2022 Ajagekar A, You F. *Quantum computing and quantum artificial intelligence for renewable and sustainable energy: A emerging prospect towards climate neutrality*. September 1 *Renewable & Sustainable Energy Reviews* 2022; [`doi.org/10.1016/j.rser.2022.112493`](https://doi.org/10.1016/j.rser.2022.112493).
+*   **Ajagekar and You, 2022** Ajagekar A, You F. *Quantum computing and quantum artificial intelligence for renewable and sustainable energy: A emerging prospect towards climate neutrality*. September 1 *Renewable & Sustainable Energy Reviews* 2022; [`doi.org/10.1016/j.rser.2022.112493`](https://doi.org/10.1016/j.rser.2022.112493).
+*   **Alassery et al., 2022** Alassery F, Alzahrani A, Khan AI, Irshad K, Kshirsagar SR. *基于人工智能的太阳辐射预测模型用于能源管理系统中的绿色能源利用*. August 1 *Sustainable Energy Technologies and Assessments* 2022; [`doi.org/10.1016/j.seta.2022.102060`](https://doi.org/10.1016/j.seta.2022.102060).
+*   **Ali and Thakkar, 2023** Ali AH, Thakkar R. *通过数据科学应对气候变化：理解和缓解环境危机*. December 2) *Mesopotamian Journal of Big Data* 2023; [`doi.org/10.58496/mjbd/2023/017`](https://doi.org/10.58496/mjbd/2023/017).
+*   **Bliss et al., 2021** Bliss, N., Bradley, E., & Monteleoni, C. (2021, August 12). Computing research for the climate crisis. arXiv.org. [`arxiv.org/abs/2108.05926`](https://arxiv.org/abs/2108.05926).
+*   **Cowls et al., 2021** Cowls J, Tsamados A, Taddeo M, Floridi L. *人工智能赌注：利用人工智能应对气候变化——机遇、挑战和建议*. October 18 *AI & Society* 2021; [`doi.org/10.1007/s00146-021-01294-x`](https://doi.org/10.1007/s00146-021-01294-x).
+*   **Entezari et al., 2023** Entezari A, Aslani A, Zahedi R, Noorollahi Y. *能源系统中的人工智能和机器学习：文献计量视角*. January 1 *Energy Strategy Reviews* 2023; [`doi.org/10.1016/j.esr.2022.101017`](https://doi.org/10.1016/j.esr.2022.101017).
+*   **Filho et al., 2022** Filho WL, Wall T, Mucova SAR, et al. *部署人工智能用于气候变化适应*. July 1 *Technological Forecasting and Social Change* 2022; [`doi.org/10.1016/j.techfore.2022.121662`](https://doi.org/10.1016/j.techfore.2022.121662).
+*   **Hernández et al., 2022** Hernández D, Cano J-C, Silla F, Calafate CT, Cecilia JM. *用于快速气候变化危机评估的 AI 驱动自主无人机*. *IEEE Internet of Things Journal*. 2022;9(10):7286–7297 [`doi.org/10.1109/JIOT.2021.3098379`](https://doi.org/10.1109/JIOT.2021.3098379) 15 May.
+*   **Himeur et al., 2022** Himeur Y, Rimal B, Tiwary A, Amira A. *利用人工智能和数据融合进行环境监测：综述与未来展望*. October 1 *Information Fusion* 2022; [`doi.org/10.1016/j.inffus.2022.06.003`](https://doi.org/10.1016/j.inffus.2022.06.003).
+*   **Kaack et al., 2022** Kaack LH, Donti PL, Strubell E, Kamiya G, Creutzig F, Rolnick D. *使人工智能与气候变化缓解保持一致*. June 1) *Nature Climate Change* 2022; [`doi.org/10.1038/s41558-022-01377-7`](https://doi.org/10.1038/s41558-022-01377-7).
+*   **Nishant et al., 2020** Nishant R, Kennedy M, Corbett J. *人工智能助力可持续发展：挑战、机遇与研究议程*. August 1 *International Journal of Information Management* 2020; [`doi.org/10.1016/j.ijinfomgt.2020.102104`](https://doi.org/10.1016/j.ijinfomgt.2020.102104).
+*   **Pekpostalci et al., 2023** Pekpostalci DS, Tür R, Mehr AD, Ghaffari MAV, Dąbrowska D, Nourani V. *土耳其干旱监测与预测：当代综述*. March 31 *Sustainability* 2023; [`doi.org/10.3390/su15076080`](https://doi.org/10.3390/su15076080).
+*   **Polo-Mendoza et al., 2023** Polo-Mendoza R, Martínez-Arguelles G, Peñabaena-Niebles R. *通过人工智能技术对含再生混凝土骨料的温拌沥青设计进行环境优化*. March 1 *Results in Engineering* 2023; [`doi.org/10.1016/j.rineng.2023.100984`](https://doi.org/10.1016/j.rineng.2023.100984).
+*   **Rane, 2023** Rane N. *ChatGPT 及其他生成式人工智能在可再生和可持续能源中的贡献*. January 1 *Social Science Research Network* 2023; [`doi.org/10.2139/ssrn.4597674`](https://doi.org/10.2139/ssrn.4597674).
+*   **Rezaiy and Shabri, 2023** Rezaiy R, Shabri A. *使用标准化降水指数的 W-ARIMA 模型进行干旱预测*. September 1 *Journal of Water and Climate Change* 2023; [`doi.org/10.2166/wcc.2023.431`](https://doi.org/10.2166/wcc.2023.431).
 
+---
 
+# 缩略语对照表
 
+*   `GRU`：门控循环单元
+*   `LSTM`：长短期记忆
+*   `MA`：移动平均
+*   `MAE`：平均绝对误差
+*   `MEAE`：中位数绝对误差
+*   `MSE`：均方误差
+*   `MSLE`：均方对数误差
+*   `RNN`：循环神经网络
 
+> **注**：3 个月、6 个月和 12 个月数据集的最成功模型性能值以粗体突出显示。
 
-* Alassery et al., 2022 Alassery F, Alzahrani A, Khan AI, Irshad K, Kshirsagar SR. *基于人工智能的太阳辐射预言模型用于能源管理系统中的绿色能源利用*. August 1 *Sustainable Energy Technologies and Assessments* 2022; [`doi.org/10.1016/j.seta.2022.102060`](https://doi.org/10.1016/j.seta.2022.102060).
-
-* Ali and Thakkar, 2023 Ali AH, Thakkar R. *通过数据科学应对气候变化：理解和缓解环境危机*. December 2) *Mesopotamian Journal of Big Data* 2023; [`doi.org/10.58496/mjbd/2023/017`](https://doi.org/10.58496/mjbd/2023/017).
-
-* Bliss et al., 2021 Bliss, N., Bradley, E., & Monteleoni, C. (2021, August 12). Computing research for the climate crisis. arXiv.org. [`arxiv.org/abs/2108.05926`](https://arxiv.org/abs/2108.05926).
-
-* Cowls et al., 2021 Cowls J, Tsamados A, Taddeo M, Floridi L. *人工智能赌注：利用人工智能应对气候变化——机遇、挑战和建议*. October 18 *AI & Society* 2021; [`doi.org/10.1007/s00146-021-01294-x`](https://doi.org/10.1007/s00146-021-01294-x).
-
-* Entezari et al., 2023 Entezari A, Aslani A, Zahedi R, Noorollahi Y. *能源系统中的人工智能和机器学习：文献计量视角*. January 1 *Energy Strategy Reviews* 2023; [`doi.org/10.1016/j.esr.2022.101017`](https://doi.org/10.1016/j.esr.2022.101017).
-
-* Filho et al., 2022 Filho WL, Wall T, Mucova SAR, et al. *部署人工智能用于气候变化适应*. July 1 *Technological Forecasting and Social Change* 2022; [`doi.org/10.1016/j.techfore.2022.121662`](https://doi.org/10.1016/j.techfore.2022.121662).
-
-* Hernández et al., 2022 Hernández D, Cano J-C, Silla F, Calafate CT, Cecilia JM. *用于快速气候变化危机评估的 AI 驱动自主无人机*. *IEEE Internet of Things Journal*. 2022;9(10):7286–7297 [`doi.org/10.1109/JIOT.2021.3098379`](https://doi.org/10.1109/JIOT.2021.3098379) 15 May.
-
-* Himeur et al., 2022 Himeur Y, Rimal B, Tiwary A, Amira A. *利用人工智能和数据融合进行环境监测：综述与未来展望*. October 1 *Information Fusion* 2022; [`doi.org/10.1016/j.inffus.2022.06.003`](https://doi.org/10.1016/j.inffus.2022.06.003).
-
-* Kaack et al., 2022 Kaack LH, Donti PL, Strubell E, Kamiya G, Creutzig F, Rolnick D. *使人工智能与气候变化缓解保持一致*. June 1) *Nature Climate Change* 2022; [`doi.org/10.1038/s41558-022-01377-7`](https://doi.org/10.1038/s41558-022-01377-7).
-
-* Nishant et al., 2020 Nishant R, Kennedy M, Corbett J. *人工智能助力可持续发展：挑战、机遇与研究议程*. August 1 *International Journal of Information Management* 2020; [`doi.org/10.1016/j.ijinfomgt.2020.102104`](https://doi.org/10.1016/j.ijinfomgt.2020.102104).
-
-* Pekpostalci et al., 2023 Pekpostalci DS, Tür R, Mehr AD, Ghaffari MAV, Dąbrowska D, Nourani V. *土耳其干旱监测与预测：当代综述*. March 31 *Sustainability* 2023; [`doi.org/10.3390/su15076080`](https://doi.org/10.3390/su15076080).
-
-* Polo-Mendoza et al., 2023 Polo-Mendoza R, Martínez-Arguelles G, Peñabaena-Niebles R. *通过人工智能技术对含再生混凝土骨料的温拌沥青设计进行环境优化*. March 1 *Results in Engineering* 2023; [`doi.org/10.1016/j.rineng.2023.100984`](https://doi.org/10.1016/j.rineng.2023.100984).
-
-* Rane, 2023 Rane N. *ChatGPT 及其他生成式人工智能在可再生和可持续能源中的贡献*. January 1 *Social Science Research Network* 2023; [`doi.org/10.2139/ssrn.4597674`](https://doi.org/10.2139/ssrn.4597674).
-
-* Rane, 2023 Rane N. *ChatGPT 及其他生成式人工智能在可再生和可持续能源中的贡献*. January 1 *Social Science Research Network* 2023; [`doi.org/10.2139/ssrn.4597674`](https://doi.org/10.2139/ssrn.4597674).
-
-* Rezaiy and Shabri, 2023 Rezaiy R, Shabri A. *使用标准化降水指数的 W-ARIMA 模型进行干旱预测*. September 1 *Journal of Water and Climate Change* 2023; [`doi.org/10.2166/wcc.2023.431`](https://doi.org/10.2166/wcc.2023.431).
-
-2
-
-
-*GRU*，门控循环单元；*LSTM*，长短期记忆；*MA*，移动平均；*MAE*，平均绝对误差；*MEAE*，中位数绝对误差；*MSE*，均方误差；*MSLE*，均方对数误差；*RNN*，循环神经网络。
-
-3 个月、6 个月和 12 个月数据集的最成功模型性能值以粗体突出显示。
-
-## 2.5 结论
+# 2.5 结论
 
 本章重点预测布尔杜尔省的降水水平。每日和月度降水数据表现出显著的噪声，促使我们采用 3 个月、6 个月和 12 个月 `MA` 进行预测。`GRU`、`LSTM` 和传统 `RNN` 模型被部署用于此目的。这些模型的预测性能使用 `MAE`、`MSE`、`MSLE` 和 `MEAE` 等指标进行评估。比较模型后，`GRU` 模型成为更优的执行者，特别是对于降水 3 个月和 12 个月 `MA`，在这些指标上超越了其他模型。另一方面，对于 6 个月 `MA`，`GRU` 在 `MSLE` 方面表现出色，而 `LSTM` 模型在与其它模型相比时，在 `MAE`、`MSE` 和 `MEAE` 指标方面表现出更优的性能。
 
 由于全年无雨天频率高，数据集中包含大量零值。此外，降水量在一年中并未表现出一致的上升或下降趋势；相反，它遵循明显的季节性模式。因此按日预测的效果较差，按季节预测获得了更准确的结果。
 
-## 参考文献
+# 参考文献
 
-* Altinbilek and Hatipoglu, 2020 Altinbilek D, Hatipoglu MA. Water resources development. In: Harmancioglu NB, Altinbilek D, eds. *Water resources of Turkey*. Springer International Publishing 2020;:61–84. [`doi.org/10.1007/978-3-030-11729-0_3`](https://doi.org/10.1007/978-3-030-11729-0_3).
-* Apaydin and Sattari, 2020 Apaydin H, Sattari MT. Deep-learning GIS hybrid approach in precipitation modeling based on spatio-temporal variables in the coastal zone of Turkey. *Climate Research*. 2020;81:149–165 [`doi.org/10.3354/cr01612`](https://doi.org/10.3354/cr01612).
-* Aydin and Çeli̇k, 2013 Aydin, M., & Çeli̇k, E (2013). Early detection of hazardous weather conditions in Turkey with satellite images using support vector machines and artificial neural networks. In *2013 21st signal processing and communications applications conference (SIU)* (pp. 1–4). [`doi.org/10.1109/SIU.2013.6531492`](https://doi.org/10.1109/SIU.2013.6531492).
-* Bilgili and Sahin, 2009 Bilgili M, Sahin B. Prediction of long-term monthly temperature and rainfall in Turkey. *Energy Sources, Part A: Recovery, Utilization, and Environmental Effects*. 2009;32(1):60–71 [`doi.org/10.1080/15567030802467522`](https://doi.org/10.1080/15567030802467522).
-* Chakravarty et al., 2012 Chakravarty S, Ghosh SK, Suresh CP, Dey AN, Shukla G. *Deforestation: Causes, effects and control strategies*. *Global perspectives on sustainable forest management* InTech 2012;3–28.
+*   **Altinbilek and Hatipoglu, 2020** Altinbilek D, Hatipoglu MA. Water resources development. In: Harmancioglu NB, Altinbilek D, eds. *Water resources of Turkey*. Springer International Publishing 2020;:61–84. [`doi.org/10.1007/978-3-030-11729-0_3`](https://doi.org/10.1007/978-3-030-11729-0_3).
+*   **Apaydin and Sattari, 2020** Apaydin H, Sattari MT. Deep-learning GIS hybrid approach in precipitation modeling based on spatio-temporal variables in the coastal zone of Turkey. *Climate Research*. 2020;81:149–165 [`doi.org/10.3354/cr01612`](https://doi.org/10.3354/cr01612).
+*   **Aydin and Çeli̇k, 2013** Aydin, M., & Çeli̇k, E (2013). Early detection of hazardous weather conditions in Turkey with satellite images using support vector machines and artificial neural networks. In *2013 21st signal processing and communications applications conference (SIU)* (pp. 1–4). [`doi.org/10.1109/SIU.2013.6531492`](https://doi.org/10.1109/SIU.2013.6531492).
+*   **Bilgili and Sahin, 2009** Bilgili M, Sahin B. Prediction of long-term monthly temperature and rainfall in Turkey. *Energy Sources, Part A: Recovery, Utilization, and Environmental Effects*. 2009;32(1):60–71 [`doi.org/10.1080/15567030802467522`](https://doi.org/10.1080/15567030802467522).
+*   **Chakravarty et al., 2012** Chakravarty S, Ghosh SK, Suresh CP, Dey AN, Shukla G. *Deforestation: Causes, effects and control strategies*. *Global perspectives on sustainable forest management* InTech 2012;3–28.
+
+
+
 * Cho et al., 2014 Cho, K., Van Merriënboer, B., Bahdanau, D., & Bengio, Y. (2014). On the properties of neural machine translation: Encoder-decoder approaches. *arXiv preprint*. arXiv:1409.1259.
+
 * Chung et al., 2014 Chung, J., Gulcehre, C., Cho, K., & Bengio, Y. (2014). Empirical evaluation of gated recurrent neural networks on sequence modeling. *arXiv preprint*. arXiv:1412.3555.
+
 * Climate Data, 2023 Climate Data. (2023). Data and graphs for weather & climate in Burdur. <[`en.climate-data.org/asia/turkey/burdur/burdur-184/`](https://en.climate-data.org/asia/turkey/burdur/burdur-184/)> Accessed 13.03.23.
+
 * Coban et al., 2021 Coban V, Guler E, Kilic T, Kandemir SY. Precipitation forecasting in Marmara region of Turkey. *Arabian Journal of Geosciences*. 2021;14(2):86 [`doi.org/10.1007/s12517-020-06363-x`](https://doi.org/10.1007/s12517-020-06363-x).
+
 * Davraz et al., 2019 Davraz A, Sener E, Sener S. Evaluation of climate and human effects on the hydrology and water quality of Burdur Lake, Turkey. *Journal of African Earth Sciences*. 2019;158103569 [`doi.org/10.1016/j.jafrearsci.2019.103569`](https://doi.org/10.1016/j.jafrearsci.2019.103569).
+
 * Gers et al., 2000 Gers FA, Schmidhuber J, Cummins F. Learning to forget: Continual prediction with LSTM. *Neural Computation*. 2000;12(10):2451–2471.
-
-
-
-
 
 * Haile 等，2020 Haile GG, Tang Q, Hosseini-Moghari S-M, et al. 气候变化对东非干旱模式的 projected impacts. *Earth’s Future*. 2020;8e2020EF001502 [`doi.org/10.1029/2020EF001502`](https://doi.org/10.1029/2020EF001502).
 
@@ -424,33 +408,25 @@ Carbon; climate change; ecosystem; electromagnetic field; radiation; renewable e
 
 可持续发展目标框架旨在提供社会、环境和经济进步。在 SDG 中，目标-13 涉及与碳排放相关的气候行动。它要求在生产中消除浪费并增加产量节约。
 
+这一流行病年影响了许多人的生活和生计，导致气候危机并影响全球经济损失和社会生活。这是一场未知且意外的流行病，影响了人类生活。尽管交通运输部门的 `CO[2]` 排放量显著下降了 6.4%，但在医疗行业的所有废物处置中却发现了巨大的增长。全球宣布了到 2030 年将碳排放减少一半并到 2050 年实现净零碳的紧急决定，目标为 1.5°C。巴黎协定中的一项显著声明与可持续发展目标的采纳相辅相成。
+
+科学明确指出，如果一个部门未能实现这些目标，社会的经济就会受到破坏。可持续发展目标及其目标是综合且普遍适用的，考虑到不同的国家现实、能力和发展水平，并尊重国家政策和优先事项。全球层面的雄心是能源部门实现目标。能源的生产和使用是全球温室气体排放的主要来源。在大气中，`CO[2]` 水平和其他温室气体在 2019 年创下新纪录；该年恰好是第二温暖的年份。煤炭是温室气体排放的主要来源，煤炭是人类种族的敌人，污染全球环境。
+
+在 2020 年 COVID-19 大流行期间，由于旅行禁令和经济停滞，温室气体排放出现了 6% 的大幅下降。运输排放约占石油需求的 60%，而石油需求的下降在 2020 年排放下降中贡献了最大份额（IEA, 2021 [`www.iea.org/data-and-statistics/charts/change-in-co2-emissions-by-fuel-1990-2020`](https://www.iea.org/data-and-statistics/charts/change-in-co2-emissions-by-fuel-1990-2020)）。运输区的大部分能源使用由石油提供，石油会释放有毒空气污染物和温室气体（Guttikunda & Jawahar, 2012）。医疗保健是最大的污染行业之一，约占全球温室气体总量的 5%（Sherman, 2021；Jayanthi & Muralikrishna, 2023）。电动汽车的使用将消除到 2030 年的 `CO[2]` 排放，并在连接主要城市的智能道路上建立自动烟雾探测器/传感器。COVID-19 并未暂停气候变化（CC），但当大流行消失时，预计排放将恢复到极端水平（[`www.un.org/sustainabledevelopment/climate-change/`](https://www.un.org/sustainabledevelopment/climate-change/)）。
+
+印度污染问题的又一个原因是环境 `PM[2.5]` 水平不健康，设定实现新的零碳目标是一个挑战。确保最小排放的保证将需要改造经济的
 
 
 
+# 疫情年对气候、排放与可持续发展的影响
 
-这一流行病年影响了许多人的生活和生计，导致气候危机并影响全球经济损失和社会生活。这是一场未知且意外的流行病，影响了人类生活。尽管交通运输部门的 CO[2] 排放量显著下降了 6.4%，但在医疗行业的所有废物处置中却发现了巨大的增长。全球宣布了到 2030 年将碳排放减少一半并到 2050 年实现净零碳的紧急决定，目标为 1.5°C。巴黎协定中的一项显著声明与可持续发展目标的采纳相辅相成。
+这一流行病年影响了许多人的生活和生计，导致气候危机并影响全球经济损失和社会生活。这是一场未知且意外的流行病，影响了人类生活。尽管交通运输部门的 `CO[2]` 排放量显著下降了 6.4%，但在医疗行业的所有废物处置中却发现了巨大的增长。全球宣布了到 2030 年将碳排放减少一半并到 2050 年实现净零碳的紧急决定，目标为 1.5°C。巴黎协定中的一项显著声明与可持续发展目标的采纳相辅相成。
 
-科学明确指出，如果一个部门未能实现这些目标，社会的经济就会受到破坏。可持续发展目标及其目标是综合且普遍适用的，考虑到不同的国家现实、能力和发展水平，并尊重国家政策和优先事项。全球层面的雄心是能源部门实现目标。能源的生产和使用是全球温室气体排放的主要来源。在大气中，CO[2] 水平和其他温室气体在 2019 年创下新纪录；该年恰好是第二温暖的年份。煤炭是温室气体排放的主要来源，煤炭是人类种族的敌人，污染全球环境。
+科学明确指出，如果一个部门未能实现这些目标，社会的经济就会受到破坏。可持续发展目标及其目标是综合且普遍适用的，考虑到不同的国家现实、能力和发展水平，并尊重国家政策和优先事项。全球层面的雄心是能源部门实现目标。能源的生产和使用是全球温室气体排放的主要来源。在大气中，`CO[2]` 水平和其他温室气体在 2019 年创下新纪录；该年恰好是第二温暖的年份。煤炭是温室气体排放的主要来源，煤炭是人类种族的敌人，污染全球环境。
 
-在 2020 年 COVID-19 大流行期间，由于旅行禁令和经济停滞，温室气体排放出现了 6% 的大幅下降。运输排放约占石油需求的 60%，而石油需求的下降在 2020 年排放下降中贡献了最大份额（IEA, 2021 [`www.iea.org/data-and-statistics/charts/change-in-co2-emissions-by-fuel-1990-2020`](https://www.iea.org/data-and-statistics/charts/change-in-co2-emissions-by-fuel-1990-2020)）。运输区的大部分能源使用由石油提供，石油会释放有毒空气污染物和温室气体（Guttikunda & Jawahar, 2012）。医疗保健是最大的污染行业之一，约占全球温室气体总量的 5%（Sherman, 2021；Jayanthi & Muralikrishna, 2023）。电动汽车的使用将消除到 2030 年的 CO[2] 排放，并在连接主要城市的智能道路上建立自动烟雾探测器/传感器。COVID-19 并未暂停气候变化（CC），但当大流行消失时，预计排放将恢复到极端水平（[`www.un.org/sustainabledevelopment/climate-change/`](https://www.un.org/sustainabledevelopment/climate-change/)）。
+在 2020 年 COVID-19 大流行期间，由于旅行禁令和经济停滞，温室气体排放出现了 6% 的大幅下降。运输排放约占石油需求的 60%，而石油需求的下降在 2020 年排放下降中贡献了最大份额（IEA, 2021 [`www.iea.org/data-and-statistics/charts/change-in-co2-emissions-by-fuel-1990-2020`](https://www.iea.org/data-and-statistics/charts/change-in-co2-emissions-by-fuel-1990-2020)）。运输区的大部分能源使用由石油提供，石油会释放有毒空气污染物和温室气体（Guttikunda & Jawahar, 2012）。医疗保健是最大的污染行业之一，约占全球温室气体总量的 5%（Sherman, 2021；Jayanthi & Muralikrishna, 2023）。电动汽车的使用将消除到 2030 年的 `CO[2]` 排放，并在连接主要城市的智能道路上建立自动烟雾探测器/传感器。COVID-19 并未暂停气候变化（CC），但当大流行消失时，预计排放将恢复到极端水平（[`www.un.org/sustainabledevelopment/climate-change/`](https://www.un.org/sustainabledevelopment/climate-change/)）。
 
-印度污染问题的又一个原因是环境 PM[2.5] 水平不健康，设定实现新的零碳目标是一个挑战。确保最小排放的保证将需要改造经济的[content]
-
-这一流行病年影响了许多人的生活和生计，导致气候危机并影响全球经济损失和社会生活。这是一场未知且意外的流行病，影响了人类生活。尽管交通运输部门的 CO[2] 排放量显著下降了 6.4%，但在医疗行业的所有废物处置中却发现了巨大的增长。全球宣布了到 2030 年将碳排放减少一半并到 2050 年实现净零碳的紧急决定，目标为 1.5°C。巴黎协定中的一项显著声明与可持续发展目标的采纳相辅相成。
-
-科学明确指出，如果一个部门未能实现这些目标，社会的经济就会受到破坏。可持续发展目标及其目标是综合且普遍适用的，考虑到不同的国家现实、能力和发展水平，并尊重国家政策和优先事项。全球层面的雄心是能源部门实现目标。能源的生产和使用是全球温室气体排放的主要来源。在大气中，CO[2] 水平和其他温室气体在 2019 年创下新纪录；该年恰好是第二温暖的年份。煤炭是温室气体排放的主要来源，煤炭是人类种族的敌人，污染全球环境。
-
-在 2020 年 COVID-19 大流行期间，由于旅行禁令和经济停滞，温室气体排放出现了 6% 的大幅下降。运输排放约占石油需求的 60%，而石油需求的下降在 2020 年排放下降中贡献了最大份额（IEA, 2021 [`www.iea.org/data-and-statistics/charts/change-in-co2-emissions-by-fuel-1990-2020`](https://www.iea.org/data-and-statistics/charts/change-in-co2-emissions-by-fuel-1990-2020)）。运输区的大部分能源使用由石油提供，石油会释放有毒空气污染物和温室气体（Guttikunda & Jawahar, 2012）。医疗保健是最大的污染行业之一，约占全球温室气体总量的 5%（Sherman, 2021；Jayanthi & Muralikrishna, 2023）。电动汽车的使用将消除到 2030 年的 CO[2] 排放，并在连接主要城市的智能道路上建立自动烟雾探测器/传感器。COVID-19 并未暂停气候变化（CC），但当大流行消失时，预计排放将恢复到极端水平（[`www.un.org/sustainabledevelopment/climate-change/`](https://www.un.org/sustainabledevelopment/climate-change/)）。
-
-印度污染问题的又一个原因是环境 PM[2.5] 水平不健康，设定实现新的零碳目标是一个挑战。确保最小排放的保证将需要改造经济的[content]
-
-这一流行病年影响了许多人的生活和生计，导致气候危机并影响全球经济损失和社会生活。这是一场未知且意外的流行病，影响了人类生活。尽管交通运输部门的 CO[2] 排放量显著下降了 6.4%，但在医疗行业的所有废物处置中却发现了巨大的增长。全球宣布了到 2030 年将碳排放减少一半并到 2050 年实现净零碳的紧急决定，目标为 1.5°C。巴黎协定中的一项显著声明与可持续发展目标的采纳相辅相成。
-
-科学明确指出，如果一个部门未能实现这些目标，社会的经济就会受到破坏。可持续发展目标及其目标是综合且普遍适用的，考虑到不同的国家现实、能力和发展水平，并尊重国家政策和优先事项。全球层面的雄心是能源部门实现目标。能源的生产和使用是全球温室气体排放的主要来源。在大气中，CO[2] 水平和其他温室气体在 2019 年创下新纪录；该年恰好是第二温暖的年份。煤炭是温室气体排放的主要来源，煤炭是人类种族的敌人，污染全球环境。
-
-在 2020 年 COVID-19 大流行期间，由于旅行禁令和经济停滞，温室气体排放出现了 6% 的大幅下降。运输排放约占石油需求的 60%，而石油需求的下降在 2020 年排放下降中贡献了最大份额（IEA, 2021 [`www.iea.org/data-and-statistics/charts/change-in-co2-emissions-by-fuel-1990-2020`](https://www.iea.org/data-and-statistics/charts/change-in-co2-emissions-by-fuel-1990-2020)）。运输区的大部分能源使用由石油提供，石油会释放有毒空气污染物和温室气体（Guttikunda & Jawahar, 2012）。医疗保健是最大的污染行业之一，约占全球温室气体总量的 5%（Sherman, 2021；Jayanthi & Muralikrishna, 2023）。电动汽车的使用将消除到 2030 年的 CO[2] 排放，并在连接主要城市的智能道路上建立自动烟雾探测器/传感器。COVID-19 并未暂停气候变化（CC），但当大流行消失时，预计排放将恢复到极端水平（[`www.un.org/sustainabledevelopment/climate-change/`](https://www.un.org/sustainabledevelopment/climate-change/)）。
-
-印度污染问题的又一个原因是环境 PM[2.5] 水平不健康，设定实现新的零碳目标是一个挑战。确保最小排放的保证将需要改造经济的重要部门——能源、交通、农业、工业和建筑。这种转型旨在生产更少的废物、更高效地使用资源并促进可持续的生产和消费。这场革命是持续的空气和水污染问题的挑战。去年，全球范围内的排放都在增长。
+印度污染问题的又一个原因是环境 `PM[2.5]` 水平不健康，设定实现新的零碳目标是一个挑战。确保最小排放的保证将需要改造经济的重要部门——能源、交通、农业、工业和建筑。这种转型旨在生产更少的废物、更高效地使用资源并促进可持续的生产和消费。这场革命是持续的空气和水污染问题的挑战。去年，全球范围内的排放都在增长。
 
 ## 3.2 讨论与结果
 
@@ -458,7 +434,7 @@ Carbon; climate change; ecosystem; electromagnetic field; radiation; renewable e
 
 ### 3.2.1 海平面上升
 
-在一次讨论中，来自 IPCC 的科学家表示，到 2100 年全球海平面将从 0.3 到 1 m 上升。同时，随着地球变暖每升高一度，海平面大约上升 2.3 m。海平面随温度升高而上升需要多长时间的问题仍然是研究人员未知（Willis et al., 2018）。根据调查，最大温度上升发生在 1910–45 年和 1975 年之后。然而，如果没有采取预防措施减少 CO[2] 排放和其他温室气体。到 2100 年，气温将上升 5°C，预计海平面将因全球化的人类财富而上升 48 cm（Enzler, 2021）。
+在一次讨论中，来自 IPCC 的科学家表示，到 2100 年全球海平面将从 0.3 到 1 m 上升。同时，随着地球变暖每升高一度，海平面大约上升 2.3 m。海平面随温度升高而上升需要多长时间的问题仍然是研究人员未知（Willis et al., 2018）。根据调查，最大温度上升发生在 1910–45 年和 1975 年之后。然而，如果没有采取预防措施减少 `CO[2]` 排放和其他温室气体。到 2100 年，气温将上升 5°C，预计海平面将因全球化的人类财富而上升 48 cm（Enzler, 2021）。
 
 ### 3.2.2 手机或基站的辐射
 
@@ -466,77 +442,78 @@ Carbon; climate change; ecosystem; electromagnetic field; radiation; renewable e
 
 ### 3.2.3 信息通信技术行业的排放
 
-ICT 行业通过其发展的各个行业推动了国家/地区的经济增长。研究人员和分析师估计，到 2020 年最多将有 500 亿台设备添加到 ICT；统计结果证明未来五年将有超过 1000 亿台设备。数据中心是地球上最大的能源消费者，其温室气体排放份额很大，超过了许多国家的能源消费水平（Reports on the Increasing Energy Consumption of Wireless Systems and Digital Ecosystem, 2021）。开发任何 AI 系统都会消耗大量能源。此外，ChatGPT 每年排放 CO[2]（8.4 吨）；通过在 AI R&D 中推广可持续实践（Sophie, 2023），可以减少排放。
+ICT 行业通过其发展的各个行业推动了国家/地区的经济增长。研究人员和分析师估计，到 2020 年最多将有 500 亿台设备添加到 ICT；统计结果证明未来五年将有超过 1000 亿台设备。数据中心是地球上最大的能源消费者，其温室气体排放份额很大，超过了许多国家的能源消费水平（Reports on the Increasing Energy Consumption of Wireless Systems and Digital Ecosystem, 2021）。开发任何 AI 系统都会消耗大量能源。此外，ChatGPT 每年排放 `CO[2]`（8.4 吨）；通过在 AI R&D 中推广可持续实践（Sophie, 2023），可以减少排放。
 
-
-
-
-
-来自加拿大麦克马斯特大学的研究人员指出，ICT（包括计算机、手机和数据中心）的温室气体排放将使全球排放量从 1%（2007 年）增加到超过 14%（2040 年）。全球交通运输部门现有的碳足迹减少了一半（Garg et al., 2011）。ICT 行业 CO[2] 排放的总体贡献对 CC 具有巨大影响。在一份欧盟报告中，研究人员估计，为将全球气温上升控制在 2°C 以下，到 2020 年碳排放必须减少约 15%–30%（Patel, 2018）。然而，由于疫情，PC 的碳排放并未减少反而增加。封锁期间，大多数工作和购物（必需品和杂货）都在网上进行。*下载 300 部 4G 高清电影需要 1 kWh 的电；然而，使用 5G，1 kWh 可下载 5K 超高清电影（**Cho, 2020**）*。
+来自加拿大麦克马斯特大学的研究人员指出，ICT（包括计算机、手机和数据中心）的温室气体排放将使全球排放量从 1%（2007 年）增加到超过 14%（2040 年）。全球交通运输部门现有的碳足迹减少了一半（Garg et al., 2011）。ICT 行业 `CO[2]` 排放的总体贡献对 CC 具有巨大影响。在一份欧盟报告中，研究人员估计，为将全球气温上升控制在 2°C 以下，到 2020 年碳排放必须减少约 15%–30%（Patel, 2018）。然而，由于疫情，PC 的碳排放并未减少反而增加。封锁期间，大多数工作和购物（必需品和杂货）都在网上进行。下载 300 部 4G 高清电影需要 1 kWh 的电；然而，使用 5G，1 kWh 可下载 5K 超高清电影（**Cho, 2020**）。
 
 ### 3.2.4 人工神经网络——排放率计算
 
-ANN 模型（Fig. 3–1）用于计算 Greenhouse gas emissions calculations (n.d.)（[`www.pca.state.mn.us/business-with-us/`](https://www.pca.state.mn.us/business-with-us/)），以产生更准确的结果用于分析碳净零。该模型训练作为输入的不同污染物以预测碳浓度。所有这些参数都乘以权重并传入各个隐藏层以产生结果。该预测将有助于最大限度地减少任何特定位置或区域的污染物数量。排放率的计算如 Fig. 3–1 所示。本研究涉及 2020 年 2 月 26 日至 3 月 27 日德里 Anand Vihar 市的空气质量指数数据。Fig. 3–2 描绘了德里 CO 和其他污染物，主要是 PM[2.5]、PM[10] 和 NO[2] 的排放量。Fig. 3–3 显示了 2020 年 2 月 26 日至 3 月 27 日的空气质量指数水平。
+ANN 模型（Fig. 3–1）用于计算 Greenhouse gas emissions calculations (n.d.)（[`www.pca.state.mn.us/business-with-us/`](https://www.pca.state.mn.us/business-with-us/)），以产生更准确的结果用于分析碳净零。该模型训练作为输入的不同污染物以预测碳浓度。所有这些参数都乘以权重并传入各个隐藏层以产生结果。该预测将有助于最大限度地减少任何特定位置或区域的污染物数量。排放率的计算如 Fig. 3–1 所示。本研究涉及 2020 年 2 月 26 日至 3 月 27 日德里 Anand Vihar 市的空气质量指数数据。Fig. 3–2 描绘了德里 `CO` 和其他污染物，主要是 `PM[2.5]`、`PM[10]` 和 `NO[2]` 的排放量。Fig. 3–3 显示了 2020 年 2 月 26 日至 3 月 27 日的空气质量指数水平。
 
 ![Figure 3–1 ANN model for prediction.](img/F000079f03-01-9780443219054.jpg)
+
 Figure 3–1 ANN model for prediction.
 
 ![Figure 3–2 Air pollutant quantity in Anand Vihar.](img/F000079f03-02-9780443219054.jpg)
+
 Figure 3–2 Air pollutant quantity in Anand Vihar.
 
 ![Figure 3–3 Air quality index in Anand Vihar.](img/F000079f03-03-9780443219054.jpg)
+
 Figure 3–3 Air quality index in Anand Vihar.
 
 ### 3.2.5 污染物排放和空气质量指数——德里 2020
 
-Fig. 3–2 表示 2020 年 2 月 26 日至 3 月 27 日的不同污染物，即 CO、PM[2.5]、PM[10]、SO[2]、NO[2]、臭氧和 NH[3]。PM[10] 在 2020 年 3 月 2 日达到最大值，大气空气质量较差。
+Fig. 3–2 表示 2020 年 2 月 26 日至 3 月 27 日的不同污染物，即 `CO`、`PM[2.5]`、`PM[10]`、`SO[2]`、`NO[2]`、臭氧和 `NH[3]`。`PM[10]` 在 2020 年 3 月 2 日达到最大值，大气空气质量较差。
 
-Fig. 3–3 表示 Anand Vihar 的 AQI 读数，并在 2020 年 3 月 27 日收集的数据中发现最低值为 71。一氧化碳在 2020 年 3 月 13 日较低（Fig. 3–4）。一氧化碳由烹饪气体、天然气、木材、机动车辆、发电厂、野火和焚化炉排放。CO 中毒与人体血液直接相关（Rose et al., 2017）。PM[2.5]（Fig. 3–5）在 3 月 2 日较高（284），在 3 月 27 日最低（49）。
+Fig. 3–3 表示 Anand Vihar 的 AQI 读数，并在 2020 年 3 月 27 日收集的数据中发现最低值为 71。一氧化碳在 2020 年 3 月 13 日较低（Fig. 3–4）。一氧化碳由烹饪气体、天然气、木材、机动车辆、发电厂、野火和焚化炉排放。`CO` 中毒与人体血液直接相关（Rose et al., 2017）。`PM[2.5]`（Fig. 3–5）在 3 月 2 日较高（284），在 3 月 27 日最低（49）。
 
 ![Figure 3–4 CO in Anand Vihar.](img/F000079f03-04-9780443219054.jpg)
+
 Figure 3–4 CO in Anand Vihar.
 
 ![Figure 3–5 PM2.5 in Delhi.](img/F000079f03-05-9780443219054.jpg)
+
 Figure 3–5 PM2.5 in Delhi.
 
-Fig. 3–6 表示 AQI 与 CO 排放的关系。同样，Fig. 3–7 表示 PM[10] 与 PM[2.5] 的关系，其排放来自建筑工地、火灾、未铺砌道路和烟囱。PM 颗粒被人类吸入后会深入肺部。进入血液。并对慢性呼吸系统构成风险。
+Fig. 3–6 表示 AQI 与 `CO` 排放的关系。同样，Fig. 3–7 表示 `PM[10]` 与 `PM[2.5]` 的关系，其排放来自建筑工地、火灾、未铺砌道路和烟囱。`PM` 颗粒被人类吸入后会深入肺部。进入血液。并对慢性呼吸系统构成风险。
 
 ![Figure 3–6 AQI versus CO graph.](img/F000079f03-06-9780443219054.jpg)
+
 Figure 3–6 AQI versus CO graph.
 
 ![Figure 3–7 The graph for PM10 versus PM2.5.](img/F000079f03-07-9780443219054.jpg)
+
 Figure 3–7 The graph for PM10 versus PM2.5.
 
 ### 3.2.6 可再生能源、清洁能源和水电
 
 SDG 目标 13（气候行动）的目的是到 2020 年 11 月将可再生能源在总装机发电能力中的占比提高。全球目标是在全部 37 个州将 CC 措施纳入国家政策、规划和战略中。
 
-*T**h**e**c**o**m**p**u**t**a**t**i**o**n**e**q**u**a**t**i**o**n**i**s**g**i**v**e**n*by = ((installed*g**r**i**d**i**n**t**e**r**a**c**t**i**v**e**r**e**n**e**w**a**b**l**e**p**o**w**e**r* + *i**n**s**t**a**l**l**e**d**c**a**p**a**c**i**t**y**o**f**l**a**r**g**e**h**y**d**r**o**p**o**w**e**r*project)/(Total*i**n**s**t**a**l**l**e**d**c**a**p**a**c**i**t**y**o**f**p**o**w**e**r**u**t**i**l**i**t**i**e**s*)) × 100.
+计算公式由 `installed_grid_interactive_renewable_power + installed_capacity_of_large_hydropower_project / Total_installed_capacity_of_power_utilities) × 100` 给出。
 
 ![Equation](img/F000079si1.png)
 
 它旨在采取紧急行动应对 CC 及其影响。整个世界正在经历海平面上升，有害于生命的温室气体浓度增加。随着温室气体排放量的增加，需要雄心勃勃的计划和行动来进行 CC 适应和减缓（Sustainable Development Goals: National Indicator Framework, 2020）。
 
-
-
-
-
-Table 3–1 显示，要将印度在可持续发展目标 13 方面的得分提高到 70%以上，印度需要在减少 CO[2] 排放方面做出大量贡献。截至目前，印度的整体表现仅为 54%；各严重程度州的合作对于改善整体表现至关重要。
+Table 3–1 显示，要将印度在可持续发展目标 13 方面的得分提高到 70%以上，印度需要在减少 `CO[2]` 排放方面做出大量贡献。截至目前，印度的整体表现仅为 54%；各严重程度州的合作对于改善整体表现至关重要。
 
 ### Table 3–1
 
 各州在 SDG 13 指标上的表现（SDG INDIA Index & Dashboard 2020-21: Partnerships in the Decade of Action, 20-21: Partnerships in the Decade of Action, 2021）。
 
-| States/ Uts || No. of human loss per 1 crore pop. (caused by extreme weather events) || % of renewable energy out of total installed generating capacity || CO[2] reduced by using LED bulbs (per 1000 pop.) || (DALY) rate—air pollution (per 100,000 pop.) || No. of human loss per 1 crore pop. due to extreme weather events || % of renewable energy out of total installed generating capacity || CO[2] reduced from LED bulbs per 100 pop (tons) || (DALY) rate - air pollution (per 100,000 pop.) || SDG13 index score |
+| States/UTs | No. of human loss per 1 crore pop. (caused by extreme weather events) | % of renewable energy out of total installed generating capacity | CO[2] reduced by using LED bulbs (per 1000 pop.) | (DALY) rate—air pollution (per 100,000 pop.) | No. of human loss per 1 crore pop. due to extreme weather events | % of renewable energy out of total installed generating capacity | CO[2] reduced from LED bulbs per 100 pop (tons) | (DALY) rate - air pollution (per 100,000 pop.) | SDG13 index score |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BR || – || 7.91 || 16.65 || 4308 || – || 18 || 11 || 7 || 16 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| CT || 2.46 || 5.94 || 38.32 || 3667 || 99 || 13 || 33 || 28 || 38 |
-| GA || – || 1.06 || 67.78 || 1482 || – || 0 || 64 || 99 || 44 |
-| JH || – || 9.48 || 37.15 || 3117 || – || 22 || 32 || 46 || 25 |
-| MP || 3.81 || 33.53 || 21.78 || 3809 || 99 || 83 || 16 || 23 || 49 |
-| RJ || 2.22 || 46.04 || 22.64 || 4528 || 100 || 100 || 17 || 0 || 49 |
-| TS || – || 41.12 || 6.07 || 2710 || – || 100 || 0 || 59 || 43 |
+| BR | – | 7.91 | 16.65 | 4308 | – | 18 | 11 | 7 | 16 |
+| CT | 2.46 | 5.94 | 38.32 | 3667 | 99 | 13 | 33 | 28 | 38 |
+| GA | – | 1.06 | 67.78 | 1482 | – | 0 | 64 | 99 | 44 |
+| JH | – | 9.48 | 37.15 | 3117 | – | 22 | 32 | 46 | 25 |
+| MP | 3.81 | 33.53 | 21.78 | 3809 | 99 | 83 | 16 | 23 | 49 |
+| RJ | 2.22 | 46.04 | 22.64 | 4528 | 100 | 100 | 17 | 0 | 49 |
+| TS | – | 41.12 | 6.07 | 2710 | – | 100 | 0 | 59 | 43 |
+
+
+
 | TR || 55.51 || 12.41 || 27.04 || 3598 || 88 || 29 || 22 || 30 || 41 |
 | UP || 4.71 || 25.77 || 11.91 || 4390 || 99 || 63 || 6 || 4 || 39 |
 | WB || 27.56 || 17.76 || 9.88 || 3761 || 94 || 43 || 4 || 25 || 39 |
@@ -559,7 +536,7 @@ Figure 3–9 全球能源相关 CO[2] 排放量，1990–2020 年（[`www.iea.or
 
 然而，在对 ICT 行业 CO[2] 排放进行大量研究后，提出了针对云数据中心的“碳高效绿色政策”建议，以提高能源效率并降低碳足迹（Garg et al., 2011）。利用零碳电力电解水产生的氢被称为 *绿色氢*。它具有显著的潜力，帮助各国实现经济转型以实现气候目标（Fan et al., 2021）。观察到在工业革命之前，CO[2] 浓度保持在约 280 ppm（体积）。然而，在 2020 年 3 月，全球月平均浓度上升至 413.67 ppm，即比 2019 年高出 3 ppm（Greenhouse Gases, 2020）。投资名为“碳捕获与储存”的技术，可捕获电力生产和化石燃料气体生产行业的排放物，从而加工并防止 CO[2] 进入大气。预计全球 CO[2] 排放量到 2030 年将下降至 2010 年的 45%，并在 2050 年左右实现净零排放，从而避免气温上升超过 1.5°C（Fan et al., 2021）。总体而言，可持续发展目标为实现 1.5°C 更暖世界的可气候适应性发展路径提供了良好见解。
 
-#### 3.2.6.1 Hydropower
+### 3.2.6.1 Hydropower
 
 全球变暖正在加剧并影响气候变化，突发性强降雨引发洪水、冰川融化以及野火发生。建议使用零排放技术发电。水电是一种清洁、经济且最常见的可再生能源。它成本低、耐用。可减少社会温室气体排放和能源账单。水电依靠水循环的持续再充电系统发电，使用在过程中不会减少的水作为燃料。
 
@@ -568,10 +545,6 @@ Figure 3–9 全球能源相关 CO[2] 排放量，1990–2020 年（[`www.iea.or
 与使用化石燃料的其他主要电力来源相比，水电对环境更安全。此外，水电站不排放化石燃料设施常见的废气或热量，这些是空气污染和全球变暖的主要贡献者。通常，发电机在运行时会排放烟雾并产生可怕的噪音污染。
 
 ### 3.2.7 Climate change with extreme rising temperature globally
-
-
-
-
 
 39 位研究人员团队的研究，包括科学家们，指出大量降雨模式年际变化很大，影响着 `CC`。极端降雨发生在西欧更大面积范围内，并影响了全球温度（气候变化使西欧洪水更可能，2021）。`CC` 导致了引发洪水的强降雨事件，如 图 3–10 所示。温室气体 `GHGs` 排放和温度升高导致的全球变暖加剧是降雨模式变化的关键因素。
 
@@ -610,23 +583,22 @@ Figure 3–9 全球能源相关 CO[2] 排放量，1990–2020 年（[`www.iea.or
 ## 参考文献
 
 * Boulos and Wilson, 2023 Boulos K, Wilson. 用于监测和减轻气候变化及其对人类健康影响的地理空间技术. *International Journal of Health Geographics*. 2023;22:2.
+
 * Cell phone radiation affects plants, vegetables: Research, 2016 手机辐射影响植物、蔬菜：研究 (2016). *The Hindustan Times*, 15 February.
+
 * Cho, 2020 Cho R. (2020). 即将到来的 5G 革命：它将如何影响环境？可获取于 [`news.climate.columbia.edu/`](https://news.climate.columbia.edu/)。
+
 * 气候变化使西欧洪水更可能，2021 气候变化使西欧洪水更可能 (2021). 可获取于 [`public.wmo.int/`](https://public.wmo.int/)。
 
+* Enzler, 2021 Enzler, S.M. (2021). IPCC SRES scenarios–consequences of climate change. 可获取于 `https://www.lenntech.com/greenhouse-effect/`。
 
+* Fan et al., 2021 Fan, Z., Ochu, E., Braverman, S. et al. (2021). Green hydrogen in a circular carbon economy: Opportunities and limits. 可获取于 `https://www.energypolicy.columbia.edu/research/report/`。
 
-
-
-* Enzler, 2021 Enzler, S.M. (2021). IPCC SRES scenarios–consequences of climate change. 可获取于 `https://www.lenntech.com/greenhouse-effect/`.
-
-* Fan et al., 2021 Fan, Z., Ochu, E., Braverman, S. et al. (2021). Green hydrogen in a circular carbon economy: Opportunities and limits. 可获取于 `https://www.energypolicy.columbia.edu/research/report/`.
-
-* Flooding and Climate Change: Everything You Need to Know, 2019 Flooding and Climate Change: Everything You Need to Know (2019). 可获取于 `https://www.nrdc.org/`.
+* Flooding and Climate Change: Everything You Need to Know, 2019 Flooding and Climate Change: Everything You Need to Know (2019). 可获取于 `https://www.nrdc.org/`。
 
 * Garg et al., 2011 Garg SK, Yeo CS, Buyya R. *Green cloud framework for improving carbon efficiency for clouds* Berlin, Heidelberg: Springer; 2011;.
 
-* Greenhouse gas emissions calculations, n.d. Greenhouse gas emissions calculations. (n.d.). 可获取于 `https://www.pca.state.mn.us/business-with-us/`.
+* Greenhouse gas emissions calculations, n.d. Greenhouse gas emissions calculations. (n.d.). 可获取于 `https://www.pca.state.mn.us/business-with-us/`。
 
 * Greenhouse Gases, 2020 Greenhouse Gases. *Center for sustainable systems* University of Michigan 2020; A Report.
 
@@ -634,15 +606,19 @@ Figure 3–9 全球能源相关 CO[2] 排放量，1990–2020 年（[`www.iea.or
 
 * Halder and Bandyopadhyay, 2021 Halder B, Bandyopadhyay J. Evaluating the impact of climate change on urban environment using geospatial technologies in the planning area of Bilaspur, India. *Environmental Challenges*. 2021;5:100286.
 
-* IEA, 2021 IEA, Change in CO[2] emissions by fuel. (2021). 可获取于 `https://www.iea.org/data-and-statistics/charts/change-in-co2-emissions-by-fuel-1990-2020`.
+* IEA, 2021 IEA, Change in CO[2] emissions by fuel. (2021). 可获取于 `https://www.iea.org/data-and-statistics/charts/change-in-co2-emissions-by-fuel-1990-2020`。
 
 * Jayanthi and Muralikrishna, 2023 Jayanthi P, Muralikrishna I. Sustainable development goals 3.9: Environmental pollution with devices. *International Journal for Research Trends and Innovation*. 2023;8(3):12–18 ISSN: 2456-3315.
 
-* June ends with exceptional heat, 2021 June ends with exceptional heat (2021). 可获取于 `https://bit.ly/3w7MUUK`.
+* June ends with exceptional heat, 2021 June ends with exceptional heat (2021). 可获取于 `https://bit.ly/3w7MUUK`。
 
-* Melting glaciers drove ‘21% of sea level rise’ over past two decades, 2021 Melting glaciers drove ‘21% of sea level rise’ over past two decades (2021). 可获取于 `https://www.carbonbrief.org/`.
+* Melting glaciers drove ‘21% of sea level rise’ over past two decades, 2021 Melting glaciers drove ‘21% of sea level rise’ over past two decades (2021). 可获取于 `https://www.carbonbrief.org/`。
 
-* NASA Says 2022 Fifth Warmest Year on Record, Warming Trend Continues, 2023 NASA Says 2022 Fifth Warmest Year on Record, Warming Trend Continues (2023). 可获取于 `https://climate.nasa.gov/`.
+* NASA Says 2022 Fifth Warmest Year on Record, Warming Trend Continues, 2023 NASA Says 2022 Fifth Warmest Year on Record, Warming Trend Continues (2023). 可获取于 `https://climate.nasa.gov/`。
+
+
+
+# 参考文献
 
 * NASA Study Reveals Compounding Climate Risks at Two Degrees of Warming, 2023 NASA Study Reveals Compounding Climate Risks at Two Degrees of Warming (2023). 可获取于 `https://climate.nasa.gov/news`.
 
@@ -650,7 +626,7 @@ Figure 3–9 全球能源相关 CO[2] 排放量，1990–2020 年（[`www.iea.or
 
 * Patel, 2018 Patel, P. (2018). Smartphones are warming the planet far more that you think.
 
-* Pradhan et al., 2017 Pradhan P, Costa L, Rybski D, et al. *A systematic study of sustainable development goal (SDG) interactions*. *Earth’s future*. 5 AGU Publications 2017;1169–1179.
+* Pradhan et al., 2017 Pradhan P, Costa L, Rybski D, et al. *A systematic study of sustainable development goal (SDG) interactions*. *Earth's future*. 5 AGU Publications 2017;1169–1179.
 
 * Ram, 2008 Ram A. *Radiation from mobile towers wipes out birds* Times of India 2008;.
 
@@ -672,19 +648,15 @@ Figure 3–9 全球能源相关 CO[2] 排放量，1990–2020 年（[`www.iea.or
 
 * Willis et al., 2018 Willis KJ, Kemp A, Strauss BH. Sea level rise. *Smithsonian* 2018;.
 
-4
+# Evaluating computational time series methods for monthly rainfall forecasting in the wettest region of Türkiye: a case study of Rize province
 
-## Evaluating computational time series methods for monthly rainfall forecasting in the wettest region of Türkiye: a case study of Rize province
-
-İsmail Kırbaş^(1), Osman Tayfun Bişkin^(2) and Ahmet Çifci^(2),    ¹Department of Computer Engineering, Faculty of Engineering and Architecture, Burdur Mehmet Akif Ersoy University, Burdur, Turkey,    ²Department of Electrical-Electronics Engineering, Faculty of Engineering and Architecture, Burdur Mehmet Akif Ersoy University, Burdur, Turkey
+İsmail Kırbaş^(1), Osman Tayfun Bişkin^(2) and Ahmet Çifci^(2)  
+¹Department of Computer Engineering, Faculty of Engineering and Architecture, Burdur Mehmet Akif Ersoy University, Burdur, Turkey  
+²Department of Electrical-Electronics Engineering, Faculty of Engineering and Architecture, Burdur Mehmet Akif Ersoy University, Burdur, Turkey
 
 ## Abstract
 
 准确的降雨预测对于有效的水资源管理和减轻气候变化影响至关重要。本章评估了三种计算时间序列方法——自回归积分滑动平均模型 (`ARIMA`)、Prophet 和长短期记忆 (`LSTM`) 网络——在土耳其里泽省月降水预测中的预测能力。里泽省因其地形多样性和易发生山洪暴发，被认为是土耳其最湿润的地区，因此被选为研究区域。利用 2004 年至 2023 年的气象数据来开发模型并比较其预测性能。为解决降雨时间序列的非平稳性，在建模前对数据进行预处理，应用了窗口为 3 个月和 5 个月的移动平均滤波器。
-
-
-
-
 
 `ARIMA`、`Prophet` 和 `LSTM` 模型均在 2004 年至 2021 年的过滤历史数据上进行训练，并将它们的短期预测与 2022 年至 2023 年的实际观测值进行评估。当采用具有更大滤波窗口的平滑输入数据集时，预测准确性表现出逐步提升。`ARIMA` 和 `LSTM` 模型在捕捉时间趋势和周期性变化以生成稳健的月度预测方面表现出强大的能力。将更长期的移动平均引入建模过程增强了平稳性并降低了噪声，使算法能够更精确地推断降雨模式以及与过去事件的关系。该研究证明了计算时间序列模型在里泽降水预测中的可行性，并验证了简单预处理技术在优化非平稳气候数据以用于建模应用方面的价值。
 
@@ -695,13 +667,10 @@ Figure 3–9 全球能源相关 CO[2] 排放量，1990–2020 年（[`www.iea.or
 ## 4.1 Introduction
 
 降雨是地球水文循环的重要要素，对环境和生命的维持具有实质性影响（Hou et al., 2014；Ravi et al., 2022；Rodrigo-Comino, 2021）。温度、湿度、大气压和风模式只是影响这一复杂气象现象的变量中的几个。对降雨进行准确评估和研究对于理解当地气候趋势、有效管理水资源、优化农业实践和维持生态系统至关重要（Barua et al., 2013；Berhane et al., 2020；Sidle & Bogaard, 2016）。降雨通常以毫米（`mm`）或英寸（`inch`）为单位在特定时间范围内量化，通常按日、月或年为基准（Miftahuddin et al., 2020）。降雨空间分布的显著变异是地形因素如山地地形、海域邻近性和盛行大气环流模式的结果。这种多样性导致了从干旱沙漠到丰饶雨林的广泛气候带。研究降雨模式涉及统计分析、建模和预测方法的使用。科学家使用各种设备，包括雨量计、天气雷达和卫星图像，来观察和量化不同地理和时间维度上的降雨（de Oliveira Simoyama et al., 2023；Guzzetti et al., 2020；Han et al., 2023）。上述数据对于理解长期模式、极端天气事件以及气候变化对降雨模式的影响至关重要。降雨不仅对环境产生重大影响，而且具有严重的社会经济后果。充足的降雨对农业至关重要，因为它为作物生长和粮食生产提供所需的水分。另一方面，降雨过多或不足可能导致洪水、干旱和水资源短缺，从而影响人类、经济和生态系统。
+
 土耳其的地理位置和多样化的地形造就了该国丰富的气候多样性，其特征为七个不同的气候带。每个区域都表现出独特的降雨模式，形成了气候条件的马赛克。这种多样性是海拔、水体邻近性和区域地形等因素的结果。地形和海洋影响成为塑造土耳其降雨的关键因素。山地地形、沿海邻近性和盛行风模式之间的相互作用导致不同地区观察到的复杂降水模式。沿海地区可能由于海洋影响而经历更高的湿度和降雨机会增加，而内陆地区可能更容易受到干旱条件的影响。东部黑海盆地是土耳其降雨最丰富的地区，降雨量最高（Akçay et al., 2022；Şimşek et al., 2023）。黑海的邻近性和地形抬升效应——湿润空气在山地地形上抬升——导致该地区降水丰富。另一方面，土耳其中部和南部地区通常经历降雨不足，尤其是在夏季（Albayrak et al., 2022；Sen et al., 2012）。这些区域差异对农业、水资源和整体环境可持续性具有影响。降雨的季节性分布是土耳其气候的另一个关键方面。虽然冬季月份通常带来增加的降水，尤其是在受地中海和黑海气候影响的沿海地区，但夏季月份通常以干燥条件为标志。这种季节性对农业实践有直接影响，因为水的可用性显著影响作物生长和产量。近年来，土耳其观察到极端降雨事件的变化，短时到长时的降雨强度增加。这一趋势与气候变化的更广泛影响有关（Danandeh Mehr & Kahya, 2017；Nigussie & Altunkaynak, 2019；Yilmaz, 2015）。大气变暖导致更强烈的对流降雨事件，可能导致诸如山洪和土壤侵蚀等问题。了解土耳其的这些变化对于有效的水资源管理和减轻气候变化的后果至关重要。
 
 ## 4.2 Literature review
-
-
-
-
 
 准确的降雨量测量和预测对于广泛的行业以及应对气候变化和变异带来的挑战至关重要。降雨预测是一项具有挑战性的任务，因为全球降雨模式不规则且气候变化多端。不同的模型和算法通过分析历史气象数据来预测降雨，旨在预测降雨的发生和降雨量。
 
@@ -729,26 +698,24 @@ Allawi et al. (2023) 提出了一种通过将优化算法与 `ANN` 集成来检�
 
 与之前的研究相比，本章的主要贡献如下：
 
-*   • 该研究应用并比较了三种时间序列预测模型——`ARIMA`、`Prophet` 和 `LSTM`——来预测土耳其里泽省的月降雨量。
-*   • 系统分析了使用不同大小移动平均滤波器预处理输入数据的影响。结果表明，滤波可以通过降低噪声和增强平稳性来改善模型性能。
-*   • 通过对原始和滤波时间序列的详细分解，促进了趋势、季节性和残差成分的可视化。这有助于诊断在捕捉不同信号方面的优势和弱点。
-*   • 通过全面展示评估指标，包括预测图和损失曲线，实现了模型拟合和预测技能的透明验证。
+* 该研究应用并比较了三种时间序列预测模型——`ARIMA`、`Prophet` 和 `LSTM`——来预测土耳其里泽省的月降雨量。
+* 系统分析了使用不同大小移动平均滤波器预处理输入数据的影响。结果表明，滤波可以通过降低噪声和增强平稳性来改善模型性能。
+* 通过对原始和滤波时间序列的详细分解，促进了趋势、季节性和残差成分的可视化。这有助于诊断在捕捉不同信号方面的优势和弱点。
+* 通过全面展示评估指标，包括预测图和损失曲线，实现了模型拟合和预测技能的透明验证。
 
 ## 4.3 研究区域和所用数据的概述
 
+### 里泽省概况
 
-
-
-
-## 里泽省概况
-
-里泽位于大约北纬 40°20′ 至 41°20′、东经 40°22′ 至 41°28′ 之间。其北面濒临黑海，南面与埃尔祖鲁姆省接壤，西面与特拉布宗省接壤，东面与阿尔特温省接壤（如 图 4–1 所示）。里泽的总地理面积约为 3920 平方公里。从地形上看，土耳其东北部的里泽省呈现出对比鲜明的景观。在西部地区，有郁郁葱葱的绿色山丘覆盖着茶园。黑海的侵蚀性洋流侵蚀了东部广大高原崎岖的地形，形成了峡谷。截至 2023 年，里泽的估计人口约为 344,000 人。里泽省境内有几条重要的河流和溪流。费尔蒂纳河因其湍急的急流和强劲的水流而被公认为最重要的一条河流，因其湍急的水流而获得了“暴风雨之水”的昵称。该河发源于卡奇卡尔山脉，流经 68 公里后注入黑海。与费尔蒂纳河平行流淌的赫姆辛河较短。它流经赫姆辛和帕扎尔区，并注入黑海。
+里泽位于大约北纬 40°20′ 至 41°20′、东经 40°22′ 至 41°28′ 之间。其北面濒临黑海，南面与埃尔祖鲁姆省接壤，西面与特拉布宗省接壤，东面与阿尔特温省接壤（如图 4–1 所示）。里泽的总地理面积约为 3920 平方公里。从地形上看，土耳其东北部的里泽省呈现出对比鲜明的景观。在西部地区，有郁郁葱葱的绿色山丘覆盖着茶园。黑海的侵蚀性洋流侵蚀了东部广大高原崎岖的地形，形成了峡谷。截至 2023 年，里泽的估计人口约为 344,000 人。里泽省境内有几条重要的河流和溪流。费尔蒂纳河因其湍急的急流和强劲的水流而被公认为最重要的一条河流，因其湍急的水流而获得了“暴风雨之水”的昵称。该河发源于卡奇卡尔山脉，流经 68 公里后注入黑海。与费尔蒂纳河平行流淌的赫姆辛河较短。它流经赫姆辛和帕扎尔区，并注入黑海。
 
 ![Figure 4–1 Geographic location of the Rize province. Map lines delineate study areas and do not necessarily depict accepted national boundaries.](img/F000031f04-01-9780443219054.jpg)
 
 Figure 4–1 Geographic location of the Rize province. Map lines delineate study areas and do not necessarily depict accepted national boundaries.
 
-## 气候
+### 气候
+
+
 
 里泽是土耳其降雨量最多的城市之一，年降雨量超过 2300 毫米，年平均降雨天数接近 173 天。里泽由于靠近黑海，气候温和潮湿。沿海地区全年平均气温约为 14.5°C（MGM, 2023）。然而，里泽内陆山区气温更低。黑海的影响使里泽气候潮湿，全年降雨频繁。2010 年 8 月 26 日，该地区经历了一场强降雨，24 小时内降雨总量达 166.5 毫米。这场强降雨导致了巨大的破坏，包括众多挡土墙的倒塌。这场洪水造成了严重破坏，对其路径上的汽车和公寓造成了严重损害（Şen & Kahya, 2017）。
 
@@ -756,23 +723,22 @@ Figure 4–1 Geographic location of the Rize province. Map lines delineate study
 
 本章使用的数据集来自水文气象与遥感中心（CHRS），通过其数据门户 [`chrsdata.eng.uci.edu/`](https://chrsdata.eng.uci.edu/) 获取。该数据集专门涉及里泽省的降雨数据，涵盖 2004 年 1 月至 2023 年 10 月的时间段。表 4–1 提供了数据集的概述，重点介绍了 2004 年至 2023 年期间的平均月降雨量（以毫米为单位）。该表包括最小值、最大值、均值、标准差、偏度和峰度等各种关键指标，这些指标共同提供了对降雨数据分布和特征的全面理解。
 
-### Table 4–1
+### 表 4–1
 
-Monthly average rainfall spanning the years 2004–23.
+2004–2023 年月平均降雨量。
 
-|   || Rainfall || Moving average 3 || Moving average 5 |
-| --- | --- | --- | --- |
-| Count || 234 || 234 || 234 |
-| --- | --- | --- | --- |
-| Mean || 32.652 || 32.544 || 32.596 |
-| Std Dev || 28.006 || 17.246 || 13.638 |
-| Min || 0 || 1.860 || 7.666 |
-| 25% || 13.430 || 20.142 || 23.222 |
-| 50% || 25.935 || 30.377 || 31.141 |
-| 75% || 45.463 || 42.728 || 39.425 |
-| Max || 178.620 || 91.037 || 78.466 |
-| Kurtosis || 3.730 || 0.686 || 0.619 |
-| Skewness || 1.582 || 0.833 || 0.762 |
+| | | Rainfall | Moving average 3 | Moving average 5 |
+| --- | --- | --- | --- | --- |
+| Count | | 234 | 234 | 234 |
+| Mean | | 32.652 | 32.544 | 32.596 |
+| Std Dev | | 28.006 | 17.246 | 13.638 |
+| Min | | 0 | 1.860 | 7.666 |
+| 25% | | 13.430 | 20.142 | 23.222 |
+| 50% | | 25.935 | 30.377 | 31.141 |
+| 75% | | 45.463 | 42.728 | 39.425 |
+| Max | | 178.620 | 91.037 | 78.466 |
+| Kurtosis | | 3.730 | 0.686 | 0.619 |
+| Skewness | | 1.582 | 0.833 | 0.762 |
 
 ## 降雨分析
 
@@ -800,47 +766,39 @@ Fig. 4–5 显示了使用 5 个月移动平均滤波器预处理的月降雨信
 
 Figure 4–5 Decomposed plots for rainfall data filtered with a moving average (window size 5).
 
-
-
-
-
 Fig. 4–6 显示了 2004 年至 2023 年里泽的原始月降雨量数据直方图以及使用 3 个月和 5 个月移动平均窗口过滤后的数据。原始数据的直方图（第一面板）呈现右偏分布，尾部向较高降雨值延伸。这种正偏表明极端高降雨量出现的频率高于极端低值。此外，原始数据直方图的分布更宽，反映了噪声输入序列中存在更大的变化。应用 3 个月移动平均滤波器后，中位直方图（第二面板）显示的分布仍为右偏，但与原始图相比明显变窄。这表明 3 个月平均值减少了原始序列中存在的部分异常值和异常现象。第三面板描绘了使用 5 个月窗口平滑后的数据直方图。与其他两个分布相比，它在均值周围的集中度更紧密。5 个月的较长滤波窗口产生的降雨序列接近正态分布，偏斜最小。
 
 ![Figure 4–6 Histogram plots for raw and filtered monthly rainfall data.](img/F000031f04-06-9780443219054.jpg)
 
 Figure 4–6 Histogram plots for raw and filtered monthly rainfall data.
 
-## 4.4 Methodology
+## 4.4 方法论
 
-### 4.4.1 Autoregressive integrated moving average
+### 4.4.1 自回归积分滑动平均模型
 
-Box and Jenkins 提出了使用 ARIMA 作为表示随机信号的模型 (Box & Jenkins, 1970)。它是自回归移动平均 ARMA 模型的推广版本。ARMA 模型通常应用于广义平稳随机信号。然而，如果信号或数据在均值意义上是非平稳的，则应用 ARIMA 模型。因此，在数据或信号具有非平稳性质的情况下，它在预测问题中被广泛使用。在表示 ARMA 模型时，它表示为 `ARMA(p,q)`，其中 `p` 是自回归 AR 部分的阶数，`q` 是移动平均 MA 部分的阶数。类似地，ARIMA 模型表示为 `ARIMA(p,d,q)`，其中 `p` 和 `q` 的含义与 ARMA 模型中的相同。然而，在 ARIMA 模型中，还有一个额外的参数 `d`，它指的是对原始数据进行差分以使其平稳的次数。
+Box and Jenkins 提出了使用 `ARIMA` 作为表示随机信号的模型 (Box & Jenkins, 1970)。它是自回归移动平均 `ARMA` 模型的推广版本。`ARMA` 模型通常应用于广义平稳随机信号。然而，如果信号或数据在均值意义上是非平稳的，则应用 `ARIMA` 模型。因此，在数据或信号具有非平稳性质的情况下，它在预测问题中被广泛使用。在表示 `ARMA` 模型时，它表示为 `ARMA(p,q)`，其中 `p` 是自回归 `AR` 部分的阶数，`q` 是移动平均 `MA` 部分的阶数。类似地，`ARIMA` 模型表示为 `ARIMA(p,d,q)`，其中 `p` 和 `q` 的含义与 `ARMA` 模型中的相同。然而，在 `ARIMA` 模型中，还有一个额外的参数 `d`，它指的是对原始数据进行差分以使其平稳的次数。
 
 设 `x[t]` 表示时间 `t` 时时间序列数据的取值或观测值。使用 `ARMA(p,q)` 模型表示该信号可表示如下：
 
-`x[t] = θ[1]x[t-1] + θ[2]x[t-2] + … + θ[p]x[t-p] + Φ[0]e[t-0] + Φ[1]e[t-1] + … + Φ[q]e[t-q]`，<mml:math><mml:msub><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>&#952;</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>&#952;</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:mo>&#8230;</mml:mo><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>&#952;</mml:mi></mml:mrow><mml:mrow><mml:mi>p</mml:mi></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mi>p</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#934;</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>e</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>0</mml:mn></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#934;</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>e</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:mo>&#8230;</mml:mo><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#934;</mml:mi></mml:mrow><mml:mrow><mml:mi>q</mml:mi></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>e</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mi>q</mml:mi></mml:mrow></mml:msub><mml:mo>,</mml:mo></mml:math> (4.1)
+```
+x[t] = θ[1]x[t-1] + θ[2]x[t-2] + … + θ[p]x[t-p] + Φ[0]e[t-0] + Φ[1]e[t-1] + … + Φ[q]e[t-q]
+```
 
-![Equation](img/F000031si1.png)(4.1)
+其中 `θ` 和 `Φ` 分别是 `AR` 和 `MA` 系数。项 `e[t]` 表示随机信号中的误差项。`ARIMA` 模型是 `ARMA` 模型的推广版本，使用 `ARIMA(p,d,q)` 模型表示信号为
 
-其中 `θ` 和 `Φ` 分别是 AR 和 MA 系数。项 `e[t]` 表示随机信号中的误差项。ARIMA 模型是 ARMA 模型的推广版本，使用 `ARIMA(p,d,q)` 模型表示信号为
+```
+y[t] = θ[1]y[t-1] + θ[2]y[t-2] + … + θ[p]y[t-p] + Φ[0]e[t-0] + Φ[1]e[t-1] + … + Φ[q]e[t-q]
+```
 
-`y[t] = θ[1]y[t-1] + θ[2]y[t-2] + … + θ[p]y[t-p] + Φ[0]e[t-0] + Φ[1]e[t-1] + … + Φ[q]e[t-q]`，<mml:math><mml:msub><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>&#952;</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>&#952;</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:mo>&#8230;</mml:mo><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>&#952;</mml:mi></mml:mrow><mml:mrow><mml:mi>p</mml:mi></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mi>p</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#934;</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>e</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>0</mml:mn></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#934;</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>e</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:mo>&#8230;</mml:mo><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#934;</mml:mi></mml:mrow><mml:mrow><mml:mi>q</mml:mi></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>e</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mi>q</mml:mi></mml:mrow></mml:msub><mml:mo>,</mml:mo></mml:math> (4.2)
 
-![Equation](img/F000031si2.png)(4.2)
 
-其中 `y[t]` 是差分后的时间序列信号。此外，`θ` 和 `Φ` 分别表示 AR 和 MA 系数。ARIMA 模型中的项 `d` 是差分的阶数，差分后的时间序列根据该参数的值获得。例如，如果 `d` 选择为 1，则 `y[t]` 变为 `y[t] = x[t] - x[t-1]`<mml:math><mml:msub><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>&#8722;</mml:mo><mml:msub><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub></mml:math>![Equation](img/F000031si3.png)。
+其中 `y[t]` 是差分后的时间序列信号。此外，`θ` 和 `Φ` 分别表示 AR 和 MA 系数。ARIMA 模型中的项 `d` 是差分的阶数，差分后的时间序列根据该参数的值获得。例如，如果 `d` 选择为 1，则 `y[t] = x[t] - x[t-1]`。
 
 ### 4.4.2 Prophet model
 
-
-
-
-
 Taylor and Letham (2018) 提出了 `Prophet` 模型作为一种具有可解释参数的模块化回归模型。它允许研究人员应用他们对数据的知识。因此 `Prophet` 模型具有使用统计预测和判断预测的优势。时间序列信号可以用 `Prophet` 模型写成如下形式：
 
-*x*[*t*] = *g*[*t*] + *s*[*t*] + *h*[*t*] + *e*[*t*],<mml:math><mml:msub><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>g</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mo>+</mml:mo><mml:mi>s</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>e</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>,</mml:mo></mml:math> (4.3)
-
-![Equation](img/F000031si4.png)(4.3)
+*x*[*t*] = *g*[*t*] + *s*[*t*] + *h*[*t*] + *e*[*t*], (4.3)
 
 其中 `g[t]` 表示信号的趋势项，而 `s[t]` 表示数据中的周期性变化。项 `h[t]` 表示假日期项并代表假期对数据的影响。`Prophet` 模型的这一特性对于金融数据非常有用。最后，`e[t]` 是误差项，表示数据的随机特征。为了预测数据中的季节性效应，`Prophet` 利用傅里叶级数展开 (Wang et al., 2022)。
 
@@ -848,62 +806,59 @@ Taylor and Letham (2018) 提出了 `Prophet` 模型作为一种具有可解释�
 
 `LSTM` 最初由 Hochreiter and Schmidhuber (1997) 提出，其主要目标是解决梯度消失问题。`LSTM` 架构是用于处理序列数据的 `GRU` 模型的高级变体 (Kirbas, 2019)。正如 Gers et al. (2000) 详细描述的，一个 `LSTM` 层由输入、输出和遗忘门组成。输入门和输出门调节层内输入和输出数据的流动，而遗忘门负责擦除单元记忆 (Gers et al., 2000)。用 `i[t]`、`o[t]` 和 `f[t]` 分别表示输入、输出和遗忘门，一个 `LSTM` 层在数学上表示如下：
 
-*i*[*t*] = *σ*(*W*[*i*]\[*h*[*t* − 1],*x*[*t*]\]+*b*[*i*])<mml:math><mml:msub><mml:mrow><mml:mi>i</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mi>&#963;</mml:mi><mml:mrow><mml:mfenced close=")" open="("><mml:mrow><mml:msub><mml:mrow><mml:mi>W</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mfenced close="\]" open="\"><mml:mrow><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfenced></mml:mrow><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>b</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfenced></mml:mrow></mml:math>
+```
+i[t] = σ(W[i][h[t-1], x[t]] + b[i])
+o[t] = σ(W[o][h[t-1], x[t]] + b[o])
+f[t] = σ(W[f][h[t-1], x[t]] + b[f])
+```
 
-![Equation
+其中变量 `b[i]`、`b[o]` 和 `b[f]` 是偏置参数，而 `W[i]`、`W[o]` 和 `W[f]` 分别表示输入、输出和遗忘权重参数。`σ(.)` 在 Eq. (4.4) 中是 sigmoid 激活函数。向量 `h[t]` 是时间 `t` 处的隐藏状态，由下式给出：
 
-*o*[*t*] = *σ*(*W*[*o*]\[*h*[*t* − 1],*x*[*t*]\]+*b*[*o*])<mml:math><mml:msub><mml:mrow><mml:mi>o</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mi>&#963;</mml:mi><mml:mrow><mml:mfenced close=")" open="("><mml:mrow><mml:msub><mml:mrow><mml:mi>W</mml:mi></mml:mrow><mml:mrow><mml:mi>o</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mfenced close="\]" open="\"><mml:mrow><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfenced></mml:mrow><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>b</mml:mi></mml:mrow><mml:mrow><mml:mi>o</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfenced></mml:mrow></mml:math> (4.4)
+```
+h[t] = o[t] ⊙ tanh(c[t]) (4.5)
+```
 
-![Equation(4.4)
+其中 `c[t] = i[t] ⊙ c̃[t] + f[t] ⊙ c[t-1]`，`⊙` 表示哈达玛积。函数 `tanh(.)` 对应于双曲正切函数。表达式 `c̃[t]` 可以表示为：
 
-*f*[*t*] = *σ*(*W*[*f*]\[*h*[*t* − 1],*x*[*t*]\]+*b*[*f*]),<mml:math><mml:msub><mml:mrow><mml:mi>f</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mi>&#963;</mml:mi><mml:mrow><mml:mfenced close=")" open="("><mml:mrow><mml:msub><mml:mrow><mml:mi>W</mml:mi></mml:mrow><mml:mrow><mml:mi>f</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mfenced close="\]" open="\"><mml:mrow><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfenced></mml:mrow><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>b</mml:mi></mml:mrow><mml:mrow><mml:mi>f</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfenced></mml:mrow><mml:mo>,</mml:mo></mml:math>
-
-![Equation
-
-其中变量 `b[i]`、`b[o]` 和 `b[f]` 是偏置参数，而 `W[i]`、`W[o]` 和 `W[f]` 分别表示输入、输出和遗忘权重参数。`σ(.)` 在 Eq. (4.4) 中是 sigmoid 激活函数。向量 `h[t]` 是时间 `t` 处的隐藏状态，由下式给出
-
-*h*[*t*] = *o*[*t*] ⊙ tan *h*(*c*[*t*]),<mml:math><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>o</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>&#8857;</mml:mo><mml:mi>tan</mml:mi><mml:mi>h</mml:mi><mml:mrow><mml:mfenced close=")" open="("><mml:mrow><mml:msub><mml:mrow><mml:mi>c</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfenced></mml:mrow><mml:mo>,</mml:mo></mml:math> (4.5)
-
-![Equation](img/F000031si8.png)(4.5)
-
-其中 `c[t]` = `i[t]` ⊙ `c̃[t]` + `f[t]` ⊙ `c[t − 1]`<mml:math><mml:msub><mml:mrow><mml:mi>c</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>i</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>&#8857;</mml:mo><mml:msub><mml:mrow><mml:mover accent="true"><mml:mrow><mml:mi>c</mml:mi></mml:mrow><mml:mo>&#732;</mml:mo></mml:mover></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>f</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>&#8857;</mml:mo><mml:msub><mml:mrow><mml:mi>c</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub></mml:math>![Equation](img/F000031si9.png) 和 ![ent](img/odot_8857.png) 表示哈达玛积。函数 `tan h(.)`<mml:math><mml:mi>tan</mml:mi><mml:mi>h</mml:mi><mml:mrow><mml:mfenced close=")" open="("><mml:mrow><mml:mo>.</mml:mo></mml:mrow></mml:mfenced></mml:mrow></mml:math>![Equation](img/F000031si10.png) 对应于双曲正切函数。表达式 `c̃[t]`<mml:math><mml:msub><mml:mrow><mml:mover accent="true"><mml:mrow><mml:mi>c</mml:mi></mml:mrow><mml:mo>&#732;</mml:mo></mml:mover></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub></mml:math>![Equation](img/F000031si11.png) 可以表示为
-
-
-
-
-
-`c̃[t]` = `tan h(W[c][h[t-1],x[t]]+b[c])`.<mml:math><mml:msub><mml:mrow><mml:mover accent="true"><mml:mrow><mml:mi>c</mml:mi></mml:mrow><mml:mo>&#732;</mml:mo></mml:mover></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mi>tan</mml:mi><mml:mi>h</mml:mi><mml:mrow><mml:mfenced close=")" open="("><mml:mrow><mml:msub><mml:mrow><mml:mi>W</mml:mi></mml:mrow><mml:mrow><mml:mi>c</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mfenced close="\]" open="\"><mml:mrow><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfenced></mml:mrow><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>b</mml:mi></mml:mrow><mml:mrow><mml:mi>c</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfenced></mml:mrow><mml:mo>.</mml:mo></mml:math> (4.6)
-
-![Equation(4.6)
+```
+c̃[t] = tanh(W[c][h[t-1], x[t]] + b[c]) (4.6)
+```
 
 这里，`W[c]` 表示权重参数，而 `b[c]` 是偏置变量。
 
 ### 4.4.4 性能评估标准
 
-为了评估 `ARIMA`、`Prophet` 和 `LSTM` 模型在预测方面的有效性，计算了多个误差指标，包括平均绝对误差 (`MAE`)、`MSE`、`RMSE` 和平均绝对百分比误差 (`MAPE`)。这些常见的性能指标被用于比较 `ARIMA`、`Prophet` 和 `LSTM` 模型。令 `y` <mml:math><mml:mi>y</mml:mi></mml:math>![Equation](img/F000031si13.png) 为表示序列 `x` <mml:math><mml:mi>x</mml:mi></mml:math>![Equation](img/F000031si14.png) 未来值的向量，定义为 `y` = `x̃` = [`x[T]` `x[T+1]`…`x[T+k]`] <mml:math><mml:mi>y</mml:mi><mml:mo>=</mml:mo><mml:mover accent="true"><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mo>&#732;</mml:mo></mml:mover><mml:mo>=</mml:mo><mml:mo>\[</mml:mo><mml:msub><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mi>T</mml:mi></mml:mrow></mml:msub><mml:mspace width="1em"/><mml:msub><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mi>T</mml:mi><mml:mo>+</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>&#8230;</mml:mo><mml:msub><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mi>T</mml:mi><mml:mo>+</mml:mo><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo>\]</mml:mo></mml:math>![Equation](img/F000031si15.png)。这里 `y[i]` <mml:math><mml:msub><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:math>![Equation](img/F000031si16.png) 和 `ỹ[i]` <mml:math><mml:msub><mml:mrow><mml:mover accent="true"><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mo>&#732;</mml:mo></mml:mover></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:math>![Equation](img/F000031si17.png) 分别表示实际值和预测值。误差指标定义如下（Bişkin & Çifci, 2021; Kırbaş, 2019）：
 
-`${MAE} = \\frac{1}{n}\\sum\\limits\_{i = 0}^{n - 1}\\left| {y\_{i} - \\widetilde{y}}\_{i} \\right|`<mml:math><mml:mi mathvariant="normal">MAE</mml:mi><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:mfrac><mml:munderover><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn></mml:mrow><mml:mrow><mml:mi>n</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:munderover><mml:mrow><mml:mfenced close="|" open="|"><mml:mrow><mml:msub><mml:mrow><mml:msub><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo>&#8722;</mml:mo><mml:mover accent="true"><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mo>&#732;</mml:mo></mml:mover></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfenced></mml:mrow></mml:math> (4.7)
 
-![Equation](img/F000031si18.png)(4.7)
+为了评估 `ARIMA`、`Prophet` 和 `LSTM` 模型在预测方面的有效性，计算了多个误差指标，包括平均绝对误差 (`MAE`)、`MSE`、`RMSE` 和平均绝对百分比误差 (`MAPE`)。这些常见的性能指标被用于比较 `ARIMA`、`Prophet` 和 `LSTM` 模型。令 `y` 为表示序列 `x` 未来值的向量，定义为 `y` = `x̃` = [`x[T]` `x[T+1]`…`x[T+k]`]。这里 `y[i]` 和 `ỹ[i]` 分别表示实际值和预测值。误差指标定义如下（Bişkin & Çifci, 2021; Kırbaş, 2019）：
 
-`${MSE} = \\frac{1}{n}\\sum\\limits\_{i = 0}^{n - 1}\\left( {y\_{i} - \\widetilde{y}}\_{i} \\right)^{2}`<mml:math><mml:mi mathvariant="normal">MSE</mml:mi><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:mfrac><mml:munderover><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn></mml:mrow><mml:mrow><mml:mi>n</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:munderover><mml:mrow><mml:msup><mml:mrow><mml:mfenced close=")" open="("><mml:mrow><mml:msub><mml:mrow><mml:msub><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo>&#8722;</mml:mo><mml:mover accent="true"><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mo>&#732;</mml:mo></mml:mover></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfenced></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math> (4.8)
+```
+${MAE} = \frac{1}{n}\sum\limits_{i = 0}^{n - 1}\left| {y_{i} - \widetilde{y}}_{i} \right|`
+```
 
-![Equation](img/F000031si19.png)(4.8)
+(4.7)
 
-`${RMSE} = \\sqrt{\\frac{1}{n}\\sum\\limits\_{i = 0}^{n - 1}\\left( {y\_{i} - \\widetilde{y}}\_{i} \\right)^{2}}`<mml:math><mml:mi mathvariant="normal">RMSE</mml:mi><mml:mo>=</mml:mo><mml:msqrt><mml:mrow><mml:mfrac><mml:mrow><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:mfrac><mml:munderover><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn></mml:mrow><mml:mrow><mml:mi>n</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:munderover><mml:mrow><mml:msup><mml:mrow><mml:mfenced close=")" open="("><mml:mrow><mml:msub><mml:mrow><mml:msub><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo>&#8722;</mml:mo><mml:mover accent="true"><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mo>&#732;</mml:mo></mml:mover></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfenced></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:mrow></mml:msqrt></mml:math> (4.9)
+```
+${MSE} = \frac{1}{n}\sum\limits_{i = 0}^{n - 1}\left( {y_{i} - \widetilde{y}}_{i} \right)^{2}`
+```
 
-![Equation](img/F000031si20.png)(4.9)
+(4.8)
 
-`${MAPE} = \\frac{1}{n}\\sum\_{i = 0}^{n - 1}{\\left| \\frac{{y\_{i} - \\widetilde{y}}\_{i}}{y\_{i}} \\right| \\times 100}.`<mml:math><mml:mi mathvariant="normal">MAPE</mml:mi><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:mfrac><mml:msubsup><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn></mml:mrow><mml:mrow><mml:mi>n</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msubsup><mml:mrow><mml:mrow><mml:mfenced close="|" open="|"><mml:mrow><mml:mfrac><mml:mrow><mml:msub><mml:mrow><mml:msub><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo>&#8722;</mml:mo><mml:mover accent="true"><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mo>&#732;</mml:mo></mml:mover></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfrac></mml:mrow></mml:mfenced></mml:mrow><mml:mo>&#215;</mml:mo><mml:mn>100</mml:mn></mml:mrow><mml:mo>.</mml:mo></mml:math> (4.10)
+```
+${RMSE} = \sqrt{\frac{1}{n}\sum\limits_{i = 0}^{n - 1}\left( {y_{i} - \widetilde{y}}_{i} \right)^{2}}`
+```
 
-![Equation](img/F000031si21.png)(4.10)
+(4.9)
+
+```
+${MAPE} = \frac{1}{n}\sum_{i = 0}^{n - 1}{\left| \frac{{y_{i} - \widetilde{y}}_{i}}{y_{i}} \right| \times 100}.`
+```
+
+(4.10)
 
 ## 4.5 结果与讨论
 
-对 `ARIMA`、`Prophet` 和 `LSTM` 模型在土耳其里泽省 2004–23 年期间的月降雨时间序列数据上的预测性能进行了评估。数据被分为训练集和测试集，其中 2004 年 1 月至 2021 年 12 月的数据用于模型训练，剩余的 2022 年 1 月至 2023 年 10 月的数据用于评估。基于原始原始月降雨数据以及使用窗口大小为 3 个月和 5 个月的移动平均滤波器预处理后的数据，进行了三次实验。
-
-
-
+对 `ARIMA`、`Prophet` 和 `LSTM` 模型在土耳其里泽省 2004–23 年期间的月降雨时间序列数据上的预测性能进行了评估。数据被分为训练集和测试集，其中 2004 年 1 月至 2021 年 12 月的数据用于模型训练，剩余的 2022 年 1 月至 2023 年 10 月的数据用于评估。基于原始月降雨数据以及使用窗口大小为 3 个月和 5 个月的移动平均滤波器预处理后的数据，进行了三次实验。
 
 `Fig. 4–7` 描绘了将 `LSTM` 模型应用于里泽月降雨数据时，损失值随训练轮数变化的曲线。损失值衡量模型在训练期间预测输出与真实目标输出之间的差异。损失越低表示性能越好，目标是尽可能将其最小化。在该图中，蓝色线条追踪了 `LSTM` 模型参数在每个轮次根据训练数据迭代更新时损失的演变情况。可以看出，初始时损失较高，但在连续的训练周期中损失稳步下降，达到最小值后趋于平稳。这种行为表明 `LSTM` 网络正在利用反向传播和梯度下降优化有效地学习输入时间序列中的模式。随着训练的进行，模型改进了捕捉过去与未来降雨值之间时间关系的能力。值得注意的是，损失在前 10 个轮次内急剧下降，此后下降速率开始趋于平稳。这表明大部分学习发生在早期，之后收益递减。它为确定理想的训练轮次数以避免过拟合提供了参考。
 
@@ -915,13 +870,15 @@ Taylor and Letham (2018) 提出了 `Prophet` 模型作为一种具有可解释�
 
 ![Figure 4–8 Raw monthly rainfall training data, predictions, and actual values for LSTM model.](img/F000031f04-08-9780443219054.jpg)
 
-Figure 4–8 Raw monthly rainfall training data, predictions, and actual values for LSTM model.
+`Figure 4–8` Raw monthly rainfall training data, predictions, and actual values for LSTM model.
 
 `Figs. 4–9` 和 `4–10` 显示了使用 `LSTM` 模型预测里泽月降雨量并与实际观测值进行比较的结果，但降雨数据分别经过 3 个月和 5 个月移动平均滤波预处理。在 `Fig. 4–9` 中，输入到 `LSTM` 的数据使用 3 个月窗口进行滤波。评估 2022–23 年的预测时，可以看到绿色预报数据比原始数据 `Fig. 4–8` 更精确地追踪观测降雨量（红色线）的起伏。这种更紧密的拟合意味着 3 个月平均去除了噪声，使 `LSTM` 更有效地学习模式。类似地，`Fig. 4–10` 显示了使用 5 个月滤波输入到 `LSTM` 模型的评估结果。在此，预测值（绿色）与实际测量值（红色）几乎完美对应，在所有时间点几乎没有偏差。这种更优的匹配表明，更长的平均降低了失真，使得 `LSTM` 完全捕捉到里泽的潜在降水趋势。值得注意的是，虽然 `Figs. 4–9` 和 `4–10` 相对于 `Fig. 4–8` 显示出改进的预报，但从 3 个月到 5 个月滤波数据集，预测的准确性逐步提高。渐进增强的实现证实，加入额外的平滑技术成功减少了非平稳性，导致输入数据更符合 `LSTM` 的平稳性假设。因此，模型的预测能力得到提升。
 
 ![Figure 4–9 Moving average filtered (window size 3) monthly rainfall training data, predictions, and actual values for long short-term memory model.](img/F000031f04-09-9780443219054.jpg)
 
 `Figure 4–9` 移动平均滤波（窗口大小 3）月降雨训练数据、预测值和长短期记忆模型的实际值。
+
+
 
 ![Figure 4–10 Moving average filtered (window size 5) monthly rainfall training data, predictions, and actual values for long short-term memory model.](img/F000031f04-10-9780443219054.jpg)
 
@@ -933,11 +890,7 @@ Figure 4–8 Raw monthly rainfall training data, predictions, and actual values 
 
 Figure 4–11 Raw monthly rainfall training data, predictions, and actual values for ARIMA model.
 
-
-
-
-
-ARIMA 模型的预测性能评估显示在 图 4–12 和 4–13 中。模型分别使用 3 个月和 5 个月移动平均降雨序列作为输入进行评估。评估期为 2022 年至 2023 年。在 图 4–12 中，ARIMA 模型在用 3 个月移动平均滤波器预处理的数据上训练。与实际测量值相比，绿色预测曲线比原始数据（见 图 4–11）更准确地反映了观测降雨（红线表示）的变化。这种增强表明滤波器帮助模型捕捉趋势。图 4–13 显示了使用 5 个月平均输入对 ARIMA 进行评估的结果。在这里，预测值几乎完美地对应于实际观测值，绿色线和红线之间在任何时间点都几乎没有可感知的偏差。这种高度吻合表明更长的平均产生了更高的平稳性，使模型能够以最高精度学习降水趋势。值得注意的是，与 LSTM 模型一样，从 3 个月到 5 个月窗口采用平滑输入，ARIMA 预测与现实之间的吻合度不断提高。这强化了额外的滤波有助于进一步去除噪声，从而产生最适合 ARIMA 假设的输入。
+`ARIMA` 模型的预测性能评估显示在 `Figure 4–12` 和 `Figure 4–13` 中。模型分别使用 3 个月和 5 个月移动平均降雨序列作为输入进行评估。评估期为 2022 年至 2023 年。在 `Figure 4–12` 中，`ARIMA` 模型在用 3 个月移动平均滤波器预处理的数据上训练。与实际测量值相比，绿色预测曲线比原始数据（见 `Figure 4–11`）更准确地反映了观测降雨（红线表示）的变化。这种增强表明滤波器帮助模型捕捉趋势。`Figure 4–13` 显示了使用 5 个月平均输入对 `ARIMA` 进行评估的结果。在这里，预测值几乎完美地对应于实际观测值，绿色线和红线之间在任何时间点都几乎没有可感知的偏差。这种高度吻合表明更长的平均产生了更高的平稳性，使模型能够以最高精度学习降水趋势。值得注意的是，与 `LSTM` 模型一样，从 3 个月到 5 个月窗口采用平滑输入，`ARIMA` 预测与现实之间的吻合度不断提高。这强化了额外的滤波有助于进一步去除噪声，从而产生最适合 `ARIMA` 假设的输入。
 
 ![图 4–12 移动平均滤波（窗口大小 3）月降雨训练数据、自回归积分滑动平均模型的预测值和实际值。](img/F000031f04-12-9780443219054.jpg)
 
@@ -947,50 +900,43 @@ ARIMA 模型的预测性能评估显示在 图 4–12 和 4–13 中。模型分
 
 图 4–13 移动平均滤波（窗口大小 5）月降雨训练数据、预测值和自回归积分滑动平均模型的实际值。
 
-图 4–14 描绘了将 Prophet 模型应用于预测 2022 年 1 月至 2023 年 10 月里泽月降雨量并将预测值与该评估期间实际观测降雨量进行比较的结果。蓝线追踪真实测量的月降雨量，而黑点代表 Prophet 模型在 2004 年至 2021 年历史数据上训练后生成的预测。目视检查可见，Prophet 预测在测试时间段的大部分时间内都紧密跟踪实际降雨的波动。这表明模型有效地捕捉了基于训练的时间序列的潜在趋势和模式。偶尔会观察到一些轻微的差异，例如 2022 年 3 月和 9 月，但这些偏差与预测值和观测值之间整体吻合的准确性相比相对较小。
+`Figure 4–14` 描绘了将 `Prophet` 模型应用于预测 2022 年 1 月至 2023 年 10 月里泽月降雨量并将预测值与该评估期间实际观测降雨量进行比较的结果。蓝线追踪真实测量的月降雨量，而黑点代表 `Prophet` 模型在 2004 年至 2021 年历史数据上训练后生成的预测。目视检查可见，`Prophet` 预测在测试时间段的大部分时间内都紧密跟踪实际降雨的波动。这表明模型有效地捕捉了基于训练的时间序列的潜在趋势和模式。偶尔会观察到一些轻微的差异，例如 2022 年 3 月和 9 月，但这些偏差与预测值和观测值之间整体吻合的准确性相比相对较小。
 
 ![图 4–14 原始月降雨训练数据、Prophet 模型的预测值和实际值。](img/F000031f04-14-9780443219054.jpg)
 
 图 4–14 原始月降雨训练数据、预测值和 Prophet 模型的实际值。
 
-图 4–15 展示了 Prophet 模型使用以 3 个月移动平均窗口滤波的预处理月降雨数据作为输入的预测性能，并将 2022–23 年的预测与实际测量值进行比较。可以看出，黑色的预测数据与观测降雨（蓝线）的波动相比在使用原始数据作为 Prophet 输入时（图 4–14）更为紧密地对应。这种更紧密的拟合表明平滑去除了噪声和变化，使模型能够更精确地推断趋势和周期性。预测值与实现值之间更密切的吻合验证了 3 个月平均产生了略高的平稳性，从而实现了对降雨生成过程更准确的建模。
+`Figure 4–15` 展示了 `Prophet` 模型使用以 3 个月移动平均窗口滤波的预处理月降雨数据作为输入的预测性能，并将 2022–23 年的预测与实际测量值进行比较。可以看出，黑色的预测数据与观测降雨（蓝线）的波动相比在使用原始数据作为 `Prophet` 输入时（`Figure 4–14`）更为紧密地对应。这种更紧密的拟合表明平滑去除了噪声和变化，使模型能够更精确地推断趋势和周期性。预测值与实现值之间更密切的吻合验证了 3 个月平均产生了略高的平稳性，从而实现了对降雨生成过程更准确的建模。
 
 ![图 4–15 移动平均滤波（窗口大小 3）月降雨训练数据、Prophet 模型的预测值和实际值。](img/F000031f04-15-9780443219054.jpg)
 
 图 4–15 移动平均滤波（窗口大小 3）月降雨训练数据、预测值和 Prophet 模型的实际值。
 
-同样，图 4–16 显示了 Prophet 在提供 5 个月移动平均降雨序列作为输入时评估结果。在这里，预测量（黑点）几乎与实际观测值（蓝线）无法区分，在每个时间点上显示出近乎完美的一致性。这种优越的匹配表明更长的滤波产生了极接近平稳性的输入序列，使 Prophet 能够理解里泽的降雨趋势。比较 图 4–15 和 4–16，可以确认额外的平滑持续有利于 Prophet 的预测技能，通过连续减少序列中的失真。
+同样，`Figure 4–16` 显示了 `Prophet` 在提供 5 个月移动平均降雨序列作为输入时评估结果。在这里，预测量（黑点）几乎与实际观测值（蓝线）无法区分，在每个时间点上显示出近乎完美的一致性。这种优越的匹配表明更长的滤波产生了极接近平稳性的输入序列，使 `Prophet` 能够理解里泽的降雨趋势。比较 `Figure 4–15` 和 `Figure 4–16`，可以确认额外的平滑持续有利于 `Prophet` 的预测技能，通过连续减少序列中的失真。
 
 ![图 4–16 移动平均滤波（窗口大小 5）月降雨训练数据、Prophet 模型的预测值和实际值。](img/F000031f04-16-9780443219054.jpg)
 
 图 4–16 移动平均滤波（窗口大小 5）月降雨训练数据、预测值和 Prophet 模型的实际值。
 
-表 4–2 总结了各实验中模型在测试集上获得的 MAE、MSE、RMSE 和 MAPE 值。在原始数据实验中，Prophet 模型优于 ARIMA 和 LSTM 模型，MAE 最低为 19.225，MSE 为 564.023，RMSE 为 23.749。就 MAPE 而言，ARIMA 模型表现最佳，值为 3.635，其次是 LSTM 为 3.700，然后是 Prophet 为 4.206。当应用窗口大小为 3 个月的移动平均滤波器时，所有模型根据所有指标的性能都大幅提高。ARIMA 模型取得了最佳结果，MAE、MSE 和 RMSE 值分别为 8.349、86.139 和 9.281。MAPE 也最低，为 0.353。 对于使用 5 个月移动平均滤波数据的实验，ARIMA 再次表现最佳，MAE、MSE 和 RMSE 值分别为 4.850、28.473 和 5.336。MAPE 为 0.199% 也是模型中最低的。
+`Table 4–2` 总结了各实验中模型在测试集上获得的 `MAE`、`MSE`、`RMSE` 和 `MAPE` 值。在原始数据实验中，`Prophet` 模型优于 `ARIMA` 和 `LSTM` 模型，`MAE` 最低为 19.225，`MSE` 为 564.023，`RMSE` 为 23.749。就 `MAPE` 而言，`ARIMA` 模型表现最佳，值为 3.635，其次是 `LSTM` 为 3.700，然后是 `Prophet` 为 4.206。当应用窗口大小为 3 个月的移动平均滤波器时，所有模型根据所有指标的性能都大幅提高。`ARIMA` 模型取得了最佳结果，`MAE`、`MSE` 和 `RMSE` 值分别为 8.349、86.139 和 9.281。`MAPE` 也最低，为 0.353。对于使用 5 个月移动平均滤波数据的实验，`ARIMA` 再次表现最佳，`MAE`、`MSE` 和 `RMSE` 值分别为 4.850、28.473 和 5.336。`MAPE` 为 0.199% 也是模型中最低的。
 
-表 4–2
+### 表 4–2 实验的数值结果
 
-实验的数值结果。
-
-|    || Model || MAE || MSE || RMSE || MAPE |
+| 实验类型 | Model | MAE | MSE | RMSE | MAPE |
 | --- | --- | --- | --- | --- | --- |
-| 原始 || ARIMA || 23.255 || 610.594 || 24.710 || 3.635 |
-| --- | --- | --- | --- | --- | --- |
-| LSTM || 23.778 || 653.265 || 25.559 || 3.700 |
-| Prophet || 19.225 || 564.023 || 23.749 || 4.206 |
-| 移动平均 3 || ARIMA || 8.349 || 86.139 || 9.281 || 0.353 |
-| LSTM || 13.724 || 258.638 || 16.082 || 0.732 |
-| Prophet || 13.866 || 280.013 || 16.733 || 0.981 |
-| 移动平均 5 || ARIMA || 4.850 || 28.473 || 5.336 || 0.199 |
-|   || LSTM || 11.352 || 174.659 || 13.215 || 0.412 |
-|   || Prophet || 13.200 || 217.887 || 14.760 || 0.749 |
+| 原始 | ARIMA | 23.255 | 610.594 | 24.710 | 3.635 |
+| 原始 | LSTM | 23.778 | 653.265 | 25.559 | 3.700 |
+| 原始 | Prophet | 19.225 | 564.023 | 23.749 | 4.206 |
+| 移动平均 3 | ARIMA | 8.349 | 86.139 | 9.281 | 0.353 |
+| 移动平均 3 | LSTM | 13.724 | 258.638 | 16.082 | 0.732 |
+| 移动平均 3 | Prophet | 13.866 | 280.013 | 16.733 | 0.981 |
+| 移动平均 5 | ARIMA | 4.850 | 28.473 | 5.336 | 0.199 |
+| 移动平均 5 | LSTM | 11.352 | 174.659 | 13.215 | 0.412 |
+| 移动平均 5 | Prophet | 13.200 | 217.887 | 14.760 | 0.749 |
 
-*ARIMA*，自回归积分滑动平均；*LSTM*，长短期记忆；*MAE*，平均绝对误差；*MAPE*，平均绝对百分比误差；*MSE*，均方误差；*RMSE*，均方根误差。
+*`ARIMA`，自回归积分滑动平均；`LSTM`，长短期记忆；`MAE`，平均绝对误差；`MAPE`，平均绝对百分比误差；`MSE`，均方误差；`RMSE`，均方根误差。*
 
 ## 4.6 结论
-
-
-
-
 
 降雨预报对农业、灾害管理以及确保粮食和水安全至关重要。农民依靠短期和长期的降水预测来决定种植和收获时间，以最大化作物产量。水资源管理机构依赖降雨预报来调节水库水位并产生水电。准确的降雨预测对于及时发布洪水和干旱预警以保护生命并最大限度减少损失至关重要。然而，预报由于大气和地形因素以非线性方式相互作用，在复杂、变化的时空模式中难以建模，从而导致不确定性在 10 天后增加。
 
@@ -1001,77 +947,92 @@ ARIMA 模型的预测性能评估显示在 图 4–12 和 4–13 中。模型分
 ## 参考文献
 
 * Akbari Asanjan et al., 2018 Akbari Asanjan A, Yang T, Hsu K, Sorooshian S, Lin J, Peng Q. Short-term precipitation forecast based on the PERSIANN system and LSTM recurrent neural networks. *Journal of Geophysical Research: Atmospheres*. 2018;123(22):12,543–12,563 [`doi.org/10.1029/2018JD028375`](https://doi.org/10.1029/2018JD028375).
+
 * Akçay et al., 2022 Akçay F, Kankal M, Şan M. Innovative approaches to the trend assessment of streamflows in the Eastern Black Sea basin, Turkey. *Hydrological Sciences Journal*. 2022;67(2):222–247 [`doi.org/10.1080/02626667.2021.1998509`](https://doi.org/10.1080/02626667.2021.1998509).
+
 * Albayrak et al., 2022 Albayrak D, Sen OL, Yucel I. Spatiotemporal trends in daily and subdaily rainfall extremes and return levels in Turkey. *International Journal of Climatology*. 2022;42(16):10337–10352 [`doi.org/10.1002/joc.7906`](https://doi.org/10.1002/joc.7906).
+
 * Allawi et al., 2023 Allawi MF, Abdulhameed UH, Adham A, et al. Monthly rainfall forecasting modelling based on advanced machine learning methods: Tropical region as case study. *Engineering Applications of Computational Fluid Mechanics*. 2023;17(1):2243090 [`doi.org/10.1080/19942060.2023.2243090`](https://doi.org/10.1080/19942060.2023.2243090).
+
 * Anul Haq, 2022 Anul Haq M. CDLSTM: A novel model for climate change forecasting. *Computers, Materials & Continua*. 2022;71(2):2363–2381 [`doi.org/10.32604/cmc.2022.023059`](https://doi.org/10.32604/cmc.2022.023059).
+
 * Barua et al., 2013 Barua S, Muttil N, Ng AWM, Perera BJC. Rainfall trend and its implications for water resource management within the Yarra River catchment, Australia. *Hydrological Processes*. 2013;27(12):1727–1738 [`doi.org/10.1002/hyp.9311`](https://doi.org/10.1002/hyp.9311).
+
 * Berhane et al., 2020 Berhane T, Shibabaw N, Awgichew G, Kebede T. Option pricing of weather derivatives based on a stochastic daily rainfall model with analogue year component. *Heliyon*. 2020;6(1):e03212 [`doi.org/10.1016/j.heliyon.2020.e03212`](https://doi.org/10.1016/j.heliyon.2020.e03212).
+
 * Bişkin and Çifci, 2021 Bişkin OT, Çifci A. Forecasting of Turkey’s electrical energy consumption using LSTM and GRU networks. *Bilecik Şeyh Edebali Üniversitesi Fen Bilimleri Dergisi*. 2021;8(2):656–667.
+
 * Box and Jenkins, 1970 Box GEP, Jenkins GM. *Time series analysis: Forecasting and control [Holden-Day series in time series analysis and digital processing]* Holden-Day 1970;.
+
 * Chen et al., 2022 Chen C, Zhang Q, Kashani MH, et al. Forecast of rainfall distribution based on fixed sliding window long short-term memory. *Engineering Applications of Computational Fluid Mechanics*. 2022;16(1):248–261 [`doi.org/10.1080/19942060.2021.2009374`](https://doi.org/10.1080/19942060.2021.2009374).
-* Danandeh Mehr and Kahya, 2017 Danandeh Mehr A, Kahya E. Climate change impacts on catchment-scale extreme rainfall variability: Case study of Rize Province, Turkey. *Journal of Hydrologic Engineering*. 2017;22(3):05016037 [`doi.org/10.1061/(ASCE)HE.1943-5584.0001477`](https://doi.org/10.1061/\(ASCE\)HE.1943-5584.0001477).
-* Gao et al., 2020 Gao S, Huang Y, Zhang S, et al. Short-term runoff prediction with GRU and LSTM networks without requiring time step optimization during sample generation. *Journal of Hydrology*. 2020;589:125188 [`doi.org/10.1016/j.jhydrol.2020.125188`](https://doi.org/10.1016/j.jhydrol.2020.125188).
-* Gers et al., 2000 Gers FA, Schmidhuber J, Cummins F. Learning to forget: Continual prediction with LSTM. *Neural Computation*. 2000;12:2451–2471 [`doi.org/10.1162/089976600300015015`](https://doi.org/10.1162/089976600300015015).
-* Guzzetti et al., 2020 Guzzetti F, Gariano SL, Peruccacci S, et al. Geographical landslide early warning systems. *Earth-Science Reviews*. 2020;200:102973 [`doi.org/10.1016/j.earscirev.2019.102973`](https://doi.org/10.1016/j.earscirev.2019.102973).
-* Han et al., 2023 Han C, Zhang G, Ji B, Huo J, Messer H. On the potential of using emerging microwave links for city rainfall monitoring. *IEEE Communications Magazine*. 2023;61(11):174–180 [`doi.org/10.1109/MCOM.001.2200975`](https://doi.org/10.1109/MCOM.001.2200975).
-* Hochreiter and Schmidhuber, 1997 Hochreiter S, Schmidhuber J. Long short-term memory. *Neural Computation*. 1997;9:1735–1780 [`doi.org/10.1162/neco.1997.9.8.1735`](https://doi.org/10.1162/neco.1997.9.8.1735).
-* Hou et al., 2014 Hou AY, Kakar RK, Neeck S, et al. The global precipitation measurement mission. *Bulletin of the American Meteorological Society*. 2014;95(5):701–722 [`doi.org/10.1175/BAMS-D-13-00164.1`](https://doi.org/10.1175/BAMS-D-13-00164.1).
-* Hu et al., 2018 Hu C, Wu Q, Li H, Jian S, Li N, Lou Z. *Deep learning with a long short-term memory networks approach for rainfall-runoff simulation*. *Water*. 2018;10 [`doi.org/10.3390/w10111543`](https://doi.org/10.3390/w10111543) Article 11.
+
+* Danandeh Mehr and Kahya, 2017 Danandeh Mehr A, Kahya E. Climate change impacts on catchment-scale extreme rainfall variability: Case study of Rize Province, Turkey. *Journal of Hydrologic Engineering*. 2017;22(3):05016037 [`doi.org/10.1061/(ASCE)HE.1943-5584.0001477`](https://doi.org/10.1061/(ASCE)HE.1943-5584.0001477).
 
 
 
+# 参考文献
 
+* **Gao et al., 2020** Gao S, Huang Y, Zhang S, et al. Short-term runoff prediction with GRU and LSTM networks without requiring time step optimization during sample generation. *Journal of Hydrology*. 2020;589:125188 [`doi.org/10.1016/j.jhydrol.2020.125188`](https://doi.org/10.1016/j.jhydrol.2020.125188).
 
-* Kim et al., 2017 Kim, S., Hong, S., Joh, M., & Song, S. (2017). DeepRain: ConvLSTM network for precipitation prediction using multichannel radar data (arXiv:1711.02316). *arXiv*. <https://doi.org/10.48550/arXiv.1711.02316>.
+* **Gers et al., 2000** Gers FA, Schmidhuber J, Cummins F. Learning to forget: Continual prediction with LSTM. *Neural Computation*. 2000;12:2451–2471 [`doi.org/10.1162/089976600300015015`](https://doi.org/10.1162/089976600300015015).
 
-* Kirbas, 2019 Kirbas, I. (2019). Investigation of predictive performance of LSTM artificial neural networks on Brownian time series. In 5th *international conference on engineering and natural science* (ICENS) *book of proceedings* (Vol. 1, pp. 105–112).
+* **Guzzetti et al., 2020** Guzzetti F, Gariano SL, Peruccacci S, et al. Geographical landslide early warning systems. *Earth-Science Reviews*. 2020;200:102973 [`doi.org/10.1016/j.earscirev.2019.102973`](https://doi.org/10.1016/j.earscirev.2019.102973).
 
-* Kırbaş, 2019 Kırbaş, İ. (2019). Brownian gürültülü zaman serilerinde ARIMA tahmin modellerinin performanslarinin incelenmesi. In MAS *international conference on mathematics-engineering-natural & medical sciences*-IV (pp. 32–41).
+* **Han et al., 2023** Han C, Zhang G, Ji B, Huo J, Messer H. On the potential of using emerging microwave links for city rainfall monitoring. *IEEE Communications Magazine*. 2023;61(11):174–180 [`doi.org/10.1109/MCOM.001.2200975`](https://doi.org/10.1109/MCOM.001.2200975).
 
-* MGM (Meteoroloji Genel Müdürlüğü), 2023 MGM (Meteoroloji Genel Müdürlüğü). (2023). <https://www.mgm.gov.tr/veridegerlendirme/il-ve-ilceler-istatistik.aspx?m=RIZE> Accessed 31.12.23.
+* **Hochreiter and Schmidhuber, 1997** Hochreiter S, Schmidhuber J. Long short-term memory. *Neural Computation*. 1997;9:1735–1780 [`doi.org/10.1162/neco.1997.9.8.1735`](https://doi.org/10.1162/neco.1997.9.8.1735).
 
-* Miftahuddin et al., 2020 Miftahuddin, Maulidawani, Setiawan I, Ilhamsyah Y, Fadhli. Rainfall analysis in the Indian Ocean by using 6-States Markov Chain Model. *IOP Conference Series: Earth and Environmental Science*. 2020;429(1):012012 https://doi.org/10.1088/1755-1315/429/1/012012.
+* **Hou et al., 2014** Hou AY, Kakar RK, Neeck S, et al. The global precipitation measurement mission. *Bulletin of the American Meteorological Society*. 2014;95(5):701–722 [`doi.org/10.1175/BAMS-D-13-00164.1`](https://doi.org/10.1175/BAMS-D-13-00164.1).
 
-* Ni et al., 2020 Ni L, Wang D, Singh VP, et al. Streamflow and rainfall forecasting by two long short-term memory-based models. *Journal of Hydrology*. 2020;583:124296 https://doi.org/10.1016/j.jhydrol.2019.124296.
+* **Hu et al., 2018** Hu C, Wu Q, Li H, Jian S, Li N, Lou Z. *Deep learning with a long short-term memory networks approach for rainfall-runoff simulation*. *Water*. 2018;10 [`doi.org/10.3390/w10111543`](https://doi.org/10.3390/w10111543) Article 11.
 
-* Nigussie and Altunkaynak, 2019 Nigussie TA, Altunkaynak A. Impacts of climate change on the trends of extreme rainfall indices and values of maximum precipitation at Olimpiyat Station, Istanbul, Turkey. *Theoretical and Applied Climatology*. 2019;135(3):1501–1515 https://doi.org/10.1007/s00704-018-2449-x.
+* **Kim et al., 2017** Kim, S., Hong, S., Joh, M., & Song, S. (2017). DeepRain: ConvLSTM network for precipitation prediction using multichannel radar data (arXiv:1711.02316). *arXiv*. <https://doi.org/10.48550/arXiv.1711.02316>.
 
-* de Oliveira Simoyama et al., 2023 de Oliveira Simoyama F, Croope S, de Salles Neto LL, Santos LBL. Optimization of rain gauge networks—A systematic literature review. *Socio-economic Planning Sciences*. 2023;86:101469 https://doi.org/10.1016/j.seps.2022.101469.
+* **Kirbas, 2019** Kirbas, I. (2019). Investigation of predictive performance of LSTM artificial neural networks on Brownian time series. In 5th *international conference on engineering and natural science* (ICENS) *book of proceedings* (Vol. 1, pp. 105–112).
 
-* Ravi et al., 2022 Ravi, S.S., Sai, R.G. K., & Raj R, J.R. (2022). Design of deep learning model for predicting rainfall. In *2022 8th international conference on advanced computing and communication systems (ICACCS)* (Vol. 1, pp. 1343–1347). <https://doi.org/10.1109/ICACCS54159.2022.9785028>.
+* **Kırbaş, 2019** Kırbaş, İ. (2019). Brownian gürültülü zaman serilerinde ARIMA tahmin modellerinin performanslarinin incelenmesi. In MAS *international conference on mathematics-engineering-natural & medical sciences*-IV (pp. 32–41).
 
-* Rhaiem et al., 2021 Rhaiem, M.A. B., Hassine, A.B., Ouertani, A., & Farah, I.R. (2021). A hybrid rainfall prediction model for Tunisian agriculture regions based on OSM data, Voronoi spatial analysis and Long Short Term Memory deep learning (EGU21-12993). In *EGU21*. Copernicus Meetings. <https://doi.org/10.5194/egusphere-egu21-12993>.
+* **MGM (Meteoroloji Genel Müdürlüğü), 2023** MGM (Meteoroloji Genel Müdürlüğü). (2023). <https://www.mgm.gov.tr/veridegerlendirme/il-ve-ilceler-istatistik.aspx?m=RIZE> Accessed 31.12.23.
 
-* Rodrigo-Comino, 2021 Rodrigo-Comino J. Chapter 1 – Precipitation: A regional geographic topic with numerous challenges. In: Rodrigo-Comino J, ed. *Precipitation*. Elsevier 2021;:1–18. https://doi.org/10.1016/B978-0-12-822699-5.00001-X.
+* **Miftahuddin et al., 2020** Miftahuddin, Maulidawani, Setiawan I, Ilhamsyah Y, Fadhli. Rainfall analysis in the Indian Ocean by using 6-States Markov Chain Model. *IOP Conference Series: Earth and Environmental Science*. 2020;429(1):012012 https://doi.org/10.1088/1755-1315/429/1/012012.
 
-* Şen and Kahya, 2017 Şen O, Kahya E. Determination of flood risk: A case study in the rainiest city of Turkey. *Environmental Modelling & Software*. 2017;93:296–309 https://doi.org/10.1016/j.envsoft.2017.03.030.
+* **Ni et al., 2020** Ni L, Wang D, Singh VP, et al. Streamflow and rainfall forecasting by two long short-term memory-based models. *Journal of Hydrology*. 2020;583:124296 https://doi.org/10.1016/j.jhydrol.2019.124296.
 
-* Sen et al., 2012 Sen B, Topcu S, Türkeş M, Sen B, Warner JF. Projecting climate change, drought conditions and crop productivity in Turkey. *Climate Research*. 2012;52:175–191 https://doi.org/10.3354/cr01074.
+* **Nigussie and Altunkaynak, 2019** Nigussie TA, Altunkaynak A. Impacts of climate change on the trends of extreme rainfall indices and values of maximum precipitation at Olimpiyat Station, Istanbul, Turkey. *Theoretical and Applied Climatology*. 2019;135(3):1501–1515 https://doi.org/10.1007/s00704-018-2449-x.
 
-* Shi et al., 2015 Shi X, Chen Z, Wang H, Yeung D-Y, Wong W, Woo W. Convolutional LSTM network: A machine learning approach for precipitation nowcasting. *Advances in Neural Information Processing Systems*. 2015;28 (NIPS 2015).
+* **de Oliveira Simoyama et al., 2023** de Oliveira Simoyama F, Croope S, de Salles Neto LL, Santos LBL. Optimization of rain gauge networks—A systematic literature review. *Socio-economic Planning Sciences*. 2023;86:101469 https://doi.org/10.1016/j.seps.2022.101469.
 
-* Sidle and Bogaard, 2016 Sidle RC, Bogaard TA. Dynamic earth system and ecological controls of rainfall-initiated landslides. *Earth-Science Reviews*. 2016;159:275–291 https://doi.org/10.1016/j.earscirev.2016.05.013.
+* **Ravi et al., 2022** Ravi, S.S., Sai, R.G. K., & Raj R, J.R. (2022). Design of deep learning model for predicting rainfall. In *2022 8th international conference on advanced computing and communication systems (ICACCS)* (Vol. 1, pp. 1343–1347). <https://doi.org/10.1109/ICACCS54159.2022.9785028>.
 
-* Şimşek et al., 2023 Şimşek M, Öztürk MZ, Yeşilyurt S, Utlu M. Morphometric characteristics and paleogeographic implication of glacial cirques in Eastern Black Sea Mountains (Türkiye. *Geomorphology*. 2023;441:108889 https://doi.org/10.1016/j.geomorph.2023.108889.
+* **Rhaiem et al., 2021** Rhaiem, M.A. B., Hassine, A.B., Ouertani, A., & Farah, I.R. (2021). A hybrid rainfall prediction model for Tunisian agriculture regions based on OSM data, Voronoi spatial analysis and Long Short Term Memory deep learning (EGU21-12993). In *EGU21*. Copernicus Meetings. <https://doi.org/10.5194/egusphere-egu21-12993>.
 
-* Sulasikin et al., 2021 Sulasikin, A., Nugraha, Y., Kanggrawan, J.I., & Suherman, A.L. (2021). Monthly rainfall prediction using the Facebook Prophet model for flood mitigation in Central Jakarta. In *2021 international conference on ICT for smart society (ICISS)* (pp. 1–5). <https://doi.org/10.1109/ICISS53185.2021.9532507>.
+* **Rodrigo-Comino, 2021** Rodrigo-Comino J. Chapter 1 – Precipitation: A regional geographic topic with numerous challenges. In: Rodrigo-Comino J, ed. *Precipitation*. Elsevier 2021;:1–18. https://doi.org/10.1016/B978-0-12-822699-5.00001-X.
 
-* Taylor and Letham, 2018 Taylor SJ, Letham B. Forecasting at scale. *The American Statistician*. 2018;72:37–45.
+* **Şen and Kahya, 2017** Şen O, Kahya E. Determination of flood risk: A case study in the rainiest city of Turkey. *Environmental Modelling & Software*. 2017;93:296–309 https://doi.org/10.1016/j.envsoft.2017.03.030.
 
-* Wang et al., 2022 Wang, Yanding, Yan Z, et al. Prediction and analysis of COVID-19 daily new cases and cumulative cases: Times series forecasting and machine learning models. *BMC Infectious Diseases*. 2022;22:1–12.
+* **Sen et al., 2012** Sen B, Topcu S, Türkeş M, Sen B, Warner JF. Projecting climate change, drought conditions and crop productivity in Turkey. *Climate Research*. 2012;52:175–191 https://doi.org/10.3354/cr01074.
 
-* Yilmaz, 2015 Yilmaz AG. The effects of climate change on historical and future extreme rainfall in Antalya, Turkey. *Hydrological Sciences Journal*. 2015;60(12):2148–2162 https://doi.org/10.1080/02626667.2014.945455.
+* **Shi et al., 2015** Shi X, Chen Z, Wang H, Yeung D-Y, Wong W, Woo W. Convolutional LSTM network: A machine learning approach for precipitation nowcasting. *Advances in Neural Information Processing Systems*. 2015;28 (NIPS 2015).
 
-5
+* **Sidle and Bogaard, 2016** Sidle RC, Bogaard TA. Dynamic earth system and ecological controls of rainfall-initiated landslides. *Earth-Science Reviews*. 2016;159:275–291 https://doi.org/10.1016/j.earscirev.2016.05.013.
 
-## 用于天气预报研究的量子机器学习
+* **Şimşek et al., 2023** Şimşek M, Öztürk MZ, Yeşilyurt S, Utlu M. Morphometric characteristics and paleogeographic implication of glacial cirques in Eastern Black Sea Mountains (Türkiye. *Geomorphology*. 2023;441:108889 https://doi.org/10.1016/j.geomorph.2023.108889.
 
-Kolla Bhanu Prakash，印度安得拉邦瓦德斯瓦兰 Koneru Lakshmaiah 教育基金会计算机科学与工程系
+* **Sulasikin et al., 2021** Sulasikin, A., Nugraha, Y., Kanggrawan, J.I., & Suherman, A.L. (2021). Monthly rainfall prediction using the Facebook Prophet model for flood mitigation in Central Jakarta. In *2021 international conference on ICT for smart society (ICISS)* (pp. 1–5). <https://doi.org/10.1109/ICISS53185.2021.9532507>.
+
+* **Taylor and Letham, 2018** Taylor SJ, Letham B. Forecasting at scale. *The American Statistician*. 2018;72:37–45.
+
+* **Wang et al., 2022** Wang, Yanding, Yan Z, et al. Prediction and analysis of COVID-19 daily new cases and cumulative cases: Times series forecasting and machine learning models. *BMC Infectious Diseases*. 2022;22:1–12.
+
+* **Yilmaz, 2015** Yilmaz AG. The effects of climate change on historical and future extreme rainfall in Antalya, Turkey. *Hydrological Sciences Journal*. 2015;60(12):2148–2162 https://doi.org/10.1080/02626667.2014.945455.
+
+# 用于天气预报研究的量子机器学习
+
+**Kolla Bhanu Prakash**，印度安得拉邦瓦德斯瓦兰 Koneru Lakshmaiah 教育基金会计算机科学与工程系
 
 ## 摘要
 
-气候学科学可以通过量子机器学习（QML）方法得到改革。大气科学的建模和预测是天气预报中的一个动态主题，这取决于数学和数据科学。将 QML 技术应用于天气预报仍处于起步阶段，我们可以期望这些新方法能够克服经典方法中发现的局限性。天气分析的主要关注点是优化，这可以使用量子计算机解决。为了避免预测误差，我们需要正确建模预测模型中涉及的参数。为了扩展工作以校准新模型和估计参数，可以考虑量子近似优化算法。有时我们需要处理复杂的系统来预测准确的天气条件。我们可以期望通过使用量子模拟更好地理解气候学来改善天气预报。量子支持向量机和量子神经网络在处理用于分析的气候数据的数 TB 数据方面可以发挥很大作用，这将有助于识别数据中的联系和模式；经典方法失败了。因为大气是混沌的，所以天气预报本质上是不可预测的。为了更好地衡量和控制天气预报中的不确定性，可以应用量子计算，这可能导致更准确的预测。由于天气数据经常敏感且对各种用途至关重要，因此可以使用量子密码学和安全技术来保护天气数据和预报中心之间的通信。
+气候学科学可以通过量子机器学习（`QML`）方法得到改革。大气科学的建模和预测是天气预报中的一个动态主题，这取决于数学和数据科学。将 `QML` 技术应用于天气预报仍处于起步阶段，我们可以期望这些新方法能够克服经典方法中发现的局限性。天气分析的主要关注点是优化，这可以使用量子计算机解决。为了避免预测误差，我们需要正确建模预测模型中涉及的参数。为了扩展工作以校准新模型和估计参数，可以考虑量子近似优化算法。有时我们需要处理复杂的系统来预测准确的天气条件。我们可以期望通过使用量子模拟更好地理解气候学来改善天气预报。量子支持向量机和量子神经网络在处理用于分析的气候数据的数 TB 数据方面可以发挥很大作用，这将有助于识别数据中的联系和模式；经典方法失败了。因为大气是混沌的，所以天气预报本质上是不可预测的。为了更好地衡量和控制天气预报中的不确定性，可以应用量子计算，这可能导致更准确的预测。由于天气数据经常敏感且对各种用途至关重要，因此可以使用量子密码学和安全技术来保护天气数据和预报中心之间的通信。
 
 ## 关键词
 
@@ -1079,33 +1040,26 @@ Kolla Bhanu Prakash，印度安得拉邦瓦德斯瓦兰 Koneru Lakshmaiah 教育
 
 ## 5.1 引言
 
-
-
-
-
-量子机器学习（`QML`）可能产生重大影响的一个领域是天气预报。`QML` 具有许多可能的應用。(Lin et al., 2024; Boehm & Schumer, 2023) 大气过程的复杂性给传统的天气预报模型带来了困难，而量子计算可能有助于更快地处理复杂的计算。天气预报充满了优化问题，这非常适合量子计算机。通过使用 `QML` 算法优化复杂大气模型的參數，可以做出更精确的预测 (Giani & Goff-Eldredge, 2022; Kerr, 2007)。天气预报涉及对海量数据集的检查，`QML` 方法可能会改善这一点 (Delworth & Knutson, 2000)。在量子计算的参与下，可以更深入地推断天气中的模式 (Cui et al., 2021)。与经典算法相比，量子算法预计在模拟大气科学方面表现更好，这将提高准确性 (Guo et al., 2022)。不确定性问题可以使用 `QML` 更好地解决，并且使用这些算法的气候研究人员在预测中将获得最佳的置信度 (Ermida et al., 2020; Vancutsem, et al., 2010)。量子支持向量机（`QSVM`）和量子神经网络（`QNN`）将是比经典算法更适合准确天气预报的选择 (Paudel et al., 2022)。量子集成学习也可以是预测天气预报的另一个良好算法 (Paudel et al., 2022; Rice et al., 2021)。`QML` 的潜力正被多个领域的科研人员积极研究，其中包括气象学。
+量子机器学习（`QML`）可能产生重大影响的一个领域是天气预报。`QML` 具有许多可能的应用。(Lin et al., 2024; Boehm & Schumer, 2023) 大气过程的复杂性给传统的天气预报模型带来了困难，而量子计算可能有助于更快地处理复杂的计算。天气预报充满了优化问题，这非常适合量子计算机。通过使用 `QML` 算法优化复杂大气模型的参数，可以做出更精确的预测 (Giani & Goff-Eldredge, 2022; Kerr, 2007)。天气预报涉及对海量数据集的检查，`QML` 方法可能会改善这一点 (Delworth & Knutson, 2000)。在量子计算的参与下，可以更深入地推断天气中的模式 (Cui et al., 2021)。与经典算法相比，量子算法预计在模拟大气科学方面表现更好，这将提高准确性 (Guo et al., 2022)。不确定性问题可以使用 `QML` 更好地解决，并且使用这些算法的气候研究人员在预测中将获得最佳的置信度 (Ermida et al., 2020; Vancutsem, et al., 2010)。量子支持向量机（`QSVM`）和量子神经网络（`QNN`）将是比经典算法更适合准确天气预报的选择 (Paudel et al., 2022)。量子集成学习也可以是预测天气预报的另一个良好算法 (Paudel et al., 2022; Rice et al., 2021)。`QML` 的潜力正被多个领域的科研人员积极研究，其中包括气象学。
 
 ## 5.2 相关工作
 
+
+
 量子物理学家和大气科学家目前正在共同工作 (Andersen, 2021; Moore, 2006)。地球地表温度（`LST`）波动是气候变化的关键标志，影响着自然界和人类社会 (Franklin & Chong, 2006)。例如，在生长季节，`LST` 是制定农业决策时考虑的最重要因素之一。在卫星遥感的帮助下，无法在全球范围内持续监测精细分辨率的 `LST` 变化 (Giani & Eldredge, 2021)。随着过去几年众多算法的发展和完善，利用卫星传感器估计 `LST` 已大大改善 (Paudel et al., 2022)。Landsat 任务使用长波红外（`LWIR`）波段提供热数据，时间分辨率为 16 天，空间分辨率为 30 m。另一方面，通过利用两个 `LWIR` 波段，中等分辨率成像光谱辐射计（`MODIS`）可以更规律地监测全球 `LST` (Crawford et al., 2021)。`MODIS` 的 1 公里空间分辨率非常适合在世界范围内监测 `LST` 变化，并且已在多项研究中使用，尽管其分辨率不如 Landsat 精细 (Sebastianelli et al., 2022)。在以前的研究中，使用多种粗分辨率 `MODIS` 数据计算了日平均地表温度 (Zaidenberg et al., 2021)。然而，云覆盖会影响测量的准确性。此外，由于它没有考虑时间变化，先前工作中使用的地表温度函数是日温度估计的良好模型，但不是多年或昼夜分析的最佳模型 (Kulikowski, 2019)。监测短期和长期温度变化以及以高空间分辨率测量大尺度 `LST` 变化的计算挑战 (Gaitan, 2021; Somaroo et al., 1999) 也已在一些额外出版物中总结 (`Table 5–1`)。
 
-`Table 5–1`
+### Table 5–1
 
 使用量子计算的潜在益处。
 
-| S. no. || Category || Challenge || Potential benefits |
+| S. no. | Category | Challenge | Potential benefits |
 | --- | --- | --- | --- |
-| 1 || 电网韧性和安全 || 确保发电设施今后可靠且坚固。 || 改进的气候和天气模型可能使基础设施布局更安全，量子优化可能有助于更好地设计新的资源，如风电场。 |
-| --- | --- | --- | --- |
-| 2 || 天气预报和气候建模 || 随着模拟和预报模型复杂性和分辨率的提高，满足计算需求。 || 基于流体动力学的模拟分辨率增强能力可能使模型得到改进，从而更全面地理解可能的未来情况，并增强缓解和适应策略的规划。 |
-| 3 || 电网管理 || 安排和分配资源以平衡供需，特别是当发电机的数量和分散程度增加时。 || 通过改善运行条件，量子优化可能有助于成本效益的管理策略并降低消费者成本。 |
-| 4 || 量子化学 || 评估各种材料的分子尺度特性和操作，以促进技术创新。 || 量子计算可以通过改进减缓气候变化的方法以及发现和开发新型能源生产和储存技术来加速进程。 |
+| 1 | 电网韧性和安全 | 确保发电设施今后可靠且坚固。 | 改进的气候和天气模型可能使基础设施布局更安全，量子优化可能有助于更好地设计新的资源，如风电场。 |
+| 2 | 天气预报和气候建模 | 随着模拟和预报模型复杂性和分辨率的提高，满足计算需求。 | 基于流体动力学的模拟分辨率增强能力可能使模型得到改进，从而更全面地理解可能的未来情况，并增强缓解和适应策略的规划。 |
+| 3 | 电网管理 | 安排和分配资源以平衡供需，特别是当发电机的数量和分散程度增加时。 | 通过改善运行条件，量子优化可能有助于成本效益的管理策略并降低消费者成本。 |
+| 4 | 量子化学 | 评估各种材料的分子尺度特性和操作，以促进技术创新。 | 量子计算可以通过改进减缓气候变化的方法以及发现和开发新型能源生产和储存技术来加速进程。 |
 
-
-
-
-
-气候变化正在迅速发生。这主要是由于人类引起的 1.1°C 的全球变暖，带来了许多环境挑战（Kose et al., 2022；Molina et al., 2023）。变化的副作用如今正在增加，解决方案需要额外的资金（Didal et al., 2017）。损失和损害源于一些已经严重到无法调整的气候后果。在 2025 年之前，全球温室气体（GHG）排放量在与 1.5°C 相一致的路径上达到峰值。作为关键的解决方案方式，需要离开化石燃料（Biamonte et al., 2017）。作为净零的目标，温度升高 1.5°C 似乎是一个近期、最佳的解决方案。迫切需要一些旨在减缓以及适应导向解决方案的气候资金。如果我们不保证公平转型，气候变化的影响——以及我们为适应和防止其而做出的共同努力——将加剧不平等（Lloyd et al., 2013）。社会保障体系可以重新设计以纳入适应，从而降低城市和农村社区对各种气候威胁的易感性。当与提供清洁水、卫生条件和医疗保健等基础设施和基本服务获取的举措相结合时，这些行动尤其成功。如果政府、民间社会组织和企业部门合作，提供这些服务可以提高脆弱地区的气候韧性。在这一点上，以生态系统为导向的适应可以帮助应对这些问题（Molina-Perez et al., 2020）。
+气候变化正在迅速发生。这主要是由于人类引起的 1.1°C 的全球变暖，带来了许多环境挑战（Kose et al., 2022；Molina et al., 2023）。变化的副作用如今正在增加，解决方案需要额外的资金（Didal et al., 2017）。损失和损害源于一些已经严重到无法调整的气候后果。在 2025 年之前，全球温室气体（`GHG`）排放量在与 1.5°C 相一致的路径上达到峰值。作为关键的解决方案方式，需要离开化石燃料（Biamonte et al., 2017）。作为净零的目标，温度升高 1.5°C 似乎是一个近期、最佳的解决方案。迫切需要一些旨在减缓以及适应导向解决方案的气候资金。如果我们不保证公平转型，气候变化的影响——以及我们为适应和防止其而做出的共同努力——将加剧不平等（Lloyd et al., 2013）。社会保障体系可以重新设计以纳入适应，从而降低城市和农村社区对各种气候威胁的易感性。当与提供清洁水、卫生条件和医疗保健等基础设施和基本服务获取的举措相结合时，这些行动尤其成功。如果政府、民间社会组织和企业部门合作，提供这些服务可以提高脆弱地区的气候韧性。在这一点上，以生态系统为导向的适应可以帮助应对这些问题（Molina-Perez et al., 2020）。
 
 韧性也可以通过获得更好的技术来加强，例如太阳能和风能、更好的动物育种，以及更具韧性的作物种类。科学毋庸置疑。气候变化对地球和人类福祉都构成风险。如果我们现在不采取行动，气候变化的影响可能严重到我们的世界将无法自认。未来几年有一个短暂的机会，为每个人创造一个可持续的、宜居的未来。为了扭转方向，需要快速、积极和协调一致的行动来减少排放、增强韧性、保护生态系统，并大幅扩大适应和损失与损害管理的资金。图 5–1 和 5–2 分别代表传统工作站和州气象中心通信。
 
@@ -1119,77 +1073,76 @@ Kolla Bhanu Prakash，印度安得拉邦瓦德斯瓦兰 Koneru Lakshmaiah 教育
 
 ## 5.3 数学建模
 
-数学建模量子态编码方程：$\left| \psi \right\rangle = \sum_{i = 0}^{N - 1}{\sqrt{p_{i}}\left| x_{i} \right\rangle}$<mml:math><mml:mrow><mml:mo stretchy="true">|</mml:mo><mml:mi mathvariant="normal">&#968;</mml:mi><mml:mo stretchy="true">&#10217;</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:msubsup><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn></mml:mrow><mml:mrow><mml:mi>N</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msubsup><mml:mrow><mml:msqrt><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msqrt><mml:mrow><mml:mo stretchy="true">|</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo stretchy="true">&#10217;</mml:mo></mml:mrow></mml:mrow></mml:math>![Equation](img/F000122si1.png). 该方程表示将经典天气数据 *x*[*i*] 编码为量子态 |Ψ⟩。*p*[*i*] 表示与每个经典数据点 *x*[*i*] 相关的概率幅。
+数学建模量子态编码方程：$\left| \psi \right\rangle = \sum_{i = 0}^{N - 1}{\sqrt{p_{i}}\left| x_{i} \right\rangle}$。该方程表示将经典天气数据 `x[i]` 编码为量子态 `|Ψ⟩`。`p[i]` 表示与每个经典数据点 `x[i]` 相关的概率幅。
 
 量子电路方程：
 
-*U*(*θ*) = *e* − *i**H**θ*.<mml:math><mml:mi>U</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>&#952;</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>=</mml:mo><mml:mi>e</mml:mi><mml:mo>&#8722;</mml:mo><mml:mi>i</mml:mi><mml:mi>H</mml:mi><mml:mi>&#952;</mml:mi><mml:mo>.</mml:mo></mml:math> (5–1)
+`U(θ) = e^(-iHθ)` (5–1)
 
-![Equation](img/F000122si2.png)(5–1)
-
-该方程定义了用于 QML 中的量子电路对应的幺正算符 *U*(*θ*)。*H* 表示描述量子系统动力学的哈密顿算符，*θ* 表示待优化的电路参数。
+该方程定义了用于 QML 中的量子电路对应的幺正算符 `U(θ)`。`H` 表示描述量子系统动力学的哈密顿算符，`θ` 表示待优化的电路参数。
 
 量子变分电路方程：
 
-|*Ψ*(*θ*)⟩ = *U*(*θ*)|*Ψ*[0]⟩.<mml:math><mml:mrow><mml:mo stretchy="true">|</mml:mo><mml:mrow><mml:mi mathvariant="normal">&#936;</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>&#952;</mml:mi><mml:mo stretchy="false">)</mml:mo></mml:mrow><mml:mo stretchy="true">&#10217;</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mi>U</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>&#952;</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mrow><mml:mo stretchy="true">|</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#936;</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn></mml:mrow></mml:msub></mml:mrow><mml:mo stretchy="true">&#10217;</mml:mo></mml:mrow><mml:mo>.</mml:mo></mml:math> (5–2)
+`|Ψ(θ)⟩ = U(θ)|Ψ[0]⟩` (5–2)
 
-![Equation](img/F000122si3.png)(5–2)
-
-该方程描述了通过将变分量子电路 *U*(*θ*) 应用于初始量子态 |Ψ[0]⟩ 所产生的状态。*Θ* 是一个变分参数。
+该方程描述了通过将变分量子电路 `U(θ)` 应用于初始量子态 `|Ψ[0]⟩` 所产生的状态。`Θ` 是一个变分参数。
 
 代价函数方程：
 
-*C*(*θ*) = ⟨*Ψ*(*θ*)|*H*|*Ψ*(*θ*)⟩.<mml:math><mml:mi>C</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>&#952;</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>=</mml:mo><mml:mrow><mml:mo stretchy="true">&#10216;</mml:mo><mml:mrow><mml:mi mathvariant="normal">&#936;</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>&#952;</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>|</mml:mo><mml:mi>H</mml:mi><mml:mo>|</mml:mo><mml:mi mathvariant="normal">&#936;</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>&#952;</mml:mi><mml:mo stretchy="false">)</mml:mo></mml:mrow><mml:mo stretchy="true">&#10217;</mml:mo></mml:mrow><mml:mo>.</mml:mo></mml:math> (5–3)
-
-![Equation](img/F000122si4.png)(5–3)
+`C(θ) = ⟨Ψ(θ)|H|Ψ(θ)⟩` (5–3)
 
 梯度下降方程：
 
-*θ*[*t*] + 1 = *θ*[*t*] − *η*∇*C*(*θ*[*t*]).<mml:math><mml:msub><mml:mrow><mml:mi>&#952;</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:mn>1</mml:mn><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>&#952;</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>&#8722;</mml:mo><mml:mi>&#951;</mml:mi><mml:mo>&#8711;</mml:mo><mml:mi>C</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:msub><mml:mrow><mml:mi>&#952;</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="false">)</mml:mo><mml:mo>.</mml:mo></mml:math> (5–4)
+`θ[t+1] = θ[t] − η∇C(θ[t])` (5–4)
 
-![Equation](img/F000122si5.png)(5–4)
-
-该方程用于梯度下降优化算法，可用于更新参数 *θ*。*Η* 为学习率，∇*C*(*θ*[*t*]) 为代价的梯度。它考虑迭代 *t*。
+该方程用于梯度下降优化算法，可用于更新参数 `θ`。`Η` 为学习率，`∇C(θ[t])` 为代价的梯度。它考虑迭代 `t`。
 
 量子核方程：
 
+`K(x[i], x[j]) = ⟨Ψ(x[i])|Ψ(x[j])⟩` (5–5)
 
-
-
-
-*K*(*x*[*i*], *x*[*j*]) = ⟨*Ψ*(*x*[*i*])|*Ψ*(*x*[*j*])⟩<mml:math><mml:mi>K</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:msub><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="false">)</mml:mo><mml:mo>=</mml:mo><mml:mrow><mml:mo stretchy="true">&#10216;</mml:mo><mml:mrow><mml:mi mathvariant="normal">&#936;</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:msub><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="false">)</mml:mo><mml:mo>|</mml:mo><mml:mi mathvariant="normal">&#936;</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:msub><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="false">)</mml:mo></mml:mrow><mml:mo stretchy="true">&#10217;</mml:mo></mml:mrow></mml:math> (5–5)
-
-![Equation](img/F000122si6.png`)(5–5)
-
-该方程是量子核 `K`(`x`[`i`], `x`[`j`])，其在 `QSVM` 下被采用。
+该方程是量子核 `K(x[i], x[j])`，其在 `QSVM` 下被采用。
 
 量子卷积操作方程：
 
-$\\left| \\Psi\_{out} \\right\\rangle = \\sum\\limits\_{j = 1}^{M}{\\sum\\limits\_{k = 1}^{K}\\left( {\\sum\\limits\_{l = 1}^{L}\\begin{matrix} & ! \\\\ {W\_{jkl} \\otimes \\left| {\\Psi\_{in}\\left\\lbrack j + l - 1 \\right\\rbrack\\left\\lbrack k \\right\\rbrack} \\right\\rangle} & \\\\ \\end{matrix}} \\right.}$<mml:math><mml:mrow><mml:mo stretchy="true">|</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#936;</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">out</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo stretchy="true">&#10217;</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:munderover><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mi>M</mml:mi></mml:munderover><mml:mrow><mml:munderover><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>k</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mi>K</mml:mi></mml:munderover><mml:mrow><mml:mo stretchy="true">(</mml:mo><mml:mrow><mml:munderover><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>l</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mi>L</mml:mi></mml:munderover><mml:mrow><mml:mtable><mml:mtr><mml:mtd/><mml:mtd><mml:mo>!</mml:mo></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:mrow><mml:msub><mml:mrow><mml:mi>W</mml:mi></mml:mrow><mml:mrow><mml:mrow><mml:mi>j</mml:mi><mml:mi>k</mml:mi><mml:mi>l</mml:mi></mml:mrow></mml:mrow></mml:msub><mml:mo>&#8855;</mml:mo><mml:mrow><mml:mo stretchy="true">|</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#936;</mml:mi></mml:mrow><mml:mrow><mml:mrow><mml:mi mathvariant="normal">in</mml:mi></mml:mrow></mml:mrow></mml:msub><mml:mo>\[</mml:mo><mml:mspace width=".2em"/><mml:mi>j</mml:mi><mml:mo>+</mml:mo><mml:mi>l</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn><mml:mo>\]</mml:mo><mml:mo>\[</mml:mo><mml:mi>k</mml:mi><mml:mo>\]</mml:mo></mml:mrow><mml:mo stretchy="true">&#10217;</mml:mo></mml:mrow></mml:mrow></mml:mtd><mml:mtd/></mml:mtr></mml:mtable></mml:mrow></mml:mrow></mml:mrow></mml:mrow></mml:math> (5–6)
 
-![Equation](img/F000122si7.png`)(5–6)
+
+## 量子卷积神经网络方程
+
+### 量子卷积操作
+
+$$
+\left| \Psi_{out} \right\rangle = \sum_{j = 1}^{M} \sum_{k = 1}^{K} \left( \sum_{l = 1}^{L} W_{jkl} \otimes \left| \Psi_{in}[j + l - 1][k] \right\rangle \right)
+$$ (5–6)
 
 在该方程中，`|Ψ[in]⟩` 对应输入量子态，而 `W[jkl]` 为滤波器，`|Ψ[out]⟩` 用于定义输出。
 
-量子池化操作方程：
+### 量子池化操作
 
-$\\begin{matrix} {1P} \\\\ {\\left| \\Psi\_{pool} \\right\\rangle = \\left. \\sqrt{}\\sum\\left| {\\Psi\_{in}\\left\\lbrack i \\right\\rbrack} \\right\\rangle \\right.} \\\\ {P\_{i} = 1} \\\\ \\end{matrix}$<mml:math><mml:mtable><mml:mtr><mml:mtd><mml:mrow><mml:mn>1</mml:mn><mml:mi>P</mml:mi></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:mrow><mml:mrow><mml:mo stretchy="true">|</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#936;</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">pool</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo stretchy="true">&#10217;</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mo>&#8730;</mml:mo><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mo stretchy="true">|</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#936;</mml:mi></mml:mrow><mml:mrow><mml:mrow><mml:mi mathvariant="normal">in</mml:mi></mml:mrow></mml:mrow></mml:msub><mml:mo>\[</mml:mo><mml:mi>i</mml:mi><mml:mo>\]</mml:mo></mml:mrow><mml:mo stretchy="true">&#10217;</mml:mo></mml:mrow></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:mrow><mml:msub><mml:mrow><mml:mi>P</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math> (5–7)
+$$
+\begin{matrix}
+1P \\
+\left| \Psi_{pool} \right\rangle = \sqrt{\sum \left| \Psi_{in}[i] \right\rangle} \\
+P_{i} = 1
+\end{matrix}
+$$ (5–7)
 
-![Equation](img/F000122si8.png`)(5–7)
+### 量子激活函数
 
-量子激活函数方程：
+$$
+|\Psi_{out}\rangle = f(|\Psi_{in}\rangle)
+$$ (5–8)
 
-|*Ψ**o**u**t*⟩ = *f*(|*Ψ**i**n*⟩)<mml:math><mml:mrow><mml:mo stretchy="true">|</mml:mo><mml:mrow><mml:mi mathvariant="normal">&#936;</mml:mi><mml:mi mathvariant="normal">out</mml:mi></mml:mrow><mml:mo stretchy="true">&#10217;</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mi>f</mml:mi><mml:mrow><mml:mo stretchy="true">(</mml:mo><mml:mrow><mml:mo stretchy="true">|</mml:mo><mml:mrow><mml:mi mathvariant="normal">&#936;</mml:mi><mml:mi mathvariant="normal">in</mml:mi></mml:mrow><mml:mo stretchy="true">&#10217;</mml:mo></mml:mrow><mml:mo stretchy="true">)</mml:mo></mml:mrow></mml:math> (5–8)
+上式为量子激活函数 `f(.)`，其连接至量子态 `|Ψ[in]⟩`。它简要地得到量子态 `|Ψ[out]⟩`。量子激活函数为量子卷积神经网络（`QCNN`）模型引入非线性，与经典 CNN 类似。
 
-![Equation](img/F000122si9.png`)(5–8)
+### 量子权重更新
 
-上式为量子激活函数 `f`(.)，其连接至量子态 `|Ψ[in]⟩`。它简要地得到量子态 `|Ψ[out]⟩`。量子激活函数为量子卷积神经网络（`QCNN`）模型引入非线性，与经典 CNN 类似。
-
-量子权重更新方程：
-
-$\\begin{matrix} {(t + 1)} & {(t)} & {\\partial L} \\\\ W\_{jkl} & {= W\_{jkl} - \\eta\\partial} & W\_{jkl} \\\\ \\end{matrix}$<mml:math><mml:mtable><mml:mtr><mml:mtd><mml:mrow><mml:mo stretchy="false">(</mml:mo><mml:mi>t</mml:mi><mml:mo>+</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="false">)</mml:mo></mml:mrow></mml:mtd><mml:mtd><mml:mrow><mml:mo stretchy="false">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="false">)</mml:mo></mml:mrow></mml:mtd><mml:mtd><mml:mrow><mml:mi>&#8706;</mml:mi><mml:mi>L</mml:mi></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:mrow><mml:msub><mml:mrow><mml:mi>W</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi><mml:mi>k</mml:mi><mml:mi>l</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mtd><mml:mtd><mml:mrow><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>W</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi><mml:mi>k</mml:mi><mml:mi>l</mml:mi></mml:mrow></mml:msub><mml:mo>&#8722;</mml:mo><mml:mi>&#951;</mml:mi><mml:mi>&#8706;</mml:mi></mml:mrow></mml:mtd><mml:mtd><mml:mrow><mml:msub><mml:mrow><mml:mi>W</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi><mml:mi>k</mml:mi><mml:mi>l</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math> (5–9)
-
-![Equation](img/F000122si10.png`)(5–9)
+$$
+\begin{matrix}
+(t + 1) & (t) & \partial L \\
+W_{jkl} & = W_{jkl} - \eta \partial & W_{jkl}
+\end{matrix}
+$$ (5–9)
 
 在训练期间，该方程表示使用梯度下降优化更新量子卷积滤波器 `W[jkl]` 的更新规则，其中 `L` 为损失函数，`η` 为学习率，而 `∂[W]^(∂L)jkl` 为损失相对于滤波器的梯度。
 
@@ -1203,11 +1156,6 @@ $\\begin{matrix} {(t + 1)} & {(t)} & {\\partial L} \\\\ W\_{jkl} & {= W\_{jkl} -
 4. 将数据划分为训练集和测试集并标准化特征。
 5. 为特征映射实现 `QSVM`。
 6. 构建、部署并训练 `QSVM`，并测试其性能。
-
-
-
-
-
 7. 计算准确率并与其他算法的结果验证进行比较。
 
 遵循在 IBM `QISKIT` 环境中执行的相关步骤，天气预报步骤通过 Python 按以下伪代码进行：
@@ -1223,32 +1171,23 @@ $\\begin{matrix} {(t + 1)} & {(t)} & {\\partial L} \\\\ W\_{jkl} & {= W\_{jkl} -
 9. 确定模型的均方误差。
 10. 以可视化方式展示预测结果（Table 5–2）。
 
-### Table 5–2
+### Table 5–2 气候参数
 
-气候参数。
-
-| S. no. || Climate scenario || *a* || *u* || *w* || *t* |
+| S. no. | Climate scenario | *a* | *u* | *w* | *t* |
 | --- | --- | --- | --- | --- | --- |
-| 1 || Bcc-csm1–1 || 4.23 || 0.010 || 0.00176 || 897 |
-| --- | --- | --- | --- | --- | --- |
-| 2 || MRI-ESM1 || 4.13 || 0.010 || 0.00125 || 1184 |
-| 3 || MIROC5 || 4.06 || 0.010 || 0.00112 || 1302 |
-| 4 || GFDL-CM3 || 5.94 || 0.010 || 0.00274 || 625 |
-| 5 || GFDL-ESM2M || 3.10 || 0.010 || 0.00064 || 2226 |
+| 1 | Bcc-csm1–1 | 4.23 | 0.010 | 0.00176 | 897 |
+| 2 | MRI-ESM1 | 4.13 | 0.010 | 0.00125 | 1184 |
+| 3 | MIROC5 | 4.06 | 0.010 | 0.00112 | 1302 |
+| 4 | GFDL-CM3 | 5.94 | 0.010 | 0.00274 | 625 |
+| 5 | GFDL-ESM2M | 3.10 | 0.010 | 0.00064 | 2226 |
 
 Figs. 5–3 和 5–4 表示天气预报的量子训练和量子热退火。量子热退火是量子计算中用于优化问题的一种技术。它涉及利用量子特性来寻找给定函数的全局最小值，这对于解决复杂的优化任务非常有用。天气预报涉及处理大量数据并优化模型以做出准确预测。虽然量子计算有望增强天气预报的某些方面，例如改进模型优化或更有效地处理大型数据集，但量子热退火对于此任务可能并不是最合适的方案。量子退火被认为是最有效的数学建模方法之一，用于涉及组合优化问题的天气预报。Fig. 5–5 给出了天气预报的 Pytorch 程序。
 
 ![Figure 5–3 Training quantum Boltzmann machine (QBM). Part-A - Trained epochs; Part-B - Thermal Annealing.](img/F000122f05-03-9780443219054.jpg)
 
-Figure 5–3 Training quantum Boltzmann machine (QBM). Part-A - Trained epochs; Part-B - Thermal Annealing.
-
 ![Figure 5–4 Quantum thermal annealing for weather forecasting.](img/F000122f05-04-9780443219054.jpg)
 
-Figure 5–4 Quantum thermal annealing for weather forecasting.
-
 ![Figure 5–5 Pytorch program for weather forecasting.](img/F000122f05-05-9780443219054.jpg)
-
-Figure 5–5 Pytorch program for weather forecasting.
 
 ## 5.5 Discussion
 
@@ -1256,13 +1195,11 @@ Figure 5–5 Pytorch program for weather forecasting.
 
 ![Figure 5–6 Experimental design.](img/F000122f05-06-9780443219054.jpg)
 
-Figure 5–6 Experimental design.
-
 `QSVM` 将很快凭借其定制的框架和数学建模彻底改变气候学。Fig. 5–7 是此类模拟的一个例子。
 
 ![Figure 5–7 Quantum support vector machine for weather forecasting.](img/F000122f05-07-9780443219054.jpg)
 
-Figure 5–7 Quantum support vector machine for weather forecasting.
+
 
 量子计算中的一个概念，特别是关于 `QML` 的，是 Fock 空间分类器。用于气候研究的 Fock 空间分类器显示在 Fig. 5–8 中。一种称为“Fock 空间”的数学概念用于表征具有可变数量粒子的系统的量子态，例如量子化学中的原子或量子光学中的光子。Fock 空间可在 `QML` 中用于表示特征空间，其中数据的特征由量子态编码。Fock 空间分类器通过操纵特征空间中的量子态来执行分类任务。替代弹性和环境对温室气体的敏感性会影响应对气候变化的最佳行动方案。
 
@@ -1281,14 +1218,14 @@ Figure 5–8 Fock space classifier for climate studies.
 ## References
 
 * Andersen, 2021 Andersen UL. Review of photonic chip brings optical quantum computers a step closer. *Nature*. 2021;591(7848):40–41 [`doi.org/10.1038/d41586-021-00488-z`](https://doi.org/10.1038/d41586-021-00488-z).
+
 * Biamonte et al., 2017 Biamonte J, Wittek P, Pancotti N, Rebentrost P, Wiebe N, Lloyd S. Quantum machine learning. *Nature*. 2017;549(7671):195–202 [`doi.org/10.1038/nature23474`](https://doi.org/10.1038/nature23474).
+
 * Boehm, and Schumer, 2023 Boehm, S., & Schumer, C. (2023, March). 10 big findings from the 2023 IPCC report on climate change. [`www.wri.org/insights/2023-ipcc-ar6-synthesis-report-climate-change-findings`](https://www.wri.org/insights/2023-ipcc-ar6-synthesis-report-climate-change-findings).
+
 * Crawford et al., 2021 Crawford SE, Shugayev RA, Paudel HP, et al. *Quantum sensing for energy applications: Review and perspective*. *Advanced Quantum Technologies* 2021; [`doi.org/10.1002/qute.202100049`](https://doi.org/10.1002/qute.202100049) 2100049.
+
 * Cui et al., 2021 Cui D, Liang S, Wang D. Observed and projected changes in global climate zones based on Köppen climate classification. *WIREs Climate Change*. 2021;12 [`doi.org/10.1002/wcc.701`](https://doi.org/10.1002/wcc.701).
-
-
-
-
 
 * Delworth and Knutson, 2000 Delworth TL, Knutson TR. 20 世纪初全球变暖的模拟。*Science (New York, N.Y.)*. 2000;287(5461):2246–2250 [`doi.org/10.1126/science.287.5461.2246`](https://doi.org/10.1126/science.287.5461.2246).
 
@@ -1334,17 +1271,11 @@ Figure 5–8 Fock space classifier for climate studies.
 
 * Zaidenberg et al., 2021 Zaidenberg, D.A., Sebastianelli, A., Spiller, D., Saux, B.L., & Ullo, S.L. (2021). 遥感量子机器学习的优势与瓶颈。*arXiv* \[Quant-Ph\]. Retrieved from [`arxiv.org/abs/2101.10657`](http://arxiv.org/abs/2101.10657).
 
-6
-
-## 用于气候建模的新兴技术方法
+## 6 用于气候建模的新兴技术方法
 
 Prisilla Jayanthi Gandam^(1), Muralikrishna Iyyanki^(2), Xi Chen^(3), Valentina Emilia Balas^(4) and Utku Kose^(5,) ^(6), ¹CMR Institute of Technology, Hyderabad, Telangana, India, ²Defence Research and Development Organisation, Research Centre Imarat (RCI), Hyderabad, Telangana, India, ³Machine Learning Faculty, UC Santa Cruz, CA, United States, ⁴Aurel Vlaicu University of Arad, Arad, Romania, ⁵Department of Computer Engineering, Faculty of Engineering, Süleyman Demirel University, Isparta, Turkey, ⁶University of North Dakota, Grand Forks, ND, United States
 
 ## Abstract
-
-
-
-
 
 气候变化是人类在全球范围内面临的最重大挑战。机器学习与创新研究的结合，可以成为应对这一挑战的有力工具。温室气体是气候危机的根本原因，这是一个持续且无法回避的问题，已被 195 个国家在《巴黎协定》框架内所认识。联合国提醒气候危机——一场我们可以赢得的竞赛。气候危机由人类引发，解决方案也必须来自每一位公民。作为公民，人们需要停止加剧气候问题，而应考虑诸如污染税等措施，以促进更绿色的地球。让我们将科学和最新技术结合起来，在气候危机摧毁人类之前阻止它。基于自然的解决方案，以及新颖高效的技术可以帮助将排放减少至净零。此外，适应气候变化可以增强韧性并减轻加剧全球变暖的环境变化。
 
@@ -1354,13 +1285,19 @@ Prisilla Jayanthi Gandam^(1), Muralikrishna Iyyanki^(2), Xi Chen^(3), Valentina 
 
 ## 6.1 引言
 
-气候模型旨在模拟与气候变化预测相关的不确定性。这些模型增强了对气候行为可预测性的理解。科学家利用这些模型，它们基于海洋和大气中观察到的全球模式。让我们理解气候与天气有何不同。天气指的是特定时间、特定地点的气象状况，例如风、雪、阳光和温度。相比之下，气候是指特定地点经历的长期天气特征。本质上，气候是对天气状况的全面总结，考虑了长期内的变化。科学家认为温室气体（GHGs）会捕获 incoming 太阳能，导致地球表面变暖。GHGs 的急剧上升，特别是 CO[2]，会加剧温室效应，从而加剧气候变化。计算机模拟在气候建模中发挥着关键作用，帮助研究人员解读温室气体排放对地球气候的影响。
 
-本研究涵盖的主题包括 CO 污染物的排放、森林火灾、气候变化适应、粮食安全、气候预测以及物理引导的机器学习。
+
+# 气候模型与环境影响分析
+
+## 概述
+
+气候模型旨在模拟与气候变化预测相关的不确定性。这些模型增强了对气候行为可预测性的理解。科学家利用这些模型，它们基于海洋和大气中观察到的全球模式。让我们理解气候与天气有何不同。天气指的是特定时间、特定地点的气象状况，例如风、雪、阳光和温度。相比之下，气候是指特定地点经历的长期天气特征。本质上，气候是对天气状况的全面总结，考虑了长期内的变化。科学家认为温室气体（`GHGs`）会捕获 incoming 太阳能，导致地球表面变暖。`GHGs` 的急剧上升，特别是 `CO[2]`，会加剧温室效应，从而加剧气候变化。计算机模拟在气候建模中发挥着关键作用，帮助研究人员解读温室气体排放对地球气候的影响。
+
+本研究涵盖的主题包括 `CO` 污染物的排放、森林火灾、气候变化适应、粮食安全、气候预测以及物理引导的机器学习。
 
 ## 6.2 一氧化碳污染物——维沙卡帕特南的统计趋势
 
-一氧化碳（CO）已知会与其他气体反应，产生有害化合物。这种相互作用会影响其释放到大气中时温室气体的总量。对于本研究，CO 数据来自印度安得拉邦的维沙卡帕特南地区，采集时间为 2022 年 4 月、7 月和 12 月。数据被绘制成图表，以展示 CO 水平与特定日期之间在月度和小时层面的关系。Fig. 6–1 显示了月度趋势，表明 CO 水平在整个月内波动，而非保持一致。Fig. 6–2 表示所考虑的 3 个月的小时数据趋势。从趋势中可以注意到一个显著现象，即在所有月份的上午 10:00 曲线均出现下降。曲线在傍晚高峰时段上升，并在晚上 9:00 左右下降。
+一氧化碳（`CO`）已知会与其他气体反应，产生有害化合物。这种相互作用会影响其释放到大气中时温室气体的总量。对于本研究，`CO` 数据来自印度安得拉邦的维沙卡帕特南地区，采集时间为 2022 年 4 月、7 月和 12 月。数据被绘制成图表，以展示 `CO` 水平与特定日期之间在月度和小时层面的关系。Fig. 6–1 显示了月度趋势，表明 `CO` 水平在整个月内波动，而非保持一致。Fig. 6–2 表示所考虑的 3 个月的小时数据趋势。从趋势中可以注意到一个显著现象，即在所有月份的上午 10:00 曲线均出现下降。曲线在傍晚高峰时段上升，并在晚上 9:00 左右下降。
 
 ![Figure 6–1 The monthly trends of CO in Visakhapatnam.](img/F000092f06-01-9780443219054.jpg)
 
@@ -1370,7 +1307,7 @@ Figure 6–1 The monthly trends of CO in Visakhapatnam.
 
 Figure 6–2 The hourly trends of CO in Visakhapatnam.
 
-CO 的几个来源是森林火灾、火山、车辆排放和生物质燃烧。人类排放占大气中 CO 的三分之二。下文将探讨森林火灾对扰乱气候变化的影响。
+`CO` 的几个来源是森林火灾、火山、车辆排放和生物质燃烧。人类排放占大气中 `CO` 的三分之二。下文将探讨森林火灾对扰乱气候变化的影响。
 
 ## 6.3 森林火灾——自然空气污染——危害人类
 
@@ -1378,59 +1315,51 @@ CO 的几个来源是森林火灾、火山、车辆排放和生物质燃烧。�
 
 自然森林火灾会不可控制地破坏野生动物，并导致环境温度升高。火灾三角（热、氧气和燃料）有助于更快地燃烧森林中的绿树并迅速蔓延。因素包括温度、土壤湿度以及树木、灌木和其他潜在燃料的存在（Pacha, 2020）。Goodman and Horton (2021) 报道称，印度最易发生火灾的邦是东北部一些地区、中央邦、奥里萨邦、恰蒂斯加尔邦、喜马偕尔邦和喜马偕尔邦。2020 年（美国）有超过 350 万英亩土地被烧毁，成为有记录以来破坏最严重的季节（Kinver, 2021）。
 
-根据欧盟的地球监测服务，西伯利亚、北美以及地中海周边地区的野火排放了 CO[2]，创下了使地球变暖的纪录（France-Presse, 2021）。欧洲中期天气预报中心的大气监测服务（CAMS）在 2021 年报告称，全球森林树木燃起大火，在 7 月和 8 月排放了超过 25 亿吨 CO[2]——相当于印度所有不同来源的年排放量。Cerdà (2019) 指出，7 月份野火排放的 CO[2] 中超过一半来自北美和西伯利亚。
+根据欧盟的地球监测服务，西伯利亚、北美以及地中海周边地区的野火排放了 `CO[2]`，创下了使地球变暖的纪录（France-Presse, 2021）。欧洲中期天气预报中心的大气监测服务（`CAMS`）在 2021 年报告称，全球森林树木燃起大火，在 7 月和 8 月排放了超过 25 亿吨 `CO[2]`——相当于印度所有不同来源的年排放量。Cerdà (2019) 指出，7 月份野火排放的 `CO[2]` 中超过一半来自北美和西伯利亚。
 
-森林火灾在扰动期间会增加沉积物和水产出（Katila et al., 2019）。可持续发展目标（SDG）削弱了森林对气候和发展的贡献（Baumgartner, 2019）。森林砍伐和森林火灾是实现可持续发展目标的主要问题，即该地区面临极端天气事件脆弱性增加（SDG 1），观察到降雨损失和作物传粉者（SDG 2），以及森林火灾可能导致严重的呼吸道疾病（SDG 3）（[`www.weforum.org/agenda/2020/09/climate-feedback-climate-change-forest-fires`](https://www.weforum.org/agenda/2020/09/climate-feedback-climate-change-forest-fires)）。
+森林火灾在扰动期间会增加沉积物和水产出（Katila et al., 2019）。可持续发展目标（`SDG`）削弱了森林对气候和发展的贡献（Baumgartner, 2019）。森林砍伐和森林火灾是实现可持续发展目标的主要问题，即该地区面临极端天气事件脆弱性增加（`SDG 1`），观察到降雨损失和作物传粉者（`SDG 2`），以及森林火灾可能导致严重的呼吸道疾病（`SDG 3`）（[`www.weforum.org/agenda/2020/09/climate-feedback-climate-change-forest-fires`](https://www.weforum.org/agenda/2020/09/climate-feedback-climate-change-forest-fires)）。
 
 2019 年 4 月，韩国高城火灾（Hirschlag, 2023）成为该国最具毁灭性的野火，肆虐 3 天，吞噬 529 公顷土地，摧毁 2000 多座建筑，并导致约 4200 人疏散。这场大火造成估计 460 万美元的损失，并夺去两条生命。
 
-野火释放出大量细颗粒物（PM[2.5]）甚至更细的纳米颗粒，对人类健康有害。这些微小颗粒比人类头发细 30 倍，可以轻松穿透肺膜并损害呼吸系统，进入血液循环（Aguilera et al., 2021）。到 2019 年底，在澳大利亚的丛林大火期间，由于新南威尔士州的野火，呼吸问题导致的住院人数增加了 34%。
+野火释放出大量细颗粒物（`PM[2.5]`）甚至更细的纳米颗粒，对人类健康有害。这些微小颗粒比人类头发细 30 倍，可以轻松穿透肺膜并损害呼吸系统，进入血液循环（Aguilera et al., 2021）。到 2019 年底，在澳大利亚的丛林大火期间，由于新南威尔士州的野火，呼吸问题导致的住院人数增加了 34%。
 
+美国西部 2004–09 年的森林火灾研究估计，大约有 46 M 人暴露于烟雾波中。烟雾导致 `PM[2.5]` 水平升高，因呼吸系统疾病住院率增加了 7.2%。研究得出结论，该年造成了 339,000 例过早死亡。空气净化器中的高效颗粒空气过滤器（`HEPA`）过滤器可以减少室内细颗粒物。
 
-
-
-
-美国西部 2004–09 年的森林火灾研究估计，大约有 46 M 人暴露于烟雾波中。烟雾导致 PM[2.5] 水平升高，因呼吸系统疾病住院率增加了 7.2%。研究得出结论，该年造成了 339,000 例过早死亡。空气净化器中的高效颗粒空气过滤器（HEPA）过滤器可以减少室内细颗粒物。
-
-美国国家航空航天局的研究人员发现，地球周围在南极洲等地的对流层中被烟雾笼罩。它影响了全球火灾产生的五分之一气溶胶。吸入这种大小的颗粒会引起多种健康问题，如心脏病、中风、慢性阻塞性肺病以及包括肺炎在内的下呼吸道感染。研究估计，加利福尼亚北部野火在一周内释放的 CO[2] 就与 2017 年加利福尼亚所有汽车和卡车全年释放的量相当，估计 PM[2.5] 排放量更高。
+美国国家航空航天局的研究人员发现，地球周围在南极洲等地的对流层中被烟雾笼罩。它影响了全球火灾产生的五分之一气溶胶。吸入这种大小的颗粒会引起多种健康问题，如心脏病、中风、慢性阻塞性肺病以及包括肺炎在内的下呼吸道感染。研究估计，加利福尼亚北部野火在一周内释放的 `CO[2]` 就与 2017 年加利福尼亚所有汽车和卡车全年释放的量相当，估计 `PM[2.5]` 排放量更高。
 
 1950 年 6 月，Chinchaga 火灾在加拿大不列颠哥伦比亚省开始，蔓延失控，并在 5 个月后于阿尔伯塔省结束；估计该火灾烧毁了约 1.2 M 公顷（3 M 英亩）的北方森林，而 2020 年记录的火灾烧毁了 1.6 Mha，2021 年在加利福尼亚，共有 16 kha 的森林被烧毁。
 
-20 世纪初，加利福尼亚、华盛顿和俄勒冈的气温急剧上升。西北地区降雨取代了降雪，气温升高导致积雪减少，土壤干涸。所有这些因素结合起来造成了更干燥的条件，使野火更容易点燃和蔓延。2020 年的火灾排放量是 21 世纪历史平均水平的华盛顿和俄勒冈的三倍。在加利福尼亚，野火产生的排放量比全州所有经济活动的日排放量高出 4–8 倍。随着 CO[2] 浓度的升高，全球气温升高已被观察到。
+20 世纪初，加利福尼亚、华盛顿和俄勒冈的气温急剧上升。西北地区降雨取代了降雪，气温升高导致积雪减少，土壤干涸。所有这些因素结合起来造成了更干燥的条件，使野火更容易点燃和蔓延。2020 年的火灾排放量是 21 世纪历史平均水平的华盛顿和俄勒冈的三倍。在加利福尼亚，野火产生的排放量比全州所有经济活动的日排放量高出 4–8 倍。随着 `CO[2]` 浓度的升高，全球气温升高已被观察到。
 
-在 1999–2012 年期间对加利福尼亚森林火灾的研究中，随着野火特异性 PM[2.5] 每增加 10 μg/m³，呼吸系统住院率的增加范围为 1.3% 至 10%（Holm et al., 2021）。野火排放的主要成分是有机碳和元素碳，以及气体，包括 CO[2]、CO、NO[2] 和挥发性有机化合物（VOC）。儿科哮喘就诊次数有所增加，总体上儿童在野火期间反复高暴露时有长期健康影响的潜在风险（Reid & Maestas, 2019）。研究指出，野火烟雾的长期呼吸健康影响会使暴露后 10 年肺功能下降（[`bhuvan.nrsc.gov.in/home/index.php`](https://bhuvan.nrsc.gov.in/home/index.php)）。
+在 1999–2012 年期间对加利福尼亚森林火灾的研究中，随着野火特异性 `PM[2.5]` 每增加 10 μg/m³，呼吸系统住院率的增加范围为 1.3% 至 10%（Holm et al., 2021）。野火排放的主要成分是有机碳和元素碳，以及气体，包括 `CO[2]`、`CO`、`NO[2]` 和挥发性有机化合物（`VOC`）。儿科哮喘就诊次数有所增加，总体上儿童在野火期间反复高暴露时有长期健康影响的潜在风险（Reid & Maestas, 2019）。研究指出，野火烟雾的长期呼吸健康影响会使暴露后 10 年肺功能下降（[`bhuvan.nrsc.gov.in/home/index.php`](https://bhuvan.nrsc.gov.in/home/index.php)）。
 
 ### 6.3.1 森林火灾造成的经济损失结果
 
-经济损失（Table 6–1）按印度各州从 2013 年到 2018 年因森林火灾造成的损失表示。最高的是 2016 年和 2018 年的喜马偕尔邦。Table 6–2 表示印度森林调查局（FSI）使用 Modi 传感器检测到的 2018–20 年期间印度森林火灾的最高数量。记录到的火灾数量最多的是马德亚 Pradesh（MP）（4929）、米佐拉姆（2795）和阿萨姆（3000）。
+经济损失（Table 6–1）按印度各州从 2013 年到 2018 年因森林火灾造成的损失表示。最高的是 2016 年和 2018 年的喜马偕尔邦。Table 6–2 表示印度森林调查局（`FSI`）使用 Modi 传感器检测到的 2018–20 年期间印度森林火灾的最高数量。记录到的火灾数量最多的是马德亚 Pradesh（`MP`）（4929）、米佐拉姆（2795）和阿萨姆（3000）。
 
-Table 6–1
-
+**Table 6–1**  
 印度经济损失（按州，2013–18）。
 
-| State  || Loss in terms of the currency value in INR (year-wise) |
+| State | Loss in terms of the currency value in INR (year-wise) |
 | --- | --- |
-|   || 2013 || 2014 || 2015 || 2016 || 2017 || 2018 |
-| Mizoram || – || – || 15.32 || 1.25 || 0.64 || – |
-| --- | --- | --- | --- | --- | --- | --- |
-| Uttarakhand || 4.39 || 23.57 || 7.94 || 46.5 || 18.34 || 86.05 |
-| Uttar Pradesh || – || – || 0.27 || – || 8.21 || 0.27 |
-| Himachal Pradesh || 52 || 100 || 130 || 300 || 55 || 300 |
-| Meghalaya || – || – || – || – || 7.2 || – |
-| Kerala || – || – || 0.35 || 0.22 || 2.49 || – |
+|  | 2013 | 2014 | 2015 | 2016 | 2017 | 2018 |
+| Mizoram | – | – | 15.32 | 1.25 | 0.64 | – |
+| Uttarakhand | 4.39 | 23.57 | 7.94 | 46.5 | 18.34 | 86.05 |
+| Uttar Pradesh | – | – | 0.27 | – | 8.21 | 0.27 |
+| Himachal Pradesh | 52 | 100 | 130 | 300 | 55 | 300 |
+| Meghalaya | – | – | – | – | 7.2 | – |
+| Kerala | – | – | 0.35 | 0.22 | 2.49 | – |
 
 *Source*: From Ministry of Environment, Forest and Climate Change. ([`moef.gov.in/`](https://moef.gov.in/)).
 
-Table 6–2
-
+**Table 6–2**  
 印度森林调查局使用 Modi 传感器检测到的印度森林火灾数量（按州，2018–20）。
 
-| States || Jan–June 2018 || Nov 2018–June 2019 || Nov 2019–June 2020 |
+| States | Jan–June 2018 | Nov 2018–June 2019 | Nov 2019–June 2020 |
 | --- | --- | --- | --- |
-| Assam || 1660 || 1940 || 3000 |
-| --- | --- | --- | --- |
-| Madhya Pradesh || 4929 || 2723 || 1383 |
-| Mizoram || 2339 || 2795 || 2816 |
+| Assam | 1660 | 1940 | 3000 |
+| Madhya Pradesh | 4929 | 2723 | 1383 |
+| Mizoram | 2339 | 2795 | 2816 |
 
 *Source:* [`www.data.gov.in`](http://www.data.gov.in).
 
@@ -1440,63 +1369,57 @@ Fig. 6–3 显示了 2021 年 10 月 15 日至 20 日期间印度部分地区森
 
 Figure 6–3 2021 年 10 月 15 日至 20 日的森林火灾（[`bhuvan.nrsc.gov.in/home/index.php`](https://bhuvan.nrsc.gov.in/home/index.php)）。地图线划定研究区域，不一定描绘公认的国家边界。
 
-人工神经网络（ANNs，Al-Kahlout et al., 2020; Nebot & Mugica, 2021; Safi & Bouroumi, 2013）和支持向量机（Li et al., 2020）也被用于预测森林火灾。
+人工神经网络（`ANNs`，Al-Kahlout et al., 2020; Nebot & Mugica, 2021; Safi & Bouroumi, 2013）和支持向量机（Li et al., 2020）也被用于预测森林火灾。
 
-Table 6–3 列出了各种森林火灾特征。在本研究中，引入了卷积神经网络模型（Fig. 6–4）来预测特定地点可能发生的森林火灾的后续日期。通过将 Table 6–3 中指定的所有参数输入模型，它在数据上进行训练并生成预测。然后模型有望预测下一个日期、可能受影响的精确区域以及潜在的经济损失。这些信息可以帮助采取积极措施，例如疏散附近的住宅或商业建筑。
-
-Table 6–3
-
+**Table 6–3**  
 森林火灾特征。
 
-| Parameter  || Description |
+| Parameter | Description |
 | --- | --- |
-| Spatial attributes |
-| --- |
-| X || *x*\-axis |
-| Y || *y*\-axis |
-| Temporal attributes |
-| Month || Month (in year) |
-| Day || Day (in week) |
-| Fire weather index attributes |
-| FFMC || Fine fuel moisture code |
-| DMC || Duff moisture code |
-| ISI || Initial spread index |
-| DC || Drought code |
-| Weather attributes |
-| Temp || Outer temperature (°C) |
-| RH || Outer relative humidity (%) |
-| Wind || Outer wind speed (km/h) |
-| Rain || Outer rain (mm/m²) |
-| Area || Total area burnt (ha) |
+| **Spatial attributes** | |
+| X | `x`-axis |
+| Y | `y`-axis |
+| **Temporal attributes** | |
+| Month | Month (in year) |
+| Day | Day (in week) |
+| **Fire weather index attributes** | |
+| FFMC | Fine fuel moisture code |
+| DMC | Duff moisture code |
+| ISI | Initial spread index |
+| DC | Drought code |
+| **Weather attributes** | |
+| Temp | Outer temperature (°C) |
+| RH | Outer relative humidity (%) |
+| Wind | Outer wind speed (km/h) |
+| Rain | Outer rain (mm/m²) |
+| Area | Total area burnt (ha) |
 
 ![Figure 6–4 Convolution Neural Network model predicts potential forest fire occurrences. This diagram showcases the model’s architecture and data flow, with inputs derived from various forest fire characteristics (as outlined in Table 6–3) leading to the prediction of both the subsequent fire event’s date and the approximate area at risk of burning.](img/F000092f06-04-9780443219054.jpg)
 
-
-
-
-
 Figure 6–4 卷积神经网络模型预测潜在森林火灾发生情况。该图展示了模型的架构和数据流，输入源自各种森林火灾特征（见 Table 6–3 所述），从而预测下一场火灾事件的日期以及可能被烧毁的近似面积。
 
-根据 Buonocore et al. (2022)，数字孪生技术使公用事业公司能够在任何给定天气条件下模拟任何灾害发生的可能性。森林数字孪生框架被提出并用于森林管理。实时跟踪和预测借助数字孪生技术有助于保护公众健康免受空气质量风险的影响（Jiao et al., 2023）。自动飞行计划创建使用数字孪生，以利用人工智能实现无人机（`UAV`）状态监测和预测用于森林火灾（Bae et al., 2022）。数字孪生（Sahal et al., 2021）通过利用运营数据智能提供自动检测。Yun et al. (2022)提出了数字孪生的架构，以提供用于预测灾害的准确服务。
+根据 Buonocore et al. (2022)，数字孪生技术使公用事业公司能够在任何给定天气条件下模拟任何灾害发生的可能性。森林数字孪生框架被提出并用于森林管理。实时跟踪和预测借助数字孪生技术有助于保护公众健康免受空气质量风险的影响（Jiao et al., 2023）。自动飞行计划创建使用数字孪生，以利用人工智能实现无人机（`UAV`）状态监测和预测用于森林火灾（Bae et al., 2022）。数字孪生（Sahal et al., 2021）通过利用运营数据智能提供自动检测。Yun et al. (2022) 提出了数字孪生的架构，以提供用于预测灾害的准确服务。
 
 ## 6.4 气候变化适应
 
-联合国秘书长安东尼奥·古特雷斯曾评论道“气候变化是我们这个时代的决定性问题……我们每一天不作为，都是我们更接近我们都不想要的命运的一天——一个将在人类和地球生命造成的损害中世代回响的命运”（[`www.undrr.org/climate-action-and-disaster-risk-reduction`](https://www.undrr.org/climate-action-and-disaster-risk-reduction)）。
+联合国秘书长安东尼奥·古特雷斯曾评论道：“气候变化是我们这个时代的决定性问题……我们每一天不作为，都是我们更接近我们都不想要的命运的一天——一个将在人类和地球生命造成的损害中世代回响的命运”（[`www.undrr.org/climate-action-and-disaster-risk-reduction`](https://www.undrr.org/climate-action-and-disaster-risk-reduction)）。
 
 有令人信服的证据表明全球平均气温和海洋温度上升，雪和冰加速融化，海平面上升。这种深刻的转变导致气候变化，进而以两种重要方式加剧灾害风险。
 
-1. 1. 天气和气候灾害的放大，以及
-2. 2. 由于生态系统退化以及水和粮食资源可用性减少，社区对自然灾害的脆弱性加剧。
+1. 天气和气候灾害的放大，以及
+2. 由于生态系统退化以及水和粮食资源可用性减少，社区对自然灾害的脆弱性加剧。
 
 某些地区经历了加剧的干旱、作物受损以及野火风险增加。相反，降水增加的地区容易发生洪水和山体滑坡，这通常会导致大量人员伤亡和资产损失。
 
-政府间气候变化专门委员会（`IPCC`）将减缓描述为“人为干预以减少气候系统的人为强迫；它包括减少温室气体来源和排放以及增强温室气体汇的策略”（Edenhofer, 2014）。
+政府间气候变化专门委员会（`IPCC`）将减缓描述为：“人为干预以减少气候系统的人为强迫；它包括减少温室气体来源和排放以及增强温室气体汇的策略”（Edenhofer, 2014）。
 
-各种机器学习技术已应用于气候研究，例如降雨预测，以及使用多层感知器神经网络算法预测干旱（Ali et al., 2017）。开发了一个`ANN`模型来估算土耳其的日平均年太阳辐射，从而创建了基于卫星的太阳辐射图（Şahin et al., 2013）。地理信息系统和贝叶斯信念网络被引入用于评估多伦多的洪水脆弱性指数（Abebe et al., 2018）。`ANN`模型已被应用于气候变化适应（`CCA`）政策（Biesbroek et al., 2020），而`CNNs`已被用于野火检测（Oh et al., 2020）。此外，在 Jain et al. (2023)的研究中，人工智能（`AI`）已被确定为`CCA`的有前景的工具。
+各种机器学习技术已应用于气候研究，例如降雨预测，以及使用多层感知器神经网络算法预测干旱（Ali et al., 2017）。开发了一个 `ANN` 模型来估算土耳其的日平均年太阳辐射，从而创建了基于卫星的太阳辐射图（Şahin et al., 2013）。地理信息系统和贝叶斯信念网络被引入用于评估多伦多的洪水脆弱性指数（Abebe et al., 2018）。`ANN` 模型已被应用于气候变化适应（`CCA`）政策（Biesbroek et al., 2020），而 `CNNs` 已被用于野火检测（Oh et al., 2020）。此外，在 Jain et al. (2023) 的研究中，人工智能（`AI`）已被确定为 `CCA` 的有前景的工具。
 
 ## 6.5 粮食安全——气候变化的影响
 
-气候引起的温度、降水和降雨模式变化已影响产量质量和食品安全。粮食可获得性是确保粮食安全和生活水平的基本方面（Karanth et al., 2023）。机器学习（`ML`）算法和基因组预测提供了创新技术，以加快育种工作，增加作物产量以应对干旱和气温升高（Cortés & Lopez-Hernandez, 2021）。强降雨增加将导致人类污水溢出污染其他水源，导致各种水源性疾病。强降雨将增加蚊子和其它昆虫的繁殖，导致疟疾、霍乱、登革热、腹泻、伤寒和钩端螺旋体病等各种疾病。此外，温度的轻微上升将影响气候变化，增加人类感染风险。温度升高会危及本土获得性疾病，导致*Campylobacter* sp.在食物上生长（Semenza et al., 2012）。温度升高将增加食物中毒和变质的风险，除非采取必要的措施，如延长冷链得到改善（James & James, 2010）。气候变化对粮食安全有影响（Uyttendaele et al., 2015）。名为气候变化与食品安全新兴风险（`CLEFSA`）的项目解决了不确定性，并通过科学研究证明了随温度升高食源性疾病的风险（Maggiore et al., 2020）。
+
+
+气候引起的温度、降水和降雨模式变化已影响产量质量和食品安全。粮食可获得性是确保粮食安全和生活水平的基本方面（Karanth et al., 2023）。机器学习（`ML`）算法和基因组预测提供了创新技术，以加快育种工作，增加作物产量以应对干旱和气温升高（Cortés & Lopez-Hernandez, 2021）。强降雨增加将导致人类污水溢出污染其他水源，导致各种水源性疾病。强降雨将增加蚊子和其它昆虫的繁殖，导致疟疾、霍乱、登革热、腹泻、伤寒和钩端螺旋体病等各种疾病。此外，温度的轻微上升将影响气候变化，增加人类感染风险。温度升高会危及本土获得性疾病，导致`Campylobacter` sp.在食物上生长（Semenza et al., 2012）。温度升高将增加食物中毒和变质的风险，除非采取必要的措施，如延长冷链得到改善（James & James, 2010）。气候变化对粮食安全有影响（Uyttendaele et al., 2015）。名为气候变化与食品安全新兴风险（`CLEFSA`）的项目解决了不确定性，并通过科学研究证明了随温度升高食源性疾病的风险（Maggiore et al., 2020）。
 
 ## 6.6 预测气候和天气
 
@@ -1506,24 +1429,20 @@ Figure 6–4 卷积神经网络模型预测潜在森林火灾发生情况。该�
 
 布鲁诺·凯斯勒基金会和 Arpae 引入了两种不同的`TrajGRU`方法用于临近预报意大利北部气候：
 
-1. 1. 2022 年 5 月 28 日意大利北部的一次对流事件
-2. 2. 2022 年 4 月 22 日的一次层状事件。
+1. 2022 年 5 月 28 日意大利北部的一次对流事件
+2. 2022 年 4 月 22 日的一次层状事件
 
 对流涉及在不稳定环境中由于上升气流和下沉气流导致大气中热量和湿气的垂直输送。相比之下，层状是指大范围气流因大尺度风和大气动力学迫使它们斜向叠加的情况。
 
 变量反射率（`Z_60`）和其他此类纬度、经度、地理地图限制以及以度为单位的数据分辨率。
 
-
-
-
-
-The data was obtained from ([`climateindex.eu/`](https://climateindex.eu/)) for this study. `TrajGRU` model 1 utilizes on reflectivity images as training inputs for nowcasting forecast as shown in Fig. 6–5. This figure showcases reflectivity images used as inputs, with distinct color gradients representing varying intensities of precipitation. Patterns can be observed for the convective event on May 28, 2022, and the stratiform event on April 22, 2022. Annotations indicate key geographical areas and meteorological phenomena. The map boundaries, latitude, and longitude lines provide geographical context to the forecasted regions.
+数据来源为[`climateindex.eu/`](https://climateindex.eu/)。`TrajGRU` model 1 利用反射率图像作为训练输入进行临近预报，如图 6–5 所示。该图展示了用作输入的反射率图像，不同的颜色梯度代表不同强度的降水。可以观察到 2022 年 5 月 28 日对流事件和 2022 年 4 月 22 日层状事件的模式。标注指示了关键地理区域和气象现象。地图边界、纬度和经度线为预报区域提供了地理背景。
 
 ![Figure 6–5 Visualization of the TrajGRU model 1 outputs for nowcasting forecasts in Northern Italy. Map lines delineate study areas and do not necessarily depict accepted national boundaries.](img/F000092f06-05-9780443219054.jpg)
 
 Figure 6–5 Visualization of the `TrajGRU` model 1 outputs for nowcasting forecasts in Northern Italy. Map lines delineate study areas and do not necessarily depict accepted national boundaries.
 
-The `TrajGRU` model 2 is trained using reflectivity images and lightning data for nowcasting forecast in Fig. 6–6. The lightning data are sourced from LAMPINET network, operated by Air Force Meteorological Service. The color gradients represent varying levels of reflectivity, while lightning occurrences are indicated by distinct markers.
+`TrajGRU` model 2 使用反射率图像和闪电数据进行临近预报训练，如图 6–6 所示。闪电数据源自空军气象局运营的 LAMPINET 网络。颜色梯度代表不同级别的反射率，而闪电发生由不同的标记指示。
 
 ![Figure 6–6 TrajGRU model with reflectivity images and lightning. Map lines delineate study areas and do not necessarily depict accepted national boundaries.](img/F000092f06-06-9780443219054.jpg)
 
@@ -1531,7 +1450,7 @@ Figure 6–6 `TrajGRU` model with reflectivity images and lightning. Map lines d
 
 ### 6.6.2 Case study of Italy (E³CI)
 
-**European Extreme Events Climate Index (E**^(**3**)**CI)** is an innovative operational service designed for weather-induced hazard assessment and management. It is supported by the Foundation Big Data and Artificial Intelligence for Human Development (IFAB).
+**European Extreme Events Climate Index (E³CI)** is an innovative operational service designed for weather-induced hazard assessment and management. It is supported by the Foundation Big Data and Artificial Intelligence for Human Development (IFAB).
 
 For the E³CI of Italy during the period 1981–2010, one can observe average values close to zero on the same period. However, larger values have been noted in recent years, attributed to the effects of climate change. The mean of the components of E³CI is presented in Table 6–4.
 
@@ -1539,15 +1458,14 @@ Table 6–4
 
 Mean of components of E³CI for Italy (1981–2010).
 
-| Components || Mean |
+| Components | Mean |
 | --- | --- |
-| Cold stress || −0.000525 |
-| --- | --- |
-| Drought || −0.002776 |
-| E³CI || −0.000994 |
-| Extreme precipitation || −0.000536 |
-| Extreme wind || −0.001316 |
-| Heat stress || 0.000184 |
+| Cold stress | −0.000525 |
+| Drought | −0.002776 |
+| E³CI | −0.000994 |
+| Extreme precipitation | −0.000536 |
+| Extreme wind | −0.001316 |
+| Heat stress | 0.000184 |
 
 Fig. 6–7 displays the increasing magnitude of extremes, as represented by components such as extreme precipitation, extreme wind, heat stress, alongside the composite E³CI index for the year 1980, 1990, 2000, 2010, and 2020. A spatial pattern reflecting the country-wide average value for Italy is depicted in Fig. 6–8.
 
@@ -1585,11 +1503,9 @@ Figure 6–12 Seasonal analysis of various climatic parameters.
 
 ![Figure 6–13 Comparative chart showing extreme precipitation for the countries of Belgium, Luxembourg, Germany, Italy, and the Netherlands. Map lines delineate study areas and do not necessarily depict accepted national boundaries.](img/F000092f06-13-9780443219054.jpg)
 
-
-
-
-
 Figure 6–13 比较比利时、卢森堡、德国、意大利和荷兰极端降水的图表。地图线划定了研究区域，不一定代表公认的国界。
+
+
 
 ![Figure 6–14 ERA5 of Germany.](img/F000092f06-14-9780443219054.jpg)
 
@@ -1658,11 +1574,8 @@ Figure 6–24 Climate model for minimum input and relative humidity. Map lines d
 ## References
 
 * Abebe et al., 2018 Abebe Y, Kabir G, Tesfamariam S. Assessing urban areas vulnerability to pluvial flooding using GIS applications and Bayesian Belief Network model. *Journal of Cleaner Production*. 2018;174:1629–1641 ISSN 0959-6526.
+
 * Aguilera et al., 2021 Aguilera R, Corringham T, Gershunov A, et al. Wildfire smoke impacts respiratory health more than fine particles from other sources: Observational evidence from Southern California. *Nature Communications*. 2021;12:1493.
-
-
-
-
 
 * Ali 等, 2017 Ali Z, Hussain I, Faisal M, et al. Forecasting drought using multilayer perceptron artificial neural network model. *Advances in Meteorology.* 2017;2017:5681308.
 
@@ -1690,57 +1603,15 @@ Figure 6–24 Climate model for minimum input and relative humidity. Map lines d
 
 * Hirschlag, 2023 Hirschlag, A. (2023). Smoke from burning forests and peat can linger in the atmosphere for weeks, travelling thousands of miles and harming the health of populations living far away. Available from `https://www.bbc.com/future/article/20200821-how-wildfire-pollution-may-be-harming-your-health`.
 
-* Holm 等, 2021 Holm SM, Miller MD, Balmes JR. Health effects of wildfire smoke in children and public health tools: A narrative review. *Journal of Exposure Science & Environmental Epidemiology*. 2021;31:1–20.
 
-* Jain 等, 2023 Jain H, Dhupper R, Shrivastava A, et al. AI-enabled strategies for climate change adaptation: Protecting communities, infrastructure, and businesses from the impacts of climate change. *Computational Urban Science*. 2023;3:25.
 
-* James and James, 2010 James SJ, James C. The food cold-chain and climate change. *Food Research International*. 2010;43(7):1944–1956.
-
-* Jiao 等, 2023 Jiao, J., Lewis, R.H., & Seong, K., et al. (2023). Fire and smoke digital twin – A computational framework for modeling fire incident outcomes. *a*rXiv. `/abs/2305.18313`.
-
-* Karanth 等, 2023 Karanth S, Benefo EO, Patra D, et al. Importance of artificial intelligence in evaluating climate change and food safety risk. *Journal of Agriculture and Food Research*. 2023;11:100485.
-
-* Katila 等, 2019 Katila P, Carol J, Colfer P, et al. *Sustainable development goals: Their impacts on forests and people* Cambridge University Press 2019; ISBN 9781108765015.
-
-* Kinver, 2021 Kinver, M. (2021). Then and now: The burning issue of wildfires. Available from `https://www.bbc.com/news/science-environment-57946155`.
-
-* Li 等, 2020 Li Y, Feng Y, Chen S, et al. Application of the artificial neural network and support vector machines in forest fire prediction in the Guangxi Autonomous Region, China. *Discrete Dynamics in Nature and Society*. 2020;2020:1–14.
-
-* Maggiore 等, 2020 Maggiore A, Afonso A, Barrucci F, et al. *Climate change as a driver of emerging risks for food and feed safety, plant, animal health and nutritional quality* European Food Safety Authority 2020; EN-1881.
-
-* Nebot and Mugica, 2021 Nebot À, Mugica F. Forest fire forecasting using fuzzy logic models. *Forests*. 2021;12:1005.
-
-* Oh 等, 2020 Oh SH, Ghyme SW, Jung SK, et al. *Early wildfire detection using convolutional neural network*. *Frontiers of Computer Vision* Springer Singapore 2020;18–30.
-
-* Pacha, 2020 Pacha, A. (2020, July 7). Understanding forest fires and their effect on carbon emissions. *The Hindu Newspaper*.
-
-* Reid and Maestas, 2019 Reid CE, Maestas MM. Wildfire smoke exposure under climate change: Impact on respiratory health of affected communities. *Current Opinion in Pulmonary Medicine*. 2019;25(2):179–187.
-
-* Safi and Bouroumi, 2013 Safi YO, Bouroumi A. Prediction of forest fires using artificial neural networks. *Applied Mathematical Sciences*. 2013;7:271–286.
-
-* Sahal 等, 2021 Sahal R, Alsamhi SH, Breslin JG, et al. Digital twins collaboration for automatic erratic operational data detection in Industry 4.0. *Applied Sciences*. 2021;11:3186.
-
-* Şahin 等, 2013 Şahin M, Kaya Y, Uyar M. Comparison of ANN and MLR models for estimating solar radiation in Turkey using NOAA/AVHRR data. *Advances in Space Research*. 2013;51(5):891–904 ISSN 0273-1177.
-
-* Semenza 等, 2012 Semenza JC, Herbst S, Rechenburg A, et al. Climate change impact assessment of food- and waterborne diseases. *Critical Reviews in Environmental Science and Technology*. 2012;42:857–890.
-
-* Sonnewald 等, 2019 Sonnewald M, Wunsch C, Heimbach P. Unsupervised learning reveals geography of global ocean dynamical regions. *Earth and Space Science*. 2019;6(5):784–794.
-
-* Uyttendaele 等, 2015 Uyttendaele M, Liu C, Hofstra N. Special issue on the impacts of climate change on food safety. *Food Research International*. 2015;68:1–6.
-
-* Yun 等, 2022 Yun SJ, Kwon J, Kim W. A novel digital twin architecture with similarity-based hybrid modeling for supporting dependable disaster management systems. *Sensors (Basel, Switzerland)*. 2022;22:4774.
-
-## 农业与气候变化关系计算建模
+# 农业与气候变化关系计算建模
 
 İlhan Uysal, Burdur Mehmet Akif Ersoy University, Bucak Zeliha Tolunay School of Applied Technology And Business, Department of Information Systems and Technologies, Burdur, Turkey
 
 ## 摘要
 
 农业在人类社会、经济和文化实践的发展中已成为一个基础支柱，延续了数千年。然而，这些农业系统的可靠性和效率目前正因气候变化的复杂而广泛的影响而面临风险。诸如气温升高、降雨模式变化和极端天气事件等因素，是全球粮食安全和农业可持续生存的巨大障碍。鉴于这些问题，研究人员和政策制定者越来越需要依赖计算建模。这种复杂的方法对于理解、预测和解决农业与气候变化之间复杂动态至关重要。
-
-
-
-
 
 本研究深入探讨了气候变化对全球粮食安全和农业可持续性带来的挑战，并强调了计算建模在应对这些问题中的作用。讨论涵盖了农业数据固有的局限性、农业和气候科学领域计算模型的进步，以及这些模型如何对于基于各种气候变化条件预测未来情景至关重要。此外，本章还评估了气候变化对农业部门的财务后果。它包括案例研究和实例，展示了计算建模如何帮助制定气候适应型农业实践的策略并指导政策制定过程。
 
@@ -1782,10 +1653,6 @@ Figure 7–1 气候变化对农业生产的直接、间接和社会经济影响�
 
 在他们的研究中，Helfer 及其同事提出了一个计算框架，该框架利用无处不在的计算技术基于历史背景预测土壤肥力和农业产量。通过整合各种传感器和机器学习技术，他们的理论表明，农业可以变得更高效、更具生产力，同时减少生态足迹。该研究的目的是描述这一拟议模型及其架构部署，回顾精准农业和数据预测中的类似努力，并展示某些实验和定量分析的结果。研究结果表明，该模型在估算土壤健康和农业生产力方面是有效的。研究中包含的实验和分析显示出有希望的精确度和效能。该模型预计将提高农业效率和生产力，同时减少环境影响（Helfer et al., 2020）。
 
-
-
-
-
 Kompas 等人利用了可计算一般均衡（CGE）模型的时间变体 `GTAP-INT`，该模型在全球贸易分析项目（`GTAP`）框架内，评估气候变化对各国 GDP 的影响以及遵守《巴黎气候协定》的整体经济优势。该模型针对 `GTAP` 数据库中的全部 139 个国家实施，并详细说明了在一系列温度变化和代表性浓度路径（`RCP`）情景下的结果。研究表明，气候变化对全球平均 GDP 的影响在很大程度上取决于 `RCP` 情景，但对各国的影响在不同 `RCP` 下可能都很显著。此外，研究还强调了遵守《巴黎协定》可能带来的可观全球经济效益。尽管分析全面，该研究也承认了 CGE 模型的某些局限性，包括缺乏随机性和无法考虑随机过程的跳跃-扩散特征。总体而言，这项研究对气候变化的经济后果以及遏制这些影响的措施的重要性提供了深入评估（Kompas et al., 2018）。
 
 在他们的全面综述中，Jarvis 等人讨论了各种全球气候模型及其对 21 世纪气候模式的预测。该综述深入探讨了全球气候建模背后的科学原理，强调了未来气候预测固有的不确定性。它包括对特殊报告排放情景的概述。当前科学共识表明，到 2050 年全球气温将上升 1°C–3°C，并伴随降水在复杂且区域特异性的变化。综述指出，预测极端天气事件，特别是飓风，具有显著的不确定性。它还探讨了气候变化对农业产量的预期后果、害虫和疾病的流行情况，以及 CO[2] 富集对作物的影响。一般而言，预计作物生产力的影响将是不利的，随着温度适度升高可能带来的生产力增益将被超过 1°C 的更显著升温所抵消。CO[2] 肥效的可能缓解作用仍是持续争论的话题。虽然就气候变化导致农业害虫和疾病增加已达成共识，但只有有限数量的研究量化了这些影响，凸显了该领域需要进一步研究（Jarvis et al., 2010）。
@@ -1794,33 +1661,73 @@ Kumar 等人提出了一项研究，讨论了使用智能技术进行计算建�
 
 Francesco Bosello 和 Jian Zhang 的研究侧重于通过 CGE 模型评估到 2050 年气候变化对农业的经济影响。他们的研究结果表明，虽然对粮食供应和福利的总体影响很小，但分配效应却非常明显，尤其是在发展中国家。该研究采用了一种综合模型，将全球环流模型、作物生长模拟、土地利用规划和经济分析相结合。关键气候因素如温度变化、CO[2] 水平和降水变化均被考虑在内，同时还考虑了气候变化带来的其他环境变化，包括土地质量、水资源的变化以及极端天气事件频率的改变。该研究还考察了气候变化对作物生理的直接影响、微观层面的农业适应影响，以及国家和全球层面的经济适应策略。研究发现气候变化对谷物生产产生不利影响，但被其他作物类型生产力提高所抵消。总体而言，研究预测全球粮食供应将相对略有下降（1.8%）和全球福利下降（0.06%）。尽管如此，由于气候变化对农业的不利影响预计在各国之间差异很大，发展中国家将承受主要冲击。该研究强调了需要一致、综合的建模来准确评估气候变化对农业的影响，并建议政策制定者优先在发展中国家开展适应举措，以应对气候变化对农业不平等的分配效应（Bosello & Zhang, 2005）。
 
+## 参考文献
+
+* Holm 等, 2021 Holm SM, Miller MD, Balmes JR. Health effects of wildfire smoke in children and public health tools: A narrative review. *Journal of Exposure Science & Environmental Epidemiology*. 2021;31:1–20.
+
+* Jain 等, 2023 Jain H, Dhupper R, Shrivastava A, et al. AI-enabled strategies for climate change adaptation: Protecting communities, infrastructure, and businesses from the impacts of climate change. *Computational Urban Science*. 2023;3:25.
+
+* James and James, 2010 James SJ, James C. The food cold-chain and climate change. *Food Research International*. 2010;43(7):1944–1956.
+
+* Jiao 等, 2023 Jiao, J., Lewis, R.H., & Seong, K., et al. (2023). Fire and smoke digital twin – A computational framework for modeling fire incident outcomes. *arXiv*. `/abs/2305.18313`.
+
+* Karanth 等, 2023 Karanth S, Benefo EO, Patra D, et al. Importance of artificial intelligence in evaluating climate change and food safety risk. *Journal of Agriculture and Food Research*. 2023;11:100485.
+
+* Katila 等, 2019 Katila P, Carol J, Colfer P, et al. *Sustainable development goals: Their impacts on forests and people* Cambridge University Press 2019; ISBN 9781108765015.
+
+* Kinver, 2021 Kinver, M. (2021). Then and now: The burning issue of wildfires. Available from `https://www.bbc.com/news/science-environment-57946155`.
+
+* Li 等, 2020 Li Y, Feng Y, Chen S, et al. Application of the artificial neural network and support vector machines in forest fire prediction in the Guangxi Autonomous Region, China. *Discrete Dynamics in Nature and Society*. 2020;2020:1–14.
+
+* Maggiore 等, 2020 Maggiore A, Afonso A, Barrucci F, et al. *Climate change as a driver of emerging risks for food and feed safety, plant, animal health and nutritional quality* European Food Safety Authority 2020; EN-1881.
+
+* Nebot and Mugica, 2021 Nebot À, Mugica F. Forest fire forecasting using fuzzy logic models. *Forests*. 2021;12:1005.
+
+* Oh 等, 2020 Oh SH, Ghyme SW, Jung SK, et al. *Early wildfire detection using convolutional neural network*. *Frontiers of Computer Vision* Springer Singapore 2020;18–30.
+
+* Pacha, 2020 Pacha, A. (2020, July 7). Understanding forest fires and their effect on carbon emissions. *The Hindu Newspaper*.
+
+* Reid and Maestas, 2019 Reid CE, Maestas MM. Wildfire smoke exposure under climate change: Impact on respiratory health of affected communities. *Current Opinion in Pulmonary Medicine*. 2019;25(2):179–187.
+
+* Safi and Bouroumi, 2013 Safi YO, Bouroumi A. Prediction of forest fires using artificial neural networks. *Applied Mathematical Sciences*. 2013;7:271–286.
+
+* Sahal 等, 2021 Sahal R, Alsamhi SH, Breslin JG, et al. Digital twins collaboration for automatic erratic operational data detection in Industry 4.0. *Applied Sciences*. 2021;11:3186.
+
+* Şahin 等, 2013 Şahin M, Kaya Y, Uyar M. Comparison of ANN and MLR models for estimating solar radiation in Turkey using NOAA/AVHRR data. *Advances in Space Research*. 2013;51(5):891–904 ISSN 0273-1177.
+
+* Semenza 等, 2012 Semenza JC, Herbst S, Rechenburg A, et al. Climate change impact assessment of food- and waterborne diseases. *Critical Reviews in Environmental Science and Technology*. 2012;42:857–890.
+
+* Sonnewald 等, 2019 Sonnewald M, Wunsch C, Heimbach P. Unsupervised learning reveals geography of global ocean dynamical regions. *Earth and Space Science*. 2019;6(5):784–794.
+
+* Uyttendaele 等, 2015 Uyttendaele M, Liu C, Hofstra N. Special issue on the impacts of climate change on food safety. *Food Research International*. 2015;68:1–6.
+
+* Yun 等, 2022 Yun SJ, Kwon J, Kim W. A novel digital twin architecture with similarity-based hybrid modeling for supporting dependable disaster management systems. *Sensors (Basel, Switzerland)*. 2022;22:4774.
+
+
+
 Purcell 等人对农业中数字孪生的当前研究进行了综述，重点关注其支持可持续农业实践的潜力。数字孪生的概念被审视为一个虚拟实验室，可用于评估和预测农业资产（例如作物、土壤和天气）变化的影响，而无需与物理实验相关的成本、风险或干扰。综述还讨论了在农业中使用数字孪生的挑战和机遇，包括数据集成和计算机建模的需求，以及对环境和社会可能产生的负面影响。它为农业中数字孪生的发展提供了一张路线图，指出需要实现的关键里程碑以支持其开放和可持续发展。他们还强调了在数字孪生开发中考虑社会技术生态因素的重要性，以及需要跨学科合作以确保数字孪生以支持环境可持续性和社会公平的方式使用（Purcell et al., 2023）。
 
 ## 7.3 气候变化、农业适应策略和计算建模
 
 农业是人类活动的主要部门之一，直接受到不断变化的气候的影响（Akalin, 2014）。随着气候变化预测显示极端天气事件将更频繁、更严重，降水模式发生变化，气温升高，农业中有效适应策略的需求变得至关重要。使农业实践适应不断变化的气候对于确保粮食安全以及增强农村社区的韧性和可持续资源管理至关重要。
 
-
-
-
-
 纵观历史，农业社区发展并传承了传统知识和实践，以增强在不断变化的气候条件下面临的韧性。原住民农民和农村社区通常对地方适应性实践有宝贵的认识，例如作物品种、水管理技术和土地利用实践（Quandt et al., 2023）。这些知识体系与当地生态系统紧密相连，并在几个世纪以来支撑了不同环境下的农业。
 
-*   • *作物多样性与本土种子：* 传统农民长期以来依赖具有不同气候胁迫耐受性的多样化作物品种。通过种植本土种子和地方适应品种，农民可以提高对不断变化的环境条件的韧性，并降低作物歉收的脆弱性。
+*   **作物多样性与本土种子：** 传统农民长期以来依赖具有不同气候胁迫耐受性的多样化作物品种。通过种植本土种子和地方适应品种，农民可以提高对不断变化的环境条件的韧性，并降低作物歉收的脆弱性。
 
-*   • *农林复合与综合农业：* 将树木种植与作物和牲畜生产相结合的农林复合实践促进了生态平衡，改善了土壤肥力，并为极端天气事件提供了自然缓冲。同样，IFS 利用不同组成部分之间的协同作用，创造出具有韧性和可持续性的农业景观。
+*   **农林复合与综合农业：** 将树木种植与作物和牲畜生产相结合的农林复合实践促进了生态平衡，改善了土壤肥力，并为极端天气事件提供了自然缓冲。同样，`IFS` 利用不同组成部分之间的协同作用，创造出具有韧性和可持续性的农业景观。
 
-*   • *集水与节水：* 地方水管理实践，如雨水收集、修建拦水坝以及社区主导的用水共享系统，可优化用水并确保在干旱或降雨不规律期间的水资源供应。
+*   **集水与节水：** 地方水管理实践，如雨水收集、修建拦水坝以及社区主导的用水共享系统，可优化用水并确保在干旱或降雨不规律期间的水资源供应。
 
 科学和技术的进步为农业适应气候变化创造了新的可能性。从精准农业到气候智能创新，这些技术干预为农民提供了数据驱动的决策工具和可持续实践。利用遥感、地理信息系统和全球定位系统等现代技术，精准农业通过将水、肥料和农药等投入品精确地施用到所需位置和时间来优化资源利用。这种方法提高了生产力，减少了环境影响，并增强了对气候变化的韧性（Gebbers & Adamchuk, 2010）。植物育种者通过传统育种技术以及日益增多的生物技术培育气候适应型作物品种。这些新品种表现出抗旱、耐热和抗虫等性状，有助于在气候变化中提高农业生产力（Varotto et al., 2020）。水资源短缺是许多受气候变化影响地区的主要关切。节水灌溉方法如滴灌和微喷灌可最大限度地减少水浪费并提高用水效率，使农民能够可持续地管理水资源。获取准确及时的天气信息对农民规划农业活动和减轻与极端天气事件相关的风险至关重要。天气预报和预警系统被视为作物种植、收获和灾害准备决策的重要支持。
 
 政府和国际组织在支持农业适应气候变化方面的作用，对于在更广泛的范围内促进韧性和可持续性至关重要。政策干预涵盖一系列措施，从推广气候智能实践到改善研究和推广服务。
 
-*   • *气候适应型农业政策：* 政府制定和实施促进采用气候适应型农业实践的政策（Manevska-Tasevska et al., 2023）。这些政策应包括对农民的财政支持、保险计划以及对气候智能技术的补贴。
+*   **气候适应型农业政策：** 政府制定和实施促进采用气候适应型农业实践的政策（Manevska-Tasevska et al., 2023）。这些政策应包括对农民的财政支持、保险计划以及对气候智能技术的补贴。
 
-*   • *研究与推广服务：* 投资农业研究和推广服务有助于将知识、技术进步和最佳实践传播给农民。这些服务使农民能够更有效地适应气候变化并促进农业实践的创新。
+*   **研究与推广服务：** 投资农业研究和推广服务有助于将知识、技术进步和最佳实践传播给农民。这些服务使农民能够更有效地适应气候变化并促进农业实践的创新。
 
-*   • *气候变化适应基金*：设立专门用于农业适应的基金支持提高农业社区气候韧性的项目（Bouwer & Aerts, 2006）。这些基金更适合可持续土地管理、基础设施发展和能力建设举措。
+*   **气候变化适应基金：** 设立专门用于农业适应的基金支持提高农业社区气候韧性的项目（Bouwer & Aerts, 2006）。这些基金更适合可持续土地管理、基础设施发展和能力建设举措。
 
 ### 7.3.1 气候变化、农业适应策略和计算建模的基本数学表达式和模型
 
@@ -1828,7 +1735,9 @@ Purcell 等人对农业中数字孪生的当前研究进行了综述，重点关
 
 气候变化速率 `ΔT/Δt`：衡量给定时期内平均温度的变化，并以 Eq. (7.1) 表示（Kelly et al., 2013）。
 
-`ΔT/Δt = (T2−T1)/(t2−t1)` (7.1)
+```
+ΔT/Δt = (T2−T1)/(t2−t1) (7.1)
+```
 
 ![Equation](img/F000109si1.png`)(7.1)
 
@@ -1836,41 +1745,35 @@ Purcell 等人对农业中数字孪生的当前研究进行了综述，重点关
 
 农业适应策略包括在气候变化条件下确保农业可持续性所使用的各种技术和实践。数学表达式更受青睐以评估和优化这些策略的影响。例如，可使用 Eq. (7.2) 等模型来优化灌溉策略（Gürbüz, 2019）：
 
-`Irrigation efficiency(%) = total water yield − total water use × 100` (7.2)
+```
+Irrigation efficiency(%) = total water yield − total water use × 100 (7.2)
+```
 
 ![Equation](img/F000109si2.png`)(7.2)
 
 计算建模可定义为使用数学模型分析气候变化和农业适应策略。用于气候建模的能量平衡方程描述了来自太阳的能量、表面热量、大气温度变化和辐射平衡的流动（Meyers & Hollinger, 2004）。
 
-`Q = H + LE + G + ΔS` (7.3)
+```
+Q = H + LE + G + ΔS (7.3)
+```
 
 ![Equation](img/F000109si3.png`)(7.3)
 
 根据 Eq. (7.3) 中给出的数学表达式，
 
-*   • `Q` 表示地表能量平衡（W/m²）。
-
-
-
-
-
-* `H` 代表显热通量，通常被称为潜热通量。热量是由于与空气接触的表面之间的温度差异造成的（W/m²）。
-
-* `LE` 代表潜热通量，是由水汽传输引起的能量变化（W/m²）。
-
-* `G` 代表地下热通量，表示地下储存或释放的热量（W/m²）。
-
-* `ΔS` 是地表能量储存的变化，通常取决于地表温度的变化（W/m²）。
+*   `Q` 表示地表能量平衡（W/m²）。
+*   `H` 代表显热通量，通常被称为潜热通量。热量是由于与空气接触的表面之间的温度差异造成的（W/m²）。
+*   `LE` 代表潜热通量，是由水汽传输引起的能量变化（W/m²）。
+*   `G` 代表地下热通量，表示地下储存或释放的热量（W/m²）。
+*   `ΔS` 是地表能量储存的变化，通常取决于地表温度的变化（W/m²）。
 
 许多数学模型已针对气候变化和农业适应策略进行了开发。这些模型用于确定气候变化对农业部门的影响并制定适应策略。其中一些列举如下：
 
-* `Agricultural Production Systems Simulator (APSIM)`: 该模型用于评估农业生产系统的性能。`APSIM` 考虑了许多因素，如植物生长、土壤水分、养分、病虫害（Keating et al., 2003）。
+*   `Agricultural Production Systems Simulator (APSIM)`：该模型用于评估农业生产系统的性能。`APSIM` 考虑了许多因素，如植物生长、土壤水分、养分、病虫害（Keating et al., 2003）。
+*   `DSSAT (Decision Support System for Agrotechnology Transfer)`：该模型用于评估气候变化对农业生产的影响。`DSSAT` 考虑了许多因素，如植物生长、土壤水分、养分、病虫害（Jones et al., 1998）。
+*   `Agricultural Model Intercomparison and Improvement Project (AgMIP)`：在该项目中，开发了一系列数学模型以评估气候变化对农业部门的影响。这些模型考虑了许多因素，如植物生长、土壤水分、养分、病虫害。`AgMIP` 可用于根据气候变化情景预测农业生产的变化（Rosenzweig et al., 2013）。
 
-* `DSSAT (Decision Support System for Agrotechnology Transfer)`: 该模型用于评估气候变化对农业生产的影响。`DSSAT` 考虑了许多因素，如植物生长、土壤水分、养分、病虫害（Jones et al., 1998）。
-
-* `Agricultural Model Intercomparison and Improvement Project (AgMIP)`: 在该项目中，开发了一系列数学模型以评估气候变化对农业部门的影响。这些模型考虑了许多因素，如植物生长、土壤水分、养分、病虫害。`AgMIP` 可用于根据气候变化情景预测农业生产的变化（Rosenzweig et al., 2013）。
-
-区域气候模型（RCMs）在为地方农业规划提供详细的气候数据方面发挥着关键作用。这些模型专注于较小的地理区域，弥补了更广泛的一般环流模型（GCMs）所留下的空白。RCMs 基于大气物理、化学和动力学原理的复杂数学方程运行，使用三维网格模拟大气、陆地和海洋之间的相互作用。辐射、湿度、风和温度等关键要素都被纳入这些高分辨率模型中。通过细化 GCM 数据，RCMs 提供了准确的区域气候预测，这对有效的农业战略和气候影响研究至关重要。统计降尺度和动力降尺度是区域化全球气候模型输出以进行农业影响评估的关键技术（Pal et al., 2007）。统计降尺度涉及大尺度大气变量与局部气候特征之间的数学关系。这种方法采用回归分析、天气类型或机器学习等统计方法，从粗分辨率模型输出中推断更精细的气候细节。另一方面，动力降尺度使用高分辨率气候模型对小区域的气候进行物理模拟，同时考虑局部地形和土地利用。该方法依赖于流体动力学和热力学的根本原理，将其应用于高分辨率建模框架中以捕捉局部气候变化。这两种技术对于将大尺度气候预测转化为可操作、本地化的数据至关重要，这对农业规划和管理至关重要（Kotamarthi et al., 2021）。作物模拟模型如 `APSIM` 和 `DSSAT` 运行于复杂的算法和数学方程之上，以模拟作物在各种环境条件下的生长和产量。这些模型整合了植物生理学、土壤科学和气象学，以预测作物如何响应土壤类型、天气条件和农业管理实践等不同因素。它们采用水量平衡、养分循环和光截获等算法，以真实地再现作物生长阶段和产量结果。这些模型是理解农业系统动态和协助可持续作物生产决策制定的关键工具（Tsuji et al., 1998）。农业中的 CGE 模型是先进的经济模型，分析经济内部的相互联系，涵盖农业在内的各个部门。它们以代表经济行为的数学方程为基础，如生产、消费和贸易。这些模型用于评估政策变化、市场发展以及气候变化等外部因素对农业部门和更广泛经济的影响。通过模拟经济对不同情景的响应，CGE 模型为政策制定者在制定应对气候变化在农业中带来的挑战的战略时提供了宝贵的见解（Böhringer & Löschel, 2006）。
+区域气候模型（`RCMs`）在为地方农业规划提供详细的气候数据方面发挥着关键作用。这些模型专注于较小的地理区域，弥补了更广泛的一般环流模型（`GCMs`）所留下的空白。`RCMs` 基于大气物理、化学和动力学原理的复杂数学方程运行，使用三维网格模拟大气、陆地和海洋之间的相互作用。辐射、湿度、风和温度等关键要素都被纳入这些高分辨率模型中。通过细化 `GCM` 数据，`RCMs` 提供了准确的区域气候预测，这对有效的农业战略和气候影响研究至关重要。统计降尺度和动力降尺度是区域化全球气候模型输出以进行农业影响评估的关键技术（Pal et al., 2007）。统计降尺度涉及大尺度大气变量与局部气候特征之间的数学关系。这种方法采用回归分析、天气类型或机器学习等统计方法，从粗分辨率模型输出中推断更精细的气候细节。另一方面，动力降尺度使用高分辨率气候模型对小区域的气候进行物理模拟，同时考虑局部地形和土地利用。该方法依赖于流体动力学和热力学的根本原理，将其应用于高分辨率建模框架中以捕捉局部气候变化。这两种技术对于将大尺度气候预测转化为可操作、本地化的数据至关重要，这对农业规划和管理至关重要（Kotamarthi et al., 2021）。作物模拟模型如 `APSIM` 和 `DSSAT` 运行于复杂的算法和数学方程之上，以模拟作物在各种环境条件下的生长和产量。这些模型整合了植物生理学、土壤科学和气象学，以预测作物如何响应土壤类型、天气条件和农业管理实践等不同因素。它们采用水量平衡、养分循环和光截获等算法，以真实地再现作物生长阶段和产量结果。这些模型是理解农业系统动态和协助可持续作物生产决策制定的关键工具（Tsuji et al., 1998）。农业中的 `CGE` 模型是先进的经济模型，分析经济内部的相互联系，涵盖农业在内的各个部门。它们以代表经济行为的数学方程为基础，如生产、消费和贸易。这些模型用于评估政策变化、市场发展以及气候变化等外部因素对农业部门和更广泛经济的影响。通过模拟经济对不同情景的响应，`CGE` 模型为政策制定者在制定应对气候变化在农业中带来的挑战的战略时提供了宝贵的见解（Böhringer & Löschel, 2006）。
 
 ### 7.3.2 计算建模在分析气候变化对农业影响中的作用
 
@@ -1878,13 +1781,8 @@ Purcell 等人对农业中数字孪生的当前研究进行了综述，重点关
 
 计算模型在根据各种排放轨迹和全球气候模式预测未来气候情景方面发挥着核心作用。这些气候预测是理解不同温室气体排放路径如何影响区域和全球气候模式的关键输入。通过生成可能的未来气候，研究人员可以预见农业系统可能面临的潜在挑战和机遇。
 
-* `Global Climate Models`: 这些模型使用复杂的数学方程开发，在全球尺度上模拟地球气候系统。全球气候模型根据不同的温室气体排放情景预测可能的未来气候情景，同时考虑大气成分、洋流和地表相互作用等因素（Ramirez-Villegas et al., 2013）。
-
-* `Downsizing Techniques`: 由于全球气候模型具有粗分辨率，因此使用降尺度技术将气候预测降尺度到区域或地方尺度。RCMs 和统计降尺度方法用于为特定农业区域提供更详细的气候信息（Tumbo et al., 2010）。
-
-
-
-
+*   `Global Climate Models`：这些模型使用复杂的数学方程开发，在全球尺度上模拟地球气候系统。全球气候模型根据不同的温室气体排放情景预测可能的未来气候情景，同时考虑大气成分、洋流和地表相互作用等因素（Ramirez-Villegas et al., 2013）。
+*   `Downsizing Techniques`：由于全球气候模型具有粗分辨率，因此使用降尺度技术将气候预测降尺度到区域或地方尺度。`RCMs` 和统计降尺度方法用于为特定农业区域提供更详细的气候信息（Tumbo et al., 2010）。
 
 计算建模促进了对农业系统脆弱性和风险的评估，使研究人员能够识别最易受气候变化不利影响的地区和作物。通过整合气候数据、土壤特性、作物管理实践等多种数据源，建模脆弱性还能提高对气候变化对粮食生产和粮食安全潜在影响的理解 (Bilen et al., 2022)。研究人员正在利用计算模型开发脆弱性指数和指标，以评估农业系统的敏感性、暴露度和适应能力。这些指标有助于确定需要有针对性适应措施的地区和社区。综合评估模型将气候、作物和经济模型结合起来，评估气候变化对农业生产力、贸易和粮食价格的影响。这些模型使决策者能够评估不同的适应和减缓策略。
 
@@ -1898,13 +1796,9 @@ Purcell 等人对农业中数字孪生的当前研究进行了综述，重点关
 
 作物特异性模型已发展成为提供每种作物对不断变化的气候条件响应详细信息的专业工具。这些模型通常基于广泛的田间数据和植物生理学知识，有助于更精确地预测气候变化情景下的作物生长和产量。它们的准确性和可靠性对于农业规划和适应的知情决策至关重要。基于生理的作物模型模拟特定作物的生理过程，考虑光合作用、呼吸作用和水分吸收等因素。通过纳入作物特异性特征和响应，这些模型提高了在不同气候情景下预测作物行为的准确性 (Boote et al., 2016)。作物遗传学和育种的进步导致了考虑基因型-环境互作的模型的发展。通过考虑作物品种的多样性，这些模型捕捉到作物对不断变化的气候条件响应的变异性。研究人员正在使用集合建模方法来解决产品特异性模型固有的不确定性。集合模型整合多个产品模型，考虑不同的假设和参数化，以提供更全面的潜在结果范围 (Abramowitz et al., 2019)。
 
-虽然全球气候模型提供了有关大尺度气候模式的宝贵信息，但区域尺度模型和降尺度技术提供了更详细和本地化的信息。降尺度对于获得与农业系统相关的空间分辨率的气候数据以及更好地理解区域气候变异及其对作物的影响至关重要。`RCMs`是全球气候模型的区域尺度版本，为特定地理区域提供更集中的气候预测。`RCMs`提供更高分辨率的数据，捕捉局部气候特征并提高气候影响评估的准确性 (Chokkavarapu & Mandla, 2019)。统计降尺度方法使用从全球气候模型得出的大尺度气候变量与局部气候观测之间的经验关系。这些方法提供了精细尺度的气候预测，对于农业规划和适应策略具有不可估量的价值 (IPCC, 2007)。
+虽然全球气候模型提供了有关大尺度气候模式的宝贵信息，但区域尺度模型和降尺度技术提供了更详细和本地化的信息。降尺度对于获得与农业系统相关的空间分辨率的气候数据以及更好地理解区域气候变异及其对作物的影响至关重要。`RCMs` 是全球气候模型的区域尺度版本，为特定地理区域提供更集中的气候预测。`RCMs` 提供更高分辨率的数据，捕捉局部气候特征并提高气候影响评估的准确性 (Chokkavarapu & Mandla, 2019)。统计降尺度方法使用从全球气候模型得出的大尺度气候变量与局部气候观测之间的经验关系。这些方法提供了精细尺度的气候预测，对于农业规划和适应策略具有不可估量的价值 (IPCC, 2007)。
 
 生物物理与社会经济模型的整合标志着理解气候变化对农业影响多方面性质的重大进步。通过将生物物理模型（如作物模型、水文模型）与社会经济模型（如经济模型、土地利用模型）相结合，研究人员可以探索气候、农业生产力和社会经济因素之间的动态反馈和相互作用。综合评估模型（`IAMs`）是综合框架，将气候、农业和经济模型结合起来。它们分析气候变化对农业生产力、粮食价格和全球贸易的潜在后果。它们有助于在各种情景下评估适应和减缓策略 (Nikas et al., 2019)。社会-生态系统建模采取整体方法，考虑社会、经济和生态维度。社会-生态系统建模有助于揭示人类社会与农业生态系统之间复杂的相互依存关系，促进对气候变化对生计和粮食安全影响的更深入理解 (Groot & Rossing, 2011)。
-
-
-
-
 
 不确定性是气候变化预测和计算建模固有的一个方面。不确定性和敏感性分析技术有助于评估模型结果的稳健性和可靠性，从而提高决策者和政策制定者对建模结果的可信度。蒙特卡洛模拟涉及使用不同的输入参数创建多次模型运行，以捕捉可能结果的范围并量化不确定性。这些模拟提供了概率性预测，反映了与气候变化影响相关的不确定性。敏感性分析研究模型输入的变化如何影响输出，使研究人员能够识别最有效的参数并提高模型精度。这一过程有助于理解不确定性的关键驱动因素并改进关键模型组件（Macdonald, 2002）。
 
@@ -1918,9 +1812,12 @@ Purcell 等人对农业中数字孪生的当前研究进行了综述，重点关
 
 虽然农业在温室气体排放中发挥着主要作用，但它也具有碳捕获和助力气候变化减缓的潜力（Lynch et al., 2021）。计算模型有助于量化不同农业实践的碳足迹，从而识别低碳和气候智能型农业技术。
 
-*   • *Life Cycle Assessment (LCA)*：LCA 模型跟踪农业产品整个生命周期从生产到消费相关的碳排放和固碳。因此，它们有助于识别排放热点并支持降低农业供应链碳强度的努力（Adler et al., 2007）。
-*   • *Carbon Farming Applications*：计算模型有助于评估碳农业实践如农林复合经营、覆盖作物和土壤固碳的潜力，以减少温室气体（GHG）排放并提高农业系统的韧性（Dumbrell et al., 2016）。
-*   • *Policy Support for Climate-Smart Agriculture (CSA)*：衡量农业实践的碳足迹为政策制定者提供了制定激励措施和财务机制的证据，以鼓励采用气候智能型农业实践（Chandra et al., 2018）。
+*   **Life Cycle Assessment (LCA)**：`LCA` 模型跟踪农业产品整个生命周期从生产到消费相关的碳排放和固碳。因此，它们有助于识别排放热点并支持降低农业供应链碳强度的努力（Adler et al., 2007）。
+*   **Carbon Farming Applications**：计算模型有助于评估碳农业实践如农林复合经营、覆盖作物和土壤固碳的潜力，以减少温室气体（`GHG`）排放并提高农业系统的韧性（Dumbrell et al., 2016）。
+
+
+
+*   **Policy Support for Climate-Smart Agriculture (CSA)**：衡量农业实践的碳足迹为政策制定者提供了制定激励措施和财务机制的证据，以鼓励采用气候智能型农业实践（Chandra et al., 2018）。
 
 CSA 策略旨在提高农业生产力、韧性和可持续性，同时减少温室气体排放。计算模型在指导 CSA 计划的制定和支持制定促进农业部门气候韧性的政策方面发挥着重要作用。它们还有助于通过评估其对作物产量、农民收入和环境可持续性的潜在影响来优先考虑对 CSA 实践的投资。通过整合气候、作物和经济模型，研究人员和政策制定者可以评估不同 CSA 实践之间的协同效应和权衡。这种方法确保政策全面、可持续并与更广泛的发展目标保持一致。通过帮助建立 CSA 倡议的监测和评估框架，它能够持续评估进展并随着新数据和见解的出现而适应性地管理政策。
 
@@ -1930,17 +1827,13 @@ CSA 策略旨在提高农业生产力、韧性和可持续性，同时减少温�
 
 数据是任何计算模型的基础，其可用性和质量对于准确可靠的预测至关重要。在农业和气候变化的背景下会出现几个挑战。例如，气候和农业数据可能并不总是以计算模型所需的空间和时间分辨率可用。获取精细尺度数据可能困难且资源密集，尤其是在区域和地方研究中。在某些地区，历史气候数据可能缺失或农业数据有限，阻碍了全面模型的开发。缺失或不完整的数据可能导致模型结果偏差和预测不确定性。此外，温度和降水等气候数据通常包含固有不确定性。农业数据，包括产量记录和土地利用信息，其质量和准确性可能存在差异。
 
-
-
-
-
 农业与气候变化涵盖了大量相互关联的因素，使得开发全面的计算模型具有挑战性。气候变量、土壤特性、作物生理以及社会经济因素之间的相互作用发生在不同的空间和时间尺度上。在模型中捕捉这些多尺度相互作用需要复杂的算法和大量的计算资源。农业与其他部门如能源、水和土地利用相关。将这些跨部门联系整合到模型中需要跨不同学科和数据集的协调。气候变化本质上是不确定的，未来情景取决于各种社会经济和政策因素。将这些不确定性整合到模型中并准确预测未来的气候条件构成了重大挑战。
 
 确保计算模型的准确性和可靠性需要严格的校准和验证过程：
 
-*   • *参数化*：模型通常依赖于经验数据和假设进行参数化，这可能导致偏差和不确定性。用观测数据校准模型参数至关重要，但该过程复杂且耗时。
-*   • *模型验证*：将模型输出与现实世界观测进行验证对于评估其准确性至关重要。然而，由于数据可用性有限或模型结果与实际测量之间存在差异，验证是困难的。
-*   • *模型复杂性*：随着模型变得更加复杂并涉及更多过程和相互作用，校准和验证变得更加复杂，需要专业知识和资源。
+*   **参数化**：模型通常依赖于经验数据和假设进行参数化，这可能导致偏差和不确定性。用观测数据校准模型参数至关重要，但该过程复杂且耗时。
+*   **模型验证**：将模型输出与现实世界观测进行验证对于评估其准确性至关重要。然而，由于数据可用性有限或模型结果与实际测量之间存在差异，验证是困难的。
+*   **模型复杂性**：随着模型变得更加复杂并涉及更多过程和相互作用，校准和验证变得更加复杂，需要专业知识和资源。
 
 在农业和气候变化研究中使用计算建模引发了伦理和社会方面的考虑。CSA 实践的采用可能对不同的农业社区和社会群体产生不同的影响。模型应设计为评估潜在的公平性和分配后果。模型可以影响政策决策和资源分配。确保模型透明且可访问并反映不同利益相关者的观点，对于包容和公平的决策过程至关重要。用于建模目的的数据收集和使用引发了关于数据隐私和所有权的问题。保护敏感数据、确保同意和数据保护是关键的伦理考虑。
 
@@ -1962,83 +1855,68 @@ CSA 策略旨在提高农业生产力、韧性和可持续性，同时减少温�
 
 计算建模研究的研究成果有可能对全球农业和气候变化减缓工作产生深远影响。这些发现可以为政策制定者、农业利益相关者和国际组织提供信息，推动气候智能型实践的采用、改善粮食安全并支持农村生计。计算建模的未来方向指向模型准确性的持续改进、各种利益相关者之间更深入的合作以及先进技术在数据驱动洞察方面的战略性使用。随着模型变得更加复杂并涵盖气候和农业的更广泛方面，其在塑造可持续政策和实践方面的适用性将增加。
 
-
-
-
-
 面对气候变化，应对其对农业的影响需要紧急而协调一致的行动。计算建模为理解和应对这一关键关系提供了一套有价值的工具。政府、机构和组织应优先为聚焦气候-农业相互作用的计算建模研究提供研究资金，并促进更准确、更全面的模型的发展。研究人员、政策制定者、农民和社区应密切合作，共同设计气候适应策略，确保模型反映当地现实并优先考虑公平和包容性的方法。计算模型的研究见解应转化为可操作的政策，决策支持系统可协助政策制定者实施气候适应型农业实践。利用大数据、人工智能和其他新兴技术将推动计算建模的创新，并彻底改变其在农业和气候变化研究中的应用。民间社会、非政府组织和倡导团体在提高人们对气候变化对农业影响的认识并促进可持续农业实践方面发挥着至关重要的作用。通过共同采取这些行动，社会的各个部门都可以建设一个农业能够抵御气候变化、全球粮食安全得到保护以及农村社区在环境挑战面前蓬勃发展的未来。
 
 ## 参考文献
 
 * Abramowitz et al., 2019 Abramowitz G, Herger N, Gutmann ED, et al. Model dependence in multi-model climate ensembles: Weighting, sub-selection and out-of-sample testing. *Earth System Dynamics*. 2019;10:91–105.
-
 * Adler et al., 2007 Adler PR, Grosso SJD, Parton WJ. Life-cycle assessment of net greenhouse-gas flux for bioenergy cropping systems. *Ecological Applications*. 2007;17(3):675–691.
-
 * Akalin, 2014 Akalin M. Impacts of climate change on agriculture: Adaptation and mitigation strategies to address these impacts. *Hitit University Journal of Institute of Social Sciences*. 2014;7(2):351–377.
-
 * Bilen et al., 2022 Bilen C, El Chami D, Mereu V, Trabucco A, Marras S, Spano D. A systematic review on the impacts of climate change on coffee agrosystems. *Plants*. 2022;12(1):102.
-
 * Böhringer and Löschel, 2006 Böhringer C, Löschel A. Computable general equilibrium models for sustainability impact assessment: Status quo and prospects. *Ecological Economics*. 2006;60(1):49–64.
-
 * Boote et al., 2016 Boote KJ, Jones JW, Tollenaar M, Dzotsi KA, Vara Prasad PV, Lizaso JI. *Testing approaches and components in physiologically based crop models for sensitivity to climatic factors*. *Improving modeling tools to assess climate change effects on crop response*. Vol. 7 ASA, CSSA, SSSA 2016;1–31.
-
 * Bosello and Zhang, 2005 Bosello, F., & Zhang, J. (2005). *Assessing climate change impacts: agriculture*. FEEM Working Paper No. 94.05, CMCC Research Paper No. 2. <https://doi.org/10.2139/ssrn.771245>.
-
 * Bouwer and Aerts, 2006 Bouwer LM, Aerts JC. Financing climate change adaptation. *Disasters*. 2006;30(1):49–63.
-
 * Chandra et al., 2018 Chandra A, McNamara KE, Dargusch P. Climate-smart agriculture: Perspectives and framings. *Climate Policy*. 2018;18(4):526–541.
-
 * Chokkavarapu and Mandla, 2019 Chokkavarapu N, Mandla VR. Comparative study of GCMs, RCMs, downscaling and hydrological models: A review toward future climate change impact estimation. *SN Applied Sciences*. 2019;1(12):1698.
-
 * Dumbrell et al., 2016 Dumbrell NP, Kragt ME, Gibson FL. What carbon farming activities are farmers likely to adopt? A best–worst scaling survey. *Land Use Policy*. 2016;54:29–37.
-
 * FAO, 2021 FAO. (2021). *The impact of disasters and crises on agriculture and food security: 2021*. Rome. <https://doi.org/10.4060/cb3673en>.
-
 * Gebbers and Adamchuk, 2010 Gebbers R, Adamchuk VI. Precision agriculture and food security. *Science*. 2010;327(5967):828–831.
-
 * Groot and Rossing, 2011 Groot JC, Rossing WA. Model-aided learning for adaptive management of natural resources: An evolutionary design perspective. *Methods in Ecology and Evolution*. 2011;2(6):643–650.
-
-* Gürbüz, 2019 Gürbüz İ H. Performance evaluation in irrigation systems. *Bahri Dağdaş Crop Research Journal*. 2019;8(1):195–215.
-
+* Gürbüz, 2019 Gürbüz İ H. Performance evaluation in irrigation systems. *Bahri Dağdaş Crop Research Journal*. 2019;8(1):195–215.
 * Helfer et al., 2020 Helfer GA, Barbosa JLV, dos Santos R, da Costa AB. A computational model for soil fertility prediction in ubiquitous agriculture. *Computers and Electronics in Agriculture*. 2020;175:105602.
-
 * IPCC, 2007 IPCC. (2007). <https://archive.ipcc.ch/publications_and_data/ar4/wg1/en/ch11s11-10-1-3.html> Accessed 25.07.23.
-
 * Jarvis et al., 2010 Jarvis A, Ramirez J, Anderson B, Leibing C, Aggarwal P. *Scenarios of climate change within the context of agriculture*. *Climate change and crop production* Wallingford: CABI; 2010;9–37.
-
 * Jones et al., 1998 Jones JW, Tsuji GY, Hoogenboom G, et al. *Decision support system for agrotechnology transfer: DSSAT v3*. *Understanding options for agricultural production* Springer 1998;157–177.
-
 * Keating et al., 2003 Keating BA, Carberry PS, Hammer GL, et al. An overview of APSIM, a model designed for farming systems simulation. *European Journal of Agronomy*. 2003;18(3–4):267–288.
-
 * Kelly et al., 2013 Kelly D, Geldenhuis A, James A, et al. Of mast and mean: Differential-temperature cue makes mast seeding insensitive to climate change. *Ecology Letters*. 2013;16(1):90–98.
-
 * Kompas et al., 2018 Kompas T, Pham VH, Che TN. The effects of climate change on GDP by country and the global economic gains from complying with the Paris climate accord. *Earth’s Future*. 2018;6(8):1153–1173.
-
 * Kotamarthi et al., 2021 Kotamarthi R, Hayhoe K, Wuebbles D, Mearns LO, Jacobs J, Jurado J. *Downscaling techniques for high-resolution climate projections: From global change to local impacts* Cambridge University Press 2021;.
-
 * Kumar et al., 2015 Kumar, S., Shamim, M., Bansal, M., Gangwar, B., & Aggarwal, R.P. (2015). Computational modeling and emerging trend in agriculture. In *2nd international conference on computing for sustainable global development* (INDIACom) (pp. 1156–1160). IEEE.
+
+
 
 * Lynch et al., 2021 Lynch J, Cain M, Frame D, Pierrehumbert R. Agriculture’s contribution to climate change and role in mitigation is distinct from predominantly fossil CO[2]-emitting sectors. *Frontiers in Sustainable Food Systems*. 2021;4:518039.
 
+* Macdonald, 2002 Macdonald, I.A. (2002). *量化建筑模拟中不确定性的影响* [Doctoral dissertation, University of Strathclyde]。
 
+* Manevska-Tasevska et al., 2023 Manevska-Tasevska G, Duangbootsee U, Bimbilovski I, Thathong P, Ha TM. 气候适应型农业政策建议的系统性范围综述和内容分析. *Climate Policy*. 2023;23:1271–1287。
 
+* Meyers and Hollinger, 2004 Meyers TP, Hollinger SE. 玉米和大豆地表能量平衡中储存项的评估. *Agricultural and Forest Meteorology*. 2004;125(1–2):105–115。
 
+* Nikas et al., 2019 Nikas A, Doukas H, Papandreou A. *气候经济模型的详细概述和一致分类*. *Understanding risks and uncertainties in energy and climate policy: Multidisciplinary methods and tools for a low carbon society*. Springer 2019;1–54。
 
-*   Macdonald, 2002 Macdonald, I.A. (2002). *量化建筑模拟中不确定性的影响* \[Doctoral dissertation, University of Strathclyde\]。
-*   Manevska-Tasevska et al., 2023 Manevska-Tasevska G, Duangbootsee U, Bimbilovski I, Thathong P, Ha TM. 气候适应型农业政策建议的系统性范围综述和内容分析. *Climate Policy*. 2023;23:1271–1287。
-*   Meyers and Hollinger, 2004 Meyers TP, Hollinger SE. 玉米和大豆地表能量平衡中储存项的评估. *Agricultural and Forest Meteorology*. 2004;125(1–2):105–115。
-*   Nikas et al., 2019 Nikas A, Doukas H, Papandreou A. *气候经济模型的详细概述和一致分类*.  *Understanding risks and uncertainties in energy and climate policy: Multidisciplinary methods and tools for a low carbon society*. Springer 2019;1–54。
-*   O’Brien et al., 2018 O’Brien GC, Dickens C, Hines E, et al. 环境流评估的区域尺度生态风险框架. *Hydrology and Earth System Sciences*. 2018;22(2):957–975。
-*   Pal et al., 2007 Pal JS, Giorgi F, Bi X, et al. 为发展中国家进行区域气候建模：ICTP RegCM3 和 RegCNET. *Bulletin of the American Meteorological Society*. 2007;88(9):1395–1410。
-*   Purcell et al., 2023 Purcell W, Neubauer T, Mallinger K. 农业中的数字孪生：环境可持续性的挑战与机遇. *Current Opinion in Environmental Sustainability*. 2023;61:101252。
-*   Quandt et al., 2023 Quandt A, Neufeldt H, Gorman K. 通过农林复合经营实现气候变化适应：机遇与差距. *Current Opinion in Environmental Sustainability*. 2023;60:101244。
-*   Ramirez-Villegas et al., 2013 Ramirez-Villegas J, Challinor AJ, Thornton PK, Jarvis A. 全球气候模式区域改进对农业影响研究的意义. *Environmental Research Letters*. 2013;8(2):024018。
-*   Rauff and Bello, 2015 Rauff KO, Bello R. 作物生长模拟模型作为农业气象工具的综述. *Agricultural Sciences*. 2015;6:1098–1105。
-*   Raza et al., 2019 Raza A, Razzaq A, Mehmood S, et al. 气候变化对作物适应性的影响及应对其后果的策略：综述. *Plants*. 2019;8(2):34 [`doi.org/10.3390/plants8020034`](https://doi.org/10.3390/plants8020034)。
-*   Rosenzweig et al., 2013 Rosenzweig C, Jones JW, Hatfield JL, et al. 农业模型互比与改进项目（AgMIP）：协议和试点研究. *Agricultural and Forest Meteorology*. 2013;170:166–182。
-*   Tsuji et al., 1998 Tsuji GY, Hoogenboom G, Thornton PK, eds. *理解农业生产的选择*. Vol. 7. Springer Science & Business Media 1998;。
-*   Tumbo et al., 2010 Tumbo SD, Mpeta E, Tadross M, Kahimba FC, Mbillinyi BP, Mahoo HF. 应用自组织映射技术对坦桑尼亚 Same 的 GCMs 气候变化预测进行降尺度. *Physics and Chemistry of the Earth, Parts A/B/C*. 2010;35(13–14):608–617。
-*   Varotto et al., 2020 Varotto S, Tani E, Abraham E, et al. 表观遗传学：气候智能型作物育种的可能应用. *Journal of Experimental Botany*. 2020;71(17):5223–5236。
+* O’Brien et al., 2018 O’Brien GC, Dickens C, Hines E, et al. 环境流评估的区域尺度生态风险框架. *Hydrology and Earth System Sciences*. 2018;22(2):957–975。
+
+* Pal et al., 2007 Pal JS, Giorgi F, Bi X, et al. 为发展中国家进行区域气候建模：ICTP RegCM3 和 RegCNET. *Bulletin of the American Meteorological Society*. 2007;88(9):1395–1410。
+
+* Purcell et al., 2023 Purcell W, Neubauer T, Mallinger K. 农业中的数字孪生：环境可持续性的挑战与机遇. *Current Opinion in Environmental Sustainability*. 2023;61:101252。
+
+* Quandt et al., 2023 Quandt A, Neufeldt H, Gorman K. 通过农林复合经营实现气候变化适应：机遇与差距. *Current Opinion in Environmental Sustainability*. 2023;60:101244。
+
+* Ramirez-Villegas et al., 2013 Ramirez-Villegas J, Challinor AJ, Thornton PK, Jarvis A. 全球气候模式区域改进对农业影响研究的意义. *Environmental Research Letters*. 2013;8(2):024018。
+
+* Rauff and Bello, 2015 Rauff KO, Bello R. 作物生长模拟模型作为农业气象工具的综述. *Agricultural Sciences*. 2015;6:1098–1105。
+
+* Raza et al., 2019 Raza A, Razzaq A, Mehmood S, et al. 气候变化对作物适应性的影响及应对其后果的策略：综述. *Plants*. 2019;8(2):34 [`doi.org/10.3390/plants8020034`](https://doi.org/10.3390/plants8020034)。
+
+* Rosenzweig et al., 2013 Rosenzweig C, Jones JW, Hatfield JL, et al. 农业模型互比与改进项目（AgMIP）：协议和试点研究. *Agricultural and Forest Meteorology*. 2013;170:166–182。
+
+* Tsuji et al., 1998 Tsuji GY, Hoogenboom G, Thornton PK, eds. *理解农业生产的选择*. Vol. 7. Springer Science & Business Media 1998;。
+
+* Tumbo et al., 2010 Tumbo SD, Mpeta E, Tadross M, Kahimba FC, Mbillinyi BP, Mahoo HF. 应用自组织映射技术对坦桑尼亚 Same 的 GCMs 气候变化预测进行降尺度. *Physics and Chemistry of the Earth, Parts A/B/C*. 2010;35(13–14):608–617。
+
+* Varotto et al., 2020 Varotto S, Tani E, Abraham E, et al. 表观遗传学：气候智能型作物育种的可能应用. *Journal of Experimental Botany*. 2020;71(17):5223–5236。
 
 ## PM2.5 的能量为更好的气候服务：可持续发展的案例
 
@@ -2048,7 +1926,7 @@ Prisilla Jayanthi Gandam^(1) and Utku Kose^(2,) ^(3), ¹CMR Institute of Technol
 
 摘要
 
-气候变化显著导致空气污染，影响人类健康和生计。本研究对安得拉邦、德里和拉贾斯坦邦三个州的空气污染进行了研究，实施了 GLM 回归模型。模型结果显示非常有前景。*z*\-score 值被发现为 PM2.5（0.20），95% 置信区间（CI）（-0.4414 至 0.5406）为维沙卡帕特南（V），而内鲁那加尔（NN）PM2.5 为（5.31），CI 为（0.3279–0.7109），沙斯特里那加尔（SN）PM2.5 为（0.10），CI 为（-0.5077 至 0.5608）。此外，GLM 模型在雨季数据中观察到最小的 AIC 和 BIC，其中 V 的 AIC 为（6.5737），NN 为（6.9374），SN 为（6.4447）；同样，V 的 BIC 为（-88.9989），NN 为（-61.1624），SN 为（-65.1675）是一个更好的模型。模型被证明是统计学上显著的拟合。PM2.5 对人类健康极其有害且具有致癌性，会导致癌症和其他呼吸系统问题。为了减少污染物排放，实现零废物和零碳，废物能源技术找到了捕获 PM2.5 碳纳米颗粒并将其用作超级电容器电极的解决方案。
+气候变化显著导致空气污染，影响人类健康和生计。本研究对安得拉邦、德里和拉贾斯坦邦三个州的空气污染进行了研究，实施了 `GLM` 回归模型。模型结果显示非常有前景。`z`-score 值被发现为 PM2.5（0.20），95% 置信区间（CI）（-0.4414 至 0.5406）为维沙卡帕特南（V），而内鲁那加尔（NN）PM2.5 为（5.31），CI 为（0.3279–0.7109），沙斯特里那加尔（SN）PM2.5 为（0.10），CI 为（-0.5077 至 0.5608）。此外，`GLM` 模型在雨季数据中观察到最小的 `AIC` 和 `BIC`，其中 V 的 `AIC` 为（6.5737），NN 为（6.9374），SN 为（6.4447）；同样，V 的 `BIC` 为（-88.9989），NN 为（-61.1624），SN 为（-65.1675）是一个更好的模型。模型被证明是统计学上显著的拟合。PM2.5 对人类健康极其有害且具有致癌性，会导致癌症和其他呼吸系统问题。为了减少污染物排放，实现零废物和零碳，废物能源技术找到了捕获 PM2.5 碳纳米颗粒并将其用作超级电容器电极的解决方案。
 
 ## Keywords
 
@@ -2064,10 +1942,6 @@ Air pollution is a global concern that affects climate change (CC) and human hea
 
 空气污染是影响气候变化（CC）和人类健康的全球性问题（Manisalidis et al., 2020）。根据 WHO (2022) ([`trackingsdg7.esmap.org/`](https://trackingsdg7.esmap.org/))，由于空气污染报告了 670 万例过早死亡。空气污染相关问题不能由单一国家孤立解决；曾经的国家问题现在已成为全球关注的问题。建筑工地的污染会杀死植物并破坏农作物及其产量。这种污染在各个阶段对人类生命都有危害。工业污染污染了水和土壤的表面。改善空气质量有助于改善土壤质量、作物产量和水质，这些都与粮食安全密切相关。一些污染源包括家用燃烧设备、汽车和工业废物。这种污染可以是室内或室外环境污染，由任何扰乱大气环境的化学、物理或生物因子引起。污染物因多种因素而增加，如区域干旱、风和降水导致 CC（Iyyanki & Jayanthi, 2020）。主要空气污染物包括 CO、NH[3]、NO、NO[2]、O[3]、PM 和 SO[2]。PM2.5 的浓度在工业化和城市化迅速发展的密集人口地区达到峰值（Ji et al., 2018）。PM2.5 很容易深入肺部并损害呼吸系统（Xing et al., 2016）。PM 导致多种疾病，影响儿童（Iyyanki et al., 2018）和患有呼吸问题的老年人。PM 比任何其他导致过敏的污染物更危险。
 
-
-
-
-
 在本案例研究中，关于空气污染物的研究中，安得拉邦（AP）等州为中等州，拉贾斯坦邦（RJ）为干旱州。德里夏季炎热，冬季寒冷且降雨适中。德里是印度污染最严重的城市之一；本研究和统计比较研究之所以进行，是为了比较这三个州。在雨季，空气质量非常好，冲洗掉了大气中的污染/污染物。减少这些州的污染物可以改善并惠及该州居民。减少污染既不是一个人的工作，也不是一个州的工作；它是众多污染大气部门的协作。这些部门的贡献有助于社会，无论大小，都能发展、改善并实现净零碳。
 
 废物管理已采取多项措施，并实施了许多可能性以改善能源浪费。将废物转化为有用的能源来源有助于国家，并间接实现净零碳目标。捕获 PM2.5 碳纳米颗粒并将其用作超级电容器中的电极有助于消除或利用 PM2.5。布袋过滤器用于在 ANDRITZ 收集 PM 排放物，并利用自供电摩擦电过滤器从车辆尾气中消除 PM。
@@ -2080,11 +1954,11 @@ Figure 8–1 Anticipating living style.
 
 ## 8.2 通过颗粒物传播的污染物
 
-PM2.5 和 PM10 由排放导致全球变暖的温室气体（GHG）的活动产生。环境空气中的 PM10 水平被发现与肺功能缺陷有关（Siddique et al., 2010）。这些细颗粒会导致心脏病和肺病、肺癌、哮喘（`www.npi.gov.au/npidata/action/load/summary-result, n.d`.）和呼吸阻塞问题。由各种来源排放的细尘，归类为 PM10 和 PM2.5，列于 Table 8–1（`www.dcceew.gov.au/environment/protection/npi/substances/fact-sheets/particulate-matter-pm10-and-pm25, n.d`.）。PM2.5 是澳大利亚最令人担忧和最危险的污染物，将在下一节中讨论。
+PM2.5 和 PM10 由排放导致全球变暖的温室气体（GHG）的活动产生。环境空气中的 PM10 水平被发现与肺功能缺陷有关（Siddique et al., 2010）。这些细颗粒会导致心脏病和肺病、肺癌、哮喘（`www.npi.gov.au/npidata/action/load/summary-result, n.d.`）和呼吸阻塞问题。由各种来源排放的细尘，归类为 PM10 和 PM2.5，列于 Table 8–1（`www.dcceew.gov.au/environment/protection/npi/substances/fact-sheets/particulate-matter-pm10-and-pm25, n.d.`）。PM2.5 是澳大利亚最令人担忧和最危险的污染物，将在下一节中讨论。
 
 Table 8–1
 
-来自 PM2.5 和 PM10 的各种粉尘（`www.dcceew.gov.au/environment/protection/npi/substances/fact-sheets/particulate-matter-pm10-and-pm25, n.d`.）。
+来自 PM2.5 和 PM10 的各种粉尘（`www.dcceew.gov.au/environment/protection/npi/substances/fact-sheets/particulate-matter-pm10-and-pm25, n.d.`）。
 
 | Contaminants (each component is a dust excluding fume) || Time weighted average (TWA) units (mg/m³) |
 | --- | --- |
@@ -2114,7 +1988,7 @@ Table 8–2 表示根据 IQair 污染报告，按年份划分的 PM2.5 总工业
 
 Table 8–2
 
-PM2.5 排放更新（`www.npi.gov.au/npidata/action/load/summary-result, n.d`.）。
+PM2.5 排放更新（`www.npi.gov.au/npidata/action/load/summary-result, n.d.`）。
 
 | Year || Total industry emission (kg) |
 | --- | --- |
@@ -2127,6 +2001,8 @@ PM2.5 排放更新（`www.npi.gov.au/npidata/action/load/summary-result, n.d`.�
 
 ## 8.3 二氧化氮污染——儿童哮喘
 
+
+
 Takenoue et al. (2012) 对 NO[2] 暴露与儿童哮喘之间的关系进行了研究。氮二氧化物（NO[2]）是一种无法避免的空气污染物，也是与死亡率相关的最大空气污染物排放源。NO[2] 主要是城市污染物，与儿科健康问题相关，包括哮喘，尤其是在亚洲和非洲。在 2011 年和 2012 年，中国的 NO[2] 排放量达到峰值。在印度、中东部分地区和东欧，NO[2] 排放量有所增加（Anenberg et al., 2022）。在另一项关于 NO[2] 的案例研究中，已证明燃气烹饪会产生 NO[2] 和其他污染物，如超细颗粒。该研究还显示，生活在有燃气烹饪污染的房屋内的儿童患哮喘的风险增加 42%。尤其是儿童，接触室内 NO[2] 会增加急性呼吸道疾病和慢性呼吸道疾病的风险，降低肺功能并加重哮喘。根据 Lin et al. (2013)，儿童大部分时间都在室内度过。儿童接触室外 NO[2]、PM2.5 和黑碳（BC）会促进儿童哮喘的发展（Khreis et al., 2019）。长期接触 NO[2] 会导致严重的健康疾病。慢性暴露显著导致了较高的 COVID-19 死亡率（Ogen, 2020）。
 
 ## 8.4 一氧化碳
@@ -2135,15 +2011,11 @@ Takenoue et al. (2012) 对 NO[2] 暴露与儿童哮喘之间的关系进行了�
 
 ## 8.5 气候变化——全球变暖
 
-
-
-
-
 CC 是一个具有挑战性的全球性问题。CC 是由主要污染物排放造成的。CC 扰乱了健康的社会和环境因素——呼吸清洁空气、饮用安全水、食物和住所。BC 是细 PM 的一种成分，在 CO[2] 之后是导致全球变暖的主要贡献者之一。BC 通过吸收阳光来温暖地球大气，加速雪和冰的融化。PM2.5 浓度的增加会增加 CC，反之亦然（Park et al., 2020），从而会成为最大的全球健康威胁（Huang et al., 2021）。CC 对 PM2.5 空气质量具有更大且更显著的影响。几项研究工作已使用由一般循环模型驱动的化学传输模型研究了 CC 对 PM2.5 的影响（Amos et al., 2010）。研究证明，CC 对空气污染的影响因区域和季节而异，具体取决于 PM2.5 的成分。它包括 PM2.5 的七种成分，即铵、元素碳、硝酸盐、有机碳、硅、钠和硫酸盐（Weeberb et al., 2019）。CC 通过调节大气环流、温度和水文循环来控制 PM2.5 浓度（Park et al., 2020）。
 
 ## 8.6 广义线性模型——印度空气污染
 
-讨论了印度三个邦 AP、德里和 RJ 降雨对空气污染物影响的案例研究。空气污染物数据取自 [`app.cpcbccr.com/AQI_India/`](https://app.cpcbccr.com/AQI_India/) 并应用了机器学习算法和广义线性模型进行分析。GLM 是一种回归模型，它将 `y` 的条件期望转换为回归变量 `X` 的线性组合。链接函数 `g(.)` 是 GLM 的转换函数。
+讨论了印度三个邦 AP、德里和 RJ 降雨对空气污染物影响的案例研究。空气污染物数据取自 [`app.cpcbccr.com/AQI_India/`](https://app.cpcbccr.com/AQI_India/) 并应用了机器学习算法和广义线性模型进行分析。`GLM` 是一种回归模型，它将 `y` 的条件期望转换为回归变量 `X` 的线性组合。链接函数 `g(.)` 是 `GLM` 的转换函数。
 
 ```
 g\left( \pi_{i} \right) = \sum\limits_{j = 0}^{p}{\beta_{j}.}x_{\mathit{ij}}
@@ -2157,15 +2029,17 @@ g\left( \pi_{i} \right) = \sum\limits_{j = 0}^{p}{\beta_{j}.}x_{\mathit{ij}}
 
 ![Equation](img/F000043si2.png)(8.2)
 
-数据收集于三个不同季节，即雨季（2022 年 7 月）、冬季（2022 年 11 月和 12 月）和夏季（2022 年 4 月和 5 月）。Visakhapatnam（AP）、Nehru Nagar（德里）和 Shastri Nagar（RJ）四种污染物 PM2.5、PM10、CO 和 NO[2] 的 GLM 结果分别显示在 Table 8–3 至 Tables 8–4 和 8–5。结果清楚地表明，雨季数据集的 `z` 分数值与其他数据集相比明显较低：
+数据收集于三个不同季节，即雨季（2022 年 7 月）、冬季（2022 年 11 月和 12 月）和夏季（2022 年 4 月和 5 月）。Visakhapatnam（AP）、Nehru Nagar（德里）和 Shastri Nagar（RJ）四种污染物 PM2.5、PM10、CO 和 NO[2] 的 `GLM` 结果分别显示在 Table 8–3 至 Tables 8–4 和 8–5。结果清楚地表明，雨季数据集的 `z` 分数值与其他数据集相比明显较低：
 
 1. Visakhapatnam (V) 的 PM2.5 为 0.20，95% 置信区间（CI）为（-0.4414 至 0.5406），PM10 为 9.60，CI=0.7728–1.1644，CO 为 0.05，CI=-0.4869 至 0.5123，NO[2] 为 0.11，CI=-0.8367 至 0.9344。
+
 2. Nehru Nagar (NN) 的 PM2.5 为 0.5194，CI=0.3279–0.7109，PM10 为 0.6111，CI=0.2508–0.9714，CO 为 -0.1605，CI=-0.8940 至 0.5728，NO[2] 为 0.1117，CI=-0.2382 至 0.4617。
+
 3. Shastri Nagar (SN) 的 PM2.5 为 0.10，CI=-0.5077 至 0.5608，PM10 为 4.09，CI=0.4155–1.1806，CO 为 0.09，CI=-0.4743 至 0.5214，NO[2] 为 1.90，CI=-0.0188 至 1.2593。
 
 ### Table 8–3
 
-夏季数据的 GLM 模型。
+夏季数据的 `GLM` 模型。
 
 | GLM model: April and May 2022 |
 | --- |
@@ -2189,7 +2063,7 @@ g\left( \pi_{i} \right) = \sum\limits_{j = 0}^{p}{\beta_{j}.}x_{\mathit{ij}}
 
 ### Table 8–4
 
-雨季数据的 GLM 模型。
+雨季数据的 `GLM` 模型。
 
 | GLM model for July 2022 |
 | --- |
@@ -2213,7 +2087,7 @@ g\left( \pi_{i} \right) = \sum\limits_{j = 0}^{p}{\beta_{j}.}x_{\mathit{ij}}
 
 ### Table 8–5
 
-冬季数据的 GLM 模型。
+冬季数据的 `GLM` 模型。
 
 | GLM model for November and December 2022 |
 | --- |
@@ -2228,21 +2102,11 @@ g\left( \pi_{i} \right) = \sum\limits_{j = 0}^{p}{\beta_{j}.}x_{\mathit{ij}}
 | V || NO[2] || −0.0796 || 0.1687 || −0.47 || 0.637 || −0.4103 to 0.2510 |
 | NN || 1.46e-16 || 0.1919 || 0.00 || 1.000 || −0.3762 to 0.3762 |
 | SN || 0.0266 || 0.0665 || 0.40 || 0.689 || −0.1036 to 0.1568 |
-
-
-
-
-
 | `V` || `CO` || 0.2313 || 0.1605 || 1.44 || 0.150 || −0.0834 to 0.5459 |
-
 | `NN` || −1.25e-16 || 0.3744 || −0.00 || 1.000 || −0.7339 to 0.7339 |
-
 | `SN` || 0.2267 || 0.1543 || 1.47 || 0.142 || −0.7574 to 0.5291 |
-
 | `V` || `_cons` || 7.7214 || 6.3975 || 1.21 || 0.227 || −4.8176 to 20.2604 |
-
 | `NN` || −8.18e-14 || 20.1582 || −0.00 || 1.000 || −39.5095 to 39.5095 |
-
 | `SN` ||   || 9.7643 || 7.2937 || 1.34 || 0.181 || −4.5311 to 24.0597 |
 
 表 8–6 至 表 8–8 表示使用夏季（2022 年 4 月和 5 月）、雨季（2022 年 7 月）和冬季（2022 年 11 月和 12 月）数据的 `GLM` 模型得到的赤池信息准则（`AIC`）和贝叶斯信息准则（`BIC`）读数。`AIC` 和 `BIC` 的值用于比较回归模型。`AIC` 和 `BIC` 值越低，模型拟合越好。让我们理解这些值提供了什么。`AIC` 给出了常数的评估以及似然函数在未知真实（数据）与模型拟合之间的相对距离，而 `BIC` 则提供了模型为真时的后验概率评估。`GLM` 回归模型在雨季数据上的 `AIC` 和 `BIC` 相对于其他数据模型而言相对较小。最小的 `AIC` 分别为 `V`（6.5737）、`NN`（6.9374）和 `SN`（6.4447）；同样，`V`（−88.9989）、`NN`（−61.1624）和 `SN`（−65.1675）的 `BIC` 被确定为比其他模型具有更好的拟合。在 表 8–6 至 表 8–8 中，方差函数（`Var.`）和链接函数（`Lin.`）分别表示为 *V*(*u*)=*u* 和 *g*(*u*)=*u*。
@@ -2251,65 +2115,47 @@ g\left( \pi_{i} \right) = \sum\limits_{j = 0}^{p}{\beta_{j}.}x_{\mathit{ij}}
 
 `GLM` 模型—夏季数据。
 
-| `GLM`: 2022 年 4 月和 5 月  |
-
+| `GLM`: 2022 年 4 月和 5 月 |
 | --- |
-
 | `GLM` 优化: `ML` || 尺度参数=1 || `Var.` \[poisson\] || `Lin.` |
-
 | 位置 || 对数似然 || 残差 df || 偏差 || Pearson || (1/df) Dev. || (1/df) Pear. || `AIC` || `BIC` |
-
 | `V` || −180.0331 || 53 || 0.1045 || 0.1051 || 0.0019 || 0.0019 || 6.3804 || −215.099 |
-
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-
 | `NN` || −229.6696 || 44 || 103.9804 || 103.6166 || 2.3632 || 2.3549 || 9.5783 || −67.2596 |
-
 | `SN` || −243.1849 || 51 || 95.6810 || 101.7525 || 1.8761 || 1.9951 || 8.8637 || −109.6119 |
 
 ### 表 8–7
 
 `GLM` 模型—雨季数据。
 
-| `GLM`: 2022 年 7 月  |
-
+| `GLM`: 2022 年 7 月 |
 | --- |
-
 | `GLM` 优化: `ML` || 尺度参数=1 || `Var.` \[poisson\] || `Lin.` |
-
 | 位置 || 对数似然 || 残差 df || 偏差 || Pearson || (1/df) Dev. || (1/df) Pear. || `AIC` || `BIC` |
-
 | `V` || −96.8932 || 26 || 0.2846 || 0.2876 || 0.0109 || 0.0111 || 6.5737 || −88.9989 |
-
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-
 | `NN` || −88.6556 || 22 || 11.3459 || 11.2233 || 0.5157 || 0.5101 || 6.9374 || −61.1624 |
-
 | `SN` || −78.7813 || 21 || 3.2524 || 3.2757 || 0.1548 || 0.1559 || 6.4447 || −65.1675 |
 
 ### 表 8–8
 
 `GLM` 模型—冬季数据。
 
-| `GLM`: 2022 年 11 月和 12 月  |
-
+| `GLM`: 2022 年 11 月和 12 月 |
 | --- |
-
 | `GLM` 优化: `ML` || 尺度参数=1 || `Var.` \[poisson\] || `Lin.` |
-
 | 位置 || 对数似然 || 残差 df || 偏差 || Pearson || (1/df) Dev. || (1/df) Pear. || `AIC` || `BIC` |
 
-| `V` || −225.0508 || 56 || 30.7572 || 30.9748 || 0.5492 || 0.5531 || 7.5426 || −199.4518 |
 
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-| `NN` || −231.2829 || 55 || 6.84341e-13 || 3.13605e-28 || 1.24e-14 || 5.70e-30 || 7.8761 || −225.189 |
-
-| `SN` || −216.4147 || 56 || 20.1562 || 20.3172 || 0.3599 || 0.3628 || 7.2594 || −210.0527 |
+| `V` | | −225.0508 | 56 | 30.7572 | 30.9748 | 0.5492 | 0.5531 | 7.5426 | −199.4518 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `NN` | | −231.2829 | 55 | 6.84341e-13 | 3.13605e-28 | 1.24e-14 | 5.70e-30 | 7.8761 | −225.189 |
+| `SN` | | −216.4147 | 56 | 20.1562 | 20.3172 | 0.3599 | 0.3628 | 7.2594 | −210.0527 |
 
 ## 8.6.1 维沙卡帕特南空气污染物的小时趋势
 
-维沙卡帕特南和沙斯特里那加尔的小时数据是在 2022 年 4 月、7 月、12 月和 2023 年 1 月的连续六天收集的。趋势清楚地显示雨季污染较低（Jayanthi & Muralikrishna, 2022）。*x*\-轴和 *y*\-轴分别表示小时数和污染物数量。
+维沙卡帕特南和沙斯特里那加尔的小时数据是在 2022 年 4 月、7 月、12 月和 2023 年 1 月的连续六天收集的。趋势清楚地显示雨季污染较低（Jayanthi & Muralikrishna, 2022）。`x`轴和 `y`轴分别表示小时数和污染物数量。
 
 在收集用于测量空气质量指数（`AQI`）的数据中，存在多个自变量（月度图表），例如 `PM2.5`、`PM10`、`CO`、`NO[2]`，以及一个因变量（`AQI`）；因此，这被称为多元时间序列。在多元时间序列中，趋势图具有一个以上的时间序列变量。每个变量不依赖于其历史数据，而是依赖于其他变量。
 
@@ -2335,10 +2181,6 @@ Z2 = a[2] + w[1]20 * y1 + w[1]21 * y2 + e1
 
 同样，对于单变量趋势图（小时图），单一因变量和自变量，线性回归方程如下：
 
-
-
-
-
 `a` = `m``b` + `c` (8.5)
 
 ![Equation](img/F000043si5.png)(8.5)
@@ -2350,19 +2192,19 @@ Z2 = a[2] + w[1]20 * y1 + w[1]21 * y2 + e1
 * `m` = 斜率
 * `c` = `y`-截距
 
-1. A. 四月
+### 1. A. 四月
 
 对于维沙卡帕特南，四月（Fig. 8–2A），观测时间为 2022 年 4 月 25 日至 30 日。4 月 27 日，`PM2.5` 为最低，范围为 39–42；同样，`CO` 在 4 月 29 日为最低，范围为 20–34；`NO[2]` 在 4 月 30 日为最低，范围为 38–43；`PM10` 在 4 月 28 日为 95–106。
 
-2. B. 2022 年七月
+### 2. B. 2022 年七月
 
 七月（Fig. 8–2B），读数考虑自 2022 年 7 月 20 日至 25 日。7 月 24 日，`PM2.5`（40–46）和 `NO[2]`（39–40）均被发现具有最低范围；同样，7 月 25 日，`CO`（11–23）和 `PM10`（79–87）均被发现为最低。
 
-3. C. 2022 年十二月
+### 3. C. 2022 年十二月
 
 2022 年十二月（Fig. 8–2C），观测收集自 2022 年 12 月 1 日至 6 日。12 月 2 日，`PM2.5`（114–119）和 `PM10`（110–113）均有最低值。同样，12 月 4 日，`CO`（16–45）和 `NO[2]`（30–35）的最低范围被记录。
 
-4. D. 2023 年一月
+### 4. D. 2023 年一月
 
 本月考虑的观测时间为 2023 年 1 月 1 日至 6 日（Fig. 8–2D）。1 月 3 日，`PM2.5` 在 73–93 范围内为最低；同样，`CO` 在 1 月 1 日于 19–31 范围内为最低。1 月 2 日，`NO[2]`（28–33）和 `PM10`（86–110）均处于最低值。
 
@@ -2402,19 +2244,19 @@ Figure 8–5 Monthly trends of AQI for Visakhapatnam.
 
 在小时趋势中，可以观察到 `PM10`、`PM2.5` 和 `CO` 在干旱夏季，即四月，具有高值，而在十二月和一月（冬季），`CO` 和 `NO[2]` 具有最低值（Fig. 8–6C and D）。七月具有更好的 `AQI` 值（Fig. 8–7）。
 
-1. A. 2022 年四月
+### 1. A. 2022 年四月
 
 四月（Fig. 8–6A），沙斯特里纳加尔在 4 月 26 日 `CO`（22–35）最低。同样，4 月 29 日，`PM2.5`（103–114）和 `PM10`（123–127）均被发现为最低，`NO[2]`（115–119）于 4 月 28 日。
 
-2. B. 2022 年七月
+### 2. B. 2022 年七月
 
 七月（Fig. 8–6B），最低 `CO`（31–40）于 7 月 21 日观察到。同样，7 月 22 日，`PM2.5`（36–41）和 `PM10`（42–49）于 7 月 25 日为最低，`NO[2]`（40–41）于 7 月 23 日和 24 日。
 
-3. C. 2022 年十二月
+### 3. C. 2022 年十二月
 
 十二月（Fig. 8–6C），沙斯特里纳加尔在 12 月 4 日 `PM10`（152–162）最低。同样，12 月 6 日，`PM2.5`（127–134）和 `CO`（20–53）均被发现处于最低值，`NO[2]`（39–48）于 12 月 1 日。
 
-4. D. 2023 年一月
+### 4. D. 2023 年一月
 
 一月（Fig. 8–6D），沙斯特里纳加尔在 1 月 1 日 `CO`（17–26）最低。同样，1 月 2 日，`PM2.5`（91–109）和 `PM10`（111–129）均被发现处于最低值，`NO[2]`（42–49）于 1 月 3 日。
 
@@ -2446,30 +2288,32 @@ Figure 8–9 Monthly trends of AQI for Shastri Nagar.
 
 `AQI` 值（Fig. 8–15）表示大气中空气的质量。它范围为四月（111–261）、五月（144–368）、七月（42–74）、十一月（102–261）和十二月（71–212）。
 
-
-
-
-
 ## 8.6.9 奈赫鲁纳加尔（德里）空气污染物小时变化趋势
 
 在小时变化趋势中，可以观察到 PM10、PM2.5 和 CO 在冬季月份，即 2022 年 12 月和 2023 年 1 月的值较高，而在 7 月（雨季），CO 和 NO[2] 达到最低值（Fig. 8–10），AQI 值较好（Fig. 8–12）。
 
 #### 1. A. 2022 年 4 月
+
 对于 4 月份，读数考虑了 2022 年 4 月 1 日至 6 日（Fig. 8–10A）。奈赫鲁纳加尔在 4 月 5 日 CO 最低（59–68）。同样，在 4 月 3 日，PM2.5（228–251）、NO[2]（104–119）和 PM10（184–262）均在 4 月 1 日达到最大值。
 
 #### 2. B. 2022 年 7 月
+
 在 7 月份（Fig. 8–10B），读数考虑了 7 月 8–14 日，CO 最低（18–24）出现在 7 月 8 日，PM2.5（43–50）最低出现在 7 月 14 日，而在 7 月 12 日观察到 PM2.5 最大值（125–174）。PM10（63–79）和 NO[2]（35–41）均在 7 月 10 日达到最低。
 
 #### 3. C. 2022 年 12 月
+
 为研究冬季，读数收集自 12 月 25 日至 31 日（Fig. 8–10C）。CO 最低（17–34）出现在 12 月 31 日，NO[2]（84–104）在 12 月 29 日达到最大值，而 PM2.5（413–437）和 PM10（340–359）均在 12 月 30 日达到最大值。
 
 #### 4. D. 2023 年 1 月
+
 在 1 月份（Fig. 8–10D），奈赫鲁纳加尔 CO 最低（22–41）出现在 1 月 3 日。同样，在 1 月 6 日，PM2.5（414–462）、PM10（348–445）和 NO[2]（81–94）均达到最大值。
 
 ![Figure 8–10 (A) April month air pollutant trends. (B) July month air pollutant trends. (C) December month air pollutant trends. (D) January month air pollutant trends.](img/F000043f08-10a-9780443219054.jpg)
+
 Figure 8–10 (A) April month air pollutant trends. (B) July month air pollutant trends. (C) December month air pollutant trends. (D) January month air pollutant trends.
 
 ![Figure 8–12 AQI hourly trends for Nehru Nagar.](img/F000043f08-12a-9780443219054.jpg)
+
 Figure 8–12 AQI hourly trends for Nehru Nagar.
 
 ## 8.6.10 奈赫鲁纳加尔（德里）2022 年 4 月、7 月和 12 月空气污染物月变化趋势
@@ -2477,6 +2321,7 @@ Figure 8–12 AQI hourly trends for Nehru Nagar.
 空气污染趋势（Fig. 8–11）显示 PM2.5（480）和 PM10（435）在 11 月 4 日达到峰值，CO（152）在 5 月 9 日，NO[2]（128）在 2022 年 5 月 6 日。同样，AQI（Fig. 8–12）在 11 月 4 日达到最大值（480），在 7 月 30 日达到最小值（38）。
 
 ![Figure 8–11 Monthly trends for air pollutants.](img/F000043f08-11-9780443219054.jpg)
+
 Figure 8–11 Monthly trends for air pollutants.
 
 ## 8.6.11 空气质量指数小时变化趋势：2022 年 4 月、7 月、12 月和 2023 年 1 月——奈赫鲁纳加尔
@@ -2488,6 +2333,7 @@ Figure 8–11 Monthly trends for air pollutants.
 AQI 值（Fig. 8–13）表示大气中空气的质量。其范围为 4 月（201–337）、5 月（116–321）、7 月（38–190）、11 月（256–480）和 12 月（191–455）。
 
 ![Figure 8–13 AQI monthly trends for Nehru Nagar.](img/F000043f08-13-9780443219054.jpg)
+
 Figure 8–13 AQI monthly trends for Nehru Nagar.
 
 ## 8.7 空气质量指数的需求
@@ -2495,55 +2341,52 @@ Figure 8–13 AQI monthly trends for Nehru Nagar.
 AQI 有助于人们了解当地空气质量如何影响健康。在美国，每年估计有 10 万人因空气质量差而过早死亡。在印度，估计每年死亡人数为 67 万人。每当人们呼吸空气污染物时，它们就会进入血液并导致咳嗽和眼睛发痒，加重许多呼吸问题，可能导致癌症和过早死亡。空气污染会导致呼吸系统和心血管系统疾病。因此，AQI 有助于评估和比较任何地点的短期和长期疾病。烟雾或雾霾等污染物会降低大气中的能见度。AQI 值在或低于 100 时通常为良好或令人满意（Table 8–9）。Table 8–9 表示 2019 年、2020 年、2022 年和 2023 年 4 月 15 日 PM2.5 和相应 AQI 的比较值，适用于三个不同州：AP（维沙卡帕特南）、RJ（沙斯特里纳加尔）和德里（奈赫鲁纳加尔）。从读数中可以观察到，NN 中的 PM2.5 和 AQI 正在增加，而 SN 在 2021 年最高，但对于维沙卡帕特南，AQI 和 PM 2.5 值急剧上升。该图（Fig. 8–14）表示值的变化。
 
 Table 8–9
+
 Comparison of PM2.5 versus AQI.
 
-|    || Nehru Nagar || Visakhapatnam || Shastri Nagar |
-| --- | --- | --- | --- |
-| Year || PM2.5 || AQI || PM2.5 || AQI || PM2.5 || AQI |
-| 2019 || 62 || 149 || 40 || 85 || 82 || 117 |
-| --- | --- | --- | --- | --- | --- | --- |
-| 2020 || 125 || 166 || 33 || 63 || 59 || 95 |
-| 2021 || 113 || 200 || 33 || 85 || 152 || 168 |
-| 2022 || 165 || 179 || 105 || 145 || 102 || 133 |
+
+
+## 数据表：Nehru Nagar、Visakhapatnam、Shastri Nagar 的 PM2.5 与 AQI 对比
+
+| Year | Nehru Nagar | | Visakhapatnam | | Shastri Nagar | |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| | PM2.5 | AQI | PM2.5 | AQI | PM2.5 | AQI |
+| 2019 | 62 | 149 | 40 | 85 | 82 | 117 |
+| 2020 | 125 | 166 | 33 | 63 | 59 | 95 |
+| 2021 | 113 | 200 | 33 | 85 | 152 | 168 |
+| 2022 | 165 | 179 | 105 | 145 | 102 | 133 |
 
 ![Figure 8–14 PM2.5 versus AQI for NN, SN and Visakhapatnam.](img/F000043f08-14-9780443219054.jpg)
-Figure 8–14 PM2.5 versus AQI for NN, SN and Visakhapatnam.
 
-冬季使用更多私人车辆会增加空气中的污染。此外，使用木柴和壁炉保持室内/室外温暖也会导致污染增加。冬季，空气污染在空气中停留的时间更长，且吸入速率高于夏季。而在雨季（Fig. 8–15），空气质量良好。Fig. 8–15 中的分级色块州地图由 QGIS 软件制作。由于缺乏德里州降雨数据，作者未进行绘制。这里可以一目了然地看到，2009 年降雨量很高，而在随后的几年（2019 年和 2022 年）有所下降。原因是大气中污染增加，从而导致全球变暖。此外，可以观察到雪地地区的空气质量良好。雪通过吸收空气中的污染物来减少污染物并改善大气中的空气质量。
+**Figure 8–14** PM2.5 versus AQI for NN, SN and Visakhapatnam.
+
+冬季使用更多私人车辆会增加空气中的污染。此外，使用木柴和壁炉保持室内/室外温暖也会导致污染增加。冬季，空气污染在空气中停留的时间更长，且吸入速率高于夏季。而在雨季（Fig. 8–15），空气质量良好。Fig. 8–15 中的分级色块州地图由 `QGIS` 软件制作。由于缺乏德里州降雨数据，作者未进行绘制。这里可以一目了然地看到，2009 年降雨量很高，而在随后的几年（2019 年和 2022 年）有所下降。原因是大气中污染增加，从而导致全球变暖。此外，可以观察到雪地地区的空气质量良好。雪通过吸收空气中的污染物来减少污染物并改善大气中的空气质量。
 
 ## 8.8 废物能源——PM2.5 回收
 
 今天的废物行业遍布循环经济的每个角落和每个心脏。工业 4.0 涉及不同的技术致力于废物管理，其不同阶段包括：废物产生、储存、收集、废物处置和废物处理（[ISWA \[2021–2030\], n.d](#Ch008_125-155_B9780443219054000043.xhtml#bib39).）。然而，工业 5.0 涉及 6R：识别、重新考虑、实现、减少、再利用和回收，以及物流效率设计原则。四 R——维修、减少、再利用和回收——对于思考零废物至关重要。回收是工业再利用的重要成果之一，其中涉及工艺废物；道路上空载的运输车辆属于工艺废物（Demir & Cicibaş, 2019）。
 
-
-
-
-
 Industry 5.0 旨在以人为中心，通过辅助技术的发展并推动实现环境目标（Turner 等, 2022）。CC 对废物产生有负面影响。然而，废物处理和处置可能对气候产生积极和消极影响。因此，增加废物管理活动可减少温室气体排放（Waste and Climate Change: Global trends and strategy framework. United Nations Environmental Programme Division of Technology, n.d.）。废物不是问题，而是解决方案的一部分，也是可再生能源的重要来源；其能量价值可通过焚烧和工业共燃烧等热过程加以利用。废物层级（Waste and Climate Change: Global trends and strategy framework. United Nations Environmental Programme Division of Technology, n.d.）包括废物预防、再利用、回收、废物能源化和填埋，其中会产生能源浪费（图 8–16）。本研究讨论了 PM2.5 回收。
 
 ![Figure 8–16 Waste to energy.](img/F000043f08-16-9780443219054.jpg)
 
-图 8–16 废物能源化。
+**图 8–16** 废物能源化。
 
 电子废物处置和回收活动会排放 PM（Bungadaeng 等, 2019）和多环芳烃（PAHs）（Gu 等, 2010），这些物质会暴露于工人和附近居民，导致各种疾病。根据 Zheng 等 (2016) 的研究，PM2.5 由致癌和非致癌元素以及 PAH 组成，对人类健康尤其是儿童的危害风险高于成人。电子废物的回收、排放控制以及工人的防护措施在早期阶段并不存在或未得到告知（Kwarteng 等, 2022）。
 
-ANDRITZ 布袋除尘器用于收集 PM 排放物、灰分再循环以及部分气态污染物的吸收。湿式静电除尘器用于从气流中累积亚微米颗粒和气溶胶（PM10）（Clean air for better tomorrow. Air Pollution Control, n.d.）。
+`ANDRITZ` 布袋除尘器用于收集 PM 排放物、灰分再循环以及部分气态污染物的吸收。湿式静电除尘器用于从气流中累积亚微米颗粒和气溶胶（PM10）（Clean air for better tomorrow. Air Pollution Control, n.d.）。
 
 在重型柴油车中，使用柴油颗粒过滤器，但由于成本昂贵，大多数燃料车辆或轻型汽车中并未发现颗粒过滤器。 Han 等 (2015) 提出了一种自供电摩擦电过滤器，用于利用摩擦电化效应从车辆尾气中消除 PM。摩擦电过滤器具有非常巨大的收集能力，PM2.5 的收集效率约为 ~95.5%，利用尾管的自振动。
 
 ### 8.8.1 废物到能源价值转换：用于电极的 PM2.5
 
-从柴油车上，连接空气计量 MV 便携式采样器至发动机排气口，产生并收集 PM2.5 样品。在观察研究期间，每收集一小时，PM2.5（4–5 mg）样品从空气采样器中的滤膜（PTFE）中收集（图 8–17）。然后，在 900°C 下，在 Ar（100*s**c**c**m*）<mml:math><mml:mo>(</mml:mo><mml:mn>100</mml:mn><mml:mi mathvariant="normal">sccm</mml:mi><mml:mo>)</mml:mo></mml:math>![Equation](img/F000043si6.png) 流动下退火 PM2.5 样品一小时，并依次用 5 *w**t*.%<mml:math><mml:mi mathvariant="normal">wt</mml:mi><mml:mo>.</mml:mo><mml:mo>%</mml:mo></mml:math>![Equation](img/F000043si7.png) HF、HCl（1.0*M*），<mml:math><mml:mrow><mml:mfenced close=")" open="("><mml:mrow><mml:mn>1.0</mml:mn><mml:mi mathvariant="normal">M</mml:mi></mml:mrow></mml:mfenced></mml:mrow><mml:mo>,</mml:mo></mml:math>![Equation](img/F000043si8.png) 去离子水、乙醇清洗，最后在 110°C 下整夜干燥。退火和净化后，剩余的元素主要是碳和少量 O[2] 和 N（掺杂元素）。XPS 分析了 *P**M* − *C**N**P**s*.<mml:math><mml:mi mathvariant="normal">PM</mml:mi><mml:mo>&#8722;</mml:mo><mml:mi mathvariant="normal">CNPs</mml:mi><mml:mo>.</mml:mo></mml:math>![Equation](img/F000043si9.png) 中存在的 N、O 和 C 元素的化学状态和原子比。超级电容器在 6.0M KOH 中具有出色的储能能力，比电容为 $\\left( 134.4\\frac{F}{g}{in} 6.0M{KOH} \\right)$<mml:math><mml:mo>(</mml:mo><mml:mn>134.4</mml:mn><mml:mfrac><mml:mrow><mml:mi>F</mml:mi></mml:mrow><mml:mrow><mml:mi>g</mml:mi></mml:mrow></mml:mfrac><mml:mspace width=".20em"/><mml:mi mathvariant="normal">in</mml:mi><mml:mspace width=".20em"/><mml:mn>6.0</mml:mn><mml:mi mathvariant="normal">M</mml:mi><mml:mi mathvariant="normal">KOH</mml:mi><mml:mo>)</mml:mo></mml:math>![Equation](img/F000043si10.png)，电流密度为 $\\left( 0.1\\ \\frac{A}{g} \\right)$<mml:math><mml:mo>(</mml:mo><mml:mn>0.1</mml:mn><mml:mspace width="0.25em"/><mml:mfrac><mml:mrow><mml:mi>A</mml:mi></mml:mrow><mml:mrow><mml:mi>g</mml:mi></mml:mrow></mml:mfrac><mml:mo>)</mml:mo></mml:math>![Equation](img/F000043si11.png) 时，并在 5000 次循环中表现出良好的稳定性，发现于  *P**M* − *C**N**P*<mml:math><mml:mspace width="1em"/><mml:mi mathvariant="normal">PM</mml:mi><mml:mo>&#8722;</mml:mo><mml:mi mathvariant="normal">CNP</mml:mi></mml:math>![Equation](img/F000043si12.png)。 *P**M* − *C**N**P**s*<mml:math><mml:mi mathvariant="normal">PM</mml:mi><mml:mo>&#8722;</mml:mo><mml:mi mathvariant="normal">CNPs</mml:mi></mml:math>![Equation](img/F000043si13.png) 具有独特的结构和组成，是超级电容器的优异电极材料。最后，总体结果证明了从 PM2.5 气溶胶中回收高性能碳材料的有效策略的开发。因此， *P**M* − *C**N**P**s*<mml:math><mml:mi mathvariant="normal">PM</mml:mi><mml:mo>&#8722;</mml:mo><mml:mi mathvariant="normal">CNPs</mml:mi></mml:math>![Equation](img/F000043si14.png) 提供了一种创新的电极材料，在能量转换和储存方面具有更大的可能性，结合了更高的渗透性、电化学活性和稳定性（Zhu 等, 2017）。
+从柴油车上，连接空气计量 MV 便携式采样器至发动机排气口，产生并收集 PM2.5 样品。在观察研究期间，每收集一小时，PM2.5（4–5 mg）样品从空气采样器中的滤膜（PTFE）中收集（图 8–17）。然后，在 900°C 下，在 `Ar (100 sccm)` 流动下退火 PM2.5 样品一小时，并依次用 `5 wt.% HF`、`HCl (1.0 M)`、去离子水、乙醇清洗，最后在 110°C 下整夜干燥。退火和净化后，剩余的元素主要是碳和少量 `O2` 和 `N`（掺杂元素）。`XPS` 分析了 `PM−CNPs` 中存在的 `N`、`O` 和 `C` 元素的化学状态和原子比。超级电容器在 6.0M KOH 中具有出色的储能能力，比电容为 `134.4 F/g in 6.0M KOH`，电流密度为 `0.1 A/g` 时，并在 5000 次循环中表现出良好的稳定性，发现于 `PM−CNP`。 `PM−CNPs` 具有独特的结构和组成，是超级电容器的优异电极材料。最后，总体结果证明了从 PM2.5 气溶胶中回收高性能碳材料的有效策略的开发。因此， `PM−CNPs` 提供了一种创新的电极材料，在能量转换和储存方面具有更大的可能性，结合了更高的渗透性、电化学活性和稳定性（Zhu 等, 2017）。
 
 ![Figure 8–17 PM2.5 for supercapacitors (Zhu et al., 2017).](img/F000043f08-17-9780443219054.jpg)
 
-图 8–17 用于超级电容器的 PM2.5（Zhu 等, 2017）。
+**图 8–17** 用于超级电容器的 PM2.5（Zhu 等, 2017）。
 
 ## 8.9 纳米技术助力废物能源化
-
-
-
-
 
 环境可持续性关注的是全球 CC 和污染，无论是水、土壤还是空气。本章研究重点关注空气污染物，即 PM2.5，以及它对人类健康的影响（Sun, 2019）。让我们更详细地讨论如何利用技术解决方案解决环境污染。其中一种解决方案是创新的纳米技术，它能够检测、感知和处理空气中的污染浓度。世界面临的最大污染是含有有机和无机化合物的环境污染。空气、水和土壤主要受到工业化革命产生的大量危险废物的污染。纳米材料是出色的吸附剂、催化剂和传感器。此外，纳米材料具有独特的物理化学、表面和光电特性，可解决常规技术无法处理的难题。当人们吸入、摄入或吸收环境污染时，它对人类是有害的（Mohamed, 2017）。
 
@@ -2551,7 +2394,7 @@ ANDRITZ 布袋除尘器用于收集 PM 排放物、灰分再循环以及部分�
 
 塑料的低成本和耐用性占据了人类生活的主要地位，无论是日常家居用品、工业包装材料、医院等。塑料不会发生生物降解，而是形成微塑料进入海洋，造成水污染并间接造成空气和环境污染。水散发出恶臭并扩散到空气中，污染附近的居民区。这些微塑料存在于饮用水、食用盐和其他食品产品中（进入活鱼），对人类生命造成危害。纳米添加剂的使用改善了回收材料的机械和光学性能，并开发了用于塑料解聚的纳米催化剂。纳米颗粒作为塑料解聚的催化剂。
 
-纳米添加剂分为两类：有机和无机材料。有机材料由碳衍生组分组成，如石墨烯、碳纳米管（CNT）和纳米纤维素。然而，在无机纳米添加剂中，金属氧化物材料，即 ZnO、TiO[2] 和 SiO[2] 纳米颗粒，存在于聚对苯二甲酸乙二醇酯和聚丙烯的回收中，作为无机纳米增强材料以改善机械性能（Distaso, 2020）。因此，这些纳米颗粒有助于更好地回收塑料，减少温室气体排放，从而减少环境污染，并总体上节约能源。在这里，废物被重新利用以节约能源。
+纳米添加剂分为两类：有机和无机材料。有机材料由碳衍生组分组成，如 `石墨烯`、`碳纳米管 (CNT)` 和 `纳米纤维素`。然而，在无机纳米添加剂中，金属氧化物材料，即 `ZnO`、`TiO2` 和 `SiO2` 纳米颗粒，存在于聚对苯二甲酸乙二醇酯和聚丙烯的回收中，作为无机纳米增强材料以改善机械性能（Distaso, 2020）。因此，这些纳米颗粒有助于更好地回收塑料，减少温室气体排放，从而减少环境污染，并总体上节约能源。在这里，废物被重新利用以节约能源。
 
 ### 8.9.2 纳米技术：空气污染的独特解决方案
 
@@ -2559,11 +2402,11 @@ ANDRITZ 布袋除尘器用于收集 PM 排放物、灰分再循环以及部分�
 
 #### 8.9.2.1 催化剂
 
-纳米结构催化剂材料具有特殊的空气污染控制应用特性。纳米球、纳米板、纳米管和纳米气凝胶存在于该催化剂材料中；它具有固有的性能，并在物理化学稳定性方面表现出色（Nasrollahzadeh et al., 2020）。某些催化剂可从工业烟囱排放口去除挥发性有机化合物，从而污染环境。该催化剂被称为纳米纤维催化剂，由氧化锰制成。昆士兰大学的研究人员用一种名为 CNT 的纳米材料进行了实验，用于收集采矿煤炭和发电造成的温室气体排放。这种 CNT 比其他技术快 100 倍地捕获气体。此外，一种磁性纳米催化剂 ((*C**H*[3])[3]−*N**H**C*−*P**d*@*F**e*[3]*O*[4])<mml:math><mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:mi mathvariant="normal">CH</mml:mi></mml:mrow><mml:mrow><mml:mn>3</mml:mn></mml:mrow></mml:msub><mml:mo>)</mml:mo></mml:mrow><mml:mrow><mml:mn>3</mml:mn></mml:mrow></mml:msub><mml:mo>&#8722;</mml:mo><mml:mi mathvariant="normal">NHC</mml:mi><mml:mo>&#8722;</mml:mo><mml:mi mathvariant="normal">Pd@</mml:mi><mml:msub><mml:mrow><mml:mi mathvariant="normal">Fe</mml:mi></mml:mrow><mml:mrow><mml:mn>3</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi mathvariant="normal">O</mml:mi></mml:mrow><mml:mrow><mml:mn>4</mml:mn></mml:mrow></mml:msub><mml:mo>)</mml:mo></mml:math>![Equation](img/F000043si15.png) 是降低有毒环境污染物的出色催化剂。在室温下，Manjunatha et al. (2021) 建议磁性纳米催化剂可减少水基溶液中的有毒 4-硝基苯酚、六价铬、亚甲基蓝和甲基橙。纳米催化剂具有更大的表面积，其目的是加速化学反应，将汽车和工业厂的有害废气蒸气转化为有用气体（Turning to Nanotechnology for Pollution Control: Applications of Nanoparticles, 2009）（[`sites.dartmouth.edu/`](https://sites.dartmouth.edu/)）。此外，通过储存氧气，纳米催化剂支持完全燃料燃烧，从而减少温室气体的排放（Chausali et al., 2023）。
+纳米结构催化剂材料具有特殊的空气污染控制应用特性。纳米球、纳米板、纳米管和纳米气凝胶存在于该催化剂材料中；它具有固有的性能，并在物理化学稳定性方面表现出色（Nasrollahzadeh et al., 2020）。某些催化剂可从工业烟囱排放口去除挥发性有机化合物，从而污染环境。该催化剂被称为纳米纤维催化剂，由氧化锰制成。昆士兰大学的研究人员用一种名为 `CNT` 的纳米材料进行了实验，用于收集采矿煤炭和发电造成的温室气体排放。这种 `CNT` 比其他技术快 100 倍地捕获气体。此外，一种磁性纳米催化剂 `((CH3)3−NHC−Pd@Fe3O4)` 是降低有毒环境污染物的出色催化剂。在室温下，Manjunatha et al. (2021) 建议磁性纳米催化剂可减少水基溶液中的有毒 4-硝基苯酚、六价铬、亚甲基蓝和甲基橙。纳米催化剂具有更大的表面积，其目的是加速化学反应，将汽车和工业厂的有害废气蒸气转化为有用气体（Turning to Nanotechnology for Pollution Control: Applications of Nanoparticles, 2009）（[`sites.dartmouth.edu/`](https://sites.dartmouth.edu/)）。此外，通过储存氧气，纳米催化剂支持完全燃料燃烧，从而减少温室气体的排放（Chausali et al., 2023）。
 
 #### 8.9.2.2 纳米传感器
 
-纳米传感器在检测有毒气体如 NO[2]、二氧化硫和硫化氢方面的效率值得称赞（Manjunatha et al., 2021）。
+纳米传感器在检测有毒气体如 `NO2`、二氧化硫和硫化氢方面的效率值得称赞（Manjunatha et al., 2021）。
 
 #### 8.9.2.3 纳米生物修复
 
@@ -2571,71 +2414,111 @@ ANDRITZ 布袋除尘器用于收集 PM 排放物、灰分再循环以及部分�
 
 ## 8.10 光电化学：二氧化碳
 
-光电化学（PEC）CO[2] 转化是一种人工光合作用方法，也是将 CO[2] 在太阳光照射下转化为选择性气态和液态产物的最佳方法。在 PEC CO[2] 转化过程中，吸热反应由电和光照射决定。同样，光生电子的能级和空穴必须高于 *H*[2]*O*/*O*[2]<mml:math><mml:msub><mml:mrow><mml:mi mathvariant="normal">H</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msub><mml:mi mathvariant="normal">O</mml:mi><mml:mo>/</mml:mo><mml:msub><mml:mrow><mml:mi mathvariant="normal">O</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msub></mml:math>![Equation](img/F000043si16.png) 的过电位，并且低于 *C**O*[2]/*H**C**O**O**H*<mml:math><mml:msub><mml:mrow><mml:mi mathvariant="normal">CO</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msub><mml:mo>/</mml:mo><mml:mi mathvariant="normal">HCOOH</mml:mi></mml:math>![Equation](img/F000043si17.png) 的过电位，才能实现可行的 CO[2] 转化。CO[2] 转化的结果由电极和电解质中材料的选择决定（Kumaravel et al., 2020）。
+
+
+# 光电化学（PEC）CO₂ 转化
+
+光电化学（PEC）CO₂ 转化是一种人工光合作用方法，也是将 CO₂ 在太阳光照射下转化为选择性气态和液态产物的最佳方法。在 PEC CO₂ 转化过程中，吸热反应由电和光照射决定。同样，光生电子的能级和空穴必须高于 H₂O/O₂ 的过电位，并且低于 CO₂/HCOOH 的过电位，才能实现可行的 CO₂ 转化。CO₂ 转化的结果由电极和电解质中材料的选择决定（Kumaravel et al., 2020）。
 
 ## 8.11 结论
-
-
-
-
 
 空气污染和 `AQI` 在三个邦 `AP`、德里和 `RJ` 中进行了研究。对数据集应用了 `GLM` 回归模型。观察到由于排放的各种因素，冬季 `PM2.5` 和 `PM10` 的 `z-score` 值高于雨季。在雨季，这些邦的空气质量要好得多。`PM2.5` 排放对人体呼吸系统构成增加的风险，会导致癌症。然而，废物能源技术证明了空气污染物，例如对人类风险很高的 `PM2.5`，可以转化为有用的能源。捕获的 `PM2.5` 可用于超级电容器的电极。
 
 ## 参考文献
 
 * Amos et al., 2010 Amos PKT, Loretta JM, Daniel JJ. 美国细颗粒物 (`PM2.5`) 与气象变量之间的相关性：对 `PM2.5` 对气候变化敏感性的影响。*Atmospheric Environment*. 2010;44(32):3976–3984.
-* Anenberg et al., 2022 Anenberg SC, Mohegh A, Goldberg DL, et al. 城市 NO[2] 浓度的长期趋势及其相关的儿科哮喘发病率估计：来自全球数据集。*Lancet Planet Health*. 2022;6(2022):e49–e58.
-* Bungadaeng et al., 2019 Bungadaeng S, Prueksasit T, Siriwong W. 与泰国布里รัม府电子废物露天焚烧活动相关的工人可吸入颗粒物吸入暴露。*Sustainable Environment Research*. 2019;29:26.
+
+* Anenberg et al., 2022 Anenberg SC, Mohegh A, Goldberg DL, et al. 城市 NO₂ 浓度的长期趋势及其相关的儿科哮喘发病率估计：来自全球数据集。*Lancet Planet Health*. 2022;6(2022):e49–e58.
+
+* Bungadaeng et al., 2019 Bungadaeng S, Prueksasit T, Siriwong W. 与泰国布里拉姆府电子废物露天焚烧活动相关的工人可吸入颗粒物吸入暴露。*Sustainable Environment Research*. 2019;29:26.
+
 * Chausali et al., 2023 Chausali N, Saxena J, Prasad R. 纳米技术作为应对气候变化环境影响的可持续方法。*Journal of Agriculture and Food Research*. 2023;12:100541.
+
 * Chen et al., 2021 Chen K, Breitner S, Wolf K, et al. 环境一氧化碳与每日死亡率：337 个城市的全球时间序列研究。*The Lancet Planetary Health*. 2021;5(4):e191–e199.
+
 * Clean air for better tomorrow. Air Pollution Control, n.d. Clean air for better tomorrow. Air Pollution Control. (n.d.). Andritz engineered success. Available at `https://www.andritz.com/`.
+
 * Demir and Cicibaş, 2019 Demir KA, Cicibaş H. *The next industrial revolution: Industry 5.0 and discussions on Industry 4.0 Industry 4.0 from the MIS perspective* Peter Lang GmbH: Internationaler Verlag der Wissenschaften; 2019;.
+
 * Distaso, 2020 Distaso M. 纳米技术对塑料材料循环经济的潜在贡献。*Acta Innovations*. 2020;37:57–66.
+
 * Gu et al., 2010 Gu Z, Feng J, Han W, et al. 中国台州电子废物拆解区 `PM2.5` 中有机物的特征。*Chemosphere*. 2010;80(7):800–806.
+
 * Haleema et al., 2022 Haleema S, Syed JZ, Ahmad FI, et al. 用于空气污染修复的纳米材料进展及其对环境的影响。*Chemosphere*. 2022;287(2):132083.
+
 * Han et al., 2015 Han CB, Jiang T, Zhang C, et al. 使用自供电摩擦过滤器去除车辆颗粒物排放。*ACS Nano*. 2015;22.9 12552-61.
+
 * `http://www.npi.gov.au/npidata/action/load/summary-result`, n.d. 澳大利亚 2020/2021 年的数据 - 来自所有来源的 2.5 微米颗粒物可从 `http://www.npi.gov.au/npidata/action/load/summary-result` 获取。 (n.d.).
+
 * `https://www.dcceew.gov.au/environment/protection/npi/substances/fact-sheets/particulate-matter-pm10-and-pm25`, n.d. `https://www.dcceew.gov.au/environment/protection/npi/substances/fact-sheets/particulate-matter-pm10-and-pm25` (n.d.).
+
 * Huang et al., 2021 Huang J, Tian H, Wang J, et al. 气候变化和空气污染排放控制对 `PM2.5` 相关健康影响的建模研究——中国，2010 年代和 2040 年代。*China CDC Weekly*. 2021;3(23):500–506.
+
 * ISWA [2021-2030], n.d. 废物管理部门的未来。十年趋势、机遇和挑战。ISWA [2021-2030]. (n.d.).
+
 * Iyyanki and Jayanthi, 2020 Iyyanki MKV, Jayanthi P. *The impact of climate change on human eyes*. *Urban health risk and resilience in Asian cities* Springer 2020;205–215.
+
 * Iyyanki et al., 2018 Iyyanki MKV, Jayanthi P, Aruna M. 空气污染：城市区域哮喘儿童和成人的案例研究。*EPH - International Journal of Medical and Health Science*. 2018;4.
+
 * Jayanthi and Muralikrishna, 2022 Jayanthi P, Muralikrishna I. 降雨对 `PM` 浓度的影响：净零碳的案例研究。*International Journal of Information Communication Technology and Digital Convergence*. 2022;7(2):14–32.
+
 * Ji et al., 2018 Ji X, Yao Y, Long X. 什么导致 `PM2.5` 污染？来自社会经济视角的跨经济实证分析。*Energy Policy*. 2018;119:458–472 ISSN 0301-4215.
+
 * Khreis et al., 2019 Khreis H, Cirach M, Mueller N, et al. 欧洲儿童哮喘负担与户外空气污染。*European Respiratory Journal*. 2019;54(4):1802194.
+
 * Kumar et al., 2022 Kumar R, Gupta K, Bordoloi N. 纳米技术：应对空气污染的新兴策略。*Environmental Sustainability and Industries* 2022;:117–128.
-* Kumaravel et al., 2020 Kumaravel V, Bartlett JP, Suresh C. 二氧化碳 (`CO[2]`) 的光电化学转化成燃料和增值产品。*ACS Energy Letters*. 2020;5:486–519.
+
+* Kumaravel et al., 2020 Kumaravel V, Bartlett JP, Suresh C. 二氧化碳 (`CO₂`) 的光电化学转化成燃料和增值产品。*ACS Energy Letters*. 2020;5:486–519.
+
 * Kwarteng et al., 2022 Kwarteng L, Devasurendra AM, Laskaris Z. 加纳 Agbogbloshie 废物回收现场颗粒物和 `PM2.5` 相关多环芳烃的职业暴露。*Environment International*. 2022;158:106971.
+
 * Lin et al., 2013 Lin W, Bert BB, Gehring U. 室内二氧化氮和燃气烹饪对儿童哮喘和喘息影响的荟萃分析。*International Journal of Epidemiology*. 2013;42:1724–1737.
+
 * Manisalidis et al., 2020 Manisalidis I, Stavropoulou E, Stavropoulos A, et al. 空气污染的环境和健康影响：综述。*Frontiers in Public Health*. 2020;8:505570.
+
 * Manjunatha et al., 2021 Manjunatha K, Vishal K, Ramesh BD, et al. 用于还原有毒环境污染物的高效可回收钯富集磁性纳米催化剂。*Journal of Environmental Sciences.* 2021;101:189–204.
+
 * Mohamed, 2017 Mohamed EF. 纳米技术：环境空气污染控制的未来。*Environmental Management and Sustainable Development*. 2017;6(2):429–454.
+
 * Nasrollahzadeh et al., 2020 Nasrollahzadeh M, Baran T, Yılmaz Baran NY, et al. 固定在胺改性沸石上的 Pd 纳米催化剂：水介质中环境污染修复的抗菌和催化活性。*Separation and Purification Technology* 2020;:239.
-* Ogen, 2020 Ogen Y. 评估二氧化氮 (NO[2]) 水平作为冠状病毒 (COVID-19) 致死率的促成因素。*Science of the Total Environment*. 2020;726:138605.
+
+* Ogen, 2020 Ogen Y. 评估二氧化氮 (NO₂) 水平作为冠状病毒 (COVID-19) 致死率的促成因素。*Science of the Total Environment*. 2020;726:138605.
+
 * Park et al., 2020 Park S, allen RJ, Lim CH. 未来气候变化下细颗粒物和过早死亡率可能增加。*Air Quality, Atmosphere & Health*. 2020;13:143–151.
+
 * Rose et al., 2019 Rose JJ, Wang L, Xu Q, et al. 一氧化碳中毒：发病机制、管理及治疗未来方向。*American Journal of Respiratory and Critical Care Medicine*. 2019;195(5):596–606.
+
 * Siddique et al., 2010 Siddique S, Banerjee M, Ray MR, et al. 空气污染及其对印度首都德里儿童肺功能的影响。*Water, Air, and Soil Pollution*. 2010;212:89–100.
+
 * Sun, 2019 Sun H. 环境纳米技术的重大挑战。*Frontiers in Nanotechnology*. 2019;1:2.
-* Takenoue et al., 2012 Takenoue Y, Kaneko T, Miyamae T, et al. 户外 NO[2] 暴露对儿童哮喘的影响：荟萃分析。*Pediatrics International*. 2012;54:762–769.
 
-
-
-
+* Takenoue et al., 2012 Takenoue Y, Kaneko T, Miyamae T, et al. 户外 NO₂ 暴露对儿童哮喘的影响：荟萃分析。*Pediatrics International*. 2012;54:762–769.
 
 * Tam et al., 2012 Tam CW, Bevan RJ, Harrison PTC, et al. Public health impacts of exposure to carbon monoxide from gas appliances in UK homes – Are we missing something?. *Indoor and Built Environment*. 2012;21(2):229–240.
+
 * Turner et al., 2022 Turner C, Oyekan J, Garn W, et al. Industry 5.0 and the circular economy: Utilizing LCA with intelligent products. *Sustainability*. 2022;14(22):14847.
+
 * Turning to Nanotechnology for Pollution Control, 2009 Turning to Nanotechnology for Pollution Control: Applications of Nanoparticles. (2009). Available at [`sites.dartmouth.edu/`](https://sites.dartmouth.edu/).
+
 * Wang et al., 2021 Wang Y, Li J, Wang L, et al. The impact of carbon monoxide on years of life lost and modified effect by individual- and city-level characteristics: Evidence from a nationwide time-series study in China. *Ecotoxicology and Environmental Safety*. 2021;210:111884.
+
 * Waste and Climate Change: Global trends and strategy framework. United Nations Environmental Programme Division of Technology, n.d. Waste and Climate Change: Global trends and strategy framework. United Nations Environmental Programme Division of Technology. Industry and Economics International Environmental Technology Centre. (n.d.).
+
 * Weeberb et al., 2019 Weeberb JR, Iny J, Brent AC, et al. Climate impact on ambient PM2.5 elemental concentration in the United States: A trend analysis over the last 30-years. *Environment International*. 2019;131:114888.
+
 * WHO, 2022 WHO. *Tracking SDG 7: The energy progress report* Washington, DC: World Bank; 2022; [`trackingsdg7.esmap.org/downloads`](https://trackingsdg7.esmap.org/downloads).
+
 * Xing et al., 2016 Xing YF, Xu YH, Shi MH, et al. The impact of PM2.5 on the human respiratory system. *Journal of Thoracic Disease*. 2016;8(1):E69–E74.
+
 * Zheng et al., 2016 Zheng X, Xu X, Yekeen TA, et al. Ambient air heavy metals in PM2.5 and potential human health risk assessment in an informal electronic-waste recycling site of China. *Aerosol and Air Quality Research*. 2016;16:388–397.
+
+
+
 * Zhu et al., 2017 Zhu G, Chen T, Hu Y, et al. Recycling PM2.5 carbon nanoparticles generated by diesel vehicles for supercapacitors and oxygen reduction reaction. *Nano Energy*. 2017;33:229–237.
 
-## 第 9 章
+# 第 9 章
 
-## 在 Python 框架内开发用于气候变化的深度学习模型
+# 在 Python 框架内开发用于气候变化的深度学习模型
 
 Hemaraju Pollayi^1, Praveena Rao^2, Dathathreya Chakali^1 和 Pratyusha Bandaru^1, ¹土木工程系，GITAM 大学，海得拉巴，特伦甘纳邦，印度，²土木工程系，航空工程学院，海得拉巴，特伦甘纳邦，印度
 
@@ -2677,17 +2560,13 @@ Figure 9–1 To calculate the global population the U.S. Census Bureau uses data
 
 ### 9.1.4 深度学习
 
-
-
-
-
 DL 将算法分层排列以自行产生人工神经网络（`ANN`）；这样的系统能够获取信息并做出审慎的决策。`ML` 有一个名为 `DL` 的子领域。在人类大脑的运作中，`DL` 中的“深度”一词指的是多个层级的交互或神经元。
 
 `AI` 在有效实施时有潜力改变整个领域。`AI` 能够带来技术上的创新进步。以下是 `DL` 在地球上的一些潜在应用：
 
 * 气候建模和天气预报
 * 智慧农业
-* 分布式能源电网。
+* 分布式能源电网
 
 公共机构（如 `NASA`）使用它来改善气候和天气模型的功能和有效性。这些数学框架处理的是复杂的数据，例如涉及海洋和大气中流体动力学的算法和科学原理。方程的复杂性需要昂贵、高度耗能的计算。`DL` 网络可以大致匹配这些气候模拟的某些特征，这使得计算能够显著更快地运行，并在进行模拟时纳入更多来自真实系统的变量。`AI` 方法的使用可以使这些天气和气候模型受益，以解决偏差问题。
 
@@ -2712,10 +2591,6 @@ DL 将算法分层排列以自行产生人工神经网络（`ANN`）；这样的
 
 ## 9.2 用于气候变化的深度学习模型
 
-
-
-
-
 在全球应对全球变暖的斗争中，本章力求对 `DL` 在通过创造性研究或高效工程使用时可能产生非常大影响的领域进行全面总结。处理连续数据的一种常见 `DL` 技术是循环神经网络（`RNNs`）。它们已在多个领域得到有效应用，包括自然语言处理、语言建模和语音识别。然而，梯度消失和梯度爆炸问题使得重新训练 `RNNs` 变得困难。许多 `RNN` 架构，例如门控循环单元（`GRU`）和长短期记忆（`LSTM`）网络，已被提出以解决这些问题。在本章中，作者比较了这些模型并强调了它们的优缺点。
 
 ### 9.2.1 循环神经网络
@@ -2728,7 +2603,7 @@ DL 将算法分层排列以自行产生人工神经网络（`ANN`）；这样的
 
 Figure 9–2 Representation of (A) standard recurrent neural network and (B) feed-forward network.
 
-Fig. 9–3 显示了 `RNN` 单元的架构。它接收来自当前和先前步骤的信息。这里，tan *h* `tan h` 用作激活函数；然而，你也可以使用不同的激活函数代替。`RNN` 的主要特征是其利用隐藏层来解决问题的利用。对于预测目的，`RNNs` 可以利用隐藏层来帮助记忆词（或数据）序列。`RNN` 的隐藏状态由
+Fig. 9–3 显示了 `RNN` 单元的架构。它接收来自当前和先前步骤的信息。这里，`tan h` 用作激活函数；然而，你也可以使用不同的激活函数代替。`RNN` 的主要特征是其利用隐藏层来解决问题的利用。对于预测目的，`RNNs` 可以利用隐藏层来帮助记忆词（或数据）序列。`RNN` 的隐藏状态由
 
 *h*[*t*] = tan h(*W*[*h h*]*h*[*t* − 1]+*W*[*x h*]*x*[*t*]).
 
@@ -2759,10 +2634,6 @@ Figure 9–5 Diagrammatic representation of long short-term memory architecture.
 *i*[*t*] = *σ**g*
 
 ![Equation](img/F000080si4.png)
-
-
-
-
 
 `O[t]` = `σ[O]`(`W[O]x[t]`+`U[O]h[t − 1]`+`b[O]`) (9–2)
 
@@ -2802,232 +2673,257 @@ Figure 9–7 Diagrammatic representation of gated recurrent unit architecture.
 
 #### 9.2.3.1 长短期记忆与门控循环单元
 
-
-
-
-
 使用门控来调节信息流是 `GRU` 和 `LSTM` 共有的一个特征。但 `GRU` 只有两个门，而 `LSTM` 有三个。正因如此，`LSTM` 比 `GRU` 更复杂也更具表达力。此外，`LSTM` 和 `GRU` 的区别还在于前者包含一个独立的记忆单元，而后者将其合并为一个记忆向量。`LSTM` 以及 `GRU` 在多种任务（包括情感分析、语言建模和语音识别）中的有效性已在多项研究中得到检验。研究结果相互矛盾；有些研究表明 `LSTM` 比 `GRU` 工作得更好，而另一些研究则建议相反。然而，大多数研究一致认为，在分析序列数据时，`LSTM` 和 `GRU` 同样有用，尽管具体的任务和数据集将决定每个模型的表现如何。
 
 ## 9.2.4 MSE、MAE、MAPE 和 *R*² 的数学方程
 
 为了评估网络的准确性，均方误差（`MSE`）、平均绝对误差（`MAE`）、平均绝对百分比误差（`MAPE`）和 *R* 方（`R²`）分别由 Eqs. (9–4)、(9–5)、(9–6) 和 (9–7) 计算。
 
-${MSE} = \\frac{1}{N}\\sum\\limits\_{i = 1}^{N}\\left( {y\_{actual} - y\_{predicted}} \\right)^{2}$<mml:math><mml:mi mathvariant="normal">MSE</mml:mi><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>N</mml:mi></mml:mrow></mml:mfrac><mml:munderover><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>N</mml:mi></mml:mrow></mml:munderover><mml:mrow><mml:msup><mml:mrow><mml:mfenced close=")" open="("><mml:mrow><mml:msub><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">actual</mml:mi></mml:mrow></mml:msub><mml:mo>&#8722;</mml:mo><mml:msub><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">predicted</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfenced></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math> (9–4)
 
-![Equation](img/F000080si11.png)(9–4)
 
-${MAE} = \\frac{1}{N}\\sum\\limits\_{i = 1}^{N}\\left| {y\_{actual} - y\_{predicted}} \\right|$<mml:math><mml:mi mathvariant="normal">MAE</mml:mi><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>N</mml:mi></mml:mrow></mml:mfrac><mml:munderover><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>N</mml:mi></mml:mrow></mml:munderover><mml:mrow><mml:mfenced close="|" open="|"><mml:mrow><mml:msub><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">actual</mml:mi></mml:mrow></mml:msub><mml:mo>&#8722;</mml:mo><mml:msub><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">predicted</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfenced></mml:mrow></mml:math> (9–5)
+## 评价指标数学方程
 
-![Equation](img/F000080si12.png)(9–5)
+### 均方误差 (MSE)
 
-${MAPE} = \\frac{1}{N}\\sum\\limits\_{i = 1}^{N}\\left| \\frac{y\_{actual} - y\_{predicted}}{y\_{actual}} \\right|$<mml:math><mml:mi mathvariant="normal">MAPE</mml:mi><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>N</mml:mi></mml:mrow></mml:mfrac><mml:munderover><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>N</mml:mi></mml:mrow></mml:munderover><mml:mrow><mml:mfenced close="|" open="|"><mml:mrow><mml:mfrac><mml:mrow><mml:msub><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">actual</mml:mi></mml:mrow></mml:msub><mml:mo>&#8722;</mml:mo><mml:msub><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">predicted</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">actual</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfrac></mml:mrow></mml:mfenced></mml:mrow></mml:math> (9–6)
+$$
+MSE = \frac{1}{N}\sum_{i=1}^{N}\left( y_{actual} - y_{predicted} \right)^{2} \tag{9-4}
+$$
 
-![Equation](img/F000080si13.png)(9–6)
+### 平均绝对误差 (MAE)
 
-$R^{2} = 1 - \\frac{\\sum\\limits\_{i = 1}^{N}\\left( {y\_{actual} - y\_{predicted}} \\right)^{2}}{\\sum\\limits\_{i = 1}^{N}\\left( {y\_{mean} - y\_{actual}} \\right)^{2}},$<mml:math><mml:msup><mml:mrow><mml:mi>R</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>&#8722;</mml:mo><mml:mfrac><mml:mrow><mml:munderover><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>N</mml:mi></mml:mrow></mml:munderover><mml:mrow><mml:msup><mml:mrow><mml:mfenced close=")" open="("><mml:mrow><mml:msub><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">actual</mml:mi></mml:mrow></mml:msub><mml:mo>&#8722;</mml:mo><mml:msub><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">predicted</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfenced></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:mrow><mml:mrow><mml:munderover><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>N</mml:mi></mml:mrow></mml:munderover><mml:mrow><mml:msup><mml:mrow><mml:mfenced close=")" open="("><mml:mrow><mml:msub><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">mean</mml:mi></mml:mrow></mml:msub><mml:mo>&#8722;</mml:mo><mml:msub><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">actual</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfenced></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:mrow></mml:mfrac><mml:mo>,</mml:mo></mml:math> (9–7)
+$$
+MAE = \frac{1}{N}\sum_{i=1}^{N}\left| y_{actual} - y_{predicted} \right| \tag{9-5}
+$$
 
-![Equation](img/F000080si14.png)(9–7)
+### 平均绝对百分比误差 (MAPE)
 
-其中 *y*[*p**r**e**d**i**c**t**e**d*]<mml:math><mml:msub><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">predicted</mml:mi></mml:mrow></mml:msub></mml:math>![Equation](img/F000080si15.png) 表示 `ANN` 模型的输出，*y*[*a**c**t**u**a**l*]<mml:math><mml:msub><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">actual</mml:mi></mml:mrow></mml:msub></mml:math>![Equation](img/F000080si16.png) 是数值模拟的结果，*N*<mml:math><mml:mi>N</mml:mi></mml:math>![Equation](img/F000080si17.png) 是数据的总量，而 *y*[*m**e**a**n*]<mml:math><mml:msub><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">mean</mml:mi></mml:mrow></mml:msub></mml:math>![Equation](img/F000080si18.png) 是所有数据点数值模拟结果的均值。
+$$
+MAPE = \frac{1}{N}\sum_{i=1}^{N}\left| \frac{y_{actual} - y_{predicted}}{y_{actual}} \right| \tag{9-6}
+$$
+
+### 决定系数 ($R^2$)
+
+$$
+R^{2} = 1 - \frac{\sum_{i=1}^{N}\left( y_{actual} - y_{predicted} \right)^{2}}{\sum_{i=1}^{N}\left( y_{mean} - y_{actual} \right)^{2}} \tag{9-7}
+$$
+
+其中 `y_predicted` 表示 `ANN` 模型的输出，`y_actual` 是数值模拟的结果，`N` 是数据的总量，而 `y_mean` 是所有数据点数值模拟结果的均值。
 
 ## 9.2.5 优化器数学方程：Adam、SGD、Adamax、Adagrad、Adadelta、RMSProp 和 Nadam
 
 在本章中，使用以下方程来更好地理解优化器的特性：
 
-#### 9.2.5.1 Adagrad
+### 9.2.5.1 Adagrad
 
-$\\theta\_{t + 1} = \\theta\_{t} - \\frac{\\eta}{\\sqrt{G\_{t} + \\epsilon}}g\_{t},$<mml:math><mml:msub><mml:mrow><mml:mi>&#952;</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>+</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>&#952;</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>&#8722;</mml:mo><mml:mfrac><mml:mrow><mml:mi>&#951;</mml:mi></mml:mrow><mml:mrow><mml:msqrt><mml:mrow><mml:msub><mml:mrow><mml:mi>G</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:mi>&#1013;</mml:mi></mml:mrow></mml:msqrt></mml:mrow></mml:mfrac><mml:msub><mml:mrow><mml:mi>g</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>,</mml:mo></mml:math> (9–8)
+$$
+\theta_{t + 1} = \theta_{t} - \frac{\eta}{\sqrt{G_{t} + \epsilon}}g_{t} \tag{9-8}
+$$
 
-![Equation](img/F000080si19.png)(9–8)
+其中 `θ[t]` 是第 `t` 代的节点权重，`η` 是学习率，`g[t]` 是当前世代的梯度向量，`G[t]` 是包含所有先前梯度平方的对角矩阵，而 `ϵ` 是一个提供数值稳定性的很小项。
+
+### 9.2.5.2 Adamax
 
 
 
+#### 9.2.5.2 RMSProp
 
+$$
+\left\{
+\begin{matrix}
+m_{t} = \beta_{1}m_{t - 1} + \left( {1 - \beta_{1}} \right)g_{t} \\
+\quad \\
+v_{t} = \beta_{1}v_{t - 1} + \left( {1 - \beta_{2}} \right){g_{t}}^{2}
+\end{matrix}
+\right\},
+$$ (9–9)
 
-其中 `θ[t]`![Equation](img/F000080si20.png) 是第 `t`![Equation](img/F000080si21.png) 代的节点权重，`η`![Equation](img/F000080si22.png) 是学习率，`g[t]`![Equation](img/F000080si23.png) 是当前世代的梯度向量，`G[t]`![Equation](img/F000080si24.png) 是包含所有先前梯度平方的对角矩阵，而 `ϵ`![Equation](img/F000080si25.png) 是一个提供数值稳定性的很小项。
-
-#### 9.2.5.2 Adamax
-
-$\\left. \\begin{matrix} {m\_{t} = \\beta\_{1}m\_{t - 1} + \\left( {1 - \\beta\_{1}} \\right)g\_{t}} \\\\ \\quad \\\\ {v\_{t} = \\beta\_{1}v\_{t - 1} + \\left( {1 - \\beta\_{2}} \\right){g\_{t}}^{2}} \\\\ \\end{matrix} \\right\\},$<mml:math><mml:mrow><mml:mfenced close="}" open=""><mml:mrow><mml:mtable><mml:mtr><mml:mtd><mml:msub><mml:mrow><mml:mi>m</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>&#946;</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>m</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:mrow><mml:mfenced close=")" open="("><mml:mrow><mml:mn>1</mml:mn><mml:mo>&#8722;</mml:mo><mml:msub><mml:mrow><mml:mi>&#946;</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:mfenced></mml:mrow><mml:msub><mml:mrow><mml:mi>g</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:mspace width="1em"/></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>&#946;</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:mrow><mml:mfenced close=")" open="("><mml:mrow><mml:mn>1</mml:mn><mml:mo>&#8722;</mml:mo><mml:msub><mml:mrow><mml:mi>&#946;</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:mfenced></mml:mrow><mml:msup><mml:mrow><mml:msub><mml:mrow><mml:mi>g</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mtd></mml:mtr></mml:mtable></mml:mrow></mml:mfenced></mml:mrow><mml:mo>,</mml:mo></mml:math> (9–9)
-
-![Equation](img/F000080si26.png)(9–9)
-
-其中 `m[t]`![Equation](img/F000080si27.png) 是过去梯度的指数衰减平均值，`β1`![Equation](img/F000080si28.png) 是衰减率，`v[t]`![Equation](img/F000080si29.png) 是过去梯度平方的指数衰减平均值，而 `β2`![Equation](img/F000080si30.png) 是衰减率。
+其中 `m[t]` 是过去梯度的指数衰减平均值，`β1` 是衰减率，`v[t]` 是过去梯度平方的指数衰减平均值，而 `β2` 是衰减率。
 
 #### 9.2.5.3 Adam
 
-`v[t] = max(β[2]v[t − 1],|g[t]|)`<mml:math><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mi>max</mml:mi><mml:mrow><mml:mfenced close=")" open="("><mml:mrow><mml:msub><mml:mrow><mml:mi>&#946;</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:mrow><mml:mfenced close="|" open="|"><mml:mrow><mml:msub><mml:mrow><mml:mi>g</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfenced></mml:mrow></mml:mrow></mml:mfenced></mml:mrow></mml:math> (9–10)
-
-![Equation](img/F000080si31.png)(9–10)
+`v[t] = max(β[2]v[t − 1], |g[t]|)` (9–10)
 
 #### 9.2.5.4 SGD
 
 以下方程用于生成噪声更少的新的数据序列：
 
-`v[t] = βv[t − 1] + (1−β)s[t]`,<mml:math><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mi>&#946;</mml:mi><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:mrow><mml:mfenced close=")" open="("><mml:mrow><mml:mn>1</mml:mn><mml:mo>&#8722;</mml:mo><mml:mi>&#946;</mml:mi></mml:mrow></mml:mfenced></mml:mrow><mml:msub><mml:mrow><mml:mi>s</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>,</mml:mo></mml:math>
+`v[t] = βv[t − 1] + (1−β)s[t]`
 
-![Equation](img/F000080si32.png)
+其中 `s[t]` 是在时间 `t` 生成的噪声数据。
 
-其中 `s[t]`![Equation](img/F000080si33.png) 是在时间 `t`![Equation](img/F000080si34.png) 生成的噪声数据。
+以下方程用于在 SGD 中更新权重 (`w`) 和偏置 (`b`)：
 
-以下方程用于在 SGD 中更新权重 (`w`)![Equation](img/F000080si35.png) 和偏置 (`b`)![Equation](img/F000080si36.png)：
+$$
+\left\{
+\begin{matrix}
+w_{t} = w_{t - 1} - \eta\frac{\partial L}{\partial w_{t - 1}} \\
+\quad \\
+b_{t} = b_{t - 1} - \eta\frac{\partial L}{\partial b_{t - 1}}
+\end{matrix}
+\right\},
+$$ (9–11)
 
-
-
-
-
-$\\left. \\begin{matrix} {w\_{t} = w\_{t - 1} - \\eta\\frac{\\partial L}{\\partial w\_{t - 1}}} \\\\ \\quad \\\\ {b\_{t} = b\_{t - 1} - \\eta\\frac{\\partial L}{\\partial b\_{t - 1}}} \\\\ \\end{matrix} \\right\\},$<mml:math><mml:mrow><mml:mfenced close="}" open=""><mml:mrow><mml:mtable><mml:mtr><mml:mtd><mml:msub><mml:mrow><mml:mi>w</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>w</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>&#8722;</mml:mo><mml:mi>&#951;</mml:mi><mml:mfrac><mml:mrow><mml:mo>&#8706;</mml:mo><mml:mi>L</mml:mi></mml:mrow><mml:mrow><mml:mo>&#8706;</mml:mo><mml:msub><mml:mrow><mml:mi>w</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:mfrac></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:mspace width="1em"/></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:msub><mml:mrow><mml:mi>b</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>b</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>&#8722;</mml:mo><mml:mi>&#951;</mml:mi><mml:mfrac><mml:mrow><mml:mo>&#8706;</mml:mo><mml:mi>L</mml:mi></mml:mrow><mml:mrow><mml:mo>&#8706;</mml:mo><mml:msub><mml:mrow><mml:mi>b</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:mfrac></mml:mtd></mml:mtr></mml:mtable></mml:mrow></mml:mfenced></mml:mrow><mml:mo>,</mml:mo></mml:math> (9–11)
-
-![Equation](img/F000080si37.png)(9–11)
-
-其中 $\\frac{\\partial L}{\\partial w}$<mml:math><mml:mfrac><mml:mrow><mml:mo>&#8706;</mml:mo><mml:mi>L</mml:mi></mml:mrow><mml:mrow><mml:mo>&#8706;</mml:mo><mml:mi>w</mml:mi></mml:mrow></mml:mfrac></mml:math>![Equation](img/F000080si38.png) 是损失对权重的导数，而 $\\frac{\\partial L}{\\partial b}$<mml:math><mml:mfrac><mml:mrow><mml:mo>&#8706;</mml:mo><mml:mi>L</mml:mi></mml:mrow><mml:mrow><mml:mo>&#8706;</mml:mo><mml:mi>b</mml:mi></mml:mrow></mml:mfrac></mml:math>![Equation](img/F000080si39.png) 是损失对偏置的导数。
+其中 $\frac{\partial L}{\partial w}$ 是损失对权重的导数，而 $\frac{\partial L}{\partial b}$ 是损失对偏置的导数。
 
 #### 9.2.5.5 Adadelta
 
-$w\_{t} = w\_{t - 1} - \\eta\_{t}^{\\prime}\\frac{\\partial L}{\\partial w\_{t - 1}}{with}\\eta\_{t}^{\\prime} = \\frac{\\eta}{\\sqrt{g\_{t} + \\varepsilon}},$<mml:math><mml:msub><mml:mrow><mml:mi>w</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>w</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>&#8722;</mml:mo><mml:msubsup><mml:mrow><mml:mi>&#951;</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mo>&#8242;</mml:mo></mml:mrow></mml:msubsup><mml:mfrac><mml:mrow><mml:mi>&#8706;</mml:mi><mml:mi>L</mml:mi></mml:mrow><mml:mrow><mml:mi>&#8706;</mml:mo><mml:msub><mml:mrow><mml:mi>w</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:mfrac><mml:mspace width=".25em"/><mml:mi mathvariant="normal">with</mml:mi><mml:mspace width=".25em"/><mml:msubsup><mml:mrow><mml:mi>&#951;</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mo>&#8242;</mml:mo></mml:mrow></mml:msubsup><mml:mo>=</mml:mo><mml:mfrac><mml:mi>&#951;</mml:mi><mml:mrow><mml:msqrt><mml:mrow><mml:msub><mml:mrow><mml:mi>g</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:mi>&#949;</mml:mi></mml:mrow></mml:msqrt></mml:mrow></mml:mfrac><mml:mo>,</mml:mo></mml:math> (9–12)
-
-![Equation](img/F000080si40.png)(9–12)
+$$
+w_{t} = w_{t - 1} - \eta_{t}^{\prime}\frac{\partial L}{\partial w_{t - 1}} \quad \text{with} \quad \eta_{t}^{\prime} = \frac{\eta}{\sqrt{g_{t} + \varepsilon}},
+$$ (9–12)
 
 其中
 
-$g\_{t} = \\beta g\_{t - 1} + \\left( {1 - \\beta} \\right)\\left\\lbrack \\frac{\\partial L}{\\partial w\_{t - 1}} \\right\\rbrack^{2}.$<mml:math><mml:msub><mml:mrow><mml:mi>g</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mi>&#946;</mml:mi><mml:msub><mml:mrow><mml:mi>g</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:mrow><mml:mfenced close=")" open="("><mml:mrow><mml:mn>1</mml:mn><mml:mo>&#8722;</mml:mo><mml:mi>&#946;</mml:mi></mml:mrow></mml:mfenced></mml:mrow><mml:msup><mml:mrow><mml:mfenced close="\]" open="\"><mml:mrow><mml:mfrac><mml:mrow><mml:mo>&#8706;</mml:mo><mml:mi>L</mml:mi></mml:mrow><mml:mrow><mml:mo>&#8706;</mml:mo><mml:msub><mml:mrow><mml:mi>w</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:mfrac></mml:mrow></mml:mfenced></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup><mml:mo>.</mml:mo></mml:math> (9–13)
 
-![Equation(9–13)
 
 #### 9.2.5.6 RMSProp
 
-$\\left. \\begin{matrix} {w\_{t} = w\_{t - 1} - \\frac{\\eta}{\\sqrt{E\\left\\lbrack g^{2} \\right\\rbrack}}\\frac{\\partial c}{\\partial w\_{t - 1}}} \\\\ \\quad \\\\ {{E\\left\\lbrack g^{2} \\right\\rbrack}\_{t} = \\beta{E\\left\\lbrack g^{2} \\right\\rbrack}\_{t - 1} + \\left( {1 - \\beta} \\right)\\left\\lbrack \\frac{\\partial c}{\\partial w\_{t - 1}} \\right\\rbrack^{2}} \\\\ \\end{matrix} \\right\\},$<mml:math><mml:mrow><mml:mfenced close="}" open=""><mml:mrow><mml:mtable><mml:mtr><mml:mtd><mml:msub><mml:mrow><mml:mi>w</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>w</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>&#8722;</mml:mo><mml:mfrac><mml:mrow><mml:mi>&#951;</mml:mi></mml:mrow><mml:mrow><mml:msqrt><mml:mrow><mml:mi>E</mml:mi><mml:mo>\[</mml:mo><mml:msup><mml:mrow><mml:mi>g</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup><mml:mo>\]</mml:mo></mml:mrow></mml:msqrt></mml:mrow></mml:mfrac><mml:mfrac><mml:mrow><mml:mo>&#8706;</mml:mo><mml:mi>c</mml:mi></mml:mrow><mml:mrow><mml:mo>&#8706;</mml:mo><mml:msub><mml:mrow><mml:mi>w</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:mfrac></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:mspace width="1em"/></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:msub><mml:mrow><mml:mi>E</mml:mi><mml:mo>\[</mml:mo><mml:msup><mml:mrow><mml:mi>g</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup><mml:mo>\]</mml:mo></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mi>&#946;</mml:mi><mml:msub><mml:mrow><mml:mi>E</mml:mi><mml:mo>\[</mml:mo><mml:msup><mml:mrow><mml:mi>g</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup><mml:mo>\]</mml:mo></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:mrow><mml:mfenced close=")" open="("><mml:mrow><mml:mn>1</mml:mn><mml:mo>&#8722;</mml:mo><mml:mi>&#946;</mml:mi></mml:mrow></mml:mfenced></mml:mrow><mml:msup><mml:mrow><mml:mfenced close="\]" open="\"><mml:mrow><mml:mfrac><mml:mrow><mml:mo>&#8706;</mml:mo><mml:mi>c</mml:mi></mml:mrow><mml:mrow><mml:mo>&#8706;</mml:mo><mml:msub><mml:mrow><mml:mi>w</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>&#8722;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:mfrac></mml:mrow></mml:mfenced></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mtd></mml:mtr></mml:mtable></mml:mrow></mml:mfenced></mml:mrow><mml:mo>,</mml:mo></mml:math> (9–14)
+$$g_{t} = \beta g_{t - 1} + \left( {1 - \beta} \right)\left\lbrack \frac{\partial L}{\partial w_{t - 1}} \right\rbrack^{2}.$$
 
-![Equation(9–14)
+$$
+\left. \begin{matrix} 
+{w_{t} = w_{t - 1} - \frac{\eta}{\sqrt{E\left\lbrack g^{2} \right\rbrack}}\frac{\partial c}{\partial w_{t - 1}}} \\ 
+\quad \\ 
+{{E\left\lbrack g^{2} \right\rbrack}_{t} = \beta{E\left\lbrack g^{2} \right\rbrack}_{t - 1} + \left( {1 - \beta} \right)\left\lbrack \frac{\partial c}{\partial w_{t - 1}} \right\rbrack^{2}} \\ 
+\end{matrix} \right\}, \quad (9\text{--}14)
+$$
 
+其中 `E[g]` 是梯度的平方的移动平均值，而 `∂c/∂w` 是成本函数相对于权重的梯度。
 
+#### 9.2.5.7 Nadam
 
+$$\theta_{t + 1} = \theta_{t} - \frac{\eta}{\sqrt{{\widehat{v}}_{t}} + \epsilon}\left( {\beta_{1}{\widehat{m}}_{t} + \frac{1 - \beta_{1}}{1 - \beta_{1}^{t}}g}_{t} \right), \quad (9\text{--}15)$$
 
-
-其中 *E*\[*g*\]<mml:math><mml:mi>E</mml:mi><mml:mrow><mml:mfenced close="\]" open="\"><mml:mrow><mml:mi>g</mml:mi></mml:mrow></mml:mfenced></mml:mrow></mml:math>![Equation 是梯度的平方的移动平均值，而 $\frac{\partial c}{\partial w}$<mml:math><mml:mfrac><mml:mrow><mml:mo>&#8706;</mml:mo><mml:mi>c</mml:mi></mml:mrow><mml:mrow><mml:mo>&#8706;</mml:mo><mml:mi>w</mml:mi></mml:mrow></mml:mfrac></mml:math>![Equation](img/F000080si44.png) 是成本函数相对于权重的梯度。
-
-### 9.2.5.7 Nadam
-
-$\theta_{t + 1} = \theta_{t} - \frac{\eta}{\sqrt{{\widehat{v}}_{t}} + \epsilon}\left( {\beta_{1}{\widehat{m}}_{t} + \frac{1 - \beta_{1}}{1 - \beta_{1}^{t}}g}_{t} \right),$<mml:math><mml:msub><mml:mrow><mml:mi>&#952;</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi><mml:mo>+</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>&#952;</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>&#8722;</mml:mo><mml:mfrac><mml:mrow><mml:mi>&#951;</mml:mi></mml:mrow><mml:mrow><mml:msqrt><mml:mrow><mml:msub><mml:mrow><mml:mover accent="true"><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mo>&#710;</mml:mo></mml:mover></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msqrt><mml:mo>+</mml:mo><mml:mi>&#1013;</mml:mi></mml:mrow></mml:mfrac><mml:mrow><mml:mfenced close=")" open="("><mml:mrow><mml:msub><mml:mrow><mml:msub><mml:mrow><mml:mi>&#946;</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mover accent="true"><mml:mrow><mml:mi>m</mml:mi></mml:mrow><mml:mo>&#710;</mml:mo></mml:mover></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:mfrac><mml:mrow><mml:mn>1</mml:mn><mml:mo>&#8722;</mml:mo><mml:msub><mml:mrow><mml:mi>&#946;</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msub></mml:mrow><mml:mrow><mml:mn>1</mml:mn><mml:mo>&#8722;</mml:mo><mml:msubsup><mml:mrow><mml:mi>&#946;</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msubsup></mml:mrow></mml:mfrac><mml:mi>g</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfenced></mml:mrow><mml:mo>,</mml:mo></mml:math> (9–15)
-
-![Equation](img/F000080si45.png)(9–15)
-
-其中 ${\widehat{m}}_{t} = \frac{m_{t}}{1 - \beta_{1}^{t}}$<mml:math><mml:msub><mml:mrow><mml:mover accent="true"><mml:mrow><mml:mi>m</mml:mi></mml:mrow><mml:mo>&#710;</mml:mo></mml:mover></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:msub><mml:mrow><mml:mi>m</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mrow><mml:mn>1</mml:mn><mml:mo>&#8722;</mml:mo><mml:msubsup><mml:mrow><mml:mi>&#946;</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msubsup></mml:mrow></mml:mfrac></mml:math>![Equation](img/F000080si46.png) 且 ${\widehat{v}}_{t} = \frac{v_{t}}{1 - \beta_{2}^{t}}$<mml:math><mml:msub><mml:mrow><mml:mover accent="true"><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mo>&#710;</mml:mo></mml:mover></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mrow><mml:mn>1</mml:mn><mml:mo>&#8722;</mml:mo><mml:msubsup><mml:mrow><mml:mi>&#946;</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msubsup></mml:mrow></mml:mfrac></mml:math>![Equation](img/F000080si47.png)。
+其中 ${\widehat{m}}_{t} = \frac{m_{t}}{1 - \beta_{1}^{t}}$ 且 ${\widehat{v}}_{t} = \frac{v_{t}}{1 - \beta_{2}^{t}}$。
 
 ## 9.3 使用 Jupyter Notebook 在 Python 框架中进行操作
 
 在本章中，原始的脏全球数据集收集自 Berkeley Earth (`http://berkeleyearth.org/data/`)。它提供了自 1750 年以来陆地和海洋的温度网格数据以及更高分辨率的时间序列数据。以下最新一代产品通过机器学习技术增强，以提高空间分辨率：
 
-* • `GlobalLandTemperaturesByCountry.csv`（按国家划分的全球平均陆地温度）
-* • `GlobalLandTemperaturesByState.csv`（按州划分的全球平均陆地温度）
-* • `GlobalLandTemperaturesByMajorCity.csv`（按主要城市划分的全球陆地温度）
-* • `GlobalLandTemperaturesByCity.csv`（按城市划分的全球陆地温度）
-* • `GlobalTemperatures.csv`（陆地和海洋-陆地的全球温度）。
+* `GlobalLandTemperaturesByCountry.csv`（按国家划分的全球平均陆地温度）
+* `GlobalLandTemperaturesByState.csv`（按州划分的全球平均陆地温度）
+* `GlobalLandTemperaturesByMajorCity.csv`（按主要城市划分的全球陆地温度）
+* `GlobalLandTemperaturesByCity.csv`（按城市划分的全球陆地温度）
+* `GlobalTemperatures.csv`（陆地和海洋-陆地的全球温度）
 
 原始脏数据集需要大量的数据清洗和预处理。在执行必要的特征工程步骤并通过可视化探索数据后，数据准备好输入模型。之后，构建、训练并评估模型以完成任务：预测全球温度趋势以及预测美国和印度温度趋势。以下操作针对这些趋势执行：
 
-1. 1. 加载数据集
-2. 2. 执行探索性数据分析
-3. 3. 执行数据清洗
-4. 4. 执行数据可视化
-5. 5. 准备数据以训练全局模型（全球温度趋势）
-6. 6. 构建并训练 `RNN`、`LSTM` 和 `GRU` 模型以预测全球温度趋势
-7. 7. 评估第 6 步中构建的模型的性能
-8. 8. 准备数据以训练美国和印度模型（美国和印度温度趋势）
-9. 9. 构建并训练 `RNN`、`LSTM` 和 `GRU` 模型以预测美国和印度温度趋势
-10. 10. 评估第 9 步中构建的模型的性能。
+1. 加载数据集
+2. 执行探索性数据分析
+3. 执行数据清洗
 
-在本章中，所有操作均使用 Python 框架内的 `Jupyter Notebook` 实现，其 *pseudocode* 如下：
 
-![](img/F000080u09-01-9780443219054.jpg)![](img/F000080u09-02-9780443219054.jpg)![](img/F000080u09-03-9780443219054.jpg)
+
+## 执行步骤
+
+1. 执行数据可视化
+2. 准备数据以训练全局模型（全球温度趋势）
+3. 构建并训练 `RNN`、`LSTM` 和 `GRU` 模型以预测全球温度趋势
+4. 评估第 3 步中构建的模型的性能
+5. 准备数据以训练美国和印度模型（美国和印度温度趋势）
+6. 构建并训练 `RNN`、`LSTM` 和 `GRU` 模型以预测美国和印度温度趋势
+7. 评估第 6 步中构建的模型的性能
+
+在本章中，所有操作均使用 Python 框架内的 `Jupyter Notebook` 实现，其 `pseudocode` 如下：
+
+![](img/F000080u09-01-9780443219054.jpg)
+![](img/F000080u09-02-9780443219054.jpg)
+![](img/F000080u09-03-9780443219054.jpg)
 
 ![](img/F000080u09-04-9780443219054.jpg)
 
 ## 9.4 气候模型的可视化探索
 
-Figs. 9–8 和 9–9 分别显示了平均温度的国家级计数和平均温度的不确定性计数。平均全球陆地温度范围为 −20°C 至 30°C，如 Fig. 9–10 所示。 Figs. 9–11 至 9–15 分别显示了 1743 年、1800 年、1900 年、2000 年和 2013 年的全球温度变化。全球平均陆地温度如 Fig. 9–16 所示，观察到在 1860 年之前温度变化范围为 15°C 至 19°C。但由于全球气候变化，2013 年观察到的温度变化范围为 19°C 至 21°C。 Fig. 9–17 显示了 1800 年至 2013 年的美国温度数据，其变化范围为 −10°C 至 25°C，而 Fig. 9–18 显示了 1800 年至 2013 年的印度温度数据，其变化范围为 5°C 至 35°C，这是由于气候变化所致。 Fig. 9–19 显示了训练集和测试集的历史记录，而 Fig. 9–20 显示了逐年实际温度值和预测值。实际温度值与预测值之间的误差如 Fig. 9–21 所示，而温度误差的绘制如 Fig. 9–22 所示。
+Figs. 9–8 和 9–9 分别显示了平均温度的国家级计数和平均温度的不确定性计数。平均全球陆地温度范围为 −20°C 至 30°C，如 Fig. 9–10 所示。Figs. 9–11 至 9–15 分别显示了 1743 年、1800 年、1900 年、2000 年和 2013 年的全球温度变化。全球平均陆地温度如 Fig. 9–16 所示，观察到在 1860 年之前温度变化范围为 15°C 至 19°C。但由于全球气候变化，2013 年观察到的温度变化范围为 19°C 至 21°C。Fig. 9–17 显示了 1800 年至 2013 年的美国温度数据，其变化范围为 −10°C 至 25°C，而 Fig. 9–18 显示了 1800 年至 2013 年的印度温度数据，其变化范围为 5°C 至 35°C，这是由于气候变化所致。Fig. 9–19 显示了训练集和测试集的历史记录，而 Fig. 9–20 显示了逐年实际温度值和预测值。实际温度值与预测值之间的误差如 Fig. 9–21 所示，而温度误差的绘制如 Fig. 9–22 所示。
 
 ![Figure 9–8 Country-wise count of average temperature.](img/F000080f09-08-9780443219054.jpg)
 
 Figure 9–8 Country-wise count of average temperature.
 
-
-
-
-
 ![Figure 9–9 Country-wise uncertainty count of average temperature.](img/F000080f09-09-9780443219054.jpg)
+
 图 9–9 各国平均温度的不确定性计数。
 
 ![Figure 9–10 Average global land temperatures. Map lines delineate study areas and do not necessarily depict accepted national boundaries.](img/F000080f09-10-9780443219054.jpg)
+
 Figure 9–10 全球平均陆地温度。地图线划定了研究区域，不一定代表公认的国家边界。
 
 ![Figure 9–11 Global temperature change in 1743. Map lines delineate study areas and do not necessarily depict accepted national boundaries.](img/F000080f09-11-9780443219054.jpg)
+
 Figure 9–11 1743 年全球温度变化。地图线划定了研究区域，不一定代表公认的国家边界。
 
 ![Figure 9–12 Global temperature change in 1800. Map lines delineate study areas and do not necessarily depict accepted national boundaries.](img/F000080f09-12-9780443219054.jpg)
+
 图 9–12 1800 年全球温度变化。地图线划定了研究区域，不一定代表公认的国家边界。
 
 ![Figure 9–13 Global temperature change in 1900. Map lines delineate study areas and do not necessarily depict accepted national boundaries.](img/F000080f09-13-9780443219054.jpg)
+
 图 9–13 1900 年全球温度变化。地图线划定了研究区域，不一定代表公认的国家边界。
 
 ![Figure 9–14 Global temperature change in 2000. Map lines delineate study areas and do not necessarily depict accepted national boundaries.](img/F000080f09-14-9780443219054.jpg)
+
 图 9–14 2000 年全球温度变化。地图线划定了研究区域，不一定代表公认的国家边界。
 
 ![Figure 9–15 Global temperature change in 2013. Map lines delineate study areas and do not necessarily depict accepted national boundaries.](img/F000080f09-15-9780443219054.jpg)
+
 Figure 9–15 2013 年全球温度变化。地图线划定了研究区域，不一定代表公认的国家边界。
 
 ![Figure 9–16 Average land temperatures globally.](img/F000080f09-16-9780443219054.jpg)
+
 Figure 9–16 全球平均陆地温度。
 
 ![Figure 9–17 US temperature data.](img/F000080f09-17-9780443219054.jpg)
+
 Figure 9–17 美国温度数据。
 
 ![Figure 9–18 India temperature data.](img/F000080f09-18-9780443219054.jpg)
+
 Figure 9–18 印度温度数据。
 
 ![Figure 9–19 History of training set and testing set.](img/F000080f09-19-9780443219054.jpg)
+
 Figure 9–19 训练集和测试集的历史。
 
 ![Figure 9–20 Year-wise actual and prediction values of temperature.](img/F000080f09-20-9780443219054.jpg)
+
 Figure 9–20 各年份温度的实际值和预测值。
 
 ![Figure 9–21 Error in actual and prediction values of temperature.](img/F000080f09-21-9780443219054.jpg)
+
 Figure 9–21 温度实际值和预测值的误差。
 
 ![Figure 9–22 Error in temperature.](img/F000080f09-22-9780443219054.jpg)
+
 Figure 9–22 温度误差。
 
-要产生预测或判断，模型会在 ML 和 DL 系统中均使用数据集进行训练。优化过程，即确定理想的模型参数集以最小化训练数据上的误差或损失，是训练过程中的关键步骤。优化算法对任何 DL 程序的成功至关重要。优化器算法在训练阶段被采用，以确定理想模型的<|message|> 参数配置。上述技术会迭代地修改模型的权重和偏见，直到达到最佳损失值。
+要产生预测或判断，模型会在 ML 和 DL 系统中均使用数据集进行训练。优化过程，即确定理想的模型参数集以最小化训练数据上的误差或损失，是训练过程中的关键步骤。优化算法对任何 DL 程序的成功至关重要。优化器算法在训练阶段被采用，以确定理想模型的参数配置。上述技术会迭代地修改模型的权重和偏见，直到达到最佳损失值。
 
 Keras 为神经网络模型训练提供了众多优化器。以下优化算法在当前的 DL 中被用于增强神经网络的训练：
-* Adaptive Moment Estimation (Adam)
-* Stochastic Gradient Descent (SGD)
-* Adaptive Moment Estimation with Infinity Norm (Adamax)
-* Adaptive Gradient Algorithm (Adagrad)
-* Adaptive Delta (Adadelta)
-* Root Mean Square Propagation (RMSProp)
-* Nesterov Adaptive Moment Estimation (Nadam).
 
-各种优化器的优缺点在 Table 9–1 中进行了汇总。在第一步，构建并训练 LSTM 模型以预测全球温度趋势，其中 activation=`linear`，optimizer=`adam`，loss=`mse`。在第二步，构建并训练 GRU 模型以预测全球温度趋势，其中 activation=`linear`，optimizer=`adam`，loss=`mse`。在第三步，构建并训练 RNN 模型以预测全球温度趋势，其中 activation=`linear`，optimizer=`adam`，loss=`mse`。在 Table 9–2 中，可训练参数分别为 53,051、40,251 和 13,301，对应 LSTM、GRU 和 RNN。
+* Adaptive Moment Estimation (`Adam`)
+* Stochastic Gradient Descent (`SGD`)
+* Adaptive Moment Estimation with Infinity Norm (`Adamax`)
+* Adaptive Gradient Algorithm (`Adagrad`)
+* Adaptive Delta (`Adadelta`)
+* Root Mean Square Propagation (`RMSProp`)
+* Nesterov Adaptive Moment Estimation (`Nadam`)
+
+各种优化器的优缺点在 Table 9–1 中进行了汇总。在第一步，构建并训练 `LSTM` 模型以预测全球温度趋势，其中 `activation='linear'`，`optimizer='adam'`，`loss='mse'`。在第二步，构建并训练 `GRU` 模型以预测全球温度趋势，其中 `activation='linear'`，`optimizer='adam'`，`loss='mse'`。在第三步，构建并训练 `RNN` 模型以预测全球温度趋势，其中 `activation='linear'`，`optimizer='adam'`，`loss='mse'`。在 Table 9–2 中，可训练参数分别为 53,051、40,251 和 13,301，对应 `LSTM`、`GRU` 和 `RNN`。
 
 ### Table 9–1
+
 各种优化器的优缺点。
 
 | S. No. | Optimizer | Advantages | Disadvantages |
 | --- | --- | --- | --- |
-| 1 | Adam | • Efficient<br>• Ease of implementation<br>• Applicable to large datasets and high-dimensional models | Hyperparameter tweaking is necessary |
-| 2 | SGD | • Simple to implement<br>• Efficient in computation<br>• Works well with big datasets that have an elevated feature space dimensionality | • Inert in the nearby minimum<br>• Extremely sensitive to the starting learning rate |
-| 3 | Adamax | • Robust to high-dimensional spaces<br>• Performs well in presence of noisy gradients | Computationally expensive |
-| 4 | Adagrad | • Adaptive learning rate per parameter<br>• Efficient with sparse data | • Stop learning too early<br>• Acquisition rates may rapidly decrease as quadratic gradients accumulate |
-| 5 | Adadelta | • Lack of learning rate exceedingly precise<br>• Has the ability to adjust the pace of learning even more quickly than Adagrad | Rapid convergence is caused by an excessively rapid pace of learning adaptation |
-| 6 | RMSProp | • Working well for goals that are not stationary<br>• A parameter that restricts the buildup of gradients has an adaptive learning rate | Slow convergence rate in some situations |
-| 7 | Nadam | • Little faster training time than Adam<br>• Less tuning on hyperparameters | Change optimizer if performance of model does not meet expectation |
+| 1 | `Adam` | • Efficient<br>• Ease of implementation<br>• Applicable to large datasets and high-dimensional models | Hyperparameter tweaking is necessary |
+| 2 | `SGD` | • Simple to implement<br>• Efficient in computation<br>• Works well with big datasets that have an elevated feature space dimensionality | • Inert in the nearby minimum<br>• Extremely sensitive to the starting learning rate |
+| 3 | `Adamax` | • Robust to high-dimensional spaces<br>• Performs well in presence of noisy gradients | Computationally expensive |
+| 4 | `Adagrad` | • Adaptive learning rate per parameter<br>• Efficient with sparse data | • Stop learning too early<br>• Acquisition rates may rapidly decrease as quadratic gradients accumulate |
+| 5 | `Adadelta` | • Lack of learning rate exceedingly precise<br>• Has the ability to adjust the pace of learning even more quickly than `Adagrad` | Rapid convergence is caused by an excessively rapid pace of learning adaptation |
+| 6 | `RMSProp` | • Working well for goals that are not stationary<br>• A parameter that restricts the buildup of gradients has an adaptive learning rate | Slow convergence rate in some situations |
+| 7 | `Nadam` | • Little faster training time than `Adam`<br>• Less tuning on hyperparameters | Change optimizer if performance of model does not meet expectation |
 
 ### Table 9–2
-
-
-
-
 
 长短期记忆 (`LSTM`)、门控循环单元 (`GRU`) 和简单循环神经网络 (`RNN`) 中的可训练参数。
 
@@ -3037,7 +2933,7 @@ Keras 为神经网络模型训练提供了众多优化器。以下优化算法�
 | 2 | `GRU` | 40,251 | 40,251 | 0 |
 | 3 | Simple `RNN` | 13,301 | 13,301 | 0 |
 
-对于使用 `LSTM` 算法和 `Adam` 优化器的美国数据，历史、逐年温度和误差的图示如 Figs.9–23–9–26 所示。同样，Figs.9–27–9–30 显示了使用 `LSTM` 算法和 `Adam` 优化器的印度数据的历史、逐年温度和误差。
+对于使用 `LSTM` 算法和 `Adam` 优化器的美国数据，历史、逐年温度和误差的图示如 Figs. 9–23–9–26 所示。同样，Figs. 9–27–9–30 显示了使用 `LSTM` 算法和 `Adam` 优化器的印度数据的历史、逐年温度和误差。
 
 ![Figure 9–23 History of training set and testing set (US data).](img/F000080f09-23-9780443219054.jpg)
 
@@ -3071,15 +2967,16 @@ Figure 9–29 Error in actual and prediction values of temperature (India data).
 
 Figure 9–30 Error in temperature (India data).
 
-评估模型预测效率的一个流行指标是均方误差，即 `MSE`。 Table 9–3 显示了在 `LSTM`、`GRU` 和 `RNN` 算法中使用的各种优化器的 `MSE` 值。了解这三种模型后可以观察到，`LSTM` 对于 1743 年至 2013 年的序列全球温度数据表现良好。使用 `Adam` 优化器，使用 `LSTM` 可以实现更快的训练和计算成本更低，其次是 `GRU` 和 `RNN`。同样，使用 `SGD` 优化器，`LSTM` 预测效果良好，其次是 `GRU` 和 `RNN`。但使用 `Adamax` 优化器，`LSTM` 预测效果良好，其次是 `RNN` 和 `GRU`。同样，使用 `Adagrad` 和 `Adadelta` 优化器，`LSTM` 预测效果良好，其次是 `GRU` 和 `RNN`。使用 `RMSProp` 优化器，`GRU` 预测效果良好，其次是 `RNN` 和 `LSTM`。使用 `Nadam` 优化器，`LSTM` 预测效果良好，其次是 `RNN` 和 `GRU`。
+评估模型预测效率的一个流行指标是均方误差，即 `MSE`。Table 9–3 显示了在 `LSTM`、`GRU` 和 `RNN` 算法中使用的各种优化器的 `MSE` 值。了解这三种模型后可以观察到，`LSTM` 对于 1743 年至 2013 年的序列全球温度数据表现良好。使用 `Adam` 优化器，使用 `LSTM` 可以实现更快的训练和计算成本更低，其次是 `GRU` 和 `RNN`。同样，使用 `SGD` 优化器，`LSTM` 预测效果良好，其次是 `GRU` 和 `RNN`。但使用 `Adamax` 优化器，`LSTM` 预测效果良好，其次是 `RNN` 和 `GRU`。同样，使用 `Adagrad` 和 `Adadelta` 优化器，`LSTM` 预测效果良好，其次是 `GRU` 和 `RNN`。使用 `RMSProp` 优化器，`GRU` 预测效果良好，其次是 `RNN` 和 `LSTM`。使用 `Nadam` 优化器，`LSTM` 预测效果良好，其次是 `RNN` 和 `GRU`。
 
 ### Table 9–3
 
-长短期记忆 (`LSTM`)、门控循环单元 (`GRU`) 和简单循环神经网络 (`RNN`) 中使用的各种优化器的均方误差 (`MSE`) 值。
 
-| S. No. | Optimizer | `MSE` |
-| --- | --- | --- |
-| `LSTM` | `GRU` | Simple `RNN` |
+
+# 长短期记忆 (`LSTM`)、门控循环单元 (`GRU`) 和简单循环神经网络 (`RNN`) 中使用的各种优化器的均方误差 (`MSE`) 值
+
+| S. No. | Optimizer | `LSTM` | `GRU` | Simple `RNN` |
+| --- | --- | --- | --- | --- |
 | 1 | `Adam` | 0.09250031065887551 | 0.08040434597627735 | 0.06096303859943463 |
 | 2 | `SGD` | 1.8776324756386953 | 0.9815534033191056 | 0.11220742113813277 |
 | 3 | `Adamax` | 0.0998461682132788 | 0.09817570471281879 | 0.09855693036455689 |
@@ -3088,7 +2985,7 @@ Figure 9–30 Error in temperature (India data).
 | 6 | `RMSProp` | 0.07977269791361769 | 0.10032250216117587 | 0.08745906210421796 |
 | 7 | `Nadam` | 0.09401263234931696 | 0.07443513244167563 | 0.0772197251373337 |
 
-## 9.5 Conclusions and recommendations
+# 9.5 Conclusions and recommendations
 
 本章描述了在 `python` 框架内使用 DL 模型对全球温度进行气候变化建模的方法论。原始且未经处理的全球数据集收集自 Berkeley Earth（[`berkeleyearth.org/data/`](http://berkeleyearth.org/data/)）。它提供了从 1743 年到 2013 年的网格格式温度数据以及陆地和海洋的超高分辨率时间序列数据。构建、训练和评估了三种流行的神经网络，如 `RNN`、`LSTM` 和 `GRU`，使用各种优化器如 `Adam`、`SGD`、`Adamax`、`Adagrad`、`Adadelta`、`RMSprop` 和 `Nadam` 来预测全球温度趋势以及美国和印度温度趋势。本章的主要贡献如下：
 
@@ -3097,36 +2994,31 @@ Figure 9–30 Error in temperature (India data).
 3. 使用 `Adamax` 优化器，`LSTM` 预测效果良好，其次是 `RNN` 和 `GRU`。均方误差为：`MSE=0.0998461682132788`（`LSTM`），`MSE=0.09855693036455689`（`RNN`），`MSE=0.09817570471281879`（`GRU`）
 4. 使用 `Adagrad` 和 `Adadelta` 优化器，`LSTM` 预测效果良好，其次是 `GRU` 和 `RNN`。均方误差为：`MSE=22.645661292549917`（`Adagrad` 下的 `LSTM`），`MSE=2.210322750347732`（`Adagrad` 下的 `GRU`），`MSE=0.22145172804570754`（`Adagrad` 下的 `RNN`），`MSE=49.68461904083209`（`Adadelta` 下的 `LSTM`），`MSE=41.480035564039305`（`Adadelta` 下的 `GRU`），`MSE=13.816304188418261`（`Adadelta` 下的 `RNN`）
 5. 使用 `RMSProp` 优化器，`GRU` 预测效果良好，其次是 `RNN` 和 `LSTM`。均方误差为：`MSE=0.10032250216117587`（`GRU`），`MSE=0.08745906210421796`（`RNN`），`MSE=0.07977269791361769`（`LSTM`）
-6. 使用 `Nadam` 优化器，`LSTM` 预测效果良好，其次是 `RNN` 和 `GRU`。均方误差为：`MSE=0.09401263234931696`（`LSTM`），`MSE=0.0772197251373337`（`RNN`），`MSE=0.07443513244167563`（`GRU`）。
+6. 使用 `Nadam` 优化器，`LSTM` 预测效果良好，其次是 `RNN` 和 `GRU`。均方误差为：`MSE=0.09401263234931696`（`LSTM`），`MSE=0.0772197251373337`（`RNN`），`MSE=0.07443513244167563`（`GRU`）
 
 本章中说明的 DL 模型可用于预测地球即将到来的气候变化。
 
-## References
+# References
 
-* Ardabili et al., 2020 Ardabili, S., Mosavi, A., Dehghani, M., Várkonyi-Kóczy, A.R. (2020). Deep learning and machine learning in hydrological processes climate change and earth systems a systematic review. In: Várkonyi-Kóczy, A. (eds) *Engineering for sustainable future*. INTER-ACADEMIA 2019. Lecture notes in networks and systems, 101, Springer, Cham. [`doi.org/10.1007/978-3-030-36841-8\_5`](https://doi.org/10.1007/978-3-030-36841-8_5).
-* Bolibar et al., 2022 Bolibar J, Rabatel A, Gouttevin I. Nonlinear sensitivity of glacier mass balance to future climate change unveiled by deep learning. *Nature Communications*. 2022;13:409–421 [`doi.org/10.1038/s41467-022-28033-0`](https://doi.org/10.1038/s41467-022-28033-0).
-
-
-
-
-
-* Chakrabortty et al., 2021 Chakrabortty R, Pal SC, Janizadeh S. Impact of climate change on future flood susceptibility: An evaluation based on deep learning algorithms and GCM model. *Water Resources Management*. 2021;35:4251–4274 [`doi.org/10.1007/s11269-021-02944-x`](https://doi.org/10.1007/s11269-021-02944-x).
+* Ardabili et al., 2020 Ardabili, S., Mosavi, A., Dehghani, M., Várkonyi-Kóczy, A.R. (2020). Deep learning and machine learning in hydrological processes climate change and earth systems a systematic review. In: Várkonyi-Kóczy, A. (eds) *Engineering for sustainable future*. INTER-ACADEMIA 2019. Lecture notes in networks and systems, 101, Springer, Cham. [`doi.org/10.1007/978-3-030-36841-8_5`](https://doi.org/10.1007/978-3-030-36841-8_5)
+* Bolibar et al., 2022 Bolibar J, Rabatel A, Gouttevin I. Nonlinear sensitivity of glacier mass balance to future climate change unveiled by deep learning. *Nature Communications*. 2022;13:409–421 [`doi.org/10.1038/s41467-022-28033-0`](https://doi.org/10.1038/s41467-022-28033-0)
+* Chakrabortty et al., 2021 Chakrabortty R, Pal SC, Janizadeh S. Impact of climate change on future flood susceptibility: An evaluation based on deep learning algorithms and GCM model. *Water Resources Management*. 2021;35:4251–4274 [`doi.org/10.1007/s11269-021-02944-x`](https://doi.org/10.1007/s11269-021-02944-x)
 * Cho et al., 2014 Cho, K., Bart, M., Dzmitry, B., & Yoshua, B. (2014). On the properties of neural machine translation: Encoder-decoder approaches. In *Proceedings of SSST-8, eighth workshop on syntax, semantics and structure in statistical translation*, 103-111. Doha, Qatar.
-* David et al., 2022 David R, Priya LD, Lynn HK, et al…. Tackling climate change with machine learning. *ACM Computing Surveys*. 2022;55(2):1–96 [`doi.org/10.1145/3485128`](https://doi.org/10.1145/3485128).
-* Haggag et al., 2021 Haggag M, Siam AS, El-Dakhakhni W. A deep learning model for predicting climate-induced disasters. *Natural Hazards*. 2021;107:1009–1034 [`doi.org/10.1007/s11069-021-04620-0`](https://doi.org/10.1007/s11069-021-04620-0).
-* Hochreiter and Schmidhuber, 1997 Hochreiter S, Schmidhuber J. Long short-term memory. *Neural Computation*. 1997;9(8):1735–1780 [`doi.org/10.1162/neco.1997.9.8.1735`](https://doi.org/10.1162/neco.1997.9.8.1735).
-* Ki et al., 2021 Ki JN, Qian L, Sung KH, et al. Inter-regional multimedia fate analysis of PAHs and potential risk assessment by integrating deep learning and climate change scenarios. *Journal of Hazardous Materials*. 2021;411:125149–125165 [`doi.org/10.1016/j.jhazmat.2021.125149`](https://doi.org/10.1016/j.jhazmat.2021.125149).
-* Ladi et al., 2022 Ladi T, Jabalameli S, Sharifi A. Applications of machine learning and deep learning methods for climate change mitigation and adaptation. *Environment and Planning B: Urban Analytics and City Science*. 2022;49(4):1314–1330 [`doi.org/10.1177/23998083221085281`](https://doi.org/10.1177/23998083221085281).
-* Lee et al., 2020 Lee D, Lee G, Kim S, Jung S. Future runoff analysis in the Mekong river basin under a climate change scenario using deep learning. *Water*. 2020;12(6):1556 [`doi.org/10.3390/w12061556`](https://doi.org/10.3390/w12061556).
-* Lydiri et al., 2023 Lydiri M, Mourabit Y, Habouz Y. A performant deep learning model for sentiment analysis of climate change. *Social Network Analysis and Mining*. 2023;13(8):1–16 [`doi.org/10.1007/s13278-022-01014-3`](https://doi.org/10.1007/s13278-022-01014-3).
-* Malik et al., 2023 Malik I, Ahmed M, Gulzar Y, et al. Estimation of the extent of the vulnerability of agriculture to climate change using analytical and deep-learning methods: A case study in Jammu, Kashmir, and Ladakh. *Sustainability*. 2023;15(14):11465–11479 [`doi.org/10.3390/su151411465`](https://doi.org/10.3390/su151411465).
-* NASA, 2024 NASA. (2024). [`www.nasa.gov/audience/forstudents/k-4/stories/nasa-knows/what-is-climate-change-k4.html`](https://www.nasa.gov/audience/forstudents/k-4/stories/nasa-knows/what-is-climate-change-k4.html).
-* Paramita et al., 2022 Paramita R, Subodh CP, Saeid J, et al. Evaluation of climate change impacts on future gully erosion using deep learning and soft computational approaches. *Geocarto International*. 2022;37(26):12709–12745 [`doi.org/10.1080/10106049.2022.2071473`](https://doi.org/10.1080/10106049.2022.2071473).
-* Wunsch et al., 2022 Wunsch A, Liesch T, Broda S. Deep learning shows declining groundwater levels in Germany until 2100 due to climate change. *Nature Communications*. 2022;13:1221 [`doi.org/10.1038/s41467-022-28770-2`](https://doi.org/10.1038/s41467-022-28770-2).
+* David et al., 2022 David R, Priya LD, Lynn HK, et al…. Tackling climate change with machine learning. *ACM Computing Surveys*. 2022;55(2):1–96 [`doi.org/10.1145/3485128`](https://doi.org/10.1145/3485128)
+* Haggag et al., 2021 Haggag M, Siam AS, El-Dakhakhni W. A deep learning model for predicting climate-induced disasters. *Natural Hazards*. 2021;107:1009–1034 [`doi.org/10.1007/s11069-021-04620-0`](https://doi.org/10.1007/s11069-021-04620-0)
+* Hochreiter and Schmidhuber, 1997 Hochreiter S, Schmidhuber J. Long short-term memory. *Neural Computation*. 1997;9(8):1735–1780 [`doi.org/10.1162/neco.1997.9.8.1735`](https://doi.org/10.1162/neco.1997.9.8.1735)
+* Ki et al., 2021 Ki JN, Qian L, Sung KH, et al. Inter-regional multimedia fate analysis of PAHs and potential risk assessment by integrating deep learning and climate change scenarios. *Journal of Hazardous Materials*. 2021;411:125149–125165 [`doi.org/10.1016/j.jhazmat.2021.125149`](https://doi.org/10.1016/j.jhazmat.2021.125149)
+* Ladi et al., 2022 Ladi T, Jabalameli S, Sharifi A. Applications of machine learning and deep learning methods for climate change mitigation and adaptation. *Environment and Planning B: Urban Analytics and City Science*. 2022;49(4):1314–1330 [`doi.org/10.1177/23998083221085281`](https://doi.org/10.1177/23998083221085281)
+* Lee et al., 2020 Lee D, Lee G, Kim S, Jung S. Future runoff analysis in the Mekong river basin under a climate change scenario using deep learning. *Water*. 2020;12(6):1556 [`doi.org/10.3390/w12061556`](https://doi.org/10.3390/w12061556)
+* Lydiri et al., 2023 Lydiri M, Mourabit Y, Habouz Y. A performant deep learning model for sentiment analysis of climate change. *Social Network Analysis and Mining*. 2023;13(8):1–16 [`doi.org/10.1007/s13278-022-01014-3`](https://doi.org/10.1007/s13278-022-01014-3)
+* Malik et al., 2023 Malik I, Ahmed M, Gulzar Y, et al. Estimation of the extent of the vulnerability of agriculture to climate change using analytical and deep-learning methods: A case study in Jammu, Kashmir, and Ladakh. *Sustainability*. 2023;15(14):11465–11479 [`doi.org/10.3390/su151411465`](https://doi.org/10.3390/su151411465)
+* NASA, 2024 NASA. (2024). [`www.nasa.gov/audience/forstudents/k-4/stories/nasa-knows/what-is-climate-change-k4.html`](https://www.nasa.gov/audience/forstudents/k-4/stories/nasa-knows/what-is-climate-change-k4.html)
+* Paramita et al., 2022 Paramita R, Subodh CP, Saeid J, et al. Evaluation of climate change impacts on future gully erosion using deep learning and soft computational approaches. *Geocarto International*. 2022;37(26):12709–12745 [`doi.org/10.1080/10106049.2022.2071473`](https://doi.org/10.1080/10106049.2022.2071473)
+* Wunsch et al., 2022 Wunsch A, Liesch T, Broda S. Deep learning shows declining groundwater levels in Germany until 2100 due to climate change. *Nature Communications*. 2022;13:1221 [`doi.org/10.1038/s41467-022-28770-2`](https://doi.org/10.1038/s41467-022-28770-2)
 
-## 旅游与气候变化关系的计算建模方法
+# 旅游与气候变化关系的计算建模方法
 
-Gamze Kose, 土耳其阿伊丁阿德南·门德雷斯大学健康旅游系
+**Gamze Kose**, 土耳其阿伊丁阿德南·门德雷斯大学健康旅游系
 
 ## 摘要
 
@@ -3140,10 +3032,9 @@ Gamze Kose, 土耳其阿伊丁阿德南·门德雷斯大学健康旅游系
 
 旅游可以被定义为解释人们为了个人或以业务为导向的目的离开其已知地点（国家或城市），并与目标地点进行文化、社会和经济互动的概念（Camilleri, 2018; Netto, 2009）。在此背景下，旅游并非一种常见的人类活动。相反，它有许多原因和结果，应从社会科学和技术科学两个角度进行审视。实际上，与社会和经济优势的联系一直在塑造对与旅游潜力相关具体因素的总体关注。这样的潜力与人们的兴趣、社会文化特征、进行旅游活动的直接或间接原因以及确定旅游行动计划的经济状况相关联（Camilleri, 2018; Sharma, 2004）。除此之外，总体方法已通过创建确保可持续旅游的系统内反馈机制的成果得到支持。所有这些努力都需要与人们的反馈以及通过不断进步的技术组件广泛收集的数据中的隐藏模式密切互动。还值得注意的是，旅游活动对技术和社会条件方面的全球变化高度敏感。
 
-
-
-
 当今日的条件以技术视角进行审视时，可以说信息和通信技术（ICT）的进步使得旅游目的地的旅行更加实用。ICT 使人们能够获取世界各地特定地点的所需信息。此外，获取旅行方式、文化景点以及目标地点潜在活动的信息也更加便捷（Bethapudi, 2013; Van Wee et al., 2013）。由于 ICT 使得全球沟通得以实现，信息获取和沟通的优势使得在旅游情境中规划和行动变得不再遥不可及。当然，现代生活各个领域的数字化转型也影响了商业方式，使得全球旅行的更便捷方式提升了旅游目的的强度，不仅限于个人意图，也包括商业目的（Abeba, 2024; Imtiaz & Kim, 2019; Şahin, 2024）。因此，基于此前的所有解释，可以说技术是推动全球旅游活动扩张的关键催化剂。
+
+
 
 正如旅游领域所见，技术进步在生活许多领域带来了优势。然而，技术的强烈使用以及人类活动的贡献增加了气候变化的程度。气候变化以温度水平和天气事件的平均状态的显著变化和变异而闻名（Romm, 2022）。早期的研究表明，气候变化的预警已经出现，但自 2000 年代以来，气候条件的具体影响已经显现。特别是近几年，出现了许多意外事件，如风暴、极端（高温或低温）温度、森林火灾、冰川融化以及生态系统的转移（Levine & Steele, 2021; Walsh et al., 2020）。甚至也有讨论将 `COVID-19` 与可能的流行病与气候变化相连（Gupta et al., 2021; Lounis et al., 2023）。随着时间的推移，气候变化的术语逐渐演变为气候危机。由于这似乎是对人类及其他生物的生存性风险，目前正在大力努力应对气候变化的负面影响，并采取措施使现状转向平衡状态。从全国范围内减少碳排放的法规，到低能耗的绿色解决方案，再到电动汽车的转型以取代化石燃料车辆，气候危机的斗争中有许多不同的做法。此外，分析人类行为——无论是直接还是间接导致资源不均使用——也至关重要。与此相关，人类活动通常与使用化石燃料车辆以及与先进技术的互动相联系（Dunlap & Brulle, 2015; Karyono, 2015; Trenberth, 2018）。与先进技术的互动包括使用云服务、运行人工智能、投资加密货币，甚至使用智能设备拍照、录像或进行即时通信。同样，旅游活动的增加也与气候变化相关，因为信息获取、沟通、旅行以及文化、社会和商业互动中的进一步行动在技术使用背景下显而易见。由于数据流量庞大且可能与复杂关系相连，这些活动可以通过计算模型的努力来观察。除了人类活动的负面影响外，还可以关注气候变化对旅游活动的负面影响。实际上，文献更关注气候变化对旅游的影响，但通过双向讨论，可以更好地把握平衡。
 
@@ -3156,9 +3047,6 @@ Gamze Kose, 土耳其阿伊丁阿德南·门德雷斯大学健康旅游系
 当前的旅游范畴高度依赖于技术的使用，因为旅游活动的任何阶段都可以通过技术组件得到改进。此外，气候条件的变化迫使旅游领域调整方向或聚焦于不同的地点或活动阶段。因此，理解不同主体和活动如何塑造旅游与气候变化之间的联系至关重要。本节在转向计算建模视角之前，提供相关的一般性解释。
 
 ### 10.2.1 Technology factor
-
-
-
 
 旅游业在从不同行为主体（如机构、管理人员、游客和第三方服务提供商）的角度进行评估时具有多个阶段。在活动策划、广告和推广活动中，机构和管理人员使用以数据为导向的分析和决策支持系统。从游客的角度来看，类似的技术互动通过使用社交媒体、专门开发的应用程序以及由先进技术背景赋能的沟通周期得以实现。因此，即使在确切的旅游活动之前，也存在着显著的技术使用强度，这可以与气候变化动态相联系。在旅行时，一些资源被用于移动。考虑到乘坐飞机旅行以及进一步的交通，有多种使用技术的方式，这会触发燃料和电力等资源的消耗。当旅游活动正在进行时，由于旅游活动内部不可预测的人类活动，它几乎是无止境的流动。当然，旅游的特殊性导致人类活动增加，从而导致进一步的技术和资源使用。图 10–1 展示了旅游的不同阶段以及潜在的技术使用案例。
 
@@ -3178,17 +3066,13 @@ Gamze Kose, 土耳其阿伊丁阿德南·门德雷斯大学健康旅游系
 
 #### 10.2.2.2 旅游对气候变化的影响
 
-
-
-
-
 聚焦于旅游对气候影响的文献在详细考虑温室气体排放时取得了显著成果。Lenzen et al. (2018) 进行了一项研究量化了旅游在共计 160 个国家之间造成的全球碳流动。该研究揭示了由于旅游活动碳足迹出现了关键性增长。研究发现旅游活动的原因与交通、食品和购物相关。作者认为旅游将在温室气体排放的全球增长中发挥显著作用。详细而言，Filimonau et al. (2013) 根据其对度假套餐旅游背景下碳影响的研究发现，旅游对温室气体排放具有关键的间接影响。作为另一项发现的问题，Eijgelaar et al. (2010) 表明南极邮轮旅游活动对排放和气候危机产生影响。具体而言，旅游需求以及包括飞机和邮轮在内的交通似乎是具有负面影响的重要因素。相关的南极旅游问题在替代研究中经常被考虑（Amelung & Lamers, 2007；Jabour, 2014；Kariminia et al., 2013；Nielsen, 2022；Shijin et al., 2020；Tejedo et al., 2022）。已有研究通过考虑世界各地特定旅游目的地展示了旅游活动对气候的影响。Gühnemann et al. (2021) 表明奥地利的游客出行由于密集的汽车出行和长途飞行导致气体排放增加。考虑到瑞士的案例，Perch-Nielsen et al. (2010) 发现尤其是航空运输对气体排放有很大影响，导致气候危机。研究还进行了预测以了解旅游的气体排放是否可以减少。然而，到目前为止研究尚未提供积极的消息（Balli et al., 2019；Dubois & Ceron, 2006b；Isik et al., 2017；Liu et al., 2021；Scott et al., 2010）。
 
 研究表明，美洲大陆高收入国家的旅游活动在气候变化的负面影响中发挥主导作用（Gozbasi et al., 2021）。这也可以扩展到全球范围内的其他高收入国家（Lenzen et al., 2018）。另一方面，旅游业发达的亚洲国家在环境影响方面被发现存在劣势（Nosheen et al., 2021），但 Voumik et al. (2023) 的一项最新研究表明旅游对亚洲的碳排放没有直接影响。然而，似乎研究中报告的主要原因仍然可以间接与旅游活动相关。最终，似乎基于区域的研究不足以从特定国家旅游视角清晰地描述全球气候危机。因此，旅游与气候变化之间的联系采用累积状态，而解决方案可以被视为地方性的。当评估旅游活动的细节时，可以看出文献经常在旅游与气候危机关系背景下提及交通、技术使用和人类流动（Dube & Nhamo, 2021）。考虑到研究结果，以下因素可以被指出为旅游中导致气候变化负面影响的基本组成部分：
 
-*   • *Transportation and Travels*: 尤其是航空运输、邮轮旅行和长途汽车旅行（特别是使用化石燃料和/或旧车）导致温室气体排放增加。
-*   • *Technology*: 尽管该因素应进一步研究以确定主要技术工具和/或使用视角，但似乎旅游活动期间技术的密集使用在负面影响中发挥作用。这种联系是实际问题，与技术使用增加与气候变化之间的正相关联系在一起。
-*   • *Mobility*: 人类流动在即使是旅游活动时也具有许多复杂动态。它包括许多人类活动，包括旅行、购物、技术使用以及可与气候变化情景联系的许多其他行为。因此，人类流动的累积视角似乎是气候负面影响的另一个因素。
+*   **Transportation and Travels**: 尤其是航空运输、邮轮旅行和长途汽车旅行（特别是使用化石燃料和/或旧车）导致温室气体排放增加。
+*   **Technology**: 尽管该因素应进一步研究以确定主要技术工具和/或使用视角，但似乎旅游活动期间技术的密集使用在负面影响中发挥作用。这种联系是实际问题，与技术使用增加与气候变化之间的正相关联系在一起。
+*   **Mobility**: 人类流动在即使是旅游活动时也具有许多复杂动态。它包括许多人类活动，包括旅行、购物、技术使用以及可与气候变化情景联系的许多其他行为。因此，人类流动的累积视角似乎是气候负面影响的另一个因素。
 
 Fig. 10–2 代表了旅游与气候变化之间双向关系结果的总体概述。可以看出，双方的影响各有其特征并与许多参数具有复杂关系。此外，解决气候变化问题的努力需要在相关关系背景下需要更多预测性和描述性分析。这种方式中的一种重要方法是使用计算建模来理解和预测动态。这样，进一步的发现可以帮助设计旅游与气候变化之间的平衡关系。
 
@@ -3204,23 +3088,25 @@ Figure 10–2 Two-sided relation between tourism and climate change.
 
 文献提供了从气候变化对旅游影响视角的计算模型研究。例如，Mieczkowski (1985) 通过召回模型作为旅游气候指数（`TCIndex`）提供了最早的建模视角之一。考虑到日间热舒适指数（`Cd_coi`）、日热舒适指数（`Cda_coi`）、降水量指数（`Pa_rec`）、风欣赏指数（`W`）和日照价值指数（`S`），`TCIndex` 得分根据 20 到 100 的范围进行分类：
 
-
-
-
-
 `TCIndex` = 2(4`Cd_coi`+`Cda_coi`+2`S`+2`Pa_rec`+`W`) (10–1)
 
+```
 ![Equation](img/F00002Xsi1.png)(10–1)
+```
 
 `TCIndex` 并非旨在聚焦气候变化对旅游业的直接影响，但足以追踪气候变化对旅游流的影响。除此之外，文献一直关注测量旅游需求以了解气候变化对旅游业的影响。就计算建模而言，通常考虑三种方法：离散选择模型、时间序列分析以及总量旅游需求模型（Rossello-Nadal, 2014）。离散选择模型基于人们为何选择特定旅游目的地的提问。据此，Morley (1992) 提出了根据访问目的地 *i* 进行效用计算的模型（而非 *j*，考虑 *i ≠ j*），其选择概率计算如下：
 
 `Util[n_i]` = `β[n]'a[n_i]` + `τ[n_i]` (10–2)
 
+```
 ![Equation](img/F00002Xsi2.png)(10–2)
+```
 
 `π[n_i]` = Pr(`β[n]'a[n[i]]`+`τ[n[i]]` > `β[n]'a[n[j]]`+`τ[n[j]]`) (10–3)
 
+```
 ![Equation](img/F00002Xsi3.png)(10–3)
+```
 
 相关模型激发了研究对微观经济视角及进一步营销分析的兴趣。然而，由于决策过程是某种复杂动态，它常被认为受众多参数影响（Marcussen, 2011; Rossello-Nadal, 2014）。另一方面，离散选择模型也被用来理解气候变化如何影响决策以及旅游业的总体状况（Bujosa & Rossello, 2013; Eugenio-Martin & Campos-Soria, 2010）。
 
@@ -3228,137 +3114,104 @@ Figure 10–2 Two-sided relation between tourism and climate change.
 
 `∂pF i` = `∇px[i]` + `δyw[i]` (10–4)
 
+```
 ![Equation](img/F00002Xsi4.png)(10–4)
+```
 
 值得注意的是，这样的模型有助于揭示英国游客的旅游行为与英国天气相关不同变量之间的显著关系（Rossello, 2009）。需要指出的是，时间序列分析与离散选择模型一样具有价值，因为这些建模方法显示了旅游与气候变化之间的关系。然而，有人指出这两种建模方法都允许收集短期预测的信息，因此长期影响需要额外的建模解决方案（Li et al., 2005; Rossello-Nadal, 2014; Song & Li, 2008）。为应对这一状况，引入了总量旅游需求模型。作为一个显著的模型，汉堡旅游模型（HTM）采用两个方程来评估目标年份的国际游客出游和入境。具体而言，HTM 试图通过考虑诸如总到达人数（`Arr`）、总出发人数（`Dep`）、目标国家的平均温度（`Tar`）、人口（`Pop`）以及其他参数如该国人均收入（`IC`）等参数来理解气候变化如何影响旅游流（Hamilton et al., 2005）：
 
 
 
+### 10.3.1 气候变化对旅游业影响的计算模型
 
+气候变化对旅游业的影响也从旅游场所的角度进行了研究。例如，Pons-Pons et al. (2012) 模拟了安道尔冬季滑雪旅游的影响。Hein et al. (2009) 通过评估西班牙的五个不同旅游区域进行了另一项特定地点的研究。Bigano, Hamilton, et al. (2008) 提供了多国模型来理解海平面上升对旅游业的影响。Carrillo et al. (2022) 使用天气预报模型研究了加那利群岛的影响。还有替代研究来运行计算模型，以了解气候变化对北美、地中海、葡萄牙、西藏、德国-瑞士和奥地利阿尔卑斯山以及加拿大落基山脉等广泛和较小区域选择的影响 (Bigano, Bosello, et al., 2008; Pintassilgo et al., 2016; Scott et al., 2004, 2007; Soboll & Dingeldey, 2012; Zhong et al., 2019)。这些选择指出了确保受欢迎的旅游目的地以及在气候变化的负面影响下全国性参观区域可持续性的重要性。
 
-ln *Arr*[d] = *γ*[0] + *γ*[1]*X*[d] + *γ*[2]*Tar*[d] + *γ*[3]*Tar*[d]² + *γ*[4]*Y*[d] + *γ*[5]ln *IC*[d]<mml:math><mml:mi>ln</mml:mi><mml:msub><mml:mrow><mml:mspace width=".30em"/><mml:mi mathvariant="italic">Arr</mml:mi></mml:mrow><mml:mrow><mml:mi>d</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>&#947;</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>&#947;</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>X</mml:mi></mml:mrow><mml:mrow><mml:mi>d</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>&#947;</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi mathvariant="italic">Tar</mml:mi></mml:mrow><mml:mrow><mml:mi>d</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>&#947;</mml:mi></mml:mrow><mml:mrow><mml:mn>3</mml:mn></mml:mrow></mml:msub><mml:msubsup><mml:mrow><mml:mi mathvariant="italic">Tar</mml:mi></mml:mrow><mml:mrow><mml:mi>d</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msubsup><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>&#947;</mml:mi></mml:mrow><mml:mrow><mml:mn>4</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>Y</mml:mi></mml:mrow><mml:mrow><mml:mi>d</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>&#947;</mml:mi></mml:mrow><mml:mrow><mml:mn>5</mml:mn></mml:mrow></mml:msub><mml:mspace width=".20em"/><mml:mi>ln</mml:mi><mml:msub><mml:mrow><mml:mspace width=".20em"/><mml:mi mathvariant="italic">IC</mml:mi></mml:mrow><mml:mrow><mml:mi>d</mml:mi></mml:mrow></mml:msub></mml:math> (10–5)
+$$
+\ln Arr_d = \gamma_0 + \gamma_1 X_d + \gamma_2 Tar_d + \gamma_3 Tar_d^2 + \gamma_4 Y_d + \gamma_5 \ln IC_d \tag{10–5}
+$$
 
 ![Equation](img/F00002Xsi5.png)(10–5)
 
-$\\ln\\frac{\\mathit{Dep}\_{\\mathit{OR}}}{\\mathit{Pop}\_{\\mathit{OR}}} = \\delta\_{0} + \\delta\_{1}t\_{\\mathit{OR}} + \\delta\_{2}t\_{\\mathit{OR}}^{2} + \\delta\_{3}Z\_{\\mathit{OR}} + \\delta\_{4}\\mathit{IC}\_{\\mathit{OR}} + \\delta\_{5}\\ln{ X}\_{\\mathit{OR}}$<mml:math><mml:mi>ln</mml:mi><mml:mfrac><mml:mrow><mml:msub><mml:mrow><mml:mi mathvariant="italic">Dep</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="italic">OR</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi mathvariant="italic">Pop</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="italic">OR</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfrac><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>&#948;</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>&#948;</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="italic">OR</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>&#948;</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msub><mml:msubsup><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="italic">OR</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msubsup><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>&#948;</mml:mi></mml:mrow><mml:mrow><mml:mn>3</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>Z</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="italic">OR</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>&#948;</mml:mi></mml:mrow><mml:mrow><mml:mn>4</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi mathvariant="italic">IC</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="italic">OR</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>&#948;</mml:mi></mml:mrow><mml:mrow><mml:mn>5</mml:mn></mml:mrow></mml:msub><mml:mspace width=".20em"/><mml:mi>ln</mml:mi><mml:msub><mml:mrow><mml:mspace width=".25em"/><mml:mi>X</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="italic">OR</mml:mi></mml:mrow></mml:msub></mml:math> (10–6)
+$$
+\ln\frac{Dep_{OR}}{Pop_{OR}} = \delta_0 + \delta_1 t_{OR} + \delta_2 t_{OR}^2 + \delta_3 Z_{OR} + \delta_4 IC_{OR} + \delta_5 \ln X_{OR} \tag{10–6}
+$$
 
 ![Equation](img/F00002Xsi6.png)(10–6)
 
-气候变化对旅游业的影响也从旅游场所的角度进行了研究。例如，Pons-Pons et al. (2012) 模拟了安道尔冬季滑雪旅游的影响。 Hein et al. (2009) 通过评估西班牙的五个不同旅游区域进行了另一项特定地点的研究。 Bigano, Hamilton, et al. (2008) 提供了多国模型来理解海平面上升对旅游业的影响。 Carrillo et al. (2022) 使用天气预报模型研究了加那利群岛的影响。 还有替代研究来运行计算模型，以了解气候变化对北美、地中海、葡萄牙、西藏、德国-瑞士和奥地利阿尔卑斯山以及加拿大落基山脉等广泛和较小区域选择的影响 (Bigano, Bosello, et al., 2008; Pintassilgo et al., 2016; Scott et al., 2004, 2007; Soboll & Dingeldey, 2012; Zhong et al., 2019)。 这些选择指出了确保受欢迎的旅游目的地以及在气候变化的负面影响下全国性参观区域可持续性的重要性。
-
 ### 10.3.2 旅游业对气候影响的计算模型
 
-当情景转向旅游业引发气候变化/危机的情况时，基于计算建模的显著研究。 这些研究广泛考虑了旅游活动造成的温室气体排放。 例如， Kelly and Williams (2007) 引入了目的地规划策略的模型，其中包含能源使用和气体排放状态。 基于惠斯勒、不列颠哥伦比亚省（北美的一座山地度假胜地），他们通过考虑诸如旅行流量（`PerKmTr`：出行人公里）和建筑物中的能源消耗等方面来衡量能源和气体排放：
+当情景转向旅游业引发气候变化/危机的情况时，基于计算建模的显著研究。这些研究广泛考虑了旅游活动造成的温室气体排放。例如，Kelly and Williams (2007) 引入了目的地规划策略的模型，其中包含能源使用和气体排放状态。基于惠斯勒、不列颠哥伦比亚省（北美的一座山地度假胜地），他们通过考虑诸如旅行流量（`PerKmTr`：出行人公里）和建筑物中的能源消耗等方面来衡量能源和气体排放：
 
-${\\mathit{Per}\\mathit{Km}\\mathit{Tr}}\_{x} = \\sum\\limits\_{y = 1}^{m}\\left( \\mathit{empl}\_{y} \\times \\mathit{work}\\\_\\mathit{days} \\times {\\mathit{return}\\\_\\mathit{dist}}\_{y} \\times {{mod}\\\_\\mathit{spl}}\_{\\mathit{xy}} \\right)$<mml:math><mml:msub><mml:mrow><mml:mi mathvariant="italic">Per</mml:mi><mml:mspace width=".20em"/><mml:mi mathvariant="italic">Km</mml:mi><mml:mspace width=".20em"/><mml:mi mathvariant="italic">Tr</mml:mi></mml:mrow><mml:mrow><mml:mi>x</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:munderover><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>y</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>m</mml:mi></mml:mrow></mml:munderover><mml:mrow><mml:mo>(</mml:mo><mml:msub><mml:mrow><mml:mi mathvariant="italic">empl</mml:mi></mml:mrow><mml:mrow><mml:mi>y</mml:mi></mml:mrow></mml:msub><mml:mo>&#215;</mml:mo><mml:mi mathvariant="italic">work</mml:mi><mml:mi mathvariant="normal">\_</mml:mi><mml:mi mathvariant="italic">days</mml:mi><mml:mo>&#215;</mml:mo><mml:msub><mml:mrow><mml:mi mathvariant="italic">return</mml:mi><mml:mi mathvariant="normal">\_</mml:mi><mml:mi mathvariant="italic">dist</mml:mi></mml:mrow><mml:mrow><mml:mi>y</mml:mi></mml:mrow></mml:msub><mml:mo>&#215;</mml:mo><mml:msub><mml:mrow><mml:mi>mod</mml:mi><mml:mi mathvariant="normal">\_</mml:mi><mml:mi mathvariant="italic">spl</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="italic">xy</mml:mi></mml:mrow></mml:msub><mml:mo>)</mml:mo></mml:mrow></mml:math> (10–7)
+$$
+PerKmTr_x = \sum_{y=1}^{m} \left( empl_y \times work\_days \times return\_dist_y \times mod\_spl_{xy} \right) \tag{10–7}
+$$
 
 ![Equation](img/F00002Xsi7.png)(10–7)
 
-
-
-
-
-${\\mathit{Per}\\mathit{Km}\\mathit{Tr}}\_{x} = \\sum\\limits\_{y = 1}^{m}\\left( \\mathit{vis}\_{y} \\times {\\mathit{return}\\\_\\mathit{dist}}\_{y} \\times {{mod}\\\_\\mathit{spl}}\_{\\mathit{xy}} \\right)$<mml:math><mml:msub><mml:mrow><mml:mi mathvariant="italic">Per</mml:mi><mml:mspace width=".20em"/><mml:mi mathvariant="italic">Km</mml:mi><mml:mspace width=".20em"/><mml:mi mathvariant="italic">Tr</mml:mi></mml:mrow><mml:mrow><mml:mi>x</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:munderover><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>y</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>m</mml:mi></mml:mrow></mml:munderover><mml:mrow><mml:mo>(</mml:mo><mml:msub><mml:mrow><mml:mi mathvariant="italic">vis</mml:mi></mml:mrow><mml:mrow><mml:mi>y</mml:mi></mml:mrow></mml:msub><mml:mo>&#215;</mml:mo><mml:msub><mml:mrow><mml:mi mathvariant="italic">return</mml:mi><mml:mi mathvariant="normal">\_</mml:mi><mml:mi mathvariant="italic">dist</mml:mi></mml:mrow><mml:mrow><mml:mi>y</mml:mi></mml:mrow></mml:msub><mml:mo>&#215;</mml:mo><mml:msub><mml:mrow><mml:mi>mod</mml:mi><mml:mi mathvariant="normal">\_</mml:mi><mml:mi mathvariant="italic">spl</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="italic">xy</mml:mi></mml:mrow></mml:msub><mml:mo>)</mml:mo></mml:mrow></mml:math> (10–8)
+$$
+PerKmTr_x = \sum_{y=1}^{m} \left( vis_y \times return\_dist_y \times mod\_spl_{xy} \right) \tag{10–8}
+$$
 
 ![Equation](img/F00002Xsi8.png)(10–8)
 
-*E**n**g*\_*c**o**n**s**u**m**p*[*z**t*] = *E**x**i**s*\_*f**l**o**o**r*\_*a**r**e**a*[*z**t*] × *E**x**i**s*\_*E*\_*U*\_*I*[*z**t*]*E**x**i**s**t*\_*f**l**o**o**r*\_*a**r**e**a*[*z**t*]<mml:math><mml:msub><mml:mrow><mml:mi mathvariant="italic">Eng</mml:mi><mml:mi mathvariant="normal">\_</mml:mi><mml:mi mathvariant="italic">consump</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="italic">zt</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi mathvariant="italic">Exis</mml:mi><mml:mi mathvariant="normal">\_</mml:mi><mml:mi mathvariant="italic">floor</mml:mi><mml:mi mathvariant="normal">\_</mml:mi><mml:mi mathvariant="italic">area</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="italic">zt</mml:mi></mml:mrow></mml:msub><mml:mo>&#215;</mml:mo><mml:msub><mml:mrow><mml:mi mathvariant="italic">Exis</mml:mi><mml:mi mathvariant="normal">\_</mml:mi><mml:mi>E</mml:mi><mml:mi mathvariant="normal">\_</mml:mi><mml:mi>U</mml:mi><mml:mi mathvariant="normal">\_</mml:mi><mml:mi>I</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="italic">zt</mml:mi></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi mathvariant="italic">Exist</mml:mi><mml:mi mathvariant="normal">\_</mml:mi><mml:mi mathvariant="italic">floor</mml:mi><mml:mi mathvariant="normal">\_</mml:mi><mml:mi mathvariant="italic">area</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="italic">zt</mml:mi></mml:mrow></mml:msub></mml:math> (10–9)
-
-![Equation](img/F00002Xsi9.png)(10–9)
-
-另一项研究聚焦于碳排放动态与旅游经济增长以及技术效率的关系（Sun, 2016）。在此基础上，该研究构建了一个通用模型，包括对游客经济活动和能源使用的计算。具体而言，该模型采用旅游直接和国内间接温室气体排放（GHG）的方法如下：
-
-计算时间段之间碳排放差异：
-
-*E**f**f**e**c**t* = *C**D**Y*<mml:math><mml:mi mathvariant="italic">Effect</mml:mi><mml:mo>=</mml:mo><mml:mi mathvariant="italic">CDY</mml:mi></mml:math> (10–10)
-
-![Equation](img/F00002Xsi10.png)(10–10)
-
-*E**f**f**e**c**t*[*t**i**m**e* + 1] − *E**f**f**e**c**t*[*t**i**m**e*] = *E*[*i**n**t*] + *E*[*s**t**r*] + *E*[*f**d*]<mml:math><mml:msub><mml:mrow><mml:mi mathvariant="italic">Effect</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="italic">time</mml:mi><mml:mo>+</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>&8722;</mml:mo><mml:msub><mml:mrow><mml:mi mathvariant="italic">Effect</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="italic">time</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>E</mml:mi></mml:mrow><mml:mrow><mml:mi>int</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>E</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="italic">str</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>E</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="italic">fd</mml:mi></mml:mrow></mml:msub></mml:math> (10–11)
-
-![Equation](img/F00002Xsi11.png)(10–11)
-
-*E*[*i**n**t*]<mml:math><mml:msub><mml:mrow><mml:mi>E</mml:mi></mml:mrow><mml:mrow><mml:mi>int</mml:mi></mml:mrow></mml:msub></mml:math>![Equation](img/F00002Xsi12.png) 表示计算强度效应值：
-
-*E*[*i**n**t*] = *Δ**C**D**Y* + 1/2*Δ**C**Δ**D**Y* + 1/2*Δ**C**D**Δ**Y* + 1/3*Δ**C**Δ**D**Δ**Y*<mml:math><mml:msub><mml:mrow><mml:mi>E</mml:mi></mml:mrow><mml:mrow><mml:mi>int</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mo>&#916;</mml:mo><mml:mi mathvariant="italic">CDY</mml:mi><mml:mo>+</mml:mo><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>2</mml:mn><mml:mo>&#916;</mml:mo><mml:mi>C</mml:mi><mml:mo>&#916;</mml:mo><mml:mi mathvariant="italic">DY</mml:mi><mml:mo>+</mml:mo><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>2</mml:mn><mml:mo>&#916;</mml:mo><mml:mi mathvariant="italic">CD</mml:mi><mml:mo>&#916;</mml:mo><mml:mi>Y</mml:mi><mml:mo>+</mml:mo><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>3</mml:mn><mml:mo>&#916;</mml:mo><mml:mi>C</mml:mi><mml:mo>&#916;</mml:mo><mml:mi>D</mml:mi><mml:mo>&#916;</mml:mo><mml:mi>Y</mml:mi></mml:math> (10–12)
-
-![Equation](img/F00002Xsi13.png)(10–12)
-
-*E*[*s**t**r*]<mml:math><mml:msub><mml:mrow><mml:mi>E</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="italic">str</mml:mi></mml:mrow></mml:msub></mml:math>![Equation](img/F00002Xsi14.png) 用于计算结构效应值：
-
-*E*[*s**t**r*] = *C**Δ**D**Y* + 1/2*Δ**C**Δ**D**Y* + 1/2*C**Δ**D**Δ**Y* + 1/3*Δ**C**Δ**D**Δ**Y*<mml:math><mml:msub><mml:mrow><mml:mi>E</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="italic">str</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mi>C</mml:mi><mml:mo>&#916;</mml:mo><mml:mi mathvariant="italic">DY</mml:mi><mml:mo>+</mml:mo><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>2</mml:mn><mml:mo>&#916;</mml:mo><mml:mi>C</mml:mi><mml:mo>&#916;</mml:mo><mml:mi mathvariant="italic">DY</mml:mi><mml:mo>+</mml:mo><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>2</mml:mn><mml:mi>C</mml:mi><mml:mo>&#916;</mml:mo><mml:mi>D</mml:mi><mml:mo>&#916;</mml:mo><mml:mi>Y</mml:mi><mml:mo>+</mml:mo><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>3</mml:mn><mml:mo>&#916;</mml:mo><mml:mi>C</mml:mi><mml:mo>&#916;</mml:mo><mml:mi>D</mml:mi><mml:mo>&#916;</mml:mo><mml:mi>Y</mml:mi></mml:math> (10–13)
-
-![Equation](img/F00002Xsi15.png)(10–13)
-
-*E*[*f**d*]<mml:math><mml:msub><mml:mrow><mml:mi>E</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="italic">fd</mml:mi></mml:mrow></mml:msub></mml:math>![Equation](img/F00002Xsi16.png) 表示计算最终需求效应值：
-
-*E*[*f**d*] = *C**D**Δ**Y* + 1/2*Δ**C**D**Δ**Y* + 1/2*C**Δ**D**Δ**Y* + 1/3*Δ**C**Δ**D**Δ**Y*<mml:math><mml:msub><mml:mrow><mml:mi>E</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="italic">fd</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mi mathvariant="italic">CD</mml:mi><mml:mo>&#916;</mml:mo><mml:mi>Y</mml:mi><mml:mo>+</mml:mo><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>2</mml:mn><mml:mo>&#916;</mml:mo><mml:mi mathvariant="italic">CD</mml:mi><mml:mo>&#916;</mml:mo><mml:mi>Y</mml:mi><mml:mo>+</mml:mo><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>2</mml:mn><mml:mi>C</mml:mi><mml:mo>&#916;</mml:mo><mml:mi>D</mml:mi><mml:mo>&#916;</mml:mo><mml:mi>Y</mml:mi><mml:mo>+</mml:mo><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>3</mml:mn><mml:mo>&#916;</mml:mo><mml:mi>C</mml:mi><mml:mo>&#916;</mml:mo><mml:mi>D</mml:mi><mml:mo>&#916;</mml:mo><mml:mi>Y</mml:mi></mml:math> (10–14)
-
-![Equation](img/F00002Xsi17.png)(10–14)
 
 
-
-
-
-就过去的时间段而言，该模型采用通过矩阵差分进行的计算（Sun, 2016），旅游直接和国内间接温室气体排放量的计算如下：
-
-`Effect_Total = C(1-M[d])^(-1)DY = CBDY` (10–15)
-
-![Equation](img/F00002Xsi18.png)(10–15)
-
-考虑过去的时间段：
-
-`Effect_Total[time + 1] - Effect_Total[time] = E[int] + E[ltf] + E[str] + E[fd]` (10–16)
-
-![Equation](img/F00002Xsi19.png)(10–16)
-
-### 10.3.3 计算模型建议
+## 计算模型建议
 
 考虑到文献中一般的思路，一些计算模型可以被视为平衡建模结构。在此背景下，第一个模型建议可以采用与旅游活动相关的代理的形式。这样的代理可以定义为：
 
-`A[ij] = G(a) + T(a) + C` (10–17)
-
-![Equation](img/F00002Xsi20.png)(10–17)
+```
+A[ij] = G(a) + T(a) + C
+```
+(10–17)
 
 其中，多个代理（`A`）可与行为者 `i` 的活动 `j` 相关联，对应的温室气体排放量可通过 `G` 模型计算，而技术排放量则通过 `T` 计算，并且诸如天气事件、温度、需求或经济状况等常数可以根据目标活动以及位置而被包含或排除。这样的常数在另一个模型下定义为 `C`。该模型可以与其他模型集成，定义为财务因素（`F`）和旅行因素（`T`）：
 
-`F(x[1],x[2],x[3],...,x[n]) = (x[1],x[2],x[3...]+C[1])/(x[10],x[11],x[n-m...]+C[2])` (10–18)
+```
+F(x[1],x[2],x[3],...,x[n]) = (x[1],x[2],x[3...]+C[1])/(x[10],x[11],x[n-m...]+C[2])
+```
+(10–18)
 
-![Equation](img/F00002Xsi21.png)(10–18)
+```
+T(PKT,VKT) = E(PKT,VKT) + C[3]
+```
+(10–19)
 
-`T(PKT,VKT) = E(PKT,VKT) + C[3]` (10–19)
-
-![Equation](img/F00002Xsi22.png)(10–19)
-
-`A[ij] = G(a) + T(a) + (C+M(F,T))` (10–20)
-
-![Equation](img/F00002Xsi23.png)(10–20)
-
-
-
-
+```
+A[ij] = G(a) + T(a) + (C+M(F,T))
+```
+(10–20)
 
 作为 `F` 和 `T` 作为对代理 `A` 的已知常数的有效因子的附加模型被包含在内，它们也采用了一些与直接温室气体排放相关的已知模型。每个代理都应被视为旅游场景中的行为者。这些行为者可以是游客、机构、技术工具（消耗能源的软件/硬件）、ICT 组件，或任何其他与气候效应以及旅游流内部的活动要素相互作用的行为者。除了这些受旅游活动控制的代理之外，还有一些其他代理可以与气候参数相连，例如特定的天气事件（如降雨、降雪和极端温度）或影响旅游活动的已知速率。因此，可以进行代理之间的平衡互动，就像与旅游和气候相关的不同代理正在构建一个顶层系统一样。
 
 另一种模型视图可以是与特定活动相连的更简单方程的组合，例如：
 
-`Travel` = `Carbon` * `distance` * `time` * `additional_emission_parameters` (10–21)
+```
+Travel = Carbon * distance * time * additional_emission_parameters
+```
+(10–21)
 
-![Equation](img/F00002Xsi24.png)(10–21)
+```
+Software_Use = Technology_Carbon(Time) * time * [Carbon(incoming)+Carbon(outgoing)]
+```
+(10–22)
 
-`Software_Use` = `Technology_Carbon`(`Time`) * `time` * [`Carbon`(`incoming`)+`Carbon`(`outgoing`)] (10–22)
+```
+Room_Use = Light(time) + Technology_Carbon(Time) + additional_emission_parameters
+```
+(10–23)
 
-![Equation](img/F00002Xsi25.png)(10–22)
+```
+Location_Travel = Carbon * distance * time * location − based_emission_parameters
+```
+(10–24)
 
-`Room_Use` = `Light`(`time`) + `Technology_Carbon`(`Time`) + `additional_emission_parameters` (10–23)
+```
+Country_Emission = Models on emission measurement + Location_Emission(X)
+```
+(10–25)
 
-![Equation](img/F00002Xsi26.png)(10–23)
 
-`Location_Travel` = `Carbon` * `distance` * `time` * `location` − `based_emission_parameters` (10–24)
-
-![Equation](img/F00002Xsi27.png)(10–24)
-
-`Country_Emission` = `Models` `on` `emission` `measurement` + `Location_Emission`(`X`) (10–25)
 
 ![Equation](img/F00002Xsi28.png)(10–25)
 
@@ -3374,64 +3227,114 @@ ${\\mathit{Per}\\mathit{Km}\\mathit{Tr}}\_{x} = \\sum\\limits\_{y = 1}^{m}\\left
 
 * Aliyah et al., 2023 Aliyah L, Lukita C, Pangilinan GA, Chakim MHR, Saputra DB. Examining the impact of artificial intelligence and internet of things on smart tourism destinations: A comprehensive study. *Aptisi Transactions on Technopreneurship*. 2023;5:135–145.
 
-
-
-
 * Amelung and Lamers, 2007 Amelung B, Lamers M. 估算南极旅游的温室气体排放. *Tourism in Marine Environments*. 2007;4(2-3):121–133.
-* Balandina et al., 2015 Balandina E, Balandin S, Koucheryavy Y, Mouromtsev D. *) 医疗和旅游中的物联网用例*.  *2015 IEEE 17th conference on business informatics*. Vol. 2 IEEE 2015;37–44.
+
+* Balandina et al., 2015 Balandina E, Balandin S, Koucheryavy Y, Mouromtsev D. *医疗和旅游中的物联网用例*. *2015 IEEE 17th conference on business informatics*. Vol. 2 IEEE 2015;37–44.
+
 * Balli et al., 2019 Balli E, Sigeze C, Manga M, Birdir S, Birdir K. 旅游、CO[2]排放与经济增长之间的关系：地中海国家案例. *Asia Pacific Journal of Tourism Research*. 2019;24(3):219–232.
+
 * Becken, 2013 Becken S. 旅游与气候变化作为一个不断发展的知识领域的综述. *Tourism Management Perspectives*. 2013;6:53–62.
+
 * Becken and Clapcott, 2011 Becken S, Clapcott R. 气候变化的国家旅游政策. *Journal of Policy Research in Tourism, Leisure & Events*. 2011;3(1):1–17.
+
 * Becken and Hay, 2007 Becken S, Hay JE. 旅游与气候变化：风险与机遇. *Multilingual Matters* 2007;.
+
 * Becken et al., 2020 Becken S, Whittlesea E, Loehr J, Scott D. 旅游与气候变化：评估政策整合的程度. *Journal of Sustainable Tourism*. 2020;28(10):1603–1624.
+
 * Bethapudi, 2013 Bethapudi A. 信息通信技术在旅游业中的作用. *Journal of Applied Economics and Business*. 2013;1(4):67–79.
+
 * Bigano et al., 2008 Bigano A, Bosello F, Roson R, Tol RS. 气候变化的经济范围影响：海平面上升与旅游的联合分析. *Mitigation and Adaptation Strategies for Global Change*. 2008;13:765–791.
+
 * Bigano et al., 2008 Bigano A, Hamilton JM, Tol RS. *地中海的气候变化与旅游*. *Research unit sustainability and global change FNU-157* Hamburg: Hamburg University and Centre for Marine and Atmospheric Science; 2008;.
+
 * Bujosa and Rossello, 2013 Bujosa A, Rossello J. 气候变化与夏季大众旅游：西班牙国内旅游案例. *Climatic Change*. 2013;117:363–375.
+
 * Camilleri, 2018 Camilleri MA. *旅游业概述*. *Travel marketing, tourism economics and the airline product* Springer International Publishing 2018;3–27.
+
 * Carrillo et al., 2022 Carrillo J, Gonzalez A, Pérez JC, Exposito FJ, Diaz JP. 气候变化对加那利群岛旅游影响的预测. *Regional Environmental Change*. 2022;22(2):61.
+
 * Deperlioglu et al., 2020 Deperlioglu O, Kose U, Gupta D, Khanna A, Sangaiah AK. 基于自编码深度神经网络的安全物联网健康系统诊断心脏病. *Computer Communications*. 2020;162:31–50.
+
 * Dube and Nhamo, 2021 Dube K, Nhamo G. 维多利亚瀑布的温室气体排放与可持续性：关注酒店、旅游运营商及相关景点. *African Geographical Review*. 2021;40(2):125–140.
+
 * Dubois and Ceron, 2006a Dubois G, Ceron JP. 旅游与气候变化：研究议程建议. *Journal of Sustainable Tourism*. 2006a;14(4):399–415.
+
 * Dubois and Ceron, 2006b Dubois G, Ceron JP. 2050 年旅游/休闲温室气体排放预测：法国的变化因素. *Journal of Sustainable Tourism*. 2006b;14(2):172–191.
+
 * Dunlap and Brulle, 2015 Dunlap RE, Brulle RJ, eds. *气候变化与社会：社会学视角*. Oxford University Press 2015;.
+
 * Eijgelaar et al., 2010 Eijgelaar E, Thaper C, Peeters P. 南极邮轮旅游：大使角色、“最后机会旅游”与温室气体排放的悖论. *Journal of Sustainable Tourism*. 2010;18(3):337–354.
+
 * Eugenio-Martin and Campos-Soria, 2010 Eugenio-Martin JL, Campos-Soria JA. 出发地和目的地的气候对出境旅游需求的影响. *Tourism Management*. 2010;31(6):744–753.
+
 * Filimonau et al., 2013 Filimonau V, Dickinson J, Robbins D, Reddy MV. 旅游中“间接”温室气体排放的作用：度假套餐旅游的隐性碳影响评估. *Transportation Research Part A: Policy and Practice*. 2013;54:78–91.
+
 * Gozbasi et al., 2021 Gozbasi O, Altinoz B, Ocal O. 财务发展、可再生和不可再生能源消费以及国际旅游对不同大洲高收入国家温室气体排放的影响. *Journal of Research in Economics Politics and Finance*. 2021;6(2):371–384.
+
 * Gupta et al., 2021 Gupta S, Rouse BT, Sarangi PP. 气候变化是否影响了 COVID-19 大流行的出现、传播和表现？. *Frontiers in Medicine*. 2021;8:769208.
+
 * Gühnemann et al., 2021 Gühnemann A, Kurzweil A, Mailer M. 旅游出行与气候变化——奥地利现状综述. *Journal of Outdoor Recreation and Tourism*. 2021;34:100382.
+
 * Hallur et al., 2021 Hallur GG, Prabhu S, Aslekar A. 人工智能、大数据和物联网时代的娱乐. *Digital Entertainment: The Next Evolution in Service Sector* 2021;:87–109.
+
 * Hamilton et al., 2005 Hamilton JM, Maddison DJ, Tol RS. 气候变化对国际旅游的影响. *Climate Research*. 2005;29(3):245–254.
+
 * Hein et al., 2009 Hein L, Metzger MJ, Moreno A. 气候变化对旅游的潜在影响；西班牙案例研究. *Current Opinion in Environmental Sustainability*. 2009;1(2):170–178.
+
 * Imtiaz and Kim, 2019 Imtiaz S, Kim DJ. 数字化转型：旅游业新商业模式的发展. *Culinary Science & Hospitality Research; A Journal of Science and Its Applications*. 2019;25(4):91–101.
+
 * Isik et al., 2017 Isik C, Kasimati E, Ongan S. 分析希腊经济增长、金融发展、国际贸易、旅游支出与 CO[2]排放之间的因果关系. *Energy Sources, Part B: Economics, Planning, and Policy*. 2017;12(7):665–673.
+
 * Jabour, 2014 Jabour J. 南极旅游的战略管理与监管. *Antarctic Futures: Human Engagement with the Antarctic Environment* 2014;:273–286.
+
 * Kajan and Saarinen, 2013 Kajan E, Saarinen J. 旅游、气候变化与适应：综述. *Current Issues in Tourism*. 2013;16(2):167–195.
+
 * Kariminia et al., 2013 Kariminia S, Ahmad SS, Hashim R, Ismail Z. 南极旅游的全球环境后果. *Procedia-Social and Behavioral Sciences*. 2013;105:781–791.
 
-
-
 * Karyono, 2015 Karyono TH. *建筑与技术：现代技术对全球变暖的影响*. *“技术与本土智慧”国际会议* 印度尼西亚：Wonosobo；2015；.
+
 * Kelly and Williams, 2007 Kelly J, Williams PW. 旅游目的地能源消费和温室气体排放的建模：加拿大不列颠哥伦比亚省惠斯勒。 *可持续旅游杂志*. 2007;15(1):67–90.
+
 * Kose et al., 2024 Kose G, Marmolejo-Saucedo L, Rodriguez-Aguilar M, Kose U. 健康旅游的可穿戴设备：观点与模型建议。 *EAI 认可的可穿透健康与技术交易* 2024;:10.
+
 * Lenzen et al., 2018 Lenzen M, Sun YY, Faturay F, Ting YP, Geschke A, Malik A. 全球旅游的碳足迹。 *自然气候变化*. 2018;8(6):522–528.
+
 * Levine and Steele, 2021 Levine MD, Steele RV. 气候变化：我们所知的内容及应采取的措施。 *Wiley 跨学科评论：能源与环境*. 2021;10(1):e388.
+
 * Li et al., 2005 Li G, Song H, Witt SF. 计量经济学建模与预测的最新发展。 *旅游研究杂志*. 2005;44(1):82–99.
+
 * Liu et al., 2021 Liu D, Yang D, Huang A. 基于跃迁的中国旅游业温室气体排放峰值与低碳路径。 *国际环境研究与公共卫生杂志*. 2021;18(3):1218.
+
 * Lounis et al., 2023 Lounis M, Madani A, Boutebal SE. 阿尔及利亚学生对气候变化及其与新冠疫情大流行可能关系的认知与知识：一项初步横断面调查。 *气候*. 2023;11(4):90.
+
 * Marcussen, 2011 Marcussen CH. 理解德国旅行者的目的地选择。 *旅游分析*. 2011;16(6):649–662.
+
 * Mieczkowski, 1985 Mieczkowski Z. 旅游气候指数：评估世界气候对旅游的适宜性的方法。 *加拿大地理学家/Le Geographe Canadien*. 1985;29(3):220–233.
+
 * Morley, 1992 Morley CL. 国际旅游需求的微观经济理论。 *旅游研究年鉴*. 1992;19(2):250–267. doi 10.1016/0160-7383(92)90080-9.
+
 * Netto, 2009 Netto AP. 什么是旅游？定义、理论阶段和原则。 *旅游中的哲学问题*. 2009;37:43–62.
+
 * Nielsen, 2022 Nielsen HE. *南极旅游与气候变化的虚构再现：走向世界的尽头*. *气候变化的后殖民文学* Brill 2022;334–360.
+
 * Nosheen et al., 2021 Nosheen M, Iqbal J, Khan HU. 分析亚洲经济体中二氧化碳排放、经济增长、旅游和能源消费之间的联系。 *环境科学与污染研究*. 2021;28:16707–16719.
+
 * Perch-Nielsen et al., 2010 Perch-Nielsen S, Sesartic A, Stucki M. 旅游业的温室气体强度：以瑞士为例。 *环境科学与政策*. 2010;13(2):131–140.
+
 * Pintassilgo et al., 2016 Pintassilgo P, Rossello J, Santana-Gallego M, Valle E. 气候变化对旅游业影响的经济维度：以葡萄牙为例。 *旅游经济学*. 2016;22(4):685–698.
+
 * Pons-Pons et al., 2012 Pons-Pons M, Johnson PA, Rosas-Casals M, Sureda B, Jover E. 模拟气候变化对安道尔冬季滑雪旅游的影响。 *气候研究*. 2012;54(3):197–207.
+
 * Rath et al., 2024 Rath KC, Khang A, Roy D. *工业 4.0 经济中物联网技术的作用*. *工业 4.0 数字经济中的先进物联网技术与应用* CRC Press 2024;1–28.
+
 * Romm, 2022 Romm JJ. *气候变化：每个人都需要知道的内容* 牛津大学出版社 2022；.
+
 * Rossello, 2009 Rossello, J. (2009). 北大西洋涛动指数对欧洲航空中转的影响 (No. 2009/5). Centre de Recerca Economica (UIB Sa Nostra).
+
+
+
+# 参考文献
+
 * Rossello-Nadal, 2014 Rossello-Nadal J. 如何评估气候变化对旅游业的影响。 *旅游管理*. 2014;42:334–340.
 * Scott and Becken, 2010 Scott D, Becken S. 适应气候变化和气候政策：进展、问题与潜力。 *可持续旅游杂志*. 2010;18(3):283–295.
 * Scott and Gössling, 2021 Scott D, Gössling S. 从杰尔巴到格拉斯哥：旅游与气候变化的宣言是否让我们更接近有意义的气候行动？. *可持续旅游杂志*. 2021;30(1):199–222.
@@ -3446,45 +3349,28 @@ ${\\mathit{Per}\\mathit{Km}\\mathit{Tr}}\_{x} = \\sum\\limits\_{y = 1}^{m}\\left
 * Soboll and Dingeldey, 2012 Soboll A, Dingeldey A. 气候变化对阿尔卑斯冬季旅游的未来影响：德国和奥地利阿尔卑斯山的高分辨率模拟系统。 *可持续旅游杂志*. 2012;20(1):101–120.
 * Song and Li, 2008 Song H, Li G. 旅游需求建模与预测——近期研究的回顾。 *旅游管理*. 2008;29(2):203–220.
 * Sun, 2016 Sun YY. 旅游温室气体排放的分解：揭示旅游经济增长、技术效率与碳排放之间的动态关系。 *旅游管理*. 2016;55:326–336.
-
-
-
-
 * Tejedo et al., 2022 Tejedo P, Benayas J, Cajiao D, Leung YF, De Filippo D, Liggett D. 南极旅游的真实环境影响是什么？通过全面的荟萃分析揭示其重要性。 *Journal of Environmental Management*. 2022;308:114634.
-
 * Trenberth, 2018 Trenberth KE. 人类活动导致气候变化正在发生，并且已经产生重大后果。 *Journal of Energy & Natural Resources Law*. 2018;36(4):463–481.
-
 * Voumik et al., 2023 Voumik LC, Islam MA, Nafi SM. 旅游对亚洲碳排放有影响吗？新鲜面板方法的应用。 *Environment, Development and Sustainability* 2023;:1–19.
-
 * Walsh et al., 2020 Walsh JE, Ballinger TJ, Euskirchen ES, et al. 北部地区的极端天气和气候事件：综述。 *Earth-Science Reviews*. 2020;209:103324.
-
 * Weaver, 2011 Weaver D. 可持续旅游能否经受住气候变化的考验？. *Journal of Sustainable Tourism*. 2011;19(1):5–15.
-
 * Van Wee et al., 2013 Van Wee B, Geurs K, Chorus C. 信息、通信、出行行为与可达性。 *Journal of Transport and Land Use*. 2013;6(3):1–16.
-
 * Zhong et al., 2019 Zhong L, Yu H, Zeng Y. 基于旅游气候指数的气候变化对西藏旅游的影响。 *Journal of Geographical Sciences*. 2019;29:2085–2100.
-
 * Şahin, 2024 Şahin GG. *旅游、航空与数字化转型的协同作用：通往无缝旅行体验的路径*. *Harnessing digital innovation for air transportation* IGI Global 2024;112–132.
 
-11
-
-## 利用多智能体系统建模应对气候危机与可持续发展的负责任技术
+# 11 利用多智能体系统建模应对气候危机与可持续发展的负责任技术
 
 Pragyan Nanda^1, Sipra Sahoo^2, Roman Rodríguez Aguilar^3, Jose Antonio Marmolejo-Saucedo^4 和 Itishree Behera^5, ¹信息与技术系，Interscience Institute of Management and Technology，布巴内斯瓦尔，奥里萨邦，印度，²计算机科学与工程系，SOA Deemed to be University，布巴内斯瓦尔，奥里萨邦，印度，³经济与商学院，Universidad Panamericana，墨西哥城，墨西哥，⁴工程学院，墨西哥国立自治大学，墨西哥城，墨西哥，⁵金融系，Interscience Institute of Management and Technology，布巴内斯瓦尔，奥里萨邦，印度
 
 ## Abstract
 
-本章深入探讨负责任技术的动态发展格局及其在应对气候危机和推动可持续发展中的关键作用。它强调需要理解技术采用、环境影响和社会行为之间错综复杂的联系，这些联系贯穿可持续发展的各个维度，包括环境、社会、经济、文化、技术、政治、伦理、健康、教育和适应性方面。本章介绍了负责任技术的概念及其关键原则，强调了现实世界实验的局限性和模拟的优势，特别是通过多智能体系统。探讨了不同的建模方法，重点关注多智能体系统在研究负责任技术方面的适用性，以及其实<|message|>
-
-
+本章深入探讨负责任技术的动态发展格局及其在应对气候危机和推动可持续发展中的关键作用。它强调需要理解技术采用、环境影响和社会行为之间错综复杂的联系，这些联系贯穿可持续发展的各个维度，包括环境、社会、经济、文化、技术、政治、伦理、健康、教育和适应性方面。本章介绍了负责任技术的概念及其关键原则，强调了现实世界实验的局限性和模拟的优势，特别是通过多智能体系统。探讨了不同的建模方法，重点关注多智能体系统在研究负责任技术方面的适用性，以及其实
 
 当代社会面临着一系列令人望而生畏的挑战，其中气候危机尤为显著。这一多维度问题由持续的温室气体排放、猖獗的森林砍伐以及不可持续的资源利用等因素驱动。它对星球及其多样生态系统构成了生存性威胁。在危机中，实现可持续性的紧迫需求凸显，强调“负责任的技术”。负责任的技术象征着对创新与进步方式的范式转变（Arshad, 2017; Charry-Aysanoa et al., 2023; Ocone, 2020）。与其前辈不同，负责任的技术超越了对眼前问题的单纯解决，而是以全面视角精心设计。其首要目标不仅是应对当前挑战，更是主动防止进一步的环境退化。这些创新遵循伦理与生态原则，致力于将进步与地球及其居民的长期福祉相协调。采用负责任技术的需求源于其内在焦点——将进步与星球的长期健康及生物多样性相结合。它们是一种负责任的态度的体现，不仅局限于短期目标，更致力于为地球及其多样生命形态构建可持续的未来。随着社会应对气候危机挑战，强调优先推进可持续解决方案以保护星球未来的重要性日益凸显。负责任技术涵盖多种创新与实践，包括可再生能源、可持续农业、节能系统、绿色交通、生态友好制造工艺等（Bisaga, 2021; Cenci et al., 2022; Shaikh, 2017）。其特点在于致力于减少伤害，并在环境与社会层面产生积极、持久的影响。负责任技术体现了人类进步与生态可持续性并非相互排斥，而是相互强化的关系。本章旨在探索负责任技术、气候危机与可持续性的关键交叉点。它描述了这些技术的异质性及其在应对气候危机中的关键作用。在技术进步位于人类进步前沿的世界里，负责任技术脱颖而出，成为我们对抗气候变化、推动可持续性努力的枢纽。其核心在于认识到，虽然创新对于解决气候危机至关重要，但创新必须遵循伦理与环境标准。换言之，技术进步不应以牺牲星球福祉或加剧现有社会不平等为代价。
 
-因此，负责任技术旨在最小化伤害、最大化收益，并建立可持续解决方案。本章后续部分将聚焦负责任技术、气候危机与可持续性的交叉点，进一步分析负责任技术如何转变我们应对气候变化与可持续性的方式。我们将探讨这些技术如何减少环境损害、倡导伦理标准，并确保进步与星球的长期福祉相一致。此外，我们还将审视多智能体系统（MAS）在建模与塑造这些技术中的作用。MAS 是理解复杂自适应系统和决策过程的强大工具。本章将探讨 MAS 的原则、应用及潜力。我们将考虑 MAS 模拟如何评估情景、评估政策，并衡量负责任技术对气候与可持续性的影响。我们将强调负责任技术开发中固有的伦理与社会维度，并说明 MAS 如何将这些关键方面整合到决策程序中。本章将引导我们在气候危机后寻找前进的道路，凸显负责任技术——借助诸如 MAS 等创新建模方法——在重塑我们走向更可持续、更负责任未来的道路中的关键作用。最终，目标是促进负责任创新，优先应对气候变化的紧迫需求，为所有生物保障可持续的未来。Section 11.2 讨论负责任技术在应对气候危机及构建可持续性方面的作用。Section 11.3 探讨建模与仿真的相关性。然后在 Section 11.4 中探讨 MAS 在负责任技术建模中的关键作用。Section 11.5 介绍拟议的 MAS 集成分布式能源系统（MAS-DES）。Section 11.6 讨论实施拟议的 MAS-DES 框架的机遇与挑战，而 Section 11.7 则以章节结论收尾，回顾观察。
+因此，负责任技术旨在最小化伤害、最大化收益，并建立可持续解决方案。本章后续部分将聚焦负责任技术、气候危机与可持续性的交叉点，进一步分析负责任技术如何转变我们应对气候变化与可持续性的方式。我们将探讨这些技术如何减少环境损害、倡导伦理标准，并确保进步与星球的长期福祉相一致。此外，我们还将审视多智能体系统（`MAS`）在建模与塑造这些技术中的作用。`MAS` 是理解复杂自适应系统和决策过程的强大工具。本章将探讨 `MAS` 的原则、应用及潜力。我们将考虑 `MAS` 模拟如何评估情景、评估政策，并衡量负责任技术对气候与可持续性的影响。我们将强调负责任技术开发中固有的伦理与社会维度，并说明 `MAS` 如何将这些关键方面整合到决策程序中。本章将引导我们在气候危机后寻找前进的道路，凸显负责任技术——借助诸如 `MAS` 等创新建模方法——在重塑我们走向更可持续、更负责任未来的道路中的关键作用。最终，目标是促进负责任创新，优先应对气候变化的紧迫需求，为所有生物保障可持续的未来。Section 11.2 讨论负责任技术在应对气候危机及构建可持续性方面的作用。Section 11.3 探讨建模与仿真的相关性。然后在 Section 11.4 中探讨 `MAS` 在负责任技术建模中的关键作用。Section 11.5 介绍拟议的 `MAS` 集成分布式能源系统（`MAS-DES`）。Section 11.6 讨论实施拟议的 `MAS-DES` 框架的机遇与挑战，而 Section 11.7 则以章节结论收尾，回顾观察。
 
-
-
--   在前面的讨论中，负责任的技术关注伦理、环境和社会原则，以使进步与星球的福祉及其居民保持一致。它们在实现人类进步与生态保护之间的平衡方面发挥着关键作用，通过应对资源枯竭、气候变化以及生物多样性丧失等问题，同时也促进社会公平和经济稳定。这些技术最大限度地减少对环境的损害，最大化积极影响，并推动伦理和负责任的实践（[Lobschat et al., 2021; Matthews et al., 2019; Voegtlin & Scherer, 2017）。例如，风能和太阳能等可再生能源技术有助于应对气候变化并降低温室气体排放。负责任的技术坚持伦理和社会原则，确保技术发展惠及社会的所有成员，避免加剧现有的不平等。它们促进透明度、问责制和包容性。此外，负责任的技术通过倡导有限材料的合理利用和生态系统的保护，有助于延长资源的使用寿命。可持续农业实践旨在保护土壤质量和生物多样性，确保未来世代的粮食供应稳定可靠。为了评估技术和实践的可持续性，本章提供了关于可持续性多个维度的全面讨论。这些维度包括（1）环境影响，（2）气候变化减缓，（3）资源效率，（4）生物多样性保护，（5）社会公平，（6）经济稳定，（7）健康与福祉，（8）教育与知识传递，（9）社区参与，以及（10）伦理与负责任治理。Fig. 11–1 展示了这些维度，并将在下文中进一步阐述。
+- 在前面的讨论中，负责任的技术关注伦理、环境和社会原则，以使进步与星球的福祉及其居民保持一致。它们在实现人类进步与生态保护之间的平衡方面发挥着关键作用，通过应对资源枯竭、气候变化以及生物多样性丧失等问题，同时也促进社会公平和经济稳定。这些技术最大限度地减少对环境的损害，最大化积极影响，并推动伦理和负责任的实践（Lobschat et al., 2021; Matthews et al., 2019; Voegtlin & Scherer, 2017）。例如，风能和太阳能等可再生能源技术有助于应对气候变化并降低温室气体排放。负责任的技术坚持伦理和社会原则，确保技术发展惠及社会的所有成员，避免加剧现有的不平等。它们促进透明度、问责制和包容性。此外，负责任的技术通过倡导有限材料的合理利用和生态系统的保护，有助于延长资源的使用寿命。可持续农业实践旨在保护土壤质量和生物多样性，确保未来世代的粮食供应稳定可靠。为了评估技术和实践的可持续性，本章提供了关于可持续性多个维度的全面讨论。这些维度包括（1）环境影响，（2）气候变化减缓，（3）资源效率，（4）生物多样性保护，（5）社会公平，（6）经济稳定，（7）健康与福祉，（8）教育与知识传递，（9）社区参与，以及（10）伦理与负责任治理。Fig. 11–1 展示了这些维度，并将在下文中进一步阐述。
 
 ![Figure 11–1 Sustainability dimensions.](img/F000110f11-01-9780443219054.jpg)
 
@@ -3504,6 +3390,10 @@ Resource efficiency maximizes materials and resources while minimizing waste. Su
 
 ## 11.2.4 Biodiversity conservation
 
+
+
+# Biodiversity
+
 Biodiversity refers to the rich variety of life on Earth, including all living organisms, ecosystems, and habitats. Responsible technologies recognize the importance of biodiversity and aim to preserve it. They work to protect endangered species, prevent their extinction, and conserve habitats to maintain the natural balance of ecosystems. Responsible technologies promote coexistence with nature by adhering to sustainable practices that minimize environmental harm, reducing human-induced threats to biodiversity. Protecting and enhancing biodiversity is not just an ethical endeavor; it is essential for the health and resilience of the planet’s ecosystems, supporting human well-being.
 
 ## 11.2.5 Social equity
@@ -3520,8 +3410,6 @@ Sustainable technologies directly impact human health and overall well-being. Th
 
 ## 11.2.8 Education and knowledge transfer
 
-
-
 教育与知识传递是可持续性的重要组成部分。可持续技术不仅提供解决方案，还促进理解和知识共享。这确保了这些技术的好处对社会的所有成员都可及，无论其专业水平如何。教育项目和推广活动帮助社区获得信息，赋予其做出可持续选择的能力。这种知识传递培养了可持续发展文化，使个人和社区能够积极参与可持续发展努力。教育与知识传递是推动可持续实践和技术在多元化人群中广泛应用的关键驱动力。
 
 ## 11.2.9 社区参与
@@ -3536,31 +3424,25 @@ Sustainable technologies directly impact human health and overall well-being. Th
 
 ## 11.3 建模与仿真中的作用
 
-
-
-
-## 建模在理解技术采用的复杂动态及其广泛影响方面发挥着关键作用。
+### 建模在理解技术采用的复杂动态及其广泛影响方面发挥着关键作用。
 
 建模提供了一个结构化的框架，用于模拟和分析各种场景，这在探索技术采用时尤为关键。它能够预测并分析技术采用的后果，这对于政府、企业和组织而言具有不可估量的价值。通过构建数学或计算模型来模拟现实世界过程（`Peng et al., 2020`; `Wang et al., 2022`; `Xia et al., 2021`），可以模拟和评估不同场景及其潜在结果。例如，建模电动汽车的采用可以帮助我们预测其对减少温室气体排放的影响以及相应的电力需求。此类预测为决策提供依据，并有助于确保技术采用与更广泛的环境和经济目标相一致。新技术的采用通常伴随着重大风险，在现实世界中尝试未经验证的技术可能成本高昂且充满危险。相反，建模通过模拟技术采用提供了一个更安全、风险更低的替代方案。它还能够系统地识别潜在缺陷、评估风险并制定缓解策略（`Rehman et al., 2021`）。当涉及具有颠覆性潜力的技术（如人工智能或生物技术）时，这一点变得尤为重要，因为风险很高，不慎的决策后果可能重大。建模使我们能够在不将个人和社会置于不必要风险中的情况下探索这些技术。伴随新技术的采用往往伴随着伦理困境，尤其是对隐私和公民自由有影响的技术。人脸识别技术是一个典型例子，它引发了需要慎重考虑的伦理问题。建模提供了一个伦理沙盒，可以在不进行可能引发伦理争议的现实实验的情况下，深入探讨采用此类技术的影响（`Simpson et al., 2021`; `Yerlikaya et al., 2020`）。这使得我们能够全面审视潜在的社会影响，从而制定与社会价值观和原则相一致的伦理准则和法规。技术采用本质上是复杂的，涉及众多变量，从用户行为和市场动态到政府政策。此外，研究人员可以孤立特定变量、测试假设，并识别塑造技术采用的最具影响力的因素。这种细致入微且受控的分析方式可能在现实世界中难以实现。建模与模拟的一个主要优势是其迭代性质。与通常只能进行一次且结果固定的现实实验不同，建模允许持续的改进和重新测试。随着新数据和洞见的出现，模型可以适应，更准确地反映现实发展。这种迭代学习过程确保我们对技术采用的理解始终保持最新和相关，即使在技术景观快速变化的情况下。许多技术承载着重大的环境和经济影响。例如，向可再生能源转型对碳排放和能源成本有深远影响（`Østergaard et al., 2022`; `Perera et al., 2020`; `Rooney-Varga et al., 2020`）。建模技术采用提供了一个平台，用于提前评估这些环境和经济影响。这种前瞻性方法对于明智的规划和决策至关重要，它使我们能够在技术进步与可持续实践之间取得平衡（`Ewert & Grant, 2020`; `Gernaat et al., 2021`）。建模技术采用对企业和组织的战略决策具有重要作用。它们可以利用模型评估采用特定技术的潜在市场份额、收入和竞争优势。这些洞察是使业务战略与不断变化的技术环境保持一致、确保组织保持竞争力和应对市场动态变化的基础。建模赋予战略决策者以利用技术采用作为成功驱动力的能力。建模使研究人员和决策者能够分析诸多变量，包括用户行为、市场动态和外部因素，以预测技术采用的后果。它使我们能够预测潜在的收益和风险，如经济影响、环境变化和社会转型。此外，建模还能帮助识别潜在的障碍并制定克服它们的策略。它提供了一种结构化的方式来评估不同技术采用场景，评估其影响，并做出促进负责任和可持续进步的明智选择。
 
-## 由于能够全面模拟复杂且广泛的场景，模拟在建模中表现出色。
+### 由于能够全面模拟复杂且广泛的场景，模拟在建模中表现出色。
 
 它们提供了全面探索这些情况的灵活性，使研究人员能够评估大规模技术采用的潜在后果。这种可扩展性使模拟对于应对全球性和远大范围的技术挑战变得不可或缺。现实实验通常缺乏对变量的控制，因为外部因素会影响结果，这使得难以孤立正在研究技术的具体影响。模拟提供了更大的控制，使研究人员能够精确且系统地操纵变量并理解其影响。这种受控的环境允许更深入地审视单个因素如何促成技术的采用及其后果。它提供了一种现实实验难以企及的清晰度。现实实验的一个显著局限是它们通常是一次性机会，结果是固定的。相比之下，模拟是迭代的。研究人员可以反复运行模拟，在新数据、洞见和改进出现时加以整合。这种适应性和持续测试的特性使模型能够演变，变得更加准确和相关。模拟的迭代特性确保我们对技术采用的理解始终保持最新，即使在技术景观快速变化的情况下。现实实验的局限性，包括成本和时间限制、伦理与安全考虑、可扩展性问题、变量控制困难以及缺乏迭代测试，凸显了模拟的不可或缺作用。它提供了一个受控、高效、可扩展且迭代的环境，用于探索技术采用及其影响的复杂性，从而使决策过程更加明智、负责任和伦理化。
 
+`MAS` 是一种动态且多功能的建模工具，特别适合于解决技术采用的复杂性及其深远影响。该方法涉及创建一个数字领域，其中自主代理人代表各种实体或个体，在定义的系统内相互作用，并遵循预定义的规则。`MAS` 的一个显著优势是其能够捕捉个体行为在技术采用中表现出的复杂且往往不可预测的特征。这些代理人可以被编程来代表不同的利益相关者，如消费者、企业、监管机构或采用过程中的任何其他相关行为者（`Abdoos et al., 2013`; `Albrecht & Woolridge, 2022`; `Amaduo, 2015`）。这种适应性和表征能力使得 `MAS` 成为模型复杂技术采用场景的多功能工具。它使研究人员能够深入探讨这些个体行为者的动机、决策和反应，提供一种细粒度的视角，能够反映现实世界的复杂性。`MAS` 模型本质上是适应性和动态的，反映了个体代理人如何做出决策、相互影响并通过采用新技术来适应不断变化的环境。这种动态特性与技术采用的复杂性完美契合，因为外部因素、市场动态和个体选择在不断变化的环境中相互作用。`MAS` 为探索采用过程的流动性提供了平台，使其非常适合用于表示现实场景（`Cheng et al., 2019`; `Crooks et al., 2014`）。在 `MAS` 框架内，个体代理人的相互作用产生复杂的系统层面行为，体现了技术采用结果往往是集体决策和行动的汇聚。这种涌现行为使研究人员能够模拟宏观趋势（如市场趋势、社会变化或监管转变）是如何由个体选择的汇总结果产生的。它捕捉了技术采用在不同领域的涟漪效应，为如何汇聚各种因素以塑造结果提供了洞察。`MAS` 在探索多种技术采用场景及其潜在后果方面表现出色。研究人员可以利用 `MAS` 测试不同条件、模拟法规变更的影响，并尝试不同的采用策略。这种动态实验不仅有助于阐明个体与集体行为之间的复杂相互作用，还允许系统地评估“如果…会怎样”的情境，从而系统地评估各种因素的影响。`MAS` 使研究人员能够获得技术采用景观的整体视角（`Gerber et al., 2017`; `Hu et al., 2015`; `Ralha et al., 2013`; `Rasoulkhani et al., 2020`）。
 
+与传统的数学或统计模型相比，`MAS` 提供了更真实、更详细的技术采用建模方法。它捕捉了人类决策、互动和适应的细微性，为采用过程提供了更为细致的表征。通过自主代理人模拟技术采用过程，`MAS` 将技术采用的异质维度（包括市场力量、消费者选择和监管动态）纳入其中。这种程度的真实性提高了建模的准确性和全面性，使其成为理解和预测技术采用及其影响的不可或缺工具。`MAS` 提供了一个动态、适应且真实的框架来建模技术采用（`Akhatova et al., 2022`）。它们能够表征个体行为、适应变化、模拟系统层面的涌现效应、探索多种场景，并提供对技术采用过程的细致视角，这使得 `MAS` 成为理解和预测技术采用的复杂动态及其深远影响的有价值工具。
 
-MAS 是一种动态且多功能的建模工具，特别适合于解决技术采用的复杂性及其深远影响。该方法涉及创建一个数字领域，其中自主代理人代表各种实体或个体，在定义的系统内相互作用，并遵循预定义的规则。MAS 的一个显著优势是其能够捕捉个体行为在技术采用中表现出的复杂且往往不可预测的特征。这些代理人可以被编程来代表不同的利益相关者，如消费者、企业、监管机构或采用过程中的任何其他相关行为者 (`Abdoos et al., 2013`; `Albrecht & Woolridge, 2022`; `Amaduo, 2015`)。这种适应性和表征能力使得 MAS 成为模型复杂技术采用场景的多功能工具。它使研究人员能够深入探讨这些个体行为者的动机、决策和反应，提供一种细粒度的视角，能够反映现实世界的复杂性。MAS 模型本质上是适应性和动态的，反映了个体代理人如何做出决策、相互影响并通过采用新技术来适应不断变化的环境。这种动态特性与技术采用的复杂性完美契合，因为外部因素、市场动态和个体选择在不断变化的环境中相互作用。MAS 为探索采用过程的流动性提供了平台，使其非常适合用于表示现实场景 (`Cheng et al., 2019`; `Crooks et al., 2014`)。在 MAS 框架内，个体代理人的相互作用产生复杂的系统层面行为，体现了技术采用结果往往是集体决策和行动的汇聚。这种涌现行为使研究人员能够模拟宏观趋势（如市场趋势、社会变化或监管转变）是如何由个体选择的汇总结果产生的。它捕捉了技术采用在不同领域的涟漪效应，为如何汇聚各种因素以塑造结果提供了洞察。MAS 在探索多种技术采用场景及其潜在后果方面表现出色。研究人员可以利用 MAS 测试不同条件、模拟法规变更的影响，并尝试不同的采用策略。这种动态实验不仅有助于阐明个体与集体行为之间的复杂相互作用，还允许系统地评估“如果…会怎样”的情境，从而系统地评估各种因素的影响。MAS 使研究人员能够获得技术采用景观的整体视角 (`Gerber et al., 2017`; `Hu et al., 2015`; `Ralha et al., 2013`; `Rasoulkhani et al., 2020`)。
-
-与传统的数学或统计模型相比，MAS 提供了更真实、更详细的技术采用建模方法。它捕捉了人类决策、互动和适应的细微性，为采用过程提供了更为细致的表征。通过自主代理人模拟技术采用过程，MAS 将技术采用的异质维度（包括市场力量、消费者选择和监管动态）纳入其中。这种程度的真实性提高了建模的准确性和全面性，使其成为理解和预测技术采用及其影响的不可或缺工具。MAS 提供了一个动态、适应且真实的框架来建模技术采用 (`Akhatova et al., 2022`)。它们能够表征个体行为、适应变化、模拟系统层面的涌现效应、探索多种场景，并提供对技术采用过程的细致视角，这使得 MAS 成为理解和预测技术采用的复杂动态及其深远影响的有价值工具。
-
-MAS 有潜力通过捕捉影响环境变化的各种因素之间的相互作用来模拟环境变化。它们将环境元素（如人类行为和气候生态系统）表示为自主代理。这些代理负责系统内部以及系统外部的所有交互，并根据预定义的规则和环境响应相互影响。MAS 基于模型不仅捕捉环境因素之间的动态交互，还捕捉复杂的反馈循环，说明任何一个组件的变化都会影响其他组件。此外，采用 MAS 进行建模的研究人员能够探索自然环境变化的潜在结果、各种环境干预和政策等 (`Huang et al., 2020`; `Liang et al., 2022`)。再次，基于 MAS 的模型能够更深入地理解影响环境的各种要素之间的相互联系，并支持对环境条件的未来预测。基于 MAS 的建模在环境变化刺激方面可以发挥重要作用，如下文所述。
+`MAS` 有潜力通过捕捉影响环境变化的各种因素之间的相互作用来模拟环境变化。它们将环境元素（如人类行为和气候生态系统）表示为自主代理。这些代理负责系统内部以及系统外部的所有交互，并根据预定义的规则和环境响应相互影响。`MAS` 基于模型不仅捕捉环境因素之间的动态交互，还捕捉复杂的反馈循环，说明任何一个组件的变化都会影响其他组件。此外，采用 `MAS` 进行建模的研究人员能够探索自然环境变化的潜在结果、各种环境干预和政策等（`Huang et al., 2020`; `Liang et al., 2022`）。再次，基于 `MAS` 的模型能够更深入地理解影响环境的各种要素之间的相互联系，并支持对环境条件的未来预测。基于 `MAS` 的建模在环境变化刺激方面可以发挥重要作用，如下文所述。
 
 ### 11.4.1 代理表示
 
-MAS 是一种能够代表从天气模式和生态系统等自然组成部分到工业、政策制定者和社区等人类利益相关者的多种实体的动态框架。这些代理在 MAS 框架内模拟多样的行为、交互和决策过程，从而能够全面模拟引导环境变化的复杂动态。MAS 通过建模这些多层次的交互和行为，为研究人员提供了关于这些实体之间的相互作用及其对环境的集体影响的洞察。这种全面的方法使研究人员能够理解环境变化的复杂性，预测可能的结果，并制定更好环境管理和可持续性的策略。通过这些模拟，MAS 对于理解各种代理如何影响并塑造不断变化的生态环境起到了重要作用 (`Bürgi et al., 2022`; `Kaaronen & Strelkovskii, 2020`)。
+`MAS` 是一种能够代表从天气模式和生态系统等自然组成部分到工业、政策制定者和社区等人类利益相关者的多种实体的动态框架。这些代理在 `MAS` 框架内模拟多样的行为、交互和决策过程，从而能够全面模拟引导环境变化的复杂动态。`MAS` 通过建模这些多层次的交互和行为，为研究人员提供了关于这些实体之间的相互作用及其对环境的集体影响的洞察。这种全面的方法使研究人员能够理解环境变化的复杂性，预测可能的结果，并制定更好环境管理和可持续性的策略。通过这些模拟，`MAS` 对于理解各种代理如何影响并塑造不断变化的生态环境起到了重要作用（`Bürgi et al., 2022`; `Kaaronen & Strelkovskii, 2020`）。
 
 ### 11.4.2 生态系统建模
-
 
 
 
@@ -3584,9 +3466,6 @@ MAS 可作为强大的工具，用于建模和预测污染物在环境中的传�
 
 ### 11.4.7 预测适应与韧性
 
-
-
-
 -   [将多代理系统集成到分布式能源系统中]的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
 
 1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
@@ -3595,9 +3474,7 @@ MAS 可作为强大的工具，用于建模和预测污染物在环境中的传�
 if (condVar > someVal) {console.log("xxx")}
 ```
 
-
-
-2. 2. 存储单元：在 DES 框架中，像电池或其他存储技术的能量存储系统建模代理是至关重要的组成部分。这些代理通过智能地平衡能源供给与需求，优化存储的利用。在能源生产充足的时期，它们高效存储多余的能源；在高峰需求时或可再生能源发电不足时，这些代理释放存储的能源以满足需求，从而确保能源供应稳定和电网可靠。
+2. 存储单元：在 DES 框架中，像电池或其他存储技术的能量存储系统建模代理是至关重要的组成部分。这些代理通过智能地平衡能源供给与需求，优化存储的利用。在能源生产充足的时期，它们高效存储多余的能源；在高峰需求时或可再生能源发电不足时，这些代理释放存储的能源以满足需求，从而确保能源供应稳定和电网可靠。
 
 换句话说，基于 MAS 的代理共同促进了一个动态适应的能源系统，其中消费者代理（prosumer agents）促进能源共享，存储单元代理优化能源供需平衡，电网运营代理（grid operator agents）管理整体能源系统的稳定性和效率，所有代理协同工作，构建了一个有弹性和可持续的分布式能源网络。
 
@@ -3611,13 +3488,11 @@ if (condVar > someVal) {console.log("xxx")}
 
 首先，关键组件的符号表示如下：
 
-*   *P*[*i*]: 消费者代理 *i*
+*   `P[i]`: 消费者代理 `i`
+*   `S[j]`: 存储单元代理 `j`
+*   `G[k]`: 电网运营代理 `k`。
 
-*   *S*[*j*]: 存储单元代理 *j*
-
-*   *G*[*k*]: 电网运营代理 *k*。
-
-令 *E*[*ij*] 表示消费者 *i* 与消费者 *j* 之间交换的能源。目标是最小化消费者之间能源交换的差异。现在，负载平衡和动态能源路由的优化函数可以表示为：
+令 `E[ij]` 表示消费者 `i` 与消费者 `j` 之间交换的能源。目标是最小化消费者之间能源交换的差异。现在，负载平衡和动态能源路由的优化函数可以表示为：
 
 负载平衡目标：
 
@@ -3625,7 +3500,7 @@ if (condVar > someVal) {console.log("xxx")}
 Minimize ∑[i≠j]|E[i,j]−E[j,i]|   (11.1)
 ```
 
-![Equation](img/F000110si1.png)(11.1) 
+![Equation](img/F000110si1.png)(11.1)
 
 动态能源路由目标：
 
@@ -3633,31 +3508,29 @@ Minimize ∑[i≠j]|E[i,j]−E[j,i]|   (11.1)
 Minimize ∑[i≠j]C(E[i,j])   (11.2)
 ```
 
-![Equation](img/F000110si2.png)(11.2) 
+![Equation](img/F000110si2.png)(11.2)
 
-其中，成本函数 C(E[i,j]) 表示消费者和存储单元之间能源交换的经济或效率成本。在 DES 中，能源交换量与交换成本之间存在非线性关系，因为成本随交换量的变化可能不呈线性增减。此外，由于系统约束、距离、时间段或传输损耗等因素，能源成本可能随交换量的增加而上升。因此，所提框架定义了一个二次成本函数，能够捕捉这些非线性并提供更准确的表示。同时，该函数在不同成本结构和系统特性下具有鲁棒性和灵活性。
+其中，成本函数 `C(E[i,j])` 表示消费者和存储单元之间能源交换的经济或效率成本。在 DES 中，能源交换量与交换成本之间存在非线性关系，因为成本随交换量的变化可能不呈线性增减。此外，由于系统约束、距离、时间段或传输损耗等因素，能源成本可能随交换量的增加而上升。因此，所提框架定义了一个二次成本函数，能够捕捉这些非线性并提供更准确的表示。同时，该函数在不同成本结构和系统特性下具有鲁棒性和灵活性。
 
-C(E[i,j]) = a·(E[i,j])² + b·E[i,j] + c,   (11.3)
+`C(E[i,j]) = a·(E[i,j])² + b·E[i,j] + c,   (11.3)`
 
-![Equation](img/F000110si3.png)(11.3) 
+![Equation](img/F000110si3.png)(11.3)
 
-其中，a 表示二次项系数，决定曲率并影响能源交换的增长；b 表示一次项系数，考虑距离、时间段或其他操作因素对能源交换成本的影响；c 表示常数项，捕获与能源交换无关的固定成本或基础费用。
+其中，`a` 表示二次项系数，决定曲率并影响能源交换的增长；`b` 表示一次项系数，考虑距离、时间段或其他操作因素对能源交换成本的影响；`c` 表示常数项，捕获与能源交换无关的固定成本或基础费用。
 
 ### 11.5.3 弹性与可靠性
-
-
 
 冗余规划，由 `MAS` 引导，强化了 `DES` 的可靠性和韧性。它设计用于在故障或中断期间立即行动，确保不间断的能源供应。再次，`MAS` 在创建和实施应急计划方面表现出色。`Agents` 代表各类组件，能够迅速重新配置能源路径，防止长时间的停机。在面对中断时，`MAS` 驱动的 `agents` 迅速将能源通过备用路径重定向，最大限度地降低故障的影响。`MAS` 的灵活编排提升了应对不可预见挑战的适应性。通过主动启动备用能源路径，`MAS` 能够快速响应，减少中断。其主要目标是最小化 `DES` 的停机时间，提升整体可靠性。通过快速适应，`MAS` 有助于增强韧性，确保能源供应连续。因此，由 `MAS` 引导的冗余规划提升了 `DES` 的可靠性。快速的重新配置、主动启动备用路径以及减少停机时间，确保在中断期间能源供应无缝。
 
 冗余规划可以如下建模：
 
-冗余规划的目标是最大化 `DES` 中整体冗余水平。这可以被表述为一个优化问题，目标是最大化所有 prosumers 之间冗余水平之和。设 *R*[*ji*] 表示 Prosumer *i* 与 Prosumer *j* 之间能源路径的可靠性评分。目标是最大化能源路径的整体可靠性，考虑基础设施的强度以及备用路径等因素。
+冗余规划的目标是最大化 `DES` 中整体冗余水平。这可以被表述为一个优化问题，目标是最大化所有 prosumers 之间冗余水平之和。设 `R[ji]` 表示 Prosumer `i` 与 Prosumer `j` 之间能源路径的可靠性评分。目标是最大化能源路径的整体可靠性，考虑基础设施的强度以及备用路径等因素。
 
-*M**a**x**i**m**i**z**e*∑[*i* ≠ *j*]*R*[*j**i*],<mml:math><mml:mi mathvariant="normal">Maximize</mml:mi><mml:msub><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>&#8800;</mml:mo><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:msub><mml:mrow><mml:mi>R</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="italic">ji</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>,</mml:mo></mml:math> (11.4)
+`Maximize ∑[i≠j]R[ji],   (11.4)`
 
-![Equation](img/F000110si4.png)(11.4) 
+![Equation](img/F000110si4.png)(11.4)
 
-其中 *R*[*i**j*] = *f*(*F*[*i**j*])<mml:math><mml:msub><mml:mrow><mml:mi>R</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="italic">ij</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mi>f</mml:mi><mml:mrow><mml:mfenced close=")" open="("><mml:mrow><mml:msub><mml:mrow><mml:mi>F</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="italic">ij</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfenced></mml:mrow></mml:math>![Equation](img/F000110si5.png) 且 *F*[*ij*] 表示诸如备份能源来源的可用性、备用能源路径的可靠性或基础设施组件的冗余等因素。最大化此目标确保系统具备强有力的冗余机制，能够有效应对故障或中断。
+其中 `R[ij] = f(F[ij])` ![Equation](img/F000110si5.png) 且 `F[ij]` 表示诸如备份能源来源的可用性、备用能源路径的可靠性或基础设施组件的冗余等因素。最大化此目标确保系统具备强有力的冗余机制，能够有效应对故障或中断。
 
 ### 11.5.4 市场机制
 
@@ -3671,24 +3544,23 @@ C(E[i,j]) = a·(E[i,j])² + b·E[i,j] + c,   (11.3)
 
 学习目标：
 
-*M**a**x**i**m**i**z**e*∑[*i*]*L**e**a**r**n**i**n**g**\_*S**c**o**r**e*(*P*[*i*]),<mml:math><mml:mi mathvariant="normal">Maximize</mml:mi><mml:msub><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:msub><mml:mrow><mml:mi mathvariant="normal">Learning\_Score</mml:mi><mml:mo>(</mml:mo><mml:mi>P</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo>)</mml:mo></mml:mrow><mml:mo>,</mml:mo></mml:math> (11.5)
+`Maximize ∑[i]Learning_Score(P[i]),   (11.5)`
 
-![Equation](img/F000110si6.png)(11.5) 
+![Equation](img/F000110si6.png)(11.5)
 
 其中 `Learning_Score` 表示学习函数，它结合了代理决策过程的当前状态以及从环境或与其他 prosumers 互动中获得的反馈。学习分数可能包含历史表现、适应变化的能力以及用户满意度等因素。
 
 ## 11.6 讨论
 
-
-
-
 通过在 DES 中实施所提议的 MAS，该方法实现了更灵活、高效且具有韧性的能源网络。它能够实现本地能源优化，鼓励可再生能源的整合，并构建以社区为中心的能源生态系统。分布式决策与代理间的协同赋能 DES 能够在适应变化的情况和需求模式时更可持续地运行。采用所提议的 MAS-DES 不仅带来新的机遇，也为实现该框架带来一定的挑战。由于 MAS 考虑了本地需求、可再生能源可用性和储能容量等因素，它能够在代理优化能源分配时实现实时决策。Prosumers（生产者-消费者）、储能单元和电网运营商作为代理相互协作，利用本地生成的能源，高效减少传输损耗。MAS 通过纳入冗余规划，促进了有韧性能源系统的设计。在出现故障或中断时，代理会重新配置能源流路径，确保能源供应连续，最大限度地减少停机时间。此外，MAS 框架中的代理会根据能源生成或需求模式的变化进行适应，从而有助于系统对气候条件或消费变化引起的波动保持韧性。MAS 还促进了去中心化能源市场的形成，使 Prosumers 能够直接交易剩余能源。这种点对点交易提升了 Prosumers 的经济收益，并推动了本地能源独立性。代理会根据实时市场价格，调整能源消费或生产模式。MAS 确保公平的定价机制和激励措施，营造了一个更具经济可行性和可持续性的能源生态系统。MAS 允许模拟不同情景，评估各类能源政策和法规对 DES 的影响，有助于做出明智决策并进行有效的长期规划。此外，MAS 还辅助基础设施规划，通过建模代理在投资决策方面的行为，帮助识别向更清洁能源转型的最佳策略，以契合可持续发展目标。
 
-关键挑战包括 MAS-DES 的技术集成复杂性。将 MAS 集成到现有 DES 基础设施中面临技术挑战，需要兼容的技术并实现与现有电网的无缝衔接。下一个挑战在于 MAS 涉及代理间的数据交换，确保与能源消费、交易和基础设施相关的敏感信息的隐私与安全是一项需要强有力解决方案的关键难题。此外，监管框架对能源系统的管控可能与 MAS 驱动的去中心化和动态 DES 不匹配，政策制定者需要调整法规以适应这些系统的独特特性。此外，在 MAS 框架中建模和预测人类代理（如 Prosumers 和消费者）的行为仍面临挑战，人类决策涉及复杂因素，往往难以准确捕捉。再者，在更大、更复杂的去中心化能源网络中，MAS 的可扩展性面临挑战，随着代理数量和交互增多，计算需求可能成为瓶颈。
+
+
+关键挑战包括 MAS-DES 的技术集成复杂性。将 `MAS` 集成到现有 `DES` 基础设施中面临技术挑战，需要兼容的技术并实现与现有电网的无缝衔接。下一个挑战在于 `MAS` 涉及代理间的数据交换，确保与能源消费、交易和基础设施相关的敏感信息的隐私与安全是一项需要强有力解决方案的关键难题。此外，监管框架对能源系统的管控可能与 `MAS` 驱动的去中心化和动态 `DES` 不匹配，政策制定者需要调整法规以适应这些系统的独特特性。此外，在 `MAS` 框架中建模和预测人类代理（如 `Prosumers` 和消费者）的行为仍面临挑战，人类决策涉及复杂因素，往往难以准确捕捉。再者，在更大、更复杂的去中心化能源网络中，`MAS` 的可扩展性面临挑战，随着代理数量和交互增多，计算需求可能成为瓶颈。
 
 ## 11.7 结论
 
-将 MAS 集成到 DES 揭示了重新定义能源格局、提升可持续性、效率和韧性的广阔机遇。实现这些机遇与克服数据隐私、监管框架、行为复杂性、可扩展性和可靠性等挑战相辅相成。在不断演进的环境中，保持平衡至关重要，既要利用 MAS 的潜力，也要创新解决方案以克服挑战。本章聚焦于负责任技术的背景及其与气候危机和可持续发展的交汇点，进一步探讨 MAS 作为一种建模方法，利用多个自主代理在定义环境中相互作用的概念，有效模拟复杂的自适应系统。本章展示了 MAS 作为理解气候变化和可持续发展复杂性的稳健框架。本章接下来提出了一个由多个自主代理在定义环境中相互作用的分布式能源系统整合 MAS 框架。MAS 为模拟和分析动态交互提供了强大的视角，通过建模技术采用、政策变化和个人选择对气候与可持续发展结果的影响，分析其作用。本章旨在全面阐述 MAS 在分布式能源系统中应对气候与可持续发展问题中的作用。
+将 `MAS` 集成到 `DES` 揭示了重新定义能源格局、提升可持续性、效率和韧性的广阔机遇。实现这些机遇与克服数据隐私、监管框架、行为复杂性、可扩展性和可靠性等挑战相辅相成。在不断演进的环境中，保持平衡至关重要，既要利用 `MAS` 的潜力，也要创新解决方案以克服挑战。本章聚焦于负责任技术的背景及其与气候危机和可持续发展的交汇点，进一步探讨 `MAS` 作为一种建模方法，利用多个自主代理在定义环境中相互作用的概念，有效模拟复杂的自适应系统。本章展示了 `MAS` 作为理解气候变化和可持续发展复杂性的稳健框架。本章接下来提出了一个由多个自主代理在定义环境中相互作用的分布式能源系统整合 `MAS` 框架。`MAS` 为模拟和分析动态交互提供了强大的视角，通过建模技术采用、政策变化和个人选择对气候与可持续发展结果的影响，分析其作用。本章旨在全面阐述 `MAS` 在分布式能源系统中应对气候与可持续发展问题中的作用。
 
 ## References
 
@@ -3713,8 +3585,6 @@ C(E[i,j]) = a·(E[i,j])² + b·E[i,j] + c,   (11.3)
 *   Cenci et al., 2022 `Cenci` `MP`, `Scarazzato` `T`, `Munchen` `DD`, `et al`. Eco-friendly electronics—A comprehensive review. *Advanced Materials Technologies*. 2022;7 2001263.
 
 *   Charry-Aysanoa et al., 2023 `Charry-Aysanoa` `J`, `Layza-Candela` `PA`, `Rodas-Serrano` `VW`, `Yong-Castañeda` `CA`, `Durand-Saavedra` `DP`, `Fuentes-Murillo` `H`. Deepening environmental crisis: When prevention and environmental responsibility measures do not work. *Remittances Review*. 2023;8.
-
-
 
 *   Cheng et al., 2019 Cheng X, Long R, Chen H, Yang J. 社会互动是否会影响居民的可持续生活方式决策？基于后悔和博弈论的多智能体模拟。 *Applied Energy*. 2019;251113366.
 
@@ -3774,40 +3644,35 @@ C(E[i,j]) = a·(E[i,j])² + b·E[i,j] + c,   (11.3)
 
 *   Rooney-Varga et al., 2020 Rooney-Varga JN, Kapmeier F, Sterman JD, Jones AP, Putko M, Rath K. 气候行动模拟。 *Simulation & Gaming*. 2020;51(2):114–140.
 
+*   Sami, 2020 Sami BS. Intelligent energy management for off-grid renewable hybrid system using multi-agent approach. *IEEE Access*. 2020;8:8681–8696.
+
+*   Simoiu et al., 2022 Simoiu MS, Fagarasan I, Ploix S, Calofir V. Modeling the energy community members’ willingness to change their behaviour with multi-agent systems: A stochastic approach. *Renewable Energy*. 2022;194:1233–1246.
 
 
--   Sami, 2020 Sami BS. Intelligent energy management for off-grid renewable hybrid system using multi-agent approach. *IEEE Access*. 2020;8:8681–8696.
 
--   Simoiu et al., 2022 Simoiu MS, Fagarasan I, Ploix S, Calofir V. Modeling the energy community members’ willingness to change their behaviour with multi-agent systems: A stochastic approach. *Renewable Energy*. 2022;194:1233–1246.
+# References
 
--   Simpson et al., 2021 Simpson NP, Mach KJ, Constable A, et al. A framework for complex climate change risk assessment. *One Earth*. 2021;4(4):489–501.
+- Simpson et al., 2021 Simpson NP, Mach KJ, Constable A, et al. A framework for complex climate change risk assessment. *One Earth*. 2021;4(4):489–501.
+- Shaikh, 2017 Shaikh ZA. Towards sustainable development: A review of green technologies. *Trends in Renewable Energy*. 2017;4(1):1–14.
+- Shukla et al., 2023 Shukla, A. K., Shukla, S., Surampalli, R. Y., Zhang, T. C., Yu, Y. L., & Kao, C. M. (2023). Modeling microconstituents based on remote sensing and GIS techniques. In *Microconstituents in the environment: Occurrence, fate, removal and management*, John Wiley & Sons, pp. 227–246.
+- Voegtlin and Scherer, 2017 Voegtlin C, Scherer AG. Responsible innovation and the innovation of responsibility: Governing sustainable development in a globalized world. *Journal of Business Ethics*. 2017;143:227–243.
+- Wang et al., 2022 Wang Z, Li X, Mao Y, Li L, Wang X, Lin Q. Dynamic simulation of land use change and assessment of carbon storage based on climate change scenarios at the city level: A case study of Bortala, China. *Ecological Indicators*. 2022;134108499.
+- Xia et al., 2021 Xia X, Wu X, BalaMurugan S, Karuppiah M. Effect of environmental and social responsibility in energy-efficient management models for smart cities infrastructure. *Sustainable Energy Technologies and Assessments*. 2021;47101525.
+- Yalew et al., 2020 Yalew SG, van Vliet MT, Gernaat DE, et al. Impacts of climate change on energy systems in global and regional scenarios. *Nature Energy*. 2020;5(10):794–802.
+- Yang et al., 2020 Yang Q, Wang J, Liu X, Xia J. MAS-based interaction simulation within asymmetric information on emergency management of urban rainstorm disaster. *Complexity*. 2020;2020:1–13.
+- Yerlikaya et al., 2020 Yerlikaya, B.A., Ömezli, S., & Aydoğan, N. (2020). Climate change forecasting and modeling for the year of 2050. *Environment, climate, plant and vegetation growth*, pp.109–122, Springer.
 
--   Shaikh, 2017 Shaikh ZA. Towards sustainable development: A review of green technologies. *Trends in Renewable Energy*. 2017;4(1):1–14.
+# Modeling the effect of meteorological drought on lake level changes with machine learning techniques
 
--   Shukla et al., 2023 Shukla, A. K., Shukla, S., Surampalli, R. Y., Zhang, T. C., Yu, Y. L., & Kao, C. M. (2023). Modeling microconstituents based on remote sensing and GIS techniques. In *Microconstituents in the environment: Occurrence, fate, removal and management*, John Wiley & Sons, pp. 227–246.
+Özlem Terzi^(1), Emine Dilek Taylan^(2) and Tahsin Baykal^(3)
 
--   Voegtlin and Scherer, 2017 Voegtlin C, Scherer AG. Responsible innovation and the innovation of responsibility: Governing sustainable development in a globalized world. *Journal of Business Ethics*. 2017;143:227–243.
-
--   Wang et al., 2022 Wang Z, Li X, Mao Y, Li L, Wang X, Lin Q. Dynamic simulation of land use change and assessment of carbon storage based on climate change scenarios at the city level: A case study of Bortala, China. *Ecological Indicators*. 2022;134108499.
-
--   Xia et al., 2021 Xia X, Wu X, BalaMurugan S, Karuppiah M. Effect of environmental and social responsibility in energy-efficient management models for smart cities infrastructure. *Sustainable Energy Technologies and Assessments*. 2021;47101525.
-
--   Yalew et al., 2020 Yalew SG, van Vliet MT, Gernaat DE, et al. Impacts of climate change on energy systems in global and regional scenarios. *Nature Energy*. 2020;5(10):794–802.
-
--   Yang et al., 2020 Yang Q, Wang J, Liu X, Xia J. MAS-based interaction simulation within asymmetric information on emergency management of urban rainstorm disaster. *Complexity*. 2020;2020:1–13.
-
--   Yerlikaya et al., 2020 Yerlikaya, B.A., Ömezli, S., & Aydoğan, N. (2020). Climate change forecasting and modeling for the year of 2050. *Environment, climate, plant and vegetation growth*, pp.109–122, Springer.
-
-12 
-
-## Modeling the effect of meteorological drought on lake level changes with machine learning techniques
-
-Özlem Terzi^(1), Emine Dilek Taylan^(2) and Tahsin Baykal^(3),    ¹Department of Civil Engineering, Technology Faculty, Isparta Applied Sciences University, Isp
-1Department of Civil Engineering, Technology Faculty, Isparta Applied Sciences University, Isparta, Turkey,    ²Department of Civil Engineering, Engineering and Natural Sciences Faculty, Süleyman Demirel University, Isparta, Turkey,    ³Department of Civil Engineering, Engineering and Natural Sciences Faculty, Kırıkkale University, Kırıkkale, Turkey
+1. Department of Civil Engineering, Technology Faculty, Isparta Applied Sciences University, Isparta, Turkey
+2. Department of Civil Engineering, Engineering and Natural Sciences Faculty, Süleyman Demirel University, Isparta, Turkey
+3. Department of Civil Engineering, Engineering and Natural Sciences Faculty, Kırıkkale University, Kırıkkale, Turkey
 
 ## Abstract
 
-This study investigates the impact of meteorological droughts on the water level of Eğirdir Lake, indicating hydrological drought, utilizing machine learning (ML) models, including k-nearest neighbors, support vector regression, AdaBoost, Random Forest, extra trees, gradient boosting regressor, XGBoost, and CatBoost algorithms. Initially, standardized precipitation index (SPI) series were calculated for 12-month period, analyzing precipitation data from 1976 to 2019 obtained from meteorological stations in Eğirdir, Senirkent, Uluborlu, Yalvaç, and Isparta. ML models were developed to estimate the water level of Eğirdir Lake exclusively based on SPI values during only dry periods. The CatBoost algorithm gave the best performance among ML models with an *R*² value of 0.71 for the testing set. Hyperparameter tuning for CatBoost model was enhanced with Optuna the success of the model and mitigate overfitting. Therefore the *R*² value of the CatBoost model increased to 0.75. Subsequently, long short-term memory was employed to forecast the next 10-year SPI values for each station. Additionally, the best ML model, utilizing possible SPI values for the next 10 years, forecasts potential water levels for Lake Eğirdir. The study concludes that ML models effectively assess the impact of meteorological droughts on lake water levels and can predict forthcoming water level changes.
+This study investigates the impact of meteorological droughts on the water level of Eğirdir Lake, indicating hydrological drought, utilizing machine learning (ML) models, including `k-nearest neighbors`, `support vector regression`, `AdaBoost`, `Random Forest`, `extra trees`, `gradient boosting regressor`, `XGBoost`, and `CatBoost` algorithms. Initially, standardized precipitation index (SPI) series were calculated for 12-month period, analyzing precipitation data from 1976 to 2019 obtained from meteorological stations in Eğirdir, Senirkent, Uluborlu, Yalvaç, and Isparta. ML models were developed to estimate the water level of Eğirdir Lake exclusively based on SPI values during only dry periods. The `CatBoost` algorithm gave the best performance among ML models with an *R*² value of 0.71 for the testing set. Hyperparameter tuning for `CatBoost` model was enhanced with `Optuna` the success of the model and mitigate overfitting. Therefore the *R*² value of the `CatBoost` model increased to 0.75. Subsequently, long short-term memory was employed to forecast the next 10-year SPI values for each station. Additionally, the best ML model, utilizing possible SPI values for the next 10 years, forecasts potential water levels for Lake Eğirdir. The study concludes that ML models effectively assess the impact of meteorological droughts on lake water levels and can predict forthcoming water level changes.
 
 ## Keywords
 
@@ -3817,20 +3682,17 @@ Meteorological drought; standardized precipitation index; lake level; machine le
 
 Hydrological drought occurs with the continuation of meteorological drought, which occurs when precipitation falls below the mean in a period time and decreases in groundwater and surface water resources (Gumus, 2017). Agricultural drought occurs when the decreasing water resources potential cannot meet the plant water needs (Dai et al., 2020). In this context, it is of great importance to accurately determine the severity, magnitude, and duration of a possible meteorological drought and subsequent hydrological drought to make forward-looking and sustainable planning of water resources in a region.
 
+- **标准化降水指数 (SPI)** 是一种用于在不同时间尺度上监测气象干旱的方法 (`McKee et al., 1993`)。该方法因仅使用降水数据而受到许多研究者的青睐 (`Alvarez et al., 2024`; `Angelidis et al., 2012`; `Bhunia et al., 2020`; `Latifoğlu & Özger, 2023`; `Młyński et al., 2024`; `Moreira et al., 2006`; `Pande et al., 2023`; `Sakellariou et al., 2024`; `Šebenik et al., 2017`)。`Kumar et al. (2009)` 使用 SPI 方法对印度安得拉邦的长期降水数据进行气象干旱分析，他们指出该地区降水的累积概率分布函数在下尾和上尾偏离正态分布，需要尝试不同的概率分布函数。`Abeysingha and Rajapaksha (2020)` 利用斯里兰卡 54 个气象站的降水数据，在 3 个月、6 个月和 12 个月的周期内使用 SPI 方法分析干旱，并对 SPI 系列应用曼 Kendall 趋势检验，检测到干旱呈上升趋势。`Mahmoudi et al. (2021)` 研究了在伊朗 63 个站点的降水数据为零时，确定最合适的概率分布以用于 SPI 值。`Masoudi and Taheri (2024)` 利用 1990 年至 2019 年的降水数据为伊朗法尔省（Fars）制作干旱风险图，图示表明干旱风险从东南向西北递增。`Rezaiy and Shabri (2024)` 利用 1970 年至 2019 年的降水数据为阿富汗哈拉特省（Herat Province）计算 3 个月、6 个月、9 个月和 12 个月的 SPI 系列，对 SPI 系列进行 Ensemble Empirical Mode Decomposition (EEMD) 分解，并使用 Autoregressive Integrated Moving Average (ARIMA) 进行干旱预测，他们指出 EEMD-ARIMA 模型比 ARIMA 更成功。
 
+自然湖泊和人工湖泊是受气候变化影响的重要地表水资源，它们在支持渔业和休闲活动、满足饮用水和灌溉水需求、缓和气候、提高农业产量等方面对区域经济贡献显著。因此，检查湖泊水位——作为受气候变化和气象干旱影响的水文干旱指标——至关重要 (`Erkoç, 2023`; `Mtilatila et al., 2020`; `Wang et al., 2018`; `Zhang et al., 2015`)。`Mtilatila et al. (2020)` 评估了湖泊和河流流域的气象干旱和水文干旱趋势，指出因气温升高和降水减少，该地区干旱趋势呈上升。`Liu et al. (2020)` 提出在中国东鼎湖（Dongting Lake）地区采用创新的洪水调控方案，在洪水期间蓄积多余径流，以防止水文干旱。
 
-
--   [标准化降水指数 (SPI)](https://wiki.example.org/feynmans_learning_method) 是一种用于在不同时间尺度上监测气象干旱的方法 (`McKee et al., 1993`). 该方法因仅使用降水数据而受到许多研究者的青睐 (`Alvarez et al., 2024`; `Angelidis et al., 2012`; `Bhunia et al., 2020`; `Latifoğlu & Özger, 2023`; `Młyński et al., 2024`; `Moreira et al., 2006`; `Pande et al., 2023`; `Sakellariou et al., 2024`; `Šebenik et al., 2017`). `Kumar et al. (2009)` 使用 SPI 方法对印度安得拉邦的长期降水数据进行气象干旱分析，他们指出该地区降水的累积概率分布函数在下尾和上尾偏离正态分布，需要尝试不同的概率分布函数。`Abeysingha and Rajapaksha (2020)` 利用斯里兰卡 54 个气象站的降水数据，在 3 个月、6 个月和 12 个月的周期内使用 SPI 方法分析干旱，并对 SPI 系列应用曼 Kendall 趋势检验，检测到干旱呈上升趋势。`Mahmoudi et al. (2021)` 研究了在伊朗 63 个站点的降水数据为零时，确定最合适的概率分布以用于 SPI 值。`Masoudi and Taheri (2024)` 利用 1990 年至 2019 年的降水数据为伊朗法尔省（Fars）制作干旱风险图，图示表明干旱风险从东南向西北递增。`Rezaiy and Shabri (2024)` 利用 1970 年至 2019 年的降水数据为阿富汗哈拉特省（Herat Province）计算 3 个月、6 个月、9 个月和 12 个月的 SPI 系列，对 SPI 系列进行 Ensemble Empirical Mode Decomposition (EEMD) 分解，并使用 Autoregressive Integrated Moving Average (ARIMA) 进行干旱预测，他们指出 EEMD-ARIMA 模型比 ARIMA 更成功。 
-
-自然湖泊和人工湖泊是受气候变化影响的重要地表水资源，它们在支持渔业和休闲活动、满足饮用水和灌溉水需求、缓和气候、提高农业产量等方面对区域经济贡献显著。因此，检查湖泊水位——作为受气候变化和气象干旱影响的水文干旱指标——至关重要 (`Erkoç, 2023`; `Mtilatila et al., 2020`; `Wang et al., 2018`; `Zhang et al., 2015`). `Mtilatila et al. (2020)` 评估了湖泊和河流流域的气象干旱和水文干旱趋势，指出因气温升高和降水减少，该地区干旱趋势呈上升。`Liu et al. (2020)` 提出在中国东鼎湖（Dongting Lake）地区采用创新的洪水调控方案，在洪水期间蓄积多余径流，以防止水文干旱。 
-
-机器学习（ML）是基于输入信息处理不同函数并通过自学生成解决方案的算法系统，它们被用于获得最佳预测并预测水文领域的时间序列数据，如干旱 (`Dai et al., 2024`; `Fan et al., 2024`; `Hancock & Khoshgoftaar, 2020`; `Ibrahim et al., 2020`; `Sanjeetha et al., 2021`; `Zhang et al., 2024`). `Huang et al. (2019)` 利用 2001 年至 2015 年中国南方五个站点的气象数据，通过类别增强（CatBoost）、随机森林（RF）和支持向量机（SVM）算法估算参考蒸发 otranspiration，他们指出 CatBoost 算法比其他方法提供更快且更准确的结果。`Kumar et al. (2023)` 尝试不同的机器学习算法预测 Garudeshwar 盆地的河流流量，其中指出 CatBoost 算法在建模水文时间序列方面表现出色。`Saber et al. (2022)` 使用 LightGBM 和 CatBoost 算法在埃及瓦迪系统（Wadi System）中建模闪 lood 敏感性，他们指出 LightGBM 在 445 个闪 lood 区域表现更为成功。`Wang and Qian (2023)` 提出将 CatBoost 用于河网分类，并通过 SHapley Additive exPlanations (SHAP) 增强模型成功率，取得了合理的成功。 
+机器学习（ML）是基于输入信息处理不同函数并通过自学生成解决方案的算法系统，它们被用于获得最佳预测并预测水文领域的时间序列数据，如干旱 (`Dai et al., 2024`; `Fan et al., 2024`; `Hancock & Khoshgoftaar, 2020`; `Ibrahim et al., 2020`; `Sanjeetha et al., 2021`; `Zhang et al., 2024`)。`Huang et al. (2019)` 利用 2001 年至 2015 年中国南方五个站点的气象数据，通过类别增强（CatBoost）、随机森林（RF）和支持向量机（SVM）算法估算参考蒸发 otranspiration，他们指出 CatBoost 算法比其他方法提供更快且更准确的结果。`Kumar et al. (2023)` 尝试不同的机器学习算法预测 Garudeshwar 盆地的河流流量，其中指出 CatBoost 算法在建模水文时间序列方面表现出色。`Saber et al. (2022)` 使用 LightGBM 和 CatBoost 算法在埃及瓦迪系统（Wadi System）中建模闪 lood 敏感性，他们指出 LightGBM 在 445 个闪 lood 区域表现更为成功。`Wang and Qian (2023)` 提出将 CatBoost 用于河网分类，并通过 SHapley Additive exPlanations (SHAP) 增强模型成功率，取得了合理的成功。
 
 `Belayneh and Adamowski (2013)` 利用人工神经网络（ANN）、支持向量回归（SVR）和小波分析（WA）等不同的机器学习算法，对埃塞俄比亚阿瓦什河流域的标准化降水指数（SPI）所确定的气象干旱进行预测，他们指出 WA-ANN 方法在 3 个月的时间跨度内成功估计 SPI 值。`Citakoglu and Coşkun (2022)` 使用 ANN、自适应模糊推理系统、SVR、高斯过程回归和 k 最近邻（kNN）算法，在计算 Sakarya 气象站降水数据的 1 个月、3 个月和 6 个月期间的 SPI 系列后，预测 t+1 月的数值，他们指出不同的混合方法在每个周期中均取得了成功。`Mokhtar et al. (2021)` 利用标准化蒸渗指数（SPEI）在 3 个月和 6 个月的时间跨度内，在中国青藏高原计算气象干旱，并使用多种机器学习算法估算 SPEI 值，比较了不同输入组合下机器学习算法的表现。`Dash et al. (2024)` 采用逻辑回归、决策树（DT）、随机森林（RF）和支持向量机（SVM）算法对降水进行预测，指出随机森林模型提供最佳预测。
 
 
 
-Long short-term memory (LSTM) has a structure that uses the output obtained in the previous step as the input of the current step and organizes the flow of information by keeping it in memory for a short time. It is frequently used in modeling and forecasting time series. This method has achieved high success in estimating nonlinear data. In recent years, the method has been often preferred in hydrology for future predictions (Baykal et al., 2023; Latifoğlu & Nuralan, 2020; Swagatika et al., 2024). Xu et al. (2024) stated that the Cauchy mutation and adaptive weight factor (CABES) method increased the success of LSTM in estimating annual flow values of Xiajiang hydrological station in the Ganjiang River Basin, China. Kadam et al. (2024) made a drought assessment with 6-month SPI values using recurrent neural network, gated recurrent unit (GRU), and LSTM deep learning methods for the Marathwada region in India. They stated that the model based on LSTM with 6-month SPI is the most successful model for the region. Li, Liu et al. (2024) used LSTM, GRU, and temporal convolutional network deep learning methods to predict the level changes of Polang Lake, located in the middle parts of the Yangtze River in China. They preferred Bayesian model average and Monte Carlo methods to increase the prediction accuracy of the models and stated that GRU gave the best estimations. Li, Shu et al. (2024) compared LSTM and `bidirectional long short-term memory (BiLSTM)` methods in a different study for Polang Lake level prediction. While both methods were found to be successful in short-term forecasts, BiLSTM was found to be more successful in long-term forecasts.
+# Long short-term memory (LSTM) has a structure that uses the output obtained in the previous step as the input of the current step and organizes the flow of information by keeping it in memory for a short time. It is frequently used in modeling and forecasting time series. This method has achieved high success in estimating nonlinear data. In recent years, the method has been often preferred in hydrology for future predictions (Baykal et al., 2023; Latifoğlu & Nuralan, 2020; Swagatika et al., 2024). Xu et al. (2024) stated that the Cauchy mutation and adaptive weight factor (CABES) method increased the success of LSTM in estimating annual flow values of Xiajiang hydrological station in the Ganjiang River Basin, China. Kadam et al. (2024) made a drought assessment with 6-month SPI values using recurrent neural network, gated recurrent unit (GRU), and LSTM deep learning methods for the Marathwada region in India. They stated that the model based on LSTM with 6-month SPI is the most successful model for the region. Li, Liu et al. (2024) used LSTM, GRU, and temporal convolutional network deep learning methods to predict the level changes of Polang Lake, located in the middle parts of the Yangtze River in China. They preferred Bayesian model average and Monte Carlo methods to increase the prediction accuracy of the models and stated that GRU gave the best estimations. Li, Shu et al. (2024) compared LSTM and `bidirectional long short-term memory (BiLSTM)` methods in a different study for Polang Lake level prediction. While both methods were found to be successful in short-term forecasts, BiLSTM was found to be more successful in long-term forecasts.
 
 In this study, the effects of meteorological droughts on Eğirdir Lake water level changes, that is, hydrological drought, were examined with ML algorithms. For this purpose, firstly, SPI series were calculated for meteorological drought in a 12-month period using precipitation data between 1976 and 2019 from Eğirdir, Senirkent, Uluborlu, Yalvaç, and Isparta meteorological stations. ML models were developed to estimate the water level of Eğirdir Lake with only SPI values during dry periods as input. Then, the next 10-year (2020–30) SPI values of each station were estimated with LSTM and the possible change of Eğirdir Lake water level was examined with the most appropriate ML model selected. When analyzing the existing studies in the literature, it was seen that ML studies on the prediction of lake water level from meteorological drought were limited. In addition, estimating lake levels using only the dry periods of the SPI series and forecasting possible level changes with LSTM also reveal the novelty of the study.
 
@@ -3838,7 +3700,7 @@ In this study, the effects of meteorological droughts on Eğirdir Lake water lev
 
 ### 12.2.1 Study region
 
-Lake Eğirdir is the second largest freshwater lake in Turkey, located within the borders of Isparta Province, formed by tectonic and karst effects. It is located between 35°37′41″ and 38°16′55″ northern latitudes and 30°44′39″ and 30°57′43″ eastern longitudes (Fig. 12–1). The lake, which has steep rocks and a flat and shallow bottom, has a shoreline length of 150 km. Another of the most important features of Lake Eğirdir is its connection with the sea. The waters coming to Kovada Lake through the 22 km Kovada canal were discharged from the Kovada Valley to Aksu Stream and from there to the Mediterranean via karst paths. For the last 20 years, the waters of the lake have been flowing to the Karacaören I and II Dams built in the Çandır Plain.
+Lake Eğirdir is the second largest freshwater lake in Turkey, located within the borders of Isparta Province, formed by tectonic and karst effects. It is located between 35°37′41″ and 38°16′55″ northern latitudes and 30°44′39″ and 30°57′43″ eastern longitudes (Fig. 12–1). The lake, which has steep rocks and a flat and shallow bottom, has a shoreline length of 150 km. Another of the most important features of Lake Eğirdir is its connection with the sea. The waters coming to Kovada Lake through the 22 km Kovada canal were discharged from the Kovada Valley to Aksu Stream and from there to the Mediterranean via karst paths. For the last 20 years, the waters of the lake have been flowing to the Karacaören I and II Dams built in the Çandır Plain.
 
 ![Figure 12–1 The study region. Map lines delineate study areas and do not necessarily depict accepted national boundaries.](img/F000055f12-01-9780443219054.jpg)
 
@@ -3846,15 +3708,17 @@ Figure 12–1 The study region. Map lines delineate study areas and do not neces
 
 The most important water inputs feeding the lake are the springs from the bottom of the lake. At the same time, there are many large and small streams and streams descending from the surrounding mountains and fed by rainwater. The most important of these are the Pupa Stream, which comes from Yalvaç district and flows into the lake from Gelendost district, passing through Akçay, Uluborlu and Senirkent districts, Değirmen Stream descending from Hoyran Plain, and Aksu Stream, which connects to the lake with a channel from Aksu Stream. Eğirdir Lake meets the drinking water needs of Isparta province and surrounding settlements. It is also used as irrigation water in the plains of Isparta, Gönen, Uluborlu, Senirkent, Yalvaç, Gelendost, and Eğirdir (URL-1).
 
-## 12.2.2 Standardized precipitation index
+### 12.2.2 Standardized precipitation index
 
-SPI is a widely used method developed by McKee et al. (1993) to monitor meteorological drought. Abnormalities in dry or wet events at any time scale in a region can be determined by SPI, which depends on only precipitation parameter. It is the index value (SPI) obtained by dividing the difference of the precipitation value (*X*[*i*]) from the mean (*X*[mean]) for the specified period by the standard deviation (*σ*)![Equation](img/F000055si1.png)) (Eq. 12.1).
+SPI is a widely used method developed by McKee et al. (1993) to monitor meteorological drought. Abnormalities in dry or wet events at any time scale in a region can be determined by SPI, which depends on only precipitation parameter. It is the index value (SPI) obtained by dividing the difference of the precipitation value (*X*[*i*]) from the mean (*X*[mean]) for the specified period by the standard deviation (*σ*) (Eq. 12.1).
 
-${SPI} = \\left( \\frac{x\_{i}{- x}\_{mean}}{\\sigma} \\right)$<mml:math><mml:mi mathvariant="normal">SPI</mml:mi><mml:mo>=</mml:mo><mml:mo>(</mml:mo><mml:mfrac><mml:mrow><mml:msub><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mo>&#8722;</mml:mo><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">mean</mml:mi></mml:mrow></mml:msub></mml:mfrac><mml:mo>)</mml:mo></mml:math> (12.1)
+```
+${SPI} = \left( \frac{x_{i}{- x}_{mean}}{\sigma} \right)$<mml:math><mml:mi mathvariant="normal">SPI</mml:mi><mml:mo>=</mml:mo><mml:mo>(</mml:mo><mml:mfrac><mml:mrow><mml:msub><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mo>&#8722;</mml:mo><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">mean</mml:mi></mml:mrow></mml:msub></mml:mfrac><mml:mo>)</mml:mo></mml:math> (12.1)
+```
 
-![Equation](img/F000055si2.png)(12.1)  
+![Equation](img/F000055si2.png)(12.1)
 
-## 12.2.3 Machine learnings algorithms
+### 12.2.3 Machine learnings algorithms
 
 ML uses a variety of computational methods to generate knowledge from data. Data scientists note that there is no best, one-size-fits-all algorithm for solving a problem. The type of algorithm to be used to obtain the best model may vary depending on the problem type and the number of variables. ML is broadly classified into four groups: supervised (in case of smaller amount of data and clearly labeled for training), unsupervised (usually for large datasets), semisupervised (where unlabeled data are available and retrieving labeled data are exhausting), and reinforcement learning (maximizing cumulative reward concept in an environment of software agents) (Mahesh, 2020). In this study, kNN, SVR, adaptive boosting (AdaBoost), RF, Extra trees (ET), gradient boosting regressor (GBR), eXtreme gradient boosting (XGBoost), and CatBoost algorithms were used.
 
@@ -3864,174 +3728,144 @@ kNN is a nonparametric ML algorithm proposed by Shakhnarovich et al. (2008). It 
 
 #### 12.2.3.2 Support vector regression
 
-
-
-
-Proposed by `Cortes` and [`Vapnik` (1995), `SVR` is an ML technique where a model learns the significance of a variable to characterize the relationship between input and output (`Zhang & O'Donnell`, 2020). It is a statistical learning algorithm that allows reaching a universal solution with a small number of examples. This algorithm is a powerful regression approach for estimating linear and nonlinear systems and has been widely used in different studies to solve estimation problems (`Malik` et al., 2021). Moreover, having high prediction accuracy increases generalization ability (`Awad` et al., 2015).
+Proposed by `Cortes` and `Vapnik` (1995), `SVR` is an ML technique where a model learns the significance of a variable to characterize the relationship between input and output (`Zhang & O'Donnell`, 2020). It is a statistical learning algorithm that allows reaching a universal solution with a small number of examples. This algorithm is a powerful regression approach for estimating linear and nonlinear systems and has been widely used in different studies to solve estimation problems (`Malik` et al., 2021). Moreover, having high prediction accuracy increases generalization ability (`Awad` et al., 2015).
 
 #### 12.2.3.3 Adaptive boosting
 
-`AdaBoost` is one of the ensemble algorithms obtained by combining weak learning algorithms such as `DTs` to create a stronger learning algorithm. During training of the model, a weight `w[i]` is assigned to each sample and this weight is recalculated iteratively. At each iteration, `AdaBoost` changes the weight `w[i]` to reduce the error by reaching training samples with higher error in the prediction value, so that each subsequent regression tree has a reweighted training data set (`Drucker`, 1997).
 
-#### 12.2.3.4 Random forest
+
+# 12.2.3.4 Random forest
 
 `RF` is an ML algorithm used to solve classification and regression problems that combines the output of multiple randomly generated `DTs`. It is an alternative technique that provides improved prediction success than general classification and regression tree models (`Vrontos` et al., 2021). Random decision forests in this ensemble learning method, which makes class (classification) or number (regression) predictions according to the type of problem by creating many `DTs` in the training phase for classification, regression, and other tasks, eliminates the problems of overfitting `DTs` to training sets (`Lee` et al., 2021).
 
-#### 12.2.3.5 Extra tree algorithm
+# 12.2.3.5 Extra tree algorithm
 
 `ET`, one of the ensemble learning methods that belongs to the family of `DT`-based models, separates the nodes with randomly selected cutoff points, unlike other tree-based combination methods. It uses the entire learning sample when evolving trees to minimize bias (`Geurts` et al., 2006). When creating a `DT`, the dependency relationship of extracted data samples is used (`Kumar` et al., 2022; `Sharaff & Gupta`, 2019). The `DT` selects the best features based on Gini index given in `Eq. (12.2)`.
 
-$\\mathit{gini}\\left( D \\right) = 1 - \\sum\\limits\_{i = 1}^{m}P\_{i}^{2}$<mml:math><mml:mi mathvariant="italic">gini</mml:mi><mml:mrow><mml:mfenced close=")" open="("><mml:mrow><mml:mi>D</mml:mi></mml:mrow></mml:mfenced></mml:mrow><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>&#8722;</mml:mo><mml:munderover><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>m</mml:mi></mml:mrow></mml:munderover><mml:mrow><mml:msubsup><mml:mrow><mml:mi>P</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msubsup></mml:mrow></mml:math> (12.2)
+```
+gini(D) = 1 - ∑_{i=1}^{m} P_i^2
+```
+(12.2)
 
-![Equation](img/F000055si3.png)(12.2) 
+where `m` denotes the number of output labels and `P[i]` represents the probability of belonging to the `i`th output label in the `D` dataset (`Du` et al., 2023).
 
-where *m* denotes the number of output labels and *P*[*i*] represents the probability of belonging to the *i*th output label in the *D* dataset (`Du` et al., 2023).
-
-#### 12.2.3.6 Gradient boosting regressor
+# 12.2.3.6 Gradient boosting regressor
 
 `GBR`, an integrated model having higher performance and stability, is a technique that extends the boosting algorithm for solving the regression problem proposed by `Friedman` (2001). It uses negative gradients of the loss function, such as least squares and least absolute deviation, to solve the minimum value. `GBR`, which can handle well the noisy and unclean data, support different loss functions, and has powerful prediction capability for nonlinear data, is widely used in research. It prevents the problem of overfitting during the `DT` learning phase by stopping the growth of the tree as soon as possible (`Li` et al., 2018).
 
-#### 12.2.3.7 eXtreme gradient boosting
+# 12.2.3.7 eXtreme gradient boosting
 
 `XGBoost` by developed by `Chen` and [`Guestrin` (2016), is as an improved version of gradient boosting. It has the added benefit of parallel tree boosting and uses a gradient boosting framework. The algorithm overcomes overfitting and achieves higher performance, and additionally uses parallel operations, which reduces computation time. Many weak learners are combined using `XGBoost` to predict the output with a boosting method (`Naghibi` et al., 2020).
 
-#### 12.2.3.8 Category boosting
+# 12.2.3.8 Category boosting
 
 `CatBoost`, a gradient `DT` algorithm that can handle categorical features better, uses the entire data set for training. Thus it provides categorical characteristics with minimal loss of information (`Prokhorenkova` et al., 2018). It can combine all categorical features into one new feature. Additionally, it overcomes deviations in the solution with its sequential boosting feature and provides faster results (`Huang` et al., 2019).
 
-## 12.3 Results and discussion
+# 12.3 Results and discussion
 
 In this study, the effect of meteorological droughts on Eğirdir Lake water level was examined with ML algorithms. For this, firstly, SPI values were calculated for meteorological drought in a 12-month period using precipitation data from Eğirdir, Senirkent, Uluborlu, Yalvaç, and Isparta meteorological stations between 1976 and 2019 (`Fig. 12–2`). Secondly, ML models were developed to estimate the water level of Lake Eğirdir by using only SPI values during dry periods as input. Then, SPI values for the next 10 years (2020–30) of each station were forecasted with LSTM and the possible change of Eğirdir Lake water level was examined with the most appropriate ML model.
 
 ![Figure 12–2 Time series of 12-month standardized precipitation index values.](img/F000055f12-02a-9780443219054.jpg)
 
-Figure 12–2 Time series of 12-month standardized precipitation index values.
+**Figure 12–2 Time series of 12-month standardized precipitation index values.**
 
-When `Fig. 12–2` was examined, a total of 281 months were dry at Eğirdir station, 265 months at Senirkent station, 237 months at Uluborlu station, 217 months at Yalvaç station, and 241 months at Isparta station. While in October 2007, for Eğirdir, Senirkent, and Yalvaç stations the lowest SPI values were obtained as −2.55, −2.03, and −3.24, respectively, they were found as −2.78 and −2.82, respectively, in Uluborlu and Isparta stations in November 1990. At the same time, an SPI value of −2.38 was obtained at Senirkent station in November 1990, and −2.86 at Isparta station in February 2000. The common dry period of all stations was determined as 127 months. ML models were developed using kNN, `SVR`, `AdaBoost`, `RF`, `ET`, `GBR`, `XGBoost`, and `CatBoost` algorithms. In the models, the dry values of these five stations in the study region were used as input, and the lake water level in these dry months was estimated. The determination coefficient (*R*²) and root mean square error (RMSE) of the developed ML models are shown in `Table 12–1`. The calculation of *R*² and RMSE values are given in `Eqs. 12.3` and `12.4`, respectively.
+When `Fig. 12–2` was examined, a total of 281 months were dry at Eğirdir station, 265 months at Senirkent station, 237 months at Uluborlu station, 217 months at Yalvaç station, and 241 months at Isparta station. While in October 2007, for Eğirdir, Senirkent, and Yalvaç stations the lowest SPI values were obtained as −2.55, −2.03, and −3.24, respectively, they were found as −2.78 and −2.82, respectively, in Uluborlu and Isparta stations in November 1990. At the same time, an SPI value of −2.38 was obtained at Senirkent station in November 1990, and −2.86 at Isparta station in February 2000. The common dry period of all stations was determined as 127 months. ML models were developed using kNN, `SVR`, `AdaBoost`, `RF`, `ET`, `GBR`, `XGBoost`, and `CatBoost` algorithms. In the models, the dry values of these five stations in the study region were used as input, and the lake water level in these dry months was estimated. The determination coefficient (`R²`) and root mean square error (RMSE) of the developed ML models are shown in `Table 12–1`. The calculation of `R²` and RMSE values are given in `Eqs. 12.3` and `12.4`, respectively.
 
 
 
-$R^{2} = 1 - \frac{\\sum_{i = 1}^{N}(X_{i(\\text{measured})} - X_{i(\\text{model})})^{2}}{\\sum_{i = 1}^{N}(X_{i(\\text{measured})} - X_{i(\\text{mean})})^{2}}$<mml:math><mml:msup><mml:mrow><mml:mi>R</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>&#8722;</mml:mo><mml:mfrac><mml:mrow><mml:munderover><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:msup><mml:mrow><mml:mfenced close=")" open="("><mml:mrow><mml:msub><mml:mrow><mml:mi>X</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mo>(</mml:mo><mml:mi mathvariant="normal">measured</mml:mi><mml:mo>)</mml:mo></mml:msub><mml:msub><mml:mrow><mml:mo>&#8722;</mml:mo><mml:mi>X</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mo>(</mml:mo><mml:mi mathvariant="normal">model</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:msub></mml:mfenced></mml:mrow></mml:msup></mml:mrow></mml:msup></mml:msup><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>&#8722;</mml:mo><mml:mfrac><mml:mrow><mml:munderover><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>N</mml:mi></mml:mrow></mml:munderover><mml:mrow><mml:msup><mml:mrow><mml:mfenced close=")" open="("><mml:mrow><mml:msub><mml:mrow><mml:mi>X</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mo>(</mml:mo><mml:mi mathvariant="normal">measured</mml:mi><mml:mo>)</mml:mo></mml:msub><mml:mo>&#8722;</mml:mo><mml:msub><mml:mrow><mml:mi>X</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mo>(</mml:mo><mml:mi mathvariant="normal">mean</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:msub></mml:mfenced></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:msup></mml:mfrac></mml:math> (12.3)
+## 公式与模型评价指标
 
-![Equation](img/F000055si4.png)(12.3) 
+决定系数（$R^2$）和均方根误差（RMSE）的计算公式如下：
 
-${RMSE} = \\sqrt{\\frac{1}{N}\\sum_{i = 1}^{N}(X_{i(\\text{measured})} - X_{i(\\text{model})})^{2}}$<mml:math><mml:mi mathvariant="normal">RMSE</mml:mi><mml:mo>=</mml:mo><mml:msqrt><mml:mrow><mml:mfrac><mml:mrow><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>N</mml:mi></mml:mrow></mml:mfrac><mml:munderover><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>N</mml:mi></mml:mrow></mml:munderover><mml:mrow><mml:msup><mml:mrow><mml:mfenced close=")" open="("><mml:mrow><mml:msub><mml:mrow><mml:mi>X</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mo>(</mml:mo><mml:mi mathvariant="normal">measured</mml:mi><mml:mo>)</mml:mo></mml:msub><mml:mo>&#8722;</mml:mo><mml:msub><mml:mrow><mml:mi>X</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mo>(</mml:mo><mml:mi mathvariant="normal">model</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:msub></mml:mfenced></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:mrow></mml:msqrt></mml:math> (12.4)
+$$R^{2} = 1 - \frac{\sum_{i = 1}^{N}(X_{i(\text{measured})} - X_{i(\text{model})})^{2}}{\sum_{i = 1}^{N}(X_{i(\text{measured})} - X_{i(\text{mean})})^{2}} \tag{12.3}$$
 
-![Equation](img/F000055si5.png)(12.4) 
+![Equation](img/F000055si4.png)
 
-where *N* shows the total number of data, *X*[*i*(measured)] is the measured lake water level value, and *X*[*i*(model)] is the result of the ML model. *X*[mean] is the mean amount of measured lake water level values.
+$$RMSE = \sqrt{\frac{1}{N}\sum_{i = 1}^{N}(X_{i(\text{measured})} - X_{i(\text{model})})^{2}} \tag{12.4}$$
 
-Table 12–1
+![Equation](img/F000055si5.png)
 
- Results of machine learning (ML) models. 
+其中，$N$ 表示数据总数，$X_{i(\text{measured})}$ 为实测湖水位值，$X_{i(\text{model})}$ 为机器学习模型预测结果，$X_{\text{mean}}$ 为实测湖水位均值。
 
-| ML algorithms  || Training set || Testing set |
+## 机器学习模型结果对比
 
-| --- | --- | --- |
+**表 12-1** 展示了各机器学习（ML）模型在训练集和测试集上的 $R^2$ 与 RMSE 结果。
 
-| *R*² || RMSE || *R*² || RMSE |
+| ML algorithms | Training set | | Testing set | |
+| :--- | :---: | :---: | :---: | :---: |
+| | $R^2$ | RMSE | $R^2$ | RMSE |
+| kNN | 0.67 | 0.37 | 0.62 | 0.44 |
+| SVR | 0.71 | 0.34 | 0.55 | 0.48 |
+| AdaBoost | 0.81 | 0.28 | 0.61 | 0.45 |
+| RF | 0.92 | 0.18 | 0.63 | 0.44 |
+| ET | 1.00 | $0.1\times10^{-10}$ | 0.70 | 0.39 |
+| GBR | 0.99 | 0.08 | 0.54 | 0.49 |
+| XGBoost | 1.00 | 0.0008 | 0.70 | 0.39 |
+| CatBoost | 1.00 | 0.02 | 0.71 | 0.39 |
 
-| kNN || 0.67 || 0.37 || 0.62 || 0.44 |
+为提升模型性能并防止过拟合，对基于 CatBoost 算法开发的模型进行了超参数调优。采用 Akiba 等人（2019）推荐的 Optuna 框架，因其在不同领域具有良好的可扩展性和易用性。调优后，改进的 CatBoost 模型在测试集上的 $R^2$ 和 RMSE 分别为 0.75 和 0.37；训练集上分别为 1 和 0.000025。测试集 $R^2$ 值有所提升。超参数取值见 **表 12-2**。
 
-| --- | --- | --- | --- | --- |
+**表 12-2** CatBoost 模型超参数调优取值。
 
-| SVR || 0.71 || 0.34 || 0.55 || 0.48 |
+| Parameters | Value |
+| :--- | :--- |
+| Iterations | 926 |
+| Depth | 5 |
+| `Learning_rate` | 0.093 |
+| `l2_leaf_reg` | $1.73\times10^{-7}$ |
+| `Border_count` | 84 |
 
-| AdaBoost || 0.81 || 0.28 || 0.61 || 0.45 |
-
-| RF || 0.92 || 0.18 || 0.63 || 0.44 |
-
-| ET || 1.00 || 0.1×10^(−10) || 0.70 || 0.39 |
-
-| GBR || 0.99 || 0.08 || 0.54 || 0.49 |
-
-| XGBoost || 1.00 || 0.0008 || 0.70 || 0.39 |
-
-| CatBoost || 1.00 || 0.02 || 0.71 || 0.39 |
-
-In order to increase model performance and prevent overfitting, hyperparameter tuning of the model developed with the CatBoost algorithm were made. Optuna was used as the framework recommended by Akiba et al. (2019) due to its scalability and usability in different areas. *R*² and RMSE values for the testing set of the improved CatBoost model after hyperparameter tuning were found to be 0.75 and 0.37, respectively. These values 1 and 0.000025 were obtained for the training set. It was observed that the *R*² value for the testing set of the CatBoost model increased. Hyperparameter values were given in Table 12–2.
-
-Table 12–2
-
-CatBoost model hyperparameter tuning values.
-
-| Parameters || Value |
-
-| --- | --- |
-
-| Iterations || 926 |
-
-| --- | --- |
-
-| Depth || 5 |
-
-| Learning\_rate || 0.093 |
-
-| l2\_leaf\_reg || 1.73×10^(−7) |
-
-| Border\_coun || 84 |
-
-Scatter diagrams for the training and testing sets are given in Fig. 12–3. As can be seen from the scatter diagrams, the distribution of estimated and measured values was around the 45-degree line and does not have large deviations.
+训练集与测试集的散点图见 **图 12-3**。散点显示，预测值与实测值分布在 45 度线附近，无显著偏离。
 
 ![Figure 12–3 Scatter diagrams of CatBoost model for training and testing sets.](img/F000055f12-03-9780443219054.jpg)
 
-Figure 12–3 Scatter diagrams of CatBoost model for training and testing sets.
+**图 12-3** CatBoost 模型训练集与测试集散点图。
 
-Additionally, feature importance was calculated to understand the effect of input parameters on the CatBoost model (Fig. 12–4). Examining Fig. 12–4, it was figured out that the SPI values of the Isparta meteorological station have the highest effect on the water level estimation of Lake Eğirdir, while the SPI values of the Uluborlu station have the lowest effect.
+此外，计算了特征重要性以理解输入参数对 CatBoost 模型的影响（**图 12-4**）。分析表明，伊斯帕尔塔（Isparta）气象站的 SPI 值对埃伊尔迪尔湖水位预测影响最大，而乌卢博尔卢（Uluborlu）站的 SPI 值影响最小。
 
 ![Figure 12–4 Feature importance chart for CatBoost model.](img/F000055f12-04-9780443219054.jpg)
 
-Figure 12–4 Feature importance chart for CatBoost model.
+**图 12-4** CatBoost 模型特征重要性图。
 
-Then, forecasting for the next 10 years were made with LSTM using the SPI values of Eğirdir, Senirkent, Uluborlu, Yalvaç, and Isparta meteorological stations. For this, 80% (409 months of data) of the SPI values between 1976 and 2019 (517 months of data) were used to train LSTM models, and the remaining 20% (108 months of data) was used for testing the models. To determine the LSTM models that give the best results, different units, activation functions, and optimizers were tried and *R*² values were compared. The parameters and *R*² values of the best LSTM models developed for each station are given in Table 12–3 and the time series in Fig. 12–5.
+## LSTM 模型构建与未来预测
 
-Table 12–3
+随后，利用埃伊尔迪尔（Eğirdir）、塞尼尔肯特（Senirkent）、乌卢博尔卢（Uluborlu）、亚尔瓦奇（Yalvaç）和伊斯帕尔塔（Isparta）五个气象站的 SPI 值，采用 LSTM 模型预测未来 10 年湖水位。数据集为 1976–2019 年共 517 个月数据，按 8:2 比例划分：训练集 409 个月（80%），测试集 108 个月（20%）。通过对比不同单元数、激活函数和优化器下的 $R^2$ 值，确定各站点最优 LSTM 模型，其超参数与 $R^2$ 见 **表 12-3**，时序预测图见 **图 12-5**。
 
- The most appropriate hyperparameters and *R*² values for long short-term memory models. 
+**表 12-3** 长短期记忆（LSTM）模型最优超参数与 $R^2$ 值。
 
-| Station  || Parameters |
-
-| --- | --- |
-
-| Units || Activation || Optimizer || *R*² |
-
-| Eğirdir || 396 || tanh || adam || 0.82 |
-
-| --- | --- | --- | --- |
-
-| Senirkent || 460 || relu || adam || 0.80 |
-
-| Uluborlu || 12 || tanh || rmsprop || 0.80 |
-
-| Yalvaç || 364 || relu || rmsprop || 0.75 |
-
-| Isparta || 460 || relu || adam || 0.74 |
+| Station | Units | Activation | Optimizer | $R^2$ |
+| :--- | :---: | :---: | :---: | :---: |
+| Eğirdir | 396 | tanh | adam | 0.82 |
+| Senirkent | 460 | relu | adam | 0.80 |
+| Uluborlu | 12 | tanh | rmsprop | 0.80 |
+| Yalvaç | 364 | relu | rmsprop | 0.75 |
+| Isparta | 460 | relu | adam | 0.74 |
 
 ![Figure 12–5 Time series of long short-term memory models for each station.](img/F000055f12-05a-9780443219054.jpg)
 
-Figure 12–5 Time series of long short-term memory models for each station.
+**图 12-5** 各站点 LSTM 模型时间序列预测图。
 
-As can be seen from Table 12–3, the highest success was obtained at Eğirdir station with an *R*² value of 0.82, while the lowest *R*² value was obtained as 0.74 at Isparta station among the LSTM models. While the *R*² value at Senirkent and Uluborlu stations was 0.80, the *R*² value at Yalvaç station was 0.75.
+由 **表 12-3** 可知，埃伊尔迪尔站 $R^2$ 最高（0.82），伊斯帕尔塔站最低（0.74）；塞尼尔肯特站与乌卢博尔卢站均为 0.80，亚尔瓦奇站为 0.75。
 
-
-
--   图 12-5 所示，LSTM 模型在所有站点正确预测了 SPI 值的增减。LSTM 模型开发后，使用了前一步开发的最佳机器学习模型的下一个 10 年 SPI 值作为输入，并预测了未来 10 年的湖泊水位。Eğirdir 湖在 1976 至 2019 年的水位在图 12-6 中给出，未来 10 年的 Eğirdir 湖水位变化在图 12-7 中给出。
+**图 12-5** 显示，LSTM 模型在所有站点均能正确预测 SPI 值的增减趋势。基于上一步得到的最佳机器学习模型（CatBoost），将 LSTM 预测的未来 10 年 SPI 值作为输入，进而预测未来 10 年湖水位。1976–2019 年埃伊尔迪尔湖水位变化见 **图 12-6**，未来 10 年预测水位变化见 **图 12-7**。
 
 ![Figure 12–6 Eğirdir Lake water level change between 1976 and 2019.](img/F000055f12-06-9780443219054.jpg)
 
-Figure 12–6 Eğirdir Lake water level change between 1976 and 2019.
+**图 12-6** 1976–2019 年埃伊尔迪尔湖水位变化。
 
 ![Figure 12–7 Eğirdir Lake water level change for the next 10 years.](img/F000055f12-07-9780443219054.jpg)
 
-Figure 12–7 Eğirdir Lake water level change for the next 10 years.
+**图 12-7** 未来 10 年埃伊尔迪尔湖水位变化预测。
 
-图 12-6 的检查显示，最小湖泊水位出现在 1994 年 10 月的 915.81 m、2008 年 12 月的 916.25 m 以及 2018 年 12 月的 916.20 m。将这些最小水位与在 Senirkent、Uluborlu 和 Isparta 站点于 1990 年 11 月记录的最干旱值（见图 12-2）进行比较，显示出在大约 48 个月后出现了显著的湖泊水位下降。与此同时，Eğirdir 站和 Yalvaç站在 2007 年 10 月的最干旱值与 2008 年 12 月的 916.25 m 湖泊水位之间存在约 12 个月的延迟。
+检查 **图 12-6** 发现，最小湖水位分别出现在 1994 年 10 月（915.81 m）、2008 年 12 月（916.25 m）和 2018 年 12 月（916.20 m）。将这些最小水位与 1990 年 11 月塞尼尔肯特、乌卢博尔卢和伊斯帕尔塔站记录的最干旱 SPI 值（**图 12-2**）对比，显示湖水位在约 48 个月后出现显著下降。同时，埃伊尔迪尔站和亚尔瓦奇站 2007 年 10 月的最干旱值与 2008 年 12 月 916.25 m 湖水位之间存在约 12 个月的滞后响应。
+
+
 
 图 12-7 的可能未来 10 年湖泊水位估计显示，2021 年 8 月的 916.94 m 水位可能是 2017 至 2018 年所有站点的干旱期所致。还显示，1976 至 2019 年观测期间 Eğirdir 湖的平均水位约为 917.30 m，而未来 10 年预计约为 917.50 m。
 
 ## 12.4 Conclusions
 
-本研究使用机器学习算法探讨气象干旱与湖泊水位之间的关系。首先，计算了 1976 至 2019 年 Eğirdir、Senirkent、Uluborlu、Yalvaç和 Isparta 站点的 12 个月 SPI 值。根据计算出的 SPI 值，这五个站点共获得了 127 个月的共同干旱期。随后，将这 127 个月的 SPI 值作为输入，使用 kNN、SVR、AdaBoost、RF、ET、GBR、XGBoost 和 CatBoost 等机器学习模型进行预测，估算 Eğirdir 湖泊水位。模型结果表明，CatBoost 算法表现最佳。为提升 CatBoost 模型的成功率并防止过拟合，采用 Optuna 进行超参数调优，模型性能得到提升。此外，为更好地理解该模型，计算了特征重要性值，并分析输入对模型结果的影响。根据特征重要性，Isparta 站是 Eğirdir 湖泊水位估计 CatBoost 模型中最具影响力的站点，其他站点的影响也值得注意。
+本研究使用机器学习算法探讨气象干旱与湖泊水位之间的关系。首先，计算了 1976 至 2019 年 Eğirdir、Senirkent、Uluborlu、Yalvaç 和 Isparta 站点的 12 个月 SPI 值。根据计算出的 SPI 值，这五个站点共获得了 127 个月的共同干旱期。随后，将这 127 个月的 SPI 值作为输入，使用 kNN、SVR、AdaBoost、RF、ET、GBR、XGBoost 和 CatBoost 等机器学习模型进行预测，估算 Eğirdir 湖泊水位。模型结果表明，CatBoost 算法表现最佳。为提升 CatBoost 模型的成功率并防止过拟合，采用 Optuna 进行超参数调优，模型性能得到提升。此外，为更好地理解该模型，计算了特征重要性值，并分析输入对模型结果的影响。根据特征重要性，Isparta 站是 Eğirdir 湖泊水位估计 CatBoost 模型中最具影响力的站点，其他站点的影响也值得注意。
 
 其次，利用 LSTM 在各站点估计未来 10 年的 SPI 值，从而预测可能的 Eğirdir 湖泊水位。检查各站点最合适的 LSTM 模型的结果后，发现测试集中计算值与预测值相似。随后，将所有时期的 SPI 值作为各站点最佳 LSTM 模型的输入，预测未来 10 年的 SPI 值。同时，将未来 10 年的 SPI 值作为最佳机器学习模型的输入，预测湖泊水位。将 1976 至 2019 年 Eğirdir 湖泊水位与机器学习模型的未来 10 年预测值进行比较，发现机器学习模型的平均水位预测误差为 0.20 m。本研究表明，机器学习模型能够成功评估气象干旱对湖泊水位的影响，并预测未来的水位变化。结论表明，气象干旱对 Eğirdir 湖泊水位的影响通常在 2 至 4 年之间，这段时间足以建立早期预警系统以防范可能的水文干旱，并开展最优的湖泊管理研究。
 
@@ -4055,590 +3889,432 @@ Figure 12–7 Eğirdir Lake water level change for the next 10 years.
 
 *   Chen and Guestrin, 2016 Chen, T., & Guestrin, C. (2016, August). XGBoost: A scalable tree boosting system. In *Proceedings of the 22nd ACM SIGKDD international conference on knowledge discovery and data mining* (pp. 785–794). [`https://doi.org/10.1145/2939672.2939785`](https://doi.org/10.1145/2939672.2939785).
 
+*   Citakoglu and Coşkun, 2022 Citakoglu H, Coşkun Ö. 混合机器学习方法用于预测土耳其萨卡里亚气象站的短期气象干旱。 *Environmental Science and Pollution Research*. 2022;29(50):75487–75511 [`https://doi.org/10.1007/s11356-022-21083-3`](https://doi.org/10.1007/s11356-022-21083-3).
 
+*   Cortes and Vapnik, 1995 Cortes C, Vapnik V. 支持向量网络。 *Machine Learning*. 1995;20:273–297 [`https://doi.org/10.1007/BF00994018`](https://doi.org/10.1007/BF00994018).
 
--   Citakoglu and Coşkun, 2022 Citakoglu H, Coşkun Ö. 混合机器学习方法用于预测土耳其萨卡里亚气象站的短期气象干旱。 *Environmental Science and Pollution Research*. 2022;29(50):75487–75511 [`doi.org/10.1007/s11356-022-21083-3`](https://doi.org/10.1007/s11356-022-21083-3).
+*   Dai et al., 2020 Dai M, Huang S, Huang Q, 等. 农业干旱风险评估及其动态演变特征。 *Agricultural Water Management*. 2020;231106003 [`https://doi.org/10.1016/j.agwat.2020.106003`](https://doi.org/10.1016/j.agwat.2020.106003).
 
--   Cortes and Vapnik, 1995 Cortes C, Vapnik V. 支持向量网络。 *Machine Learning*. 1995;20:273–297 [`doi.org/10.1007/BF00994018`](https://doi.org/10.1007/BF00994018).
+*   Dai et al., 2024 Dai R, Wang W, Zhang R, Yu L. 多模态深度学习水位预测模型用于费伊云河流域的多尺度干旱警报。 *Expert Systems with Applications*. 2024;244122951 [`https://doi.org/10.1016/j.eswa.2023.122951`](https://doi.org/10.1016/j.eswa.2023.122951).
 
--   Dai et al., 2020 Dai M, Huang S, Huang Q, 等. 农业干旱风险评估及其动态演变特征。 *Agricultural Water Management*. 2020;231106003 [`doi.org/10.1016/j.agwat.2020.106003`](https://doi.org/10.1016/j.agwat.2020.106003).
+*   Dash and Jaiswal, 2024 Dash S, Jaiswal A. 基于机器学习的降雨预测模型。 *World Journal of Advanced Research and Reviews*. 2024;21(1):1678–1686 [`https://doi.org/10.30574/wjarr.2024.21.1.0180`](https://doi.org/10.30574/wjarr.2024.21.1.0180).
 
--   Dai et al., 2024 Dai R, Wang W, Zhang R, Yu L. 多模态深度学习水位预测模型用于费伊云河流域的多尺度干旱警报。 *Expert Systems with Applications*. 2024;244122951 [`doi.org/10.1016/j.eswa.2023.122951`](https://doi.org/10.1016/j.eswa.2023.122951).
+*   Drucker, 1997 Drucker, H. (1997, July). 使用增强技术改进回归器。在 *ICML’97: Proceedings of the fourteenth international conference on machine learning* (第 107–115 页)。
 
--   Dash and Jaiswal, 2024 Dash S, Jaiswal A. 基于机器学习的降雨预测模型。 *World Journal of Advanced Research and Reviews*. 2024;21(1):1678–1686 [`doi.org/10.30574/wjarr.2024.21.1.0180`](https://doi.org/10.30574/wjarr.2024.21.1.0180).
+*   Du et al., 2023 Du Y, Liu Y, Yan Y, Fang J, Jiang X. 基于可解释额外树的电力系统天气相关故障风险管理。 *Journal of Modern Power Systems and Clean Energy* 2023; [`https://doi.org/10.35833/MPCE.2022.000430`](https://doi.org/10.35833/MPCE.2022.000430).
 
--   Drucker, 1997 Drucker, H. (1997, July). 使用增强技术改进回归器。在 *ICML’97: Proceedings of the fourteenth international conference on machine learning* (第 107–115 页)。
+*   Erkoç, 2023 Erkoç M. 对拜谢湖水位及当地干旱条件的科学分析。 *Bulletin of Geophysics and Oceanography*. 2023;64 [`https://doi.org/10.4430/bgo00426`](https://doi.org/10.4430/bgo00426).
 
--   Du et al., 2023 Du Y, Liu Y, Yan Y, Fang J, Jiang X. 基于可解释额外树的电力系统天气相关故障风险管理。 *Journal of Modern Power Systems and Clean Energy* 2023; [`doi.org/10.35833/MPCE.2022.000430`](https://doi.org/10.35833/MPCE.2022.000430).
+*   Fang et al., 2024 Fang L, Yin J, Wang Y, 等. 机器学习和共轭分析全球干旱及社会暴露过去变化的研究。 *Journal of Hydrology*. 2024;628130536 [`https://doi.org/10.1016/j.jhydrol.2023.130536`](https://doi.org/10.1016/j.jhydrol.2023.130536).
 
--   Erkoç, 2023 Erkoç M. 对拜谢湖水位及当地干旱条件的科学分析。 *Bulletin of Geophysics and Oceanography*. 2023;64 [`doi.org/10.4430/bgo00426`](https://doi.org/10.4430/bgo00426).
+*   Friedman, 2001 Friedman JH. 贪婪函数逼近：梯度提升机。 *Annals of Statistics* 2001;:1189–1232 [`https://www.jstor.org/stable/2699986`](https://www.jstor.org/stable/2699986).
 
--   Fang et al., 2024 Fang L, Yin J, Wang Y, 等. 机器学习和共轭分析全球干旱及社会暴露过去变化的研究。 *Journal of Hydrology*. 2024;628130536 [`doi.org/10.1016/j.jhydrol.2023.130536`](https://doi.org/10.1016/j.jhydrol.2023.130536).
+*   Geurts et al., 2006 Geurts P, Ernst D, Wehenkel L. 极端随机树。 *Machine Learning*. 2006;63:3–42 [`https://doi.org/10.1007/s10994-006-6226-1`](https://doi.org/10.1007/s10994-006-6226-1).
 
--   Friedman, 2001 Friedman JH. 贪婪函数逼近：梯度提升机。 *Annals of Statistics* 2001;:1189–1232 [`www.jstor.org/stable/2699986`](https://www.jstor.org/stable/2699986).
+*   Gumus, 2017 Gumus V. 利用流量干旱指数对阿西河流域的水文干旱进行分析。 *Gazi University Journal of Science Part C*. 2017;5:65–73.
 
--   Geurts et al., 2006 Geurts P, Ernst D, Wehenkel L. 极端随机树。 *Machine Learning*. 2006;63:3–42 [`doi.org/10.1007/s10994-006-6226-1`](https://doi.org/10.1007/s10994-006-6226-1).
+*   Hancock and Khoshgoftaar, 2020 Hancock JT, Khoshgoftaar TM. CatBoost 用于大数据：跨学科综述。 *Journal of Big Data*. 2020;7(1):1–45 [`https://doi.org/10.1186/s40537-020-00369-8`](https://doi.org/10.1186/s40537-020-00369-8).
 
--   Gumus, 2017 Gumus V. 利用流量干旱指数对阿西河流域的水文干旱进行分析。 *Gazi University Journal of Science Part C*. 2017;5:65–73.
+*   Huang et al., 2019 Huang G, Wu L, Ma X, 等. 评估 CatBoost 方法在湿润地区预测参考蒸发量的效果。 *Journal of Hydrology*. 2019;574:1029–1041 [`https://doi.org/10.1016/j.jhydrol.2019.04.085`](https://doi.org/10.1016/j.jhydrol.2019.04.085).
 
--   Hancock and Khoshgoftaar, 2020 Hancock JT, Khoshgoftaar TM. CatBoost 用于大数据：跨学科综述。 *Journal of Big Data*. 2020;7(1):1–45 [`doi.org/10.1186/s40537-020-00369-8`](https://doi.org/10.1186/s40537-020-00369-8).
+*   Ibrahim et al., 2020 Ibrahim AA, Ridwan RL, Muhammed MM, Abdulaziz RO, Saheed GA. 与其他机器学习方法比较 CatBoost 分类器。 *International Journal of Advanced Computer Science and Applications*. 2020;11 [`https://doi.org/10.14569/ijacsa.2020.0111190`](https://doi.org/10.14569/ijacsa.2020.0111190).
 
--   Huang et al., 2019 Huang G, Wu L, Ma X, 等. 评估 CatBoost 方法在湿润地区预测参考蒸发量的效果。 *Journal of Hydrology*. 2019;574:1029–1041 [`doi.org/10.1016/j.jhydrol.2019.04.085`](https://doi.org/10.1016/j.jhydrol.2019.04.085).
+*   Kadam et al., 2024 Kadam CM, Bhosle UV, Holambe RS. 深度学习驱动的区域干旱评估：优化视角。 *Earth Science Informatics* 2024;:1–15 [`https://doi.org/10.1007/s12145-024-01244-3`](https://doi.org/10.1007/s12145-024-01244-3).
 
--   Ibrahim et al., 2020 Ibrahim AA, Ridwan RL, Muhammed MM, Abdulaziz RO, Saheed GA. 与其他机器学习方法比较 CatBoost 分类器。 *International Journal of Advanced Computer Science and Applications*. 2020;11 [`doi.org/10.14569/ijacsa.2020.0111190`](https://doi.org/10.14569/ijacsa.2020.0111190).
+*   Kumar et al., 2022 Kumar P, Singh SN, Dawra S. 使用额外树分类器和增强胡氏鹰优化算法对软件组件可重用性进行预测。 *International Journal of System Assurance Engineering and Management*. 2022;13(2):892–903 [`https://doi.org/10.1007/s13198-021-01359-6`](https://doi.org/10.1007/s13198-021-01359-6).
 
--   Kadam et al., 2024 Kadam CM, Bhosle UV, Holambe RS. 深度学习驱动的区域干旱评估：优化视角。 *Earth Science Informatics* 2024;:1–15 [`doi.org/10.1007/s12145-024-01244-3`](https://doi.org/10.1007/s12145-024-01244-3).
+*   Kumar et al., 2023 Kumar V, Kedam N, Sharma KV, Mehta DJ, Caloiero T. 先进机器学习技术提升水文预测：对流量预测模型的比较分析。 *Water*. 2023;15(14):2572 [`https://doi.org/10.3390/w15142572`](https://doi.org/10.3390/w15142572).
 
--   Kumar et al., 2022 Kumar P, Singh SN, Dawra S. 使用额外树分类器和增强胡氏鹰优化算法对软件组件可重用性进行预测。 *International Journal of System Assurance Engineering and Management*. 2022;13(2):892–903 [`doi.org/10.1007/s13198-021-01359-6`](https://doi.org/10.1007/s13198-021-01359-6).
+*   Latifoğlu and Nuralan, 2020 Latifoğlu L, Nuralan KB. 使用 singular spectrum analysis 和长短期记忆网络预测流量。 *European Journal of Science and Technology* 2020;:376–381 [`https://doi.org/10.31590/ejosat.araconf49`](https://doi.org/10.31590/ejosat.araconf49).
 
--   Kumar et al., 2023 Kumar V, Kedam N, Sharma KV, Mehta DJ, Caloiero T. 先进机器学习技术提升水文预测：对流量预测模型的比较分析。 *Water*. 2023;15(14):2572 [`doi.org/10.3390/w15142572`](https://doi.org/10.3390/w15142572).
+*   Latifoğlu and Özger, 2023 Latifoğlu L, Özger M. 高性能 SPI 数据估计在干旱预测中的新方法。 *Sustainability*. 2023;15(19):14046 [`https://doi.org/10.3390/su151914046`](https://doi.org/10.3390/su151914046).
 
--   Latifoğlu and Nuralan, 2020 Latifoğlu L, Nuralan KB. 使用 singular spectrum analysis 和长短期记忆网络预测流量。 *European Journal of Science and Technology* 2020;:376–381 [`doi.org/10.31590/ejosat.araconf49`](https://doi.org/10.31590/ejosat.araconf49).
+*   Lee et al., 2021 Lee J, Lee S, Hong J, 等. 使用机器学习和深度学习模型评估降雨侵蚀性因子估计。 *Water*. 2021;13(3):382 [`https://doi.org/10.3390/w13030382`](https://doi.org/10.3390/w13030382).
 
--   Latifoğlu and Özger, 2023 Latifoğlu L, Özger M. 高性能 SPI 数据估计在干旱预测中的新方法。 *Sustainability*. 2023;15(19):14046 [`doi.org/10.3390/su151914046`](https://doi.org/10.3390/su151914046).
-
--   Lee et al., 2021 Lee J, Lee S, Hong J, 等. 使用机器学习和深度学习模型评估降雨侵蚀性因子估计。 *Water*. 2021;13(3):382 [`doi.org/10.3390/w13030382`](https://doi.org/10.3390/w13030382).
-
--   Li et al., 2024 Li G, Liu Z, Zhang J, Han H, Shu Z. 将深度学习模型组合的贝叶斯模型平均法提高湖泊水位预测。 *Science of The Total Environment*. 2024;906167718 [`doi.org/10.1016/j.scitotenv.2023.167718`](https://doi.org/10.1016/j.scitotenv.2023.167718).
-
--   Li et al., 2024 Li G, Shu Z, Lin M, Zhang J, Yan X, Liu Z. 多步预测湖泊水位的深度学习模型策略比较。 *Journal of Cleaner Production* 2024;141228 [`doi.org/10.1016/j.jclepro.2024.141228`](https://doi.org/10.1016/j.jclepro.2024.141228).
-
--   Li et al., 2018 Li X, Li W, Xu Y. 基于 DNA 甲基化的梯度提升回归器实现人类年龄预测。 *Genes*. 2018;9(9):424 [`doi.org/10.3390/genes9090424`](https://doi.org/10.3390/genes9090424).
-
--   Liu et al., 2020 Liu Y, Yang SQ, Jiang C, Long Y, Deng B, Yan S. 洪水大坝运行后东亭湖地区的水文干旱及可能的解决方案。 *Water*. 2020;12(10):2713 [`doi.org/10.3390/w12102713`](https://doi.org/10.3390/w12102713).
+*   Li et al., 2024 Li G, Liu Z, Zhang J, Han H, Shu Z. 将深度学习模型组合的贝叶斯模型平均法提高湖泊水位预测。 *Science of The Total Environment*. 2024;906167718 [`https://doi.org/10.1016/j.scitotenv.2023.167718`](https://doi.org/10.1016/j.scitotenv.2023.167718).
 
 
 
--   马赫·2020 马赫·B. 机器学习算法 – 综述. *International Journal of Science and Research (IJSR) \[Internet\]*. 2020;9(1):381–386 [`doi.org/10.21275/ART20203995`](https://doi.org/10.21275/ART20203995).
+# 参考文献
 
--   马赫穆迪等人, 2021 马赫穆迪·P, 古埃米·A, 里吉·A, 阿米尔·贾汉沙希·S·M. 为干旱监测在干旱和半干旱地区修改标准化降水指数 (SPI) 的建议. *Water Resources Management*. 2021;35:3253–3275 [`doi.org/10.1007/s11269-021-02891-7`](https://doi.org/10.1007/s11269-021-02891-7).
+- Li et al., 2024 Li G, Shu Z, Lin M, Zhang J, Yan X, Liu Z. 多步预测湖泊水位的深度学习模型策略比较。*Journal of Cleaner Production* 2024;141228 [`doi.org/10.1016/j.jclepro.2024.141228`](https://doi.org/10.1016/j.jclepro.2024.141228).
 
--   马利克等人, 2021 马利克·A, 提哈马里纳·Y, 塞阿格-加马内·D, 拉伊·P, 萨门·S·S, 基西·O. 将支持向量回归与新型元启发算法相结合，用于气象干旱预测. *Meteorology and Atmospheric Physics*. 2021;133:891–909 [`doi.org/10.1007/s00703-021-00787-0`](https://doi.org/10.1007/s00703-021-00787-0).
+- Li et al., 2018 Li X, Li W, Xu Y. 基于 DNA 甲基化的梯度提升回归器实现人类年龄预测。*Genes*. 2018;9(9):424 [`doi.org/10.3390/genes9090424`](https://doi.org/10.3390/genes9090424).
 
--   马西奥迪和塔希里, 2024 马西奥迪·M, 塔希里·Z. 利用标准化降水指数 (SPI) 在伊朗法尔省进行干旱风险评估的 GIS 分析. *Journal of Resources and Ecology*. 2024;15(2):439–447 [`doi.org/10.5814/j.issn.1674-764x.2024.02.018`](https://doi.org/10.5814/j.issn.1674-764x.2024.02.018).
+- Liu et al., 2020 Liu Y, Yang SQ, Jiang C, Long Y, Deng B, Yan S. 洪水大坝运行后东亭湖地区的水文干旱及可能的解决方案。*Water*. 2020;12(10):2713 [`doi.org/10.3390/w12102713`](https://doi.org/10.3390/w12102713).
 
--   McKee et al., 1993 McKee, T.B., Doesken, N.J., & Kleist, J. (1993, Jan 17–22). The relationship of drought frequency and duration to time scales. In *Proceedings of the 8th conference on applied climatology* (pp. 179–183).
+- 马赫·2020 马赫·B. 机器学习算法 – 综述。*International Journal of Science and Research (IJSR) [Internet]*. 2020;9(1):381–386 [`doi.org/10.21275/ART20203995`](https://doi.org/10.21275/ART20203995).
 
--   Młyński et al., 2024 Młyński D, Książek L, Bogdał A. 气象干旱对中欧水电潜力的影响. *Renewable and Sustainable Energy Reviews*. 2024;191114175 [`doi.org/10.1016/j.rser.2023.114175`](https://doi.org/10.1016/j.rser.2023.114175).
+- 马赫穆迪等人, 2021 马赫穆迪·P, 古埃米·A, 里吉·A, 阿米尔·贾汉沙希·S·M. 为干旱监测在干旱和半干旱地区修改标准化降水指数 (SPI) 的建议。*Water Resources Management*. 2021;35:3253–3275 [`doi.org/10.1007/s11269-021-02891-7`](https://doi.org/10.1007/s11269-021-02891-7).
 
--   Mokhtar et al., 2021 Mokhtar A, Jalali M, He H, 等. 利用机器学习算法估算 SPEI 气象干旱. *IEEE Access*. 2021;9:65503–65523 [`doi.org/10.1109/ACCESS.2021.3074305`](https://doi.org/10.1109/ACCESS.2021.3074305).
+- 马利克等人, 2021 马利克·A, 提哈马里纳·Y, 塞阿格-加马内·D, 拉伊·P, 萨门·S·S, 基西·O. 将支持向量回归与新型元启发算法相结合，用于气象干旱预测。*Meteorology and Atmospheric Physics*. 2021;133:891–909 [`doi.org/10.1007/s00703-021-00787-0`](https://doi.org/10.1007/s00703-021-00787-0).
 
--   Moreira et al., 2006 Moreira EE, Paulo AA, Pereira LS, Mexia JT. 利用对数线性模型分析 SPI 干旱类别的转换. *Journal of Hydrology*. 2006;331(1–2):349–359 [`doi.org/10.1016/j.jhydrol.2006.05.022`](https://doi.org/10.1016/j.jhydrol.2006.05.022).
+- 马西奥迪和塔希里, 2024 马西奥迪·M, 塔希里·Z. 利用标准化降水指数 (SPI) 在伊朗法尔省进行干旱风险评估的 GIS 分析。*Journal of Resources and Ecology*. 2024;15(2):439–447 [`doi.org/10.5814/j.issn.1674-764x.2024.02.018`](https://doi.org/10.5814/j.issn.1674-764x.2024.02.018).
 
--   Mtilatila et al., 2020 Mtilatila L, Bronstert A, Bürger G, Vormoor K. 对湖泊马拉维和肖尔河流域 (1970–2013) 的气象和水文干旱进行评估. *Hydrological Sciences Journal*. 2020;65(16):2750–2764 [`doi.org/10.1080/02626667.2020.1837384`](https://doi.org/10.1080/02626667.2020.1837384).
+- McKee et al., 1993 McKee, T.B., Doesken, N.J., & Kleist, J. (1993, Jan 17–22). The relationship of drought frequency and duration to time scales. In *Proceedings of the 8th conference on applied climatology* (pp. 179–183).
 
--   Naghibi et al., 2020 Naghibi SA, Hashemi H, Berndtsson R, Lee S. 利用极端梯度提升和并行随机森林算法，基于从 DEM 导出的因子评估地下水泉潜力. *Journal of Hydrology*. 2020;589125197 [`doi.org/10.1016/j.jhydrol.2020.125197`](https://doi.org/10.1016/j.jhydrol.2020.125197).
+- Młyński et al., 2024 Młyński D, Książek L, Bogdał A. 气象干旱对中欧水电潜力的影响。*Renewable and Sustainable Energy Reviews*. 2024;191114175 [`doi.org/10.1016/j.rser.2023.114175`](https://doi.org/10.1016/j.rser.2023.114175).
 
--   Naresh Kumar et al., 2009 Naresh Kumar M, Murthy CS, Sesha Sai MVR, Roy PS. 使用标准化降水指数 (SPI) 评估干旱强度. *Meteorological Applications: A Journal of Forecasting, Practical Applications, Training Techniques and Modelling*. 2009;16(3):381–389 [`doi.org/10.1002/met.136`](https://doi.org/10.1002/met.136).
+- Mokhtar et al., 2021 Mokhtar A, Jalali M, He H, 等. 利用机器学习算法估算 SPEI 气象干旱。*IEEE Access*. 2021;9:65503–65523 [`doi.org/10.1109/ACCESS.2021.3074305`](https://doi.org/10.1109/ACCESS.2021.3074305).
 
--   Pande et al., 2023 Pande CB, Kushwaha NL, Orimoloye IR, 等. 不同核函数下改进 SVM 方法在多尺度干旱指数预测中的比较评估. *Water Resources Management*. 2023;37(3):1367–1399 [`doi.org/10.1007/s11269-023-03440-0`](https://doi.org/10.1007/s11269-023-03440-0).
+- Moreira et al., 2006 Moreira EE, Paulo AA, Pereira LS, Mexia JT. 利用对数线性模型分析 SPI 干旱类别的转换。*Journal of Hydrology*. 2006;331(1–2):349–359 [`doi.org/10.1016/j.jhydrol.2006.05.022`](https://doi.org/10.1016/j.jhydrol.2006.05.022).
 
--   Prokhorenkova et al., 2018 Prokhorenkova L, Gusev G, Vorobev A, Dorogush AV, Gulin A. CatBoost: Unbiased boosting with categorical features. *Advances in Neural Information Processing Systems*. 2018;31.
+- Mtilatila et al., 2020 Mtilatila L, Bronstert A, Bürger G, Vormoor K. 对湖泊马拉维和肖尔河流域 (1970–2013) 的气象和水文干旱进行评估。*Hydrological Sciences Journal*. 2020;65(16):2750–2764 [`doi.org/10.1080/02626667.2020.1837384`](https://doi.org/10.1080/02626667.2020.1837384).
 
--   Rezaiy and Shabri, 2024 Rezaiy R, Shabri A. 通过基于标准化降水指数的 EEMD-ARIMA 模型提升干旱预测精度. *Water Science & Technology* 2024;wst2024028 [`doi.org/10.2166/wst.2024.028`](https://doi.org/10.2166/wst.2024.028).
+- Naghibi et al., 2020 Naghibi SA, Hashemi H, Berndtsson R, Lee S. 利用极端梯度提升和并行随机森林算法，基于从 DEM 导出的因子评估地下水泉潜力。*Journal of Hydrology*. 2020;589125197 [`doi.org/10.1016/j.jhydrol.2020.125197`](https://doi.org/10.1016/j.jhydrol.2020.125197).
 
--   - Saber et al., 2022 Saber M, Boulmaiz T, Guermoui M, 等. 评估 LightGBM 和 CatBoost 模型在沟谷洪水易发性预测中的表现. *Geocarto International*. 2022;37(25):7462–7487 [`doi.org/10.1080/10106049.2021.1974959`](https://doi.org/10.1080/10106049.2021.1974959).
+- Naresh Kumar et al., 2009 Naresh Kumar M, Murthy CS, Sesha Sai MVR, Roy PS. 使用标准化降水指数 (SPI) 评估干旱强度。*Meteorological Applications: A Journal of Forecasting, Practical Applications, Training Techniques and Modelling*. 2009;16(3):381–389 [`doi.org/10.1002/met.136`](https://doi.org/10.1002/met.136).
 
--   Sakellariou et al., 2024 Sakellariou S, Spiliotopoulos M, Alpanakis N, 等. 基于网格化标准化降水指数 (SPI) 的脆弱农业生态系统的时空干旱评估. *Sustainability*. 2024;16(3):1240 [`doi.org/10.3390/su16031240`](https://doi.org/10.3390/su16031240).
+- Pande et al., 2023 Pande CB, Kushwaha NL, Orimoloye IR, 等. 不同核函数下改进 SVM 方法在多尺度干旱指数预测中的比较评估。*Water Resources Management*. 2023;37(3):1367–1399 [`doi.org/10.1007/s11269-023-03440-0`](https://doi.org/10.1007/s11269-023-03440-0).
 
--   Sanjeetha et al., 2021 Sanjeetha R, Raj A, Saivenu K, Ahmed MI, Sathvik B, Kanavalli A. 利用 CatBoost 机器学习算法在 SDN 环境中检测和缓解基于 botnet 的 DDoS 攻击. *International Journal of Advanced Technology and Engineering Exploration*. 2021;8(76):445 [`doi.org/10.19101/IJATEE.2021.874021`](https://doi.org/10.19101/IJATEE.2021.874021).
+- Prokhorenkova et al., 2018 Prokhorenkova L, Gusev G, Vorobev A, Dorogush AV, Gulin A. CatBoost: Unbiased boosting with categorical features。*Advances in Neural Information Processing Systems*. 2018;31.
 
--   Šebenik et al., 2017 Šebenik U, Brilly M, Šraj M. 利用标准化降水指数 (SPI) 进行干旱分析. *Acta Geographica Slovenica*. 2017;57(1):31–49 [`doi.org/10.3986/AGS.729`](https://doi.org/10.3986/AGS.729).
+- Rezaiy and Shabri, 2024 Rezaiy R, Shabri A. 通过基于标准化降水指数的 EEMD-ARIMA 模型提升干旱预测精度。*Water Science & Technology* 2024;wst2024028 [`doi.org/10.2166/wst.2024.028`](https://doi.org/10.2166/wst.2024.028).
 
--   Shakhnarovich et al., 2008 Shakhnarovich G, Darrell T, Indyk P. 最近邻方法在学习和视觉中的应用. *IEEE Transactions on Neural Networks*. 2008;19(2):377.
+- Saber et al., 2022 Saber M, Boulmaiz T, Guermoui M, 等. 评估 LightGBM 和 CatBoost 模型在沟谷洪水易发性预测中的表现。*Geocarto International*. 2022;37(25):7462–7487 [`doi.org/10.1080/10106049.2021.1974959`](https://doi.org/10.1080/10106049.2021.1974959).
 
--   Sharaff and Gupta, 2019 Sharaff A, Gupta H. *基于元启发方法的额外树分类器用于电子邮件分类*. *Advances in computer communication and computational sciences: Proceedings of IC4S 2018* Springer Singapore 2019;189–197.
+- Sakellariou et al., 2024 Sakellariou S, Spiliotopoulos M, Alpanakis N, 等. 基于网格化标准化降水指数 (SPI) 的脆弱农业生态系统的时空干旱评估。*Sustainability*. 2024;16(3):1240 [`doi.org/10.3390/su16031240`](https://doi.org/10.3390/su16031240).
 
--   Swagatika et al., 2024 Swagatika S, Paul JC, Sahoo BB, Gupta SK, Singh PK. 利用混合深度学习模型提高印度布拉马尼河月度径流时间序列的预测精度. *Journal of Water and Climate Change*. 2024;15(1):139–156 [`doi.org/10.2166/wcc.2023.487`](https://doi.org/10.2166/wcc.2023.487).
+- Sanjeetha et al., 2021 Sanjeetha R, Raj A, Saivenu K, Ahmed MI, Sathvik B, Kanavalli A. 利用 CatBoost 机器学习算法在 SDN 环境中检测和缓解基于 botnet 的 DDoS 攻击。*International Journal of Advanced Technology and Engineering Exploration*. 2021;8(76):445 [`doi.org/10.19101/IJATEE.2021.874021`](https://doi.org/10.19101/IJATEE.2021.874021).
 
--   Twumasi and Twumasi, 2022 Twumasi C, Twumasi J. 利用机器学习算法对加纳特玛总医院缺失值和离群值血需求数据进行预测和回溯：特马总医院的研究. *International Journal of Forecasting*. 2022;38(3):1258–1277 [`doi.org/10.1016/j.ijforecast.2021.10.008`](https://doi.org/10.1016/j.ijforecast.2021.10.008).
+- Šebenik et al., 2017 Šebenik U, Brilly M, Šraj M. 利用标准化降水指数 (SPI) 进行干旱分析。*Acta Geographica Slovenica*. 2017;57(1):31–49 [`doi.org/10.3986/AGS.729`](https://doi.org/10.3986/AGS.729).
 
--   URL-1 URL-1. *Eğirdir Gölü*. <[`tr.wikipedia.org/wiki/Eğirdir_Gölü`](https://tr.wikipedia.org/wiki/Eğirdir_Gölü)> 2024 年 1 月 25 日访问 (土耳其语).
+- Shakhnarovich et al., 2008 Shakhnarovich G, Darrell T, Indyk P. 最近邻方法在学习和视觉中的应用。*IEEE Transactions on Neural Networks*. 2008;19(2):377.
 
+- Sharaff and Gupta, 2019 Sharaff A, Gupta H. *基于元启发方法的额外树分类器用于电子邮件分类*。*Advances in computer communication and computational sciences: Proceedings of IC4S 2018* Springer Singapore 2019;189–197.
 
+- Swagatika et al., 2024 Swagatika S, Paul JC, Sahoo BB, Gupta SK, Singh PK. 利用混合深度学习模型提高印度布拉马尼河月度径流时间序列的预测精度。*Journal of Water and Climate Change*. 2024;15(1):139–156 [`doi.org/10.2166/wcc.2023.487`](https://doi.org/10.2166/wcc.2023.487).
 
+- Twumasi and Twumasi, 2022 Twumasi C, Twumasi J. 利用机器学习算法对加纳特玛总医院缺失值和离群值血需求数据进行预测和回溯：特马总医院的研究。*International Journal of Forecasting*. 2022;38(3):1258–1277 [`doi.org/10.1016/j.ijforecast.2021.10.008`](https://doi.org/10.1016/j.ijforecast.2021.10.008).
 
--   Vrontos 等人, 2021 Vrontos SD, Galakis J, Vrontos ID. 使用机器学习技术建模和预测美国经济衰退。 *International Journal of Forecasting*。2021;37(2):647–671 [`doi.org/10.1016/j.ijforecast.2020.08.005`](https://doi.org/10.1016/j.ijforecast.2020.08.005)。
+- URL-1 URL-1. *Eğirdir Gölü*. <[`tr.wikipedia.org/wiki/Eğirdir_Gölü`](https://tr.wikipedia.org/wiki/Eğirdir_Gölü)> 2024 年 1 月 25 日访问 (土耳其语).
 
--   Wang 和 Qian, 2023 Wang D, Qian H. 基于 CatBoost 的河网自动分类研究。 *ISPRS International Journal of Geo-Information*。2023;12(10):416 [`doi.org/10.3390/ijgi12100416`](https://doi.org/10.3390/ijgi12100416)。
+- Vrontos 等人, 2021 Vrontos SD, Galakis J, Vrontos ID. 使用机器学习技术建模和预测美国经济衰退。*International Journal of Forecasting*。2021;37(2):647–671 [`doi.org/10.1016/j.ijforecast.2020.08.005`](https://doi.org/10.1016/j.ijforecast.2020.08.005)。
 
--   Wang 等, 2018 Wang R, Peng W, Liu X, Wu W, Chen X, Zhang S. 中国最大淡水湖水位对过去五十年气候干旱指数（SPEI）的响应。 *Water*。2018;10(2):137 [`doi.org/10.3390/w10020137`](https://doi.org/10.3390/w10020137)。
+- Wang 和 Qian, 2023 Wang D, Qian H. 基于 CatBoost 的河网自动分类研究。*ISPRS International Journal of Geo-Information*。2023;12(10):416 [`doi.org/10.3390/ijgi12100416`](https://doi.org/10.3390/ijgi12100416)。
 
--   Xu 等, 2024 Xu DM, Liao AD, Wang W, Tian WC, Zang HF. 基于 CEEMDAN‑VMD 分解的 CABES‑LSTM 混合模型改进月度径流序列预测。 *Journal of Hydroinformatics*。2024;26(1):255–283 [`doi.org/10.2166/hydro.2023.216`](https://doi.org/10.2166/hydro.2023.216)。
+- Wang 等, 2018 Wang R, Peng W, Liu X, Wu W, Chen X, Zhang S. 中国最大淡水湖水位对过去五十年气候干旱指数（SPEI）的响应。*Water*。2018;10(2):137 [`doi.org/10.3390/w10020137`](https://doi.org/10.3390/w10020137)。
 
--   Zhang 和 O’Donnell, 2020 Zhang F, O’Donnell LJ. *支持向量回归*。 *Machine learning* Academic Press 2020;123–140 [`doi.org/10.1016/B978-0-12-815739-8.00007-9`](https://doi.org/10.1016/B978-0-12-815739-8.00007-9)。
+- Xu 等, 2024 Xu DM, Liao AD, Wang W, Tian WC, Zang HF. 基于 CEEMDAN‑VMD 分解的 CABES‑LSTM 混合模型改进月度径流序列预测。*Journal of Hydroinformatics*。2024;26(1):255–283 [`doi.org/10.2166/hydro.2023.216`](https://doi.org/10.2166/hydro.2023.216)。
 
--   Zhang 等, 2024 Zhang Q, Li YP, Huang GH, Wang H, Li YF, Shen ZY. 用卷积神经网络预测长期农业干旱，适用于全球变暖情境。 *Agricultural Water Management*。2024;292108683 [`doi.org/10.1016/j.agwat.2024.108683`](https://doi.org/10.1016/j.agwat.2024.108683)。
+- Zhang 和 O’Donnell, 2020 Zhang F, O’Donnell LJ. *支持向量回归*。*Machine learning* Academic Press 2020;123–140 [`doi.org/10.1016/B978-0-12-815739-8.00007-9`](https://doi.org/10.1016/B978-0-12-815739-8.00007-9)。
 
--   Zhang 等, 2015 Zhang Z, Chen X, Xu CY, Hong Y, Hardy J, Sun Z. 考察河湖交互对鄱阳湖流域干旱及水资源影响。 *Journal of Hydrology*。2015;522:510–521 [`doi.org/10.1016/j.jhydrol.2015.01.008`](https://doi.org/10.1016/j.jhydrol.2015.01.008)。
+- Zhang 等, 2024 Zhang Q, Li YP, Huang GH, Wang H, Li YF, Shen ZY. 用卷积神经网络预测长期农业干旱，适用于全球变暖情境。*Agricultural Water Management*。2024;292108683 [`doi.org/10.1016/j.agwat.2024.108683`](https://doi.org/10.1016/j.agwat.2024.108683)。
 
-## Index
+- Zhang 等, 2015 Zhang Z, Chen X, Xu CY, Hong Y, Hardy J, Sun Z. 考察河湖交互对鄱阳湖流域干旱及水资源影响。*Journal of Hydrology*。2015;522:510–521 [`doi.org/10.1016/j.jhydrol.2015.01.008`](https://doi.org/10.1016/j.jhydrol.2015.01.008)。
 
-*Note*: 页码后跟“*f*”和“*t*”分别指图和表。
+# 索引
+
+> **Note**: 页码后跟“*f*”和“*t*”分别指图和表。
 
 ## A
 
-*   AdaBoost, *See* 自适应增强（AdaBoost）
-
-*   Adadelta, *See* 自适应 Δ（Adadelta）
-
-*   Adagrad, *See* 自适应梯度算法（Adagrad）
-
-*   Adam, *See* 自适应矩估计（Adam）
-
-*   Adamax 方程, 167–169, 168
-
-*   自适应增强（AdaBoost）, 232, 232
-
-*   自适应 Δ（Adadelta）, 177 
-
-    *   方程, 167–169, 168
-
-*   自适应梯度算法（Adagrad）, 174–176 
-
-    *   方程, 167–169, 167
-
-*   自适应矩估计（Adam）, 174 
-
-    *   方程, 167–169, 168
-
-*   自适应模糊推理系统（Adaptive Neuro Fuzzy Inference System）, 228–229
-
-*   采用, 210–211, 211, 221–222
-
-*   AgMIP, *See* 农业模型比较与改进项目（AgMIP）
-
-*   农业活动, 107
-
-*   农业适应策略, 113 
-
-    *   气候变化的基本数学表达式和模型, 113–114
-
-*   农业资产, 111
-
-*   农业数据, 119
-
-*   农业干旱, 227
-
-*   农业方法, 107
-
-*   农业模型比较与改进项目（AgMIP）, 114
-
-*   农业生产系统模拟器（APSIM）, 113
-
-*   农业稳定性, 107
-
-*   农业系统, 110
-
-*   农业, 15–16, 49–50, 107, 107, 107, 108, 111, 119 
-
-    *   计算模型的进展, 116–117
-
-    *   计算建模的挑战与局限, 119–120
-
-    *   气候变化 
-
-        *   农业适应策略与计算建模, 111–121
-
-        *   对农业生产的影响, 109*f*
-
-    *   计算建模案例研究与应用, 117–119
-
-    *   未来展望, 120–121
-
-    *   基础, 108–111
-
-    *   计算建模在分析气候变化影响中的作用, 115–116
-
-*   AI, *See* 人工智能（AI）
-
-*   AIC, *See* 艾克信息准则（AIC）
-
-*   空气, 152–153
-
-*   空气污染物, 125–126, 148–149, 152–153 
-
-    *   数据, 129
-
-    *   在 Nehru Nagar 
-
-        *   小时趋势, 143–144, 146*f*
-
-        *   月度趋势, 144
-
-    *   在 Shastri Nagar 
-
-        *   小时趋势, 138–143
-
-        *   月度趋势, 143
-
-    *   在 Visakhapatnam 
-
-        *   小时趋势, 132–133
-
-
-
-
--   [月度趋势]的 133，138*f*
-
--   [空气污染]的 125，207–208 
-    -   [与空气污染相关的问题]的 125
-    -   [在印度]的 129–147
-    -   [趋势]的 144
-    -   [独特的解决方案]的 153–154 
-        -   [催化剂]的 154
-        -   [纳米生物修复]的 154
-        -   [纳米传感器]的 154
-
--   [空气质量指数 (AQI)]的 35–36，132，133，137*f*，148–149 
-    -   [德里]的 36–37 
-        -   [安 and Vihar 的空气污染物量]的 37*f*
-        -   [安 and Vihar 的空气质量指数]的 38*f*
-        -   [AQI vs. CO 图表]的 39*f*
-        -   [CO 在安 and Vihar]的 38*f*
-        -   [PM10 vs. PM2.5 图表]的 40*f*
-        -   [PM2.5 在德里]的 39*f*
-
-    -   [小时趋势]的 133，137*f*，143，144–145，148*f*
-
-    -   [月度趋势] 
-        -   [在 Nehru Nagar]的 145–147
-        -   [在 Shastri Nagar]的 143，143*f*
-        -   [在 Visakhapatnam]的 133–138，138*f*，138*f*
-
-    -   [需求]的 148–149，149*t*
-
-    -   [价值]的 143
-
--   [空中污染物]的 126
-
--   [飞机]的 191–192
-
--   [AIC (Akaike 信息准则)]的 129–132
-
--   [ANDRIZ 布料过滤器]的 152
-
--   [ANNs]的[See]的人工神经网络 (ANNs)
-
--   [南极邮轮旅游]的 191–192
-
--   [人为强迫]的 92
-
--   [人为干预]的 92
-
--   [APSIM]的[See]的 Agricultural Production Systems Simulator (APSIM)
-
--   [AQI]的[See]的空气质量指数 (AQI)
-
--   [AR 部分]的[See]的自回归部分 (AR part)
-
--   [ARIMA]的[See]的自回归集成移动平均 (ARIMA)
-
--   [人工智能 (AI)]的 1–2，17–18，90，160–161，160，161，197–198，209–210 
-    -   [优势]的 5–6，5*f*
-
-    -   [案例研究]的 10–11，12*t*
-
-    -   [挑战]的 8–9，9*f*
-
-    -   [特征]的 7–8，8*f*
-
-    -   [气候危机]的 2
-
-    -   [劣势]的 6–7，6*f*
-
-    -   [机会]的 12
-
-    -   [强化学习算法]的 121
-
-    -   [提议的方法]的 2–5
-
--   [人工神经网络 (ANNs)]的 17–18，50–52，90，160，228–229 
-    -   [预测的 ANN 模型]的 36*f*
-
-    -   [排放率计算]的 35–36
-
-    -   [模型]的 167
-
--   [大气二氧化碳]的 108
-
--   [自回归集成移动平均 (ARIMA)]的 17–18，50–52，58，227–228 
-    -   [原始月降雨训练数据]的 64*f*的预测值和实际值
-
--   [自回归移动平均 (ARMA)]的 58
-
--   [自回归部分 (AR part)]的 58
-
-## B
-
--   [贝叶斯信息准则 (BIC)]的 129–132
-
--   [贝叶斯模型]的 229
-
--   [贝叶斯神经网络 (BNN)]的 99 
-    -   [BNN 预测的海洋区域的箱线图]的 100*f*
-
-    -   [预测海洋区域的]的 99*f*
-
-    -   [使用该方法的概率海洋区域预测]的 97–100
-
--   [BC]的[See]的黑碳 (BC)
-
--   [BIC]的[See]的贝叶斯信息准则 (BIC)
-
--   [大数据分析]的 121
-
--   [生物多样性保护]的 207
-
--   [生物技术]的 209–210
-
--   [黑碳 (BC)]的 127–128 
-    -   [加热]的 128–129
-
--   [黑海]的 53
-
-
-
-## BNN
-
-*   BNN, *See* 贝叶斯神经网络 (BNN)
-
-## C
-
-*   *Campylobacter* sp., 92
-
-*   CAMS, *See* Copernicus 大气监测服务 (CAMS)
-
-*   碳
-
-    *   捕获
-
-        *   与封存, 4
-
-        *   与存储, 8, 12, 40–43
-
-    *   碳衍生组分, 153
-
-    *   排放, 33, 35, 196
-
-    *   足迹, 40–43
-
-    *   灯塔, 47
-
-    *   封存, 2
-
-*   二氧化碳 (CO[2]), 35, 154, 159 
-
-    *   浓度, 88
-
-    *   排放, 33
-
-    *   施肥, 110
-
-    *   污染物, 34–35
-
-*   一氧化碳 (CO), 36–37, 85–86, 128, 138–143, 143–144 
-
-    *   CO 污染物, 85–86 
-
-        *   Visakhapatnam 的 CO 小时趋势, 87*f*
-
-        *   Visakhapatnam 的 CO 月度趋势, 86*f*
-
-*   碳纳米管 (CNT), 153
-
-*   CatBoost, *See* 类别增强 (CatBoost)
-
-*   类别增强 (CatBoost), 228, 233 
-
-    *   算法, 228, 232, 236, 236
-
-*   Cauchy 突变和自适应权重因子 (CABES), 229
-
-*   CCA, *See* 气候变化适应 (CCA)
-
-*   CDLSTM, *See* 气候深度 LSTM (CDLSTM)
-
-*   单元记忆, 59
-
-*   手机，辐射, 34–35
-
-*   中心 for 水文气象和遥感 (CHRS), 53
-
-*   CGE 模型, *See* 可计算一般均衡模型 (CGE model)
-
-*   儿童哮喘, 127–128
-
-*   慢阻塞性肺疾病, 88
-
-*   CHRS, *See* 中心 for 水文气象和遥感 (CHRS)
-
-*   清洁能源, 37–43
-
-*   清洁工艺, 205
-
-*   CLEFSA, *See* 气候变化与食品安全新风险 (CLEFSA)
-
-*   气候变化, 1–2, 15–16, 49–50, 74–75, 108, 108, 110–111, 110, 113, 113, 115, 116, 118, 119, 128–129, 171–172, 188, 189–190 
-
-    *   计算机模型的进展, 116–117
-
-    *   对农业生产的影响, 109*f*
-
-    *   人工智能, 160
-
-    *   基本数学表达式和气候变化农业适应策略及计算模型, 113–114
-
-    *   计算全球人口 U. S, 159*f*
-
-    *   计算模型的挑战和限制, 119–120
-
-    *   气候变化、农业适应策略和计算模型, 111–121
-
-    *   计算模型, 193–198 
-
-        *   案例研究和应用, 117–119
-
-        *   对气候变化对旅游业的影响, 193–195
-
-        *   分析气候变化对农业的影响, 115–116
-
-    *   旅游与气候变化的联系, 189–192
-
-    *   深度学习, 160–162, 162–169
-
-    *   探索气候模型的可视化, 171–183
-
-    *   全球极端升温, 43–45 
-
-        *   西欧的降水总量, 44*f*
-
-        *   全球升温, 44*f*
-
-    *   未来视角, 120–121
-
-    *   地理空间方法, 45–47
-
-    *   全球挑战, 160
-
-    *   机器学习, 160
-
-    *   缓解, 205–206
-
-    *   使用 Python 框架的 Jupyter Notebook 运行, 169–170
-
-    *   基础, 108–111
-
-    *   进展, 108
-
-    *   建议, 183–184
-
-    *   旅游与气候变化关系的研究, 190–192
-
-
-
-*   气候变化对旅游业的影响，190–191
-*   旅游业与气候变化的影响，191–192
-*   技术因素，189–190
-*   气候变化适应（CCA），85，92
-*   气候变化与食品安全新兴风险（CLEFSA），92
-*   气候危机，1–2，2，33，203–204
-*   气候数据，119
-*   Climate Deep LSTM（CDLSTM），50–52
-*   气候信息，9
-*   气候建模，12，85 
-    *   一氧化碳污染物，85–86
-    *   气候变化适应，91–92
-    *   食品安全，92
-    *   气候和天气预测，93–100
-    *   森林火灾，86–90
-    *   物理引导型机器学习，101–103
-*   气候智能农业（CSA），118，119
-*   气候模型，161
-*   云计算平台，11
-*   云层覆盖，73–74
-*   云服务，188
-*   CLSTM，*见* `卷积长短期记忆网络（CLSTM）`
-*   CNT，*见* `碳纳米管（CNT）`
-*   煤炭，33
-*   沿海旅游，190–191
-*   寒冷压力，95
-*   社区参与，208
-*   复杂算法方程，114
-*   复杂数学方程，114
-*   可计算一般均衡模型（CGE 模型），109–110，114
-*   循环神经网络模型的计算分析 
-    *   实验，21–27 
-        *   绩效指标，26–27
-        *   研究区域和数据，21–26，`22*f*`，`23*t*`，`23*t*`
-    *   方法论，18–21 
-        *   门控循环单元，20–21
-        *   长短期记忆，19–20
-        *   问题陈述，18
-        *   循环神经网络，18–19
-    *   结果，28–30
-    *   月平均降雨预测 
-        *   使用 3 个月移动平均，`28*f*`
-        *   使用 6 个月移动平均，`29*f*`
-        *   使用 12 个月移动平均，`29*f*`
-    *   实验的数值结果，`30*t*`
-*   计算框架，108–109
-*   计算建模，6，108，108，108，108，108，110，113，115，115，115，117，119，120–121，120，120，162，188–189 
-    *   农业，111–121 
-        *   气候变化与农业的进展，116–117
-        *   在分析气候变化对农业的影响时，115–116
-        *   气候变化农业适应策略的基本数学表达式和模型，以及计算建模，113–114
-        *   农业和气候变化研究的案例研究和应用，117–119
-        *   农业和气候变化的挑战和局限性，119–120
-    *   旅游与气候变化之间的联系，189–192
-    *   未来工作，198
-    *   旅游与气候变化，193–198 
-        *   气候变化对旅游的影响，193–195
-        *   旅游对气候的影响，195–196
-        *   建议，196–198
-*   计算机模拟，85，108，110
-*   计算机视觉，7
-*   卷积长短期记忆网络（CLSTM），50–52
-
-
-
-*   growth, `[115–116`](#Ch007_107-122_B9780443219054000109.xhtml#p0255)
-
-*   simulation models, `[114`](#Ch007_107-122_B9780443219054000109.xhtml#p0225)
-
-*   Cruise ships, `[191–192`](#Ch010_187-198_B978044321905400002X.xhtml#p0060)
-
-*   CSA, *See* `Climate-Smart Agriculture (CSA)`
-
-*   Daily thermal comfort index, `[193–194`](#Ch010_187-198_B978044321905400002X.xhtml#p0095)
-
-*   Data, `[119`](#Ch007_107-122_B9780443219054000109.xhtml#p0335), `[129`](#Ch008_125-155_B9780443219054000043.xhtml#p0070) 
-
-    *   bias, `[7`](#Ch001_1-13_B9780443219054000067.xhtml#u0190)
-
-    *   collection, `[6`](#Ch001_1-13_B9780443219054000067.xhtml#u0185)
-
-    *   mining method, `[197–198`](#Ch010_187-198_B978044321905400002X.xhtml#p0180)
-
-    *   sources, `[115`](#Ch007_107-122_B9780443219054000109.xhtml#p0250)
-
-*   Dataset, `[22`](#Ch002_15-30_B9780443219054000018.xhtml#p0070), `[95`](#Ch006_85-103_B9780443219054000092.xhtml#p0205)
-
-*   Daytime thermal comfort index, `[193–194`](#Ch010_187-198_B978044321905400002X.xhtml#p0095)
-
-*   Decision Support System for Agrotechnology Transfer (DSSAT), `[113–114`](#Ch007_107-122_B9780443219054000109.xhtml#u0070)
-
-*   Decision Tree (DT), `[228–229`](#Ch012_227-243_B9780443219054000055.xhtml#p0030), `[232`](#Ch012_227-243_B9780443219054000055.xhtml#p0075)
-
-*   Decision-making process, `[6`](#Ch001_1-13_B9780443219054000067.xhtml#u0170), `[7`](#Ch001_1-13_B9780443219054000067.xhtml#u0240), `[194`](#Ch010_187-198_B978044321905400002X.xhtml#p0105), `[212`](#Ch011_203-223_B9780443219054000110.xhtml#p0105), `[213`](#Ch011_203-223_B9780443219054000110.xhtml#p0120), `[214`](#Ch011_203-223_B9780443219054000110.xhtml#p0130), `[215–216`](#Ch011_203-223_B9780443219054000110.xhtml#p0145), `[221`](#Ch011_203-223_B9780443219054000110.xhtml#p0260)
-
-*   Deep learning (DL), `[160–162`](#Ch009_159-184_B9780443219054000080.xhtml#s0030), `[160`](#Ch009_159-184_B9780443219054000080.xhtml#p0140), `[160`](#Ch009_159-184_B9780443219054000080.xhtml#p0150)  
-
-    *See also* `Machine learning (ML)` 
+- AdaBoost, *See* 自适应增强（AdaBoost）
+- Adadelta, *See* 自适应 Δ（Adadelta）
+- Adagrad, *See* 自适应梯度算法（Adagrad）
+- Adam, *See* 自适应矩估计（Adam）
+- Adamax 方程, 167–169, 168
+- 自适应增强（AdaBoost）, 232, 232
+- 自适应 Δ（Adadelta）, 177
+    - 方程, 167–169, 168
+- 自适应梯度算法（Adagrad）, 174–176
+    - 方程, 167–169, 167
+- 自适应矩估计（Adam）, 174
+    - 方程, 167–169, 168
+- 自适应模糊推理系统（Adaptive Neuro Fuzzy Inference System）, 228–229
+- 采用, 210–211, 211, 221–222
+- AgMIP, *See* 农业模型比较与改进项目（AgMIP）
+- 农业活动, 107
+- 农业适应策略, 113
+    - 气候变化的基本数学表达式和模型, 113–114
+- 农业资产, 111
+- 农业数据, 119
+- 农业干旱, 227
+- 农业方法, 107
+- 农业模型比较与改进项目（AgMIP）, 114
+- 农业生产系统模拟器（APSIM）, 113
+- 农业稳定性, 107
+- 农业系统, 110
+
+
+
+## 索引
+
+### A
+
+- 农业, 15–16, 49–50, 107, 108, 111, 119
+  - 计算模型的进展, 116–117
+  - 计算建模的挑战与局限, 119–120
+  - 气候变化
+    - 农业适应策略与计算建模, 111–121
+    - 对农业生产的影响, 109*f*
+  - 计算建模案例研究与应用, 117–119
+  - 未来展望, 120–121
+  - 基础, 108–111
+  - 计算建模在分析气候变化影响中的作用, 115–116
+
+- AI, *See* 人工智能（AI）
+- AIC, *See* 艾克信息准则（AIC）
+- 空气, 152–153
+- 空气污染物, 125–126, 148–149, 152–153
+  - 数据, 129
+  - 在 Nehru Nagar
+    - 小时趋势, 143–144, 146*f*
+    - 月度趋势, 144
+  - 在 Shastri Nagar
+    - 小时趋势, 138–143
+    - 月度趋势, 143
+  - 在 Visakhapatnam
+    - 小时趋势, 132–133
+    - 月度趋势, 133, 138*f*
+
+- 空气污染, 125, 207–208
+  - 与空气污染相关的问题, 125
+  - 在印度, 129–147
+  - 趋势, 144
+  - 独特的解决方案, 153–154
+    - 催化剂, 154
+    - 纳米生物修复, 154
+    - 纳米传感器, 154
+
+- 空气质量指数 (AQI), 35–36, 132, 133, 137*f*, 148–149
+  - 德里, 36–37
+    - 安 and Vihar 的空气污染物量, 37*f*
+    - 安 and Vihar 的空气质量指数, 38*f*
+    - AQI vs. CO 图表, 39*f*
+    - CO 在安 and Vihar, 38*f*
+    - PM10 vs. PM2.5 图表, 40*f*
+    - PM2.5 在德里, 39*f*
+  - 小时趋势, 133, 137*f*, 143, 144–145, 148*f*
+  - 月度趋势
+    - 在 Nehru Nagar, 145–147
+    - 在 Shastri Nagar, 143, 143*f*
+    - 在 Visakhapatnam, 133–138, 138*f*
+  - 需求, 148–149, 149*t*
+  - 价值, 143
+
+- 空中污染物, 126
+- 飞机, 191–192
+- AIC (Akaike 信息准则), 129–132
+- ANDRIZ 布料过滤器, 152
+- ANNs, *See* 人工神经网络 (ANNs)
+- 南极邮轮旅游, 191–192
+- 人为强迫, 92
+- 人为干预, 92
+- APSIM, *See* Agricultural Production Systems Simulator (APSIM)
+- AQI, *See* 空气质量指数 (AQI)
+- AR 部分, *See* 自回归部分 (AR part)
+- ARIMA, *See* 自回归集成移动平均 (ARIMA)
+- 人工智能 (AI), 1–2, 17–18, 90, 160–161, 197–198, 209–210
+  - 优势, 5–6, 5*f*
+  - 案例研究, 10–11, 12*t*
+  - 挑战, 8–9, 9*f*
+  - 特征, 7–8, 8*f*
+  - 气候危机, 2
+  - 劣势, 6–7, 6*f*
+  - 机会, 12
+  - 强化学习算法, 121
+  - 提议的方法, 2–5
+
+- 人工神经网络 (ANNs), 17–18, 50–52, 90, 160, 228–229
+  - 预测的 ANN 模型, 36*f*
+  - 排放率计算, 35–36
+  - 模型, 167
+
+- 大气二氧化碳, 108
+- 自回归集成移动平均 (ARIMA), 17–18, 50–52, 58, 227–228
+  - 原始月降雨训练数据的预测值和实际值, 64*f*
+- 自回归移动平均 (ARMA), 58
+- 自回归部分 (AR part), 58
+
+### B
+
+- 贝叶斯信息准则 (BIC), 129–132
+- 贝叶斯模型, 229
+- 贝叶斯神经网络 (BNN), 99
+  - BNN 预测的海洋区域的箱线图, 100*f*
+  - 预测海洋区域的, 99*f*
+  - 使用该方法的概率海洋区域预测, 97–100
+
+- BC, *See* 黑碳 (BC)
+- BIC, *See* 贝叶斯信息准则 (BIC)
+- 大数据分析, 121
+- 生物多样性保护, 207
+- 生物技术, 209–210
+- 黑碳 (BC), 127–128
+  - 加热, 128–129
+
+- 黑海, 53
+
+### BNN
+
+- BNN, *See* 贝叶斯神经网络 (BNN)
+
+### C
+
+- *Campylobacter* sp., 92
+- CAMS, *See* Copernicus 大气监测服务 (CAMS)
+- 碳
+  - 捕获
+    - 与封存, 4
+    - 与存储, 8, 12, 40–43
+  - 碳衍生组分, 153
+  - 排放, 33, 35, 196
+  - 足迹, 40–43
+  - 灯塔, 47
+  - 封存, 2
+
+- 二氧化碳 (CO[2]), 35, 154, 159
+  - 浓度, 88
+  - 排放, 33
+  - 施肥, 110
+  - 污染物, 34–35
+
+- 一氧化碳 (CO), 36–37, 85–86, 128, 138–143, 143–144
+  - CO 污染物, 85–86
+    - Visakhapatnam 的 CO 小时趋势, 87*f*
+    - Visakhapatnam 的 CO 月度趋势, 86*f*
+
+- 碳纳米管 (CNT), 153
+- CatBoost, *See* 类别增强 (CatBoost)
+- 类别增强 (CatBoost), 228, 233
+  - 算法, 228, 232, 236
+
+- Cauchy 突变和自适应权重因子 (CABES), 229
+- CCA, *See* 气候变化适应 (CCA)
+- CDLSTM, *See* 气候深度 LSTM (CDLSTM)
+- 单元记忆, 59
+- 手机，辐射, 34–35
+- 中心 for 水文气象和遥感 (CHRS), 53
+- CGE 模型, *See* 可计算一般均衡模型 (CGE model)
+- 儿童哮喘, 127–128
+- 慢阻塞性肺疾病, 88
+- CHRS, *See* 中心 for 水文气象和遥感 (CHRS)
+- 清洁能源, 37–43
+- 清洁工艺, 205
+- CLEFSA, *See* 气候变化与食品安全新风险 (CLEFSA)
+- 气候变化, 1–2, 15–16, 49–50, 74–75, 108, 110–111, 113, 115, 116, 118, 119, 128–129, 171–172, 188, 189–190
+  - 计算机模型的进展, 116–117
+  - 对农业生产的影响, 109*f*
+  - 人工智能, 160
+  - 基本数学表达式和气候变化农业适应策略及计算模型, 113–114
+  - 计算全球人口 U. S, 159*f*
+  - 计算模型的挑战和限制, 119–120
+  - 气候变化、农业适应策略和计算模型, 111–121
+  - 计算模型, 193–198
+    - 案例研究和应用, 117–119
+    - 对气候变化对旅游业的影响, 193–195
+    - 分析气候变化对农业的影响, 115–116
+  - 旅游与气候变化的联系, 189–192
+  - 深度学习, 160–162, 162–169
+  - 探索气候模型的可视化, 171–183
+  - 全球极端升温, 43–45
+    - 西欧的降水总量, 44*f*
+    - 全球升温, 44*f*
+  - 未来视角, 120–121
+  - 地理空间方法, 45–47
+  - 全球挑战, 160
+  - 机器学习, 160
+  - 缓解, 205–206
+  - 使用 Python 框架的 Jupyter Notebook 运行, 169–170
+  - 基础, 108–111
+  - 进展, 108
+  - 建议, 183–184
+  - 旅游与气候变化关系的研究, 190–192
+
+- 气候变化对旅游业的影响, 190–191
+- 旅游业与气候变化的影响, 191–192
+- 技术因素, 189–190
+- 气候变化适应（CCA）, 85, 92
+- 气候变化与食品安全新兴风险（CLEFSA）, 92
+- 气候危机, 1–2, 2, 33, 203–204
+- 气候数据, 119
+- Climate Deep LSTM（CDLSTM）, 50–52
+- 气候信息, 9
+- 气候建模, 12, 85
+  - 一氧化碳污染物, 85–86
+  - 气候变化适应, 91–92
+  - 食品安全, 92
+  - 气候和天气预测, 93–100
+  - 森林火灾, 86–90
+  - 物理引导型机器学习, 101–103
+
+- 气候智能农业（CSA）, 118, 119
+- 气候模型, 161
+- 云计算平台, 11
+- 云层覆盖, 73–74
+- 云服务, 188
+- CLSTM, *See* `卷积长短期记忆网络（CLSTM）`
+- CNT, *See* `碳纳米管（CNT）`
+- 煤炭, 33
+- 沿海旅游, 190–191
+- 寒冷压力, 95
+- 社区参与, 208
+- 复杂算法方程, 114
+- 复杂数学方程, 114
+- 可计算一般均衡模型（CGE 模型）, 109–110, 114
+- 循环神经网络模型的计算分析
+  - 实验, 21–27
+    - 绩效指标, 26–27
+    - 研究区域和数据, 21–26, `22*f*`, `23*t*`
+  - 方法论, 18–21
+    - 门控循环单元, 20–21
+    - 长短期记忆, 19–20
+    - 问题陈述, 18
+    - 循环神经网络, 18–19
+  - 结果, 28–30
+  - 月平均降雨预测
+    - 使用 3 个月移动平均, `28*f*`
+    - 使用 6 个月移动平均, `29*f*`
+    - 使用 12 个月移动平均, `29*f*`
+  - 实验的数值结果, `30*t*`
+
+- 计算框架, 108–109
+- 计算建模, 6, 108, 110, 113, 115, 117, 119, 120–121, 162, 188–189
+  - 农业, 111–121
+    - 气候变化与农业的进展, 116–117
+    - 在分析气候变化对农业的影响时, 115–116
+    - 气候变化农业适应策略的基本数学表达式和模型，以及计算建模, 113–114
+    - 农业和气候变化研究的案例研究和应用, 117–119
+    - 农业和气候变化的挑战和局限性, 119–120
+  - 旅游与气候变化之间的联系, 189–192
+  - 未来工作, 198
+  - 旅游与气候变化, 193–198
+    - 气候变化对旅游的影响, 193–195
+    - 旅游对气候的影响, 195–196
+    - 建议, 196–198
+
+- 计算机模拟, 85, 108, 110
+- 计算机视觉, 7
+- 卷积长短期记忆网络（CLSTM）, 50–52
+- growth, `[115–116`](#Ch007_107-122_B9780443219054000109.xhtml#p0255)
+- simulation models, `[114`](#Ch007_107-122_B9780443219054000109.xhtml#p0225)
+- Cruise ships, `[191–192`](#Ch010_187-198_B978044321905400002X.xhtml#p0060)
+- CSA, *See* `Climate-Smart Agriculture (CSA)`
+- Daily thermal comfort index, `[193–194`](#Ch010_187-198_B978044321905400002X.xhtml#p0095)
+- Data, `[119`](#Ch007_107-122_B9780443219054000109.xhtml#p0335), `[129`](#Ch008_125-155_B9780443219054000043.xhtml#p0070)
+  - bias, `[7`](#Ch001_1-13_B9780443219054000067.xhtml#u0190)
+  - collection, `[6`](#Ch001_1-13_B9780443219054000067.xhtml#u0185)
+  - mining method, `[197–198`](#Ch010_187-198_B978044321905400002X.xhtml#p0180)
+  - sources, `[115`](#Ch007_107-122_B9780443219054000109.xhtml#p0250)
+
+- Dataset, `[22`](#Ch002_15-30_B9780443219054000018.xhtml#p0070), `[95`](#Ch006_85-103_B9780443219054000092.xhtml#p0205)
+- Daytime thermal comfort index, `[193–194`](#Ch010_187-198_B978044321905400002X.xhtml#p0095)
+- Decision Support System for Agrotechnology Transfer (DSSAT), `[113–114`](#Ch007_107-122_B9780443219054000109.xhtml#u0070)
+- Decision Tree (DT), `[228–229`](#Ch012_227-243_B9780443219054000055.xhtml#p0030), `[232`](#Ch012_227-243_B9780443219054000055.xhtml#p0075)
+- Decision-making process, `[6`](#Ch001_1-13_B9780443219054000067.xhtml#u0170), `[7`](#Ch001_1-13_B9780443219054000067.xhtml#u0240), `[194`](#Ch010_187-198_B978044321905400002X.xhtml#p0105), `[212`](#Ch011_203-223_B9780443219054000110.xhtml#p0105), `[213`](#Ch011_203-223_B9780443219054000110.xhtml#p0120), `[214`](#Ch011_203-223_B9780443219054000110.xhtml#p0130), `[215–216`](#Ch011_203-223_B9780443219054000110.xhtml#p0145), `[221`](#Ch011_203-223_B9780443219054000110.xhtml#p0260)
+
+
+
+## D
+
+*   Deep learning (DL), `[160–162`](#Ch009_159-184_B9780443219054000080.xhtml#s0030), `[160`](#Ch009_159-184_B9780443219054000080.xhtml#p0140), `[160`](#Ch009_159-184_B9780443219054000080.xhtml#p0150)
+
+    *See also* `Machine learning (ML)`
 
     *   arranges algorithms, `[160`](#Ch009_159-184_B9780443219054000080.xhtml#p0150)
 
-    *   mathematical equations 
+    *   mathematical equations
 
         *   for MSE, MAE, MAPE, and R2, `[167`](#Ch009_159-184_B9780443219054000080.xhtml#s0060)
 
@@ -4646,7 +4322,7 @@ Figure 12–7 Eğirdir Lake water level change for the next 10 years.
 
     *   methods, `[101–103`](#Ch006_85-103_B9780443219054000092.xhtml#p0250)
 
-    *   models, `[17–18`](#Ch002_15-30_B9780443219054000018.xhtml#p0025) 
+    *   models, `[17–18`](#Ch002_15-30_B9780443219054000018.xhtml#p0025)
 
         *   for climate change, `[162–169`](#Ch009_159-184_B9780443219054000080.xhtml#s0035)
 
@@ -4726,7 +4402,7 @@ Figure 12–7 Eğirdir Lake water level change for the next 10 years.
 
 *   EMR, *See* `Electromagnetic radiation (EMR)`
 
-*   Energy 
+*   Energy
 
     *   budget equation, `[113`](#Ch007_107-122_B9780443219054000109.xhtml#p0170)
 
@@ -4742,7 +4418,7 @@ Figure 12–7 Eğirdir Lake water level change for the next 10 years.
 
     *   sector, `[215`](#Ch011_203-223_B9780443219054000110.xhtml#p0140)
 
-    *   waste to, `[150–152`](#Ch008_125-155_B9780443219054000043.xhtml#s0120) 
+    *   waste to, `[150–152`](#Ch008_125-155_B9780443219054000043.xhtml#s0120)
 
         *   value energy conversion, `[152`](#Ch008_125-155_B9780443219054000043.xhtml#s0125)
 
@@ -4754,166 +4430,161 @@ Figure 12–7 Eğirdir Lake water level change for the next 10 years.
 
 *   Ethical governance, `[208`](#Ch011_203-223_B9780443219054000110.xhtml#s0065)
 
-*   European Extreme Events Climate Index (E³CI), `[94–95`](#Ch006_85-103_B9780443219054000092.xhtml#s0050), `[94`](#Ch006_85-103_B9780443219054000092.xhtml#p0190), `[95–96`](#Ch006_85-103_B9780443219054000092.xhtml#s0055) 
+*   European Extreme Events Climate Index (E³CI), `[94–95`](#Ch006_85-103_B9780443219054000092.xhtml#s0050), `[94`](#Ch006_85-103_B9780443219054000092.xhtml#p0190), `[95–96`](#Ch006_85-103_B9780443219054000092.xhtml#s0055)
 
     *   mean of components of, `[94*t*`](#Ch006_85-103_B9780443219054000092.xhtml#t0025)
 
 *   Extra trees (ET), `[232`](#Ch012_227-243_B9780443219054000055.xhtml#p0065), `[232–233`](#Ch012_227-243_B9780443219054000055.xhtml#s0055)
 
-
-
-* eXtreme gradient boosting (XGBoost), 232, 233
+*   eXtreme gradient boosting (XGBoost), 232, 233
 
 ## F
 
-* 人脸识别技术, 209–210
+*   人脸识别技术, 209–210
 
-* 农民, 16–17
+*   农民, 16–17
 
-* 农业, 12 
+*   农业, 12
 
-    * 方法, 118
+    *   方法, 118
 
-* 施肥, 2
+*   施肥, 2
 
-* 细尺度数据, 119
+*   细尺度数据, 119
 
-* Fırtına River, 52–53
+*   Fırtına River, 52–53
 
-* Fock space 分类器, 81 
+*   Fock space 分类器, 81
 
-    * 对气候研究, 82*f*
+    *   对气候研究, 82*f*
 
-* 食品 
+*   食品
 
-    * 生产, 115, 115
+    *   生产, 115, 115
 
-    * 安全, 85, 92
+    *   安全, 85, 92
 
-* 预测气候和天气, 85, 93–100 
+*   预测气候和天气, 85, 93–100
 
-    * 德国案例研究, 95–96 
+    *   德国案例研究, 95–96
 
-        * 德国的 ERA5, 98*f*
+        *   德国的 ERA5, 98*f*
 
-        * 气候参数的季节性分析, 97*f*
+        *   气候参数的季节性分析, 97*f*
 
-    * 意大利案例研究, 94–95 
+    *   意大利案例研究, 94–95
 
-        * E³CI 模型对意大利极端降水的表示, 96*f*, 97*f*
+        *   E³CI 模型对意大利极端降水的表示, 96*f*, 97*f*
 
-        * 意大利的 ERA5, 96*f*
+        *   意大利的 ERA5, 96*f*
 
-        * 意大利极端事件的时间分析, 95*f*
+        *   意大利极端事件的时间分析, 95*f*
 
-    * 使用 BNN 的概率海洋区域预测, 97–100
+    *   使用 BNN 的概率海洋区域预测, 97–100
 
-    * TrajGRU 现在预测, 93–94
+    *   TrajGRU 现在预测, 93–94
 
-* 预测模型, 162
+*   预测模型, 162
 
-* 森林火灾, 85, 86–90, 89, 90*f* 
+*   森林火灾, 85, 86–90, 89, 90*f*
 
-    * 特征, 91*t*
+    *   特征, 91*t*
 
-    * CNN 模型预测潜在森林火灾发生, 91*f*
+    *   CNN 模型预测潜在森林火灾发生, 91*f*
 
-    * 印度的经济损失, 89*t*
+    *   印度的经济损失, 89*t*
 
-    * FSI 使用 Modi 传感器检测到的森林火灾数量, 89*t*
+    *   FSI 使用 Modi 传感器检测到的森林火灾数量, 89*t*
 
-    * 相关经济损失的结果, 89–90
+    *   相关经济损失的结果, 89–90
 
-* 化石燃料, 2 
+*   化石燃料, 2
 
-    * 设施, 43
+    *   设施, 43
 
-    * 气体, 40–43
+    *   气体, 40–43
 
-* 基础大数据和人工智能用于人类发展（IFAB for Human Development）, 94
+*   基础大数据和人工智能用于人类发展（IFAB for Human Development）, 94
 
-* 燃料, 189
+*   燃料, 189
 
 ## G
 
-* Ganjiang River 流域, 229
+*   Ganjiang River 流域, 229
 
-* 门控循环单元（GRUs）, 18, 20–21, 20–21, 50–52, 162–163, 165–166, 166–167, 229 
+*   门控循环单元（GRUs）, 18, 20–21, 20–21, 50–52, 162–163, 165–166, 166–167, 229
 
-    * 其内部结构, 21*f*
+    *   其内部结构, 21*f*
 
-    * 长短期记忆 *vs*. 门控循环单元, 166–167
+    *   长短期记忆 *vs*. 门控循环单元, 166–167
 
-    * 网络, 165–167
+    *   网络, 165–167
 
-* GBR, *See* 梯度提升回归器（GBR）
+*   GBR, *See* `梯度提升回归器（GBR）`
 
-* GCMs, *See* 通用循环模型（GCMs）, 全球气候模型（GCMs）
+*   GCMs, *See* `通用循环模型（GCMs）`, `全球气候模型（GCMs）`
 
-* 通用循环模型（GCMs）, 114
+*   通用循环模型（GCMs）, 114
 
-* 广义线性模型（GLM）, 129–147
+*   广义线性模型（GLM）, 129–147
 
-* 发电机, 43
+*   发电机, 43
 
-* 遗传算法, 4–5
+*   遗传算法, 4–5
 
-* 地理信息系统（GIS）, 17–18, 92
+*   地理信息系统（GIS）, 17–18, 92
 
-* 气候变化的地理空间方法, 45–47
+*   气候变化的地理空间方法, 45–47
 
-* 地理空间技术, 45–47
+*   地理空间技术, 45–47
 
-* 地热发电, 205–206
+*   地热发电, 205–206
 
-* GHG, *See* 温室气体（GHG）
+*   GHG, *See* `温室气体（GHG）`
 
-* GIS, *See* 地理信息系统（GIS）
+*   GIS, *See* `地理信息系统（GIS）`
 
-* 冰川, 45 
+*   冰川, 45
 
-    * 形成, 162
+    *   形成, 162
 
-* GLM, *See* 广义线性模型（GLM）
+*   GLM, *See* `广义线性模型（GLM）`
 
-* 全球气候模型（GCMs）, 110, 115, 116–117
+*   全球气候模型（GCMs）, 110, 115, 116–117
 
-* 全球数据集, 169
+*   全球数据集, 169
 
-* 全球环境, 160
+*   全球环境, 160
 
-* 全球温室气体, 33, 74–75
+*   全球温室气体, 33, 74–75
 
-* 全球变暖, 34, 43, 128–129, 160
+*   全球变暖, 34, 43, 128–129, 160
 
-* GML, *See* 全球监测实验室（GML）
+*   GML, *See* `全球监测实验室（GML）`
 
-* 梯度提升回归器（GBR）, 232, 233
+*   梯度提升回归器（GBR）, 232, 233
 
-* 梯度下降方程, 77
+*   梯度下降方程, 77
 
-* 梯度下降优化算法, 77
+*   梯度下降优化算法, 77
 
-* 绿色预测数据, 62
+*   绿色预测数据, 62
 
-* 绿色氢能, 40–43
+*   绿色氢能, 40–43
 
-* 绿色交通, 203–204
+*   绿色交通, 203–204
 
-* 温室气体（GHG）, 85, 160, 190–191 
+*   温室气体（GHG）, 85, 160, 190–191
 
-    * 排放, 7, 191–192, 195, 195–196
+    *   排放, 7, 191–192, 195, 195–196
 
-* 电网集成, 3
+*   电网集成, 3
 
-* 电网运营商, 217–218, 221–222
-
-
-
+*   电网运营商, 217–218, 221–222
 
 *   GRUs, *See* `Gated recurrent units (GRUs)`
 
-*   GTAP 
+*   GTAP
 
     *   database, `[109–110`]
 
@@ -4933,999 +4604,599 @@ Figure 12–7 Eğirdir Lake water level change for the next 10 years.
 
 *   Heat stress, `[95`], `[108`]
 
-*   Heavy diesel vehicles, `[152`]
 
-*   Heavy rainfall events, `[43`]
 
+## 索引
+
+### H
+
+*   Heavy diesel vehicles, `[152]`
+*   Heavy rainfall events, `[43]`
 *   HTM, *See* `Hamburg Tourism Model (HTM)`
+*   Human activity, `[111]`
+*   Human decision-making, `[222]`
+*   Human emissions, `[86]`
+*   Human-induced global warming, `[74–75]`
+*   Hydro power, `[205–206]`
+*   Hydroelectricity, `[43]`
+*   Hydrogen, `[40–43]`
+*   Hydropower, `[37–43]`, `[43]`
+*   Hyperbolic tangent function, `[19–20]`, `[59]`
 
-*   Human activity, `[111`]
+### I
 
-*   Human decision-making, `[222`]
-
-*   Human emissions, `[86`]
-
-*   Human-induced global warming, `[74–75`]
-
-*   Hydro power, `[205–206`]
-
-*   Hydroelectricity, `[43`]
-
-*   Hydrogen, `[40–43`]
-
-*   Hydropower, `[37–43`], `[43`]
-
-*   Hyperbolic tangent function, `[19–20`], `[59`]
-
-## I
-
-*   IAMs, `[117`]
-
+*   IAMs, `[117]`
 *   IC, *See* `Income of country (IC)`
-
 *   ICT, *See* `Information and communication technologies (ICT)`
-
 *   IFS, *See* `Integrated farming systems (IFS)`
+*   Income of country (IC), `[194–195]`
+*   Index for amount of precipitation, `[193–194]`
+*   India, air pollution in, `[129–147]`
+*   Industrial pollution contaminates, `[125]`
+*   Industry, `[151]`
+*   Information and communication technologies (ICT), `[187–188]`
+    *   emission from, `[35]`
+*   Innovative modeling methods, `[204]`
+*   Innovative techniques, `[92]`
+*   Integrated farming systems (IFS), `[110]`
+*   Internet of Things, `[197–198]`
+*   Irrigation methods, `[16–17]`
 
-*   Income of country (IC), `[194–195`]
+### K
 
-*   Index for amount of precipitation, `[193–194`]
-
-*   India, air pollution in, `[129–147`]
-
-*   Industrial pollution contaminates, `[125`]
-
-*   Industry, `[151`]
-
-*   Information and communication technologies (ICT), `[187–188`] 
-
-    *   emission from, `[35`]
-
-*   Innovative modeling methods, `[204`]
-
-*   Innovative techniques, `[92`]
-
-*   Integrated farming systems (IFS), `[110`]
-
-*   Internet of Things, `[197–198`]
-
-*   Irrigation methods, `[16–17`]
-
-## K
-
-*   k-nearest neighbors (kNN), `[228–229`], `[232`]
-
-*   Kaçkar Mountains, `[52–53`]
-
-*   Kernel functions, `[79`]
-
+*   k-nearest neighbors (kNN), `[228–229]`, `[232]`
+*   Kaçkar Mountains, `[52–53]`
+*   Kernel functions, `[79]`
 *   kNN, *See* `k-nearest neighbors (kNN)`
+*   Knowledge transfer, `[208]`
 
-*   Knowledge transfer, `[208`]
+### L
 
-## L
-
-*   Lakes, `[16–17`] 
-
-    *   levels, `[229`]
-
-*   Land surface temperature (LST), `[73–74`]
-
-*   Land use, `[15`] 
-
-    *   change modeling, `[213`]
-
-    *   and land cover change, `[45–47`]
-
+*   Lakes, `[16–17]`
+    *   levels, `[229]`
+*   Land surface temperature (LST), `[73–74]`
+*   Land use, `[15]`
+    *   change modeling, `[213]`
+    *   and land cover change, `[45–47]`
 *   LCA, *See* `Life Cycle Assessment (LCA)`
-
-*   Learning method, `[209–210`], `[220–221`], `[220–221`], `[232–233`]
-
-*   Leveraging modern technologies, `[112`]
-
-*   Life Cycle Assessment (LCA), `[118`]
-
-*   LightGBM algorithms, `[228`]
-
-*   Lightning data, `[94`]
-
-*   Linear systems, `[232`]
-
-*   Load Balancing, `[218`], `[219`]
-
-*   Long short-term memory (LSTM), `[17–18`], `[19–20`], `[19–20`], `[50–52`], `[59`], `[162–163`], `[164–165`], `[166–167`], `[178–179`], `[229`] 
-
-    *   algorithm, `[179–180`]
-
-    *   internal architecture of, `[20*f*`]
-
-    *   loss value plot during LSTM model training, `[60*f*`]
-
-    *   numerical results of experiment, `[69*t*`]
-
-    *   raw monthly rainfall training data, predictions, and actual values for, `[61*f*`]
-
-*   Long-wave infrared bands (LWIR bands), `[73–74`]
-
-*   Lower respiratory infections, `[88`]
-
+*   Learning method, `[209–210]`, `[220–221]`, `[232–233]`
+*   Leveraging modern technologies, `[112]`
+*   Life Cycle Assessment (LCA), `[118]`
+*   LightGBM algorithms, `[228]`
+*   Lightning data, `[94]`
+*   Linear systems, `[232]`
+*   Load Balancing, `[218]`, `[219]`
+*   Long short-term memory (LSTM), `[17–18]`, `[19–20]`, `[50–52]`, `[59]`, `[162–163]`, `[164–165]`, `[166–167]`, `[178–179]`, `[229]`
+    *   algorithm, `[179–180]`
+    *   internal architecture of, `[20*f*]`
+    *   loss value plot during LSTM model training, `[60*f*]`
+    *   numerical results of experiment, `[69*t*]`
+    *   raw monthly rainfall training data, predictions, and actual values for, `[61*f*]`
+*   Long-wave infrared bands (LWIR bands), `[73–74]`
+*   Lower respiratory infections, `[88]`
 *   LST, *See* `Land surface temperature (LST)`
-
 *   LSTM, *See* `Long short-term memory (LSTM)`
-
 *   LWIR bands, *See* `Long-wave infrared bands (LWIR bands)`
 
-## M
+### M
 
 *   MA, *See* `Moving averages (MA)`
+*   Machine learning (ML), `[7]`
+    *   k-nearest neighbors, `[232]`
+    *   random forest, `[232]`
+    *   support vector regression, `[232]`
+    *   computation, `[2]`
+    *   model, `[17–18]`, `[229]`
+    *   techniques, `[92]`, `[108–109]`
+*   MAE, *See* `Mean absolute error (MAE)`
+*   MAPE, *See* `Mean absolute percentage error (MAPE)`
+*   MAS, *See* `Multiagent systems (MAS)`
+*   MAS-DES, *See* `Multiagent systems integrated decentralized energy systems (MAS-DES)`
+*   Mathematical equations, `[114]`
+    *   for MSE MAE MAPE and R², `[167]`
+    *   for optimizers, `[167–169]`
+        *   Adadelta equations, `[167–169]`, `[168]`
+        *   Adagrad equations, `[167–169]`, `[167]`
+        *   Adam equations, `[167–169]`, `[168]`
+        *   Adamax equations, `[167–169]`, `[168]`
+        *   Nadam equations, `[167–169]`, `[169]`
+        *   RMSProp equations, `[167–169]`, `[169]`
+        *   SGD equations, `[167–169]`, `[168]`
+*   Mathematical models, `[113]`, `[113–114]`
+    *   quantum state encoding equations, `[75]`
+*   MEAE, *See* `Median absolute error (MEAE)`
+*   Mean absolute error (MAE), `[26]`, `[59–60]`, `[167]`
+*   Mean absolute percentage error (MAPE), `[59–60]`, `[167]`
+*   Mean square error (MSE), `[26]`, `[50–52]`, `[167]`
+*   Mean squared log error (MSLE), `[26]`
+*   Median absolute error (MEAE), `[26]`
+*   Meteorological droughts, `[228]`
+    *   Materials and methods, `[230–233]`
+        *   Machine learning algorithms, `[230–233]`
+        *   Standardized Precipitation Index, `[230]`
+        *   Study area, `[230]`
+    *   Results, `[233–242]`
+*   Microplastics, `[153]`
+*   ML, *See* `Machine learning (ML)`
+*   Mobile radiation, `[34–35]`
+*   MODerate Resolution Imaging Spectroradiometer (MODIS), `[73–74]`
+*   Modi Sensors, `[89]`
+*   MODIS, *See* `MODerate Resolution Imaging Spectroradiometer (MODIS)`
+*   Modular regression model, `[58]`
+*   Monte Carlo methods, `[117]`, `[229]`
+*   Moving averages (MA), `[28]`, `[58]`
+*   MSE, *See* `Mean square error (MSE)`
+*   MSLE, *See* `Mean squared log error (MSLE)`
+*   Multiagent systems (MAS), `[204]`, `[210–211]`
+    *   excel, `[219]`
+    *   integrated decentralized energy systems, `[215–221]`
+        *   agent representation, `[216–218]`
+        *   market mechanisms, `[220]`
+        *   optimization and learning, `[220–221]`
+        *   optimizing energy distribution, `[218–219]`
+        *   resilience and reliability, `[219–220]`
+    *   MAS-based DES, `[217–218]`, `[218]`
+    *   MAS-based models, `[212]`
+    *   MAS-based scenario simulations, `[214]`
+    *   MAS-based simulations, `[212–213]`
+    *   MAS-driven simulations, `[214–215]`
+    *   modeling responsible technologies with, `[212–215]`
+        *   agent representation, `[212]`
+        *   climate simulation, `[213]`
+        *   ecosystem modeling, `[212–213]`
+        *   land-use change modeling, `[213]`
+        *   pollution and resource usage modeling, `[214]`
+        *   predicting adaptation and resilience, `[214–215]`
+        *   scenario analysis, `[214]`
+    *   models, `[214–215]`
+    *   proposed multiagent system integrated decentralized energy systems, `[215–221]`
+    *   responsible technologies and sustainability, `[205–208]`
+        *   biodiversity conservation, `[207]`
+        *   climate change mitigation, `[205–206]`
+        *   community engagement, `[208]`
+        *   economic stability, `[207]`
+        *   education and knowledge transfer, `[208]`
+        *   environmental impact, `[205]`
+        *   ethical and responsible governance, `[208]`
+        *   health and well-being, `[207–208]`
+        *   resource efficiency, `[206–207]`
+        *   social equity, `[207]`
+    *   role of modeling and simulation, `[209–211]`
+*   Multiagent systems integrated decentralized energy systems (MAS-DES), `[204]`
+*   Multilayer perceptron neural network algorithm, `[92]`
+*   Multivariate time series, `[132]`
+
+### N
+
+*   Nadam, *See* `Nesterov Adaptive Moment Estimation (Nadam)`
+*   Nanobioremediation, `[154]`
+*   Nanofiber catalyst, `[154]`
+*   Nanomaterials, `[152–153]`
+*   Nanoparticles, `[153]`
+*   Nanosensors, `[154]`
+*   Nanosized particles, `[154]`
+*   Nanostructured catalyst material, `[154]`
+*   Nanotechnology
+    *   to overcoming air pollution abatement, `[153–154]`
+    *   in plastic recycle, `[153]`
+    *   toward waste to energy, `[152–154]`
+*   National Drought Management Strategy and Action Plan, `[15–16]`
+*   Natural forest fire, `[86]`
+*   Natural language processing, `[7]`
+*   Naturally air pollution, `[86–90]`
+*   Nature tourism, `[190–191]`
+*   NCEI, *See* `National Centers for Environmental Information (NCEI)`
+*   Nehru Nagar
+    *   air pollutants in
+        *   hourly trends of, `[143–144]`, `[146*f*]`
+        *   monthly trends of, `[144]`
+        *   monthly trends of air quality index in, `[145–147]`
+*   Nesterov Adaptive Moment Estimation (Nadam), `[177]`
+    *   equations, `[167–169]`, `[169]`
+*   Neural networks, `[18–19]`, `[163]`
+*   Nitrogen di oxide pollution, `[127–128]`
+*   Nitrogen dioxide (NO[2]), `[127–128]`
+*   Nonlinear systems, `[232]`
+*   Novel deep learning model, `[50–52]`
+*   Nowcasting, `[93]`
 
-*   Machine learning (ML), [`[7](#Ch001_1-13_B978044321905400006
+### O
 
+*   Optimal computational model, `[4–5]`
+*   Optimization, `[173]`, `[220–221]`
+    *   algorithm, `[173]`, `[174–178]`
+    *   problems, `[73]`
+    *   process, `[28]`
+*   Optimized carbon capture, `[3]`
+*   Optimized computational modelling, `[1–2]`
+    *   advantages, `[5–6]`, `[5*f*]`
+    *   case study, `[10–11]`, `[12*t*]`
+    *   challenges, `[8–9]`, `[9*f*]`
+    *   characteristics, `[7–8]`, `[8*f*]`
+    *   climate crisis, `[2]`
+    *   disadvantages, `[6–7]`, `[6*f*]`
+    *   future perspectives, `[12–13]`
+    *   opportunities, `[12]`
+    *   proposed methodology, `[2–5]`
+*   Optimum solutions, `[189–190]`
+*   Optuna framework, `[236]`
+*   Organic carbons, `[89]`
 
+### P
 
-*   `k-最近邻`, 232
+*   PAHs, *See* `Polycyclic aromatic hydrocarbons (PAHs)`
+*   Particulate matter (PM), `[152]`
+    *   PM10, `[126–127]`, `[138–143]`, `[143–144]`
 
-*   `随机森林`, 232
 
-*   `支持向量回归`, 232
 
-*   `计算`, 2
+- `PM2.5`, 125, 126–127, 127, 128–129, 138–143, 143–144, 151
+    * `carbon nanoparticles`, 126
+    * `for electrodes`, 152
+    * `recycle of`, 150–152
+    * `for supercapacitors`, `153*f*`
+    * `waste to value energy conversion`, 152
 
-*   `模型`, 17–18, 229
+- `PEC`, *See* `Photoelectrochemical (PEC conversion)`
 
-*   `技术`, 92, 108–109
+- `Peer-to-peer model`, 220
 
-*   `MAE`, *See* `平均绝对误差 (MAE)`
+- `PERSIANN`, *See* `Precipitation Estimation from Remotely Sensed Information using ANNs (PERSIANN)`
 
-*   `MAPE`, *See* `平均绝对百分比误差 (MAPE)`
+- `Photoelectrochemical conversion (PEC conversion)`, 154
+    * `CO[2] conversion`, 154
 
-*   `MAS`, *See* `多智能体系统 (MAS)`
+- `Physics–guided machine learning`, 85, 101–103, 101–103
+    * `climate model`
+        * `for maximum input and relative humidity`, `103*f*`
+        * `for maximum input with near-surface specific humidity`, `102*f*`
+        * `for mean input and relative humidity`, `102*f*`
+        * `for mean input with near-surface specific humidity`, `101*f*`
+    * for minimum input and relative humidity, `[103*f*](#Ch006_85-103_B9780443219054000092.xhtml#f0125)`
+    * for minimum input with near-surface specific humidity, `[102*f*](#Ch006_85-103_B9780443219054000092.xhtml#f0105)`
 
-*   `MAS-DES`, *See* `多智能体系统集成分布式能源系统 (MAS-DES)`
+- Plant breeders, `[112](#Ch007_107-122_B9780443219054000109.xhtml#p0125)`
 
-*   `数学方程`, 114 
+- Plastic recycle, nanotechnology in, `[153](#Ch008_125-155_B9780443219054000043.xhtml#s0135)`
 
-    *   `用于 MSE MAE MAPE 和 R²`, 167
+- Plastics, `[153](#Ch008_125-155_B9780443219054000043.xhtml#p0370)`
 
-    *   `用于优化器`, 167–169 
+- Policymakers, `[162](#Ch009_159-184_B9780443219054000080.xhtml#p0235)`, `[214](#Ch011_203-223_B9780443219054000110.xhtml#p0125)`, `[222](#Ch011_203-223_B9780443219054000110.xhtml#p0275)`
+    * emission, `[36–37](#Ch003_33-47_B9780443219054000079.xhtml#s0040)`
 
-        *   `Adadelta 方程`, 167–169, 168
+- Pollutants, `[127–128](#Ch008_125-155_B9780443219054000043.xhtml#p0050)`, `[143](#Ch008_125-155_B9780443219054000043.xhtml#p0255)`, `[214](#Ch011_203-223_B9780443219054000110.xhtml#p0125)`
+    * emission, `[36–37](#Ch003_33-47_B9780443219054000079.xhtml#s0040)`
 
-        *   `Adagrad 方程`, 167–169, 167
+- Pollution, `[125](#Ch008_125-155_B9780443219054000043.xhtml#p0020)`, `[214](#Ch011_203-223_B9780443219054000110.xhtml#s0100)`
 
-        *   `Adam 方程`, 167–169, 168
+- Polycyclic aromatic hydrocarbons (PAHs), `[151](#Ch008_125-155_B9780443219054000043.xhtml#p0345)`
 
-        *   `Adamax 方程`, 167–169, 168
+- Precipitation Estimation from Remotely Sensed Information using ANNs (PERSIANN), `[50–52](#Ch004_49-70_B9780443219054000031.xhtml#p0020)`
 
-        *   `Nadam 方程`, 167–169, 169
+- Precipitation forecasting model, `[17–18](#Ch002_15-30_B9780443219054000018.xhtml#p0025)`
 
-        *   `RMSProp 方程`, 167–169, 169
+- Probabilistic ocean regime predictions using BNN, `[97–100](#Ch006_85-103_B9780443219054000092.xhtml#s0060)`
 
-        *   `SGD 方程`, 167–169, 168
+- Process-based crop models, `[115–116](#Ch007_107-122_B9780443219054000109.xhtml#p0255)`, `[120](#Ch007_107-122_B9780443219054000109.xhtml#p0370)`
 
-*   `数学模型`, 113, 113–114 
+- Prophet model, `[58](#Ch004_49-70_B9780443219054000031.xhtml#s0035)`
+    * forecasting performance, `[67](#Ch004_49-70_B9780443219054000031.xhtml#p0150)`
 
-    *   `量子态编码方程`, 75
+- Prosumers, `[216](#Ch011_203-223_B9780443219054000110.xhtml#o0010)`, `[220](#Ch011_203-223_B9780443219054000110.xhtml#p0250)`, `[221–222](#Ch011_203-223_B9780443219054000110.xhtml#p0270)`
 
-*   `MEAE`, *See* `中位绝对误差 (MEAE)`
+- Python, `[78](#Ch005_73-82_B9780443219054000122.xhtml#p0155)`
+    * operations in python framework using Jupyter Notebook, `[169–170](#Ch009_159-184_B9780443219054000080.xhtml#s0105)`
 
-*   `Mean absolute error (MAE)`, 26, 59–60, 167
+- QML, *See* `[Quantum machine learning (QML)](#Index_247-259_B9780443219054000171.xhtml#idx659)`
 
-*   `Mean absolute percentage error (MAPE)`, 59–60, 167
+- QNN, *See* `[Quantum neural networks (QNN)](#Index_247-259_B9780443219054000171.xhtml#idx671)`
 
-*   `Mean square error (MSE)`, 26, 50–52, 167
+- QSVM, *See* `[Quantum support vector machines (QSVM)](#Index_247-259_B9780443219054000171.xhtml#idx673)`
 
-*   `Mean squared log error (MSLE)`, 26
+- Quantum activation function equation, `[77](#Ch005_73-82_B9780443219054000122.xhtml#p0095)`
 
-*   `Median absolute error (MEAE)`, 26
+- Quantum annealing, `[78–79](#Ch005_73-82_B9780443219054000122.xhtml#p0210)`
 
-*   `Meteorological droughts`, 228 
+- Quantum circuit equation, `[75](#Ch005_73-82_B9780443219054000122.xhtml#p0035)`
 
-    *   `材料与方法`, 230–233 
+- Quantum computing, `[78–79](#Ch005_73-82_B9780443219054000122.xhtml#p0210)`
 
-        *   `机器学习算法`, 230–233
+- Quantum convolution operation equation, `[77](#Ch005_73-82_B9780443219054000122.xhtml#p0080)`
 
-        *   `标准化降水指数`, 230
+- Quantum ensemble learning, `[73](#Ch005_73-82_B9780443219054000122.xhtml#p0010)`
 
-        *   `研究区域`, 230
+- Quantum kernel equation, `[77](#Ch005_73-82_B9780443219054000122.xhtml#p0070)`
 
-    *   `结果`, 233–242
+- Quantum machine learning (QML), `[73](#Ch005_73-82_B9780443219054000122.xhtml#p0010)`
+    * implementation, `[78–79](#Ch005_73-82_B9780443219054000122.xhtml#s0025)`
+        * climate parameters, `[78*t*](#Ch005_73-82_B9780443219054000122.xhtml#t0015)`
+        * quantum thermal annealing for weather forecasting, `[79*f*](#Ch005_73-82_B9780443219054000122.xhtml#f0025)`
+        * training QBM, `[79*f*](#Ch005_73-82_B9780443219054000122.xhtml#f0020)`
+    * mathematical modeling, `[75–77](#Ch005_73-82_B9780443219054000122.xhtml#s0020)`
+    * Pytorch program for weather forecasting, `[80*f*](#Ch005_73-82_B9780443219054000122.xhtml#f0030)`
+    * quantum support vector machine for weather forecasting, `[81*f*](#Ch005_73-82_B9780443219054000122.xhtml#f0040)`
+    * related work, `[73–75](#Ch005_73-82_B9780443219054000122.xhtml#s0015)`
+        * potential benefits of using quantum computing, `[74*t*](#Ch005_73-82_B9780443219054000122.xhtml#t0010)`
+        * State Met Centers communication, `[76*f*](#Ch005_73-82_B9780443219054000122.xhtml#f0015)`
+        * weather-to-climate prediction, `[76*f*](#Ch005_73-82_B9780443219054000122.xhtml#f0010)`
+
+- Quantum neural networks (QNN), `[73](#Ch005_73-82_B9780443219054000122.xhtml#p0010)`
+
+- Quantum pooling operation equation, `[77](#Ch005_73-82_B9780443219054000122.xhtml#p0090)`
+
+- Quantum support vector machines (QSVM), `[73](#Ch005_73-82_B9780443219054000122.xhtml#p0010)`
+
+- Quantum thermal annealing, `[78–79](#Ch005_73-82_B9780443219054000122.xhtml#p0210)`
+
+- Quantum variational circuit equation, `[75](#Ch005_73-82_B9780443219054000122.xhtml#p0045)`
+
+- Quantum weight updation equation, `[77](#Ch005_73-82_B9780443219054000122.xhtml#p0105)`
+
+- R-squared (R²), mathematical equations for, `[167](#Ch009_159-184_B9780443219054000080.xhtml#s0060)`
+
+- Radiation from cell phones or towers, `[34–35](#Ch003_33-47_B9780443219054000079.xhtml#s0025)`
+
+- Rain washes, `[133](#Ch008_125-155_B9780443219054000043.xhtml#p0195)`
+
+- Rainfall, `[49–50](#Ch004_49-70_B9780443219054000031.xhtml#p0010)`, `[129](#Ch008_125-155_B9780443219054000043.xhtml#p0065)`
+
+- Rainfall forecasting in wettest region of Türkiye
+    * literature, `[50–52](#Ch004_49-70_B9780443219054000031.xhtml#s0015)`
+    * methodology, `[58–60](#Ch004_49-70_B9780443219054000031.xhtml#s0025)`
+        * autoregressive integrated moving average, `[58](#Ch004_49-70_B9780443219054000031.xhtml#s0030)`
+        * long short-term memory, `[59](#Ch004_49-70_B9780443219054000031.xhtml#s0040)`
+        * performance evaluation criteria, `[59–60](#Ch004_49-70_B9780443219054000031.xhtml#s0045)`
+        * prophet model, `[58](#Ch004_49-70_B9780443219054000031.xhtml#s0035)`
+    * results, `[60–69](#Ch004_49-70_B9780443219054000031.xhtml#s0050)`
+    * study area and data used, `[52–57](#Ch004_49-70_B9780443219054000031.xhtml#s0020)`
+        * decomposed graphics for monthly rainfall data, `[55*f*](#Ch004_49-70_B9780443219054000031.xhtml#f0020)`
+        * geographic location of Rize province, `[53*f*](#Ch004_49-70_B9780443219054000031.xhtml#f0010)`
+        * monthly average rainfall spanning years, `[54*t*](#Ch004_49-70_B9780443219054000031.xhtml#t0010)`
+        * monthly rainfall raw and rolling window filtered for Rize, `[54*f*](#Ch004_49-70_B9780443219054000031.xhtml#f0015)`
+
+- Rains, air quality, `[125–126](#Ch008_125-155_B9780443219054000043.xhtml#p0025)`
+
+- Random decision forests, `[232](#Ch012_227-243_B9780443219054000055.xhtml#p0080)`
+
+- Random Forest (RF), `[228]`, `[232]`
+    * data-driven model, `[50–52](#Ch004_49-70_B9780443219054000031.xhtml#p0020)`
+
+- Raw data, `[53–55](#Ch004_49-70_B9780443219054000031.xhtml#p0065)`
+
+
+
+## 索引
+
+### R
+
+- **Raw dirty dataset**, `[169–170](#Ch009_159-184_B9780443219054000080.xhtml#p0385)`
+- **RCMs**, *See* `[Regional climate models (RCMs)](#Index_247-259_B9780443219054000171.xhtml#idx708)`
+- **RCP**, *See* `[Representative concentration pathway (RCP)](#Index_247-259_B9780443219054000171.xhtml#idx722)`
+- **Recurrent models**, `[18](#Ch002_15-30_B9780443219054000018.xhtml#p0030)`
+- **Recurrent neural networks (RNNs)**, `[18]`, `[18–19]`, `[18–19]`, `[162–163]`, `[163]`, `[163]`
+    - internal architecture of RNN unit, `[19*f*](#Ch002_15-30_B9780443219054000018.xhtml#f0010)`
+    - model, `[178–179](#Ch009_159-184_B9780443219054000080.xhtml#p0495)`
+- **Redundancy planning**, `[220]`, `[220]`
+- **反射图像** 93–94
+- **区域气候模型 (RCM)** 116–117
+- **调节信息流** 166–167
+- **遥感技术** 93
+- **可再生能源**, 37, 37–43, 205–206
+    - 燃料的 `CO₂` 排放 `42*f*`
+    - 全球能源相关的 `CO₂` 排放 `42*f*`
+    - 优化 8
+    - 各州在 `SDG 13` 指标上的表现 `41*t*`
+    - 来源 203–204, 204, 209–210, 215–216
+    - 技术 205
+- **可再生能源来源**, 216
+- **可再生能源** 12
+    - 集成 4
+    - 来源 11
+- **代表性浓度路径 (RCP)** 109–110
+- **储层** 86
+- **韧性** 75
+- **资源效率** 206–207
+- **资源建模** 214
+- **呼吸系统** 88
+- **负责任治理** 208
+- **负责任技术**, 205–208, 207, 208
+- **RF**, *See* [随机森林 (RF)]
+- **河流** 16–17
+- **RMSE**, *See* [均方根误差 (RMSE)]
+- **RMSProp**, *See* [根均方数传播 (RMSProp)]
+- **RNNs**, *See* [循环神经网络 (RNNs)]
+- **机器人学** 7
+- **根均方数传播 (RMSProp)**, `[177`
+    - 方程, 167–169, 169
+    - 优化器 180–183
+- **根均方根误差 (RMSE)**, `[50–52]`
+- **运行人工智能** 188
+- **海平面上升** 34
+- **海面高度 (SSH)** 97–99
+- **季节波动** 55
+- **SGD**, *See* [随机梯度下降 (SGD)]
+- **Shastri Nagar**
+    - 空气污染物, 143, `143*f*`
+    - 小时趋势 138–143
+    - 月度趋势 143
+- **Sigmoid 激活函数** 19–20
+- **模拟** 210
+    - 作用 209–211
+- **智能网络** 3
+- **社会公平** 207
+- **社会保护系统** 74–75
+- **社会生态系统** 117
+- **社会经济模型** 117
+- **土壤** 152–153
+    - 成熟度 2
+- **光伏发电** 40
+- **光伏能源** 85
+- **光热器** 40
+- **光伏板** 216
+- **光伏电力**, 75, 205–206, 205
+- **时空数据** 79
+- **季节波动** 55
+- **SGD**, *See* [随机梯度下降 (SGD)]
+- **Shastri Nagar**
+    - 空气质量指数月度趋势 143, `143*f*`
+    - 小时趋势 138–143
+    - 月度趋势 143
+- **2.5 微米颗粒物 from various sources**, `[127](#127)`
+- **框架**, `[33](#33)`
+- **广义线性模型**, `[129–147](#129–147)`
+- **地理空间方法用于气候变化**, `[45–47](#45–47)`
+- **纳米技术用于废物转能源**, `[152–154](#152–154)`
+- **空气质量指数的需求**, `[148–149](#148–149)`, `[149*t*](#149*t*)`
+- **氮氧化物污染**, `[127–128](#127–128)`
+- **光电化学**, `[154](#154)`
+- **结果**, `[34–45](#34–45)`
+    - 人工神经网络, `[35–36](#35–36)`
+    - 全球极端升温的气候变化, `[43–45](#43–45)`
+    - `ICT` 行业的排放, `[35](#35)`
+    - 污染物排放和空气质量指数, `[36–37](#36–37)`
+    - 手机或基站的辐射, `[34–35](#34–35)`
+    - 可再生能源、清洁能源和水电, `[37–43](#37–43)`
+    - 海平面上升, `[34](#34)`
+- **废物转能源**, `[150–152](#150–152)`
+- **可持续技术**, `[205–206](#205–206)`, `[207](#207)`
+- **可持续水资源管理**, `[18](#18)`
+- **支持向量机 (SVMs)**, *See* `[Support vector machines (SVMs)](#Support vector machines (SVMs))`
+- **支持向量回归 (SVR)**, *See* `[Support vector regression (SVR)](#Support vector regression (SVR))`
+
+### T
+
+- **旅游和气候变化的技术因子**, `[189–190](#189–190)`
+- **远程医疗**, `[207–208](#207–208)`
+- **热过程**, `[151](#151)`
+- **时间序列信号**, `[58](#58)`
+- **旅游**, `[187](#187)`, `[189](#189)`
+    - 计算建模, `[193–198](#193–198)`
+        - 气候变化的影响, `[193–195](#193–195)`
+        - 旅游对气候的影响, `[195–196](#195–196)`
+    - 旅游与气候变化的关联, `[189–192](#189–192)`
+    - 旅游与气候变化关系的研究, `[190–192](#190–192)`
+        - 气候变化对旅游的影响, `[190–191](#190–191)`
+        - 旅游在气候变化方面的影响, `[191–192](#191–192)`
+    - 技术因子, `[189–190](#189–190)`
+- **旅游气候指数 (TCIndex)**, `[193–194](#193–194)`, `[194](#194)`
+- **传统数学模型**, `[211](#211)`
+- **传统统计模型**, `[211](#211)`
+- **传统天气预报模型**, `[73](#73)`
+- **TrajGRU 现在预测**, `[93–94](#93–94)`
+    - 带反射率图像和闪电的, `[94*f*](#94*f*)`
+    - 现在预测的输出, `[93*f*](#93*f*)`
+- **交通排放**, `[33–34](#33–34)`
+- **Triboelectric filter**, `[152](#152)`
+- **涡轮的机械能量**, `[43](#43)`
+
+### V
+
+- **Visakhapatnam**
+    - 空气污染物
+        - 小时趋势, `[132–133](#132–133)`
+        - 月度趋势, `[133](#133)`, `[138*f*](#138*f*)`
+        - Visakhapatnam 的空气质量指数月度趋势, `[133–138](#133–138)`, `[138*f*](#138*f*)`
+- **可视化**, `[23](#23)`, `[52](#52)`
+    - 各种优化器的优缺点, `[178*t*](#178*t*)`
+    - 全球陆地平均温度, `[172*f*](#172*f*)`
+    - 全球陆地平均温度, `[175*f*](#175*f*)`
+    - 国家平均温度计数, `[171*f*](#171*f*)`
+    - 国家平均温度的不确定性计数, `[172*f*](#172*f*)`
+    - 误差
+        - 实际和预测温度值的误差, `[180*f*](#180*f*)`
+        - 温度的误差, `[181*f*](#181*f*)`
+    - 探索气候模型的可视化, `[171–183](#171–183)`
+    - 全球温度变化, `[173*f*](#173*f*)`, `[175*f*](#175*f*)`
+    - 训练集和测试集的历史, `[179*f*](#179*f*)`
+    - `MSE`, `[183*t*](#183*t*)`
+    - `LSTM` 的可训练参数, `[179*t*](#179*t*)`
+    - 美国温度数据, `[175*f*](#175*f*)`
+    - 年平均实际和预测温度值, `[180*f*](#180*f*)`
+- **活力容量优化**, `[3](#3)`
+
+### W
+
+- **WA**, *See* `[Wavelet analysis (WA)](#Wavelet analysis (WA))`
+- **废物**, `[151](#151)`
+    - 转能源, `[150–152](#150–152)`
+    - 行业, `[150–151](#150–151)`
+    - 管理, `[126](#126)`
+    - 转换能源的价值转换, `[152](#152)`
+- **水**, `[152–153](#152–153)`
+    - 效率, `[206–207](#206–207)`
+    - 管理, `[16–17](#16–17)`
+    - 质量, `[125](#125)`
+        - 评估, `[205](#205)`
+    - 资源管理, `[50](#50)`
+    - 稀缺, `[112](#112)`
+    - 节水灌溉方法, `[112](#112)`
+    - 节水技术, `[15–16](#15–16)`
+- **波形分析 (WA)**, `[228–229](#228–229)`
+
+### WA-ANN 方法
+
+`228–229`
+
+### 小波-LSTM (WLSTM)
+
+`50–52`
+
+### 天气预报
+
+`73, 78–79`
+
+### 天气引起的危害评估与管理
+
+`94`
+
+### 湿沉积
+
+`133`
+
+### 风力发电
+
+`75, 205–206, 205`
+
+### 风力涡轮
+
+`216`
+
+### 冬季
+
+`149`
+
+### 季节
+
+`149`
+
+### 雪上运动旅游
+
+`195`
+
+### 体育旅游
+
+`190–191`
+
+### WLSTM
 
-*   `Microplastics`, 153
-
-*   `ML`, *See* `机器学习 (ML)`
-
-*   `Mobile radiation`, 34–35
-
-*   `MODerate Resolution Imaging Spectroradiometer (MODIS)`, 73–74
-
-*   `Modi Sensors`, 89
-
-*   `MODIS`, *See* `MODerate Resolution Imaging Spectroradiometer (MODIS)`
-
-*   `Modular regression model`, 58
-
-*   `Monte Carlo methods`, 117, 229
-
-*   `Moving averages (MA)`, 28, 58
-
-*   `MSE`, *See* `平均平方误差 (MSE)`
-
-*   `MSLE`, *See* `平均平方对数误差 (MSLE)`
-
-*   `Multiagent systems (MAS)`, 204, 210–211 
-
-    *   `excel`, 219
-
-    *   `integrated decentralized energy systems`, 215–221 
-
-        *   `agent representation`, 216–218
-
-        *   `market mechanisms`, 220
-
-        *   `optimization and learning`, 220–221
-
-        *   `optimizing energy distribution`, 218–219
-
-        *   `resilience and reliability`, 219–220
-
-    *   `MAS-based DES`, 217–218, 218
-
-    *   `MAS-based models`, 212
-
-    *   `MAS-based scenario simulations`, 214
-
-    *   `MAS-based simulations`, 212–213
-
-    *   `MAS-driven simulations`, 214–215
-
-    *   `modeling responsible technologies with`, 212–215 
-
-        *   `agent representation`, 212
-
-        *   `climate simulation`, 213
-
-        *   `ecosystem modeling`, 212–213
-
-        *   `land-use change modeling`, 213
-
-        *   `pollution and resource usage modeling`, 214
-
-        *   `predicting adaptation and resilience`, 214–215
-
-        *   `scenario analysis`, 214
-
-    *   `models`, 214–215
-
-    *   `proposed multiagent system integrated decentralized energy systems`, 215–221
-
-    *   `responsible technologies and sustainability`, 205–208 
-
-        *   `biodiversity conservation`, 207
-
-        *   `climate change mitigation`, 205–206
-
-        *   `community engagement`, 208
-
-        *   `economic stability`, 207
-
-        *   `education and knowledge transfer`, 208
-
-        *   `environmental impact`, 205
-
-
-
-
--   `ethical and responsible governance`, 208
-
--   `health and well-being`, 207–208
-
--   `resource efficiency`, 206–207
-
--   `social equity`, 207
-
--   `role of modeling and simulation`, 209–211
-
--   `Multiagent systems integrated decentralized energy systems (MAS-DES)`, 204
-
--   `Multilayer perceptron neural network algorithm`, 92
-
--   `Multivariate time series`, 132
-
--   `Nadam`, *See* `Nesterov Adaptive Moment Estimation (Nadam)`
-
--   `Nanobioremediation`, 154
-
--   `Nanofiber catalyst`, 154
-
--   `Nanomaterials`, 152–153
-
--   `Nanoparticles`, 153
-
--   `Nanosensors`, 154
-
--   `Nanosized particles`, 154
-
--   `Nanostructured catalyst material`, 154
-
--   `Nanotechnology`
-
-    *   `to overcoming air pollution abatement`, 153–154
-
-    *   `in plastic recycle`, 153
-
-    *   `toward waste to energy`, 152–154
-
--   `National Drought Management Strategy and Action Plan`, 15–16
-
--   `Natural forest fire`, 86
-
--   `Natural language processing`, 7
-
--   `Naturally air pollution`, 86–90
-
--   `Nature tourism`, 190–191
-
--   `NCEI`, *See* `National Centers for Environmental Information (NCEI)`
-
--   `Nehru Nagar`
-
-    *   `air pollutants in`
-
-        *   `hourly trends of`, 143–144, `146*f*`
-
-        *   `monthly trends of`, 144
-
-        *   `monthly trends of air quality index in`, 145–147
-
--   `Nesterov Adaptive Moment Estimation (Nadam)`, 177
-
-    *   `equations`, 167–169, `169`
-
--   `Neural networks`, 18–19, 163
-
--   `Nitrogen di oxide pollution`, 127–128
-
--   `Nitrogen dioxide (NO[2])`, 127–128
-
--   `Nonlinear systems`, 232
-
--   `Novel deep learning model`, 50–52
-
--   `Nowcasting`, 93
-
--   `Optimal computational model`, 4–5
-
--   `Optimization`, 173, 220–221
-
-    *   `algorithm`, 173, 174–178
-
-    *   `problems`, 73
-
-    *   `process`, 28
-
--   `Optimized carbon capture`, 3
-
--   `Optimized computational modelling`, 1–2
-
-    *   `advantages`, 5–6, `5*f*`
-
-    *   `case study`, 10–11, `12*t*`
-
-    *   `challenges`, 8–9, `9*f*`
-
-    *   `characteristics`, 7–8, `8*f*`
-
-    *   `climate crisis`, 2
-
-    *   `disadvantages`, 6–7, `6*f*`
-
-    *   `future perspectives`, 12–13
-
-    *   `opportunities`, 12
-
-    *   `proposed methodology`, 2–5
-
--   `Optimum solutions`, 189–190
-
--   `Optuna framework`, 236
-
--   `Organic carbons`, 89
-
--   `PAHs`, *See* `Polycyclic aromatic hydrocarbons (PAHs)`
-
--   `Particulate matter (PM)`, 152
-
-    *   `PM10`, 126–127, 138–143, 143–144
-
-    *   `PM2.5`, 125, 126–127, 127, 128–129, 138–143, 143–144, 151
-
-        *   `carbon nanoparticles`, 126
-
-        *   `for electrodes`, 152
-
-        *   `recycle of`, 150–152
-
-        *   `for supercapacitors`, `153*f*`
-
-        *   `waste to value energy conversion`, 152
-
--   `PEC`, *See* `Photoelectrochemical (PEC conversion)`
-
--   `Peer-to-peer model`, 220
-
--   `PERSIANN`, *See* `Precipitation Estimation from Remotely Sensed Information using ANNs (PERSIANN)`
-
--   `Photoelectrochemical conversion (PEC conversion)`, 154
-
-    *   `CO[2] conversion`, 154
-
--   `Physics–guided machine learning`, 85, 101–103, 101–103
-
-    *   `climate model`
-
-        *   `for maximum input and relative humidity`, `103*f*`
-
-        *   `for maximum input with near-surface specific humidity`, `102*f*`
-
-        *   `for mean input and relative humidity`, `102*f*`
-
-        *   `for mean input with near-surface specific humidity`, `101*f*`
-
-
-
--   for minimum input and relative humidity, `[103*f*`](#Ch006_85-103_B9780443219054000092.xhtml#f0125)
-
--   for minimum input with near-surface specific humidity, `[102*f*`](#Ch006_85-103_B9780443219054000092.xhtml#f0105)
-
--   Plant breeders, `[112`](#Ch007_107-122_B9780443219054000109.xhtml#p0125)
-
--   Plastic recycle, nanotechnology in, `[153`](#Ch008_125-155_B9780443219054000043.xhtml#s0135)
-
--   Plastics, `[153`](#Ch008_125-155_B9780443219054000043.xhtml#p0370)
-
--   Policymakers, `[162`](#Ch009_159-184_B9780443219054000080.xhtml#p0235), `[214`](#Ch011_203-223_B9780443219054000110.xhtml#p0125), `[222`](#Ch011_203-223_B9780443219054000110.xhtml#p0275) 
-
-    *   emission, `[36–37`](#Ch003_33-47_B9780443219054000079.xhtml#s0040)
-
--   Pollutants, `[127–128`](#Ch008_125-155_B9780443219054000043.xhtml#p0050), `[143`](#Ch008_125-155_B9780443219054000043.xhtml#p0255), `[214`](#Ch011_203-223_B9780443219054000110.xhtml#p0125) 
-
-    *   emission, `[36–37`](#Ch003_33-47_B9780443219054000079.xhtml#s0040)
-
--   Pollution, `[125`](#Ch008_125-155_B9780443219054000043.xhtml#p0020), `[214`](#Ch011_203-223_B9780443219054000110.xhtml#s0100)
-
--   Polycyclic aromatic hydrocarbons (PAHs), `[151`](#Ch008_125-155_B9780443219054000043.xhtml#p0345)
-
--   Precipitation Estimation from Remotely Sensed Information using ANNs (PERSIANN), `[50–52`](#Ch004_49-70_B9780443219054000031.xhtml#p0020)
-
--   Precipitation forecasting model, `[17–18`](#Ch002_15-30_B9780443219054000018.xhtml#p0025)
-
--   Probabilistic ocean regime predictions using BNN, `[97–100`](#Ch006_85-103_B9780443219054000092.xhtml#s0060)
-
--   Process-based crop models, `[115–116`](#Ch007_107-122_B9780443219054000109.xhtml#p0255), `[120`](#Ch007_107-122_B9780443219054000109.xhtml#p0370)
-
--   Prophet model, `[58`](#Ch004_49-70_B9780443219054000031.xhtml#s0035) 
-
-    *   forecasting performance, `[67`](#Ch004_49-70_B9780443219054000031.xhtml#p0150)
-
--   Prosumers, `[216`](#Ch011_203-223_B9780443219054000110.xhtml#o0010), `[220`](#Ch011_203-223_B9780443219054000110.xhtml#p0250), `[221–222`](#Ch011_203-223_B9780443219054000110.xhtml#p0270)
-
--   Python, `[78`](#Ch005_73-82_B9780443219054000122.xhtml#p0155) 
-
-    *   operations in python framework using Jupyter Notebook, `[169–170`](#Ch009_159-184_B9780443219054000080.xhtml#s0105)
-
--   QML, *See* `[Quantum machine learning (QML)`](#Index_247-259_B9780443219054000171.xhtml#idx659)
-
--   QNN, *See* `[Quantum neural networks (QNN)`](#Index_247-259_B9780443219054000171.xhtml#idx671)
-
--   QSVM, *See* `[Quantum support vector machines (QSVM)`](#Index_247-259_B9780443219054000171.xhtml#idx673)
-
--   Quantum activation function equation, `[77`](#Ch005_73-82_B9780443219054000122.xhtml#p0095)
-
--   Quantum annealing, `[78–79`](#Ch005_73-82_B9780443219054000122.xhtml#p0210)
-
--   Quantum circuit equation, `[75`](#Ch005_73-82_B9780443219054000122.xhtml#p0035)
-
--   Quantum computing, `[78–79`](#Ch005_73-82_B9780443219054000122.xhtml#p0210)
-
--   Quantum convolution operation equation, `[77`](#Ch005_73-82_B9780443219054000122.xhtml#p0080)
-
--   Quantum ensemble learning, `[73`](#Ch005_73-82_B9780443219054000122.xhtml#p0010)
-
--   Quantum kernel equation, `[77`](#Ch005_73-82_B9780443219054000122.xhtml#p0070)
-
--   Quantum machine learning (QML), `[73`](#Ch005_73-82_B9780443219054000122.xhtml#p0010) 
-
-    *   implementation, `[78–79`](#Ch005_73-82_B9780443219054000122.xhtml#s0025) 
-
-        *   climate parameters, `[78*t*`](#Ch005_73-82_B9780443219054000122.xhtml#t0015)
-
-        *   quantum thermal annealing for weather forecasting, `[79*f*`](#Ch005_73-82_B9780443219054000122.xhtml#f0025)
-
-        *   training QBM, `[79*f*`](#Ch005_73-82_B9780443219054000122.xhtml#f0020)
-
-    *   mathematical modeling, `[75–77`](#Ch005_73-82_B9780443219054000122.xhtml#s0020)
-
-    *   Pytorch program for weather forecasting, `[80*f*`](#Ch005_73-82_B9780443219054000122.xhtml#f0030)
-
-    *   quantum support vector machine for weather forecasting, `[81*f*`](#Ch005_73-82_B9780443219054000122.xhtml#f0040)
-
-    *   related work, `[73–75`](#Ch005_73-82_B9780443219054000122.xhtml#s0015) 
-
-        *   potential benefits of using quantum computing, `[74*t*`](#Ch005_73-82_B9780443219054000122.xhtml#t0010)
-
-        *   State Met Centers communication, `[76*f*`](#Ch005_73-82_B9780443219054000122.xhtml#f0015)
-
-        *   weather-to-climate prediction, `[76*f*`](#Ch005_73-82_B9780443219054000122.xhtml#f0010)
-
--   Quantum neural networks (QNN), `[73`](#Ch005_73-82_B9780443219054000122.xhtml#p0010)
-
--   Quantum pooling operation equation, `[77`](#Ch005_73-82_B9780443219054000122.xhtml#p0090)
-
--   Quantum support vector machines (QSVM), `[73`](#Ch005_73-82_B9780443219054000122.xhtml#p0010)
-
--   Quantum thermal annealing, `[78–79`](#Ch005_73-82_B9780443219054000122.xhtml#p0210)
-
--   Quantum variational circuit equation, `[75`](#Ch005_73-82_B9780443219054000122.xhtml#p0045)
-
--   Quantum weight updation equation, `[77`](#Ch005_73-82_B9780443219054000122.xhtml#p0105)
-
--   R-squared (R²), mathematical equations for, `[167`](#Ch009_159-184_B9780443219054000080.xhtml#s0060)
-
--   Radiation from cell phones or towers, `[34–35`](#Ch003_33-47_B9780443219054000079.xhtml#s0025)
-
--   Rain washes, `[133`](#Ch008_125-155_B9780443219054000043.xhtml#p0195)
-
--   Rainfall, `[49–50`](#Ch004_49-70_B9780443219054000031.xhtml#p0010), `[129`](#Ch008_125-155_B9780443219054000043.xhtml#p0065)
-
--   Rainfall forecasting in wettest region of Türkiye 
-
-    *   literature, `[50–52`](#Ch004_49-70_B9780443219054000031.xhtml#s0015)
-
-    *   methodology, `[58–60`](#Ch004_49-70_B9780443219054000031.xhtml#s0025) 
-
-        *   autoregressive integrated moving average, `[58`](#Ch004_49-70_B9780443219054000031.xhtml#s0030)
-
-        *   long short-term memory, `[59`](#Ch004_49-70_B9780443219054000031.xhtml#s0040)
-
-        *   performance evaluation criteria, `[59–60`](#Ch004_49-70_B9780443219054000031.xhtml#s0045)
-
-        *   prophet model, `[58`](#Ch004_49-70_B9780443219054000031.xhtml#s0035)
-
-    *   results, `[60–69`](#Ch004_49-70_B9780443219054000031.xhtml#s0050)
-
-    *   study area and data used, `[52–57`](#Ch004_49-70_B9780443219054000031.xhtml#s0020) 
-
-        *   decomposed graphics for monthly rainfall data, `[55*f*`](#Ch004_49-70_B9780443219054000031.xhtml#f0020)
-
-        *   geographic location of Rize province, `[53*f*`](#Ch004_49-70_B9780443219054000031.xhtml#f0010)
-
-        *   monthly average rainfall spanning years, `[54*t*`](#Ch004_49-70_B9780443219054000031.xhtml#t0010)
-
-        *   monthly rainfall raw and rolling window filtered for Rize, `[54*f*`](#Ch004_49-70_B9780443219054000031.xhtml#f0015)
-
--   Rains, air quality, `[125–126`](#Ch008_125-155_B9780443219054000043.xhtml#p0025)
-
--   Random decision forests, `[232`](#Ch012_227-243_B9780443219054000055.xhtml#p0080)
-
--   Random Forest (RF), `[228`], `[232`] 
-
-    *   data-driven model, `[50–52`](#Ch004_49-70_B9780443219054000031.xhtml#p0020)
-
--   Raw data, `[53–55`](#Ch004_49-70_B9780443219054000031.xhtml#p0065)
-
--   Raw dirty dataset, `[169–170`](#Ch009_159-184_B9780443219054000080.xhtml#p0385)
-
--   RCMs, *See* `[Regional climate models (RCMs)`](#Index_247-259_B9780443219054000171.xhtml#idx708)
-
--   RCP, *See* `[Representative concentration pathway (RCP)`](#Index_247-259_B9780443219054000171.xhtml#idx722)
-
--   Recurrent models, `[18`](#Ch002_15-30_B9780443219054000018.xhtml#p0030)
-
--   Recurrent neural networks (RNNs), `[18`], `[18–19`], `[18–19`], `[162–163`], `[163`], `[163`] 
-
-    *   internal architecture of RNN unit, `[19*f*`](#Ch002_15-30_B9780443219054000018.xhtml#f0010)
-
-    *   model, `[178–179`](#Ch009_159-184_B9780443219054000080.xhtml#p0495)
-
--   Redundancy planning, `[220`], `[220`]
-
-
-
--   反射图像 93–94
-
--   区域气候模型 (RCM), 116–117
-
--   调节信息流 166–167
-
--   遥感技术 93
-
--   可再生能源, 37, 37–43, 205–206 
-
-    *   燃料的 CO₂排放 42*f*
-
-    *   全球能源相关的 CO₂排放 42*f*
-
-    *   优化 8
-
-    *   各州在 SDG 13 指标上的表现 41*t*
-
-    *   来源 203–204, 204, 209–210, 215–216
-
-    *   技术 205
-
--   可再生能源来源, 216
-
--   可再生能源 12 
-
-    *   集成 4
-
-    *   来源 11
-
--   代表性浓度路径 (RCP) 109–110
-
--   储层 86
-
--   韧性 75
-
--   资源效率 206–207
-
--   资源建模 214
-
--   呼吸系统 88
-
--   负责任治理 208
-
--   负责任技术, 205–208, 207, 208
-
--   RF, *See* [随机森林 (RF)]
-
--   河流 16–17
-
--   RMSE, *See* [均方根误差 (RMSE)]
-
--   RMSProp, *See* [根均方数传播 (RMSProp)]
-
--   RNNs, *See* [循环神经网络 (RNNs)]
-
--   机器人学 7
-
--   根均方数传播 (RMSProp), [177 
-
-    *   方程, 167–169, 169
-
-    *   优化器 180–183
-
--   根均方根误差 (RMSE), [50–52]
-
--   运行人工智能 188
-
--   海平面上升 34
-
--   海面高度 (SSH) 97–99
-
--   季节波动 55
-
--   SGD, *See* [随机梯度下降 (SGD)]
-
--   Shastri Nagar 
-
-    *   空气污染物, 143, 143*f*
-
-    *   小时趋势 138–143
-
-    *   月度趋势 143
-
--   Sigmoid 激活函数 19–20
-
--   模拟 210 
-
-    *   作用 209–211
-
--   智能网络 3
-
--   社会公平 207
-
--   社会保护系统 74–75
-
--   社会生态系统 117
-
--   社会经济模型 117
-
--   土壤 152–153 
-
-    *   成熟度 2
-
--   光伏发电 40
-
--   光伏能源 85
-
--   光热器 40
-
--   光伏板 216
-
--   光伏电力, 75, 205–206, 205
-
--   时空数据 79
-
--   季节波动 55
-
--   SGD, *See* [随机梯度下降 (SGD)]
-
--   Shastri Nagar 
-
-    *   空气质量指数月度趋势 143, 143*f*
-
-    *   小时趋势 138–143
-
-    *   月度趋势 143
-
--   Sigmoid 激活函数 19–20
-
--   模拟 210 
-
-    *   作用 209–211
-
--   智能网络 3
-
--   社会公平 207
-
--   社会保护系统 74–75
-
--   社会生态系统 117
-
--   社会经济模型 117
-
--   土壤 152–153 
-
-    *   成熟度 2
-
--   光伏发电 40
-
--   光伏能源 85
-
--   光热器 40
-
--   光伏板 216
-
--   光伏电力, 75, 205–206, 205
-
--   时空数据 79
-
--   季节波动 55
-
--   SGD, *See* [随机梯度下降 (SGD)]
-
--   Shastri Nagar 
-
-    *   空气质量指数月度趋势 143, 143*f*
-
-    *   小时趋势 138–143
-
-    *   月度趋势 143
-
-
-
-
--   2.5 微米颗粒物 from various sources, `[127`](`127`)
-
--   框架 , `[33`](`33`)
-
--   广义线性模型 , `[129–147`](`129–147`)
-
--   地理空间方法用于气候变化 , `[45–47`](`45–47`)
-
--   纳米技术用于废物转能源 , `[152–154`](`152–154`)
-
--   空气质量指数的需求 , `[148–149`](`148–149`), `[149*t`](`149*t`)
-
--   氮氧化物污染 , `[127–128`](`127–128`)
-
--   光电化学 , `[154`](`154`)
-
--   结果 , `[34–45`](`34–45`)
-
-  * 人工神经网络 , `[35–36`](`35–36`)
-
-  * 全球极端升温的气候变化 , `[43–45`](`43–45`)
-
-  * ICT 行业的排放 , `[35`](`35`)
-
-  * 污染物排放和空气质量指数 , `[36–37`](`36–37`)
-
-  * 手机或基站的辐射 , `[34–35`](`34–35`)
-
-  * 可再生能源、清洁能源和水电 , `[37–43`](`37–43`)
-
-  * 海平面上升 , `[34`](`34`)
-
--   废物转能源 , `[150–152`](`150–152`)
-
--   可持续技术 , `[205–206`](`205–206`), `[207`](`207`)
-
--   可持续水资源管理 , `[18`](`18`)
-
--   支持向量机 (SVMs) , *See* `[Support vector machines (SVMs)`](`Support vector machines (SVMs)`)
-
--   支持向量回归 (SVR) , *See* `[Support vector regression (SVR)`](`Support vector regression (SVR)`)
-
-## T
-
--   旅游和气候变化的技术因子 , `[189–190`](`189–190`)
-
--   远程医疗 , `[207–208`](`207–208`)
-
--   热过程 , `[151`](`151`)
-
--   时间序列信号 , `[58`](`58`)
-
--   旅游 , `[187`](`187`), `[189`](`189`)
-
-  * 计算建模 , `[193–198`](`193–198`)
-
-    * 气候变化的影响 , `[193–195`](`193–195`)
-
-    * 旅游对气候的影响 , `[195–196`](`195–196`)
-
-  * 旅游与气候变化的关联 , `[189–192`](`189–192`)
-
-  * 旅游与气候变化关系的研究 , `[190–192`](`190–192`)
-
-    * 气候变化对旅游的影响 , `[190–191`](`190–191`)
-
-    * 旅游在气候变化方面的影响 , `[191–192`](`191–192`)
-
-  * 技术因子 , `[189–190`](`189–190`)
-
--   旅游气候指数 (TCIndex) , `[193–194`](`193–194`), `[194`](`194`)
-
--   传统数学模型 , `[211`](`211`)
-
--   传统统计模型 , `[211`](`211`)
-
--   传统天气预报模型 , `[73`](`73`)
-
--   TrajGRU 现在预测 , `[93–94`](`93–94`)
-
-  * 带反射率图像和闪电的 , `[94*f`](`94*f`)
-
-  * 现在预测的输出 , `[93*f`](`93*f`)
-
--   交通排放 , `[33–34`](`33–34`)
-
--   Triboelectric filter , `[152`](`152`)
-
--   涡轮的机械能量 , `[43`](`43`)
-
-## V
-
--   Visakhapatnam
-
-  * 空气污染物
-
-    * 小时趋势 , `[132–133`](`132–133`)
-
-    * 月度趋势 , `[133`](`133`), `[138*f`](`138*f`)
-
-    * Visakhapatnam 的空气质量指数月度趋势 , `[133–138`](`133–138`), `[138*f`](`138*f`)
-
--   可视化 , `[23`](`23`), `[52`](`52`)
-
-  * 各种优化器的优缺点 , `[178*t`](`178*t`)
-
-  * 全球陆地平均温度 , `[172*f`](`172*f`)
-
-  * 全球陆地平均温度 , `[175*f`](`175*f`)
-
-  * 国家平均温度计数`](`171*f`)
-
-  * 国家平均温度的不确定性计数`](`172*f`)
-
-  * 误差
-
-    * 实际和预测温度值的误差 , `[180*f`](`180*f`)
-
-    * 温度的误差`](`181*f`)
-
-  * 探索气候模型的可视化 , `[171–183`](`171–183`)
-
-  * 全球温度变化`](`173*f`), `[175*f`](`175*f`)
-
-  * 训练集和测试集的历史`](`179*f`)
-
-  * MSE`](`183*t`)
-
-  * LSTM 的可训练参数`](`179*t`)
-
-  * 美国温度数据`](`175*f`)
-
-  * 年平均实际和预测温度值`](`180*f`)
-
--   活力容量优化`](`3`)
-
-## W
-
--   WA , *See* `[Wavelet analysis (WA)`](`Wavelet analysis (WA)`)
-
--   废物`](`151`)
-
-  * 转能源`](`150–152`)
-
-  * 行业`](`150–151`)
-
-  * 管理`](`126`)
-
-  * 转换能源的价值转换`](`152`)
-
--   水`](`152–153`)
-
-  * 效率`](`206–207`)
-
-  * 管理`](`16–17`)
-
-  * 质量`](`125`)
-
-    * 评估`](`205`)
-
-  * 资源管理`](`50`)
-
-  * 稀缺`](`112`)
-
-  * 节水灌溉方法`](`112`)
-
-  * 节水技术`](`15–16`)
-
--   波形分析 (WA)`](`228–229`)
-
-
-
-## WA-ANN 方法
-228–229
-
-## 小波-LSTM (WLSTM)
-50–52
-
-## 天气预报
-73, 78–79
-
-## 天气引起的危害评估与管理
-94
-
-## 湿沉积
-133
-
-## 风力发电
-75, 205–206, 205
-
-## 风力涡轮
-216
-
-## 冬季
-149
-
-## 季节
-149
-
-## 雪上运动旅游
-195
-
-## 体育旅游
-190–191
-
-## WLSTM
 *See* `Wavelet-LSTM (WLSTM)`
 
-## X
+### X
+
 *See* `eXtreme gradient boosting (XGBoost)`
 
-## XPS 分析
-152
+### XPS 分析
 
-## 零碳电力
-40–43
+`152`
 
-## 零碳目标
-34
+### 零碳电力
 
-## 零排放技术
-43
+`40–43`
+
+### 零碳目标
+
+`34`
+
+### 零排放技术
+
+`43`

@@ -1,86 +1,81 @@
+
 # 机器学习极简版：革命初学者指南
 
-
-
-
-# 我为什么要写这本书？
+## 我为什么要写这本书？
 
 几年前，我开始以传统的方式学习机器学习。首先，我学习了数学，然后从数学角度理解了算法。之后，我理解了每个算法的应用。最后，我才开始接触代码。这是一个很好的方法，毫无疑问。但随后我在想，为什么我们不能反过来呢？对于初学者来说，这样更容易保持他们的动力和兴趣。为什么很少有人支持这种做法？于是，我提出了这种方法并写了这本关于的书。
 
-# 为什么你应该读这本书？
+## 为什么你应该读这本书？
 
 你对机器学习算法中那些复杂的数学公式感到困惑吗？你想以一种简单的方式学习算法吗？你希望尽快应用机器学习算法并看到它的实际效果吗？如果你对以上任何一个回答都是“是”，那么这本书绝对是为**你**准备的。但如果你来是为了学习高级数学，或者想在读完这本书后写研究论文，那么你会失望的。本书侧重于介绍机器学习算法及其应用、优缺点，并最终通过代码实现它们。它像一份指南，帮助你进入机器学习的世界。所以，祝你好运，编码愉快！
 
-
-
-
-
-
-
-# 第 1 章 人工智能简介
+## 第 1 章 人工智能简介
 
 人工智能是全球范围内的一个热门话题。大多数大公司都声称在其产品和服务中使用了人工智能。它在市场中再次开始获得热捧。是的，人工智能在 20 世纪 60 年代和 70 年代也曾是一个热门话题，但后来都销消失了。历史会重演吗？这个问题没有明确的“是”或“否”答案。
 
 人工智能实际上是一种意识。这种意识要求计算机必须具有类人类的认知能力。我所说的认知能力是指类人类的理解、视觉和语音能力。根据能力，人工智能可以分为三类。
 
-## 人工窄智能 (ANI)
+### 人工窄智能 (ANI)
+
 通常被称为`弱 AI`，这类人工智能的能力低于人类。这就是我们现在每天都能看到的 AI。它们通常被局限于特定的任务。例如，人脸识别程序无法执行语音识别。乍一看，它们可能比人类更有能力，但我们广阔的大脑和经验使我们远胜于这些。
 
-## 人工通用智能 (AGI)
+### 人工通用智能 (AGI)
+
 这类人工智能的能力与人类平相当。它们也被称为`强 AI`。它可以模拟人类，但仅存在于概念和理论中。它不仅要在单一任务上表现出色，还应该擅长各种任务。以目前的计算技术，我们无法在短期内期待 AGI，除非发生革命。一些研究人员建议，量子计算机可能是实现 AGI 所需的突破。
 
-## 人工超智能 (ASI)
+### 人工超智能 (ASI)
+
 超越人类的能力，它们是地球上最智能的生物。它们超过了人类，并可能像人类奴役动物一样奴役人类。它们拥有情感并产生自我意识。电影《机械姬》、《终结者》、《机器人》等中显示的机器人就属于 ASI 类别。幸运的是，它们仅仅是假设，我们很可能在有生之看不到它们（除非技术取得重大突破）。
 
 所以，为了回答关于历史是否会重演的第一个问题，完全取决于大众的期望。如果他们期待 AGI 和 ASI，那么它可能会重演。为了实现这种意识，我们使用一种名为机器学习的方法。因此，如果任何在线课程或书籍声称教你人工智能，那么它只是点击诱饵。实际上，它们在教你机器学习。
 
-## 什么是机器学习？
+### 什么是机器学习？
 
 机器学习是使用数学和统计工具来识别数据集中的模式。它主要用于执行本质上具有重复性且对人类来说枯燥的任务。到目前为止，它是接触人工智能的最优方法。
 
 机器学习过程可以分为 4 个步骤：
-* 收集并精炼数据集（已标记或未标记）
-* 选择机器学习算法
-* 训练机器学习模型
-* 从训练好的模型中进行预测
+
+- 收集并精炼数据集（已标记或未标记）
+- 选择机器学习算法
+- 训练机器学习模型
+- 从训练好的模型中进行预测
 
 有三种机器学习算法：
 
-### 监督式机器学习算法 
+#### 监督式机器学习算法
+
 这类机器学习算法使用一组输入-输出对来让机器理解它们之间的关系。这组输入-输出对被称为`已标记的数据集`。通过应用这种关系，机器就可以预测给定的未知输入的输出。（如果你还没有理解，不要担心，一直看到最后，你会理解一切的。）
 
 监督机器学习算法的一些示例是：
-* `线性回归`
-* `人工神经网络`
-* `逻辑回归`
-* `支持向量机`
-* `朴素贝叶斯分类器`，等。
 
-### 无监督机器学习算法
+- `线性回归`
+- `人工神经网络`
+- `逻辑回归`
+- `支持向量机`
+- `朴素贝叶斯分类器`，等。
+
+#### 无监督机器学习算法
+
 那些你必须使用未标记数据集来训练机器学习模型的机器学习算法就是无监督机器学习算法。它们主要用于分类和聚类任务。无监督机器学习算法的一些示例是：
-* `K-means 聚类`
-* `自动编码器`
-* `主成分分析`
-* `生成对抗网络`，等。
 
-### 强化学习算法
+- `K-means 聚类`
+- `自动编码器`
+- `主成分分析`
+- `生成对抗网络`，等。
+
+#### 强化学习算法
+
 这是一种较新的方法，基于试错法工作。它有一套奖励和惩罚机制。模型在初始阶段执行随机活动，对于每个没有产生良好结果的活动，它将得到负分，反之亦然。模型努力增加自己的分数。处理完成后，结果是一个优化模型。
 
 例如，假设你正在学习骑自行车。那么，每当你摔倒时，你意识到摔倒时使用的那个特定步骤不应再次使用，即惩罚；每当你骑行而没有摔倒时，你意识到你应该使用那个特定的步骤，即奖励。在几天类似的重复后，你就会学会骑自行车。这就是强化学习的工作原理。
 
-## 什么是深度学习？
+### 什么是深度学习？
 
 神经网络是人工神经元的网络，尽可能模仿生物神经元。让我们谈谈生物神经元。
 
-图 1-1. 神经元的结构（来源：[点击此处](https://socratic.org/questions/how-is-a-neuron-adapted-to-perform-its-function) ）
+图 1-1. 神经元的结构（来源：[点击此处](https://socratic.org/questions/how-is-a-neuron-adapted-to-perform-its-function)）
 
 人体包含约 1000 亿个神经元，在整个范围内传递信息。神经元由`树突`、`胞体`和`轴突`组成。`胞体`处理由`树突`传递的信息。
-
-（注：源中的剩余文本似乎是重复的占位符/乱码文本，已根据指令进行过滤以维护核心内容的质量。）
-
-
-
-
 
 1. 访问 `colab.research.google.com`，你将看到类似于图 2-6 的屏幕。
 
@@ -88,24 +83,30 @@
 
 2. 现在，点击 `NEW NOTEBOOK`（新建笔记本）按钮创建一个新笔记本，并在上面开始编写代码。
 
-## 结论
+### 结论
+
 在本章中，我们学习了向量、矩阵和张量等概念。然后，我们在各种平台上安装了 TensorFlow，并学习了如何使用 Google Colab。从下一章开始，我们将深入学习不同的机器学习概念。**为接下来的战斗做好准备。**
 
-# 第 3 章：线性回归：什么是它？
+## 第 3 章 线性回归：什么是它？
 
-## 引言
+### 引言
+
 假设你是一个巧克力爱好者，经常去 Frodo 的零售店买巧克力。第 1 天，你买了 6 包 KitKat，他们要求你支付 12 美元。第二天，你买了 9 包，他们要 18 美元。现在，第三天你只有 14 美元了，你不想问他们 14 美元能买多少巧克力。于是，你尝试在脑海中建立这种关系，并立刻得出结论：`巧克力数量 = 金钱 / 2`。所以通过计算，你发现你可以买 7 包。当你到达接待处时，他们正好向你要 14 美元。然后，你开心地回家了。
 
 这就是线性回归。线性回归进入机器学习世界的敲阶石。它是映射输入与输出之间（线性）关系并利用该关系预测输出的过程。线性函数看起来像这样：`Y = mX + c` 其中 `X` 是输入，`Y` 是输出。使用算法提供的数据，它尝试估计 `m` 和 `c` 的值，这些值将用于找到 `Y`，即输出。
 
+为了实现这一点，程序为 `m` 和 `c` 生成随机值。然后，通过输入-输出对来验证 `m` 和 `c`。为了验证，它使用了均方误差。例如，如果你有 `(10,30)`，其中 10 是 `X`，30 是 `Y`。那么，使用随机生成的 `m` 和 `c` 值输入 10 得到 65（这是一个任意值），但实际输出是 30。因此，误差计算为：
 
+![](img/rsrc23F.jpg)
 
-为了实现这一点，程序为 `m` 和 `c` 生成随机值。然后，通过输入-输出对来验证 `m` 和 `c`。为了验证，它使用了均方误差。例如，如果你有 `(10,30)`，其中 10 是 `X`，30 是 `Y`。那么，使用随机生成的 `m` 和 `c` 值输入 10 得到 65（这是一个任意值），但实际输出是 30。因此，误差计算为：![](img/rsrc23F.jpg)
 其中，`N = 示例总数（输入-输出对）`
+
 `yi = 实际输出`
+
 `yi^ = 预测输出`
 
-## 代码实现
+### 代码实现
+
 现在，让我们用代码来实现。首先，我们导入所有必要的库。`sklearn` 中的 `linear_model` 我们将使用的 `LinearRegression` 类，而 `datasets` 包含一些示例数据集。
 
 ```python
@@ -176,36 +177,48 @@ plt.plot(train_X, regressor.predict(train_X), c= 'blue' )
 plt.show()
 ```
 
-代码的 colab 笔记本可以在[这里](https://bit.ly/3c8nIn9) 找到。
+代码的 colab 笔记本可以在[这里](https://bit.ly/3c8nIn9)找到。
 
-## 优点
+### 优点
+
 - 易于理解
 - 计算量较少
 - 不需要大量数据
 
 ### 缺点
+
 - 它无法映射非线性关系
-
-
-
 
 由于真实世界中的数据大多是非线性形式，这种算法很少被使用。`Linear Regression`（线性回归）有一个改进版本称为 `Polynomial Regression`（多项回归）。它超出了本书的范围，但你可以查看这篇文章：[`videhablogs.com/polynomial-regression-on-tensorflow-2-0/`](https://videhablogs.com/polynomial-regression-on-tensorflow-2-0/)
 
-## 结论
+### 结论
+
 在本章中，我们通过一些真实生活的示例学习了 `Linear Regression` 的概念。然后，我们接触了数学的门槛。之后，我们实现了代码并进行了解释。我希望你已经理解了这一章。如果没有，你可以重读一遍。如果你准备好了，让我们进入下一步。
 
-# 第 4 章 逻辑回归
+## 第 4 章 逻辑回归
 
-## 引言
-不要被这个名字误导了。它并不是一种回归算法。它不预测连续（数值）值，而是预测类别（CATEGORICAL）值，例如像这样的狗/猫分类器：![](img/rsrc23J.jpg)图 4-1 逻辑回归（来源：[点击此处](https://blog.goodaudience.com/machine-learning-using-logistic-regression-in-python-with-code-ab3c7f5f3bed?gi=cd0934386999) ) 基本上，它为类别创建了一个边界。边界之外的数据为一个类别，内部的另一个类别。工作机制几乎与 `Linear Regression` 相似，只有一些微调。
+### 引言
+
+不要被这个名字误导了。它并不是一种回归算法。它不预测连续（数值）值，而是预测类别（CATEGORICAL）值，例如像这样的狗/猫分类器：
+
+![](img/rsrc23J.jpg)
+
+图 4-1 逻辑回归（来源：[点击此处](https://blog.goodaudience.com/machine-learning-using-logistic-regression-in-python-with-code-ab3c7f5f3bed?gi=cd0934386999)）
+
+基本上，它为类别创建了一个边界。边界之外的数据为一个类别，内部的另一个类别。工作机制几乎与 `Linear Regression` 相似，只有一些微调。
 
 假设在这个例子中，你有超过 1 个输入变量(`X`)。那么方程将是：`Z = m1 X1 + m2 X2 + m3 X3 +...+ mn Xn + c` 其中 `X1`, `X2`, `X3` …… 是输入变量，`m1`, `m2`, `m3` …… 是斜率，`c` 是截距，`Z` 是输出变量。
 
 我们在 `Linear Regression` 中通常只到这里，这就是我们的输出，但在 `Logistic Regression` 中，多了一步。`Z` 的值被传递给逻辑函数。
 
-`P(Y=1) = 1 / (1+ e\-Z )` 该函数将任何给定的数值转换为类别值，即 0 或 1。因此，这里它返回我们的输出为 1 的概率。该函数可以可视化为：![](img/rsrc23K.jpg)这个函数通常被称为 `Sigmoid Function`（Sigmoid 函数）。
+`P(Y=1) = 1 / (1+ e^-Z )` 该函数将任何给定的数值转换为类别值，即 0 或 1。因此，这里它返回我们的输出为 1 的概率。该函数可以可视化为：
 
-## 代码实现
+![](img/rsrc23K.jpg)
+
+这个函数通常被称为 `Sigmoid Function`（Sigmoid 函数）。
+
+### 代码实现
+
 导入所需的库。我们将创建一个乳腺癌分类器。它有 30 个输入变量并输出 0 或 1。
 
 ```python
@@ -252,21 +265,31 @@ classifier.fit(X_train, y_train)
 y_pred = classifier.predict(X_test)
 ```
 
-## 混淆矩阵
-在训练完模型后，你需要检查它的性能。有很多指标可以做到，但最好且最流行的是 `confusion matrix`（混淆矩阵）。它用于检查分类模型的性能。它的形式如下矩阵：![](img/rsrc23N.jpg)图 4-2 混淆矩阵（来源：[点击此处](https://towardsdatascience.com/understanding-confusion-matrix-a9ad2d6) )
+### 混淆矩阵
+
+在训练完模型后，你需要检查它的性能。有很多指标可以做到，但最好且最流行的是 `confusion matrix`（混淆矩阵）。它用于检查分类模型的性能。它的形式如下矩阵：
+
+![](img/rsrc23N.jpg)
+
+图 4-2 混淆矩阵（来源：[点击此处](https://towardsdatascience.com/understanding-confusion-matrix-a9ad2d)）
 
 使用的术语：
+
 - `True Positive (TP)` (真阳性)：实际值和预测值均为正的样本数量。
 - `True Negative (TN)` (真阴性)：实际值和预测值均为负的样本数量。
 - `False Positive (FP)` (假阳性)：实际值为负，但预测值为正的样本数量。
 - `False Negative (FN)` (假阴性)：实际值为正，但预测值为负的样本数量。
 
-让我们看一个随机梗图来理解这个：![](img/rsrc23P.jpg)通过这些值，你可以计算精确率（precision）、召回率（recall）等不同的值来检查模型的性能。
+让我们看一个随机梗图来理解这个：
 
-- `Recall` (召回率)：![](img/rsrc23R.jpg)该值针对每个类别。高 `Recall` 意味着该类别被正确预测。它告诉我们当样本为正时，模型预测为正的频率有多高。
-- `Precision` (精确率)：![](img/rsrc23S.jpg)该值针对每个类别。高 `Precision` 意味着正样本被预测为正的概率。它告诉我们当模型预测为正时，正确的概率有多大。
-- `F1 Score` (F1 分)：![](img/rsrc23T.jpg)它是 `Recall` 和 `Precision` 的综合得分。
-- `Accuracy` (准确率)：![](img/rsrc23U.jpg)在此之前，你可能认为高准确率意味着更好的性能。事实并非如此。假设你有一个包含 90% A 类和 10% B 类数据的数据集。那么，如果你预测每个样本都是 A 类，那么你的准确率就是 90%。但这真的准确吗？准确率在所有类别数据量相等的理想情况下才有效。
+![](img/rsrc23P.jpg)
+
+通过这些值，你可以计算精确率、召回率等不同的值来检查模型的性能。
+
+- `Recall` (召回率)：![](img/rsrc23R.jpg) 该值针对每个类别。高 `Recall` 意味着该类别被正确预测。它告诉我们当样本为正时，模型预测为正的频率有多高。
+- `Precision` (精确率)：![](img/rsrc23S.jpg) 该值针对每个类别。高 `Precision` 意味着正样本被预测为正的概率。它告诉我们当模型预测为正时，正确的概率有多大。
+- `F1 Score` (F1 分)：![](img/rsrc23T.jpg) 它是 `Recall` 和 `Precision` 的综合得分。
+- `Accuracy` (准确率)：![](img/rsrc23U.jpg) 在此之前，你可能认为高准确率意味着更好的性能。事实并非如此。假设你有一个包含 90% A 类和 10% B 类数据的数据集。那么，如果你预测每个样本都是 A 类，那么你的准确率就是 90%。但这真的准确吗？准确率在所有类别数据量相等的理想情况下才有效。
 
 让我们看看之前训练的模型的混淆矩阵：导入所需的模块。
 
@@ -287,93 +310,113 @@ print (confusion_matrix(y_test, y_pred))
 print (classification_report(y_test, y_pred))
 ```
 
+
+
 Colab 笔记本：[点击此处](https://colab.research.google.com/drive/1V8EO8lL-NgY4PGNW3M98DtOR8-ROp)
 
-
-
-
-
 ## 结论
+
 在本章中，我们学习了逻辑回归（Logistic Regression）的机制并在代码中实现了它。我们还讨论了混淆矩阵以及评估模型性能的不同指标。接下来的，我们将学习另一种分类算法。
 
-# 第 5 章：K 近邻算法 (KNN)
+# 第 5 章：K 近邻算法
 
 ## 引言
-“你是你相处时间最长的 5 个人的平均值。” – 吉姆·罗恩（Jim Rohn）
+
+“你是你相处时间最长的 5 个人的平均值。” – 吉姆·罗恩
 
 这句来自美国著名企业家吉姆·罗恩的话非常接近 K 近邻的概念。它是一种与逻辑回归类似的分类算法。它比逻辑回归更好，因为它在边界中引入了非线性，而不是仅仅使用直线。
 
 ## KNN 算法的步骤
+
 1. 绘制给定的训练标记数据。下图有 2 个类，即红色和绿色。KNN 没有训练过程，计算是实时完成的。
-图 5-1 绘制的标记数据（来源：[点击此处](https://www.kdnuggets.com/2017/09/rapidminer-k-nearest-neighbors-laziest-machine-learning-technique.html) ）
+
+图 5-1 绘制的标记数据（来源：[点击此处](https://www.kdnuggets.com/2017/09/rapidminer-k-nearest-neighbors-laziest-machine-learning-technique.html)）
 
 2. 现在，引入你想要预测的输入。然后，机器会查看 `K`（任意整数）最近的数据点。拥有最多数据点的类别被分配为新输入的类。
-图 5-2 新数据点（来源：[点击此处](http://brokerstir.com/knn-classifier-algorithm/) ）
+
+图 5-2 新数据点（来源：[点击此处](http://brokerstir.com/knn-classifier-algorithm/)）
 
 如果我们在上面的图中取 `K = 5`，根据我们的推测，3 个将属于红色类别，2 个属于绿色类别。因此，新数据属于红色类别。请记住将 `K` 设置为奇数，因为如果你使用偶数，可能会从每个类别中获得相同数量的数据点。数据点之间的距离可以通过许多方法计算，但常用的是欧几里得法。通过寻找距离，机器可以知道哪些数据点是最近的。理论部分就此此。现在，让我们在代码中实现它。
 
 ## 代码实现
+
 导入所需的模块。我们将使用具有 3 个输出类的鸢花数据集。
+
 ```python
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.datasets import load_iris
 ```
+
 将数据集加载到 `X` 和 `y` 变量中。
+
 ```python
 X, y = load_iris(return_X_y= True )
 ```
+
 将数据集分为训练集和测试集。我们使用 `test_size=0.25`，这意味着 25% 的数据将作为测试集。
+
 ```python
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size =0.25 , random_state =0 )
 ```
+
 现在，让我们导入 `StandardScaler` 类来缩放数据，以提高计算效率。`.fit_transform` 方法将缩小我们的数据。
+
 ```python
 from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 ```
+
 创建 `KNeighborsClassifier` 类的实例。我们将选择 `n_neighbors` 即 `k = 5` 并训练模型。
+
 ```python
 classifier = KNeighborsClassifier(n_neighbors= 5 )
 classifier.fit(X_train, y_train)
 ```
+
 让我们预测测试集的输出。
+
 ```python
 y_pred = classifier.predict(X_test)
 ```
+
 现在，让我们评估模型的性能。
+
 ```python
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import classification_report
 print (confusion_matrix(y_test, y_pred))
 ```
+
 由于我们有 3 个类，所以我们得到一个 3x3 的混淆矩阵，而不是 2x2。
+
 ```python
 print (classification_report(y_test, y_pred))
 ```
 
 ## 优点
+
 - 由于它可以映射非线性数据，其性能优于逻辑回归。
 - 易于理解
 - 不需要训练
 
-### 缺点
+## 缺点
+
 - 算法运行缓慢
 - 当特征维度较多时较难预测
 - 对异常值非常敏感（属于某一类但未包含该类许多特征的特殊数据）
 
+Colab 笔记本：[点击此处](https://colab.research.google.com/drive/1XsMl1RYxwFVwc6BRD-g6pCROOscsAxlx)
 
+## 结论
 
-
-
-Colab 笔记本：[点击此处](https://colab.research.google.com/drive/1XsMl1RYxwFVwc6BRD-g6pCROOscsAxlx) 结论：在本章中，我们学习了 K 近邻算法的机制并在代码中实现了它。我希望大家到目前都很喜欢。从下一章开始我们将学习最流行的神经网络。
+在本章中，我们学习了 K 近邻算法的机制并在代码中实现了它。我希望大家到目前都很喜欢。从下一章开始我们将学习最流行的神经网络。
 
 # 第 6 章 神经网络
 
 在第 1 章中，我们接触了深度学习和神经网络的边缘。现在，我们需要进一步深入。你的脑海中可能会产生一个问题：我们有了线性回归，为什么还需要其他算法呢？简单的答案是**非线性性**。线性回归只能映射线性关系，但现实生活中的数据很少具有线性关系，而在提供足够数据的情况下，神经网络是大多数情况下的最佳算法。
-
 
 不要被这张图吓到。我会解释它的每一个部分。根据之前的知识，你可能已经理解这个神经网络接收两个输入并给出一个输出。图中的每个圆被称为节点，如图所示，每个节点都与相邻层中的每个其他节点连接。
 
@@ -394,14 +437,13 @@ ŷ = h1 * w7 + h2 * w8 + h3 * w9
 
 现在，预测的误差/损失通过公式 `Loss = (y - ŷ) ²` 计算。为了获得更好的预测，必须将此损失降到最低。为此，我们必须改变参数（`W` 和 `B`）的值。我们通过被称为**反向传播**的过程来实现。
 
-
-对每个相应权重取 `Loss` (`L`) 导数的目的是检查每个权重的微小变化如何影响损失。让我们取 `w8` 看看它是如何更新的。
+对每个相应权重取 `Loss`（`L`）导数的目的是检查每个权重的微小变化如何影响损失。让我们取 `w8` 看看它是如何更新的。
 
 ```
 w8 ” = w8 - η * dL/dw 8
 ```
 
-其中，`η` = 学习率 (LR)。引入它的目的是为了防止权重发生剧烈变化。假设 `dL/dw 8 = 20`。这是一个巨大的数字，会剧烈改变 `w 8`。因此，为了最小化这一点，我们可以乘以一个极小值，比如 0.01。那么它只会改变 `w 8` 数值的 0.2。这就是学习率的功能。同样，其他所有权重和偏置都会更新。如你所示，这个过程是倒着移动，即从输出层到隐藏层再到输入层。因此，这个过程被称为反向传播。
+其中，`η` = 学习率。引入它的目的是为了防止权重发生剧烈变化。假设 `dL/dw 8 = 20`。这是一个巨大的数字，会剧烈改变 `w 8`。因此，为了最小化这一点，我们可以乘以一个极小值，比如 0.01。那么它只会改变 `w 8` 数值的 0.2。这就是学习率的功能。同样，其他所有权重和偏置都会更新。如你所示，这个过程是倒着移动，即从输出层到隐藏层再到输入层。因此，这个过程被称为反向传播。
 
 现在，在深入代码之前，让我们再学习几点。
 
@@ -426,28 +468,38 @@ h3 = f (x1 * w3 + x2 * w6 + b3)
 其中，`f(x)` 可以是任何激活函数。我们将讨论几个。
 
 ### ReLU
+
 这是最常用的激活函数。对于正输入，它输出相同，但对于负输入，它输出零。例如，如果输入是 9，它输出 9；但如果输入是 -9，输出是 0。
 
-
 ### Sigmoid
-这也是最常用的激活函数之一。主要用于逻辑回归![](img/rsrc23K.jpg)图 6-4 Sigmoid (来源：[https://hackaday.io/page/5331-])
+
+这也是最常用的激活函数之一，主要用于逻辑回归。
+
+![](img/rsrc23K.jpg)
+
+图 6-4 Sigmoid（来源：[https://hackaday.io/page/5331-]）
 
 其他激活函数有：
-- 双曲正切 (Tanh) 函数
+
+- 双曲正切函数
 - Softmax 函数
 
-### 损失函数
+## 损失函数
+
 在每次正向传播期间计算预测误差的函数。对于二分类，交叉熵最常用，而对于回归问题，使用均方误差。
 
-### 优化器
-为了最小化模型的损失，必须使用某些算法。最常用的是随机梯度下降 (SGD)。其他优化器有：
+## 优化器
+
+为了最小化模型的损失，必须使用某些算法。最常用的是随机梯度下降。其他优化器有：
+
 - Adam
 - AdaGrad
 - Momentum
 
 ## 过拟合与欠拟合
 
-考虑![](img/rsrc244.jpg)图 6-5 生活中的过拟合示例。如果你的神经网络没有足够的数据，就会倾向于欠拟合。相反，如果模型训练过度，它就会倾向于过拟合。它们是相互相对的。防止它们的最佳方法是：
+考虑 ![](img/rsrc244.jpg) 图 6-5 生活中的过拟合示例。如果你的神经网络没有足够的数据，就会倾向于欠拟合。相反，如果模型训练过度，它就会倾向于过拟合。它们是相互相对的。防止它们的最佳方法是：
+
 - 数据增强
 - Dropout
 - 选择合适的网络架构
@@ -510,14 +562,13 @@ print(model.predict([20.0]))
 print(h.get_weights())
 ```
 
-
 ```python
 import tensorflow as tf
 import tensorflow_datasets as tfds
 import matplotlib.pyplot as plt
 ```
 
-从 tfds 下载数据集及其信息。
+从 `tfds` 下载数据集及其信息。
 
 ```python
 dataset, info = tfds.load('mnist', as_supervised=True, with_info=True)
@@ -543,7 +594,7 @@ def normalize(image, labels):
 
 ```python
 BATCH_SIZE = 128
-## 在训练、测试和验证数据集上洗牌并实现 normalize 函数
+# 在训练、测试和验证数据集上洗牌并实现 normalize 函数
 train_batches = train_dataset.shuffle(num_train//4).map(normalize).batch(BATCH_SIZE).prefetch(1)
 validation_batches = test_dataset.map(normalize).batch(BATCH_SIZE).prefetch(1)
 test_batches = test_dataset.map(normalize).batch(3000).prefetch(1)
@@ -576,6 +627,8 @@ history = model.fit(train_batches, epochs=5, validation_data=validation_batches)
 
 在模型训练后，用测试集测试我们的模型。
 
+
+
 ```python
 test_loss, test_acc = model.evaluate(test_batches)
 ```
@@ -606,68 +659,89 @@ def visualize(is_acc):
     plt.show()
 ```
 
-visualize(is_acc=True) ![](img/rsrc249.jpg)
-visualize(is_acc=False) ![](img/rsrc24A.jpg)
+`visualize(is_acc=True)`
 
+![](img/rsrc249.jpg)
 
+`visualize(is_acc=False)`
 
+![](img/rsrc24A.jpg)
 
--   几乎可以用于每种任务
--   不需要特征工程
--   在大多数情况下，与其他算法相比，提供了最高的准确率
+### 优点
+
+- 几乎可以用于每种任务
+- 不需要特征工程
+- 在大多数情况下，与其他算法相比，提供了最高的准确率
 
 ### 缺点
--   需要大量数据
--   难以学习该算法的每个变体
--   容易过拟合
--   超参数调优困难
--   计算成本高
+
+- 需要大量数据
+- 难以学习该算法的每个变体
+- 容易过拟合
+- 超参数调优困难
+- 计算成本高
 
 神经网络及其变体（我们将在接下来的章节中学习它们）是最复杂的算法。因此，在大多数情况下它能提供最佳结果，但如果你没有足够的数据或计算能力，那么它对你的问题可能不是最佳选择。
 
 结论：简单神经网络的介绍到此结束。在这一章中，我们学习了神经网络的工作原理、相关的各种术语，并实现了两个项目。我们还学习了图像知识。我希望你喜欢。现在，我们将讨论神经网络的一些变体。真正的乐趣从这里开始。
 
-# 第 7 章：卷积神经网络 (CNN)
+# 第 7 章：卷积神经网络
 
 你知道吗，我们可以训练舌头来帮助我们检查自己是否盲盲？是的，这是真的。有一家名为 Brainport 的公司正在做这件事。但等一下，我们在上一章中也做过类似的事情。简单神经网络并不是为了图像处理设计的。尽管如此，我们还是得到了良好的准确率。但通过卷积神经网络，我们可以获得更高的准确率，特别是使用彩色图像作为数据时。因此，主要用于图像处理的神经网络变体是 `Convolution Neural Network`。
 
 现在你可能会问，`CNN` 如何在图像处理中提供更好的结果呢？简单的答案是“通过称为卷积的过程”。`CNN` 是一个在开头带有卷积的简单神经网络。假设你想识别图像中某人的脸，但背景中还有汽车、道路等物品。如果使用简单神经网络，它会给图像中的每个像素分配权重。但在卷积的帮助下，网络将对脸分配权重，这将显著提高计算效率并提高准确率。因此，它被 Google、Facebook、Instagram 等科技巨头使用。
 
-
 ## 卷积过程
 
-假设这是一张图像![](img/rsrc24C.jpg)现在，为了从这张图像中提取有用信息（特征），需要将其与一个相对较小的矩阵（通常大小为 `3x3`）进行逐元素乘![](img/rsrc24D.jpg)那个较小的矩阵被称为 `kernel` 或 `filter`。现在，将此 `kernel` 应用于图像矩阵以提取特征。操作后的矩阵被称为 `feature map`。
+假设这是一张图像
 
+![](img/rsrc24C.jpg)
 
-`feature map` 总是比输入图像小。如果你想让 `feature map` 的大小与输入相同，可以在 `feature map` 矩阵周围添加零。这个过程被称为 `zero padding`（零填充）。查看这张图片以帮助更好地理解卷积![](img/rsrc24F.jpg)图 7-3. 特征图图像（来源:[点击此处](https://www.kdnuggets.com/2016/11/intuitive-explanation-convolutional-neural-networks.html））
+现在，为了从这张图像中提取有用信息（特征），需要将其与一个相对较小的矩阵（通常大小为 `3x3`）进行逐元素乘
+
+![](img/rsrc24D.jpg)
+
+那个较小的矩阵被称为 `kernel` 或 `filter`。现在，将此 `kernel` 应用于图像矩阵以提取特征。操作后的矩阵被称为 `feature map`。
+
+`feature map` 总是比输入图像小。如果你想让 `feature map` 的大小与输入相同，可以在 `feature map` 矩阵周围添加零。这个过程被称为 `zero padding`（零填充）。查看这张图片以帮助更好地理解卷积
+
+![](img/rsrc24F.jpg)
+
+图 7-3. 特征图图像（来源:[点击此处](https://www.kdnuggets.com/2016/11/intuitive-explanation-convolutional-neural-networks.html)）
 
 `CNN` 中的一些术语是：
--   **深度 (Depth)**：它是应用于图像的过滤器数量。在上面的示例中我们使用了一个过滤器。所以它的深度为 1。如果使用 3 个过滤器，则深度为 3，依此类推。通常彩色图像使用 3 个过滤器，因为有 3 个矩阵。
--   **步长 (Stride)**：它是输入矩阵中每一步跳过的像素数。如果 `stride` 为 1，则 `kernel` 每步向前移动一个像素；如果是 2，则 `kernel` 每步向前移动两个像素，依此类推。
 
-图 7-4.步长
+- **深度**：它是应用于图像的过滤器数量。在上面的示例中我们使用了一个过滤器。所以它的深度为 1。如果使用 3 个过滤器，则深度为 3，依此类推。通常彩色图像使用 3 个过滤器，因为有 3 个矩阵。
+- **步长**：它是输入矩阵中每一步跳过的像素数。如果 `stride` 为 1，则 `kernel` 每步向前移动一个像素；如果是 2，则 `kernel` 每步向前移动两个像素，依此类推。
+
+图 7-4. 步长
 
 ### 非线性
+
 提取特征图后，你需要对 `feature map` 应用非线性。对于 `CNN` 来说，最好的是 `ReLU`。
 
-### 池化 / 下采样 (Pooling / Subsampling)
-我们已经提取了特征并对其应用了非线性。现在，我们必须将其准备好进行处理。`Pooling` 是一种缩小特征图尺寸的方法。尺寸减小意味着权重更少，这意味着模型过拟合的可能性较低，并且增加了计算效率。池化有 2 类型![](img/rsrc24J.jpg)图 7-5. 池化的类型（来源:[点击此处](https://www.researchgate.net/figure/Illustration-of-Max-Pooling-and-Average-Pooling-Figure-2-above-shows-an-example-of-max_fig2_333593451））
+### 池化 / 下采样
+
+我们已经提取了特征并对其应用了非线性。现在，我们必须将其准备好进行处理。`Pooling` 是一种缩小特征图尺寸的方法。尺寸减小意味着权重更少，这意味着模型过拟合的可能性较低，并且增加了计算效率。池化有 2 类型
+
+![](img/rsrc24J.jpg)
+
+图 7-5. 池化的类型（来源:[点击此处](https://www.researchgate.net/figure/Illustration-of-Max-Pooling-and-Average-Pooling-Figure-2-above-shows-an-example-of-max_fig2_333593451)）
 
 正如你看到的，`Max pooling`（最大池化）是从矩阵的池大小中提取最大值像素的技术，而 `Average pooling`（平均池化）是将矩阵池大小内的像素平均化为一个像素的技术。在图中，池的大小为 `2x2`，因此每个颜色覆盖矩阵的 `2x2` 部分，并对其进行池化操作。
 
 ### 神经网络
+
 这是 `CNN` 的最后部分。它是我们在之前的课程中学习如何构建的简单神经网络。所以，我在这里不再谈论它。你已经都理解了。
 
 ## 快速回顾：
+
 `CNN` 包含以下步骤：
+
 1. 使用 `kernel/filter` 从输入图像创建 `feature map`。
 2. 使用激活函数（通常是 `ReLU`）为 `feature map` 提供非线性。
 3. 随后对非线性特征图进行 `pooling` 处理，以缩小 `feature map` 的尺寸。
 4. 将 `pooling` 后得到的矩阵交给简单神经网络进行预测。
-
-
-
-
 
 ## 代码实现
 
@@ -713,7 +787,7 @@ validation_batches = test_dataset.map(normalize).batch(BATCH_SIZE).prefetch(1)
 test_batches = test_dataset.map(normalize).batch(3000).prefetch(1)
 ```
 
-现在，让我们创建模型。我们将使用 3 个卷积层，卷积核大小同样为 3x3。第一层卷积层使用 16 个过滤器，接下来的两层各使用 32 个过滤器。记住在每次卷积后进行池化（Pool）。然后，我们展平图像并使用神经网络。
+现在，让我们创建模型。我们将使用 3 个卷积层，卷积核大小同样为 3x3。第一层卷积层使用 16 个过滤器，接下来的两层各使用 32 个过滤器。记住在每次卷积后进行池化。然后，我们展平图像并使用神经网络。
 
 ```python
 model = tf.keras.Sequential([
@@ -734,7 +808,7 @@ model = tf.keras.Sequential([
 model.summary()
 ```
 
-现在，让我们使用 Adam 优化器和稀疏分类交叉熵（Sparse Categorical Cross Entropy）作为损失函数编译模型。这是分类数据中最常用的损失函数。
+现在，让我们使用 Adam 优化器和稀疏分类交叉熵作为损失函数编译模型。这是分类数据中最常用的损失函数。
 
 ```python
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
@@ -783,17 +857,20 @@ def visualize(is_acc):
 ```
 
 `visualize(is_acc=True)`
+
 ![](img/rsrc24N.jpg)
+
 `visualize(is_acc=False)`
+
 ![](img/rsrc24P.jpg)
 
-结论：所以，通过这种方式我们学习了 CNN 的架构、应用以及它们的工作原理。之后，我们实现了 CNN 来创建一个 CIFAR10 图像分类器。我可以保证，如果你不使用 CNN 创建相同的模型，你会看到准确率大幅下降。所以，这就是关于 CNN 的所有内容。在下一章中，我们将学习机器学习中的一项重要技术。希望你到目前得愉快。
+结论：所以，通过这种方式我们学习了 `CNN` 的架构、应用以及它们的工作原理。之后，我们实现了 `CNN` 来创建一个 `CIFAR10` 图像分类器。我可以保证，如果你不使用 `CNN` 创建相同的模型，你会看到准确率大幅下降。所以，这就是关于 `CNN` 的所有内容。在下一章中，我们将学习机器学习中的一项重要技术。希望你到目前得愉快。
 
 # 第 8 章：迁移学习
 
-假设有两个朋友：`John` 和 `Kim`。`John` 是一个棒球运动员，但 `Kim` 不是。有一天，他们面临挑战要学习板球（Cricket）。你认为谁更有机会赢？当然，`John` 有运动方面的经验。此外，棒球和板球有些相似，所以 `John` 可以在很短的时间内学会。但另一方面，`Kim` 必须从零学习，这对他来说是全新的。关于大脑，由于经验，可以帮助你更快、更高效地学习新技能。这就是迁移学习的核心思想。根据 Ian Goodfellow、Aaron Courville 和 Yoshua Bengio 的深度学习，迁移学习的定义是“利用在一个任务中学到的知识来提高另一个任务性能的方法”。
+假设有两个朋友：`John` 和 `Kim`。`John` 是一个棒球运动员，但 `Kim` 不是。有一天，他们面临挑战要学习板球。你认为谁更有机会赢？当然，`John` 有运动方面的经验。此外，棒球和板球有些相似，所以 `John` 可以在很短的时间内学会。但另一方面，`Kim` 必须从零学习，这对他来说是全新的。关于大脑，由于经验，可以帮助你更快、更高效地学习新技能。这就是迁移学习的核心思想。根据 Ian Goodfellow、Aaron Courville 和 Yoshua Bengio 的深度学习，迁移学习的定义是“利用在一个任务中学到的知识来提高另一个任务性能的方法”。
 
-图 8-1 传统机器学习 VS 迁移学习（来源：[点击此处](https://example.com/book/big_data/978178896212/introduction-to-learning））
+图 8-1 传统机器学习 VS 迁移学习（来源：[点击此处](https://example.com/book/big_data/978178896212/introduction-to-learning)）
 
 让我们看看实际上是如何做的。假设你想创建一个狗猫分类器，并且有一个名为 `ImageNet` 的数据集，其中包含 400 万张图像。在 `ImageNet` 上训练的模型是可用的。现在你可以做的是下载那个 `ImageNet` 预训练模型并移除输出层。你可以在预训练模型之上添加你自己的输出层。现在你可以训练模型。但记住这些点：
 
@@ -824,7 +901,9 @@ num_train = info.splits['train'].num_examples
 num_test = info.splits['test'].num_examples
 ```
 
-归一化并批处理数据。我们将图像调整大小为 224x224，因为我们将使用需要 224x224 图像输入的 ResNet 预训练模型。
+归一化并批处理数据。我们将图像调整大小为 224x224，因为我们将使用需要 224x224 图像输入的 `ResNet` 预训练模型。
+
+
 
 ```python
 def normalize(image, labels):
@@ -856,7 +935,9 @@ model = tf.keras.Sequential([
 ])
 ```
 
-`model.summary()`
+```python
+model.summary()
+```
 
 你可以看到，输出层的参数是可训练的，其他的是不可训练的。
 
@@ -868,11 +949,8 @@ history = model.fit(train_batches, epochs=EPOCHS, validation_data=validation_bat
 ```
 
 可以看到，在如此巨大的数据集上，仅通过 5 个 epoch 我们就取得了如此显著的结果。Colab 笔记本：[点击此处](https://colab.research.google.com/drive/12LSR55Yx1w9cg8BBFLXS_UfnY16BHp3)
-优势: 
 
-
-
-
+### 优势
 
 * 通过极少量的训练即可获得更好的结果
 * 所需数据更少
@@ -882,27 +960,37 @@ history = model.fit(train_batches, epochs=EPOCHS, validation_data=validation_bat
 * 预训练模型应在相似的数据上进行训练。否则，会发生所谓的“负迁移”现象
 * 你对模型没有太多的控制权
 
-
-
-
 ## 结论
-在本短章节中，你学习并实现了迁移学习（Transfer Learning），这是机器学习中一个非常重要的概念。在大多数大型机器学习项目中，你可能会用到这种技术。因此，我希望你已经理解了这一概念。在下一章中，我们将学习神经网络的另一个变体。祝愉快！
+
+在本短章节中，你学习并实现了迁移学习，这是机器学习中一个非常重要的概念。在大多数大型机器学习项目中，你可能会用到这种技术。因此，我希望你已经理解了这一概念。在下一章中，我们将学习神经网络的另一个变体。祝愉快！
 
 # 第 9 章 循环神经网络
 
-你们都用过 Siri、Alexa、Bixby 以及许多语音助手。但它们是如何理解你说的话的？事实证明它们使用了循环神经网络（Recurrent Neural Network）。它们专门用于时间序列和顺序数据。
+你们都用过 Siri、Alexa、Bixby 以及许多语音助手。但它们是如何理解你说的话的？事实证明它们使用了循环神经网络。它们专门用于时间序列和顺序数据。
 
 从目前为止的学习中，你可能知道简单神经网络的输出不受之前输入的影响。如果一张图像被预测为狗，那么每当你使用同一张图像时，无论你之前或之后预测了什么，输出都是相同的。
 
-但在某些情况下，我们需要考虑之前的输入。假设你想进行股票预测。但你不能通过将每天的市场价格视为独立输入来这样做。今天的市场价格受昨天的影响，而昨天的价格受前天的影响，以此此类推。这正是 RNN 派上用场的地方。看看它的架构![](img/rsrc24V.jpg)图 9-1. RNN 架构（来源：[点击此处](https://www.researchgate.net/figure/A-recurrent-neural-network-and-the-unfolding-architecture-U-V-and-W-are-the-weights-of_fig4_318991900)）。正如你看到的，模型只有一个隐藏神经元。同一个网络对每个输入都是循环。因此，它被称为循环神经网络。对于输入 `x t`，来自 `x t-1` 的输出被用作输入的一部分，以此此类推。这样就了数据的序列。每个输出都受到之前输入的影响。循环传递的输入数量称为时间步（time step）。在上面的图中有 3 个时间步。
+但在某些情况下，我们需要考虑之前的输入。假设你想进行股票预测。但你不能通过将每天的市场价格视为独立输入来这样做。今天的市场价格受昨天的影响，而昨天的价格受前天的影响，以此类推。这正是 RNN 派上用场的地方。看看它的架构。
+
+![](img/rsrc24V.jpg)
+
+图 9-1. RNN 架构（来源：[点击此处](https://www.researchgate.net/figure/A-recurrent-neural-network-and-the-unfolding-architecture-U-V-and-W-are-the-weights-of_fig4_318991900)）
+
+正如你看到的，模型只有一个隐藏神经元。同一个网络对每个输入都是循环。因此，它被称为循环神经网络。对于输入 `x t`，来自 `x t-1` 的输出被用作输入的一部分，以此类推。这样就了数据的序列。每个输出都受到之前输入的影响。循环传递的输入数量称为时间步。在上面的图中有 3 个时间步。
 
 ## RNN 中的问题
 
-RNN 看起来非常完美，也确实适用。但它有一个问题。在训练过程中，它容易受到梯度消失/爆炸问题（Vanishing/Exploding Gradient Problem）的影响。我们知道反向传播期间权重更新是通过以下方式实现的![](img/rsrc24W.jpg)图 9-2. 权重更新（来源：[点击此处](https://hmkcode.com/ai/backpropagation-step-by-step/)）。这是在 RNN 的每个时间步进行的。因此，从最后一个时间步到第一个时间步减去导数时，前几层将产生极小的权重或巨大的权重。这将导致训练停止。因此，为了解决这个问题，引入了 RNN 的几种变体。最流行的是 LSTM 和 GRU。
+RNN 看起来非常完美，也确实适用。但它有一个问题。在训练过程中，它容易受到梯度消失/爆炸问题的影响。我们知道反向传播期间权重更新是通过以下方式实现的。
 
-### 长短期记忆网络 (LSTM)
+![](img/rsrc24W.jpg)
 
-为了解决 RNN 中的梯度消失/爆炸问题，引入了 RNN 的改进架构，即 LSTM。这种架构的主要思想是使用称为“单元状态”（cell state）的东西。它贯穿整个网络，并携带信息。为了改变单元状态中的信息，LSTM 使用了称为“门”（gates）的结构。它们由 sigmoid 函数控制，该函数输出 0 到 1 之间的值。0 表示不让信息流动，1 表示让所有信息流动。门有两种类型：遗忘门（Forget gate）决定从单元状态中删除什么以及删除多少信息；输入门（Input gate）决定向单元状态中添加什么以及多少新信息。LSTM 就此。。我们不会在书中深入探讨 LSTM。如果你想学习更多，可以查看这个博客：[`colah.github.io/posts/2015-08-Understanding-LSTMs/`](https://colah.github.io/posts/2015-08-Understanding-LSTMs/)
+图 9-2. 权重更新（来源：[点击此处](https://hmkcode.com/ai/backpropagation-step-by-step/)）
+
+这是在 RNN 的每个时间步进行的。因此，从最后一个时间步到第一个时间步减去导数时，前几层将产生极小的权重或巨大的权重。这将导致训练停止。因此，为了解决这个问题，引入了 RNN 的几种变体。最流行的是 LSTM 和 GRU。
+
+### 长短期记忆网络
+
+为了解决 RNN 中的梯度消失/爆炸问题，引入了 RNN 的改进架构，即 LSTM。这种架构的主要思想是使用称为“单元状态”的东西。它贯穿整个网络，并携带信息。为了改变单元状态中的信息，LSTM 使用了称为“门”的结构。它们由 `sigmoid` 函数控制，该函数输出 0 到 1 之间的值。0 表示不让信息流动，1 表示让所有信息流动。门有两种类型：遗忘门决定从单元状态中删除什么以及删除多少信息；输入门决定向单元状态中添加什么以及多少新信息。LSTM 就此。我们不会在书中深入探讨 LSTM。如果你想学习更多，可以查看这个博客：[`colah.github.io/posts/2015-08-Understanding-LSTMs/`](https://colah.github.io/posts/2015-08-Understanding-LSTMs/)
 
 ## 代码实现
 
@@ -926,7 +1014,7 @@ pip install yfinance
 import yfinance as yf
 ```
 
-下载苹果的股票价格数据并保留“Adj Close”列，忽略其他的。
+下载苹果的股票价格数据并保留`Adj Close`列，忽略其他的。
 
 ```python
 data=yf.download('AAPL')['Adj Close']
@@ -990,7 +1078,10 @@ model.compile(loss='mean_squared_error', optimizer='adam')
 ```python
 model.summary()
 ```
-![](img/rsrc24X.jpg)现在，在 25 个 epoch 上训练模型。
+
+![](img/rsrc24X.jpg)
+
+现在，在 25 个 epoch 上训练模型。
 
 ```python
 history = model.fit(train_X, train_Y, epochs=25, batch_size=128, shuffle=False)
@@ -1039,11 +1130,15 @@ plt.xlabel('Time')
 plt.ylabel('Stock Price')
 plt.show()
 ```
-![](img/rsrc24Y.jpg)蓝色曲线是实际价格，红色是预测价格。你可以看到，模型在预测实际价格方面并不准确，但在遵循价格趋势方面非常准确。Colab 笔记本：[点击此处](https://colab.research.com/drive/AKj26frwXzBi96Dq)
+
+![](img/rsrc24Y.jpg)
+
+蓝色曲线是实际价格，红色是预测价格。你可以看到，模型在预测实际价格方面并不准确，但在遵循价格趋势方面非常准确。Colab 笔记本：[点击此处](https://colab.research.com/drive/AKj26frwXzBi96Dq)
 
 # 第 10 章 自然语言处理 (NLP)
 
 Siri、Alexa、Bixby 等，我们假设大家至少熟悉其中一个。我们对它们说一些话，它们会做什么。理解人类语言的过程被称为自然语言处理。NLP 是机器学习中的一个热门话题。它有许多应用：
+
 * 机器人
 * 虚拟助手
 * 文本分析
@@ -1052,9 +1147,10 @@ Siri、Alexa、Bixby 等，我们假设大家至少熟悉其中一个。我们�
 ## 语言基础
 
 在学习 NLP 之前，让我们了解语言。语言由：
-* 语法 (Syntax)
-* 语义 (Semantics)
-* 语用 (Pragmatics)
+
+* 语法
+* 语义
+* 语用
 
 这些是定义语言的内容。让我们学习它们：
 
@@ -1066,10 +1162,10 @@ Siri、Alexa、Bixby 等，我们假设大家至少熟悉其中一个。我们�
 
 在任何深度学习过程中，处理图像时，我们需要处理文本以准备数据。
 
-* **清洗 (Cleaning)**：从文本中移除不需要的项。包括 HTML 标签、无关符号等。
-* **移除停用词 (Removing Stop Words)**：在句子“I am going to California today!”中，像“am”、““to”这样的词没有太大意义。这些词被称为停用词。
-* **归一化 (Normalizing)**：现在是让文本变得正常和标准了。将所有字母转换为相同的大小（通常是小写），并修正如“u”这样的不规范单词。
-* **分词 (Tokenization)**：这是一个简单的概念。它是将句子或段落分成单词的过程。它还统计单词出现的频率。导入 `Tokenizer`。
+* **清洗**：从文本中移除不需要的项。包括 HTML 标签、无关符号等。
+* **移除停用词**：在句子“I am going to California today!”中，像“am”、“to”这样的词没有太大意义。这些词被称为停用词。
+* **归一化**：现在是让文本变得正常和标准了。将所有字母转换为相同的大小（通常是小写），并修正如“u”这样的不规范单词。
+* **分词**：这是一个简单的概念。它是将句子或段落分成单词的过程。它还统计单词出现的频率。导入 `Tokenizer`。
 
 ```python
 from tensorflow.keras.preprocessing.text import Tokenizer
@@ -1099,7 +1195,12 @@ tokenizer.fit_on_texts(text)
 words = tokenizer.word_index
 print(words)
 ```
-输出：{'hello': 1, 'there': 2, 'welcome': 3, 'to': 4, 'the': 5, 'introduction': 6, 'of': 7, 'natural': 8, 'language': 9, 'processing': 10, 'i': 11, 'hope': 12, 'you': 13, 'all': 14, 'are': 15, 'having': 16, 'fun': 17}
+
+输出：
+
+```
+{'hello': 1, 'there': 2, 'welcome': 3, 'to': 4, 'the': 5, 'introduction': 6, 'of': 7, 'natural': 8, 'language': 9, 'processing': 10, 'i': 11, 'hope': 12, 'you': 13, 'all': 14, 'are': 15, 'having': 16, 'fun': 17}
+```
 
 让我们用 `texts_to_sequences` 方法将文本转换为数值（序列）。
 
@@ -1107,33 +1208,42 @@ print(words)
 sequences = tokenizer.texts_to_sequences(text)
 print(sequences)
 ```
-输出：[[1, 2, 3, 4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17]]
 
-如你所见，两个文本中的单词数量相等。但作为训练数据使用时它们必须相等。因此，有一种名为填充（padding）的技术。它的作用是向短句子添加零，以使单词数量相同。
+输出：
+
+```
+[[1, 2, 3, 4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17]]
+```
+
+如你所见，两个文本中的单词数量相等。但作为训练数据使用时它们必须相等。因此，有一种名为填充的技术。它的作用是向短句子添加零，以使单词数量相同。
 
 ```python
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 padded_sequences = pad_sequences(sequences, padding='post')
 print(padded_sequences)
 ```
-输出：[[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0, 0, 0, 0, 0, 0, 0, 0], [11, 12, 13, 14, 15, 16, 17, 0, 0, 0, 0, 0, 0, 0, 0]]
+
+输出：
+
+```
+[[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0, 0, 0, 0, 0, 0, 0, 0], [11, 12, 13, 14, 15, 16, 17, 0, 0, 0, 0, 0, 0, 0, 0]]
+```
 
 结论：在本章中，我们学习了 RNN 和 LSTM 的架构、应用和工作原理。我们随后创建了一个预测苹果股价的算法（你可以预测任何公司）。这是神经网络的另一个变体。在下一章中，我们将介绍自然语言处理。你准备好开启愉快的之旅了吗？如果是，让我们开始吧；但如果你没理解这一章，我建议你复习一下。
 
 
 
-
-
-| 单词 | 向量 |
-| --- | --- |
+| 单词 | 维度 1 | 维度 2 | 维度 3 | 维度 4 | 维度 5 |
+| --- | --- | --- | --- | --- | --- |
 | hello | 0.13 | 0.4 | 0.27 | 0.67 | -0.5 |
 | introduction | 0.17 | -0.8 | 0.11 | -0.2 | 0.8 |
 | natural | -0.33 | 0.6 | 0.1 | 0.21 | -0.44 |
 | fun | -0.36 | 0.42 | -0.3 | -0.56 | 0.15 |
 
-我从分词示例中提取了几个单词。每个单词都由一组被称为“向量”的数字表示。在这里，我们使用了 5 个数字进行表示。因此，上述表示的维度是 5，但在实践中，这个值要大得多。这是通过词嵌入（word embedding）技术实现的。
+我从分词示例中提取了几个单词。每个单词都由一组被称为“向量”的数字表示。在这里，我们使用了 5 个数字进行表示。因此，上述表示的维度是 5，但在实践中，这个值要大得多。这是通过词嵌入技术实现的。
 
 现在，你可能会问每个单词的向量是如何生成的？我会告诉你。词嵌入是基于预测的技术，即它使用神经网络对数据进行训练，然后将学习到的权重作为向量表示。计算词嵌入的一些方法包括：
+
 - SkipGram
 - Word2vec
 - GloVe
@@ -1156,11 +1266,13 @@ text = "Hello world! This is my first Text to Speech."
 ```
 
 将文本传递给 `gTTS` 函数并将其存储在变量中。
+
 ```python
 speech = gTTS(text)
 ```
 
 使用 `.save` 方法保存语音，并传入你想保存的文件名和扩展名。
+
 ```python
 speech.save('tts.mp3')
 ```
@@ -1199,10 +1311,6 @@ print(text)
 
 Colab 笔记本：[点击此处访问](https://colab.research.google.com/drive/1T_qrx_tF6scssHq_KczbKSFktMmu3nwQ)
 
-
-
-
-
 ## IMDB 评论情感分析
 
 导入所有需要的库。从 `tf.keras.dataset` 导入 `imdb` 数据集并导入文本预处理所需的 `sequence`。
@@ -1222,9 +1330,12 @@ from tensorflow.keras.preprocessing import sequence
 ```
 
 取数据集中每条文本的前 400 个单词，因为这足够判断句子的情绪了。
-`max_words = 400`
 
-数据集中的文本默认经过分词的（tokenized）。因此，我们需要对数据进行填充（padding）。
+```python
+max_words = 400
+```
+
+数据集中的文本默认经过分词的。因此，我们需要对数据进行填充。
 
 ```python
 training_text = sequence.pad_sequences(training_text, maxlen=max_words)
@@ -1233,7 +1344,7 @@ testing_text = sequence.pad_sequences(testing_text, maxlen=max_words)
 
 ### 创建模型
 
-现在，让我们创建模型。第一层将嵌入层（embedding layer），`input_dimension` 等于词汇数量，输入长度为 `400`。输出维度为 `30`。然后将其传递到 `Dense` 密集层，最后生成输出。
+现在，让我们创建模型。第一层将嵌入层，`input_dimension` 等于词汇数量，输入长度为 `400`。输出维度为 `30`。然后将其传递到 `Dense` 密集层，最后生成输出。
 
 ```python
 model = tf.keras.Sequential([
@@ -1251,9 +1362,11 @@ model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy']
 ```
 
 查看模型架构。
+
 ```python
 model.summary()
 ```
+
 ![](img/rsrc24Z.jpg)
 
 ### 训练模型
@@ -1265,8 +1378,12 @@ history = model.fit(training_text, training_targets, validation_data=(testing_te
 ```
 
 找到训练准确率为 `0.9841`。
-`test_loss, test_accuracy = model.evaluate(testing_text, testing_targets)`
-`print(test_accuracy)`
+
+```python
+test_loss, test_accuracy = model.evaluate(testing_text, testing_targets)
+print(test_accuracy)
+```
+
 找到文本准确率为 `0.854`。
 
 ### 测试模型
@@ -1284,6 +1401,7 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 ```
 
 创建一个 `Tokenizer` 实例。
+
 ```python
 tokenizer = Tokenizer()
 ```
@@ -1317,6 +1435,7 @@ pred = model.predict(seq)
 ```python
 round(pred[0][0])
 ```
+
 结果为 `1`，意味着该评论是正面的。
 
 Colab 笔记本：[点击此处](https://colab.research.google.com/drive/1iICl6ot8OmxwdZoyvNU4TPy6xHkJy6T0)
@@ -1332,5 +1451,5 @@ Colab 笔记本：[点击此处](https://colab.research.google.com/drive/1iICl6o
 ### 关于作者
 
 ![](img/r250.jpg)
-从小充满好奇，Rachin Kalakheti 是一位拥有 5 年行业经验的软件开发人员。他与多个机构合作，为问题提供技术解决方案。他的知识领域包括游戏开发、机器学习、数据科学、应用开发等。他精通的编程语言有 `C#`、`Java`、`Python` 和 `Dart`。他拥有 `IBM`、`Stanford`、`Google` 等权威机构的证书。他还是 `Google Code-in 2019` 的获奖者。此外，还在在线指导学生。他还运营一个技术博客网站 [videhablogs.com](https://videhablogs.com/)。你也可以在那里查看他的见解文章。如果你愿意，可以从网站加入他的邮件列表，他每周会发送极具价值的建议。如果你有任何问题，可以通过 `akalakhti@gmail.com` 与我联系。
 
+从小充满好奇，Rachin Kalakheti 是一位拥有 5 年行业经验的软件开发人员。他与多个机构合作，为问题提供技术解决方案。他的知识领域包括游戏开发、机器学习、数据科学、应用开发等。他精通的编程语言有 `C#`、`Java`、`Python` 和 `Dart`。他拥有 `IBM`、`Stanford`、`Google` 等权威机构的证书。他还是 `Google Code-in 2019` 的获奖者。此外，还在在线指导学生。他还运营一个技术博客网站 [videhablogs.com](https://videhablogs.com/)。你也可以在那里查看他的见解文章。如果你愿意，可以从网站加入他的邮件列表，他每周会发送极具价值的建议。如果你有任何问题，可以通过 `akalakhti@gmail.com` 与我联系。

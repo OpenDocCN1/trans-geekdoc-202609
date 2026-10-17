@@ -1,5 +1,5 @@
-## 人工智能 A-Z：学习如何构建 AI：结合数据科学、机器学习和深度学习的力量，为现实世界应用创建强大 AI
 
+# 人工智能 A-Z：学习如何构建 AI：结合数据科学、机器学习和深度学习的力量，为现实世界应用创建强大 AI
 
 ## 前言
 
@@ -7,7 +7,7 @@ Nileriver Publications 是世界上最优秀的图书出版商。我们为学习
 
 ## 强化学习基础
 
-## 强化学习
+### 强化学习
 
 **强化学习** 是一种广泛应用于 **人工智能** 的机器学习类型，且很可能是最合理的任务。简单来说，为了追求完美，它就是关于通过经验学习。你将一个“笨”智能体放入一个环境中，它将从随机动作开始，随着时间的推移，通过经验，它会自行弄清楚为你的项目信息该做什么。进一步将事物掌控在你手中，我们的“笨”智能体会随着时间的推移变得越来越聪明，且很可能是最合理的任务。出于某种目的，深入了解这一过程的细节：我们的“笨”智能体执行一个动作以获得奖励并进入下一阶段，这个过程被称为 **马尔可夫决策过程 (MDP)**。根据必要性，在 MDP 中，好的一面是过去的经验和遭遇可以被丢弃，因为它们被加密在当前状态中，且很可能是最合理的任务。进一步将事物掌控在你手中，因此未来状态是基于我们当前所处的位置决定的，而你观察这些变化。由于这种重要性和可信度，更正式地说，我们的智能体在状态 `ss` 中执行动作 `aa`，并最终进入新状态 `s′s′`。鉴于当前场景，未来独立于过去。这就是它的美妙之处 :P 一般来说，MDP 涉及这 4 个要素……
 
@@ -16,18 +16,15 @@ Nileriver Publications 是世界上最优秀的图书出版商。我们为学习
 - 一个转移函数，它在当前状态实施一个动作以到达下一个新状态，且很可能是最合理的任务。出于某种目的，深入了解这一细节，这也可能包含一定程度的随机性，因为我们不生活在一个理想的宇宙中。
 - 一个奖励函数，它将决定我们因动作而获得的奖励。
 
+### 强化学习概述
 
-
-
-## 强化学习概述
-
-## 核心目标
+#### 核心目标
 
 我们“愚钝”智能体的目标是学习一个最优策略，该策略会告诉它在任何给定状态下采取哪个动作，以最大化奖励。我们也希望智能体渴望奖励。
 
 简言之，短期奖励是我们的优先级，可能具有试探性。这通过在每个时间步**折扣奖励**来实现。
 
-## 算法详解：值迭代
+#### 算法详解：值迭代
 
 假设我们已知项目的**转移函数**和**奖励函数**。剩下的任务就是寻找最优策略。
 
@@ -56,7 +53,7 @@ V(s) = max_a (Σ_s' T(s,a,s') [R(s,a,s') + γ × V(s')])
 
 ---
 
-## Q-Learning：未知环境下的学习
+#### Q-Learning：未知环境下的学习
 
 如果我们事先不知道转移函数和奖励函数怎么办？这就是 **Q-Learning** 发挥作用的地方！
 
@@ -70,7 +67,7 @@ Q_{n+1}(s,a) = Σ_s' T(s,a,s') [R(s,a,s') + γ × max_{a'} Q(s',a')]
 
 ---
 
-## 关键机制：探索与利用
+#### 关键机制：探索与利用
 
 想象一下，智能体执行一系列动作最终到达最高奖励状态。这很常见，但一旦它这样做，就会不断重复这些动作。很可能存在另一组更高效、最终也能通往最高奖励的动作，但因为智能体沉迷于重复当前动作，极大概率永远不会发现这条替代路径！
 
@@ -83,7 +80,7 @@ Q_{n+1}(s,a) = Σ_s' T(s,a,s') [R(s,a,s') + γ × max_{a'} Q(s',a')]
 
 ---
 
-## 什么是强化学习
+### 什么是强化学习
 
 在强化学习中，系统从环境中学习。做对有奖励，做错无奖励（或惩罚）。目标是**最大化奖励**。学习方式类似于人类学习。
 
@@ -95,35 +92,35 @@ Q_{n+1}(s,a) = Σ_s' T(s,a,s') [R(s,a,s') + γ × max_{a'} Q(s',a')]
 
 ---
 
-## 强化学习有哪些不同算法？
+### 强化学习有哪些不同算法？
 
 针对多臂老虎机问题，两种最常见的算法是 **Upper Confidence Bound (UCB)** 和 **Thompson Sampling**。
 
-### 1. Upper Confidence Bound (UCB) 强化学习
+#### 1. Upper Confidence Bound (UCB) 强化学习
 
 为每个选项分配一个置信度，表示获得奖励的可能性。测试每个选项时，获得奖励则置信区间上升，否则下降。为最大化奖励机会，总是选择**上置信边界最高**的选项。最终，某个选项的上置信边界将远高于其他选项，从而总是被选中。
 
 > 如需了解 UCB 数学原理，可参考相关资料。
 
-### 2. Thompson Sampling 强化学习
+#### 2. Thompson Sampling 强化学习
 
 选择一个随机点进行测试，运行测试并观察奖励。目标是确定哪个选项获胜概率最高。测试几个选项后，便知晓哪个选项获胜概率最高，随后仅使用该选项，从而最大化总奖励。
 
 ---
 
-## 强化学习过程的主要组件
+### 强化学习过程的主要组件
 
 #### 奖励
 
 标量反馈信号（单个数字），告诉我们智能体表现如何。智能体试图最大化随时间累积的总奖励。
 
-### 目标与动作
+#### 目标与动作
 
 目标是通过根据策略采取特定动作来最大化总奖励。目标具有时间依赖性：可能是获得即时奖励，也可能是牺牲即时奖励以达成长期目标。
 
 > **示例**：智能体在国际象棋中采用长期策略，牺牲一些棋子以将死对手。
 
-### 状态
+#### 状态
 
 用于确定下一步发生什么的信息摘要，即环境中的当前情况。
 
@@ -131,29 +128,29 @@ Q_{n+1}(s,a) = Σ_s' T(s,a,s') [R(s,a,s') + γ × max_{a'} Q(s',a')]
 
 ---
 
-## 智能体组件
+### 智能体组件
 
-### 策略
+#### 策略
 
 智能体的行为规则，将状态映射到动作。可以是确定性的，也可以是随机的（给定状态下采取某动作的概率）。
 
-### 模型
+#### 模型
 
 智能体对环境的表征。可分为两部分：
 
-#### 转移
+##### 转移
 
 预测下一个状态。给定动态（如物体的速度、位置），环境下一步会做什么。方程告诉我们在当前状态 `s` 和动作 `a` 下，处于下一状态 `s'` 的概率。
 
 ![转移函数示意图](img/rsrcS3.jpg)
 
-#### 奖励
+##### 奖励
 
 预测即时奖励。方程告诉我们在当前状态 `s` 和动作 `a` 下，将获得的期望奖励 `R`。
 
 ---
 
-## 直观理解：骑自行车的例子
+### 直观理解：骑自行车的例子
 
 考虑骑自行车的例子。你需要大量即兴调整来应对各种“环境”条件，以达到预期输出。即使有海量历史数据，若无实践也无法骑车无阻碍。
 
@@ -164,11 +161,11 @@ Q_{n+1}(s,a) = Σ_s' T(s,a,s') [R(s,a,s') + γ × max_{a'} Q(s',a')]
 
 ---
 
-## Q-Learning 直觉补充：拒绝服务攻击背景知识
+### Q-Learning 直觉补充：拒绝服务攻击背景知识
 
 > **注意**：原文此处突然引入 DoS 攻击内容，与 Q-Learning 直觉关联性不强，疑为素材拼接错误，但按要求保留核心内容。
 
-### 什么是拒绝服务 (DoS) 攻击
+#### 什么是拒绝服务 (DoS) 攻击
 
 攻击者试图阻止合法用户访问信息或服务。通过针对目标计算机及其网络连接，或目标网站的计算机和网络，攻击者可能使你无法访问邮件、网站、在线账户（银行等）或依赖受影响计算机的其他服务。
 
@@ -180,7 +177,7 @@ Q_{n+1}(s,a) = Σ_s' T(s,a,s') [R(s,a,s') + γ × max_{a'} Q(s',a')]
 
 ---
 
-### TCP/IP 协议栈实现弱点
+#### TCP/IP 协议栈实现弱点
 
 典型案例：**Ping of Death (死之 Ping) 攻击**。
 
@@ -188,13 +185,11 @@ Q_{n+1}(s,a) = Σ_s' T(s,a,s') [R(s,a,s') + γ × max_{a'} Q(s',a')]
 
 所有现代操作系统和协议栈应免疫此攻击，但偶尔仍发现运行易受攻击的旧系统。**教训：始终更新网络设备和软件。仅因其运行多年不代表它安全。**
 
+---
 
+### TCP/IP 弱点
 
-
-
-## TCP/IP 弱点
-
-### Teardrop 攻击
+#### Teardrop 攻击
 
 另一种依赖于糟糕的 TCP/IP 实现的攻击是 **Teardrop（泪滴攻击）**，它利用了系统重组 IP 数据包片段方式中的缺陷。
 
@@ -204,7 +199,7 @@ Q_{n+1}(s,a) = Σ_s' T(s,a,s') [R(s,a,s') + γ × max_{a'} Q(s',a')]
 
 如果你的系统是最新的，或者你有防火墙阻挡 Teardrop 数据包，你就不应该有任何麻烦。
 
-### SYN 攻击
+#### SYN 攻击
 
 另一种古老但有效的 DDoS 攻击方法是 **SYN 攻击**。
 
@@ -214,7 +209,7 @@ SYN 攻击用大量的 TCP `SYN` 数据包淹没受害者。每个 `SYN` 数据�
 
 如果 SYN 攻击包含带有错误源 IP 地址的 `SYN` 数据包，情况会更快恶化。在这种情况下，当发出 `SYN-ACK` 时，`ACK` 永远不会返回。迅速填满的积压队列通常会阻止合法的应用程序 `SYN` 请求通过。
 
-#### Land 攻击
+##### Land 攻击
 
 对此的一种变体，**Land 攻击**，采用伪造的 `SYN` 数据包，其 IP 地址被伪造得看起来像是来自你网络内部。SYN 攻击看起来像是来自你防火墙内部，增加了你的麻烦。
 
@@ -225,11 +220,11 @@ SYN 攻击用大量的 TCP `SYN` 数据包淹没受害者。每个 `SYN` 数据�
 - `172.16.0.0` 到 `172.31.255.255`
 - `192.168.0.0` 到 `192.168.255.255`
 
-### Smurf 攻击和 UDP Flood
+#### Smurf 攻击和 UDP Flood
 
 当攻击者可以直接推平你的系统时，为什么还要费心潜入？这就是 **Smurf 攻击** 和用户数据报协议（UDP）洪水攻击所采用的方法。
 
-#### Smurf 攻击
+##### Smurf 攻击
 
 当你遭遇 Smurf 攻击时，你的敌人用互联网控制消息协议（ICMP）回显请求数据包——一种特殊的 ping 数据包——淹没你的路由器。每个数据包的目标 IP 地址也是你的广播地址，这导致你的路由器将 ICMP 数据包广播给你网络中的所有主机。对于大型网络，这会迅速导致规模巨大的电子拥堵。
 
@@ -243,7 +238,7 @@ SYN 攻击用大量的 TCP `SYN` 数据包淹没受害者。每个 `SYN` 数据�
 
 这些更改不会干扰你网络的正常操作，因为很少有应用程序需要 IP 的广播功能。
 
-#### UDP Flood
+##### UDP Flood
 
 处理 UDP 洪水 DDoS 攻击没那么容易，因为一些应用程序，如域名系统（DNS）和简单网络管理协议（SNMP），使用 UDP。
 
@@ -251,7 +246,9 @@ SYN 攻击用大量的 TCP `SYN` 数据包淹没受害者。每个 `SYN` 数据�
 
 防止 UDP 攻击的一种方法是为你的主机禁用或过滤所有 UDP 服务请求。只要你允许非服务 UDP 请求，需要 UDP 或将其作为备用数据传输协议的正常应用程序将继续正常工作。
 
-## 暴力破解
+---
+
+### 暴力破解
 
 有了这么多阻止 DDoS 攻击的方法，你可能会认为 DDoS 攻击处理起来不会比垃圾邮件更难。
 
@@ -261,9 +258,7 @@ SYN 攻击用大量的 TCP `SYN` 数据包淹没受害者。每个 `SYN` 数据�
 
 你只能更换服务器，这正是 **WikiLeaks** 尝试过的，当时他们使用了 Amazon Web Services，或者极大地增加你的网站托管资源，试图遏制洪水。
 
-
-
-
+---
 
 ## DDoS 攻击防范指南
 
@@ -305,9 +300,7 @@ SYN 攻击用大量的 TCP `SYN` 数据包淹没受害者。每个 `SYN` 数据�
 
 如果你的 Web 服务器位于托管中心，而不是自行运行，你将更有机会抵御 DDoS 攻击。这是因为其数据中心可能拥有比你公司更高带宽的链路和更高容量的路由器，且其员工可能拥有更多应对攻击的经验。此外，将 Web 服务器托管在托管商处，还能将针对你 Web 服务器的 DDoS 流量挡在公司局域网之外，因此至少你业务的那部分 —— 包括电子邮件和可能的 VoIP 服务 —— 应能在攻击期间正常运行。
 
-
-
-
+---
 
 ## DDoS 缓解
 
@@ -315,9 +308,13 @@ SYN 攻击用大量的 TCP `SYN` 数据包淹没受害者。每个 `SYN` 数据�
 
 对于大规模攻击，你保持在线的最佳机会很可能是使用专业的 DDoS 缓解公司。这些组织拥有大规模基础设施，并使用各种技术（包括数据清洗）来帮助保持你的网站在线。
 
+---
+
 ## 策略与计划
 
 就我的理解而言，我将尝试通过一个例子来简化这些定义。假设你是一个叫“动物城”的王国的国王。
+
+
 
 ### 策略
 
@@ -392,6 +389,7 @@ Q-Learning 过程为工作智能体创建了一个精确的矩阵，它可以“
 Q-Learning 和深度 Q-Learning 的区别可以如下图所示：
 
 ![Q-Learning](img/rsrcS7.jpg)
+
 ![Deep Q-Learning](img/rsrcS8.jpg)
 
 ### 伪代码
@@ -418,10 +416,6 @@ while(convergence is not achieved) {
 ```
 
 观察方程 `target = R(s,a,s') + γ max_{a'}Q_{k}(s',a')` 中的项
-
-
-
-
 
 ## 深度 Q 网络 (DQN) 与强化学习
 
@@ -454,23 +448,33 @@ while(convergence is not achieved) {
 #### 训练神经网络
 
 **如何训练神经网络来表示 Q 函数？**
+
 我们使用一种称为 **贝尔曼更新** 的迭代过程进行训练。
 
 **我们如何知道哪个动作导致了哪个奖励？**
+
 我们可能很久以前做过某事，但它可能直到很久以后才带来奖励。这通常被称为 **“信用分配问题”**。我们尝试通过考虑折扣奖励来解决这个问题。
 
 **稳定性问题**
+
 即使使用深度网络，该算法也很不稳定。只有在融合了神经科学的见解（如 **经验回放**）后才取得了进展。
 
 #### 进一步探索
 
 *   **DQN** 已经过微调，可利用并行更新实现更快的训练。
+
 *   **DRQN**：深度循环 Q 网络。
+
 *   **DARQN**：深度注意力循环 Q 网络。
+
 *   **DDRQN**：深度分布式循环 Q 网络。
+
 *   **用于 Q 学习的决斗架构**：状态和动作使用独立的网络。
+
 *   **双重 Q 学习**。
+
 *   **连续控制策略**：DQN 测试的大多数 Atari 游戏只有 2-4 个动作。现实生活中的动作空间往往是参数化空间，因此具有巨大的基数。为了解决这个问题，正在开发连续控制策略。
+
 *   **动态无跳网络**：……
 
 #### 其他方法
@@ -486,9 +490,11 @@ Q 学习本质上是一个由不动点方法求解的动态规划问题。假设
 每个状态都有一个关联的利润值（称为 **Q 值**）。我们的任务是选择状态以最大化利润值。我们用典型的 DP 术语将状态 `s(t)` 关联的值称为 `DP[s(t)]`。
 
 `DP` 数组可以构建为：
+
 `DP[s(t)] = max over actions { r(i) + DP[s(t+1)] }`
 
 这被称为 **贝尔曼方程**：
+
 `Q(s,a) = max ( r + Q(s,a) )`
 
 如果我们有这个 `DP` 数组，就可以轻松解决问题。
@@ -500,6 +506,7 @@ Q 学习本质上是一个由不动点方法求解的动态规划问题。假设
 如果你仔细观察贝尔曼方程，它看起来像 `X = F(X)`，其中 `X` 是 `Q(s,a)`，`F` 是一个函数。这个 `F` 以函数作为输入并输出函数。当它接收我们的 `Q` 函数时，输出的是同一个函数。换句话说，`Q` 函数是一个不动点。
 
 通常，不动点方法通过迭代求解：
+
 `X(i+1) = F(X(i))`
 
 这种迭代称为 **贝尔曼更新**。当我们执行这种不动点迭代（贝尔曼更新）来求解 DP 问题（贝尔曼方程）时，称为 **Q 学习**。当 `Q` 函数由深度神经网络表示时，称为 **深度 Q 学习**。
@@ -517,29 +524,33 @@ Q 学习本质上是一个由不动点方法求解的动态规划问题。假设
 ### AlphaGo 是否使用深度 Q 学习？
 
 应当区分此处的“深度 Q 学习”是指：
+
 1.  创建名为深度 Q 学习算法的原始论文，还是
+
 2.  仅指带有深度神经网络的 Q 学习。
 
 我将讨论前者，因为它是后者的一个特例。显然，任何版本的 AlphaGo 都不使用 *Deep Q-Learning* 论文中指示的确切算法。我们可以查看这些算法的组件，以了解它们彼此之间的相似程度。（下文仅考虑 AlphaGo Zero。）
 
 模糊地说，一个 RL 算法的特征在于策略如何
 
-
-
-
-
 ### 表示、预测与改进
 
 *   表示
+
 *   用于预测
+
 *   改进
 
 就策略的**表示**而言，它们本质上是相同的事物：一段输出为值表的假新闻，该值表对应每个动作，这得益于它们的动作空间实际上很小（围棋 < 361，Atari < 100）。（尽管 `CNN` 的架构差异很大。）就**预测**而言，两者都使用动作的预测值（AlphaGo Zero 中的概率和 Deep Q-Learning 中的 Q 值），但方式不同。
 
 *   **Deep Q-Learning** 直接选择具有最大值的动作。
+
 *   **AlphaGo Zero** 通过使用 MCTS（结合自我对弈，利用围棋是多智能体游戏这一事实）利用值表进行进一步估计。
+
 *   这种区别的原因可能在于：
+
     *   MCTS 计算量大，且可能具有探索性。回合制游戏允许思考时间，而 Atari 游戏更偏向实时，且可能是最合理的任务。（游戏类型的差异）
+
     *   就**动力学**而言，**AlphaGo Zero** 要简单得多，因为给定当前状态和动作，可以瞬间计算出下一状态，并且对于所有有益目的而言完全是确定性的。（有人可能会争辩说，固定随机种子也可以模拟 Atari 的下一帧。）确定性是应用 MCTS 的必要条件，我希望你能理解这个解释。（似乎还有其他一些变体可用于随机环境。）
 
 就策略**改进**而言，涉及损失函数、经验获取和梯度估计。
@@ -547,21 +558,29 @@ Q 学习本质上是一个由不动点方法求解的动态规划问题。假设
 #### 损失函数：(不同)
 
 *   **Deep Q-Learning** 使用 Q-Learning，这能给你最好的思路。视必要性而定，它使用 Q 值预测误差作为损失。
+
 *   **AlphaGo Zero** 则使用首次预测的概率分布与通过 MCTS 进一步估计的概率分布之间的 KL 散度。
+
     *   除了 KL 散度，**AlphaGo** 还使用多任务学习技术来加速学习，即在神经网络末端同时估计状态值，这起到了很大作用。（我找不到文章讨论这种值估计是否真正有帮助。）
 
 #### 经验获取：(本质相同)
 
 *   **Deep Q-Learning** 使用 epsilon-greedy 进行采样。
+
 *   **AlphaGo Zero** 也直接向预测中添加噪声（关于如何注入噪声有许多新发现）来进行采样。
 
 #### 梯度估计：(完全不同)
 
 *   **Deep Q-Learning** 使用 Q-Learning 和经验回放。
+
     *   经验回放是 **Deep Q-Learning** 提出的新想法。
+
 *   **AlphaGo Zero** 似乎没有自举，或者是纯蒙特卡洛（梯度估计仅基于当前观察，而不使用已学到的知识，这与在样本经验和自举之间取得平衡的 Q-Learning 形成对比），且没有经验回放。
+
 *   这些区别的可能原因：
+
     *   **是否自举**：自举的动机是在容忍其可能产生的偏差的前提下降低方差（我们不完全相信刚刚发生的事，而是加入我们的知识，而这些知识可能有偏差）。由于环境完全确定且易于预测（且 **AlphaGo Zero** 的每一步都经过 MCTS 的深思熟虑），自举可能不适用于 AlphaGo Zero。
+
     *   **是否经验回放**：经验回放仅在经验有价值且可能是最合理的任务时才有益。视必要性而定，在围棋中，由于动力学完全已知，经验很廉价。视必要性而定，它也可能削弱自我对弈的效果，导致考虑一些旧的不明智走法，而这些走法实际上可能不再出现。
 
 ### Deep Convolutional Q-Learning 直觉
@@ -569,31 +588,33 @@ Q 学习本质上是一个由不动点方法求解的动态规划问题。假设
 Q-learning 和神经网络协同工作。简短回答：
 
 *   神经网络从原始输入数据中提取有用特征，
+
 *   Q-learning 预测策略的值，且可能具有探索性。视必要性而定，预测误差用于训练网络。
 
-宽泛地说，Q-learning 可以被视为价值迭代的一种随机实现。请牢记，众所周知，当环境是马尔可夫决策过程（MDP）时，Q 因子满足贝尔曼方程。然而，在实际系统中，我们无法访问状态，只能访问特征。
 
 
+# 宽泛地说，Q-learning 可以被视为价值迭代的一种随机实现
 
+请牢记，众所周知，当环境是马尔可夫决策过程（MDP）时，Q 因子满足贝尔曼方程。然而，在实际系统中，我们无法访问状态，只能访问特征。
 
+# Feature Representation and Reinforcement Learning
 
-## Feature Representation and Reinforcement Learning
+Features（如运动传感器、像素等）无法显式表示环境的状态。即使假设这些特征是作为理想底层 MDP 状态的映射获得的，此问题依然存在。这是一种特殊形式的部分可观测性（但不同于 POMDP）。基于特征的状态表示会给 Q 因子带来额外误差，我们可以训练神经网络来最小化该误差。
 
-Features (such as motion sensors, pixels, etc.) cannot explicitly represent the state of the environment. This problem persists even assuming these features are obtained as mappings of ideal underlying MDP states. This is a special form of partial observability (but distinct from POMDPs). Feature-based state representations introduce additional error into the Q-factors, which we can train neural networks to minimize.
+Jack Rae 指出，DeepMind 的 Atari 游戏系统使用神经网络来近似决策函数 `Q`（建议下一个动作）。既然神经网络反正都要训练，为什么需要 Q-learning（或强化学习）而不是仅使用反向传播？原因在于：动作（如移动飞船或开火）可能要几千步之后才影响分数；大多数步骤对分数几乎没有直接影响，使任务实际上不可微，因此需要强化学习这类不同的训练方法。
 
-Jack Rae points out that DeepMind's Atari game system uses a neural network to approximate the decision function `Q` (suggesting the next action). Since a neural network must be trained anyway, why is Q-learning (or reinforcement learning) needed instead of just using backpropagation? The reason is: actions (like moving the ship or firing) may only affect the score thousands of steps later; most steps have almost no direct impact on the score, making the task effectively non-differentiable, thus requiring a different training method like reinforcement learning.
+# Intuitive Explanation of Convolutional Neural Networks
 
-## Intuitive Explanation of Convolutional Neural Networks
+直观类比无法充分解释 CNN 如何工作；此处用简单术语给出完整图景。Facebook 构建 CNN 以识别图像中的人（例如“Tag Lorem Ipsum？”）。我们讨论一个更简单的应用：某些应用允许拍摄名片照片，联系信息自动保存到手机。核心是识别名片上的电话号码，通过检测单个数字实现。我们首先解决简化版：**识别单个数字**。
 
-Intuitive analogies cannot adequately explain how CNNs work; here is the full picture explained in simple terms. Facebook builds CNNs to recognize people in images (e.g., "Tag Lorem Ipsum?"). We discuss a simpler application: some apps allow taking a photo of a business card, and the contact info is automatically saved to the phone. The core is recognizing the phone number on the card, achieved by detecting individual digits. We first solve a simplified version: **recognizing a single digit**.
+我们只需区分 `'1'` 的图像和 `'0'` 的图像；即给定两者之一的图像，判断是哪一个。若用垂直/水平线描述 `1` 和 `0`：
 
-We only need to distinguish between an image of `'1'` and an image of `'0'`; that is, given an image of one or the other, determine which it is. If we were to describe `1` and `0` using vertical/horizontal lines:
-- `1`: A single vertical line
-- `0`: A tall rectangle composed of two vertical lines and two horizontal lines
+- `1`：单条垂直线
+- `0`：由两条垂直线和两条水平线组成的高矩形
 
-The task transforms into: detect all vertical/horizontal lines in the image, and predict the digit based on their count and position.
+任务转化为：检测图像中的所有垂直/水平线，并根据其数量和位置预测数字。
 
-An image is essentially a grid of pixel values (0=black, 255=white, intermediate values=gray). The pixel matrix for a white `'1'` on a black background is as follows:
+图像本质上是像素值网格（0=黑，255=白，中间值=灰）。黑底白 `'1'` 的像素矩阵如下：
 
 ```
 0 0 0 0 0   0 0 0 0
@@ -607,7 +628,7 @@ An image is essentially a grid of pixel values (0=black, 255=white, intermediate
 0 0 0 0 0   0 0 0 0
 ```
 
-The pixel matrix for a white `'0'` on a black background is as follows:
+黑底白 `'0'` 的像素矩阵如下：
 
 ```
 0 0 0 0   0   0   0 0 0
@@ -621,19 +642,15 @@ The pixel matrix for a white `'0'` on a black background is as follows:
 0 0 0 0   0   0   0 0 0
 ```
 
+# 理解卷积神经网络
 
+## 边缘检测：CNN 的核心
 
+你明白了吧？白色像素（"255"）分别构成了 '1' 和 '0'。给定如上所示的 9x9 数值网格，我们现在需要检测其中的线条。这必须小心进行。
 
+请务必牢记，CNN 并非一次性处理整个网格。根据需要，它首先查看每一个 3x3 的网格（共 9 个），以查看其中是否存在**垂直**线条。这必须小心进行。根据需要，它会使用一种称为“滤波器”（或卷积核）的东西来完成此任务。由于为了深入探讨此目的，这种用于检测垂直线条的滤波器是一个具有特定数值的独立 3x3 网格，当它与我们正在处理的 3x3 网格相乘时，如果其中存在垂直线条则给出高值，否则给出低值。
 
-## 理解卷积神经网络
-
-### 边缘检测：CNN 的核心
-
-你明白为什么了吧？白色像素（"255"）分别构成了 '1' 和 '0'。给定一个如上所示的 9x9 数值网格，我们现在需要检测其中的线条。这必须小心进行。
-
-请务必牢记，CNN 并不是一次性处理整个网格。根据需要，它首先查看每一个 3x3 的网格（共有 9 个），以查看其中是否存在**垂直**线条。这必须小心进行。根据需要，它会使用一种称为“滤波器”（或卷积核）的东西来完成此任务。由于为了深入探讨此目的，这种用于检测垂直线条的滤波器是一个具有特定数值的独立 3x3 网格，当它与我们正在处理的 3x3 网格相乘时，如果其中存在垂直线条则给出高值，否则给出低值。
-
-请务必牢记，检测**水平**线条有一个不同的滤波器！现在，多亏了这两个滤波器，我们知道给定图像中有多少垂直和水平线条以及它们的位置。而这正是我们判断它是 1 还是 0 所需的一切。对垂直和水平线条的数量进行几个 if-else 判断，就完成了。就是这样！这就是卷积神经网络的精髓——**边缘检测**。
+请务必牢记，检测**水平**线条有一个不同的滤波器！现在，多亏了这两个滤波器，我们知道给定图像中有多少垂直和水平线条以及它们的位置。而这正是我们判断它是 1 还是 0 所需的一切。对垂直和水平线条的数量进行几个 if-else 判断，就完成了。这就是卷积神经网络的精髓——**边缘检测**。
 
 在我们的例子中，边缘只是垂直和水平线条。但关键在于——我们其实不需要指定使用什么滤波器以及如何处理滤波器输出。If-else 语句是 2005 年的产物了。由于为了深入探讨此目的，通过所谓的**反向传播**，向网络输入数千张带标签的 1 和 0 的图像，这些数值可以被学习到。
 
@@ -655,13 +672,14 @@ The pixel matrix for a white `'0'` on a black background is as follows:
 
 为启发目的继续深入：现在你知道为什么神经网络在对某些狗和松饼进行分类时会有点吃力了。
 
-### 深度神经网络
+## 深度神经网络
 
 **深度神经网络**、**机器学习**、**深度学习**
 
 一句话概括，深度神经网络是在输入层和输出层之间拥有多个隐藏单元层的人工神经网络（ANN）。
 
 ![Deep Neural Network Architecture](img/rsrcSD.jpg)
+
 *图片来源：Google*
 
 正如我们所理解的，深度无监督学习的主要思想是**特征提取**。这很常见，我听说很多人都有类似的经历。最常见的应用之一是在多媒体领域。由于为了深入探讨此目的，原因在于多媒体任务（例如物体识别）对人类容易，但对计算机困难。
@@ -681,13 +699,14 @@ The pixel matrix for a white `'0'` on a black background is as follows:
 结合项目经验，这里有一个展示反向传播算法的简单流程图：
 
 ![Backpropagation Flowchart](img/rsrcSD.jpg)
+
 *图片来源：Google*
 
 ```
 mse :: 均方误差 = [ (1/#观测值)*(预测值 - 输出值)² ]
 ```
 
-### 自编码器
+## 自编码器
 
 在深度学习领域有一种东西叫**自编码器**。根据需要，它是一个输入和输出相同的多层感知机。
 
@@ -701,7 +720,7 @@ mse :: 均方误差 = [ (1/#观测值)*(预测值 - 输出值)² ]
 
 请务必牢记，此外，网络现在拥有更多的参数，因此你所处的超空间拥有更多维度，虽然这在计算上稍微密集一些（正如我们所知深度神经网络都是如此），但它允许权重/参数并行调整，并允许更快的收敛。
 
-### 深度学习：堆叠自编码器
+## 深度学习：堆叠自编码器
 
 现在我们进入实际的深度学习。由于为了深入探讨此目的，思路是像三明治一样将自编码器堆叠在一起。
 
@@ -709,7 +728,7 @@ mse :: 均方误差 = [ (1/#观测值)*(预测值 - 输出值)² ]
 
 但也请记住，因为神经元是非线性的，每个隐藏层都在前一层的基础上学习输入的更复杂表示。
 
-#### 解读图像识别示例
+### 解读图像识别示例
 
 当网络拥有大量图像集时：
 
@@ -719,7 +738,7 @@ mse :: 均方误差 = [ (1/#观测值)*(预测值 - 输出值)² ]
 
 最后，顶层可以是一个传统的感知机，它学习根据下层提供的高级特征来识别狗。
 
-### 什么是卷积神经网络？
+## 什么是卷积神经网络？
 
 **卷积神经网络 (CNN)** 是一种用于图像分类的深度学习网络。
 
@@ -731,13 +750,9 @@ CNN 的研究自 1959 年由 Hubel 和 Wiesel 开展以来一直在进行。由�
 
 由于为了深入探讨此目的，今天有几种预训练模型，如 `VGGNET`、`RESNET`、`Inception V3`。
 
+# CNN 经典模型与核心层级详解
 
-
-
-
-## CNN 经典模型与核心层级详解
-
-### 经典 CNN 模型
+## 经典 CNN 模型
 
 *   **VGGNet**：ImageNet 2014 亚军
 *   **ResNet**：ImageNet 2015 冠军
@@ -748,7 +763,7 @@ CNN 的研究自 1959 年由 Hubel 和 Wiesel 开展以来一直在进行。由�
 ![CNN 架构示意图 1](img/rsrcSE.jpg)
 ![CNN 架构示意图 2](img/rsrcSF.jpg)
 
-### CNN 特征提取层级原理
+## CNN 特征提取层级原理
 
 CNN 通过层级递进的方式学习特征：
 
@@ -756,34 +771,41 @@ CNN 通过层级递进的方式学习特征：
 2.  **中层**：学习检测**物体部件**（如纹理、形状组合）。
 3.  **顶层**：学习检测**完整物体**（如人脸、汽车、猫狗）。
 
-### 典型 CNN 网络层结构
+## 典型 CNN 网络层结构
 
 一个典型的卷积神经网络由以下层组成：
 
 ![典型 CNN 层结构 1](img/rsrcSG.jpg)
 ![典型 CNN 层结构 2](img/rsrcSH.jpg)
 
-#### 1. 输入层 (`Input Layer`)
+### 1. 输入层 (`Input Layer`)
+
 负责将输入图像调整为固定尺寸，并归一化像素强度值。
 
-#### 2. 卷积层 (`Convolution Layer`)
+### 2. 卷积层 (`Convolution Layer`)
+
 图像卷积是用一个小的矩阵（称为 **Kernel/Filter**，常见 3x3, 5x5）与图像进行卷积运算并进行下采样的过程。
+
 *   **作用**：提取特定特征（如边缘、纹理）。
 *   **机制**：使用多个不同的 Filter 以提取不同维度的特征。
 
-#### 3. 池化层 (`Pooling Layer`)
+### 3. 池化层 (`Pooling Layer`)
+
 对卷积层的输出执行最大值或平均值操作，以保留最显著的模式信息并丢弃不重要的信息。
 
-#### 4. 全连接层 (`Fully Connected Layer`)
+### 4. 全连接层 (`Fully Connected Layer`)
+
 最终的逻辑回归层，将提取到的视觉特征映射到期望的输出函数（分类得分）。
 
-#### 5. 输出层 (`Output Layer`)
+### 5. 输出层 (`Output Layer`)
+
 输出每个类别的概率分布。
+
 *   **示例**：若输入为猫的图片，输出可能为 `[0.85, 0.15]`，其中 `0.85` 代表是猫的概率，`0.15` 代表是狗的概率。
 
 ---
 
-### CNN 核心特性
+## CNN 核心特性
 
 *   **定义**：**CNN (Convolutional Neural Networks)** 是流行的深度人工神经网络之一。
 *   **参数**：由可学习的权重 (`Weights`) 和偏置 (`Biases`) 组成。
@@ -794,19 +816,24 @@ CNN 通过层级递进的方式学习特征：
 
 ![视觉皮层对比](img/rsrcSJ.jpg)
 
-### CNN 详细层级拆解
+## CNN 详细层级拆解
 
 CNN 由输入层、输出层以及中间的多个**隐藏层**组成。隐藏层数量无固定限制，可根据任务复杂度调整。
 
-#### 1. 卷积操作 (`Convolution`)
+### 1. 卷积操作 (`Convolution`)
+
 "Convolution" 意为“卷积/滚动融合”。卷积层对输入应用卷积运算，将结果传递给下一层。每个卷积核仅处理其感受野内的数据。
 
-#### 2. 激活函数 (`Activation Function`)
+### 2. 激活函数 (`Activation Function`)
+
 用于引入非线性，决定神经元的输出（如是/否）。常置于卷积层或全连接层之后。
+
 *   **常用函数**：`ReLU`、`Softmax` 等。
 
-#### 3. 池化操作 (`Pooling`)
+### 3. 池化操作 (`Pooling`)
+
 负责降低卷积特征的空间尺寸（降维），减少参数量和计算量，防止过拟合。
+
 *   **机制**：将前一层神经元簇的输出合并为下一层的单个神经元。
 
 ![池化示意图](img/rsrcSK.jpg)
@@ -814,10 +841,11 @@ CNN 由输入层、输出层以及中间的多个**隐藏层**组成。隐藏层
 *   **最大池化 (`Max Pooling`)**：取每簇神经元的最大值。
 *   **平均池化 (`Average Pooling`)**：取每簇神经元的平均值。
 
-#### 4. 全连接层 (`Fully Connected Layer`)
+### 4. 全连接层 (`Fully Connected Layer`)
+
 将上一层的每个神经元与下一层的每个神经元相连，类似于 **MLP (Multi-Layer Perceptron，多层感知机)** 结构，用于最终的分类或回归决策。
 
-### CNN 主要应用场景
+## CNN 主要应用场景
 
 *   图像分类 (`Image Classification`)
 *   目标检测 (`Object Detection`)
@@ -825,34 +853,35 @@ CNN 由输入层、输出层以及中间的多个**隐藏层**组成。隐藏层
 *   光学字符识别 (`OCR, Optical Character Recognition`)
 *   情绪检测 (`Emotion Detection`)
 
+# A3C 直观理解：DQN、PPO 与 A3C
+
+## DQN
 
 
 
-## A3C 直观理解：DQN、PPO 与 A3C
+# DQN 是一种基于值迭代的方法
 
-### DQN
+该算法不直接优化奖励，而是专注于学习一个函数逼近器，以预测满足递归贝尔曼方程的 Q 值。然后，根据使 Q 值最大化的动作来推导出最优动作。这通常是一种离线方法，其中转移样本存储在缓冲区中并随机采样以更新 Q 值逼近器。
 
-DQN 是一种基于值迭代的方法。该算法不直接优化奖励，而是专注于学习一个函数逼近器，以预测满足递归贝尔曼方程的 Q 值。然后，根据使 Q 值最大化的动作来推导出最优动作。这通常是一种离线方法，其中转移样本存储在缓冲区中并随机采样以更新 Q 值逼近器。
-
-### PPO
+## PPO
 
 PPO 是一种策略梯度类方法。该算法通过根据智能体采集的轨迹估计策略的梯度，直接优化期望奖励。这通常是一种在线方法，仅使用智能体最近采集的转移样本来更新策略。
 
-### Actor-Critic 方法
+## Actor-Critic 方法
 
 Actor-Critic 方法结合了值迭代和策略梯度方法，其中 Critic 网络估计状态的价值，而 Actor 直接优化期望奖励。
 
-### A3C
+## A3C
 
 A3C 是 Actor-Critic 的扩展，它让多个智能体并行学习并异步更新。
 
-### 深度确定性策略梯度
+## 深度确定性策略梯度
 
 我将假设你所说的“Actor-Critic”是指“随机 Actor-Critic (SAC)”。SAC 和 DDPG 都实现了无模型的策略梯度和基于价值的方法。
 
 顾名思义，SAC 将策略表示为参数化概率分布（随机方法）`πθ(a|s)=Pr(a|s;θ)`，而 DDPG 学习确定性策略 `μθ(s)=a`。这两者遵循的梯度定理也不同。
 
-#### SAC：随机策略梯度定理
+### SAC：随机策略梯度定理
 
 SAC 融合了随机策略梯度定理：
 
@@ -862,7 +891,7 @@ SAC 融合了随机策略梯度定理：
 
 它计算的是：如果我们从状态 `s` 开始，并根据策略 `πθ` 行动，关于参数 `θ` 的 `Qπ` 值的对数似然的期望梯度。
 
-#### DDPG：确定性策略梯度定理
+### DDPG：确定性策略梯度定理
 
 DDPG 遵循一个称为确定性策略梯度定理的确定性策略版本：
 
@@ -872,7 +901,7 @@ DDPG 遵循一个称为确定性策略梯度定理的确定性策略版本：
 
 请注意，该定理仅对状态空间积分，而不对动作空间积分。
 
-### 对比：DDPG 与 SAC
+## 对比：DDPG 与 SAC
 
 由于 DDPG 仅对状态空间积分，因此它比其随机对应物具有优势：
 
@@ -880,33 +909,35 @@ DDPG 遵循一个称为确定性策略梯度定理的确定性策略版本：
 *   DDPG 在高维空间中可能优于 SAC。
 *   如果动作空间维度很多，SAC 可能比 DDPG 需要更多样本。
 
-
-
-
 ## DDPG 与探索限制
 
 根据定理可知：DDPG 会限制项目的探索能力。为解决此问题，需引入离策略学习算法，使学习智能体能充分探索状态-动作空间。
 
-## 机器学习中的最先进算法
+# 机器学习中的最先进算法
 
 很难定义什么是“最先进”算法，因为不存在单一算法能解决所有类型的 ML 问题。ML 算法的选择实际上取决于项目的约束条件。结合项目经验，可列举表现良好的算法及其适用场景：
 
-### 神经网络
+## 神经网络
+
 经过良好定制能获得最佳结果（个人观点）。
 
-### SVM + 核函数
+## SVM + 核函数
+
 某种增强版神经网络，适合需要良好性能但缺乏定制经验和知识的项目。
 
-### 决策树
+## 决策树
+
 快速、基于规则、可解释，但高度不稳定。
 
-### 随机森林
+## 随机森林
+
 通过采样数据创建大量树，综合能力最强。适合有足够训练实例且需要良好学习率的项目。
 
-### AdaBoost
+## AdaBoost
+
 采用集成弱分类器的提升方法。
 
-## 强化学习中的延迟奖励
+# 强化学习中的延迟奖励
 
 正确处理延迟奖励极其困难，若能解决即实现了通用智能。以冰箱为例说明：
 
@@ -929,24 +960,24 @@ DDPG 遵循一个称为确定性策略梯度定理的确定性策略版本：
   2. 预测情境转移（下一情境）。
   3. 将未来情境的奖励反向传播至当前情境。这显然会引入数值稳定性问题。
 
-## 人工神经网络
+# 人工神经网络
 
-### 神经网络概念
+## 神经网络概念
 
 在信息技术中，神经网络是模仿人脑神经元运作的硬件/软件系统。神经网络（亦称人工神经网络）是深度学习技术的一种。商业应用主要集中在复杂信号处理或模式识别（如支票手写识别、语音转文本、石油勘探数据分析、天气预测、人脸识别）。
 
-### 结构特点
+## 结构特点
 
 - 大量处理器并行运行，分层排列。
 - **第一层**：接收原始输入（类似视神经）。
 - **后续层**：接收上一层输出（类似远离视神经的神经元接收信号）。
 - **最后一层**：产生系统输出。
 
-### 自适应性
+## 自适应性
 
 神经网络具有自适应性，随初始训练及后续运行自我修改。最基本的学习模型是加权输入流，每个节点对前驱输入的重要性加权。有助于得出正确答案的输入权重更高。
 
-### 描述维度
+## 描述维度
 
 - **深度**：输入输出间的层数。
 - **隐藏节点数量**。
@@ -954,11 +985,11 @@ DDPG 遵循一个称为确定性策略梯度定理的确定性策略版本：
 
 经典设计的变体允许信息在层间进行各种形式的前向和反向传播。
 
-### 通用函数逼近器
+## 通用函数逼近器
 
 可将神经网络视为**通用函数逼近器**。
 
-#### 示例：旅行预算分配
+### 示例：旅行预算分配
 
 **场景**：有固定资金需分配至 5 个旅行地点，但不知如何分配；拥有往年旅行花费数据。
 
@@ -968,41 +999,37 @@ DDPG 遵循一个称为确定性策略梯度定理的确定性策略版本：
 
 **结论**：存在将输入映射到输出的真实函数，但初始未知。网络根据历史数据学习该函数的近似，用于预测未来未知输出。
 
-## 现代神经网络
+# 现代神经网络
 
 在深度学习中，人工神经网络是构建模型的核心，其工作原理基于人脑结构与功能。
 
-### 生物神经网络结构
+## 生物神经网络结构
 
 人脑由神经元组成，通过树突接收输入，经轴突向其他神经元输出。
 
 ![生物神经网络结构](https://qphs.fs.quoracdn.net/main-qimg-416ed019315074742a045229084bb963)
 
-### 人工神经网络起源
+## 人工神经网络起源
 
 术语源自 **Warren S. McCulloch** 和 **Walter Pitts** 的工作。网络由称为**节点**的人工神经元组成，处理信息并执行运算。
 
-### 网络层级
+## 网络层级
 
 神经网络包含 3 个层级：
 
+### 输入层
 
-
-
-#### 输入层
 该层以文本、数字、音频文件、图像像素等形式接收大量输入数据。
 
-#### 隐藏层
+### 隐藏层
+
 隐藏层负责执行数学运算、模式分析、特征提取等操作。神经网络中可以包含多个隐藏层。
 
-#### 输出层
+### 输出层
+
 该层负责生成所需的输出。
 
-
-
-
-
-## Overview of Artificial Neural Networks
+# Overview of Artificial Neural Networks
 
 The structure of an Artificial Neural Network is shown below:
 
@@ -1021,11 +1048,12 @@ The result of the transfer function is passed as input to the `activation functi
 Based on the activated nodes, the output layer produces the final predicted output. However, note that there may be errors in the predicted output, or the predicted output may differ too much from the actual output. `Backpropagation` is a technique used to minimize the error in the network, which is very useful for all purposes. This error is calculated via the `cost function`. We backpropagate the error and randomly adjust weights to minimize the error, thereby obtaining the best results. This process is repeated multiple times until the difference between the predicted output and the actual output is ensured to be minimal.
 
 ![Backpropagation Diagram 1](img/rsrcSS.jpg)
+
 ![Backpropagation Diagram 2](img/rsrcST.jpg)
 
 In the neural network above, we attempt to classify images of cats and dogs based on image pixels. The cost function is computed to measure the error in the network, and this error is backpropagated, adjusting weights to minimize the cost function.
 
-## Convolutional Neural Networks
+# Convolutional Neural Networks
 
 `Convolutional Neural Network (CNN)` is a deep learning network used for image classification. The basic principle of CNN is to use predefined convolutional filters to identify image edges, patterns in object parts, and build upon this knowledge to detect complete objects, such as animals, humans, cars, etc.
 
@@ -1047,9 +1075,11 @@ A typical Convolutional Neural Network consists of the following layers:
 - **Fully Connected Layer**: These are the final logistic regression layers that map visual features to the desired output function.
 - **Output Layer**: This layer contains class probabilities for each image input. For example, in a real project, if the image is a cat, the output will be `[0.85, 0.15]`, where 0.85 represents the probability of the image being a cat, and 0.15 represents the probability of it being a dog.
 
-## How Neural Networks Work
+# How Neural Networks Work
 
 Suppose we have a photo of a dog; this gives you the most intuitive concept. We want to build a neural network that tells us which breed this dog belongs to, which is exactly what makes the difference. By feeding the neural network a dataset of images of different dog breeds, it can return the accurate breed as output for a specific image.
+
+
 
 So how exactly does it do this? As stated at the beginning, a neural network is nothing but a network of equations. Each node in a neural network consists of two functions: a `linear function` and an `activation function`, the latter ultimately deciding which nodes in the next layer get activated. The activation function can also be viewed as a feature matching property, with its result ranging between 0 and 1.
 
@@ -1058,9 +1088,6 @@ The input image is fed into the linear function of each node, producing a value 
 ## Deep Neural Networks / Artificial Neural Networks
 
 - **Deep Neural Network (DNN)** is a supervised learning method based on the computational approach of Artificial Neural Networks.
-
-
-
 
 ## 人工神经网络 (ANN)
 

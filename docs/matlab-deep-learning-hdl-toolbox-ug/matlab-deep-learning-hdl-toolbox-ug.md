@@ -1,69 +1,14 @@
+
 # MATLAB 深度学习 HDL 工具箱使用指南
 
+## 修订历史
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 修订历史
-
-- 2020 年 9 月版本 1.0（2020 版本发布）在线更新
-- 2021 年 3 月版本 1.1（R2021a 版本发布）在线修订
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- 2020 年 9 月 版本 1.0（2020 版本发布）在线更新
+- 2021 年 3 月 版本 1.1（R2021a 版本发布）在线修订
 
 ## 什么是深度学习？
 
-
-## 深度学习简介
+### 深度学习简介
 
 深度学习是机器学习的一个分支，它教电脑如何像人类自然而然做的那样：从经验中学习。学习算法使用计算方法直接从数据中“学习”信息，而不依赖于预先定义的方程作为模型。深度学习使用神经网络直接从图像中学习有用的数据表示。它是机器学习的一种特殊形式，可用于图像分类、目标检测、语音识别和内容描述等应用。相关特征会自动从图像中提取。深度学习算法可以应用于监督学习和无监督学习。这些深度算法随数据规模缩放，也就是说网络性能随数据大小而提高。
 
@@ -71,23 +16,21 @@
 
 可以使用从头训练、迁移学习或特征提取等方法为分类任务训练深度学习网络。
 
-## 从头训练
+### 从头训练
 
 从头训练深度学习神经网络需要大量的标记数据。使用神经网络工具箱创建网络架构时，可以使用内置层、定义自己的层，或从 Caffe 模型导入层。然后使用大量的标记数据对神经网络进行训练。使用训练后的网络进行预测或分类。这些网络的训练可能需要几天或几周。因此，它并不是一种常用的训练方法。
 
-img/747bfd4f288a7e0917a1f2763cc5c2d_10_0.png
-img/747bfd4f288a7e0917a1f2763cc5c2d_10_1.png
+`img/747bfd4f288a7e0917a1f2763cc5c2d_10_0.png`
+
+`img/747bfd4f288a7e0917a1f2763cc5c2d_10_1.png`
 
 更多信息，请参阅“迁移学习”。
 
-
-
-
-# 特征提取
+## 特征提取
 
 深度学习网络中的层被用于从输入数据中提取特征。这种方法使用网络作为特征提取器。训练后提取的特征可以放入各种机器学习模型中，例如支持向量机（SVM）。
 
-## 卷积神经网络
+### 卷积神经网络
 
 卷积神经网络（CNN）是最常用的深度网络之一。它们受动物视觉皮层启发的前馈神经网络。这些网络设计用于具有空间时间信息的数据。因此，卷积神经网络广泛应用于图像识别、语音识别和自然语言处理。卷积神经网络架构由各种层组成，将原始像素转换为类别得分。
 
@@ -97,7 +40,6 @@ img/747bfd4f288a7e0917a1f2763cc5c2d_10_1.png
 
 关于 CNN 训练过程的更多详细信息，请参见“深度学习入门”。
 
-
 ## 深度学习处理器架构
 
 软件提供了通用的深度学习处理器 IP，它是目标无关的，可以部署到任何指定的平台。该处理器可以复用并共享，以适应具有各种层大小和参数的神经网络。使用此处理器从 MATLAB 快速原型化神经网络并将其部署到 FPGA。
@@ -106,41 +48,39 @@ img/747bfd4f288a7e0917a1f2763cc5c2d_10_1.png
 
 ![](img/747bfd4f288a7e0917a1f2763cc5c2d_15_0.png
 
-# DDR内存
+## DDR内存
 
 你可以将输入、权重和输出图像存储在外部 DDR内存中。处理器由四个 AXI4 主接口组成，与外部内存通信。使用一个 AXI4 主接口，可以将输入加载到块内存（BRAM）中。块内存为通用卷积处理器执行激活。
 
-## 通用卷积处理器
+### 通用卷积处理器
 
 通用卷积处理器执行卷积层的等效操作。使用另一个 AXI4 主接口，为通用卷积处理器提供卷积操作权重。通用卷积随后在图像上执行卷积操作并为激活化提供激活。该处理器是通用的，因为它支持各种大小的张量。
 
-# 激活化
+## 激活化
 
 根据你提供的神经网络，激活化模块用于添加非线性、池化层或执行局部响应归一化（LRN）。可以看到处理器有两个激活化单元。一个单元跟随通用卷积处理器。另一个单元跟随通用 FC 处理器。
 
-## 卷积控制器（调度）
+### 卷积控制器（调度）
 
 取决于预训练网络中卷积层的数量，卷积控制器（调度）充当乒乓缓冲区（ping-pong buffers）。通用卷积处理器和激活化一次可以处理一层。为了处理下一层，卷积控制器（调度）回到 BRAM 并执行网络中所有卷积层的卷积和激活化。
 
-## 通用 FC 处理器
+### 通用 FC 处理器
 
 通用 FC 处理器执行全连接层（FC）的等效操作。使用另一个 AXI4 主接口，通用 FC 处理器提供全连接层的权重。通用 FC 处理器随后在图像上执行全连接层操作并为激活化模块提供激活。此处理器也是通用的，因为它支持各种大小的张量。
 
-## FC 控制（调度）
+### FC 控制（调度）
 
 FC 控制（调度）的工作原理与卷积控制器（调度）类似。FC 控制（调度）与 FIFO 协作，作为乒乓缓冲区用于执行全连接层操作和激活化，具体取决于神经网络中的 FC 层数量、ReLU、池化或 LRN 特性。在通用 FC 处理器和激活化模块处理图像中的所有帧后，预测结果或得分通过 AXI4 主接口传输并存储在外部 DDR内存中。
 
-# 深度学习处理器应用
+## 深度学习处理器应用
 
 深度学习处理器 IP 的一种应用是 MATLAB 深度学习处理器：要创建此功能，使用 AXI4 接口将深度学习处理器 IP 与 HDL Verifier™ MATLAB AXI Master IP 集成。通过 JTAG 或 PCI Express 接口，你可以从 MATLAB 导入预训练神经网络，执行深度学习处理器 IP 中指定的网络并将分类结果返回给 MATLAB。
 
 更多信息请参见第 3 页的“MATLAB 控制深度学习处理器”。
 
-# 应用与示例
+## 应用与示例
 
-## 3 应用与示例
-
-# MATLAB 控制深度学习网络
+### MATLAB 控制深度学习网络
 
 要从 MATLAB 在 FPGA 上快速原型化深度学习网络，请使用 MATLAB 控制深度学习处理器。该处理器将通用深度学习处理器与 HDL Verifier MATLAB AXI Master IP 集成。更多信息：
 
@@ -153,14 +93,12 @@ FC 控制（调度）的工作原理与卷积控制器（调度）类似。FC �
 
 将通用深度学习处理器 IP 与深度学习处理器 IP 核心的 MATLAB AXI4 Slave 接口集成。通过使用 JTAG 或 PCI Express 接口，IP 响应或写入来自 MATLAB 的命令。因此，你可以使用 MATLAB 控制的深度学习处理器从 MATLAB 将深度学习神经网络部署到 FPGA 板，执行网络架构指定的运算，然后将预测结果返回给 MATLAB。接下来的示例说明了如何在 Intel® Arria® 10 SoC 开发套件上部署预训练网络 AlexNet。
 
-3-2
-
-# FPGA 深度学习概述
+## FPGA 深度学习概述
 
 - 第 4-2 页“FPGA 深度学习工作流”
 - 第 4-4 页“FPGA 深度学习 解决方案与工作流”
 
-# FPGA 深度学习工作流
+## FPGA 深度学习工作流
 
 此图说明了 FPGA 深度学习工作流。
 
@@ -170,7 +108,7 @@ FC 控制（调度）的工作原理与卷积控制器（调度）类似。FC �
 
 - 1 加载深度学习神经网络
 
-你可以将 AlexNet、VGG 和 GoogleNet 等各种深度学习网络加载到 MATLAB 框架。当你编译网络时，网络参数保存在由 NetConfigs 和 LayerConfigs 组成的结构中。NetConfigs 包含训练网络的权重和偏置。LayerConfig 包含训练网络的各种配置细节。
+你可以将 AlexNet、VGG 和 GoogleNet 等各种深度学习网络加载到 MATLAB 框架。当你编译网络时，网络参数保存在由 `NetConfigs` 和 `LayerConfigs` 组成的结构中。`NetConfigs` 包含训练网络的权重和偏置。`LayerConfig` 包含训练网络的各种配置细节。
 
 - 2 在 MATLAB 上通过迁移学习修改预训练神经网络
 
@@ -182,18 +120,13 @@ FC 控制（调度）的工作原理与卷积控制器（调度）类似。FC �
 
 - 4 部署到目标 FPGA 板
 
-通过特定的 API 以及 NetConfigs 和 LayerConfigs，部署编译后的网络会将用户训练的网络连接成固定位流，然后下载该位流。
+通过特定的 API 以及 `NetConfigs` 和 `LayerConfigs`，部署编译后的网络会将用户训练的网络连接成固定位流，然后下载该位流。
 
 - 5 预测结果
 
 要对输入图像进行分类，请使用部署在 FPGA 上的框架。
 
-
-
-
-
 参见第 4-4 页“FPGA 深度学习解决方案与工作流”
-
 
 图展示了在 FPGA 上实现深度学习的 MATLAB 解决方案。
 
@@ -211,7 +144,7 @@ FPGA 具有以下优势：
 - 模型并行
 - 流水线并行
 
-# FPGA 深度学习工作流
+### FPGA 深度学习工作流任务
 
 要运行某些 FPGA 深度学习任务，请参考下表列出的信息。
 
@@ -225,9 +158,6 @@ FPGA 具有以下优势：
 | 比较量化后的预训练系列网络与单数据类型预训练系列网络的准确性。 | 第 11-14 页“验证” |
 | 在您的目标 FPGA 板卡上运行量化的预训练系列网络。 | 第 11-17 页“代码生成与部署” |
 
-
-
-
 要原型化并部署您的自定义系列深度学习网络，请创建一个 `dlhdl.Workflow` 类的对象。使用此对象完成以下任务：
 
 - 使用 `deploy` 函数在指定的目标 FPGA 或 SoC 板卡上编译并部署深度学习网络。
@@ -239,13 +169,11 @@ FPGA 具有以下优势：
 
 ![](img/747bfd4f288a7e0917a1f27637cc5c2d_27_0.png)
 
-
-dldl.Target | dldl.Workflow
-
+`dldl.Target` | `dldl.Workflow`
 
 - 第 10-5 页“在 Xilinx ZCU102 SoC 上开始深度学习 FPGA 部署”
 
-分析推理运行
+### 分析推理运行
 
 通过我们的预训练系列网络查看层、卷积模块和全连接模块的网络预测和性能数据。示例展示了如何获取 ResNet-18 网络的预测和分析结果。
 
@@ -279,7 +207,6 @@ snet.Layers(end).ClassNames(idx)
 ### Running simple input activations.
 ```
 
-
 | 末帧延迟(Cycles) | 末帧延迟(秒) | 帧数 | 总延迟 | 帧/秒 |
 | --- | --- | --- | --- | --- |
 | Network | 23659630 | 0.10754 | 1 | 23659630 | 9.3 |
@@ -308,18 +235,11 @@ snet.Layers(end).ClassNames(idx)
 | res5b branch2b | 904389 | 0.00411 |
 | res5b | 904367 | 0.00408 |
 
-
-
-
-
-
-
 | 本节包含... |
 | :--- |
 | 第 6-2 页的“以太网接口” |
 | 第 6-2 页的“配置 LIBIIO/Ethernet 连接” |
 | 第 6-2 页的“LIBIIO/Ethernet 性能” |
-
 
 以太网接口利用 ARM 处理器从 FPGA 发送和接收信息。ARM 处理器运行在 Linux 操作系统上。你可以使用 Linux 操作系统服务与 FPGA 交互。使用以太网接口时，位流会被下载到 SD 卡中。位流持久化，并在每次打开 FPGA 时重新编程。在编程位流时，ARM 处理器会配置正确的设备树。
 
@@ -329,9 +249,7 @@ snet.Layers(end).ClassNames(idx)
 
 ![](img/747bfd4f288a7e0917a1f27637cc5c2d_35_0.png)
 
-
 你可以在创建工作流对象时将 ddllWorkflow 对象的硬件接口配置为以太网。更多信息请参见“创建具有以太网接口的目标对象并设置 IP 地址”。
-
 
 表列出了 JTAG 相比 LIBIIO/Ethernet 的性能速度提升。
 
@@ -345,8 +263,8 @@ dlhdl.Target
 ```
 
 ## 更多信息
-- 第 10-77 页的“使用以太网加速大型网络的原型工作流”
 
+- 第 10-77 页的“使用以太网加速大型网络的原型工作流”
 
 ## 支持的网络、层、板卡和工具
 
@@ -357,66 +275,95 @@ dlhdl.Target
 | 第 7-21 页的“支持的板卡” |
 | 第 7-22 页的“第三方综合工具和版本支持” |
 
-
 Deep Learning HDL Toolbox 支持卷积神经网络（CNN 或 ConvNets）的代码生成。你可以为任何计算层支持代码生成的已训练卷积神经网络生成代码。请参见第 7-10 页的“支持的层”。你可以使用表列出的预训练网络之一，并为你的 Intel 或 Xilinx FPGA 板卡生成代码。
 
 | 网络 | 网络描述 | 类型 | 单一数据类型（带发行位流） | INT8 数据类型（带发行位流） | 应用领域 |
 |---|---|---|---|---|---|
-| AlexNet | AlexNet 卷积神经网络。 | 序列网络 | 是 | ZCU102 Z706 Arria10 SoC | ZCU102 Z706 Arria10 SoC | 分类 |
-| LogoNet | AlexNet 识别网络 (LogoNet) 是 MATLAB 开发的识别网络。更多信息请参见“Logo 识别网络”。 | 序列网络 | 是 | 是 | 是 | 是 | 是 | 是 | 分类 |
-| MNIST | MNIST 数字分类。参见“为分类创建简单的深度学习网络” | 序列网络 | 是 | 是 | 是 | 是 | 是 | 是 | 分类 |
-| MNIST | | | | | | | | | | | | 分类 |
-| 车道检测 | LaneNet 卷积神经网络。更多信息请参见第 14 页的“为车道检测部署迁移学习网络” | 序列网络 | 是 | 是 | 是 | 是 | 是 | 是 | 分类 |
-| VGG-16 | VGG-16 卷积神经网络。对于预训练的 VGG-16 模型，请参见 vgg16。 | 序列网络 | 否。网络超过 PL 内存大小 | 否。网络超过 FC 模块大小。 | 是 | 是 | 否。网络超过 FC 模块大小。 | 是 | 分类 |
-| VGG-19 | VGG-19 卷积神经网络。对于预训练的 VGG-19 模型，请参见 vgg19 | 序列网络 | 否。网络超过 PLD 内存大小 | 否。网络超过 FC 模块大小。 | 是 | 是 | 否。网络超过 FC 模块大小。 | 是 | 是 | 分类 |
-| Darknet- 19 | Darknet-19 | Darknet-19 卷积神经网络。对于预训练的 darknet-19 模型，请参见 darknet-19 | 序列网络 | 是 | 是 | 是 | 是 | 分类 |
-| 雷达 | 使用多普勒识别对象的卷积神经网络。 | 序列网络 | 是 | 是 | 是 | 是 | | | 软件定义无线电 (SDR) |
-| 缺陷检测 | 用于识别和分类的自定义卷积网络。更多信息请参见第 10-24 页的“缺陷检测”。 | 序列网络 | 是 | 是 | | | |
-| | | | | | | | | | | | |
-| 缺陷检测 | | | | | | | | | | | |
-| YOLO v2 | 仅一次 (YOLO) 是一种目标检测器，它可以解码卷积神经网络的预测并在对象周围生成边界框。更多信息请参见第 10-125 页的“使用基于 DAG v2 部署到 FPGA 的车辆检测” | | | | | | | | | |
-| Darknet-53 | Darknet-53 卷积神经网络。对于预训练的 Darknet-53 模型，请参见 darknet53。 | 基于有向无环图 (DAG) 的网络 | | | | | | | |
-| ResNet-18 | 用于预训练 ResNet-18 模型的 ResNet-1 卷积神经网络，请参见 resnet18。 | 基于有向无环图 (DAG) 的网络 | | | | | | | |
-| ResNet-50 | 用于预训练 ResNet-50 模型的 ResNet-5 卷积神经网络，请参见 resnet50。 | 基于有向无环图 (DAG) 的网络 | | | | | | | |
-| MobileNetV2 | MobileNet-v2 卷积 | 基于有向无环图 (DAG) 的神经网络。对于预训练的 MobileNet-v2 模型，mobilenet2。 | 是 | 是 | 是 | 否 | 否 | 否 | 分类 |
 
+
+
+| AlexNet | AlexNet 卷积神经网络。 | 序列网络 | 是 | ZCU102 Z706 Arria10 SoC | ZCU102 Z706 Arria10 SoC | 分类 |
+
+| LogoNet | AlexNet 识别网络 (LogoNet) 是 MATLAB 开发的识别网络。更多信息请参见“Logo 识别网络”。 | 序列网络 | 是 | 是 | 是 | 是 | 是 | 是 | 分类 |
+
+| MNIST | MNIST 数字分类。参见“为分类创建简单的深度学习网络” | 序列网络 | 是 | 是 | 是 | 是 | 是 | 是 | 分类 |
+
+| MNIST | | | | | | | | | | | | 分类 |
+
+| 车道检测 | LaneNet 卷积神经网络。更多信息请参见第 14 页的“为车道检测部署迁移学习网络” | 序列网络 | 是 | 是 | 是 | 是 | 是 | 是 | 分类 |
+
+| VGG-16 | VGG-16 卷积神经网络。对于预训练的 VGG-16 模型，请参见 vgg16。 | 序列网络 | 否。网络超过 PL 内存大小 | 否。网络超过 FC 模块大小。 | 是 | 是 | 否。网络超过 FC 模块大小。 | 是 | 分类 |
+
+| VGG-19 | VGG-19 卷积神经网络。对于预训练的 VGG-19 模型，请参见 vgg19 | 序列网络 | 否。网络超过 PLD 内存大小 | 否。网络超过 FC 模块大小。 | 是 | 是 | 否。网络超过 FC 模块大小。 | 是 | 是 | 分类 |
+
+| Darknet- 19 | Darknet-19 | Darknet-19 卷积神经网络。对于预训练的 darknet-19 模型，请参见 darknet-19 | 序列网络 | 是 | 是 | 是 | 是 | 分类 |
+
+| 雷达 | 使用多普勒识别对象的卷积神经网络。 | 序列网络 | 是 | 是 | 是 | 是 | | | 软件定义无线电 (SDR) |
+
+| 缺陷检测 | 用于识别和分类的自定义卷积网络。更多信息请参见第 10-24 页的“缺陷检测”。 | 序列网络 | 是 | 是 | | | |
+
+| | | | | | | | | | | | |
+
+| 缺陷检测 | | | | | | | | | | | |
+
+| YOLO v2 | 仅一次 (YOLO) 是一种目标检测器，它可以解码卷积神经网络的预测并在对象周围生成边界框。更多信息请参见第 10-125 页的“使用基于 DAG v2 部署到 FPGA 的车辆检测” | | | | | | | | | |
+
+| Darknet-53 | Darknet-53 卷积神经网络。对于预训练的 Darknet-53 模型，请参见 darknet53。 | 基于有向无环图 (DAG) 的网络 | | | | | | | |
+
+| ResNet-18 | 用于预训练 ResNet-18 模型的 ResNet-1 卷积神经网络，请参见 resnet18。 | 基于有向无环图 (DAG) 的网络 | | | | | | | |
+
+| ResNet-50 | 用于预训练 ResNet-50 模型的 ResNet-5 卷积神经网络，请参见 resnet50。 | 基于有向无环图 (DAG) 的网络 | | | | | | | |
+
+| MobileNetV2 | MobileNet-v2 卷积 | 基于有向无环图 (DAG) 的神经网络。对于预训练的 MobileNet-v2 模型，mobilenet2。 | 是 | 是 | 是 | 否 | 否 | 否 | 分类 |
 
 Deep Learning HDL Toolbox 支持以下层。
 
-
 | 层 | 类型（硬件或软件） | 硬件 | 描述和限制 | INT8 兼容 |
+
 | --- | --- | --- | --- | --- |
+
 | imageInput | SW | | 图像层向网络输入二维图像，并应用数据归一化。 | 是。在 SW 中作为单一数据类型运行。 |
 
-
 | 层 | 类型（硬件或软件） | 层输出格式 | 描述和限制 | INT8 兼容 |
+
 | --- | --- | --- | --- | --- |
+
 | | | | | |
-
-
-
-
 
 ![](img/747bfd4f288a7e0917a1f27637cc5c2d_48_0.png)
 
 | HW | 卷积 (Conv) | 2-D | 是 |
+
 |---|---|---|---|
+
 | convolution2dLayer | | 卷积层将滑动卷积滤波器应用于输入。
+
 当为使用此层构建网络生成代码时，将适用以下限制条件：
+
 * 滤波器尺寸必须在 1-14 之间且为正方形。例如 [1 1] 或 [14]。
+
 * 步长大小必须在 1-12 之间且为正方形。
+
 * 填充（Padding）大小必须在 0-8 范围内。
+
 * 膨胀因子必须为 [1 1]。
+
 * 不支持填充值。 | | |
 
-
 | HW | 卷积 (Conv) | 2D分组卷积层 | 是 |
+
 |---|---|---|---|
+
 | groupedConvolution2dLayer | | 将输入通道分为若干组并应用滑动卷积滤波器。使用分组卷积层进行通道级可分离卷积（也称为深度可卷积）。
+
 现在支持为 NumGroups 属性设置为 'channel-wise' 的 2D 分组卷积层生成代码。
+
 当为使用此层构建网络生成代码时，将适用以下限制条件：
+
 * 滤波器尺寸必须在 1-14 之间且为正方形。例如 [1 1] 或 [14 14]。当 NumGroups 设置为 'channel-wise' 时，滤波器尺寸必须为 3-14。
+
 * 步长大小必须在 1-12 之间且为正方形。
+
 * 填充大小必须在 0-8 范围内。 | | | |
 
 7-12
@@ -424,117 +371,138 @@ Deep Learning HDL Toolbox 支持以下层。
 ![](img/747bfd4f288a7e0917a1f27637cc5c2d_50_0.png)
 
 | | 全连接 (FC) | 是 |
+
 |---|---|---|
+
 | fullyConnected Layer | HW | • 膨胀因子必须为 [1 1]。 • 组数必须为 1 或 2。全连接层将输入乘以权重矩阵并加上偏置向量。当为使用此层构建网络生成代码时，将适用以下限制条件： • 层的输入和输出大小受 "InputMemorySize" 和 "OutputMemorySize" 中指定值的限制 | | |
 
-
 | 层 | 层类型 硬件 (HW) 或 软件 (SW) | 层输出格式 | 描述与限制 | INT8 兼容 |
+
 |---|---|---|---|---|
 
-
 | HW | 层已融合。 | ReLU 层对输入中的每个元素执行阈值操作，将任何小于零的值设为零。 | 是 |
-| | | | 只有当 ReLU 层之前置跟了以下任一层时，才支持该 ReLU 层：
-* 卷积层
-* 全连接层
-* 加法层 | | | |
-| leakyRelu | 层已融合。 | Leaky ReLU 层执行阈值操作，其中任何小于零的输入值都乘以一个固定标量。只有当 leaky ReLU 层之前置跟了以下任一层时，才支持：
-* 卷积层
-* 全连接层
-* 加法层 | 是 | |
 
+| | | | 只有当 ReLU 层之前置跟了以下任一层时，才支持该 ReLU 层：
+
+* 卷积层
+
+* 全连接层
+
+* 加法层 | | | |
+
+| leakyRelu | 层已融合。 | Leaky ReLU 层执行阈值操作，其中任何小于零的输入值都乘以一个固定标量。只有当 leaky ReLU 层之前置跟了以下任一层时，才支持：
+
+* 卷积层
+
+* 全连接层
+
+* 加法层 | 是 | |
 
 支持的网络、层、开发板和工具
 
 ![](img/747bfd4f288a7e0917a1f27637cc5c2d_52_0.png)
 
 | HW | 层已融合。 | 剪裁 ReLU 层执行阈值操作，将任何小于零的输入值设为零，并将任何超过裁剪上限的值设为该裁剪值。
+
 只有当剪裁 ReLU 层之前置跟了以下任一层时，才支持该层：
+
 * 卷积层
+
 * 全连接层
+
 * 加法层 | 是 | | |
 
-
 | 层 | 层类型 硬件 (HW) 或 软件 (SW) | 层输出 | 描述与限制 | INT8 兼容 |
+
 | batchNormalizationLayer | HW | 层已融合。 | 批量归一化层跨小批量（mini-batch）对每个输入通道进行归一化。
+
 只有当批量归一化层之前置跟了卷积层时，才支持该层。 | 是 | | |
 
 7-15
 
-
 | | | | | |
+
 |---|---|---|---|---|
+
 | crossChannelNormalization | HW | 卷积 (Conv) 通道级局部响应（跨通道）归一化层执行通道级归一化。 | 是。在 HW 中以单数据类型运行。 |
+
 | | | 生成代码时 WindowChannelSize 必须在 3-9 范围内。 | | |
+
 | dropoutLayer | 推理时无操作 | 推理时无操作 一个 Dropout 层根据给定的概率随机将输入元素设为零。 | 是 | |
 
-
 | 层 | 层类型 硬件 (HW) 或 软件 (SW) | 层输出格式 | 描述与限制 | INT8 兼容 |
+
 |---|---|---|---|---|
+
 | maxPooling2d | HW | 卷积 (Conv) 最大池化层通过通过将输入划分为矩形池化区域并计算每个区域的最大值来执行下采样。 | 是 | |
+
 | | | | 当为使用此层构建网络生成代码时，将适用以下限制条件：这些 池化尺寸必须在 1-14 之间且为正方形。例如 [1] 或 [14]。- 步长尺寸必须在 1-7 之间且为正方形。- 填充尺寸必须在 0-2 范围内。 | | |
 
 7-16
 
 | averagePooling2d | HW | 卷积 (Conv) 平均池化层通过将输入划分为矩形池化区域并计算每个区域的平均值来执行下采样。
-当为使用此层构建网络生成代码时，将适用以下限制条件：
-- 池化尺寸必须在 1-14 之间且为正方形。- 步长尺寸必须在 1-7 之间且为正方形。- 填充尺寸必须在 0-2 范围内。 | | |
 
+当为使用此层构建网络生成代码时，将适用以下限制条件：
+
+- 池化尺寸必须在 1-14 之间且为正方形。- 步长尺寸必须在 1-7 之间且为正方形。- 填充尺寸必须在 0-2 范围内。 | | |
 
 ![](img/747bfd4f288a7e0917a1f27637cc5c2d_55.png)
 
 | | | |
+
 |---|---|---|
+
 | | | 卷积 (Conv) 或 全连接 (FC)。当输入激活值小于阈值时，全局池化层输出格式为 FC。全局池化层通过计算输入的高度和宽度进行采样。
+
 当为使用此层构建网络生成代码时，将适用以下限制条件：- 池化尺寸必须在 1-14 之间且为正方形。例如 [1] 或 [12]。- 步长尺寸必须在 1-7 之间且为正方形。- 填充尺寸必须在 0-2 范围内。- 输入激活值必须小于处理器内存大小。 | | |
 
 7-18
 
-
 | 层 | 层类型 硬件 (HW) 或 软件 (SW) | 描述与限制 |
+
 | --- | | | |
+
 | additionLayer | HW | 继承自输入。 加法层对多个网络层进行逐元素相加。当为使用此层构建网络生成代码时，将适用以下限制条件：当输入类型为 int8 时，加法输入最多有两个。两个输入层必须具有相同的输出格式。例如，层都必须具有卷积输出格式或 FC 输出格式。 | 是 | | |
 
 ## 7 网络与层
 
 | HW | 继承 | 否 | |
-| depthConcatenationLayer | 深度拼接层接收相同高度和宽度的输入并沿着第三个维度（通道维度）进行拼接。当为使用此层构建网络生成代码时，将适用以下限制条件：输入激活特征数必须是线程数的平方根的倍数。深度拼接层的输入必须是唯一的。具有卷积输出格式的层和具有 FC 输出格式的层不能拼接。 | | | |
 
+| depthConcatenationLayer | 深度拼接层接收相同高度和宽度的输入并沿着第三个维度（通道维度）进行拼接。当为使用此层构建网络生成代码时，将适用以下限制条件：输入激活特征数必须是线程数的平方根的倍数。深度拼接层的输入必须是唯一的。具有卷积输出格式的层和具有 FC 输出格式的层不能拼接。 | | | |
 
 | 层 | 层类型 硬件 (HW) 或 软件 (SW) | 描述与限制
 
 7-20
 
-
 | softmax | SW | Softmax 层对输入应用 softmax 函数。 | 是。在 SW 中以单数据类型运行。 |
+
 | classificationLayer | SW | 分类层为互斥类问题计算交叉熵损失。 | 是 |
+
 | regressionLayer | SW | 回归层为回归问题计算半均方误差损失。 | 是 |
 
 | 层 | 层类型 硬件 (HW) 或 软件 (SW) | 层输出格式 | 描述与限制 | INT8 兼容 |
-|---|---|---|---|---|
-| nnet.keras.layer.FlattenCLayer | HW | 层融合 | 按 C 风格（行优先）顺序将激活展平为 1D 层。nnet.keras.layer.FlattenCLayer 只有当其置跟了全连接层时，才支持该层。 | 是 | | | |
-| nnet.keras.layer.ZeroPadding2dLayer | HW | 层融合。 | 2D 输入的零填充层。nnet.keras.layer.ZeroPadding2dLayer 只有当其置跟了卷积层或最大池化层时，才支持该层。 | 是 | | | |
 
+|---|---|---|---|---|
+
+| nnet.keras.layer.FlattenCLayer | HW | 层融合 | 按 C 风格（行优先）顺序将激活展平为 1D 层。nnet.keras.layer.FlattenCLayer 只有当其置跟了全连接层时，才支持该层。 | 是 | | | |
+
+| nnet.keras.layer.ZeroPadding2dLayer | HW | 层融合。 | 2D 输入的零填充层。nnet.keras.layer.ZeroPadding2dLayer 只有当其置跟了卷积层或最大池化层时，才支持该层。 | 是 | | | |
 
 这些开发板被 Deep Learning HDL Toolbox 支持：
 
-
-
-
 - Xilinx Zynq-7000 ZC706.
+
 - Intel Arria 10 SoC.
+
 - Xilinx Zynq UltraScale+™ MPSoC ZCU102.
 
 深度学习 HDL 工具箱已在以下版本中进行过测试：
 
 - Xilinx Vivado HDL Design Suite 2020.1
+
 - Intel Quartus Prime 18.1
 
-
-
 - “配置特定板的设置信息”
-
-
-
 
 通过实验深度学习处理器卷积和全连接模块的设置，估计您的自定义处理器配置的性能和资源利用率。有关深度学习处理器的更多信息，请参阅第 2-2 页的“深度学习处理器架构”。有关卷积和全连接模块参数的信息，请参阅“属性”。
 
@@ -562,20 +530,16 @@ dhdli.buildProcessor(hPC)
 hW.estimate('Performance')
 ```
 
-
-estimatePerformance | estimateResources | dhdli.ProcessorConfig | getModuleProperty | setModuleProperty
-
-
-
+`estimatePerformance` | `estimateResources` | `dhdli.ProcessorConfig` | `getModuleProperty` | `setModuleProperty`
 
 为了缩短设计满足性能要求的自定义深度学习网络所需的时间，在部署网络之前，请分析层延迟。比较深度学习网络在自定义位流处理器上的性能与在参考（出厂）位流处理器配置上的性能。
 
 要学习如何使用 `estimatePerformance` 函数的表格数据信息来计算您的网络性能，请参阅第 5-4 页的“分析推理运行”。
 
-
 此示例演示了如何为自定义处理器配置计算深度学习网络的性能。
 
 - 1 在您的工作文件夹中创建一个名为 `getLogonNetwork.m` 的文件。在文件中输入：
+
 ```matlab
 function net = getLogonNetwork())
 if isfile('Logonet.mat')
@@ -587,34 +551,48 @@ end
 ```
 
 调用该函数并保存结果。
-snet = getLogonNetwork();
+
+`snet = getLogonNetwork();`
 
 - 2 创建 `dhldl.ProcessorConfig` 对象。
-hPC = dhldl.ProcessorConfig;
+
+`hPC = dhldl.ProcessorConfig;`
 
 - 3 使用 `snet` 调用 `estimatePerformance` 以检索 Logonet 网络的层延迟和性能。
-hPC.estimatePerformance(snet)
+
+`hPC.estimatePerformance(snet)`
 
 3 创建了 3 个内存区域。
 
 | 网络 | 上次延迟(周期) | 上次延迟(秒) | 帧数 | 总延迟 |
+
 |---|---|---|---|---|
+
 | conv_1 | 39853 | 0.19927 | 1 | 39853 |
+
 | maxpool_1 | 60252 | 0.03013 | 1 | 60252 |
+
 | conv_2 | 37558 | 0.01878 | 1 | 37558 |
+
 | maxpool_2 | 10440 | 0.0052 | 1 | 10440 |
+
 | conv_3 | 14786 | 0.00724 | 1 | 14786 |
+
 | maxpool_3 | 9393 | 0.00469 | 1 | 9393 |
+
 | conv_4 | 17658 | 0.00883 | 1 | 17658 |
+
 | maxpool_4 | 17780 | 0.00885 | 1 | 17780 |
+
 | fc_1 | 20890 | 0.01014 | 1 | 20890 |
+
 | fc_2 | 16925 | 0.00846 | 1 | 16925 |
+
 | fc_3 | 8929 | 0.00445 | 1 | 8929 |
 
 * DL 器的时钟频率为: 200MHz
 
 要了解 `estimatePerformance` 返回的参数，请参见 .
-
 
 在自定义处理器配置上评估深度学习网络的性能
 
@@ -622,10 +600,9 @@ hPC.estimatePerformance(snet)
 
 在此示例中，我们比较 zcu102_single 位流上的 ResNet-18 网络性能。
 
-
 - Xilinx FPGA 和 SoC 深度学习工具箱支持包
-- 深度学习工具箱
 
+- 深度学习工具箱
 
 加载预训练网络。
 
@@ -633,8 +610,9 @@ hPC.estimatePerformance(snet)
 snet = resnet18;
 ```
 
-
 要检索 zcu102_single 位流配置，使用 `dhldl.ProcessorConfig` 对象。有关更多信息，请参见处理器配置的可修改参数，参见 `getModuleProperty` 和 `setModuleProperty`。
+
+
 
 ```
 hPC_shipping = dhldl.ProcessorConfig('Bitstream', 'zcu102_single')
@@ -674,27 +652,21 @@ hPC_shipping = dhldl.ProcessorConfig('Bitstream', 'zcu102_single')
 
 8-4
 
-
 综合芯片族: 'Zynq UltraScale+'
+
 综合设备名称: 'xczu9eg-ffb1156-1'
+
 综合工具名称: ''
 
-
-要检索 zcu102_single 位流配置，使用 `dhldl.ProcessorConfig` 对象。有关更多信息，请参见处理器配置的可修改参数，参见 `getModuleProperty` 和 `setModuleProperty`。
+要检索 `zcu102_single` 位流配置，使用 `dhldl.ProcessorConfig` 对象。有关更多信息，请参见处理器配置的可修改参数，参见 `getModuleProperty` 和 `setModuleProperty`。
 
 ```
 hPC_custom = dhldl.ProcessorConfig
-
 ```
 
 ```
 hPC_custom = 处理模块 "conv"
 ```
-
-
-
-
-
 
 ```
 ConvThreadNumber: 16
@@ -729,7 +701,6 @@ SynthesisToolPackageName: ''
 SynthesisToolSpeedValue: ''
 ```
 
-
 为了估计 ResNet-18 DAG 网络的性能，我们使用 `dldhl.ProcessorConfig` 对象的 `estimateFunction`。该函数返回估计的延迟、网络延迟以及每秒帧数（Frames/s）性能。
 
 ```python
@@ -737,6 +708,7 @@ hpc_custom.estimatePerformance(snet)
 ```
 
 ### 初始化序列网络：将 'ncnn.layer.BatchNormalizationLayer' 融合到 'ncnn.layer'
+
 创建了 5 个内存区域。
 
 # 深度学习处理器仿真器性能结果
@@ -756,9 +728,7 @@ hpc_custom.estimatePerformance(snet)
 | res3bbranch5 | 919117 | 0.00460 | | |
 | res3bbranchb | 919117 | 0.00460 | | |
 | res4a_brancha | 509261 | 0.00255 | | |
-
-
-| | | |
+| | | | |
 |---|---|---|
 | res4a branch2b | 905421 | 0.00453 |
 | res4a branch11 | 509261 | 0.00255 |
@@ -774,7 +744,7 @@ hpc_custom.estimatePerformance(snet)
 
 > * DL 处理器的时钟频率为：200MHz
 
-自定义比特流配置的 ResNet-18 性能低于 zcu102 单比特配置。自定义比特流配置与 zcu102 单比特配置之间的差异在于目标频率。
+自定义比特流配置的 ResNet-18 性能低于 `zcu102` 单比特配置。自定义比特流配置与 `zcu102` 单比特配置之间的差异在于目标频率。
 
 ## 修改自定义处理器配置
 
@@ -863,10 +833,6 @@ hPC_custom.estimatePerformance(snet)
 | pool5 | 54594 | 0.00027 | | |
 | fc1000 | 287349 | 0.00104 | | |
 
-
-
-
-
 ## 估计自定义处理器配置的资源利用率
 
 ```
@@ -883,36 +849,56 @@ hPC_custom.estimatePerformance(snet)
 
 ## 获取 zcu102_int8 位流配置
 
-要获取 zcu102_int8 位流配置，请使用 `dhldl.ProcessorConfig` 对象。欲需更多信息，请使用 `dhldl.ProcessorConfig` 学习处理器配置的可修改参数、`getModuleProperty` 和 `setModuleProperty`。
+要获取 `zcu102_int8` 位流配置，请使用 `dhldl.ProcessorConfig` 对象。欲需更多信息，请使用 `dhldl.ProcessorConfig` 学习处理器配置的可修改参数、`getModuleProperty` 和 `setModuleProperty`。
 
-hPC_reference = dhldl.ProcessorConfig('Bitstream', 'zcu102_int8')
+`hPC_reference = dhldl.ProcessorConfig('Bitstream', 'zcu102_int8')`
 
 Processing Module "conv"
+
 ConvThreadNumber: 64
+
 InputMemorySize: [227 227 3]
+
 OutputMemorySize: [227 227 3]
+
 FeatureSizeLimit: 2048
+
 KernelDataType: 'int8'
 
 Processing Module "fc"
+
 FCTThreadNumber: 16
+
 InputMemorySize: 25088
+
 OutputMemorySize: 4096
+
 KernelDataType: 'int8'
 
 Processing Module "adder"
+
 InputMemorySize: 40
+
 OutputMemorySize: 40
+
 KernelDataType: 'int8'
 
 System Level Properties
+
 TargetPlatform: Xilinx Zynq UltraScale+ MPSOC ZCU102 Evaluation K
+
 TargetFrequency: 250
+
 SynthesisTool: 'Xilinx Vivado'
+
 ReferenceDesign: 'AXI-Stream DDR Memory Access :3-AXIM'
+
 SynthesisChipFamily: 'Zynq UltraScale+'
+
 SynthesisDeviceName: 'zcueg-9-ffvb116-2-e'
+
 SynthesisToolPackage: ''
+
 SynthesisToolSpeedValue:
 
 ## 估计 zcu102_int8 位流配置的网络性能和资源利用率
@@ -923,7 +909,7 @@ SynthesisToolSpeedValue:
 
 # 自定义处理器配置工作
 
-要估计 zcu102_int8 位流的资源使用，请使用 `dlhdl.ProcessorConfig` 对象的 `estimateResources` 函数。该函数返回估计的 DSP slice 和 BRAM 使用量。
+要估计 `zcu102_int8` 位流的资源使用，请使用 `dlhdl.ProcessorConfig` 对象的 `estimateResources` 函数。该函数返回估计的 DSP slice 和 BRAM 使用量。
 
 ```
 hPC_reference.estimatePerformance(dlquantObj)
@@ -964,6 +950,7 @@ hPC_reference.estimateResources
 估计的性能为 4314 FPS，估计的资源计数为：
 
 - * 数字信号处理器 (DSP) slice 计数 - 768
+
 - * 随机访问内存 (BRAM) 计数 - 386
 
 估计的 DSP slice 和 BRAM 计数超过了目标设备的资源预算。自定义位流配置以减少资源使用。
@@ -972,47 +959,73 @@ hPC_reference.estimateResources
 
 要创建自定义处理器配置，请使用 `dlhdl.ProcessorConfig` 对象。欲需更多信息，请使用 `dlhdl.ProcessorConfig`。要学习处理器配置的可修改参数，请使用 `getProperty` 和 `setModuleProperty`。
 
-要减少自定义位流的资源，请修改 conv、fc 和 adder 模块的 `KernelDataType`。修改 `ConvThreadNumber` 以减少 DSP slice 计数。减少 conv 模块的 `InputMemorySize` 和 `OutputMemorySize` 以减少 BRAM 计数。
+要减少自定义位流的资源，请修改 `conv`、`fc` 和 `adder` 模块的 `KernelDataType`。修改 `ConvThreadNumber` 以减少 DSP slice 计数。减少 `conv` 模块的 `InputMemorySize` 和 `OutputMemorySize` 以减少 BRAM 计数。
 
 ```
 hPC_custom = dlhdl.ProcessorConfig;
 hPC_custom.setModuleProperty('conv','KernelDataType','int8');
 ```
 
-hPC_custom.setModuleProperty('fc', 'KernelDataType', 'int8');
-hPC_custom.setModuleProperty('adder', 'KernelDataType', 'int8');
-hPC_custom.setModuleProperty('conv', 'ConvThreadNumber', 4);
-hPC_custom.setModuleProperty('conv', 'InputMemorySize', [30 30 1]);
-hPC_custom.setModuleProperty('conv', 'OutputMemorySize', [30 30 1]);
 
-hPC_custom =
+
+`hPC_custom.setModuleProperty('fc', 'KernelDataType', 'int8');`
+
+`hPC_custom.setModuleProperty('adder', 'KernelDataType', 'int8');`
+
+`hPC_custom.setModuleProperty('conv', 'ConvThreadNumber', 4);`
+
+`hPC_custom.setModuleProperty('conv', 'InputMemorySize', [30 30 1]);`
+
+`hPC_custom.setModuleProperty('conv', 'OutputMemorySize', [30 30 1]);`
+
+`hPC_custom =`
 
 Processing Module "conv"
+
 ConvThreadNumber: 4
+
 InputMemorySize: [30 30 1]
+
 OutputMemorySize: [30 30 1]
+
 FeatureSizeLimit: 2048
+
 KernelDataType: 'int8'
 
 Processing Module "fc"
+
 FCThreadNumber: 4
+
 InputMemorySize: 25088
+
 OutputMemorySize: 4096
+
 KernelDataType: 'int8'
 
 Processing Module "adder"
+
 InputMemorySize: 40
+
 OutputMemorySize: 40
+
 KernelDataType: 'int8'
 
 System Level Properties
+
 TargetPlatform: 'Xilinx Zynq UltraScale+ MPSoC ZCU12 Evaluation K
+
 TargetFrequency: 200
+
 SynthesisTool: 'Xilinx'
+
 ReferenceDesign: 'AXI-Stream DDR Memory Access : 3-AXIM'
+
 SynthesisToolChipFamily: 'Zynq UltraScale+'
+
 SynthesisToolDeviceName: 'xczu9eg-fv01156-2-e'
+
 SynthesisToolPackageName: -
+
 SynthesisToolSpeedValue: 
 
 ## 估计自定义位流配置的性能和资源利用率
@@ -1021,7 +1034,7 @@ SynthesisToolSpeedValue:
 
 要估计 hPC 自定义直播的使用，请使用 `dhdhl.ProcessorConfig` 对象的 `estimateResources` 函数。该函数返回估计的 DSP slice 和 BRAM 使用量。
 
-hPC_custom.estimatePerformance(dliquantObj)
+`hPC_custom.estimatePerformance(dliquantObj)`
 
 ```
 ### Optimizing series network: Fused nnet.cnn.layer.BatchNormLayer' into 'nnet.cnn.layer
@@ -1034,7 +1047,7 @@ LastFrameLatency(cycles) LastFrameLatency(seconds) FramesNum Total |8-13
 
 # 自定义处理器配置工作
 
-# hPC_custom.estimateResources
+# `hPC_custom.estimateResources`
 
 深度学习处理器估算器资源结果
 
@@ -1049,7 +1062,7 @@ LastFrameLatency(cycles) LastFrameLatency(seconds) FramesNum Total |8-13
 
 ## 参见
 
-dl1.ProcessorConfig | estimatePerformance | estimateResources | getModuleProperty | setModuleProperty
+`dl1.ProcessorConfig` | `estimatePerformance` | `estimateResources` | `getModuleProperty` | `setModuleProperty`
 
 ## 更多关于
 
@@ -1073,10 +1086,6 @@ dl1.ProcessorConfig | estimatePerformance | estimateResources | getModulePropert
 | "FCThreadNumber" | fc | 增加线程数。 | 提升性能。 | 增加资源占用。 |
 | "InputMemorySize" | fc | 增加输入内存大小。 | 提升性能。 | 增加块 RAM (BRAM) 利用率。 |
 | "OutputMemorySize" | fc | 增加输出内存大小。 | 提升性能。 | 增加块 RAM (BRAM) 利用率。 |
-
-
-
-| | | | | |
 | :--- | :--- | :--- | :--- | :--- |
 | "KernelDataType" | fc | 将数据类型更改为 int8。 | 提高性能。可能会导致精度下降。 | 减少资源占用。 |
 | "InputMemorySize" | adder | | | |
@@ -1085,7 +1094,8 @@ dl1.ProcessorConfig | estimatePerformance | estimateResources | getModulePropert
 | "KernelDataType" | adder | 将数据类型更改为 int8。 | 提高性能。可能会导致精度下降。 | 减少资源占用。 |
 
 ## 参见
-dldl.ProcessorConfig | estimatePerformance | estimateResources | getModuleProperty | setModuleProperty
+
+`dldl.ProcessorConfig` | `estimatePerformance` | `estimateResources` | `getModuleProperty` | `setModuleProperty`
 
 ## 更多信息
 
@@ -1109,6 +1119,7 @@ hPC = dhldl.ProcessorConfig;
 ```
 
 2. 设置设计工具的路径。例如，设置 Vivado® 设计工具的路径，输入：
+
 ```matlab
 dissetuppath('Toolname','Xilinx Vivado','ToolPath','C:\Xilinx\Vivado\2019.2\bin\vivado.bat');
 ```
@@ -1124,11 +1135,11 @@ dhldl.buildProcessor(hPC);
 要将生成的位流用于支持的 Xilinx 板卡，应将 `system_top_wrapper.bit` 和 `system_top_wrapper.mat` 文件拷贝到同一个文件夹。
 
 | 名称 | 日期 | 类型 | 大小 |
-| :--- | :--- | :--- | :--- | :--- |
-| codegen | 7/14/2020 4:10 AM | 文件文件夹 | | |
-| dhldl_prj | 7/14/2020 5:02 AM | 文件文件夹 | | |
-| hdlsrc | 7/14/2020 4:57 AM | 文件文件夹 | | |
-| slprj | 7/14/2020 4:57 AM | 文件文件夹 | | |
+| :--- | :--- | :--- | :--- |
+| codegen | 7/14/2020 4:10 AM | 文件文件夹 | |
+| dhldl_prj | 7/14/2020 5:02 AM | 文件文件夹 | |
+| hdlsrc | 7/14/2020 4:57 AM | 文件文件夹 | |
+| slprj | 7/14/2020 4:57 AM | 文件文件夹 | |
 | cksm_Network | 7/14/2020 4:10 AM | MATLAB 数据 | 6 KB |
 | DeployableNetwork | 7/14/2020 4:10 AM | MATLAB 数据 | 6 KB |
 | inputP1_seqimg | 7/14/2020 4:10 AM | MATLAB 数据 | 1 KB |
@@ -1141,10 +1152,10 @@ dhldl.buildProcessor(hPC);
 
 | 名称 | 日期 | 类型 | 大小 |
 | :--- | :--- | :--- | :--- |
-| codegen | 7/14/2020 4:10 AM | 文件文件夹 | | |
-| dlhdl_prj | 7/14/2020 5:04 AM | 文件文件夹 | | |
-| hdlsrc | 7/14/2020 4:16 AM | 文件文件夹 | | |
-| slprj | 7/14/2020 5:01 AM | 文件文件夹 | | |
+| codegen | 7/14/2020 4:10 AM | 文件文件夹 | |
+| dlhdl_prj | 7/14/2020 5:04 AM | 文件文件夹 | |
+| hdlsrc | 7/14/2020 4:16 AM | 文件文件夹 | |
+| slprj | 7/14/2020 5:01 AM | 文件文件夹 | |
 | cksm_Network | 7/14/2020 4:10 AM | MATLAB 数据 | 7 KB |
 | DeployableNetwork | 7/14/2020 4:10 AM | MATLAB 数据 | 6 KB |
 | inputP1_seqlm | 7/14/2020 4:10 AM | MATLAB 数据 | 1 KB |
@@ -1165,10 +1176,6 @@ hw = dlhd.Workflow('Network',smet, 'Bitstream','system_top_wrapper.bit', 'Target
 hw = dlhd.Workflow('Network',smet, 'Bitstream','system_top_wrapper.bit', 'Target',htarget);
 ```
 
-
-
-
-
 # 在 Intel Arria 10 SoC 上开始深度学习 FPGA 部署
 
 ```
@@ -1182,10 +1189,12 @@ Target: [1x1 dlhdl.Target]
 
 ## 编译 MNIST 系列网络
 
-要编译 MNIST 系列网络，请运行 dlhdl.Workflow 对象的 `compile` 函数。
-d = hw.compile;
+要编译 MNIST 系列网络，请运行 `dlhdl.Workflow` 对象的 `compile` 函数。
 
-### 正在优化系列网络：将 cnet.layer.BatchNormalizationLayer 合并到 'cnet.layer.'
+`d = hw.compile;`
+
+### 正在优化系列网络：将 `cnet.layer.BatchNormalizationLayer` 合并到 'cnet.layer.'
+
 offset_address offset_address allocated_space
 
 | InputDataOffset | 0x00000000 | 4.0 MB |
@@ -1198,7 +1207,7 @@ offset_address offset_address allocated_space
 
 # 在 FPGA 上固程序位流并部署网络权重
 
-若要在 Intel Arria 10 硬件上部署网络，请运行 dlhdl.Workflow 对象的 `deploy` 函数。该函数使用 `compile` 函数的输出通过编程文件对 FPGA 板进行编程。它还会下载网络权重和偏置。`deploy` 函数开始为 FPGA 设备编程，显示进度消息以及部署网络所需的时间。
+若要在 Intel Arria 10 硬件上部署网络，请运行 `dlhdl.Workflow` 对象的 `deploy` 函数。该函数使用 `compile` 函数的输出通过编程文件对 FPGA 板进行编程。它还会下载网络权重和偏置。`deploy` 函数开始为 FPGA 设备编程，显示进度消息以及部署网络所需的时间。
 
 ```
 hW.deploy
@@ -1208,7 +1217,7 @@ hW.deploy
 
 ## 为示例图像运行预测
 
-要加载示例图像，执行 dlhdl.Workflow 对象的 `predict` 函数，然后显示 FPGA 结果：
+要加载示例图像，执行 `dlhdl.Workflow` 对象的 `predict` 函数，然后显示 FPGA 结果：
 
 ```
 inputImg = imread('five_28x28.pgm');
@@ -1260,16 +1269,20 @@ printf('The prediction result is %d\n', idx-1);
 
 # 在 Xilinx ZCU102 SoC 上开始深度学习 FPGA 部署
 
-此示例展示了如何使用针对 Xilinx FPGA 和 SoC 的 Deep HDL Toolbox™ 支持包创建、编译并部署一个 dlhd.Workflow 对象，该对象以手写字符检测系列网络作为网络对象。使用 MATLAB™ 从目标设备获取预测。
+此示例展示了如何使用针对 Xilinx FPGA 和 SoC 的 Deep HDL Toolbox™ 支持包创建、编译并部署一个 `dlhd.Workflow` 对象，该对象以手写字符检测系列网络作为网络对象。使用 MATLAB™ 从目标设备获取预测。
 
-# ## 先决条件
+## 先决条件
 
 - Xilinx ZCU102 SoC 开发套。
 - Deep Learning HDL Toolbox™
-- Deep Learning HDL Toolbox™ Support Package for Xilinx FPGA and SoC
-- Deep Learning HDL Toolbox™
 
-# ## 加载预训练系列网络
+
+
+# Deep Learning HDL Toolbox™ Support Package for Xilinx FPGA and SoC
+
+## Deep Learning HDL Toolbox™
+
+### 加载预训练系列网络
 
 要加载在修改后的美国国家标准技术 (MNIST) 数据库上训练的预训练系列网络，输入：
 
@@ -1283,7 +1296,7 @@ snet = getDigitsNetwork();
 analyzeNetwork(snet)
 ```
 
-# ## 创建目标对象
+### 创建目标对象
 
 创建一个目标对象，为您的目标设备自定义名称，并创建一个连接目标设备到主机计算机的接口。接口选项有 JTAG 和以太网。
 
@@ -1301,271 +1314,9 @@ hTarget =
     Port: 22
 ```
 
-# ## 创建 Workflow 对象
+### 创建 Workflow 对象
 
-创建 dlhdl.Workflow 类的对象。在创建对象时指定网络和位流名称。指定预训练神经网络 snet 作为网络。确保名称与数据类型以及您的目标 FPGA 匹配。在本示例中，目标 FPGA 是 Xilinx ZCU102 板，使用单一数据类型。
-
-```
-hw = dlhdl.Workflow('network', 'Bitstream', 'zcu102_single', hTarget)
-hw =
-    Workflow with properties:
-Network: [1x1 SeriesNetwork]
-Bitstream: [zcu102_single]
-ProcessorConfig: []
-Target: [1x1 Target]
-```
-
-## 编译 MNIST 系列网络
-
-要编译 MNIST 系列网络，请运行 dlhdl.Workflow 对象中的 `compile` 函数。
-
-```
-dn = HW.compile;
-### 正在为深度学习 FPGA 原型设计编译网络 ...
-### 正在目标位流 zcu102_single ...
-### 网络包含以下层：
-1 'imageinput'      图像输入             带有 'normalization' 的 28x28 图像
-2 'conv 1'          3x3 卷积，步长 [1] 且填充
-3 'batchnorm 1'     8 通通道的批量归一化
-4 'relu 1'          ReLU
-5 'maxpool 1'      最大池化             2x2 最大池化，步长 [2] 且填充
-6 'conv 2'          卷积             16x3 卷积，步长 [1] 且填充
-7 'batchnorm 2'   16 通道的的批量归一化
-8 'relu 2'          ReLU
-9 'maxpool 2'      最大池化             2x2 最大池化，步长 [2] 且填充
-10 'conv 3'         卷积             32x16 卷积，步长 [1] 且填充
-11 'batchnorm 3'   32 通道的批量归一化
-12 'relu 3'          ReLU
-13 'fc'             全连接         10 个全连接层
-14 'softmax'        Softmax
-15 'classoutput'   带有 '0' 和其他 9 个类别的分类输出
-
-内存区域已创建。
-
-跳过: conv 1->relu_3
-### 正在优化系列网络：将 cnet.layer.BatchNormalizationLayer 合并到 'cnet.layer.'
-### 网络包含以下层：
-1 'imageinput'      图像输入             带有 'normalization' 的 28x28 图像
-2 'conv 1'          3x3 卷积，步长 [1] 且填充
-3 'batchnorm 1'     8 通通道的批量归一化
-4 'relu 1'          ReLU
-5 'maxpool 1'      最大池化             2x2 最大池化，步长 [2] 且填充
-6 'conv 2'          卷积             16x3 卷积，步长 [1] 且填充
-7 'batchnorm 2'   16 通道的批量归一化
-8 'relu 2'          ReLU
-9 'maxpool 2'      最大池化             2x2 最大池化，步长 [2] 且填充
-10 'conv 3'         卷积             32x16 卷积，步长 [1] 且填充
-11 'batchnorm 3'   32 通道的批量归一化
-12 'relu 3'          ReLU
-13 'fc'             全连接         10 个全连接层
-14 'softmax'        Softmax
-15 'classoutput'   带有 '0' 和其他 9 个类别的分类输出
-
-跳过: conv 1->relu_3
-### 正在优化系列网络：将 cnet.layer.BatchNormalizationLayer 合并到 'cnet.layer.'
-### 网络包含以下层：
-1 'imageinput'      图像输入             带有 'normalization' 的 28x28 图像
-2 'conv 1'          3x3 卷积，步长 [1] 且填充
-3 'batchnorm 1'     8 通通道的批量归一化
-4 'relu 1'          ReLU
-5 'maxpool 1'      最大池化             2x2 最大池化，步长 [2] 且填充
-6 'conv 2'          卷积             16x3 卷积，步长 [1] 且填充
-7 'batchnorm 2'   16 通道的批量归一化
-8 'relu 2'          ReLU
-9 'maxpool 2'      最大池化             2x2 最大池化，步长 [2] 且填充
-10 'conv 3'         卷积             32x16 卷积，步长 [1] 且填充
-11 'batchnorm 3'   32 通道的批量归一化
-12 'relu 3'          ReLU
-13 'fc'             全连接         10 个全连接层
-14 'softmax'        Softmax
-15 'classoutput'   带有 '0' 和其他 9 个类别的分类输出
-
-内存区域已创建。
-
-跳过: conv 1->relu_3
-### 正在优化系列网络：将 cnet.layer.BatchNormalizationLayer 合并到 'cnet.layer.'
-### 网络包含以下层：
-1 'imageinput'      图像输入             带有 'normalization' 的 28x28 图像
-2 'conv 1'          3x3 卷积，步长 [1] 且填充
-3 'batchnorm 1'     8 通通道的批量归一化
-4 'relu 1'          ReLU
-5 'maxpool 1'      最大池化             2x2 最大池化，步长 [2] 且填充
-6 'conv 2'          卷积             16x3 卷积，步长 [1] 且填充
-7 'batchnorm 2'   16 通道的批量归一化
-8 'relu 2'          ReLU
-9 'maxpool 2'      最大池化             2x2 最大池化，步长 [2] 且填充
-10 'conv 3'         卷积             32x16 卷积，步长 [1] 且填充
-11 'batchnorm 3'   32 通道的批量归一化
-12 'relu 3'          ReLU
-13 'fc'             全连接         10 个全连接层
-14 'softmax'        Softmax
-15 'classoutput'   带有 '0' 和其他 9 个类别的分类输出
-
-内存区域已创建。
-
-跳过: conv 1->relu_3
-### 正在优化系列网络：将 cnet.layer.BatchNormalizationLayer 合并到 'cnet.layer.'
-### 网络包含以下层：
-1 'imageinput'      图像输入             带有 'normalization' 的 28x28 图像
-2 'conv 1'          3x3 卷积，步长 [1] 且填充
-3 'batchnorm 1'     8 通通道的批量归一化
-4 'relu 1'          ReLU
-5 'maxpool 1'      最大池化             2x2 最大池化，步长 [2] 且填充
-6 'conv 2'          卷积             16x3 卷积，步长 [1] 且填充
-7 'batchnorm 2'   16 通道的批量归一化
-8 'relu 2'          ReLU
-9 'maxpool 2'      最大池化             2x2 最大池化，步长 [2] 且填充
-10 'conv 3'         卷积             32x16 卷积，步长 [1] 且填充
-11 'batchnorm 3'   32 通道的批量归一化
-12 'relu 3'          ReLU
-13 'fc'             全连接         10 个全连接层
-14 'softmax'        Softmax
-15 'classoutput'   带有 '0' 和其他 9 个类别的分类输出
-
-*(注：由于原文文本中存在大量重复段落，译文已根据“注意不要重复输出原文”的原则进行了去重处理，仅保留核心逻辑和翻译内容)*
-
-[/content]
-
-**抱歉，由于您提供的原文中存在大量的完全重复内容（例如“编译 MNIST 系列网络”等部分出现了多次），为了遵循您的注意事项中“一定不要重复输出原文”的原则，我在翻译时剔除了冗余的重复。以下是精简后完整的逻辑逻辑译文：**
-
----
-
-[content]
-# 在 Intel Arria 10 SoC 上开始深度学习 FPGA 部署
-
-```
-hW =
-Workflow with properties:
-Network: [1x1 SeriesNetwork]
-Bitstream: 'arria10soc_single'
-ProcessorConfig: []
-Target: [1x1 dlhdl.Target]
-```
-
-## 编译 MNIST 系列网络
-
-要编译 MNIST 系列网络，请运行 dlhdl.Workflow 对象的 `compile` 函数。
-d = hw.compile;
-
-### 正在优化系列网络：将 cnet.layer.BatchNormalizationLayer 合并到 'cnet.layer.'
-offset_address offset_address allocated_space
-
-| InputDataOffset | 0x00000000 | 4.0 MB |
-| OutputResultOffset | 0x04000000 | 4.0 MB |
-| SystemBufferOffset | 0x08000000 | 28.0 MB |
-| InstructionDataOffset | 0x02400000 | 4.0 MB |
-| ConvWeightDataOffset | 0x02800000 | 4.0 MB |
-| FCWeightDataOffset | 0x02C00000 | 4.0 MB |
-| EndOffset | 0x03000000 | Total: 48.0 MB |
-
-# 在 FPGA 上固程序位流并部署网络权重
-
-若要在 Intel Arria 10 硬件上部署网络，请运行 dlhdl.Workflow 对象的 `deploy` 函数。该函数使用 `compile` 函数的输出通过编程文件对 FPGA 板进行编程。它还会下载网络权重和偏置。`deploy` 函数开始为 FPGA 设备编程，显示进度消息以及部署网络所需的时间。
-
-```
-hW.deploy
-### FPGA 位流编程已跳过，因为目标上已加载相同的位流
-### 正在加载权重到 FC 处理器。当前时间为 2020年6月30日 13:45:67
-```
-
-## 为示例图像运行预测
-
-要加载示例图像，执行 dlhdl.Workflow 对象的 `predict` 函数，然后显示 FPGA 结果：
-
-```
-inputImg = imread('five_28x28.pgm');
-imshow(inputImg);
-```
-
-![](img/747bfd4f288a7e0917a1f27637cc5c2d_82_0.png)
-
-使用配置 'on' 运行预测，以获取延迟和吞吐量结果。
-
-```
-[prediction, speed] = hW.predict(single(inputImg), 'Profile', 'on');
-```
-
-```
-### 完成输入激活值。
-### 正在运行单个输入激活值。
-```
-
-深度学习处理器分析器性能结果
-
-| | LayerLatency(cycles) | LastLatency(seconds) | FramesNum |
-|---|---|---|--|
-| Network | 49243 | 0.00033 | 1 |
-| conv_module | 25983 | 0.00017 | |
-| conv_1 | 6813 | 0.00005 | |
-| maxpool_1 | 4705 | 0.00003 | |
-| conv_2 | 5205 | 0.00003 | |
-| maxpool_2 | 3839 | 0.00003 | |
-| conv_3 | 5481 | 0.00004 | |
-| fc_module | 23260 | 0.00016 | |
-| fc | 23260 | 0.00016 | |
-
-* DL 处理器的时钟频率为: 150MHz
-
-```
-[val, idx] = max(prediction);
-printf('The prediction result is %d\n', idx-1);
-```
-
-预测结果为 5
-
-# 另
-
-## 更多关于
-
-- "检查主机计算机与 FPGA 板的连接"
-- "创建用于分类的简单深度学习网络"
-
-# 在 Xilinx ZCU102 SoC 上开始深度学习 FPGA 部署
-
-此示例展示了如何使用针对 Xilinx FPGA 和 SoC 的 Deep HDL Toolbox™ 支持包创建、编译并部署一个 dlhd.Workflow 对象，该对象以手写字符检测系列网络作为网络对象。使用 MATLAB™ 从目标设备获取预测。
-
-# ## 先决条件
-
-- Xilinx ZCU102 SoC 开发套件。
-- Deep Learning HDL Toolbox™
-- Deep Learning HDL Toolbox™ Support Package for Xilinx FPGA and SoC
-- Deep Learning HDL Toolbox™
-
-# ## 加载预训练系列网络
-
-要加载在修改后的美国国家标准技术 (MNIST) 数据库上训练的预训练系列网络，输入：
-
-```
-snet = getDigitsNetwork();
-```
-
-要查看预训练系列网络的层，输入：
-
-```
-analyzeNetwork(snet)
-```
-
-# ## 创建目标对象
-
-创建一个目标对象，为您的目标设备自定义名称，并创建一个连接目标设备到主机计算机的接口。接口选项有 JTAG 和以太网。
-
-```
-hTarget = dlhdl.Target('Xilinx', 'Interface', 'Ethernet')
-```
-
-```
-hTarget =
-    Target with properties:
-    Vendor: 'Xilinx'
-    Interface: Ethernet
-    IPAddress: '192.168.1.101'
-    Username: 'root'
-    Port: 22
-```
-
-# ## 创建 Workflow 对象
-
-创建 dlhdl.Workflow 类的对象。在创建对象时指定网络和位流名称。指定预训练神经网络 snet 作为网络。确保名称与数据类型以及您的目标 FPGA 匹配。在本示例中，目标 FPGA 是 Xilinx ZCU102 板，使用单一数据类型。
+创建 `dlhdl.Workflow` 类的对象。在创建对象时指定网络和位流名称。指定预训练神经网络 `snet` 作为网络。确保名称与数据类型以及您的目标 FPGA 匹配。在本示例中，目标 FPGA 是 Xilinx ZCU102 板，使用单一数据类型。
 
 ```
 hw = dlhdl.Workflow('network', 'Bitstream', 'zcu102_single', hTarget)
@@ -1577,48 +1328,88 @@ ProcessorConfig: []
 Target: [1x1 Target]
 ```
 
-## 编译 MNIST 系列网络
+### 编译 MNIST 系列网络
 
-要编译 MNIST 系列网络，请运行 dlhdl.Workflow 对象中的 `compile` 函数。
+要编译 MNIST 系列网络，请运行 `dlhdl.Workflow` 对象中的 `compile` 函数。
 
 ```
 dn = HW.compile;
+```
+
 ### 正在为深度学习 FPGA 原型设计编译网络 ...
-### 正在目标位流 zcu102_single ...
+
+### 正在目标位流 `zcu102_single` ...
+
 ### 网络包含以下层：
-1 'imageinput'      图像输入             带有 'normalization' 的 28x28 图像
-2 'conv 1'          3x3 卷积，步长 [1] 且填充
-3 'batchnorm 1'     8 通通道的批量归一化
-4 'relu 1'          ReLU
-5 'maxpool 1'      最大池化             2x2 最大池化，步长 [2] 且填充
-6 'conv 2'          卷积             16x3 卷积，步长 [1] 且填充
-7 'batchnorm 2'   16 通道的批量归一化
-8 'relu 2'          ReLU
-9 'maxpool 2'      最大池化             2x2 最大池化，步长 [2] 且填充
-10 'conv 3'         卷积             32x16 卷积，步长 [1] 且填充
-11 'batchnorm 3'   32 通道的批量归一化
-12 'relu 3'          ReLU
-13 'fc'             全连接         10 个全连接层
-14 'softmax'        Softmax
-15 'classoutput'   带有 '0' 和其他 9 个类别的分类输出
+
+1 'imageinput' 图像输入 带有 'normalization' 的 28x28 图像
+2 'conv 1' 3x3 卷积，步长 [1] 且填充
+3 'batchnorm 1' 8 通通道的批量归一化
+4 'relu 1' ReLU
+5 'maxpool 1' 最大池化 2x2 最大池化，步长 [2] 且填充
+6 'conv 2' 卷积 16x3 卷积，步长 [1] 且填充
+7 'batchnorm 2' 16 通道的的批量归一化
+8 'relu 2' ReLU
+9 'maxpool 2' 最大池化 2x2 最大池化，步长 [2] 且填充
+10 'conv 3' 卷积 32x16 卷积，步长 [1] 且填充
+11 'batchnorm 3' 32 通道的批量归一化
+12 'relu 3' ReLU
+13 'fc' 全连接 10 个全连接层
+14 'softmax' Softmax
+15 'classoutput' 带有 '0' 和其他 9 个类别的分类输出
 
 内存区域已创建。
 
+跳过: `conv 1->relu_3`
+
+### 正在优化系列网络：将 `cnet.layer.BatchNormalizationLayer` 合并到 'cnet.layer.'
 
 
+
+1 `'imageinput'` 图像输入 带有 `'normalization'` 的 28x28 图像
+
+2 `'conv 1'` 3x3 卷积，步长 `[1]` 且填充
+
+3 `'batchnorm 1'` 8 通通道的批量归一化
+
+4 `'relu 1'` ReLU
+
+5 `'maxpool 1'` 最大池化 2x2 最大池化，步长 `[2]` 且填充
+
+6 `'conv 2'` 卷积 16x3 卷积，步长 `[1]` 且填充
+
+7 `'batchnorm 2'` 16 通道的批量归一化
+
+8 `'relu 2'` ReLU
+
+9 `'maxpool 2'` 最大池化 2x2 最大池化，步长 `[2]` 且填充
+
+10 `'conv 3'` 卷积 32x16 卷积，步长 `[1]` 且填充
+
+11 `'batchnorm 3'` 32 通道的批量归一化
+
+12 `'relu 3'` ReLU
+
+13 `'fc'` 全连接 10 个全连接层
+
+14 `'softmax'` Softmax
+
+15 `'classoutput'` 带有 `'0'` 和其他 9 个类别的分类输出
+
+内存区域已创建。
 
 # 特色示例
 
 ![](img/747bfd4f288a7e0917a1f27637cc5c2d_87_0.png)
 
-使用配置 'on' 运行预测以查看延迟和吞吐量结果。
+使用配置 `'on'` 运行预测以查看延迟和吞吐量结果。
 
 ```mat
 [prediction, speed] = hW.predict(single(inputImg), 'Profile', 'on');
+```
 
 ### 完成输入激活。
 ### 正在运行输入激活。
-```
 
 深度学习处理器分析器性能结果
 
@@ -1731,8 +1522,11 @@ dn = hW.compile
 | "EndOffset" | 0x00000000 | 总计: 176.0 MB |
 
 dn = 具有字段的结构体:
+
 Operators: [1x struct]
+
 LayerConfigs: [1x struct]
+
 NetConfigs: [1x struct]
 
 # 将位流程序到 FPGA 并下载网络权重
@@ -1744,9 +1538,13 @@ hw.deploy
 ```
 
 > ### FPGA 位流已跳跳，因为相同的位流已加载到 t
+
 ### 正在加载权重到 FC 处理器。
+
 ### 35% 完成，当前时间为 2020年6月28日 12:40:14。
+
 ### 67% 完成，当前时间为 2020年6月28日 12:40:14。
+
 ### FC 权重已加载。当前时间为 2020年6月28日 12:40:14
 
 # 加载示例图像
@@ -1785,75 +1583,6 @@ imshow(inputImg);
 | conv_3 | 2977 | 0.00001 | |
 | fc | 6752 | 0.00003 | |
 | fc | 7228 | 0.00033 | |
-*(等待，重新评估第 91 页的表格)*
-
-| | 上一层延迟(周期) | 上一层延迟(秒) | 帧数 |
-| --- | --- | --- | --- |
-| Network | 38865102 | 0.17666 | |
-| conv_module | 34295952 | 0.15591 | |
-| conv_1 | 6955899 | 0.03162 | |
-| maxpool_1 | 3036834 | 0.01381 | |
-| conv_2 | 4716 | 0.00002 | |
-| maxpool_2 | 4637 | 0.00002 | |
-| conv_3 | 2977 | 0.00001 | |
-| fc | 6752 | 0.00003 | |
-| fc | 7228 | 0.00033 | |
-*(实际上，第 91 页的表格是乱码。根据提供的文本重构)*
-
-| | 上一层延迟(周期) | 上一层延迟(秒) | 帧数 |
-| --- | --- | --- | --- |
-| Network | 38865102 | 0.17666 | |
-| conv_module | 34295952 | 0.15591 | |
-| conv_1 | 6955899 | 0.03162 | |
-| maxpool_1 | 3036834 | 0.01381 | |
-| conv_2 | 4716 | 0.00002 | |
-| maxpool_2 | 4637 | 0.00002 | |
-| conv_3 | 2977 | 0.00001 | |
-| fc | 6752 | 0.00003 | |
-| fc | 7228 | 0.00033 | |
-*(等待，第 91 页的 OCR 文字不同。我将严格遵循 OCR 文字：)*
-
-| | 上一层延迟(周期) | 上一层延迟(秒) | 帧数 |
-| --- | --- | --- | --- |
-| Network | 38865102 | 0.17666 | |
-| conv_module | 34295952 | 0.15591 | |
-| conv_1 | 6955899 | 0.03162 | |
-| maxpool_1 | 3036834 | 0.01381 | |
-| conv_2 | 4716 | 0.00002 | |
-| maxpool_2 | 4637 | 0.00002 | |
-| conv_3 | 2977 | 0.00001 | |
-| fc | 6752 | 0.00003 | |
-| fc | 7228 | 0.00033 | |
-
-*(实际上，再次查看第 91 页提供的 OCR：)*
-
-| | 上一层延迟(周期) | 上一层延迟(秒) | 帧数 |
-| --- | --- | --- | --- |
-| Network | 38865102 | 0.17666 | |
-| conv_module | 34295952 | 0.15591 | |
-| conv_1 | 6955899 | 0.03162 | |
-| maxpool_1 | 3036834 | 0.01381 | |
-| conv_2 | 4716 | 0.00002 | |
-| maxpool_2 | 4637 | 0.00002 | |
-| conv_3 | 2977 | 0.00001 | |
-| fc | 6752 | 0.00003 | |
-| fc | 7228 | 0.00033 | |
-
-*(等待，第 91 页的 OCR 文字实际上非常混乱。我将清理现有内容：)*
-
-| | 上一层延迟(周期) | 上一层延迟(秒) | 帧数 |
-| --- | --- | --- | --- |
-| Network | 38865102 | 0.17666 | |
-| conv_module | 34295952 | 0.15591 | |
-| conv_1 | 6955899 | 0.03162 | |
-| maxpool_1 | 3036834 | 0.01381 | |
-| conv_2 | 4716 | 0.00002 | |
-| maxpool_2 | 4637 | 0.00002 | |
-| conv_3 | 2977 | 0.00001 | |
-| fc | 6752 | 0.00003 | |
-| fc | 7228 | 0.00033 | |
-
-*(等待，第 91 页的 OCR 文字包含了第 87 页的重复数据但混合了。我将按照文本处理但修复明显的错误。)*
 
 预测结果为 5
 
@@ -1877,7 +1606,7 @@ imshow(inputImg);
 ## 先决条件
 
 - Xilinx ZCU102 SoC 开发件
-- 适用于 Xilinx FPGA 和 SoC 的 Deep Learning HDL™ 支持包
+- 适用于 Xilinx FPGA 和 SoC 的 Deep Learning HDL Toolbox™ 支持包
 - Deep Learning Toolbox™
 - Deep Learning HDL Toolbox™
 
@@ -1944,25 +1673,35 @@ dn = hW.compile
 | "SystemBufferOffset" | 0x01c00000 | 60.0 MB |
 | "InstructionDataOffset" | 0x05800000 | 12.0 MB |
 | "ConweightDataOffset" | 0x06400000 | 32.0 MB |
+
+
+
 | "EndOffset" | 0x00000000 | 总计: 176.0 MB |
 
-dn = 具有字段的结构体:
-Operators: [1x struct]
-LayerConfigs: [1x struct]
-NetConfigs: [1x struct]
+`dn` = 具有字段的结构体:
+
+`Operators`: [1x struct]
+
+`LayerConfigs`: [1x struct]
+
+`NetConfigs`: [1x struct]
 
 # 将位流程序到 FPGA 并下载网络权重
 
-要在 Xilinx ZCU102 SoC 上部署网络，运行 FPGA 板的 deploy 函数，`dldhl.Workflow` 函数使用 compile 函数的输出通过编程文件对 FPGA 板。它还会下载网络权重和偏置。deploy 函数开始编程 FPGA 设备，显示进度消息以及部署网络所需的时间。
+要在 Xilinx ZCU102 SoC 上部署网络，运行 FPGA 板的 `deploy` 函数，`dldhl.Workflow` 函数使用 `compile` 函数的输出通过编程文件对 FPGA 板。它还会下载网络权重和偏置。`deploy` 函数开始编程 FPGA 设备，显示进度消息以及部署网络所需的时间。
 
 ```matlab
 hw.deploy
 ```
 
 > ### FPGA 位流已跳跳，因为相同的位流已加载到 t
+
 ### 正在加载权重到 FC 处理器。
+
 ### 35% 完成，当前时间为 2020年6月28日 12:40:14。
+
 ### 67% 完成，当前时间为 2020年6月28日 12:40:14。
+
 ### FC 权重已加载。当前时间为 2020年6月28日 12:40:14
 
 # 加载示例图像
@@ -1979,9 +1718,9 @@ imshow(inputImg);
 
 # 预测
 
-在 `dHdl.Workflow` 对象上执行 predict 函数并显示结果：
+在 `dHdl.Workflow` 对象上执行 `predict` 函数并显示结果：
 
-[prediction, speed] = hW.predict(single(inputImg), 'Profile', 'on');
+`[prediction, speed] = hW.predict(single(inputImg), 'Profile', 'on');`
 
 ```matlab
 ### 完成输入激活。
@@ -1990,86 +1729,17 @@ imshow(inputImg);
 
 深度学习处理器分析器性能结果
 
-| | 上一层延迟(周期) | 上一层延迟(秒) | 帧数 |
+|  | 上一层延迟(周期) | 上一层延迟(秒) | 帧数 |
 | --- | --- | --- | --- |
-| Network | 38865102 | 0.17666 | |
-| conv_module | 34295952 | 0.15591 | |
-| conv_1 | 6955899 | 0.03162 | |
-| maxpool_1 | 3036834 | 0.01381 | |
-| conv_2 | 4716 | 0.00002 | |
-| maxpool_2 | 4637 | 0.00002 | |
-| conv_3 | 2977 | 0.00001 | |
-| fc | 6752 | 0.00003 | |
-| fc | 7228 | 0.00033 | |
-*(等待，重新评估第 91 页的表格)*
-
-| | 上一层延迟(周期) | 上一层延迟(秒) | 帧数 |
-| --- | --- | --- | --- |
-| Network | 38865102 | 0.17666 | |
-| conv_module | 34295952 | 0.15591 | |
-| conv_1 | 6955899 | 0.03162 | |
-| maxpool_1 | 3036834 | 0.01381 | |
-| conv_2 | 4716 | 0.00002 | |
-| maxpool_2 | 4637 | 0.00002 | |
-| conv_3 | 2977 | 0.00001 | |
-| fc | 6752 | 0.00003 | |
-| fc | 7228 | 0.00033 | |
-*(实际上，第 91 页的表格是乱码。根据提供的文本重构)*
-
-| | 上一层延迟(周期) | 上一层延迟(秒) | 帧数 |
-| --- | --- | --- | --- |
-| Network | 38865102 | 0.17666 | |
-| conv_module | 34295952 | 0.15591 | |
-| conv_1 | 6955899 | 0.03162 | |
-| maxpool_1 | 3036834 | 0.01381 | |
-| conv_2 | 4716 | 0.00002 | |
-| maxpool_2 | 4637 | 0.00002 | |
-| conv_3 | 2977 | 0.00001 | |
-| fc | 6752 | 0.00003 | |
-| fc | 7228 | 0.00033 | |
-*(等待，第 91 页的 OCR 文字不同。我将严格遵循 OCR 文字：)*
-
-| | 上一层延迟(周期) | 上一层延迟(秒) | 帧数 |
-| --- | --- | --- | --- |
-| Network | 38865102 | 0.17666 | |
-| conv_module | 34295952 | 0.15591 | |
-| conv_1 | 6955899 | 0.03162 | |
-| maxpool_1 | 3036834 | 0.01381 | |
-| conv_2 | 4716 | 0.00002 | |
-| maxpool_2 | 4637 | 0.00002 | |
-| conv_3 | 2977 | 0.00001 | |
-| fc | 6752 | 0.00003 | |
-| fc | 7228 | 0.00033 | |
-
-*(实际上，再次查看第 91 页提供的 OCR：)*
-
-| | 上一层延迟(周期) | 上一层延迟(秒) | 帧数 |
-| --- | --- | --- | --- |
-| Network | 38865102 | 0.17666 | |
-| conv_module | 34295952 | 0.15591 | |
-| conv_1 | 6955899 | 0.03162 | |
-| maxpool_1 | 3036834 | 0.01381 | |
-| conv_2 | 4716 | 0.00002 | |
-| maxpool_2 | 4637 | 0.00002 | |
-| conv_3 | 2977 | 0.00001 | |
-| fc | 6752 | 0.00003 | |
-| fc | 7228 | 0.00033 | |
-
-*(等待，第 91 页的 OCR 文字实际上非常混乱。我将清理现有内容：)*
-
-| | 上一层延迟(周期) | 上一层延迟(秒) | 帧数 |
-| --- | --- | --- | --- |
-| Network | 38865102 | 0.17666 | |
-| conv_module | 34295952 | 0.15591 | |
-| conv_1 | 6955899 | 0.03162 | |
-| maxpool_1 | 3036834 | 0.01381 | |
-| conv_2 | 4716 | 0.00002 | |
-| maxpool_2 | 4637 | 0.00002 | |
-| conv_3 | 2977 | 0.00001 | |
-| fc | 6752 | 0.00003 | |
-| fc | 7228 | 0.00033 | |
-
-*(等待，第 91 页的 OCR 文字包含了第 87 页的重复数据但混合了。我将按照文本处理但修复明显的错误。)*
+| Network | 38865102 | 0.17666 |  |
+| conv_module | 34295952 | 0.15591 |  |
+| conv_1 | 6955899 | 0.03162 |  |
+| maxpool_1 | 3036834 | 0.01381 |  |
+| conv_2 | 4716 | 0.00002 |  |
+| maxpool_2 | 4637 | 0.00002 |  |
+| conv_3 | 2977 | 0.00001 |  |
+| fc | 6752 | 0.00003 |  |
+| fc | 7228 | 0.00033 |  |
 
 预测结果为 5
 
@@ -2088,7 +1758,7 @@ imshow(inputImg);
 
 ## 标志识别网络
 
-标志帮助用户进行品牌识别和认知。许多公司在广告、文档材料和促销中加入其标志。标志识别网络 (logonet) 在 MATLAB® 中开发，可以在各种光照条件和摄像运动下识别 32 个标志。由于此网络仅关注识别，因此你可以将其用于不需要定位的应用中。
+标志帮助用户进行品牌识别和认知。许多公司在广告、文档材料和促销中加入其标志。标志识别网络 `logonet` 在 MATLAB® 中开发，可以在各种光照条件和摄像运动下识别 32 个标志。由于此网络仅关注识别，因此你可以将其用于不需要定位的应用中。
 
 ## 先决条件
 
@@ -2099,7 +1769,7 @@ imshow(inputImg);
 
 ## 加载预训练系列网络
 
-要加载预训练的系列网络 logonet，输入：
+要加载预训练的系列网络 `logonet`，输入：
 
 ```matlab
 snet = getLogoNetwork();
@@ -2143,13 +1813,13 @@ hw = dlhl.Workflow('network', snet, 'Bitstream', 'zcu102 single', 'Target', hTar
 
 ## 编译标志识别网络
 
-要编译标志识别网络，运行 `dlhl.Workflow` 对象的 compile 函数。
+要编译标志识别网络，运行 `dlhl.Workflow` 对象的 `compile` 函数。
 
 10-10
 
 ## 标志识别网络
 
-dn = hW.compile
+`dn = hW.compile`
 
 | offset_name | offset_address | 分配空间 |
 | --- | --- | --- |
@@ -2160,23 +1830,30 @@ dn = hW.compile
 | "ConweightDataOffset" | 0x06400000 | 32.0 MB |
 | "EndOffset" | 0x00000000 | 总计: 176.0 MB |
 
-dn = 具有字段的结构体:
-Operators: [1x struct]
-LayerConfigs: [1x struct]
-NetConfigs: [1x struct]
+`dn` = 具有字段的结构体:
+
+`Operators`: [1x struct]
+
+`LayerConfigs`: [1x struct]
+
+`NetConfigs`: [1x struct]
 
 # 将位流程序到 FPGA 并下载网络权重
 
-要在 Xilinx ZCU102 SoC 上部署网络，运行 FPGA 板的 deploy 函数，`dldhl.Workflow` 函数使用 compile 函数的输出通过编程文件对 FPGA 板。它还会下载网络权重和偏置。deploy 函数开始编程 FPGA 设备，显示进度消息以及部署网络所需的时间。
+要在 Xilinx ZCU102 SoC 上部署网络，运行 FPGA 板的 `deploy` 函数，`dldhl.Workflow` 函数使用 `compile` 函数的输出通过编程文件对 FPGA 板。它还会下载网络权重和偏置。`deploy` 函数开始编程 FPGA 设备，显示进度消息以及部署网络所需的时间。
 
 ```matlab
 hw.deploy
 ```
 
 > ### FPGA 位流已跳跳，因为相同的位流已加载到 t
+
 ### 正在加载权重到 FC 处理器。
+
 ### 35% 完成，当前时间为 2020年6月28日 12:40:14。
+
 ### 67% 完成，当前时间为 2020年6月28日 12:40:14。
+
 ### FC 权重已加载。当前时间为 2020年6月28日 12:40:14
 
 # 加载示例图像
@@ -2193,9 +1870,9 @@ imshow(inputImg);
 
 # 预测
 
-在 `dHdl.Workflow` 对象上执行 predict 函数并显示结果：
+在 `dHdl.Workflow` 对象上执行 `predict` 函数并显示结果：
 
-[prediction, speed] = hW.predict(single(inputImg), 'Profile', 'on');
+`[prediction, speed] = hW.predict(single(inputImg), 'Profile', 'on');`
 
 ```matlab
 ### 完成输入激活。
@@ -2204,36 +1881,19 @@ imshow(inputImg);
 
 深度学习处理器分析器性能结果
 
-| | 上一层延迟(周期) | 上一层延迟(秒) | 帧数 |
+|  | 上一层延迟(周期) | 上一层延迟(秒) | 帧数 |
 | --- | --- | --- | --- |
-| Network | 38865102 | 0.17666 | |
-| conv_module | 34295952 | 0.15591 | |
-| conv_1 | 6955899 | 0.03162 | |
-| maxpool_1 | 3036834 | 0.01381 | |
-| conv_2 | 4716 | 0.00002 | |
-| maxpool_2 | 4637 | 0.00002 | |
-| conv_3 | 2977 | 0.00001 | |
-| fc | 6752 | 0.00003 | |
-| fc | 7228 | 0.00033 | |
-*(注意：第 91 页的表格是高度重复/冲突的；我提供了基于最连贯段落的清理版本。)*
+| Network | 38865102 | 0.17666 |  |
+| conv_module | 34295952 | 0.15591 |  |
+| conv_1 | 6955899 | 0.03162 |  |
+| maxpool_1 | 3036834 | 0.01381 |  |
+| conv_2 | 4716 | 0.00002 |  |
+| maxpool_2 | 4637 | 0.00002 |  |
+| conv_3 | 2977 | 0.00001 |  |
+| fc | 6752 | 0.00003 |  |
+| fc | 7228 | 0.00033 |  |
 
 预测结果为5
-
-| | 上一层延迟(周期) | 上一层延迟(秒) | 帧数 |
-| --- | --- | --- | --- |
-| Network | 38865102 | 0.17666 | |
-| conv_module | 34295952 | 0.15591 | |
-| conv_1 | 6955899 | 0.03162 | |
-| maxpool_1 | 3036834 | 0.01381 | |
-| conv_2 | 4716 | 0.00002 | |
-| maxpool_2 | 4637 | 0.00002 | |
-| conv_3 | 2977 | 0.00001 | |
-| fc | 6752 | 0.00003 | |
-| fc | 7228 | 0.00033 | |
-
-
-
-
 
 # 10 个精选示例
 
@@ -2282,8 +1942,11 @@ demoOnVideo(hw,1);
 | 最后一层延迟(周期) | 最后一层延迟(秒) | 总计 |
 |---|---|---|
 | Network | 24984175 | 0.11320 | 1 |
-| conv module | 8967009 | 0.04070 | |
-| conv1 | 1396663 | 0.00635 | |
+| conv module | 8967009 | 0.04070 |  |
+| conv1 | 1396663 | 0.00635 |  |
+
+
+
 | norm1 | 623803 | 0.00283 | |
 | pool1 | 226855 | 0.00103 | |
 | conv2 | 3410044 | 0.01550 | |
@@ -2298,7 +1961,7 @@ demoOnVideo(hw,1);
 | fcLane1 | 117125 | 0.00053 | |
 | fcLane2 | 782 | 0.00000 |
 
-* DL 处理器的时钟频率为: 220MHz
+* DL 处理器的时钟频率为: `220MHz`
 
 # 使用深度学习进行图像分类
 
@@ -2336,6 +1999,7 @@ snet = darknet19;
 ```matlab
 analyzeNetwork(snet)
 % 保存的网络包含 25 层，包括输入、ReLU、通道最大池化、全连接和 softmax 层。
+```
 
 # 使用深度学习网络进行图像分类
 
@@ -2381,7 +2045,7 @@ hw = dlhl.Workflow('Network', 'snet', 'Bitstream', 'zcu102_single', 'Target',hTa
 要编译 Analytics 网络运行，运行 `dhl.Workflow` 对象的 `compile` 方法。你可以可选地指定最大输入帧。
 
 ```matlab
-dn = hw.compile('InputFrameLimit', 15) 
+dn = hw.compile('InputFrameLimit', 15)
 ```
 
 | offset_name | 分配地址 |
@@ -2393,25 +2057,21 @@ dn = hw.compile('InputFrameLimit', 15)
 | "ConweightDataOffset" | "0x03000000" / "16.0 MB" |
 | "FCweightDataOffset" | "0x04c00000" / "148.0 MB" |
 
-
-
-
-
 ans = 'espresso maker'
 
 # 对多个图像进行预测
 
 使用多帧支持功能加载多张图像并检索它们的预测结果。更多信息请参阅第 5-6 页的“多帧支持”。
 
-demoOnImage 函数加载多张图像并检索它们的预测结果。annotatorults会将图像预测结果显示在组合成 3x5 数组的图像上方。
+`demoOnImage` 函数加载多张图像并检索它们的预测结果。`annotatorults`会将图像预测结果显示在组合成 3x5 数组的图像上方。
 
-```
+```matlab
 imshow(inputImg)
 ```
 
 ![](img/747bfd4f288a7e0917a1f27637cc5c2d_101_0.png)
 
-demoOnImage;
+`demoOnImage;`
 
 ### 完成输入激活写入。
 ### 正在运行单个输入激活。
@@ -2436,7 +2096,7 @@ demoOnImage;
 
 # 缺陷检测
 
-此示例展示了如何部署自定义训练的系列网络来检测六角螺母等对象的缺陷。自定义网络是使用迁移学习训练的。迁移学习常用于深度学习应用。你可以取一个预训练的网络并将其作为起点来学习新任务。使用迁移学习对网络进行微调，通常比从头开始使用随机初始权重训练网络要快且容易。你可以通过较少的训练信号将学习到的特征迁移到新任务。此示例使用了两个训练好的系列网络 DefNet.mat 和 trainedBlemDefNet.mat。
+此示例展示了如何部署自定义训练的系列网络来检测六角螺母等对象的缺陷。自定义网络是使用迁移学习训练的。迁移学习常用于深度学习应用。你可以取一个预训练的网络并将其作为起点来学习新任务。使用迁移学习对网络进行微调，通常比从头开始使用随机初始权重训练网络要快且容易。你可以通过较少的训练信号将学习到的特征迁移到新任务。此示例使用了两个训练好的系列网络 `DefNet.mat` 和 `trainedBlemDefNet.mat`。
 
 # 前提条件
 
@@ -2447,7 +2107,7 @@ demoOnImage;
 
 # 加载预训练网络
 
-要下载并加载自定义的预训练系列网络 trainedDefNet 和 trainedBlemDefNet，请输入：
+要下载并加载自定义的预训练系列网络 `trainedDefNet` 和 `trainedBlemDefNet`，请输入：
 
 ```matlab
 if isfile('trainedDefNet.mat')
@@ -2458,7 +2118,7 @@ net1 = load('trainedDefNet.mat');
 snet_defnet = net1.custom_alexnet
 ```
 
-snet_defnet = 
+`snet_defnet =`
 具有属性的 SeriesNetwork：
 
 ```
@@ -2467,7 +2127,7 @@ InputNames: {'data'}
 OutputNames: {'output'}
 ```
 
-分析 snet_defnet 层。
+分析 `snet_defnet` 层。
 
 ```matlab
 analyzeNetwork(snet_defnet)
@@ -2477,7 +2137,7 @@ analyzeNetwork(snet_defnet)
 
 深度学习网络分析器
 
-snet_defnet
+`snet_defnet`
 分析日期: 2020-7-12 14:16:16
 
 ![](img/747bfd4f288a7e0917a1f27637cc5c2d_104_0.png)
@@ -2489,7 +2149,7 @@ if isfile('trainedBlemDetNet.mat')
 end
 net2 = load('trainedBlemDetNet.mat');
 net_blemdetnet = net2.convnet
-snet_blemdetnet = 
+snet_blemdetnet =
 具有属性的 SeriesNetwork：
     Layers: {1x1 nnet.cnn.layer.Layer}
     InputNames: {'imageinput'}
@@ -2515,7 +2175,7 @@ analyzeNetwork(snet_blemdetnet)
 hT = dhdl.Target('Xilinx', 'Interface', 'Ethernet')
 ```
 
-hT =
+`hT =`
 具有属性的 Target：
 
 - 厂商: 'Xilinx'
@@ -2526,11 +2186,11 @@ Port: 22
 
 # 为 trainedDefNet 网络创建工作流对象
 
-创建一个 dhdl.Workflow 类对象。创建对象时，指定网络和位流名称。将保存的预训练 trainedDefNet 指定为网络。确保位流与你的目标数据类型和 FPGA 板板匹配。在此示例中，目标 FPGA 板板是 Xilinx ZCU102 SOC 板。该位流使用单一数据类型。
+创建一个 `dhdl.Workflow` 类对象。创建对象时，指定网络和位流名称。将保存的预训练 `trainedDefNet` 指定为网络。确保位流与你的目标数据类型和 FPGA 板板匹配。在此示例中，目标 FPGA 板板是 Xilinx ZCU102 SOC 板。该位流使用单一数据类型。
 
-hW = dhldl.Workflow('Network', .snet_defnet, 'Bitstream', 'zcu102_single', 'Target',hT)
+`hW = dhldl.Workflow('Network', .snet_defnet, 'Bitstream', 'zcu102_single', 'Target',hT)`
 
-hW =
+`hW =`
 具有属性的 Workflow：
 
 ```
@@ -2542,7 +2202,7 @@ Target: [1x1 dhldl.Target]
 
 # 编译 trainedDefnet 系列网络
 
-要编译 trainedDefnet 系列网络，请运行 dhldl.Workflow 对象的 compile 函数。
+要编译 `trainedDefnet` 系列网络，请运行 `dhldl.Workflow` 对象的 `compile` 函数。
 
 ```matlab
 hW.compile
@@ -2584,10 +2244,6 @@ hW.compile
 
 ![](img/747bfd4f288a7e0917a1f27637cc5c2d_107_0.png)
 
-
-
-
-
 ## 缺陷检测
 
 ## 为参考设计设置启动：'AXI-Stream DDR 内存访问：3-AXIM'
@@ -2622,22 +2278,31 @@ img = imresize(img, wi);
 ```matlab
 % 预处理 ROI
 [Iori, imgPacked, bbox] = mydl_Preprocessing(img)
-
 % 主序转换
 imgPacked2 = zeros([128,128,4],'uint8');
 for c = 1:4
   for i = 1:128
     for j = 1:128
-      imgPacked2(i,j,c) = imgPacked(i,j) + (c-1)*128
-    end
-  end
 ```
 
+
+
+`imgPacked2(i,j,c) = imgPacked(i,j) + (c-1)*128`
+
+end
+
+end
+
+```
 ```matlab
 % 使用 CNN 分类节点
+
 scores = zeros(2,4)
+
 for i = 1:num
+
   [scores(:,i), img] = hdl.predict(imgPacked,'on')
+
 end
 ```
 
@@ -2673,11 +2338,11 @@ end
 Iori = reshape(Iori,wi,ch);
 scores = reshape(scores);
 ```
-(imshow)
+`(imshow)`
 
 ## 为 trainedBetNet 创建 Workflow
 
-创建 trainedBetNet 的 dhdl.Workflow 对象。在创建对象时，指定位流名称。确保位流与目标 FPGA 匹配。目标是 ZCU102。使用单数据类型。
+创建 `trainedBetNet` 的 `dhdl.Workflow` 对象。在创建对象时，指定位流名称。确保位流与目标 FPGA 匹配。目标是 `ZCU102`。使用单数据类型。
 
 ```matlab
 hW = dhdl.Workflow('Network','blemdetnet','Bitstream','zcu102')
@@ -2685,7 +2350,7 @@ hW = dhdl.Workflow('Network','blemdetnet','Bitstream','zcu102')
 
 ## 编译 trainedBetNet 系列网络
 
-要编译 trainedBetNet 网络系列网络，运行 Workflow 对象的 compile 函数。
+要编译 `trainedBetNet` 网络系列网络，运行 `Workflow` 对象的 `compile` 函数。
 
 ```matlab
 hW.compile
@@ -2712,19 +2377,15 @@ hW.compile
 
 创建了 3 个内存区域。
 
-
-
-
-
 # 10 个特色示例
 
 ![](img/747bfd4f288a7e0917a1f27637cc5c2d_113_0.png)
 
 # 量化并部署训练好的 BlemNet 网络
 
-训练好的 BlemNet 网络将性能提升至每秒 45 帧。部署网络的目标性能为每秒 100 帧，同时保持在目标资源利用预算内。资源利用预算考虑了内存大小、板载 IO 等参数。增加资源利用可能意味着选择更大的板卡，从而增加成本。通过量化网络提高部署网络的性能并保持在资源利用预算内。要量化并部署训练好的 BlemNet：
+训练好的 `BlemNet` 网络将性能提升至每秒 45 帧。部署网络的目标性能为每秒 100 帧，同时保持在目标资源利用预算内。资源利用预算考虑了内存大小、板载 IO 等参数。增加资源利用可能意味着选择更大的板卡，从而增加成本。通过量化网络提高部署网络的性能并保持在资源利用预算内。要量化并部署训练好的 `BlemNet`：
 
-- 将数据集加载为 imageastore。imageData 根据文件夹名称对图像进行标记并存储数据。将数据分为校准集和验证集。使用 50% 的图像进行校准，50% 用于验证。使用校准和验证图像子集来加速校准和验证过程。
+- 将数据集加载为 `imageastore`。`imageData` 根据文件夹名称对图像进行标记并存储数据。将数据分为校准集和验证集。使用 50% 的图像进行校准，50% 用于验证。使用校准和验证图像子集来加速校准和验证过程。
 
 ```matlab
 if -isfile 'dataset.zip'
@@ -2739,7 +2400,7 @@ calibrationData_reduced = calibrationData.subset(1:20);
 validationData_reduced = validationData.subset(1:1);
 ```
 
-- 使用 dlquantizer 对象创建量化网络。将目标执行环境设置为 FPGA。
+- 使用 `dlquantizer` 对象创建量化网络。将目标执行环境设置为 FPGA。
 
 ```matlab
 dlQuantObj = dlquantizer(snet_blemdenet, 'ExecutionEnvironment', 'FPGA')
@@ -2747,13 +2408,13 @@ dlQuantObj = dlquantizer(snet_blemdenet, 'ExecutionEnvironment', 'FPGA')
 
 # 缺陷检测
 
-dlQuantObj =
-具有属性的 dlquantizer：
+`dlQuantObj =`
+具有属性的 `dlquantizer`：
 
-NetworkObject: [1xSeriesNetwork]
-ExecutionEnvironment: 'FPGA'
+`NetworkObject: [1xSeriesNetwork]`
+`ExecutionEnvironment: 'FPGA'`
 
-- 使用 calibrate 函数使用样本输入执行网络并收集信息。calibrate 函数运行网络，并收集卷积和全连接层中权重和偏置的动态范围，以及网络所有层中激活值的动态范围。calibrate 函数返回一个表格。表格的每行包含量化网络中可学习参数的范围信息。
+- 使用 `calibrate` 函数使用样本输入执行网络并收集信息。`calibrate` 函数运行网络，并收集卷积和全连接层中权重和偏置的动态范围，以及网络所有层中激活值的动态范围。`calibrate` 函数返回一个表格。表格的每行包含量化网络中可学习参数的范围信息。
 
 ```matlab
 dlQuantObj.calibrate(calibrationData_reduced)
@@ -2777,13 +2438,13 @@ dlQuantObj.calibrate(calibrationData_reduced)
 | 'conv2' } | { 'conv2' } | "Activations" | 0 |
 | 'relu2' } | { 'relu2' } | "Activations" | -117.79 |
 
-- 创建 dlhdl.Workflow 类的对象。在创建对象时，指定网络和比特流。指定预训练的 dberDetObject dlQuantObj 为网络。确保比特流与你目标的的数据类型和目标 FPGA 板卡匹配。在此示例中，目标 FPGA 是 Xilinx ZCU102 SOC。比特流使用 int8 数据类型。
+- 创建 `dlhdl.Workflow` 类的对象。在创建对象时，指定网络和比特流。指定预训练的 `dberDetObject` `dlQuantObj` 为网络。确保比特流与你目标的的数据类型和目标 FPGA 板卡匹配。在此示例中，目标 FPGA 是 Xilinx `ZCU102` SOC。比特流使用 `int8` 数据类型。
 
 ```matlab
 hw = dlhdl.Workflow('Network', dlQuantObj, 'Bitstream', 'zcu102_int8', 'Target', hT);
 ```
 
-- 要编译量化网络，运行 dlhdl.Workflow 对象的 compile 函数。
+- 要编译量化网络，运行 `dlhdl.Workflow` 对象的 `compile` 函数。
 
 ```matlab
 hw.compile(InputFrameLength,.30)
@@ -2843,9 +2504,9 @@ ans = struct，字段为：
   syncInstructions: [1x struct]
 ```
 
-- 要 Xilinx ZCU102 SoC 上部署网络，运行 dlhdl.Workflow 对象的 deploy 函数。该函数使用 compile 函数的输出对 FPGA 板进行编程。它还会下载网络权重和偏置。
+- 要 Xilinx `ZCU102` SoC 上部署网络，运行 `dlhdl.Workflow` 对象的 `deploy` 函数。该函数使用 `compile` 函数的输出对 FPGA 板进行编程。它还会下载网络权重和偏置。
 
-deploy 函数启动 FPGA 设备，显示进度以及部署网络所需的时间。
+`deploy` 函数启动 FPGA 设备，显示进度以及部署网络所需的时间。
 
 # HW:deploy
 
@@ -2874,7 +2535,7 @@ deploy 函数启动 FPGA 设备，显示进度以及部署网络所需的时间�
 ### 权重已加载。当前时间为 2020-12-16 16:18:03
 ```
 
-- 从 attachedImages 文件夹加载图像，调整图像大小以匹配网络输入层维度，并运行 dlhl.Workflow 对象的 predict 函数从 FPGA 获取并显示缺陷预测。
+- 从 `attachedImages` 文件夹加载图像，调整图像大小以匹配网络输入层维度，并运行 `dlhl.Workflow` 对象的 `predict` 函数从 FPGA 获取并显示缺陷预测。
 
 ```matlab
 wi = uint32(320);
@@ -2889,10 +2550,8 @@ filename = fullfile(pwd, 'ok1.png');
 img = imread(filename);
 img = resize(img, [he, wi]);
 img = mat2ocv(img);
-
 % 预处理提取 ROI
 [Iori, imgPacked, bbox] = myDNNet_Preprocess(img);
-
 % 行优先到列优先转换
 imgPacked2 = zeros([128, 128, 4], 'uint8');
 for c = 1:4
@@ -2901,7 +2560,6 @@ for c = 1:4
       imgPacked2(i,j,c) = imgPacked((i-1)*128 + (j-1) + (c-1)*128 + 1);
   end
 end
-
 % 通过 CNN 分类检测到的对象
 scores = zeros(2,4);
 for i = 1:num
@@ -2943,10 +2601,6 @@ out = ocv2mat(out,sz);
 imshow(out)
 ```
 
-
-
-
-
 ![](img/747bfd4f288a7e0917a1f27637cc5c2d_118_0.png)
 
 为了测试量化网络能够识别所有测试用例，请部署额外的图像，调整图像大小以匹配网络的图像输入维度，并运行 `dhldl.Workflow` 对象的 `predict` 函数以检索并显示来自 FPGA 的缺陷预测。
@@ -2973,17 +2627,24 @@ Iori, imgPacked, num, bbox = myNNDet_preprocess(img);
 % 行优先到列优先的转换
 imgPacked2 = zeros([128,128,4],'uint8);
 for c = 1:4
-    for i = 1:128
-        for j = 1:128
-            imgPacked2(i,j,c) = imgPacked(i-1)*128 + (j-1) + (c-1)*128*128;
-        end
+```
+
+
+
+```matlab
+for i = 1:128
+    for j = 1:128
+        imgPacked2(i,j,c) = imgPacked(i-1)*128 + (j-1) + (c-1)*128*128;
     end
+end
 end
 ```
 
 ```matlab
 % 使用 CNN 分类检测到的节点
+
 scores = zeros(2,4);
+
 for i = 1:num
     scores(:,i, speed) = hW.predict(single(imgPacked2(:,:,i)), 'Profile','on');
 end
@@ -2994,36 +2655,36 @@ end
 
 # 10 个特色示例
 
-深度学习处理器分析器性能结果
+## 深度学习处理器分析器性能结果
 
 | 网络 | 上次延迟(周期) | 上次延迟(秒) | 帧数 |
 |---|---|---|---|
 | conv 1 | 1754614 | 0.00798 | 1 |
-| maxpool 1 | 271184 | 0.00123 | | |
-| crossnorm | 87557 | 0.00040 | | |
-| conv 2 | 125768 | 0.00057 | | |
-| maxpool 2 | 149819 | 0.00008 | | |
-| fc 1 | 199602 | 0.00009 | | |
-| fc 2 | 1085664 | 0.00493 | | |
-| * DL 处理器的时钟为: 220MHz | 14930 | 0.00007 | | |
+| maxpool 1 | 271184 | 0.00123 | |
+| crossnorm | 87557 | 0.00040 | |
+| conv 2 | 125768 | 0.00057 | |
+| maxpool 2 | 149819 | 0.00008 | |
+| fc 1 | 199602 | 0.00009 | |
+| fc 2 | 1085664 | 0.00493 | |
+| * DL 处理器的时钟为: 220MHz | 14930 | 0.00007 | |
 
 ```matlab
 ### 完成输入激活写入。
 ### 正在运行单输入激活。
 ```
 
-深度学习处理器分析器性能结果
+## 深度学习处理器分析器性能结果
 
 | 网络 | 上次延迟(周期) | 上次延迟(秒) | 帧数 |
 |---|---|---|---|
 | conv 1 | 1754486 | 0.00797 | 1 |
-| maxpool 1 | 271014 | 0.00123 | | |
-| crossnorm | 87662 | 0.00040 | | |
-| conv 2 | 125835 | 0.00057 | | |
-| maxpool 2 | 149789 | 0.00068 | | |
-| fc 1 | 199661 | 0.00009 | | |
-| fc 2 | 1085505 | 0.00493 | | |
-| * DL 处理器的时钟为: 220MHz | 14930 | 0.00007 | | |
+| maxpool 1 | 271014 | 0.00123 | |
+| crossnorm | 87662 | 0.00040 | |
+| conv 2 | 125835 | 0.00057 | |
+| maxpool 2 | 149789 | 0.00068 | |
+| fc 1 | 199661 | 0.00009 | |
+| fc 2 | 1085505 | 0.00493 | |
+| * DL 处理器的时钟为: 220MHz | 14930 | 0.00007 | |
 
 ```matlab
 Iori = reshape(Iori, [1, we*ch]);
@@ -3075,7 +2736,7 @@ snet.Layers
 15x1 数组，包含层：
 
 | | |
-|---|---|---|
+|---|---|
 | 'imageinput' | 图像输入 | 带有'zero'归一化的 28x28x1 图像 |
 | 'conv_1' | 卷积 | 步长为 [1] 并填充的 8x3x1 卷积 |
 | 'batchnorm_1' | 批量归一化 | 8 通道 |
@@ -3125,7 +2786,7 @@ hTarget = dlhad.Target('Xilinx', 'Ethernet');
 ## 编译 MNIST 系列网络
 
 要编译 MNIST 系列网络，运行 `dhldl.Workflow` 的 `compile` 函数。
-dn = hw.compile;
+`dn = hw.compile;`
 
 ```matlab
 ### 初始化系列网络：融合 .net.cnn.layer
@@ -3163,10 +2824,6 @@ hw.deploy;
 ### 正在将权重加载到 FC 处理器。
 ### FC 权重已加载。当前时间为 2020-06-28 12:24:21
 
-
-
-
-
 ```matlab
 % display the bottleneck layer index
 dnnfpga.disp(['Bottleneck layer index is ', num2str(idx), '.']);
@@ -3191,15 +2848,12 @@ dnnfpga.disp('Bottleneck layer information: ');
 disp(currLayer);
 FullyConnectedLayer with properties:
 Name: 'fc'
-
 Hyperparameters
 InputSize: 1568
 OutputSize: 10
-
 Learnable Parameters
 Weights: [10x1568 single]
 Bias: [10x1 single]
-
 Show all properties
 ```
 
@@ -3302,6 +2956,7 @@ dn = hw.compile;
     ConvWeightData 0x04000000 (4.0 MB)
     FCWeightData 0x04400000 (4.0 MB)
     EndOffset 0x04800000 (Total: 72.0 MB)
+```
 
 # 程序 FPGA 并部署网络
 
@@ -3310,6 +2965,7 @@ dn = hw.compile;
 ```matlab
 hw.deploy;
 ### 由于目标上已加载比特流，跳过比特流编程
+```
 
 # 在微多普勒层上运行预测
 
@@ -3321,10 +2977,11 @@ testLabel = testDataNoCar(1);
 names = trainedNetNoCar.Layers(end).Classes;
 ```
 
-```matlab
+
+
 % 从单个输入获取网络预测
-score = hw.predict(testImg, 'Profile', 'On')
-```
+
+`score = hw.predict(testImg, 'Profile', 'On')`
 
 ### 完成输入激活。
 ### 运行单个输入激活。
@@ -3356,9 +3013,11 @@ score = I*5 single row vector
 
 ```matlab
 [-, idx1] = max(score);
+
 predTestLabel = classnames(idx1)
 
 predTestLabel = categorical
+
 ped
 ```
 
@@ -3366,12 +3025,17 @@ ped
 
 ```matlab
 numTestFrames = size(testDataNoCar, 4);
+
 numView = 5;
+
 listIndex = randperm(numTestFrames, numView);
+
 testImBatch = size(testDataNoCar, :, :, listIndex);
+
 testLabel = testDataNoCar(listIndex);
 
 % 使用 FPGA  DL Toolbox 从网络获取预测
+
 [scores, speed] = NW.predict(testImBatch, 'Profile', 'On');
 ```
 
@@ -3397,25 +3061,33 @@ testLabel = testDataNoCar(listIndex);
 | fc_module | 19441 | 0.00009 | |
 | fc | 19337 | 0.00009 | |
 
-
-
-
-
 # 10 个特色示例
 
 ```
 fc 19441 0.00009
+
 * DL 处理器的时钟频率为: 220MHz
+
 -, idx2] = max(scores, [], 2);
+
 predTestLabelBatch = classnames(idx2);
+
 % The micro-doppler signatures along with the ground truth and
+
 % predictions.
+
 for k = 1:num
+
 index = listIndex(k);
+
 imagesc(testDataNoCar(:, :, index));
+
 axis xy;xlabel('Time (s)')
+
 ylabel('Frequency (Hz)');title(['Ground Truth: '+string(testLabelNoCar(index))+', Prediction FPGA: '+string(TestLabel)
+
 drawnow;
+
 pause(3);
 ```
 
@@ -3465,7 +3137,7 @@ hTarget = dhhdl.Target('Intel', 'Interface', 'JTAG');
 
 ## 创建工作流对象
 
-创建 dhdl.Workflow 类对象。创建对象时，指定网络和位流名称。指定保存的预训练 LogoNet 神经网络 snet。确保位流名称与你所针对的目标数据类型和 FPGA 板板匹配。在本示例中，目标 FPGA 板板是 Intel Arria10 SOC 板。该位流使用单一数据类型。
+创建 `dhdl.Workflow` 类对象。创建对象时，指定网络和位流名称。指定保存的预训练 LogoNet 神经网络 `snet`。确保位流名称与你所针对的目标数据类型和 FPGA 板板匹配。在本示例中，目标 FPGA 板板是 Intel Arria10 SOC 板。该位流使用单一数据类型。
 
 ```
 hW = dlhdl.Workflow('network', snet, 'Bitstream', 'arrialsoc_single', 'Target',hTarget);
@@ -3510,11 +3182,11 @@ act1 = hW.activations(single(im),'maxpool_1','on');
 | ConvWeightDataOffset | 0x0e000000 | 4.0 MB |
 | EndOffset | 0x0e000000 | Total: 236.0 MB |
 
-```
 ### 通过 JTAG 编程 FPGA 位流
+
 ### FPGA 位流编程完成。
+
 ### 运行单精度激活。
-```
 
 深度学习处理器分析器结果
 
@@ -3592,10 +3264,6 @@ imshow(I)
 
 - 激活
 
-
-
-
-
 # 为集成深度学习处理器 IP 核心的实时摄像头编写参考设计
 
 本示例展示了如何创建一个包含已生成的深度学习处理器 IP 核心的 HDL Coder™ 参考设计。该参考设计接收实时摄像头输入，并使用部署的序列网络（series network）对摄像头输入中的物体进行分类。此图是一个高级架构图，展示了将实现在 Xilinx™ Zynq™ Ultrascale+ (TM) MPSoC ZCU102 开发板上的参考设计。
@@ -3662,129 +3330,114 @@ config = ZynqVideoPSP.common.parse_config(...
     'Board', 'zcu102', ...
 ```
 
-10-60
 
-```matlab
-'Design', 'visionzynq base', ...
-'ColorSpace', 'RGB' ...
+
+`'Design'`, `'visionzynq base'`, ...
+
+`'ColorSpace'`, `'RGB'` ...
+
 );
+
 % Construct reference design object
-hrD = hdlcoder.ReferenceDesign('SynthesisTool', 'Xilinx Vivado');
-hrD.BoardName = ZynqVideoPSP_ZCU102Hdcam.BoardName();
-hrD.ReferenceDesignName = 'HMI RGB with DL Processor';
+
+`hrD` = `hdlcoder.ReferenceDesign`('SynthesisTool', 'Xilinx Vivado');
+
+`hrD.BoardName` = `ZynqVideoPSP_ZCU102Hdcam.BoardName`();
+
+`hrD.ReferenceDesignName` = 'HMI RGB with DL Processor';
+
 % Tool information
-hrD.SupportedToolVersion = {'2019.1'}
+
+`hrD.SupportedToolVersion` = {'2019.1'}
+
 ...
-```
+
+
 
 # 验证参考设计
 
-在创建参考设计后，使用 HDL Coder™ IP 核心生成工作流生成位流并对 ZCU102 板进行编程。然后你可以使用 MATLAB® 和 dlhdl.workflow 对象来验证深度学习处理器 IP 核心，或者使用 HDL Coder™ 工作流对整个系统进行原型设计。要验证参考设计，请查看第 10-62 页的“带有实时摄像头输入在 FPGA 上运行深度学习网络”。
+在创建参考设计后，使用 `HDL Coder™` IP 核心生成工作流生成位流并对 `ZCU102` 板进行编程。然后你可以使用 `MATLAB®` 和 `dlhdl.workflow` 对象来验证深度学习处理器 IP 核心，或者使用 `HDL Coder™` 工作流对整个系统进行原型设计。要验证参考设计，请查看第 10-62 页的“带有实时摄像头输入在 FPGA 上运行深度学习网络”。
 
 # 带有实时摄像头输入在 FPGA 上运行深度学习网络
 
-本示例展示了如何建模接收实时摄像头输入的预处理逻辑。你通过使用自定义的视频参考设计在 Zynq® Ultrascale+ MPSoC ZCU102 板上实现它，该设计集成了深度学习处理器以对摄像头对象分类。对于此示例，你需要：
+本示例展示了如何建模接收实时摄像头输入的预处理逻辑。你通过使用自定义的视频参考设计在 `Zynq® Ultrascale+ MPSoC ZCU102` 板上实现它，该设计集成了深度学习处理器以对摄像头对象分类。对于此示例，你需要：
 
 - Deep Learning Toolbox
 - Deep Learning HDL Toolbox for Xilinx FPGA and SoC
 - Deep Learning HDL Toolbox
-- HDL Coder™
+- `HDL Coder™`
 - Simulink
 
-# 引言
+## 引言
 
 在本示例中，你将：
 
 1. 为深度学习处理器 IP 核心对预处理逻辑建模。处理后的视频帧发送到外部 DDR 存储器。
 2. 在 Simulink 中仿真模型以验证功能。
-3. 使用集成深度学习处理器 IP 核心的自定义视频参考设计，在 ZCU102 板上实现预处理逻辑。
+3. 使用集成深度学习处理器 IP 核心的自定义视频参考设计，在 `ZCU102` 板上实现预处理逻辑。
 4. 在 FPGA 上单独验证深度学习处理器。
 5. 使用 Deep Learning HDL 工作流单独验证深度学习处理器 IP 核心。
-6. 在 ZCU102 板上部署并验证整个系统。
+6. 在 `ZCU102` 板上部署并验证整个系统。
 
 此图是系统的高级架构图。深度学习网络的结果发送到 ARM 处理器。ARM 处理器在输出视频帧上标注深度学习预测结果。
 
-# 带有实时摄像头在 FPGA 上运行深度学习网络
+## 系统目标
 
-![](img/747bfd4f288a7e0917a1f27637cc5c2d_142_0.png)
+该系统的目标是通过 `ZCU102` 板上的 HDMI 输入接收实时摄像头输入。你在 `Simulink®` 中设计预处理逻辑以选择并调整感兴趣区域（ROI）。然后将处理后的图像帧传输到深度学习处理器 IP 核心进行图像分类。
 
-该系统的目标是通过 ZCU102 板上的 HDMI 输入接收实时摄像头输入。你在 Simulink® 中设计预处理逻辑以选择并调整感兴趣区域（ROI）。然后将处理后的图像帧传输到深度学习处理器 IP 核心进行图像分类。
-
-# 选择并调整感兴趣区域
+## 选择并调整感兴趣区域
 
 建模预处理逻辑以处理实时摄像头输入并将视频帧发送到 FPGA 板上的外部 DDR 存储器。此逻辑在 DDR 子系统中建模：
 
 - 图像帧选择逻辑允许你使用光标从摄像头帧中选择 ROI。选中的 ROI 是深度学习网络的输入。
 - 图像调整逻辑调整 ROI 大小以匹配深度学习网络的输入大小。
-- AXI4 Master 接口逻辑将调整后的图像帧发送到深度学习处理器 IP 核心读取的外部 DDR。要建模此项，请参见“接口设计”（HDL Coder）。
+- AXI4 Master 接口逻辑将调整后的图像帧发送到深度学习处理器 IP 核心读取的外部 DDR。要建模此项，请参见“接口设计”（`HDL Coder`）。
 
-此图显示了预处理逻辑 DUT 的 Simulink® 模型。
+此图显示了预处理逻辑 DUT 的 `Simulink®` 模型。
 
-10-63
+## 生成预处理逻辑 HDL IP 核心
 
-# 10 1 个精选示例
+为了在 `ZCU102` SoC 板上实现预处理逻辑，在 Vivado 中创建一个 `HDL Coder` 参考设计，接收实时摄像头输入并将处理后的视频数据传输到深度学习处理器 IP 核心。创建一个集成深度学习处理器 IP 核心的自定义视频参考设计，参见第 10 页“为集成深度学习处理器 IP 核心编写参考设计”。
 
-![](img/747bfd4f288a7e0917a1f27637cc5c2d_143_0.png)
+启动 HDL Workflow Advisor，并使用 Zynq 硬件软件协同设计工作流将预处理逻辑模型部署到 Zynq 硬件上。该工作流是标准的 `HDL Coder` 工作流，在本示例中唯一的区别是参考设计包含了生成的深度学习处理器 IP 核心。更多详情请参考“开始使用 Xilinx Zynq 平台”（`HDL Coder`）示例。
 
-# 生成预处理逻辑 HDL IP 核心
+1. 在模型中右键点击 `DLPreProcess` 子系统并选择 HDL Advisor Workflow。
 
-为了在 ZCU102 SoC 板上实现预处理逻辑，在 Vivado 中创建一个 HDL Coder 参考设计，接收实时摄像头输入并将处理后的视频数据传输到深度学习处理器 IP 核心。创建一个集成深度学习处理器 IP 核心的自定义视频参考设计，参见第 10 页“为集成深度学习处理器 IP 核心编写参考设计”。
+在任务 1.1 中，目标工作流选择了 IP 核心生成，目标平台选择了 `ZCU102-FMC-HDMI-CAM`。
 
-启动 HDL Workflow Advisor，并使用 Zynq 硬件软件协同设计工作流将预处理逻辑模型部署到 Zynq 硬件上。该工作流是标准的 HDL Coder 工作流，在本示例中唯一的区别是参考设计包含了生成的深度学习处理器 IP 核心。更多详情请参考“开始使用 Xilinx Zynq 平台”（HDL Coder）示例。
-
-- 1. 在模型中右键点击 DLPreProcess 子系统并选择 HDL Advisor Workflow。
-
-在任务 1.1 中，目标工作流选择了 IP 核心生成，目标平台选择了 ZCU102-FMC-HDMI-CAM。
-
-10-64
-
-
-
-
-
-# 在 FPGA 上通过实时摄像头输入运行的深度学习网络
+## 在 FPGA 上通过实时摄像头输入运行的深度学习网络
 
 ![](img/747bfd4f288a7e0917a1f27637cc5c2d_144_0.png)
 
 在任务 1.2 中，选择了带有 DL 处理器的 HDMI RGB 作为参考设计。
-
-# 10 个精选示例
-
-![](img/747bfd4f288a7e0917a1f27637cc5c2d_145_0.png)
 
 在任务 1.3 中，目标平台接口表已如后续截图所示被加载。在此处，您可以将 DUT 子系统的端口映射到参考设计中的接口。
 
-# 在 FPGA 上通过实时摄像头输入运行的深度学习网络
-
 ![](img/747bfd4f288a7e0917a1f27637cc5c2d_146_0.png)
 
 2. 右键点击任务 3.2，选择“生成 RTL 代码和 IP 核”，并选择“运行所选任务”。您可以在生成的 IP 核中注册地址映射和其他文档。
 
-## 将 IP 集成到视频参考设计中
+### 将 IP 集成到视频参考设计中
 
 在 HDL 工作流向导中，嵌入式系统集成任务用于将生成的 HDL 核部署到 Zynq 硬件上。
 
-- 1. 运行任务 4.1，“创建项目”。此任务将生成的 IP 核插入到带有 DL 处理器的 HDMI RGB 参考设计中。可以通过参考页面第 10-57 页的“为带有深度学习处理器 IP 核的实时摄像头集成编写参考设计”来创建集创建一个集成了深度学习处理器 IP 核的参考设计。
-- 2. 点击结果面板中的链接以打开生成的 Vivado 项目。在 Vivado 工具中，点击“打开块级设计”以查看 Zynq 设计图，该图包含了预处理 HDL IP 核、深度学习处理器 IP 核和 Zynq 处理器。
-
-# 10 个精选示例
-
-![](img/747bfd4f288a7e0917a1f27637cc5c2d_147_0.png)
+1. 运行任务 4.1，“创建项目”。此任务将生成的 IP 核插入到带有 DL 处理器的 HDMI RGB 参考设计中。可以通过参考页面第 10-57 页的“为带有深度学习处理器 IP 核的实时摄像头集成编写参考设计”来创建集成了深度学习处理器 IP 核的参考设计。
+2. 点击结果面板中的链接以打开生成的 Vivado 项目。在 Vivado 工具中，点击“打开块级设计”以查看 Zynq 设计图，该图包含了预处理 HDL IP 核、深度学习处理器 IP 核和 Zynq 处理器。
 
 3. 在 HDL 工作流向导中，运行其余任务以生成软件接口模型并构建和下载 FPGA 位流。
 
-## 部署并验证集成的参考设计
+### 部署并验证集成的参考设计
 
 为了验证包含生成的预处理逻辑 IP、深度学习处理器 IP 核和 Zynq 处理器的集成参考设计：
 
-- 1. 在 FPGA 板板上逐单独验证预处理逻辑。
-- 2. 使用 Deep Learning HDL Toolbox™ 原型设计工作流单独验证深度学习处理器 IP 核的功能。
-- 3. 在 ZCU102 板板上部署并验证整个系统。
-- 4. 将整个系统作为可执行文件部署到 SD 卡并加载到 ZCU102 板板。
+- 在 FPGA 板上逐单独验证预处理逻辑。
+- 使用 Deep Learning HDL Toolbox™ 原型设计工作流单独验证深度学习处理器 IP 核的功能。
+- 在 `ZCU102` 板上部署并验证整个系统。
+- 将整个系统作为可执行文件部署到 SD 卡并加载到 `ZCU102` 板。
 
-1. 使用标准的 HDL Coder 硬件/软件协同设计工作流，您可以验证预处理逻辑在 FPGA 上是否按预期工作。HDL 工作流向导在任务 4.2 **生成软件接口模型** 期间生成一个软件接口子系统，您可以使用该模型在软件模型中与 FPGA 接口。从软件模型中，您可以使用 Simulink 外部模式（External Mode）在硬件上调优和探测 FPGA 设计。指示 FPGA 预处理逻辑捕获输入帧并发送到外部 DDR 内存。
+1. 使用标准的 `HDL Coder` 硬件/软件协同设计工作流，您可以验证预处理逻辑在 FPGA 上是否按预期工作。HDL 工作流向导在任务 4.2 **生成软件接口模型** 期间生成一个软件接口子系统，您可以使用该模型在软件模型中与 FPGA 接口。从软件模型中，您可以使用 Simulink 外部模式（External Mode）在硬件上调优和探测 FPGA 设计。指示 FPGA 预处理逻辑捕获输入帧并发送到外部 DDR 内存。
 
-随后，您可以使用 `fpga` 对象创建从 MATLAB 到 ZCU102 板板的连接，并将外部 DDR 内存的内容读取到 MATLAB 中验证。要使用 *fpga* 对象，请参见“创建软件接口脚本以控制和快速原型 HDL IP 核”（HDL Coder）。
+随后，您可以使用 `fpga` 对象创建从 `MATLAB` 到 `ZCU102` 板板的连接，并将外部 DDR 内存的内容读取到 `MATLAB` 中验证。要使用 `fpga` 对象，请参见“创建软件接口脚本以控制和快速原型 HDL IP 核”（`HDL Coder`）。
 
 ![](img/747bfd4f288a7e0917a1f27637cc5c2d_148_0.png)
 
@@ -3792,17 +3445,13 @@ hrD.SupportedToolVersion = {'2019.1'}
 
 3. 在单独验证了预处理逻辑 IP 核和深度学习处理器 IP 核后，您可以在 FPGA 板上对整个集成系统进行原型设计。使用 Simulink 外部模型，指示 FPGA 预处理逻辑将处理过的输入帧发送到 DDR 缓冲区，指示深度学习处理器 IP 核从同一个 DDR 缓冲区读取并执行预测。深度学习处理器 IP 核将结果传回外部 DDR 内存。运行在 ARM 处理器上的软件模型检索预测结果，并在输出视频上对预测进行标注。此截图显示您可以使用串口连接读取 ARM 处理器的预测结果。
 
-# 10 个精选示例
-
 ![](img/747bfd4f288a7e0917a1f27637cc5c2d_149_0.png)
 
 此截图显示了从输出视频捕获的帧，包含了 ROI 选择和标注的预测。
 
-# 在 FPGA 上通过实时摄像头输入运行的深度学习网络
-
 ![](img/747bfd4f288a7e0917a1f27637cc5c2d_150_0.png)
 
-4. 完成所有验证步骤后，使用 ARM 处理器将整个参考设计作为可执行文件手动部署到 ZCU102 板板的 SD 卡上。一旦完成手动部署，操作参考设计不需要连接到 FPGA 板。
+4. 完成所有验证步骤后，使用 ARM 处理器将整个参考设计作为可执行文件手动部署到 `ZCU102` 板板的 SD 卡上。一旦完成手动部署，操作参考设计不需要连接到 FPGA 板。
 
 # 通过 FPGA 部署运行仅卷积网络
 
@@ -3814,442 +3463,24 @@ hrD.SupportedToolVersion = {'2019.1'}
 - Xilinx Zynq ZCU102 Evaluation Kit
 - Deep Learning HDL Toolbox for Xilinx
 - Deep Learning HDL Toolbox
-- HDL Coder
+- `HDL Coder`
 
-## FPGA 部署仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## FPGA 部署仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## FPGA 部署仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## FPGA 部署仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## FPGA 部署仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## FPGA 部署仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## FPGA 部署仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## Resnet50 仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件：
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## Resnet50 仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件：
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## Resnet50 仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件：
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## Resnet50 仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件 0：
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## Resnet50 仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件 0：
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## Resnet50 仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件：
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## Resnet50 仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件 10：
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## Resnet50 仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件 10：
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## Resnet50 仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件 ：
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## Resnet50 仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件 ：
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## Resnet50 仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件 ：
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## Resnet50 仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件 1：
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## Resnet50 仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件 1：
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## Resnet50 仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件 1：
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## Resnet50 仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件 10：
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## Resnet50 仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件 10：
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## Resnet50 仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件 10：
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## Resnet50 仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件 ：
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## Resnet50 仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件 1：
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## Resnet50 仅卷积网络
-
-（此处省略...）
-
-## Resnet50 仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件 10：
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## Resnet50 仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件 10：
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-## Resnet50 仅卷积网络
-
-（此处省略...）
-
-（注：由于原始文本中存在大量重复的段落，译文已根据“不要重复输出原文”的原则对核心内容进行了翻译。）
-
-[content]
-# 在 FPGA 上通过实时摄像头输入运行的深度学习网络
-
-![](img/747bfd4f288a7e0917a1f27637cc5c2d_144_0.png)
-
-在任务 1.2 中，选择了带有 DL 处理器的 HDMI RGB 作为参考设计。
-
-# 10 个精选示例
-
-![](img/747bfd4f288a7e0917a1f27637cc5c2d_145_0.png)
-
-在任务 1.3 中，目标平台接口表已如后续截图所示加载。在此处，您可以将 DUT 子系统的端口映射到参考设计中的接口。
-
-# 在 FPGA 上通过实时摄像头输入运行的深度学习网络
-
-![](img/747bfd4f288a7e0917a1f27637cc5c2d_146_0.png)
-
-2. 右键点击任务 3.2，选择“生成 RTL 代码和 IP 核”，并选择“运行所选任务”。您可以在生成的 IP 核中注册地址映射和其他文档。
-
-## 将 IP 集成到视频参考设计中
-
-在 HDL 工作流向导中，嵌入式系统集成任务用于将生成的 HDL 核部署到 Zynq 硬件上。
-
-- 1. 运行任务 4.1，“创建项目”。此任务将生成的 IP 核插入到带有 DL 处理器的 HDMI RGB 参考设计中。可以通过参考页面第 10-57 页的“为带有深度学习处理器 IP 核的实时摄像头集成编写参考设计”来创建集成了深度学习处理器 IP 核的参考设计。
-- 2. 点击结果面板中的链接以打开生成的 Vivado 项目。在 Vivado 工具中，点击“打开块级设计”以查看 Zynq 设计图，该图包含了预处理 HDL IP 核、深度学习处理器 IP 核和 Zynq 处理器。
-
-# 10 个精选示例
-
-![](img/747bfd4f288a7e0917a1f27637cc5c2d_147_0.png)
-
-3. 在 HDL 工作流向导中，运行其余任务以生成软件接口模型并构建和下载 FPGA 位流。
-
-## 部署并验证集成的参考设计
-
-为了验证包含生成的预处理逻辑 IP、深度学习处理器 IP 核和 Zynq 处理器的集成参考设计：
-
-- 1. 在 FPGA 板上逐单独验证预处理逻辑。
-- 2. 使用 Deep Learning HDL Toolbox™ 原型设计工作流单独验证深度学习处理器 IP 核的功能。
-- 3. 在 ZCU102 板上部署并验证整个系统。
-- 4. 将整个系统作为可执行文件部署到 SD 卡并加载到 ZCU102 板板。
-
-## 使用标准的 HDL Coder 硬件/软件协同设计工作流，您可以验证预处理逻辑在 FPGA 上按预期工作。HDL 工作流向导在任务 4.2 **生成软件接口模型** 期间生成一个软件接口子系统，您可以使用该模型在软件模型中与 FPGA 接口。从软件模型中，您可以使用 Simulink 外部模式在硬件上调优和探测 FPGA 设计。指示 FPGA 预处理逻辑捕获输入帧并发送到外部 DDR 内存。
-
-随后，您可以使用 `fpga` 对象创建从 MATLAB 到 ZCU102 板板的连接，并将外部 DDR 内存的内容读取到 MATLAB 中验证。要使用 *fpga* 对象，请参见“创建软件接口脚本以控制和快速原型 HDL IP 核”（HDL Coder）。
-
-![](img/747bfd4f288a7e0917a1f27637cc5c2d_148_0.png)
-
-2. 生成的深度学习处理器 IP 核具有以太网和 JTAG 接口，用于生成的位流通信。您可以使用 `ddheld.Workflow` 对象单独验证深度学习处理器 IP 核。
-
-3. 在单独验证了预处理逻辑 IP 核和深度学习处理器 IP 核后，您可以在 FPGA 板上对整个集成系统进行原型设计。使用 Simulink 外部模型，指示 FPGA 预处理逻辑将处理过的输入帧发送到 DDR 缓冲区，指示深度学习处理器 IP 核从同一个 DDR 缓冲区读取并执行预测。深度学习处理器 IP 核将结果传回外部 DDR 内存。运行在 ARM 处理器上的软件模型检索预测结果，并在输出视频上对预测进行标注。此截图显示您可以使用串口连接读取 ARM 处理器的预测结果。
-
-# 10 个精选示例
-
-![](img/747bfd4f288a7e0917a1f27637cc5c2d_149_0.png)
-
-此截图显示了从输出视频捕获的帧，包含了 ROI 选择和标注的预测。
-
-# 在 FPGA 上通过实时摄像头输入运行的深度学习网络
-
-![](img/747bfd4f288a7e0917a1f27637cc5c2d_150_0.png)
-
-4. 完成所有验证步骤后，使用 ARM 处理器将整个参考设计作为可执行文件部署到 ZCU102 板板的 SD 卡上。一旦完成手动部署，操作参考设计不需要连接到 FPGA 板。
-
-# 通过 FPGA 部署运行仅卷积网络
-
-为了理解和调试卷积网络，本示例展示了如何通过 FPGA 部署来、运行和调试一个仅卷积的网络。
-
-## 前提条件
-
-- Xilinx Zynq ZCU102
-- Xilinx Zynq ZCU102 Evaluation Kit
-- Deep Learning HDL Toolbox for Xilinx
-- Deep Learning HDL Toolbox
-- HDL Coder
-
-
-
-
-# 执行预测
+## 执行预测
 
 执行 `dhldl.Workflow` 对象的 `predict` 函数。
 
 ```matlab
-[P, speed] = HW.predict(single(I),'Profile','on');
-### 完成输入激活值的写入。
-### 正在运行单输入激活值。
 ```
 
+
+
+[P, speed] = HW.predict(single(I),'Profile','on');
+
+### 完成输入激活值的写入。
+
+### 正在运行单输入激活值。
+
+```
 深度学习处理器性能分析器性能结果
 
 | 网络 | 层延迟(周期) | 层延迟(秒) | 帧数 |
@@ -4262,6 +3493,7 @@ hrD.SupportedToolVersion = {'2019.1'}
 * * DL 处理器的时钟频率为：220MHz
 
 结果数据以 3 维数组的形式返回，第三维度索引跨 64 个特征图像。
+```
 
 ```matlab
 sz = size(P)
@@ -4303,14 +3535,14 @@ imshow(J)
 
 此示例展示了如何通过以太网连接到目标设备部署深度学习网络并获取预测结果。使用以太网 JTAG 可以显著加快大型深度学习网络的部署和预测时间。此示例展示了 ZCU102 SoC 板上的工作流。该示例也适用于 Deep Learning HDL Toolbox 支持的其他板卡。请参阅第 7-2 页的“支持的网络、层、板卡和工具”。
 
-# 前提条件
+## 前提条件
 
 * * Xilinx ZCU102 SoC 开发包。有关板卡设置的帮助，请参阅“引导式 SD 卡设置”（Xilinx FPGA 和 SoC 设备的 Deep Learning HDL 支持包）。
 * Deep Learning HDL Toolbox™ Support Package for Xilinx FPGA and SoC
 * Deep Learning HDL Toolbox™
 * Deep Learning Toolbox™ Model for AlexNet Network
 
-# 简介
+## 简介
 
 Deep Learning HDL Toolbox 在主机计算机与 FPGA 之间建立了连接，以便在硬件上构建深度学习网络原型。该连接用于部署深度学习网络和运行预测。该连接提供两种服务：
 
@@ -4319,7 +3551,7 @@ Deep Learning HDL Toolbox 在主机计算机与 FPGA 之间建立了连接，以
 
 有两种硬件接口可以建立主机计算机与 FPGA 板之间的连接：JTAG 和以太网。
 
-# JTAG 接口
+## JTAG 接口
 
 JTAG 接口通过 JTAG 将比特流编程到 FPGA 上。比特流在掉电循环后不会保留。每次打开 FPGA 时，都必须重新编程比特流。
 
@@ -4331,13 +3563,15 @@ MATLAB 使用 JTAG 控制 FPGA 设计中的 AXI Master IP，以便与运行在 F
 
 10-77
 
-# 以太网接口
+## 以太网接口
 
 以太网接口利用 ARM 处理器从运行在 FPGA 上的设计发送和接收信息。ARM 处理器运行在 Linux 操作系统上。你可以使用 Linux 操作系统服务与 FPGA 交互。使用以太网接口时，比特流被下载到 SD 卡中。比特流在掉电循环中是持久的，每次打开 FPGA 时都会重新编程。在编程比特流时，ARM 处理器被配置了正确的设备树。
 
 为了与运行在 FPGA 上的设计进行通信，MATLAB 利用主机计算机与 ARM 处理器之间的以太网连接。ARM 处理器运行一个 LIBIIO 服务，该服务与 FPGA 设计中的 datamover IP 通信。datamover IP 有于主机计算机与 FPGA 之间的数据传输，这对于构建在 JTAG 上传输时间很长的深度学习网络原型非常有用。ARM 处理器产生读/写事务，以访问板载内存中的内存位置，下图显示了以太网接口的高层架构。
 
-![](img/747bfd4f288a7e0917a1f27637cc5c2d_157_0.png)# 加载并编译深度学习网络
+![](img/747bfd4f288a7e0917a1f27637cc5c2d_157_0.png)
+
+# 加载并编译深度学习网络
 
 此示例使用预训练的 AlexNet 网络。通过以太网部署时，该网络在传输时间上有显著改进。要加载 Alexnet，使用：
 
@@ -4382,10 +3616,6 @@ analyze(snet);
 | flatten | | |
 | fc1 | | |
 
-
-
-
-
 ## 性示例
 
 ## 将深度学习网络部署到 FPGA
@@ -4420,22 +3650,40 @@ Target 属性:
 hW.Target = hTargetJAG;
 tic;
 hW.deploy();
+```
+
 ### 正在使用 JTAG 编程 FPGA 位流...
+
 ### FPGA 位流编程已完成。
+
 ### 正在加载权重到 FC 控制器
+
 ### 0% 完成，当前时间为 29-Jun-2020 16:33:14.
+
 ### 17% 完成，当前时间为 29-Jun-2020 16:34:20.
+
 ### 25% 完成，当前时间为 29-Jun-2020 16:35:38.
+
 ### 33% 完成，当前时间为 29-Jun-2020 16:36:56.
+
 ### 42% 完成，当前时间为 29-Jun-2020 16:38:13.
+
 ### 50% 完成，当前时间为 29-Jun-2020 16:39:31.
+
 ### 58% 完成，当前时间为 29-Jun-2020 16:40:48.
+
 ### 67% 完成，当前时间为 29-Jun-2020 16:42:02.
+
 ### 75% 完成，当前时间为 29-Jun-2020 16:43:10.
+
 ### 83% 完成，当前时间为 29-Jun-2020 16:44:23.
+
 ### 91% 完成，当前时间为 29-Jun-2020 16:45:39.
+
 ### FC 权重已加载。当前时间为 29-Jun-2020 16:46:31
+
 elapsedTimeJTAG = toc
+
 elapsedTimeJTAG = 1.0614e+03
 ```
 
@@ -4473,8 +3721,6 @@ elapsedTimeJTAG = 1.0614e+03
 ### 91% 完成，当前时间为 29-Jun-2020 16:47:08.
 ### FC 权重已加载。当前时间为 29-Jun-2020 16:46:31
 ```
-
-
 
 ```
 numClasses = 32
@@ -4562,15 +3808,22 @@ testDataTbl = vehicleDataset(shuffledIndices(idx+1:end),:);
 ```
 
 使用 `imageDataset` 和 `boxLabelDataset` 创建用于在训练和评估期间加载图像和标签的数据存储。
-
-```
-imdsTrain = imageDataset(trainingDataTbl:,,'imageFilename');
-bldsTrain = boxLabelDataset(trainingDataTbl:,,'vehicle');
 ```
 
+
+
+`imdsTrain = imageDataset(trainingDataTbl:,,'imageFilename');`
+
+`bldsTrain = boxLabelDataset(trainingDataTbl:,,'vehicle');`
+
 ```
-imdsTest = imageDataset(testDataTbl:,,'imageFilename');
-bldsTest = boxLabelDataset(testDataTbl:,,'vehicle');
+```
+
+`imdsTest = imageDataset(testDataTbl:,,'imageFilename');`
+
+`bldsTest = boxLabelDataset(testDataTbl:,,'vehicle');`
+
+```
 ```
 
 合并图像和标签数据存储。
@@ -4634,7 +3887,7 @@ netTransfer = trainNetwork(augmsTrain,layers,options);
 
 深度学习是一种强大的学习技术，你可以用它来训练鲁棒的目标检测器。存在多种目标检测技术，包括 Faster-CNN 和一次性（YOLO）v2。此示例使用 `trainYOLOV2bObjectDetector` 函数训练 YOLO v2 检测器。
 
-# 加载数据集
+## 加载数据集
 
 此示例使用了一个包含 295 张图像的小型车辆数据集。其中许多图像来自 Caltech Cars 1999 和 2001 数据集，这些数据集可在 Caltech 计算网站获取，由 Pietro Persona 创建并经许可使用。每张图像包含一个或两个标记的车辆实例。小型数据集对于探索 YOLO v2 训练过程很有用，但在实践中，需要更多标记图像来训练鲁棒的检测器。解压图像并加载车辆真值。
 
@@ -4680,7 +3933,7 @@ trainingData = combine(imdsTrain,bldsTrain);
 testData = combine(imdsTest,bldsTest);
 ```
 
-# 创建 YOLO v2 目标检测网络
+## 创建 YOLO v2 目标检测网络
 
 YOLO v2 目标检测网络由两个子网络组成：一个特征提取网络，随后是一个检测网络。特征提取网络通常是预训练的 CNN（详情请参 预训练深度神经网络）。此示例使用 AlexNet 进行特征提取。根据应用需求，也可以使用其他预训练网络，如 MobileNet v2 或 ResNet-18。检测子网络与特征提取网络相比是一个较小的 CNN，由几个专门用于 YOLO v2 的卷积层组成。
 
@@ -4751,7 +4004,7 @@ lgraph = yolov2Layers(inputSize,numClasses,anchorBoxes,featureExtractionNetwork,
 
 如果对 YOLO2 架构需要更多控制，可以使用 Deep Designer 手动设计 YOLO2 检测网络。更多信息请参阅 设计 YOLO2 检测网络 (Computer Vision Toolbox)。
 
-# 数据增强
+## 数据增强
 
 数据增强用于在训练期间随机转换原始数据来提高准确性。通过使用数据增强，你可以在不实际增加标记样本的情况下增加数据的变性。
 
@@ -4761,7 +4014,7 @@ lgraph = yolov2Layers(inputSize,numClasses,anchorBoxes,featureExtractionNetwork,
 augmentedTrainingData = transform(trainingData,@yolo_augmentedData);
 ```
 
-# 预处理训练数据并训练 YOLO2 检测器
+## 预处理训练数据并训练 YOLO2 检测器
 
 预处理增强后的训练数据和验证数据以准备训练。
 preprocessedTrainingData = transform(trainingData,@data)yolo_preprocessData(data,input
@@ -4772,10 +4025,6 @@ preprocessedTrainingData = transform(trainingData,@data)yolo_preprocessData(data
 options = trainingOptions('sgdm', ...
 'MiniBatchSize',16, ...
 ```
-
-
-
-
 
 # 10 个精选示例
 
@@ -4828,7 +4077,7 @@ imshow(I_new)
 
 10-90
 
-# 加载预训练网络
+## 加载预训练网络
 
 加载预训练网络。
 
@@ -4884,8 +4133,10 @@ With properties:
 dn = HW.compile
 ```
 
+
+
 ### 正在为深度学习 FPGA 原型编译网络 ...
-### 正在目标位 FPGA 位流 zcul02_single ...
+### 正在目标位 FPGA 位流 `zcul02_single` ...
 ### 网络包含以下层：
 
 | 层名称 | 类型 | 详细信息 |
@@ -4911,15 +4162,15 @@ dn = HW.compile
 | 'yolov2Batch2' | 归一化 | 带有 256 通道的归一化 |
 | 'relu6' | ReLU | ReLU |
 | 'yolov2ClassConv' | 卷积 | 42 个 1x1x256 卷积，带有步长 |
-| 'yolov2Transform' | YOLO v2  | 带有 7 的 YOLO v2  |
+| 'yolov2Transform' | YOLO v2 | 带有 7 的 YOLO v2 |
 | 'yolov2Output' | YOLO v2 输出 | 带有 7 的 YOLO v2 输出 |
 
 ### 正在优化网络：将 'snet.cnn.NormalizationLayer' 合并到 'snet.cnn'。
 创建内存区域
-跳过: data
-正在编译 conv1->yolov2ClassConv
-正在编译 conv1->yolov2ClassConv
-跳过: yolov2OutputLayer
+跳过: `data`
+正在编译 `conv1`->`yolov2ClassConv`
+正在编译 `conv1`->`yolov2ClassConv`
+跳过: `yolov2OutputLayer`
 创建调度...
 调度...完成。
 创建表...
@@ -4937,21 +4188,30 @@ dn = HW.compile
 | ConvWeightDataOffset | 0x03c0000 | 16.0 MB |
 | EndOffset | 0x04c0000 | 总计: 76.6 MB |
 
-```mat
+```
+mat
+```
+
 ### 网络编译完成。
-dn 字段:
-  weights: [1x struct]
-  instructions: [1x struct]
-  registers: [1x struct]
-  syncInstructions: [1x struct]
+
+`dn` 字段:
+
+`weights`: [1x struct]
+
+`instructions`: [1x struct]
+
+`registers`: [1x struct]
+
+`syncInstructions`: [1x struct]
 
 # 将位流传输到 FPGA 并下载网络 Zynq UltraScale+ MPSoC ZCU102
 
-在 dhdll.Workflow 函数上使用编程函数运行 FPGA 板。该函数下载权重和偏置。部署函数检查 Xilinx Vivado 工具版本。它使用位流开始编程 FPGA 设备，显示消息并花费部署网络的时间。
+在 `dhdll.Workflow` 函数上使用编程函数运行 FPGA 板。该函数下载权重和偏置。部署函数检查 Xilinx Vivado 工具版本。它使用位流开始编程 FPGA 设备，显示消息并花费部署网络的时间。
 
-hW.
+`hW.`
 
-```mat
+```
+mat
 ### 跳过 FPGA 位流编程，因为相同的位流已加载在
 ### 加载权重到卷积处理器。
 ### 卷积权重加载。当前时间为 2020-12-20 15:26:28
@@ -4959,7 +4219,7 @@ hW.
 
 # 加载示例函数并运行预测
 
-在 dhdl.Workflow 对象上执行预测函数并显示结果：
+在 `dhdl.Workflow` 对象上执行预测函数并显示结果：
 
 ```mat
 [prediction, speed] = HW.predict(I_re, 'Profile', 'on');
@@ -4974,6 +4234,7 @@ hW.
 
 | 上一帧延迟 (周期) | 上一帧延迟 (秒) | 帧数 |
 |---|---|---|
+
 | Network | 861567 | 0.03916 | 1 |
 | conv1 | 1357049 | 0.00617 |
 | norm1 | 569406 | 0.00259 |
@@ -5056,13 +4317,9 @@ SynthesisToolPackageName: ''
 SynthesisToolSpeedValue: ''
 ```
 
-
-
-
-
 # 估计 LogoNet 性能
 
-要估计 LogoNet 系列网络的性能，请使用 dlhdl.ProcessorConfig 对象的 estimatePerformance 函数。该函数返回估计的延迟、网络延迟以及以每秒帧数（Frames/s）计算的网络性能。
+要估计 LogoNet 系列网络的性能，请使用 `dlhdl.ProcessorConfig` 对象的 `estimatePerformance` 函数。该函数返回估计的延迟、网络延迟以及以每秒帧数（Frames/s）计算的网络性能。
 
 ```matlab
 hPC.estimatePerformance(snet)
@@ -5081,6 +4338,7 @@ hPC.estimatePerformance(snet)
 
 | | LastFrame(Cycles) | LastLatency(seconds) | Frames | Total |
 |---|---|---|---|---|
+
 | Network conv_1 | 39864116 | 0.18120 | 1 | 398 |
 | | maxpool_1 | 6825287 | 0.03102 | | |
 | | conv_2 | 10440701 | 0.01707 | | |
@@ -5095,11 +4353,11 @@ hPC.estimatePerformance(snet)
 
 > * DL 处理器的时钟频率为: 220MHz
 
-估计的每秒帧数为 5.5 Frames/s。要提高网络性能，请修改自定义卷积模块的内核数据类型、卷积线程数以及全连接网络的内核线程数。有关关于这些参数的更多信息，请使用 getModuleProperty 和 setModuleProperty。
+估计的每秒帧数为 5.5 Frames/s。要提高网络性能，请修改自定义卷积模块的内核数据类型、卷积线程数以及全连接网络的内核线程数。有关关于这些参数的更多信息，请使用 `getModuleProperty` 和 `setModuleProperty`。
 
 # 创建自定义处理器配置
 
-要创建处理器配置，请使用 dlhdl.ProcessorConfig 对象。更多信息请参阅 dlhdl.ProcessorConfig。要了解处理器配置的可修改参数，请使用 setModuleProperty 和 setModuleProperty。
+要创建处理器配置，请使用 `dlhdl.ProcessorConfig` 对象。更多信息请参阅 `dlhdl.ProcessorConfig`。要了解处理器配置的可修改参数，请使用 `setModuleProperty` 和 `setModuleProperty`。
 
 ```matlab
 hPCNew = dlhdl.ProcessorConfig;
@@ -5162,7 +4420,7 @@ dquantObj.calibrate(image);
 
 # 估计 LogoNet 性能
 
-要估计 LogoNet 网络的性能，请使用 dlhdl.Workflow 对象的 estimatePerformance 函数。该函数返回估计的延迟、网络延迟以及以帧(s) 计算的网络性能。
+要估计 LogoNet 网络的性能，请使用 `dlhdl.Workflow` 对象的 `estimatePerformance` 函数。该函数返回估计的延迟、网络延迟以及以帧(s) 计算的网络性能。
 
 ```matlab
 hPCNew.estimatePerformance(dquantObj)
@@ -5181,6 +4439,7 @@ hPCNew.estimatePerformance(dquantObj)
 
 | LastFrameLatency(cycles) | LastFrameLatency(seconds) | Frames | Total |
 |---|---|---|---|---|
+
 | Network conv_1 | 1415856 | 0.04718 | 1 | 147 |
 | maxpool_1 | 3475319 | 0.01158 | | |
 | conv_2 | 1876680 | 0.00626 | | |
@@ -5208,11 +4467,13 @@ hPCNew.estimatePerformance(dquantObj)
 
 要了解生成的比特流文件，请参见第 9 页的“生成自定义比特流”。
 
-示例中生成的比特流类似于 zcu102_int8。要使用 zcu102_int8 比特流部署量化的 LogoNet 网络，请参阅“获取量化 LogoNet 预测结果”。
+示例中生成的比特流类似于 `zcu102_int8`。要使用 `zcu102_int8` 比特流部署量化的 LogoNet 网络，请参阅“获取量化 LogoNet 预测结果”。
 
 # 部署量化网络示例
 
-本示例展示了如何使用 Xilinx FPGA and SoC Support Package 训练、编译并部署一个具有量化 Alexnet 网络的 dldl.Workflow 对象。通过将网络层的权重、偏置和激活值量化为 8 位缩放整数类型，有助于减少深度网络的内存需求。使用 MATLAB™ 从目标设备检索预测结果。
+
+
+本示例展示了如何使用 Xilinx FPGA and SoC Support Package 训练、编译并部署一个具有量化 Alexnet 网络的 `dldl.Workflow` 对象。通过将网络层的权重、偏置和激活值量化为 8 位缩放整数类型，有助于减少深度网络的内存需求。使用 MATLAB™ 从目标设备检索预测结果。
 
 # 所需产品
 
@@ -5247,7 +4508,7 @@ inputSize = 1x3
 
 # 定义训练和验证数据集
 
-此示例使用 logos 数据集。该集合包含 320 张图像。创建一个 augmentedImageDatastore 用于训练和验证。
+此示例使用 logos 数据集。该集合包含 320 张图像。创建一个 `augmentedImageDatastore` 用于训练和验证。
 
 ```matlab
 curDir = pwd;
@@ -5316,20 +4577,21 @@ options = trainingOptions('sgd',
     'Shuffle','every-epoch', ...);
 ```
 
+## 特性示例
 
+`'ValidationData',augdimsValidation, ...`
 
+`'ValidationFrequency',3, ...`
 
+`'Verbose',false, ...`
 
-# 特性示例
+`'Plots','training_progress');`
 
-'ValidationData',augdimsValidation, ...
-'ValidationFrequency',3, ...
-'Verbose',false, ...
-'Plots','training_progress');
+由传输层和新层组成的训练网络。默认情况下，如果可用 GPU，`trainNetwork` 将使用 GPU（需要 Parallel Computing Toolbox™ 和支持的 GPU 设备）。更多信息，请参阅“GPU Support by Release”（Parallel Computing Toolbox）。否则，网络将使用 CPU（需要 MATLAB Code Interface for Deep Libraries™）。你还可以通过使用 `trainingOptions` 的 `'ExecutionEnvironment'` 名称-值对来指定执行环境。
 
-由传输层和新层组成的训练网络。默认情况下，如果可用 GPU，trainNetwork 将使用 GPU（需要 Parallel Computing Toolbox™ 和支持的 GPU 设备）。更多信息，请参阅“GPU Support by Release”（Parallel Computing Toolbox）。否则，网络将使用 CPU（需要 MATLAB Code Interface for Deep Libraries™）。你还可以通过使用 trainingOptions 的 'ExecutionEnvironment' 名称-值对来指定执行环境。
-
+```matlab
 netTransfer = trainNetwork(augmLTrain,Layers,options);
+```
 
 ![](img/747bfd4f288a7e0917a1f27637cc5c2d_181_0.png)
 
@@ -5351,7 +4613,7 @@ netTransfer = trainNetwork(augmLTrain,Layers,options);
 
 # 创建 dquantizer 对象
 
-创建一个 dquantizer 对象并指定要量化的网络。指定执行环境为 FPGA。
+创建一个 `dquantizer` 对象并指定要量化的网络。指定执行环境为 FPGA。
 
 ```matlab
 dlQuantObj = dquantizer(netTransfer, 'ExecutionEnvironment', 'FPGA');
@@ -5359,7 +4621,7 @@ dlQuantObj = dquantizer(netTransfer, 'ExecutionEnvironment', 'FPGA');
 
 # 校准网络量化
 
-dquantizer 对象使用校准数据收集网络卷积层和全连接层学习参数的动态范围。
+`dquantizer` 对象使用校准数据收集网络卷积层和全连接层学习参数的动态范围。
 
 为了获得最佳量化效果，校准数据必须 LogoNet 网络预测的所有输入的代表。通过将校准数据集减少到 20 张图像来加速校准过程。
 
@@ -5395,7 +4657,7 @@ hTarget = dhldl.Target('Xilinx','Interface','Ethernet');
 
 # 创建流对象
 
-创建 dhldl.workflow 类的对象。当你创建该类时，会指定 dligquantizer 对象的实例、位流名称和目标信息。将 dlQuantObj 指定为网络。确保位流名称与数据类型以及你目标的 FPGA 板相匹配。在此示例中，目标 FPGA 板是 Xilinx ZCU102 SOC 板，位流使用 int8 数据类型。
+创建 `dhldl.workflow` 类的对象。当你创建该类时，会指定 `dligquantizer` 对象的实例、位流名称和目标信息。将 `dlQuantObj` 指定为网络。确保位流名称与数据类型以及你目标的 FPGA 板相匹配。在此示例中，目标 FPGA 板是 Xilinx ZCU102 SOC 板，位流使用 int8 数据类型。
 
 ```matlab
 hW = dhldl.Workflow('Network', dlQuantObj, 'Bitstream', 'zcu102 int8', 'Target',hTarget);
@@ -5403,7 +4665,7 @@ hW = dhldl.Workflow('Network', dlQuantObj, 'Bitstream', 'zcu102 int8', 'Target',
 
 # 编译量化系列网络
 
-要编译量化的 AlexNet 系列网络，运行 dhldl.Workflow 对象的 compile 函数。
+要编译量化的 AlexNet 系列网络，运行 `dhldl.Workflow` 对象的 `compile` 函数。
 
 ```matlab
 dn = hW.compile
@@ -5446,19 +4708,33 @@ dn = hW.compile
 3 个内存区域创建。
 
 跳过 data
+
 编译: conv1->pool5
+
 编译: conv1->pool5 ... 完成。
+
 编译: fc6->fc
+
 编译: fc6->fc ... 完成。
+
 跳过 softmax
+
 跳过 classoutput
+
 创建 Schedule...
+
 创建 Schedule... 完成。
+
 创建 Status Table...
+
 创建 Status Table... 完成。
+
 发布 Schedule...
+
 发布 Schedule... 完成。
+
 发布 Status Table...
+
 发布 Status Table... 完成。
 
 ### 分配外部内存：
@@ -5490,39 +4766,59 @@ dn struct 包含字段:
 
 # 将位流写入 FPGA 并下载权重
 
-在 Xilinx ZCU102 硬件上部署网络，运行 dhldl.workflow 对象的 deploy 函数。该函数使用 compile 函数的输出通过编程文件 FPGA FPGA。还会下载权重和偏置。deploy 函数开始编程 FPGA 设备，显示进度以及部署网络所需。
+在 Xilinx ZCU102 硬件上部署网络，运行 `dhldl.workflow` 对象的 `deploy` 函数。该函数使用 `compile` 函数的输出通过编程文件 FPGA FPGA。还会下载权重和偏置。`deploy` 函数开始编程 FPGA 设备，显示进度以及部署网络所需。
 
 ```matlab
 HW.deploy
 ```
 
 ### FPGA 位流编程已跳过，因为相同的位流已加载在
+
 ### 正在加载权重到 Conv Processor。
+
 ### 当前权重已加载。时间是 2020-12-17 11:06:56
+
 ### 正在加载权重到 FC Processor。
+
 ### 完成 33%，时间是 2020-12-17 11:06:57。
+
 ### 完成 67%，时间是 2020-12-17 11:06:59。
+
 ### FC 权重已加载。时间是 2020-12-17 11:06:59
+
 ```
 
 # 加载示例图像并运行预测
 
-加载示例图像，执行 dhldl.workflow 对象的 predict 函数，要部署 FPGA 结果，执行：
+加载示例图像，执行 `dhldl.workflow` 对象的 `predict` 函数，要部署 FPGA 结果，执行：
 
 ```matlab
 idx = randperm(numel(imdsValidation.Files),4)
+
 figure
+
 for i = 1:4
+
     subplot(2,2,i)
+
     I = readimage(imdsValidation,idx(i))
+
     imshow(I)
+
     [prediction, speed] = HW.predict(single(I), 'Profile','on')
+
     [val, index] = max(prediction)
+
     netTransfer.Layers(end).ClassNames(index)
+
     label = netTransfer.Layers(end).ClassNames(index)
+
     title(string(label))
+
 end
 ```
+
+
 
 ### 完成写入输入激活。
 ### 运行简单的输入激活。
@@ -5544,10 +4840,6 @@ end
 | pool5 | 19576 | 0.00080 | |
 | fc6 | 3955696 | 0.01798 | |
 | fc7 | 1757863 | 0.00799 | |
-
-
-
-
 
 # 10 个精选示例
 
@@ -5664,6 +4956,7 @@ label = 'corona'
 snet = getNetwork;
 analyzeNetwork(snet)
 ```
+
 ![](img/747bfd4f288a7e0917a1f27637cc5c2d_188_0.png)
 
 # 定义校准和验证集
@@ -5683,7 +4976,7 @@ validationDataSimulation = validationData.subset(1);
 
 # 创建量化对象
 
-创建一个 dlquantizer 对象并指定要量化的网络。为 FPGA 指定执行环境。在第二个量化对象上使用 MATLAB 仿真：
+创建一个 `dlquantizer` 对象并指定要量化的网络。为 FPGA 指定执行环境。在第二个量化对象上使用 MATLAB 仿真：
 
 ```matlab
 dQuantObj_simulation = dlquantizer(net,'ExecutionEnvironment','FPGA','Simulation','on');
@@ -5692,7 +4985,7 @@ dQuantObj_FPGA = dlquantizer(net,'ExecutionEnvironment','FPGA');
 
 # 校准量化网络
 
-使用 calibrate 函数输入输入运行网络并收集范围。calibrate 执行网络并收集权重和偏置的动态范围。calibrate 返回一个表格。表格中的每行对应量化网络中的一个参数。
+使用 `calibrate` 函数输入输入运行网络并收集范围。`calibrate` 执行网络并收集权重和偏置的动态范围。`calibrate` 返回一个表格。表格中的每行对应量化网络中的一个参数。
 
 ```matlab
 dQuantObj_simulation.calibrate(calibrationData_reduced)
@@ -5719,11 +5012,7 @@ dQuantObj_simulation.calibrate(calibrationData_reduced)
 
 # 为 FPGA 部署量化网络
 
-dlQuantObj_FPGA.calibrate(calibrationData_reduced)
-
-
-
-
+`dlQuantObj_FPGA.calibrate(calibrationData_reduced)`
 
 ## 10 个特色示例
 
@@ -5745,7 +5034,6 @@ prediction_solution = dQuantOutObj.validate(validationData_simulation,options:)
 ### 网络: (Layer 1) 类型为 'nnet.cnn.layer.ImageInput' 的层 'conv 3' 已实现
 ### 网络: (Layer 2) 类型为 'nnet.cnn.layer.SoftmaxLayer' 的层 'softmax' 已实现
 ### 网络: (Layer 3) 类型为 'nnet.cnn.layer.ClassificationOutputLayer' 的层 'classoutout' 已实现
-```
 
 ```matlab
 prediction_solution = struct with fields:
@@ -5760,12 +5048,14 @@ prediction_FPGA = dQuantOutObj_FPGA.validate(validationData_FPGA, options_FPGA) 
 ```
 
 ### 为深度学习原型设计编译网络
+
 ### 目标 FPGA 比流 zcu102 写入
+
 ### 网络包含以下内容：
 
 | | | 输入 | | |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | 'imageinput' | | | 带有 'zerocenter' 归一化的 227x227x3  |
+| 1 | 'imageinput' | | | 带有 'zerocenter' 归一化的 227x227x3 |
 | 2 | 'conv 1' | 卷积 | 96 个 5x3 卷积，步长为 [1 1] 并有填充 |
 | 3 | 'relu 1' | ReLU | | |
 | 4 | 'maxpool 1' | 最大池化 | 3x3 最大池化，步长为 [2 2] 并有填充 |
@@ -5789,25 +5079,43 @@ prediction_FPGA = dQuantOutObj_FPGA.validate(validationData_FPGA, options_FPGA) 
 ## 为 FPGA 部署量化网络
 
 21 'softmax' softmax
+
 22 'classoutput' 分类输出 熵，包含 'adidas' 和其他 31 个类
 
 创建了 3 个内存区域。
+
 跳过: imageinput
+
 正在编译分支: conv 1->maxpool 4 ...
+
 编译分支: conv 1->maxpool 4 ... complete。
+
 正在编译分支: fc 1->fc 3 ...
+
 编译分支: fc 1->fc 3 ... complete。
+
 跳过: softmax
+
 跳过: classout
+
 正在计划...
+
 ...
+
 正在计划...complete。
+
 正在状态表...
+
 ...
+
 正在状态表...complete。
+
 正在输出...
+
 ...
+
 正在输出...complete。
+
 正在表...complete。
 
 ### 分配外部内存：
@@ -5824,7 +5132,9 @@ prediction_FPGA = dQuantOutObj_FPGA.validate(validationData_FPGA, options_FPGA) 
 | "EndOffset" | 0x09400000 | 总计 148.0 MB |
 
 ### 网络完成。
+
 由于目标上已加载相同的位流，跳过 FPGA 位编程
+
 由于已写入输入激活，跳过深度学习网络编程。
 
 ### 深度学习处理器结果
@@ -5832,6 +5142,9 @@ prediction_FPGA = dQuantOutObj_FPGA.validate(validationData_FPGA, options_FPGA) 
 | 最后帧(周期) | 最后帧(秒) | 帧 |
 | :--- | :--- | :--- |
 | conv 1 | 127297 | 0.00578 | 1 |
+
+
+
 | conv 2 | 281362 | 0.00217 | 1 |
 | conv 3 | 535330 | 0.00243 | 1 |
 | conv 4 | 504820 | 0.00229 | 1 |
@@ -5843,24 +5156,20 @@ prediction_FPGA = dQuantOutObj_FPGA.validate(validationData_FPGA, options_FPGA) 
 | fc 2 | 246293 | 0.00112 | 1 |
 | fc 3 | 129631 | 0.00156 | 1 |
 
-
-
-
-
 # 10 个特色示例
 
-ReferenceDesign: 'AXI-Stream DDR Memory Access'
-SynthesisTool: ''
-ChipFamily: 'Zynq UltraScale+'
-SynthesisToolDeviceName: 'xczu9eg-ffvbl115-26-e'
-SynthesisToolPackageName: ''
-SynthesisToolSpeedValue: ''
+`ReferenceDesign`: 'AXI-Stream DDR Memory Access'
+`SynthesisTool`: ''
+`ChipFamily`: 'Zynq UltraScale+'
+`SynthesisToolDeviceName`: 'xczu9eg-ffvbl115-26-e'
+`SynthesisToolPackageName`: ''
+`SynthesisToolSpeedValue`: ''
 
 # 为 zcu102-single 位流配置估计 ResNet-18 性能
 
 要估计 ResNet-18 DAG 网络的性能，请使用 `dlhdl.ProcessorConfig` 对象的 `estimatePerformance` 函数。该函数返回估计的延迟、网络延迟以及每秒帧数（Frames/s）。
 
-hPC_shipping.estimatePerformance(snet)
+`hPC_shipping.estimatePerformance(snet)`
 
 ```
 ### 正在优化系列网络：将 'nnet.cnn.layer.BatchNormalizationLayer' 合并到 'nnet.cnn.layer'。
@@ -5906,7 +5215,7 @@ hPC_custom = dlhdl.ProcessorConfig
 
 # 在自定义处理器配置上评估深度学习网络的性能
 
-hPC_custom =
+`hPC_custom =`
 
 ```
 处理模块 "conv"
@@ -5939,7 +5248,7 @@ SynthesisToolValue: ''
 
 要估计 ResNet-18 DAG 网络的性能，我们使用 `dlh.ProcessorConfig` 对象的 `estimatePerformance` 方法。该函数返回估计的延迟、网络延迟以及每帧内存（Frames/）。
 
-hPC_custom.estimatePerformance(snet)
+`hPC_custom.estimatePerformance(snet)`
 
 ```
 ### 正在优化系列网络：将 'resnet.cnn.layer.BatchNormalization' 合并到 'resnet.cnn.layer'。
@@ -6015,7 +5324,7 @@ SynthesisToolSpeedValue: ''
 
 在修改后的自定义位流配置上估计 ResNet-18 DAG 网络的性能。
 
-hPC_custom.estimatePerformance(snet)
+`hPC_custom.estimatePerformance(snet)`
 
 ```
 ### 正在优化系列网络：将 nnet.cnn.layer.BatchNormalizationLayer 合并到 'nnet.cnn.layer'。
@@ -6027,29 +5336,25 @@ hPC_custom.estimatePerformance(snet)
 | 网络 | 上帧延迟(cycles) | 上帧延迟(秒) | 帧数 |
 |---|---|---|---|
 | conv1 | 22576184 | 0.01026 | 1 |
-| pool | 2165372 | 0.00908 | | |
-| pool | 64626 | 0.00024 | | |
-| res2a branch2a | 96621 | 0.00439 | | |
-| res2a branch2b | 96621 | 0.00439 | | |
-| res2b branch2a | 96621 | 0.00439 | | |
-| res2b branch2b | 96621 | 0.00439 | | |
-| res3a brancha | 757716 | 0.00379 | | |
-| res3a branchb | 919117 | 0.00460 | | |
-| res3a branch1 | 540749 | 0.00270 | | |
-| res3b brancha | 919117 | 0.00460 | | |
-| res3b branchb | 919117 | 0.00460 | | |
-| res4a brancha | 509261 | 0.00255 | | |
-| res4a branchb | 905421 | 0.00453 | | |
-| res4b brancha | 509261 | 0.00255 | | |
-| res4b branchb | 905421 | 0.00453 | | |
-| res5a brancha | 1013837 | 0.00507 | | |
-| res5a branchb | 1939661 | 0.00970 | | |
-| res5b brancha | 1013837 | 0.00507 | | |
-| res5b branchb | 1939661 | 0.00970 | | |
-
-
-
-
+| pool | 2165372 | 0.00908 | |
+| pool | 64626 | 0.00024 | |
+| res2a branch2a | 96621 | 0.00439 | |
+| res2a branch2b | 96621 | 0.00439 | |
+| res2b branch2a | 96621 | 0.00439 | |
+| res2b branch2b | 96621 | 0.00439 | |
+| res3a brancha | 757716 | 0.00379 | |
+| res3a branchb | 919117 | 0.00460 | |
+| res3a branch1 | 540749 | 0.00270 | |
+| res3b brancha | 919117 | 0.00460 | |
+| res3b branchb | 919117 | 0.00460 | |
+| res4a brancha | 509261 | 0.00255 | |
+| res4a branchb | 905421 | 0.00453 | |
+| res4b brancha | 509261 | 0.00255 | |
+| res4b branchb | 905421 | 0.00453 | |
+| res5a brancha | 1013837 | 0.00507 | |
+| res5a branchb | 1939661 | 0.00970 | |
+| res5b brancha | 1013837 | 0.00507 | |
+| res5b branchb | 1939661 | 0.00970 | |
 
 # 定制位流配置以满足资源需求
 
@@ -6132,6 +5437,8 @@ hPC_reference.estimatePerformance(dlquantObj)
 hPC_reference.estimateResources
 ```
 
+
+
 # 深度学习处理器估算结果
 
 | DSPs | Block RAM* |
@@ -6168,7 +5475,7 @@ hPC_custom.setModuleProperty('conv', 'InputMemorySize', [30 30 1]);
 hPC_custom.setModuleProperty('conv', 'OutputMemorySize', [30 30 1]);
 ```
 
-# 定制位流配置以满足资源需求
+## 定制位流配置以满足资源需求
 
 ```python
 Processing Module "conv"
@@ -6200,7 +5507,7 @@ SynthesisToolPackageName: ''
 SynthesisToolSpeedValue: ''
 ```
 
-# 自定义位流的网络性能和资源利用率
+## 自定义位流的网络性能和资源利用率
 
 要估计数字系列网络的性能，请使用 `dhldl.ProcessorConfig` 对象的 `estimatePerformance` 函数。该函数返回估计的层延迟、网络延迟以及每秒帧（Frames/s）的网络性能。
 
@@ -6248,7 +5555,7 @@ hPC_custom.estimatePerformance(dlquantObj)
 
 深度学习是一种强大的机器学习技术，你可以用它训练健壮的目标检测器。存在多种目标检测技术，包括 Faster-CNN 和 YOLO v2。此示例使用 `trainYOLOv2objectDetector` 函数训练 YOLO v2 车辆检测器。
 
-# 加载数据集
+## 加载数据集
 
 此示例使用包含 295 张图像的小型车辆数据集。其中许多图像来自 Caltech Cars 1999 和 2001 数据集（可在 Computational Vision 网站获取由 Pietro Perona 创建并获得许可）。每张图像包含一个或两个标记的车辆实例。小型数据集对于探索 YOLO v2 训练很有用，但在实践中，需要更多标记图像来训练健壮检测器。解压车辆真值数据。
 
@@ -6291,13 +5598,9 @@ trainingData = combine(mdsTrain,bldsTrain);
 testData = combine(mdsTest,bldsTest);
 ```
 
-# 创建 YOLO v2 检测网络
+## 创建 YOLO v2 检测网络
 
 YOLO v2 检测网络由两个子网络组成。跟随检测网络。特征提取网络通常是预训练的 CNN（对于
-
-
-
-
 
 # 10 个特性示例
 
@@ -6316,6 +5619,7 @@ inputSize = {224 224 3};
 ```
 
 定义要检测的对象类别数。
+
 `numClasses = width(vehicleDataset)-1;`
 
 注意，此示例中使用的训练图像大于 224x224 尺寸各异，因此你必须在训练之前的预处理步骤中调整图像大小。
@@ -6346,7 +5650,7 @@ meanIoU = 0.8651
 
 有关如何选择锚框的更多信息，请参见 [Estimate Anchor Boxes From Training Data (Computer Vision Toolbox (Computer Vision Toolbox™))] 和 [Anchor Boxes for Object Detection (Computer Vision Toolbox)]。
 
-# 使用部署到 FPGA 的基于 DAG 网络 YOLO v2 进行车辆检测
+## 使用部署到 FPGA 的基于 DAG 网络 YOLO v2 进行车辆检测
 
 现在，使用 `resnet18` 加载预训练的 ResNet-18 模型。
 
@@ -6370,7 +5674,7 @@ lgraph = yolov2Layers(inputSize,numClasses,anchorBoxes,featureExtractionNetwork,
 
 如果需要对 YOLO v2 架构进行更多控制，请使用 Deep Network Designer 手动设计 YOLO v2 检测网络。更多信息请参见 [Design a YOLO v2 Detection Network (Computer Vision Toolbox)]。
 
-# 数据增强
+## 数据增强
 
 数据增强用于通过在训练期间随机转换原始数据来提高网络准确性。通过使用数据增强，你可以在不实际增加标记样本的情况下增加数据的多样性。
 
@@ -6380,7 +5684,7 @@ lgraph = yolov2Layers(inputSize,numClasses,anchorBoxes,featureExtractionNetwork,
 augmentedTrainingData = transform(trainingData,@yolo_augment);
 ```
 
-# 预处理训练数据并训练 YOLO v2 检测器
+## 预处理训练数据并训练 YOLO v2 检测器
 
 预处理增强数据和验证数据以准备训练。
 
@@ -6408,6 +5712,7 @@ options = trainingOptions('sgdm',
 正在为以下对象类别训练 YOLO v2 检测器：
 
 - vehicle
+
 在单 CPU 上训练。初始化数据归一化。
 
 | Epoch | Iteration | Time Elapsed (hh:mm:ss) | Mini-batch RMSE | Mini-batch Loss | Base Learning Rate |
@@ -6428,13 +5733,16 @@ options = trainingOptions('sgdm',
 ```
 
 显示结果。
+
 `I_new = insertObjectAnnotation(I,'rectangle',bboxes);`
+
 `figure`
+
 `imshow(I_new)`
 
 img/7bfd428a7e091f2763cc5d
 
-# 加载预训练网络
+## 加载预训练网络
 
 加载预训练网络。
 
@@ -6448,7 +5756,7 @@ snet = detector;
 analyzeNetwork(snet)
 ```
 
-## 创建目标对象
+### 创建目标对象
 
 为你的目标设备创建一个带有供应商名称和连接到主机计算机接口的目标对象。使用安装的 Vivado Design Suite 通过以太网对设备进行编程。
 
@@ -6456,20 +5764,26 @@ analyzeNetwork(snet)
 hTarget = dhdl.Target('Xilinx', 'Interface', 'Ethernet');
 ```
 
-## 创建 Workflow 对象
+### 创建 Workflow 对象
 
 创建 `dhdl.Workflow` 类对象。创建对象时，指定网络和位流名称。指定保存的预训练网络 `snet` 作为网络。确保位流名称与你的目标 FPGA 板板匹配。在本示例中，FPGA 板是 Zynq UltraScale+ MPSOC ZCU102。位流使用单类型数据。
+
+
 
 ```
 hw = dhdl.Workflow('Network', snet, 'Bitstream', 'zcu102 single', 'Target', hTarget)
 hw
 ```
 
-具有属性的 Workflow：
-Network: [1x1 DAGNetwork]
-Bitstream: ['zcu102_single']
-ProcessorConfig: []
-Target: [1x1 dhdl.Target]
+具有属性的 `Workflow`：
+
+`Network`: [1x1 DAGNetwork]
+
+`Bitstream`: ['zcu102_single']
+
+`ProcessorConfig`: []
+
+`Target`: [1x1 dhdl.Target]
 
 # 编译 YOLO v2 对象检测器
 
@@ -6477,15 +5791,17 @@ Target: [1x1 dhdl.Target]
 
 ```
 dn = hw.compile
-
 ```
 
 正在为深度学习 FPGA 原型编译 ...
-目标 FPGA 位流 zcu102 single ...
+
+目标 FPGA 位流 `zcu102 single` ...
+
 网络包含以下层：
 
 | 'data' | 图像输入 | 224x224x3 使用'zscore' 归一化的图像 |
 |---|---|---|
+
 | 'conv1' | 卷积 | 64 7x7 卷积，步长 [2] |
 | 'bn conv1' | 批量归一化 | 64 通道的批量归一化 |
 | 'conv1_relu' | ReLU | ReLU |
@@ -6495,13 +5811,7 @@ dn = hw.compile
 | 'res2a_branch2a_relu' | ReLU | ReLU |
 | 'res2a_branch2b' | 卷积 | 64 3x6 卷积，步长 |
 
-```
-
-
-
-
-
-# 10 个特色示例
+## 10 个特色示例
 
 | ID | 名称 | 类型 | 描述 |
 | :--- | :--- | :--- | :--- |
@@ -6554,27 +5864,29 @@ dn = hw.compile
 
 ```
 Skipping: data
+
 Compiling: conv1->pool
+
 Compiling: conv1->pool      complete.
 ```
 
-编译分支: res2a_branch2>>res2a_branch2...
-编译分支: res2a_branch2>>res2a_branch2 ... complete.
-编译分支: res2b_branch2>>res2b_branch2 ... complete.
-编译分支: res2a_branch2>>res2b_branch2...
-编译分支: res3a_branch1 ... complete.
-编译分支: res3a_branch1>>res3a_branch2...
-编译分支: res3a_branch2>>res3a_branch2 ... complete.
-编译分支: res3b_branch2>>res3b_branch2...
-编译分支: res3b_branch2>>res3b_branch2 ... complete.
-编译分支: res4a_branch1 ... complete.
-编译分支: res4a_branch2>>res4a_branch2...
-编译分支: res4a_branch2>>res4a_branch2 ... complete.
-编译分支: res4b_branch2>>res4b_branch2...
-编译分支: res4b_branch2>>res4b_branch2 ... complete.
-编译分支: yolov2Conv1>>yolov2ClassConv ... complete.
-跳过: yolov2Conv1>>yolov2ClassConv
-跳过: yolov2OutputLayer
+编译分支: `res2a_branch2>>res2a_branch2`...
+编译分支: `res2a_branch2>>res2a_branch2` ... complete.
+编译分支: `res2b_branch2>>res2b_branch2` ... complete.
+编译分支: `res2a_branch2>>res2b_branch2`...
+编译分支: `res3a_branch1` ... complete.
+编译分支: `res3a_branch1>>res3a_branch2`...
+编译分支: `res3a_branch2>>res3a_branch2` ... complete.
+编译分支: `res3b_branch2>>res3b_branch2`...
+编译分支: `res3b_branch2>>res3b_branch2` ... complete.
+编译分支: `res4a_branch1` ... complete.
+编译分支: `res4a_branch2>>res4a_branch2`...
+编译分支: `res4a_branch2>>res4a_branch2` ... complete.
+编译分支: `res4b_branch2>>res4b_branch2`...
+编译分支: `res4b_branch2>>res4b_branch2` ... complete.
+编译分支: `yolov2Conv1>>yolov2ClassConv` ... complete.
+跳过: `yolov2Conv1>>yolov2ClassConv`
+跳过: `yolov2OutputLayer`
 正在创建调度...
 
 正在创建调度...完成。
@@ -6593,20 +5905,20 @@ Compiling: conv1->pool      complete.
 | EndOffset | 0x0540000 | 总计: 84.0 MB |
 
 ### 网络完成字段：
-instructions: [1x1]
-weights: [1x1]
-registers: [1x1]
-syncInstructions: [1x1]
+`instructions`: [1x1]
+`weights`: [1x1]
+`registers`: [1x1]
+`syncInstructions`: [1x1]
 
 ### 特色示例
-要在 Zynq UltraScale+ MPSoC 上部署网络，请使用位流运行 deploy 函数。该函数还会下载权重偏置。Xilinx Vivado 工具随后使用位流启动 FPGA 设备，并显示部署网络所需的时间。
+要在 Zynq UltraScale+ MPSoC 上部署网络，请使用位流运行 `deploy` 函数。该函数还会下载权重偏置。Xilinx Vivado 工具随后使用位流启动 FPGA 设备，并显示部署网络所需的时间。
 
 ### 正在向 FPGA 位流...
-通过 SD 卡下载目标设备配置。将 /tmp/hdlcoder_rd 复制到 /mnt/hdlcoder_rd。将 hdlcoder_system.bit 复制到 /mnt/hdlcoder_rd。设置位流到 hdlcoder_rd/hdlcoder_system.bit。将 devicetree.dt 复制到 /mnt/hdlcoder_rd/devicetree.dt。设置参考设计：'AXI-Stream DDR'：系统正在重启...FPGA 位流已成功完成。权重加载。当前时间为 2021年1月4日 15:59:03
+通过 SD 卡下载目标设备配置。将 `/tmp/hdlcoder_rd` 复制到 `/mnt/hdlcoder_rd`。将 `hdlcoder_system.bit` 复制到 `/mnt/hdlcoder_rd`。设置位流到 `hdlcoder_rd/hdlcoder_system.bit`。将 `devicetree.dt` 复制到 `/mnt/hdlcoder_rd/devicetree.dt`。设置参考设计：'AXI-Stream DDR'：系统正在重启...FPGA 位流已成功完成。权重加载。当前时间为 2021年1月4日 15:59:03
 
 ### 加载示例并运行预测
-在硬件上执行 predict 函数并显示结果：
-prediction, speed = HW.predict(I_re, 'Profile');
+在硬件上执行 `predict` 函数并显示结果：
+`prediction, speed = HW.predict(I_re, 'Profile');`
 
 ### 完成写入激活。正在运行单个输入激活。
 
@@ -6652,16 +5964,15 @@ prediction, speed = HW.predict(I_re, 'Profile');
 
 ```
 [bboxes, scoresn, labelsn] = yolo_post_proc(prediction,I_pre,anchorBoxes,{'Vehicle'});
+
 I_new3 = insertObjectAnnotation(I,rectangle,bboxes,scoresn);
+
 figure
+
 imshow(I_new3)
 ```
 
 ![](img/747bfd4f288a7e0917a1f27637cc5c2d_212_0.png)
-
-
-
-
 
 # 定制位流配置以满足资源使用需求
 
@@ -6670,7 +5981,7 @@ imshow(I_new3)
 - 数字信号处理器 (DSP) 切片数量 - 240
 - 块随机访问内存 (BRAM) 数量 - 128
 
-参考（出厂）zcu102_int8 位流配置是针对 Xilinx ZCU102 ZU9EG 设备的。默认板资源计数为：
+参考（出厂）`zcu102_int8` 位流配置是针对 Xilinx ZCU102 ZU9EG 设备的。默认板资源计数为：
 
 - 数字信号处理器 (DSP) 切片数量 - 2520
 - 块随机访问内存 (BRAM) 数量 - 9128
@@ -6700,7 +6011,9 @@ snet = getDigitsNetwork;
 
 ```matlab
 dquantObj = dquantizer(snet, 'ExecutionEnvironment', 'FPGA');
+
 Image = imageDatastore('five_28_28.png', 'Labels', 'five');
+
 dquantObj.calibrate(Image)
 ```
 
@@ -6717,20 +6030,31 @@ dquantObj.calibrate(Image)
 
 ```matlab
 {'fc Weights' } {('fc')} "Weights" -0.2258
+
 {'fc Bias' } {('fc')} "Bias" -0.011837
+
 {'imageinput' } {('imageinput')} "Activations" 0
+
 {'imageinput_normalization' } {('imageinput')} "Activations" -22.566
+
 {'conv_1' } {('batchnorm_1')} "Activations" -7.9196
+
 {'relu_1' } {('relu_1')} "Activations" 0
+
 {'maxpool_1' } {('maxpool_1')} "Activations" 0
+
 {'conv_2' } {('('norm_2')} "Activations" -8.6461
+
 {'relu_2' } {('relu_2')} "Activations" 0
+
 {'maxpool_2' } {('maxpool_2')} "Activations" 0
 ```
 
+
+
 # 获取 zcu102_it8 位流配置
 
-使用 dhldl.ProcessorConfig 对象获取 zcu102_it8 位流配置。如需更多信息，请使用 dhldl.ProcessorConfig。要如何修改处理器配置的特定参数，请使用 getModuleProperty 和 setModuleProperty。
+使用 `dhldl.ProcessorConfig` 对象获取 `zcu102_it8` 位流配置。如需更多信息，请使用 `dhldl.ProcessorConfig`。要如何修改处理器配置的特定参数，请使用 `getModuleProperty` 和 `setModuleProperty`。
 
 ```matlab
 hPC_reference = dhldl.ProcessorConfig('Bitstream', 'zcu102_it8')
@@ -6764,19 +6088,19 @@ SynthesisToolDeviceName: 'xcu29q-ffvb156-2-e'
 SynthesisToolPackageName: ''
 SynthesisToolSpeedValue: ''
 
-# 为 zcu102_it8 位流配置估计网络性能和资源利用
+## 为 zcu102_it8 位流配置估计网络性能和资源利用
 
-要估计数字网络的性能，请使用 dhldl.ProcessorConfig 对象的 estimatePerformance。该函数返回估计的层延迟、网络延迟以及每帧数 (Frames/s) 计算的网络性能。
+要估计数字网络的性能，请使用 `dhldl.ProcessorConfig` 对象的 `estimatePerformance`。该函数返回估计的层延迟、网络延迟以及每帧数 `Frames/s` 计算的网络性能。
 
-# 10 个特色示例
+### 10 个特色示例
 
-要估计 zcu102_it8 位流的资源使用情况，请使用 dhldl.ProcessorConfig 对象的 estimateResources 函数。该函数返回估计的 DSP 切片和 BAM 使用情况。
+要估计 `zcu102_it8` 位流的资源使用情况，请使用 `dhldl.ProcessorConfig` 对象的 `estimateResources` 函数。该函数返回估计的 DSP 切片和 BAM 使用情况。
 
 ```matlab
 hPC_reference.estimatePerformance(dlquantObj)
 ```
 
-# 深度学习处理器估计器结果
+## 深度学习处理器估计器结果
 
 | | LastFrameLatency(cycles) | LastFrameLatency(seconds) | FramesNum |
 |---|---|---|---|
@@ -6789,7 +6113,7 @@ hPC_reference.estimatePerformance(dlquantObj)
 | fc | 43564 | 0.00017 | | |
 * DL 处理器的频率为: 250MHz
 
-# 深度学习处理器估计器资源结果
+## 深度学习处理器估计器资源结果
 
 | | DSPs | Block RAM |
 |---|---|---|
@@ -6803,22 +6127,28 @@ hPC_reference.estimatePerformance(dlquantObj)
 
 估计性能为 4314 FPS，估计资源计数为：
 
-- 数字信号处理器 (DSP) 切片数量 - 768
-- 块随机访问内存 (BRAM) 数量 - 386
+- 数字信号处理器 `DSP` 切片数量 - 768
+- 块随机访问内存 `BRAM` 数量 - 386
 
 估计的 DSP 切片数量和 BAM 超过了目标设备。定制位流配置以减少资源使用。
 
-## 创建位流配置
+### 创建位流配置
 
-要创建处理器配置，请使用 dhldl.ProcessorConfig。更多信息请使用 dhldl.ProcessorConfig。要了解处理器配置的可修改参数，请使用 getModuleProperty 和 setModuleProperty。要减少自定义位流的使用，请修改 conv、fc 和 adder模块的 KernelDataType。修改 ConvThreadNumber 以减少 DSP 切片数量。减少 conv 模块的 InputMemorySize 和 OutputMemorySize 以减少 BAM 数。
+要创建处理器配置，请使用 `dhldl.ProcessorConfig`。更多信息请使用 `dhldl.ProcessorConfig`。要了解处理器配置的可修改参数，请使用 `getModuleProperty` 和 `setModuleProperty`。要减少自定义位流的使用，请修改 `conv`、`fc` 和 `adder` 模块的 `KernelDataType`。修改 `ConvThreadNumber` 以减少 DSP 切片数量。减少 `conv` 模块的 `InputMemorySize` 和 `OutputMemorySize` 以减少 BAM 数。
 
 ```matlab
 hPC_custom = dhldl.ProcessorConfig;
+
 hPC_custom.setModuleProperty('conv', 'KernelDataType', 'int8');
+
 hPC_custom.setModuleProperty('fc', 'KernelDataType', 'int8');
+
 hPC_custom.setModuleProperty('adder', 'KernelDataType', 'int8');
+
 hPC_custom.setModuleProperty('conv', 'ConvThreadNumber', 4);
+
 hPC_custom.setModuleProperty('conv', 'InputMemorySize', [30 30 1]);
+
 hPC_custom.setModuleProperty('conv', 'OutputMemorySize', [30 30 1]);
 ```
 
@@ -6849,11 +6179,11 @@ SynthesisToolChipFamily: 'Zynq UltraScale+'
 SynthesisToolPackageName: 'xcu29g-fvv0156-2-e'
 SynthesisToolSpeedValue: 
 
-# 为自定义位流估计性能和资源利用
+## 为自定义位流估计性能和资源利用
 
-要估计数字网络的性能，请使用 dhldl.ProcessorConfig 对象的 estimatePerformance 函数。该函数返回估计的层延迟、网络延迟以及每帧数 (Frames/sec) 计算的网络性能。
+要估计数字网络的性能，请使用 `dhldl.ProcessorConfig` 对象的 `estimatePerformance` 函数。该函数返回估计的层延迟、网络延迟以及每帧数 `Frames/sec` 计算的网络性能。
 
-要估计 hPC 自定义位流的资源使用情况，请使用 dhldl.ProcessorConfig 对象的 estimateResources 函数。该函数返回估计的 DSP 切片和分支使用。
+要估计 `hPC_custom` 位流的资源使用情况，请使用 `dhldl.ProcessorConfig` 对象的 `estimateResources` 函数。该函数返回估计的 DSP 切片和分支使用。
 
 ```matlab
 hPC_custom.estimatePerformance(dquantObj)
@@ -6862,7 +6192,7 @@ hPC_custom.estimatePerformance(dquantObj)
 ### 优化系列网络：将 nnet.cnn.layer.BatchNormalizationLayer 融合到 'nnet.cnn.layer'
 创建了 3 个内存区域。
 
-# 10 个特色示例（继续）
+### 10 个特色示例（继续）
 
 | Network | | LastFrameLatency(cycles) | LastFrameLatency(seconds) | FramesNum |
 |---|---|---|---|---|
@@ -6874,15 +6204,11 @@ hPC_custom.estimatePerformance(dquantObj)
 | conv_3 | 121493 | 0.00061 | | |
 | fc | 43409 | 0.00022 | | |
 
-
-
-
-
 ## 使用部署到 FPGA 的 DAG 网络进行分类
 
 此示例演示了如何使用用于 Xilinx FPGA 和 SoC 的 Deep Learning HDL Toolbox™ Support Package 将 `dhldl.Workflow` 对象作为网络对象进行训练、编译和部署。使用 MATLAB® 从目标设备获取预测结果。
 
-## 所需产品
+### 所需产品
 
 对于此示例，您需要：
 
@@ -6892,7 +6218,7 @@ hPC_custom.estimatePerformance(dquantObj)
 - Deep Learning HDL Toolbox Support Package for Xilinx FPGA and SoC Devices
 - Image Processing Toolbox™
 
-## 加载预训练的系列网络
+### 加载预训练的系列网络
 
 要加载预训练的系列网络 ResNet-18，请输入：
 
@@ -6908,20 +6234,23 @@ analyzeNetwork(snet);
 
 第一层是图像输入，需要大小为 227x227x3 的输入图像，其中 3 是颜色通道数。
 
-## 定义训练和验证数据集
+### 定义训练和验证数据集
 
 此示例使用了 MathWorks MerchData 数据集。这是一个小型数据集，包含 75 张 MathWorks 商品图像，属于五个不同的类别（帽子、立方体、扑牌、螺丝刀和手电筒）。
 
 ```matlab
 curDir = pwd;
+
 unzip('MerchData.zip');
+
 imds = imageDatastore('MerchData',
 'IncludeSubfolders',true,
 'LabelSource','foldernames');
+
 [imds.train,imdsValidation] = splitEachLabel(imds,0.7,'randomized');
 ```
 
-## 替换末端层
+### 替换末端层
 
 预训练网络的全连接层和分类层配置为1000个类别。ResNet-18 中的这两层 `fc1000` 和 `ClassificationLayer_predictions` 包含了如何结合网络提取的特征类别概率和预测标签的信息。这两层必须针对新的分类问题进行微调。从预训练网络中提取除最后层之外的所有层。
 
@@ -6930,7 +6259,7 @@ lgraph = layerGraph(snet)
 lgraph = LayerGraph with properties;
 ```
 
-## 10 个特色示例
+### 10 个特色示例
 
 ```
 Layers: [71×1 nnet.cnn.layer.Layer]
@@ -6947,17 +6276,21 @@ newLearnableLayer = fullyConnectedLayer(numClasses, ...
 'Name', 'fc', ...
 'WeightLearnFactor',10, ...
 'BiasLearnFactor',10;
+
 graph = replaceLayer(graph, 'fc1000', newLearnableLayer)
+
 newClass = classificationLayer('Name', 'new classoutput')
+
 graph = replaceLayer(graph, 'ClassificationLayer_predictions', newClass);
 ```
 
-## 训练网络
+### 训练网络
 
 网络需要大小为 224x224x3 的图像，但图像数据存储中的图像大小不同。使用增强图像数据存储（augmented image datastore）自动调整图像大小。指定在训练图像上执行额外的增强操作，例如沿垂直轴随机翻转图像并在水平和垂直方向上平最多30个像素。数据增强有助于防止网络过拟合并记忆训练图像的细节。
 
 ```matlab
 pixelRange = [-30 30]
+
 imageAugmenter = imageDataAugmenter(
 'RandReflection',true, ...
 'RandTranslation',pixelRange, ...
@@ -6987,16 +6320,17 @@ netTransfer = trainNetwork(augindsTrain, Igraph, options);
 
 ![](img/747bfd4f288a7e09171f2637cc)
 
-## 创建目标对象
+### 创建目标对象
 
 使用 `dlhdTarget` 类为您的目标主机创建一个具有自定义名称的对象。接口选项有 JTAG 和以太网。要使用 JTAG，安装 Xilinx Vivado Design Suite 2019.2。
 
 ```matlab
 $ dlhdtoolpath('ToolName', 'Xilinx Vivado', 'ToolPath', 'C:\Xilinx\Vivado\2019.2\bin')
+
 target = dlhd('('net');
 ```
 
-## 创建工作流对象
+### 创建工作流对象
 
 使用 `dlhd.Workflow` 类创建一个对象。在创建对象时，指定网络和比特流名称。指定预训练的 alexnet 神经网络作为网络。确保比特流与数据类型和您的目标 FPGA 板板匹配。在示例中，FPGA 板板是 Xilinx ZCU102。比特流使用单一数据类型。
 
@@ -7004,9 +6338,9 @@ target = dlhd('('net');
 hw = dlhd.Workflow('Network', netTransfer, 'Bitstream', 'zcu102_single', 'Target', hTarget);
 ```
 
-## 10 个特色示例
+### 10 个特色示例
 
-## 编译 netTransfer DAG，运行 dldl.Workflow 的 compile 方法
+### 编译 netTransfer DAG，运行 dldl.Workflow 的 compile 方法
 
 编译 netTransfer DAG 时，可以指定最大输入数量。
 
@@ -7014,9 +6348,11 @@ hw = dlhd.Workflow('Network', netTransfer, 'Bitstream', 'zcu102_single', 'Target
 dn = hw.compile('InputFrameNumberLimit',15)
 ```
 
+
+
 ### 为 FPGA zcu102_single 编译 netTransfer DAG 包含以下层：
 
-| | | |
+|  |  |  |
 |---|---|---|
 | 1 | data | 输入 |
 | 2 | conv1 | 卷积 |
@@ -7039,10 +6375,6 @@ dn = hw.compile('InputFrameNumberLimit',15)
 | 19 | globalpool | 全局池化 |
 | 20 | fc | 全连接 |
 | 21 | newclassoutput | 分类 |
-
-
-
-
 
 # 使用部署到 FPGA 的 DAG 网络进行图像分类
 
@@ -7073,39 +6405,67 @@ dn = hw.compile('InputFrameNumberLimit',15)
 | 70 | prob* | | |
 | 71 | new_classout | 分类输出 | 与 'MathWorks' Cap 的交叉熵 |
 
-```
 ### Optimizing series network: fused 'resnet.cnn.layer.BatchNormalizationLayer into 'resnet.cnn..
+
 Skipping data:
+
 Compiling leg: conv1->pool1 ... complete.
+
 Compiling leg: conv1->pool1 ... complete.
+
 Compiling leg: res2a branch2a->res2a branch2b...
+
 Compiling leg: res2a branch2a->res2a branch2b ... complete.
+
 Compiling leg: res2b branch2a->res2b branch2b...
+
 Compiling leg: res2b branch2a->res2b branch2b ... complete.
+
 Compiling leg: res3a branch1 ... complete.
+
 Compiling leg: res3a branch1 ... complete.
+
 Compiling leg: res3a branch2a->res3a branch2b...
+
 Compiling leg: res3a branch2a->res3a branch2b ... complete.
+
 Compiling leg: res3b branch2a->res3b branch2b...
+
 Compiling leg: res3b branch2a->res3b branch2b ... complete.
+
 Compiling leg: res4a branch1 ... complete.
+
 Compiling leg: res4a branch1 ... complete.
+
 Compiling leg: res4a branch2a->res4a branch2b...
+
 Compiling leg: res4a branch2a->res4a branch2b ... complete.
+
 Compiling leg: res4b branch2a->res4b branch2b...
+
 Compiling leg: res4b branch2a->res4b branch2b ... complete.
+
 Compiling leg: res5a branch1 ... complete.
+
 Compiling leg: res5a branch1 ... complete.
+
 Compiling leg: res5a branch2a->res5a branch2b...
+
 Compiling leg: res5a branch2a->res5a branch2b ... complete.
+
 Compiling leg: res5b branch2a->res5b branch2b...
+
 Compiling leg: res5b branch2a->res5b branch2b ... complete.
+
 Compiling leg: pool5 ... complete.
+
 Compiling leg: pool5 ... complete.
+
 Compiling leg: new_fc ... complete.
+
 Compiling leg: new_fc ... complete.
+
 Skipping: prob
-```
 
 10-143
 
@@ -7146,26 +6506,29 @@ Emitting Status Table..complete.
 
 ```
 dn = struct fields:
+
 	weights: [1x struct]
+
 	instructions: [1x struct]
+
 	registers: [1x struct]
+
 	nSyncInstructions: [1x struct];
 ```
 
 # 将比特流程序到 FPGA 并下载网络权重
 
-
-
-
-
 # 特色示例
 
 ```mat
 curDir = pwd;
+
 unzip('MerchData.zip');
+
 imds = imageDatastore('MerchData', ...
 'IncludeSubfolders',imds,true, ...
 'LabelSource','foldername');
+
 [imdsTrain,imdsValidation] = splitLabel(imds,0.7,'randomized');
 ```
 
@@ -7182,8 +6545,8 @@ InputNames:{data'}
 OutputNames:{ClassificationLayer_predictions})
 ```
 
-numClasses = num(category(classes))
-numClasses = 5
+`numClasses = num(category(classes))`
+`numClasses = 5`
 
 ```mat
 newLearnableLayer = fullyConnectedLayer(numClasses,
@@ -7201,6 +6564,7 @@ lgraph = replaceLayer(lgraph,'ClassificationLayer_predictions',newLayer);
 
 ```mat
 pixelRange = [-30 30];
+
 imageAugmenter = augmenter('RandReflection',true,
 'RandTranslation',pixelRange,
 'RandRotation',pixelRange);
@@ -7292,6 +6656,8 @@ hw = dl.Workflow('Network', dquantobj, 'Bitstream', 'zcu102int8', 'Target', hTar
 dn = hw.compile('InputFrameLimit');
 ```
 
+
+
 # 使用量化网络在 FPGA 上分类
 
 深度学习原型设计...网络包含以下层：
@@ -7351,11 +6717,7 @@ dn = hw.compile('InputFrameLimit');
 | 51 | 'res3b_relu' | ReLU | ReLU |
 | 52 | 'res4a_2a' | 卷积 | 3×3 卷积，步长 [1] |
 
-
-
-
-
-# 10 个特性示例
+## 10 个特性示例
 
 | | | | | |
 |---|---|---|---|---|
@@ -7379,44 +6741,75 @@ dn = hw.compile('InputFrameLimit');
 | 70 | 'prob' | Softmax | softmax | |
 | 71 | 'new_classout' | 分类输出 (Classification Output) | 使用 'MathWorks Cap' 的交叉熵 | |
 
-```
 ### 网络优化设置: 将 'cnn.layer.BatchNormalization' 融合进 'net.cnn.layer'
+
 创建了 5 个内存区域。
+
 跳过: data:
+
 Compiling leg: conv1->pool1
+
 Compiling leg: conv1->pool1 ... complete.
+
 Compiling leg: res5a branch2a=>res5a branch2b
+
 Compiling leg: res5a branch2a=>res5a branch2b ... complete.
+
 Compiling leg: res5b branch2a=>res5b branch2b
+
 Compiling leg: res5b branch2a=>res5b branch2b ... complete.
+
 Compiling leg: res5a branch1
+
 Compiling leg: res5a branch1 ... complete.
+
 Compiling leg: res5a branch3=>res5a branch2b
+
 Compiling leg: res5a branch3=>res5a branch2b ... complete.
+
 Compiling leg: res5b branch3=>res5b branch2b
+
 Compiling leg: res5b branch3=>res5b branch2b ... complete.
+
 Compiling leg: res5a branch1
+
 Compiling leg: res5a branch1 ... complete.
+
 Compiling leg: res5a branch4=>res5a branch2b
+
 Compiling leg: res5a branch4=>res5a branch2b ... complete.
+
 Compiling leg: res5b branch4=>res5b branch2b
+
 Compiling leg: res5b branch4=>res5b branch2b ... complete.
+
 Compiling leg: res5a branch1
+
 Compiling leg: res5a branch1 ... complete.
+
 Compiling leg: res5a branch5=>res5a branch2b
+
 Compiling leg: res5a branch5=>res5a branch2b ... complete.
+
 Compiling leg: res5b branch5=>res5b branch2b
+
 Compiling leg: res5b branch5=>res5b branch2b ... complete.
+
 Compiling leg: pool5
+
 Compiling leg: pool5 ... complete.
+
 Compiling leg: new_fc ... complete.
+
 Skipping: prob
+
 Skipping: new_classout
+
 Creating Schedule...
 
 Creating Schedule...
+
 Creating Table Status...
-```
 
 10-152
 
@@ -7431,7 +6824,7 @@ Emitting Table...
 
 Emitting Table...complete.
 
-### ### 分配外部内存:
+### 分配外部内存:
 
 | offset_name | offset_address | allocated_space |
 |---|---|---|
@@ -7444,18 +6837,23 @@ Emitting Table...complete.
 | FCweightDataOffset | 0x05000000 | 4.0 MB |
 | EndOffset | | Total: 84.0 MB |
 
-# ### 网络完成.
+# 网络完成.
+
 ```
 dn = struct:
+
   weights: [1]
+
   instructions: [1]
+
   registers: [1]
+
 ```
 
-### ### 在 FPGA 上编写位流
+### 在 FPGA 上编写位流
 为了在 Xilinx ZCU102 硬件上部署网络，运行 deploy 函数。该函数使用输出文件下载网络权重和偏置。deploy 函数开始编写 FPGA 设备，显示进度以及部署网络的时间。
 
-### ### 通过以太网编写位流...
+### 通过以太网编写位流...
 通过以太网下载 FPGA 配置到 SD 卡 ...
 Copied /tmp/data_rd to /mnt/data_rd
 Copying data.bit to /mnt/data_rd
@@ -7464,30 +6862,32 @@ Setting up to /mnt/data_rd
 Set up for Reference Design: AXI-Stream Memory Access
 此系统现在将重启... 位流已成功完成。
 
-### ### 加载权重到卷积处理器.
+### 加载权重到卷积处理器.
 当前时间为 2021-1-11 12:26:16
 
-### ### 加载权重到全连接处理器.
+### 加载权重到全连接处理器.
 当前时间为 2021-1-11 11:26:16
 
-### ### 图像加载
+### 图像加载
 加载示例图像。
 ```matlab
 imgFile = fullfile(pwd,'MathData','Mathcube_0.jpg');
+
 inputImg = imresize(imread(imgFile),[224 224]);
+
 imshow(inputImg)
 ```
 
-### ### 为图像预测
+### 为图像预测
 在 workflow 对象上执行 predict 方法并在 MATLAB 窗口中显示标签。
 ```matlab
 [prediction, speed] = hw.predict(inputImg);
 ```
 
-### ### 完成写入激活值.
+### 完成写入激活值.
 运行单个激活值。
 
-### ### 深度学习分析器性能结果
+### 深度学习分析器性能结果
 
 | 网络 | 上帧延迟(周期) | 上帧延迟(秒) | 总帧数 |
 |---|---|---|---|
@@ -7526,10 +6926,6 @@ imshow(inputImg)
 | res5b branch2a | 311050 | 0.00124 | |
 | res5b branch2b | 311130 | 0.00124 | |
 
-
-
-
-
 # 使用部署到 FPGA 的 DAG 网络对 ECG 信号进行分类
 
 在 physionet-ECG data-master 中解压 ECGData.zip。将数据文件加载到你的 MATLAB 工作区。
@@ -7537,21 +6933,27 @@ imshow(inputImg)
 ```matlab
 unzip(fullfile(tempdir, 'physionet ECG data-master','ECGData.zip'),..
     fullfile(tempdir, 'physionet ECG data-master'))
+
 load(fullfile(tempdir, 'physionet ECG data-master','ECGData.mat'))
 ```
 
-ECGData 是一个包含两个字段的结构体数组：Data 和 Labels。Data 字段是一个 162-65536 的矩阵，其中每行都是一个采样频率为 128 Hz 的 ECG 记录。Labels 对应 Data 的每一行。三个诊断类别为：'ARR'、'CHF', 'NSR'。
+`ECGData` 是一个包含两个字段的结构体数组：`Data` 和 `Labels`。`Data` 字段是一个 162-65536 的矩阵，其中每行都是一个采样频率为 128 Hz 的 ECG 记录。`Labels` 对应 `Data` 的每一行。三个诊断类别为：'ARR'、'CHF', 'NSR'。
 
-为了存储每个类别的预处理数据，在 tempdir 内部创建一个名为 dataDir 的 ECG 数据目录。然后并在 'data' 中创建以每个 ECG 类别命名的子目录。辅助函数 helperCreateECGdirectories 可以实现此操作。helperCreateECGdirectories  ECGData、ECG 数据目录名称和父目录名称作为输入参数。你可以将 tempdir 替换为你有权限的其他目录。你可以在此示例末的“辅助函数”部分找到该辅助函数的源代码。
+为了存储每个类别的预处理数据，在 tempdir 内部创建一个名为 dataDir 的 ECG 数据目录。然后并在 'data' 中创建以每个 ECG 类别命名的子目录。辅助函数 helperCreateECGdirectories 可以实现此操作。`helperCreateECGdirectories` ECGData、ECG 数据目录名称和父目录名称作为输入参数。你可以将 tempdir 替换为你有权限的其他目录。你可以在此示例末的“辅助函数”部分找到该辅助函数的源代码。
 
 ```matlab
 %parentDir = tempdir;
+
 parentDir = pwd;
+
 dataDir = 'data';
+
 helperCreateECGdirectories(ECGData,parentDir,dataDir)
 ```
 
-绘制每个 ECG 类别的代表性图。辅助函数 helperPlotReps  ECGData 作为输入。你可以在此示例末的“辅助函数”部分找到该辅助函数的源代码。
+
+
+绘制每个 ECG 类别的代表性图。辅助函数 `helperPlotReps` `ECGData` 作为输入。你可以在此示例末的“辅助函数”部分找到该辅助函数的源代码。
 
 ```matlab
 helperPlotReps(ECGData)
@@ -7561,21 +6963,25 @@ helperPlotReps(ECGData)
 
 ![](img/747bfd4f288a7e0917a1f27637cc5c2d_237_0.png)
 
-### ### 创建时频表示
+## 创建时频表示
 
 创建文件夹后，创建 ECG 信号的时频表示。这些表示被称为尺度图（scalograms）。尺度图是信号的 CWT 系数的绝对值。
 
 要创建尺度图，请预先计算 CWT 滤波器组。当在使用相同参数对多个信号进行 CWT 时，预计算 CWT 滤波器组是首选方法。
 
-在生成尺度图之前，检查其中一个。使用 cfilterbank 为具有 1000 个样本的信号创建一个 CWT 滤波器组。使用该滤波器组对信号的前 1000 个样本进行 CWT，并从系数获取尺度图。
+在生成尺度图之前，检查其中一个。使用 `cfilterbank` 为具有 1000 个样本的信号创建一个 CWT 滤波器组。使用该滤波器组对信号的前 1000 个样本进行 CWT，并从系数获取尺度图。
 
 ```matlab
 Fs = 120;
+
 fb = cfilterbank('Signallength',1000,...
     'SamplingFrequency',Fs,...
     'VoicesPerOctave',12);
+
 sig = ECGData.Data(1:1000);
+
 [cfs,frq] = wt(fb,sig);
+
 t = (0:999)/Fs;figure;pcolor(t,frq,abs(cfs))
 set(gca,'yscale','log');shading,interp;axis tight
 title('Scalogram');xlabel('Time (s)');ylabel('Frequency (Hz)')
@@ -7583,13 +6989,15 @@ title('Scalogram');xlabel('Time (s)');ylabel('Frequency (Hz)')
 
 ![](img/747bfd4f288a7e0917a1f27637cc5c2d_238_0.png)
 
-使用辅助函数 helperCreateRGBfromTF 将尺度图创建为 RGB 图像，并将它们写入 dataDir 中相应的子目录。该辅助函数的源代码位于此示例末尾的辅助函数中。为了兼容 GoogLeNet 架构，每个 RGB 图像都是大小为 224-by-224-by-3 的数组。
+使用辅助函数 `helperCreateRGBfromTF` 将尺度图创建为 RGB 图像，并将它们写入 `dataDir` 中相应的子目录。该辅助函数的源代码位于此示例末尾的辅助函数中。为了兼容 GoogLeNet 架构，每个 RGB 图像都是大小为 224-by-224-by-3 的数组。
 
 ```matlab
 helperCreateRGBfromTF(ECListData,parentDir,dataDir)
-``` 划分训练和验证数据
+```
 
-将尺度图加载为 image datastore。imageDatastore 函数通过文件夹名称自动标记图像并存储为 image datastore 对象。image datastore 允许存储无法内存的大型图像，并在训练期间高效读取批量图像。
+### 划分训练和验证数据
+
+将尺度图加载为 image datastore。`imageDatastore` 函数通过文件夹名称自动标记图像并存储为 image datastore 对象。image datastore 允许存储无法内存的大型图像，并在训练期间高效读取批量图像。
 
 ```matlab
 allImages = imageDatastore(fullfile(parentDir,dataDir),
@@ -7607,17 +7015,21 @@ disp(['Number of validation images: ',num2str(numel(imgsValidation.Files))]);
 
 # SqueezeNet
 
-SqueezeNet 是一个深度 CNN，支持尺寸为 227-by-227-by-3 的图像。尽管维度与 GoogleLeNet 不同，但不需要生成新的 RGB 图像。加载自定义的 SqueezeNet 网络。
+`SqueezeNet` 是一个深度 CNN，支持尺寸为 227-by-227-by-3 的图像。尽管维度与 GoogleLeNet 不同，但不需要生成新的 RGB 图像。加载自定义的 SqueezeNet 网络。
 
 ```matlab
 sqz = squeeze;
-``` 从网络中提取图。确认 SqueezeNet 的层数比 GoogleLeNet 少。
+```
+
+从网络中提取图。确认 SqueezeNet 的层数比 GoogleLeNet 少。
 
 ```matlab
 graphSqz = layerGraph(sqz);
 disp('Number of Layers: ',numel(graphSqz.Layers));
 disp(graphSqz.Layers(end).InputSize)
-``` 修改 SqueezeNet 参数
+```
+
+## 修改 SqueezeNet 参数
 
 为了保留 SqueezeNet 以分类新图像，进行与 GoogleLeNet 类似的更改。检查网络的最后六层。
 
@@ -7639,12 +7051,16 @@ ans =
 tmpLayer = graphSqz.Layers(end);
 newDropoutLayer = dropoutLayer(0.6,'Name','new dropout');
 graphSqz = replaceLayer(graphSqz,tmpLayer.Name,newDropoutLayer);
-``` 与 GoogleLeNet 不同，SqueezeNet 中的可学习层是 1-by-1 卷积层 'conv10$，而不是全连接。将 'conv10' 替换为数量等于类别数量的卷积层。像 GoogleLeNet 一样，增加新层的学习率。
+```
+
+与 GoogleLeNet 不同，SqueezeNet 中的可学习层是 1-by-1 卷积层 'conv10$，而不是全连接。将 'conv10' 替换为数量等于类别数量的卷积层。像 GoogleLeNet 一样，增加新层的学习率。
 
 ```matlab
 numClasses = numel(categories(imgsTrain.Labels));
 tmpLayer = graphSqz.Layers(end-4);
-``` 使用部署到 FPGA 的 DAG 网络对 ECG 信号进行分类
+```
+
+使用部署到 FPGA 的 DAG 网络对 ECG 信号进行分类
 
 ```matlab
 newLearnableLayer = convolution2dLayer(1,numClasses, ...
@@ -7652,13 +7068,17 @@ newLearnableLayer = convolution2dLayer(1,numClasses, ...
 'WeightLearnRateFactor',10, ...
 'BiasLearnRateFactor',10)
 graphSqz = replaceLayer(graphSqz,tmpLayer.Name,newLearnableLayer);
-``` 将该层替换为没有类别标签的新层。
+```
+
+将该层替换为没有类别标签的新层。
 
 ```matlab
 tmpLayer = graphSqz.Layers(end)
 newClassLayer = classificationLayer('Name','newclassout')
 graphSqz = replaceLayer(graphSqz,tmpLayer.Name,newClassLayer);
-``` 检查网络最后已更改的 dropout、卷积和输出层。
+```
+
+检查网络最后已更改的 dropout、卷积和输出层。
 
 ```matlab
 ans =
@@ -7673,7 +7093,7 @@ ans =
 
 # 为 SqueezeNet 准备数据
 
-RGB 图像具有适用于 GoogleNet 架构的维度。创建 augmented image datastore 自动调整现有 RGB 图像以适应 SqueezeNet 架构。更多信息请参见 augmentedImageDatastore。
+RGB 图像具有适用于 GoogleNet 架构的维度。创建 augmented image datastore 自动调整现有 RGB 图像以适应 SqueezeNet 架构。更多信息请参见 `augmentedImageDatastore`。
 
 ```matlab
 augimsTrain = augmentedImageDatastore({227 227},imgsTrain);
@@ -7704,10 +7124,6 @@ opts = trainingOptions('sgdm',
 rng default
 trainedSN = trainNetwork(augimsTrain,graphSqz,opts);
 ```
-
-
-
-
 
 # 初始化输入数据归一化。
 
@@ -7758,15 +7174,15 @@ LossFunction: 'crossentropy'
 # 评估 SqueezeNet 准确率
 
 使用验证数据评估网络。
-[Ypred,probs] = classify(trainedSN,augimgsValidation)
-accuracy = mean(Ypred=ImgsValidation.Labels)
-disp('SqueezeNet Accuracy:', num2str(100*accuracy),'%')
+`[Ypred,probs] = classify(trainedSN,augimgsValidation)`
+`accuracy = mean(Ypred=ImgsValidation.Labels)`
+`disp('SqueezeNet Accuracy:', num2str(100*accuracy),'%')`
 
 SqueezeNet 准确率: 84.375%
 
 ## 创建目标对象
 
-使用 dhdl.Target 为你的目标设备创建一个自定义名称的目标对象，并创建一个连接目标设备到主机计算机的接口。接口选项有 JTAG 和以太网。要使用 JTAG，请安装 Xilinx™ Vivado Design Suite 2019.2。设置 Xilinx Vivado 工具路径，输入：
+使用 `dhdl.Target` 为你的目标设备创建一个自定义名称的目标对象，并创建一个连接目标设备到主机计算机的接口。接口选项有 JTAG 和以太网。要使用 JTAG，请安装 Xilinx™ Vivado Design Suite 2019.2。设置 Xilinx Vivado 工具路径，输入：
 
 ```matlab
 % dhdlsetuppath('TargetName', 'Xilinx', 'ToolPath', 'C:\Xilinx\Vivado\2019.2\bin\vivado.exe')
@@ -7778,7 +7194,7 @@ hTarget = dhdl.Target('Xilinx', 'Interface', 'Ethernet');
 
 ## 创建 Workflow 对象
 
-使用 dhdl.Workflow 创建对象。创建对象时，指定网络、位流和目标 FPGA 板。在此示例中，目标 FPGA 板是 Xilinx ZCU102 SoC 板。位流使用单一类型
+使用 `dhdl.Workflow` 创建对象。创建对象时，指定网络、位流和目标 FPGA 板。在此示例中，目标 FPGA 板是 Xilinx ZCU102 SoC 板。位流使用单一类型
 
 ```matlab
 hw = dhdl.Workflow('Network', trainedSN, 'Bitstream', 'zcu102_single', 'Target',hTarget)
@@ -7791,13 +7207,17 @@ Network: [1x DAG]
 Bitstream: 'zcu102_single'
 ProcessorConfig: []
 Target: [1x dhdl.Target]
-```# 编译修改后的 SqueezeNet DAG 网络
+```
 
-要编译训练好的 SN DAG 网络，运行 dhdl.Workflow 对象的 compile 方法。
+# 编译修改后的 SqueezeNet DAG 网络
+
+要编译训练好的 SN DAG 网络，运行 `dhdl.Workflow` 对象的 compile 方法。
 
 ```matlab
 dn = hw.compile
 ```
+
+
 
 # 10 个特色示例
 
@@ -7859,7 +7279,7 @@ dn = hw.compile
 | 52 | 'fire8-expand3' | 卷积 | 256x64 卷积，步长 |
 | 53 | 'relu-expand3' | ReLU | |
 
-# 使用部署到 FPGA 的 DAG 网络分类 ECG 信号
+## 使用部署到 FPGA 的 DAG 网络分类 ECG 信号
 
 | 55 | fire8-concat | 深度连接 | 2 个输入的深度连接 |
 | 56 | fire9-squeezel1 | 卷积 | 64x512 卷积，步长 |
@@ -7875,29 +7295,25 @@ dn = hw.compile
 | 66 | softmax10 | Softmax | |
 | 67 | output | 输出 | |
 
+### 编译日志
 
-
-
-
-# 10 个特色示例
-
-编译分段: fire7-expand3x>>fire7-relu-expand3x ... 完成。
-执行无操作: fire7-concat
-编译分段: fire8-s1xl1>>fire8-relu-s1xl1 ...
-编译分段: fire8-s1xl1>>fire8-relu-s1xl1 ... 完成。
-编译分段: fire8-expand1x>>fire8-relu-expand1x ... 完成。
-编译分段: fire8-expand3x>>fire8-relu-expand3x ... 完成。
-执行无操作: fire8-concat
-编译分段: fire9-s1xl1>>fire9-relu-s1xl1 ...
-编译分段: fire9-s1xl1>>fire9-relu-s1xl1 ... 完成。
-编译分段: fire9-expand1x>>fire9-relu-expand1x ... 完成。
-编译分段: fire9-expand3x>>fire9-relu-expand3x ... 完成。
-执行无操作: fire9-concat
-编译分段: new_conv1>>conv10 ... 完成。
-编译分段: pool10
-编译分段: pool10 ... 完成。
-跳过: prob
-跳过: new_classoutput
+编译分段: `fire7-expand3x>>fire7-relu-expand3x` ... 完成。
+执行无操作: `fire7-concat`
+编译分段: `fire8-s1xl1>>fire8-relu-s1xl1` ...
+编译分段: `fire8-s1xl1>>fire8-relu-s1xl1` ... 完成。
+编译分段: `fire8-expand1x>>fire8-relu-expand1x` ... 完成。
+编译分段: `fire8-expand3x>>fire8-relu-expand3x` ... 完成。
+执行无操作: `fire8-concat`
+编译分段: `fire9-s1xl1>>fire9-relu-s1xl1` ...
+编译分段: `fire9-s1xl1>>fire9-relu-s1xl1` ... 完成。
+编译分段: `fire9-expand1x>>fire9-relu-expand1x` ... 完成。
+编译分段: `fire9-expand3x>>fire9-relu-expand3x` ... 完成。
+执行无操作: `fire9-concat`
+编译分段: `new_conv1>>conv10` ... 完成。
+编译分段: `pool10`
+编译分段: `pool10` ... 完成。
+跳过: `prob`
+跳过: `new_classoutput`
 正在创建调度...
 ...
 n...
@@ -7932,15 +7348,19 @@ n...
 
 ```
 dn = struct with fields:
+
     weights: [1x struct]
+
     instructions: [1x struct]
+
     registers: [1x1 struct]
+
     syncInstructions: [1x1 struct]
 ```
 
-# 使用部署到 FPGA 的 DAG 网络对 ECG 信号分类
+## 使用部署到 FPGA 的 DAG 网络对 ECG 信号分类
 
-# 将程序位流下载到 FPGA 并下载网络权重
+## 将程序位流下载到 FPGA 并下载网络权重
 
 要在 Xilinx ZCU102 硬件上部署网络，请运行 `dlhl.Workflow` 对象的 `deploy` 函数。该函数使用 `compile` 函数的输出，通过编程文件对 FPGA 板进行编程。它还会下载网络权重和偏置。`deploy` 函数开始对 FPGA 设备，显示进度消息以及部署网络所需的时间。
 
@@ -7951,20 +7371,25 @@ HW.deploy
 ### FPGA 位流编程已跳过，因为 t 上已加载相同的位流
 ### 卷积权重已加载。当前时间为 2021年1月12日 16:28:17
 
-# 加载图像进行预测并运行预测
+## 加载图像进行预测并运行预测
 
-```mat
+```
 idx=randi(32);
+
 testim=reimage(imgsValidation,idx);
+
 im=resize(testim,[227 227]);
+
 imshow(testim)
 ```
 
 ![](img/747bfd4f288a7e0917a1f27637cc5c2d_246_0.png)
 
-```mat
+```
 [YPred1,probs1] = classify(trainedSN,im);
+
 accuracy1 = (YPred1==imgsValidation.Labels);
+
 [YPred2,probs2] = HW.predict(single(im), profile', 'on');
 ```
 
@@ -8009,20 +7434,23 @@ accuracy1 = (YPred1==imgsValidation.Labels);
 
 > DL 处理器的频率: 220MHz
 
-```mat
+```
 accuracy2 = (YPred2==Validation.Labels);
+
 [val,idx] = max(YPred2);
+
 trainedSN.Layers(end).ClassNames(idx)
 ```
 
-```mat
+```
 ans =
+
   'CHF'
 ```
 
-# 支持函数
+## 支持函数
 
-helperCreateGData 在父目录创建一个目录，然后在数据目录内创建子目录。子目录根据 ECGData 中的每个 ECG 信号命名。
+`helperCreateGData` 在父目录创建一个目录，然后在数据目录内创建子目录。子目录根据 `ECGData` 中的每个 ECG 信号命名。
 
 ```matlab
 function helperCreateGdirectories(ECGData,parentFolder,dataFolder)
@@ -8044,13 +7472,12 @@ end
 end
 ```
 
-helperPlotReps 绘制 ECGData 中每个 ECG 类别代表性的前千个样本。
+`helperPlotReps` 绘制 `ECGData` 中每个 ECG 类别代表性的前千个样本。
 
 ```matlab
 function helperPlotReps(ECGData)
 % 此函数仅用于 ECGDeepLearningExample。
 % 它在未来的版本中可能会更改或删除。
-
 folderLabels = unique(ECGData.Labels);
 for k=1:3
   ecType = folderLabels(k);
@@ -8062,19 +7489,16 @@ for k=1:3
 end
 ```
 
-helperCreateRGBfromTF 使用 cwtfilterbank（小波工具箱）获取 ECG 信号的连续小波变换，并从小波系数生成尺度图。辅助函数缩放尺度图并将其写入 jpeg 图像。
+`helperCreateRGBfromTF` 使用 `cwtfilterbank`（小波工具箱）获取 ECG 信号的连续小波变换，并从小波系数生成尺度图。辅助函数缩放尺度图并将其写入 jpeg 图像。
 
 ```matlab
 function helperCreateRGBfromTF(ECGData,parentFolder,childFolder)
 % 此函数仅用于 ECGDeepLearningExample。
 % 它在未来的版本中可能会更改或删除。
-
 imageRoot = fullfile(parentFolder,childFolder);
 data = ECGData.Data;
 labels = ECGData.Labels;
-
 [-,signlength] = size(data);
-
 fb = cwtfilterbank('SignalLength',signLength,'VoicesPerOctave',12);
 for ii = 1:r
   cfs = abs(fb.data(ii,:));
@@ -8084,6 +7508,8 @@ for ii = 1:r
   imwrite(imresize(im,[224 224]),fullfile(imgLoc,imFileName));
 end
 ```
+
+
 
 # 深度学习量化
 
@@ -8097,15 +7523,11 @@ end
 
 在数字硬件中，数字存储在二进制字中。二进制字是固定长度的 1 和 0 序列。数据类型定义了硬件或软件如何解释这些 1 和 0。数字以缩放整数（通常称为固定点）或浮点类型表示。
 
-大多数预训练网络和使用 Deep Learning Toolbox 训练的网络使用单精度浮点类型。即使是小型神经网络也需要大量的内存，以及能够执行浮点运算的硬件。这些限制限制了深度学习在微控制器和 FPGA 部署。
+大多数预训练网络和使用 `Deep Learning Toolbox` 训练的网络使用单精度浮点类型。即使是小型神经网络也需要大量的内存，以及能够执行浮点运算的硬件。这些限制限制了深度学习在微控制器和 FPGA 部署。
 
-使用 Deep Learning Model Quantization 支持包，可以将网络量化为使用 8 位整数类型。
+使用 `Deep Learning Model Quantization` 支持包，可以将网络量化为使用 8 位整数类型。
 
-网络量化需要 GPU、Deep Libraries 支持包以及 Deep Learning Model Quantization 支持包。使用 GPU 需要启用 CUDA 且计算能力为 6.1 或更高的 NVIDIA GPU。
-
-
-
-
+网络量化需要 GPU、`Deep Libraries` 支持包以及 `Deep Learning Model Quantization` 支持包。使用 GPU 需要启用 `CUDA` 且计算能力为 6.1 或更高的 NVIDIA GPU。
 
 2 找到每个记录的参数值的理想二进制表示。
 
@@ -8224,11 +7646,7 @@ Apps
 Deep Network Quantizer
 
 Functions
-calibrate | dlquantizationOptions | dlquantizer | validate
-
-
-
-
+`calibrate` | `dlquantizationOptions` | `dlquantizer` | `validate`
 
 | 部署 | 深度学习 HDL Toolbox | GPU Coder | MATLAB Coder™ |
 |---|---||---|--|
@@ -8252,7 +7670,7 @@ calibrate | dlquantizationOptions | dlquantizer | validate
 
 ## 另另
 
-calibrate | dlquantizationOptions | dlquantizer | validate
+`calibrate` | `dlquantizationOptions` | `dlquantizer` | `validate`
 
 ## 更多信息
 
@@ -8283,7 +7701,7 @@ calibrate | dlquantizationOptions | dlquantizer | validate
 
 ## 另另
 
-dlquantizationOptions | dlquantizer | validate
+`dlquantizationOptions` | `dlquantizer` | `validate`
 
 ## 更多信息
 
@@ -8306,7 +7724,7 @@ dlquantizationOptions | dlquantizer | validate
 
 ## 另另
 
-dldl.Workflow | dldl.Target | dlquantizer
+`dldl.Workflow` | `dldl.Target` | `dlquantizer`
 
 ## 更多信息
 
@@ -8344,14 +7762,14 @@ dldl.Workflow | dldl.Target | dlquantizer
 
 输出内存格式包括：
 
-- InputDataOffset
-- OutputResultOffset
-- SchedulerDataOffset
-- SystemBufferOffset
-- InstructionDataOffset
-- ConvWeightOffset
-- FCWeightOffset
-- EndOffset
+- `InputDataOffset`
+- `OutputResultOffset`
+- `SchedulerDataOffset`
+- `SystemBufferOffset`
+- `InstructionDataOffset`
+- `ConvWeightOffset`
+- `FCWeightOffset`
+- `EndOffset`
 
 此图说明了将您的量化深度学习网络部署到 FPGA 板的工作流。
 
@@ -8365,14 +7783,14 @@ dldl.Workflow | dldl.Target | dlquantizer
 
 输出内存格式包括：
 
-- InputDataOffset
-- OutputResultOffset
-- SchedulerDataOffset
-- SystemBufferOffset
-- InstructionDataOffset
-- ConvWeightOffset
-- FCWeightOffset
-- EndOffset
+- `InputDataOffset`
+- `OutputResultOffset`
+- `SchedulerDataOffset`
+- `SystemBufferOffset`
+- `InstructionDataOffset`
+- `ConvWeightOffset`
+- `FCWeightOffset`
+- `EndOffset`
 
 此图说明了将量化深度学习网络部署到 FPGA 板的工作流。
 
@@ -8380,23 +7798,25 @@ dldl.Workflow | dldl.Target | dlquantizer
 
 输出内存格式包括：
 
-- InputDataOffset
-- OutputResultOffset
-- SchedulerDataOffset
-- SystemBufferOffset
-- InstructionDataOffset
-- ConvWeightOffset
-- FCWeightOffset
-- EndOffset
+- `InputDataOffset`
+- `OutputResultOffset`
+- `SchedulerDataOffset`
+- `SystemBufferOffset`
+- `InstructionDataOffset`
+- `ConvWeightOffset`
+- `FCWeightOffset`
+- `EndOffset`
 
 `compile` 函数通过识别可以单次执行并融合的网络层来优化网络部署：
 
-- 批量归一化层（batchNormalizationLayer）和 2D 卷积层（convolution2DLayer）。
-- 2D 零填充层（nnet.keras.ZeroPadding2DLayer）和 2D 卷积层（convolution2DLayer）。
-- 2D 零填充层（nnet.keras.ZeroPadding2DLayer）和 2D 最大池化层（maxPooling2Layer）。
+- 批量归一化层（`batchNormalizationLayer`）和 2D 卷积层（`convolution2DLayer`）。
+- 2D 零填充层（`nnet.keras.ZeroPadding2DLayer`）和 2D 卷积层（`convolution2DLayer`）。
+- 2D 零填充层（`nnet.keras.ZeroPadding2DLayer`）和 2D 最大池化层（`maxPooling2Layer`）。
 
 此代码输出是编译器日志中的优化：
+```
 Optimizing series network: Used 'nnet.keras.Layer.BatchNormalizationLayer' into 'nnet.cnn.Convolution2'.
+```
 
 `compile` 函数在编译期间将网络分成腿（legs）。腿是你可以转换为系列网络的子集。`compile` 函数根据层的输出格式对腿进行分组。层的输出格式定义为处理卷积、fc 或加法的深度学习处理模块的数据格式。例如，在此图中，`compile` 函数将 Leg 2 中的所有层分在一起，因为它们具有相同的输出格式。要了解输出格式，请参见第 70 页的“支持的层”。
 
@@ -8406,15 +7826,11 @@ Optimizing series network: Used 'nnet.keras.Layer.BatchNormalizationLayer' into 
 
 ![](img/747bfd4f288a7e0917a1f27637cc5c2d_271_1.png)
 
-
-
-
-
 ## 参见
 
 ## 更多信息
 
--   * “深度学习处理器 IP 内核”参见第 12-2 页
+- * “深度学习处理器 IP 内核”参见第 12-2 页
 * “外部内存数据格式”参见第 12-6 页
 * “深度学习处理器寄存器映射表”参见第 12-9 页
 
@@ -8424,7 +7840,7 @@ Optimizing series network: Used 'nnet.keras.Layer.BatchNormalizationLayer' into 
 
 # 术语
 
-- 并行数据传输数（Parallel Data Transfer Number）指通过 AXI 主设备接口每周期传输的像素数量。用字母 N 代替并行数据传输数。在数学上，N 是 ConvTransferNumber 的平方根。参见“ConvThreadNumber”（卷积数）
+- 并行数据传输数（Parallel Data Transfer Number）指通过 AXI 主设备接口每周期传输的像素数量。用字母 N 代替并行数据传输数。在数学上，N 是 `ConvTransferNumber` 的平方根。参见“`ConvThreadNumber`”（卷积数）
 - 特征数（Feature Number）指 x-y-by-z 矩阵的 z 维度的值。例如，大多数输入图像的维度是 x-y-by-three，指的是图像的红、绿、蓝通道。用字母 Z 代替特征数。
 
 # 卷积外部内存数据格式
@@ -8473,7 +7889,7 @@ Optimizing series network: Used 'nnet.keras.Layer.BatchNormalizationLayer' into 
 
 ## 更多信息
 
--   * “深度学习处理器 IP 内核”参见第 12-2 页
+- * “深度学习处理器 IP 内核”参见第 12-2 页
 * “使用编译器输出进行系统集成”参见第 12-3 页
 * “深度学习处理器寄存器映射表”参见第 12-9 页
 
@@ -8494,4 +7910,3 @@ DL 处理器内核使用 HDL Coder IP 内核生成工作流生成。生成的内
 图像包含了 IP 内核生成期间创建的所有 AXI 寄存器。
 
 ![](img/747bfd4f288a7e0917a1f27637cc5c2d_276_1.png)
-

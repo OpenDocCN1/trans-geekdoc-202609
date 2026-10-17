@@ -1,24 +1,5 @@
+
 # Go 编程实用指南：学习谷歌的Golang编程、数据结构、错误处理和并发（英文版）
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## 分销商
 
@@ -129,9 +110,6 @@ Golang 被认为是一种快速而无懈可击的编程语言，拥有大量有�
 
 本章将涵盖 Golang 中接口的概念。你将学习 Golang 中的接口是什么，Golang 接口与其他语言有何不同，如何声明接口，以及 Golang 中隐式实现是如何发生的及其好处。我们将创建没有方法的接口，并通过内置函数看到其好处。我们将看到在实现接口和创建多态对象时使用值接收器和指针接收器的影响。
 
-
-
-
 ## 第10章：[指针]
 
 在本章中，你将了解 Go 语言中的指针是什么。本章将向你解释指针的用途、如何声明指针变量，以及理解指针类型。你还将了解为什么在 Go 语言中不允许对指针变量进行算术运算。
@@ -148,23 +126,23 @@ Golang 被认为是一种快速而无懈可击的编程语言，拥有大量有�
 
 请通过以下链接下载本书的彩色图像：
 
-https://rebrand.ly/xqrsibm
+`https://rebrand.ly/xqrsibm`
 
 ## 勘误
 
 在 BPB Publications，我们对自己的工作深感自豪，并遵循最佳实践来确保内容的准确性，为读者提供愉悦的阅读体验。读者是我们的镜子，我们会借助他们的意见来反思和改进出版过程中可能出现的任何人为错误。为了让我们保持质量，并帮助可能因任何意外错误而遇到困难的读者，请写信至：
 
-errata@bpbonline.com
+`errata@bpbonline.com`
 
 BPB Publications 大家庭非常感谢您的支持、建议和反馈。
 
-您是否知道，BPB 为每本已出版的图书都提供电子书版本，包含 PDF 和 ePub 文件？您可以在 [www.bpbonline.com](http://www.bpbonline.com) 升级到电子书版本，作为印刷版图书的客户，您有权享受电子书折扣。如需了解更多详情，请通过 [business@bpbonline.com](mailto:business@bpbonline.com) 与我们联系。
+您是否知道，BPB 为每本已出版的图书都提供电子书版本，包含 PDF 和 ePub 文件？您可以在 `www.bpbonline.com` 升级到电子书版本，作为印刷版图书的客户，您有权享受电子书折扣。如需了解更多详情，请通过 `business@bpbonline.com` 与我们联系。
 
 您还可以阅读一系列免费技术文章，订阅多种免费新闻通讯，并享受 BPB 图书和电子书的专属折扣和优惠。
 
 ## BPB 正在寻找像您一样的作者
 
-如果您有兴趣成为 BPB 的作者，请访问 [www.bpbonline.com](www.bpbonline.com) 并立即申请。我们曾与数千名像您一样的开发人员和技术专业人士合作，帮助他们与全球技术社区分享见解。您可以进行一般申请，申请我们正在招募作者的特定热门主题，或提交您自己的想法。
+如果您有兴趣成为 BPB 的作者，请访问 `www.bpbonline.com` 并立即申请。我们曾与数千名像您一样的开发人员和技术专业人士合作，帮助他们与全球技术社区分享见解。您可以进行一般申请，申请我们正在招募作者的特定热门主题，或提交您自己的想法。
 
 本书的配套代码包也托管在 GitHub 上。如果代码有任何更新，都会更新到现有的 GitHub 仓库中。
 
@@ -172,7 +150,7 @@ BPB Publications 大家庭非常感谢您的支持、建议和反馈。
 
 ## 盗版
 
-如果您在互联网上以任何形式发现我们作品的非法副本，请将位置地址或网站名称告诉我们，我们将不胜感激。请通过 [business@bpbonline.com](mailto:business@bpbonline.com) 联系我们并提供材料链接。
+如果您在互联网上以任何形式发现我们作品的非法副本，请将位置地址或网站名称告诉我们，我们将不胜感激。请通过 `business@bpbonline.com` 联系我们并提供材料链接。
 
 ## 如果您有兴趣成为作者
 
@@ -183,142 +161,6 @@ BPB Publications 大家庭非常感谢您的支持、建议和反馈。
 请留下评论。当您阅读并使用本书后，何不在您购买本书的网站上留下评论呢？潜在读者可以看到并参考您的客观意见来做出购买决定，我们 BPB 也能了解您对我们产品的看法，我们的作者也能看到您对本书的反馈。谢谢！
 
 如需了解更多 BPB 信息，请访问
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## 第 1 章
 
@@ -381,7 +223,6 @@ Go 通过 goroutine 为该问题提供了解决方案。您一次可以启动数
 |---|---|---|---|
 | types: | types: | types: | types: |
 | types: | types: | types: | types: |
-
 |  |  |  |  |  |  |  |  |
 |---|---|---|---|---|---|---|---|
 | types: | types: | types: | types: | types: | types: | types: | types: |
@@ -401,7 +242,9 @@ fmt.Println(z)
 以下是上述程序的输出：
 
 **apple**
+
 **orange**
+
 **apple\norange**
 
 #### 1.1.3 布尔类型
@@ -435,11 +278,11 @@ func main() {
 
 ### 1.2 常量
 
-在 Go 中，const 是引入标量值（如 3.14159）名称的关键字。此类值称为常量。
+在 Go 中，`const` 是引入标量值（如 3.14159）名称的关键字。此类值称为常量。
 
 **类型：** 当变量在未指定显式类型的情况下声明（使用 `:=` 语法或 `var =` 表达式语法）时，变量的类型会从右侧的值推断出来。
 
-常量使用 const 关键字声明，可以是数值、字符串、布尔或字符值。
+常量使用 `const` 关键字声明，可以是数值、字符串、布尔或字符值。
 
 常量不能使用 `:=` 语法声明
 
@@ -478,9 +321,9 @@ func main() {
 
 声明变量时，它会被赋予该类型的 *自然* 空值。
 
-这意味着在这里，在 `var i int` 之后，i 的值为 0。
+这意味着在这里，在 `var i int` 之后，`i` 的值为 0。
 
-使用 `var s`，s 被赋予零字符串，即 `""`。
+使用 `var s`，`s` 被赋予零字符串，即 `""`。
 
 比较以下具有相同效果的代码片段：
 
@@ -531,20 +374,18 @@ a := 10
 x, y := 100, 200
 ```
 
+
+
 ```
 p, q, r := 150, 250, 300
 ```
 
-**短变量声明：**
+### 短变量声明
 
 - 它仅用于在函数内部声明和初始化变量。
 - 变量的声明和初始化同时进行。
 - 变量在函数内部声明，因此它们具有局部作用域。
 - 在短变量声明中不需要提及变量的类型。
-
-
-
-
 
 ### 1.3 运算符
 
@@ -562,11 +403,17 @@ p, q, r := 150, 250, 300
 请参考下表：
 
 | table: table: table: |
+
 | table: table: table: table: table: table: table: table: |
+
 | table: table: table: |
+
 | table: table: table: table: |
+
 | table: table: table: table: table: table: table: table: table: table: |
+
 | table: table: table: table: table: table: table: table: table: |
+
 | table: table: table: table: table: table: table: table: table: |
 
 *表 1.3*
@@ -576,26 +423,37 @@ p, q, r := 150, 250, 300
 请参考下表：
 
 table: table: table: table: table: table: table: table: table: table:
+
 table: table: table: table: table: table: table: table: table:
 
 table: table: table: table: table: table: table: table: table: table:
+
 table: table: table: table: table: table: table: table: table: table:
+
 table: table: table:
 
 table: table: table: table: table: table: table: table: table: table:
+
 table: table: table: table: table: table: table: table: table: table:
+
 table: table: table: table: table:
 
 table: table: table: table: table: table: table: table: table: table:
+
 table: table: table: table: table: table: table: table: table: table:
+
 table: table: table: table: table: table: table:
 
 table: table: table: table: table: table: table: table: table: table:
+
 table: table: table: table: table: table: table: table: table: table:
+
 table: table: table: table: table: table: table: table:
 
 table: table: table: table: table: table: table: table: table: table:
+
 table: table: table: table: table: table: table: table: table: table:
+
 table: table: table: table: table: table: table: table:
 
 *表 1.4*
@@ -605,10 +463,15 @@ table: table: table: table: table: table: table: table:
 请参考下表：
 
 table: table: table:
+
 table: table: table:
+
 table: table: table: table: table: table: table: table: table: table:
+
 table: table: table: table: table: table: table: table: table: table:
+
 table: table: table: table: table: table: table: table: table: table:
+
 table:
 
 *表 1.5*
@@ -632,18 +495,25 @@ var b int = 20
 位运算符作用于位，并逐位执行运算。请参考下表：
 
 | table: table: table: table: table: table: table: table: table: table: | table: table: table: table: table: |
+
 | table: table: table: table: table: table: table: table: table: table: | table: table: |
+
 | table: table: table: table: table: table: table: table: table: table: | table: table: table: table: table: table: |
 
 *表 1.6*
 
-下面是 and 与 ^ 的真值表：
+下面是 `and` 与 `^` 的真值表：
 
 | below: below: below: |
+
 |---| 
+
 | below: |
+
 | below: |
+
 | below: |
+
 | below: |
 
 *表 1.7*
@@ -653,16 +523,27 @@ var b int = 20
 请参考下表：
 
 | |
+
 |---|
+
 | table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: |
+
 | table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: |
+
 | table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: |
+
 | table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: |
+
 | table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: |
+
 | table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: table: |
+
 | table: table: table: table: table: |
+
 | table: table: table: table: table: |
+
 | table: table: table: table: |
+
 | table: table: table: table: table: table: |
 
 #### 表 1.8
@@ -732,6 +613,7 @@ fmt.Printf("%d >> %d = %d \\n", a, b, a>>b)
 ```go
 /* Go program to explain bitwise AND assignment operator,
 ```
+
 bitwise exclusive OR and assignment operator and bitwise inclusive OR and assignment operator */
 ```go
 package main
@@ -754,9 +636,11 @@ fmt.Printf("Example of |= Operator: value of c = %d\n", c)
 
 我们将得到以下输出：
 
-**&= 运算符示例：a 的值 = 0**
-**^= 运算符示例：b 的值 = 2**
-**|= 运算符示例：c 的值 = 2**
+**`&= `运算符示例：`a` 的值 = 0**
+
+**`^= `运算符示例：`b` 的值 = 2**
+
+**`|= `运算符示例：`c` 的值 = 2**
 
 #### 1.4.1 类型化常量
 
@@ -807,7 +691,7 @@ fmt.Println(a)
 
 我们将得到以下输出：
 
-**:= 左侧没有新变量**
+**`:=` 左侧没有新变量**
 
 你可以使用短多变量声明重新声明变量，其中至少引入一个新变量，如下所示：
 
@@ -830,8 +714,9 @@ func main() {
 
 我们将得到以下输出：
 
-a 的值：20
-b 的值：30
+`a` 的值：20
+
+`b` 的值：30
 
 ### 1.7 重新赋值概念
 
@@ -861,15 +746,15 @@ func main() {
 
 我们将得到以下输出：
 
-x 的值：10
-x 的值：20
-y 的值：30
-x 的值：10
+`x` 的值：10
 
-在程序中，变量 x 由于 y := 而被遮蔽。内部作用域之外的 x 值保持不变，即 10；而在内部作用域中，x 被遮蔽后其值为 20。
+`x` 的值：20
 
+`y` 的值：30
 
+`x` 的值：10
 
+在程序中，变量 `x` 由于 `y :=` 而被遮蔽。内部作用域之外的 `x` 值保持不变，即 10；而在内部作用域中，`x` 被遮蔽后其值为 20。
 
 ### 结论
 
@@ -896,7 +781,7 @@ Go 程序由多个包构建，以便高效管理依赖关系。
 - Goroutine 是什么？解释使用它们的优点。
 - Golang 中变量的静态类型声明是什么？
 - 有类型常量和无类型常量是什么？
-- = 和 := 运算符有什么区别？
+- `=` 和 `:=` 运算符有什么区别？
 - Golang 中的字符串字面量是什么？
 - Golang 中的包是什么？
 - Golang 中局部变量的默认值是什么？
@@ -910,7 +795,7 @@ Go 程序由多个包构建，以便高效管理依赖关系。
 
 Go 中的函数是一组共同执行任务的语句。每个 Go 程序都会有一个。函数帮助你将大任务分解成较小的代码片段并提高程序的可读性和可维护性。
 
-## 结构
+### 结构
 
 - 函数声明
 - 参数和返回值
@@ -920,7 +805,7 @@ Go 中的函数是一组共同执行任务的语句。每个 Go 程序都会有�
 - 延迟
 - 编程示例
 
-## 目标
+### 目标
 
 本章将涵盖函数声明、参数、多返回值、变参函数和 defer 语句。它还将涵盖按值调用的概念以及如何将变量的地址作为值传递。你将学习如何在 Go 编程语言中使用它们。
 
@@ -946,11 +831,13 @@ func function_name([parameter_list]) [return_types] {
 
 #### 2.2.2 返回值
 
-函数可能返回一系列值。return_types 是函数返回的值的数据类型列表。某些函数在不返回值的情况下执行所需操作。在这种情况下，return_type 不是必需的。
+函数可能返回一系列值。`return_types` 是函数返回的值的数据类型列表。某些函数在不返回值的情况下执行所需操作。在这种情况下，`return_type` 不是必需的。
 
 以下是解释参数和返回值的示例 Go 程序：
 
 #### 程序 2.1
+
+
 
 ```go
 // Go program to explain parameters and returns
@@ -986,7 +873,7 @@ return result
 
 在创建 Go 函数时，你定义函数将执行的任务。要使用函数，你必须调用该函数来执行预定义的任务。
 
-当程序调用函数时，程序控制权转移到被调用函数。被调用函数执行定义好的任务，并在执行其 return 语句或到达其函数结束的闭合大括号时，将程序控制权返回给主程序。
+当程序调用函数时，程序控制权转移到被调用函数。被调用函数执行定义好的任务，并在执行其 `return` 语句或到达其函数结束的闭合大括号时，将程序控制权返回给主程序。
 
 要调用函数，你只需将所需参数与其函数名一起传递。如果函数返回值，则可以存储返回值。
 
@@ -996,7 +883,7 @@ Golang 允许在函数定义中为函数的返回或结果参数命名。此外�
 
 #### 2.3.1 多返回值
 
-在 Go 中，函数可以使用 return 语句返回多个值。返回值的类型取决于参数列表中定义的参数类型，如下所示：
+在 Go 中，函数可以使用 `return` 语句返回多个值。返回值的类型取决于参数列表中定义的参数类型，如下所示：
 
 #### 程序 2.2
 
@@ -1029,7 +916,7 @@ fmt.Printf("\nsubtraction result: %d", testvar2)
 
 #### 2.3.2 命名返回值
 
-Golang 允许在函数定义中为函数的返回参数命名，即在函数定义中显式命名返回变量。它消除了在 return 语句中提及变量名的需要。
+Golang 允许在函数定义中为函数的返回参数命名，即在函数定义中显式命名返回变量。它消除了在 `return` 语句中提及变量名的需要。
 
 这个概念通常用于函数需要返回多个值时。Golang 提供此功能以方便用户并增强代码可读性。
 
@@ -1096,7 +983,7 @@ value of x before function call = 10
 value of x after function call = 10
 ```
 
-如前所述，Go 没有按引用调用，因为它没有引用变量。然而，我们可以按值传递变量的地址。在这里，我们将使用指针和解引用运算符的概念。地址运算符 & 用于获取任何数据类型的变量的地址，而解引用运算符 * 用于访问地址处的值。
+如前所述，Go 没有按引用调用，因为它没有引用变量。然而，我们可以按值传递变量的地址。在这里，我们将使用指针和解引用运算符的概念。地址运算符 `&` 用于获取任何数据类型的变量的地址，而解引用运算符 `*` 用于访问地址处的值。
 
 由于实际参数和形式参数引用相同的位置，因此在函数内部所做的任何更改都会反映在调用者的实际参数中。这如下所示：
 
@@ -1107,8 +994,6 @@ value of x after function call = 10
 
 package main
 ```
-
-
 
 ```
 import "fmt"
@@ -1133,6 +1018,7 @@ fmt.Printf("\nvalue of x after function call = %d", x)
 以下是上述程序的输出：
 
 **函数调用前 x 的值 = 10**
+
 **函数调用后 x 的值 = 20**
 
 ### 2.5 可变参数函数
@@ -1147,9 +1033,9 @@ func variadic_function(a int, b ...int) {
 }
 ```
 
-在上面的函数中，参数 b 是可变参数，因为它前面加上了省略号，并且可以接受任意数量的参数。
+在上面的函数中，参数 `b` 是可变参数，因为它前面加上了省略号，并且可以接受任意数量的参数。
 
-让我们使 variadic_function 的第一个参数变为可变参数。语法如下所示：
+让我们使 `variadic_function` 的第一个参数变为可变参数。语法如下所示：
 
 ```
 func variadic_function(a ...int, b int) {
@@ -1157,11 +1043,11 @@ func variadic_function(a ...int, b int) {
 }
 ```
 
-上述 variadic_function 将无法编译，并出现语法错误：
+上述 `variadic_function` 将无法编译，并出现语法错误：
 
 **不能对非最后一个参数 a 使用 ...**
 
-在上面的函数中，不可能向参数 b 传递参数，因为我们传递的任何参数都会被分配给第一个参数 a，因为它是可变参数。因此，可变参数只能出现在函数定义的最后。可变参数函数的工作方式是将可变数量的参数转换为可变参数类型的一个切片。你将在 *第 5 章：切片* 中详细学习切片的概念：
+在上面的函数中，不可能向参数 `b` 传递参数，因为我们传递的任何参数都会被分配给第一个参数 `a`，因为它是可变参数。因此，可变参数只能出现在函数定义的最后。可变参数函数的工作方式是将可变数量的参数转换为可变参数类型的一个切片。你将在 *第 5 章：切片* 中详细学习切片的概念：
 
 #### 程序 2.6
 
@@ -1266,11 +1152,11 @@ fmt.Println(x[4])
 
 ### 2.6 Defer
 
-Go 有控制流机制：等，但其中一些使用较少的是 defer、panic 和 recover。
+Go 有控制流机制：等，但其中一些使用较少的是 `defer`、`panic` 和 `recover`。
 
 #### 2.6.1 Defer
 
-defer 语句会推迟函数的执行，并将函数调用推入一个列表，直到包含的函数返回，无论是正常返回还是通过 panic。defer 通常用于简化执行各种清理操作的函数，如下所示：
+`defer` 语句会推迟函数的执行，并将函数调用推入一个列表，直到包含的函数返回，无论是正常返回还是通过 `panic`。`defer` 通常用于简化执行各种清理操作的函数，如下所示：
 
 #### 程序 2.9
 
@@ -1290,27 +1176,28 @@ fmt.Println("Book")
 以下是上述程序的输出：
 
 Book
+
 GO
 
 ### 结论
 
-函数声明由关键字、函数名、参数列表（main 为空）、结果列表以及函数体——定义其行为的语句——用大括号括起来组成。
+函数声明由关键字、函数名、参数列表（`main` 为空）、结果列表以及函数体——定义其行为的语句——用大括号括起来组成。
 
 当函数被调用时，你会向参数传递一个值。这个值被称为实际参数或参数。参数列表指的是函数的参数的类型、顺序和数量。
 
-当程序调用函数时，程序控制权转移到被调用的函数。被调用的函数执行定义的任务，并在其 return 语句执行或其函数结束的闭合大括号到达时，将程序控制权返回给主程序。
+当程序调用函数时，程序控制权转移到被调用的函数。被调用的函数执行定义的任务，并在其 `return` 语句执行或其函数结束的闭合大括号到达时，将程序控制权返回给主程序。
 
-在 Go 中，函数可以使用 return 语句返回多个值。返回值的类型取决于参数列表中定义的参数类型。
+在 Go 中，函数可以使用 `return` 语句返回多个值。返回值的类型取决于参数列表中定义的参数类型。
 
-Golang 允许在函数定义中为函数的返回参数命名，即在函数定义中显式命名返回变量。它消除了在 return 语句中提及变量名的需要。
+Golang 允许在函数定义中为函数的返回参数命名，即在函数定义中显式命名返回变量。它消除了在 `return` 语句中提及变量名的需要。
 
-Go 没有按引用调用，因为它没有引用变量。然而，我们可以按值传递变量的地址。这里，我们将使用指针和解引用运算符的概念。地址运算符 & 用于获取任何数据类型变量的地址，而解引用运算符 * 用于访问地址处的值。
+Go 没有按引用调用，因为它没有引用变量。然而，我们可以按值传递变量的地址。这里，我们将使用指针和解引用运算符的概念。地址运算符 `&` 用于获取任何数据类型变量的地址，而解引用运算符 `*` 用于访问地址处的值。
 
 通常情况下，函数只接受固定数量的参数，但可变参数函数可以接受可变数量的参数。只有一个函数的最后一个参数可以是可变参数。如果函数定义的最后一个参数前面加上省略号，则该函数可以为该参数接受任意数量的参数。
 
 可变参数函数提高了程序的可读性。它可以在参数数量未知的情况下使用。
 
-defer 语句会推迟函数的执行，并将函数调用推入一个列表，直到包含的函数返回，无论是正常返回还是通过 panic。defer 通常用于简化执行各种清理操作的函数。
+`defer` 语句会推迟函数的执行，并将函数调用推入一个列表，直到包含的函数返回，无论是正常返回还是通过 `panic`。`defer` 通常用于简化执行各种清理操作的函数。
 
 ### 问题
 
@@ -1322,17 +1209,17 @@ defer 语句会推迟函数的执行，并将函数调用推入一个列表，�
 
 什么是可变参数函数？解释其可使用的场景。
 
-Golang 中的 defer 语句是什么？
+Golang 中的 `defer` 语句是什么？
 
 ## 控制流
 
-在 Go 中，控制流语句用于中断执行流程并使程序能够基于某些条件执行代码。本章将介绍 Go 中的控制流概念。它将介绍使用 if...else switch...case 和 fallthrough 语句在 Golang 中的决策制定。它还将介绍循环的概念 - for 循环、嵌套 for 循环、循环控制语句 – 等。
+在 Go 中，控制流语句用于中断执行流程并使程序能够基于某些条件执行代码。本章将介绍 Go 中的控制流概念。它将介绍使用 `if...else` `switch...case` 和 `fallthrough` 语句在 Golang 中的决策制定。它还将介绍循环的概念 - `for` 循环、嵌套 `for` 循环、循环控制语句 – 等。
 
 ## 结构
 
-决策（if, if...else, if...else if...else, switch...case）
+决策（`if`, `if...else`, `if...else if...else`, `switch...case`）
 
-循环（for 循环、嵌套 for 循环、循环控制语句-break、goto、continue、无限循环）和 fallthrough
+循环（`for` 循环、嵌套 `for` 循环、循环控制语句-`break`、`goto`、`continue`、无限循环）和 `fallthrough`
 
 编程示例
 
@@ -1346,7 +1233,7 @@ Golang 使用控制语句根据某些条件控制程序的执行流程。它们�
 
 #### 3.1.1 If 语句
 
-如果一个条件被发现为真，则语句会执行一段代码。如果该语句看起来像 C 或 Java 中的那样，只有一个区别，那就是我们需要使用 {} 而不是 ()。语句声明的变量仅在 if 结束之前处于作用域内。
+如果一个条件被发现为真，则语句会执行一段代码。如果该语句看起来像 C 或 Java 中的那样，只有一个区别，那就是我们需要使用 `{}` 而不是 `()`。语句声明的变量仅在 `if` 结束之前处于作用域内。
 
 **语法：**
 
@@ -1356,7 +1243,7 @@ if condition {
 }
 ```
 
-例如，下面的程序将在变量 a 为 true 时打印。
+例如，下面的程序将在变量 `a` 为 true 时打印。
 
 #### 程序 3.1
 
@@ -1369,8 +1256,6 @@ import (
 "fmt"
 )
 ```
-
-
 
 ```go
 func main() {
@@ -1388,7 +1273,7 @@ func main() {
 
 #### 3.1.2 if...else 语句
 
-if 语句在条件为真时执行一段语句块，如果条件为假，则会跳转到 else 块并执行它。
+`if` 语句在条件为真时执行一段语句块，如果条件为假，则会跳转到 `else` 块并执行它。
 
 **语法：**
 
@@ -1400,7 +1285,7 @@ if condition {
 }
 ```
 
-以下示例将在 x 为 New Delhi 时显示输出 Capital of India。
+以下示例将在 `x` 为 New Delhi 时显示输出 Capital of India。
 
 **程序 3.2**
 
@@ -1430,7 +1315,7 @@ func main() {
 
 #### 3.1.3 if...else if...else 语句
 
-if...else if...else 语句允许组合多个 if...else 语句。
+`if...else if...else` 语句允许组合多个 `if...else` 语句。
 
 **语法：**
 
@@ -1446,9 +1331,11 @@ if condition-1 {
 
 下面的示例将显示以下输出：
 
-"**Capital of Maharashtra**" if x is "Mumbai"
-"**City of Maharashtra**" if x is "Pune" and
-"**Neither Pune nor Mumbai**" if x is other than "Pune" or "Mumbai"
+"**Capital of Maharashtra**" if `x` is "Mumbai"
+
+"**City of Maharashtra**" if `x` is "Pune" and
+
+"**Neither Pune nor Mumbai**" if `x` is other than "Pune" or "Mumbai"
 
 让我们看下面的示例：
 
@@ -1471,6 +1358,9 @@ if condition-1 {
 | 南塘 | 20 | 鲤鱼 | 4000 |
 
 - 一、具结人承诺已仔细阅读并充分理解《养殖水域滩涂规划》和《水域滩涂养殖证管理办法》等法律法规，保证所提交的申请材料真实、合法、有效。
+
+
+
 - 二、具结人承诺在取得水域滩涂养殖证后，严格按照规划依法从事养殖生产，不擅自改变养殖水域滩涂用途，不破坏水域生态环境。
 - 三、具结人承诺积极配合渔业主管部门的监督管理，如实提供有关养殖生产信息，按期参加养殖证年度核查。
 - 四、具结人承诺如实填报《水域滩涂养殖证申请表》，因虚假申报造成的法律后果由本人承担。
@@ -1482,9 +1372,9 @@ if condition-1 {
 
 #### 3.1.4 switch...case 语句
 
-switch 语句是多分支语句。它提供了一种根据表达式的值将执行高效转移到代码不同部分的方式。switch 语句在多个分支上表达条件。案例从上到下进行评估，在某个案例成功时停止。如果没有案例匹配且存在 default 案例，则执行其语句。
+`switch`语句是多分支语句。它提供了一种根据表达式的值将执行高效转移到代码不同部分的方式。`switch`语句在多个分支上表达条件。案例从上到下进行评估，在某个案例成功时停止。如果没有案例匹配且存在`default`案例，则执行其语句。
 
-下面的示例将根据 switch 变量的值显示星期几：
+下面的示例将根据`switch`变量的值显示星期几：
 
 **程序 3.4**
 
@@ -1523,11 +1413,11 @@ func main() {
 
 ### 3.2 循环
 
-循环语句用于重复执行一段代码。For 是 Go 中唯一可用的循环。Go 没有像 C 等其他语言中存在的 while 或 do...while 循环。
+循环语句用于重复执行一段代码。`For`是Go中唯一可用的循环。Go没有像C等其他语言中存在的`while`或`do...while`循环。
 
 #### 3.2.1 For 循环
 
-for 循环是一种重复控制结构。它允许你编写需要执行特定次数的循环。
+`for`循环是一种重复控制结构。它允许你编写需要执行特定次数的循环。
 
 **语法：**
 
@@ -1537,7 +1427,7 @@ for [Initial Statement] ; [Condition] ; [Post Statement] {
 }
 ```
 
-下面的示例将使用 for 循环显示从 1 到 10 的数字之和：
+下面的示例将使用`for`循环显示从1到10的数字之和：
 
 **程序 3.5**
 
@@ -1563,7 +1453,7 @@ func main() {
 
 #### 3.2.2 嵌套 for 循环
 
-循环可以在 Go 中像其他编程语言一样嵌套。嵌套循环是在另一个循环内发生的循环。当你希望对数据集的每个元素执行循环操作时，这些循环很有用。
+循环可以在Go中像其他编程语言一样嵌套。嵌套循环是在另一个循环内发生的循环。当你希望对数据集的每个元素执行循环操作时，这些循环很有用。
 
 ```go
 for {
@@ -1574,7 +1464,7 @@ for {
 }
 ```
 
-下面的示例将使用嵌套 for 循环显示从 1 到 20 的质数：
+下面的示例将使用嵌套`for`循环显示从1到20的质数：
 
 **程序 3.6**
 
@@ -1605,25 +1495,32 @@ func main() {
 上述程序将显示以下输出：
 
 Prime number between 1 to 20: 2
+
 Prime number between 1 to 20: 3
+
 Prime number between 1 to 20: 5
+
 Prime number between 1 to 20: 7
+
 Prime number between 1 to 20: 11
+
 Prime number between 1 to 20: 13
+
 Prime number between 1 to 20: 17
+
 Prime number between 1 to 20: 19
 
 #### 3.2.3 循环控制语句
 
 循环控制语句用于改变程序的执行。当给定循环离开其作用域时，在该作用域内创建的对象也会被销毁。
 
-Go 语言支持 3 种循环控制语句：break、goto 和 continue。
+Go语言支持3种循环控制语句：`break`、`goto`和`continue`。
 
 ##### 3.2.3.1 Break 语句
 
-break 语句用于终止其所在的循环或语句。break 语句用于终止当前循环的执行。
+`break`语句用于终止其所在的循环或语句。`break`语句用于终止当前循环的执行。
 
-下面的示例给出从 1 开始输出数字，并在遇到 break 时退出循环：
+下面的示例给出从1开始输出数字，并在遇到`break`时退出循环：
 
 **程序 3.7**
 
@@ -1656,9 +1553,9 @@ func main() {
 
 ##### 3.2.3.2 Goto 语句
 
-Goto 语句用于将控制转移到程序中的标记语句。标签是一个有效的标识符，放置在控制从其转移的语句之前。
+`Goto`语句用于将控制转移到程序中的标记语句。标签是一个有效的标识符，放置在控制从其转移的语句之前。
 
-下面的示例显示从 1 开始输出数字，并在遇到 goto 时不打印 3，控制转移到 Lable1。
+下面的示例显示从1开始输出数字，并在遇到`goto`时不打印3，控制转移到`Lable1`。
 
 **程序 3.8**
 
@@ -1695,9 +1592,9 @@ Number is: 5
 
 ##### 3.2.3.3 Continue 语句
 
-continue 语句用于在特定条件下跳过循环的执行部分。之后，它将控制转移到循环的开头。
+`continue`语句用于在特定条件下跳过循环的执行部分。之后，它将控制转移到循环的开头。
 
-continue 语句用于当你想跳过循环的剩余部分并返回到循环顶部继续新迭代时。下面的示例显示从 1 开始输出数字，并在遇到 continue 语句时不打印该数字，控制转移到循环顶部进行下一次迭代。
+`continue`语句用于当你想跳过循环的剩余部分并返回到循环顶部继续新迭代时。下面的示例显示从1开始输出数字，并在遇到`continue`语句时不打印该数字，控制转移到循环顶部进行下一次迭代。
 
 **程序 3.9**
 
@@ -1737,7 +1634,7 @@ func main() {
 
 ##### 3.2.3.4 无限循环
 
-在 Go 中，如果省略循环条件或使用 true 布尔值，for 循环可以作为无限循环工作。下面的示例会一直打印 Infinite Loop：
+在Go中，如果省略循环条件或使用`true`布尔值，`for`循环可以作为无限循环工作。下面的示例会一直打印`Infinite Loop`：
 
 **程序 3.10**
 
@@ -1763,8 +1660,6 @@ func main() {
 
 **Infinite Loop**
 
-
-
 ```text
 Infinite Loop
 Infinite Loop
@@ -1776,7 +1671,7 @@ Infinite Loop
 
 ##### 3.2.3.5 穿透
 
-在 Go 中，程序控制在执行完某个 case 后会立即退出 switch 语句。但通过使用 `fallthrough` 语句，可以将控制转移到表达式 switch 语句中下一个 case 子句的第一个语句。
+在Go中，程序控制在执行完某个`case`后会立即退出`switch`语句。但通过使用`fallthrough`语句，可以将控制转移到表达式`switch`语句中下一个`case`子句的第一个语句。
 
 **程序 3.11**
 
@@ -1807,7 +1702,7 @@ fmt.Printf("%d is greater than 100", number)
 200 is greater than 100
 ```
 
-`fallthrough` 不能在 switch 的最后一个 case 中使用，因为后面没有更多 case 了。如果在最后一个 case 中使用 `fallthrough`，将出现以下编译错误：
+`fallthrough`不能在`switch`的最后一个`case`中使用，因为后面没有更多`case`了。如果在最后一个`case`中使用`fallthrough`，将出现以下编译错误：
 
 ```text
 cannot fallthrough final case in switch
@@ -1850,50 +1745,50 @@ cannot fallthrough final case in switch
 
 ### 结论
 
-Golang 中的控制语句用于根据某些条件控制给定程序的执行流程。它们用于确保程序执行期间根据程序状态的变化保持逻辑流程。
+Golang中的控制语句用于根据某些条件控制给定程序的执行流程。它们用于确保程序执行期间根据程序状态的变化保持逻辑流程。
 
-在 `if...else` 语句中，`if` 语句会在条件为真时执行一段语句；如果条件为假，则会转到 `else` 块并执行它。
+在`if...else`语句中，`if`语句会在条件为真时执行一段语句；如果条件为假，则会转到`else`块并执行它。
 
-该语句允许组合多个 `if...else` 语句。
+该语句允许组合多个`if...else`语句。
 
-`switch` 语句是多路分支语句，可根据表达式的值高效地将执行转移到代码的不同部分。case 会从上到下进行评估，并在找到为真的 case 时停止。如果没有 case 匹配且存在 `default` case，则会执行它。
+`switch`语句是多路分支语句，可根据表达式的值高效地将执行转移到代码的不同部分。`case`会从上到下进行评估，并在找到为真的`case`时停止。如果没有`case`匹配且存在`default` `case`，则会执行它。
 
-循环语句用于重复执行给定的代码块。`for` 循环是 Go 语言中唯一的循环。与 C 不同，Go 不支持 `while` 或 `do...while` 循环。
+循环语句用于重复执行给定的代码块。`for`循环是Go语言中唯一的循环。与C不同，Go不支持`while`或`do...while`循环。
 
-嵌套循环是在另一个循环内发生的循环，当需要在数据集的每个元素上执行循环操作时非常有用。在 Go 中，循环可以像其他编程语言一样嵌套。
+嵌套循环是在另一个循环内发生的循环，当需要在数据集的每个元素上执行循环操作时非常有用。在Go中，循环可以像其他编程语言一样嵌套。
 
 当给定循环的执行离开其作用域时，在该作用域内创建的对象也会被销毁。循环控制语句用于更改程序的执行。
 
-`break` 语句用于终止当前所在的循环或语句。
+`break`语句用于终止当前所在的循环或语句。
 
-`goto` 语句用于将控制转移到 Go 程序中的标记语句。标签是一个有效的标识符，并放置在控制从其转移的语句之前。
+`goto`语句用于将控制转移到Go程序中的标记语句。标签是一个有效的标识符，并放置在控制从其转移的语句之前。
 
-`continue` 语句用于在特定条件下跳过给定循环的执行部分。之后，它将控制转移到循环的开头。
+`continue`语句用于在特定条件下跳过给定循环的执行部分。之后，它将控制转移到循环的开头。
 
-在 Go 语言中，如果省略循环条件或使用 `true` 布尔值，`for` 循环可以作为无限循环工作。
+在Go语言中，如果省略循环条件或使用`true`布尔值，`for`循环可以作为无限循环工作。
 
-在 Golang 中，程序控制在执行完某个 case 后会立即退出 switch 语句。但通过使用 `fallthrough` 语句，可以将控制转移到表达式 switch 语句中下一个 case 子句的第一个语句。
+在Golang中，程序控制在执行完某个`case`后会立即退出`switch`语句。但通过使用`fallthrough`语句，可以将控制转移到表达式`switch`语句中下一个`case`子句的第一个语句。
 
 ### 问题
 
-- 编写一个 Go 程序来解释 `if..else` 语句的使用。
+- 编写一个Go程序来解释`if..else`语句的使用。
 - 判断正误：
-  - `for` 循环在 Golang 中不可用。
-  - Go 没有 `while` 或 `do...while` 循环。
-  - `for` 循环在 Golang 中可用。
-- 写出 `if...else if...else` 语句的语法。
-- 什么是 `switch...case` 语句？编写一个 Go 程序来解释 `switch...case` 语句的使用。
-- `goto` 语句在 Go 程序中的作用是什么？用 Go 程序解释。
-- Go 支持多少种类型的循环控制语句？编写一个 Go 程序来解释它。
+  - `for`循环在Golang中不可用。
+  - Go没有`while`或`do...while`循环。
+  - `for`循环在Golang中可用。
+- 写出`if...else if...else`语句的语法。
+- 什么是`switch...case`语句？编写一个Go程序来解释`switch...case`语句的使用。
+- `goto`语句在Go程序中的作用是什么？用Go程序解释。
+- Go支持多少种类型的循环控制语句？编写一个Go程序来解释它。
 - 判断正误：
-  - `goto` 语句用于将控制转移到 Go 程序中的标记语句。
-  - `continue` 语句不用于在特定条件下跳过循环的执行部分。
-  - 在 Go 中，如果省略循环条件或使用 `true` 布尔值，`for` 循环可以作为无限循环工作。
-- 写出 Golang 中嵌套 `for` 循环的语法。
+  - `goto`语句用于将控制转移到Go程序中的标记语句。
+  - `continue`语句不用于在特定条件下跳过循环的执行部分。
+  - 在Go中，如果省略循环条件或使用`true`布尔值，`for`循环可以作为无限循环工作。
+- 写出Golang中嵌套`for`循环的语法。
 
 ## 第 4 章 数组
 
-在 Go 中，数组是相同类型的固定大小元素的集合。数组的元素按顺序存储，可以通过其索引访问。一旦在 Go 中定义了数组，就不能扩展以容纳更多数据。Go 是一种静态类型语言。不允许在数组中混合属于不同数据类型的不同值。
+在Go中，数组是相同类型的固定大小元素的集合。数组的元素按顺序存储，可以通过其索引访问。一旦在Go中定义了数组，就不能扩展以容纳更多数据。Go是一种静态类型语言。不允许在数组中混合属于不同数据类型的不同值。
 
 ### 结构
 
@@ -1909,23 +1804,23 @@ Golang 中的控制语句用于根据某些条件控制给定程序的执行流�
 
 ### 目标
 
-本章的目的是向读者介绍数组的概念。它还涵盖了在 Go 编程语言中声明、初始化和将数组传递给函数。
+本章的目的是向读者介绍数组的概念。它还涵盖了在Go编程语言中声明、初始化和将数组传递给函数。
 
 ### 4.1 数组
 
-数组是一种容纳相同类型值的容器。Go 中的数组具有固定长度；一旦定义，就不能扩展以容纳更多数据。然而，这个问题可以通过使用切片来解决，你将在下一章学习它。
+数组是一种容纳相同类型值的容器。Go中的数组具有固定长度；一旦定义，就不能扩展以容纳更多数据。然而，这个问题可以通过使用切片来解决，你将在下一章学习它。
 
-数组是一个固定长度的序列，用于在内存中存储同质元素。在 Go 中，像许多其他语言一样，数组是固定的。声明数组需要我们指定大小。一旦指定大小，就不能增长。数组是具有固定长度的单一类型元素的编号序列。
+数组是一个固定长度的序列，用于在内存中存储同质元素。在Go中，像许多其他语言一样，数组是固定的。声明数组需要我们指定大小。一旦指定大小，就不能增长。数组是具有固定长度的单一类型元素的编号序列。
 
-数组的元素通过使用 `[]` 索引运算符与其基于零的位置进行索引，这意味着第一个元素的索引是 `array[0]`，最后一个元素的索引是 `n-1`。
+数组的元素通过使用`[]`索引运算符与其基于零的位置进行索引，这意味着第一个元素的索引是`array[0]`，最后一个元素的索引是`n-1`。
 
 ### 4.2 数组声明
 
-在 Go 语言中，数组可以通过两种不同的方式创建：使用 `var` 关键字或简写声明。在 Go 中，数组索引从 0 开始，即第一个元素。因此，最后一个元素的索引是 `n-1`，其中 `n` 是数组的长度。要访问数组中的任何元素，我们需要使用 `a[index]` 语法，其中 `a` 是数组变量。
+在Go语言中，数组可以通过两种不同的方式创建：使用`var`关键字或简写声明。在Go中，数组索引从0开始，即第一个元素。因此，最后一个元素的索引是`n-1`，其中`n`是数组的长度。要访问数组中的任何元素，我们需要使用`a[index]`语法，其中`a`是数组变量。
 
 #### 4.2.1 使用 var 关键字
 
-使用 `var` 关键字、类型、名称、大小和元素创建数组。
+使用`var`关键字、类型、名称、大小和元素创建数组。
 
 **语法：**
 
@@ -1933,9 +1828,9 @@ Golang 中的控制语句用于根据某些条件控制给定程序的执行流�
 var array_name [length]Type
 ```
 
-例如，`var team [15]int` 可以使用索引 `team[0]` 到 `team[14]` 保存多达 15 个分数。尝试访问数组中超出范围的索引将导致编译器或运行时错误。
+例如，`var team [15]int`可以使用索引`team[0]`到`team[14]`保存多达15个分数。尝试访问数组中超出范围的索引将导致编译器或运行时错误。
 
-以下示例将打印大小为 5 的数组：
+以下示例将打印大小为5的数组：
 
 **程序 4.1**
 
@@ -1958,9 +1853,11 @@ fmt.Println(x)
 [0 0 0 0 0]
 ```
 
+
+
 由于我们没有为 `x` 分配任何值，我们只是定义了数组但没有定义数组元素的值。因此，它将具有其数据类型的零值。
 
-#### 4.2.2 简写声明
+### 4.2.2 简写声明
 
 **语法：**
 
@@ -1970,7 +1867,7 @@ array_name := [length]Type{item1, item2, item3, ... itemN}
 
 让我们看下面的程序：
 
-**程序 4.2**
+#### 程序 4.2
 
 ```go
 // Go program to explain use shorthand declaration
@@ -2000,7 +1897,6 @@ Godavari
 Kaveri
 Narmada
 ```
-
 
 ### 4.3 数组初始化
 
@@ -2086,7 +1982,7 @@ func main() {
 Array a: [5 0 10 0 15]
 ```
 
-我们可以使用 `array[index] = value` 语法在某个索引处设置值，并使用 `array[index]` 获取值。要访问数组中的任何元素，我们需要使用 `a[index]` 语法，其中 a 是一个数组变量。如下所示：
+我们可以使用 `array[index] = value` 语法在某个索引处设置值，并使用 `array[index]` 获取值。要访问数组中的任何元素，我们需要使用 `a[index]` 语法，其中 `a` 是一个数组变量。如下所示：
 
 #### 程序 4.6
 
@@ -2144,7 +2040,7 @@ fmt.Println("2D Array:", a)
 
 ### 4.5 数组遍历
 
-在 Go 中，我们可以使用 for 循环遍历数组。此外，Go 还提供了 range 运算符，它在 for 循环中返回数组每个元素的索引和值。
+在 Go 中，我们可以使用 `for` 循环遍历数组。此外，Go 还提供了 `range` 运算符，它在 `for` 循环中返回数组每个元素的索引和值。
 
 #### 程序 4.9
 
@@ -2206,7 +2102,7 @@ x[4] = 50
 
 ### 4.6 将数组传递给函数
 
-当你将数组传递给函数时，它们与 int 或 string 数据类型一样按值传递。函数只接收到它的一个副本。因此，当你修改函数内部的数组时，它不会反映到原始数组中。但切片（slice）不是这种情况，你将在下一章学习。
+当你将数组传递给函数时，它们与 `int` 或 `string` 数据类型一样按值传递。函数只接收到它的一个副本。因此，当你修改函数内部的数组时，它不会反映到原始数组中。但切片（slice）不是这种情况，你将在下一章学习。
 
 在 Go 语言中，你可以将数组作为参数传递给函数。要将数组作为参数传递给函数，你应首先使用以下语法创建一个形参。
 
@@ -2226,7 +2122,7 @@ func function_name(variable_name []type){
 }
 ```
 
-在下面的示例中，我们有一个名为 arr_sum() 的函数，它接受一个数组作为参数。在 main 函数中，我们向该函数传递了 int 类型的 x[5] 以及数组的大小，该函数返回数组元素的总和。
+在下面的示例中，我们有一个名为 `arr_sum()` 的函数，它接受一个数组作为参数。在 `main` 函数中，我们向该函数传递了 `int` 类型的 `x[5]` 以及数组的大小，该函数返回数组元素的总和。
 
 #### 程序 4.12
 
@@ -2267,7 +2163,7 @@ func main() {
 Sum of array elements: 150
 ```
 
-在下面的示例中，我们使用一个名为 arr_avg() 的函数解释了将数组传递给函数的概念，该函数接受一个数组作为参数。在 main 函数中，我们向该函数传递了 int 类型的 x[4] 以及数组的大小，该函数返回数组元素的平均值，如下所示：
+在下面的示例中，我们使用一个名为 `arr_avg()` 的函数解释了将数组传递给函数的概念，该函数接受一个数组作为参数。在 `main` 函数中，我们向该函数传递了 `int` 类型的 `x[4]` 以及数组的大小，该函数返回数组元素的平均值，如下所示：
 
 #### 程序 4.13
 
@@ -2309,18 +2205,15 @@ fmt.Printf("Average of array elements: %d ", avg)
 Average of array elements: 50
 ```
 
-在数组中，我们可以使用 array[index] = value 语法在某个索引处设置值，并使用 array[index] 获取值。要访问数组中的任何元素，我们需要使用 a[index] 语法，其中 a 是一个数组变量。
+在数组中，我们可以使用 `array[index] = value` 语法在某个索引处设置值，并使用 `array[index]` 获取值。要访问数组中的任何元素，我们需要使用 `a[index]` 语法，其中 `a` 是一个数组变量。
 
 数组本身是 Go 语言中的一种类型。数组类型是一维的，但你可以组合类型来构建多维数据结构。
 
 Go 是一种静态类型语言，因此，不允许在数组中混合属于不同数据类型的值。
 
-在 Go 语言中，我们可以使用 for 循环遍历数组。此外，Go 还提供了 range 运算符，它在 for 循环中返回数组每个元素的索引和值。
+在 Go 语言中，我们可以使用 `for` 循环遍历数组。此外，Go 还提供了 `range` 运算符，它在 `for` 循环中返回数组每个元素的索引和值。
 
-当你将数组传递给函数时，它们与 int 或 string 数据类型一样按值传递，函数只接收到它的一个副本。因此，当你修改函数内部的数组时，原始数组不会反映这些更改。
-
-
-
+当你将数组传递给函数时，它们与 `int` 或 `string` 数据类型一样按值传递，函数只接收到它的一个副本。因此，当你修改函数内部的数组时，原始数组不会反映这些更改。
 
 ### 问题
 
@@ -2337,13 +2230,21 @@ Go 是一种静态类型语言，因此，不允许在数组中混合属于不�
 ## 结构
 
 - 切片的概念
+
 - 切片的声明
+
 - 创建切片
+
 - 修改切片
+
 - 零值切片
+
 - 切片的比较
+
 - 多维切片
+
 - 对切片进行排序
+
 - 遍历切片
 
 ## 目标
@@ -2352,9 +2253,9 @@ Go 是一种静态类型语言，因此，不允许在数组中混合属于不�
 
 ### 5.1 切片的概念
 
-切片是数组的一个片段，可以调整大小，因此与数组相比，它更加灵活。与数组一样，切片可以被索引，并且有长度。切片是一种轻量级结构，它包装并表示数组的一部分。切片使用make函数创建。
+切片是数组的一个片段，可以调整大小，因此与数组相比，它更加灵活。与数组一样，切片可以被索引，并且有长度。切片是一种轻量级结构，它包装并表示数组的一部分。切片使用 `make` 函数创建。
 
-切片是一个可变长度的序列，存储相似类型的元素，并且不允许在同一片中存储不同类型的元素。切片中的第一个索引位置始终为0，最后一个索引位置为（切片长度 - 1）。
+切片是一个可变长度的序列，存储相似类型的元素，并且不允许在同一片中存储不同类型的元素。切片中的第一个索引位置始终为 `0`，最后一个索引位置为（切片长度 - 1）。
 
 ### 5.2 切片的声明
 
@@ -2366,7 +2267,7 @@ Go 是一种静态类型语言，因此，不允许在数组中混合属于不�
 var my_slice []int
 ```
 
-例如，我们创建了一个长度为0的team。
+例如，我们创建了一个长度为 `0` 的 `team`。
 
 ```
 var team []int
@@ -2448,7 +2349,7 @@ slice = [1 3 5 7 9]
 array_name[low:high]
 ```
 
-上述表达式从给定数组中选择一个切片。生成的切片包括从索引low到high的所有元素，但不包括索引high处的元素。
+上述表达式从给定数组中选择一个切片。生成的切片包括从索引 `low` 到 `high` 的所有元素，但不包括索引 `high` 处的元素。
 
 #### 程序5.3
 
@@ -2477,7 +2378,7 @@ fmt.Println("Slice s =", s)
 
 **切片s = [Gorakhpur Pune Bengaluru Mumbai]**
 
-切片表达式中的下界和上界索引是可选的。low的默认值为0，high的默认值是切片的长度。
+切片表达式中的下界和上界索引是可选的。`low` 的默认值为 `0`，`high` 的默认值是切片的长度。
 
 #### 程序5.4
 
@@ -2511,6 +2412,8 @@ slice1 = [Pune Bengaluru]
 slice2 = [Delhi Gorakhpur Jaipur]
 slice3 = [Pune Bengaluru Mumbai Delhi Gorakhpur Jaipur]
 ```
+
+
 
 #### 5.3.3 从另一个切片创建切片
 
@@ -2547,11 +2450,11 @@ Maharashtra Cities = [Nagpur Mumbai Nashik]
 
 #### 5.3.4 使用make()函数创建切片
 
-你也可以使用Go库提供的make()函数创建一个切片。这个函数接受三个参数——类型、长度和容量。在这里，容量值是可选的。它分配一个大小等于给定容量的底层数组，并返回一个切片，该切片引用底层数组。
+你也可以使用Go库提供的`make()`函数创建一个切片。这个函数接受三个参数——类型、长度和容量。在这里，容量值是可选的。它分配一个大小等于给定容量的底层数组，并返回一个切片，该切片引用底层数组。
 
 #### 程序5.6
 
-// 使用make()函数创建切片的Go程序
+// 使用`make()`函数创建切片的Go程序
 
 ```go
 package main
@@ -2571,7 +2474,9 @@ fmt.Printf("\nCapacity = %d", cap(my_slice))
 以下将是上述程序的输出：
 
 切片 = [0 0 0 0 0]
+
 长度 = 5
+
 容量 = 8
 
 ### 5.4 修改切片
@@ -2613,13 +2518,19 @@ fmt.Println("slice2 =", slice2)
 以下将是上述程序的输出：
 
 ***** 修改前 *****
+
 数组 = [One Two Three Four Five Six Seven]
+
 slice1 = [Two Three Four Five Six Seven]
+
 slice2 = [Four Five Six Seven]
 
 ****** 修改后 ******
+
 数组 = [One TWO Three FOUR FIVE Six Seven]
+
 slice1 = [TWO Three FOUR FIVE Six Seven]
+
 slice2 = [FOUR FIVE Six Seven]
 
 ### 5.5 零值切片
@@ -2650,13 +2561,9 @@ Length of Slice = 0
 Capacity of Slice = 0
 ```
 
-
-
-
-
 ### 5.6 切片的比较
 
-你可以使用切片中的 == 运算符来检查给定的切片是否为 nil。让我们看看下面的例子：
+你可以使用切片中的 `==` 运算符来检查给定的切片是否为 nil。让我们看看下面的例子：
 
 #### 程序 5.9
 
@@ -2681,6 +2588,7 @@ fmt.Println(s2 == nil)
 上述程序的输出如下：
 
 false
+
 true
 
 ### 5.7 多维切片
@@ -2730,7 +2638,7 @@ Slice 2 : [[Rajasthan Jaipur] [Maharashtra Mumbai] [Karnataka Bengaluru]]
 
 ### 5.8 切片的排序
 
-在 Go 语言中，你可以对切片中的元素进行排序。标准 Go 库提供了 sort 包，其中包含不同类型的排序方法，用于对字符串和整数切片进行排序。让我们看看下面的例子：
+在 Go 语言中，你可以对切片中的元素进行排序。标准 Go 库提供了 `sort` 包，其中包含不同类型的排序方法，用于对字符串和整数切片进行排序。让我们看看下面的例子：
 
 #### 程序 5.11
 
@@ -2738,22 +2646,31 @@ Slice 2 : [[Rajasthan Jaipur] [Maharashtra Mumbai] [Karnataka Bengaluru]]
 
 ```
 ```go
+
 package main
 
 import (
+
 "fmt"
+
 "sort"
+
 )
 
 func main() {
 
 // Creating Slice
+
 slice1 := []string{"India", "Japan", "China", "Russia", "Singapore"}
+
 slice2 := []int{200, 500, 700, 400, 800, 300, 600, 900}
 
 fmt.Println("***** Before sorting *****")
+
 fmt.Println("Slice 1:", slice1)
+
 fmt.Println("Slice 2:", slice2)
+
 ```
 ```
 
@@ -2782,7 +2699,7 @@ Slice 2: [200 300 400 500 600 700 800 900]
 
 ### 5.9 遍历切片
 
-你可以使用 for 循环或 for 循环中的 range 来遍历切片。
+你可以使用 `for` 循环或 `for` 循环中的 `range` 来遍历切片。
 
 #### 5.9.1 使用 for 循环遍历切片
 
@@ -2792,6 +2709,7 @@ Slice 2: [200 300 400 500 600 700 800 900]
 
 ```
 ```go
+
 // Go program to iterate over slice using for loop
 
 package main
@@ -2799,31 +2717,41 @@ package main
 import "fmt"
 
 func main() {
+
 // Creating a slice
+
 my_slice := []string{"Golang", "program",
+
 "to", "iterate", "over", "slice", "using", "for", "loop"}
 
 // Iterate using for loop
+
 for i := 0; i < len(my_slice); i++ {
+
 fmt.Println(my_slice[i])
+
 }
+
 }
+
 ```
 ```
 
 上述程序的输出如下：
 
 Golang
+
 program
 
 #### 5.9.2 使用 for 循环中的 range 遍历切片
 
-你可以使用 for 循环中的 range 来遍历切片。通过在 for 循环中使用 range，你还可以获取索引和元素值。让我们看看下面的程序：
+你可以使用 `for` 循环中的 `range` 来遍历切片。通过在 `for` 循环中使用 `range`，你还可以获取索引和元素值。让我们看看下面的程序：
 
 #### 程序 5.13
 
 ```
 ```go
+
 // Go program to iterate over slice using a range in for loop
 
 package main
@@ -2831,30 +2759,48 @@ package main
 import "fmt"
 
 func main() {
+
 // Creating a slice
+
 my_slice := []string{"Golang", "program", "to", "iterate",
+
 "over", "slice", "using", "range", "in", "for", "loop"}
 
 // Iterate slice using range in for loop
+
 for index, element := range my_slice {
+
 fmt.Printf("Index = %d and Element = %s\\n", index, element)
+
 }
+
 }
+
 ```
 ```
 
 上述程序的输出如下：
 
 Index = 0 and Element = Golang
+
 Index = 1 and Element = program
+
 Index = 2 and Element = to
+
 Index = 3 and Element = iterate
+
 Index = 4 and Element = over
+
 Index = 5 and Element = slice
+
 Index = 6 and Element = using
+
 Index = 7 and Element = range
+
 Index = 8 and Element = in
+
 Index = 9 and Element = for
+
 Index = 10 and Element = loop
 
 ### 总结
@@ -2867,19 +2813,17 @@ Index = 10 and Element = loop
 
 为了从数组创建切片，我们指定两个索引，即下界和上界，用冒号分隔。low 的默认值为 0，high 为切片的长度。切片表达式中的 low 和 high 索引是可选的。
 
-在 Go 中，你可以使用 Go 库提供的 make() 函数创建切片。该函数接受三个参数——类型、长度和容量。其中容量值是可选的。它会分配一个大小等于给定容量的底层数组，并返回一个引用该底层数组的切片。
+在 Go 中，你可以使用 Go 库提供的 `make()` 函数创建切片。该函数接受三个参数——类型、长度和容量。其中容量值是可选的。它会分配一个大小等于给定容量的底层数组，并返回一个引用该底层数组的切片。
 
-切片是 Go 语言中的引用类型，它们引用一个底层数组。因此，修改切片的一个元素将会
+切片是 Go 语言中的引用类型，它们引用一个底层数组。因此，修改切片的一个元素将会修改被引用数组中对应的元素，并且引用同一数组的其他切片也会看到这些修改。
 
-修改被引用数组中对应的元素，并且引用同一数组的其他切片也会看到这些修改。
-
-在 Go 中，nil 切片不包含任何元素。因此，该切片的容量和长度都为 0，并且 nil 切片不包含数组引用。此外，你可以使用切片中的 == 运算符来检查给定的切片是否为 nil。
+在 Go 中，nil 切片不包含任何元素。因此，该切片的容量和长度都为 0，并且 nil 切片不包含数组引用。此外，你可以使用切片中的 `==` 运算符来检查给定的切片是否为 nil。
 
 在 Go 中，多维切片与多维数组非常相似，只不过切片不包含大小。
 
-你可以使用 for 循环或 for 循环中的 range 来遍历切片。通过在 for 循环中使用 range，你还可以获取索引和元素值。
+你可以使用 `for` 循环或 `for` 循环中的 `range` 来遍历切片。通过在 `for` 循环中使用 `range`，你还可以获取索引和元素值。
 
-在 Go 中，你可以对切片中存在的元素进行排序。标准 Go 库提供了 sort 包，其中包含不同类型的排序方法，用于对字符串和整数切片进行排序。
+在 Go 中，你可以对切片中存在的元素进行排序。标准 Go 库提供了 `sort` 包，其中包含不同类型的排序方法，用于对字符串和整数切片进行排序。
 
 ### 问题
 
@@ -2889,7 +2833,7 @@ Index = 10 and Element = loop
 
 如何从另一个切片创建切片？请用 Go 程序解释。
 
-编写一个 Go 程序，使用 make() 函数创建切片。
+编写一个 Go 程序，使用 `make()` 函数创建切片。
 
 编写一个 Go 程序来修改切片。
 
@@ -2897,7 +2841,7 @@ Index = 10 and Element = loop
 
 编写一个 Go 程序来创建并访问多维切片。
 
-编写一个 Go 程序，使用 sort 包对切片进行排序。
+编写一个 Go 程序，使用 `sort` 包对切片进行排序。
 
 如何遍历切片？请用 Go 程序解释。
 
@@ -2912,14 +2856,23 @@ Golang 映射是无序键值对的集合。它提供快速查找，我们可以�
 ## 结构
 
 - 什么是 Go 映射？
+
 - Go 映射的声明
+
 - Go 映射的初始化
+
 - 遍历 Go 映射
+
 - 在映射中添加键值对
+
 - 在映射中更新键值对
+
 - 在映射中检索键的值
+
 - 检查键是否存在于 Go 映射中
+
 - 从映射中删除键
+
 - 映射是引用类型
 
 ### 6.1 什么是 Go 映射？
@@ -2927,9 +2880,6 @@ Golang 映射是无序键值对的集合。它提供快速查找，我们可以�
 映射是无序键值对的集合。键在映射中是唯一的，但值可能不唯一。它被广泛使用，因为它提供快速查找，并且可以借助键来检索、更新或删除值。
 
 映射也称为关联数组、哈希表或字典。映射用于根据关联的键查找值。
-
-
-
 
 ### 6.2 Go map 的声明
 
@@ -2977,17 +2927,19 @@ map[]
 Map is empty
 ```
 
-如果取消注释语句 m1["ten"] = 10，程序将给出运行时错误。因此，在向其中添加项目之前，必须初始化一个 map。
+如果取消注释语句 `m1["ten"] = 10`，程序将给出运行时错误。因此，在向其中添加项目之前，必须初始化一个 map。
 
 ### 6.3 Go Map 的初始化
 
-map 可以通过使用 map 字面量或内置的 make() 函数进行初始化。
+map 可以通过使用 map 字面量或内置的 `make()` 函数进行初始化。
 
 #### 6.3.1 使用 map 字面量初始化 map
 
 map 字面量是使用一些数据初始化 map 的最简单方法。您只需在花括号内传递用冒号分隔的键值对，并且最后一个尾随逗号是必要的，否则您会收到编译器错误。
 
 #### 程序 6.2
+
+
 
 // Go program to initialize a map using map literal
 
@@ -3016,9 +2968,9 @@ map[a:10 b:20 c:30 d:40 e:50]
 
 您还可以通过将花括号留空，使用 map 字面量创建一个空 map。
 
-#### 6.3.2 使用 make() 函数初始化 map
+### 6.3.2 使用 make() 函数初始化 map
 
-您可以使用内置的 make() 函数初始化 map。您只需将 map 的类型传递给 make() 函数，它将返回一个已初始化且可用的 map。让我们看下面的程序：
+您可以使用内置的 `make()` 函数初始化 map。您只需将 map 的类型传递给 `make()` 函数，它将返回一个已初始化且可用的 map。让我们看下面的程序：
 
 #### 程序 6.3
 
@@ -3042,20 +2994,24 @@ fmt.Println("Map is not empty")
 
 // make() function returns an initialized and ready to use map
 ```
+
 ```go
 // you can add new keys
 m["ten"] = 10
 fmt.Println(m)
 }
 ```
-```
 
 以下是上述代码的输出：
 
 ```text
+
 map[]
+
 Map is not empty
+
 map[ten:10]
+
 ```
 
 ### 6.4 遍历 Go map
@@ -3065,6 +3021,7 @@ map[ten:10]
 #### 程序 6.4
 
 ```go
+
 // Go program to explain iteration over a map
 
 package main
@@ -3072,26 +3029,41 @@ package main
 import "fmt"
 
 func main() {
+
 var my_map = map[string]string{
+
 "Maharashtra": "Mumbai",
+
 "Uttar_Pradesh": "Lucknow",
+
 "Rajasthan": "Jaipur",
+
 "Karnataka": "Bengaluru",
+
 }
 
 for state, capital := range my_map {
+
 fmt.Println(state, capital)
+
 }
+
 }
+
 ```
 
 以下是上述代码的输出：
 
 ```
+
 Maharashtra Mumbai
+
 Uttar_Pradesh Lucknow
+
 Rajasthan Jaipur
+
 Karnataka Bengaluru
+
 ```
 
 让我们看下面的示例：
@@ -3099,6 +3071,7 @@ Karnataka Bengaluru
 #### 程序 6.5
 
 ```go
+
 // Go program to explain iteration over a map
 
 package main
@@ -3106,26 +3079,41 @@ package main
 import "fmt"
 
 func main() {
+
 var my_map = map[string]int{
+
 "India": 1947,
+
 "Singapore": 1965,
+
 "Australia": 1901,
+
 "Malaysia": 1957,
+
 }
 
 for country, year_of_independence := range my_map {
+
 fmt.Println(country, year_of_independence)
+
 }
+
 }
+
 ```
 
 以下是上述代码的输出：
 
 ```
+
 India 1947
+
 Singapore 1965
+
 Australia 1901
+
 Malaysia 1957
+
 ```
 
 map 是一个无序集合，因此，遍历 map 的顺序不能保证每次都相同。因此，如果您多次运行上述程序，您将得到不同的结果顺序。
@@ -3145,27 +3133,42 @@ map_name[key]=value
 // Go program to add key-value pairs in a map
 
 ```go
+
 package main
 
 import "fmt"
 
 func main() {
+
 // Create and initialize a map
+
 var my_map = map[int]string{
+
 1: "US",
+
 91: "India",
+
 86: "China",
+
 44: "UK",
+
 }
 
 fmt.Println("Original Map\n", my_map)
+
 ```
 ```
+
 // Adding new key-value pairs in the map
+
 my_map[39] = "Italy"
+
 my_map[81] = "Japan"
+
 fmt.Println("\nMap after adding new key-value pairs \n", my_map)
+
 }
+
 ```
 
 以下是上述代码的输出：
@@ -3196,19 +3199,31 @@ package main
 import "fmt"
 
 func main() {
+
 // Create and initialize a map
+
 var my_map = map[int]string{
+
 1: "US",
+
 91: "India",
+
 86: "China",
+
 44: "UK",
+
 }
 
 fmt.Println("Original Map\n", my_map)
+
 // Updating values of the map
+
 my_map[1] = "United States"
+
 my_map[44] = "United Kingdom"
+
 fmt.Println("\nAfter updating values of the map \n", my_map)
+
 }
 ```
 
@@ -3225,6 +3240,7 @@ map_name[key]
 #### 程序 6.8
 
 ```go
+
 // Go program to retrieve the value of a key in a map
 
 package main
@@ -3232,25 +3248,42 @@ package main
 import "fmt"
 
 func main() {
+
 // Create and initialize a map
+
 var my_map = map[int]string{
+
 1: "US",
+
 91: "India",
+
 86: "China",
+
 44: "UK",
+
 }
+
 ```
 ```
+
 fmt.Println("Original Map:", my_map)
 
 // Retrieve values with the help of keys
+
 v1 := my_map[91]
+
 v2 := my_map[93]
+
 v3 := my_map[44]
+
 fmt.Println("Value of key[91]:", v1)
+
 fmt.Println("Value of key[93]:", v2)
+
 fmt.Println("Value of key[44]:", v3)
+
 }
+
 ```
 
 以下是上述代码的输出：
@@ -3277,6 +3310,7 @@ value, variable_name := map_name[key]
 #### 程序 6.9
 
 ```go
+
 // Go program to check if a key exists in a map
 
 package main
@@ -3284,27 +3318,44 @@ package main
 import "fmt"
 
 func main() {
+
     // Create and initialize a map
+
     var my_map = map[int]string{
+
         1: "US",
+
         91: "India",
+
 ```
 ```
+
 86: "China",
+
 44: "UK",
+
 }
+
 ```
 
 ```
+
 fmt.Println("Original Map:", my_map)
+
 ```
 
 ```
+
 // Checking key is available or not in map
+
 country, x := my_map[91]
+
 fmt.Println("\nKey present or not:", x)
+
 fmt.Println("Value:", country)
+
 }
+
 ```
 
 以下是上述代码的输出：
@@ -3314,7 +3365,7 @@ fmt.Println("Value:", country)
 键是否存在：true
 值：India
 
-如果您只想检查键是否存在而不检索与该键关联的值，则可以使用 _（下划线）代替第一个值。
+如果您只想检查键是否存在而不检索与该键关联的值，则可以使用 `_`（下划线）代替第一个值。
 
 ```
 _, variable_name := map_name[key]
@@ -3324,15 +3375,13 @@ _, variable_name := map_name[key]
 
 #### 程序 6.10
 
-
-
 Key 91 是否存在：true
 
 Key 95 是否存在：false
 
 ### 6.9 从映射中删除键
 
-在映射中，允许使用 delete() 函数删除映射中存在的键。它是一个内置函数。它不返回任何值，并且如果给定映射中不存在该键，则不执行任何操作：
+在映射中，允许使用 `delete()` 函数删除映射中存在的键。它是一个内置函数。它不返回任何值，并且如果给定映射中不存在该键，则不执行任何操作：
 
 ```
 delete(map_name, key)
@@ -3343,6 +3392,7 @@ delete(map_name, key)
 #### 程序 6.11
 
 ```go
+
 // Go program to explain key deletion from a map
 
 package main
@@ -3350,24 +3400,39 @@ package main
 import "fmt"
 
 func main() {
+
 // Create and initialize a map
+
 var my_map = map[int]string{
+
 1: "US",
+
 91: "India",
+
 86: "China",
+
 44: "UK",
+
 }
+
 }
+
 ```
 
 ```go
+
 fmt.Println("Map before deletion:\n", my_map)
 
 // Delete keys in a Map using delete()
+
 delete(my_map, 1)
+
 delete(my_map, 44)
+
 fmt.Println("\nMap after deletion:\n", my_map)
+
 }
+
 ```
 
 以下是上述代码的输出：
@@ -3375,23 +3440,30 @@ fmt.Println("\nMap after deletion:\n", my_map)
 ```
 Map before deletion:
 map[1:US 44:UK 86:China 91:India]
-
 Map after deletion:
 map[86:China 91:India]
 ```
 
 ```go
+
 // Assigned the map into a new variable
+
 new_map := my_map
 
 // Perform modification in new_map
+
 new_map[86] = "China"
+
 new_map[33] = "France"
 
 // Display map after modification
+
 fmt.Println("New map:\n", new_map)
+
 fmt.Println("Modification in old map:\n", my_map)
+
 }
+
 ```
 
 以下是上述代码的输出：
@@ -3413,11 +3485,11 @@ map[1:US 33:France 44:UK 81:Japan 86:China 91:India 972:Israel]
 
 映射的零值为 nil，而 nil 映射没有键。因此，任何向 nil 映射添加键的尝试都会导致运行时错误。
 
-在 Go 中，映射可以通过使用映射字面量或内置 make() 函数进行初始化。
+在 Go 中，映射可以通过使用映射字面量或内置 `make()` 函数进行初始化。
 
 映射字面量是在 Go 编程中用一些数据初始化映射的最简单方法。您只需在花括号内传递用冒号分隔的键值对即可。最后一个尾随逗号是必要的，否则您会收到编译器错误。
 
-在 Go 中，您可以使用内置的 make() 函数初始化映射。您只需将映射的类型传递给 make() 函数，它将返回一个已初始化且可立即使用的映射。
+在 Go 中，您可以使用内置的 `make()` 函数初始化映射。您只需将映射的类型传递给 `make()` 函数，它将返回一个已初始化且可立即使用的映射。
 
 您可以使用 Go 编程语言中 for 循环的 range 形式遍历映射。它在每次迭代中为您提供键值对。
 
@@ -3429,7 +3501,7 @@ map[1:US 33:France 44:UK 81:Japan 86:China 91:India 972:Israel]
 
 在 Go 中，当您使用语法检索分配给给定键的值时，它还会返回一个额外的布尔值，如果键存在于映射中则为 true，如果不存在则为 false。
 
-在映射中，允许使用 delete() 函数删除映射中存在的键。它是 Golang 中的内置函数。它不返回任何值，并且如果给定映射中不存在该键，则不执行任何操作。
+在映射中，允许使用 `delete()` 函数删除映射中存在的键。它是 Golang 中的内置函数。它不返回任何值，并且如果给定映射中不存在该键，则不执行任何操作。
 
 映射是 Golang 中的引用类型。当您将映射分配给新变量时，两者都引用相同的底层数据结构。因此，由一个变量所做的更改对另一个变量可见。
 
@@ -3437,7 +3509,7 @@ map[1:US 33:France 44:UK 81:Japan 86:China 91:India 972:Israel]
 
 Golang 映射是什么？编写一个 Go 程序使用映射字面量初始化映射。
 
-解释在 Golang 中使用 make() 函数初始化映射。
+解释在 Golang 中使用 `make()` 函数初始化映射。
 
 编写一个 Go 程序来解释遍历映射。
 
@@ -3481,17 +3553,22 @@ Golang 映射是什么？编写一个 Go 程序使用映射字面量初始化映
 
 ### 7.2 声明和初始化结构体类型
 
-结构体的声明以关键字 type 开始，然后是新结构体的名称，最后是关键字 struct。在大括号内，一系列数据字段以名称和类型指定。
+结构体的声明以关键字 `type` 开始，然后是新结构体的名称，最后是关键字 `struct`。在大括号内，一系列数据字段以名称和类型指定。
 
 您可以使用结构体字面量初始化结构体类型变量。您还需要按结构体中声明的相同顺序传递字段值。
 
 **结构体语法：**
 
 ```text
+
 type identifier struct{
+
 field_1 data_type
+
 field_2 data_type
+
 }
+
 ```
 
 让我们看下面的程序：
@@ -3499,30 +3576,48 @@ field_2 data_type
 ### 程序 7.1
 
 ```go
+
 // Golang program to declare and define struct
 
 package main
 
 import "fmt"
+
 ```
 
 ```go
+
 // Define a struct type
+
 type city_list struct {
+
 city string
+
 state string
+
 country string
+
 }
 
 func main() {
+
+
+
+```
 // Declare and initialize struct using a struct literal
+
 c1 := city_list{"Mumbai", "Maharashtra", "India"}
+
 c2 := city_list{"Chicago", "Illinois", "US"}
+
 c3 := city_list{"Sydney", "New South Wales", "Australia"}
 
 fmt.Println("City1:", c1)
+
 fmt.Println("City2:", c2)
+
 fmt.Println("City3:", c3)
+
 }
 ```
 
@@ -3569,8 +3664,6 @@ fmt.Println("City3:", c3)
 **City1:** {Mumbai Maharashtra India}
 **City2:** {Chicago Illinois US}
 
-
-
 城市3: {Sydney New South Wales Australia}
 
 ### 7.3 结构体的零值
@@ -3581,22 +3674,18 @@ fmt.Println("City3:", c3)
 
 ```go
 // Golang program to explain zero value of a struct
-
 package main
-
 import (
-    "fmt"
+"fmt"
 )
-
 type employee struct {
-    name string
-    age int
-    city string
+name string
+age int
+city string
 }
-
 func main() {
-    var emp1 employee //zero valued struct
-    fmt.Println("Employee1 details:", emp1)
+var emp1 employee //zero valued struct
+fmt.Println("Employee1 details:", emp1)
 }
 ```
 
@@ -3606,7 +3695,7 @@ func main() {
 Employee1 details: {0}
 ```
 
-上述程序定义了 emp1，但未对其进行初始化。因此，name 和 city 被赋予零值，即 ""，age 被赋予零值，即 0。因此，程序输出如下：
+上述程序定义了 `emp1`，但未对其进行初始化。因此，`name` 和 `city` 被赋予零值，即 `""`，`age` 被赋予零值，即 `0`。因此，程序输出如下：
 
 ```text
 Employee1 details: {0}
@@ -3618,25 +3707,21 @@ Employee1 details: {0}
 
 ```go
 // Golang program to explain zero value of a struct
-
 package main
-
 import (
-    "fmt"
+"fmt"
 )
-
 type employee struct {
-    name string
-    age int
-    location string
+name string
+age int
+location string
 }
-
 func main() {
-    emp1 := employee{
-        age: 30,
-        location: "Pune",
-    }
-    fmt.Println("Employee1 details:", emp1)
+emp1 := employee{
+age: 30,
+location: "Pune",
+}
+fmt.Println("Employee1 details:", emp1)
 }
 ```
 
@@ -3654,31 +3739,24 @@ Employee1 details: {30 Pune}
 
 ```go
 // Golang program to access fields of struct
-
 package main
-
 import "fmt"
-
 // define struct
 type bike struct {
-    name, model, color string
-    weight_in_kg float64
+name, model, color string
+weight_in_kg float64
 }
-
 // Main Function
 func main() {
-    b := bike{name: "Bajaj", model: "Pulsar_150cc",
-        color: "Black Grey", weight_in_kg: 148}
-
-    // Access struct fields using the dot operator
-    fmt.Println("bike name:", b.name)
-    fmt.Println("bike color:", b.color)
-
-    // Assign a new value to a struct field
-    b.color = "Neon Red"
-
-    // Display result
-    fmt.Println("bike:", b)
+b := bike{name: "Bajaj", model: "Pulsar_150cc",
+color: "Black Grey", weight_in_kg: 148}
+// Access struct fields using the dot operator
+fmt.Println("bike name:", b.name)
+fmt.Println("bike color:", b.color)
+// Assign a new value to a struct field
+b.color = "Neon Red"
+// Display result
+fmt.Println("bike:", b)
 }
 ```
 
@@ -3694,36 +3772,28 @@ bike: {Bajaj Pulsar_150cc Neon Red 148}
 
 Golang 中的指针是一个用于存储另一个变量内存地址的变量。变量用于在系统中某个内存地址存储一些数据。
 
-你也可以借助 & 运算符，即地址运算符，使用指针指向结构体。Golang 允许程序员使用指针访问结构体的字段，而无需显式解引用。让我们看下面的程序：
+你也可以借助 `&` 运算符，即地址运算符，使用指针指向结构体。Golang 允许程序员使用指针访问结构体的字段，而无需显式解引用。让我们看下面的程序：
 
 #### 程序 7.6
 
 ```go
 // Golang program to explain the concept of the pointer in the struct
-
 package main
-
 import "fmt"
-
 type my_struct struct {
-    city string
-    country string
+city string
+country string
 }
-
 func main() {
-    // create instance of my_struct
-    my_struct1 := my_struct{"New Delhi", "India"}
-
-    // pointer to the struct
-    my_pointer := &my_struct1
-
-    fmt.Println(my_pointer)
-
-    // accessing struct field using a pointer
-    fmt.Println(my_pointer.country)
-
-    // accessing struct field using dereferencing concept
-    fmt.Println((*my_pointer).country)
+// create instance of my_struct
+my_struct1 := my_struct{"New Delhi", "India"}
+// pointer to the struct
+my_pointer := &my_struct1
+fmt.Println(my_pointer)
+// accessing struct field using a pointer
+fmt.Println(my_pointer.country)
+// accessing struct field using dereferencing concept
+fmt.Println((*my_pointer).country)
 }
 ```
 
@@ -3745,29 +3815,22 @@ India
 
 ```go
 // Golang program to update values of struct members using pointer
-
 package main
-
 import "fmt"
-
 type my_struct struct {
-    city string
-    country string
+city string
+country string
 }
-
 func main() {
-    // create instance of my_struct
-    my_struct1 := my_struct{"New Delhi", "India"}
-
-    // pointer to the struct
-    my_pointer := &my_struct1
-
-    // display struct values
-    fmt.Println("Before updating value of struct member:\n", my_pointer)
-
-    // update city name
-    my_pointer.city = "Pune"
-    fmt.Println("After updating value of struct member:\n", my_pointer)
+// create instance of my_struct
+my_struct1 := my_struct{"New Delhi", "India"}
+// pointer to the struct
+my_pointer := &my_struct1
+// display struct values
+fmt.Println("Before updating value of struct member:\n", my_pointer)
+// update city name
+my_pointer.city = "Pune"
+fmt.Println("After updating value of struct member:\n", my_pointer)
 }
 ```
 
@@ -3776,7 +3839,6 @@ func main() {
 ```text
 Before updating value of struct member:
 &{New Delhi India}
-
 After updating value of struct member:
 &{Pune India}
 ```
@@ -3805,11 +3867,10 @@ After updating value of struct member:
 ```go
 //non-main package
 package module
-
 // Unexported struct (accessible inside package module only)
 type city struct {
-    city_name string // unexported field (accessible inside package module only)
-    state string // unexported field (accessible inside package module only)
+city_name string // unexported field (accessible inside package module only)
+state string // unexported field (accessible inside package module only)
 }
 ```
 
@@ -3818,11 +3879,10 @@ type city struct {
 ```go
 //non-main package
 package module
-
 type Employee struct { // exported struct type
-    Id int // exported field
-    employee_name string // unexported field (accessible inside package module)
-    City string // exported field
+Id int // exported field
+employee_name string // unexported field (accessible inside package module)
+City string // exported field
 }
 ```
 
@@ -3831,25 +3891,22 @@ type Employee struct { // exported struct type
 ```go
 //Go program with the main package
 package main
-
 import (
-    "fmt"
-    "program/module"
+"fmt"
+"program/module"
 )
-
 func main() {
-    e := module.Employee{
-        Id: 100,
-        //employee_name: "Singh",
-        City: "Pune",
-    }
-    fmt.Println("Employee ID and City= ", e)
-
-    // c := module.city{
-    //     city_name: "Pune",
-    //     state: "Maharashtra",
-    // }
-    // fmt.Println("City and State= ", c)
+e := module.Employee{
+Id: 100,
+ //employee_name: "Singh",
+City: "Pune",
+}
+fmt.Println("Employee ID and City= ", e)
+// c := module.city{
+//     city_name: "Pune",
+//     state: "Maharashtra",
+// }
+// fmt.Println("City and State= ", c)
 }
 ```
 
@@ -3859,9 +3916,9 @@ func main() {
 Employee ID and City= {100 Pune}
 ```
 
-当你运行程序时，结构体 Employee 的 Id 和 City 字段可以从外部包访问，但 employee_name 字段不能从中访问。尝试从 main 访问 employee_name 结构体字段会因其以小写字母开头而导致错误信息。
+当你运行程序时，结构体 `Employee` 的 `Id` 和 `City` 字段可以从外部包访问，但 `employee_name` 字段不能从中访问。尝试从 `main` 访问 `employee_name` 结构体字段会因其以小写字母开头而导致错误信息。
 
-当你运行程序时，结构体 city 的 city_name 和 state 字段不能从外部包访问。尝试从 main 访问 city_name 和 state 结构体字段会因其以小写字母开头而导致错误信息。
+当你运行程序时，结构体 `city` 的 `city_name` 和 `state` 字段不能从外部包访问。尝试从 `main` 访问 `city_name` 和 `state` 结构体字段会因其以小写字母开头而导致错误信息。
 
 ### 7.7 结构体是值类型
 
@@ -3873,30 +3930,24 @@ Employee ID and City= {100 Pune}
 
 ```go
 // Go program to explain Structs are value types
-
 package main
-
 import "fmt"
-
 type city struct {
-    city1 string
-    city2 string
-    city3 string
+city1 string
+city2 string
+city3 string
 }
-
 func main() {
-    // Structs are value types
-    c1 := city{"Pune", "Delhi", "Lucknow"}
-
-    c2 := c1 // A copy of the struct 'c1' is assigned to 'c2'
-    fmt.Println("city list c1 =", c1)
-    fmt.Println("city list c2 =", c2)
-
-    c2.city2 = "Bengaluru"
-    c2.city3 = "Mumbai"
-    fmt.Println("\nAfter modifying c2:")
-    fmt.Println("city list c1 =", c1)
-    fmt.Println("city list c2 =", c2)
+// Structs are value types
+c1 := city{"Pune", "Delhi", "Lucknow"}
+c2 := c1 // A copy of the struct 'c1' is assigned to 'c2'
+fmt.Println("city list c1 =", c1)
+fmt.Println("city list c2 =", c2)
+c2.city2 = "Bengaluru"
+c2.city3 = "Mumbai"
+fmt.Println("\nAfter modifying c2:")
+fmt.Println("city list c1 =", c1)
+fmt.Println("city list c2 =", c2)
 }
 ```
 
@@ -3905,7 +3956,6 @@ func main() {
 ```text
 city list c1 = {Pune Delhi Lucknow}
 city list c2 = {Pune Delhi Lucknow}
-
 After modifying c2:
 city list c1 = {Pune Delhi Lucknow}
 city list c2 = {Pune Bengaluru Mumbai}
@@ -3917,7 +3967,7 @@ city list c2 = {Pune Bengaluru Mumbai}
 
 结构体是 Go 语言中创建具体用户定义类型的唯一方式，它们也提高了模块化。
 
-在 Go 中，结构体的声明以关键字 type 开始，然后是新结构体的名称，最后是关键字 struct。在大括号内，一系列数据字段以名称和其类型指定。
+在 Go 中，结构体的声明以关键字 `type` 开始，然后是新结构体的名称，最后是关键字 `struct`。在大括号内，一系列数据字段以名称和其类型指定。
 
 你可以使用结构体字面量初始化结构体类型变量。你需要按结构体中声明的顺序传递字段值。
 
@@ -3929,7 +3979,7 @@ Go 编程中的指针是一个用于存储另一个变量内存地址的变量�
 
 在系统中存储一些数据到内存地址中。
 
-你也可以借助 & 运算符，即地址运算符，使用指向结构体的指针。它允许在 Golang 中不显式解引用即可使用指针访问结构体的字段。
+你也可以借助 `&` 运算符，即地址运算符，使用指向结构体的指针。它允许在 Golang 中不显式解引用即可使用指针访问结构体的字段。
 
 在 Go 中，任何以大写字母开头的结构体类型都是导出的，可以从外部包访问。同样，任何以大写字母开头的结构体字段都是导出的。任何以小写字母开头的结构体类型仅在同一包内可见。
 
@@ -3967,22 +4017,25 @@ Golang 中的结构体是值类型，即当创建值类型实例时，会在内�
 
 ### 8.1 定义
 
-方法的语法几乎与函数相似，只有一个区别——方法总是在 func 关键字和方法名之间有一个接收器，如下所示：
+方法的语法几乎与函数相似，只有一个区别——方法总是在 `func` 关键字和方法名之间有一个接收器，如下所示：
 
 ```
-func (receiverName receiverType) methodName(param1 paramType) (returnType1) {
-...
-}
-```
 
-接收器放在 func 关键字之后、方法名之前 的括号 () 中。其余语法与函数相似。它有一组参数。方法可以有一个或多个参数。方法参数可以有不同的类型，也可以全部是同一类型。返回类型也适用相同规则。然而，如果方法返回多个值，则返回类型必须放在括号中；否则，我们可以省略括号。
 
-你可能会想知道为什么方法需要接收器。我们在其他基于类的面向对象语言如 C++ 和 Java 中不需要接收器。这是因为在 C++ 和 Java 中方法被分组到类中。方法始终声明为类体的一部分。因此编译器可以通过类定义理解该类具有某些方法。但在 Go 中并非如此。类型及其方法
-未分组。方法不是其类型声明的一部分。甚至方法也不需要在与类型相同的源文件中。你可以在不同的源文件中声明方法和其类型。因此，我们需要在方法上使用接收器，以便 Go 编译器能够理解它属于哪种类型。
+
+`func (receiverName receiverType) methodName(param1 paramType) (returnType1) {`
+
+`...`
+
+`}`
+
+接收器放在 `func` 关键字之后、`methodName` 之前 的括号 `()` 中。其余语法与函数相似。它有一组参数。方法可以有一个或多个参数。方法参数可以有不同的类型，也可以全部是同一类型。返回类型也适用相同规则。然而，如果方法返回多个值，则返回类型必须放在括号中；否则，我们可以省略括号。
+
+你可能会想知道为什么方法需要接收器。我们在其他基于类的面向对象语言如 `C++` 和 `Java` 中不需要接收器。这是因为在 `C++` 和 `Java` 中方法被分组到类中。方法始终声明为类体的一部分。因此编译器可以通过类定义理解该类具有某些方法。但在 `Go` 中并非如此。类型及其方法未分组。方法不是其类型声明的一部分。甚至方法也不需要在与类型相同的源文件中。你可以在不同的源文件中声明方法和其类型。因此，我们需要在方法上使用接收器，以便 `Go` 编译器能够理解它属于哪种类型。
 
 这里最关键的一点是，方法和其类型必须在同一包中声明。你不能在与类型不同的包中声明方法。这就是我们不能为预定义命名类型添加方法的原因。示例：你不能为添加方法。然而，对于这个问题有一个变通方法，我们将在后面的章节中看到。
 
-### 程序 8.1
+## 程序 8.1
 
 ```go
 type rectangle struct {
@@ -3994,12 +4047,11 @@ return r.length * r.width
 }
 ```
 
-_程序 8.1_ 声明了一个名为 rectangle 的结构体，其字段为 length 和 width。Both length and width are declared as float32。The rectangle struct has a method named as area。The method is not declared as part of the rectangle body. Instead, it is declared separately. It is considered a method of the rectangle struct because the rectangle is used as the receiver type. The receiver is placed between the func keyword and the method name。The receiver is declared with the receiver variable r。We can access fields of the receiver in a
-method body by applying the dot operator on the receiver variable. We have accessed length and width in the method body by `r.length` and `r.width`。The method calculates the area of the rectangle by multiplying length and width and finally, it returns the result. The return type of the method is float32。
+*程序 8.1* 声明了一个名为 `rectangle` 的结构体，其字段为 `length` 和 `width`。Both `length` and `width` are declared as `float32`。The `rectangle` struct has a method named as `area`。The method is not declared as part of the `rectangle` body. Instead, it is declared separately. It is considered a method of the `rectangle` struct because the `rectangle` is used as the receiver type. The receiver is placed between the `func` keyword and the method name。The receiver is declared with the receiver variable `r`。We can access fields of the receiver in a method body by applying the dot operator on the receiver variable. We have accessed `length` and `width` in the method body by `r.length` and `r.width`。The method calculates the area of the rectangle by multiplying `length` and `width` and finally, it returns the result. The return type of the method is `float32`。
 
-你可以为接收器名称提供任何有效的标识符。你可以像我们在 Java 或 Python 中分别定义的那样将接收器名称定义为 *this* 或 *self*，但这不是强制性的。也可以为所有方法定义不同的接收器名称。为所有接收器提供简短且相同的名称是一个好习惯。*程序 8.2* 声明了两个方法，area 和 perimeter，并且这两个方法具有不同的接收器名称，分别为 r 和 rect。
+你可以为接收器名称提供任何有效的标识符。你可以像我们在 `Java` 或 `Python` 中分别定义的那样将接收器名称定义为 `*this` 或 `*self*`，但这不是强制性的。也可以为所有方法定义不同的接收器名称。为所有接收器提供简短且相同的名称是一个好习惯。*程序 8.2* 声明了两个方法，`area` 和 `perimeter`，并且这两个方法具有不同的接收器名称，分别为 `r` 和 `rect`。
 
-### 程序 8.2
+## 程序 8.2
 
 ```go
 type rectangle struct {
@@ -4014,12 +4066,11 @@ return (2 * rect.length) + (2 * rect.width)
 }
 ```
 
-接收器名称在方法声明中不是强制性的。你可以通过仅提供接收器类型来声明方法。如果方法不读取或修改接收器的任何字段，我们可以省略接收器名称（尽管这不是一个有效的用例，因为
-如果方法确实读取/修改字段，那么声明该方法就没有意义了）。
+接收器名称在方法声明中不是强制性的。你可以通过仅提供接收器类型来声明方法。如果方法不读取或修改接收器的任何字段，我们可以省略接收器名称。
 
-程序 8.3 声明了一个方法名 doSomething，仅使用接收器类型。此方法不读取/修改任何 rectangle 字段 相反，它只是将字符串打印到控制台，因此我们已删除接收器变量，如下所示：
+程序 8.3 声明了一个方法名 `doSomething`，仅使用接收器类型。此方法不读取/修改任何 `rectangle` 字段 相反，它只是将字符串打印到控制台，因此我们已删除接收器变量，如下所示：
 
-### 程序 8.3
+## 程序 8.3
 
 ```
 type rectangle struct {
@@ -4031,9 +4082,9 @@ fmt.Println("I don't know what to do")
 }
 ```
 
-到目前为止，我们已经学习了如何声明方法。现在，让我们学习如何调用方法。方法可以使用点运算符在类型值上调用。下面给出的代码在 rectangle 结构体的 rect 变量上调用 area() 方法。它返回一个 float32 值，因此我们已将其分配给变量 a。最后，它将结果打印到控制台：
+到目前为止，我们已经学习了如何声明方法。现在，让我们学习如何调用方法。方法可以使用点运算符在类型值上调用。下面给出的代码在 `rectangle` 结构体的 `rect` 变量上调用 `area()` 方法。它返回一个 `float32` 值，因此我们已将其分配给变量 `a`。最后，它将结果打印到控制台：
 
-### 程序 8.4
+## 程序 8.4
 
 ```
 func main() {
@@ -4045,7 +4096,7 @@ fmt.Println(a)
 
 ### 全部整合
 
-### 程序 8.5
+## 程序 8.5
 
 ```
 package main
@@ -4056,7 +4107,6 @@ a := rect.area()
 fmt.Println(a)
 }
 type rectangle struct {
-
 length float32
 width float32
 }
@@ -4068,11 +4118,11 @@ return (2 * r.length) + (2 * r.width)
 }
 ```
 
-### 8.2 值接收器和指针接收器
+## 8.2 值接收器和指针接收器
 
 我们在第 节的所有示例中都使用了值接收器。我们正在尝试从值接收器读取值。然而，如果我们尝试修改值接收器上的值，它不会反映在调用者中，因为修改是由方法中的值接收器完成的，并且更改对调用者不可见。让我们在以下程序中验证这一点：
 
-### 程序 8.6
+## 程序 8.6
 
 ```go
 package main
@@ -4097,28 +4147,23 @@ r.length = r.length + a
 {12.3 21.45}
 ```
 
-*程序 8.6* 添加了一个新方法，使用值接收器。此方法根据提供的输入增加矩形的长度。main 方法为 rectangle 结构体创建了一个变量 rect，长度和宽度值分别为 12.3 和 21.45。main 方法通过传递 3.4 作为参数调用 increaseLength 方法。最后，它将 rect 打印到控制台。根据代码，它应该打印具有更新长度的 rect，但事实并非如此。它在控制台上打印 {12.3 21.45}，其中长度仍然是 12.3。原因非常简单。increaseLength 是使用值接收器定义的。
+*程序 8.6* 添加了一个新方法，使用值接收器。此方法根据提供的输入增加矩形的长度。`main` 方法为 `rectangle` 结构体创建了一个变量 `rect`，长度和宽度值分别为 `12.3` 和 `21.45`。`main` 方法通过传递 `3.4` 作为参数调用 `increaseLength` 方法。最后，它将 `rect` 打印到控制台。根据代码，它应该打印具有更新长度的 `rect`，但事实并非如此。它在控制台上打印 `{12.3 21.45}`，其中长度仍然是 `12.3`。原因非常简单。`increaseLength` 是使用值接收器定义的。
 
-如果你想修改接收器并希望更改对调用者可见？你可以使用指针接收器。指针接收器方法的语法与值接收器方法相似，除了一个区别，即接收器定义为指针。请注意下面给出的语法。receiverType 前缀为星号
+如果你想修改接收器并希望更改对调用者可见？你可以使用指针接收器。指针接收器方法的语法与值接收器方法相似，除了一个区别，即接收器定义为指针。请注意下面给出的语法。`receiverType` 前缀为星号
 
 ```go
-func (receiverName *receiverType) methodName(param1
-paramType) (returnType) {
+func (receiverName *receiverType) methodName(param1 paramType) (returnType) {
 ...
 }
 ```
 
-让我们使用指针接收器重新声明 increaseLength 方法：
+让我们使用指针接收器重新声明 `increaseLength` 方法：
 
-### 程序 8.7
-
-
+## 程序 8.7
 
 ```
 package main
-
 import "fmt"
-
 func main() {
 rect := rectangle{12.3, 21.45}
 p := &rect
@@ -4127,7 +4172,6 @@ fmt.Println(rect)
 }
 type rectangle struct {
 length float32
-
 width float32
 }
 func (r *rectangle) increaseLength(a float32) {
@@ -4139,11 +4183,12 @@ r.length = r.length + a
 
 **{15.7 21.45}**
 
-运行此程序时，它将打印 length 的更新值。这里最需要注意的重要点是 increaseLength 方法是使用指针调用的
+运行此程序时，它将打印 `length` 的更新值。这里最需要注意的重要点是 `increaseLength` 方法是使用指针调用的
 
-并非必须使用指针变量调用指针接收者方法。你也可以使用非指针变量调用这些方法。当指针接收者方法在没有指针的情况下被调用时，Go 编译器会获取变量的地址。反之亦然。你也可以使用指针变量调用值接收者方法。当 Go 发现指针被用于值接收者方法时，会自动进行解引用。引用和解引用仅在变量被使用时才有效。当找不到变量时，Go 编译器无法执行引用和解引用。以下程序会导致编译错误：
+并非必须使用指针变量调用指针接收者方法。你也可以使用非指针变量调用这些方法。当指针接收者方法在没有指针的情况下被调用时，`Go` 编译器会获取变量的地址。反之亦然。你也可以使用指针变量调用值接收者方法。当 `Go` 发现指针被用于值接收者方法时，会自动进行解引用。引用和解引用仅在变量被使用时才有效。当找不到变量时，`Go` 编译器无法执行引用和解引用。以下程序会导致编译错误：
 
-### 程序 8.8
+## 程序 8.8
+
 ```
 func main() {
 rectangle{12.3, 21.45}.increaseLength(3.5)
@@ -4153,6 +4198,7 @@ rectangle{12.3, 21.45}.increaseLength(3.5)
 上述程序的输出如下：
 
 ### 错误 8.1：
+
 ```
 cannot call the pointer method on composite literal
 cannot take the address of composite literal
@@ -4166,17 +4212,16 @@ cannot take the address of composite literal
 
 一个类型可以同时拥有值接收者和指针接收者方法。某些方法可以声明为值接收者，某些方法可以声明为指针接收者。它始终是一个良好的实践，要么所有方法都是值接收者，要么都是指针接收者。除非极其必要，否则我们不应混合使用两者。
 
-#### 8.3.2 复合类型上的方法
+### 8.3.2 复合类型上的方法
 
 本节我们将在切片上定义方法。就像我们需要定义切片的自定义类型以便在其上定义方法一样。
 
-### 程序 8.10
+## 程序 8.10
+
 ```
 ```go
 package main
-
 import "fmt"
-
 func main() {
 var l list = []string{"A", "B", "C"}
 var input list = []string{"B", "C", "D"}
@@ -4187,7 +4232,6 @@ fmt.Println("After deletion:", l)
 fmt.Println("Index of B:", l.indexOf("B"))
 fmt.Println("Index of C:", l.indexOf("C"))
 }
-
 type list []string
 func (l list) intersect(input list) list {
 mp := make(map[string]bool)
@@ -4196,28 +4240,27 @@ mp[ele] = true
 ```
 ```
 
-#### 8.3.3 函数类型上的方法
+### 8.3.3 函数类型上的方法
 
-我们也可以在函数类型上定义方法。此功能在 一直使用很多。一个很好的 stdlib 示例是 net/http 包。该包具有如下所示的函数类型：
+我们也可以在函数类型上定义方法。此功能在 一直使用很多。一个很好的 `stdlib` 示例是 `net/http` 包。该包具有如下所示的函数类型：
 
 ```
 type HandlerFunc *Request)
 ```
 
-HandlerFunc 类型具有如下所示的 ServeHTTP 方法：
+`HandlerFunc` 类型具有如下所示的 `ServeHTTP` 方法：
 
 ```
 func (f HandlerFunc) ServeHTTP(w ResponseWriter, r *Request)
 ```
 
-函数上的方法在需要为多种场景提供相似功能时非常有用。以下代码实现了相同的功能。此代码在 By 函数类型上有一个 Filter 方法。Filter 方法按年龄、获赞最多、访问最多和关注最多来过滤用户的切片。
+函数上的方法在需要为多种场景提供相似功能时非常有用。以下代码实现了相同的功能。此代码在 `By` 函数类型上有一个 `Filter` 方法。`Filter` 方法按年龄、获赞最多、访问最多和关注最多来过滤用户的切片。
 
-### 程序 8.11
+## 程序 8.11
+
 ```
 package main
-
 import "fmt"
-
 type User struct {
 id int
 ```
@@ -4234,14 +4277,12 @@ var users []User = []User{
 User{101, "A", 18, 20, 645, 2342},
 User{102, "B", 23, 110, 323, 110},
 User{103, "C", 40, 125, 1120, 4577},
-
 User{104, "D", 36, 45, 323, 1201},
 User{105, "D", 42, 45, 323, 1201},
 }
 ```
 ```
 type By func(user User) bool
-
 func (by By) Filter(s1 []User) []User {
 filtered := make([]User, 0)
 for _, ele := range s1 {
@@ -4260,48 +4301,42 @@ frequent := func(user User) bool {
 ```
 return user.visitDays > 100
 }
-
 //Liked User
 appreciated := func(user User) bool {
 return user.totalLikes > 500
 }
-
 // Large followers
 respected := func(user User) bool {
 return user.followers > 1000
 }
-
 // Matured User
 matured := func(user User) bool {
 return user.age > 35
-
 }
-
 frequentUsers := By(frequent).Filter(users)
 fmt.Println(frequentUsers)
-
 appreciatedUsers := By(appreciated).Filter(users)
 fmt.Println(appreciatedUsers)
-
 respectedUsers := By(respected).Filter(users)
 fmt.Println(respectedUsers)
-
 maturedUsers := By(matured).Filter(users)
 fmt.Println(maturedUsers)
+}
 ```
 
-}
+我们创建了一个名为 `User` 的结构体，包含字段并且我们有一个 `users` 变量，它是 `User` 的切片，已存储了五个用户值。`By` 是一个函数类型，它接受 `User` 类型作为参数并返回 `bool` 类型。`Filter` 是 `By` 函数类型上的一个方法，它接受 `User` 的切片作为参数并返回一个切片。`Filter` 方法根据在 `By` 类型函数的实际值上调用它来返回过滤后的用户。它遍历 `s1`（`User` 切片）并在 `if` 条件中调用 `by` 函数。`if` 条件中的 `by` 值根据其实现返回 `true` 或 `false`。`main` 函数为 `By` 函数类型定义了四个值，即，并且所有这些值都有其对 `By` 函数类型的实现。`frequent` 函数如果访问总数超过 `100` 则返回 `true`。`appreciated` 函数如果点赞总数超过则返回 `true`。`respected` 函数如果关注者总数超过则返回 `true`。`matured` 函数如果年龄超过则返回 `true`
 
-我们创建了一个名为 User 的结构体，包含字段并且我们有一个 users 变量，它是 User 的切片，已存储了五个用户值。By 是一个函数类型，它接受 User 类型作为参数并返回 bool 类型。Filter 是 By 函数类型上的一个方法，它接受 User 的切片作为参数并返回一个切片。Filter 方法根据在 By 类型函数的实际值上调用它来返回过滤后的用户。它遍历 s1（User 切片）并在 if 条件中调用 by 函数。if 条件中的 by 值根据其实现返回 true 或 false。main 函数为 By 函数类型定义了四个值，即，并且所有这些值都有其对 By 函数类型的实现。frequent 函数如果访问总数超过 100 则返回 true。appreciated 函数如果点赞总数超过则返回 true。respected 函数如果关注者总数超过则返回 true。matured 函数如果年龄超过则返回 true
+所有函数值在调用 `Filter` 方法之前都会被转换为 `By` 类型。因此，结论是 `Filter` 的功能被重用了。一个过滤功能可以应用于不同类型的过滤器，因此它被重用了。我们不必为不同类型的条件重写或重复过滤函数。
 
-所有函数值在调用 Filter 方法之前都会被转换为 By 类型。因此，结论是 Filter 的功能被重用了。一个过滤功能可以应用于不同类型的过滤器，因此它被重用了。我们不必为不同类型的条件重写或重复过滤函数。
+## 8.4 嵌入类型的方法
 
-### 8.4 嵌入类型的方法
-
-继承是 OOP 最重要的支柱之一，但 Go 没有继承（IS-A），即没有父子关系。我们可以通过使用嵌入（HAS-A）来实现类似的功能。我们需要将一个类型嵌入到另一个类型中而不指定变量名，如下所示：
+继承是 `OOP` 最重要的支柱之一，但 `Go` 没有继承（`IS-A`），即没有父子关系。我们可以通过使用嵌入（`HAS-A`）来实现类似的功能。我们需要将一个类型嵌入到另一个类型中而不指定变量名，如下所示：
 
 #### 程序 8.12
 ```
+
+
+
 ```go
 package main
 
@@ -4319,33 +4354,28 @@ func (p Person) getFullName() string {
 
 type Student struct {
 	Person
-```
-```
-```
-marks []float32
+	marks []float32
 }
 
 func (s Student) getTotalMarks() (total float32) {
-for _, val := range s.marks {
-total += val
-}
-return
+	for _, val := range s.marks {
+		total += val
+	}
+	return
 }
 
 func main() {
-p := Person{101, "Prithvi", "Singh"}
-
-marks := []float32{10.2, 23.3, 19.5}
-s := Student{p, marks}
-fmt.Println(s.getFullName())
-fmt.Println(s.getTotalMarks())
+	p := Person{101, "Prithvi", "Singh"}
+	marks := []float32{10.2, 23.3, 19.5}
+	s := Student{p, marks}
+	fmt.Println(s.getFullName())
+	fmt.Println(s.getTotalMarks())
 }
 ```
 
-我们声明了 Person 结构体，包含字段并且 Person 结构体有一个方法 getFullName，它通过组合 firstName 和返回全名。我们声明了另一个结构体，即 Student，包含字段 marks 和方法。Person 被嵌入到。请注意，这里我们没有为 Person 定义变量名。在 main 函数中，我们为 Student 类型声明了值 s。请注意，这里我们正在 Student 的变量上调用 getFullName() 方法。像继承一样，它可以直接在 Student 类型中使用。这称为方法
+我们声明了 `Person` 结构体，包含字段并且 `Person` 结构体有一个方法 `getFullName`，它通过组合 `firstName` 和返回全名。我们声明了另一个结构体，即 `Student`，包含字段 `marks` 和方法。`Person` 被嵌入到。请注意，这里我们没有为 `Person` 定义变量名。在 `main()` 函数中，我们为 `Student` 类型声明了值 `s`。请注意，这里我们正在 `Student` 的变量上调用 `getFullName()` 方法。像继承一样，它可以直接在 `Student` 类型中使用。这称为方法
 
-
-我们还可以通过指定 `s.Person.getFullName()` 在 Student 类型上调用 getFullName() 方法：
+我们还可以通过指定 `s.Person.getFullName()` 在 `Student` 类型上调用 `getFullName()` 方法：
 
 ```go
 s.Person.getFullName()
@@ -4365,7 +4395,7 @@ s.Person.getFullName()
 
 **图 8.2：** *方法解析过程中的歧义*
 
-在*程序*中，方法 m1() 在类型 B 和 C 中都有定义。B 和 C 都被嵌入到 A 中。当在 A 类型的变量上调用 m1() 时，main() 函数中会出现编译错误。这是因为编译器在 A 中找不到 m1() 方法时，尝试在嵌入类型（即 B 和 C）中查找，而 m1() 在 B 和 C 中都有定义。
+在*程序*中，方法 `m1()` 在类型 `B` 和 `C` 中都有定义。`B` 和 `C` 都被嵌入到 `A` 中。当在 `A` 类型的变量上调用 `m1()` 时，`main()` 函数中会出现编译错误。这是因为编译器在 `A` 中找不到 `m1()` 方法时，尝试在嵌入类型（即 `B` 和 `C`）中查找，而 `m1()` 在 `B` 和 `C` 中都有定义。
 
 **程序 8.13**
 
@@ -4373,22 +4403,25 @@ s.Person.getFullName()
 package main
 
 type A struct {
-B
-C
+	B
+	C
 }
 
 type B struct {
 }
+
 func (b B) m1() {
 }
 
 type C struct {
 }
+
 func (c C) m1() {
 }
+
 func main() {
-a := A{}
-a.m1()
+	a := A{}
+	a.m1()
 }
 ```
 
@@ -4400,13 +4433,13 @@ a.m1()
 ./main.go:20:3: ambiguous selector a.m1
 ```
 
-可以通过在调用方法时指定嵌入类型来解决这个问题。如果我们想调用 C 的 m1 方法，可以在变量 a 后面用点运算符指定 C，然后再写方法名。示例如下：
+可以通过在调用方法时指定嵌入类型来解决这个问题。如果我们想调用 `C` 的 `m1()` 方法，可以在变量 `a` 后面用点运算符指定 `C`，然后再写方法名。示例如下：
 
 ```go
 a.C.m1()
 ```
 
-当同一个方法定义在嵌入类型中但在不同层级时，不会出现任何问题。如果 B 和 C 嵌入在 A 中，D 嵌入在 B 中，m1() 方法定义在 C 和 D 中，而它们位于不同层级。这种情况下没有歧义。当在 A 类型的变量上调用 m1() 时，它总是会调用 C 的 m1()。
+当同一个方法定义在嵌入类型中但在不同层级时，不会出现任何问题。如果 `B` 和 `C` 嵌入在 `A` 中，`D` 嵌入在 `B` 中，`m1()` 方法定义在 `C` 和 `D` 中，而它们位于不同层级。这种情况下没有歧义。当在 `A` 类型的变量上调用 `m1()` 时，它总是会调用 `C` 的 `m1()`。
 
 ![](img/e1030b71ae44b81457dd2ae7b5008eac_273_0.png)
 
@@ -4416,38 +4449,39 @@ a.C.m1()
 
 ```go
 package main
+
 import "fmt"
 
 type A struct {
-B
-C
+	B
+	C
 }
 
 type B struct {
-D
+	D
 }
 
 type D struct {
 }
 
 func (d D) m1() {
-fmt.Println("m1 of D")
-
+	fmt.Println("m1 of D")
 }
 
 type C struct {
 }
 
 func (c C) m1() {
-fmt.Println("m1 of C")
+	fmt.Println("m1 of C")
 }
+
 func main() {
-a := A{}
-a.m1()
+	a := A{}
+	a.m1()
 }
 ```
 
-如果我们想调用 D 的方法，可以显式指定：
+如果我们想调用 `D` 的方法，可以显式指定：
 
 ```go
 a.B.D.m1()
@@ -4455,7 +4489,7 @@ a.B.D.m1()
 
 #### 8.4.2 不允许多态
 
-嵌入类型不允许多态。多态可以通过接口实现；我们将在下一章介绍接口。以 Person 和 Student 为例。Person 被嵌入到 Student 中。如果一个函数期望接收 Person 作为参数，我们不能传入 Student 的值。
+嵌入类型不允许多态。多态可以通过接口实现；我们将在下一章介绍接口。以 `Person` 和 `Student` 为例。`Person` 被嵌入到 `Student` 中。如果一个函数期望接收 `Person` 作为参数，我们不能传入 `Student` 的值。
 
 **程序 8.15**
 
@@ -4463,18 +4497,21 @@ a.B.D.m1()
 package main
 
 type Person struct {
-    id int
-    name string
+	id   int
+	name string
 }
+
 type Student struct {
-    Person
-    marks []float32
+	Person
+	marks []float32
 }
+
 func processPerson(person Person) {
 }
+
 func main() {
-    s := Student{Person{101, "Prithvi"}, []float32{9.3, 3.4, 6.7}}
-    processPerson(s)
+	s := Student{Person{101, "Prithvi"}, []float32{9.3, 3.4, 6.7}}
+	processPerson(s)
 }
 ```
 
@@ -4487,9 +4524,9 @@ func main() {
 argument to processPerson
 ```
 
-在程序 8.15 中，我们定义了带有 id 和 name 字段的 Person，以及以 Person 为嵌入字段并带有 marks 的 Student。函数 processPerson() 期望接收一个 Person 参数。我们创建了一个 Student 类型的值，并尝试将其传递给 processPerson() 函数。结果产生了编译错误，提示我们不能在 processPerson 的参数中将 Student 类型当作 Person 类型使用。
+在程序 8.15 中，我们定义了带有 `id` 和 `name` 字段的 `Person`，以及以 `Person` 为嵌入字段并带有 `marks` 的 `Student`。函数 `processPerson()` 期望接收一个 `Person` 参数。我们创建了一个 `Student` 类型的值，并尝试将其传递给 `processPerson()` 函数。结果产生了编译错误，提示我们不能在 `processPerson()` 的参数中将 `Student` 类型当作 `Person` 类型使用。
 
-我们可以传入 Student 值中作为其一部分的 Person 值来调用 processPerson() 函数：
+我们可以传入 `Student` 值中作为其一部分的 `Person` 值来调用 `processPerson()` 函数：
 
 ```go
 processPerson(s.Person)
@@ -4525,29 +4562,33 @@ Go 中也不允许方法重载。如果我们尝试进行方法重载，编译�
 
 ```go
 package main
+
 import "fmt"
+
 type person struct {
-id int
-name string
+	id   int
+	name string
 }
+
 func (p person) setName(name string) {
-p.name = name
+	p.name = name
 }
+
 func main() {
-p := person{101, "Xyz"}
-p.setName("Abc")
-fmt.Println(p)
+	p := person{101, "Xyz"}
+	p.setName("Abc")
+	fmt.Println(p)
 }
 ```
 
 判断正误：
 
 - 我们可以在 Golang 中创建重载方法。
-
 - 指针接收者方法只能在声明该方法的类型的地址上调用。
 
 ```go
 }
+
 func main() {
 	b := B{}
 	b.m1()
@@ -4575,8 +4616,8 @@ func main() {
 接口的语法类似于结构体。语法如下：
 
 ```go
-type InterfaceName interface{
-MethodName(argument argumentType) returnType
+type InterfaceName interface {
+	MethodName(argument argumentType) returnType
 }
 ```
 
@@ -4586,26 +4627,22 @@ MethodName(argument argumentType) returnType
 
 ```go
 type Executor interface {
-Execute()
+	Execute()
 }
 ```
 
-接口名为 Executor。它有一个方法，即 Execute。该方法没有参数，也没有返回值。如果接口只有一个方法，那么按照接口命名约定，接口名应该是方法名加 er。在我们的示例中，方法名是 Execute。因此，通过在方法名末尾附加 r，接口名就是 Executor。这不是硬性规则，而是一种约定。
+接口名为 `Executor`。它有一个方法，即 `Execute`。该方法没有参数，也没有返回值。如果接口只有一个方法，那么按照接口命名约定，接口名应该是方法名加 er。在我们的示例中，方法名是 `Execute`。因此，通过在方法名末尾附加 r，接口名就是 `Executor`。这不是硬性规则，而是一种约定。
 
-接口中可以有多个方法。所有方法可以有不同签名。下面给出的代码定义了一个名为 Connection 的接口。从接口的定义可以看出，任何可以连接到外部资源（如数据库、套接字等）的类型都可以实现它。它有两个方法，即 Open 和 Close。Open() 方法期望一个用于连接的字符串 URI。它返回两个值：session 和 error。Close() 方法不期望任何参数，但返回 error 类型。
+接口中可以有多个方法。所有方法可以有不同签名。下面给出的代码定义了一个名为 `Connection` 的接口。从接口的定义可以看出，任何可以连接到外部资源（如数据库、套接字等）的类型都可以实现它。它有两个方法，即 `Open` 和 `Close`。`Open()` 方法期望一个用于连接的字符串 URI。它返回两个值：`session` 和 `error`。`Close()` 方法不期望任何参数，但返回 `error` 类型。
 
 **程序 9.2**
 
 ```go
 type Connection interface {
-Open(uri string) (Session, error)
-Close() error
+	Open(uri string) (Session, error)
+	Close() error
 }
 ```
-
-
-
-
 
 ### 9.2 实现接口
 
@@ -4642,13 +4679,13 @@ func main() {
 Executing thread
 ```
 
-上面代码中的 `Thread` 类型隐式实现了 `Executor` 接口。与 Java 不同，我们没有使用任何特定的关键字来实现接口。有什么证据能证明 `Thread` 实现了 `Executor` 接口？答案就在 main 函数中。我们创建了一个 `Executor` 的多态对象。我们定义了一个 `Executor` 类型的变量，即 `exe`，并将一个 `Thread` 对象赋值给它。
+上面代码中的 `Thread` 类型隐式实现了 `Executor` 接口。与 Java 不同，我们没有使用任何特定的关键字来实现接口。有什么证据能证明 `Thread` 实现了 `Executor` 接口？答案就在 `main()` 函数中。我们创建了一个 `Executor` 的多态对象。我们定义了一个 `Executor` 类型的变量，即 `exe`，并将一个 `Thread` 对象赋值给它。
 
-如果在 `Thread` 类型中没有定义 `Execute()` 方法，那么在创建多态对象时，main 函数中就会得到一个编译错误。
+如果在 `Thread` 类型中没有定义 `Execute()` 方法，那么在创建多态对象时，`main()` 函数中就会得到一个编译错误。
 
 `cannot use (Thread literal) (value of type Thread) as Executor value in the assignment: missing method Execute`
 
-正如我们在程序 9.3 中看到的，我们可以创建一个接口变量，并为它赋予一个实际的实现值。如果我们不给接口变量赋予实际的实现值，这个接口变量将是无用的，因为该变量会被赋予 `nil`。如果我们对该变量调用方法，代码将会 panic。如果我们修改上述代码并移除 `Thread` 到 `exe` 的赋值，那么这段代码将会 panic，并产生以下错误信息：
+正如我们在程序 9.3 中看到的，我们可以创建一个接口变量，并为它赋予一个实际的实现值。如果我们不给接口变量赋予实际的实现值，这个接口变量将是无用的，因为该变量会被赋予 `nil`。如果我们对该变量调用方法，代码将会 `panic`。如果我们修改上述代码并移除 `Thread` 到 `exe` 的赋值，那么这段代码将会 `panic`，并产生以下错误信息：
 
 **错误 9.1：**
 
@@ -4661,7 +4698,7 @@ main.main()
 exit status 2
 ```
 
-要实现任意接口，你需要在类型中定义/实现该接口的所有方法。在下面代码的 main 函数中，我们会得到一个编译错误，因为我们在 `DbConnection` 中只定义了 `Connection` 的 `Close()` 方法，而缺少 `Open()` 方法。
+要实现任意接口，你需要在类型中定义/实现该接口的所有方法。在下面代码的 `main()` 函数中，我们会得到一个编译错误，因为我们在 `DbConnection` 中只定义了 `Connection` 的 `Close()` 方法，而缺少 `Open()` 方法。
 
 **程序 9.4**
 
@@ -4703,9 +4740,9 @@ func main() {
 
 如果你有 Java 背景，你可能会疑惑为什么我们要采用接口的隐式实现。你可能会认为显式实现总是更合适，因为通过查看类型就能清楚它实现了哪个接口。但隐式实现有其好处：
 
--   你可能希望在一个来自第三方库的类型上实现你的自定义接口。你无法访问其代码，因此不能修改代码。在这种情况下，隐式实现是有益的。如果该类型具有能够满足你接口的方法，那么它就会隐式地实现该接口。
+- 你可能希望在一个来自第三方库的类型上实现你的自定义接口。你无法访问其代码，因此不能修改代码。在这种情况下，隐式实现是有益的。如果该类型具有能够满足你接口的方法，那么它就会隐式地实现该接口。
 
--   如果你想创建一个方法很少的新接口，并且想在许多类型中实现该接口，你不需要在所有地方修改代码。
+- 如果你想创建一个方法很少的新接口，并且想在许多类型中实现该接口，你不需要在所有地方修改代码。
 
 **程序 9.5**
 
@@ -4758,7 +4795,10 @@ Pigeon is flying on normal height
 Penguin cannot fly
 ```
 
-我们创建了一个名为 `Bird` 的接口。`Bird` 接口有一个方法 `Fly()`。我们创建了三个结构体 `Eagle`、`Pigeon` 和 `Penguin`，它们都通过覆写 `Fly()` 方法实现了 `Bird` 接口。最重要的是，我们定义了一个函数 `flyNow(b Bird)`。`flyNow` 函数期望一个 Bird 作为参数，并在 `Bird` 类型的变量上调用 `Fly` 方法。`flyNow` 函数并不知道会传入哪一个 Bird 的实现；它只知道该实现会有一个 `Fly` 方法。我们可以传入任何实现了 Bird 接口的类型的对象。在 `main()` 函数中，我们调用了 `flyNow` 函数三次，并分别传入了 `Eagle{}`、`Pigeon{}` 和 `Penguin{}` 的值。当 `flyNow` 函数调用 `Fly` 方法时，实际调用会进入 `Eagle`、`Pigeon` 或 `Penguin` 的接收者。
+
+
+
+我们创建了一个名为 `Bird` 的接口。`Bird` 接口有一个方法 `Fly()`。我们创建了三个结构体 `Eagle`、`Pigeon` 和 `Penguin`，它们都通过覆写 `Fly()` 方法实现了 `Bird` 接口。最重要的是，我们定义了一个函数 `flyNow(b Bird)`。`flyNow` 函数期望一个 `Bird` 作为参数，并在 `Bird` 类型的变量上调用 `Fly` 方法。`flyNow` 函数并不知道会传入哪一个 `Bird` 的实现；它只知道该实现会有一个 `Fly` 方法。我们可以传入任何实现了 `Bird` 接口的类型的对象。在 `main()` 函数中，我们调用了 `flyNow` 函数三次，并分别传入了 `Eagle{}`、`Pigeon{}` 和 `Penguin{}` 的值。当 `flyNow` 函数调用 `Fly` 方法时，实际调用会进入 `Eagle`、`Pigeon` 或 `Penguin` 的接收者。
 
 ### 9.3 空接口
 
@@ -4803,7 +4843,7 @@ a
 {101 Shyam}
 ```
 
-我们创建了一个名为 `MyEmpty` 的空接口。接口 `MyEmpty` 没有任何方法。我们还创建了一个 `Student` 结构体，其字段为 `id` 和 `name`。在 main 函数中，我们创建了一个名为 `empty` 的 `MyEmpty` 接口变量。我们向该变量赋予了不同类型的值，如 `10`、`"a"`、`22.3` 和 `Student{101, "Shyam"}`，并打印了这些值。
+我们创建了一个名为 `MyEmpty` 的空接口。接口 `MyEmpty` 没有任何方法。我们还创建了一个 `Student` 结构体，其字段为 `id` 和 `name`。在 `main` 函数中，我们创建了一个名为 `empty` 的 `MyEmpty` 接口变量。我们向该变量赋予了不同类型的值，如 `10`、`"a"`、`22.3` 和 `Student{101, "Shyam"}`，并打印了这些值。
 
 但是空接口有什么好处呢？我们通过查看标准库代码来理解它的好处。我们经常使用 `fmt` 包在控制台打印输出。你是否曾尝试理解 `fmt.Println()` 函数是如何工作的？为什么它允许我们传入任意值？让我们先看一下这个函数的签名：
 
@@ -4819,7 +4859,7 @@ func Println(a ...interface{}) (n int, err error) {
 
 方法集是使类型隐式实现接口的方法集合。到目前为止，我们已经看到，当一个类型定义了某个接口的所有方法时，该类型就会隐式地实现该接口的所有方法。但我们还没有看到方法应该是指针接收者方法还是值接收者方法。接口方法并不指定实现类型应该使用指针接收者还是值接收者。
 
-如果类型 T 具有（某个接口的）指针接收者方法，那么实现该接口的是 `*T`，而不是 `T`。我们可以将 T 的地址赋给接口变量。如果我们尝试将 T 的值赋给接口变量，就会得到一个编译错误。让我们通过下面的程序来理解这一点：
+如果类型 `T` 具有（某个接口的）指针接收者方法，那么实现该接口的是 `*T`，而不是 `T`。我们可以将 `T` 的地址赋给接口变量。如果我们尝试将 `T` 的值赋给接口变量，就会得到一个编译错误。让我们通过下面的程序来理解这一点：
 
 **程序 9.7**
 
@@ -4832,12 +4872,10 @@ type ltr interface {
 	m1()
 	m2()
 }
+
 type St struct {
 }
 ```
-
-
-
 
 #### 程序 9.7
 
@@ -4857,6 +4895,7 @@ type St struct {
 func (s *St) m1() {
     fmt.Println("In m1 of St")
 }
+
 func (s *St) m2() {
     fmt.Println("In m2 of St")
 }
@@ -4878,7 +4917,7 @@ func main() {
 St does not implement Itr (m1 method has pointer receiver)
 ```
 
-在程序 9.7 中，我们定义了一个接口 `Itr`。该接口有两个方法：`m1` 和 `m2`。我们定义了一个结构体类型 `St`。类型 `St` 通过使用指针接收器定义 `m1` 和 `m2` 方法来实现 `Itr` 接口。在 main 函数中，我们使用 `var` 关键字声明了一个 `Itr` 的变量，并将 `St` 的值赋给它。然后，我们在接口变量上调用了 `m1` 和 `m2` 方法。但运行此代码时，我们会得到编译错误。错误提示 `St` 未实现 `Itr`。出现此错误的原因是 `*St` 实现 `Itr` 接口，而不是 `St`。
+在程序 9.7 中，我们定义了一个接口 `Itr`。该接口有两个方法：`m1` 和 `m2`。我们定义了一个结构体类型 `St`。类型 `St` 通过使用指针接收器定义 `m1` 和 `m2` 方法来实现 `Itr` 接口。在 `main` 函数中，我们使用 `var` 关键字声明了一个 `Itr` 的变量，并将 `St` 的值赋给它。然后，我们在接口变量上调用了 `m1` 和 `m2` 方法。但运行此代码时，我们会得到编译错误。错误提示 `St` 未实现 `Itr`。出现此错误的原因是 `*St` 实现 `Itr` 接口，而不是 `St`。
 
 如果我们重新运行上述代码，将 `St` 的地址赋给变量 `i`，代码将正常工作。
 
@@ -4929,7 +4968,7 @@ func main() {
 **在 St 的 m1 中**  
 **在 St 的 m2 中**
 
-在上述代码中，我们通过使用值接收器定义 `m1` 和 `m2` 方法来实现 `Itr` 接口。在 main 函数中，我们尝试将 `St` 的值和地址都赋给一个接口变量，并且它工作正常。在此代码中我们不会得到编译错误。
+在上述代码中，我们通过使用值接收器定义 `m1` 和 `m2` 方法来实现 `Itr` 接口。在 `main` 函数中，我们尝试将 `St` 的值和地址都赋给一个接口变量，并且它工作正常。在此代码中我们不会得到编译错误。
 
 ### 方法集的结论
 
@@ -5132,9 +5171,7 @@ func main() {
 Executing thread
 ```
 
-在程序 9.13 中，我们创建了一个名为 `Process` 的结构体，其中接口变量 `exe` 作为字段。`exe` 字段是 `Executor` 接口的变量。`Thread` 结构体实现了 `Executor` 接口。在 main 函数中，我们创建了一个 `Process` 的变量，并为 `Executor` 字段传递了 `Thread` 值。我们在 `p` 变量的 `exe` 字段上调用了 `Execute` 方法。
-
-
+在程序 9.13 中，我们创建了一个名为 `Process` 的结构体，其中接口变量 `exe` 作为字段。`exe` 字段是 `Executor` 接口的变量。`Thread` 结构体实现了 `Executor` 接口。在 `main` 函数中，我们创建了一个 `Process` 的变量，并为 `Executor` 字段传递了 `Thread` 值。我们在 `p` 变量的 `exe` 字段上调用了 `Execute` 方法。
 
 ### 结论
 
@@ -5159,22 +5196,35 @@ package main
 import "fmt"
 
 type I interface {
-	m1()
+
+
+
+`m1()`
+
 }
 
-type T struct {
+type `T` struct {
+
 }
 
-func (t *T) m1() {
+func (`t` *`T`) `m1()` {
+
 	fmt.Println("M1 of T")
+
 }
 
 func main() {
+
 	var i I
+
 	t := T{}
+
 	i = t
+
 	i.m1()
+
 }
+
 ```
 
 - M1 of T
@@ -5197,6 +5247,7 @@ type T struct {
 func (t *T) m1() {
     fmt.Println("M1 of T")
 }
+
 func (t *T) m2() {
     fmt.Println("M2 of T")
 }
@@ -5213,7 +5264,7 @@ func main() {
 - M1 of T
 - 编译错误
 
-stringer 接口是什么？
+`stringer` 接口是什么？
 
 - 它将每个对象转换为字符串。
 - 它是一个空接口，每个类型默认都实现此接口。
@@ -5277,7 +5328,7 @@ Value of x: 15
 Address of x: 0xc000014058
 ```
 
-> **注意：** x 的内存地址在每次运行中可能不同。
+> **注意：** `x` 的内存地址在每次运行中可能不同。
 
 变量 `a` 被称为指针变量，因为它保存了变量的内存地址。指针变量指向的值可以使用星号 (`*`) 访问。使用 `*` 访问指针的底层值称为 *解引用*。程序 10.2 将打印...
 
@@ -5291,7 +5342,6 @@ import "fmt"
 func main() {
     x := 15
     a := &x
-
     fmt.Println("Value at address of x:", *a)
 }
 ```
@@ -5484,9 +5534,6 @@ false
 
 相等操作符 `==` 或 `!=` 可用于检查特定指针变量是否指向内存地址或指向 `nil`，如图所示。
 
-
-
-
 #### 10.3.2 算术运算符
 
 那些具有 C/C++ 背景的人会期望指针上支持算术运算符。但为了简单起见，Go 语言不允许在指针上使用算术运算符。指针上的算术运算符可能会导致非法地址，这是非常危险的。
@@ -5526,7 +5573,7 @@ func main() {
 1
 ```
 
-在**程序 10.9**中，我们使用星号声明了一个指向数组变量的指针。我们声明了 `[5]int` 类型的数组，即 `[5]int{1, 2, 3, 4, 5}`。然后，我们将 arr2 的地址赋值给了 arr1。我们打印了 arr1 的第 0 个元素。从输出中可以看到，arr1 的第 0 个元素是 1，因为我们将 arr2 赋值给了 arr1，而 arr2 在数组第 0 个位置的值是 1。请注意，我们使用了星号来访问指针数组上的值，即 `(*arr1)[0]`。
+在**程序 10.9**中，我们使用星号声明了一个指向数组变量的指针。我们声明了 `[5]int` 类型的数组，即 `[5]int{1, 2, 3, 4, 5}`。然后，我们将 `arr2` 的地址赋值给了 `arr1`。我们打印了 `arr1` 的第 0 个元素。从输出中可以看到，`arr1` 的第 0 个元素是 1，因为我们将 `arr2` 赋值给了 `arr1`，而 `arr2` 在数组第 0 个位置的值是 1。请注意，我们使用了星号来访问指针数组上的值，即 `(*arr1)[0]`。
 
 访问指针数组上的元素并不一定要使用星号。我们可以像访问数组变量一样访问指针数组的元素。这样看起来非常清晰。**程序 10.10** 在没有使用星号的情况下访问了指针数组元素：
 
@@ -5559,9 +5606,7 @@ fmt.Println(arr1[0])
 
 ```
 package main
-
 import "fmt"
-
 func main() {
 var arr1 *[5]int
 fmt.Println(arr1[0])
@@ -5575,13 +5620,11 @@ fmt.Println(arr1[0])
 ```
 panic: runtime error: invalid memory address or nil pointer dereference
 [signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0x109d09f]
-
 goroutine 1 [running]:
-```
-
 main.main()
 /Users/prithvipalsingh/go/src/workspace/main.go:7 +0x1f
 exit status 2
+```
 
 在程序 10.11 中，我们声明了指针数组，但没有分配任何数组的地址。当我们运行时，它会发生 panic，因为我们试图获取指针数组的第 0 个元素，但不存在底层数组。
 
@@ -5615,15 +5658,12 @@ arr1 的第 0 个元素：1
 
 ```
 package main
-
 import "fmt"
-
 func main() {
 arr := [5]int{10, 20, 30, 40, 50}
 modify(&arr)
 fmt.Println("Array Elements", arr)
 }
-
 func modify(arr *[5]int) {
 arr[0] = 100
 }
@@ -5644,17 +5684,14 @@ arr[0] = 100
 ```
 package main
 import "fmt"
-
 func main() {
 arr := [5]int{10, 20, 30, 40, 50}
 modify(arr[:])
 ```
-
 ```
 fmt.Println("Slice Elements", arr)
 }
 ```
-
 ```
 func modify(arr []int) {
 arr[0] = 100
@@ -5677,16 +5714,13 @@ arr[0] = 100
 
 ```
 package main
-
 import "fmt"
-
 func main() {
  s1 := []int{10, 20, 30, 40, 50}
  modify(s1)
  fmt.Println("Slice Elements", s1)
 }
 ```
-
 ```
 func modify(s1 []int) {
 s1[0] = 100
@@ -5694,6 +5728,8 @@ s1 = append(s1, 60)
 s1 = append(s1, 70)
 }
 ```
+
+
 
 上述程序的输出如下：
 
@@ -5705,11 +5741,9 @@ s1 = append(s1, 70)
 
 #### 程序 10.16
 
-```
+```go
 package main
 ```
-
-
 
 ```go
 package main
@@ -5717,15 +5751,15 @@ package main
 import "fmt"
 
 func main() {
-	s1 := []int{10, 20, 30, 40, 50}
-	modify(&s1)
-	fmt.Println("Slice Elements", s1)
+    s1 := []int{10, 20, 30, 40, 50}
+    modify(&s1)
+    fmt.Println("Slice Elements", s1)
 }
 
 func modify(s1 *[]int) {
-	(*s1)[0] = 100
-	*s1 = append(*s1, 60)
-	*s1 = append(*s1, 70)
+    (*s1)[0] = 100
+    *s1 = append(*s1, 60)
+    *s1 = append(*s1, 70)
 }
 ```
 
@@ -5749,17 +5783,17 @@ package main
 import "fmt"
 
 type person struct {
-	id int
-	name string
+    id int
+    name string
 }
 
 func main() {
-	p1 := person{101, "XYX"}
-	p2 := &p1
-	fmt.Println("Person *p2.id:", (*p2).id)
-	fmt.Println("Person p2.id:", p2.id)
-	p2.name = "ABC"
-	fmt.Println("Person p1:", p1)
+    p1 := person{101, "XYX"}
+    p2 := &p1
+    fmt.Println("Person *p2.id:", (*p2).id)
+    fmt.Println("Person p2.id:", p2.id)
+    p2.name = "ABC"
+    fmt.Println("Person p1:", p1)
 }
 ```
 
@@ -5773,7 +5807,7 @@ Person p1: {101 ABC}
 
 在程序 10.17 中，我们定义了一个名为 `person` 的结构体，包含 `id` 和 `name` 字段。在 `main` 函数中，我们创建了一个 person 结构体的对象，即 `p1`。我们创建了一个指向结构体变量的指针 `p2`，并将 `p1` 的地址赋值给它。我们有两个打印语句来打印 `p2` 变量的 `id`。第一个打印语句使用了星号，而第二个打印语句没有使用星号。两个打印语句输出相同的结果。在下一行中，我们修改了 `p2` 变量的 `name` 字段。由于 `p2` 保存着 `p1` 的地址，修改后的 `name` 字段在 `p1` 中得到了体现。
 
-指向结构体的指针也可以在结构体初始化时创建。我们可以在初始化结构体时使用与号（`&`）：
+指向结构体的指针也可以在结构体初始化时创建。我们可以在初始化结构体时使用与号 `&`：
 
 ```go
 p1 := &person{101, "XYX"}
@@ -5789,18 +5823,18 @@ package main
 import "fmt"
 
 type person struct {
-	id int
-	name string
+    id int
+    name string
 }
 
 func main() {
-	p1 := &person{101, "XYZ"}
-	modify(p1)
-	fmt.Println("Person p1:", p1)
+    p1 := &person{101, "XYZ"}
+    modify(p1)
+    fmt.Println("Person p1:", p1)
 }
 
 func modify(p1 *person) {
-	p1.name = "NewXYZ"
+    p1.name = "NewXYZ"
 }
 ```
 
@@ -5815,8 +5849,8 @@ Person p1: &{101 NewXYZ}
 ### 结论
 
 - 指针变量可以保存另一个变量的地址。
-- 可以使用与号（`&`）访问变量的内存地址。
-- 可以使用星号（`*`）访问地址处的值。
+- 可以使用与号 `&` 访问变量的内存地址。
+- 可以使用星号 `*` 访问地址处的值。
 - 可以使用 reflect 包来查找指针变量的类型。
 - 指针变量必须先被赋值为另一个变量的地址，才能访问指针变量的值；否则，代码会 panic。
 - `int` 变量的地址只能赋给 `int` 类型的指针变量。这同样适用于其他类型。
@@ -5834,18 +5868,18 @@ package main
 import "fmt"
 
 type person struct {
-	id int
-	name string
+    id int
+    name string
 }
 
 func main() {
-	p1 := &person{101, "XYX"}
-	modify(p1)
-	fmt.Println("Person p1:", *p1)
+    p1 := &person{101, "XYX"}
+    modify(p1)
+    fmt.Println("Person p1:", *p1)
 }
 
 func modify(p1 *person) {
-	p1 = &person{202, "ABC"}
+    p1 = &person{202, "ABC"}
 }
 ```
 
@@ -5860,10 +5894,10 @@ package main
 import "fmt"
 
 func main() {
-	var a *int
-	b := 10.3
-	a = &b
-	fmt.Println(*a)
+    var a *int
+    b := 10.3
+    a = &b
+    fmt.Println(*a)
 }
 ```
 
@@ -5879,8 +5913,8 @@ package main
 import "fmt"
 
 func main() {
-	var a *int
-	fmt.Println(*a)
+    var a *int
+    fmt.Println(*a)
 }
 ```
 
@@ -5909,12 +5943,13 @@ fmt.Println(x == y)
 
 ```go
 package main
+
 import "fmt"
 
 func main() {
-	a := 10
-	b := &a
-	fmt.Println(a == b)
+    a := 10
+    b := &a
+    fmt.Println(a == b)
 }
 ```
 
@@ -5946,23 +5981,23 @@ Golang 中的并发程序称为 goroutine。多个 goroutine 可以并行运行�
 package main
 
 import (
-	"fmt"
-	"time"
+    "fmt"
+    "time"
 )
 
 func main() {
-	go f1("F1")
-	go f1("F2")
-	fmt.Println("Sleeping for 5 second")
-	time.Sleep(5 * time.Second)
-	fmt.Println("Main completed")
+    go f1("F1")
+    go f1("F2")
+    fmt.Println("Sleeping for 5 second")
+    time.Sleep(5 * time.Second)
+    fmt.Println("Main completed")
 }
 
 func f1(name string) {
-	for index := 0; index < 10; index++ {
-		fmt.Printf("%v: index %d\n", name, index)
-		time.Sleep(1 * time.Second)
-	}
+    for index := 0; index < 10; index++ {
+        fmt.Printf("%v: index %d\n", name, index)
+        time.Sleep(1 * time.Second)
+    }
 }
 ```
 
@@ -5972,7 +6007,6 @@ func f1(name string) {
 F1: index 0
 F2: index 0
 Sleeping for 5 second
-
 F2: index 1
 F1: index 1
 F2: index 2
@@ -5992,21 +6026,17 @@ Main completed
 
 请注意上述代码的输出。goroutine 并没有打印出所有迭代的值。它只打印到两个 goroutine 的索引 4，然后程序就结束了，而我们编写的 `for` 循环是从 0 到 9 进行打印。这是因为每次迭代休眠 1 秒。`for` 循环迭代 10 次，因此总休眠时间为 10 秒。但 `main` 函数只休眠了 5 秒。所以当主函数结束时，它不会等待子 goroutine 完成。它会在主 goroutine 结束时终止子 goroutine。同样，输出是不可预测的，你运行这个程序时可能会得到不同的输出。
 
-
-
-
-
 #### 11.1.2 WaitGroup
 
 在上一节中，我们使用 Sleep 函数来等待子 goroutine 结束。但使用 Sleep 函数等待子 goroutine 结束并不是一种好的做法。我们可以使用 sync 包中的 WaitGroup 来等待子 goroutine 结束。
 
-sync.WaitGroup 是一个结构体类型。它有三个有用的方法：
+`sync.WaitGroup` 是一个结构体类型。它有三个有用的方法：
 
-Add 方法向计数器添加一个整数。这个整数是一个计数，表示 main 函数将等待多少个 goroutine 完成。
+`Add` 方法向计数器添加一个整数。这个整数是一个计数，表示 main 函数将等待多少个 goroutine 完成。
 
-Done 方法减少在 Add 函数中添加的计数。我们应该在 goroutine 结束时调用它。
+`Done` 方法减少在 `Add` 函数中添加的计数。我们应该在 goroutine 结束时调用它。
 
-Wait 方法等待所有 goroutine 完成。当计数达到 0 时，等待结束。
+`Wait` 方法等待所有 goroutine 完成。当计数达到 0 时，等待结束。
 
 让我们看看下面的程序：
 
@@ -6025,7 +6055,6 @@ func main() {
 var wg sync.WaitGroup
 wg.Add(2)
 go f1("F1", &wg)
-
 go f1("F2", &wg)
 fmt.Println("Main: Waiting for Goroutines to finish")
 wg.Wait()
@@ -6066,13 +6095,13 @@ F2: index 9
 F1: index 9
 Main completed
 
-程序 11.2 与程序 11.1 几乎相同。唯一的区别是，我们定义了一个 sync.WaitGroup 类型的变量 wg。我们调用了 Add 方法并传入了参数 2。我们把 wg 变量的地址传给了 goroutine。我们以 goroutine 的方式两次调用了同一个函数。我们在函数末尾对 wg 变量调用了 Done 函数，表示该 goroutine 已执行完毕。我们在 main 函数末尾调用了 Wait 方法。
+程序 11.2 与程序 11.1 几乎相同。唯一的区别是，我们定义了一个 `sync.WaitGroup` 类型的变量 `wg`。我们调用了 `Add` 方法并传入了参数 2。我们把 `wg` 变量的地址传给了 goroutine。我们以 goroutine 的方式两次调用了同一个函数。我们在函数末尾对 `wg` 变量调用了 `Done` 函数，表示该 goroutine 已执行完毕。我们在 main 函数末尾调用了 `Wait` 方法。
 
-如果所有 goroutine 都已完成，但计数尚未达到 0，Wait 方法就会发生死锁。因此，代码会在调用 Wait 方法时 panic。请把这个当作练习试一下。
+如果所有 goroutine 都已完成，但计数尚未达到 0，`Wait` 方法就会发生死锁。因此，代码会在调用 `Wait` 方法时 panic。请把这个当作练习试一下。
 
 #### 11.1.3 互斥锁
 
-当多个 goroutine 更新同一个共享变量时，这种情况称为竞态条件。竞态条件会导致共享变量更新不一致。导致变量更新不一致的代码称为临界区。我们可以使用 sync.Mutex 结构体来锁定临界区，这样同一时刻只有一个 goroutine 能更新变量：
+当多个 goroutine 更新同一个共享变量时，这种情况称为竞态条件。竞态条件会导致共享变量更新不一致。导致变量更新不一致的代码称为临界区。我们可以使用 `sync.Mutex` 结构体来锁定临界区，这样同一时刻只有一个 goroutine 能更新变量：
 
 #### 程序 11.3
 
@@ -6083,7 +6112,9 @@ import (
 "fmt"
 "sync"
 )
+
 var amount = 1000
+
 func main() {
 var wg sync.WaitGroup
 wg.Add(100)
@@ -6102,7 +6133,7 @@ amount = amount - 1
 
 程序 11.3 的输出不可预测。预期输出是 900，但当你运行该程序时，会得到 900 到 1000 之间的值。
 
-我们将 withdraw 函数作为 100 个 goroutine 执行。每次 goroutine 调用，withdraw 函数都会将 amount 减去 1。amount 变量是一个共享变量，因此将 amount 减 1 是一个临界区。我们需要将递减语句包裹在互斥锁中。我们在程序 11.4 中完成了这一操作。
+我们将 `withdraw` 函数作为 100 个 goroutine 执行。每次 goroutine 调用，`withdraw` 函数都会将 `amount` 减去 1。`amount` 变量是一个共享变量，因此将 `amount` 减 1 是一个临界区。我们需要将递减语句包裹在互斥锁中。我们在程序 11.4 中完成了这一操作。
 
 #### 程序 11.4
 
@@ -6139,7 +6170,7 @@ m.Unlock()
 
 900
 
-我们在 main 方法中创建了一个 sync.Mutex 变量，并将其地址传给了 withdraw 函数。我们在递减语句之前调用 Lock，在它之后调用 Unlock，因此现在的递减操作是安全的。它总会给出相同的结果。
+我们在 main 方法中创建了一个 `sync.Mutex` 变量，并将其地址传给了 `withdraw` 函数。我们在递减语句之前调用 `Lock`，在它之后调用 `Unlock`，因此现在的递减操作是安全的。它总会给出相同的结果。
 
 互斥锁的一个缺点是：由于它会对临界区加锁，使其他 goroutine 无法访问，因此会降低程序的整体执行速度。
 
@@ -6149,29 +6180,40 @@ Go 标准库中提供了一些函数，我们可以使用这些函数来控制 g
 
 #### 程序 11.5
 
-```
+```go
 var wg sync.WaitGroup
 wg.Add(2)
 go f1("F1", &wg)
 go f1("F2", &wg)
 fmt.Println("Main: Waiting for Goroutines to finish")
 wg.Wait()
-fmt.Println("Main completed")
-
-}
-func f1(name string, wg *sync.WaitGroup) {
-for index := 0; index < 10; index++ {
-fmt.Printf("%v: index %d\n", name, index)
-}
-wg.Done()
-}
 ```
 
-程序 11.5 的输出不可预测，但它会并行运行。我们在 main 函数的第一行调用了 runtime.GOMAXPROCS。
+
+
+`fmt.Println("Main completed")`
+
+}
+
+func f1(name string, wg *sync.WaitGroup) {
+
+for index := 0; index < 10; index++ {
+
+fmt.Printf("%v: index %d\n", name, index)
+
+}
+
+wg.Done()
+
+}
+
+```
+
+程序 11.5 的输出不可预测，但它会并行运行。我们在 `main` 函数的第一行调用了 `runtime.GOMAXPROCS`。
 
 #### 11.2.2 Goexit 函数
 
-我们可以使用 Goexit 函数来停止 goroutine 的执行。Goexit 函数会停止调用它的 goroutine。
+我们可以使用 `Goexit` 函数来停止 goroutine 的执行。`Goexit` 函数会停止调用它的 goroutine。
 
 #### 程序 11.6
 
@@ -6192,6 +6234,7 @@ func main() {
     wg.Wait()
     fmt.Println("Main completed")
 }
+
 func f1(name string, wg *sync.WaitGroup) {
     defer wg.Done()
     for index := 0; index < 10; index++ {
@@ -6213,51 +6256,51 @@ F1: index 3
 F1: index 4
 Main completed
 
-在程序 11.6 中，我们将 f1 函数作为一个 goroutine 执行。f1 函数有一个从 0 到 9 的 for 循环。在 for 循环中，我们设置了一个条件：如果 index 的值为 5，就调用 Goexit 函数。因此，for 循环从 index 0 执行到 index 5 后退出，并打印出 0 到 4。main 函数会一直等待，直到 f1 函数完成。
+在程序 11.6 中，我们将 `f1` 函数作为一个 goroutine 执行。`f1` 函数有一个从 0 到 9 的 `for` 循环。在 `for` 循环中，我们设置了一个条件：如果 `index` 的值为 5，就调用 `Goexit` 函数。因此，`for` 循环从 `index` 0 执行到 `index` 5 后退出，并打印出 0 到 4。`main` 函数会一直等待，直到 `f1` 函数完成。
 
 ### 11.3 *通道*
 
-Channel 是 Golang 中的一种类型，两个 goroutine 可以通过它进行通信。一个 goroutine 可以发送数据，另一个 goroutine 可以接收数据。它就像一条管道。Golang 中的 channel 引入了一种新的并发方式。使用 channel 实现并发时，遵循的原则如下：
+`Channel` 是 Golang 中的一种类型，两个 goroutine 可以通过它进行通信。一个 goroutine 可以发送数据，另一个 goroutine 可以接收数据。它就像一条管道。Golang 中的 `channel` 引入了一种新的并发方式。使用 `channel` 实现并发时，遵循的原则如下：
 
 > *不要通过共享内存来通信；而应该通过通信来共享内存。*
 
-我们在[11.1.3 节]中已经看到过：我们把 amount 作为共享变量，多个 goroutine 同时访问它。Golang 并不鼓励以这种方式实现并发。它强烈主张：*不要通过共享来通信*。它建议我们在需要通信的地方使用 channel。
+我们在[11.1.3 节]中已经看到过：我们把 `amount` 作为共享变量，多个 goroutine 同时访问它。Golang 并不鼓励以这种方式实现并发。它强烈主张：*不要通过共享来通信*。它建议我们在需要通信的地方使用 `channel`。
 
 #### 11.3.1 简介
 
-内置函数 make 可以用来声明 channel。
+内置函数 `make` 可以用来声明 `channel`。
 
 ```
 make(chan Type, size)
 ```
 
-chan 关键字用于声明 channel。
+`chan` 关键字用于声明 `channel`。
 
-类型可以是任意有效类型，channel 将保存该类型的值。类型可以是基本数据类型，也可以是自定义类型。
+类型可以是任意有效类型，`channel` 将保存该类型的值。类型可以是基本数据类型，也可以是自定义类型。
 
-buffer 是一个可选值，默认值为 0。通过提供该值，我们可以声明一个带缓冲的 channel。本章后面将讨论带缓冲和不带缓冲的 channel。
+`buffer` 是一个可选值，默认值为 0。通过提供该值，我们可以声明一个带缓冲的 `channel`。本章后面将讨论带缓冲和不带缓冲的 `channel`。
 
-让我们声明一个可以容纳整数值的 channel。
+让我们声明一个可以容纳整数值的 `channel`。
 
 ```
 ch := make(chan int)
 ```
 
-`<-` 运算符用于向 channel 写入值或从 channel 读取值。
+`< -` 运算符用于向 `channel` 写入值或从 `channel` 读取值。
 
 ```
 ch <- 10
 ```
 
-上面的语句向 channel 写入 10。
+上面的语句向 `channel` 写入 10。
 
 ```
 a := <-ch
 ```
 
-上面的语句从 channel 读取值，并将其存储到变量 a 中。
+上面的语句从 `channel` 读取值，并将其存储到变量 `a` 中。
 
-下面我们把这些内容组合起来。我们将编写一个程序：定义一个 channel，一个 goroutine 向 channel 写入值，main 方法从 channel 读取这个值。
+下面我们把这些内容组合起来。我们将编写一个程序：定义一个 `channel`，一个 goroutine 向 `channel` 写入值，`main` 方法从 `channel` 读取这个值。
 
 #### 程序 11.7
 
@@ -6284,12 +6327,9 @@ ch <- 10
 
 10
 
+我们在 `main` 函数中定义了一个 `int` 类型的通道。我们调用 `writeVal` 函数作为 goroutine，并将通道变量传递给它。在 `main` 函数中，我们从通道中读取值，将其赋给变量并打印该值。请注意，`main` 函数中的读取操作将一直阻塞，直到 `writeVal` 函数向通道中写入数据。因此，`main` 函数将等待通道上有可用的值。
 
-
-
-我们在 main 函数中定义了一个 int 类型的通道。我们调用 writeVal 函数作为 goroutine，并将通道变量传递给它。在 main 函数中，我们从通道中读取值，将其赋给变量并打印该值。请注意，main 函数中的读取操作将一直阻塞，直到 writeVal 函数向通道中写入数据。因此，main 函数将等待通道上有可用的值。
-
-由于上述代码中的读写操作都是阻塞调用，如果 main 函数正在等待从通道读取，却不存在任何 goroutine，Go 运行时会将其判定为死锁，程序将发生 panic。这可以在程序 11.8 中看到。
+由于上述代码中的读写操作都是阻塞调用，如果 `main` 函数正在等待从通道读取，却不存在任何 goroutine，Go 运行时会将其判定为死锁，程序将发生 panic。这可以在程序 11.8 中看到。
 
 **程序 11.8**
 
@@ -6301,7 +6341,6 @@ import (
 )
 
 func main() {
-
 ch := make(chan int, 0)
 a := <-ch
 fmt.Println(a)
@@ -6312,7 +6351,6 @@ fmt.Println(a)
 
 ```text
 fatal error: all goroutines are asleep - deadlock!
-
 goroutine 1 [chan receive]:
 main.main()
 		/Users/prithvipalsingh/PRITHVI/Github/src/go-practice/main.go:9 +0x5b
@@ -6335,17 +6373,15 @@ exit status 2
 
 ```text
 panic: send on closed channel
-
 goroutine 19 [running]:
 main.writeVal(0xc000094060, 0xc000098000)
 /Users/prithvipalsingh/go/src/workspace/main.go:17 +0x37
 created by main.main
-
 /Users/prithvipalsingh/go/src/workspace/main.go:12 +0xa5
 exit status 2
 ```
 
-在程序 11.9 中，我们在创建通道之后将其关闭。我们将已关闭的通道传递给了 writeVal() 函数。当 writeVal 函数中执行发送操作时，程序会发生 panic，因为不允许对已关闭的通道执行发送/写入操作。我们在 main 函数中使用 WaitGroup 进行等待，因此在 writeVal goroutine 有机会启动之前，main 函数不会结束。
+在程序 11.9 中，我们在创建通道之后将其关闭。我们将已关闭的通道传递给了 `writeVal()` 函数。当 `writeVal` 函数中执行发送操作时，程序会发生 panic，因为不允许对已关闭的通道执行发送/写入操作。我们在 `main` 函数中使用 `WaitGroup` 进行等待，因此在 `writeVal` goroutine 有机会启动之前，`main` 函数不会结束。
 
 可以对已关闭的通道执行读取操作。当我们对已关闭的通道执行读取操作时，它总是返回零值。零值可能是通道中的有效值。我们可以区分从通道返回的零值究竟是通道中实际存在的零值，还是因为通道已关闭而导致的返回值。通道会返回两个值：第一个是值，第二个是检查通道是否已关闭的标志。当通道关闭时，我们会收到第二个值为 false：
 
@@ -6363,7 +6399,6 @@ ch := make(chan int)
 close(ch)
 val, ok := <-ch
 if !ok {
-
 fmt.Printf("Value %v is returned. the channel is closed\n", val)
 }
 }
@@ -6375,7 +6410,7 @@ fmt.Printf("Value %v is returned. the channel is closed\n", val)
 
 ##### 11.3.2.2 遍历通道
 
-我们可以在读取通道时遍历通道。遍历通道读取数据有两种方式。一种方式是使用通道返回的第二个值。我们可以使用无限循环进行遍历，并在第二个值为 false 时跳出循环。另一种方式是使用 range 子句。
+我们可以在读取通道时遍历通道。遍历通道读取数据有两种方式。一种方式是使用通道返回的第二个值。我们可以使用无限循环进行遍历，并在第二个值为 false 时跳出循环。另一种方式是使用 `range` 子句。
 
 程序 11.11 演示了第一种方式：
 
@@ -6387,7 +6422,6 @@ package main
 import "fmt"
 
 func main() {
-
 ch := make(chan int)
 go func() {
 for i := 0; i < 10; i++ {
@@ -6431,9 +6465,7 @@ package main
 import "fmt"
 
 func main() {
-
 ch := make(chan int)
-
 go func() {
 for i := 0; i < 10; i++ {
 ch <- i
@@ -6462,9 +6494,9 @@ fmt.Println(val)
 9
 ```
 
-我们对 for 循环进行了重构。我们在 for 循环的初始化部分读取了值和 ok。在条件部分检查 ok 变量的值，并在后置条件中再次读取值和 ok。
+我们对 `for` 循环进行了重构。我们在 `for` 循环的初始化部分读取了值和 `ok`。在条件部分检查 `ok` 变量的值，并在后置条件中再次读取值和 `ok`。
 
-第二种方式是使用 range 子句。这是最好的方式，因为我们不需要条件，当通道被关闭且通道中的所有值都已被读取时，range 子句会自动结束：
+第二种方式是使用 `range` 子句。这是最好的方式，因为我们不需要条件，当通道被关闭且通道中的所有值都已被读取时，`range` 子句会自动结束：
 
 **程序 11.13**
 
@@ -6474,9 +6506,7 @@ package main
 import "fmt"
 
 func main() {
-
 ch := make(chan int)
-
 go func() {
 for i := 0; i < 10; i++ {
 ch <- i
@@ -6486,7 +6516,6 @@ close(ch)
 
 for val := range ch {
 fmt.Println(val)
-
 }
 }
 ```
@@ -6526,7 +6555,6 @@ import (
 )
 
 func main() {
-
 ch := make(chan int)
 done := make(chan bool)
 go producer(ch, done)
@@ -6574,7 +6602,6 @@ import (
 )
 
 func main() {
-
 ch := make(chan int, 5)
 done := make(chan bool)
 go producer(ch, done)
@@ -6587,7 +6614,6 @@ for index := 0; index < 10; index++ {
 fmt.Printf("PRODUCER: sending %v\n", index)
 ch <- index
 }
-
 close(ch)
 done <- true
 }
@@ -6608,8 +6634,6 @@ PRODUCER: sending 2
 PRODUCER: sending 3
 ```
 
-
-
 ### 11.4 只读和只发送通道
 
 我们可以将只读或只发送通道变量定义为函数参数。如果一个函数有一个只读通道并且我们尝试向该通道发送数据，程序将给出编译错误，反之亦然：
@@ -6620,7 +6644,7 @@ func readVal(ch <-chan int) {
 }
 ```
 
-上述代码将给出编译错误，因为 ch 变量被声明为只读变量。
+上述代码将给出编译错误，因为 `ch` 变量被声明为只读变量。
 
 现在让我们将只发送通道声明为函数参数，看看从中接收值时会发生什么。
 
@@ -6634,7 +6658,7 @@ func writeVal(ch chan<- int) {
 
 ### 11.5 Select 语句
 
-select 语句用于存在多个 goroutine 向多个通道发送数据的情况。我们需要并发地处理所有通道的值。select 语句的语法几乎与 switch 语句相似。select 语句中可以有多个 case。每个 case 语句可以有一个通道操作。当一个 case 语句可以从通道接收时，则该 case 将被执行。像 switch 语句一样，select 也可以有 default。当没有任何 case 从通道接收时，则执行 default 部分。select 语句主要用于 for 循环中，但不是必须的：
+`select` 语句用于存在多个 goroutine 向多个通道发送数据的情况。我们需要并发地处理所有通道的值。`select` 语句的语法几乎与 `switch` 语句相似。`select` 语句中可以有多个 `case`。每个 `case` 语句可以有一个通道操作。当一个 `case` 语句可以从通道接收时，则该 `case` 将被执行。像 `switch` 语句一样，`select` 也可以有 `default`。当没有任何 `case` 从通道接收时，则执行 `default` 部分。`select` 语句主要用于 `for` 循环中，但不是必须的：
 
 **程序 11.16**
 
@@ -6651,7 +6675,6 @@ func main() {
 	ch2 := make(chan string)
 	go producer(ch1, "P1", time.Millisecond*1000)
 	go producer(ch2, "P2", time.Millisecond*1300)
-
 	receiver(ch1, ch2)
 }
 
@@ -6689,49 +6712,63 @@ Message from ch2 P2: 0
 Message from ch1 P1: 1
 Message from ch2 P2: 1
 Message from ch1 P1: 2
+```
+
+
+
 Message from ch2 P2: 2
+
 Message from ch1 P1: 3
+
 Message from ch1 P1: 4
 
 Message from ch2 P2: 3
+
 Message from ch1 P1: 5
+
 Message from ch2 P2: 4
+
 Message from ch1 P1: 6
+
 Message from ch2 P2: 5
+
 Message from ch1 P1: 7
+
 Message from ch1 P1: 8
+
 Message from ch2 P2: 6
+
 Message from ch1 P1: 9
+
 Message from ch1
-```
 
-在程序 11.16 中，我们在 main 函数中创建了两个通道 ch1 和 ch2。我们创建了一个函数，即 producer。producer 函数接收三个参数：类型为 `chan string` 的 channel，类型为 `string` 的 name，以及类型为 `time.Duration` 的 sleep。producer 函数有一个 for 循环，迭代 10 次，并在 for 循环结束时关闭通道。在每次迭代中，它会按参数给定的 sleep 时长休眠，并向通道发送 name: index 格式的字符串。在 main 函数中，我们两次以 goroutine 的形式调用了 producer 函数。第一次调用 producer 时，name 为 P1，sleep 时间为 1000 毫秒。第二次调用 producer 函数时，name 为 P2，sleep 时间为 1300 毫秒。
+在程序 11.16 中，我们在 `main` 函数中创建了两个通道 `ch1` 和 `ch2`。我们创建了一个函数，即 `producer`。`producer` 函数接收三个参数：类型为 `chan string` 的 channel，类型为 `string` 的 name，以及类型为 `time.Duration` 的 sleep。`producer` 函数有一个 `for` 循环，迭代 10 次，并在 `for` 循环结束时关闭通道。在每次迭代中，它会按参数给定的 sleep 时长休眠，并向通道发送 `name: index` 格式的字符串。在 `main` 函数中，我们两次以 goroutine 的形式调用了 `producer` 函数。第一次调用 `producer` 时，name 为 P1，sleep 时间为 1000 毫秒。第二次调用 `producer` 函数时，name 为 P2，sleep 时间为 1300 毫秒。
 
-我们创建了一个函数，即 receiver。receiver 函数接收两个通道变量作为参数。它有一个无限 for 循环，在 for 循环内部我们有一个包含两个 case 的 select 语句。两个 case 语句都从通道读取。第一个 case 从 ch1 读取，第二个 case 从 ch2 读取。读取后，这些 case 语句打印值并检查 ok 变量是否为 false。如果 ok 变量的值为 false，则返回。
+我们创建了一个函数，即 `receiver`。`receiver` 函数接收两个通道变量作为参数。它有一个无限 `for` 循环，在 `for` 循环内部我们有一个包含两个 `case` 的 `select` 语句。两个 `case` 语句都从通道读取。第一个 `case` 从 `ch1` 读取，第二个 `case` 从 `ch2` 读取。读取后，这些 `case` 语句打印值并检查 `ok` 变量是否为 false。如果 `ok` 变量的值为 false，则返回。
 
-运行此程序时，receiver 函数从有值的通道读取值。当通道关闭且 case 得到 ok 为 false 时，程序结束。
+运行此程序时，`receiver` 函数从有值的通道读取值。当通道关闭且 `case` 得到 `ok` 为 false 时，程序结束。
 
 ### 11.6 time 包中的通道
 
-time 包中有两个通道：Ticker 和 Timer。两者都是结构体，并有一个类型为 Time 的通道作为字段。
+`time` 包中有两个通道：`Ticker` 和 `Timer`。两者都是结构体，并有一个类型为 `Time` 的通道作为字段。
 
 #### 11.6.1 Ticker
 
-Ticker 在给定时间内发送连续事件。当我们需要在特定时间内获得连续事件时使用 Ticker。
+`Ticker` 在给定时间内发送连续事件。当我们需要在特定时间内获得连续事件时使用 `Ticker`。
 
-我们可以通过 time 包的 NewTicker 函数声明一个 Ticker：
+我们可以通过 `time` 包的 `NewTicker` 函数声明一个 `Ticker`：
 
 ```go
 ticker := time.NewTicker(time.Millisecond * 1000)
 ```
 
-我们可以使用 <- 运算符从 ticker 的通道，即 C，读取事件：
+我们可以使用 `<-` 运算符从 `ticker` 的通道，即 `C`，读取事件：
 
 ```go
 msg := <-ticker.C
 ```
 
-我们可以通过在 ticker 变量上调用 Stop 方法来关闭 Ticker 的通道。当我们停止一个 Ticker 时，Ticker 停止发送事件：
+我们可以通过在 `ticker` 变量上调用 `Stop` 方法来关闭 `Ticker` 的通道。当我们停止一个 `Ticker` 时，`Ticker` 停止发送事件：
 
 ```go
 ticker.Stop()
@@ -6770,51 +6807,51 @@ func receiver(ticker1 *time.Ticker, ticker2 *time.Ticker) {
 }
 ```
 
-在程序 11.17 中，我们声明了两个 ticker 变量：ticker1 和 ticker2。ticker1 每 1000 毫秒发送一次事件，ticker2 每 1300 毫秒发送一次事件。我们以 goroutine 的形式调用了 receiver 函数。receiver 函数有一个 for 循环。for 循环内有一个 select 语句。select 语句有两个 case。每个 case 分别从 ticker1 和 ticker2 读取并打印返回的值。main 函数等待 3000 毫秒并在 ticker1 上调用 Stop 方法。由于 ticker1 已关闭，第一个 case 停止接收事件。main 函数再次等待 10000 毫秒，以给 goroutine 一些执行时间。
+在程序 11.17 中，我们声明了两个 `ticker` 变量：`ticker1` 和 `ticker2`。`ticker1` 每 1000 毫秒发送一次事件，`ticker2` 每 1300 毫秒发送一次事件。我们以 goroutine 的形式调用了 `receiver` 函数。`receiver` 函数有一个 `for` 循环。`for` 循环内有一个 `select` 语句。`select` 语句有两个 `case`。每个 `case` 分别从 `ticker1` 和 `ticker2` 读取并打印返回的值。`main` 函数等待 3000 毫秒并在 `ticker1` 上调用 `Stop` 方法。由于 `ticker1` 已关闭，第一个 `case` 停止接收事件。`main` 函数再次等待 10000 毫秒，以给 goroutine 一些执行时间。
 
 #### 11.6.2 Timer
 
-Timer 与 Ticker 类似，但有一个区别：Timer 只发送一次事件，而 Ticker 连续发送事件。
+`Timer` 与 `Ticker` 类似，但有一个区别：`Timer` 只发送一次事件，而 `Ticker` 连续发送事件。
 
-我们可以通过 time 包的 NewTimer 函数声明一个 Timer。NewTimer 函数以 duration 作为参数：
+我们可以通过 `time` 包的 `NewTimer` 函数声明一个 `Timer`。`NewTimer` 函数以 `duration` 作为参数：
 
 ```go
 timer := time.NewTimer(1000 * time.Millisecond)
 ```
 
-我们可以使用 <- 运算符从 Timer 读取值：
+我们可以使用 `<-` 运算符从 `Timer` 读取值：
 
 ```go
 <-timer.C
 ```
 
-我们可以用 Timer 代替 Sleep。使用 Timer 而不是 Sleep 的好处是我们可以停止一个 Timer。因此它不会在给定时间接收任何事件。我们可以使用 Stop 方法停止 Timer：
+我们可以用 `Timer` 代替 `Sleep`。使用 `Timer` 而不是 `Sleep` 的好处是我们可以停止一个 `Timer`。因此它不会在给定时间接收任何事件。我们可以使用 `Stop` 方法停止 `Timer`：
 
 ```go
 timer.Stop()
 ```
 
-我们不能从 Timer 读取值超过一次。如果这样做，程序将 panic。
+我们不能从 `Timer` 读取值超过一次。如果这样做，程序将 panic。
 
 ### 结论
 
 - Goroutine 可用于在 Golang 中编写并发程序。
 - 当多个 goroutine 同时执行时，其顺序不可预测。任何 goroutine 都可能先启动或先完成。
 - 当主 goroutine 退出时，其所有子 goroutine 也会退出。
-- 如果我们希望父 goroutine 等待子 goroutine 完成，则使用 WaitGroup 来控制。
-- WaitGroup 类型有三个有用的方法：Add、Done 和 Wait。
-- 我们可以使用 MutexLock 来保护临界区，以确保只有一个 goroutine 进入临界区。
+- 如果我们希望父 goroutine 等待子 goroutine 完成，则使用 `WaitGroup` 来控制。
+- `WaitGroup` 类型有三个有用的方法：`Add`、`Done` 和 `Wait`。
+- 我们可以使用 `MutexLock` 来保护临界区，以确保只有一个 goroutine 进入临界区。
 - 我们可以使用通道在两个 goroutine 之间进行通信。
-- <- 运算符可用于向通道发送/从通道读取消息。
+- `<-` 运算符可用于向通道发送/从通道读取消息。
 - 当通道关闭时，我们不能再向通道发送消息。
-- 我们可以使用 range 子句从通道读取消息。当通道关闭且所有消息都被读取时，for 循环结束。
+- 我们可以使用 `range` 子句从通道读取消息。当通道关闭且所有消息都被读取时，`for` 循环结束。
 - 通道有两种类型：带缓冲和无缓冲。
 - 在将通道定义为函数参数时，我们可以定义只读或只写通道。
-- 当通信发生在多个通道之间时，可以使用 select 语句。
+- 当通信发生在多个通道之间时，可以使用 `select` 语句。
 
 ### 问题
 
-编写一个生产者-消费者程序，其中有两个生产者 goroutine 以不同的间隔生产 int 类型的数据。一个 goroutine 每 300 毫秒生产一次数据，另一个 goroutine 每 400 毫秒生产一次数据。将有一个消费者 goroutine 来消费数据。请注意，生产者只能生产 100 次数据。
+编写一个生产者-消费者程序，其中有两个生产者 goroutine 以不同的间隔生产 `int` 类型的数据。一个 goroutine 每 300 毫秒生产一次数据，另一个 goroutine 每 400 毫秒生产一次数据。将有一个消费者 goroutine 来消费数据。请注意，生产者只能生产 100 次数据。
 
 找出以下程序中的错误：
 
@@ -6837,9 +6874,6 @@ func main() {
 }
 ```
 
-
-
-
 有缓冲通道和无缓冲通道有什么区别？
 
 以下哪个代码定义了一个只读通道作为函数参数？
@@ -6847,7 +6881,6 @@ func main() {
 ```
 func read(ch <-chan int) {
 ch <- 10
-
 }
 ```
 
@@ -6877,97 +6910,91 @@ ch <- 10
 
 无论是否有监听者，程序都会结束。
 
-大多数语言将意外行为称为异常。当抛出异常时，我们需要使用 try/catch 块优雅地处理这些异常。导致异常的代码片段称为临界块。可能导致错误的临界代码块需要放在 try/catch 块中。在 Golang 中，意外行为被称为错误。Go 使用不同的方法来处理错误。
+大多数语言将意外行为称为异常。当抛出异常时，我们需要使用 `try/catch` 块优雅地处理这些异常。导致异常的代码片段称为临界块。可能导致错误的临界代码块需要放在 `try/catch` 块中。在 Golang 中，意外行为被称为错误。Go 使用不同的方法来处理错误。
 
 ## 目标
 
-本章将涵盖错误处理。在本章结束时，你将学习 Golang 中的错误是什么，如何从函数或方法中返回错误，以及如何在调用函数中处理这些错误。我们还将看到内置的 error 接口、errors 包中的错误包和方法、函数以及结构体。你将学习如何定义一个新错误、创建自定义错误类型、什么是 panic、如何使用 defer 处理 panic、什么是 defer，以及 defer 函数在处理 panic 时的重要性。
+本章将涵盖错误处理。在本章结束时，你将学习 Golang 中的错误是什么，如何从函数或方法中返回错误，以及如何在调用函数中处理这些错误。我们还将看到内置的 `error` 接口、`errors` 包中的错误包和方法、函数以及结构体。你将学习如何定义一个新错误、创建自定义错误类型、什么是 `panic`、如何使用 `defer` 处理 `panic`、什么是 `defer`，以及 `defer` 函数在处理 `panic` 时的重要性。
 
 ### 12.1 错误
 
-Go 有一个内置的 error 类型。错误可以赋值给变量并从函数返回。12.1.1 节更详细地解释了 error 接口。Go 中任何可能导致意外行为的方法/函数都会将错误作为最后一个返回值返回。
+Go 有一个内置的 `error` 类型。错误可以赋值给变量并从函数返回。12.1.1 节更详细地解释了 `error` 接口。Go 中任何可能导致意外行为的方法/函数都会将错误作为最后一个返回值返回。
 
 我们已经在 2.3.1 节中看到，函数可以返回多个值。当我们说最后一个返回值是错误时，意味着函数返回多个值，而最后一个值是错误。将错误作为最后一个返回值并不是强制性的，但这是一种约定。
 
-标准库中有许多返回错误的函数。一个例子是下面所示的 os.Open，它打开一个文件并返回 *File 和 error。如果出现错误，比如文件未找到或你没有权限打开文件，该函数将返回一个错误值；否则，它将返回文件句柄作为第一个返回值，并将 nil 作为第二个返回值（错误值）：
+标准库中有许多返回错误的函数。一个例子是下面所示的 `os.Open`，它打开一个文件并返回 `*File` 和 `error`。如果出现错误，比如文件未找到或你没有权限打开文件，该函数将返回一个错误值；否则，它将返回文件句柄作为第一个返回值，并将 `nil` 作为第二个返回值（错误值）：
 
-```
 ```go
 func Open(name string) (*File, error) {
     return OpenFile(name, O_RDONLY, 0)
 }
 ```
-```
 
-该函数的调用者可以在处理打开的文件之前检查函数返回的错误是否为 nil。如果错误不是 nil，则说明存在错误，我们不能继续处理：
+该函数的调用者可以在处理打开的文件之前检查函数返回的错误是否为 `nil`。如果错误不是 `nil`，则说明存在错误，我们不能继续处理：
 
-```
+```go
 file, err := os.Open("myfile.txt")
 if err != nil {
 log.Fatal(err)
 }
 ```
 
-有时函数可能不返回任何有意义的值，但它可能引发错误。在这种情况下，该函数将只返回一个错误。一个例子是 os 包的 Mkdir 函数，如下所示：
+有时函数可能不返回任何有意义的值，但它可能引发错误。在这种情况下，该函数将只返回一个错误。一个例子是 `os` 包的 `Mkdir` 函数，如下所示：
 
-```
+```go
 func Mkdir(name string, perm FileMode) error
 ```
 
 #### 12.1.1 error 接口
 
-Go 有一个名为 error 的内置接口，它只有一个方法，即 Error 方法返回字符串类型，如下所示：
+Go 有一个名为 `error` 的内置接口，它只有一个方法，即 `Error` 方法返回字符串类型，如下所示：
 
-```
+```go
 type error interface {
 Error() string
 }
 ```
 
-Go 有一个名为 errors 的包。errors 包有一个未导出的 errorString 结构体类型。errorString 是 error 接口的一个实现，因为它实现了 Error() 方法。下面给出的代码片段是 error 包的完整代码：
+Go 有一个名为 `errors` 的包。`errors` 包有一个未导出的 `errorString` 结构体类型。`errorString` 是 `error` 接口的一个实现，因为它实现了 `Error()` 方法。下面给出的代码片段是 `error` 包的完整代码：
 
-```
+```go
 package errors
 ```
 
-```
+```go
 func New(text string) error {
 return &errorString{text}
 }
 ```
 
-```
+```go
 type errorString struct {
 s string
 }
 ```
 
-```
+```go
 func (e *errorString) Error() string {
-```
-
-```
 return e.s
 }
 ```
 
-errorString 是 error 接口最常用的实现。由于它是未导出的，我们不能直接创建 errorString 的值。我们需要调用 New() 函数来创建 errorString 类型的值，如下所示：
+`errorString` 是 `error` 接口最常用的实现。由于它是未导出的，我们不能直接创建 `errorString` 的值。我们需要调用 `New()` 函数来创建 `errorString` 类型的值，如下所示：
 
-```
+```go
 err := errors.New("Invalid Inputs")
 ```
 
-fmt 包也可以用来创建错误值。Errorf 函数使用 errors.New() 函数创建错误，并使用 Sprintf 格式化字符串。fmt 包的 Errorf 函数有助于格式化错误消息。它返回错误值，如下所示：
+`fmt` 包也可以用来创建错误值。`Errorf` 函数使用 `errors.New()` 函数创建错误，并使用 `Sprintf` 格式化字符串。`fmt` 包的 `Errorf` 函数有助于格式化错误消息。它返回错误值，如下所示：
 
-```
+```go
 err := fmt.Errorf("Invalid Input: %v", 12)
 ```
 
-程序 12.1 中的 create() 函数为 student 类型创建值，放入 map 中，并返回学生的 id。如果 name 为空或 age <= 0，则返回错误。main() 函数将返回值赋给 err 变量。它检查 err 变量的值，如果它不是 nil，则打印错误消息并返回。如果 err 为 nil，则意味着 create() 函数没有返回错误，因此它会继续处理其余代码。此代码使用 fmt 包的 Errorf 函数创建错误值：
+程序 12.1 中的 `create()` 函数为 `student` 类型创建值，放入 `map` 中，并返回学生的 `id`。如果 `name` 为空或 `age <= 0`，则返回错误。`main()` 函数将返回值赋给 `err` 变量。它检查 `err` 变量的值，如果它不是 `nil`，则打印错误消息并返回。如果 `err` 为 `nil`，则意味着 `create()` 函数没有返回错误，因此它会继续处理其余代码。此代码使用 `fmt` 包的 `Errorf` 函数创建错误值：
 
 #### 程序 12.1
 
-```
 ```go
 package main
 
@@ -6998,24 +7025,21 @@ func create(name string, age int) (int, error) {
 		return 0, fmt.Errorf("Invalid Age %v, Age can’t be <= 0", age)
 	}
 	id := len(stuMap) + 1
-```
-
-```
-stu := student{id, name, age}
-stuMap[id] = stu
-return id, nil
+	stu := student{id, name, age}
+	stuMap[id] = stu
+	return id, nil
 }
 ```
 
-请尝试在 create() 函数中传递不同的值，看看输出。
+请尝试在 `create()` 函数中传递不同的值，看看输出。
 
 #### 12.1.2 用户自定义错误
 
-自定义错误也可以通过实现 error 接口来创建。我们之前已经看到 error 接口只有一个方法，即，以下代码片段创建了
+自定义错误也可以通过实现 `error` 接口来创建。我们之前已经看到 `error` 接口只有一个方法，即，以下代码片段创建了
 
 #### 代码片段 12.1
 
-```
+```go
 type InvalidAgeError struct {
 age int
 }
@@ -7024,11 +7048,11 @@ return fmt.Sprintf("Invalid Age %v, Age can’t be <= 0", i.age)
 }
 ```
 
-现在，我们可以在程序 12.1 中返回 InvalidAgeError，而不是通用错误。代码片段 12.2 展示了如何更改程序的 else if 部分
+现在，我们可以在程序 12.1 中返回 `InvalidAgeError`，而不是通用错误。代码片段 12.2 展示了如何更改程序的 `else if` 部分
 
 #### 代码片段 12.2
 
-```
+```go
 if name == "" {
 return 0, fmt.Errorf("Invalid Name, Name can’t be Empty")
 } else if age <= 0 {
@@ -7040,13 +7064,12 @@ return 0, InvalidAgeError{age}
 
 ### 12.2 Panic
 
-意外的运行时错误会突然停止程序的执行流程。panic 最常见的例子是除以零、索引越界等。当遇到 panic 时，程序终止，延迟函数被调用，控制权转到调用者。这个过程一直持续到控制权到达 goroutine 调用栈的第一个方法。
+意外的运行时错误会突然停止程序的执行流程。`panic` 最常见的例子是除以零、索引越界等。当遇到 `panic` 时，程序终止，延迟函数被调用，控制权转到调用者。这个过程一直持续到控制权到达 goroutine 调用栈的第一个方法。
 
 最后，它在控制台上打印堆栈跟踪：
 
 #### 程序 12.2
 
-```
 ```go
 package main
 
@@ -7059,7 +7082,6 @@ func main() {
 	c := a / b
 	fmt.Println("Result:", c)
 }
-```
 ```
 
 对于上述程序，我们将得到以下错误：
@@ -7078,135 +7100,199 @@ main.main()
 
 exit status 2
 
-上述代码不会打印最后一行。相反，它会 panic 并停止程序流程，并显示一条消息。该消息显示了 panic 的原因、goroutine 名称以及带有文件名和行号的完整堆栈跟踪。
+上述代码不会打印最后一行。相反，它会 `panic` 并停止程序流程，并显示一条消息。该消息显示了 `panic` 的原因、goroutine 名称以及带有文件名和行号的完整堆栈跟踪。
 
-可以显式地触发 panic。内置的 panic 函数可以用来显式地引发 panic：
+可以显式地触发 `panic`。内置的 `panic` 函数可以用来显式地引发 `panic`：
 
 #### 程序 12.3
 
-```
 ```go
 package main
 
 import "fmt"
-
-func main() {
-fmt.Println("Start of Main Func")
-fn()
-fmt.Println("End of Main Func")
-}
-func fn() {
-fmt.Println("Start of fn Func")
 ```
 
 
-```go
-panic("Calling panic explicitly")
-fmt.Println("End of fn Func")
+
+`func main()` {
+
+`fmt.Println("Start of Main Func")`
+
+`fn()`
+
+`fmt.Println("End of Main Func")`
+
 }
+
+`func fn()` {
+
+`fmt.Println("Start of fn Func")`
+
+```
+```
+```go
+
+`panic("Calling panic explicitly")`
+
+`fmt.Println("End of fn Func")`
+
+}
+
 ```
 
 对于上述程序，我们将得到如下错误：
 
 ```
 Error 12.2
+
 Start of Main Func
+
 Start of fn Func
+
 panic: Calling panic explicitly
 
 goroutine 1 [running]:
+
 main.fn()
+
 /Users/prithvipalsingh/go/src/workspace/main.go:12 +0x95
+
 main.main()
+
 /Users/prithvipalsingh/go/src/workspace/main.go:7 +0x7e
+
 exit status 2
 ```
 
-在*程序*中，我们定义了一个名为 `fn` 的函数。在 `fn` 函数中，我们打印了一个字符串，调用了 panic 函数，然后在末尾又打印了一次。在 main 函数中，我们在控制台打印一个字符串，调用 `fn` 函数，然后在末尾打印一个字符串。运行该程序时，程序在 `fn` 函数的第二行发生 panic。从程序输出中可以看到，只有开头的打印语句被执行了；而末尾的打印语句没有执行，因为一旦 panic 被引发，程序会立即退出，panic 之后的任何代码都不会执行。
+在*程序*中，我们定义了一个名为 `fn` 的函数。在 `fn` 函数中，我们打印了一个字符串，调用了 `panic` 函数，然后在末尾又打印了一次。在 `main` 函数中，我们在控制台打印一个字符串，调用 `fn` 函数，然后在末尾打印一个字符串。运行该程序时，程序在 `fn` 函数的第二行发生 `panic`。从程序输出中可以看到，只有开头的打印语句被执行了；而末尾的打印语句没有执行，因为一旦 `panic` 被引发，程序会立即退出，`panic` 之后的任何代码都不会执行。
 
 注意：任何好的编辑器/IDE 都会对 `fn` 函数的最后一行发出警告，因为它是不可达的。
 
-#### 12.2.1 Panic 和 defer
+### 12.2.1 Panic 和 defer
 
-到目前为止，我们已经看到，当程序发生 panic 时，程序流程会停止并打印堆栈跟踪。我们还在前面的章节中看到了 defer 函数。defer 在函数调用结束时执行。如果调用堆栈中有任何 defer 函数，那么程序停止执行之前，调用堆栈中所有函数的 defer 函数都会被调用。
+到目前为止，我们已经看到，当程序发生 `panic` 时，程序流程会停止并打印堆栈跟踪。我们还在前面的章节中看到了 `defer` 函数。`defer` 在函数调用结束时执行。如果调用堆栈中有任何 `defer` 函数，那么程序停止执行之前，调用堆栈中所有函数的 `defer` 函数都会被调用。
 
-下面给出的程序有四个函数：每个函数都有一个 defer 函数。当程序在某个函数中发生 panic 时，它会按逆序执行所有 defer 函数，并在程序停止前将输出打印到控制台。另外，注意它不会打印所有函数的最后一行：
+下面给出的程序有四个函数：每个函数都有一个 `defer` 函数。当程序在某个函数中发生 `panic` 时，它会按逆序执行所有 `defer` 函数，并在程序停止前将输出打印到控制台。另外，注意它不会打印所有函数的最后一行：
 
 #### 程序 12.4
 
 ```go
+
 package main
 
 import "fmt"
 
 func main() {
+
 fmt.Println("Start of Main Func")
+
 defer func() {fmt.Println("Defer in Main func")}()
+
 fn1()
+
 fmt.Println("End of Main Func")
+
 }
+
 func fn1() {
-```
 
 ```
+```
+
 goroutine 1 [running]:
+
 main.fn3()
+
 /Users/prithvipalsingh/go/src/workspace/main.go:27 +0xb7
+
 main.fn2()
+
 /Users/prithvipalsingh/go/src/workspace/main.go:20 +0xa0
+
 main.fn1()
+
 /Users/prithvipalsingh/go/src/workspace/main.go:14 +0xa0
+
 main.main()
 
 /Users/prithvipalsingh/go/src/workspace/main.go:8 +0xa0
+
 exit status 2
 ```
 
 ### 12.3 *恢复*
 
-内置函数 `recover` 可以从 panic 中恢复。程序通常在 recover 调用之后继续执行。recover 应该从 defer 函数中调用；否则不会有任何效果。
+内置函数 `recover` 可以从 `panic` 中恢复。程序通常在 `recover` 调用之后继续执行。`recover` 应该从 `defer` 函数中调用；否则不会有任何效果。
 
-recover 函数可以从调用堆栈中的任何函数中调用。不一定要在遇到 panic 的同一个函数中调用 recover 函数。在下面给出的代码中，recover 函数在 `fn2` 函数中被调用。在 `fn2` 调用之后，程序不会终止。相反，它恢复流程并优雅地结束程序。需要重点注意的是，`fn2` 的最后一行不会执行：
+`recover` 函数可以从调用堆栈中的任何函数中调用。不一定要在遇到 `panic` 的同一个函数中调用 `recover` 函数。在下面给出的代码中，`recover` 函数在 `fn2` 函数中被调用。在 `fn2` 调用之后，程序不会终止。相反，它恢复流程并优雅地结束程序。需要重点注意的是，`fn2` 的最后一行不会执行：
 
 #### 程序 12.5
 
 ```go
+
 package main
 
 import "fmt"
 
 func main() {
+
     fmt.Println("Start of Main Func")
+
     defer func() {fmt.Println("Defer in Main func")}()
+
     fn1()
+
     fmt.Println("End of Main Func")
+
 }
+
 func fn1() {
+
     fmt.Println("Start of Fn1 Func")
-```
 
 ```
+```
+
 defer func() {fmt.Println("Defer in Fn1 func")}()
+
 fn2()
+
 fmt.Println("End of Fn1 Func")
+
 }
+
 func fn2() {
+
 fmt.Println("Start of Fn2 Func")
+
 defer func() {
 
 fmt.Println("Defer in Fn2 func")
+
 if rec := recover(); rec != nil {
+
 fmt.Println("Recovered:", rec)
+
 }
+
 }()
+
 fn3()
+
 fmt.Println("End of Fn2 Func")
+
 }
+
 func fn3() {
+
 fmt.Println("Start of Fn3 Func")
+
 defer func() {fmt.Println("Defer in Fn3 func")}()
+
 panic("Calling panic explicitly in Fn3")
+
 }
+
 ```
 
 对于上述程序，我们将得到以下输出：
@@ -7224,7 +7310,7 @@ Defer in Fn1 func
 End of Main Func
 Defer in Main func
 
-如果调用堆栈中没有 panic，`recover` 函数返回 nil。这在程序 12.6 中得到了演示。
+如果调用堆栈中没有 `panic`，`recover` 函数返回 `nil`。这在程序 12.6 中得到了演示。
 
 #### 程序 12.6
 
@@ -7234,19 +7320,33 @@ package main
 import "fmt"
 
 func main() {
+
 fmt.Println("Start of Main Func")
+
 defer func() {fmt.Println("Defer in Main func")}()
+
 fn1()
+
 fmt.Println("End of Main Func")
+
 }
+
 func fn1() {
+
 fmt.Println("Start of Fn1 Func")
+
 defer func() {
+
 fmt.Println("Defer in Fn1 func")
+
 fmt.Println("Recovered:", recover())
+
 }()
+
 fmt.Println("End of Fn1 Func")
+
 }
+
 ```
 
 对于上述程序，我们将得到以下输出：
@@ -7259,7 +7359,7 @@ Recovered:
 End of Main Func
 Defer in Main func
 
-程序 12.7 展示了，如果 `recover` 函数在 defer 函数之外被调用，它不会有任何影响，并且它总是返回 nil。
+程序 12.7 展示了，如果 `recover` 函数在 `defer` 函数之外被调用，它不会有任何影响，并且它总是返回 `nil`。
 
 #### 程序 12.7
 
@@ -7268,67 +7368,90 @@ package main
 
 import "fmt"
 
-
 func main() {
+
 fmt.Println("Start of Main Func")
+
 defer func() {fmt.Println("Defer in Main func")}()
+
 fn1()
+
 fmt.Println("End of Main Func")
+
 }
+
 func fn1() {
+
 fmt.Println("Start of Fn1 Func")
+
 fmt.Println("Recovered", recover())
+
 defer func() {
+
 fmt.Println("Defer in Fn1 func")
-```
 
 ```
+```
+
 }()
+
 panic("Panicking from fn1")
+
 }
+
 ```
 
 对于上述程序，我们将得到以下输出：
 
 ```
 Start of Main Func
+
 Start of Fn1 Func
+
 Recovered
+
 Defer in Fn1 func
+
 Defer in Main func
+
 panic: Panicking from fn1
 ```
 
 ```
 goroutine 1 [running]:
+
 main.fn1()
+
 /Users/prithvipalsingh/go/src/workspace/main.go:17 +0x147
+
 main.main()
+
 /Users/prithvipalsingh/go/src/workspace/main.go:8 +0xa0
+
 exit status 2
 ```
 
 ### 12.4 最佳实践
 
-在程序逻辑中显式调用 panic 并不是好的做法。你的函数的调用者不会知道你的函数可能发生 panic，因此调用者可能不会编写 recover 函数。在这种情况下，整个程序将终止。始终最好的做法是让函数返回错误，而不是显式调用 panic。
+在程序逻辑中显式调用 `panic` 并不是好的做法。你的函数的调用者不会知道你的函数可能发生 `panic`，因此调用者可能不会编写 `recover` 函数。在这种情况下，整个程序将终止。始终最好的做法是让函数返回错误，而不是显式调用 `panic`。
 
 当函数返回错误时，我们应该处理该错误，不应该忽略它。
 
 ### 结论
 
-Golang 使用 error 类型进行错误处理。
+Golang 使用 `error` 类型进行错误处理。
 
-如果函数可能引发错误，则函数可以将 error 类型作为最后一个返回类型返回。
+如果函数可能引发错误，则函数可以将 `error` 类型作为最后一个返回类型返回。
 
-将 error 类型作为最后一个返回类型返回并不是强制性的，这只是一个约定。
+将 `error` 类型作为最后一个返回类型返回并不是强制性的，这只是一个约定。
 
-当函数没有返回错误时，函数会返回 nil 作为错误。调用方函数检查错误是否为 nil，以判断调用函数时是否出现了错误。
+当函数没有返回错误时，函数会返回 `nil` 作为错误。调用方函数检查错误是否为 `nil`，以判断调用函数时是否出现了错误。
 
-我们可以通过实现 error 接口的 Error() 方法来创建自定义错误。
+我们可以通过实现 `error` 接口的 `Error()` 方法来创建自定义错误。
 
-如果出现意外行为，Golang 代码会发生 panic。预期行为的一个示例是使用大于长度的索引访问数组元素。
+如果出现意外行为，Golang 代码会发生 `panic`。预期行为的一个示例是使用大于长度的索引访问数组元素。
 
-recover 函数可用于处理 panic。
+`recover` 函数可用于处理 `panic`。
 
 无
 
@@ -7349,7 +7472,7 @@ recover 函数可用于处理 panic。
 - 数组声明
 - 关于 [50](#)
 - 简写声明 [52](#)
-- var 关键字，使用 [51](#)
+- `var` 关键字，使用 [51](#)
 - 数组初始化
 - 数组迭代
 - 赋值运算符
@@ -7358,7 +7481,7 @@ recover 函数可用于处理 panic。
 
 - 位运算符 [10](#)
 - 布尔类型 [4](#)
-- break 语句 [41](#)
+- `break` 语句 [41](#)
 - 有缓冲通道 [194](#)
 
 内置接口
@@ -7389,7 +7512,7 @@ recover 函数可用于处理 panic。
 
 常量 5
 
-continue 语句 43
+`continue` 语句 43
 
 临界区 178
 
@@ -7409,13 +7532,13 @@ continue 语句 43
 决策
 
 - 关于 34
-- if...else if...else 语句 37
-- if...else 语句 35
-- if 语句 34
-- switch 语句 38
+- `if...else if...else` 语句 37
+- `if...else` 语句 35
+- `if` 语句 34
+- `switch` 语句 38
 - 声明
-- defer 函数 211
-- defer 语句 30
+- `defer` 函数 211
+- `defer` 语句 30
 
 - 派生类型 5
 
@@ -7437,13 +7560,13 @@ continue 语句 43
 
 ### F
 
-- fallthrough 语句 46
-- for 循环 39
+- `fallthrough` 语句 46
+- `for` 循环 39
 
 
 
 
-func 关键字
+`func` 关键字
 定义
 函数
 约 20
@@ -7451,38 +7574,38 @@ func 关键字
 函数声明 20
 函数，在 Go 标准库中
 约 180
-Goexit 函数 182
-GOMAXPROCS 函数 181
+`Goexit` 函数 182
+`GOMAXPROCS` 函数 181
 
 ### G
-Goexit 函数 182
+`Goexit` 函数 182
 Go 映射
 约 80
 声明 81
 初始化 81
-使用 make() 函数初始化 82
-使用 map 字面量初始化 82
+使用 `make()` 函数初始化 82
+使用 `map` 字面量初始化 82
 迭代 84
 键，删除 91
 键存在性，检查
 键值对，添加 85
 键值对，检索 88
 键值对，更新 86
-GOMAXPROCS 函数 181
+`GOMAXPROCS` 函数 181
 Go 编程
 需要 2
-goroutine 约 175
+`goroutine` 约 175
 
-Mutex 锁
+`Mutex` 锁
 
-WaitGroup
+`WaitGroup`
 
-Goto 语句 42
+`Goto` 语句 42
 
 ### I
-if...else if...else 语句 37
-if...else 语句 35
-if 语句 34
+`if...else if...else` 语句 37
+`if...else` 语句 35
+`if` 语句 34
 隐式实现
 优点 138
 接口
@@ -7497,19 +7620,19 @@ if 语句 34
 逻辑运算符 9
 循环控制语句
 约 40
-break 语句 41
-continue 语句 43
-Fallthrough 语句 46
-Goto 语句 42
+`break` 语句 41
+`continue` 语句 43
+`Fallthrough` 语句 46
+`Goto` 语句 42
 无限循环 44
 循环语句
 约 38
-for 循环 39
+`for` 循环 39
 循环控制语句 40
-嵌套 for 循环 40
+嵌套 `for` 循环 40
 
 ### M
-make() 函数
+`make()` 函数
 用于创建切片 69
 映射
 引用类型 93
@@ -7529,11 +7652,11 @@ make() 函数
 多个常量
 声明 14
 多返回值 23
-Mutex 锁
+`Mutex` 锁
 
 ### N
 - 命名返回值
-- 嵌套 for 循环 40
+- 嵌套 `for` 循环 40
 - 数字类型 2
 
 ### O
@@ -7546,7 +7669,7 @@ Mutex 锁
 - 关系运算符 8
 
 ### P
-- panic 函数
+- `panic` 函数
 - 参数函数 20
 - 指针数组
 - 约 161
@@ -7571,7 +7694,7 @@ Mutex 锁
 竞态条件 178
 只读通道 195
 重新赋值概念 16
-recover 函数
+`recover` 函数
 重新声明概念 15
 关系运算符 160
 返回函数
@@ -7579,7 +7702,7 @@ recover 函数
 最佳实践 216
 
 ### S
-select 语句 198
+`select` 语句 198
 只发送通道 195
 简写声明 52
 短变量声明 7
@@ -7590,22 +7713,22 @@ select 语句 198
 - 创建 64
 - 从数组创建 67
 - 从现有切片创建 68
-- 使用 make() 函数创建 69
+- 使用 `make()` 函数创建 69
 - 使用切片字面量创建 65
 - 声明 64
 - 迭代 75
-- 使用 for 循环迭代 75
-- 使用 for 循环中的 range 迭代 76
+- 使用 `for` 循环迭代 75
+- 使用 `for` 循环中的 `range` 迭代 76
 - 长度 64
 - 修改 70
 - 指针 64
 - 排序 74
 - 切片字面量
 - 用于创建切片 65
-- sort 包接口
-- stdlib 接口
+- `sort` 包接口
+- `stdlib` 接口
 - 使用 144
-- Stringer 接口 145
+- `Stringer` 接口 145
 - 字符串字面量 3
 - 字符串字面量，样式
 - 反引号样式 3
@@ -7620,15 +7743,17 @@ select 语句 198
 值接收者
 变量声明 6
 变参函数
-var 关键字
+`var` 关键字
 使用 51
 
 ### W
-WaitGroup
-WaitGroup，方法
-Add 方法 176
-Done 方法 176
-Wait 方法 176
+`WaitGroup`
+`WaitGroup`，方法
+`Add` 方法 176
+`Done` 方法 176
+`Wait` 方法 176
 
 ### Z
 零值切片 71
+
+```

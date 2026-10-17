@@ -1,13 +1,10 @@
+
 # 2020 第54届阿西洛马信号、系统与计算机会议论文｜如何实现 5G 通信
-
-
-
-
-
 
 Brian Kim¹, Yalin E. Sagduyer², Kemal Davlioglu², Tugba Erpek², and Sennur Ulukus¹
 
-*美国马里兰州大学帕克大学分校电气与计算机工程系，MD 20742
+*¹美国马里兰州大学帕克大学分校电气与计算机工程系，MD 20742
+
 ²美国马里兰州罗克维尔 Intelligent Automation 公司，MD 20855
 
 **摘要—** 我们考虑了从深度学习（DL）分类器检测是否存在传输的窃听者隐藏通信的问题。我们证明了发射机可以欺骗窃听者的接收端，而隐蔽干扰可以将对抗扰动作为噪声引入接收到的信号中。我们展示了这种对抗扰动会导致窃听者以高概率将信号误分类为噪声，并进一步证明了如果窃听者使用 DL 分类器检测传输，任何 5G 通信都可以从其视线中有效隐藏。
@@ -24,8 +21,8 @@ Brian Kim¹, Yalin E. Sagduyer², Kemal Davlioglu², Tugba Erpek², and Sennur U
 
 我们使用 CJ 作为对抗扰动的源来欺骗窃听者的分类器。CJ 添加的大扰动可以轻易欺骗分类器，但同时会将目标接收处的干扰和比特率（RATE）增加到不可接受的水平。根据 [27] 中考虑的方法（即发射机对其信号添加扰动以欺骗机器分类器同时保持其性能），我们的重点是受 CJ 辅助的隐蔽通信，CJ 重点影响窃听者将接收到的信号分类为噪声，同时降低网络性能。欺骗分类器将信号误分类为噪声（如本文考虑的）比插入此类干扰攻击（如 [27] 中考虑的）要困难得多。在评估中，我们使用了各种调制方案（QPSK 和 QAM），并证明了我们可以从使用 DL 分类器检测传输的窃听者处有效隐藏这些信号。
 
-
 ![](img/1c9877e90b513c63096e0d8f3f8eceab_1_0.png)
+
 图 1. 系统模型。
 
 由于来自 CJ 的扰动不仅在窃听者处产生干扰，在接收处也是如此，因此 CJ 通过使用固定功率预算确定其 $\delta$，以导致窃听者的误分类，同时该预算也限制了接收处的 BER。最后，CJ 通过求解以下优化问题首先确定 $\delta$：
@@ -48,10 +45,6 @@ $\delta^{(4)}$ 在接收处的 BER 中求解，可以通过相应地设置 $P_{m
 
 我们分析了 CJ 实现正确性的成功以及对接收处 BER 的相应影响。我们将此扰动与对比
 
-
-
-
-
 ## 算法 1：生成 CJ 的扰动
 
 ```
@@ -69,13 +62,13 @@ $\theta \leftarrow \theta - \gamma \delta_{\theta}$
 
 ![](img/1c9877e90b513c63096e0d8f3f8eceab_2_0.png)
 
-图. 2. 当 $d_{ce}=d_{cr} = 1$ 时窃听者的成功率。
+图 2. 当 $d_{ce}=d_{cr} = 1$ 时窃听者的成功率。
 
 CJ 传输的高斯噪声。此外，我们改变 CJ 的位置以研究拓扑和通道的影响。我们假设二进制数据在接收端均匀且独立地生成。分类器是一个卷积神经网络（CNN）。该 CNN 在两个维度 (2,16) 上处理 16 相/Q I/O 数据样本。CNN 包含一个卷积核大小为 (1,3) 的卷积层，丢弃率为 0.1。隐藏层使用激活函数，输出层使用 softmax 激活以产生信号标签。我们使用带有 Adam 优化器的反向传播算法通过交叉熵损失训练 CNN。据此实现了 CJ。我们假设窃听者已经通过 CJ 知晓信号。因此，分类器仅用两个标签：信号和噪声进行训练。对于每种信号类型，我们使用数据集训练不同的分类器，该数据集包含 20000 个符号，并分为 16 个 QPSK 块。节点之间的通道建模为：从节点 $i$ 到节点 $j$ 的通道增益为 $d_{ij}$，其中 $d_{ij}$ 是 $i$ 和 $j$ 之间的距离，衰减系数 $\gamma$ 是路 损耗。通过仿真，我们设置 $d = 1$ 且 $\gamma = 2.8$。我们参考 [25] 引入其他通道方法，包括阴影效应和小尺度衰落等衰落效应。
 
 ![](img/1c9877e90b513c63096e0d8f3f8eceab_2_1.png)
 
-图. 3. 当 $d_{ce} = 0.5$ 且 $d_{cr} = 1$ 时窃听者的成功率。
+图 3. 当 $d_{ce} = 0.5$ 且 $d_{cr} = 1$ 时窃听者的成功率。
 
 我们使用 [24] 中的扰动噪声指标 (PNR) 来捕捉 CJ 相对于噪声的相对扰动。PNR 越高，窃听者分类器的准确性就越高。随着 PNR 的增加，CJ 生成的扰动更容易被窃听者检测，并增加接收端的误码率 (BER)。
 
@@ -124,32 +117,63 @@ CJ 传输的高斯噪声。此外，我们改变 CJ 的位置以研究拓扑和�
 ## 参考文献
 
 [1] A. Y. Sheng and J. Sukhwani, “Wireless, privacy-based security: Lessons from information theory,” Proceedings of the IEEE, vol. 103, no. 10, pp. 1814–1825, 2015.
-[2] H. Wang and P. H. Vu, “Communication security under channel uncertainty and adversarial attacks,” Proceedings of the IEEE, vol. 103, no. 10, pp. 1796–1813, 2015.
-[3] M. Zhang, Y. Liu, and others, “Robust communication over noisy channels: A reliability perspective,” IEEE Transactions on Information Theory, vol. 62, no. 5, pp. 2334–2354, 2016.
-[4] J. Chen, J. Wang, and L. Zheng, “Fundamental limits of communication with low reliability,” IEEE Transactions on Information Theory, vol. 62, no. 6, pp. 3493–3503, 2016.
-[5] B. Xu, Y. Zhang, and T. Zhou, “Robust information hiding in noise: fundamental limits of covert communication,” IEEE Communications Magazine, vol. 12, no. 53, pp. 26–31, 2015.
-[6] M. Pokharel and S. Sukhwani, “Covert bit through queries,” in IEEE ICC, 2016, pp. 626–630.
-[7] A. Kurakin, T. Goodfellow, and S. Beng, “Adversarial examples in the physical world,” in International Conference on Learning Representations (ICLR), 2017.
-[8] Y. Liu, M. Sagaglia, and A. Grushin, “How to steal a machine learning classifier with deep learning,” IEEE Transactions on Security and Host Environments (SSH), 2017.
-[9] Y. Sagaglia, T. Liu, and., “Adversarial learning: A survey,” on Artificial Intelligence, vol. 2, no. 3.
-[10] M., “Adversarial attacks for radio jamming,” in IEEE Military Conference (MILCOM), 2021.
-[11] Y. Sagaglia, Y. Liu, and S. Shao, “Iot network security with deep learning,” in IEEE SECON Workshop on Machine Learning, 2019.
-[12] J. Sadikh, Y. Sagaglia, and Y. Lee, “Generative adversarial attacks over-the-spectrum jamming,” IEEE Transactions on Mobile Computing, vol. 19, no. 4, pp. 719–728, 2020.
-[13] M. Yh, Y,,,,,,,,,,,,,,11.
-[111] M. Yh, Y. 1,,,,,,,,,,,,,,,,,,.
-[14] M. Yh, Y. 1,,,,,,,,,,,,,,,,,,11.
-[15] M. Yh, Y. 1,,,,,,,,,,,,,,,,,,,,11.
-[16] M. Yh, Y. 1,,,,,,,,,,,,,,,,,,,,11.
-[17] M. Yh, Y. 1,,,,,,,,,,,,,,,,,,,,11.
-[18] M. Yh, Y. 1,,,,,,,,,,,,,,,,,,,,11.
-[19] M. Yh, Y. 1,,,,,,,,,,,,,,,,,,,,11.
-[20] M. Yh, Y. 1,,,,,,,,,,,,,,,,,,,,11.
-[21] M. Yh, Y. 1,,,,,,,,,,,,,,,,,,,,11.
-[22] M. Yh, Y. 1,,,,,,,,,,,,,,,,,,,,11.
-[23] M. Yh, Y. 1,,,,,,,,,,,,,,,,,,,,11.
-[24] M. Yh, Y. 1,,,,,,,,,,,,,,,,,,,,11.
-[25] M. Yh, Y. 1,,,,,,,,,,,,,,,,,,,,,11.
-[26]..,,,,,..1,,,,,,,,,,,,,,,,11.
-[27] M. Yh, Y. 1,,,,,,,,,,,,,,,,,,,,,11.
-[28] Y. Sagaglia, R. Berry, and A. Emery, “Jamming games in wireless networks with imperfect jamming,” IEEE Communications Magazine, vol. 49, no. 8, pp. 112–118, 2023.
 
+[2] H. Wang and P. H. Vu, “Communication security under channel uncertainty and adversarial attacks,” Proceedings of the IEEE, vol. 103, no. 10, pp. 1796–1813, 2015.
+
+[3] M. Zhang, Y. Liu, and others, “Robust communication over noisy channels: A reliability perspective,” IEEE Transactions on Information Theory, vol. 62, no. 5, pp. 2334–2354, 2016.
+
+[4] J. Chen, J. Wang, and L. Zheng, “Fundamental limits of communication with low reliability,” IEEE Transactions on Information Theory, vol. 62, no. 6, pp. 3493–3503, 2016.
+
+[5] B. Xu, Y. Zhang, and T. Zhou, “Robust information hiding in noise: fundamental limits of covert communication,” IEEE Communications Magazine, vol. 12, no. 53, pp. 26–31, 2015.
+
+[6] M. Pokharel and S. Sukhwani, “Covert bit through queries,” in IEEE ICC, 2016, pp. 626–630.
+
+[7] A. Kurakin, T. Goodfellow, and S. Beng, “Adversarial examples in the physical world,” in International Conference on Learning Representations (ICLR), 2017.
+
+[8] Y. Liu, M. Sagaglia, and A. Grushin, “How to steal a machine learning classifier with deep learning,” IEEE Transactions on Security and Host Environments (SSH), 2017.
+
+[9] Y. Sagaglia, T. Liu, and., “Adversarial learning: A survey,” on Artificial Intelligence, vol. 2, no. 3.
+
+[10] M., “Adversarial attacks for radio jamming,” in IEEE Military Conference (MILCOM), 2021.
+
+[11] Y. Sagaglia, Y. Liu, and S. Shao, “Iot network security with deep learning,” in IEEE SECON Workshop on Machine Learning, 2019.
+
+[12] J. Sadikh, Y. Sagaglia, and Y. Lee, “Generative adversarial attacks over-the-spectrum jamming,” IEEE Transactions on Mobile Computing, vol. 19, no. 4, pp. 719–728, 2020.
+
+
+
+## References
+
+[13] M. Yh, Y., 11.
+
+[111] M. Yh, Y. 1.
+
+[14] M. Yh, Y. 1., 11.
+
+[15] M. Yh, Y. 1., 11.
+
+[16] M. Yh, Y. 1., 11.
+
+[17] M. Yh, Y. 1., 11.
+
+[18] M. Yh, Y. 1., 11.
+
+[19] M. Yh, Y. 1., 11.
+
+[20] M. Yh, Y. 1., 11.
+
+[21] M. Yh, Y. 1., 11.
+
+[22] M. Yh, Y. 1., 11.
+
+[23] M. Yh, Y. 1., 11.
+
+[24] M. Yh, Y. 1., 11.
+
+[25] M. Yh, Y. 1., 11.
+
+[26] 1., 11.
+
+[27] M. Yh, Y. 1., 11.
+
+[28] Y. Sagaglia, R. Berry, and A. Emery, “Jamming games in wireless networks with imperfect jamming,” *IEEE Communications Magazine*, vol. 49, no. 8, pp. 112–118, 2023.

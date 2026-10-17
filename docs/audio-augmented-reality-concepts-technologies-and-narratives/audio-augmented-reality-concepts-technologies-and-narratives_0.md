@@ -1,22 +1,11 @@
-# 
-音频增强现实：概念、技术与叙事
 
+# 音频增强现实：概念、技术与叙事
 
 ![](img/cover.jpg)
 
-
 Designed cover image: Shutterstock
 
-
-
-
-
-
-
 *Trademark notice*: Product or corporate names may be trademarks or registered trademarks, and are used only for identification and explanation without intent to infringe.
-
-
-
 
 ISBN: 978-1-003-62728-9 (ebk)
 
@@ -36,53 +25,47 @@ I want to thank Emilia Lehtinen, author and filmmaker, for brainstorming invalua
 
 Finally, my deepest thanks to you, Kaisa, my wife, for your unwavering support and for making sure I had the time to focus when it was needed most.
 
-
 虽然我们可能生活在视觉主导的文化中，但可以认为是通过耳朵我们理解世界。与视觉不同，听力是全向的，360 度覆盖所有方向，能够检测和识别障碍物后方的声源。它也能在黑暗中以及我们睡眠时工作。在缺乏听力的情况下，对环境的存在感和理解感会大幅下降——世界显得不那么有生命（McGill et al., 2020）。虽然眼睛可能提供更精确的数据，但耳朵将我们在三维和情感上与世界连接起来。
 
-
-
-
 ### Surround systems
--   军事显然成为了耳机的主要用户，并且他们也采用双耳（binaural）方式使用：例如，在第一次世界大战期间，某些声音定位仪配备了耳机（Self，[2024），而潜艇则是通过两个水听器（hydrophones）获得的双耳听觉图像来跟踪的（Boren，2018）。二战期间，Luftwaffe（德国空军）使用了一种创新的盲航导航系统，基于双声道耳机聆听：一台战略定位的无线电站向飞行员左耳发送摩斯电码点，另一台站向右耳发送破折号，正好在点之间，偏离指定航线会导致信号失调，从而提示飞行员进行纠正（Kittler, Winthrop-Young and Wutz，1999）。
 
--   从 1930 年代起对主动降噪的研究以及 Bose 在 1989 年推出的首款商用降噪耳机，标志着 AAR（自适应音频系统）的重要里程碑，随后降噪功能成为消费者最广泛使用和使用的首个 AAR 功能。这使得个人声音景观的动态操控成为可能，这已是从单纯控制音量的跨越。
+- 军事显然成为了耳机的主要用户，并且他们也采用双耳（binaural）方式使用：例如，在第一次世界大战期间，某些声音定位仪配备了耳机（Self，2024），而潜艇则是通过两个水听器（hydrophones）获得的双耳听觉图像来跟踪的（Boren，2018）。二战期间，Luftwaffe（德国空军）使用了一种创新的盲航导航系统，基于双声道耳机聆听：一台战略定位的无线电站向飞行员左耳发送摩斯电码点，另一台站向右耳发送破折号，正好在点之间，偏离指定航线会导致信号失调，从而提示飞行员进行纠正（Kittler, Winthrop-Young and Wutz，1999）。
+
+- 从 1930 年代起对主动降噪的研究以及 Bose 在 1989 年推出的首款商用降噪耳机，标志着 AAR（自适应音频系统）的重要里程碑，随后降噪功能成为消费者最广泛使用和使用的首个 AAR 功能。这使得个人声音景观的动态操控成为可能，这已是从单纯控制音量的跨越。
 
 ## 4.4 Audio guides and audio walks
 
--   耳机和耳塞使得“音频步行”和“音频导览”概念得以实现。早期的实现缺乏更近期应用的基于位置的互动性，但其内容强烈与特定地点相关——或者有意与之背离。
+- 耳机和耳塞使得“音频步行”和“音频导览”概念得以实现。早期的实现缺乏更近期应用的基于位置的互动性，但其内容强烈与特定地点相关——或者有意与之背离。
 
 ### 4.4.1 Audio guides
 
--   音频导览是有导览的旅游的中介形式。它们缺乏人类导览员的存在，但能够让参观者以更灵活甚至更个性化的方式体验展览，支持多语言，且不干扰其他参观者——运行成本也低于雇佣人类导览员。早期的实现方式是线性的，有时还允许暂停和倒带。20 世纪 80 年代，随着红外和无线电技术的发展，单个展品可以在访客接近时循环播放声音，常常访客到达时正处于循环的中间，因而错过了描述的开头。随后，博物馆实施了系统：访客轻点代码即可从随机存取存储设备中选择正确的音频轨道（Eckel，2001），2000 年代开始，自动定位系统逐渐出现。然而，即便到现在，许多现代音频导览和步行仍无法实现头部追踪，从而无法使听觉内容在空间上与环境对齐。即便如此，在设计良好的音频导览中，即使内容是线性的，声音也会与环境融合，邀请“参与者在听到声音后与现有环境建立联系”（Schraffenberger and Heide，2014，第 68 页）。这为后续更具定位性和 6DoF（六度自由）体验奠定了坚实基础。
+- 音频导览是有导览的旅游的中介形式。它们缺乏人类导览员的存在，但能够让参观者以更灵活甚至更个性化的方式体验展览，支持多语言，且不干扰其他参观者——运行成本也低于雇佣人类导览员。早期的实现方式是线性的，有时还允许暂停和倒带。20 世纪 80 年代，随着红外和无线电技术的发展，单个展品可以在访客接近时循环播放声音，常常访客到达时正处于循环的中间，因而错过了描述的开头。随后，博物馆实施了系统：访客轻点代码即可从随机存取存储设备中选择正确的音频轨道（Eckel，2001），2000 年代开始，自动定位系统逐渐出现。然而，即便到现在，许多现代音频导览和步行仍无法实现头部追踪，从而无法使听觉内容在空间上与环境对齐。即便如此，在设计良好的音频导览中，即使内容是线性的，声音也会与环境融合，邀请“参与者在听到声音后与现有环境建立联系”（Schraffenberger and Heide，2014，第 68 页）。这为后续更具定位性和 6DoF（六度自由）体验奠定了坚实基础。
 
--   最早的已知音频导览实现于 1952 年，在阿姆斯特丹的 Stedelijk Museum（荷兰国家美术馆）推出。线性语音描述被录制在磁带上，并通过安装在踢脚板后的感应环在馆内广播；参观者佩戴耳机并通过小型接收器接收无线电信号（Nederlands Instituut voor Beeld and Geluid，2020）。这一先驱的“无线导览”引起了多家博物馆的兴趣（Stedelijk Museum Amsterdam，2021），随后类似系统也在华盛顿国家画廊（National Gallery of Washington）使用（Kennedy，2006）。
+- 最早的已知音频导览实现于 1952 年，在阿姆斯特丹的 Stedelijk Museum（荷兰国家美术馆）推出。线性语音描述被录制在磁带上，并通过安装在踢脚板后的感应环在馆内广播；参观者佩戴耳机并通过小型接收器接收无线电信号（Nederlands Instituut voor Beeld and Geluid，2020）。这一先驱的“无线导览”引起了多家博物馆的兴趣（Stedelijk Museum Amsterdam，2021），随后类似系统也在华盛顿国家画廊（National Gallery of Washington）使用（Kennedy，2006）。
 
--   ![Figure 4.5Visitors on the Alcatraz Cellhouse Audio Tour ¶ Source: Photograph by JiaYing Grygiel](img/fig4_5.jpg)
+![Figure 4.5Visitors on the Alcatraz Cellhouse Audio Tour ¶ Source: Photograph by JiaYing Grygiel](img/fig4_5.jpg)
 
--   Figure 4.5Visitors on the *Alcatraz Cellhouse Audio Tour* ¶ Source: Photograph by JiaYing Grygiel
+Figure 4.5Visitors on the *Alcatraz Cellhouse Audio Tour* ¶ Source: Photograph by JiaYing Grygiel
 
--   当代音频导览的典型例子是广为人知的*Alcatraz Cellhouse Audio Tour*，该导览位于旧金山湾的传奇性最高安全级别联邦监狱——该监狱在 1980 年代改建为博物馆。原始音频导览于 1987 年使用 Sony Walkman 制作，2007 年在翻新期间推出了新版本，采用重新设计的音效和 MP3 播放器（Golden Gate National Parks Conservancy，2007）。
+- 当代音频导览的典型例子是广为人知的*Alcatraz Cellhouse Audio Tour*，该导览位于旧金山湾的传奇性最高安全级别联邦监狱——该监狱在 1980 年代改建为博物馆。原始音频导览于 1987 年使用 Sony Walkman 制作，2007 年在翻新期间推出了新版本，采用重新设计的音效和 MP3 播放器（Golden Gate National Parks Conservancy，2007）。
 
--   45 分钟的音频呈现包含了在监狱时代生活和工作的矫正官和囚犯的真实声音。通过监狱门闸的敲击声、脚步声以及其他监狱音效营造出氛围。与使用编号地点并需按按钮触发个别音频段的方式不同，该音频导览采用线性播放，假设访客以相对稳定的速度沿既定路径行走，类似于 Stedelijk Museum 的导览。若访客在某处逗留或行走速度快于预期，可自行暂停并重新开始音频。这种方式提供了低维护的解决方案，无需在历史建筑上安装任何追踪基础设施。
+- 45 分钟的音频呈现包含了在监狱时代生活和工作的矫正官和囚犯的真实声音。通过监狱门闸的敲击声、脚步声以及其他监狱音效营造出氛围。与使用编号地点并需按按钮触发个别音频段的方式不同，该音频导览采用线性播放，假设访客以相对稳定的速度沿既定路径行走，类似于 Stedelijk Museum 的导览。若访客在某处逗留或行走速度快于预期，可自行暂停并重新开始音频。这种方式提供了低维护的解决方案，无需在历史建筑上安装任何追踪基础设施。
 
--   与 Stedelijk 系统类似，Alcatraz 的音频是“头部锁定”（head-locked），但仍能在访客站在走廊时，听到铁栏的撞击声和囚犯的喊叫，营造出沉浸感。在某些时刻，访客被邀请同步与一名囚犯的步伐，这一方法与 Janet Cardiff 在部分音频步行中用来与叙事者建立联系的技巧相似。
+- 与 Stedelijk 系统类似，Alcatraz 的音频是“头部锁定”（head-locked），但仍能在访客站在走廊时，听到铁栏的撞击声和囚犯的喊叫，营造出沉浸感。在某些时刻，访客被邀请同步与一名囚犯的步伐，这一方法与 Janet Cardiff 在部分音频步行中用来与叙事者建立联系的技巧相似。
 
 ### 4.4.2 Audio walks
 
--   Janet Cardiff 及其合作伙伴–协作者 George Bures Miller 是音频步行（site-specific sound art）发展的重要人物。Cardiff 的*Lousiana Walk #14*（1996 年）让艺术画廊的参观者通过耳机听到精确的音频指示，引导他们离开室内空间“踏上户外冒险”（Butler，2007）。Cardiff 的音频步行自*Münster Walk*（1997 年）起开始使用双耳人头模型（binaural dummy head）录音，以增强沉浸感和与叙事者的共在感；在步行时，参与者被鼓励跟随叙述者的脚步节奏（Butler，2007）。这些步行常常将多层虚构叙事与现实及身体运动相结合（Bradley，2012），从而探索自适应音频（AAR）的核心要素。
+- Janet Cardiff 及其合作伙伴–协作者 George Bures Miller 是音频步行（site-specific sound art）发展的重要人物。Cardiff 的*Lousiana Walk #14*（1996 年）让艺术画廊的参观者通过耳机听到精确的音频指示，引导他们离开室内空间“踏上户外冒险”（Butler，2007）。Cardiff 的音频步行自*Münster Walk*（1997 年）起开始使用双耳人头模型（binaural dummy head）录音，以增强沉浸感和与叙事者的共在感；在步行时，参与者被鼓励跟随叙述者的脚步节奏（Butler，2007）。这些步行常常将多层虚构叙事与现实及身体运动相结合（Bradley，2012），从而探索自适应音频（AAR）的核心要素。
 
--   Cardiff–Miller 的首批音频步行使用便携 CD 播放器和 iPod 播放线性内容，并提供暂停和倒带功能；到本世纪第一个十年结束时，这些内容被智能手机所取代（Bradley，2012）。
+- Cardiff–Miller 的首批音频步行使用便携 CD 播放器和 iPod 播放线性内容，并提供暂停和倒带功能；到本世纪第一个十年结束时，这些内容被智能手机所取代（Bradley，2012）。
 
--   最近已故的荷兰声音艺术家 Cilia Eren 的音频步行则恰恰相反：首先，Eren 本人从未以声音出现，而是让参与者扮演叙事者的角色；其次，其目标是让参与者产生错位感。例如，她的首部音频步行*China Daily*（1987 年）邀请听众想象自己置身于繁忙的中国城市，而实际漫步在阿姆斯特丹的街道上（Steijn，2023）。虽然这种声学转位通常难以实现，但叙事的 transportation 以及步行这一共同模式（听觉与身体）可能提供帮助。
+- 最近已故的荷兰声音艺术家 Cilia Eren 的音频步行则恰恰相反：首先，Eren 本人从未以声音出现，而是让参与者扮演叙事者的角色；其次，其目标是让参与者产生错位感。例如，她的首部音频步行*China Daily*（1987 年）邀请听众想象自己置身于繁忙的中国城市，而实际漫步在阿姆斯特丹的街道上（Steijn，2023）。虽然这种声学转位通常难以实现，但叙事的 transportation 以及步行这一共同模式（听觉与身体）可能提供帮助。
 
 ### 4.4.3 Radio-based locative experiences
 
--   卫星定位和移动互联网在可穿戴设备中的应用，使得本世纪第一个十年出现了基于地理位置的音频步行和体验，这将在下一章详细讨论。在此之前，一些声音艺术家使用无线电发射和接收设备，在环境中植入虚拟声音源，创造定位体验。
+- 卫星定位和移动互联网在可穿戴设备中的应用，使得本世纪第一个十年出现了基于地理位置的音频步行和体验，这将在下一章详细讨论。在此之前，一些声音艺术家使用无线电发射和接收设备，在环境中植入虚拟声音源，创造定位体验。
 
-
-
-
-在 2000 年，Edwin van der Heide (2023) 创作了他首个`Radioscape`装置，该装置探索无线电作为空间和互动媒介。十五台定制发射器散布在城市环境中，广播元“元作曲”的多层内容，参与者通过专为其设计的接收器收听。接收器具备两个有趣的特性。首先，它们能够同时接收多个信号。其次，发射器与接收器之间的距离直接影响音量，即使在短距离内也如此，这与许多习惯收听高功率商业和公共电台的听众不同。
+在 2000 年，Edwin van der Heide (2023) 创作了他首个*Radioscape*装置，该装置探索无线电作为空间和互动媒介。十五台定制发射器散布在城市环境中，广播元“元作曲”的多层内容，参与者通过专为其设计的接收器收听。接收器具备两个有趣的特性。首先，它们能够同时接收多个信号。其次，发射器与接收器之间的距离直接影响音量，即使在短距离内也如此，这与许多习惯收听高功率商业和公共电台的听众不同。
 
 第三，也许最有趣的特点是，接收器是“立体全景接收器”，正如艺术家所称。通过使用两根天线和立体耳机，它们的功能类似于立体麦克风：参与者能够感知发射器的方向和距离；位于天线左侧的广播站在左耳听到更明显，反之亦然。
 
@@ -90,174 +73,169 @@ Finally, my deepest thanks to you, Kaisa, my wife, for your unwavering support a
 
 ![Figure 4.6Participants of Radioscape using the custom-made radio receivers ¶ Source: Photograph by Edwin van der Heide, courtesy of Studio Edwin van der Heide](img/fig4_6.jpg)
 
-Figure 4.6`Participants of *Radioscape* using the custom-made radio receivers` ¶ Source: Photograph by Edwin van der Heide, courtesy of Studio Edwin van der Heide
+Figure 4.6Participants of *Radioscape* using the custom-made radio receivers ¶ Source: Photograph by Edwin van der Heide, courtesy of Studio Edwin van der Heide
 
-另一个基于无线电的音频体验是`Linked`，该装置于 2003 年由 Graeme Miller (2024) 在英国东伦敦安装。该作品利用多台无线电发射器创建“地理定位”的接收区域。原始作品由伦敦博物馆应邀创作，以回应 M11 联络道路的建设，该道路拆除了超过 400 栋建筑，影响了一个充满活力的社区。沿着道路 5 公里的路段，多个安装在路灯杆上的发射器播放记忆、故事和来自该地区过往居民的声音，包括艺术家、工人和活跃参与反对开发的抗议者。
+另一个基于无线电的音频体验是*Linked*，该装置于 2003 年由 Graeme Miller (2024) 在英国东伦敦安装。该作品利用多台无线电发射器创建“地理定位”的接收区域。原始作品由伦敦博物馆应邀创作，以回应 M11 联络道路的建设，该道路拆除了超过 400 栋建筑，影响了一个充满活力的社区。沿着道路 5 公里的路段，多个安装在路灯杆上的发射器播放记忆、故事和来自该地区过往居民的声音，包括艺术家、工人和活跃参与反对开发的抗议者。
 
-2003 年，基于卫星定位的移动音频步行应用尚未向公众提供。使用无线电发射器是一种优雅的前身，但需要实物安装、电源供应和维护。与 Heide 的作品一样，实体无线电发射器将内容具体地锚定在环境中。`Linked`采用音频循环，其缺点是，若在循环中途接收到信号，听众需等待下一个故事开始（Bederson, 1995）。在`Linked`中，这种间歇性的无线电信号接收，加上信号的不连续性，营造出一种怀旧感，适合作品本身；同时，多个参与者能够同步聆听内容，这在基于网页的系统中难以实现（Bradley, 2012）。
+2003 年，基于卫星定位的移动音频步行应用尚未向公众提供。使用无线电发射器是一种优雅的前身，但需要实物安装、电源供应和维护。与 Heide 的作品一样，实体无线电发射器将内容具体地锚定在环境中。*Linked*采用音频循环，其缺点是，若在循环中途接收到信号，听众需等待下一个故事开始（Bederson, 1995）。在*Linked*中，这种间歇性的无线电信号接收，加上信号的不连续性，营造出一种怀旧感，适合作品本身；同时，多个参与者能够同步聆听内容，这在基于网页的系统中难以实现（Bradley, 2012）。
 
 ## References
 
-1.  Apple, R.W. (2023) ‘Turning Wax into Diamonds’, Edison and Ford Winter Estates, 1 December. Available at: [`www.edisonfordwinterestates.org/turning-wax-into-diamonds/`](https://www.edisonfordwinterestates.org/turning-wax-into-diamonds/) (Accessed: 2 July 2024).
+1. Apple, R.W. (2023) ‘Turning Wax into Diamonds’, Edison and Ford Winter Estates, 1 December. Available at: [www.edisonfordwinterestates.org/turning-wax-into-diamonds/](https://www.edisonfordwinterestates.org/turning-wax-into-diamonds/) (Accessed: 2 July 2024).
 
-2.  Bederson, B.B. (1995) ‘Audio Augmented Reality: A Prototype Automated Tour Guide’, in Conference Companion on Human Factors in Computing Systems – CHI ’95. Denver, Colorado, United States: ACM Press, pp. 210–211. Available at: [`doi.org/10.1145/223355.223526`](https://doi.org/10.1145/223355.223526).
+2. Bederson, B.B. (1995) ‘Audio Augmented Reality: A Prototype Automated Tour Guide’, in Conference Companion on Human Factors in Computing Systems – CHI ’95. Denver, Colorado, United States: ACM Press, pp. 210–211. Available at: [doi.org/10.1145/223355.223526](https://doi.org/10.1145/223355.223526).
 
-3.  Berry, G. (2017) ‘History of Binaural’. Available at: [`geberry.wixsite.com/binaural/history`](https://geberry.wixsite.com/binaural/history) (Accessed: 10 September 2024).
+3. Berry, G. (2017) ‘History of Binaural’. Available at: [geberry.wixsite.com/binaural/history](https://geberry.wixsite.com/binaural/history) (Accessed: 10 September 2024).
 
-4.  Boren, B. (2018) ‘History of 3D Sound’, in A. Roginska and P. Geluso (eds) Immersive Sound: The Art and Science of Binaural and Multi-Channel Audio. Routledge, pp. 40–62.
+4. Boren, B. (2018) ‘History of 3D Sound’, in A. Roginska and P. Geluso (eds) Immersive Sound: The Art and Science of Binaural and Multi-Channel Audio. Routledge, pp. 40–62.
 
-5.  Bose (2024) ‘Active Sound Management | Bose Automotive’. Available at: [`automotive.bose.com/road-ahead/active-sound-management`](https://automotive.bose.com/road-ahead/active-sound-management) (Accessed: 25 September 2024).
-
-6.  Bradley, S. (2012) ‘History To Go: Oral History, Audiowalks and Mobile Media’ (pre-published version). Available at: [`www.academia.edu/1148470/History_to_go_oral_history_audiowalks_and_mobile_media_pre_published_version_`](https://www.academia.edu/1148470/History_to_go_oral_history_audiowalks_and_mobile_media_pre_published_version_) (Accessed: 1 August 2024).
-
-7.  Briggs, M.J. (2023) ‘A Brief History of the Acoustic Ear Trumpet and Some Collection Favourites’, ENT & Audiology News, December. Available at: [`www.entandaudiologynews.com/features/audiology-features/post/a-brief-history-of-the-acoustic-ear-trumpet-and-some-collection-favourites`](https://www.entandaudiologynews.com/features/audiology-features/post/a-brief-history-of-the-acoustic-ear-trumpet-and-some-collection-favourites) (Accessed: 15 September 2024).
-
-8.  Bülow, R. (2013) ‘Vor 40 Jahren: Ein Kunstkopf für binaurale Stereophonie’, heise online. Available at: [`www.heise.de/news/Vor-40-Jahren-Ein-Kunstkopf-fuer-binaurale-Stereophonie-1946286.html`](https://www.heise.de/news/Vor-40-Jahren-Ein-Kunstkopf-fuer-binaurale-Stereophonie-1946286.html) (Accessed: 10 September 2024).
-
-9.  Butler, T. (2007) ‘Memoryscape: How Audio Walks Can Deepen Our Sense of Place by Integrating Art, Oral History and Cultural Geography’, Geography Compass, 1 (3), pp. 360–372. Available at: [`doi.org/10.1111/j.1749-8198.2007.00017.x`](https://doi.org/10.1111/j.1749-8198.2007.00017.x).
-
-10.  Cardiff, J. and Miller, G.B. (2024) ‘Münster Walk, Janet Cardiff & George Bures Miller’. Available at: [`cardiffmiller.com/walks/munster-walk/`](https://cardiffmiller.com/walks/munster-walk/) (Accessed: 31 October 2024).
-
-11.  Chion, M. (1994) Audio-Vision: Sound on Screen. Columbia University Press.
-
-12.  Davis, M. (2003) ‘History of Spatial Coding’, Journal of the Audio Engineering Society, 51 (6), pp. 554–569.
-
-13.  Dawson, V. (2020) ‘The Epic Failure of Thomas Edison’s Talking Doll’, Smithsonian Magazine. Available at: [`www.smithsonianmag.com/smithsonian-institution/epic-failure-thomas-edisons-talking-doll-180955442/`](https://www.smithsonianmag.com/smithsonian-institution/epic-failure-thomas-edisons-talking-doll-180955442/) (Accessed: 3 September 2024).
-
-14.  Dia Art Foundation (2023) ‘Max Neuhaus, Times Square’. Available at: [`www.diaart.org/exhibition/exhibitions-projects/max-neuhaus-times-square-site`](https://www.diaart.org/exhibition/exhibitions-projects/max-neuhaus-times-square-site) (Accessed: 23 September 2024).
+5. Bose (2024) ‘Active Sound Management | Bose Automotive’. Available at: [automotive.bose.com/road-ahead/active-sound-management](https://automotive.bose.com/road-ahead/active-sound-management) (Accessed: 25 September 2024).
 
 
 
-15. Eckel, G. (2001) ‘Immersive Audio‑Augmented Environments: The LISTEN Project’, in Proceedings Fifth International Conference on Information Visualisation, IEEE, pp. 571–573. 可于：https://doi.org/10.1109/IV.2001.942112
+6. Bradley, S. (2012) ‘History To Go: Oral History, Audiowalks and Mobile Media’ (pre-published version). Available at: [`www.academia.edu/1148470/History_to_go_oral_history_audiowalks_and_mobile_media_pre_published_version_`](https://www.academia.edu/1148470/History_to_go_oral_history_audiowalks_and_mobile_media_pre_published_version_) (Accessed: 1 August 2024).
 
-16. Ford (2015) ‘How New Ford Technology Can Make Your Car Work Like a Giant Pair of Noise‑Cancelling Headphones’. 可于：https://media.ford.com/content/fordmedia/feu/en/news/2015/11/11/how-new-ford-technology-can-make-your-car-work-like---a-giant-pa.html (Accessed: 25 September 2024).
+7. Briggs, M.J. (2023) ‘A Brief History of the Acoustic Ear Trumpet and Some Collection Favourites’, ENT & Audiology News, December. Available at: [`www.entandaudiologynews.com/features/audiology-features/post/a-brief-history-of-the-acoustic-ear-trumpet-and-some-collection-favourites`](https://www.entandaudiologynews.com/features/audiology-features/post/a-brief-history-of-the-acoustic-ear-trumpet-and-some-collection-favourites) (Accessed: 15 September 2024).
 
-17. Golden Gate National Parks Conservancy (2007) ‘Alcatraz Breaks Out! Major Renovation of World Famous National Park Site’, Golden Gate National Parks Conservancy. 可于：https://www.parksconservancy.org/news/alcatraz-breaks-out-major-renovation-world-famous-natioenal-park-site (Accessed: 17 September 2024).
+8. Bülow, R. (2013) ‘Vor 40 Jahren: Ein Kunstkopf für binaurale Stereophonie’, heise online. Available at: [`www.heise.de/news/Vor-40-Jahren-Ein-Kunstkopf-fuer-binaurale-Stereophonie-1946286.html`](https://www.heise.de/news/Vor-40-Jahren-Ein-Kunstkopf-fuer-binaurale-Stereophonie-1946286.html) (Accessed: 10 September 2024).
+
+9. Butler, T. (2007) ‘Memoryscape: How Audio Walks Can Deepen Our Sense of Place by Integrating Art, Oral History and Cultural Geography’, Geography Compass, 1 (3), pp. 360–372. Available at: [`doi.org/10.1111/j.1749-8198.2007.00017.x`](https://doi.org/10.1111/j.1749-8198.2007.00017.x).
+
+10. Cardiff, J. and Miller, G.B. (2024) ‘Münster Walk, Janet Cardiff & George Bures Miller’. Available at: [`cardiffmiller.com/walks/munster-walk/`](https://cardiffmiller.com/walks/munster-walk/) (Accessed: 31 October 2024).
+
+11. Chion, M. (1994) Audio-Vision: Sound on Screen. Columbia University Press.
+
+12. Davis, M. (2003) ‘History of Spatial Coding’, Journal of the Audio Engineering Society, 51 (6), pp. 554–569.
+
+13. Dawson, V. (2020) ‘The Epic Failure of Thomas Edison’s Talking Doll’, Smithsonian Magazine. Available at: [`www.smithsonianmag.com/smithsonian-institution/epic-failure-thomas-edisons-talking-doll-180955442/`](https://www.smithsonianmag.com/smithsonian-institution/epic-failure-thomas-edisons-talking-doll-180955442/) (Accessed: 3 September 2024).
+
+14. Dia Art Foundation (2023) ‘Max Neuhaus, Times Square’. Available at: [`www.diaart.org/exhibition/exhibitions-projects/max-neuhaus-times-square-site`](https://www.diaart.org/exhibition/exhibitions-projects/max-neuhaus-times-square-site) (Accessed: 23 September 2024).
+
+15. Eckel, G. (2001) ‘Immersive Audio‑Augmented Environments: The LISTEN Project’, in Proceedings Fifth International Conference on Information Visualisation, IEEE, pp. 571–573. 可于：[`https://doi.org/10.1109/IV.2001.942112`](https://doi.org/10.1109/IV.2001.942112)
+
+16. Ford (2015) ‘How New Ford Technology Can Make Your Car Work Like a Giant Pair of Noise‑Cancelling Headphones’. 可于：[`https://media.ford.com/content/fordmedia/feu/en/news/2015/11/11/how-new-ford-technology-can-make-your-car-work-like---a-giant-pa.html`](https://media.ford.com/content/fordmedia/feu/en/news/2015/11/11/how-new-ford-technology-can-make-your-car-work-like---a-giant-pa.html) (Accessed: 25 September 2024).
+
+17. Golden Gate National Parks Conservancy (2007) ‘Alcatraz Breaks Out! Major Renovation of World Famous National Park Site’, Golden Gate National Parks Conservancy. 可于：[`https://www.parksconservancy.org/news/alcatraz-breaks-out-major-renovation-world-famous-natioenal-park-site`](https://www.parksconservancy.org/news/alcatraz-breaks-out-major-renovation-world-famous-natioenal-park-site) (Accessed: 17 September 2024).
 
 18. Gronow, P. and Saunio, I. (1990) Äänilevyn historia. Porvoo: WSOY.
 
-19. Harman (2024) ‘Active Noise Cancellation – The Sound of Silence’. 可于：https://car.harman.com/solutions/car-audio/halosonic/active-noise-cancellation (Accessed: 25 September 2024).
+19. Harman (2024) ‘Active Noise Cancellation – The Sound of Silence’. 可于：[`https://car.harman.com/solutions/car-audio/halosonic/active-noise-cancellation`](https://car.harman.com/solutions/car-audio/halosonic/active-noise-cancellation) (Accessed: 25 September 2024).
 
-20. Heide, E. van der (2023) ‘Edwin van der Heide – Portfolio’. 可于：https://www.evdh.net/portfolio/EvdH_portfolio.pdf (Accessed: 12 September 2024).
+20. Heide, E. van der (2023) ‘Edwin van der Heide – Portfolio’. 可于：[`https://www.evdh.net/portfolio/EvdH_portfolio.pdf`](https://www.evdh.net/portfolio/EvdH_portfolio.pdf) (Accessed: 12 September 2024).
 
-21. Howard, P. and Templeton, W.B. (1966) Human Spatial Orientation. London: Wiley. 可于：https://archive.org/details/trent_0116301611517
+21. Howard, P. and Templeton, W.B. (1966) Human Spatial Orientation. London: Wiley. 可于：[`https://archive.org/details/trent_0116301611517`](https://archive.org/details/trent_0116301611517)
 
-22. Hyundai (2020) ‘Hyundai’s World’s First Road‑Noise Active Noise Control, RANC’, Hyundai Motor Group. 可于：https://www.hyundaimotorgroup.com/story/CONT0000000000090151 (Accessed: 25 September 2024).
+22. Hyundai (2020) ‘Hyundai’s World’s First Road‑Noise Active Noise Control, RANC’, Hyundai Motor Group. 可于：[`https://www.hyundaimotorgroup.com/story/CONT0000000000090151`](https://www.hyundaimotorgroup.com/story/CONT0000000000090151) (Accessed: 25 September 2024).
 
-23. Kennedy, R. (2006) ‘At Museums: Invasion of the Podcasts’, The New York Times, 19 May. 可于：https://www.nytimes.com/2006/05/19/arts/design/at-museums-invasion-of-the-podcasts.html (Accessed: 3 October 2024).
+23. Kennedy, R. (2006) ‘At Museums: Invasion of the Podcasts’, The New York Times, 19 May. 可于：[`https://www.nytimes.com/2006/05/19/arts/design/at-museums-invasion-of-the-podcasts.html`](https://www.nytimes.com/2006/05/19/arts/design/at-museums-invasion-of-the-podcasts.html) (Accessed: 3 October 2024).
 
 24. Kittler, F.A., Winthrop‑Young, G. and Wutz, M. (1999) Gramophone, Film, Typewriter. Stanford, CA: Stanford University Press (Writing science).
 
-25. Kotz, L. (2009) ‘Max Neuhaus: Sound into Space’. 可于：https://faculty.ucr.edu/~ewkotz/texts/Kotz-2009-Dia-Neuhaus-proof.pdf (Accessed: 23 September 2024).
+25. Kotz, L. (2009) ‘Max Neuhaus: Sound into Space’. 可于：[`https://faculty.ucr.edu/~ewkotz/texts/Kotz-2009-Dia-Neuhaus-proof.pdf`](https://faculty.ucr.edu/~ewkotz/texts/Kotz-2009-Dia-Neuhaus-proof.pdf) (Accessed: 23 September 2024).
 
 26. Kroon, R.W. (2010) A/V A to Z: An Encyclopedic Dictionary of Media, Entertainment and Other Audiovisual Terms. McFarland.
 
-27. Lawton, M., Cunningham, S. and Convery, I. (2020) ‘Nature Soundscapes: An Audio Augmented Reality Experience’, in Proceedings of the 15th International Audio Mostly Conference (AM’20). AM’20: Audio Mostly 2020, Graz Austria: ACM, pp. 85–92. 可于：https://doi.org/10.1145/3411109.3411142
+27. Lawton, M., Cunningham, S. and Convery, I. (2020) ‘Nature Soundscapes: An Audio Augmented Reality Experience’, in Proceedings of the 15th International Audio Mostly Conference (AM’20). AM’20: Audio Mostly 2020, Graz Austria: ACM, pp. 85–92. 可于：[`https://doi.org/10.1145/3411109.3411142`](https://doi.org/10.1145/3411109.3411142)
 
-28. Majdak, P., Goupell, M.J. and Laback, B. (2010) ‘3-D Localization of Virtual Sound Sources: Effects of Visual Environment, Pointing Method, and Training’, Attention, Perception, & Psychophysics, 72 (2), pp. 454–469. 可于：https://doi.org/10.3758/APP.72.2.454
+28. Majdak, P., Goupell, M.J. and Laback, B. (2010) ‘3-D Localization of Virtual Sound Sources: Effects of Visual Environment, Pointing Method, and Training’, Attention, Perception, & Psychophysics, 72 (2), pp. 454–469. 可于：[`https://doi.org/10.3758/APP.72.2.454`](https://doi.org/10.3758/APP.72.2.454)
 
-29. Miller, G. (2024) ‘LINKED’. 可于：https://graememiller.org/project/linked/ (Accessed: 11 November 2024).
+29. Miller, G. (2024) ‘LINKED’. 可于：[`https://graememiller.org/project/linked/`](https://graememiller.org/project/linked/) (Accessed: 11 November 2024).
 
-30. Nederlands Instituut voor Beeld & Geluid (2020) ‘Draadloze rondleiding in het Amsterdams Stedelijk Museum (1952)’. 可于：https://www.youtube.com/watch?v=QSEqf_mqjCA (Accessed: 2 October 2024).
+30. Nederlands Instituut voor Beeld & Geluid (2020) ‘Draadloze rondleiding in het Amsterdams Stedelijk Museum (1952)’. 可于：[`https://www.youtube.com/watch?v=QSEqf_mqjCA`](https://www.youtube.com/watch?v=QSEqf_mqjCA) (Accessed: 2 October 2024).
 
 31. Niittymäki, H. (2024) ‘Email exhange with Matias Harju, 3 October’.
 
-32. Pettorino, M. (2015) ‘The History of Talking Heads: The Trick and the Research’, in R. Hoffmann and J. Trouvain (eds) Proceedings of the First International Workshop of the History of Speech Communication Research. HSCR 2015, Dresden: TUD Press, pp. 30–41. 可于：https://unora.unior.it/bitstream/11574/160948/1/pettorino_dresden_2015.pdf (Accessed: 19 September 2024).
+32. Pettorino, M. (2015) ‘The History of Talking Heads: The Trick and the Research’, in R. Hoffmann and J. Trouvain (eds) Proceedings of the First International Workshop of the History of Speech Communication Research. HSCR 2015, Dresden: TUD Press, pp. 30–41. 可于：[`https://unora.unior.it/bitstream/11574/160948/1/pettorino_dresden_2015.pdf`](https://unora.unior.it/bitstream/11574/160948/1/pettorino_dresden_2015.pdf) (Accessed: 19 September 2024).
 
-33. Pick, H.L., Warren, D.H. and Hay, J.C. (1969) ‘Sensory Conflict in Judgments of Spatial Direction’, Perception & Psychophysics, 6 (4), pp. 203–205. 可于：https://doi.org/10.3758/BF03207017
+33. Pick, H.L., Warren, D.H. and Hay, J.C. (1969) ‘Sensory Conflict in Judgments of Spatial Direction’, Perception & Psychophysics, 6 (4), pp. 203–205. 可于：[`https://doi.org/10.3758/BF03207017`](https://doi.org/10.3758/BF03207017)
 
-34. Schoenherr, S.E. (1999) ‘Sound Recording Research at Bell Labs’. 可于：https://www.aes-media.org/historical/html/recording.technology.history/bell-labs.html (Accessed: 10 September 2024).
+34. Schoenherr, S.E. (1999) ‘Sound Recording Research at Bell Labs’. 可于：[`https://www.aes-media.org/historical/html/recording.technology.history/bell-labs.html`](https://www.aes-media.org/historical/html/recording.technology.history/bell-labs.html) (Accessed: 10 September 2024).
 
 35. Schraffenberger, H. and Heide, E. van der (2014) ‘The Real in Augmented Reality’, in xCoAx: Proceedings of the Conference on Computation, Communication, Aesthetics and X. xCoAx 2014, Porto, pp. 64–74.
 
-36. Self, D. (2024) ‘Acoustic Location and Sound Mirrors’. 可于：http://douglas-self.com/MUSEUM/COMMS/ear/ear.htm (Accessed: 20 September 2024).
+36. Self, D. (2024) ‘Acoustic Location and Sound Mirrors’. 可于：[`http://douglas-self.com/MUSEUM/COMMS/ear/ear.htm`](http://douglas-self.com/MUSEUM/COMMS/ear/ear.htm) (Accessed: 20 September 2024).
 
-37. Stamp, J. (2023) ‘A Partial History of Headphones’, Smithsonian Magazine. 可于：https://www.smithsonianmag.com/arts-culture/a-partial-history-of-headphones-4693742/ (Accessed: 23 September 2024).
+37. Stamp, J. (2023) ‘A Partial History of Headphones’, Smithsonian Magazine. 可于：[`https://www.smithsonianmag.com/arts-culture/a-partial-history-of-headphones-4693742/`](https://www.smithsonianmag.com/arts-culture/a-partial-history-of-headphones-4693742/) (Accessed: 23 September 2024).
 
-38. Stedelijk Museum Amsterdam (2021) Have You Heard About the Very First Museum Audio Tour?, Instagram. 可于：https://www.instagram.com/stedelijkstudies/p/CT2SHjFIBoS/ (Accessed: 2 October 2024).
+38. Stedelijk Museum Amsterdam (2021) Have You Heard About the Very First Museum Audio Tour?, Instagram. 可于：[`https://www.instagram.com/stedelijkstudies/p/CT2SHjFIBoS/`](https://www.instagram.com/stedelijkstudies/p/CT2SHjFIBoS/) (Accessed: 2 October 2024).
 
-39. Steijn, R. (2023) ‘Ode aan de verstilling – Cilia Erens (1946–2023)’, Theaterkrant. 可于：https://www.theaterkrant.nl/tm-artikel/ode-aan-de-verstilling-cilia-erens-1946-2023/ (Accessed: 9 October 2024).
+39. Steijn, R. (2023) ‘Ode aan de verstilling – Cilia Erens (1946–2023)’, Theaterkrant. 可于：[`https://www.theaterkrant.nl/tm-artikel/ode-aan-de-verstilling-cilia-erens-1946-2023/`](https://www.theaterkrant.nl/tm-artikel/ode-aan-de-verstilling-cilia-erens-1946-2023/) (Accessed: 9 October 2024).
 
 40. Thomas A. Edison Inc. (1920) ‘The New Edison Advertisement (August 14, 1920)’, The Saturday Evening Post, 14 August, pp. 164–165.
 
-41. Thor (2024) ‘THOR AVAS – Acoustic Vehicle Alerting System for All Types of Electric Vehicles’. 可于：https://thor-avas.com/legislation/regulation-on-avas-requirements/ (Accessed: 25 September 2024).
+41. Thor (2024) ‘THOR AVAS – Acoustic Vehicle Alerting System for All Types of Electric Vehicles’. 可于：[`https://thor-avas.com/legislation/regulation-on-avas-requirements/`](https://thor-avas.com/legislation/regulation-on-avas-requirements/) (Accessed: 25 September 2024).
 
-42. Waller, S. (2002) ‘Psychoacoustic Influences of the Echoing Environments of Prehistoric Art’, Journal of The Acoustical Society of America, 112, pp. 2284–2284. 可于：https://doi.org/10.1121/1.4779166
+42. Waller, S. (2002) ‘Psychoacoustic Influences of the Echoing Environments of Prehistoric Art’, Journal of The Acoustical Society of America, 112, pp. 2284–2284. 可于：[`https://doi.org/10.1121/1.4779166`](https://doi.org/10.1121/1.4779166)
 
 
 
 43. 于, K. (2022) ‘世界上最深的桶’, Valens 研究. 可于: [`www.valens-research.com/dynamic-marketing-communique/the-worlds-deepest-bin-find-out-how-this-campaign-encouraged-a-fun-cleaning-activity-in-2009-thursdays-gorillas-of-guerrilla-marketing/`](https://www.valens-research.com/dynamic-marketing-communique/the-worlds-deepest-bin-find-out-how-this-campaign-encouraged-a-fun-cleaning-activity-in-2009-thursdays-gorillas-of-guerrilla-marketing/) (访问日期: 2024 年 9 月 23 日)。
 
-## 5Towards mixed realities
+## 5 Towards mixed realities
 
 DOI: [10.4324/9781003627289-5](https://doi.org/10.4324/9781003627289-5)
 
-1990 年代以前, 将虚拟音频合并到现实世界的过程主要依赖于隐藏扬声器的直接增强, 或者通过耳机提供线性或手动控制的音频导览和音频步行 (见 第 4 章)。当时, 计算性能的提升推动了对虚拟现实和“元空间”的热情探索。1992 年, 卡德尔和米泽尔 (Caudell and Mizell) 1992 为在波音公司研发的头戴式显示器而引入“增强现实”一词。随后, “增强音频现实”(Cohen, Aoki and Koizumi 1993) 和“音频增强现实”(Bederson, 1995) 等概念相继出现, 这些概念展示了基于计算机生成的空间声和基于位置的交互功能的早期实际原型。
+1990 年代以前, 将虚拟音频合并到现实世界的过程主要依赖于隐藏扬声器的直接增强, 或者通过耳机提供线性或手动控制的音频导览和音频步行 (见 第 4 章)。当时, 计算性能的提升推动了对虚拟现实和“元空间”的热情探索。1992 年, 卡德尔和米泽尔 (`Caudell and Mizell` 1992) 为在波音公司研发的头戴式显示器而引入“增强现实”一词。随后, “增强音频现实”(`Cohen, Aoki and Koizumi` 1993) 和“音频增强现实”(`Bederson, 1995`) 等概念相继出现, 这些概念展示了基于计算机生成的空间声和基于位置的交互功能的早期实际原型。
 
-通往听觉混合现实 (MR) 的旅程已经开始, 想象一个未来, 计算机生成的虚拟声音能够无缝融合到现实世界中。虽然这种无缝融合仍是许多实际应用的理想目标, 但增强音频现实 (AAR) 的其他特征已经被成功利用, 创造出吸引人且富有信息的体验。本章通过一系列双耳声道或耳机驱动的 AAR 示例, 探索这条道路, 重点突出该领域的重要里程碑以及仍然可供公众使用的叙事应用。与上一章的示例类似, 本章中展示的示例在全书中均有引用。
+通往听觉混合现实 (`MR`) 的旅程已经开始, 想象一个未来, 计算机生成的虚拟声音能够无缝融合到现实世界中。虽然这种无缝融合仍是许多实际应用的理想目标, 但增强音频现实 (`AAR`) 的其他特征已经被成功利用, 创造出吸引人且富有信息的体验。本章通过一系列双耳声道或耳机驱动的 `AAR` 示例, 探索这条道路, 重点突出该领域的重要里程碑以及仍然可供公众使用的叙事应用。与上一章的示例类似, 本章中展示的示例在全书中均有引用。
 
-## 5.1 首个 AAR 原型
+### 5.1 首个 AAR 原型
 
-自贝尔进行的“双耳声道”实验 (见第 4.1 章) 以来, 具有真实声学表现的远程存在已成为虚拟音频领域的核心兴趣之一。在 AAR 领域, 科恩、阿 oki 和小泉 (Cohen, Aoki and Koizumi) 1993 在日本爱因斯坦大学进行了一项有趣的研究。研究人员探讨了在危险环境中工作的“遥控机器人”操作员如何通过双耳假人头和耳机听到机器人的声音——即所谓的“真实声景”。他们使用所谓的“增强音频现实”, 在真实声景之上叠加计算机生成的空间化声音, 如警报和通信, 使其与真实声音共存。
+自贝尔进行的“双耳声道”实验 (见第 4.1 章) 以来, 具有真实声学表现的远程存在已成为虚拟音频领域的核心兴趣之一。在 `AAR` 领域, 科恩、阿 oki 和小泉 (`Cohen, Aoki and Koizumi` 1993) 在日本爱因斯坦大学进行了一项有趣的研究。研究人员探讨了在危险环境中工作的“遥控机器人”操作员如何通过双耳假人头和耳机听到机器人的声音——即所谓的“真实声景”。他们使用所谓的“增强音频现实”, 在真实声景之上叠加计算机生成的空间化声音, 如警报和通信, 使其与真实声音共存。
 
 除了增强双耳音频馈送外, 科恩及其同事还测试了在静音的桌面电话上空间定位虚拟铃声。这是最早的演示之一, 将空间化的虚拟声音附着在现实物体上 (除扬声器外)。
 
-在爱因斯坦大学的实验中, 用户坐在椅子上; 而 1995 年, 乔·贝德森 (Bederson) 及其在新泽西州贝尔通信研究所的团队则构建了一个具有重要影响的原型, 探索了 AAR 的另一个重要范式: 位置感知交互。在<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>
+在爱因斯坦大学的实验中, 用户坐在椅子上; 而 1995 年, 乔·贝德森 (`Bederson`) 及其在新泽西州贝尔通信研究所的团队则构建了一个具有重要影响的原型, 探索了 `AAR` 的另一个重要范式: 位置感知交互。
 
+- [大卫·鲍伊展]的灵感源于诺贝尔物理奖获得者**理查德·鲍伊**。
 
-
--   [大卫·鲍伊展]的灵感源于诺贝尔物理奖获得者**理查德·鲍伊**。
-
-1.  运用鲍伊技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+1. 运用鲍伊技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
 
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
 
--   可以将 `Dimensions of Sound` 展览视为 `David Bowie Is` 的更新版本，位于匈牙利布达佩斯的 `House of Music`。2022 年开幕，该大型永久展览利用 `usomo` 系统实现 6DoF（超宽带 UWB 跟踪）和空间音频。展览通过互动参与、基于位置触发和视频同步的音频内容，实现与展品的互动。头部追踪功能让声音能够附着于对应的实体物体，提升沉浸感和清晰度。展览设计可容纳数十名同时参观者，不追求真实声场，而是依赖丰富内容和互动性。如同 `David Bowie Is`，该展览在博物馆语境中展示了强大的大规模系统，能高效处理高流量访客。
+- 可以将 `Dimensions of Sound` 展览视为 `David Bowie Is` 的更新版本，位于匈牙利布达佩斯的 `House of Music`。2022 年开幕，该大型永久展览利用 `usomo` 系统实现 `6DoF`（超宽带 `UWB` 跟踪）和空间音频。展览通过互动参与、基于位置触发和视频同步的音频内容，实现与展品的互动。头部追踪功能让声音能够附着于对应的实体物体，提升沉浸感和清晰度。展览设计可容纳数十名同时参观者，不追求真实声场，而是依赖丰富内容和互动性。如同 `David Bowie Is`，该展览在博物馆语境中展示了强大的大规模系统，能高效处理高流量访客。
 
 ![Figure 5.1Headphones and mobile devices equipped with the usomo system waiting for visitors at the Dimensions of Sound exhibition in Budapest ¶ Source: Photograph by the author](img/fig5_1.jpg)
 
 Figure 5.1Headphones and mobile devices equipped with the `usomo` system waiting for visitors at the `Dimensions of Sound` exhibition in Budapest ¶ Source: Photograph by the author
 
-## 5.3 Reinforced environments
+### 5.3 Reinforced environments
 
-AR 和 AAR 的独特之处在于它们能够在现实中揭示新的意义。前面的例子主要关注在真实物体上添加虚拟声音，同时确保保留原有意义。还可以对整个环境进行 `reinforce`（Azuma, 2015），相关内容见第 8.5 章。下面的示例中的音频内容根植于地点及其居民。这类体验显然是特定场所的，无法转移到其他地方。
+`AR` 和 `AAR` 的独特之处在于它们能够在现实中揭示新的意义。前面的例子主要关注在真实物体上添加虚拟声音，同时确保保留原有意义。还可以对整个环境进行 `reinforce`（`Azuma, 2015`），相关内容见第 8.5 章。下面的示例中的音频内容根植于地点及其居民。这类体验显然是特定场所的，无法转移到其他地方。
 
-### 5.3.1 Augmented office
+#### 5.3.1 Augmented office
 
-`Audio Aura` 是加州 Xerox PARC 的早期 AAR 研究项目 (`Mynatt et al.`, 1998)。其目标是使用虚拟背景声音，为例如同事的位置提供“巧合性”的信息。当用户走进某位同事的办公室，却发现房间为空时，系统会通过用户的无线耳机播放音频提示，告知该同事是否即将返回。系统利用射频 proximity 传感器追踪每位员工的大致位置。除了上述基于位置、具有社会意义的信息外，该系统还作为普遍音频显示，告知用户收到的邮件数量。所有音频提示和声呈化均采用自然音效（如海鸥和海浪），提供“周边”信息而非精确的“看到同事的灯亮和手提箱靠在桌边”的感觉（`Mynatt et al.`, 1998）。
+`Audio Aura` 是加州 Xerox PARC 的早期 `AAR` 研究项目 (`Mynatt et al.`, 1998)。其目标是使用虚拟背景声音，为例如同事的位置提供“巧合性”的信息。当用户走进某位同事的办公室，却发现房间为空时，系统会通过用户的无线耳机播放音频提示，告知该同事是否即将返回。系统利用射频 proximity 传感器追踪每位员工的大致位置。除了上述基于位置、具有社会意义的信息外，该系统还作为普遍音频显示，告知用户收到的邮件数量。所有音频提示和声呈化均采用自然音效（如海鸥和海浪），提供“周边”信息而非精确的“看到同事的灯亮和手提箱靠在桌边”的感觉（`Mynatt et al.`, 1998）。
 
 尽管测试用户反应积极，但像 `Audio Aura` 这样的系统在工作场所并未获得广泛采用。虽然没有技术障碍，但概念可能只是过早出现。此外，隐私问题可能是潜在障碍，且持续听到作为提醒的环境声音可能会随着时间的推移变得压抑，无论这些声音多么巧合。
 
-### 5.3.2 Time travelling
+#### 5.3.2 Time travelling
 
-在叙事 AAR 中，虚拟背景环境当然被广泛使用。一个近期的例子是 `Sonic Traces Heldenplatz`（位于维也纳），该体验于 2020 年推出，由 `scopeaudio` 和 `hoerwinkel` (`Aichinger`, 2024) 开发。参与者佩戴头部追踪 `Bose AR` 耳机，并携带一款简单的图形用户界面（GUI）手机，可在漫步广场时在 1848 与 2084 两个时间层之间切换。每个层中，用户会发现酷影人物讨论当时的热点问题，而音景则通过马车和飞行汽车描绘时代氛围。有趣的是，切换层时，人物仍在讨论同一主题，但从各自时代的视角出发。
+在叙事 `AAR` 中，虚拟背景环境当然被广泛使用。一个近期的例子是 `Sonic Traces Heldenplatz`（位于维也纳），该体验于 2020 年推出，由 `scopeaudio` 和 `hoerwinkel` (`Aichinger`, 2024) 开发。参与者佩戴头部追踪 `Bose AR` 耳机，并携带一款简单的图形用户界面（GUI）手机，可在漫步广场时在 1848 与 2084 两个时间层之间切换。每个层中，用户会发现酷影人物讨论当时的热点问题，而音景则通过马车和飞行汽车描绘时代氛围。有趣的是，切换层时，人物仍在讨论同一主题，但从各自时代的视角出发。
 
-该无实体音频层同样让历史回归到 `Maison Gainsbourg`（巴黎）。如今，这座建筑是法国音乐家 Serge Gainsbourg 及其家庭的纪念博物馆。2023 年向公众开放，通过 30 分钟的预约制沉浸式音频导览，利用 `usomo` 6DoF 系统呈现。音频内容由 `The Soundwalk Collective` 与 Serge Gainsbourg 的女儿 Charlotte Gainsbourg 共同创作。导览期间，访客听到 Charlotte 回忆她与父亲在此房屋的生活点滴。独特之处在于使用了家庭日常生活的原始录音。当这些录音在原始录制地点空间定位时——例如，Serge 在客厅的大钢琴旁教 Charlotte 弹钢琴的声音——时间层在强大的方式上对齐。
+该无实体音频层同样让历史回归到 `Maison Gainsbourg`（巴黎）。如今，这座建筑是法国音乐家 Serge Gainsbourg 及其家庭的纪念博物馆。2023 年向公众开放，通过 30 分钟的预约制沉浸式音频导览，利用 `usomo` `6DoF` 系统呈现。音频内容由 `The Soundwalk Collective` 与 Serge Gainsbourg 的女儿 Charlotte Gainsbourg 共同创作。导览期间，访客听到 Charlotte 回忆她与父亲在此房屋的生活点滴。独特之处在于使用了家庭日常生活的原始录音。当这些录音在原始录制地点空间定位时——例如，Serge 在客厅的大钢琴旁教 Charlotte 弹钢琴的声音——时间层在强大的方式上对齐。
 
 ![Figure 5.2Visitors waiting for their audio tour to start at Maison Gainsbourg in Paris ¶ Source: Photograph by the author](img/fig5_2.jpg)
 
 Figure 5.2Visitors waiting for their audio tour to start at `Maison Gainsbourg` in Paris ¶ Source: Photograph by the author
 
-## 5.4 Reskinned environments
+### 5.4 Reskinned environments
 
-设定在“reskinned environment”中的应用要么是在为体验而专门构建的人工环境，要么是在真实场所进行改造以适应使用（Azuma, 2015），如第 8.5 章进一步讨论。它们通常可以迁移到其他地点，因为就像展览 AAR 那样，reskinning 对真实世界的关注很小，专注于“魔法圈”内的体验。
+设定在“reskinned environment”中的应用要么是在为体验而专门构建的人工环境，要么是在真实场所进行改造以适应使用（`Azuma, 2015`），如第 8.5 章进一步讨论。它们通常可以迁移到其他地点，因为就像展览 `AAR` 那样，reskinning 对真实世界的关注很小，专注于“魔法圈”内的体验。
 
-### 5.4.1 Poetry of objects
+#### 5.4.1 Poetry of objects
 
-
-
-
-一个好的再包装示例是 `The Sound of Things`，由 `Holger Förterer` 创作的一个声音装置（(2013)）。该装置设在昏暗的房间，包含一张木桌，上面放置了一盏台灯，光线照射在十个精心散布在桌面上的物品上。两名同时聆听者佩戴由红外摄像机追踪的无线耳机，实现 6DoF 追踪。当聆听者蹲下更靠近物体时，虚拟声音会从它们中传来：酒杯发出庆祝的声音，记忆笔记本发出书写的声音，书桌灯发出轻柔的嗡鸣，香烟发出噼啪声……这些无生气的物品似乎在低语记忆，虽然很难从中拼凑出连贯的故事，但聆听者开始思考这些桌子和物品的主人是谁，主人发生了什么，围在酒杯旁的人是谁，记忆笔记本上写的是什么。
+一个好的再包装示例是 `The Sound of Things`，由 `Holger Förterer` 创作的一个声音装置（(2013)）。该装置设在昏暗的房间，包含一张木桌，上面放置了一盏台灯，光线照射在十个精心散布在桌面上的物品上。两名同时聆听者佩戴由红外摄像机追踪的无线耳机，实现 `6DoF` 追踪。当聆听者蹲下更靠近物体时，虚拟声音会从它们中传来：酒杯发出庆祝的声音，记忆笔记本发出书写的声音，书桌灯发出轻柔的嗡鸣，香烟发出噼啪声……这些无生气的物品似乎在低语记忆，虽然很难从中拼凑出连贯的故事，但聆听者开始思考这些桌子和物品的主人是谁，主人发生了什么，围在酒杯旁的人是谁，记忆笔记本上写的是什么。
 
 ![Figure 5.3A participant in The Sound of Things installation ¶ Source: Still capture from video by Holger Förterer](img/fig5_3.jpg)
 
 Figure 5.3A participant in `The Sound of Things` installation ¶ Source: Still capture from video by `Holger Förterer`
 
-这种体验可以被感知为三维的声诗，或是一个悬疑故事的场景。`The Sound of Things` 是利用 6DoF 双耳音频 AAR 高效作为隐含、碎片化叙事的媒介的典型例子。用户周围的环境逐渐陷入黑暗并被忽略，这进一步强化了其象征性而非真实感。
+这种体验可以被感知为三维的声诗，或是一个悬疑故事的场景。`The Sound of Things` 是利用 `6DoF` 双耳音频 `AAR` 高效作为隐含、碎片化叙事的媒介的典型例子。用户周围的环境逐渐陷入黑暗并被忽略，这进一步强化了其象征性而非真实感。
 
-### 5.4.2 叙事再包装
+#### 5.4.2 叙事再包装
 
 黑暗是英国公司 `DARKFIELD` 所制作作品的核心特征。他们制作完全黑暗的音频体验，并将其安装在运输集装箱内。虽然集装箱为叙事环境提供了完全的控制，同时也使其能够全球巡演，并为创作过程划定明确的边界。`DARKFIELD` 来源于沉浸式戏剧传统，其首部作品 `Séance` 于 2018 年首演。`Séance` 是其方法的典型示例：观众在 20–30 分钟的线性叙事中，通过双耳空间音频体验，该叙事紧密与虚构的环境以及参与表演的真实观众相连。`Séance` 在黑暗中进行，使得拟声角色和事件显得可信，同时激发观众的想象力。
 
@@ -265,28 +243,27 @@ Figure 5.3A participant in `The Sound of Things` installation ¶ Source: Still c
 
 Figure 5.4`Two DARKFIELD shows, Séance and Arcade,` on tour in June 2024 in Norwich, UK ¶ Source: Photograph by the author
 
-`The Sound of Things` 通过在桌面上放置实物并对其进行声层叠，而 `Séance` 则通过对完全预备好的运输集装箱进行声层叠。`Horror-Fi Me` 由 `Laurence Cliffe` (2021; 2024) 创作，几乎可以在任何室内环境上叠加一部恐怖电影的声音景观。该 iPhone 应用允许用户将虚拟声音附加到家中的物体上：例如，窗户会被雨声和风暴声所包围，门会偶尔发出敲击声，水龙头会滴水声。利用空间化声音与 6DoF 技术，这些增强会包围用户，能够在像家这样的安全环境中将其转变为充满惊悚感的空间。作为一款感知环境的应用，`Horror-Fi Me` 也是可转移性和环境驱动的 AAR 的出色例子，详见第 8.4 节。
+`The Sound of Things` 通过在桌面上放置实物并对其进行声层叠，而 `Séance` 则通过对完全预备好的运输集装箱进行声层叠。`Horror-Fi Me` 由 `Laurence Cliffe` (2021; 2024) 创作，几乎可以在任何室内环境上叠加一部恐怖电影的声音景观。该 iPhone 应用允许用户将虚拟声音附加到家中的物体上：例如，窗户会被雨声和风暴声所包围，门会偶尔发出敲击声，水龙头会滴水声。利用空间化声音与 `6DoF` 技术，这些增强会包围用户，能够在像家这样的安全环境中将其转变为充满惊悚感的空间。作为一款感知环境的应用，`Horror-Fi Me` 也是可转移性和环境驱动的 `AAR` 的出色例子，详见第 8.4 节。
 
-作为再包装的最后一个例子，`The Reign Union` (`Valtakunnan liitto`) 以真实场景为故事的基础，并在整个体验中进行全面的再包装。它是名为‘Full-AAR’的艺术研究项目的一部分，由芬兰海沃斯（WHS）的艺术研究项目创作，属于生物虚构 AAR 故事。自 2025 年 5 月起向公众开放，该故事位于曾在 1950 年代容纳洗衣房的画廊空间内。故事围绕洗衣房的创始人与二战期间地下纳粹小组的联系展开。两名同时在空间中导航的用户会共享同一故事，但听到的叙事不同，这引发了信任问题以及对所听之信度的思考。
+作为再包装的最后一个例子，`The Reign Union` (`Valtakunnan liitto`) 以真实场景为故事的基础，并在整个体验中进行全面的再包装。它是名为‘Full-AAR’的艺术研究项目的一部分，由芬兰海沃斯（WHS）的艺术研究项目创作，属于生物虚构 `AAR` 故事。自 2025 年 5 月起向公众开放，该故事位于曾在 1950 年代容纳洗衣房的画廊空间内。故事围绕洗衣房的创始人与二战期间地下纳粹小组的联系展开。两名同时在空间中导航的用户会共享同一故事，但听到的叙事不同，这引发了信任问题以及对所听之信度的思考。
 
 画廊本身充当过渡空间，位于两个展览之间，周围散落着几个箱子和设备。这使其成为再包装的理想平台——可以将其从当前状态转变为任何其他场景，如洗衣房、火车站或花园，既在语境上又通过虚拟声效实现。
 
-## 5.5 导航与情境意识
+### 5.5 导航与情境意识
 
-AAR 在提供不依赖侵入性视觉屏幕的导航辅助方面拥有巨大的潜力，并通过全方位听觉强化情境意识。这一点早在早期就被认可，例如自 1970 年代起，为视障人士开发的音频辅助系统就已经出现。最初的系统使用红外发射器的固定安装，对感兴趣的物体发送音频标记给用户（Schmalstieg and Hollerer, 2016）。随后，卫星定位与空间化文本语音在路径标记上的原型被提出，例如在加州大学圣塔芭芭拉分校的 `Personal Guidance System`（Loomis, Golledge and Klatzky, 1998）以及法国联合 consortium 在 2008–2014 年开发的 `NAVIG` 系统。`NAVIG` 系统相当先进：除了户外环境，它还能在室内工作，并使用头戴摄像头识别楼梯、走廊等特征，并通过空间化语音和各种声效进行增强（Katz et al., 2012）。如今，正如第 2.8 节所讨论的，市面上已有许多移动应用利用计算机视觉和人工智能来解读周围环境，但它们通常不支持空间音频。
+`AAR` 在提供不依赖侵入性视觉屏幕的导航辅助方面拥有巨大的潜力，并通过全方位听觉强化情境意识。这一点早在早期就被认可，例如自 1970 年代起，为视障人士开发的音频辅助系统就已经出现。最初的系统使用红外发射器的固定安装，对感兴趣的物体发送音频标记给用户（`Schmalstieg and Hollerer, 2016`）。随后，卫星定位与空间化文本语音在路径标记上的原型被提出，例如在加州大学圣塔芭芭拉分校的 `Personal Guidance System`（`Loomis, Golledge and Klatzky, 1998`）以及法国联合 consortium 在 2008–2014 年开发的 `NAVIG` 系统。`NAVIG` 系统相当先进：除了户外环境，它还能在室内工作，并使用头戴摄像头识别楼梯、走廊等特征，并通过空间化语音和各种声效进行增强（`Katz et al., 2012`）。如今，正如第 2.8 节所讨论的，市面上已有许多移动应用利用计算机视觉和人工智能来解读周围环境，但它们通常不支持空间音频。
 
 然而，利用空间音频进行导航对普通人群同样有用。该概念曾在 `Guided by Music` 研究中被探索，由 Albrecht、Väänänen 和 Lokki (2016) 进行。其原型通过将音乐空间化到路径上的路标上，引导行人和骑行者到达目的地，从而避免查看屏幕获取方向。但直到最近，缺乏头部追踪耳机，这一想法一直受到限制，导致基于空间化声音信标的导航应用难以出现。因此，`Google Maps` 等应用的头部锁定的逐向语音提示仍然是视觉不可用或不受欢迎时的主要导航工具。
 
-自 1990 年代以来，航空业一直在大量研究虚拟双耳音频技术。其动机是开发航空碰撞避免系统以及处理军用机舱内的威胁任务和语音分离（Simpson et al., 2005）。多项飞行模拟研究表明，3D 音频显示能够帮助飞行员更快地应对机体周围的威胁和事件，同时降低视觉感知的认知负荷（Veltman, Oving and Bronkhorst, 2004）。
+自 1990 年代以来，航空业一直在大量研究虚拟双耳音频技术。其动机是开发航空碰撞避免系统以及处理军用机舱内的威胁任务和语音分离（`Simpson et al., 2005`）。多项飞行模拟研究表明，3D 音频显示能够帮助飞行员更快地应对机体周围的威胁和事件，同时降低视觉感知的认知负荷（`Veltman, Oving and Bronkhorst, 2004`）。
 
+- 首个在飞行员头盔中集成的实际 3D 音频系统，配有头部追踪功能，由丹麦公司 Terma 制造，并在 2010 年代安装在皇家丹麦空军的 F-16 战斗机上 (`Kucinski`, [2018)。这些以及其他类似系统具有两个主要特点。首先，它们在空间上分离无线电频道，使飞行员能够保持对所有通信的感知，同时专注于最重要的内容；机组成员在通话中的声音也被空间化，使通信更加自然且高效 (`Szondy`, 2013; `Terma`, 2024)。其次，威胁通过空间化的声音指示实际方向，显著提升情境感知并大幅缩短反应时间，相比传统面板显示更为显著 (`Kucinski`, 2018; `Evans`, 2024)。
 
-
-
--   首个在飞行员头盔中集成的实际 3D 音频系统，配有头部追踪功能，由丹麦公司 Terma 制造，并在 2010 年代安装在皇家丹麦空军的 F-16 战斗机上 (`Kucinski`, [2018)。这些以及其他类似系统具有两个主要特点。首先，它们在空间上分离无线电频道，使飞行员能够保持对所有通信的感知，同时专注于最重要的内容；机组成员在通话中的声音也被空间化，使通信更加自然且高效 (`Szondy`, 2013; `Terma`, 2024)。其次，威胁通过空间化的声音指示实际方向，显著提升情境感知并大幅缩短反应时间，相比传统面板显示更为显著 (`Kucinski`, 2018; `Evans`, 2024)。
-
-## 5.6 Geolocated audio
+### 5.6 Geolocated audio
 
 准确的卫星导航彻底改变了众多行业和领域，并催生了全新的服务。2000 年 5 月，美国政府关闭了对民用的故意 GPS 错误，使得 GPS 追踪精度从 45–100 米提升至约 5–15 米 (`NOAA`, 2018)。这推动了地理定位服务和应用的发展。不到十年时间，配备高速互联网连接和易用图形化操作系统的 GPS 接收器便集成到移动电话中。重要的是，`MapQuest`、`OpenStreetMap` 和 `Google Maps` 等地图服务的 API 对开发者开放。2008 年 iPhone 3G 发布时，这些 API 已全部可用。随后，三个其他卫星导航服务相继面向公众开放，统称为 `全球导航卫星系统`（GNSS），定位精度进一步显著提升。
+
+
 
 这为 `地理定位 AAR`（位置感知音频）的实现提供了可能，使用户能够创建、分享并享受嵌入环境的内容。在地理定位 AAR 中，专用软件平台用于将音频文件绑定在地图上的“地理围栏”区域。当携带移动设备并佩戴耳机的用户进入其中一个区域时，相应的声音会被播放。地理定位应用大致分为两类：1）多作者社交应用，用户可自行录制声音并放置在地图上，供其他用户后续发现；2）音频漫步或音频步道，通常针对特定场景，由单一创作者制作。
 
@@ -312,10 +289,7 @@ Figure 5.5A geolocated audio walk made and shared on `Echoes` with geofenced tri
 
 `Hyperkuulo`（意为“超听”）是一个基于 `NoTours` 平台的交互式漫步，值得一提。该漫步于 2013 年 4 月在芬兰坦佩雷（Tampere）推出，由 Ari Koivumäki 与坦佩雷应用技术大学的学生团队共同发起（2018)。漫步的叙事围绕一次带有听觉增强植入物的科学实验展开，耳机在故事中贯穿始终，将所有声音视为实验的一部分，并部分豁免了头戴式音频的局限。场景设在公园中，用户需要完成一系列任务，如逆时针绕泉花走动并哼唱“omm”，或在户外乐队台上制造回响。由于听觉敏感度提升，用户甚至能听到草木生长、远处桑拿房中的人在洗澡的声音，以及过去与未来的声音。随着用户到达指定地点，叙事会自动推进，但由于缺乏动作验证传感器，系统仅依赖用户自愿遵循指示，以保持一种虚假的主体性感（参见 `Fendt` 等，2012)。
 
-
-
-
-Whereas *Hyperkuulo* was site-specific, *The Planets* (Sofilab, 2023) is an example of a transferable geolocated application. It is available in multiple urban parks around the world, authored remotely using *Google Maps* (Nitschke, 2022). The listener, equipped with a mobile phone and headphones, assumes the role of a spaceship pilot and navigates from planet to planet by walking within the park, guided by a binaurally rendered sound signal. Each planet, or designated area in the park, features the corresponding movement from Gustav Holst’s orchestral suite *The Planets*, played back as spatialised acousmatic instrument groups. While *The Planets* is set in a real-world environment and its primary interaction mode is physical movement within that space, the content itself lacks a direct contextual relationship with the surroundings. This forces listeners to actively interpret and construct their own connections between the space theme, the music, and the urban park.
+Whereas `Hyperkuulo` was site-specific, `The Planets` (Sofilab, 2023) is an example of a transferable geolocated application. It is available in multiple urban parks around the world, authored remotely using `Google Maps` (Nitschke, 2022). The listener, equipped with a mobile phone and headphones, assumes the role of a spaceship pilot and navigates from planet to planet by walking within the park, guided by a binaurally rendered sound signal. Each planet, or designated area in the park, features the corresponding movement from Gustav Holst’s orchestral suite `The Planets`, played back as spatialised acousmatic instrument groups. While `The Planets` is set in a real-world environment and its primary interaction mode is physical movement within that space, the content itself lacks a direct contextual relationship with the surroundings. This forces listeners to actively interpret and construct their own connections between the space theme, the music, and the urban park.
 
 ## 5.7 AAR games
 
@@ -323,19 +297,21 @@ AAR games are a niche genre, but nevertheless, remain an interesting platform fo
 
 ### 5.7.1 Environmental relationship
 
-Some of the earliest AAR games used the real environment merely as a platform for walking and thus interacting with the game, not unlike *The Planets*. For instance, *Guided by Voices* (Lyons, Gandy and Starner, 2000), a prototype developed at the Georgia Institute of Technology, USA, immersed the player into a fantasy world through virtual sounds without any narrative relationship with the real environment. Gameplay was based on making decisions in the acoustic fantasy world by physically moving between several locations within the real space, which could be an office, yard, or any other place. Despite the obvious incongruence between the real and virtual worlds, the movement reportedly aided in players’ immersion in the game. The game also fostered social interaction as multiple people could play it simultaneously in the same space.
+Some of the earliest AAR games used the real environment merely as a platform for walking and thus interacting with the game, not unlike `The Planets`. For instance, `Guided by Voices` (Lyons, Gandy and Starner, 2000), a prototype developed at the Georgia Institute of Technology, USA, immersed the player into a fantasy world through virtual sounds without any narrative relationship with the real environment. Gameplay was based on making decisions in the acoustic fantasy world by physically moving between several locations within the real space, which could be an office, yard, or any other place. Despite the obvious incongruence between the real and virtual worlds, the movement reportedly aided in players’ immersion in the game. The game also fostered social interaction as multiple people could play it simultaneously in the same space.
 
-A more recent AAR game prototype, *Sound PacMan* (Chatzidimitris, Gavalas and Michael, 2016), was, on the other hand, completely based on the user’s environment. The gameplay followed the idea of the original *Pac-Man*, but transformed the user’s local street network into the game’s maze; the player’s objective was to traverse along the real-world streets and eat ‘cookies’ while avoiding the pursuing ghosts that were also following along the same streets. Both cookies and ghosts were denoted by virtual sounds. The ubiquitous and adaptive nature of the game fundamentally leveraged the unique nature of AAR as a layer to reality, even if the contextual connection between the game characters and the local streets may have remained vague.
+A more recent AAR game prototype, `Sound PacMan` (Chatzidimitris, Gavalas and Michael, 2016), was, on the other hand, completely based on the user’s environment. The gameplay followed the idea of the original `Pac-Man`, but transformed the user’s local street network into the game’s maze; the player’s objective was to traverse along the real-world streets and eat ‘cookies’ while avoiding the pursuing ghosts that were also following along the same streets. Both cookies and ghosts were denoted by virtual sounds. The ubiquitous and adaptive nature of the game fundamentally leveraged the unique nature of AAR as a layer to reality, even if the contextual connection between the game characters and the local streets may have remained vague.
 
-In contrast, the narrative connection with the environment was strong with *Audio Legends* (Rovithis et al., 2019; Moustakas et al., 2020), playable in 2018–2019. It was a site-specific outdoor game created by researchers at the Ionian University in Greece, and based on the folklore of the island of Corfu. The player’s task was to protect the island by escorting a sailor carrying wheat to the town’s entrance, locating and fighting ‘the monsters of plague’, and blocking incoming cannonballs (Rovithis, 2024). The real environment was utilised by embedding gameplay elements in the appropriate real-world surroundings, such as enemy gunships on the sea. The game also explored the use of gestures as an interaction mechanism within AAR: for instance, the user had to move the mobile device as if it were a shield to block the acousmatic cannonballs. The authentic environment and the contextual links between it and the story seem to have played a significant role in making the game feel immersive to the players (Rovithis et al., 2019).
+In contrast, the narrative connection with the environment was strong with `Audio Legends` (Rovithis et al., 2019; Moustakas et al., 2020), playable in 2018–2019. It was a site-specific outdoor game created by researchers at the Ionian University in Greece, and based on the folklore of the island of Corfu. The player’s task was to protect the island by escorting a sailor carrying wheat to the town’s entrance, locating and fighting ‘the monsters of plague’, and blocking incoming cannonballs (Rovithis, 2024). The real environment was utilised by embedding gameplay elements in the appropriate real-world surroundings, such as enemy gunships on the sea. The game also explored the use of gestures as an interaction mechanism within AAR: for instance, the user had to move the mobile device as if it were a shield to block the acousmatic cannonballs. The authentic environment and the contextual links between it and the story seem to have played a significant role in making the game feel immersive to the players (Rovithis et al., 2019).
 
-*Zombies, Run!* takes an interesting approach to the user’s environment. Released in 2012, this AAR application immerses the user in a zombie narrative set in their own neighbourhood. As Runner Five, one of the few survivors, the user must run and evade zombies while completing game-like tasks to save the community. The user can listen to their own music playlist on a mobile device, which is, every now and then, interrupted by a ‘radio transmission’ where the protagonists talk to the user. The application also features Radio Mode that augments the listener’s music playlist with virtual radio broadcasts, creating an interesting layered reality discussed in Chapter 3.1.
+`Zombies, Run!` takes an interesting approach to the user’s environment. Released in 2012, this AAR application immerses the user in a zombie narrative set in their own neighbourhood. As Runner Five, one of the few survivors, the user must run and evade zombies while completing game-like tasks to save the community. The user can listen to their own music playlist on a mobile device, which is, every now and then, interrupted by a ‘radio transmission’ where the protagonists talk to the user. The application also features Radio Mode that augments the listener’s music playlist with virtual radio broadcasts, creating an interesting layered reality discussed in Chapter 3.1.
 
 The application does not attempt to embed virtual sounds in the environment other than with some general ambiences. In fact, location tracking is not utilised, meaning the system has no awareness of the user’s whereabouts or the nature of their surroundings. Instead, the gameplay relies on the user’s pace, with elements like randomly occurring chases where zombies’ breathing and drooling can be heard behind the user, prompting them to speed up for a minute to evade capture. Without head tracking, the app assumes users predominantly look forward while running. Despite not knowing the user’s surroundings, the dialogue references generic landmarks and directions (‘hospital’, ‘old mill’, ‘east of the trees’), creating an illusion that the story world aligns with the real one.
 
 ![Figure 5.6A player of Audio Legends blocking an incoming cannon ball with the mobile device ¶ Source: Photograph courtesy of Emmanouel Rovithis and Nikolaos Moustakas](img/fig5_6.jpg)
 
-Figure 5.6A player of *Audio Legends* blocking an incoming cannon ball with the mobile device ¶ Source: Photograph courtesy of Emmanouel Rovithis and Nikolaos Moustakas
+Figure 5.6A player of `Audio Legends` blocking an incoming cannon ball with the mobile device ¶ Source: Photograph courtesy of Emmanouel Rovithis and Nikolaos Moustakas
+
+
 
 ### 5.7.2 Collaboration
 
@@ -343,95 +319,70 @@ The aforementioned AAR games were designed for solo play, although multiple peop
 
 ## 5.8 Conclusion
 
-
-
 本章研究的案例凸显了双耳 AAR（双耳声呈现）的潜力，特别是它们与现实的关系。虽然许多引人入胜的项目已被省略以保持聚焦，虚拟音频研究和技术的发展则保留用于其他讨论，本章旨在提供该领域成就的总体概览。学习 AAR 经验的一个重要挑战是缺乏标准化词汇。这导致内容创作者、博物馆、机构和产品制造商使用各异的术语来描述可以轻易归类为 AAR 的功能。有时，尽管具有吸引人的 AAR 元素，展览可能因策展人或新闻发言人未能认识到其重要性而未得到充分宣传。然而，只要创新内容持续创作，技术得到支持，且这些作品能够有效传达给受众，我们便可以不拘泥于术语，专注于全身心投入 AAR 世界。
 
 ## 参考文献
 
 1. 59 Studio (2024) ‘David Bowie Is’, 59 Studio. Available at: [`https://59.studio/project/david-bowie-is/`](https://59.studio/project/david-bowie-is/) (Accessed: 24 November 2024).
-
 2. Aichinger, T. (2024) ‘Conversation with Matias Harju, March 6’.
-
 3. Albrecht, R., Väänänen, R. and Lokki, T. (2016) ‘Guided by Music: Pedestrian and Cyclist Navigation with Route and Beacon Guidance’, Personal and Ubiquitous Computing, 20 (1), pp. 121–145. Available at: [`https://doi.org/10.1007/s00779-016-0906-z`](https://doi.org/10.1007/s00779-016-0906-z).
-
 4. Azuma, R. (2015) ‘Location-Based Mixed and Augmented Reality Storytelling’, in B. Woodword (ed.), Fundamentals of Wearable Computers and Augmented Reality, 2nd edn. CRC Press, pp. 259–276.
-
-5. Bederson, B.B. (1995) ‘Audio Augmented Reality: A Prototype Automated Tour Guide’, in Conference Companion on Human Factors in COMPUTING Systems – CHI ’95. Denver, Colorado, United States: ACM Press, pp. 210–211. Available at: [`https://doi.org/10.1145/223355.223526`](https://doi.org/10.1145/223355.223526).
-
-6. Bicrophonic Research Institute (2024) ‘Bicrophonic Research Institute – Makes Music and Audio Landscapes to be Triggered by You the Cyclist’. Available at: [`https://sonicbikes.net/`](https://sonicbikes.net/) (Accessed: 30 October 2024).
-
+5. Bederson, B.B. (1995) ‘Audio Augmented Reality: A Prototype Automated Tour Guide’, in Conference Companion on Human Factors in COMPUTING Systems – CHI ’95. Denver, Colorado, United States: ACM Press, pp. 210–211. Available at: [`https://doi.org/10.1145/223355.223526`](https://doi.org/10.1145/223355.223526).
+6. Bicrophonic Research Institute (2024) ‘Bicrophonic Research Institute – Makes Music and Audio Landscapes to be Triggered by You the Cyclist’. Available at: [`https://sonicbikes.net/`](https://sonicbikes.net/) (Accessed: 30 October 2024).
 7. Burgund, H. (2024) ‘Email with Matias Harju, November 18’.
-
 8. Caudell, T. and Mizell, D. (1992) ‘Augmented Reality: An Application of Heads-Up Display Technology to Manual Manufacturing Processes’, in Proceedings of the Twenty-Fifth Hawaii International Conference on System Sciences, pp. 659–669 vol. 2. Available at: [`https://doi.org/10.1109/HICSS.1992.183317`](https://doi.org/10.1109/HICSS.1992.183317).
-
 9. Chatzidimitris, T., Gavalas, D. and Michael, D. (2016) ‘SoundPacman: Audio Augmented Reality in Location-Based Games’, in 18th Mediterranean Electrotechnical Conference (MELECON). Lemesos, Cyprus: IEEE, pp. 1–6. Available at: [`https://doi.org/10.1109/MELCON.2016.7495414`](https://doi.org/10.1109/MELCON.2016.7495414).
-
 10. Cliffe, L. (2021) ‘Horror-Fi Me’. Available at: [`https://lozcliffe.com/horror-fi-me/`](https://lozcliffe.com/horror-fi-me/) (Accessed: 9 December 2024).
-
-11. Cliffe, L. (2024) ‘Into the Here and Now: Explorations within a New Acoustic Virtual Reality’, Leonardo \[Preprint\]. Available at: [`https://nottingham-repository.worktribe.com/output/42480431/into-the-here-and-now-explorations-within-a-new-acoustic-virtual-reality`](https://nottingham-repository.worktribe.com/output/42480431/into-the-here-and-now-explorations-within-a-new-acoustic-virtual-reality) (Accessed: 2 December 2024).
-
+11. Cliffe, L. (2024) ‘Into the Here and Now: Explorations within a New Acoustic Virtual Reality’, Leonardo [Preprint]. Available at: [`https://nottingham-repository.worktribe.com/output/42480431/into-the-here-and-now-explorations-within-a-new-acoustic-virtual-reality`](https://nottingham-repository.worktribe.com/output/42480431/into-the-here-and-now-explorations-within-a-new-acoustic-virtual-reality) (Accessed: 2 December 2024).
 12. Cohen, M., Aoki, S. and Koizumi, N. (1993) ‘Augmented Audio Reality: Telepresence/VR Hybrid Acoustic Environments’, in Proceedings of 1993 2nd IEEE International Workshop on Robot and Human Communication, pp. 361–364. Available at: [`https://doi.org/10.1109/ROMAN.1993.367692`](https://doi.org/10.1109/ROMAN.1993.367692).
-
 13. Eckel, G. (2001) ‘Immersive Audio-Augmented Environments: The LISTEN Project’, in Proceedings Fifth International Conference on Information Visualisation, pp. 571–573. Available at: [`https://doi.org/10.1109/IV.2001.942112`](https://doi.org/10.1109/IV.2001.942112).
-
 14. Evans, S. (2024) ‘PTC, BAE Team to Create Augmented Reality Fighter Pilot Helmet’. Available at: [`https://www.iotworldtoday.com/metaverse/ptc-bae-team-to-create-augmented-reality-fighter-pilot-helmet-`](https://www.iotworldtoday.com/metaverse/ptc-bae-team-to-create-augmented-reality-fighter-pilot-helmet-) (Accessed: 10 October 2024).
-
 15. Fendt, M.W. et al. (2012) ‘Achieving the Illusion of Agency’, in D. Oyarzun et al. (eds) Interactive Storytelling. Berlin, Heidelberg: Springer, pp. 114–125. Available at: [`https://doi.org/10.1007/978-3-642-34851-8\_11`](https://doi.org/10.1007/978-3-642-34851-8_11).
-
 16. Förterer, H. (2013) ‘The Sound of Things’. Available at: [`https://www.foerterer.com/sound-of-things.html`](https://www.foerterer.com/sound-of-things.html) (Accessed: 3 December 2024).
-
 17. Hatala, M. and Wakkary, R. (2005) ‘Ontology-Based User Modeling in an Augmented Audio Reality System for Museums’, User Modeling and User-Adapted Interaction, 15 (3), pp. 339–380. Available at: [`https://doi.org/10.1007/s11257-005-2304-5`](https://doi.org/10.1007/s11257-005-2304-5).
-
 18. Katz, B.F.G. et al. (2012) ‘NAVIG: Augmented Reality Guidance System for the Visually Impaired’, Virtual Reality, 16 (4), pp. 253–269. Available at: [`https://doi.org/10.1007/s10055-012-0213-6`](https://doi.org/10.1007/s10055-012-0213-6).
-
 19. Koivumäki, A. (2018) Maiseman äänittäminen: Äänimaisematutkimus äänisuunnittel 的支持下。 Helsinki: Aalto-yliopiston taiteiden ja suunnittel 的高等教育 (Aalto-yliopiston julkaisusarja).
-
 20. Kopeček, J. (2024) ‘Conversation with Matias Harju, October 21’.
-
 21. Kucinski, W. (2018) ‘A-10C Pilots Will Get 3D-Audio to Increase Situational Awareness’. Available at: [`https://www.sae.org/site/news/2018/11/a-10c-pilots-will-get-3d-audio-to-increase-situational-awareness`](https://www.sae.org/site/news/2018/11/a-10c-pilots-will-get-3d-audio-to-increase-situational-awareness) (Accessed: 10 October 2024).
-
 22. Loomis, J.M., Golledge, R.G. and Klatzky, R.L. (1998) ‘Navigation System for the Blind: Auditory Display Modes and Guidance’, Presence: Teleoperators and Virtual Environments, 7 (2), pp. 193–203. Available at: [`https://doi.org/10.1162/105474698565677`](https://doi.org/10.1162/105474698565677).
-
 23. Lyons, K., Gandy, M. and Starner, T. (2000) ‘Guided by Voices: An Audio Augmented Reality System’, in Proceedings of the International Conference on Auditory Display April, 2000. Georgia Institute of Technology, Atlanta, Georgia, USA: International Community for Auditory Display. Available at: [`https://smartech.gatech.edu/handle/1853/50672`](https://smartech.gatech.edu/handle/1853/50672) (Accessed: 5 November 2018).
-
 24. Moustakas, N. et al. (2020) ‘Adaptive Audio Mixing for Enhancing Immersion in Augmented Reality Audio Games’, in Companion Publication of the ICMI 2020 International Conference on Multimodal Interaction. Virtual Event Netherlands: ACM, pp. 220–227. Available at: [`https://doi.org/10.1145/3395035.3425325`](https://doi.org/10.1145/3395035.3425325).
 
 
 
-25.  Mynatt, E.D. 等人 (1998) “Designing Audio Aura”，在 SIGCHI 会议论文集《Human Factors in Computing Systems – CHI ’98》中，洛杉矶加利福尼亚州，美国：ACM 出版社，第 566–573 页。可在：[`https://doi.org/10.1145/274644.274720`](https://doi.org/10.1145/274644.274720)。
+25. Mynatt, E.D. 等人 (1998) “Designing Audio Aura”，在 SIGCHI 会议论文集《Human Factors in Computing Systems – CHI ’98》中，洛杉矶加利福尼亚州，美国：ACM 出版社，第 566–573 页。可在：[`https://doi.org/10.1145/274644.274720`](https://doi.org/10.1145/274644.274720)。
 
-26.  Nagele, A.N. 等人 (2021) “Interactive Audio Augmented Reality in Participatory Performance”，Frontiers in Virtual Reality，1，第 610320 页。可在：[`https://doi.org/10.3389/frvir.2020.610320`](https://doi.org/10.3389/frvir.2020.610320)。
+26. Nagele, A.N. 等人 (2021) “Interactive Audio Augmented Reality in Participatory Performance”，Frontiers in Virtual Reality，1，第 610320 页。可在：[`https://doi.org/10.3389/frvir.2020.610320`](https://doi.org/10.3389/frvir.2020.610320)。
 
-27.  Nitschke, M. (2022) “Conversation with Matias Harju, September 14”。
+27. Nitschke, M. (2022) “Conversation with Matias Harju, September 14”。
 
-28.  NOAA (2018) “GPS.gov: Data From the First Week Without Selective Availability”。可在：[`https://www.gps.gov/systems/gps/modernization/sa/data/`](https://www.gps.gov/systems/gps/modernization/sa/data/)（访问日期：2024 年 11 月 25 日）。
+28. NOAA (2018) “GPS.gov: Data From the First Week Without Selective Availability”。可在：[`https://www.gps.gov/systems/gps/modernization/sa/data/`](https://www.gps.gov/systems/gps/modernization/sa/data/)（访问日期：2024 年 11 月 25 日）。
 
-29.  Rovithis, E. (2024) “Audio Legends – SonicManos”。可在：[`https://sonicmanos.com/index.php?id=audio-legends`](https://sonicmanos.com/index.php?id=audio-legends)（访问日期：2024 年 10 月 15 日）。
+29. Rovithis, E. (2024) “Audio Legends – SonicManos”。可在：[`https://sonicmanos.com/index.php?id=audio-legends`](https://sonicmanos.com/index.php?id=audio-legends)（访问日期：2024 年 10 月 15 日）。
 
-30.  Rovithis, E. 等人 (2019) “Audio Legends: Investigating Sonic Interaction in an Augmented Reality Audio Game”，Multimodal Technologies and Interaction，3（4），第 73 页。可在：[`https://doi.org/10.3390/mti3040073`](https://doi.org/10.3390/mti3040073)。
+30. Rovithis, E. 等人 (2019) “Audio Legends: Investigating Sonic Interaction in an Augmented Reality Audio Game”，Multimodal Technologies and Interaction，3（4），第 73 页。可在：[`https://doi.org/10.3390/mti3040073`](https://doi.org/10.3390/mti3040073)。
 
-31.  Rozier, J., Karahalios, K. and Donath, J. (2000) “Hear&There: An Augmented Reality System of Linked Audio”，在《International Conference on Auditory Display April, 2000》论文集中，乔治亚技术学院，美国亚特兰大，美国。
+31. Rozier, J., Karahalios, K. and Donath, J. (2000) “Hear&There: An Augmented Reality System of Linked Audio”，在《International Conference on Auditory Display April, 2000》论文集中，乔治亚技术学院，美国亚特兰大，美国。
 
-32.  Schmalstieg, D. and Hollerer, T. (2016) Augmented Reality: Principles and Practice. Addison-Wesley Professional.
+32. Schmalstieg, D. and Hollerer, T. (2016) Augmented Reality: Principles and Practice. Addison-Wesley Professional.
 
-33.  Sennheiser (2013) “David Bowie Is”: Sennheiser Helps the V&A Bring Together Sound and Vision。可在：[`https://web.archive.org/web/20160112020455/https://en-de.sennheiser.com/news-david-bowie-is-sennheiser-helps-the-va-bring-together-sound-and-vision-`](https://web.archive.org/web/20160112020455/https://en-de.sennheiser.com/news-david-bowie-is-sennheiser-helps-the-va-bring-together-sound-and-vision-)（访问日期：2024 年 8 月 13 日）。
+33. Sennheiser (2013) “David Bowie Is”: Sennheiser Helps the V&A Bring Together Sound and Vision。可在：[`https://web.archive.org/web/20160112020455/https://en-de.sennheiser.com/news-david-bowie-is-sennheiser-helps-the-va-bring-together-sound-and-vision-`](https://web.archive.org/web/20160112020455/https://en-de.sennheiser.com/news-david-bowie-is-sennheiser-helps-the-va-bring-together-sound-and-vision-)（访问日期：2024 年 8 月 13 日）。
 
-34.  Simpson, B. 等人 (2005) “Spatial Audio Displays for Improving Safety and Enhancing Situation Awareness in General Aviation Environments”，在 New Directions for Improving Audio Effectiveness 会议论文集 RTO-MP-HFM-123，Paper 26，法国 Neuilly-sur-Seine，第 21–26 页。可在：[`https://apps.dtic.mil/sti/citations/ADA454658`](https://apps.dtic.mil/sti/citations/ADA454658)（访问日期：2024 年 9 月 21 日）。
+34. Simpson, B. 等人 (2005) “Spatial Audio Displays for Improving Safety and Enhancing Situation Awareness in General Aviation Environments”，在 New Directions for Improving Audio Effectiveness 会议论文集 RTO-MP-HFM-123，Paper 26，法国 Neuilly-sur-Seine，第 21–26 页。可在：[`https://apps.dtic.mil/sti/citations/ADA454658`](https://apps.dtic.mil/sti/citations/ADA454658)（访问日期：2024 年 9 月 21 日）。
 
-35.  Sofilab (2023) “The Planets, The Planets”。可在：[`https://the-planets.app/`](https://the-planets.app/)（访问日期：2024 年 10 月 31 日）。
+35. Sofilab (2023) “The Planets, The Planets”。可在：[`https://the-planets.app/`](https://the-planets.app/)（访问日期：2024 年 10 月 31 日）。
 
-36.  Szondy, D. (2013) “Raytheon Developing 3D Hearing for Pilots”，New Atlas。可在：[`https://newatlas.com/raytheon-3d-audio/26839/`](https://newatlas.com/raytheon-3d-audio/26839/)（访问日期：2024 年 10 月 10 日）。
+36. Szondy, D. (2013) “Raytheon Developing 3D Hearing for Pilots”，New Atlas。可在：[`https://newatlas.com/raytheon-3d-audio/26839/`](https://newatlas.com/raytheon-3d-audio/26839/)（访问日期：2024 年 10 月 10 日）。
 
-37.  Terma (2024) “3D-Audio and Active Noise Reduction - Rotary Wing”。可在：[`https://www.terma.com/media/a52digfm/3d-audio_rotary_a4.pdf`](https://www.terma.com/media/a52digfm/3d-audio_rotary_a4.pdf)（访问日期：2024 年 10 月 10 日）。
+37. Terma (2024) “3D-Audio and Active Noise Reduction - Rotary Wing”。可在：[`https://www.terma.com/media/a52digfm/3d-audio_rotary_a4.pdf`](https://www.terma.com/media/a52digfm/3d-audio_rotary_a4.pdf)（访问日期：2024 年 10 月 10 日）。
 
-38.  Veltman, J.A., Oving, A.B. and Bronkhorst, A.W. (2004) “3-D Audio in the Fighter Cockpit Improves Task Performance”，The International Journal of Aviation Psychology，14（3），第 239–256 页。
+38. Veltman, J.A., Oving, A.B. and Bronkhorst, A.W. (2004) “3-D Audio in the Fighter Cockpit Improves Task Performance”，The International Journal of Aviation Psychology，14（3），第 239–256 页。
 
-39.  Woo, D. 等人 (2006) “Audio Nomad”，在 Institute of Navigation 19th International Technical Meeting of the Satellite Division, ION GNSS 2006 会议中，第 3117–3123 页。
+39. Woo, D. 等人 (2006) “Audio Nomad”，在 Institute of Navigation 19th International Technical Meeting of the Satellite Division, ION GNSS 2006 会议中，第 3117–3123 页。
 
-40.  Zimmermann, A. and Lorenz, A. (2008) “LISTEN: A User-Adaptive Audio-Augmented Museum Guide”，User Modeling and User-Adapted Interaction，18（5），第 389–416 页。可在：[`https://doi.org/10.1007/s11257-008-9049-x`](https://doi.org/10.1007/s11257-008-9049-x)。
+40. Zimmermann, A. and Lorenz, A. (2008) “LISTEN: A User-Adaptive Audio-Augmented Museum Guide”，User Modeling and User-Adapted Interaction，18（5），第 389–416 页。可在：[`https://doi.org/10.1007/s11257-008-9049-x`](https://doi.org/10.1007/s11257-008-9049-x)。
 
-6Spatial hearing and virtual audio
+# 6 Spatial hearing and virtual audio
 
 DOI: [`10.4324/9781003627289-6`](https://doi.org/10.4324/9781003627289-6)
 
@@ -455,9 +406,9 @@ In virtual and augmented realities, the concept of auditory event is important. 
 
 Figure 6.2Auditory event misaligned with the virtual sound (attached to a real-world object) due to imperfect virtual audio rendering
 
-
-
 If the artificial sound is played through a hidden loudspeaker from the location where the real-world sound would be (`direct augmentation`), we obviously do not need to worry about the sound spatialisation and propagation effects as they happen naturally—although the directivity of the loudspeaker might be different from the real sound source, thus causing acoustic differences. In *virtual audio* technologies that use *binaural* reproduction, however, it is important to understand which perceptual cues are needed to trick the auditory system and how those illusions can be made. Many of the same considerations are also elementary in the audio production stage even if the delivery format was a surround loudspeaker system.
+
+
 
 An auditory event is not always caused by a sound event and sound waves, tinnitus being a prime example (Blauert, 1997). It is possible to generate virtual sounds by stimulating the auditory nerve or brainstem directly (see Veronese et al., 2023), or even stimulating the auditory cortex in the brain (see Leaver, 2024), albeit such techniques are still far from being applicable in practical AAR applications. Further, even if such technologies were available for the virtual audio community, it would not free us from simulating the same acoustic phenomena described above and discussed in more detail in this chapter.
 
@@ -489,8 +440,6 @@ Channel-based audio is the most traditional method for audio production and deli
 
 Static binaural audio is also channel-based, as it uses two distinct channels dedicated to each ear in recording, processing, and playback. In AAR, channel-based approaches are very useful for various production phases. In runtime, they can be used for head-locked sounds including narration, music, static ambiences, and first-person sounds.
 
-
-
 进入`/path/to/xxx`目录，找到`xxx.json`。
 
 在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
@@ -502,8 +451,6 @@ Static binaural audio is also channel-based, as it uses two distinct channels de
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
-
-
 
 为简化，让猫和用户保持静止。随后，声音被声场化。在此过程中，虚拟声音被渲染为如果声波在真实空间中传播，会被墙壁和其他表面反射和吸收而变得可听。空间的声学特性可以通过`房间脉冲响应`（RIRs）来捕捉，这些是声场在任意测量点的物理-数学模型，它们在某种意义上是声学“指纹”。从多个位置获取的若干 RIRs 组成的集合称为`空间房间脉冲响应`（SRIR），能够提供空间的三维信息（Meyer-Kahlen，2024）。
 
@@ -523,6 +470,8 @@ if (condVar > someVal) {console.log("xxx")}
 
 ### 6.4.5 混合解决方案
 
+
+
 在 6DoF 应用中，听者可以在空间内任意移动，且可能存在多个声源，这些声源也可能随时间变化。因此，需要大量的麦克风-扬声器组合的密网格测量来获取相应的 RIRs。测量数量会迅速增多，在大多数情况下（尤其是移动 AAR 应用）几乎无法实现，而且实时存储、加载和处理海量数据对大多数系统而言都过于吃力（Meyer-Kahlen，2024）。因此，开发了混合系统，结合不同方法以优化结果和性能。例如，Brandenburg Labs 的专有 `Deep Dive Audio` 技术将 RIR 测量数据与 GA 方法相结合，得到高度可信的结果。`Steam Audio` 插件则在游戏引擎中结合 GA 与基于波的模拟。`dearVR` 空间化器（作为游戏引擎插件提供）则采用更稳健的方式，将简单的“盒子”混响与基于几何的模拟结合，以模拟早期反射。
 
 ### 6.4.6 估计
@@ -541,67 +490,65 @@ if (condVar > someVal) {console.log("xxx")}
 
 ## 6.5 结论
 
-
-
 在虚拟音频与现实无缝融合中需要满足众多要素。此外，每种空间化软件工具似乎都依赖其独特的方法和技术组合。对于单个 AAR 创作者而言，在如此复杂的选项和工作流中导航可能让人感到不知所措，且测试不同系统可能耗时费力。在尚未出现能够同时提供高质量结果和优化性能的广泛接受的标准之前，创作者可能只能继续探索和学习。好在完美的虚拟音频渲染通常并非必要，因为其他因素如丰富的互动性或叙事沉浸感（见 第 3 章）可以弥补技术缺陷。
 
 不过，当虚拟声音与现实难以区分时，效果会显得真正神奇。
 
 ## References
 
-1.  Akeroyd, M.A. (2006) ‘The Psychoacoustics of Binaural Hearing’, International Journal of Audiology, 45 (supl.1), pp. 25–33. Available at: [`doi.org/10.1080/14992020600782626`](https://doi.org/10.1080/14992020600782626).
+1. Akeroyd, M.A. (2006) ‘The Psychoacoustics of Binaural Hearing’, International Journal of Audiology, 45 (supl.1), pp. 25–33. Available at: [`doi.org/10.1080/14992020600782626`](https://doi.org/10.1080/14992020600782626).
 
-2.  Best, V.et al. (2020) ‘Sound Externalization: A Review of Recent Research’, Trends in Hearing, 24, p. 2331216520948390. Available at: [`doi.org/10.1177/2331216520948390`](https://doi.org/10.1177/2331216520948390).
+2. Best, V.et al. (2020) ‘Sound Externalization: A Review of Recent Research’, Trends in Hearing, 24, p. 2331216520948390. Available at: [`doi.org/10.1177/2331216520948390`](https://doi.org/10.1177/2331216520948390).
 
-3.  Blauert, J. (1997) Spatial Hearing : The Psychophysics of Human Sound Localization. Rev. edn. MIT Press.
+3. Blauert, J. (1997) Spatial Hearing : The Psychophysics of Human Sound Localization. Rev. edn. MIT Press.
 
-4.  Brandenburg, K. et al. (2023) ‘Implementation of and Application Scenarios for Plausible Immersive Audio Via Headphones’, in Audio Engineering Society Convention 155, Audio Engineering Society. Available at: [`www.aes.org/e-lib/browse.cfm?elib=22308`](https://www.aes.org/e-lib/browse.cfm?elib=22308) (Accessed: 25 November 2023).
+4. Brandenburg, K. et al. (2023) ‘Implementation of and Application Scenarios for Plausible Immersive Audio Via Headphones’, in Audio Engineering Society Convention 155, Audio Engineering Society. Available at: [`www.aes.org/e-lib/browse.cfm?elib=22308`](https://www.aes.org/e-lib/browse.cfm?elib=22308) (Accessed: 25 November 2023).
 
-5.  Gonzalez, R., McCormack, L. and Politis, A. (2024) ‘S 3 MASH: Spatial Sound Scene Matching using Single-Channel Audio’, in 2024 AES 5th International Conference on Audio for Virtual and Augmented Reality, Audio Engineering Society. Available at: [`www.researchgate.net/publication/384051910_S3MASH_Spatial_Sound_Scene_Matching_using_Single-Channel_Audio`](https://www.researchgate.net/publication/384051910_S3MASH_Spatial_Sound_Scene_Matching_using_Single-Channel_Audio) (Accessed: 27 November 2024).
+5. Gonzalez, R., McCormack, L. and Politis, A. (2024) ‘S 3 MASH: Spatial Sound Scene Matching using Single-Channel Audio’, in 2024 AES 5th International Conference on Audio for Virtual and Augmented Reality, Audio Engineering Society. Available at: [`www.researchgate.net/publication/384051910_S3MASH_Spatial_Sound_Scene_Matching_using_Single-Channel_Audio`](https://www.researchgate.net/publication/384051910_S3MASH_Spatial_Sound_Scene_Matching_using_Single-Channel_Audio) (Accessed: 27 November 2024).
 
-6.  Hudspeth, A.J. (1997) ‘How Hearing Happens’, Neuron, 19 (5), pp. 947–950. Available at: [`doi.org/10.1016/S0896-6273\(00\)80385-2`](https://doi.org/10.1016/S0896-6273\(00\)80385-2).
+6. Hudspeth, A.J. (1997) ‘How Hearing Happens’, Neuron, 19 (5), pp. 947–950. Available at: [`doi.org/10.1016/S0896-6273\(00\)80385-2`](https://doi.org/10.1016/S0896-6273\(00\)80385-2).
 
-7.  Kadel, O. (2024) ‘The Evolution of Spatial Audio in Immersive Storytelling’, MPSE Wavelength, June, pp. 72–83.
+7. Kadel, O. (2024) ‘The Evolution of Spatial Audio in Immersive Storytelling’, MPSE Wavelength, June, pp. 72–83.
 
-8.  Kim, S. (2015) ‘Bio-Inspired Engineered Sonar Systems Based on the Understanding of Bat Echolocation’, in Biomimetic Technologies: Principles and Applications. Cambridge, United Kingdom: Elsevier Science & Technology. Available at: [`ebookcentral.proquest.com/lib/aalto-ebooks/detail.action?docID=2102159`](http://ebookcentral.proquest.com/lib/aalto-ebooks/detail.action?docID=2102159) (Accessed: 10 April 2021).
+8. Kim, S. (2015) ‘Bio-Inspired Engineered Sonar Systems Based on the Understanding of Bat Echolocation’, in Biomimetic Technologies: Principles and Applications. Cambridge, United Kingdom: Elsevier Science & Technology. Available at: [`ebookcentral.proquest.com/lib/aalto-ebooks/detail.action?docID=2102159`](http://ebookcentral.proquest.com/lib/aalto-ebooks/detail.action?docID=2102159) (Accessed: 10 April 2021).
 
-9.  Larsson, P. et al. (2010) ‘Auditory-Induced Presence in Mixed Reality Environments and Related Technology’, in E. Dubois, P. Gray, and L. Nigay (eds) The Engineering of Mixed Reality Systems. London: Springer (Human-Computer Interaction Series), pp. 143–163. Available at: [`doi.org/10.1007/978-1-84882-733-2_8`](https://doi.org/10.1007/978-1-84882-733-2_8).
+9. Larsson, P. et al. (2010) ‘Auditory-Induced Presence in Mixed Reality Environments and Related Technology’, in E. Dubois, P. Gray, and L. Nigay (eds) The Engineering of Mixed Reality Systems. London: Springer (Human-Computer Interaction Series), pp. 143–163. Available at: [`doi.org/10.1007/978-1-84882-733-2_8`](https://doi.org/10.1007/978-1-84882-733-2_8).
 
-10.  Leaver, A.M. (2024) ‘Perceptual and Cognitive Effects of Focal tDCS of Auditory Cortex in Tinnitus’, medRxiv, p. 2024.01.31.24302093. Available at: [`doi.org/10.1101/2024.01.31.24302093`](https://doi.org/10.1101/2024.01.31.24302093).
+10. Leaver, A.M. (2024) ‘Perceptual and Cognitive Effects of Focal tDCS of Auditory Cortex in Tinnitus’, medRxiv, p. 2024.01.31.24302093. Available at: [`doi.org/10.1101/2024.01.31.24302093`](https://doi.org/10.1101/2024.01.31.24302093).
 
-11.  Lee, H. (2022) ‘Psychoacoustics of Height Perception’, in J. Paterson and H. Lee (eds) 3D Audio. New York, NY: Routledge (Perspectives on music production), pp. 82–98.
+11. Lee, H. (2022) ‘Psychoacoustics of Height Perception’, in J. Paterson and H. Lee (eds) 3D Audio. New York, NY: Routledge (Perspectives on music production), pp. 82–98.
 
-12.  McCormack, L. et al. (2022) ‘Object-Based Six-Degrees-of-Freedom Rendering of Sound Scenes Captured with Multiple Ambisonic Receivers’, Journal of the Audio Engineering Society, 70 (5), pp. 355–372. Available at: [`doi.org/10.17743/jaes.2022.0010`](https://doi.org/10.17743/jaes.2022.0010).
+12. McCormack, L. et al. (2022) ‘Object-Based Six-Degrees-of-Freedom Rendering of Sound Scenes Captured with Multiple Ambisonic Receivers’, Journal of the Audio Engineering Society, 70 (5), pp. 355–372. Available at: [`doi.org/10.17743/jaes.2022.0010`](https://doi.org/10.17743/jaes.2022.0010).
 
-13.  Meyer-Kahlen, N. (2024) Transfer-Plausible Acoustics for Augmented Reality. PhD thesis. Aalto University. Available at: [`urn.fi/URN:ISBN:978-952-64-1913-8`](https://urn.fi/URN:ISBN:978-952-64-1913-8).
+13. Meyer-Kahlen, N. (2024) Transfer-Plausible Acoustics for Augmented Reality. PhD thesis. Aalto University. Available at: [`urn.fi/URN:ISBN:978-952-64-1913-8`](https://urn.fi/URN:ISBN:978-952-64-1913-8).
 
-14.  Orsholits, A. et al. (2024) ‘PLATONE: An Immersive Geospatial Audio Spatialization Platform’, in The 2nd Annual IEEE International Conference on Metaverse Computing, Networking, and Applications (IEEE MetaCom), Hong Kong.
+14. Orsholits, A. et al. (2024) ‘PLATONE: An Immersive Geospatial Audio Spatialization Platform’, in The 2nd Annual IEEE International Conference on Metaverse Computing, Networking, and Applications (IEEE MetaCom), Hong Kong.
 
-15.  Politis, A. et al. (2023) ‘Wide-Area 6DOF Rendering of Multi-Point Ambisonic Recordings Based on Interpolation of Spatial Parameters’, in 2023 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA). New Paltz, NY, USA: IEEE, pp. 1–5. Available at: [`doi.org/10.1109/WASPAA58266.2023.10248142`](https://doi.org/10.1109/WASPAA58266.2023.10248142).
+15. Politis, A. et al. (2023) ‘Wide-Area 6DOF Rendering of Multi-Point Ambisonic Recordings Based on Interpolation of Spatial Parameters’, in 2023 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA). New Paltz, NY, USA: IEEE, pp. 1–5. Available at: [`doi.org/10.1109/WASPAA58266.2023.10248142`](https://doi.org/10.1109/WASPAA58266.2023.10248142).
 
-16.  Roginska, A. (2018) ‘Binaural Audio Through Headphones’, in A. Roginska and P. Geluso (eds) Immersive Sound: The Art and Science of Binaural and Multi-Channel Audio. Routledge.
+16. Roginska, A. (2018) ‘Binaural Audio Through Headphones’, in A. Roginska and P. Geluso (eds) Immersive Sound: The Art and Science of Binaural and Multi-Channel Audio. Routledge.
 
-17.  Savioja, L. and Svensson, U.P. (2015) ‘Overview of Geometrical Room Acoustic Modeling Techniques’, The Journal of the Acoustical Society of America, 138 (2), pp. 708–730. Available at: [`doi.org/10.1121/1.4926438`](https://doi.org/10.1121/1.4926438).
+17. Savioja, L. and Svensson, U.P. (2015) ‘Overview of Geometrical Room Acoustic Modeling Techniques’, The Journal of the Acoustical Society of America, 138 (2), pp. 708–730. Available at: [`doi.org/10.1121/1.4926438`](https://doi.org/10.1121/1.4926438).
 
-18.  Sunder, K. (2022) ‘Binaural Audio Engineering’, in J. Paterson and H. Lee (eds) 3D Audio. New York, NY: Routledge (Perspectives on music production), pp. 130–159.
+18. Sunder, K. (2022) ‘Binaural Audio Engineering’, in J. Paterson and H. Lee (eds) 3D Audio. New York, NY: Routledge (Perspectives on music production), pp. 130–159.
 
-19.  Taevs, M. et al. (2010) ‘Semantic Elaboration in Auditory and Visual Spatial Memory’, Frontiers in Psychology, 1. Available at: [`doi.org/10.3389/fpsyg.2010.00228`](https://doi.org/10.3389/fpsyg.2010.00228).
+19. Taevs, M. et al. (2010) ‘Semantic Elaboration in Auditory and Visual Spatial Memory’, Frontiers in Psychology, 1. Available at: [`doi.org/10.3389/fpsyg.2010.00228`](https://doi.org/10.3389/fpsyg.2010.00228).
 
-20.  Veronese, S. et al. (2023) ‘Ten-Year Follow-Up of Auditory Brainstem Implants: From Intra-Operative Electrical Auditory Brainstem Responses to Perceptual Results’, PLOS ONE, 18 (3), p. e0282261. Available at: [`doi.org/10.1371/journal.pone.0282261`](https://doi.org/10.1371/journal.pone.0282261).
+20. Veronese, S. et al. (2023) ‘Ten-Year Follow-Up of Auditory Brainstem Implants: From Intra-Operative Electrical Auditory Brainstem Responses to Perceptual Results’, PLOS ONE, 18 (3), p. e0282261. Available at: [`doi.org/10.1371/journal.pone.0282261`](https://doi.org/10.1371/journal.pone.0282261).
 
-21.  Wenzel, E.M., Begault, D.R. and Godfroy-Cooper, M. (2018) ‘Perception of Spatial Sound’, in A. Roginska and P. Geluso (eds) Immersive Sound: The Art and Science of Binaural and Multi-Channel Audio. Routledge, pp. 5–39.
+21. Wenzel, E.M., Begault, D.R. and Godfroy-Cooper, M. (2018) ‘Perception of Spatial Sound’, in A. Roginska and P. Geluso (eds) Immersive Sound: The Art and Science of Binaural and Multi-Channel Audio. Routledge, pp. 5–39.
 
-22.  Xie, B. (2013) Head-Related Transfer Function and Virtual Auditory Display, 2nd edn. J. Ross Publishing.
+22. Xie, B. (2013) Head-Related Transfer Function and Virtual Auditory Display, 2nd edn. J. Ross Publishing.
 
-# 7Technical components
+# 7 Technical components
 
-DOI: [10.4324/9781003627289-7](https://doi.org/10.4324/9781003627289-7)
+DOI: [`10.4324/9781003627289-7`](https://doi.org/10.4324/9781003627289-7)
 
-As we have learned, there are multiple ways to augment the real world with virtual audio. One of the most straightforward AAR systems would entail a hidden loudspeaker and an audio player, possibly triggered by a proximity sensor, like onboard `Barque Sigyn`. Immersive AAR experiences can also be realised with simple headphones-based systems. For instance, the `Alcatraz Cellhouse Audio Tour` uses an MP3 player and a pair of headphones, without head or location tracking, relying on the user to follow the audio guidance in sync with the narrative.
+As we have learned, there are multiple ways to augment the real world with virtual audio. One of the most straightforward AAR systems would entail a hidden loudspeaker and an audio player, possibly triggered by a proximity sensor, like onboard `Barque Sigyn`. Immersive AAR experiences can also be realised with simple headphones-based systems. For instance, the `Alcatraz Cellhouse Audio Tour` uses an `MP3` player and a pair of headphones, without head or location tracking, relying on the user to follow the audio guidance in sync with the narrative.
+
+然而，为了实现更动态和互动的双耳（binaural）体验，系统需求会迅速增加。本章描述了典型互动可穿戴 AAR（增强现实/现实混合）应用的关键组件，这些应用利用 `6DoF`（六自由度），例如使用耳机、智能眼镜或其他可穿戴音频显示设备。然而，其中的许多组件也适用于其他平台，包括直接增强、CTC 和 WTF，以及自由度较少的可穿戴体验。姿态跟踪方法和耳机将比其他组件获得更多关注。这是因为适合 AAR 的计算机、软件和编辑工具的需求与视频游戏和 `VR`（虚拟现实）相似，且已在其他来源中广泛讨论。虚拟音频引擎也已在 第 6 章 中讨论过。
 
 
-
-然而，为了实现更动态和互动的双耳（binaural）体验，系统需求会迅速增加。本章描述了典型互动可穿戴 AAR（增强现实/现实混合）应用的关键组件，这些应用利用 6DoF（六自由度），例如使用耳机、智能眼镜或其他可穿戴音频显示设备。然而，其中的许多组件也适用于其他平台，包括直接增强、CTC 和 WTF，以及自由度较少的可穿戴体验。姿态跟踪方法和耳机将比其他组件获得更多关注。这是因为适合 AAR 的计算机、软件和编辑工具的需求与视频游戏和 VR（虚拟现实）相似，且已在其他来源中广泛讨论。虚拟音频引擎也已在 第 6 章 中讨论过。
 
 ## 7.1 可穿戴 AAR 系统
 
@@ -615,27 +562,37 @@ Figure 7.1A simplified overview of the components of a wearable AAR system
 
 大多数 AAR 系统依赖于传感器来检测用户的姿态、动作、声音和意图。其他人、物体和环境条件也可以被跟踪。传感器数据用于控制系统内部的交互逻辑，无论是切换视角当用户转头时、引导类似游戏的事件流，还是为基于人工智能的虚拟角色提供行为模式。数据（包括捕获的声音）也可以被处理以满足多种需求：识别语音命令、增强语音、隔离声音、对其进行操作、估算房间声学等，仅举几例。
 
-系统还可以包含次要输入接口，如音量按钮或触摸屏——或更具创意的接口，例如 *ec(h)o* 中使用的木制方块（Hatala and Wakkary, 2005）或在 *Audio Legends* 中作为盾牌的移动设备（Rovithis et al., 2019）。信号和数据也可以从环境中的其他系统接收，例如同步耳机中的音频与附近的任何视频投影，如在 *David Bowie Is* 或 *Dimensions of Sound* 中所见。
+系统还可以包含次要输入接口，如音量按钮或触摸屏——或更具创意的接口，例如 `ec(h)o` 中使用的木制方块（Hatala and Wakkary, 2005）或在 `Audio Legends` 中作为盾牌的移动设备（Rovithis et al., 2019）。信号和数据也可以从环境中的其他系统接收，例如同步耳机中的音频与附近的任何视频投影，如在 `David Bowie Is` 或 `Dimensions of Sound` 中所见。
 
 ### 7.2.1 姿态跟踪
 
-跟踪 *姿态* 意味着跟踪物体在物理空间中的位置和朝向。在基于耳机的应用中，3DoF（仅头部跟踪）或 6DoF（头部和位置跟踪）至关重要，以便无论用户如何移动，虚拟声音都能固定在三维位置上。除了更新听觉视角外，姿态跟踪常作为主要交互机制，尤其是在没有按钮、语音识别或其他输入方式时（Yang, Barde and Billinghurst, 2022）。例如，用户在空间中的绝对位置，或相对物体的近度，可以触发交互转换。
+跟踪 `姿态` 意味着跟踪物体在物理空间中的位置和朝向。在基于耳机的应用中，`3DoF`（仅头部跟踪）或 `6DoF`（头部和位置跟踪）至关重要，以便无论用户如何移动，虚拟声音都能固定在三维位置上。除了更新听觉视角外，姿态跟踪常作为主要交互机制，尤其是在没有按钮、语音识别或其他输入方式时（Yang, Barde and Billinghurst, 2022）。例如，用户在空间中的绝对位置，或相对物体的近度，可以触发交互转换。
 
 表 7.1 列出了 AAR 系统通常能够检测的特征（见 Lombard and Ditton, 1997; Naphtali and Rodkin, 2019; Arena et al., 2022; Yang, Barde and Billinghurst, 2022）：
 
-| *Source*  | *Features* |
+| *Source* | *Features* |
+
 | --- | --- |
+
 | User | Pose (location and orientation) of head and other body parts |
+
 | Gestures | |
+
 | User-generated sounds (voice, footsteps, etc.) | |
+
 | Biodata | |
+
 | Environment | Pose of other people, creatures, objects |
+
 | Sounds of other people, creatures, objects | |
+
 | Room acoustics | |
+
 | Environmental conditions (weather, temperature, etc) | |
+
 | Signals and data from other systems (video timecode, etc.) | |
 
-头部朝向有时被用作交互触发，例如响应用户的点头和摇头（例如，Gampe, 2009）——这是某些智能耳机和眼镜中发现的功能，或用于确定用户的注视方向。头部朝向的另一个有趣用途是判断另一个人是否 *不* 看着用户。在 *The Reign Union* 中，这偶尔用于为另一个人添加小的非语言声音。
+头部朝向有时被用作交互触发，例如响应用户的点头和摇头（例如，Gampe, 2009）——这是某些智能耳机和眼镜中发现的功能，或用于确定用户的注视方向。头部朝向的另一个有趣用途是判断另一个人是否 `不` 看着用户。在 `The Reign Union` 中，这偶尔用于为另一个人添加小的非语言声音。
 
 姿态跟踪即使在听觉显示不需要的情况下，也能为任何应用带来额外的交互益处。例如，跟踪用户的手势（如用手指捏合）正逐渐成为 AR 和空间计算设备在需要精确交互时的重要输入方式。
 
@@ -643,26 +600,23 @@ Figure 7.1A simplified overview of the components of a wearable AAR system
 
 ![Figure 7.2A concealed IMU sensor (Pozyx Developer Tag) measuring the door opening angle ¶ Source: Photograph by the author](img/fig7_2.jpg)
 
-Figure 7.2A concealed IMU sensor (*Pozyx Developer Tag*) measuring the door opening angle ¶ Source: Photograph by the author
+Figure 7.2A concealed IMU sensor (`Pozyx Developer Tag`) measuring the door opening angle ¶ Source: Photograph by the author
 
-追踪的两种主要功能方法：系统可以提供绝对数据，或提供相对数据（即与上一次状态相比的变化）（Mazuryk and Gervautz, 1999）。大多数适用于 AAR 的跟踪系统提供绝对数据，例如基于固定锚点或摄像头的系统，或使用卫星导航的系统。然而，例如陀螺仪和加速度计提供相对数据，因此需要更频繁的校准，因为存在漂移。为了实现实时校准并提高整体精度、可靠性和稳健性，常常会组合不同类型的传感器。这称为 *传感器融合*（*sensor fusion*）。传感器融合可以集成在测量单元或设备中，也可以由用户通过组合多个跟踪系统的数据来实现。
+追踪的两种主要功能方法：系统可以提供绝对数据，或提供相对数据（即与上一次状态相比的变化）（Mazuryk and Gervautz, 1999）。大多数适用于 AAR 的跟踪系统提供绝对数据，例如基于固定锚点或摄像头的系统，或使用卫星导航的系统。然而，例如陀螺仪和加速度计提供相对数据，因此需要更频繁的校准，因为存在漂移。为了实现实时校准并提高整体精度、可靠性和稳健性，常常会组合不同类型的传感器。这称为 `传感器融合`（`sensor fusion`）。传感器融合可以集成在测量单元或设备中，也可以由用户通过组合多个跟踪系统的数据来实现。
 
 由于存在多种姿态跟踪技术，下面简要介绍一些技术及其在 AAR 中的可用性评估。
 
 ### 7.2.2 光学跟踪
 
-光学跟踪是一种绝对方法，利用视频摄像机来确定物体（有时包括方向）的位置（Wu, Tang and Lee, 2018）。光学跟踪主要有两种方法：*外向-in* 和 *内向-out*。外向-in 原理使用环境中固定安装的摄像机来跟踪移动目标，而内向-out 则在移动物体本身上安装摄像机，根据其观察到的周围环境来确定其位置和朝向（Bimber and Raskar, 2005; Vertucci et al., 2023）。
+光学跟踪是一种绝对方法，利用视频摄像机来确定物体（有时包括方向）的位置（Wu, Tang and Lee, 2018）。光学跟踪主要有两种方法：`外向-in` 和 `内向-out`。外向-in 原理使用环境中固定安装的摄像机来跟踪移动目标，而内向-out 则在移动物体本身上安装摄像机，根据其观察到的周围环境来确定其位置和朝向（Bimber and Raskar, 2005; Vertucci et al., 2023）。
 
-光学跟踪可以使用传统的 2D 摄像机，也可以使用深度摄像机或立体摄像机以获得更高的精度。光学跟踪，特别是基于标记的跟踪，精度极高（甚至可达 0.1 mm），但需要 *视线*（LOS）和理想的光照条件（Ungi, Lasso and Fichtinger, 2015）。因此，在多人体验或自然光较强的场所可能不具备可行性。
+光学跟踪可以使用传统的 2D 摄像机，也可以使用深度摄像机或立体摄像机以获得更高的精度。光学跟踪，特别是基于标记的跟踪，精度极高（甚至可达 0.1 mm），但需要 `视线`（LOS）和理想的光照条件（Ungi, Lasso and Fichtinger, 2015）。因此，在多人体验或自然光较强的场所可能不具备可行性。
 
-
-
-
-光学跟踪的优势在于灵活性和能够同时跟踪位置和姿态。此外，使用 `*SLAM*`（同步定位和映射）、`*PTAM*`（并行跟踪和映射）以及 `*DSLAM*`（动态 SLAM）等算法，即使在未知环境中也能确定物体位置（Wu, Tang and Lee, 2018; Vertucci et al., 2023）。这为内容创作开辟了巨大的可能性：体验可以在任何环境中传递并自适应，而无需绑定到固定布局或地图。
+光学跟踪的优势在于灵活性和能够同时跟踪位置和姿态。此外，使用 `SLAM`（同步定位和映射）、`PTAM`（并行跟踪和映射）以及 `DSLAM`（动态 SLAM）等算法，即使在未知环境中也能确定物体位置（Wu, Tang and Lee, 2018; Vertucci et al., 2023）。这为内容创作开辟了巨大的可能性：体验可以在任何环境中传递并自适应，而无需绑定到固定布局或地图。
 
 #### 基于标记的跟踪
 
-在基于标记的跟踪中，摄像头会在寻找附着在可跟踪物体（外向‑内）上的视觉模式，或在环境中放置的标记（内向‑外）。标记可以是像 `*OptiTrack*` 系统那样用红外光照射的反射器构成的星形阵列，也可以是 `*ArUco*` 和 `*QR*` 代码等在普通光下可见的 fiducial 标记，这些标记由黑白形状组成。通过与计算机内存中的原始标记模型进行比对，算法计算物体的距离、位置和姿态（Vertucci et al., 2023）。即使只使用单个摄像头即可推导出 6DoF 信息，使用多个不同视角的摄像头会显著提升准确度。
+在基于标记的跟踪中，摄像头会在寻找附着在可跟踪物体（外向‑内）上的视觉模式，或在环境中放置的标记（内向‑外）。标记可以是像 `OptiTrack` 系统那样用红外光照射的反射器构成的星形阵列，也可以是 `ArUco` 和 `QR` 代码等在普通光下可见的 fiducial 标记，这些标记由黑白形状组成。通过与计算机内存中的原始标记模型进行比对，算法计算物体的距离、位置和姿态（Vertucci et al., 2023）。即使只使用单个摄像头即可推导出 6DoF 信息，使用多个不同视角的摄像头会显著提升准确度。
 
 #### 无标记跟踪
 
@@ -670,9 +624,9 @@ Figure 7.2A concealed IMU sensor (*Pozyx Developer Tag*) measuring the door open
 
 ![Figure 7.3Markerless tracking of a picture frame using object detection with the ZED SDK ¶ Source: Photograph by the author](img/fig7_3.jpg)
 
-`Figure 7.3`无标记跟踪的图片框使用物体检测（`*ZED SDK*`） ¶ 来源：作者照片
+`Figure 7.3`无标记跟踪的图片框使用物体检测（`ZED SDK`） ¶ 来源：作者照片
 
-光学、无标记的内向‑外跟踪应用于从智能手机、混合现实（MR）头显到机器人吸尘器和自动驾驶汽车的多种设备。使用移动电话作为跟踪设备的问题在于其体积和重量——这在尝试将其安装在耳机上时是个不便，并且价格较高。另一方面，MR 头显由于体积笨重且前视显示器遮挡视线，并不适合用于增强现实（AAR）。然而，专用的单一用途跟踪器正在出现，`*VIVE Ultimate Tracker*` 便是其中一个例子，于 2023 年发布。虽然该设备主要面向 VR 身体跟踪，但它仍能利用两台摄像头和 IMU 实现 6DoF 自主姿态跟踪。尽管其跟踪区域有限且 API 受限，阻碍了其在增强现实（AAR）中的应用，但这仍然为独立开发者在寻找室内便捷跟踪解决方案时提供了有希望的消息。
+光学、无标记的内向‑外跟踪应用于从智能手机、混合现实（MR）头显到机器人吸尘器和自动驾驶汽车的多种设备。使用移动电话作为跟踪设备的问题在于其体积和重量——这在尝试将其安装在耳机上时是个不便，并且价格较高。另一方面，MR 头显由于体积笨重且前视显示器遮挡视线，并不适合用于增强现实（AAR）。然而，专用的单一用途跟踪器正在出现，`VIVE Ultimate Tracker` 便是其中一个例子，于 2023 年发布。虽然该设备主要面向 VR 身体跟踪，但它仍能利用两台摄像头和 IMU 实现 6DoF 自主姿态跟踪。尽管其跟踪区域有限且 API 受限，阻碍了其在增强现实（AAR）中的应用，但这仍然为独立开发者在寻找室内便捷跟踪解决方案时提供了有希望的消息。
 
 #### LiDAR
 
@@ -680,9 +634,9 @@ LiDAR（Light Detection And Ranging）是一种测距技术，它发射激光脉
 
 #### Lighthouse
 
-`*VIVE*` 的专有 `*Lighthouse*` 跟踪系统在许多实验性 AAR 项目中被广泛使用。它使用基站发射精确时间同步的红外激光扫描，跟踪单元上的传感器捕获这些激光闪光的时间和模式，从而计算出物体在空间中的位置和姿态（HTC, 2023）。跟踪器内置 IMU，提供加速度计和陀螺仪数据，以在高速运动或 IR 信号暂时丢失时提升跟踪精度。
+`VIVE` 的专有 `Lighthouse` 跟踪系统在许多实验性 AAR 项目中被广泛使用。它使用基站发射精确时间同步的红外激光扫描，跟踪单元上的传感器捕获这些激光闪光的时间和模式，从而计算出物体在空间中的位置和姿态（HTC, 2023）。跟踪器内置 IMU，提供加速度计和陀螺仪数据，以在高速运动或 IR 信号暂时丢失时提升跟踪精度。
 
-虽然 `*Lighthouse*` 提供快速且精准的跟踪，但其可跟踪区域受限，且对强光敏感，使用性受限。为了覆盖更大的空间，可使用多个基站组合，但这类系统稳定性较差且难以部署。
+虽然 `Lighthouse` 提供快速且精准的跟踪，但其可跟踪区域受限，且对强光敏感，使用性受限。为了覆盖更大的空间，可使用多个基站组合，但这类系统稳定性较差且难以部署。
 
 ### 7.2.3 RF‑based tracking
 
@@ -694,7 +648,7 @@ UWB（超宽带）跟踪使用固定位置的“锚点”在千兆赫兹频段�
 
 #### AoA
 
-`*Bluetooth*` Angle of Arrival（AoA）是一种通过分析多天线阵列中相位差来确定蓝牙信号方向的定位方法。将此方向信息与信号强度或通过多个接收器的三角测量结合，系统即可估计设备的位置。基本上，任何蓝牙设备都可以被跟踪，专用标签重量轻且体积小。然而，通常需要在天花板上安装多根天线，这在某些情况下（如历史建筑）可能不可行。低安装高度会显著降低精度，且像所有射频系统一样，AoA 在拥挤环境中对信号反射敏感，易导致跟踪误差。
+`Bluetooth` Angle of Arrival（AoA）是一种通过分析多天线阵列中相位差来确定蓝牙信号方向的定位方法。将此方向信息与信号强度或通过多个接收器的三角测量结合，系统即可估计设备的位置。基本上，任何蓝牙设备都可以被跟踪，专用标签重量轻且体积小。然而，通常需要在天花板上安装多根天线，这在某些情况下（如历史建筑）可能不可行。低安装高度会显著降低精度，且像所有射频系统一样，AoA 在拥挤环境中对信号反射敏感，易导致跟踪误差。
 
 #### 其他射频跟踪技术
 
@@ -703,8 +657,6 @@ UWB（超宽带）跟踪使用固定位置的“锚点”在千兆赫兹频段�
 5G 技术也可用于定位，在室内环境下甚至可以实现厘米级精度；但实现方式需要大规模天线阵列（Italiano et al., 2024），目前仍不具备实际可行性。
 
 ### 7.2.4 Electromagnetic tracking
-
-
 
 电磁跟踪（EM tracking），有时称为电磁场跟踪（EMF），利用局部电磁场来确定物体在三维空间中的精确位置和方向，提供高精度和相对低延迟。然而，其依赖于低频场限制了其范围仅几米。一些系统允许使用多个发射器来扩展覆盖范围，但系统仍易受金属结构或电子设备的干扰。尽管电磁跟踪自 1960 年代起主要用于军事和医疗环境，该技术仍在持续开发和改进（如 Amfitech，2024）。
 
@@ -752,10 +704,9 @@ RFID（射频识别）是另一种常见方法，用户佩戴的标签可被读�
 
 
 
-
 声学水印在 AAR（增强现实）的背景下值得认可。它是一种信号处理技术，将在听不见的信息嵌入音频信号中，使其能够在不显著改变原始声音的情况下携带隐藏数据（`Lin` 和 `Abdulla`，2015）。例如，博物馆展品可以通过扬声器发出水印声音。当访客接近不同的展品时，他们的设备可以检测到这些嵌入的信号，提供定制的音频叙事或触发各种交互提示。该技术无需额外硬件或可见信号，并且由于声音可以绕过障碍物（如墙壁和家具）传播，声学水印在复杂室内环境中可能更有效。
 
-#### Biodata sensors
+### Biodata sensors
 
 正如第 3 节讨论的那样，生物数据对 AAR 应用可能很有用。皮肤温度、心率和电皮肤活动只是一些可以相对容易测量的变量。许多活动手表、戒指和其他设备都集成生物数据传感器，虽然可以通过 API 或平台访问数据，但通常需要技术专业知识和编程。
 
@@ -797,12 +748,9 @@ Figure 7.5The main headphone types categorised by structure
 
 ### 7.5.1 耳罩式耳机
 
+- `Over-ear` 或 `circumaural` 耳机具有大耳罩，覆盖整个外耳。耳罩通常通过头带连接，头带可用于安装特定 AAR 应用所需的特殊设备和标记。`closed-back` 和 `open-back` 设计两种。`closed-back` 耳机衰减外部声音并防止内部声音泄漏。这在环境噪音会干扰虚拟音频内容时可能是最佳选择。然而，`closed-back` 耳机会产生共振或“浑浊”的低音响应，且不透气，长时间使用会积聚热量（Tran, Amrein and Letowski, 2009）。
 
-
-
--   `Over-ear` 或 `circumaural` 耳机具有大耳罩，覆盖整个外耳。耳罩通常通过头带连接，头带可用于安装特定 AAR 应用所需的特殊设备和标记。`closed-back` 和 `open-back` 设计两种。`closed-back` 耳机衰减外部声音并防止内部声音泄漏。这在环境噪音会干扰虚拟音频内容时可能是最佳选择。然而，`closed-back` 耳机会产生共振或“浑浊”的低音响应，且不透气，长时间使用会积聚热量（Tran, Amrein and Letowski, 2009）。
-
--   `Open-back` 和半开放耳机结构“通风”，产生更开阔自然的声音。它们比 `closed` 耳机更具声学透明性，这有助于保持对真实环境及他人的感知，同时提升虚拟声音的外部化（McGill et al., 2020）。不过，实际中 `closed-back` 设计有时因价格更低而被选择，且开放式耳机未必能显著提升与同伴的口头交流（Armbruster, 2024）。尽管如此，开放式设计能减轻隔离感，通常被认为更舒适（Vazquez-Alvarez et al., 2016）。开放式耳机始终会对真实世界声音造成一定程度的色彩化，这在某些关键应用中可能不可接受（Jacuzzi, 2018）。但由于听觉具有适应性，用户可能会习惯这种色彩化声景，因此尝试对虚拟内容进行均衡以更好地融合两者声学层是个好主意。
+- `Open-back` 和半开放耳机结构“通风”，产生更开阔自然的声音。它们比 `closed` 耳机更具声学透明性，这有助于保持对真实环境及他人的感知，同时提升虚拟声音的外部化（McGill et al., 2020）。不过，实际中 `closed-back` 设计有时因价格更低而被选择，且开放式耳机未必能显著提升与同伴的口头交流（Armbruster, 2024）。尽管如此，开放式设计能减轻隔离感，通常被认为更舒适（Vazquez-Alvarez et al., 2016）。开放式耳机始终会对真实世界声音造成一定程度的色彩化，这在某些关键应用中可能不可接受（Jacuzzi, 2018）。但由于听觉具有适应性，用户可能会习惯这种色彩化声景，因此尝试对虚拟内容进行均衡以更好地融合两者声学层是个好主意。
 
 ### 7.5.2 On-ear 耳机
 
@@ -816,7 +764,7 @@ Figure 7.5The main headphone types categorised by structure
 
 `In-ear` 耳机（以及一定程度上 `closed-back` 耳机）会增加用户对自身身体声音的感知，这可能导致与周围环境的连接感下降（Larsson et al., 2010）。
 
-耳塞是私人设备，出于卫生原因不适用于公共场合的手出设备。AR 体验可能依赖用户自备设备和耳机，但这对设计提出挑战——无法事先了解每个用户的设备。在增强现实情境中，声学透明度至关重要。若音频水平精准至关重要，则需要在体验开始时进行校准。 
+耳塞是私人设备，出于卫生原因不适用于公共场合的手出设备。AR 体验可能依赖用户自备设备和耳机，但这对设计提出挑战——无法事先了解每个用户的设备。在增强现实情境中，声学透明度至关重要。若音频水平精准至关重要，则需要在体验开始时进行校准。
 
 ### 7.5.4 Open-ear 耳机
 
@@ -836,14 +784,11 @@ Figure 7.6Acoustically transparent, 3D-printable headphones nicknamed ‘`Mushro
 
 ### 7.5.7 听透（Hear-through）
 
-现代许多耳机（包括耳塞）配备主动降噪（ANC）和电子听透功能，部分型号能识别语音及其他声音以实现自适应声景调节。耳机结构通常封闭，阻隔部分环境声音。它们采用 `pseudoacoustic` 系统，外部麦克风阵列安装在设备外表面，捕捉外部声音（Härmä et al., 2004）。通过数字信号处理（DSP），环境声音被通过反相信号馈入耳中，实现“消噪”。 
+现代许多耳机（包括耳塞）配备主动降噪（ANC）和电子听透功能，部分型号能识别语音及其他声音以实现自适应声景调节。耳机结构通常封闭，阻隔部分环境声音。它们采用 `pseudoacoustic` 系统，外部麦克风阵列安装在设备外表面，捕捉外部声音（Härmä et al., 2004）。通过数字信号处理（DSP），环境声音被通过反相信号馈入耳中，实现“消噪”。
 
 这种“麦克风-通过”系统（Albrecht, Lokki and Savioja, 2011）可用于 AR 场景提供声学透明，类似 MR 头戴式显示器的视频透通。相比纯声学透明系统，伪声学系统更复杂，因为需要处理并将环境声音馈入耳机。但其优势在于可移除和替换真实世界声景，为 MR 体验铺路。然而，若使用商用降噪耳机，开发者可能发现制造商未公开 API，导致难以“劫持”并操纵麦克风信号。
 
 ### 7.5.8 Smart 头戴式耳机（hearables）
-
-
-
 
 当耳机配备传感器和高级技术时，它们有时被称为`smart headphones or hearables`。通过基于 AI 的技术，ANC 系统可以更有效、经常适应性地工作，能够识别特定声音（如语音）并让其通过，同时降低其他声音。多个麦克风使得光束成型成为可能，即在声学上“聚焦”到所需的音频源，并且能够减少闭塞效应。除了现代助听器具备这些功能外，消费级耳机也具备类似特性，如`Pixel Buds Pro 2`。
 
@@ -887,49 +832,47 @@ Figure 7.8`The Reign Union`的互动故事结构的一部分，在`Unity Visual 
 
 
 
--   60 或 50 毫秒（ms）以下的延迟通常在大多数虚拟音频场景中被认为是不可见的，而低于 30 ms 则几乎不可见（Brungart, Kordik and Simpson, [2006; Brandenburg et al., 2023])。实际上，这些数值可以在跟踪系统非常快速（如 `OptiTrack` 或 `VIVE Tracker`）、音频渲染优化良好并在功率强大的计算机上运行且缓冲区很小、尽可能多的连接均为有线的情况下实现。然而，许多 AAR 应用无法在如此高的规格下运行。例如，即使使用 IMU 跟踪器进行头部朝向跟踪相对快速（延迟 10 ms，Supper, 2021），位置跟踪系统可能引入超过 100 ms 的延迟。好在头部朝向跟踪通常比位置跟踪更为关键，而快速位置跟踪仅在虚拟声音贴近时才变得重要。
+60 或 50 毫秒（ms）以下的延迟通常在大多数虚拟音频场景中被认为是不可见的，而低于 30 ms 则几乎不可见（Brungart, Kordik and Simpson, [2006; Brandenburg et al., 2023]）。实际上，这些数值可以在跟踪系统非常快速（如 `OptiTrack` 或 `VIVE Tracker`）、音频渲染优化良好并在功率强大的计算机上运行且缓冲区很小、尽可能多的连接均为有线的情况下实现。然而，许多 AAR 应用无法在如此高的规格下运行。例如，即使使用 IMU 跟踪器进行头部朝向跟踪相对快速（延迟 10 ms，Supper, 2021），位置跟踪系统可能引入超过 100 ms 的延迟。好在头部朝向跟踪通常比位置跟踪更为关键，而快速位置跟踪仅在虚拟声音贴近时才变得重要。
 
--   音频渲染会增加额外延迟，如第 7.3 节所述。复杂的听觉场景对计算机和软件的要求更高，通常导致更大的音频缓冲区和更高的延迟。最后，如果需要向耳机进行无线音频传输，则可能引入显著延迟。专业无线系统可实现低于 1 毫秒的延迟。一些低延迟蓝牙编码（如 `aptX LL` 和 `LHDC LL`）的延迟为 30–40 ms，而标准蓝牙编码则可能超过 200 ms，这会显著影响用户体验（Katz, 2024）。综上，若系统能将运动到声音的延迟控制在约 100 ms，这在保持可信度方面已算相当不错（Lindau, 2009）。
+音频渲染会增加额外延迟，如第 7.3 节所述。复杂的听觉场景对计算机和软件的要求更高，通常导致更大的音频缓冲区和更高的延迟。最后，如果需要向耳机进行无线音频传输，则可能引入显著延迟。专业无线系统可实现低于 1 毫秒的延迟。一些低延迟蓝牙编码（如 `aptX LL` 和 `LHDC LL`）的延迟为 30–40 ms，而标准蓝牙编码则可能超过 200 ms，这会显著影响用户体验（Katz, 2024）。综上，若系统能将运动到声音的延迟控制在约 100 ms，这在保持可信度方面已算相当不错（Lindau, 2009）。
 
--   听觉“远程效应”（ventriloquism effect），即虚拟声音“磁化”到可信的物理物体上，可以弥补部分动态错误（见 Ahrens, 2019）。但实际经验表明，这种容忍度有限，声音不能偏离太大。如果跟踪不稳定且虚拟声音在物理物体周围漂移，幻觉更容易破裂。
+听觉“远程效应”（ventriloquism effect），即虚拟声音“磁化”到可信的物理物体上，可以弥补部分动态错误（见 Ahrens, 2019）。但实际经验表明，这种容忍度有限，声音不能偏离太大。如果跟踪不稳定且虚拟声音在物理物体周围漂移，幻觉更容易破裂。
 
 ## 7.8 完整系统和标准
 
--   目前尚无法购买完整的 6DoF AAR 系统，至少在作者所知范围内，只有少数由制作 AAR 内容的公司研发的专有系统。然而，这些系统同样不完整：尽管它们在技术上设计得周到且可靠，但作者管道或跟踪系统仍可能依赖第三方工具和复杂的工作流。
+目前尚无法购买完整的 6DoF AAR 系统，至少在作者所知范围内，只有少数由制作 AAR 内容的公司研发的专有系统。然而，这些系统同样不完整：尽管它们在技术上设计得周到且可靠，但作者管道或跟踪系统仍可能依赖第三方工具和复杂的工作流。
 
--   部分解决方案已或将会可供购买，而第一个交互式沉浸式音频标准 `MPEG-I` 预计将在本书出版时于 2025 年发布。该标准由多家公司共同开发，旨在统一并稳定各设备上的音频渲染。它支持 6DoF 音频场景，兼容双耳耳机和扬声器设置。`MPEG-I` 具备可扩展性，能够为处理能力有限的移动设备优化渲染分辨率。它基于 `MPEG-H` 编码，支持通道式音频、对象式音频（OBA）以及更高阶麦克风阵列（HOA），并引入多点 HOA（Herre et al., 2024）。在 AAR 方面，一个重要特性是可以输入参数（如房间混响时间 RT60），以匹配虚拟声学与真实环境（Herre and Disch, 2023）。
+部分解决方案已或将会可供购买，而第一个交互式沉浸式音频标准 `MPEG-I` 预计将在本书出版时于 2025 年发布。该标准由多家公司共同开发，旨在统一并稳定各设备上的音频渲染。它支持 6DoF 音频场景，兼容双耳耳机和扬声器设置。`MPEG-I` 具备可扩展性，能够为处理能力有限的移动设备优化渲染分辨率。它基于 `MPEG-H` 编码，支持通道式音频、对象式音频（OBA）以及更高阶麦克风阵列（HOA），并引入多点 HOA（Herre et al., 2024）。在 AAR 方面，一个重要特性是可以输入参数（如房间混响时间 RT60），以匹配虚拟声学与真实环境（Herre and Disch, 2023）。
 
--   另一项最近发布的标准和 codec `IVAS` 尤其值得关注。它由多家电信和技术公司联合开发，能够通过单个移动设备即兴捕获空间听觉场景（如会议桌周围的人），并且可以在终端设备上对每位参与者的远程音频流进行空间化（Bruhn, Multrus and Varga, 2022; IVAS Codec Public Collaboration Contributors, 2023）。
+另一项最近发布的标准和 codec `IVAS` 尤其值得关注。它由多家电信和技术公司联合开发，能够通过单个移动设备即兴捕获空间听觉场景（如会议桌周围的人），并且可以在终端设备上对每位参与者的远程音频流进行空间化（Bruhn, Multrus and Varga, 2022; IVAS Codec Public Collaboration Contributors, 2023）。
 
--   尚需观察这些标准将被硬件和软件公司多广泛采用，它们能否简化并统一生产流程，以及是否能实现无缝的跨平台内容分发。尽管如此，它们的存在已反映出虚拟和空间音频在行业中的重要性日益被认可。
+尚需观察这些标准将被硬件和软件公司多广泛采用，它们能否简化并统一生产流程，以及是否能实现无缝的跨平台内容分发。尽管如此，它们的存在已反映出虚拟和空间音频在行业中的重要性日益被认可。
 
 ## 7.9 结论
 
--   实现 AAR 的可能技术种类看似繁多，选择正确的方案始终是一项充满挑战的过程，且测试某一技术往往需要投入金钱和时间，最终可能发现它并非最佳选择。除地理定位 AAR 平台外，缺乏面向内容创作者的现成完整系统，可能会延缓创意落地。本章希望为从业者提供选型指导，帮助其在项目中精准选择组件，减少重复试错，同时展望 AAR 技术的潜力与机遇。
+实现 AAR 的可能技术种类看似繁多，选择正确的方案始终是一项充满挑战的过程，且测试某一技术往往需要投入金钱和时间，最终可能发现它并非最佳选择。除地理定位 AAR 平台外，缺乏面向内容创作者的现成完整系统，可能会延缓创意落地。本章希望为从业者提供选型指导，帮助其在项目中精准选择组件，减少重复试错，同时展望 AAR 技术的潜力与机遇。
 
 ## 参考文献
 
-1.  Ahrens, A. 等 (2019) ‘Sound Source Localization with Varying Amount of Visual Information in Virtual Reality’，PLOS ONE, 14 (3), p. e0214603。Available at: [`doi.org/10.1371/journal.pone.0214603`](https://doi.org/10.1371/journal.pone.0214603)。
+1. Ahrens, A. 等 (2019) ‘Sound Source Localization with Varying Amount of Visual Information in Virtual Reality’，PLOS ONE, 14 (3), p. e0214603。Available at: [`doi.org/10.1371/journal.pone.0214603`](https://doi.org/10.1371/journal.pone.0214603)。
 
-2.  Albrecht, R., Lokki, T. and Savioja, L. (2011) ‘A Mobile Augmented Reality Audio System with Binaural Microphones’，in Proceedings of Interacting with Sound Workshop: Exploring Context-Aware, Local and Social Audio Applications. New York, NY, USA: Association for Computing Machinery (IwS ’11), pp. 7–11。Available at: [`doi.org/10.1145/2019335.2019337`](https://doi.org/10.1145/2019335.2019337)。
+2. Albrecht, R., Lokki, T. and Savioja, L. (2011) ‘A Mobile Augmented Reality Audio System with Binaural Microphones’，in Proceedings of Interacting with Sound Workshop: Exploring Context-Aware, Local and Social Audio Applications. New York, NY, USA: Association for Computing Machinery (IwS ’11), pp. 7–11。Available at: [`doi.org/10.1145/2019335.2019337`](https://doi.org/10.1145/2019335.2019337)。
 
-3.  ALPS (2018) ‘ALPS – Acoustic Localisation Positioning System’。Available at: [`alps.fi/`](https://alps.fi/) (Accessed: 26 November 2024)。
+3. ALPS (2018) ‘ALPS – Acoustic Localisation Positioning System’。Available at: [`alps.fi/`](https://alps.fi/) (Accessed: 26 November 2024)。
 
-4.  Amfitech (2024) ‘AMFITRACKTM, AmfiTrack’。Available at: [`www.amfitrack.com`](https://www.amfitrack.com) (Accessed: 26 November 2024)。
+4. Amfitech (2024) ‘AMFITRACKTM, AmfiTrack’。Available at: [`www.amfitrack.com`](https://www.amfitrack.com) (Accessed: 26 November 2024)。
 
-5.  Arena, F. 等 (2022) ‘An Overview of Augmented Reality’，Computers, 11 (2), p. 28。Available at: [`doi.org/10.3390/computers11020028`](https://doi.org/10.3390/computers11020028)。
+5. Arena, F. 等 (2022) ‘An Overview of Augmented Reality’，Computers, 11 (2), p. 28。Available at: [`doi.org/10.3390/computers11020028`](https://doi.org/10.3390/computers11020028)。
 
-6.  Armbruster, S. (2024) ‘Conversation with Matias Harju, March 7’.
+6. Armbruster, S. (2024) ‘Conversation with Matias Harju, March 7’.
 
-7.  Bederson, B.B. (1995) ‘Audio Augmented Reality: A Prototype Automated Tour Guide’，in Conference Companion on Human Factors in Computing Systems – CHI ’95. Denver, Colorado, United States: ACM Press, pp. 210–211。Available at: [`doi.org/10.1145/223355.223526`](https://doi.org/10.1145/223355.223526)。
+7. Bederson, B.B. (1995) ‘Audio Augmented Reality: A Prototype Automated Tour Guide’，in Conference Companion on Human Factors in Computing Systems – CHI ’95. Denver, Colorado, United States: ACM Press, pp. 210–211。Available at: [`doi.org/10.1145/223355.223526`](https://doi.org/10.1145/223355.223526)。
 
-8.  Bimber, O. and Raskar, R. (2005) Spatial Augmented Reality: Merging Real and Virtual Worlds. Wellesley, Massachussets: A K Peters.
+8. Bimber, O. and Raskar, R. (2005) Spatial Augmented Reality: Merging Real and Virtual Worlds. Wellesley, Massachussets: A K Peters.
 
-9.  Boquet, G., Vilajosana, X. and Martinez, B. (2024) ‘Feasibility of Providing High-Precision GNSS Correction Data Through Non-Terrestrial Networks’, IEEE Transactions on Instrumentation and Measurement, 73, pp. 1–15。Available at: [`doi.org/10.1109/TIM.2024.3453319`](https://doi.org/10.1109/TIM.2024.3453319)。
+9. Boquet, G., Vilajosana, X. and Martinez, B. (2024) ‘Feasibility of Providing High-Precision GNSS Correction Data Through Non-Terrestrial Networks’, IEEE Transactions on Instrumentation and Measurement, 73, pp. 1–15。Available at: [`doi.org/10.1109/TIM.2024.3453319`](https://doi.org/10.1109/TIM.2024.3453319)。
 
-10.  Brandenburg, K。et al. (2023) ‘Implementation of and Application Scenarios for Plausible Immersive Audio Via Headphones’，in Audio Engineering Society Convention 155, Audio Engineering Society。Available at: [`www.aes.org/e-lib/browse.cfm?elib=22308`](https://www.aes.org/e-lib/browse.cfm?elib=22308) (Accessed: 25 November 2023)。
-
-
+10. Brandenburg, K。et al. (2023) ‘Implementation of and Application Scenarios for Plausible Immersive Audio Via Headphones’，in Audio Engineering Society Convention 155, Audio Engineering Society。Available at: [`www.aes.org/e-lib/browse.cfm?elib=22308`](https://www.aes.org/e-lib/browse.cfm?elib=22308) (Accessed: 25 November 2023)。
 
 11. Bruhn, S., Multrus, M. and Varga, I. (2022) ‘IVAS – 将 3GPP 语音和音频服务提升至新的沉浸式水平’, 3GPP Highlights, 十月, 第 8–9 页。
 
@@ -969,6 +912,8 @@ Figure 7.8`The Reign Union`的互动故事结构的一部分，在`Unity Visual 
 
 29. Katz, L. (2024) ‘了解蓝牙编码', SoundGuests。可在: [`www.soundguests.com/understanding-bluetooth-codecs-15352/`](https://www.soundguests.com/understanding-bluetooth-codecs-15352/) (访问日期: 2024 年 10 月 18 日)。
 
+
+
 30. Larsson, P. et al. (2010) ‘在混合现实环境中产生听觉存在感及相关技术', in E. Dubois, P. Gray, and L. Nigay (eds) The Engineering of Mixed Reality Systems. London: Springer (Human-Computer Interaction Series), 第 143–163 页。可在: [`doi.org/10.1007/978-1-84882-733-2_8`](https://doi.org/10.1007/978-1-84882-733-2_8)。
 
 31. Lin, Y. and Abdulla, W.H. (2015) ‘音频水印技术', in Y. Lin and W.H. Abdulla (eds) Audio Watermark: A Comprehensive Foundation Using MATLAB. Cham: Springer International Publishing, 第 51–94 页。可在: [`doi.org/10.1007/978-3-319-07974-5_3`](https://doi.org/10.1007/978-3-319-07974-5_3)。
@@ -982,8 +927,6 @@ Figure 7.8`The Reign Union`的互动故事结构的一部分，在`Unity Visual 
 35. Mazuryk, T. and Gervautz, M. (1999) ‘虚拟现实 – 历史、应用、技术与未来', ResearchGate \[Preprint\]. 可在: [`www.researchgate.net/publication/2617390_Virtual_Reality_-_History_Applications_Technology_and_Future`](https://www.researchgate.net/publication/2617390_Virtual_Reality_-_History_Applications_Technology_and_Future) (访问日期: 2019 年 3 月 10 日)。
 
 36. McGill, M. et al. (2020) ‘声学透明与听觉混合现实声音景观的变化', in Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems. Honolulu, Hawaii, USA: ACM, 第 1–16 页。可在: [`doi.org/10.1145/3313831.3376702`](https://doi.org/10.1145/3313831.3376702)。
-
-
 
 37. 梅耶-卡黑恩, N. 等人 (2023) ‘测量虚拟声学渲染系统的运动到声音延迟’，AES: 《音频工程学会杂志》, 71 (6), 第 390–398 页。可于: [`doi.org/10.17743/jaes.2022.0089`](https://doi.org/10.17743/jaes.2022.0089)。
 
@@ -1021,9 +964,9 @@ Figure 7.8`The Reign Union`的互动故事结构的一部分，在`Unity Visual 
 
 54. [杨, Z. 等人 (2020) ‘Ear-AR：在耳机上进行室内声学增强现实’，在《第 26 届国际移动计算与网络年会论文集》中。MobiCom ’20, 伦敦, 英国: ACM, 第 1–14 页。可于: [`doi.org/10.1145/3372224.3419213`](https://doi.org/10.1145/3372224.3419213)。
 
-8Narrative design considerations
+# 8 Narrative design considerations
 
-DOI: [10.4324/9781003627289-8](https://doi.org/10.4324/9781003627289-8)
+DOI: [`10.4324/9781003627289-8`](https://doi.org/10.4324/9781003627289-8)
 
 叙事者永远不会处于可以任意选择最适合讲述故事的媒介，并在该媒介内任意挑选任何可想象的方法、技术和场所的情形。选择始终由作者的技能与兴趣、利益相关者的需求与预算，以及制作者和资助方的优先级决定。但让我们假设叙事者已选择使用增强现实 (AAR) 来传达故事。那么，从哪里开始呢？本章简要讨论了几项叙事设计考量因素。虽然前几节已轻触过实际制作相关问题，并在后续部分继续出现，但因篇幅限制，这些内容不作深入探讨。
 
@@ -1037,31 +980,36 @@ DOI: [10.4324/9781003627289-8](https://doi.org/10.4324/9781003627289-8)
 
 正如我们所知，AAR 作为叙事媒介拥有巨大潜力。相较于视觉增强现实，当前的 AAR 技术已能够创造出与真实环境中相互共存的可信虚拟物体幻象。结合 AAR 的其他特性，这打开了若干令人着迷的叙事可能性，下面给出一些示例。
 
+### 熟悉的环境作为叙事空间
 
-
-
-## 熟悉的环境作为叙事空间
 AAR 使得故事能够在用户自己的环境中展开，将熟悉的周围环境转化为叙事空间。`Zombies, Run!` 就是一个例子，它在每个人的社区中充斥着僵尸，可能引发强烈的情感反应。挑战在于，如何个性化内容，使其不显得过于普通。在更原始认知层面运作的类型，如恐怖，可能在这方面更有效，而基于地点的叙事结构可能设计起来较为困难。
 
-## 与地点相关的个人和集体故事
+### 与地点相关的个人和集体故事
+
 听觉常被视为个人和亲密的感官。与特定地点相关的个人故事，结合空间感知的互动，可以非常有力量，`Maison Gainsbourg` 中夏洛特的回忆就是一个例子。地理定位的音频平台也展现出潜力，能够分享用户自己的故事，并为叙事提供真实感和社会黏合力。集体叙事则可能揭示地点的共享故事，可能通过参与者的实时贡献得到丰富。
 
-## 隐藏的叙事
+### 隐藏的叙事
+
 AAR 可以揭示某一地点的“隐藏”叙事，为显著叙事提供另一种视角，暴露伦理、社会和环境主题。通过基于耳机的应用，这些叙事层可以隐藏于其他人之外，使体验在不打扰现有环境和周围人的情况下进行。第 9.7 章讨论了一种称为“替代匹配”（alternative match）的叙事技巧，并给出了一些概念的使用示例。
 
-## 集体与个人
+### 集体与个人
+
 与隐藏和替代叙事相关，耳机基于 AAR 的一个可能性是为参与者提供共享故事，但每个听众个性化。显而易见的实现方式包括多语言选项，以及根据年龄、听力障碍或认知挑战进行定制。然而，定制可以进一步扩展到叙事层面，让每个参与者以不同的时间顺序或从不同角色的视角听到同一故事，如在 `The Reign Union` 中所示。
 
-## 增强戏剧
+### 增强戏剧
+
 虽然某些剧院提供通过耳机的翻译服务，AAR 仍然可以通过空间化翻译声音、将其附着于舞台上的演员来提升沉浸感。叙事上，这为上述个性化对话提供了有趣的可能性。此外，虚拟音效和环境音也可以通过 AAR 系统传递，这对于一些难以通过观众周围的物理扬声器实现的沉浸式效果特别有用。例如，英国国家剧院的 `Anna` 表演利用了双耳间距（binaural telepresence），让观众通过耳机听到舞台事件。高级 AAR 技术可以进一步拓展这些概念。
 
-## 复苏已灭绝的声音并 evoking（唤起）未来
+### 复苏已灭绝的声音并 evoking（唤起）未来
+
 博物馆长期使用虚拟音频来复原不再能听见的声音。`Nature Soundscapes` 项目通过扬声器在森林中再现已灭绝物种的声音，而移动 AAR 系统则有望将这一概念扩展到更广泛的受众。同样，AAR 可以设想未来世界的声音，无论是有人类影响还是没有。
 
-## 迭生叙事
+### 迭生叙事
+
 AAR 能够驱动环境驱动的叙事，这些叙事会根据环境因素（如天气）进行反应和适应，例如 `Naphtali and Rodkin, 2019`。借助人工智能，生成式故事也可以完全从用户周围的现实中萌芽，接收来自环境和其中人物的输入。
 
 ## 8.3 技术平台
+
 正如本书所述，理论上实现 AAR 的可能性是无限的。但在现实中，实际选择往往受限，并且已被预定义的环境和位置依赖性所左右，例如应用是否具有普遍性（ubiquitous）或是特定于某一地点（site-specific）。
 
 如果符合需求，直接增强（direct augmentation）是一个明显的选项。通常，仅需简单的 proximity（近距离）感应即可实现，虽然在公共场所确保系统可靠可能需要一定努力。对于户外移动体验，地理定位的应用和 SDK 提供了简便的作者工具、稳定的性能以及与大量支持的终端设备的全球兼容性。但其代价是艺术和交互工具的局限，除非与这些系统的开发者协作进行定制。
@@ -1071,10 +1019,10 @@ AAR 能够驱动环境驱动的叙事，这些叙事会根据环境因素（如�
 尽管所有 AAR 平台仍处于实验阶段，CTC、WFS 和环绕系统在 AAR 领域更为实验性，甚至可能完全不在创作者和观众的可达范围之内。尽管如此，为它们创作 AAR 内容仍然被强烈鼓励！
 
 ## 8.4 哪个环境？
+
 另一个与技术平台紧密相关的关键考量是故事是否应与特定地点绑定、可转移到多个地点，还是移动且可在任何地方使用。为特定地点编写故事通常能形成连贯的叙事，充分利用真实环境、历史、未来及其居民。但可及性问题也随之而来：由于地理位置、身体残疾或经济障碍，并非所有受众都能轻松接入特定地点的叙事，这可能限制受众多样性，排除那些本可受益的群体。此外，观众需要前往现场还会增加环境污染，尤其是当现场难以通过公共交通到达时。
 
 可转移和普遍的体验可以解决可及性问题，但对叙事设计构成挑战：如何创造有意义的故事，使其在任何环境中都能适应并贴合？一个解决方案是精选故事运行的地点，例如全球多个公园（如 `The Planets`），或限定可能的场景，例如让故事发生在家庭环境中（如 `Horror-Fi Me`），这是广为人知且能够唤起普遍情感的情境。风险仍然存在——体验可能显得更为通用，与现实的关联变得表面化。某些类型更能容忍这种情况，例如恐怖和悬疑，它们基于更原始的情感层面，更容易在不同环境中迁移。
-
 
 
 
@@ -1106,17 +1054,12 @@ If the production has enough resources to develop natural interaction for the ex
 
 On the other hand, a gripping story told through near-realistic virtual sounds may not require any interaction at all (e.g., *Séance*). So, while resources may limit the ability to include every last feature, a well-curated experience can still fully engage participants and lead them to suspend their disbelief. Further, as is the case with new media, the fascinating medium itself may sometimes draw too much attention away from the content (Green, 2021; Krieger et al., 2023). This phenomenon might occur in the ‘uncanny valley’, where the technology mimics realism impressively but not convincingly enough for the audience to become fully immersed and accept the illusion of nonmediation.
 
-
-
 在叙事体验中，听众的角色——无论是观察者、被动参与者还是主动参与者——决定了体验的交互需求和技术复杂度。以下是一些示例角色：
 
-*`Ghost`*。听众是沉默的观察者，可以自由移动，但通常被其他角色忽视且对剧情没有影响。不过，听众的移动可能会触发场景中的事件。例如，《The Sound of Things》和《Sonic Traces Heldenplatz》。
-
-*`Passive central character`*。听众成为剧情的中心人物，但保持被动，遵循指向性、沉浸式的叙事，无需主动输入。例如，《Séance》。
-
-*`Passive companion/visitor`*。听众被邀请作为访客探索，遵循预定路径或遇到为其精心设计的场景。这里的互动是间接的，听众通过声音景观或叙事被引导，营造出场所感，但不需要主动决策。该角色仍依赖脚本驱动的音频，但需要结构化的环境提示来指示探索。例如，《Maison Gainsbourg》。
-
-*`Active actor`*。听众通过自己的选择和移动主动塑造叙事，成为故事中的角色。这需要复杂的互动，用户的行动驱动动态响应和叙事路径。例如，《The Reign Union》。
+- `Ghost`。听众是沉默的观察者，可以自由移动，但通常被其他角色忽视且对剧情没有影响。不过，听众的移动可能会触发场景中的事件。例如，《The Sound of Things》和《Sonic Traces Heldenplatz》。
+- `Passive central character`。听众成为剧情的中心人物，但保持被动，遵循指向性、沉浸式的叙事，无需主动输入。例如，《Séance》。
+- `Passive companion/visitor`。听众被邀请作为访客探索，遵循预定路径或遇到为其精心设计的场景。这里的互动是间接的，听众通过声音景观或叙事被引导，营造出场所感，但不需要主动决策。该角色仍依赖脚本驱动的音频，但需要结构化的环境提示来指示探索。例如，《Maison Gainsbourg》。
+- `Active actor`。听众通过自己的选择和移动主动塑造叙事，成为故事中的角色。这需要复杂的互动，用户的行动驱动动态响应和叙事路径。例如，《The Reign Union》。
 
 还有许多其他角色需要考虑，但关键点在于每种角色的交互需求决定了所需的输入类型。在更被动的角色中，输入可以局限于位置跟踪或简单的存在感检测。而主动角色则需要更丰富的输入，可能包括 6DoF 移动、手势和语音。
 
@@ -1132,17 +1075,19 @@ On the other hand, a gripping story told through near-realistic virtual sounds m
 
 表 8.1 AAR 次要界面示例
 
-| *Domain* || *Input* || *Output* |
+| Domain | Input | Output |
 | --- | --- | --- |
 | Auditory | Speech recognition | System messages |
-| Visual | Gesture recognitionFacial tracking | Text and graphics |
-| Physical/tactile | TouchscreenPhysical knobs, slidersTapping on the side of device | Vibration |
+| Visual | Gesture recognition, Facial tracking | Text and graphics |
+| Physical/tactile | Touchscreen, Physical knobs, sliders, Tapping on the side of device | Vibration |
 
-一种方法是利用人工智能为用户做决定，从而最大程度减少对次要界面的需求，但显而易见的风险是机器的误判。用户界面也可以在不需要时禁用或静音。例如，一个全新的 AAR 展览系统可以在开始时提供详细说明，让用户自行调节音量等设置，之后这些次要界面即可被禁用。例如，2012 年的 *Journey* 游戏通过将游戏机制自然融入叙事和环境，无需显式教程即可无缝教会玩法。此类在 AAR 中的做法同样能立即抓住用户的注意力，从体验一开始就进行。
+
+
+一种方法是利用人工智能为用户做决定，从而最大程度减少对次要界面的需求，但显而易见的风险是机器的误判。用户界面也可以在不需要时禁用或静音。例如，一个全新的 AAR 展览系统可以在开始时提供详细说明，让用户自行调节音量等设置，之后这些次要界面即可被禁用。例如，2012 年的 `Journey` 游戏通过将游戏机制自然融入叙事和环境，无需显式教程即可无缝教会玩法。此类在 AAR 中的做法同样能立即抓住用户的注意力，从体验一开始就进行。
 
 ## 8.9 可访问性考虑
 
-由于 AAR 非常适合视力受限的个人，且许多潜在用户可能有听力障碍，因此需要考虑几个关键设计原则来满足这些特定需求。首先，应避免指向视觉对象的表述，例如‘向黄色建筑走去’。更易取得的提示可以是听觉或触觉的参考点，如‘朝我的声音转’，或相对于用户当前姿态的指示：‘向左转。再多点…完美！’ 
+由于 AAR 非常适合视力受限的个人，且许多潜在用户可能有听力障碍，因此需要考虑几个关键设计原则来满足这些特定需求。首先，应避免指向视觉对象的表述，例如‘向黄色建筑走去’。更易取得的提示可以是听觉或触觉的参考点，如‘朝我的声音转’，或相对于用户当前姿态的指示：‘向左转。再多点…完美！’
 
 其次，需注意音频音量。许多盲人依靠回响和环境声音来理解周围环境。然而，即使是透明的音频系统，过大的虚拟声音也会掩盖真实世界的声音。例如，在《The Reign Union》的某个场景中，音乐被空间化为三维、acousmatic 管弦乐，对白人参与者来说，鼓励他们起舞，但部分盲人参与者决定完全停止，因为他们听不到真实世界的声音，感到不适。降低虚拟声音的音量可能会削弱场景的力度和魔力。更好的解决方案是让用户有选择权，可以保持静止并享受音乐。
 
@@ -1154,12 +1099,9 @@ On the other hand, a gripping story told through near-realistic virtual sounds m
 
 ## 8.10 现实程度
 
-
-
-
 AAR 的真实程度不只是一种审美选择。它会影响用户对叙事的理解：用户能够辨认出哪些声音元素属于故事本身。在传统的戏剧、电影或电子游戏中，参与者随时可以环顾四周，区分故事世界与现实世界，尽管角色、场景和声音的真实程度如何。在增强现实（AR）、沉浸式戏剧、现场角色扮演游戏以及某些实验性视频游戏中，这一界限变得模糊，因为用户周围的一切都可能成为故事的一部分。在 AAR 中，可以渲染出如此逼真的虚拟内容，以至于即使有意识地努力，也难以将其与现实区分开来。
 
-无法辨认哪些元素属于故事、哪些属于现实，会引发不确定感并产生混乱（见 `Härmä et al., 2003`；`Dam et al., 2024`）。在受控环境中，如 `DARKFIELD` 设备在运输集装箱内的表演，真实程度可以调至最大，因为每位观众都知道自己进入了一个完全沉浸的体验，每一个声音都可能——也可能不——在故事中发挥作用。然而，在公共空间或人群环境中，使用接近现实的虚拟声音可能带来风险：如果用户未能将这些声音视为故事的一部分，可能会做出不可预测的行为。正如传说所述，1938 年《世界大战》广播节目（Orson Welles 的《电台剧院》系列）让部分听众误以为外星人入侵真实发生并产生恐慌。在 AAR 中同样可能发生，例如在博物馆潜艇内虚拟火警响起，或用户听到门后有暴力行为，从而报警。在 Dafna Naphtali 的地理定位音频步行 *Walkie Talkie Dream Angles*（位于纽约华盛顿广场），制作方决定不使用消防车警报声，因为这会掩盖真实的紧急车辆声音（Naphtali and Rodkin, 2019）。
+无法辨认哪些元素属于故事、哪些属于现实，会引发不确定感并产生混乱（见 `Härmä et al., 2003`；`Dam et al., 2024`）。在受控环境中，如 `DARKFIELD` 设备在运输集装箱内的表演，真实程度可以调至最大，因为每位观众都知道自己进入了一个完全沉浸的体验，每一个声音都可能——也可能不——在故事中发挥作用。然而，在公共空间或人群环境中，使用接近现实的虚拟声音可能带来风险：如果用户未能将这些声音视为故事的一部分，可能会做出不可预测的行为。正如传说所述，1938 年《世界大战》广播节目（Orson Welles 的《电台剧院》系列）让部分听众误以为外星人入侵真实发生并产生恐慌。在 AAR 中同样可能发生，例如在博物馆潜艇内虚拟火警响起，或用户听到门后有暴力行为，从而报警。在 Dafna Naphtali 的地理定位音频步行 `Walkie Talkie Dream Angles`（位于纽约华盛顿广场），制作方决定不使用消防车警报声，因为这会掩盖真实的紧急车辆声音（Naphtali and Rodkin, 2019）。
 
 在深度伪造视频和声音克隆的时代，‘听感逼真’的声音也可能引发数字欺骗的担忧：AAR 能够创造难以与真实声音区分的虚拟音效，这可能使用户更易受到欺骗（Turner, 2022）。
 
@@ -1167,7 +1109,7 @@ AAR 的真实程度不只是一种审美选择。它会影响用户对叙事的�
 
 也许虚拟幻觉的逼真性本身在技术上就难以实现。这并不意味着体验必然失败，因为还有许多其他因素促成引人入胜的体验，如前文所述并在第 3.2 章中讨论。
 
-8.11 结论
+## 8.11 结论
 
 投身 AAR 制作已经是一跃进入未知领域，而此后的前进往往依赖于亲身探索和实践学习。本章概述的设计考量旨在帮助把握 AAR 设计的复杂性。但生产的实际方面——同样对 AAR 体验成功至关重要——仍是进一步探索的课题。虽然完美的听觉幻觉可以令人着迷并实现真正的混合现实，但它们并非所有应用都可行，也并非必要。这一认识可能让从业者感到安心，扩大可实现的范围，同时也强调了在技术精确性与创意适应性之间取得平衡的重要性。
 
@@ -1201,8 +1143,6 @@ References
 
 14. Krieger, E. et al. (2023) ‘Youth and Augmented Reality’, in A.Y.C. Nee and S.K. Ong (eds) Springer Handbook of Augmented Reality. Cham, Switzerland: Springer (Springer Handbooks), pp. 709–741.
 
-
-
 15. McErlean, K. (2018) 《交互叙事与跨媒体叙事：在新媒体平台上创造沉浸式故事》1 版。Milton: Routledge。可于: [`doi.org/10.4324/9781315637570`](https://doi.org/10.4324/9781315637570)。
 
 16. Naphtali, D. and Rodkin, R. (2019) “面向互动音景、声音艺术和音乐传递的音频增强现实”，载于《互动媒体声音设计基础》。Routledge。
@@ -1215,9 +1155,9 @@ References
 
 20. Wirth, W. 等人 (2007) “空间存在体验形成过程模型”，Media Psychology \[预印本\]。可于: [`doi.org/10.1080/15213260701283079`](https://doi.org/10.1080/15213260701283079)。
 
-# 9Narrative techniques and concepts
+# 9 Narrative techniques and concepts
 
-DOI: [10.4324/9781003627289-9](https://doi.org/10.4324/9781003627289-9)
+DOI: [`10.4324/9781003627289-9`](https://doi.org/10.4324/9781003627289-9)
 
 AAR 是一种具有巨大叙事潜力的新媒介。虽然多年来人工声音与现实融合已用于讲述与特定地点或物体相关的故事，但内容创作者往往各自为政，不了解该领域其他人的努力。许多包含 AAR 元素的体验仍未被标记为 AAR，这使得从中学习或在此基础上发展变得困难。虽然本书旨在将这些应用统一于共享框架下，同时也识别了这些体验中独有的叙事技巧。通过认识到 AAR 社区内的共同工具和实践，内容创作过程将变得稍微容易一些，从而让创作者能够更专注于探索和开发新点子。
 
@@ -1233,7 +1173,7 @@ AAR 是一种具有巨大叙事潜力的新媒介。虽然多年来人工声音�
 
 ## 9.1 Locative audio
 
-*Locative audio* 指的是根据用户位置触发和操控的拟声（acousmatic）声音。 (关于拟声，请参见第 2.11 章。) 该技巧主要适用于移动和可穿戴的 AAR，声音通常包括环境音、声音和音乐。Locative audio 在大多数地理定位音频应用中已成为事实上的范式。这主要是因为头部追踪往往难以实现或对部分用户不可用，限制了将虚拟声音附着于实体的能力；而位置追踪在室外可通过卫星定位轻松实现，室内则可通过 proximity（近距离）传感器相对容易实现。
+`Locative audio` 指的是根据用户位置触发和操控的拟声（acousmatic）声音。 (关于拟声，请参见第 2.11 章。) 该技巧主要适用于移动和可穿戴的 AAR，声音通常包括环境音、声音和音乐。`Locative audio` 在大多数地理定位音频应用中已成为事实上的范式。这主要是因为头部追踪往往难以实现或对部分用户不可用，限制了将虚拟声音附着于实体的能力；而位置追踪在室外可通过卫星定位轻松实现，室内则可通过 proximity（近距离）传感器相对容易实现。
 
 表 9.1 部分叙事技巧和概念特征于 AAR
 
@@ -1245,148 +1185,15 @@ AAR 是一种具有巨大叙事潜力的新媒介。虽然多年来人工声音�
 
 | Attachment || 虚拟声音似乎发出于真实世界物体 || 《Horror-Fi Me》中的门敲击声 |
 
-| Object congruence || 物体与声音在情境中完全可信的对齐 || 附着于静音办公桌电话的电话铃声（Cohen, Aoki, and Koizumi，1993） |
 
-| Partial congruence || 物体与声音在情境中呈现出略微 tangential 的对齐 || 来自空酒杯的庆祝音效（《The Sound of Things》） |
 
-| Incongruence || 物体与声音相对于期望出现的情境不匹配 || 狗叫声从人身上发出（《The Reign Union》） |
+一致性幻觉在应用于运动中的人物时也同样有效。在*The Reign Union*中，另一位虚拟主角 Mauno 开始出现幻觉并到处听到间谍的耳语。用户可以与他一起听到这些耳语。现在，如果另一位参与者进入同一房间，就会将耳语附着到他们身上，并在他们的头部背向用户或位于用户身后时播放，确保他们的嘴巴保持不可见。这避免了与口型动作不同步相关的任何不一致。如果叙事允许，口哨声或许会创造出更好的一致性，因为它对人物声音独特的音色更为不敏感。
 
-| Addition || 在声音产生物体上加入额外声音，从而改变对该物体的感知 || 在升降机的嗡嗡声上叠加绳索吱呀声，将安全的升降机变成令人不安的地方 |
+对于被阻挡的物体，一致性很容易实现：穿过墙壁和门板的闷响往往显得出奇地真实。其原因可能是音量通常较低，使得声音处于边缘状态且不易受到严格审视。此外，这类声音的空间定位总是有些模糊，这也宽容了虚拟音频系统中任何跟踪和注册误差。
 
-| Alternative match || 使用提供不同但仍然相符的视角的音频 || 在有异味的情况下，听到怠速车声或漏气燃气管的声音 |
+## 9.4 部分一致性
 
-| Extension || 通过声音创造并暗示超出可观察范围的空间 || 通过丢弃垃圾的声音让垃圾桶显得极其深沉（*The world’s deepest bin*） |
 
-
-
-
--   [揭示] || 被阻挡的声音来源在下一房间 (`Barque Sigyn`) 中被揭示 || 被揭示的金属滴答声来源在下一房间 (`Barque Sigyn`) |
-| 无实体声音 || 无实体对应的声音 || 家庭空间化的声音在空荡的厨房中 (`Maison Gainsbourg`) |
-| 分离 || 声音与实体物体分离；变为无实体声音 || 触摸发声展品会导致声音在用户周围环绕 |
-| 吸引性声音 || 通过独特声音吸引用户的物体 || 博物馆展品‘呼唤’自另一房间 (`LISTEN`) |
-| 空间尺度与偏移 || 空间坐标系统和尺度以多种方式操控 || 将声景听作他人的耳朵 (`National Theatre: Anna`) |
-| 近场 || 利用离头部非常近的声音 || 蚊子发出的声音造成烦躁 (`The Reign Union`) |
-| 移除与替换 || 从用户感知中移除或替换声音 || 将用户的语音替换为脚本版本 |
-| 同步 || 在虚拟与现实世界之间创建瞬时同步点以增强意义 || 当墙上时钟敲响 12 时，街道声音转为自然声 |
-| 声学转换 || 将真实空间转换为虚拟空间 || 画廊空间听起来像花园 (`The Reign Union`) |
-
-叙事性空间定位音频自然聚焦于有意义的地点、场所以及用户与它们的关系，使用户成为主动探索者，通过移动来实现。通常，音频内容在用户进入‘地理围栏’触发区域时开始或淡入，在离开时淡出。然而，用户的位置可以映射到任何参数，如音频滤波、音量，甚至合成器的‘旋钮’。
-
-触发区域可在编辑过程中在地图或平面图上定义。触发区也可以是相对的，即与环境中的参考点或物体关联。除了完整的位置跟踪外，临近传感器是实现该功能的一种方式，而基于上下文感知的系统则通过计算机视觉实现：它们识别周围的视觉特征（如博物馆展品），并在用户距离预定距离时触发音频（例如 `Vienna Augarten`）。
-
-### 9.2 附着
-
-与依赖无实体声音的空间定位音频不同，虚拟声音可以与现实物体在空间上对齐，营造出声音直接从物体发出的错觉。此方法在此被称为 `attachment`。利用此技术，桌上的照片可以‘说话’，而邻居派对的模糊声音可以被听作虚拟声音从墙体发出。
-
-在信息性应用中，附着的声音可以引导用户注意特定物体：导航应用中的途径点可以通过声音提示其位置（如 Albrecht、Väänänen 和 Lokki, 2016），而在战斗机头盔中， incoming missile 可被听作虚拟声音，其来源对应真实位置，从而提升情境感知（参见第 5.5 节）。
-
-在叙事语境中，attachment 可用于制造无生命物体栩栩如生的幻觉：在 `The Sound of Things` 中，桌面上的物品发出声音，仿佛拥有生命。相反，附着的声音本身也变得具体化，融入环境。这使得听觉体验比通过传统非空间化方式听取同一音频更为‘直接’、‘熟悉’且‘易及’（Cliffe, 2024）。
-
-一般性环境音和声景有助于用户沉浸于当前叙事，而单个物体的附着声音则可能激发互动、更深入的参与，最终通过它们获取知识（Wakkary et al., 2004）。但需注意，环境音也可以通过附着声音创建，尽管此类声音的功能通常是保持在次要位置。
-
-#### 9.2.1 显露与阻挡
-
-如果实体物体在我们的感知范围内且可被感知，则可视为 `exposed`（显露）物体。称其为 exposed 而非 ‘visible’ 是为了涵盖视觉感知不可用的情形，例如因障碍、黑暗或感官障碍导致视觉受限。
-
-虚拟声音也可以附着于 `obstructed`（被阻挡）或隐藏的物体，例如被墙体遮挡、距离遥远或被雾气模糊遮蔽。与光线不同，声波能穿透许多障碍并绕过拐角，因此即使未直接感知其源头，仍可能听到声音。
-
-显露与阻挡的概念并非绝对二元，因为可能出现物体虽被视觉遮挡但可通过其他感官（如气味）感知的情况。在本书范围内，这些可视为无需立即重新调整术语的特例。但正如本书及 AAR 许多方面所指出，始终有机会让社区完善和适应概念与术语，以更好地捕捉多样现象。
-
-显露物体不一定需要视觉可感知，虽然通常如此。距离、雾气、缺乏光线以及个体生理因素可能阻止视觉，但这并不妨碍将虚拟声音附加到肉眼不可见但可通过其他感官感知的真实物体上。虽然此类用例较少，仍可想象为香水云层或墙体因供暖管道产生的热点附加声音。在 `Séance` 中，虚拟音频对象附着于其他参与者、容器的墙壁以及用户触摸的桌子等，这些在灯光熄灭前显然可被感知，且在黑暗中也能被察觉。
-
-#### 9.2.2 技术要求
-
-Attachment 要求系统能够渲染声音，使其看起来像是从真实位置（或至少其真实方向）发出。实际操作中，最简单的实现方式是使用直接增强：在物体内部或背后隐藏扬声器。然而，利用双耳听声（binaural）和其他技术则需要更高级的系统。双耳听声系统的要求较高，因为若用户难以判断声音来源方向，附着幻觉会迅速失效。正如前文所述，心理声学、视觉和叙事线索有助于声音定位，从而支持 attachment，但并非对所有用户都同样有效。最坏情况下，外部化差或头部朝向跟踪漂移会导致吸引性声音和警报空间化错误，误导用户。
-
-关于姿态跟踪，某些情况下要求较低。如果虚拟声音在空间上相对均匀包围用户（如森林声），则头部朝向跟踪可能并非关键。这种有限跟踪方法在大多数地理定位音频步行应用中被广泛使用。相反，对于距离遥远的声音，用户位置的精确性影响不大。无论是从 95 米还是 105 米听到公鸡鸣，或是向左右移动几米（前提是中间无遮挡），声音的感知基本保持一致。
-
-
-
-
--   除直接增强和双耳系统外，附着也可以通过技术手段实现，至少需要方向扬声器和波场合成（WFS）。然而，正如第 2.10 节所讨论的，WFS 的挑战在于需要多个扬声器，这些扬声器可能难以隐藏或在叙事上难以合理解释。
-
-在音频制作和渲染流程中，附着并不专属于对象式音频（OBA）；类似的效果也可以通过场景式音频管道实现，例如多点 HOA（高阶听觉），甚至可以通过使用假人头的头戴式双耳录音（如在 *Séance* 中）来实现。不过，在这些情况下，更合适的术语可能是“空间对齐”，因为不存在可以“附着”或赋予位置坐标的独立声音对象。
-
-### 9.2.3 在手可及与遥不可及之间
-
-无论被增强的对象是 *within-reach* 还是 *out-of-reach*，都会产生一些实际影响。当对象在手可及范围内，即位于“播放区”内时，用户可以靠近它并可能绕行于其周围。这对虚拟音频渲染提出了很高的要求；例如，使用双耳系统时，需要准确且低延迟的 6DoF（六自由度）追踪。远处的声音、窗户后的声音、邻室漏出的声音以及整体环境音都是 out-of-reach——用户无法到达这些声音。这些声音的实现相对容易，因为空间精度不那么关键。与其使用对象式音频，头部中心化的全向音（Ambisonics）能够提供许多 out-of-reach 声音的效果。
-
-### 9.2.4 跨模态支持
-
-如果在正确对齐虚拟声音与真实世界物体时遇到技术困难，诸如通俗化效果（ventriloquism effect）或视觉提示等手段可能会有所帮助，如前文所述。其他感官也可能派上用场；例如，如果用户能够触摸到物体，但听到的虚拟声音方向错误，本体感（proprioception） —  — 对位置的感觉 —  — 可以纠正定位感知（参见 Pick, Warren 和 Hay, [1969）。此外，物体与声音之间的情境一致性至少能帮助用户判断误对齐的声音属于哪个物体（Yang et al., 2020）。
-
-尽管如此，根据实际经验，如果 binaural 系统中的头部追踪不稳定，且虚拟声音源不断 erratic 地移动，前述线索不足以稳定声音图像。快速的解决办法是对追踪数据进行平滑处理，而不是让其不断变动，即使这会牺牲一些响应速度。
-
-### 9.2.5 术语
-
-虽然“attachment”和“attached sound”这两个术语直观且使用广泛，但它们并不标准化。描述相同概念的其他术语包括 *spatially registered*（Kaghat and Cubaud, 2010; Tsepapadakis and Gavalas, 2023），*localized*（Härmä et al., 2004; Brandenburg and Sloma, 2024），*anchored*（Väänänen-Vainio-Mattila et al., 2013），以及 *spatially aligned*。每个术语含义略有不同，并在合适的情境下提供更精准的描述。
-
-### 9.3 对象一致性
-
-在本书开头（第 2.6 章）简要讨论了可信度、逼真度和一致性的概念。有意调整虚拟声音与其现实对应物之间的一致性，可作为 AAR（增强现实音频）中的叙事手法。为区分这种匹配与其他类型的匹配（如视听一致或房间一致），此处将其称为 *object congruence*。Object congruence 仅指对象与其声音之间的情境对齐，而不涉及虚拟声音的声学属性。
-
-Object congruence 可用于补充和强化对象，但当匹配具体且直白时，也可能导致音调贴合和强调（tone painting and underscoring）（Naphtali and Rodkin, 2019），从而产生平淡无趣的效果（Stevens, 2009; Fry, 2019）。
-
-人们对“一致”的感知因人而异，也因体验而异。文化背景、学习关联以及情境都会影响这种感知（Stevens, 2009）。因此，在声音设计中，音频应顺应听者的心理模型和期待，而不是真实世界中实际的声音（Lyons, Gandy and Starner, 2000; Chion, 2019）。 genre 或情境在此起重要作用。例如，狗在现实中通常不说话，但在卡通或马戏团中它们会。
-
-Object congruence 需要添加或替换对象所 *可能* 或 *正在* 产生声音的声响。可信的声源包括扬声器、运行的机器、其他人、视频投影以及只能通过声音感知的被遮挡物体。博物馆中常见的文物过去曾发出声音，但如今已不再如此，例如历史收音机。恢复这类 *被静音* 的物体的声音（Cliffe, 2022）可以实现 object congruence，前提是声音让该物体看起来像是正在发出该声音。
-
-然而，为了使声音与收音机完全一致，设备必须开机，且频率旋钮应调至正确的电台频率。一致性始终高度依赖于情境。例如，当一台 1930 年代的老收音机开机时，在大多数地方你可能只会听到噪音，因为长波和中波电台已很少。但在历史叙事语境下，听到虚拟广播是合理的。正如任何叙事媒介一样，听者会根据情境调整自己并参与其中，除非他们极度怀疑或体验本身设计和实现不佳。
-
-虚拟声音可能是原始录音，例如老收音机节目的记录，也可能是近似再现，如重新表演的版本。亦或是完全虚构的声音，只要它看起来像是该物体可能产生的声音。例如，在一次“旧”收音机采访中，嘉宾预测未来，这与当下事件巧妙地契合。利用 object congruence 创造这种听觉幻觉是 AAR 的核心艺术手段之一（参见 Cliffe, 2022）。换言之，声音改变了我们对物体的感知，通过其制造的对比增添了价值（Chion, 1994）。
-
-![Figure 9.1An old radio receiver in The Reign Union with power switched on and augmented with virtual radio broadcast ¶ Source: Photograph by the author](img/fig9_1.jpg)
-
-Figure 9.1An old radio receiver in *The Reign Union* with power switched on and augmented with virtual radio broadcast ¶ Source: Photograph by the author
-
-
-
-假设你是一个高级文档工程师和翻译员，请参考下面的注意事项了解 Markdown 文档的格式，然后参考示例，将给定英文文本翻译成中文。
-
-## 注意事项
-
--   粗体（**bold**）和斜体（*itatic*）需要翻译翻译内容并保留符号。
--   内联代码（`code`）和代码块不需要翻译。
--   链接（[link](https://example.org)）需要翻译其内容，但保留网址。
--   列表，表格，引用块保留格式，翻译内容
--   原文可能有多行，不要漏掉任何一行，并且注意一定不要重复输出原文！！！
--   输出应包含在“[content]...[/content]”中
-
-## 示例
-
-原文：
-
-[content]
--   [Feynman's learning method](https://wiki.example.org/feynmans_learning_method) is inspired by **Richard Feynman**, the Nobel Prize winner in physics. 
-
-1.  With Feynman's skills, you can understand the knowledge points in depth in just `20 min`, and it is memorable and *hard to forget*. 
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-译文：
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-## 以下是需要翻译的文本
-
-[content]
-
-The congruence illusion also works when applied to people in motion. In *The Reign Union*, the other virtual main character, Mauno, starts to hallucinate and hear whispers of spies everywhere. The user gets to hear the whispers together with him. Now, if another participant enters the same room, a whisper is attached to them and played whenever their head is turned away from the user or is positioned behind the user, ensuring their mouth remains unseen. This avoids any incongruences with asynchrony of lip movements. If the narrative allowed, whistling would create perhaps an even better congruence, since it is more agnostic to the unique timbre of the person’s voice.
-
-With obstructed objects, congruence is easy to realise: muffled sounds through walls and doors often appear as surprisingly real. The likely reason is that the sound level is often low, rendering the sounds peripheral and subject to less critical scrutiny. Also, the spatial positioning of such sounds is always somewhat blurry, which forgives any tracking and registration errors in the virtual audio system.
-
-## 9.4 Partial congruence
 
 *Partial object congruence*, or *partial congruence* for short, is perhaps the most typical congruence level in narrative AAR applications. At the same time, it is a somewhat vague concept between congruence and incongruence. When partial congruence is applied, some characteristics of the virtual sound align with the object or real environment, while others do not. In such cases, the context and the user’s willing suspension of disbelief are crucial factors in determining whether the juxtaposition is considered plausible.
 
@@ -1396,9 +1203,9 @@ Examples of partial congruence in AAR include historical street sounds heard thr
 
 Virtual sound can, of course, be attached on a completely *silent* object that has never been able to produce any sound (Cliffe, 2022). For this to work, however, clear narrative congruence is essential. With such, a photograph can easily talk (*The Reign Union*) and an empty wine glass echo the sounds of last night’s party (*The Sound of Things*). The result can be symbolic, poetic, and unrealistic, but still plausible if the spatial rendering and internal narrative logic are solid. Since congruence is a continuum, these examples could well be labeled as *incongruence*, too, discussed in the next section.
 
-![Figure 9.2Wine glass and other objects emanating sounds in The Sound of Things ¶ Source: Photograph by Holger Förterer](img/fig9_2.jpg)
+![Figure 9.2 Wine glass and other objects emanating sounds in The Sound of Things ¶ Source: Photograph by Holger Förterer](img/fig9_2.jpg)
 
-Figure 9.2Wine glass and other objects emanating sounds in *The Sound of Things* ¶ Source: Photograph by Holger Förterer
+Figure 9.2 Wine glass and other objects emanating sounds in *The Sound of Things* ¶ Source: Photograph by Holger Förterer
 
 In *Nature Soundscapes* (Lawton, Cunningham and Convery, 2020), animal sounds were played back in a forest in central England. In the first scene, the sounds were local and matched the environment. The next scene introduced animals completely out of context, such as bears and monkeys. Finally, human-made sounds were layered over the scene to reflect environmental degradation. While the study’s primary focus lay elsewhere, these sounds illustrated varying levels of congruence, with the alien animals representing the furthest deviation from full congruence, while native animals and human-made sounds remained relatively plausible.
 
@@ -1418,20 +1225,17 @@ Acousmatic transformations and translocations—when you stand in a gallery spac
 
 *Addition* is an advanced variation of using congruent sounds to fuse a new meaning with *added value*. While in the previous examples, the object may have been silent, in this technique, the real object natively produces sound. A virtual sound is then added on top of it, aiming at the best possible congruence possible. The result should alter the perception of the object, reshaping its narrative, much like in *Nature Soundscapes*, where animal sounds were overlaid onto the forest soundscape, transforming the experience.
 
+- 加法需要一个声学透明的系统，以便用户能够听到物体的原始声音。在声学隔离的系统中，物体的声音应被再现，从而丢失了核心思想。
 
+1. 当物体行为可预测或可控制时，加法容易融入故事。对于不可预测且失控的物体，必须考虑其随机性。例如，在纽约华盛顿广场公园的 *Walkie-Talkie Dream Angles* 中，演示的声音被加入到现实生活中经常发生演示的角落（Naphtali 和 Rodkin，2019）。尽管系统使用的是头戴立体声，未能达到完美的同步，但如果在参与者聆听音频漫步时真实的演示正好发生，历史层会与当下事件形成对比，从而可能为当下的政治和事件增添情境。
 
+Table 9.2 Examples of new meanings created through the merging of native and added sounds
 
--   [加法需要一个声学透明的系统，以便用户能够听到物体的原始声音。在声学隔离的系统中，物体的声音应被再现，从而丢失了核心思想。]
-
-1.  当物体行为可预测或可控制时，加法容易融入故事。对于不可预测且失控的物体，必须考虑其随机性。例如，在纽约华盛顿广场公园的 *Walkie-Talkie Dream Angles* 中，演示的声音被加入到现实生活中经常发生演示的角落（Naphtali 和 Rodkin，2019）。尽管系统使用的是头戴立体声，未能达到完美的同步，但如果在参与者聆听音频漫步时真实的演示正好发生，历史层会与当下事件形成对比，从而可能为当下的政治和事件增添情境。
-
-Table 9.2Examples of new meanings created through the merging of native and added sounds
-
-| *Object* || *Native sound* || *Added sound(s)* || *New meaning* |
+| *Object* | *Native sound* | *Added sound(s)* | *New meaning* |
 | --- | --- | --- | --- |
-| Lift || Whir, hum, chime || Creaking cables, grinding noise || Unsafe, outdated, tension, claustrophobia |
-| Wind chimes || Tinkling, chiming || Resonance, harmonic overtones || Mysticism, emotional depth |
-| Closing door || Slam || Scream || Narrative layer |
+| Lift | Whir, hum, chime | Creaking cables, grinding noise | Unsafe, outdated, tension, claustrophobia |
+| Wind chimes | Tinkling, chiming | Resonance, harmonic overtones | Mysticism, emotional depth |
+| Closing door | Slam | Scream | Narrative layer |
 
 然而，这种技术似乎难以实施，因为其使用案例很少，尤其是针对单个物体。这可能是因为产生规律或持续声音的物体在许多展览空间中很少见，或者缺乏叙事吸引力。此外，如前所述，不规则且不可预测的声音本身就很难有效融入。
 
@@ -1440,6 +1244,8 @@ Table 9.2Examples of new meanings created through the merging of native and adde
 *替代匹配* 是指在真实世界中为一个物体添加多种完全符合该物体但传达完全不同含义的备选声音。这种方式可以让不同用户获得故事的不同版本，例如从不同角色的视角呈现事件。例如，当房间开始弥漫难闻气味时，一个用户听到车辆引擎怠速的声音，暗示气味来自排气管；另一个用户则听到嘶嘶声，暗示燃气管道泄漏。用户的反应会因所听到的声音和其含义而显著不同。
 
 这些替代匹配类似于克里斯·马尔克（Chris Marker）1957 年电影《来自西伯利亚的信》中的经典例子，该电影通过不同的旁白为苏联雅库茨克的纪实画面赋予完全不同的含义。同样，在 AAR 体验中，单个参与者也可以从多个叙事视角听到同一事件。系统可以根据用户的行为模式选择视角，也可以通过在空间中移动或绕行物体来改变视角，仿佛视角本身在变化。例如，Cliffe 等人（2021）的研究中，一个实体收音机同时发出四条独立的虚拟广播，每条广播可从收音机的不同侧面听到。这种具身交互鼓励参与者探索和发现意外。
+
+
 
 替代匹配与*非对称信息*（asymmetric information）概念相关，该概念曾在《请确认您不是机器人》（*Please Confirm You Are Not a Robot*）中研究。在那里，参与者听到故事的不同部分，因而相互交流各自所听到的内容，促使小组协作和发现（Nagele 等人，2021）。
 
@@ -1461,10 +1267,7 @@ Table 9.2Examples of new meanings created through the merging of native and adde
 
 在 *revelation*（启示）中，被遮蔽的声音来源被揭示。这是一种古老的声音设计技术，在戏剧、歌剧和电影中常用：当角色首先通过场外或屏幕外的声音被介绍，随后才显现时，这种技术同样在 AAR 中可能极具成效。它与肖恩（1994）的 *deacousmatisation*（去拟声化）概念相关，该过程将某种神秘且面无表情的场外声音具体化，使其身份得以显现。
 
-
-
-
--   概念在参与者被提供惊喜、启示、玩笑或反面时效果最佳。这在 `Barque Sigyn` 上发生，当下一间房中猫叫声和掉落物体的声音被揭示时。另一个例子来自 `The Reign Union`，参与者在另一间房中听到两个虚拟角色的声音，这些角色被视作“受阻”物体，参与者未能看到它们。虽然 Sylvia 在故事中大部分时间保持隐形，但 Mauno 被揭示：他邀请参与者进入后室，参与者跟随他的声音后，他的声音来源最终被揭示为一张挂在相框里的照片。Mauno 此前看起来神秘且有些有力量，如今真正被去神秘化，被囚禁在相框内。
+- 概念在参与者被提供惊喜、启示、玩笑或反面时效果最佳。这在 `Barque Sigyn` 上发生，当下一间房中猫叫声和掉落物体的声音被揭示时。另一个例子来自 `The Reign Union`，参与者在另一间房中听到两个虚拟角色的声音，这些角色被视作“受阻”物体，参与者未能看到它们。虽然 Sylvia 在故事中大部分时间保持隐形，但 Mauno 被揭示：他邀请参与者进入后室，参与者跟随他的声音后，他的声音来源最终被揭示为一张挂在相框里的照片。Mauno 此前看起来神秘且有些有力量，如今真正被去神秘化，被囚禁在相框内。
 
 ### 9.10 使用隐形声音
 
@@ -1475,7 +1278,6 @@ Table 9.2Examples of new meanings created through the merging of native and adde
 有人可能认为，隐形声音让我们远离音频增强现实（AR），转而进入音频虚拟现实（VR）。虽然概念上在某些情况下可能成立，但隐形声音至少有两个原因仍可紧密置于 AAR 范围内：
 
 1. 尽管隐形声音缺乏物理外观，它仍可与真实环境共存。例如，在真实 3D 空间的特定位置放置的虚拟听觉贴纸（Lokki et al., 2004），或在用户所在房间中漂浮的鬼魂，这两者都在真实环境中有空间锚定。
-
 2. 由于技术限制，许多 AAR 系统无法实现准确的虚拟声音空间化（如果有的话），因此隐形声音可能是增强环境的唯一方式。虽然它们不附着于任何物理物体，但如果配合强烈的叙事，它们仍可显得沉浸感十足。
 
 #### 9.10.1 可信性
@@ -1497,9 +1299,6 @@ Table 9.2Examples of new meanings created through the merging of native and adde
 #### 9.10.3 参考点
 
 创建看似源自环境中明确可感知点的隐形虚拟声音并非易事，尤其是在 6DoF 应用中。对于双耳听声系统，需要高质量的追踪和虚拟音频引擎。波场合成（WFS）能够创建精准定位的‘全息’声音，实验也使用两个方向性扬声器利用空气非线性（Zhou et al., 2024）进行测试。当这种幻觉被创造出来，它同时让人感到神奇和真实。不过，隐形声音在空间准确性上可能比绑定于物体的声音更宽容——毕竟，它们本质上是‘幽灵’，可以在空间中轻微漂浮。
-
-
-
 
 进入`/path.to/xxx`目录，找到`xxx.json`。
 
@@ -1535,82 +1334,81 @@ Detachment is similar to Chion’s (2019) concept of *acousmatization*: ‘with 
 
 The key technique to directing the user’s attention across the space is to use *attractor sounds* as explored in *LISTEN* (Zimmermann and Lorenz, 2008). An attractor sound would be a virtual sound emitting from an object or place, distinguishable from the other sounds and intriguing enough to make the participant take an action to find out what the sound will reveal. Attractor sounds can also be triggered adaptively and personalised to each user as demonstrated in *LISTEN*. Due to the physical attributes of sound, it would be entirely plausible to hear attraction sounds from obstructed objects, other rooms, or behind obstacles, encouraging exploration beyond the immediate environment.
 
-When using an attractor sound, two trigger zones can be created around the source object, sometimes called *proximity zone* and *activation zone* (Vazquez-Alvarez et al., 2016). Proximity zone is larger, activation zone smaller. When the participant enters the proximity zone, or is already inside it, the attractor sound is played—for example, a telephone ringing behind a door. If the participant keeps stationed for a set period of time or moves out of the zone, the sound may stop to allow further exploration or alternative progression of the narrative. However, if the participant decides to move closer to the sound, the activation zone gets triggered, and the actual content starts to play. The transition must, of course, be smooth and natural—unless the attractor sound can continue playing in the background with the content mixed on top of it. Behind the door, we may hear footsteps approach, someone pick up the telephone, and a conversation start.
+
+
+When using an attractor sound, two trigger zones can be created around the source object, sometimes called `proximity zone` and `activation zone` (Vazquez-Alvarez et al., 2016). Proximity zone is larger, activation zone smaller. When the participant enters the proximity zone, or is already inside it, the attractor sound is played—for example, a telephone ringing behind a door. If the participant keeps stationed for a set period of time or moves out of the zone, the sound may stop to allow further exploration or alternative progression of the narrative. However, if the participant decides to move closer to the sound, the activation zone gets triggered, and the actual content starts to play. The transition must, of course, be smooth and natural—unless the attractor sound can continue playing in the background with the content mixed on top of it. Behind the door, we may hear footsteps approach, someone pick up the telephone, and a conversation start.
 
 Instead of using map-based trigger zones, sounds can be controlled based on the user’s distance to the object. This approach is an obvious choice when only proximity tracking is available but can also work effectively with absolute tracking systems. For instance, distance-based triggering is a built-in feature in most audio middleware.
 
 Attractor sounds are useful in exploration-based scenes where the participant can hear sounds from around the surroundings—invitations to narratives—and decide which one to choose. However, in practice, such a scene may be challenging to balance and programme for at least two reasons:
 
-1.  The attractor sounds should be audible far enough for the participant to hear at least two of them simultaneously. If only one is heard, the user will likely go directly to that source, skipping the exploration phase. However, if multiple sounds are audible, there is a risk of cacophony, so attenuation curves must be adjusted carefully and the sounds selected and mixed with care.
+1. The attractor sounds should be audible far enough for the participant to hear at least two of them simultaneously. If only one is heard, the user will likely go directly to that source, skipping the exploration phase. However, if multiple sounds are audible, there is a risk of cacophony, so attenuation curves must be adjusted carefully and the sounds selected and mixed with care.
 
-2.  The logic of handling the different attractor sounds and the narrative content found from their sources may get complicated. For instance, what if the user selects one attractor and starts to listen to the content, but has second thoughts and walks away? Should the narrative continue and be audible to the user, fade out and pause—or fade out, stop and rewind? Meanwhile, what happened to the other attractor sounds; did they disappear, or are they still active? Furthermore, if the scene has a time limit after which the next one begins, users who explore multiple sounds may not have enough time to finish listening to their chosen story. These are, of course, common challenges in developing interactive experiences and these are not unique to AAR.
+2. The logic of handling the different attractor sounds and the narrative content found from their sources may get complicated. For instance, what if the user selects one attractor and starts to listen to the content, but has second thoughts and walks away? Should the narrative continue and be audible to the user, fade out and pause—or fade out, stop and rewind? Meanwhile, what happened to the other attractor sounds; did they disappear, or are they still active? Furthermore, if the scene has a time limit after which the next one begins, users who explore multiple sounds may not have enough time to finish listening to their chosen story. These are, of course, common challenges in developing interactive experiences and these are not unique to AAR.
 
 ### 9.13 Spatial scale and offset
 
+- [调整衰减曲线](https://example.org)是声音设计中常用的技术，通常用于定义声音可以被听见的距离。这在某种程度上将个体听觉空间的规模从“自然”状态转变为人工状态。此外，还有其他一些方法可以调整听觉视角和尺度，并可能带来叙事效益。
 
-
--   [调整衰减曲线](https://example.org)是声音设计中常用的技术，通常用于定义声音可以被听见的距离。这在某种程度上将个体听觉空间的规模从“自然”状态转变为人工状态。此外，还有其他一些方法可以调整听觉视角和尺度，并可能带来叙事效益。
-
-### 9.13.1 受控衰减曲线
+#### 9.13.1 受控衰减曲线
 
 衰减曲线可以进行调整，例如防止同时发出的声音重叠，确保某些声音只能在更近的距离内被听见，或让某些声音无论用户与它们的距离如何变化都保持不变。尽管受控衰减曲线使得虚拟声音违背物理规律，但结果可能提供一个更连贯且受控的声景，在其语境下对听众来说可能显得自然且可信（Cliffe，2022）。
 
-曲线也可用于更具创意的目的。例如，“缩放”到远处声音源的概念就是一个典型例子。在 *Hyperkuulo* 中，参与者在某个时刻可以听到遥远公共桑拿的声音，仿佛它们离得更近。虽然这种效果可以通过多种技术实现，但彻底调整衰减曲线提供了一种简单且有效的解决方案。
+曲线也可用于更具创意的目的。例如，“缩放”到远处声音源的概念就是一个典型例子。在 `Hyperkuulo` 中，参与者在某个时刻可以听到遥远公共桑拿的声音，仿佛它们离得更近。虽然这种效果可以通过多种技术实现，但彻底调整衰减曲线提供了一种简单且有效的解决方案。
 
-Martínez-Cabrejas 等人 (2024) 提出一种 *方向衰减模型*，即只有用户正面朝向的声音会被听见，周围的声音则被衰减。该概念并非新颖，虽然它可以帮助用户专注于感兴趣的对象，但在实现时应格外谨慎：Armbruster (2024) 指出，在展览中，人们会不断转动头部和身体——可能在寻找朋友并请求倾听——过滤掉这些用户运动需要复杂的算法。
+Martínez-Cabrejas 等人 (2024) 提出一种 `方向衰减模型`，即只有用户正面朝向的声音会被听见，周围的声音则被衰减。该概念并非新颖，虽然它可以帮助用户专注于感兴趣的对象，但在实现时应格外谨慎：Armbruster (2024) 指出，在展览中，人们会不断转动头部和身体——可能在寻找朋友并请求倾听——过滤掉这些用户运动需要复杂的算法。
 
-### 9.13.2 缩放空间响应
+#### 9.13.2 缩放空间响应
 
-在常规的 3DoF、6DoF 以及俯仰-偏航系统中，将头向右转 90 度会导致虚拟声景向左转 90 度，从而保持声音与现实世界对齐。然而，对于某些声音，降低空间响应可能是合理的：在 90 度的头部转动时，声音仅向右平移约 45 度（参见 Figure 9.4）。*Vienna Augarten* 体验中，靠近瓷器展品时触发声音描述，利用了这种 *缩放空间响应* 技术：叙述者的声音既不完全空间化到展品上，也不完全固定于头部，而是适度倾向于目标物体。这既保持了认知焦点在描述上，又保留了叙事与展品之间的空间关联。该技术同样可用于其他非 diegetic 声音，例如音乐。
+在常规的 3DoF、6DoF 以及俯仰-偏航系统中，将头向右转 90 度会导致虚拟声景向左转 90 度，从而保持声音与现实世界对齐。然而，对于某些声音，降低空间响应可能是合理的：在 90 度的头部转动时，声音仅向右平移约 45 度（参见 Figure 9.4）。`Vienna Augarten` 体验中，靠近瓷器展品时触发声音描述，利用了这种 `缩放空间响应` 技术：叙述者的声音既不完全空间化到展品上，也不完全固定于头部，而是适度倾向于目标物体。这既保持了认知焦点在描述上，又保留了叙事与展品之间的空间关联。该技术同样可用于其他非 diegetic 声音，例如音乐。
 
 ![Figure 9.4Scaled spatial response](img/fig9_4.jpg)
 
 Figure 9.4 缩放空间响应
 
-### 9.13.3 3DoF 声音
+#### 9.13.3 3DoF 声音
 
-环境中的声音通常是 *allocentric*，即相对于环境的；而头部锁定的声音则是 *egocentric*，随听者的移动和头部朝向变化（Tsingos，2018）。但有时，让声音随用户移动同时保持头部追踪是有益的，从而利用三度自由度（3DoF）。Ambisonic 环境音有时采用这种 3DoF 附着方式，也可以将其应用于基于对象的音频源，例如通过在用户周围创建一个虚拟扬声器穹顶。该方法适用于移动自由度较大的移动应用及其他应用，且在叙事和声音设计上也有需求，例如在记忆场景中，真实环境被语境性地“淡化”到背景中。
+环境中的声音通常是 `allocentric`，即相对于环境的；而头部锁定的声音则是 `egocentric`，随听者的移动和头部朝向变化（Tsingos，2018）。但有时，让声音随用户移动同时保持头部追踪是有益的，从而利用三度自由度（3DoF）。Ambisonic 环境音有时采用这种 3DoF 附着方式，也可以将其应用于基于对象的音频源，例如通过在用户周围创建一个虚拟扬声器穹顶。该方法适用于移动自由度较大的移动应用及其他应用，且在叙事和声音设计上也有需求，例如在记忆场景中，真实环境被语境性地“淡化”到背景中。
 
-### 9.13.4 空间偏移
+#### 9.13.4 空间偏移
 
-虚拟声音的空间坐标也可以相对于除真实环境或用户之外的其他实体进行定义。在现实生活中，飞机在天空中的声音常常滞后于其视觉位置，这是由于声音速度慢于光速造成的，从而产生空间偏移的错觉。相反，靠近的火车声可能听起来像是从轨道前方发出，伴随类似激光枪的效果。此类在 AAR 中使用的效果可以在叙事上暗示我们从不同的听觉视角感知世界——要么是从自身视角但带有偏移，要么是完全相对于另一参考系的视角。例如，在英国国家剧院的戏剧 *Anna* 中，佩戴耳机的观众通过放置在主角耳中的双耳麦捕捉的双声道音频，体验到舞台事件。虽然观众视觉上仍坐在座位上观看，但他们听到的听觉世界仿佛附着在演员的头上。类似的空间偏移也可出现在双声道音频步道中，如果参与者偏离预定节奏或路径。
+虚拟声音的空间坐标也可以相对于除真实环境或用户之外的其他实体进行定义。在现实生活中，飞机在天空中的声音常常滞后于其视觉位置，这是由于声音速度慢于光速造成的，从而产生空间偏移的错觉。相反，靠近的火车声可能听起来像是从轨道前方发出，伴随类似激光枪的效果。此类在 AAR 中使用的效果可以在叙事上暗示我们从不同的听觉视角感知世界——要么是从自身视角但带有偏移，要么是完全相对于另一参考系的视角。例如，在英国国家剧院的戏剧 `Anna` 中，佩戴耳机的观众通过放置在主角耳中的双耳麦捕捉的双声道音频，体验到舞台事件。虽然观众视觉上仍坐在座位上观看，但他们听到的听觉世界仿佛附着在演员的头上。类似的空间偏移也可出现在双声道音频步道中，如果参与者偏离预定节奏或路径。
 
 飞机和火车的例子也可能暗示时间偏移，即听者在其他感官模式中听到的世界事件发生在之前或之后。虽然这些偏移在 AAR 中提供了有趣的可能性，但如果缺乏叙事正当性，它们同样可能被视为错误。
 
 ## 9.14 近场
 
-*近场* 声音指距离听者头部非常近（通常小于一米）但仍然外部化、不在头内播放的声音。对许多用户而言，这些声音会触发一种往往被认为令人愉悦或强烈的身体反应，正如 ASMR 视频的流行所示。人声在近场中可能让人感到极度亲密，或根据情境和声音性质显得具有威胁性。
+`近场` 声音指距离听者头部非常近（通常小于一米）但仍然外部化、不在头内播放的声音。对许多用户而言，这些声音会触发一种往往被认为令人愉悦或强烈的身体反应，正如 ASMR 视频的流行所示。人声在近场中可能让人感到极度亲密，或根据情境和声音性质显得具有威胁性。
 
 在 AAR 中，近场声音可以通过至少双声道系统来实现。将声音放置在用户视野之外——侧面、后方、上方或下方——可以营造出声音真实存在的错觉，即使不需要头部追踪，尤其是当声音像蚊子般持续移动，或像精神低语般随头部移动时。
 
-在 *Séance* 中，近场声音被有力地使用。它们能够将感知从环境转移到“内脏空间”，即我们自身的私密、即时空间（Mann et al., 2023）。这种效果在音频增强现实（AAR）体验中进一步放大：虚拟声音几乎与现实难以区分，我们无法确定耳边的声音是否真实。
+在 `Séance` 中，近场声音被有力地使用。它们能够将感知从环境转移到“内脏空间”，即我们自身的私密、即时空间（Mann et al., 2023）。这种效果在音频增强现实（AAR）体验中进一步放大：虚拟声音几乎与现实难以区分，我们无法确定耳边的声音是否真实。
 
 ## 9.15 移除与替换
 
-虽然对于 AAR 创作者而言，选择性移除声音的工具尚未完全成熟，但这将 undoubtedly 带来有趣的叙事可能性。正如前文讨论，声学干扰或令人不安的声音是挑战，可以通过自适应且选择性的降噪技术消除。此类技术有时被称为 *diminished audio*（Dam et al., 2024），并可能在更具创意的应用中发挥作用。
+虽然对于 AAR 创作者而言，选择性移除声音的工具尚未完全成熟，但这将 undoubtedly 带来有趣的叙事可能性。正如前文讨论，声学干扰或令人不安的声音是挑战，可以通过自适应且选择性的降噪技术消除。此类技术有时被称为 `diminished audio`（Dam et al., 2024），并可能在更具创意的应用中发挥作用。
 
 有意省略某物体的声音可以通过突出其沉默来成为叙事或情感手段。例如，音乐盒在听者靠近时可能突然变 silenc，象征脆弱或孤独。
 
+- 前文讨论的消除扩展技术也可以在只移除选定的声音时受益，此外，人声可以被擦除并用脚本化的虚拟语音取代。这既打开了创造性的可能性，也带来了令人不寒而栗的数字欺骗前景，这已经在深度伪造视频（Arena et al., [2022; Turner, 2022）中出现过。
 
+1. 由于 AAR 融合了虚拟与真实，两者之间的同步至关重要。每一次交互在某种意义上都是同步的实例。然而，这里指的是虚拟与物理世界在特别有意义的时刻短暂交汇的情形。叙事上有许多有趣的同步方式，这里简要讨论两种。
 
+第一种方法紧密关联于 Chion’s (1994) 的 `synchresis` 概念，即声音与画面同时出现时会产生一种心理图像，通常在极短的时刻内发生。在 AAR 中，可以通过让真实世界控制虚拟音频事件，精准地将一个虚拟声音与单个瞬时的真实事件同步，从而实现两者的语境融合。例如，当墙面时钟敲响 12 点时，通过窗户听到的喧闹街道声 suddenly 会转变为宁静的自然声，象征一种释放或自由的时刻。
 
--   前文讨论的消除扩展技术也可以在只移除选定的声音时受益，此外，人声可以被擦除并用脚本化的虚拟语音取代。这既打开了创造性的可能性，也带来了令人不寒而栗的数字欺骗前景，这已经在深度伪造视频（Arena et al., [2022; Turner, 2022）中出现过。
+当真实事件不可预测且由真实物体（如他人、动物、自然等）引起时，同步会更有效。但实现这种同步的设计难度较大，需要先进的感官系统。
 
-1.  由于 AAR 融合了虚拟与真实，两者之间的同步至关重要。每一次交互在某种意义上都是同步的实例。然而，这里指的是虚拟与物理世界在特别有意义的时刻短暂交汇的情形。叙事上有许多有趣的同步方式，这里简要讨论两种。
-
-    第一种方法紧密关联于 Chion’s (1994) 的 *synchresis* 概念，即声音与画面同时出现时会产生一种心理图像，通常在极短的时刻内发生。在 AAR 中，可以通过让真实世界控制虚拟音频事件，精准地将一个虚拟声音与单个瞬时的真实事件同步，从而实现两者的语境融合。例如，当墙面时钟敲响 12 点时，通过窗户听到的喧闹街道声 suddenly 会转变为宁静的自然声，象征一种释放或自由的时刻。
-
-    当真实事件不可预测且由真实物体（如他人、动物、自然等）引起时，同步会更有效。但实现这种同步的设计难度较大，需要先进的感官系统。
-
-    另一种做法是引导用户与虚拟音频同步。Rotozaza 的 *Etiquette* 是一部在真实咖啡馆举办的参与式戏剧，两位参与者佩戴耳机并接收行动指令。在某个时刻，其中一位参与者被提示在提示语 “One, two, three, now” 时将手指放在桌面上，此时手指触碰桌面，钢琴和弦响起（Rotozaza, 2015）。虽然该效果的成功依赖于参与者的配合，但它体现了与听觉主体同步行动的概念，正如 Janet Cardiff 的音频漫步以及 *Alcatraz Cellhouse Tour* 所示，形成了虚拟与物理世界之间的直接、具体的联系。
+另一种做法是引导用户与虚拟音频同步。Rotozaza 的 `Etiquette` 是一部在真实咖啡馆举办的参与式戏剧，两位参与者佩戴耳机并接收行动指令。在某个时刻，其中一位参与者被提示在提示语 “One, two, three, now” 时将手指放在桌面上，此时手指触碰桌面，钢琴和弦响起（Rotozaza, 2015）。虽然该效果的成功依赖于参与者的配合，但它体现了与听觉主体同步行动的概念，正如 Janet Cardiff 的音频漫步以及 `Alcatraz Cellhouse Tour` 所示，形成了虚拟与物理世界之间的直接、具体的联系。
 
 ## 9.16 Synchronisation
 
 Since AAR merges virtual and real, synchronisation between these two realms is essential. Every interaction in AAR is, in a way, an instance of synchronisation. However, here the concept refers to short, sparse moments where the virtual and physical worlds intersect in a particularly meaningful way. Narratively, there are many interesting approaches to synchronisation, two of which will be briefly discussed here.
 
-The first approach is closely related to Chion’s (1994) concept of *synchresis*, where a mental image is created as sound and visuals occur simultaneously, typically within a brief moment. In AAR, this could be achieved by letting the real world control virtual audio events, precisely synchronising a virtual sound to a single, momentary real-world event in order to create a contextual fusion between the two. For example, when the dials of a wall clock strike 12 o’clock, the bustling street sounds heard through a window could suddenly shift to serene nature sounds, perhaps symbolising a moment of release or freedom.
+The first approach is closely related to Chion’s (1994) concept of `synchresis`, where a mental image is created as sound and visuals occur simultaneously, typically within a brief moment. In AAR, this could be achieved by letting the real world control virtual audio events, precisely synchronising a virtual sound to a single, momentary real-world event in order to create a contextual fusion between the two. For example, when the dials of a wall clock strike 12 o’clock, the bustling street sounds heard through a window could suddenly shift to serene nature sounds, perhaps symbolising a moment of release or freedom.
 
 Synchronisation would potentially be most effective when the real-world event is unpredictable and caused by a real object, such as other people, animals, nature, etc. However, implementing such synchronisation may be difficult to design and would require an advanced sensory system.
+
+
 
 Alternatively, the user can be guided to act in synchronisation with virtual audio. In Rotozaza’s *Etiquette* a participatory theatre performance staged in real cafés, two participants wear headphones and receive instructions on what to do. At one point, one participant is prompted to place their fingers on the table at the cue ‘One, two, three, now’. At ‘now’, as the fingers presumably touch the table, a piano chord plays (Rotozaza, 2015). While the success of this effect relies on the participant’s cooperation, it mirrors the concept of synchronising actions with an auditory protagonist, as demonstrated in Janet Cardiff’s audio walks and the *Alcatraz Cellhouse Tour*, creating a direct and tangible link between the virtual and physical world.
 
@@ -1630,23 +1428,21 @@ Observing the emergence and evolution of a new medium is an exciting process. Wi
 
 ## References
 
-1.  Albrecht, R., Väänänen, R. and Lokki, T. (2016) ‘Guided by Music: Pedestrian and Cyclist Navigation with Route and Beacon Guidance’, Personal and Ubiquitous Computing, 20 (1), pp. 121–145. Available at: [`doi.org/10.1007/s00779-016-0906-z`](https://doi.org/10.1007/s00779-016-0906-z).
+1. Albrecht, R., Väänänen, R. and Lokki, T. (2016) ‘Guided by Music: Pedestrian and Cyclist Navigation with Route and Beacon Guidance’, Personal and Ubiquitous Computing, 20 (1), pp. 121–145. Available at: [`doi.org/10.1007/s00779-016-0906-z`](https://doi.org/10.1007/s00779-016-0906-z).
 
-2.  Arena, F. et al. (2022) ‘An Overview of Augmented Reality’, Computers, 11 (2), p. 28. Available at: [`doi.org/10.3390/computers11020028`](https://doi.org/10.3390/computers11020028).
+2. Arena, F. et al. (2022) ‘An Overview of Augmented Reality’, Computers, 11 (2), p. 28. Available at: [`doi.org/10.3390/computers11020028`](https://doi.org/10.3390/computers11020028).
 
-3.  Armbruster, S. (2024) ‘Conversation with Matias Harju, March 7’.
+3. Armbruster, S. (2024) ‘Conversation with Matias Harju, March 7’.
 
-4.  Brandenburg, K. and Sloma, U. (2024) ‘Conversation with Matias Harju, May 23’.
+4. Brandenburg, K. and Sloma, U. (2024) ‘Conversation with Matias Harju, May 23’.
 
-5.  Chion, M. (1994) Audio-Vision: Sound on Screen. Columbia University Press.
+5. Chion, M. (1994) Audio-Vision: Sound on Screen. Columbia University Press.
 
-6.  Chion, M. (2019) Audio-vision: Sound on Screen, 2nd edn. Columbia University Press.
-
-
+6. Chion, M. (2019) Audio-vision: Sound on Screen, 2nd edn. Columbia University Press.
 
 7. Cliffe, L. (2022) 《Audio Augmented Objects and the Audio Augmented Reality Experience》博士论文。诺丁汉大学。可于 [`https://eprints.nottingham.ac.uk/69795/`](https://eprints.nottingham.ac.uk/69795/) 查阅。
 
-8. Cliffe, L. (2024) “走入当下：在新声学虚拟现实中的探索”。《Le​onardo》[预印本]。可于 [`https://nottingham-repository.worktribe.com/output/42480431/into-the-here-and-now-explorations-within-a-new-acoustic-virtual-reality`](https://nottingham-repository.worktribe.com/output/42480431/into-the-here-and-now-explorations-within-a-new-acoustic-virtual-reality) 查阅（2024 年 12 月 2 日访问）。
+8. Cliffe, L. (2024) “走入当下：在新声学虚拟现实中的探索”。《Leonardo》[预印本]。可于 [`https://nottingham-repository.worktribe.com/output/42480431/into-the-here-and-now-explorations-within-a-new-acoustic-virtual-reality`](https://nottingham-repository.worktribe.com/output/42480431/into-the-here-and-now-explorations-within-a-new-acoustic-virtual-reality) 查阅（2024 年 12 月 2 日访问）。
 
 9. Cliffe, L. 等人 (2021) “将情境具象化：用于真实世界探索的虚拟声景”。Personal and Ubiquitous Computing, 25 (4)，第 623–636 页。可于 [`https://doi.org/10.1007/s00779-020-01405-3`](https://doi.org/10.1007/s00779-020-01405-3) 查阅。
 
@@ -1674,6 +1470,8 @@ Observing the emergence and evolution of a new medium is an exciting process. Wi
 
 21. Martínez-Cabrejas, M. 等人 (2024) “用于增强现实环境的新型以听者为中心的方向衰减声模型”。Multimedia Tools and Applications \[预印本\]。可于 [`https://doi.org/10.1007/s11042-023-17943-w`](https://doi.org/10.1007/s11042-023-17943-w) 查阅。
 
+
+
 22. Nagele, A.N. 等人 (2021) “参与式表演中的交互音频增强现实”。Frontiers in Virtual Reality, 1，第 610320 页。可于 [`https://doi.org/10.3389/frvir.2020.610320`](https://doi.org/10.3389/frvir.2020.610320) 查阅。
 
 23. Naphtali, D. and Rodkin, R. (2019) “用于交互式声步道、声音艺术和音乐传递的音频增强现实”。载《交互媒体声音设计基础》。Routledge。
@@ -1700,8 +1498,6 @@ Observing the emergence and evolution of a new medium is an exciting process. Wi
 
 34. Väänänen-Vainio-Mattila, K. 等人 (2013) “在物理环境中与虚拟物体进行音频触觉交互的用户体验与使用场景”。载《第 6 届设计悦乐产品与界面国际会议论文集》（DPPI ’13），纽约，美国：ACM，第 67–76 页。可于 [`https://doi.org/10.1145/2513506.2513514`](https://doi.org/10.1145/2513506.2513514) 查阅。
 
-
-
 35. Wakkary, R. 等人 (2004) 论文《交互音频内容：通过增强现实音频和自适应信息检索为动态博物馆体验提供音频内容》可于：[`summit.sfu.ca/item/15157`](http://summit.sfu.ca/item/15157) 获取 (访问日期: 2018 年 11 月 5 日)。
 
 36. Yang, Z. 等人 (2020) 论文《Ear-AR: 耳机上的室内声学增强现实》，发表于第 26 届移动计算与网络国际会议论文集。MobiCom ’20，英国伦敦：ACM，页码 1–14。可于：[`doi.org/10.1145/3372224.3419213`](https://doi.org/10.1145/3372224.3419213) 获取。
@@ -1710,7 +1506,7 @@ Observing the emergence and evolution of a new medium is an exciting process. Wi
 
 38. Zimmermann, A. and Lorenz, A. (2008) 论文《LISTEN：用户自适应的音频增强博物馆导览》，发表于《用户建模与自适应交互》，第 18 卷，第 5 期，页码 389–416。可于：[`doi.org/10.1007/s11257-008-9049-x`](https://doi.org/10.1007/s11257-008-9049-x) 获取。
 
-# 10The future of AAR
+# 10 The future of AAR
 
 DOI: [`10.4324/9781003627289-10`](https://doi.org/10.4324/9781003627289-10)
 
@@ -1732,16 +1528,12 @@ AAR 的未来充满希望与不确定性。人们已经习惯在做其他事情�
 
 ## 10.2 Telepresence
 
-故事始于一次音频会议，参与者在空间中被呈现为空间化的听觉全息投影。虽然远程工作的转变近年来已获得动力，但全息通信可能成为一种引人入胜的平行解决方案，它能够在国际团队之间实现自然协作，并减少出行需求。沉浸式音频能够唤起归属感和连接感，使跨越物理距离的自然互动得以实现（Yang, Barde and Billinghurst, 2022），而自然听到他人声音则可能带来更无缝、更轻松的会议体验（Bruhn, Multrus and Varga, 2022）。像 *Meta Horizon Workrooms* 和 *Arthur* 等 VR 会议应用已经实现了声音的空间化。要在 AAR 中实现相同效果，需要去除头像和其他视觉元素，并将声音 aural 化，使其仿佛在与用户同处同一真实房间（参见 Meyer-Kahlen, 2024）。更快的移动数据网络的不断发展，如当前 5G 的后继技术，将缩短延迟并提升音质。当前的一项进展是开发了 IVAS 编码器，用于在会议场景中实现低延迟的空间音频（见第 7.8 章）。
+故事始于一次音频会议，参与者在空间中被呈现为空间化的听觉全息投影。虽然远程工作的转变近年来已获得动力，但全息通信可能成为一种引人入胜的平行解决方案，它能够在国际团队之间实现自然协作，并减少出行需求。沉浸式音频能够唤起归属感和连接感，使跨越物理距离的自然互动得以实现（Yang, Barde and Billinghurst, 2022），而自然听到他人声音则可能带来更无缝、更轻松的会议体验（Bruhn, Multrus and Varga, 2022）。像 `Meta Horizon Workrooms` 和 `Arthur` 等 VR 会议应用已经实现了声音的空间化。要在 AAR 中实现相同效果，需要去除头像和其他视觉元素，并将声音 aural 化，使其仿佛在与用户同处同一真实房间（参见 Meyer-Kahlen, 2024）。更快的移动数据网络的不断发展，如当前 5G 的后继技术，将缩短延迟并提升音质。当前的一项进展是开发了 IVAS 编码器，用于在会议场景中实现低延迟的空间音频（见第 7.8 章）。
 
 除了会议，类似的低延迟和高质量空间音频编码器也能够实现混合音乐表演：管弦乐团或合唱团可以在混合形式下排练和演出，融合现场和远程音乐家。通过 telepresence，远程参与者将在声学上存在并位于物理音乐家之中。在近乎零延迟和高质量空间音频编码的条件下，所有音乐家都能自然地相互响应并做出贡献。
 
-
-
-
--   主角通过眼动结束通话，该眼动由内置麦克风捕捉到的声音检测到。研究人员（Lovich 等，[2023）发现，眼动会向耳朵发送脑电信号，这些信号在耳朵中被转化为微小的声音，而这些声音已被证明能够检测眼动。虽然这可以作为一种无手操作的输入方式，但也有人推测，这种机制可能会影响声音定位以及其他听觉感知，对理解大脑如何整合不同感知模式具有意义。
-
--   随着我们迈向未来愿景，类似的发现预计会层出不穷，推动新技术的出现以及人与设备、人与环境互动的新方式。
+- 主角通过眼动结束通话，该眼动由内置麦克风捕捉到的声音检测到。研究人员（Lovich 等，[2023）发现，眼动会向耳朵发送脑电信号，这些信号在耳朵中被转化为微小的声音，而这些声音已被证明能够检测眼动。虽然这可以作为一种无手操作的输入方式，但也有人推测，这种机制可能会影响声音定位以及其他听觉感知，对理解大脑如何整合不同感知模式具有意义。
+- 随着我们迈向未来愿景，类似的发现预计会层出不穷，推动新技术的出现以及人与设备、人与环境互动的新方式。
 
 ## 10.3 声学空间化
 
@@ -1765,16 +1557,15 @@ AAR 的未来充满希望与不确定性。人们已经习惯在做其他事情�
 
 技术上，一旦声音被移除，就可以用虚拟替代音源进行替代，这与本书前文讨论的其他增强方式并无本质区别。一个可能的应用领域是剧院和电影院，演员的声音可以被翻译成其他语言。听觉助听环回（ hearing‑aid loops）在某种程度上是该概念的前身——它们通过向用户的耳朵传输增强后的音频内容，而个人化的自适应声场（AAR）设备和服务则能将此思想推向更远的程度。
 
-
-
-
--   配音，传统上依赖于演员预先录制的台词。然而，目前已有几款配合智能手机的耳机应用——例如 `Time Kettle W4 Pro` 和 `Pixel Buds Pro`——能够提供近乎实时的翻译。它们会聆听用户选择的语言，进行翻译，并使用语音合成器播放给用户。当这些功能与前文提到的声分离和空间化技术相结合时，翻译后的声音可以在空间上定位，仿佛直接来自说话者的嘴边，正如我们故事中描述的那样。
+- 配音，传统上依赖于演员预先录制的台词。然而，目前已有几款配合智能手机的耳机应用——例如 `Time Kettle W4 Pro` 和 `Pixel Buds Pro`——能够提供近乎实时的翻译。它们会聆听用户选择的语言，进行翻译，并使用语音合成器播放给用户。当这些功能与前文提到的声分离和空间化技术相结合时，翻译后的声音可以在空间上定位，仿佛直接来自说话者的嘴边，正如我们故事中描述的那样。
 
 ## 10.6 导航与情境感知
 
 在导航任务中，音频指引具有显著优势，因为它可以让视觉和其他感官自由观察周围环境，而这类服务很可能会利用空间声来发展。作为我们故事的灵感，阿尔布雷希特、维阿内宁和洛基（[2016）的原型系统通过将路线上的方式点空间化为空间化的音乐，引导用户到达目的地。
 
 与导航类似，情境感知在未来的 AAR（增强现实）应用中也必将成为关键领域之一。航空领域的双耳频率 3D 音频系统在提升反应速度（Kucinski, 2018）等方面具有显著优势，类似的 AAR 系统也可以在驾驶员变道时（Lylykangas, 2023）帮助其在盲区发现其他车辆。针对视力障碍人士的视觉解释和障碍避免系统，预计会发展并整合到智能眼镜或其他头戴式设备中，如 `Envision Glasses`（Envision, 2023）所示。在我们未来的故事中，主角的个人系统检测到后方接近的自行车，并以自行车铃声进行声化处理。这需要使用具备 360 度视野的 LiDAR 或其他传感器，类似于自动驾驶汽车使用的传感器，可能如之前所建议的那样安装在头盔上。
+
+
 
 虽然一些工业环境已采用视觉 AR（以及 MR）进行各类任务，但 AAR 迄今仍 largely 被忽视。然而，嵌入式声化声音在诸多应用中可能发挥潜力，例如在设备维护和诊断系统中（Yang, Barde and Billinghurst, 2022），通过声化报告机器不同部件的状态。空间化声的感官增强也可能在专业领域找到用途。正如普尔基（Ville Pulkki）所设想的，电厂工作人员可以听到可能的辐射泄漏来源，潜水员则可以利用空间听觉（Zaki, 2024），这种能力在水下通常是不可用的。
 
@@ -1788,20 +1579,17 @@ AAR 的未来充满希望与不确定性。人们已经习惯在做其他事情�
 
 ## 10.8 标准与编码
 
-在故事中， protagonists 从博物馆服务器接收交互式音频流。为此，必须建立能够无论设备制造商和型号如何，都向终端用户传输 6DoF 虚拟音频的标准。用户的姿态追踪及其他感官数据则需要向系统回传，并且保持兼容性。
+在故事中，protagonists 从博物馆服务器接收交互式音频流。为此，必须建立能够无论设备制造商和型号如何，都向终端用户传输 6DoF 虚拟音频的标准。用户的姿态追踪及其他感官数据则需要向系统回传，并且保持兼容性。
 
 MPEG‑I 新标准是朝该愿景迈出的一步（见第 7.8 章）。这些标准还应简化设计与制作流程，降低内容创作门槛，并使内容能够在多个平台上使用。这需要软件与硬件制造商同意采用共同标准，这显然是一项艰巨的要求——尤其是当任何一方认为标准质量不足，或倾向于使用自有的专有系统以满足商业需求时。
 
-为实现普适的 AAR，无缝连接在线服务（如地图、公共交通数据、云计算、实时事件与天气数据以及其他用户共享内容）就需要开放的 API 与标准化协议。在我们的故事里， protagonists 通过耳机之间的无线电链路相互交谈，随后一位用户将城市声景模拟分享给第一人称角色。这些也需要达成一致的通信标准，类似于 IVAS 与 MPEG‑I。
+为实现普适的 AAR，无缝连接在线服务（如地图、公共交通数据、云计算、实时事件与天气数据以及其他用户共享内容）就需要开放的 API 与标准化协议。在我们的故事里，protagonists 通过耳机之间的无线电链路相互交谈，随后一位用户将城市声景模拟分享给第一人称角色。这些也需要达成一致的通信标准，类似于 IVAS 与 MPEG‑I。
 
 ## 10.9 挑战与风险
 
 金钱在塑造 AAR 未来方面发挥着极其重要的作用。为了使 AAR 体验在叙事上得以发展，必须在博物馆、文化遗产场馆、剧院以及传统上需要向观众传达叙事的场所进行探索和创作。然而，这些地方往往资金最为匮乏。在规划下一轮预算时，投资 AAR 体验或应用可能不是首要任务。如果技术质量不令人信服、叙事繁琐——这对于如此新兴的媒介是自然的——那么观众可能很长时间都无法再次体验 AAR。
 
 部分内容创作者表示失望，认为高质量的体验或外部虚拟声音往往被大多数人所忽视。这种观点令人担忧，因为细节至关重要。即便人们缺乏词汇来描述虚拟角色的空间化程度，他们仍能判断角色是否可信，以及是否成功吸引听众投入故事情节。
-
-
-
 
 为使 AR 设备能够正常工作，并成为通用计算生态系统的功能性组成部分，它们需要收集大量关于用户的物理位置、姿态和行为的信息，记录并分析人们的声音和环境声景，传输并处理消息、信息，这些信息往往是私密且敏感的。大部分这些操作在用户或其周围的人未察觉的情况下进行。在 `Google Glass` 引起轰动并能够在不被注意的情况下录制视频后，Meta 在其 `Ray-Ban Meta` 智能眼镜中加入了一个小灯，以指示视频摄像机何时在录制，以及通过五个内置麦克风何时记录环绕声。
 
@@ -1815,7 +1603,7 @@ MPEG‑I 新标准是朝该愿景迈出的一步（见第 7.8 章）。这些标
 
 ## 10.11 Conclusion
 
-通过 AAR，将听觉信息和叙事嵌入真实环境，改变了我们感知和解读周围空间和物体的方式。它不再是简单地叠加声音，而是通过听觉层积极重塑我们对物理世界的理解。 captivate 我们的并非声音本身，而是声音与现实的融合。
+通过 AAR，将听觉信息和叙事嵌入真实环境，改变了我们感知和解读周围空间和物体的方式。它不再是简单地叠加声音，而是通过听觉层积极重塑我们对物理世界的理解。captivate 我们的并非声音本身，而是声音与现实的融合。
 
 我们正在见证一种向沉浸式、个性化音频的趋势，这使得“可自主选择的动态声音世界”成为可能（Kadel, 2024）。AAR 结合无眼手、直观的界面，预计将成为连接我们生活与“扩展空间”的关键技术，在那里实时数据能够无缝融入日常生活（参见 Manovich, 2003）。AAR 能够增强并重塑我们对周围事件的听觉认知，促进社交互动，同时保留用户珍视的、未经中介的听觉时刻。
 
@@ -1823,29 +1611,27 @@ MPEG‑I 新标准是朝该愿景迈出的一步（见第 7.8 章）。这些标
 
 ## References
 
-1.  Albrecht, R., Väänänen, R. and Lokki, T. (2016) ‘Guided by Music: Pedestrian and Cyclist Navigation with Route and Beacon Guidance’, Personal and Ubiquitous Computing, 20 (1), pp. 121–145. Available at: [`doi.org/10.1007/s00779-016-0906-z`](https://doi.org/10.1007/s00779-016-0906-z).
+1. Albrecht, R., Väänänen, R. and Lokki, T. (2016) ‘Guided by Music: Pedestrian and Cyclist Navigation with Route and Beacon Guidance’, Personal and Ubiquitous Computing, 20 (1), pp. 121–145. Available at: [`doi.org/10.1007/s00779-016-0906-z`](https://doi.org/10.1007/s00779-016-0906-z).
 
-2.  Andre, E. (2024) ‘Should I Wear My Hearing Aids All the Time?’ Available at: [`www.earhealth.co.nz/should-i-wear-my-hearing-aids-all-the-time/`](https://www.earhealth.co.nz/should-i-wear-my-hearing-aids-all-the-time/) (Accessed: 11 December 2024).
+2. Andre, E. (2024) ‘Should I Wear My Hearing Aids All the Time?’ Available at: [`www.earhealth.co.nz/should-i-wear-my-hearing-aids-all-the-time/`](https://www.earhealth.co.nz/should-i-wear-my-hearing-aids-all-the-time/) (Accessed: 11 December 2024).
 
-3.  Brandenburg, K. et al. (2023) ‘Implementation of and Application Scenarios for Plausible Immersive Audio via Headphones’, in Audio Engineering Society Convention 155, Audio Engineering Society. Available at: [`www.aes.org/e-lib/browse.cfm?elib=22308`](https://www.aes.org/e-lib/browse.cfm?elib=22308) (Accessed: 25 November 2023).
+3. Brandenburg, K. et al. (2023) ‘Implementation of and Application Scenarios for Plausible Immersive Audio via Headphones’, in Audio Engineering Society Convention 155, Audio Engineering Society. Available at: [`www.aes.org/e-lib/browse.cfm?elib=22308`](https://www.aes.org/e-lib/browse.cfm?elib=22308) (Accessed: 25 November 2023).
 
-4.  Best, V. et al. (2020) ‘Sound Externalization: A Review of Recent Research’, Trends in Hearing, 24, p. 2331216520948390. Available at: [`doi.org/10.1177/2331216520948390`](https://doi.org/10.1177/2331216520948390).
+4. Best, V. et al. (2020) ‘Sound Externalization: A Review of Recent Research’, Trends in Hearing, 24, p. 2331216520948390. Available at: [`doi.org/10.1177/2331216520948390`](https://doi.org/10.1177/2331216520948390).
 
-5.  Breunig, D. (2024) ‘The Rise of Audio Augmented Reality’, Medium. Available at: [`medium.com/design-bootcamp/the-rise-of-audio-augmented-reality-c56a6348ff59`](https://medium.com/design-bootcamp/the-rise-of-audio-augmented-reality-c56a6348ff59) (Accessed: 20 November 2024).
+5. Breunig, D. (2024) ‘The Rise of Audio Augmented Reality’, Medium. Available at: [`medium.com/design-bootcamp/the-rise-of-audio-augmented-reality-c56a6348ff59`](https://medium.com/design-bootcamp/the-rise-of-audio-augmented-reality-c56a6348ff59) (Accessed: 20 November 2024).
 
-6.  Bruhn, S., Multrus, M. and Varga, I. (2022) ‘IVAS – Taking 3GPP Voice and Audio Services to a New Immersive Level’, 3GPP Highlights, October, pp. 8–9.
+6. Bruhn, S., Multrus, M. and Varga, I. (2022) ‘IVAS – Taking 3GPP Voice and Audio Services to a New Immersive Level’, 3GPP Highlights, October, pp. 8–9.
 
-7.  Das, A.-S. (2023) ‘How the Apple Vision Pro Will Shift the Audio Experience: Part 2’, Fansea, 11 October. Available at: [`medium.com/fansea/how-the-apple-vision-pro-will-shift-the-audio-experience-part-2-b5788051ebaf`](https://medium.com/fansea/how-the-apple-vision-pro-will-shift-the-audio-experience-part-2-b5788051ebaf) (Accessed: 11 December 2024).
+7. Das, A.-S. (2023) ‘How the Apple Vision Pro Will Shift the Audio Experience: Part 2’, Fansea, 11 October. Available at: [`medium.com/fansea/how-the-apple-vision-pro-will-shift-the-audio-experience-part-2-b5788051ebaf`](https://medium.com/fansea/how-the-apple-vision-pro-will-shift-the-audio-experience-part-2-b5788051ebaf) (Accessed: 11 December 2024).
 
-8.  Duong, N.Q.K. et al. (2017) ‘Audio Zoom for Smartphones Based on Multiple Adaptive Beamformers’, in P. Tichavský et al. (eds) Latent Variable Analysis and Signal Separation. Cham: Springer International Publishing, pp. 121–130. Available at: [`doi.org/10.1007/978-3-319-53547-0\_12`](https://doi.org/10.1007/978-3-319-53547-0_12).
+8. Duong, N.Q.K. et al. (2017) ‘Audio Zoom for Smartphones Based on Multiple Adaptive Beamformers’, in P. Tichavský et al. (eds) Latent Variable Analysis and Signal Separation. Cham: Springer International Publishing, pp. 121–130. Available at: [`doi.org/10.1007/978-3-319-53547-0\_12`](https://doi.org/10.1007/978-3-319-53547-0_12).
 
-9.  Envision (2023) ‘Envision Glasses – Smart Glasses for People Who Are Blind or Low Vision’. Available at: [`www.letsenvision.com/glasses/home`](https://www.letsenvision.com/glasses/home) (Accessed: 12 December 2024).
+9. Envision (2023) ‘Envision Glasses – Smart Glasses for People Who Are Blind or Low Vision’. Available at: [`www.letsenvision.com/glasses/home`](https://www.letsenvision.com/glasses/home) (Accessed: 12 December 2024).
 
-10.  Hong, J.Y. et al. (2017) ‘Spatial Audio for Soundscape Design: Recording and Reproduction’, Applied Sciences, 7 (6), p. 627. Available at: [`doi.org/10.3390/app7060627`](https://doi.org/10.3390/app7060627).
+10. Hong, J.Y. et al. (2017) ‘Spatial Audio for Soundscape Design: Recording and Reproduction’, Applied Sciences, 7 (6), p. 627. Available at: [`doi.org/10.3390/app7060627`](https://doi.org/10.3390/app7060627).
 
-11.  Kadel, O. (2024) ‘The Evolution of Spatial Audio in Immersive Storytelling’, MPSE Wavelength, June, pp. 72–83.
-
-
+11. Kadel, O. (2024) ‘The Evolution of Spatial Audio in Immersive Storytelling’, MPSE Wavelength, June, pp. 72–83.
 
 12. Kiss, F., Mayer, S. and Schwind, V. (2020) ‘Audio VR: Did Video Kill the Radio Star?’, *Interactions*, 27, pp. 46–51. 可查阅: [`https://doi.org/10.1145/3386385`](https://doi.org/10.1145/3386385).
 
@@ -1861,722 +1647,385 @@ MPEG‑I 新标准是朝该愿景迈出的一步（见第 7.8 章）。这些标
 
 18. Manovich, L. (2003) ‘The Poetics of Augmented Space’, in A. Everett and J.T. Caldwell (eds) *New Media: Theories and Practices of Digitextuality*. Routledge, pp. 75–92.
 
+
+
 19. McGill, M. et al. (2020) ‘Acoustic Transparency and the Changing Soundscape of Auditory Mixed Reality’, in Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems. Honolulu, Hawaii, USA: ACM, pp. 1–16. 可查阅: [`https://doi.org/10.1145/3313831.3376702`](https://doi.org/10.1145/3313831.3376702).
-
 20. Meyer-Kahlen, N. (2024) *Transfer-Plausible Acoustics for Augmented Reality*. PhD thesis. Aalto University. 可查阅: [`https://urn.fi/URN:ISBN:978-952-64-1913-8`](https://urn.fi/URN:ISBN:978-952-64-1913-8).
-
 21. Purcher, J. (2024) ‘A Top Apple Analyst Predicts that Apple Could Introduce Next-Gen AirPods with an IR Camera, Apple Intelligence & More for 2026’, *Patently Apple*. 可查阅: [`https://www.patentlyapple.com/2024/07/a-top-apple-analyst-predicts-that-apple-could-introduce-next-gen-airpods-with-an-ir-camera-apple-intelligence-more-for-202.html`](https://www.patentlyapple.com/2024/07/a-top-apple-analyst-predicts-that-apple-could-introduce-next-gen-airpods-with-an-ir-camera-apple-intelligence-more-for-202.html) (Accessed: 25 October 2024).
-
 22. Schmalstieg, D. and Hollerer, T. (2016) *Augmented Reality: Principles and Practice*. Addison-Wesley Professional.
-
-23. Signia (2024) ‘Signia Integrated Xperience Hearing Aids – All Models’, *Signia*. 可查阅: [`https://www.signia.net/en/hearing-aids/integrated-xperience/`](https://www.signia.net/en/hearing-aids/integrated-xperience/) (Accessed: 22 October 2024).
-
+23. Signia (2024) ‘Signia Integrated Xperience Hearing Aids – All Models’, *Signia*. 可查阅: [`https://www.signia.net/en/hearing-aids/integrated-xperience/`](https://www.signia.net/en/hearing-aids/integrated-xperience/) (Accessed: 22 October 2024).
 24. Sonova (2024) ‘Sonova Announces Two New Hearing Aid Platforms, Including the First Hearing Aid with Real-Time AI to Address Most Pressing Need in Hearing Loss’, *Sonova International*. 可查阅: [`https://www.sonova.com/en/investor-news/sonova-announces-two-new-hearing-aid-platforms-including-first-hearing-aid-real-time`](https://www.sonova.com/en/investor-news/sonova-announces-two-new-hearing-aid-platforms-including-first-hearing-aid-real-time) (Accessed: 7 August 2024).
-
 25. Turner, C. (2022) ‘Augmented Reality, Augmented Epistemology, and the Real-World Web’, *Philosophy & Technology*, 35 (1), p. 19. 可查阅: [`https://doi.org/10.1007/s13347-022-00496-5`](https://doi.org/10.1007/s13347-022-00496-5).
-
 26. Veluri, B. et al. (2023) ‘Semantic Hearing: Programming Acoustic Scenes with Binaural Hearables’, in Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology. New York, NY, USA: Association for Computing Machinery (UIST ’23), pp. 1–15. 可查阅: [`https://doi.org/10.1145/3586183.3606779`](https://doi.org/10.1145/3586183.3606779).
-
 27. Veluri, B. et al. (2024) ‘Look Once to Hear: Target Speech Hearing with Noisy Examples’, in Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems. New York, NY, USA: Association for Computing Machinery (CHI ’24), pp. 1–16. 可查阅: [`https://doi.org/10.1145/3613904.3642057`](https://doi.org/10.1145/3613904.3642057).
-
 28. Veronese, S. et al. (2023) ‘Ten-Year Follow-Up of Auditory Brainstem Implants: From Intra-Operative Electrical Auditory Brainstem Responses to Perceptual Results’, *PLOS ONE*, 18 (3), p. e0282261. 可查阅: [`https://doi.org/10.1371/journal.pone.0282261`](https://doi.org/10.1371/journal.pone.0282261).
-
 29. Yang, J., Barde, A. and Billinghurst, M. (2022) ‘Audio Augmented Reality: A Systematic Review of Technologies, Applications, and Future Research Directions’, *Journal of the Audio Engineering Society*, 70 (10), pp. 788–809.
-
 30. Zaki, S. (2024) ‘Reportaasi | Harva tietää, että Espoossa piilee “Suomen hiljaisin huone”’, *Helsingin Sanomat*. 可查阅: [`https://www.hs.fi/pkseutu/art-2000010425471.html`](https://www.hs.fi/pkseutu/art-2000010425471.html) (Accessed: 25 May 2024).
 
-
-
--   主动降噪 (ANC) [12, 18, 68, 68, 129–130, 187; 作为选择性和自适应 5, 54, 179, 190–191]
-
--   addition (叙事技巧) [156, 166–167]
-
--   AI *see* 人工智能
-
--   Albrecht, Robert 86, 191
-
--   *Alcatraz Cellhouse Audio Tour* 70–71, 112, 180]
-
--   *Alien Encounters* 54
-
--   alternative narratives [3, 140, 141, 175]
-
--   alternative match (叙事技巧) [141, 156, 167–168, 191]
-
--   Ambisonics [*22, 26–27, 102–104, 109, 135, 169-160, 178]
-
--   ANC *see* [主动降噪]
-
--   animatronic [42, 65, 165]
-
--   *Anna* 142, 157, 178]
-
--   *Apple AirPods Pro* 47, 130]
-
--   *Apple Vision Pro* 108, 189]
-
--   applications [14–16; art 66, 71–73, 83–84, 89; attractions 65; aviation 19–20, 68, 86–87; cars 19, 68, 89, 191; cinemas and theatres 142, 191; environmental design 192; games 4, 90–93, 194–195; healthcare 122, 191, 192; industry 192; military 61, 68, 86–87; museums and exhibitions 45, 67, 69–71, 78–80, 81–82, 144; storytelling 81–85, 87–90, 91–93, 141–142; telepresence 1, 77–78, 142, 188; tourism 11, 14, 15; ubiquitous assistance 20, 52, 81, 86, 190–192]
-
--   AR *see* [增强现实]
-
--   *ARCore* 124]
-
--   *ARKit* 124]
-
--   Armbruster, Steffen [177]
-
--   artificial intelligence (AI): analysing environment [20, 86, 189; generating content 142, 195; interacting with user 46, 149; in sound separation 15, 21, 130, 190; in tracking 117; controlling virtual characters 113, 172]
-
--   assisted reality [14, 15]
-
--   attachment (virtual sound) [29–32, 98–99, 105, 144, 156, 157–161, 174]
-
--   attenuation curve [175, 176]
-
--   attractor sounds [46, 50, 79, 157, 159, 175–176]
-
--   audification [19]
-
--   *Audio Aura* 81]
-
--   audio zooming *see* [缩放]
-
--   audio display *see* [听觉显示]
-
--   audio games (non-AAR) [21, 90]
-
--   audio interface (hardware component) [112, *113*, 123, 124, 125]
-
--   *Audio Legends* 91, *92*, 113, 145, 172]
-
--   *Audio Nomad* 27, 89]
-
--   audio pass-through *see* [听透]
-
--   audio walk [2–3, 15, 52, 145, 192; linear 12, 71, 77, 166, 178, 180; geolocated 51, 87–90, 133, 151, 159, 167; locative radio-based 60, 71–73]
-
--   audiotrail *see* [audio walk]
-
--   auditory display [22–29, 31, 111, 148; *see also* headphones]
-
--   auditory event [97–99, 109]
-
--   augmented reality (AR): introduction [11–13; in digital society 5, 194; glasses 6, 130; in narratives 140, 168; pose tracking 114, 130; and reality 39–42, 55, 81, 150; sense of presence 43–45, 128]
-
--   auralisation [80, 97, 104–109, 189; *see also* virtual audio]
-
--   Auslander, Philip [42]
-
--   *Autio* 89]
-
--   authoring [49, 123–124, 131–133, 157, 195; in geolocated app 87–90, 142–143]
-
--   AVAS (acoustic vehicle alerting systems) [68]
-
--   Azuma, Robert [12, 13, 81, 83, 145]
-
--   Bailenson, Jeremy [146]
-
-
-
--   *Barque Sigyn* 25, 67, 112, 156, 169
-
--   beamforming 29, 122, 130, 190
-
--   Bell, Graham 62, 77
-
--   Bell Labs/Bell Communications Research 62–63, 78
-
--   Bederson, Benjamin B. 78–79, 87, 121, 124
-
--   binaural audio 22, 23, 61–63; using dummy-head 71, 78, 84, 160, 171; in virtual acoustics engine 78, 108–109; *see also* `spatial hearing`
-
--   blind estimation 108, 123, 189
-
--   biodata 3, 48, 114, 123
-
--   Blauert, Jens 97
-
--   blind individuals `see` visually impaired persons
-
--   Bluetooth: audio 125, 134, 170; location tracking 89, 119, 121
-
--   Bose noise reduction headphones 68
-
--   *Bose AR* 81, 130
-
--   *Bose Frames* 23, 93, 130
-
--   *Bose Ultra Open Earbuds* *128*
-
--   Cardiff, Janet 52, 71, 180
-
--   Caudell, Thomas 77
-
--   channel-based audio *22*, 26, 101–102, 135, 103, *104*, *105*
-
--   *China Daily* 71
-
--   Chion, Michel 61, 168, 169, 171, 174, 180
-
--   Cliffe, Laurence 54, 85, 167
-
--   cloning of voice `see` voice cloning
-
--   Cohen, Michael 77–78
-
--   comfort (headphone use) 6, 117, 126–129, 187; weight 123, 125, 126
-
--   compensated amplitude panning (CAP) 9, *22*, 27
-
--   computer 9, 17, 22, 112, 123–124, 134; algorithms 24; -generated sounds 12, 78; vision 20, 79, 86, 108, 144, 157
-
--   congruence 19; audiovisual 19; object 19, 156, 160, 161–167; room 19, 99, 109
-
--   context-aware 79, 85, 144, 145, 157, 192
-
--   *Corvette Karjala* 172–173, *174*
-
--   Costner, Kevin 89
-
--   Crawford, Chris 49–50
-
--   cross-modal interaction 20, 46, 160
-
--   cross-talk cancellation (CTC, XTC) 9, 22, 24, 53, 112, 143
-
--   Cummings, James 146
-
--   DARKFIELD 46, 84, 150, 163, 171
-
--   *David Bowie Is* 79–80, 113, 121
-
--   *dearVR* 108
-
--   *d&b Soundscape* 22, 26
-
--   *Deep Dive Audio* 108
-
--   deepfake 7, 151, 179, 194
-
--   dérive 52
-
--   detachment (narrative technique) 156, 171, 174
-
--   digital deception `see` deepfake
-
--   *Dimensions of Sound* 80, 113, 145, 156
-
--   direct augmentation (hidden loudspeakers) 9, *22*, 24–25, 52, 142; for attached sounds 30, 99, 159; in example applications 63–68, 169
-
--   directional speakers 9, *22*, 24, 25–26, 29, 159, 172, 173
-
--   Ditton, Theresa 43
-
--   *Dolby Atmos* 22, 26, 102
-
--   *DTS:X* 26, 102
-
--   dummy head (binaural) 23, 63, 71, 78, 160, 171
-
--   earbuds `see` headphones
-
--   *ec(h)o* 79, 113
-
--   *Echoes* 88, 89
-
--   Edison, Thomas A. 63–64
-
--   electromagnetic (EM, EMF) tracking 120
-
--   embodied experience 11, 39, 46, 167
-
--   environment-aware system 122, 186
-
--   environment-driven system 85, 142, 143
-
--   *Envision AI* 20
-
--   *Envision Glasses* 191
-
--   erasing sounds `see` removing and replacing sounds
-
--   Eren, Cilia 52, 71, 166
-
--   *Etiquette* 180
-
--   exposed objects 150, 158–159
-
--   extended reality (XR) 13, *14*, 23, 31, 42, 43, 155
-
-
-
--   extension (叙事技巧) 66, 156, 168–169, 179
-
--   externalisation 29–31, 78, 178, 181, 194; 在双耳音频中 23, 24; 使用 6DoF 31; 使用声学透明 53–54, 127; 在虚拟音频中 97, 109, 159, 166
-
--   *FMOD* 124
-
--   Foley 171
-
--   Förterer, Holger 49, 83, 164
-
--   Full-AAR 85, 154
-
--   Gainsbourg, Charlotte 82, 141, 172
-
--   *Gainsbourg, Maison See* Maison Gainsbourg
-
--   Gainsbourg, Serge 82, 172–173
-
--   game engine 103, 105–108, 124
-
--   games (AAR) *see* applications
-
--   geofenced *see* trigger zone
-
--   geolocated audio 11, 52, 46, 60, 87–90, 155; 作者编写 132, 133; 作为个人经验 51, 141; 作为基于广播 71–73; 平台 135, 142–143; 作为头部锁定 159
-
--   geometrical acoustics (GA) 107, 133
-
--   Glassner, Andrew 49
-
--   GNSS (全球导航卫星系统) *see* 卫星定位
-
--   *Google Glass* 194
-
--   *Google Maps* 86, 87, 90
-
--   *Google Pixel Buds Pro* 130, 191
-
--   GPS (全球定位系统) *see* 卫星定位
-
--   GUI (图形用户界面) *see* 用户界面
-
--   *Guided by Music* 86, 157, 191
-
--   *Guided by Voices* 90, 170, 172, 181
-
--   head-locked audio 14, 86, 102, 103, 155, 160; 作为次要界面 40, 148; 在示例应用中 46, 70, 89, 156, 167
-
--   head-related transfer function *see* HRTF
-
--   head tracking 23, 113–114, 189; 在示例应用中 80, 81, 86–87, 93; 使用 IMU 121–122; 在智能设备中 130; 在 3DoF 中 177–178; 在虚拟音频中 102, 160
-
--   head-related transfer function *see* HRTF
-
--   headphones *22*, 23, 68–69, 126–131; 声学隔离 44, 54, 169; 声学透明 53; 耳罩式 126–127; 耳垂式 127; 入耳式 127–128; 开放式 128; 骨传导 129; 软骨传导 129; 听透式 1, 50, 54, 129–130; 智能 114, 130; 四声道 27; 让人想起中介 43; 无线 83, 125; *see also* 声学透明; 主动降噪
-
--   hearables *see* headphones (smart)
-
--   *Hear&There* 87–88
-
--   hearing aid 61, 129, 130, 150, 187, 190; 声分离 5, 15, 21, 54, 190
-
--   hidden loudspeaker *see* direct augmentation
-
--   higher-order Ambisonics (HOA) *see* Ambisonics
-
--   Hochberg, Julian 146
-
--   hoerwinkel 81
-
--   hologram 16, 42; 听觉 16, 28, 186, 188
-
--   HOLOPLOT 26, 29
-
--   *Horror-Fi Me* 85, 143, 156
-
--   HRTF (头部相关传递函数) 23, 27, 101, 108–109, 189
-
--   *Hyperkuulo* 89–90, 171, 176
-
--   Ikeda, Ryoji 19
-
--   illusion of agency 49, 90
-
--   illusion of nonmediation 24, 27, 43–44, 133, 147
-
--   immersion 43–45, 146, 148–149, 166, 172; 在示例应用中 71, 80, 90, 93; *see also* 存在感
-
--   immersive theatre *see* theatre
-
--   incongruence (mismatch) 90, 156, 163–166, 181
-
--   IMU (inertial measurement unit) *115*, 118, 121–122, 134, 189
-
--   inside-out tracking 116–117, 187, 189
-
--   inside-the-head locatedness (IHL) 29, 109
-
--   Irwin-Schütze, Anna 54
-
--   IVAS (codec) 135, 188, 193
-
--   Kishino, Fumio 13, 41
-
--   Koivumäki, Ari 89
-
--   language translation *see* simultaneous interpretation
-
-
-
-*   latency: audio 1, 123, 124, 125, 130, 188; pose tracking 117, 120, 160; motion-to-sound 133–134
-
-*   lateralisation 29–31
-
-*   *Letter from Siberia* 167
-
-*   level of realness 41–42
-
-*   LiDAR (light detection and ranging) 118, 124, 187, 189–190; scanning environment 20, 108, 133, 144, 192; *see also* `tracking`
-
-*   *Lighthouse See Vive Lighthouse*
-
-*   *Linked* 73, 145
-
-*   *LISTEN* 79, **157**, 175
-
-*   local presence 11, 13–14, 43
-
-*   localised sound *see* attachment
-
-*   location-driven AAR 143
-
-*   locative audio 60, 69, 71–73, 155–157
-
-*   Lokki, Tapio 86, 191
-
-*   Lombard, Matthew 43
-
-*   loudspeaker (hidden) *see* `direct augmentation`
-
-*   *Lousiana Walk #14* 71
-
-*   magnetisation effect *see* `ventrioloquism effect`
-
-*   *Maison Gainsbourg* 54, 147, 168; reinforcing 82; remembering 141, 145; acousmatic sounds **156**, 172–173
-
-*   Manovich, Lev 5
-
-*   Marker, Chris 167
-
-*   marker-based tracking 116, 126, *128*
-
-*   markerless tracking 116–117, 189
-
-*   *The Matrix* 182
-
-*   Merleau-Ponty, Maurice 39
-
-*   *Meta XR Audio SDK* 107
-
-*   microphones 2, 122–123, 188; Ambisonic 102–103; for adaptive sound control 48, 54, 129–130, 190; binaural 23, 71, 78, 84, 160, 171, 178; integrated in devices 124, 125, 130, *131*, 187; privacy concerns 190, 194; for ultrasound tracking 121; for scanning environment 107–108, 144
-
-*   microphone-through *see* `pseudoacoustic headphones`
-
-*   *Microsoft Project Acoustics* 107
-
-*   Milgram, Paul 13, 41
-
-*   Miller, George Bures 71
-
-*   Miller, Graeme 73, 145
-
-*   MiniDisc 78, 124
-
-*   mixed reality (MR) 11, 13–14, 192; auditory 77, 129, 151, 179; headsets 6, 47, 108, 117–118, 128–129, 189; with headphones 23; immersion 43, 128
-
-*   Mizell, David 77
-
-*   mobile AAR 108, 142, 194; see also `ubiquitous AAR`
-
-*   Montan, Nils 27
-
-*   motion-to-sound latency *see* `latency`
-
-*   *MPEG-H* 26, 102, 135
-
-*   *MPEG-I* 134, 103, 193
-
-*   MR *see* `mixed reality`
-
-*   multi-point HOA 135, 159
-
-*   Mülleder, Alexander *128*
-
-*   *Münster Walk* 71
-
-*   Naphtali, Dafna 148, 151
-
-*   narrative 140; focus 144–146; ideas 141–142; immersion/transportation 44–45, 71, 109; techniques 154–155, **156**–**157**; interactive storytelling 48–50
-
-*   *Nature Soundscapes* 66, 142, 165, 166
-
-*   *NAVIG* 86
-
-*   near field sounds 101, **157**, 178–179
-
-*   near-ear speakers 6, 22, 23, 128, 130, *131*
-
-*   neckband speakers *see* `wearable speakers`
-
-*   Neuhaus, Max 66
-
-*   noise reduction *see* `active noise cancelling`
-
-*   *NoTours* 89
-
-*   object-based audio (OBA) *22*, 26, 101–102, 103–105, 135, 159, 160
-
-*   obstructed (augmented object); in virtual audio 105, 114
-
-*   in narratives 150, **156**, 161, 158–159, 163, 169, 171
-
-*   with attractor sounds 175
-
-*   occlusion effect (headphones) 127, 130
-
-*   omnidirectional hearing 5, 14, 43, 86; *see also* `spatial hearing`
-
-*   *OptiTrack* 116, *128*, 133
-
-*   outside-in tracking 116
-
-*   *Personal Guidance System* 86
-
-*   *The Planets* 90, 143, 181
-
-*   *PLATONE* 107
-
-*   plausibility 18–19; in sense of presence 43–45; in object congruence 161–166; with acousmatic sounds 171
-
-
-
-*   *请确认您不是机器人* 92–93, 130, 167
-
-*   *精灵宝可梦 GO* 54–55
-
-*   pose tracking *see* 追踪
-
-*   privacy concerns 81, 190, 194
-
-*   private: devices 128; experience 29, 54, 179
-
-*   proximity: interaction based on 25, 89, 114, 142, 175, 177; sensors 25, 45, 112, 121, 143, 155, 157; in example applications 79–80, 81, 88–89
-
-*   pseudoacoustic headphones 54, 129
-
-*   Pulkki, Ville 192
-
-*   *Radioscape* 72–73
-
-*   *Ray-Ban Meta* 23, 47, *131*, 194
-
-*   reality 39–42, 55
-
-*   reality-virtuality continuum 10, 13
-
-*   *The Reign Union (Valtakunnan liitto)* 10, 39, 85, 132, 154; accessibility 21, 149; individualised content 93, 141; interaction 47, 114, 147; object congruence/incongruence **156**, *162*, 163, 164, 165; reskinning 85, 146; use of acousmatic sounds 170, 173; other narrative techniques **157**, 168, 169, 174
-
-*   reinforcing (design paradigm) 81–82, 144–146, 161
-
-*   remembering (design paradigm) 144–145
-
-*   removing and replacing sounds 1–4, 9, 12, 18, 33, 191, 194; using microphones 122–123, 130; in narratives **157**, 161, 169, 179
-
-*   reskinning (design paradigm) 42, 83–85, 144–146
-
-*   revelation (narrative technique) **156**, 169–170, 171, 174, 175
-
-*   *RjDj* 47–48
-
-*   Rodkin, Richard 148
-
-*   room acoustics 28, 104–109, 113, **114**, 118, 133, 171, 189
-
-*   room congruence 19, 99, 161
-
-*   room divergence 166, 181
-
-*   room impulse response (RIR) 97, 106–109
-
-*   *Rotozaza* 180
-
-*   *Roundware* 88
-
-*   satellite positioning: navigation 15, 20, 86, 87; geolocated audio 71, 73, 87–88, 155; GNSS 87, 120, 189; GPS 87–88, 120; as tracking technology 87, 115, 120, 189
-
-*   *Saving Private Ryan* 169
-
-*   scene-based audio *see* Ambisonics
-
-*   Schaeffer, Pierre 29
-
-*   Schafer, R. Murray 50–51
-
-*   Schraffenberger, Hanna 146
-
-*   Schütze, Stephan 54
-
-*   scopeaudio 81
-
-*   *Séance* 39, 84–85, 147, 163, 172, 179; lack of interaction 31, 46, 146; sound attachment 159, 160
-
-*   *Sennheiser guidePORT* 80, 121
-
-*   *Sennheiser Surrounder* 27
-
-*   sense of presence 5, 42, 43–46, 93, 133; embodied interaction 31, 45–46, 49, 55; acoustic transparency 50, 53–54; tech hickups 133; *see also* immersion
-
-*   sensor fusion 115
-
-*   sensory substitution 20
-
-*   simultaneous interpretation (live translation) 4, 142, 190–191
-
-*   site-specific AAR 17, 46; accessibility 143; applications 71, 87–90, 91; environment 42, 81, 145; platform 22, 142
-
-*   situational awareness 14, 16, 19, 86–87, 158, 191–192; blind users 20; cars 68; connection to reality 39, 53
-
-
-
--   six degrees of freedom (6DoF) 31–32, 155, 177, 193; in interaction 49–50, 147; foundations of 69; availability for creators 134, 143; in virtual acoustics 103, 105, 107–108, 109, 126, 160, 172, 189; in example applications 79, 80, 82, 83–84, 85; in pose tracking 114, 116, 118, 120, 121–122
-
-*   SLAM (simultaneous localization and mapping) 116
-
-*   smart glasses 6, 23, 112, 128, 130, 131; for user interaction 20, 47, 114, 149; as technical platform 124, 187, 190, 191; in example application 93; privacy concerns 194
-
-*   smart headphones *see* headphones
-
-*   smart ring 5–6
-
-*   smart watch 2, 48
-
-*   social interaction 53, 61, 90, 92–93, 127
-
-*   *The Sonic Bike* 89
-
-*   *Sonic Traces Heldenplatz* 81–82, 147, 172
-
-*   sonification 19–20, 21, 39–40, 68, 81, 86, 192
-
-*   Sony Walkman 63, 70
-
-*   sound event 97–99
-
-*   *The Sound of Things* 21, 49, 83–84, 145, 147, 158; using partial congruence `156`, `164`
-
-*   *Sound PacMan* 91
-
-*   sound separation (isolation) 4, 7, 9, 15, 113, 122, 129–130, 190
-
-*   soundfield 22, 24, 27, 53
-
-*   soundscape manipulation 5, 7, 54, 69, 129, 190
-
-*   The Soundwalk Collective 82
-
-*   soundwalks 52
-
-*   spatial hearing 97–101, 192; *see also* `binaural audio`; `omnidirectional hearing`
-
-*   spatial room impulse response (SRIR) *see* `room impulse response`
-
-*   spatial scale and offset (narrative technique) `157`, `176–178`
-
-*   spatialisation *see* `virtual audio`
-
-*   spatialiser *see* `virtual audio`
-
-*   spatially aligned *see* `attachment`
-
-*   spatially registered *see* `attachment`
-
-*   speech recognition 132, 192; for voice separation 4, 5, 129–130, 190; for interaction 47, 113, 114, 148
-
-*   speech separation *see* `sound separation`
-
-*   speech synthesis 4, 191, 192
-
-*   Spielberg, Steven 169
-
-*   standards 103, 134–135, 193
-
-*   *Steam Audio* 108
-
-*   Stedelijk Museum 69–70
-
-*   storyworld 49–50
-
-*   ‘super hearing’ 20, 73
-
-*   surround sound 15, 102, 194; systems 26–27, 63, 68, 89, 99, 143; with object-based audio 102
-
-*   suspension of disbelief 45, 163–164
-
-*   synchronisation (narrative technique) `157`, `180`, `182`
-
-*   teleconferencing *see* `telepresence`
-
-*   telepresence 14, 16, 62–63, 135, 188; *see also* `applications`
-
-*   tethered connections 125, 134
-
-*   theatre 142, 150, 169, 178, 191, 193; immersive/participatory 42, 48, 53, 84, 150, 180; radio 151
-
-*   three degrees of freedom (3DoF) 32, 113, 177–178
-
-*   *Time Kettle W4 Pro* 191
-
-*   *Time Square* 66
-
-*   tracking systems (pose) 113–115, 189–190; electromagnetic 120; inertial 121–122, 134; motion sensors 66, 67; optical 83, 85, 86, 116–118, 133, 144, 187; radio-based 80, 89, 118–120; satellite 87, 120, 155; ultrasound 120–121; limitations 33, 69, 155, 159; *see also* `proximity`
-
-*   transferable AAR 17, 85, 90, 116, 143
-
-*   trigger zone/area 87–88, `89`, 144, 155, 157, 175
-
-
-
--   [Truax, Barry]（章节 3，第 51 页）
--   无处不在的 AAR（章节 2，第 16 页），（章节 2，第 22 页），（章节 3，第 42 页），（章节 3，第 48 页），（章节 9，第 168 页），（章节 10，第 187 页），（章节 10，第 193 页）；*参见* [移动 AAR]（索引 1，第 306 页）
--   超声波跟踪 *see* [跟踪]（索引 1，第 483 页）
--   “uncanny valley”（章节 8，第 147 页）
--   Unity（章节 6，第 102 页），（章节 7，第 124 页），（章节 7，第 132 页）
--   Unreal Engine（章节 6，第 102 页），（章节 7，第 124 页），（章节 7，第 132 页）
--   用户界面（除音频外）（章节 5，第 79 页），（章节 5，第 81–82 页），（章节 8，第 148–149 页）
--   *usomo*（章节 5，第 80 页），（章节 5，第 82 页）
--   UWB（超宽带）*see* [跟踪]（索引 1，第 483 页）
--   *Valtakunnan Liitto See the Reign Union*
--   van der Heide, Edwin（章节 4，第 72 页）
--   ventriloquism effect（章节 2，第 31 页），（章节 4，第 61 页），（章节 7，第 134 页），（章节 9，第 160 页）
--   verbocentrism（章节 2，第 21–22 页）
--   verisimilitude（章节 2，第 18–19 页），（章节 9，第 161 页）
--   Vienna Augarten（章节 8，第 144 页），（章节 8，第 144 页），（章节 9，第 157 页），（章节 9，第 177 页）
--   virtual acoustics *see* [virtual audio]（索引 1，第 511 页）
--   virtual audio: spatialisation（章节 6，第 97–99 页）；virtual acoustics engine（spatialiser）（章节 6，第 104–109 页）
--   virtual reality (VR)（章节 2，第 12 页），（章节 2，第 13 页），（章节 2，第 14 页），（章节 6，第 102 页），（章节 9，第 170 页），（章节 9，第 180 页）；听觉（章节 3，第 39 页）；virtual audio（章节 6，第 102 页），（章节 6，第 107 页），（章节 10，第 188 页）；跟踪（章节 7，第 118 页），（章节 7，第 121 页）
--   virtual sounds（章节 2，第 17–18 页）
--   visually impaired persons（章节 2，第 12 页），（章节 2，第 15 页），（章节 2，第 20–21 页），（章节 2，第 30 页），（章节 3，第 44 页），（章节 4，第 68 页），（章节 5，第 86 页），（章节 8，第 149 页）；*参见 also* [accessibility]（索引 1，第 3 页）
--   *VIVE Lighthouse*（章节 7，第 118 页）
--   *VIVE Tracker*（章节 7，第 133 页）
--   *VIVE Ultimate Tracker*（章节 7，第 117 页）
--   voice cloning（章节 1，第 4 页），（章节 8，第 151 页）
--   voice recognition *see* [speech recognition]（索引 1，第 457 页）
--   VR *see* [virtual reality]（索引 1，第 513 页）
--   Väänänen, Riitta（章节 5，第 86 页），（章节 10，第 191 页）
--   *Walkie-Talkie Dream Angles*（章节 2，第 21 页），（章节 8，第 151 页），（章节 9，第 167 页）
--   *The War of the Worlds*（章节 8，第 150–151 页）
--   wave field synthesis (WFS)（章节 2，第 9 页），（章节 2，第 17 页），（章节 2，第 22 页），（章节 2，第 26 页），（章节 2，第 28–29 页），（章节 4，第 63 页），（章节 9，第 172 页）；挑战（章节 2，第 28 页），（章节 9，第 159 页）
--   wearable speakers（章节 2，第 9 页），（章节 2，第 23 页），（章节 2，第 27 页）
--   Welles, Orson（章节 8，第 151 页）
--   WHS（章节 5，第 85 页）
--   wireless audio transmission（章节 7，第 124 页），（章节 7，第 125 页），（章节 7，第 130 页），（章节 7，第 134 页）；在示例应用中（章节 1，第 2 页），（章节 4，第 69 页），（章节 5，第 81 页），（章节 5，第 83 页）
--   *The World’s Deepest Bin*（章节 4，第 66 页），（章节 9，第 156 页），（章节 9，第 168 页）
--   *Wwise*（章节 7，第 124 页）
--   XR *see* [extended reality]（索引 1，第 168 页）
--   XY-Yaw（章节 2，第 33 页），（章节 5，第 88 页），（章节 9，第 155 页），（章节 9，第 177 页）
--   *Zombies, Run!*（章节 3，第 41 页），（章节 3，第 46 页），（章节 5，第 91–92 页），（章节 8，第 141 页），（章节 8，第 145 页），（章节 9，第 168–169 页）
--   zooming (audio) *see* [beamforming]（索引 1，第 93 页）
--   zooming (virtual sounds)（章节 9，第 176 页）
+- 主动降噪 (ANC) [12, 18, 68, 68, 129–130, 187; 作为选择性和自适应 5, 54, 179, 190–191]
+- addition (叙事技巧) [156, 166–167]
+- AI *see* 人工智能
+- Albrecht, Robert 86, 191
+- *Alcatraz Cellhouse Audio Tour* 70–71, 112, 180]
+- *Alien Encounters* 54
+- alternative narratives [3, 140, 141, 175]
+- alternative match (叙事技巧) [141, 156, 167–168, 191]
+- Ambisonics [*22, 26–27, 102–104, 109, 135, 169-160, 178]
+- ANC *see* [主动降噪]
+- animatronic [42, 65, 165]
+- *Anna* 142, 157, 178]
+- *Apple AirPods Pro* 47, 130]
+- *Apple Vision Pro* 108, 189]
+- applications [14–16; art 66, 71–73, 83–84, 89; attractions 65; aviation 19–20, 68, 86–87; cars 19, 68, 89, 191; cinemas and theatres 142, 191; environmental design 192; games 4, 90–93, 194–195; healthcare 122, 191, 192; industry 192; military 61, 68, 86–87; museums and exhibitions 45, 67, 69–71, 78–80, 81–82, 144; storytelling 81–85, 87–90, 91–93, 141–142; telepresence 1, 77–78, 142, 188; tourism 11, 14, 15; ubiquitous assistance 20, 52, 81, 86, 190–192]
+- AR *see* [增强现实]
+- `ARCore` 124]
+- `ARKit` 124]
+- Armbruster, Steffen [177]
+- artificial intelligence (AI): analysing environment [20, 86, 189; generating content 142, 195; interacting with user 46, 149; in sound separation 15, 21, 130, 190; in tracking 117; controlling virtual characters 113, 172]
+- assisted reality [14, 15]
+- attachment (virtual sound) [29–32, 98–99, 105, 144, 156, 157–161, 174]
+- attenuation curve [175, 176]
+- attractor sounds [46, 50, 79, 157, 159, 175–176]
+- audification [19]
+- *Audio Aura* 81]
+- audio zooming *see* [缩放]
+- audio display *see* [听觉显示]
+- audio games (non-AAR) [21, 90]
+- audio interface (hardware component) [112, *113*, 123, 124, 125]
+- *Audio Legends* 91, *92*, 113, 145, 172]
+- *Audio Nomad* 27, 89]
+- audio pass-through *see* [听透]
+- audio walk [2–3, 15, 52, 145, 192; linear 12, 71, 77, 166, 178, 180; geolocated 51, 87–90, 133, 151, 159, 167; locative radio-based 60, 71–73]
+- audiotrail *see* [audio walk]
+- auditory display [22–29, 31, 111, 148; *see also* headphones]
+- auditory event [97–99, 109]
+- augmented reality (AR): introduction [11–13; in digital society 5, 194; glasses 6, 130; in narratives 140, 168; pose tracking 114, 130; and reality 39–42, 55, 81, 150; sense of presence 43–45, 128]
+- auralisation [80, 97, 104–109, 189; *see also* virtual audio]
+- Auslander, Philip [42]
+- *Autio* 89]
+- authoring [49, 123–124, 131–133, 157, 195; in geolocated app 87–90, 142–143]
+- AVAS (acoustic vehicle alerting systems) [68]
+- Azuma, Robert [12, 13, 81, 83, 145]
+- Bailenson, Jeremy [146]
+- *Barque Sigyn* 25, 67, 112, 156, 169
+- beamforming 29, 122, 130, 190
+- Bell, Graham 62, 77
+- Bell Labs/Bell Communications Research 62–63, 78
+- Bederson, Benjamin B. 78–79, 87, 121, 124
+- binaural audio 22, 23, 61–63; using dummy-head 71, 78, 84, 160, 171; in virtual acoustics engine 78, 108–109; *see also* `spatial hearing`
+- blind estimation 108, 123, 189
+- biodata 3, 48, 114, 123
+- Blauert, Jens 97
+- blind individuals `see` visually impaired persons
+- Bluetooth: audio 125, 134, 170; location tracking 89, 119, 121
+- Bose noise reduction headphones 68
+- *Bose AR* 81, 130
+- *Bose Frames* 23, 93, 130
+- *Bose Ultra Open Earbuds* *128*
+- Cardiff, Janet 52, 71, 180
+- Caudell, Thomas 77
+- channel-based audio *22*, 26, 101–102, 135, 103, *104*, *105*
+- *China Daily* 71
+- Chion, Michel 61, 168, 169, 171, 174, 180
+- Cliffe, Laurence 54, 85, 167
+- cloning of voice `see` voice cloning
+- Cohen, Michael 77–78
+- comfort (headphone use) 6, 117, 126–129, 187; weight 123, 125, 126
+- compensated amplitude panning (CAP) 9, *22*, 27
+- computer 9, 17, 22, 112, 123–124, 134; algorithms 24; -generated sounds 12, 78; vision 20, 79, 86, 108, 144, 157
+- congruence 19; audiovisual 19; object 19, 156, 160, 161–167; room 19, 99, 109
+- context-aware 79, 85, 144, 145, 157, 192
+- *Corvette Karjala* 172–173, *174*
+- Costner, Kevin 89
+- Crawford, Chris 49–50
+- cross-modal interaction 20, 46, 160
+- cross-talk cancellation (CTC, XTC) 9, 22, 24, 53, 112, 143
+- Cummings, James 146
+- DARKFIELD 46, 84, 150, 163, 171
+- *David Bowie Is* 79–80, 113, 121
+- `dearVR` 108
+- *d&b Soundscape* 22, 26
+
+
+
+- *Deep Dive Audio* 108
+- deepfake 7, 151, 179, 194
+- dérive 52
+- detachment (narrative technique) 156, 171, 174
+- digital deception `see` deepfake
+- *Dimensions of Sound* 80, 113, 145, 156
+- direct augmentation (hidden loudspeakers) 9, *22*, 24–25, 52, 142; for attached sounds 30, 99, 159; in example applications 63–68, 169
+- directional speakers 9, *22*, 24, 25–26, 29, 159, 172, 173
+- Ditton, Theresa 43
+- *Dolby Atmos* 22, 26, 102
+- *DTS:X* 26, 102
+- dummy head (binaural) 23, 63, 71, 78, 160, 171
+- earbuds `see` headphones
+- *ec(h)o* 79, 113
+- *Echoes* 88, 89
+- Edison, Thomas A. 63–64
+- electromagnetic (EM, EMF) tracking 120
+- embodied experience 11, 39, 46, 167
+- environment-aware system 122, 186
+- environment-driven system 85, 142, 143
+- *Envision AI* 20
+- *Envision Glasses* 191
+- erasing sounds `see` removing and replacing sounds
+- Eren, Cilia 52, 71, 166
+- *Etiquette* 180
+- exposed objects 150, 158–159
+- extended reality (XR) 13, *14*, 23, 31, 42, 43, 155
+- extension (叙事技巧) 66, 156, 168–169, 179
+- externalisation 29–31, 78, 178, 181, 194; 在双耳音频中 23, 24; 使用 6DoF 31; 使用声学透明 53–54, 127; 在虚拟音频中 97, 109, 159, 166
+- *FMOD* 124
+- Foley 171
+- Förterer, Holger 49, 83, 164
+- Full-AAR 85, 154
+- Gainsbourg, Charlotte 82, 141, 172
+- *Gainsbourg, Maison See* Maison Gainsbourg
+- Gainsbourg, Serge 82, 172–173
+- game engine 103, 105–108, 124
+- games (AAR) *see* applications
+- geofenced *see* trigger zone
+- geolocated audio 11, 52, 46, 60, 87–90, 155; 作者编写 132, 133; 作为个人经验 51, 141; 作为基于广播 71–73; 平台 135, 142–143; 作为头部锁定 159
+- geometrical acoustics (GA) 107, 133
+- Glassner, Andrew 49
+- GNSS (全球导航卫星系统) *see* 卫星定位
+- *Google Glass* 194
+- *Google Maps* 86, 87, 90
+- *Google Pixel Buds Pro* 130, 191
+- GPS (全球定位系统) *see* 卫星定位
+- GUI (图形用户界面) *see* 用户界面
+- *Guided by Music* 86, 157, 191
+- *Guided by Voices* 90, 170, 172, 181
+- head-locked audio 14, 86, 102, 103, 155, 160; 作为次要界面 40, 148; 在示例应用中 46, 70, 89, 156, 167
+- head-related transfer function *see* HRTF
+- head tracking 23, 113–114, 189; 在示例应用中 80, 81, 86–87, 93; 使用 IMU 121–122; 在智能设备中 130; 在 3DoF 中 177–178; 在虚拟音频中 102, 160
+- head-related transfer function *see* HRTF
+- headphones *22*, 23, 68–69, 126–131; 声学隔离 44, 54, 169; 声学透明 53; 耳罩式 126–127; 耳垂式 127; 入耳式 127–128; 开放式 128; 骨传导 129; 软骨传导 129; 听透式 1, 50, 54, 129–130; 智能 114, 130; 四声道 27; 让人想起中介 43; 无线 83, 125; *see also* 声学透明; 主动降噪
+- hearables *see* headphones (smart)
+- *Hear&There* 87–88
+- hearing aid 61, 129, 130, 150, 187, 190; 声分离 5, 15, 21, 54, 190
+- hidden loudspeaker *see* direct augmentation
+- higher-order Ambisonics (HOA) *see* Ambisonics
+- Hochberg, Julian 146
+- hoerwinkel 81
+- hologram 16, 42; 听觉 16, 28, 186, 188
+- HOLOPLOT 26, 29
+- *Horror-Fi Me* 85, 143, 156
+- HRTF (头部相关传递函数) 23, 27, 101, 108–109, 189
+- *Hyperkuulo* 89–90, 171, 176
+- Ikeda, Ryoji 19
+- illusion of agency 49, 90
+- illusion of nonmediation 24, 27, 43–44, 133, 147
+- immersion 43–45, 146, 148–149, 166, 172; 在示例应用中 71, 80, 90, 93; *see also* 存在感
+- immersive theatre *see* theatre
+- incongruence (mismatch) 90, 156, 163–166, 181
+- IMU (inertial measurement unit) *115*, 118, 121–122, 134, 189
+- inside-out tracking 116–117, 187, 189
+- inside-the-head locatedness (IHL) 29, 109
+- Irwin-Schütze, Anna 54
+- IVAS (codec) 135, 188, 193
+- Kishino, Fumio 13, 41
+- Koivumäki, Ari 89
+- language translation *see* simultaneous interpretation
+* latency: audio 1, 123, 124, 125, 130, 188; pose tracking 117, 120, 160; motion-to-sound 133–134
+* lateralisation 29–31
+* *Letter from Siberia* 167
+* level of realness 41–42
+* LiDAR (light detection and ranging) 118, 124, 187, 189–190; scanning environment 20, 108, 133, 144, 192; *see also* `tracking`
+* *Lighthouse See Vive Lighthouse*
+* *Linked* 73, 145
+* *LISTEN* 79, **157**, 175
+* local presence 11, 13–14, 43
+* localised sound *see* attachment
+* location-driven AAR 143
+* locative audio 60, 69, 71–73, 155–157
+* Lokki, Tapio 86, 191
+* Lombard, Matthew 43
+* loudspeaker (hidden) *see* `direct augmentation`
+* *Lousiana Walk #14* 71
+* magnetisation effect *see* `ventrioloquism effect`
+* *Maison Gainsbourg* 54, 147, 168; reinforcing 82; remembering 141, 145; acousmatic sounds **156**, 172–173
+* Manovich, Lev 5
+* Marker, Chris 167
+* marker-based tracking 116, 126, *128*
+* markerless tracking 116–117, 189
+* *The Matrix* 182
+* Merleau-Ponty, Maurice 39
+* *Meta XR Audio SDK* 107
+* microphones 2, 122–123, 188; Ambisonic 102–103; for adaptive sound control 48, 54, 129–130, 190; binaural 23, 71, 78, 84, 160, 171, 178; integrated in devices 124, 125, 130, *131*, 187; privacy concerns 190, 194; for ultrasound tracking 121; for scanning environment 107–108, 144
+* microphone-through *see* `pseudoacoustic headphones`
+* *Microsoft Project Acoustics* 107
+* Milgram, Paul 13, 41
+* Miller, George Bures 71
+* Miller, Graeme 73, 145
+* MiniDisc 78, 124
+* mixed reality (MR) 11, 13–14, 192; auditory 77, 129, 151, 179; headsets 6, 47, 108, 117–118, 128–129, 189; with headphones 23; immersion 43, 128
+* Mizell, David 77
+* mobile AAR 108, 142, 194; see also `ubiquitous AAR`
+* Montan, Nils 27
+* motion-to-sound latency *see* `latency`
+* *MPEG-H* 26, 102, 135
+* *MPEG-I* 134, 103, 193
+* MR *see* `mixed reality`
+* multi-point HOA 135, 159
+* Mülleder, Alexander *128*
+* *Münster Walk* 71
+* Naphtali, Dafna 148, 151
+* narrative 140; focus 144–146; ideas 141–142; immersion/transportation 44–45, 71, 109; techniques 154–155, **156**–**157**; interactive storytelling 48–50
+* *Nature Soundscapes* 66, 142, 165, 166
+* *NAVIG* 86
+* near field sounds 101, **157**, 178–179
+* near-ear speakers 6, 22, 23, 128, 130, *131*
+* neckband speakers *see* `wearable speakers`
+* Neuhaus, Max 66
+* noise reduction *see* `active noise cancelling`
+* *NoTours* 89
+* object-based audio (OBA) *22*, 26, 101–102, 103–105, 135, 159, 160
+* obstructed (augmented object); in virtual audio 105, 114
+* in narratives 150, **156**, 161, 158–159, 163, 169, 171
+* with attractor sounds 175
+* occlusion effect (headphones) 127, 130
+* omnidirectional hearing 5, 14, 43, 86; *see also* `spatial hearing`
+* *OptiTrack* 116, *128*, 133
+* outside-in tracking 116
+* *Personal Guidance System* 86
+* *The Planets* 90, 143, 181
+* *PLATONE* 107
+* plausibility 18–19; in sense of presence 43–45; in object congruence 161–166; with acousmatic sounds 171
+* *请确认您不是机器人* 92–93, 130, 167
+* *精灵宝可梦 GO* 54–55
+* pose tracking *see* 追踪
+* privacy concerns 81, 190, 194
+* private: devices 128; experience 29, 54, 179
+* proximity: interaction based on 25, 89, 114, 142, 175, 177; sensors 25, 45, 112, 121, 143, 155, 157; in example applications 79–80, 81, 88–89
+* pseudoacoustic headphones 54, 129
+* Pulkki, Ville 192
+* *Radioscape* 72–73
+* *Ray-Ban Meta* 23, 47, *131*, 194
+* reality 39–42, 55
+* reality-virtuality continuum 10, 13
+* *The Reign Union (Valtakunnan liitto)* 10, 39, 85, 132, 154; accessibility 21, 149; individualised content 93, 141; interaction 47, 114, 147; object congruence/incongruence **156**, *162*, 163, 164, 165; reskinning 85, 146; use of acousmatic sounds 170, 173; other narrative techniques **157**, 168, 169, 174
+* reinforcing (design paradigm) 81–82, 144–146, 161
+* remembering (design paradigm) 144–145
+* removing and replacing sounds 1–4, 9, 12, 18, 33, 191, 194; using microphones 122–123, 130; in narratives **157**, 161, 169, 179
+* reskinning (design paradigm) 42, 83–85, 144–146
+* revelation (narrative technique) **156**, 169–170, 171, 174, 175
+* *RjDj* 47–48
+* Rodkin, Richard 148
+* room acoustics 28, 104–109, 113, **114**, 118, 133, 171, 189
+* room congruence 19, 99, 161
+
+
+
+* room divergence 166, 181
+* room impulse response (RIR) 97, 106–109
+* *Rotozaza* 180
+* *Roundware* 88
+* satellite positioning: navigation 15, 20, 86, 87; geolocated audio 71, 73, 87–88, 155; GNSS 87, 120, 189; GPS 87–88, 120; as tracking technology 87, 115, 120, 189
+* *Saving Private Ryan* 169
+* scene-based audio *see* Ambisonics
+* Schaeffer, Pierre 29
+* Schafer, R. Murray 50–51
+* Schraffenberger, Hanna 146
+* Schütze, Stephan 54
+* scopeaudio 81
+* *Séance* 39, 84–85, 147, 163, 172, 179; lack of interaction 31, 46, 146; sound attachment 159, 160
+* *Sennheiser guidePORT* 80, 121
+* *Sennheiser Surrounder* 27
+* sense of presence 5, 42, 43–46, 93, 133; embodied interaction 31, 45–46, 49, 55; acoustic transparency 50, 53–54; tech hickups 133; *see also* immersion
+* sensor fusion 115
+* sensory substitution 20
+* simultaneous interpretation (live translation) 4, 142, 190–191
+* site-specific AAR 17, 46; accessibility 143; applications 71, 87–90, 91; environment 42, 81, 145; platform 22, 142
+* situational awareness 14, 16, 19, 86–87, 158, 191–192; blind users 20; cars 68; connection to reality 39, 53
+* six degrees of freedom (6DoF) 31–32, 155, 177, 193; in interaction 49–50, 147; foundations of 69; availability for creators 134, 143; in virtual acoustics 103, 105, 107–108, 109, 126, 160, 172, 189; in example applications 79, 80, 82, 83–84, 85; in pose tracking 114, 116, 118, 120, 121–122
+* SLAM (simultaneous localization and mapping) 116
+* smart glasses 6, 23, 112, 128, 130, 131; for user interaction 20, 47, 114, 149; as technical platform 124, 187, 190, 191; in example application 93; privacy concerns 194
+* smart headphones *see* headphones
+* smart ring 5–6
+* smart watch 2, 48
+* social interaction 53, 61, 90, 92–93, 127
+* *The Sonic Bike* 89
+* *Sonic Traces Heldenplatz* 81–82, 147, 172
+* sonification 19–20, 21, 39–40, 68, 81, 86, 192
+* Sony Walkman 63, 70
+* sound event 97–99
+* *The Sound of Things* 21, 49, 83–84, 145, 147, 158; using partial congruence `156`, `164`
+* *Sound PacMan* 91
+* sound separation (isolation) 4, 7, 9, 15, 113, 122, 129–130, 190
+* soundfield 22, 24, 27, 53
+* soundscape manipulation 5, 7, 54, 69, 129, 190
+* The Soundwalk Collective 82
+* soundwalks 52
+* spatial hearing 97–101, 192; *see also* `binaural audio`; `omnidirectional hearing`
+* spatial room impulse response (SRIR) *see* `room impulse response`
+* spatial scale and offset (narrative technique) `157`, `176–178`
+* spatialisation *see* `virtual audio`
+* spatialiser *see* `virtual audio`
+* spatially aligned *see* `attachment`
+* spatially registered *see* `attachment`
+* speech recognition 132, 192; for voice separation 4, 5, 129–130, 190; for interaction 47, 113, 114, 148
+* speech separation *see* `sound separation`
+* speech synthesis 4, 191, 192
+* Spielberg, Steven 169
+* standards 103, 134–135, 193
+* *Steam Audio* 108
+* Stedelijk Museum 69–70
+* storyworld 49–50
+* ‘super hearing’ 20, 73
+* surround sound 15, 102, 194; systems 26–27, 63, 68, 89, 99, 143; with object-based audio 102
+* suspension of disbelief 45, 163–164
+* synchronisation (narrative technique) `157`, `180`, `182`
+* teleconferencing *see* `telepresence`
+* telepresence 14, 16, 62–63, 135, 188; *see also* `applications`
+* tethered connections 125, 134
+* theatre 142, 150, 169, 178, 191, 193; immersive/participatory 42, 48, 53, 84, 150, 180; radio 151
+* three degrees of freedom (3DoF) 32, 113, 177–178
+* *Time Kettle W4 Pro* 191
+* *Time Square* 66
+* tracking systems (pose) 113–115, 189–190; electromagnetic 120; inertial 121–122, 134; motion sensors 66, 67; optical 83, 85, 86, 116–118, 133, 144, 187; radio-based 80, 89, 118–120; satellite 87, 120, 155; ultrasound 120–121; limitations 33, 69, 155, 159; *see also* `proximity`
+* transferable AAR 17, 85, 90, 116, 143
+* trigger zone/area 87–88, `89`, 144, 155, 157, 175
+* [Truax, Barry]（章节 3，第 51 页）
+* 无处不在的 AAR（章节 2，第 16 页），（章节 2，第 22 页），（章节 3，第 42 页），（章节 3，第 48 页），（章节 9，第 168 页），（章节 10，第 187 页），（章节 10，第 193 页）；*参见* [移动 AAR]（索引 1，第 306 页）
+* 超声波跟踪 *see* [跟踪]（索引 1，第 483 页）
+* “uncanny valley”（章节 8，第 147 页）
+* Unity（章节 6，第 102 页），（章节 7，第 124 页），（章节 7，第 132 页）
+* Unreal Engine（章节 6，第 102 页），（章节 7，第 124 页），（章节 7，第 132 页）
+* 用户界面（除音频外）（章节 5，第 79 页），（章节 5，第 81–82 页），（章节 8，第 148–149 页）
+* *usomo*（章节 5，第 80 页），（章节 5，第 82 页）
+* UWB（超宽带）*see* [跟踪]（索引 1，第 483 页）
+* *Valtakunnan Liitto See the Reign Union*
+* van der Heide, Edwin（章节 4，第 72 页）
+* ventriloquism effect（章节 2，第 31 页），（章节 4，第 61 页），（章节 7，第 134 页），（章节 9，第 160 页）
+* verbocentrism（章节 2，第 21–22 页）
+* verisimilitude（章节 2，第 18–19 页），（章节 9，第 161 页）
+* Vienna Augarten（章节 8，第 144 页），（章节 8，第 144 页），（章节 9，第 157 页），（章节 9，第 177 页）
+* virtual acoustics *see* [virtual audio]（索引 1，第 511 页）
+* virtual audio: spatialisation（章节 6，第 97–99 页）；virtual acoustics engine（spatialiser）（章节 6，第 104–109 页）
+* virtual reality (VR)（章节 2，第 12 页），（章节 2，第 13 页），（章节 2，第 14 页），（章节 6，第 102 页），（章节 9，第 170 页），（章节 9，第 180 页）；听觉（章节 3，第 39 页）；virtual audio（章节 6，第 102 页），（章节 6，第 107 页），（章节 10，第 188 页）；跟踪（章节 7，第 118 页），（章节 7，第 121 页）
+* virtual sounds（章节 2，第 17–18 页）
+* visually impaired persons（章节 2，第 12 页），（章节 2，第 15 页），（章节 2，第 20–21 页），（章节 2，第 30 页），（章节 3，第 44 页），（章节 4，第 68 页），（章节 5，第 86 页），（章节 8，第 149 页）；*参见 also* [accessibility]（索引 1，第 3 页）
+* *VIVE Lighthouse*（章节 7，第 118 页）
+* *VIVE Tracker*（章节 7，第 133 页）
+* *VIVE Ultimate Tracker*（章节 7，第 117 页）
+* voice cloning（章节 1，第 4 页），（章节 8，第 151 页）
+* voice recognition *see* [speech recognition]（索引 1，第 457 页）
+* VR *see* [virtual reality]（索引 1，第 513 页）
+* Väänänen, Riitta（章节 5，第 86 页），（章节 10，第 191 页）
+* *Walkie-Talkie Dream Angles*（章节 2，第 21 页），（章节 8，第 151 页），（章节 9，第 167 页）
+* *The War of the Worlds*（章节 8，第 150–151 页）
+* wave field synthesis (WFS)（章节 2，第 9 页），（章节 2，第 17 页），（章节 2，第 22 页），（章节 2，第 26 页），（章节 2，第 28–29 页），（章节 4，第 63 页），（章节 9，第 172 页）；挑战（章节 2，第 28 页），（章节 9，第 159 页）
+* wearable speakers（章节 2，第 9 页），（章节 2，第 23 页），（章节 2，第 27 页）
+* Welles, Orson（章节 8，第 151 页）
+* WHS（章节 5，第 85 页）
+* wireless audio transmission（章节 7，第 124 页），（章节 7，第 125 页），（章节 7，第 130 页），（章节 7，第 134 页）；在示例应用中（章节 1，第 2 页），（章节 4，第 69 页），（章节 5，第 81 页），（章节 5，第 83 页）
+* *The World’s Deepest Bin*（章节 4，第 66 页），（章节 9，第 156 页），（章节 9，第 168 页）
+* *Wwise*（章节 7，第 124 页）
+* XR *see* [extended reality]（索引 1，第 168 页）
+* XY-Yaw（章节 2，第 33 页），（章节 5，第 88 页），（章节 9，第 155 页），（章节 9，第 177 页）
+* *Zombies, Run!*（章节 3，第 41 页），（章节 3，第 46 页），（章节 5，第 91–92 页），（章节 8，第 141 页），（章节 8，第 145 页），（章节 9，第 168–169 页）
+* zooming (audio) *see* [beamforming]（索引 1，第 93 页）
+* zooming (virtual sounds)（章节 9，第 176 页）

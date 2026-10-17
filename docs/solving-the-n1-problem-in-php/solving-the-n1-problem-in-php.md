@@ -1,43 +1,17 @@
+
 # PHP 中的 N+1 问题求解
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 在 Twitter 上推文这本书！
+## 在 Twitter 上推文这本书！
 
 请通过在 Twitter 上传播这本书来帮助 Paul M. Jones！
 
-本书建议的标签（hashtag）为 #sn1php。
+本书建议的标签（hashtag）为 `#sn1php`。
 
 点击此链接在 Twitter 上搜索该标签，了解其他人对这本书的评价：
 
 https://twitter.com/search?q=#sn1php
 
-# Paul M. Jones 的其他著作
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Paul M. Jones 的其他著作
 
 # 1. 引言
 
@@ -68,17 +42,17 @@ https://twitter.com/search?q=#sn1php
 
 这是一个遗留应用示例，因此没有使用 ORM。（不同的 ORM 实现有自己的 N+1 缓解策略，我们在这里无法讨论。）
 
-在没有 ORM 的情况下，这个假设的应用使用 PDO² 进行数据库抽象。并不是所有的遗留代码都使用 PDO，但关于 N+1 的原理（包括问题和解决方案）适用于所有的数据库连接库。这些包括 mysqli³、mysqli*，以及我们自己的数据库抽象层。
+在没有 ORM 的情况下，这个假设的应用使用 `PDO`² 进行数据库抽象。并不是所有的遗留代码都使用 `PDO`，但关于 N+1 的原理（包括问题和解决方案）适用于所有的数据库连接库。这些包括 `mysqli`³、`mysqli*`，以及我们自己的数据库抽象层。
 
-在获取查询时，我们的应用程序尽可能使用 `PDO::FETCH_CLASS`* 模式。这导致 PDO 返回一个指定实体类的数组实例，每个实例的属性已填充了来自该行的数据。在其他系统中，你可能会单独从数据库查询创建类；我们使用 `FETCH_CLASS` 主要是为了减少示例代码量。（实体类本身是带有公共属性的普通 PHP 对象）
+在获取查询时，我们的应用程序尽可能使用 `PDO::FETCH_CLASS`* 模式。这导致 `PDO` 返回一个指定实体类的数组实例，每个实例的属性已填充了来自该行的数据。在其他系统中，你可能会单独从数据库查询创建类；我们使用 `FETCH_CLASS` 主要是为了减少示例代码量。（实体类本身是带有公共属性的普通 PHP 对象）
 
 最后，简易代码库使用普通的 PHP 数组处理实体集合。更复杂的系统可能会使用通用类属性，但关于集合的 N+1 原理仍然是一致的。
 
 > ¹https://github.com/mlphp
-²http://php.net/PDO
-³http://php.net/mysql
-⁴http://php.net/mysqli
-⁵http://php.net/manual/pdostatement.fetch.php
+> ²http://php.net/PDO
+> ³http://php.net/mysql
+> ⁴http://php.net/mysqli
+> ⁵http://php.net/manual/pdostatement.fetch.php
 
 ## 定义 N+1 问题
 
@@ -86,7 +60,7 @@ https://twitter.com/search?q=#sn1php
 
 通过示例来描述 N+1 问题是最简单的。假设我们的简易博客应用需要显示一个包含 10 篇最新博客文章的页面，以及每篇文章文章的所有评论。
 
-首先，应用程序以数组形式获取 Post 实体的根集合：
+首先，应用程序以数组形式获取 `Post` 实体的根集合：
 
 ```php
 <?php
@@ -100,7 +74,7 @@ $posts = $sth->fetchAll(PDO::FETCH_CLASS, 'Post');
 ?>
 ```
 
-到目前为止良好：应用程序已执行了一个查询来构建 Post 实体的根集合。接下来，应用程序收集每个实体上的 Comment 实体：
+到目前为止良好：应用程序已执行了一个查询来构建 `Post` 实体的根集合。接下来，应用程序收集每个实体上的 `Comment` 实体：
 
 ```php
 <?php
@@ -115,22 +89,21 @@ foreach ($posts as $post) {
 }
 ?>
 ```
-（注：原文代码块处有格式错误，已按逻辑对齐）
 
 应用程序为每个文章执行了十次查询。通过此，我们到达了 N+1 问题的核心。
 
-## 问题定义
+### 问题定义
 
 N+1 问题表现为如下：
 
 对于根集合中的每个实体，应用程序都会执行一个额外的查询来获取关联。
 
-在上面的示例中，应用程序总共执行了 11 次查询来构建 10 个实体及其 Comment 集合：
+在上面的示例中，应用程序总共执行了 11 次查询来构建 10 个实体及其 `Comment` 集合：
 
 - 一个获取根集合实体的查询（这是 N+1 中的 "1"）
 - 为根集合中的每个实体执行的十次获取的查询（这是 N+1 中的 "N"，其中 "N" 等于根集合中的实体数量）。
 
-## 性能影响
+### 性能影响
 
 N+1 有两个性能影响：
 
@@ -163,14 +136,6 @@ foreach ($posts as $post) {
 
 或者，我们可以从问题的另一个端开始，审查数据库查询日志（或应用程序级查询分析器）以寻找查询中的模式。在对应用程序和底层数据有一定了解的情况下，这更容易实现，但在简单情况下，即使没有详细的应用知识，也应该是显而易见的。模式识别是这种方法成功的关键。
 
-
-
-
-
-## 诊断 N+1 问题
-
-在我们帖子和评论的示例中，可能会在查询日志中看到类似的内容：
-
 ### N 次评论查询和 1 次帖子查询
 
 ```
@@ -187,7 +152,7 @@ SELECT * FROM comments WHERE comments.post_id = 927;
 
 如果应用程序检索两个或多个关系的数据，这种模式可能没那么明显。在“慢速报告脚本”的情况下，应用程序为每个根实体检索了五个关联实体，日志看起来如下……
 
-按根实体批处理的查询
+### 按根实体批处理的查询
 
 ```
 SELECT * FROM root_table WHERE;
@@ -208,13 +173,9 @@ SELECT * FROM rel4 WHERE rel4.root_id = 10326 ...;
 SELECT * FROM rel5 WHERE rel5.root_id = 10326 ...;
 ```
 
-……依此类，每个根实体都有 5 次相关查询。如你所见，该模式以五行为一组进行重复，每行对应一个 rel1 到 rel5。
+……依此类，每个根实体都有 5 次相关查询。如你所见，该模式以五行为一组进行重复，每行对应一个 `rel1` 到 `rel5`。
 
-## 诊断 N+1 问题
-
-如果查询是按关系而不是按根实体批处理，日志可能更像这样：
-
-按关系批处理的查询
+### 按关系批处理的查询
 
 ```
 SELECT * FROM root_table WHERE ... ;
@@ -263,7 +224,7 @@ SELECT * FROM rel5.root_id = 10326 ...
 
 我们都知道 CRUD 这个缩写：创建（Create）、读取（Read）、更新（Update）、删除（Delete）。这里的关键在于，CRUD 主要应用于单个实体：检索单个实体、编辑和删除单个实体。
 
-这种一次处理一个的方法对于大多数数据库交互都是很有用的。它导致了如 RowDataGateway 和 ActiveRecord? 等模式的使用。在这些模式中，重点在于如何构建单个实体（通常带有它的关联关系）。
+这种一次处理一个的方法对于大多数数据库交互都是很有用的。它导致了如 `RowDataGateway` 和 `ActiveRecord`? 等模式的使用。在这些模式中，重点在于如何构建单个实体（通常带有它的关联关系）。
 
 对单个实体的关注是 N+1 问题的根源。在这种思维下，开发者将构建多个实体的集合视为构建实体的变体。开发者只是对集合中的每个实体循环一次单实体的创建过程。实体集合本质上是事后考虑的。因为它们不是主要关注点，开发者自然会倾向于使用“循环内查询”，这正是 N+1 问题的标志。
 
@@ -273,28 +234,30 @@ SELECT * FROM rel5.root_id = 10326 ...
 
 虽然“R-E-A-D”部分直接对应“C-R-U-D”，但请注意，第一个字母代表的是实体的集合。
 
-## 为什么会出现 N+1 问题？
-
-通过首先考虑实体的集合而不是只考虑单个实体，开发者开始考虑不同的方法。如 TableGateway³、Table⁴ 甚至 DataMapper⁵ 等模式将集合视为一等公民来处理。在将实体集合视为一等关注后，构建单个实体（即只包含单个实体的实体）就变得相对容易。
+通过首先考虑实体的集合而不是只考虑单个实体，开发者开始考虑不同的方法。如 `TableGateway`³、`Table`⁴ 甚至 `DataMapper`⁵ 等模式将集合视为一等公民来处理。在将实体集合视为一等关注后，构建单个实体（即只包含单个实体的实体）就变得相对容易。
 
 如果我们能高效地构建实体集合，那么构建单个实体也是高效的。反之则并非如此，正如我们在示例中所看到的那样。
+
+³https://martinfowler.com/eaa/eaaCatalog/tableDataGateway.html
+⁴https://martinfowler.com/eaa/eaaCatalog/tableModule.html
+⁵https://martinfowler.com/eaa/eaaCatalog/dataMapper.html
 
 # 5. 使用单个查询解决 N+1
 
 解决 N+1 问题的一种方法是在一次查询中检索所有根实体的数据以及所有关联的数据：
 
--   发处一个查询，将所有必要的表连接到单个结果集中。
--   在 PHP 循环中将每行结果转换为实体对象。
+- 发处一个查询，将所有必要的表连接到单个结果集中。
+- 在 PHP 循环中将每行结果转换为实体对象。
 
 这种方法在直觉上很有吸引力，因为无论根实体或关联的数量有多少，它只产生一个查询。虽然它对于“一对”关系效果良好，但通常对于“一对多”关系并不适用。尽管如此，为了完整性起见，它仍然值得讨论。
 
- 处理“多对一”关系
+## 处理“多对一”关系
 
 假设我们的博客应用程序需要展示10 篇最新的博客帖子及其作者。在 N+1 的情况下，相关代码可能如下。
 
-## 原始的 N+1 代码
+### 原始的 N+1 代码
 
-```
+```php
 <?php
 // 获取最新的帖子
 $stmt = 'SELECT *
@@ -317,23 +280,15 @@ foreach ($posts as $post) {
 ?>
 ```
 
-³https://martinfowler.com/eaa/eaaCatalog/tableDataGateway.html
-⁴https://martinfowler.com/eaa/eaaCatalog/tableModule.html
-⁵https://martinfowler.com/eaa/eaaCatalog/dataMapper.html
+与任何 N+1 情况一样，这会为根实体集合发布 1 次查询，然后为每个关联发布 1 次查询。在这种情况下，如果有 10 个 `Post` 实体，就意味着总共会有 11 次查询。
 
 
 
-
-
-## 使用单个查询解决 N+1 问题
-
-与任何 N+1 情况一样，这会为根实体集合发布 1 次查询，然后为每个关联发布 1 次查询。在这种情况下，如果有 10 个 Post 实体，就意味着总共会有 11 次查询。
-
-> 作为一个额外的问题，请注意该代码为每个 Post 创建了一个新的 Author 实体。如果所有 Post 实体都属于同一个 Author，意味着存在十份 Author 数据的副本，且其中任何一个都不是权威的。对一个 Post 的 Author 的更改不会反映在另一个帖子上本应是相同的 Author 上。我们将在下文的单查询解决方案中解决这个问题。
+> 作为一个额外的问题，请注意该代码为每个 `Post` 创建了一个新的 `Author` 实体。如果所有 `Post` 实体都属于同一个 `Author`，意味着存在十份 `Author` 数据的副本，且其中任何一个都不是权威的。对一个 `Post` 的 `Author` 的更改不会反映在另一个帖子上本应是相同的 `Author` 上。我们将在下文的单查询解决方案中解决这个问题。
 
 ## 转换为单查询
 
-由于这是一个“多对一”查询（每个 Post 仅属于一个 Author），我们可以考虑使用单查询方法来消除 N+1 问题。首先，我们获取包含所有 Post 和 Author 数据的一行记录：
+由于这是一个“多对一”查询（每个 `Post` 仅属于一个 `Author`），我们可以考虑使用单查询方法来消除 N+1 问题。首先，我们获取包含所有 `Post` 和 `Author` 数据的一行记录：
 
 ```php
 <?php
@@ -360,11 +315,11 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 - 我们不再使用 `SELECT *`。我们必须处理具有相同列名（在本例中为 `author_id`）的表之间的命名冲突，同时确保我们获取了构建相关实体所需的所有数据。在这里，我们通过为每个列名加上带有目标实体名称的别缀，并使用两个下划线作为分隔符来实现。
 - 我们为“对一”关系添加了 `JOIN` 子句，在本例中连接到作者表。
-- 3. 我们使用 `PDO::FETCH_ASSOC` 获取模式而不是 `PDO::FETCH_CLASS`。这返回的是一个数组数组，而不是对象实例数组。因为每行代表了两个实体的数据（一个 Post 和一个 Author），所以没有一个类适用于该行数据。因此，我们必须从行数据自己创建对象实例。
+- 我们使用 `PDO::FETCH_ASSOC` 获取模式而不是 `PDO::FETCH_CLASS`。这返回的是一个数组数组，而不是对象实例数组。因为每行代表了两个实体的数据（一个 `Post` 和一个 `Author`），所以没有一个类适用于该行数据。因此，我们必须从行数据自己创建对象实例。
 
 数据库返回的结果集看起来如下：
 
-## 带有 Post 和作者的结果行
+### 带有 Post 和作者的结果行
 
 | post_id | title | author_id | name |
 | --- | --- | --- | --- |
@@ -416,11 +371,12 @@ $post->author = $author;
 // 在集合中保留 post
 $posts[] = $post;
 ```
+```
 
 关于对象创建代码的说明：
 
-- 1. 这种方法显然比允许 PDO 为我们创建实体实例的代码行数要多。在一种不那么简单的情况下，实体构造函数可能会接收一个数据数组并填充自己，或者会有某种类型的实体工厂或构建器来处理这些工作。无论如何，这种方法的性能保证优于发布 11 次查询来创建 Post 实体及其关联的 Author 实体。
-- 2. 该解决方案在 Post 实体之间使用了唯一的 Author 关联，与 N+1 代码不同。虽然不是严格的 N+1 问题，但它解决了多个对象表示同一个作者的问题。
+- 这种方法显然比允许 `PDO` 为我们创建实体实例的代码行数要多。在一种不那么简单的情况下，实体构造函数可能会接收一个数据数组并填充自己，或者会有某种类型的实体工厂或构建器来处理这些工作。无论如何，这种方法的性能保证优于发布 11 次查询来创建 `Post` 实体及其关联的 `Author` 实体。
+- 该解决方案在 `Post` 实体之间使用了唯一的 `Author` 关联，与 N+1 代码不同。虽然不是严格的 N+1 问题，但它解决了多个对象表示同一个作者的问题。
 
 至此，解决方案就完成了。添加“一对一”关系来构建关联实体同样简单。我们会添加另一个 `JOIN` 子句，相应地为所选列名设置别名，然后在实体创建流中从行中提取它们，在此过程中跟踪唯一的实体。
 
@@ -428,7 +384,7 @@ $posts[] = $post;
 
 在单查询方法下，这些关系非常直观。我们只需要一个普通的 `JOIN`，不需要对唯一实体进行任何跟踪。
 
-假设博客应用程序需要展示 Post 实体列表，以及跟踪视图次数和评论数量的 Summary 数据。检索和创建代码看起来如下所示：
+假设博客应用程序需要展示 `Post` 实体列表，以及跟踪视图次数和评论数量的 `Summary` 数据。检索和创建代码看起来如下所示：
 
 ```php
 <?php
@@ -542,13 +498,9 @@ foreach ($rows as $row) {
 ?>
 ```
 
-
-
-
-
 ## 处理“一对多”关系
 
-遗憾的是，单查询解决方案对于大多数“一对多”和“多对多”情况几乎完全是不适用的。让我们来看看之前的“帖子与评论”示例，找出为什么如此。我们将首先获取所有的 Post 实体（而不仅仅是 10 个）以及它们的所有评论：
+遗憾的是，单查询解决方案对于大多数“一对多”和“多对多”情况几乎完全是不适用的。让我们来看看之前的“帖子与评论”示例，找出为什么如此。我们将首先获取所有的 `Post` 实体（而不仅仅是 10 个）以及它们的所有评论：
 
 ```php
 <?php
@@ -573,15 +525,15 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 关于这段代码需要注意的几点：
 
-- 1. 对于“一对一”，我们不再使用 SELECT *；仍然需要对相似的列名进行解构。
-- 2. 对于“一对多”关系，我们添加了 LEFT JOIN 子句，在本例中是连接 comments 表。（我们使用 LEFT JOIN 是以防某些帖子没有评论）。
-- 3. 同样对于“一对一”，我们使用 PDO::FETCH_ASSOC 模式而不是 PDO::FETCH_CLASS，并且我们必须自己创建对象实例。
+- 对于“一对一”，我们不再使用 `SELECT *`；仍然需要对相似的列名进行解构。
+- 对于“一对多”关系，我们添加了 `LEFT JOIN` 子句，在本例中是连接 `comments` 表。（我们使用 `LEFT JOIN` 是以防某些帖子没有评论）。
+- 同样对于“一对一”，我们使用 `PDO::FETCH_ASSOC` 模式而不是 `PDO::FETCH_CLASS`，并且我们必须自己创建对象实例。
 
-结果集将会非常大，并且包含大量重复内容。如果系统中有 50 个 Post 实体，每个 Post 关联了 5 个 Comment 实体，这意味着结果集中将有 250 行。它看起来像这样：
+结果集将会非常大，并且包含大量重复内容。如果系统中有 50 个 `Post` 实体，每个 `Post` 关联了 5 个 `Comment` 实体，这意味着结果集中将有 250 行。它看起来像这样：
 
-## 使用单查询解决 N+1 问题
+### 使用单查询解决 N+1 问题
 
-### 带有评论和重复帖子的结果行
+#### 带有评论和重复帖子的结果行
 
 | post_id | title | comment_id | body |
 |---|---|---|---|
@@ -601,53 +553,21 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 | 10 | Post #10 | 249 | Comment #4 on post #10 |
 | 10 | Post #10 | 250 | Comment #5 on post #10 |
 
-由于结果集中的这些重复，我们需要遍历结果集并提取出不同的 Posts。同时，我们需要保留与每个 Post 关联的多个 Comment 实体。实现此操作的代码如下：
+由于结果集中的这些重复，我们需要遍历结果集并提取出不同的 `Posts`。同时，我们需要保留与每个 `Post` 关联的多个 `Comment` 实体。实现此操作的代码如下：
 
-```php
-<?php
-$posts = array();
-foreach ($rows as $row) {
-    // 此行的 post 实体 ID
-    $post_id = $row['posts__post_id'];
-    
-    // post 实体是否已于 $posts 集合中？
-    if (!isset($posts[$post_id])) {
-        // 创建一个新的 post 实体
-        $post = new Post();
-        $post->post_id = $row['posts__post_id'];
-        $post->author_id = $row['posts__author_id'];
-        $post->datetime = $row['posts__datetime'];
-        $post->title = $row['posts__title'];
-        $post->body = $row['posts__body'];
-        $post->comments = array();
-    }
 
-    // 从行数据创建一个 comment 实体
-```php
-$comment = new Comment();
-$comment->comment_id = $row['comment__comment_id'];
-$comment->name = $row['comment__name'];
-$comment->email = $row['comment__email'];
-$comment->website = $row['comment__website'];
-$comment->body = $row['comment__body'];
 
-// 将 comment 关联到 post
-$posts[$post_id]->comments[$comment->comment_id] = $comment;
-}
-?>
-```
-
-在循环结束时，我们将拥有一个包含所有 Post 实体及其所有关联 Comment 实体的 $posts 集合。
+在循环结束时，我们将拥有一个包含所有 Post 实体及其所有关联 Comment 实体的 `$posts` 集合。
 
 ## 单查询在处理“一对多”关系时失效
 
 虽然单查询解决方案看起来可能是解决应用于“一对多”关系的 N+1 问题的办法，但它存在一些主要的缺点。
 
-首先，没有合理的方法可以添加按我们所需方式工作的 LIMIT 子句。这是因为 LIMIT 应用于返回的行数，而不是所代表的实体数量。这种区别虽然微妙但非常重要。
+首先，没有合理的方法可以添加按我们所需方式工作的 `LIMIT` 子句。这是因为 `LIMIT` 应用于返回的行数，而不是所代表的实体数量。这种区别虽然微妙但非常重要。
 
-如果我们在上面的查询中添加 LIMIT 10，我们实际上会得到 10 行。但这些行并不一定代表 10 个 Post 实体（至少除非每个 Post 只有一个评论）。即使是对 FROM 和 JOIN 子句进行子查询变体，并在子查询中使用 LIMIT 子句，在“一对多”关系中也无法按照我们想要的方式工作。
+如果我们在上面的查询中添加 `LIMIT 10`，我们实际上会得到 10 行。但这些行并不一定代表 10 个 `Post` 实体（至少除非每个 `Post` 只有一个评论）。即使是对 `FROM` 和 `JOIN` 子句进行子查询变体，并在子查询中使用 `LIMIT` 子句，在“一对多”关系中也无法按照我们想要的方式工作。
 
-事实证明，在单查询解决方案中强制执行“一对多”关系的 LIMIT 的唯一方法是在 PHP 循环代码中计数实体。可以说，这是一种次优方法。
+事实证明，在单查询解决方案中强制执行“一对多”关系的 `LIMIT` 的唯一方法是在 PHP 循环代码中计数实体。可以说，这是一种次优方法。
 
 其次，如果有两个或多个“一对多”关系，构建查询并解析结果集以创建实体将变得困难得多。重复问题会呈指数级变得棘手，我们需要跟踪每个关联实体的存在。此外，结果集的大小也会成为问题，无论是列数（因为每行都包含每个实体的所有列）还是行数（因为每行都会重复每个实体的每个数据元素，乘以关系的数量）。
 
@@ -677,70 +597,99 @@ $posts[$post_id]->comments[$comment->comment_id] = $comment;
 
 ## 处理“一对多”关系
 
-以下是使用查询与缝合技术重写的之前的帖子-评论示例。获取主 Post 实体的查询是相同的，但请注意我们随后创建了一个基于 post_id 的根集合（即而不是顺序键）。
+以下是使用查询与缝合技术重写的之前的帖子-评论示例。获取主 `Post` 实体的查询是相同的，但请注意我们随后创建了一个基于 `post_id` 的根集合（即而不是顺序键）。
 
 ```php
 <?php
+
 // 获取顺序索引的实体
+
 $stmt = 'SELECT
+
 FROM posts
+
 ORDER BY datetime DESC
+
 LIMIT 10';
+
 $stmt = $pdo->prepare($stmt);
+
 $stmt->execute();
+
 $post_entities = $stmt->fetchAll(PDO::FETCH_CLASS, 'Post');
 
 // 根据主键值重索引实体
+
 $posts = array();
+
 foreach ($post_entities as $post) {
+
     $post_id = $post->post_id;
+
     $posts[$post_id] = $post;
+
 }
+
 ?>
 ```
 
-现在我们有了根据标识值键索引的 Post 实体集合，我们通过一次查询获取整个 $posts 集合的所有 Comment 实体。
-
-
-
-
+现在我们有了根据标识值键索引的 `Post` 实体集合，我们通过一次查询获取整个 `$posts` 集合的所有 `Comment` 实体。
 
 ## 使用 Query-Stitch 解决 N+1
 
 ```php
 <?php
+
 // 创建一个用逗号分隔的引号 post_id 值列表
+
 $quoted_post_ids = [];
+
 foreach (array_keys($posts) as $post_id) {
+
     $quoted_post_ids[] = $pdo->quote($post_id);
+
 }
+
 $quoted_post_ids = implode(',', $quoted_post_ids);
 
 // 获取所有帖子的评论
+
 $stmt = "SELECT 
+
 FROM comments
+
 WHERE post_id IN ($quoted_post_ids)";
+
 $stmt = $pdo->prepare($stmt);
+
 $stmt->execute();
+
 $comment_entities = $stmt->fetchAll(PDO::FETCH_CLASS, 'Comment');
+
 ?>
 ```
 
-> 评论-编码功能会创建一个用逗号分隔的 post_id 值列表，用于 IN 子句。通常情况下，我们更倾向于使用占位符绑定（placeholder binding），但遗憾的是 PDO 不绑定数组。此外，quote() 不会将数组转换为引号且逗号分隔的值。因此，我们必须创建带引号的逗号分隔的值集。（某些数据库访问库可以绑定数组作为逗号分隔的值，例如 AuraSql。如果你正在使用其中一种，那就再棒了。）
+> 评论-编码功能会创建一个用逗号分隔的 `post_id` 值列表，用于 `IN` 子句。通常情况下，我们更倾向于使用占位符绑定（placeholder binding），但遗憾的是 `PDO` 不绑定数组。此外，`quote()` 不会将数组转换为引号且逗号分隔的值。因此，我们必须创建带引号的逗号分隔的值集。（某些数据库访问库可以绑定数组作为逗号分隔的值，例如 `AuraSql`。如果你正在使用其中一种，那就再棒了。）
 
-最后，我们将 Comment 条目提交到 Post 实体的根集合中。由于 $posts 集合是以 post_id 值作为键的，很容易将每个 Comment 匹配到每个 Post。
+最后，我们将 `Comment` 条目提交到 `Post` 实体的根集合中。由于 `$posts` 集合是以 `post_id` 值作为键的，很容易将每个 `Comment` 匹配到每个 `Post`。
 
 ```php
 <?php
+
 foreach ($comment_entities as $comment) {
+
     $post_id = $comment->post_id;
+
     $comment_id = $comment->comment_id;
+
     $posts[$post_id]->comments[$comment_id] = $comment;
+
 }
+
 ?>
 ```
 
-搞定：我们总共使用了两次查询和两个循环，就创建了带有关联 Comment 集合的 Post 实体根集合。
+搞定：我们总共使用了两次查询和两个循环，就创建了带有关联 `Comment` 集合的 `Post` 实体根集合。
 
 尽管我们仍然使用了循环，但重要的区别在于我们没有在循环内部使用查询。与在循环内部运行查询相比，将关联实体缝合（stitch）到根集合中的循环快得多。
 
@@ -750,28 +699,43 @@ https://github.com/aurasphp/AuraSql
 
 ## 处理“多对多”关系
 
-我们也可以关联多对多关系中的实体。例如，如果我们需要为每个 Post 关联一个多对多关系的 Tag 集合，我们可以这样操作：
+我们也可以关联多对多关系中的实体。例如，如果我们需要为每个 `Post` 关联一个多对多关系的 `Tag` 集合，我们可以这样操作：
 
 ```php
 <?php
+
 // 通过 `posts_tags` 关联表获取所有标签
+
 $stmt = "SELECT
+
     posts_tags.post_id AS post_id,
+
     tags.*
+
 FROM tags
+
 JOIN posts_tags ON posts_tags.tag_id = tags.tag_id
+
 WHERE posts_tags.post_id IN ({$quoted_post_ids})";
 
 $stmt = $pdo->prepare();
+
 $stmt->execute();
+
 $tag_entities = $stmt->fetchAll(PDO::FETCH_CLASS, 'Tag');
 
 // 将标签缝合到 posts 中
+
 foreach ($tag_entities as $tag) {
+
     $post_id = $tag->post_id;
+
     $tag_id = $tag->tag_id;
+
     $posts[$post_id]->tags[$tag_id] = $tag;
+
 }
+
 ?>
 ```
 
@@ -783,42 +747,63 @@ foreach ($tag_entities as $tag) {
 
 如果我们想添加一个“多对一”关系（有时称为“属于”（belongs-to）关联），query-and-stitch 逻辑会稍微复杂一些。我们需要构建一个唯一关联实体的集合，然后将关联实体缝合到根集合中。在这种情况下，我们不希望为每个关联实体创建多个副本，每个实体由相同的底层数据库行表示。
 
-例如，如果每个 Post 都属于一个 Author，我们需要先收集唯一的 Author 实体，然后将它们缝合到 Post 集合中。如果一个 Author 关联了多个 Post 实体，通过一个 Post 修改 Author 数据将反映在所有具有相同 Author 的其他 Post 实体中。
+例如，如果每个 `Post` 都属于一个 `Author`，我们需要先收集唯一的 `Author` 实体，然后将它们缝合到 `Post` 集合中。如果一个 `Author` 关联了多个 `Post` 实体，通过一个 `Post` 修改 `Author` 数据将反映在所有具有相同 `Author` 的其他 `Post` 实体中。
 
 ```php
 <?php
+
 // 从 posts 集合中获取唯一的 author_id 值
+
 $quoted_author_ids = array();
+
 foreach ($posts as $post) {
+
     $quoted_author_ids[] = $pdo->quote($post->author_id);
+
 }
+
 $quoted_author_ids = implode(',', array_unique($quoted_author_ids));
 
 // 将所有作者获取到 posts 集合
+
 $stmt = "SELECT *
+
 FROM authors
+
 WHERE author_id IN ($quoted_author_ids)";
 
 $stmt = $pdo->prepare();
+
 $stmt->execute();
+
 $author_entities = $stmt->fetchAll(PDO::FETCH_CLASS, 'Author');
 
 // 根据标识值对所有作者集合建立键
+
 $authors = array();
+
 foreach ($author_entities as $author) {
+
     $author_id = $author->author_id;
+
     $authors[$author_id] = $author;
+
 }
 
 // 将 Author 实体缝合到 posts
+
 foreach ($posts as $post) {
+
     $author_id = $post->author_id;
+
     $post->author = $authors[$author_id];
+
 }
+
 ?>
 ```
 
-Author 是我们为每个 Post 添加的第三个关联（两个是 Comment 和 Tag 关联）。这样做，我们只添加了 1 次查询，总共 4 次。在这种情况下，有两个额外的循环，一个用于创建 Author 集合，另一个将每个 Author 缝合到其关联的 Post。
+`Author` 是我们为每个 `Post` 添加的第三个关联（两个是 `Comment` 和 `Tag` 关联）。这样做，我们只添加了 1 次查询，总共 4 次。在这种情况下，有两个额外的循环，一个用于创建 `Author` 集合，另一个将每个 `Author` 缝合到其关联的 `Post`。
 
 ## 处理“一对一”关系
 
@@ -826,31 +811,47 @@ Author 是我们为每个 Post 添加的第三个关联（两个是 Comment 和 
 
 ```php
 <?php
+
 // 获取根集合的所有 summaries
+
 $stmt = "SELECT *
+
 FROM summaries
+
 WHERE post_id IN ($quoted_post_ids)";
 
 $stmt = $pdo->prepare();
+
 $stmt->execute();
+
 $summary_entities = $stmt->fetchAll(PDO::FETCH_CLASS, 'Summary');
 
 // 根据标识值对 summaries 建立键
+
 $summaries = array();
+
 foreach ($summary_entities as $summary) {
+
     $post_id = $summary->post_id;
+
     $summaries[$post_id] = $summary;
+
 }
 
 // 将 summaries 缝合到 posts
+
 foreach ($posts as $post) {
+
     $post_id = $post->post_id;
+
     $post->summary = $summaries[$post_id];
+
 }
+
 ?>
 ```
 
-Summary 是我们为每个 Post 添加的第四个关联。
+`Summary` 是我们为每个 `Post` 添加的第四个关联。
 
 ## 性能影响
 
@@ -858,12 +859,12 @@ Summary 是我们为每个 Post 添加的第四个关联。
 
 - 总共 5 次查询：1 次用于根集合，每个关联各 1 次
 - 总共 9 次循环：
-  - 1 次为 Post 集合建立键
-  - 1 次分别为 Author 和 Summary 集合建立键
-  - 1 次创建 post_id 的引号分隔值
-  - 1 次将 Comment、Tag、Author 和 Summary 关联缝合到根集合
+  - 1 次为 `Post` 集合建立键
+  - 1 次分别为 `Author` 和 `Summary` 集合建立键
+  - 1 次创建 `post_id` 的引号分隔值
+  - 1 次将 `Comment`、`Tag`、`Author` 和 `Summary` 关联缝合到根集合
 
-相比之下，具有 10 个 Post 实体的 N+1 情况将只有一个循环，但将发出 41 次查询。query-and-stitch 解决方案的代码量更多，但由于查询减少，性能要更好。
+相比之下，具有 10 个 `Post` 实体的 N+1 情况将只有一个循环，但将发出 41 次查询。query-and-stitch 解决方案的代码量更多，但由于查询减少，性能要更好。
 
 # 7. 重构代码库以移除 N1 问题
 
@@ -875,13 +876,9 @@ Summary 是我们为每个 Post 添加的第四个关联。
 
 最重要的是我们要对应用程序拥有某些测试，至少是对我们要修改的部分。这些测试将帮助我们确保移除 N1 问题时所做的更改不会破坏应用程序。这些不需要是单元测试，表征测试（Characterization tests）即可。至少要与 QA 团队建立良好关系，并将他们的验收测试应用于你的更改。
 
-如果我们没有使用修订版本控制系统（如 Git），现在是开始的好时机。我们应该在单独的分支中工作，而不是在主开发分支中。在我们确认更改工作正常后再进行合并。
+如果我们没有使用修订版本控制系统（如 `Git`），现在是开始的好时机。我们应该在单独的分支中工作，而不是在主开发分支中。在我们确认更改工作正常后再进行合并。
 
 我们需要能够在短的迭代循环中诊断并解决我们的数据库交互循环。这意味着我们需要访问数据库本身（即使只是本地副本），并带有一组用于查询测试的数据数据集。当然，这还需要一套可运行的应用程序安装。
-
-
-
-
 
 ## 流程
 
@@ -905,37 +902,55 @@ Summary 是我们为每个 Post 添加的第四个关联。
 
 这是更困难的 N+1 变体，在现代化的代码库中很常见。在这里，实体的根集合在代码库中的一个位置构建，但关联在另一个独立的位置构建。
 
-例如，如果我们的业务逻辑构建了一个 Post 实体集合……
+例如，如果我们的业务逻辑构建了一个 `Post` 实体集合……
 
 ## 重构代码库以消除 N+1 问题
 
-/path/to/posts_controller.php
+`/path/to/posts_controller.php`
 
 ```php
 <?php
+
 $stmt = 'SELECT * FROM posts ORDER BY datetime DESC LIMIT 10';
+
 $sth = $pdo->prepare($stmt);
+
 $sth->execute();
+
 $posts = $sth->fetchAll(PDO::FETCH_CLASS, 'Post');
+
 ?>
 ```
 
-并且我们的表现层遍历 Post 实体以显示 Comment 集合……
 
-/path/to/templates/show_posts.php
+
+并且我们的表现层遍历 `Post` 实体以显示 `Comment` 集合……
+
+`/path/to/templates/show_posts.php`
 
 ```php
 <?php
+
 foreach ($posts as $post) {
+
   // 显示帖子，...
+
   $stmt = "SELECT * FROM comments WHERE post_id = :post_id LIMIT 10";
+
   $sth = $pdo->prepare(array('post_id' => $post->post_id));
+
   $sth->execute();
+
   $comments = $sth->fetchAll(PDO::FETCH_CLASS, 'Comment');
+
   foreach ($comments as $comment) {
+
     // 显示每个评论
+
   }
+
 }
+
 ?>
 ```
 
@@ -945,54 +960,83 @@ foreach ($posts as $post) {
 
 由于“1”和“N”位于不同的位置，即使在关联是单个实体的情况下，我们也无法应用单查询解决方案。我们需要在分离的位置中内联嵌入“查询并缝合”逻辑。
 
-首先，我们更改构建根集合的代码，使其根据 Post 的标识值对集合进行键化处理。（这看起来应该熟悉；它取自关于查询并缝合的章节.）
+首先，我们更改构建根集合的代码，使其根据 `Post` 的标识值对集合进行键化处理。（这看起来应该熟悉；它取自关于查询并缝合的章节.）
 
-/path/to/posts_controller.php
+`/path/to/posts_controller.php`
 
 ```php
 <?php
+
 $stm = 'SELECT * FROM posts ORDER BY datetime DESC LIMIT 10';
+
 $stm = $pdo->prepare($stm);
+
 $stm->execute();
+
 $post_entities = $stm->fetchAll(PDO::FETCH_CLASS, 'Post');
 
 $posts = array();
+
 foreach ($post_entities as $post) {
+
     $post_id = $post->post_id;
+
     $posts[$post_id] = $post;
+
 }
+
 ?>
 ```
 
 然后，在构建关联的分离位置中，我们内联应用“查询并缝合”方法。（这看起来应该熟悉。）
 
-/path/to/templates/show_posts.php
+`/path/to/templates/show_posts.php`
 
 ```php
 <?php
+
 $quoted_post_ids = [];
+
 foreach (array_keys($posts) as $post_id) {
+
     $quoted_post_ids[] = $pdo->quote($post_id);
+
 }
+
 $quoted_post_ids = implode(',', $quoted_post_ids);
 
 // 获取所有帖子的评论并缝合到帖子中
+
 $stm = "SELECT * FROM comments WHERE post_id IN ($quoted_post_ids)";
+
 $stm = $pdo->prepare($stm)->execute();
+
 $comment_entities = $stm->fetchAll(PDO::FETCH_CLASS, 'Comment');
+
 foreach ($comment_entities as $comment) {
+
     $post_id = $comment->post_id;
+
     $comment_id = $comment->comment_id;
+
     $posts[$post_id]->comments[$comment_id] = $comment;
+
 }
 
 // 重构后的表现逻辑
+
 foreach ($posts as $post) {
+
     // 显示帖子，然后...
+
     foreach ($post->comments as $comment) {
+
         // 显示每个评论
+
     }
+
 }
+
 ?>
 ```
 
@@ -1000,39 +1044,61 @@ foreach ($posts as $post) {
 
 内联方法对于遗留代码库是可行的，但它很混乱。如果我们有一个分层良好的现代代码库，那么最好将分离的关联构建逻辑提取到适当层中。这到目前为止是首选的方法。
 
-例如，假设我们有一个 PostsMapper 和 CommentsMapper：
+例如，假设我们有一个 `PostsMapper` 和 `CommentsMapper`：
 
-Mapper 类
+### Mapper 类
 
 ```php
 <?php
+
 class PostsMapper
+
 {
+
     protected $pdo;
 
     public function fetchRecentPosts()
+
     {
+
         $stm = 'SELECT * FROM posts ORDER BY datetime DESC LIMIT 10';
+
         $sth = $this->pdo->prepare($stm);
+
         $sth->execute();
+
         $posts = $sth->fetchAll(PDO::FETCH_CLASS, 'Post');
+
         return $posts;
+
     }
+
 }
 
 class CommentsMapper
+
 {
+
     protected $pdo;
 
     public function fetchCommentsForPost($post_id)
+
     {
+
         $stm = 'SELECT * FROM comments WHERE post_id = :post_id';
+
         $sth = $this->pdo->prepare($stm);
+
         $sth->execute(array('post_id' => $post_id));
+
         $comments = $sth->fetchAll(PDO::FETCH_CLASS, 'Comment');
+
         return $comments;
+
     }
+
 }
+
 ?>
 ```
 
@@ -1040,76 +1106,103 @@ class CommentsMapper
 
 我们的 N+1 表现逻辑可能看起来如下：
 
-/path/to/templates/show_posts.php
+`/path/to/templates/show_posts.php`
 
 ```php
 foreach ($posts as $post) {
+
     // 显示帖子，然后...
+
     foreach ($post->comments as $comment) {
+
         // 显示每个评论
+
     }
+
 }
 ```
 
-使用“查询并缝合”的一种方法是将将其放在 CommentsMapper 中。
+使用“查询并缝合”的一种方法是将将其放在 `CommentsMapper` 中。
 
-CommentsMapper.php
+`CommentsMapper.php`
 
 ```php
 <?php
+
 class CommentsMapper {
+
     public function fetchIntoPosts($posts) {
+
         $quoted_post_ids = [];
+
         foreach (array_keys($posts) as $post_id) {
+
             $quoted_post_ids[] = $pdo->quote($post_id);
+
         }
+
         $quoted_post_ids = implode(',', $quoted_post_ids);
 
         // 获取所有帖子的评论
+
         $stmt = "SELECT * FROM comments WHERE post_id IN ($quoted_post_ids)";
+
         $stmt = $pdo->prepare($stmt)->execute();
+
         $comment_entities = $stm->fetchAll(PDO::FETCH_CLASS, 'Comment');
 
         // 缝合到帖子
+
         foreach ($comment_entities as $comment) {
+
             $post_id = $comment->post_id;
+
             $comment_id = $comment->comment_id;
+
             $posts[$post_id]->comments[$comment_id] = $comment;
+
         }
+
     }
+
 }
+
 ?>
 ```
 
-（不需要返回 $posts，因为 $posts 是按引用传递的。）
+（不需要返回 `$posts`，因为 `$posts` 是按引用传递的。）
 
 然后表现逻辑可以变成这样：
 
-/path/to/templates/show_posts.php
+`/path/to/templates/show_posts.php`
 
 ```php
 <?php
+
 $comments_mapper->fetchIntoPosts($posts);
+
 foreach ($posts as $post) {
+
     // 显示帖子
+
     foreach ($post->comments as $comment) {
+
         // 显示每个评论
+
     }
+
 }
+
 ?>
 ```
 
-通过这种方式，我们解决了 N+1 问题。然而，我们仍然存在层分离问题。作为进一步的重构，我们可能希望在领域层中统一“查询并缝合”逻辑，并以更好的方式构建 Post 实体集合。
-
-
-
-
+通过这种方式，我们解决了 N+1 问题。然而，我们仍然存在层分离问题。作为进一步的重构，我们可能希望在领域层中统一“查询并缝合”逻辑，并以更好的方式构建 `Post` 实体集合。
 
 # 8. 常见问题
 
 ## 我可以将单次查询（Single-Query）与查询合并（Query-and-Stitch）结合吗？
 
-在某些情况下，将单次查询方法与查询合并方法结合可能是合理的。你可以用单次查询处理所有的“一对一”关系，然后使用查询合并方法处理所有的“一对多”关系。这样做通过将所有“一对一”查询合并到根查询中，减少了总的查询次数。在我们之前的示例中，这意味着三个 Post（文章）、Author（作者）和 Summary（摘要）的查询将合并为一个查询，只剩下 Comment（评论）和 Tag（标签）查询。
+在某些情况下，将单次查询方法与查询合并方法结合可能是合理的。你可以用单次查询处理所有的“一对一”关系，然后使用查询合并方法处理所有的“一对多”关系。这样做通过将所有“一对一”查询合并到根查询中，减少了总的查询次数。在我们之前的示例中，这意味着三个 `Post`（文章）、`Author`（作者）和 `Summary`（摘要）的查询将合并为一个查询，只剩下 `Comment`（评论）和 `Tag`（标签）查询。
 
 在性能极其重要的情况下，我支持结合这些方法。但我推测，通过消除代码库中的 N+1 问题，我们大幅提升了性能，以至于更大的担忧变成了一致性问题。混合使用方法，或者在某些情况下使用一种方法而在其他情况下使用另一种方法，意味着代码库的不一致。这反过来会降低开发者的理解能力并误导他们的预期。
 
@@ -1125,20 +1218,26 @@ foreach ($posts as $post) {
 
 然而，在某些情况下，`IN()` 运算符仍然是一个可衡量的性能问题。你只有通过对较慢的查询运行 `EXPLAIN`（或等效命令），并发现查询计划对 `IN()` 并不是最优的，才能判断这一点。
 
-在这种情况下，用对子查询的 `JOIN` 替换 `IN()`，以提供检索所需的相关值。例如，获取 Post 实体的根集合和关联的 Comment 实体集合可能看起来如下所示：
+在这种情况下，用对子查询的 `JOIN` 替换 `IN()`，以提供检索所需的相关值。例如，获取 `Post` 实体的根集合和关联的 `Comment` 实体集合可能看起来如下所示：
 
 ```php
 <?php
+
 // 获取按顺序索引的 post 实体
+
 $stmt = 'SELECT *
 FROM posts
 ORDER BY datetime DESC
 LIMIT 10';
+
 $sth = $pdo->prepare($stmt);
+
 $sth->execute();
+
 $post_entities = $sth->fetchAll(PDO::FETCH_CLASS, 'Post');
 
 // 获取所有文章的所有评论
+
 $stm = "SELECT *
 FROM comments
 JOIN (
@@ -1147,9 +1246,13 @@ FROM posts
 ORDER BY datetime DESC
 LIMIT 10
 ) AS posts ON posts.post_id = comments.post_id";
+
 $sth = $pdo->prepare($stmt);
+
 $sth->execute();
+
 $comment_entities = $sth->fetchAll(PDO::FETCH_CLASS, 'Comment');
+
 ?>
 ```
 
@@ -1159,7 +1262,7 @@ $comment_entities = $sth->fetchAll(PDO::FETCH_CLASS, 'Comment');
 
 ## 我应该在查询合并时使用事务（Transaction）吗？
 
-通过查询合并，我们对数据库进行了多次调用。然而，数据库中的数据在这些调用之间可能会发生。例如，假设我们获取了 Post 集合的行，紧接着其中一个文章的行值被更改了（例如 `author_id`）。之后任何 `JOIN posts` 或以其他方式向可用数据提供相同 `author_id` 列表的查询，都可能不一致并导致意外结果。
+通过查询合并，我们对数据库进行了多次调用。然而，数据库中的数据在这些调用之间可能会发生。例如，假设我们获取了 `Post` 集合的行，紧接着其中一个文章的行值被更改了（例如 `author_id`）。之后任何 `JOIN posts` 或以其他方式向可用数据提供相同 `author_id` 列表的查询，都可能不一致并导致意外结果。
 
 出于这个原因，在某些情况下在事务内部执行查询合并可能是明智的。这样做有助于在将结果合并的多个查询之间保持一致的状态。
 
@@ -1167,17 +1270,25 @@ $comment_entities = $sth->fetchAll(PDO::FETCH_CLASS, 'Comment');
 
 > 事务和事务隔离涉及与表锁和行锁相关的性能考虑。务必咨询你的数据库文档以获取特定细节。你可能需要在一致性和性能之间进行权衡。
 
-例如，使用 PDO 配合 MySQL 或 PostgreSQL，代码可能如下：
+例如，使用 `PDO` 配合 `MySQL` 或 `PostgreSQL`，代码可能如下：
 
 ```php
 <?php
+
 // 开启事务
+
 $pdo->exec('SET TRANSACTION ISOLATION LEVEL REPEATABLE READ');
+
 $pdo->beginTransaction();
+
 // 选择所有数据 ...
+
 // 结束事务
+
 $pdo->commit();
+
 // 将数据合并为实体
+
 ?>
 ```
 
@@ -1187,9 +1298,9 @@ $pdo->commit();
 
 ## 我可以直接用 ORM 吗？
 
-到这里，一些读者在考虑引入诸如 Doctrine、Propel 或 PHP 中提供的其他 ORM 系统是否是明智的。毕竟，ORM 本身就使用了单次查询和查询合并技术，因此使用 ORM 可以自动处理掉我们在解决 N+1 问题时需要自己编写的大量代码。
+到这里，一些读者在考虑引入诸如 `Doctrine`、`Propel` 或 `PHP` 中提供的其他 ORM 系统是否是明智的。毕竟，ORM 本身就使用了单次查询和查询合并技术，因此使用 ORM 可以自动处理掉我们在解决 N+1 问题时需要自己编写的大量代码。
 
-我对 ORM 态度复杂。在与 Jeff Moore一起为 Solar 开发了一套健壮的 ORM 系统后，我完全熟悉使用它们的权衡。它们在应用程序开发的早期通常是巨大的助力。但在边缘情况下，它们会被揭示为不透明、低效或不可预测，因此需要你对它们在不同情况下的特殊性有良好的了解。
+我对 ORM 态度复杂。在与 `Jeff Moore` 一起为 `Solar` 开发了一套健壮的 ORM 系统后，我完全熟悉使用它们的权衡。它们在应用程序开发的早期通常是巨大的助力。但在边缘情况下，它们会被揭示为不透明、低效或不可预测，因此需要你对它们在不同情况下的特殊性有良好的了解。
 
 ORM 几乎总是要求你学习特殊的惯用法来构建查询。这些惯用法可能与某种类 SQL 的语言绑定，也可能与各种类中的特定一组方法和信息属性绑定，或者二者兼有。我觉得这种修改后的工作方式为将 ORM 引入现有应用程序带来了显著的阻碍。即使你的数据库逻辑拆分得很好，你也必须重写每一个数据库交互以符合 ORM 的查询惯用法。这需要花费时间和精力的，而这些精力可能花在其他地方更好。
 
@@ -1204,42 +1315,60 @@ http://www.procata.com
 
 ## SQL Schema
 
-以下 SQLite 表表示了一个简单的博客应用程序的数据结构。
-表以复数实体命名：posts、comments 等。每个主键列都是自动递增的，并以单数实体命名并带有 `*_id`：post_id、comment_id 等。
+以下 `SQLite` 表表示了一个简单的博客应用程序的数据结构。
+表以复数实体命名：`posts`、`comments` 等。每个主键列都是自动递增的，并以单数实体命名并带有 `*_id`：`post_id`、`comment_id` 等。
 
-`summaries` 表没有 `summary_id` 列，因为每一行与 posts 是直接一对一的。`posts_tags` 表是一张关联表，映射 posts 和 tags 之间的多多关系。
+`summaries` 表没有 `summary_id` 列，因为每一行与 `posts` 是直接一对一的。`posts_tags` 表是一张关联表，映射 `posts` 和 `tags` 之间的多多关系。
 
 这些表被剥离以显示数据的本质，不应作为真实应用程序的基础。
 
 ```
 CREATE TABLE authors (
+
     author_id INTEGER PRIMARY KEY AUTOINCREMENT,
+
     name VARCHAR(255)
+
 );
+
 CREATE TABLE comments (
+
     comment_id INTEGER PRIMARY KEY AUTOINCREMENT,
+
     post_id INTEGER,
+
     datetime DATETIME,
+
     name VARCHAR(255),
+
     email VARCHAR(255),
+
     website VARCHAR(255),
+
     body TEXT
+
 );
+
 CREATE TABLE posts (
+
     post_id INTEGER PRIMARY KEY AUTOINCREMENT,
+
     author_id INTEGER,
+
     datetime DATETIME,
+
     title VARCHAR(255),
+
     body TEXT
+
 );
+
 CREATE TABLE posts_tags (
 ```
 
 
 
-
-
-附录
+## 附录
 
 40
 
@@ -1263,7 +1392,7 @@ tag_id INTEGER PRIMARY KEY AUTOINCREMENT,
 name VARCHAR(255));
 ```
 
-## PHP 类
+### PHP 类
 
 以下 PHP 类代表了一个简易博客应用程序中的实体。这些类经过了刻意简化，以展示类的核心内容，不应作为实际应用程序的基础。特别，这些类使用了公共属性来避免编写样板的 getter 和 setter 方法；这样做是为了减少展示的代码量，而不是表示这良好的实践。
 
@@ -1297,21 +1426,18 @@ class Post {
     public $datetime;
     public $title;
     public $body;
-
     /** 关联 */
     public $author;
     public $comments;
     public $summary;
     public $tags;
 }
-
 class Summary {
   /** 数据库列 */
   public $post_id;
   public $view_count;
   public $comment_count;
 }
-
 class Tag {
   /** 数据库列 */
   public $tag_id;
@@ -1321,9 +1447,9 @@ class Tag {
 
 ## 版后记
 
-Leanpub 格式设置
+### Leanpub 格式设置
 
-| | |
+|  |  |
 |---|---|
 | 每一节后强制分页 | 否 |
 | 在 PDF 中以脚注形式显示链接 | 是 |
@@ -1346,7 +1472,7 @@ Leanpub 格式设置
 
 ## 关于作者
 
-Paul M. Jones 是一位国际认可的 PHP 专家，他曾在各种机构（企业、军事、非营利、教育、医疗等）中担任过从初级开发人员到工程副总裁的所有职位。他在 paul-m-jones.com 运营专业博客，并是各种 PHP 大会的定期演讲者。
+Paul M. Jones 是一位国际认可的 PHP 专家，他曾在各种机构（企业、军事、非营利、教育、医疗等）中担任过从初级开发人员到工程副总裁的所有职位。他在 `paul-m-jones.com` 运营专业博客，并是各种 PHP 大会的定期演讲者。
 
 Paul 最新的开源项目是 Aura for PHP¹。此前，他是 Solar Framework² 背后的架构师，也是 Savant 模板系统的创建者³。他是 Zend Framework¹DB、DB、Table 和 View 组件的创始贡献者，并编写了一系列关于动态框架性能⁶的权威基准测试⁵。
 
@@ -1367,4 +1493,3 @@ Paul 是 PEAR 项目⁷的首批成员之一。他是 PHP 框架互操作小组�
 - ¹¹http://php-fig.org/psr/psr-2
 - ¹²http://php-fig.org/psr/psr-4
 - ¹³https://www.zend.com/services/certification/php-5-certification/education-advisory-board
-

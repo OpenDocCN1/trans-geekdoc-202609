@@ -1,14 +1,8 @@
+
 # 从预测到理解：AI 基础模型会改变脑科学吗？
 
-
-
-
-
-
-
-
-
 **Thomas Serre**¹ 和 Ellie Pavlick²
+
 布朗大学认知与心理科学系及计算机科学系，计算脑科学中心，美国罗德岛州，普罗维登斯。
 
 利用海量数据的深度学习方法改变了 AI，并正在重塑科学。我们探讨了基础模型何时将改变神经科学，概述了关键条件，以及从预测到解释的转变——将之与神经活动和认知的机制联系起来。
@@ -27,8 +21,7 @@
 
 ![](img/5d2e02e98d0d27e742ac5d2382d8a13e_0_0.png)
 
-
-### ### 框 1. 自监督学习
+## 框 1. 自监督学习
 
 自监督学习（SSL）是一类方法，其中模型创建自己的训练信号。模型不再依赖外部标签，而是通过破坏输入的一部分并根据周围上下文对其进行预测。这使得系统能够直接从数据、未标记的数据集中学习。
 
@@ -38,18 +31,11 @@
 
 随着神经科学的扩展，对模型孪生投影的需求也随之增加。例如，高密度探针跨越长时间记录数千个神经元，大规模细胞聚合了数千万个细胞。在实践中，生成式基础模型可以产生与个体或群体相同的神经或行为序列。这种模拟器将构成数字孪生的核心，允许硅实验、个性化神经技术。然而，解释性仍然是一个问题——它并没有，通过，
 
-
 ## 框 2. 基础模型扩展
 
 最近的进展由经验扩展法则驱动，这些法则表明随着数据、计算和参数的增加，模型性能会预测地提高。这些法则指导了日益巨大的基础模型的设计，这些模型在多样化数据集上预训练并适配任务。
 
 相同的预训练-微调范式实现了文本、图像、音频和其他数据类型的多模态学习。例如，在大规模图像数据集上训练的视觉语言模型可以支持临床任务，而视觉语言动作模型使机器人能够遵循自然语言指令。前沿模型——如 GPT-4o、Claude Claude 和 Gemini 2.0——是以前所未有的规模训练的多模态系统。虽然扩展带来了惊人的预测收益，但它并不能保证模型揭示其目标系统背后的因果机制。
-
-
-
-
-
-
 
 提供一种说明。阐明“存在”如何超越预测保真度转向机制需求，取决于它们是否能够推动神经科学的发展，而仅仅是另一个黑箱。
 
@@ -81,15 +67,14 @@
 
 在表示层，[缺失] 揭示了对感知概念具有选择性的单个模型，神经科学中关于“细胞”到底在调用什么的长期争论，以及在单神经元水平与分布式群体水平上解释神经代码（参见 See 和 Pavlov）。早期研究表明，大型视觉模型中的“细胞”等单元，早期层中的“生成器”，以及最近的，“Golden”在
 
-
-
-
-
-
 - 5 Polapenko, A., 等人. (2021) 使用 AlphaFold 进行高精度蛋白质结构预测。Nature 596, 583–589. https://doi.org/10.1038/s41586-021-03819-2.
-- 6 Vata, K., Chang, P.G., Rembach, A., 和 Mulanenberg, S. (2025) 基础模型发现了什么？利用归纳偏置探测世界模型。https://icml.co/virtual/2025/poster/4374.
-- 7 Namazova, S., Brionetta, A., Strifitmatter, Y., Nasser, M., 和 Mussick, S. (2025) 大脑尚未拥有 AlphaFold：评估作为合成参与者的 Centaur。arXiv:2502.12345 [https://arxiv.org/abs/2502.12345]。
-- 8 Bowers, J.S., Puebla, G., Thorat, S., Tetsos, K., 和 Ludwig, C.J.H. (2025) Centaur：一个没有理论的模型。QSF. https://doi.org/10.31234/osf.io/wh3w7v5.
-- 9 Olah, C., Cammata, N., Schubert, L., Goh, G, M., 和 Carver, S. (2020) 放大：电路简介。https://doi.org/10.23915/distill.0024.001.
-- 10 Lininsley, D., Feng, P., 和 Serre, T. (2025) 更优秀的工智能并不意味着更好的生物学模型，arXiv. https://doi.org/10.48550/arXiv.2504.16940.
 
+- 6 Vata, K., Chang, P.G., Rembach, A., 和 Mulanenberg, S. (2025) 基础模型发现了什么？利用归纳偏置探测世界模型。https://icml.co/virtual/2025/poster/4374.
+
+- 7 Namazova, S., Brionetta, A., Strifitmatter, Y., Nasser, M., 和 Mussick, S. (2025) 大脑尚未拥有 AlphaFold：评估作为合成参与者的 Centaur。arXiv:2502.12345 [https://arxiv.org/abs/2502.12345]。
+
+- 8 Bowers, J.S., Puebla, G., Thorat, S., Tetsos, K., 和 Ludwig, C.J.H. (2025) Centaur：一个没有理论的模型。QSF. https://doi.org/10.31234/osf.io/wh3w7v5.
+
+- 9 Olah, C., Cammata, N., Schubert, L., Goh, G, M., 和 Carver, S. (2020) 放大：电路简介。https://doi.org/10.23915/distill.0024.001.
+
+- 10 Lininsley, D., Feng, P., 和 Serre, T. (2025) 更优秀的工智能并不意味着更好的生物学模型，arXiv. https://doi.org/10.48550/arXiv.2504.16940.

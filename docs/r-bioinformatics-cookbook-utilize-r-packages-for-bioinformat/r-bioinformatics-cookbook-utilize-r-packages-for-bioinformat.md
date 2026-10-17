@@ -1,27 +1,5 @@
+
 # R 生物信息学秘籍：利用 R 包进行生物信息学、基因组学、数据科学和机器学习
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 > 献给我的女儿 Zoë：嗨！如果这本书有点无聊，我很抱歉，但我没有别的可以送给你。也没有其他我想把书送的人。
 
@@ -39,36 +17,21 @@ Swarna Kanchan 博士拥有生物信息学博士学位，拥有15年以上的研
 
 非常感谢美国马尔沙大学研究副员 Minu Kesheri 博士在审稿过程中的支持。
 
-
-
-
-
-
-
-
-
-
-
 ## 在 tidyverse 中加载、整理和清理数据 23
 
-  - 准备工作 29
-  - 如何操作... 33
+- 准备工作 29
+- 如何操作... 33
 
 ## 3 ggplot2 及用于出版质量图表的扩展 45
-
-
 
 ## 使用 Quarto 制作数据丰富的报告、演示文稿和网站 77
 
 - 使用 Markdown 和 Quarto 进行文学化计算 80
-  - 更多内容... 83
+- 更多内容... 83
 - 从相同源创建不同的文档格式 90
 
-
-
-
-
 # 从 Quarto 文档集创建网站
+
 # 使用 Shiny 添加交互性
 
 - 准备工作 90
@@ -76,15 +39,12 @@ Swarna Kanchan 博士拥有生物信息学博士学位，拥有15年以上的研
 - 原理... 92
 
 # 5
+
 ## 使用线性模型轻松执行统计检验 97
 
 ## 线性模型中变量间相互作用的检验与解释 114
 
-
 # 使用线性模型计算两组的平均值 105
-
-
-
 
 ## 使用线性模型和方差分析比较单变量中的多个组 108
 
@@ -94,20 +54,16 @@ Swarna Kanchan 博士拥有生物信息学博士学位，拥有15年以上的研
 
 ## 使用线性模型和方差分析比较多变量中的多个组 111
 
-
 # 6 执行定量 RNA-seq
-
 
 ## 使用 edgeR 估算差异表达 129
 
-
 ## 使用 DESeq2 估算差异表达 133
-
 
 ## 使用 Kallisto 和 Sleuth 估算差异表达 141
 
-
 ## 使用 Sleuth 分析时间序列实验 144
+
 - 原理... 165
 - 如何操作... 167
 - 原理... 168
@@ -118,62 +74,51 @@ Swarna Kanchan 博士拥有生物信息学博士学位，拥有15年以上的研
 
 ## 寻找具有高从头起始峰潜力的区域 159
 
-
 ## 差异峰分析 162
-
 
 ## 使用 SVA 估算批次效应 164
 
-
 ## 使用 AllelicImbalance 寻找等位基因特异性表达 166
-
 
 ## 使用 ComplexHeatmap 展示 RNA-Seq 数据 169
 
-
 # 7
+
 - 准备工作 180
 - 如何操作... 182
 - 原理... 184
 
 ## 长参考序列中预测开放阅读框 184
 
-
 ## 使用 karyoploteR 在遗传图上绘制特征 188
-
 
 ## 使用 VariantAnnotation 选择和分类变异 191
 
-
 ## 提取感兴趣的基因组区域 193
-
 
 ## 使用 GWAS 寻找表型与基因型的关联 197
 
-
 ## 估计感兴趣位点的拷贝数 200
-
 
 # 8
 
 - 更多信息 208
 
-
-
 ## 使用 PFAM 和 dbfam 寻找蛋白质结构域 211
 
-
 ## 寻找 InterPro 结构域 214
+
 - 准备工作 215
 - 如何操作... 215
 - 原理... 215
+
 ## 使用 tmhmm 和 Pseek 寻找跨膜结构域 216
+
 - 准备工作 217
 - 更多内容... 218
-
 - 如何操作... 219
-## 蛋白质或基因的多重对齐 222
 
+## 蛋白质或基因的多重对齐 222
 
 ## 使用 DECIPHER 对齐基因组序列 225
 
@@ -185,7 +130,6 @@ Swarna Kanchan 博士拥有生物信息学博士学位，拥有15年以上的研
 
 ## 使用 treespace 量化并估计树之间的差异 246
 
-
 ## 使用 ape 提取并处理子树 249
 
 ## 使用 panghorn 从比齐中重建树 256
@@ -194,8 +138,8 @@ Swarna Kanchan 博士拥有生物信息学博士学位，拥有15年以上的研
 
 ## 使用互向 BLAST 寻找同源基因候选者 258
 
-
 ## 为对齐可视化创建点图 252
+
 - 准备工作 252
 
 # 10 分析基因注释 265
@@ -203,18 +147,16 @@ Swarna Kanchan 博士拥有生物信息学博士学位，拥有15年以上的研
 - 准备工作 274
 
 ## 从 BioMart 检索基因和基因组注释 268
-## 使用 topGO 以本体学方法寻找 GO 富集 278
 
+## 使用 topGO 以本体学方法寻找 GO 富集 278
 
 ## 寻找富集的 KEGG 通路 282
 
-
 ## 使用 AnoDB 包进行基因组注释 272
+
 ## 检索并处理 SNPs 284
 
-
 # 11 使用 mlr3 进行机器学习 287
-
 
 ## 使用随机森林分类并用 mlr3 解释 302
 
@@ -222,15 +164,11 @@ Swarna Kanchan 博士拥有生物信息学博士学位，拥有15年以上的研
 
 ## 在 mlr3 流水中使用 PCA 进行降维 306
 
-
 ## 交叉验证测试模型拟合情况 295
-
 
 ## 创建 tsNE 和 UMAP 嵌入 310
 
-
 ## 使用逻辑回归分类两种结果的相对概率 298
-
 
 ## 使用 k-means 和层次聚类进行聚类 314
 
@@ -242,23 +180,15 @@ Swarna Kanchan 博士拥有生物信息学博士学位，拥有15年以上的研
 
 ## 将基础 R 对象“整洁化” 322
 
-
-
-
-
-
 ## 在 purrr 中使用 map 族函数
-另见 326
 
+另见 326
 
 ## 使用 apply 族函数 327
 
-
-
 # 13
+
 # 使用 ChatGPT 加速 R 开发 337
-
-
 
 # 使用 ChatGPT 为 R 函数编写文档 351
 
@@ -266,20 +196,13 @@ Swarna Kanchan 博士拥有生物信息学博士学位，拥有15年以上的研
 
 如何操作... 351
 
-
 # 使用 ChatGPT 为 R 函数编写单元测试 354
 
-
 # 使用 ChatGPT 调试和改进代码 342
-
-
 
 # 使用 ChatGPT 查找构建工作流的 R 包 356
 
 # 使用 ChatGPT 生成代码 346
-
-
-
 
 # 你感兴趣的其他书籍 370
 
@@ -325,22 +248,18 @@ Swarna Kanchan 博士拥有生物信息学博士学位，拥有15年以上的研
 
 |---|---|
 | R 4.2 | Windows, macOS, Linux |
+
 # 使用的规范
 
-
 代码块如下：
-
 
 > 如下所示。
 
 # 与我们联系
 
-
-**版权侵权**：如果你在互联网上发现我们作品的任何形式的非法拷贝，我们将感谢你提供位置地址或网站名称。请联系 copyright@packpub.com 并附上材料链接。
+**版权侵权**：如果你在互联网上发现我们作品的任何形式的非法拷贝，我们将感谢你提供位置地址或网站名称。请联系 `copyright@packpub.com` 并附上材料链接。
 
 # 分享你的想法
-
-
 
 # 下载此书的免费 PDF 副本
 
@@ -358,11 +277,6 @@ Swarna Kanchan 博士拥有生物信息学博士学位，拥有15年以上的研
 
 遵循以下简单步骤即可获取福利：
 
-
-
-
-
-
 ## 设置你的 R 生物信息学工作环境
 
 R 是一种强大且多功能的编程语言，广泛应用于生物信息学、数据科学和统计学。R 的主要优势之一是其丰富的包和库生态系统，这允许用户轻松地执行复杂任务并分析大型数据集——特别是 `tidyverse` 软件包（提供了大量数据科学功能）以及 `Bioconductor` 软件包（生物学分析的领先水平），提供了巨大的助力。为了充分发挥这些工具的作用，请确保你以最高效的方式进行工作，使用最佳工具并采用清晰、组织良好的项目结构，以确保你的工作具有可读性、可维护性和可重复性。
@@ -377,7 +291,6 @@ Biconda 和 Homebrew 是包管理系统，它们让你能够轻松地在计算�
 
 在本章中，你将学习一些设置电脑的基本技巧和方法，以便以最高效的方式工作。
 
-
 - 在目录中设置 R 项目
 - 使用 `here` 包简化路径操作
 - 在环境中安装和管理不同版本的 Bioconductor 包
@@ -385,25 +298,9 @@ Biconda 和 Homebrew 是包管理系统，它们让你能够轻松地在计算�
 
 我们将使用 `renv` 以项目特定的方式管理项目中的包。要使用 `renv` 安装包，你首先需要安装 `renv` 包。虽然 `renv` 似乎不需要特定的 R 版本，但使用最新版本的 R 是个主意。`renv` 会记录你在开始某个项目时使用的 R 版本。请注意，你不应该在主目录中直接使用 `renv`，只在项目目录中使用。你可以在“设置 R 项目目录”和“使用 `renv` 包创建项目特定的包集”配方中查看关于此工作结构的更多信息。
 
-
-
-
 ```
-
-
-
-
 renv::install("<user name>/<repo name>")
-
-
-
-
-
-
-
-
-
-
+```
 
 这个略显重复的配方是为了突出一个事实：在 `here` 工作流中实际上只使用了两个函数，而且使用模式非常直观。在模式的第一个部分，用户使用 `i_am()` 函数来声明脚本的位置——这有助于推导出项目结构。然后，每当我们想要使用路径时，都会使用 `here()` 函数本身。我们只需要将所有的路径都相对于项目根目录（即 `my_project` 文件夹）即可。注意，所有这些步骤都是通过编辑配方文件完成的，而不是在控制台中键入。
 
@@ -443,11 +340,15 @@ devtools::install_github("danmaclean/rbioinfcookbook")
 - 2. 安装 example_devtools_branch:
 ```
 library(rbioinfcookbook)
+
 # 下面这一行不起...
+
 rbioinfcookbook::function_from_branch()
 
 # 现在可以了
+
 detach("package:rbioinfcookbook", unload=TRUE)
+
 devtools::install_github("danmaclean/rbioinfcookbook")
 ```
 
@@ -458,6 +359,7 @@ devtools::install_github("danmaclean/rbioinfcookbook")
 - 4. 我们清理：
 ```
 detach("package:rbioinfcookbook", unload=TRUE)
+
 remove.packages("rbioinfcookbook")
 ```
 
@@ -465,7 +367,6 @@ remove.packages("rbioinfcookbook")
 ```
 devtools::install_github("danmaclean/rbioinfcookbook")
 ```
-
 
 
 
@@ -489,7 +390,7 @@ devtools::install_github("danmaclean/rbioinfcookbook")
 图 1.6 – RTools 网页；为你的 R 选择正确的版本
 
 - 2. 对于 macOS，安装 xcode 命令行工具，在 macOS 终端中输入：
-   xcode-select --install
+  `xcode-select --install`
 
 - 3. 接下来，在弹出的框中选择 **Install**（安装）：
 
@@ -525,7 +426,7 @@ sudo tar xvf openmp-12.0.1-darwin20-Release.tar.gz -C /
 
 - 6. 更新一些本地变量。
 
-将以下行添加到 "/Users/your_username/.R/Makevars" 中（如果该文件不存在请创建它），并确保将 your_username 替换为你的用户名！
+将以下行添加到 `"/Users/your_username/.R/Makevars"` 中（如果该文件不存在请创建它），并确保将 `your_username` 替换为你的用户名！
 
 ```
 CPPFLAGS=-I/usr/local/include -Xclang -fopenmp
@@ -537,7 +438,6 @@ LDFLAGS+=-L/usr/local/lib -lomp
 
 ```
 FC=/opt/R/arm64/gfortran/bin/gfortran -mtune=native
-
 LIBS=-L/opt/R/arm64/gfortran/lib/aarch64-apple-darwin20.6.0/12.0.1 -L/opt/R/arm64/gfortran/lib -lgfortran -lemrt3 -lim
 ```
 
@@ -547,11 +447,11 @@ LIBS=-L/opt/R/arm64/gfortran/lib/aarch64-apple-darwin20.6.0/12.0.1 -L/opt/R/arm6
 
 步骤 1 是 Windows 特有的步骤，也是获取 Windows 完整工具链的唯一步骤。我们只需下载并运行 RTools 包的安装程序。请注意你正在运行的 R 版本并匹配对应的 RTools 版本（参见图 1.5 和图 1.6）。你可以在新会话顶部的控制台或 RStudio 的 Console 中查看 R 版本。
 
-步骤 2 是 macOS 设备的通用步骤。xcode-select 会安装一套用于 macOS 开发的工具，你很有可能已经安装了它。如果没有，请按照图 1.7 所示进行安装。
+步骤 2 是 macOS 设备的通用步骤。`xcode-select` 会安装一套用于 macOS 开发的工具，你很有可能已经安装了它。如果没有，请按照图 1.7 所示进行安装。
 
 16 设置 R 生物信息工作环境
 
-步骤 3 是针对配备 M1 或 M2 Silicon 处理器的设备的特定步骤。在本文编写时，Apple Silicon 的 Xcode 工具链缺少 Fortran 编译器和其他一些库，因此我们将它们包含进去。在这里，我们使用 sudo 根权限来下载、解压并链接编译器。
+步骤 3 是针对配备 M1 或 M2 Silicon 处理器的设备的特定步骤。在本文编写时，Apple Silicon 的 Xcode 工具链缺少 Fortran 编译器和其他一些库，因此我们将它们包含进去。在这里，我们使用 `sudo` 根权限来下载、解压并链接编译器。
 
 步骤 4 的相似之处在于，我们下载并解压了 OpenMP，而步骤 5 设置了 R 在启动时从 Makevars 脚本加载的 Bash，以便其能正确使用工具。
 
@@ -561,21 +461,16 @@ LIBS=-L/opt/R/arm64/gfortran/lib/aarch64-apple-darwin20.6.0/12.0.1 -L/opt/R/arm6
 
 ## 使用 renv 包创建项目特定的包集
 
-在软件开发上下文中，“环境”指的是用于运行特定应用程序或项目的特定依赖项和软件版本集合。这些环境有助于避免不同项目（可能需要相同包的不同版本）之间产生冲突，并确保应用程序在不同的开发、测试和生产环境中一致运行。renv R 包是一个用于 R 项目的依赖管理工具。
-
-
-
+在软件开发上下文中，“环境”指的是用于运行特定应用程序或项目的特定依赖项和软件版本集合。这些环境有助于避免不同项目（可能需要相同包的不同版本）之间产生冲突，并确保应用程序在不同的开发、测试和生产环境中一致运行。`renv` R 包是一个用于 R 项目的依赖管理工具。
 
 以下是需要翻译的文本
 
-[content]
 3. 显式告诉安装程序使用 Bioconductor 进行初始化：
 
 ```
 renv::install("bioc::ComplexHeatmap")
 ```
 
-[/content]
 以及：
 
 ## 工作原理
@@ -586,14 +481,8 @@ renv::install("bioc::ComplexHeatmap")
 
 第 3 步是安装步骤，使用 `renv::install()` 从 Bioconductor 安装包，这种结构在环境初始化时非常有用。
 
-[/content]
-译文：
-：
-
-[content]
 ## 使用 bioconda 安装外部工具
 
-[content]
 在 R 中使用环境管理包对于不同的项目非常有用。生物信息学流水线有很多 R 之外的依赖，包括命令行程序和软件包，可以使用 conda 管理。
 
 Anaconda 是一个 Python 和 R 的发行版，在科学计算、数据科学和机器学习领域受欢迎。它包含了许多预装软件包和工具，如 NumPy、SciPy 和 Jupyter，使其能够轻松上手。Anaconda 还包含了 conda 包管理器，用于安装额外的包和管理环境。Bioconda 是构建在 conda 之上的发行版，包含了多种生物信息学工具和库，可以用一致的方式安装和管理这些工具。在本教程中，我们将查看如何在环境中创建这些软件。
@@ -602,7 +491,6 @@ Anaconda 是一个 Python 和 R 的发行版，在科学计算、数据科学和
 
 我们需要安装来自 https://docs.conda.io/projects/latest/user-guide/install.html 的 conda。有两个版本：Anaconda，它提供了所有软件包并占用约 3 GB 的磁盘空间；以及 Miniconda，两者都可以，请选择适合您的一个。对于商业用户，还有一个版本（参见 https://www.anaconda.com/blog/anaconda-edition-faq）。我们还需要 reticulate 包。
 
-[/content]
 ## 如何操作
 
 我们将在命令行中启动本教程，设置 conda并将软件安装到特定环境，然后进入 R 运行：
@@ -635,11 +523,9 @@ conda install minimap2 gatk samtools==1.15.1
 env_path <- function(env, program = "") {
   df <- reticulate::conda_list()
   b <- df$python[which(df$name == env)]
-
   if (length(b) == 0) {
     stop("未找到该环境")
   }
-
   file.path(dirname(b), program)
 }
 ```
@@ -661,7 +547,6 @@ system(paste(minimap2, "-h"))
 
 *在第 4 步中*，我们在 R 中。我们定义了一个自定义函数，接收环境名称和可选的程序名称，返回环境 bin 目录的完整路径；如果指定了程序，则返回程序的完整路径。该函数使用 `reticulate::conda_list()` 获取我们感兴趣的环境详情。在示例中，我们获取了在 bioinformatics_project 中安装的 minimap2 路径并赋值给变量 `minimap2`。然后我们可以在 R 代码中使用该路径，例如通过系统调用运行特定版本的程序。
 
-[/content]
 ## 在 tidyverse 中加载、整理和清洗数据
 
 数据清洗是数据科学过程中的关键步骤。数据清洗是数据科学过程中的关键步骤。数据清洗是数据科学过程中的关键步骤。数据清洗是数据科学过程中的关键步骤。……（文本继续）……合并和展开列。
@@ -714,10 +599,6 @@ renv::install("bioc::Biobase")
 ```
 renv::install("user name/repo name")
 ```
-
-
-
-
 
 此程序包所需的所有样本数据都位于 GitHub 上专门创建的 `danmaclean/rbioinfcookbook` 数据包中。安装该数据包后，数据将出现在你的项目环境中。
 
@@ -827,13 +708,15 @@ df <- read_csv(filename,
   col_types = col_types)
 ```
 
+
+
 到此，我们已经加载了一个仔细检查过数据类型的文件。
 
 ## 工作原理...
 
 步骤 1 加载了 `readr` 包。该包包含了用于读取和写入各种格式（包括 CSV）表格数据的函数。使用 `fs::path_package("extdata", "census_2021.csv", package="rbioinfocookbook")` 函数来创建指向 `census_2021.csv` 文件的路径。它简单地找到了 `rbioinfocookbook` 包安装的位置，并在 `extdata` 目录内找到该文件，返回完整的文件路径。
 
-在步骤 2 中，我们为列指定了新名称向量。在步骤 3 中，我们根据新名称和内容设置了列类型。我们将列显式设置为 factor，并使用了默认的 .default。
+在步骤 2 中，我们为列指定了新名称向量。在步骤 3 中，我们根据新名称和内容设置了列类型。我们将列显式设置为 factor，并使用了默认的 `.default`。
 
 最后，我们使用 `read_csv()` 函数读取逗号分隔的数据，但还有更多函数适用于不同的分隔符。
 
@@ -843,12 +726,12 @@ df <- read_csv(filename,
 
 | 函数 | 分隔符 |
 |---|---|
-| read_csv() | CSV |
-| read_tsv() | TSV |
-| read_delim() | 用户指定的分隔符 |
-| read_fwf() | 固定宽文件 |
-| read_table() | 空格分隔文件 |
-| read_log() | 网络日志文件 |
+| `read_csv()` | CSV |
+| `read_tsv()` | TSV |
+| `read_delim()` | 用户指定的分隔符 |
+| `read_fwf()` | 固定宽文件 |
+| `read_table()` | 空格分隔文件 |
+| `read_log()` | 网络日志文件 |
 
 对于不同的本地习惯（例如数字分隔符和分组标记），你可以使用 `locale` 函数。
 
@@ -882,26 +765,33 @@ tidy 数据的主要原理：
 
 ```
 library (rbioinfcookbook)
+
 library (dplyr)
+
 library (tidyr)
 
 long_df <- census_df |>
+
   rename("0_to_4" = "under_4", "90_to_120" = "over_90") |>
+
   pivot_longer(
 ```
-
-
-
 
 ## 在 tidyverse 中加载、整理和清理数据
 
 ```
 cols = contains("_to_"),
+
 names_to = c("age_from", "age_to"),
+
 names_pattern = "(\.*)_to_(.*)",
+
 names_transform = list("age_from" = as.integer,
+
                       age_to = as.integer),
+
 values_to = "count"
+
 )
 ```
 
@@ -909,11 +799,11 @@ values_to = "count"
 
 ## 工作原理...
 
-tidyr 包包含了一些函数，它们允许用户指定特定的转换，该转换将应用于数据以生成新数据。在这一单一步骤中，我们指定了一个增加行数的操作，以找到所有包含年龄信息的列。接下来，我们将该列数据的标题拆分为两个新列——一个用于年龄类别的下限，另一个用于年龄类别的上限。然后，我们将这些列的类型更改为整数，最后将实际计数放入一个新列中。
+`tidyr` 包包含了一些函数，它们允许用户指定特定的转换，该转换将应用于数据以生成新数据。在这一单一步骤中，我们指定了一个增加行数的操作，以找到所有包含年龄信息的列。接下来，我们将该列数据的标题拆分为两个新列——一个用于年龄类别的下限，另一个用于年龄类别的上限。然后，我们将这些列的类型更改为整数，最后将实际计数放入一个新列中。
 
 该流水线中的第一个函数是代码 `dplyr`，它帮助我们重命名列标题。我们的年龄数据列很大程度上是一致的，除了下限和上限，因此我们重命名这些列以匹配它们的模式，简化了转换规范。
 
-`pivot_longer()` 函数在参数中指定转换，其中我们选择操作的 cols 是任何包含 `to` 的列。names_pattern 参数接收一个正则表达式（regex），它用于捕获列名中字符串前后的文本部分，并将它们用作 `names` 参数中定义列的值。单元格中的实际计数被放入名为 `counts` 的新列中。该转换在一步中完成，并减少了数据框的数量，将行数增加到 6,935，在此过程中使数据变得整洁（tidy），并更容易在下游包中运行。
+`pivot_longer()` 函数在参数中指定转换，其中我们选择操作的 `cols` 是任何包含 `to` 的列。`names_pattern` 参数接收一个正则表达式（regex），它用于捕获列名中字符串前后的文本部分，并将它们用作 `names` 参数中定义列的值。单元格中的实际计数被放入名为 `counts` 的新列中。该转换在一步中完成，并减少了数据框的数量，将行数增加到 6,935，在此过程中使数据变得整洁（tidy），并更容易在下游包中运行。
 
 ## 另需阅读
 
@@ -921,11 +811,11 @@ tidyr 包包含了一些函数，它们允许用户指定特定的转换，该�
 
 ## 使用 tidyr 将长格式表格整理为整洁表格
 
-在这个配方中，我们查看与“使用 tidyr 将宽格式表格整理为整洁表格”配方互补的操作。我们将取一个长表并拆出其中一列以创建新列。起初，这似乎我们没有违反整洁数据框的要求，但我们确实会遇到将多个变量挤进单个列中的数据框。与之前的配方一样，tidyr 有一个基于规范的函数，允许我们修正数据框。
+在这个配方中，我们查看与“使用 tidyr 将宽格式表格整理为整洁表格”配方互补的操作。我们将取一个长表并拆出其中一列以创建新列。起初，这似乎我们没有违反整洁数据框的要求，但我们确实会遇到将多个变量挤进单个列中的数据框。与之前的配方一样，`tidyr` 有一个基于规范的函数，允许我们修正数据框。
 
 ## 准备工作
 
-我们将使用 tidyr 包和 rbioocookbook 包中的处理数据框。该数据框有四列，其中一列 measurement（测量）包含两个变量名，需要将其拆分为单独的列。
+我们将使用 `tidyr` 包和 `rbioocookbook` 包中的处理数据框。该数据框有四列，其中一列 `measurement`（测量）包含两个变量名，需要将其拆分为单独的列。
 
 ## 如何操作...
 
@@ -933,12 +823,17 @@ tidyr 包包含了一些函数，它们允许用户指定特定的转换，该�
 
 ```
 library (rbiocookbook)
+
 library (tidyr)
 
 treatments |>
+
 pivot_wider(
+
   names_from = measurement,
+
   values_from = value
+
 )
 ```
 
@@ -946,11 +841,11 @@ pivot_wider(
 
 ## 工作原理...
 
-在这个非常简单的配方中，规范非常清晰：只需提取测量列并根据其值创建新列，并相应地移动这些值。names_from 参数指定了要拆分的列，values_from 指定了这些值的来源。
+在这个非常简单的配方中，规范非常清晰：只需提取测量列并根据其值创建新列，并相应地移动这些值。`names_from` 参数指定了要拆分的列，`values_from` 指定了这些值的来源。
 
 ### 还有更多...
 
-可以同时合并来自多个列的值；只需向 names_from 参数传递列向量，并就可以使用 names_glue 格式输出中计算出的列名。
+可以同时合并来自多个列的值；只需向 `names_from` 参数传递列向量，并就可以使用 `names_glue` 格式输出中计算出的列名。
 
 # 使用 join 函数合并表格
 
@@ -958,15 +853,15 @@ pivot_wider(
 
 ## 在 tidyverse 中加载、整理和清理数据
 
-dplyr 包提供了用于操作和清理数据的函数，包括一个名为 join() 的函数，可以根据一个或多个公共列来合并表格。join 函数支持多种类型的连接，包括内连接、左连接、右连接和全外连接。在这个配方中，我们将查看这些连接各是如何工作的。
+`dplyr` 包提供了用于操作和清理数据的函数，包括一个名为 `join()` 的函数，可以根据一个或多个公共列来合并表格。`join` 函数支持多种类型的连接，包括内连接、左连接、右连接和全外连接。在这个配方中，我们将查看这些连接各是如何工作的。
 
 ## 准备工作
 
-我们需要 dplyr 包和 rbioinfo cookbook 包，这将为我们提供一个包含 10 个 Mapagorte oryza 的短基因数据集，以及针对整个基因组约 60,000 行的相关注释数据。
+我们需要 `dplyr` 包和 `rbioinfo cookbook` 包，这将为我们提供一个包含 10 个 Mapagorte oryza 的短基因数据集，以及针对整个基因组约 60,000 行的相关注释数据。
 
 ## 如何操作...
 
-过程将从从数据包加载数据框开始。mo_gene_exp、mo_go_acc 和 mo_go_evidence 对象在加载 rbioinfocookbook 库时作为数据对象可用，因此我们不需要从文件中加载它们。你将在我们的 R 教程中看到这种行为。对于我们的工作，这模拟了你已经从磁盘文件加载数据或从上游函数接收数据框的情况。
+过程将从从数据包加载数据框开始。`mo_gene_exp`、`mo_go_acc` 和 `mo_go_evidence` 对象在加载 `rbioinfocookbook` 库时作为数据对象可用，因此我们不需要从文件中加载它们。你将在我们的 R 教程中看到这种行为。对于我们的工作，这模拟了你已经从磁盘文件加载数据或从上游函数接收数据框的情况。
 
 以下步骤将帮助我们合并表格：
 
@@ -974,6 +869,7 @@ dplyr 包提供了用于操作和清理数据的函数，包括一个名为 join
 
 ```
 library(rbioinfocookbook)
+
 library(dplyr)
 ```
 
@@ -1003,6 +899,7 @@ a <- right_join(x, mo_go_acc, by = c('gene_id' = 'Gene stable ID') )
 
 ```
 mol_func <- filter(mo_go_evidence, `GO domain` == 'molecular function')
+
 cell_comp <- filter(mo_go_evidence, `GO domain` == 'cellular component')
 
 bind_rows(mol_func, cell_comp)
@@ -1012,7 +909,9 @@ bind_rows(mol_func, cell_comp)
 
 ```
 small_mol_func <- head(mol_func, 15)
+
 small_cell_comp <- head(cell_comp, 15)
+
 bind_cols(small_mol_func, small_cell_comp)
 ```
 
@@ -1020,18 +919,15 @@ bind_cols(small_mol_func, small_cell_comp)
 
 ## 工作原理...
 
-代码以各种方式连接不同的数据框。mo_gene_exp、mo_terms、mo_go_acc 和 mo_go_evidence 对象都是数据框，它们使用 rbioinf 库加载。然后，第一个操作是使用 left_join() 函数添加术语。left_join() 函数根据 mo_gene_exp 数据框的 gene_id 列和 mo_terms 数据框的 stable ID 列连接 mo_gene_exp 和 mo_terms。由于多个匹配行，注意行数和列数的增加。
+代码以各种方式连接不同的数据框。`mo_gene_exp`、`mo_terms`、`mo_go_acc` 和 `mo_go_evidence` 对象都是数据框，它们使用 `rbioinf` 库加载。然后，第一个操作是使用 `left_join()` 函数添加术语。`left_join()` 函数根据 `mo_gene_exp` 数据框的 `gene_id` 列和 `mo_terms` 数据框的 `stable ID` 列连接 `mo_gene_exp` 和 `mo_terms`。由于多个匹配行，注意行数和列数的增加。
 
-在步骤 2 中，我们使用 right_join() 函数连接 mo_go_acc 数据框和第一次连接的结果 (x)，依据是 mo_go_acc 数据框的 Gene stable ID 列和 x 数据框。调整数据框的顺序可以减少行数；反过来操作请参见步骤 5。请注意右_join() 函数返回右数据框的完整行集。
+在步骤 2 中，我们使用 `right_join()` 函数连接 `mo_go_acc` 数据框和第一次连接的结果 (`x`)，依据是 `mo_go_acc` 数据框的 `Gene stable ID` 列和 `x` 数据框。调整数据框的顺序可以减少行数；反过来操作请参见步骤 5。请注意 `right_join()` 函数返回右数据框的完整行集。
 
-步骤 3：inner_join() 展示了只有共享的行会被返回。其余步骤根据领域 创建 mo_go_evidence 数据框的子集，以突出 bind_rows() 如何进行不忽略名称的堆叠，以及 bind_cols() 如何进行数据框的左右粘贴拼接。最后这两个函数既快速又简单，但并没有做任何智能的操作，请确保数据可以按照这种方式正确合并。
-
-
-
+步骤 3：`inner_join()` 展示了只有共享的行会被返回。其余步骤根据领域 创建 `mo_go_evidence` 数据框的子集，以突出 `bind_rows()` 如何进行不忽略名称的堆叠，以及 `bind_cols()` 如何进行数据框的左右粘贴拼接。最后这两个函数既快速又简单，但并没有做任何智能的操作，请确保数据可以按照这种方式正确合并。
 
 ## 使用 stringr 将现有数据重新格式化并提取到新列
 
-文本处理在生物信息学中非常重要，因为它允许对 DNA 和蛋白质序列注释数据进行高效处理和分析。R 语言的 stringr 包 包是文本处理的良好选择，因为它为常见的字符串操作（如模式匹配和字符串替换）提供了简单且一致的接口。`stringr` 构建在字符串处理库的基础上，使其成为处理任意字符串的快速高效工具。在本教程中，我们将研究如何对混乱的 FAST-All (FASTA)-格式序列头中的数据进行合理化。
+文本处理在生物信息学中非常重要，因为它允许对 DNA 和蛋白质序列注释数据进行高效处理和分析。R 语言的 `stringr` 包 包是文本处理的良好选择，因为它为常见的字符串操作（如模式匹配和字符串替换）提供了简单且一致的接口。`stringr` 构建在字符串处理库的基础上，使其成为处理任意字符串的快速高效工具。在本教程中，我们将研究如何对混乱的 FAST-All (FASTA)-格式序列头中的数据进行合理化。
 
 ## 准备工作
 
@@ -1039,13 +935,15 @@ bind_cols(small_mol_func, small_cell_comp)
 
 ## 如何操作...
 
-要使用 stringr 重新格式化基因名称，我们可以按照以下步骤进行：
+要使用 `stringr` 重新格式化基因名称，我们可以按照以下步骤进行：
 
 - 1. 提取 ATXGxxxxx 格式的 ID：
 
 ```
 library(rbioinfcookbook)
+
 library(stringr)
+
 ids <- str_extract(ath_seq_names, "^AT\\dG\\..*\\$")
 ```
 
@@ -1053,6 +951,7 @@ ids <- str_extract(ath_seq_names, "^AT\\dG\\..*\\$")
 
 ```
 description <- str_split(ath_seq_names, "\\||", simplify = TRUE)
+
 str_trim()
 ```
 
@@ -1060,6 +959,7 @@ str_trim()
 
 ```
 info <- str_split(ath_seq_names, "\\||", simplify = TRUE)[,4] |
+
 str_trim()
 ```
 
@@ -1073,26 +973,35 @@ chr <- str_match(info, "chr(\\d+):(\\d+))-(\\d+)")
 
 ```
 strand_pos <- str_locate(info, "[FORWARD|REVERSE]")
+
 strand <- str_sub(info, start=strand_pos, end=strand_pos+1)
 ```
 
 - 6. 提取长度信息：
 
 ```
-lengths <- str_match(info, "LENGTH=(\d+)\\$")[,2]
+lengths <- str_match(info, "LENGTH=(\\d+)\\$")[,2]
 ```
 
 - 7. 将所有提取到的信息合并到一个数据框（data frame）：
 
 ```
 results <- data.frame(
+
   ids = ids,
+
   description = description,
+
   chromosome = as.integer(chr[2]),
+
   start = as.integer(chr[3]),
+
   end = as.integer(chr[4]),
+
   strand = strand,
+
   length = as.integer(lengths)
+
 )
 ```
 
@@ -1106,7 +1015,7 @@ results <- data.frame(
 
 步骤 2 和 3 类似，使用 `str_split()` 函数通过 `|` 字符拆分 `seq_names` 向量；`simplify` 选项返回一个结果矩阵，每个子字符串对应一列。`str_trim()` 函数删除子字符串中烦人的前后空格。保存了结果矩阵的第三列和第四列。
 
-下一行代码使用 `str_match()` 函数从 `info` 变量中提取匹配 `"chr(\d+) :(\d)"` 正式的子字符串。这匹配任何以 "chr" 开头，后跟一个数字、然后是 ":"、然后是一个或多个数字、然后是 "-", 最后是一个或多个数字的字符串。`()` 括号标记了要保存的部分；每个保存的部分进入矩阵中的一列。
+下一行代码使用 `str_match()` 函数从 `info` 变量中提取匹配 `"chr(\\d+) :(\\d)"` 正式的子字符串。这匹配任何以 "chr" 开头，后跟一个数字、然后是 ":"、然后是一个或多个数字、然后是 "-", 最后是一个或多个数字的字符串。`()` 括号标记了要保存的部分；每个保存的部分进入矩阵中的一列。
 
 下一行代码使用 `str_locate()` 函数找到 `info` 变量中 `FORWARD` 或 `REVERSE` 出现的位置。然后使用 `str_sub()` 提取该位置的字符。最后一行代码使用 `str_match()` 函数从 `info` 变量中提取以 "LENGTH=" 开头的一个或多个数字。
 
@@ -1128,8 +1037,11 @@ results <- data.frame(
 
 ```
 library(dplyr)
+
 df <- data.frame(gene_id = c("gene1", "gene2", "gene3"),
+
 	tissue1 = c(5.1, 7.3, 8.2),
+
 	tissue2 = c(5.1, 7.3, 8.2))
 ```
 
@@ -1137,6 +1049,7 @@ df <- data.frame(gene_id = c("gene1", "gene2", "gene3"),
 
 ```
 df %>%
+
   mutate_if(is.numeric, .fun = .x + 1)
 ```
 
@@ -1144,52 +1057,77 @@ df %>%
 
 ```
 library(dplyr)
+
 df <- data.frame(gene_id = c("gene1", "gene2", "gene3"))
 ```
 *(注：源文件中第58-59 页的 OCR 文本严重损坏并包含重复的代码循环。我已根据标准的 `dplyr` 模式和提供的可见片段重构了逻辑。）*
-
-
-
 
 - 3. 在多列上分组并汇总：
 
 ```r
 genes_df |>
+
   group_by(chromosome_id, strand) |>
+
   summarise(
+
   num_genes = n(),
+
   avg_length = mean(length)
 )
 ```
+
+
 
 - 4. 对嵌套数据框（nested dataframe）操作：
 
 ```r
 # 创建一个嵌套数据框
+
 chromosome_id <- c(1,1,1,2,2,3,3)
+
 gene_id <- c("A1","A2","A3","B1","B2","C1","C2","C3")
+
 strand <- c("forward","reverse","forward","forward","reverse",
+
 "forward","reverse","reverse")
+
 length <- c(2000,1500,3000,2500,2000,1000,3000)
+
 genes_df <- data.frame(chromosome_id, gene_id, strand, length)
 ```
 
 ```r
 genes_df$samples <- list(data.frame(sample_id=1:2,
+
 expression=c(2,3)),
+
 data.frame(sample_id=1:3,
+
 expression=c(3,4,5)),
+
 data.frame(sample_id=1:2,
+
 expression=c(4,5)),
+
 data.frame(sample_id=1:3,
+
 expression=c(5,6,7)),
+
 data.frame(sample_id=1:2,
+
 expression=c(6,7)),
+
 data.frame(sample_id=1:2,
+
 expression=c(1,2)),
+
 data.frame(sample_id=1:2,
+
 expression=c(2,3)),
+
 data.frame(sample_id=1:2,
+
 expression=c(3,4)))
 ```
 
@@ -1200,7 +1138,7 @@ genes_df |>
   summarise(mean_expression = mean(expression))
 ```
 
-这些是在 dplyr 中使用“拆分-应用-合并”（split-apply-combine）的广泛示例。
+这些是在 `dplyr` 中使用“拆分-应用-合并”（split-apply-combine）的广泛示例。
 
 ## 工作原理……
 
@@ -1214,7 +1152,7 @@ genes_df |>
 
 将数据粘贴到源代码文档中出于各种原因非常有用，其中最重要的是它允许创建一个可重复的示例，也称为 reprodex——一个演示问题或概念的最小化、自包含的示例。通过将数据包含在源代码中，其他人可以运行代码并亲眼看到结果，从而更容易理解和复制结果。
 
-R 的 datapasta 包可以方便地将数据粘贴到 R 源代码文档中。它提供了一系列将数据转换为 R 定义的函数，在代码示例、测试或共享时创建静态对象时非常有用。在本教程中，你将学习如何使用 datapasta 将外部数据带入你的源代码文档中，而不是通过长期输入。
+R 的 `datapasta` 包可以方便地将数据粘贴到 R 源代码文档中。它提供了一系列将数据转换为 R 定义的函数，在代码示例、测试或共享时创建静态对象时非常有用。在本教程中，你将学习如何使用 `datapasta` 将外部数据带入你的源代码文档中，而不是通过长期输入。
 
 ## 准备工作
 
@@ -1228,21 +1166,19 @@ renv::install("datapasta", repos = c(mm = "https://ilesmcbain.universe.dev",), g
 
 ## 如何操作……
 
-datapasta 工具是以 RStudio 插件（add-in）的形式实现的，因此我们首先进行该设置：
+`datapasta` 工具是以 RStudio 插件（add-in）的形式实现的，因此我们首先进行该设置：
 
 - 1. 使用 RStudio 的 **Tools（工具） | Addins（插件） | Browse Addins（浏览插件）** 菜单，然后选择 **Keyboard Shortcuts（快捷键）**。你可以选择想要用于粘贴的组合键。
-
 - 2. 点击操作旁边的中间列（如下截图所示），并按下你想要的按键。*图 2.1* 中的组合是一个不错的选择：
 
 ![](img/dd0d7d9aaacf496c4d1d0e31d83783b3_63_0.png)
 
 图 2.1 – 选择快捷键
-
 - 3. 获取一个网页表格——例如，访问 **Wikipedia（维基百科）** 此页面：`https://en.wikipedia.org/wiki/Tab-separated_values`——使用浏览右键 **Copy（复制）** 功能复制整个文本示例表格。这会将文本表格放入你的剪贴板缓冲区中。它看起来应该像*图 2.2 所示：*：
 
 # 示例 [编辑]
 
-iris 数据集的头部可以使用以下纯文本存储为 TSV（注意，HTML 渲染可能会将制表符转换为空格）：
+`iris` 数据集的头部可以使用以下纯文本存储为 TSV（注意，HTML 渲染可能会将制表符转换为空格）：
 
 | Sepal length | Sepal width | Petal length | Petal width | Species |
 |---|---|---|---|---|
@@ -1258,21 +1194,17 @@ iris 数据集的头部可以使用以下纯文本存储为 TSV（注意，HTML 
 
 - 4. 将剪贴板中的新行粘贴到 R 源代码文档中。在合适的位置放置输入光标。
 
-
-
-
-
 在本章中，我们将涵盖以下配方：
 
-- 在 ggplot2 中组合多种图表类型
-- 使用 ggridges 比较分布的变化
-- 使用 ggeasy 定制图表
-- 使用 gghighlight 在复杂的图表中突出显示选定值
-- 使用 ggdist 更好地绘制变异性和置信区间
-- 使用 plotly 制作交互式图形
-- 使用 facetzoom 明确选定图表部分的标签位置
-- 使用 facetzoom 对选定图表部分进行缩放并添加标注
-- 使用 cowplot 和 patchwork 将多个图表组合成单图
+- 在 `ggplot2` 中组合多种图表类型
+- 使用 `ggridges` 比较分布的变化
+- 使用 `ggeasy` 定制图表
+- 使用 `gghighlight` 在复杂的图表中突出显示选定值
+- 使用 `ggdist` 更好地绘制变异性和置信区间
+- 使用 `plotly` 制作交互式图形
+- 使用 `facetzoom` 明确选定图表部分的标签位置
+- 使用 `facetzoom` 对选定图表部分进行缩放并添加标注
+- 使用 `cowplot` 和 `patchwork` 将多个图表组合成单图
 
 ## 技术要求
 
@@ -1291,7 +1223,6 @@ renv::init()
 ```
 
 - 3. 这将在你的当前项目目录下创建一个名为 `.renv` 的新目录。
-
 - 4. 你可以使用以下命令安装包：
 
 ```
@@ -1331,20 +1262,20 @@ renv::install("danmaclean/rbioinfcookbook")
 对于本章，我们需要以下包：
 
 - 常规包：
-  - cowplot
-  - dplyr
-  - gggist
-  - ggeasy
-  - ggforce
-  - gghighlight
-  - ggplot2
-  - ggrepel
-  - ggridges
-  - palmerpenguins
-  - patchwork
-  - plotly
+  - `cowplot`
+  - `dplyr`
+  - `gggist`
+  - `ggeasy`
+  - `ggforce`
+  - `gghighlight`
+  - `ggplot2`
+  - `ggrepel`
+  - `ggridges`
+  - `palmerpenguins`
+  - `patchwork`
+  - `plotly`
 - GitHub:
-  - danmaclean/rbioinfcookbook
+  - `danmaclean/rbioinfcookbook`
 
 完成这些，我们就准备就绪了。这些包在安装时都不应该出现特殊问题。
 
@@ -1368,7 +1299,7 @@ letters[1:5]
 
 ## 在 ggplot2 中组合多种图表类型
 
-ggplot2 的层模型是该库的一个核心特性，允许用户通过构建数据、美学和几何对象（geoms）的层来创建复杂的可视化效果。每一层代表图表的不同方面，它们堆叠在一起创建最终的可视化结果。在这个配方中，我们将使用层模型为 `palmerpenguins` 包中的数据创建一个复杂的图表。通过将其打印到屏幕上直接在 R 中检查数据可能会有所帮助。此外，该包在 https://allisonhorst.github.io/palmerpenguins/ 上有良好的文档，你可能想进一步了解它是如何生成的。
+`ggplot2` 的层模型是该库的一个核心特性，允许用户通过构建数据、美学和几何对象（geoms）的层来创建复杂的可视化效果。每一层代表图表的不同方面，它们堆叠在一起创建最终的可视化结果。在这个配方中，我们将使用层模型为 `palmerpenguins` 包中的数据创建一个复杂的图表。通过将其打印到屏幕上直接在 R 中检查数据可能会有所帮助。此外，该包在 https://allisonhorst.github.io/palmerpenguins/ 上有良好的文档，你可能想进一步了解它是如何生成的。
 
 ## 准备工作
 
@@ -1383,7 +1314,6 @@ ggplot2 的层模型是该库的一个核心特性，允许用户通过构建数
 ```
 library(ggplot2)
 library(palmerpenguins)
-
 p <- ggplot(data = penguins) + 
 aes(x = bill_length_mm, y = bill_depth_mm)
 ```
@@ -1439,7 +1369,7 @@ dotsize = .5
 
 ### 还有更多...
 
-让 ggplot2 智能化的下一步是使用 `aesthetic()` 将变量与某些视觉方面建立映射。我们可以借此将形状、线条颜色、填充颜色和点大小等属性映射到图表上。全局 `aes()` 应用于所有几何层，而特定几何对象的 `aes()` 只应用于它们声明所在的几何层。
+让 `ggplot2` 智能化的下一步是使用 `aesthetic()` 将变量与某些视觉方面建立映射。我们可以借此将形状、线条颜色、填充颜色和点大小等属性映射到图表上。全局 `aes()` 应用于所有几何层，而特定几何对象的 `aes()` 只应用于它们声明所在的几何层。
 
 以下代码展示了如何操作：
 
@@ -1456,10 +1386,6 @@ scale_colour_brewer(palette = "Set2")
 
 最后的修改是通过 `scale()` 和调色板完成的。在前面的代码中，我们使用内置的 ColourBrewer 调色板添加了手动颜色标度。
 
-
-
-
-
 ## 如何操作...
 
 我们可以通过以下步骤来观察分布的变化：
@@ -1470,7 +1396,6 @@ scale_colour_brewer(palette = "Set2")
 library(ggplot2)
 library(ggridges)
 library(palmerpenguins)
-
 gplot(data = penguins) +
   aes(x = bill_length_mm, y = species,
       fill = species,
@@ -1517,11 +1442,13 @@ scale_fill_manual(
 theme_ridges()
 ```
 
+
+
 这些就是漂亮展示分布差异所需的所有内容。
 
-## 工作原理...
+## 工作原理
 
-在步骤 1 中，我们创建了一个基础的山脊图（ridge plot）。它是作为 ggplot2 的额外 geom 构建的，因此我们构建了一个标准的 ggplot 图表描述，并将该 geom 添加到其中。企鹅图被设定为每个物种对应喙长度的分布，并使用 `geom_density_ridges` geom 来绘制脊线图。`position` 和 `jittered_points` 参数为曲线下方实际点的散点可视化增加了额外效果。`scale` 参数影响重叠的程度。见图 3.4：
+在步骤 1 中，我们创建了一个基础的山脊图（ridge plot）。它是作为 `ggplot2` 的额外 `geom` 构建的，因此我们构建了一个标准的 `ggplot` 图表描述，并将该 `geom` 添加到其中。企鹅图被设定为每个物种对应喙长度的分布，并使用 `geom_density_ridges` `geom` 来绘制脊线图。`position` 和 `jittered_points` 参数为曲线下方实际点的散点可视化增加了额外效果。`scale` 参数影响重叠的程度。见图 3.4：
 
 ![](img/dd0d7d9aaacf496c4d1d0e31d83783b3_76_0.png)
 
@@ -1529,7 +1456,7 @@ theme_ridges()
 
 在步骤 2 中，我们创建了一个类似的图表，其颜色与喙长度成比例并呈现渐变色。请注意，这次由于填充颜色必须经过计算，我们必须使用 `stat()` 作为填充值，并使用特定的 `geom_density_ridges_gradient()` 函数来处理。见图 3.5：
 
-# 使用 ggridges 比较分布的变化
+### 使用 ggridges 比较分布的变化
 
 ![](img/dd0d7d9aaacf496c4d1d0e31d83783b3_77_0.png)
 
@@ -1543,13 +1470,13 @@ theme_ridges()
 
 # 使用 ggasy 定制化图表
 
-在 ggplot2 中，自定义图表的关键方面之一是 `theme()` 函数，它允许用户自定义图表整体外观的元素。在 ggplot2 中自定义图表可能并不那么直观。虽然 `theme()` 功能强大，但它确实要求用户手动指定图表的每个元素，例如轴标签、标题、颜色和形状。构建在 ggplot 之上的 ggplot2 包旨在通过为许多常用自定义任务提供更简单、更直观的语法，以使图表自定义更易实现。`ggasy` 提供了一系列围绕 `theme()` 的简单封装函数，使得重要的事情变得更容易记忆。通过这个配方，我们将查看如何定制最初在 ggplot2 中创建的图表中的标签、图例和轴。
+在 `ggplot2` 中，自定义图表的关键方面之一是 `theme()` 函数，它允许用户自定义图表整体外观的元素。在 `ggplot2` 中自定义图表可能并不那么直观。虽然 `theme()` 功能强大，但它确实要求用户手动指定图表的每个元素，例如轴标签、标题、颜色和形状。构建在 `ggplot` 之上的 `ggplot2` 包旨在通过为许多常用自定义任务提供更简单、更直观的语法，以使图表自定义更易实现。`ggasy` 提供了一系列围绕 `theme()` 的简单封装函数，使得重要的事情变得更容易记忆。通过这个配方，我们将查看如何定制最初在 `ggplot2` 中创建的图表中的标签、图例和轴。
 
 ## 准备工作
 
 我们需要 `ggplot2`、`ggasy` 和 `palmerpenguins` 包。
 
-## 如何操作...
+## 如何操作
 
 我们可以按照如下方式定制图表。
 
@@ -1589,7 +1516,7 @@ p +
   )
 ```
 
-# 使用 ggasy 定制图表
+### 使用 ggasy 定制图表
 
 ```r
 p +
@@ -1608,10 +1535,6 @@ p +
 
 这就是我们定制图表的方法。
 
-
-
-
-
 # ggplot2 以及用于出版级图表的扩展包
 
 谓词（predicate）将被高亮，而其他部分将背景化。这里的谓词简单是指 `scaled_p` 值是否大于 10，而 `label_type` 的值告诉我们使用哪一列作为标签。`ggighlight()` 会主动对不符合谓词的无趣基因着色，并将其余部分置于前景并带有标签；见图 3.9。
@@ -1620,7 +1543,7 @@ p +
 
 图 3.9 – 高亮火山图
 
-第二个示例是基因表达水平随时间变化的折线图；每条线代表单个基因。我们再次开始使用来自数据包中的 `ath_ts` 创建一个基础 ggplot，尽管这次使用了 `geom_line()` 几何形状，并且我们顺便使用 `scale_continuous()` 添加了更易读的 x 轴。然后，我们使用 `ggighlight()` 应用了高亮过滤器，指定的谓词为在整个过程中最小值低于 0.05 的任何值（即在任何时间点均显著）。我们使用 `unhighlighted_params` 参数格式化未高亮线的样式，该参数接受一个 ggplot 美学设置的列表。见图 3.10。
+第二个示例是基因表达水平随时间变化的折线图；每条线代表单个基因。我们再次开始使用来自数据包中的 `ath_ts` 创建一个基础 `ggplot`，尽管这次使用了 `geom_line()` 几何形状，并且我们顺便使用 `scale_continuous()` 添加了更易读的 x 轴。然后，我们使用 `ggighlight()` 应用了高亮过滤器，指定的谓词为在整个过程中最小值低于 0.05 的任何值（即在任何时间点均显著）。我们使用 `unhighlighted_params` 参数格式化未高亮线的样式，该参数接受一个 `ggplot` 美学设置的列表。见图 3.10。
 
 ![](img/dd0d7d9aaacf496c4d1d0e31d83783b3_82_1.png)
 
@@ -1636,7 +1559,7 @@ p +
 
 对于这个配谱，我们需要 `ggdist`、`ggplot2` 和 `palmerpenguins` 包。
 
-## 如何实现...
+## 如何实现
 
 我们可以如下所示创建带有置信区间的图表：
 
@@ -1646,7 +1569,6 @@ p +
 library(ggplot2)
 library(ggdist)
 library(palmerpenguins)
-
 ggplot(penguins) +
 aes(x = flipper_length_mm, y = island) +
 geom_dots(side = "bottomleft", aes(colour = island)) +
@@ -1676,9 +1598,9 @@ ggplot(penguins) +
 
 这就是我们制作带有变异表示图表所需的所有内容。
 
-## 工作原理...
+## 工作原理
 
-步骤 1 展示了如何创建雨云图，如图 3.11 所示。我们像往常一样在 ggplot 中设置了数据和美学层，添加了 `ggdist` 的 `geom_dots()` 函数，该函数将向图中添加一层代表每个数据点的点。我们使用 `side` 参数将点放在线条下方。使用 `unhighlighted_params` 参数格式化未高亮线的样式，该参数接受一个 ggplot 美学设置的列表。注意 `stat_slab` 能够为我们添加分布的密度 `stat_interval` 能够添加区间，`stat_slabinterval` 能够为我们同时添加分布的密度：
+步骤 1 展示了如何创建雨云图，如图 3.11 所示。我们像往常一样在 `ggplot` 中设置了数据和美学层，添加了 `ggdist` 的 `geom_dots()` 函数，该函数将向图中添加一层代表每个数据点的点。我们使用 `side` 参数将点放在线条下方。使用 `unhighlighted_params` 参数格式化未高亮线的样式，该参数接受一个 `ggplot` 美学设置的列表。注意 `stat_slab` 能够为我们添加分布的密度 `stat_interval` 能够添加区间，`stat_slabinterval` 能够为我们同时添加分布的密度：
 
 ![](img/dd0d7d9aaacf496c4d1d0e31d83783b3_84.png)
 
@@ -1696,12 +1618,9 @@ ggplot(penguins) +
 
 图 3.13 – 渐变图
 
-
-
-
 # 另参
 
-plotly 对象与 Shiny 用户界面 (UI) 元素配合得很好。检查该包，它有一系列复选框和滑块，允许你动态更改 plotly 对象的输入。
+`plotly` 对象与 Shiny 用户界面 (UI) 元素配合得很好。检查该包，它有一系列复选框和滑块，允许你动态更改 `plotly` 对象的输入。
 
 # 使用 ggrepel 明确标签位置
 
@@ -1711,7 +1630,7 @@ plotly 对象与 Shiny 用户界面 (UI) 元素配合得很好。检查该包，
 
 我们需要 `ggplot2` 和 `ggrepel` 包，以及 `rbioinfcookbook` 数据包中的裂酵母基因表达数据集。该数据框包含一列酵母基因 ID、该基因表达的 `log 2` 倍数变化，以及来自统计检验的 p 值。
 
-## 如何实现...
+## 如何实现
 
 我们可以如下创建一个噪声图：
 
@@ -1719,7 +1638,6 @@ plotly 对象与 Shiny 用户界面 (UI) 元素配合得很好。检查该包，
 library(rbioinfcookbook)
 library(ggplot2)
 library(ggrepel)
-
 set.seed(44)
 fission_ge |>
 dplyr::mutate(
@@ -1744,7 +1662,7 @@ theme_minimal()
 
 这就是我们对标签进行整理所需要的所有操作。
 
-## 工作原理...
+## 工作原理
 
 加载库后，使用 `ggreppel` 将种子设置为随机；这有助于在使用 `ggrepel` 时图形的可复现性，因为布局包含随机组件，可能会导致图表比需要的更拥挤。数据集添加了一列用于我们即将制作的火山图的 p 值。数据传递给 `ggplot2`，并使用 `geom_text_repel()`——注意美学属性是在 `geom` 中通过 `aes()` 声明的，而不是我们的。我们必须设置标签映射来渲染标签。该 `geom` 的参数是为了允许标签提供最大的可读性和空间。`max.time` 参数限制了算法的运行时间；设置 `point.padding` 移除了标签与点之间的最大距离，允许标签悬离其所属点远。`arrow` 函数定义了连接标签和点的线条属性。`force` 参数定义了标签的重叠程度（默认为 1，这个值很大）。最后一个参数 `xlim` 定义了 x 轴标签的边界；将值设置为 `NA` 意味着标签可以浮在绘图区域之外，这对于某些非常拥挤的图表来说很有用。y 轴也有对应的参数。生成的图表如图 3.15 所示。敏锐的读者会注意到，大多数点实际上并没有标签。这是因为 `max.overlaps` 移除了重叠过多内容的标签；我们使用的默认值为 10：
 
@@ -1756,15 +1674,11 @@ theme_minimal()
 
 我们在这些教程中已经看到生物信息学数据集可以涵盖非常大的规模。基因组长度可达数千碱基并包含数万个基因，分类单元有数千个成员，生物群可能有具有很大范围大小的数十亿个体。因此，上下文信息在分析和可视化中通常很重要；我们可能希望在更广泛的范围内查看数据子集的细节。我们可以通过使用 `facetzoom` 在更广泛的范围内查看数据子集的细节。
 
-
-
-
 ## ggplot2 及用于出版级图表的扩展
 
 ```r
 label_key = id +
 theme(legend.position = "bottom")
-
 p3 <- ggplot(penguins) +
 aes(x = flipper_length_mm
 ```
@@ -1798,7 +1712,6 @@ col = 1, labels = c("A","B","C"))
 ```r
 l1 <- get_legend(p1)
 l13 <- get_legend(p3)
-
 right_column <- plot_grid(l1, NULL, l13, ncol=1)
 ```
 
@@ -1817,17 +1730,19 @@ plot_grid(two_cols, labelled_4, ncol = 1, rel_heights = c(0.6,
 0.4))
 ```
 
+
+
 这就是我们从多个图表创建一个组合图表所需的所有步骤。
 
-## 工作原理...
+## 工作原理
 
-步骤 1 虽然很长，但本质上重复了本章之前讨论的代码（例如，第一个图来自此 ggrides 章节中的更改章节）。注意，在 p1 和 p3 中，我们修改了图例，在 `scale_fill_manual()` 层中使用 `guides` 函数来确保网格跨越两或三行（以便每行有一个元素）——这在以后非常重要，因为网格将被提取到单独的空间中。
+步骤 1 虽然很长，但本质上重复了本章之前讨论的代码（例如，第一个图来自此 ggrides 章节中的更改章节）。注意，在 `p1` 和 `p3` 中，我们修改了图例，在 `scale_fill_manual()` 层中使用 `guides` 函数来确保网格跨越两或三行（以便每行有一个元素）——这在以后非常重要，因为网格将被提取到单独的空间中。
 
-步骤 2，我们通过将 p1、p2 和 p3 传递给 `cowplot::plot_grid()` 函数并将列数设置为 1，创建一个包含这三个图的图，使它们垂直堆叠。我们为每个图应用了标签。注意，这些图在堆叠之前已经通过 `theme` 移除了图例；我们将手动应用标签。
+步骤 2，我们通过将 `p1`、`p2` 和 `p3` 传递给 `cowplot::plot_grid()` 函数并将列数设置为 1，创建一个包含这三个图的图，使它们垂直堆叠。我们为每个图应用了标签。注意，这些图在堆叠之前已经通过 `theme` 移除了图例；我们将手动应用标签。
 
 步骤 3 使用 `cowplot_get_legend()` 函数从原始图中提取图例并存储到对象中；再次使用 `plot_grid()` 将这些对象堆叠成一列。`NULL` 强制网格在该包含一个空元素。
 
-步骤 4，我们组合已有的两列（再次使用 `plot_grid()`），这次分两列（`two_cols`），使用 `rel_widths` 选项允许图占据图表宽度的 60%。最后，我们为 p4 添加了一个标签——正如你猜的那样——通过最后一次调用 `plot_grid()` 将其置于之前的列之上，将列数设置为 1，并设置相对高度使列占据大部分空间。最终的图表如图 3.18 所示——或者在本书格式提供的较小图表空间内渲染时。当你自己在自己的机器上运行时，可能会看到更清晰的图。由于 R 的工作原理是在视口（指定大小的矩形）中渲染并尝试拟合对象，当某些对象无法进一步缩小时，它们可能会发生重叠。对于这个由许多子图组成的图来说，这是一个问题，因为某些元素无法缩小——特别是，当图变得太小时，文本必须保持足够大以便阅读，否则会发生重叠。我们为图表预留的空间有时会有物理限制。我们使用的包通过 `margins` 选项让您能够控制如何布局图表：
+步骤 4，我们组合已有的两列（再次使用 `plot_grid()`），这次分两列（`two_cols`），使用 `rel_widths` 选项允许图占据图表宽度的 60%。最后，我们为 `p4` 添加了一个标签——正如你猜的那样——通过最后一次调用 `plot_grid()` 将其置于之前的列之上，将列数设置为 1，并设置相对高度使列占据大部分空间。最终的图表如图 3.18 所示——或者在本书格式提供的较小图表空间内渲染时。当你自己在自己的机器上运行时，可能会看到更清晰的图。由于 R 的工作原理是在视口（指定大小的矩形）中渲染并尝试拟合对象，当某些对象无法进一步缩小时，它们可能会发生重叠。对于这个由许多子图组成的图来说，这是一个问题，因为某些元素无法缩小——特别是，当图变得太小时，文本必须保持足够大以便阅读，否则会发生重叠。我们为图表预留的空间有时会有物理限制。我们使用的包通过 `margins` 选项让您能够控制如何布局图表：
 
 ## ggplot2 及用于出版级图表的扩展
 
@@ -1835,7 +1750,7 @@ plot_grid(two_cols, labelled_4, ncol = 1, rel_heights = c(0.6,
 
 至此，我们可以看到如何将多个图组合成一个图。
 
-## 更多...
+## 更多
 
 这些图都有不同的图例，因此我们必须单独处理它们。你将分享的许多图共享图例和轴。`cowplot` 可以通过 `align_plots()` 函数按轴对齐子图。
 
@@ -1843,29 +1758,27 @@ plot_grid(two_cols, labelled_4, ncol = 1, rel_heights = c(0.6,
 
 `patchwork` 库提供了组合图表的另一种方法，提供了一种看起来有点数学化的声明式语法。在以下示例中，我们制作了两个版本的图表，将图例设置为行，在最后的 `(p1 + p3s) / p4` 中，我们创建了一个布局，将两个图放在同一行，位于单独占一行的第三个图上方。将其想象成一个数学表达式，即 `plot1` 和 `plot3` 都在 `plot4` 之上。我们还使用 `plot_annotation()` 添加了注释。
 
-图 3.18 – 
+图 3.18 –
 
-
-
-5. 你也可以使用 renv 包管理器通过运行以下命令来安装 Bioconductor 软件包：
+5. 你也可以使用 `renv` 包管理器通过运行以下命令来安装 Bioconductor 软件包：
 
 ```
 renv::install("bioc::<package name>")
 ```
 
-6. 例如，要安装 Biobase 包，你需要运行此命令：
+6. 例如，要安装 `Biobase` 包，你需要运行此命令：
 
 ```
 renv::install("bioc::Biobase")
 ```
 
-7. 你可以使用 renv 从 GitHub 安装开发包，如下所示： 
+7. 你可以使用 `renv` 从 GitHub 安装开发包，如下所示：
 
 ```
 renv::install("<user name>/<repo name>")
 ```
 
-例如，要安装用户 danmaclean 的 rbioinfcookbook 包，你将运行以下命令：
+例如，要安装用户 `danmaclean` 的 `rbioinfcookbook` 包，你将运行以下命令：
 
 ```
 renv::install("danmaclean/rbioinfcookbook")
@@ -1873,26 +1786,26 @@ renv::install("danmaclean/rbioinfcookbook")
 
 这里是一些其他关于安装的提示：
 
-- 你也可以通过逗号分隔多个包名来同时安装多个包，renv 会自动处理你安装的包所需的任何依赖项。
-- 在 renv 下，所有包都将安装在本地项目目录中，而不是主中央库，这意味着你可以为同一个包拥有多个版本，每个项目对应一个特定的版本。
-- 该包所需的所有示例数据都在 GitHub 上专门创建的数据包中：danmaclean/rbioinfcookbook。安装该数据包后，数据将在你的项目中可用。
+- 你也可以通过逗号分隔多个包名来同时安装多个包，`renv` 会自动处理你安装的包所需的任何依赖项。
+- 在 `renv` 下，所有包都将安装在本地项目目录中，而不是主中央库，这意味着你可以为同一个包拥有多个版本，每个项目对应一个特定的版本。
+- 该包所需的所有示例数据都在 GitHub 上专门创建的数据包中：`danmaclean/rbioinfcookbook`。安装该数据包后，数据将在你的项目中可用。
 
 对于本章节，我们需要以下包：
 
 - 常规包：
-  - ggplot2
-  - knitr
-  - palmerpenguins
-  - rmarkdown
-  - tidyverse
+  - `ggplot2`
+  - `knitr`
+  - `palmerpenguins`
+  - `rmarkdown`
+  - `tidyverse`
 - GitHub:
-  - danmaclean/rbioinfcookbook
+  - `danmaclean/rbioinfcookbook`
 
 这些应该都能轻松安装，然后我们就可以开始了。
 
 # 更多信息
 
-在教程的替代方案中，我们通常从普通的命令行（Bash 或 Windows）中调用 Quarto。RStudio IDE 包含渲染按钮，quarto 包中也有可在 R 控制台中使用的函数。请随时使用任何对你有效的方法。
+在教程的替代方案中，我们通常从普通的命令行（Bash 或 Windows）中调用 Quarto。RStudio IDE 包含渲染按钮，`quarto` 包中也有可在 R 控制台中使用的函数。请随时使用任何对你有效的方法。
 
 在 R 中，加载库并直接通过名称使用函数是通常的做法。虽然这在短的交互式会话中很棒，但当同时加载许多共享函数名的包时，可能会引起混淆。为了明确我在特定时刻使用的是哪个包和哪个函数，我会偶尔使用 `packageName::functionName()` 约定。
 
@@ -1916,13 +1829,13 @@ letters [1:5]
 
 ## 准备工作
 
-我们需要章节开头提到的 Quarto 命令行工具和一个文本编辑器。可选，你可以安装 R quarto 包。我们在这里创建的 Markdown 应该保存为具有 .qmd 扩展的文件——例如，example_quarto.qmd。
+我们需要章节开头提到的 Quarto 命令行工具和一个文本编辑器。可选，你可以安装 R `quarto` 包。我们在这里创建的 Markdown 应该保存为具有 `.qmd` 扩展的文件——例如，`example_quarto.qmd`。
 
-## 如何操作...
+## 如何操作
 
 可以使用以下步骤开发可重用的工作流和报告：
 
-1. 在 example_quarto.qmd 文件中，添加 YAML header：
+1. 在 `example_quarto.qmd` 文件中，添加 YAML header：
 
 ```
 ---
@@ -1938,13 +1851,11 @@ output: html document
 你正在阅读一个用 Rmarkdown 创建并在 Quarto 中渲染的文档。
 此文档包含了文本和代码的混合。下面的代码封装在反引号中，在渲染时代码将被执行，结果将插入到文档中
 
-```````{r}
+```{r}
 library(palmerpenguins)
 x <- penguins$bill_length_mm
 y <- penguins$bill_depth_mm
-
 lmm(y - x)
-```````
 ```
 
 3. 使用 Markdown 的最小标记标记格式化文本：
@@ -1958,6 +1869,7 @@ lmm(y - x)
 我们可以创建文本格式，包括 _斜体_ 和 **粗体**。
 
 我们可以创建列表：
+
 1. 第一项
 2. 第二项
 
@@ -1999,31 +1911,24 @@ quarto render example_quarto.qmd
 quarto render example_quarto.qmd
 ```
 
-## 工作原理...
+## 工作原理
 
 Quarto 系统基于多功能且强大的 Pandoc 来转换不同的文档。它最实用的功能之一是在各种标记语言之间（例如 HTML 和 LaTeX，以及 Markdown 和 Microsoft Office）之间进行翻译，使其成为作家、研究人员和开发者的有用工具。这意味着如果你有一个以一种格式编写的文档，可以轻松地将其转换为另一种格式，而无需手动重新格式整个文档。Pandoc 还可以执行各种转换，例如添加脚注、表格和图像，使其成为格式化和为出版准备文档的绝佳工具。例如，如果你需要准备提交期刊的报告，可以使用 Pandoc 将你的 R Markdown 转换为 PDF 或 Word，添加图像，并根据期刊的规范进行格式化。格式是由 YAML header 中的选项或配置文件指定的，而不是在标记本身中，因此将文档准备为从相同源渲染成多种格式仅需正确设置配置。在本教程中，我们将查看如何操作，特别是针对 HTML、PDF 和 Word 文档输出。
-
-
-
-
 
 ## 准备工作
 
 我们需要一个由 `rbioinfcookbook` 包提供的示例 R Markdown 文档，因此如果你还没有安装它们，请安装 `fs` 包和 `ggplot2` 包。此外，你还需要按照章节开头的说明安装 Quarto。请确保你也安装了 TinyTeX，这是 Quarto 所必需的，这在章节开头也有讨论过。
 
-## 如何操作...
+## 如何操作
 
 我们可以按照以下步骤准备一个标记过的文档以渲染为各种格式：
 
 - 保存可访问的示例文件：
 
 ```
-qmd_path <- fs::path_package("extdata", "mtcars.qmd",
-package=rbioinfcookbook)
+qmd_path <- fs::path_package("extdata", "mtcars.qmd", package=rbioinfcookbook)
 file.copy(qmd_path, 'somewhere/on/your/system/mtcars.qmd')
-
-bib_path <- fs::path_package("extdata", "mtcars.bib",
-package=rbioinfcookbook)
+bib_path <- fs::path_package("extdata", "mtcars.bib", package=rbioinfcookbook)
 file.copy(bib_path, 'somewhere/on/your/system/mtcars.bib')
 ```
 
@@ -2063,8 +1968,7 @@ quarto render mtcars.qmd --to html
 - 4. 获取引用样式语言 (CSL) 文件来确定参考文献的格式化：
 
 ```
-csl_path <- fs::path_package("extdata", "bioinformatics.csl",
-package="rbioinfcookbook")
+csl_path <- fs::path_package("extdata", "bioinformatics.csl", package="rbioinfcookbook")
 file.copy(csl_path, 'somewhere/on/your/system/bioinformatics.csl')
 ```
 
@@ -2095,8 +1999,7 @@ quarto render mtcars.qmd --to html,pdf
 - 7. 获取一个 Microsoft Word .docx 文件作为 Microsoft Word 文档的样式模板：
 
 ```
-docx <- fs::path_package("extdata", "custom-reference-doc.docx",
-package="rbioinfcookbook")
+docx <- fs::path_package("extdata", "custom-reference-doc.docx", package="rbioinfcookbook")
 file.copy(docx_path, 'somewhere/on/your/system/custom-reference-doc.docx')
 ```
 
@@ -2119,17 +2022,13 @@ quarto render mtcars.qmd --to html,pdf,docx
 
 这将为我们从输入生成 html、pdf 和 docx 输出文件。
 
-## 工作原理...
+## 工作原理
 
 虽然这个配方很长，但它相对简单；我们所做的只是设置全局格式并从支持包中提取一些预备的文件来协助。在第 1 步中，我们使用了机器上某个可访问的 `mtcars.qmd` 文件。我们对参考文献文件 .bib 执行了同样的操作，它设置了参考文献的路径。HTML 特有的选项应用在 `format HTML` 下。在这里，我们使用值从内置主题之一（cyborg）中设置主题。这是一个独特的特性，当我们开启目录并通过 `toc-location` 将其设置为左侧时它会被应用，还有渲染数学公式的选项，并提供了一个可选的 CSS 文件用于自定义样式。尝试这些值以了解它们的作用。在第 3 步中，我们转到命令行渲染文档；结果应该是 `mtcars.html` 和其他文件。
 
 在第 4 步中，我们开始 PDF 格式化文档，首先提取描述参考文献的 `bioinformatics.csl` 文件并将其放在你的某处。在第 5 步中，我们设置了 PDF 输出选项，选择了 `pdf-engine`、某些文档类型、更多内容选项以及某些特定字体。当你浏览文档时，这些应该是清晰的。请注意 `csl` 键已添加到 YAML 中，其缩进应与 HTML 块匹配。在第 6 步中，我们同时渲染这两种格式。比较输出以观察特定格式的选项如何影响它们。
 
 对于 Word 文档，样式是由 .docx 文件定义的。同样，支持包中有一个，但你可以通过进入 Word 并设置你喜欢的样式，然后将文件保存为模板来创建自己的。在第 7 步中，我们复制了示例文档。在第 8 步中，我们设置了一些选项。最重要的是 `reference-doc`，它获取你的样式引用的路径。同样重要的是 `citeproc` 键，它开启了参考文献格式化器。最后，在第 9 步中，我们渲染所有格式。
-
-
-
-
 
 ```yaml
 beamer:
@@ -2146,13 +2045,15 @@ quarto render presentation.qmd
 
 这将生成一个演示文稿文档。
 
-## 工作原理...
+## 工作原理
 
 这个配方非常简单，尽管这里包含了一些新的语法成员。在第 1 步中，我们创建了一个基础幻灯片；每张幻灯片由一个二级标题创建（记住在 Markdown 中这是 ##）。我们的第一张幻灯片描述了我们的方法。它被实现为一个增量列表；三个分隔符（:::）标记列表的开始和结束，而带有 `.incremental` 标签的块将其标记为逐步显示的列表，它将一次显示一个项目（也可以使用 `.nonincremental`）。
 
 在第 2 步中，我们使用 R 创建了第二张幻灯片。输出是一张图表，通过设置 `eval=FALSE` R 块选项，我们可以阻止代码通过最终的演示文稿。
 
 在第 3 步中，我们创建了一个具有双列布局的更复杂的幻灯片。四个分隔符标记了列布局的边界，三个冒号分隔符标记了每列的内容。我们使用 `width` 选项来设置每列的相对宽度。列作为独立的列表运行；左列打印图表，右列显示一些模型代码及其结果（注意这次没有设置 `eval` 选项）。在最底部，我们使用由三个冒号分隔符定义的 `.notes` 标签添加了一些只有演讲者才能看到的注释。
+
+
 
 现在所有幻灯片都已定义完毕，我们可以设置配置 YAML。这在第 4 步中所示，这里的文本位于文件顶部。在这里设置了演示文稿的标题和作者，并设置了每个演示系统的选项。`incremental` 开启了增量列表。`theme` 允许你选择 Reveal.js 和 Beamer 中内置主题之一。`reference-doc` 标签允许你指定一个参考 PowerPoint PPTX 文件，从那里获取样式，正如我们在上一个配方中渲染 Word 时看到的那样。如果你不想渲染某些格式，只需删除你不需要的即可。
 
@@ -2174,7 +2075,7 @@ file.copy(ref_path, `somewhere/on/your/system/reference_presentation.pptx`)
 
 这再次应该帮助你一次性查看文档并节省一些打字时间。
 
-## 从 Quarto 文档集合创建网站
+# 从 Quarto 文档集合创建网站
 
 Pandoc 是一个多功能工具，可以在许多不同格式之间转换文档，包括 Markdown、HTML、LaTeX 和 PDF。它可以用于将一组 Markdown 文档转换为静态网站。基础网站的方法是在 Markdown 文件中编写内容，使用 Pandoc 将 Markdown 文件转换为 HTML 文件，然后使用 Web 服务器提供 HTML 文件。Quarto 通过提供模板、一系列额外的标记和渲染配置简化了通过 Pandoc 的渲染，实现了这一工作流。
 
@@ -2301,53 +2202,75 @@ Shiny 元素可以和其他文本和 R 代码一起纳入 R Markdown 文档中�
 title: "Penguin Exploration"
 format: html
 ```
+
 ```
 
 ```r
+
 server: shiny
+
 ```
 
 2. 为输入小部件创建一个面板：
 
 ```r
+
 # panel: sidebar
+
 num_vars <- c("bill_length_mm", "flipper_length_mm", "body_mass_g")
+
 cat_vars <- c("species", "island", "sex")
 
 selectInput("x", "X轴上的变量", num_vars)
+
 selectInput("y", "Y轴上的变量", num_vars)
+
 selectInput("colour", "按颜色分类", cat_vars)
+
 ```
 
 3. 为动态图表创建一个面板：
 
 ```r
+
 # panel: fill
+
 plotOutput("scatter_plot")
+
 ```
 
 4. 编写服务器代码：
 
 ```r
+
 # context: server
 
 library(ggplot2)
+
 library(palmerpenguins)
+
 output$scatter_plot <- renderPlot({
 
   ggplot(penguins) + 
+
     aes(string(input$x, input$y)) + 
+
     geom_point(aes_string(colour = input$colour)) +
+
     theme_minimal() + 
+
     scale_color_brewer(palette = "Set2")
 
 })
+
 ```
 
 5. 启动服务器：
 
 ```bash
+
 quarto serve shiny.qmd
+
 ```
 
 这将在我们的浏览器窗口中启动一个交互式文档。
@@ -2369,9 +2292,13 @@ quarto serve shiny.qmd
 如果你需要获取此配方的完整示例文件，可以这样从 `rbioinfcookbook` 包中提取它：
 
 ```r
+
 qmd_path <- fs::path_path("extdata", "shiny.qmd",
+
 package="rbioinfcookbook")
+
 file.copy(qmd_path, 'somewhere/on/your/system/shiny.qmd')
+
 ```
 
 这样，你可以轻松地看到文档的结构，并有望节省一些打字时间。
@@ -2405,13 +2332,17 @@ file.copy(qmd_path, 'somewhere/on/your/system/shiny.qmd')
 - 1. 安装 renv：
 
 ```r
+
 install.packages("renv")
+
 ```
 
 - 2. 创建一个新的 renv 环境：
 
 ```r
+
 renv::init()
+
 ```
 
 这将创建一个 .renv 目录。
@@ -2419,31 +2350,41 @@ renv::init()
 - 3. 随后可以通过以下安装包：
 
 ```r
+
 renv::install()
+
 ```
 
 - 4. 我们也可以使用 renv 包管理器安装 Bioconductor 包：
 
 ```r
+
 renv::install("bioc::package")
+
 ```
 
 - 5. 例如，要安装 Biobase 包，运行：
 
 ```r
+
 renv::install("bioc::Biobase")
+
 ```
 
 - 6. 你可以使用以下命令从 GitHub 安装开发版版包：
 
 ```r
+
 renv::install("user/repo")
+
 ```
 
 - 7. 例如，要安装 danmaclean/rbioinfcookbook 包，运行：
 
 ```r
+
 renv::install("danmaclean/rbioinfcookbook")
+
 ```
 
 你也可以通过逗号分隔包名一次安装多个包。renv 会自动处理你安装的包的依赖关系。在 renv 下，所有包将安装到本地目录而不是中央库，这意味着你可以拥有包的多个版本。
@@ -2460,13 +2401,10 @@ renv::install("danmaclean/rbioinfcookbook")
 - GitHub 包：
   - danmaclean/rbioinfcookbook
 
-
-
-
-
 # 使用线性模型进行数据建模
 
 线性模型是一种统计模型，用于分析因变量与一个或多个自变量之间的关系。本质上，它们试图寻找一条描述这些变量之间关系的直线，使我们能够根据自变量的值对因变量进行预测。简单线性模型的方程可以写为：
+
 ```
 $y = \beta_0 + \beta_1x + \epsilon$
 ```
@@ -2489,19 +2427,27 @@ $y = \beta_0 + \beta_1x + \epsilon$
 
 - 1. 加载并查看 `PlantGrowth` 数据的摘要：
 ```r
+
 summary("PlantGrowth")
+
 summary(PlantGrowth)
+
 ```
 
 - 2. 根据其他变量指定表达式的线性模型：
 ```r
+
 model_1 <- lm(weight - group, data = PlantGrowth)
+
 summary(model_1)
+
 ```
 
 - 3. 绘制一些诊断图：
 ```
+
 plot(model_1, which=1)
+
 ```
 
 到此，我们完成了构建线性模型的所有工作。然而，解释模型要困难得多，因此让我们通过拆解来仔细观察。
@@ -2511,14 +2457,22 @@ plot(model_1, which=1)
 步骤 1 使用了 `summary()`，这是一个通用函数，用于显示我们的 `Plant.Growth` 数据集概况。它生成了以下输出：
 
 ```
+
 ## weight          group
+
 ## Min.           :3.590 ctl:10
+
 ## 1st Qu.:4.550 trt1:10
-## Median         :5.155 tr2:10
-## Mean             :5.073
+
+
+
+## Median :5.155 tr2:10
+
+## Mean :5.073
+
 ## 3rd Qu.:5.530
-## Max.            :6.310
-```
+
+## Max. :6.310
 
 它向我们展示了连续的重量变量和一个具有 3 个层级的分类变量，每组有 10 个测量值。
 
@@ -2545,10 +2499,6 @@ plot(model_1, which=1)
 ## Adjusted R-squared: 0.209
 ## F-statistic: 4.84 on 1 and 18 DF
 ```
-
-
-
-
 
 ![](img/dd0d7d9aaacf496c4d1d0e31d83783b3_126_0.png)
 
@@ -2591,13 +2541,11 @@ $dryWeight = \beta_0 + \beta_1 \cdot treatment + \epsilon$
 library(rbioinfocookbook)
 summary(plant_growth_two)
 ```
-
 - 2. 构建线性模型：
 ```
 model_1 <- lm(weight - group, data = plant_growth_two)
 summary(model_1)
 ```
-
 - 3. 手动计算组差异：
 ```
 library(dplyr)
@@ -2605,10 +2553,9 @@ group_means <- plant_growth_two |>
 group_by(group) |>
 summarize(mean_wt = mean(weight))
 ```
-
-group_means
-difference_in_means <- group_means$mean_wt[1] - group_means$mean_wt[2]
-difference_in_means
+`group_means`
+`difference_in_means <- group_means$mean_wt[1] - group_means$mean_wt[2]`
+`difference_in_means`
 
 这几步就是我们需要的全部。
 
@@ -2623,16 +2570,13 @@ difference_in_means
 ```
 ## Call:
 ## lm(formula = weight ~ group, data = plant_growth_two)
-
 ## Residuals:
 ## Min 1Q Median 3Q Max
 ## -0.862 -0.410 -0.006 0.280 1.078
-
 ## Coefficients:
 ## Estimate Std. Error t Pr(>t|)
 ## (Intercept) 5.0320 0.1637 30.742 <2e-16 ***
 ## groupB -0.4940 0.2315 -2.134 0.0469 *
-
 ## Signific. codes: 0 **** * 0.001 ** 0.01 * 0.05 . . ' 1
 ## Residual standard error: 0.6234 on 27 degrees of freedom
 ## Multiple R-squared: 0.2641, Adjusted R-squared: 0.2096
@@ -2645,10 +2589,6 @@ difference_in_means
 通过检验系数 $\beta_1$ 是否可能为零，可以从该线性模型推导出t检验。如果它不为，则有表明两种处理之间的平均干重存在显著差异。
 
 （注：此处原文翻译部分存在大量逻辑重复和乱码，译文已尽可能保持核心逻辑的连贯，但根据指令要求保留了原始结构）
-
-
-
-
 
 # 使用线性模型轻松进行统计检验
 
@@ -2706,36 +2646,28 @@ summary(model_2)
 该方法与单因素 ANOVA 为相似，但增加了潜在交互作用的复杂性并有更显式的比较：
 
 - 1. 对新数据进行汇总并建模：
-
 ```r
 library(rbioinfcookbook)
 summary(expression)
 model_1 <- lm(Expression ~ Treatment + Replicate, data = expression)
 summary(model_1)
 ```
-
 执行 Tukey 事后检验：
-
 ```r
 library(multcomp)
 tested <- glht(model_1,
 linfct = mcp(Replicate = "Tukey",
 Treatment = "Tukey"))
-
 summary(tested)
 ```
-
 将测试输出与绘图对比：
-
 ```r
 library(ggplot2)
-
 ggplot(expression) +
 aes(Treatment, Expression) +
 geom_boxplot() +
 geom_jitter(aes(colour = Replicate))
 ```
-
 这就是完成一个简单的 ANOVA 所需的所有工作。然而，这里的解释比单因素方法更困难，让我们来看它们：
 
 ## 它是如何工作的……
@@ -2759,56 +2691,44 @@ n -3.9665 -1.7154 -0.0843 1.7505 5.0958
 | Replicate2 | 0.3843 | 0.7757 | 0.495 | 0.62250 |
 ```
 
-
-
-
-
 # 线性模型中变量间交互作用的测试与处理
 
 直观的。我们要记住，大型交互模型有时会非常复杂，需要我们咨询统计学家的，但这里的方法对于初级分析和引导后续的问题是有帮助的。
 
 ## 准备工作
 
-在这个食谱中，我们将使用来自 `rbioinfcookbook` 的植物产量大小数据集 `compost`，以及 `dplyr` 和 `ggplot2` 软件包。
+在这个食谱中，我们将使用来自 `rbioinfocookbook` 的植物产量大小数据集 `compost`，以及 `dplyr` 和 `ggplot2` 软件包。
 
 ## 如何操作...
 
 测试交互作用要要的第一步是绘图。然后，我们可以开始建模：
 
 - 1. 检查潜在的交互作用：
-
 ```
-library(rbioinfcookbook)
+library(rbioinfocookbook)
 summary(compost)
-
 interaction.plot(compost$compost, compost$supplement,
 compost$size,
   xlab="Compost Type", ylab="Size", trace.label = 
 "Supplement"
 )
 ```
-
 - 2. 添加一个显式的交互列：
-
 ```
 compost_int <- dplyr::mutate(compost,
 compost_supp = interaction(compost, supplement)
 )
 ```
-
 - 3. 将交互作用作为一个单独变量进行建模：
-
 ```
 model_1 <- lm(size ~ compost_supp, data=compost_int)
 summary(model_1)
-
 library(multcomp)
 tested <- glht(model_1,
 linfct = mcp(compost_supp = "Tukey")
 )
 summary(tested)
 ```
-
 - 4. 创建一个表：
 
 通过这些步骤，我们有一种相当直观的方法来检查和建模交互变量。
@@ -2837,20 +2757,39 @@ summary(tested)
 ## Linear Hypotheses:
 ##
 Std. Error t value Pr(|t|)                               Estimate
-## John Innes #2.Formula X1           John Innes #1.Formula X1 =\=
+## John Innes #2.Formula X1           John Innes #1.Formula X1 ====
+```
+
+
+
+```
 0 1.30865      0.13666      9.576      <1e-04 ***
+```
+
 ## John Innes #1.Formula X1           John Innes #2.Formula X1 =\=
+
 0 0.17780      0.13666      1.301      0.570
+
 ## John Innes #2.Formula X2           John Innes #1.Formula X1 =\=
+
 0 0.17074      0.13666      1.247      0.603
+
 ## John Innes #1.Formula X2           John Innes #2.Formula X1 = 0
+
 -1.13085      0.13666      <1e-04 ***
+
 ## John Innes #2.Formula X2           John Innes #2.Formula X1 = 0
+
 -1.13821      0.13666      -8.329
+
 ## John Innes #2.Formula X2           John Innes #1.Formula X2 = 0
+
 -0.00736      0.13666      0.054      1.000
+
 ##
+
 ## Signif. codes: 0 **** 0.001 *** 0.01 ** 0.05 * .01 . 1
+
 ## (Adjusted p values reported -- single-step method)
 ```
 
@@ -2871,10 +2810,6 @@ Std. Error t value Pr(|t|)                               Estimate
 序变量在类别之间具有自然顺序。序数变量的例子包括教育水平、收入等级和满意度评分。在线性模型中，序数变量可以使用数值表示，或通过为每个类别分配数值排名来表示。例如，在通过工资预测满意度的线性模型中，收入等级可以根据大小分配从一到五的数值排名。排名有助于我们方便地使用线性模型。
 
 名义变量类别之间没有内在顺序或排名。名义变量的例子包括性别和职业。在线性模型中，名义变量通常用虚拟变量表示。你可能需要统计学家的输入，而他们可能并不容易获得。相反，我们采用了一种简单但功能较弱的方法。在第 2 步中，我们使用 `interaction()` 函数和 `mutate()` 创建了一个 `compost_supp` 列，描述了肥料和补充剂之间的交互作用。然后，在第 3 步中，直接在模型中使用新列。来自 `glht()` 函数的事后检验列出了所有可能的两两交互作用，正如 `compost_supp` 列描述的那样。
-
-
-
-
 
 # 对两个分类变量之间的数据差异进行测试
 
@@ -2922,7 +2857,9 @@ Std. Error t value Pr(|t|)                               Estimate
 - 1. 构建一个将中位房价与城市、年份和销售月份相关的模型：
 ```r
 library(ggplot2)
+
 str(txhousing)
+
 model <- lm(median ~ city + year + month, data = txhousing)
 ```
 - 2. 创建一个用于预测的可能值框：
@@ -2987,7 +2924,6 @@ install.packages("renv")
 renv::init()
 ```
 这将在你的项目目录下创建一个名为 `.renv` 的新目录。
-
 - 3. 然后你可以使用以下命令安装包：
 ```r
 renv::install_packages()
@@ -3012,10 +2948,6 @@ renv::install("danmacaclean/rbioinfcookbook")
 你也可以通过逗号分隔包名来一次安装多个包。`renv` 会自动处理你安装的包所需的任何依赖项。在 `renv` 下，所有包将安装在本地项目目录中而不是主库中，这意味着你可以为每个项目拥有同一个包的多个版本。
 
 此包所需的所有示例数据都在 GitHub 上一个专门创建的数据包 `danmacclean/rbioinfcookbook` 中。一旦安装了它，数据将将在你的项目中可用。
-
-
-
-
 
 # 执行定量 RNA-seq
 
@@ -3080,69 +3012,66 @@ Bioconductor 中的 edgeR 包是一个用于从 RNA-Seq 数据中识别差异表
 在示例中，我们在 `rbioinfocookbook` 包中有两个准备好的 DataFrame：`count_dataframe`（包含转录本的实际计数）和 `pheno_data`（一个提供样本信息的元数据 DataFrame）。参考以下步骤：
 
 - 1. 首先加载计数数据并将其转换为矩阵：
-
 ```
 library(rbioinfcookbook)
+
 genes <- count_dataframe[['gene']]
+
 count_dataframe[['gene']] <- NULL
+
 count_matrix <- as.matrix(count_data)
+
 rownames(count_matrix) <- genes
 ```
-
 - 2. 指定感兴趣的实验：
-
 ```
 experiments_of_interest <- c("L1Larvae", "L2Larvae")
+
 columns_of_interest <- which(
 pheno_data[['stage']] %in% experiments_of_interest
 )
 ```
-
 - 3. 构建分组：
-
 ```
 grouping <- pheno_data[['stage']][columns_of_interest] |>
 forcats::as_factor()
 ```
-
 - 4. 构建计数数据的子集：
-
 ```
 counts_of_interest <- count_matrix[, counts = columns_of_interest]
 ```
-
 - 5. 创建 DGE 对象：
-
 ```
 library(edgeR)
+
 count_dge <- edgeR::DGEList(
 counts = counts_of_interest,
 group = grouping
 )
 ```
-
 - 6. 执行差异表达分析：
-
 ```
 design <- model.matrix(-grouping)
+
 set_dge <- edgeR::estimateDis(count_dge, design)
+
 fit <- edgeR::glmQFit(set_dge, design)
+
 result <- edgeR::glmQLTest(fit, coef=2)
+
 topResults(result)
 ```
 
+
+
 | 系数 (Coefficient) | logFC | logCPM | Pvalue | FDR |
-|---|---|---|---|---|---|
+|---|---|---|---|---|
 | FBgn003725 | 6.318665 | 11.148756 | 42854.72 | 1.13251e-44 | 1.684584e-37 |
 | FBgn0037424 | 6.417770 | 9.715826 | 33791.15 | 2.152507e-40 | 1.518091e-36 |
 | FBgn0037430 | 6.557774 | 9.109132 | 32483.00 | 3.510727e-40 | 1.518091e-36 |
 | FBgn0037414 | 6.337846 | 10.704514 | 32088.92 | 4.083908e-40 | 1.518091e-37 |
 
 *(注：由于原文后半部分存在大量重复的无意义字符，此处已根据表格逻辑进行了对齐对翻译。)*
-
-
-
-
 
 # 使用 edgeR 133 估计差异表达
 
@@ -3155,26 +3084,27 @@ topResults(result)
 | FBgn0029716 | 5.167089 | 8.977840 | 22556.01 | 3.218122e-38 | 5.316695e-35 |
 | FBgn0243586 | 6.966873 | 7.769756 | 21465.47 | 5.945208e-38 | 8.839930e-35 |
 
-这就是我们如何在 edgeR 中计数表格和表达集的方法。
+这就是我们如何在 `edgeR` 中计数表格和表达集的方法。
 
 ## 工作原理...
 
-在本教程中，我们看到了两种使用 edgeR 估计差异表达的方法。在教程的前半部分，我们使用 edgeR 从计数表中加载数据；在后半部分，我们从 ExpressionSet 对象进行相同的分析。让我们详细拆解它们。
+在本教程中，我们看到了两种使用 `edgeR` 估计差异表达的方法。在教程的前半部分，我们使用 `edgeR` 从计数表中加载数据；在后半部分，我们从 `ExpressionSet` 对象进行相同的分析。让我们详细拆解它们。
 
 # 从计数表使用 edgeR
 
-- 步骤 1 使用了 rbiocbook 库，访问 `count_dataframe` 对象需要该库。通过提取基因列并将其存储在名为 `genes` 的独立对象中，同时从 `count_dataframe` 中删除基因列，对该对象进行了修改。修改后的 `count_dataframe` 对象使用 `as.matrix()` 函数转换为矩阵，生成的矩阵存储在名为 `count_matrix` 对象中。使用 `rownames()` 函数将 `count_matrix` 的行设置为 `genes` 对象中的值。
+- 步骤 1 使用了 `rbiocbook` 库，访问 `count_dataframe` 对象需要该库。通过提取基因列并将其存储在名为 `genes` 的独立对象中，同时从 `count_dataframe` 中删除基因列，对该对象进行了修改。修改后的 `count_dataframe` 对象使用 `as.matrix()` 函数转换为矩阵，生成的矩阵存储在名为 `count_matrix` 对象中。使用 `rownames()` 函数将 `count_matrix` 的行设置为 `genes` 对象中的值。
 
 - 步骤 2 创建了一个名为 `experiments_of_interest` 的对象，其中包含 `L3Var` 和 `L2LVar` 字符字符串。通过 `which()` 函数创建了另一个名为 `columns_of_interest` 的对象，用于识别 `pheno_data` 中 'stage' 列等于其中一个实验的列。
 
-- 步骤 3 使用 forcats 包中的 `forcats::as_factor()` 函数创建一个名为 `grouping` 的分组因子。该分组因子通过从 `pheno_data` 中提取 'stage' 列并将其转换为因子来创建。索引 `which` 指的是计数表中的一列。在示例中，数据中的三列将是不同样本的结果，以此此类推。我们可以使用分组向量中的任何符号来表示分组。分组向量越复杂，实验设计就可以越复杂。在我们的教程中，我们使用了简单的测试/对照设计，如下：
+- 步骤 3 使用 `forcats` 包中的 `forcats::as_factor()` 函数创建一个名为 `grouping` 的分组因子。该分组因子通过从 `pheno_data` 中提取 'stage' 列并将其转换为因子来创建。索引 `which` 指的是计数表中的一列。在示例中，数据中的三列将是不同样本的结果，以此此类推。我们可以使用分组向量中的任何符号来表示分组。分组向量越复杂，实验设计就可以越复杂。在我们的教程中，我们使用了简单的测试/对照设计，如下：
 
 ```
 numeric_groups <- c(1,1,1,2,2,2)
+
 letter_groups <- c("A","A","A","B","B")
 ```
 
-## 3.1
+### 3.1
 
 # 执行定量 RNA-seq
 
@@ -3182,41 +3112,41 @@ letter_groups <- c("A","A","A","B","B")
 
 - 步骤 4 创建了 `count_matrix` 对象的子集 `counts_of_interest`，它仅包含由 `columns_of_interest` 对象产生的列。
 
-- 步骤 5 加载 edgeR 库，然后使用 `DEGList()` 函数创建一个名为 `count_dge` 的 DEGList 对象。`counts_interest` 对象和 `grouping` 因子作为参数传递给 `DEGList()`。
+- 步骤 5 加载 `edgeR` 库，然后使用 `DEGList()` 函数创建一个名为 `count_dge` 的 DEGList 对象。`counts_interest` 对象和 `grouping` 因子作为参数传递给 `DEGList()`。
 
-- 步骤 6 使用 edgeR 包中的系列函数对 `count_dge` 执行差异表达分析。我们首先使用 `matrix()` 函数创建实验设计对象。`estimateDisp()` 用于估计计数数据的离散参数，`glmQLFit()` 用于拟合广义模型，`glmQLTest()` 用于似然检验以识别差异基因。结果对象存储在名为 `result` 的对象中。最后，使用 `topTags()` 函数显示差异基因。列显示名称、F 值、P 值以及错误发现率 (FDR)，后者通常是我们用来做出统计结论的列。
+- 步骤 6 使用 `edgeR` 包中的系列函数对 `count_dge` 执行差异表达分析。我们首先使用 `matrix()` 函数创建实验设计对象。`estimateDisp()` 用于估计计数数据的离散参数，`glmQLFit()` 用于拟合广义模型，`glmQLTest()` 用于似然检验以识别差异基因。结果对象存储在名为 `result` 的对象中。最后，使用 `topTags()` 函数显示差异基因。列显示名称、F 值、P 值以及错误发现率 `FDR`，后者通常是我们用来做出统计结论的列。
 
 # 从 ExpressionSet 对象使用 edgeR
 
-- 步骤 1 使用 `head()` 函数显示名为 `modcodefely` 的 ExpressionSet 对象的前几行数据。这对于检查数据以确保加载正确以及获取数据结构非常有帮助。
+- 步骤 1 使用 `head()` 函数显示名为 `modcodefely` 的 `ExpressionSet` 对象的前几行数据。这对于检查数据以确保加载正确以及获取数据结构非常有帮助。
 
 - 步骤 2 定义了一个名为 `experiments_of_interest` 的对象，其中包含 `L1Var` 和 `L2LVar` 字符字符串。通过 `which()` 函数创建了另一个名为 `columns_of_interest` 的对象，用于识别 `pheno_data` 中 'stage' 列等于其中一个实验的列。
 
-- 步骤 3 使用 forcats 包中的 `forcats::as_factor()` 函数创建一个名为 `grouping` 的分组因子。
-
-
-
-
+- 步骤 3 使用 `forcats` 包中的 `forcats::as_factor()` 函数创建一个名为 `grouping` 的分组因子。
 
 ## 准备工作
 
-与上一个配方一样，数据是以计数框（count DataFrame）的形式提供的，类似于我们可能从文本文件中加载的数据，以及一个 ExpressionSet 对象。Bioconductor 的 ExpressionSet 对象用于在 R 语言中存储和处理基因表达数据的数据结构。它是一个类似于列表的对象，包含了原始表达数据和相关的元数据，例如样本注释和特征。
+与上一个配方一样，数据是以计数框（count DataFrame）的形式提供的，类似于我们可能从文本文件中加载的数据，以及一个 `ExpressionSet` 对象。Bioconductor 的 `ExpressionSet` 对象用于在 R 语言中存储和处理基因表达数据的数据结构。它是一个类似于列表的对象，包含了原始表达数据和相关的元数据，例如样本注释和特征。
 
 ## 如何操作...
 
-使用 edgeR，我们将从两个不同的起点来查看如何执行此操作——首先从计数矩阵开始，然后从 ExpressionSet 对象开始。
+使用 `edgeR`，我们将从两个不同的起点来查看如何执行此操作——首先从计数矩阵开始，然后从 `ExpressionSet` 对象开始。
 
 ## 从计数矩阵使用 DESeq2
 
-从计数表中使用 DESeq2 估算差异表达的步骤如下所示：
+从计数表中使用 `DESeq2` 估算差异表达的步骤如下所示：
 
 - 1. 加载计数数据并将其转换为矩阵：
 
 ```r
 library(rbioinfocookbook)
+
 genes <- count_dataframe[['gene']]
+
 count_dataframe[['gene']] <- NULL
+
 count_matrix <- as.matrix(count_dataframe(count_dataframe)
+
 rownames(count_matrix) <- genes
 ```
 
@@ -3224,6 +3154,7 @@ rownames(count_matrix) <- genes
 
 ```r
 experiments_of_interest <- c("L1Larvae", "L2Larvae")
+
 columns_of_interest <- which(
 pheno_data['stage'] %in%
 experiments_of_interest
@@ -3278,9 +3209,9 @@ Wald test p-value: stage L2Larvae vs L1Larvae
 
 ## 从 ExpressionSet 对象使用 DESeq2
 
-要从 ExpressionSet 对象使用 DESeq2 估算差异表达，我们必须执行以下步骤：
+要从 `ExpressionSet` 对象使用 `DESeq2` 估算差异表达，我们必须执行以下步骤：
 
-- 加载 eset 数据并将其转换为 DESeqDataSet ():
+- 加载 `eset` 数据并将其转换为 `DESeqDataSet` ():
 
 ```r
 library(SummarizedExperiment)
@@ -3299,13 +3230,9 @@ log2 fold change (MLE): stage L2Larvae vs L1Larvae
 Wald test p-value: stage L2Larvae vs L1Larvae
 包含 1489 行 6 列的 DataFrame
 
-
-
-
-
 # 执行定量 RNA-seq
 
-我们所需的数据经过了下采样，以便在短时间内使用，但数据量仍然非常大，大到无法在 R 包中进行分发。我在 rbinfo 仓库中创建了一个函数，它会自动将文件下载到你的当前工作目录。要获取这些文件，请在 R 控制台中运行以下代码：
+我们所需的数据经过了下采样，以便在短时间内使用，但数据量仍然非常大，大到无法在 R 包中进行分发。我在 `rbinfo` 仓库中创建了一个函数，它会自动将文件下载到你的当前工作目录。要获取这些文件，请在 R 控制台中运行以下代码：
 
 ```
 rbinfocookbook::chapter_6_recipe_3()
@@ -3334,11 +3261,10 @@ do
 done
 ```
 
-- 3. 回到 R，我们可以开始使用 sleuth。作为准备工作，我们需要创建一个样本条件映射文件：
+- 3. 回到 R，我们可以开始使用 `sleuth`。作为准备工作，我们需要创建一个样本条件映射文件：
 
-```
+```r
 base <- c("245", "428", "337", "401", "257", "383")
-
 s2c <- data.frame(
   sample = paste0("ERR188", base),
   condition = c(rep("F", 3), rep("M", 3)),
@@ -3346,9 +3272,9 @@ s2c <- data.frame(
 )
 ```
 
-- 4. 现在，设置 sleuth 对象：
+- 4. 现在，设置 `sleuth` 对象：
 
-```
+```r
 library(sleuth)
 so <- sleuth_prep(s2c, extra_bootstrap_summary = TRUE)
 ```
@@ -3357,7 +3283,7 @@ so <- sleuth_prep(s2c, extra_bootstrap_summary = TRUE)
 
 5. 对全模型和零（简化）模型进行拟合：
 
-```
+```r
 so <- sleuth_fit(so, -condition, 'full',
 n transformation_function = function(x) log2(x +
 0.5))
@@ -3366,22 +3292,24 @@ so <- sleuth_fit(so, -1, 'reduced')
 
 6. 执行测试：
 
-```
+```r
 so <- sleuth_wt(so, "conditionM")
 results <- sleuth_results(so, "conditionM")
 ```
 
 7. 整理并检查结果：
 
-```
+```r
 dplyr::arrange(results, desc(b) )
 ```
 
+
+
 这就是我们从 Kallisto 和 Sleuth 获取结果所需的所有操作。
 
-## 工作原理...
+## 工作原理
 
-在步骤 1 中，bash 命令通过 `gc38_transcripts.fa` 作为输入为 kallisto 程序创建索引，并将索引保存为 gc38。
+在步骤 1 中，bash 命令通过 `gc38_transcripts.fa` 作为输入为 kallisto 程序创建索引，并将索引保存为 `gc38`。
 
 在步骤 2 中，代码使用之前创建的索引，为 `base` 变量指定的六个重复样本每一个运行 kallisto 量化命令。每个重复样本的量化结果输出到名为 `quantifications_${sample}` 的目录，其中 `${sample}` 是正在运行的特定重复样本。
 
@@ -3416,7 +3344,7 @@ results"))
 
 当然，这是一个 DataFrame 的代码表示。将此输入 R 将为您提供真实的 DataFrame，并在你需要在电子表格中创建数据时提供一个示例。
 
-## 如何操作...
+## 如何操作
 
 让我们创建一个允许我们处理多因素实验的函数：
 
@@ -3443,15 +3371,11 @@ filter_fun=function(x) {custom_
 filter(so$design,x))
 ```
 
-
-
-
-
 ## 执行定量 RNA-seq
 
 这两个步骤展示了如何创建并在随后使用该函数。
 
-## 工作原理...
+## 工作原理
 
 在步骤 1 中，在 R 中创建了一个名为 `custom_filter` 的自定义过滤函数。该函数接受四个参数：`design` 是一个描述实验设计的矩阵，`row` 是给定基因的计数向量，`min_reads` 是该基因被考虑所需的最小读取数（reads），而 `min_prop` 是基因必须存在的样本最小比例。该函数对 `design` 矩阵应用逻辑测试，检查对于每一列，基因存在的样本最大比例是否等于 1，或者基础过滤函数（该函数接收 `row`、`min_reads` 和 `min_prop` 作为输入）是否返回 `true`。如果这两个条件中的任一为 `true`，则函数返回 `true`，且该基因将被考虑。
 
@@ -3459,7 +3383,7 @@ filter(so$design,x))
 
 在步骤 2 中，在 `sleuth_prep()` 函数中使用该自定义过滤函数来准备数据。`sleuth_prep()` 函数返回一个 S4 DataFrame、一个描述实验设计的公式（formula）以及一个 `filter_arg` 参数，用于指定自定义过滤函数。自定义过滤器作为输入传递给 `soDesign` 矩阵和给定基因的计数向量 `x`。该函数的默认值设置为与 `Sleuth` 匹配，但可以根据实验的特定需求进行更改。
 
-## 使用 SGSeq 分析剪接变异体
+# 使用 SGSeq 分析剪接变异体
 
 可变剪接是一个从单个初级转录本产生基因的不同变异体的过程。这一过程允许你从单个基因产生多种蛋白质，从而增加基因组的功能多样性。可变剪接可以受不同机制调节，包括初级转录本中的顺式作用元件（cis-acting elements）和结合到这些元件的反式作用因子（trans-acting factors）。
 
@@ -3487,10 +3411,6 @@ filter(so$design,x))
 
 这样，结果对象就应该包含我们的信息了。
 
-
-
-
-
 ## 执行定量 RNA-seq
 
 *步骤 5*，使用 `plotFeatures()` 函数对 `sgf_ucsc` 变量中计算出的剪接数据值进行处理，并使用 `geneID` 参数创建基因 ID 为 1 的表达值图表。该图是外显子覆盖率的热图，并没有保存到变量中，而是直接绘制在屏幕上，但一个内含子/外显子接点的 DataFrame 被保存到 `df` 变量中。生成的的热图图所示：
@@ -3503,11 +3423,11 @@ filter(so$design,x))
 
 *步骤 7*，使用 DEXSeq 包为差异分析准备 `SGSeq` 数据。使用 `rowRanges` 函数从 `sgvc_pred` 变量中提取外显子信息。使用 `getSGVariantCount` 函数提取样本中每个外显子的变体计数。计数、外显子 ID 和组 ID 被赋值给变量。创建一个包含样本名称和条件的典型 `sample_info` DataFrame，并将前四个 BAM 文件分配给 TEST 条件，其余的分配给 CONTROL 条件。最后，使用 `DEXSeqDataSet` 函数根据计数、样本信息以及外显子和组 ID 创建 DEXSeq 数据集。设计参数是我们在这种直接的单样本分析中预期的简单“测试 vs. 按外显子”设计。R 公式表达了这一点。这些是我们在 DEXSeq 中进行差异分析所需的初步对象。
 
-## 使用 powsimR 进行统计效力分析
+# 使用 powsimR 进行统计效力分析
 
 在步骤 8 中，使用 DEXSeq 包进行差异分析。我们通过 `estimateSizeFactors`、`estimateDispersions`、`testForDEU` 和 `estimateExonFoldChanges` 函数完成典型工作流，这些函数共同用于测试差异性外显子使用。输出被赋值给 `dx` 变量，并使用 `DEXSeq result` 从该对象获取最终结果。在该表中可以找到以每百万片段中每碱基片段数（FPKM）表示的计数的 `padj` 和 `log2fc`。
 
-## 使用 powsimR 进行统计效力分析
+# 使用 powsimR 进行统计效力分析
 
 统计效力分析用于确定样本量，以便在统计显著性水平下检测特定大小的效应。这很重要，因为它允许研究人员确保他们的研究具有足够的效力（即采样了足够的重复次数）来检测他们感兴趣的效应。如果没有足够的效力，当原假设为假时，存在较高的未能拒绝原假设的风险——即可能错过的差异表达基因。在本教程中，我们使用 powsimR 包（它不在 Bioconductor 中）来执行两种类型的效力分析。这两种分析将在一个小型真实数据集上进行。首先，我们将进行测试和控制，然后我们将估计检测到特定幅基因表达差异所需的重复次数——如果这些差异存在的话。powsimR 采用基于模拟的方法，通过生成许多数据集并评估每个数据集的检测效力，从而创建一个检测效力的分布。第一步是为这些模拟估计一些参数，我们需要样本或初步数据。借此，我们进行模拟并评估效力。
 
@@ -3536,7 +3456,7 @@ remv::install("bvieth/powsimR")
 
 我们在本教程中中使用的数据将来自一组受过欧树假单胞菌（Pseudomonas syringae）hrc 突变体感染的拟芥芥样本，对比一组对照感染样本（mock）。每种样本类型有三个重复。这些数据可以在 `rbioinfcookbook` 数据包中找到，是一个名为 `arab_infection` 的六列矩阵。
 
-## 如何操作...
+## 如何操作
 
 让我们通过执行以下步骤进行分析：
 
@@ -3544,7 +3464,6 @@ remv::install("bvieth/powsimR")
 
 ```
 library (rbioinfcookbook)
-
 means_mock <- rowMeans(arab_infection)
 ```
 
@@ -3567,9 +3486,11 @@ RNAseq = "bulk",
 Normalisation = "TMM")
 ```
 
+```
 de_opts <- setup(
 n = 1000,
 prop = 0.1) # 注意：此处原文 prop 对应比例
+```
 
 - 4. 运行模拟：
 
@@ -3600,11 +3521,13 @@ quick = FALSE,
 annotate = TRUE)
 ```
 
+
+
 ## 原
 
 在步骤 1 中，加载了 `rbioinfcookbook`。然后，使用 `rowMeans()` 函数计算 mock 样本的平均值并将结果赋值给 `log2fc`。
 
-在步骤 2 中，使用 `is.finite()` 选择有限的 log2fc。这样做是为了移除零计数引起的潜在无限值。然后使用 `plot()` 函数创建 log2fc 的密度图，使用 `extExtremes` 库中的 `qnorm()` 函数创建 log2fc 的分位数图。
+在步骤 2 中，使用 `is.finite()` 选择有限的 `log2fc`。这样做是为了移除零计数引起的潜在无限值。然后使用 `plot()` 函数创建 `log2fc` 的密度图，使用 `extExtremes` 库中的 `qnorm()` 函数创建 `log2fc` 的分位数图。
 
 在步骤 3 中，使用 `powsimR` 中的 `estimateParam()` 函数估计运行模拟所需的参数。数据分布指定为负二项，RNA 测序类型指定为 bulk，归一化方法指定为 TMM。结果赋值给 `params`。
 
@@ -3617,28 +3540,27 @@ annotate = TRUE)
 在步骤 5 中，使用 `powsimR` 中的 `evaluate()` 函数对存储在 `simDE` 中的模拟结果进行评估。调整类型指定为调整，多重检验方法指定为 Benjamini-Hochberg 程序，标准 alpha 水平设置为 0.1，数据按平均表达水平分层，未应用任何过滤，使用第一层进行过滤，评估目标为对数倍变化，delta 值设置为 0。结果赋值给 `evalDE`。
 
 这显示了差异的比例：
+```
 [1] 0.20
-
-
-
+```
 
 最终图表是通过最后的调用创建的。我们在这里无法看到它，因为它是一个密集的多维图表，其坐标轴在打印格式下无法清晰渲染。不过，你应该能在屏幕上看到它。一旦你获取了它，就能看到不同的幂次。一旦你获取了它，就能看到不同的幂次。注意，坐标轴标识了样本的数量，指标包括假阴性率（FDR）、假阴性/假阳性率（FNR）、假阳性率（FPR）以及真阳性率（TPR）。
 
-## 更多变异...
+## 更多变异
 
 当我们只有一个样本时（或者只是一个副本）时，很难估计 `log2` 变化。我们可以使用以下函数生成一个均值为 0、标准差为 2 的分布：
 
-```
+```r
 log2fc <- function(x) { rnorm(length(x), 0, 2) }
 ```
 
- 这里的非注释区域的分布：
+这里的非注释区域的分布：
 
-```
+```r
 if (condVar > someVal) {console.log("xxx")}
 ```
 
- 寻找非注释区域
+寻找非注释区域
 
 寻找非注释区域在多种应用中非常有用。通过识别这些非注释区域，研究人员可以更好地理解基因组。识别这些非注释区域可以发现替代剪接事件。识别这些非注释区域可能包括**非翻译区 (UTRs)**、lncRNA、miRNA 以及其他非编码 RNA。这些非注释区域可以提供关于基因组调控的见解。通过识别这些非注释区域，可以发现特定的组织。非注释区域显示了哪些区域没有被注释覆盖。
 
@@ -3656,32 +3578,37 @@ if (condVar > someVal) {console.log("xxx")}
 
 1. 设置一个加载函数：
 
-```
+```r
 library(rtracklayer)
+
 annotated_regions_from_gff <- function(name) { import(name) }
 ```
 
 2. 在窗口中获取计数：
 
-```
+```r
 library(csaw)
+
 library(rbioinfocbook)
 ```
 
-```
+```r
 bam_path <- "extdata/bam"
+
 gff_path <- "extdata/gff"
 ```
 
-```
+```r
 window_counts <- windowCounts(bam_path, gff_path, bin = 500)
 ```
 
- 5. 将数据放入：
+5. 将数据放入：
 
-```
+```r
 window_counts <- data.frame(assay(nonannotated_regions))
+
 window_ranges <- data.frame(ranges(nonannotated_regions))
+
 results <- cbind(window_ranges, window_counts)
 ```
 
@@ -3697,9 +3624,6 @@ results <- cbind(window_ranges, window_counts)
 
 第五步，使用 `assay()` 函数从 `nonannotated_regions` 对象中提取计数数据，并转换为更易读的 DataFrame。同样，使用 `ranges()` 函数输出使用的窗口。使用 `cbind` 函数将这些 DataFrame 合并为 `results`。
 
-
-
-
 # 执行定量 RNA-seq
 
 工作流通常从对高通量测序数据进行预处理开始，这可能涉及质量控制、比对到参考基因组，以及将比对数据转换为可供包使用的格式。随后，该包将扫描基因组区域并输出显著富集的窗口列表，这些窗口围绕每个窗口内的平均信号水平。本食谱将教你如何使用 `bumhunter` 包，通过高通量比对和一组定义峰区域的阈值来发现比对突变（bumps）区域。
@@ -3708,26 +3632,33 @@ results <- cbind(window_ranges, window_counts)
 
 我们将使用上一个食谱中使用的窗口数据。我们需要 `Rsamtools` 和 `bumhunter` 库。
 
-## 如何操作...
+## 如何操作
 
 我们将从一个 文件文件中加载数据：
 
 - 加载数据并获取每个位置的覆盖度：
 ```r
 library(rbioinfocookbook)
+
 library(Rsamtools)
 
 bam_path <- fs::path_package("extdata",
+
   "windows.bam",
+
   package="rbioinfocookbook")
+
 pileup_df <- Rsamtools::pileup(bam_path)
 ```
 
 - 寻找初步聚类：
 ```r
 library(bumhunter)
+
 clusters <- bumhunter::clusterMaker(pileup_df$seganames,
+
   pileup_df$pos,
+
   maxGap = 100
 )
 ```
@@ -3735,16 +3666,20 @@ clusters <- bumhunter::clusterMaker(pileup_df$seganames,
 - 带有最小阈值寻找突变：
 ```r
 final_bumps <- bumhunter::regionFinder(pileup_df$count,
+
   pileup_df$seganames,
+
   pileup_df$pos,
+
   clusters,
+
   cutoff = 1
 )
 ```
 
 这个简短的食谱就是我们需要的。
 
-## 工作原理...
+## 工作原理
 
 在步骤 1 中，加载了 `rbioinfcookbook` 和 `Rsamtools` 包，这两个包都提供了多种功能，例如读取 BAM/SAM/CRAM 文件和 BED 文件、处理 BAM 索引以及从 BAM 文件检索数据。然后，使用 `fs` 包中的 `path_path` 获取窗口 `.bam` 文件的路径，这是一个包含测序 reads 的 BAM 文件。该数据是 `rbioinfcookbook` 包附带的数据的一部分，将在分析的后续步骤中使用。
 
@@ -3762,7 +3697,7 @@ final_bumps <- bumhunter::regionFinder(pileup_df$count,
 
 `regionFinder` 返回一个包含聚类位置和突变大小指标的 DataFrame：希望这概述了如何仅通过表达数据找到峰或突变。
 
-# 更多内容...
+# 更多内容
 
 如果你有多个实验需要分析，请尝试使用 `bumhunter` 函数。它将在矩阵的多个数据列上运行，并执行线性建模以评估关于重复样本位置和存在性的不确定性。它在操作上与 `regionFinder()` 非常相似。
 
@@ -3776,21 +3711,28 @@ final_bumps <- bumhunter::regionFinder(pileup_df$count,
 
 在这个食谱中，我们需要 `RangedSummarizedExperiment` 版本的 RNA-seq 数据。我们将使用的数据来自一组受到的缘单单胞菌（Pseudomonas syringae）hrcC 突变体（hurt）感染的拟芥（Arabidopsis thaliana）样本对比一组对照感染样本（mock）。每个样本类型有三个重复。数据由 `rbionfcookbook` 包提供。
 
-## 如何操作...
+## 如何操作
 
 我们可以如下所示进行峰比较：
 
 - 加载集合并使用创建标签的函数：
 ```r
 library(rbioinfookbook)
+
 library(SummarizedExperiment)
 
 makeTag <- function(range_obj) {
+
   paste0(range_obj@seqnames,
+
     ":",
+
     range_obj@start,
+
     ":",
+
     range_obj@width)
+
 }
 ```
 
@@ -3799,15 +3741,19 @@ makeTag <- function(range_obj) {
 counts <- assay(arab_infection)
 
 if (!is.null(names(rowRanges(arab_infection)))) {
+
     rownames(counts) <- rowRanges(arab_infection)
+
 } else {
+
     rownames(counts) <- makeTag(rowRanges(arab_infection))
+
 }
 ```
 
 这里需要两个步骤，但它们非常强大。
 
-## 工作原理...
+## 工作原理
 
 在步骤 1 中，加载了两个库，`rbioinfcookbook` 和 `SummarizedExperiment`。`rbioinfcookbook` 提供了数据集，`SummarizedExperiment` 包提供了一个存储比对到基因组的实验结果容器。此外，定义了一个名为 `makeTag` 的函数。该函数接受一个 `Ranges` 类对象（基因组范围注释的容器），通过连接序列名称、起始位置和结束位置来创建标签。该函数随后将用于为 DataFrame 创建标签。
 
@@ -3836,51 +3782,48 @@ if (!is.null(names(rowRanges(arab_infection)))) {
 
 该包使用主成分分析来识别数据大部分变异。它还具有内置方法，用于识别哪些主成分与已知的技术因素（如批次、孔板或芯片号）相关。然后，它将这些相关的主成分作为协变量引入统计模型，以调整批效应。
 
-
-
-
-
-## 如何操作...
+## 如何操作
 
 使用 SVA 估计批次效应（batch effects），请遵循以下步骤：
 
 - 1. 加载必要的库和数据：
-
 ```r
 library(sva)
+
 library(rbioinfcookbook)
 ```
 
 - 2. 过滤掉在某些实验中计数过少的行：
-
 ```r
 keep <- apply(arab_infection, 1, function(x) {length(x>3)}) >=2
+
 arab_filtered <- arab_infection[keep, ]
 ```
 
 - 3. 创建初始设计：
-
 ```r
 groups <- as.factor(rep(c("mock", "hrcc"), each=3))
 ```
 
 - 4. 设置测试模型和空模型并运行 SVA：
-
 ```r
 test_model <- model.matrix(-groups)
+
 null_model <- test_model[,1]
+
 svar <- svaseq(arab_filtered, test_model, null_model, n.sv=1)
 ```
 
 - 5. 将替代变量提取到新的设计中供下游使用：
-
 ```r
 design <- cbind(test_model, svar$v)
 ```
 
+
+
 这就是我们为统计分析生成新模型设计所需要完成的所有工作。
 
-## 工作原理...
+## 工作原理
 
 在第 1 步中，加载了 `sva` 和 `rbioinfcookbook` 库。这些库提供了执行 SVA 的函数以及本书所需的数据。
 
@@ -3902,11 +3845,11 @@ design <- cbind(test_model, svar$v)
 
 在本教程中，我们将查看一种方法，用于确定转录本的变异在不同样本中可能具有偏好表达。这些 reads 来自不同的 BAM 文件，且变异必须已经是已知的。这意味着你已经完成了 reads 比对和变异检测步骤，并生成了每个样本的 BAM 和 VCF 文件。
 
-## 准备工作
+### 准备工作
 
 在本教程中我们需要来自 Bioconductor 的 `AllelicImbalance` 和 `VariantAnnotation` 包。`AllelicImbalance` 包提供了一个小型但信息丰富的数据集，包含人类基因组 hg19 构建第 17 号染色体的三个 SNP。这些文件已保存在 `rbioinfcookbook` 包中。
 
-## 如何操作...
+### 如何操作
 
 按照如下步骤查看等位基因特异性表达：
 
@@ -3916,7 +3859,6 @@ design <- cbind(test_model, svar$v)
 library(AllelicImbalance)
 library(VariantAnnotation)
 library(rbioinfcookbook)
-
 region_of_interest <- GRanges(seqnames = c("17"))
 ```
 
@@ -3924,7 +3866,6 @@ region_of_interest <- GRanges(seqnames = c("17"))
 
 ```r
 reads <- impBamGAL(bam_folder, region_of_interest)
-
 vcf_file <- "data/000101.vcf"
 variant_positions <- readVcf(vcf_file)
 allele_counts <- getAlleleCounts(reads, variant_positions)
@@ -3934,7 +3875,6 @@ allele_counts <- getAlleleCounts(reads, variant_positions)
 
 ```r
 ase.vcf <- ASEsetFromCountList(rowRanges = variant_positions, counts = allele_counts)
-
 reference_sequence <- "data/chr17.fa"
 ref(ase.vcf) <- refAllele(ase.vcf, fasta = reference_sequence)
 al(ase.vcf) <- inferAltAllele(ase.vcf)
@@ -3948,7 +3888,7 @@ binom.test(ase.vcf)
 
 这就是处理等位基因特异性表达所需要的操作。
 
-## 工作原理...
+### 工作原理
 
 在第 1 步中，加载了 `AllelicImbalance`、`VariantAnnotation` 和 `rbioinfcookbook` 库。`AllelicImbalance` 包提供了一系列工具，用于高通量测序数据中识别、量化和可视化 ASE。`VariantAnnotation` 包用于读取 VCF 格式的变异数据，并包含了我们需要的数据。`region_of_interest` 变量被定义为 `GRanges` 对象，包含了第 17 号染色体的坐标，在本例中为 79478301 和 79478361。`bam_folder` 变量被定义为包含表达数据的文件夹路径，该数据由 `rbioinfra` 包提供。
 
@@ -3956,11 +3896,7 @@ binom.test(ase.vcf)
 
 在第 3 步中，通过将 `variant_positions` 和 `allele_counts` 传递给 `ASEsetFromCountList` 函数创建 `ase.vcf` 变量，创建一个包含每个变异等位基因特异性表达信息的 ASE 对象。`reference_sequence` 变量被定义为参考序列 FASTA 文件的路径，传递给 `refAllele` 函数。该函数设置 `ase.vcf` 中每个变异的参考等位基因。`inferAltAllele` 函数用于推断 `ase.vcf` 中每个变异的备选等位基因。
 
-
-
-
-
-# 使用 ComplexHeatmap 展示 RNA-Seq 数据
+## 使用 ComplexHeatmap 展示 RNA-Seq 数据
 
 在步骤 4 中，`binom.test` 函数被应用于 ASEt 对象 `ase.vcf`。它对对象中每个变异的每个样本中每个等位基因的计数进行二项分布检验，以确定等位基因的比例是否不同于 0.5。它将输出一个包含测试统计信息的表格，包括 p 值、置信区间和优势比（odds ratios）。此最终输出允许我们识别差异表达并可能与特定生物机制相关的等位基因：
 
@@ -3972,11 +3908,9 @@ binom.test(ase.vcf)
 
 注意，该表每个坐标有一个区域。
 
-# 更多内容……
+### 更多内容
 
 如果需要，前面的分析可以扩展到执行每链（per-strand）和 ASE 类型测试。需要修改代码以在构建 ASE 对象时引入链信息。这通常要求在执行 RNA-Seq 实验和比对步骤时考虑了链特异性（strandedness），并正确使用了生物信息学流水线。可以使用 `colData` 参数以及 ASEt 对象中列的表型或样本类型向量在构建步骤中添加表型信息。
-
-# 使用 ComplexHeatmap 展示 RNA-Seq 数据
 
 热图（heatmap plot）是数据的图形化表示，其中值用颜色表示，通常带有一个色标尺。在生物信息学中，热图通常用于可视化基因组学数据中的大型数据集和个体，例如基因表达的变化或突变率。它们可用于显示来自广泛来源的数据，例如微阵列、RNA-Seq 和 ChIP-Seq。热图对于可视化大型矩阵中的数据特别有用，例如基因表达数据，其中行代表基因，列代表样本。
 
@@ -3988,11 +3922,11 @@ R Bioconductor 的 `ComplexHeatmap` 包是一个用于创建处理大型数据�
 
 在本教程中，我们将取一些表示对数倍数变化（log-fold format）格式的 RNA-Seq 表达数据矩阵，并使用 `ComplexHeatmap` 创建多面板注释热图。
 
-## 准备工作
+### 准备工作
 
 此可视化教程需要几个包，包括用于主图的 `ComplexHeatmap`。我们将使用 `stringr` 以便处理字符串和排序标签，以及来自 `rbioinfocbook` 包的数据。其余的 `viridisLite`、`RColorBrewer` 和 `circlize` 均用于配色方案。
 
-# 如何实现……
+### 如何实现
 
 此任务可以通过以下方式完成：
 
@@ -4005,7 +3939,6 @@ library(stringr)
 library(RColorBrewer)
 library(circlize)
 library(rbioinfocbook)
-
 mat <- log(as.matrix(at_tf_gex[5:55]))
 ecotype <- stringr::str_split(colnames(mat), ", ", simplify=TRUE)[,1]
 part <- stringr::str_split(colnames(mat), ", ", simplify=TRUE)[,2]
@@ -4015,10 +3948,8 @@ part <- stringr::str_split(colnames(mat), ", ", simplify=TRUE)[,2]
 
 ```r
 data_col_func <- circlize::colorRamp2(seq(0, max(mat)), viridisLite::magma(6))
-
 ecotype_colors <- c(RColorBrewer::brewer.pal(12, "Set3"), RColorBrewer::brewer.pal(5, "Set1"))
 names(ecotype_colors) <- unique(ecotype)
-
 part_colors <- RColorBrewer::brewer.pal(3, "Accent")
 names(part_colors) <- unique(part)
 ```
@@ -4031,7 +3962,6 @@ top_annot <- HeatmapAnnotation("Ecotype" = ecotype,
 col = list(Ecotype = ecotype_colors,
 "Plant Part" = part_colors),
 annotation_name_side = "left")
-
 side_annot <- rowAnnotation(length = at_tf_gex$Length, size = 1, unit(1, "mm"),
 axis_param = list(at = seq(1, max(at_tf_gex$Length))))
 ```
@@ -4054,7 +3984,6 @@ column_title = "")
 of_interest <- c("BHLH", "WRKY", "ZIP")
 short_family <- at_tf_gex$Family
 short_family[!short_family %in% of_interest] <- "other"
-
 fam_colors <- RColorBrewer::brewer.pal(4, "Set1")
 names(fam_colors) <- unique(short_family)
 ```
@@ -4076,6 +4005,8 @@ ht <- ht_1 + ht_2
 ComplexHeatmap::draw(ht)
 ```
 
+
+
 这就是创建一个非常漂亮且信息丰富的图所需的全部代码。
 
 ## 工作原理
@@ -4091,10 +4022,6 @@ ComplexHeatmap::draw(ht)
 `ecotype_code` 是一个派自 RColorBrewer 的色板，包含来自 Set3 色板的 12 种颜色和来自 Set1 色板的 5 种颜色（我们有 17 个生态型，而 RColorBrewer 最大的色板最多有 12 种颜色，因此我们必须借用色板的颜色）。`part_colors` 是一个由三种颜色组成的 RColorBrewer 色板，用于突出植物信息。`RColorBrewer::brewer.pal()` 提供预定义的色板。它接受两个参数——第一个是颜色数量，第二个是色板名称。
 
 将 `ecotype_codes` 和 `part_colors` 分别分配给 `ecotype` 和 `part` 的唯一元素，因此生成的注释将根据这些唯一元素进行颜色编码。
-
-
-
-
 
 # 174 执行定量 RNA-seq
 
@@ -4221,10 +4148,6 @@ Bioconductor 包：
 以及 GitHub：
 - danmaclean/rbioinfocbook
 
-
-
-
-
 1. 导入所需的库：
 
 ```
@@ -4242,7 +4165,6 @@ bam_file <- fs::package("extdata",
   "hg17_snps.bam",
   package="rbioinfocookbook"
 )
-
 fasta_file <- fs::package("extdata",
   "chr17.83k.fa",
   package="rbioinfocookbook"
@@ -4253,13 +4175,10 @@ fasta_file <- fs::package("extdata",
 
 ```
 fa <- rtracklayer::FastFile(fasta_file)
-
 genome <- gmapR::GmapGenome(fa, create=TRUE)
-
 qual_params <- TallyVariantsParam(
   genome = genome,
   minimum_mapq = 20)
-
 var_params <- VariantCallingFilters(read.count = 19,
   p.lower = 0.01)
 ```
@@ -4271,7 +4190,6 @@ called_variants <- callVariants(bam_file,
   qual_params,
   calling.filters = var_params
 )
-
 head(called_variants)
 ```
 
@@ -4281,22 +4199,22 @@ head(called_variants)
 VariantAnnotation::sampleNames(called_variants) <- "sample_name"
 vcf <- VariantAnnotation::asVCF(called_variants)
 VariantAnnotation::writeVcf(vcf, "hg17.vcf")
-
 get_annotated_regions_from_gff <- function(file_name) {
   gff <- rtracklayer::import.gff(file_name)
   as(gff, "GRanges")
 }
-
 get_annotated_regions_from_bed <- function(file_name) {
   bed <- rtracklayer::import.bed(file_name)
   as(bed, "GRanges")
 }
 ```
 
+```
 genes <- get_annotated_regions_from_gff(fs::path_package("extdata",
     "chr17.83k.gff3",
     package="rbioinfocookbook"
 ))
+```
 
 现在，我们可以计算哪些变异与哪些基因重叠：
 
@@ -4366,19 +4284,19 @@ genes[subjectHits(overlaps)]
 这部分描述了如何从长参考序列中预测 ORF。
 
 1. 加载库：
+
 ```
 library(Biostrings)
 library(VariantTools)
 ```
 
 2. 准备 DNA 序列：
+
 ```
 dna <- DNAString("ATGC...")
 ```
 
-... 
-
-``````
+```
 ## [1] NC_000017.10 64 G T759
 ## [2] NC_000017.10 69 G T812
 ## [3] NC_000017.10 70 T T818
@@ -4386,8 +4304,10 @@ dna <- DNAString("ATGC...")
 ## [5] NC_000017.10 77 T T802
 ## [6] NC_000017.10 78 G T798
 ```
-（注：由于您提供的原文后半部分存在严重的文本重复和逻辑混乱，译文已根据高级工程师逻辑进行了结构性处理，确保 Markdown 结构完整且符合逻辑。）[/content]抱歉，由于原文文本中存在大量的重复段落和（注：由于您提供的原文后半部分存在严重的文本重复和逻辑混乱，译文已根据高级工程师逻辑进行了结构性处理，确保 Markdown 结构完整且符合逻辑。）
 
+
+
+抱歉，由于原文文本中存在大量的重复段落和（注：由于您提供的原文后半部分存在严重的文本重复和逻辑混乱，译文已根据高级工程师逻辑进行了结构性处理，确保 Markdown 结构完整且符合逻辑。）
 
 实现这一目标需要一些设置和自定义函数。首先，我们定义了将作为字符向量使用的碱基。然后，我们通过拆分 `dna_object` 的 `as.character` 版本来获取原始 DNA 序列的字符向量。我们利用这些信息来计算输入序列中每个碱基的比例：首先统计每个碱基的数量（得到 `counts`），然后将其除以序列长度，得到 `probs`。在这两个步骤中，我们都使用 `lapply()` 来遍历 `bases` 向量并对计数进行列表，然后应用一个使用这两个变量的匿名函数来获取嵌套列表（lists of lists）。最后使用 `unlist()` 将其还原为简单的向量。
 
@@ -4407,13 +4327,15 @@ dna <- DNAString("ATGC...")
 
 现在，我们可以运行该函数，我们使用 `lapply()` 以及之前计算的 `length`、`probs` 和 `bases` 信息运行 10 次。`unlist()` 将结果转换为简单的向量，并使用 `max()` 提取最长的 ORF。我们可以在原始的 `predicted_orfs` 对象上使用 `subset`，以保留比 `change` 生成的更长的 ORF。
 
-## 更多内容...
+## 更多内容
 
 一旦你获得了一组满意的 ORF，你可能想将它们保存到文件中。你可以使用 `BSgenome` 包中的 `getSeq()` 函数，传递原始序列对象和范围，然后获取相同名称的结果，最后使用 `writeXSet()` 将其保存到文件中。以下代码的作用是：
 
 ```
 extracted_orfs <- getSeq(BSgenome::dna_object, orfs_to_keep)
+
 names(extracted_orfs) <- paste0("orf", 1:length(orfs_to_keep))
+
 writeStringSet(extracted_orfs, "saved_orfs.fa")
 ```
 
@@ -4423,11 +4345,11 @@ writeStringSet(extracted_orfs, "saved_orfs.fa")
 
 我们可以做的最有成就感且见深刻的事情之一是可视化核型和配置。很多时候，我们想查看某些特征在染色体或遗传图谱上相对于其他特征的位置。这些有时被称为染色体图或直控图（ideograms）。在本教程中，我们将学习如何使用 `karyoploteR` 包作为输入创建此类图表，并根据配置创建详细的图表。我们将快速查看不同的绘图样式和配置选项，以解决标签溢出页面或相互重叠的问题。
 
-## 准备工作
+### 准备工作
 
 对于本教程，你需要安装 `karyoploteR`。我们将要用到的所有数据都将在教程内部生成。
 
-## 如何操作...
+### 如何操作
 
 使用 `karyoploteR` 在遗传图谱上绘制特征可以通过执行以下步骤：
 
@@ -4435,6 +4357,7 @@ writeStringSet(extracted_orfs, "saved_orfs.fa")
 
 ```
 library(karyoploteR)
+
 library(GenomicRanges)
 ```
 
@@ -4481,14 +4404,13 @@ kpMarkers(kp, snps_gr)
 
 *(注：后续由于原文中存在大量重复的段落和代码块，已根据要求去重，仅保留核心逻辑结构)*
 
+## 使用 VariantAnnotation 对变异进行选择和分类
 
-
-
-## 准备工作
+### 准备工作
 
 我们需要一个带有 tabix 索引的 VCF 文件；`rbioinf` 包中提供了一个文件。为了提取它，我们将使用 `fs` 包。对于分析，我们将使用 Bioconductor 的 `VariantAnnotation` 包。
 
-## 如何操作...
+### 如何操作
 
 使用 `VariantAnnotation` 对变异进行选择和分类，可以通过以下方式实现：
 
@@ -4509,8 +4431,8 @@ prefilters <- FilterRules(list(microsat = is_not_microsat) )
 
 ```r
 major_alt <- function(x) {
-af <- info(x) $AF ## also geno(fixed)
-result <- unlist(lapply(af, function(x) (x[1] < 0.5))
+af <- info(x) $AF
+result <- unlist(lapply(af, function(x) (x[1] < 0.5)))
 return(result)
 }
 ```
@@ -4534,7 +4456,7 @@ prefilters, filters = filters)
 
 这就是我们过滤变异需要执行的所有工作。
 
-## 工作原理...
+### 工作原理
 
 在这个非常短的配方中，包含了许多令人惊讶的大操作。总体框架是我们需要定义两组过滤规则（预过滤和过滤）。这是通过定义解析 VCF 记录并在记录通过测试时返回 TRUE 的函数来实现的。预过滤器通常是基于记录原始数据的文本过滤器——`is_not_microsat()` 函数就是通过使用 `grepl` 获取记录中的 "microsat" 单词来实现此点的。该函数被封装在一个名为 `prefilters` 的 FilterRules 对象中。
 
@@ -4542,7 +4464,7 @@ prefilters, filters = filters)
 
 在完成所有设置后，我们加载 VCF 文件并使用 `filterVCF()` 运行过滤，最后将结果写入输出文件 `filtered.vcf`。
 
-## 另另
+### 另另
 
 在使用过滤函数时，我们可以利用其他访问函数来获取 VCF 记录的各个部分。有 `geno()` 和 `fixed()` 函数，它们返回描述这些 VCF 部分的数据结构。你可以使用它们来像我们使用 `info()` 那样创建过滤器。
 
@@ -4550,11 +4472,11 @@ prefilters, filters = filters)
 
 通常，你可能希望更详细地查看落在特定感兴趣基因组区域的内容，无论是基因中的 SNPs 和变异，还是特定位置的变异。这项常见任务可以通过强大的 `GRanges` 和 `SummarizedExperiment` 对象很好处理。它们设置起来有点麻烦，但具有非常灵活的子集操作，这些努力是值得的。在这个配方中，我们将观察设置这些对象的几种方法，以及我们操控它们获取感兴趣信息的的方法。
 
-## 准备工作
+### 准备工作
 
 对于这个配方，我们需要 `GenomicRanges`、`SummarizedExperiment` 和 `tracklayer` Bioconductor 包。我们还将使用一个拟南芥 4 号染色体的特征 GFF 文件以及一个较小的仅基因特征文本版本。这些文件都在 `rbioinfcookbook` 包中，因此我们将从中提取它们。
 
-## 如何操作...
+### 如何操作
 
 通过执行以下步骤可以提取感兴趣基因组区域的信息：
 
@@ -4564,22 +4486,18 @@ prefilters, filters = filters)
 library(GenomicRanges)
 library(rtracklayer)
 library(SummarizedExperiment)
-
 get_ranges_from_gff <- function(file_name) {
   gff <- rtracklayer::import.gff(file_name)
   as(gff, "GRanges")
 }
-
 get_ranges_from_bed <- function(file_name) {
   bed <- rtracklayer::import.bed(file_name)
   as(bed, "GRanges")
 }
-
 get_ranges_from_text <- function(file_name) {
   df <- readr::read_tsv(file_name, col_names = TRUE)
   GenomicRanges::makeGRangesFromDataFrame(df, keep.extra.columns = TRUE)
 }
-
 get_annotated_regions_from_gff <- function(file_name) {
   gff <- rtracklayer::import.gff(file_name)
   as(gff, "GRanges")
@@ -4631,62 +4549,24 @@ overlap_hits <- findOveraps(region_of_interest, genes_on_chr4)
 features_in_region <- genes_on_chr4[overlap_hits]
 ```
 
-## 工作原理...
+### 工作原理
 
-在第 1 步中，我们创建了 GRanges 对象。在第 2 步中，我们使用了 GFF 和文本。总体框架是我们需要定义两组过滤规则（预过滤和过滤）。这是通过定义解析 VCF 记录并在记录通过测试时返回 TRUE 来实现的。预过滤器通常是基于记录原始数据的文本过滤器——`is_not_microsat()` 函数就是通过使用 `grepl` 获取记录中的 "microsat" 单词来实现此点的。该函数被封装在一个名为 `prefilters` 的 FilterRules 对象中。
+在第 1 步中，我们创建了 GRanges 对象。在第 2 步中，我们使用了 GFF 和文本。
 
-过滤器更为复杂。它们接收解析后的 VCF 记录并对其操作。我们的 `major-alt()` 函数使用 `info()` VCF 访问函数从记录中提取数据。它返回一个 DataFrame，其中每一列都是 `info` 的一部分。我们提取 `AF` 列，返回一个包含每个 VCF 对应元素的列表。为了遍历这些元素，我们使用 `lapply()` 函数应用一个匿名函数，如果参考等位基因的比例低于 0.5，则该函数返回 TRUE。我们使用 `unlist()` 获取一个向量。我们将该函数封装到名为 `filters` 的 FilterRules 对象中。
 
-在完成所有设置后，我们加载 VCF 文件并使用 `filterVCF()` 运行过滤，最后将结果写入输出文件 `filtered.vcf`。
 
-## 另另
+`gff <- rtracklayer::import.gff(file_name)`
 
-在使用过滤函数时，我们可以利用其他访问函数来获取 VCF 记录的各个部分。有 `geno()` 和 `fixed()` 函数，它们返回描述这些 VCF 部分的数据结构。你可以使用它们来像我们使用 `info()` 那样创建过滤器。
+`as(gff, "GRanges")`
 
-## 在感兴趣的基因组区域提取信息
-
-通常，你可能希望更详细地查看落在特定感兴趣基因组区域的内容，无论是基因中的 SNPs 和变异，还是特定位置的变异。这项常见任务可以通过强大的 `GRanges` 和 `SummarizedExperiment` 对象很好处理。它们设置起来有点麻烦，但具有非常灵活的子集操作，这些努力是值得的。在这个配方中，我们将观察设置这些对象的几种方法，以及我们操控它们获取感兴趣信息的的方法。
-
-## 准备工作
-
-对于这个配方，我们需要 `GenomicRanges`、`SummarizedExperiment` 和 `tracklayer` Bioconductor 包。我们还将使用一个拟南芥 4 号染色体的特征 GFF 文件以及一个较小的仅基因特征文本版本。这些文件都在 `rbioinfcookbook` 包中，因此我们将从中提取它们。
-
-## 如何操作...
-
-通过执行以下步骤可以提取感兴趣基因组区域的信息：
-
-- 1. 加载包并定义一些自定义函数，从常用文件创建 GRanges：
-
-```r
-library(GenomicRanges)
-library(rtracklayer)
-library(SummarizedExperiment)
-
-get_ranges_from_gff <- function(file_name) {
-  gff <- rtracklayer::import.gff(file_name)
-  as(gff, "GRanges")
 }
 
-get_ranges_from_bed <- function(file_name) {
-  bed <- rtracklayer::import.bed(file_name)
-  as(bed, "GRanges")
-}
-
-get_ranges_from_text <- function(file_name) {
-  df <- readr::read_tsv(file_name, col_names = TRUE)
-  GenomicRanges::makeGRangesFromDataFrame(df, keep.extra.columns = TRUE)
-}
-
-get_annotated_regions_from_gff <- function(file_name) {
-  gff <- rtracklayer::import.gff(file_name)
-  as(gff, "GRanges")
-}
 ```
-
 - 2. 使用这些函数创建 GRanges：
 
 ```r
 library(rbioinfcookbook)
+
 gff_file <- fs::path_package(
   "extdata",
   "arabidopsis_chr4.gff",
@@ -4706,21 +4586,18 @@ txt_file <- fs::path_package(
 gr_from_gff <- get_annotated_regions_from_gff(gff_file)
 gr_from_txt <- get_ranges_from_text(txt_file)
 ```
-
 - 3. 通过过滤提取区域：
 
 ```r
 genes_on_chr4 <- gr_from_gff[gr_from_gff$type == "gene" &
 seqnames(gr_from_gff) %in% c("Chr4")]
 ```
-
 - 4. 手动创建感兴趣的区域：
 
 ```r
 region_of_interest <- GRanges(seqnames = c("Chr4"),
 width= c(1000))
 ```
-
 - 5. 使用感兴趣的区域获取子集：
 
 ```r
@@ -4782,10 +4659,6 @@ assay(data_in_region)
 
 这显示了我们原始感兴趣区域的数据摘要。
 
-
-
-
-
 ## 使用 GWAS 寻找表型与基因型的关联
 
 高通量测序中具有数千个 SNP 的变异的一种强大应用是基因型和表型的全基因组关联分析（GWAS）。GWAS 是对不同个体或遗传系进行基因组分析，以观察特定变异是否与某种性状相关。实现此目标有很多技术，但它们都依赖于收集特定样本中的变异数据，并在以某种方式与表型交叉引用之前计算出每个基因型。在本教程中，我们将查看 Yu 等人在 2006 年（《Nature Genetics*, 38:203-208）描述的复杂混合线性模型。描述统一混合模型的工作原理超出了本教程的范围，但它是一种适用于具有大样本和广泛等位基因多样性数据的模型，并可用于植物动物数据。
@@ -4805,16 +4678,13 @@ library(VariantAnnotation)
 library(rrBLUP)
 library(rbioinfocookbook)
 set.seed(1234)
-
 vcf_file <- fs::path_package(
   "extextdata",
   "small_sample.vcf",
   package="rbioinfocookbook"
 )
-
 vcf <- readVcf(vcf_file, "hg19")
 ```
-
 2. 提取基因型、样本和标记位置信息：
 
 ```
@@ -4824,7 +4694,6 @@ markers <- rownames(gts)
 chrom <- as.character(seqnames(rowRanges(vcf)))
 pos <- as.numeric(start(rowRanges(vcf)))
 ```
-
 3. 创建一个自定义函数将 VCF 基因型转换为 GWAS 使用的约定：
 
 ```
@@ -4836,7 +4705,6 @@ convert <- function(v) {
   return(v)
 }
 ```
-
 4. 调用该函数并将结果转换为矩阵：
 
 ```
@@ -4844,7 +4712,6 @@ gt_char <- apply(gts, 2, convert)
 genotype_matrix <- matrix(as.numeric(gt_char), nrow(gt_char))
 colnames(genotype_matrix) <- samples
 ```
-
 5. 构建描述变异的 DataFrame：
 
 ```
@@ -4852,13 +4719,11 @@ variant_info <- data.frame(marker = markers,
 chrom = chrom,
 pos = pos)
 ```
-
 6. 构建基因型/变异 DataFrame：
 
 ```
 genotypes <- cbind(variant_info, as.data.frame(genotype_matrix))
 ```
-
 7. 构建表型 DataFrame：
 
 ```
@@ -4867,7 +4732,6 @@ phenotypes <- data.frame(
   score = rnorm(length(samples))
 )
 ```
-
 8. 运行 GWAS：
 
 ```
@@ -4947,20 +4811,17 @@ whole_genome <- csaw::windowCounts(
 )
 colnames(whole_genome) <- c("h17")
 ```
-
 2. 从 SummarizeExperiment 中提取需要的数据：
 
 ```
 counts <- assay(whole_genome, [1])
 ```
-
 3. 计算一个低计数阈值并将低计数的窗口设置为 NA：
 
 ```
 min_count <- quantile(counts, 0.1) [[1]]
 counts[counts < min_count] <- NA
 ```
-
 4. 将中间窗口的计数翻倍——我们的高计数区域：
 
 ```
@@ -4972,7 +4833,6 @@ multiplier <- c(rep(1, left_pad), rep(2, doubled_windows),
 rep(1, right_pad))
 counts <- counts * multiplier
 ```
-
 5. 计算平均值和每个窗口的比例，然后绘制图：
 
 ```
@@ -4980,17 +4840,12 @@ mean_cov <- mean(counts, na.rm=TRUE)
 ratio <- matrix(log2(counts / mean_cov), ncol = 1)
 plot(ratio)
 ```
-
 6. 使用新数据和旧行数据构建 SummarizedExperiment：
 
 ```
 se <- SummarizedExperiment(assays=list(ratio), rowRanges=
 rowRanges(whole_genome), colData = c("CoverageRatio")
 ```
-
-
-
-
 
 # 使用 HTS 数据寻找遗传变异
 
@@ -5001,9 +4856,11 @@ data_in_region <- se[subjectHits(overlap_hits)]
 assay(data_in_region)
 ```
 
+
+
 这些就是估算拷贝数所需的所有内容。
 
-## 工作原理...
+## 工作原理
 
 在步骤 1 中，我们使用 `csaw` 包来获取我们人类 17 号染色体一小区域内每 100 bp 窗口的读取计数（read counts）。读取过滤选项在 `param` 参数中。在步骤 2 中，我们使用 `assay()` 函数和子集提取提取第一列（也是唯一列）数据，从而得到一个简单的计数向量。接下来，在步骤 3 中，我们使用 `quantile()` 函数获取计数向量中低第 10% 分位数的 `min_count` 值。需要使用双括号子集是为了从 `quantile()` 函数返回的命名向量中获取单个数字。`min_count` 值是一个截止值。计数向量中所有低于此值的都被都被设置为 `NA` 以将其从分析中移除 —— 这起到了低覆盖度阈值的作用，你可以根据需要在配方的适配中修改使用的百分位数。
 
@@ -5015,33 +4872,49 @@ assay(data_in_region)
 
 图 7.3 – 窗口计数图
 
-# 估计感兴趣位点的拷贝数 203
+### 估计感兴趣位点的拷贝数
 
 在步骤 6 中，我们构建了一个名为 `se` 的新 `SummarizedExperiment` 对象来存储窗口范围和新的比例数据。我们从 `window_counts` 中提取 `GRanges` 和 `colData` 对象并添加新的新的比例矩阵。我们现在可以对其进行子集提取，查看感兴趣区域的覆盖情况。这生成了以下输出：
 
 ```
 ## [1]
+
 ## [1,] 0.01725283
+
 ## [2,] 0.03128239
+
 ## [3,] -0.05748934
+
 ## [4,] 0.05893873
+
 ## [5,] 0.94251006
+
 ## [6,] 0.88186246
+
 ## [7,] 0.87927929
+
 ## [8,] 0.63780103
+
 ## [9,] 1.00308550
+
 ## [10,] 0.75515798
+
 ## [11,] 0.80228189
+
 ## [12,] 1.05207419
+
 ## [13,] 0.82393626
+
 ## [14,] NA
+
 ## [15,] NA
+
 ## [16,] -0.16269298
 ```
 
 我们可以看到该区域相对于背景具有 log2 比例为 1（两倍）的覆盖，我们可以将其解释为拷贝数为二。
 
-# 另见
+### 另见
 
 此配方中背景水平的计算非常简单 —— 这对于学习配方非常有帮助，但在你的真实数据中它的效能可能不足。你有许多选项可以修改为数据计算背景水平的方法。请查看 `zoo` 包中的 `rollmeans()` 和 `rollmedians()` 函数。这些函数可以为你提供任意步长滑动窗口的平均值或中位数，并提供一个可能更合适的移动窗口背景平均值。与拷贝数相关的另一种分析是根据 SNP 等位基因频率估计倍性性。你可以查看 `vocR` 包的 `freq_peaks()` 函数作为起点，从 BAM 文件中的变异信息估计倍性性。
 
@@ -5051,10 +4924,10 @@ assay(data_in_region)
 
 在本章中我们将涵盖以下配方：
 
-- * 使用 universalmotif 寻找 DNA 基序
-- * 使用 PFAM 和 db3D 寻找域
-- * 寻找 InterPro
-- * 使用 HMMER 寻找跨膜域
+- 使用 universalmotif 寻找 DNA 基序
+- 使用 PFAM 和 db3D 寻找域
+- 寻找 InterPro
+- 使用 HMMER 寻找跨膜域
 - 创建蛋白质特征
 - 执行多次对齐
 - 基因组序列对齐
@@ -5062,9 +4935,9 @@ assay(data_in_region)
 
 ## 技术要求
 
-我们将使用 renv 来管理包。你需要安装它。
+我们将使用 `renv` 来管理包。你需要安装它。
 
-1. 安装 renv：
+1. 安装 `renv`：
 ```r
 install.packages("renv")
 ```
@@ -5097,37 +4970,37 @@ renv::install("user/repo")
 ```r
 renv::install("user/name")
 ```
-你也可以通过逗号分隔名称来安装多个包。renv 将自动处理任何依赖项。一旦安装完成，你所需的数据都在你的项目中。
+你也可以通过逗号分隔名称来安装多个包。`renv` 将自动处理任何依赖项。一旦安装完成，你所需的数据都在你的项目中。
 
-# 需要的包
+### 需要的包
 
 对于本章，我们需要以下包：
 
-- ape
-- bio3d
-- dplyr
-- fs
-- ggplot2
-- knitr
-- readr
-- reticulate
-- seqnr
-- tibble
-- user/repo
-- pureseq
-- Hhmm
-- biomaRt
-- Biostrings
-- DECIPHER
-- drawProteins
-- Ensb.norvegicus.v79
-- ensembleddb
-- kebabs
-- msa
-- org.At.tair.db
-- org.Hs.eg.db
+- `ape`
+- `bio3d`
+- `dplyr`
+- `fs`
+- `ggplot2`
+- `knitr`
+- `readr`
+- `reticulate`
+- `seqnr`
+- `tibble`
+- `user/repo`
+- `pureseq`
+- `Hhmm`
+- `biomaRt`
+- `Biostrings`
+- `DECIPHER`
+- `drawProteins`
+- `Ensb.norvegicus.v79`
+- `ensembleddb`
+- `kebabs`
+- `msa`
+- `org.At.tair.db`
+- `org.Hs.eg.db`
 
-# 更多信息
+### 更多信息
 
 本章中的所有配方都在 R 中运行 —— 有些基于命令行。我通常使用终端处理这些。大多数 macOS 和 Linux 机器都有终端应用程序。Windows 用户可能不需要这些步骤，尽管如果你需要可以使用各种 Linux 子系统。
 
@@ -5147,44 +5020,36 @@ letters[1:5]
 
 注意输出行以 ## 为前缀。任何其他信息将在时给出。
 
-# 使用 universalmotif 寻找 DNA 基序
+## 使用 universalmotif 寻找 DNA 基序
 
 处理 DNA 序列时的一个非常常见的任务是在较长的序列中寻找基序（一种短序列）。这些可能代表蛋白质-DNA 结合位点，例如基因启动子或增强子中的转录因子结合位点。这种分析有两个起点 —— 你要么有一个基序数据库，想要扫描目标 DNA 序列并在基序出现的地方提取，或者你只是拥有感兴趣的序列并想找出其中是否存在重复的基序。我们将在配方中查看这两种情况的方法。
 
-- PFAM.db
-- seqnir
-- universalmotif
+- `PFAM.db`
+- `seqnir`
+- `universalmotif`
 
 除了这些包之外，我们还需要一些 R 工具作为 conda；所有这些将在需要时描述。
 
-
-
-
-
-## 准备工作
+### 准备工作
 
 对于此配方，我们需要一个描述基序的矩阵（位置特异性权重矩阵或 PWSM）以及一组来自转转录起始位点的序列。这些内容由 `rbioinfocookbook` 包提供。我们将使用 `universalmotif` 包来处理基序，并使用 `reticulate` 包来帮助我们获取外部工具的路径。在开始之前，我们需要安装该外部工具。这可以通过 bioconda 完成，正如第 1 章“设置你的 R 生物信息工作环境”中的“使用 bioconda 安装外部工具”配方所述。你可以在 https://anaconda.org/bioconda/meme 找到该包。
 
 现在，我们可以开始了。
 
-## 如何操作...
+### 如何操作
 
 使用 `universalmotif` 寻找 DNA 基序的步骤如下：
 
 - 创建一个用于查找 meme 路径的函数：
 ```python
 env_path <- function(env, program = "") {
-
   df <- reticulate::conda_list()
   b <- df$python[which(df$name == env)]
-
   if (length(b) == 0) {
     stop("no environment with that name found")
   }
-
   file.path(dirname(b), program)
 }
-
 meme_path <- env_path("bio_project", "meme")
 ```
 
@@ -5192,7 +5057,6 @@ meme_path <- env_path("bio_project", "meme")
 ```r
 library(universalmotif)
 library(Biostrings)
-
 motif_file <- fs::path_package("extdata",
                                "simple_motif.txt",
                                package="rbioinfocookbook")
@@ -5206,26 +5070,21 @@ sequences <- readDNAStringSet(promoter_file)
 ```
 
 - 3. 扫描序列：
-
 ```r
 motif_hits <- scan_sequences(motif, sequences = sequences)
 head(motif_hits)
 ```
 
 - 4. 计算基序在序列中富集：
-
 ```r
 motif_info <- enrich_motifs(motif,
-
 sequences,
 shuffle.k = 3,
 verbose = 0, RC = TRUE)
-
 motif_info
 ```
 
 - 5. 运行 MEME 来寻找基序：
-
 ```r
 meme_run <- run_meme(sequences, bin = meme_path, output = "meme-\nout", overwrite.dir = TRUE)
 motifs <- read_meme("meme_out/meme.txt")
@@ -5234,7 +5093,7 @@ view_motifs(motifs)
 
 这就是我们查看搜索结果所需的所有操作。
 
-# 原理解析...
+### 原理解析
 
 这段代码非常高效！只需几行代码，我们就能完成整个分析。在第 1 步中，我们创建了一个查找外部 meme 程序路径的函数。然后，第 2 步中，我们加载了基序的描述矩阵以及用于寻找基序的一些序列。在第 3 步中，我们扫描了序列并找到了通用基序和一个用于使用的 `DNAStringSet` 对象。`scan_sequences()` 函数搜索每个序列并报告发现基序的位置——检查 `motif_hits` 对象以查看具体位置。该对象的打印格式如下：
 
@@ -5252,15 +5111,15 @@ view_motifs(motifs)
 
 图是一个标准的 Logo 图，其中基序的贡献由大小表示。
 
-## 更多...
+### 更多
 
 从 JASPAR 和 TRANS 等数据库加载基序是简单的，因为 `universalmotif` 有 `read_matrix()` 函数的替代方案。要加载各种格式的基序，我们可以使用 `cisbp()`、`read_homer()`、`read_asp()`、`read_meme()` 和 `read_motifs()` 函数。
 
-# 使用 PFAM 寻找蛋白域
+## 使用 PFAM 寻找蛋白域
 
 解码蛋白质序列是一项关键任务。我们可以通过多种方式实现，包括针对 BLAST 进行搜索。如果我们需要更详细的信息，可以寻找单个功能域。PFAM 等数据库使用隐马马尔可夫模型编码域，hmmmer 使用这些模型扫描序列并报告域的出现情况。通常基因注释项目会执行这些搜索，这些以 `.db` 结尾的包。在本配方中，我们需要 `org.Hs.db` 和一个 FASTA 序列文件，可以在 `rbioinfocookbook` 包中找到。为了连接到 hmmer 服务，我们需要 `bio3d`、`fs` 和 `dplyr` 包。
 
-## 如何操作...
+### 如何操作
 
 通过执行以下步骤使用 PFAM 数据库寻找蛋白质：
 
@@ -5305,7 +5164,7 @@ dplyr::left_join(result, id_description_mapping, by = c("PFAM" = "ac"))
 
 这里加上必要的 PFAM 描述。
 
-# 原理解析...
+### 原理解析
 
 这种方法的关键是确定你尝试使用的数据库是否带有域信息。这就是第 1 步发生的情况——我们使用 `keytypes()` 函数列可用搜索，并在结果中看到 PFAM。一旦验证可以使用该数据库获取所需的信息，就可以遵循第 2 步开始的标准程序。在第 2 步中，我们有一组要查询的键——例如基因名称。我们直接从数据库提取它们，但它们也可以来自任何地方。在第 3 步中，我们使用 `select()` 函数查询数据库以提取给定键的数据。`columns` 参数要提取的数据。在第 4 步中，我们制作 PFAM ID 和描述的列表。我们加载 `PFAM.db` 包并使用 `PFAMDE` 对象获取 ID 和描述之间的映射。这将产生以下输出：
 
@@ -5337,14 +5196,13 @@ domain MG4
 ## 4 ENSG00000175899 PF07677
 A-macroglobulin receptor binding domain
 ## 5 ENSG00000175899 PF17791
-Macroglobulin domain MG3
 ```
 
+
+
+Macroglobulin domain MG3
+
 这是一个带有基因 ID 和连接的 PFAM 的 DataFrame。
-
-
-
-
 
 ## 更多内容...
 
@@ -5359,11 +5217,8 @@ columns(org.At.tair.db)
 
 ```r
 library(bio3d)
-seq_file <- fs::path_package("extdata",
-  "ecoli_hsp.fa")
-
+seq_file <- fs::path_package("extdata", "ecoli_hsp.fa")
 package <-"rbioinfockbook"
-
 sequence <- read.fasta(seq_file)
 result <- hummer(sequence, type="hmmerscan", db="pfam")
 result$hit.table
@@ -5414,9 +5269,7 @@ k <- head (e, keytype = "GENEID", n = 3 )
 - 3. 提取相关的：
 
 ```r
-select(e, keys = GeneIdFilter(k),
-columns = c("BIOTYPE","UNIPROT",
-"PROTEINID","INTERPROACC"))
+select(e, keys = GeneIdFilter(k), columns = c("BIOTYPE","UNIPROT","PROTEINID","INTERPROACC"))
 ```
 
 这就是我们所有的代码。
@@ -5429,7 +5282,7 @@ columns = c("BIOTYPE","UNIPROT",
 
 ## 更多内容...
 
-此配方中的方法适用于 Ensembl 核心数据库，但还有其他非核心数据库可以搜索，对于这些可以使用 biomaRt。biomaRt 包允许我们定义到具有查询接口的其他数据库的连接。要这样做，我们需要加载该包并使用 `useMart()` 函数定义到相应主机和数据集的连接。
+此配方中的方法适用于 Ensembl 核心数据库，但还有其他非核心数据库可以搜索，对于这些可以使用 biomaRt。`biomaRt` 包允许我们定义到具有查询接口的其他数据库的连接。要这样做，我们需要加载该包并使用 `useMart()` 函数定义到相应主机和数据集的连接。
 
 ## 搜索基因和蛋白质序列的结构域和基序
 
@@ -5455,10 +5308,6 @@ omart_atha <- useMart(biomart = "plants"
 
 如果你在查找 mart 和列名称时遇到困难，尝试使用 biomaRt 中的 `listMarts()` 和 `listDatasets()` 函数，它们。
 
-
-
-
-
 # 使用 drawProteins 创建蛋白质结构域图表
 
 蛋白质可视化是生物信息学中一种强大的工具，允许研究人员探索蛋白质的结构和功能。将蛋白质在两个域上进行可视化可以帮助研究人员理解并比较不同蛋白质的结构，从而揭示相似之处和差异，这些差异对于理解它们的功能可能很重要。这在研究蛋白质之间的进化关系时尤为有用。
@@ -5475,7 +5324,7 @@ omart_atha <- useMart(biomart = "plants"
 
 - 1. 定义一个链信息的 DataFrame：
 
-```
+```r
 chain_df <- tibble(
   "type" = "CHAIN",
   "description" = c("example protein", "different protein"),
@@ -5491,7 +5340,7 @@ chain_df <- tibble(
 
 - 2. 定义一个结构域信息的 DataFrame：
 
-```
+```r
 domain_df <- tibble(
   "type" = "DOMAIN",
   "description" = c("dom1", "dom1", "dom2"),
@@ -5506,10 +5355,9 @@ domain_df <- tibble(
 
 在 drawProteins 中渲染绘图：
 
-```
+```r
 library(drawProteins)
 protein_df <- dplyr::bind_rows(chain_df, domain_df)
-
 draw_canvas(protein_df) |>
 draw_chains(protein_df) |>
 draw_domains(protein_df, label_domains = TRUE)
@@ -5541,17 +5389,11 @@ draw_domains(protein_df, label_domains = TRUE)
 
 图 8.3 - 应用了 theme_minimal() 后的图
 
-（注：由于原文文本后续部分描述存在重复或乱码风险，此处已根据指令逻辑对核心内容进行了翻译。用户提供的原始文本中后半部分存在大量逻辑碎片和重复，此处已根据格式要求完成完整翻译。]
-
-
-
-
-
 ## 使用 DECIPHER 对齐基因组长度序列
 
 相应的代码如下：
 
-```
+```r
 alignment_seqinr <- msaConvert(alignment, type="seqnr::alignment")
 distances <- seqinr::dist.alignment(alignment_seqinr, "identity")
 tree <- ape::nj(distances)
@@ -5576,7 +5418,7 @@ plot(tree, main="Phylogenetic Tree of HBA Sequences")
 
 - 1. 加载必要的库和基因组序列：
 
-```
+```r
 library(DECIPHER)
 genomes_file <- fs::path_package(
 "extdata",
@@ -5591,32 +5433,32 @@ long_seqs
 
 - 2. 在本地数据库中准备序列：
 
-```
+```r
 Segs2DB(long_seqs, "XStringSet", "long_db", names(long_seqs))
 ```
 
 - 3. 寻找共线性块：
 
-```
+```r
 synteny <- FindSynteny("long_db", verbose=FALSE)
 pairs(synteny)
 ```
 
 - 4. 绘制共线性块：
 
-```
+```r
 plot(synteny)
 ```
 
 - 5. 完成比对：
 
-```
+```r
 alignment <- AlignSynteny(synteny, "long_db", verbose=FALSE)
 ```
 
 - 6. 保存成对比对：
 
-```
+```r
 blocks <- unlist(alignment[[1]])
 writeXStringSet(blocks, "genome_blocks_out.fa")
 ```
@@ -5673,71 +5515,107 @@ NC_022459.1 Camel.
 
 - 1. 加载必要的库和输入文件：
 
-```
+```r
 library(keras)
-library(Biostrings)
-sequence_file <- fs::path_package(
-"extdata",
-"ecoli_proteins.fa",
-package = "rbinfoinfcookbook"
-)
-seqs <- readStringSet(sequence_file)
-
-class_file <- fs::path_package(
-  "extdata",
-  "ecoli_protein_classes.txt",
-  package = "rbinfoinfcookbook"
-)
 ```
 
+
+
+`library(Biostrings)`
+
+`sequence_file <- fs::path_package(`
+
+`"extdata"`,
+
+`"ecoli_proteins.fa"`,
+
+`package = "rbinfoinfcookbook"`
+
+`)`
+
+`seqs <- readStringSet(sequence_file)`
+
+`class_file <- fs::path_package(`
+
+`  "extdata"`,
+
+`  "ecoli_protein_classes.txt"`,
+
+`  package = "rbinfoinfcookbook"`
+
+`)`
+
+```
 - 2. 将数据分为训练集和测试集：
+```
 
 ```
 classes <- readr::read_csv(class_file, col_names = TRUE)
+
 classes <- classes$class
+
 num_seqs <- length(seqs)
+
 training_proportion <- 0.75
+
 training_set_indices <- sample(1:num_seqs, training_proportion)
+
 test_set_indices <- c(1:num_seqs)[-training_set_indices]
 ```
 
+```
 - 3. 使用训练集构建模型：
+```
 
 ```
 kernel <- girlyKernel(k=1, m=3)
 
 model <- ksvm(x=seqs[training_set_indices],
+
       y=classes[training_set_indices],
+
       kernel=kernel,
+
       package="e1071",
+
       svm="C", cost=15)
 ```
 
+```
 - 4. 使用模型预测测试集的类：
+```
 
 ```
 predictions <- predict(model, seqs[test_set_indices])
+
 evaluatePrediction(predictions, classes[test_set_indices],
+
       labels=c(1,-1))
 ```
 
+```
 - 5. 检查序列的预测概况：
+```
 
 ```
 seq_to_test <- seqs[[1]][1:10]
+
 prediction_profile <- getPredictionProfile(seq_to_test, kernel,
+
       model=model)
 ```
 
+```
 - 6. 绘制预测概况：
+```
 
 ```
 plot(prediction_profile)
 ```
 
-## 原理解析...
+## 原理解析
 
-步骤 1 非常直接——我们从主工作流加载数据的简单类向量。我们只需使用 `$` 运算符。然后，在步骤 2 中，我们决定使用多少数据进行训练以及多少测试。在创建 `training_proportion` 变量时，我们将训练数据比例设置为 75%。这结合 `num_seqs sample()` 随机选择放入训练集的序列索引。`training_set_indices` 变量包含了我们稍后用于子划分数据的整数。然后，我们通过方括号和否定运算符 (`-`) 为 `test_set_indices` 创建了测试集的互补索引向量。本质上，这创建一个包含 `training_set_indices` 中所有索引的向量的惯用方法。
+步骤 1 非常直接——我们从主工作流加载数据的简单类向量。我们只需使用 `$` 运算符。然后，在步骤 2 中，我们决定使用多少数据进行训练以及多少测试。在创建 `training_proportion` 变量时，我们将训练数据比例设置为 75%。这结合 `num_seqs` `sample()` 随机选择放入训练集的序列索引。`training_set_indices` 变量包含了我们稍后用于子划分数据的整数。然后，我们通过方括号和否定运算符 (`-`) 为 `test_set_indices` 创建了测试集的互补索引向量。本质上，这创建一个包含 `training_set_indices` 中所有索引的向量的惯用方法。
 
 在步骤 3 中，我们构建并训练 SVM 模型，从选择一个内核开始，将输入数据映射到 SVM 可以学习的矩阵空间中。在这里，我们使用该函数。注意，有很多内核；这种非常适合序列数据。我们将内核传递给 `ksvm()` 函数，并将 `training_set_indices` 序列子集作为 `x` 参数，相同的类子集作为 `y` 参数。该函数的其他参数决定了精确的模型类型和包，它们对最终模型的质量有很大影响。最好你的特定数据进行一些科学实验。最终模型保存在 `model` 变量中。
 
@@ -5745,21 +5623,25 @@ plot(prediction_profile)
 
 ```
 ## 1 -1
+
 ## 1 25 13
+
 ## -1 14 36
+
 ## Accuracy: 69.318% (61 of 88)
+
 ## Balanced accuracy: 68.786% (25 of 39 and 36 of 49)
+
 ## Matthews CC: 0.377
+
 ## Sensitivity: 64.103% (25 of 39)
+
 ## Specificity: 73.469% (36 of 49)
+
 ## Precision: 65.789% (25 of 38)
 ```
 
 我们这里的模型准确率为 69%，这是可以的；它比随机要好。我们的数据集较小，且模型没有经过优化；通过更多努力，它可以变得更好。注意如果你运行代码，可能会得到不同的答案。由于训练序列的选择是随机的，取决于输入数据，模型可能会稍微差一点或好一点。
-
-
-
-
 
 # bio3d 中的 3D 结构蛋白质对齐
 
@@ -5777,7 +5659,7 @@ plot(prediction_profile)
 
 ## 准备工作
 
-对于这个配方，我们需要安装一个序列对齐器。我们将利用 msa 包自带的 MUSCLE 版本并安装它。你也可以使用 conda 单独安装它。
+对于这个配方，我们需要安装一个序列对齐器。我们将利用 `msa` 包自带的 MUSCLE 版本并安装它。你也可以使用 conda 单独安装它。
 
 我们还需要安装一个查看器。我们将使用 PyMOL，它可以通过以下方式安装到 conda 环境中：
 
@@ -5789,7 +5671,7 @@ conda install -c conda-forge -c schrodinger pymol-bundle
 
 我们还将使用 `bio3d` 包以及 `rbioinfcookbook` 包中的数据文件。
 
-## 如何操作...
+## 如何操作
 
 我们可以通过执行以下步骤来预测结构：
 
@@ -5799,17 +5681,27 @@ conda install -c conda-forge -c schrodinger pymol-bundle
 library (bio3d)
 
 flxwc.pdb <- fs::path_package(
+
   "extdata",
+
   "1xwc.pdb",
+
   package="rbioinfcookbook"
+
 )
+
 f3trx.pdb <- fs::path_package(
+
   "extdata",
+
   "3trx.pdb",
+
   package="rbioinfcookbook"
+
 )
 
 a <- read.pdb(flxwc.pdb)
+
 b <- read.pdb(f3trx.pdb)
 ```
 
@@ -5823,14 +5715,19 @@ pdbs <- pdbaln(list("1xwc"=a,"3trx"b), fit=TRUE, exfile="msa")
 
 ```
 env_path <- function(env, program = "") {
+
   df <- reticulate::conda_list(
+
   b <- df$python[which($dfname == env)]
 
   if (length(b) == 0) {
+
     stop("未找到名为该的环境")
+
   }
 
   file.path(dirname(b), program)
+
 }
 
 pymol_path <- env_path("informatics_project", "pymol")
@@ -5840,13 +5737,13 @@ pymol(pdbs, exfile = pymol_path, type = "launch", as="cartoon")
 
 这些都是为了获得预测结构的渲染视图我们需要执行的所有步骤。
 
-## 工作原理...
+## 工作原理
 
 与通常一样，步骤 1 是使用 `read.pdb()` 函数加载库和输入数据——两个不同的蛋白质数据库（PDB）文件。在第 2 步中，我们使用 `pdaln()` 函数进行对齐。我们将所有想要对齐的 PDB 放入一个具有适当名称的列表对象中。`fit` 参数设置为 `TRUE`，以便根据所有对齐序列执行结构叠加。`exefile` 参数告诉函数去哪里寻找对齐器——在这里，`msa` 值告诉它去我们安装的 `msa` 包中查找。
 
 一旦我们有了对齐，就想在 PyMOL 中将其可视化。可执行文件安装在 conda 环境中，因此我们可以使用第 3 步开头定义的自定义 `env_path()` 函数提取路径并将其作为参数传递给 `pymol()`。PyMOL 将会启动并渲染对齐结果。
 
-## 更多...
+## 更多
 
 如果你不想在 msa 中使用 MUSCLE，可以在第 2 步中使用指向替代可执行文件的路径，或者将 `exefile` 替换为 `web.args="your.email@something.org"` 以通过 EBI 网页进行对齐。
 
@@ -5874,7 +5771,7 @@ install.packages("renv")
 renv::init()
 ```
 
-这会在你的项目中创建一个名为 .renv 的目录。
+这会在你的项目中创建一个名为 `.renv` 的目录。
 
 - 3. 随后可以使用以下命令安装包：
 
@@ -5910,36 +5807,33 @@ renv::install("damnaclean/rbioinfcookbook")
 
 在 renv 下，所有包都将安装在本地项目目录中，而不是主库中，这意味着每个项目可以拥有同一个包的不同版本。
 
-该包所需的所有示例数据都在 GitHub 上专门创建的数据包 damnaclean/rbioinfcookbook 中。安装该包后，这些数据将在你的项目中可用。
+该包所需的所有示例数据都在 GitHub 上专门创建的数据包 `damnaclean/rbioinfcookbook` 中。安装该包后，这些数据将在你的项目中可用。
 
 对于本章，我们需要以下包：
 
 - 常规包：
-  * adographics
-  * ape
-  * cowplot
-  * data.table
-  * dplyr
-  * fs
-  * ggplot2
-  * pangorn
-  * readr
-  * reticulate
-  * treespace
+  * `adographics`
+  * `ape`
+  * `cowplot`
+  * `data.table`
+  * `dplyr`
+  * `fs`
+  * `ggplot2`
+  * `pangorn`
+  * `readr`
+  * `reticulate`
+  * `treespace`
 - GitHub:
-  * damnaclean/rbioinfcookbook
-  * evolvedmicrobe/dotplot
+  * `damnaclean/rbioinfcookbook`
+  * `evolvedmicrobe/dotplot`
 - Bioconductor:
-  * Biostrings
-  * dotplot
-  * ggtree
-  * msa
-  * treeio
+  * `Biostrings`
+  * `dotplot`
+  * `ggtree`
+  * `msa`
+  * `treeio`
 
 除了这些包之外，我们还需要一些 R 工具，例如 conda。所有这些将在需要时进行说明。
-
-
-
 
 # 更多信息
 
@@ -5961,17 +5855,15 @@ letters[1:5]
 
 注意，输出行带有前缀 ## .
 
-
-
 # 使用 ape 和 treeio 读取和写入各种树的格式
 
-系统发育分析是生物学和生物信息学的基石。程序种类多样且复杂，计算耗时长，且数据集通常很大。许多程序是独立的，并具有许多专有的输入输出格式。这创建了一个非常复杂的生态系统，我们在处理系统发育数据时必须在其中导航，这意味着最简单的策略是使用工具组合来加载、转换和查看分析结果，以便在不同的包中使用它们。在这个配谱中，我们将处理 R 中的系统发育树数据。为了支持这一点，很少有包具有足够标准的对象，使得工作流可以集中在少数类型上，并使这些类型的转换变得顺畅。我们将查看使用 ape 和 treeio 包从 R 中提取树数据。
+系统发育分析是生物学和生物信息学的基石。程序种类多样且复杂，计算耗时长，且数据集通常很大。许多程序是独立的，并具有许多专有的输入输出格式。这创建了一个非常复杂的生态系统，我们在处理系统发育数据时必须在其中导航，这意味着最简单的策略是使用工具组合来加载、转换和查看分析结果，以便在不同的包中使用它们。在这个配谱中，我们将处理 R 中的系统发育树数据。为了支持这一点，很少有包具有足够标准的对象，使得工作流可以集中在少数类型上，并使这些类型的转换变得顺畅。我们将查看使用 `ape` 和 `treeio` 包从 R 中提取树数据。
 
 ## 准备工作
 
-对于本节，我们需要 rbioinfocookbook 包提供的树和系统发育信息。其中一种是 Newick 格式，另一种是 Nexus 格式。它们代表相同的哺乳动物系统发育树。我们还需要一个来自 BEAST 程序的树文件和一个 RAXML 文件。这两者都来自 treeio 包，因此我们需要从 Bioconductor 获取 treeio 包以及 ape 包。
+对于本节，我们需要 `rbioinfocookbook` 包提供的树和系统发育信息。其中一种是 Newick 格式，另一种是 Nexus 格式。它们代表相同的哺乳动物系统发育树。我们还需要一个来自 BEAST 程序的树文件和一个 RAXML 文件。这两者都来自 `treeio` 包，因此我们需要从 Bioconductor 获取 `treeio` 包以及 `ape` 包。
 
-## 如何实现...
+## 如何实现
 
 可以通过以下步骤执行使用 ape 和 treeio 读取和写入树格式：
 
@@ -5979,19 +5871,29 @@ letters[1:5]
 
 ```
 library(ape)
+
 newick_file_path <- fs::path_package(
+
 "extdata",
+
 "mammal_tree.nwk",
+
 package=rbioinfcookbook
+
 )
 
 nexus_file_path <- fs::path_package(
+
 "extdata",
+
 "mammal_tree.nexus",
+
 package=rbioinfcookbook
+
 )
 
 newick <- ape::read.tree(newick_file_path)
+
 nexus <- ape::read.nexus(nexus_file_path)
 ```
 
@@ -5999,21 +5901,33 @@ nexus <- ape::read.nexus(nexus_file_path)
 
 ```
 library(treeio)
+
 beast_file_path <- fs::path_package(
+
 "extdata",
+
 "beast_mcc.tree",
+
 package=rbioinfcookbook
+
 )
+
 raxml_file_path <- fs::path_package(
+
 "extdata",
+
 "RAXML_bipartitionsBranchLabels.H3",
+
 package=rbioinfcookbook
+
 )
 ```
 
 ```
 library(treeio)
+
 beast <- read.beast(beast_file_path)
+
 raxml <- read.raxml(raxml_file_path)
 ```
 
@@ -6021,8 +5935,11 @@ raxml <- read.raxml(raxml_file_path)
 
 ```
 class(newick)
+
 class(nexus)
+
 class(beast)
+
 class(raxml)
 ```
 
@@ -6030,6 +5947,7 @@ class(raxml)
 
 ```
 beast_phylo <- treeio::as.phylo (beast)
+
 newick_tidytree <- treeio::as.treedata(newick)
 ```
 
@@ -6037,26 +5955,25 @@ newick_tidytree <- treeio::as.treedata(newick)
 
 ```
 treeio::write.beast (newick_tidytree,file = "mammal_tree.beast")
+
 ape::write.nexus (beast_phylo, file = "beast_mcc.nexus")
 ```
 
+
+
 这就是我们在 R 中读取和写入系统发育树的方法。
 
-## 工作原理...
+## 工作原理
 
-在步骤 1 中，我们使用了 ape 中简单的加载函数——我们使用了 `read.tree()` 和 `read.nexus()` 函数，它们可以读取文件中的通用树。在步骤 2 中，我们利用了 treeio 针对 BEAST 和 RAXL 输出的特定格式函数。步骤 3 仅确认了函数返回的对象类型。注意 ape 返回的是 `phylo` 对象，而 treeio 返回的是 `treedata` 对象。在步骤 4 中，通过 treeio 的 `.phylo()` 和 `as.treedata()` 将它们进行相互转换。通过这种转换，我们可以获得 R 下游分析的许多格式的输入。在步骤 5 中，我们使用文件写入函数将树写入磁盘。
+在步骤 1 中，我们使用了 `ape` 中简单的加载函数——我们使用了 `read.tree()` 和 `read.nexus()` 函数，它们可以读取文件中的通用树。在步骤 2 中，我们利用了 `treeio` 针对 BEAST 和 RAXL 输出的特定格式函数。步骤 3 仅确认了函数返回的对象类型。注意 `ape` 返回的是 `phylo` 对象，而 `treeio` 返回的是 `treedata` 对象。在步骤 4 中，通过 `treeio` 的 `.phylo()` 和 `as.treedata()` 将它们进行相互转换。通过这种转换，我们可以获得 R 下游分析的许多格式的输入。在步骤 5 中，我们使用文件写入函数将树写入磁盘。
 
 # 参见
 
-我们在步骤 2 中使用的加载函数只是可用函数中的几个。请参考 treeio 包的摘要（vignettes）获取完整列表。
+我们在步骤 2 中使用的加载函数只是可用函数中的几个。请参考 `treeio` 包的摘要（vignettes）获取完整列表。
 
 # 使用 ggtree 快速可视化多个基因的树
 
-一旦你计算出一棵树，你想对它的第一件事就是查看它。这在许多程序中都是可能的，但 R 拥有一个以 ggtree 形式存在的、极其强大、灵活且快速的系统。
-
-
-
-
+一旦你计算出一棵树，你想对它的第一件事就是查看它。这在许多程序中都是可能的，但 R 拥有一个以 `ggtree` 形式存在的、极其强大、灵活且快速的系统。
 
 ![](img/dd0d7d9aaacf496c4d1d0e31d83783b3_267_0.png)
 
@@ -6066,7 +5983,7 @@ ape::write.nexus (beast_phylo, file = "beast_mcc.nexus")
 
 正如我们看到的，这是一个用于树可视化的优秀包。
 
-# 更多内容...
+# 更多内容
 
 步骤 6 和 7 依赖于知道树中要操作哪些节点。这并不总是显而易见的，因为节点是通过编号而非名称来识别的。如果我们需要“最近共同祖先（MRCA）”函数，就可以获取节点编号。只需传递一个节点名称的向量，它就会返回代表 MRCA 的节点 ID：
 
@@ -6090,14 +6007,15 @@ MRCA(itol, tip=c("Photorhabdus_lumenscens","Blochmannia_floridanus"))
 
 在本教程中，我们将使用 `treespace` 包来计算距离和聚类。我们将使用 `ape` 和 `adegraphics` 用于辅助加载和可视化函数。输入数据将是20 个 Newick 格式的树文件，每个文件代表 15 个物种中的单个基因。这些文件可以在 `danmacclean/rbioinf` 包中获得，请进行安装。
 
-## 如何操作...
+## 如何操作
 
 使用 `treespace` 量化树与树之间的差异可以通过以下步骤：
 
 - 1. 加载库：
 
 ```
-library(ape)library(adegraphics)
+library(ape)
+library(adegraphics)
 library(treespace)
 ```
 
@@ -6109,32 +6027,27 @@ file_path <- fs::path_package(
   "gene_trees",
   package="rbioinfcookbook"
 )
-
 treefiles <- list.files(file_path, full.names = TRUE)
 tree_list <- lapply(treefiles, read.tree)
-
 class(tree_list) <- "multiPhylo"
 ```
 
 - 2. 计算 Kendall-all 距离：
-
 - 3. 绘制两两距离：
-
 - 4. 绘制主成分分析 (PCA) 和聚类：
 
 ```
 plotGroves(comparisons$pco, lab.show=TRUE, lab.cex=1.5)
-
 groves <- findGroves(comparisons, ncluster = 4)
 plotGroves(groves)
 ```
 
 这就是我们查看树之间距离所需的所有内容。
 
-## 工作原理...
+## 工作原理
 
 这里短小精悍的代码非常强大——只需几个命令就能提供大量的分析。
-*步骤 1* 加载库。*步骤 2* 开始创建一个 `treefiles` 字符向量，其中包含我们使用的 20 棵树的每条路径。我们使用的 `list.files()` 函数取文件系统路径作为参数，并返回在路径中找到的文件名。`treefiles` 是一个向量，我们可以将其作为 `lapply()` 的第一个参数。如果你不熟悉，`lapply()` 是一个迭代函数，返回一个 R 列表（类似于 `lapply()`）。简单来说，`lapply()` 在列表的每个元素上运行第二个参数中指定的函数。当前元素作为目标函数的第一个参数传递。因此，在步骤 2 中，我们对 `treefiles` 中命名的每个文件运行 `read.tree()` 函数，并返回一个包含 phylo 对象的 R 列表。最后一步是确保 `tree_list` 对象具有 `multiPhylo` 类，以便满足下游函数的要求。希望 `multiPhylo` 对象本质上是一个类似列表的对象，因此我们可以通过 `class()` 函数将 `multiPhylo` 字符串添加到类属性中。
+*步骤 1* 加载库。*步骤 2* 开始创建一个 `treefiles` 字符向量，其中包含我们使用的 20 棵树的每条路径。我们使用的 `list.files()` 函数取文件系统路径作为参数，并返回在路径中找到的文件名。`treefiles` 是一个向量，我们可以将其作为 `lapply()` 的第一个参数。如果你不熟悉，`lapply()` 是一个迭代函数，返回一个 R 列表（类似于 `lapply()`）。简单来说，`lapply()` 在列表的每个元素上运行第二个参数中指定的函数。当前元素作为目标函数的第一个参数传递。因此，在步骤 2 中，我们对 `treefiles` 中命名的每个文件运行 `read.tree()` 函数，并返回一个包含 `phylo` 对象的 R 列表。最后一步是确保 `tree_list` 对象具有 `multiPhylo` 类，以便满足下游函数的要求。希望 `multiPhylo` 对象本质上是一个类似列表的对象，因此我们可以通过 `class()` 函数将 `multiPhylo` 字符串添加到类属性中。
 
 # 进化分析与可视化
 
@@ -6156,15 +6069,11 @@ plotGroves(groves)
 
 图 9.9 – 聚类
 
-
-
-
-
 # 进化系统学分析与可视化
 
 这些步骤结合在一起可以帮助我们构建带有特定节点的树。
 
-# 还有更多内容……
+# 还有更多内容
 
 前面的函数有一个小问题，即它们要求我们预先知道要操作节点编号。访问此信息的一种简单方法是使用交互式 `subtreeplot()` 函数。此 `subtree` (newick) 调用将为提供的树生成一个交互式图表。通过点击节点，图像将更新并显示子树和被点击的节点 ID。
 
@@ -6191,7 +6100,6 @@ seqfile <- fs::path_package(
   "bhlh.fa",
   package = "rbiocookbook"
 )
-
 seqs <- readAAStringStringSet(seqfile)
 ```
 
@@ -6218,7 +6126,6 @@ make_dot_plot <- function(i=1, j=1, seqs = NULL){
 seqi <- as.character(seqs[[i]])
 seqj <- as.character(seqs[[j]])
 namei <- names(seqs)[i]
-
 namej <- names(seqs)[j]
 return(dotPlotg(seqi, seqj) + 
 theme_bw() + labs(x=namei, y=namej))
@@ -6288,7 +6195,6 @@ cowplot::plot_grid(plotlist = plots)
 library(Biostrings)
 library(msa)
 library(phylorn)
-
 seqfile <- fs::path_package(
   "extdata",
   "abc.fa",
@@ -6322,6 +6228,8 @@ bootstraps <- bootstrap.phyDat(aln, FUN=function(x) { NJ(dist.ml(x)) }, bs=100)
 plotBS(nj_tree, bootstraps, p = 10)
 ```
 
+
+
 这样，我们就有了自检树的图表。
 
 ## 工作原理
@@ -6348,10 +6256,6 @@ plotBS(nj_tree, bootstraps, p = 10)
 
 在基因组学中，同源性（orthology）是指不同物种之间的基因关系，这些基因通过物种形成进化自共同祖先基因。同源基因通常具有相同的功能和结构，并在不同生物中发挥相似的作用，即使它们已经发生了分化。
 
-
-
-
-
 # 使用双向 BLAST 寻找同源物候选基因
 
 同源性在生物信息学中有许多重要用途。同源性可以根据新测序基因组中的基因与其他物种已知基因的相似性，来推断该基因的功能。这对于识别参与特定生物学过程或途径的基因特别有用。同源基因可用于比较不同生物的基因组，并研究基因家族的进化。通过识别在不同物种间保守的基因，研究人员可以了解这些基因及其载体生物的进化历史。
@@ -6377,7 +6281,6 @@ env_path <- function (env, program = "") {
   if (length(b) == 0) { stop("no environment with name found") }
   file.path(dirname(b), program)
 }
-
 blast_path <- env_path("bioinformatics_project")
 ```
 
@@ -6395,7 +6298,6 @@ make_blastdb <- function(fasta, blast_path) {
 ```r
 run_blast <- function(query, db, outfile, blast_path,
   evaluate="1E-5", max_target_seqs=1000) {
-
   system(paste0(
     blast_path,
     'blastp -db ',
@@ -6422,13 +6324,11 @@ sceres <- fs::path_package(
 "sceres_100.fa",
 package = "rbioinfookbook"
 )
-
 spombe <- fs::path_package(
 "extdata",
 "spombe_100.fa",
 package = "rbioinfookbook"
 )
-
 ```
 
 ```r
@@ -6525,10 +6425,6 @@ rbh <- dplyr::semi_join(
 # 系统发育分析与可视化
 
 在第 6 步，我们定义了处理 BLAST 结果的函数。`parse_hits()` 函数概念简单——它只是想读取 CSV 文件并返回一个数据框风格的对象——它的执行方式稳健且高效，有助于读取大文件。首先，`col_names` 包含了命中表的列名，然后我们使用 `readr` 读取数据，并显式设置我们预期的列类型。在大文件中问题很容易出错，因此这种看似冗长的方法是值得的。`data.table()` 调用将对象转换为稳健的 `data.table`，针对大型数据集进行了优化。
-
-
-
-
 
 # 基因注释分析
 
@@ -6651,8 +6547,6 @@ letters[1:5]
 
 对于这个配方，我们需要 `biocductor` 包和可用的互联网连接。我们还需要知道要连接到哪个 BioMart 服务器——全球大约有 40 个，提供有关各种基因组的信息。访问最广泛的是 Ensembl 数据库，这些是该包中的默认值。我们将开发的代码将...
 
-
-
 ## 如何操作...
 
 获取 GO 信息可以通过以下步骤完成：
@@ -6662,19 +6556,26 @@ letters[1:5]
 ```
 library (biomart)
 ensembl_connection <- useMart(biomart = "ENSEMBL_MART_ENSEMBL")
-listDatasets(ensembl_connection)
-data_set_connection <- useMart("hsapiens_gene_ensem", biomart = "ENSEMBL_MART_ENSEMBL")
-att <- listAttributes(data_set_connection)
-fil <- listFilters(data_set_connection)
 ```
 
-- 2. 获取基因列表并使用其 ID 获取 GO 注释：
 
-```
+
+`listDatasets(ensembl_connection)`
+
+`data_set_connection <- useMart("hsapiens_gene_ensem", biomart = "ENSEMBL_MART_ENSEMBL")`
+
+`att <- listAttributes(data_set_connection)`
+
+`fil <- listFilters(data_set_connection)`
+
+### 2. 获取基因列表并使用其 ID 获取 GO 注释：
+
+```r
 genes <- getBTM(attributes = c("ensembl_gene_id"),
                 filters = c("chromosomal_region"),
                 value = c("1:200:2000000:1"),
                 mart = data_set_connection)
+
 go_ids <- getBTM(attributes = c("ensembl_gene_id", "go_id", "goslim_goa_description"),
                  filters = c("ensembl_gene_id"),
                  values = genes$ensembl_gene_id,
@@ -6683,7 +6584,7 @@ go_ids <- getBTM(attributes = c("ensembl_gene_id", "go_id", "goslim_goa_descript
 
 这样我们就得到了所选基因的 GO 术语。
 
-## 工作原理...
+## 工作原理
 
 步骤 1 重复了上一个配方的前几个步骤：从 BioMart 获取基因和基因组注释，并获取连接到 BioMart 的数据集、属性和过滤器的正确值。
 
@@ -6699,7 +6600,7 @@ Bioconductor Annovo 软件包旨在处理来自各种生物的基因组数据类
 
 我们需要 Bioconductor `org.Hs.eg.db` 和 `GO.db` 软件包，以及 `rbioinfocookbook` 和 `dplyr` 软件包。
 
-## 如何操作...
+## 如何操作
 
 对 H. sapiens 基因符号向量进行注释的过程如下：
 
@@ -6728,18 +6629,17 @@ annot <- select(org.Hs.eg.db,
                            "UNIPROT"))
 ```
 
-# 扩展 GO 注释：
+### 扩展 GO 注释：
 
 ```r
 library(GO.db)
-
 go_annots <- select(GO.db,
                     keys=annot$GO,
                     keytype = "GOID",
                     columns = "DEFINITION")
 ```
 
-# 合并两者：
+### 合并两者：
 
 ```r
 dplyr::left_join(annot, go_annots, by = c("GO" = "GOID"))
@@ -6747,7 +6647,7 @@ dplyr::left_join(annot, go_annots, by = c("GO" = "GOID"))
 
 这就是我们从 Annovo 获取注释的方法。
 
-## 工作原理...
+## 工作原理
 
 这个 de配方从步骤 1 开始，加载我们感兴趣的生物的 Annovo 软件包，并检查 `columns()` 函数可以带给我们什么类型的数据，该函数会返回如下内容：
 
@@ -6785,7 +6685,7 @@ Bioconductor Annovo 软件包旨在处理来自各种生物的基因组数据类
 
 我们需要 Bioconductor `org.Hs.eg.db` 和 `GO.db` 软件包，以及 `rbioinfocookbook` 和 `dplyr` 软件包。
 
-## 如何操作...
+## 如何操作
 
 对 H. sapiens 基因符号向量进行注释的过程如下：
 
@@ -6814,18 +6714,17 @@ annot <- select(org.Hs.eg.db,
                            "UNIPROT"))
 ```
 
-# 扩展 GO 注释：
+### 扩展 GO 注释：
 
 ```r
 library(GO.db)
-
 go_annots <- select(GO.db,
                     keys=annot$GO,
                     keytype = "GOID",
                     columns = "DEFINITION")
 ```
 
-# 合并两者：
+### 合并两者：
 
 ```r
 dplyr::left_join(annot, go_annots, by = c("GO" = "GOID"))
@@ -6833,7 +6732,7 @@ dplyr::left_join(annot, go_annots, by = c("GO" = "GOID"))
 
 这就是我们从 Annovo 获取注释的方法。
 
-## 工作原理...
+## 工作原理
 
 这个简单的配方从步骤 1 开始，加载我们感兴趣的生物的 Annovo 软件包，并检查 `columns()` 函数可以带给我们什么类型的数据，该函数会返回如下内容：
 
@@ -6861,25 +6760,20 @@ UNIPROT
 
 （注：由于提供的待翻译文本存在大量重复，以上翻译已按要求进行去重复处理）
 
-
-
 # 分析基因注释
 
-6. 转换为 DAVID 格式：
+## 6. 转换为 DAVID 格式：
 
 ```r
 enricher_to_david <- function(enrich,terms) {
   comma_sep_genes <- gsub("/", " ", enrichresult@result$geneID)
-
   terms <- dplyr::mutate(terms,
     short_category = dplyr::if_else(`GO domain` == 'biological_process', "BP",
     dplyr::if_else(`GO domain` == "molecular_function", "MF", "CC"))
   )
-
   id_to_category <- terms$short_category
   names(id_to_category) <- terms$GO term accession
   fixed_category <- id_to_category[enrich$result$ID]
-
   data.frame(
     category = fixed_category,
     ID = enrichresult$ID,
@@ -6891,7 +6785,7 @@ enricher_to_david <- function(enrich,terms) {
 david <- enricher_to_david(enrich_info, mo_go)
 ```
 
-7. 在 GOplot 图中绘制：
+## 7. 在 GOplot 图中绘制：
 
 ```r
 library(GOplot)
@@ -6900,20 +6794,20 @@ expr_info <- data.frame(
   logFC = mo_exp$log2.fc
 )
 circ <- circle_dat(david, expr_info)
-
 circ <- circ | dplyr::mutate(term = substr(term, 1, 20))
-
 GObubbleplot(circ, labels = 10, display='single', table.legend = TRUE,ID=TRUE) +
   ggplot2::ylim(0, 330)
 ```
+
+
 
 这为我们提供了一个很好的 GO 富集表示。*
 
 # 使用 ClusterProfiler 确定聚类中的 GO 富集
 
-此类分析的第一步是设置 GO 术语定义并将其映射到相关基因。在现实世界中，这些注释可能来自许多地方，包括 Bioconductor 注释包，或从模型基因组网站和 BioMart 下载的内容。在我们的示例中，我们在数据框 mo_go 中有一个有一个的注释，其中包含了基因 ID 及其对应的 GO 信息。因此，对于 clusterProfiler，第 1 步使用并设置了 termgene（仅包含基因 ID 和 GO 术语访问号）以及 termname（仅包含 GO 访问号和 GO 描述）。我们还设置了一个唯一的基因 ID 列表来表示条目。在第 2 步中，我们提取基因列表和表达值以进行 GO 分析；在实际分析中，这些可能直接来自你的实验。
+此类分析的第一步是设置 GO 术语定义并将其映射到相关基因。在现实世界中，这些注释可能来自许多地方，包括 Bioconductor 注释包，或从模型基因组网站和 BioMart 下载的内容。在我们的示例中，我们在数据框 `mo_go` 中有一个有一个的注释，其中包含了基因 ID 及其对应的 GO 信息。因此，对于 `clusterProfiler`，第 1 步使用并设置了 `termgene`（仅包含基因 ID 和 GO 术语访问号）以及 `termname`（仅包含 GO 访问号和 GO 描述）。我们还设置了一个唯一的基因 ID 列表来表示条目。在第 2 步中，我们提取基因列表和表达值以进行 GO 分析；在实际分析中，这些可能直接来自你的实验。
 
-第 3 步是执行富集分析的；我们使用 clusterProfiler 中的函数 `enricher()` 来操作，传递我们在第 1 步中准备的数据以及来自基因表达数据的基因 ID。我们返回的是一个复杂的 `enrichResult` 对象，但我们可以像第 4 步那样使用 `as.data.frame()` 函数来美观地查看。
+第 3 步是执行富集分析的；我们使用 `clusterProfiler` 中的函数 `enricher()` 来操作，传递我们在第 1 步中准备的数据以及来自基因表达数据的基因 ID。我们返回的是一个复杂的 `enrichResult` 对象，但我们可以像第 4 步那样使用 `as.data.frame()` 函数来美观地查看。
 
 通过第 5 步，我们可以将结果可视化；`dotplot()` 函数提供了如图 10.1 所示的良好表示，并清楚地显示钙结合在这些基因中是富集的：
 
@@ -6921,7 +6815,7 @@ GObubbleplot(circ, labels = 10, display='single', table.legend = TRUE,ID=TRUE) +
 
 图 10.1 – GO 分析的点点图表示
 
-其他包（如 GOplot）提供了替代的可视化方案，但需要不同格式的富集结果。在第 6 步中，我们通过创建一个自定义函数来转换 enrich 对象，该函数从提供的 enrich 对象中提取基因名称，将术语类型转换为缩写（例如，从 biological_process 转换为 BP），并从 enrich 对象中的其他数据创建一个数据框并返回它。在运行该操作后，我们移动到第 7 步。要使用 `tnGOBubble()()` 函数，我们需要将 mo_exp 数据中的基因 ID 列和表达值列重命名为 ID 和 logFC，并使用 `circle_dat()` 函数准备一个格式正确的数据框。我们传递了 DAVID 对象和表达数据。我们还修剪了返回的 circle 对象中的 GO 定义，因为它们是非常长的字符串，在某些绘图类型中渲染效果不好。在这里，通过 `dplyr::mutate()` 和 `substr()`，我们只取了字符串的前 20 个字符并使用它们。
+其他包（如 `GOplot`）提供了替代的可视化方案，但需要不同格式的富集结果。在第 6 步中，我们通过创建一个自定义函数来转换 enrich 对象，该函数从提供的 enrich 对象中提取基因名称，将术语类型转换为缩写（例如，从 `biological_process` 转换为 `BP`），并从 enrich 对象中的其他数据创建一个数据框并返回它。在运行该操作后，我们移动到第 7 步。要使用 `tnGOBubble()()` 函数，我们需要将 `mo_exp` 数据中的基因 ID 列和表达值列重命名为 `ID` 和 `logFC`，并使用 `circle_dat()` 函数准备一个格式正确的数据框。我们传递了 DAVID 对象和表达数据。我们还修剪了返回的 circle 对象中的 GO 定义，因为它们是非常长的字符串，在某些绘图类型中渲染效果不好。在这里，通过 `dplyr::mutate()` 和 `substr()`，我们只取了字符串的前 20 个字符并使用它们。
 
 最后，在第 7 步中，我们进行绘图；我们使用 `GOBubble()` 和 `par` 选项来确保我们在单个面板中获得所有的 GO 类别、图例，并且气泡用 GO ID（而不是完整描述）进行标注。我们得到了如图 10.2 所示的图。
 
@@ -6933,7 +6827,7 @@ GObubbleplot(circ, labels = 10, display='single', table.legend = TRUE,ID=TRUE) +
 
 GO 是一种层次本体，它以标准化的方式描述基因产物的生物学过程、分子功能和细胞组分。该本体结构化为有向无环图 (DAG)，包含三个主要部分：生物学过程（BP）、分子功能（MF）和细胞组分（CC）。
 
-上，在现实世界中，这些注释可能来自许多地方，包括 Bioconductor 注释包，或从模型基因组网站和 BioMart 下载的内容。在我们的示例中，我们在数据框 mo_go 中有一个直接的注释，其中包含了基因 ID 及其对应的 GO 信息。因此，对于 `clusterProfiler`，第 1 步使用并设置了 `termgene`（仅包含基因 ID 和 GO 术语访问号）以及 `termname`（仅包含 GO 访问号和 GO 描述）。我们还设置了一个唯一的基因 ID 列表来表示条目。在第 2 步中，我们提取基因列表和表达值以进行 GO 分析；在实际分析中，这些可能直接来自你的实验。
+上，在现实世界中，这些注释可能来自许多地方，包括 Bioconductor 注释包，或从模型基因组网站和 BioMart 下载的内容。在我们的示例中，我们在数据框 `mo_go` 中有一个直接的注释，其中包含了基因 ID 及其对应的 GO 信息。因此，对于 `clusterProfiler`，第 1 步使用并设置了 `termgene`（仅包含基因 ID 和 GO 术语访问号）以及 `termname`（仅包含 GO 访问号和 GO 描述）。我们还设置了一个唯一的基因 ID 列表来表示条目。在第 2 步中，我们提取基因列表和表达值以进行 GO 分析；在实际分析中，这些可能直接来自你的实验。
 
 第 3 步是执行富集分析的；我们使用 `clusterProfiler` 中的函数 `enricher()` 来操作，传递我们在第 1 步中准备的数据以及来自基因表达数据的基因 ID。我们返回的是一个复杂的 `enrichResult` 对象，但我们可以像第 4 步那样使用 `as.data.frame()` 函数来美观地查看。
 
@@ -6943,15 +6837,11 @@ GO 是一种层次本体，它以标准化的方式描述基因产物的生物�
 
 图 10.1 – GO 分析的点点图表示
 
-其他包（如 GOplot）提供了替代的可视化方案，但需要不同格式的富集结果。在第 6 步中，我们通过创建一个自定义函数来转换 enrich 对象，该函数从提供的 enrich 对象中提取基因名称，将术语类型转换为缩写（例如，从 biological_process 转换为 BP），并从 enrich 对象中的其他数据创建一个数据框并返回它。在运行该操作后，我们移动到第 7 步。要使用 `tnGOBubble()()` 函数，我们需要将 mo_exp 数据中的基因 ID 列和表达值列重命名为 ID 和 logFC，并使用 `circle_dat()` 函数准备一个格式正确的数据框。我们传递了 DAVID 对象和表达数据。我们还修剪了返回的 circle 对象中的 GO 定义，因为它们是非常长的字符串，在某些绘图类型中渲染效果不好。在这里，通过 `dplyr::mutate()` 和 `substr()`，我们只取了字符串的前 20 个字符并使用它们。
+其他包（如 `GOplot`）提供了替代的可视化方案，但需要不同格式的富集结果。在第 6 步中，我们通过创建一个自定义函数来转换 enrich 对象，该函数从提供的 enrich 对象中提取基因名称，将术语类型转换为缩写（例如，从 `biological_process` 转换为 `BP`），并从 enrich 对象中的其他数据创建一个数据框并返回它。在运行该操作后，我们移动到第 7 步。要使用 `tnGOBubble()()` 函数，我们需要将 `mo_exp` 数据中的基因 ID 列和表达值列重命名为 `ID` 和 `logFC`，并使用 `circle_dat()` 函数准备一个格式正确的数据框。我们传递了 DAVID 对象和表达数据。我们还修剪了返回的 circle 对象中的 GO 定义，因为它们是非常长的字符串，在某些绘图类型中渲染效果不好。在这里，通过 `dplyr::mutate()` 和 `substr()`，我们只取了字符串的前 20 个字符并使用它们。
 
 最后，在第 7 步中，我们进行绘图；我们使用 `GOBubble()` 和 `par` 选项来确保我们在单个面板中获得所有的 GO 类别、图例，并且气泡用 GO ID（而不是完整描述）进行标注。我们得到了如图 10.2 所示的图。
 
 ![](img/dd0d7d9aaacf496c4d1d0e31d83783b3_300_0.png)
-
-
-
-
 
 # 分析基因注释
 
@@ -6983,6 +6873,7 @@ KEGG 广泛应用于生物信息学分析，用于理解生物系统中基因、
 
 ```r
 library(clusterProfiler)
+
 search_kegg_organism('mgr', by='kegg_code')
 ```
 
@@ -6990,6 +6881,7 @@ search_kegg_organism('mgr', by='kegg_code')
 
 ```r
 library(rbioinfcookbook)
+
 mo_gexp <- fs::path_package(
 "extdata",
 "mo_gexp.csv",
@@ -7007,7 +6899,11 @@ genes <- readr::read_csv(mo_gexp)
 kegg_result <- enrichKEGG(gene = genes$gene_id, organism="mgr",
 pvalueCutoff = 0.05)
 as.data.frame(kegg_result)
-# 4. 将结果发送到网页进行可视化：
+```
+
+- 4. 将结果发送到网页进行可视化：
+
+```r
 browseKEGG(kegg_result, "mgr00513")
 ```
 
@@ -7109,21 +7005,17 @@ mart = data_set_connection)
 
 `mlr3` 包是一个用于 R 语言的开源机器学习框架。它旨在为构建、评估和比较机器学习模型提供统一且高效的接口。`mlr3` 构建在 `mlr` 包之上，它是 R 中流行的机器学习包之一。
 
-mlr3 遵循模块化设计，这意味着机器学习过程的不同部分（如数据预处理、特征选择、模型训练和模型评估）被分离成独立的对象。这种设计提供了更大的灵活性模块化，允许用户自定义和扩展框架的功能。我们将通过本章中连续的分类和测试步骤查看此框架。
+`mlr3` 遵循模块化设计，这意味着机器学习过程的不同部分（如数据预处理、特征选择、模型训练和模型评估）被分离成独立的对象。这种设计提供了更大的灵活性模块化，允许用户自定义和扩展框架的功能。我们将通过本章中连续的分类和测试步骤查看此框架。
 
 在本章中，我们将涵盖以下教程：
 
-- 在 mlr3 中定义任务和学习器以实现 k-近邻 (k-NN)
+- 在 `mlr3` 中定义任务和学习器以实现 k-近邻 (k-NN)
 - 使用交叉验证测试模型拟合情况
 - 使用逻辑回归优化模型参数，以根据两种结果的相对概率进行分类
-- 使用随机森林进行分类并使用 iml 进行解释
-- 在 mlr3 流水线中使用 PCA 进行降维
+- 使用随机森林进行分类并使用 `iml` 进行解释
+- 在 `mlr3` 流水线中使用 PCA 进行降维
 - 创建 tSNE 和 UMAP 嵌入
 - 使用 k-均类和层次聚类进行聚类
-
-
-
-
 
 ## 技术要求
 
@@ -7172,6 +7064,8 @@ renv::install("user name/repo name")
 renv::install("danmaclean/rbioinfocookbook")
 ```
 
+
+
 你也可以通过逗号分隔包名来一次安装多个包。`renv` 会自动处理你安装的包所需的任何依赖项。
 
 在 `renv` 环境下，所有包都将安装到本地项目目录，而不是主中央库，这意味着你可以拥有同一个包的多个版本，每个版本专门针对一个特定的项目。
@@ -7181,29 +7075,29 @@ renv::install("danmaclean/rbioinfocookbook")
 对于本章节，我们需要以下包：
 
 - 常规包：
-    - DALExtra
-    - dplyr
-    - factoextra
-    - ggplot2
-    - iml
-    - magrittr
-    - mlbench
-    - mlr3
-    - mlr3learners
-    - mlr3pipelines
-    - mlr3tuning
-    - mlr3viz
-    - palmerpenguins
-    - purrr
-    - RColorBrewer
-    - Rtsne
-    - tibble
-    - tidyr
-    - umap
+    - `DALExtra`
+    - `dplyr`
+    - `factoextra`
+    - `ggplot2`
+    - `iml`
+    - `magrittr`
+    - `mlbench`
+    - `mlr3`
+    - `mlr3learners`
+    - `mlr3pipelines`
+    - `mlr3tuning`
+    - `mlr3viz`
+    - `palmerpenguins`
+    - `purrr`
+    - `RColorBrewer`
+    - `Rtsne`
+    - `tibble`
+    - `tidyr`
+    - `umap`
 - Bioconductor：
-    - Biobase
+    - `Biobase`
 - GitHub:
-    - danmacan/rbioinfcookbook
+    - `danmacan/rbioinfcookbook`
 
 除了这些包之外，我们还需要一些 R 工具，例如 Conda。所有这些工具将在需要时进行描述。
 
@@ -7231,9 +7125,9 @@ k 最近邻 (k-NN) 分类是一种非参数机器学习算法，根据数据点�
 
 # 在 mlr 中定义任务和学习器以实现 k 最近邻 (k-NN)
 
-在 particular配方中，我们将使用 `mlr3` 为乳腺癌数据构建分类器。已经从被识别为良性或恶性的肿瘤提取了一组测量值。
+在 particular 配方中，我们将使用 `mlr3` 为乳腺癌数据构建分类器。已经从被识别为良性或恶性的肿瘤提取了一组测量值。
 
- 准备工作
+## 准备工作
 
 对于此配方，我们需要安装 `mlr3`、`knn` 和 `mlr3viz` 包。我们将使用来自 `mlbench` 的 `BreastCancer` 对象。
 
@@ -7247,7 +7141,6 @@ library(mlr3)
 library(mlr3viz)
 library(mlbench)
 data("BreastCancer")
-
 selected <- BreastCancer[c("thickness", "cell_size", "cell_shape", "marginal_adhesion", "epithel_size", "chromatin", "mitoses")]
 task <- as_task_class(selected, target="Class")
 autoplot(task)
@@ -7311,9 +7204,6 @@ predictions$score(measures)
 * Properties: multiclass, twclass
 ```
 
-
-
-
 在第 5 步中，我们可以使用新训练的学习器对测试集进行一些预测。`learner$predict()` 函数接收任务和测试划分。我们可以使用 `autoplot()` 函数结合预测结果，将真实值与模型预测进行对比，实现测试结果的可视化，如图 11.2 所示：
 
 ![](img/dd0d7d9aaacf496c4d1d0e31d83783b3_316_0.png)
@@ -7371,49 +7261,41 @@ K 折交叉验证涉及将数据集划分为 K 个等大小的子集（或折）
 可以通过如下进行交叉验证：
 
 - 1. 设置任务和学习器：
-
 ```
 library(mlr3)
 library(mlbench)
 library(mlr3learners)
 data("BreastCancer")
-
 selected <- BreastCancer[c("Cl.thickness", "Cell.size", "Cell.shape", "Marg.adhesion", "Epith.c.size", "Bl.chromatin", "Normal.nucleoli", "Mitoses", "Class")]
-
 task <- as_task_classifier(selected, target="Class")
 learner <- lrn("classifier.knn")
 learner$paramset$set_values(k = 4)
 ```
 
 - 2. 设置重采样对象：
-
 ```
 resample <- resampling("cv")
 resample$paramset$values = list(folds = 3)
 ```
 
 - 3. 执行重采样：
-
 ```
 resultcv <- resell(task, learner, resample)
 ```
 
 - 4. 评估迭代：
-
 ```
 measures <- msrs(c("class.precision", "class.specificity", "class.sensitivity"))
 resultcv$score(measures)
 ```
 
 - 5. 检查聚合预测：
-
 ```
 predcv <- resultcv$prediction()
 predcv$confusion
 ```
 
 - 6. 在不同的验证方案中使用相同的任务和学习器：
-
 ```
 resampleloo <- resampling("loo")
 resultloo <- resell(task, learner, resampleloo)
@@ -7455,25 +7337,17 @@ mlr3 的方法在本配方中表现得很好。模块化的对象设计允许我
 
 逻辑回归模型使用极大似然估计进行训练，该方法寻找输入变量的最优系数，使观测结果的似然概率最大化。
 
-
-
-
 ## 如何操作...
 
 执行逻辑回归并使用调优（tuner）对象进行优化可以按照以下步骤进行：
 
--   设置任务、学习器和重采样器：
-
+- 设置任务、学习器和重采样器：
 ```
 library (mlr3)
 library (mlbench)
 library (mlr3learners)
 data ("BreastCancer")
-
-selected <- BreastCancer[c("Cl.thickness","Cell.size","Cell.
-shape","Marg. adhesion","Epith.c.size","Bl.chromatin","Normal
-nucleoli","Mitoses","Class")]
-
+selected <- BreastCancer[c("Cl.thickness","Cell.size","Cell.shape","Marg. adhesion","Epith.c.size","Bl.chromatin","Normal nucleoli","Mitoses","Class")]
 task <- as_task_classify(selected, target="Class")
 learner <- lrn("class.log_reg")
 resamp_kcv <- rsmp("cv")
@@ -7481,62 +7355,58 @@ resamp_kcv$param_setValues = list(folds = 3)
 measure <- msr("class.acc")
 ```
 
--   检查我们可以优化的参数：
-
+- 检查我们可以优化的参数：
 ```
 as.data.table(learner$param_set)
 ```
 
--   为参数设置动态限制：
-
+- 为参数设置动态限制：
 ```
 library(mlr3tuning)
 learner$param_set$set_values(epsilon = to_tune(0, 10),
 maxit = to_tune(1, 10) )
 ```
 
--   决定优化任务应如何终止：
-
+- 决定优化任务应如何终止：
 ```
 terminate <- trm("run_time", secs = 5)
 ```
 
--   将输入编译为调优对象：
-
+- 将输入编译为调优对象：
 ```
 tunit <- ti(
 task = task,
 learner = learner,
 resampling = resamp_kcv,
 measures = measure,
-terminator = terminate
-)
 ```
+
+
 
 # 使用 mlr3 进行机器学习
 
-6. 运行调优器：
+## 6. 运行调优器
 
-```
+```r
 tuner <- tnr("random_search")
 tuner$optimize(tunit)
 tunit$result
 ```
 
-7. 绘制所选参数值与结果指标之间的关系图：
+## 7. 绘制所选参数值与结果指标之间的关系图
 
-```
+```r
 library(mlr3viz)
 apoplot(tunit)
 ```
 
 这段代码允许我们能够构建并评估逻辑回归。
 
-## 工作原理...
+### 工作原理
 
-此配方将创建任务、学习器、重采样策略和评估指标的熟悉过程浓缩在第 1 步中。加载数据并创建对象，指定了逻辑回归 `class.log_reg` 学习器和三折交叉验证重采样（`cv`）。我们评估模型的指标是单一的，并由 `mlr()` 函数指定为分类准确率（`class.acc`）。在遍历逻辑回归参数的不同值时，所有内容都将被反复使用。
+此配方将创建任务、学习器、重采样策略和评估指标的熟悉过程浓缩在第 1 步中。加载数据并创建对象，指定了逻辑回归 `class.log_reg` 学习器和三折交叉验证重采样 `cv`。我们评估模型的指标是单一的，并由 `mlr()` 函数指定为分类准确率 `class.acc`。在遍历逻辑回归参数的不同值时，所有内容都将被反复使用。
 
-设置好学习器后，我们可以检查哪些参数可以被优化。我们在第 2 步中通过将对象强制转换为 `data.table` 来实现。输出（略有截）如下：
+设置好学习器后，我们可以检查哪些参数可以被优化。我们在第 2 步中通过将对象强制转换为 `data.table` 来实现。输出如下：
 
 ```
 special_vals
@@ -7551,22 +7421,18 @@ ParamUty NA NA Inf FALSE <list [0]>
 
 我们可以看到 `epsilon` 和 `maxit` 参数是双精度数字 `ParamDbl`，可以取正负无穷。我们将在示例中优化这些参数。
 
-在第 3 步中，我们使用 `mlr3` 包来访问调优/优化对象和函数，使用 `learner$param_sets$set_values()` 在学习器中设置选定的参数，我们通过 `to_tune()` 函数向其传递想要存储的可能值范围。这意味着这里的值将在每次运行时根据我们选择的优化方案（将在稍后定义）发生更改。
+在第 3 步中，我们使用 `mlr3` 包来访问调优/优化对象和函数，使用 `learner$param_sets$set_values()` 在学习器中设置选定的参数，我们通过 `to_tune()` 函数向其传递想要存储的可能值范围。这意味着这里的值将在每次运行时根据我们选择的优化方案发生更改。
 
-# 使用逻辑回归对两个结果的相对可能性进行分类
+### 使用逻辑回归对两个结果的相对可能性进行分类
 
-在第 4 步中，我们需要定义优化何时终止。优化可以在数千种参数组合上运行，因此决定它如何结束是一个好主意。在 `mlr3` 中，终止器（terminator）对象定义了停止标准。使用 `$trm()` 函数配合 $run\_time$ 标准设置五秒。在 `mlr3` 中，终止器对象定义了停止标准。使用 `$trm()` 函数配合 $run\_time$ 标准设置五秒。在 `mlr3` 中，终止器对象定义了停止标准。使用 `$trm()` 函数配合 $run\_time$ 标准设置五秒。在 `mlr3` 中，终止器对象定义了停止标准。使用 `$trm()` 函数配合 $run\_time$ 标准设置五秒。在 `mlr3` 中，终止器对象定义了停止标准。使用 `$trm()` 函数配合 $run\_time$ 标准设置五秒。
+在第 4 步中，我们需要定义优化何时终止。优化可以在数千种参数组合上运行，因此决定它如何结束是一个好主意。在 `mlr3` 中，终止器 `terminator` 对象定义了停止标准。使用 `$trm()` 函数配合 `$run_time$` 标准设置五秒。
 
-（注：由于原文后续部分存在大量重复和乱码，此处遵循“不要重复输出原文”的原则，仅翻译核心逻辑部分）
+## 使用随机森林分类并用 iml 进行解释
 
-
-
-
-
-- 5. 运行 ROC 分析：
+### 5. 运行 ROC 分析
 
 ```r
-library (DALEXtra)
+library(DALEXtra)
 model <- explain_mlr3(
   data = cancer_x
 )
@@ -7574,18 +7440,16 @@ model <- explain_mlr3(
 
 这段代码构建了模型并为我们提供了特征分析。
 
-## 工作原理...
+### 工作原理
 
-*在第 1 步中*，我们在 *learner* 对象中构建训练好的模型之前，执行了熟悉的数据清洗和任务定义过程。你可以在本章的第一个菜谱 *mlr3 中的《定义任务和学习器以实现 k-近邻 (k-NNs)》* 中读到更多详细信息。*第 2 步*是关于如何使用 `predict()` 函数利用模型对未见数据进行分类的快速演示。在这里，我们简单地传递 `learner` 中的模型和一组与模型训练数据格式相同的新数据。结果是一个类类名的简单向量：
+*在第 1 步中*，我们在 `learner` 对象中构建训练好的模型之前，执行了熟悉的数据清洗和任务定义过程。你可以在本章的第一个菜谱 *mlr3 中的《定义任务和学习器以实现 k-近邻 k-NNs》* 中读到更多详细信息。*第 2 步*是关于如何使用 `predict()` 函数利用模型对未见数据进行分类的快速演示。在这里，我们简单地传递 `learner` 中的模型和一组与模型训练数据格式相同的新数据。结果是一个类向量：
 
 ```
 ## [1] benign malignant malignant benign
 Levels: benign malignant
 ```
 
-*在第 4 步中*，我们可以使用 `FeatureImp$new()` 函数运行并绘制特征重要性分析，然后对生成的 imp 对象运行 `plot()` 方法。这为我们提供了*图 11.4*：
-
-# 使用随机森林分类并用 iml 进行解释
+*在第 4 步中*，我们可以使用 `FeatureImp$new()` 函数运行并绘制特征重要性分析，然后对生成的 imp 对象运行 `plot()` 方法。这为我们提供了图 11.4：
 
 ![](img/dd0d7d9aaacf496c4d1d0e31d83783b_327_0.png)
 
@@ -7617,7 +7481,7 @@ auc : 0.9984286
 
 现在可以将生成的模型对象传递给 `model_performance()` 函数，其结果可以传递给通用的 `plot()` 函数并指定 roc geom。生成的图与图 11.5 类似：
 
-# 接收者操作特征曲线
+### 接收者操作特征曲线
 
 ![](img/dd0d7d9aaacf496c4d1d0e31d83783b_328_0.png)
 
@@ -7627,19 +7491,19 @@ auc : 0.9984286
 
 # mlr3 流水线中的 PCA 进行降维
 
-主成分分析 (PCA) 是一种在生物信息学常用的降维技术，用于分析和解释高维生物数据，例如基因表达数据、蛋白质谱或基因组数据。
+主成分分析 `PCA` 是一种在生物信息学常用的降维技术，用于分析和解释高维生物数据，例如基因表达数据、蛋白质谱或基因组数据。
 
-PCA 的主要目标是寻找数据的低维表示，同时保留原始数据中的重要模式和变异。它通过将数据转换为一组新的不相关的变量（称为主成分）来实现这一点。这些主成分按这种方式排列：第一个成分捕获数据中最大的变异，第二个成分捕获次大的变异，依此类推。
+PCA 的主要目标是寻找数据的低维表示，同时保留原始数据中的重要模式和变异。它通过将数据转换为一组新的不相关的变量来实现这一点。这些主成分按这种方式排列：第一个成分捕获数据中最大的变异，第二个成分捕获次大的变异，依此类推。
 
-PCA 在生物信息学中有许多应用，包括可视化，它能将数据减少到两个或三个维度以便使用。PCA 在特征选择中起着重要作用，因为它可以通过评估特征对主成分的贡献，从训练集中选择出信息量丰富的特征（基因、蛋白质等）。这有助于在保留最相关变量的同时减少数据维度，并使任务更易处理。在这个菜谱中，我们将查看如何将 PCA 等预处理步骤构建到 mlr3 流水线中，而不是外部步骤。
+PCA 在生物信息学中有许多应用，包括可视化，它能将数据减少到两个或三个维度以便使用。PCA 在特征选择中起着重要作用，因为它可以通过评估特征对主成分的贡献，从训练集中选择出信息量丰富的特征。这有助于在保留最相关变量的同时减少数据维度，并使任务更易处理。在这个菜谱中，我们将查看如何将 PCA 等预处理步骤构建到 mlr3 流水线中，而不是外部步骤。
 
 ## 准备工作
 
 对于这个菜谱，我们将使用 mlr3 包、辅助包 mlr3learners、mlr3pipelines 和 mlr3tuning，以及数据包 mlbench。我们还需要 magrittr 包。
 
-## 如何操作...
+## 如何操作
 
-要构建一个de构一个带有 PCA 预处理步骤的流水线，我们按照以下步骤进行：
+要构建一个带有 PCA 预处理步骤的流水线，我们按照以下步骤进行：
 
 1. 构建用于标准化和 PCA 的流水线：
 ```r
@@ -7679,39 +7543,30 @@ measures = get_measures(performance)
 plot(performance, type = "roc")
 ```
 
-
-
-
-
-## 如何操作...
+## 如何操作
 
 我们通过准备数据来开始创建这些嵌入：
 
-- 1. 加载库和数据：
-
+1. 加载库和数据：
 ```r
 library(palmerpenguin)
 library(tidyr)
 library(dplyr)
 library(tibble)
-
 penguins_filtered <- penguins |
   drop_na(-year) |
   select(-year) |
   mutate(ID=row_number())
-
 penguins_scaled <- penguins_filtered |
   select(where(is.numeric)) |
   column_to_rownames("ID") |
   scale()
 ```
 
-- 2. 定义参数空间和嵌入函数：
-
+2. 定义参数空间和嵌入函数：
 ```r
 library(Rtsne)
 space <- expand.grid(perp = seq(5, 50, by = 10), dim = 1:3)
-
 tsne <- function(p, d) {
   tsn <- Rtsne(penguins_scaled, perplexity = p, dimensions = p)
   data.frame(
@@ -7722,13 +7577,11 @@ tsne <- function(p, d) {
     species = penguins_filtered$species
   )
 }
-
 res <- purrr::map2(space$perp, space$dim, tsne) |>
   purrr::list_rbind()
 ```
 
-- 3. 绘制结果：
-
+3. 绘制结果：
 ```r
 library(ggplot2)
 ggplot(res) +
@@ -7738,14 +7591,11 @@ ggplot(res) +
   theme_minimal()
 ```
 
-- 4. 使用 UMAP 和特定参数重复整个过程：
-
+4. 使用 UMAP 和特定参数重复整个过程：
 ```r
 library(umap)
-
 space <- expand.grid(n_neighbours = c(5,25,50) , min_dist =
   c(0.01, 0.1, 0.5, 0.99))
-
 do_umap <- function(n, m) {
   map <- umap(penguins_scaled, n_neighbours = n, min_dist = m)
   data.frame(
@@ -7756,10 +7606,8 @@ do_umap <- function(n, m) {
     species = penguins_filtered$species
   )
 }
-
 purr::map2(space$n_neighbours, space$min_dist, do_umap) |>
   purrr::list_rbind()
-
 ggplot() +
   aes(UMAP1, UMAP2) +
   geom_point(aes(colour = species)) +
@@ -7769,23 +7617,17 @@ ggplot() +
 
 这段代码为我们提供了数据的两种不同图表。
 
-## 工作原理...
+### 工作原理
 
-第一步是确保我们已经对数据进行了清洗和缩放。在步骤 1 中，我们使用 tidyverse 风格的管道来移除 NA（使用 `drop_na()`），使用 `select (-year)` 移除无信息的年份列，并添加一个新的基于行的 ID 列。我们保留此结果 `penguins_filtered` 以保留我们需要的物种数据。接着，我们将数值列提取到一个新的数据框中，将 ID 列转换为行名属性（因此实际上是移出了实际数据框），然后当我们有了想要可视化的数值列时，可以应用 `scale()` 函数将所有数据带到相似的范围内，防止算法赋予某个变量比其他变量更大的权重。
+第一步是确保我们已经对数据进行了清洗和缩放。在步骤 1 中，我们使用 tidyverse 风格的管道来移除 NA，使用 `select(-year)` 移除无信息的年份列，并添加一个新的基于行的 ID 列。我们保留此结果 `penguins_filtered` 以保留我们需要的物种数据。接着，我们将数值列提取到一个新的数据框中，将 ID 列转换为行名属性，然后当我们有了想要可视化的数值列时，可以应用 `scale()` 函数将所有数据带到相似的范围内，防止算法赋予某个变量比其他变量更大的权重。
 
-在步骤 2 中，我们通过加载库并准备一个存储参数搜索空间值的数据结构来开始 t-SNE。`expand.grid()` 函数返回所传向量的所有组合的数据框，因此我们得到了一个 `perp` 列（对应困惑度，值从 5 到 50，步长为 10）以及一个 `dim` 列（对应维度，值为 1 到 3）。接下来，我们定义了一个函数，可以使用传入的困惑度和维度参数执行 t-SNE。该对象被传递到数据框中以记录参数和结果。函数定义后，我们使用 `purr::map2` 在搜索空间上运行它，它会遍历两个等长的向量（即 `space` 中的两列），并将它们的值发送给命名函数 `tsne`。生成的数据框列表被压缩成一个单一的数据框。
+在步骤 2 中，我们通过加载库并准备一个存储参数搜索空间值的数据结构来开始 t-SNE。`expand.grid()` 函数返回所传向量的所有组合的数据框，因此我们得到了一个 `perp` 列以及一个 `dim` 列。接下来，我们定义了一个函数，可以使用传入的困惑度和维度参数执行 t-SNE。该对象被传递到数据框中以记录参数和结果。函数定义后，我们使用 `purr::map2` 在搜索空间上运行它，它会遍历两个等长的向量，并将它们的值发送给命名函数 `tsne`。生成的数据框列表被压缩成一个单一的数据框。
 
-步骤 3 是对数据的标准 ggplot2 绘图，在每个分面（facet）中显示我们改变的两个参数的组合的可视化结果。我们得到了类似于图 11.8 的结果：
+步骤 3 是对数据的标准 ggplot2 绘图，在每个分面中显示我们改变的两个参数的组合的可视化结果。我们得到了类似于图 11.8 的结果：
 
 ![](img/dd0d7d9aaacf496c4d1d0e31d83783b3_335_0.png)
 
 图 11.8 – 显示困惑度和维度参数影响的 t-SNE 可视化
-
-1 2 3
-| Adelle |
-| Chinstrap\Gentoo |
-
-注意组之间关系发生了巨大的变化，这使得不适合像我们处理生物信息学中其他聚类那样的将其解释为同一个聚类。
 
 整个过程在步骤 4 中为 UMAP 算法重复。过程几乎完全相同，除了某些重命名以及为 UMAP 中最重要的两个参数——`n_neighbours` 和 `min_dist` 选择了不同的值之外。结果看起来类似于图 11.9：
 
@@ -7803,28 +7645,24 @@ ggplot() +
 
 我们需要 `factextra`、`ColorBrewer` 和 `Biobase` 库。我们将使用来自 `pengspook` 的数据集。
 
-## 如何操作...
+## 如何操作
 
 我们可以通过以下代码对数据集进行 PCA
 
-- 1. 加载数据并运行 PCA：
-
+1. 加载数据并运行 PCA：
 ```r
 library(factextra)
 library(Biobase)
 library(pengspook)
-
 expr_pca <- prcomp(setet, center = TRUE, scale = TRUE)
 ```
 
-- 2. 提取主成分并估计聚类：
-
+2. 提取主成分并估计聚类：
 ```r
 main_components <- expr_pca$rotation[, 1:3]
 ```
 
-- 3. 执行 k-means 以可视化：
-
+3. 执行 k-means 以可视化：
 ```r
 kmean_clus <- kmeans(main_components, k = 5, nstart = 25, iter.max = 1000)
 fviz_cluster(kmean_clus, data = main_components,
@@ -7833,13 +7671,15 @@ fviz_cluster(kmean_clus, data = main_components,
   main = "Sample Clustering")
 ```
 
+
+
 这段代码给了我们聚类。
 
 ## 工作原理...
 
 在步骤 1 中，我们加载包括 `pengspook` 在内的库，它提供了数据集。我们对其使用 `prcomp()` 函数返回一个 PCA 对象。然后我们使用 `factextra` 的 `fviz_screeplot()` 函数绘制 PCA 并看到图 11.10。
 
-# 使用 ml3 进行机器学习
+### 使用 ml3 进行机器学习
 
 ![](img/dd0d7d9aaacf496c4d1d0e31d83783b_338_0.png)
 
@@ -7857,15 +7697,11 @@ fviz_cluster(kmean_clus, data = main_components,
 
 在步骤 3 中，我们使用 `kmeans()` 函数执行 k-means 聚类，将 `main_components` 作为 `data` 参数的数据，并将聚类数设置为五。`nstart` 和 `iter.max` 参数的值对于大多数算法运行都是合理的。我们将 `kmean_clus` 结果对象传递给 `fviz_cluster()` 并设置了一些显示选项。你应该看到类似于图 11.12 的内容：
 
-# k-Means 样本聚类
+### k-Means 样本聚类
 
 ![](img/dd0d7d9aaacf496c4d1d0e31d83783b3_339_0.png)
 
 这就是我们在这个配方中想要做的全部！
-
-
-
-
 
 # 使用 purrr 和基础 R 进行函数式编程
 
@@ -7879,12 +7715,12 @@ R 具有多个基础函数，包括 `apply` 系列函数，以及一些支持函
 - 使用嵌套数据框进行函数式编程
 - 使用 `apply` 系列函数
 
-# 使用 purrr 和基础 R 进行函数式编程
+## 使用 purrr 和基础 R 进行函数式编程
 
 - 使用来自 `purrr` 的 `map` 系列函数
 - 在 `purrr` 中处理列表
 
-## 技术要求
+### 技术要求
 
 我们将使用 `renv` 以项目为特定的方式管理包。要使用 `renv` 安装包，你首先需要安装 `renv` 包。你可以通过在 R 控制台中运行以下命令来实现此操作：
 
@@ -7954,7 +7790,7 @@ renv::install("danmaclean/rbioinfcookbook")
 
 除了这些包，我们还需要一些非 R 工具，如 `conda`；所有这些将在使用时描述。
 
-# 更多信息
+### 更多信息
 
 本节并非所有食谱都在 R 中进行；有些是基于命令设置。我通常假设这些任务将使用 bash 终端。大多数 macOS 和 Linux 机器的 `Terminal` 应用程序都有这些。Windows 用户可能不需要这些特定步骤，尽管如果你想找，也存在可以在 Windows 上运行 Linux 子系统的各种包。
 
@@ -8008,7 +7844,7 @@ library(Biobase)
 library(rbioinfcookbook)
 ```
 
-# 让基础 R 对象变得“tidy” 32
+### 让基础 R 对象变得“tidy” 32
 
 ```
 tidy(mod, addPheno=TRUE)
@@ -8016,7 +7852,7 @@ tidy(mod, addPheno=TRUE)
 
 这展示了 tidy 常用对象的范围。
 
-# 它的工作原理
+## 它的工作原理
 
 我们从通过 `lm()` 函数查看常用对象开始，第一步是使用 `lm()` 函数创建一个对象，然后使用 `tidy()` 函数返回模型组件的摘要。它看起来如下：
 
@@ -8051,15 +7887,11 @@ tidy(mod, addPheno=TRUE)
 
 在步骤 3 中，我们使用 `aov()` 函数在 iris 数据上运行 ANOVA 以查看花长度的影响——在这种情况下，当我们使用 `tidy()` 时，我们得到的是模型级的摘要，可能不是我们预期的，因此我们改为对 `TukeyHSD()` 的结果运行 `tidy()`。
 
-
-
-
-
 ## 324 使用 purr 和 base R 进行函数式编程
 
 步骤 4 转移到 Bioconductor，我们对 `ExpressionSet` 对象使用了 Biobroom 版本的 `tidy()`。这会将表达值的方矩阵转换为整洁（tidy）的数据框（dataframe），并带有样本数据和其他类型的列。额外参数 `addPhen` 是该类型对象特有的，它会插入对象中的表型元数据。请注意，生成的数据框超过了 200 万行——生物数据集可能非常大，并生成巨大的数据框。
 
-## 使用嵌套数据框进行函数式编程
+# 使用嵌套数据框进行函数式编程
 
 函数式编程是一种关注于使用函数来解决问题的编程风格。它避免了编写清晰、可重用、易理解且行为可预测的代码。
 
@@ -8173,10 +8005,9 @@ simple_df <- unnest(nested_mt_list_cols, tidy_model)
 <lm> wt -2.19 .037
 ```
 
+
+
 我们现在有了一个解包了 model 的数据框。注意（此处省略了后续重复的说明文字）。
-
-
-
 
 使用 apply 函数族
 
@@ -8192,15 +8023,21 @@ simple_df <- unnest(nested_mt_list_cols, tidy_model)
 
 ```
 > lapply(my_list, mean)
+
 [[1]]
+
 [1] -0.0283512
 
 [[2]]
+
 [1] 0.4751846
 
 [[3]]
+
 [1] -0.1266651
+
 > sapply(my_list, mean)
+
 [1] -0.0283512 0.4751846 -0.1266651
 ```
 
@@ -8210,7 +8047,9 @@ simple_df <- unnest(nested_mt_list_cols, tidy_model)
 
 ```
 unlist(list_from_data_frame)
+
 Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+
 5.080333 3.043333 3.760000 1.184167 NA
 ```
 
@@ -8224,11 +8063,11 @@ R 的基础函数式编程工具包 `purrr` 的创建是为了扩展它，并创
 
 在本教程中，我们将查看 `map` 函数族的一些使用示例。
 
-## 准备工作
+### 准备工作
 
 对于本教程，我们只需要 `purrr` 包。
 
-## 如何操作...
+### 如何操作...
 
 可以通过以下示例实现 `map` 函数族的使用：
 
@@ -8236,15 +8075,14 @@ R 的基础函数式编程工具包 `purrr` 的创建是为了扩展它，并创
 
 ```r
 library(purrr)
+
 df <- data.frame(
   small_nums = 1:3,
   big_nums = c(100, 200, 300)
 )
 
 means <- map(df, mean, na.rm=TRUE)
-
 norm <- map2(df, means, function(o, m){o / m })
-
 result <- pmap(list(df, means, norm), function(o, m, n){
   data.frame(original_value = o,
   means = m,
@@ -8269,7 +8107,7 @@ walk_result <- walk(df, print)
 
 这就是使用 `map` 函数所需的全部知识。
 
-## 工作原理..
+### 工作原理..
 
 该步骤使用了最常见的 `map()` 形式。在该步骤初，我们设置了一个数据框作为处理对象，然后首先使用 `map()` 遍历该数据框，对每个元素调用 `map()` 函数。在这种情况下，元素是数据框的每一列。我们得到一个如下所示的列表：
 
@@ -8333,11 +8171,11 @@ dbl <dbl
 
 因此，`purrr` 包提供了许多处理列表的函数，在本教程中，我们将查看几个用于汇总、简化和提取数据的函数。
 
-## 准备工作
+### 准备工作
 
 我们需要 `purrr` 包。
 
-## 如何操作...
+### 如何操作...
 
 我们可以使用以下函数在 `purrr` 中操作列表：
 
@@ -8350,9 +8188,7 @@ set.seed(2345)
   b = rnorm(10, mean = 10),
   c = rnorm(10, mean = 20)
 )
-
 library(purrr)
-
 keep(1, function(x) mean(x) >= 10)
 keep(1, ~ mean(.x) >= 10)
 detect_index(1, ~ mean(.x) >= 10)
@@ -8365,22 +8201,19 @@ some(1, ~ mean(.x) >= 10)
 ```r
 names <- c("ones", "tens", "twenties")
 1 <- set_names(1, names)
-
 short_l <- modify(1, function(x) x[1:3])
 transpose(short_l)
 ```
 
 这些是处理列表的简短步骤。
 
-## 工作原理...
+### 工作原理...
 
 步骤 1 查看了过滤列表的函数，并从定义一个简单的向量列表来配合随机种子开始。然后我们加载 `purrr` 并使用 `keep()` 函数。它接收一个列表和一个应用到每个元素的函数。任何函数返回 TRUE 的元素都会被保留。`keep()` 的第二个示例展示了使用公式的简写版本，变量 `.x` 代表当前考虑的元素。从每个版本中，我们得到如下：
 
 ```
-
 $b
 [1] 12.055349 10.910236 9.616023 11.241007 10.197379
-
 $c
 [1] 20.73866 20.051863 19.50086 20.81962 19.456862 ...
 ```
@@ -8396,21 +8229,15 @@ $c
 步骤 2 专注于修改列表，从定义一组名称并使用 `set_names()` 应用于每个元素开始，返回如下：
 
 ```
-
 $ones
 [1] -0.19142463 1.549300549 0.937594857 1.265441500 ...
-
 $tens
 [1] 12.055349 10.910236 9.616023 11.241007 10.197379 ...
-
 $twenties
 [1] 20.73866 20.051863 19.50086 20.81962 19.456862 ...
 ```
 
 `modify()` 函数修改每个元素并返回修改后的列表。在这里，函数简单地从每个向量中提取前几个数字。
-
-
-
 
 # 在 purrr 335 中操作列表
 
@@ -8455,11 +8282,13 @@ ChatGPT 通过提供快速代码生成、问题解决指导、包推荐、代码
 我们将使用 `renv` 以项目特定的方式来管理包。要使用 `renv` 安装包，你首先需要安装 `renv` 包。你可以通过在 R 控制台中运行以下命令完成这一点：
 
 - 1. 安装 renv：
+
 ```
 install.packages("renv")
 ```
 
 - 2. 创建一个新的 renv 环境：
+
 ```
 renv::init()
 ```
@@ -8467,6 +8296,7 @@ renv::init()
 这将在你的当前项目目录中创建一个名为 `renv` 的新目录。
 
 - 3. 然后你可以使用以下命令安装包：
+
 ```
 renv::install_packages()
 ```
@@ -8496,6 +8326,7 @@ ChatGPT 可以利用其自然语言处理能力和对 R 编程语言的理解帮
 以下是如何在 ChatGPT 会话中工作并让它为你解释某些代码的方法：
 
 - 将以下代码粘贴到 ChatGPT 提示框中：
+
 ```r
 # 将命名列转换为因子
 #
@@ -8510,7 +8341,6 @@ ChatGPT 可以利用其自然语言处理能力和对 R 编程语言的理解帮
 #
 factorise_cols <- function(df, col_list) {
   not_all_na <- function(x) any(!is.na(x))
-
   for ( i in col_list) {
     df <- dplyr::mutate(!!(i)) := as.factor(!!(i))
   }
@@ -8518,12 +8348,12 @@ factorise_cols <- function(df, col_list) {
 }
 ```
 
+
+
 - 读取响应：
 这段 R 代码定义了一个名为 `factorise_cols` 的函数，它使用 `as.factor` 函数将数据框中显式命名的列转换为因子。函数接受两个参数：
-
-- 1. `df`:这是包含要转换列的数据框。
-- 2. `col_list`:这是一个带引号的列名的向量。
-
+- 1. `df`：这是包含要转换列的数据框。
+- 2. `col_list`：这是一个带引号的列名的向量。
 函数使用 `not_all_na` 来检查是否存在任何非 NA 值。在循环内部，变量 `i` 代表列名。最后使用 `select_if(not_all_na)` 过滤掉全 NA 的列。
 
 - 针对某个难点请求解释：
@@ -8531,7 +8361,7 @@ factorise_cols <- function(df, col_list) {
 在 `factorise_cols` 函数中，`i` 代表 `col_list` 的每个元素。
 
 读取响应：
-当然！在循环中，变量 `i` 代表 `col_list` 的每个元素。在 `mutate` 函数中，`i` 需要被取消引用并作为表达式评估。这是因为 `mutate` 期望提供表达式。`!!` 运算符用于执行这种取消引用。这是 `dplyr` 提供的 tidy 框架的一部分。通过用 `!!` 包裹 `i`，它指示 `mutate`  `i`，从而得到取消引用的列名。
+当然！在循环中，变量 `i` 代表 `col_list` 的每个元素。在 `mutate` 函数中，`i` 需要被取消引用并作为表达式评估。这是因为 `mutate` 期望提供表达式。`!!` 运算符用于执行这种取消引用。这是 `dplyr` 提供的 tidy 框架的一部分。通过用 `!!` 包裹 `i`，它指示 `mutate` `i`，从而得到取消引用的列名。
 
 # 借助 ChatGPT 协助解释复杂的代码
 
@@ -8541,10 +8371,7 @@ factorise_cols <- function(df, col_list) {
 
 注意，ChatGPT 的响应会根据上下文有所不同，你可能无法得到完全相同的生成内容。这是该模型的特性，但你可以获得含义相同的内容。
 
-
-
-
-使用 ChatGPT 加速 R 语言开发
+# 使用 ChatGPT 加速 R 语言开发
 
 ## 使用 ChatGPT 调试和改进代码
 
@@ -8552,30 +8379,29 @@ factorise_cols <- function(df, col_list) {
 
 ## 准备工作
 
-我们只需要一个 ChatGPT 账号：https://chat.openai.com。
+我们只需要一个 ChatGPT 账号：`https://chat.openai.com`。
 
 ## 如何操作...
 
 我们可以编写一些预期可以正常运行的代码并进行尝试：
-
 - 设置一些我们预期可以正常运行的代码并尝试：
+
 ```r
 data <- data.frame(
   predictor = c(1, 2, 3, 4, NA),
   response = c("A", "B", "C", "D", "E")
 )
-
 model <- lm(response - predictor, data = data)
 ```
 
 - 将这段错误代码发送给 ChatGPT：
+
 ```r
 Help me fix the following code:
 data <- data.frame(
   predictor = c(1, 2, 3, 4, NA),
   response = c("A", "B", "C", "D", "E")
 )
-
 model <- lm(response - predictor, data = data)
 ```
 
@@ -8583,9 +8409,11 @@ model <- lm(response - predictor, data = data)
 
 3. 在 R 中读取并运行生成的响应：
 
-```
-要修复代码，你需要处理 predictor 列中的缺失值 (NA)。以下是修复后的代码：
+要修复代码，你需要处理 `predictor` 列中的缺失值 `NA`。以下是修复后的代码：
+
 # Fixing the code
+
+```r
 data <- data.frame(
   predictor = c(1, 2, 3, 4, NA),
   response = c("A", "B", "C", "D", "E")
@@ -8608,7 +8436,7 @@ model <- lm(response ~ predictor, data = data)
 summary(model)
 ```
 
-在修复后的代码中，我使用 `mean()` 函数配合 `na.rm = TRUE` 将 predictor 列中的 NA 值替换为剩余数值数值的平均值。然后，我使用 `as.factor()` 函数将响应变量转换为因子。最后，使用修正后的数据计算线性回归模型，并通过 `summary(model)` 显示模型摘要。
+在修复后的代码中，我使用 `mean()` 函数配合 `na.rm = TRUE` 将 `predictor` 列中的 NA 值替换为剩余数值数值的平均值。然后，我使用 `as.factor()` 函数将响应变量转换为因子。最后，使用修正后的数据计算线性回归模型，并通过 `summary(model)` 显示模型摘要。
 
 4. 告诉 ChatGPT 代码无法运行
 
@@ -8652,11 +8480,11 @@ data$response <- as.numeric(data$response)
 # 执行线性回归
 model <- lm(response ~ predictor, data = data)
 summary(model)
-在更新后的代码中，我使用了 `as.numeric()` 将响应变量转换为数值编码。这允许回归模型将其视为数值响应。现在，`lm()` 函数应该可以在不报错的情况下运行，`summary(model)` 将显示模型摘要。
 ```
 
-- 6. 询问检查原始代码是否经过了恰当分析：
+在更新后的代码中，我使用了 `as.numeric()` 将响应变量转换为数值编码。这允许回归模型将其视为数值响应。现在，`lm()` 函数应该可以在不报错的情况下运行，`summary(model)` 将显示模型摘要。
 
+- 6. 询问检查原始代码是否经过了恰当分析：
 原始数据适合线性模型吗？
 
 - 7. 读取响应：
@@ -8670,11 +8498,8 @@ summary(model)
 由于原始数据不适合线性模型，你通常需要将其编码为虚拟变量，或使用多项逻辑回归等技术。
 
 这看起来有点奇怪。
-```
-[/content]
 
-[content]
-使用 ChatGPT 加速 R 语言开发
+# 使用 ChatGPT 加速 R 语言开发
 
 ## 使用 ChatGPT 生成代码
 
@@ -8684,12 +8509,11 @@ ChatGPT 在生成 R 代码方面非常有用，因为它对大量的编程相关
 
 ## 准备工作
 
-对于本教程，我们需要安装 `ggplot2` 和 `tidyr` 包。我们还需要一个 ChatGPT 账号：https://chat.openai.com/。
+对于本教程，我们需要安装 `ggplot2` 和 `tidyr` 包。我们还需要一个 ChatGPT 账号：`https://chat.openai.com/`。
 
 ## 如何操作...
 
 为了让 ChatGPT 生成绘图代码，我们可以这样操作：
-
 - 1. 给它示例数据和指令：
 
 ```
@@ -8702,17 +8526,10 @@ sample1 sample2 sample3
 5 4.29 2.89 16.2
 6 2.48 1.77 16.5
 7 3.48 3.66 15.0
+8 1.07 3.47 17.1
+9 4.25 3.74 14.5
+10 4.19 3.35 16.3
 ```
-
-
-
-
-
-| | | | |
-|---|---|---|---|
-| 8 | 1.07 | 3.47 | 17.1 |
-| 9 | 4.25 | 3.74 | 14.5 |
-| 10 | 4.19 | 3.35 | 16.3 |
 
 - 2. 读取并运行响应：
 
@@ -8724,14 +8541,11 @@ plot_sample_data <- function() {
 sample1 <- c(2.85, 2.78, 2.09, 1.22, 4.29, 2.48, 3.48, 1.07, 4.25, 4.19)
 sample2 <- c(3.61, 1.58, 2.75, 3.56, 2.89, 1.77, 3.66, 3.47, 3.74, 3.35)
 sample3 <- c(16.7, 16.6, 17.2, 16.0, 16.2, 16.5, 15.0, 17.1, 14.5, 16.3)
-
 # 创建数据框
 data <- data.frame(sample1, sample2, sample3)
-
 # 绘制数据
 plot(data$sample1, type = "l", col = "blue", ylim = 
 range(data), xlab = "Index", ylab = "Value", main = "Sample Data")
-
 lines(data$sample2, col = "red")
 lines(data$sample3, col = "green")
 }
@@ -8741,13 +8555,11 @@ lines(data$sample3, col = "green")
 ```
 # 添加图例
 legend("topright", legend = c("Sample 1", "Sample 2", "Sample 3"), col = c("blue", "red", "green"), lty = 1)
-
 ```
 
 你可以调用函数 `plot_sample_data()` 来加载并绘制数据。它将生成一个包含三条折线图，分别代表三个样本。x 轴表示索引，y 轴表示对应的值。图表将有一个指示样本颜色的图例。
 
 - 3. 更新提示词使其更清晰：
-
 这看起来还可以，但我想用 `ggplot2` 绘制一个点图，将所有样本与其他样本进行对比。
 
 - 4. 读取并运行响应：
@@ -8758,19 +8570,16 @@ legend("topright", legend = c("Sample 1", "Sample 2", "Sample 3"), col = c("blue
 library(ggplot2)
 ```
 
-```
+```r
 plot_sample_data <- function() {
 # 定义数据
 sample1 <- c(2.85, 2.78, 2.09, 1.22, 4.29, 2.48, 3.48, 1.07, 4.25, 4.19)
 sample2 <- c(3.61, 1.58, 2.75, 3.56, 2.89, 1.77, 3.66, 3.47, 3.74, 3.35)
 sample3 <- c(16.7, 16.6, 17.2, 16.0, 16.2, 16.5, 15.0, 17.1, 14.5, 16.3)
-
 # 创建数据框
 data <- data.frame(sample1, sample2, sample3)
-
 # 将数据转换为长格式
 data_long <- tidyr::gather(data, key = "Sample", value = "Value")
-
 # 使用 ggplot2 绘制数据
 ggplot(data_long, aes(x = Sample, y = Value, color = Sample)) +
   geom_point() +
@@ -8782,16 +8591,13 @@ ggplot(data_long, aes(x = Sample, y = Value, color = Sample)) +
 你可以调用函数 `plot_sample_data()` 来加载并绘制数据。它将生成一个点图，其中每个点代表一个样本中的一个值。x 轴表示样本，y 轴表示对应的值。每个样本都进行了颜色编码，以便识别。
 
 - 5. 再次尝试，在提示词中添加细节：
-
 这不是我的意思！我想要一个样本 1 vs 2，样本 1 vs 2 vs 3 的分面图（faceted plot）。
 
 - 6. 读取并运行响应：
-
 抱歉误解了。这里有一个函数的更新版本，它使用 `ggplot2` 创建了样本 1 vs 2、样本 1 vs 3 以及 2 vs 3 的分面图：
 
-```
+```r
 library(ggplot2)
-
 plot_sample_data <- function() {
 # 定义数据
 sample1 <- c(2.85, 2.78, 2.09, 1.22, 4.29, 2.48, 3.48, 1.07, 4.25, 4.19)
@@ -8806,6 +8612,7 @@ sample1 <- c(2.85, 2.78, 2.09, 1.22, 4.29, 2.48, 3.48, 1.07, 4.25, 4.19)
 在第 1 步中，我们给 ChatGPT 一些样本数据来绘图。提示词并不具体，我们在第 2 步中收到的代码虽然可以运行，但生成的是图 13.1，这并不是我们想要的：
 
 # 样本数据
+
 ![](img/dd0d9aaacf96c4d0e31d378b3_0.png)
 
 图 13.1 – ChatGPT 的第一次尝试，使用了极简提示词
@@ -8813,6 +8620,7 @@ sample1 <- c(2.85, 2.78, 2.09, 1.22, 4.29, 2.48, 3.48, 1.07, 4.25, 4.19)
 在第 3 步中，我们生成了更详细的指令，并得到了第 4 步中的响应和代码。当我们运行它时，我们得到了图 13.2：
 
 # 样本数据
+
 ![](img/dd0d9aaacf96c4d0e31d378b3_1.png)
 
 图 13.2 – ChatGPT 的第二次尝试，使用了更详细的提示词
@@ -8827,12 +8635,11 @@ sample1 <- c(2.85, 2.78, 2.09, 1.22, 4.29, 2.48, 3.48, 1.07, 4.25, 4.19)
 
 ## 准备工作
 
-我们只需要 ChatGPT 的账号：https://chat.openai.com/。
+我们只需要 ChatGPT 的账号：`https://chat.openai.com/`。
 
 ## 如何操作
 
 为了让 ChatGPT 协助编写代码，请按照以下步骤操作：
-
 - 编写提示词并粘贴代码：
 
 ```
@@ -8844,7 +8651,6 @@ sample1 <- c(2.85, 2.78, 2.09, 1.22, 4.29, 2.48, 3.48, 1.07, 4.25, 4.19)
 ```
 factorise_cols <- function(df, col_list) {
   not_all_na <- function(x) any(!is.na(x))
-
   for (i in col_list) {
     df <- df %>% dplyr::mutate(!!(i)) := as.factor(!!(i))
   }
@@ -8876,7 +8682,6 @@ factorise_cols <- function(df, col_list) {
 # @importFrom base as.factor
 factorise_cols <- function(df, col_list) {
   not_all_na <- function(x) any(!is.na(x))
-
   for (i in col_list) {
     df <- df %>% dplyr::mutate(!!(i)) := as.factor(!!(i))
   }
@@ -8886,11 +8691,9 @@ factorise_cols <- function(df, col_list) {
 
 这就是我们创建文档所需的所有内容。
 
-
-
-
-
 # 使用 ChatGPT 加速 R 开发
+
+
 
 ```r
 ''
@@ -8907,7 +8710,7 @@ factorise_cols <- function(df, col_list) {
 }
 ```
 
-在此示例中，它重构了模糊的变量并为读者添加了内联注释。这两者都能帮助代码阅读者更容易理解代码。ChatGPT 还像以前一样生成了文档，这可能是上一个提示词（prompt）的影响。
+在此示例中，它重构了模糊的变量并为读者添加了内联注释。这两者都能帮助代码阅读者更容易理解代码。ChatGPT 还像以前一样生成了文档，这可能是上一个提示词（`prompt`）的影响。
 
 记住，当 ChatGPT 生成修改后的代码时，并不保证它能像以前一样工作。检查它是否按预期是你的工作。
 
@@ -8917,7 +8720,7 @@ ChatGPT 在生成 R 单元测试方面非常有益，因为它对编程模式和
 
 ## 准备工作
 
-我们只需要一个 ChatGPT 账户：https://chat.openai.com/
+我们只需要一个 ChatGPT 账户：`https://chat.openai.com/`
 
 ## 如何操作...
 
@@ -8987,37 +8790,39 @@ test_that("factorise_cols returns a data frame with non-NA columns", {
 
 该食谱利用了 ChatGPT 对 R 编程语言结构的表示，编写出能够有效测试某些示例代码的代码。在步骤 1 中，我们只需定义我们想要测试的函数并请求任务。
 
-在步骤 2 中，我们输出了 ChatGPT 在此实例中生成的内容。它为我们提供了一很好的单元测试。对于与 ChatGPT 有关的一切，并无法保证它们是正确的，但我们可以非常容易地读取并验证它们——显然比自己编写它们要快得多。需要注意的一点是，在这种情况下，ChatGPT 没有为列中仅有 NA的情况生成测试，而我们可能会决定使用这种情况。
-
-
-
+在步骤 2 中，我们输出了 ChatGPT 在此实例中生成的内容。它为我们提供了一很好的单元测试。对于与 ChatGPT 有关的一切，并无法保证它们是正确的，但我们可以非常容易地读取并验证它们——显然比自己编写它们要快得多。需要注意的一点是，在这种情况下，ChatGPT 没有为列中仅有 NA 的情况生成测试，而我们可能会决定使用这种情况。
 
 # 使用 ChatGPT 构建工作流的 R 包查找
 
 ### 3. 标准化与批效应消除：
-- 使用如 `scran` 等包提供的“尺寸因子”（size factors）或“总计数缩放”（total-count scaling）方法对 scRNA-seq 数据进行标准化，以调整测序深度或库大小差异。
+
+- 使用如 `scran` 等包提供的“尺寸因子”`size factors`或“总计数缩放”`total-count scaling`方法对 scRNA-seq 数据进行标准化，以调整测序深度或库大小差异。
 - 如果存在批效应，使用来自 `sva` 包的 `ComBat` 或 `Seurat` 中的其他相关方法进行整合和批效应校正。
 
 ### 4. 细胞聚类与可视化：
-- 使用 `Seurat` 执行降维技术（例如 PCA、t-SNE、UMAP），在低维空间中可视化 scRNA-seq 数据。
+
+- 使用 `Seurat` 执行降维技术（例如 `PCA`、`t-SNE`、`UMAP`），在低维空间中可视化 scRNA-seq 数据。
 - 在降维后的维度上使用基于图的聚类算法（`Seurat` 中的 `FindClusters` 函数）进行聚类分析，识别不同的细胞群体。
 - 使用 `Seurat` 和 `ggplot2` 对聚类进行可视化，以便进行探索和解释。
 
 ### 5. 差异表达分析：
-- 使用 `Seurat` 或 `limma` 识别聚类或细胞组之间的差异表达基因 (DEGs)。
-- 执行统计检验（例如 t 检验、Wilcoxon 秩和检验）和多重假设校正（例如 Bonferroni、FDR），以获得显著的 DEGs。
+
+- 使用 `Seurat` 或 `limma` 识别聚类或细胞组之间的差异表达基因 `DEGs`。
+- 执行统计检验（例如 t 检验、Wilcoxon 秩和检验）和多重假设校正（例如 Bonferroni、`FDR`），以获得显著的 DEGs。
 - 使用火山图、热图或其他相关的可视化方法对 DEGs 进行可视化。
 
 ### 6. 轨迹推断与拟时间分析：
+
 - 如果你的 scRNA-seq 数据代表发育过程或随时间变化的过程，使用 `Monocle` 或 `slingshot` 等包推断细胞轨迹和拟时间排序。
 - 使用这些包提供的绘图函数可视化轨迹。
 
 ### 7. 功能富集分析：
+
 - 使用 `clusterProfiler` 或 `enrichR` 对源自差异表达分析或基因聚类的基因集进行功能富集分析。
-- 识别与差异表达或聚类基因相关的基因本体 (GO) 术、通路或其他生物本体学注释。
+- 识别与差异表达或聚类基因相关的基因本体 `GO` 术、通路或其他生物本体学注释。
 - 使用这些包提供的适当可视化方法对富集结果进行可视化。
 
-需要注意的是，此工作流是一个通用指南，可能需要根据你 scRNA-seq 分析的具体特征和目标进行调整。建议查阅每个包提供的文档、教程和示例（vignettes），以深入了解它们的功能以及如何如何在分析中有效利用它们。
+需要注意的是，此工作流是一个通用指南，可能需要根据你 scRNA-seq 分析的具体特征和目标进行调整。建议查阅每个包提供的文档、教程和示例（`vignettes`），以深入了解它们的功能以及如何如何在分析中有效利用它们。
 
 # 使用 ChatGPT 加速 R 开发
 
@@ -9038,54 +8843,66 @@ test_that("factorise_cols returns a data frame with non-NA columns", {
 # 符号
 
 3D 结构蛋白对齐
-预测，在 bio3d 中 231-235
+
+预测，在 `bio3d` 中 231-235
 
 # B
 
 # A
 
 基础 R 对象
-制作 tidy 322, 323
 
-基础螺旋-环-螺旋 (bHLH) 252
+制作 `tidy` 322, 323
+
+基础螺旋-环-螺旋 `bHLH` 252
+
 批效应
-估计，使用 SVA 164-166
 
-- * 使用 AllelicImbalance，用于寻找等位基因特异性表达 (ASE) 166-169
+估计，使用 `SVA` 164-166
 
-bio3d
+- * 使用 `AllelicImbalance`，用于寻找等位基因特异性表达 `ASE` 166-169
+
+`bio3d`
+
 3D 结构蛋白对齐，预测 231-233
 
-- * 使用方差分析 (ANOVA) 97，用于比较多个变量中的多个组 111-114；用于比较单变量中的多个组 108-110
+- * 使用方差分析 `ANOVA` 97，用于比较多个变量中的多个组 111-114；用于比较单变量中的多个组 108-110
 
 用于，寻找蛋白结构域 211-224
 
-- * 使用 bioconda 安装外部工具 19-21
+- * 使用 `bioconda` 安装外部工具 19-21
 
-- * 使用 AnnotationDB 包，用于基因组注释 272-274
+- * 使用 `AnnotationDB` 包，用于基因组注释 272-274
 
 Bioconductor 包 18
+
 管理 18
-renv 18, 19
 
-- * ape 包 238 树格式，读取和写入 239, 240；用于提取和处理子集 249-251
+`renv` 18, 19
 
-生物学过程 (BP) 278
+- * `ape` 包 238 树格式，读取和写入 239, 240；用于提取和处理子集 249-251
+
+生物学过程 `BP` 278
+
 BioMart
+
 基因注释，检索 268-270
+
 基因组注释，检索 268-270
 
-- * 使用 apply() 函数 327-329
+- * 使用 `apply()` 函数 327-329
 
-bumhunter
+`bumhunter`
+
 用于从头开始寻找高表达区域 159-161
 
-- * 应用任意函数，从头开始 mutate() 函数 36-38
+- * 应用任意函数，从头开始 `mutate()` 函数 36-38
 
-busy plots
-选定值，使用 gghigh 高亮 58-60
+`busy plots`
 
-- * 使用 autoplot() 函数 294
+选定值，使用 `gghigh` 高亮 58-60
+
+- * 使用 `autoplot()` 函数 294
 
 # C
 
@@ -9093,34 +8910,40 @@ busy plots
 
 数据测试 118-121
 
-细胞组分 (CC) 279
+细胞组分 `CC` 279
 
 ChatGPT
+
 R 包，搜索构建工作流 356-360
 
 ChatGPT 帮助
 
 复杂的代码，解释 338-341
+
 叶绿体基因 225
 
-CIT (CL) 85
+CIT `CL` 85
 
 ClusterProfiler
+
 用于，确定聚类中的 GO 富集 274-278
 
 代码，使用 ChatGPT
+
 调试 342-346 生成 346-351
 
-逗号分隔值 (CSV) 264
+逗号分隔值 `CSV` 264
 
 ComplexHeatmap
+
 RNA-Seq 数据，展示 169-175
 
 复杂的代码，使用 ChatGPT 解释
 
 Cook's distance 104
 
-cowplot
+`cowplot`
+
 用于将图表组合成单图 70-75
 
 交叉验证 295
@@ -9129,8 +8952,10 @@ cowplot
 
 计算 36, 37
 
-数据，从文件加载使用 readr 260
+数据，从文件加载使用 `readr` 260
+
 富数据创建 87, 89
+
 数据列
 
 数据建模 100-104
@@ -9138,203 +8963,149 @@ cowplot
 分类变量 118-121
 
 创建相同源 83-86
+
 创建可视化 252-256
+
 创建蛋白图 219-221
+
 创建 R 对象 38, 39
+
 创建并粘贴数据 40-43
+
 为对齐创建 225-227
+
 为子集创建 249-251
-
-DECIPHER
-用于，寻找蛋白结构域 211-224
-
-DESeq2
-差异表达，估计 135-130
-表达，从头开始 129-130（注：由于原文存在大量重复，此处仅翻译核心结构）
-
-基础螺旋-环-螺旋 (bHLH) 252
-批效应
-估计，使用 SVA 164-166
-
-- * 使用 AllelicImbalance 用于寻找等位基因特异性表达 (ASE) 166-169
-
-bio3d
-3D 结构蛋白对齐，预测 231-233
-
-- * 使用方差分析 (ANOVA) 97，用于比较多个变量中的多个组 111-114；用于比较单变量中的多个组 108-110
-
-用于，寻找蛋白结构域 211-224
-
-- * 使用 bioconda 安装外部工具 19-21
-
-- * 使用 AnnotationDB 包，用于基因组注释 272-274
-
-Bioconductor 包 18
-管理 18
-renv 18, 19
-
-- * ape 包 238 树格式，读取和写入 239, 240；用于提取和处理子集 249-251
-
-生物学过程 (BP) 278
-BioMart
-基因注释，检索 268-270
-基因组注释，检索 268-270
-
-- * 使用 apply() 函数 327-329
-
-bumhunter
-用于从头开始寻找高表达区域 159-161
-
-- * 应用任意函数，从头开始 mutate() 函数 36-38
-
-busy plots
-选定值，使用 gghigh 高亮 58-60
-
-- * 使用 autoplot() 函数 294
-
-# C
-
-分类变量
-
-数据测试 118-121
-
-细胞组分 (CC) 279
-
-ChatGPT
-R 包，搜索构建工作流 356-360
-
-ChatGPT 帮助
-
-复杂的代码，解释 338-341
-叶绿体基因 225
-
-引用格式 (CL) 85
-
-ClusterProfiler
-用于，确定聚类中的 GO 富集 274-278
-
-代码，使用 ChatGPT 调试 342-346 生成 346-351
-
-逗号分隔值 (CSV) 264
-
-ComplexHeatmap
-RNA-Seq 数据，展示 169-175
-
-复杂的代码，使用 ChatGPT 解释
-
-Cook's distance 104
-
-cowplot
-用于将图表组合成单图 70-75
-
-交叉验证 295
-
-# D
-
-计算 36, 37
-
-数据，从文件加载使用 readr 260
-富数据创建 87, 89
-数据列
-
-数据建模 100-104
-
-分类变量 118-121
-
-创建相同源 83-86
-创建可视化 252-256
-创建蛋白图 219-221
-创建 R 对象 38, 39
-创建并粘贴数据 40-43
-为对齐创建 225-227
-为子集创建 249-251
-
-（注：由于原文包含大量重复内容，此处翻译核心逻辑部分并保持格式一致）
-
-
-
 
 # GO 富集分析
-在 Ontology Conditional 中使用 topGO 发现 278-282
+
+在 Ontology Conditional 中使用 `topGO` 发现 278-282
 
 # H
+
 - 此处使用了 `here` 包，用于管理文件路径 8-10
+
 - 分层二项负分布模型 121
+
 - 分层聚类
+
 - 314-317 处的聚类
 
 # I
+
 - `iml` 包
+
 - 特征重要性，执行于 304-306
-- 使用 VariantTools 从序列数据中发现插入/缺失 (INDELs) 180-180
-- 交互式开发环境 (IDE) 4
+
+- 使用 `VariantTools` 从序列数据中发现插入/缺失 `INDELs` 180-180
+
+- 交互式开发环境 `IDE` 4
+
 - 使用 `plotly` 制作交互式图表 64-66
+
 - InterPro 结构域发现 214-216
 
 # J
+
 - 表格连接函数，合并 31-356 处
 
 # K
-- 使用 Kallisto 估计差异表达 141-144
+
+- 使用 `Kallisto` 估计差异表达 141-144
+
 - 使用了 `karyoploteR`，用于在遗传图谱上绘制特征 188-191
+
 - `keras` 学习器，在 `mlr3` 参考链接中 295
+
 - k折交叉验证 295
+
 - 314-317 处的 k-means 聚类
-- k-近邻 (k-NNs) 290
+
+- k-近邻 `k-NNs` 290
+
 - 实现，在 `mlr3` 包中定义任务和 learner 291-294
-- 日本京都基因与基因组数据库 (KEGG) 282
+
+- 日本京都基因与基因组数据库 `KEGG` 282
 
 # L
+
 - 使用 `ggreple` 澄清标签位置 66, 67
-- 留一法 (LOO) 交叉验证 295
+
+- 留一法 `LOO` 交叉验证 295
+
 - 线性模型
+
 - 变量间的相互作用，考虑 114-118
+
 - 变量间的相互作用，测试 114-118
+
 - 预测制作 122, 123
+
 - 用于数据建模 100-104
+
 - 用于在多个变量中比较多个组 111-114
+
 - 用于在单个变量中比较多个组 108-110
+
 - 用于比较两组 105-107
+
 - `purrr` 包列表 333
+
 - 操作 333-335
-- 兴趣位点 (locus of interest)
+
+- 兴趣位点 `locus of interest`
+
 - 拷贝数估计 200-203
+
 - 逻辑回归 298
+
 - 用于分类两个结果的相对概率 298-302
 
 # 长格式表格
+
 - 使用 `tidyr` 整理为整洁格式的表格 29-31
 
 # 长参考序列
+
 - 在 184-187 预测开放阅读框
 
 # O
-# 机器学习 (ML) 287
+
+# 机器学习 `ML` 287
+
 - 函数族，使用 330-332 处
 
 # Markdown
+
 - 用于文学化计算 80-83
+
 - `mlr3` 包 287, 290, 295
-- 任务和 learner 的定义，以实现 k-近邻 (k-NNs) 291-294
+
+- 任务和 learner 的定义，以实现 k-近邻 `k-NNs` 291-294
 
 # mlr3 流水线
+
 - 使用 PCA 降维 307-309
 
 # mlr3 包 287
 
-# 分子功能 (MRF) 278
-- 最近共同祖先 (MRCA) 246
+# 分子功能 `MRF` 278
+
+- 最近共同祖先 `MRCA` 246
 
 # 蛋白质或基因的多序列比对
+
 - 执行 222-225
 
 # mutate() 函数
+
 - 任意函数，应用于 36, 37 处
 
 # N
-# 美国国立生物技术信息中心 (NCBI) 220
+
+# 美国国立生物技术信息中心 `NCBI` 220
 
 # 嵌套数据框
+
 - 用于函数式编程 324-326
 
 # 神经网络 295
@@ -9342,146 +9113,231 @@ cowplot
 # 名义变量 118
 
 # 非 CRAN 包
+
 - 使用 `devtools` 包操作 10-12
 
 # 正态 Q-Q 图 103
 
 # 新颖特征检测
+
 - 蛋白质中 228-231
 
 # Ontology Conditional
-- 使用 topGO 发现 GO 富集 278-282
+
+- 使用 `topGO` 发现 GO 富集 278-282
 
 # 开放阅读框
+
 - 在长参考序列中预测 184-187
 
 # 序数变量 118
+
+
+
 - 使用反向 BLAST 发现同源候选基因 259-264
 
 # 同源性 (orthistry) 258
+
 - 异常值 141
 
 # P
+
 - 使用 `patchwork` 将多个图表组合成图形 70-75
 
 # PFAM
+
 - 用于发现蛋白质结构域 211, 213
 
 # phang 包
+
 - 用于从比对序列中重构树 256-258
 
 # 表型与基因型关联
+
 - 使用 GWAS 发现 197-200
 
 # 进化发育分析 238
+
 - 进化发育 235
 
 # plotly
+
 - 使用 `plotly` 制作交互式图表 64-66
 
 # 图表
+
 - 使用 `ggeasy` 自定义 56-58
 
 # 图表类型
+
 - 在 `ggplot2` 中组合 48-51
+
 - 位置特异性矩阵 (PWSM) 209
 
 # powsimR
+
 - 执行效力分析 151-155
+
 - 主成分分析 (PCA) 247
+
 - 蛋白质数据库 (PDB) 233
-- 使用 PFAM 和 bio3d 发现蛋白质结构域 211-214
+
+- 使用 PFAM 和 `bio3d` 发现蛋白质结构域 211-214
+
 - 拉请求 (PRs) 11
+
 - 使用 `pureseq` 发现跨膜结构域 216-218
+
 - `purrr` 列表操作 333-355
+
 - `renv` 包 288
+
 - 用于创建项目特定的包集 16, 17
+
 - prex 40
+
 - 残差误差 102
+
 - 响应变量 118
+
 - 编写带有文档的 R 函数 351-354
+
 - 编写单元测试 354-356
+
 - 脊线图 (joyplots) 52
+
 - 使用 `ComplexHeatmap` 展示 RNA-Seq 数据 169-175
+
 - 搜索以构建工作流
+
 - 在目录中设置 4-7
 
 # Q
+
 - 使用 Quarto 进行文学化计算 80-83
+
 - 从集合中创建 Quarto 文档 90-92
 
 # R
+
 - 随机森林 302
+
 - 构建随机森林 303, 304
+
 - 使用 `readr` 从 26-28 加载数据
-- 接收者工作特征 (ROC)  302
+
+- 接收者工作特征 (ROC) 302
+
 - 受体激酶 (RLK) 217
+
 - 反向 BLAST 命中 (RBH) 259
+
 - 使用反向 BLAST 发现同源性 259-264
+
 - 正则表达式 (regex) 30
 
 # S
+
 - 尺度-位置图 104
+
 - 使用 146-151 分析剪接变体
+
 - 单核苷酸多态性 (SNPs) 64
+
 - 从序列数据中发现单核苷酸多态性 (SNPs) 180-184
+
 - 使用 Shiny 估计差异表达 144-146
+
 - 编译源包 13-16 处
+
 - 使用 SGSeq 分析剪接变体 146-151
+
 - 字符串 34, 35
+
 - 使用 `ape` 提取子树 249-251
+
 - 支持向量机 (SVM) 228
+
 - 替代分析 (SVA) 估计批次效应 164-166
+
 - 替代变量 164
+
 - 使用 `ggtree` 可视化多个基因 240
+
 - 使用 treespace 量化树之间的差异 246
+
 - M值的修剪中位数 (TMM) 129
 
 # U
+
 - 未标记转录基因发现 155-159
+
 - 均匀流形近似与投影 (UMAP) 嵌入创建 311-313
+
 - 非翻译区 (UTRs) 155
+
 - 用户界面 (UIs) 93
 
 # T
+
 - 连接函数合并表格 31-33
+
 - 制表符分隔值 (TSV) 26
+
 - t-分布随机邻域嵌入 (t-SNE) 创建 311-313
+
 - 使用 `tidyr` 将长格式整理为整洁格式 30, 31
+
 - 使用 `tidyr` 将宽表整理为整洁格式 29
+
 - 使用 Sleuth 分析时间序列实验 144-146
+
 - 使用 `tm` 发现跨膜结构域 216-218
+
 - 使用 `pureeq` 发现跨膜结构域 216-218
+
 - 使用 `ape` 读取和写入树格式 239, 240
+
 - 使用 `treeio` 读取和写入树格式 239, 240
+
 - `treeio` 包 238
+
 - 树格式，读取和写入 239, 240
 
 # V
+
 - 方差稳定变换 (VST) 135
+
 - 使用 `VariantAnnotation` 选择和分类变异 191-193
+
 - `VariantTools` 从序列数据中发现 SNPs 和 INDELs 180-184
 
 # W
+
 - 从 Quarto 文档集合创建网站 90-92
+
 - 使用 `tidyr` 将宽格式表格整理为整洁格式 29
+
 - 平方和 (wss) 317
-
-
-
-
-
 
 # 简易医疗数据分析
 
 Vikas “Vik” Kumar
+
 ISBN: 978-1-77827-670-2
 
 - 深入了解医疗激励、财务和法律的宝贵见解
+
 - 发现机器学习与医疗流程之间的联系
+
 - 使用 SQL 和 Python 分析数据
+
 - 衡量医疗质量和医疗提供者的绩效
+
 - 识别特征和属性，以构建成功的医疗模型
+
 - 使用真实的医疗数据构建预测模型
+
 - 成为结构化临床数据预测建模的专家
+
 - 展望医疗分析的未来趋势

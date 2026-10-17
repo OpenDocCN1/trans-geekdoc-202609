@@ -1,15 +1,9 @@
-# 回归模型错误 (机器学习微型指南，#1)
 
-
-
+# 回归模型错误（机器学习微型指南，#1）
 
 统治一切的统计量
 
 ![C:\Users\Lee\Google Drive\CSI Staff Folder\Websites\CSI Website\CSI eBooks\Bite-Size ML Series\1. Errors of Regression Models\Edition 1\Cover Art\Mockups\ERM - 650x550.png](img/image022.png)
-
-
-
-
 
 感谢下载《回归模型的误差》。
 
@@ -23,11 +17,10 @@
 
 ***
 
-
-
 ![C:\Users\Lee\Google Drive\CSI Staff Folder\Websites\CSI Website\CSI eBooks\Bite-Size ML Series\1. Errors of Regression Models\Edition 1\Cover Art\Course Ad.png](http://www.bit.ly/EPMCourse)
 
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
+
 | --- | --- | --- |
 
 ![image](img/chapter_title_above.png)
@@ -45,13 +38,14 @@
 一个画面正在形成……
 
 它是……
+
 它是……
 
 啊！！！消失了！
 
 有时候，学习统计学可能就像在窥视水晶球。你以为已经掌握了它，结果又多读了一篇文章/论文/博客，突然间又变得像泥浆一样模糊，而且你离答案比刚开始时还要远得多。
 
-MaxBG1001 在他的博客上说这是一回事，但 Sk8rBoi 在 TwitFace 上坚持认为是另一回事——而且他们都有完全合理的解释，说明为什么他们都是正确的。RazrButt 和 VanillaCupCake 又说了不同的观点，听起来他们也像很懂行似的！
+`MaxBG1001` 在他的博客上说这是一回事，但 `Sk8rBoi` 在 `TwitFace` 上坚持认为是另一回事——而且他们都有完全合理的解释，说明为什么他们都是正确的。`RazrButt` 和 `VanillaCupCake` 又说了不同的观点，听起来他们也像很懂行似的！
 
 啊啊啊啊——我太困惑了！
 
@@ -64,6 +58,7 @@ MaxBG1001 在他的博客上说这是一回事，但 Sk8rBoi 在 TwitFace 上坚
 所以，这里有两点可以帮助你找到内平静：
 
 1. 统计学更像是一把菜刀，而不是激光手术刀
+
 2. 通常没有单一的正确答案（甚至可能没有正确答案！）
 
 在大多数情况下，存在一个方法谱，其中某些方法比其他的更合适。
@@ -74,12 +69,14 @@ MaxBG1001 在他的博客上说这是一回事，但 Sk8rBoi 在 TwitFace 上坚
 
 你会发现存在一组相关的统计量，每个成员都有他们自己的忠实粉丝。
 
-尽管如此，在这种情况下，有一个正确的统计量是可以使用的，而其他测量——虽然在各自方面都有用处——在选择最准确的预测模型方面只能提供部分答案。我将介绍这个家族的每一个成员，并带你了解它们的优缺点，向你展示如何计算和解释它们。最后，我将解释解释为什么某一个特定的成员是“老爸”（The Daddy）。
+尽管如此，在这种情况下，有一个正确的统计量是可以使用的，而其他测量——虽然在各自方面都有用处——在选择最准确的预测模型方面只能提供部分答案。我将介绍这个家族的每一个成员，并带你了解它们的优缺点，向你展示如何计算和解释它们。最后，我将解释解释为什么某一个特定的成员是“老爸”（`The Daddy`）。
 
 ***
 
 ![image](img/scene.png)
+
 | ![image](img/chapter_title_corner_decoration_left.png) ||  || ![image](img/chapter_title_corner_decoration_right.png) |
+
 | --- | --- | --- |
 
 ![image](img/chapter_title_above.png)
@@ -96,7 +93,7 @@ MaxBG1001 在他的博客上说这是一回事，但 Sk8rBoi 在 TwitFace 上坚
 
 另一方面，当与非统计学家讨论统计学时，围绕所使用的术语似乎总是存在分歧、困惑和误解。
 
-在预测世界中，对于是否应该使用误差（Error）、残差（Residual）还是偏差（Deviation）来描述观测值（Observation）与预测值（Prediction）之间的差异，总是存在分歧，因此我想从一开始就先做几个定义，然后讨论它们的含义。
+在预测世界中，对于是否应该使用误差（`Error`）、残差（`Residual`）还是偏差（`Deviation`）来描述观测值（`Observation`）与预测值（`Prediction`）之间的差异，总是存在分歧，因此我想从一开始就先做几个定义，然后讨论它们的含义。
 
 ## 观测值
 
@@ -122,35 +119,33 @@ MaxBG1001 在他的博客上说这是一回事，但 Sk8rBoi 在 TwitFace 上坚
 
 偏差是观测值与另一个值之间差异的测量。观测值与感兴趣数量真实值（如总体平均值）之间的偏差是误差，而观测值与真实值估计值（如样本平均值）之间的偏差是残差。
 
-
-
-
-
-![C:\\Users\\Lee\\Google Drive\\CSI Staff Folder\\Websites\\CSI Website\\CSI eBooks\\Bite-Size ML Series\\1. Errors of Regression Models\\Edition 1\\Images\\Errors & Residuals.png](img/image011.png)
+![C:\Users\Lee\Google Drive\CSI Staff Folder\Websites\CSI Website\CSI eBooks\Bite-Size ML Series\1. Errors of Regression Models\Edition 1\Images\Errors & Residuals.png](img/image011.png)
 
 ## 残差与误差的区别
 
-区分这些概念似乎并不重要，但如果你查阅文献、统计学书籍和发表的论文，你会经常看到各种统计统计量，例如 `RMSE`、`RMSR` 和 `RMSD`（我们稍后会提到这些），它们分别代表：
+区分这些概念似乎并不重要，但如果你查阅文献、统计学书籍和发表的论文，你会经常看到各种统计统计量，例如`RMSE`、`RMSR`和`RMSD`（我们稍后会提到这些），它们分别代表：
 
-* 均方根误差 (Root Mean Squared Error)
-* 均方根残差 (Root Mean Squared Residual)
-* 均方根偏差 (Root Mean Squared Deviation)
+* 均方根误差（`Root Mean Squared Error`）
 
-为了说明清楚——这些都是同一件事，由于误差（error）通常不可知，而偏差（deviation）是模糊的，正确的术语应该是 `RMSR`。
+* 均方根残差（`Root Mean Squared Residual`）
 
-尽管如此，`RMSR` 很少使用，你在文献中看到的是 `RMSE`。我甚至在我的博士论文中也犯了这个错误（但我过关了！）。
+* 均方根偏差（`Root Mean Squared Deviation`）
 
-那么我们在这里应该使用什么术语呢？我会尽量保持一致，但可能会偶尔疏忽。在这里，`error`、`deviation` 和 `residual` 可以互换使用，但不要被它误导——我们谈论的是残差（residuals）！
+为了说明清楚——这些都是同一件事，由于误差（`error`）通常不可知，而偏差（`deviation`）是模糊的，正确的术语应该是`RMSR`。
+
+尽管如此，`RMSR`很少使用，你在文献中看到的是`RMSE`。我甚至在我的博士论文中也犯了这个错误（但我过关了！）。
+
+那么我们在这里应该使用什么术语呢？我会尽量保持一致，但可能会偶尔疏忽。在这里，`error`、`deviation`和`residual`可以互换使用，但不要被它误导——我们谈论的是残差（`residuals`）！
 
 那么从回归模型的角度，残差是什么？嗯，回归模型会对感兴趣的数值进行预测，通常这些预测会有不同——换句话说，它们不太可能与观测值完全重合：
 
-![C:\\Users\\Lee\\Google Drive\\CSI Staff Folder\\Websites\\CSI Website\\CSI eBooks\\Bite-Size ML Series\\1. Errors of Regression Models\\Edition 1\\Images\\Data - Observed v Predicted.png](img/image015.png)
+![C:\Users\Lee\Google Drive\CSI Staff Folder\Websites\CSI Website\CSI eBooks\Bite-Size ML Series\1. Errors of Regression Models\Edition 1\Images\Data - Observed v Predicted.png](img/image015.png)
 
 ### 预测很少能匹配观测值
 
 我们可以在散点图中将预测值与观测值进行对比，并对数据进行回归分析：
 
-![C:\\Users\\Lee\\Google Drive\\CSI Staff Folder\\Websites\\CSI Website\\CSI eBooks\\Bite-Size ML Series\\1. Errors of Regression Models\\Edition 1\\Images\\Residuals on a Scatter Plot.png](img/image024.png)
+![C:\Users\Lee\Google Drive\CSI Staff Folder\Websites\CSI Website\CSI eBooks\Bite-Size ML Series\1. Errors of Regression Models\Edition 1\Images\Residuals on a Scatter Plot.png](img/image024.png)
 
 ### 散点图上的残差
 
@@ -178,7 +173,7 @@ MaxBG1001 在他的博客上说这是一回事，但 Sk8rBoi 在 TwitFace 上坚
 
 ![image](img/scene_break.png)
 
-![C:\\Users\\Lee\\AppData\\Local\\Microsoft\\Windows\\Temporary Internet Files\\Content.IE5\\SPFQN5I5\\2etgsa12\[1\].png](d2d_images/image025.png)
+![C:\Users\Lee\AppData\Local\Microsoft\Windows\Temporary Internet Files\Content.IE5\SPFQN5I5\2etgsa12\[1\].png](d2d_images/image025.png)
 
 ***
 
@@ -188,30 +183,31 @@ MaxBG1001 在他的博客上说这是一回事，但 Sk8rBoi 在 TwitFace 上坚
 
 大多数人并不会。
 
-答案是，`R²` 值是一个非常具有误导性的标准。并非总是如此，但有时确实如此，在使用 `R²` 作为衡量模型准确预测能力的指标之前，你必须对自己的分析非常有把握。
+答案是，`R²`值是一个非常具有误导性的标准。并非总是如此，但有时确实如此，在使用`R²`作为衡量模型准确预测能力的指标之前，你必须对自己的分析非常有把握。
 
 让我通过一个例子来解释。
 
 针对这些预测，我们可能会问两个不同的问题：
 
 * 预测偏离观测值有多远？
+
 * 预测偏离最佳拟线有多远？
 
 这实际上是两个完全不同的问题。
 
 这是一个与之前相同的数据的散点图（红色），我也添加了这些数据的副本（蓝色）。在第二组数据中，我将残差的大小缩小了一半（即减小了方差），并添加了 0.3 的正偏差：
 
-![C:\\Users\\Lee\\Google Drive\\CSI Staff Folder\\Websites\\CSI Website\\CSI eBooks\\Bite-Size ML Series\\1. Errors of Regression Models\\Edition 1\\Images\\R-Squared on a Scatter Plot.png](img/image009.png)
+![C:\Users\Lee\Google Drive\CSI Staff Folder\Websites\CSI Website\CSI eBooks\Bite-Size ML Series\1. Errors of Regression Models\Edition 1\Images\R-Squared on a Scatter Plot.png](img/image009.png)
 
 ## 带有偏差和方差的竞争模型
 
-红色数据组良好地围绕在完美对应线（Line of Perfect Correspondence）周围，此时预测值等于观测值。在这种情况下，直线是完美拟合的。
+红色数据组良好地围绕在完美对应线（`Line of Perfect Correspondence`）周围，此时预测值等于观测值。在这种情况下，直线是完美拟合的。
 
 然而，蓝色数据并不接近完美对应线，尽管我缩小了它们的残差（方差），但它们存在了正偏差。
 
-换句话说，如果你的模型产生了偏差，`R²` 可能会产生严重的误导，甚至是灾难性的！
+换句话说，如果你的模型产生了偏差，`R²`可能会产生严重的误导，甚至是灾难性的！
 
-我们感兴趣的是预测值与观测值的偏差，但 `R²` 衡量的是预测值与最佳拟线的偏差。
+我们感兴趣的是预测值与观测值的偏差，但`R²`衡量的是预测值与最佳拟线的偏差。
 
 这些看起来可能是一样的，但实际上并非如此。在任何情况下，都有更好的衡量模型的方法，这就是我们接下来要做的。
 
@@ -229,7 +225,7 @@ MaxBG1001 在他的博客上说这是一回事，但 Sk8rBoi 在 TwitFace 上坚
 
 ![image](img/chapter_title_below.png)
 
-![C:\\Users\\Lee\\AppData\\Local\\Microsoft\\Windows\\Temporary Internet Files\\Content.IE5\\SPFQN5I5\\2etgsa12\[1\].png](d2d_images/image025.png)
+![C:\Users\Lee\AppData\Local\Microsoft\Windows\Temporary Internet Files\Content.IE5\SPFQN5I5\2etgsa12\[1\].png](d2d_images/image025.png)
 
 ***
 
@@ -239,15 +235,15 @@ MaxBG1001 在他的博客上说这是一回事，但 Sk8rBoi 在 TwitFace 上坚
 
 我们通过以下方式计算残差的方差：
 
-![C:\\Users\\Lee\\Google Drive\\CSI Staff Folder\\Websites\\CSI Website\\CSI eBooks\\Bite-Size ML Series\\1. Errors of Regression Models\\Edition 1\\Images\\Equation - Variance of Residuals.png](img/image021.png)
+![C:\Users\Lee\Google Drive\CSI Staff Folder\Websites\CSI Website\CSI eBooks\Bite-Size ML Series\1. Errors of Regression Models\Edition 1\Images\Equation - Variance of Residuals.png](img/image021.png)
 
 你已经知道如何计算残差和残差的平均值。嗯，至少我你知道如何计算残差的平均值——如果你不会，那你还没有准备好进行预测建模！
 
-所以在得到这些值后，你计算它们之间的差并平方。这表示了每个残差偏离其平均值的程度。然后通过求和（`Σ` 的含义）并除以 `N`（预测数量）来计算所有结果的平均值。
+所以在得到这些值后，你计算它们之间的差并平方。这表示了每个残差偏离其平均值的程度。然后通过求和（`Σ`的含义）并除以`N`（预测数量）来计算所有结果的平均值。
 
 我计算了上一章中蓝红色模型的残差及其方差，以查看方差是否有用：
 
-![C:\\Users\\Lee\\Google Drive\\CSI Staff Folder\\Websites\\CSI Website\\CSI eBooks\\Bite-Size ML Series\\1. Errors of Regression Models\\Edition 1\\Images\\Data - Variance of Residuals.png](img/image016.png)
+![C:\Users\Lee\Google Drive\CSI Staff Folder\Websites\CSI Website\CSI eBooks\Bite-Size ML Series\1. Errors of Regression Models\Edition 1\Images\Data - Variance of Residuals.png](img/image016.png)
 
 ## 残差方差可能会误导
 
@@ -255,10 +251,7 @@ MaxBG1001 在他的博客上说这是一回事，但 Sk8rBoi 在 TwitFace 上坚
 
 从上看，残差方差并不是衡量模型准确性的良好指标，因为它它是偏离残差平均值的衡量，而当模型存在偏差时，这种衡量是有缺陷的。
 
-
-
-
-但这并不意味着我们要完全抛弃残差——尽管如此——它对于无偏模型显然非常有用。它的价值在于其单位与你感兴趣的变量单位是相关的（提示：想想“平方根”！）。我们将在后面的章节中回到这一点。现在，让我们继续，看看一种被称为“平均绝对误差”（Mean Absolute Error）的内容。
+但这并不意味着我们要完全抛弃残差——尽管如此——它对于无偏模型显然非常有用。它的价值在于其单位与你感兴趣的变量单位是相关的（提示：想想“平方根”！）。我们将在后面的章节中回到这一点。现在，让我们继续，看看一种被称为“平均绝对误差”（`Mean Absolute Error`）的内容。
 
 ***
 
@@ -272,7 +265,7 @@ MaxBG1001 在他的博客上说这是一回事，但 Sk8rBoi 在 TwitFace 上坚
 
 啊！！！这看起来太糟糕了！好了，让我们把它拆解开，从中心向外分析。我们已经知道预测值与观测值之间的差异就是残差，所以我们可以从这里开始。
 
-垂直括号告诉我们需要计算残差的绝对值（modulus），即残差的大小或程度，不考虑正负号。例如，值为 +3 和 -3 的残差具有相同的绝对残差 +3。从这里，我们通过求和这些绝对残差，然后除以 `N`（预测的数量）来计算这些绝对残差的平均值。
+垂直括号告诉我们需要计算残差的绝对值（`modulus`），即残差的大小或程度，不考虑正负号。例如，值为 +3 和 -3 的残差具有相同的绝对残差 +3。从这里，我们通过求和这些绝对残差，然后除以`N`（预测的数量）来计算这些绝对残差的平均值。
 
 让我们看看红色模型的残差，看看我的意思：
 
@@ -288,17 +281,19 @@ MaxBG1001 在他的博客上说这是一回事，但 Sk8rBoi 在 TwitFace 上坚
 
 左侧是残差。正残差位于线方，而负残差则位于线下方。对于绝对残差，所有负值都被转换为正值，同时保留了大小，因此右侧的插图显示了所有的绝对残差，它们都是正数。
 
-平均绝对误差不能告诉你模型是否存在偏差，因为它没有提供任何关于残差方向的信息，但它能告诉每个预测值偏离观测值的程度，因此它非常擅长表达平均模型误差（用橙色线标记）。注意，`MEabs` 的单位与感兴趣的变量相同，所以如果你的变量范围是从 0 到 100，那么平均绝对误差的取值范围可以是 0 到 100，如果你的模型非常糟糕，甚至可能更高！`MEabs` 有一个邪恶的双胞胎，他一心想要困惑你！我们将在下一章节遇到他。
+平均绝对误差不能告诉你模型是否存在偏差，因为它没有提供任何关于残差方向的信息，但它能告诉每个预测值偏离观测值的程度，因此它非常擅长表达平均模型误差（用橙色线标记）。注意，`MEabs`的单位与感兴趣的变量相同，所以如果你的变量范围是从 0 到 100，那么平均绝对误差的取值范围可以是 0 到 100，如果你的模型非常糟糕，甚至可能更高！`MEabs`有一个邪恶的双胞胎，他一心想要困惑你！我们将在下一章节遇到他。
 
 ***
 
 # 邪恶的双胞胎：平均误差
 
-我们已经看了好的双胞胎——平均绝对误差，现在来认识一下邪恶的双胞胎——平均误差（Mean Error）。平均误差的计算方式如下：
+我们已经看了好的双胞胎——平均绝对误差，现在来认识一下邪恶的双胞胎——平均误差（`Mean Error`）。平均误差的计算方式如下：
 
 ![d2d_images/image002.png)
 
 平均误差的计算非常简单——你只需要计算残差的平均值，搞定！邪恶瞬间产生！实际上，这个公式看起来相当无害，一点也不邪恶——它和好的双胞胎几乎完全一样。唯一的区别在于我们不计算绝对残差，而是让它们保持原样。
+
+
 
 为了看到平均误差与平均绝对误差的区别，看看这个：
 
@@ -306,9 +301,9 @@ MaxBG1001 在他的博客上说这是一回事，但 Sk8rBoi 在 TwitFace 上坚
 
 ## 平均误差可以是负数
 
-与平均绝对误差相反，残差可以是负数，因此平均误差也可以是负数！如果我们感兴趣的是以某种尺寸来表达预测模型的准确性——比如“它有多大”——那么平均误差对我们来说毫无用处。这就是为什么它是邪恶的双胞胎——它看起来和好的双胞胎几乎一样，但对于相信哪一个可能会非常困惑。更糟糕的是，平均误差总是比平均绝对误差小，因为正负残差相互抵消了。平均误差试图诱惑你（选我，选我），因为我们都喜欢小的误差值，不是吗（噢，你知道你想要的)？实际上，我对平均误差有点不公平。他并不那么邪恶。是的，他很困惑且具有诱惑性，但他也有一些可救之处。虽然平均误差不适合告诉我们准确性的大小，但他在衡量平均模型偏差方面做得非常好。这非常有用。例如，如果你发现一个模型的平均模型偏差为 75，为了获得更准确的模型，你只需要从每个预测值中减去 75。在机器学习和智能算法的世界里，这似乎并不复杂，但它确实有效！在下一章节，我们将遇到这个群体中的父辈——均方根误差。
+与平均绝对误差相反，残差可以是负数，因此平均误差也可以是负数！如果我们感兴趣的是以某种尺寸来表达预测模型的准确性——比如“它有多大”——那么平均误差对我们来说毫无用处。这就是为什么它是邪恶的双胞胎——它看起来和好的双胞胎几乎一样，但对于相信哪一个可能会非常困惑。更糟糕的是，平均误差总是比平均绝对误差小，因为正负残差相互抵消了。平均误差试图诱惑你（选我，选我），因为我们都喜欢小的误差值，不是吗（噢，你知道你想要的）？实际上，我对平均误差有点不公平。他并不那么邪恶。是的，他很困惑且具有诱惑性，但他也有一些可救之处。虽然平均误差不适合告诉我们准确性的大小，但他在衡量平均模型偏差方面做得非常好。这非常有用。例如，如果你发现一个模型的平均模型偏差为 `75`，为了获得更准确的模型，你只需要从每个预测值中减去 `75`。在机器学习和智能算法的世界里，这似乎并不复杂，但它确实有效！在下一章节，我们将遇到这个群体中的父辈——均方根误差。
 
-***
+---
 
 # 父亲：均方根误差
 
@@ -317,8 +312,6 @@ MaxBG1001 在他的博客上说这是一回事，但 Sk8rBoi 在 TwitFace 上坚
 ![d2d_images/image026.png)
 
 `RMSE` 的计算比家族其他成员复杂一点，但对我们来说并不难——我们现在有经验了！你只需要计算每个残差的平方，然后取平均值，最后开平方根即可。
-
-
 
 与 `MAE` 相比，`RMSE` —— 由于残差在取平均值之前经过了平方 —— 对较大的残差和离群值赋予了较高的权重。换句话说，当模型中不希望出现较大的残差，作为模型准确性的衡量标准，应该始终优先选择 `RMSE` 而非 `MAE`。另一方面，平方距离的使用使得 `RMSE` 的解释变得困难，而 `MAE` 在概念上更简单，因为每个误差对 `MAE` 的贡献与该误差的绝对值成比例，而这对于 `RMSE` 并非如此。
 
@@ -355,11 +348,11 @@ MaxBG1001 在他的博客上说这是一回事，但 Sk8rBoi 在 TwitFace 上坚
 
 但这故事并没有完全结束——正如我们在下一章中看到的，我们将把家族的所有成员聚在一起进行小小的家庭聚会……
 
-***
+---
 
 ![image](img/scene_break.png)
 
-| ![image](img/chapter_title_decoration_left.png) || || ![image](img/chapter_title_decoration_right.png) |
+| ![image](img/chapter_title_decoration_left.png) |  | ![image](img/chapter_title_decoration_right.png) |
 | --- | --- | --- |
 
 ![image](img/chapter_title_above.png)
@@ -370,7 +363,7 @@ MaxBG1001 在他的博客上说这是一回事，但 Sk8rBoi 在 TwitFace 上坚
 
 ![C:\Users\Lee\AppData\Local\Microsoft\Windows\Temporary Internet Files\Content.IE5\9DEE29EW\400px-Addams_Family_cast_1964.jpg](img/image005.png)
 
-***
+---
 
 尽管大大叫和争吵，但 `RMSE` 之所以是老爸有一个非常充分的理由——我已经给你提示过是什么！让我向你介绍老爸的超级英雄名字：偏差/方差权衡（Bias/Variance Trade-Off）
 
@@ -412,9 +405,6 @@ MaxBG1001 在他的博客上说这是一回事，但 Sk8rBoi 在 TwitFace 上坚
 
 最后你可以引用方差，解释这是预测偏离其平均值的程度。作为方差的替代方案，你可以使用 `R²`。我不喜欢使用它，因为它的单位与你感兴趣的变量无关，但 `R²` 实际上是一个非常好的选择，因为大多数运行回归分析的人对好坏的 `R²` 都有很好的感觉。如果你想表现得自豪，可以引用 `BVTO` ——这通常会让你在老板面前看起来很好……
 
-
-
-
 偏差（Deviation）是观测值与某个值之间差异的衡量，我们可以将偏差分为两种类型：误差（error）源于真实且不可观测的值；而残差（residual）则是观测值与预测值之间的差异。
 
 `RMSE` 是所有衡量指标之“父”，用俗话说，它是能够统领一切的唯一指标。我确定以前在某个地方听过这句话……
@@ -429,14 +419,15 @@ MaxBG1001 在他的博客上说这是一回事，但 Sk8rBoi 在 TwitFace 上坚
 
 ## RMSE 家族树
 
-我希望你现在能更好地在衡量回归模型准确性时做出明智选择。更好的是，下一次你读到 Sk8rBoi 或 RazrButt 关于最佳准确性衡量标准的评论时，你会报以苦涩的微笑，因为你不仅知道正确答案是什么，而且还有“偏差/方差权衡”（Bias/Variance Trade-Off）作为你的盟友！
+我希望你现在能更好地在衡量回归模型准确性时做出明智选择。更好的是，下一次你读到 `Sk8rBoi` 或 `RazrButt` 关于最佳准确性衡量标准的评论时，你会报以苦涩的微笑，因为你不仅知道正确答案是什么，而且还有“偏差/方差权衡”（Bias/Variance Trade-Off）作为你的盟友！
 
-***
+---
 
 ![image](img/scene_break.png)
 
-| ![image](img/chapter_title_corner_decoration_left.png) |  || ![image](img/chapter_title_corner_decoration_right.png) |
+| ![image](img/chapter_title_corner_decoration_left.png) |  | ![image](img/chapter_title_corner_decoration_right.png) |
 | --- | --- | --- |
+
 ![image](img/chapter_title_above.png)
 
 # 关于作者
@@ -449,7 +440,7 @@ MaxBG1001 在他的博客上说这是一回事，但 Sk8rBoi 在 TwitFace 上坚
 
 他的使命是释放你内心的数据忍者！
 
-***
+---
 
 ![image](img/scene_break.png)
 
@@ -465,14 +456,15 @@ Lee Baker 是一位屡获奖项的软件开发者，生活在黑暗房间的键�
 
 时通讯：[`www.chi2innovations.com/newsletter-signup/`](https://www.chi2innovations.com/newsletter-signup/)
 
-***
+---
 
 ![image](img/scene_break.png)
 
 ![C:\Users\Lee\Google Drive\CSI Staff Folder\Websites\CSI Website\CSI eBooks\Bite-Size ML Series\1. Errors of Regression Models\Edition 1\Cover Art\Course Ad.png](http://www.bit.ly/EPMCourse)
 
-| ![image](img/chapter_title_corner_decoration_left.png) |  || ![image](img/chapter_title_corner_decoration_right.png) |
+| ![image](img/chapter_title_corner_decoration_left.png) |  | ![image](img/chapter_title_corner_decoration_right.png) |
 | --- | --- | --- |
+
 ![image](img/chapter_title_above.png)
 
 # 留评论
@@ -485,9 +477,8 @@ Lee Baker 是一位屡获奖项的软件开发者，生活在黑暗房间的键�
 
 我希望你喜欢这本书的程度，就像我写它时一样开心。如果你喜欢，请花一点时间留个评论。我都会亲自阅读，最好的评论将刊登在书开头。
 
-*   [`www.chi2innovations.com/tell-us-what-you-think-errors-of-regression-models/`](https://www.chi2innovations.com/tell-us-what-you-think-errors-of-regression-models/)
+- [`www.chi2innovations.com/tell-us-what-you-think-errors-of-regression-models/`](https://www.chi2innovations.com/tell-us-what-you-think-errors-of-regression-models/)
 
 感谢！
 
 Lee Baker
-

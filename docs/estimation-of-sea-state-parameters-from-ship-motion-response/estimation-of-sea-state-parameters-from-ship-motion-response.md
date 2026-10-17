@@ -1,15 +1,11 @@
+
+
 # 基于注意力神经网络的船舶运动响应海况参数估计
-
-
-
-
-
-
-
 
 ## 文章信息
 
 关键词：
+
 - 船舶运动
 - 海况估计
 - 深度学习
@@ -48,28 +44,7 @@
 
 ### 2.1. 时间序列数据的计算
 
-让我们假设船舶在自然航道中航行，即在不规则波中，以指定的前进速度U和相对
-
-![](img/4734fbdc67cafcec90fddf3b05be1d58_2_0.png)
-
-图 2. 六自由度（6-DOF）中的船舶运动响应。
-
-![](img/4734fbdc67cafcec90fddf3b05be1d58_2_1.png)
-
-图 3. 波高 H_s = 3.0 m 且 T_z = 4.0 s 的单向一维 Bretschneider 波谱。
-
-表 1
-散货船的主要特性。
-| 名称 | 值 |
-|---|---|
-| 长度 L_pp | 160.4 m |
-| 宽度 B | 27.2 m |
-| 吃水 T | 6.55 m |
-| 初稳性高度 G_M | 3.97 m |
-| 块系数 C_B | 0.77 |
-| 排水量 | 22,193 t |
-
-关于迎浪航向 β。在此情况下，波面升高可表示为多个正弦（规则）波分量的总和：
+让我们假设船舶在自然航道中航行，即在不规则波中，以指定的前进速度U和相对迎浪航向 β。在此情况下，波面升高可表示为多个正弦（规则）波分量的总和：
 
 ζ(x,t) = Σ_{i=1}^{n} A_i cos(ω_i t - k_i x + ε_i)   (1)
 
@@ -105,59 +80,51 @@ R_i(t) = Σ_{i=1}^{n} A_i |Φ_R(ω_{e,i})| cos(ω_{e,i} t + ε_i)   (5)
 
 应用式（5），我们计算了 3-DOF 中的运动响应时序，采样频率为 5 Hz，样本长度为 300 s。时序响应的示例在图 5 中给出。
 
-![](img/4734fbdc67cafcec90fddf3b05be1d58_3_0.png)
+图 4. 不同相对波向（β = 90 deg.、β = 150 deg. 和 β = 180 deg.）下垂荡、纵摇和横摇响应的传递函数振幅，以及船舶前进速度 U = 16.19 节。
 
-**图 4.** 不同相对波向（β = 90 deg.、β = 150 deg. 和 β = 180 deg.）下垂荡、纵摇和横摇响应的传递函数振幅，以及船舶前进速度 $U = 16.19$ 节。
+图 5. 船舶前进速度 U = 16.19 节，海况参数 H_s = 3.0 m、T_z = 4.0 s 且 β = 150 deg 时计算的船舶运动响应时序。
 
-![](img/4734fbdc67cafcec90fddf3b05be1d58_3_1.png)
+我们设计拉丁超立方采样（LHS）以 20,000 个样本点在均匀距离上离散化 H_s、T_z 和 β 的三维搜索空间。参数 H_s 的有效范围为 [0.5, 10.5] m，参数 T_z 为 [3.5, 9.6] s。遭遇角 β 定义在范围 [0, 360] deg 内。此外，遵循（Mittendorf et al., 2022）的工作，对不规则波应用约束以包含波破碎条件，即以适度的波陡为限，最大值为 S_s，根据 DNV-GL（2018）：
 
-**图 5.** 船舶前进速度 $U = 16.19$ 节，海况参数 $H_s = 3.0$ m、$T_z = 4.0$ s 且 β = 150 deg 时计算的船舶运动响应时序。
+S_s = { 1/10 for T_z ≤ 6 s; 1/15 for T_z ≥ 12 s }   (6)
 
-我们设计拉丁超立方采样（LHS）以 20,000 个样本点在均匀距离上离散化 $H_s$、$T_z$ 和 β 的三维搜索空间。参数 $H_s$ 的有效范围为 [0.5, 10.5] m，参数 $T_z$ 为 [3.5, 9.6] s。遭遇角 β 定义在范围 [0, 360] deg 内。此外，遵循（Mittendorf et al., 2022）的工作，对不规则波应用约束以包含波破碎条件，即以适度的波陡为限，最大值为 $S_s$，根据 DNV-GL（2018）：
+在上述方程给出的极限之间的值通过线性插值求得。应用这些约束后，数据集包含约 13,000 个样本。H_s、T_z 和 β 的最终三维搜索空间由 LHS 采样。由于 LHS 方法有助于确保样本均匀分布并减少在给定范围内遗漏样本的可能性，它是我们模拟和实验的有用工具。LHS 在计算上也比标准蒙特卡洛采样便宜。虽然在现代计算机上这可能不那么重要，但它被使用，因为它可能在真实变异性方面给出略微更准确的结果（给定处理时间）。
 
-$$S_s = \begin{cases} \frac{1}{10} & \text{for } T_z \leq 6\ s \\ \frac{1}{15} & \text{for } T_z \geq 12\ s \end{cases} \tag{6}$$
-
-在上述方程给出的极限之间的值通过线性插值求得。应用这些约束后，数据集包含约 13,000 个样本。$H_s$、$T_z$ 和 β 的最终三维搜索空间由 LHS 采样。由于 LHS 方法有助于确保样本均匀分布并减少在给定范围内遗漏样本的可能性，它是我们模拟和实验的有用工具。LHS 在计算上也比标准蒙特卡洛采样便宜。虽然在现代计算机上这可能不那么重要，但它被使用，因为它可能在真实变异性方面给出略微更准确的结果（给定处理时间）。
-
-图 3 显示了使用选定的分布参数对（$H_s$ 和 $T_z$）的波谱的二维表示示例。如果考虑三维搜索空间中的第三个参数（波向 β），则可以获得方向波谱。
+图 3 显示了使用选定的分布参数对（H_s 和 T_z）的波谱的二维表示示例。如果考虑三维搜索空间中的第三个参数（波向 β），则可以获得方向波谱。
 
 以下是数据增强过程和用于创建 DL 模型的 NN 架构的详细描述。
 
 ### 2.2. 数据预处理
 
-输入-输出样本以 JSON 文件的形式为模型训练准备，随后进行处理和缩放。海况参数的输出值被缩放，使得 $H_s$ 和 $T_z$ 除以 15，相对波向 β 值除以 360。大量实验表明，输入数据（3-DOF）的缩放并不影响所测试模型的收敛。然而，模型的收敛很大程度上受输出尺度（设为 0 到 1 之间）的影响。通过选择 15 和 360 作为我们的数据集扩大 10% 后的最大值，我们确保了这些条件的满足。
+输入-输出样本以 JSON 文件的形式为模型训练准备，随后进行处理和缩放。海况参数的输出值被缩放，使得 H_s 和 T_z 除以 15，相对波向 β 值除以 360。大量实验表明，输入数据（3-DOF）的缩放并不影响所测试模型的收敛。然而，模型的收敛很大程度上受输出尺度（设为 0 到 1 之间）的影响。通过选择 15 和 360 作为我们的数据集扩大 10% 后的最大值，我们确保了这些条件的满足。
 
 数据增强策略在数据预处理步骤中采用以提高模型精度。数据增强应用于所提出的模型后，我们增加了数据的多样性并消除了过拟合。
 
-接下来，我们解释所使用的增强方法。图 6 显示了一个包含 $n = 32$ 个样本的批次。批次中的每个样本由三个船舶运动响应时序输入数据组成，记为 $M_1$、$M_2$ 和 $M_3$。在每个批次内，以大小 $s = 32$ 进行采样，导致每个输入数据的 $k = 47$ 个子样本。
+接下来，我们解释所使用的增强方法。图 6 显示了一个包含 n = 32 个样本的批次。批次中的每个样本由三个船舶运动响应时序输入数据组成，记为 M_1、M_2 和 M_3。在每个批次内，以大小 s = 32 进行采样，导致每个输入数据的 k = 47 个子样本。
 
-图 7 比较了对每个输入数据的子样本进行洗牌的变换。我们区分两种不同的增强方法：批处理方式和行方式。比较使用一个包含 $n = 3$ 个样本和 $k = 3$ 个 token 的批次。如图所示，批处理方式增强随机洗牌输入数据信号，使得所有行以相同方式同时洗牌。行方式增强则分别对每个数据样本进行洗牌。为了比较结果，所有 DL 模型均在无增强、批处理方式增强和行方式增强下训练。经过训练的模型始终优于未使用上述数据增强的模型。
+图 7 比较了对每个输入数据的子样本进行洗牌的变换。我们区分两种不同的增强方法：批处理方式和行方式。比较使用一个包含 n = 3 个样本和 k = 3 个 token 的批次。如图所示，批处理方式增强随机洗牌输入数据信号，使得所有行以相同方式同时洗牌。行方式增强则分别对每个数据样本进行洗牌。为了比较结果，所有 DL 模型均在无增强、批处理方式增强和行方式增强下训练。经过训练的模型始终优于未使用上述数据增强的模型。
 
-除了证实使用行方式和批处理方式增强的好处外，还需要进一步阐述所使用的增强对模型训练的作用。与 YoloV4 论文中引入的“mosaic”和“bag of freebies”增强类似，所使用的增强也处理数据变化（Bochkovskiy et al., 2020）。总体思路是置换数据块以迫使模型学习块之间的不同关系并使整个问题更具挑战性。通过引入更多数据变化，模型被迫学习散布模式中更深入的关系。因此，行方式和批处理方式增强在模型训练期间引入到数据中的置换数量（增加的方差）不同。批处理方式增强引入的训练变化较少，因为批次中的所有样本都使用相同的随机种子重新排列。相反，行方式增强对数值运算成本更高，但由于按样本随机种子，引入了更多的数据集变化。根据我们的评估，我们无法为所有方法确定最佳方法——有些方法从批处理方式增强中受益更多，而其他方法在
-
-![](img/4734fbdc67cafcec90fddf3b05be1d58_4_0.png)
-
-图 6. 数据增强建模，样本更多。
-
-![](img/4734fbdc67cafcec90fddf3b05be1d58_4_1.png)
-
-图 7. 逐批与逐行数据增强的比较。
-
-逐行增强。尽管如此，任何数据增强都比不进行增强更好，正如 Mak 等人的工作中所展示的那样，逐批和逐行增强可以帮助模型学习信号中的散射信息。
+除了证实使用行方式和批处理方式增强的好处外，还需要进一步阐述所使用的增强对模型训练的作用。与 YoloV4 论文中引入的“mosaic”和“bag of freebies”增强类似，所使用的增强也处理数据变化（Bochkovskiy et al., 2020）。总体思路是置换数据块以迫使模型学习块之间的不同关系并使整个问题更具挑战性。通过引入更多数据变化，模型被迫学习散布模式中更深入的关系。因此，行方式和批处理方式增强在模型训练期间引入到数据中的置换数量（增加的方差）不同。批处理方式增强引入的训练变化较少，因为批次中的所有样本都使用相同的随机种子重新排列。相反，行方式增强对数值运算成本更高，但由于按样本随机种子，引入了更多的数据集变化。根据我们的评估，我们无法为所有方法确定最佳方法——有些方法从批处理方式增强中受益更多，而其他方法在行方式增强中受益更多。尽管如此，任何数据增强都比不进行增强更好，正如 Mak 等人的工作中所展示的那样，逐批和逐行增强可以帮助模型学习信号中的散射信息。
 
 ### 2.3. 深度学习模型
+
+
+
 
 在本研究中，我们提出了一种新颖的 DL 模型用于海况参数估计，该模型基于当前最先进的模块 Attention（Vaswani 等，2017）。为了证明所提出的模型经过微调并且可以被视为目前可用的最佳解决方案，我们将其与 Mak 和 Düz（2019）中提出的另外三种 DL 模型进行了比较。此外，为了正确地将所提出的模型与现有模型进行比较，我们通过缩放核数和神经元数量来增强现有模型。在此我们认为 Mak 和 Düz（2019）所做的工作最为相关，原因有几点：他们的方法定义明确，能够实现模型的可重复性，所提出的模型基于不同的模块，最后但并非最不重要的是，他们处理的问题与本文所涉及的问题相同。我们使用现有模型与原始使用之间的唯一区别是输入信号的数量。也就是说，在原始论文中，现有模型使用了船舶运动的 6-DOF，而我们的实验仅使用了 3-DOF。通过减少 DOF 数量，我们在任何方面都没有损害模型的完整性，这一点得到了与原始论文结果相当的实验结果的支持。
 
 在下面的小节中，将详细介绍所使用的 DL 模型，而实现这些模型的源代码可以在以下存储库中找到（Selimović 等，2022）。此外，在本小节末尾，我们简要总结了所有模型的超参数并探讨了模型背后的动机。
 
-#### 2.3.1. CNN回归：原始版和增强版
+### 2.3.1. CNN回归：原始版和增强版
 
 Mak 和 Düz（2019）中提出的第一个 NN 是基于卷积的最直接的 NN。因此，CNN-REG 非常适合此 DL 模型：用于回归的 CNN。该 NN 由两个卷积和一个密集层组成，主要后接 tanh 激活函数（如图 8 所示）。第一个卷积层有 48 个滤波器，核大小为 3 × 15，而第二个卷积层有 48 个滤波器，核大小为 1 × 9。密集层由 30 个神经元组成，后接 dropout 层，dropout 概率设置为 0.25。此外，我们对以下超参数的值进行了实验以找到最佳性能：
 
 - 最大池化核大小：1, 3, 5, 7, 10
+
 - 缩放因子 κ ：1, 5, 10
+
 - 测试的优化器为 ADAM 和 SGD，均使用学习率 α = 5 · 10⁻³, 5 · 10⁻⁴, 5 · 10⁻⁵
+
 - 数据增强：逐行和逐批
 
 需要注意的是，Mak 等人提出的 NNs 通过添加缩放因子来增强，从而增加 NN 的“宽度”。宽度通过将卷积层中的滤波器数量和密集层中的神经元数量乘以缩放因子 κ 来增强。例如，初始提出的第一个卷积层的滤波器数量为 48，经过 κ = 5 的缩放后变为 240。这样，我们不仅将所提出的 AT-NN DL 模型与当前最先进的 NNs 进行了比较；我们甚至尝试增强了原始提出的模型。因此我们将为 CNN-REG NN 拓扑的两个版本呈现结果：原始版（CNN-REG-ORG）和增强版（CNN-REG-ENH）。
@@ -172,13 +139,13 @@ CNN-REG-ORG 的参数与 Mak 和 Düz（2019）中所述相同（κ = 1，最大
 
 图 9. 多变量 LSTM-CNN 的架构（MLSTM-CNN）。
 
-#### 2.3.2. 多变量长短期记忆 CNN（MLSTM-CNN）：原始版和增强版
+### 2.3.2. 多变量长短期记忆 CNN（MLSTM-CNN）：原始版和增强版
 
 多变量长短期记忆（LSTM）CNN 由两个组件组成，如图 9 所示。第一个组件基于卷积（类似于 CNN-REG 模型），但增强了 squeeze and excitation 块（SEB）（Hu 等，2018）。SEB 块引入权重，增加卷积层特征图之间的相互依赖性，同时仅增加少量计算成本。第二个组件基于 LSTM 块（Hochreiter 和 Schmidhuber，1997）。LSTM 块引入了记忆，能够“记住”观察时刻的信号样本与观察时刻之前所有样本之间的依赖关系。
 
 MLSTM-CNN 测试的超参数与缩放因子 κ 相关，选择范围为：1、5 和 10。其他超参数，如数据增强和优化器（及其各自的学习率），与 CNN-REG 的情况相同。在增强了原始提出的 MLSTM-CNN 之后，MLSTM-CNN-ENH 的最佳性能参数为：数据增强逐行，优化器为学习率设置为 α = 0.005 的 ADAM，以及缩放因子 κ = 5。另一方面，MLSTM-CNN-ORG 的最佳性能参数为：数据增强逐批，以及学习率为 α = 0.005 的 SGD 优化器。
 
-#### 2.3.3. 滑动拼图网络：原始版和增强版
+### 2.3.3. 滑动拼图网络：原始版和增强版
 
 Mak 和 Düz（2019）中提出的滑动拼图神经网络（SP-NN）具有相当不错的动机。该模型旨在以类似于滑动拼图的方式打乱输入数据的随机补丁。在滑动拼图中，尽管图像被打乱，但图像的内容仍然可见。这一想法导致了 NN 的构建，其拓扑结构如图 10 所示。SP-NN 设计用于完全消除样本之间的位置依赖性。
 
@@ -194,17 +161,17 @@ Mak 和 Düz（2019）中提出的滑动拼图神经网络（SP-NN）具有相�
 
 我们相信我们以一种不违反原始作者对 NN 设计的理由和动机的增强方式增强了所有 NNs。此外，在我们对参数值有疑问时（当这些值在原始工作中未指定时），我们测试了不同的参数值并采用了性能最好的一个。
 
-#### 2.3.4. 基于注意力的神经网络（AT-NN）
+### 2.3.4. 基于注意力的神经网络（AT-NN）
 
 计算机视觉、自然语言处理（NLP）或甚至数据增强生成的许多最先进算法都依赖于注意力模块（Galassi 等，2021；Zhang 等，2019；Woo 等，2018）。注意力模块，包括自注意力模块，已在论文（Vaswani 等，2017）中引入，该论文声称“Attention is all you need”。注意力模块背后的直觉来自 NLP，其中需要在句子/文本中捕捉彼此相距很远的词语之间的关系是必要的。
 
 我们认为描述船舶运动的时间序列信号也具有需要分组的散射信息。所提出的模型 AT-NN 可以通过利用自注意力模块来把握输入信号不同部分之间的交互和相关性。因此，模型可以创建简单卷积操作无法获得的对海况估计至关重要的新信息特征。
 
+#### 基于注意力的神经网络
 
+#### 自注意力块
 
-##### 基于注意力的神经网络
-##### 自注意力块
-##### 全连接块
+#### 全连接块
 
 ![](img/4734fbdc67cafcec90fddf3b05be1d58_6_0.png)
 
@@ -230,6 +197,7 @@ head_i = attention(Q, K, V)   (8)
 第二个 MHA 计算的最终嵌入（batch_size × 128 × 1377）被展平为 batch_size 个长度为 176,256 的 1D 向量。这很重要，因为所提出的 AT-NN 的下一部分由全连接（密集）层组成。如图 11 所示，AT-NN 由三个密集层组成。第一个密集层有 128 个神经元，其后是 RELU 激活函数、dropout 层和批归一化层（Agarap, 2018; Santurkar et al., 2018）。
 
 - MHA 块数：2、4、8，
+
 - 每个 MHA 块中的头数：2、4、8，
 
 ##### Table 2
@@ -237,19 +205,31 @@ head_i = attention(Q, K, V)   (8)
 每个模型最佳超参数的概述。
 
 | 模型 | 数据增强 | 优化器 | 学习率 | 缩放 | 最大池化 | 块数 | 头数 | 嵌入大小 | 嵌入数 | 神经元 |
+
 |---|---|---|---|---|---|---|---|---|---|---|
+
 | CNN-REG-ORG | 行式 | SGD | 0.005 | 3 | 1 | / | / | / | / | / |
+
 | MLSTM-CNN-ORG | 批式 | SGD | 0.005 | 1 | / | / | / | / | / | / |
+
 | SP-NN-ORG | 批式 | SGD | 0.005 | 5 | 1 | / | / | / | / | / |
+
 | CNN-REG-ENH | 行式 | ADAM | 0.0005 | 10 | 5 | / | / | / | / | / |
+
 | MLSTM-CNN-ENH | 行式 | ADAM | 0.005 | 5 | / | / | / | / | / | / |
+
 | SP-NN-ENH | 批式 | ADAM | 0.00005 | 10 | 5 | / | / | / | / | / |
+
 | AT-NN | 批式 | ADAM | 0.0005 | / | / | 2 | 2 | 125 | 128 | 128,64,3 |
 
 - token 大小：125、250、500，
+
 - 嵌入数量：32、64、128、256，
+
 - 全连接层中神经元的连续数量：（128、64、3）、（256、128、3）、（512、256、3）和（1,024、512、3），
+
 - 测试的优化器为 ADAM 和 SGD，两者学习率均为 α = 5·10⁻³、5·10⁻⁴、5·10⁻⁵（Kingma and Ba, 2014; Bottou, 2012），
+
 - 数据增强：行式和批式。
 
 在考虑优化器的选择时，决定使用 SGD 以保持与论文（Mak and Düz, 2019）一致，并使用最流行的优化器 ADAM。其他流行的优化器，例如 RMS-prop（Zou et al., 2019）和 ADAGRAD（Mukkamala and Hein, 2017），也可以使用；然而，这不会显著影响方法性能和研究结论。也许某些模型会更快收敛或获得更好的结果，但所取得的结果显示模型性能令人满意，因此无需进一步测试优化器。
@@ -274,7 +254,6 @@ head_i = attention(Q, K, V)   (8)
 
 模型性能的评估针对每个海况参数分别进行：H_s、T_z 和 β。我们在验证集和测试集上计算了三个指标：均方误差（MSE）、平均绝对误差（MAE）和纳什-苏特克利夫效率（NSE）（Chai and Draxler, 2014; Nash and Sutcliffe, 1970）。MSE 和 MAE 是神经网络评估中常用的指标，而 NSE 是源自水文学的更严格的指标。也就是说，在训练 NN 时，它
 
-
 ![](img/4734fbdc67cafcec90fddf3b05be1d58_8_0.png)
 
 图 12. 雷达图显示了在验证数据集上针对每个波浪角度使用 AT-NN 估计的每个海况参数的绝对误差和平方误差。
@@ -284,7 +263,25 @@ head_i = attention(Q, K, V)   (8)
 验证数据集上估计参数的模型结果 (-10^-3)。
 
 | 模型 | MSE | | | MAE | | | NSE | | | MSE | MAE | NSE |
+
 | | H_s | T_z | β | H_s | T_z | β | H_s | T_z | β | | | |
+
+| CNN-REG-ORG | 5.285 | 3.889 | 1.252 | 57.042 | 50.812 | 26.703 | 843.208 | 598.950 | 937.176 | 3.476 | 44.852 | 793.111 |
+
+| MLSTM-CNN-ORG | 4.942 | 4.194 | 1.113 | 56.162 | 53.026 | 25.387 | 853.407 | 567.514 | 944.171 | 3.416 | 44.859 | 788.364 |
+
+
+
+![](img/4734fbdc67cafcec90fddf3b05be1d58_8_0.png)
+
+**图 12.** 雷达图显示了在验证数据集上针对每个波浪角度使用 AT-NN 估计的每个海况参数的绝对误差和平方误差。
+
+#### 表 3
+
+验证数据集上估计参数的模型结果 (-10^-3)。
+
+| 模型 | MSE(H_s) | MSE(T_z) | MSE(β) | MAE(H_s) | MAE(T_z) | MAE(β) | NSE(H_s) | NSE(T_z) | NSE(β) | MSE | MAE | NSE |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | CNN-REG-ORG | 5.285 | 3.889 | 1.252 | 57.042 | 50.812 | 26.703 | 843.208 | 598.950 | 937.176 | 3.476 | 44.852 | 793.111 |
 | MLSTM-CNN-ORG | 4.942 | 4.194 | 1.113 | 56.162 | 53.026 | 25.387 | 853.407 | 567.514 | 944.171 | 3.416 | 44.859 | 788.364 |
 | SP-NN-ORG | 5.226 | 4.765 | 1.413 | 57.097 | 54.960 | 26.935 | 844.973 | 508.647 | 929.108 | 3.801 | 46.331 | 760.909 |
@@ -297,8 +294,8 @@ head_i = attention(Q, K, V)   (8)
 
 测试数据集上估计参数的模型结果 (-10^-3)。
 
-| 模型 | MSE | | | MAE | | | NSE | | | MSE | MAE | NSE |
-| | H_s | T_z | β | H_s | T_z | β | H_s | T_z | β | | | |
+| 模型 | MSE(H_s) | MSE(T_z) | MSE(β) | MAE(H_s) | MAE(T_z) | MAE(β) | NSE(H_s) | NSE(T_z) | NSE(β) | MSE | MAE | NSE |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | CNN-REG-ORG | 5.039 | 3.940 | 1.620 | 55.412 | 50.962 | 28.445 | 848.066 | 605.270 | 920.216 | 3.533 | 44.940 | 791.184 |
 | MLSTM-CNN-ORG | 4.887 | 4.118 | 1.556 | 55.246 | 52.170 | 28.297 | 852.675 | 587.368 | 923.360 | 3.520 | 45.238 | 787.801 |
 | SP-NN-ORG | 5.262 | 4.663 | 1.903 | 58.078 | 53.857 | 28.713 | 841.354 | 532.818 | 906.277 | 3.943 | 46.883 | 760.150 |
@@ -307,45 +304,7 @@ head_i = attention(Q, K, V)   (8)
 | SP-NN-ENH | 1.257 | 0.862 | 0.217 | 26.768 | 21.340 | 10.730 | 962.107 | 913.647 | 989.319 | 0.779 | 19.613 | 955.024 |
 | AT-NN | 0.852 | 0.404 | 0.115 | 21.122 | 13.956 | 7.485 | 974.325 | 959.516 | 994.359 | 0.457 | 14.188 | 976.067 |
 
-有必要让模型关注最棘手的样本。这种行为可以通过 MSE 实现，因为它会使小的误差（正确的预测）变得更小。同时，它增加了模型预测不正确（或与正确预测相差最远）的样本中误差的影响。另一方面，我们还使用了 MAE 和 NSE，它们可被视为海况估计实际应用场景中可靠且现实的指标。表 3 和表 4 分别展示了验证集和测试集上每个估计参数的模型结果。如图所示，列 MSE、MAE 和 NSE 表示三个估计海况参数的平均 MSE、平均 MAE 和平均 NSE（显示模型在全部三个估计海况参数上的总体得分）。模型
-
-MSE 和 MAE 最低且 NSE 最高的被视为表现最好的模型。由于论文中数据集（Mak and Düz, 2019）未公开，我们无法将其应用于我们的方法，因此不得不重新实现所有模型。通过比较验证集上它们的损失值结果（MSE = 0.05），我们可以得出结论，使用原始模型产生的[content]
-
-![](img/4734fbdc67cafcec90fddf3b05be1d58_8_0.png)
-
-图 12. 雷达图显示了在验证数据集上针对每个波浪角度使用 AT-NN 估计的每个海况参数的绝对误差和平方误差。
-
-#### 表 3
-
-验证数据集上估计参数的模型结果 (-10^-3)。
-
-| 模型 | MSE | | | MAE | | | NSE | | | MSE | MAE | NSE |
-| | H_s | T_z | β | H_s | T_z | β | H_s | T_z | β | | | |
-| CNN-REG-ORG | 5.285 | 3.889 | 1.252 | 57.042 | 50.812 | 26.703 | 843.208 | 598.950 | 937.176 | 3.476 | 44.852 | 793.111 |
-| MLSTM-CNN-ORG | 4.942 | 4.194 | 1.113 | 56.162 | 53.026 | 25.387 | 853.407 | 567.514 | 944.171 | 3.416 | 44.859 | 788.364 |
-| SP-NN-ORG | 5.226 | 4.765 | 1.413 | 57.097 | 54.960 | 26.935 | 844.973 | 508.647 | 929.108 | 3.801 | 46.331 | 760.909 |
-| CNN-REG-ENH | 0.939 | 0.478 | 0.210 | 23.321 | 16.436 | 11.417 | 972.146 | 950.675 | 989.456 | 0.543 | 17.058 | 970.759 |
-| MLSTM-CNN-ENH | 1.260 | 0.605 | 0.298 | 26.480 | 19.14 | 13.94 | 962.63 | 937.67 | 985.04 | 0.720 | 19.85 | 961.78 |
-| SP-NN-ENH | 1.290 | 0.752 | 0.169 | 26.582 | 19.686 | 9.921 | 961.736 | 922.505 | 991.502 | 0.736 | 18.730 | 958.581 |
-| AT-NN | 0.803 | 0.372 | 0.115 | 20.823 | 13.836 | 7.600 | 976.182 | 961.543 | 994.214 | 0.430 | 14.086 | 977.313 |
-
-#### 表 4
-
-测试数据集上估计参数的模型结果 (-10^-3)。
-
-| 模型 | MSE | | | MAE | | | NSE | | | MSE | MAE | NSE |
-| | H_s | T_z | β | H_s | T_z | β | H_s | T_z | β | | | |
-| CNN-REG-ORG | 5.039 | 3.940 | 1.620 | 55.412 | 50.962 | 28.445 | 848.066 | 605.270 | 920.216 | 3.533 | 44.940 | 791.184 |
-| MLSTM-CNN-ORG | 4.887 | 4.118 | 1.556 | 55.246 | 52.170 | 28.297 | 852.675 | 587.368 | 923.360 | 3.520 | 45.238 | 787.801 |
-| SP-NN-ORG | 5.262 | 4.663 | 1.903 | 58.078 | 53.857 | 28.713 | 841.354 | 532.818 | 906.277 | 3.943 | 46.883 | 760.150 |
-| CNN-REG-ENH | 0.982 | 0.561 | 0.231 | 24.166 | 17.323 | 11.694 | 970.400 | 943.744 | 988.617 | 0.591 | 17.728 | 967.587 |
-| MLSTM-CNN-ENH | 1.345 | 0.692 | 0.290 | 26.954 | 20.598 | 13.600 | 959.442 | 930.708 | 985.716 | 0.776 | 20.384 | 958.622 |
-| SP-NN-ENH | 1.257 | 0.862 | 0.217 | 26.768 | 21.340 | 10.730 | 962.107 | 913.647 | 989.319 | 0.779 | 19.613 | 955.024 |
-| AT-NN | 0.852 | 0.404 | 0.115 | 21.122 | 13.956 | 7.485 | 974.325 | 959.516 | 994.359 | 0.457 | 14.188 | 976.067 |
-
-有必要让模型关注最棘手的样本。这种行为可以通过 MSE 实现，因为它会使小的误差（正确的预测）变得更小。同时，它增加了模型预测不正确（或与正确预测相差最远）的样本中误差的影响。另一方面，我们还使用了 MAE 和 NSE，它们可被视为海况估计实际应用场景中可靠且现实的指标。表 3 和表 4 分别展示了验证集和测试集上每个估计参数的模型结果。如图所示，列 MSE、MAE 和 NSE 表示三个估计海况参数的平均 MSE、平均 MAE 和平均 NSE（显示模型在全部三个估计海况参数上的总体得分）。模型
-
-MSE 和 MAE 最低且 NSE 最高的被视为表现最好的模型。由于论文中数据集（Mak and Düz, 2019）未公开，我们无法将其应用于我们的方法，因此不得不重新实现所有模型。通过比较验证集上它们的损失值结果（MSE = 0.05），我们可以得出结论，使用原始模型产生的结果得到改进。在我们的研究中，作为输入参数使用的是 3-DOF 而非 6-DOF 运动。因此，我们成功证明了原始模型在减少输入数据的情况下仍能取得相同或更好的结果。这也是除估计精度之外，这里所提出方法的一个优势。
+有必要让模型关注最棘手的样本。这种行为可以通过 MSE 实现，因为它会使小的误差（正确的预测）变得更小。同时，它增加了模型预测不正确（或与正确预测相差最远）的样本中误差的影响。另一方面，我们还使用了 MAE 和 NSE，它们可被视为海况估计实际应用场景中可靠且现实的指标。表 3 和表 4 分别展示了验证集和测试集上每个估计参数的模型结果。如图所示，列 MSE、MAE 和 NSE 表示三个估计海况参数的平均 MSE、平均 MAE 和平均 NSE（显示模型在全部三个估计海况参数上的总体得分）。模型 MSE 和 MAE 最低且 NSE 最高的被视为表现最好的模型。由于论文中数据集（Mak and Düz, 2019）未公开，我们无法将其应用于我们的方法，因此不得不重新实现所有模型。通过比较验证集上它们的损失值结果（`MSE = 0.05`），我们可以得出结论，使用原始模型产生的结果得到改进。在我们的研究中，作为输入参数使用的是 3-DOF 而非 6-DOF 运动。因此，我们成功证明了原始模型在减少输入数据的情况下仍能取得相同或更好的结果。这也是除估计精度之外，这里所提出方法的一个优势。
 
 ![](img/4734fbdc67cafcec90fddf3b05be1d58_9_0.png)
 
@@ -355,27 +314,23 @@ MSE 和 MAE 最低且 NSE 最高的被视为表现最好的模型。由于论文
 
 图 12 和图 13 展示了作为我们研究中表现最好的模型的 AT-NN 在验证集和测试集的每个数据点上的绝对误差和平方误差。估计参数 $H_s$、$T_p$ 和 $β$ 随波浪角度的雷达图有潜力识别出所提出模型误差最大的区域。然而，经过仔细检查，我们可以得出结论，在两个数据集上都无法断言模型存在持续失效的区域。误差似乎与单个角度相关，而非相邻角度。这种行为证实模型既未过拟合也未欠拟合。当模型表现不佳时，它仍然能取得显著良好的结果。此外，为了提高所提出模型的可靠性，我们还启用了不确定性估计作为附加功能。
 
-该过程在实质上相当简单：对于相同的输入时间序列信号，我们运行 AT-NN 的预测 256 次，每次预测时随机丢弃神经元。通过丢弃随机神经元，我们获得了原始 NN 的新版本，其预测结果与其他“采样”网络略有不同。通过计算所有预测的均值 $μ$ 和标准差 $σ$，我们可以计算出估计模型决策不确定性的高斯曲线。伴随不确定性估计，我们还拥有在不丢弃任何神经元的情况下生成的模型的实际预测。
-
-为了提高可解释性并提供额外信息，我们通过引入统计测量扩展了 Monte-Carlo dropout 采样的输出。尽管其本质相当简单，统计测量涉及计数有多少个测试集的正确测量落入由 Monte-Carlo dropout 采样以不同 $σ$ 值估计的高斯曲线中（$μ$ 固定）。不同的 $σ$ 值是通过将 sigma 乘以 $n ∈ [1, 2, 3, 4, 5]$ 计算得出，从而得到更宽的高斯曲线。因此，遵循预期，更宽的高斯曲线也会涵盖更多正确的海况测量。因此对于 $n = 1$，$σ_{scaled} = 1×σ$ 的高斯曲线包含了 387 个正确预测，而 896 个预测/样本在范围之外。这使我们得出该相当窄的高斯曲线的总体置信度为 30%（387/1283）。另一方面，$σ_{scaled} = 5 × σ$ 的更宽高斯曲线包含了测试集中 1283 个样本中的 1246 个预测，从而得出置信度为 97%。验证数据集在 $σ$ 值和包含样本数量方面的表现相似，因此估计的完整性未受损害。最终 AT-NN 输出的图形示例在图 14 中给出。可以看出，蓝色线代表给定输入信号的真实值，黑色线代表不丢弃任何神经元的 AT-NN 预测。相比之下，高斯曲线代表正确测量可能落入的不同“区间”/“区域”概率。我们相信这种估计和解释 NN 输出的新颖过程提高了所提出模型的可靠性。此外，除了仅有一个数字作为结果外，如果用户对模型估计存疑，所提出模型的现在具有置信水平
-
 ### 3.2. 不确定性估计
 
 如第 2.3.4 节所述，在 AT-NN 模型的“head”部分添加 dropout 层使得能够利用 Monte-Carlo 采样。通过利用 Monte-Carlo dropout 采样，我们模拟了高斯过程，因此获得了每个估计海况参数的模型预测不确定性（Gal and Ghahramani, 2016）。
 
+该过程在实质上相当简单：对于相同的输入时间序列信号，我们运行 AT-NN 的预测 256 次，每次预测时随机丢弃神经元。通过丢弃随机神经元，我们获得了原始 NN 的新版本，其预测结果与其他“采样”网络略有不同。通过计算所有预测的均值 $μ$ 和标准差 $σ$，我们可以计算出估计模型决策不确定性的高斯曲线。伴随不确定性估计，我们还拥有在不丢弃任何神经元的情况下生成的模型的实际预测。
 
-
-
+为了提高可解释性并提供额外信息，我们通过引入统计测量扩展了 Monte-Carlo dropout 采样的输出。尽管其本质相当简单，统计测量涉及计数有多少个测试集的正确测量落入由 Monte-Carlo dropout 采样以不同 $σ$ 值估计的高斯曲线中（$μ$ 固定）。不同的 $σ$ 值是通过将 $\sigma$ 乘以 $n ∈ [1, 2, 3, 4, 5]$ 计算得出，从而得到更宽的高斯曲线。因此，遵循预期，更宽的高斯曲线也会涵盖更多正确的海况测量。因此对于 $n = 1$，$σ_{scaled} = 1×σ$ 的高斯曲线包含了 387 个正确预测，而 896 个预测/样本在范围之外。这使我们得出该相当窄的高斯曲线的总体置信度为 30%（387/1283）。另一方面，$σ_{scaled} = 5 × σ$ 的更宽高斯曲线包含了测试集中 1283 个样本中的 1246 个预测，从而得出置信度为 97%。验证数据集在 $σ$ 值和包含样本数量方面的表现相似，因此估计的完整性未受损害。最终 AT-NN 输出的图形示例在图 14 中给出。
 
 ![](img/4734fbdc67cafcec90fddf3b05be1d58_10_0.png)
 
-图14. 基于 Monte-Carlo dropout 的 NN 输出 H_s、T_z 和 β 的不确定性估计。
+**图 14.** 基于 Monte-Carlo dropout 的 NN 输出 $H_s$、$T_z$ 和 $β$ 的不确定性估计。
 
-由不同的高斯曲线提供。我们认为，以前述方式定制的不确定性估计在各种实际场景中可能至关重要。
+可以看出，蓝色线代表给定输入信号的真实值，黑色线代表不丢弃任何神经元的 AT-NN 预测。相比之下，高斯曲线代表正确测量可能落入的不同“区间”/“区域”概率。我们相信这种估计和解释 NN 输出的新颖过程提高了所提出模型的可靠性。此外，除了仅有一个数字作为结果外，如果用户对模型估计存疑，所提出模型现在具有置信水平由不同的高斯曲线提供。我们认为，以前述方式定制的不确定性估计在各种实际场景中可能至关重要。
 
 ## 3.3. 讨论
 
-在我们的研究中，我们重新实现了 Mak 和 Düz (2019) 提出的模型，并通过缩放其滤波器数量对其进行了增强，从而得到模型的一个增强版本。正如第 2.4 节末尾所讨论的，增强背后的动机以及每个模型机制都有充分的理由。本研究中提出的新模型也是如此。实验表明，原始模型的增强版本优于原始模型。这种增强在图15中测试集上的 MSE 和 MAE 结果的箱线图中很明显。该图还表明，所提出的 AT-NN 模型优于原始模型和增强模型，成为根据船舶运动响应估计海况参数的新最先进模型。基于注意力机制的所提出模型的优越性甚至通过测试集上的 NSE 指标 NSE(AT − NN) = 976.067 · 10⁻³ 得到证实（表4）。如果我们将测试集上性能最佳的原始模型（即 CNN-REG-ORG，MSE(MLSTM − CNN − ORG) = 3.533 · 10⁻³）与所提出的模型（MSE(AT − NN) = 0.457 · 10⁻³）进行比较，误差降低了 3.076 · 10⁻³，折算成比率则误差率降低了约 ≈ 7.73 倍。此外，通过分析图12和图13中的雷达图，确定没有特定角度范围会在估计海况参数时导致所建议模型始终表现不佳。此外，引入的模型海况参数预测不确定性估计将所提出模型的可信度提升到了更高水平，这对于开发利用机器学习模型的应用至关重要。下一步研究将是在各种真实数据集上测试所提出的方法。我们相信，通过对输入数据进行适当的预处理，可以实现类似的结果，但还需要针对不同的海况测量做进一步研究。
+在我们的研究中，我们重新实现了 Mak 和 Düz (2019) 提出的模型，并通过缩放其滤波器数量对其进行了增强，从而得到模型的一个增强版本。正如第 2.4 节末尾所讨论的，增强背后的动机以及每个模型机制都有充分的理由。本研究中提出的新模型也是如此。实验表明，原始模型的增强版本优于原始模型。这种增强在图15中测试集上的 MSE 和 MAE 结果的箱线图中很明显。该图还表明，所提出的 AT-NN 模型优于原始模型和增强模型，成为根据船舶运动响应估计海况参数的新最先进模型。基于注意力机制的所提出模型的优越性甚至通过测试集上的 NSE 指标 `NSE(AT − NN) = 976.067 · 10⁻³` 得到证实（表4）。如果我们将测试集上性能最佳的原始模型（即 CNN-REG-ORG，`MSE(MLSTM − CNN − ORG) = 3.533 · 10⁻³`）与所提出的模型（`MSE(AT − NN) = 0.457 · 10⁻³`）进行比较，误差降低了 3.076 · 10⁻³，折算成比率则误差率降低了约 ≈ 7.73 倍。此外，通过分析图12和图13中的雷达图，确定没有特定角度范围会在估计海况参数时导致所建议模型始终表现不佳。此外，引入的模型海况参数预测不确定性估计将所提出模型的可信度提升到了更高水平，这对于开发利用机器学习模型的应用至关重要。下一步研究将是在各种真实数据集上测试所提出的方法。我们相信，通过对输入数据进行适当的预处理，可以实现类似的结果，但还需要针对不同的海况测量做进一步研究。
 
 最后，让我们通过明确指出本手稿中取得的成就和新颖性来总结我们的研究，总结如下：
 
@@ -387,12 +342,15 @@ MSE 和 MAE 最低且 NSE 最高的被视为表现最好的模型。由于论文
 
 (b)
 
-图15. 测试集上的箱线图，包含两种度量：(a) MSE 和 (b) MAE。
+**图 15.** 测试集上的箱线图，包含两种度量：(a) MSE 和 (b) MAE。
 
 - 我们重新训练了 Mak 和 Düz (2019) 提出的现有最先进模型，并通过增加其宽度对其进行了增强。增强后的模型表现优于最初提出的模型。
 - 我们证明了仅使用3自由度船舶运动响应（而非使用6自由度船舶运动响应）即可获得相似或更好的结果（当考虑所有测试方法和海况参数时，海况参数估计在 MSE 方面最高提升 94%，在 MAE 方面最高提升 74%，在 NSE 方面最高提升 80%）。与性能最佳的原始模型相比，MSE、MAE 和 NSE 分别最多提升 83%、62% 和 8%。
 - 作为模型训练指南，我们深入研究了基于输入信号切片洗牌的数据增强方法。调查得出结论：所有测试模型在使用洗牌后的输入信号切片时都能取得更好的结果。
 - 我们提出了一种新颖的 AT-NN 模型，在测试的所有模型中，针对每个估计的海况参数都取得了最佳结果。据我们所知，这是 AT-NN 首次被应用于海况估计。
+
+
+
 - 此外，在本手稿中，我们提出了一种基于 Monte-Carlo dropout 方法解释 NN 输出不确定性估计的新方法。我们解释模型预测不确定性的方式将提高模型的可信度，即使其初始预测误差率很低。同时，根据广泛的文献综述，这也是海况估计中首次对深度学习模型进行不确定性估计。
 
 ## 4. 结论
@@ -477,35 +435,36 @@ Nielsen, U.D., 2006. Estimations of on-site directional wave spectra from measur
 
 Nielsen, U.D., 2017. A concise account of techniques available for shipboard sea state estimation. Ocean Eng. 129, 352–362. http://dx.doi.org/10.1016/j.oceaneng.2016.11.035, URL https://www.sciencedirect.com/science/article/pii/S0029801816305388.
 
-Nielsen, U., Bjerregård, M., Galeazzi, R., Fossen, T., 2015. New concepts for shipboard sea state estimation. http://dx.doi.org/10.23919/OCEANS.2015.7404386.
 
-Nielsen, U.D., Galeazzi, R., Brodtkorb, A.H., 2016. Evaluation of shipboard wave estimation techniques through model-scale experiments. In: OCEANS 2016 - Shanghai. pp. 1–8. http://dx.doi.org/10.1109/OCEANSAP.2016.7485701.
 
-Pascoal, R., Guedes Soares, C., 2009. Kalman filtering of vessel motions for ocean wave directional spectrum estimation. Ocean Eng. 36 (6), 477–488. http://dx.doi.org/10.1016/j.oceaneng.2009.01.013, URL https://www.sciencedirect.com/science/article/pii/S0029801809000183.
+Nielsen, U., Bjerregård, M., Galeazzi, R., Fossen, T., 2015. New concepts for shipboard sea state estimation. `http://dx.doi.org/10.23919/OCEANS.2015.7404386`.
 
-Pascoal, R., Perera, L., Guedes Soares, C., 2017. Estimation of directional sea spectra from ship motions in sea trials. Ocean Eng. 132, 126–137. http://dx.doi.org/10.1016/j.oceaneng.2017.01.020, URL https://www.sciencedirect.com/science/article/pii/S0029801817300288.
+Nielsen, U.D., Galeazzi, R., Brodtkorb, A.H., 2016. Evaluation of shipboard wave estimation techniques through model-scale experiments. In: OCEANS 2016 - Shanghai. pp. 1–8. `http://dx.doi.org/10.1109/OCEANSAP.2016.7485701`.
 
-Russakovsky, O., Deng, J., Su, H., Krause, J., Satheesh, S., Ma, S., Huang, Z., Karpathy, A., Khosla, A., Bernstein, M., Berg, A.C., Fei-Fei, L., 2015. ImageNet large scale visual recognition challenge. Int. J. Comput. Vis. (IJCV) 115 (3), 211–252. http://dx.doi.org/10.1007/s11263-015-0816-y.
+Pascoal, R., Guedes Soares, C., 2009. Kalman filtering of vessel motions for ocean wave directional spectrum estimation. Ocean Eng. 36 (6), 477–488. `http://dx.doi.org/10.1016/j.oceaneng.2009.01.013`, URL `https://www.sciencedirect.com/science/article/pii/S0029801809000183`.
 
-Santurkar, S., Tsipras, D., Ilyas, A., Madry, A., 2018. How does batch normalization help optimization? In: Bengio, S., Wallach, H., Larochelle, H., Grauman, K., Cesa-Bianchi, N., Garnett, R. (Eds.), In: Advances in Neural Information Processing Systems, vol. 31, Curran Associates, Inc., URL https://proceedings.neurips.cc/paper/2018/file/905056c1ac1ad141560467e0a99f1ec-Paper.pdf.
+Pascoal, R., Perera, L., Guedes Soares, C., 2017. Estimation of directional sea spectra from ship motions in sea trials. Ocean Eng. 132, 126–137. `http://dx.doi.org/10.1016/j.oceaneng.2017.01.020`, URL `https://www.sciencedirect.com/science/article/pii/S0029801817300288`.
 
-Scholz, T., Mak, B., 2020. Ship as a wave buoy: Estimating full directional wave spectra from in-service ship motion measurements using deep learning. http://dx.doi.org/10.1115/OMAE2020-18783.
+Russakovsky, O., Deng, J., Su, H., Krause, J., Satheesh, S., Ma, S., Huang, Z., Karpathy, A., Khosla, A., Bernstein, M., Berg, A.C., Fei-Fei, L., 2015. ImageNet large scale visual recognition challenge. Int. J. Comput. Vis. (IJCV) 115 (3), 211–252. `http://dx.doi.org/10.1007/s11263-015-0816-y`.
 
-Selimović, D., Hrizić, F., Prpić-Oršić, J., Lerga, J., 2022. Sea state estimation from ship motion responses using deep learning. URL https://github.com/fhrzic/DselimovicProject.git.
+Santurkar, S., Tsipras, D., Ilyas, A., Madry, A., 2018. How does batch normalization help optimization? In: Bengio, S., Wallach, H., Larochelle, H., Grauman, K., Cesa-Bianchi, N., Garnett, R. (Eds.), In: Advances in Neural Information Processing Systems, vol. 31, Curran Associates, Inc., URL `https://proceedings.neurips.cc/paper/2018/file/905056c1ac1ad141560467e0a99f1ec-Paper.pdf`.
 
-Selimović, D., Lerga, J., Prpić-Oršić, J., Kenji, S., 2020. Improving the performance of dynamic ship positioning systems: A review of filtering and estimation techniques. J. Mar. Sci. Eng. 8 (4), http://dx.doi.org/10.3390/jmse8040234, URL https://www.mdpi.com/2077-1312/8/4/234.
+Scholz, T., Mak, B., 2020. Ship as a wave buoy: Estimating full directional wave spectra from in-service ship motion measurements using deep learning. `http://dx.doi.org/10.1115/OMAE2020-18783`.
 
-Tannuri, E.A., Sparano, J.V., Simos, A.N., Da Cruz, J.J., 2003. Estimating directional wave spectrum based on stationary ship motion measurements. Appl. Ocean Res. 25 (5), 243–261. http://dx.doi.org/10.1016/j.apor.2004.01.003, URL https://www.sciencedirect.com/science/article/pii/S014111870400070.
+Selimović, D., Hrizić, F., Prpić-Oršić, J., Lerga, J., 2022. Sea state estimation from ship motion responses using deep learning. URL `https://github.com/fhrzic/DselimovicProject.git`.
 
-Tu, F., Ge, S.S., Choo, Y.S., Hang, C.C., 2018. Sea state identification based on vessel motion response learning via multi-layer classifiers. Ocean Eng. 147, 318–332. http://dx.doi.org/10.1016/j.oceaneng.2017.08.047, URL https://www.sciencedirect.com/science/article/pii/S0029801817305188.
+Selimović, D., Lerga, J., Prpić-Oršić, J., Kenji, S., 2020. Improving the performance of dynamic ship positioning systems: A review of filtering and estimation techniques. J. Mar. Sci. Eng. 8 (4), `http://dx.doi.org/10.3390/jmse8040234`, URL `https://www.mdpi.com/2077-1312/8/4/234`.
 
-Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.N., Kaiser, L.U., Polosukhin, I., 2017. Attention is all you need. In: Guyon, I., Luxburg, U.V., Bengio, S., Wallach, H., Fergus, R., Vishwanathan, S., Garnett, R. (Eds.), In: Advances in Neural Information Processing Systems, vol. 30, Curran Associates, Inc., URL https://proceedings.neurips.cc/paper/2017/file/3f5ee243547de91fb053c1c4a845a-Paper.pdf.
+Tannuri, E.A., Sparano, J.V., Simos, A.N., Da Cruz, J.J., 2003. Estimating directional wave spectrum based on stationary ship motion measurements. Appl. Ocean Res. 25 (5), 243–261. `http://dx.doi.org/10.1016/j.apor.2004.01.003`, URL `https://www.sciencedirect.com/science/article/pii/S014111870400070`.
+
+Tu, F., Ge, S.S., Choo, Y.S., Hang, C.C., 2018. Sea state identification based on vessel motion response learning via multi-layer classifiers. Ocean Eng. 147, 318–332. `http://dx.doi.org/10.1016/j.oceaneng.2017.08.047`, URL `https://www.sciencedirect.com/science/article/pii/S0029801817305188`.
+
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.N., Kaiser, L.U., Polosukhin, I., 2017. Attention is all you need. In: Guyon, I., Luxburg, U.V., Bengio, S., Wallach, H., Fergus, R., Vishwanathan, S., Garnett, R. (Eds.), In: Advances in Neural Information Processing Systems, vol. 30, Curran Associates, Inc., URL `https://proceedings.neurips.cc/paper/2017/file/3f5ee243547de91fb053c1c4a845a-Paper.pdf`.
 
 Woo, S., Park, J., Lee, J.Y., Kweon, I.S., 2018. CBAM: Convolutional block attention module. In: Proceedings of the European Conference on Computer Vision. ECCV.
 
-Yu, Y., Si, X., Hu, C., Zhang, J., 2019. A review of recurrent neural networks: LSTM cells and network architectures. Neural Comput. 31 (7), 1235–1270. http://dx.doi.org/10.1162/neco_a.01199.
+Yu, Y., Si, X., Hu, C., Zhang, J., 2019. A review of recurrent neural networks: LSTM cells and network architectures. Neural Comput. 31 (7), 1235–1270. `http://dx.doi.org/10.1162/neco_a.01199`.
 
-Zhang, H., Goodfellow, I., Metaxas, D., Odena, A., 2019. Self-attention generative adversarial networks. In: Chaudhuri, K., Salakhutdinov, R. (Eds.), Proceedings of the 36th International Conference on Machine Learning. In: Proceedings of Machine Learning Research, vol. 97, PMLR, pp. 7354–7363, URL https://proceedings.mlr.press/v97/zhang19d.html.
+Zhang, H., Goodfellow, I., Metaxas, D., Odena, A., 2019. Self-attention generative adversarial networks. In: Chaudhuri, K., Salakhutdinov, R. (Eds.), Proceedings of the 36th International Conference on Machine Learning. In: Proceedings of Machine Learning Research, vol. 97, PMLR, pp. 7354–7363, URL `https://proceedings.mlr.press/v97/zhang19d.html`.
 
 Zou, F., Shen, L., Jie, Z., Zhang, W., Liu, W., 2019. A sufficient condition for convergences of adam and rmsprop. In: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. CVPR.
-

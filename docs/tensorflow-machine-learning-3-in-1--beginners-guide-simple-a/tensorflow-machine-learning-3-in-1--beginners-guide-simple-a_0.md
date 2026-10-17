@@ -1,152 +1,222 @@
+
 # TensorFlow 机器学习：三合一——初学者指南+ 简单实用的技巧+ 使用 Scikit-Learn、Keras 和 TensorFlow 学习机器学习高级指南
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-简单有效的技巧与窍门
-
-
-
-
-
+## 简单有效的技巧与窍门
 
 ### 引言
+
 ## 第 1 章：机器学习简介
+
 ### 什么是机器学习？
+
 ### 机器学习的示例
+
 ### 机器学习的不同类型
+
 ### 监督学习与无监督学习
+
 ### 在线学习与批量学习
+
 ### 机器学习的阻碍因素
 
 ## 第 2 章：使用 Scikit-Learn 执行回归任务
+
 ### 收集数据
+
 ### 选择回归任务
+
 ### 选择合适的性能指标
+
 ### 开始实践工作
+
 ### 使用随机采样创建测试集
+
 ### 准备数据
+
 ### 创建、训练和评估模型
+
 ### 使用测试数据集评估模型
 
 ## 第 3 章：使用 Scikit-Learn 创建分类模型
+
 ### MNIST 数据集
+
 ### 训练二分类器
+
 ### 衡量性能
 
 ## 第 4 章：使用 Keras 处理人工神经网络
+
 ### 使用 Keras API
+
 ### 使用 Sequential API 创建图像分类器
+
 ### 使用 Sequential API 创建回归 MLP
 
 ## 第 5 章：解决训练深度神经网络时面临的问题
+
 ### 处理梯度消失和爆炸问题
+
 ### 处理深度神经网络训练时数据短缺的问题
+
 ### 处理训练速度慢的问题
+
 ### 处理深度神经网络的过拟合风险
+
 ## 结论
 
-
 ### 引言
+
 ## 第一部分：机器学习简介
+
 ### 什么是机器学习？
+
 ### 机器学习方法
+
 ### 监督学习
+
 ### 无监督学习
+
 ### 强化学习
+
 ### 机器学习方法
+
 ### 编程语言
+
 ### 深度学习
+
 ### 深度学习 VS 机器学习
 
 ## 第二部分：TensorFlow 简介
+
 ### 什么是 TensorFlow？
+
 ### TensorFlow 历史
+
 ### TensorFlow 架构
+
 ### TensorFlow 哪里运行？
+
 ### TensorFlow 组件
+
 ### TensorFlow 示例
+
 ### 将数据加载到 TensorFlow
+
 ### 构建 TensorFlow 流线
+
 ### 安装 TensorFlow
+
 ### 安装 Anaconda
+
 ### 安装 TensorFlow
+
 ## Jupyter Notebook
+
 ### TensorFlow 基础
+
 ### 什么是 Tensor（量）？
-`Tensor("Const_6:0", shape=(1, 3, 2), dtype=int16)`
-`Tensor("ones_3:0", shape=(3, 2), dtype=float32)`
+
+```
+Tensor("Const_6:0", shape=(1, 3, 2), dtype=int16)
+```
+
+```
+Tensor("ones_3:0", shape=(3, 2), dtype=float32)
+```
+
 ### 有用的 TensorFlow 操作
-`Tensor("Mul:0", shape=(1, 2), dtype=int32)`
+
+```
+Tensor("Mul:0", shape=(1, 2), dtype=int32)
+```
+
 ### 变量（Variables）
+
 ### 占位符（Placeholders）
+
 ### TensorBoard 图可视化
+
 ### 使用 TensorBoard
 
 ## 第三部分：Keras 简介
+
 ### 什么是 Keras？
+
 ### 什么是后端（Backend）？
+
 ### Keras vs TensorFlow
+
 ### 如何在 Windows 和 Mac OS 上安装 Keras
+
 ### 直接安装或虚拟环境
+
 ### 安装 Keras
+
 ### 安装 Keras
+
 ## 深度学习 Keras 基础
+
 ### 编译、训练和评估
+
 ### 微调和使用预训练 Keras 模型
+
 ### 使用 Keras 进行脸识别
+
 ### 网络模型
+
 ### 使用摄像头进行预测
+
 ### Keras 还是 TensorFlow？哪个更好？
+
 ### Keras 教程
 
 ## 第四部分：Scikit-Learn 简介
+
 ### 什么是 Scikit-Learn？
+
 ### 分类回归树
+
 ### 下载并安装 Scikit-Learn
+
 ### 使用 Scikit-Learn 进行机器学习
+
 ### XGBoost 模型
+
 ### 使用 `MLPClassifier` 创建 DNN
+
 ### 使用 `LIME` 信任模型
+
 ### 构建随机森林模型预测葡萄酒质量
+
 ### 机器学习和深度学习的前 12 个 Python 库
+
 ### PyTorch
+
 ### Scikit-Learn
+
 ### Pandas
+
 ### NLTK
+
 ### Theano
+
 ### MXNet
+
 ### SciPy
+
 ### NumPy
+
 ### Matplotlib
 
 # TensorFlow 机器学习：从 A 到 Z 学习 TensorFlow 机器学习领域的全面新手指南
 
 ### 引言
+
 机器学习是最复杂的学科之一，但它并没有人们想象的那么困难。至少现在已经不再如此了，这归功于一系列机器学习框架的实现，它们帮助我们获取数据、训练模型、提供预测和优化结果变得比以前任何时候都容易。这些框架中的一个就是 `TensorFlow`。`TensorFlow` 是 Google Brain 团队的创造，是一个辅助机器学习和数值计算的开源库。`TensorFlow` 为我们带来了一整机器学习和深度学习算法及模型，全部集中在一个易于使用的地方。如果你没有计算机编程背景，特别是 `Python` 背景，那么你现在需要回头了——这本书是为具有一定经验并理解 `Python` 及其内容的人编写的。我们可以使用 `TensorFlow` 训练神经网络并将其用于手写数字分类、图像识别、`RNNs`（循环神经网络）、`NLP`（自然语言处理）等。
 
 ### 关于本书
+
 我以逻辑的方式编写了这本书，你可以轻松跟进，其中包含许多代码示例将帮助你更好地理解这些概念。如前提到的，你需要具有 `Python` 编程经验，因为我不会提供任何所需的编程语言背景知识。这本书的安排如下：
 
 * 第一章——深度学习的概述和介绍
@@ -158,17 +228,12 @@
 * 第七章——`NumPy` 简介
 * 第八章——`Pandas` 简介
 * 第九章——`Scikit-Learn` 简介
-
-
-
-
-
-## 第十章 – 线性回归
-## 第十一章 – 线性回归案例研究
-## 第十二章 – 核方法展望
-## 第十三章 – 基于 TensorFlow 的人工神经网络 (ANNs)
-## 第十四章 – 基于 TensorFlow 的卷积神经网络图像分类
-## 第十五章 – TensorFlow 自动编码器
+* 第十章——线性回归
+* 第十一章——线性回归案例研究
+* 第十二章——核方法展望
+* 第十三章——基于 TensorFlow 的人工神经网络 (ANNs)
+* 第十四章——基于 TensorFlow 的卷积神经网络图像分类
+* 第十五章——TensorFlow 自动编码器
 
 当你读完本指南时，你将对 TensorFlow 的工作原理以及如何在你的机器学习任务中使用它有一个极好的理解。所以，让我们不要再浪费时间，直接进入正题。注意——书中的代码来自 `https://www.guru99.com`，由他们完全拥有。公共使用许可。
 
@@ -178,18 +243,18 @@
 
 * 顶层 – 输入层
 * 底部 – 输出层
-* 中间层 – 这些统称为隐藏层（Hidden Layers）——“深度”意味着涉及超过两层层
+* 中间层 – 这些统称为隐藏层——“深度”意味着涉及超过两层层
 
-每个隐藏层都由相互连接的神经元组成。每个神经元都会处理从上一层接收到的输入信号并将其传播出去。传递到下一层的信号强度由激活函数、偏置（bias）和权重（weight）决定。网络消耗大量的输入数据，并使用多个层，确保深度越深，学习到的特征就越复杂。
+每个隐藏层都由相互连接的神经元组成。每个神经元都会处理从上一层接收到的输入信号并将其传播出去。传递到下一层的信号强度由激活函数、偏置（`bias`）和权重（`weight`）决定。网络消耗大量的输入数据，并使用多个层，确保深度越深，学习到的特征就越复杂。
 
 ### 深度学习是如何工作的？
 
 DNN（或深度神经网络）对于大多数任务都非常准确，并且可以自动学习——它们不需要程序员将知识编码在其中。假设我们有一个三口之家——两个父母和一个孩子。无论孩子指向什么物体，他总是称其为“狗”。他的父母告诉他，是的，那是一只狗，或者不，那不是狗。随着时间的推移，孩子识别狗的能力变得越来越擅长，但他不知道自己为什么能判断那是不是一只狗。孩子学习到的是复杂的、分级的特征——他可以通过观察物体并关注属于狗的细节来识别狗。如果不存在这些特征，那么它就不可能是狗。神经网络也是如此，每一层都代表一个不断加深的知识水平——即层级结构。层数多的网络比层数少的网络学习得更多。学习有两个阶段：
 
 1. 应用输入的非线性变换，并创建统计模型作为输出
-2. 应用称为导数（derivative）的数学模型来改进模型
+2. 应用称为导数（`derivative`）的数学模型来改进模型
 
-这些阶段不断重复，直到达到良好的准确率水平——每次重复称为一次迭代（iteration）。
+这些阶段不断重复，直到达到良好的准确率水平——每次重复称为一次迭代（`iteration`）。
 
 ### 神经网络是如何分类的
 
@@ -203,10 +268,12 @@ DNN（或深度神经网络）对于大多数任务都非常准确，并且可�
 深度学习网络主要有三种类型：
 
 ### 前馈网络
+
 最简单的网络，信息只能单向流动——从输入层通过隐藏层流向输出层。没有循环。
 
 ### RNN
-循环神经网络使用上语上下文节点（context nodes）来存储信息。它可以学习数据序列，输出是一个序列或一个数字。神经元之间存在循环。例如，假设你想预测句子中的下一个单词——“Would you like some …”
+
+循环神经网络使用上下文节点（`context nodes`）来存储信息。它可以学习数据序列，输出是一个序列或一个数字。神经元之间存在循环。例如，假设你想预测句子中的下一个单词——“Would you like some …”
 
 * 神经元获得一个指向句子开头的信号。
 * 发送到网络的输入是单词“would”——产生一个向量并传回神经元。这为网络提供了内存，从而帮助网络记住它接收了什么以及处于什么位置，即第一个。
@@ -214,13 +281,15 @@ DNN（或深度神经网络）对于大多数任务都非常准确，并且可�
 * 最后阶段是单词“some”，此时，网络为可能完成句子的单词给出概率——相关性越高，概率越高。
 
 #### 常见的 RNN 用途
+
 * 为证券交易员生成分析报告
 * 发现财务报表中的异常情况
-* 信用卡信用卡进行欺诈检测
+* 信用卡进行欺诈检测
 * 提供图像描述
 * 驱动聊天机器人
 
 ### CNN
+
 卷积神经网络包含几层，每层都有独特的设计，旨在提取复杂特征——层越深，特征越复杂。CNN 通常主要用于没有固定结构的数据集，例如图像集，以及当需要从这些数据集中提取信息时。例如，在图像描述预测中：
 
 * 给 `CNN` 一张狗的图片——这对计算机来说只是一堆像素。彩色图像有三层，灰度图像有一层。
@@ -228,7 +297,8 @@ DNN（或深度神经网络）对于大多数任务都非常准确，并且可�
 * 学习完成后，`CNN` 可以为接收到的每个图像提供概率——概率最高的为网络的预测结果。
 
 ### 强化学习
-这是机器学习的一个子领域，通过试错法使用奖励或惩罚系统来训练系统。Google 创建的 `DeepMind` 使用强化学习击败了人类围棋世界冠军，视频游戏也使用这种学习来提供更好的游戏体验。最著名的强化学习算法有：：
+
+这是机器学习的一个子领域，通过试错法使用奖励或惩罚系统来训练系统。Google 创建的 `DeepMind` 使用强化学习击败了人类围棋世界冠军，视频游戏也使用这种学习来提供更好的游戏体验。最著名的强化学习算法有：
 
 * `DDPG` – 深度确定性策略梯度
 * `Deep Q network`
@@ -251,53 +321,55 @@ DNN（或深度神经网络）对于大多数任务都非常准确，并且可�
 
 像任何事物一样，深度学习也有其局限性：
 
-
-
-
-
 ## 深度学习面临的挑战
 
-*   **数据标注**：通常使用监督学习来训练 AI 模型，这意味着底层数据必须先由人工进行标注和分类——这本身就会带来一系列错误。例如，自动驾驶技术公司正在雇佣人员从原型机的视频流并进行人工标注，以对系统进行训练。
-*   **获取海量训练数据集**：一些较简单的深度学习技术（如 `CNN`）可以复制许多领域（如医学）的专家知识。然而，随着如今机器学习的飞速发展，所需的训练集是经过标注的、通用且广泛的——换句话说，就是海量的。准确性要求深度学习方法拥有成千上万个模型来用于分类训练，而要达到人类水平，可能需要数百万个模型。世界上一些最大的科技公司通过深度学习积累了海量数据。在某些情况下，他们积累了数拍字节（petabyte）的数据，这使其能够创建准确的模型。
-*   **问题解释**：要用人类语言解释某些较为复杂的模型并非易事。例如，我们不能总是解释模型为何做出某个决策，而且人们普遍认为，在我们需要解释性的领域，某些 AI 模型的运行速度太慢了。随着 AI 应用的增长，我们可能会面临监管要求，从而迫使产生能够易于解释的模型。
+* **数据标注**：通常使用监督学习来训练 AI 模型，这意味着底层数据必须先由人工进行标注和分类——这本身就会带来一系列错误。例如，自动驾驶技术公司正在雇佣人员从原型机的视频流并进行人工标注，以对系统进行训练。
+* **获取海量训练数据集**：一些较简单的深度学习技术（如 `CNN`）可以复制许多领域（如医学）的专家知识。然而，随着如今机器学习的飞速发展，所需的训练集是经过标注的、通用且广泛的——换句话说，就是海量的。准确性要求深度学习方法拥有成千上万个模型来用于分类训练，而要达到人类水平，可能需要数百万个模型。世界上一些最大的科技公司通过深度学习积累了海量数据。在某些情况下，他们积累了数拍字节（`petabyte`）的数据，这使其能够创建准确的模型。
+* **问题解释**：要用人类语言解释某些较为复杂的模型并非易事。例如，我们不能总是解释模型为何做出某个决策，而且人们普遍认为，在我们需要解释性的领域，某些 AI 模型的运行速度太慢了。随着 AI 应用的增长，我们可能会面临监管要求，从而迫使产生能够易于解释的模型。
 
 ## 总结
+
 毫无疑问，深度学习是 AI 尖端技术。其架构由一个输入层、输出层以及其之间的两个或多个隐藏层组成——“深度”意味着至少有两个层是全连接的。存在许多神经网络，每种网络都是围绕特定任务设计的。例如，`CNN` 最适合处理图像，而 `RNN` 在文本分析和时间序列方面表现出色。深度学习见于许多不同领域——医学、金融、营销等，最大的公司在其他任何合理技术之前就使用了深度学习，这是很合理的，因为他们拥有构建广泛训练集所需的数据量。在下一章节中，我们将看看机器学习与深度学习之间的区别。
 
 ## 第 2 章 机器学习 vs. 深度学习
 
 首先，AI 是赋予机器思考的能力，其基准是人类智能，如视觉、语音和推理——尽管在未来一段时间内我们还无法看到这种实现。AI 有三个层次：
 
-*   **窄（Narrow）**：当机器在某项任务上的表现优于人类时。
-*   **通用（General）**：当机器执行任务的准确率与人类相同时。
-*   **主动（Active）**：当机器在多项任务上超越人类时。
+* **窄（Narrow）**：当机器在某项任务上的表现优于人类时。
+* **通用（General）**：当机器执行任务的准确率与人类相同时。
+* **主动（Active）**：当机器在多项任务上超越人类时。
 
 ### 什么是机器学习？
+
 机器学习是我们在模式识别方面拥有的最佳分析工具之一。其核心思想是教导（训练）机器来自动执行重复性任务或人类无法完成的任务。机器学习可以在人类干预很少的情况下做出决策。数据被输入到算法中，算法理解输入/输出关系，从而引导机器学习做出预测。
 
 ### 什么是深度学习？
+
 深度学习是模仿人类大脑神经元网络的软件，是机器学习的一个子集。它使用深度神经网络（`DNNs`）从多个层中学习数据——网络越深，层数就越多，学习到的特征也就越复杂。
 
 ### 机器学习是如何实现的？
+
 假设你被指派构建一个物体识别程序。该模型使用分类器进行训练，该分类器利用对象的特征来识别该对象属于哪一类。让我们用四个对象的示例来训练一个检测的分类器：
 
-*   飞机
-*   船
-*   汽车
-*   自行车
+* 飞机
+* 船
+* 汽车
+* 自行车
 
 这些是分类器必须训练接受的四个类别。分类器通过使用带有标签的输入数据构建。数据被输入算法，算法随后识别模式并将其归分为正确的类别。这被称为监督学习——所有在监督学习中使用过的数据都是带标签的。训练算法需要以下步骤：
 
-1.  收集数据。
-2.  训练分类器。
-3.  模型做出预测。
+1. 收集数据。
+2. 训练分类器。
+3. 模型做出预测。
 
-第一步至关重要，因为算法的成功或失败取决于正确的数据。这些数据被称为 `features`（特征），在上面的上面的示例中，物体是组成图像的像素组。每张图像是一行数据，每个像素是一列数据。假设你有一组 28x28 像素的图像，数据集将包含 784 列。图像被转换为特征向量并进行标注，告诉机器它是什么物体。这些数据应被用于训练分类器识别物体类型。首先，创建特征列。然后选择用于训练模型的正确算法，当训练完成后，模型会对比图片对应哪个物体做出预测。一旦完成这些操作，模型就可以轻松地预测新图像。当每张图像被输入模型时，模型会对物体应所属的类别做出预测。假设我们给模型提供一张未标注的图像；人类可以很容易看出图像是什么，但机器需要使用它之前学到的知识来预测它是什么。
+第一步至关重要，因为算法的成功或失败取决于正确的数据。这些数据被称为 `features`（特征），在上面的示例中，物体是组成图像的像素组。每张图像是一行数据，每个像素是一列数据。假设你有一组 28x28 像素的图像，数据集将包含 784 列。图像被转换为特征向量并进行标注，告诉机器它是什么物体。这些数据应被用于训练分类器识别物体类型。首先，创建特征列。然后选择用于训练模型的正确算法，当训练完成后，模型会对比图片对应哪个物体做出预测。一旦完成这些操作，模型就可以轻松地预测新图像。当每张图像被输入模型时，模型会对物体应所属的类别做出预测。假设我们给模型提供一张未标注的图像；人类可以很容易看出图像是什么，但机器需要使用它之前学到的知识来预测它是什么。
 
 ### 深度学习是如何实现的？
+
 深度学习使用神经网络来完成学习。使用相同的物体示例，在深度学习中，训练数据集被交给神经网络。每个单独的输入被传递给神经元，并使用权重进行相乘。结果然后作为输入发送到下一层，这种操作持续于网络中的每一层。最后一层是输出层，在此提供数值，以及任务中每个类别的概率。网络使用数学算法更新所有神经元的权重。当这些权重提供的输出尽可能接近现实时，认为已完全训练。
 
 ### 自动特征提取
+
 数据集可能拥有从几个到几百甚至数千个特征，模型将根据每个特征的相关性进行学习。然而，某些特征对算法来说毫无意义，机器学习成功的关键部分之一是寻找正确的特征集，以确保模型能够学习。实现这一点的方法之一是使用所谓的特征提取。它将所有现有特征结合，形成一个更有相关性的特征集。这通常通过降维算法完成，例如 `T-SNE` 或 `PCA`。以图像处理为例，必须从图像中手动提取特征，如眼睛、耳朵、轮子等。这些特征随后被交给分类模型。在深度学习中，不需要这样做，特别是当你使用 `CNN`（卷积神经网络）时。网络的第一层从图像中学习一些细微细节，随后的每一层都会学习更多。`CNN` 使用过滤器来执行特征提取；这些过滤器应用于图像以寻找匹配，例如特征形状是否与图像的一部分匹配。如果存在匹配，则使用该特定的过滤器。因此，特征提取在深度学习中是自动的。
 
 下表直观展示了深度学习与机器学习之间的区别：
@@ -305,14 +377,12 @@ DNN（或深度神经网络）对于大多数任务都非常准确，并且可�
 | | 机器学习 | 深度学习 |
 | --- | --- | --- |
 | 数据依赖性 | 在中小型数据集上表现良好 | 在大型数据集上表现良好 |
-
-
-
-
-
 | 特性 | 机器学习 | 深度学习 |
-| :--- | :--- | :--- |
+
+
+
 | 硬件依赖 | 可以在低端、性能不强大的机器上运行 | 需要非常强大的机器，最好是带有 GPU 的机器，因为深度学习需要进行大量的矩阵乘法 |
+| --- | --- | --- |
 | 特征工程 | 需要理解表示数据的特征 | 不需要理解表示数据的最佳特征 |
 | 执行时间 | 从几分钟到几小时不等 | 可能需要几周，因为神经网络有大量的权重计算需要完成 |
 | 可解释性 | 某些算法更容易解释，例如决策树和逻辑算法。其他算法，如 `XGBoost` 和 `SVM` 则几乎不可能 | 难以解释，在某些情况下是不可能的 |
@@ -326,12 +396,11 @@ DNN（或深度神经网络）对于大多数任务都非常准确，并且可�
 | 训练数据集 | 小 | 大 |
 | 是否选择特征 | 是 | 否 |
 | 算法数量 | 很多 | 很少 |
-| 训练时间 | 短短 | 长 |
+| 训练时间 | 短 | 长 |
 
-机器学习算法在训练目的不需要像深度学习算法那么多的数据。对于深度学习，你需要一个多样且庞大的数据集来寻找底层结构——机器学习的结果是模型训练速度快得多，而深度学习模型可能花费几周时间。高准确率是使用深度学习而非机器学习最大的优势。你不需要理解数据表示的最佳特征，因为神经网络会自动完成这一点；而机器学习则要求你手动进行特征提取。现在你已经对机器学习和深度学习有了整体了解，是时候转向 TensorFlow 了。在下一章，我们将介绍基础知识。
+机器学习算法在训练目的不需要像深度学习算法那么多的数据。对于深度学习，你需要一个多样且庞大的数据集来寻找底层结构——机器学习的结果是模型训练速度快得多，而深度学习模型可能花费几周时间。高准确率是使用深度学习而非机器学习最大的优势。你不需要理解数据表示的最佳特征，因为神经网络会自动完成这一点；而机器学习则要求你手动进行特征提取。现在你已经对机器学习和深度学习有了整体了解，是时候转向 `TensorFlow` 了。在下一章，我们将介绍基础知识。
 
 ## 第 3 章 什么是 TensorFlow？
-
 
 `TensorFlow` 是世界上主要的深度学习库之一，由 Google 所有。Google 在其许多产品中使用机器学习来使它们变得更好，例如推荐、翻译、搜索引擎、图像说明等。Google 拥有世界上最大的数据集，而机器学习是他们利用这些数据的最佳方式。数据科学家、研究人员和程序员都使用机器学习，无论是独立工作还是协作，以提高生产力和效率。`TensorFlow` 的构建是为了处理世界上最大的计算机之一——Google 的计算需求。由 Google Brain 团队构建，`TensorFlow` 库的发展旨在加速深度神经网络和机器学习的研究。它可以运行在移动操作系统、多个 CPU 和多个 GPU 上；它还通过使用封装器支持多种计算机编程语言，如 `Java`、`C++` 和 `Python`。
 
@@ -349,8 +418,8 @@ DNN（或深度神经网络）对于大多数任务都非常准确，并且可�
 
 名字的由来是因为 `TensorFlow` 将多维数组（也称为 `tensors` 张量）作为输入，并为输入构建一个名为 `graph`（图）的操作流程图。输入从一端开始，流经系统中的所有操作，并作为输出退出。我们可以将 `TensorFlow` 的软件和硬件需求分类为以下阶段：
 
-*   开发 – 模型训练，通常在笔记本电脑或台式计算机上进行
-*   运行/推理 – 当训练完成后，你可以在多个平台上运行 `TensorFlow`，包括 `Linux`、`macOS`、`Windows`、`iOS`、`Android` 以及云端的 Web 服务。
+*   **开发** – 模型训练，通常在笔记本电脑或台式计算机上进行
+*   **运行/推理** – 当训练完成后，你可以在多个平台上运行 `TensorFlow`，包括 `Linux`、`macOS`、`Windows`、`iOS`、`Android` 以及云端的 Web 服务。
 
 你也可以在 GPU 上训练并使用模型。这些 GPU 最初纯粹为视频游戏设计。然而，斯坦福的研究人员在 2010 年发现 GPU 也擅长代数和矩阵计算。深度学习依赖矩阵乘法，而 `TensorFlow` 能够快速计算这些，是因为它使用 `C++` 编写。然而，尽管使用 `C++` 实现 `TensorFlow`，但它很容易被其他计算机语言访问和控制，主要的语言是 `Python`。最后，`TensorBoard` 是一个重要特性，使用户能够以可视化和图形化的监控 `TensorFlow` 正在运行。
 
@@ -359,6 +428,7 @@ DNN（或深度神经网络）对于大多数任务都非常准确，并且可�
 `TensorFlow` 有几个组件：
 
 *   **Tensor (张量)** - 名字 `TensorFlow` 直接源于核心框架 `Tensor`。`TensorFlow` 中的每个计算都涉及 `tensors`，它们是表示所有数据类型的 `n-dimensions` 矩阵或向量。`tensor` 中的每个值都具有已知或部分已知形状的相同的数据类型。数据形状是数组或矩阵的维度。`tensors` 可以来自输入数据，也可以是计算的结果。`TensorFlow` 中的每个操作都在 `graph`（图）中发生，图是一系列连续的计算，所有操作统称为 `op` 节点，且它们都是相互连接的。`graph` 概述了 `ops` 和节点连接，但它不会显示值。节点边被称为 `tensor`，即使用数据填充操作的方法。
+
 *   **Graphs (图)** – `TensorFlow` 使用 `graph` 框架来汇总训练完成的系列计算并对其进行描述。`graph` 有几个优势：
     *   它可以在多个 GPU、CPU 或移动操作系统上运行
     *   `graph` 是可移植的，这意味着计算可以保留供现在或以后使用
@@ -379,11 +449,7 @@ DNN（或深度神经网络）对于大多数任务都非常准确，并且可�
 *   深度学习线性组合：`tf.estimator.DNNLinearCombinedClassifier`
 *   线性回归：`tf.estimator.LinearRegressor`
 
-
-
-
-
-## 示例示例
+## 示例
 
 这是一个关于 TensorFlow 的简单示例：
 
@@ -398,7 +464,7 @@ import tensorflow as tf
 
 首先，需要定义 `X_1` 和 `X_2` 输入节点。当创建一个 `TensorFlow` 节点时，我们必须确定想要创建的节点类型。`X_1` 和 `X_2` 将被称为“占位符”（placeholders），它们每当进行计算时都会分配新值。在我们的示例中，这些占位符节点将是 `TF.dot`。
 
-## 第一步 – 定义
+### 第一步 – 定义
 
 ```python
 X_1 = tf.placeholder(tf.float32, name = "X_1")
@@ -407,7 +473,7 @@ X_2 = tf.placeholder(tf.float32, name = "X_2")
 
 创建占位符节点时，必须传递数据类型；因为我们使用的是数字，所以使用了浮点类型 – `tf.float32`。节点还需要命名，当查找此模型的图形化可视化时，就能看到该名称。我们将节点命名为 `X_1`，通过传递一个名为 `name` 并包含 `X_1` 值的参数或变量来实现。`X_2` 以同样的方式定义。
 
-## 第二步 – 计算定义
+### 第二步 – 计算定义
 
 ```python
 multiply = tf.multiply(X_1, X_2, name = "multiply")
@@ -415,7 +481,7 @@ multiply = tf.multiply(X_1, X_2, name = "multiply")
 
 下一步是定义负责乘法的节点。我们使用 `tf.multiply` 节点来完成此操作。`X_1` 和 `X_2` 节点被传递此节点，让 `TensorFlow` 知道节点应该在图中连接——它需要获取 `x` 和 `y` 值然后将它们相乘。我们将乘法节点命名为“multiply”，这就完成了整个图的定义。
 
-## 第三步 – 操作执行
+### 第三步 – 操作执行
 
 执行图操作需要创建一个会话（session），在 `TensorFlow` 中，这是通过使用 `tf.Session()` 完成的。一旦创建了会话，我们只需要调用该会话并使用 `run` 来运行我们的计算，就可以让它运行图上的选定操作。当我们运行时，它会发现必须获取 `X_1` 和 `X_2` 节点的值 –为此，我们必须提供这些值。这是通过传递名为 `feed_dict` 的参数实现的，在我们的示例中，为 `X_1` 传递值 `1, 2, 3`，为 `X_2` 传递 `4, 5, 6`。我们使用 `print(result)` 来打印结果：
 
@@ -428,10 +494,6 @@ with tf.Session() as sess:
     print(result)
 ```
 
-
-
-
-
 ## 2. 通过创建 .yml 文件安装依赖
 
 ## 3. 使用 pip 添加 TensorFlow
@@ -443,29 +505,37 @@ with tf.Session() as sess:
 ### 第一步 - 在你的 Mac 或 Windows 系统上安装 anaconda（适用于 Python 3.6 的最新版本）。
 
 ### 第二步 - 创建 .yml 文件
+
 找到 Anaconda 路径。创建一个包含你所需库的 conda 环境：
-- **Windows**: 打开 Anaconda 提示符并输入 `C:\>where anaconda`。我们需要知道 Anaconda 的位置，因为我们的环境将在该路径下创建。
-- **Mac**: 打开终端并输入 `which anaconda`。
+
+*   **Windows**: 打开 Anaconda 提示符并输入 `C:\>where anaconda`。我们需要知道 Anaconda 的位置，因为我们的环境将在该路径下创建。
+*   **Mac**: 打开终端并输入 `which anaconda`。
 
 在 Anaconda 内部，创建一个新文件，并在其中安装 `TensorFlow`、`Jupyter` 和 `IPython`。
 
 ### 第三步 – 设置工作目录
+
 在这里，必须为创建 yml 文件指定工作目录。
-- **Mac**: Mac 终端会将目录设置为默认的 `Users/USERNAME`。终端中 `$` 符号之前始终显示最新的文件夹，所有的库都将在此目录安装。如果文本编辑器路径与工作目录不同，请在终端提示符处使用命令 `cd PATH`。对于 `PATH`，使用粘贴到文本编辑器中的路径，不要忘记用‘PATH,’ 包起来以更改工作目录。在终端中输入 `cd anaconda3`。
-- **Windows**: 如果你使用的是 Windows，请确保在 `Anaconda3` 之前是正确的文件夹，例如 `cd C:\Users\Admin\Anaconda3`。
+
+*   **Mac**: Mac 终端会将目录设置为默认的 `Users/USERNAME`。终端中 `$` 符号之前始终显示最新的文件夹，所有的库都将在此目录安装。如果文本编辑器路径与工作目录不同，请在终端提示符处使用命令 `cd PATH`。对于 `PATH`，使用粘贴到文本编辑器中的路径，不要忘记用‘PATH,’ 包起来以更改工作目录。在终端中输入 `cd anaconda3`。
+*   **Windows**: 如果你使用的是 Windows，请确保在 `Anaconda3` 之前是正确的文件夹，例如 `cd C:\Users\Admin\Anaconda3`。
 
 ### 第四步 – 创建 yml 文件
+
 我们在新目录中执行此操作，以确保安装 TensorFlow 依赖。这是执行此操作的代码：
-- **Mac**: `touch hello-tf.yml`。这将在 `anaconda3` 中创建一个名为 `hello-tf.yml` 的新文件。
-- **Windows**: `echo. >hello-tf.yml`。同样，你应该看到一个名为 `hello-tf.yml` 的新文件。
+
+*   **Mac**: `touch hello-tf.yml`。这将在 `anaconda3` 中创建一个名为 `hello-tf.yml` 的新文件。
+*   **Windows**: `echo. >hello-tf.yml`。同样，你应该看到一个名为 `hello-tf.yml` 的新文件。
 
 ### 第五步 - 编辑文件
-- **Mac**: 执行此操作，在终端中输入以下内容——这使用了 `vim`：`vi hello-tf.yml`。按下 `ESC` 键后，你可以使用以下操作：
-  - 编辑 – 按 `i`
-  - 保存 – 按 `w`
-  - 退出 – 按 `q!`
+
+*   **Mac**: 执行此操作，在终端中输入以下内容——这使用了 `vim`：`vi hello-tf.yml`。按下 `ESC` 键后，你可以使用以下操作：
+    *   编辑 – 按 `i`
+    *   保存 – 按 `w`
+    *   退出 – 按 `q!`
 
 一旦进入编辑模式，添加以下代码，注意该文件对缩进和大小写均敏感。你必须在每个缩进后包含两个空格：
+
 ```yaml
 name: hello-tf
 dependencies:
@@ -476,9 +546,11 @@ dependencies:
   - pip:
       - https://storage.googleapis.com/tensorflow/MacOS/cpu/tensorflow-1.5.0-py3-none-any.whl
 ```
+
 退出时，按 `ESC` 然后按 `q!`
 
-- **Windows**: Windows 没有 `vim`，所以请使用记事本：`notepad hello-tf.yml`。在打开的文件中输入以下内容
+*   **Windows**: Windows 没有 `vim`，所以请使用记事本：`notepad hello-tf.yml`。在打开的文件中输入以下内容
+
 ```yaml
 name: hello-tf
 dependencies:
@@ -487,82 +559,107 @@ dependencies:
   - ipython
   - pandas
 ```
+
 在这一步中，仅为 Windows 准备了 conda 环境；TensorFlow 将在下一步安装。
 
 ### 第六步 – 编译文件
+
 使用以下代码编译文件（Mac 和 Windows）：
+
 ```bash
 conda env create -f hello-tf.yml
 ```
 
 ### 第七步 – 激活你的 conda 环境
+
 快快了。你应该有两个 conda 环境，其中包含一个包含了未来所需所有库的隔离环境。要激活环境，请切换到 `hello-tf`：
-- **Mac**: `source activate hello-tf`
-- **Windows**: `activate hello-tf`
+
+*   **Mac**: `source activate hello-tf`
+*   **Windows**: `activate hello-tf`
 
 在这里要做的一个重要点是确保环境中的所有依赖项都在一起，允许它们在单个环境内相互使用。如果缺少任何依赖项，你需要返回并重新开始。执行此操作：
-- **Mac**: `which python`, `which jupyter`, `which ipython`。
+
+*   **Mac**: `which python`, `which jupyter`, `which ipython`。
+
 作为一个可选步骤，你也可以查看是否有更新：`pip install --upgrade tensorflow`。
-- **仅限 Windows – 安装 TensorFlow**: `where python`, `where jupyter`, `where ipython`。
+
+*   **仅限 Windows – 安装 TensorFlow**: `where python`, `where jupyter`, `where ipython`。
 
 现在你有两个 Python 环境 – 主环境以及你使用 `hello-tf` 创建的新环境。注意，TensorFlow 只安装在 `hello-tf` 中，而不是主环境中。Windows 用户可以使用此命令安装 TensorFlow：`pip install tensorflow`。
 
 ## 打开 Jupyter Notebook
+
 这两个操作系统的方法是相同的；可以使用 Jupyter 打开 TensorFlow：
-- **第一步 - 激活 conda**:
-  - Mac: `source activate hello-tf`
-  - Windows: `conda activate hello-tf`
-- **第二步 – 打开 Jupyter**: `jupyter notebook`
+
+*   **第一步 - 激活 conda**:
+    *   Mac: `source activate hello-tf`
+    *   Windows: `conda activate hello-tf`
+*   **第二步 – 打开 Jupyter**: `jupyter notebook`
 
 Jupyter Notebook 应向你显示工作目录中的每一个文件。创建一个新的 Notebook 只需点击 `New > Python 3`。新的 Notebook 会自动保存到工作目录。可以在 Jupyter 内部使用别名 `tf` 导入 TensorFlow。点击 Run 就会创建一个新单元格：
+
 ```python
 import tensorflow as tf
 ```
+
 让我们用 TensorFlow 写一些代码：
+
 ```python
 hello = tf.constant('Hello, everyone!')
 hello
 ```
+
 你已经创建了一个新张量。
 
 ### 第三步 – 删除文件
+
 现在 Jupyter 中的文件 `Untitled.ipynb` 可以删除。
 
 ### 第四步 – 关闭 Jupyter
+
 你可以通过两种方式关闭 Jupyter – 从终端或提示符。
-- **来自 Jupyter**: 从 Jupyter 面板，点击 `Logout`，你将被发送。
-- **来自终端/提示符**: 从终端或提示符，运行 `CTRL+C` 两次。第一次后，你将被询问是否关闭 Notebook；再次按 `CTRL+C`。
+
+*   **来自 Jupyter**: 从 Jupyter 面板，点击 `Logout`，你将被发送。
+*   **来自终端/提示符**: 从终端或提示符，运行 `CTRL+C` 两次。第一次后，你将被询问是否关闭 Notebook；再次按 `CTRL+C`。
 
 在下一章中，我们将深入 TensorFlow 基础。
 
 ## 第 5 章 深入 TensorFlow
 
+
+
+# TensorFlow 基础：张量、运算与会话
+
 在 TensorFlow 中，每个计算都涉及一个或多个张量，它们是 n 维的矩阵或向量，代表不同的数据类型。张量中的每个值共享一个已知或部分已知的形状。数据是数组或矩阵。张量可以来自计算结果或输入数据；图用于每个操作，每个图包含连续的操作。操作连接被称为节点。图显示操作和节点连接，但不会显示任何值。节点边是张量，是填充操作的方式。在机器学习中，我们向模型输入特征向量（对象列表）。它们可以是任何数据类型，但通常是填充张量的主要方法。值通过张量流向节点，产生一个新的张量；然后它会被用于另一个操作。
 
-### 张量表示
+## 张量表示
+
 张量是 n 维的特征向量集合或数组。例如，假设我们有一个 2x3 的矩阵，包含 1 到 6。我们将这样写：
+
 ![](img/image_rsrcSH.jpg)
+
 这在 TensorFlow 中表示为 `[[1, 2, 3], [4, 5, 6]]`。
 
 如果我们进一步使用 1 到 8 的值来创建一个三维矩阵，我们将得到：
+
 ![](img/image_rsrcSJ.jpg)
+
 这在 TensorFlow 中表示为 `[[[1, 2], [3, 4]], [[5, 6], [7, 8]]]`。
 
-### 张量类型
+## 张量类型
+
 TensorFlow 中的每个计算都通过一个张量，张量仅仅是一个具有三个属性的对象：
+
 - `Name` – 标签（唯一）
 - `Shape` – 维度
 - `dtype` – 数据类型
 
 每个 TensorFlow 操作都要求你操作张量，你可以创建四种主要的类型：
+
 - `tf.Variable`
 - `tf.constant`
 - `tf.placeholder`
 - `tf.SparseTensor`
-
-
-
-
 
 我们将介绍如何创建前两种张量。在开始之前，请确保已激活带有 TensorFlow 的 conda 环境（参见上一章）——完成后，请按如下方式导入 TensorFlow：
 
@@ -571,10 +668,12 @@ TensorFlow 中的每个计算都通过一个张量，张量仅仅是一个具有
 import tensorflow as tf
 ```
 
-## 创建 n 维张量 (n-dimension Tensor)
-我们从创建一个标量（即单维张量）开始，使用 `tf.constant()` 来来实现：`tf.constant(value, dtype, name = "")`
+## 创建 n 维张量
+
+我们从创建一个标量（即单维张量）开始，使用 `tf.constant()` 来实现：`tf.constant(value, dtype, name = "")`
 
 参数：
+
 - `value`: 用于定义张量的 n 维值。可选。
 - `dtype`: 定义数据类型：
     - `tf.string`: 字符串变量
@@ -613,6 +712,7 @@ print(r1_string)
 接下来的代码可以创建一个一维张量：
 
 ### 秩 1 (Rank 1)
+
 ```python
 r1_vector = tf.constant([1,3,5], tf.int16)
 print(r1_vector)
@@ -626,6 +726,7 @@ print(r2_boolean)
 你会发现形状（shape）只有一列。如果你想要两个维度，必须在每一行之后闭合括号：
 
 ### 秩 2 (Rank 2)
+
 ```python
 r2_matrix = tf.constant([[1, 2], [3, 4]], tf.int16)
 print(r2_matrix)
@@ -635,13 +736,15 @@ print(r2_matrix)
 生成的矩阵有两行两列，填充了从 1 到 4 的值。通过增加另一层括号来创建一个三维矩阵：
 
 ### 秩 3 (Rank 3)
+
 ```python
 r3_matrix = tf.constant([[[1, 2], [3, 4], [5, 6]]], tf.int16)
 print(r3_matrix)
 # 输出 Tensor("Const_6:0", shape=(1, 3, 2), dtype=int16)
 ```
 
-### 形状 (Shape)
+### 形状
+
 当打印张量时，形状会被推测，但你可以使用 `shape` 属性来获取张量的形状。下面的代码构建了一个包含数字 10 到 15 的矩阵，并检查 `m_shape` 的形状：
 
 ```python
@@ -651,7 +754,7 @@ m_shape.shape
 # 输出 [Dimension(3), Dimension(2)]
 ```
 
-生成的矩阵由三行两列组成。在 TensorFlow 中，你会发现几个实命令可以创建填充 1 或 0 的矩阵或向量。例如，如果你想要一个形状为 10 且填充 0 的一维张量——这段代码可以实现这一点：
+生成的矩阵由三行两列组成。在 TensorFlow 中，你会发现几个实用命令可以创建填充 1 或 0 的矩阵或向量。例如，如果你想要一个形状为 10 且填充 0 的一维张量——这段代码可以实现这一点：
 
 ```python
 # 创建一个 0 向量
@@ -682,7 +785,8 @@ print(tf.ones(m_shape.shape))
 # 输出 Tensor("ones_3:0", shape=(3, 2), dtype=float32)
 ```
 
-## 数据类型 (Data Types)
+## 数据类型
+
 数据类型是张量的另一个属性。张量一次只允许一种数据类型，你可以使用 `dtype` 返回类型：
 
 ```python
@@ -690,7 +794,7 @@ print(m_shape.dtype)
 # 输出 <int32>
 ```
 
-在在某些情况下，你可能想更改数据类型，这是通过 `tf.cast` 方法实现的。例如，我们可以将浮点张量转换为整数：
+在某些情况下，你可能想更改数据类型，这是通过 `tf.cast` 方法实现的。例如，我们可以将浮点张量转换为整数：
 
 ```python
 # 修改数据类型
@@ -704,7 +808,8 @@ print(type_int.dtype)
 
 如果在创建张量时没有指定参数，TensorFlow 会自动选择数据类型。例如，如果你传递了文本，TensorFlow 会认为它是字符串，并以此传递。
 
-## 创建运算符 (Operator)
+## 创建运算符
+
 现在你已经知道了如何创建张量，我们应该看看数学运算以及如何执行它们。TensorFlow 包含了所有的基础运算，从简单的开始，我们将计算指定数字的平方。张量是通过一个参数创建的，我们使用 `tf.sqrt(x)` 来构造平方——`x` 是一个浮点数：
 
 ```python
@@ -713,41 +818,43 @@ print(tf.sqrt(x))
 # 输出 Tensor("Sqrt:0", shape=(1,), dtype=float32)
 ```
 
-注意 我们得到的是一个张量对象，而不是预期的 2 的平方。在这个示例中，打印的是张量的定义，而不是运算的结果。稍后，我们将介绍如何使用 TensorFlow 执行运算。这里是最常用的几个运算，每个运算至少需要一个参数：
+> **注意** 我们得到的是一个张量对象，而不是预期的 2 的平方。在这个示例中，打印的是张量的定义，而不是运算的结果。稍后，我们将介绍如何使用 TensorFlow 执行运算。
+
+这里是最常用的几个运算，每个运算至少需要一个参数：
 
 - `tf.add(a, b)`
-- `tf.substract(a, b)`
+- `tf.subtract(a, b)`
 - `tf.multiply(a, b)`
 - `tf.div(a, b)`
 - `tf.pow(a, b)`
 - `tf.exp(a)`
 - `tf.sqrt(a)`
 
-
-
-
-
 这里有一个示例：
 
-# 添加张量
-```
+### 添加张量
+
+```python
 tensor_a = tf.constant([[1,2]], dtype = tf.int32)
 tensor_b = tf.constant([[3, 4]], dtype = tf.int32)
 tensor_add = tf.add(tensor_a, tensor_b)
 print(tensor_add)
 # Output Tensor("Add:0", shape=(1, 2), dtype=int32)
 ```
-我们所做的了两个张量，一个包含 1 和 2，另一个包含 3 和 4，然后对张量进行相加。注意，两个张量的形状必须相同，并且可以在两者上执行乘法。
 
-# 乘法张量
-```
+我们所做的是创建了两个张量，一个包含 1 和 2，另一个包含 3 和 4，然后对张量进行相加。注意，两个张量的形状必须相同，并且可以在两者上执行乘法。
+
+### 乘法张量
+
+```python
 tensor_multiply = tf.multiply(tensor_a, tensor_b)
 print(tensor_multiply)
 # Output Tensor("Mul:0", shape=(1, 2), dtype=int32)
 ```
 
-# 变量
-到为止创建的常量张量作用不大。所有数据都有不同的值，但你可以使用变量类来捕捉这一点。创建变量需要使用名为 `tf.get_variable()` 的方法：`tf.get_variable(name = "", values, dtype, initializer)` 参数如下：
+## 变量
+
+到目前位置创建的常量张量作用不大。所有数据都有不同的值，但你可以使用变量类来捕捉这一点。创建变量需要使用名为 `tf.get_variable()` 的方法：`tf.get_variable(name = "", values, dtype, initializer)` 参数如下：
 
 - `name = ""`: 变量名称
 - `values`: 张量的维度
@@ -756,24 +863,27 @@ print(tensor_multiply)
 
 如果我们指定了 `initializer`，我们就不需要添加具体的值，而是使用初始化器的形状。例如，接下来的代码将创建一个具有两个维度和两个随机值的变量。TensorFlow 默认返回一个随机值，变量被命名为 `var`：
 
-# 创建变量
+### 创建 2 个随机值
 
-## 创建 2 个随机值
-```
+```python
 var = tf.get_variable("var", [1, 2])
 print(var.shape)
 # Output (1, 2)
 ```
-你也可以创建一个一行两列的变量，变量维度是使用 `[1,2]` 创建的。张量的初始值为零；当模型进行训练时，我们需要初始值，以便计算特征权重。这就是将初始值设置为 零的方法：
-```
+
+你也可以创建一个一行两列的变量，变量维度是使用 `[1,2]` 创建的。张量的初始值为零；当模型进行训练时，我们需要初始值，以便计算特征权重。这就是将初始值设置为零的方法：
+
+```python
 var_init_1 = tf.get_variable("var_init_1", [1, 2], dtype=tf.int32, initializer=tf.zeros_initializer)
 print(var_init_1.shape)
 # Output (1, 2)
 ```
+
 也可以通过 `tf.constant()` 方法创建常量张量，并将常量张量的值传递给变量。初始值为 10、20、30 和 40，形状将为 2x2：
 
-# 创建一个 2x2 矩阵
-```
+### 创建一个 2x2 矩阵
+
+```python
 tensor_const = tf.constant([[10, 20], [30, 40]])
 # 初始化张量的第一个值等于 tensor_const
 var_init_2 = tf.get_variable("var_init_2", dtype=tf.int32, initializer=tensor_const)
@@ -781,20 +891,22 @@ print(var_init_2.shape)
 # Output (2, 2)
 ```
 
-# 占位符
-占位符馈入张量；它们被用于初始化数据，因此数据流入张量。使用 `feed_dict` 方法在会 中提供占位符。此示例向你展示如何创建占位符：`tf.placeholder(dtype,shape=None,name=None)` 参数如下：
+## 占位符
+
+占位符馈入张量；它们被用于初始化数据，因此数据流入张量。使用 `feed_dict` 方法在会话中提供占位符。此示例向你展示如何创建占位符：`tf.placeholder(dtype, shape=None, name=None)` 参数如下：
 
 - `dtype`: 数据类型
 - `shape`: 占位符的维度。可选。默认是数据的形状
 - `name`: 占位符名称。可选
 
-```
+```python
 data_placeholder_a = tf.placeholder(tf.float32, name = "data_placeholder_a")
 print(data_placeholder_a)
 # Output Tensor("data_placeholder_a:0", dtype=float32)
 ```
 
-## Session
+## 会话
+
 TensorFlow 围绕三个主要组件工作：
 
 - 图（Graph）——所有的数学操作都在图中完成；操作由节点表示，它们可以创建新的张量
@@ -803,51 +915,62 @@ TensorFlow 围绕三个主要组件工作：
 
 会话和图是独立的；可以运行会话，并可以使用值进行后续计算。这里有一个示例。
 
-## 第一步 – 创建 x 和 y 张量
-```
+### 第一步 – 创建 x 和 y 张量
+
+```python
 x = tf.constant([2])
 y = tf.constant([4])
 ```
 
-## 第二步 – 乘 x 和 y 创建运算符
-```
+### 第二步 – 乘 x 和 y 创建运算符
+
+```python
 multiply = tf.multiply(x, y)
 ```
 
-## 第三步 – 打开会话以便完成所有计算，完成后关闭它
-```
+### 第三步 – 打开会话以便完成所有计算，完成后关闭它
+
+```python
 sess = tf.Session()
 result_1 = sess.run(multiply)
 print(result_1)
 sess.close()
 # Output [8]
 ```
+
 会话也可以在块中创建，优点是会话会自动关闭。
-```
+
+```python
 with tf.Session() as sess:
     result_2 = multiply.eval()
     print(result_2)
 # Output [8]
 ```
+
 此示例展示了你如何在创建会话后查看张量值：
 
-## 检查之前的张量
-```
+### 检查之前的张量
+
+```python
 sess = tf.Session()
 print(sess.run(r1))
 print(sess.run(r2_matrix))
 print(sess.run(r3_matrix))
 # Output 1 [[1, 2], [3, 4]] [[1, 2], [5, 6]]
 ```
-默认情况下，即使创建了张量，变量也是空的。要使用变量，必须使用 `tf.global_variable_initializer()` 对象进行初始化。你可以使用 `run()` 方法检查之前创建的变量：
-```
+
+默认情况下，即使创建了张量，变量也是空的。要使用变量，必须使用 `tf.global_variables_initializer()` 对象进行初始化。你可以使用 `run()` 方法检查之前创建的变量：
+
+```python
 sess.run(tf.global_variables_initializer())
 print(sess.run(var))
 print(sess.run(var_init_1))
 print(sess.run(var_init_2))
 # Output [[-0.05356491 0.75867283]] [[0, 0]] [[10, 20], [30, 40]]
 ```
+
 之前创建的占位符可以馈入真实值，并将数据传递给 `feed_dict()` 方法。以下是获取 `data_placeholder_a` 的平方的方法：
+
 ```python
 import numpy as np
 power_a = tf.pow(data_placeholder_a, 2)
@@ -858,10 +981,9 @@ with tf.Session() as sess:
 # Output [[0.05478134 0.27213147 0.8803037 0.0398424 0.21172127 0.01444725 0.02584014 0.3763949 0.66022706 0.7565559]]
 ```
 
+## 将模型保存到磁盘
 
 
-
-## 5. 将模型保存到磁盘
 
 我们可以将神经网络想象为一个黑盒，而 `TensorBoard` 就是我们查看其内部情况的检查工具。该工具让我们能够看到并理解操作的依赖关系，展示权重计算、损失函数以及许多对理解正在发生的情况至关重要的信息。一旦你能将所有信息整合在一起，你就能看到大局，拥有更好的调试方法，并找到改进的方法。神经网络在预测最佳结果之前，决定了连接神经元的最佳方式以及模型所需的层数。一旦定义了架构，你需要的不仅仅是训练模型——你还需要一些帮助计算预测准确性的指标。我们称这种指标为损失函数，你的目标是尽可能地减少该损失函数。简单来说，损失函数越小，你的模型犯的错误就越少。每个机器学习算法都会根据需要重复计算，直到将损失降低到最低，这需要定义一个学习率。学习率是你期望模型学习的速度——设置得太高，模型学习的时间就会太短，导致无法学习。`TensorBoard` 是查看这些指标并发现任何可能问题的最佳工具之一。神经网络可能需要几周才能找到解决方案，而 `TensorBoard` 会不断更新指标。因此，你无需等到最后就可以看到模型运行得有多如何，这意味着你可以在需要的地方、需要的时间进行更改。在本章中，我们将学习如何在 Windows 和 Mac 上打开 `TensorBoard`——暂时不要担心代码，我们稍后会关注这一点。
 
@@ -879,6 +1001,7 @@ X_train = (np.random.sample((10000,5)))
 y_train = (np.random.sample((10000,1)))
 X_train.shape
 ```
+
 输出：`(10000, 5)`
 
 你稍后将看到的代码将转换你的数据并创建学习模型。注意，我们的学习率等于 `0.1`——将该比率调高，你的模型将无法找到解决方案。在许多使用 `TensorFlow` 的教程中，我们将使用 `TensorFlow estimator`，这是一个包含你所需的数学计算的 API。
@@ -902,7 +1025,9 @@ DNN_reg = tf.estimator.DNNRegressor(
     )
 )
 ```
+
 输出：
+
 ```
 INFO:tensorflow:Using default config.
 INFO:tensorflow:Using config: {'_model_dir': 'train/linreg', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': None, '_save_checkpoints_secs': 600, '_session_config': None, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 100, '_train_distribute': None, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x1818e63828>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1}
@@ -920,7 +1045,9 @@ train_input = tf.estimator.inputs.numpy_input_fn(
 )
 DNN_reg.train(train_input,steps=3000)
 ```
+
 输出：
+
 ```
 INFO:tensorflow:Calling model_fn.
 INFO:tensorflow:Done calling model_fn.
@@ -991,22 +1118,24 @@ INFO:tensorflow:loss = 10.06104, step = 2901
 INFO:tensorflow:loss = 10.73032, step = 3000
 ```
 
-
-
-
 在日志事件准备就绪后，我们现在可以启动 `TensorBoard`。当 `Jupyter` 占用端口 `8888` 时，`TensorBoard` 将运行在端口 `6006` 上。Mac 用户应该使用终端打开 `TensorBoard`，而 Windows 用户应该使用 `Anaconda prompt`。Mac 的情况有所不同。
 
 ```bash
 cd /Users/hello/tuto_TF
 source activate hello-tf
 ```
+
 Windows:
+
 ```bash
 cd C:\Users\Admin\Anaconda3
 activate hello-tf
 ```
+
 确保路径与你的 Notebook 或代码存储的位置匹配。要打开 `TensorBoard`，请使用以下相关代码：
+
 Mac: `tensorboard --logdir=./train/linreg`
+
 Windows: `tensorboard --logdir=.\train\linreg`
 
 可以通过 `http://localhost:6006` 找到 `TensorBoard`，请将该 URL 粘贴到浏览器中。如果你看到类似下面的消息，说明找不到日志文件。请确保 `cd` 指向正确的路径，或者确保日志事件已创建——如果没有，请重新运行代码。你可以使用 `CTRL+C` 关闭 `TensorBoard`。我们将暂时离开 `TensorFlow`，查看三个重要的库，从 `NumPy` 开始。
@@ -1015,83 +1144,111 @@ Windows: `tensorboard --logdir=.\train\linreg`
 
 `NumPy` 是 Python 中用于数据科学、数学、工程和科学编程的最重要的开源库之一，也是执行统计和数学操作的最佳工具之一。这就是为什么它在处理矩阵和多维数组乘法时效果非常好。该库专门为处理随机数、线性代数、傅里叶变换、n 维数组等而构建，并且很容易集成到 `Fortran`、`C` 和 `C++` 中。在本章，我们将查看在使用 `TensorFlow` 时需要的重要 `NumPy` 函数。
 
-为什么选择 NumPy?
-`NumPy` 非常内存内存，这意味着它可以处理大量数据。在重塑和矩阵乘法方面，`NumPy` 便利且快速，`TensorFlow` 在后端充分利用它进行矩阵乘法。
+### 为什么选择 NumPy?
+
+`NumPy` 非常内存高效，这意味着它可以处理大量数据。在重塑和矩阵乘法方面，`NumPy` 便利且快速，`TensorFlow` 在后端充分利用它进行矩阵乘法。
 
 ### 安装 NumPy
+
 大多数情况下，安装 `TensorFlow` 时会自动安装 `NumPy`，但由于某些原因如果没有安装，你可以通过两种方式安装它：
 
 **使用 Anaconda Prompt:**
+
 ```bash
 conda install -c anaconda numpy
 ```
+
 **使用 Jupyter Notebook:**
+
 ```python
 import sys
 !conda install --yes --prefix {sys.prefix} numpy
 ```
+
 要导入 `NumPy` 并检查版本是否正确，请使用以下命令：
+
 ```python
 import numpy as np
 ```
+
 通过这样做，`NumPy` 命名空间被重命名为 `np`，这意味着我们可以使用 `np` 而不是 `numpy` 前缀方法和函数。要检查你使用的是哪个版本，请使用此命令：
+
 ```python
 print(np.__version__)
 ```
 
 ### 创建 NumPy 数组
+
 创建 `NumPy` 数组的最简单方法是使用 Python 列表：
+
 ```python
 myPythonList = [1, 7, 9, 2]
 ```
+
 可以使用 `np.array` 对象将 列表转换为数组：
+
 ```python
 numpy_array_from_list = np.array(myPythonList)
 print(numpy_array_from_list)
 # 输出: array([1, 7, 9, 2])
 ```
+
 在实践中，我们不需要声明列表；可以将操作合并。在实践中，没有必要声明 Python List。
+
 ```python
 a = np.array([1, 7, 2])
 ```
 
 ### 数组上的数学运算
+
 你可以在数组上执行几种数学操作，包括减法、加法、乘法和除法。使用的语法是数组名称、你想的操作，例如：
+
 ```python
 numpy_array_from_list + 10
 # 输出: array([11, 17, 19, 12])
 ```
 
 ### 数组的形状
+
 也可以通过数组后接 `shape` 来检查数组形状。你也可以同样地使用 `dtypes` 来检查类型：
+
 ```python
 import numpy as np
 a = np.array([1, 2, 3])
 print(a.shape)
 print(a.dtype) # int
 ```
+
 整数是整数，即没有小数位。如果使用小数创建数组，类型将从 `int` 变为 `float`：
+
 ```python
 b = np.array([1.1, 2.0, 3.2])
 print(b.dtype) # float
 ```
 
 ### 二维数组
+
 可以使用括号内的逗号 (,) 添加维度：
+
 ```python
 c = np.array([(1, 2, 3), (4, 5, 6)])
 print(c.shape) # (2, 3)
 ```
 
 ### 三维数组
+
 你还可以添加更多维度，例如：
+
 ```python
 d = np.array([[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]])
 print(d.shape) # (2, 2, 3)
 ```
 
 ### np.zeros 和 np.ones
+
 可以创建一个填充 1 和零的矩阵，并在第一次迭代初始化权重时使用它。语法：`numpy.zeros(shape, dtype=float, order='C')` 和 `numpy.ones(shape, dtype=float, order='C')`。在语法中，`shape` 是数组形状，`dtype` 是数据类型（可选的，默认值为 `float64`，`order` 默认为 `C`。
+
+
 
 ```python
 np.zeros((2,2))
@@ -1104,8 +1261,10 @@ np.ones((1,2,3), dtype=np.int16)
 # 输出: array([[[1, 1, 1]]]) ... 等
 ```
 
-### 数据的重塑与扁平化
+## 数据的重塑与扁平化
+
 有时数据需要重塑——它可能太宽了，需要变长：
+
 ```python
 e = np.array([(1, 2, 3), (4, 5, 6)])
 print(e)
@@ -1119,14 +1278,18 @@ e.reshape(3,2)
 #        [3, 4],
 #        [5, 6]])
 ```
+
 某些神经网络需要数组被扁平化，我们可以使用 `flatten()` 方法来实现：
+
 ```python
 e.flatten()
 # 输出: [1, 2, 3, 4, 5, 6]
 ```
 
-### hstack 和 vstack
+## hstack 和 vstack
+
 NumPy 库包含两个好的函数允许你垂直或水平追加数据。让我们通过示例看看它们的工作：
+
 ```python
 f = np.array([1, 2, 3])
 g = np.array([4, 5, 6])
@@ -1139,8 +1302,10 @@ print(np.vstack((f, g)))
 #  [4 5 6]]
 ```
 
-### 生成随机数
+## 生成随机数
+
 如果你想为高斯分布生成随机数，将使用 `numpy.random.normal(loc, scale, size)`。分解如下：
+
 *   `loc`: 均值，中心。
 *   `scale`: 标准差。
 *   `size`: 结果的数量。
@@ -1152,12 +1317,16 @@ print(normal_array)
 #          5.61211317 4.46704244 5.22675736 4.49888936 4.68731125]
 ```
 
-### Asarray
+## Asarray
+
 查看下面的二维矩阵；它有填充 1 的四列：
+
 ```python
 A = np.matrix(np.ones((4,4)))
 ```
+
 你不能更改矩阵值，即使你想改，因为副本是不可变的。
+
 ```python
 np.array(A)[2]=2
 print(A)
@@ -1167,7 +1336,9 @@ print(A)
 #         [1.,1.,1.,1.],
 #         [1.,1.,1.,1]])
 ```
+
 矩阵不是可变的。但你可以通过 `asarray` 对矩阵进行修改；下面的示例显示了使用 `asarray` 将第三行的值改为 2：
+
 ```python
 np.asarray(A)[2]=2
 print(A)
@@ -1178,90 +1349,105 @@ print(A)
 #        [1, 1, 1, 1]])
 ```
 
+## Arange
 
-
-
-
-### Arange
 有时你可能希望某个值在指定的间隔内均匀分布。假设你想要创建从 1 到 10 的值；你可以使用 `arange` 来实现这一点：`numpy.arange(start, stop, step)`。`Start` 和 `Stop` 是间隔的起始和结束值，而 `Step` 表示每个值之间的间隔——默认值为 1。这里有一个示例：`np.arange(1, 11)`。
 
-```
+```python
 array([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 ```
+
 如果你想改变步长，则需要在括号内添加第三个数字：`np.arange(1, 14, 4)`。
 
-```
+```python
 array([ 1, 5, 9, 13])
 ```
 
-### Linspace
+## Linspace
+
 Linspace 用于提供均匀分布的样本：`numpy.linspace(start, stop, num, endpoint)`。`Start` 和 `Stop` 是序列的起始和结束值，`Num` 表示要生成的样本数量（默认为 50），`Endpoint` 如果为 True 则包含最终值，但如果为 False 则不包含停止值。例如，你可以从 1 到 5 创建 10 个均匀分布的值：`np.linspace(1.0, 5.0, num=10)`。
 
-```
+```python
 array([1. , 1.44444444, 1.88888889, 2.33333333, 2.77777778, 3.22222222, 3.66666667, 4.11111111, 4.55555556, 5. ])
 ```
+
 如果你不想在间隔中包含最后一个数字，可以将 `endpoint` 设置为 false：`np.linspace(1.0, 5.0, num=5, endpoint=False)`。
 
-```
+```python
 array([1. , 1.8, 2.6, 3.4, 4.2])
 ```
 
-### LogSpace
+## LogSpace
+
 此将返回在对数尺度上均匀分布的数字，它与 `np.linspace` 共享相同的参数：`np.logspace(3.0, 4.0, num=4)`。
 
-```
+```python
 array([ 1000. , 2154.43469003, 4641.58883361, 10000. ])
 ```
+
 最后，使用 `itemsize` 来检查数组的大小：`x = np.array([1,2,3], dtype=np.complex128)`。
 
-```
+```python
 x.itemsize
 ```
 
-## 索引与切片
+# 索引与切片
+
 NumPy 使切片变得非常简单，在我们的示例中，我们将切片名为 `e` 的矩阵。Python 要求你使用括号来返回列或行：
 
-### 切片
+## 切片
+
 ```python
 e = np.array([(1,2,3), (4,5,6)])
 print(e)
 ```
-```
+
+```python
 [[1 2 3]
 [4 5 6]]
 ```
+
 在 NumPy 中，数组或列必须从 0 开始：
 
-### 第一列
+### 第一行
+
 ```python
 print('First row:', e[0])
 ```
 
-### 第二列
+### 第二行
+
 ```python
 print('Second row:', e[1])
 ```
-```
+
+```python
 First row: [1 2 3]
 Second row: [4 5 6]
 ```
+
 与其他语言类似，在 Python 中，逗号之前的值是行，而右侧的值是列。如果你想选择特定的列，必须在逗号前添加 `:`，使用 `:` 也表示你想获取该列的所有行。
 
 ```python
 print('Second column:', e[:,1])
 ```
-```
+
+```python
 Second column: [2 5]
 ```
+
 如果你想要第 2 行的第一对值，将使用 `:` 选择前两个列：
 
 ```python
 print(e[1,:2])
 ```
+
+```python
 [4 5]
 ```
 
-## 统计函数
+# 统计函数
+
 NumPy 提供了一些统计函数：
 
 | 函数 | NumPy |
@@ -1273,6 +1459,7 @@ NumPy 提供了一些统计函数：
 | 标准差 | `np.std()` |
 
 这些函数的示例：
+
 ```python
 print(np.min(array))
 print(np.max(array))
@@ -1281,10 +1468,12 @@ print(np.median(array))
 print(np.std(array))
 ```
 
-## 线性代数
+# 线性代数
+
 NumPy 允许你使用 `np.dot` 计算点积：
 
 ## 点积：两个数组的积
+
 ```python
 f = np.array([1,2])
 g = np.array([4,5])
@@ -1292,7 +1481,8 @@ np.dot(f, g)
 ```
 
 ## 矩阵乘法
-同样，`np.matmul` 可矩阵乘法：
+
+同样，`np.matmul` 可用于矩阵乘法：
 
 ```python
 h = np.array([[1,2],[3,4]])
@@ -1301,17 +1491,21 @@ np.matmul(h, i)
 ```
 
 ## 行列式
+
 最后，`np.linalg.det()` 可计算行列式——由 NumPy 处理：
 
-```
+```python
 np.linalg.det(i)
 ```
 
-## 第 8 章 Pandas
+# 第 8 章 Pandas
+
 Pandas 是另一个用于处理数据的开源库。它构建在 NumPy 之上，这意味着没有 NumPy 就无法操作。通过 Pandas，你获得了一种创建数据、处理和清洗数据的简单方法，它非常适合时间序列数据。
 
-### 为什么用 Pandas？
+## 为什么用 Pandas？
+
 Pandas 提供以下优势：
+
 * 轻松处理缺失数据
 * 使用 `DataFrame` 处理多维数据，使用 `Series` 处理一维数据
 * 高效切片数据
@@ -1320,55 +1514,67 @@ Pandas 提供以下优势：
 
 你可以看到，Pandas 是最强大的分析库之一，用于分析和处理数据。它给了我们强大且易用的数据结构。
 
-### 安装 Pandas
+## 安装 Pandas
+
 在安装 TensorFlow 时通常会安装 Pandas，但由于某些原因没有安装，你可以通过以下方式安装：
 
 ### Mac
+
 使用 Jupyter Notebook，输入：
+
 ```python
 import sys
 !conda install pandas
 ```
 
 ### Windows
+
 在 Anaconda 提示符中输入：`conda install pandas`
 
 ## 什么是 DataFrame？
+
 DataFrame 是二维数组的标准数据存储结构；列和行（轴）是有标签的，它们以表格格式存储数据——数据在行，名称在列。
 
-### 什么是 Series？
+## 什么是 Series？
+
 Series 也是一种数据结构，这次是一维的。Series 可以是任何数据结构，如字符串、浮点或整数，对于计算或当你想要返回一维数组时非常有用。Series 不能超过一列，并且只有一个参数——`data`，可以是标量值、字典或列表：
 
 ```python
 pd.Series([1., 2., 3.])
 ```
-```
+
+```python
 0    1.0
 1    2.0
 2    3.0
 dtype: float64
 ```
+
 可以使用 `index` 添加索引，有助于你给行命名。长度和列大小应该相等：
 
 ```python
 pd.Series([1., 2., 3.], index=['a', 'b', 'c'])
 ```
+
 现在我们将在 Pandas 中创建一个 series，第三行将具有缺失值。在 Python 中，缺失值被称为 `NaN`（不是数字），并将由 NumPy 创建：`np.nan`。
 
 ```python
 pd.Series([1,2,np.nan])
 ```
-```
+
+```python
 Output 0    1.0
 1    2.0
 2    NaN
 dtype: float64
 ```
 
-### 创建 DataFrame
+## 创建 DataFrame
+
 可以使用 `pd.DataFrame()` 将 NumPy 数组转换为 Pandas DataFrame。你也可以使用 `np.array()` 反向转换。
 
 ### Numpy 到 pandas
+
 ```python
 import numpy as np
 h = np.array([[1,2],[3,4]])
@@ -1377,51 +1583,59 @@ print('Data Frame:', df_h)
 ```
 
 ### Pandas 到 numpy
+
 ```python
 df_h_n = np.array(df_h)
 print('Numpy array:', df_h_n)
 ```
-```
+
+```python
 Data Frame:
    0  1
 0  1  2
 1  3  4
-
 Numpy array: [[1 2] [3 4]]
 ```
+
 Pandas DataFrames 也可以通过字典创建：`dic = {'Name': ["James", "Green"], 'Age': [40, 50]}`。
 
 ```python
 pd.DataFrame(data=dic)
 ```
+
+```python
 0   40  James
 1   50  Green
 ```
 
-### Range Data
+## Range Data
+
 等等，文中说是 `pd.data_range`，但它指的是 `pd.date_range`。
+
 在 Pandas 中，你还会发现一个实用的 API 可以创建日期范围：`pd.date_range(date,period,frequency)`。有三个参数——起始日期、周期（如果指定了结束日期则可选）以及频率——D（天）、M（月）和 Y（年）。
 
 ### 创建日期
-## 天
+
+#### 天
+
 ```python
 dates_d = pd.date_range('20200101', periods=6, freq='D')
 ```
 
-
-
-
-
 ```python
-print('Day:', dates_d) Output Day: DatetimeIndex(['2020-01-01', '2020-01-02', '2020-01-03', '2020-01-04', '2020-01-05', '2020-01-06'], dtype='datetime64[ns]', freq='D')
+print('Day:', dates_d)
+# Output Day: DatetimeIndex(['2020-01-01', '2020-01-02', '2020-01-03', '2020-01-04', '2020-01-05', '2020-01-06'], dtype='datetime64[ns]', freq='D')
 ```
 
-### 月份
-
-dates_m = pd.date_range('20200101', periods=6, freq='M')
+#### 月份
 
 ```python
-print('Month:', dates_m) Output Month: DatetimeIndex(['2020-01-31', '2020-02-28', '2020-03-31', '2020-04-30','2020-05-31', '2020-06-30'], dtype='datetime64[ns]', freq='M')
+dates_m = pd.date_range('20200101', periods=6, freq='M')
+```
+
+```python
+print('Month:', dates_m)
+# Output Month: DatetimeIndex(['2020-01-31', '2020-02-28', '2020-03-31', '2020-04-30','2020-05-31', '2020-06-30'], dtype='datetime64[ns]', freq='M')
 ```
 
 ## 检查数据
@@ -1445,6 +1659,7 @@ df = pd.DataFrame(random,
 ```
 
 ### 第三步 – 使用 head() 函数
+
 ```python
 df.head(3)
 ```
@@ -1456,6 +1671,7 @@ df.head(3)
 | 2020-03-31 | -0.519179 | 0.080984 | -1.454334 | 1.314947 |
 
 ### 第四步 – 使用 tail 函数
+
 ```python
 df.tail(3)
 ```
@@ -1483,26 +1699,33 @@ df.describe()
 | 75% | 0.802237 | 0.732131 | 0.421296 | 1.178404 |
 | max | 1.139433 | 1.318510 | 0.857751 | 1.615822 |
 
-### 切片数据
+## 切片数据
 
 为了完成这个简短教程，这里是切片 DataFrame 的方法。最简单的方法是通过列名从指定列提取数据：
 
 ### 使用名称
+
 ```python
 df['A']
 ```
+
+```python
 2020-01-31 -0.168655
 2020-02-28 0.689585
 2020-03-31 0.767534
 2020-04-30 0.557299
 2020-05-31 -1.547836
 2020-06-30 0.511551 Freq: M, Name: A, dtype: float64
+```
+
+
 
 如果你需要多列，需要双层括号——第一对表示你想要列，第二对指定你想要的列：
 
 ### 多列
+
 ```python
-df.loc[:,['A','B']]
+df.loc[:, ['A', 'B']]
 ```
 
 | | A | B |
@@ -1517,6 +1740,7 @@ df.loc[:,['A','B']]
 Pandas 提供了另一种选择多行或多列的方法——`iloc()`。它不使用列而是使用索引——下面的示例将给你相同的 DataFrame：
 
 ### 使用切片选择行
+
 ```python
 df.iloc[0:2]
 ```
@@ -1531,6 +1755,7 @@ df.iloc[0:2]
 | 2020-06-30 | 0.511551 | 1.572085 |
 
 ### 删除列
+
 可以使用 `drop()` 删除列：
 
 ```python
@@ -1539,7 +1764,7 @@ df.drop(columns=['A', 'C'])
 
 ### 合并
 
-两个 DataFrame 可以 `pd.concat()` 进行并。首先，你需要创建两个 DataFrame：
+两个 DataFrame 可以 `pd.concat()` 进行合并。首先，你需要创建两个 DataFrame：
 
 ```python
 import numpy as np
@@ -1555,7 +1780,7 @@ df2 = pd.DataFrame({'name': ['Andrew', 'Green'],
 最后，将它们进行合并：
 
 ```python
-df_concat = pd.concat([df1,df2])
+df_concat = pd.concat([df1, df2])
 ```
 
 ### 去重
@@ -1584,27 +1809,27 @@ df_concat.rename(columns={"name": "Surname", "Age": "Age_ppl"})
 
 ### 导入 CSV 文件
 
-将在 TensorFlow 教程中使用 adult 数据集，这是一个分类任务的常用数据集——你可以在 https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data 找到它，数据为 CSV 格式。该数据集具有以下分类值：
+将在 TensorFlow 教程中使用 adult 数据集，这是一个分类任务的常用数据集——你可以在 `https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data` 找到它，数据为 CSV 格式。该数据集具有以下分类值：
 
-*   education
-*   marital
-*   native_country
-*   occupation
-*   race
-*   relationship
-*   sex
-*   workclass
+*   `education`
+*   `marital`
+*   `native_country`
+*   `occupation`
+*   `race`
+*   `relationship`
+*   `sex`
+*   `workclass`
 
 以及这些连续变量：
 
-*   age
-*   capital_gain
-*   capital_loss
-*   education_num
-*   fnlwgt
-*   hours_week
+*   `age`
+*   `capital_gain`
+*   `capital_loss`
+*   `education_num`
+*   `fnlwgt`
+*   `hours_week`
 
-导入 CSV 数据集使用 `pd.read_csv()`，语法为：`pandas.read_csv(filepath_or_buffer,sep=', ',names=None,index_col=None,skipinitialspace=False)`。请此示例：
+导入 CSV 数据集使用 `pd.read_csv()`，语法为：`pandas.read_csv(filepath_or_buffer, sep=', ', names=None, index_col=None, skipinitialspace=False)`。请看此示例：
 
 ```python
 import pandas as pd
@@ -1613,37 +1838,30 @@ import pandas as pd
 ## 定义路径数据
 
 ```python
-COLUMNS = ['age','workclass', 'fnlwgt', 'education', 'education_num', 'marital',
-```
-
-
-
-
-
-```python
-'occupation', 'relationship', 'race', 'sex', 'capital_gain', 'capital_loss', 'hours_week', 'native_country', 'label'
-```
+COLUMNS = ['age', 'workclass', 'fnlwgt', 'education', 'education_num', 'marital',
+           'occupation', 'relationship', 'race', 'sex', 'capital_gain', 'capital_loss', 'hours_week', 'native_country', 'label']
 
 PATH = "https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data"
 
 df_train = pd.read_csv(PATH,
                       skipinitialspace=True,
-                      names = COLUMNS,
+                      names=COLUMNS,
                       index_col=False)
+
 print(df_train.shape)
 # 输出 (32561, 15)
 ```
 
 ## Groupby
 
-`groupby()` 方法是查看数据最简单的方法，它可以帮助提供分组数据的摘要。`groupby()` 中的方法包括包括：
+`groupby()` 方法是查看数据最简单的方法，它可以帮助提供分组数据的摘要。`groupby()` 中的方法包括：
 
 * `count`: 计数 
 * `max`: 最大值 
 * `mean`: 平均值 
 * `median`: 中位数 
 * `min`: 最小值 
-* `standard deviation`: 标准差 (sdt) 
+* `standard deviation`: 标准差 (std) 
 
 在 `groupby()` 中，你使用想要应用该方法的特定列。这里有一个使用 adult 数据集的单分组示例。它给出了按收入类型（超过或低于 5 万美元）划分的每个连续变量的平均值。
 
@@ -1657,8 +1875,12 @@ df_train.groupby(['label']).mean()
 | >50K | 44.249841 | 188005.00000 | 11.611657 | 4006.142456 | 195.001530 | 45.473026 |
 
 你按家庭类型获取年龄最小值：
+
 ```python
 df_train.groupby(['label'])['age'].min()
+```
+
+```
 ## label
 # <=50K    17
 # >50K     19
@@ -1666,8 +1888,12 @@ df_train.groupby(['label'])['age'].min()
 ```
 
 也可以使用多列来进行分组。例如，你可以使用婚姻状况和家庭类型来获取最大资本：
+
 ```python
 df_train.groupby(['label', 'marital'])['capital_gain'].max()
+```
+
+```
 # label  marital
 # <=50K   Divorced      34095
 # Married-AF-spouse  2653
@@ -1736,8 +1962,9 @@ pip install git+git://github.com/scikit-learn/scikit-learn.git
 列表将手动填充，以便你理解我们将要使用的列。使用以下代码可以更快地构建变量：
 
 ```python
-categorical_features = df_train.iloc[:,:-1].select_dtypes('object').columns
+categorical_features = df_train.iloc[:, :-1].select_dtypes('object').columns
 print(categorical_features)
+
 continuous_features = df_train.get_numeric()
 print(continuous_features)
 ```
@@ -1746,10 +1973,15 @@ print(continuous_features)
 
 ```python
 import pandas as pd
+
 COLUMNS = ['workclass', 'fnlwgt', 'education_num', 'marital', 'occupation', 'relationship', 'sex', 'capital_gain', 'capital_loss', 'hours_week', 'native_country', 'label']
+
 PATH = "https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data"
-df_train = pd.read_csv(PATH, skipinitialspace=True, names = COLUMNS, index_col=False)
+
+df_train = pd.read_csv(PATH, skipinitialspace=True, names=COLUMNS, index_col=False)
+
 df_train[features] = df_train[features].astype('float64')
+
 print(df_train.describe())
 ```
 
@@ -1768,6 +2000,9 @@ print(df_train.describe())
 
 ```python
 df_train.native_country.value_counts()
+```
+
+```
 # United-States      2170
 # Mexico             43
 # ?                  53
@@ -1789,35 +2024,30 @@ df_train.native_country.value_counts()
 # Japan              62
 # Poland             60
 # Colombia           59
+# Taiwan             51
+# Haiti              44
+# Iran               43
+# Portugal           37
+# Nicaragua          34
+# Peru               31
+# France             29
+# Laos               29
+# Ecuador            28
+# Ireland            24
+# Hong Kong          20
+# Cambodia           19
+# Trinidad and Tobago 19
+# Thailand           18
+# Laos               18
+# Yugoslavia         16
+# Outlying-US(Guam-USVI-etc) 14
+# Honduras           13
+# Hungary            13
+# Scotland           12
+# Holland-Netherlands 1
 ```
 
-
-
-
-
-- 台湾: 51
-- 海地: 44
-- 伊朗: 43
-- 葡萄牙: 37
-- 尼加拉瓜: 34
-- 秘鲁: 31
-- 法国: 29
-- 腊: 29
-- 厄瓜多尔: 28
-- 爱尔兰: 24
-- 香港: 20
-- 柬埔寨: 19
-- 特立尼达和多巴哥: 19
-- 泰国: 18
-- 老挝: 18
-- 南斯拉夫: 16
-- 美国海外属地（关岛-美属维尔群岛等）: 14
-- 洪拉斯: 13
-- 匈牙利: 13
-- 苏格兰: 12
-- 荷兰: 1
-
-Name: `native_country`, dtype: `int64`。以下内容可以删除，因为它们没有实际作用：## 掉荷兰，它只有一行
+Name: `native_country`, dtype: `int64`。以下内容可以删除，因为它们没有实际作用：## 删除荷兰，它只有一行
 
 ```python
 df_train = df_train[df_train.native_country != "Holland-Netherlands"]
@@ -1825,16 +2055,21 @@ df_train = df_train[df_train.native_country != "Holland-Netherlands"]
 
 接下来，连续特征的位置存储在一个列表中——这很快就会需要。接下来的代码遍历存储在 `CONTI_FEATURES` 中的每一个列名；我将获取其位置（数字）并将其添加到 `conti_features` 列表中：
 
-## 获取类别特征的列索引
+## 获取连续特征的列索引
 
 ```python
 conti_features = []
+
 for i in CONTI_FEATURES:
     position = df_train.columns.get_loc(i)
     conti_features.append(position)
+
 print(conti_features)
 ```
-`[0, 2, 10, 4, 11, 12]`
+
+```
+[0, 2, 10, 4, 11, 12]
+```
 
 接下来的代码对分类变量执行相同的操作：
 
@@ -1842,12 +2077,21 @@ print(conti_features)
 
 ```python
 categorical_features = []
+
 for i in CATE_FEATURES:
-    position = df_train.columns.get_loc(i)
-    categorical_features.append(position)
-print(categorical_features)
 ```
-`[1, 3, 5, 6, 7, 8, 9, 13]`
+
+
+
+position = df_train.columns.get_loc(i)
+
+categorical_features.append(position)
+
+print(categorical_features)
+
+```
+[1, 3, 5, 6, 7, 8, 9, 13]
+```
 
 最后，查看数据集，你会发现每个类别特征实际上都是字符串。模型不能赋予字符串值；必须使用虚拟变量（dummy variable）进行转换。
 
@@ -1860,6 +2104,7 @@ df_train.head(5)
 ```python
 print(df_train[CATE_FEATURES].nunique(), 'There are', sum(df_train[CATE_FEATURES].nunique()), 'groups in the entire dataset')
 ```
+
 workclass: 9
 - `education`: 16
 - `marital`: 7
@@ -1875,18 +2120,22 @@ workclass: 9
 for i in CATE_FEATURES:
     print(df_train[i].unique())
 ```
-`['State-gov', 'Self-emp-not-inc', 'Private', 'Federal-gov', 'Local-gov', 'Self-emp-inc', 'Never-worked', 'Bachelors', 'HS-grad', 'Masters', 'Some-college', 'Assoc-adem', 'Assoc-voc', 'Doctorate', 'Prof-school', '5th', '6th', '7th', '8th', '9th', '10th', '1st', '2nd', '3rd', '4th', 'Never-married', 'Married-civ', 'Divorced', 'Married-spouse-absent', 'Separated', 'Married-spouse', 'Widowed', 'clerical', 'manager', 'Handlers-clean', 'specialty', 'Sales', 'repair', 'Transport-moving', 'Farming-fishing', 'Machine-op', 'Tech-support', 'Protective-serv', 'Armed-Forces', 'Priv-house-serv', 'Not-in-family', 'Husband', 'Wife', 'Own-child', 'Unmarried', 'Other-relative', 'White', 'Black', 'Asian-Islander', 'Amer-Indian', 'Eskimo', 'Male', 'Female', 'United-States', 'Cuba', 'India', '?', 'South-Rico', 'Honduras', 'England', 'Germany', 'Iran', 'Philippines', 'Italy', 'Poland', 'Cambodia', 'Thailand', 'Ecuador', 'Taiwan', 'Haiti', 'Portugal', 'Dominican-Republic', 'El-Salvador', 'France', 'Guatemala', 'Japan', 'Yugoslavia', 'Outlying-US(Guam-USVI-etc)', 'Scotland', 'Trinidad & Tobago', 'Greece', 'Nicaragua', 'Vietnam', 'Hong', 'Hungary']`
+
+```
+['State-gov', 'Self-emp-not-inc', 'Private', 'Federal-gov', 'Local-gov', 'Self-emp-inc', 'Never-worked', 'Bachelors', 'HS-grad', 'Masters', 'Some-college', 'Assoc-adem', 'Assoc-voc', 'Doctorate', 'Prof-school', '5th', '6th', '7th', '8th', '9th', '10th', '1st', '2nd', '3rd', '4th', 'Never-married', 'Married-civ', 'Divorced', 'Married-spouse-absent', 'Separated', 'Married-spouse', 'Widowed', 'clerical', 'manager', 'Handlers-clean', 'specialty', 'Sales', 'repair', 'Transport-moving', 'Farming-fishing', 'Machine-op', 'Tech-support', 'Protective-serv', 'Armed-Forces', 'Priv-house-serv', 'Not-in-family', 'Husband', 'Wife', 'Own-child', 'Unmarried', 'Other-relative', 'White', 'Black', 'Asian-Islander', 'Amer-Indian', 'Eskimo', 'Male', 'Female', 'United-States', 'Cuba', 'India', '?', 'South-Rico', 'Honduras', 'England', 'Germany', 'Iran', 'Philippines', 'Italy', 'Poland', 'Cambodia', 'Thailand', 'Ecuador', 'Taiwan', 'Haiti', 'Portugal', 'Dominican-Republic', 'El-Salvador', 'France', 'Guatemala', 'Japan', 'Yugoslavia', 'Outlying-US(Guam-USVI-etc)', 'Scotland', 'Trinidad & Tobago', 'Greece', 'Nicaragua', 'Vietnam', 'Hong', 'Hungary']
+```
 
 训练集将有 101 列，加上 7 个连续特征。Scikit-learn 完成了转换：
 - 字符串被转换为 ID；由 `LabelEncoder` 函数完成此操作。
 - 每个 ID 被转置为列——101 列将捕捉类别特征中的分组，由 `OneHotEncoder` 函数完成。
 
-### 第二步——创建训练和测试集
+## 第二步——创建训练和测试集
 
 现在我们需要将数据集分成两部分——80% 用于训练，20% 用于测试。使用 `train_test_split` 执行此操作，传递两个参数——特征的 DataFrame 和标签的 DataFrame。`test_size` 将帮助指定测试集的大小：
 
 ```python
 from sklearn.model_selection import train_test_split
+
 X_train, X_test, y_train, y_test = train_test_split(
     features,
     df_train.label,
@@ -1894,13 +2143,17 @@ X_train, X_test, y_train, y_test = train_test_split(
     random_state=0
 )
 ```
+
 ```python
 X_train.head(5)
 print(X_train.shape, X_test.shape)
 ```
-`(26048, 14) (6512, 14)`
 
-### 第三步——构建管道
+```
+(26048, 14) (6512, 14)
+```
+
+## 第三步——构建管道
 
 我们通过管道将数据传递模型。在示例中，我们需要对连续变量进行标准化并转换类别数据。可以在管道中执行任何操作，包括创建新变量。
 
@@ -1929,7 +2182,10 @@ preprocess = make_column(
 ```python
 preprocess.fit_transform(X_train).shape
 ```
-`(26048, 107)`
+
+```
+(26048, 107)
+```
 
 你的数据转换器现在准备就绪；我们可以使用 `pipeline` 构建管道，转换数据并将其交给逻辑回归：
 
@@ -1946,29 +2202,31 @@ model = pipeline(
 model.fit(X_train, y_train)
 print("logistic regression score: %f" % model.score(X_test, y_test))
 ```
-`logistic regression score: 0.850891`
+
+```
+logistic regression score: 0.850891
+```
 
 最后，`predict_proba` 用于类别预测，返回每个类的概率：
 
 ```python
 model.predict_proba(X_test)
 ```
+
 ```python
 array([[0.83576663, 0.16423337], [0.94582765, 0.05417235], [0.64760587, 0.35239413], ...])
 ```
 
-
-
-
-
-### 第四步 – 管道与网格搜索
+## 第四步 – 管道与网格搜索
 
 超参数调优是一项枯燥的工作。你可以通过改变训练集的大小并评估性能，为了查看评分指标，重复十次。这太耗时间了。`Scikit-learn` 有一个非常有用的函数用于调优交叉验证：
 
 ### 交叉验证
-这意味着在训练进行期间，训练集会被划分为 `n` 折，并对模型进行 `n` 次评估。假设我们设置 `cv=10` —— 集合将被训练并评估 10 次。每次随机选择 9  折进行训练，最后 1  折用于评估。
+
+这意味着在训练进行期间，训练集会被划分为 `n` 折，并对模型进行 `n` 次评估。假设我们设置 `cv=10` —— 集合将被训练并评估 10 次。每次随机选择 9 折进行训练，最后 1 折用于评估。
 
 ### 网格搜索
+
 每个分类器都有一个或多个需要训练的超参数。你可以尝试不同的值，或者使用参数网格。可以使用 `GridSearchCV` 对象配合你创建的字典来存储用于调优的超参数。超参数与其值一起列表。例如，以下内容可以帮助你调优 `C` 参数：`'logisticregression__C': [0.1, 1.0, 1.0]`：名称在前（小写），接两个下划线，然后是参数名。模型会尝试这四个值 —— 0.001, 0.01, 0.1, 1。使用 10 折来训练模型：
 
 ```python
@@ -1980,7 +2238,7 @@ param_grid = {
 }
 ```
 
-使用 `GridSearchCV`  `cv` 和参数网格来训练模型：
+使用 `GridSearchCV` `cv` 和参数网格来训练模型：
 
 ```python
 ### 训练模型
@@ -1997,7 +2255,7 @@ GridSearchCV(cv=10, error_score='raise-deprecating',
   estimator=Pipeline(memory=None,
   steps=[('columntransformer', ColumnTransformer(n_jobs=1, remainder='drop', transformer_weights=None,
   transformers=[('standardscaler', StandardScaler(copy=True, with_mean=True, with_std=True), [0, 2, 10, 4, 11]), ('onehotencoder', OneHotEncoder(categorical_features=None, categories=None,ty='l2', random_state=None, solver='liblinear', tol=0.0001,
- verbose=0, warm_start=False)])),
+ verbose=0, warm_start=False)]))),
   fit_params=None, iid=False, n_jobs=1,
   param_grid={'logisticregression__C': [0.001, 0.01, 0.1, 1.0]},
   pre_dispatch='2*n_jobs', refit=True, return_train_score='warn',
@@ -2012,9 +2270,12 @@ array([[0.8357667, 0.1642332],
  [0.64760416, 0.3523958],
  ..., [0.99639224,0.0036076],
  [0.02072033,0.97927967],
- [0.56782222,0.43217778]])```
+ [0.56782222,0.43217778]])
+```
 
-# XGBoost Model 是优于随机森林的顶级分类器之一。这是一个非常有挑战性的分类器，因为有很多参数需要调优 —— `GridSearchCV` 可以选择参数，但我们将查看另一种更快的方法。`RandomizedSearchCV` 允许你在每次迭代中选择超参数值。例如，如果使用 1000 次迭代，则需要评估 1000 种组合。必须导入 `XGBoost`。使用 `pip` 执行以下命令：
+# XGBoost Model
+
+`XGBoost Model` 是优于随机森林的顶级分类器之一。这是一个非常有挑战性的分类器，因为有很多参数需要调优 —— `GridSearchCV` 可以选择参数，但我们将查看另一种更快的方法。`RandomizedSearchCV` 允许你在每次迭代中选择超参数值。例如，如果使用 1000 次迭代，则需要评估 1000 种组合。必须导入 `XGBoost`。使用 `pip` 执行以下命令：
 
 ```python
 import sys
@@ -2047,6 +2308,7 @@ model_xgb = make_pipeline(
                           objective='binary:logistic',
                           silent=True,
                           nthread=1)
+)
 ```
 
 `Stratified K-fold` 交叉验证器可能用于改进交叉验证。构建三折会加快计算，但质量会降低。你可以通过选择五折或十折来改进。使用四次迭代训练模型：
@@ -2083,6 +2345,13 @@ random_search.fit(X_train, y_train)
 [CV] xgb__max_depth=3, xgb__gamma=0.5, score=0.8706519235199263, total= 1.0min
 [CV] xgb__max_depth=4, xgb__gamma=0.5 ............
 [CV] xgb__max_depth=3, xgb__gamma=1 ............
+```
+
+
+
+### 模型结果与日志
+
+```
 [CV] xgb__max_depth=4, xgb__gamma=0.5, score=0.8735460094437406, total= 1.3min
 [CV] xgb__max_depth=3, xgb__gamma=1 ............
 [CV] xgb__max_depth=3, xgb__gamma=1, score=0.8722791661868018, total= 57.7s
@@ -2095,18 +2364,13 @@ random_search.fit(X_train, y_train)
 [CV] xgb__max_depth=4, xgb__gamma=1 ............
 [CV] xgb__max_depth=3, xgb__gamma=1, score=0.8707671043538355, total= 1.0min
 [CV] xgb__max_depth=4, xgb__gamma=1, score=0.8729701715996775, total= 1.2min
-```
 [Parallel(n_jobs=4)]: Done 10 out of 12 | elapsed: 3.6min remaining: 43.5s
-
-
-
-
-
-### 模型结果与日志
+```
 
 ```text
 [CV] xgbclassifier__max_depth=4, xgbclassifier__gamma=1, score=0.8736611770125533, total= 1.2min
-[CV] xgbclassifier__max_depth=4, xgbclassifier__gamma=1, score=0.8692697535130154, total= 1.2min [Parallel(n_jobs=4)]: Done 12 out of 12 | elapsed: 3.6min finished
+[CV] xgbclassifier__max_depth=4, xgbclassifier__gamma=1, score=0.8692697535130154, total= 1.2min
+[Parallel(n_jobs=4)]: Done 12 out of 12 | elapsed: 3.6min finished
 ```
 
 ```text
@@ -2122,16 +2386,19 @@ RandomizedSearchCV(cv=<generator object _BaseKFold.split at 0x1101eb830>,
       reg_alpha=0, reg_lambda=1, scale_pos_weight=1, seed=None,
       silent=True, subsample=1))]),
                    fit_params=None, iid='warn', n_iter=4, n_jobs=4,
-                   param_distributions={'xgbclassifier__gamma': [0.5, 1], 'xgbclassifier__max_depth': [3, 4]}, 
+                   param_distributions={'xgbclassifier__gamma': [0.5, 1], 'xgbclassifier__max_depth': [3, 4]},
                    pre_dispatch='2*n_jobs', random_state=1001, refit=True,
                    return_train_score='warn', scoring='accuracy', verbose=3)
 ```
 
 ```python
-XGBoost 的得分明显比上一个回归更好：print("Best parameter", random_search.best_params_)
+XGBoost 的得分明显比上一个回归更好：
+print("Best parameter", random_search.best_params_)
 print("best logistic regression from grid search: %f" % random_search.best_estimator_.score(X_test, y_test))
+
 Best parameter {'xgbclassifier__max_depth': 3, 'xgbclassifier__gamma': 0.5}
 best logistic regression from grid search: 0.873157
+
 random_search.best_estimator_.predict(X_test)
 array(['<=50K', '<=50K', '<=50K', ..., '<=50K', '>50K', '<=50K'], dtype=object)
 ```
@@ -2139,6 +2406,7 @@ array(['<=50K', '<=50K', '<=50K', ..., '<=50K', '>50K', '<=50K'], dtype=object)
 ### 在 Scikit-Learn 中使用 MLPClassifier 创建 DNN
 
 最后，Scikit-learn 也可以用于深度学习算法——可以在 `MLPClassifier` 中找到分类器：`from sklearn.neural_network import MLPClassifier`。该算法定义如下：
+
 - `Adam` 求解器
 - `ReLu` 激活函数
 - `alpha = 0.0001`
@@ -2153,10 +2421,12 @@ model_dnn = make_pipeline(
                   activation='ReLu',
                   batch_size=150,
                   hidden_layer_sizes=(200, 100),
-                  random_state=1))
+                  random_state=1)
+)
 ```
 
 可以通过更改层数来改进模型：`model_dnn.fit(X_train, y_train)`。
+
 ```python
 print("DNN score: %f" % model_dnn.score(X_test, y_test))
 DNN score: 0.82153
@@ -2164,31 +2434,47 @@ DNN score: 0.82153
 
 ### 使用 LIME 建立对模型信任
 
-你现在需要使用一个工具来信任你的模型，最好的工具被称为 `LIME – Local Interpretable Model-Agnostic Explations`（局部可解释模型无关解释）。就像医生不能信任计算机出的诊断一样，你不能总是信任你的模型；要做到这一点，你需要理解用于预测的特征——LIME 可以告诉你这些特征是什么。
+你现在需要使用一个工具来信任你的模型，最好的工具被称为 `LIME – Local Interpretable Model-Agnostic Explanations`（局部可解释模型无关解释）。就像医生不能信任计算机出的诊断一样，你不能总是信任你的模型；要做到这一点，你需要理解用于预测的特征——LIME 可以告诉你这些特征是什么。
 
 ### 数据准备
 
-在运行 LIME 之前，你需要完成几件事，其中是安装 `lime`——使用 `pip` 执行。为了在本地近似模型，LIME 使用了一个名为 `LimeTabularExplainer` 的对象。这需要：
+在运行 LIME 之前，你需要完成几件事，其中之一是安装 `lime`——使用 `pip` 执行。为了在本地近似模型，LIME 使用了一个名为 `LimeTabularExplainer` 的对象。这需要：
+
 - NumPy 格式的数据集
 - 特征名称 – `feature_names`
 - 类名称 – `class_names`
 - 类别特征列 – `categorical_features`
 - 类别组名称
 
-创建一个 NumPy 训练集：`df_train` 可以从 Pandas 复制并转换为 NumPy：`df_train.head(5)` `df_lime = df_train.head(3)` `unique()` 对象允许你获取标签 `class_names = df_lime.label.unique() array(['<=50K', '>50K'], dtype=object)`
+创建一个 NumPy 训练集：`df_train` 可以从 Pandas 复制并转换为 NumPy：
 
-# 类别特征列索引
+```python
+df_train.head(5)
+df_lime = df_train.head(3)
+```
+
+`unique()` 对象允许你获取标签：
+
+```python
+class_names = df_lime.label.unique()
+array(['<=50K', '>50K'], dtype=object)
+```
+
+#### 类别特征列索引
 
 你之前使用过一种方法获取组名，现在可以使用相同的方法；`LabelEncoder` 用于对标签进行编码，并在每个类别特征上重复：
 
 ```python
 import sklearn.preprocessing as preprocessing
+
 categorical_names = {}
+
 for feature in CATE_FEATURES:
     le = preprocessing.LabelEncoder()
     le.fit(df_lime[feature])
     df_lime[feature] = le.transform(df_lime[feature])
     categorical_names[feature] = le.classes_
+
 print(categorical_names)
 ```
 
@@ -2223,21 +2509,20 @@ X_train_lime, X_test_lime, y_train_lime, y_test_lime = train_test_split(
 )
 ```
 
-
-
-
-
 ```python
 xgboost.XGBClassifier(max_depth=3,
                       gamma=0.5,
                       n_estimators=600,
                       objective='binary:logistic',
                       silent=True,
-                      nthread=1))
+                      nthread=1)
+
 model_xgb.fit(X_train_lime, y_train_lime)
 ```
 
-`/Users/Thomas/anaconda3/envs/hello-tf/lib/python3.6/site-packages/sklearn/preprocessing/_encoders.py:351: FutureWarning: The handling of integer data will change in version 0.22. Currently, the categories are determined based on the range [0, max(values)], while in the future, they will be determined based on the unique values. If you want the future behavior and silence this warning, you can specify "categories='auto'."In case you used a LabelEncoder before this OneHotEncoder to convert the categories to integers, then you can now use the OneHotEncoder directly. warnings.warn(msg, FutureWarning)`
+```text
+/Users/Thomas/anaconda3/envs/hello-tf/lib/python3.6/site-packages/sklearn/preprocessing/_encoders.py:351: FutureWarning: The handling of integer data will change in version 0.22. Currently, the categories are determined based on the range [0, max(values)], while in the future, they will be determined based on the unique values. If you want the future behavior and silence this warning, you can specify "categories='auto'."In case you used a LabelEncoder before this OneHotEncoder to convert the categories to integers, then you can now use the OneHotEncoder directly. warnings.warn(msg, FutureWarning)
+```
 
 ```python
 Pipeline(memory=None,
@@ -2249,14 +2534,19 @@ Pipeline(memory=None,
 
 你会看到一个警告，告诉你在 pipeline 之前不需要创建标签编码器。如果你正在使用 LIME，请继续使用这种方法；否则，请使用之前的方法。
 
-```python
-print("best logistic regression from grid search: %f" % model_xgb.score(X_test_lime, y_test_lime))
-```
 
+
+print("best logistic regression from grid search: %f" % model_xgb.score(X_test_lime, y_test_lime))
+
+```
 网格搜索的最佳逻辑回归：`0.73157`
+```
 
 ```python
 model_xgb.predict_proba(X_test_lime)
+```
+
+```
 array([[7.9646105e-01, 2.0353897e-01],
        [9.5173013e-01, 4.8269872e-02],
        [7.9344827e-01, 2.0655173e-01],
@@ -2275,6 +2565,9 @@ temp['wrong'] = temp['label'] != temp['predicted']
 temp = temp.query('wrong==True').drop('wrong', axis=1)
 temp = temp.sort_values(by=['label'])
 temp.shape
+```
+
+```
 (826, 16)
 ```
 
@@ -2286,6 +2579,9 @@ predict_fn = lambda x: model_xgb.predict_proba(x).astype(float)
 
 ```python
 X_test_lime.dtypes
+```
+
+```
 age             float64
 workclass        int64
 fnlw            float64
@@ -2305,6 +2601,9 @@ dtype: object
 
 ```python
 predict_fn(X_test_lime)
+```
+
+```
 array([[7.96461046e-01, 2.03538969e-01],
        [9.51730132e-01, 4.82698716e-02],
        [7.93448269e-01, 2.06551731e-01],
@@ -2320,9 +2619,13 @@ Pandas dataframe 转换为 NumPy 数组：
 X_train_values = X_train_values = y_train_values
 X_test_values = X_test_lime.values
 y_test_values = y_test_lime.values
+```
 
 ```python
 model_xgb.predict_proba(X_test_lime)
+```
+
+```
 array([[7.9646105e-01, 2.0353897e-01],
        [9.5173013e-01, 4.8269872e-02],
        [7.9344827e-01, 2.0655173e-01],
@@ -2338,7 +2641,7 @@ LIME 解释器：
 print(features, class_names, categorical_features, categorical_names)
 ```
 
-```python
+```
 {'workclass': ['?', 'Federal-gov', 'Never-worked', 'Private', 'Self-emp-inc', 'Self-emp-not-inc', 'State-gov'],
  'education': ['10th', '12th', '1st-4th', '5th', '6th', '7th', '8th', '9th', 'Assoc-dm', 'Assoc-voc', 'Doctorate', 'HS-grad', 'Masters', 'Preschool', 'Some-college'],
  'marital': ['Divorced', 'Married', 'Married-spouse', 'Married-spouse-absent', 'Never-married', 'Separated', 'Widowed'],
@@ -2349,8 +2652,10 @@ print(features, class_names, categorical_features, categorical_names)
  'native_country': ['?', 'Canada', 'China', 'Cuba', 'Dominican-Republic', 'El-Salvador', 'England', 'France', 'Germany', 'Greece', 'Guatemala', 'Haiti', 'Honduras', 'Hong', 'Hungary', 'India', 'Ireland', 'Italy', 'Jamaica', 'Japan', 'Laos', 'Mexico', 'Nicaragua', 'Outlying-US(Guam-USVI-etc)', 'Peru', 'Philippines', 'Poland', 'Portugal', 'Puerto-Rico', 'Scotland', 'South', 'Taiwan', 'Thailand', 'Trinidad & Tobago', 'United-States', 'Vietnam', 'Yugoslavia']}
 ```
 
+```python
 import lime
 import lime.lime_tabular
+```
 
 ### 训练应该是标签编码而不是独热编码
 
@@ -2370,12 +2675,15 @@ import numpy as np
 np.random.seed(1)
 i = 100
 print(y_test_lime.iloc[i])
->50K
-X_test_lime[i]
 ```
 
+```
+>50K
+```
 
-
+```python
+X_test_lime[i]
+```
 
 你可以使用 `explainer_instance` 查看模型解释：`exp = explainer.explain_instance(X_test_lime[i], predict_fn, num_features=6)`
 
@@ -2485,23 +2793,23 @@ prediction_set = pd.read_csv("E:/boston_predict.csv", skipinitialspace=True,rows
 ```python
 print(training_set.shape, test_set.shape, prediction_set.shape)
 ```
+
 输出：
-`(400, 10) (100, 10) (6, 10)`
+
+```
+(400, 10) (100, 10) (6, 10)
+```
 
 标签 (`y`) 在数据集中，因此我们需要定义另外两个列表。一个包含特征，一个包含标签名称。这些将告知估计器哪些是特征和标签名称：
 
 ```python
-FEATURES = ["crim", "zn", "indus", "nox", "rm"]
+FEATURES = ["crim", "zn", "indus", "nox", "rm",
+            "age", "dis", "tax", "ptratio"]
+LABEL = "medv"
 ```
 
-
-
-
-"age", "dis", "tax", "ptratio"
-
-`LABEL = "medv"`
-
 ### 第二步 – 转换数据
+
 数值型变量必须使用 `tf.feature_column.numeric_column()` 转换为正确的格式。在此之前，我们定义了在模型中需要的特征列表。现在我们可以使用这个列表来转换变量。我们将使用 Python 列表推导式，利用名为 `FEATURES` 的列表生成另一个名为 `feature_cols` 的列表。这将减少你需要编写的代码量。
 
 ```python
@@ -2509,23 +2817,30 @@ feature_cols = [tf.feature_column.numeric_column(k) for k in FEATURES]
 ```
 
 ### 第三步 – 定义估计器 (Estimator)
+
 现在我们可以定义估计器了。在 TensorFlow 中，有六个内置估计器，回归和分类各占三个：
 
 回归任务：
+
 * `DNNRegressor`
 * `LinearRegressor`
 * `DNNLinearRegressor`
 
 分类任务：
+
 * `DNNClassifier`
 * `LinearClassifier`
 * `DNNLinearClassifier`
 
 我们将使用 `LinearRegressor`，通过 `tf.estimator` 访问它。该函数需要两个参数：
+
 * `feature_columns`：包含要纳入模型中的变量。
+
+
+
 * `model_dir`：存储图和保存模型参数的路径等。
 
-TensorFlow 会自动在工作目录中创建一个名为 ‘train’ 的文件——这是你访问 TensorBoard 时需要的路径路径。
+TensorFlow 会自动在工作目录中创建一个名为 `train` 的文件——这是你访问 TensorBoard 时需要的路径路径。
 
 ```python
 estimator = tf.estimator.LinearRegressor(
@@ -2534,19 +2849,23 @@ estimator = tf.estimator.LinearRegressor(
 ```
 
 输出 INFO：
+
+```
 INFO:tensorflow:Using default config.
 INFO:tensorflow:Using config: {'_model_dir': 'train', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': None, '_save_checkpoints_secs': 600, '_session_config': None, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 100, '_train_distribute': None, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x1a215dc550>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1}
+```
 
 最困难的部分是如何向模型输入数据。TensorFlow 的设计使其适用于大型数据集和并行计算。计算资源的限制决定了模型必须分批（batches）喂入数据——当你使用数百万记录时更是如此；不使用分批处理会导致内存错误。当所有数据都喂给模型时，一个 epoch（轮次）即完成。epoch 定义为模型查看数据的次数。
 
 最佳选项是将此设置为 `None`。你也可以添加指令，在每次迭代之前打乱（shuffle）数据。这非常重要，因为它可以阻止模型学习特定的模式。这可能导致预测在未见数据上产生泛化，这一过程被称为过拟合（overfitting）。虽然模型在训练数据上表现良好，但对未见数据的预测将是错误的。
 
 这两个步骤通过 TensorFlow 很容易就能完成。当数据进入流水线时，它将已经知道所需的观测数量以及数据是否需要打乱。我们使用 `pandas_input_fn` 来此，并给对象传递以下五个参数：
-* `x`: 特征数据
-* `y`: 标签数据
-* `batch_size`: 批大小 – 默认 128
-* `num_epoch`: epoch 数量 – 默认 1
-* `shuffle`: 数据是否应该打乱 – 默认 none。
+
+* `x`：特征数据
+* `y`：标签数据
+* `batch_size`：批大小 – 默认 128
+* `num_epoch`：epoch 数量 – 默认 1
+* `shuffle`：数据是否应该打乱 – 默认 none。
 
 模型需要被喂入多次，因此必须定义一个函数来确保过程重复——`get_input_fn`：
 
@@ -2554,18 +2873,20 @@ INFO:tensorflow:Using config: {'_model_dir': 'train', '_tf_random_seed': None, '
 def get_input_fn(data_set, num_epochs=None, n_batch=128, shuffle=True):
     return tf.estimator.inputs.pandas_input_fn(
         x=pd.DataFrame({k: data_set[k].values for k in FEATURES}),
-        y = pd.Series(data_set[LABEL].values),
+        y=pd.Series(data_set[LABEL].values),
         batch_size=n_batch,
         num_epochs=num_epochs,
         shuffle=shuffle)
 ```
 
 通常，我们通过三个步骤评估模型的性能：
+
 * `Train`（训练）
 * `Evaluate`（评估）
 * `Predict`（预测）
 
 ### 第四步 – 训练模型
+
 名为 `train` 的估计器可用于模型评估。这需要 `input_fn` 以及一些步骤。使用你之前创建的函数喂给模型，并告诉模型你想运行 1000 次迭代。不需要指定多少个 epoch。例如，如果你将 epochs 设置为 1，你将得到迭代——训练集有 400 条记录，批次大小为 128。因此，将 epoch 设置为 `None` 并定义迭代是最好的：
 
 ```python
@@ -2578,6 +2899,8 @@ estimator.train(
 ```
 
 输出 INFO：
+
+```
 INFO:tensorflow:Calling model_fn.
 INFO:tensorflow:Done calling model_fn.
 INFO:tensorflow:CreateCheckpoint.
@@ -2606,8 +2929,10 @@ INFO:tensorflow:loss = 11051.979
 INFO:tensorflow:global_step/sec: 292.405
 INFO:tensorflow:loss = 10845.855
 INFO:tensorflow:Saving checkpoints for 1000 into train/ckpt.
+```
 
 ### 第五步 – 评估模型
+
 可以使用以下代码在测试数据集上评估模型拟合情况：
 
 ```python
@@ -2619,6 +2944,8 @@ ev = estimator.evaluate(
 ```
 
 输出 INFO：
+
+```
 INFO:tensorflow:Calling model_fn.
 INFO:tensorflow:Done calling model_fn.
 INFO:tensorflow:Starting evaluation at 2018-05-13-01:43:13
@@ -2628,6 +2955,7 @@ INFO:tensorflow:Running local_init_op.
 INFO:tensorflow:Done local_init_op.
 INFO:tensorflow:Finished evaluation at 2018-05-13-01:43:13
 INFO:tensorflow:Saving dict for global step 1000: average_loss = 32.15896, global_step = 1000, loss = 3215.896
+```
 
 使用以下代码打印损失：
 
@@ -2635,14 +2963,11 @@ INFO:tensorflow:Saving dict for global step 1000: average_loss = 32.15896, globa
 loss_score = ev["loss"]
 ```
 
-
-
-
-
 ```python
 print("Loss: {0:f}".format(loss_score))
 # 输出 Loss: 3215.895996
 ```
+
 我们可以看到损失为 3215；要查看此误差有多大，请查看摘要统计数据：`training_set['medv'].describe()`。
 
 ```
@@ -2661,13 +2986,13 @@ Name: medv, dtype: float64
 
 ### 第六步 – 进行预测
 
-最后，可以使用 ‘predict’ 估计器估计波士顿六栋房屋的价值：
+最后，可以使用 `predict` 估计器估计波士顿六栋房屋的价值：
 
 ```python
 y = estimator.predict(
     input_fn=get_input_fn(prediction_set,
     num_epochs=1,
-    n_batch = 128,
+    n_batch=128,
     shuffle=False))
 ```
 
@@ -2748,16 +3073,14 @@ INFO:tensorflow:Using default config.
 INFO:tensorflow:Using config: {'_model_dir': 'train1', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': None, '_save_checkpoints_secs': 600, '_session_config': None, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_hours': 10000, '_log_step_count_steps': 100, '_train_distribute': None, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x1a21d8f28>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 0}
 ```
 
-
-
-
-
 预测结果：`[array([32.297546], dtype=float32), array([18.961248], dtype=float32), array([27.270979], dtype=float32), array([29.299242], dtype=float32), array([16.43668], dtype=float32), array([21.460878], dtype=float32)]`
 
 ## 仅使用 TensorFlow
+
 这要复杂一些，但 TensorFlow 包含一个非常有用的工具将数据传递给流水线（pipeline）。通过这种方法，你将自己构建 `input_fn` 函数。注意——如果你在使用 Jupyter Notebook，请在启动此新会话之前，重启并清理内核（kernel）。
 
 ### 第一步 – 定义路径和数据格式
+
 首先，我们需要声明一组带有 CSV 文件路径的变量。你有两个文件：训练文件和测试文件：
 
 ```python
@@ -2774,26 +3097,30 @@ RECORDS_ALL = [[0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0
 ```
 
 ### 第二步 – 定义函数 – input_fn
+
 我们可以将函数分为三部分：
+
 1. 数据导入
 2. 迭代器创建
 3. 数据消费
 
 以下代码显示了函数定义：
 
+
+
 ```python
-def input_fn(data_file, batch_size, num_epoch = None):
+def input_fn(data_file, batch_size, num_epoch=None):
     # Step 1
     def parse_csv(value):
         columns = tf.decode_csv(value, record_defaults=RECORDS_ALL)
         features = dict(zip(COLUMNS, columns))
-        #labels = features.pop('median_house_value')
+        # labels = features.pop('median_house_value')
         labels = features.pop('medv')
         return features, labels
 
     # 使用 Dataset API 从输入文件中提取行。
-    dataset = (tf.data.TextLineDataset(data_file) # 读取文本文件
-               .skip(1) # 跳过标题行
+    dataset = (tf.data.TextLineDataset(data_file)  # 读取文本文件
+               .skip(1)  # 跳过标题行
                .map(parse_csv))
     dataset = dataset.repeat(num_epoch)
     dataset = dataset.batch(batch_size)
@@ -2803,8 +3130,9 @@ def input_fn(data_file, batch_size, num_epoch = None):
     return features, labels
 ```
 
-### 导入数据
-在 CSV 文件中，dataset 方法逐行读取内容。使用名为 `TextLineDataset` 的对象来构建数据集。由于数据集中包含表头，使用 `skip(1)` 跳过第一行——数据被读入流水线，但不包含表头。为了给模型提供数据，必须将特征和标签分离，我们使用 `map()` 方法应用数据转换。
+## 导入数据
+
+在 CSV 文件中，`dataset` 方法逐行读取内容。使用名为 `TextLineDataset` 的对象来构建数据集。由于数据集中包含表头，使用 `skip(1)` 跳过第一行——数据被读入流水线，但不包含表头。为了给模型提供数据，必须将特征和标签分离，我们使用 `map()` 方法应用数据转换。
 
 *   `tf.data.TextLineDataset(data_file)` 读取 CSV 文件。
 *   使用 `.skip(1)` 跳过表头。
@@ -2813,12 +3141,14 @@ def input_fn(data_file, batch_size, num_epoch = None):
 *   使用 `zip(COLUMNS, columns)` 使用提取出的列填充字典。
 *   使用 `features.pop('median_house_value')` 将目标变量从特征变量中排除，并创建一个标签变量。
 
-为了让张量被迭代喂送，我们需要向数据添加更多元素。必须添加 `repeat` 方法，以便模型可以继续喂送；如果你忽略了这一点点，你只会获得一次迭代，随后会报错，因为流水线没有接收到更多数据。完成后，可以使用 `batch` 方法控制批次大小——简单来说，batch size 越大，模型运行得越慢。
+为了让张量被迭代喂送，我们需要向数据添加更多元素。必须添加 `repeat` 方法，以便模型可以继续喂送；如果你忽略了这一点，你只会获得一次迭代，随后会报错，因为流水线没有接收到更多数据。完成后，可以使用 `batch` 方法控制批次大小——简单来说，batch size 越大，模型运行得越慢。
 
-### 第三步 – 创建迭代器
+## 第三步 – 创建迭代器
+
 创建迭代器的最简单方法是使用 `make_one_shot_iterator` 方法，然后可以使用迭代器来创建标签和特征。
 
-### 第四步 – 消费数据
+## 第四步 – 消费数据
+
 可以使用 `input_fn` 函数来查看发生了什么。该函数必须在会话（session）中调用才能消费数据——从 batch size 等于 1 开始。字典特征将与标签（数组形式）一起打印。将显示 CSV 文件的第一行。尝试使用不同的批次大小：
 
 ```python
@@ -2829,111 +3159,93 @@ with tf.Session() as sess:
 # 输出: ({crim': array([2.3004], dtype=float32), 'zn': array([...])
 ```
 
-### 第四步 – 定义列
+## 第四步 – 定义列
+
 特征列需要如下定义：
 
 ```python
 # 这里的列是 'crim', 'zn', 'indus', 'nox', 'rm', 'age', 'dis', 'tax', 'ptratio'
 ```
-```
 
-### 第五步 – 训练模型
+## 第五步 – 训练模型
+
 我们可以使用 `LinearRegressor` 估计器来训练我们的模型：
 
 ```python
 model = tf.estimator.LinearRegressor(feature_columns=base_columns, model_dir='train3')
 ```
+
 需要一个 Lambda 函数来向 `input_fn` 函数传递参数——忽略这一点模型将无法进行训练：
 
 ```python
 ## 训练估计器
-model.train(steps=1000, input_fn=lambda : input_fn(df_train, batch_size=128, num_epoch=None))
+model.train(steps=1000, input_fn=lambda: input_fn(df_train, batch_size=128, num_epoch=None))
 ```
 
-
-INFO:tensorflow:loss = 12050.5625, step = 401 (0.978 sec)  
-
-INFO:tensorflow:global\_step/sec: 104.656  
-
-INFO:tensorflow:loss = 11766.134, step = 501 (0.956 sec)  
-
-INFO:tensorflow:global\_step/sec: 106.697  
-
-INFO:tensorflow:loss = 11509.922, step = 601 (0.938 sec)  
-
-INFO:tensorflow:global\_step/sec: 118.454  
-
-INFO:tensorflow:loss = 11272.889, step = 701 (0.844 sec)  
-
-INFO:tensorflow:global\_step/sec: 114.947  
-
-INFO:tensorflow:loss = 11051.9795, step = 801 (0.870 sec)  
-
-INFO:tensorflow:global\_step/sec: 111.484  
-
-INFO:tensorflow:loss = 10845.855, step = 901 (0.897 sec)  
-
-INFO:tensorflow:Saving checkpoints for 1000 into train3/model.ckpt.  
-
-INFO:tensorflow:Loss for final step: 5925.9873.  
-
-Out[8]:  
-
 ```
-<tensorflow.python.estimator.canned.linear.LinearRegressor at 0x18225eb8d0> The model fit can be evaluated using the following code on the test set: results = model.evaluate(steps =None,input\_fn=lambda: input\_fn(df\_eval, batch\_size =128, num\_epoch = 1))  
+INFO:tensorflow:loss = 12050.5625, step = 401 (0.978 sec)
+INFO:tensorflow:global_step/sec: 104.656
+INFO:tensorflow:loss = 11766.134, step = 501 (0.956 sec)
+INFO:tensorflow:global_step/sec: 106.697
+INFO:tensorflow:loss = 11509.922, step = 601 (0.938 sec)
+INFO:tensorflow:global_step/sec: 118.454
+INFO:tensorflow:loss = 11272.889, step = 701 (0.844 sec)
+INFO:tensorflow:global_step/sec: 114.947
+INFO:tensorflow:loss = 11051.9795, step = 801 (0.870 sec)
+INFO:tensorflow:global_step/sec: 111.484
+INFO:tensorflow:loss = 10845.855, step = 901 (0.897 sec)
+INFO:tensorflow:Saving checkpoints for 1000 into train3/model.ckpt.
+INFO:tensorflow:Loss for final step: 5925.9873.
+Out[8]:
+<tensorflow.python.estimator.canned.linear.LinearRegressor at 0x18225eb8d0>
+```
 
+The model fit can be evaluated using the following code on the test set:
+
+```python
+results = model.evaluate(steps=None, input_fn=lambda: input_fn(df_eval, batch_size=128, num_epoch=1))
 for key in results:
     print("    {}, was: {}".format(key, results[key]))
 ```
 
-Output INFO:tensorflow:Calling model\_fn.  
-
-INFO:tensorflow:Done calling model\_fn.  
-
-INFO:tensorflow:Starting evaluation at 2018-05-13-02:06:02  
-
-INFO:tensorflow:Graph was finalized.  
-
-INFO:tensorflow:Restoring parameters from train3/model.ckpt-1000  
-
-INFO:tensorflow:Running local\_init\_op.  
-
-INFO:tensorflow:Done running local\_init\_op.  
-
-INFO:tensorflow:Finished evaluation at 2018-05-13-02:06:02  
-
-INFO:tensorflow:Saving dict for global step 1000: average\_loss = 32.15896, global\_step = 1000, loss = 3215.896  
-
-  average\_loss was: 32.158958435058594  
-
-  loss was: 3215.89599609375  
-
-  global\_step was: 1000
-
-### 第六步 – 预测值
-
-最后，我们可以预测值——这是基于特征矩阵的值。可以编写一个字典来包含你想要预测的值。我们的模型有九个特征，因此我们需要九个值，模型将为每个值提供预测。在接下来的代码中，写入了来自 `df_predict` 的特征值。由于数据集没有标签，必须编写一个新的 `input_fn` 函数。可以使用 `from_tensor` API：`prediction_input = {`
-
-```python
-'crim': [0.03359,5.09017,0.12650,0.05515,8.15174,0.24522],  
-  'zn': [75.0,0.0,25.0,33.0,0.0,0.0],  
-  'indus': [2.95,18.10,5.13,2.18,18.10,9.90],  
-  'nox': [0.428,0.713,0.453,0.472,0.700,0.544],  
-  'rm': [7.024,6.297,6.762.7.236,5.390,5.390],  
-  'age': [15.8,43.4,98.9,71.7],  
-  'dis': [5.4,2.3,7.9,4.0,2.7],  
-  'tax': [252,666,284,304],  
-  'ratio': [18.3,20.2,19.7,20.2]
-}
+```
+Output INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-05-13-02:06:02
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from train3/model.ckpt-1000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-05-13-02:06:02
+INFO:tensorflow:Saving dict for global step 1000: average_loss = 32.15896, global_step = 1000, loss = 3215.896
+  average_loss was: 32.158958435058594
+  loss was: 3215.89599609375
+  global_step was: 1000
 ```
 
+## 第六步 – 预测值
 
+最后，我们可以预测值——这是基于特征矩阵的值。可以编写一个字典来包含你想要预测的值。我们的模型有九个特征，因此我们需要九个值，模型将为每个值提供预测。在接下来的代码中，写入了来自 `df_predict` 的特征值。由于数据集没有标签，必须编写一个新的 `input_fn` 函数。可以使用 `from_tensor` API：
 
+```python
+prediction_input = {
+    'crim': [0.03359, 5.09017, 0.12650, 0.05515, 8.15174, 0.24522],
+    'zn': [75.0, 0.0, 25.0, 33.0, 0.0, 0.0],
+    'indus': [2.95, 18.10, 5.13, 2.18, 18.10, 9.90],
+    'nox': [0.428, 0.713, 0.453, 0.472, 0.700, 0.544],
+    'rm': [7.024, 6.297, 6.762, 7.236, 5.390, 5.390],
+    'age': [15.8, 43.4, 98.9, 71.7],
+    'dis': [5.4, 2.3, 7.9, 4.0, 2.7],
+    'tax': [252, 666, 284, 304],
+    'ratio': [18.3, 20.2, 19.7, 20.2]
+}
+```
 
 ```python
 df = pd.DataFrame(boston.data)
 ```
-存储在 `features_names` 对象中的数组是用于存储特征名称的地方：`boston.feature_names`。输出数组（`['CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM', 'AGE', 'DIS', 'RAD','TAX', 'PTRATIO', 'B', 'LSTAT'], dtype='<U7')`）。可以重命名列：`df.columns = boston.feature_names`。
+
+存储在 `features_names` 对象中的数组是用于存储特征名称的地方：`boston.feature_names`。输出数组（`['CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM', 'AGE', 'DIS', 'RAD', 'TAX', 'PTRATIO', 'B', 'LSTAT'], dtype='<U7'`）。可以重命名列：`df.columns = boston.feature_names`。
 
 ```python
 df['PRICE'] = boston.target
@@ -2942,14 +3254,17 @@ df['PRICE'] = boston.target
 ```python
 df.head(2)
 ```
+
 名为 `CHAS` 的变量转换为字符串变量并标记了标签——如果 `CHAS=1`，则标记为 yes；如果 `CHAS=0`，则标记为 no。
+
 ```python
-df['CHAS'] = df['CHAS'].map({1:'yes', 0:'no'})
+df['CHAS'] = df['CHAS'].map({1: 'yes', 0: 'no'})
 ```
 
 ```python
 df['CHAS'].head(5)
 ```
+
 ```
 0    no
 1    no
@@ -2958,28 +3273,36 @@ df['CHAS'].head(5)
 4    no
 Name: CHAS, dtype: object
 ```
+
 Pandas 可以轻松拆分数据集；数据集被随机分为 80/20——80% 训练集和 20% 测试集。Pandas 提供了一个函数来实现此。第一个参数名为 `frac`，取值范围为 0 到 1。我们将将其设置为 `0.8`，以划分 80% 的数据集用于训练。为了确保每个人返回相同的 DataFrame，我们使用了 `random_state`。
 
 ### 创建训练/测试集
 
 ```python
-df_train=df.sample(frac=0.8,random_state=200)
-df_test=df.drop(df_train.index)
+df_train = df.sample(frac=0.8, random_state=200)
+df_test = df.drop(df_train.index)
 ```
+
 数据形状应当为：
-- 训练集：506*0.8 = 405
-- 测试集：506*0.2 = 101
+- 训练集：506 * 0.8 = 405
+- 测试集：506 * 0.2 = 101
 
 我们可以这样获取：
+
 ```python
 print(df_train.shape, df_test.shape)
 ```
+
 输出 `(405, 14) (101, 14)`。
 
 ```python
 df_test.head(5)
 ```
+
+
+
 输出：
+
 | | CRIM | ZN | INDUS | CHAS | NOX | RM | AGE | DIS | RAD | TAX | PTRATIO | B | LSTAT | PRICE |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0 | 0.00632 | 18.0 | 2.31 | no | 0.538 | 6.575 | 65.2 | 4.0900 | 1.0 | 296.0 | 15.3 | 396.90 | 4.98 | 24.0 |
@@ -2988,282 +3311,34 @@ df_test.head(5)
 | 6 | 0.08829 | 12.5 | 7.87 | no | 0.524 | 6.012 | 66.6 | 5.5605 | 5.0 | 311.0 | 15.2 | 395.60 | 12.43 | 22.9 |
 | 7 | 0.14455 | 12.5 | 7.87 | no | 0.524 | 6.172 | 96.1 | 5.9505 | 5.0 | 311.0 | 15.2 | 396.90 | 19.15 | 27.1 |
 
-这应该告诉你是数据有些杂乱、不平衡，并且带有离群值，会偏离分析和学习。多亏 Google Research 团队，我们现在有一个可以轻松完成此点的工具。它被称为 `Facets`，它可以帮助你以多种方式可视化和切分数据。你可以使用 `Facets` 来寻找数据不正常的地方，Google 已经让你轻松地将 Facets 嵌入 Jupyter Notebook。
+这应该告诉你是数据有些杂乱、不平衡，并且带有离群值，会偏离分析和学习。多亏 Google Research 团队，我们现在有一个可以轻松完成此点的工具。它被称为 `Facets`，它可以帮助你以多种方式可视化和切分数据。你可以使用 `Facets` 来寻找数据不正常的地方，Google 已经让你轻松地将 `Facets` 嵌入 Jupyter Notebook。
 
 ### Facets 概述
+
 `Facets Overview` 让你看到数据集，将数据分成重要信息的行。这些信息显示了：
+
 - 缺失观测百分比
 - 最小值和最大值
 - 数据统计信息，如标准差、平均值和位数
 - 显示零值百分比的新列
 - 一种查看每个特征在测试集和训练集上分布的方法。这让你检查测试集和训练集是否具有相似的分布。
-
-### Facets 概述
-`Facets Overview` 让你看到数据集，将数据分成重要信息的行。这些信息显示了：
-- 缺失观测百分比
-- 最小值和最大值
-- 数据统计信息，如标准差、平均值和位数
-- 显示零值百分比的新列
-- 一种查看每个特征在测试集和训练集上分布的方法。这让你检查测试集和训练集是否具有相似的分布。
-
-### Facets 概述
-`Facets Overview` 让你看到数据集，将数据分成重要信息的行。这些信息显示了：
-- 缺失观测百分比
-- 最小值和最大值
-- 数据统计信息，如标准差、平均值和位数
-- 显示零值百分比的新列
-- 一种查看每个特征在测试集和训练集上分布的方法。这让你检查测试集和训练集是否具有相似的分布。
-
-### Facets 概述
-`Facets Overview` 让你看到数据集，将数据分成重要信息的行。这些信息显示了：
-- 缺失观测百分比
-- 最小值和最大值
-- 数据统计信息，如标准差、平均值和位数
-- 显示零值百分比的新列
-- 一种查看每个特征在测试集和训练集上分布的方法。这让你检查测试集和训练集是否具有相似的分布。
-
-### Facets 概述
-`Facets Overview` 让你看到数据集，将数据分成重要信息的行。这些信息显示了：
-- 缺失观测百分比
-- 最小值和最大值
-- 数据统计信息，如标准差、平均值和位数
-- 显示零值百分比的新列
-- 一种查看每个特征在测试集和训练集上分布的方法。这让你检查测试集和训练集是否具有相似的分布。
-
-### Facets 概述
-`Facets Overview` 让你看到数据集，将数据分成重要信息的行。这些信息显示了：
-- 缺失观测百分比
-- 最小值和最大值
-- 数据统计信息，如标准差、平均值和位数
-- 显示零值百分比的新列
-- 一种查看每个特征在测试集和训练集上分布的方法。这让你检查测试集和训练集是否具有相似的分布。
-
-### Facets 概述
-`Facets Overview` 让你看到数据集，将数据分成重要信息的行。这些信息显示了：
-- 缺失观测百分比
-- 最小值和最大值
-- 数据统计信息，如标准差、平均值和位数
-- 显示零值百分比的新列
-- 一种查看每个特征在测试集和训练集上分布的方法。这让你检查测试集和训练集是否具有相似的分布。
-
-### Facets 概述
-`Facets Overview` 让你看到数据集，将数据分成重要信息的行。这些信息显示了：
-- 缺失观测百分比
-- 最小值和最大值
-- 数据统计信息，如标准差、平均值和位数
-- 显示零值百分比的新列
-- 一种查看每个特征在测试集和训练集上分布的方法。这让你检查测试集和训练集是否具有相似的分布。
-
-### Facets 概述
-`Facets Overview` 让你看到数据集，将数据分成重要信息的行。这些信息显示了：
-- 缺失观测百分比
-- 最小值和最大值
-- 数据统计信息，如标准差、平均值和位数
-- 显示零值百分比的新列
-- 一种查看每个特征在测试集和训练集上分布的方法。这让你检查测试集和训练集是否具有相似的分布。
-
-### Facets 概述
-`Facets Overview` 让你看到数据集，将数据分成重要信息的行。这些信息显示了：
-- 缺失观测百分比
-- 最小值和最大值
-- 数据统计信息，如标准差、平均值和位数
-- 显示零值百分比的新列
-- 一种查看每个特征在测试集和训练集上分布的方法。这让你检查测试集和训练集是否具有相似的分布。
-
-### Facets 概述
-`Facets Overview` 让你看到数据集，将数据分成重要信息的行。这些信息显示了：
-- 缺失观测百分比
-- 最小值和最大值
-- 数据统计信息，如标准差、平均值和位数
-- 显示零值百分比的新列
-- 一种查看每个特征在测试集和训练集上分布的方法。这让你检查测试集和训练集是否具有相似的分布。
-
-### Facets 概述
-`Facets Overview` 让你看到数据集，将数据分成重要信息的行。这些信息显示了：
-- 缺失观测百分比
-- 最小值和最大值
-（此处重复翻译逻辑，，直接后续核心逻辑）
-
-### Facets 概述
-`Facets Overview` 让你看到数据集，将数据分成重要信息的行。这些信息显示了：
-- 缺失观测百分比
-- 最小值和最大值
-- 数据统计信息，如标准差、平均值和位数。
-- 显示零值百分比的新列
-- 一种查看每个特征在测试集和训练集上分布的方法。这让你检查测试集和训练集是否具有相似的分布。
-
-### Facets 概述
-`Facets Overview` 让你看到数据集，将数据分成重要信息的行。这些信息显示了：
-- 缺失观测百分比
-- 最小值和最大值
-- 数据统计信息，如标准差、平均值和位数。
-- 显示零值百分比的新列
-- 一种查看每个特征在测试集和训练集上分布的方法。这让你检查测试集和训练集是否具有相似的分布。
-
-（由于提供的文本中存在大量重复，以下为核心功能翻译部分）
-
-### Facets 概述
-`Facets Overview` 让你看到数据集，将数据分成重要信息的行。这些信息显示了：
-- 缺失观测百分比
-- 最小值和最大值
-- 数据统计信息，如标准差、平均值和位数。
-- 显示零值百分比的新列
-- 一种查看每个特征在测试集和训练集上分布的方法。这让你检查测试集和训练集是否具有相似的分布。
-
-### Facets 概述
-`Facets Overview` 让你看到数据集，将数据分成重要信息的行。这些信息显示了：
-- 缺失观测百分比
-- 最小值和最大值
-- 数据统计信息，如标准差、平均值和位数。
-- 显示零值百分比的新列
-- 一种查看每个特征在测试集和训练集上分布的方法。这让你检查测试集和训练集是否具有相似的分布。
-
-### Facets 概述
-`Facets Overview` 让你看到数据集，将数据分成重要信息的行。这些信息显示了：
-- 缺失观测百分比
-- 最小值和最大值
-- 数据统计信息，如标准差、平均值和位数。
-- 显示零值百分比的新列
-- 一种查看每个特征在测试集和训练集上分布的方法。这让你检查测试集和训练集是否具有相似的分布。
-
-### Facets 概述
-`Facets Overview` 让你看到数据集，将数据分成重要信息的行。这些信息显示了：
-- 缺失观测百分比
-- 最小值和最大值
-- 数据统计信息，如标准差、平均值和位数。
-- 显示零值百分比的新列
-- 一种查看每个特征在测试集和训练集上分布的方法。这让你检查测试集和训练集是否具有相似的分布。
-
-### Facets 概述
-`Facets Overview` 让你看到数据集，将数据分成重要信息的行。这些信息显示了：
-- 缺失观测百分比
-- 最小值和最大值
-- 数据统计信息，如标准差、平均值和位数。
-- 显示零值百分比的新列
-- 一种查看每个特征在测试集和训练集上分布的方法。这让你检查测试集和训练集是否具有相似的分布。
-
-（注：原文中 Facets Overview 之后重复多次，此处已按要求翻译核心内容）
-
-### Facets 概述
-`Facets Overview` 让你看到数据集，将数据分成重要信息的行。这些信息显示了：
-- 缺失观测百分比
-- 最小值和最大值
-- 数据统计信息，如标准差、平均值和位数。
-- 显示零值百分比的新列
-- 一种查看每个特征在测试集和训练集上分布的方法。这让你检查测试集和训练集是否具有相似的分布。
-
-### Facets 概述
-`Facets Overview` 让你看到数据集，将数据分成重要信息的行。这些信息显示了：
-- 缺失观测百分比
-- 最小值和最大值
-- 数据统计信息，如标准差、平均值和位数。
-- 显示零值百分比的新列
-- 一种查看每个特征在测试集和训练集上分布的方法。这让你检查测试集和训练集是否具有相似的分布。
-
-### Facets 概述
-`Facets Overview` 让你看到数据集，将数据分成重要信息的行。这些信息显示了：
-- 缺失观测百分比
-- 最小值和最大值
-- 数据统计信息，如标准差、平均值和位数。
-- 显示零值百分比的新列
-- 一种查看每个特征在测试集和训练集上分布的方法。这让你检查测试集和训练集是否具有相似的分布。
-
-（由于输入文本存在大量重复段落，以下为核心翻译结果）
-
-### Facets 概述
-`Facets Overview` 让你看到数据集，将数据分成重要信息的行。这些信息显示了：
-- 缺失观测百分比
-- 最小值和最大值
-- 数据统计信息，如标准差、平均值和位数。
-- 显示零值百分比的新列
-- 一种查看每个特征在测试集和训练集上分布的方法。这让你检查测试集和训练集是否具有相似的分布。
-
-### Facets 概述
-`Facets Overview` 让你看到数据集，将数据分成重要信息的行。这些信息显示了：
-- 缺失观测百分比
-- 最小值和最大值
-- 数据统计信息，如标准差、平均值和位数。
-- 显示零值百分比的新列
-- 一种查看每个特征在测试集和训练集上分布的方法。这让你检查测试集和训练集是否具有相似的分布。
-
-（抱歉，由于提供的文本包含大量重复内容，我将为您提供不重复的完整逻辑译文）
-
-### Facets 概述
-`Facets Overview` 让你看到数据集，将数据分成重要信息的行。这些信息显示了：
-- 缺失观测百分比
-- 最小值和最大值
-- 数据统计信息，如标准差、平均值和位数。
-- 显示零值百分比的新列
-- 一种查看每个特征在测试集和训练集上分布的方法。这让你检查测试集和训练集是否具有相似的分布。
-
-### Facets 概述
-`Facets Overview` 让你看到数据集，将数据分成重要信息的行。这些信息显示了：
-- 缺失观测百分比
-- 最小值和最大值
-- 数据统计信息，如标准差、平均值和位数。
-- 显示零值百分比的新列
-- 一种查看每个特征在测试集和训练集上分布的方法。这让你检查测试集和训练集是否具有相似的分布。
-
-（此处省略中间重复部分，直接进入后续功能翻译）
 
 ### 深度探索
+
 `Deep Dive` 让你更深入地理解数据集，通过 `Facets` 缩放并查看数据。
 
 ### 安装
+
 `Facets` 让你更好地理解数据集，通过 `Facets` 缩放并查看数据。
-
-### ets  
-``ets` 让你 etsets，数据集，通过 `Facets` 缩到 Jupyter 查看数据。
-
-### ets 概述
-`Facets` 让你更好地理解数据集，通过 `Facets` 缩放并查看数据。
-
-### ets 概述
-`Facets` 让你更好地理解数据集，通过 etsets 缩放并查看数据。
-
-### ets 概述
-`Facets` 让你更好地理解数据集，通过 `Facets` 缩放并查看数据。
-
-### ets 概述
-`Facets` 让你更好地理解数据集，通过 `Facets` 缩放并查看数据。
-
-### ets 概述
-`Facets` 让你更好地理解数据集，通过 `Facets` 缩放并查看数据。
-
-### ets 概述
-`Facets` 让你更好地理解数据集，通过 `Facets` 缩放并查看数据。
-
-### ets 概述
-`Facets` 让你更好地理解数据集，通过 `Facets` 缩放并查看数据。
-
-### ets 概述
-`Facets` 让你更好地理解数据集，通过 `Facets` 缩放并查看数据。
-
-### ets 概述
-`Facets` 让你更好地理解数据集，通过 `Facets` 缩放并查看数据。
-
-### ets 概述
-`Facets` 让你更好地理解数据集，通过 `Facets` 缩放并查看数据。
-
-### ets 概述
-`Facets` 让你更好地理解数据集，通过 `Facets` 缩放并查看数据。
-
-### ets 概述
-`Facets` 让你更好地理解数据集，通过 `Facets` 缩放并查看数据。
-
-### ets 概述
-`Facets` 让你更好地理解数据集，通过 `Facets` 缩放并查看数据 etsets 缩放并查看数据。
-
-（由于输入文本存在极其严重的重复和乱码，我将根据核心逻辑为您提供一份干净的、不重复的高质量译文）
 
 ---
 
 **以下是基于您文本逻辑的精简高质量译文：**
 
-[content]
 ```python
 df = pd.DataFrame(boston.data)
 ```
+
 存储在 `features_names` 对象中的数组是用于存储特征名称的地方：`boston.feature_names`。输出数组（`['CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM', 'AGE', 'DIS', 'RAD','TAX', 'PTRATIO', 'B', 'LSTAT'], dtype='<U7')`。可以重命名列：`df.columns = boston.feature_names`。
 
 ```python
@@ -3273,7 +3348,9 @@ df['PRICE'] = boston.target
 ```python
 df.head(2)
 ```
+
 名为 `CHAS` 的变量转换为字符串变量并标记了标签——如果 `CHAS=1`，则标记为 yes；如果 `CHAS=0`，则标记为 no。
+
 ```python
 df['CHAS'] = df['CHAS'].map({1:'yes', 0:'no'})
 ```
@@ -3281,6 +3358,7 @@ df['CHAS'] = df['CHAS'].map({1:'yes', 0:'no'})
 ```python
 df['CHAS'].head(5)
 ```
+
 ```
 0    no
 1    no
@@ -3289,6 +3367,7 @@ df['CHAS'].head(5)
 4    no
 Name: CHAS, dtype: object
 ```
+
 Pandas 可以轻松拆分数据集；数据集被随机分为 80/20——80% 训练集和 20% 测试集。Pandas 提供了一个函数来实现此。第一个参数名为 `frac`，取值范围为 0 到 1。我们将将其设置为 `0.8`，以划分 80% 的数据集用于训练。为了确保每个人返回相同的 DataFrame，我们使用了 `random_state`。
 
 ### 创建训练/测试集
@@ -3297,20 +3376,28 @@ Pandas 可以轻松拆分数据集；数据集被随机分为 80/20——80% 训
 df_train=df.sample(frac=0.8,random_state=200)
 df_test=df.drop(df_train.index)
 ```
+
 数据形状应当为：
+
 - 训练集：506*0.8 = 405
 - 测试集：506*0.2 = 101
 
 我们可以这样获取：
+
 ```python
 print(df_train.shape, df_test.shape)
 ```
+
 输出 `(405, 14) (101, 14)`。
 
 ```python
 df_test.head(5)
 ```
+
+
+
 输出：
+
 | | CRIM | ZN | INDUS | CHAS | NOX | RM | AGE | DIS | RAD | TAX | PTRATIO | B | LSTAT | PRICE |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0 | 0.00632 | 18.0 | 2.31 | no | 0.538 | 6.575 | 65.2 | 4.0900 | 1.0 | 296.0 | 15.3 | 396.90 | 4.98 | 24.0 |
@@ -3322,7 +3409,9 @@ df_test.head(5)
 这应该告诉你是数据有些杂乱、不平衡，并且带有离群值，会偏离分析和学习。多亏 Google Research 团队，我们现在有一个可以轻松完成此点的工具。它被称为 `Facets`，它可以帮助你以多种方式可视化和切分数据。你可以使用 `Facets` 来寻找数据不正常的地方，Google 已经让你轻松地将 Facets 嵌入 Jupyter Notebook。
 
 ### Facets 概述
+
 `Facets Overview` 让你看到数据集，将数据分成重要信息的行。这些信息显示了：
+
 - 缺失观测百分比
 - 最小值和最大值
 - 数据统计信息，如标准差、平均值和位数。
@@ -3330,15 +3419,16 @@ df_test.head(5)
 - 一种查看每个特征在测试集和训练集上分布的方法。这让你检查测试集和训练集是否具有相似的分布。
 
 ### 深度探索
+
 `Deep Dive` 让你更深入地理解数据集，通过 `Facets` 缩放并查看数据。
 
 ### 安装
+
 `Facets` 让你更好地理解数据集，通过 `Facets` 缩放并查看数据。
 
-
-
-
-`square=True, linewidths=.5, cbar_kws={"shrink": .5}) Output <matplotlib.axes._subplots.AxesSubplot at 0x1a184d6518>`
+```
+square=True, linewidths=.5, cbar_kws={"shrink": .5}) Output <matplotlib.axes._subplots.AxesSubplot at 0x1a184d6518>
+```
 
 矩阵显示 `PRICE` 与 `LSTAT` 以及 `RM` 之间存在强相关性。你还可以看到 `INDUS` 和 `NOX` 之间存在正相关——这两个变量以相同的方向变化。此外，这两者都与 `PRICE` 相关，且 `DIS`、`NOX` 和 `IND` 之间也存在相关性。这一切告诉我们 `NOX` 和 `IND` 可能是很好的交互项候选变量，`DIS` 也也值得关注。我们可以通过成对网格（pair grid）进一步分析。我们将如下构建一个：
 
@@ -3357,17 +3447,22 @@ df_test.head(5)
 
 ```python
 g = sns.PairGrid(df[attributes])
+
 g = g.map_upper(sns.regplot, color="g")
+
 g = g.map_lower(sns.kdeplot, cmap="Reds", shade=True, shade_lowest=False)
+
 g = g.map_diag(sns.kdeplot)
 ```
 
 ### 顶部
+
 *   `PRICE` 与 `NOX`、`LSTAT` 和 `INDUS` 呈负相关，与 `RM` 为正相关
 *   `PRICE` 和 `LSTAT` 表现出少量的非线性
 *   当 `PRICE` 等于 50 时，你会看到一条直线。数据集描述告诉我们 `PRICE` 被截断在 50
 
 ### 对角线
+
 *   `NOX` 似乎有两个簇——0.5 和 0.85
 
 如果你想获取更多信息，可以查看底部。多变量核密度向我们展示了大多数点聚集的地方；颜色越深，点越多。观察 `NOX` 和 `INDUS` 的多变量密度；你应该能看到两个簇和正相关性。当工业份额超过 18 时，我们的氧化氮浓度超过 0.6。如果你愿意，可以考虑在 `NOX` 和 `INDUS` 之间建立一个交互项。最后，我们可以使用 Deep Dive（深度探索）。当你打开它时，会发现在界面上有四个部分。在中心，你可以缩放数据；顶部是一个下拉菜单，用于更改数据布局以控制颜色、位置和分面（facets）。在右侧，你可以查看给定数据行的详细信息；你可以点击中间部分的任何数据点，它会在右侧详细显示。当你进行数据可视化时，你希望看到房价与（独立）变量之间的两两相关性。这至少需要三个变量，而 3D 图处理起来非常棘手。你可以实现这一点的一种方法是创建一个分类变量。这意味着创建一个 2D 图。`PRICE` 可以被分成四份，每份为一个四位数，我们将该变量命名为 `Q_PRICE`。
@@ -3379,29 +3474,40 @@ df['Q_PRICE'] = pd.qcut(df['PRICE'], 4, labels=["Lowest", "Low", "Upper", "upper
 ```
 
 ## 显示 RM 和 LSTAT 之间的非线性
+
 ```python
 ax = sns.lmplot(x="DIS", y="INDUS", hue="Q_PRICE", data=df, fit_reg = False, palette="Set3")
 ```
 
 ### 分面深度探索 (Facets Deep Dive)
+
 必须将数据转换为 JSON 格式才能打开 Deep Dive，Pandas 为我们提供了一个实用的对象。在 Pandas 数据集之后，使用 `to_json`。第一行代码处理数据集大小：`df['Q_PRICE'] = pd.qcut(df['PRICE'], 4, labels=["Lowest", "Low", "Upper", "upper_plus"])`
 
 ```python
 sprite_size = 32 if len(df.index)>50000 else 64
+
 jsonstr = df.to_json(orient='records')
 ```
 
 下一步代码来自 GitHub：
+
 ```python
 from IPython.core.display import display, HTML
 
 TEMPLATE = """
+
 <link rel="stylesheet" href="facets.html">
+
 <div id="elem" width="{sprite_size}" height="{sprite_size}"></div>
+
 <script>
+
     document.querySelector("#elem").data = {jsonstr};
+
 </script>
+
 """
+
 display(HTML(TEMPLATE.format(jsonstr=jsonstr, sprite_size=sprite_size)))
 ```
 
@@ -3409,12 +3515,13 @@ display(HTML(TEMPLATE.format(jsonstr=jsonstr, sprite_size=sprite_size)))
 
 工业份额超过 18 时，我们的氧化氮浓度超过 0.6。观察 `NOX` 和 `INDUS` 的多变量密度；你应该能看到两个簇和正相关性。
 
+```
+feature_columns=categorical_features + continuous_features_new) 输出 INFO:tensorflow::Using default config.
+```
 
-
-
-`feature_columns=categorical_features + continuous_features_new)` 输出 `INFO:tensorflow:`:`Using default config.`
-
-`INFO:tensorflow:`:`Using config:` `{'_model_dir': 'train_Boston', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': None, '_save_checkpoints_secs': 600, '_session_config': None, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 100, '_train_distribute': None, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at  0x1a19e76ac8>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1}`
+```
+INFO:tensorflow::Using config: {'_model_dir': 'train_Boston', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': None, '_save_checkpoints_secs': 600, '_session_config': None, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 100, '_train_distribute': None, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x1a19e76ac8>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1}
+```
 
 训练或测试数据中的所有列都通过 `get_input_fn` 转换为 `Tensors`：`FEATURES = ['CRIM', 'ZN', 'INDUS', 'NOX', 'RM', 'AGE', 'DIS', 'RAD','TAX', 'PTRATIO', 'B', 'LSTAT', 'CHAS']`
 
@@ -3422,69 +3529,52 @@ display(HTML(TEMPLATE.format(jsonstr=jsonstr, sprite_size=sprite_size)))
 
 ```python
 def get_input_fn(data_set, num_epochs=None, n_batch = 128, shuffle=True):
+
     return tf.estimator.inputs.pandas_input_fn(
+
       x=pd.DataFrame({k: data_set[k].values for k in FEATURES}),
+
       y = pd.Series(data_set[LABEL].values),
+
       batch_size=n_batch,
+
       num_epochs=num_epochs,
+
       shuffle=shuffle)
 ```
 
-使用训练数据用于估计模型。`model.train(input_fn=get_input_fn(df_train_scale, num_epochs=None, n_batch = 128, shuffle=False), steps=1000)` 输出 `INFO:tensorflow:`:`Calling model_fn.`
+使用训练数据用于估计模型。`model.train(input_fn=get_input_fn(df_train_scale, num_epochs=None, n_batch = 128, shuffle=False), steps=1000)` 输出：
 
-`INFO:tensorflow:`:`Done calling model_fn.`
-
-`INFO:tensorflow:`:`Create CheckpointSaverHook.`
-
-`INFO:tensorflow:`:`Graph was finalized.`
-
-`INFO:tensorflow:`:`Running local_init_op.`
-
-`INFO:tensorflow:`:`Done running local_init_op.`
-
-`INFO:tensorflow:`:`Saving checkpoints for 1 into train_Boston/model.ckpt.`
-
-`INFO:tensorflow:`:`loss = 56417.703, step = 1`
-
-`INFO:tensorflow:`:`global_step/sec: 144.457`
-
-`INFO:tensorflow:`:`loss = 76982.734, step = 101 (0.697 sec)`
-
-`INFO:tensorflow:`:`global_step/sec: 258.392`
-
-`INFO:tensorflow:`:`loss = 21246.334, step = 201 (0.383 sec)`
-
-`INFO:tensorflow:`:`global_step/sec: 227.998`
-
-`INFO:tensorflow:`:`loss = 30534.78, step = 301 (0.439 sec)`
-
-`INFO:tensorflow:`:`global_step/sec: 210.739`
-
-`INFO:tensorflow:`:`loss = 36794.5, step = 401 (0.477 sec)`
-
-`INFO:tensorflow:`:`global_step/sec: 234.237`
-
-`INFO:tensorflow:`:`loss = 8562.981, step = 501 (0.425 sec)`
-
-`INFO:tensorflow:`:`global_step/sec: 238.1`
-
-`INFO:tensorflow:`:`loss = 34465.08, step = 601 (0.420 sec)`
-
-`INFO:tensorflow:`:`global_step/sec: 237.934`
-
-`INFO:tensorflow:`:`loss = 12241.709, step = 701 (0.420 sec)`
-
-`INFO:tensorflow:`:`global_step/sec: 220.687`
-
-`INFO:tensorflow:`:`loss = 11019.228, step = 801 (0.453 sec)`
-
-`INFO:tensorflow:`:`global_step/sec: 232.702`
-
-`INFO:tensorflow:`:`loss = 24049.678, step = 901 (0.432 sec)`
-
-`INFO:tensorflow:`:`Saving checkpoints for 1000 into train_Boston/model.ckpt.`
-
-`INFO:tensorflow:`:`Loss for final step: 23228.568. <tensorflow.python.estimator.canned.linear.LinearRegressor at 0x1a19e76320>`
+```
+INFO:tensorflow::Calling model_fn.
+INFO:tensorflow::Done calling model_fn.
+INFO:tensorflow::Create CheckpointSaverHook.
+INFO:tensorflow::Graph was finalized.
+INFO:tensorflow::Running local_init_op.
+INFO:tensorflow::Done running local_init_op.
+INFO:tensorflow::Saving checkpoints for 1 into train_Boston/model.ckpt.
+INFO:tensorflow::loss = 56417.703, step = 1
+INFO:tensorflow::global_step/sec: 144.457
+INFO:tensorflow::loss = 76982.734, step = 101 (0.697 sec)
+INFO:tensorflow::global_step/sec: 258.392
+INFO:tensorflow::loss = 21246.334, step = 201 (0.383 sec)
+INFO:tensorflow::global_step/sec: 227.998
+INFO:tensorflow::loss = 30534.78, step = 301 (0.439 sec)
+INFO:tensorflow::global_step/sec: 210.739
+INFO:tensorflow::loss = 36794.5, step = 401 (0.477 sec)
+INFO:tensorflow::global_step/sec: 234.237
+INFO:tensorflow::loss = 8562.981, step = 501 (0.425 sec)
+INFO:tensorflow::global_step/sec: 238.1
+INFO:tensorflow::loss = 34465.08, step = 601 (0.420 sec)
+INFO:tensorflow::global_step/sec: 237.934
+INFO:tensorflow::loss = 12241.709, step = 701 (0.420 sec)
+INFO:tensorflow::global_step/sec: 220.687
+INFO:tensorflow::loss = 11019.228, step = 801 (0.453 sec)
+INFO:tensorflow::global_step/sec: 232.702
+INFO:tensorflow::loss = 24049.678, step = 901 (0.432 sec)
+INFO:tensorflow::Saving checkpoints for 1000 into train_Boston/model.ckpt.
+INFO:tensorflow::Loss for final step: 23228.568. <tensorflow.python.estimator.canned.linear.LinearRegressor at 0x1a19e76320>
+```
 
 最后，使用测试集来估计模型性能：`model.evaluate(input_fn=get_input_fn(df_test_scale, num_epochs=1, n_batch=128, shuffle=False))`
 
@@ -3498,109 +3588,134 @@ def get_input_fn(data_set, num_epochs=None, n_batch = 128, shuffle=True):
 
 ```python
 model = tf.estimator.LinearRegressor(
+
   model_dir="train_Boston_1",
+
   feature_columns=categorical_features + continuous_features_new)
 ```
 
 
 
-INFO:tensorflow:Using config: {'\_model\_dir': 'train\_Boston\_1', '\\_tf\_random\_seed': None, \\_save\_summary\_steps': 100, \\_save\_checkpoints\_steps': None, \\_save\_checkpoints\_secs': 600, \\_session\_config': None, \\_keep\_checkpoint\_max': 5, \\_keep\_checkpoint\_every\_n\_hours': 10000, \\_log\_step\_count\_steps': 100, \\_train\_distribute': None, \\_service': None, \\_cluster\_spec': <tensorflow.python.training.server\_lib.ClusterSpec object at 0x1a1a5d5860>, \\_task\_type': 'worker', \\_task\_id': 0, \\_global\_id\_in\_cluster': 0, \\_master': '', \\_evaluation\_master': '', \\_is\_chief': True, \\_num\_ps\_replicas': 0, \\_num\_worker\_replicas': 1}
+# TensorFlow 线性回归与核方法分类实战
 
-`CODE FEATURES` = ['CRIM', 'ZN', 'INDUS', 'NOX', 'RM', 'AGE', 'DIS', 'RAD','TAX', 'PTRATIO', 'B', 'LSTAT','INDUS\_NOS', 'INDUS\_NOS\_DIS','CHAS']
+## 1. 波士顿房价预测：线性回归模型
 
-`LABEL`= 'PRICE'
-
-```python
-def get\_input\_fn(data\_set, num\_epochs=None, n\_batch = 128, shuffle=True):
-    return tf.estimator.inputs.pandas\_input\_fn(
-        x=pd.DataFrame({k: data\_set[k].values for k in FEATURES}),
-        y = pd.Series(data\_set[LABEL].values),
-        batch\_size=n\_batch,
-        num\_epochs=num\_epochs,
-        shuffle=shuffle)
-
-model.train(input\_fn=get\_input\_fn(df\_train\_new,
-                                     num\_epochs=None,
-                                     n\_batch = 128, shuffle=False),
-                                     steps=1000)
+### 1.1 模型配置
+```
+INFO:tensorflow:Using config: {'_model_dir': 'train_Boston_1', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': None, '_save_checkpoints_secs': 600, '_session_config': None, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 100, '_train_distribute': None, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x1a1a5d5860>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1}
 ```
 
-INFO:tensorflow:Calling model\_fn.
-INFO:tensorflow:Done calling model\_fn.
+### 1.2 特征与标签定义
+```python
+CODE_FEATURES = ['CRIM', 'ZN', 'INDUS', 'NOX', 'RM', 'AGE', 'DIS', 'RAD', 'TAX', 'PTRATIO', 'B', 'LSTAT', 'INDUS_NOS', 'INDUS_NOS_DIS', 'CHAS']
+LABEL = 'PRICE'
+```
+
+### 1.3 输入函数构建
+```python
+def get_input_fn(data_set, num_epochs=None, n_batch=128, shuffle=True):
+    return tf.estimator.inputs.pandas_input_fn(
+        x=pd.DataFrame({k: data_set[k].values for k in FEATURES}),
+        y=pd.Series(data_set[LABEL].values),
+        batch_size=n_batch,
+        num_epochs=num_epochs,
+        shuffle=shuffle)
+```
+
+### 1.4 模型训练
+```python
+model.train(input_fn=get_input_fn(df_train_new,
+                                  num_epochs=None,
+                                  n_batch=128, shuffle=False),
+            steps=1000)
+```
+
+### 1.5 训练日志
+```
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
 INFO:tensorflow:Create CheckpointSaverHook.
 INFO:tensorflow:Graph was finalized.
-INFO:tensorflow:Running local\_init\_op.
-INFO:tensorflow:Done running local\_init\_op.
-INFO:tensorflow:Saving checkpoints for 1 into train\_Boston\_1/model.ckpt.
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 1 into train_Boston_1/model.ckpt.
 INFO:tensorflow:loss = 56417.703, step = 1
-INFO:tensorflow:global\_step/sec: 124.844
+INFO:tensorflow:global_step/sec: 124.844
 INFO:tensorflow:loss = 65522.3, step = 101 (0.803 sec)
-INFO:tensorflow:global\_step/sec: 182.704
+INFO:tensorflow:global_step/sec: 182.704
 INFO:tensorflow:loss = 15384.148, step = 201 (0.549 sec)
-INFO:tensorflow:global\_step/sec: 208.189
+INFO:tensorflow:global_step/sec: 208.189
 INFO:tensorflow:loss = 22020.305, step = 301 (0.482 sec)
-INFO:tensorflow:global\_step/sec: 213.855
+INFO:tensorflow:global_step/sec: 213.855
 INFO:tensorflow:loss = 28208.812, step = 401 (0.468 sec)
-INFO:tensorflow:global\_step/sec: 209.758
+INFO:tensorflow:global_step/sec: 209.758
 INFO:tensorflow:loss = 7606.877, step = 501 (0.473 sec)
-INFO:tensorflow:global\_step/sec: 196.618
+INFO:tensorflow:global_step/sec: 196.618
 INFO:tensorflow:loss = 26679.76, step = 601 (0.514 sec)
-INFO:tensorflow:global\_step/sec: 196.472
+INFO:tensorflow:global_step/sec: 196.472
 INFO:tensorflow:loss = 11377.163, step = 701 (0.504 sec)
-INFO:tensorflow:global\_step/sec: 172.82
+INFO:tensorflow:global_step/sec: 172.82
 INFO:tensorflow:loss = 8592.07, step = 801 (0.578 sec)
-INFO:tensorflow:global\_step/sec: 168.916
+INFO:tensorflow:global_step/sec: 168.916
 INFO:tensorflow:loss = 19878.56, step = 901 (0.592 sec)
-INFO:tensorflow:Saving checkpoints for 1000 into train\_Boston\_1/model.ckpt.
+INFO:tensorflow:Saving checkpoints for 1000 into train_Boston_1/model.ckpt.
 INFO:tensorflow:Loss for final step: 19598.387. <tensorflow.python.estimator.canned.linear.LinearRegressor at 0x1a1a5d5e10>
-
-```python
-model.evaluate(input\_fn=get\_input\_fn(df\_test\_new,
-                                     num\_epochs=1,
-                                     n\_batch = 128,
-                                     shuffle=False),
-                                     steps=1000)
 ```
 
-INFO:tensorflow:Calling model\_fn.
-INFO:tensorflow:Done calling model\_fn.
+### 1.6 模型评估
+```python
+model.evaluate(input_fn=get_input_fn(df_test_new,
+                                     num_epochs=1,
+                                     n_batch=128,
+                                     shuffle=False),
+               steps=1000)
+```
+
+```
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
 INFO:tensorflow:Starting evaluation at 2018-05-29:02:14.
 INFO:tensorflow:Graph was finalized.
-INFO:tensorflow:Restoring parameters from train\_Boston\_1/model.ckpt-100
-INFO:tensorflow:Running local\_init\_op.
-INFO:tensorflow:Done running local\_init\_op.
+INFO:tensorflow:Restoring parameters from train_Boston_1/model.ckpt-100
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
 INFO:tensorflow:Finished evaluation at 2018-05-29:02:14.
+```
 
+![模型结构图](img/image_rsrc9TB.jpg)
 
+---
 
+## 2. 核方法理论基础
 
-![](img/image_rsrc9TB.jpg)
-如果你需要处理一个至少两个维度的大型数据集，上述方法将让你感到非常吃力。每个数据点都需要进行转换，这显然是不可持续的——它会花费大量时间，而且你的计算机可能没有足够的资源。最简单的方法是使用核（Kernel）。
+如果你需要处理一个至少两个维度的大型数据集，上述方法将让你感到非常吃力。每个数据点都需要进行转换，这显然是不可持续的——它会花费大量时间，而且你的计算机可能没有足够的资源。最简单的方法是使用核。
 
-什么是核？为了让数据尽可能接近线性可分，我们需要一个更高维的特征空间，而这种空间有很多——首先是多项式映射。我们还证明了，对于海量数据，转换并不是最好的方法。你可以使用核函数来修改数据，而不需要新的特征规划。核的魔力在于找到一个合适的函数，从而避免陷入高维计算带来的困扰。核的结果是标量，即一维空间。一旦确定了该函数，就可以将其插入到线性分类器中。这里有一个例子。我们有一对向量，`x1` 和 `x2`。我们将使用多项式映射来获取高维，输出将等于新特征积的点积映射。
+### 2.1 什么是核？
+为了让数据尽可能接近线性可分，我们需要一个更高维的特征空间，而这种空间有很多——首先是多项式映射。我们还证明了，对于海量数据，转换并不是最好的方法。你可以使用核函数来修改数据，而不需要新的特征规划。核的魔力在于找到一个合适的函数，从而避免陷入高维计算带来的困扰。核的结果是标量，即一维空间。一旦确定了该函数，就可以将其插入到线性分类器中。
 
-*   `X1` 和 `x2` 需要转换到新维度
-*   必须计算点积
-*   `X1` 和 `x2` 需要转换到新维度
+### 2.2 核函数示例
+我们有一对向量 `x1` 和 `x2`。我们将使用多项式映射来获取高维，输出将等于新特征积的点积映射。
+
+- `x1` 和 `x2` 需要转换到新维度
+- 必须计算点积
+- `x1` 和 `x2` 需要转换到新维度
 
 之前创建的函数可以进行高维计算：
 
-## Kernel
-
 ```python
-x1 = np.array([3,6])
-x2 = np.array([10,10])
+x1 = np.array([3, 6])
+x2 = np.array([10, 10])
 x_1 = mapping(x1, x2)
 print(x_1)
 # 输出 [[ 9. 100.]
-# [25.45584412 141.42135624]
-# [36. 100.]]
+#  [25.45584412 141.42135624]
+#  [36. 100.]]
 ```
 
-### 计算点积
+#### 计算点积
 NumPy 对象 `dot` 可以用于 `x_1` 中的第一个和第二个向量之间进行计算：`print(np.dot(x_1[:,0], x_1[:,1]))`。
 
-你得到的输出是 8100。你可以看出问题所在之处——新的特征映射必须存储在内存中，才能计算点积。如果你的数据集非常巨大，这种方法根本不可有效。多项式核更好，因为它并不转换向量。该函数实际上计算了 `x1` 和 `x2` 的点积，就像这些向量已经转换到更高维度一样。核函数可以用 Python 这样写写：
+你得到的输出是 8100。你可以看出问题所在之处——新的特征映射必须存储在内存中，才能计算点积。如果你的数据集非常巨大，这种方法根本不可有效。多项式核更好，因为它并不转换向量。该函数实际上计算了 `x1` 和 `x2` 的点积，就像这些向量已经转换到更高维度一样。核函数可以用 Python 这样写：
 
 ```python
 def polynomial_kernel(x, y, p=2):
@@ -3614,14 +3729,21 @@ polynomial_kernel(x1, x2, p=2)
 # 8100
 ```
 
-##不同的核方法
-有很多核，最简单的是线性核，适用于文本分类。其他核包括高斯核多项式核。在 TensorFlow 示例中，我们将使用随机傅里叶变换（Random Fourier）。TensorFlow 内置了一个用于计算特征空间的估计器，它是高斯核函数的近似：![](img/adult.test"
+### 2.3 不同的核方法
+有很多核，最简单的是线性核，适用于文本分类。其他核包括高斯核、多项式核。在 TensorFlow 示例中，我们将使用随机傅里叶变换。TensorFlow 内置了一个用于计算特征空间的估计器，它是高斯核函数的近似。
 
+---
+
+## 3. 成人收入分类实战：核分类器 vs 逻辑回归
+
+### 3.1 数据加载
+```python
 # 导入
 df_train = pd.read_csv(PATH, header=None, names=COLUMNS)
 df_test = pd.read_csv(PATH_test, skiprows=1, header=None, names=COLUMNS)
 ```
 
+### 3.2 标签编码
 训练集和测试集已经定义，现在列标签可以从字符串改为整数：
 
 ```python
@@ -3631,8 +3753,8 @@ label_t = {'<=50K.': 0, '>50K.': 1}
 df_test.label = [label_t[item] for item in df_test.label]
 ```
 
-### 第三步——数据准备
-数据中既有类别又有连续特征，最佳实践是对比连续变量进行标准化。Scikit-learn 函数 `StandardScaler` 可以实现这一点，并配合一个自定义函数来方便地转换训练和测试集。类别和连续值被拼接，你应该得到一个 float32 数组：
+### 3.3 数据准备
+数据中既有类别又有连续特征，最佳实践是对连续变量进行标准化。Scikit-learn 函数 `StandardScaler` 可以实现这一点，并配合一个自定义函数来方便地转换训练和测试集。类别和连续值被拼接，你应该得到一个 float32 数组：
 
 ```python
 COLUMNS_INT = ['age', 'fnlwgt', 'education_num', 'capital_gain', 'capital_loss', 'hours_week']
@@ -3658,14 +3780,20 @@ X_train, y_train = prep_data_str(df_train)
 X_test, y_test = prep_data_str(df_test)
 print(X_train.shape)
 # (32561, 14)
-```接下来我们将训练逻辑回归以获取基准准确率。我们的目标是使用核分类器来超越基准。
+```
 
-### 第四步——构建逻辑模型——基准
-特征列使用 `real_value_column` 对象构建，确保变量都是稠密的（数值型）：
+接下来我们将训练逻辑回归以获取基准准确率。我们的目标是使用核分类器来超越基准。
+
+### 3.4 第四步——构建逻辑模型——基准
+特征列使用 `real_valued_column` 对象构建，确保变量都是稠密的（数值型）：
 
 ```python
 feat_column = tf.contrib.layers.real_valued_column('features', dimension=14)
+```
+
 我们使用 TensorFlow 估计器定义估计器，向特征列传递指令，并指定图应该保存的位置：
+
+```python
 estimator = tf.estimator.LinearClassifier(
     feature_columns=[feat_column],
     n_classes=2,
@@ -3673,15 +3801,13 @@ estimator = tf.estimator.LinearClassifier(
 )
 ```
 
-
-
-
+```
 INFO:tensorflow:Using config: {'_model_dir': 'kernel_log', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': None, '_save_checkpoints_secs': 600, '_session_config': None, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 100, '_train_distribute': None, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x1a2003f780>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1}
+```
 
 逻辑回归在大小为 200 的小 batches 上进行训练：
 
-### 训练模型
-
+#### 训练模型
 ```python
 train_input_fn = tf.estimator.inputs.numpy_input_fn(
     x={"features": X_train},
@@ -3693,6 +3819,7 @@ train_input_fn = tf.estimator.inputs.numpy_input_fn(
 
 可以使用 1000 次迭代来训练模型：`estimator.train(input_fn=train_input_fn, steps=1000)`。
 
+```
 INFO:tensorflow:Calling model_fn.
 INFO:tensorflow:Done calling model_fn.
 INFO:tensorflow:Create CheckpointSaverHook.
@@ -3706,6 +3833,13 @@ INFO:tensorflow:loss = 87.16762, step = 101 (0.310 sec)
 INFO:tensorflow:global_step/sec: 267.092
 INFO:tensorflow:loss = 71.53657, step = 201 (0.376 sec)
 INFO:tensorflow:global_step/sec: 292.679
+```
+
+
+
+# 模型训练日志
+
+```
 INFO:tensorflow:loss = 69.56703, step = 301 (0.340 sec)
 INFO:tensorflow:global_step/sec: 225.582
 INFO:tensorflow:loss = 74.615875, step = 401 (0.445 sec)
@@ -3721,12 +3855,13 @@ INFO:tensorflow:global_step/sec: 359.857
 INFO:tensorflow:loss = 78.54885, step = 901 (0.277 sec)
 INFO:tensorflow:Saving checkpoints for 1000 into kernel_log/model.ckpt.
 INFO:tensorflow:Loss for final step: 67.79706. <tensorflow.python.estimator.canned.linear.LinearClassifier at 0x1a1fa3cbe0>
+```
 
 # 第六步 评估模型
 
 使用 NumPy estimator 在整个数据集上对模型进行评估：
 
-# 评估
+## 评估
 
 ```python
 test_input_fn = tf.estimator.inputs.numpy_input_fn(
@@ -3738,6 +3873,7 @@ test_input_fn = tf.estimator.inputs.numpy_input_fn(
 estimator.evaluate(input_fn=test_input_fn, steps=1)
 ```
 
+```
 INFO:tensorflow:Calling model_fn.
 WARNING:tensorflow:Trapezoidal rule is known to produce PR-AUCs; please switch to "careful_interpolation".
 WARNING:tensorflow:Trapezoidal rule is known to produce PR-AUCs; please switch to "careful_interpolation".
@@ -3749,12 +3885,10 @@ INFO:tensorflow:Running local_init_op.
 INFO:tensorflow:Done local_init_op.
 INFO:tensorflow:Evaluation [1/1]
 INFO:tensorflow:Finished evaluation at 2018-07-12:15:22
-
-
-
 INFO:tensorflow:Using config: {'_task_type': None, '_task_id': 0, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x1a200ae550>, '_master': '', '_num_ps_replicas': 0, '_num_worker_replicas': 0, '_environment': 'local', '_is_chief': True, '_evaluation_master': '', '_train_distribute': None, '_tf_config': gpu_options { per_process_gpu_memory_fraction: 1.0 } , '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_secs': 600, '_log_step_count_steps': 100, '_session_config': None, '_save_checkpoints_steps': None, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_model_dir': 'kernel_train'}
+```
 
-# 第四步 – 模型
+# 第四步 模型
 
 我们现在准备好训练模型，迭代 2,000 次：
 
@@ -3764,161 +3898,101 @@ INFO:tensorflow:Using config: {'_task_type': None, '_task_id': 0, '_cluster_spec
 estimator_kernel.fit(input_fn=train_input_fn, steps=2000)
 ```
 
+```
 WARNING:tensorflow:将 <dtype: 'int32'> labels 转换为 bool。
-
 WARNING:tensorflow:将 <dtype: 'int32'> labels 转换为 bool。
-
 WARNING:tensorflow:已知梯形法则会产生错误的 PR-AUCs；请切换到 "careful_interpolation"。
-
 WARNING:tensorflow:已知梯形法则会产生错误的 PR-AUCs；请切换到 "careful_interpolation"。
-
 WARNING:tensorflow:从 /Users/Thomas/anaconda3/envs/hello-tf/lib/python3.6/site-packages/tensorflow/contrib/learn/python/learn/estimators/head.py:678 处的 ModelFnOps.__new__ (来自 tensorflow.contrib.learn.python.learn.estimators.model_fn) 已弃用并将在未来的版本中删除。
-
 更新说明：
-
 当切换到 `tf.estimator.Estimator` 时，请使用 `tf.estimator.EstimatorSpec`。你可以使用 `estimator_spec` 方法来创建一个等效的。
-
 INFO:tensorflow:创建 CheckpointSaverHook。
-
 INFO:tensorflow:Graph 已确定。
-
 INFO:tensorflow:正在运行 local_init_op。
-
 INFO:tensorflow:完成运行 local_init_op。
-
 INFO:tensorflow:正在将 1 个 checkpoint  保存到 kernel_train/model.ckpt。
-
 INFO:tensorflow:loss = 0.6931474, step = 1
-
 INFO:tensorflow:global_step/sec: 86.6365
-
 INFO:tensorflow:loss = 0.39374447, step = 101 (1.155 sec)
-
 INFO:tensorflow:global_step/sec: 80.1986
-
 INFO:tensorflow:loss = 0.3797774, step = 201 (1.247 sec)
-
 INFO:tensorflow:global_step/sec: 79.6376
-
 INFO:tensorflow:loss = 0.3908726, step = 301 (1.256 sec)
-
 INFO:tensorflow:global_step/sec: 95.8442
-
 INFO:tensorflow:loss = 0.41890752, step = 401 (1.043 sec)
-
 INFO:tensorflow:global_step/sec: 93.7799
-
 INFO:tensorflow:loss = 0.35700393, step = 501 (1.066 sec)
-
 INFO:tensorflow:global_step/sec: 94.7071
-
 INFO:tensorflow:loss = 0.35535482, step = 601 (1.056 sec)
-
 INFO:tensorflow:global_step/sec: 90.7402
-
 INFO:tensorflow:loss = 0.3692882, step = 701 (1.102 sec)
-
 INFO:tensorflow:global_step/sec: 94.4924
-
 INFO:tensorflow:loss = 0.34746957, step = 801 (1.058 sec)
-
 INFO:tensorflow:global_step/sec: 95.3472
-
 INFO:tensorflow:loss = 0.33655524, step = 901 (1.049 sec)
-
 INFO:tensorflow:global_step/sec: 97.2928
-
 INFO:tensorflow:loss = 0.35966292, step = 1001 (1.028 sec)
-
 INFO:tensorflow:global_step/sec: 85.6761
-
 INFO:tensorflow:loss = 0.31254214, step = 1101 (1.167 sec)
-
 INFO:tensorflow:global_step/sec: 91.4194
-
 INFO:tensorflow:loss = 0.33247527, step = 1201 (1.094 sec)
-
 INFO:tensorflow:global_step/sec: 82.5954
-
 INFO:tensorflow:loss = 0.29305756, step = 1301 (1.211 sec)
-
 INFO:tensorflow:global_step/sec: 89.8748
-
 INFO:tensorflow:loss = 0.37943482, step = 1401 (1.113 sec)
-
 INFO:tensorflow:global_step/sec: 76.9761
-
 INFO:tensorflow:loss = 0.34204718, step = 1501 (1.300 sec)
-
 INFO:tensorflow:global_step/sec: 73.7192
-
 INFO:tensorflow:loss = 0.34614792, step = 1601 (1.356 sec)
-
 INFO:tensorflow:global_step/sec: 83.0573
-
 INFO:tensorflow:loss = 0.38911164, step = 1701 (1.204 sec)
-
 INFO:tensorflow:global_step/sec: 71.7029
-
 INFO:tensorflow:loss = 0.35255936, step = 1801 (1.394 sec)
-
 INFO:tensorflow:global_step/sec: 73.2663
-
 INFO:tensorflow:loss = 0.31130585, step = 1901 (1.365 sec)
-
 INFO:tensorflow:将 2000 个 checkpoint 保存到 kernel_train/model.ckpt。
-
 INFO:tensorflow:最终步 Loss: 0.37795097.
 KernelLinearClassifier(params={'head': <tensorflow.contrib.learn.python.learn.estimators.head._BinaryLogisticHead at 0x1a2054cd30>, 'feature_columns': {_RealValuedColumn(column_name='features_MAPPED', dimension=5000, default_value=None, dtype=tf.float32, normalizer=None)}, 'optimizer': <tensorflow.python.training.ftrl.FtrlOptimizer at 0x1a20aec18>, 'kernel_mappers': {_RealValuedColumn(column_name='features', dimension=14, default_value=None, dtype=tf.float32, normalizer=None): [<tensorflow.contrib.kernel_methods.python.mappers.random_fourier_features.RandomFourierFeatureMapper at 0x1a200ae400>]}})
+```
 
-### 第五步 – 评估模型
+### 第五步 评估模型
 
 最后，我们可以评估模型的性能：
 
-# 评估并报告指标。
+## 评估并报告指标
 
 ```python
 eval_metrics = estimator_kernel.evaluate(input_fn=test_input_fn, steps=1)
 ```
 
+```
 WARNING:tensorflow:将 <dtype: 'int32'> labels 转换为 bool。
-
 WARNING:tensorflow:将 <dtype: 'int32'> labels 转换为 bool。
-
 WARNING:tensorflow:已知梯形法则会产生错误的 PR-AUCs；请切换到 "careful_interpolation"。
-
 WARNING:tensorflow:已知梯形法则会产生错误的 PR-AUCs；请切换到 "careful_interpolation"。
-
 INFO:tensorflow:于 2018-07-12-15:58:50 开始评估
-
 INFO:tensorflow:Graph 已确定。
-
 INFO:tensorflow:从 kernel_train/model.ckpt-2000 恢复参数。
-
 INFO:tensorflow:正在运行 local_init_op。
-
 INFO:tensorflow:完成运行 local_init_op。
-
 INFO:tensorflow:评估 [1/1]
-
 INFO:tensorflow:于 2018-07-12-15:58:51 完成评估。
-
 INFO:tensorflow:保存全局步 2000 的字典：accuracy = 0.83975184, accuracy/baseline_label_mean = 0.23622628, accuracy/threshold_0.500000_mean = 0.83975184, auc = 0.8904007, auc_precision_recall = 0.72722375, global_step = 2000, labels/actual_label_mean = 0.23622628, labels/prediction_mean = 0.23786618, loss = 0.34277728, precision/positive_threshold_0.500000_mean = 0.73001117, recall/positive_threshold_0.500000_mean = 0.5104004
+```
 
 # 第 13 章 使用 TensorFlow 构建 ANN
 
 人工神经网络由四个主要原理组成：
 
-*   层（Layers）——所有的学习都在层内部发生，分为三种：输入层、输出层和隐藏层。
-*   特征和标签（Feature and label）——特征是网络的输入数据，标签是网络的输出。
-*   损失函数（Loss function）——该指标用于估计学习阶段的性能。
-*   优化器（Optimizer）——它更新网络知识，从而改进学习。
-
-
+*   **层**——所有的学习都在层内部发生，分为三种：输入层、输出层和隐藏层。
+*   **特征和标签**——特征是网络的输入数据，标签是网络的输出。
+*   **损失函数**——该指标用于估计学习阶段的性能。
+*   **优化器**——它更新网络知识，从而改进学习。
 
 程序将接收输入数据并将其推送到两个层（全连接层）。假设你有一道数学题。首先，你会学习这个问题，然后应用这些知识来帮助解决它。你不太可能得高分，神经网络也是如此——当它第一次看到数据时，预测很可能是不准确的。在我们的案例，优化器通过重新阅读数学题的信息来帮助你获得更多见解。同样，网络优化器提供新知识，网络利用这些知识测试自己还需要学习多少。这个步骤不断重复，直到网络获得最低误差。如果你反复阅读数学信息直到学会它，但仍然犯错，说明你已经达到了通过该材料进行学习的极限，必须寻找新材料。神经网络的工作方式也一样；如果它无法利用现有知识学习更多，但仍需改进，则网络需要更多的优化。
 
 ## 神经网络架构层
+
 所有的学习都发生在层中。每层都包含许多神经元（权重），典型的网络通常使用密集连接层进行处理。这意味着所有输入都与输出有连接。典型网络会接收一个向量（输入）和一个带有标签的标量。输入被发送到连接节点，并使用激活函数来计算信号。
 
 1. 节点一包含输入值。
@@ -3926,49 +4000,65 @@ INFO:tensorflow:保存全局步 2000 的字典：accuracy = 0.83975184, accuracy
 3. 输出通过隐藏层计算，并做出预测。在分类任务中，预测等于类别的数量，而在回归任务中，我们只得到一个值。
 
 ### 激活函数
+
 激活函数用于定义特定输入集的输出。这使得网络能够学习非线性模式。最常用的激活函数是线性整流单元，即 `ReLu`——该函数对任何负值都提供零。其他常见的激活函数包括：
 
-* Leaky ReLu
-* 分段线性
-* Sigmoid
-* Tanh
+*   `Leaky ReLu`
+*   `分段线性`
+*   `Sigmoid`
+
+
+
+# Tanh
 
 当你构建神经网络时，有两个关键决策要做出：
-* 层的数
+
+* 层的数量
 * 每层中隐藏单元的数量
 
 如果网络具有多个层和多个隐藏单元，它就能够学习复杂的数据表示，但计算成本是昂贵的。
 
-### 损失函数
-一旦定义了层和激活函数，就必须指定损失函数以及优化器。在二分类任务中，我们通常使用二元交叉熵函数，而在线性回归中，使用 `MSE`。损失函数是估计优化器性能的重要部分，并在训练期间被最小化。选择数量时要小心——它必须反映问题类型。
+## 损失函数
+
+一旦定义了层和激活函数，就必须指定损失函数以及优化器。在二分类任务中，我们通常使用二元交叉熵函数，而在线性回归中，使用 `MSE`。损失函数是估计优化器性能的重要部分，并在训练期间被最小化。选择时要小心——它必须反映问题类型。
 
 ## 优化器
-损失函数衡量性能，优化器通过改进网络权重来最小化损失。常用的优化器是随机梯度，但其他的包括：
+
+损失函数衡量性能，优化器通过改进网络权重来最小化损失。常用的优化器是随机梯度下降，但其他的包括：
+
 * AdaGrad
 * Adam 优化
 * 动量优化
 * Nesterov 加速梯度
 
 ## 神经网络的局限性
+
 ### 过拟合
-与复杂神经网络相关的问题之一是对未见数据的泛化。具有许多权重的网络可以识别训练集的细节，但往往会导致过拟合。如果我们组内数据不平衡（某些组比其他组多），网络在训练期间会学习，但无法将模式泛化到未见的数据上。在机器学习中，泛化和优化之间存在权衡，后者需要找到最优参数以最小化损失，而前者指导模型在未见数据上应该如何表现。可以使用一些技术来阻止模型获取训练集中的不期望模式或特定细节，最好的方法是确保数据平衡且充足。正则化可以减少过拟合，让我们来看一些技术。
+
+与复杂神经网络相关的问题之一是对未见数据的泛化。具有许多权重的网络可以识别训练集的细节，但往往会导致过拟合。如果组内数据不平衡（某些组比其他组多），网络在训练期间会学习，但无法将模式泛化到未见的数据上。在机器学习中，泛化和优化之间存在权衡，后者需要找到最优参数以最小化损失，而前者指导模型在未见数据上应该如何表现。可以使用一些技术来阻止模型获取训练集中的不期望模式或特定细节，最好的方法是确保数据平衡且充足。正则化可以减少过拟合，让我们来看一些技术。
 
 ### 网络尺寸
+
 如果一个网络具有许多层和单元，它被认为是复杂的。降低复杂度最简单的方法就是减小尺寸。从少数几层开始，不断增加直到模型过拟合。
 
 ### 权重正则化
+
 另一种停止过拟合的标准方法是约束网络权重，确保网络只取较小的值。约束放置在误差损失函数中；有两种正则化类型：
-1. `L1`: Lasso – 成本与权重系数的绝对值成正比。
-2. `L2`: Ridge – 成本与权重系数的平方成正比。
+
+1. `L1` (Lasso)：成本与权重系数的绝对值成正比。
+2. `L2` (Ridge)：成本与权重系数的平方成正比。
 
 ### Dropout (丢弃)
-这是一个非常有用的技术。当网络具有 dropout 时，随机权重被设置为零。假设你有一个包含权重的数组——`[0.1, 1.5, 0.8, -0.6]`。如果有 dropout，数组将变为 `[0.1, 0.0, -0.6]`，零随机分布。丢弃率是控制 dropout 的参数，它定义了应该设置为零的权重数量。通常速率在 0.2 到 0.5 之间。
+
+这是一个非常有用的技术。当网络具有 dropout 时，随机权重被设置为零。假设你有一个包含权重的数组——`[0.1, 1.5, 0.8, -0.6]`。如果有 dropout，数组将变为 `[0.1, 0.0, 0.8, -0.6]`（示例中随机将第二个元素置零），零随机分布。丢弃率是控制 dropout 的参数，它定义了应该设置为零的权重比例。通常速率在 `0.2` 到 `0.5` 之间。
 
 ## 使用 TensorFlow 训练神经网络
+
 现在我们进入实践，查看如何使用 TensorFlow 中的 `DNNClassifier` 估计器使用 MNIST 数据集训练神经网络。这并不难，与我们学过的其他教程类似：
 
 ### 第一步 – 导入数据
-首先，我们需要正确的库和 MNIST 数据集，你可以从 `http://yann.lecun.com/exdb/mnist/` 下载。这是测试算法和技术的最常用数据集之一。它包含系列图像，大小为 28x28 像素，每张图像上都有手写的 0 到 9 的数字。目前使用七个 CNN 的最低测试误差 0.27%。
+
+首先，我们需要正确的库和 MNIST 数据集，你可以从 `http://yann.lecun.com/exdb/mnist/` 下载。这是测试算法和技术的最常用数据集之一。它包含一系列图像，大小为 `28x28` 像素，每张图像上都有手写的 `0` 到 `9` 的数字。目前使用七个 CNN 的最低测试误差 `0.27%`。
 
 ```python
 import numpy as np
@@ -4005,57 +4095,55 @@ print(X_train.shape, y_train.shape, y_test.shape)
 ```
 
 ### 第二步 – 转换数据
-我们将使用最小最大值缩放器来转换我们的数据，公式如下：`(X-min_x)/(max_x - min_x)`。我们使用 Scikit-learn 的 `MinMaxScaler()` 函数：
+
+我们将使用最小最大值缩放器来转换我们的数据，公式如下：`(X - min_x) / (max_x - min_x)`。我们使用 Scikit-learn 的 `MinMaxScaler()` 函数：
 
 ```python
 from sklearn.preprocessing import MinMaxScaler
 
 scaler = MinMaxScaler()
 
-### 训练
+# 训练
 X_train_scaled = scaler.fit_transform(X_train.astype(np.float64))
 
 # 测试
-```
-
-
-
-
-```python
-X_test_scaled = scaler.fit_transform(X_test.astype(np.float64))
+X_test_scaled = scaler.transform(X_test.astype(np.float64))
 ```
 
 ### 第三步 – 构建张量
+
 你已经知道如何在 TensorFlow 中实现这一点。训练集可以转换为数值列：`feature_columns = [tf.feature_column.numeric_column('x', shape=X_train_scaled.shape[1:])]`。
 
 ### 第四步 – 建立模型
-我们的神经网络有两个隐藏层；在第一层中有 300 个单元，在第二层中有 100 个单元。使用 `DNNClassifier` 估估计器来构建模型。在 `feature_columns` 参数中，你可以定义层数，并且必须将类别数（class number）设置为 10 —— 这是训练数据集中类别的数量。请参考之前的教程查看用于参数的特征列，以及 `model_dir` 和类别数量——它们是相同的。我们有一个名为 `hidden_unit` 的新参数，它用于控制层数以及网络中连接的节点数量。该估估计器使用 `tf.estimator.DNNClassifier` 构建，并具有以下参数：
 
-* `feature_columns`: 需要多少列
-* `hidden_units`: 有多少个隐藏神经元
-* `n_classes`: 将预测多少个类别
-* `model_dir`: TensorBoard 的路径
+我们的神经网络有两个隐藏层；在第一层中有 `300` 个单元，在第二层中有 `100` 个单元。使用 `DNNClassifier` 估计器来构建模型。在 `feature_columns` 参数中，你可以定义输入特征，并且必须将类别数（`n_classes`）设置为 `10` —— 这是训练数据集中类别的数量。请参考之前的教程查看用于参数的特征列，以及 `model_dir` 和类别数量——它们是相同的。我们有一个名为 `hidden_units` 的新参数，它用于控制层数以及网络中连接的节点数量。该估计器使用 `tf.estimator.DNNClassifier` 构建，并具有以下参数：
+
+* `feature_columns`：需要多少列
+* `hidden_units`：有多少个隐藏神经元
+* `n_classes`：将预测多少个类别
+* `model_dir`：TensorBoard 的路径
 
 ```python
 estimator = tf.estimator.DNNClassifier(
     feature_columns=feature_columns,
     hidden_units=[300, 100],
     n_classes=10,
-    model_dir = '/train/DNN')
+    model_dir='/train/DNN')
 ```
 
 ### 第五步 – 训练与评估
-使用 NumPy 方法来实现此：
+
+使用 NumPy 方法来实现此过程：
 
 ```python
-# 训练估估计器
+# 训练估计器
 train_input = tf.estimator.inputs.numpy_input_fn(
     x={"x": X_train_scaled},
     y=y_train,
     batch_size=50,
     shuffle=False,
     num_epochs=None)
-estimator.train(input_fn = train_input,steps=1000)
+estimator.train(input_fn=train_input, steps=1000)
 
 eval_input = tf.estimator.inputs.numpy_input_fn(
     x={"x": X_test_scaled},
@@ -4063,13 +4151,14 @@ eval_input = tf.estimator.inputs.numpy_input_fn(
     shuffle=False,
     batch_size=X_test_scaled.shape[0],
     num_epochs=1)
-estimator.evaluate(eval_input,steps=None)
+estimator.evaluate(eval_input, steps=None)
 ```
 
-输出 `{'accuracy': 0.9637143, 'average_loss': 0.12014342, 'loss': 1682.0079, 'global_step': 1000}`。我们在评估时获得了 96% 的准确率。
+输出 `{'accuracy': 0.9637143, 'average_loss': 0.12014342, 'loss': 1682.0079, 'global_step': 1000}`。我们在评估时获得了 `96%` 的准确率。
 
 ### 第六步 – 改进模型
-我们可以添加一些正则化参数来看看是否可以改进结果。Adam 优化器将提供帮助，配合 0.3 的 dropout 率，L1 为 X，L2 为 y。控制优化器是通过使用优化器名称和训练对象完成的。在 TensorFlow 中，你会找到用于 Proximal AdaGrad 优化器的 API，并使用 `tf.train.ProximalAdagradOptimizer` 来添加正则化，使用这些参数：
+
+我们可以添加一些正则化参数来看看是否可以改进结果。Adam 优化器将提供帮助，配合 `0.3` 的 dropout 率，L1 为 X，L2 为 y。控制优化器是通过使用优化器名称和训练对象完成的。在 TensorFlow 中，你会找到用于 Proximal AdaGrad 优化器的 API，并使用 `tf.train.ProximalAdagradOptimizer` 来添加正则化，使用这些参数：
 
 * `learning_rate`
 * `l1_regularization_strength`
@@ -4080,18 +4169,18 @@ estimator_imp = tf.estimator.DNNClassifier(
     feature_columns=feature_columns,
     hidden_units=[300, 100],
     dropout=0.3,
-    n_classes = 10,
+    n_classes=10,
     optimizer=tf.train.ProximalAdagradOptimizer(
-      learning_rate=0.01,
-      l1_regularization_strength=0.01,
-      l2_regularization_strength=0.01
+        learning_rate=0.01,
+        l1_regularization_strength=0.01,
+        l2_regularization_strength=0.01
     ),
-    model_dir = '/train/DNN1')
-estimator_imp.train(input_fn = train_input,steps=1000)
-estimator_imp.evaluate(eval_input,steps=None)
+    model_dir='/train/DNN1')
+estimator_imp.train(input_fn=train_input, steps=1000)
+estimator_imp.evaluate(eval_input, steps=None)
 ```
 
-输出 `{'accuracy': 0.95057142, 'average_loss': 0.17318928, 'loss': 2424.6499, 'global_step': 2000}`。我们未能通过选择不同的值来提高准确率。事实上，我们让它变得更差了 —— 第模型的准确率为 96%，而这一个只有 95%。可以使用不同的值进行尝试，并观察它们对准确率的影响。在下一章中，我们将学习使用卷积网络进行图像分类。
+输出 `{'accuracy': 0.95057142, 'average_loss': 0.17318928, 'loss': 2424.6499, 'global_step': 2000}`。我们未能通过选择不同的值来提高准确率。事实上，我们让它变得更差了 —— 第一个模型的准确率为 `96%`，而这一个只有 `95%`。可以使用不同的值进行尝试，并观察它们对准确率的影响。在下一章中，我们将学习使用卷积网络进行图像分类。
 
 # 第 14 章 使用 TensorFlow 进行 ConvNet 图像分类
 
@@ -4100,60 +4189,66 @@ estimator_imp.evaluate(eval_input,steps=None)
 ConvNet 也称为卷积神经网络或 CNNs，通常用于图像分类任务。我们将学习如何构建一个，然后使用 TensorFlow 在 MNIST 数据集上使用它。
 
 ## ConvNet 的架构
-许多 Facebook 用户可能还记得，在早期，他们必须手动标记上传到社交网络的图片中的人物。现在这些都是使用卷积网络自动完成的。这些很容易理解 —— 图像被作为输入，稍后赋予标签。通常，图像作为输入传入；经过若干步骤，然后网络就可以对图像做出预测。每张图像都由像素数组组成，具有宽度和高度。如果图像是灰色的，它只有一个通道，而彩色图像有三个通道 —— 红、绿、蓝，堆叠在一起。每个像素都有一个 0 到 255 之间的值；值越低越亮。
+
+许多 Facebook 用户可能还记得，在早期，他们必须手动标记上传到社交网络的图片中的人物。现在这些都是使用卷积网络自动完成的。这些很容易理解 —— 图像被作为输入，稍后赋予标签。通常，图像作为输入传入；经过若干步骤，然后网络就可以对图像做出预测。每张图像都由像素数组组成，具有宽度和高度。如果图像是灰色的，它只有一个通道，而彩色图像有三个通道 —— 红、绿、蓝，堆叠在一起。每个像素都有一个 `0` 到 `255` 之间的值；值越低越亮。
 
 ### 卷积操作
-卷积层是模型最重要的部分，其目的是缩小图像尺寸以加快计算。在这一部分，卷积网络通过被称为卷积的技术来提取相关特征。卷积是一种逐元素乘法。它很容易理解 —— 图像的一个部分被计算机扫描（通常是 3x3 维度），然后与过滤器相乘。输出被称为特征图，这种操作重复直到整个图像被扫描。完成后，图像尺寸变小了。那么，它是如何工作的？在这一阶段，过滤器被应用于图像的一个小型像素数组。过滤器以 3x3 或 5x5 的形状在图像移动。你会发现输出的宽度和高度可能与输入不同，这是由于边界效应。假设我们有一个 5x5 的特征图和一个 3x3 的过滤器。中心是一个窗口，可以扫描 3x3 的网格。从这里输出的特征图会小两个瓦片，维度为 3x3。如果你想要输入和输出维度相同，则需要填充。这意味着要在矩阵的侧添加正确数量的列和行，以确保卷积覆盖所有的输入瓦片。
+
+卷积层是模型最重要的部分，其目的是缩小图像尺寸以加快计算。在这一部分，卷积网络通过被称为卷积的技术来提取相关特征。卷积是一种逐元素乘法。它很容易理解 —— 图像的一个部分被计算机扫描（通常是 `3x3` 维度），然后与过滤器相乘。输出被称为特征图，这种操作重复直到整个图像被扫描。完成后，图像尺寸变小了。那么，它是如何工作的？在这一阶段，过滤器被应用于图像的一个小型像素数组。过滤器以 `3x3` 或 `5x5` 的形状在图像上移动。你会发现输出的宽度和高度可能与输入不同，这是由于边界效应。假设我们有一个 `5x5` 的特征图和一个 `3x3` 的过滤器。中心是一个窗口，可以扫描 `3x3` 的网格。从这里输出的特征图会小两个瓦片，维度为 `3x3`。如果你想要输入和输出维度相同，则需要填充。这意味着要在矩阵的侧面添加正确数量的列和行，以确保卷积覆盖所有的输入瓦片。
 
 ### ConvNet 组件
+
 ConvNet 有四个阶段或组件：
 
 * 卷积
-* 非线性 - ReLu
+* 非线性 - ReLU
 * 池化/子采样
 * 分类 - 全连接层
 
 当定义网络时，有三个参数控制卷积后的特征：
 
 * `Depth`（深度）：定义了卷积中应应用多少个过滤器
-* `Stride`（步长）：定义了两个切片之间的跳跃数。如果步长为 1，窗口移动一个像素；步长越大，特征图越小
+* `Stride`（步长）：定义了两个切片之间的跳跃数。如果步长为 `1`，窗口移动一个像素；步长越大，特征图越小
 * `Zero-Padding`（零填充）：填充在图的每侧添加行和列，使输入和输出维度相同。
 
+## 非线性 – ReLU
 
+当卷积过程完成后，会在输出上使用激活函数来提供非线性。`ReLU` 是一种典型的激活函数，所有负值像素都会被替换为零。
 
+## 最大池化 (Max Pooling)
 
-
-# 非线性 – ReLu
-当卷积过程完成后，会在输出上使用激活函数来提供非线性。`ReLu` 是一种典型的激活函数，所有负值像素都会被替换为零。
-
-# 最大池化 (Max Pooling)
 池化旨在减少输入图像的维度，从而降低操作的复杂度。通过降低维度，需要计算的权重更少；因此防止了过拟合。在池化中，必须定义 `stride`（步长）和 `size`（尺寸）。标准方法是使用特征图的最大值。结果是特征图的大小显著缩小。
 
-# 全连接层
+## 全连接层
+
 最后阶段是构建人工神经网络。每一层的所有神经元都连接到下一层，并使用 `SoftMax` 激活函数对输入图像的数量进行分类。
 
 # 使用 TensorFlow 训练 CNN
+
 现在是时候使用 `TensorFlow` 构建一个 CNN 了；我们正在使用 MNIST 数据集。
 
 ### 第一步 – 上传数据集
-你可以从 `http://yann.lecun.com/exdb/mnist/` 下载 MNIST 数据集。将其存储在你的 `Downloads` 文件夹中，然后我们将使用 `fetch_mnist('MNIST original')` 来上传它。接下来，使用 `train_test_split` 将数据集分为训练集和测试集。之后使用 `MaxScaler` 对特征进行缩放。
+
+你可以从 `http://yann.lecun.com/exdb/mnist/` 下载 MNIST 数据集。将其存储在你的 `Downloads` 文件夹中，然后我们将使用 `fetch_mldata('MNIST original')` 来加载它。接下来，使用 `train_test_split` 将数据集分为训练集和测试集。之后使用 `MinMaxScaler` 对特征进行缩放。
 
 ```python
 import numpy as np
 import tensorflow as tf
-from sklearn.datasets import fetch_mnist
+from sklearn.datasets import fetch_mldata
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 ```
 
-# 将 USER 改为你的电脑
-### Windows
+#### Windows
+
 ```python
-mnist = fetch_mnist('C:\\Users\\Downloads\\MNIST original')
+mnist = fetch_mldata('C:\\Users\\Downloads\\MNIST original')
 ```
-### Mac
+
+#### Mac
+
 ```python
-mnist = fetch_mnist('/Users/Downloads/MNIST original')
+mnist = fetch_mldata('/Users/Downloads/MNIST original')
 print(mnist.data.shape)
 print(mnist.target.shape)
 ```
@@ -4166,13 +4261,14 @@ batch_size = len(X_train)
 print(X_train.shape, y_train.shape, y_test.shape)
 ```
 
-### rescale
+### 缩放数据
+
 ```python
 scaler = MinMaxScaler()
 # Train
 X_train_scaled = scaler.fit_transform(X_train.astype(np.float64))
 # test
-X_test_scaled = scaler.fit_transform(y_test.astype(np.float64))
+X_test_scaled = scaler.transform(X_test.astype(np.float64))
 ```
 
 ```python
@@ -4180,36 +4276,46 @@ feature_columns = [tf.feature_column.numeric_column('x', shape=X_train_scaled.sh
 X_train_scaled.shape
 ```
 
-# 定义 CNN
-构建 CNN 需要：
-- **卷积层**：对特征图应用 `n` 个卷积核，一旦卷积完成，就会应用 `ReLu` 激活函数来为网络提供非线性。
-- **池化层**：特征图需要进行下采样；这减少了特征图的维度，提高了速度并停止了过拟合。最大池化是最常用的，它将地图划分为 `2x2` 子区域并保留最大值。
-- **全连接层**：`neurons` 被连接到下一层，并根据卷积过程产生的特征对标签进行分类；池化层减少了这些特征。
+## 定义 CNN
 
-# CNN 架构
-- **卷积层**：应用 14 个 `5x5` 的卷积核，提取 `5x5` 的子区域，并使用 `ReLu`。
-- **池化层**：使用步长为 `2` 的 `2x2` 卷积核进行最大池化。
-- **卷积层**：应用 36 个 `5x5` 的卷积核，并使用 `ReLu`。
-- **池化层**：同上，`2x2` 卷积核和 `2` 的步长。
-- **1764 个神经元**：具有 `0.4` 的丢弃率。
-- **稠密层**：每个目标数字 `0` 到 `9` 对应一个神经元 = `10` 个神经元。
+构建 CNN 需要：
+
+* **卷积层**：对特征图应用 `n` 个卷积核，一旦卷积完成，就会应用 `ReLU` 激活函数来为网络提供非线性。
+* **池化层**：特征图需要进行下采样；这减少了特征图的维度，提高了速度并停止了过拟合。最大池化是最常用的，它将地图划分为 `2x2` 子区域并保留最大值。
+* **全连接层**：`neurons` 被连接到下一层，并根据卷积过程产生的特征对标签进行分类；池化层减少了这些特征。
+
+## CNN 架构
+
+* **卷积层 1**：应用 `14` 个 `5x5` 的卷积核，提取 `5x5` 的子区域，并使用 `ReLU`。
+* **池化层 1**：使用步长为 `2` 的 `2x2` 卷积核进行最大池化。
+* **卷积层 2**：应用 `36` 个 `5x5` 的卷积核，并使用 `ReLU`。
+* **池化层 2**：同上，`2x2` 卷积核和 `2` 的步长。
+* **全连接层**：`1764` 个神经元，具有 `0.4` 的丢弃率。
+* **稠密层**：每个目标数字 `0` 到 `9` 对应一个神经元 = `10` 个神经元。
 
 CNN 需要三个关键模块：
-- `conv2d()`：构建 2D 层，作为参数传递卷积核的数量、卷积核的大小、填充以及所选的激活函数。
-- `max_pooling2d()`：使用最大池化算法构建 2D 层。
-- `dense()`：构建包含单元和隐藏层的稠密层。
+
+* `conv2d()`：构建 2D 层，作为参数传递卷积核的数量、卷积核的大小、填充以及所选的激活函数。
+* `max_pooling2d()`：使用最大池化算法构建 2D 层。
+* `dense()`：构建包含单元和隐藏层的稠密层。
 
 现在我们将构建自己的 CNN，因此在用函数将它们整合在一起之前，让我们深入研究每个构建模块。
 
 ### 第二步 – 输入层
+
+
+
 ```python
 def cnn_model_fn(features, labels, mode):
     input_layer = tf.reshape(tensor=features["x"], shape=[-1, 28, 28, 1])
 ```
+
 我们需要定义一个具有数据形状的张量，并使用 `tf.reshape` 模块。初始参数是数据特征，在函数参数中定义。MNIST 数据集包含单色图像，大小为 `28x28`。在 `shape` 参数中，批量大小设置为 `-1`，允许它获取特征形状。
 
 ### 第三步 – 卷积层
-# 第一个卷积层
+
+#### 第一个卷积层
+
 ```python
 conv1 = tf.layers.conv2d(
     inputs=input_layer,
@@ -4218,19 +4324,27 @@ conv1 = tf.layers.conv2d(
     padding="same",
     activation=tf.nn.ReLu)
 ```
+
 这里使用了 14 个卷积核，内核大小为 `[5, 5]`，填充为 `"same"`，激活函数为 `tf.nn.ReLu`。
+
 使用 `"same"` 填充确保了输出的高度和宽与输入相同；池化层减少了这些特征。
 
 ### 第四步 – 池化层
+
 当卷积层完成后，进入池化层。池化层减少数据维度，使用 `max_pooling2d` 模块，尺寸为 `2x2`，步长为 `2`。
-# 第一个池化层
+
+#### 第一个池化层
+
 ```python
 pool1 = tf.layers.max_pooling2d(conv1, strides=2)
 ```
 
 ### 第五步 – 第二轮卷积与池化
+
 卷积层使用了 36 个卷积核，输出为 `[batch_size, 14, 14]`。
-# 第二卷积层
+
+#### 第二卷积层
+
 ```python
 conv2 = tf.layers.conv2d(
     inputs=pool1,
@@ -4238,37 +4352,45 @@ conv2 = tf.layers.conv2d(
     kernel_size=[5, 5],
     padding="same",
     activation=tf.nn.ReLu)
+```
 
 ### 第六步 – 稠密层
+
 接下来我们将定义稠密层（全连接层）。在将其连接到稠密层之前，我们需要将特征图展平，这是通过 `reshape` 完成的，尺寸为 `7*7*36`。稠密层有 1764 个神经元，并添加了 `ReLu` 函数。丢弃（Dropout）仅在训练期间发生。在 `cnn_model_fn` 模型中，你可以找到一个参数来声明是否需要训练。
+
 ```python
 pool2_flat = tf.reshape(pool2, [-1, 7 * 36])
+
 dense = tf.layers.dense(inputs=pool2_flat, units=7 * 36, activation=tf.nn.ReLu)
+
 dropout = tf.layers.dropout(inputs=dense, rate=0.3, training=mode == tf.Modes.TRAIN)
 ```
 
 ### 第七步 – Logits 层
+
 最后，使用模型预测定义 logits 层，输出形状等于批量的大小并等于 `10`（图像的数量）。
-# Logits 层
+
+#### Logits 层
+
 ```python
 logits = tf.layers.dense(inputs=dropout, units=10)
 ```
-可以创建一个包含类别和类别概率的字典。`tf-argmax()` 模块返回 logits 层的最大值，类别概率由 `SoftMax` 函数返回。
+
+可以创建一个包含类别和类别概率的字典。`tf.argmax()` 模块返回 logits 层的最大值，类别概率由 `SoftMax` 函数返回。
+
 ```python
 predictions = {
     "classes": tf.argmax(input=logits, axis=1),
     "probabilities": tf.nn.softmax(logits, name="softmax_tensor")
 }
 ```
+
 只有当模式被设置为预测时，才返回字典预测，以下代码将显示它们：
+
 ```python
 if mode == tf.estimator.ModeKeys.PREDICT:
     return tf.estimator.EstimatorSpec(mode=mode, predictions=predictions)
 ```
-
-
-
-
 
 `loss = tf.losses.sparse_softmax_cross_entropy(labels=labels, logits=logits)`
 
@@ -4277,14 +4399,14 @@ if mode == tf.estimator.ModeKeys.PREDICT:
 ```python
 train_op = optimizer.minimize(
     loss=loss,
-    global_step=tf.train.get_global_step()) 
+    global_step=tf.train.get_global_step())
 ```
 
 CNN 已经完成，但我们希望在评估期间显示性能指标。这是模型的准确率，TensorFlow 中有一个名为 `accuracy` 的模块可以帮助我们——它包含了一对参数，`labels` 和预测值。
 
 ```python
 eval_metric_ops = {
-    "accuracy": tf.metrics.accuracy(labels=labels, predictions=predictions["classes"])} 
+    "accuracy": tf.metrics.accuracy(labels=labels, predictions=predictions["classes"])}
 ```
 
 `return tf.estimator.EstimatorSpec(mode=mode, loss=loss, eval_metric_ops=eval_metric_ops)`
@@ -4316,16 +4438,20 @@ def cnn_model_fn(features, labels, mode):
       kernel_size=[5, 5],
       padding="same",
       activation=tf.nn.ReLu)
+
   pool2 = tf.layers.max_pooling2d(inputs=conv2, pool_size=[2, 2], strides=2)
 
   # 全连接层
   pool2_flat = tf.reshape(pool2, [-1, 7 * 7 * 36])
+
   dense = tf.layers.dense(inputs=pool2_flat, units=7 * 7 * 36, activation=tf.nn.ReLu)
+
   dropout = tf.layers.dropout(
       inputs=dense, rate=0.4, training=mode == tf.estimator.ModeKeys.TRAIN)
 
   # Logits 层
   logits = tf.layers.dense(inputs=dropout, units=10)
+
   predictions = {
       # 生成预测（用于 PREDICT 和 EVAL 模式）
       "classes": tf.argmax(input=logits, axis=1),
@@ -4357,6 +4483,7 @@ def cnn_model_fn(features, labels, mode):
 接下来，我们使用 CNN 模型来定义估计器（estimator）：
 
 ### 创建估计器
+
 ```python
 mnist_classifier = tf.estimator.Estimator(
     model_fn=cnn_model_fn, model_dir="train/mnist_convnet_model")
@@ -4365,6 +4492,7 @@ mnist_classifier = tf.estimator.Estimator(
 CNN 的训练可能需要多次迭代，因此我们需要一个日志钩子（Logging hook）；它会在每 50 次迭代后存储 SoftMax 层的值。
 
 ### 设置预测的日志记录
+
 ```python
 tensors_to_log = {"probabilities": "softmax_tensor"}
 logging_hook = tf.train.LoggingTensorHook(tensors=tensors_to_log, every_n_iter=50)
@@ -4386,14 +4514,12 @@ eval_results = mnist_classifier.evaluate(input_fn=eval_input)
 print(eval_results)
 ```
 
-
-
-
 可以从 [https://www.cs.toronto.edu/~kriz/cifar.html] 下载。解压图像后，你会发现一个名为 `for-10-batches-py` 的文件夹；它包含五个批次，每个批次包含 10,000 张随机排序的图像。
 
 ## 图像预处理
 
 ### 第一步 – 数据
+
 官方网站告诉我们可以使用以下代码来上传数据。代码将进入一个包含标签和数据的字典——这段代码实际上是一个函数：
 
 ```python
@@ -4409,6 +4535,7 @@ def unpickle(file):
 ```
 
 ### 第二步 – 转换数据
+
 为了简单起见，我们将数据转换为黑白（灰度）格式，这样它就只有一个维度（彩色图像有三个）。
 
 ```python
@@ -4417,9 +4544,11 @@ def grayscale(im):
 ```
 
 ### 第三步 – 合并批次
+
 我们现在已经创建了函数并加载了数据集。现在，需要一个循环将所有数据添加到内存中。包含数据的解压文件名为 `data_batch_`，编号从 1 到 5——可以通过循环这些文件来完成合并。完成后，彩色数据将被转换为灰度数据。数据形状为 50000 和 1024；扁平化将 32x32 像素减少为 1024。
 
-# 将数据加载到内存
+#### 将数据加载到内存
+
 ```python
 data, labels = [], []
 
@@ -4435,6 +4564,7 @@ for i in range(1, 6):
         labels = open_data['labels']
 
 data = grayscale(data)
+
 x = np.matrix(data)
 y = np.array(labels)
 print(x.shape)
@@ -4442,6 +4572,7 @@ print(x.shape)
 ```
 
 ### 第四步 – 构建训练集
+
 我们希望训练既快又容易，所以我们只使用鸟类图像。它们是第三类，每类有 5,000 张图像。可以打印数据形状以确认该类有 5,000 张图像和 1024 列：
 
 ```python
@@ -4452,6 +4583,7 @@ print(bird_x.shape)
 ```
 
 ### 第五步 – 构建图像可视化器
+
 最后，我们可以通过构建一个用于打印图像图像的函数来绘制这些图像。实现此点的最简单方法是使用 Matplotlib 库中的 `imshow`。数据形状必须进行转换；它是 1024，而需要转换为 32*32。
 
 ```python
@@ -4471,11 +4603,13 @@ def plot_image(image, shape=[32, 32], cmap="gray"):
 - `cmap`，我们默认选择的颜色映射
 
 尝试绘制第一个数据集：
+
 ```python
 plot_image(bird_x[1], shape=[32, 32], cmap="gray")
 ```
 
 ### 第六步 – 设置数据集估计器
+
 我们的数据集现在准备就绪，可以开始使用 TensorFlow。在构建模型之前，我们需要使用 TensorFlow 估计器喂送网络。这是通过 `from_tensor_slices`、`repeat` 和 `batch` 实现的。
 
 ```python
@@ -4501,49 +4635,60 @@ with tf.Session() as sess:
 # (1, 1024)
 ```
 
+
+
 ## 构建网络
+
 我们现在构建网络，并将训练一个堆叠式自动编码器。网络中有一个具有 1024 个点的输入层——图像形状为 32*32。在编码器块中，顶部有一个包含 300 个神经元的单隐藏层。中间有一个包含 150 个神经元的层，解码器和编码器是对称的。层值可以更改。构建自动编码器与构建任何深度学习模型没有太大区别。我们之前学习了如何创建流水线以便模型被喂送——我们将使用四层构建自动编码器。我们将使用 Xavier 初始化技术；这允许设置输入和输出方差相等。最后使用了 ReLU，并且 L2 正则化确保损失函数被正则化。
 
 ### 第一步 – 参数定义
+
 在这里我们定义每层包含多少神经元、学习率以及正则化器超参数。在此之前，函数是部分定义的。这是定义密集层参数更好的方法。以下代码是自动编码器值的定义。有两个层——分别是 300 个和 150 个神经元——`n_hidden_1` 和 `n_hidden_2` 是存储这些值的地方。必须定义学习率并将其存储在 `learning_rate` 中；我们还定义了 L2 超参数，存储在 `l2_reg` 中。
 
 ```python
 from functools import partial
 
 ### 编码器
+
 n_hidden_1 = 300
+
 n_hidden_2 = 150 # 编码
 
 ### 解码器
+
 n_hidden_3 = n_hidden_1
+
 n_outputs = n_inputs
+
 learning_rate = 0.01
+
 l2_reg = 0.0001
 
 # 我们使用 xavier_initializer 对象从 contrib 估计器调用 Xavier 初始化。
+
 # 我们也可以使用 l2_regularizer 将正则化器添加到同一个估计器中。
+
 # 定义 Xavier 初始化
+
 xav_init = tf.contrib.layers.xavier_initializer()
 
 # 定义 L2 正则化
+
 l2_regularizer = tf.contrib.layers.l2_regularizer(l2_reg)
 ```
 
 ### 第二步 – 定义层
+
 我们现在已经设置了所有层参数。可以使用 `partial` 将所有内容封装进 `dense_layer` 变量中。`dense_layer` 对象将使用了 ELU 激活函数、L2 正则化的 Xavier 初始化。
 
 ```python
 # 创建密集层
+
 dense_layer = partial(tf.layers.dense,
                      activation=tf.nn.elu,
                      kernel_initializer=xav_init,
                      kernel_regularizer=l2_regularizer)
 ```
-
-
-
-
-`kernel_regularizer=l2_regularizer`
 
 ### 第三步 – 定义架构
 
@@ -4558,8 +4703,11 @@ dense_layer = partial(tf.layers.dense,
 
 ```python
 hidden_1 = dense_layer(features, n_hidden_1)
+
 hidden_2 = dense_layer(hidden_1, n_hidden_2)
+
 hidden_3 = dense_layer(hidden_2, n_hidden_3)
+
 outputs = dense_layer(hidden_3, n_outputs, activation=None)
 ```
 
@@ -4573,7 +4721,9 @@ outputs = dense_layer(hidden_3, n_outputs, activation=None)
 
 ```python
 loss = tf.reduce_mean(tf.square(outputs - features))
+
 optimizer = tf.train.AdamOptimizer(learning_rate)
+
 train = optimizer.minimize(loss)
 ```
 
@@ -4583,6 +4733,7 @@ train = optimizer.minimize(loss)
 
 ```python
 n_batches = bird_x.shape[0] // BATCH_SIZE
+
 print(n_batches)
 ```
 
@@ -4602,23 +4753,40 @@ n_epochs = 100
 
 ```python
 saver = tf.train.Saver()
+
 with tf.Session() as sess:
+
     sess.run(tf.global_variables_initializer())
+
     # 使用训练数据初始化迭代器
+
     sess.run(iter.initializer, feed_dict={x: bird_x,
              batch_size: BATCH_SIZE})
+
     print('Training...')
+
     print(sess.run(features).shape)
+
     for epoch in range(n_epochs):
+
         for iteration in range(n_batches):
+
             sess.run(train)
+
             if epoch % 10 == 0:
+
                 loss_train = loss.eval()
+
                 print("{}".format(epoch), "Train MSE:", loss_train)
+
                 # saver.save(sess, "./model_all_layers.ckpt")
+
                 save_path = saver.save(sess, "./model.ckpt")
+
                 print("Model saved in path: %s" % save_path)
 ```
+
+
 
 Training...
 (150, 1024)
@@ -4632,41 +4800,34 @@ Training...
 70 Train MSE: 1482.323
 80 Train MSE: 1445.7035
 90 Train MSE: 1453.8597
-Model saved in path: ./model.ckpt
+Model saved in path: `./model.ckpt`
 
 ### 第六步 – 评估模型
 
 我们的模型已经训练完成，现在可以进行评估。为了做到这一点，需要从 `/cifar-10-batches-py/` 文件导入 `test`：`test_data = pickle('./cifar-10-batches-py/test_batch')`，`test_x = grayscale(test_data)`。
 
-
-
-
-
 ## 参考文献
-![](img/image_rsrc9SG.jpg) [TensorFlow](https://www.tensorflow.org/) [InfoWorld](https://www.infoworld.com/) [Machine Learning Mastery](https://machinelearningmastery.com/) [HackerNoon](https://hackernoon.com/) [Zendesk](https://www.zendesk.com/) [Stack Abuse](https://stackabuse.com/) [Guru99](https://www.guru99.com/) [Medium](https://medium.com/) [DataCamp](https://www.datacamp.com/) [Towards Data Science](https://towardsdatascience.com/) [GeeksforGeeks](https://www.geeksforgeeks.org/) [NumPy](https://numpy.org/) [Pandas](https://pandas.pydata.org/) [Scikit-Learn](https://scikit-learn.org/stable/) [Adventures in Machine Learning](https://adventuresinmachinelearning.com/) [ScienceDirect](https://www.sciencedirect.com/) [Missing Link](https://missinglink.ai/)
 
-## TensorFlow
+[TensorFlow](https://www.tensorflow.org/) [InfoWorld](https://www.infoworld.com/) [Machine Learning Mastery](https://machinelearningmastery.com/) [HackerNoon](https://hackernoon.com/) [Zendesk](https://www.zendesk.com/) [Stack Abuse](https://stackabuse.com/) [Guru99](https://www.guru99.com/) [Medium](https://medium.com/) [DataCamp](https://www.datacamp.com/) [Towards Data Science](https://towardsdatascience.com/) [GeeksforGeeks](https://www.geeksforgeeks.org/) [NumPy](https://numpy.org/) [Pandas](https://pandas.pydata.org/) [Scikit-Learn](https://scikit-learn.org/stable/) [Adventures in Machine Learning](https://adventuresinmachinelearning.com/) [ScienceDirect](https://www.sciencedirect.com/) [Missing Link](https://missinglink.ai/)
 
-## 机器学习
-![](img/image_rsrc9SG.jpg)
+# TensorFlow
+
+# 机器学习
 
 ### 使用 Scikit-Learn, Keras 和 TensorFlow 机器学习的简单高效技巧与秘诀
-![](img/image_rsrc9SF.jpg) Benjamin Smith
+
+Benjamin Smith
 
 ### 引言
-![](img/image_rsrc9SG.jpg)
+
 不可否认，机器学习是人类计算机发展史中本世纪最热门的话题。传统上，计算机被视为需要被明确指示做什么的工具。而训练计算机并使其学习某些模式以能够自主做出决策的想法，在十年前还会被归类为科幻小说。尽管在第二个千年之初，创建能够理解和区分数据的智能自功能计算机的努力已经开始，但当时的这些努力并不十分有效。这是由于计算资源的匮乏以及该领域本身尚处于婴儿阶段。回首过去，机器学习的创新大多是偶然。在某些情况下，杰出的人士通过将他们卓越的智力投入到探索计算机数学方面的秘密中，为机器学习的繁荣铺平了道路。现在，机器学习的影响已不容置疑。我们正看到自动驾驶汽车与人工智能同步实现机器学习的概念。我们正在构建智能系统，它们能够在海量数据中搜寻并产生其他本无法实现的结果。我们看到机器学习作为核心功能被应用于所有智能家电和语音助手中。这仅仅是一个新时代的开始。成为人类生活中这场革命的先驱者之一，是一生仅此一次的机会。因此，学习机器学习并精通它已成为一个非常备受推崇的目标，本书将实现这一目标。
 
-## 第 1 章：机器学习简介
-![](img/image_rsrc9SG.jpg)
+# 第 1 章：机器学习简介
+
 机器学习，在几年前还被认为是值得百年进步的创新，在当代已经被人类实现。光学字符识别（`OCR`）是这项创新为我们提供的许多有用产品之一。它的第一个应用（现在已非常常见）出现于 90 年代：垃圾邮件过滤器。其他目前运行在每部智能手机和任何计算机中的众多 `ML` 示例还包括：
 
 *   语音搜索
 *   推荐机制
-
-
-
-
 
 本主题将探索这一创新的独特性。它让我们对学习的最本质产生了疑问。在计算机中保存一个包含哲学内容的文件，会让它对生活的真理产生好奇吗？保存一份《纯粹理性批判》副本会让它探索道德伦理的深渊吗？最关键的问题是，保存到计算机中的数据会让它变成比以前更博学的实体吗？
 
@@ -4692,13 +4853,9 @@ Model saved in path: ./model.ckpt
 2. 垃圾邮件过滤器最重要的元素之一是所使用的算法。该算法负责学习并熟悉垃圾邮件的模式。一旦算法在邮件中注意到这种模式，它就会自动地将其标记为垃圾邮件。
 3. 最后，我们需要对垃圾邮件机器人程序进行测试。如果性能不尽如意且垃圾邮件检测功能不够高效，那么我们就回到前两步进行改进。并不是每个人都能写出程序，即使是简单的程序也是如此。它很好地结合了机器学习，因此接受程序存在缺陷是没关系的，并努力改进直到它符合你的标准。
 
-
-
-
-
 垃圾邮件过滤器通过检测仅在被标记为“垃圾邮件”的邮件中出现的重复单词模式，学习哪些单词和短语是识别“垃圾邮件”特征的良好线索。对于未被标记为“垃圾邮件”的邮件中出现的单词和短语模式，程序则不予考虑。
 
-由于 `ML`的使用，程序往往比传统程序更加简洁且易于维护，并且由于其自学习过程和独立性，通常准确性要高得多。
+由于 `ML` 的使用，程序往往比传统程序更加简洁且易于维护，并且由于其自学习过程和独立性，通常准确性要高得多。
 
 当使用采用标准检测算法的传统程序（假设是一个标准机器人）时，如果垃圾邮件者开始使用诸如“night”之类的单词代替“9it”，那么我们就被迫相应地更新检测算法。这是因为此类传统程序是基于一套规则的。因此，如果垃圾邮件者注意到目标正在使用传统的垃圾邮件机器人程序，他们就可以简单地利用程序结构中的漏洞并绕过检测算法。这样，每当垃圾邮件发送者发现另一个漏洞时，你就被迫不断更新程序的规则。
 
@@ -4713,7 +4870,7 @@ Model saved in path: ./model.ckpt
 以下是展示机器学习在专业程序中的应用列表：
 
 - 对生产线上的产品图像进行分析以进行分类被称为图像分类，这项任务是通过使用卷积神经网络（`CNNs`）完成的。
-- 语义分割用于检测脑肿瘤，为了做到，图像中的每个像素都会被区分，因为我们的目标是检测肿瘤的精确位置及其大小，这项任务同样是使用 `CNNs` 完成的
+- 语义分割用于检测脑肿瘤，为了做到，图像中的每个像素都会被区分，因为我们的目标是检测肿瘤的精确位置及其大小，这项任务同样是使用 `CNNs` 完成的。
 - 自然语言处理（`NLP`）用于分类新闻文章，准确地称为文本分类，这项任务通过使用 `CNNs`、循环神经网络（`RNNs`）和 `Transformers` 来解决。
 - 讨论论坛经常受到攻击性内容和不当内容的侵害。这些评论会被自动挑选出来，这是使用相同 `NLP` 工具进行的文本分类。
 - 冗长的文档在需要排序时花费大量时间。自然语言处理提供了一种名为“文本摘要”的工具，可以自动完成这项艰巨的任务。
@@ -4732,22 +4889,13 @@ Model saved in path: ./model.ckpt
 现在有各种类型的机器学习可用。最流行的机器学习类型及其特征列在下方：
 
 - 如果一个机器学习模型被外部用户忽略（即超参数的调优、循环不同的激活函数以选择最佳的一个等），并且模型在标记数据上的开发和训练也由用户引导，那么这种模型被归类为监督学习系统。
-
-
-
-
-
 - 如果一个机器学习模型没有经过外部用户的监督，且用于训练模型的数据是未标记的，那么这种机器学习模型被归类为无监督学习系统。同样，如果模型是在一个部分标记的数据集上进行训练，则它被称为半监督学习系统。如果一个机器学习系统根据特定的响应，并学习如何分析周围环境以确定最佳行动方案，则它被归类为强化学习系统。
-
 - 只能通过输入完整批次的数据进行训练的机器学习系统被称为批学习系统。另一方面，可以通过顺序使用数据实例（小批次）进行训练的机器学习系统被称为在线学习系统。
-
-
-
-
 
 你可以以任何可能应用这些标准，对于是否专门应用这些标准并没有固定的规则。结合机器学习的监督学习和无监督学习系统可以根据几个因素进行分类。其中一个因素是用于训练模型的数据类型（有标记或未标记）。另一个因素是模型的训练过程是否由用户进行严密的观察和管理。在本节中，我们将根据上述因素讨论机器学习的主要大类：
 
 ### 监督学习
+
 正如其名所示，在监督学习中，我们从所选的数据集中创建一个训练集，并使用它来训练模型。训练集中的数据是有标记的。标记数据意味着在特定的数据集中，所有的类别或数据实例都被标记了它们实际上所代表的内容。例如，在 `MNIST` 数据集（我们很快就会讨论它）中，整个数据由手写数字的实例组成。如果每个数据实例（手写数字）都被标记为它们所代表的数字（一个手写数字“3”被显式标记为“3”），那么我们就说该数据集是有标记的。
 
 监督学习常见于需要模型对对象进行分类的任务（也称为分类任务）。为了简单起见，让我们考虑在前面的章节中讨论过的垃圾邮件过滤程序示例。我们可以说这类程序结合了监督学习的使用。我们不仅使用有标记的数据训练模型（数据集中的电子邮件已分类并标记为“垃圾邮件”和“非垃圾邮件”），而且问题的本质上也是一个“分类任务”（将电子邮件分类为垃圾邮件或非垃圾邮件）。
@@ -4757,6 +4905,7 @@ Model saved in path: ./model.ckpt
 当我们在机器学习背景下讨论时，知道属性（attribute）和特征（feature）之间的区别很重要。属性基本上指的是分配给数据的类型（例如，“里程数”的数据类型与“引擎类型”甚至“油箱容量”不同）。相比之下，当任何值伴随属性时，它就被称为“特征”（例如，如果我们说 `fuel capacity` = `30L`，那么它就是一个特征）。
 
 算法是机器学习系统中最重要的组件之一。每个任务都需要使用特定类型的算法来获得最佳性能，因此了解模型中使用的不同算法也很重要。以下是监督学习中一些常用算法列表：
+
 * `k-Nearest Neighbors`（k-近邻算法）
 * `Linear Regression`（线性回归）
 * `Logistic Regression`（逻辑回归）
@@ -4765,7 +4914,9 @@ Model saved in path: ./model.ckpt
 * `Random Forests`（随机森林）
 
 ### 无监督学习
+
 无监督学习基本上是监督学习的相反面。与其对应项不同，在无监督学习中，训练模型的数据是没有标记的。这意味着模型不需要被告知它属于哪一类。以下是无监督学习中常用的算法列表：
+
 * `Clustering` (`K-Means`)（聚类）
 * `Hierarchical Cluster Analysis` (`HCA`)（层次聚类分析）
 * `Anomaly detection` (`One-class SVM`)（异常检测）
@@ -4777,13 +4928,12 @@ Model saved in path: ./model.ckpt
 让我们通过一个例子来理解无监督学习。假设通过某种巧妙的技巧，算法得出大约 70% 的访问者是女性，其余是男性。根据这些访问者访问博客的时间（记录在网站历史中），算法得出大多数人在工作日的晚上左右访问博客，而其他人则倾向于只在周末访问博客的科幻部分。根据所使用的聚类算法，模型甚至可以将这一细节包含进来（如果有足够的信息允许的话）。
 
 ### 可视化算法
+
 正如其名所示，可视化算法通常关注在二维或三维图中以图形方式表示复杂数据。例如，`Principal Component Analysis` (`PCA`) 算法通常用于视觉化表示未标记且复杂的数据。此外，可视化算法在可视化时优先考虑数据结构的保留。这样做的原因是为了更方便地分析可视化数据，最重要的是，使用户户能够在数据模式中寻找异常。
 
 ### 降维算法
+
 正如 `PCA` 算法简化复杂数据一样，降维算法的主要目的是减少输入数据的复杂性，同时优先考虑保留内在信息（将信息损失降到最低）。通常，降维算法简化数据的方法是将相互关联的特征合并在一起。这样，特征的数量就减少了。这意味着数据中的维度也减少了。
-
-
-
 
 * 燃料容量
 * 里程数
@@ -4798,39 +4948,44 @@ Model saved in path: ./model.ckpt
 * 模型的整体性能也将提高。
 
 ### 半监督学习
+
 假设你从你选择的任何仓库下载了一个数据集，以便训练你的机器学习模型。与流行数据集（如 `MNIST` 数据集）不同，许多数据集并不是完全标记的，尤其是那些规模特别大的数据集。即使你搜遍了多个仓库，顶多也只能找到一个部分标记的数据集。此外，自己标记数据会花费大量时间，而这些时间本可以用来调优模型。即使你聘请公司或组织来标记，成本也会非常高。在这些处理部分标记数据集的数据的情况下，我们可以使用特定的算法。此类算法负责处理此类数据集的标记部分。这种方法被称为半监督学习。我们甚至可以看到半监督机器学习被应用于在线服务中。以 Google Photos 为例。如果我们通过云端在他们的服务器上上传家庭相册，这意味着服务器本质上正在接收未见且未标记的数据。通过机器学习，服务器可以识别出照片中的某个特定个人也出现在该相册的其他照片中。如果我们对这个数据实例进行标记（即指定该人的姓名），那么服务器就可以自动标记该人员出现的所有其他照片。
 
 ### 强化学习
+
 与我们目前为止讨论的不同类型的机器学习不同，强化学习有着本质的不同性。使用强化学习的系统被称为“智能体（Agent）”，这种系统的特点在于它能够通过观察周围环境来计算合适的行动。如果智能体选择了正确的响应，它将获得一个“奖励”。这种奖励可以很容易地编程，也可以根据开发者的选择即兴产生。强化学习的独特特征是系统试图在受限空间内识别出最优策略。这意味着机器被赋予了一个具有特定刺激特定环境；系统仔细观察周围环境，然后根据此制定最优策略做出决策。机器制定的策略被称为它的“策略（policy）”。展示强化学习全部潜力的最佳例子是机器人和 AI 机器人。大多数设计的机器人包含了强化学习，以学习如何操纵肢体使其能够行走。同样，`AlphaGo` 是一个旨在玩“围棋”游戏的 AI 机器人。该机器人结合了强化学习，并通过允许它分析大量的专业“围棋”比赛来接受训练。一旦完成分析，它就会与自己进行对弈，最终，它根据自己制定的策略，在正式比赛中击败了这项棋类游戏的世界冠军。
 
 ### 在线学习与批量学习
 
-### 批量学习
-使用批量学习的模型不允许数据以序列或实例的形式馈入系统。模型是通过使用整个数据集进行训练的，即整个批次的数据一次性喂给系统，因此被称为“批量学习”。由于模型处理的是整个数据集（相比之下，`MNIST` 是一个标准数据集，包含约 7 万张图像），显而易见的后果是我们减慢了训练速度。由于模型处理的是整个数据集（相比之下，`MNIST` 是一个标准数据集，包含约 7 万张图像），显而易见的后果是我们减慢了训练速度。由于训练速度比通常慢，批量学习通常在本地进行（线下）。批量学习的一个缺点是，模型只能执行它已经知道的操作，除非再次使用整个数据集进行训练；这意味着，如果你有新的数据实例，它们必须首先包含在原始数据集中并重新开始训练。因此，批量学习也被称为“离线学习”。然而，训练、评估和测试的过程是可以自动化的。因此，在模型初始化后，你只需要简单地将数据集加载到模型。
+#### 批量学习
 
-### 在线学习
+使用批量学习的模型不允许数据以序列或实例的形式馈入系统。模型是通过使用整个数据集进行训练的，即整个批次的数据一次性喂给系统，因此被称为“批量学习”。由于模型处理的是整个数据集（相比之下，`MNIST` 是一个标准数据集，包含约 7 万张图像），显而易见的后果是我们减慢了训练速度。由于训练速度比通常慢，批量学习通常在本地进行（线下）。批量学习的一个缺点是，模型只能执行它已经知道的操作，除非再次使用整个数据集进行训练；这意味着，如果你有新的数据实例，它们必须首先包含在原始数据集中并重新开始训练。因此，批量学习也被称为“离线学习”。然而，训练、评估和测试的过程是可以自动化的。因此，在模型初始化后，你只需要简单地将数据集加载到模型。
+
+#### 在线学习
+
 在线学习是批量学习的完全相反（也称为离线学习）。在在线学习中，模型以序列的形式提供数据。这意味着模型可以使用实例或一组实例（被称为 `mini-batches`）进行训练。由于与批量学习相比，数据量要小得多，可以肯定模型的训练速度会很快，并且产生压力压力。通过这种方式，当新数据实例到达时，系统可以轻松适应。当我们处理持续流数据时，在线学习成为了一种可行的选择（例如，股市数据具有不间断流）。我们的任务要求模型在没有延迟的情况下适应变化。此外，如果我们使用的系统在原始功率方面落后，那么在线学习系统是一个完美的选择，因为它并不消耗资源。在线学习的另一个优点是，一旦它在新的实例上进行了训练，用户就可以从系统中删除这些数据实例，从而节省存储空间。在线学习中，某些算法能够处理大型数据集。因此，如果我们有一个不适应系统主内存的数据集，可以使用在线学习在该数据集上训练模型。不使用系统主内存训练模型被称为“核心外学习（out-of-core learning）”。在线学习算法做到这一点的方法是简单的从数据集中加载批量，然后在这些数据上训练一个 epoch。
 
 ### 机器学习的阻碍因素
+
 在创建和开发机器学习模型时，用户最重要的贡献是为模型提供最优算法以及训练模型所需的数据。然而，机器学习模型的创建和开发本质上是一个尝试错误的过程。在从头开发一个新的机器学习模型时，我们无法一次性搞定一切。总会有某些需要更改、调优甚至重新设计。在本节中，我们将讨论阻碍机器学习模型进展的两个主要因素：
 
 * 错误的数据
 * 错误的算法
 
-
-
-
 以下是一些示例，展示了在处理机器学习模型时会遇到“坏数据”的情况。
 
-### 数据量不足
+#### 数据量不足
+
 在机器学习中，没有哪件事是简单到给它看一张你喜爱的猫的照片，然后期望程序在每次看到猫时都能识别出猫来。我们本质上是在教一个感知世界为一维二进制数字的机器去识别三维物体。为了让计算机执行此类任务，它需要大量数据进行训练。由于这是机器学习的一项重要要求，因此数据量不足是“坏数据”的一个例子。
 
-### 非具代表性的训练数据
+#### 非具代表性的训练数据
+
 为了让机器学习模型将其从训练数据中学习到的模式和其他内容泛化到未见的数据（模型从未遇到过的数据）上，模型必须使用某种程度上代表这些未见数据的数据进行训练。我们不能训练一个模型来识别手写数字，然后就期望它能预测未来几年的房价。如果我们想让模型识别手写数字，那么我们必须使用实际代表手写数字的数据进行训练。
 
 进一步说明的是，如果我们想创建一个预测每个国家人口总体幸福感的模型，那么我们需要使用代表我们预期预测的国家状况的数据来对其进行训练。如果模型仅在显示第三世界国家幸福感和繁荣程度下降的数据上进行训练，那么当我们使用需要预测发达国家繁荣和幸福感的数据进行测试时，它的表现将不符合我们的预期。训练数据没有代表我们测试模型的情况，而且缺少许多国家。除非我们包含每个类别的国家（富裕、中等富和贫穷国家），否则模型将无法良好泛化，因为训练数据不能真正代表我们希望它处理的内容。
 
-### 数据质量差
+#### 数据质量差
+
 正如其名所示，缺乏质量的数据集是“坏数据”的典型例子，它们阻碍了机器学习模型的进展、发展，最重要的是性能。通过“质量差”，我们基本上是指具有以下特征的数据集：
 
 *   常见错误
@@ -4847,28 +5002,27 @@ Model saved in path: ./model.ckpt
 3. 第三，你可以由自己指定缺失信息（在这种情况下，你可以计算客户列表的平均年龄并进行推测）。
 4. 最后，我们可以创建两个独立的模型，一个用这些错误实例进行训练，另一个则省略这些不完整的实例，以查看性能是否存在任何明显的差异。
 
-### 无关数据
+#### 无关数据
+
 不需要过多思考就能发现，如果我们使用与模型本应执行的任务完全无关的数据，那么模型绝对会失败。如果在错误的数据集上训练模型，那么模型在面对未见数据时将无法执行任何操作。它将无法在训练集上学习到的模式与测试阶段甚至现实应用中呈现的数据结构和类型之间看到任何相关性。因此，确保即使我们使用的数据与模型分配的任务相关，它也不包含任何无关紧要或必要的特征是非常重要的。
 
-### 过拟合训练数据
+#### 过拟合训练数据
+
 要理解过拟合的概念，将其与“过度泛化”联系起来。在过度泛化中，我们对一个孤立的观察结果做出通用的假设。例如，让我们考虑一个理论场景：一个人访问另一个城市，由于这是他第一次去那里，他向一个行人问路。行人没有回应他的引导请求，而是嗤之以鼻并忽略了他。在这样的遭遇之后，这个人假设这个城市里的每个人都像这个陌生人一样无礼。这被称为过度泛化，而“过拟合”的概念对计算机意味着同样。
 
 如果用户不够警觉且缺乏经验，模型可能会在训练数据上过拟合。这意味着模型将很好地学习训练集的模式，但当面对测试集时，模型会假设相同的模式同样适用于未见数据。换句话说，尽管模型在训练数据上的表现令人满意，但它在未见数据上无法良好泛化。
 
-### 数据欠拟合
+#### 数据欠拟合
+
 从名称上明显看出，欠拟合是机器学习中观察到的现象，与过拟合完全相反。当机器学习模型在训练数据上欠拟合时，这意味着数据结构太简单了，以至于模型无法开始检测和学习任何模式。换句话说，模型训练所需的数据与现实世界发生的问题相比太不现实，这样，模型生成的预测将是不准确的。例如，如果我们以不同国家幸福感为例，在此类数据上训练的模型具有较高的欠拟合风险。为了减少欠拟合，我们可以通过：
 
 *   使用能力较强且具有更广泛假设的模型。
 *   使用所选算法更好、更精细的特征（这一过程被称为“特征工程”）。
 *   对模型使用更少的约束，即减少正则化的使用并使用较少的超参数。
 
-第 2 章 执行回归
+# 第 2 章 执行回归
 
-
-
-
-
-# 使用 Scikit-Learn 进行任务
+## 使用 Scikit-Learn 进行任务
 
 在本章中，我们将重点讨论如何利用 `Scikit-Learn` 库来创建一个机器学习项目，以执行标准的回归任务。需要注意的是，该任务的性质与数据科学家关注的工作相似。因此，为了让讨论尽可能真实，我们也将以数据科学家的心态来处理这个项目。不要担心；我们只会探索项目中涉及数据科学的方面，因为讨论更多内容将超出本书书的讨论范畴。
 
@@ -4899,17 +5053,13 @@ Model saved in path: ./model.ckpt
 * 均方根误差（也称为 `RMSE`）
 * 平均绝对误差（也称为 `MAE`）
 
-
-
-
-
-# 均方根误差
+#### 均方根误差
 
 一旦我们选择了模型要执行的任务（在本例中，是在加利州住房数据集上进行线性回归），下一步的行动计划就是选择一个适合我们任务的性能指标。对于希望计算模型处理回归问题有效性的模型，`RMSE` 是一个流行的选择。在创建线性回归模型时，`RMSE` 非常重要。如果我们不实现任何性能指标，我们就无法了解模型在生成预测时产生的整体误差。这将会剥夺我们在进行进一步操作之前预先调优模型的能力，因为我们只有在实际测试并发现预测结果有些偏差时，才知道模型的性能是乏味的。
 
 `RMSE` 计算并显示模型预测中产生的平均误差，并根据误差的大小和重要性为它们分配相应的权重。因此，权重较大的误差会立即向用户信号该误差显著。同样，权重较小的误差会立即让用户知道该误差并不显著。尽管许多回归任务倾向于使用均方根误差函数作为性能指标，但总存在需要例外的情况，仅仅因为某些回归任务可能更偏于使用完全不同的函数。
 
-# 平均绝对误差
+#### 平均绝对误差
 
 当你遇到此类特殊情况（例如数据中的“离群值”区域），且使用 `RMSE` 函数不是可行选项时，平均绝对误差函数就成了下一个最佳选择。让我们尝试理解模型中 `RMSE` 和 `MAE` 函数的作用。
 
@@ -4935,10 +5085,15 @@ Model saved in path: ./model.ckpt
 任何机器学习项目最基础的要求是安装 Python。通过执行下方所示的命令，我们能够在系统上安装 Python。一旦在系统上安装了 `python`，我们现在将在系统存储上创建一个单独目录，并在其中存放项目所需的所有文件。尽可能保持条理是非常重要的，因为在计算机文件目录中搜索东西不仅会破坏节奏，而且在实践中是低效的。
 
 ```bash
-export ML_PATH="$HOME/ml"
-# 如果你喜欢，可以更改路径
-mkdir -p $ML_PATH
 ```
+
+
+
+export `ML_PATH="$HOME/ml"`
+
+# 如果你喜欢，可以更改路径
+
+`mkdir -p $ML_PATH`
 
 最重要的工具是 `Python`。Python 是重要机器学习模块的主宿，例如 `NumPy`、`Pandas`、`Matplotlib` 库（将数据可视化绘制成图表）以及 `Scikit-Learn` 库。`Jupyter notebook` 是文本编辑器，我们可以在其中编辑 `python` 脚本并将其保存以供以后使用。
 
@@ -4950,14 +5105,12 @@ mkdir -p $ML_PATH
 - 通过 `Anaconda`（一种科学 Python 发行版，提供它自己的软件包系统。如果你使用 `windows`，推荐使用这种方法）。
 - 通过 Python 的原生软件包系统（使用 `pip` 命令）。
 
-
-
-
 目前，我们将使用第三种方法来安装这些工具。请注意，根据你的系统，你可能需要对即将看到的命令进行细小的调整。`pip` 的版本取决于所安装的 Python 版本。要双检系统当前是否已安装 `pip`，我们可以通过执行以下命令来实现：
 
 ```bash
 python3 -m pip --version
 ```
+
 输出：`pip 19.3.1 from [...]/lib/python3.7/site-packages/pip (python 3.7)`
 
 现在我们已经确定 `pip` 确实已安装在系统上并可以使用，我们应该检查它是否是最新版本或者是否已经过时。如果你确实运行的是旧版本的 `pip` 模块，可以通过执行下所示的命令进行升级（这是本文写作时 `pip` 模块的最新版本）：
@@ -4965,6 +5118,7 @@ python3 -m pip --version
 ```bash
 python3 -m pip install --user -U pip
 ```
+
 输出：`Collecting pip [...] / Successfully installed pip-19.3.1`
 
 现在我们已经拥有了所选包管理系统的最新版本。在安装了 `pip` 模块的最新版本后，我们可以开始在系统中安装其余的工具和模块，以便继续进行项目。我们可以像下面所示，在一个命令中指定所有想要安装的工具（这非常方便）：
@@ -4972,6 +5126,7 @@ python3 -m pip install --user -U pip
 ```bash
 python3 -m pip install -U jupyter matplotlib numpy pandas scipy scikit-learn
 ```
+
 输出：
 `Collecting jupyter Downloading https://[...]/jupyter-1.0.0-py2.py3-none-any.whl`
 `Collecting matplotlib [...]`
@@ -4987,6 +5142,7 @@ python3 -m ipykernel install --user --name=python3
 ```bash
 jupyter notebook [...]
 ```
+
 输出：
 `Serving notebooks from local directory: [...]/ml [...]`
 `The Jupyter Notebook is running at: [...] http://localhost:8888/?token=60995e108e44ac8d8865a[...] [...]`
@@ -4997,7 +5153,7 @@ jupyter notebook [...]
 
 现在 `Jupyter` 已经功能完备，我们终于可以开始处理实际的项目了。在 `jupyter` notebook 窗口中，寻找“New”（新建）按钮并使用它来创建一个独立的 python 笔记本文件。注意，每当你在 `jupyter` 中创建一个新文件时，程序都会要求你指定想要使用的 Python 版本，在我们的案例中我们将使用 Python 3。新创建文件的默认名称为“Untitled”（未命名）。一旦创建了 python 笔记本文件，我们就将其放入为项目创建的独立目录中，并将笔记本文件重命名为“Housing”（住房）。如果你从未用过 `jupyter` 笔记本，那么在继续之前，学习如何使用该程序的基础知识可能是一个好主意。`jupyter` 程序帮助菜单中有一个选项，会为用户提供程序功能及使用的完整指南。
 
-### 下载数据
+## 下载数据
 
 通常，当你处理线性回归数据集时，数据要么以表格、文档甚至文件的形式存在。同样，你会发现这些数据存储在数据库或任何其他数据存储形式中。这是因为数据科学家可以使用访问关系型数据库并方便处理数据的软件。然而，为了访问数据库，需要输入正确的凭据以授权访问。
 
@@ -5034,7 +5190,7 @@ def load_housing_data(housing_path=HOUSING_PATH):
     return pd.read_csv(csv_path)
 ```
 
-### 快速分析数据
+## 快速分析数据
 
 在继续之前，快速浏览数据结构并理解其组织方式总是一个好主意。这种做法在其他机器学习项目中会被证明非常有用，因为有时我们需要为模型指定数据结构并根据我们使用的层对其进行调整。通过使用 `DataFrame` 的 `head()` 方法，我们可以显示存储在加州数据集表格中的数据。下图展示了这一点：
 
@@ -5042,10 +5198,7 @@ def load_housing_data(housing_path=HOUSING_PATH):
 
 在上面的图中，我们只显示了加州数据集的前五行。在这张表格中，每一行（0 到 4）代表一个独立的地区（区块）。此外，通过观察表格的排列和特征，我们可以看到总共有十个属性（数据的特征）。这些属性如下：
 
-*   加州数据集属性：`longitude`, `latitude`, `housing_median_age`, `total_rooms`, `total_bedrooms`, `population`, `households`, `median_income`, `median_house-value`, `ocean_proximity`.
-
-
-
+* 加州数据集属性：`longitude`, `latitude`, `housing_median_age`, `total_rooms`, `total_bedrooms`, `population`, `households`, `median_income`, `median_house-value`, `ocean_proximity`.
 
 有时，我们并不希望以表格的形式观察数据。相反，我们更倾向于以描述性的形式显示数据。对于这种情况，我们可以使用 `info()` 方法。该方法会返回数据的详细描述，其中包含了特征的摘要。例如，当我们对加利福尼亚住房数据集（California Housing dataset）使用 `info()` 方法时，我们会看到一个摘要（数据集中包含多少行和多少列、每个属性的数据类型是什么等），如下所示所示：![](img/image_rsrc9TE.jpg)
 
@@ -5059,7 +5212,7 @@ def load_housing_data(housing_path=HOUSING_PATH):
 
 我们现在对数据集有了良好的理解，现在可以进行下一步，将数据集划分为训练集和测试集。
 
-### 使用随机抽样创建测试集
+## 使用随机抽样创建测试集
 
 通常，我们没有足够的资源来收集一个单独的数据集仅用于测试机器学习模型的能力。这是因为数据需要经过清洗、精炼且没有错误，而寻找这样一个数据集来测试我们的模型往往像大海捞针。为了方便起见（很大程度上是因为我们没有选择），我们从用于训练模型的数据集中分离出一部分，并将其视为独立数据集。通过这种方式，我们现在有一个主要用于训练模型的数据集，以及另一个模型从未见过的数据集，用于测试模型学习得有多好以及在现实世界任务中的表现如何。
 
@@ -5088,20 +5241,17 @@ def split_train_test(data, test_ratio):
 
 尽管这种创建测试集的方法确实有效，但它并不是最好的解决方案。还有其他方法，我们在本书中讨论深度神经网络时将会看到。现在，让我们关注为什么这种方法并非没有缺陷。问题在于，尽管使用这些代码行创建了测试集，但一旦我们保存了测试集，就无法从程序中删除它们。因此，每当程序执行时，都会创建一个与之前完全不同的测试集。这违背了测试集的整个目的；在某个时刻，模型将熟悉整个数据集，除了分离出来的那部分。当生成下一个测试集时，所使用的实例很可能是模型已经处理过的实例。这就是我们目前面临的问题的核心。我们无法省略这种特定的创建测试集的方法，但我们也希望能够为我们的使用生成测试集。唯一的逻辑解决方案是找到一种方法使得该函数随机生成的测试集始终是相同的。这意味着无论我们执行程序多少次，都不需要担心模型被错误测试。以下是上述测试集问题的解决方案：
 
-
-
-
-
 - 如果你正在处理的数据集中，每个实例都带有一个充当其标识符的标记，那么我们就可以利用这一点。幸运的是，加州住房数据集（California Housing set）中的实例是带有标记的。因此，我们可以使用这些标识符来判断该实例是否应该包含在测试集中。这可以通过指定阈值来实现。每个标识符都有一个哈希值，这提供了一个很好的阈值。我们可以设置阈值：如果一个实例标识符的哈希值小于最大哈希值的 20%，则允许将其选入测试集。否则，该特定实例将被认为不适用于测试集。
-
 - 在某些情况下，并不是每个数据集的实例都带有标识符。在这种情况下，一种简单的解决方案是在模型第一次执行时直接生成测试集并将其保存。此之后，你就可以省略生成测试集的函数以及在测试集中用过的那部分数据集。这样，当你再次启动模型时，只需要加载这个测试集即可，一切都会进展顺利。
 
 要通过将标识符作为每个实例是否参与测试集的决定因素来实现第一种方案，请使用以下代码：
 
 ```python
 from zlib import crc32
+
 def test_set_check(identifier, test_ratio):
     return crc32(np.int64(identifier)) & 0xffffffff < test_ratio * 2**32
+
 def split_train_test_by_id(data, test_ratio, id_column):
     ids = data[id_column]
     in_test_set = ids.apply(lambda id_: test_set_check(id_, test_ratio))
@@ -5112,13 +5262,17 @@ def split_train_test_by_id(data, test_ratio, id_column):
 
 ```python
 housing_with_id = housing.reset_index() # 添加了一个 `index` 列
-train_set, test_set = split_train_test_by_id(housing_with_id, 0.2, "index")
 ```
 
-由于我们使用行作为数据实例的标识符，存在一种可能危及解决方案本身的场景。假设我们想向原始数据集中添加新数据。如果我们粗心地地这样做，可能会弄乱行（对应每个数据实例）的排列，这反过来也会搞乱整个标识符设置。因此，我们需要确保即使添加了新数据，它也只放置在表格的末尾，保持其余索引布局不受影响。如果你无法控制新数据的位置，那么我们只需要找到另一个可以作为数据实例唯一标识符的元素即可。使用数据集的属性也是一个很好的选择。然而，重要重要的是，如果你使用某个属性作为唯一标识符，那么该属性本身必须是稳定的。这意味着当数据更新或添加新数据时，现有实例的属性不应受到影响，并且不能与新数据实例的属性冲突。在这种情况下，如果我们使用属性作为唯一标识符，那么出于显而易见的原因，最合适的选项是地理属性（经度和纬度）。使用属性作为唯一标识符已在以下代码行中得到了证明：
+
+
+`train_set, test_set = split_train_test_by_id(housing_with_id, 0.2, "index")`
+
+由于我们使用行作为数据实例的标识符，存在一种可能危及解决方案本身的场景。假设我们想向原始数据集中添加新数据。如果我们粗心地这样做，可能会弄乱行（对应每个数据实例）的排列，这反过来也会搞乱整个标识符设置。因此，我们需要确保即使添加了新数据，它也只放置在表格的末尾，保持其余索引布局不受影响。如果你无法控制新数据的位置，那么我们只需要找到另一个可以作为数据实例唯一标识符的元素即可。使用数据集的属性也是一个很好的选择。然而，重要的是，如果你使用某个属性作为唯一标识符，那么该属性本身必须是稳定的。这意味着当数据更新或添加新数据时，现有实例的属性不应受到影响，并且不能与新数据实例的属性冲突。在这种情况下，如果我们使用属性作为唯一标识符，那么出于显而易见的原因，最合适的选项是地理属性（经度和纬度）。使用属性作为唯一标识符已在以下代码行中得到了证明：
 
 ```python
 housing_with_id["id"] = housing["longitude"] * 1000 + housing["latitude"] * 1000
+
 train_set, test_set = split_train_test_by_id(housing_with_id, 0.2, "id")
 ```
 
@@ -5127,14 +5281,15 @@ train_set, test_set = split_train_test_by_id(housing_with_id, 0.2, "id")
 现在我们已经将数据分成了两个集合，我们现在准备好准备数据，以便算法可以使用它。当我们说需要准备数据时，实际上意味着我们需要对其进行转换，使其变得算法可用。这是因为算法需要以特定的格式和类型输入数据。我们不能直接使用数据的原始结构。准备数据有两种方法，我们可以手动进行，也可以使用函数来自动完成该过程。你可能会认为，如果你有充足的时间，手动进行会更好，但相反，使用函数具有更好的优势。其中一些优势已列在下方：
 
 1. 在某些情况下，你可能需要重新执行数据转换（例如，在添加新数据或加载更新的数据集时）。如果你使用函数来进行数据转换，那么再次执行将非常容易。然而，如果你是手动完成的，那么一个简单的任务将变得非常费力且耗时。
-2. 每个算法在在使用数据之前都需要对数据进行不同的转换。因此，对于不同的任务、不同的数据集和不同的算法，你将逐渐建立起一套转换函数集合。到那时，你不仅会熟悉这些函数，而且还可以复用它们。
+2. 每个算法在使用数据之前都需要对数据进行不同的转换。因此，对于不同的任务、不同的数据集和不同的算法，你将逐渐建立起一套转换函数集合。到那时，你不仅会熟悉这些函数，而且还可以复用它们。
 3. 函数可以在数据流向内存时对其进行转换，反过来可以提高你模型的效率。
-4. 使用函数允许快速简单的数据转换。这使用户户尝试不同的数据转换以查看最适合你的模型。
+4. 使用函数允许快速简单的数据转换。这使用户尝试不同的数据转换以查看最适合你的模型。
 
 现在，我们将创建一个训练集的副本，并省略其中的标签和预测变量。如果不这样做，函数也会转换预测变量和标签。这可以通过以下代码中的 `copy()` 和 `drop()` 方法来实现：
 
 ```python
 housing = strat_train_set.drop("median_house_value", axis=1)
+
 housing_labels = strat_train_set["median_house_value"].copy()
 ```
 
@@ -5160,12 +5315,10 @@ housing.drop("total_bedrooms", axis=1)
 housing["total_bedrooms"].fillna(inplace=True)
 ```
 
-
-
-
-
-`median = housing["total_bedrooms"].median()`
-`housing["total_bedrooms"].fillna(median, inplace=True)`
+```python
+median = housing["total_bedrooms"].median()
+housing["total_bedrooms"].fillna(median, inplace=True)
+```
 
 选择第三选项更符合逻辑，因为遗漏这些地区或从整个数据集中剔除该属性都可能对模型的性能产生巨大影响。因此，如果你也选择第三种方法，建议你使用中位数（计算该属性所有其他相同数值的平均值）来替换该属性中的缺失值。一旦你计算出中位数，就应该将其保存起来，因为你之后也需要使用它来替换测试集中的缺失值。
 
@@ -5173,6 +5326,7 @@ housing["total_bedrooms"].fillna(inplace=True)
 
 ```python
 from sklearn.impute import SimpleImputer
+
 imputer = SimpleImputer(strategy="median")
 ```
 
@@ -5180,12 +5334,15 @@ imputer = SimpleImputer(strategy="median")
 
 我们现在将使用 `fit()` 方法来确保训练集允许填充器实例进行拟合。为了做到这一点，我们使用以下语句：`imputer.fit(housing_num)`
 
-此时，Scikit-Library 中的 `SimpleImputer` 类应该完成了它的工作，即数据集中所有五个属性的中位数（记住我们删除了第 10 个属性 `ocean_proximity`）已经计算出来并存储在类对应的变量中。但我们现在不能掉以轻心。目前，我们知道使用的当前版本的加州住房数据集中，第 5 个属性具有缺失值。然而，无法保证在模型执行时，新生成的值也不会有任何缺失值。因此，最好不要冒险。这就是为什么所有属性（除第 10 个属性外）都将用于 `SimpleImputer` 类中，而不仅仅是第 5 个属性（`total_bedrooms`）：
+此时，Scikit-Learn 中的 `SimpleImputer` 类应该完成了它的工作，即数据集中所有五个属性的中位数（记住我们删除了第 10 个属性 `ocean_proximity`）已经计算出来并存储在类对应的变量中。但我们现在不能掉以轻心。目前，我们知道使用的当前版本的加州住房数据集中，第 5 个属性具有缺失值。然而，无法保证在模型执行时，新生成的值也不会有任何缺失值。因此，最好不要冒险。这就是为什么所有属性（除第 10 个属性外）都将用于 `SimpleImputer` 类中，而不仅仅是第 5 个属性（`total_bedrooms`）：
 
 ```python
 >>> imputer.statistics_
+
 array([-118.51 , 34.26 , 29. , 2119.5 , 433. , 1164. , 408. , 3.5409])
+
 >>> housing_num.median().values
+
 array([-118.51 , 34.26 , 29. , 2119.5 , 433. , 1164. , 408. , 3.5409])
 ```
 
@@ -5193,13 +5350,14 @@ array([-118.51 , 34.26 , 29. , 2119.5 , 433. , 1164. , 408. , 3.5409])
 
 输出是一个标准的 NumPy 数组，其特征是经过填充器转换的属性。将数组转换回原始格式以便在 Pandas 中使用并不困难。你只需要使用以下语句：`housing_tr = pd.DataFrame(X, columns=housing_num.columns)`
 
- 创建、训练和评估模型
+## 创建、训练和评估模型
 
 训练机器学习模型并不困难。相反，如果你理解了书中之前的章节阐述的概念，你会发现训练过程相对简单。为了训练模型，我们必须首先创建模型。为了做到这一点，我们将首先导入 `LinearRegression` 库。此外，我们还加载了准备好的数据集以及对应的标签。如下所示：
 
 ```python
 from sklearn.linear_model import LinearRegression
-lin_reg()
+
+lin_reg = LinearRegression()
 ```
 
 我们现在成功创建了一个用于执行线性回归任务的模型。我们现在将在测试数据集上训练模型：
@@ -5225,19 +5383,17 @@ Labels: [286600.0, 340600.0, 196900.0, 46300.0, 254500.0]
 68628.19819848922
 ```
 
-该结果显然是不令人满意的，它证明了模型欠拟合训练数据的例子。获得的结果表明，特征提供的信息不足，或者模型本身不够强。。欠拟合可以通过以下方式解决：
+该结果显然是不令人满意的，它证明了模型欠拟合训练数据的例子。获得的结果表明，特征提供的信息不足，或者模型本身不够强。欠拟合可以通过以下方式解决：
 
-*   选择更强大的模型
-*   向训练算法输入更好的特征
-*   减少对模型的约束
-
-
-
+* 选择更强大的模型
+* 向训练算法输入更好的特征
+* 减少对模型的约束
 
 在这里可以排除最后一个选项了，因为该模型是非正则化的。在尝试添加更多特征（如人口的对数）之前，先选择一个更复杂的模型，例如 `DecisionTreeRegressor`。这个强大的模型能够在数据中搜索更复杂的非线性关系。以下几行代码演示了这一点。
 
 ```python
 from sklearn.tree import DecisionTreeRegressor
+
 tree_reg = DecisionTreeRegressor()
 tree_reg.fit(housing_prepared, housing_labels)
 ```
@@ -5255,10 +5411,12 @@ tree_reg.fit(housing_prepared, housing_labels)
 代码似乎没有显示任何错误，这可能会导致模型是绝对完美的结论。但更有可能的假设是模型以一种糟糕的方式过拟合了数据，导致了给定的结果。为了确保这一点，在模型准备好并发布之前，不要干预测试集。训练集的一部分用于训练模型，另一部分用于验证模型。
 
 ### 使用测试数据集评估模型
+
 在测试模型之前，我们通常会调整超参数来提高模型的整体性能；这是通过使用交叉验证等技术实现的。然而，这些主题将在接下来的章节中详细讨论。现在，我们将重点放在对模型的评估和测试上。因此，该项目的下一步将包括在测试集上评估最终模型。该过程非常简单，涉及从测试集中获取预测变量和标签，执行 `full_pipeline.transform()` 方法转换数据，并在测试集上评估最终模型。整个过程演示如下：
 
 ```python
 final_model = grid_search.best_estimator_
+
 X_test = strat_test_set.drop("median_house_value", axis=1)
 y_test = strat_test_set["median_house_value"].copy()
 X_test_prepared = full_pipeline.transform(X_test)
@@ -5267,19 +5425,21 @@ final_mse = mean_squared_error(y_test, final_predictions)
 final_rmse = np.sqrt(final_mse) # => 结果为 47,730.2
 ```
 
-尽管模型的性能不是那么出色，但一旦你理解了超参数调优的概念（在接下来的章节中详细解释），你将能够大幅提升你的模型性能。这将是一个很好的练习，即在学习新知识时，改进你已经创建的模型。然而，在对超参数调优的潜在收益感到兴奋之前，你必须理解一点：如果过度调优超参数，模型的运行效果可能会比交叉验证描述的要差。这是因为系统被设置为在验证数据上运行得更好，而不是未知的数据集。如果发生此类问题，建议不要重新校准超参数以获得在测试集上看起来良好但通上无法适用于新数据的值。
+尽管模型的性能不是那么出色，但一旦你理解了超参数调优的概念（在接下来的章节中详细解释），你将能够大幅提升你的模型性能。这将是一个很好的练习，即在学习新知识时，改进你已经创建的模型。然而，在对超参数调优的潜在收益感到兴奋之前，你必须理解一点：如果过度调优超参数，模型的运行效果可能会比交叉验证描述的要差。这是因为系统被设置为在验证数据上运行得更好，而不是未知的数据集。如果发生此类问题，建议不要重新校准超参数以获得在测试集上看起来良好但通用无法适用于新数据的值。
 
 # 第 3 章 创建分类模型
 
 在第一章中，我们学习了在监督学习机器学习模型中，执行的最常见任务是回归任务（模型为数值生成预测）或分类任务（模型为类别生成预测）。同样，在上一章中，我们探索了如何构建机器学习模型并对其进行回归任务的训练。在本章中，我们将重点转向构建一个用于预测类别的模型。
 
 ### MNIST 数据集
+
 对于任何任务，机器学习模型都需要适当的数据进行训练，以便它能够熟悉分配给它的工作。由于我们正在创建第一个可以执行分类的模型（至少在本书中如此），我们将使用在此类冒险中最受欢迎的数据集——MNIST 数据集。MNIST 数据集可以被视为机器学习中的“Hello World！”等价物。熟悉机器学习领域的初学者通常会在使用此类数据集时，通过重要的技巧和窍门引导他们学习基础知识。
 
 MNIST 数据集是描绘手写数字的图像集合。该集合总包含 70,000 张图像（分辨率和尺寸都较小）。该数据集被用作第一个机器学习项目前沿的原因是，模型的目标简单，而且数据集相当大并且完全经过标记。有标记的数据意味着数据集中的每个元素都已标记了相应的类别等。对于 MNIST 数据集，每张图像都标记有一个数字，该数字对应于图像所描绘的数字。所有 70,000 张图像被归类为共 10 个类别。每张图像属于这些类别中的一个（数字 1 类、数字 2 类和数字 3 类等等）。由于 MNIST 数据集是学习构建和训练执行分类任务的机器学习模型的最佳选择，许多人也使用该数据集来尝试新算法和新技术，并观察模型的表现。即使我们在这书中不讨论这个数据集，在探索机器学习的途中也迟早会遇到 MNIST。
 
 ### 下载 MNIST 数据集
-我们将使用 Scikit-Learn 来创建机器学习模型并对其进行训练。使用 Scikit-Learn 的辅助函数为模型下载和获取 MNIST 数据集是非常直接的。这些函数允许用户下载和获取社区中几乎任何流行的数据集（正如我们之前讨论过的，MNIST 就是其中之一）。以下代码行演示了使用 Scikit-Learn 的 `fetch()` 函数下载 MNIST 数据集：
+
+我们将使用 Scikit-Learn 来创建机器学习模型并对其进行训练。使用 Scikit-Learn 的辅助函数为模型下载和获取 MNIST 数据集是非常直接的。这些函数允许用户下载和获取社区中几乎任何流行的数据集（正如我们之前讨论过的，MNIST 就是其中之一）。以下代码行演示了使用 Scikit-Learn 的 `fetch_openml()` 函数下载 MNIST 数据集：
 
 ```python
 >>> from sklearn.datasets import fetch_openml
@@ -5289,16 +5449,18 @@ dict_keys(['data', 'target', 'feature_names', 'DESCR', 'details', 'url'])
 ```
 
 当我们使用 Scikit-Learn 获取数据时，获得的数据集通常具有标准的字典结构，包括：
-- 用于描述数据集本身的键 (`DESCR` 键）。
-- 具有每个实例一行、每个特征一列的数组键 (`data` 键）。
-- 包含标签的数组 (`target` 键）。
+- 用于描述数据集本身的键（`DESCR` 键）。
+- 具有每个实例一行、每个特征一列的数组键（`data` 键）。
+- 包含标签的数组（`target` 键）。
 
 让我们查看下面的数组：
 
 ```python
 >>> X, y = mnist["data"], mnist["target"]
->>> X.shape (70000, 784)
->>> y.shape (70000,)
+>>> X.shape
+(70000, 784)
+>>> y.shape
+(70000,)
 ```
 
 从这个数组中，我们可以清楚地看到数据集共有 70,000 张图像，每张图像共有 784 个特征。这个精确特征数量的原因很简单，数据集中的每张图像分辨率都是 28x28 像素，这些图像的每个特征代表相应的像素强度（0 表示白色，255 表示黑色）。让我们看看 MNIST 数据集中一个数字。为了显示图像，我们必须指定特定实例的特征向量，将其重塑为 28x28 的数组。最后，我们使用 Matplotlib 库中的 `imshow()` 函数（记得导入它）来显示图像。整个过程演示如下：
@@ -5306,25 +5468,33 @@ dict_keys(['data', 'target', 'feature_names', 'DESCR', 'details', 'url'])
 ```python
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-some_digit = X[0]
-some_digit_image = some_digit.reshape(28, 28)
-plt.imshow(some_digit_image, cmap="binary")
-plt.axis("off")
-plt.show()
 ```
 
 
 
+some_digit = X[0]
 
-![](img/image_rsrc9TF.jpg)这张手写图像看起来和数字“5”很像。通过检查这张图像的标签，我们可以确认确实如此：
+some_digit_image = some_digit.reshape(28, 28)
 
-`>>> y[0] '5'`
+plt.imshow(some_digit_image, cmap="binary")
+
+plt.axis("off")
+
+plt.show()
+
+![](img/image_rsrc9TF.jpg)
+
+这张手写图像看起来和数字“5”很像。通过检查这张图像的标签，我们可以确认确实如此：
+
+`>>> y[0]`
+`'5'`
 
 如果我们仔细查看数据集中包含的标签，会注意到它们是字符串。我们不能忽略这一点，因为大多数机器学习算法都想要数字而不是字符。因此，我们需要像下面所示将 `y` 对象强制转换为整数：
 
 `>>> y = y.astype(np.uint8)`
 
 如果你认为分类任务很容易处理，那么你低估了这项任务的复杂性。为了详细阐述这一点，请看下方的图，该图描述了来自 MNIST 数据集的一簇图像。
+
 ![](img/image_rsrc9TG.jpg)
 
 现在，在我们继续之后并开始处理数据集以及用它训练机器学习模型之前，我们必须始终确保从数据集中取出一块并将其保留起来（不用于训练）。这很重要，因为我们需要模型不熟悉的数据（模型熟悉的数据仅是它训练时使用的数据）来适当测试它的能力，并对其性能进行准确的衡量。因此，我们将数据集划分为训练集和测试集。训练集由数据集的前 6 万张图像组成，测试集由数据集的最后 1 万张图像组成。
@@ -5337,7 +5507,7 @@ X_train, X_test, y_train, y_test = X[:60000], X[60000:], y[:60000], y[60000:]
 
 ## 训练二分类分类器
 
-目前，我们将降低问题的复杂性，只坚持使用基础方法，因为在书中没有必要花费太多精力探索分类的每一个方面面。我们将单独分类每个数字的问题（多分类）简化为仅分类单个数字（二分类），即通过训练机器学习模型来仅识别数字“5”。通过这种方式，模型将能够检测它面前的数字是否为“5”。
+目前，我们将降低问题的复杂性，只坚持使用基础方法，因为在书中没有必要花费太多精力探索分类的每一个方面。我们将单独分类每个数字的问题（多分类）简化为仅分类单个数字（二分类），即通过训练机器学习模型来仅识别数字“5”。通过这种方式，模型将能够检测它面前的数字是否为“5”。
 
 要启动项目，我们首先需要生成必要的目标向量来处理二分类任务：
 
@@ -5352,6 +5522,7 @@ y_test_5 = (y_test == 5)
 
 ```python
 from sklearn.linear_model import SGDClassifier
+
 sgd_clf = SGDClassifier(random_state=42)
 sgd_clf.fit(X_train, y_train_5)
 ```
@@ -5374,17 +5545,21 @@ sgd_clf.fit(X_train, y_train_5)
 ```python
 from sklearn.model_selection import StratifiedKFold
 from sklearn.base import clone
+
 skfolds = StratifiedKFold(n_splits=3)
+
 for train_index, test_index in skfolds.split(X_train, y_train_5):
     clone_clf = clone(sgd_clf)
     X_train_folds = X_train[train_index]
     y_train_folds = y_train_5[train_index]
     X_test_fold = X_train[test_index]
     y_test_fold = y_train_5[test_index]
+
     clone_clf.fit(X_train_folds, y_train_folds)
     y_pred = clone_clf.predict(X_test_fold)
     n_correct = sum(y_pred == y_test_fold)
     print(n_correct / len(y_pred))
+
 # 打印 0.9502, 0.9656, 0.9649
 ```
 
@@ -5400,6 +5575,7 @@ array([0.96355, 0.93795, 0.95615])
 
 ```python
 from sklearn.base import BaseEstimator
+
 class Never5Classifier(BaseEstimator):
     def fit(self, X, y=None):
         return self
@@ -5425,6 +5601,7 @@ array([0.91125, 0.90855, 0.90915])
 
 ```python
 from sklearn.model_selection import cross_val_predict
+
 y_train_pred = cross_val_predict(sgd_clf, X_train, y_train_5, cv=3)
 ```
 
@@ -5474,7 +5651,8 @@ array([[54579, 0], [0, 5421]])
 
 在本节中，我们将探索 `precision` 和 `recall` 的平衡。我们之所以说是“平衡”，是因为每当我们增加一个指标时，另一个指标的值就会相应减少（换句话说，保持平衡）。然而，这个解释太模糊了，需要澄清，为了这样做，我们首先需要理解 `SGDClassifier` 是如何决策的。为了决定做出预测，分类器首先为每个数据实例计算一个值（我们称之为 `score`）。这个值基本上代表了分类器认为最可能的选项。例如，一旦分数足够高以跨越正类的线，分类器将预测该数据实例属于负类。通常，这条决策之间的线被称为“阈值（Threshold）”。为了更好地理解这一点，请看下图：
 
-![](img/image_rsrc9TH.jpg)(Picture by Aurélien Ger in Hands-On Machine Learning with Scikit-Learn, Keras and TensorFlow)
+![](img/image_rsrc9TH.jpg)
+*(Picture by Aurélien Géron in Hands-On Machine Learning with Scikit-Learn, Keras and TensorFlow)*
 
 在 Scikit-Learn 中，没有调整分类器阈值设置的方法；我们可以直接使用不同的阈值。为了决定使用哪个阈值，我们只需要查看分数并根据这些信息做决定。以下代码演示了使用 `decision_function()` 来这样做：
 
@@ -5504,6 +5682,7 @@ y_scores = cross_val_predict(sgd_clf, X_train, y_train_5, cv=3, method="decision
 
 ```python
 from sklearn.metrics import precision_recall_curve
+
 precisions, recalls, thresholds = precision_recall_curve(y_train_5, y_scores)
 ```
 
@@ -5511,10 +5690,19 @@ precisions, recalls, thresholds = precision_recall_curve(y_train_5, y_scores)
 
 ```python
 def plot_precision_recall_vs_threshold(precisions, recalls, thresholds):
-    plt.plot(thresholds, precisions[:-1], "b--", label="Precision")
-    plt.plot(thresholds, recalls[:-1], "g-", label="Recall")
-    # [...]
-    # 突出阈值并添加图例、轴标签和网格
+```
+
+
+
+# 使用 Keras 处理人工神经网络
+
+## 代码示例：精确率-召回率阈值可视化
+
+```python
+plt.plot(thresholds, precisions[:-1], "b--", label="Precision")
+plt.plot(thresholds, recalls[:-1], "g-", label="Recall")
+# [...]
+# 突出阈值并添加图例、轴标签和网格
 plot_precision_recall_vs_threshold(precisions, recalls, thresholds)
 plt.show()
 ```
@@ -5523,35 +5711,30 @@ plt.show()
 
 从每个阈值如何影响分类器的精确率和召回率的视觉表示中，你可以根据分类器执行的任务更偏好的指标做出最终决定。假设我们希望分类器至少具有 90% 的精确率。通过查看上方图中绘制的数据，我们可以很容易理解为了做到这一点，我们需要使用至少 8000 的阈值。
 
+## 第 4 章 使用 Keras 处理人工神经网络
 
+![](img/image_rsrc9SG.jpg)
 
-
-
-# 第 4 章 使用 Keras 处理人工神经网络
-
-![](img/image_rsrc9SG.jpg) 大多数革命性的人类发明灵感源于大自然本身。例如，飞行的概念灵感来自鸟类，这导致了飞机的发明。在你人生的某个时刻，你可能遇到过将人脑与计算机进行比较的讨论。尽管初听起来可能很荒谬，但这并非完全异是叛道。人脑的结构如此奇妙且复杂，它可以为机器学习以及深度学习领域中最成功的结构化网络提供基础。
+大多数革命性的人类发明灵感源于大自然本身。例如，飞行的概念灵感来自鸟类，这导致了飞机的发明。在你人生的某个时刻，你可能遇到过将人脑与计算机进行比较的讨论。尽管初听起来可能很荒谬，但这并非完全异是叛道。人脑的结构如此奇妙且复杂，它可以为机器学习以及深度学习领域中最成功的结构化网络提供基础。
 
 结构灵感来自生物神经元本身排列的机器学习模型被称为人工神经网络。然而，我们无需担心，因为我们不会通过讨论生物神经元来解释人工神经网络中具有的相似之处。相反，我们将直接讨论如何使用 `Keras` API 在机器学习模型中实现人工神经网络。
 
 ### 使用 Keras API
 
-与 `tensor-flow` 和 `scikit-learning` 不同，`Keras` 是一个相对更先进、功能更强大的 API，主要用于深度学习模型。通过使用 `Keras` API，我们不仅可以在模型中有效地执行神经网络，还可以使用低级 API 创建自己的自定义神经网络。然而，在本节中，我们的重点仅在于如何使用 `Keras` API 在机器学习模型中实现神经网络。
+与 `TensorFlow` 和 `Scikit-Learn` 不同，`Keras` 是一个相对更先进、功能更强大的 API，主要用于深度学习模型。通过使用 `Keras` API，我们不仅可以在模型中有效地执行神经网络，还可以使用低级 API 创建自己的自定义神经网络。然而，在本节中，我们的重点仅在于如何使用 `Keras` API 在机器学习模型中实现神经网络。
 
 `Keras` 最初于 2015 年作为开源项目发布；因此，使用人工神经网络的深度学习和机器学习领域仍处于发展中。一个模型的成功取决于用户的创新性、可用训练数据的质量以及人工神经网络的实现方式。人工神经网络通常执行需要大量计算资源的任务；因此，`Keras` API 依赖于后端来处理这些计算需求。在编写本书时，可以与 `Keras` API 配合使用的最流行的开源深度学习后端库如下：
 
-* `TensorFlow`
-* Microsoft Cognitive Toolkit（也称为 `CNTK`）
-* `Theano`
+*   `TensorFlow`
+*   Microsoft Cognitive Toolkit（也称为 `CNTK`）
+*   `Theano`
 
 我们也可以使用不同的实现来运行 `Keras` API。例如，`Keras` 可以实现在以下平台：
 
-* `Apache MXNet`
-* Apple 的 `Core ML`
-* `JavaScript` 或 `TypeScript`（允许在网页浏览器中执行 Keras 代码）
-* `PlaidML`（在图形处理器——如 `Nvidia` 的 GPU——上运行 Keras 代码）
-
-
-
+*   `Apache MXNet`
+*   Apple 的 `Core ML`
+*   `JavaScript` 或 `TypeScript`（允许在网页浏览器中执行 Keras 代码）
+*   `PlaidML`（在图形处理器——如 `Nvidia` 的 GPU——上运行 Keras 代码）
 
 Keras 的这些不同实现为该 API 提供了更广泛的使用范围。回到主讨论，在 Keras 的三个流行的后端库中，`TensorFlow` 是最受欢迎的库。如果你希望使用 `TensorFlow`，那么你会惊喜地发现 `TensorFlow` 库现在已经包含了它自己的 Keras 实现（`tf.keras`）。然而，唯一的缺点是该实现只支持一个后端库，而该库正是 `TensorFlow`。尽管如此，我们仍然可以在 `TensorFlow` 库中利用一些非常有用且具有建设性的特性。例如，这一特定实现具有 `TensorFlow` 数据 API，它使得数据加载变得更加简单和高效，同时也提供了一种高效的数据预处理方法。因此，我们在书中也将使用 `tf.keras` 版本的 Keras API。不过，为了使本章中使用的代码能够与其他 Keras 实现（例如 `Python`）兼容，我们将避免使用特定于 `TensorFlow` 库的特性。这样一来，通过对代码进行细小的更改（如更改导入语句），读者也可以在自己偏好的 Keras 实现上使用它。接下来的展示了两种不同的 Keras 实现。在左侧，你可以看到一个多后端的 Keras 实现，在右侧，你可以看到 `TensorFlow` Keras 实现。
 
@@ -5561,15 +5744,15 @@ Keras 的这些不同实现为该 API 提供了更广泛的使用范围。回到
 
 ### 安装 TensorFlow 2
 
-在书的开头章节中，我们学习了安装开源文本编辑器 `Jupyter` 以及机器学习库 `Scikit-learn` 的正确步骤。我们将按照相同的程序使用 `pip` 安装 `TensorFlow` 库。如果你正在使用虚拟环境，请务必在遵循指令之前开启它。你可以通过命令行界面使用以下命令激活虚拟环境：
+在书的开头章节中，我们学习了安装开源文本编辑器 `Jupyter` 以及机器学习库 `Scikit-Learn` 的正确步骤。我们将按照相同的程序使用 `pip` 安装 `TensorFlow` 库。如果你正在使用虚拟环境，请务必在遵循指令之前开启它。你可以通过命令行界面使用以下命令激活虚拟环境：
 
 ```bash
 $ cd $ML_PATH # 你的 ML 工作目录（例如 $HOME/ml）
 $ source my_env/bin/activate  # 在 Linux 或 macOS 上
-$ .\\my\_env\\Scripts\\activate # 在 Windows 上
+$ .\my_env\Scripts\activate # 在 Windows 上
 ```
 
-如果你没有使用虚拟环境，则必须使用管理员权限运行命令行。要安装 `TensorFlow 2`，我们需要使用以下命令。
+如果你没有使用虚拟环境，则必须使用管理员权限运行命令行。要安装 `TensorFlow 2`，我们需要使用以下命令：
 
 ```bash
 $ python3 -m pip install -U tensorflow
@@ -5601,35 +5784,42 @@ fashion_mnist = keras.datasets.fashion_mnist
 (X_train_full, y_train_full), (X_test, y_test) = fashion_mnist.load_data()
 ```
 
-Keras 加载数据集的过程与 `Scikit-Learn` 截然不同。这是因为模型结构的差异。`Scikit-Learn` 使用基础的机器学习结构，因此数据集被转换为一维数组。然而，由于我们正在深度神经网络中实现许多层，其基础结构是完全不同的。因此，数据需要以不同的方式进行转换（这也就是为什么我们将数据集中的每个实例转换为 28x 28 的数组，以便深度神经网络可以使用它）。在记住以下差异的情况下，让我们观察 `Fashion MNIST` 数据集的两个特征，即形状和结构。
+Keras 加载数据集的过程与 `Scikit-Learn` 截然不同。这是因为模型结构的差异。`Scikit-Learn` 使用基础的机器学习结构，因此数据集被转换为一维数组。然而，由于我们正在深度神经网络中实现许多层，其基础结构是完全不同的。因此，数据需要以不同的方式进行转换（这也就是为什么我们将数据集中的每个实例转换为 28x28 的数组，以便深度神经网络可以使用它）。在记住以下差异的情况下，让我们观察 `Fashion MNIST` 数据集的两个特征，即形状和结构。
 
 ```python
->>> X_train_full.shape (60000, 28, 28)
->>> X_train_full.dtype dtype('uint8')
+>>> X_train_full.shape
+(60000, 28, 28)
+>>> X_train_full.dtype
+dtype('uint8')
 ```
 
 该数据集包含训练集和测试集，但没有验证集，因此在进一步操作之前，我们必须创建一个。由于我们在这个模型中使用了 `SGDClassifier`，我们需要对输入数据的属性进行缩放（因为这是一个深度神经网络模型）。我们要做的是：
 
-- 获取每个数据实例的像素强度的原始范围，并将该范围缩小到 0 到 1。为了做到这一点，我们将像素强度的最大值除以它本身（在这种情况下，将是 255.0）。以下代码行演示了这一点：
+*   获取每个数据实例的像素强度的原始范围，并将该范围缩小到 0 到 1。为了做到这一点，我们将像素强度的最大值除以它本身（在这种情况下，将是 255.0）。以下代码行演示了这一点：
 
+```python
+X_valid, X_train = X_train_full[:5000] / 255.0, X_train_full[5000:] / 255.0
+y_valid, y_train = y_train_full[:5000], y_train_full[5000:]
+```
 
+与 `MNIST` 数据集的标签代表手写数字本身不同，我们需要以略微不同的方式对 `Fashion MNIST` 数据集进行标记。我们需要创建一个所有类别项目的列表，以便知道模型正在训练的是哪种物品。可以通过以下方式创建列表：
 
-
-`X_valid, X_train = X_train_full[:5000] / 255.0, X_train_full[5000:] / 255.0`
-`y_valid, y_train = y_train_full[:5000], y_train_full[5000:]`
-
-与 MNIST 数据集的标签代表手写数字本身不同，我们需要以略微不同的方式对 Fashion MNIST 数据集进行标记。我们需要创建一个所有类别项目的列表，以便知道模型正在训练的是哪种物品。可以通过以下方式创建列表：`class_names = ["T-shirt/top", "Trouser", "Pullover", "Dress", "Coat", "Sandal", "Shirt", "Sneaker", "Bag", "Ankle boot"]`
+```python
+class_names = ["T-shirt/top", "Trouser", "Pullover", "Dress", "Coat", "Sandal", "Shirt", "Sneaker", "Bag", "Ankle boot"]
+```
 
 现在，如果我们检查数据集的第一张图像代表的是什么物品，我们将得到该物品的正确名称：
-```
->>> class_names[y_train[0]] 'Coat'
+
+```python
+>>> class_names[y_train[0]]
+'Coat'
 ```
 
-## 使用 Sequential API 构建模型
+### 使用 Sequential API 构建模型
 
 现在我们已经获取了数据集并使用 Keras API 加载了它，现在我们需要构建一个能够处理这些数据的神经网络模型。为此，我们将创建一个包含共 2 个隐藏层的“分类 MLP（多层感知器）”。这在以下几行代码中得到了演示：
 
-```
+```python
 model = keras.models.Sequential()
 model.add(keras.layers.Flatten(input_shape=[28, 28]))
 model.add(keras.layers.Dense(300, activation="relu"))
@@ -5639,39 +5829,40 @@ model.add(keras.layers.Dense(10, activation="softmax"))
 
 在继续下一步之前，让我们逐步理解这些代码实际上是如何工作的：
 
-1. 第一行代码简单来说是生成了一个顺序模型（sequential model）。这种模型实际上是使用人工神经网络最简单、最基础的机器学习模型类型。这是因为顺序模型的结构只由一层堆组成。这些层是顺序连接的；因此该 API 被称为 `Sequential API`。到目前为止，模型仍然是空的，即它不包含任何层。
+1.  第一行代码简单来说是生成了一个顺序模型（`Sequential` model）。这种模型实际上是使用人工神经网络最简单、最基础的机器学习模型类型。这是因为顺序模型的结构只由一层堆栈组成。这些层是顺序连接的；因此该 API 被称为 `Sequential API`。到目前为止，模型仍然是空的，即它不包含任何层。
+2.  在下一行中，开始向神经网络添加额外的层级。我们首先向网络中添加了一个“展平层（`Flatten` Layer）”。该层的目的是转换其输入的维度特征。这意味着任何通过“展平层”的图像都将被重塑为一维图像。同样，请注意，与其他层不同，第二层没有分配任何参数。这背后的原因是，该层唯一的工作是转换输入的维度（这基本上只是处理数据）。此外，输入到神经网络的数据形状必须在第一层中始终指定。由于“展平层”是网络的第一层，我们可以看到也使用了指定图像形状的参数（`input_shape=[28, 28]`）。
+3.  在第三行代码中，我们开始在神经网络内部实现“全连接隐藏层（`Dense` hidden layers）”。当我们定义实际上采用算法来学习模式的层时，这意味着它们使用了神经元。因此，在代码中定义此类层时，我们必须指定该层将具有的神经元数量。如你所示，括号内的第一个数值对应于第一个隐藏全连接层的神经元数量。指定神经元数量后，完成层定义的最后一步是定义该层用于处理其权重矩阵的激活函数。在这种情况下，为该层定义的激活函数是“ReLU”激活函数。
+4.  在第四行代码中，我们添加了另一个全连接隐藏层。然而，该层包含 100 个神经元。该层使用的激活函数是相同的，即 ReLU。
+5.  在代码块的最后一行，我们添加了一个全连接层，但这次它是包含 10 个神经元的输出层。此外，激活函数也是不同的。该层使用了 softmax 激活函数。
 
-2. 在下一行中，开始向神经网络添加额外的层级。我们首先向网络中添加了一个“展平层（Flatten Layer）”。该层的目的是转换其输入的维度特征。这意味着任何通过“展平层”的图像都将被重塑为一维图像。同样，请注意，与其他层不同，第二层没有分配任何参数。这背后的原因是，该层唯一的工作是转换输入的维度（这基本上只是处理数据）。此外，输入到神经网络的数据形状必须在第一层中始终指定。由于“展平层”是网络的第一层，我们可以看到也使用了指定图像形状的参数（`input_shape=[28, 28]`）。
-
-3. 在第三行代码中，我们开始在神经网络内部实现“全密隐藏层（dense hidden layers）”。当我们定义实际上采用算法来学习模式的层时，这意味着它们使用了神经元。因此，在代码中定义此类层时，我们必须指定该层将具有的神经元数量。如你所示，括号内的第一个数值对应于第一个隐藏全密层的神经元数量。指定神经元数量后，完成层定义的最后一步是定义该层用于处理其权重矩阵的激活函数。在这种情况下，为该层定义的激活函数是“ReLU”激活函数。
-
-4. 在第四行代码中，我们添加了另一个全密隐藏层。然而，该层包含 100 个神经元。该层使用的激活函数是相同的，即 ReLU。
-
-5. 在代码块的最后一行，我们添加了一个全密层，但这次它是包含 10 个神经元的输出层。此外，激活函数也是不同的。该层使用了 softmax 激活函数。
-
-## 替代层方法
+### 替代层方法
 
 另一种向顺序模型中插入额外层的方法。这种方法非常简单直接。你只需要列出模型生成时想要的所有层即可。以下代码显示了如何操作：
 
-```
-model = keras.models.Sequential([keras.layers.Flatten(input_shape=[28, 28]), keras.layers.Dense(300, activation="relu"), keras.layers.Dense(100, activation="relu"), keras.layers.Dense(10, activation="softmax")])
+```python
+model = keras.models.Sequential([
+    keras.layers.Flatten(input_shape=[28, 28]),
+    keras.layers.Dense(300, activation="relu"),
+    keras.layers.Dense(100, activation="relu"),
+    keras.layers.Dense(10, activation="softmax")
+])
 ```
 
 如果你想双检并查看模型中使用的层，可以使用 `model.summary()` 方法，如下所示：
 
-```
+```python
 >>> model.summary()
 Model: "sequential"
 _________________________________________________
-Layer (type) Output Shape Param #
+Layer (type)         Output Shape    Param #
 =================================================
-flatten (Flatten) (None, 784) 0
+flatten (Flatten)    (None, 784)     0
 _________________________________________________
-dense (Dense) (None, 300) 235500
+dense (Dense)        (None, 300)     235500
 _________________________________________________
-dense_1 (Dense) (None, 100) 30100
+dense_1 (Dense)      (None, 100)     30100
 _________________________________________________
-dense_2 (Dense) (None, 10) 1010
+dense_2 (Dense)      (None, 10)      1010
 =================================================
 Total params: 266,610
 Trainable params: 266,610
@@ -5685,27 +5876,34 @@ Non-trainable params: 0
 *   每个层的参数数量。
 *   可训练参数和不可训练参数的总数。
 
+从上述模型摘要可以看出，注意全连接层（`Dense` layer）的参数非常丰富。仅第一个全连接隐藏层就有 235,500 个参数。虽然这看起来是一项了不起的成就，但它也有优缺点。一个层具有这么多参数的优点是，它在拟合训练数据集时为整个模型提供了更好的灵活性。另一方面，这意味着模型过拟合的概率更高，当我们没有足够的训练数据来供模型使用时，这种概率会增加。我们还可以获取模型所使用的完整层列表。这种获取可以根据索引或根据层的名称来完成。
 
+```python
+>>> model.layers
+[<tensorflow.python.keras.layers.core.Flatten at 0x132414e48>, <tensorflow.python.keras.layers.core.Dense at 0x1324149b0>, <tensorflow.python.keras.layers.core.Dense at 0x1356ba8d0>, <tensorflow.python.keras.layers.core.Dense at 0x13240d240>]
 
-
-从上述模型摘要可以看出，注意全连接层（dense layer）的参数非常丰富。仅第一个全连接隐藏层就有 235,500 个参数。虽然这看起来是一项了不起的成就，但它也有优缺点。一个层具有这么多参数的优点是，它在拟合训练数据集时为整个模型提供了更好的灵活性。另一方面，这意味着模型过拟合的概率更高，当我们没有足够的训练数据来供模型使用时，这种概率会增加。我们还可以获取模型所使用的完整层列表。这种获取可以根据索引或根据层的名称来完成。
-
-```
->>> model.layers [<tensorflow.python.keras.layers.core.Flatten at 0x132414e48>, <tensorflow.python.keras.layers.core.Dense at 0x1324149b0>, <tensorflow.python.keras.layers.core.Dense at 0x1356ba8d0>, <tensorflow.python.keras.layers.core.Dense at 0x13240d240>] 
 >>> hidden1 = model.layers[1]
->>> hidden1.name 'dense'
->>> model.get_layer('dense') is hidden1 True
+>>> hidden1.name
+'dense'
+>>> model.get_layer('dense') is hidden1
+True
 ```
 
 如果你想访问特定层的任何参数或所有参数，可以使用权重方法，即：`get_weights()` 和 `set_weights()`。如果你访问的参数是全连接层的参数，那么你还可以访问该层连接的权重以及偏置项（bias terms）：
 
-```
+```python
 >>> weights, biases = hidden1.get_weights()
->>> weights array([[0.02448617, -0.00877795, -0.02189048, ..., -0.02766046, 0.03859074, -0.06889391], ..., [-0.06022581, 0.01577859, -0.02585464, ..., -0.00527829, 0.00272203, -0.06793761]], dtype=float32)
->>> weights.shape (784, 300)
->>> biases array([0., 0., 0., 0., 0., 0., 0., 0., 0., ..., 0., 0., 0.], dtype=float32)
->>> biases.shape (300,)
 ```
+
+
+
+>>> `weights` array([[0.02448617, -0.00877795, -0.02189048, ..., -0.02766046, 0.03859074, -0.06889391], ..., [-0.06022581, 0.01577859, -0.02585464, ..., -0.00527829, 0.00272203, -0.06793761]], dtype=float32)
+
+>>> `weights.shape` (784, 300)
+
+>>> `biases` array([0., 0., 0., 0., 0., 0., 0., 0., 0., ..., 0., 0., 0.], dtype=float32)
+
+>>> `biases.shape` (300,)
 
 我们可以看到，全连接层随机初始化了连接权重，而偏置则是从零初始化的。这是因为随机初始化是打破连接权重对称性的关键。此外，将偏置从零初始化也是可以的。但这并不是你在创建层时初始化参数的唯一方法。`kernel_initializer` 方法以及 `bias_initializer` 是同样效果的替代方案。
 
@@ -5729,19 +5927,19 @@ model.compile(loss="sparse_categorical_crossentropy", optimizer="sgd", metrics=[
 history = model.fit(X_train, y_train, epochs=30, validation_data=(X_valid, y_valid))
 
 Train on 55000 samples, validate on 5000 samples
+
 Epoch 1/30 55000/55000 - 3s 49us/sample - loss: 0.7218 - accuracy: 0.7660 - val_loss: 0.4973 - val_accuracy: 0.8366
+
 Epoch 2/30 55000/55000 - 2s 45us/sample - loss: 0.4840 - accuracy: 0.8327 - val_loss: 0.4456 - val_accuracy: 0.8480
+
 ...
+
 Epoch 30/30 55000/55000 - 3s 53us/sample - loss: 0.2252 - accuracy: 0.9192 - val_loss: 0.2999 - val_accuracy: 0.8926
 ```
 
 为了训练模型，我们只需指定数据集的输入特征 (`X_train`) 和相应的目标类别 (`y_train`)。此外，始终记得指定你想让模型迭代的 `epochs`（轮数）。如果你不指定 `epochs`，它将默认为 1 轮（这对于创建一个好的模型显然是不够）。下一步是可选的，但仍然是一种良好的做法。除了训练数据集，我们还为模型提供了一个验证集。当一个训练轮完成后，Keras 会首先通过验证集测量损失，然后是编译步骤中指定的指标，在这种情况下是 `accuracy`。这些值给了我们关于模型性能好坏的想法。例如，如果模型在训练数据集上的表现优于验证集，那么这意味着模型实际上在过拟合训练数据集。
 
 一旦所有的训练轮完成，神经网络就完全训练好了。如果我们查看上方系统显示的实际训练过程，可以注意到训练损失在每一轮之后都在下降。这告诉我们模型很好地拟合了训练数据集。同样，模型在验证集上的最终准确率为 89.26%，而训练集上的最终准确率为 91.92%。差异并不大，这告诉我们模型没有过拟合。这里有一个你们可以使用的酷技巧：如果你事先没有创建验证集，你可以简单地将训练集分为训练集和验证集。例如，你可以在整个数据集洗牌之前预留训练集中最后 20% 的数据作为验证集。这可以通过参数 `validation_split=0.2` 实现。另一个需要记住的提示是，如果你注意到训练集具有不同的权重，这意味着集合中的某些类别“代表性不足”，而某些类别“代表性过度”，你应该调整这一点并重新训练模型。这可以通过调用 `fit()` 方法时使用 `class_weight` 参数来实现。`fit()` 方法返回的训练和验证数据还可以进行可视化表示，以便更轻松地评估模型。`fit()` 方法返回以下内容：
-
-
-
-
 
 - 一个包含所有定义训练参数的历史对象。这是 `history.params`。
 - 模型训练的训练轮数（epochs）。这是 `history.epoch`。
@@ -5752,6 +5950,7 @@ Epoch 30/30 55000/55000 - 3s 53us/sample - loss: 0.2252 - accuracy: 0.9192 - val
 ```python
 import pandas as pd
 import matplotlib.pyplot as plt
+
 pd.DataFrame(history.history).plot(figsize=(8, 5))
 plt.grid(True)
 plt.gca().set_ylim(0, 1) # 设置垂直范围为 [0-1]
@@ -5768,13 +5967,11 @@ plt.show()
 - 每层包含的神经元总数。
 - 模型中每个隐藏层所使用的激活序列类型。
 
-
-
-
 你也可以关注数据集本身的超参数调优，例如批大小（batch size）（在调用 `fit()` 方法时，你可以使用参数 `batch_size` 来指定批大小，该参数的默认值为 32）。一旦你在验证集上获得了所需的准确率且性能令人满意，就是时候通过对未见数据（测试数据集）生成预测预测，来测试模型在真实世界中的实际性能了。通过这种方式，我们可以了解模型将其学到的知识泛化到从未遇到过的数据的效果如何。要测试模型，我们将使用名为 `evaluate()` 的方法，如下所示：
 
 ```
 model.evaluate(X_test, y_test) 
+
 10000/10000 [==========] - 0s 29us/sample - loss: 0.3340 - accuracy: 0.8851 [0.3339798209667206, 0.8851]
 ```
 
@@ -5788,16 +5985,13 @@ model.evaluate(X_test, y_test)
 X_new = X_test[:3]
 y_proba = model.predict(X_new)
 y_proba.round(2)
+
 array([[0. , 0. , 0. , 0. , 0. , 0.03, 0. , 0.01, 0. , 0.96],
  [0. , 0. , 0.98, 0. , 0.02, 0. , 0. , 0. , 0. , 0.     ],
  [0. , 1. ,   0. ,0. , 0. , 0. , 0. , 0. , 0. ,0.      ]], dtype=float32)
 ```
 
 从结果数组中，我们可以清楚地看到机器学习模型为每个类别生成了一个预测，即对于从 0 到 9 的类别，模型为每个实例提供了每个类别的概率概率。详细来说，我们可以看到在第一个数组中，模型预测该数据实例有 96% 的概率……（注意：源代码中的剩余原始文本包含大量的重复/乱码短语，根据指令已进行压缩以保持核心技术流程的清晰度）。
-
-
-
-
 
 # 第 5 章 解决深度神经网络训练中面临的问题 ![](img/image_rsrc9SG.jpg)
 
@@ -5826,10 +6020,6 @@ array([[0. , 0. , 0. , 0. , 0. , 0.03, 0. , 0.01, 0. , 0.96],
 
 *   当时流行的逻辑 sigmoid 激活函数的组合。
 *   权重初始化技术（使用均值为 0 的正态分布和标准差 1 的均值）。
-
-
-
-
 
 他们指出，通过使用这种初始化技术和激活函数，与同一层输入的方差相比，每层的相应输出具有更高的方差。这种输出方差增加的趋势随着我们深入神经网络的每一层而变得明显，并且当激活函数在网络的最顶层最终饱和时才会停止。此外，激活函数的饱和还会受到均值为 0.5（而非 0）的逻辑函数的负面影响。这是因为在深度神经网络中，均值为 0.5 的逻辑函数在行为和效果上都略逊于均值为 0 的“双双曲正切函数（hyperbolic tangent function）”。以下是逻辑函数激活函数饱和的视觉化表示。
 
@@ -5867,12 +6057,9 @@ keras.layers.Dense(10, activation="relu", kernel_initializer="he_normal")
 
 在这个示例中，我们正在使用基于 `fan avg` 的均匀分布公式的 He 初始化策略。我们也可以更改均匀分布公式依赖的变量；例如，不再让均匀分布基于变量‘fan avg’，而是基于基于‘fan in’。为了实现这一点，我们需要使用一种名为‘VariableScaling’的初始化器，如下几行代码所示：
 
-```
-he_avg_init = keras.initializers.VarianceScaling(scale=2., mode='fan_avg', distribution='uniform')
-keras.layers.Dense(10, activation="sigmoid", kernel_initializer=he_avg_init)
-```
 
-## 使用 Keras 实现批归一化
+
+# 使用 Keras 实现批归一化
 
 我们为止讨论的处理梯度消失和爆炸的方法并不完美。这是因为即使我们使用了配合 ReLU 激活函数甚至 ELU 激活函数的 He 初始化策略，它也无法保证梯度问题不会再次出现并在训练期间困扰神经网络。因此，我们需要讨论额外的措施来彻底解决梯度问题。
 
@@ -5882,22 +6069,23 @@ keras.layers.Dense(10, activation="sigmoid", kernel_initializer=he_avg_init)
 *   对每个输入进行归一化
 *   在每一层上使用两个向量参数，一个参数执行缩放，另一个参数执行层结果（输出）的平移
 
-
-
-
 简单来说，该操作使深度学习模型能够识别其每一层输入的最佳尺度和均值元素。我们在此停止理论讨论，直接开始使用 Keras 实现批归一化（Batch Normalization）。正如 Keras API 简化了技术的实现一样，批归一化也不例外。正如我们所讨论的，我们需要目标层激活函数之前或之后实现该操作。为了实现这一点，我们必须在目标隐藏层的激活函数之前或该隐藏层的激活函数之后添加一个 `BatchNormalization` 层。
 
 这里是一个模型的快速演示，在将输入图像转换为 1D（展平）后，在每一层之后都包含了一个 `BatchNormalization` 层：
 
 ```python
+he_avg_init = keras.initializers.VarianceScaling(scale=2., mode='fan_avg', distribution='uniform')
+
+keras.layers.Dense(10, activation="sigmoid", kernel_initializer=he_avg_init)
+
 model = keras.models.Sequential([
-    keras.layers.Flatten(input_shape=[28, 28]), 
-    keras.layers.BatchNormalization(), 
-    keras.layers.Dense(300, activation="elu", kernel_initializer="he_normal"), 
-    keras.layers.BatchNormalization(), 
-    keras.layers.Dense(100, activation="elu", kernel_initializer="he_normal"), 
-    keras.layers.BatchNormalization(), 
-    keras.layers.Dense(10, activation="softmax") 
+    keras.layers.Flatten(input_shape=[28, 28]),
+    keras.layers.BatchNormalization(),
+    keras.layers.Dense(300, activation="elu", kernel_initializer="he_normal"),
+    keras.layers.BatchNormalization(),
+    keras.layers.Dense(100, activation="elu", kernel_initializer="he_normal"),
+    keras.layers.BatchNormalization(),
+    keras.layers.Dense(10, activation="softmax")
 ])
 ```
 
@@ -5907,23 +6095,20 @@ model = keras.models.Sequential([
 >>> model.summary()
 Model: "sequential_3"
 ________________________________________________________________
-Layer (type) Output Shape Param #
+Layer (type)                 Output Shape              Param #
 ================================================================
-flatten_3 (Flatten) (None, 784) 0
-batch_normalization_v2 (Batch) (None, 784) 3136
-dense_50 (Dense) (None, 300) 235500
-batch_normalization_v2_1 (Ba) (None, 300) 1200
-dense_51 (Dense) (None, 100) 30100
-batch_normalization_v2_2 (Ba) (None, 100) 400
-dense_52 (Dense) (None, 10) 10
+flatten_3 (Flatten)          (None, 784)               0
+batch_normalization_v2 (Batch) (None, 784)             3136
+dense_50 (Dense)             (None, 300)               235500
+batch_normalization_v2_1 (Ba) (None, 300)              1200
+dense_51 (Dense)             (None, 100)               30100
+batch_normalization_v2_2 (Ba) (None, 100)              400
+dense_52 (Dense)             (None, 10)                10
 ================================================================
 Total params: 271346
 Trainable params: 268978
 Non-trainable params: 2368
 ```
-
-
-
 
 # 解决深度神经网络训练中的数据短缺问题
 
@@ -5953,15 +6138,11 @@ Non-trainable params: 2368
 
 现在，让我们通过一个我们已经熟悉的示例——Fashion MNIST 数据集来了解如何实现迁移学习。假设 Fashion MNIST 数据集不是包含 10 个类，而是只包含 8 个类（准确地说，我们排除了代表凉鞋和代表衬衫的类别）。有人使用 `Keras` 利用该数据集训练了他们的神经网络模型，并令人惊讶地获得了约 90% 的准确率。现在，我们将该模型称为 `Model X`。
 
-现在假设我们需要处理一个类似于 `Model A` 设计处理的任务。在这种情况下，我们希望模型从我们提供的图像中将凉鞋和衬衫区分到不同的类别。我们希望模型执行一个二分类任务，这与 `Model X` 执行的分类任务相似。然而，我们缺乏训练神经网络所需的数据，准确地说，我们的数据集总共有。
+现在假设我们需要处理一个类似于 `Model X` 设计处理的任务。在这种情况下，我们希望模型从我们提供的图像中将凉鞋和衬衫区分到不同的类别。我们希望模型执行一个二分类任务，这与 `Model X` 执行的分类任务相似。然而，我们缺乏训练神经网络所需的数据，准确地说，我们的数据集总共有。
 
-## 解决训练缓慢的问题
+# 解决训练缓慢的问题
 
 构建具有许多连接和权重的深度神经网络也会按指数级增加训练所需的时间，这并不意外。假设你已经通过克服梯度问题成功构建了一个深度神经网络。接下来，你通过迁移学习解决了训练数据数据的问题，但面临的下一个问题是训练速度非常缓慢。你可能没有注意到，在之前的章节中讨论的四种技术对提高深度神经网络的训练速度也有帮助。具体来说，这些技术是：
-
-
-
-
 
 *   采用良好的初始化策略
 *   选择并使用最合适的激活函数
@@ -6015,12 +6196,11 @@ m ← mβ - η∇ θJ(θ)
 ```
 
 2. 将得到的动量加到权重上：
+```
+θ ← θ + m
+```
 
-
-
-
-
-`θ ← θ + m` 这种变化看起来可能微不足道或仅仅令人平淡，但实际上，与动量优化相比，训练速度的差异是巨大的。其背后的原因是，在任何给定时刻，动量向量都会直接指向优化点。这使得梯度更新相比于动量优化更加准确，从本质上说，缩短了梯度回到正确方向所需的时间。下图展示了 Nesterov 动量优化与标准动量优化相比，是如何更新梯度的。
+这种变化看起来可能微不足道或仅仅令人平淡，但实际上，与动量优化相比，训练速度的差异是巨大的。其背后的原因是，在任何给定时刻，动量向量都会直接指向优化点。这使得梯度更新相比于动量优化更加准确，从本质上说，缩短了梯度回到正确方向所需的时间。下图展示了 Nesterov 动量优化与标准动量优化相比，是如何更新梯度的。
 
 ![](img/image_rsrc9TT.jpg)
 
@@ -6046,60 +6226,64 @@ optimizer = keras.optimizers.SGD(lr=0.001, momentum=0.9, nesterov=True)
 optimizer = keras.optimizers.RMSprop(lr=0.001, rho=0.9)
 ```
 
+
+
 在上面的代码行中，结尾的参数（`rho=0.9`）指的是指数衰减的超参数。除了基础简单的任务外，观察到 `RMSProp` 优化器在复杂任务和深度神经网络上的表现远优于 `AdaGrad`。
 
-### 处理深度神经网络的过拟合风险
+## 处理深度神经网络的过拟合风险
 
 我们现在遇到了深度神经网络使用的最后一个主要问题：当网络拥有这么多参数时，模型过拟合的风险。在标准深度神经网络中，你会发现大多数通常具有几十万个参数，某些甚至可能超过百万个参数。虽然这赋予了模型执行非常复杂任务和处理高度复杂数据集的惊人能力，但过拟合问题仍然存在。换句话说，使用这么多参数带来的灵活性是需要代价的，即网络过拟合数据集的更高。
 
-解决这一问题最常用的方法之一是正则化（regularization）。我们讨论过一些可以作为正则化器的技术和方法。即使 `Batch Normalization`（批归一化）技术在某种程度上也是很好的正则化器（尽管创建这种方法的主要目的是处理梯度问题）。然而，我们现在将注意力转移到专门用于正则化且目前因其功能而流行的技术。这些正则化技术如下：
+解决这一问题最常用的方法之一是正则化。我们讨论过一些可以作为正则化器的技术和方法。即使 `Batch Normalization`（批归一化）技术在某种程度上也是很好的正则化器（尽管创建这种方法的主要目的是处理梯度问题）。然而，我们现在将注意力转移到专门用于正则化且目前因其功能而流行的技术。这些正则化技术如下：
 
 - `l1` 和 `l2` 正则化
 - `Dropout` 正则化
 - `max-norm` 正则化
 
+## L1 和 L2 正则化
 
+这种类型的正则化主要用于约束其所在网络中的连接权重（`l2` 正则化），或者创建一个大多数权重被设置为 0 的稀疏模型（`l1` 正则化）。你也可以同时使用这两种正则化。为了演示起见，让我们在 Keras 中对全连接层的某些连接权重实现 `l2` 正则化，同时将“正则化因子”保持为 0.01：
 
-
-
-# L1 和 L2 正则化
-
-这种类型的正则化主要用于约束其所在网络中的连接权重（`l2` 正则化），或者创建一个大多数权重被设置为 0 的稀疏模型（`l1` 正则化）。你也可以同时使用这两种正则化。为了演示起，让我们在 Keras 中对全连接层的某些连接权重实现 `l2` 正则化，同时将“正则化因子”保持为 0.01：
-
-```
+```python
 layer = keras.layers.Dense(100, activation="elu", kernel_initializer="he_normal", kernel_regularizer=keras.regularizers.l2(0.01))
 ```
 
-在最后一行，我们可以看到通过使用 `kernel_regularizer` 参数指定了正则化方法。该参数后面跟着 `l2()` 函数，它详细说明了 `l2` 正则化的用法。当我们训练模型时，该函数会在每个训练轮次（epoch）返回 `l2` 正则化器。这样，正则化器就能计算正则化损失。一旦获得正则化损失的值，它就会将其添加到最终的损失中。要使用 `l1` 正则化，我们只需要将最后一个参数替换为 `keras.regularizers.l1()`。这将返回 `l1` 正则化器。如果你想同时使用 `l1` 和 `l2` 正则化，可以通过使用以下参数 `keras.regularizers.l1_l2()` 来。然而，由于我们使用了两种正则化，你必须为两个正则化器指定正则化因子。
+在最后一行，我们可以看到通过使用 `kernel_regularizer` 参数指定了正则化方法。该参数后面跟着 `l2()` 函数，它详细说明了 `l2` 正则化的用法。当我们训练模型时，该函数会在每个训练轮次（epoch）返回 `l2` 正则化器。这样，正则化器就能计算正则化损失。一旦获得正则化损失的值，它就会将其添加到最终的损失中。要使用 `l1` 正则化，我们只需要将最后一个参数替换为 `keras.regularizers.l1()`。这将返回 `l1` 正则化器。如果你想同时使用 `l1` 和 `l2` 正则化，可以通过使用以下参数 `keras.regularizers.l1_l2()` 来实现。然而，由于我们使用了两种正则化，你必须为两个正则化器指定正则化因子。
 
 通常，在对层应用正则化时，趋势倾向于将此正则化器应用于模型神经网络中的每一层。但这种趋势不仅适用于正则化器，在整个隐藏层中应用相同的初始化策略和相同的激活函数也是你在深度神经网络中最终会做的事情。但为了做到这一点，初学者或对深度神经网络缺乏经验的人会简单地为网络中的每一层重复正则化器、激活函数和初始化策略的参数。但这种方法并不实际。相反，它会导致生成的代码更容易出错且不必要的冗长。为了避免反复编写参数，我们可以使用循环来重构代码本身，或者像下面所示使用 Python 函数 `functools.partial()`：
 
 ```python
 from functools import partial
+
 RegularizedDense = partial(keras.layers.Dense, activation="elu", kernel_initializer="he_normal", kernel_regularizer=keras.regularizers.l2(0.01))
+
 model = keras.models.Sequential([
+
     keras.layers.Flatten(input_shape=[28, 28]),
+
     RegularizedDense(300),
+
     RegularizedDense(100),
+
     RegularizedDense(10, activation="softmax", kernel_initializer="glorot_uniform")
+
 ])
 ```
+
+
 
 # Dropout（丢弃）
 
 由于 Dropout 在模型实现中非常成功，这可能是专门用于深度神经网络最受欢迎且应用广泛的正则化器。为了了解它的实用性和作用，请考虑这一点：如果在由专业人士使用先进架构和资源构建的神经网络中使用 dropout 正则器，我们可以很容易预期模型的准确率提高 1% 到 2%。初一看，许多人可能认为这种准确率的提升是微不足道的，但事实恰恰相反。如果最好的深度神经网络模型准确率为 96%，那么 2% 的提升将是巨大的（这也意味着模型的错误率下降了 50%，即从 4% 的错误率下降到 2% 的错误率）。
 
-你可能会认为，既然正则化器很好用，那么它一定有一套非常复杂的运行机制来产生这样的结果。但相反，dropout 正化器的工作方式实际上非常简单。当在神经网络中实现 dropout 正化器时，除了输出神经元的所有神经元（输入神经元）在训练期间都有完全忽略的机会。换句话说，任何神经元都有可能从训练过程中被丢弃。概率变量 `p` 指定了这种机会。然而，丢弃神经元并不意味着它从模型中删除。当一个神经元被丢弃时，它不会包含在当前的训练轮中，但当下一个轮次开始时，之前被忽略的神经元也将被训练，而其他某些神经元会被丢弃。这种在训练期间丢弃的过程会一直持续到训练结束。
+你可能会认为，既然正则化器很好用，那么它一定有一套非常复杂的运行机制来产生这样的结果。但相反，dropout 正则器的工作方式实际上非常简单。当在神经网络中实现 dropout 正则器时，除了输出神经元的所有神经元（输入神经元）在训练期间都有完全忽略的机会。换句话说，任何神经元都有可能从训练过程中被丢弃。概率变量 `p` 指定了这种机会。然而，丢弃神经元并不意味着它从模型中删除。当一个神经元被丢弃时，它不会包含在当前的训练轮中，但当下一个轮次开始时，之前被忽略的神经元也将被训练，而其他某些神经元会被丢弃。这种在训练期间丢弃的过程会一直持续到训练结束。
 
-每个神经元被丢弃的概率 `p` 实际上是 dropout 正化器本身的超参数。这个超参数被称为“丢弃率”（dropout rate）。通常，该超参数设置为 10% 到 50% 之间可以获得最佳效果。然而，观察发现，如果在循环神经网络中使用该正则化器，超参数的最佳值为 20% 到 30% 之间。同样，如果在卷积神经网络中使用该正则化器，最好将超参数设置为 40% 到 50% 之间。
+每个神经元被丢弃的概率 `p` 实际上是 dropout 正则器本身的超参数。这个超参数被称为“丢弃率”（dropout rate）。通常，该超参数设置为 10% 到 50% 之间可以获得最佳效果。然而，观察发现，如果在循环神经网络中使用该正则化器，超参数的最佳值为 20% 到 30% 之间。同样，如果在卷积神经网络中使用该正则化器，最好将超参数设置为 40% 到 50% 之间。
 
-下图展示了丢弃神经元的过程：![](img/image_rsrc9TU.jpg)
+下图展示了丢弃神经元的过程：
+![](img/image_rsrc9TU.jpg)
 
-常见的问题是，这种破坏性且非传统的方法是如何提高神经网络准确率的。让我们探讨一个类比（尽管这可能不完全实际，但概念传得很清楚）。考虑一家遵循与使用 dropout 正化器的神经网络中相同常规的公司。每天，每个员工都必须掷硬币来决定他们是在办公室上班还是请假。理论上讲，这样的公司必须相应地调整其工作基础设施。每个员工都必须相应地调整。
-
-
-
-
+常见的问题是，这种破坏性且非传统的方法是如何提高神经网络准确率的。让我们探讨一个类比（尽管这可能不完全实际，但概念传得很清楚）。考虑一家遵循与使用 dropout 正则器的神经网络中相同常规的公司。每天，每个员工都必须掷硬币来决定他们是在办公室上班还是请假。理论上讲，这样的公司必须相应地调整其工作基础设施。每个员工都必须相应地调整。
 
 ## 结论
 
@@ -6107,7 +6291,7 @@ model = keras.models.Sequential([
 
 ## 参考文献
 
-- `Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow (2nd Edition)`，Aurélien Géron 
+- `Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow (2nd Edition)`，Aurélien Géron
 - `TensorFlow`
 
 ## 机器学习
@@ -6126,10 +6310,6 @@ model = keras.models.Sequential([
 其理念是为你提供这三者如何工作的完整示例，在整个过程中，你也将开始看到它们是如何协同工作的。书中提供了完整的安装说明和完整的项目供你跟随，所以如果你已经准备好开启你的机器学习之旅，让我们开始吧。
 
 # 第一部分 机器学习简介
-
-
-
-
 
 ### 什么是机器学习？
 
@@ -6159,7 +6339,9 @@ model = keras.models.Sequential([
 
 最后一种学习方法是强化学习，它在任何地方的使用都没有监督或无监督学习多。强化学习关于采取行动以确保在给定情况下获得最大奖励，并用于为机器或软件找到最佳路径。像无监督学习一样，强化学习不会预先提供答案。相反，模型必须学会做什么；错误的决定会惩罚机器，而良好的决定会奖励它，这就是模型学习的方式——从经验中学习。
 
-## 机器学习方法机器学习领域与计算统计学有密切的关系，使得统计学对于想要使用这些算法的人非常有用。如果你不熟悉统计学，也许你的起点应该是理解回归（regression）和相关性（correlation）的区别，因为它们是用于研究变量之间关系的最常用的机器学习技术。在最基础的，回归观察自变量和因变量之间的关系。当自变量已知时，使用统计学预测因变量，这意味着回归对于预测任务很有用。相关性衡量未标记为因变量或自变量的变量之间的关联。机器学习方法正在不断演进，新方法不断被开发出来。
+## 机器学习方法
+
+机器学习领域与计算统计学有密切的关系，使得统计学对于想要使用这些算法的人非常有用。如果你不熟悉统计学，也许你的起点应该是理解回归（regression）和相关性（correlation）的区别，因为它们是用于研究变量之间关系的最常用的机器学习技术。在最基础的，回归观察自变量和因变量之间的关系。当自变量已知时，使用统计学预测因变量，这意味着回归对于预测任务很有用。相关性衡量未标记为因变量或自变量的变量之间的关联。机器学习方法正在不断演进，新方法不断被开发出来。
 
 ### K 近邻
 
@@ -6181,10 +6363,6 @@ K 近邻，又称 `KNN`，同时用于回归和分类问题中的模式识别。
 
 （注：原文此后仅有标题 Decision Tree，后续无正文，已按要求仅翻译标题）
 
-
-
-
-
 ### 深度学习
 
 深度学习 ![](img/image_rsrc9SG.jpg)
@@ -6205,7 +6383,7 @@ K 近邻，又称 `KNN`，同时用于回归和分类问题中的模式识别。
 
 ## 深度学习如何工作
 
-深度学习模型不断分析逻辑结构化数据，就像人类对事物得出结论的方式一样。这是通过一种称为人工神经网络的层级算法结构实现的。`ANN` 设计基于人类大脑的神经网络，它允许学习过程比你的普通机器学习算法强大得。。确保深度学习模型不做出错误预测并不容易，因为这需要大量的训练来确保过程正确。但当它足够深度时，当它实现了预期功能时，深度学习被视为一种奇迹，许多人认为是 AI 真正的骨干。
+深度学习模型不断分析逻辑结构化数据，就像人类对事物得出结论的方式一样。这是通过一种称为人工神经网络的层级算法结构实现的。`ANN` 设计基于人类大脑的神经网络，它允许学习过程比你的普通机器学习算法强大得多。确保深度学习模型不做出错误预测并不容易，因为这需要大量的训练来确保过程正确。但当它足够深度时，当它实现了预期功能时，深度学习被视为一种奇迹，许多人认为是 AI 真正的骨干。
 
 深度学习最好的例子之一是 `AlphaGo`。它是 Google 创建的一个带有神经网络的程序，经过训练用于下棋——一种以需要直觉和智力而称的抽象棋类。该程序与人类职业对对，并学会了如何在高水平下棋，超过了以前 AI 看到的任何水平。它还会在没有被告知的情况下学会何时该下棋——大多数机器学习模型都需要被告诉何时执行。
 
@@ -6227,15 +6405,14 @@ TensorFlow ![](img/image_rsrc9SG.jpg)
 - 数据科学家
 - 程序员。
 
-
-
-
 每个小组可以共享数据工具集，通过协作提高效率。可以说，Google 拥有世界上最大的计算机，其中充满了大量数据，因此他们构建了 `TensorFlow` 来扩展规模。`TensorFlow` 由 `Google Brain Team` 开发，是一个旨在加速机器学习以及深度神经网络研究的库。它支持运行在多个 `GPUs` 或 `CPUs` 上，也可以在移动操作系统系统上运行，并在不同的语言（如 `Python`、`Java` 和 `C++`）中拥有多个封装器。
 
 ### TensorFlow 历史
+
 在过去的几年里，深度学习的表现远远超过了任何其他处理海量数据的机器学习算法。Google 意识到了这一点，并发现可以利用它来改进自己的服务，包括 Google 搜索引擎、`Google Photo` 和 `Gmail`。为了实现这一点，他们构建了 `TensorFlow` 框架，允许开发者和研究人员在人工智能模型上进行协作。它在 2015 年底才首次公开，但直到 2017 年才发布了第一个真正的稳定版本。`TensorFlow` 是一个根据 `Apache Open Source License` 分发的开源库，这意味着任何人都可以免费地使用、分发和修改它。
 
 ### TensorFlow 架构
+
 `TensorFlow` 架构包含三个部分：
 
 1. 数据预处理
@@ -6245,6 +6422,7 @@ TensorFlow ![](img/image_rsrc9SG.jpg)
 之所以被称为 `TensorFlow`，是因为它可以接受 `tensor` 作为输入。`tensor` 是一个多维数组，并且可以构建称为 `graphs` 的操作流程图并在 `tensor` 上执行操作。输入从一端进入，经过多个操作，然后从另一端作为输出输出。简而言之，`tensor` 流过系统，因此得名。
 
 ## TensorFlow 可以在哪里运行？
+
 我们可以将 `TensorFlow` 的软件硬件需求分为两个阶段。第一阶段是开发阶段，通常在笔记本电脑或计算机上进行模型训练。第二阶段是推理或运行阶段，一旦完成训练，`TensorFlow` 可以在不同的平台上运行，包括：
 
 * `macOS`、`Windows` 或 `Linux` 上的桌面设备或笔记本电脑
@@ -6254,18 +6432,23 @@ TensorFlow ![](img/image_rsrc9SG.jpg)
 `TensorFlow` 可以在多个机器上进行训练，然后训练好的模型可以在完全不同的机器上运行，包括 `GPUs` 和 `CPUs`。`GPU` 最初设计用于视频游戏，但在 2010 年，斯坦福的研究人员发现它也适用于代数和矩阵运算。这意味着 `GPU` 对于此类计算非常快且是理想选择，特别是因为深度学习对矩阵乘法有很强的依赖。`TensorFlow` 用 `C++` 编写，这使其在矩阵计算时非常快，尽管使用了 `C++` 实现，但其他语言（通常是 `Python`）可以访问并控制它。最后一个主要功能是 `TensorBoard`，它允许用户以图形化的方式可视化 `TensorFlow` 的工作情况。
 
 ### TensorFlow 组件
+
 `TensorFlow` 的两个主要组件是：
 
 ### Tensor
+
 `tensor` 是 `TensorFlow` 的核心框架，其中的每个计算都会涉及这些 `tensors`。那么，什么是 `tensor` 呢？它是一个代表所有数据类型的 `n` 维矩阵或向量。所有 `tensor` 的值具有相同的数据类型，其形状是已知的或至少部分已知，该数据形状是数组或矩阵的维度。`Tensors` 可以源于两个地方——输入数据或计算结果。所有的 `TensorFlow` 操作都发生在 `graph` 内部，`graph` 是计算集合，其中所有操作都是连续的。这些操作相互连接并被称为 `op nodes`。`graph` 概述了 `ops` 和节点连接，但并不显示值。`tensor` 是节点的边，是向操作中填充所有数据的方式。
 
 ### Graphs
+
 `TensorFlow` 也使用 `graph` 框架，训练期间执行的计算序列在此被汇集并描述。`graph` 具有高度的可移植性，这意味着计算可以被保存以备即时使用或留作以后使用。`Tensors` 由节点和边组成。`node` 是数学操作所在的地方，也是从端点获取输出的地方。`edges` 解释了每个节点之间的输入和输出关系。
 
 ## 为什么 TensorFlow 如此流行
+
 `TensorFlow` 之所以流行是因为任何人都可以访问它。它构建了多个用于扩展 `ANNs`、`CNNs` 和其他深度学习架构的 `APIs`。此外，由于 `TensorFlow` 基于 `graphs`，开发者可以使用 `TensorBoard` 查看神经网络是如何构建的，这也有助于调试。
 
 ## 顶级 TensorFlow 算法
+
 `TensorFlow` 内置了以下算法的 `APIs`：
 
 * 提升树分类：`tf.estimator.BoostedTreesClassifier`
@@ -6275,15 +6458,16 @@ TensorFlow ![](img/image_rsrc9SG.jpg)
 * 深度学习擦除深度：`tf.estimator.DNNLinearCombinedClassifier`
 * 线性回归：`tf.estimator.LinearRegressor`
 
-
-
-
 # TensorFlow 简单示例 ![](img/image_rsrc9SG.jpg)
 
 ```python
-import numpy as np
-import tensorflow as tf
 ```
+
+
+
+import numpy as np
+
+import tensorflow as tf
 
 这真的不能再更简单了。在这两行简单的代码中，我们把 `TensorFlow` 导入为 `tf`。在 Python 中，你会注意到我们通常会缩短库的名称，这样做唯一好处是当我们使用它时，不需要输入完整的库名。例如，`TensorFlow` 被导入为 `tf`，当我们需要使用 `TensorFlow` 函数时，只需调用 `tf` 即可。`NumPy`也是如此，它是另一个流行的 Python 机器学习库。
 
@@ -6296,6 +6480,7 @@ import tensorflow as tf
 
 ```python
 X_1 = tf.placeholder(tf.float32, name = "X_1")
+
 X_2 = tf.placeholder(tf.float32, name = "X_2")
 ```
 
@@ -6313,9 +6498,13 @@ multiply = tf.multiply(X_1, X_2, name = "multiply")
 
 ```python
 multiply = tf.multiply(X_1, X_2, name = "multiply")
+
 with tf.Session() as session:
+
     result = session.run(multiply, feed_dict={X_1:[1,2,3], X_2: [4,5,6]})
+
     print(result)
+
 # [ 4. 10. 18. ]
 ```
 
@@ -6328,13 +6517,9 @@ with tf.Session() as session:
 那么，你应该使用哪一种呢？
 
 1.  **在内存中加载数据**：如果你的数据集很小（小于 10 GB），这是最好的方法，因为数据可以很容易放入内存。最优秀的库之一是 `Pandas`，它可以帮助你导入 `CSV` 文件。
-2.  **使用 TensorFlow 流水线**：如果你的数据集巨大，请使用这种方法。例如，如果你的电脑有 16 GB 内存，而你正尝试导入 50 GB 的数据，那是行行的；你所能做的只是让电脑崩溃。
+2.  **使用 TensorFlow 流水线**：如果你的数据集巨大，请使用这种方法。例如，如果你的电脑有 16 GB 内存，而你正尝试导入 50 GB 的数据，那是行不通的；你所能做的只是让电脑崩溃。
 
 对于后一种方法，你需要构建一个流水线并使用它每次加载一小批数据。每批数据进入流水线并为训练做好准备。这是一个非常棒的解决方案，因为你可以使用被称为...的工具。
-
-
-
-
 
 我们将使用第一个版本，即 CPU 支持版本，因为它对于本教程的目的来说完全足够了。此外，Mac 版本没有 GPU 支持版本。现在开始吧——在开始操作之前，请先阅读，因为其中包含部分理论内容和实际操作说明。
 
@@ -6342,55 +6527,55 @@ with tf.Session() as session:
 
 我们将首先查看如何在 Windows 和 macOS 上安装 Anaconda。
 
-### Windows
+#### Windows
 
-1. 访问 [`www.anaconda.com/download/#windows`](https://www.anaconda.com/download/#windows) 并下载 Anaconda 安装程序，将其保存到桌面。
-2. 找到并双击安装程序以启动——**不要**在你的“收藏夹”文件夹中执行此操作，否则会导致权限错误。
-3. 在启动器窗口上点击 `Next`（下一步）。
-4. 阅读条款和条件并点击 `I Agree`（我同意）。
-5. 除非你是为所有系统用户安装，否则在下一个窗口中选择为 `Just Me`（仅限我），并选择安装位置。
-6. 点击 `Next`（下一步）。
-7. 在下一个窗口中，你有两个可以勾选的框框——第一个询问你是否要将 Anaconda 添加到你的 `PATH` 环境变量。我们不建议这样做，因为它倾向于干扰计算机上的某些其他软件，所以不要勾选此框。相反，你应该通过 `Start Menu`（开始菜单）提示或 `Anaconda Navigator` 来使用 Anaconda。
-8. 第二个勾选框询问你要将 Anaconda 注册为默认 Python。除非你打算运行多个版本的 Python 或 Anaconda，否则勾选此框。
-9. 现在点击 `Install`（安装）。如果你想查看正在安装哪些包，点击 `Show Details`（显示详情），或者让它自动安装。
+1.  访问 [`www.anaconda.com/download/#windows`](https://www.anaconda.com/download/#windows) 并下载 Anaconda 安装程序，将其保存到桌面。
+2.  找到并双击安装程序以启动——**不要**在你的“收藏夹”文件夹中执行此操作，否则会导致权限错误。
+3.  在启动器窗口上点击 `Next`（下一步）。
+4.  阅读条款和条件并点击 `I Agree`（我同意）。
+5.  除非你是为所有系统用户安装，否则在下一个窗口中选择为 `Just Me`（仅限我），并选择安装位置。
+6.  点击 `Next`（下一步）。
+7.  在下一个窗口中，你有两个可以勾选的框框——第一个询问你是否要将 Anaconda 添加到你的 `PATH` 环境变量。我们不建议这样做，因为它倾向于干扰计算机上的某些其他软件，所以不要勾选此框。相反，你应该通过 `Start Menu`（开始菜单）提示或 `Anaconda Navigator` 来使用 Anaconda。
+8.  第二个勾选框询问你要将 Anaconda 注册为默认 Python。除非你打算运行多个版本的 Python 或 Anaconda，否则勾选此框。
+9.  现在点击 `Install`（安装）。如果你想查看正在安装哪些包，点击 `Show Details`（显示详情），或者让它自动安装。
 10. 点击 `Next`（下一步），你会获得安装 PyCharm 的选项；现在只需在此窗口上点击 `Next`。
 11. 一旦 Anaconda 安装完成，你会得到一个感谢你安装的对话框。点击 `Finish`（完成）。
 
 现在你需要验证安装，有两种方法可以实现——使用 Anaconda Navigator 或 `conda`。
 
-### Anaconda Navigator
+#### Anaconda Navigator
 这是一个与 Anaconda 一起安装的 GUI（图形用户界面）。进入开始菜单并输入 `Anaconda Navigator`。如果它能打开，说明 Anaconda 安装成功。如果没有打开，说明安装失败。在这种情况下，请临时禁用你的杀病毒软件并再次运行上述步骤。别忘了在之后重新启用它。
 
-### Conda
+#### Conda
 这是给那些喜欢使用 CLI（命令行界面）的人准备。点击开始菜单并输入 `Anaconda Prompt`。从这里，你有方法可以检查安装。在命令行提示符处：
 
 * 输入 `conda list`。如果安装成功，你将看到列出的已安装包及其版本号；或者
 * 在提示符处输入 `python`。如果安装了 Anaconda，Python 解释器应该运行，你应该能看到有关版本的信息。输入 `quit()` 关闭解释器；或者
 * 在提示符处输入 `anaconda-navigator` 来打开 Anaconda；它只会在安装成功时才会打开。
 
-### Mac
+#### Mac
 
 你有两种方法在 Mac 上安装 Anaconda —— 图形化安装程序或命令行。如果你不确定应该使用哪一个，请选择图形化安装程序。
 
-### 图形化安装
-1. 访问 [`www.anaconda.com/downloads#macos`](https://www.anaconda.com/downloads#macos) 并根据你需要的 Python 版本下载正确的安装程序。
-2. 双击文件图标并点击 `Continue`（继续）开始安装。
-3. 点击通过 Introduction（简介）、Read Me（自述）和 License（许可）屏幕，同意每一项内容。
-4. 在下一个窗口上点击 `Install`（安装）——这将 Anaconda 安装到 `~/opt` 目录，这是推荐的目录。
-5. 打开 Destination Select（选择目标）界面，点击 `Install for Me Only`（仅为我安装）。
-6. 点击 `Continue`（继续），然后在 PyCharm 屏幕上点击 `Continue`。
-7. Anaconda 安装完成后，你将看到 `Thank You For Installing`（感谢安装）屏幕。
+##### 图形化安装
+1.  访问 [`www.anaconda.com/downloads#macos`](https://www.anaconda.com/downloads#macos) 并根据你需要的 Python 版本下载正确的安装程序。
+2.  双击文件图标并点击 `Continue`（继续）开始安装。
+3.  点击通过 Introduction（简介）、Read Me（自述）和 License（许可）屏幕，同意每一项内容。
+4.  在下一个窗口上点击 `Install`（安装）——这将 Anaconda 安装到 `~/opt` 目录，这是推荐的目录。
+5.  打开 Destination Select（选择目标）界面，点击 `Install for Me Only`（仅为我安装）。
+6.  点击 `Continue`（继续），然后在 PyCharm 屏幕上点击 `Continue`。
+7.  Anaconda 安装完成后，你将看到 `Thank You For Installing`（感谢安装）屏幕。
 
-### 命令行安装
+##### 命令行安装
 这是给倾向于使用终端窗口的人准备的。
 
-1. 打开浏览器访问 [`www.anaconda.com/downloads#macos`](https://www.anaconda.com/downloads#macos)。
-2. 下载命令行版本。
-3. 打开终端并输入以下命令，将 `filename` 替换为你自己的路径和文件名：
+1.  打开浏览器访问 [`www.anaconda.com/downloads#macos`](https://www.anaconda.com/downloads#macos)。
+2.  下载命令行版本。
+3.  打开终端并输入以下命令，将 `filename` 替换为你自己的路径和文件名：
 ```bash
 shasum -a 256 /path/filename
 ```
-4. 现在决定你正在安装 Python 3.7 还是 2.7。对于 3.7，输入以下命令：
+4.  现在决定你正在安装 Python 3.7 还是 2.7。对于 3.7，输入以下命令：
 ```bash
 bash ~/Downloads/Anaconda3-2020.02-MacOSX-x86_64.sh
 ```
@@ -6399,23 +6584,24 @@ bash ~/Downloads/Anaconda3-2020.02-MacOSX-x86_64.sh
 bash ~/Downloads/Anaconda2-2019.10-MacOSX-x86_64.sh
 ```
 确保在两种情况下，你都已将 `Downloads` 替换为你自己的路径，并将 `Anaconda3-2020.02-MacOSX-x86_64.sh` 替换为下载的文件名。
-5. 现在你将看到安装程序提示要求你查看许可条款——点击 `Enter`（回车），滚动到最后然后点击 `Yes`（是）。
-6. 现在安装程序要求你按回车键确认位置。你有两个选择——同意默认设置，情况下你会看到 `PREFIX=/home/<user>/anaconda<2 or 3>`。如果你想更改默认设置，按 `CTRL+C` 并输入新目录。推荐使用前者。
-7. 安装程序现在会询问你是否要运行 `conda init` 来初始化 `Anaconda3` ——点击 `Yes`。
-8. 等待安装完成，你会看到“感谢安装”窗口。
-9. 关闭安装程序并打开终端窗口以使安装生效。现在决定你是否希望每个 shell 会话都激活基础环境。如果是的话，在提示符处运行以下命令：
+5.  现在你将看到安装程序提示要求你查看许可条款——点击 `Enter`（回车），滚动到最后然后点击 `Yes`（是）。
+6.  现在安装程序要求你按回车键确认位置。你有两个选择——同意默认设置，情况下你会看到 `PREFIX=/home/<user>/anaconda<2 or 3>`。如果你想更改默认设置，按 `CTRL+C` 并输入新目录。推荐使用前者。
+7.  安装程序现在会询问你是否要运行 `conda init` 来初始化 `Anaconda3` ——点击 `Yes`。
+8.  等待安装完成，你会看到“感谢安装”窗口。
+9.  关闭安装程序并打开终端窗口以使安装生效。现在决定你是否希望每个 shell 会话都激活基础环境。如果是的话，在提示符处运行以下命令：
 ```bash
 conda config --set auto_activate_base False or True
 ```
 如果你希望从任何地方运行 `conda` 而不激活基础环境，输入：
 ```bash
 conda init config config --set auto_activate_base False
-```最后，必须验证安装，使用 Anaconda Navigator 或 `conda`。
+```
+最后，必须验证安装，使用 Anaconda Navigator 或 `conda`。
 
-### Navigator
+##### Navigator
 * 点击 Launchpad 并选择 `Anaconda Navigator`；或者按 `CMD+Space` 启动 Spotlight 搜索；输入 `Navigator` 程序打开。
 
-### Conda
+##### Conda
 * 按 `CMD+Space` 启动 Spotlight 搜索并输入 `Navigator`
 
 现在使用以下方法之一验证安装：
@@ -6423,18 +6609,16 @@ conda init config config --set auto_activate_base False
 * 在提示符处输入 `python`。如果安装了 Anaconda，Python 解释器应该运行，你应该能看到有关版本的信息。输入 `quit()` 关闭解释器；或者
 * 在提示符处输入 `anaconda-navigator` 来打开 Anaconda；它只会在安装成功时才会打开。
 
-
-
-
-
 ### 安装 TensorFlow
 
-## 第一步 – 定 Anaconda
+## 第一步 – 找到 Anaconda
 ### Windows
 第一步是找到 Anaconda 的路径。我们需要一个 `conda` 环境，其中存放所有需要的库。打开 Anaconda prompt（提示符）并输入：
+
 ```
 C:\>where anaconda
 ```
+
 我们需要知道安装 Anaconda 的文件夹名称，因为该路径将是新环境安装的地方。
 
 ### Mac OS
@@ -6490,12 +6674,19 @@ vi hello-tf.yml
 在编辑模式下编写以下代码，然后按下 `esc` 键和 `w` 键。请注意，所有内容都是严格对应的且区分大小写，每个缩进必须有两个空格：
 ```yaml
 name: hello-tf
+
 dependencies:
+
   - python=3.6
+
   - jupyter
+
   - ipython
+
   - pandas
+
   - pip:
+
       - https://storage.googleapis.com/tensorflow/MacOS/cpu/tensorflow-1.5.0-py3-none-any.whl
 ```
 别忘记按下 `esc` 键然后按 `w` 保存；接着按 `esc` 和 `q` 退出。
@@ -6508,10 +6699,15 @@ notepad hello-tf.yml
 在文件中输入以下内容：
 ```yaml
 name: hello-tf
+
 dependencies:
+
   - python=3.6
+
   - jupyter
+
   - ipython
+
   - pandas
 ```
 
@@ -6529,6 +6725,7 @@ conda env create -f hello-tf.yml
 ```bash
 source activate-tf
 ```
+
 ### Windows
 ```cmd
 conda activate-tf
@@ -6536,7 +6733,9 @@ conda activate-tf
 运行 `conda env list` 时，默认环境由星号 (`*`) 标记。要检查 TensorFlow 是否需要更新，使用以下命令：
 
 ### Mac OS / Windows
+```bash
 pip install --upgrade tensorflow
+```
 
 ## 启动 Jupyter
 Windows 和 Mac OS 相同。请注意，当你想打开 TensorFlow 时，必须初始化环境。我们将执行：
@@ -6548,11 +6747,13 @@ Windows 和 Mac OS 相同。请注意，当你想打开 TensorFlow 时，必须�
 
 ### 第一步 – 激活 Conda
 在相应的提示符输入以下命令：
-### Mac OS
+
+#### Mac OS
 ```bash
 source activate-tf
 ```
-### Windows
+
+#### Windows
 ```cmd
 conda activate-tf
 ```
@@ -6560,38 +6761,47 @@ conda activate-tf
 ### 第二步 – 启动 Jupyter
 现在可以启动 `Jupyter` 了。在提示符输入：
 ```bash
-jupyter notebook
 ```
-如果浏览器没有自动打开，请复制提示符显示的 URL 并将其粘贴到浏览器中。它应该以 `http://localhost:8888` 开头。当 Jupyter Notebook 打开时时，你会看到工作目录及其所有文件。
 
-### 第三步 – 导入 TensorFlow
-现在可以在 `Jupyter` 中使用 `tf` 别导入 TensorFlow 了。点击 Run 创建新单元格，在其中输入：
+
+
+# Jupyter Notebook
+
+如果浏览器没有自动打开，请复制提示符显示的 URL 并将其粘贴到浏览器中。它应该以 `http://localhost:8888` 开头。当 Jupyter Notebook 打开时，你会看到工作目录及其所有文件。
+
+## 第三步 – 导入 TensorFlow
+
+现在可以在 `Jupyter` 中使用 `tf` 别名导入 TensorFlow 了。点击 Run 创建新单元格，在其中输入：
+
 ```python
 import tensorflow as tf
 ```
+
 是时候使用 TensorFlow 编写代码了。输入：
+
 ```python
 hello = tf.constant('Hello, HappyMonday!')
 ```
-在这里，我们创建了一个张量 – 你已通过 `Jupyter` 在电脑上安装了 TensorFlow。
 
-### 第四步 – 删除文件
+在这里，我们创建了一个张量 —— 你已通过 `Jupyter` 在电脑上安装了 TensorFlow。
+
+## 第四步 – 删除文件
+
 如果你想，可以在 `Jupyter` 中删除名为 `Untitled.ipynb` 的文件。只需勾选它并点击 delete 按钮。
 
-### 第五步 – 关闭 Jupyter
+## 第五步 – 关闭 Jupyter
+
 你有两种方法关闭 `Jupyter`。首先可以从 `Notebook` 关闭，其次是通过 Anaconda 提示符或终端。
 
 ### Jupyter
+
 在 `Jupyter` 主界面点击 `Logout`（退出）按钮，你将进入注销页面。
 
 ### Terminal/Anaconda Prompt
-在提示符或终端中，连续两次 `CTRL+C`。第一次时，你需要确认是否要关闭 Notebook。第二次 `CTRL+C` 将确认关闭。
 
+在提示符或终端中，连续两次按 `CTRL+C`。第一次时，你需要确认是否要关闭 Notebook。第二次 `CTRL+C` 将确认关闭。
 
-
-
-
-### TensorFlow 基础
+# TensorFlow 基础
 
 ![](img/image_rsrc9SG.jpg)
 
@@ -6599,18 +6809,20 @@ hello = tf.constant('Hello, HappyMonday!')
 
 ## 什么是张量（Tensor）？
 
-TensorFlow 的名称来源于张量（tensor），它是该库的核心框架。张量参与了每一个 TensorFlow 计算，但什么是张量呢？正如我们之前解释的，它是表示所有数据类型的 n 维矩阵或向量。每个张量值具有相同的数据类型，并具有已知或部分知的形状，数据的形状即数组或矩阵的维度。张量可以来自两个地方——计算结果或输入数据。
+TensorFlow 的名称来源于张量（tensor），它是该库的核心框架。张量参与了每一个 TensorFlow 计算，但什么是张量呢？正如我们之前解释的，它是表示所有数据类型的 n 维矩阵或向量。每个张量值具有相同的数据类型，并具有已知或部分已知的形状，数据的形状即数组或矩阵的维度。张量可以来自两个地方 —— 计算结果或输入数据。
 
 所有的 TensorFlow 操作都在一个图中进行，图是一系列连续的计算。每个 TensorFlow 操作都是一个 `op` 节点，这些节点都是连接的。图显示了 `ops` 及其连接，但它不会显示它们的值。节点边缘是张量，它是向操作中填充数据的方法。在机器学习中，我们向模型提供特征向量，特征向量是对象的列表。这些向量可以是任何数据类型，但它们是填充张量的主要输入方法。对象值通过张量流到 `op` 节点，计算结果将创建一个新的张量。该新张量将被用于新的操作，所有这些都可以在图中可视化。
 
 ## 张量如何表示
 
-我们已经知道张量是一个 n 维特征向量的数组或矩阵。所以，如果我们的矩阵是 2x3，并且包含 1 到 6 的值，我们将写为：![](https://www.guru99.com/images/1/080418_1250_WhatisaTens111.png)
+我们已经知道张量是一个 n 维特征向量的数组或矩阵。所以，如果我们的矩阵是 2x3，并且包含 1 到 6 的值，我们将写为：
+![](https://www.guru99.com/images/1/080418_1250_WhatisaTens111.png)
 
 它在 TensorFlow 中的表示为：`[[1, 2, 3], [4, 5, 6]]`。
 
-如果我们有一个包含 1 到 8 值的 3 维矩阵，我们将：![](img/image_rsrc9U1.jpg)
-TensorFlow 将其表示为：`[[[1, 2], [[3, 4], [[5, 6], [[7,8]]]]`。值得注意的是，张量可以使用标量来表示它们，或者它们的形状可能是四维或更多维，但高维级别的可视化要困难得多。
+如果我们有一个包含 1 到 8 值的 3 维矩阵，我们将：
+![](img/image_rsrc9U1.jpg)
+TensorFlow 将其表示为：`[[[1, 2], [3, 4], [5, 6], [7, 8]]]`。值得注意的是，张量可以使用标量来表示它们，或者它们的形状可能是四维或更多维，但高维级别的可视化要困难得多。
 
 ### 张量类型
 
@@ -6627,7 +6839,7 @@ TensorFlow 将其表示为：`[[[1, 2], [[3, 4], [[5, 6], [[7,8]]]]`。值得注
 - `tf.placeholder`
 - `tf.SparseTensor`
 
-我们将查看创建其中两个——`tf.Variable` 和 `tf.constant`。在开始之前，你需要确保已激活了带有 TensorFlow 的 `conda` 环境。不要忘记，我们将其命名为 `hello-tf`。以下是激活它的方法：
+我们将查看创建其中两个 —— `tf.Variable` 和 `tf.constant`。在开始之前，你需要确保已激活了带有 TensorFlow 的 `conda` 环境。不要忘记，我们将其命名为 `hello-tf`。以下是激活它的方法：
 
 - Mac: `source activate hello-tf`
 - Windows: `activate hello-tf`
@@ -6653,6 +6865,7 @@ import tensorflow as tf
 - `name`: 张量的名称。可选。
 
 ### Rank 0 (秩 0)
+
 ```python
 ## 默认名称
 r1 = tf.constant(1, tf.int16)
@@ -6664,7 +6877,8 @@ r2 = tf.constant(1, tf.int16, name="my_scalar")
 print(r2)
 # 输出 Tensor("my_scalar:0", shape=(), dtype=int16)
 ```
-张量的 `name` 用于显示每一个张，我们通过 `name`、`shape` 和 `dtype` 定义张量对象。通过更改数据类型，可以使用字符串或小数值定义张量。
+
+张量的 `name` 用于显示每一个张量，我们通过 `name`、`shape` 和 `dtype` 定义张量对象。通过更改数据类型，可以使用字符串或小数值定义张量。
 
 ```python
 # 小数
@@ -6674,11 +6888,13 @@ print(r1_decimal)
 ## 字符串
 r1_string = tf.constant("Happy", tf.string)
 print(r1_string)
+
 # 输出 Tensor("Const_1:0", shape=(), dtype=float32)
 # Tensor("Const_2:0", shape=(), dtype=string)
 ```
 
 ### Rank 1 (秩 1)
+
 维度为 1 的张量可以如下创建：
 
 ```python
@@ -6687,29 +6903,34 @@ print(r1_vector)
 
 r2_boolean = tf.constant([True, True, False], tf.bool)
 print(r2_boolean)
+
 # 输出 Tensor("Const_3:0", shape=(3,), dtype=int16)
 # Tensor("Const_4:0", shape=(3,), dtype=bool)
 ```
+
+### Rank 2 (秩 2)
+
 维度为 2 的张量可以如下创建：
 
 ```python
 r2_matrix = tf.constant([[1, 2], [3, 4]], tf.int16)
 print(r2_matrix)
+
 # 输出 Tensor("Const:0", shape=(2, 2), dtype=int16)
 ```
+
+### Rank 3 (秩 3)
+
 维度为 3 的张量可以如下创建：
 
 ```python
 r3_tensor = tf.constant([[[1, 2], [3, 4]], [[5, 6], [7, 8]]], tf.int16)
 print(r3_tensor)
+
 # 输出 Tensor("Const:0", shape=(2, 2, 2), dtype=int16)
 ```
 
 *(注：原文中 Rank 2 和 Rank 3 的示例代码似乎不完整，译文根据逻辑补全并保持了格式。)*
-
-
-
-
 
 `Tensor("ones_3:0", shape=(3, 2), dtype=float32)` ![](img/image_rsrc9SG.jpg)
 
@@ -6717,7 +6938,7 @@ print(r3_tensor)
 
 张量的另一个属性是数据类型，每个张量在任何时候只能包含一种数据类型。我们使用 `dtype` 属性来返回数据类型：`print(m_shape.dtype)` 输出 `<dtype: 'int32'>`。
 
-有时，你可能需要更改数据类型，我们可以在 TensorFlow 中使用 `tf.cast` 方法来实现这一点：这里有一个示例：在下面的代码中，我们使用 `tf.cast` 将浮点数张量转换为整数。
+有时，你可能需要更改数据类型，我们可以在 TensorFlow 中使用 `tf.cast` 方法来实现这一点。这里有一个示例：在下面的代码中，我们使用 `tf.cast` 将浮点数张量转换为整数。
 
 ```python
 # 更改数据类型
@@ -6732,15 +6953,15 @@ print(type_int.dtype)
 
 # 有用的 TensorFlow 算符
 
-现在我们已经知道如何创建张量，应该将注意力转向数学运算了。你可以在 TensorFlow 中找到所有的基础算符，我们将从一个简单的操作开始，使用 TensorFlow 计算给定数字的平方。这很容易，因为张量只用了一个参数构造。我们使用 `tf.sqrt(x)`，其中 `x` 代表一个浮点数。
+现在我们已经知道如何创建张量，应该将注意力转向数学运算了。你可以在 TensorFlow 中找到所有的基础算符，我们将从一个简单的操作开始，使用 TensorFlow 计算给定数字的平方根。这很容易，因为张量只用了一个参数构造。我们使用 `tf.sqrt(x)`，其中 `x` 代表一个浮点数。
 
 ```python
-x = tf.constant([2.0], dtype = tf.float32)
+x = tf.constant([2.0], dtype=tf.float32)
 print(tf.sqrt(x))
 ```
 输出 `Tensor("Sqrt:0", shape=(1,), dtype=float32)`
 
-注意，输出并不是你预期的结果——你认为它应该是 2 的平方结果，但它是一个张量对象。示例打印的是张量的定义而不是操作的求值。很快我们将查看 TensorFlow 是如何执行操作的，但首先，这里有一个常用操作列表，每个操作至少需要一个参数：
+注意，输出并不是你预期的结果 —— 你认为它应该是 2 的平方根结果，但它是一个张量对象。示例打印的是张量的定义而不是操作的求值。很快我们将查看 TensorFlow 是如何执行操作的，但首先，这里有一个常用操作列表，每个操作至少需要一个参数：
 
 * `tf.add(a, b)`
 * `tf.div(a, b)`
@@ -6748,14 +6969,14 @@ print(tf.sqrt(x))
 * `tf.multiply(a, b)`
 * `tf.pow(a, b)`
 * `tf.sqrt(a)`
-* `tf.substract(a, b)`
+* `tf.subtract(a, b)`
 
 这里有一个示例：
 
 ```python
 # 相加张量
-tensor_a = tf.constant([[1,2]], dtype = tf.int32)
-tensor_b = tf.constant([[3, 4]], dtype = tf.int32)
+tensor_a = tf.constant([[1, 2]], dtype=tf.int32)
+tensor_b = tf.constant([[3, 4]], dtype=tf.int32)
 tensor_add = tf.add(tensor_a, tensor_b)
 print(tensor_add)
 ```
@@ -6770,17 +6991,19 @@ print(tensor_add)
 tensor_multiply = tf.multiply(tensor_a, tensor_b)
 print(tensor_multiply)
 ```
-输出 `Tensor("Mul:0", shape=(1, 2), dtype=int32)` ![](img/image_rsrc9SG.jpg)
+输出 `Tensor("Mul:0", shape=(1, 2), dtype=int32)`
+
+![](img/image_rsrc9SG.jpg)
 
 # 变量
 
-到目前为止，我们一直关注的是常量张量，但公平地说，这些并不总是最好的选择。这是因为数据以各种类型和值出现，捕捉这些数据需要我们使用 `Variable` 类。它代表值始终在变化的节点。我们需要使用 `tf.get_variable` 方法来实现：`tf.get_variable(name = "", values, dtype, initializer)`
+到目前为止，我们一直关注的是常量张量，但公平地说，这些并不总是最好的选择。这是因为数据以各种类型和值出现，捕捉这些数据需要我们使用 `Variable` 类。它代表值始终在变化的节点。我们需要使用 `tf.get_variable` 方法来实现：`tf.get_variable(name="", values, dtype, initializer)`
 
 参数为：
-* `name = ""`: 变量名
+* `name=""`: 变量名
 * `values`: 张量维度
-* `dtype`: 可选——数据类型
-* `initializer`: 可选——初始化张量
+* `dtype`: 可选 —— 数据类型
+* `initializer`: 可选 —— 初始化张量
 
 如果我们指定了 `initializer`，就不需要添加值了，因为会使用初始化器的形状。例如，在下面我们创建了一个包含一对随机值的二维变量。TensorFlow 默认会返回一个随机值。该变量命名为 `var`：
 
@@ -6792,7 +7015,7 @@ print(var.shape)
 ```
 输出 `(1, 2)`
 
-接下来，我们将创建一个具有两列一行的变量，为了创建变量的维度，我们使用 `[1,2]`。这个张量的初始值为 0。在训练模型时，你必须提供初始值，以便计算特征的权重。在这种情况下，我们将它们设置为零：
+接下来，我们将创建一个具有两列一行的变量。为了创建变量的维度，我们使用 `[1, 2]`。这个张量的初始值为 0。在训练模型时，你必须提供初始值，以便计算特征的权重。在这种情况下，我们将它们设置为零：
 
 ```python
 var_init_1 = tf.get_variable("var_init_1", [1, 2], dtype=tf.int32, initializer=tf.zeros_initializer)
@@ -6812,20 +7035,17 @@ print(var_init_2.shape)
 
 # 占位符
 
-占位符只有一个简单的工作——传递数据。我们使用它们来初始化会。你需要语法是：`tf.placeholder(dtype, shape, name)`：
+占位符只有一个简单的工作 —— 传递数据。我们使用它们来初始化会话。你需要的语法是：`tf.placeholder(dtype, shape, name)`：
 
 * `dtype`: 数据类型
-* `shape`: 可选——维度
-* `name`: 可选——占位符名称
+* `shape`: 可选 —— 维度
+* `name`: 可选 —— 占位符名称
 
 ```python
 data_placeholder_a = tf.placeholder(tf.float32, name="data_placeholder_a")
 ```
 
-
-
-
-我们也可以在块内部创建会话（sessions），这样做的好处是即使忘记关闭会话也没关系，系统会自动为你完成：
+我们也可以在块内部创建会话，这样做的好处是即使忘记关闭会话也没关系，系统会自动为你完成：
 
 ```python
 with tf.Session() as sess:
@@ -6842,11 +7062,11 @@ Output `[8]`
 sess = tf.Session()
 print(sess.run(r1))
 print(sess.run(r2_matrix))
-print(sess.run(r3_matrix))
+print(sess.run(r3_tensor))
 ```
 Output `1 [[1 2] [3 4]] [[[1 2] [3 4] [5 6]]]`
 
-默认情况下，即使已经创建了张量，变量也是空的。如果你想使用变量，必须对其进行初始化，而初始化变量的值是使用 `tf.global_variables_initialzer()` 对象完成的。显式使用该对象初始化每一个变量，这在训练模型之前是一个非常有用的操作。与张量一样，你也可以创建一个会话来检查已创建的变量，并且张量的评估需要 `run()`：
+默认情况下，即使已经创建了张量，变量也是空的。如果你想使用变量，必须对其进行初始化，而初始化变量的值是使用 `tf.global_variables_initializer()` 对象完成的。显式使用该对象初始化每一个变量，这在训练模型之前是一个非常有用的操作。与张量一样，你也可以创建一个会话来检查已创建的变量，并且张量的评估需要 `run()`：
 
 ```python
 sess.run(tf.global_variables_initializer())
@@ -6856,7 +7076,7 @@ print(sess.run(var_init_2))
 ```
 Output `[[-0.05356491 0.75867283]] [[0 0]] [[10 20] [30 40]]]`
 
-你之前创建的位符（placeholder）也可以使用并喂值。数据必须通过 `feed_dict` 方法传递。例如，我们有一个名为 `data_placeholder_a` 的位符，我们想要该位符的 2 次方：
+你之前创建的占位符也可以使用并喂值。数据必须通过 `feed_dict` 方法传递。例如，我们有一个名为 `data_placeholder_a` 的占位符，我们想要该占位符的 2 次方：
 
 ```python
 import numpy as np
@@ -6867,79 +7087,91 @@ with tf.Session() as sess:
 # Will succeed.
 ```
 
+
+
 拆解这段代码：
 
-*   `import numpy as np`: 导入 numpy 库以便我们可以创建数据。
-*   `tf.pow(data_placeholder_a, 2)`: 创建操作（ops）。
-*   `np.random.rand(1, 10)`: 创建随机数据数组。
-*   `feed_dict={data_placeholder_a: data}`: 将数据喂给位符。
+*   `import numpy as np`：导入 numpy 库以便我们可以创建数据。
+*   `tf.pow(data_placeholder_a, 2)`：创建操作（ops）。
+*   `np.random.rand(1, 10)`：创建随机数据数组。
+*   `feed_dict={data_placeholder_a: data}`：将数据喂给占位符。
 
-Output `[[0.05478134 0.27213147 0.8803037 0.0398424 0.21172127 0.01444725 0.02584014 0.3763949 0.66022706 0.7565559]]`
+输出：`[[0.05478134 0.27213147 0.8803037 0.0398424 0.21172127 0.01444725 0.02584014 0.3763949 0.66022706 0.7565559]]`
 
-## 图（Graphs）
+## 图
 
-在 TensorFlow 中渲染操作需要使用数据流方案（dataflow scheme）来表示计算。为了实现，开发了数据流图以便我们可以看到每个操作的数据依赖关系。数学算法由一系列连续的操作组成，图可以方便地向我们展示计算之间的协调关系。在 TensorFlow 图上，你会看到一条边（edge）和一个节点（node）。边代表张量，可以产生新的张量或接收输入数据，而节点代表操作。张量是产生新张量还是接收输入数据完全取决于单个操作的依赖关系。图的结构用于连接节点并显示它们是如何被喂入数据的。你在图中看不到的是操作的输出。
+在 TensorFlow 中渲染操作需要使用数据流方案来表示计算。为了实现，开发了数据流图以便我们可以看到每个操作的数据依赖关系。数学算法由一系列连续的操作组成，图可以方便地向我们展示计算之间的协调关系。在 TensorFlow 图上，你会看到一条边和一个节点。边代表张量，可以产生新的张量或接收输入数据，而节点代表操作。张量是产生新张量还是接收输入数据完全取决于单个操作的依赖关系。图的结构用于连接节点并显示它们是如何被喂入数据的。你在图中看不到的是操作的输出。
 
-让我们通过一个例子更深入地理解这一点。假设我们想要评估以下函数：$f(x, z) = xz + x² + z + 5$。TensorFlow 通过创建一个所示的图来执行此函数：![](img/image_rsrc9U2.jpg)
+让我们通过一个例子更深入地理解这一点。假设我们想要评估以下函数：$f(x, z) = xz + x^2 + z + 5$。TensorFlow 通过创建一个所示的图来执行此函数：![](img/image_rsrc9U2.jpg)
 
 这清楚地显示了张量到达终点所经过的路径。图告诉你操作的顺序是：
 
-*   相加 1) 
+*   相加 1)
 *   加到 2)
-*   加到 3) 
+*   加到 3)
 
 ```python
 x = tf.get_variable("x", dtype=tf.int32, initializer=tf.constant([5]))
+
 z = tf.get_variable("z", dtype=tf.int32, initializer=tf.constant([6]))
+
 c = tf.constant([5], name="constant")
+
 square = tf.constant([2], name="square")
+
 f = tf.multiply(x, z) + tf.pow(x, square) + z + c
 ```
 
 拆解这段代码：
 
-*   `x`: 使用值 5 初始化名为 `x` 的变量，这是一个常量值。
-*   `z`: 使用值 6 初始化名为 `z` 的变量，这是一个常量值。
-*   `c`: 初始化名为 `constant` 的常量。
-*   `square`: 初始化名为 `square` 的常量。
-*   `f`: 表达式 `tf.multiply(x, z) + tf.pow(x, square) + z + c`。
+*   `x`：使用值 5 初始化名为 `x` 的变量，这是一个常量值。
+*   `z`：使用值 6 初始化名为 `z` 的变量，这是一个常量值。
+*   `c`：初始化名为 `constant` 的常量。
+*   `square`：初始化名为 `square` 的常量。
+*   `f`：表达式 `tf.multiply(x, z) + tf.pow(x, square) + z + c`。
 
 图告诉你操作的顺序是：
 相加 1)
 加到 2)
 加到 3)。
 
-
-
-
 # 简介
+
 那么，TensorBoard 的核心思想是什么？很简单；它帮助我们检查神经网络。它帮助我们理解每个操作之间的依赖关系、权重是如何计算的，并向我们展示损失函数等信息。将所有这些整合在一起，为我们提供了调试模型并确定如何改进模型的最佳工具。下面的图片将让你了解图表的用处![](img/image_rsrc9U6.jpg)
 
-神经网络决定了连接神经元的最佳方式以及预测结果所需的层数。一旦定义了架构，模型就需要进行训练，但我们还需要指标来帮助计算预测的准确性。这就是损失函数，我们的目标是使其最小化，即确保模型的错误尽可能少。任何算法，无论是什么算法，都会反复重复计算，直到损失降低到一条平直的线。必须定义学习率来帮助最小化损失，它表示你希望模型学习的速度。如果速率设置得太高，模型将没有足够的时间进行学习，正如你在上面图片左侧看到的。线条线条上下波动，意味着预测纯属随机猜测。图像的右侧表示损失在每次迭代中都会减少，直到线条变平坦。此时，已经找到了解决方案。TensorBoard 帮助我们查看这些指标，并显示它们可能出现问题的地方。在某些情况下，神经网络可能需要几才能才能解决方案，而 TensorBoard 会频繁更新指标。通过使用 TensorBoard，你不再需要等待查看模型是否正常训练。相反，只需打开工具，就可以看到发生了什么以及哪里需要进行更改。
+神经网络决定了连接神经元的最佳方式以及预测结果所需的层数。一旦定义了架构，模型就需要进行训练，但我们还需要指标来帮助计算预测的准确性。这就是损失函数，我们的目标是使其最小化，即确保模型的错误尽可能少。任何算法，无论是什么算法，都会反复重复计算，直到损失降低到一条平直的线。必须定义学习率来帮助最小化损失，它表示你希望模型学习的速度。如果速率设置得太高，模型将没有足够的时间进行学习，正如你在上面图片左侧看到的。线条上下波动，意味着预测纯属随机猜测。图像的右侧表示损失在每次迭代中都会减少，直到线条变平坦。此时，已经找到了解决方案。TensorBoard 帮助我们查看这些指标，并显示它们可能出现问题的地方。在某些情况下，神经网络可能需要几才能才能解决方案，而 TensorBoard 会频繁更新指标。通过使用 TensorBoard，你不再需要等待查看模型是否正常训练。相反，只需打开工具，就可以看到发生了什么以及哪里需要进行更改。
 
-### 使用 TensorBoard
+## 使用 TensorBoard
+
 我们将介绍如何使用 TensorBoard。你需要做的第一件事是导入训练所需的库：
 
 ### 导入库
+
 ```python
 import tensorflow as tf
+
 import numpy as np
 ```
 
 接下来，必须创建数据；我们的数据是一个包含 5 列 10,000 行的数组：
+
 ```python
 X_train = (np.random.sample((10000,5)))
+
 y_train = (np.random.sample((10000,1)))
+
 X_train.shape
 ```
+
 输出：`(10000, 5)`
 
-你在下方看到的代码将转换我们的数据并创建我们的模型。注意，我们将学习率设置为等等于 `0.1`。如果这个值更高，模型将无法找到解决方案，这就是我们在之前的图像中看到的。我们大多数 TensorFlow 教程使用一个名为 `TensorFlow estimator` 的 TensorFlow API 来处理数学计算。创建日志文件需要指定路径，我们使用名为 `model_dir` 的参数为此。在我们的示例中，模型将存储在你的 Python 文件或笔记本所在的的工作目录中。TensorFlow 在此路径下创建一个文件夹并命名为 `train`，并在其中一个子文件夹名为 `linreg`：
+你在下方看到的代码将转换我们的数据并创建我们的模型。注意，我们将学习率设置为等于 `0.1`。如果这个值更高，模型将无法找到解决方案，这就是我们在之前的图像中看到的。我们大多数 TensorFlow 教程使用一个名为 `TensorFlow estimator` 的 TensorFlow API 来处理数学计算。创建日志文件需要指定路径，我们使用名为 `model_dir` 的参数为此。在我们的示例中，模型将存储在你的 Python 文件或笔记本所在的的工作目录中。TensorFlow 在此路径下创建一个文件夹并命名为 `train`，并在其中一个子文件夹名为 `linreg`：
 
 ```python
 feature_columns = [
     tf.feature_column.numeric_column('x', shape=X_train.shape[1:])
 ]
+
 DNN_reg = tf.estimator.DNNRegressor(
     feature_columns=feature_columns,
     # 指定日志文件应该存储的位置
@@ -6951,6 +7183,7 @@ DNN_reg = tf.estimator.DNNRegressor(
     )
 )
 ```
+
 输出：
 ```
 INFO:tensorflow:Using default config.
@@ -6960,10 +7193,12 @@ INFO:tensorflow:Using config: {'model_dir': 'train/linreg', '_random_seed': None
 最后一步是训练模型，在整个训练过程中，TensorFlow 将信息写入模型目录：
 
 ```python
-# 训练估器器
+# 训练估计器
 train_input = tf.estimator.inputs.numpy_input(x=X_train, y=y_train, shuffle=False, epochs=None)
+
 DNN_reg.train(train_input, steps=3000)
 ```
+
 输出：
 ```
 INFO:tensorflow:Calling model_fn.
@@ -7005,19 +7240,6 @@ INFO:tensorflow:loss = 11.92943, step = 1401 (0.494 sec)
 INFO:tensorflow:global_step/sec: 144.161
 INFO:tensorflow:loss = 11.95169, step = 1501 (0.694 sec)
 INFO:tensorflow:global_step/sec: 154.144
-INFO:tensorflow:loss = 8.62097, step = 1601 (0.644 sec) -- wait, checking source...
-INFO:tensorflow:global_step/sec: 154.144
-INFO:tensorflow:loss = 8.62097, step = 1601 (0.644 sec)
-INFO:tensorflow:global_step/sec: 154.144
-INFO:tensorflow:loss = 10.66115, step = 1701 (0.513 sec)
-INFO:tensorflow:global_step/sec: 111.171
-INFO:tensorflow:loss = 10.62115, step = 1801 (0.511 sec)
-INFO:tensorflow:global_step/sec: 199.174
-INFO:tensorflow:loss = 10.6017, step = 1001 (0.566 sec)
-INFO:::global_step/sec: 199.70
-
-::tensorflow:loss = 1..1077, step = 1101 (0.566 sec) -- (Note: Re-aligning based on provided text flow)
-INFO:tensorflow:global_step/sec: 154.144
 INFO:tensorflow:loss = 8.62097, step = 1601 (0.644 sec)
 INFO:tensorflow:global_step/sec: 154.144
 INFO:tensorflow:loss = 10.66115, step = 1701 (0.513 sec)
@@ -7030,39 +7252,48 @@ INFO:tensorflow:loss = 10.73032, step = 2001 (0.566 sec)
 ```
 
 ## 启动 TensorBoard
+
 所有这些信息可以在 TensorBoard 中查看。现在日志事件已写入，可以打开 TensorBoard。它运行在端口 6006，而 Jupyter 运行在端口 8888。
 
 ### 针对你的不同
+
 **Mac OS:**
+
 ```bash
 cd /Users/HappyMonday/tuto_tf
 source activate hello-tf
 ```
+
 笔记本存储在 `/Users/HappyMonday/tuto_tf`。
 
 **Windows:**
+
 ```bash
 cd C:\Users\Admin\Anaconda3
 activate hello-tf
 ```
+
 笔记本存储在 `C:\Users\Admin\Anaconda3`。
 
 以下代码将启动 TensorBoard：
+
 **Mac OS:**
+
 ```bash
 tensorboard --logdir=./train/linreg
 ```
+
 **Windows:**
+
 ```bash
 tensorboard --logdir=.\train\linreg
 ```
+
+
+
 TensorBoard 位于 URL：`http://localhost:6006`。复制 URL 并将其粘贴到浏览器中，你应该看到图表。如果你看到这个或类似，说明 TensorBoard 无法找到日志文件。检查 `cd` 是否指向了正确的路径，并确保日志文件已实际创建。如果没有，则需要重新运行代码：![](img/image_rsrc97.jpg)
 
 我打算在这里结束。我可以关于 TensorFlow 和 TensorBoard 说得更多，但我需要转向 Keras。不过，你现在应该对这一切的运作方式有了良好的了解。
-
-
-
-
 
 # 第三部分 Keras 简介 ![](img/image_rsrc9SG.jpg)
 
@@ -7106,6 +7337,7 @@ Keras 提供了几个优势：
 ```python
 from keras.models import Sequential
 from keras.layers import Dense
+
 model = Sequential()
 model.add(Dense(64, activation='relu', input_shape=50))
 model.add(Dense(28, activation='relu'))
@@ -7133,14 +7365,8 @@ model.add(Dense(10, activation='softmax'))
 3. 输入你的笔记本名称
 4. 现在你需要创建一个 `IAM 角色`，它会创建一个格式为 `AmazonSageMaker-Executionrole-YYYYMMDD|HHmmSS` 的角色
 5. 再次点击创建笔记本实例，SageMaker 将启动新实例 – 这可能需要几分钟。
-
-
-
-
-
-## 6. 点击 `Open` 启动 notebook 实例
-
-## 7. 在 Jupyter 中点击 `New>conda_tensorflow_p36`，你就可以开始编码了。
+6. 点击 `Open` 启动 notebook 实例
+7. 在 Jupyter 中点击 `New>conda_tensorflow_p36`，你就可以开始编码了。
 
 ### 在此之前安装 Keras
 在可以安装 TensorFlow 和 Keras 之前，如果你还没有安装 `pip`、`Python` 和 `virtualenv`，则需要先安装它们。这些指令适用于 Mac 和 Windows 系统：
@@ -7150,9 +7376,9 @@ model.add(Dense(10, activation='softmax'))
    Mac OS: `$ python -m pip –version`
    Windows: `C:\> py -m pip –version`
 3. 接下来，使用以下命令安装 `virtualenv`：
-   ```
-   pip3 install –U pip virtualenv
-   ```
+```
+pip3 install –U pip virtualenv
+```
    安装 Microsoft Visual C++ 2015 Redistributable Update 3
 4. [下载 Visual Studio](https://www.microsoft.com/en-us/download/details.aspx?id=53587) 到你的计算机
 5. 打开它并点击 `Redistributables>Build Tools`
@@ -7162,7 +7388,7 @@ model.add(Dense(10, activation='softmax'))
 ```
 pip3 install virtualenv
 ```
-虚拟环境 虚拟环境有助于将工作系统与主系统隔离，因此请输入此命令：
+虚拟环境有助于将工作系统与主系统隔离，因此请输入此命令：
 ```
 virtualenv –system-site-packages –p python3 ./venv
 ```
@@ -7273,23 +7499,15 @@ model.fit(x_train, y_train, epochs=10)
 model.evaluate(x_test, y_test)
 ```
 
-
-
-
-
 ### 准备数据
-
 接下来，我们使用 Keras 的 `ImageDataGenerator` 来获取训练数据。
 
 1. 首先，需要下载数据，因此请使用你之前复制的链接运行以下代码 – 将图像文件名更改为你自己的文件：
-
 ```bash
 !wget https://s3.us-east-2.amazonaws.com/naturalimages02/images.tar.gz
 !tar -xzf images.tar.gz
 ```
-
 数据下载完成后，即可开始训练过程：
-
 ```python
 from keras.preprocessing.image import ImageDataGenerator
 import numpy as np
@@ -7300,101 +7518,55 @@ test_path = 'images/test/'
 batch_size = 16
 image_size = 224
 num_class = 8
+
 train_datagen = ImageDataGenerator(validation_split=0.3, shear_range=0.2, zoom_range=0.2, horizontal_flip=True)
 train_generator = train_datagen.flow_from_directory(
     directory=train_path,
-    target_size=(image_size,image_size),
+    target_size=(image_size, image_size),
     batch_size=batch_size,
     class_mode='categorical',
     color_mode='rgb',
     shuffle=True
 )
 ```
-
 `ImageDataGenerator` 从目录创建 `X_training` 数据，子目录被用作每个对象的类别。图像以 `RGB` 颜色模式加载，`Y_training` 数据被赋予分类类别模式，并且我们有一批大小为 16 的数据。现在数据可以进行洗乱。我们可以使用 `matplotlib` 来绘制图像并随机向我们展示：
-
 ```python
 x_batch, y_batch = train_generator.next()
-fig=plt.figure()
+fig = plt.figure()
 columns = 4
 rows = 4
-for i in range(1, columns*rows):
+for i in range(1, columns * rows):
     num = np.random.randint(batch_size)
     image = x_batch[num].astype(np.int)
     fig.add_subplot(rows, columns, i)
     plt.imshow(image)
     plt.show()
 ```
-
 输出 ![](img/image_rsrc9U9.jpg)
 
 之后，可以使用 `VGG16` 使用预训练的 `imageNet` 权重来创建模型。层被冻结，因此它们无法被训练，这有助于减少计算所需的时间。
 
 ## 创建 VGG16 模型
-
 模型的创建方式如下：
-
 ```python
 import keras
 from keras.models import Model, load_model
-from keras.layers import Activation, Dropout, Flatten, Dense
-from keras.preprocessing.image import ImageDataGenerator
-from keras.applications.vgg16 import VGG16
-
-# 加载 VGG 模型基础
-base_model = VGG16(weights='imagenet', include_top=False, input_shape=(image_size, image_size, 3))
-print(base_model.summary())
-
-# 冻结层
-for layer in base_model.layers:
-    layer.trainable = False
-
-# 创建模型
-model = keras.models.Sequential()
-
-# 添加 vgg 卷积基础模型
-model.add(base_model)
-
-# 添加新层
-model.add(Flatten())
-model.add(Dense(1024, activation='relu'))
-model.add(Dense(1024, activation='relu'))
-model.add(Dense(num_class, activation='softmax'))
-
-# 显示模型摘要。检查可训练参数的数量
-print(model.summary())
-```
-
-模型摘要看起来如下：
-
-```text
-Layer (type)             Output Shape              Param #
-=================================================================
-vgg16 (Model)             (None, 7, 7, 512)         14714688
-flatten_1 (Flatten)       (None, 25088)            0
-dense_1 (Dense)           (None, 1024)             25691136
-dense_2 (Dense)           (None, 1024)             1049600
-dense_3 (Dense)           (None, 8)                 8200
-=================================================================
-Total params: 41,463,624
-Trainable params: 26,748
 ```
 
 
 
-
-
-# 使用 Keras 构建网络 ![Network with Keras](img/image_rsrc9TV.jpg)
+# 使用 Keras 构建网络
 
 人脸识别正越来越流行，并广泛应用于需要识别特定人物、估计年龄以及学习面部表情的系统中。例如，当你在 Facebook 照片上标记朋友时，人脸识别就会被用于完成这项工作。那么，它是如何工作的呢？以 Facebook 为例，每当图像中标记某人时，Facebook 都会使用人工智能进行学习。从那时起，它将尝试预测该名字，并一直持续直到正确。当它正确时，你就不再需要自己标记朋友了，因为 Facebook 会替你完成。我们将使用 Keras 和深度学习来构建自己的人脸识别系统。
 
-### 网络模型
+## 网络模型
 
 为此，我们将使用 `VGG16` 模型并添加 `VGGFace` 权重。`VGGFace` 是 Keras 的深度人脸识别模型，其网络架构是 `VGG16`。你可以从 [GitHub](https://github.com/rcmalli/keras-vggface) 免费下载 `VGGFace`，现在去下载吧。这是你需要的代码：
 
 ```python
 from keras.applications.vgg16 import VGG16
 from keras_vggface.vggface import VGGFace
+
 face_model = VGGFace(model='vgg16', weights='vggface', input_shape=(224,224,3))
 face_model.summary()
 ```
@@ -7448,6 +7620,7 @@ for layer in face_model.layers:
 ```python
 from keras.models import Sequential
 from keras.layers import Input, Dense, Flatten, Activation, Dropout, softmax
+
 person_count = 5
 last_layer = face_model.get_layer('pool5').output
 custom_model = Sequential([
@@ -7504,34 +7677,31 @@ Non-trainable params: 14,714,688
 
 下一步是准备人脸，我们将使用一个包含五位知名人物图像的目录：
 
-
-
-
-
 - 粉红
 - 科林·菲斯
 - 汤姆·希德尔斯顿
 - 休伯·格兰特
 - 斯蒂芬·弗莱
 
-
-
-
 每个文件夹中都有十张图像用于训练和评估。当然，数据量不多，但这难道不就是挑战的一半吗？`Keras` 将帮助我们准备数据，遍历数据集文件夹，然后为训练过程准备数据。
 
 ```python
 from keras.preprocessing.image import ImageDataGenerator
+
 batch_size = 5
 train_path = 'data/'
 eval_path = 'eval/'
+
 train_datagen = ImageDataGenerator(rescale=1./255, shear_range=0.2, zoom_range=0.2, horizontal_flip=True)
 valid_datagen = ImageDataGenerator(rescale=1./255, shear_range=0.2, zoom_range=0.2, horizontal_flip=True)
+
 train_generator = train_datagen.flow_from_directory(
     train_path, 
     target_size=(image_size,image_size), 
     batch_size=batch_size, 
     class_mode='sparse', 
     color_mode='rgb')
+
 valid_generator = valid_datagen.flow_from_directory(
     directory=eval_path, 
     target_size=(224, 224), 
@@ -7543,73 +7713,103 @@ valid_generator = valid_datagen.flow_from_directory(
 ```
 
 ### 训练模型
+
 我们将通过用优化器函数和损失函数编译网络来开始训练。我们使用的损失函数是 `sparse_categorical_crossentropy`，学习优化器是 `SGD`。
 
 ```python
 from keras.optimizers import SGD
+
 custom_face.compile(loss='sparse_categorical_crossentropy', optimizer=SGD(lr=1e-4, momentum=0.9), metrics=['accuracy'])
+
 history = custom_face.fit_generator(
     train_generator, 
     validation_data=valid_generator, 
     steps_per_epoch=49/batch_size, 
     validation_steps=valid_generator.n, 
     epochs=50)
+
 custom_face.evaluate_generator(generator=valid_generator)
 custom_face.save('vgg_face.h5')
 ```
 
 ```text
 Epoch 25/50 10/9 [==============================] - 60s 6s/step - loss: 1.4882 - acc: 0.8998 - val_loss: 1.5659 - val_acc: 0.5851
-Epoch 26/50 10/9 [==============================] - 59s 6s/step - loss: 1.4882 - acc: 0.8998 - val_loss: 1.5638 - val_acc: 0.5809
-Epoch 27/50 10/9 [==============================] - 60s 6s/step - loss: 1.4779 - acc: 0.8597 - val_loss: 1.5613 - val_acc: 0.5477
-Epoch 28/50 10/9 [==============================] - 60s 6s/step - loss: 1.4755 - acc: 0.9199 - val_loss: 1.5576 - val_acc: 0.5809
-Epoch 29/50 10/9 [==============================] - 60s 6s/step - loss: 1.4794 - acc: 0.9153 - val_loss: 1.5531 - val_acc: 0.5892
-Epoch 30/50 10/9 [==============================] - 60s 6s/step - loss: 1.4714 - acc: 0.8953 - val_loss: 1.5510 - val_acc: 0.6017
-Epoch 31/50 10/9 [==============================] - 60s 6s/step - loss: 1.4552 - acc: 0.9199 - val_loss: 1.5509 - val_acc: 0.5809
-Epoch 32/50 10/9 [==============================] - 60s 6s/step - loss: 1.4504 - acc: 0.9199 - val_loss: 1.5492 - val_acc: 0.5975
-Epoch 33/50 10/9 [==============================] - 60s 6s/step - loss: 1.4497 - acc: 0.8998 - val_loss: 1.5490 - val_acc: 0.5851
-Epoch 34/50 10/9 [==============================] - 60s 6s/step - loss: 1.4453 - acc: 0.9399 - val_loss: 1.5529 - val_acc: 0.5643
-Epoch 35/50 10/9 [==============================] - 60s 6s/step - loss: 1.4399 - acc: 0.9599 - val_loss: 1.5451 - val_acc: 0.5768
-Epoch 36/50 10/9 [==============================] - 60s 6s/step - loss: 1.4373 - acc: 0.8998 - val_loss: 1.5424 - val_acc: 0.5768
-Epoch 37/50 10/9 [==============================] - 60s 6s/step - loss: 1.4231 - acc: 0.9199 - val_loss: 1.5389 - val_acc: 0.6183
-Epoch 38/50 10/9 [==============================] - 59s 6s/step - loss: 1.4247 - acc: 0.9199 - val_loss: 1.5372 - val_acc: 0.5934
-Epoch 39/50 10/9 [==============================] - 60s 6s/step - loss: 1.4153 - acc: 0.9199 - val_loss: 1.5406 - val_acc: 0.5560
-Epoch 40/50 10/9 [==============================] - 60s 6s/step - loss: 1.4074 - acc: 0.9800 - val_loss: 1.5327 - val_acc: 0.6224
-Epoch 41/50 10/9 [==============================] - 60s 6s/step - loss: 1.4023 - acc: 0.9800 - val_loss: 1.5305 - val_acc: 0.6100
-Epoch 42/50 10/9 [==============================] - 59s 6s/step - loss: 1.3938 - acc: 0.9800 - val_loss: 1.5269 - val_acc: 0.5975
-Epoch 43/50 10/9 [==============================] - 60s 6s/step - loss: 1.3897 - acc: 0.9599 - val_loss: 1.5234 - val_acc: 0.6432
-Epoch 44/50 10/9 [==============================] - 60s 6s/step - loss: 1.3828 - acc: 0.9800 - val_loss: 1.5210 - val_acc: 0.6556
-Epoch 45/50 10/9 [==============================] - 59s 6s/step - loss: 1.3848 - acc: 0.9599 - val_loss: 1.5234 - val_acc: 0.5975
-Epoch 46/50 10/9 [==============================] - 60s 6s/step - loss: 1.3716 - acc: 0.9800 - val_loss: 1.5216 - val_acc: 0.6432
-Epoch 47/50 10/9 [==============================] - 60s 6s/step - loss: 1.3721 - acc: 0.9800 - val_loss: 1.5195 - val_acc: 0.6266
-Epoch 48/50 10/9 [==============================] - 60s 6s/step - loss: 1.3621 - acc: 0.9800 - val_loss: 1.5216 - val_acc: 0.6432
-Epoch 49/50 10/9 [==============================] - 60s 6s/step - loss: 1.4453 - acc: 0.9399 - val_loss: 1.5529 - val_acc: 0.5643
-Epoch 50/50 10/9 [==============================] - 60s 6s/step - loss: 1.4399 - acc: 0.9599 - val_loss: 1.5451 - val_acc: 0.5768
 ```
 
-总结
-`Keras` 提供了简单性，让我们能够立即理解。它是一个对用户友好的库，实现非常简单，不需要为运行模型创建多个变量。这意味着我们不需要完全理解所有的后端细节。`TensorFlow` 是一个低级程序，提供了高级操作和灵活性，帮助我们创建模型或计算图。它还为我们提供了 `TensorFlow` 来帮助我们可视化一切，以及一个帮助我们发现和修复错误的调试工具。
+
+
+Epoch 26/50 10/9 [==============================] - 59s 6s/step - loss: 1.4882 - acc: 0.8998 - val_loss: 1.5638 - val_acc: 0.5809
+
+Epoch 27/50 10/9 [==============================] - 60s 6s/step - loss: 1.4779 - acc: 0.8597 - val_loss: 1.5613 - val_acc: 0.5477
+
+Epoch 28/50 10/9 [==============================] - 60s 6s/step - loss: 1.4755 - acc: 0.9199 - val_loss: 1.5576 - val_acc: 0.5809
+
+Epoch 29/50 10/9 [==============================] - 60s 6s/step - loss: 1.4794 - acc: 0.9153 - val_loss: 1.5531 - val_acc: 0.5892
+
+Epoch 30/50 10/9 [==============================] - 60s 6s/step - loss: 1.4714 - acc: 0.8953 - val_loss: 1.5510 - val_acc: 0.6017
+
+Epoch 31/50 10/9 [==============================] - 60s 6s/step - loss: 1.4552 - acc: 0.9199 - val_loss: 1.5509 - val_acc: 0.5809
+
+Epoch 32/50 10/9 [==============================] - 60s 6s/step - loss: 1.4504 - acc: 0.9199 - val_loss: 1.5492 - val_acc: 0.5975
+
+Epoch 33/50 10/9 [==============================] - 60s 6s/step - loss: 1.4497 - acc: 0.8998 - val_loss: 1.5490 - val_acc: 0.5851
+
+Epoch 34/50 10/9 [==============================] - 60s 6s/step - loss: 1.4453 - acc: 0.9399 - val_loss: 1.5529 - val_acc: 0.5643
+
+Epoch 35/50 10/9 [==============================] - 60s 6s/step - loss: 1.4399 - acc: 0.9599 - val_loss: 1.5451 - val_acc: 0.5768
+
+Epoch 36/50 10/9 [==============================] - 60s 6s/step - loss: 1.4373 - acc: 0.8998 - val_loss: 1.5424 - val_acc: 0.5768
+
+Epoch 37/50 10/9 [==============================] - 60s 6s/step - loss: 1.4231 - acc: 0.9199 - val_loss: 1.5389 - val_acc: 0.6183
+
+Epoch 38/50 10/9 [==============================] - 59s 6s/step - loss: 1.4247 - acc: 0.9199 - val_loss: 1.5372 - val_acc: 0.5934
+
+Epoch 39/50 10/9 [==============================] - 60s 6s/step - loss: 1.4153 - acc: 0.9199 - val_loss: 1.5406 - val_acc: 0.5560
+
+Epoch 40/50 10/9 [==============================] - 60s 6s/step - loss: 1.4074 - acc: 0.9800 - val_loss: 1.5327 - val_acc: 0.6224
+
+Epoch 41/50 10/9 [==============================] - 60s 6s/step - loss: 1.4023 - acc: 0.9800 - val_loss: 1.5305 - val_acc: 0.6100
+
+Epoch 42/50 10/9 [==============================] - 59s 6s/step - loss: 1.3938 - acc: 0.9800 - val_loss: 1.5269 - val_acc: 0.5975
+
+Epoch 43/50 10/9 [==============================] - 60s 6s/step - loss: 1.3897 - acc: 0.9599 - val_loss: 1.5234 - val_acc: 0.6432
+
+Epoch 44/50 10/9 [==============================] - 60s 6s/step - loss: 1.3828 - acc: 0.9800 - val_loss: 1.5210 - val_acc: 0.6556
+
+Epoch 45/50 10/9 [==============================] - 59s 6s/step - loss: 1.3848 - acc: 0.9599 - val_loss: 1.5234 - val_acc: 0.5975
+
+Epoch 46/50 10/9 [==============================] - 60s 6s/step - loss: 1.3716 - acc: 0.9800 - val_loss: 1.5216 - val_acc: 0.6432
+
+Epoch 47/50 10/9 [==============================] - 60s 6s/step - loss: 1.3721 - acc: 0.9800 - val_loss: 1.5195 - val_acc: 0.6266
+
+Epoch 48/50 10/9 [==============================] - 60s 6s/step - loss: 1.3621 - acc: 0.9800 - val_loss: 1.5216 - val_acc: 0.6432
+
+Epoch 49/50 10/9 [==============================] - 60s 6s/step - loss: 1.4453 - acc: 0.9399 - val_loss: 1.5529 - val_acc: 0.5643
+
+Epoch 50/50 10/9 [==============================] - 60s 6s/step - loss: 1.4399 - acc: 0.9599 - val_loss: 1.5451 - val_acc: 0.5768
+
+```
+
+# 总结
+
+`Keras` 提供了简单性，让我们能够立即理解。它是一个对用户友好的库，实现非常简单，不需要为运行模型创建多个变量。这意味着我们不需要完全理解所有的后端细节。`TensorFlow` 是一个低级程序，提供了高级操作和灵活性，帮助我们创建模型或计算图。它还为我们提供了 `TensorBoard` 来帮助我们可视化一切，以及一个帮助我们发现和修复错误的调试工具。
 
 总结一下这部分：
 
-
-
-
-
 # Keras 简介
 
-* Keras 是用于的高层 API 之一，在后端引擎的帮助下，使得深度学习网络的创建和使用变得更容易。
+* `Keras` 是 `TensorFlow` 用于深度学习的高层 API 之一，在后端引擎的帮助下，使得深度学习网络的创建和使用变得更容易。
 * 它用户友好且易于理解，并对 Python 提供完全支持，使用起来感觉非常自然。对于想要学习深度学习的初学者以及寻找易用 API 的研究人员来说，它是最好的库之一。
-* Keras 安装简单，并可以在虚拟环境、AWS 或其他外部平台上使用。
+* `Keras` 安装简单，并可以在虚拟环境、`AWS` 或其他外部平台上使用。
 
-Keras 还提供了内置的多种网络模型，因此你可以选择微调预训练模型，而不是从零开始构建。
+`Keras` 还提供了内置的多种网络模型，因此你可以选择微调预训练模型，而不是从零开始构建。
 
-### Keras 教程
+## Keras 教程
 
-Keras 教程 ![](img/image_rsrc9TV.jpg) 我们在这里不需要太多的代码，但我将带你一步步走完这个最终的 Keras 模型，以便你将来知道如何进行操作。以下是本教程将教给你的内容：
+我们在这里不需要太多的代码，但我将带你一步步走完这个最终的 `Keras` 模型，以便你将来知道如何进行操作。以下是本教程将教给你的内容：
 
 * 加载数据
-* 定义 Keras 模型
+* 定义 `Keras` 模型
 * 编译模型
 * 拟合模型
 * 评估模型
@@ -7619,14 +7819,14 @@ Keras 教程 ![](img/image_rsrc9TV.jpg) 我们在这里不需要太多的代码�
 在开始教程之前，你的系统上必须安装并配置以下内容：
 
 * Python 2 或 3+
-* SciPy 和 NumPy
-* Keras 以及一个后端，TensorFlow 或 Theano
+* `SciPy` 和 `NumPy`
+* `Keras` 以及一个后端，`TensorFlow` 或 `Theano`
 
 在开始之前，创建一个文件并命名为 `keras_first_network.py` – 这是代码将存放的地方。
 
 ## 第一步 – 加载数据
 
-首先，我们需要定义要使用的类和函数。我们将使用 `NumPy` 加载数据集，然后使用几个 Keras 类来定义模型。我们需要以下导入：
+首先，我们需要定义要使用的类和函数。我们将使用 `NumPy` 加载数据集，然后使用几个 `Keras` 类来定义模型。我们需要以下导入：
 
 ```python
 # first neural network with keras tutorial
@@ -7636,7 +7836,7 @@ from keras.layers import Dense
 ...
 ```
 
-现在可以加载数据集了。我们将使用一个名为 Pima Indians 的流行数据集，其中包含关于糖尿病发病的数据。它是 UCI 机器学习库中一个标准库，描述了 Pima 印第人患者的数据以及在五年内是否发了糖尿病。这使其成为一个二分类问题，因为值非常简单——1 表示糖尿病发病，0 表示没有。用于描述患者的输入变量是数值型的，使得在需要数值输入和数值输出的神经网络上非常简单。这对于本教程非常完美。你可以从以下地方下载 CSV 文件：
+现在可以加载数据集了。我们将使用一个名为 Pima Indians 的流行数据集，其中包含关于糖尿病发病的数据。它是 `UCI` 机器学习库中一个标准库，描述了 Pima 印第安人患者的数据以及在五年内是否患了糖尿病。这使其成为一个二分类问题，因为值非常简单——1 表示糖尿病发病，0 表示没有。用于描述患者的输入变量是数值型的，使得在需要数值输入和数值输出的神经网络上非常简单。这对于本教程非常完美。你可以从以下地方下载 CSV 文件：
 
 * [数据集 CSV 文件 (pima-indians-diabetes.csv)](https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv)
 * [数据集详情](https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.names)
@@ -7655,11 +7855,11 @@ from keras.layers import Dense
 
 **输入变量 (X):**
 1. 患者怀孕的次数
-2. 口服葡萄糖耐量测试 2 小时后的血血糖浓度
-3. 舒缩压 (mm Hg)
-4. 三头肌皮肤厚度 (mm)
+2. 口服葡萄糖耐量测试 2 小时后的血浆葡萄糖浓度
+3. 舒张压 (mm Hg)
+4. 三头肌皮肤褶厚度 (mm)
 5. 2 小时血清胰岛素 (mu U/ml)
-6. 体质指数（体重为 kg/(高度为 m)²)）
+6. 体质指数（体重 kg / (身高 m)²）
 7. 糖尿病遗传概率函数
 8. 年龄（岁）
 
@@ -7672,29 +7872,25 @@ from keras.layers import Dense
 # load the dataset
 dataset = loadtxt('pima-indians-diabetes.csv', delimiter=',')
 # split into input (X) and output (y) variables
-X = dataset[:,0:8]
-y = dataset[:,8]
+X = dataset[:, 0:8]
+y = dataset[:, 8]
 ...
 ```
 
-现在神经网络模型已经准备好定义了。请注意，我们的数据集中有 `nine` 列，而 `0:8` 范围选择了索引从 0 到 7 的列。如果你以前没有遇到这种情况，简单的解释是 Python 索引从 0 开始——索引 0 表示第一列，此类此类。
+现在神经网络模型已经准备好定义了。请注意，我们的数据集中有 `nine` 列，而 `0:8` 范围选择了索引从 0 到 7 的列。如果你以前没有遇到这种情况，简单的解释是 Python 索引从 0 开始——索引 0 表示第一列，以此类推。
 
 ## 第二步 – 定义我们的模型
 
-Keras 模型被定义为层的序列。我们将创建一个顺序模型，并逐个添加层，直到架构符合我们的要求。第一要正确的是确保输入层具有正确数量的特征。当我们创建第一层时，可以使用 `input_dim` 参数指定输入数量。我们将其设置为 `8`，因为我们有八个变量。
+`Keras` 模型被定义为层的序列。我们将创建一个 `Sequential` 模型，并逐个添加层，直到架构符合我们的要求。首先要正确的是确保输入层具有正确数量的特征。当我们创建第一层时，可以使用 `input_dim` 参数指定输入数量。我们将其设置为 `8`，因为我们有八个变量。
 
-我听到你们在问我们需要多少层以及它们的类型。这不是一个容易回答的问题，但有一些启发式方法可以帮助我们。不过，最好的网络通常通过实验找到。通常，你的网络需要足够大以捕捉问题的结构。我们正在使用三层的全连接结构。我们使用 `Dense` 类来定义全连接层，层中的节点或神经元的数量作为第一个参数指定。`activation` 参数用于指定我们使用哪种激活函数。我们在第一层和第二层上使用 `ReLU` 或修正线性单元作为激活函数，输出层将使用 `Sigmoid` 函数。曾几何，`Tanh` 和 `Sigmoid` 函数是每个层的首选激活函数，但现在 `ReLU` 函数带给我们更更好的性能。我们在输出层使用 `Sigmoid` 函数，以确保网络输出在 0 到 1 之间。我们还希望它能够轻松映射到类别 1 的概率，或者根据 0.5 的默认阈值分类为某一类。当每个层都添加后，我们将它们整合：
+我听到你们在问我们需要多少层以及它们的类型。这不是一个容易回答的问题，但有一些启发式方法可以帮助我们。不过，最好的网络通常通过实验找到。通常，你的网络需要足够大以捕捉问题的结构。我们正在使用三层的全连接结构。我们使用 `Dense` 类来定义全连接层，层中的节点或神经元的数量作为第一个参数指定。`activation` 参数用于指定我们使用哪种激活函数。我们在第一层和第二层上使用 `ReLU` 或修正线性单元作为激活函数，输出层将使用 `Sigmoid` 函数。曾几何时，`Tanh` 和 `Sigmoid` 函数是每个层的首选激活函数，但现在 `ReLU` 函数带给我们更好的性能。我们在输出层使用 `Sigmoid` 函数，以确保网络输出在 0 到 1 之间。我们还希望它能够轻松映射到类别 1 的概率，或者根据 0.5 的默认阈值分类为某一类。当每个层都添加后，我们将它们整合：
 
 * 我们的模型将期望包含八个变量的数据行 – `input_dim=8` 参数
 * 隐藏层一包含 12 个节点并使用 `ReLU` 激活函数
 * 隐藏层二包含 8 个节点并使用 `ReLU` 激活函数
 * 输出层包含单个节点并使用 `Sigmoid` 激活函数
 
-
-
-
-
-定义 Keras 模型
+### 定义 Keras 模型
 
 ```python
 model = Sequential()
@@ -7703,7 +7899,7 @@ model.add(Dense(8, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 ```
 
-最令人困惑点之一是，模型的输入形状在初始隐藏层中作为参数被定义。这意味着添加第一个 `Dense` 层的代码执行了两个件事：它定义了可见层（即输入层），并定义了第一个隐藏层。
+最令人困惑的一点是，模型的输入形状在初始隐藏层中作为参数被定义。这意味着添加第一个 `Dense` 层的代码执行了两件事：它定义了可见层（即输入层），并定义了第一个隐藏层。
 
 ## 第三步 – 编译模型
 
@@ -7711,9 +7907,9 @@ model.add(Dense(1, activation='sigmoid'))
 
 当我们编译模型时，我们需要指定一些训练网络时需要的属性。请记住，当我们训练网络时，我们正试图找到一组最优权重，将输入映射到输出。我们必须指定用于评估这组权重的损失函数，以及用于遍历网络权重的优化器，以及我们可能在整个训练过程中收集并报告的任何指标。
 
-我们使用的 `loss` 参数是 `cross-entropy`（交叉熵），它是 Keras 中被定义为 `binary_crossentropy` 的二分类损失函数。`optimizer` 将定义为 `adam`，这是一种效率惊人的随机梯度下降算法。这是最流行、最常用的梯度下降版本。它会自动调整并在许多不同问题中提供最佳结果。最后，由于我们正在尝试解决一个分类问题，我们还希望收集并报告分类准确率；我们使用 `metrics` 参数来定义此项。
+我们使用的 `loss` 参数是 `cross-entropy`（交叉熵），它是 `Keras` 中被定义为 `binary_crossentropy` 的二分类损失函数。`optimizer` 将定义为 `adam`，这是一种效率惊人的随机梯度下降算法。这是最流行、最常用的梯度下降版本。它会自动调整并在许多不同问题中提供最佳结果。最后，由于我们正在尝试解决一个分类问题，我们还希望收集并报告分类准确率；我们使用 `metrics` 参数来定义此项。
 
-## 编译 keras 模型
+### 编译 Keras 模型
 
 ```python
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
@@ -7721,15 +7917,17 @@ model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy']
 
 ## 第四步 – 拟合模型
 
-现在模型已经定义并编译完成，是时候在一组数据上执行它了。我们调用 `fit()` 函数在数据上训练（拟合）我们的模型。所有的训练将在指定的 `epochs`（轮次）数量上进行，每个轮次又被划分为若干 `batches`（批次）。一个 `epoch` 是对整个训练数据集的行，而一个 `batch` 是模型在每个轮次中更新权重之前所查看的样本数。
+现在模型已经定义并编译完成，是时候在一组数据上执行它了。我们调用 `fit()` 函数在数据上训练（拟合）我们的模型。所有的训练将在指定的 `epochs`（轮次）数量上进行，每个轮次又被划分为若干 `batches`（批次）。一个 `epoch` 是对整个训练数据集的遍历，而一个 `batch` 是模型在每个轮次中更新权重之前所查看的样本数。
 
 训练将在指定的迭代次数或 `epochs` 上进行，我们使用 `epochs` 参数来指定次数。我们还需要指定在每个轮次结束更新权重之前，训练会考虑数据集的多少行。这就是 `batch_size`，我们使用 `batch_size` 参数进行设置。我们将运行次数较少的 `epochs`，即 150 次，批次大小仅为 10。我们可以通过试错来选择这些值；模型需要经过足够的训练以学习输入行数据到输出分类的映射。模型会有一定程度的误差，但在达到某一点后会趋于稳定，这取决于模型的配置，被称为模型收敛。
 
-## 在数据集上拟合 keras 模型
+### 在数据集上拟合 Keras 模型
 
 ```python
 model.fit(X, y, epochs=150, batch_size=10)
 ```
+
+
 
 此时，工作正在你的 `GPU` 或 `CPU` 上进行。我们对这个模型只使用了 `CPU`。
 
@@ -7739,44 +7937,59 @@ model.fit(X, y, epochs=150, batch_size=10)
 
 模型通过 `evaluate()` 函数在测试集上进行评估，使用训练时相同的输入和输出。这会产生新的预测结果，并收集像准确率这样的指标。由于 `evaluate()` 函数返回两个值，第一个是模型在数据集上的损失，另一个是准确率。我们忽略了损失，因为我们只想知道模型的准确率：
 
-## 评估 keras 模型
+#### 评估 Keras 模型
 
 ```python
 _, accuracy = model.evaluate(X, y)
+
 print('Accuracy: %.2f' % accuracy)
 ```
 
-## 第六步 – 整合
+### 第六步 – 整合
 
 这看起来并不糟糕，对吧？你现在已经使用 Keras 构建了一个神经网络，让我们把它全部整合在一起：
 
 ```python
 # 首先神经网络
+
 from numpy import loadtxt
+
 from keras.models import Sequential
+
 from keras.layers import Dense
 
 # 加载数据集
+
 dataset = loadtxt('pima-indians-diabetes.csv', delimiter=',')
 
 # 分分为输入 (X) 和输出 (y) 变量
+
 X = dataset[:,0:8]
+
 y = dataset[:,8]
 
 # 定义 keras 模型
+
 model = Sequential()
+
 model.add(Dense(12, input_dim=8, activation='relu'))
+
 model.add(Dense(8, activation='relu'))
+
 model.add(Dense(1, activation='sigmoid'))
 
 # 编译 keras 模型
+
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
 # 在数据集上拟合 keras 模型
+
 model.fit(X, y, epochs=150, batch_size=10)
 
 # 评估 keras 模型
+
 _, accuracy = model.evaluate(X, y)
+
 print('Accuracy: %.2f' % (accuracy*100))
 ```
 
@@ -7786,11 +7999,7 @@ print('Accuracy: %.2f' % (accuracy*100))
 
 ## Keras 的缺点
 
-之前我们讨论了 Keras 的优点，所以似乎也应该地告诉你它的缺点——事实上，它只有一个： 
-
-
-
-
+之前我们讨论了 Keras 的优点，所以似乎也应该地告诉你它的缺点——事实上，它只有一个：
 
 *   无法处理低级 API – `Keras` 只能处理层级 API，即运行在 `TensorFlow`、`CNTK`、`Theano` 以及其他后端引擎或框架上的 API。在某种程度上，如果你想构建抽象层，它并不非常有用，因为 `Keras` 包含了预配置的层。
 
@@ -7828,24 +8037,35 @@ print('Accuracy: %.2f' % (accuracy*100))
 
 ```python
 # Sample 决策树分类器
+
 from sklearn import datasets
+
 from sklearn import metrics
+
 from sklearn.tree import DecisionTreeClassifier
 
 # 加载鸢尾花数据集
+
 dataset = datasets.load_iris()
 
 # 对数据拟合 CART 模型
+
 model = DecisionTreeClassifier()
+
 model.fit(dataset.data, dataset.target)
+
 print(model)
 
 # 进行预测
+
 expected = dataset.target
+
 predicted = model.predict(dataset.data)
 
 # 汇总模型的拟合情况
+
 print(metrics.classification_report(expected, predicted))
+
 print(metrics.confusion_matrix(expected, predicted))
 ```
 
@@ -7859,7 +8079,9 @@ DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None, max_
 precision    recall  f1-score   support
 
 0      1.00      1.00      1.00        50
+
 1      1.00      1.00      1.00        50
+
 2      1.00      1.00      1.00        50
 
 avg      1.00      1.00      1.00       150
@@ -7883,14 +8105,13 @@ conda remove scikit-learn
 
 ```bash
 conda install -c anaconda git
+
 pip install Cython
+
 pip install h5py
+
 pip install git+git://github.com/scikit-learn/scikit-learn.git
 ```
-
-
-
-
 
 ### 使用 Scikit-Learn 进行机器学习
 
@@ -7910,11 +8131,15 @@ pip install git+git://github.com/scikit-learn/scikit-learn.git
 
 ```python
 # 列分类特征 CATE_FEATURES
+
 CATE_FEATURES = df_train.iloc[:,:-1].select_dtypes('object').columns
+
 print(CATE_FEATURES)
 
 # 列连续特征
+
 CONTI_FEATURES = df_train._get_numeric_data()
+
 print(CONTI_FEATURES)
 ```
 
@@ -7922,30 +8147,42 @@ print(CONTI_FEATURES)
 
 ```python
 # 导入数据集
+
 import pandas as pd
 
 ## 定义路径
+
 COLUMNS = ['age','workclass', 'fnlwgt', 'education', 'education_num', 'marital', 'occupation', 'relationship', 'race', 'sex', 'capital_gain', 'capital_loss', 'hours_week', 'native_country', 'label']
 
 # 定义连续列表
+
 CONTI_FEATURES = ['age', 'fnlwgt','capital_gain', 'education_num', 'capital_loss', 'hours_week']
 
 # 定义分类列表
+
 CATE_FEATURES = ['workclass', 'education', 'marital', 'occupation', 'relationship', 'race', 'sex', 'native_country']
 ```
 
 ### 准备数据
 
+```python
 features = ['age','workclass', 'fnlwgt', 'education', 'education_num', 'marital', 'occupation', 'relationship', 'race', 'sex', 'capital_gain', 'capital_loss', 'hours_week', 'native_country']
+
 PATH = "https://archive.ics.uci.edu/machine-learning-databases/adult.data"
-df_train = pd.read_csv(PATH, skipinitialspace=True, names = COLUMNS, index_col=False)
+
+df_train = pd.read_csv(PATH, skipinitialspace=True, names=COLUMNS, index_col=False)
+
 df_train[CONTI_FEATURES] = df_train[CONTI_FEATURES].astype('float64')
+
 df_train.describe()
+```
 
 `native_country` 特征唯一值计数告诉我们 Holland-Netherlands 只有一行。这一行不会给我们提供任何信息，会导致训练错误：
 
 ```python
 df_train.native_country.value_counts()
+```
+
 ```
 United-States: 29170
 Mexico: 643
@@ -7986,11 +8223,13 @@ Guam-US-etc: 14
 Honduras: 13
 Hungary: 12
 Holland-Netherlands: 1
+```
 
 这一行可以从数据集中删除，因为：
 
 ```python
 # 删除荷兰行
+
 df_train = df_train[df_train.native_country != "Holland-Netherlands"]
 ```
 
@@ -7998,10 +8237,15 @@ df_train = df_train[df_train.native_country != "Holland-Netherlands"]
 
 ```python
 # 获取连续特征索引
+
 conti_features = []
+
 for i in CONTI_FEATURES:
+
     position = df_train.columns.get_loc(i)
+
     conti_features.append(position)
+
 print(conti_features) # [0, 2, 10, 4, 11, 12]
 ```
 
@@ -8009,10 +8253,15 @@ print(conti_features) # [0, 2, 10, 4, 11, 12]
 
 ```python
 # 获取分类特征索引
+
 categorical_features = []
+
 for i in CATE_FEATURES:
+
     position = df_train.columns.get_loc(i)
+
     categorical_features.append(position)
+
 print(categorical_features) # [1, 3, 5, 6, 7, 8, 9, 13]
 ```
 
@@ -8027,6 +8276,8 @@ df_train.head(5)
 ```python
 print(df_train[CATE_FEATURES].nunique(), 'There are', sum(df_train[CATE_FEATURES].nunique()), 'groups in the whole dataset')
 ```
+
+```
 workclass: 9
 education: 16
 marital: 7
@@ -8036,14 +8287,24 @@ race: 5
 sex: 2
 native_country: 41
 
-**整个数据集共有 101 个组**
+整个数据集共有 101 个组
+```
 
 你可以看到，这个数据集有 101 个组。workclass 特征有 9 个组，occupation 有 15 个组，以此此类推。后续代码帮助你可视化组名称：`unique()` 返回分类特征的唯一值。
 
 ```python
 for i in CATE_FEATURES:
+
     print(df_train[i].unique())
 ```
+
+
+
+## 数据预处理与模型训练
+
+### 分类特征取值列表
+
+```text
 ['State-gov', 'Self-emp-not-inc', 'Private', 'Federal-gov', 'Local-gov', '?', 'Self-emp-inc', 'Without-pay', 'Never-worked']
 ['Bachelors', 'HS-grad', '11th', 'Masters', '9th', 'Some-college', 'Assoc-acdm', 'Assoc-voc', '7th-8th', 'Doctorate', 'Prof-school', '5th-6th', '10th', '1st-4th', 'Preschool', '12th']
 ['Never-married', 'Married-spouse', 'Divorced', 'Married-spouse-absent', 'Separated', 'Married-AF-spouse', 'Widowed']
@@ -8052,29 +8313,30 @@ for i in CATE_FEATURES:
 ['White', 'Black', 'Asian-Pac-Islander', 'Amer-Indian-Eskimo', 'Other']
 ['Male', 'Female']
 ['United-States', 'Cuba', 'Jamaica', 'India', '?', 'Mexico', 'South', 'Puerto-Rico', 'Honduras', 'England', 'Canada', 'Germany', 'Iran', 'Philippines', 'Italy', 'Poland', 'Columbia', 'Cambodia', 'Thailand', 'Ecuador', 'Laos', 'Taiwan', 'Haiti', 'Portugal', 'Dominican-Republic', 'El-Salvador', 'France', 'Guatemala', 'China', 'Japan', 'Yugoslavia', 'Peru', 'Outlying-US(Guam-US-etc)', 'Scotland', 'Trinidad & Tobago', 'Greece', 'Nicaragua', 'Vietnam', 'Hong', 'Ireland', 'Hungary']
+```
 
 训练数据集将具有 101+7 列，其中 7 列是连续特征。Scikit-Learn 可以为你完成转换，它将分为两个步骤：
 
-1. 字符串必须转换为 ID。例如，State-gov 获得 ID1，Self-emp-not-inc 获得 ID2，以此此类推。这些都由 `LabelEncoder` 函数完成。
-
-
-
-
-
-2.  然后，每个 ID 都必须转置为新的一列。如你所知，有 101 个 ID，这意味着对于分类特征组来说有 101 列。Scikit-Learn 中的 `OneHotEncoder` 函数可以完成这一操作。
+1. 字符串必须转换为 ID。例如，`State-gov` 获得 ID1，`Self-emp-not-inc` 获得 ID2，以此类推。这些都由 `LabelEncoder` 函数完成。
+2. 然后，每个 ID 都必须转置为新的一列。如你所知，有 101 个 ID，这意味着对于分类特征组来说有 101 列。Scikit-Learn 中的 `OneHotEncoder` 函数可以完成这一操作。
 
 ### 第二步——创建训练集和测试集
-现在数据集准备好拆分为训练集和测试集。我们将将其分为 80% 的训练集和 20% 的测试集。我们使用 `train_test_split` 通过两个参数来实现。第一个是包含所有特征的帧，第二个是包含标签的帧。我们使用 `test_size` 来指定测试集的大小。
+
+现在数据集准备好拆分为训练集和测试集。我们将其分为 80% 的训练集和 20% 的测试集。我们使用 `train_test_split` 通过两个参数来实现。第一个是包含所有特征的帧，第二个是包含标签的帧。我们使用 `test_size` 来指定测试集的大小。
 
 ```python
 from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(df_train[features], df_train.label, test_size = 0.2, random_state=0)
+
+X_train, X_test, y_train, y_test = train_test_split(df_train[features], df_train.label, test_size=0.2, random_state=0)
+
 X_train.head(5)
+
 print(X_train.shape, X_test.shape)
 # (26048, 14) (6512, 14)
 ```
 
 ### 第三步——构建流水线
+
 我们使用流水线（pipeline）来确保能够轻松地向模型提供一致的数据。其思想是将原始数据输入流水线，以便它可以执行操作。例如，对于我们的数据集，连续变量需要进行标准化，分类数据需要进行转换。任何操作都可以在流水线完成，例如，如果你的数据集包含 NA，你可以将它们替换为中位数或平均值，也可以创建新变量。显然，你可以选择硬编码这两个过程，但随着时间的推移，这会导致不一致和数据泄露。最好的方法是创建一个流水线：
 
 ```python
@@ -8088,14 +8350,14 @@ from sklearn.linear_model import LogisticRegression
 1. 标准化变量：`StandardScaler()`
 2. 转换分类特征：`OneHotEncoder(sparse=False)`
 
-这两个步骤可以使用 `make_column_transformer` 函数完成。现在要提醒你，在你已经移除的旧版本 Scikit-Learn 中，你无法让该函数在流水线中执行 onehotencoder 或 labelencoder；这就是为什么我们倾向于使用开发版本。你会发现 `make_column_transformer` 使用起来非常简单。你只需要定义需要转换的列以及应用什么转换。例如，如果你想对连续变量进行标准化，你可以这样做：在 `make_column_transformer` 内部使用 `conti_features` 和 `StandardScaler()`。
+这两个步骤可以使用 `make_column_transformer` 函数完成。现在要提醒你，在你已经移除的旧版本 Scikit-Learn 中，你无法让该函数在流水线中执行 `OneHotEncoder` 或 `LabelEncoder`；这就是为什么我们倾向于使用开发版本。你会发现 `make_column_transformer` 使用起来非常简单。你只需要定义需要转换的列以及应用什么转换。例如，如果你想对连续变量进行标准化，你可以这样做：在 `make_column_transformer` 内部使用 `conti_features` 和 `StandardScaler()`。
 
-`conti_features`: 包含连续变量的列表
-`StandardScaler`: 标准化变量
+- `conti_features`：包含连续变量的列表
+- `StandardScaler`：标准化变量
 
 ```python
 preprocess = make_column_transformer(
-    (conti_features, StandardScaler()), # 必须是数值而不是字符串以指定列名
+    (conti_features, StandardScaler()),  # 必须是数值而不是字符串以指定列名
     (categorical_features, OneHotEncoder(sparse=False))
 )
 ```
@@ -8118,10 +8380,12 @@ print("logistic regression score: %f" % model.score(X_test))
 
 最后，我们可以使用 `predict_proba` 来预测类别并返回每个类的概率。注意总和为 1：`model.predict_proba(X_test)`
 
+```text
+array([[0.83576677, 0.16423323], [0.9458291 , 0.0541709 ], [0.64760416, 0.35239584], ..., [0.99639224, 0.00360776], [0.02072033, 0.97927967], [0.56782222, 0.43217778]])
 ```
-array([[0.83576677, 0.16423323], [0.9458291 , 0.0541709 ], [0.64760416, 0.35239584], ..., [0.99639224, 0.00360776], [0.02072033, 0.97927967], [0.56782222, 0.43217778]])```
 
 ### 第四步——在网格搜索中使用流水线
+
 超参数用于确定网络结构，例如隐藏单元，这些需要调优，但这样做可能需要大量精力。我们可以通过更改训练数据集的大小并评估其性能来评估模型。使用 Scikit-Learn 有一种简单的方法可以帮助你调整参数并交叉验证：
 
 - **交叉验证 (Cross-Validation)**：通过交叉验证，训练数据集被分为若干折，你必须指定折的数量。例如，如果你将 `cross_validation` 设置为 10，训练集将被评估 10 次，每次选择一个随机折作为测试集进行评估。
@@ -8131,17 +8395,18 @@ array([[0.83576677, 0.16423323], [0.9458291 , 0.0541709 ], [0.64760416, 0.352395
 
 ```python
 from sklearn.model_selection import GridSearchCV
+
 # 构建参数网格
 param_grid = {
     'logistic_regression__C': [0.001, 0.01, 0.1, 1],
 }
+
 # 使用 GridSearchCV 训练，使用两个参数和 cv
 ### 训练模型
 grid_clf = GridSearchCV(model, param_grid, cv=10, iid=False)
 grid_clf.fit(X_train, y_train)
 ```
 
-OUTPUT
 ```
 GridSearchCV(cv=10, error_score='raise', estimator=Pipeline(memory=None, steps=[('columransformer', ColumnTransformer(n_jobs=1, remainder='drop', transformer_weights=None, transformers=[('standardscaler', StandardScaler(copy=True, with_mean=True, with_std=True), [0, 2, 10, 4, 11, 12]), ('onehotencoder', OneHotEncoder(categorical_features=None, categories=None, ...), random_state=None, solver='liblinear', tol=0.0001, verbose=0, warm_start=False))]), fit_params=None, iid=False, n_jobs=1, param_grid={'logistic_regression__C': [0.001, 0.01, 0.1, 1]}, pre_dispatch='2*n_jobs', refit=True, return_train_score='warn', scoring=None, verbose=0)
 ```
@@ -8151,7 +8416,7 @@ GridSearchCV(cv=10, error_score='raise', estimator=Pipeline(memory=None, steps=[
 ```python
 grid_clf.best_params_
 ```
-OUTPUT
+
 ```
 {'logistic_regression__C': 1.0}
 ```
@@ -8168,17 +8433,18 @@ print("best logistic regression from grid search: %f" % grid_clf.best_estimator_
 ```python
 grid_clf.best_estimator_.predict_proba(X_test)
 ```
+
+```text
 array([[0.83576677, 0.16423323], [0.9458291 , 0.0541709 ], [0.64760416, 0.35239584], ..., [0.99639224, 0.00360776], [0.02072033, 0.97927967], [0.56782222, 0.43217778]])
+```
 
-
-
-
-
-### XGBoost 模型
+## XGBoost 模型
 
 ![](img/image_rsrc9TV.jpg)
 
-现在我们将尝试训练 XGBoost 分类器，它是最优秀的分类器之一，而且相比随机森林分类器有明显的改进。我不会详细介绍该分类器，因为那超出了本书的讨论范围。我想请大家记住，`XGBoost` 赢得过很多比赛，特别是 Kaggle 竞赛。在中等规模的数据集上，它的表现与许多深度学习算法相当，甚至更好。然而，我要说，由于需要调优的参数非常多，`XGBoost` 的调优具有一定的挑战性。当然，`GridSearchCV` 始终可以为你挑选参数。但我们想用另一种更好的方法来寻找最佳参数。虽然 `GridSearchCV` 有效，但非常耗时，特别是在传递了多个值的情况下。参数越多，搜索空间越大，而使用 `RandomizedSearchCV` 是更好的解决方案。这种方法涉及在每次迭代后随机选择每个超参数的值。例如，如果我们训练分类器经过了 1000 次迭代，那么就会评估 1000 种组合。它的工作原理与 `GridSearchCV` 类似，但更符合我们的需求。## 设置
+现在我们将尝试训练 XGBoost 分类器，它是最优秀的分类器之一，而且相比随机森林分类器有明显的改进。我不会详细介绍该分类器，因为那超出了本书的讨论范围。我想请大家记住，`XGBoost` 赢得过很多比赛，特别是 Kaggle 竞赛。在中等规模的数据集上，它的表现与许多深度学习算法相当，甚至更好。然而，我要说，由于需要调优的参数非常多，`XGBoost` 的调优具有一定的挑战性。当然，`GridSearchCV` 始终可以为你挑选参数。但我们想用另一种更好的方法来寻找最佳参数。虽然 `GridSearchCV` 有效，但非常耗时，特别是在传递了多个值的情况下。参数越多，搜索空间越大，而使用 `RandomizedSearchCV` 是更好的解决方案。这种方法涉及在每次迭代后随机选择每个超参数的值。例如，如果我们训练分类器经过了 1000 次迭代，那么就会评估 1000 种组合。它的工作原理与 `GridSearchCV` 类似，但更符合我们的需求。
+
+### 设置
 
 首先，让我们导入 `xgboost`。如果你还没有安装它，可以使用 `pip` 安装，或者执行以下操作：
 
@@ -8214,7 +8480,8 @@ model_xgb = make_pipeline(
 如果使用 `Stratified K-Fold` 交叉验证器，可以显著提高交叉验证。使用这种方法，我们通过只构建三个折来加速计算，但代价是质量较低。如果你想要更高质量的结果，可以将值增加到 5 或 10。我们将在四次迭代中训练模型：
 
 ```python
-skf = StratifiedKFold(n_splits=3, shuffle = True, random_state = 1001)
+skf = StratifiedKFold(n_splits=3, shuffle=True, random_state=1001)
+
 random_search = RandomizedSearchCV(
     model_xgb,
     param_distributions=params,
@@ -8230,13 +8497,41 @@ random_search = RandomizedSearchCV(
 现在随机搜索准备就绪，可以训练模型了：
 
 ```python
-#grid_xgb = GridSearchCV(model_xgb, params, cv=10, iid=False)
+# grid_xgb = GridSearchCV(model_xgb, params, cv=10, iid=False)
 random_search.fit(X_train, y_train)
 ```
 
-```
-Fitting 3 folds for each 4 candidates, totaling 12 fits [CV] xgbclassifier__max_depth=3, xgbclassifier__gamma=0.5 ............ [CV] xgbclassifier__max_depth=3, xgbclassifier__gamma=0.5 ............ [CV] xgbclassifier__max_depth=3, xgbclassifier__gamma=0.5 ............ [CV] xgbclassifier__max_depth=4, xgbclassifier__gamma=0.5 ............ [CV]  xgbclassifier__max_depth=3, xgbclassifier__gamma=0.5, score=0.8759645283888057, total= 1.0min [CV] xgbclassifier__max_depth=4, xgbclassifier__gamma=0.5 ............ [CV]  xgbclassifier__max_depth=3, xgbclassifier__gamma=0.5, score=0.8729701715996775, total= 1.0min [CV]  xgbclassifier__max_depth=3, xgbclassifier__gamma=0.5, score=0.8706519235199263, total= 1.0min [CV] xgbclassifier__max_depth=4, xgbclassifier__gamma=0.5  ............ [CV] xgbclassifier__max_depth=3, xgbclassifier__gamma=1 .............. [CV]  xgbclassifier__max_depth=4, xgbclassifier__gamma=0.5, score=0.8735460094437406, total= 1.3min [CV] xgbclassifier__max_depth=3, xgbclassifier__gamma=1 .............. [CV]  xgbclassifier__max_depth=3, xgbclassifier__gamma=1, score=0.8722791661868018, total= 57.7s [CV] xgbclassifier__max_depth=3, xgbclassifier__gamma=1 .............. [CV]  xgbclassifier__max_depth=3, xgbclassifier__gamma=1, score=0.875388690547426, total= 1.0min [CV] xgbclassifier__max_depth=4, xgbclassifier__gamma=1 .............. [CV] xgbclassifier__max_depth=4, xgbclassifier__gamma=0.5, score=0.8697304768486523, total= 1.3min [CV] xgbclassifier__max_depth=4, xgbclassifier__gamma=1 .............. [CV]  xgbclassifier__max_depth=4, xgbclassifier__gamma=0.5, score=0.874006679718912, total= 1.4min [CV] xgbclassifier__max_depth=4, xgbclassifier__gamma=1 .............. [CV] xgbclassifier__max_depth=3, xgbclassifier__gamma=1, score=0.87076710435835, total= 1.0min [CV] xgbclassifier__max_depth=4, xgbclassifier__gamma=1, score=0.8729701715996775, total= 1.2min [Parallel(n_jobs=4)]: Done 10 out of 12 | elapsed: 3.6min remaining: 43.5s [CV] xgbclassifier__max_depth=4, xgbclassifier__gamma=1, score=0.87366177012533, total= 1.2min [CV] xgbclassifier__max_depth=4, xgbclassifier__gamma=1, score=0.869269753513154, total= 1.2min [Parallel(n_jobs=4)]: Done 12 out of 12 | elapsed: 3.6min finished
-```从结果可以看出，`XGBoost` 的得分比我们做的逻辑回归要好得多。
+
+
+Fitting 3 folds for each 4 candidates, totaling 12 fits
+[CV] `xgbclassifier__max_depth=3, xgbclassifier__gamma=0.5` ............
+[CV] `xgbclassifier__max_depth=3, xgbclassifier__gamma=0.5` ............
+[CV] `xgbclassifier__max_depth=3, xgbclassifier__gamma=0.5` ............
+[CV] `xgbclassifier__max_depth=4, xgbclassifier__gamma=0.5` ............
+[CV] `xgbclassifier__max_depth=3, xgbclassifier__gamma=0.5, score=0.8759645283888057, total= 1.0min`
+[CV] `xgbclassifier__max_depth=4, xgbclassifier__gamma=0.5` ............
+[CV] `xgbclassifier__max_depth=3, xgbclassifier__gamma=0.5, score=0.8729701715996775, total= 1.0min`
+[CV] `xgbclassifier__max_depth=3, xgbclassifier__gamma=0.5, score=0.8706519235199263, total= 1.0min`
+[CV] `xgbclassifier__max_depth=4, xgbclassifier__gamma=0.5` ............
+[CV] `xgbclassifier__max_depth=3, xgbclassifier__gamma=1` .............
+[CV] `xgbclassifier__max_depth=4, xgbclassifier__gamma=0.5, score=0.8735460094437406, total= 1.3min`
+[CV] `xgbclassifier__max_depth=3, xgbclassifier__gamma=1` .............
+[CV] `xgbclassifier__max_depth=3, xgbclassifier__gamma=1, score=0.8722791661868018, total= 57.7s`
+[CV] `xgbclassifier__max_depth=3, xgbclassifier__gamma=1` .............
+[CV] `xgbclassifier__max_depth=3, xgbclassifier__gamma=1, score=0.875388690547426, total= 1.0min`
+[CV] `xgbclassifier__max_depth=4, xgbclassifier__gamma=1` .............
+[CV] `xgbclassifier__max_depth=4, xgbclassifier__gamma=0.5, score=0.8697304768486523, total= 1.3min`
+[CV] `xgbclassifier__max_depth=4, xgbclassifier__gamma=1` .............
+[CV] `xgbclassifier__max_depth=4, xgbclassifier__gamma=0.5, score=0.874006679718912, total= 1.4min`
+[CV] `xgbclassifier__max_depth=4, xgbclassifier__gamma=1` .............
+[CV] `xgbclassifier__max_depth=3, xgbclassifier__gamma=1, score=0.87076710435835, total= 1.0min`
+[CV] `xgbclassifier__max_depth=4, xgbclassifier__gamma=1, score=0.8729701715996775, total= 1.2min`
+[Parallel(n_jobs=4)]: Done 10 out of 12 | elapsed: 3.6min remaining: 43.5s
+[CV] `xgbclassifier__max_depth=4, xgbclassifier__gamma=1, score=0.87366177012533, total= 1.2min`
+[CV] `xgbclassifier__max_depth=4, xgbclassifier__gamma=1, score=0.869269753513154, total= 1.2min`
+[Parallel(n_jobs=4)]: Done 12 out of 12 | elapsed: 3.6min finished
+
+从结果可以看出，`XGBoost` 的得分比我们做的逻辑回归要好得多。
 
 ```python
 print("Best parameter", random_search.best_params_)
@@ -8256,25 +8551,22 @@ from sklearn.neural_network import MLPClassifier
 
 现在定义下面的深度学习算法：
 
-*   `Adam` 求解器
-*   `Relu` 激活函数
-*   `Alpha = 0.0001`
-*   批量大小为 150
-*   两个分别包含 100 和 50 个神经元的隐藏层
-
-
-
-
+* `Adam` 求解器
+* `Relu` 激活函数
+* `Alpha = 0.0001`
+* 批量大小为 150
+* 两个分别包含 100 和 50 个神经元的隐藏层
 
 ```python
-model_dnn = make_pipeline( preprocess, MLPClassifier(solver='adam', alpha=0.0001, activation='relu', batch_size=150, hidden_layer_sizes=(200, 100) , random_state=1))
+model_dnn = make_pipeline(preprocess, MLPClassifier(solver='adam', alpha=0.0001, activation='relu', batch_size=150, hidden_layer_sizes=(200, 100), random_state=1))
 ```
+
 可以通过更改层数来改进模型的工作效果。
 
 ```python
 model_dnn.fit(X_train, y_train)
 print("DNN regression score: %f" % model_dnn.score(X_test, y_test))
-DNN regression score: 0.821253
+# DNN regression score: 0.821253
 ```
 
 # 使用 LIME 信任你的模型
@@ -8283,7 +8575,7 @@ DNN regression score: 0.821253
 
 例如，你并不总是知道是否可以信任机器学习模型提供的预测结果。同样，医生也不会仅仅因为计算机告诉他某个诊断结果就一定信任它。在投入实际使用之前，你需要知道你的模型是值得信赖的。
 
-想一下，如果我们能准确理解为什么分类器会做出特定的预测，那么即使是是最复杂的模型（如神经网络、SVM、随机森林以及任何带有核函数的模型），也将变得更容易被信任。回到那位医生和他的计算机诊断的例子，如果他有一个计算机模型能告诉他某种疾病的关键症状，他更有可能对其产生某种信任。这就是 `LIME` 介入的地方，它可以告诉你哪些特征影响了分类器的决策。
+想一下，如果我们能准确理解为什么分类器会做出特定的预测，那么即使是最复杂的模型（如神经网络、SVM、随机森林以及任何带有核函数的模型），也将变得更容易被信任。回到那位医生和他的计算机诊断的例子，如果他有一个计算机模型能告诉他某种疾病的关键症状，他更有可能对其产生某种信任。这就是 `LIME` 介入的地方，它可以告诉你哪些特征影响了分类器的决策。
 
 ### 准备数据
 
@@ -8303,10 +8595,10 @@ pip install lime
 
 ## 创建 NumPy 训练集
 
-从 `Panda` 复制并将 `df_train` 转换为 `NumPy` 非常简单：
+从 `Pandas` 复制并将 `df_train` 转换为 `NumPy` 非常简单：
 
 ```python
-df_train.head(5) # Create numpy data 
+df_train.head(5) # Create numpy data
 df_lime = df_train
 df_lime.head(3)
 ```
@@ -8315,17 +8607,13 @@ df_lime.head(3)
 
 我们使用 `unique()` 对象来实现此操作，你应该看到：
 
-* '<=50K'
-* '>50K'
+* `<=50K`
+* `>50K`
 
-
-
-
-
-# 获取类名
-
-`class_names = df_lime.label.unique()`
-`class_names array(['<=50K', '>50K'], dtype=object)`
+```python
+class_names = df_lime.label.unique()
+# class_names array(['<=50K', '>50K'], dtype=object)
+```
 
 ## 获取类别特征列索引
 
@@ -8333,22 +8621,26 @@ df_lime.head(3)
 
 ```python
 import sklearn.preprocessing as preprocessing
+
 categorical_names = {}
+
 for feature in CATE_FEATURES:
     le = preprocessing.LabelEncoder()
     le.fit(df_lime[feature])
     df_lime[feature] = le.transform(df_lime[feature])
     categorical_names[feature] = le.classes_
+
 print(categorical_names)
 ```
 
-输出:
+输出：
+
 ```
 {'workclass': array(['?', 'Federal-gov', 'Local-gov', 'Never-worked', 'Private', 'Self-emp-inc', 'Self-emp-not-inc', 'State-gov', 'Without-pay'], dtype=object), 'education': array(['10th', '11th', '12th', '1st-4th', '5th-6th', '7th-8th', '9th', 'Assoc-acdm', 'Assoc-voc', 'Bachelors', 'Doctorate', 'HS-grad', 'Masters', 'Preschool', 'Prof-school', 'Some-college'], dtype=object), 'marital': array(['Divorced', 'Married-AF-spouse', 'Married-civ-spouse', 'Married-spouse-absent', 'Never-married', 'Separated', 'Widowed'], dtype=object), 'occupation': array(['?', 'Adm-clerical', 'Armed-Forces', 'Craft-repair', 'Exec-managerial', 'Farming-fishing', 'Handlers-cleaners', 'Machine-op-inspect', 'Other-service', 'Priv-house-serv', 'Prof-specialty', 'Protective-serv', 'Sales', 'Tech-support', 'Transport-moving'], dtype=object), 'relationship': array(['Husband', 'Not-in-family', 'Other-relative', 'Own-child', 'Unmarried', 'Wife'], dtype=object), 'race': array(['Amer-Indian-Eskimo', 'Asian-Pac-Islander', 'Black', 'Other', 'White'], dtype=object), 'sex': array(['Female', 'Male'], dtype=object), 'native_country': array(['?', 'Cambodia', 'Canada', 'China', 'Columbia', 'Cuba', 'Dominican-Republic', 'Ecuador', 'El-Salvador', 'England', 'France', 'Germany', 'Greece', 'Guatemala', 'Haiti', 'Honduras', 'Hong', 'Hungary', 'India', 'Iran', 'Ireland', 'Italy', 'Jamaica', 'Japan', 'Laos', 'Mexico', 'Nicaragua', 'Outlying-US(Guam-USVI-etc)', 'Peru', 'Philippines', 'Poland', 'Portugal', 'Puerto-Rico', 'Scotland', 'South', 'Taiwan', 'Thailand', 'Trinadad&Tobago', 'United-States', 'Vietnam', 'Yugoslavia'], dtype=object)}
 ```
 
-`df_lime.dtypes`
 ```
+df_lime.dtypes
 age float64
 workclass int64
 fnlwgt float64
@@ -8370,6 +8662,7 @@ label object
 
 ```python
 from sklearn.model_selection import train_test_split
+
 X_train_lime, X_test_lime, y_train_lime, y_test_lime = train_test_split(df_lime[features], test_size=0.2, random_state=0)
 X_train_lime.head(5)
 ```
@@ -8381,22 +8674,30 @@ model_xgb = make_pipeline(preprocess, xgboost.XGBClassifier(max_depth=3, gamma=0
 model_xgb.fit(X_train_lime, y_train_lime)
 ```
 
-`FutureWarning: /Users/xxxxxx/anaconda3/envs/hello-tf/lib/python3.6/site-packages/sklearn/preprocessing/_encoders.py:351: The handling of integer data will change in version 0.22. The categories are currently determined based on range [0, max(values)], while in the future, they will be determined on the unique values. If you want to use the future behavior and get rid of that warning, see categories=auto. 如果 HotEncoder 之前使用了 LabelEncoder 将类别转换为整数，现在可以直接使用 HotEncoder: warnings.warn(msg)`
+```
+FutureWarning: /Users/xxxxxx/anaconda3/envs/hello-tf/lib/python3.6/site-packages/sklearn/preprocessing/_encoders.py:351: The handling of integer data will change in version 0.22. The categories are currently determined based on range [0, max(values)], while in the future, they will be determined on the unique values. If you want to use the future behavior and get rid of that warning, see categories=auto. 如果 HotEncoder 之前使用了 LabelEncoder 将类别转换为整数，现在可以直接使用 HotEncoder: warnings.warn(msg)
+```
 
-```python
+```
 Pipeline(memory=None, steps=[
     ('columntransformer', ColumnTransformer(n_jobs=1, remainder='drop', weights=None, transformers=[
         ('standardscaler', StandardScaler(copy=True, with_mean=True, with_std=True), [0, 2, 10, 4, 12])),
-    ('onehotencoder', OneHotEncoder(categorical_features=None, categories=None, alpha=0, scale_pos_weight=1, seed=None, silent=True, subsample=1))`
+```
+
+
+
+('onehotencoder', OneHotEncoder(categorical_features=None, categories=None, alpha=0, scale_pos_weight=1, seed=None, silent=True, subsample=1))
 
 你会看到一条警告消息，提示在流水线之前需要创建 label encoder。如果你在使用 LIME，请参考教程的第一部分。如果你想用 LIME，请使用编码后的数据集并设置 `HotEncoder`。
 
 ```python
 print("best logistic regression from grid: %f" % model_xgb.score(X_test_lime, y_test_lime))
 ```
+
 `best logistic regression from search: 0.873157`
 
 `model_xgb.predict_proba(X_test_lime)`
+
 ```
 array([[7.9646105e-01, 2.0353897e-01], [9.51730132e-01, 4.82698716e-02], [7.9344827e-01, 2.06551731e-01], ..., [9.90314305e-01, 9.68566816e-03], [6.45816326e-04, 9.99354184e-01], [9.71042812e-01, 2.89571714e-02]], dtype=float32)
 ```
@@ -8411,6 +8712,7 @@ temp = temp.query('wrong==True').drop('wrong', axis=1)
 temp = temp.sort_values(by=['label'])
 print(temp.shape)
 ```
+
 `(826, 16)`
 
 然后创建一个 Lambda 函数来获取模型对新数据的预测——你很快需要它：
@@ -8420,6 +8722,7 @@ predict_fn = lambda x: model_xgb.predict_proba(x).astype(float)
 ```
 
 `X_test_lime.dtypes`
+
 ```
 age float64
 workclass int64
@@ -8439,6 +8742,7 @@ label object
 ```
 
 `predict_fn(X_test_lime)`
+
 ```
 array([[7.96461046e-01, 2.0353896e-01], [9.51730132e-01, 4.82698716e-02], [7.93448269e-01, 2.06551731e-01], ..., [9.90314305e-01, 9.68566816e-03], [6.45816326e-04, 9.99354184e-01], [9.71042812e-01, 2.89571714e-02]])
 ```
@@ -8468,7 +8772,9 @@ np.random.seed(1)
 i = 100
 print(y_test_lime.iloc[i])
 ```
+
 `X_test_lime[i]`
+
 `array([4.2000e+01, 4.0000e+00, 1.76286e+05, 7.0000e+00, 1.2000e+01, 2.0000e+00, 4.0000e+00, 0.0000e+00, 1.0000e+00, 0.0000e+00, 4.0000e+01, 3.8000e+01])`
 
 解释器可以通过调用 `explain_instance` 使用——这会告诉你模型为什么做出了预测：
@@ -8479,10 +8785,6 @@ exp.show_in_notebook(show_all=False)
 ```
 
 输出显示了正确的预测，我们能对它说明什么？首先我们可以说模型对预测结果并不确定。预测显示有 64% 的概率收入超过 50k。这 64% 来自于两个特征——`marital` 和 `capital gain`。
-
-
-
-
 
 # 构建随机森林模型
 
@@ -8522,6 +8824,7 @@ $ conda update <package name>
 ```
 $ python -c "import sklearn; print sklearn.__version__"
 ```
+
 0.18.1 你的版本号可能不同。现在创建一个新文件并命名为 `sklearn_ml_example.py`。
 
 ## 第二步 – 导入所需的库和模块
@@ -8614,7 +8917,8 @@ print data.head()
 现在看起来好多了，也更容易读了。现在来看看数据形状：
 
 ```python
-print data.shape (1599, 12)
+print data.shape
+# (1599, 12)
 ```
 
 我们可以看到有 1599 个样本和 12 个特征，包括目标特征。现在让我们打印一下摘要：
@@ -8646,10 +8950,6 @@ print data.describe()
 * 硫酸
 * 总二氧化硫
 * 挥发性酸
-
-
-
-
 
 方便的是，这些特征都是数值型的，但它们的量级非常不同。在心中提醒自己，稍后必须对数据进行标准化。请注意，为了本教程的方便，我们没有进行通常建议的那么多的探索性分析。接下来，我们需要对数据进行拆分。
 
@@ -8699,7 +8999,10 @@ print X_train_scaled.std(axis=0)
 
 1. 在训练数据集上拟合转换器，保留标准差和平均值。
 2. 将转换器应用于训练数据集，从而对训练数据进行缩放。
-3. 使用第一步得到的标准差和平均值将转换器应用于测试数据集。
+
+
+
+## 3. 使用第一步得到的标准差和平均值将转换器应用于测试数据集
 
 通过这种方式，我们可以获得性能的更真实的估计，并且可以将我们的预处理步骤放入交叉验证流水线——关于这一点会有更多介绍。以下是我们的做法：
 
@@ -8714,7 +9017,7 @@ X_train_scaled = scaler.transform(X_train)
 print X_train_scaled.mean(axis=0)
 # [0., 0., 0., ..., 0., 0., 0.]
 print X_train_scaled.std(axis=0)
-# [1., 1., 1., ..., 1., 1., 1.]]
+# [1., 1., 1., ..., 1., 1., 1.]
 ```
 
 注意，测试缩放数据集同样以零为中心。
@@ -8724,24 +9027,24 @@ X_test_scaled = scaler.transform(X_test)
 print X_test_scaled.mean(axis=0)
 # [0., 0., 0., ..., 0., 0., 0.]
 print X_test_scaled.std(axis=0)
-# [1., 1., 1., ..., 1., 1., 1.]]
+# [1., 1., 1., ..., 1., 1., 1.]
 ```
-
-
-
-
 
 # 交叉验证概述
 
 1. 将数据分为 `k` 份（等分）或称为折（folds）。典型的划分方式是 `k=10`。
+
 2. 在 `k-1` 折上训练模型——即前 9 份。
+
 3. 最后一折用于评估该模型。
+
 4. 重复第二步和第三步共 `k` 次，但每次都留出不同的折进行评估。
+
 5. 聚合所有折的性能，该聚合结果即为性能指标。
 
 ## 为什么交叉验证如此重要
 
-假设我们现在像这里一样，想要想要训练一个随机森林回归器。其中一个必须调优的超参数是森林中每棵树允许的最大深度。你该如何决定呢？
+假设我们现在像这里一样，想要训练一个随机森林回归器。其中一个必须调优的超参数是森林中每棵树允许的最大深度。你该如何决定呢？
 
 这正是交叉验证发挥用场的地方。仅通过你的训练数据集，交叉验证就可以评估许多不同的超参数，并估计它们的有效性。通过这种方式，测试集可以保持纯净，留到最后选择模型时进行适当的留出评估。例如，可以使用训练数据集来调优线性回归、随机森林和 K-近邻模型，从而让测试集保持纯净，以便选择你需要的模型族。
 
@@ -8750,11 +9053,17 @@ print X_test_scaled.std(axis=0)
 当你执行交叉验证时，你的数据预处理步骤应该放在交叉验证循环中，以防止训练折被受影响的测试数据污染。包含了所有预处理步骤后，流水线如下所示：
 
 1. 将数据分为 `k` 份（等分）或称为折。典型的划分方式是 `k=10`。
+
 2. 对 `k-1` 份训练折进行预处理。
+
 3. 在相同的 `k-1` 折上训练模型。
-4. 使用我们在第 2 中使用的变换对留出的折进行预处理。
+
+4. 使用我们在第 2 步中使用的变换对留出的折进行预处理。
+
 5. 使用最后一折来评估模型。
+
 6. 重复第二步到第五步共 `k` 次，但每次都留出不同的折进行评估。
+
 7. 聚合所有折的性能，该聚合结果即为性能指标。
 
 这些看起来可能很复杂，但 Scikit-Learn 让它变得极其简单：
@@ -8802,13 +9111,17 @@ print mean_squared_error(y_test, y_pred) # 0.35461593750000003
 现在我们必须问自己一个问题——性能好吗？这是我们想要的吗？通常，你的第一个模型不太可能是最好的，但建议结合三种独立的策略来确定模型性能是否足够：
 
 1. 从模型的目标开始。模型是否解决了它设定要完成的问题？
+
 2. 做一些研究，查看学术文献，了解对于不同数据类型（特别是你模型中使用的类型）你应该考虑的性能基准。
+
 3. 寻找“垂手可得”的目标（low-hanging fruit），看看你的模型可以如何改进。
 
 “垂手可得”的目标是指容易实现的目标、衡量标准、任务等。有几种改进模型的方法，以及你可以尝试的一些事项：
 
 1. 使用不同的回归模型族，例如提升树或正则化回归。
+
 2. 如果成本不是很高，多收集一些数据。
+
 3. 花时间进行探索性数据分析并工程化更好的特征。
 
 最后，当你尝试第一种方法（即使用不同的模型族）时，请坚持使用训练随机森林模型时的相同训练和测试集。这是比较不同模型性能的唯一方法。
@@ -8869,26 +9182,24 @@ clf.fit(X_train, y_train)
 # 如果 clf.refit == True（默认为 True），不需要额外代码
 ```
 
-
-
-
-
 # 机器学习与深度学习
 
 在很久以前，在机器学习的早期，任务是通过手动算法编码以及对统计和数学公式进行年度编码来完成的。当然，这花费了大量的时间，而且效率从不高，但今天我们再也不需要做这些了。今天，我们有许多机器学习库可以调用，而 `Python` 作为最流行的机器学习语言，提供了一些非常顶级的库。这些是最好的。
 
 ## TensorFlow
-`TensorFlow` 无疑是人类以来构建的最优秀的机器学习库之一。它由 `Google` 设计，是一个提供高级数值计算的开源库。`TensorFlow` 框架允许我们使用 `tensors` 来定义和运行计算。它用于训练和运行 `DNNs`（深度神经网络），以开发人工智能应用程序。`TensorFlow` 机器学习和深度学习的几点优势包括： 
 
-* 处理深度神经网络的能力 
+`TensorFlow` 无疑是人类以来构建的最优秀的机器学习库之一。它由 `Google` 设计，是一个提供高级数值计算的开源库。`TensorFlow` 框架允许我们使用 `tensors` 来定义和运行计算。它用于训练和运行 `DNNs`（深度神经网络），以开发人工智能应用程序。`TensorFlow` 机器学习和深度学习的几点优势包括：
+
+* 处理深度神经网络的能力
 * `NLP` – 自然语言处理
 * 偏微分方程
 * 抽象
 * 文本、语音和图像识别
-* 协作代码和想法的简单方式。
+* 协作代码和想法的简单方式
 
 ## Keras
-`Keras` 是另一个非常流行的库，一个专注于神经网络的开源库。一位 Google 工程师最初为 `ONEIROS`（或“开放式神经电子智能机器人操作系统”）设计了它，但它很快在 `TensorFlow` 中获得了全面支持。它是可以在 `Theano`、`CNTK` 和 `TensorFlow` 上运行的最高级神经网络 API 之一，并且同时运行在 `CPUs` 和 `GPUs` 上。`Keras` 让初学者和专业人士构建神经网络都变得简单，允许快速的原型开发。`Keras` 中可用的一些工具和构建模块包括： 
+
+`Keras` 是另一个非常流行的库，一个专注于神经网络的开源库。一位 Google 工程师最初为 `ONEIROS`（或“开放式神经电子智能机器人操作系统”）设计了它，但它很快在 `TensorFlow` 中获得了全面支持。它是可以在 `Theano`、`CNTK` 和 `TensorFlow` 上运行的最高级神经网络 API 之一，并且同时运行在 `CPUs` 和 `GPUs` 上。`Keras` 让初学者和专业人士构建神经网络都变得简单，允许快速的原型开发。`Keras` 中可用的一些工具和构建模块包括：
 
 * 激活函数
 * 损失函数
@@ -8901,14 +9212,16 @@ clf.fit(X_train, y_train)
 使用这些功能，`Keras` 可以扩展 `TensorFlow` 在机器学习和深度学习中的可用性。在专用 slack 频道和热心社区的支持下，轻松获得所需的所有支持。`Keras` 完全支持标准神经网络、卷积神经网络和循环神经网络。
 
 ### PyTorch
-`PyTorch` 由 `Facebook` 开发，提供对 `Python` 以及 `C++/C++` 接口的支持。被认为是最好的机器学习和深度学习框架之一，正与 `TensorFlow` 竞争顶位置。它是一个基于另一个名为 `Torch` 的开源库的开源库。`Torch` 是一个带有 `Lua` 封装的 `C` 库。`PyTorch` 为 `NLP`、计算机视觉以及许多机器学习程序提供了大量的库和工具，并允许开发者使用 `GPE` 加速对 `tensors` 进行计算，帮助创建计算图。它的顶级特性包括： 
 
-* 使用 `GPU` 加速处理的张量计算 
+`PyTorch` 由 `Facebook` 开发，提供对 `Python` 以及 `C++` 接口的支持。被认为是最好的机器学习和深度学习框架之一，正与 `TensorFlow` 竞争顶位置。它是一个基于另一个名为 `Torch` 的开源库的开源库。`Torch` 是一个带有 `Lua` 封装的 `C` 库。`PyTorch` 为 `NLP`、计算机视觉以及许多机器学习程序提供了大量的库和工具，并允许开发者使用 `GPU` 加速对 `tensors` 进行计算，帮助创建计算图。它的顶级特性包括：
+
+* 使用 `GPU` 加速处理的张量计算
 * 易于学习和使用，并能轻松与 `Python` 生态系统集成
 * 支持基于张量的自动微分神经网络
 
 ### Scikit-Learn
-`scikit-Learn` 在机器学习领域非常活跃，常用于机器学习并易于与 `Pandas`、`NumPy` 和其他机器学习库集成。它是经典机器学习算法的顶级库之一，构建在 `SciPy` 和 `NumPy` 之上。它支持几乎所有的无监督和监督机器学习算法，并可用于数据分析和数据挖掘，使其成为初学者的完美工具。`Scikit-Learn` 支持以下算法： 
+
+`scikit-Learn` 在机器学习领域非常活跃，常用于机器学习并易于与 `Pandas`、`NumPy` 和其他机器学习库集成。它是经典机器学习算法的顶级库之一，构建在 `SciPy` 和 `NumPy` 之上。它支持几乎所有的无监督和监督机器学习算法，并可用于数据分析和数据挖掘，使其成为初学者的完美工具。`Scikit-Learn` 支持以下算法：
 
 * 分类
 * 聚类
@@ -8918,7 +9231,8 @@ clf.fit(X_train, y_train)
 * 回归
 
 ### Pandas
-`Pandas` 是 `Python` 中顶级的数据分析库之一，在训练准备数据集之前使用。它能够轻松处理结构化多维数据和时间序列。`Pandas` 与机器学习没有直接关系；相反，它处理数据提取和数据准备。它提供了高级的数据结构和许多数据分析工具，以及大量的数据分组、合并和数据过滤工具。`Pandas` 的一些顶级特性是： 
+
+`Pandas` 是 `Python` 中顶级的数据分析库之一，在训练准备数据集之前使用。它能够轻松处理结构化多维数据和时间序列。`Pandas` 与机器学习没有直接关系；相反，它处理数据提取和数据准备。它提供了高级的数据结构和许多数据分析工具，以及大量的数据分组、合并和数据过滤工具。`Pandas` 的一些顶级特性是：
 
 * 数据的重塑和透视
 * 合并和连接数据集
@@ -8929,7 +9243,8 @@ clf.fit(X_train, y_train)
 `Pandas` 使用 `data frames`，这无非 `2D` 数据表示。
 
 ### NLTK
-`NLTK`或自然语言工具包（Natural Language Toolkit）是一个用于 `NLP` 的库，它是最流行的人类语言数据库之一。它提供了简单、用户友好的接口以及丰富的词汇资源，如 `WordNet`、`FrameNet` 和 `Word2Vec` 等。它的一些最佳特性包括： 
+
+`NLTK` 或自然语言工具包（Natural Language Toolkit）是一个用于 `NLP` 的库，它是最流行的人类语言数据库之一。它提供了简单、用户友好的接口以及丰富的词汇资源，如 `WordNet`、`FrameNet` 和 `Word2Vec` 等。它的一些最佳特性包括：
 
 * 在文档中搜索特定关键词
 * 文本分类和分词
@@ -8937,6 +9252,7 @@ clf.fit(X_train, y_train)
 * 词形还原和单词词干提取
 
 ## Spark MLlib
+
 `MLlib` 由 `Apache Spark` 开发，是一个旨在帮助扩展计算的机器学习库。它非常易用，并与许多工具无缝集成，是开发机器学习应用程序的最佳工具之一。`Spark MLlib` 为开发者提供了这些算法：
 
 * 基础统计
@@ -8948,7 +9264,8 @@ clf.fit(X_train, y_train)
 * 回归
 
 ### Theano
-`Theano` 是最强大的库之一，帮助我们定义、优化和评估使用多维数组的表达式。机器学习基本上由统计和数学组成，通过 `Theano` 我们可以优化 `GPU` 和 `CPU` 以提高效率。`Theano` 用于自验证和单元测试，帮助我们发现并诊断错误。它长期以来应用于一些大规模项目中，但保持了简单性。`Theano` 能够实现这些功能的特性包括： 
+
+`Theano` 是最强大的库之一，帮助我们定义、优化和评估使用多维数组的表达式。机器学习基本上由统计和数学组成，通过 `Theano` 我们可以优化 `GPU` 和 `CPU` 以提高效率。`Theano` 用于自验证和单元测试，帮助我们发现并诊断错误。它长期以来应用于一些大规模项目中，但保持了简单性。`Theano` 能够实现这些功能的特性包括：
 
 * 支持在 `CPUs` 上获得更好的性能
 * 支持强集成 `NumPy`
@@ -8956,13 +9273,16 @@ clf.fit(X_train, y_train)
 * 帮助创建自定义的数学 `C` 代码
 
 ### MXNet
+
 `MXNet` 是最高效和灵活的机器学习库之一，特别是用于深度学习。它用于深度神经网络的训练和部署，具有扩展性并支持快速训练。它由 `Apache` 构建，支持多种编程语言，包括 `Python`、`Scala`、`R`、`Julia`、`Perl`、`C++`、`Go` 等。它的扩展性和移植性允许在平台之间轻松移动，并根据你的需求进行扩展。它被一些科技巨头使用，包括 `MIT`、`Intel` 和 `Microsoft`。
 
 ### SciPy
+
 `SciPy` 是另一个流行的机器学习库，提供了线性代数、优化、统计和积分模块。不要与 `SciPy Stack` 混淆——`SciPy` 库是 `Stack` 的一部分，对于处理图像也非常有用。
 
 ### NumPy
-`NumPy` 负责处理多维数据以及一些在数据上运行的复杂数学函数。它在科学计算中也非常流行，在线性、随机和傅里叶变换非常有用。`TensorFlow` 和其他高级库使用 `NumPy` 来操作 `tensors`。它为一些复杂的数组函数提供了快速计算和快速执行，它的一些优点包括： 
+
+`NumPy` 负责处理多维数据以及一些在数据上运行的复杂数学函数。它在科学计算中也非常流行，在线性、随机和傅里叶变换非常有用。`TensorFlow` 和其他高级库使用 `NumPy` 来操作 `tensors`。它为一些复杂的数组函数提供了快速计算和快速执行，它的一些优点包括：
 
 * 支持逻辑和数学操作
 * 形状操作
@@ -8972,37 +9292,42 @@ clf.fit(X_train, y_train)
 * 线性代数
 * 统计操作
 
-
-
-
-
 # N 维数组支持
 
 ### Matplotlib
+
 `Matplotlib` 是 `Python` 中最流行的数据可视化库之一，但它与机器学习没有直接关系。它有助于我们可视化数据模式，是一个用于 2D 绘图、创建图表和图形的库。通过 `PyPlot` 可以绘图变得简单，这是一个实用的模块，包含了让我们控制字体属性、线条样式、格式化轴等功能。它提供了许多图表，包括柱状图、直方图等。
 
 ## 结
+
 ![](img/image_rsrc9SG.jpg)
+
 很高兴在这里见到你，我很高兴你完成了这些教程。现在，你可能认为自己已经准备好开始预测各种事情了，甚至是你认为下一任美国总统会是谁。幸运的是，有很多框架和库可以在你的道路上提供帮助，其中包含了我们在这里讨论的三个——`TensorFlow`、`Keras` 和 `Scikit-Learn`。在你投入机器学习之前，在你开始随机选择库之前，有几件事是你应该考虑的。
 
 ### 你的目标是什么？
+
 这是你在每个项目中都需要考虑的事项，因为你使用的模型和框架完全取决于该项目的性质。例如，如果你正在寻找一个预测电影评论意见的模型，那么你想要一种使用 `PyTorch` 或 `Keras` 的深度学习方法。如果你想预测大联盟棒球赛票的未来价格，你将使用 `Scikit-Learn` 处理结构化数据的能力。`Keras` 和 `Scikit-Learn` 都提供了构建实用的、最小化结构的能力，这些结构可以在几分钟内构建、训练和部署，而 `PyTorch` 和 `TensorFlow` 则用于更复杂的建模。
 
 ### 从简单开始
+
 当你在网上寻找机器学习教程时，你可能会发现自己直接被推入了深水区，例如编写复杂的正则化函数。那不是最好的开始地点，但要点在于，所有的框架都是不同的，而且并不是所有的框架都能快速上手。以 `Scikit-Learn` 为例，只需三行代码就能让你构建并训练最简单的模型：
 
-```
+```python
 from sklearn.svm import SVC
 model = SVC()
 model.fit(X, y)
 ```
 
+
+
 虽然你可能无法获得最好的结果，但从简单开始是正确学习的最佳方法。只有这样，你才能转向更复杂的模型来构建更有挑战性的东西。相比之下，如果你直接开始使用 `PyTorch` 或 `TensorFlow` 构建端到端模型，你可能会发现有些无从心。
 
 ### 不要试图学习一切
+
 当然，这看起来可能显而易见，但许多初学者认为他们应该彻底学习每一个框架，以获得担任数据科学家或机器学习工程师的工作。不要尝试学习太多——你会发现弄懂这一切要困难得多。最好的方法是从一个框架开始并学习基础概念。在此过程中，你将学习到其他框架，因为大多数框架都是相互协作来工作的。选择一个问题并尝试用一个框架解决它——这样，你就能更好地理解它是如何运作的。
 
 ## 要点总结
+
 * 在投入深入研究任何特定框架之前，探索所有的选择并权衡它们。你可能会发现其他东西更值得学习。
 * 如果你不能立即建立出一个出色的模型，又怎样？学习的乐趣一半在于从底部开始并构建，见证你的知识随着你的进步而增长。
 * 不要试图一次性学习太多。信心是有价值的，但尝试学习一个框架的每一个细微细节更有可能导致你失败。你不需要知道一切来学习如何解决问题。
@@ -9010,7 +9335,9 @@ model.fit(X, y)
 希望通过书中包含的所有实际示例，我已经在所有三个机器学习框架中都为你打下了坚实的基础。是的，我本可以做一个涵盖这三个的端到端问题，但我认为逐查看它们更好。我希望你喜欢这本书，并祝你的机器学习之旅一切顺利。
 
 ## 参考文献
+
 ![](img/image_rsrc9SG.jpg)
+
 * An Introduction to Machine Learning. (n.d.). DigitalOcean. https://www.digitalocean.com/community/tutorials/an-introduction-to-machine-learning
 * https://www.facebook.com/jason.brownlee.39. (2019, July 4). Keras Tutorial: Develop Your First Neural Network in Python Step-By-Step. Machine Learning Mastery. https://machinelearningmastery.com/tutorial-first-neural-network-python/
 * Keras Tutorial for Beginners with Python: Deep Learning EXAMPLE. (n.d.). Ww.Guru99.com. Retrieved from https://www.guru99.com/keras-tutorial.html

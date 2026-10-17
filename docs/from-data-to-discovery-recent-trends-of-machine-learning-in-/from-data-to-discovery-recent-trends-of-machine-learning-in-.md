@@ -1,24 +1,9 @@
+
 # 从数据到发现：金属有机框架中机器学习的最新趋势
 
-
-
-
-
-
-
 在线阅读
 
 ACCESS | 指标与更多 | 文章推荐
-
-
-**ABSTRACT:** 以其高孔隙率和结构多样性而闻名，金属有机框架（MOFs）是一类适用于广泛应用的有前景的材料。近几十年来，随着大规模数据库的发展，MOF 社区见证了数据驱动机器学习方法带来的创新，这些方法加深了对 MOFs 化学本质的理解，并推动了新型结构的发展。值得注意的是，随着新方法、架构和数据表示的积极研究，机器学习持续快速发展，其在材料发现中的实施也[content]
-
-
-
-在线阅读
-
-ACCESS | 指标与更多 | 文章推荐
-
 
 **ABSTRACT:** 以其高孔隙率和结构多样性而闻名，金属有机框架（MOFs）是一类适用于广泛应用的有前景的材料。近几十年来，随着大规模数据库的发展，MOF 社区见证了数据驱动机器学习方法带来的创新，这些方法加深了对 MOFs 化学本质的理解，并推动了新型结构的发展。值得注意的是，随着新方法、架构和数据表示的积极研究，机器学习持续快速发展，其在材料发现中的实施也积极推进。在这种情况下，密切关注近期研究趋势并识别正在引入的技术非常重要。在本述评中，我们重点关注 MOF 领域机器学习的出现趋势、它们面临的挑战以及其发展的未来方向。
 
@@ -52,7 +37,6 @@ ACCESS | 指标与更多 | 文章推荐
 
 就预测材料性能的数据驱动方法而言，输入表示对于确定模型的整体性能至关重要。早期针对 MOFs 的机器学习方法侧重于使用
 
-
 ![](img/2f712768e5a4736e5d16a5c39e669a82_2_0.png)
 
 ![](img/2f712768e5a4736e5d16a5c39e669a82_2_1.png)
@@ -67,7 +51,7 @@ ACCESS | 指标与更多 | 文章推荐
 
 随后，机器学习模型在MOF中的进展涉及考虑依赖经验直觉的其他相关化学描述符。Fanourgakis等人44使用源自势能面的描述符进行CH4吸附预测（图2b）。他们通过考虑不同探针原子与骨架的相互作用计算平均玻尔兹曼因子，并观察到准确性的显著提升。Bucior等人45使用能量网格直方图预测MOF的H2工作容量（图2c）。这里的能量网格表示每个网格点上探针气体与MOF之间的Lennard-Jones势能和库仑势能。使用最小绝对收缩和选择算子（LASSO）模型，他们实现了高精度（R2得分为0.96），并成功识别出51个H2工作容量大于45 g L−1的有前景的MOF候选材料。这些尝试凸显了选择合适且创新的描述符对于提升机器学习模型识别高性能MOF的预测能力的重要性。除上述工作外，还有大量研究利用固有描述符进行MOF性质预测。46–48
 
-近年来，图神经网络（GNN）49已成为包括无机化合物和类药分子在内的多种材料领域中使用最广泛的输入抽象之一。通过将原子表示为节点、键表示为边，图表示可以有效捕获局部原子环境和远程结构信息。这些模型也已扩展到周期性（即晶体）材料，其中晶体图卷积神经网络（CGCNN）50是最具代表性的例子，成功解决了周期性边界条件问题（图2d）。为此，Rosen等人51构建了QMOF数据库，包含超过20,000个在DFT水平上计算的MOF带隙数据，CGCNN模型在预测这些结构的带隙时取得了R2得分为0.876的成绩。在后续工作中，52他们使用另一种基于GNN的预测模型——材料图网络（MEGNET）53，实现了更高的性能。近期，Shoghi等人54基于GemNet-OC55应用了联合多域预训练方法（JMP），在预测MOF带隙方面取得了最先进的性能。这些进展表明，使用GNN模型通过有效捕获结构内的复杂相互作用，能够显著提高MOF性质的预测准确性。
+近年来，图神经网络（GNN）49已成为包括无机化合物和类药分子在内的多种材料领域中使用最广泛的输入抽象之一。通过将原子表示为节点、键表示为边，图表示可以有效捕获局部原子环境和远程结构信息。这些模型也已扩展到周期性（即晶体）材料，其中晶体图卷积神经网络（CGCNN）50是最具代表性的例子，成功解决了周期性边界条件问题（图2d）。为此，Rosen等人51构建了`QMOF`数据库，包含超过20,000个在DFT水平上计算的MOF带隙数据，`CGCNN`模型在预测这些结构的带隙时取得了R2得分为0.876的成绩。在后续工作中，52他们使用另一种基于GNN的预测模型——材料图网络（`MEGNET`）53，实现了更高的性能。近期，Shoghi等人54基于`GemNet-OC`55应用了联合多域预训练方法（`JMP`），在预测MOF带隙方面取得了最先进的性能。这些进展表明，使用GNN模型通过有效捕获结构内的复杂相互作用，能够显著提高MOF性质的预测准确性。
 
 ### 2.3. 基于Transformer的回归模型
 
@@ -79,7 +63,7 @@ ACCESS | 指标与更多 | 文章推荐
 
 图3. 使用Transformer的MOF性质预测模型示例。(a) DeepSorption模型概述，将原子坐标和元素类型输入Transformer，与吸附专家知识共同学习。转载自参考文献57。版权2023作者。(b) MOFTransformer架构，在Transformer中同时考虑两种不同类型的输入（局部特征：原子图，全局特征：能量网格）。该模型在100万个虚拟MOF上预训练，并微调以预测所需性质。经参考文献35许可转载。版权2023 Springer Nature。
 
-基于这种巨大潜力，使用基于Transformer的模型进行MOF性质预测的研究激增，利用了它们捕获数据中复杂关系的能力。对于MOF，Cao等人58开发的MOFormer以MOF的上下文表示作为输入，并通过自监督学习预训练Transformer和CGCNN。预训练模型针对带隙和气体吸附进行了微调，比化学计量-12060和使用修正自相关描述符（RACs61）等模型（这些描述符是启发式原子性质之间的离散相关性）的准确率高出多达48%。在DeepSorption中，Cui等人57开发了一个以原子坐标和原子类型为输入的Transformer模型（图3a）。该模型考虑了全局结构和局部
+基于这种巨大潜力，使用基于Transformer的模型进行MOF性质预测的研究激增，利用了它们捕获数据中复杂关系的能力。对于MOF，Cao等人58开发的`MOFormer`以MOF的上下文表示作为输入，并通过自监督学习预训练Transformer和`CGCNN`。预训练模型针对带隙和气体吸附进行了微调，比化学计量-12060和使用修正自相关描述符（RACs61）等模型（这些描述符是启发式原子性质之间的离散相关性）的准确率高出多达48%。在`DeepSorption`中，Cui等人57开发了一个以原子坐标和原子类型为输入的Transformer模型（图3a）。该模型考虑了全局结构和局部
 
 ![](img/2f712768e5a4736e5d16a5c39e669a82_4_0.png)
 
@@ -87,16 +71,15 @@ ACCESS | 指标与更多 | 文章推荐
 
 图4. 构建MLP的示意图。它包括三个步骤：通过从头计算构建数据库、用描述符表示原子环境，以及训练回归模型。经John Wiley & Sons许可，引自参考文献70。
 
-使用多尺度原子注意力（5、8、12和无穷大）的空间原子相互作用。此外，在训练过程中，除了目标值外，还预测了各种几何描述符，从而提高了准确性和时间效率。在预测吸附曲线时，该方法与CGCNN和其他基于描述符的模型相比，平均绝对误差（MAE）降低了20–35%。Wang等人56利用631,000个MOF和COF在Transformer模型上采用自监督学习开发了Uni-MOF。他们通过从噪声数据预测原子的三维位置和预测掩蔽原子来预训练模型。然后，该模型使用从各种MOF数据库、气体类型、温度和压力中随机采样的多系统性质进行微调，实现了R²值稳定在0.83至0.98的气体吸附预测。
+使用多尺度原子注意力（5、8、12和无穷大）的空间原子相互作用。此外，在训练过程中，除了目标值外，还预测了各种几何描述符，从而提高了准确性和时间效率。在预测吸附曲线时，该方法与`CGCNN`和其他基于描述符的模型相比，平均绝对误差（MAE）降低了20–35%。Wang等人56利用631,000个MOF和COF在Transformer模型上采用自监督学习开发了`Uni-MOF`。他们通过从噪声数据预测原子的三维位置和预测掩蔽原子来预训练模型。然后，该模型使用从各种MOF数据库、气体类型、温度和压力中随机采样的多系统性质进行微调，实现了R²值稳定在0.83至0.98的气体吸附预测。
 
-近期的研究集中在使用多模态学习来提高MOF的预测性能，这种方法同时考虑不同类型的输入。Kang等人35开发的MOFTransformer同时考虑了全局特征（如几何和拓扑描述符）和局部特征（如特定键和构建块的化学特性），以针对可能与某种机制或另一种机制相关的各种不同性质（图3b）。他们使用100万个假设的MOF执行了三种预训练任务：拓扑预测、孔隙率预测以及金属团簇/有机连接体分类。微调后，他们的模型成功预测了H₂吸收量、H₂扩散率和带隙，且性能优于基线模型。多模态学习是一个尚未在MOF中进行深入探索的新分支，但在提高性质预测的准确性和鲁棒性方面具有巨大潜力。
+近期的研究集中在使用多模态学习来提高MOF的预测性能，这种方法同时考虑不同类型的输入。Kang等人35开发的`MOFTransformer`同时考虑了全局特征（如几何和拓扑描述符）和局部特征（如特定键和构建块的化学特性），以针对可能与某种机制或另一种机制相关的各种不同性质（图3b）。他们使用100万个假设的MOF执行了三种预训练任务：拓扑预测、孔隙率预测以及金属团簇/有机连接体分类。微调后，他们的模型成功预测了H₂吸收量、H₂扩散率和带隙，且性能优于基线模型。多模态学习是一个尚未在MOF中进行深入探索的新分支，但在提高性质预测的准确性和鲁棒性方面具有巨大潜力。
 
 ### 2.4. 潜在弱点与改进
 
-尽管机器学习为性质预测带来了显著进步，但仍存在若干挑战。回归模型高度依赖于数据，且由于大多数性质数据是通过分子模拟获得的，模拟方法的准确性会显著影响模型的性能。目前，已有多个MOF数据库，如CoREMOF62和QMOF51，但与材料领域的其他方向相比，它们包含的数据量仍然相对较少。特别是带隙等需要DFT计算的性质，获取时需要花费大量时间，因此难以获得大型数据集。此外，在MD模拟（包括气体扩散率或体积模量计算）中，数据的可重复性通常较低，导致机器学习预测不准确。这些问题凸显了持续开发更稳健的数据库和改进模拟技术以提高机器学习模型可靠性和准确性的必要性。
+尽管机器学习为性质预测带来了显著进步，但仍存在若干挑战。回归模型高度依赖于数据，且由于大多数性质数据是通过分子模拟获得的，模拟方法的准确性会显著影响模型的性能。目前，已有多个MOF数据库，如`CoREMOF`62和`QMOF`51，但与材料领域的其他方向相比，它们包含的数据量仍然相对较少。特别是带隙等需要DFT计算的性质，获取时需要花费大量时间，因此难以获得大型数据集。此外，在MD模拟（包括气体扩散率或体积模量计算）中，数据的可重复性通常较低，导致机器学习预测不准确。这些问题凸显了持续开发更稳健的数据库和改进模拟技术以提高机器学习模型可靠性和准确性的必要性。
 
 从基于描述符的模型到多模态Transformer模型，MOF性质预测已取得了重大进展。展望未来，开发创新的MOF表示方法和采用先进的机器学习技术对于进一步提高这些方法的准确性和效率至关重要。此外，为了利用回归模型获得具有所需性质的MOF，训练好的模型通常被集成到高通量筛选（HTS）方案中，取代传统的分子
-
 
 ![](img/2f712768e5a4736e5d16a5c39e669a82_5_0.png)
 
@@ -108,9 +91,9 @@ ACCESS | 指标与更多 | 文章推荐
 
 ### 3.1. MLPs 简介
 
-原子模拟能够积累各种材料性质数据，但准确性与计算成本之间的权衡长期以来一直是探索大化学空间的挑战性方面。广泛使用的 DFT 计算被认为相对准确但速度慢。为了降低计算成本，经典（经验）原子间势被用于模拟分子动力学，其中库仑势⁶⁷和伦纳德-琼斯势⁶⁸是广泛使用的例子。反应性力场 (ReaxFF)⁶⁹是另一个显著例子，可以模拟灵活的键断裂和形成，但尽管如此，这些原子间势的准确性不足，且与量子水平模拟相比适用于更窄的化学领域。在这一点上，机器学习势 (MLPs) 通过使用在从头计算数据上训练的预测机器学习模型来克服准确性与计算成本之间的权衡，使其能够在量子力学水平上学习势能面。使用 MLPs 的这些方法在各种材料领域获得了显著关注，最近的 MLP 工作正接近于用单一可转移模型覆盖广泛化学空间的水平。²⁵,⁷⁰,⁷¹
+原子模拟能够积累各种材料性质数据，但准确性与计算成本之间的权衡长期以来一直是探索大化学空间的挑战性方面。广泛使用的 DFT 计算被认为相对准确但速度慢。为了降低计算成本，经典（经验）原子间势被用于模拟分子动力学，其中库仑势⁶⁷和伦纳德-琼斯势⁶⁸是广泛使用的例子。反应性力场 (`ReaxFF`)⁶⁹是另一个显著例子，可以模拟灵活的键断裂和形成，但尽管如此，这些原子间势的准确性不足，且与量子水平模拟相比适用于更窄的化学领域。在这一点上，机器学习势 (`MLPs`) 通过使用在从头计算数据上训练的预测机器学习模型来克服准确性与计算成本之间的权衡，使其能够在量子力学水平上学习势能面。使用 MLPs 的这些方法在各种材料领域获得了显著关注，最近的 MLP 工作正接近于用单一可转移模型覆盖广泛化学空间的水平。²⁵,⁷⁰,⁷¹
 
-构建 MLP 模型需要表示原子环境并训练模型从选定的数据库学习势能面（图 4）。在开发原子环境的描述符以及训练能够学习原子间势的模型方面付出了大量努力。历史和详细示例超出了本文的范围，因此可以参考引用的论文来了解模型架构和概念。截至本文撰写时，MACE⁸³,⁸⁴（具体为 MACE-mp-0）在 Matbench Discovery 基准测试⁸⁵中展示了公开可用的 MLPs 中最高的准确性，该基准测试评估模型预测固态热力学稳定性质的性能。MACE 架构结合了原子簇展开⁷³和消息传递神经网络⁸⁶,⁸⁷，其中 MPTrj 数据集⁸¹用于训练。随着神经网络架构的快速发展以及新的从头数据以兼容的方式被整合，原子模拟中 MLPs 的领域正在迅速增长。
+构建 MLP 模型需要表示原子环境并训练模型从选定的数据库学习势能面（图 4）。在开发原子环境的描述符以及训练能够学习原子间势的模型方面付出了大量努力。历史和详细示例超出了本文的范围，因此可以参考引用的论文来了解模型架构和概念。截至本文撰写时，`MACE`⁸³,⁸⁴（具体为 `MACE-mp-0`）在 `Matbench Discovery` 基准测试⁸⁵中展示了公开可用的 MLPs 中最高的准确性，该基准测试评估模型预测固态热力学稳定性质的性能。`MACE` 架构结合了原子簇展开⁷³和消息传递神经网络⁸⁶,⁸⁷，其中 `MPTrj` 数据集⁸¹用于训练。随着神经网络架构的快速发展以及新的从头数据以兼容的方式被整合，原子模拟中 MLPs 的领域正在迅速增长。
 
 MLPs 在 MOFs 中的利用也非常令人鼓舞，因为庞大而复杂的化学环境导致其原子模拟困难。在以下章节中，将展示用于建模 MOFs 的 MLP 实现示例以及潜在的未来方向。
 
@@ -119,6 +102,8 @@ MLPs 在 MOFs 中的利用也非常令人鼓舞，因为庞大而复杂的化学
 在许多 MOF 系统中，通用力场参数无法准确模拟各种吸附性质，因为这些力场并非专门为 MOFs 开发，而 MOFs 通常含有独特的化学基团，如开放金属位点 (OMS)。在这一点上，MLPs 可以是在合理时间尺度内计算吸附能的最佳方法，从而与基于力场的计算相比显著提高准确性。
 
 特别是，Zheng 等⁹⁰利用 MLP 模拟了单个 CO₂ 分子插入 Mg-MOF-74 时的势能面，Mg-MOF-74 含有 5 配位的 Mg–O 簇，在框架内诱导 OMS。由于四极矩在 CO₂ 中起作用，CO₂ 的氧部分与带正电的 OMS 表现出强相互作用。尽管经典力场可以提供合理的自由能曲线，但它们仍然显著低估了 OMS 与 CO₂ 分子之间的相互作用。然而，本工作中训练的 MLP 通过预测分子间相互作用远强于经典力场的预测，准确地考虑了 OMS 与 CO₂ 分子之间的化学吸附。
+
+
 
 除了单分子情况外，Goeminne 等使用来自 DFT 计算的包含不同数量客体分子（本例中为 CO₂）的快照训练了 MLP。⁹¹通过此程序，他们有效地考虑了整个框架内的主-客体相互作用，并捕捉到由于 MOFs 的限域效应导致的主-客体或客体-客体相互作用的细微变化。遵循广泛使用的常规 GCMC 的基本假设，他们使用静态框架和刚性吸附质收集数据，并从单点计算中提取相互作用能量和力。他们将该方案应用于 ZIF-8 并确认 MLP 可以再现实验吸附等温线。然而，他们研究中遇到的一项限制是 MLP 的可转移性有限。用 ZIF-8 训练的 MLP 不能直接用于具有相同组分但表现出不同拓扑的多形 MOFs。从这个角度来看，MOFs 的独特特性可能成为 MLPs 在 MOFs 中可转移性的障碍。同样，Liu 等尝试运行 GCMC 模拟以借助 MLP（图 5a）⁹²准确再现 Al-soc-MOF-1d 的实验 H₂ 吸附等温线。鉴于 MLP 是使用从从头分子动力学 (AIMD) 收集的构型训练的，可以预期通常被忽略的框架的客体诱导柔性可能在吸附模拟期间被隐式考虑。
 
@@ -131,9 +116,6 @@ MLPs 在 MOFs 中的利用也非常令人鼓舞，因为庞大而复杂的化学
 在 MOFs 中 MLP 开发的早期阶段，结构被分解为分子片段，MLP 基于这些单元进行训练。⁹⁴,⁹⁵这些训练好的模型能够准确预测平衡晶格常数，并可应用于诸如机理和热行为等更复杂的应用。⁹⁵然而，该方法从根本上存在一个限制：周期性在训练水平上无法明确考虑。为解决此问题，几项后续研究使用了整个晶胞作为 MLPs 的训练集。Vandenhaute 等⁹⁶使用增量学习方法训练了名为 NequIP 的 MLP 模型，该方法使用了元动力学的概念来高效采样构型以训练模型。在这项工作中，UiO-66 (Zr) 和 MIL-53 (Al) 分别被选为代表性刚性和柔性 MOFs。凭借 MLPs 的优点，其能够以高精度模拟大胞，他们将 MIL-53 (Al) 的模拟胞扩展到 9 × 2 × 9（包含超过 10 000 个原子）并成功再现了实验转变压力数据（图 5b）。在这项工作中，他们研究了框架对外部压力的柔性响应，但客体诱导的柔性尚未使用 MLP 进行研究。因此，这将是一个未来研究课题的绝佳建议。同样，Fan 等⁹⁷合理设计了可能由于酒架基序而表现出相变的二维 MOFs，并使用 MLP 模型观察了机理行为。虽然之前的研究将模拟结果与实验结果相匹配，但同一组的最新研究利用 MLPs 在分子水平上揭示了实验中未观察到的现象。⁹⁸他们研究了 CALF-20 的动力学并观察到负面积压缩性 (NAC) 和负热膨胀 (NTE)，这些是与 CALF-20 实验观察不一致的反直觉现象。
 
 除了晶体框架内的形变外，Castel 等²⁶使用 MLP 在分子水平上研究了 MOFs 的非晶相。他们选择 ZIF-4 作为基准 MOF，实验表明其具有多种非晶相。非晶相是通过熔融淬火方法获得的，这可以直观地用分子动力学体现。由于在常规通用力场中键应保持完整，涉及可逆键断裂和形成的 MOFs 晶格破坏无法模拟。然而，正如前文所述，键断裂和形成可以使用 MLP 模拟，类似于 DFT 计算，从而能够研究晶格性的丧失。
-
-
-
 
 ### 3.4. 机器学习势（MLPs）在金属有机框架（MOFs）中的潜在应用
 
@@ -165,10 +147,7 @@ MLPs 在 MOFs 中的利用也非常令人鼓舞，因为庞大而复杂的化学
 
 图6. 用于MOFs的生成模型。(a) SMVAE架构。训练了一个变分自编码器用于生成MOFs。MOFs被表示为其构建组件（拓扑、金属节点、有机节点和连接边）的组合。经参考文献33许可转载，版权归2021 Springer Nature所有。(b) MOF FUSION架构。使用符号距离函数（SDF）作为输入表示，训练了一个扩散模型用于MOF生成。转载自参考文献36，采用CC BY-NC许可。
 
-编码器组件将给定的MOF结构映射为降维后的潜在向量，而解码器则将其映射回原始的MOF结构。整个架构经过联合训练，在生成阶段，训练好的解码器能够根据随机采样的潜在向量生成新结构。SMVAE的结构有效性为61.5%，以采样向量的先验有效性衡量。（在随机
-
-
-对采样的潜在向量，61.5% 生成了有效的 MOF 结构。）通过训练一个额外的性质预测模型，该模型可从潜在向量预测 MOF 的化学性质，他们能够生成具有期望性质的结构。聚焦于 CO₂ 吸附，他们证明了该模型能够控制 CO₂ 吸附容量和选择性。
+编码器组件将给定的MOF结构映射为降维后的潜在向量，而解码器则将其映射回原始的MOF结构。整个架构经过联合训练，在生成阶段，训练好的解码器能够根据随机采样的潜在向量生成新结构。SMVAE的结构有效性为61.5%，以采样向量的先验有效性衡量。（在随机对采样的潜在向量，61.5% 生成了有效的 MOF 结构。）通过训练一个额外的性质预测模型，该模型可从潜在向量预测 MOF 的化学性质，他们能够生成具有期望性质的结构。聚焦于 CO₂ 吸附，他们证明了该模型能够控制 CO₂ 吸附容量和选择性。
 
 在各种生成模型架构中，扩散模型因其在生成逼真样本和多样化条件能力方面的卓越性能而获得了巨大关注。¹¹⁶,¹¹⁸ 将扩散模型应用于 MOF 生成最近已被尝试，采用了多种不同的方法来处理 MOF 的结构复杂性。Park 等人¹³⁷ 专注于生成 MOF 配体（而非整个结构），并将生成的配体插入具有固定金属节点类型（Cu 桨轮、Zn 桨轮和 Zn 四聚体）的 pcu 拓扑中。他们利用了 DiffLinker，¹²⁸ 这是一种预先开发的扩散模型，用于基于化学片段生成配体分子。他们将 0.1 bar 下 CO₂ 容量高于 2 mmol/g 的结构定义为高性能 MOF，并从现有数据库中这些高性能 MOF 中获得了 540 个独特的分子片段。利用这些片段，他们获得了 12,305 个配体，并据此获得了 120,000 个 MOF 结构。他们使用单独的预测模型筛选了 MOF 空间，并验证了六种 CO₂ 容量高于 2 mmol/g 的 MOF。
 
@@ -202,6 +181,8 @@ Fu 等人¹³⁸ 通过引入构建模块的粗粒化表示，巧妙地处理了
 
 利用跨领域知识的代表性示例之一是 He 等人160 的工作。以验证电导性 MOF 为目标，他们开发了一个二元分类模型，该模型基于带隙对结构是否具有导电性进行分类。当时，没有专门针对 MOF 带隙的数据库。（然而，QMOF 数据库，51 现在提供了 MOF 结构的 DFT 计算带隙。）为克服这一限制，他们利用了无机化合物积累的数据。开放量子材料数据库（OQMD）161 包含 ~52,300 种无机化合物的 DFT 水平计算的带隙信息。他们在该数据集上训练了分类模型并将其应用于 MOF 数据库，以识别可能具有导电性的结构。他们的研究方法预测了九种导电 MOF，随后的计算验证证实其中六种为金属。这是一个使用来自其他领域的数据来解决 MOF 研究领域数据稀缺问题的适当示例。
 
+
+
 迁移学习是不同领域之间知识转移的广泛使用方法。Cai 等人162 探索了在异质多孔材料背景下实施迁移学习的可能性。他们的重点是解决计算就绪实验（CoRE）数据集大小之间的不平衡，其中 CoRE COF 结构相对较少（约 1,000 个结构），而 CoRE MOF 超过 10,000 个结构。14 为了实现用 CoRE COF 预测 Xe/Kr 选择性的高准确性，研究人员采用了迁移学习。具体而言，他们使用 CoRE MOF 数据库对模型进行预训练，并用 300 个 COF 结构进行微调。他们证实，与仅使用 COF 数据库的直接学习相比，迁移学习始终实现了更高的准确性。
 
 Park 等人163 提出了多孔材料中迁移学习的另一个引人注目的应用。他们在多孔材料的各个领域训练了 Transformer 架构，涵盖 MOF、COF、沸石和 PPN。在不同材料类别之间的协同效应推动下，他们旨在通过迁移学习解决数据不平衡问题。他们的方案涉及提出跨材料少样本学习方案。通过转移从 MOF 获得的知识，他们观察到在少样本学习场景中预测 COF 带隙的准确性得到提高。此外，作者还进一步探索了零样本学习方案的可行性，其中仅在材料 A 上训练的模型可用于预测未见的材料 B。
@@ -213,8 +194,6 @@ Park 等人163 提出了多孔材料中迁移学习的另一个引人注目的�
 ### 5.3. 从文献中提取数据
 
 数据的质量对于开发可靠的机器学习模型至关重要。在本节中，我们关注现实世界数据与模拟数据之间的差异。
-
-
 
 ![](img/2f712768e5a4736e5d16a5c39e669a82_11_0.png)
 
@@ -271,17 +250,29 @@ Park 等人163 提出了多孔材料中迁移学习的另一个引人注目的�
 ## ■ 参考文献
 
 1. Zhang, X.; Lin, R. B.; Wang, J.; Wang, B.; Liang, B.; Yildirim, T.; Zhang, J.; Zhou, W.; Chen, B. Optimization of the pore structures of MOFs for record high hydrogen volumetric working capacity. *Advanced materials* 2020, 32 (17), 1907995.
+
 2. Nguyen, T.; Shimizu, G.; Rajendran, A. Post-Combustion CO2 capture by vacuum swing adsorption using a hydrophobic metal-organic framework (MOF), CALF-20: Multi-objective optimization and experimental validation. *ChemRxiv*, 2022.
+
 3. Li, B.; Wen, H.-M.; Zhou, W.; Xu, J. Q.; Chen, B. Porous metal-organic frameworks: promising materials for methane storage. *Chem. 2016*, 1 (4), 555–580.
+
 4. Park, J.; Suh, B. L.; Kim, J. Computational design of a photoresponsive metal–organic framework for post-combustion carbon capture. *J. Phys. Chem. C* 2020, 124 (24), 13162–13167.
+
 5. Wang, Q.; Astruc, D. State of the art and prospects in metal–organic framework (MOF)-based and MOF-derived nanocatalysis. *Chem. Rev.* 2020, 120 (2), 1438–1511.
+
 6. Doonan, C. J.; Sumby, C. J. Metal–organic framework catalysis. *CrystEngComm* 2017, 19 (29), 4044–4048.
+
 7. Shan, Y.; Zhang, G.; Shi, Y.; Pang, H. Synthesis and catalytic application of defective MOF materials. *Cell Reports Physical Science* 2023, 4 (3), 101301.
+
 8. Jo, Y. M.; Jo, Y. K.; Lee, J. H.; Jang, H. W.; Hwang, I. S.; Yoo, D. J. MOF-based chemiresistive gas sensors: toward new functionalities. *Adv. Mater.* 2023, 35 (43), 2206842.
+
 9. Small, L. J.; Henkelis, S. E.; Rademacher, D. X.; Schindelholz, M. E.; Krumhansl, J. L.; Vogel, D. J.; Nenoff, T. M. Near-zero power MOF-based sensors for NO2 detection. *Adv. Funct. Mater.* 2020, 30 (50), 2006598.
+
 10. Mallakpour, S.; Nikkhoo, E.; Hussain, C. M. Application of MOF materials as drug delivery systems for cancer therapy and dermal treatment. *Coord. Chem. Rev.* 2022, 451, 214262.
+
 11. Suresh, K.; Matzger, A. J. Enhanced drug delivery by dissolution of amorphous drug encapsulated in a water unstable metal–organic framework (MOF). *Angew. Chem., Int. Ed.* 2019, 58 (47), 16790–16794.
+
 12. Colón, Y. J.; Gómez-Gualdrón, D. A.; Snurr, R. Q. Topologically guided, automated construction of metal–organic frameworks and their evaluation for energy-related applications. *Cryst. Growth Des.* 2017, 17 (11), 5801–5810.
+
 13. Lee, S.; Kim, B.; Cho, H.; Lee, H.; Lee, S. Y.; Cho, E. S.; Kim, J. Computational screening of trillions of metal–organic frameworks for ...
 
 高性能甲烷存储。*ACS应用材料与界面* **2021**, *13* (20), 23647–23654.
@@ -310,62 +301,35 @@ Park 等人163 提出了多孔材料中迁移学习的另一个引人注目的�
 
 - (25) Behler, J. 观点：用于原子模拟的机器学习势。*化学物理杂志* **2016**, *145* (17), 170901.
 
+
+
 - (26) Castel, N.; André, D.; Edwards, C.; Evans, J. D.; Coudert, F.-X. 非晶沸石咪唑酯框架的机器学习原子间势。*数字发现* **2024**, *3*, 355–368.
-
 - (27) Sun, Y.; DeJaco, R. F.; Li, Z.; Tang, D.; Glante, S.; Sholl, D. S.; Colina, C. M.; Snurr, R. Q.; Thommes, M.; Hartmann, M.; 等. 利用元学习为不同纳米多孔材料确定最佳储氢条件。*科学进展* **2021**, *7* (30), eabg3983.
-
 - (28) Lakshmanaprabu, S.; Shankar, K.; Ilayaraja, M.; Nasir, A. W.; Vijayakumar, V.; Chilamkurti, N. 基于最优特征的物联网大数据分类随机森林。*国际机器学习与控制论杂志* **2019**, *10* (10), 2609–2618.
-
 - (29) Corso, G.; Stark, H.; Jegelka, S.; Jaakkola, T.; Barzilay, R. 图神经网络。*自然综述：方法入门* **2024**, *4* (1), 17.
-
 - (30) Pinheiro Cinelli, L.; Araújo Marins, M.; Barros da Silva, E. A.; Lima Netto, S. 变分自编码器。载于《机器学习变分方法及其在深度网络中的应用》；施普林格，2021；第111–149页。
-
 - (31) Aurpa, T. T.; Sadik, R.; Ahmed, M. S. 使用基于Transformer的深度学习模型检测Facebook上的攻击性孟加拉语评论。*社交网络分析与挖掘* **2022**, *12* (1), 24.
-
 - (32) Lyu, Z.; Xu, X.; Yang, C.; Lin, D.; Dai, B. 通过扩散过程的早停来加速扩散模型。*arXiv*:2205.12524, 2022.
-
 - (33) Yao, Z.; Sánchez-Lengeling, B.; Bobbitt, N. S.; Bucior, B. J.; Kumar, S. G. H.; Collins, S. P.; Burns, T.; Woo, T. K.; Farha, O. K.; Snurr, R. Q.; 等. 利用深度生成模型逆向设计纳米多孔晶态网状材料。*自然机器智能* **2021**, *3* (1), 76–86.
-
 - (34) Batzner, S.; Musaelian, A.; Sun, L.; Geiger, M.; Mailoa, J. P.; Kornbluth, M.; Molinari, N.; Smidt, T. E.; Kozinsky, B. 用于数据高效且精确的原子间势的E(3)等变图神经网络。*自然通讯* **2022**, *13* (1), 2453.
-
 - (35) Kang, Y.; Park, H.; Smit, B.; Kim, J. 用于金属有机框架通用迁移学习的多模态预训练Transformer。*自然机器智能* **2023**, *5* (3), 309–318.
-
 - (36) Park, J.; Lee, Y.; Kim, J. 使用3D建模技术的金属有机框架生成多模态条件化。*ChemRxiv*，2024。DOI: 10.26434/chemrxiv-2024-w8fps.
-
 - (37) Canivet, J.; Bonnefoy, J.; Daniel, C.; Legrand, A.; Coasne, B.; Farrusseng, D. 金属有机框架中水吸附的结构-性质关系。*新化学杂志* **2014**, *38* (7), 3102–3111.
-
 - (38) Wu, D.; Yang, Q.; Zhong, C.; Liu, D.; Huang, H.; Zhang, W.; Maurin, G. 揭示金属有机框架用于烟气捕集CO2的结构-性质关系。*朗缪尔* **2012**, *28* (33), 12094–12099.
-
 - (39) Fahrmeir, L.; Kneib, T.; Lang, S.; Marx, B. 《回归模型》；施普林格，2013.
-
 - (40) Hearst, M. A.; Dumais, S. T.; Osuna, E.; Platt, J.; Schölkopf, B. 支持向量机。*IEEE智能系统及其应用* **1998**, *13* (4), 18–28.
-
 - (41) Chen, T.; Guestrin, C. XGBoost：一种可扩展的树提升系统。*第22届ACM SIGKDD国际知识发现与数据挖掘会议论文集* **2016**, 785–794.
-
 - (42) Breiman, L. 随机森林。*机器学习* **2001**, *45*, 5–32.
-
 - (43) Fernandez, M.; Woo, T. K.; Wilmer, C. E.; Snurr, R. Q. 金属有机框架中甲烷储存的大规模定量结构-性质关系（QSPR）分析。*物理化学杂志C* **2013**, *117* (15), 7681–7689.
-
 - (44) Fanourgakis, G. S.; Gkagkas, K.; Tylianakis, E.; Klontzas, E.; Froudakis, G. 一种用于预测纳米多孔材料中甲烷吸附的稳健机器学习算法。*物理化学杂志A* **2019**, *123* (28), 6080–6087.
-
 - (45) Bucior, B. J.; Bobbitt, N. S.; Islamoglu, T.; Goswami, S.; Gopalan, A.; Yildirim, T.; Farha, O. K.; Bagheri, N.; Snurr, R. Q. 基于能量的描述符用于快速预测金属有机框架中的储氢性能。*分子系统设计与工程* **2019**, *4* (1), 162–174.
-
 - (46) Wu, X.; Xiang, S.; Su, J.; Cai, W. 基于机器学习理解金属有机框架甲烷储存能力与特征性质之间的定量关系。*物理化学杂志C* **2019**, *123* (14), 8550–8559.
-
 - (47) Burner, J.; Luo, J.; Luo, H.; Miranir, A.; Kwon, O.; Boyd, P. G.; Maley, S.; Gibaldi, M.; Simrod, S.; Ogden, V.; 等. ARC–MOF：具有DFT推导的部分原子电荷和机器学习描述符的多样化金属有机框架数据库。*材料化学* **2023**, *35* (3), 900–916.
-
 - (48) Yuan, X.; Li, L.; Shi, Z.; Liang, H.; Li, S.; Qiao, Z. 分子指纹机器学习辅助设计与预测用于从空气中捕集NMHC的高性能MOF。*先进粉末材料* **2022**, *1* (3), 100026.
-
 - (49) Zhou, J.; Cui, G.; Hu, S.; Zhang, Z.; Yang, C.; Liu, Z.; Wang, L.; Li, C.; Sun, M. 图神经网络：方法与应用的综述。*AI开放* **2020**, *1*, 57–81.
-
 - (50) Xie, T.; Grossman, J. C. 用于材料性质准确可解释预测的晶体图卷积神经网络。*物理评论快报* **2018**, *120* (14), 145301.
-
 - (51) Rosen, A. S.; Iyer, S. M.; Ray, D.; Yao, Z.; Aspuru-Guzik, A.; Gagliardi, L.; Notestein, J. M.; Snurr, R. Q. 机器学习金属有机框架的量子化学性质以加速材料发现。*物质* **2021**, *4* (5), 1578–1597.
-
 - (52) Rosen, A. S.; Fung, V.; Huck, P.; O’Donnell, C. T.; Horton, M. K.; Truhlar, D. G.; Persson, K. A.; Notestein, J. M.; Snurr, R. Q. 金属有机框架电子性质的高通量预测。
-
-
-
 - (95) Tayfuroglu, O.; Kocak, A.; Zorlu, Y. 一种针对IRMOF系列的神经网络势及其在热和光化学行为中的应用。 *Phys. Chem. Chem. Phys.* **2022**, *24* (19), 11882–11897.
 - (96) Vandenhaute, S.; Cools-Ceuppens, M.; DeKeyser, S.; Verstraelen, T.; Van Speybroeck, V. 利用增量学习方法为金属有机框架开发的机器学习势。 *npj Computational Materials* **2023**, *9* (1), 1–8.
 - (97) Fan, D.; Ozyan, A.; Liu, P.; Maurin, G. 通过机器学习势分子动力学揭示二维金属有机框架的非正常面内拉伸性。 *Nanoscale* **2024**, *16* (7), 3438–3447.
@@ -396,56 +360,105 @@ Park 等人163 提出了多孔材料中迁移学习的另一个引人注目的�
 - (122) Ramesh, A.; Dhariwal, P.; Nichol, A.; Chu, C.; Chen, M. 基于CLIP潜在变量的层次化文本条件图像生成。 *arXiv*, 2204.06125, 2022.
 - (123) *Midjourney*. 2022. https://www.midjourney.com (accessed 28 Aug, 2024).
 - (124) Bubeck, S.; Chandrasekaran, V.; Eldan, R.; Gehrke, J.; Horvitz, E.; Kamar, E.; Lee, P.; Lee, Y. T.; Li, Y.; Lundberg, S. 通用人工智能的火花：gpt-4的早期实验。 *arXiv*, 2303.12712, 2023.
+
+
+
 - (125) Zhang, L.; Rao, A.; Agrawala, M. 为文本到图像扩散模型添加条件控制。 *Proceedings of the IEEE/CVF International Conference on Computer Vision 2023*, 3836–3847.
+
 - (126) Kang, S.; Cho, K. 基于深度生成模型的条件分子设计。 *J. Chem. Inf. Model.* **2019**, *59* (1), 43–52.
+
 - (127) Hoogeboom, E.; Satorras, V. G.; Vignac, C.; Welling, M. 用于3D分子生成的等变扩散。 In *International Conference on Machine Learning*, 2022; PMLR: pp 8867–8887.
+
 - (128) Igashov, I.; Stärk, H.; Vignac, C.; Schneuing, A.; Satorras, V. G.; Frossard, P.; Welling, M.; Bronstein, M.; Correia, B. E. 用于分子连接子设计的等变3D条件扩散模型。 *Nature Machine Intelligence* **2024**, *6*, 417.
+
 - (129) Wu, K. E.; Yang, K. K.; Berg, R. v. d.; Zou, J. Y.; Lu, A. X.; Amini, A. P. 通过折叠扩散生成蛋白质结构。 *arXiv*, 2209.15611, 2022.
+
 - (130) Hawkins-Hooker, A.; Depardieu, F.; Baur, S.; Couairon, G.; Chen, A.; Bikard, D. 用变分自编码器生成功能性蛋白质变体。 *PLoS computational biology* **2021**, *17* (2), e1008736.
+
 - (131) Xie, T.; Fu, X.; Ganea, O.-E.; Barzilay, R.; Jaakkola, T. 用于周期材料生成的晶体扩散变分自编码器。 *arXiv*, 2110.06197, 2021.
+
 - (132) Freund, R.; Zaremba, O.; Arnauts, G.; Ameloot, R.; Skorupskii, G.; Dinçă, M.; Bavykina, A.; Gascon, J.; Ejsmont, A.; Goscianska, J.; et al. MOF和COF应用的现状。 *Angew. Chem., Int. Ed.* **2021**, *60* (45), 23975–24001.
+
 - (133) Kim, B.; Lee, S.; Kim, J. 利用人工神经网络对多孔材料的逆向设计。 *Science advances* **2020**, *6* (1), eaax9324.
+
 - (134) Park, J.; Gill, A. P. S.; Moosavi, S. M.; Kim, J. 多孔材料的逆向设计：扩散模型方法。 *Journal of Materials Chemistry A* **2024**, *12*, 6507.
+
 - (135) Rappé, A. K.; Casewit, C. J.; Colwell, K.; Goddard, W. A., III; Skiff, W. M. UFF：用于分子力学和分子动力学模拟的全周期表力场。 *Journal of the American chemical society* **1992**, *114* (25), 10024–10035.
+
 - (136) *IZA数据库*. https://www.iza-structure.org/databases/ (accessed 28 Aug, 2024).
+
 - (137) Park, H.; Yan, X.; Zhu, R.; Huerta, E.; Chaudhuri, S.; Cooper, D.; Foster, I.; Tajkhorshid, E. GHP-MOFassemble: 用于理性设计的扩散建模、高通量筛选和分子动力学.
 
-
-
 - (137) 用于大规模碳捕获的新型金属有机框架的发现。 *arXiv*, 2306.08695, 2023.
+
 - (138) Fu, X.; Xie, T.; Rosen, A. S.; Jaakkola, T.; Smith, J. MOFDiff：用于金属有机框架设计的粗粒化扩散。 *arXiv*, 2310.10732, 2023.
+
 - (139) M. Bran, A.; Cox, S.; Schilter, O.; Baldassari, C.; White, A. D.; Schwaller, P. 用化学工具增强大型语言模型。 *Nature Machine Intelligence* **2024**, 6, 525.
+
 - (140) Kang, Y.; Kim, J. ChatMOF：用于预测和生成金属有机框架的自主人工智能系统。 *arXiv*, 2308.01423, 2023.
+
 - (141) Liu, S.; Nie, W.; Wang, C.; Lu, J.; Qiao, Z.; Liu, L.; Tang, J.; Xiao, C.; Anandkumar, A. 用于基于文本的检索和编辑的多模态分子结构-文本模型。 *Nature Machine Intelligence* **2023**, 5 (12), 1447–1457.
+
 - (142) Besserve, M.; Sun, R.; Janzing, D.; Schölkopf, B. 生成模型中外推的独立机制理论。 In *Proceedings of the AAAI Conference on Artificial Intelligence* **2021**, 35, 6741–6749.
+
 - (143) Thompson, N. C.; Greenewald, K.; Lee, K.; Manso, G. F. 深度学习的计算极限。 *arXiv*, 2007.05558, 2020.
+
 - (144) Villalobos, P.; Sevilla, J.; Besiroglu, T.; Heim, L.; Ho, A.; Hobbahn, M. 机器学习模型规模与参数差距。 *arXiv*, 2207.02852, 2022.
+
 - (145) Weiss, K.; Khoshgoftaar, T. M.; Wang, D. 迁移学习综述。 *Journal of Big Data* **2016**, 3, 1–40.
+
 - (146) Lim, Y.; Kim, J. 迁移学习在预测金属有机框架扩散性质中的应用。 *Molecular Systems Design & Engineering* **2022**, 7 (9), 1056–1064.
+
 - (147) Ma, R.; Colon, Y. J.; Luo, T. 金属有机框架中气体吸附的迁移学习研究。 *ACS Appl. Mater. Interfaces* **2020**, 12 (30), 34041–34048.
+
 - (148) Wang, C.-H.; Huang, K.-Y.; Yao, Y.; Chen, J.-C.; Shuai, H.-H.; Cheng, W.-H. 轻量级深度学习：概述。 *IEEE Consumer Electronics Magazine* **2024**, 13, 51.
+
 - (149) Yang, H.; Hu, C.; Zhou, Y.; Liu, X.; Shi, Y.; Li, J.; Li, G.; Chen, Z.; Chen, S.; Zeni, C. MatterSim：跨元素、温度和压力的深度学习原子模型。 *arXiv*, 2405.04967, 2024.
+
 - (150) Jiao, X.; Yin, Y.; Shang, L.; Jiang, X.; Chen, X.; Li, L.; Wang, F.; Liu, Q. TinyBERT：用于自然语言理解的BERT蒸馏。 *arXiv*, 1909.10351, 2019.
+
 - (151) Sanh, V.; Debut, L.; Chaumond, J.; Wolf, T. DistilBERT，BERT的蒸馏版本：更小、更快、更便宜、更轻。 *arXiv*, 1910.01108, 2019.
+
 - (152) Lan, Z.; Chen, M.; Goodman, S.; Gimpel, K.; Sharma, P.; Soricut, R. ALBERT：用于语言表示自监督学习的轻量级BERT。 *arXiv*, 1909.11942, 2019.
+
 - (153) Sun, Z.; Yu, H.; Song, X.; Liu, R.; Yang, Y.; Zhou, D. MobileBERT：面向资源受限设备的紧凑型任务无关BERT。 *arXiv*, 2004.02984, 2020.
+
 - (154) Xu, C.; Zhou, W.; Ge, T.; Wei, F.; Zhou, M. BERT-of-Theseus：通过渐进式模块替换压缩BERT。 *arXiv*, 2002.02925, 2020.
+
 - (155) de Wynter, A.; Perry, D. J. BERT的最优子架构提取。 *arXiv*, 2010.10499, 2020.
+
 - (156) Nandy, A.; Duan, C.; Kulik, H. J. 大胆的庞大：克服计算材料发现中机器学习的数据稀缺性和数据质量挑战。 *Current Opinion in Chemical Engineering* **2022**, 36, 100778.
+
 - (157) Lim, D.-W.; Kitagawa, H. 质子导电金属有机框架的理性策略。 *Chem. Soc. Rev.* **2021**, 50 (11), 6349–6368.
+
 - (158) Sarango-Ramírez, M. K.; Park, J.; Kim, J.; Yoshida, Y.; Lim, D. W.; Kitagawa, H. 金属有机框架中质子传导的孔隙空间与表面官能化。 *Angew. Chem., Int. Ed.* **2021**, 60 (37), 20173–20177.
+
 - (159) Mancuso, J. L.; Mroz, A. M.; Le, K. N.; Hendon, C. H. 金属有机框架的电子结构建模。 *Chem. Rev.* **2020**, 120 (16), 8641–8715.
+
 - (160) He, Y.; Cubuk, E. D.; Allendorf, M. D.; Reed, E. J. 由机器学习方法与从头计算相结合预测的金属金属有机框架。 *Journal of Physical Chemistry Letters* **2018**, 9 (16), 4562–4569.
+
 - (161) Kirklin, S.; Saal, J. E.; Meredig, B.; Thompson, A.; Doak, J. W.; Aykol, M.; Rühl, S.; Wolverton, C. 开放量子材料数据库（OQMD）：评估DFT形成能的准确性。 *npj Computational Materials* **2015**, 1 (1), 1–15.
+
 - (162) Cai, Z.; Li, W.; Chung, Y. G.; Li, S.; Liang, T.; Wu, T. 迁移学习辅助的金属有机框架和共价有机框架用于Xe/Kr惰性气体分离的计算筛选。 *Sep. Purif. Technol.* **2024**, 348, 127752.
+
 - (163) Park, H.; Kang, Y.; Kim, J. 通过迁移学习和跨材料小样本学习增强多孔材料的结构-性能关系。 *ACS Appl. Mater. Interfaces* **2023**, 15 (48), 56375–56385.
+
 - (164) Park, S.; Kim, B.; Choi, S.; Boyd, P. G.; Smit, B.; Kim, J. 金属有机框架论文的文本挖掘。 *J. Chem. Inf. Model.* **2018**, 58 (2), 244–251.
+
 - (165) Nandy, A.; Duan, C.; Kulik, H. J. 利用机器学习和数据挖掘利用社区知识进行稳定金属有机框架的工程设计。 *J. Am. Chem. Soc.* **2021**, 143 (42), 17535–17547.
+
 - (166) Glasby, L. T.; Gubsch, K.; Bence, R.; Oktavian, R.; Isoko, K.; Moosavi, S. M.; Cordiner, J. L.; Cole, J. C.; Moghadam, P. Z. DigiMOF：通过文本挖掘生成的金属有机框架合成信息数据库。 *Chem. Mater.* **2023**, 35 (11), 4510–4524.
+
 - (167) Park, H.; Kang, Y.; Choe, W.; Kim, J. 从科学文献文本中挖掘金属有机框架合成的见解。 *J. Chem. Inf. Model.* **2022**, 62 (5), 1190–1198.
+
 - (168) Zheng, Z.; Zhang, O.; Borgs, C.; Chayes, J. T.; Yaghi, O. M. 用于文本挖掘和MOF合成预测的ChatGPT化学助手。 *J. Am. Chem. Soc.* **2023**, 145 (32), 18048–18062.
+
 - (169) Zheng, Z.; He, Z.; Khatab, O.; Rampal, N.; Zaharia, M. A.; Borgs, C.; Chayes, J. T.; Yaghi, O. M. 由GPT-4V驱动的网状化学中的图像和数据挖掘。 *Digital Discovery* **2024**, 3 (3), 491–501.
+
 - (170) Xie, Y.; Sattari, K.; Zhang, C.; Lin, J. 面向自主实验室：人工智能与实验自动化的融合。 *Prog. Mater. Sci.* **2023**, 132, 101043.
+
 - (171) Seifrid, M.; Pollice, R.; Aguilar-Granda, A.; Morgan Chan, Z.; Hotta, K.; Ser, C. T.; Vestfrid, J.; Wu, T. C.; Aspuru-Guzik, A. 自主化学实验：建立自驾实验室的挑战与展望。 *Acc. Chem. Res.* **2022**, 55 (17), 2454–2466.
+
 - (172) Szymanski, N. J.; Rendy, B.; Fei, Y.; Kumar, R. E.; He, T.; Milsted, D.; McDermott, M. J.; Gallant, M.; Cubuk, E. D.; Merchant, A.; et al. 用于新型材料加速合成的自主实验室。 *Nature* **2023**, 624 (7990), 86–91.
+
 - (173) Vriza, A.; Chan, H.; Xu, J. 用于聚合物电子学的自驾实验室。 *Chem. Mater.* **2023**, 35 (8), 3046–3056.

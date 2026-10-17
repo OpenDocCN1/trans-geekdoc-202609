@@ -1,8 +1,5 @@
+
 # PHP 编程：MySQL 和 Oracle 使用指南
-
-
-
-
 
 ## 概述
 
@@ -12,23 +9,23 @@ PHP 是一种用于开发世界范围内动态网页的编程语言。HTML 或�
 
 本书关于 PHP。 如果需要复习该主题，可以考虑我的 JavaScript 书籍。
 
-本书的网页位于：http://beamto.fjtbooks
+本书的网页位于：`http://beamto.fjtbooks`
 
 开始之前：
 
 要运行 PHP 脚本，这是一种基于服务器的脚本，需要以下内容：
 
-用于保存扩展名为 ".php" 的文件的记事本编辑器或类似工具。以及
+用于保存扩展名为 `".php"` 的文件的记事本编辑器或类似工具。以及
 
 放置完成后的脚本的位置。这可以是托管站点，其中有许多（免费或廉价的网络托管站点）允许 PHP 脚本。在独立计算机上，可以下载免费的 PHP 编辑器软件。本书的代码使用 EasyPHP 编辑器（版本 17）和服务器开发，该编辑器和服务器在撰写本书时可以免费下载并安装。PHP 有不同的版本，当前版本是 7。本书适用于版本 5 和 7。 这两个版本之间存在一些显著差异。然而，许多托管站点仍在使用版本 5 系列。
 
-大多数 PHP 托管站点包含的默认数据库是 MySQL，并且像上面提到的这样的免费编辑器也附带此类数据库。除了此数据库外，本书还将探讨连接到 Oracle 数据库的连接。 本书中使用的 Oracle 数据库是可单独使用的 Windows 版本 11.2g Express 版本，可免费下载，网址为 http://www.oracle.com。
+大多数 PHP 托管站点包含的默认数据库是 MySQL，并且像上面提到的这样的免费编辑器也附带此类数据库。除了此数据库外，本书还将探讨连接到 Oracle 数据库的连接。 本书中使用的 Oracle 数据库是可单独使用的 Windows 版本 11.2g Express 版本，可免费下载，网址为 `http://www.oracle.com`。
 
 ## 第 1 章. 简介
 
 在任何语言中，按不成文的传统，第一个程序都是“Hello World”。在 PHP 中实现的方法如下：
 
-使用扩展名为 ".php" 的记事本创建一个名为 hello (`hello.php`) 的文件。 在该文件中输入以下行。
+使用扩展名为 `".php"` 的记事本创建一个名为 hello (`hello.php`) 的文件。 在该文件中输入以下行。
 
 ```
 <?php  print "Hello World!!!";?>
@@ -115,6 +112,7 @@ PHP 中的日期类型由数字和字符串组成，并未明确定义为变量�
 示例：
 
 | John || Adam || Smith || Mary || Sally |
+
 | --- | --- | --- | --- | --- |
 
 其中 John 的索引或键为 0，Adam 的键为 1，以此类推，直到 Sally，她的索引为 4。 这个单维数组的大小为 5（0-4）。
@@ -148,10 +146,6 @@ $y ="John ";
 print "The number is $x";
 ```
 
-
-
-
-
 现在让我们创建一个 PHP 程序，它将打印名为 John 的人的姓名和地址。
 
 ```
@@ -162,7 +156,7 @@ print "The number is $x";
 
 # ![](img/00003.jpeg)
 
-# 
+#
 
 脚本的位置会根据编辑器而有所不同。即使在 EasyPHP 编辑器中，也可以在旧版本（12 到 14）的 projects 文件夹下运行此脚本，或在版本 17 中使用 `eds-www` 文件夹。
 
@@ -266,10 +260,6 @@ GET 方法将收集到的所有数据作为 URL 的一部分发送。POST 方法
 <?php$item=$_POST['item'];$quantity=$_POST['quantity'];$price=$_POST['price'];$discount=$_POST['discount'];$tax=$_POST['tax'];$tax = ($tax/100);$taxrate =1+$tax;$total = ($quantity * $price)-$discount;$final=$total*$taxrate;print"You have chosen $item";print"<p>The quantity ordered is $quantity, at $price$.";print"<p>The discount is $discount$.";print"<p>The tax is $tax.";print"<p>The final cost is $final$";print"<p>Thank you.";?>
 ```
 
-
-
-
-
 生成的页面如下所示：
 
 ![](img/00007.jpeg)
@@ -301,6 +291,8 @@ GET 方法将收集到的所有数据作为 URL 的一部分发送。POST 方法
 `number_format()` -
 
 示例：
+
+
 
 `number_format(400.43567,2) = 400.44`
 
@@ -524,10 +516,6 @@ other statement(s);
 
 让我们看一个例子。用户登录页面的 HTML 文件如下。
 
-
-
-
-
 ### 用户登录表单
 
 ```html
@@ -543,9 +531,13 @@ other statement(s);
 此代码背后的逻辑如下：
 
 1. 用户为用户名输入 `administrator`。
+
 2. 用户为密码输入 `administrator`。
+
 3. 如果用户名和密码长度大于 10，则代码将检查用户名和密码是否匹配。
+
 4. 代码接受输入并感谢用户。
+
 5. 如果用户名和密码不匹配，则显示登录失败的消息。
 
 需要注意的是，这里密码是硬编码的。在现实生活中，用户名和密码将存储在数据库中。
@@ -712,6 +704,8 @@ print $x;
 
 因此数字将从 1 到 10 包含。
 
+
+
 `while` 循环设计为只要条件为真就工作。条件在每次迭代中都会检查，就像在 `for` 循环中一样。
 
 在 `do... while` 循环中，语句至少执行一次。
@@ -740,10 +734,6 @@ PHP 脚本将被修改为如下表所示，以接受 `x` 的传入值，然后�
 PHP 文件中使用的变量名本可以更有描述性，因此在选择变量名时请记住这一点。
 
 我们这里有三个变量，它们是：`xmin`、`xmax` 和 `xstep`。
-
-
-
-
 
 进入`/path/to/xxx`目录，找到`xxx.json`。
 
@@ -816,7 +806,9 @@ Example: An array can be made to include a list of cars as shown below.
 Array variable naming is as follows:
 
 1\. Start with a `$` sign.
+
 2\. Continue with a letter or underscore.
+
 3\. Finish with any combination of letters or numbers or the underscore.
 
 An array variable has an index system. An array stands out from other variables with the presence of the `[]` brackets. Thus, `$car[]` is an array variable.
@@ -846,7 +838,9 @@ The output from running this code will be as follows:
 The output above tells the following:
 
 1\. Array values cannot be printed using the `print()` function used in the previous chapters.
+
 2\. Array values can be printed using the `print_r()` function instead.
+
 3\. When using the `print_r()` function the array prints out with its index position shown in number format.
 
 There is no requirement that index positions should be numbers. Words can be used. Let us modify the above PHP code to illustrate this.
@@ -939,6 +933,8 @@ PHP has a function to merge two arrays. The function `array_merge($array1,$array
 
 For Example:
 
+
+
 `$car1[] =('Toyota','GM','Ford');`
 
 `$car2[] =('Nissan','Mazda','VW','Hyundai');`
@@ -956,10 +952,6 @@ The above merge of two arrays can also be achieved by writing as follows.
 There is only one way to retrieve an array element that is by indicating the key index value. If all elements of an array has to be printed a loop will be needed.
 
 For example:
-
-
-
-
 
 ### PHP 数组遍历与排序
 
@@ -1211,6 +1203,8 @@ Thus we have created a multidimensional array.
 
 To point to an element in an array within array is at best the same way as done for a single dimensional array by using the index or key number.
 
+
+
 So a command `print "Print the second book in programming is {$books['Software'][1]}";`
 
 will print the word Java.
@@ -1236,10 +1230,6 @@ Let us modify the above script to use the `print_r()` seen in the beginning of t
 
 The code is as follows.
 
-
-
-
-
 进入`/path/to/xxx`目录，找到`xxx.json`。
 
 在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
@@ -1260,7 +1250,7 @@ if (condVar > someVal) {console.log("xxx")}
 
 ![](img/00032.jpeg)
 
-## 第 5 章 Web 应用程序组件
+# 第 5 章 Web 应用程序组件
 
 PHP 主题至少需要 HTML 知识。除此之外，对层叠样式表（CSS）、Java 脚本和结构化查询语言的了解可以极大地增强创建动态、美观网页的能力。
 
@@ -1456,10 +1446,6 @@ HTML 页面将调用 `cookie.php` 文件并将用户的颜色偏好传递给它�
 
 并使用与之前相同的 html 文件（为方便起见在此处重现）。
 
-
-
-
-
 ### Cookie 示例
 
 ```html
@@ -1505,7 +1491,9 @@ setcookie('cookiename', ' ', time()-60);
 会话提供了一种在多个页面上跟踪用户数据的方法。Cookie 将数据存储在客户端，而会话将其存储在服务器上。除此之外，会话具有以下特征。
 
 1. 它们更安全，因为数据仅在服务器上。
+
 2. 它们允许存储比 cookie 更多信息。
+
 3. 即使用户不接受 cookie，它们也可以正常工作。
 
 会话就像英文单词的含义一样（一段时期，如课堂会话）。会话开始时，会创建一个随机会话 ID。这是引用该特定会话及其存储数据的标识。
@@ -1526,6 +1514,8 @@ $_SESSION['age'] =35;
 数据会写入服务器上存储的临时文件。让我们来看下面的代码。
 
 此代码用于登录框。
+
+
 
 ```php
 <?phpif(isset($_POST['submit'])){if ($_POST['username']=='admin' && $_POST['password']=='admin'){session_start();$_SESSION['username'] ='admin';$_SESSION['login'] =time();print"You are logged in";exit();}}?><html><head><title>Session Example</title></head><body><form action="session.php" method="post"> <p>Username:<input type="text" name="username" size="20"><p>Password:<input type="text" name="password" size ="20"><p><input type ="submit" name="submit" value="Submit"></form></body></html>
@@ -1583,7 +1573,7 @@ unset($_SESSION);
 
 需要注意的是，会话可能在共享类型的 Web 托管上以略有不同的方式实现。因此，重要的是要检查 Web 主机的常见问题解答表或技术支持，了解它是如何为这种类型的托管配置的。
 
-#### PHP 中的用户自定义函数
+### PHP 中的用户自定义函数
 
 PHP 中的函数可以由用户创建。到目前为止看到的函数已经在 PHP 中定义。
 
@@ -1604,10 +1594,6 @@ statements;
 ```php
 <?phpfunction make_car_menu (){$car =array(1=>'Nissan',2=>'GM',3=>'Ford',4=>'Toyota',5=>'Mazda',6=>'Tesla',7=>'Mitsubishi',8=>'Hyundai',9=>'VW',10=>'BYD');print"<select name='car'>";foreach ($car as $key=>$value){print"<option value=$key>$value</option>";}print"<select>";}//end of functionprint"<form action='' method='post'>";make_car_menu();print"</form>";?>
 ```
-
-
-
-
 
 函数 `make_car_menu` 定义了一个汽车数组变量，并使用 `foreach` 循环打印出 select 选项的菜单项。请注意这段代码的一个重要部分- 1) 它写在一个单一的 PHP 文件中。2) 每当在 print 或 PHP 语句中出现两个 `""` 时，外层引号应为 `""`，但内层引号必须为单引号(`'`)类型。
 
@@ -1727,10 +1713,6 @@ statements;
 if(!empty($_POST['data']).
 ```
 
-
-
-
-
 让我们重写上面显示的代码以包含这两个语句。第二个语句将确保文本区域框中有一些数据可写入或追加到数据文件。
 
 ```
@@ -1776,6 +1758,8 @@ if(!empty($_POST['data']).
 请注意，变量 `$data` 是一个数组，我们正在按数组章节中所示的方式打印结果。
 
 输出如下：
+
+
 
 ![](img/00047.jpeg)
 
@@ -1893,18 +1877,11 @@ Delete – 从数据库表的行中删除数据。
 | 100 | Robert | Manager | 8000 | Atlanta |
 | 101 | Albert | Administrator | 3000 | Atlanta |
 
-
-
-
-
 ### Staff Table 示例
 
 | 102 || Sally || Secretary || 2000 || Atlanta |
-
 | 103 || Martha || Receptionist || 1500 || Atlanta |
-
 | 104 || John || Accountant || 5000 || Atlanta |
-
 | 105 || Sandy || Trainee || 1000 || Atlanta |
 
 在此表中所有字段的类型均为文本，除了 `salary` 其类型为数字。让我们对该表运行一些查询。
@@ -2093,6 +2070,7 @@ select name from staff
 where exists
 (select name from staff where salary > 5000);
 ```
+
 结果将为：
 
 | name |
@@ -2153,15 +2131,13 @@ where
 location = any (select location from staff where salary > 3000);
 ```
 
+
+
 将找到薪资大于 3000 的每个位置。在这种情况下，三座城市中至少有一人薪资大于 3000。因此查询的第一部分将打印表中的所有行。共有七行。
 
 迄今为止给出的命令可以在 MySQL、Oracle 和 Microsoft 的 Access 等数据库中工作。
 
 如果使用编辑器在将 PHP 脚本上传到网站之前在计算机上开发，则首先要做的是查找它是否附带 PHPMyadmin 模块。
-
-
-
-
 
 本书中的示例使用 EasyPHP 编辑器开发，可在以下网站获取- [`www.easyphp.org`](http://www.easyphp.org)。本书撰写时 PHP 的当前版本为 7，其界面已在第 1 章中展示。下面的界面适用于 PHP 5 系列。
 
@@ -2173,7 +2149,7 @@ location = any (select location from staff where salary > 3000);
 
 ![](img/00050.jpeg)
 
-如图所示，可以使用左侧上方的 new 链接创建数据库。所有基于 Unix/Linux 的网络托管的 C-Panel 也会显示类似的屏幕。
+如图所示，可以使用左侧上方的 `new` 链接创建数据库。所有基于 Unix/Linux 的网络托管的 C-Panel 也会显示类似的屏幕。
 
 上图顶部的菜单可列出与账户或安装相关的数据库，并可运行 SQL 命令。导出和导入允许备份数据库和输入批量数据。
 
@@ -2193,7 +2169,7 @@ location = any (select location from staff where salary > 3000);
 
 这些步骤与在实际网络托管上执行的操作非常相似，但界面方式或外观可能存在细微差异。
 
-## 第 8 章. PHP 用于 MySQL 数据库
+# 第 8 章. PHP 用于 MySQL 数据库
 
 本章的重点是编写针对 MySQL 数据库和表的 PHP 代码。如果此脚本在独立计算机或笔记本电脑上的编辑器中运行，则首先要弄清楚的是数据库的路径。
 
@@ -2209,9 +2185,9 @@ location = any (select location from staff where salary > 3000);
 <html><body><?phpif($dx =mysql_connect('localhost','root ',' ')){print"Connected to MySQL.";mysql_close();} else {print"Could not connect to MySQL.";}?></body></html>
 ```
 
-连接机制如上所示的 PHP 脚本所示。行 `mysql_connect('localhost',' root',' '))` 在使用的网络主机上会略有不同。localhost 后跟用户名和密码。
+连接机制如上所示的 PHP 脚本所示。行 `mysql_connect('localhost',' root',' '))` 在使用的网络主机上会略有不同。`localhost` 后跟用户名和密码。
 
-在独立机器上的开发软件的情况下，用户名通常为 root，但这需要在使用的 PHP 编辑器的帮助手册中进行验证。
+在独立机器上的开发软件的情况下，用户名通常为 `root`，但这需要在使用的 PHP 编辑器的帮助手册中进行验证。
 
 现在在连接到 MySQL 之后，第二步是连接到所选数据库，然后连接到表以执行某些操作。让我们从选择或检索选项开始我们的操作示例。
 
@@ -2251,7 +2227,7 @@ print "<tr><td>".$row['sid']."</td>"."<td>".$row['name']."</td>"."<td>".$row['jo
 
 `mysql_close( $link_id );`
 
-### 数据库必须关闭，表也是如此。运行此代码的结果如下：
+## 数据库必须关闭，表也是如此。运行此代码的结果如下：
 
 ![](img/00054.jpeg)
 
@@ -2273,9 +2249,6 @@ print "<tr><td>".$row['sid']."</td>"."<td>".$row['name']."</td>"."<td>".$row['jo
 
 为了演示使用 PHP 向 MySQL 中的表插入数据的方法，让我们按如下方式创建一个 PHP 文件：
 
-
-
-
 PHP 文件末尾有一个表单，允许用户为表格中的每个字段输入值。`isset` 函数用于检查提交按钮是否被点击，如果是，则表单中输入的值将被插入到数据库中。可以在 `mysql_query( $sql, $link_id ) or die ( "Statement failed: " . mysql_error() );` 行之后写一个友好的提示信息。
 
 在插入语句中，务必注意引号错误。数据录入的结果可以通过使用 `PHPMyadmin` 浏览表格来观察。
@@ -2284,7 +2257,7 @@ PHP 文件末尾有一个表单，允许用户为表格中的每个字段输入�
 
 ![](img/00056.jpeg)
 
-#### Update method
+### Update method
 
 为了演示 PHP 代码中用于 MySQL 的更新方法，我们要记住在 Staff 表中 `sid` 是主键。
 
@@ -2348,15 +2321,13 @@ PHP 的第 7 版是一个主要版本，并且受新功能影响的领域之一�
 <html><body><?php$link_id = mysqli_connect( 'localhost','root','','thottungal') or die ("Could not connect: " . mysqli_connect_error());$sql = "SELECT * FROM staff";$result_id = mysqli_query( $link_id, $sql ) or die ( "Statement failed: " . mysqli_error($sql) );$x=mysqli_num_rows($result_id);print "<b>Total number of entries retrieved: </b>$x";print "<table border=1 width=800>";while ( $row = mysqli_fetch_array( $result_id ) ) {print "<tr><td>".$row['sid']."</td>"."<td>".$row['name']."</td>"."<td>".$row['job']."</td>"."<td>".$row['salary']."</td>"."<td>".$row['location']."</td></tr>";}mysqli_free_result($result_id);mysqli_close( $link_id );print "</table>";?></body></html>
 ```
 
+
+
 逻辑流程与之前的版本 5 相同。`$link_id` 连接到数据库。这里的区别是 `mysqli_connect` 括号内需要输入四个元素。最后一个是数据库名称。其余条目对于开发目的的本地安装是正确的，并且在托管站点上会略有不同。如果网站位于共享托管站点，则需要从共享托管站点的技术支持处获取这些值。
 
 在将查询赋给 `$sql` 之后，`mysqli_fetch_array` 创建的数组中获得的行数将被打印。然后如代码所示打印出数组。程序通过释放查询的内存然后关闭连接来结束。`mysqli_fetch_array` 函数可以处理带有字符串或数字关键字的数组。
 
 因此，除了上面提到的两个段落中的区域外，PHP 5 和 7 的版本非常相似。现在让我们尝试将一行插入到数据库中。版本 5 的相同代码将在下面修改以适应版本 7。
-
-
-
-
 
 进入`/path/to/xxx`目录，找到`xxx.json`。
 
@@ -2476,10 +2447,6 @@ oci_close($db);?></body></html>
 
 在上面的代码中，`oci_fetch_array` 有两个参数 - 正在解析的语句和数组键的类型。`OCI_BOTH` 表示数组同时使用字符串和数字键。如果键是字符串，则可改用 `OCI_ASSOC`。`row[0]` 表示数组中 oracle 表的第一列。
 
-
-
-
-
 如果需要使用每个 Oracle 表的列标题，请记住名称可能区分大小写。默认情况下，列标题为大写字母。因此，如果需要将列标题而不是数字用作数组键，上面的代码可以修改如下。
 
 ```
@@ -2558,6 +2525,8 @@ oci_close($db);
 上面示例中完成的插入可以通过另一种方法完成。此方法涉及使用 OCI8 函数 `oci_bind_by_name()`。
 
 `oci_bind_by_name()` 将 PHP 变量绑定到 Oracle 占位符。此绑定可提高数据库性能，也是避免 SQL 注入安全问题的一种方法。SQL 注入是一种计算机攻击，其中恶意代码嵌入到设计不佳的应用程序中，然后传递到后端数据库。绑定变量不被视为 SQL 语句的一部分，因此减少了 SQL 注入问题。代码如下：
+
+
 
 ```
 ?php
@@ -2687,10 +2656,6 @@ POSIX 在 PHP 中有六个函数，它们是：
 字面量是按原样写入并按原样解释的值。例如，字母 "b" 匹配字母 b。
 
 现在让我们编写一个程序，将输入与五位邮政编码匹配。邮政编码仅由数字组成。
-
-
-
-
 
 进入`/path/to/xxx`目录，找到`xxx.json`。
 
@@ -2887,10 +2852,6 @@ Windows 版 Oracle release 11.2 express 版的安装看起来与以下屏幕截�
 
 ![inst.jpg](img/00064.jpeg)
 
-
-
-
-
 ![inst2.jpg](img/00065.jpeg)
 
 ![inst3.jpg](img/00066.jpeg)
@@ -2935,9 +2896,11 @@ MySQL 管理允许打开 PHPMyadmin 以创建数据库和/或表。MySQL 数据�
 
 此界面无法直接访问其他数据库，例如 Oracle。也许在编辑器的后续版本中会有。 要激活用于连接 Oracle 的 OCI8 功能，必须找到 PHP.ini 文件。此版本编辑器中会有两个，因为与之关联有两个 PHP 版本。找到您想要的版本的 PHP.ini 文件，为此请前往 EasyPHP 的安装文件夹。在本书使用的计算机上，其位置为：
 
+
+
 `C:\\Program Files (x86)\\EasyPHP-Devserver-17\\eds-binaries\\php`
 
-适用于版本 7 和版本 5。选择您想要的 PHP 版本的文件夹，然后找到 PHP.ini 文件并取消注释 `remove ;` 处理 OCI8 dll 的行。如果有两行，则取消注释与 Oracle express 版本关联的那一行，如果计算机上安装的是该版本的数据库。
+适用于版本 7 和版本 5。选择您想要的 PHP 版本的文件夹，然后找到 `PHP.ini` 文件并取消注释 `remove ;` 处理 `OCI8` dll 的行。如果有两行，则取消注释与 Oracle express 版本关联的那一行，如果计算机上安装的是该版本的数据库。
 
 此编辑器上 PHP 的默认版本 `version 7` 是 PHP 5.6。可以使用的在线快速编辑器可用于粘贴代码并进行测试。
 
@@ -2947,7 +2910,7 @@ MySQL 管理允许打开 PHPMyadmin 以创建数据库和/或表。MySQL 数据�
 
 请记住，迄今为止，此在线编辑器适用于版本 5.6，并且可以肯定的是，在此编辑器的未来更新版本中，可以看到更现代的在线编辑器。
 
-### 附录 V. 参考文献
+## 附录 V. 参考文献
 
 我为与网页开发本科课程相关的实验室课程编译了这本书。
 
@@ -2959,9 +2922,8 @@ Beginning PHP and MySQL, From Novice to Professional, Gilmore, W Jason, Apress, 
 
 Oracle with PHP: php.net/manual/en/function.oci-connect.php
 
-关于作者：
+### 关于作者
 
 作者是 Oracle 认证的，并在过去十七年里在公共和私营部门担任 IT 和管理顾问。作者的教育背景是电气和计算机工程师，拥有工程系统与管理硕士学位。
 
 作者本和其他书籍的网页为：http://beam.to/fjtbooks
-

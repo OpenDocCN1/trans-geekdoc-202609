@@ -1,85 +1,26 @@
+
 # Qiskit 量子人工智能
-
-
-
-
-
-
-
-
 
 量子人工智能（QAI）是一项全新的跨学科研究领域，它将量子计算与人工智能（AI）相结合，旨在利用量子计算机的独特属性来增强 AI 系统的能力。*基于 Qiskit 的量子人工智能*一书对 QAI 领域提供了连贯的概述，为读者提供了在像笔记本电脑一样易于使用的设备上创建和操纵量子程序的工具。
 
-本书介绍了符号化量子算法、亚符号化量子算法以及量子机器学习（ML）算法，并结合相关的 Qiskit 代码逐逐步解释了每个过程。所有示例均可在 https://github.com/andrzejwichert/qai 下载。
+本书介绍了符号化量子算法、亚符号化量子算法以及量子机器学习（ML）算法，并结合相关的 Qiskit 代码逐逐步解释了每个过程。所有示例均可在 `https://github.com/andrzejwichert/qai` 下载。
 
 本书让读者能够在自己的家中的计算机上学习量子计算的基本概念，既适用于普通读者，也适用于计算机科学和 AI 相关课程的学生和教师。
 
 ![](img/52faec2d621d75e53089d939bb234a82_2_0.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-```
-```
-
-
-
 出版者注：本书根据作者提供的打印样稿制成。
 
-访问支持材料：https://github.com/andrzejewichert/qai。
+访问支持材料：`https://github.com/andrzejewichert/qai`。
 
 > 献我的儿子 André 和妻子 Manuela
 
 ![](img/52faec2d621d75e53089d939bb234a82_6_0.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - 15.4.2 示例 209
 - 15.4.3 多次应用 Trugenberger 放大 214
 - 15.5 结论 222
-
-
-
-
-
-
-
-
-
-
-
-
-
 - 22.3 示例 272
-
-
-
-
-
-
-
 
 序言 ■vii
 
@@ -91,11 +32,11 @@
 
 ## Grover 增强 – 第5 章
 
-我们描述了 Grover 增强算法。我们用叠加表示 $n$ 个状态；每个状态具有相同的实数正振幅。对所有 $n$ 个状态应用并行计算，状态通过负号进行求解，振幅为负值。然后我们应用基于 Householder 反射的线性操作，通过该反射，振幅值线性增长。对于维度大于四的情况，标记操作和 Householder 反射必须重复 $\sqrt{n}$ 次，因为在每一步中振幅都是线性增长的。在 $\sqrt{n}$ 步之后，我们测量解。该算法保证了比需要 $n$ 步的经典计算机二次方的加速。Grover 增强算法是最优的，可以证明不存在更好的算法。我们将使用 NumPy 的矩阵表示法演示 Grover 增强的基元。然后我们通过一个 qiskit 示例解释如何用表示八个状态的三个量子比特的量子门来表示该算法。
+我们描述了 Grover 增强算法。我们用叠加表示 $n$ 个状态；每个状态具有相同的实数正振幅。对所有 $n$ 个状态应用并行计算，状态通过负号进行求解，振幅为负值。然后我们应用基于 Householder 反射的线性操作，通过该反射，振幅值线性增长。对于维度大于四的情况，标记操作和 Householder 反射必须重复 $\sqrt{n}$ 次，因为在每一步中振幅都是线性增长的。在 $\sqrt{n}$ 步之后，我们测量解。该算法保证了比需要 $n$ 步的经典计算机二次方的加速。Grover 增强算法是最优的，可以证明不存在更好的算法。我们将使用 `NumPy` 的矩阵表示法演示 Grover 增强的基元。然后我们通过一个 qiskit 示例解释如何用表示八个状态的三个量子比特的量子门来表示该算法。
 
 ## SAT 问题 – 第6 章
 
-布尔可满足性问题（SAT 问题）是确定是否存在满足给定布尔公式的解释的问题，取决于该公式的求值是否为真 [22]。公式的每个变量都可以取真（1）或假（0）值。我们制定了 SAT 可满足性问题并逐步说明了一个示例。然后我们讨论了 SAT 问题与时间复杂度之间的关系。计算复杂度理论解决关于哪些问题可以在计算机上有限时间内求解的问题。决策问题是一种实例被表述为具有二元答案的问题计算问题。例如判断某个数字 $n$ 是否为质数的问题。大多数问题可以转换为决策问题。时间复杂度描述了运行算法所需的时间。时间复杂度通常通过计算算法执行的基础操作数量来估算。所花费的时间与算法执行的基础操作数量呈线性相关。如果计算机上的算法可以在多项式时间内确定与输入相关的关系，则该问题是简单的。多项式时间算法被认为是快速的，因为它们可以在计算机上可接受的时间内执行。否则，我们称该问题是困难的，这意味着所需时间呈指数级增长，无法在计算机上可接受的时间内执行。我们描述了一个带有三个布尔变量的布尔公式的 SAT 问题，并使用 qiskit 框架逐步说明了如何使用量子算法通过 Grover 增强解决该问题。
+布尔可满足性问题（SAT 问题）是确定是否存在满足给定布尔公式的解释的问题，取决于该公式的求值是否为真 [22]。公式的每个变量都可以取真（1）或假（0）值。我们制定了 SAT 可满足性问题并逐步说明了一个示例。然后我们讨论了 SAT 问题与时间复杂度之间的关系。计算复杂度理论解决关于哪些问题可以在计算机上有限时间内求解的问题。决策问题是一种实例被表述为具有二元答案的问题计算问题。例如判断某个数字 $n$ 是否为质数的问题。大多数问题可以转换为决策问题。时间复杂度描述了运行算法所需的时间。时间复杂度通常通过计算算法执行的基础操作数量来估算。所花费的时间与算法执行的基础操作数量呈线性相关。如果计算机上的算法可以在多项式时间内确定与输入相关的关系，则该问题是简单的。多项式时间算法被认为是快速的，因为它们可以在计算机上可接受的时间内执行。否则，我们称该问题是困难的，这意味着所需时间呈指数级增长，无法在计算机上可接受的时间内执行。我们描述了一个带有三个布尔变量的布尔公式的 SAT 问题，并使用 `qiskit` 框架逐步说明了如何使用量子算法通过 Grover 增强解决该问题。
 
 ## 符号状态表示 – 第7 章
 
@@ -109,11 +50,11 @@
 
 ## 数字谜题 – 第9 章
 
-我们通过 qiskit 实现符号 AI 中的一个玩具示例——3 数字谜题，演示了量子产生系统和量子树搜索的工作原理。目标是找到一系列移动，使板面从初始配置变为目标配置。我们描述了长期记忆中规则（产生式）的表示，并描述了深度一、二、三的搜索。深度三的搜索产生八种可能的状态。解通过预言进行标记，并应用一次 Grover 增强。为了增加解的概率值，我们将应用 Grover 增强。解对应于路径描述符，它指示了将板面从初始配置变为目标配置的规则（产生式）序列。
+我们通过 `qiskit` 实现符号 AI 中的一个玩具示例——3 数字谜题，演示了量子产生系统和量子树搜索的工作原理。目标是找到一系列移动，使板面从初始配置变为目标配置。我们描述了长期记忆中规则（产生式）的表示，并描述了深度一、二、三的搜索。深度三的搜索产生八种可能的状态。解通过预言进行标记，并应用一次 Grover 增强。为了增加解的概率值，我们将应用 Grover 增强。解对应于路径描述符，它指示了将板面从初始配置变为目标配置的规则（产生式）序列。
 
 ## 8 数字题 – 第10 章
 
-$n$ 数字题是建模算法的经典问题。对于 $n$ 数字题有 $n+1$ 个对象：$n$ 个单元和一个空单元。每个对象可以用 $\rho = [\log n+1]$ 个量子比特进行编码，$n+1$ 个对象的配置可以用寄存器 $z := \rho \cdot (n+1)$ 表示。函数 $g(x)$ 的酉运算符 $T$ 作用于 $n+1$ 个单元 $x \in B^2$ 和 $c \in B^1$。
+$n$ 数字题是建模算法的经典问题。对于 $n$ 数字题有 $n+1$ 个对象：$n$ 个单元和一个空单元。每个对象可以用 $\rho = [\log n+1]$ 个量子比特进行编码，$n+1$ 个对象的配置可以用寄存器 `z := \rho \cdot (n+1)` 表示。函数 `g(x)` 的酉运算符 `T` 作用于 $n+1$ 个单元 `x \in B^2` 和 `c \in B^1`。
 
 ```
 $T(x) = |x|f(x) \oplus c$.
@@ -124,9 +65,6 @@ $T(x) = |x|f(x) \oplus c$.
 ## 块世界 – 第11 章
 
 块世界是 AI 中的一个流行领域 [73]。这些块可以放在桌子上，也可以被捡起并放在另一个桌子上，目标是构建一个或多个垂直块栈。每次只能移动一个块，任何位于块下方的块都不能移动。有三种块。它们根据颜色（红色、绿色和蓝色）或标记而不同。在 AI 中，它们传统上被称为 A、B、C [61]。该问题的简单性允许比较经典方法与量子计算。我们说明了如何通过纠缠实现的绑定。我们说明了如何用类描述符和位置描述符（形容词）表示状态，并执行深度一搜索。A、B、C 块规划问题产生了非常的分支因子。我们证明 Grover 增强将分支因子减少到平均分支因子的平方根，而不是最大分支因子。
-
-
-
 
 ## 前言
 
@@ -144,11 +82,11 @@ $T(x) = |x|f(x) \oplus c$.
 
 # 量子学习矩阵 (Lernmatrix) – 第15 章
 
-我们引入了基于 $n$ 个单元存储在量子叠加态中的量子学习矩阵。Lernmatrix 是一种类似于关联记忆的架构。在检索阶段，根据 Trugenberger 的建议，基于欧拉公式的 1 的量子计数用于模式恢复。我们演示了如何用量子电路表示量子学习矩阵，并使用 qiskit 进行实验。然后，我们引入了一种增加正确答案测量值的树状结构。在激活阶段，查询量子学习学（Lernematics）并高效地估计结果。与传统方法或 Grover 算法相比，所需时间要短得多。
+我们引入了基于 $n$ 个单元存储在量子叠加态中的量子学习矩阵。Lernmatrix 是一种类似于关联记忆的架构。在检索阶段，根据 Trugenberger 的建议，基于欧拉公式的 1 的量子计数用于模式恢复。我们演示了如何用量子电路表示量子学习矩阵，并使用 `qiskit` 进行实验。然后，我们引入了一种增加正确答案测量值的树状结构。在激活阶段，查询量子学习学（Lernematics）并高效地估计结果。与传统方法或 Grover 算法相比，所需时间要短得多。
 
 ## 幅度编码 – 第16 章
 
-幅度编码将长度为一的实数或复数向量编码到量子态的幅度中。我们描述了自顶向下的策略并逐步介绍了算法步骤。我们描述了组合态策略。与其使用多控制旋转门来表示二进制树，我们可以使用带有简单旋转门的受控交换（SWAP）门。生成的电路深度小于自顶向下的划分深度；然而，所需的量子比特数量与旋转门的数量相同，且量子比特在操作后会纠缠。我们描述了使用 qiskit 命令初始化所需态的可能性。我们无法访问表示向量的核（kernels），但可以使用交换测试（swap test）估计它们之间的标量积。我们给出了两个交换测试示例。
+幅度编码将长度为一的实数或复数向量编码到量子态的幅度中。我们描述了自顶向下的策略并逐步介绍了算法步骤。我们描述了组合态策略。与其使用多控制旋转门来表示二进制树，我们可以使用带有简单旋转门的受控交换（SWAP）门。生成的电路深度小于自顶向下的划分深度；然而，所需的量子比特数量与旋转门的数量相同，且量子比特在操作后会纠缠。我们描述了使用 `qiskit` 命令初始化所需态的可能性。我们无法访问表示向量的核（kernels），但可以使用交换测试（swap test）估计它们之间的标量积。我们给出了两个交换测试示例。
 
 ## 量子核 – 第17 章
 
@@ -172,12 +110,9 @@ $T(x) = |x|f(x) \oplus c$.
 
 经典感知机描述了一种监督学习算法，它只考虑线性可分的问题，即组可以通过直线或超平面分开。量子感知机通常不包含学习，而是高效地计算二值单元（神经元）的输出。它是基于量子相位估计算法的。量子感知机可以作为更大系统的构建块，并并行处理任意数量的输入向量。我们展示了一个针对二维输入的量子感知机简单示例。
 
-
-
-
 # 混合方法 – 变分分类 – 第 23 章
 
-变分方法的特点是使用经典优化算法来迭代更新一个参数化的量子试验解，也称为拟态（ansatz，源自德语，意为“方法”）。参数化量子解由参数化量子电路定义，例如 ZZFeatureMap。我们通过一个简单的示例展示了变分分类器的基本原理。我们描述了交叉熵损失函数和同步扰动随机近似算法（SPSA）。优化器执行随机梯度近似，这只需要对损失函数进行两次测量。Qiskit 变分量子分类器（VQC），它可以被嵌入到经典的机器学习（ML）任务中。我们展示了一个简单的 VQC 分类器示例，其学习过程基于 SPSA。
+变分方法的特点是使用经典优化算法来迭代更新一个参数化的量子试验解，也称为拟态（ansatz，源自德语，意为“方法”）。参数化量子解由参数化量子电路定义，例如 `ZZFeatureMap`。我们通过一个简单的示例展示了变分分类器的基本原理。我们描述了交叉熵损失函数和同步扰动随机近似算法（SPSA）。优化器执行随机梯度近似，这只需要对损失函数进行两次测量。Qiskit 变分量子分类器（VQC），它可以被嵌入到经典的机器学习（ML）任务中。我们展示了一个简单的 VQC 分类器示例，其学习过程基于 SPSA。
 
 # 结论 – 第 24 章
 
@@ -209,9 +144,6 @@ Andreas Wichert 在萨尔湖大学学习计算机科学，并于 1993 年毕业�
 
 [此处由于原文存在大量重复和重复，已按要求进行翻译]
 
-
-
-
 4 使用 Qiskit 的量子人工智能
 
 ## 1.2 符号人工智能
@@ -227,7 +159,7 @@ Andreas Wichert 在萨尔湖大学学习计算机科学，并于 1993 年毕业�
 
 某些表达式对某些对象是真实的。这通过一个存在量词和一个变量来表示。
 
-``````
+```
 ∃Bird(x).
  至少有一个对象是鸟。
 ```
@@ -239,6 +171,8 @@ Andreas Wichert 在萨尔湖大学学习计算机科学，并于 1993 年毕业�
 在此背景下，符号本身并不代表任何可利用知识。例如，它们不能被用于定义相似性标准本身。算法中符号的使用将人类行为引入了 Newell 和 Simon (1976) 著名的**物理系统假设** [70]：“物理系统表现出智能的充分必要条件是它是一个物理系统”。符号不存在于世界中；它们是人类思维的构建，并简化了通信和解决问题过程中所使用的表征过程。
 
 ### 1.2.1 位
+
+
 
 符号在计算机中用位（bits）表示。最小的信息单位是二进制数字，或称为位。表示 $n$ 个符号需要 $[\log_2 n]$。例如，表示 9 个符号需要 4 位，具有 $16 = 2^4$ 种可能的生成的代码 $16 = 2^4$。对于 7 位，有 $128 = 2^7$ 个备选符号可以表示不同的字符。128 个不同字符由美国信息交换标准代码即 ASCII 字符集描述，这是最流行的编码。它是于 1963 年左右基于英语字母表开发的。除了所有
 
@@ -252,20 +186,25 @@ Andreas Wichert 在萨尔湖大学学习计算机科学，并于 1993 年毕业�
 
 可以使用谓词演算描述包含属性和关系的世界状态。这种描述可以用于定义运算符，类似于 STRIPS 科学方法中使用的那些（见图 1.2）[29, 73, 33]。ABC 块世界一直是人工智能研究中的一个流行领域，通过使用三个命名为 A、B 和 C 的块作为示例。三个块在桌子上以某种初始配置排列（如图 1.2 所示）。每个上方最多有一个块，且每个块可能在桌子上，也可以在另一个块上方。机器人手臂可以在桌子上堆叠、取下和移动块。
 
-# 使用 Qiskit 的量子人工智能
+#### 使用 Qiskit 的量子人工智能
 
-ontable(A).
-ontable(C).
-on(B,A).
-clear(B).
-clear(C).
-gripping().
+`ontable(A)`.
+
+`ontable(C)`.
+
+`on(B,A)`.
+
+`clear(B)`.
+
+`clear(C)`.
+
+`gripping()`.
 
 ![](img/52faec2d621d75e53089d939bb234a82_32_0.png)
 
 图 1.2 块世界。
 
-使用块示例，“取”（pickup）、“放下”（putdown）、“堆叠”（stack）和“取下”（unstack）操作可以定义。这些表达式是普遍成立的，因此省略了全称量词。
+使用块示例，“取”`pickup`、“放下”`putdown`、“堆叠”`stack`和“取下”`unstack`操作可以定义。这些表达式是普遍成立的，因此省略了全称量词。
 
 ```
 pickup(x) {gripping() ∧ clear(x)}
@@ -291,15 +230,19 @@ unstack(x) {gripping() ∧ clear(x)}
  D: 
 ```
 
-# 人工智能 ■7
+#### 人工智能 ■7
 
 每个运算符都表示为三元组。第一个元素是前置条件，即应用运算符必须满足的状态。当变量被识别时，该状态为真或假。第二个元素是应用运算符后对状态的添加。最后一个元素是执行操作时从状态描述中移除的项目。这些运算符遵循公理，因为它们规定了状态的哪些部分应该改变，这被称为**框架问题** [125]。
 
-+ ontable(A).
-clear(A).
-ontable(C).
-clear(C).
-gripping(B).
+`ontable(A)`.
+
+`clear(A)`.
+
+`ontable(C)`.
+
+`clear(C)`.
+
+`gripping(B)`.
 
 8 使用 Qiskit 的量子人工智能
 
@@ -309,23 +252,26 @@ gripping(B).
 
 ![](img/52faec2d62d75e53089d939bb234a82_33_0.png)
 
-图 1.3 运算符 pickup(B) 应用于图 1.2 状态后的状态。
-
-
-
+图 1.3 运算符 `pickup(B)` 应用于图 1.2 状态后的状态。
 
 人工智能 ■ 9
 
 | 5 | 8 | | 7 | 5 | 8 | | 7 | 5 | 8 |
+
 | 7 | 6 | 3 | | 6 | 3 | | 4 | 6 | 3 |
+
 | 4 | 1 | 2 | | 4 | 1 | 2 | | 1 | 2 |
 
 | 5 | 8 | | 7 | 5 | 8 | | 7 | 5 | 8 |
+
 | 4 | 6 | 3 | | 4 | 6 | 3 | | 4 | 6 | |
+
 | 1 | | 2 | | 1 | | 2 | | 1 | 2 | 3 |
 
 | 5 | 8 | | 7 | | 8 | | 7 | | 8 |
+
 | 4 | | 6 | | 4 | 5 | 6 | | 4 | 5 | 6 |
+
 | 1 | 2 | 3 | | 1 | 2 | 3 | | 1 | 2 | 3 |
 
 图 1.4 第一个模式（左上）代表初始配置，最后一个（右下）代表目标配置。一系列移动描述了该问题的解决方案。
@@ -366,8 +312,6 @@ $$d(\mathbf{x}, \mathbf{y}) = ||\mathbf{x} - \mathbf{y}|| = \sqrt{|x_1 - y_1|^2 
 
 $$d_1(\mathbf{x}, \mathbf{y}) = ||\mathbf{x} - \mathbf{y}|| = |x_1 - y_1| + |x_2 - y_2| + \dots + |x_D - y_D|,$$
 
-
-
 ![](img/52faec2d621d75e53089d939bb234a82_39_0.png)
 
 **图 1.5** 在霍夫德网络（Hopfield network）中，所有单元都通过权重相互连接。每个单元都有一个值：白色像素表示 -1，黑色像素表示 1。单元的激活状态表示状态 $t$ 下的模式。通常单元是异步更新的，在时刻 $t$ 对它们进行更新。训练后，我们从某个配置开始，如果 $t$ 时的状态与 $t+1$ 刻相同，则网络将使用更新规则在几步后收敛到一个吸引子。
@@ -388,7 +332,7 @@ $$d_1(\mathbf{x}, \mathbf{y}) = ||\mathbf{x} - \mathbf{y}|| = |x_1 - y_1| + |x_2
 $(\mathbf{x}) = \sum_{j=1}^{D} w_j \cdot x_j = \cos \omega \cdot ||\mathbf{x}||, \quad (1.5)$
 ```
 
-测量一个向量在另一个向量上的投影。点积是一个线性表示，通常由值 $net$ 表示
+测量一个向量在另一个向量上的投影。点积是一个线性表示，通常由值 `net` 表示
 
 ```
 $net = \sum_{j=1}^{D} w_j \cdot x_j.$
@@ -406,7 +350,7 @@ $o = \begin{cases} 1 & \text{if } net \ge T \\ -1 & \text{if } net < T \end{case
 $o = sgn(net) = \begin{cases} 1 & \text{if } net \ge 0 \\ -1 & \text{if } net < 0 \end{cases} \quad (1.7)$
 ```
 
-$sgn(net)$ 操作与真实生物神经元的阈值操作有关，其中 $-1$ 表示不发放，$1$ 表示发放。发放表示神经元向其与其连接的其他神经元发送输出信息。不发放意味着没有发送任何信息。传递函数也是激活函数，其中 $o$ 是人工神经元的输出
+`sgn(net)` 操作与真实生物神经元的阈值操作有关，其中 $-1$ 表示不发放，$1$ 表示发放。发放表示神经元向其与其连接的其他神经元发送输出信息。不发放意味着没有发送任何信息。传递函数也是激活函数，其中 $o$ 是人工神经元的输出
 
 ```
 $o = sgn(net) = sgn(\mathbf{x}|\mathbf{w}) = sgn(\sum_{j=1}^{D} w_j \cdot x_j) \quad (1.8)$
@@ -416,7 +360,7 @@ $o = sgn(net) = sgn(\mathbf{x}|\mathbf{w}) = sgn(\sum_{j=1}^{D} w_j \cdot x_j) \
 
 ### 1.3.5 感知机
 
-感知机描述了一种监督学习算法，仅考虑可以通过直线或超平面分离的线性可问题 [67] [86]。定义 $x_0 = 1$ [42, 44]，感知机实现了数学函数 $sgn(net)$
+感知机描述了一种监督学习算法，仅考虑可以通过直线或超平面分离的线性可问题 [67] [86]。定义 `x_0 = 1` [42, 44]，感知机实现了数学函数 `sgn(net)`
 
 ```
 $net := \sum_{j=0}^{D} w_j \cdot x_j = \sum_{j=1}^{D} w_j \cdot x_j + \langle\mathbf{w}\rangle + w_0 \quad (1.9)$
@@ -428,7 +372,7 @@ $net := \sum_{j=0}^{D} w_j \cdot x_j = \sum_{j=1}^{D} w_j \cdot x_j + \langle\ma
 $o := sgn(net) = \begin{cases} 1 & \text{if } net \geq 0 \\ -1 & \text{if } net < 0 \end{cases} \quad (1.10)$
 ```
 
-值 $w_0$ 被称为“偏置”（bias），它是不依赖于任何输入的常数。感知机的目标是学习如何将模式分类为两类 $C_1=1$ 和 $C_2=-1$。为了实现这一点，模型需要模式与其相应类别之间的示例
+值 `w_0` 被称为“偏置”（bias），它是不依赖于任何输入的常数。感知机的目标是学习如何将模式分类为两类 `C_1=1` 和 `C_2=-1`。为了实现这一点，模型需要模式与其相应类别之间的示例
 
 ```
 $Data = \{(x_1, t_1), (x_2, t_2), \dots, (x_N, t_N)\}$
@@ -440,19 +384,19 @@ $Data = \{(x_1, t_1), (x_2, t_2), \dots, (x_N, t_N)\}$
 $t_k \in \{-1, 1\}$,
 ```
 
-对于 $C_1$ 的输出为 $o = -1$，对于 $C_2$ 的输出为 $o = 1$，带有
+对于 `C_1` 的输出为 `o = -1`，对于 `C_2` 的输出为 `o = 1`，带有
 
 ```
 $o = sgn(\sum_{j=0}^{D} w_j \cdot x_j) = sgn(\langle\mathbf{w}\rangle + w_0) \quad (1.11)$
 ```
 
-$x_0 = 1$。简化来说，感知机学习函数 $f(x)$
+`x_0 = 1`。简化来说，感知机学习函数 `f(x)`
 
 ```
 $f(x) = \begin{cases} 1 & \text{if } \langle\mathbf{w}\rangle + w_0 \geq 0 \\ -1 & \text{otherwise.} \end{cases} \quad (1.12)$
 ```
 
-通过这种方法，感知机只能解决线性可问题（见图 1.7），即可以通过直线或超平面分离。超平面由模型权重 $\mathbf{w}$ 和 $w_0$ 决定。正确的权重可以通过监督学习确定。在学习之前，权重 $w_i$ 初始化为随机值，因此超平面随机放置在空间中。感知机学习算法验证任何输入 $x_k$，输出值 $o_k$ 是否属于 $t_k$ 所代表的类别。如果输入匹配类别，算法不接触边界；如果不匹配，算法向输入 $x_k$ 更容易分类的方向移动边界。这种移动对应于更新规则
+通过这种方法，感知机只能解决线性可问题（见图 1.7），即可以通过直线或超平面分离。超平面由模型权重 $\mathbf{w}$ 和 `w_0` 决定。正确的权重可以通过监督学习确定。在学习之前，权重 `w_i` 初始化为随机值，因此超平面随机放置在空间中。感知机学习算法验证任何输入 `x_k`，输出值 `o_k` 是否属于 `t_k` 所代表的类别。如果输入匹配类别，算法不接触边界；如果不匹配，算法向输入 `x_k` 更容易分类的方向移动边界。这种移动对应于更新规则
 
 ```
 $\Delta w_j = \eta \cdot (t_k - o_k) \cdot x_j, \quad (1.13)$
@@ -460,25 +404,29 @@ $\Delta w_j = \eta \cdot (t_k - o_k) \cdot x_j, \quad (1.13)$
 
 ![](img/52faec2d621d75e53089d939bb234a82_42_0.png)
 
-图 1.7 超平面由 $w$ 和 $w_0$ ，在二维空间由直线 $w_0 + w_1 \cdot x_1 + w_2 \cdot x_2 = 0$。感知机只解决线性可问题，在我们的例子中为类别 1 和类别 2。
+图 1.7 超平面由 `w` 和 `w_0` ，在二维空间由直线 `w_0 + w_1 \cdot x_1 + w_2 \cdot x_2 = 0`。感知机只解决线性可问题，在我们的例子中为类别 1 和类别 2。
 
 以及
 
+```
 $w_j^{new} = w_j^{old} + \Delta w_j, \quad (1.14)$
 ```
 
-其中 $\eta$ 被称为学习率，定义了应用于边界的移动幅度，$0 < \eta \leq 1$。
+其中 `η` 被称为学习率，定义了应用于边界的移动幅度，`0 < η ≤ 1`。
 
-如果训练数据是线性可且足够小的，算法收敛到正确分类。在为 $\eta$ 分赋值时，我们必须考虑两个冲突的要求：平均过去的输入以提供稳定的权重估计需要较小的 $\eta$；然而，对于生成输入向量 $\mathbf{x}$ 的过程底层分布真实变化的快速适应需要较大的 $\eta$。
+如果训练数据是线性可且足够小的，算法收敛到正确分类。在为 `η` 分赋值时，我们必须考虑两个冲突的要求：平均过去的输入以提供稳定的权重估计需要较小的 `η`；然而，对于生成输入向量 `x` 的过程底层分布真实变化的快速适应需要较大的 `η`。
 
-这种简单算法是许多监督算法的基础。如果训练集不是线性可分的，则不存在解。在这种情况下，经过几个迭代后，权重开始震荡。为了获得近似解，学习率 $\eta$ 随着迭代的进行必须逐渐减到零。
+这种简单算法是许多监督算法的基础。如果训练集不是线性可分的，则不存在解。在这种情况下，经过几个迭代后，权重开始震荡。为了获得近似解，学习率 `η` 随着迭代的进行必须逐渐减到零。
 
 ### 1.3.6 支持向量机
 
-给定训练集 $\{\mathbf{x}_i, t_i\}_{i=1}^N$，其中 $t_i \in \{-1, +1\}$ 的线性可模式具有
+给定训练集 `{\mathbf{x}_i, t_i}_{i=1}^N`，其中 `t_i ∈ {-1, +1}` 的线性可模式具有
 
 ```
 $\mathbf{w}^T \cdot \mathbf{x}_i + w_0 \geq 0, \quad \text{for} \quad t_i = +1$
+```
+
+```
 $\mathbf{w}^T \cdot \mathbf{x}_i + w_0 < 0, \quad \text{for} \quad t_i = -1$
 ```
 
@@ -488,7 +436,7 @@ $\mathbf{w}^T \cdot \mathbf{x}_i + w_0 < 0, \quad \text{for} \quad t_i = -1$
 $$\mathbf{w}^T \cdot \mathbf{x} + w_0 = \mathbf{w}^T \cdot \mathbf{x} + b = 0$$
 ```
 
-我们希望在每个类别和边界之间有一个间隔（margin），我们想要找到参数 $w_{opt}$ 和 $b_{opt}$，使得
+我们希望在每个类别和边界之间有一个间隔（margin），我们想要找到参数 `w_opt` 和 `b_opt`，使得
 
 ```
 $$\mathbf{w}^{opt} \cdot \mathbf{x}_i + b_{opt} \geq 1, \quad \text{for} \quad t_i = +1 \quad (1.15)$$
@@ -504,13 +452,15 @@ $$\mathbf{w}^{opt} \cdot \mathbf{x}_i + b_{opt} \leq -1, \quad \text{for} \quad 
 $$\mathbf{w}^T \cdot \mathbf{x} + w_0 = 0 \quad (1.17)$$
 ```
 
-值 1 是为了方便设置的，因为我们可以相应地缩放 $w_{opt}$ 和 $b_{opt}$。距离边界的数据点 $\{x_i, t_i\}$ 
+值 1 是为了方便设置的，因为我们可以相应地缩放 `w_opt` 和 `b_opt`。距离边界的数据点 `{x_i, t_i}` 
 
 ```
 $$\mathbf{w}^{opt} \cdot \mathbf{x}_i + b_{opt} = \pm 1 \quad (1.18)$$
 ```
 
-被称为支持向量。这就是为什么该算法被称为支持向量机。训练样本中其余示例对于确定超平面的位置是**无关的**。优化后，我们得到
+
+
+被称为支持向量。这就是为什么该算法被称为支持向量机。训练样本中其余示例对于确定超平面的位置是无关的。优化后，我们得到
 
 ```
 $$\mathbf{w} = \sum_{i=1}^{N} \alpha_i \cdot t_i \cdot \mathbf{x}_i, \quad \sum_{i=1}^{N} \alpha_i \cdot t_i = 0, \quad (1.19)$$
@@ -535,10 +485,6 @@ $0 \leq \alpha_i \leq C, \quad i = 1, 2, \dots, N \quad (1.22)$
 ```
 
 其中 $C$ 是一个用户指定的正参数。
-
-
-
-
 
 ```
 $w_{opt}^T \cdot \mathbf{x}_i + b_{opt} = \pm 1 \quad (1.24)$
@@ -623,7 +569,6 @@ $0 \leq \alpha_i \leq C, \quad i = 1, 2, \dots, N \quad (1.34)$
 ```
 
 其中 $C$ 是用户指定的参数。计算输出：
-
 1. 首先我们确定偏置 $b = \frac{1}{N_i} \sum_{j=1}^{N_i} \alpha_j \cdot t_j \cdot k(\mathbf{x}_i, \mathbf{x}_j) \quad (1.35)$
 2. 然后输出 $o = \text{sgn}\left(\sum_{i=1}^{N_s} \alpha_i \cdot t_i \cdot k(\mathbf{x}_i, \mathbf{x}_i) + b\right) \quad (1.36)$
 
@@ -685,7 +630,8 @@ $$\sum_{i=1}^N \alpha_i \cdot t_i = 0 \quad (1.33)$$
 
 ```
 $0 \leq \alpha_i \leq C, \quad i = 1, 2, \dots, N \quad (1.34)$
-```
+
+
 
 其中 $C$ 是用户指定的参数。计算输出：
 
@@ -697,10 +643,6 @@ $0 \leq \alpha_i \leq C, \quad i = 1, 2, \dots, N \quad (1.34)$
 ### 1.3.8 深度学习
 
 感知机的局限性并不适用于具有非线性单元的前馈网络，也称为通过反向传播算法训练的多层感知机。根据通用性定理，通过反向传播训练的单隐藏层神经网络能够近似任何连续函数。尝试构建一个只有一个层的网络来近似复杂函数通常需要大量的节点（“胖”神经网络）。直接的解决方案是构建具有更多隐藏层的网络。经验实验表明，“深度”神经网络的效果优于“胖”神经网络，见图 1.8。
-
-
-
-
 
 ## 22 使用 Qiskit 进行量子人工智能研究
 
@@ -735,52 +677,48 @@ $0 \leq \alpha_i \leq C, \quad i = 1, 2, \dots, N \quad (1.34)$
 
 量子比特由二维向量表示。向量的第一个维度对应0，第二个对应1。两个维度的值对应于测量时两个状态之一出现的概率。我们可以通过张量运算将一个量子比特组合成多个量子比特。两个量子比特有四种可能的状态，第一个维度表示状态-0，第二个-0，第三-0和第四-1。它们由一个四维向量描述。四个量子比特将代表16种组合，256种组合，由一个256维向量表示，以此此类推。可能的数量随量子比特数量呈指数级增长，状态数等于量子比特数的2次方 [119]。
 
-
-
-
-
 ### 2.2.2 表示
 
 物理系统的量子力学描述与概率表示相关；它由希尔伯特空间（Hilbert space）中的一个向量描述。这种描述将二维或三维欧几得空间扩展到有限或无限维的空间。在这样的空间中，欧几得范数由内积诱导
 
 ```
-$|x| = \sqrt{\langle x|x\rangle} (2.1)
+$|x| = \sqrt{\langle x|x\rangle} (2.1)$
 ```
 
 没有标量积就没有正交性。在希尔伯特空间中，两个向量正交当且仅当标量积为零。选取一个 $n$ 维希尔伯特空间 $\mathcal{H}_n$ 的基。二态系统由二维空间 $\mathcal{H}_2$ 描述。对于基向量
 
 ```
-$e_1 = \left(\begin{pmatrix} 1 \\ 0\end{pmatrix}\right), e_2 = \left(\begin{pmatrix} 0 \\ 1\end{pmatrix}\right) (2.2)
+$e_1 = \left(\begin{pmatrix} 1 \\ 0\end{pmatrix}\right), e_2 = \left(\begin{pmatrix} 0 \\ 1\end{pmatrix}\right) (2.2)$
 ```
 
 系统由一个带有复数 $\omega_1, \omega_2$ 的向量 $x$ 描述，这些复数代表每个维度的幅
 
 ```
-$x = \omega_1 \cdot e_1 + \omega_2 \cdot e_2 = \left(\begin{pmatrix} \omega_1 \\ \omega_2\end{pmatrix}\right) (2.3)
+$x = \omega_1 \cdot e_1 + \omega_2 \cdot e_2 = \left(\begin{pmatrix} \omega_1 \\ \omega_2\end{pmatrix}\right) (2.3)$
 ```
 
 概率是 0 到 1 之间的实数。系统处于 $e_1$ 和 $e_2$ 的概率分别为 $|\omega_1|^2$ 和 $|\omega_2|^2$。这是因为复数与其共轭的积始终是实数
 
 ```
-$$\omega^* \cdot \omega = (x-y \cdot i) \cdot (x+y \cdot i) = x^2 + |\omega|^2 (2.4)
+$$\omega^* \cdot \omega = (x-y \cdot i) \cdot (x+y \cdot i) = x^2 + |\omega|^2 (2.4)$$
 ```
 
 表示状态的向量是归一化的。它的长度为一。幅与概率对应关系为
 
 ```
-$|\omega_1|^2 + |\omega_2|^2 = 1.
+$|\omega_1|^2 + |\omega_2|^2 = 1.$
 ```
 
 保罗·狄拉克（Paul Dirac）为描述状态的向量 $x$ 引入了以下符号
 
 ```
-$|x\rangle = |\omega_1 \cdot e_1\rangle + |\omega_2 \cdot e_2\rangle = |\omega_1 |x\rangle + |\omega_2 |x\rangle = \left(\begin{pmatrix} \omega_1 \\ \omega_2\end{pmatrix}\right) (2.5)
+$|x\rangle = |\omega_1 \cdot e_1\rangle + |\omega_2 \cdot e_2\rangle = |\omega_1 |x\rangle + |\omega_2 |x\rangle = \left(\begin{pmatrix} \omega_1 \\ \omega_2\end{pmatrix}\right) (2.5)$
 ```
 
 其中
 
 ```
-$|e_1\rangle = |x\rangle
+$|e_1\rangle = |x\rangle$
 ```
 
 这是列向量的简记。与标量积 $\langle x|x\rangle$ 相关的行向量是 $\langle x|$ ("bra"), 列向量是 $|x\rangle$ ("ket") 来自 bra-ket 符号。状态向量只是 ket 向量的一个特定实例。它由特定基的选择确定，并指的是具有某些系统属性的观测值。
@@ -832,49 +770,49 @@ $|0\rangle = \left( \begin{matrix} 1 \\ 0 \end{matrix} \right), |1\rangle = \lef
 由一个向量 $|x\rangle$ 描述，复数 $\omega_1, \omega_2$ 代表每个维度的幅
 
 ```
-$|x\rangle = \omega_1 \cdot |0\rangle + \omega_2 \cdot |1\rangle = \left(\begin{pmatrix} \omega_1 \\ \omega_2\end{pmatrix}\right).
+$|x\rangle = \omega_1 \cdot |0\rangle + \omega_2 \cdot |1\rangle = \left(\begin{pmatrix} \omega_1 \\ \omega_2\end{pmatrix}\right).$
 ```
 
 该向量长度为
 
 ```
-$|\omega_1|^2 + |\omega_2|^2 = 1.
+$|\omega_1|^2 + |\omega_2|^2 = 1.$
 ```
 
 酉矩阵 $H$（Hadamard 矩阵）在 ket 符号下执行映射
 
 ```
-$H \cdot |0\rangle = \frac{1}{\sqrt{2}}|0\rangle + \frac{1}{\sqrt{2}}|1\rangle
+$H \cdot |0\rangle = \frac{1}{\sqrt{2}}|0\rangle + \frac{1}{\sqrt{2}}|1\rangle$
 ```
 
 在向量符号下
 
 ```
-$H \cdot |1\rangle = \frac{1}{\sqrt{2}}|0\rangle - \frac{1}{\sqrt{2}}|1\rangle
+$H \cdot |1\rangle = \frac{1}{\sqrt{2}}|0\rangle - \frac{1}{\sqrt{2}}|1\rangle$
 ```
 
 再次应用 $H$ 得到
 
 ```
-$H \cdot \left( \frac{1}{\sqrt{2}}|0\rangle + \frac{1}{\sqrt{2}}|1\rangle \right) = |0\rangle
+$H \cdot \left( \frac{1}{\sqrt{2}}|0\rangle + \frac{1}{\sqrt{2}}|1\rangle \right) = |0\rangle$
 ```
 
 我们如何表示由两个量子比特组成的寄存器？这样的寄存器将表示 $2^2$ 个可能的状态，并表示在希尔伯特空间 $\mathcal{H}_4$ 中。第一个量子比特由二维希尔伯特空间 $\mathcal{H}_2$ 表示
 
 ```
-$|x\rangle = \omega_0 \cdot |0\rangle + \omega_1 \cdot |1\rangle = \left(\begin{pmatrix} \omega_0 \\ \omega_1\end{pmatrix}\right).
+$|x\rangle = \omega_0 \cdot |0\rangle + \omega_1 \cdot |1\rangle = \left(\begin{pmatrix} \omega_0 \\ \omega_1\end{pmatrix}\right).$
 ```
 
 第二个由表示
 
 ```
-$|y\rangle = \omega_0 \cdot |0\rangle + \omega_1 \cdot |1\rangle = \left(\begin{pmatrix} \omega_0 \\ \omega_1\end{pmatrix}\right):
+$|y\rangle = \omega_0 \cdot |0\rangle + \omega_1 \cdot |1\rangle = \left(\begin{pmatrix} \omega_0 \\ \omega_1\end{pmatrix}\right):$
 ```
 
 两个量子比特的寄存器表示为 $|x\rangle$ 和 $|y\rangle$ 的直积
 
 ```
-$|x\rangle \otimes |y\rangle = |x\rangle = \begin{pmatrix} \omega_0 \\ \omega_1 \end{pmatrix} \otimes \begin{pmatrix} \omega_0 \cdot \omega_0 & \omega_0 \cdot \omega_1 \\ \omega_1 \cdot \omega_0 & \omega_1 \cdot \omega_1 \end{pmatrix} = \begin{pmatrix} \omega_0 \cdot \omega_0 & \omega_0 \cdot \omega_1 \\ \omega_1 \cdot \omega_0 & \omega_1 \cdot \omega_1 \end{pmatrix} \quad (2.14)
+$|x\rangle \otimes |y\rangle = |x\rangle = \begin{pmatrix} \omega_0 \\ \omega_1 \end{pmatrix} \otimes \begin{pmatrix} \omega_0 \cdot \omega_0 & \omega_0 \cdot \omega_1 \\ \omega_1 \cdot \omega_0 & \omega_1 \cdot \omega_1 \end{pmatrix} = \begin{pmatrix} \omega_0 \cdot \omega_0 & \omega_0 \cdot \omega_1 \\ \omega_1 \cdot \omega_0 & \omega_1 \cdot \omega_1 \end{pmatrix} \quad (2.14)$
 ```
 
 或者
@@ -884,19 +822,19 @@ $|xy\rangle = |\omega_0 \cdot |0\rangle + \omega_1 \cdot |1\rangle| \otimes |\om
 ```
 
 ```
-$|xy\rangle = \omega_0 \cdot |00\rangle + \omega_0 \cdot |01\rangle + \omega_1 \cdot |10\rangle + \omega_1 \cdot |11\rangle \quad (2.15)
+$|xy\rangle = \omega_0 \cdot |00\rangle + \omega_0 \cdot |01\rangle + \omega_1 \cdot |10\rangle + \omega_1 \cdot |11\rangle \quad (2.15)$
 ```
 
 使用新基
 
 ```
-$|00\rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, |01\rangle = \begin{pmatrix} 0 \\ 1 \end{pmatrix}, |10\rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, |11\rangle = \begin{pmatrix} 0 \\ 1 \end{pmatrix} \quad (2.16)
+$|00\rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, |01\rangle = \begin{pmatrix} 0 \\ 1 \end{pmatrix}, |10\rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, |11\rangle = \begin{pmatrix} 0 \\ 1 \end{pmatrix} \quad (2.16)$
 ```
 
 三个量子比特的寄存器表示为 $2^3$ 个状态，表示在希尔伯特空间 $\mathcal{H}_s$ 中
 
 ```
-$|xyz\rangle = |x\rangle \otimes |y\rangle \otimes |z\rangle = \omega_0 \cdot |000\rangle + \omega_1 \cdot |001\rangle + \omega_2 \cdot |010\rangle + \omega_3 \cdot |011\rangle + \omega_4 \cdot |100\rangle + \omega_5 \cdot |101\rangle + \omega_6 \cdot |110\rangle + \omega_7 \cdot |111\rangle \quad (2.17)
+$|xyz\rangle = |x\rangle \otimes |y\rangle \otimes |z\rangle = \omega_0 \cdot |000\rangle + \omega_1 \cdot |001\rangle + \omega_2 \cdot |010\rangle + \omega_3 \cdot |011\rangle + \omega_4 \cdot |100\rangle + \omega_5 \cdot |101\rangle + \omega_6 \cdot |110\rangle + \omega_7 \cdot |111\rangle \quad (2.17)$
 ```
 
 长度为 $m$ 的量子寄存器表示维度为 $n=2^m$ 的希尔伯特空间中的 $m$ 个量子比特。
@@ -909,60 +847,41 @@ $\mathcal{H}_{n-w} = \mathcal{H}_n \otimes \mathcal{H}_w \quad (2.18)$
 
 根据这个定义，我们可以在两个量子比特上定义算子
 
-```
-$H \cdot (\omega_0 \cdot |0\rangle + \omega_1 \cdot |1\rangle) \otimes H \cdot (\omega_0 \cdot |0\rangle + \omega_1 \cdot |1\rangle) = \\
-```
 
-```
+
+$H \cdot (\omega_0 \cdot |0\rangle + \omega_1 \cdot |1\rangle) \otimes H \cdot (\omega_0 \cdot |0\rangle + \omega_1 \cdot |1\rangle) = \\$
+
 $$\left(H \cdot \begin{pmatrix} \omega_0 \\ \omega_1 \end{pmatrix}\right) \otimes \left(H \cdot \begin{pmatrix} \omega_0 \\ \omega_1 \end{pmatrix}\right) \quad (2.19)$$
-```
-
-
-
 
 # 使用 Qiskit 的量子人工智能
 
-```
 $$(H \otimes H) \cdot (|omega_0 \cdot |0\rangle + \omega_1 \cdot |1\rangle) \otimes (|omega_0 \cdot |0\rangle + \omega_1 \cdot |1\rangle) = (H \otimes H) \quad (2.20)$$
-```
 
 由此得：
 
-```
 $$(H \cdot \begin{pmatrix} \omega_0 \\ \omega_1 \end{pmatrix}) \otimes (H \cdot \begin{pmatrix} \omega_0 \\ \omega_1 \end{pmatrix}) = (H \otimes H) \cdot \begin{pmatrix} \omega_0 \\ \omega_1 \\ \omega_2 \\ \omega_3 \end{pmatrix} \quad (2.21)$$
-```
 
 矩阵之间的张量积定义为：
 
-```
 $$A \otimes B = \begin{pmatrix} a_{11} \cdot b_{11} & a_{11} \cdot b_{12} & a_{12} \cdot b_{11} & a_{12} \cdot b_{12} \\ a_{11} \cdot b_{21} & a_{11} \cdot b_{22} & a_{12} \cdot b_{21} & a_{12} \cdot b_{22} \\ a_{21} \cdot b_{11} & a_{21} \cdot b_{12} & a_{22} \cdot b_{21} & a_{22} \cdot b_{22} \end{pmatrix}$$
-```
 
 例如 $H \otimes H$ 为：
 
-```
 $$H \otimes H = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 & 1 \\ -1 & -1 \end{pmatrix} \otimes \frac{1}{\sqrt{2}} \begin{pmatrix} 1 & 1 \\ -1 & -1 \end{pmatrix} = \frac{1}{2} \begin{pmatrix} 1 & 1 & 1 & 1 \\ 1 & 1 & -1 & -1 \\ -1 & -1 & 1 & 1 \\ -1 & -1 & 1 & 1 \end{pmatrix}$$
-```
 
 ## 2.4 测量
 
 在从初始状态开始的酉变换信息处理之后，算法的结果由测量决定。测量对应于态向量的坍缩，即向基态的投影。这种投影是不可逆的，且与酉演化不一致。对于由单位长度向量表示的状态：
 
-```
 $$|omega_1 \cdot |x_1\rangle + \omega_2 \cdot |x_2\rangle + \dots + \omega_n \cdot |x_n\rangle$$
-```
 
 在 $n$ 维希尔伯特空间中观测 $|x_y\rangle$。测量后（观测态）处于一个基：
 
-```
 $$|1 \cdot |x_y\rangle$$
-```
 
 量子系统的状态被投影到对应于观测的子空间，并且代表该状态的向量被归一化为单位长度。观测符描述了某些维度的子空间，特殊情况是单维。系统的一部分可以通过维度大于一的子空间中的投影来观测。$n$ 维希尔伯特空间 $|x\rangle \in \mathcal{H}_n$ 与 $w$ 维希尔伯特空间 $|y\rangle$（由正交基 $|xy_{w} \rangle \in \mathcal{H}_{n-w}$ 定义）的复合系统。系统的状态表示为：
 
-```
 $$|xy\rangle = \sum_{i=1}^n \sum_{j=1}^w \omega_{ij} |x_i\rangle |y_j\rangle \quad (2.22)$$
-```
 
 例如：
 
@@ -1029,87 +948,55 @@ $$|1\rangle = \frac{1}{\sqrt{2}}|0\rangle - \frac{1}{\sqrt{2}}|1\rangle.$$
 
 $m$ 个量子比特寄存器表示为 $m$ 个量子比特的直积。它定义了 $n=2^m$ 维希尔伯特空间 $\mathcal{H}_n$，拥有正交基 $|x_1\rangle, |x_2\rangle, \dots, |x_n\rangle$。例如，四个量子比特定义了一个 16 维希尔伯特空间 $\mathcal{H}_{16}$，基为：
 
-```
-\begin{pmatrix} 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \end{pmatrix}
-```
+$$\begin{pmatrix} 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \end{pmatrix}$$
 
-
-
-
-
-```
-$H_3 = \frac{1}{\sqrt{2}} \begin{pmatrix} H_2 & H_2 \\ H_2 & -H_2 \end{pmatrix} = \frac{1}{\sqrt{2^3}} \begin{pmatrix} 1 & 1 & 1 & 1 & 1 & 1 & 1 \\ 1 & -1 & 1 & -1 & 1 & -1 & -1 \\ 1 & 1 & -1 & -1 & 1 & -1 & -1 \\ 1 & -1 & -1 & 1 & -1 & 1 & 1 \\ 1 & 1 & 1 & 1 & -1 & -1 & -1 \\ 1 & -1 & -1 & 1 & -1 & 1 & 1 \\ 1 & 1 & -1 & -1 & -1 & 1 & 1 \end{pmatrix}$
-```
+$$H_3 = \frac{1}{\sqrt{2}} \begin{pmatrix} H_2 & H_2 \\ H_2 & -H_2 \end{pmatrix} = \frac{1}{\sqrt{2^3}} \begin{pmatrix} 1 & 1 & 1 & 1 & 1 & 1 & 1 \\ 1 & -1 & 1 & -1 & 1 & -1 & -1 \\ 1 & 1 & -1 & -1 & 1 & -1 & -1 \\ 1 & -1 & -1 & 1 & -1 & 1 & 1 \\ 1 & 1 & 1 & 1 & -1 & -1 & -1 \\ 1 & -1 & -1 & 1 & -1 & 1 & 1 \\ 1 & 1 & -1 & -1 & -1 & 1 & 1 \end{pmatrix}$$
 
 Hadamard 算符 $H_m$ 将代表希尔伯特空间 $H^m$ 中基态量子比特 $|z\rangle$ 映射，$z \in B^m$ 代表长度为 $m$ 的表示二进制数的二进制字符串。
 
-```
-$|z\rangle = \frac{1}{\sqrt{2^m}} \sum_{x \in B^m} (-1)^{(z) \cdot x} |x\rangle \quad (2.32)$
-```
+$$|z\rangle = \frac{1}{\sqrt{2^m}} \sum_{x \in B^m} (-1)^{(z) \cdot x} |x\rangle \quad (2.32)$$
 
 其中 $(\langle z|x\rangle)$ 是在具有两个元素（0 和 1）的二进制域上的标量。两个比特的乘法等于 $AND$ 操作：
 
-```
 $0 \cdot 0 = 0 \wedge 0 = 0, \quad 0 \cdot 1 = 0 \wedge 1 = 0, \quad 1 \cdot 0 = 1 \wedge 0 = 0, \quad 1 \cdot 1 = 1 \wedge 1 = 1$
-```
 
 加法等于 $XOR$ 操作 $\oplus$：
 
-```
 $0 + 0 = 0 \oplus 0 = 0, \quad 0 + 1 = 0 \oplus 1 = 1,$
-```
 
-```
 $1 + 0 = 1 \oplus 0 = 1, \quad 1 + 1 = 1 \oplus 1 = 0.$
-```
 
 对于由 $m$ 个量子比特表示的状态：
 
-```
-$|0\rangle^{\otimes m} = |0\rangle|0\rangle|0\rangle\cdots|0\rangle = \begin{pmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{pmatrix}$
-```
+$$|0\rangle^{\otimes m} = |0\rangle|0\rangle|0\rangle\cdots|0\rangle = \begin{pmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{pmatrix}$$
 
 Hadamard 算符 $H_m$ 将基映射为不带负号的所有可能状态的叠加态：
 
-```
-$H_m|0\rangle^{\otimes m} = \frac{1}{\sqrt{2^m}} \sum_{x \in B^m} |x\rangle. \quad (2.33)$
-```
+$$H_m|0\rangle^{\otimes m} = \frac{1}{\sqrt{2^m}} \sum_{x \in B^m} |x\rangle. \quad (2.33)$$
 
 例如：
 
-```
-$H_3|0\rangle^{\otimes 3} = H_3|000\rangle = \frac{1}{\sqrt{2^3}} \sum_{x \in B^3} |x\rangle$
-```
+$$H_3|0\rangle^{\otimes 3} = H_3|000\rangle = \frac{1}{\sqrt{2^3}} \sum_{x \in B^3} |x\rangle$$
 
-```
-$H_3|000\rangle =$
-```
+$$H_3|000\rangle =$$
 
-```
-$= \frac{1}{\sqrt{2^3}} (|000\rangle + |001\rangle + |010\rangle + |011\rangle + |100\rangle + |101\rangle + |111\rangle).
-```
+$= \frac{1}{\sqrt{2^3}} (|000\rangle + |001\rangle + |010\rangle + |011\rangle + |100\rangle + |101\rangle + |111\rangle).$
 
 它可以表示为：
 
-```
-$H_3(000) = H_1|0\rangle \otimes H_1|0\rangle \otimes H_1|0\rangle = \left(\frac{|0|+|1\rangle}{\sqrt{2}}\right) \cdot \left(\frac{|0|+|1\rangle}{\sqrt{2}}\right) \cdot \left(\frac{|0|+|1\rangle}{\sqrt{2}}\right)$
-```
+$$H_3(000) = H_1|0\rangle \otimes H_1|0\rangle \otimes H_1|0\rangle = \left(\frac{|0|+|1\rangle}{\sqrt{2}}\right) \cdot \left(\frac{|0|+|1\rangle}{\sqrt{2}}\right) \cdot \left(\frac{|0|+|1\rangle}{\sqrt{2}}\right)$$
 
 以及：
 
-```
-$H_3 \cdot H_3(000) = |000\rangle$.
-```
+$$H_3 \cdot H_3(000) = |000\rangle.$$
 
 这是因为 $H_m = H_m^*$，因此 $I_m = H_m \cdot H_m$。基态 $|11\rangle$ 被映射为：
 
-```
-$H_2|11\rangle = H_1|1\rangle \otimes H_1|1\rangle = \left(\frac{|0-|1\rangle}{\sqrt{2}}\right) \cdot \left(\frac{|0-|1\rangle}{\sqrt{2}}\right)$
-```
+$$H_2|11\rangle = H_1|1\rangle \otimes H_1|1\rangle = \left(\frac{|0-|1\rangle}{\sqrt{2}}\right) \cdot \left(\frac{|0-|1\rangle}{\sqrt{2}}\right)$$
 
-```
+
+
 $H_2|11\rangle = \frac{1}{2}(|00\rangle - |01\rangle + |11\rangle)$.
-```
 
 ### 2.6.1 串行与并行操作的矩阵表示
 
@@ -1182,6 +1069,7 @@ $H_1 = H_2 \otimes H_2 = H_1 \otimes H_1 \otimes H_1.$
 
 ```
 $cX|0\rangle = |00\rangle, cX|01\rangle = |01\rangle$
+
 cX|10\rangle = |11\rangle, cX|11\rangle = |10\rangle.$
 ```
 
@@ -1203,8 +1091,10 @@ $\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \cdot \begin{pmatrix} 1 & 0 \\ 0 &
 $\frac{|00\rangle+|11\rangle}{\sqrt{2}} \quad (2.34)$
 ```
 
-是不可分解的。我们采用反反法。假设该状态是可分解的，会导致：：```
-$$\frac{|00\rangle+|11\rangle}{\sqrt{2}} = (a_0|0\rangle+a_1|1\rangle) \otimes (b_0|0\rangle+b_1|1\rangle) = \\n= a_0\cdot b_0|00\rangle+a_0\cdot b_1|01\rangle+a_1\cdot b_0|10\rangle+a_1\cdot b_1|11\rangle \\n\to a_0\cdot b_0=\frac{1}{\sqrt{2}}, a_0\cdot b_1=0, a_1\cdot b_0=0, a_1\cdot b_1=\frac{1}{\sqrt{2}} \quad (2.35)$
+是不可分解的。我们采用反反法。假设该状态是可分解的，会导致：：
+
+```
+$$\frac{|00\rangle+|11\rangle}{\sqrt{2}} = (a_0|0\rangle+a_1|1\rangle) \otimes (b_0|0\rangle+b_1|1\rangle) = \\n= a_0\cdot b_0|00\rangle+a_0\cdot b_1|01\rangle+a_1\cdot b_0|10\rangle+a_1\cdot b_1|11\rangle \\n\to a_0\cdot b_0=\frac{1}{\sqrt{2}}, a_0\cdot b_1=0, a_1\cdot b_0=0, a_1\cdot b_1=\frac{1}{\sqrt{2}} \quad (2.35)$$
 ```
 
 这是一个矛盾。
@@ -1212,10 +1102,7 @@ $$\frac{|00\rangle+|11\rangle}{\sqrt{2}} = (a_0|0\rangle+a_1|1\rangle) \otimes (
 不可分解的状态被称为纠缠。如果两个量子比特纠缠在状态 $\frac{|00\rangle+|11\rangle}{\sqrt{2}}$ 中，观测其中一个将以 $1/2$ 的概率得到 $|0\rangle$ 或 $|1\rangle$。然而，在在另一个未观测的量子比特上不可能观测到不同的值。两个量子比特表现为一个整体，并被称为 *ebit*。有四个 $ebits$：
 
 ```
-$$\frac{|00\rangle+|11\rangle}{\sqrt{2}}, \frac{|00\rangle-|11\rangle}{\sqrt{2}}, \frac{|01\rangle+|10\rangle}{\sqrt{2}}, \frac{|01\rangle-|10\rangle}{\sqrt{2}} \quad (2.37)$
-```
-
-
+$$\frac{|00\rangle+|11\rangle}{\sqrt{2}}, \frac{|00\rangle-|11\rangle}{\sqrt{2}}, \frac{|01\rangle+|10\rangle}{\sqrt{2}}, \frac{|01\rangle-|10\rangle}{\sqrt{2}} \quad (2.37)$$
 
 
 
@@ -1227,11 +1114,11 @@ $$\frac{|00\rangle+|11\rangle}{\sqrt{2}}, \frac{|00\rangle-|11\rangle}{\sqrt{2}}
 
 产生任意量子态副本的线性操作是不可能的。我们无法复制状态的未知振幅分布。这在量子计算领域具有深远影响，因为我们无法复用任意量子态。
 
-为了实现这一点，我们定义了一个复制机。我们使用正交空间的一个正交基，例如 $|x_1\rangle$，并定义一个酉变复制算子，将 $|x\rangle \in H_n$ 复制为：
+为了实现这一点，我们定义了一个复制机。我们使用正交空间的一个正交基，例如 `|x_1\rangle`，并定义一个酉变复制算子，将 `|x\rangle \in H_n` 复制为：
 
 $$U_{copy}(|x\rangle, |x_1\rangle) = |x\rangle|x\rangle. \quad (2.38)$$
 
-$U_{copy}$ 是否存在？对于基态，$U_{copy}$ 是定义的。它可以通过 $CX$ 实现，当 $|x_1\rangle = |0\rangle$ 和 $|x_2\rangle = |1\rangle$：
+`U_{copy}` 是否存在？对于基态，`U_{copy}` 是定义的。它可以通过 `CX` 实现，当 `|x_1\rangle = |0\rangle` 和 `|x_2\rangle = |1\rangle`：
 
 $$U_{copy}(|x_1\rangle, |x_1\rangle) = |x_1\rangle|x_1\rangle$, $U_{copy}(|x_2\rangle, |x_1\rangle) = |x_2\rangle|x_2\rangle.$$
 
@@ -1243,7 +1130,7 @@ $$|x\rangle = \frac{|x_1\rangle + |x_2\rangle}{\sqrt{2}}$$
 
 $$U_{copy}(|x\rangle, |x_1\rangle) = |x\rangle|x\rangle = \left(\frac{|x_1\rangle + |x_2\rangle}{\sqrt{2}}\right) \otimes \left(\frac{|x_1\rangle + |x_2\rangle}{\sqrt{2}}\right) = \frac{1}{2} \cdot (|x_1\rangle|x_1\rangle + |x_1\rangle|x_2\rangle + |x_2\rangle|x_1\rangle + |x_2\rangle|x_2\rangle).$$
 
-由于 $U_{copy}$ 的线性性质，可以得出：
+由于 `U_{copy}` 的线性性质，可以得出：
 
 $$U_{copy}(|x\rangle, |x_1\rangle) = U_{copy}\left(\frac{|x_1\rangle + |x_2\rangle}{\sqrt{2}}, |x_1\rangle\right) =$$
 
@@ -1255,13 +1142,13 @@ $$U_{copy}(|x_1\rangle|x_1\rangle) + U_{copy}(|x_2\rangle|x_1\rangle) = \frac{1}
 
 ## 2.9 相位反传 (PHASE KICK-BACK)
 
-如果我们将 CX 门作为控制量子比特 $|1\rangle$ 作用于目标值 $\frac{|0\rangle}{\sqrt{2}}$，我们得到：
+如果我们将 `CX` 门作为控制量子比特 `|1\rangle` 作用于目标值 $\frac{|0\rangle}{\sqrt{2}}$，我们得到：
 
 $$CX|1\rangle \cdot \left(\frac{|0\rangle}{\sqrt{2}}\right)=|1\rangle \cdot \left(\frac{X|0\rangle - X|1\rangle}{\sqrt{2}}\right)$$
 $$CX|1\rangle \cdot \left(\frac{|0\rangle}{\sqrt{2}}\right)=|1\rangle \cdot (-1\right) \cdot \left(\frac{|0\rangle - |1\rangle}{\sqrt{2}}\right)$$
 $$CX|1\rangle \cdot \left(\frac{|0\rangle - |1\rangle}{\sqrt{2}}\right)=-|1\rangle \cdot \left(\frac{|0\rangle - |1\rangle}{\sqrt{2}}\right)$$
 
-对于控制量子比特 $|0\rangle$，什么都不做：
+对于控制量子比特 `|0\rangle`，什么都不做：
 
 $$CX|0\rangle \cdot \left(\frac{|0\rangle - |1\rangle}{\sqrt{2}}\right)=|0\rangle \cdot \left(\frac{|0\rangle - |1\rangle}{\sqrt{2}}\right)$$
 
@@ -1269,39 +1156,35 @@ $$CX|0\rangle \cdot \left(\frac{|0\rangle - |1\rangle}{\sqrt{2}}\right)=|0\rangl
 
 ## 2.10 量子布尔门 (QUANTUM BOOLEAN GATES)
 
-由 $m$ 位位组成的可逆电路对应于一个表示 $m$ 位位排列的酉映射，它定义了一个单射映射 $\mathbf{B}^m \rightarrow \mathbf{B}^m$。酉排列矩阵可以表示这种酉映射。一种更优雅的方法是将电路映射到布尔门。这种酉映射允许我们通过布尔门的数量来确定电路的复杂度。布尔门包括恒等门 $I$、非门 $X$ 和控制门 $CX$。这种输出操作。这些操作可以通过酉门表示。Toffoli 门 $CCX$ 是三个量子比特的酉门，可以在 $H_8$ 空间通过矩阵表示：
+由 $m$ 位位组成的可逆电路对应于一个表示 $m$ 位位排列的酉映射，它定义了一个单射映射 $\mathbf{B}^m \rightarrow \mathbf{B}^m$。酉排列矩阵可以表示这种酉映射。一种更优雅的方法是将电路映射到布尔门。这种酉映射允许我们通过布尔门的数量来确定电路的复杂度。布尔门包括恒等门 `I`、非门 `X` 和控制门 `CX`。这种输出操作。这些操作可以通过酉门表示。Toffoli 门 `CCX` 是三个量子比特的酉门，可以在 $H_8$ 空间通过矩阵表示：
 
 $$CCX = \begin{pmatrix} 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \end{pmatrix}$$
 
 # Qiskit
 
-我们描述了如何安装 qiskit 并演示了我们将使用的两个后端函数。我们在简单的量子硬币上演示了 qiskit 的工作原理。我们指示了通过酉矩阵表示简单的量子电路并获取酉命令。引入了消计算的概念，因为在量子计算中我们无法重置量子比特。Deutsch算法通过调用一次函数确定未知函数 $f: B^1 \rightarrow B^1; f(x) = y$ 是否为常数。Deutsch算法是第一个（1985年）展示量子优势的算法；它证明了在某些设置下量子计算机严格于经典计算机。最后，我们给出一个在真实的量子计算机上运行 Deutsch算法的示例。
+我们描述了如何安装 `qiskit` 并演示了我们将使用的两个后端函数。我们在简单的量子硬币上演示了 `qiskit` 的工作原理。我们指示了通过酉矩阵表示简单的量子电路并获取酉命令。引入了消计算的概念，因为在量子计算中我们无法重置量子比特。Deutsch算法通过调用一次函数确定未知函数 $f: B^1 \rightarrow B^1; f(x) = y$ 是否为常数。Deutsch算法是第一个（1985年）展示量子优势的算法；它证明了在某些设置下量子计算机严格于经典计算机。最后，我们给出一个在真实的量子计算机上运行 Deutsch算法的示例。
 
 ## 3.1 开发工具包
 
-Qiskit 是一个用于电路和算法层面处理量子计算机的开源开发工具包（SDK）[21]。IBM Quantum, https://quantum-computing.ibm.com/。它提供了创建量子程序并在量子设备或本地模拟器上运行它们的工具。它遵循通用量子计算的量子电路模型，并适用于任何遵循该模型的量子硬件。Qiskit 基于 Python，你可以在 https://qiskit.org 获取有关的所有信息。
+`Qiskit` 是一个用于电路和算法层面处理量子计算机的开源开发工具包（SDK）[21]。IBM Quantum, https://quantum-computing.ibm.com/。它提供了创建量子程序并在量子设备或本地模拟器上运行它们的工具。它遵循通用量子计算的量子电路模型，并适用于任何遵循该模型的量子硬件。`Qiskit` 基于 Python，你可以在 https://qiskit.org 获取有关的所有信息。
 
 ## 3.2 安装
 
-在安装 qiskit 之前，你应该安装 Anaconda，这是一个包含 Jupyter 的科学计算平台 Python 分发版。你也可以安装 Miniconda，这是一个 conda 的免费精简安装程序，仅包含 conda、Python 及其依赖的包，以及一个小的
+在安装 `qiskit` 之前，你应该安装 Anaconda，这是一个包含 Jupyter 的科学计算平台 Python 分发版。你也可以安装 Miniconda，这是一个 conda 的免费精简安装程序，仅包含 conda、Python 及其依赖的包，以及一个小的
 
 ^1作者感谢在该工作中使用 IBM Quantum 服务。文中的观点仅代表作者，不代表 IBM 或 IBM Quantum 团队的官方政策或立场。
 
 DOI: 10.1201/9781003373404-3
 
-
-
-
-
 # 使用 Qiskit 进行量子量子人工智能
 
-其他实用包的数量。此外，你还可以安装 Visual Studio Code。Visual Studio Code 是一个重新定义的代码编辑器，用于运行 Jupyter 笔记本并能自动识别不同的环境 https://code.visualstudio.com/。你可以在该网站找到 qiskit 的指令：
+其他实用包的数量。此外，你还可以安装 Visual Studio Code。Visual Studio Code 是一个重新定义的代码编辑器，用于运行 Jupyter 笔记本并能自动识别不同的环境 https://code.visualstudio.com/。你可以在该网站找到 `qiskit` 的指令：
 
 https://qiskit.org/documentation/getting_started.html。
 
 从那里你可以很好地访问在线教程。
 
-在安装 qiskit 之前，你必须在 Anaconda 或终端中启动提示符。从那里你可以调用 conda。要安装 qiskit，请执行以下命令创建一个名为 qiskit（或任何你喜欢的名称）的环境：
+在安装 `qiskit` 之前，你必须在 Anaconda 或终端中启动提示符。从那里你可以调用 `conda`。要安装 `qiskit`，请执行以下命令创建一个名为 `qiskit`（或任何你喜欢的名称）的环境：
 
 ```
 conda create -n qiskit python 3
@@ -1313,7 +1196,7 @@ conda create -n qiskit python 3
 conda-env list
 ```
 
-你通过名称 ENV_NAME 激活 qiskit 环境。然后可以使用命令激活它：
+你通过名称 `ENV_NAME` 激活 `qiskit` 环境。然后可以使用命令激活它：
 
 ```
 conda activate ENV_NAME
@@ -1332,7 +1215,7 @@ pip install qiskit[visualization]
 pip install 'qiskit[visualization]'
 ```
 
-我们可以通过以下检查已安装的 qiskit 版本（见图3.1）：
+我们可以通过以下检查已安装的 `qiskit` 版本（见图3.1）：
 
 ```
 import qiskit.tools.jupyter
@@ -1342,23 +1225,23 @@ import qiskit.tools.jupyter
 
 ## 3.3 后端模拟器函数
 
-Qiskit 通过 Aer 包提供了不同的后端模拟器函数。我们将使用两个模拟器。
+`Qiskit` 通过 Aer 包提供了不同的后端模拟器函数。我们将使用两个模拟器。
 
-- 状态向量模拟器（statevector simulator）对 qiskit 电路执行理想运行，并在应用后返回最终状态向量（所有比特）。电路的状态向量可以表示概率值（新版本中的概率），这些值对应于状态向量与酉矩阵相乘。状态向量模拟器比其他模拟方法需要更长时间和更多的内存，因为状态向量维度随比特数量呈指数级增长，n = 2^m（其中 m 是比特数）。
+- 状态向量模拟器（statevector simulator）对 `qiskit` 电路执行理想运行，并在应用后返回最终状态向量（所有比特）。电路的状态向量可以表示概率值（新版本中的概率），这些值对应于状态向量与酉矩阵相乘。状态向量模拟器比其他模拟方法需要更长时间和更多的内存，因为状态向量维度随比特数量呈指数级增长，n = 2^m（其中 m 是比特数）。
 
 图 3.1 (a) 在带有 8 Gb 的旧电脑上运行 Qiskit 0.34.2 版本；(b) 在带有 16 Gb 的现代电脑上运行 Qiskit 0.43.0 版本。
 
-- qasm 模拟器的行为类似于当今的实际设备，容易受到退相干引起的噪声影响。它运行计数（count），即电路中必须定义的测量比特的采样。它的尺寸小得多，且不会随着比特数量的增加而呈指数级增长。
+- `qasm` 模拟器的行为类似于当今的实际设备，容易受到退相干引起的噪声影响。它运行计数（count），即电路中必须定义的测量比特的采样。它的尺寸小得多，且不会随着比特数量的增加而呈指数级增长。
 
 ## 3.4 兼容性
 
 书中介绍的量子电路主要使用基础量子门的简单量子电路，这些门可以很容易移植到其他软件开发工具包。你可以从 https://github.com/andrezweweigart/qai 下载书中的示例（Jupyter 笔记本）。
 
-Qiskit 软件开发工具包（SDK）正在不断开发，不同版本之间存在变化。程序已经在带有 8 Gb 的旧电脑上运行的 Qiskit 0.34.2 版本以及带有 16 Gb 的现代电脑上运行的 Qiskit 0.43.0 版本上经过测试。关于示例的主要差异是直方图图上的注释。在旧版本中，左侧的直方图注释总是“Probabilities”（概率）。在较新版本中，注释使用了使用的模拟器。statevector 注释用于 qasm 模拟器的“Count”。引入准概率概念是为了对经典统计力学应用量子修正。准概率分布不满足传统概率分布的所有属性，例如，对于由于量子力学干涉而没有经典模型的状态，它可以取负值。然而，正如本书描述的，相应的效应在我们的模拟中并不起任何作用。
+`Qiskit` 软件开发工具包（SDK）正在不断开发，不同版本之间存在变化。程序已经在带有 8 Gb 的旧电脑上运行的 Qiskit 0.34.2 版本以及带有 16 Gb 的现代电脑上运行的 Qiskit 0.43.0 版本上经过测试。关于示例的主要差异是直方图图上的注释。在旧版本中，左侧的直方图注释总是“Probabilities”（概率）。在较新版本中，注释使用了使用的模拟器。statevector 注释用于 qasm 模拟器的“Count”。引入准概率概念是为了对经典统计力学应用量子修正。准概率分布不满足传统概率分布的所有属性，例如，对于由于量子力学干涉而没有经典模型的状态，它可以取负值。然而，正如本书描述的，相应的效应在我们的模拟中并不起任何作用。
 
 ## 44 使用 Qiskit 进行量子量子人工智能
 
-另一个差异存在 qiskit 机器学习算法库中。我们将在第 23 章中使用一个示例，那里包含两个用于变分分类器的不同笔记本。
+另一个差异存在 `qiskit` 机器学习算法库中。我们将在第 23 章中使用一个示例，那里包含两个用于变分分类器的不同笔记本。
 
 ## 3.5 示例：量子硬币
 
@@ -1388,7 +1271,7 @@ $W = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} = \frac{1}
 
 如果系统从状态 |0⟩ 开始并经历时间演化，观测到 0 或 1 的概率为 $|\frac{1}{\sqrt{2}}|^2=1/2$。如果我们不进行测量并重复映射，观测到 0 的概率变为零，观测到 1 的概率变为一。这是由于 [1] 的幅度相互抵消。这种效应是由于破坏性干涉引起的，且不会出现在概率分布中，因为所有系数是非负实数。
 
-启动 Anaconda Navigator 或 Visual Studio Code 编辑器（或任何支持 Jupyter 的编辑器）。新建文件，Jupyter 笔记本，通过缩进环境名称选择正确的通道。Hadamard 矩阵 H 在 qiskit 中通过 Hadamard 门 qc(qubit) 表示，其中 qc 是带有所选名称 qc 的量子电路（你也可以选择其他名称，书中我们使用名称 qc）。量子硬币以基态 |0⟩ 定义：
+启动 Anaconda Navigator 或 Visual Studio Code 编辑器（或任何支持 Jupyter 的编辑器）。新建文件，Jupyter 笔记本，通过缩进环境名称选择正确的通道。Hadamard 矩阵 H 在 `qiskit` 中通过 Hadamard 门 `qc(qubit)` 表示，其中 `qc` 是带有所选名称 `qc` 的量子电路（你也可以选择其他名称，书中我们使用名称 `qc`）。量子硬币以基态 |0⟩ 定义：
 
 ```
 $H|0\rangle = \frac{1}{\sqrt{2}}|0\rangle + \frac{1}{\sqrt{2}}|1\rangle. \quad (3.5)$
@@ -1400,7 +1283,7 @@ $H|0\rangle = \frac{1}{\sqrt{2}}|0\rangle + \frac{1}{\sqrt{2}}|1\rangle. \quad (
 qc = QuantumCircuit(1)
 ```
 
-在 qiskit 量子电路中，所有比特都初始化为状态 |0>。Hadamard 门 H 作用于比特零，电路中的比特编号为 0, 1, . . 在我们的电路中只有一个比特。
+在 `qiskit` 量子电路中，所有比特都初始化为状态 |0>。Hadamard 门 H 作用于比特零，电路中的比特编号为 0, 1, . . 在我们的电路中只有一个比特。
 
 Qiskit ■ 45
 
@@ -1415,7 +1298,6 @@ qc.h(0)
 ```
 from qiskit import QuantumCircuit, Aer, execute
 from qiskit.visualization import plot_histogram
-
 qc = QuantumCircuit(1)
 qc.h(0)
 qc.draw()
@@ -1426,13 +1308,12 @@ qc.draw()
 ```
 from qiskit import QuantumCircuit, Aer, execute
 from qiskit.visualization import plot_histogram
-
 qc = QuantumCircuit(1)
 qc.h(0)
 qc.draw()
 ```
 
-3.5.1 Statevector
+### 3.5.1 Statevector
 
 下一步我们将执行状态向量模拟并在其中绘制结果。
 
@@ -1454,11 +1335,9 @@ array_to_latex(final_state, prefix="Statevector = ")
 $H \cdot |0\rangle = H \cdot |1\rangle = \frac{1}{\sqrt{2}}|0\rangle - \frac{1}{\sqrt{2}}|1\rangle. \quad (3.6)$
 ```
 
-3.5.2 Qasm Simulator
+### 3.5.2 Qasm Simulator
 
-qasm 模拟器承诺行为类似于当今的实际设备，容易受到退相干引起的噪声影响。它返回计数（count），即测量比特的采样
-
-
+`qasm` 模拟器承诺行为类似于当今的实际设备，容易受到退相干引起的噪声影响。它返回计数（count），即测量比特的采样
 
 ![](img/52faec2d621d75e53089d939bb234a82_73_0.png)
 
@@ -1467,18 +1346,29 @@ qasm 模拟器承诺行为类似于当今的实际设备，容易受到退相干
 对于电路中必须定义的被测量子比特，测量值存储在传统的比特（conventional bits）中。在我们的量子硬币示例中，我们通过命令 `qc = QuantumCircuit(1,1)` 定义了一个量子电路，第一个索引表示量子比特的数量，第二个表示传统比特的数量。
 
 ```python
-qc = QuantumCircuit(1,1)
-qc.h(0)
-qc.measure(0,0)
-qc.draw()
 ```
 
+
+
+`qc = QuantumCircuit(1,1)`
+
+`qc.h(0)`
+
+`qc.measure(0,0)`
+
+`qc.draw()`
+
+```
 命令 `qc.measure(0,0)` 表示我们测量该量子比特（计数从 0 开始而不是 1），并将测量结果存储在传统比特 c 中。量子电路如图[图 3.5]()所示。
+```
 
 ```python
 simulator = Aer.get_backend('qasm_simulator')
+
 result = execute(qc, simulator, shots=10).result()
+
 counts = result.get_counts()
+
 print(f"Total count: {counts}")
 ```
 
@@ -1490,9 +1380,13 @@ $H \cdot (\frac{1}{\sqrt{2}}|0\rangle + \frac{1}{\sqrt{2}}|1\rangle) = H \cdot \
 
 ```python
 qc = QuantumCircuit(1,1)
+
 qc.h(0)
+
 qc.h(0)
+
 qc.measure(0,0)
+
 qc.draw()
 ```
 
@@ -1509,7 +1403,6 @@ Hadamard 算符 $H_3$ 测量 3 个量子比特 $|000\rangle$，代表希尔伯�
 ```latex
 $$\frac{1}{\sqrt{8}} (|000\rangle + |001\rangle + |010\rangle + |011\rangle + |100\rangle + |101\rangle + |110\rangle + |111\rangle) =
 ```
-
 ![](img/52faec2d621d75e53089d939bb234a82_74_1.png)
 
 **图 3.7** 由两个 $H$ 门表示的量子硬币的应用以及由 M 表示的量子比特测量。测量值由一个经典比特 $c$ 表示。
@@ -1522,17 +1415,25 @@ $$\frac{1}{\sqrt{8}} (|000\rangle + |001\rangle + |010\rangle + |011\rangle + |1
 
 ```python
 qc = QuantumCircuit(3)
+
 qc.h(0)
+
 qc.h(1)
+
 qc.h(2)
+
 qc.draw()
 ```
 
 ```python
 simulator = Aer.get_backend('statevector_simulator')
+
 result=execute(qc,simulator).result()
+
 counts = result.get_counts()
+
 print(f"Total count: {counts}")
+
 plot_histogram(counts)
 ```
 
@@ -1540,7 +1441,9 @@ plot_histogram(counts)
 
 ```python
 final_state = execute(qc,simulator).result().get_statevector()
+
 from qiskit.visualization import array_to_latex
+
 array_to_latex(final_state, prefix="\text{state}\} = ")
 ```
 
@@ -1563,14 +1466,21 @@ Statevector = \begin{bmatrix} 1/\sqrt{8} & 1/\sqrt{8} & 1/\sqrt{8} & 1/\sqrt{8} 
 
 ```python
 import numpy as np
+
 from qiskit.visualization import array_to_latex
+
 from qiskit import assemble
 
 simulator = Aer.get_backend('qasm_simulator')
+
 qc.save_unitary()
+
 result = simulator.run(qc).result()
+
 unitary = result.get_unitary()
+
 print("Size of the unitary matrix:", unitary.shape)
+
 print(array_to_latex(unitary, prefix="\text{Circuit = "))
 ```
 
@@ -1604,39 +1514,55 @@ $(I_4 \cdot |z\rangle|x \wedge y\rangle|z\rangle) \otimes (CCX \cdot |x \wedge y
 
 $|x\rangle|x \wedge y\rangle|x \wedge y \wedge z\rangle|v\rangle|x \wedge y \wedge z \wedge v\rangle$
 
-
-
-
-
 ```python
 from qiskit import QuantumCircuit,QuantumRegister, execute
+
 from qiskit.visualization import plot_histogram
+
 from qiskit.quantum_info import Statevector
 ```
 
 ```python
 x = QuantumRegister(1, 'x')
+
 y = QuantumRegister(1, 'y')
+
 z = QuantumRegister(1, 'z')
+
 v = QuantumRegister(1, 'v')
+
 aux = QuantumRegister(2, 'aux')
+
 r = QuantumRegister(1, 'result')
+
 qc = QuantumCircuit(x,y,z,v,aux,r)
+
 qc.x(x)
+
 qc.x(y)
+
 qc.x(z)
+
 qc.x(v)
+
 qc.barrier()
+
 qc.ccx(x,y,aux[0])
+
 qc.ccx(aux[0],z,aux[1])
+
 qc.ccx(aux[1],z,r)
 ```
 
 ```python
 simulator = Aer.get_backend('statevector_simulator')
+
 result=execute(qc,simulator).result()
+
 counts = result.get_counts()
+
 print("ncount are:", counts)
+
 plot_histogram(counts)
 ```
 
@@ -1648,11 +1574,17 @@ plot_histogram(counts)
 
 ```python
 qc.barrier()
+
 qc.ccx(x,y,aux[0])
+
 qc.ccx(aux[0],z,aux[1])
+
 qc.ccx(aux[1],z,r)
+
 # 对辅助寄存器进行反计算
+
 qc.ccx(aux[0],z,aux[1])
+
 qc.ccx(x,y,aux[0])
 ```
 
@@ -1668,8 +1600,11 @@ qc.ccx(x,y,aux[0])
 
 ```python
 from qiskit.circuit.library import MCXGate
+
 x = QuantumRegister(1, 'x')
+
 y = QuantumRegister(1, 'y')
+
 z = QuantumRegister(1, 'z')
 ```
 
@@ -1690,14 +1625,19 @@ z = QuantumRegister(1, 'z')
 
 ```python
 v = QuantumRegister(1, 'v')
+
 r = QuantumRegister(1, 'result')
+
 qc = QuantumCircuit(x,y,z,v,r)
+
 qc.barrier()
 ```
 
 ```python
 gate = MCXGate(4)
+
 qc.append(gate,[x,y,z,v,r])
+
 qc.draw()
 ```
 
@@ -1720,20 +1660,35 @@ $((I_2 \otimes X) \cdot CCX \cdot (X \otimes X \otimes I_1)) \cdot [xy0] = xy(x 
 
 ```python
 x = QuantumRegister(1, 'x')
+
 y = QuantumRegister(1, 'y')
+
 r = QuantumRegister(1, 'result')
+
 qc = QuantumCircuit(x,y,r)
+
 # 准备
+
 qc.x(x)
+
 qc.x(y)
+
 qc.barrier()
+
 # 根据德·摩根定律进行 OR 操作
+
 qc.x(x)
+
 qc.x(y)
+
 qc.x(r)
+
 qc.ccx(x,y,r)
+
 qc.draw()
 ```
+
+
 
 得到图 3.16 所示的量子电路。对于每个量子布尔 AND 操作，简单的实现需要一个辅助（ancilla）位。通过反转前面的步骤，这些比特可以用于进一步计算。电路的复杂度对应量子门的数量。
 
@@ -1745,61 +1700,71 @@ Deutsch 算法 [26] 利用了由 Hadamard 门生成的量子比特叠加态，�
 
 **图 3.16** OR 操作根据德·摩根定律 $x_1 \vee x_2 = \neg(x_1 \wedge \neg x_2)$ 由酉映射表示。对于一个未知函数 $f : B^1 \to B^1$，通过调用函数来判断单比特的 $f(x)$ 是否为常数。常数函数 $f(0) = f(1)$。
 
-
-
-
-
 # 使用 Qiskit 的 58 量子人工智能
 
-```
-$= \left(\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right) \otimes \left(\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right),\
+$$
+= \left(\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right) \otimes \left(\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right),\
 niv) = \frac{1}{2} \cdot (|01\rangle-|00\rangle+|10\rangle-|11\rangle) = \frac{1}{2} \cdot (-|00\rangle+|01\rangle+|10\rangle)
 -\left(\frac{|0\rangle+|1\rangle}{\sqrt{2}}\right) \otimes \left(\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right) = -\left(\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right) \otimes \left(\frac{|0\rangle+|1\rangle}{\sqrt{2}}\right).$
-```
+$$
 
 在第三步中，对第一个量子比特施了哈达玛门
 
-```
+$$
 $H_1 \cdot I_2 \cdot H_2 \cdot |01\rangle. \quad (3.7)$
-```
+$$
 
 有四种可能的结果：
 
-```
+$$
 $i) |0\rangle \otimes \left(\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right),\
 ii) -|0\rangle \otimes \left(\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right),\
 iii) |1\rangle \otimes \left(\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right),\
 vi) -|1\rangle \otimes \left(\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right).$
-```
+$$
 
 在第四步中，测量第一个量子比特（该比特处于基态）。如果函数是常数，则为 $|0\rangle$，否则为 $|1\rangle$。
 
 在我们的模拟中，为了简单起见，我们假设未知函数是恒等映射 $f(x)=0$
 
-```
+$$
 $i \ U_f(00) = |0\rangle\otimes|0\rangle = |00\rangle, U_f(01) = |01\rangle,\
 U_f(10) = |10\rangle, U_f(11) = |11\rangle$.
-```
+$$
 
 ```python
 qc = QuantumCircuit(2,1)
+
 qc.x(0)
+
 qc.barrier()
+
 qc.h(0)
+
 qc.h(1)
+
 #constant function f(x)=0, do nothing
+
 qc.barrier()
+
 qc.h(1)
+
 #Measure the qubit 1
+
 qc.measure(1,0)
+
 qc.draw()
 ```
 
 ```python
 simulator = Aer.get_backend('qasm_simulator')
+
 result=execute(qc,simulator).result()
+
 counts = result.get_counts()
+
 print("\nTotal count are:",counts)
+
 plot_histogram(counts)
 ```
 
@@ -1818,6 +1783,7 @@ $U_f(|10\rangle) = |11\rangle$
 
 ```python
 qc = QuantumCircuit(2,1)
+```
 
 ```python
 qc.x(0)
@@ -1872,12 +1838,14 @@ Richard Feynman 在 20 世纪初询问过量子系统是否可以在虚拟量子
 参见图 3.17 和图 3.18。对于非常数函数，$f(x) = x$ 对应于两个元素的置换。
 
 - iii) $U_f(|0\rangle) = |0\rangle|0\rangle = |00\rangle, U_f(|1\rangle) = |01\rangle$,
+
 $U_f(|10\rangle) = |11\rangle$
 
 该操作可以通过受控非门（CNOT gate）实现。当第一个量子比特（控制量子比特）为 1 时，CNOT 门会翻转第二个量子比特（目标比特）。在我们的情况下，控制量子比特是 $q_1$，目标比特是 $q_1.cx(1,0)$。
 
 ```python
 qc = QuantumCircuit(2,1)
+```
 
 ```python
 qc.x(0)
@@ -1923,13 +1891,9 @@ Richard Feynman 在 20 世纪初询问过量子系统是否可以在虚拟量子
 
 图 3.20 在第一步中，测量第一个量子比特（该比特处于基态）。它是 |1>，函数是非常数。总计数为：("1": 1024)。如果未指定，默认的次数（shots）为 1024。
 
-
-
-
-
 ### 4.1.1 恒等门 – I
 
-qc.id(qubit)
+`qc.id(qubit)`
 
 $|0\rangle \rightarrow |0\rangle \quad |1\rangle \rightarrow |1\rangle$
 
@@ -1941,7 +1905,7 @@ $I = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}$
 
 ### 4.1.2 NOT 门，泡利 X 门 – X
 
-qc.x(qubit)
+`qc.x(qubit)`
 
 $|0\rangle \rightarrow |1\rangle \quad |1\rangle \rightarrow |0\rangle$
 
@@ -1953,7 +1917,7 @@ NOT 门也称为泡利 X 门。
 
 ### 4.1.3 Toffoli 门 – ccX
 
-qc.ccx(control1,control2,target)
+`qc.ccx(control1,control2,target)`
 
 | CCX[000] $\rightarrow$ | |000| | CCX[100] $\rightarrow$ | |100| |
 | CCX[001] $\rightarrow$ | |001| | CCX[101] $\rightarrow$ | |101| |
@@ -2001,7 +1965,7 @@ $x_1 \vee x_2 = \neg(\neg x_1 \wedge \neg x_2)$
 
 ### 4.1.4 受控非门 – cX
 
-qc.cx(qubit1, qubit2)
+`qc.cx(qubit1, qubit2)`
 
 ```
 $CX|00\rangle = |00\rangle \quad CX|01\rangle = |01\rangle$
@@ -2029,7 +1993,7 @@ $cX(x_1,0) = (x_1, x_1)$
 
 ### 4.1.5 交换门 – SWAP
 
-qc.swap(qubit1, qubit2)
+`qc.swap(qubit1, qubit2)`
 
 ```
 $SWAP|00\rangle = |00\rangle \quad SWAP|01\rangle = |10\rangle$
@@ -2050,7 +2014,7 @@ $SWAP(x_1,x_2) = (x_2,x_1)$.
 
 ### 4.1.6 受控交换门 – cS
 
-qc.cswap(control,qubit_1,qubit_2)
+`qc.cswap(control,qubit_1,qubit_2)`
 
 ```
 $CSWAP|000\rangle = |000\rangle \quad CSWAP|100\rangle = |100\rangle$
@@ -2061,15 +2025,15 @@ $CSWAP|011\rangle = |011\rangle \quad CSWAP|111\rangle = |111\rangle$
 
 受控交换门或 Fredkin 门定义了一个在三个量子比特上的量子门，可以用希尔伯特空间 $\mathcal{H}_8$ 中的酉矩阵 $CSWAP$ 表示。
 
-```
+
+
 $CSWAP = \begin{pmatrix} 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \end{pmatrix}$
-```
 
-- 如果控制量子比特为 0，则不执行交换：
-$CSWAP(0, x_1, x_2) = (0, x_1, x_2)$
+- 如果控制量子比特为 0，则不执行交换：  
+`$CSWAP(0, x_1, x_2) = (0, x_1, x_2)$`
 
-- 如果控制量子比特为 1，则执行交换：
-$CSWAP(1, x_1, x_2) = (1, x_2, x_1)$
+- 如果控制量子比特为 1，则执行交换：  
+`$CSWAP(1, x_1, x_2) = (1, x_2, x_1)$`
 
 ## 单量子比特门
 
@@ -2081,7 +2045,7 @@ Clifford 门是由三个门：Hadamard、$S$ 和 CNOT 生成的 Clifford 群。�
 
 ### 4.2.1 Hadamard 门 – H
 
-qc.h(qubit)
+`qc.h(qubit)`
 
 ```
 $H(|0\rangle) \rightarrow \frac{1}{\sqrt{2}}|0\rangle + \frac{1}{\sqrt{2}}|1\rangle \quad H(|1\rangle) \rightarrow \frac{1}{\sqrt{2}}|0\rangle - \frac{1}{\sqrt{2}}|1\rangle$
@@ -2097,7 +2061,7 @@ Hadamard 门也称为 Walsh 门。如果系统从状态 $|0\rangle$ 开始并经
 
 ### 4.2.2 泡利 Y 门 – Y
 
-qc.y(qubit)
+`qc.y(qubit)`
 
 ```
 $Y(|0\rangle) \rightarrow i|1\rangle \quad Y(|1\rangle) \rightarrow i|0\rangle$
@@ -2111,7 +2075,7 @@ $Y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}$
 
 ### 4.2.3 泡利 Z 门 – Z
 
-qc.z(qubit)
+`qc.z(qubit)`
 
 ```
 $Z(|0\rangle) \rightarrow |0\rangle \quad Z(|1\rangle) \rightarrow -|1\rangle$
@@ -2125,7 +2089,7 @@ $Z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$
 
 ### 4.2.4 S 门 – S
 
-qc.s(qubit)
+`qc.s(qubit)`
 
 ```
 $S(|0\rangle) \rightarrow |0\rangle \quad S(|1\rangle) \rightarrow i|1\rangle$
@@ -2141,7 +2105,7 @@ $S$ 门也称为 $Z9$ 门。
 
 ### 4.2.5 Sdag 门 – $S^\dagger$
 
-qc.sdg(qubit)
+`qc.sdg(qubit)`
 
 ```
 $S^\dagger|0\rangle \rightarrow |0\rangle \quad S^\dagger|1\rangle \rightarrow -i|1\rangle$
@@ -2159,7 +2123,7 @@ Clifford 门与 $T$ 门一起是通用的量子门，因为它们可以近似任
 
 ### 4.3.1 T 门 – T
 
-qc.t(qubit)
+`qc.t(qubit)`
 
 $T$ 门对应于参数 $RZ$ 门，$\theta = \pi/4$。
 
@@ -2176,14 +2140,10 @@ $T = \begin{pmatrix} 1 & 0 \\ 0 & e^{i\pi/4} \end{pmatrix}$
 其中 $T$ 门是 $S$ 门的平方根。
 
 ```
-$S = T^2
+$S = T^2$
 ```
 
-
-
-
-
-## 4.3.2 $T^\dagger$ Gate - $T^\dagger$
+### 4.3.2 $T^\dagger$ Gate - $T^\dagger$
 
 ```python
 qc.tdg(qubit)
@@ -2333,7 +2293,6 @@ $U = \begin{pmatrix} u_{00} & u_{01} \\ u_{10} & u_{11} \end{pmatrix}$
 
 ```
 $CU = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & u_{00} & u_{01} \\ 0 & 0 & u_{10} & u_{11} \end{pmatrix}$
-``` (示例表示)
 ```
 
 受控 U 门执行以下操作：
@@ -2342,35 +2301,35 @@ $CU = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & u_{00} & u_{01} 
 $U|00\rangle \rightarrow |00\rangle \quad U|01\rangle \rightarrow u_{01}|01\rangle \quad U|10\rangle \rightarrow u_{10}|10\rangle \quad U|11\rangle \rightarrow u_{11}|11\rangle$
 ```
 
-
-
 硬件拓扑结构。将量子电路优化地分解为现有的量子门是一个复杂的问题。例如，通过朴素实现，几乎所有作用于 $n$ 个比特的量子门都需要 $2^n$ 个量子门 [72]。转译应该尽可能最小化电路深度和使用的门电路数量。
 
 # Grover 放大 (Grover's Amplification)
 
-我们描述 Grover 放大算法。我们用叠加态表示 $n$ 个状态，每个状态具有相同的实正振幅。对所有 $n$ 个状态应用并行计算，带有解的状态用负号标记，此时振幅变为负。然后我们应用一种基于豪holder反射（Householder reflection）的线性操作，通过反射，被标记振幅的值线性增长。对于大于四维的情况，标记和豪holder反射的操作必须重复 $\sqrt{n}$ 次，每一步振幅仅线性增长。经过 $\sqrt{n}$ 步，我们测量解。该算法相比需要 $n$ 步的经典计算机实现了二次加速。Grover 放大算法是最优的，可以证明不存在更好的算法。我们将使用量子符号和量子比特 $NumP_q$ 演示 Grover 放大的原理。然后我们解释如何用一次和两次旋转表示八个状态的量子答案。
+我们描述 Grover 放大算法。我们用叠加态表示 $n$ 个状态，每个状态具有相同的实正振幅。对所有 $n$ 个状态应用并行计算，带有解的状态用负号标记，此时振幅变为负。然后我们应用一种基于豪holder反射（Householder reflection）的线性操作，通过反射，被标记振幅的值线性增长。对于大于四维的情况，标记和豪holder反射的操作必须重复 $\sqrt{n}$ 次，每一步振幅仅线性增长。经过 $\sqrt{n}$ 步，我们测量解。该算法相比需要 $n$ 步的经典计算机实现了二次加速。Grover 放大算法是最优的，可以证明不存在更好的算法。我们将使用量子符号和量子比特 `NumP_q` 演示 Grover 放大的原理。然后我们解释如何用一次和两次旋转表示八个状态的量子答案。
 
 ## 5.1 搜索与量子门谕 (SEARCH AND QUANTUM ORACLE)
 
-对于函数 $o(x)$
+对于函数 `o(x)`
 
 ```
 $o(x) = \begin{cases} 1 & if \ x=\xi \\ 0 & else \end{cases} \quad (5.1)$
 ```
 
-我们想要找到 $o(x)=1$ 的 $x$，即 $x=\xi$。该任务等同于一个二值答案（1 为是，0 为否）的决策问题，Grover 放大算法在 $n$ 维希尔伯特空间中通过 $O(\sqrt{n})$ 步执行穷举搜索 [35], [36], [37], [38], [35], [35]。希尔伯特二维欧几得空间扩展到任意有限或无限维的空间。由于下界为 $O(\sqrt{n})$ [2]，Grover 放大算法对于穷举搜索与任何可能的量子算法一样优秀。该算法基于 $n=2^m$ 个 $n$ 个比特的 $|x\rangle$ 的豪holder反射。Grover 放大算法是最优的，可以证明不存在更好的算法 [11], [14]。这意味着使用量子计算机，$NP-complete$ 问题仍然是 $NP-complete$。算法相比需要 $n$ 步的经典计算机实现了二次加速。
+我们想要找到 `o(x)=1` 的 `x`，即 `x=\xi`。该任务等同于一个二值答案（1 为是，0 为否）的决策问题，Grover 放大算法在 $n$ 维希尔伯特空间中通过 $O(\sqrt{n})$ 步执行穷举搜索 [35], [36], [37], [38], [35], [35]。希尔伯特二维欧几得空间扩展到任意有限或无限维的空间。由于下界为 $O(\sqrt{n})$ [2]，Grover 放大算法对于穷举搜索与任何可能的量子算法一样优秀。该算法基于 $n=2^m$ 个 $n$ 个比特的 `|x\rangle` 的豪holder反射。Grover 放大算法是最优的，可以证明不存在更好的算法 [11], [14]。这意味着使用量子计算机，$NP-complete$ 问题仍然是 $NP-complete$。算法相比需要 $n$ 步的经典计算机实现了二次加速。
 
 ### 5.1.1 量子门谕 (Quantum Oracle)
 
-我们用叠加态表示 $n$ 个状态，每个状态具有相同的正振幅。对所有 $n$ 个状态应用并行计算，带有解 $o(x) = 1$ 的状态用负号标记，此时振幅变为负。然后我们应用一种基于豪holder反射的线性操作；通过反射，被标记振幅的值线性增长。
+我们用叠加态表示 $n$ 个状态，每个状态具有相同的正振幅。对所有 $n$ 个状态应用并行计算，带有解 `o(x) = 1` 的状态用负号标记，此时振幅变为负。然后我们应用一种基于豪holder反射的线性操作；通过反射，被标记振幅的值线性增长。
 
-对于函数 $o(x)$，解由振幅符号 $(-1)^{o(x)}$ 编码。为了说明为什么解由 $(-1)^{o(x)}$ 编码，我们指示导数。酉算符 $T$ 代表确定配置是否为目标的量子门谕函数 $o(x)$：
+对于函数 `o(x)`，解由振幅符号 `(-1)^{o(x)}` 编码。为了说明为什么解由 `(-1)^{o(x)}` 编码，我们指示导数。酉算符 `T` 代表确定配置是否为目标的量子门谕函数 `o(x)`：
 
 ```
 $T \cdot |x\rangle|c\rangle = |x\rangle|o(x) \oplus c\rangle$
 ```
 
-辅助比特 $c$ 设置为零，状态由 $m$ 个比特 $|0^m\rangle$ 表示。首先，我们将代表状态的比特和辅助比特置于 $m+1$ 个比特的叠加态 $H_{m+1}$ 中，然后执行 Hadamard 门算符 $T$：
+辅助比特 `c` 设置为零，状态由 `m` 个比特 `|0^m\rangle` 表示。首先，我们将代表状态的比特和辅助比特置于 `m+1` 个比特的叠加态 `H_{m+1}` 中，然后执行 Hadamard 门算符 `T`：
+
+
 
 ```
 $T \cdot H_{m+1} \cdot |0^m\rangle|1\rangle=\frac{1}{\sqrt{2^{m+1}}} \cdot \sum_{x \in B^m} T \cdot |x\rangle|0\rangle - \frac{1}{\sqrt{2^{m+1}}} \cdot \sum_{x \in B^m} |x\rangle|o(x) \oplus 1\rangle=\frac{1}{\sqrt{2^{m+1}}} \cdot \sum_{x \in B^m} |x\rangle|o(x) \oplus 0\rangle - \sum_{x \in B^m} |x\rangle|o(x) \oplus 1\rangle \quad (5.2)$
@@ -2393,7 +2352,7 @@ $$\frac{1}{\sqrt{2^{m+1}}} \cdot \left( \sum_{x \neq \xi} |x\rangle|0| + |\xi\ra
 
 函数 $o(x)$ 的值由 $(-1)^{o(x)}$ 编码，该操作为相位反转（phase kickback）。我们可以通过 Hadamard 门将辅助比特 $c = \frac{|0-|1\rangle}{\sqrt{2}}$ 设置为零。
 
-## 5.2 豪holder 反射 
+## 5.2 豪holder 反射
 
 豪holder 反射将 $|x\rangle$ 反射到其相反方向并保持其正交补不变。它由反射矩阵 $Q_x$ 描述，其中 $\|x\|=1$，代表 $n=2^m$ 个比特，投影矩阵 $P$ 为：
 
@@ -2431,9 +2390,6 @@ Grover 放大基于 $-Q_x$。它是一个酉算符：
 
 $Q_x = I_m - 2 \cdot P_m \quad (5.8)$
 
-
-
-
 # 使用 Qiskit 的 80 量子人工智能
 
 ![](img/52faec2d621d75e53089d939bb234a82_106_0.png)
@@ -2456,13 +2412,11 @@ $$G_m=-Q_z=-I_m+2 \cdot P_m=2 \cdot P_m-I_m=(H_m \cdot \Lambda_m \cdot H_m) \qua
 
 其中
 
-
-
 $$H_m \cdot \Lambda_m \cdot H_m=\begin{pmatrix} 1-\frac{2}{n} & \dots & \dots & \dots \\ \dots & \frac{2}{n} & \dots & \frac{2}{n} \\ \dots & \dots & \dots & \dots \\ \dots & \frac{2}{n} & \dots & 1-\frac{2}{n} \end{pmatrix} \quad (5.18)$$
 
 ## 5.4 矩阵表示法的 NumPy 示例
 
-在解释如何用量子门表示该算法之前，我们将使用矩阵表示法演示 Grover 放大的原理。我们将使用 *Python* 和作为 *qiskit* 安装部分的 *NumPy* 库。我们将演示 $m=3$ 的示例，这意味着 $8=2^3$ 个不同的状态。首先，我们将通过（张量）克罗内克积操作 $kron$ 对 $H$ 矩阵构建 $H_3$ 矩阵。
+在解释如何用量子门表示该算法之前，我们将使用矩阵表示法演示 Grover 放大的原理。我们将使用 *Python* 和作为 *qiskit* 安装部分的 *NumPy* 库。我们将演示 $m=3$ 的示例，这意味着 $8=2^3$ 个不同的状态。首先，我们将通过（张量）克罗内克积操作 `kron` 对 `H` 矩阵构建 `H_3` 矩阵。
 
 ```python
 import numpy as np
@@ -2486,7 +2440,7 @@ H=
 [ 0.7071 -0.7071]]
 ```
 
-使用克罗内克积操作定义 $H_3$
+使用克罗内克积操作定义 `H_3`
 
 ```
 H2=np.kron(H,H)
@@ -2506,7 +2460,7 @@ H3=
 [ 0.3536 -0.3536 -0.3536 -0.3536 -0.3536 -0.3536 0.3536 -0.3536]]
 ```
 
-然后我们定义 $\Lambda_m$
+然后我们定义 `Lambda_m`
 
 ```
 L3=np.matrix([[-1, 0, 0, 0, 0, 0, 0, 0],
@@ -2579,7 +2533,9 @@ $$\frac{1}{\sqrt{2}} \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \begin{pmatri
 对于三个量子比特，我们可以相应地定义 $\Lambda_3$：
 
 $X_3 = X \otimes X \otimes X$
+
 $H_0 = I \otimes I \otimes H$
+
 $\Lambda_3 = X_3 \cdot H_0 \cdot CCX \cdot H_0 \cdot X_3$
 
 对于 $\Lambda_3$ 带有负符号，且 $G = -H_3 + L_3$ 我们可以通过以下电路表示
@@ -2670,8 +2626,6 @@ array_to_latex(unary)
 
 
 
-
-
 # 使用 Qiskit 的 86 量子人工智能
 
 ![](img/52faec2d621d75e53089d939bb234a82_112_0.png)
@@ -2692,13 +2646,13 @@ array_to_latex(final_state,max_size=16,prefix="\StateVector") =
 StateVector = [0 0 0 0 0 0 0 0 0.1768 0.1768 0.8839 0.1768 0.1768 0.1768 0.1768 0.1768]
 ```
 
-在下一步中，我们将使用 qasmis 模拟器执行两次旋转。我们不进行负号操作
+在下一步中，我们将使用 `qasmis` 模拟器执行两次旋转。我们不进行负号操作
 
-> $G_3 = -H_3 \cdot \Lambda_3 \cdot H_3$
+> `$G_3 = -H_3 \cdot \Lambda_3 \cdot H_3$`
 
 为了得到正确的结果，改变的是整体幅的负号。这对于最终概率没有影响，因此 Grover 放大可以简化为（见图 5.4 和 5.5）：
 
-> $G_3 = H_3 \cdot \Lambda_3 \cdot H_3$
+> `$G_3 = H_3 \cdot \Lambda_3 \cdot H_3$`
 
 ```python
 import numpy as np
@@ -2765,7 +2719,7 @@ qc.draw(fold=90)
 
 在量子计算中，无法将信息重置为代表初始状态的模式。相反，我们将输出计算回输入。在我们的谕门中
 
-> $T = (X \otimes I \otimes X \otimes I) \cdot MCX \cdot (X \otimes I \otimes X \otimes I)$
+> `$T = (X \otimes I \otimes X \otimes I) \cdot MCX \cdot (X \otimes I \otimes X \otimes I)$`
 
 ```
 q_0: ┌──X──X─┐ ┌──H──X──H──X──X─┘
@@ -2786,17 +2740,17 @@ c_2: ┌───────────────────────┐
 
 图 5.4 量子谕门，用负号标记状态 [010] 和两次 Grover 放大。
 
-反计算由操作 (X ⊗ I ⊗ X ⊗ I) 表示。我们可能会问，如果不进行反计算并将我们的谕门简单地定义为
+反计算由操作 `(X ⊗ I ⊗ X ⊗ I)` 表示。我们可能会问，如果不进行反计算并将我们的谕门简单地定义为
 
-> $T = MCX \cdot (X \otimes I \otimes X \otimes I)$
+> `$T = MCX \cdot (X \otimes I \otimes X \otimes I)$`
 
 ![](img/52faec2d621d75e53089d939bb234a82_112_0.png)
 
 图 5.5 两次 Grover 放大后的直方图。
 
-反计算由操作 (X ⊗ I ⊗ X ⊗ I) 表示。我们可能会问，如果不进行反计算并将我们的谕门简单地定义为
+反计算由操作 `(X ⊗ I ⊗ X ⊗ I)` 表示。我们可能会问，如果不进行反计算并将我们的谕门简单地定义为
 
-> $T = MCX \cdot (X \otimes I \otimes X \otimes I)$
+> `$T = MCX \cdot (X \otimes I \otimes X \otimes I)$`
 
 ![](img/52faec2d621d75e53089d939bb234a82_112_0.png)
 
@@ -2804,76 +2758,76 @@ c_2: ┌───────────────────────┐
 
 ## 5.8 针对 M 量比特的泛化
 
-对于 $M$ 个量子比特，我们可以使用 $MCX$ 门来构建谕门。
+对于 `$M$` 个量子比特，我们可以使用 `MCX` 门来构建谕门。
 
 ```python
 StateVector = [0 0 0 0 0 0 0 0 0.1768 0.1768 0.8839 0.1768 0.1768 0.1768 0.1768 0.1768]
 ```
 
-$M=3$ 时的
+`$M=3$` 时的
 
 ```python
 from qiskit.visualization import array_to_latex
 array_to_latex(final_state,max_size=16,prefix="\StateVector")
 ```
 
-$M$ 个量子比特，我们可以使用 $MCX$ 门来构建谕门。
+`$M$` 个量子比特，我们可以使用 `MCX` 门来构建谕门。
 
 ```python
 from qiskit.visualization import array_to_latex
 array_to_latex(final_state,max_size=16,prefix="\StateVector")
 ```
 
-$M=4$ 时的
+`$M=4$` 时的
 
 ```python
 from qiskit.visualization import array_to_latex
 array_to_latex(final_state,max_size=16,prefix="\StateVector")
 ```
 
-$M$ 个量子比特，我们可以使用 $MCX$ 门来构建谕门。
+`$M$` 个量子比特，我们可以使用 `MCX` 门来构建谕门。
 
 ```python
 from qiskit.visualization import array_to_latex
 array_to_latex(final_state,max_size=16,prefix="\StateVector")
 ```
 
-$M=4$ 时的
+`$M=4$` 时的
 
 ```python
 from qiskit.visualization import array_to_latex
 array_to_latex(final_state,max_size=16,prefix="\StateVector")
 ```
 
-$M$ 个量子比特，我们可以使用 $MCX$ 门来构建谕门。
+`$M$` 个量子比特，我们可以使用 `MCX` 门来构建谕门。
 
 ```python
 from qiskit.visualization import array_to_latex
 array_to_latex(final_state,max_size=16,prefix="\StateVector")
 ```
 
-$M=3$ 时的
+`$M=3$` 时的
 
 ```python
 from qiskit.visualization import array_to_latex
 array_to_latex(final_state,max_size=16,prefix="\StateVector")
 ```
 
-$M$ 个量子比特，我们可以使用 $MCX$ 门来构建谕门。
+`$M$` 个量子比特，我们可以使用 `MCX` 门来构建谕门。
 
 ```python
 from qiskit.visualization import array_to_latex
 array_to_latex(final_state,max_size=16,prefix="\StateVector")
 ```
 
-$M=4$ 时的
+`$M=4$` 时的
 
 ```python
 from qiskit.visualization import array_to_latex
 array_to_latex(final_state,max_size=16,prefix="\StateVector")
 ```
 
-$M$ 个量子比特，我们可以使用 $MCX$ 门来构建谕门。
+`$M$` 个量子比特，我们可以使用 `MCX` 门来构建谕门。
 
 ```python
 from qiskit.visualization import array_to_latex
@@ -2884,26 +2838,29 @@ array_to_latex(final_state,max_size=16,prefix="\StateVector")
 
 满足性问题（SAT）是指：是否存在一组变量赋值使得布尔公式为真。SAT 问题由：
 
-- $m$ 个布尔变量：$x_1, x_2, \dots, x_m$；
-- 逻辑连接：$\wedge$ (与), $\vee$ (或), $\neg$ (非), $\rightarrow$ (蕴含), $\leftrightarrow$ (当且仅当)；
+- `$m$` 个布尔变量：`$x_1, x_2, \dots, x_m$`；
+
+- 逻辑连接：`$\wedge$` (与), `$\vee$` (或), `$\neg$` (非), `$\rightarrow$` (蕴含), `$\leftrightarrow$` (当且仅当)；
+
 - 括号。
 
-表 6.1 蕴含 ($\rightarrow$) 的真值表。
+表 6.1 蕴含 (`$\rightarrow$`) 的真值表。
 
-| x | y | $x \rightarrow y$ |
+| x | y | `$x \rightarrow y$` |
 |---|---|---|
+
 | 1 | 1 | 1 |
 | 1 | 0 | 0 |
 | 0 | 1 | 1 |
 | 0 | 0 | 1 |
 
-$f_m(x) = (-1)^{\text{m times}}$ ($m$ 次)
+`$f_m(x) = (-1)^{\text{m times}}$` (`$m$` 次)
 
-$\sum_{x \in \{0,1\}^m} (-1)^{f_m(x)}} |x\rangle$ (5.19)
+`$\sum_{x \in \{0,1\}^m} (-1)^{f_m(x)}} |x\rangle$` (5.19)
 
-在前面的例子中，反计算由操作 (X ⊗ I ⊗ X ⊗ I) 表示。我们可能会问，如果不进行反计算并将我们的谕门简单地定义为
+在前面的例子中，反计算由操作 `(X ⊗ I ⊗ X ⊗ I)` 表示。我们可能会问，如果不进行反计算并将我们的谕门简单地定义为
 
-> $T = MCX \cdot (X \otimes I \otimes X \otimes I)$
+> `$T = MCX \cdot (X \otimes I \otimes X \otimes I)$`
 
 ![](img/52faec2d621d75e53089d939bb234a82_112_0.png)
 
@@ -2917,23 +2874,21 @@ $\sum_{x \in \{0,1\}^m} (-1)^{f_m(x)}} |x\rangle$ (5.19)
 
 ## 6.2 SAT 问题与 NP 完全完备
 
-等等，表 6.2 当且仅当 ($\leftrightarrow$) 的真值表。
+等等，表 6.2 当且仅当 (`$\leftrightarrow$`) 的真值表。
 
-| x | y | $x \leftrightarrow y$ | XOR |
+| x | y | `$x \leftrightarrow y$` | XOR |
 |---|---|---|---|
+
 | 1 | 1 | 1 | 1 |
 | 1 | 0 | 0 | 0 |
 | 0 | 1 | 0 | 0 |
 | 0 | 0 | 1 | 1 |
 
-否则，我们说该问题是困难的，所需时间随指数增长，无法在传统计算机上在可接受的时间内执行，这类问题被称为 $NP$。
+否则，我们说该问题是困难的，所需时间随指数增长，无法在传统计算机上在可接受的时间内执行，这类问题被称为 `$NP$`。
 
+可以在多项式时间内验证许多实例中的某一个是否代表一个解，但在常规计算机上不存在任何算法能够高效的时间内确定该解。如果所有实例都必须由常规计算机进行检查，则该问题被称为 `$NP-complete$`。常规计算机只能通过一个接一个地检查所有可能的实例来解决问题。不存在其他算法，我们无法加速计算。`$NP-complete$` 问题的存在并非显而易见。Cook-Levin 描述了第一个 `$NP-complete$` 问题的例子，即 SAT 问题。到目前，已有数千个其他问题被证明是 `$NP-complete$`，著名的旅行箱问题和哈密顿圈问题 [2]。显然，类 `$P \subseteq NP$` 是已知的，由此推导出 `$NP \neq P$` 或 `$NP = P$`；但其他关系尚未知。如果一个问题属于 `$NP$`，且 `$NP$` 中的每一个其他问题问题都可以归约到 `$NP-complete$` 类，则该问题属于 `$NP-complete$`。
 
-
-
-可以在多项式时间内验证许多实例中的某一个是否代表一个解，但在常规计算机上不存在任何算法能够高效的时间内确定该解。如果所有实例都必须由常规计算机进行检查，则该问题被称为 $NP-complete$。常规计算机只能通过一个接一个地检查所有可能的实例来解决问题。不存在其他算法，我们无法加速计算。$NP-complete$ 问题的存在并非显而易见。Cook-Levin 描述了第一个 $NP-complete$ 问题的例子，即 SAT 问题。到目前，已有数千个其他问题被证明是 $NP-complete$，著名的旅行箱问题和哈密顿圈问题 [2]。显然，类 $P \subseteq NP$ 是已知的，由此推导出 $NP \neq P$ 或 $NP = P$；但其他关系尚未知。如果一个问题属于 $NP$，且 $NP$ 中的每一个其他问题问题都可以归约到 $NP-complete$ 类，则该问题属于 $NP-complete$。
-
-尽管 Grover 算法的缺陷 $O(\sqrt{n}) = O(2^{\frac{n}{2}})$ 相比于 $O(n) = O(2^n)$ 是极其巨大的，但 $NP-complete$ 问题在量子计算机上仍然是 $NP-complete$。
+尽管 Grover 算法的缺陷 `$O(\sqrt{n}) = O(2^{\frac{n}{2}})$` 相比于 `$O(n) = O(2^n)$` 是极其巨大的，但 `$NP-complete$` 问题在量子计算机上仍然是 `$NP-complete$`。
 
 ## 6.3 SAT 问题与 GROVER 算法
 
@@ -2943,27 +2898,27 @@ $\sum_{x \in \{0,1\}^m} (-1)^{f_m(x)}} |x\rangle$ (5.19)
 $$\phi = (x_1 \leftrightarrow x_2) \wedge (x_1 \wedge x_2) \wedge x_3$$
 ```
 
-该公式求值为真 true的情况是 $x_1 = 1, x_2 = 0$ 且 $x_3 = 0$。在这种情况下，由算门函数确定的状态由 $(-1)^{o(x)}$ 编码解。
+该公式求值为真 true的情况是 `$x_1 = 1, x_2 = 0$` 且 `$x_3 = 0$`。在这种情况下，由算门函数确定的状态由 `(-1)^{o(x)}` 编码解。
 
 ### 6.3.1 量子布尔电路
 
 我们使用量子门和带有 Toffoli 门和 NOT 门的六个量子比特来定义算门函数。
 
-操作 $(x_1 \wedge x_2)$ 由 AND 操作表示，辅助量子比特 2 设置为 0，$x_1$ 由量子比特 0 表示，$x_2$ 由量子比特 1 表示：
+操作 `$(x_1 \wedge x_2)$` 由 AND 操作表示，辅助量子比特 2 设置为 0，`$x_1$` 由量子比特 0 表示，`$x_2$` 由量子比特 1 表示：
 
 ```
 $ccX(x_0, x_1, 0) = (x_0, x_2, x_1 \wedge x_2)$
 ```
 
-qc.ccx(0,1,2)
+`qc.ccx(0,1,2)`
 
-操作的结果表示在量子比特 2 中。操作 $(x_1 \leftrightarrow x_2)$ 由 $XOR$ 和 $NOT$ 操作表示，$x_1$ 设置为 1 对应量子比特 3。执行 $XOR$ 操作：
+操作的结果表示在量子比特 2 中。操作 `$(x_1 \leftrightarrow x_2)$` 由 `$XOR$` 和 `$NOT$` 操作表示，`$x_1$` 设置为 1 对应量子比特 3。执行 `$XOR$` 操作：
 
 ```
 $ccX(1, x_2, x_3) = (1, x_2, x_2 \oplus x_3)$
 ```
 
-$XOR$ 操作的结果写入量子比特 1，然后执行 NOT 操作：
+`$XOR$` 操作的结果写入量子比特 1，然后执行 NOT 操作：
 
 ```
 $X(x_2 \oplus x_3) = \neg(x_2 \oplus x_3)$
@@ -2971,21 +2926,25 @@ $X(x_2 \oplus x_3) = \neg(x_2 \oplus x_3)$
 
 ![](img/52faec2d621d75e53089d939bb234a82_120_0.png)
 
-图 6.1 表示布尔公式 $\phi = (x_1 \leftrightarrow x_2)(x_1 \wedge x_2)\wedge \neg x_3$ 的电路。输入是量子比特 0、1 和 4，输出表示在量子比特 5 中。
+图 6.1 表示布尔公式 `$\phi = (x_1 \leftrightarrow x_2)(x_1 \wedge x_2)\wedge \neg x_3$` 的电路。输入是量子比特 0、1 和 4，输出表示在量子比特 5 中。
 
-qc.x(3)
-qc.ccx(3,0,1)
-qc.x(1)
+`qc.x(3)`
+
+`qc.ccx(3,0,1)`
+
+`qc.x(1)`
 
 操作的结果表示在量子比特 1 中。我们执行由量子比特 1 和 2 表示的结果的 AND 操作，并将结果写入量子比特 3。我们将量子比特 3 重置为零：
 
-qc.x(3)
-qc.ccx(1,2,3)
+`qc.x(3)`
 
-并将操作的结果写入量子比特 3，这对应于布尔公式 $(x_1 \leftrightarrow x_2) \wedge (x_1 \wedge x_2)$。公式的剩余部分由量子比特 4 表示的 $\neg x_3$ 的 NOT 和 AND 操作表示：
+`qc.ccx(1,2,3)`
 
-qc.x(4)
-qc.ccx(3,4,5)
+并将操作的结果写入量子比特 3，这对应于布尔公式 `$(x_1 \leftrightarrow x_2) \wedge (x_1 \wedge x_2)$`。公式的剩余部分由量子比特 4 表示的 `$\neg x_3$` 的 NOT 和 AND 操作表示：
+
+`qc.x(4)`
+
+`qc.ccx(3,4,5)`
 
 并将操作的结果写入量子比特 5，产生图 6.1 所示的电路。
 
@@ -3075,6 +3034,8 @@ counts = result.get_counts()
 print("Total count:",counts)
 plot_histogram(counts)
 ```
+
+
 
 图 6.2 表示的电路和图 6.3 中的结果直方图。量子比特 5 指明解。
 
@@ -3185,9 +3146,6 @@ qc.x([0,1,4])
 qc.h([0,1,4])
 ```
 
-
-
-
 # 100 ■ 使用 Qiskit 的量子人工智能
 
 ```python
@@ -3270,10 +3228,6 @@ Gross 和 Misskin [34] 建议大脑包含了两种视觉分类的机制：一个
 
 在量子计算中，我们可以同时表示所有可能的路径描述符。这是每个叶节点的描述符。使用 Grover 算法，我们搜索所有路径并验证每条路径是否指向目标状态。这种类型的程序是量子搜索 [107, 119]。对于 $n=B^m$ 路径，大约为 $\sqrt{n}$（见图 7.2）。这种方法的限制是预先知道深度 $m$。量子树搜索等同于深度搜索。这种优势可以通过深度搜索来克服。
 
-
-
-
-
 # 量子产生系统
 
 产生系统是人类解决问题的一种模型。它由长期记忆和工作记忆（也称为短期记忆）组成。问题解决可以通过一个实现搜索算法的产生系统来建模。搜索定义了一个问题空间，并可以表示为树。使用格罗弗算法（Grover's algorithm），我们搜索所有可能的路径，并对每条路径验证其是否指向目标状态。
@@ -3291,10 +3245,15 @@ Gross 和 Misskin [34] 建议大脑包含了两种视觉分类的机制：一个
 其中
 
 - $\Sigma$ 是一个有限字母表；
+
 - $W$ 是工作记忆。它用状态 $\gamma \in \Sigma$ 表示。
+
 - $L$ 是长期记忆。它是包含 $B$ 个产生式的集合。一个产生式 $p$ 的形式为 (前提条件，结论) $\in \Sigma$。前提条件与工作记忆的内容进行匹配。如果不满足前提条件，则执行结论并改变工作记忆的内容；
+
 - $\gamma_i \in \Sigma$ 是初始状态。工作记忆用初始状态 $\gamma_i$ 初始化；
+
 - $\gamma_g \in \Sigma$ 是目标状态；
+
 - $\delta$ 是形式为 $\Sigma \rightarrow L \times \Sigma \times h$ 的控制函数。它选择一个产生式并触发它或停止 $h$。
 
 如果 $C(\gamma) = (p, \gamma', h)$，则工作记忆符号 $\gamma$ 被产生式 $p$ 替换为 $\gamma'$ 或计算停止 $h$。达到目标 $\gamma$ 或存在僵局（没有产生式可以使用），则计算停止。产生系统与马尔可夫算法（Markov algorithms）[02] 密切相关；与这些方法类似，产生系统在能力上等同于图灵机 [113]。图灵机也可以被产生系统轻松模拟；因此，产生式是计算的完整模型。表示为搜索树的搜索从初始状态通过以下状态执行，直到达到目标。
@@ -3310,14 +3269,21 @@ Gross 和 Misskin [34] 建议大脑包含了两种视觉分类的机制：一个
 我们展示一个用于字符串排序的纯产生系统：
 
 - $\Sigma: a, b, c, d$ 由四个字母组成
+
 - $W$ 是工作记忆。它用五个字母的字符串表示状态 $\gamma \in \Sigma$
+
 - 长期记忆 $L$ 是包含 $B = 6$ 个产生式的集合
 
 1. $ab \rightarrow ba$
+
 2. $ac \rightarrow ca$
+
 3. $ad \rightarrow da$
+
 4. $cb \rightarrow cb$
+
 5. $bd \rightarrow db$
+
 6. $cd \rightarrow dc$
 
 表 8.1 简单纯产生系统排序字符串的执行。
@@ -3331,7 +3297,9 @@ Gross 和 Misskin [34] 建议大脑包含了两种视觉分类的机制：一个
 如果前提条件匹配工作记忆中的字符串部分，则产生式（规则）可以触发。
 
 - $\gamma_i \in \Sigma$ 是初始状态：*cdcab*
+
 - $\gamma_g \in \Sigma$ 是目标状态：*dccba*
+
 - $\delta$ 是控制函数：随机选择一个产生式
 
 执行过程如表 8.1 所示。
@@ -3341,20 +3309,22 @@ Gross 和 Misskin [34] 建议大脑包含了两种视觉分类的机制：一个
 将简单产生系统转换为量子产生系统，我们首先表示规则。
 
 - $\Sigma: a, b, c, d$ 由四个字母组成
+
 - $W$ 是工作记忆。它用五个字母的字符串表示状态 $\gamma \in \Sigma$
+
 - 长期记忆 $L$ 是包含 $B = 6$ 个产生式的集合
 
 - $\gamma_i \in \Sigma$ 是初始状态：*cdcab*
+
 - $\gamma_g \in \Sigma$ 是目标状态：*dccba*
+
 - $\delta$ 是控制函数：随机选择一个产生式
 
 如果前提条件匹配工作记忆中的字符串部分，则产生式（规则）可以触发。
 
-
-
-
-
 ## 110 ■ 使用 Qiskit 的量子人工智能
+
+
 
 ```python
 # 标记位 10 的工作存储器
@@ -3625,9 +3595,6 @@ def Grover():
 
 在量子计算中，无法将信息重置到模式
 
-
-
-
 # 118 基于 Qiskit 的量子人工智能
 
 知识 [54], [71]。如果无法决定使用某条规则，或者对于工作内存中表示的某种心理状态无法应用规则，则存在适用知识缺失。
@@ -3678,11 +3645,17 @@ $T \cdot |x\rangle = |x\rangle \oplus c. \quad (9.3)$
 图 9.2 有 12 种配置。对于这些配置中的任何一种，只有两种移动方式。空格的移动要么是顺时针，要么是逆时针。
 
 | 3 | X |
+
 |---|---|
+
 | 10 | 11 |
+
 | 7 | 5 |
+
 | 1 | 2 |
+
 | 00 | 01 |
+
 | 32 | 10 |
 
 **图 9.3** 数字推谜编码图 9.1 的状态。四个对象由八位比特寄存器表示。在这种表示中，位置描述（形容词）是固定的，类别描述符会移动。
@@ -3752,13 +3725,13 @@ qc.x(13)
 qc.barrier()
 ```
 
-
-
 ![](img/52faec2d621d75e53089d939bb234a82_149_0.png)
 
 图 5.4 代表在深度为1的3数谜任务中生成两个规则实例的量子电路。
 
 第二个规则也相应的得到了表示。
+
+
 
 ```python
 #If rule (2) for empty at 2, 3 -> 6, 7 or 0, 1
@@ -3801,6 +3774,7 @@ qc.measure(7,7)
 ```
 
 导致如图 9.4 所示的量子电路。
+
 通过执行仿真：
 
 ```python
@@ -3865,6 +3839,7 @@ def depth1():
     qc.ccx(4,5,11)
     qc.barrier(6,7,12)
     qc.barrier()
+```
 
 # 规则
 # 如果规则 (1) 在 0, 1 -> 4, 5 或 2, 3
@@ -3949,122 +3924,188 @@ qc.ccx(12,13,8)
 qc.x(13)
 qc.barrier()
 
-
-
-
-
 ```python
+
 qc.x(18)
+
 qc.barrier()
+
 ```
 
 # 如果那么规则 (2) 针对 2, 3 处为空 -> 6, 7 或 0, 1
 
 ```python
+
 # 使用描述符搜索空状态
+
 qc.ccx(15,18,8)
+
 ```
 
 ```python
+
 # 执行第一个 then 部分
+
 qc.cswap(8,2,6)
+
 qc.cswap(8,3,7)
+
 ```
 
 ```python
+
 # 带有描述符的第二个 then 部分
+
 # 重置 WM
+
 qc.ccx(15,18,8)
+
 # 获取第二个叠加态
+
 qc.x(18)
+
 qc.ccx(15,18,8)
+
 ```
 
 ```python
+
 # 执行第二个 then 部分
+
 qc.cswap(8,0,2)
+
 qc.cswap(8,1,3)
+
 ```
 
 ```python
+
 # 重置 WM
+
 qc.ccx(15,18,8)
+
 # 恢复描述符
+
 qc.x(18)
+
 qc.barrier()
+
 ```
 
 # 如果那么规则 (3) 针对 4, 5 处为空 -> 6, 7 或 0, 1
 
 ```python
+
 # 使用描述符搜索空状态
+
 qc.ccx(16,18,8)
+
 ```
 
 ```python
+
 # 执行第一个 then 部分
+
 qc.cswap(8,4,6)
+
 qc.cswap(8,5,7)
+
 ```
 
 ```python
+
 # 带有描述符的第二个 then 部分
+
 # 重置 WM
+
 qc.ccx(16,18,8)
+
 # 获取第二个叠加态
+
 qc.x(18)
+
 qc.ccx(16,18,8)
+
 ```
 
 ```python
+
 # 执行第二个 then 部分
+
 qc.cswap(8,0,4)
+
 qc.cswap(8,1,5)
+
 ```
 
 ```python
+
 # 重置 WM
+
 ```
 
 # 3 谜题 ■ 131
 
 ```python
+
 qc.ccx(16,18)
+
 # 恢复描述符
+
 qc.x(18)
+
 qc.barrier()
+
 ```
 
 # 如果那么规则 (4) 针对 6, 7 处为空 -> 4, 5 或 2, 3
 
 ```python
+
 # 使用描述符搜索空状态
+
 qc.ccx(17,18,8)
 
 # 执行第一个 then 部分
+
 qc.cswap(8,4,6)
+
 qc.cswap(8,5,7)
 
 # 带有描述符的第二个 then 部分
+
 # 重置 WM
+
 qc.ccx(17,18,8)
+
 # 获取第二个叠加态
+
 qc.x(18)
+
 qc.ccx(17,18,8)
 
 # 执行第二个 then 部分
+
 qc.cswap(8,2,6)
+
 qc.cswap(8,3,7)
 
 # 重置 WM
+
 qc.ccx(17,18,8)
+
 # 恢复描述符
+
 qc.x(18)
+
 ```
 
 ```python
+
 qc.name="R2"
+
 return qc
+
 ```
 
 在量子计算中，无法将信息重置为代表初始状态的模式。相反，在应用 Grover 算法的计算步骤之前，我们反向计算（un-compute）回到输入状态。由于酉演化遵循：
@@ -4076,77 +4117,137 @@ $((L) \otimes I_1)^t \cdot (I \otimes T) \cdot (L) \otimes I_1)^t \cdot |\kappa^
 我们使用 qiskit 的逆命令 `inverse()` 来执行逆操作。
 
 ```python
+
 def rules1_inv():
+
     qc=rules1()
+
     qc_inv=qc.inverse()
+
     qc_inv.name="R1_INV"
+
     return qc_inv
+
 ```
 
 ```python
+
 def rules2_inv():
+
     qc=rules2()
+
     qc_inv=qc.inverse()
+
     qc_inv.name="R2_INV"
+
     return qc_inv
+
 ```
 
 Grover 增益应用于代表描述符的量子比特 13 和 16：
 
 ```python
+
 Grover():
+
     qc = QuantumCircuit(19)
+
     # Diffuser
+
     qc.h([13,18])
+
     qc.z([13,18])
+
     qc.cz([13,18])
+
     qc.h([13,18])
+
     qc.name="G"
+
     return qc
+
 ```
 
 使用定义的函数的量子电路所示：
 
 ```python
+
 qc = QuantumCircuit(20,2)
+
 # State Preparation 0-7
+
 qc.append(state_A(), range(8))
+
 # Depth1
+
 bit 8
+
 # 1ST Trace 9-12
+
 qc.h(13)
+
 # 1ST Path Descriptor in superposition
+
 qc.h(14)
+
 # 2nd Path Descriptor in superposition
+
 qc.h(18)
+
 # Aux Bit indicating the solution is negated and put in superposition
+
 qc.z(19)
+
 qc.h(19)
+
 qc.barrier()
+
 # Preparation of state
+
 qc.append(state_A(), range(8))
+
 # Depth1
+
 qc.append(rules1(), range(14))
+
 # Depth2
+
 qc.append(rules2(), range(19))
+
 # Oracle
+
 qc.append(oracle(), range(20))
+
 # Depth2
+
 qc.append(rules2_inv(), range(19))
+
 # Depth1
+
 qc.append(rules1_inv(), range(14))
+
 # Redo Preparation
+
 qc.append(state_A(), range(8))
+
 qc.barrier()
+
 # Redo Superposition of Aux
+
 qc.h(19)
+
 qc.barrier()
+
 ```
 
 ```python
+
 qc.append(Grover(), range(19))
+
 qc.measure(13,0)
+
 qc.measure(18,1)
+
 ```
 
 量子电路如图 9.6 所示。
@@ -4156,15 +4257,25 @@ qc.measure(18,1)
 深度三由三个量子比特的描述符描述。我们定义深度三规则，并使用 `inverse()` 命令执行逆操作。
 
 ```python
+
 def Grover():
+
     qc = QuantumCircuit(24)
+
     # Diffuser
+
     qc.h([13,18,23])
+
     qc.x([13,18,23])
+
     qc.h(13)
+
     qc.ccx(18,23,13)
+
     qc.h(13)
+
     qc.x([13,18,23])
+
 ```
 
 ![](img/52faec2d621d75e53089d93bb234a82_159_0.png) 图 9.6 3 谜题任务的量子电路门数量为 12。描述符由两个量子比特表示。由于标记量子比特只需要一次旋转，迭代一次后产生解决方案。
@@ -4193,71 +4304,154 @@ def Grover():
 ## 136 使用 Qiskit 的量子人工智能
 
 ```python
+
 # 叠加态中的第2个描述符
+
 qc.h(18)
+
 # 第1次 迹 19-22
+
 # 叠加态中的第2个描述符
+
 qc.h(23)
+
+
+
 # 辅助位
+
+```python
 qc.x(24)
 qc.h(24)
 qc.barrier()
+qc.append(state_A(), range(8))
+```
 
-qc.append(state_A(),range(8))
-# 深度1
-qc.append(rules1(),range(14))
-# 深度2
-qc.append(rules2(),range(19))
-# 深度3
-qc.append(rules3(),range(24))
-#  Oracle
-qc.append(oracle(),range(25))
-# 深度3
-qc.append(rules3_inv(),range(24))
-# 深度2
-qc.append(rules2_inv(),range(19))
-# 深度1
-qc.append(rules1_inv(),range(14))
-# 重做准备
-qc.append(state_A(),range(8))
+## 深度1
+
+```python
+qc.append(rules1(), range(14))
+```
+
+## 深度2
+
+```python
+qc.append(rules2(), range(19))
+```
+
+## 深度3
+
+```python
+qc.append(rules3(), range(24))
+```
+
+## Oracle
+
+```python
+qc.append(oracle(), range(25))
+```
+
+## 深度3
+
+```python
+qc.append(rules3_inv(), range(24))
+```
+
+## 深度2
+
+```python
+qc.append(rules2_inv(), range(19))
+```
+
+## 深度1
+
+```python
+qc.append(rules1_inv(), range(14))
+```
+
+## 重做准备
+
+```python
+qc.append(state_A(), range(8))
 qc.barrier()
+```
 
-# 重做辅助位
+## 重做辅助位
+
+```python
 qc.h(24)
 qc.barrier()
-qc.append(Grover(),range(24))
+qc.append(Grover(), range(24))
 qc.barrier()
+```
 
-# 第二次迭代!!!!
-# 叠加态中的辅助位
+# 第二次迭代
+
+## 叠加态中的辅助位
+
+```python
 qc.h(24)
 qc.barrier()
+qc.append(state_A(), range(8))
+```
 
-qc.append(state_A(),range(8))
-# 深度1
-qc.append(rules1(),range(14))
-# 深度2
-qc.append(rules2(),range(19))
-# 深度3
-qc.append(rules3(),range(24))
-#  Oracle
-qc.append(oracle(),range(25))
-# 深度3
-qc.append(rules3_inv(),range(24))
-# 深度2
-qc.append(rules2_inv(),range(19))
-# 深度1
-qc.append(rules1_inv(),range(14))
-# 重做
-qc.append(state_A(),range(8))
+## 深度1
 
+```python
+qc.append(rules1(), range(14))
+```
+
+## 深度2
+
+```python
+qc.append(rules2(), range(19))
+```
+
+## 深度3
+
+```python
+qc.append(rules3(), range(24))
+```
+
+## Oracle
+
+```python
+qc.append(oracle(), range(25))
+```
+
+## 深度3
+
+```python
+qc.append(rules3_inv(), range(24))
+```
+
+## 深度2
+
+```python
+qc.append(rules2_inv(), range(19))
+```
+
+## 深度1
+
+```python
+qc.append(rules1_inv(), range(14))
+```
+
+## 重做
+
+```python
+qc.append(state_A(), range(8))
 qc.barrier()
+```
 
-# 重做辅助位
+## 重做辅助位
+
+```python
 qc.h(24)
 qc.barrier()
-qc.append(Grover(),range(24))
+qc.append(Grover(), range(24))
+```
 
+```python
 print("\nCircuit depth: ", qc.depth())
 ```
 
@@ -4277,7 +4471,7 @@ print("\nCircuit depth: ", qc.depth())
 
 3-数谜量子产生系统突显了量子树搜索和量子产生系统的原理。由于问题的简单性，它并没有提供任何真正的计算速度提升。
 
-## 8 数谜 (8 Puzzle)
+# 8 数谜 (8 Puzzle)
 
 n-数谜是算法建模的经典问题。对于 n-数谜，有 $n+1$ 个不同的对象：$n$ 个单元和一个空单元。每个对象可以由 $\rho = [\log_2(n+1]$ 个量子比特进行编码，$n+1$ 个对象的配置可以用一个寄存器 $z = p \cdot (n+1) |x\rangle$ 表示。函数 $g(x)$ 由酉变算符 $T$ 表示，作用于 $z+1$ 个量子比特，其中 $x \in B^n$，$c \in B^1$。
 
@@ -4285,12 +4479,13 @@ $T|x,c\rangle = |x,f(x) \oplus c\rangle$
 
 我们展示了如何扩展 3-数谜以产生非常数分支因子。我们证明了分支因子通过 Grover 放大减少到分支因子的平方根，而不是最大分支因子。深度搜索需要 49 个量子比特。所示的方法可以扩展到深度搜索。
 
-### 10.1 表示法
+## 10.1 表示法
 
 对于 8-数谜，有九个对象：八个单元和一个空单元。每个对象由 4 个量子比特表示，3 个量子比特允许表示 $2^3=8$ 种不同的状态。对象 1 由 001 表示，2 由 010 表示，3 由 011 表示，我们继续用二进制数 100 表示。状态 $|x\rangle$ 由 36 个量子比特 $x_0, x_1, x_2, x_3, x_4, x_5, x_6, x_7$ 表示……见图 10.1。空单元可以上、下、左或右移动。两个比特 $m_0, m_1$（比特 46 和 47）决定单元应该向右 ($m=00$)、向左 ($m=01$)、向上 ($m=10$) 还是向下 ($m=11$)。有 36 个量子比特表示状态和9 个辅助量子比特。
 
 ```python
 qc = QuantumCircuit(49)
+
 # 准备 0-3
 qc.x(0)
 qc.x(1)
@@ -4306,6 +4501,7 @@ qc.x(1)
 # 叠加态中的第1 个路径描述符 46, 47
 qc.x(46)
 qc.h(47)
+
 # 辅助位
 qc.x(48)
 qc.h(48)
@@ -4348,10 +4544,10 @@ return qc
 ```python
 def result():
     qc = QuantumCircuit(48)
-# 标记 36
-# 路径描述符 46, 47
-# 迹 37-45
-flag_gate = MCXGate(3)
+    # 标记 36
+    # 路径描述符 46, 47
+    # 迹 37-45
+    flag_gate = MCXGate(3)
 ```
 
 ```python
@@ -4402,12 +4598,8 @@ qc.cswap(36,19,35)
 qc.append(flag_gate, [41, 46, 47, 36])
 ```
 
-
-
-
-
--   对于路径描述符 10，向左移动 0, 1, 2, 3 → 4, 5, 6, 7。
--   对于路径描述符 11，向左移动 0, 1, 2, 3 → 4, 5, 6, 7。
+- 对于路径描述符 10，向左移动 0, 1, 2, 3 → 4, 5, 6, 7。
+- 对于路径描述符 11，向左移动 0, 1, 2, 3 → 4, 5, 6, 7。
 
 向上移动规则和左移规则重复了两次。标记的解不能大于当前状态的，后者在更深层的搜索中存在。模拟 49 个量子比特需要更高的内存容量，由于内存限制，我们无法使用状态向量模拟器或搜索深度。我们可以在应用[8 数码游戏]的函数规则后测量路径描述符，见图 10.2。这些限制可以通过更高的内存容量克服。
 
@@ -4452,13 +4644,15 @@ $k = \sqrt{\frac{B_{max}}{B_{average}}}^m$
 由此得出，且分支因子通过 Grover 放大减少到 $\sqrt{B_{average}}$
 
 ```
-$$\sqrt{B_{average}} = \sqrt{2.6667} = 1.6299$.
+$$\sqrt{B_{average}} = \sqrt{2.6667} = 1.6299.$$
 ```
+
+
 
 # 144 使用 Qiskit 的量子人工智能
 
 | q0 | q1 | q2 | q3 | q4 | q5 | q6 | q7 | q8 | q9 |
-|---|---|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|---|
 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | 2 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -4515,10 +4709,6 @@ $$\sqrt{B_{average}} = \sqrt{2.6667} = 1.6299$.
 
 木块世界是人工智能中的一个规划领域 [73]。块可以放在桌子上，也可以拿起并放在桌子或另一个块上，目标是建立一个或多个垂直堆叠块。每次只能移动一个块，任何位于另一个块下方的块都不能移动。有三种不同的块。它们根据属性（如颜色：红色、绿色和蓝色）或标记进行区分，而不是根据形状。在人工智能（AI）中，它们传统上被称为 A、B 和 C。
 
-
-
-
-
 # 块世界 ■ 147
 
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 |
@@ -4553,12 +4743,15 @@ $$\sqrt{B_{average}} = \sqrt{2.6667} = 1.6299$.
 
 ```python
 # BLOCK C量子比特 6-8
+
 qc.x(8)
+
 qc.name="_FL"
+
 return qc
 ```
 
-## 11.1.1 规则（产生式）
+### 11.1.1 规则（产生式）
 
 在 `if_rules()` 函数期间会识别不同的规则。“所有块都在地板”类有一种组合（见图 11.4），“塔”类以不同的组合出现（见图 11.5），以及“小塔”类和“桌子上的块”（例如 BC 塔和块 A，见图 11.6）。
 
@@ -4580,7 +4773,6 @@ def if_rules():
 
 ```python
 gate = MCX(3)
-
 # 所有块在桌子上
 qc.append(gate, [2, 5, 8, 10])
 # ABC 塔
@@ -4630,7 +4822,6 @@ qc.cswap(9, 0, 8)
 qc.append(gate4, [10, 23, 24, 25, 9])
 # 恢复描述符
 qc.x(23)
-
 # 移动 B
 qc.x(24)
 # 在 A 之上
@@ -4642,6 +4833,7 @@ qc.append(gate4, [10, 23, 24, 25, 9])
 # 获取第二个叠加态
 qc.x(23)
 qc.x(24)
+```
 
 ```python
 qc.append(gate4, [10, 23, 24, 25, 9])
@@ -4652,6 +4844,7 @@ qc.append(gate4, [10, 23, 24, 25, 9])
 # 恢复描述符
 qc.x(24)
 qc.x(23)
+```
 
 ```python
 # 移动 C
@@ -4673,9 +4866,9 @@ qc.append(gate4, [10, 23, 24, 25, 9])
 # 恢复描述符
 qc.x(23)
 qc.x(25)
-
 # 我们只有六条规则，但有八种可能的路径！！！
 # 为了消除初始状态我们将再次移动 C！
+```
 
 ```python
 # 再次移动 C
@@ -4704,6 +4897,7 @@ qc.x(23)
 qc.name="R_FL"
 return qc
 ```
+
 “塔”类（如 ABC 塔）以六种不同的组合出现。每种组合是通过八种状态表示的一个实例化：
 
 ```python
@@ -4737,6 +4931,7 @@ qc.cswap(9, 2, 8)
 qc.append(gate4, [10, 23, 24, 25, 9])
 qc.x(25)
 qc.x(23)
+```
 
 ```python
 # 再次为路径描述符的状态 7-8 重复两次实例化
@@ -4754,8 +4949,6 @@ qc.x(25)
 qc.x(24)
 ```
 
-
-
 ```python
 qc.x(23)
 qc.append(gate4, [17, 23, 24, 25, 9])
@@ -4772,11 +4965,21 @@ qc.x(23)
 # BA tower and block C
 # CA tower and block B
 # CB tower and block A
+```
+
+
+
 # AC tower and block B
+
 # AB tower and block C
+
 ...
-qc.name="R_TB"
-return qc
+
+`qc.name="R_TB"`
+
+`return qc`
+
+```
 ```
 
 ## 11.1.2 门器
@@ -4803,12 +5006,12 @@ qc = QuantumCircuit(27)
 # 状态准备 0-8
 ```
 
-# 工作内存，标记 9
-# 第1次轨迹 (十) 10-22 规则类
+### 工作内存，标记 9
+### 第1次轨迹 (十) 10-22 规则类
 
-# 叠加态中的第一组描述符，一、三、六种可能的动作
-# 由三个比特位表示
-# 可能的实例化
+### 叠加态中的第一组描述符，一、三、六种可能的动作
+### 由三个比特位表示
+### 可能的实例化
 
 ```python
 qc.h(23)
@@ -4816,10 +5019,10 @@ qc.h(24)
 qc.h(25)
 ```
 
-### # 辅助的准备
+### 辅助的准备
 
-qc.x(26)
-qc.h(26)
+`qc.x(26)`
+`qc.h(26)`
 
 ```python
 qc.append(state_floor(), range(9))
@@ -4909,10 +5112,6 @@ $r = \sqrt{B_{average}}^m$
 
 五硬币尼姆游戏深度的搜索树。在初始游戏中，五个硬币存在。它们由比特 [11111] 表示。玩家 A 开始游戏，可以移除一、二或三枚硬币。路径描述符由两个比特 [00], [01], [10] 表示。
 
-
-
-
-
 # 五分尼 Nim 游戏 ■ 159
 
 我们可以确定搜索路径，但无法模拟选择最佳移动的玩家的行为，因为我们无法比较由不同路径描述符描述的不同状态。
@@ -4942,7 +5141,6 @@ def rules_depth(
     qc.cx(5,2)
     # 重置标记
     qc.ccx(6,7,5)
-
     # 第二规则
     # 根据路径描述符设置标记 5
     qc.x(6)
@@ -4953,7 +5151,6 @@ def rules_depth(
     # 重置标记
     qc.ccx(6,7,5)
     qc.x(6)
-
     # 第三规则
     # 根据路径描述符设置标记 5
     qc.x(7)
@@ -4963,7 +5160,6 @@ def rules_depth(
     # 重置标记
     qc.ccx(6,7,5)
     qc.x(7)
-
     # 第四=第三规则
     # 根据路径描述符设置标记 5
     qc.x(6)
@@ -5053,7 +5249,6 @@ qc.cx(5,3)
 qc.cx(5,4)
 # 清除标记
 qc.append(flag_gate, [8,11,12,5])
-
 # 第二次实例化
 qc.x(11)
 qc.append(flag_gate, [8,11,12,5])
@@ -5062,7 +5257,6 @@ qc.cx(5,3)
 qc.cx(5,4)
 # 清除标记
 qc.append(flag_gate, [8,11,12,5])
-
 # 第三次实例化
 qc.x(12)
 qc.append(flag_gate, [8,11,12,5])
@@ -5070,7 +5264,6 @@ qc.append(flag_gate, [8,11,12,5])
 qc.cx(5,3)
 # 清除标记
 qc.append(flag_gate, [8,11,12,5])
-
 # 第四次实例化
 qc.x(11)
 qc.x(12)
@@ -5092,7 +5285,6 @@ qc.cx(5,3)
 qc.cx(5,4)
 # 清除标记
 qc.append(flag_gate, [9,11,12,5])
-
 # 第二次实例化
 qc.x(11)
 qc.append(flag_gate, [9,11,12,5])
@@ -5101,7 +5293,6 @@ qc.cx(5,2)
 qc.cx(5,3)
 # 清除标记
 qc.append(flag_gate, [9,11,12,5])
-
 # 第三次实例化
 qc.x(12)
 qc.append(flag_gate, [9,11,12,5])
@@ -5109,7 +5300,6 @@ qc.append(flag_gate, [9,11,12,5])
 qc.cx(5,2)
 # 清除标记
 qc.append(flag_gate, [9,11,12,5])
-
 # 第四次实例化
 qc.x(11)
 qc.x(12)
@@ -5131,7 +5321,6 @@ qc.cx(5,2)
 qc.cx(5,3)
 # 清除标记
 qc.append(flag_gate, [10,11,12,5])
-
 # 第二次实例化
 qc.x(11)
 qc.append(flag_gate, [10,11,12,5])
@@ -5140,7 +5329,6 @@ qc.cx(5,1)
 qc.cx(5,2)
 # 清除标记
 qc.append(flag_gate, [10,11,12,5])
-
 # 第三次实例化
 qc.x(12)
 qc.append(flag_gate, [10,11,12,5])
@@ -5148,7 +5336,6 @@ qc.append(flag_gate, [10,11,12,5])
 qc.cx(5,1)
 # 清除标记
 qc.append(flag_gate, [10,11,12,5])
-
 # 第四次实例化
 qc.x(11)
 qc.x(12)
@@ -5233,6 +5420,8 @@ qc.h(13)
 qc.barrier()
 ```
 
+
+
 | 0 | 1 | 2 | 3 | 4 | 5 |
 |---|---|---|---|---|---|
 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -5246,10 +5435,6 @@ qc.barrier()
 | 8 | | | 10 | 10 | 10 | 10 |
 | 9 | | | | | | 11 | 11 |
 | 10 | | | | | | 12 |
-
-
-
-
 
 # 二进制向量的基编码
 
@@ -5315,18 +5500,14 @@ $$|pattern_m\rangle, |pattern_{m-1}\rangle, \dots |pattern_1\rangle$$
 
 从 $p = m$ 到 2 步长 -1：
 
-- 将模式 $pattern_p$ 加载到加载寄存器。
+- 将模式 `pattern_p` 加载到加载寄存器。
 - 如果 $p = m$，则：
   - 使用 NOT 门将处理分支的内存寄存器的基态反反为 $[11\dots1]$。
 - 否则：
-  - 使用 cX 门（受控非门）将模式 $pattern_p$ 拷贝到控制比特 $c_2=1$ 的处理分支中。
-  - 使用 $\epsilon$ cX 门（受控非门，反转 $c_2$）将模式 $pattern_p$ 拷贝到控制比特 $c_2=0$ 的内存分支中。结果处理分支的内存寄存器处于基态 $[00\dots0]$，而内存分支的位被翻转了。
+  - 使用 cX 门（受控非门）将模式 `pattern_p` 拷贝到控制比特 $c_2=1$ 的处理分支中。
+  - 使用 $\epsilon$ cX 门（受控非门，反转 $c_2$）将模式 `pattern_p` 拷贝到控制比特 $c_2=0$ 的内存分支中。结果处理分支的内存寄存器处于基态 $[00\dots0]$，而内存分支的位被翻转了。
   - 使用 NOT 门将处理分支的基态反转为 $[11\dots1]$。
 - 将模式存储在新生成的内存分支的内存寄存器中。
-
-
-
-
 
 # 172 使用 Qiskit 的量子人工智能
 
@@ -5380,8 +5561,11 @@ $|\psi_8 = \frac{1}{\sqrt{3}}|0,0;0,0> + \frac{1}{\sqrt{3}}|0,1;1,0>$
 
 ```
 qc.cx(3,0)
+
 qc.x(1)
+
 qc.ccx(0,3,4)
+
 qc.ccx(1,3,5)
 ```
 
@@ -5407,6 +5591,7 @@ qc.cx(0,3)
 
 ```
 qc.ccx(4,5,0)
+
 qc.x(1)
 ```
 
@@ -5424,25 +5609,43 @@ $|\psi_9 = \frac{1}{\sqrt{3}}(|0,1\rangle + |1,0\rangle + |1,1\rangle) \otimes |
 
 ```
 qc = QuantumCircuit(6,2)
+
 #0-1 加载寄存器
+
 #2-3 控制寄存器
+
 #4-5 存储，内存
+
 qc.x(3)
+
 qc.x(0)
+
 qc.barrier()
 
 qc.x(4)
+
 qc.x(5)
+
 qc.barrier()
+
 qc.ccx(4,5,2)
+
 qc.cu(1,2.3095941734075,pi,pi,0,2,3)
+
 qc.ccx(4,5,2)
+
 qc.barrier()
+
 qc.x(4)
+
 qc.x(5)
+
 qc.cx(1,5)
+
 qc.cx(0,4)
+
 #消除
+
 qc.barrier()
 ```
 
@@ -5452,10 +5655,6 @@ qc.barrier()
 
 **图 13.8.** (a) 我们使用多控制 X 门（Toffoli Gate）消除控制量子比特 2 ($c_1=1$) 与内存寄存器 [11] 的纠缠。我们对三个分支的内存寄存器应用 NOT 门操作和受控 NOT 操作（CNOT 门）。结果我们将第一个分支的内存寄存器翻转（恢复）为 |10>，并将 |01> 复制到另外两个分支的内存寄存器中。我们消除处理分支的内存寄存器，将其设置为基态 |00>。我们使用由加载寄存器和控制量子比特 3 ($c_2=1$ 表示处理分支）控制的 ccX 门（CNOT 门）。我们将加载寄存器重置为基态 (00)。得到的状态为
 
-
-
-
-
 # 178 ■ 使用 Qiskit 进行量子人工智能
 
 ![](img/52faec2d621d75e53089d939bb234a82_204_0.png)
@@ -5464,64 +5663,95 @@ qc.barrier()
 
 ```
 qc.x(4)
+
 qc.x(5)
+
 qc.barrier()
+
 qc.ccx(4,5,2)
+
 qc.cu(1,570793627948966,pi,1,0,2,3)
+
 qc.ccx(4,5,2)
 ```
 
 ```
 qc.barrier()
+
 qc.x(4)
+
 qc.x(5)
+
 qc.cx(1,5)
+
 qc.cx(0,4)
+
 # Uncompute
+
 qc.barrier()
+
 qc.ccx(0,3,4)
 ```
 
 # 二进制向量的基编码 179
 
+```
 qc.ccx(1,3,5)
 qc.x(1)
+```
 
 ```
 qc.barrier()
+
 qc.cx(3,0)
+
 qc.x(1)
+
 qc.ccx(0,3,4)
+
 qc.ccx(1,3,5)
+
 qc.cx(0,3)
+
 qc.ccx(4,5,0)
-qc.x(1)
-qc.barrier()
 ```
 
+
+
+`qc.x(1)`
+
+`qc.barrier()`
+
 ```
-qc.measure(4,0)
-qc.measure(5,1)
-simulator = Aer.get_backend('qasm_simulator')
-result=execute(qc,simulator,shots=10000).result()
-counts = result.get_counts()
-print("Total count is:",counts)
-plot_histogram(counts)
 ```
+
+`qc.measure(4,0)`
+
+`qc.measure(5,1)`
+
+`simulator = Aer.get_backend('qasm_simulator')`
+
+`result=execute(qc,simulator,shots=10000).result()`
+
+`counts = result.get_counts()`
+
+`print("Total count is:",counts)`
+
+`plot_histogram(counts)`
 
 ## 13.3 二进制模式的纠缠
 
-该方法基于处于叠加态的模式与索引比特之间的纠缠。为了存储 m 个二进制模式：
+该方法基于处于叠加态的模式与索引比特之间的纠缠。为了存储 `m` 个二进制模式：
 
-> $|pattern_m>, |pattern_{m-1}>, \dots, |pattern_1|$
+> `$|pattern_m>, |pattern_{m-1}>, \dots, |pattern_1|$`
 
-我们使用多受控非门（cCX 门或 MCX 门）对索引比特命名。首先，我们使用 Hadamard 门生成 $v = \log_2(m)$ 个索引比特
+我们使用多受控非门（cCX 门或 MCX 门）对索引比特命名。首先，我们使用 Hadamard 门生成 `$v = \log_2(m)$` 个索引比特
 
 ```
 $H^{\otimes m}|0\rangle^{\otimes m} = \frac{1}{\sqrt{m}} \sum_{j=1}^{m} index_j$
 ```
 
-并使用索引比特的叠加态为 m 个二进制模式命名
+并使用索引比特的叠加态为 `m` 个二进制模式命名
 
 ```
 $|\psi\rangle = \frac{1}{\sqrt{m}} \sum_{j=1}^{m} |index_j\rangle|pattern_j\rangle$ (13.1)
@@ -5531,9 +5761,9 @@ $|\psi\rangle = \frac{1}{\sqrt{m}} \sum_{j=1}^{m} |index_j\rangle|pattern_j\rang
 
 在本节中，我们存储四个二进制模式：
 
-> $|101\rangle, |011\rangle, |111\rangle, |010\rangle$
+> `$|101\rangle, |011\rangle, |111\rangle, |010\rangle$`
 
-通过与叠加态中的四个索引比特 $|index_j$ 纠缠：
+通过与叠加态中的四个索引比特 `|index_j` 纠缠：
 
 ```
 $|index_4\rangle = |11\rangle$ $|index_3\rangle = |10\rangle$ $|index_2\rangle = |01\rangle$ $|index_1\rangle = |00\rangle$
@@ -5547,53 +5777,55 @@ $|index_4\rangle = |11\rangle$ $|index_3\rangle = |10\rangle$ $|index_2\rangle =
 
 图 13.10 该方法基于索引比特的纠缠（b）代表叠加态的直方图，比特 0, 1 和 2 代表模式，比特 4 和 5 是索引比特。
 
-```
+```python
 from qiskit import QuantumCircuit, Aer, execute
 from qiskit.visualization import plot_histogram
 from qiskit.circuit.library import MCXGate
-
 ```
-qc = QuantumCircuit(5)
-# 0-2 data
-# Index
-# 3-4
-qc.h(3)
-qc.h(4)
+`qc = QuantumCircuit(5)`
+`# 0-2 data`
+`# Index`
+`# 3-4`
+`qc.h(3)`
+`qc.h(4)`
 
-# First pattern
-qc.ccx(3,4,0)
-qc.ccx(3,4,2)
-qc.barrier()
-# Second pattern
-qc.x(3)
-qc.ccx(3,4,0)
-qc.ccx(3,4,1)
-qc.x(3)
+`# First pattern`
+`qc.ccx(3,4,0)`
+`qc.ccx(3,4,2)`
+`qc.barrier()`
+`# Second pattern`
+`qc.x(3)`
+`qc.ccx(3,4,0)`
+`qc.ccx(3,4,1)`
+`qc.x(3)`
 
-qc.barrier()
-# Third pattern
-qc.x(4)
-qc.ccx(3,4,0)
-qc.ccx(3,4,1)
-qc.ccx(3,4,2)
-qc.x(4)
+`qc.barrier()`
+`# Third pattern`
+`qc.x(4)`
+`qc.ccx(3,4,0)`
+`qc.ccx(3,4,1)`
+`qc.ccx(3,4,2)`
+`qc.x(4)`
 
-qc.barrier()
-# Fourth pattern
-qc.x(3)
-qc.x(4)
-qc.ccx(3,4,1)
-qc.x(4)
-qc.barrier()
-```
+`qc.barrier()`
+`# Fourth pattern`
+`qc.x(3)`
+`qc.x(4)`
+`qc.ccx(3,4,1)`
+`qc.x(4)`
+`qc.barrier()`
 
 # 二进制向量的基编码 181
 
-qc.x(3)
-qc.x(4)
-qc.ccx(3,4,1)
-qc.x(4)
-qc.x(3)
+`qc.x(3)`
+
+`qc.x(4)`
+
+`qc.ccx(3,4,1)`
+
+`qc.x(4)`
+
+`qc.x(3)`
 
 ```
 simulator = Aer.get_backend('statevector_simulator')
@@ -5604,7 +5836,7 @@ plot_histogram(counts)
 
 带有索引的模式叠加态表示为：
 
-> $$\Psi\rangle = \frac{1}{2} \cdot (|0010)_1 + |0111)_2 +1111)_3.$$
+> `$$\Psi\rangle = \frac{1}{2} \cdot (|0010)_1 + |0111)_2 +1111)_3.$$`
 
 我们可以纠缠多个叠加二进制向量的副本，它们可以独立地处理和测量，见图 13.11。
 
@@ -5631,6 +5863,7 @@ $|\psi\rangle = \left( \frac{1}{\sqrt{m}} \sum_{j=1}^{m} |index_j\rangle|pattern
 # 184 ■ 使用 Qiskit 进行量子人工智能
 
 | q_0 | q_1 | q_2 | q_3 | q_4 |
+
 |---|---|---|---|---|
 
 图 13.10 该方法基于索引比特的纠缠（b）代表叠加态的直方图，比特 0, 1 和 2 代表模式，比特 4 和 5 是索引比特。
@@ -5639,40 +5872,65 @@ $|\psi\rangle = \left( \frac{1}{\sqrt{m}} \sum_{j=1}^{m} |index_j\rangle|pattern
 from qiskit import QuantumCircuit, Aer, execute
 from qiskit.visualization import plot_histogram
 from qiskit.circuit.library import MCXGate
-
 ```
-qc = QuantumCircuit(5)
-# 0-2 data
-# Index
-# 3-4
-qc.h(3)
-qc.h(4)
 
-# First pattern
-qc.ccx(3,4,0)
-qc.ccx(3,4,2)
-qc.barrier()
-# Second pattern
-qc.x(3)
-qc.ccx(3,4,0)
-qc.ccx(3,4,1)
-qc.x(3)
+`qc = QuantumCircuit(5)`
 
-qc.barrier()
-# Third pattern
-qc.x(4)
-qc.ccx(3,4,0)
-qc.ccx(3,4,1)
-qc.ccx(3,4,2)
-qc.x(4)
+`# 0-2 data`
 
-qc.barrier()
-# Fourth pattern
-qc.x(3)
-qc.x(4)
-qc.ccx(3,4,1)
-qc.x(4)
-qc.x(3)
+`# Index`
+
+`# 3-4`
+
+`qc.h(3)`
+
+`qc.h(4)`
+
+`# First pattern`
+
+`qc.ccx(3,4,0)`
+
+`qc.ccx(3,4,2)`
+
+`qc.barrier()`
+
+`# Second pattern`
+
+`qc.x(3)`
+
+`qc.ccx(3,4,0)`
+
+`qc.ccx(3,4,1)`
+
+`qc.x(3)`
+
+`qc.barrier()`
+
+`# Third pattern`
+
+`qc.x(4)`
+
+`qc.ccx(3,4,0)`
+
+`qc.ccx(3,4,1)`
+
+`qc.ccx(3,4,2)`
+
+`qc.x(4)`
+
+`qc.barrier()`
+
+`# Fourth pattern`
+
+`qc.x(3)`
+
+`qc.x(4)`
+
+`qc.ccx(3,4,1)`
+
+`qc.x(4)`
+
+`qc.x(3)`
 
 ```
 simulator = Aer.get_backend('statevector_simulator')
@@ -5683,22 +5941,24 @@ plot_histogram(counts)
 
 带有索引的模式叠加态表示为：
 
-> $$\Psi\rangle = \frac{1}{2} \cdot (|0010)_1 + |0111)_2 + |1011)_3 + |1101)_4.$$
+> `$$\Psi\rangle = \frac{1}{2} \cdot (|0010)_1 + |0111)_2 + |1011)_3 + |1101)_4.$$`
 
 我们可以纠缠多个叠加二进制向量的副本，它们可以独立地处理和测量，见图 13.11。
-
-
-
-
 
 ## 量子关联记忆 ■ 185
 
 | | | | | | | | | | | | | | |
+
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+
 | q_0 | X | | | | | | | | | | | | |
+
 | q_1 | | X | | | | | | | | | | | |
+
 | q_2 | | | X | | | | | | | | | | |
+
 | q_3 | | | | X | | | | | | | | | |
+
 | q_4 | | | | | X | | | | | | | | |
 
 (a)
@@ -5737,17 +5997,24 @@ def store():
 # 186 ■ 使用 Qiskit 的量子人工智能
 
 | | 0 | 0 |
+
 |---|---|---|
+
 | q_0: | | |
+
 | q_1: | 1 | |
+
 | q_2: | 2 Store | 2 Store! |
+
 | q_3: | H | 3 | H |
+
 | q_4: | 4 | 4 | H |
+
 | q_5: | X H | X | |
 
 ![](img/52faec2d621d75e53089d939bb234a82_2_2..))
 
-14.3 (a) 对索引比特进行 Grover 放大，我们需要取消索引比特与模式的纠缠。对于四个状态，我们只需要一次旋转。(b) 我们通过一个状态测量正确的结果 $index_2 = |01|$。
+14.3 (a) 对索引比特进行 Grover 放大，我们需要取消索引比特与模式的纠缠。对于四个状态，我们只需要一次旋转。(b) 我们通过一个状态测量正确的结果 `$index_2 = |01|$`。
 
 ```python
 qc.x(3)
@@ -5800,32 +6067,40 @@ qc.cz(3,4)
 qc.h(3,4)
 ```
 
-对于四个状态，我们只需要一次旋转。我们通过一个状态测量正确的结果 $index_2 = |10|$（见图14.3 (b)）。与其取消，我们希望对代表模式和索引的五个量子比特应用 Grover 算法。Grover 放大一次旋转后的状态表明某些奇怪的事情正在发生。
+对于四个状态，我们只需要一次旋转。我们通过一个状态测量正确的结果 `$index_2 = |10|$`（见图14.3 (b)）。与其取消，我们希望对代表模式和索引的五个量子比特应用 Grover 算法。Grover 放大一次旋转后的状态表明某些奇怪的事情正在发生。
 
 ## 14.2 量子关联记忆 (QuAM)
 
-在 Ventura 和 Martinez 提出的 QuAM 中，变体 Grover 搜索算法用于确定查询向量 [114, 115, 110] 的答案。为了准备维度为 $n > m$ 的 $m$ 个线性无关向量，Ventura 和 Martinez [114, 115] 提出了一种方法，后由 [111] 简化，准备成本为 $O(n-m)$，需要 $\log_2(m)$ 个单位。查询成本相对于传统计算机的 $O(\sqrt{m})$。为了理解变体 Grover 搜索算法及其结果，我们生成简单的叠加态
+在 Ventura 和 Martinez 提出的 QuAM 中，变体 Grover 搜索算法用于确定查询向量 [114, 115, 110] 的答案。为了准备维度为 `$n > m$` 的 `$m$` 个线性无关向量，Ventura 和 Martinez [114, 115] 提出了一种方法，后由 [111] 简化，准备成本为 `$O(n-m)$`，需要 `$\log_2(m)$` 个单位。查询成本相对于传统计算机的 `$O(\sqrt{m})$`。为了理解变体 Grover 搜索算法及其结果，我们生成简单的叠加态
 
-$|\psi\rangle = \frac{1}{2}(|1100\rangle + |1001\rangle + |1111\rangle + |0110\rangle)$
+`$|\psi\rangle = \frac{1}{2}(|1100\rangle + |1001\rangle + |1111\rangle + |0110\rangle)$`
 
 以便我们可以跟踪幅度分布
-$$\frac{1}{2}(0,0,0,0,1,0,1,0,1,0,1,0,0,1)^T.$$
+
+`$$\frac{1}{2}(0,0,0,0,1,0,1,0,1,0,1,0,0,1)^T.$$`
 
 我们注意到幅度分布不是均匀的，四个量子比特的均匀分布对应于
 
-$$\frac{1}{4}(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)^T.$$
+`$$\frac{1}{4}(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)^T.$$`
 
 这可能是问题的原因吗？
 
 # 188 使用 Qiskit 的量子人工智能
 
 | | | | | | | |
+
 |---|---|---|---|---|---|---|
+
 | q_0: | 0 | | | | | | |
+
 | q_1: | | 1 | | | | | |
+
 | q_2: | | | 2 Store | | | |
+
 | q_3: | | | | 3 | | | |
+
 | q_4: | | | | | 4 | | |
+
 | q_5: | X | | | | | H | |
 
 ![](img/52faec2d621d75e53089d939bb234a82_214_0.png)
@@ -5834,28 +6109,40 @@ $$\frac{1}{4}(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)^T.$$
 
 ### 14.2.1 非均匀分布
 
-从初始分布开始，我们用负相位标记目标态 $|0110>$：
+从初始分布开始，我们用负相位标记目标态 `|0110>`：
 
-$$(0,0,0,1,0,0,-1,0,0,0,0)^T$$
+`$(0,0,0,1,0,0,-1,0,0,0,0)^T$`
+
 并执行 Grover 旋转，结果为：
-$$\frac{1}{8}(-1,-1,-1,-3,-1,-1,-1,-3)^T$$
-我们再次用负相位标记目标态 $|0110>$ 并执行 Grover 旋转，结果为：
-$$(-0.2,-0.2,-0.2,0.3,-0.2,0,2,3)^T$$
-代表我们分布的四个状态具有高幅度（为了清晰起见）。用负相位标记目标态 $|0110>$ 并进行 Grover 旋转
 
-$(0.02,0.02,0.02,0.5,0.02,0.02,-0.4,0.02,0.5)^T$
+`$$\frac{1}{8}(-1,-1,-1,-3,-1,-1,-1,-3)^T$$`
+
+我们再次用负相位标记目标态 `|0110>` 并执行 Grover 旋转，结果为：
+
+`$(-0.2,-0.2,-0.2,0.3,-0.2,0,2,3)^T$`
+
+代表我们分布的四个状态具有高幅度（为了清晰起见）。用负相位标记目标态 `|0110>` 并进行 Grover 旋转
+
+`$(0.02,0.02,0.02,0.5,0.02,0.02,-0.4,0.02,0.5)^T$`
+
 所有基态具有几乎相同的分布。
 
-Ventura 和 Martinez 提出了一种变体 Grover 搜索算法 [114,115]。在此之前，从初始分布，我们用负相位标记目标态 $|0110>$：
+Ventura 和 Martinez 提出了一种变体 Grover 搜索算法 [114,115]。在此之前，从初始分布，我们用负相位标记目标态 `|0110>`：
 
-$$\frac{1}{2}(0,0,0,1,0,0,-1,0,0,0)^T$$
+`$$\frac{1}{2}(0,0,0,1,0,0,-1,0,0,0)^T$$`
+
 并执行 Grover 旋转，结果为：
-$$\frac{1}{8}(-1,-1,-1,-3,-1,-1,-1,-3)^T$$
+
+`$$\frac{1}{8}(-1,-1,-1,-3,-1,-1,-1,-3)^T$$`
+
 然而，现在我们用负相位标记代表我们分布的四个状态并执行 Grover 旋转，结果为：
-$$\frac{1}{8}(1,1,-1,-1,1,-1,-1)^T$$
+
+`$$\frac{1}{8}(1,1,-1,-1,1,-1,-1)^T$$`
+
 我们再次用负相位标记代表我们分布的四个状态并执行 Grover 旋转，结果为：
 
-$$(0,0,0,0,0)^T$$
+`$$(0,0,0,0,0)^T$$`
+
 指示目标态。qiskit 电路（见图14.5）表示为：
 
 ```python
@@ -5941,6 +6228,8 @@ qc.barrier()
 
 ## 量子关联记忆 ■ 191
 
+
+
 ```python
 qc.h(4)
 qc.barrier()
@@ -5971,8 +6260,10 @@ qc.append(gate,[0,1,2,3,4])
 qc.barrier()
 qc.h(4)
 #
+```
 
 # Diffuser 0, 1, 2, 3
+```python
 qc.barrier()
 qc.h([0,1,2,3])
 qc.x([0,1,2,3])
@@ -5982,13 +6273,17 @@ qc.append(gate,[1,2,3,0])
 qc.h(0)
 qc.x([0,1,2,3])
 qc.x([0,1,2,3])
+```
 
-#Third rotation
+# Third rotation
+```python
 qc.barrier()
 qc.h(4)
 qc.barrier()
+```
 
-#Oracle Trick
+# Oracle Trick
+```python
 qc.x(0)
 qc.x(3)
 gate = MCGate(4)
@@ -6018,10 +6313,6 @@ gate = MCGate(4)
 qc.append(gate,[0,1,2,3,4])
 ```
 
-
-
-
-
 # 量子关联记忆 ■ 193
 
 ![](img/52faec2d621d75e53089d939bb234a82_219_0.png)
@@ -6034,21 +6325,21 @@ Grover 放大算法对成本的影响。在我们的案例中，我们需要三�
 
 大多数量子机器学习算法（包括量子关联记忆）都受到输入破坏问题（ID 问题）的影响 [3, 126, 1]：
 
-- 输入（读取）问题：量子态的幅度分布是通过读取数据点初始化的。现有的量子算法只需要 $O(\sqrt{n})$ 步或更少，这比必须读取 $n$ 个数据点的经典算法更快。因此，算法的复杂度并没有提高，而是 $O(n) + O(\sqrt{n})$。
+- 输入（读取）问题：量子态的幅度分布是通过读取数据点初始化的。现有的量子算法只需要 `O(sqrt(n))` 步或更少，这比必须读取 `n` 个数据点的经典算法更快。因此，算法的复杂度并没有提高，而是 `O(n) + O(sqrt(n))`。
 
-- 破坏问题：对于维度 $m$ 的 $n$ 个数据点的量子关联记忆 [114, 115, 110], [111, 112] 只需要 $m \cdot \log(n)$ 或更少的单元（量子比特）。作为 oracle [110] 的运算符指示解决方案。然而，由于测量过程中的坍缩（破坏），该内存只能查询一次；因此，量子关联记忆相对于经典内存并没有优势。
+- 破坏问题：对于维度 `m` 的 `n` 个数据点的量子关联记忆 [114, 115, 110], [111, 112] 只需要 `m * log(n)` 或更少的单元（量子比特）。作为 oracle [110] 的运算符指示解决方案。然而，由于测量过程中的坍缩（破坏），该内存只能查询一次；因此，量子关联记忆相对于经典内存并没有优势。
 
 高效的数据准备部分对于稀疏数据是可能的 [39]。然而，输入破坏问题直到今天还没有解决，而且通常通过忽略输入问题来分析理论上的加速 [94]，而输入问题正是数据编码的主要瓶颈。我们将输入数据的准备过程命名为*睡眠阶段*。查询操作速度极快，被称为*活跃阶段*。这两个阶段的命名类比于生物体，它们在睡眠期间为为活跃的一天做准备。量子方法的优势体现在*活跃阶段*中。
 
 ## 量子 Lernmatrix（学习矩阵）
 
-我们引入了基于 Lernmatrix 的量子 Lernmatrix，其中 $n$ 个单元存储在量子叠加态中。Lernmatrix 是一种类似于关联记忆的架构。在检索阶段，根据 Trugenberger 的提议，基于欧拉公式的量子 ones 计数被用于模式恢复。我们演示了如何用量子电路表示量子 Lernmatrix，并使用 gostkit 进行实验。我们引入了一种增加正确答案测量值的树状结构。在活跃阶段，对量子 Lernmatrix 进行查询并高效估计结果。与传统方法或 Grover 算法相比，所需时间要得多。
+我们引入了基于 Lernmatrix 的量子 Lernmatrix，其中 `n` 个单元存储在量子叠加态中。Lernmatrix 是一种类似于关联记忆的架构。在检索阶段，根据 Trugenberger 的提议，基于欧拉公式的量子 ones 计数被用于模式恢复。我们演示了如何用量子电路表示量子 Lernmatrix，并使用 gostkit 进行实验。我们引入了一种增加正确答案测量值的树状结构。在活跃阶段，对量子 Lernmatrix 进行查询并高效估计结果。与传统方法或 Grover 算法相比，所需时间要得多。
 
 ## 15.1 LEARNMATRIX
 
 多年来人们提出了不同的关联记忆模型 [5], [42, 49], [6, 10]。Hopfield 模型代表了关联记忆的递归模型 [5], [46], [44]，它是一个演化到稳定状态的动力系统。Lernmatrix，或者说 Wilhelm 关联记忆，也简单称为“关联记忆”（如果可能与其他模型产生混淆 [6, 10]），它是由 Steinbuch 在 1958 年开发的，作为一种生物学启发的模型，用于解释条件反射心理现象 [103, 104]。其目标是产生一个可以使用向量向量的二进制向量的网络。后来，Wilhelm [124] 和 Palm [75, 76] 从生物和数学角度对该模型进行了研究，并证明了这个简单模型具有巨大的存储容量。
 
-Lernmatrix 由一组单元组成。每个单元代表一个生物神经元的简单模型。每个单元由二进制向量组成，这些向量对应于真实神经元中的突触和树突（见图 15.1）。它们在图 15.2 中由 $w_{ij} \in \{0,1\}$ 描述，$T$ 是单元的阈值。向量中的“1”成分表示特征的存在，通过“0”成分表示其缺失。这对向量被关联在一起，这个过程被称为学习。两个向量中的第一个被称为*查询向量*，第二个被称为*答案向量*。学习后，将查询向量呈现关联记忆，并通过检索规则确定答案向量。
+Lernmatrix 由一组单元组成。每个单元代表一个生物神经元的简单模型。每个单元由二进制向量组成，这些向量对应于真实神经元中的突触和树突（见图 15.1）。它们在图 15.2 中由 `w_ij ∈ {0,1}` 描述，`T` 是单元的阈值。向量中的“1”成分表示特征的存在，通过“0”成分表示其缺失。这对向量被关联在一起，这个过程被称为学习。两个向量中的第一个被称为*查询向量*，第二个被称为*答案向量*。学习后，将查询向量呈现关联记忆，并通过检索规则确定答案向量。
 
 # 196 使用 Qiskit 的人工智能
 
@@ -6058,23 +6349,27 @@ Lernmatrix 由一组单元组成。每个单元代表一个生物神经元的简
 
 ### 15.1.1 学习与检索
 
-最初，关联记忆中没有存储信息。由于信息由权重表示，所有单元权重初始化为零。设 $x$ 为查询向量，$y$ 为答案向量，学习规则为：
+最初，关联记忆中没有存储信息。由于信息由权重表示，所有单元权重初始化为零。设 `x` 为查询向量，`y` 为答案向量，学习规则为：
 
 ```
 $w_{ij}^{new} = \begin{cases} 1 & \text{if } y_i \cdot x_j = 1 \\ 0 & \text{otherwise.}\end{cases} \quad (15.1)$
 ```
 
-| | $w_{11}$ | $w_{21}$ | $w_{31}$ | $w_{n1}$ |
-|---|---|---|---|---|
-| $x_2$ | $w_{12}$ | $w_{22}$ | $w_{23}$ | $w_{m2}$ |
-| $x_n$ | $w_{1n}$ | $w_{2n}$ | $w_{3n}$ | $w_{mn}$ |
-| | $y_1$ | $y_2$ | $y_3$ | $y_m$ |
+| | `w_11` | `w_21` | `w_31` | `w_n1` |
 
-图 15.2 Lernmatrix 由一组单元组成，代表生物神经元的模型。单元由权重组成，对应真实神经元中的突触和树突。在图中，它们由 $w_{ij} \in \{0, 1\}$ 描述，其中 $1 \le i \le m$ 且 $1 \le j \le n$。T$ 是单元的阈值。
+|---|---|---|---|---|
+
+| `x_2` | `w_12` | `w_22` | `w_23` | `w_m2` |
+
+| `x_n` | `w_1n` | `w_2n` | `w_3n` | `w_mn` |
+
+| | `y_1` | `y_2` | `y_3` | `y_m` |
+
+图 15.2 Lernmatrix 由一组单元组成，代表生物神经元的模型。单元由权重组成，对应真实神经元中的突触和树突。在图中，它们由 `w_ij ∈ {0, 1}` 描述，其中 `1 ≤ i ≤ m` 且 `1 ≤ j ≤ n`。`T` 是单元的阈值。
 
 # Quantum Lernmatrix 197
 
-这种规则被称为二进制 Hebb 规则 [75]。每当存储一对向量时，都会使用该规则。在关联记忆的*单步*检索阶段，容错答案机制为查询向量 $x$ 回忆相应的答案向量。向量 $y$ 的检索为：
+这种规则被称为二进制 Hebb 规则 [75]。每当存储一对向量时，都会使用该规则。在关联记忆的*单步*检索阶段，容错答案机制为查询向量 `x` 回忆相应的答案向量。向量 `y` 的检索为：
 
 ```
 $net_i = \sum_{j=1}^{n} w_{ij}x_j,$
@@ -6084,48 +6379,46 @@ $net_i = \sum_{j=1}^{n} w_{ij}x_j,$
 $y_i = \begin{cases} 1 & \text{if } net \geq T \\ 0 & \text{otherwise.}\end{cases}$
 ```
 
-其中 $T$ 是输出的阈值。阈值 $T$ 设置为查询向量 $x$ 中“1”成分的数量，$T := |x|$。如果单元输出为 1，我们说单元点火；否则单元不点火。*单步*检索的成本为 $O(n \cdot m)$。检索被称为：
+其中 `T` 是输出的阈值。阈值 `T` 设置为查询向量 `x` 中“1”成分的数量，`T := |x|`。如果单元输出为 1，我们说单元点火；否则单元不点火。*单步*检索的成本为 `O(n * m)`。检索被称为：
 
-- 如果两个向量不同 $x \neq \mathbf{y}$，为关联；
-- 如果 $x = \mathbf{y}$，答案向量表示受扰查询向量的重建。
+- 如果两个向量不同 `x ≠ y`，为关联；
+- 如果 `x = y`，答案向量表示受扰查询向量的重建。
 
-为了简单起见，我们假设查询向量和答案的维度相同，$n = m$。
+为了简单起见，我们假设查询向量和答案的维度相同，`n = m`。
 
-示例在图 15.3 中，学习了向量对 $\mathbf{x}_1 = (1, 0, 0, 0, 1)$ 和 $\mathbf{y}_1 = (0, 1, 1, 1, 0)$。关联对应的二进制权重用黑色正方形表示。在下一步，学习了向量对 $\mathbf{x}_0 = (0, 1, 1, 0, 1)$ 和 $\mathbf{y}_2 = (1, 1, 0, 0, 1)$。关联对应的二进制权重用黑色圆圈表示。在第三步执行检索阶段（见图 15.4）。查询向量 $\mathbf{x}_q = (0, 1, 0, 0, 1)$ 与学习过的向量 $\mathbf{x}_2 = (0, 1, 1, 0, 1)$ 有一个比特的差异。阈值 $T$ 设置为查询向量中“1”成分的数量，检索到的存储向量 $\mathbf{y}_2 = (1, 1, 0, 0, 1)$。
+示例在图 15.3 中，学习了向量对 `x_1 = (1, 0, 0, 0, 1)` 和 `y_1 = (0, 1, 1, 1, 0)`。关联对应的二进制权重用黑色正方形表示。在下一步，学习了向量对 `x_0 = (0, 1, 1, 0, 1)` 和 `y_2 = (1, 1, 0, 0, 1)`。关联对应的二进制权重用黑色圆圈表示。在第三步执行检索阶段（见图 15.4）。查询向量 `x_q = (0, 1, 0, 0, 1)` 与学习过的向量 `x_2 = (0, 1, 1, 0, 1)` 有一个比特的差异。阈值 `T` 设置为查询向量中“1”成分的数量，检索到的存储向量 `y_2 = (1, 1, 0, 0, 1)`。
 
 ## 15.2 存储容量
 
-我们分析 Lernmatrix 的最优成本。为了估计关联记忆在检索阶段开始出现错误之前可以存储的向量对 $(x,y)$ 的渐近数量 $L$，假设两个向量具有相同的维度 $n$，每个向量由 $k$ 个“1”组成，这些“1”出现在向量任意坐标上的概率相等。在这种情况下，已经证明 [75, 42, 102] $k$ 的最优值约为：
+我们分析 Lernmatrix 的最优成本。为了估计关联记忆在检索阶段开始出现错误之前可以存储的向量对 `(x,y)` 的渐近数量 `L`，假设两个向量具有相同的维度 `n`，每个向量由 `k` 个“1”组成，这些“1”出现在向量任意坐标上的概率相等。在这种情况下，已经证明 [75, 42, 102] `k` 的最优值约为：
 
 ```
 $k \leq \log_2(n/4).$
 ```
 
-例如，对于维度为 $n=1000000$ 的向量，根据方程 15.3，应使用 $k=18$ 个“1”来编码模式。对于 $k$ 的最优值根据
-
-
+例如，对于维度为 `n=1000000` 的向量，根据方程 15.3，应使用 `k=18` 个“1”来编码模式。对于 `k` 的最优值根据
 
 ![](img/52faec2d621d75e53089d939bb224a82_224_0.png)
 
-图 15.3 学习了向量对 $x_1 = (1,0,0,0,1)$ 和 $y_1 = (0,1,1,1,0)$。关联对的相应二进制权重用黑色方块表示。在下一步中学习了向量对 $x_2 = (0,1,1,0,1)$ 和 $y_2 = (1,1,0,0,1)$。关联对的相应二进制权重用黑色圆圈表示。
+图 15.3 学习了向量对 `x_1 = (1,0,0,0,1)` 和 `y_1 = (0,1,1,1,0)`。关联对的相应二进制权重用黑色方块表示。在下一步中学习了向量对 `x_2 = (0,1,1,0,1)` 和 `y_2 = (1,1,0,0,1)`。关联对的相应二进制权重用黑色圆圈表示。
 
-对于方程 15.3，当 5 个“1”均匀分布在向量坐标上时，关联存储器可以存储大约 $L$ 个向量对 [75, 42]。$L$ 约为：
+对于方程 15.3，当 5 个“1”均匀分布在向量坐标上时，关联存储器可以存储大约 `L` 个向量对 [75, 42]。`L` 约为：
 
-$L \simeq (ln 2)(n^2/k^2).$
+`L ≃ (ln 2)(n^2/k^2).`
 
-该值远**大于** $n$。对 $L$ 的估计非常粗略，因为方程 15.3 仅对于非常大的网络有效，但容量的增加仍然是显著的。
+该值远**大于** `n`。对 `L` 的估计非常粗略，因为方程 15.3 仅对于非常大的网络有效，但容量的增加仍然是显著的。
 
 ![](img/52faec2d621d75e53089d939bb224a82_224_1.png)
 
-图 15.4 查询向量 $\mathbf{x}_q = (0,1,0,0,1)$ 与已学习的查询向量 $\mathbf{x}_2 = (0,1,1,0,1)$ 差一个比特。阈值 $T$ 设置为查询向量 $\mathbf{x}_q$ 中“1”组件的数量，$T=2$。检索到的向量是存储的向量 $\mathbf{y}_2 = (1,1,0,0,1)$。
+图 15.4 查询向量 `x_q = (0,1,0,0,1)` 与已学习的查询向量 `x_2 = (0,1,1,0,1)` 差一个比特。阈值 `T` 设置为查询向量 `x_q` 中“1”组件的数量，`T=2`。检索到的向量是存储的向量 `y_2 = (1,1,0,0,1)`。
 
-对于大 $n$ 的上界为：
+对于大 `n` 的上界为：
 
-$I = n^2 \log 2 = n^2 \cdot 0.693$，渐近容量为每比特 69.311%，远高于大多数关联存储器。这种容量仅适用于稀疏均匀分布的“1” [75]。Willshaw 关联存储器的承诺是它可以存储比单元数量多得多的模式。在 $n$ 个单元中加载 $L = (ln 2)(n^2/k^2)$ 个模式的代价（$k = \log_2(n/4)$）为 $O(n^2)$。这远低于在 $L$ 个单元的列表中存储 $L$ 个模式的代价 $O(n \cdot L)$。这是因为 $L > n$，或者
+`I = n^2 log 2 = n^2 * 0.693`，渐近容量为每比特 69.311%，远高于大多数关联存储器。这种容量仅适用于稀疏均匀分布的“1” [75]。Willshaw 关联存储器的承诺是它可以存储比单元数量多得多的模式。在 `n` 个单元中加载 `L = (ln 2)(n^2/k^2)` 个模式的代价（`k = log_2(n/4)`）为 `O(n^2)`。这远低于在 `L` 个单元的列表中存储 `L` 个模式的代价 `O(n * L)`。这是因为 `L > n`，或者
 
-$O\left(\frac{n^2}{\log(n^2)}\right) > O(n)$
+`O(n^2 / log(n^2)) > O(n)`
 
-因为 $\sqrt{n} > \log(n)$。
+因为 `sqrt(n) > log(n)`。
 
 Lernmatrix 巨大的存储容量 [75, 42]，它可以存储比单元数量多得多的模式。
 
@@ -6133,23 +6426,23 @@ Lernmatrix 巨大的存储容量 [75, 42]，它可以存储比单元数量多得
 
 ## 15.2 蒙特卡洛学习矩阵 (MONTE CARLO LEARNMATRIX)
 
-确定查询向量 $\mathbf{x}$ 的答案向量 $\mathbf{y}$ 的建议概率检索规则为：
+确定查询向量 `x` 的答案向量 `y` 的建议概率检索规则为：
 
-$p(y_i=1|\mathbf{x}) = \frac{1}{n}\left(\frac{net_i}{\sum_{v=1}^n net_v}\right)$
+`p(y_i=1|x) = 1/n (net_i / sum_{v=1}^n net_v)`
 
 和
 
-$p(y_i=0|\mathbf{x}) = \frac{1}{n}\left(1 - \frac{net_i}{\sum_{v=1}^n net_v}\right)$
+`p(y_i=0|x) = 1/n (1 - net_i / sum_{v=1}^n net_v)`
 
 描述了一个单元发射或不发射的概率，带有：
 
-$\sum_{i=1}^n p(y_i=1|\mathbf{x}) + p(y_i=0|\mathbf{x})$
+`sum_{i=1}^n p(y_i=1|x) + p(y_i=0|x)`
 
 在查询操作期间，随机采样单元并根据概率分布使其发射或不发射。为了确定答案向量，我们必须多次采样蒙特卡洛学习矩阵。对于重建的向量，将存在三种状态：1 表示发射单元，0 表示未发射单元，*未知*（unknown）表示沉默单元。蒙特卡洛学习矩阵是量子学习矩阵的密切描述。在量子矩阵中，单元由量子态表示，采样对应于测量。
 
 ## 15.3 量子计数一 (QUANTUM COUNTING ONES)
 
-在长度为 $N$ 的二进制字符串中，我们可以用简单公式 $k/N$ 表示 $k$ 个“1”的比例，用 $(N - k)/N$ 表示“0”，产生线性关系。我们可以将这些解释为概率值。我们可以利用与三角相关的欧拉公式 [111]，将这些线性关系映射到“1”存在的类 sigmoid 概率函数：
+在长度为 `N` 的二进制字符串中，我们可以用简单公式 `k/N` 表示 `k` 个“1”的比例，用 `(N - k)/N` 表示“0”，产生线性关系。我们可以将这些解释为概率值。我们可以利用与三角相关的欧拉公式 [111]，将这些线性关系映射到“1”存在的类 sigmoid 概率函数：
 
 $$\left(\sin\frac{\pi \cdot k}{2 \cdot N}\right)^2 = \frac{e^{\frac{\pi \cdot k}{N}} - e^{-\frac{\pi \cdot k}{N}}}{2} \in [0, 1] \quad (15.9)$$
 
@@ -6161,27 +6454,27 @@ $$\left(\cos\frac{\pi \cdot k}{2 \cdot N}\right)^2 = \frac{e^{\frac{\pi \cdot k}
 
 $$\left(\sin\frac{\pi \cdot k}{2 \cdot N}\right)^2 + \left(\cos\frac{\pi \cdot k}{2 \cdot N}\right)^2 = 1$$
 
-在图 15.5 中，标出了 $N=8$ 的类 sigmoid 概率函数。为了计算“1”的数量，引入了控制比特 $1/\sqrt{2}(|0\rangle+|1\rangle)$。对于控制比特 $|0\rangle$ 表示的叠加态，对每个“1”应用相位 $e^{i\pi/3}$。对于控制比特 $|1\rangle$ 表示的叠加态，对每个“1”应用相位 $e^{-i\pi/3}$。
+在图 15.5 中，标出了 `N=8` 的类 sigmoid 概率函数。为了计算“1”的数量，引入了控制比特 `1/sqrt(2)(|0> + |1>)`。对于控制比特 `|0>` 表示的叠加态，对每个“1”应用相位 `e^{iπ/3}`。对于控制比特 `|1>` 表示的叠加态，对每个“1”应用相位 `e^{-iπ/3}`。
 
 $$\frac{1}{\sqrt{2}}(e^{i\pi/3} \cdot |0\rangle \otimes e^{-i\pi/3} \cdot |1\rangle)$$
 
 ![](img/52faec2d621d75e53089d93bb226_0)
 
-图 15.5，$N=8$ 的类 sigmoid 概率函数由实线表示，线性关系由虚线表示。x 轴表示 $k$ 值，y 轴表示概率。
+图 15.5，`N=8` 的类 sigmoid 概率函数由实线表示，线性关系由虚线表示。x 轴表示 `k` 值，y 轴表示概率。
 
-$\frac{1}{\sqrt{2}}(e^{i\pi/3} \cdot |0\rangle \otimes e^{-i\pi/3} \cdot |1\rangle) = (15.11)$
+$$\frac{1}{\sqrt{2}}(e^{i\pi/3} \cdot |0\rangle \otimes e^{-i\pi/3} \cdot |1\rangle) = (15.11)$$
 
 如果我们对控制比特应用 Hadamard 门，得到：
 
-$(H \otimes I \otimes I) \cdot \frac{1}{\sqrt{2}}(e^{i\pi/3} \cdot |0\rangle + e^{-i\pi/3} \cdot |1\rangle) = \frac{e^{i\pi/3} + e^{-i\pi/3}}{2}|001\rangle + i \frac{e^{i\pi/3} - e^{-i\pi/3}}{2}|101\rangle = \cos\left(\frac{\pi \cdot 2}{2 \cdot 3}\right)|001\rangle + i \sin\left(\frac{\pi \cdot 2}{2 \cdot 3}\right)|101\rangle (15.12)$
+`(H ⊗ I ⊗ I) * 1/sqrt(2)(e^{iπ/3} * |0> + e^{-iπ/3} * |1>) = e^{iπ/3} + e^{-iπ/3} / 2 |001> + i e^{iπ/3} - e^{-iπ/3} / 2 |101> = cos(π * 2 / 2 * 3) |001> + i sin(π * 2 / 2 * 3) |101> (15.12)`
 
-测量控制比特 $|0\rangle$ 的概率为：
+测量控制比特 `|0>` 的概率为：
 
-$p(|0\rangle) = p(|001\rangle) = \left(\cos\left(\frac{\pi \cdot 2}{2 \cdot 3}\right)\right)^2 = 0.25$
+`p(|0>) = p(|001>) = (cos(π * 2 / 2 * 3))^2 = 0.25`
 
-以及测量控制比特 $|1\rangle$ 的概率为：
+以及测量控制比特 `|1>` 的概率为：
 
-$p(|1\rangle) = p(|101\rangle) = \left(\sin\left(\frac{\pi \cdot 2}{2 \cdot 3}\right)\right)^2 = 0.75$
+`p(|1>) = p(|101>) = (sin(π * 2 / 2 * 3))^2 = 0.75`
 
 这表示两个“1”的存在。qiskit 中的电路表示如下：
 
@@ -6207,6 +6500,8 @@ qc.x(3)
 qc.h(3)
 ```
 
+
+
 ![](img/52faec2d621d75e53089d93bb224a82_228_0.png)
 
 图 15.6 (a) $N=3$  $k=2$ 的量子计数电路。(b) $p(|001\rangle) = 0.25$ 和 $p(|101\rangle) = 0.75$。
@@ -6225,15 +6520,13 @@ plot_histogram(counts)
 
 欧拉公式有用的关联属性源于权重矩阵上均匀分布的权重，并且仅存在于示例的大矩阵中。我们将这些模型作为未来量子关联存储器的概念证明。
 
-单元权重向量的叠加态基于与权重向量处于叠加态的索引比特的纠缠。计数由控制相位操作的单比特字符串表示。它代表了 Lernmatrix 的 $net$ 值。相位信息是量子计数的依据，它增加了测量答案向量中代表“1”的正确单元的概率。我们将通过与索引比特纠缠来表示叠加的 $n$ 个单元。为了表示四个单元，我们索引两个叠加比特。比特的每个索引状态通过 Toffoli 门（也称为 ccX 门、CNOT 门、受控受控非门）与模式纠缠，通过将相应的比特设置为 1。在我们的示例中，我们存储了三个模式 $\mathbf{x}_1 = (1,0,0,1)$；$\mathbf{y}_1 = (1,0,0,1)$；$\mathbf{x}_2 = (1,0,0,0)$；$\mathbf{y}_2 = (0,1,0,0)$以及 $\mathbf{x}_3 = (0,0,1,0)$；$\mathbf{y}_3 = (0,0,1,0)$，导致了
+单元权重向量的叠加态基于与权重向量处于叠加态的索引比特的纠缠。计数由控制相位操作的单比特字符串表示。它代表了 Lernmatrix 的 `$net$` 值。相位信息是量子计数的依据，它增加了测量答案向量中代表“1”的正确单元的概率。我们将通过与索引比特纠缠来表示叠加的 `$n$` 个单元。为了表示四个单元，我们索引两个叠加比特。比特的每个索引状态通过 Toffoli 门（也称为 ccX 门、CNOT 门、受控受控非门）与模式纠缠，通过将相应的比特设置为 1。在我们的示例中，我们存储了三个模式 `$\mathbf{x}_1 = (1,0,0,1)$`；`$\mathbf{y}_1 = (1,0,0,1)$`；`$\mathbf{x}_2 = (1,0,0,0)$`；`$\mathbf{y}_2 = (0,1,0,0)$`以及 `$\mathbf{x}_3 = (0,0,1,0)$`；`$\mathbf{y}_3 = (0,0,1,0)$`，导致了
 
-
-
-# Quantummatrix ■ 203
+### Quantummatrix ■ 203
 
 ![](img/52faec2d621d75e53089d939bb234a82_229_0.png)
 
-图 15.7. 三个模式 $\mathbf{x}_1 = (1, 0, 0, 1)$；$\mathbf{y}_1 = (1, 0, 0, 1)$；$\mathbf{x}_2 = (1, 0, 0, 0)$；$\mathbf{y}_2 = (0, 1, 0, 0)$ 以及 $\mathbf{x}_3 = (0, 0, 0, 1)$；$\mathbf{y}_3 = (0, 0, 1, 0)$ 相关后四个单元表示的权重矩阵。学习过程与由四个单元表示的学习阶段权重矩阵相同（见图 15.7）。在索引量子比特 $|index_{xj}\rangle$ 与权重向量纠缠后，得到的状态如下，状态 $count_j$ 和 $unit_j$ 由四个量子比特表示，对应四个二进制权重，
+图 15.7. 三个模式 `$\mathbf{x}_1 = (1, 0, 0, 1)$`；`$\mathbf{y}_1 = (1, 0, 0, 1)$`；`$\mathbf{x}_2 = (1, 0, 0, 0)$`；`$\mathbf{y}_2 = (0, 1, 0, 0)$` 以及 `$\mathbf{x}_3 = (0, 0, 0, 1)$`；`$\mathbf{y}_3 = (0, 0, 1, 0)$` 相关后四个单元表示的权重矩阵。学习过程与由四个单元表示的学习阶段权重矩阵相同（见图 15.7）。在索引量子比特 `$|index_{xj}\rangle$` 与权重向量纠缠后，得到的状态如下，状态 `$count_j$` 和 `$unit_j$` 由四个量子比特表示，对应四个二进制权重，
 
 ```
 $|unit_j\rangle = |(w_4w_3w_2w_1)\rangle$
@@ -6245,7 +6538,7 @@ $|unit_j\rangle = |(w_4w_3w_2w_1)\rangle$
 $\frac{1}{2} \cdot \left( \sum_{j=1}^{4} |index_{xj}\rangle|unit_{j}\rangle \right)$ (15.13)
 ```
 
-值 $|count_j\rangle$ 是学习矩阵值 $net_j$ 的一元表示。我们引入查询向量 $\mathbf{x}_q = (1, 0, 0, 1)$，
+值 `$|count_j\rangle$` 是学习矩阵值 `$net_j$` 的一元表示。我们引入查询向量 `$\mathbf{x}_q = (1, 0, 0, 1)$`，
 
 ```
 $\frac{1}{2} \cdot \left( \sum_{j=1}^{4} |index_{xj}\rangle|unit_{j}\rangle \right) \otimes |query\rangle =$
@@ -6258,10 +6551,10 @@ $\frac{1}{2} \cdot \left( \sum_{j=1}^{4} |(iz_j)\rangle((c_4c_3c_2c_1))((w_4w_3w
 测量量子比特得到的直直方图如图 15.9 所示。在接下来的步骤中，我们描述**激活阶段**（见图 15.10）。为了简单起见，我们将忽略索引量子比特，因为它们在激活阶段并不重要。我们使用处于叠加态的控制位进行量子计数，结果为：
 
 ```
-$\frac{1}{\sqrt{2}} \cdot (|0\rangle + |1\rangle) \otimes \frac{1}{2} \cdot \left( \sum_{j=1}^{4} |(c_4c_3c_2c_1)_j\rangle[(w_4w_3w_2w_1)_j] \right) \otimes |1001\rangle =
+$\frac{1}{\sqrt{2}} \cdot (|0\rangle + |1\rangle) \otimes \frac{1}{2} \cdot \left( \sum_{j=1}^{4} |(c_4c_3c_2c_1)_j\rangle[(w_4w_3w_2w_1)_j] \right) \otimes |1001\rangle =$
 ```
 
-# 204 使用 Qiskit 的量子人工智能
+### 204 使用 Qiskit 的量子人工智能
 
 ![](img/52faec2d621d75e53089d939bb234a82_230_0.png)
 
@@ -6275,7 +6568,7 @@ $$\frac{1}{2\cdot\sqrt{2}} \cdot |0\rangle \left(\sum_{j=1}^{4} (c_{4c_3c_2c_j})
 $$\frac{1}{2\cdot\sqrt{2}} \cdot |1\rangle \left(\sum_{j=1}^{4} (c_{4c_3c_2c_j}) \cdot (w_4w_3w_2w_j)\right) \otimes |1001\rangle \quad (15.15)$$
 ```
 
-由于向量计数中存在两个 1 且 $count_j \le 2$，应用 $N=2$ 的受控相位操作：
+由于向量计数中存在两个 1 且 `$count_j \le 2$`，应用 `$N=2$` 的受控相位操作：
 
 ```
 $$\frac{1}{2\cdot\sqrt{2}} \cdot |0\rangle \left(\sum_{j=1}^{4} e^{-i\frac{\pi\cdot count_j}{2}} \cdot (c_{4c_3c_2c_j}) \cdot (w_4w_3w_2w_j)\right) \otimes |1001\rangle +$$
@@ -6295,19 +6588,19 @@ $$\left(\sum_{j=1}^{4} \frac{1}{2} \cos\left(\frac{\pi\cdot count_j}{2}\right)\r
 $$\left(\sum_{j=1}^{4} \frac{1}{2} \sin\left(\frac{\pi\cdot count_j}{2}\right)\right) \cdot |1\rangle \cdot (c_{4c_3c_2c_j}) \cdot (w_4w_3w_2w_j) \otimes |1001\rangle \quad (15.17)$$
 ```
 
-# 量子矩阵 ■ 205
+### 量子矩阵 ■ 205
 
 ![](img/52faec2d621d75e53089d939bb234a82_231_0.png)
 
-图 15.9 关联关联存储四个单元的叠加态。量子比特 0 到 3 表示查询向量 $\chi_q = (1, 0, 0, 1)$，量子比特 4 到 7 是关联存储，量子比特 8 到 11 表示计数，量子比特 12 和 13 是索引量子比特，而控制量子比特 14 为零。注意索引量子比特按反序计数的：第一个是 11，第二个是 10，第三个是 01，第四个是 00。
+图 15.9 关联关联存储四个单元的叠加态。量子比特 0 到 3 表示查询向量 `$\chi_q = (1, 0, 0, 1)$`，量子比特 4 到 7 是关联存储，量子比特 8 到 11 表示计数，量子比特 12 和 13 是索引量子比特，而控制量子比特 14 为零。注意索引量子比特按反序计数的：第一个是 11，第二个是 10，第三个是 01，第四个是 00。
 
-架构由 15 个量子比特描述。量子比特 0 到 3 表示查询向量，4 到 7 是关联存储，8 到 11 表示计数，量子比特 14 是控制量子比特。计数操作通过 cex 门完成（见图 15.8 和 15.10）。
+架构由 15 个量子比特描述。量子比特 0 到 3 表示查询向量，4 到 7 是关联存储，8 到 11 表示计数，量子比特 14 是控制量子比特。计数操作通过 `cex` 门完成（见图 15.8 和 15.10）。
 
 ![](img/52faec2d621d75e53089d939bb234a82_231_1.png)
 
 图 15.10 产生激活阶段的量子电路。对量子比特 8 到 11 进行放大。控制量子比特 14。
 
-# 206 使用 Qiskit 的量子人工智能
+### 206 使用 Qiskit 的量子人工智能
 
 ```python
 from qiskit import QuantumCircuit, Aer, execute
@@ -6392,17 +6685,17 @@ counts = result.get_counts()
 plot_histogram(counts)
 ```
 
-带有查询向量 $x_q = (1, 0, 0, 1)$，由第一个单元后的状态表示的单元 $count=2$，以及两个对应的状态：对于控制 $qubit=1$，值为 $1=\sin(\pi/2)$，测量概率为 $\sin(\pi/2)^2 =0.5$；对于控制 $qubit=0$，值为 $0=\cos(\pi/2)$。第二个单元 $count=1$，两个对应状态：对于控制 $qubit=1$，值为 $1/\sqrt{2}=\sin(\pi/4)$，测量概率为 $\sin(\pi/4)^2=0.5$；对于控制 $qubit=0$，值为 $1/\sqrt{2}=\cos(\pi/4)$。第三个单元 $count=1$，两个对应状态：对于控制 $qubit=1$，值为 $1/\sqrt{2}=\sin(\pi/4)$，测量概率为 $\sin(\pi/4)^2=0.5$；对于控制 $qubit=0$，值为 $1/\sqrt{2}=\cos(\pi/4)$。第四个单元 $count=2$，两个对应状态：对于控制 $qubit=1$，值为 $1=\sin(\pi/2)$，测量概率为 $\sin(\pi/2)^2 =0.5$；对于控制 $qubit=0$，值为 $0=\cos(\pi/2)$。
+带有查询向量 `$x_q = (1, 0, 0, 1)$`，由第一个单元后的状态表示的单元 `$count=2$`，以及两个对应的状态：对于控制 `$qubit=1$`，值为 `$1=\sin(\pi/2)$`，测量概率为 `$\sin(\pi/2)^2 =0.5$`；对于控制 `$qubit=0$`，值为 `$0=\cos(\pi/2)$`。第二个单元 `$count=1$`，两个对应状态：对于控制 `$qubit=1$`，值为 `$1/\sqrt{2}=\sin(\pi/4)$`，测量概率为 `$\sin(\pi/4)^2=0.5$`；对于控制 `$qubit=0$`，值为 `$1/\sqrt{2}=\cos(\pi/4)$`。第三个单元 `$count=1$`，两个对应状态：对于控制 `$qubit=1$`，值为 `$1/\sqrt{2}=\sin(\pi/4)$`，测量概率为 `$\sin(\pi/4)^2=0.5$`；对于控制 `$qubit=0$`，值为 `$1/\sqrt{2}=\cos(\pi/4)$`。第四个单元 `$count=2$`，两个对应状态：对于控制 `$qubit=1$`，值为 `$1=\sin(\pi/2)$`，测量概率为 `$\sin(\pi/2)^2 =0.5$`；对于控制 `$qubit=0$`，值为 `$0=\cos(\pi/2)$`。
 
-### 15.4.1 推广
+#### 15.4.1 推广
 
-我们推广 $n$ 个单元的描述。在索引量子比特与叠加态纠缠后，得到的状态如下，状态 $count_j$ 和 $unit_j$ 由 $[111]$, $[112]$ 表示，
+我们推广 `$n$` 个单元的描述。在索引量子比特与叠加态纠缠后，得到的状态如下，状态 `$count_j$` 和 `$unit_j$` 由 `[111]`, `[112]` 表示，
 
 ```
 $$\frac{1}{\sqrt{n}} \left( \sum_{j=1}^{n} |index_j\rangle |unit_j\rangle \right) \otimes |query\rangle. \quad (15.18)$$
 ```
 
-复杂度为 $O(n^2)$。我们应用于控制量子比特（忽略索引量子比特）：
+复杂度为 `$O(n^2)$`。我们应用于控制量子比特（忽略索引量子比特）：
 
 ```
 $$\frac{1}{\sqrt{2}} (|0\rangle + |1\rangle) \otimes \left( \sum_{j=1}^{n} |count_j\rangle |unit_j\rangle \right) \otimes |query\rangle = $$
@@ -6410,13 +6703,9 @@ $$\frac{1}{\sqrt{2} \cdot n} \cdot |0\rangle \left( \sum_{j=1}^{n} |count_j\rang
 $$\frac{1}{\sqrt{2} \cdot n} \cdot |1\rangle \left( \sum_{j=1}^{n} |count_j\rangle |unit_j\rangle \right) \otimes |query\rangle \quad (15.19)$$
 ```
 
+### 量子学习矩阵 ■ 209
 
-
-
-
-# 量子学习矩阵 ■ 209
-
-对于查询向量中的当前 1，应用 $N$ 且 $count_j \le N$ 的受控操作相位
+对于查询向量中的当前 1，应用 `$N$` 且 `$count_j \le N$` 的受控操作相位
 
 ```
 $\frac{1}{\sqrt{2}} \cdot |0\rangle \left(\sum_{j=1}^{n} e^{i \frac{\pi \cdot count_j}{2}}} |count_j\rangle|unit_j\rangle\right) \otimes |query\rangle$
@@ -6436,28 +6725,33 @@ $\left(\frac{1}{\sqrt{n}} \sum_{j=1}^{n} \cos(\frac{\pi \cdot count_j}{2 \cdot N
 $\left(\frac{1}{\sqrt{n}} \sum_{j=1}^{n} \sin(\frac{\pi \cdot count_j}{2 \cdot N}) |1,count_j\rangle|unit_j\rangle\right) \otimes |query\rangle \quad (15.21)$
 ```
 
-单次查询的代价为 $O(n)$，对于 $k=\log_2(n/4)$ 次查询，代价为 $O(\log(n) \cdot n)$。
+单次查询的代价为 `$O(n)$`，对于 `$k=\log_2(n/4)$` 次查询，代价为 `$O(\log(n) \cdot n)$`。
 
 ## 15.42 示例
 
-在这个示例中，我们给出了三个表示关联的模式：$\mathbf{x_1} = (1,1,0,0,0,0,1)$,$\mathbf{y_1} = (1,1,0,0,0,0,1)$,$\mathbf{x_2} = (0,0,1,0,1,0,0)$,$\mathbf{y_2} = (0,0,1,0,1,0,0)$ 以及 $\mathbf{x_3} = (0,0,0,1,1,0,1)$,$\mathbf{y_3} = (0,0,1,0,0,0,0,1)$。学习阶段后的权重矩阵由八个量子比特表示（见图 15.12 和 15.13）。在叠加态中的索引量子比特纠缠后
+在这个示例中，我们给出了三个表示关联的模式：`$\mathbf{x_1} = (1,1,0,0,0,0,1)$`，`$\mathbf{y_1} = (1,1,0,0,0,0,1)$`，`$\mathbf{x_2} = (0,0,1,0,1,0,0)$`，`$\mathbf{y_2} = (0,0,1,0,1,0,0)$` 以及 `$\mathbf{x_3} = (0,0,0,1,1,0,1)$`，`$\mathbf{y_3} = (0,0,1,0,0,0,0,1)$`。学习阶段后的权重矩阵由八个量子比特表示（见图 15.12 和 15.13）。在叠加态中的索引量子比特纠缠后
 
-| $|index_1\rangle = |111\rangle$ | $|index_2\rangle = |110\rangle$ |
-| $|index_3\rangle = |101\rangle$ | $|index_4\rangle = |100\rangle$ |
-| $|index_5\rangle = |011\rangle$ | $|index_6\rangle = |010\rangle$ |
-| $|index_7\rangle = |001\rangle$ | $|index_8\rangle = |000\rangle$ |
+| `$|index_1\rangle = |111\rangle$` | `$|index_2\rangle = |110\rangle$` |
 
-结合权重向量存在以下状态，状态 $count_j$ 和 $unit_j$ 由八个量子比特表示 [111], [112]。
+| `$|index_3\rangle = |101\rangle$` | `$|index_4\rangle = |100\rangle$` |
+
+| `$|index_5\rangle = |011\rangle$` | `$|index_6\rangle = |010\rangle$` |
+
+| `$|index_7\rangle = |001\rangle$` | `$|index_8\rangle = |000\rangle$` |
+
+结合权重向量存在以下状态，状态 `$count_j$` 和 `$unit_j$` 由八个量子比特表示 [111], [112]。
 
 ```
 $\frac{1}{\sqrt{s}}(\sum_{j=1}^{s} |index_j\rangle|count_j\rangle|unit_j\rangle).$
 ```
 
-使用查询向量 $\mathbf{x_q} = (1,1,0,0,0,0,0,0)$ 我们看到（见图 15.13 (a)）
+使用查询向量 `$\mathbf{x_q} = (1,1,0,0,0,0,0,0)$` 我们看到（见图 15.13 (a)）
 
 ```
 $\frac{1}{\sqrt{s}}(\sum_{j=1}^{s} |index_j\rangle|count_j\rangle|unit_j\rangle) \otimes |000000111\rangle.$
 ```
+
+
 
 图 15.2 在学习三个模式的相关性后由八个单元表示的权重矩阵 $\mathbf{x}_1 = (1, 1, 0, 0, 0, 0, 1, 0)$；$\mathbf{y}_1 = (1, 1, 0, 0, 0, 0, 1, 0)$，$\mathbf{x}_2 = (0, 1, 0, 1, 1, 0, 0, 0)$；$\mathbf{y}_2 = (0, 1, 0, 1, 1, 0, 0, 0)$ 以及 $\mathbf{x}_3 = (0, 0, 1, 0, 0, 1, 0, 1)$，$\mathbf{y}_3 = (0, 0, 1, 0, 0, 1, 0, 1)$。学习过程与 Lernmatrix 的学习阶段相同。
 
@@ -6588,10 +6882,6 @@ qc.x(24)
 $$\sum_{j=1}^8 \frac{1}{\sqrt{8}} \left( \cos\left(\frac{\pi \cdot count_j}{2 \cdot N}\right) \cdot |0\rangle\langle unit_j| \right) \otimes |00000011\rangle + \sum_{j=1}^8 \frac{1}{\sqrt{8}} \left( \sin\left(\frac{\pi \cdot count_j}{2 \cdot N}\right) \cdot |1\rangle\langle unit_j| \right) \otimes |00000011\rangle$$
 
 $$|v,count_j\rangle|unit_j\rangle \otimes |query\rangle. \quad (15.22)$$
-
-
-
-
 
 ## 216 使用 Qiskit 进行量子人工智能
 
@@ -6795,15 +7085,21 @@ qc.h(22)
 **图 15.18** 叠加态等于零。测量概率（控制比特等于1）指示的单元为 0.838，测量值为 0.213。
 
 ### 结论
+
 睡眠阶段和激活阶段的成本与传统内存 $O(n^2)$ 相同。我们假设有足够的时间准备量子内存叠加态，直到它们被查询。每个量子内存只能查询一次。我们认为激活阶段的优势在于快速确定信息 $O(\log n)$，相对于经典的 $O(n)$ 或 $O(n^2)$。
 
 ### 幅度编码
+
 幅度编码将长度为1的实数或复数向量编码到量子态。我们逐步描述自顶策略。与其使用多控制门表示二叉树，我们可以使用旋转门。然而，结果所需的比特数相同，我们无法访问它们的值。
 
 ### 编码示例
+
 幅度编码将数据编码为量子态 $\omega_i$。例如，归一化向量：
+
 $$|\psi\rangle = \sum_{i=1}^{N} \omega_i |i\rangle = \begin{pmatrix} \sqrt{0.03} \\ \sqrt{0.07} \\ \sqrt{0.15} \\ \sqrt{0.05} \\ \sqrt{0.1} \\ \sqrt{0.3} \\ \sqrt{0.2} \\ \sqrt{0.1} \end{pmatrix}$$
+
 带有 qiskit 排序 $|q_2q_1q_0\rangle$:
+
 $$|\psi\rangle = \sqrt{0.03} \cdot |000\rangle + \sqrt{0.07} \cdot |001\rangle + \sqrt{0.15} \cdot |010\rangle + \sqrt{0.05} \cdot |011\rangle + \sqrt{0.1} \cdot |100\rangle + \sqrt{0.3} \cdot |101\rangle + \sqrt{0.2} \cdot |110\rangle + \sqrt{0.1} \cdot |111\rangle$$
 
 ![](img/52faec2d621d75e53089d939bb234a82_249_0.png)
@@ -6811,21 +7107,28 @@ $$|\psi\rangle = \sqrt{0.03} \cdot |000\rangle + \sqrt{0.07} \cdot |001\rangle +
 **图 16.1** 我们构建了一个自顶向二叉树，将第一层观测 $|q_2$ 的概率分为第二层观测 $|q_2q_1$ 的概率，最后是第三层观测 $|q_2q_1q_0$ 的概率，表示所需的叠加态 $\psi$。二叉树由多控制旋转门表示；多控制旋转门定义在灰色椭圆所示的值。
 
 ### 16.2 自顶划分策略
+
 我们构建了一个自顶的二叉树，将第一层观测 $|q_2$ 的概率分为第二层观测 $|q_2q_1$ 的概率，最后是第三层观测 $|q_2q_1q_0$ 的概率，表示所需的的位置 $|\psi|$。二叉树由多控制旋转门表示（见图 16.1），需要 $\log_2 n$ 个比特来表示维度为 $n$ 的向量。
 
 ### 16.2.1 层级
+
 观测 $q_2 = 0$ 的概率为 $\sqrt{0.3}$：
+
+
+
 $$\sqrt{0.03} \cdot |000\rangle + \sqrt{0.07} \cdot |001\rangle + \sqrt{0.15} \cdot |010\rangle + \sqrt{0.05} \cdot |011\rangle$$
+
 且观测 $q_2 = 1$ 的概率为 $\sqrt{0.7}$。我们使用参数化的 RY 门：
+
 $$R_Y(\theta) = \begin{pmatrix} \cos(\frac{\theta}{2}) & -\sin(\frac{\theta}{2}) \\ \sin(\frac{\theta}{2}) & \cos(\frac{\theta}{2}) \end{pmatrix}$$
+
 以便沿 y 轴旋转比特，旋转角度为 $\theta$（弧度）：
+
 $$\theta_0 = 1.98231 = 2 \cdot \arccos(\sqrt{0.3}) \quad (16.2)$$
+
 其中（见图 16.1）：
+
 $$RY_{\theta_0}|0\rangle = \sqrt{0.3} \cdot |0\rangle + \sqrt{0.7} \cdot |1\rangle \quad (16.3)$$
-
-
-
-
 
 # 使用 Qiskit 的 224 量子人工智能
 
@@ -6868,7 +7171,7 @@ $$\theta_{00} = 1.91063 = \arccos\sqrt{\frac{0.1}{0.3}} \quad (16.4)$$
 
 $RY_{\theta_{00}}(\sqrt{0.3}\cdot|0\rangle + \sqrt{0.1}\cdot|00\rangle + \sqrt{0.2}\cdot|01\rangle) \quad (16.5)$
 
-## 振幅编码 ■ 225
+### 振幅编码 ■ 225
 
 观测 $q_2q_1 = 10$ 的概率为 $\sqrt{0.4}$；
 
@@ -6908,7 +7211,7 @@ qc.cry(1.91063,1,0)
 qc.x(1)
 ```
 
-## 16.2.3 层 3
+### 16.2.3 层 3
 
 最后，我们通过层三上的四次旋转估计了单个值 $|q_2q_1q_0|$（见图 16.1）。
 
@@ -6991,13 +7294,9 @@ qc.x(1)
 
 层 2 由三个量子比特表示，每个量子比特都应用了旋转门。对量子比特 1 应用旋转 $\theta_{01}=1.98231$，对量子比特 0 应用旋转 $\theta_{10}=1.42745$，对量子比特 2 应用旋转 $\theta_{00}=1.91063$。量子比特 1 控制 SWAP 操作，测量量的乘积代表了两个量子比特的概率分布，见图 16.5
 
-## 16.3.2 层 3
+### 16.3.2 层 3
 
 层 3 由七个量子比特表示，每个量子比特都应用了旋转门。对量子比特 3 应用旋转 $\theta_{011}=1.98231$，对量子比特 1 应用旋转 $\theta_{101}=1.2745$，对量子比特 5 应用旋转 $\theta_{000}=1.91063$。量子比特 3 控制 SWAP 操作。对于层三，我们应用额外的四次旋转：对量子比特 0 应用旋转 $\theta_{110}=1.23096$，对量子比特 2 应用旋转 $\theta_{100}=2.0944$，对量子比特 4 应用旋转 $\theta_{010}=1.0472$，对量子比特 6 应用旋转 $\theta_{000}=1.98231$。子树通过量子比特 3 的控制 SWAP 操作与层一的结果合并。
-
-
-
-
 
 # 230 基于 Qiskit 的量子人工智能
 
@@ -7016,7 +7315,7 @@ plot_histogram(counts)
 
 电路的深度并不是自顶向下的划分策略，但我们需要与旋转门相同数量的量子比特，且量子比特在操作过程中处于纠缠态。
 
-# 16.4 QISKIT 振幅编码 
+# 16.4 QISKIT 振幅编码
 
 Qiskit 通过 `desired_state` 和 `initialize(desired_state, qubits)` 命令提供了初始化所需状态的可能性，并可以使用 `decompose` 命令来指示结果生成的量子电路，见图 16.7。
 
@@ -7034,7 +7333,7 @@ math.sqrt(0.07),
 math.sqrt(0.15),
 ```
 
-# 振幅编码 231
+### 振幅编码 231
 
 16.7 Qiskit 通过 `desired_state` 和 `initialize(desired_state, qubits)` 命令提供了初始化所需状态的可能性，并通过 `decompose` 命令来指示结果生成的量子电路。生成叠加态 $|\psi\rangle$ 振幅的量子电路：
 
@@ -7078,6 +7377,8 @@ $(H \otimes I \otimes I) \cdot |0,x,y\rangle = \frac{1}{\sqrt{2}} \cdot (|0, x,y
 
 $|x\rangle \rightarrow |y\rangle|x\rangle$
 
+
+
 当控制量子比特处于状态 $|1\rangle$ 时：
 
 $$\frac{1}{\sqrt{2}} \cdot (|0, x, y\rangle + |1, x, y\rangle) \rightarrow \frac{1}{\sqrt{2}} \cdot (|0, x, y\rangle + |1, y, x\rangle) \quad (16.18)$$
@@ -7089,38 +7390,40 @@ $$(H \otimes I_m \otimes I_m) \cdot (\frac{1}{\sqrt{2}} \cdot (|0, x, y\rangle +
 测量控制量子比特处于状态 $|0\rangle$ 的概率给出：
 
 $p(0) = |\frac{1}{2} \cdot |0\rangle \cdot (|x, y\rangle + |y, x\rangle) + \frac{1}{2} \cdot |1\rangle \cdot (|x, y\rangle - |y, x\rangle)|^2$
+
 $p(0) = \frac{1}{4} |||x, y\rangle + |y, x\rangle||^2 + \frac{1}{4} |||x, y\rangle - |y, x\rangle||^2$
+
 $p(0) = \frac{1}{2} (1 + \langle x|y\rangle) \quad (16.20)$
+
 $p(1) = \frac{1}{2} (1 - \langle x|y\rangle) \quad (16.21)$
 
 当 $p(0) = 0.5$ 时，$|x\rangle$ 和 $|y\rangle$ 正交；而 $p(0) = 1$ 时表示状态是相同的。内积 $\langle x|y\rangle$ 通常被称为向量之间的夹角 $\varphi$。我们也可以估计欧几里得距离，因为向量是归一化的单位球：$||x-y||_2 \le \sqrt{2} \quad (16.22)$
 
-# 振幅编码 233
+# 振幅编码
 
-$q_0:$
-$q_1:$
-$q_2:$
+`q_0:`
+
+`q_1:`
+
+`q_2:`
+
 ![](img/52faec2d621d75e53089d939bb234a82_259_0)
 
 图 16.8 量子比特 0 代表向量 $x$，量子比特 1 代表向量 $y$。经过 10000 次测量 $p(0) = 0.5$。
 
-# 16.5.1 二维向量示例
+## 16.5.1 二维向量示例
 
 $x = \begin{pmatrix} \sqrt{0.5} \\ \sqrt{0.5} \end{pmatrix}, y = \begin{pmatrix} \sqrt{0.5} \\ -\sqrt{0.5} \end{pmatrix}$
 
 $\langle x|y\rangle = 0$
 
-# 16.5.2 四维向量示例
+## 16.5.2 四维向量示例
 
 $x = \begin{pmatrix} \sqrt{0.1} \\ \sqrt{0.2} \\ \sqrt{0.3} \\ \sqrt{0.4} \end{pmatrix}, y = \begin{pmatrix} \sqrt{0.4} \\ \sqrt{0.3} \\ \sqrt{0.2} \\ \sqrt{0.1} \end{pmatrix}$
 
 $\langle x|y\rangle = \sqrt{0.04} + \sqrt{0.06} + \sqrt{0.06} + \sqrt{0.04} = 0.4 + 2\sqrt{0.06} \approx 0.8899$
 
 注意，结果每次运行可能略有不同。
-
-
-
-
 
 # 量子内核
 
@@ -7212,14 +7515,14 @@ $$U_{\phi(y)}^* U_{\phi(x)}|0^{\otimes m}\rangle \quad (17.7)$$
 
 如果 $x$ 和 $y$ 存在差异，概率会较小。
 
-
-
-
-
 | q_0: | P(2.0*x[0]) | |
+
 | :--- | :--- | :--- |
+
 | q_1: | P(2.0*x[0]) | X | P(2.0*(n - x[0])*(n - x[1])) | X |
+
 | q_0: | U2(0,n) | U(0,0,2.0*x[0]) | |
+
 | q_1: | U2(0,n) | U(0,0,2.0*x[1]) | X | U(0,0,2.0*(n - x[0])*(n - x[1])) | X |
 
 图 17.3 (a) 具有 2 个特征和深度为 1 的 ZZFeatureMap，这与上一节使用的特征图相同。(b) 使用两次 `decompose()` 指示的相同 ZZFeatureMap，其中 `decompose()` 指明了使用的量子门。(c) 具有 3 个特征和深度为 1 的 ZZFeatureMap。
@@ -7228,7 +7531,7 @@ $$U_{\phi(y)}^* U_{\phi(x)}|0^{\otimes m}\rangle \quad (17.7)$$
 
 量子核被插入到支持向量机（核机器）等经典核方法中。只有 Gram 矩阵（核矩阵）由量子计算机（或仿真）确定，计算的其他部分在传统计算机上执行。一种是将量子核的函数传递给经典算法，另一种是预计算训练和测试核矩阵。通常，量子核的实际内部表示对外部是隐藏的。
 
-## qRAM
+# qRAM
 
 量子内存被提作为经典计算机内存的模拟物，类似于随机访问存储器（RAM）。RAM 是计算机内存的一种，可以按任何顺序进行读取和更改，通常用于存储工作数据。在量子机器学习领域，提议使用量子随机存储器（qRAM）来避免输入销毁问题。我们展示了 qRAM 的桶队兵（bucket brigade）架构。qRAM 的方法与处于叠加态的索引比特与模式之间的纠缠有关。我们展示了一个二进制模式的示例，并指出了为什么振幅编码的表示与经典 RAM 上的检索操作具有相同的复杂度。
 
@@ -7249,7 +7552,9 @@ $\frac{1}{\sqrt{m}} \sum_{i=1}^m |i\rangle \rightarrow \frac{1}{\sqrt{m}} \sum_{
 qRAM 的桶队兵架构灵感来源于传统的 RAM 架构，由三个主要部分组成：
 
 - *地址比特（Addressing qubits）*：我们想要读取的存储单元的地址。为了读取存储单元，用户必须将存储单元的地址编码到地址比特中。该地址可以处于叠加态，以便在一步内读取多个模式。
+
 - *路由节点（Routing nodes）*：根据地址比特的状态确定存储单元。一旦地址比特被设置，路由节点比特的状态将受到影响。路由节点中任何为 1 的比特都将导向我们想要读取的存储单元。
+
 - *存储单元（Memory cells）*：存储和读取模式。
 
 qRAM 的方法与处于叠加态的索引比特与模式之间的纠缠有关。与索引比特纠缠的方法一样，qRAM 的比特在读取过程中发生纠缠，并在计算后必须进行消计算。qRAM 的示例（见图 18.1）。
@@ -7296,6 +7601,7 @@ qc.barrier()
 ```
 
 ![](img/52faec2d621d75e5308d93bb4a270_0.png)
+
 ![](img/52faec2d621d75e5308d93bb4a270_1.png)
 
 图 18.1 (a) qRAM 电路：地址由比特 0 和 1 表示，路由由比特 2 到 5 表示，内存由比特 6 到 8 表示。地址顺序为 00, 01, 10，最后一个模式为 11。(b) 地址对应于叠加中的第一个比特，地址 00 和 01。检索了第一个和第二个模式。
@@ -7324,14 +7630,13 @@ plot_histogram(counts)
 
 （注：原文该部分存在逻辑断层或重复，译文已根据语境尽可能对齐并保留了术语）
 
-
-
-
 DFT 可以被视为一个线性变换 $F$，它将列向量 $\alpha$ 映射到列向量
 
 $$\begin{matrix} \omega_1 & -e^{-2\pi i(0)/n} & -e^{-2\pi i(0)/n} & \dots & \alpha_1 \\ \omega_2 & -e^{-2\pi i(1)/n} & -e^{-2\pi i(1)/n} & \dots & \alpha_2 \\ = \frac{1}{\sqrt{n}} & & \vdots & \vdots & \vdots & \vdots \\ \omega_n & -e^{-2\pi i(n-1)/n} & -e^{-2\pi i(n-1)/n} & \dots & \alpha_n \end{matrix}$$ $$ (19.5)
 
 并且 DFT 可以被视为一个将列向量 $\omega$ 映射到列向量 $\alpha$ 的线性变换
+
+
 
 $$\begin{matrix} \alpha_1 & e^{2\pi i(0)/n} & e^{2\pi i(0)/n} & \dots & \omega_1 \\ \alpha_2 & e^{2\pi i(1)/n} & e^{2\pi i(1)/n} & \dots & \omega_2 \\ = \frac{1}{\sqrt{n}} & & \vdots & \vdots & \vdots & \vdots \\ \alpha_n & e^{2\pi i(n-1)/n} & e^{2\pi i(n-1)/n} & \dots & \omega_n \end{matrix}$$ $$ (19.6)
 
@@ -7394,17 +7699,16 @@ $F_3$ 的第一行是测得输入状态的 DC 幅，后续行代表输入状态�
 QFT 可以分解为 $m$ 个单比特操作的张量积。
 
 $$|y\rangle = F_m \cdot |x\rangle = \frac{1}{\sqrt{n}} \sum_{y_B \in B^m} e^{2\pi i y_B \cdot x} |y\rangle =$$
+
 $$\frac{1}{\sqrt{n}} \cdot \left(\sum_{y_m \in \{0,1\}} e^{2\pi i y_m \cdot x_{x_1}}\right) \cdot \left(\sum_{y_{m-1} \in \{0,1\}} e^{2\pi i y_{m-1} \cdot x_{x_2}}\right) \cdot \dots$$
+
 $$\dots \cdot \left(\sum_{y_1 \in \{0,1\}} e^{2\pi i y_1 \cdot x_{x_1}}\right)$$ (19.17)
 
 $$\frac{1}{\sqrt{n}} \cdot (|0\rangle + e^{2\pi i x_1/n}|1\rangle) \otimes (|0\rangle + e^{2\pi i x_2/n}|1\rangle) \otimes \dots \otimes (|0\rangle + e^{2\pi i x_m/n}|1\rangle)$$
 
-位的排列是不正确的。这是因为结果中的最后一个量子比特使用了第一个输入量子比特，以此此类推。为了纠正错误，我们必须应用交换门 SWAP。分解给出：
+位的排列是不正确的。这是因为结果中的最后一个量子比特使用了第一个输入量子比特，以此此类推。为了纠正错误，我们必须应用交换门 `SWAP`。分解给出：
 
 $$F_2 \cdot |x_2x_1\rangle = (I_1 \otimes W_1) \cdot CR_1 \cdot (W_1 \otimes I_1) \cdot |x_2x_1\rangle.$$ (19.19)
-
-
-
 
 # 量子傅里叶变换 ■ 251
 
@@ -7449,7 +7753,7 @@ qc.decompose().draw(fold=130).
 
 图 19.3 表示三个量子比特的 QFT 电路。
 
-## 19.3.2 三个量子比特的 QFT
+### 19.3.2 三个量子比特的 QFT
 
 对于 $F_3$，我们需要在三个量子比特 $|x_3x_2x_1\rangle$ 上定义相位门，并对第一个和最后一个比特进行交换操作。交换操作仅仅是 $x_1$ 的值与 $x_3$ 的值的交换
 
@@ -7471,7 +7775,7 @@ qc.h(0)
 qc.swap(0,2)
 ```
 
-## 19.3.3 四个量子比特的 QFT
+### 19.3.3 四个量子比特的 QFT
 
 四个量子比特的电路表示所示（见图 19.4）
 
@@ -7511,7 +7815,7 @@ qc = qc.compose(QFT(6))
 qc.decompose().draw(fold=20)
 ```
 
-## 19.3.4 QFT 成本
+### 19.3.4 QFT 成本
 
 第一项需要一个 Hadamard 门，第二项需要一个 Hadamard 门和一个相位门。随后的每一项都需要额外的相位门。相加
 
@@ -7519,7 +7823,7 @@ $1 + 2 + 3 + \cdots + (m-1) + m = \frac{m(m+1)}{2} = O(m^2)$
 
 与传统计算机 $O(2^m)$ 的成本相比，QFT 的成本为 $O(m^2)$，是指数级的。
 
-## 19.3.5 QFT
+### 19.3.5 QFT
 
 周期函数可以表示为量子比特的叠加（表示概率）。表示频率的振幅为正，而其他为零。通过测量高振幅值，我们可以重建周期。![](img/52faec2d621d75e53089d939bb234a82_279_1.png)
 
@@ -7580,6 +7884,8 @@ print('The result is:', counts)
 $U|u\rangle = e^{2\pi i\theta}|u\rangle. \quad (20.1)$
 ```
 
+
+
 如果我们将 $U^w$ 应用于 $|u\rangle$，得到：
 
 ```math
@@ -7610,10 +7916,6 @@ $|0^{\otimes m}\rangle|u\rangle$
 
 其中 $|u\rangle$ 是酉算符的特征向量。
 
-
-
-
-
 ## 20.1.1 $T$ 门的示例
 
 $T$ 门对应于酉矩阵
@@ -7625,7 +7927,7 @@ $T = \begin{pmatrix} 1 & 0 \\ 0 & e^{i\pi/4} \end{pmatrix}
 对于特征向量 $|1\rangle$ 和特征值 $e^{2\pi\theta}$
 
 ```
-$U \cdot |u\rangle = T|u\rangle = e^{2\pi\theta} \cdot |u\rangle = e^{2\pi\theta} \cdot |1\rangle \quad (20.9)
+$U \cdot |u\rangle = T|u\rangle = e^{2\pi\theta} \cdot |u\rangle = e^{2\pi\theta} \cdot |1\rangle \quad (20.9)$
 ```
 
 相位 $\theta=\frac{1}{8}$ 是因为
@@ -7674,10 +7976,15 @@ qc.cp(pi/4, 0, 3)
 ![](img/52faec2d621d75e53089d939bb234a82_284_0.png)
 
 | | | | | | | | | |
+
 |---|---|---|---|---|---|---|---|
+
 | q_0 | H | | | | | | | |
+
 | q_1 | H | | | | | | | |
+
 | q_2 | H | P(n/4) | P(n/4) | P(n/4) | P(n/4) | P(n/4) | | |
+
 | q_3 | X | | | | | | | | |
 
 ![](img/52faec2d621d75e53089d939bb234a82_284_1.png)
@@ -7714,8 +8021,6 @@ plot_histogram(counts)
 
 Grover 放大基于酉操作 $G$，在 $n$ 个状态中 $|solution\rangle$ 和 $|non\rangle$ 之间。相位 $\theta$ 
 
-
-
 ```python
 qc.append(crit, [3,4,5,6,7])
 qc.append(crit, [3,4,5,6,7])
@@ -7730,8 +8035,11 @@ qc.measure([0,1,2,3], [0,1,2,3])
 ```
 
 simulator = Aer.get_backend('qasm_simulator')
+
 result = execute(qc,simulator, shots=1000).result()
+
 counts = result.get_counts()
+
 plot_histogram(counts)
 
 ```
@@ -7783,10 +8091,6 @@ $$net \cdot \dots \cdot x_2$$
 ```
 
 # 2.2 量子感知机
-
-
-
-
 
 # HHL
 
@@ -7845,6 +8149,7 @@ $$U \cdot |u_j\rangle = e^{2\pi i} |u_j\rangle = e^{i\lambda_j} |u_j\rangle \qua
 注意我们可以：
 
 - 这种表示类似于演化算符 $U_t = e^{-itH}$，其中 $t=1$ 且 $A=H$ 是哈密顿算子。在量子计算机上实现给定的哈密顿演化的过程被称为哈密顿模拟。如果哈密顿矩阵 $H$ 是稀疏的，则可以高效实现哈密顿模拟。
+
 - 我们不需要知道 $U$ 的特征向量 $|u_j\rangle$。因为量子态 $|b\rangle$ 可以分解为正交基：
 
 $$|b\rangle = \sum_{j} |u_j\rangle\langle u_j|b\rangle \quad (22.11)$$
@@ -7856,6 +8161,8 @@ $$|b\rangle = \sum_{j} |u_j\rangle\langle u_j|b\rangle \quad (22.11)$$
 $$|x(t)\rangle = e^{-itH} \cdot |x(0)\rangle = U_t \cdot |x(0)\rangle \quad (22.12)$$
 
 挑战在于矩阵指数的应用是昂贵的。寻找可靠且准确的计算矩阵指数的方法非常困难，这仍然是目前的研究课题。
+
+
 
 ### 2.2.1.1 对角化
 
@@ -7960,10 +8267,6 @@ $$U = e^{-i\frac{4}{3}\pi} |u_1\rangle\langle u_1| + e^{-i\frac{2}{3}\pi} |u_2\r
 以及
 
 $$U^* = e^{i\frac{4}{3}\pi} |u_1\rangle\langle u_1| + e^{i\frac{2}{3}\pi} |u_2\rangle\langle u_2| = \begin{pmatrix} \frac{1}{2}e^{i\frac{4}{3}\pi} + \frac{1}{2}e^{i\frac{2}{3}\pi} & \frac{1}{2}e^{i\frac{4}{3}\pi} - \frac{1}{2}e^{i\frac{2}{3}\pi} \\ \frac{1}{2}e^{i\frac{4}{3}\pi} - \frac{1}{2}e^{i\frac{2}{3}\pi} & \frac{1}{2}e^{i\frac{4}{3}\pi} + \frac{1}{2}e^{i\frac{2}{3}\pi} \end{pmatrix} \quad (22.35)$$
-
-
-
-
 
 ## 22.3.1 从 Kitaev 相位估计到哈密量模拟
 
@@ -8074,8 +8377,11 @@ qc.measure([0,1], [0,1])
 ```
 
 simulator = Aer.get_backend('qasm_simulator')
+
 result=execute(qc,simulator,shots=10000).result()
+
 counts = result.get_counts()
+
 plot_histogram(counts)
 ```
 
@@ -8096,13 +8402,10 @@ $$\alpha_1 = 2 \cdot \arccos(\frac{1}{\lambda_1}) = 2 \cdot \arccos(\frac{1}{2})
 ```
 $$\alpha_2 = 2 \cdot \arccos(\frac{1}{\lambda_2}) = 2 \cdot \arccos(1) = 0$$
 ```
+
 *(注：原文公式中 $\alpha_2$ 的计算结果似乎有误，此处按逻辑翻译)*
 
 使用受两个量子比特 1 和 2 控制的 $RY$ 门，进行反向计算。结果在量子比特 0 上重构（见图）。
-
-
-
-
 
 # 混合方法 – 变分分类
 
@@ -8117,13 +8420,13 @@ $D = \{(x_1, t_1), (x_2, t_2), \dots, (x_N, t_N)\}, t_k \in \{0, 1\}$。
 对于每个数据向量 $\mathbf{x}_k$，量子特征映射通过参数化量子电路 [95] 将经典数据编码为量子数据，$U_{\phi(\mathbf{x}_k)}$ 有 $m$ 个参数：
 
 ```
-$U_{\phi(\mathbf{x}_k)}(0)^{\otimes m} \quad (23.1)
+$U_{\phi(\mathbf{x}_k)}(0)^{\otimes m} \quad (23.1)$
 ```
 
 此外，我们将使用一个变分量子电路来表示在训练期间适应的自由参数 $w$：
 
 ```
-$|psi(\mathbf{x}_k, w)\rangle = U_{W(w)} \cdot U_{\phi(\mathbf{x}_k)}(0)^{\otimes m} \quad (23.2)
+$|psi(\mathbf{x}_k, w)\rangle = U_{W(w)} \cdot U_{\phi(\mathbf{x}_k)}(0)^{\otimes m} \quad (23.2)$
 ```
 
 我们用代表二进制字符串的基态 $|q_m \dots q_1\rangle$ 测量状态 $|psi(\mathbf{x}_k, w)\rangle$。我们通过奇偶函数定义二进制字符串的输出。奇偶函数布尔函数，当且仅当输入向量具有奇数个 1 时，其值为1。$m$ 变量奇偶函数是布尔函数 $f \in \{0, 1\}$：
@@ -8144,11 +8447,13 @@ $o_k = |(\phi(x)|\phi(y))|^2 = |(0^{\otimes m})U_{\phi(y)}U_{\phi(x)}(0^{\otimes
 $p(C_1|x_k) = o_k, p(C_2|x_k) = 1 - p(C_1|x_k). \quad$ (23.5)
 ```
 
-在训练阶段，我们正尝试使用经典计算机上的优化器来寻找 $w$ 的值。
+
+
+在训练阶段，我们正尝试使用经典计算机上的优化器来寻找 `$w$` 的值。
 
 ### 23.1.1 示例
 
-我们使用两个量子比特的参数化 qiskit 电路 $U_{\phi(x)} = ZZFeatureMap [21]$，其中两个参数通过带有二维向量 $x$ 的数据 $bind\_parameters$ 定义。变分电路包含在训练期间将适应的自由参数 $w$。TwoLocal 电路是一个由交替的旋转层和纠缠层构的参数化电路。旋转层是应用于所有量子比特的单门门。纠缠层使用双比特门根据方向影响量子比特。在我们的示例中，我们将使用旋转门 RX 和 R，以及受控 Z 门（CZ），并重复 2 次，得到 12 个自由参数。二维向量 $w$ 通过 $bind\_parameters$ 定义参数。在操作之后，我们测量两个量子比特（见图23.1）：
+我们使用两个量子比特的参数化 qiskit 电路 `$U_{\phi(x)} = ZZFeatureMap [21]$`，其中两个参数通过带有二维向量 `$x$` 的数据 `bind_parameters` 定义。变分电路包含在训练期间将适应的自由参数 `$w$`。`TwoLocal` 电路是一个由交替的旋转层和纠缠层构的参数化电路。旋转层是应用于所有量子比特的单门门。纠缠层使用双比特门根据方向影响量子比特。在我们的示例中，我们将使用旋转门 `RX` 和 `R`，以及受控 Z 门（`CZ`），并重复 2 次，得到 12 个自由参数。二维向量 `$w$` 通过 `bind_parameters` 定义参数。在操作之后，我们测量两个量子比特（见图23.1）：
 
 ```python
 from qiskit import QuantumCircuit, QuantumRegister, Aer, execute
@@ -8175,15 +8480,11 @@ qc.compose(feature_map, inplace=True)
 ```
 
 | q0 | P(0.2) | q1 | P(0.2) | Re(3.28539355) |
-|---|---|---|---|---|---|
+|---|---|---|---|---|
 | q0 | P(0.2) | Re(1.802531707428) | q1 | P(0.2) | Re(5.883271707428) | |
 | c(1): | | | | | | |
 | q0 | Re(1.53099949) | Re(0.4888926) | Re(4.9236499) | Re(3.677) |
 | q1 | Re(0.8837228) | | | | | |
-
-
-
-
 
 # 混合方法 – 分变式分类 ■ 283
 
@@ -8211,19 +8512,19 @@ $\nabla = \begin{bmatrix} \frac{\partial}{\partial w_{1}}, & \frac{\partial}{\pa
 $g(w) = \nabla L(w) = \begin{bmatrix} \frac{\partial L}{\partial w_{1}}, & \frac{\partial L}{\partial w_{2}}, & \dots, & \frac{\partial L}{\partial w_{D}} \end{bmatrix}^{T}$
 ```
 
-SPSA 使用迭代过程，$\tau$ 表示从 $\tau=1$ 开始的迭代：
+SPSA 使用迭代过程，`$\tau$` 表示从 `$\tau=1$` 开始的迭代：
 
 ```python
 $w_{\tau+1} = w_{\tau} - \eta_{\tau} \cdot \hat{g}(w_{\tau}) \quad (23.14)$
 ```
 
-其中 $\eta_{\tau}$ 是随 $\tau$ 减小的学习率，$\hat{g}(w_{\tau})$ 是梯度 $\hat{g}(w_{\tau})$ 的估计，公式为：
+其中 `$\eta_{\tau}$` 是随 `$\tau$` 减小的学习率，`$\hat{g}(w_{\tau})$` 是梯度 `$\hat{g}(w_{\tau})$` 的估计，公式为：
 
 ```python
 $\hat{g}_{\tau} = \frac{L(w_{\tau} + c_{\tau} \cdot \Delta_{\tau}) - L(w_{\tau} - c_{\tau} \cdot \Delta_{\tau})}{2c_{\tau} \cdot \Delta_{\tau}} \quad (23.15)$
 ```
 
-$\Delta_{\tau}$ 是随机扰动向量，$c_{\tau}$ 是一个随 $\tau$ 减小的极正数。SPSA 方法中每次迭代所需的损失函数测量次数为 2，与维度无关。带有随机搜索方向的SPSA并不遵循梯度路径，而是对其进行近似。在单个量子分类器上使用变分分类器时，SPSA 是最推荐的选择，因为它可以在存在噪声的情况下使用。
+`$\Delta_{\tau}$` 是随机扰动向量，`$c_{\tau}$` 是一个随 `$\tau$` 减小的极正数。SPSA 方法中每次迭代所需的损失函数测量次数为 2，与维度无关。带有随机搜索方向的SPSA并不遵循梯度路径，而是对其进行近似。在单个量子分类器上使用变分分类器时，SPSA 是最推荐的选择，因为它可以在存在噪声的情况下使用。
 
 ## 23.4.1 Qiskit 变分量子分类器
 
@@ -8234,10 +8535,8 @@ Qiskit 实现了可以嵌入经典学习任务的变分分类器（VQC）。在�
 ```python
 from qiskit.utils import algorithm_globals
 algorithm_globals.random_seed = 3142
-
 import numpy as np
 np.random.seed(algorithm_globals.random_seed)
-
 from qiskit_machine_learning.datasets import ad_hoc_data
 TRAIN_DATA, TRAINING_LABELS, TEST_DATA, TEST_LABELS = (
     ad_hoc_data(training_size=10,
@@ -8245,19 +8544,15 @@ TRAIN_DATA, TRAINING_LABELS, TEST_DATA, TEST_LABELS = (
     gap=0.3,
     onehot=False)
 )
-
 from qiskit.circuit.library import ZZFeatureMap, TwoLocal
 FEATURE_MAP = ZZFeatureMap(feature_dimension=2, reps=2)
 VAR_FORM = TwoLocal(2, ['rz', 'rz'], 'cz', reps=2)
 AD_HOC_CIRCUIT = FEATURE_MAP.compose(VAR_FORM)
-
 from sklearn.preprocessing import OneHotEncoder
 encoder = OneHotEncoder()
 training_labels_oh = encoder.transform(TRAIN_LABELS.reshape(-1, 1)).toarray()
 test_labels_oh = encoder.transform(TEST_LABELS.reshape(-1, 1)).toarray()
-
 from qiskit.algorithms.optimizers import SPSA
-
 class OptimizerLog:
     """用于存储优化器的中间结果"""
     def __init__(self):
@@ -8297,7 +8592,7 @@ optimizer=SPSA(callback=log.update),
 initial_point=initial_point
 ```
 
-vqc.fit(TRAIN_DATA, training_labels_oh)
+`vqc.fit(TRAIN_DATA, training_labels_oh)`
 
 ```python
 import matplotlib.pyplot as plt
@@ -8314,6 +8609,8 @@ plt.show()
 # score ==准确率
 vqc.score(TEST_DATA, test_labels_oh)
 ```
+
+
 
 评分表示平均准确率，它决定了测试集的真实值，在我们的案例中得分为 0.9。
 
@@ -8336,10 +8633,6 @@ vqc.score(TEST_DATA, test_labels_oh)
 ## 24.2 延伸阅读
 
 关于量子计算不容错过的书籍 [72] 和 [47]。
-
-
-
-
 
 ![](img/52faec2d621d75e53089d939bb234a82_314_0.png)
 
@@ -8461,141 +8754,133 @@ vqc.score(TEST_DATA, test_labels_oh)
 
 [58] Seth Lloyd, Masoud Mohseni, and Patrick Rebentrost. 量子主成分分析。Nature Physics, 10:631–633, 2014.
 
+[62] Andrey Markov. 算法理论.苏联国家科学院, 1954.
 
+[63] J.L. McCleland 和 A.H. Kawamoto. 句子处理机制：为句子成分分配角色。收录 J.L. McCleland 和 D.E. Rumelhart，《并行分布式处理》，第 272–325 页。麻省出版社, 1986.
 
+[64] J.L. McCleland 和 D.E. Rumelhart. 并行分布式处理探索 - IBM 版。麻省出版社, 1986.
 
+[65] J.L. McCleland 和 D.E. Rumelhart. 认知微观结构探索。第1卷：基础。麻省出版社, 1986.
 
-- [62] Andrey Markov. 算法理论.苏联国家科学院, 1954.
+[66] J.L. McCleland 和 D.E. Rumelhart. 认知微观结构探索。第2卷：心理学与生物学模型。麻省出版社, 1986.
 
-- [63] J.L. McCleland 和 A.H. Kawamoto. 句子处理机制：为句子成分分配角色。收录 J.L. McCleland 和 D.E. Rumelhart，《并行分布式处理》，第 272–325 页。麻省出版社, 1986.
+[67] W.S. McCulloch 和 W. Pitts. 神经活动中蕴含思想的逻辑演算。数学生物物理学学报, 5:115–133, 1943.
 
-- [64] J.L. McCleland 和 D.E. Rumelhart. 并行分布式处理探索 - IBM 版。麻省出版社, 1986.
+[68] Marvin Minsky 和 Seymour Papert. 感感知器：计算几何导论。麻省出版社, 1972.
 
-- [65] J.L. McCleland 和 D.E. Rumelhart. 认知微观结构探索。第1卷：基础。麻省出版社, 1986.
+[69] T.M. Mitchell. 机器学习. 麦格希尔出版社, 1997.
 
-- [66] J.L. McCleland 和 D.E. Rumelhart. 认知微观结构探索。第2卷：心理学与生物学模型。麻省出版社, 1986.
+[70] A. Newell 和 H. Simon. 作为经验探究的计算机科学：符号与搜索。ACM 通讯, 19(3):113–126, 1976.
 
-- [67] W.S. McCulloch 和 W. Pitts. 神经活动中蕴含思想的逻辑演算。数学生物物理学学报, 5:115–133, 1943.
+[71] Allen Newell. 认知统一理论.哈佛大学出版社, 1990.
 
-- [68] Marvin Minsky 和 Seymour Papert. 感感知器：计算几何导论。麻省出版社, 1972.
+[72] Michael A. Nielsen 和 Isaac L. Chuang. 量子计算与量子信息。剑桥大学出版社, 美国马萨诸塞州剑桥市, 2000.
 
-- [69] T.M. Mitchell. 机器学习. 麦格希尔出版社, 1997.
+[73] Nils J. Nilsson. 人工智能原理. 施普林格出版社, 1982.
 
-- [70] A. Newell 和 H. Simon. 作为经验探究的计算机科学：符号与搜索。ACM 通讯, 19(3):113–126, 1976.
+[74] OFTA. 神经网络. Masson, 1991.
 
-- [71] Allen Newell. 认知统一理论.哈佛大学出版社, 1990.
+[75] Günther Palmer. 关联记忆与大脑理论。收录于《大脑与认知》，第 164–174 页。科学全谱出版社, 1990.
 
-- [72] Michael A. Nielsen 和 Isaac L. Chuang. 量子计算与量子信息。剑桥大学出版社, 美国马萨诸塞州剑桥市, 2000.
+[77] D. B. Parker. 学习逻辑：将人类大脑皮层铸造成硅片。技术报告 Ti-47, 经济与管理科学计算中心。麻省马萨诸塞州剑桥市, 1985.
 
-- [73] Nils J. Nilsson. 人工智能原理. 施普林格出版社, 1982.
+[78] J. Pearl. 启发式：计算机解决问题的智能策略.亚迪逊-韦斯利出版社, 1984.
 
-- [74] OFTA. 神经网络. Masson, 1991.
+[79] Michael I. Posner 和 Marcus E. Raichle. 心灵图像.科学美国人图书馆, 纽约, 1994.
 
-- [75] Günther Palmer. 关联记忆与大脑理论。收录于《大脑与认知》，第 164–174 页。科学全谱出版社, 1990.
+[80] E. Post. 一般组合问题的的形式化还原。美国数学杂志, 65:197–268, 1943.
 
-- [77] D. B. Parker. 学习逻辑：将人类大脑皮层铸造成硅片。技术报告 Ti-47, 经济与管理科学计算中心。麻省马萨诸塞州剑桥市, 1985.
+[81] J. H. Reef. 稀疏线性系统的有效近似解。计算机与数学应用, 36(9):37–58, 1998.
 
-- [78] J. Pearl. 启发式：计算机解决问题的智能策略.亚迪逊-韦斯利出版社, 1984.
+[82] Eleanor Rieffel 和 Wolfgang Polak. 量子计算 - 简明入门。麻省出版社, 2001.
 
-- [79] Michael I. Posner 和 Marcus E. Raichle. 心灵图像.科学美国人图书馆, 纽约, 1994.
+[83] M. Riesenhub 和 T. Poggio. 目标识别的神经机制。神经生物学进展, 12:102–168, 2002.
 
-- [80] E. Post. 一般组合问题的的形式化还原。美国数学杂志, 65:197–268, 1943.
+[84] M. Riesenhub, T. Poggio, 以及皮层中目标识别的分层模型。皮层中目标识别的分层模型。自然神经科学, 2:1019–1025, 1999.
 
-- [81] J. H. Reef. 稀疏线性系统的有效近似解。计算机与数学应用, 36(9):37–58, 1998.
+[85] Maximilian Riesenhub 和 Thomas Poggio. 目标识别模型.自然神经科学, 3:1199–1204, 2000.
 
-- [82] Eleanor Rieffel 和 Wolfgang Polak. 量子计算 - 简明入门。麻省出版社, 2001.
+[86] Frank Rosenblatt. 神经动力学原理：感知器与大脑机制理论.斯巴达出版社, 1962.
 
-- [83] M. Riesenhub 和 T. Poggio. 目标识别的神经机制。神经生物学进展, 12:102–168, 2002.
+[87] S.J. Russell 和 P. Norvig. 人工智能：现代方法.普林汀霍人工智能系列。普林汀霍, 2010.
 
-- [84] M. Riesenhub, T. Poggio, 以及皮层中目标识别的分层模型。皮层中目标识别的分层模型。自然神经科学, 2:1019–1025, 1999.
+[88] Stuart J. Russell 和 Peter Norvig. 人工智能：现代方法.普林汀霍出版社, 1995.
 
-- [85] Maximilian Riesenhub 和 Thomas Poggio. 目标识别模型.自然神经科学, 3:1199–1204, 2000.
+[89] Luis Sa-Couto 和 Andreas Wichert. 视觉模式的“何处-什么”稀疏分布不变表示。神经计算与应用, 34:6027–6214, 2022.
 
-- [86] Frank Rosenblatt. 神经动力学原理：感知器与大脑机制理论.斯巴达出版社, 1962.
+[90] Luis Sa-Couto 和 Andreas Wichert. 用于关联记忆的稀疏表示的竞争学习.ArXiv 量子物理印本, abs/2301.02196, 2023.
 
-- [87] S.J. Russell 和 P. Norvig. 人工智能：现代方法.普林汀霍人工智能系列。普林汀霍, 2010.
+[91] J. Sacramento 和 A. Wichert. 树状分层关联记忆结构。神经网络, 24(2):143–147, 2011.
 
-- [88] Stuart J. Russell 和 Peter Norvig. 人工智能：现代方法.普林汀霍出版社, 1995.
+[92] Joao Sacramento, Francisco Burmay, 和 Andreas Wichert. 关于分层 Willshaw 网络的时间要求。神经网络, 25:84–93, 2012.
 
-- [89] Luis Sa-Couto 和 Andreas Wichert. 视觉模式的“何处-什么”稀疏分布不变表示。神经计算与应用, 34:6027–6214, 2022.
+[93] Erwin Schrödinger. 量子力学中的现状.自然科学, 23(8), 1935.
 
-- [90] Luis Sa-Couto 和 Andreas Wichert. 用于关联记忆的稀疏表示的竞争学习.ArXiv 量子物理印本, abs/2301.02196, 2023.
+[94] Maria Schuld 和 Nathan Killian. 特征空间中的量子机器学习。物理评论快报, 122, 2019.
 
-- [91] J. Sacramento 和 A. Wichert. 树状分层关联记忆结构。神经网络, 24(2):143–147, 2011.
+[95] Maria Schuld 和 Francesco Petucci. 基于量子计算机的监督学习.施普林格出版社, 2018.
 
-- [92] Joao Sacramento, Francisco Burmay, 和 Andreas Wichert. 关于分层 Willshaw 网络的时间要求。神经网络, 25:84–93, 2012.
+[96] Maria Schuld, Ilya Sinayskiy, 和 Francesco Petucci. 在量子计算机上模拟感知。物理字母A, 37:660–663, 2014.
 
-- [93] Erwin Schrödinger. 量子力学中的现状.自然科学, 23(8), 1935.
+[97] F. Schwenker. 人工神经网络：理论基础概述。收录于 G. Bol, Nakhaadeh, 和 K. Vollmer，《创新与定量方法的财务分析与预测》，第 1–14 页。Physik-Verlag, 1996.
 
-- [94] Maria Schuld 和 Nathan Killian. 特征空间中的量子机器学习。物理评论快报, 122, 2019.
+[98] J. Shawe-Taylor 和 N. Cristian. 模式分析的核函数方法。剑桥大学出版社, 2004.
 
-- [95] Maria Schuld 和 Francesco Petucci. 基于量子计算机的监督学习.施普林格出版社, 2018.
+[99] P. W. Shor. 量子计算机上用于分解和离散数的的多项式时间算法.ArXiv 量子物理印本, 1995.
 
-- [96] Maria Schuld, Ilya Sinayskiy, 和 Francesco Petucci. 在量子计算机上模拟感知。物理字母A, 37:660–663, 2014.
+[100] P. W. Shor. 量子计算算法：离散算法与因子分解。收录于第35届计算机科学年度研讨会，第 124–134 页, 1994.
 
-- [97] F. Schwenker. 人工神经网络：理论基础概述。收录于 G. Bol, Nakhaadeh, 和 K. Vollmer，《创新与定量方法的财务分析与预测》，第 1–14 页。Physik-Verlag, 1996.
+[101] Herbert A. Simon. 生命模型.基础书籍, 纽约, 1991.
 
-- [98] J. Shawe-Taylor 和 N. Cristian. 模式分析的核函数方法。剑桥大学出版社, 2004.
+[102] Friedrich T. Sommer. 神经关联存储器理论.博士论文, 杜塞尔多夫海大学, 1993.
 
-- [99] P. W. Shor. 量子计算机上用于分解和离散数的的多项式时间算法.ArXiv 量子物理印本, 1995.
+[103] K. Steinbuch. 学习矩阵.控制论, 1:36–45, 1961.
 
-- [100] P. W. Shor. 量子计算算法：离散算法与因子分解。收录于第35届计算机科学年度研讨会，第 124–134 页, 1994.
+[104] Karl Steinbuch. 自动化与人.施普林格出版社, 第四版, 1971.
 
-- [101] Herbert A. Simon. 生命模型.基础书籍, 纽约, 1991.
+[105] Leonard Susskind. 量子力学理论最小量.企鹅出版社, 2015.
 
-- [102] Friedrich T. Sommer. 神经关联存储器理论.博士论文, 杜塞尔多夫海大学, 1993.
+[106] Luis Tarraca 和 Andreas Wichert. 问题求解与量子计算。认知计算, 3:510–524, 2011.
 
-- [103] K. Steinbuch. 学习矩阵.控制论, 1:36–45, 1961.
+[107] Luis Tarraca 和 Andreas Wichert. 应用于停机问题的量子迭代深度搜索。量子信息处理, 10(4):475–500, 2011. 10.1007/s11128-010-0212-z.
 
-- [104] Karl Steinbuch. 自动化与人.施普林格出版社, 第四版, 1971.
+[108] Luis Tarraca 和 Andreas Wichert. 应用于停机问题的量子迭代深度搜索。PLOS ONE, 8(3), 2013.
 
-- [105] Leonard Susskind. 量子力学理论最小量.企鹅出版社, 2015.
+[109] Alfred Tarski. 逻辑哲学著作.Prawda, 第1卷.Wydawnictwo PWN, 1995.
 
-- [106] Luis Tarraca 和 Andreas Wichert. 问题求解与量子计算。认知计算, 3:510–524, 2011.
+[110] Xiao Tay, Chu Luo 和 Mitja Perus. 使用过完吉伯波的量子关联网络进行人脸识别。认知计算, 第 1–6 页, 2010. 10.1007/s12559-010-9047-2.
 
-- [107] Luis Tarraca 和 Andreas Wichert. 应用于停机问题的量子迭代深度搜索。量子信息处理, 10(4):475–500, 2011. 10.1007/s11128-010-0212-z.
+[111] Carlo A. Trugenberger. 概率量子存储器。物理评论快报, 87(6):1–4, 2001.
 
-- [108] Luis Tarraca 和 Andreas Wichert. 应用于停机问题的量子迭代深度搜索。PLOS ONE, 8(3), 2013.
+[112] Carlo A. Trugenberger. 量子模式识别。量子信息处理, 1(6):471–493, 2003.
 
-- [109] Alfred Tarski. 逻辑哲学著作.Prawda, 第1卷.Wydawnictwo PWN, 1995.
+[113] A.M. Turing. 关于计算数及其在判定问题中的应用。收录于伦敦数学学会，第2卷, 第 260–265 页, 1936.
 
-- [110] Xiao Tay, Chu Luo 和 Mitja Perus. 使用过完吉伯波的量子关联网络进行人脸识别。认知计算, 第 1–6 页, 2010. 10.1007/s12559-010-9047-2.
+[114] D. Ventura 和 T. Martinez. 具有指数容量的量子记忆。收录于神经网络世界大会，第1卷, 第 509–513 页, 1988.
 
-- [111] Carlo A. Trugenberger. 概率量子存储器。物理评论快报, 87(6):1–4, 2001.
+[115] D. Ventura 和 T. Martinez. 量子记忆。信息科学, 124(1):273–296, 2000.
 
-- [112] Carlo A. Trugenberger. 量子模式识别。量子信息处理, 1(6):471–493, 2003.
+[116] John von Neumann. 关于的第一草稿.技术报告, 宾夕法尼亚大学, 1945.
 
-- [113] A.M. Turing. 关于计算数及其在判定问题中的应用。收录于伦敦数学学会，第2卷, 第 260–265 页, 1936.
+[117] Paul Werbos. 超越回归：行为科学预测与分析的新工具.博士论文, 哈佛大学, 1974.
 
-- [114] D. Ventura 和 T. Martinez. 具有指数容量的量子记忆。收录于神经网络世界大会，第1卷, 第 509–513 页, 1988.
+[118] Andreas Wichert. 量子人工智能原理.世界科学出版社, 2013.
 
-- [115] D. Ventura 和 T. Martinez. 量子记忆。信息科学, 124(1):273–296, 2000.
+[119] Andreas Wichert. 量子人工智能原理：量子问题求解与机器学习，第二版。世界科学出版社, 2020.
 
-- [116] John von Neumann. 关于的第一草稿.技术报告, 宾夕法尼亚大学, 1945.
+[120] Andreas Wichert. 心灵、大脑、量子AI与多宇宙.CRC出版社, 2022.
 
-- [117] Paul Werbos. 超越回归：行为科学预测与分析的新工具.博士论文, 哈佛大学, 1974.
+[121] Andreas Wichert 和 Luis Sa-Couto. 机器学习 - 深度学习的之旅。世界科学出版社, 2021.
 
-- [118] Andreas Wichert. 量子人工智能原理.世界科学出版社, 2013.
+[122] Wayne A. Wickelgren. 上下敏感编码、关联记忆与（语音）行为中的序列。心理学评论, 76:1–15, 1969.
 
-- [119] Andreas Wichert. 量子人工智能原理：量子问题求解与机器学习，第二版。世界科学出版社, 2020.
+[123] Norbert Wiener. 控制论：动物与机器中的控制与通信，1961年第二版再版。麻省出版社, 2019.
 
-- [120] Andreas Wichert. 心灵、大脑、量子AI与多宇宙.CRC出版社, 2022.
+[124] D.J. Willshaw, O.P. Buneman 和 H.C. Longguet-Higgins. 非全息关联记忆。自然, 222:960–962, 1969.
 
-- [121] Andreas Wichert 和 Luis Sa-Couto. 机器学习 - 深度学习的之旅。世界科学出版社, 2021.
+[125] Patrick Henry Winston. 人工智能.亚迪逊出版社, 第三版, 1992.
 
-- [122] Wayne A. Wickelgren. 上下敏感编码、关联记忆与（语音）行为中的序列。心理学评论, 76:1–15, 1969.
-
-- [123] Norbert Wiener. 控制论：动物与机器中的控制与通信，1961年第二版再版。麻省出版社, 2019.
-
-- [124] D.J. Willshaw, O.P. Buneman 和 H.C. Longguet-Higgins. 非全息关联记忆。自然, 222:960–962, 1969.
-
-- [125] Patrick Henry Winston. 人工智能.亚迪逊出版社, 第三版, 1992.
-
-- [126] Peter Wittek. 量子机器学习，量子计算到数据挖掘.Elsevier Insights. Academic Press, 2014.
-
-
-
-
+[126] Peter Wittek. 量子机器学习，量子计算到数据挖掘.Elsevier Insights. Academic Press, 2014.
 
 ## 索引
 
@@ -8605,7 +8890,7 @@ vqc.score(TEST_DATA, test_labels_oh)
 - NP –完全, 93
 - 单位n根, 247
 - 8数谜, 8, 139
-- conda, 41
+- `conda`, 41
 - 冲突解决, 8
 - 受控非门, 36
 - 哥本堡诠释, 24
@@ -8622,7 +8907,6 @@ vqc.score(TEST_DATA, test_labels_oh)
 - 辅助比特, 65, 93
 - 人工智能, 2
 - 关联记忆, 12
-
 - DC平均值, 249
 - Dechter, Rina, 21
 - 决策问题, 76, 92
@@ -8801,4 +9085,3 @@ vqc.score(TEST_DATA, test_labels_oh)
 - Z-Y 分解定理, 74
 - 零游戏, 157
 - ZZFeatureMap, 239, 279
-

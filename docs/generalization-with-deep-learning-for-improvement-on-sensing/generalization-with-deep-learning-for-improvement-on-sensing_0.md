@@ -1,36 +1,5 @@
+
 # 深度学习泛化：感知能力提升
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## 关于编辑
 
@@ -50,10 +19,6 @@
 
 For years ever since the early days of AI, researchers have been struggling with the issue of machine generalization — a capability exclusive to humans and an ability to learn inductively from entity to concepts. However, AlphaGo outsmarts the human Go master and shows that it is possible for machines to learn from examples and generalize concepts. Deep learning as a game changer has set an exciting trend in the machine learning domain in recent years. It has achieved great success in many challenging research areas, such as image recognition, audio recognition and natural language processing. The key merit of deep learning is to automatically learn a very good feature representation from massive amounts of data. Nowadays, various sensors are deployed in different scenarios and thus we can easily collect large amounts of data from these sensors. Clearly, this deep learning technology can be a very good candidate for various sensing applications, including activity sensing, remote sensing and medical sensing. Various deep learning algorithms can thus be developed in many real-world scenarios to facilitate impact on practical applications.
 
-
-
-
-
 本书的目的是传播启发性的研究成果和深度学习方法解决各种传感应用中技术挑战的优秀最佳实践。本书将涵盖深度学习技术的原理及其在实际问题中的应用，包括活动感知、遥感和医疗感知。它将展示不同的深度学习技术如何帮助提高传感能力，并使科学家和从业者能够从数据中做出富有洞察力的观察和宝贵的发现。
 
 ## 书籍组织
@@ -72,48 +37,11 @@ For years ever since the early days of AI, researchers have been struggling with
 
 我们借此机会感谢所有为开发各种传感应用的深度学习方法这一令人兴奋且重要的研究课题做出贡献的作者。我们衷心感谢我们的图书审阅者，他们提供了非常有用的评论和宝贵的反馈，并感谢世界科学出版社的出版团队在从最初构思到最终出版的整个过程中提供的宝贵贡献和指导。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## 第一部分
-
-
-
-
 
 ### 深度学习算法简介
 
-
-https://doi.org/10.1142/9789811218842_0001
+`https://doi.org/10.1142/9789811218842_0001`
 
 ### 第 1 章
 
@@ -145,23 +73,21 @@ Keyu Wu\*, Wei Cui^(†), Vuong Nhu Khue^(‡) and Efe Camci^(§)
 
 在传感应用中最广泛使用的数据驱动模型是机器学习方法 [12]。特别地，传统的机器学习算法需要两个步骤来从给定数据解决传感应用问题。第一步是特征工程，尝试从原始数据中手动提取有用的表示（也称为特征）。例如，在智能手机传感器基于的活动识别中，可以提取一些统计特征，如均值、方差和频率分量 [13]，这些特征有助于区分行走、跑步和静止等不同身体活动。提取有用特征后，传统的机器学习算法，例如人工神经网络（ANN）、支持向量机（SVM）、k-最近邻（KNN）、决策树（DT）、随机森林（RF）等，可用于执行传感或分类任务。然而，基于传统机器学习的传感需要进行手动特征工程，这需要强大的应用特定领域知识，并且不可避免地会遗漏隐含特征 [14]。这限制了这些方法在传感应用中的性能。
 
+
+
 最近，深度学习作为机器学习的一个新分支，已在各种传感应用中取得了巨大成功 [15]。不同于包含繁琐且成本高昂的手动特征工程的传统机器学习方法，深度学习方法可以从数据中自动学习特征并同时进行推理（端到端模型），使得特征学习和推理可以联合优化，从而在许多应用领域取得更优性能。
 
 本书旨在探索增强传感能力的不同深度学习方法。在此之前，在本第一章中，我们将在以下各节中提供用于传感应用的各种标准深度学习算法的简要描述，以便读者在深入研究更先进的深度学习方法之前具备一些基本理解。
 
-#### 2.深度学习方法
+## 2.深度学习方法
 
 深度学习是机器学习的一个新分支。它旨在使用多层神经网络来学习原始数据的高级表示，并使用这些表示（也称为特征）进行推理 [15]。已提出了许多深度学习架构用于不同应用。在本章中，由于我们关注的是提高传感能力的应用，仅会详细介绍针对传感能力的相关深度学习架构。具体而言，我们将在 第 2.1 节 介绍自编码器，在 第 2.2 节 介绍受限玻尔兹曼机，在 第 2.3 节 介绍卷积神经网络，并在 第 2.3.6 节 介绍循环神经网络。
 
-##### 2.1 自编码器
+### 2.1 自编码器
 
 自编码器是一种反向传播神经网络，其中输出和输入被设置为相同。自编码器旨在学习恒等函数的近似，并由 Hinton [16] 最先提出以解决无监督学习问题。为了学习数据的有趣属性，自编码器通常通过对网络施加约束来训练，例如限制隐藏神经元的数量。原因是如果没有网络结构的限制，学习恒等函数可能是微不足道或毫无意义的。因此，通过对网络施加条件，自编码器被迫优先考虑要复制或学习的数据的相关方面；因此，输入数据中的隐藏结构，例如相关输入特征，可以被发现 [17]。
 
 ![figure](img/p6-1.jpg)
-
-
-
-
 
 **图 1：** 一个自编码器神经网络的示例。
 
@@ -192,7 +118,9 @@ Keyu Wu\*, Wei Cui^(†), Vuong Nhu Khue^(‡) and Efe Camci^(§)
 图 3 显示了去噪自编码器的示意表示。图 3 中去噪自编码器的编码和重建过程可简要概括为以下步骤：
 
 • 步骤 1：获得初始输入 `x` 的损坏版本 `x̃`。
+
 • 步骤 2：将损坏的输入 `x̃` 映射到基本自编码器（使用 `f[θ]` 编码并使用 `f[θ]` 解码，如 图 3 所示）。
+
 • 步骤 3：最小化平均重建误差 `LH`，使 `z` 尽可能接近未损坏的输入 `x`，前提是 `z` 现在是 `χ` 而非 `x` 的确定性函数。`z` 然后是 `x` 的随机映射结果。
 
 通过执行随机梯度下降，会产生输入的随机损坏版本，并在梯度步骤中重建未损坏的输入。这种机制使去噪自编码器能够学习输入的良好内部表示，同时防止编码器和解码器学习平凡的恒等函数 [18]。
@@ -235,10 +163,6 @@ RBM 的主要目的是为输入向量创建合理的生成模型。它们通过�
 
 ##### 2.2.2.3 学习过程
 
-
-
-
-
 RBMs 基于与 Hopfield 网络中类似的概念“能量函数”[23]工作。可见单元和隐藏单元向量的概率分布通过能量函数确定。给定可见单元和隐藏单元向量的联合配置 **(v, h**)，能量函数定义为
 
 ![figure](img/p11-1.png)
@@ -255,7 +179,7 @@ RBMs 基于与 Hopfield 网络中类似的概念“能量函数”[23]工作。�
 
 ![figure](img/p11-4.png)
 
-其中 *∈* 是学习率。类似地，偏置使用对应单个单元的期望值进行更新，而不是使用它们的乘积。关于学习例程（对比散度）的更多细节可在 Ref. [24] 中找到。
+其中 `∈` 是学习率。类似地，偏置使用对应单个单元的期望值进行更新，而不是使用它们的乘积。关于学习例程（对比散度）的更多细节可在 Ref. [24] 中找到。
 
 ### 2.3 卷积神经网络
 
@@ -265,9 +189,9 @@ RBMs 基于与 Hopfield 网络中类似的概念“能量函数”[23]工作。�
 
 ![figure](img/p12-1.png)
 
-其中 * 是卷积算子，*f* 表示激活函数，![figure](img/in12-1.png) 是输入特征图（第 *l* −1 层），![figure](img/in12-2.png) 是输出特征图（第 *l* 层），*k*[*ij*] 和 ![figure](img/in12-3.png) 分别表示当前层的核和偏置。输入图将与不同的核进行卷积以生成不同的输出图，输出特征图的数量取决于卷积映射中使用的核的数量。
+其中 `*` 是卷积算子，`f` 表示激活函数，![figure](img/in12-1.png) 是输入特征图（第 *l* −1 层），![figure](img/in12-2.png) 是输出特征图（第 *l* 层），`k[ij]` 和 ![figure](img/in12-3.png) 分别表示当前层的核和偏置。输入图将与不同的核进行卷积以生成不同的输出图，输出特征图的数量取决于卷积映射中使用的核的数量。
 
-• **池化层：** 池化层本质上对输入特征图执行下采样操作。池化层通常在卷积层之后执行，以减小特征图的高度和宽度。然而，在该层中，特征图的数量不会改变。例如，如果有 *N* 个输入图并应用 2 × 2 下采样核，则将有 *N* 个半尺寸输出图。该层执行的两种最常见操作包括最大池化和平均池化。在最大池化的情况下，从特征窗口中选择最大值，而在平均池化的情况下，使用窗口的平均值。
+• **池化层：** 池化层本质上对输入特征图执行下采样操作。池化层通常在卷积层之后执行，以减小特征图的高度和宽度。然而，在该层中，特征图的数量不会改变。例如，如果有 `N` 个输入图并应用 2 × 2 下采样核，则将有 `N` 个半尺寸输出图。该层执行的两种最常见操作包括最大池化和平均池化。在最大池化的情况下，从特征窗口中选择最大值，而在平均池化的情况下，使用窗口的平均值。
 
 • **全连接层：** 全连接层在若干交替的卷积层和池化层之后添加，用于从前几步提取的特征计算每个类别的分数。由于全连接层期望 1D 向量，最终特征图的输出首先展平成向量，随后输入全连接层。CNN 的最后一层通常是 softmax 分类层，它在预测输出类别上生成概率分布。最后，概率最大的类别被预测为最终类别。
 
@@ -291,10 +215,6 @@ RBMs 基于与 Hopfield 网络中类似的概念“能量函数”[23]工作。�
 
 ##### 2.3.2 AlexNet
 
-
-
-
-
 Proposed in 2012, `AlexNet` carried forward the ideas of `LeNet` and was the first large-scale CNN architecture [26]. It achieved ground breaking results for image classification and recognition tasks and won the ImageNet Large Scale Visual Recognition Challenge (ILSVRC) in 2012. As shown in Fig. 7, `AlexNet` has eight layers, comprising five convolutional layers and three fully connected layers. In addition, the first, second and fifth convolutional layers are followed by max pooling layers. `AlexNet` adopts GPUs for computing acceleration. Moreover, it successfully leverages `ReLU` activation function, `dropout`, as well as local response normalization (`LRN`) in CNN for the first time. More specifically, `ReLU` activation function is used to improve the convergence rate by alleviating the gradient vanishing problem in deep networks. `Dropout` is proposed to avoid overfitting through ignoring some neurons randomly during training. Finally, `LRN` is introduced to enhance the generalization capability of the model via simulating the lateral inhibition mechanism. Its function is very similar to normalization. Therefore, `LRN` has become deprecated since the introduction of `Batch Normalization` [50]. The success of `AlexNet` starts the era of CNNs and triggers the deep learning boom.
 
 #### 2.3.3 Visual Geometry Group
@@ -307,9 +227,11 @@ The VGG network architecture was introduced by the Visual Geometry Group (VGG) i
 
 #### 2.3.4 GoogLeNet
 
+
+
 Also introduced in 2014, `GoogLeNet` was the first large-scale CNN created by incorporating inception modules [28]. The main objective of the `GoogLeNet` architecture was to reduce computation complexity and, in the meantime, achieve high accuracy. The basic structure of the inception block is depicted in Fig. 9. It constructs a “wide” network through deploying convolution kernels of different sizes to capture spatial information at different scales. The obtained feature maps are then stacked to yield a more representative one. It is worth mentioning that 1 × 1 convolution kernel is used in `GoogLeNet` for dimensionality reduction before computationally expensive layers. Moreover, it uses an average pooling layer instead of a fully connected layer before the classifier to reduce the density of connection. These tunings result in a significant decrease in the number of parameters. Although `GoogLeNet` is 22 layers deep even without counting the pooling layers, it has much less parameters compared to the predecessors.
 
-#### 2.3.5 ResNet
+## 2.3.5 ResNet
 
 `ResNet`, which was proposed in 2015, revolutionized the development of CNN architectures by introducing the concept of residual learning [29]. In theory, deep networks outperform shallow ones since they can better extract features. Nevertheless, with the increase of layers, deep networks are prone to gradient vanishing or exploding problems. In order to address these problems, `ResNet` exploits the residual blocks constructed by shortcut connections, as shown in Fig. 10. The mathematical definition of a residual building block can be expressed as
 
@@ -325,7 +247,7 @@ Also introduced in 2014, `GoogLeNet` was the first large-scale CNN created by in
 
 where `x` and `y` are the input and output vectors of the considered layers, respectively, and function represents the residual mapping to be learned. The parameter-free shortcut connections enable cross-layer connectivity and speed up the convergence of deep networks. `ResNet` was developed with many versions, including `ResNet-34`, `ResNet-50`, `ResNet-101` and `ResNet-152`. Although `ResNet` is much deeper than `AlexNet` and `VGG`, it shows less computational complexity than previous networks.
 
-#### 2.3.6 DenseNet
+## 2.3.6 DenseNet
 
 Similar to `ResNet`, `DenseNet` was proposed in 2017 to solve the gradient vanishing problem through cross-layer connectivity as well [30]. It consists of densely connected CNN layers and connects the outputs of each layer with all successor layers in a dense block. The conceptual diagram of a dense block is illustrated in Fig. 11. The `l`\-th layer receives the features maps of all preceding layers as its input:
 
@@ -337,9 +259,9 @@ where `[x[0],x[1], …, x[l−1]]` represents the concatenation of previous feat
 
 **Figure 11:**A dense block. Figure is retrieved from Ref. [30].
 
-##### 2.4 Recurrent neural networks
+### 2.4 Recurrent neural networks
 
-###### 2.4.1 Introduction
+#### 2.4.1 Introduction
 
 Traditional neural network approaches such as multi-layer perceptron networks (`MLP`) and CNNs are incapable of dealing with the *sequential* data that have time-varying input patterns and unfixed sequential length. In 1982, John Joseph Hopfield introduced [23] a new neural network, namely recurrent neural network (`RNN`), to handle data with sequential structure. The RNNs are typical sequential learning models which allow previous outputs to be used as inputs while having hidden states.
 
@@ -358,10 +280,6 @@ Ideally, the hidden state `h[t]` could preserve the useful information of all pr
 ![figure](img/p19-3.png)
 
 where `g()` is softmax function for a classification task. Unlike `MLP` that uses different parameters at each layer, `RNN` shares the parameters (`W`, `U`, `V`) across time.
-
-
-
-
 
 从理论角度来看，RNN 可以捕捉任意长度的依赖关系。这一特性使得 RNN 在序列数据占主导的应用中取得了优越的成果，例如自然语言处理和视频分析。然而，在训练阶段的误差反向传播过程中，RNN 可能遭受梯度消失问题，这使得在实践中难以捕捉长期依赖关系。为解决这一问题，提出了一些改进的变体，例如长短期记忆 [31] 和门控循环神经网络（GRU） [32]，以缓解梯度消失或梯度爆炸问题，从而促进在更长范围内捕捉模式。
 
@@ -431,29 +349,27 @@ GRU 网络简单而有效，可以被视为在计算成本和复杂性方面 LST
 
 LSTM 模型已被证明在处理一维序列数据方面非常强大，在计算机视觉的应用中，它需要模型具有处理二维数据序列（例如视频或照片）的能力。
 
-为了学习长期的二维特征，Xingjian *et al*. [34] 提出了一种具有卷积结构的卷积 LSTM（ConvLSTM），如图 Fig. 16 所示。ConvLSTM 通过充分利用时空相关信息来预测网格中某一单元的未来状态。这可以通过输入到状态和状态到状态转换中的卷积和递归操作实现。形式上，ConvLSTM 的所有输入 `X[1]`,…,`X[t]`、细胞状态 `C[1]`,…,`C[t]`、隐藏状态 `H[1]`,…,`H[t]` 以及内部门 `i[v]`、`f[v]` `o[t]` 都是 3D 张量，其最后两个维度是空间维度。令 ⊗ 表示卷积操作，o 表示 Hadamard 积。ConvLSTM 的关键方程如下所示：
+
+
+为了学习长期的二维特征，Xingjian *et al*. [34] 提出了一种具有卷积结构的卷积 LSTM（`ConvLSTM`），如图 `Fig. 16` 所示。`ConvLSTM` 通过充分利用时空相关信息来预测网格中某一单元的未来状态。这可以通过输入到状态和状态到状态转换中的卷积和递归操作实现。形式上，`ConvLSTM` 的所有输入 `X[1]`,…,`X[t]`、细胞状态 `C[1]`,…,`C[t]`、隐藏状态 `H[1]`,…,`H[t]` 以及内部门 `i[v]`、`f[v]` `o[t]` 都是 3D 张量，其最后两个维度是空间维度。令 `⊗` 表示卷积操作，`o` 表示 Hadamard 积。`ConvLSTM` 的关键方程如下所示：
 
 ![figure](img/p23-2.png)
 
 ![figure](img/p24-1.png)
 
-由于能够捕捉时空相关性，ConvLSTM 可以为序列数据集提供不错的性能 [35–37]。
+由于能够捕捉时空相关性，`ConvLSTM` 可以为序列数据集提供不错的性能 [35–37]。
 
 ### 3. Discussion and Conclusion
 
+深度学习在过去十年中已成为机器学习和人工智能领域令人振奋的新趋势。传统的机器学习技术需要手工制作的特征，这通常既繁琐又可能限制这些方法的效果。相比之下，深度学习算法在自动特征学习方面非常有效。它们以端到端的方式联合优化特征学习和推理，从而取得更优的性能。与此同时，研究人员和从业者现在已配备了强大的计算资源，如 NVIDIA GPU。此外，各种深度学习算法在深度学习平台上公开可访问，例如 `PyTorch` 和 `TensorFlow`。因此，深度学习具有多种成功的应用，例如，人类活动识别 \[38\]、医疗保健信息学 \[39\]、遥感 \[2\] 等。
 
+在本章中，我们简要介绍不同类型的深度学习方法，包括自编码器、`RBM`、`CNN`、`RNN` 及其变体。每种深度学习方法都有其自身的优缺点。例如，自编码器支持无监督模型训练，无需标记数据即可构建模型。因此，自编码器常用于降维、特征学习和异常检测 \[40\]。`RNN` 具有非常好的建模具有时间依赖性数据的能力，例如时序传感数据。因此，`RNN` 已被广泛应用于可穿戴传感数据分析（例如，人类活动识别 \[41\]、睡眠阶段分类 \[42\]、漫游模式检测 \[43\]）和工业传感数据分析（例如，机器故障诊断与预测 \[44, 45\]）。`CNN` 是图像分类任务的首选，也用于各种传感器数据应用 \[46, 47\]。它与 `RNN` 相比具有不同的网络结构。通常，`CNN` 的训练速度远快于 `RNN`，因为它可以并行训练，而 `RNN` 需要顺序训练。
 
-
-
-深度学习在过去十年中已成为机器学习和人工智能领域令人振奋的新趋势。传统的机器学习技术需要手工制作的特征，这通常既繁琐又可能限制这些方法的效果。相比之下，深度学习算法在自动特征学习方面非常有效。它们以端到端的方式联合优化特征学习和推理，从而取得更优的性能。与此同时，研究人员和从业者现在已配备了强大的计算资源，如 NVIDIA GPU。此外，各种深度学习算法在深度学习平台上公开可访问，例如 PyTorch 和 TensorFlow。因此，深度学习具有多种成功的应用，例如，人类活动识别 \[38\]、医疗保健信息学 \[39\]、遥感 \[2\] 等。
-
-在本章中，我们简要介绍不同类型的深度学习方法，包括自编码器、RBM、CNN、RNN 及其变体。每种深度学习方法都有其自身的优缺点。例如，自编码器支持无监督模型训练，无需标记数据即可构建模型。因此，自编码器常用于降维、特征学习和异常检测 \[40\]。RNN 具有非常好的建模具有时间依赖性数据的能力，例如时序传感数据。因此，RNN 已被广泛应用于可穿戴传感数据分析（例如，人类活动识别 \[41\]、睡眠阶段分类 \[42\]、漫游模式检测 \[43\]）和工业传感数据分析（例如，机器故障诊断与预测 \[44, 45\]）。CNN 是图像分类任务的首选，也用于各种传感器数据应用 \[46, 47\]。它与 RNN 相比具有不同的网络结构。通常，CNN 的训练速度远快于 RNN，因为它可以并行训练，而 RNN 需要顺序训练。
-
-除了上述标准深度学习算法外，存在将不同深度学习架构结合起来用于特定应用的明显趋势。例如，提出 CNN 自编码器以增强特征学习 \[48\]，并提出循环自编码器用于时序异常检测 \[49\]。混合 RNN 和 CNN 方法在数据适合 CNN 且同时具有时间特征时也能取得更优的性能 \[37\]。此外，基于这些标准深度学习算法的海量新颖算法已被提出用于不同的应用。我们将在后续章节中探索一些为增强传感能力而提出的创新深度学习算法。
+除了上述标准深度学习算法外，存在将不同深度学习架构结合起来用于特定应用的明显趋势。例如，提出 `CNN` 自编码器以增强特征学习 \[48\]，并提出循环自编码器用于时序异常检测 \[49\]。混合 `RNN` 和 `CNN` 方法在数据适合 `CNN` 且同时具有时间特征时也能取得更优的性能 \[37\]。此外，基于这些标准深度学习算法的海量新颖算法已被提出用于不同的应用。我们将在后续章节中探索一些为增强传感能力而提出的创新深度学习算法。
 
 ![figure](img/p25-1.jpg)
 
-**Figure 16:** ConvLSTM 的内部结构。
+**Figure 16:** `ConvLSTM` 的内部结构。
 
 ### References
 
@@ -507,10 +423,6 @@ LSTM 模型已被证明在处理一维序列数据方面非常强大，在计算
 
 25.Y. LeCun, L. Bottou, Y. Bengio, and P. Haffner, “Gradient-based learning applied to document recognition,” *Proc. IEEE*, vol. 86, no. 11, pp. 2278–2324, 1998.
 
-
-
-
-
 26.A. Krizhevsky, I. Sutskever, and G. E. Hinton, “Imagenet classification with deep convolutional neural networks,” *Advances in Neural Information Processing Systems*, 2012, pp. 1097–1105.
 
 27.K. Simonyan and A. Zisserman, “Very deep convolutional networks for large-scale image recognition,” 2014, arXiv preprint `arXiv:1409.1556`.
@@ -534,6 +446,8 @@ LSTM 模型已被证明在处理一维序列数据方面非常强大，在计算
 36.A. K. Bhunia, A. Konwer, A. K. Bhunia, A. Bhowmick, P. P. Roy, and U. Pal, “Script identification in natural scene image and video frames using an attention based convolutional-lstm network,” *Pattern Recogn*., vol. 85, pp. 172–184, 2019.
 
 37.Z. Chen, M. Wu, W. Cui, C. Liu, and X. Li, “An attention based CNN-LSTM approach for sleep-wake detection with heterogeneous sensors,” *IEEE J. Biomed. Health Inform*., 2020.
+
+
 
 38.J. Wang, Y. Chen, S. Hao, X. Peng, and L. Hu, “Deep learning for sensor-based activity recognition: A survey,” *Pattern Recogn. Lett*., vol. 119, pp. 3–11, 2019.
 
@@ -567,7 +481,6 @@ LSTM 模型已被证明在处理一维序列数据方面非常强大，在计算
 
 ### 活动感知的深度学习
 
-
 `https://doi.org/10.1142/9789811218842_0002`
 
 ### 第 2 章
@@ -584,25 +497,21 @@ Le Zhang\*, Jagannadan Varadarajan^(†), Yong Pei^(‡) and Zhenghua Chen\*
 
 #### 摘要
 
-深度卷积神经网络（ConvNets）在计算机视觉中已变得无处不在，这得益于其在静态图像视觉识别任务中的成功。这促进了多种用于视频分类的新方法，这些方法在传统手工特征之上取得了逐步改进。现有的基于 CNN 的动作识别方法通常训练多个流来提取空间和时间特征，最后合并其预测分数。然而，它们在很大程度上依赖于外观和短期时间信息。在本章中，我们提出了一种新的分层聚合 ConvNet 架构，可以更有效地处理动作视频中存在的长期动态。所提出的网络以长视频作为输入，并在网络层次的多个层级利用时间信息，从而捕捉输入序列更复杂的动态。这是通过特殊的聚合函数实现的，该函数通过其特征图将来自多个时间段的信息结合起来。详细实验表明，我们的方法在 UCF-101 和 HMDB51 基准数据集上显著优于最先进的方法。
+深度卷积神经网络（`ConvNets`）在计算机视觉中已变得无处不在，这得益于其在静态图像视觉识别任务中的成功。这促进了多种用于视频分类的新方法，这些方法在传统手工特征之上取得了逐步改进。现有的基于 CNN 的动作识别方法通常训练多个流来提取空间和时间特征，最后合并其预测分数。然而，它们在很大程度上依赖于外观和短期时间信息。在本章中，我们提出了一种新的分层聚合 `ConvNet` 架构，可以更有效地处理动作视频中存在的长期动态。所提出的网络以长视频作为输入，并在网络层次的多个层级利用时间信息，从而捕捉输入序列更复杂的动态。这是通过特殊的聚合函数实现的，该函数通过其特征图将来自多个时间段的信息结合起来。详细实验表明，我们的方法在 `UCF-101` 和 `HMDB51` 基准数据集上显著优于最先进的方法。
 
 **关键词：** 卷积神经网络，动作识别，时间信息
 
 ### 1.引言
 
-
-
-
-
 人类行为识别因其在多媒体、计算机视觉、医疗保健、智慧城市等众多领域中的广泛应用而受到极大关注。一般而言，其可分为基于传感器的 [1–4] 和基于视觉的解决方案 [5–7]。由于基于视觉的解决方案表现出色，它们在视频监控、机器人和异常检测等各种任务中变得越来越流行。本章我们聚焦于基于视觉的人类行为识别。自最早用于自动分析人类行为的方法以来，多种特征 [5, 7–11] 和学习方法 [12–15] 不断提升识别性能，推动研究社区应对更具挑战性的场景 [20, 50] 和复杂数据集 [16, 17]。然而，由于外观、视角、光照和执行速度的变化，在解决该问题时仍存在显著障碍。
 
-最近，基于深度卷积神经网络 (`ConvNets`) 的方法因其在图像分类 [18–21]、分割 [22]、姿态估计 [23] 和人脸识别 [24] 等多个视觉任务中表现出色而在计算机视觉领域取得了长足进展，其中达到了接近人类水平的表现。受此启发，针对基于视频的行为识别也提出了多种 `ConvNet` 模型。通常，这些方法通过训练两个并行网络（也称为流）来处理视频，其中一个流（称为空间流）专注于从 `RGB` 输入图像学习空间特征，而另一个时序流则从光流中处理运动信息。最终的分类分数是通过对各个网络分数进行加权组合获得的。
+最近，基于深度卷积神经网络（`ConvNets`）的方法因其在图像分类 [18–21]、分割 [22]、姿态估计 [23] 和人脸识别 [24] 等多个视觉任务中表现出色而在计算机视觉领域取得了长足进展，其中达到了接近人类水平的表现。受此启发，针对基于视频的行为识别也提出了多种 `ConvNet` 模型。通常，这些方法通过训练两个并行网络（也称为流）来处理视频，其中一个流（称为空间流）专注于从 `RGB` 输入图像学习空间特征，而另一个时序流则从光流中处理运动信息。最终的分类分数是通过对各个网络分数进行加权组合获得的。
 
 最初，`ConvNet` 基于的方法在行为识别中并未比手工制作的特征带来显著的性能提升，这与其它基于静态图像的应用形成对比。这归因于 (i) 缺乏大规模的行为识别训练样本 — ImageNet 挑战赛每个类别有 1000 个样本，而 `UCF-101` [16] 每个类别仅有 100 个样本；(ii) 模型过拟合；以及 (iii) 行为的时序动态变化很大，而现有 `ConvNet` 模型无法很好地捕捉。
 
 最近，文献 [25, 26] 中的方法使用诸如 `Resnets` [21] 和 `BN-Inception` 模型 [27] 等复杂网络在 `UCF-101` 和 `HMDB51` 数据集上取得了令人印象深刻的结果。尽管如此，处理长程时序结构最流行的方法是评估 `ConvNet` 在多个短期片段上的表现，然后通过后期融合策略对分数进行加权组合 [25]。文献 [28] 中使用了 `LRCNs`，利用深度 `ConvNet` 最终层的输出，通过 `LSTMs` 建模长程时序动态。这些方法主要关注使用最终层结果建模时序动态，但忽略了深度 `ConvNet` 各层特征图之间的时序关系。
 
-我们认为，如文献 [25, 28] 中所做的那样，仅在单一层级使用时序信息不足以解释和理解视频的复杂性，且需要在层次的每一层进行建模。因此，本章的 `first` 贡献是提出一种名为 `hierarchically aggregated convolutional neural network` (`HACNN`) 的新颖分层 `ConvNet` 架构，以处理长期时序动态。`HACNN` 将由多个不重叠时序片段组成的长视频作为输入，并在一次前向传递后给出单一预测分数。网络层次包含多个特征处理层级。在最低层级，来自不重叠片段的输入通道经过一系列卷积、非线性和池化处理。然后采用特殊的聚合函数，通过其特征图从多个时序片段中汇聚信息。当这种操作分层重复时，我们能够捕捉长期、高阶动态。
+我们认为，如文献 [25, 28] 中所做的那样，仅在单一层级使用时序信息不足以解释和理解视频的复杂性，且需要在层次的每一层进行建模。因此，本章的 `first` 贡献是提出一种名为 `hierarchically aggregated convolutional neural network`（`HACNN`）的新颖分层 `ConvNet` 架构，以处理长期时序动态。`HACNN` 将由多个不重叠时序片段组成的长视频作为输入，并在一次前向传递后给出单一预测分数。网络层次包含多个特征处理层级。在最低层级，来自不重叠片段的输入通道经过一系列卷积、非线性和池化处理。然后采用特殊的聚合函数，通过其特征图从多个时序片段中汇聚信息。当这种操作分层重复时，我们能够捕捉长期、高阶动态。
 
 作为 `second` 贡献，我们提出自动学习特殊的 `aggregation` 函数，以从视频多个时序片段对应的特征图中汇聚信息。聚合函数可以来自一类常用的池化函数，包括简单和加权平均以及最大操作，以利用同一视频中多个片段的信息。我们证明了通过聚合函数的反向传播可以高效实现，从而允许对识别网络进行端到端优化。
 
@@ -616,25 +525,21 @@ Le Zhang\*, Jagannadan Varadarajan^(†), Yong Pei^(‡) and Zhenghua Chen\*
 
 (1)使用卷积神经网络进行行为识别，以及
 
-(2)使用 ConvNets 建模长期时序特征。
+(2)使用 `ConvNets` 建模长期时序特征。
 
-### 2.1 Action recognition using ConvNets
+#### 2.1 Action recognition using ConvNets
 
 最早尝试使用 `ConvNets` 进行行为识别的工作之一发表于文献 [29]，用于从真实场景中识别行为，其中在帧序列上应用了 3D 卷积以捕捉外观和运动属性。随后，Karpathy *et al*. [30] 发布了一个大规模视频数据集，并研究了 `ConvNet` 架构的多个方面，包括早期融合、后期融合和 3D `ConvNet` 对分类性能的影响。Simonyan *et al*. [31] 在行为识别的 `ConvNets` 方面做出了显著进展，提出了双流 `ConvNet` 架构（受人类视觉皮层中以对象为中心的腹侧通路和以运动为中心的背侧通路启发）。在此，空间 `ConvNet`（也称为流）处理 `RGB` 通道，而时序流处理编码水平和垂直方向光流的多个通道图像。然后将两个 *independent* 流的输出融合以获得输入视频的最终置信分数。
 
+随后，提出了多种修改网络架构 [26, 32] 和（或）输入特征 [33, 34] 的方法。例如，Zhang *et al*. [34] 提出用运动向量替代光流向量以实现实时速度。在文献 [34] 中，通过沿 iDT [10] 的密集轨迹池化最终卷积层的特征，将手工特征和基于 `ConvNet` 的特征的优势结合起来。在 `C3D` 方法 [35] 中，提出了在 16 帧的有限时间支持上使用 3 × 3 × 3 核的 3D 卷积，以提取用于视频分析任务的通用特征。
 
-
-
-
-随后，提出了多种修改网络架构 [26, 32] 和（或）输入特征 [33, 34] 的方法。例如，Zhang *et al*. [34] 提出用运动向量替代光流向量以实现实时速度。在文献 [34] 中，通过沿 iDT [10] 的密集轨迹池化最终卷积层的特征，将手工特征和基于 ConvNet 的特征的优势结合起来。在 `C3D` 方法 [35] 中，提出了在 16 帧的有限时间支持上使用 3 × 3 × 3 核的 3D 卷积，以提取用于视频分析任务的通用特征。
-
-### 2.2 使用 ConvNets 建模长期动态
+#### 2.2 使用 ConvNets 建模长期动态
 
 建模长期时间动态在动作识别中起着重要作用。最近已对解决此问题做出了一些尝试 [28, 32, 36, 37]。例如，在文献 [28] 中，使用动态模型如循环神经网络在特征序列上学习了长程时间依赖关系。虽然他们提出了结合 `ConvNets` 和 `RNNs` 的端到端模型，但时间动态仅使用高层感知进行建模，导致最终性能较差。在文献 [36] 中提出了涉及 100 帧的光流的长期时间卷积。最近，Wang *et al*. [32] 提出了一种网络模型，该模型从稀疏时间片段中获取分数共识，并在 `UCF-101` 和 `HMDB` 数据集上显示出改进的性能。大多数上述方法存在两个主要缺点：（i）时间信息仅通过在稀疏采样的时间片段上简单地评估网络来粗略建模；（ii）共识是在网络的顶层构建的（通常通过最终分数），忽略了深层 `ConvNet` 不同层中存在的低层特征之间的局部关系。
 
 与这些方法不同，我们认为分层利用低层特征图之间的时间交互对于提高动作识别方法的性能很重要，并提出了一种新颖的方法，该方法采用长视频并从对多个片段应用同一滤波器产生的多个特征图中池化时间信息。当以分层方式进行时，我们捕获动作视频中存在的长程、高阶动态。我们的方法与文献 [37] 中提出的分层秩池化方法有一些相似之处。然而，我们在多方面与文献 [37] 存在显著差异。我们的方法使用应用于外观和光流通道的深度 `ConvNet` 架构，并且可以与任何通用目的聚合函数一起使用。我们在层次结构的每个层级中采用更深的 `ConvNets` 来学习高层感知和用于动作识别的判别信息，而文献 [37] 中的方法使用浅层视频表示方法在时间上聚合信息。我们在 Section 4 中展示的分层聚合特征导致了更优的结果。
 
-#### 3. 分层聚合 CNN 模型
+### 3. 分层聚合 CNN 模型
 
 Figure 1 给出了我们的 `HACNN` 模型的概述。层次结构由多个层级组成，其中每个层级由一个 `subConvNet`、一个聚合函数和一个正则化函数定义。在最低层级，模型从多个时间片段获取输入，通过共享相同参数的 `subConvNets` 处理它们，并为每个片段生成特征图。聚合函数池化多个时间片段中存在的判别特征，并在更少的特征图集合上进行整合。这在层次结构的每个层级重复。最终层产生每个动作标签的概率。
 
@@ -644,11 +549,13 @@ Figure 1 给出了我们的 `HACNN` 模型的概述。层次结构由多个层�
 
 在本节中，我们介绍了本章的主要贡献。在 Section 3.1 中，我们概述了 `HACNN` 模型。`HACNN` 的各个组件，即 `subConvNet`、聚合函数和正则化函数，分别在 Sections 3.2–3.4 中进行解释。学习 `HACNN` 模型参数的反向传播步骤在 Section 3.5 中给出。
 
-##### 3.1. 背景
+#### 3.1. 背景
 
 给定一个数据集 ![figure](img/in36-2.png) 的 *N* 对，其中 `X[n]` ∈ `X` 表示输入特征空间 ![figure](img/in36-3.png) 中的一个动作视频，其对应的动作标签来自动作类别集合 {1;…, *C*}，并编码为 *C* 维二进制向量 ![figure](img/in36-4.png)，我们的目标是学习一个函数 ![figure](img/vf.png) : *χ^s* → *y*，表示一个 `ConvNet`。如 Fig. 1 所示，![figure](img/vf.png) 是一个非线性组合函数，由多个层级 *l* ∈ {1,…*L*} 的层次结构组成，其中层次结构的每个层级由一个 *subConvNet^(a)* 函数 `F[l]` 和一个聚合函数 `G[l]` 组成。更正式地，给定由多个时间片段组成的视频 `X`，![figure](img/vf.png) 定义为
 
 ![figure](img/p37-1.png)
+
+
 
 其中 `F[l]` 是具有参数 ![figure](img/in37-1.png) 的 `subConvNet`，而 `H` 是 `Softmax` 函数。在最低层级，`subConvNet` `F[1]` 的输入由 `T[1]` 个时间片段 `X` = {*x*[1]…, *x*[*T*[1]] 的 RGB 或光流通道组成，导致对应于每个输入 *x[t]*，0 < *t* ≤ `T[1]` 的一组特征图 ![figure](img/in37-2.png)：
 
@@ -658,11 +565,7 @@ Figure 1 给出了我们的 `HACNN` 模型的概述。层次结构由多个层�
 
 `G[l]` 是一个聚合函数，它接收特征图 **f[*l*]** 并生成一组新的特征图 ![figure](img/in37-3.png)，以紧凑形式编码视频中存在动态信息。对 `G[l]` 在 `F[l]` 结果上连续应用，我们期望将原始视频中的信息凝聚到更少的时间片段中。关于聚合函数选择的更多细节在 Section 3.3 中给出。
 
-##### 3.2. SubConvNet 架构
-
-
-
-
+### 3.2. SubConvNet 架构
 
 我们的 HACNN 模型在层次结构中包含若干层级。每个层级都配备有一个独特的 subConvNet 函数。我们在每个层级选择 subConvNet 函数 `F` 时考虑深度 ConvNets，因为它们在计算机视觉问题中已被证明具有优越的性能。更具体地说，subConvNet 由多个卷积、`Relu`、池化和 Batch Normalization 层组成，并基于 Ref. [27] 中提出的 BN-Inception 深度 ConvNet 设计。第一层的 subConvNet，`F[1]`，接收原始数据（`RGB` 或光流）作为输入，并通过若干个（`Convolution+Batch Normalization+ReLu` CBR）模块和池化层处理，随后是八层 inception 模块。中间层级的 subConvNets `F[l]`，`1 < l < L` 从低层获取判别性特征图并通过若干层 inception 模块进一步处理。层次结构最后一层的 `F[L]` 由一个全局池化层、一个 dropout 层组成，所有实验中 dropout 比率设为 0.8，随后是 `1 × 1` 卷积以给出最终预测。一般来说，具有更多层次结构层级可以对视频中的更长、更复杂的动态进行建模。然而，这也导致过拟合风险更高。我们经实验证实，具有三层层次结构可以获得令人满意的结果并优于当前最先进的方法。其他架构选择的比较研究可在实验 Section 4 中找到。
 
@@ -698,10 +601,6 @@ Figure 1 给出了我们的 `HACNN` 模型的概述。层次结构由多个层�
 
 ![figure](img/p41-2.png)
 
-
-
-
-
 其中 `y` 是当前输入的标签，而 `c[l[y]]` 表示与 `f[li]` 具有相同维度的输入特征图的几何均值。`c[ly]` 可以在模型反向传播过程中联合学习 [52]。中心损失约束特征图在每个类别内保持接近其均值，并鼓励低密度边界。这有助于获得每个类别更具判别性的特征图。然而，与 Ref. [41] 不同，后者将该正则化项用于深度 ConvNets 的高层，我们将公式 (6) 用于每个层级的聚合函数的结果上。这也与深度监督网络 [42] 一致，后者使用不同层级的 ConvNets 的不同损失函数以确保反向传播的有效梯度信号。
 
 ##### 3.5. 端到端学习
@@ -714,7 +613,7 @@ HACNN 由多个子 ConvNets 和可微分的聚合函数组成，使得网络的�
 
 ![figure](img/p42-2.png)
 
-#### 4. 实验
+### 4. 实验
 
 在本节中，我们首先介绍所用数据集、HACNN 模型的实现和评估细节。接下来，通过详细的实验结果分析所提出的聚合函数和正则化函数的功效。最后，我们将我们的方法获得的结果与各种最先进方法在定量上进行比较。
 
@@ -746,10 +645,6 @@ HMDB51 数据集是从电影和网络视频等各种来源收集的大量真实�
 
 ![figure](img/p45-1.jpg)
 
-
-
-
-
 最佳性能是在两个较低层使用最大聚合（max aggregation），在顶层使用简单平均时获得的。这受到了近期多项研究的启发 [25, 31, 46]，其中报告了来自多个帧的平均类别分数是有益的。在以下章节中，我们将使用“max+simple”策略，因为其性能更优。
 
 为了证明保留空间布局的聚合方法选择的优越性，我们还实现了一个使用全连接（`FC`）层的聚合函数，将输出节点数设置为 `h[l]` × `w[l]` × `d[l]`。这会丢弃所有空间布局信息，结果中的每个元素都通过从所有输入元素全局池化信息来聚合。然后将每个样本的输出激活重新调整为大小为 `h[l]` × `w[l]` × `d[l]` 的 3D 矩阵，并输入到层次结构的下一层。显然，我们看到这在表中给出了最差的性能。这也可能是由于全连接聚合涉及的参数数量很大。
@@ -776,39 +671,37 @@ HMDB51 数据集是从电影和网络视频等各种来源收集的大量真实�
 
 ![figure](img/p47-1.jpg)
 
+
+
 *Note:* 比较了空间流、时间流及其融合的结果。
 
-#### 4.7. 正则化的有效性
+## 4.7. 正则化的有效性
 
-如 Section 3.4 中所述，我们对层次结构中每一层的特征图进行正则化以进一步增强其判别能力。“Inception4”、“Inception5”和最后一个 1 × 1 卷积层的正则化参数分别设置为 `5e^(-5)`、`1e^(-6)` 和 `5e^(-5)`。使用 UCF-101 的第一个划分，我们比较了有无中心损失正则化项的模型性能，结果呈现在 Table 5 中。显然，我们看到正则化带来了更好的结果，尽管改进很小。
+如 Section 3.4 中所述，我们对层次结构中每一层的特征图进行正则化以进一步增强其判别能力。`Inception4`、`Inception5`和最后一个 1 × 1 卷积层的正则化参数分别设置为 `5e^(-5)`、`1e^(-6)` 和 `5e^(-5)`。使用 `UCF-101` 的第一个划分，我们比较了有无中心损失正则化项的模型性能，结果呈现在 Table 5 中。显然，我们看到正则化带来了更好的结果，尽管改进很小。
 
-**Table 5:**在 UCF-101 的第一个划分上比较 HACNN 方法有无中心损失正则化的性能。
+`Table 5:`在 `UCF-101` 的第一个划分上比较 `HACNN` 方法有无中心损失正则化的性能。
 
 ![figure](img/p48-1.jpg)
 
-**Table 6:**在 UCF-101 和 HMDB51 数据集上将我们的方法与其他最先进方法进行比较。
+`Table 6:`在 `UCF-101` 和 `HMDB51` 数据集上将我们的方法与其他最先进方法进行比较。
 
 ![figure](img/p48-2.jpg)
 
-#### 4.8. 与最先进方法的比较
+## 4.8. 与最先进方法的比较
 
-在两个数据集上探索层次化聚合方法并建立了该方法有效性后，我们总结了我们方法获得的结果并将其与几种最先进方法进行比较。Table 6 详细分析了各种方法，包括依赖于手工特征的传统方法，如 iDT [10] 和超向量 [6, 48]。我们还与几种基于深度学习的方法进行比较，如双流架构 [31, 33]、循环神经网络 [28]、3D 卷积 [35]、轨迹池化深度卷积描述符（`TDD`）[33] 以及最近提出的时段网络（`TSN`）[32] 和时空 Resnets（`ST-ResNet`）[26]。正如我们从 Table 6 中看到的，在大多数情况下，深度学习特征优于手工特征。
+在两个数据集上探索层次化聚合方法并建立了该方法有效性后，我们总结了我们方法获得的结果并将其与几种最先进方法进行比较。`Table 6` 详细分析了各种方法，包括依赖于手工特征的传统方法，如 `iDT` [10] 和超向量 [6, 48]。我们还与几种基于深度学习的方法进行比较，如双流架构 [31, 33]、循环神经网络 [28]、3D 卷积 [35]、轨迹池化深度卷积描述符（`TDD`）[33] 以及最近提出的时段网络（`TSN`）[32] 和时空 Resnets（`ST-ResNet`）[26]。正如我们从 `Table 6` 中看到的，在大多数情况下，深度学习特征优于手工特征。
 
-
-
-
-
-在动作识别方面取得最新进展并提升了最先进结果的著名工作有：(i) `ST-ResNet` [26] 方法，其使用非常深的架构结合跨流残差连接；以及 (ii) `TSN` 方法 [25]，其使用非常深的架构结合网络最后一层的共识函数。从 Table 6 可以看出，在相同的两种输入模态下，`HACNN` 在 `UCF-101` 上比 `ST-ResNet` [26] 高出 1.2%，在 `HMDB51` 上高出 5.5%。同样，与 `TSN` 方法 [25] 相比，我们在 `UCF-101` 上提高了 0.6%，在 `HMDB51` 上提高了 3.4%。为了确认性能提升主要归因于 `HACNN` 而非模型中使用的额外帧，我们测试了使用 32 帧的 `TSN`，并未发现性能提升。如前所述，我们使用标准的密集测试程序为每个输入帧生成 10 个样本。我们认为帧数的影响在超过某一数量后会减小。
+在动作识别方面取得最新进展并提升了最先进结果的著名工作有：(i) `ST-ResNet` [26] 方法，其使用非常深的架构结合跨流残差连接；以及 (ii) `TSN` 方法 [25]，其使用非常深的架构结合网络最后一层的共识函数。从 `Table 6` 可以看出，在相同的两种输入模态下，`HACNN` 在 `UCF-101` 上比 `ST-ResNet` [26] 高出 1.2%，在 `HMDB51` 上高出 5.5%。同样，与 `TSN` 方法 [25] 相比，我们在 `UCF-101` 上提高了 0.6%，在 `HMDB51` 上提高了 3.4%。为了确认性能提升主要归因于 `HACNN` 而非模型中使用的额外帧，我们测试了使用 32 帧的 `TSN`，并未发现性能提升。如前所述，我们使用标准的密集测试程序为每个输入帧生成 10 个样本。我们认为帧数的影响在超过某一数量后会减小。
 
 其他有趣的比较包括 (1) 双流 `LSTM` [49]，其将 `LSTM` 附加到双流 `Inception` 上，以及 (2) `LRCN` 方法 [28]，其将 `CNN` 与 `LSTM` 结合以建模长期时序动态。同样，我们观察到我们的方法比前者高出显著的 6.0%（在 `UCF-101` 上），比后者在 `UCF-101` 上高出 2.9%，在 `HMDB51` 上高出 7.1%。(3) 我们的方法比更复杂的聚合方法，如 `ActionVlad` [50]，取得了更好的结果。
 
 这清楚地证明了 `HACNN` 中采用的分层聚合策略的有效性。`HMDB` 数据集中的动作由难以在没有显式时序建模的情况下捕捉的复杂广泛运动组成。`HMDB` 数据集上更大的提升再次加强了我们关于 `HACNN` 在建模长程动态方面有效的论断。注意，我们没有像若干早期方法 [26, 46] 那样结合 `iDT` 特征。
 
-#### 5.结论
+## 5.结论
 
 在本章中，我们提出了一种新颖的分层聚合深度 ConvNets 模型，以更好地捕捉动作视频中存在的长期动态。所提出的分层模型由作用于每一层子 ConvNet 输出特征图的特殊聚合函数组成。聚合函数的作用是从邻近片段中汇聚最具判别性的信息。当在多层上重复时，这可以捕捉视频中存在的复杂动态。我们进行了详细的实验来研究模型的各个方面，例如不同聚合函数的选择及其在层次结构各层中的使用。我们观察到聚合函数在每一层都有用，并且保留空间布局的函数在实现优越性能中起着重要作用。我们还证明了整个系统是端到端可训练的，并在两个具有挑战性的动作识别数据集上实现了最先进的性能。
 
-### References
+## References
 
 1.Z. Chen, Q. Zhu, Y. C. Soh, and L. Zhang, “Robust human activity recognition using smartphone sensors via ct-pca and online SVM,” *IEEE Trans. Indust. Inform*, vol. 13, no. 6, pp. 3070–3080, 2017.
 
@@ -864,10 +757,6 @@ HMDB51 数据集是从电影和网络视频等各种来源收集的大量真实�
 
 27.S. Ioffe and C. Szegedy, “Batch Normalization: Accelerating deep network training by reducing internal covariate shift,” 2015, arXiv preprint arXiv.1502.03167.
 
-
-
-
-
 28.J. Donahue, L. A. Hendricks, S. Guadarrama, M. Rohrbach, S. Venugopalan, K. Saenko, and T. Darrell, “Long-term recurrent convolutional networks for visual recognition and description,” `CVPR`, 2015.
 
 29.S. Ji, W. Xu, M. Yang, and K. Yu, “3D convolutional neural networks for human action recognition,” `IEEE Trans. Pattern Anal. Mach. Intell`., vol. 35, no. 1, pp. 221–231, 2013.
@@ -889,6 +778,8 @@ HMDB51 数据集是从电影和网络视频等各种来源收集的大量真实�
 37.B. Fernando, P Anderson, M. Hutter, and S. Gould, “Discriminative hierarchical rank pooling for activity recognition,” `CVPR`, pp. 1924–1932, 2016.
 
 38.X. Peng, L. Wang, X. Wang, and Y. Qiao, “Bag of visual words and fusion methods for action recognition: Comprehensive study and good practice,” `Computer Vis. Image Understand`, vol. 150, pp. 109–125, 2016.
+
+
 
 39.J. Sanchez, F. Perronnin, T. Mensink, and J. Verbeek, “Image classification with the fisher vector: Theory and practice,” `Int. J. comput. Vis`., vol. 105, no. 3, pp. 222–245, 2013.
 
@@ -932,7 +823,6 @@ ________________________
 
 ^b For certain videos which are shorter than 80 frames, we replicate them and concatenate the frames.
 
-
 `https://doi.org/10.1142/9789811218842_0003`
 
 # Chapter 3
@@ -954,10 +844,6 @@ Massinissa Hamidi* and Aomar Osmani^†
 **Keywords:** human activity recognition, domain knowledge, deep learning, neural architecture search.
 
 ### 1.Introduction
-
-
-
-
 
 物联网应用所呈现的不断增加的数据源数量为所监测现象提供了多样且丰富的视角 [1]。例如，持续从可穿戴传感器部署中监测人类活动的应用程序就是如此，其目的多样，如电子健康。虽然数据的繁多，无论是在模态还是空间视角方面，都可能带来诸多优势，如信噪比改善、模糊性和不确定性降低、鲁棒性和可靠性增强等 [2, 3]，但当前机器学习处理多源信息的方式并不高效 [4]。原因在于来自这些数据源的数据被扁平化了：在处理这些数据时，与传感器部署结构以及所监测现象结构相关的潜在有价值线索会丢失。即使是原则性方法，如已知能够学习跨模态桥接并利用此类结构的深度学习 [5–8]，在面对此类问题时在实践中也会失败，需要进一步指导才能正常工作 [4, 9, 10]。
 
@@ -983,10 +869,6 @@ Massinissa Hamidi* and Aomar Osmani^†
 
 SHL 数据集 [18]^a 是一个高度通用且精确标注的数据集，旨在克服专门用于移动性相关活动识别的数据集缺乏的问题。收集的数据总量对应于 2812 小时标注数据和 17,562 公里行驶距离。
 
-
-
-
-
 与相关的代表性数据集如 \[19\] 相比，后者仅包含全球定位系统信息，SHL 数据集包含在真实环境中记录的多模态运动数据。总共有 16 种模态，包括加速度计、陀螺仪、蜂窝网络、WiFi 网络、音频等，使其适用于广泛的应用，特别是我们感兴趣的任务，即移动相关人类活动（交通方式）的识别。事实上，我们感兴趣的八个主要交通类别为：*Still, Walk, Run, Bike, Car, Bus, Train, Subway* (*Tube*)。
 
 运动数据由三名参与者记录，在数据集中称为 *User 1, User 2* 和 *User 3*，全职参与。数据收集由每位参与者使用四部智能手机同时进行，放置在人们通常携带手机的不同身体位置，*Hand, Torso, Hips*，和 *Bag*（见 Fig. 1）。具有运动模式的广泛视角是 SHL 数据集的另一个优势，与相关数据集如 \[17\] 相比。在本章中研究的底层基础设施的拓扑结构由这四个位置定义。在原始数据集的 16 种模态中，我们选择身体运动模态纳入我们的实验，即：加速度计、陀螺仪、磁力计、线性加速度、方向、重力，以及环境气压。
@@ -1011,25 +893,23 @@ SHL 数据集 [18]^a 是一个高度通用且精确标注的数据集，旨在�
 
 *Interaction*. 相互作用另一方面涉及两个或多个数据源，并被定义为它们对其对学习模型性能影响的依赖程度。给定一组相互作用的数据源 `I`，它们的交互程度表示为 `μ[I]`，并且具体而言，对于两个相互作用的数据源 `s[i]` 和 `s[j]`，它表示为 ![figure](img/in61-1.png)，或简单地 `μ[i,j]`。
 
+
+
 此外，我们定义两个参数，`τ[imp]` 和 `τ[int]`，分别对应重要性和交互阈值。这两个参数决定了高于该限值时给定数据源（具有给定重要性）或一组相互作用的数据源可以被包含在数据源子集中的限制。由此可知，相互作用数据源的子集，表示为 `χ`，定义为
 
 ![figure](img/p61-1.png)
 
-##### 3.2 Exploration of the architecture space
+### 3.2 Exploration of the architecture space
 
 如上所述，目标是找到数据源子集和特定交互，这些交互有助于特定人类活动的识别。为了获得此类子集，我们必须能够利用数据 *within* 和 *across* 数据源中包含的信息，使用高效的特征提取和传感器融合方案。
 
 这需要直接从每个人类活动的身体运动中对涉及数据源子集的动态进行建模。这是一项相当复杂的任务，除了必须在真实环境中进行大量繁重的实验外，还需要人类专业知识，而人类专业知识的洞察力是已知稀缺且有限的。因此，而不是依赖于这些动态的直接建模，我们将此问题重新表述为对负责通过特征提取和传感器融合方案建模这些动态的架构行为的分析。换句话说，该问题被重新表述为架构空间的探索，并且有适当的工具可用于解决它。
 
-*(Neural) architecture*. 架构被定义为一组组件，例如，分析单元、特征融合单元、决策融合单元等 \[12\]，负责从观测中提取有价值的见解，以特征的形式，并高效融合携带不同模态和各种空间视角的不同数据源。架构由一组 ![figure](img/vh.png) 个 `N` 个超参数，{`h[1]`..., `h[N]`} 参数化，控制各种组件的效果，并最终影响架构性能，表示为 `v`。
+*(Neural) architecture*. 架构被定义为一组组件，例如，分析单元、特征融合单元、决策融合单元等 \[12\]，负责从观测中提取有价值的见解，以特征的形式，并高效融合携带不同模态和各种空间视角的不同数据源。架构由一组 `N` 个超参数，{`h[1]`..., `h[N]`} 参数化，控制各种组件的效果，并最终影响架构性能，表示为 `v`。
 
 我们特别关注通过其超参数以及专门控制数据源影响的超参数来调整和适应这些架构所产生的见解。在给定架构的每一层，设置正确的超参数组合至关重要。特别是，为特征学习和传感器融合阶段选择正确的实例化可以导致一种架构，能够从各种数据源构建原始特征集，该特征集适用于识别给定活动。
 
-
-
-
-
-*假设*。设 ![figure](img/vh.png)[S] (![figure](img/vh.png) 为控制给定数据源 *s* 影响的超参数集合。数据源 *s* 的影响由 ![figure](img/vh.png)[*S*] 对识别性能的全局影响来表示。换句话说，作为人体运动动态的一部分，数据源 *s* 对于给定人类活动的重要性，由 ![figure](img/vh.png)[*S*] 对识别性能的全局效应来表示。
+*假设*。设 `S` 为控制给定数据源 `s` 影响的超参数集合。数据源 `s` 的影响由 `S` 对识别性能的全局影响来表示。换句话说，作为人体运动动态的一部分，数据源 `s` 对于给定人类活动的重要性，由 `S` 对识别性能的全局效应来表示。
 
 #### 4. 基于 NAS 的数据生成模型推导
 
@@ -1065,15 +945,11 @@ SHL 数据集 [18]^a 是一个高度通用且精确标注的数据集，旨在�
 
 ##### 4.2 架构训练
 
-为了训练给定的架构，我们将人类活动识别框定为序列分类问题，其目标是学习一个函数 `f` ∈ ![figure](img/in65-1.png) 将输入映射到输出。为了简化给定的观测序列 ![figure](img/in65-2.png)，（如上所述定义），我们因此引入了一个分割步骤，该步骤将负责将观测流 `x^{(i)}` 分解为固定大小且可选重叠的序列。每个观测序列 `x[j]` ∈ `X` 被分配一个标签 ![figure](img/in65-3.png)，对应于正在进行的人类活动。与传统的分类设置一样，神经架构的性能通过损失函数 `l` : `X` × `Υ` → ![figure](img/vr.png) 来量化，并且通过
+为了训练给定的架构，我们将人类活动识别框定为序列分类问题，其目标是学习一个函数 `f` ∈ `X` 将输入映射到输出。为了简化给定的观测序列 `x[j]`，（如上所述定义），我们因此引入了一个分割步骤，该步骤将负责将观测流 `x^{(i)}` 分解为固定大小且可选重叠的序列。每个观测序列 `x[j]` ∈ `X` 被分配一个标签 `y[j]`，对应于正在进行的人类活动。与传统的分类设置一样，神经架构的性能通过损失函数 `l` : `X` × `Υ` → `R` 来量化，并且通过
 
 ![figure](img/p65-1.png)
 
-找到映射，该映射可以通过在预定义函数类 ![figure](img/vf.png) 上使用梯度下降算法进行优化。在我们的案例中，![figure](img/vf.png) 将是其权重参数化的卷积神经网络，而损失函数将是 ![figure](img/in65-4.png)。对于固定的架构，即超参数的特定实例化，优化过程将调整网络的权重，同时提取从输入信号中提取的后续单模态和多模态特征。
-
-
-
-
+找到映射，该映射可以通过在预定义函数类 `F` 上使用梯度下降算法进行优化。在我们的案例中，`F` 将是其权重参数化的卷积神经网络，而损失函数将是 `cross-entropy`。对于固定的架构，即超参数的特定实例化，优化过程将调整网络的权重，同时提取从输入信号中提取的后续单模态和多模态特征。
 
 但在架构参数的优化之外，决定其潜在性能的最重要方面之一，在很大程度上定义了其潜在性能，是决定并塑造架构形状的超参数集合。在卷积神经网络的情况下，超参数集合包括不同层的滤波器，在大小和数量方面，步幅等等。
 
@@ -1083,7 +959,7 @@ SHL 数据集 [18]^a 是一个高度通用且精确标注的数据集，旨在�
 
 ### 4.3 神经架构空间的探索
 
-在本工作中，架构的性能表示为 ![figure](img/in66-1.png)，并使用诸如 `fl-score` 或 `accuracy` 之类的性能指标获得。我们还利用在训练架构期间为每个考虑的人类活动获得的部分性能。这些表示为 ![figure](img/in66-2.png)，其中 `k` 指配置，`a` 指活动。
+在本工作中，架构的性能表示为 `v`，并使用诸如 `fl-score` 或 `accuracy` 之类的性能指标获得。我们还利用在训练架构期间为每个考虑的人类活动获得的部分性能。这些表示为 `v[k,a]`，其中 `k` 指配置，`a` 指活动。
 
 模型开发和 `BO` 过程基于现成的实现，所有这些都是自由软件。特别是，我们使用 `TensorFlow` [29] 来构建神经架构，并使用专门用于优化成本函数的 `scikit-optimize` 库 [30]（`Table 2` 提供了优化的超参数列表）。输入被分割成 6,000 个样本的序列，这对应于采样率为 100 Hz 时的 1 分钟持续时间。我们在每个卷积层之上使用批归一化。该过程通过归一化不同层的输入使神经网络更稳定 [31]。每个超参数实例化训练的最大轮数为 52 轮，最小为 12 轮。在 13 个 epoch 之后，如果在随后的八个 epoch 中识别性能没有超过最佳分数的改善，我们就停止训练。
 
@@ -1111,13 +987,9 @@ SHL 数据集 [18]^a 是一个高度通用且精确标注的数据集，旨在�
 
 在这里，我们描述了如何从由相应架构的识别性能衡量的超参数的个体重要性，过渡到数据源重要性的概念以及它们之间可能出现的交互。功能 ANOVA 模型已成为捕获数据中非线性关系的有用模型的主要类别 [26]。
 
-功能 ANOVA 模型背后的原理是通过加性展开来近似潜在的多元函数关系。给定数据源集合 ![figure](img/vs.png) 及其对应的超参数 ![figure](img/vh.png) 的子集 ![figure](img/vh.png)[`s`]，功能 ANOVA 将神经架构空间 ![figure](img/in69-1.png) 的获得的性能数据分解为每个数据源以及每个数据源组合对神经架构空间方差的贡献程度，其中 `θ[i]` 表示超参数 `h[i]` 的域 [15]。
+功能 ANOVA 模型背后的原理是通过加性展开来近似潜在的多元函数关系。给定数据源集合 `S` 及其对应的超参数 `H` 的子集 `H[s]`，功能 ANOVA 将神经架构空间 `v(H)` 的获得的性能数据分解为每个数据源以及每个数据源组合对神经架构空间方差的贡献程度，其中 `θ[i]` 表示超参数 `h[i]` 的域 [15]。
 
 在这里，我们评估所提出的方法推导出所考虑的传感器丰富环境下数据生成过程的有效模型的能力。我们通过所提出的方法以及围绕从各种模态和空间视角识别人类活动的扩展文献综述，对交互进行了大规模分析。我们使用了文献 [15] 提出的 `fANOVA` 框架的高效实现，该框架基于随机森林。
-
-
-
-
 
 Figure 4 显示了按各自位置分组的数据源如何共同贡献于对某些活动（跑步、骑自行车和静止）的整体识别。Figure 5 总结了使用 fANOVA 框架进行的超参数重要性估计的结果。控制每个所考虑模态重要性的超参数的估计一阶和二阶效应分别得以说明。
 
@@ -1133,7 +1005,7 @@ Figure 4 显示了按各自位置分组的数据源如何共同贡献于对某�
 
 **Figure 5:** 控制每个模态影响的核大小超参数的个体边际重要性。top-25% 与 top-50% 表现架构之间的比较。
 
-如果我们关注按各自模态分组的超参数对（核大小）之间计算的边际（交互），我们同样可以观察到陀螺仪、重力 和磁力计是交互最强的数据源之一。例如，以下是通过 fANOVA 框架计算的最重要的成对边际：![figure](img/in71-1.png), 9.2778), ![figure](img/in71-2.png), 7.0166), ![figure](img/in71-3.png), 5.5122), ![figure](img/in71-4.png), 4.0382), ![figure](img/in71-5.png), 2.3154), ![figure](img/in71-6.png), 2.2472), ![figure](img/in71-7.png), 2.1216), ![figure](img/in71-8.png), 1.76305), 等等。
+如果我们关注按各自模态分组的超参数对（核大小）之间计算的边际（交互），我们同样可以观察到陀螺仪、重力 和磁力计是交互最强的数据源之一。例如，以下是通过 fANOVA 框架计算的最重要的成对边际：`h[i],h[j]` 9.2778), `h[i],h[j]` 7.0166), `h[i],h[j]` 5.5122), `h[i],h[j]` 4.0382), `h[i],h[j]` 2.3154), `h[i],h[j]` 2.2472), `h[i],h[j]` 2.1216), `h[i],h[j]` 1.76305), 等等。
 
 #### 5. 将数据生成模型纳入学习模型
 
@@ -1145,11 +1017,9 @@ Figure 4 显示了按各自位置分组的数据源如何共同贡献于对某�
 
 Figure 6 显示了神经网络随参数 `τ[int]` 和 `τ[imp]` 的演变。此外，该图说明了所包含数据源的平均数量随这两个阈值的变化。特别是，当 `τ[imp]` 和 `τ[int]` 例如设为 0 时，所有数据源都被包含。我们发现，使用较小子集数据源训练的神经网络表现优于基线以及大多数依赖于更高数量数据源的设置。值得注意的是，我们使用大小为 12 的数据源子集获得了 88.7% 的识别性能，以 `fl-score` 衡量，超过基线。因此，识别性能提高了 17.84%，所需数据量减少了一半。令人惊讶的是，我们在 0.2 ≤ `τ[imp]` ≤ 0.6 的范围内没有看到很多糟糕的交互数据源子集，其中每个子集的数据源数量被限制在 5 到 12 之间。
 
+
+
 ![figure](img/p73-1.jpg)
-
-
-
-
 
 **图 6：** 通过 `fl-score`（绿色）测量的识别性能，以及数据来源子集的平均基数（蓝色），作为 `τ[imp]` 和 `τ[int]` 的函数。对应于 (a) 在所有数据来源融合上训练的模型和 (b) 在受限数量数据来源上训练的最佳性能模型的混淆矩阵。将所有数据来源融合在一起训练的模型在 `fl-score` 测量的识别性能为 70.86%。两个模型均使用以下超参数集：`l[r]` = 0.1，`nf` = 28，![figure](img/in73-1.png)，![figure](img/in73-2.png)，![figure](img/in73-3.png)，![figure](img/in73-4.png)，![figure](img/in73-5.png)，![figure](img/in73-6.png)，![figure](img/in73-7.png)，`s` = 0.6，和 `n[u]` = 2048。最佳性能模型获得的识别性能为 88.7%，相比基线提升了 17.84%，使用仅包含 12 个数据来源的子集，从而将所需数据量减少了一半。
 
@@ -1193,10 +1063,6 @@ Figure 6 显示了神经网络随参数 `τ[int]` 和 `τ[imp]` 的演变。此�
 
 13. T. Elsken, J. H. Metzen, and F. Hutter, “Neural architecture search: A survey,” *J. Mach. Learni. Res*., vol. 20, no. 55, pp. 1–21, 2019.
 
-
-
-
-
 14.J. Snoek, H. Larochelle, and R. P. Adams, “机器学习算法的实用贝叶斯优化,” *Adv. Neural Inform. Process. Sys*, vol. 2, pp. 2951–2959, 2012.
 
 15.H. Hoos and K. Leyton-Brown, “一种评估超参数重要性的有效方法,” in *Int. Conf. Machine Learning*, pp. 754–762, 2014.
@@ -1235,8 +1101,6 @@ Figure 6 显示了神经网络随参数 `τ[int]` 和 `τ[imp]` 的演变。此�
 
 32.S. Wang, C. Chen, and J. Ma, “基于加速度计的移动电话交通模式识别,” in *2010 Asia-Pacific Conf. Wearable Computing Systems* (APWCS), IEEE, pp. 44–46, 2010.
 
-________________________
-
 ^a SHL 数据集的预览可以从 [`www.shl-dataset.org/download/`](http://www.shl-dataset.org/download/) 下载。
 
 © 2021 World Scientific Publishing Company
@@ -1250,25 +1114,28 @@ ________________________
 Jianfei Yang^(\*,‡), Han Zou^(†,§), Lihua Xie^(\*,¶) and Costas J. Spanos^(†,||)
 
 ^(\*)*南洋理工大学电气与电子工程学院，新加坡*  
+
 ^(†)*加州大学伯克利分校电气工程与计算机科学系，美国*  
+
 ^(‡)*yang0478@e.ntu.edu.sg*  
+
 ^(§)*enthalpyzou@gmail.com*  
+
 ^(¶)*elhxie@ntu.edu.sg*  
+
 ^(||)*spanos@berkeley.edu*
 
 ### Abstract
+
+
 
 随着 WiFi 基础设施的广泛部署，无线信号充满了大多数商业区域和家庭的空气。人类活动通常会影响 WiFi 信号的传播，可以通过信道状态信息（CSI）数据记录。CSI 样本是一个 2D 矩阵，记录当前环境中的时空动态。最近的工作利用机器学习和模式识别用于 WiFi 感知技术。在本章中，我们介绍深度学习和无监督域自适应方法如何进一步增强 WiFi 感知。具体来说，卷积神经网络（CNN）通过监督学习自动提取判别性特征。无监督域自适应（UDA）将知识从标签丰富的源域转移到未标记的目标域。例如，我们研究如何利用 CNN 和 UDA 进行自适应 WiFi 手势识别。由于 CSI 数据对时空动态敏感，在原始环境（源域）中训练的深度模型无法在新环境（目标域）中实现准确识别，这被称为分布偏移或域偏移。引入对抗域自适应方法来解决这个问题。除了经典的 CNN 架构和对抗域自适应之外，许多最近的深度学习进展都可以与 WiFi 感知联系起来。我们介绍这些潜在方向，包括迁移学习、少样本学习、跨模态监督、多模态学习和模型压缩，这将导致更稳健和全面的智能感知技术。
 
 **关键词：** 信道状态信息，域自适应，深度学习，手势识别
 
-### 1.Introduction
+# 1.Introduction
 
 在智能感知时代，人们通常会想到各种传感器，如惯性测量单元（IMU）、红外设备和雷达 \[1\]。IMU 配备在智能手机中，记录三轴加速度数据，可用于人体活动识别。红外设备通常部署在智能建筑中用于占用检测和照明控制。雷达虽然准确但昂贵，在机器人和自动驾驶中发挥着重要作用。在本章中，一种新的感知技术被介绍用于以成本有效和设备无关的方式进行人体活动或手势识别——WiFi 感知技术。
-
-
-
-
 
 基于 WiFi 的感知利用 WiFi 信号变化来识别人类活动或更精细的占用信息 \[2\]。当 WiFi 信号从发射器传播到接收器时，由于多径效应，信号的某些路径会受到人类活动的影响。这种信号变化反映在信道状态信息中，信道状态信息指的是通信链路的已知信道特性。CSI 数据由网络卡的特定工具提取，例如 Intel 5300 NIC \[3\] 和 Atheros Tools \[4\]。隐藏在 CSI 数据中的活动模式能够通过传统的统计学习或现代深度学习技术提取出来。因此，基于 WiFi 的感知技术由精确的 CSI 提取工具和先进的机器学习方法实现。
 
@@ -1286,17 +1153,14 @@ Jianfei Yang^(\*,‡), Han Zou^(†,§), Lihua Xie^(\*,¶) and Costas J. Spanos^
 
 在后续章节中，我们首先从初步介绍开始，详细介绍 CSI 数据的特性、CSI 数据如何随人类活动变化以及哪些 WiFi 系统可用于感知。然后我们讨论用于基于 CSI 的手势识别的基本深度神经网络以及用于模型迁移的对抗域适应。进行了大量实验以证明该方法的优越性。在讨论了最近的深度学习方法如何与基于 WiFi 的感知集成后，我们在最后一小节总结了整章内容。
 
-## 2. Preliminaries
+# 2. Preliminaries
 
 在无线通信中，接收信号强度指示 RSSI 和信道状态信息 CSI 是物理层环境感知两种有用的信息。RSSI 是一个标量值，表示无线信号的信号强度，因此 RSSI 仅用于室内定位、占用检测或其他粗略活动识别。而 CSI 是更精细的数据，描述通信质量。Wang *et al*. 建立了 CSI 相位信息与物体移动速度之间的理论模型 \[9\]，然后采用菲涅尔区的理论进行人体呼吸检测 \[10\]。这些物理模型是可解释的，并启发我们基于它们开发识别方法。然而，在现实世界中，环境复杂且许多无关信号干扰感知信号，这阻碍了这些物理模型的可行性。与它们不同的是，为了在复杂情况下建模 CSI 模式，我们引入基于深度学习的数据驱动模型。因此，我们首先研究我们数据的特性——CSI 是什么以及 CSI 如何被提取。为了使用该深度学习模型，我们需要展示 CSI 模式如何与人类活动或手势相关联。
 
-### 2.1 Channel state information
-
-
-
-
+## 2.1 Channel state information
 
 在无线通信中，信道状态信息反映了通信链路的信道特性。无线信号的传播受物理环境影响，导致由于信号的反射、衍射和散射而 CSI 发生变化 [11]。
+
 此外，现代 WiFi 模块在物理层采用正交频分复用（`OFDM`），并遵循 IEEE 802.11n/ac 标准，该标准允许多个发射和接收天线用于多输入多输出（`MIMO`）通信。这样，CSI 包含更多信息，用于描述每个发射机-接收机（`TX–RX`）对的通信链路状况。因此，CSI 揭示了无线信号的精细特征，结合了每个通信子载波上多径的时间延迟、幅度衰减和相位偏移的综合效应。与仅为多径信号叠加的 RSSI 相比，CSI 包含更多通信信息且具有更高的分辨率。在通信中，WiFi 信号可建模为频域中的信道脉冲响应 CIR *h*(*τ*)：
 
 ![figure](img/p84-1.png)
@@ -1309,7 +1173,7 @@ Jianfei Yang^(\*,‡), Han Zou^(†,§), Lihua Xie^(\*,¶) and Costas J. Spanos^
 
 理论上，CSI 相位 supposed to be 比 CSI 幅度更稳健、固有噪声更少。然而，在当前的 CSI 数据中，由于硬件缺陷和环境变化，情况恰好相反 [12]。设备的载波频率在 5 GHz 频段可漂移高达 100 kHz，这阻碍了 CSI 相位的可利用性。在实际应用中，准确的 CSI 相位可通过手动相位校准和复杂的去噪技术获得，但这些困难给用户带来诸多不便。尽管 CSI 相位对各种 WiFi 设备常会漂移，但相位差被证明足够稳健，这将在 Fig. 5 中经实验证明。因此，我们利用 CSI 相位差信息作为我们的 WiFi 感知数据。
 
-### 2.2 系统架构
+## 2.2 系统架构
 
 从网卡中提取 CSI 需要特定的工具。对于商用现成（`COTS`）WiFi 接入点，有两类主要工具使用不同的硬件：
 
@@ -1319,11 +1183,11 @@ Jianfei Yang^(\*,‡), Han Zou^(†,§), Lihua Xie^(\*,¶) and Costas J. Spanos^
 
 这些工具有助于从网卡中提取 CSI 数据，一些基于 CSI 的感知平台也是在此基础上构建的 [2]。在本章中，用于评估的 CSI 数据由 Atheros CSI Tool [4] 在感知平台 [2] 上采集。精细的 CSI 数据是精细手势识别的前提。
 
-### 2.3 人体手势如何影响无线信号
+## 2.3 人体手势如何影响无线信号
 
 当无线信号在室内环境中从发射机传播到接收机时，如 Fig. 2 所示，传播通常具有视距（`LOS`）路径和多条非视距（`NLOS`）路径。感知范围内任何人体活动，如行走和挥手，都可能影响这些传播路径，即通信链路，这由 CSI 数据反映并记录。自然地，主动运动对 CSI 数据的影响更大，而相对静止的运动仅导致轻微变化。直观上，我们可视化不同运动程度的 CSI 数据，并尝试找出一些规律模式。
 
-#### 2.3.1 占用影响
+### 2.3.1 占用影响
 
 最简单的情况是观察房间被占用或未被占用时 CSI 的变化。如 Fig. 3 所示，我们展示了使用一个 `TX–RX` 对、114 个子载波的七个时间戳的 CSI 幅度。值得注意的是，当人在 T3–T5 进入房间时，这些子载波的 CSI 幅度发生了很大变化。此外，当人在 T6 离开房间时，CSI 波形恢复到 T1 的状态。这些观察表明，利用 CSI 波形的相似性可以帮助判断房间是否被占用 [13]。此外，我们可以推断多个子载波的 CSI 幅度描述了空间信息。直观上，CSI 记录了当前情况下通信链路的状态，任何改变传播路径的障碍物，如人体，都会导致 CSI 发生变化。
 
@@ -1335,11 +1199,7 @@ Jianfei Yang^(\*,‡), Han Zou^(†,§), Lihua Xie^(\*,¶) and Costas J. Spanos^
 
 **Figure 3:** 房间状态从未占用（U）变为占用（O），再变回未占用（U）时七个时间戳的 CSI 幅度。
 
-#### 2.3.2 人体活动
-
-
-
-
+### 2.3.2 人体活动
 
 一个更困难的应用是如何研究人类活动对 CSI 的影响。我们使用三个 TX–RX 对（发射端 1 根天线，接收端 3 根天线）研究日常生活中非常常见的活动，例如行走和奔跑。在 Fig. 4 中，我们绘制了 CSI 矩阵的 3D 图，该图包含三个轴：时间、CSI 幅度和子载波索引。在 Fig. 4(a) 中，一个人穿过 TX–RX 对，我们观察到这一时刻在 CSI 中大约在 1s 时间戳被捕捉到。在 Fig. 4(b) 中，一个人奔跑，我们可以看到比行走活动更大、更多的变化。还观察到不同的活动，而这些活动发生的位置由不同的天线反映。由于真实场景中的多径效应过于复杂，无法通过物理模型进行分析，我们寻求深度神经网络和数据驱动解决方案的帮助，以自动提取判别模式。
 
@@ -1355,7 +1215,7 @@ Jianfei Yang^(\*,‡), Han Zou^(†,§), Lihua Xie^(\*,¶) and Costas J. Spanos^
 
 人类手势更为细微，因此手势引起的 CSI 波动应该非常小。为了捕捉这类细微模式，细粒度的 CSI 相位差和深度学习大显身手。我们比较一只手执行的 *downward* 和 *rightward* 手势。在 Fig. 5 中，顶行显示了 114 个子载波上两个天线的相位差，较暗的颜色表示值较大。底行显示了一个子载波的 CSI 相位差的具体值。我们可以看到 CSI 相位差对不同手势显示出鲁棒的形状模式。这些观察结果证明了使用 CSI 相位差的合理性，并进一步暗示应为这些敏感的 CSI 数据建立强大的表示学习模型。
 
-## 3.Deep Neural Networks for CSI-based Sensing
+# 3.Deep Neural Networks for CSI-based Sensing
 
 对于现代深度神经网络，监督表示学习主要依赖于 CNN 用于空间特征和长短期记忆 LSTM 用于时间特征。对于 CSI 数据，每个样本写成矩阵 `x` ∈ `R`^(`N[s]`×`N[t]`)，其中 `N[s]` 是子载波数量，`N[t]` 是时间持续时间。因此，对于每个子载波，时间模式隐藏在 CSI 矩阵的行中，而对于每个时间戳，空间特征隐藏在 CSI 矩阵的列中，该列指的是所有子载波之间的关系。以这种方式，一个 CSI 样本类似于一个视频序列，其中 CSI 数据的每个时间戳描述了当前空间。因此，使用 2D CNN 已经考虑了时间和空间特征，因为 2D 卷积核同时作用于时间和空间维度。此外，由于模型设计为跨域自适应，CNN 通常表现良好且更容易训练。
 
@@ -1367,13 +1227,14 @@ CNN 已成功应用于计算机视觉和神经语言处理 [19]。它使语义�
 
 所提出的 CNN 模型以监督方式训练，因为大量标记的 CSI 数据可以在实验室或工厂中收集。该模型具有强大的拟合训练数据的能力。然而，当模型在新环境中测试（例如用户的家中）或原始训练环境的布局发生变化时，由于 CSI 数据的空间偏移，模型会失效。
 
-## 4.Adversarial Training for Domain Adaptation
+# 4.Adversarial Training for Domain Adaptation
 
 如前所述，当深度神经网络或传统方法如 SVM 用于 CSI 数据时，其性能容易受到时间和空间动态的影响。原因在于这些方法无法自适应地学习分类器。在这项工作中，我们引入了一种设备无关的 **W**iFi 启用自适应手势识别系统 **(WiADG)**，旨在通过对抗域适应 [6] 在时间和空间动态下实现稳健且自适应的手势识别。
 
 为克服空间偏移问题，引入了一种新颖的对抗训练方法，该方法消除了环境变化引起的 CSI 数据的分布差异。我们方法中的域适应的目标是使用原始环境（源域）中的标记数据和新环境（目标域）中的未标记数据，在新环境中学习自适应编码器 [8]。为此，对抗训练在无监督域适应中起着至关重要的作用。它迫使编码器（即 CNN）生成 CSI 表示，其分布在两个域之间相似。整个算法总结在 Fig. 7 中，我们详细介绍三个步骤。
 
 ### Step 1:
+
 假设我们在源域（即原始环境）中收集 `N[s]` 个 CSI 帧 `X[s]`，其标签为 `Υ[s]`。WiADG 的第一步是在源域中获得一个鲁棒且准确的模型。源模型由用于特征提取的源编码器 `E[s]` 和源分类器 `C[s]` 组成，可以通过反向传播以监督方式训练：
 
 ![figure](img/p90-1.png)
@@ -1384,11 +1245,10 @@ CNN 已成功应用于计算机视觉和神经语言处理 [19]。它使语义�
 
 **Figure 7:**WiADG 的训练和测试流程。
 
-
-
-
-
 ### Step 2
+
+
+
 WiADG 的关键步骤是适应设计，旨在使模型能够在全新的环境（目标域）中识别手势，而无需在该域中进行标注劳动。由于我们的 CSI 平台可以以高采样率非侵入式地采集数据，因此在用户执行手势时，可以轻松获得目标域中的未标注 CSI 帧。将这些未标注的 CSI 数据记为 `X_t`。步骤 2 的目标是训练一个新的目标编码器 `E_t`（其架构与源编码器 `E_s` 相同），使其最小化源和目标映射分布 `E_s(X_s)` 与 `E_t(X_t)` 之间的距离。结果是，如果目标编码器将目标 CSI 数据映射到源特征空间，则源分类器 `C_s` 即可直接应用。为此，我们依赖于基于域判别器 `D` 的对抗训练，该判别器学习识别特征来自源域还是目标域 [8]。其思想与 vanilla GAN 类似，后者旨在生成逼真的图像，使判别器无法将其与真实图像区分开 [20]。在我们的场景中，由于我们知道 CSI 帧的域标签（源或目标），判别器和目标编码器进行对抗博弈，可表述为
 
 ![figure](img/p91-1.png)
@@ -1397,9 +1257,10 @@ WiADG 的关键步骤是适应设计，旨在使模型能够在全新的环境�
 
 ![figure](img/p91-2.png)
 
-在对抗域自适应中，我们使用步骤 1 中获得的 `E_s` 的参数初始化目标编码器 `E_t`，因为这些参数提供了特征提取能力，并使对抗训练更加平滑和稳定。在 WiADG 中，我们为判别器 `D` 简单设计了 3 个全连接层：1024 个隐藏单元 — 2048 个隐藏单元 — 二元输出层。ReLU 被用作激活函数。通过步骤 2，`E_t` 和 `D` 中的参数被联合更新。`D` 仅起辅助作用，而 `E_t` 用于在新环境中进行特征提取。
+在对抗域自适应中，我们使用步骤 1 中获得的 `E_s` 的参数初始化目标编码器 `E_t`，因为这些参数提供了特征提取能力，并使对抗训练更加平滑和稳定。在 WiADG 中，我们为判别器 `D` 简单设计了 3 个全连接层：1024 个隐藏单元 — 2048 个隐藏单元 — 二元输出层。`ReLU` 被用作激活函数。通过步骤 2，`E_t` 和 `D` 中的参数被联合更新。`D` 仅起辅助作用，而 `E_t` 用于在新环境中进行特征提取。
 
 ### Step 3
+
 由于目标编码器 `E_t` 可以将目标 CSI 帧映射到与源编码器 `E_s` 共享的特征空间，因此我们可以在新环境中直接采用预训练的源分类器 `C_s`。这两个组件的组合即为目标手势识别模型，能够准确识别新环境（目标域）中的手势。
 
 总之，如 Fig. 7 所描述，步骤 1 以监督方式训练源编码器 `E_s` 和分类器 `C_s`。然后我们固定 `E_s`，并在新的目标编码器 `E_t` 与域判别器 `D` 之间进行对抗博弈，迫使 `E_t` 为目标 CSI 帧生成类似源的表示。在测试阶段，我们只需在新环境中使用目标编码器和原始分类器。
@@ -1407,10 +1268,12 @@ WiADG 的关键步骤是适应设计，旨在使模型能够在全新的环境�
 #### 5.Experiments
 
 ##### 5.1 Setup
-我们使用 2 个 TP-LINK N750 接入点实现了 WiADG，其中一个用作 TX，另一个用作 RX。然后该方法在真实室内环境中进行评估，包括办公室和会议室。使用 Atheros CSI 工具 [4] 在传感平台 [2] 上，我们为每个手势样本获得 400 × 114 CSI 帧，其中 400 为时间持续时间，114 为 RX 中两个天线的相位差。采样率为 100 packets/s，我们采用线性插值以确保 CSI 值的平稳间隔来克服数据包丢失。该方法由 Pytorch 实现，并在配备 Intel i7-4810MQ 2.80GHz CPU 和 16GB RAM 的 Think-pad 笔记本上运行。
+
+我们使用 2 个 TP-LINK N750 接入点实现了 WiADG，其中一个用作 TX，另一个用作 RX。然后该方法在真实室内环境中进行评估，包括办公室和会议室。使用 Atheros CSI 工具 [4] 在传感平台 [2] 上，我们为每个手势样本获得 400 × 114 CSI 帧，其中 400 为时间持续时间，114 为 RX 中两个天线的相位差。采样率为 100 packets/s，我们采用线性插值以确保 CSI 值的平稳间隔来克服数据包丢失。该方法由 `Pytorch` 实现，并在配备 Intel i7-4810MQ 2.80GHz CPU 和 16GB RAM 的 Think-pad 笔记本上运行。
 
 ##### 5.2 Data collection
-为了模拟真实世界场景而非理想环境中的 CSI 感知，我们选择了 2 个典型的室内环境。如 Fig. 8 所示，系统部署在 7 m × 5 m 的会议室和 4.5 m × 5.6 m 的办公区。TX 与 RX 路由器之间的距离为 1 米，它们被放在桌子上，如 Fig. 9 所示。两名志愿者参与其中，使用单手采集了六种常见手势，包括 *right, left, rotting right, rotting left, push* 和 *pull*。对于每个手势在每个测试床，我们在一天内采集 100 个样本用于训练分类器，另外 100 个样本在不同天采集以体现时间动态。CSI 手势帧总数超过 2500，用于评估 WiADG 的有效性。
+
+为了模拟真实世界场景而非理想环境中的 CSI 感知，我们选择了 2 个典型的室内环境。如 Fig. 8 所示，系统部署在 7 m × 5 m 的会议室和 4.5 m × 5.6 m 的办公区。TX 与 RX 路由器之间的距离为 1 米，它们被放在桌子上，如 Fig. 9 所示。两名志愿者参与其中，使用单手采集了六种常见手势，包括 `right`, `left`, `rotting right`, `rotting left`, `push` 和 `pull`。对于每个手势在每个测试床，我们在一天内采集 100 个样本用于训练分类器，另外 100 个样本在不同天采集以体现时间动态。CSI 手势帧总数超过 2500，用于评估 WiADG 的有效性。
 
 ![figure](img/p93-1.jpg)
 
@@ -1421,6 +1284,7 @@ WiADG 的关键步骤是适应设计，旨在使模型能够在全新的环境�
 **Figure 9:**会议室中的实验设置。
 
 ##### 5.3 Evaluation in the original environment
+
 首先我们需要验证深度神经网络在与传统统计学习方法比较时的优越性，包括 WiG [21] 和 WiAG [22]。WiG 使用小波去噪和小波去噪和 SVM 分类器进行手势识别。WiAG 基于主成分分析（PCA）、离散小波变换和 KNN。为了与这些方法进行比较，我们在两个环境中报告了真阳性率（TPR）。Fig. 10 显示了这些方法的结果，我们可以看到 WiADG 在所有情况下都显著优于这些方法。它将会议室中 WiAG 和 WiG 的整体 TPR 分别提高了 7.7% 和 9.5%，办公区中分别提高了 8.6% 和 10.9%。这些结果验证了深度神经网络在相同环境下提取 CSI 模式进行手势识别的能力更强。
 
 我们可以进一步探索 WiADG 精度的混淆矩阵。WiADG 在会议室和办公区的交叉验证准确率分别为 98.3% 和 98%。如 Fig. 11 所示，会议室的性能略优于办公区，这可能是由于办公区复杂的布局和障碍物为无线信号产生了更多传播路径。总的来说，每个手势的准确率均不低于 94%，这证明了 WiADG 在不同情况下的高稳定性。
@@ -1434,11 +1298,8 @@ WiADG 的关键步骤是适应设计，旨在使模型能够在全新的环境�
 **Figure 11:**原始环境中使用 WiADG 的手势识别准确率混淆矩阵。
 
 ##### 5.4 Evaluation under environmental dynamics
+
 我们进一步研究 WiADG 在更现实的场景中的性能，其中训练环境与测试环境不同。由于我们从两个环境中采集了数据，因此形成了两种评估协议：会议室（源域）到办公区（目标域）以及相反模式。Table 1 比较了 WiADG 和其他两种方法的 TPR。可以很容易地观察到，WiG、WiAG 和 WiADG（仅源） 的性能严重下降，这表明空间和时间动态会影响传统机器学习和深度学习方法。虽然 WiADG 仍优于 WiG 和 WiAG，但约 50% 的准确率对于实际应用来说仍然太低。
-
-
-
-
 
 然后我们采用了第 4 节 中描述的对抗域自适应方法，使用目标域中的无标签数据。我们通过迫使它欺骗域判别器 `D` 来学习目标编码器 `E[t]`。随着判别器学习区分来自源编码器 `E[s]` 和目标编码器 `E[t]` 的特征，对抗训练成功地增强了源域和目标域之间的分布相似性。如 表 1 所示，与仅利用深度神经网络进行监督学习的 WiADG（仅源）相比，带域自适应的提出的 WiADG 在准确率上实现了超过 30% 的巨大提升。与其他方法相比，WiADG 仍是该迁移场景基准的最先进方法。我们可以发现，该场景的主要改进归因于步骤 2 和步骤 3，其目标是训练目标编码器生成类似源的特征分布。这些结果提供了令人信服的证据，证明使用深度神经网络的对抗域自适应能够在环境动态下实现鲁棒的 WiFi-based 手势识别。
 
@@ -1452,7 +1313,7 @@ WiADG 的关键步骤是适应设计，旨在使模型能够在全新的环境�
 
 ### 6.1 用于鲁棒特征提取器的迁移学习
 
-我们将知识从源域迁移到目标域的原因是，特征提取器（编码器）只能描述源域的 CSI 样本，而无法在新环境中提取有效特征。如果我们旨在训练适用于大多数情况的鲁棒 CSI 特征提取器，则需要大规模的 CSI 样本。例如，在计算机视觉领域，一个关键因素是 ImageNet 的收集，它包含 1000 个视觉类别的 100 万张带标签图像。如果模型旨在进行视觉识别，则在 ImageNet 上预训练它 [23] 变得极其必要。在 WiFi-based 感知中，大多数应用的 CSI 数据规模对于深度学习模型来说都很小。尽管最近提出了 Widar [24] 等新的大规模数据集，但对于 CSI-based 感知，仍需要一种具有预训练参数的通用网络架构。
+我们将知识从源域迁移到目标域的原因是，特征提取器（编码器）只能描述源域的 CSI 样本，而无法在新环境中提取有效特征。如果我们旨在训练适用于大多数情况的鲁棒 CSI 特征提取器，则需要大规模的 CSI 样本。例如，在计算机视觉领域，一个关键因素是 `ImageNet` 的收集，它包含 1000 个视觉类别的 100 万张带标签图像。如果模型旨在进行视觉识别，则在 `ImageNet` 上预训练它 [23] 变得极其必要。在 WiFi-based 感知中，大多数应用的 CSI 数据规模对于深度学习模型来说都很小。尽管最近提出了 `Widar` [24] 等新的大规模数据集，但对于 CSI-based 感知，仍需要一种具有预训练参数的通用网络架构。
 
 ### 6.2 用于真实场景的少样本学习
 
@@ -1488,10 +1349,6 @@ WiFi-based 感知的另一个问题是如何将算法部署到边缘设备，例
 
 3. D. Halperin, W. Hu, A. Sheth, and D. Wetherall, “Tool release: Gathering 802.11n traces with channel state information,” *ACM SIGCOMM Comput Commun. Revi*. vol. 41, no. 1, pp. 53–53, 2011.
 
-
-
-
-
 4.Y. Xie, Z. Li, and M. Li, “Precise power delay profiling with commodity WiFi,” in *Proc. 21st Annu. Int. Conf. Mobile Computing and Networking*, ACM, 2015, pp. 53–64.
 
 5.H. Zou, Y. Zhou, J. Yang, H. Jiang, L. Xie, and C. J. Spanos, “Deepsense: Device-free human activity recognition via autoencoder long-term recurrent convolutional network,” in *2018 IEEE Int. Conf. Communications (ICC)*, IEEE, 2018, pp. 1–6.
@@ -1511,6 +1368,8 @@ WiFi-based 感知的另一个问题是如何将算法部署到边缘设备，例
 12.J. Gjengset, J. Xiong, G. McPhillips, and K. Jamieson, “Phaser: Enabling phased array signal processing on commodity WiFi access points,” in *Proc. 20th ann. Inte. Conf. Mobile Computing and Networking*, ACM, 2014, pp. 153–164.
 
 13.H. Zou, Y. Zhou, J. Yang, W. Gu, L. Xie, and C. Spanos, “Freedetector: Devicefree occupancy detection with commodity WiFi,” in *2017 IEEE Int. Conf. Sensing, Communication and Networking (SECON Workshops), IEEE*, 2017, pp. 1–5.
+
+
 
 14.H. Zou, Y. Zhou, J. Yang, W. Gu, L. Xie, and C. Spanos, “Freecount: Devicefree crowd counting with commodity WiFi,” in: *GLOBECOM 2017–2017 IEEE Global Communications Conference, IEEE*, 2017, pp. 1–6.
 
@@ -1568,11 +1427,7 @@ Linlin Guo^(\*,‡), Hang Zhang^(†,§,¶), Weiyu Guo^(†), Jian Fang\*, Bingx
 
 **摘要**
 
-
-
-
-
-基于 WiFi 的无设备人体活动识别应用在智能环境感知领域已流行十年。现有研究提取人体活动的特征作为经典分类方法的输入来训练学习模型，然后利用训练好的模型识别活动。WiFi 信号的传播特性在相同环境中随时间推移在不同场所条件下对个体而言是可变的。依赖固定特征，数据无法有效表示人体活动并适应动态室内环境。随着深度学习近年来在无设备感知领域展现出其有效性，深度学习方法已被探索以解决 WiFi 信号面临的困难。在本章中，我们关注如何削弱个体之间在人体活动识别上的准确率差异，并在单一室内环境中提高鲁棒性。基于此，我们设计了一种名为 `LCED` 的新颖深度学习模型，它由一个基于 LSTM 的编码器、特征图像表示和一个基于 CNN 的解码器组成。基于 LSTM 的编码器可以学习时序表示并将其编码为等长向量。每个等长向量使用特征图像表示来压缩并保留关键细节。基于 CNN 的解码器通过基于空间分布捕获信号图像的局部有效信息来提供更好的识别准确率。实验结果表明，十六种活动的平均准确率很高，为 95%。个体在活动识别上的准确率差异平均降低了 3%。
+基于 WiFi 的无设备人体活动识别应用在智能环境感知领域已流行十年。现有研究提取人体活动的特征作为经典分类方法的输入来训练学习模型，然后利用训练好的模型识别活动。WiFi 信号的传播特性在相同环境中随时间推移在不同场所条件下对个体而言是可变的。依赖固定特征，数据无法有效表示人体活动并适应动态室内环境。随着深度学习近年来在无设备感知领域展现出其有效性，深度学习方法已被探索以解决 WiFi 信号面临的困难。在本章中，我们关注如何削弱个体之间在人体活动识别上的准确率差异，并在单一室内环境中提高鲁棒性。基于此，我们设计了一种名为 `LCED` 的新颖深度学习模型，它由一个基于 `LSTM` 的编码器、特征图像表示和一个基于 `CNN` 的解码器组成。基于 `LSTM` 的编码器可以学习时序表示并将其编码为等长向量。每个等长向量使用特征图像表示来压缩并保留关键细节。基于 `CNN` 的解码器通过基于空间分布捕获信号图像的局部有效信息来提供更好的识别准确率。实验结果表明，十六种活动的平均准确率很高，为 95%。个体在活动识别上的准确率差异平均降低了 3%。
 
 **关键词：** 深度学习，无设备，人体活动识别，WiFi 信号，信号处理，室内环境
 
@@ -1580,15 +1435,11 @@ Linlin Guo^(\*,‡), Hang Zhang^(†,§,¶), Weiyu Guo^(†), Jian Fang\*, Bingx
 
 人体活动识别是人机交互领域的一个重要研究课题，它探索人体活动识别作为分析用户行为以提供有效指导的初始步骤 [1]，检测异常行为以进行老年人安全监控，识别活动以控制家用电器和识别用户身份。目前，根据物体与传感设备之间的相关位置，不同应用中存在四种关于人体活动识别的模态 [2]。(i) 体 worn：由用户佩戴以描述身体运动，如智能手机、手表、腕带加速度计和陀螺仪，常用于健康产品，是人体活动识别的成熟技术。(ii) 物体：内置物体以捕捉物体的运动，如智能家电、RFID、杯子上的加速度计等。(iii) 环境：应用于环境中以捕捉用户行为并实现用户交互，如声音、摄像头、WiFi、蓝牙等，其重点是应用于智能家居，如远程控制家用电器和使用专用传感器实时监测植物状态变化。(iv) 混合：跨传感器边界，如类型的组合，通常部署在智能环境中。我们关注四个关键词，包括无设备、深度学习模型、人体活动识别和室内环境中的 WiFi 信号。随着 WiFi 信号在室内环境中的覆盖范围不断增加，环境模态可以利用 WiFi 信号的变化来记录和识别人体活动。
 
-WiFi 信号最初用于传递信息以实现通信功能。由于传播信号对环境的敏感性，WiFi 信号可以感知室内环境的变化，称为感知功能。随着无线设备的快速发展和 WiFi 基础设施在公共场所和家庭环境中的无处不在部署，基于 WiFi 的感知已吸引学术界和工业界的越来越多的关注。与可穿戴传感器相比，WiFi 感知可以通过空中不附加任何设备提供对人体活动的非侵入式和连续感知。WiFi 信号利用穿墙和宽传播能力可以抵消视觉人体活动识别和监控应用所面临的死区和遮挡问题。接收信号强度指示 RSSI 和信道状态信息 CSI 是 WiFi 信号的两种测量方式。RSSI 可以粗略定位目标 [3] 并检测人类行为如日常活动或手势 [4]。在 WiFi 信号的传播过程中，存在的多径效应导致基于 RSSI 的人类感知的性能不稳定且不可靠。CSI 可以使用时频信息区分多个传播路径 [5] 并实现跌倒检测 [6]、睡眠监测 [7]、步态识别 [8–10]、手势分类 [11–13] 和室内环境中的精细生命体征监测 [14, 15]。WiFi 基于人体活动识别背后的原理是，人的行为会影响无线信号传播并引起独特的信号变化模式。这是一个模式匹配问题。文献 [4, 16, 17] 提取 RSSI 波形来表示手势，构建指纹档案以识别人体活动并使用动态时间规整 DTW 来确定睡眠的周期性。然而，由于室内环境中 WiFi 信号的时间变化特性，模式匹配方法无法保证人体活动识别的稳定性能。基于学习的方法使用活动数据的特征来训练模型并利用训练好的模型推断相应的活动。
-
-
-
-
+WiFi 信号最初用于传递信息以实现通信功能。由于传播信号对环境的敏感性，WiFi 信号可以感知室内环境的变化，称为感知功能。随着无线设备的快速发展和 WiFi 基础设施在公共场所和家庭环境中的无处不在部署，基于 WiFi 的感知已吸引学术界和工业界的越来越多的关注。与可穿戴传感器相比，WiFi 感知可以通过空中不附加任何设备提供对人体活动的非侵入式和连续感知。WiFi 信号利用穿墙和宽传播能力可以抵消视觉人体活动识别和监控应用所面临的死区和遮挡问题。接收信号强度指示 `RSSI` 和信道状态信息 `CSI` 是 WiFi 信号的两种测量方式。`RSSI` 可以粗略定位目标 [3] 并检测人类行为如日常活动或手势 [4]。在 WiFi 信号的传播过程中，存在的多径效应导致基于 `RSSI` 的人类感知的性能不稳定且不可靠。`CSI` 可以使用时频信息区分多个传播路径 [5] 并实现跌倒检测 [6]、睡眠监测 [7]、步态识别 [8–10]、手势分类 [11–13] 和室内环境中的精细生命体征监测 [14, 15]。WiFi 基于人体活动识别背后的原理是，人的行为会影响无线信号传播并引起独特的信号变化模式。这是一个模式匹配问题。文献 [4, 16, 17] 提取 `RSSI` 波形来表示手势，构建指纹档案以识别人体活动并使用动态时间规整 `DTW` 来确定睡眠的周期性。然而，由于室内环境中 WiFi 信号的时间变化特性，模式匹配方法无法保证人体活动识别的稳定性能。基于学习的方法使用活动数据的特征来训练模型并利用训练好的模型推断相应的活动。
 
 近期基于学习的调研可分为两类：一类 [18–20] 是从原始活动数据中提取有效特征，利用经典分类算法识别活动；另一类 [21–23] 是设计深度学习模型以捕捉原始活动数据的更有效信息，从而提高不同场景下人体活动识别的鲁棒性。 Table 1 列出了关于基于 WiFi 感知的相关研究在识别方法、测试人员/场景、活动类型、样本量和准确率方面的情况。
 
-在单一室内环境中，研究 [19,20,24] 使用分类算法可利用提取的时间域和频域特征对人体活动识别取得令人满意的结果，这些特征包含广泛使用的 CSI 幅度方差、CSI 相位差、信号熵、多普勒频移和频率分量。上述特征采用基于人工的方式，受研究者对采集活动数据的主观性限制。此外，在特定室内环境中针对特定个体训练的模型，在应用于预测另一室内环境中另一个体的活动时通常效果不佳。
+在单一室内环境中，研究 [19,20,24] 使用分类算法可利用提取的时间域和频域特征对人体活动识别取得令人满意的结果，这些特征包含广泛使用的 `CSI` 幅度方差、`CSI` 相位差、信号熵、多普勒频移和频率分量。上述特征采用基于人工的方式，受研究者对采集活动数据的主观性限制。此外，在特定室内环境中针对特定个体训练的模型，在应用于预测另一室内环境中另一个体的活动时通常效果不佳。
 
 为研究这两个问题，研究人员利用深度学习算法 [25–29]，该算法可以学习原始活动数据的时间域特征和空间信息以识别活动。例如，所提出的 `EI` 框架 [25] 使用深度学习模型去除活动数据中包含的特定环境和个体的信息，并提取在不同个体、不同环境下采集的活动数据共有的环境/个体无关特征。
 
@@ -1611,17 +1462,20 @@ WiFi 信号最初用于传递信息以实现通信功能。由于传播信号对
 **Table 2:** WiFi 感知算法的汇总 [53]。
 
 | **Model:** `Y = f(x)`, `X`: CSI to measurements, `Y`: detection, recognition, or estimation results. | | **Algorithm:** To find the mapping function `f(·)` detect, recognize, or estimate `Y` given `X` |
+
 | --- | --- | --- |
+
 | Algorithm Type | | Examples |
+
 | **Modeling-based:** (1) Modeling `X` 1) Modeling `X` by theoretical models based on physical theories or statistical models based on empirical measurements; (2) Inferring `f(·)` by the model of `X`; (3) Predicting `Y` by the modeled function `f(·)` and measurements of `X`, sometimes assisted by optimization algorithms. | | **Theoretical Models:** Fresnel Zone Model, Angle of Ar-rival/Departure, Time of Flight, Amplitude Attenuation, Phase Shift, Doppler Spread, Power Delay Profile, MultiPath Fading, Radio Propagation (Reflection, Refraction, Diffraction, Absorption, Polarization, Scattering); Statistical Models: Rician Fading, Power Spectral Density, Coherence Time/Frequency, Self/Cross Correlation; Algorithms: MUSIC, Thresholding, Peak/Valley Detection, Minimization/Maximization |
+
+
+
 | **Learning-based:** (1) Training: learning `f(·)` by training samples of `X′` and `Y′`; (2) Inference: predicting `Y` by the learned function `f(·)` and measurements of `X`. | | **Learning Algorithms:** Decision Tree, Naive Bayes, Dynamic Time Wrapping, k Nearest Neighbor, Support Vector Machine, Self-Organizing Map, Hidden Markov Models, Convolutional/Recurrent Neural Network, Long- Short-Term Memory |
+
 | **Hybrid:** Modeling-based `g(·)` → learning-based `f(·)` (1) Modeling the problem by `Y = f(g(X))`; (2) Getting `f(·)` and `g(·)` by modeling-based or learningbased algorithms; (3) Predicting `Y` by the modeled or learned function `f(g(·))` and measurements of `X`. | | **Modeling-based** `g(·)` → **learning-based** `f(·)`: (1) Extracting mobility data by Doppler Spread → recognizing gestures by k-Nearest Neighbor; (2) Estimating position and orientation features by Channel Frequency Response → recognizing gestures by k-Nearest Neighbor. |
 
 #### 2.1 Pattern matching-based activity recognition
-
-
-
-
 
 模式匹配方法寻找对应于某一类别的唯一信息并将唯一信息映射到待检测对象，以检测、识别和估计目标对象。早期研究使用模式匹配方法来识别人类行为 [4, 7, 13, 15–17, 41]。WiGest [4] 从原始信号数据中提取三个基本原语（上升沿、停顿和下降沿），并将这三个原语转换为字符串序列：上升沿转换为正号，下降沿转换为负号，停顿转换为零。然后将提取的字符串序列与预定义的姿势模板进行比较以找到最佳匹配。WiSee [13] 计算手势引起的反射信号的多普勒频移作为唯一模式以匹配一个手势，因为人类活动速度的变化不会改变正负频移的模式。递增的正多普勒频率对应于手势加速，递减的正多普勒频率对应于手势减速。对应于手势的多普勒频率剖面可能仅由正多普勒频移的模式组成、仅由负多普勒频移的模式组成以及同时包含正负多普勒频移的模式组成。吸烟是一种有节奏的复合行为，包含六个动作（拿起、举起、吸入、放下、吸气和呼气）按一定顺序进行，这使得吸烟行为有别于日常活动，如举起或放下手臂。基于该特性，Smokey 系统 [17] 利用节奏/顺序信息来识别吸烟行为。
 
@@ -1640,10 +1494,6 @@ WiFi 信号最初用于传递信息以实现通信功能。由于传播信号对
 ## 3. 预备知识
 
 ### 3.1 WiFi 信号
-
-
-
-
 
 无线信号在室内环境中覆盖，不仅提供通信功能，还具有传感功能，该功能在人工智能领域的发展推动下正吸引学术界和工业界研究人员的关注。WiFi 信号可以在传播过程中记录室内环境中发生的动态变化。图 1 显示了 WiFi 信号在室内环境中的基本传播模型。在信号传播过程中，WiFi 信号会随着距离增加而面临信号衰减，并由于多径效应而具有时变特性。由一个发射器发送的 WiFi 信号通过多条路径传播到一个接收器，这些路径包括一条视距路径（`LoS` path）和若干反射路径。`LoS` path 表示接收器与发射器之间的最短距离。反射路径包含基于静态的反射路径和基于动态的反射路径。由墙壁、天花板和地板等静态物体引起的基于静态的反射路径在一段时间内在同一室内环境中具有稳定的距离和数量。动态物体改变传播路径的长度，称为基于动态的反射路径，可以精确描述物体的行为。研究机构利用粗粒度的 `RSSI` 和细粒度的 `CSI` 的 WiFi 测量，通过商用无线设备分析和估计人类行为。`RSSI` 和 `CSI` 的细节如下。
 
@@ -1699,13 +1549,10 @@ WiFi 信号最初用于传递信息以实现通信功能。由于传播信号对
 
 ### 3.2.2 长短期记忆
 
-
-
-
-
 LSTMs 可以通过设计遗忘门、输入门和输出门来避免梯度爆炸和梯度消失问题 [64]。LSTM 的关键是对应于 Figure 3 中所示的矩形框 `A` 的细胞状态。LSTM 各门的细节由相关技术博客提供支持 [65]。
 
 #### Forget gate layer
+
 遗忘门层决定从细胞状态中放弃哪些信息。
 
 ![figure](img/p115-1.jpg)
@@ -1717,6 +1564,7 @@ LSTMs 可以通过设计遗忘门、输入门和输出门来避免梯度爆炸�
 其中 `h[t−1]` 表示前一个细胞状态的输出，`x[t]` 表示当前输入数据。遗忘门层输出 `f`，其值介于 0 和 1 之间，用于前一个细胞状态 `C[t−1]` 中的每个数字，其中 1 表示完全保留该值，而 0 表示完全丢弃该值。
 
 #### Input gate layer
+
 输入门层决定我们将存储到细胞状态中的新信息是什么。分为两部分。首先，一个称为输入门层的 sigmoid 层决定我们更新哪些值。
 
 ![figure](img/p115-3.png)
@@ -1732,6 +1580,7 @@ LSTMs 可以通过设计遗忘门、输入门和输出门来避免梯度爆炸�
 同时，旧的细胞状态 `C[t−1]` 被更新为新的细胞状态 `C[t]`。之前的步骤已经决定了要做什么，我们只需遵循它们即可。我们将旧状态 `C[t−1]` 乘以 `f` 并忘记我们之前决定忘记的东西。然后我们加上 ![figure](img/in115-1.png)。这是新的候选值，按我们决定更新细胞状态每个值的程度进行缩放。
 
 #### Output gate layer
+
 输出门层决定我们将输出什么。首先，我们运行一个 sigmoid 层来决定我们将输出细胞状态的哪些部分。
 
 ![figure](img/p116-1.png)
@@ -1741,6 +1590,7 @@ LSTMs 可以通过设计遗忘门、输入门和输出门来避免梯度爆炸�
 ![figure](img/p116-2.png)
 
 ##### 3.3 Motivation and solution
+
 之前的工作利用机器学习算法和深度学习算法来提高人体活动识别的准确性。人体活动识别的准确性对于不同个体甚至同一室内环境中的同一个体都存在不稳定性。基于该问题，我们设计了一种基于 CNN 和 LSTM 的深度学习模型，以提高个体在人体活动识别上的准确性稳定性。注意，本章中我们强调的是关于人体活动识别准确性的个体间差异，而不是室内环境间的差异。
 
 - 同一个体的准确性差异。同一活动的采集活动数据相对于信号模式在不同时间会因信号传播而略有变化。活动引起的信号模式的细微变化增加了该活动在人体识别准确性上的不稳定性。使用机器学习算法进行同一个人活动识别的准确性差异在 5% 到 10% 之间。类似研究 [66] 利用深度学习算法将差异降低到 3% 到 7% 之间。该结果无法达到日常生活实际应用的需求。为了解决该问题，我们设计了 LSTM-CNN 编码器-解码器模型以减少活动识别准确性的泛化误差。与类似研究 [66] 相比，我们增加了三层卷积层和两层全连接层，以从原始活动数据中学习更有效的信息。
@@ -1750,39 +1600,38 @@ LSTMs 可以通过设计遗忘门、输入门和输出门来避免梯度爆炸�
 为了解决上述两个问题，基于 LSTM 的编码器和基于 CNN 的解码器构成了所提出的 LCED。类似研究 [67] 开发了一种自编码器长短期循环卷积网络，其侧重于使用压缩的固有时间特征进行人体活动识别，但它忽略了数据的空间特征。考虑到 CSI 信号是空间和时间的叠加，我们使用 LSTM 来提取时间特征，它可以有效地提取长依赖关系并压缩数据。此外，我们还通过采用 CNN 来捕捉局部信息以利用空间特征用于模型学习，并且可以在一定程度上消除空间中障碍物反射的噪声。因此，结合空间和时间特征可以减少环境噪声以降低个体识别差异。本章中，我们主要设计了一种名为 LCED 的新颖神经网络模型，用于学习时序信号数据。LCED 模型由基于 LSTM 的编码器和基于 CNN 的解码器组成，以增强学习能力并减弱人体活动识别中个体间的准确性差异。
 
 #### 4. LCED Neural Network
-为了提高多类活动在不同个体下的鲁棒性和通用性，我们提出了一种名为 LCED 的新颖编码器-解码器模型。LCED 模型的架构描述于 Figure 4，它包含 12 层，包括 LSTM 层、卷积层和全连接层。首先，原始信号数据被作为编码器的输入以提取固定的特征向量。然后，该向量被转换成语义图像。最后，CNN 提取并分类图像的空间特征。设计 LCED 模型的思想基于以下原则：(i) 根据 PCA 技术可视化，不同的活动在空间中具有不同的聚类，并且特征图像呈现产生活动间的多样化强度分布。(ii) LCED 的编码器部分能够学习时序表示并能够使用非线性变换将其编码为固定长度向量。更重要的是，与基于手工方式的原始方法相比，所提出的模型可以从原始信号中自动提取固定长度特征向量，能够自适应地提取特征并压缩对应于个体和活动差异的关键信息。(iii) 解码器部分基于 CNN，可以有效地基于空间分布捕捉图像的局部特征并具有更好的分类准确性。总的来说，所提出的模型由于自适应时空特征提取而具有更好的鲁棒性和更强的泛化能力。
+
+
+
+为了提高多类活动在不同个体下的鲁棒性和通用性，我们提出了一种名为 `LCED` 的新颖编码器-解码器模型。`LCED` 模型的架构描述于 Figure 4，它包含 12 层，包括 `LSTM` 层、卷积层和全连接层。首先，原始信号数据被作为编码器的输入以提取固定的特征向量。然后，该向量被转换成语义图像。最后，`CNN` 提取并分类图像的空间特征。设计 `LCED` 模型的思想基于以下原则：(i) 根据 `PCA` 技术可视化，不同的活动在空间中具有不同的聚类，并且特征图像呈现产生活动间的多样化强度分布。(ii) `LCED` 的编码器部分能够学习时序表示并能够使用非线性变换将其编码为固定长度向量。更重要的是，与基于手工方式的原始方法相比，所提出的模型可以从原始信号中自动提取固定长度特征向量，能够自适应地提取特征并压缩对应于个体和活动差异的关键信息。(iii) 解码器部分基于 `CNN`，可以有效地基于空间分布捕捉图像的局部特征并具有更好的分类准确性。总的来说，所提出的模型由于自适应时空特征提取而具有更好的鲁棒性和更强的泛化能力。
 
 ![figure](img/p117-1.jpg)
 
-**Figure 4:** LCED 模型：基于 LSTM 的编码器和基于 CNN 的解码器
+**Figure 4:** `LCED` 模型：基于 `LSTM` 的编码器和基于 `CNN` 的解码器
 
-##### 4.1 The encoder-LSTM
+### 4.1 The encoder-LSTM
 
-
-
-
-
-我们的编码器有三层，由 LSTM 设计用于提取固定的特征向量。编码器的输入由 10 个批次大小的 200 长度序列组成，具有 30 个信道子载波。前两层隐藏层是 LSTM 块层，每层包含 128 个隐藏单元，dropout 为 0.5。最后一层隐藏层是一个全连接层，可以将 LSTM 的输出压缩为大小为 64 * 64 的固定特征向量。在该编码器中，时间 *t* 从 1 到 200，最后一个输出用于通过 FC（全连接）层进行特征提取和降维。特征向量输出如下：
+我们的编码器有三层，由 `LSTM` 设计用于提取固定的特征向量。编码器的输入由 10 个批次大小的 200 长度序列组成，具有 30 个信道子载波。前两层隐藏层是 `LSTM` 块层，每层包含 128 个隐藏单元，`dropout` 为 0.5。最后一层隐藏层是一个全连接层，可以将 `LSTM` 的输出压缩为大小为 64 * 64 的固定特征向量。在该编码器中，时间 `t` 从 1 到 200，最后一个输出用于通过 `FC`（全连接）层进行特征提取和降维。特征向量输出如下：
 
 ![figure](img/p118-1.png)
 
-其中 `x[t]` 为滤波后的信道状态信息（CSI），`y[t]` 分别表示 LSTM 的输出。`c[t]` 表示单元的状态，`h[t]` 为每一层的隐藏向量。`s` 是一个激活函数，`logsoftmax` 被视为激活函数。`W[y]` 是需要优化的矩阵权重。参数 `b[y]` 是激活函数中的偏置。经过 LSTM 层后，LSTM 输出为一个固定向量，然后输入到 FC 层进行特征提取和降维。最后，我们可以得到一个 64 * 64 维的特征向量。
+其中 `x[t]` 为滤波后的信道状态信息（`CSI`），`y[t]` 分别表示 `LSTM` 的输出。`c[t]` 表示单元的状态，`h[t]` 为每一层的隐藏向量。`s` 是一个激活函数，`logsoftmax` 被视为激活函数。`W[y]` 是需要优化的矩阵权重。参数 `b[y]` 是激活函数中的偏置。经过 `LSTM` 层后，`LSTM` 输出为一个固定向量，然后输入到 `FC` 层进行特征提取和降维。最后，我们可以得到一个 64 * 64 维的特征向量。
 
-#### 4.2 解码器-CNN
+### 4.2 解码器-CNN
 
-设计的解码器共有九层。编码器的输出被转换为主特征图像表示，大小为 (64 * 64)，作为解码器的输入。前五个隐藏层结合了卷积层和局部连接层。卷积层由 32 个 5 * 5 的滤波器，步长为 1，以及 64 个 5 * 5 的滤波器，步长为 1 组成，可以提取对应于图像强度的空间特征分布和局部特征表示。两个局部连接层由 32、64 个不重叠的滤波器组成，大小为 1 * 1，在每个卷积层之后添加。卷积层操作可以等同于下采样，可以学习更多局部特征并提取高级抽象特征表示。局部连接层（1 * 1）可以等价于使用更少参数的非线性变换，增强模型学习更复杂特征的能力 [68]。接下来的三层为 FC，由 512、256、64 个单元组成，dropout 为 0.5。解码器以一个带有 `logsoftmax` 函数的 FC 结束，用于对 16 个动作类别进行分类。详细计算可表示如下：
+设计的解码器共有九层。编码器的输出被转换为主特征图像表示，大小为 (64 * 64)，作为解码器的输入。前五个隐藏层结合了卷积层和局部连接层。卷积层由 32 个 5 * 5 的滤波器，步长为 1，以及 64 个 5 * 5 的滤波器，步长为 1 组成，可以提取对应于图像强度的空间特征分布和局部特征表示。两个局部连接层由 32、64 个不重叠的滤波器组成，大小为 1 * 1，在每个卷积层之后添加。卷积层操作可以等同于下采样，可以学习更多局部特征并提取高级抽象特征表示。局部连接层（1 * 1）可以等价于使用更少参数的非线性变换，增强模型学习更复杂特征的能力 [68]。接下来的三层为 `FC`，由 512、256、64 个单元组成，`dropout` 为 0.5。解码器以一个带有 `logsoftmax` 函数的 `FC` 结束，用于对 16 个动作类别进行分类。详细计算可表示如下：
 
 ![figure](img/p119-1.png)
 
 其中 `b^(l)(j)` 指第 `l` 层神经元的偏置。![figure](img/in119-1.png) 为该层使用的核数。`k1` 为神经网络中使用的滤波器。标量 `l`、`m`、`i` 和 `w` 分别表示层、映射、第 `i` 个核以及核中的位置。![figure](img/in119-2.png) 表示来自前一层卷积后的特征提取映射或初始元素的第 `i` 个核中第 `j` 个神经元的第 `I` 个元素。然后，`logsoftmax` 函数被应用于最大化最后一层输出 `FC(σ * W + b)` 的概率分布，以获得与给定信号对应的分类类别。
 
-在所提出的模型中，在每个卷积层之后采用了批归一化（BN），可以有效避免内部协变量偏移现象并优化模型的参数设置 [69]。同样，在每个解码器层之后添加了 `ReLu` 函数，以提高模型的学习能力并增强不同个体之间的鲁棒性。
+在所提出的模型中，在每个卷积层之后采用了批归一化（`BN`），可以有效避免内部协变量偏移现象并优化模型的参数设置 [69]。同样，在每个解码器层之后添加了 `ReLu` 函数，以提高模型的学习能力并增强不同个体之间的鲁棒性。
 
 ## 5. 实验与实现
 
 ### 5.1 实验设置
 
-我们旨在设计一种新颖的深度学习模型，以减少人体活动识别中个体间的精度差异。基于这一思路，我们选择一个带有若干家具的会议室作为主要实验场景，该会议室的长度和宽度分别为 10 m 和 6 m。Figure 5 显示了会议室的家具布局、设备位置和尺寸的细节。我们使用 CSI-TOOL [70] 收集活动数据，该工具可广泛用于基于 WiFi 的应用。CSI-TOOL 平台由两台配备 Intel WiFi Link 5300（wl5300）802.11n 网卡的 T400 笔记本电脑组成，并使用监控模式以保证收集活动数据的稳定性。一台带有一个天线的 T400 笔记本电脑作为发射器传输信号数据，另一台带三个天线的作为接收器接收来自不同反射路径的传播信号数据。发射器和接收器形成一个无线链路，并在 5 GHz 运行，以避免拥挤的 2.4 GHz 干扰，因为商业路由器价格便宜，仅支持 2.4 GHz。发射器和接收器安装相同的 CSI-TOOL 代码，使用 Matlab 2010 和 Ubuntu 系统 12.04。数据包传输速率为 30 pkt/s，这在基于 WiFi 的应用中被广泛使用。数据包传输速率可以保持传感能力，并且不会影响正常的网络通信和应用。采集平台不仅可以接收实时信号数据，还可以在进行活动的过程中完成实时信号模式显示。它可以帮助我们无延迟地发现低质量的信号数据并提高采集信号的质量。
+我们旨在设计一种新颖的深度学习模型，以减少人体活动识别中个体间的精度差异。基于这一思路，我们选择一个带有若干家具的会议室作为主要实验场景，该会议室的长度和宽度分别为 10 m 和 6 m。Figure 5 显示了会议室的家具布局、设备位置和尺寸的细节。我们使用 `CSI-TOOL` [70] 收集活动数据，该工具可广泛用于基于 WiFi 的应用。`CSI-TOOL` 平台由两台配备 Intel WiFi Link 5300（`wl5300`）802.11n 网卡的 T400 笔记本电脑组成，并使用监控模式以保证收集活动数据的稳定性。一台带有一个天线的 T400 笔记本电脑作为发射器传输信号数据，另一台带三个天线的作为接收器接收来自不同反射路径的传播信号数据。发射器和接收器形成一个无线链路，并在 5 GHz 运行，以避免拥挤的 2.4 GHz 干扰，因为商业路由器价格便宜，仅支持 2.4 GHz。发射器和接收器安装相同的 `CSI-TOOL` 代码，使用 `Matlab 2010` 和 `Ubuntu` 系统 12.04。数据包传输速率为 30 pkt/s，这在基于 WiFi 的应用中被广泛使用。数据包传输速率可以保持传感能力，并且不会影响正常的网络通信和应用。采集平台不仅可以接收实时信号数据，还可以在进行活动的过程中完成实时信号模式显示。它可以帮助我们无延迟地发现低质量的信号数据并提高采集信号的质量。
 
 ![figure](img/p120-1.jpg)
 
@@ -1790,11 +1639,7 @@ LSTMs 可以通过设计遗忘门、输入门和输出门来避免梯度爆炸�
 
 ### 5.2 活动数据
 
-我们描述活动数据的细节并利用 PCA 技术来估计采集的 WiFi 活动数据的质量。我们使用 10 名志愿者的活动数据作为第一组活动数据，以评估 LCED 模型在减少个体精度差异方面的性能。十名志愿者包括四名女性和六名男性，年龄在 18 至 30 岁，身高在 160 cm 至 190 cm 之间。发射器与接收器之间的距离为 4 m，天线与地面之间的高度为 0.8 m。注意，一个志愿者位于两台笔记本电脑的中间。第二组活动数据来自在会议室中收集一名志愿者的 16 种活动，高度有三种，分别为 0.6 m、0.9 m 和 1.2 m。第三组活动数据由在室内大厅收集的一名志愿者的 16 种活动组成，距离有三种，分别为 1 m、3 m 和 6 m。16 种活动分别为水平挥臂、高举挥臂、双手挥臂、高抛、画 X、画勾、抛纸、向前踢、侧踢、弯腰、拍手、行走、打电话、喝水、坐下和蹲下。每种活动有 30 个样本，每个样本具有时序信号数据，以 30 * packets * 3 矩阵的格式提取。该格式描述了 30 个子载波、时序信号数据的长度和三个天线。
-
-
-
-
+我们描述活动数据的细节并利用 `PCA` 技术来估计采集的 WiFi 活动数据的质量。我们使用 10 名志愿者的活动数据作为第一组活动数据，以评估 `LCED` 模型在减少个体精度差异方面的性能。十名志愿者包括四名女性和六名男性，年龄在 18 至 30 岁，身高在 160 cm 至 190 cm 之间。发射器与接收器之间的距离为 4 m，天线与地面之间的高度为 0.8 m。注意，一个志愿者位于两台笔记本电脑的中间。第二组活动数据来自在会议室中收集一名志愿者的 16 种活动，高度有三种，分别为 0.6 m、0.9 m 和 1.2 m。第三组活动数据由在室内大厅收集的一名志愿者的 16 种活动组成，距离有三种，分别为 1 m、3 m 和 6 m。16 种活动分别为水平挥臂、高举挥臂、双手挥臂、高抛、画 X、画勾、抛纸、向前踢、侧踢、弯腰、拍手、行走、打电话、喝水、坐下和蹲下。每种活动有 30 个样本，每个样本具有时序信号数据，以 30 * packets * 3 矩阵的格式提取。该格式描述了 30 个子载波、时序信号数据的长度和三个天线。
 
 正如我们所知，采集的活动数据带来的数据误差抵消了个体活动之间的差异。为了探究单个人与多个人在活动识别方面的准确性差异，我们首先确保采集活动数据的质量并降低活动数据集对人体活动识别的影响。我们使用基于特征分解的 `PCA` 来分析活动数据集中每个活动的分布，并大致评估活动数据的质量。 Figure 6 展示了随机选取两位志愿者每个天线的活动分布。 `volunteer2` 的活动数据优于 `volunteer3` 的数据，因为前者的活动数据具有每个类别的明显边界。然而，后者由于某些活动的重叠，无法从 16 个活动数据中区分出某些活动。一旦出现不良/低质量的活动数据，我们会分析原因并设计两种处理方式。
 
@@ -1824,7 +1669,7 @@ LSTMs 可以通过设计遗忘门、输入门和输出门来避免梯度爆炸�
 
 ### 5.5 Training of LCED
 
-我们对七个个体评估该模型。模型的实现基于 `Pytorch` 框架，模型在单块 NVIDIA GeForce GTX 1080Ti GPU 上训练，约为 27,335MB。在训练 `LCED` 模型的过程中，数据集按 3 比 1 的比例划分，批大小设置为 10 用于批量梯度推导。我们对模型训练应用 1000 次试验以找到最小误差点。关于优化器，使用 `Adam` 来学习不同权重的自适应梯度，其初始化为 `lr` = 0.001 和 `β[1]` = 0.9、`β[2]` = 0.999、`ε` = 10^(−8)，并应用 `CrossEntropyLoss` 函数来计算预测与真实之间的误差损失以进行反向传播推导。此外，在每个全连接层之后采用 50% 的 dropout 以防止过拟合。完成每个训练 epoch 后，`LCED` 模型被设置为测试模式，然后我们使用整个测试集进行实验以评估性能从而微调参数。
+我们对七个个体评估该模型。模型的实现基于 `Pytorch` 框架，模型在单块 NVIDIA GeForce GTX 1080Ti GPU 上训练，约为 27,335MB。在训练 `LCED` 模型的过程中，数据集按 3 比 1 的比例划分，批大小设置为 10 用于批量梯度推导。我们对模型训练应用 1000 次试验以找到最小误差点。关于优化器，使用 `Adam` 来学习不同权重的自适应梯度，其初始化为 `lr` = 0.001 和 `β[1]` = 0.9、`β[2]` = 0.999、`ε` = 10^(−8)，并应用 `CrossEntropyLoss` 函数来计算预测与真实之间的误差损失以进行反向传播推导。此外，在每个全连接层之后采用 50% 的 `dropout` 以防止过拟合。完成每个训练 epoch 后，`LCED` 模型被设置为测试模式，然后我们使用整个测试集进行实验以评估性能从而微调参数。
 
 ### 5.6 Reference models
 
@@ -1834,17 +1679,13 @@ LSTMs 可以通过设计遗忘门、输入门和输出门来避免梯度爆炸�
 
 • `SVM` 算法常用于非线性二分类任务。`SVM` 使用与 `KNN` 相同的预处理数据和模型训练样本。对于人体活动识别的性能评估，我们计算准确率并绘制 16 个活动的混淆矩阵。混淆矩阵可以提供这些活动之间的清晰关系并确定相似活动。
 
-
-
-
-
 `sRNN` 由 128 个单隐藏层组成。对 `KNN` 应用的相同预处理方法用于将等长的数据集进行划分。对于超参数，`sRNN` 的初始化方式与提出的 `LCED` 相同。此外，还利用 K- Average 操作来估计 `LCED` 性能的准确性。
 
-#### 6.评估
+## 6.评估
 
 本节主要分析并估计使用提出的 `LCED` 模型进行基于 WiFi 的人体活动识别的性能，涉及不同个体、发射机与接收机之间的不同距离，以及无线设备与地面之间的不同高度。这些分析的细节如下。
 
-##### 6.1 个体的性能
+### 6.1 个体的性能
 
 研究目标是分析个体差异对人体活动识别准确性的影响。我们使用提出的 `LCED` 模型评估使用 WiFi CSI 进行人体活动识别时个体的性能。此外，我们还利用三种方法：`KNN`、`SVM`、`sRNN` 作为对比方法与提出的 `LCED` 进行比较。Table 3 显示了使用 `KNN` 时 `Volunteer` 2 的 16 项活动的性能。我们以 `Antenna_A` 为例，分析 16 项活动在 `Precision`、`Recall` 和 `F1-score` 方面的识别性能。`Precision` 是被预测为某项活动的所有样本中正确样本的数量。`Recall` 表示某项活动的 30 个样本中正确样本的数量。`Activity` 1 的 `Precision` 为 1.00，`Recall` 为 0.83。以上两个指标表明，`Activity` 1 的若干样本被误识别为其他活动。`Activity` 3、`Activity` 4、`Activity` 12、`Activity` 13 和 `Activity` 15 的识别准确率达到 100%。然而，仅 `Activity` 4、`Activity` 13 和 `Activity` 15 在使用同一志愿者的 `Antenna_B` 活动数据时仍能达到 100% 的识别准确率。结合两个天线在人体活动识别上的结果，使用 `KNN` 的 16 项活动的平均准确率达到 80%，除 `Activity` 5 和 `Activity` 8 因数据质量低而除外。总之，`KNN` 可以在简单的室内环境中利用 WiFi 信号大致检测和识别日常活动。
 
@@ -1862,6 +1703,8 @@ LSTMs 可以通过设计遗忘门、输入门和输出门来避免梯度爆炸�
 
 **Figure 9:** Performance analysis of four algorithms. `VIA` is the accuracy of `Volunteer` 1’s activity data on `Antenna_A`. `V1M` denotes the average accuracy of `Volunteer` 1’s activity data on three antennas (`Antenna_A`, `Antenna_B`, `Antenna_C`). `V1STD` is the standard deviation of `Volunteer` 1 ‘s activity data on three antennas.
 
+
+
 我们随机选择三个志愿者的活动数据作为分析对象，以估计三个天线对四种识别算法下活动性能的影响。实验结果如图 Figure 9 所示。根据使用 `KNN` 的三个志愿者的识别准确率比较，`Volunteer` 2 达到平均 90% 的准确率，`Volunteer` 3 显示出高达 80% 的识别准确率。最差的准确率是平均 77% 的 `Volunteer` 1。`Volunteer` 1 和 `Volunteer` 2 的 `Antenna_A` 在活动识别准确率上比其他天线高出 5%。使用 `KNN` 时，`Volunteer` 3 在识别准确率上的稳定性优于 `Volunteer` 1 和 `Volunteer` 3。虽然使用 `SVM`、`RNN` 时 `Volunteer` 1 的准确率仍低于其他两个个体，但其在三个天线上识别准确率的平均稳定性高于其他两个个体。与 `KNN`、`SVM` 和 `RNN` 相比，使用提出的 `LCED` 模型进行活动识别的准确率平均提高了 10%。此外，三个志愿者在人体活动识别准确率上的平均稳定性优于其他三种算法。总之，所提出的 `LCED` 实现的重要性能不仅减少了三个天线上识别准确率的差异，还增强了活动识别对个体的鲁棒性。
 
 我们关注个体使用 WiFi 信号进行人体活动识别时各天线的平均差异。Figure 10 显示了在四种识别算法下七个志愿者的各天线性能差异。我们以七个个体的 `Antenna_As` 为例分析其性能。七个志愿者在 `Volunteer_A` 上的平均准确率优于 `Antenna_B` 和 `Antenna_C`，除 `LCED` 的结果外。然而，根据 `VASTD`，`Antenna_A` 的稳定性低于其他两个天线。换句话说，七个志愿者在 `Antenna_A` 上的识别准确率差异巨大。三个天线分别具有高达 80% 平均准确率的稳定准确率，使用 `LCED` 模型可达高达 95% 的准确率。`KNN`、`SVM` 和 `RNN` 三个天线的标准差小于 0.1。与以上相比，使用 `LCED` 模型的 `Antenna_B` 和 `Antenna_C` 的标准差小于 0.01。
@@ -1876,11 +1719,7 @@ LSTMs 可以通过设计遗忘门、输入门和输出门来避免梯度爆炸�
 
 **Figure 11:** Performance analysis of individuals. `VA` is the accuracy of a `Antenna_A`; `VM` is the average accuracy of three antennas; `VSTD` is the standard deviation of three antennas.
 
-##### 6.2 不同距离的性能
-
-
-
-
+## 6.2 不同距离的性能
 
 不同发射器与接收器之间的距离对人体活动产生的反射信号有重要影响，并直接影响室内环境中人体活动识别的准确性。我们使用提出的 `LCED` 模型研究三种距离水平对人体活动识别的影响。我们首先讨论为何选择 `1 m`、`3 m`、`6 m` 作为检验距离。正如我们所知，使用商用无线路由器的 `WiFi` 信号通信距离小于 `15 m`，而具有满意精度的感知距离小于 `5 m`。一旦发生干扰或在复杂的室内环境中，感知距离小于 `3 m`。Figure 12 显示了三种距离对人体活动识别的准确性差异。使用 `KNN` 在 `1 m` 获得的人体活动识别准确率优于另外两种距离，且在 `80%` 至 `90%` 之间。`SVM` 和 `LCED` 降低了距离对人体活动识别的影响。三种距离的准确率差异对 `SVM` 小于 `0.5%`，对 `LCED` 为 `0.8%`。与 `KNN`、`SVM` 和 `RNN` 算法相比，尽管提出的 `LCED` 模型没有最佳性能，但在活动识别中三个天线的准确率稳定性最好，与 `SVM` 相同。该性能指标是评估提出的 `LCED` 模型在实际室内环境中适用性的重要因素。
 
@@ -1890,7 +1729,7 @@ LSTMs 可以通过设计遗忘门、输入门和输出门来避免梯度爆炸�
 
 与另外两种距离的准确率相比，在 `SVM` 和 `LCED` 下，`6 m` 距离的活动识别准确率最佳，这一结果与常识持有的先前观点相矛盾。我们讨论实验结果中出现的有趣问题。该问题是使用商品化无线设备进行 `WiFi` 基于人体活动识别的感知距离的限制。从 Fig. 12 所示的结果来看，`6 m` 的距离尚未达到感知距离的极限 [46, 71]。因此，后续研究将探索该问题。
 
-###### 6.2.1 Performance of different heights
+### 6.2.1 Performance of different heights
 
 我们收集三个高度的活动数据，以评估使用提出的 `LCED` 模型时高度对人体活动识别的影响。我们首先解释为何分别选择 `60 cm`、`90 cm`、`120 cm` 的高度作为评估标准。`60 cm` 的高度对应下半身，用于捕捉下半身活动如侧踢。`90 cm` 对应躯干部分，用于感知全身活动如跑步。`120 cm` 的高度对应上半身活动，用于识别手势如挥手。Figure 13 显示了使用四种算法的三种高度对人体活动识别的准确率。`KNN`、`SVM`、`RNN` 的结果均低于 `80%`，原因是活动数据质量低。原因源于非标准活动造成的额外干扰。提出的 `LCED` 模型可以抵消额外干扰对活动识别的消极影响，并实现平均准确率 `98.5%`。与另外两种高度的准确率相比，`120 cm` 的活动识别准确率最佳。根据对三种高度的人体活动识别准确率分析，我们观察到提出的 `LCED` 模型不仅可以抵消低质量活动数据的消极影响，还能保持不同高度下准确率的高稳定性。
 
@@ -1934,81 +1773,121 @@ LSTMs 可以通过设计遗忘门、输入门和输出门来避免梯度爆炸�
 
 15. Y. Zeng, D. Wu, R. Gao, T. Gu, and D. Zhang, “Full Breathe: Full human respiration detection exploiting complementarity of CSI phase and amplitude of WiFi signals,” in *Proc. ACM Interact. Mob. Wearable Ubiquitous Technol*., 2018, pp. 148:1–148:19.
 
-
-
-
 16.Y. Wang, J. Liu, Y. Chen, M. Gruteser, J. Yang, and H. Liu, “E-eyes: Device-free location-oriented activity identification using fine-grained WiFi signatures,” in *Proc. ACM Mobicom*., 2014.
+
 17.X. Zheng, J. Wang, L. Shangguan, Z. Zhou, and Y. Liu, “Smokey: Ubiquitous smoking detection with commerical WiFi infrastructures,” in *Proc. IEEE INFOCOM*., 2016.
+
 18.W. Wang, A. X. Liu, M. Shahzad, K. Ling, and S. Lu, “Understanding and modeling of WiFi signal based human activity recognition,” in *Proc. ACM MobiCom*., 2015.
+
 19.L. Guo, L. Wang, J. Liu, W. Zhou, and B. Lu, “HuAc: Human activity recognition using crowdsourced WiFi signals and skeleton data,” *Wireless Commun. Mobile Comput*., 2018.
+
 20.J. Wang, X. Zhang, X. M. Qinhua Gao, X. Feng, and H. Wang, “Device-free simultaneous wireless localization and activity recognition with wavelet feature,” *IEEE Trans. Vehi. Technol*., vol. 66, no. 2, pp. 1659–1669, 2017.
+
 21.J. Wang, X. Zhang, Q. Gao, H. Yue, and H. Wang, “Device-free wireless localization and activity recognition: A deep learning approach,” *IEEE Trans. Vehi. Technol*., vol. 66, no. 7, pp. 6258–6267, 2017.
+
 22.H. Zou, J. Yang, Y. Zhou, L. Xie, and C. J. Spanos, “Robust WiFi-enabled device-free gesture recognition via unsupervised adversarial domain adaption,” in *Proc. IEEE ICCCN*, 2018, pp. 1–8.
+
 23.Z. Chen, L. Zhang, C. Jiang, and W. Cui, “WiFi CSI based passive human activity recognition using attention based BLSTM,” *IEEE Trans. Mobile Comput*., 2018.
+
 24.B. Wei, W. Hu, M. Yang, and C. T. Chou, “Radio-based device-free activity recognition with radio frequency interference,” in *Proc. ACM IPSN*, 2015.
+
 25.W. Jiang, C. Miao, S. Y. Fenglong Ma, Y. Wang, Y. Yuan, H. Xue, C. Song, D. K. Xin Ma, W. Xu, and L. Su., “Towards environment independent device free human activity recognition,” in *Proc. ACM MobiCom*. 2018, pp. 1–16.
+
 26.C. Shi, J. Liu, H. Liu, and Y. Chen, “Smart user authentication through actuation of daily activities leveraging WiFi-enabled iot,” in *Proc. ACM Mobihoc*., 2017.
+
+
+
+# 参考文献
+
 27.C. Hsu, A. Ahuja, S. Yue, R. Hristov, Z. Kabelac, and D. Katabi, “Zero-effort in-home sleep and insomnia monitoring using radio signals,” in *Proc. ACM UbiComp*., 2017.
+
 28.M. Zhao, S. Yue, D. Katabi, T. S. Jaakkola, and M. T. Bianchi, “Learning sleep stages from radio signals: A conditional adversarial architecture,” in *Proc. IEEE ICML*, 2017.
+
 29.F. Zhang, K. Niu, J. Xiong, B. Jin, T. Gu, Y. Jiang, and D. Zhang, “Towards a diffraction-based sensing approach on human activity recognition,” in *Proc. ACM Interact. Mob. Wearable Ubiquitous Technol*. 2019, pp. 33–57.
+
 30.H. Wang, D. Zhang, Y. Wang, J. Ma, Y. Wang, and S. Li, “RT-Fall: A real-time and contactless fall detection system with commodity WiFi devices,” *IEEE Trans. Mobile Comput*., vol. 16, no. 2, pp. 511–526, 2017.
+
 31.F. Wang, Y. Song, J. Zhang, J. Han, and D. Huang, “Temporal Unet: Sample level human action recognition using WiFi,” in *Proc. arXiv*, 2019, pp. 1–14.
+
 32.F. Wang, J. Feng, Y. Zhao, X. Zhang, S. Zhang, and J. Han, “Joint activity recognition and indoor localization with WiFi fingerprints,” in *Proc. arXiv*, 2019, pp. 1–10.
+
 33.J. Liu, Y. Wang, Y. Chen, J. Yang, X. Chen, and J. Cheng, “Tracking vital signs during sleep leveraging off-the-shelf WiFi,” in *Proc. ACM MobiHoc*. 2015.
+
 34.K. Qian, Z. Zhou, Y. Zheng, Z. Yang, and Y. Liu, “Inferring motion direction using commodity WiFi for interactive exergames,” in *Proc. ACM CHI*, 2017.
+
 35.D. Z. Dan Wu, C. Xu, Y. Wang, and H. Wang, “WiDir: Walking direction estimation using wireless signals,” in *Proc. ACM UBICOMP*. 2016, pp. 351–362.
+
 36.B. Fang, N. D. Lane, M. Zhang, A. Boran, and F. Kawsar, “BodyScan: Enabling radio-based sensing on wearable devices for contactless activity and vital sign monitoring,” in *Proc. IEEE MobiSys*., 2016.
+
 37.S. Tan and J. Yang, “WiFinger: Leveraging commodity WiFi for fine-grained finger gesture recognition,” in *Proc. ACM MobiHoc*. 2016, pp. 201–210.
+
 38.A. Virmani and M. Shahzad, “Position and orientation agnostic gesture recognition using WiFi,” in *Proc. ACM MobiSys*. 2017, pp. 252–264.
+
 39.Y. Zheng, “Zero-effort cross-domain gesture recognition with Wi-Fi,” in *Proc. ACM Mobisys*, 2019, pp. 1–13.
+
 40.H. Zou, J. Yang, Y. Zhou, and C. J. Spanos, “Joint adversarial domain adaptation for resilient WiFi-enabled device-free gesture recognition,” in *Proc. IEEE ICMLA*, 2018, pp. 202–207.
+
 41.G. Wang, Y. Zou, Z. Zhou, K. Wu, and L. M. Ni, “We can hear you with WiFi!” in *Proc. ACM MobiCom*., 2014.
+
 42.K. Ali, A. X. Liu, W. Wang, and M. Shahzad, “Keystroke recognition using WiFi signals,” in *Proc. ACM MobiCom*, 2015.
+
 43.C. Humang, H. Chen, L. Yang, and D. Zhang, “Breathlive: Liveness detection for heart sound authentication with deep breathing,” in *Proc. ACM Interact. Mob. Wearable Ubiquitous Technol*., 2018, pp. 12:1–12:25.
+
 44.M. Zhao, F. Adib, and D. Katabi, “Emotion recognition using wireless signals,” in *Proc. ACM MobiCom*. 2016, pp. 1–14.
+
 45.F. Zhang, D. Zhang, J. Xiong, H. Wang, K. Niu, B. Jin, and Y. Wang, “From fresnel diffraction model to fine-grained human respiration sensing with commodity WiFi devices,” in *Proc. ACM Interact. Mob. Wearable Ubiquitous Technol*. 2018, pp. 53:1–53:23.
+
 46.Y. Zeng, D. Wu, J. Xiong, E. Yi, R. Gao, and D. Zhang, “FarSense: Pushing the range limit of WiFi-based respiration sensing with CSI ratio of two antennas,” in *Proc. ACM UbiComp*, 2019.
+
 47.X. Li, D. Zhang, J. Xiong, Y. Zhang, S. Li, Y. Wang, and H. Mei, “Training-free human vitality monitoring using commodity WiFi devices,” in *Proc. ACM Interact. Mob. Wearable Ubiquitous Technol*. 2018, pp. 121:1–121:25.
+
 48.J. Liu, Y. W. Yingying Chen, X. Chen, and J. Yang, “Monitoring vital signs and posture during sleep using wiFi signals,” *IEEE Int. Things J*. vol. 5, no. 3, pp.2071–2084, 2018.
+
 49.H. Zou, Y. Zhou, J. Yang, W. Gu, L. Xie, and C. J. Spanos, “WiFi-based human identification via convex tensor shapelet learning,” in *Proc. ACM AAAI*, 2018, pp. 1711–1718.
+
 50.T. Li, L. Fan, M. Zhao, Y. Liu, and D. Katabi, “Making the invisible visible: Action recognition through walls and occlusions,” *CoRR*, vol. abs/1909.09300, 2019. \[Online\]. Available: `https://arxiv.org/abs/1909.09300`
+
 51.K. Ohara, T. Maekawa, and Y. Matsushita, “Detecting state changes of indoor everyday objects using WiFi,” in *Proc. ACM Interact. Mob. Wearable Ubiquitous Technol*. 2017, pp. 88:1–88:28.
+
 52.A. Akbari and R. Jafari, “Transferring activity recognition models for new wearable sensors with deep generative domain adaptation,” in *Proc. ACM IPSN*, 2019, p. 85:96.
+
 53.Y. Ma, G. Zhou, and S. Wang, “WiFi sensing with channel state information: A survey,” *ACM Comput. Surv*. vol. abs/1506.00019, pp. 46:1–46:36, 2019. \[Online\]. Available: `https://doi.org/10.1145/3310194`
+
 54.M. Zhao, T. Li, M. A. Alsheikh, Y. Tian, H. Zhao, A. Torralba, and D. Katabi, “Through-wall human pose estimation using radio signals,” in *Proc. ACM CVPR*. ACM, 2018, pp. 7356–7365.
+
 55.X. Wang, X. Wang, and S. Mao, “RF Sensing in the internet of things: A general deep learning framework,” *IEEE Comm. Mag*., pp. 62–67, 2018.
+
 56.K. Niu, “Boosting fine-grained activity sensing by embracing wireless multipath effects,” in *Proc. ACM CoNEXT*, 2018, pp. 1–13.
 
+57.D. Halperin, W. Hu, A. Sheth, and D. Wetherall, “Tool release: Gathering 802.11n traces with channel state information,” *Proc. ACM SIGCOMM CCR*, vol. 41, no. 1, 2011.
+
+58.K. Jarrett, K. Kavukcuoglu, M. Ranzato, and Y. LeCun, “What is the best multistage architecture for object recognition?” in *IEEE 12th Int. Conf. Computer Vision*, 2009, pp. 2146–2153.
+
+59.A. Khan and A. S. Q. Anabia Sohail, and U. Zahoora, “A survey of the recent architectures of deep convolutional neural networks,” *CoRR*, 2019. \[Online\]. Available: [`arxiv.org/abs/1901.06032`](http://arxiv.org/abs/1901.06032)
+
+60.Y. LeCun, K. Kavukcuoglu, and C. Farabet, “Convolutional networks and applications in vision,” in *Proc. 2010 IEEE Int. Symp. Circuits and Systems*, 2010, pp. 253–256.
+
+61.D. Scherer, A. Müller, and S. Behnke, “Evaluation of pooling operations in convolutional architectures for object recognition,” in K. Dia-mantaras, W. Duch, and L. S. Iliadis *Artificial Neural Networks — ICANN 2010*, Springer Berlin Heidelberg, 2010, pp. 92–101.
+
+62.A. Qaisar, I. M. E.A, and J. M. Arfan, “A comprehensive review of recent advances on deep vision systems,” *Artif. Intell. Rev*., vol. 52, pp. 39–76, 2019.
+
+63.C.-Y. Lee, P. W. Gallagher, and Z. Tu, “Generalizing pooling functions in convolutional neural networks: Mixed, gated, and tree,” in *Art. Intel. Stat*., 2016, pp. 464–472.
+
+64.Z. C. Lipton and J. Berkowitz, “A critical review of recurrent neural networks for sequence learning,” *CoRR*, vol. abs/1506.00019, 2015. \[Online\]. Available: [`arxiv.org/abs/1506.00019`](http://arxiv.org/abs/1506.00019)
+
+65.C. Olah, “Understanding LSTM networks,” [`colah.github.io/posts/2015-08-Understanding-LSTMs/`](https://colah.github.io/posts/2015-08-Understanding-LSTMs/), 2015.
+
+66.L. Guo, H. Zhang, C. Wang, W. Guo, L. Wang, and C. Lin, “Towards diversity activity recognition via LSTM-CNN encoder-decoder neural network,” in *Proc. ACM IJCAI Workshop*, 2019, pp. 1–8.
+
+67.H. Zou, Y. Zhou, J. Yang, H. Jiang, L. Xie, and C. J. Spanos, “DeepSense: Device-free human activity recognition via autoencoder long-term recurrent convolutional network,” in *IEEE Int. Conf. Commun. (ICC)*, 2018, pp. 1–6.
+
+68.J. Gu, Z. Wang, J. Kuen, L. Ma, A. Shahroudy, S. Bing, T. Liu, X. Wang, and W. Gang, “Recent advances in convolutional neural networks,” *Computer Science*, 2015.
+
+69.S. Ioffe and C. Szegedy, “Batch normalization: Accelerating deep network training by reducing internal covariate shift,” in *Int. Conf. Machine Learning*, 2015.
+
+70.D. Halperin, W. Hu, A. Sheth, and D. Wetherall, “Linux 802.11n CSI Tool,” [`dhalperi.github.io/linux-80211n-csitool/`](http://dhalperi.github.io/linux-80211n-csitool/), 2010.
 
 
-
-57. D. Halperin, W. Hu, A. Sheth, and D. Wetherall, “Tool release: Gathering 802.11n traces with channel state information,” *Proc. ACM SIGCOMM CCR*, vol. 41, no. 1, 2011.
-
-58. K. Jarrett, K. Kavukcuoglu, M. Ranzato, and Y. LeCun, “What is the best multistage architecture for object recognition?” in *IEEE 12th Int. Conf. Computer Vision*, 2009, pp. 2146–2153.
-
-59. A. Khan and A. S. Q. Anabia Sohail, and U. Zahoora, “A survey of the recent architectures of deep convolutional neural networks,” *CoRR*, 2019. \[Online\]. Available: [`arxiv.org/abs/1901.06032`](http://arxiv.org/abs/1901.06032)
-
-60. Y. LeCun, K. Kavukcuoglu, and C. Farabet, “Convolutional networks and applications in vision,” in *Proc. 2010 IEEE Int. Symp. Circuits and Systems*, 2010, pp. 253–256.
-
-61. D. Scherer, A. Müller, and S. Behnke, “Evaluation of pooling operations in convolutional architectures for object recognition,” in K. Dia-mantaras, W. Duch, and L. S. Iliadis *Artificial Neural Networks — ICANN 2010*, Springer Berlin Heidelberg, 2010, pp. 92–101.
-
-62. A. Qaisar, I. M. E.A, and J. M. Arfan, “A comprehensive review of recent advances on deep vision systems,” *Artif. Intell. Rev*., vol. 52, pp. 39–76, 2019.
-
-63. C.-Y. Lee, P. W. Gallagher, and Z. Tu, “Generalizing pooling functions in convolutional neural networks: Mixed, gated, and tree,” in *Art. Intel. Stat*., 2016, pp. 464–472.
-
-64. Z. C. Lipton and J. Berkowitz, “A critical review of recurrent neural networks for sequence learning,” *CoRR*, vol. abs/1506.00019, 2015. \[Online\]. Available: [`arxiv.org/abs/1506.00019`](http://arxiv.org/abs/1506.00019)
-
-65. C. Olah, “Understanding LSTM networks,” [`colah.github.io/posts/2015-08-Understanding-LSTMs/`](https://colah.github.io/posts/2015-08-Understanding-LSTMs/), 2015.
-
-66. L. Guo, H. Zhang, C. Wang, W. Guo, L. Wang, and C. Lin, “Towards diversity activity recognition via LSTM-CNN encoder-decoder neural network,” in *Proc. ACM IJCAI Workshop*, 2019, pp. 1–8.
-
-67. H. Zou, Y. Zhou, J. Yang, H. Jiang, L. Xie, and C. J. Spanos, “DeepSense: Device-free human activity recognition via autoencoder long-term recurrent convolutional network,” in *IEEE Int. Conf. Commun. (ICC)*, 2018, pp. 1–6.
-
-68. J. Gu, Z. Wang, J. Kuen, L. Ma, A. Shahroudy, S. Bing, T. Liu, X. Wang, and W. Gang, “Recent advances in convolutional neural networks,” *Computer Science*, 2015.
-
-69. S. Ioffe and C. Szegedy, “Batch normalization: Accelerating deep network training by reducing internal covariate shift,” in *Int. Conf. Machine Learning*, 2015.
-
-70. D. Halperin, W. Hu, A. Sheth, and D. Wetherall, “Linux 802.11n CSI Tool,” [`dhalperi.github.io/linux-80211n-csitool/`](http://dhalperi.github.io/linux-80211n-csitool/), 2010.
 
 71. L. Chen, X. Chen, S. I. Lee, K. Chen, D. Han, D. Fang, Z. Tang, and Z. Wang, “WIDESEE: Towards wide-area contactless wireless sensing,” in *Proc. ACM SenSys*., 2019.
 
@@ -2048,13 +1927,10 @@ Weixin Luo^(\*,†,‡,§), Wen Liu^(\*,†,‡,¶) and Shenghua Gao^(\*,||)
 
 然而，这些先前的方法大多将整幅图像作为输入，这意味着在建模正常分布时无关的背景也会被包含在内。因此，由于光照和背景中无关的移动物体，在异常检测过程中可能会引入一些假阳性。此外，为了记忆这些复杂的背景，模型的负担会增加，而不是专注于建模前景对象的正常分布。综上所述，设计一些机制使模型仅关注前景对象例如人类是可取的，因为大多数异常都是由人类引起的。为了具体表征人类模式，可以利用基于骨架的动作识别以及使用 RNN [4, 5] 或时序 CNN [6, 7]。而这些提出的网络偏爱图像级数据，骨架则以坐标形式呈现。最近，图卷积网络 GCNs 被提出用于处理此类非网格数据，通过引入基于图的亲和矩阵。一些研究者采用这种强大的工具进行基于骨架的动作识别。然而，GCNs 在视频异常检测方面尚未得到充分研究。
 
-
-
-
-
 在本章中，我们介绍了一种基于时空图卷积网络的预测网络，用于基于骨架的视频异常检测。具体而言，采用了时空图卷积网络（`ST-GCNs`）[8]来自动捕捉空间构型和时序动态方面的正常模式。在该图中，节点为人体的关节，边为这些关节的空间和时序连接。对于空间连接，我们遵循配置[8]，该配置将关节物理连接起来。至于时序连接，它将关节跨时间连接起来。空间图卷积首先用于在空间上传播信息，然后是时序卷积融合时间上的信息。然后，附加一个全连接层来预测未来的关节。最后，我们基于关节的预测误差进行视频异常检测，其中较大的误差表示异常。
 
 #### 1.1 Contributions
+
 我们总结我们的贡献如下：（i）我们提出了一种基于时空图卷积网络的预测网络，用于基于骨架的视频异常检测，其中它有效地从人体关节中探索正常模式，通过空间图网络和时序网络分别在空间和时间上连接关节。据我们所知，这是首次将 `GCNs` 应用于视频异常检测的工作；（ii）我们提出的方法在 `ShanghaiTech-Campus` 和 `CUHK Avenue` 上取得了最先进的性能。
 
 本章其余部分组织如下：在 Section 2 中，我们介绍了视频异常检测、基于骨架的动作识别和图神经网络的相关工作。在 Section 3 中，我们介绍了用于基于骨架的视频异常检测的基于时空图卷积网络的预测网络。在 Section 4 中，我们进行了包括消融研究和可视化在内的广泛实验，以验证我们方法有效性。在 Section 5 中，我们总结了我们的工作。
@@ -2062,6 +1938,7 @@ Weixin Luo^(\*,†,‡,§), Wen Liu^(\*,†,‡,¶) and Shenghua Gao^(\*,||)
 ### 2. Related Work
 
 #### 2.1 Video anomaly detection
+
 该任务的一般设置是在训练集中仅提供正常数据，而测试集包含待检测的正常和异常事件。在此设置下，我们将之前的工作分为三类：（i）基于手工特征的视频异常检测；（ii）基于稀疏编码的视频异常检测；（iii）基于深度学习的视频异常检测。
 
 (1) `Handcrafted feature-based methods:` 之前的工作[9]通常利用轨迹等低级模式来进行视频异常检测，而由于背景复杂，它对人群场景并不鲁棒。然后，研究人员采用两种鲁棒特征，即方向梯度直方图（`HOG`）[10]和光流直方图（`HOF`）[11]来处理此类问题。例如，Adam *et al*. [12]利用指数分布对局部光流特征建模正常分布。此外，Kim *et al*. [13]使用概率主成分分析混合模型。此外，一类 SVM 直观上适用于该任务，可归纳为单类分类。然而，这些先前的方法由于这些次优的手工特征和分类器，对于大规模视频异常检测数据集并不最优。
@@ -2071,13 +1948,10 @@ Weixin Luo^(\*,†,‡,§), Wen Liu^(\*,†,‡,¶) and Shenghua Gao^(\*,||)
 (3) `Deep learning-based methods:` 对于基于深度学习的方法，通常采用基于编码器-解码器的重构或预测网络来建模正常分布，其中异常事件将被重构或预测出较大误差。更具体地说，Xu *et al*. [34]提出了外观和运动深度网络（`AMDN`）利用深度神经网络自动学习特征表示。Hasan *et al*. [1]将多个连续帧堆叠在通道中并输入卷积自编码器（`AE`）以重构输入。考虑到视频的时序依赖性，研究人员[3, 18]利用 `ConvLSTM` 形成 `ConvLSTM-AE`，这是一种运动和外观的解耦。此外，Liu *et al*. [2]明确设计了在外观和运动约束方面的预测网络用于视频异常检测。
 
 #### 2.2 Skeleton-based action recognition
+
 大多数动作都是由人类完成的，这意味着人类的骨架显然是动作识别的线索。此外，骨架分析可以降低动作识别的复杂性，其中人体姿态估计已被深入研究[19, 20]。从图像中提取人体姿态后，分析姿态的方法可分为两类，即基于手工特征的方法和基于深度学习的方法。前者通常利用关节的协方差矩阵[21]、部件的旋转或平移[22]以及关节的相对位置[23]。后者使用 `RNN` [4, 5]或时序 `CNN` [6, 7]。此外，Yan *et al*. [8]利用时空图卷积网络（`ST-GCN`）进行基于骨架的动作识别。基于这项工作，我们引入了基于 `ST-GCN` 的预测网络用于基于骨架的视频异常检测。最近，一项相关工作[24]也采用了重构和预测网络用于基于骨架的视频异常检测，其中跨时间的骨架可以分为两个组件，例如，表示全局身体运动的全局坐标和表示局部身体姿势的局部坐标。进一步，使用消息传递编码器-解码器循环神经网络（`MPED-RNN`）来探索这两种表示的组合以提高性能。然而，它需要模型正则化，即寻找仍在高容量网络初始验证损失 5% 范围内的最小容量网络。我们认为这样高容量的网络对于低维度的骨架表示来说过于复杂。因此，寻求最小容量网络的这种补救措施将是次优的。应该注意的是，我们提出的方法将此任务作为空间和时间上骨架图连接的正常分布建模，这与 `MPED-RNN` 有显著不同。
 
 #### 2.3 Graph neural networks
-
-
-
-
 
 图神经网络的视角可以从两个方面来解释，即谱视角 [25–28] 和空间视角 [29, 30]。前者从谱的角度考虑图卷积，而后者仅在节点的邻域上应用一维卷积。此外，Si *et al*. [31] 引入了一种注意力增强的图卷积 LSTM 网络用于基于骨架的动作识别。
 
@@ -2135,25 +2009,23 @@ Weixin Luo^(\*,†,‡,§), Wen Liu^(\*,†,‡,¶) and Shenghua Gao^(\*,||)
 
 ## 4.Experiment
 
-
-
-
-
 我们的方法在两个公开的视频异常检测数据集上进行了评估，即上海科技大学 [17] 和 CUHK Avenue [16]。我们将我们提出的 Normal Graph 与利用 RNN 预测未来关节并重建当前关节的 MPED-RNN [24] 进行比较。所有实验均在帧级 AUC 指标上进行评估。
 
 ### 4.1 数据集
 
 **上海科技大学数据集** [17] 是一个新的大规模异常检测数据集，记录于校园内的多个地点。该数据集中定义的异常可由人类和车辆引起。之前的工作 [24] 从上海科技大学中划分出一个仅包含与人类相关异常的子集，命名为 HR-ShanghaiTech，将在本文中使用。我们也在该子集上评估我们的方法。
 
+
+
 **CUHK Avenue 数据集** [16] 也是一个流行的异常检测数据集，记录于地铁的一个单一视角。我们也提取其中与人类相关的异常并命名为 HR-Avenue。
 
 ### 4.2 实现细节
 
-我们利用 Alpha-Pose [19] 为视频中的每一帧提取骨架。我们遵循参考文献 [24] 中使用的跟踪算法，该算法将稀疏光流与骨架相结合。对于 ST-GCN 的配置，我们遵循参考文献 [8] 中的设置，由 9 个 ST-GCN 层组成。前三层、接下来的三层和最后三层分别具有 64、128 和 256 个通道。Resnet 机制应用于每个 ST-GCN。
+我们利用 `Alpha-Pose` [19] 为视频中的每一帧提取骨架。我们遵循参考文献 [24] 中使用的跟踪算法，该算法将稀疏光流与骨架相结合。对于 `ST-GCN` 的配置，我们遵循参考文献 [8] 中的设置，由 9 个 `ST-GCN` 层组成。前三层、接下来的三层和最后三层分别具有 64、128 和 256 个通道。`Resnet` 机制应用于每个 `ST-GCN`。
 
 ### 4.3 与最先进方法的比较
 
-在本节中，我们将 Normal Graph 与基于外观的方法 [1, 2, 17, 32] 以及基于骨架的方法 [24] 进行比较。图 Table 1 所示的结果表明，基于骨架的方法在 AUC 上优于基于外观的方法，尤其是在 HR-ShanghaiTech 数据集上，其中异常仅与人类相关。我们认为基于外观的方法会在重建 [1, 17] 或预测 [2] 过程中引入背景噪声。此外，我们的方法优于使用 RNN 建模骨架关系的 MPED-RNN，而我们的方法利用时空图卷积网络在图上建模关系。总之，我们提出的方法在上海科技大学 (ST)、HR-ShanghaiTech (HR-ST) 和 CUHK Avenue 上实现了最先进的 AUC 和 EER，这证明了我们方法的有效性。
+在本节中，我们将 `Normal Graph` 与基于外观的方法 [1, 2, 17, 32] 以及基于骨架的方法 [24] 进行比较。图 Table 1 所示的结果表明，基于骨架的方法在 `AUC` 上优于基于外观的方法，尤其是在 `HR-ShanghaiTech` 数据集上，其中异常仅与人类相关。我们认为基于外观的方法会在重建 [1, 17] 或预测 [2] 过程中引入背景噪声。此外，我们的方法优于使用 `RNN` 建模骨架关系的 `MPED-RNN`，而我们的方法利用时空图卷积网络在图上建模关系。总之，我们提出的方法在上海科技大学 (`ST`)、`HR-ShanghaiTech` (`HR-ST`) 和 `CUHK Avenue` 上实现了最先进的 `AUC` 和 `EER`，这证明了我们方法的有效性。
 
 **Table 1:** The performance of different baselines on ShanghaiTech (ST), Human-Related ShanghaiTech (HR-ST) and CUHK HR-Avenue.
 
@@ -2161,11 +2033,11 @@ Weixin Luo^(\*,†,‡,§), Wen Liu^(\*,†,‡,¶) and Shenghua Gao^(\*,||)
 
 ### 4.4 ST-GCN 的数量
 
-我们进一步对 ST-GCN 的数量进行消融研究，以探索 ST-GCN 的机制。9 个 ST-GCN 的输出通道设置为 64、64、64、64、128、128、128、256、256，分别。ST-GCN 的数量逐渐增加，并且始终使用全连接层进行预测。如 Fig. 3 所示，随着 ST-GCN 数量的增加，CUHK Avenue 数据集上的性能逐渐提高。尤其是，当 ST-GCN 的数量为 9 时，在 CUHK Avenue 数据集上达到最佳性能。我们假设更深的 ST-GCN 模型会造成优化困难，其中一些工作 [33] 提出了残差机制来增加 GCN 的层数，这超出了本文的范围。
+我们进一步对 `ST-GCN` 的数量进行消融研究，以探索 `ST-GCN` 的机制。9 个 `ST-GCN` 的输出通道设置为 64、64、64、64、128、128、128、256、256，分别。`ST-GCN` 的数量逐渐增加，并且始终使用全连接层进行预测。如 Fig. 3 所示，随着 `ST-GCN` 数量的增加，`CUHK Avenue` 数据集上的性能逐渐提高。尤其是，当 `ST-GCN` 的数量为 9 时，在 `CUHK Avenue` 数据集上达到最佳性能。我们假设更深的 `ST-GCN` 模型会造成优化困难，其中一些工作 [33] 提出了残差机制来增加 `GCN` 的层数，这超出了本文的范围。
 
 ### 4.5 ST-GCN 的有效性
 
-为了进一步研究我们提出方法的有效性，我们引入了一个仅包含 9 个全连接层的基线，以及另一个仅包含空间 GCN 的基线。为了公平比较，9 个全连接层的维度与 9 个基于 ST-GCN 的 Normal Graph 相同。如 Table 2 所示，仅堆叠几个全连接层会导致性能急剧下降。这证明全连接层无法显式表征人体关节的时空关系，而 GCN 能够通过特定的邻接矩阵对这种复杂关系进行建模。此外，仅具有空间连接而没有时间连接的 GCN 无法很好地表征跨时间的关系，导致性能略有下降。
+为了进一步研究我们提出方法的有效性，我们引入了一个仅包含 9 个全连接层的基线，以及另一个仅包含空间 `GCN` 的基线。为了公平比较，9 个全连接层的维度与 9 个基于 `ST-GCN` 的 `Normal Graph` 相同。如 Table 2 所示，仅堆叠几个全连接层会导致性能急剧下降。这证明全连接层无法显式表征人体关节的时空关系，而 `GCN` 能够通过特定的邻接矩阵对这种复杂关系进行建模。此外，仅具有空间连接而没有时间连接的 `GCN` 无法很好地表征跨时间的关系，导致性能略有下降。
 
 ![figure](img/p149-1.jpg)
 
@@ -2174,10 +2046,15 @@ Weixin Luo^(\*,†,‡,§), Wen Liu^(\*,†,‡,¶) and Shenghua Gao^(\*,||)
 **Table 2:** The demonstration of the effectiveness of our proposed normal graph.
 
 |  || **CUHK Avenue** |
+
 | --- | --- |
+
 | 9 Fully connected layers || 0.802 |
+
 | --- | --- |
+
 | Normal Graph without temporal connection || 0.857 |
+
 | Normal Graph || 0.873 |
 
 ![figure](img/p150-1.jpg)
@@ -2186,11 +2063,11 @@ Weixin Luo^(\*,†,‡,§), Wen Liu^(\*,†,‡,¶) and Shenghua Gao^(\*,||)
 
 ### 4.6 Normal Graph 的演示
 
-为了进一步分析我们的方法，我们在 HR-ST 数据集上可视化从视频片段中分数归一化后的分数。如 Fig. 4 所示，我们提出的 Normal Graph 可以很好地检测 HR 异常。此外，我们发现失败案例通常发生在一些细微动作和遮挡场景中，这些场景无法通过关节很好地捕捉。
+为了进一步分析我们的方法，我们在 `HR-ST` 数据集上可视化从视频片段中分数归一化后的分数。如 Fig. 4 所示，我们提出的 `Normal Graph` 可以很好地检测 `HR` 异常。此外，我们发现失败案例通常发生在一些细微动作和遮挡场景中，这些场景无法通过关节很好地捕捉。
 
 ### 4.7 异常检测的可视化
 
-我们还在 HR-ST 数据集和 HR-Avenue 数据集上可视化了一些成功检测的结果，如 Figs. 5 和 6 所示。可视化显示，异常行为的行人无法在关节位置方面得到很好预测，而正常情况则预测良好。
+我们还在 `HR-ST` 数据集和 `HR-Avenue` 数据集上可视化了一些成功检测的结果，如 Figs. 5 和 6 所示。可视化显示，异常行为的行人无法在关节位置方面得到很好预测，而正常情况则预测良好。
 
 ![figure](img/p151-1.jpg)
 
@@ -2202,21 +2079,17 @@ Weixin Luo^(\*,†,‡,§), Wen Liu^(\*,†,‡,¶) and Shenghua Gao^(\*,||)
 
 ### 4.8 真阳性率和假阴性率的分析
 
-除了对 AUC 的测量外，我们还提供了在设定一定阈值 (0.5) 以确定帧是否正常或异常时，真阳性率 (TPR) 和假阳性率 (FPR) 的分析。我们在 HR-ST 数据集上进行此类实验，发现 TPR 为 0.76，FPR 为 0.37。
+除了对 `AUC` 的测量外，我们还提供了在设定一定阈值 (0.5) 以确定帧是否正常或异常时，真阳性率 (`TPR`) 和假阴性率 (`FPR`) 的分析。我们在 `HR-ST` 数据集上进行此类实验，发现 `TPR` 为 0.76，`FPR` 为 0.37。
 
 我们还发现，骑自行车的人很容易被我们提出的基于骨架的方法遗漏，因为他们看起来与行走的行人非常相似。因此，可以通过结合基于图像的解决方案和基于骨架的解决方案来处理此类问题。我们将其留待未来研究。
 
 #### 5. 结论
 
-用于视频异常检测的基于图像级重建或预测的方法可能会引入背景噪声。为了最小化背景的影响，我们通过结合多个时空图卷积网络和预测模块的基于骨架的预测网络来解决这个问题。通过仅在训练集上的正常数据上训练模型，异常事件将以骨架表示自动被发现。据我们所知，这是首次将图卷积网络应用于基于骨架的视频异常检测。实验表明，与基于图像级重建的方法、基于图像级预测的方法和基于骨架级 RNN 的方法相比，我们提出的 normal graph 实现了最先进的性能。
+用于视频异常检测的基于图像级重建或预测的方法可能会引入背景噪声。为了最小化背景的影响，我们通过结合多个时空图卷积网络和预测模块的基于骨架的预测网络来解决这个问题。通过仅在训练集上的正常数据上训练模型，异常事件将以骨架表示自动被发现。据我们所知，这是首次将图卷积网络应用于基于骨架的视频异常检测。实验表明，与基于图像级重建的方法、基于图像级预测的方法和基于骨架级 `RNN` 的方法相比，我们提出的 `normal graph` 实现了最先进的性能。
 
 ### References
 
 1.M. Hasan, J. Choi, *et al*., “Learning temporal regularity in video sequences,” in *CVPR*, 2016.
-
-
-
-
 
 2.W. Liu, W. Luo, D. Lian, and S. Gao, “用于异常检测的未来帧预测——一种新的基准，” in *CVPR*, 2018.
 
@@ -2304,17 +2177,15 @@ Gustau Camps-Valls
 
 **Abstract**
 
-机器学习，特别是深度学习（DL），对许多科学领域产生了巨大影响。在过去十年中，先进的深度学习方法被开发并广泛应用于地球数据科学问题。分类和参数检索方面的应用产生了差异：方法非常准确，能够处理大量数据并有效地处理空间和时间数据结构。然而，仍有若干重要挑战需要解决。当前标准的深度架构在无监督方式下学习有用的地球特征表示方面存在困难，并且难以处理长程依赖，因此无法捕捉空间和时间上遥远的驱动过程，并且无法有效地处理非欧几里得空间。DL 模型仍然晦涩且难以解释，而且与其他数据驱动技术一样，它们不一定学习到物理上有意义的，更重要的是因果关系。需要取得进展以应对任意信号结构和数据关系、物理合理性和可解释性。本章回顾了当前的方法并讨论了在所有这些方向上为地球科学开发新的 DL 方法的思路。
+机器学习，特别是深度学习（`DL`），对许多科学领域产生了巨大影响。在过去十年中，先进的深度学习方法被开发并广泛应用于地球数据科学问题。分类和参数检索方面的应用产生了差异：方法非常准确，能够处理大量数据并有效地处理空间和时间数据结构。然而，仍有若干重要挑战需要解决。当前标准的深度架构在无监督方式下学习有用的地球特征表示方面存在困难，并且难以处理长程依赖，因此无法捕捉空间和时间上遥远的驱动过程，并且无法有效地处理非欧几里得空间。`DL` 模型仍然晦涩且难以解释，而且与其他数据驱动技术一样，它们不一定学习到物理上有意义的，更重要的是因果关系。需要取得进展以应对任意信号结构和数据关系、物理合理性和可解释性。本章回顾了当前的方法并讨论了在所有这些方向上为地球科学开发新的 `DL` 方法的思路。
 
 **Keywords:** deep learning, learning representations, hybrid machine learning, interpretability, causality, remote sensing, geoscience, Earth system science
 
 ### 1.Introduction
 
-
-
-
-
 过去 5–10 年里，在深度学习提供的里程碑指引下，机器学习领域出现了科学和技术贡献的急剧增长 [1]。大量算法和网络架构已被理论上开发并在实践中广泛使用，其中包括众所周知的卷积神经网络 (`CNN`) [2]、具有长短期记忆 (`LSTM`) 单元的循环网络 [3]，或生成式方法如生成对抗网络 (`GANs`) [4]。深度学习的应用对自然语言处理、计算机视觉和语音识别等领域产生了巨大影响。毋庸置疑，它们现在是这些领域的最新技术，在这些领域中存在明显的空间和/或时间数据结构。
+
+
 
 在地球科学问题中的应用也在过去十年中出现，主要集中于从遥感卫星图像中解决图像分类和目标检测问题、地球系统数据立方体的时空分析以及气候科学中的极端事件检测和跟踪 [5]。Zhang *et al*. [6] 和 Zhu *et* al. [7] 已发表了一些关于卫星地球观测数据处理这一特定子领域的优秀综述。`DL` 方法现在是解决涉及大气、陆地和海洋的地球科学和气候数据问题的成功工具。深度学习在变化/异常检测、土地利用和覆盖分类 [6]、生物地球物理参数反演 [8, 9]、天气预报 [10]、极端天气检测 [11] 和 ENSO 预测 [12] 等具有挑战性的问题中取得了显著成功，仅举几个应用实例。Camps-Valls *et al*. [17] 综述了深度学习在地球科学中的最新进展。
 
@@ -2334,14 +2205,12 @@ Gustau Camps-Valls
 
 (3) **物理一致性：** 深度学习算法擅长拟合观测，但预测可能由于外推或观测偏差而在物理上不一致甚至不合理。这一问题要求整合领域（专家）知识并实现物理一致性。迫切需要教会模型地球系统的主导物理规律，并在纯观测约束之上为其提供有意义的约束。类似的讨论目前在自然语言处理的符号式 AI 模型概念周围也在进行，其中语义规则将发挥我们领域中支配物理方程的作用。
 
-
-
-
-
 #### 模型可解释性
+
 提高预测精度当然非常重要，但已证明是不够的，尤其是在地球和气候应用中，更远大且雄心勃勃的目标是通过机器学习来理解现象，以及学习协变量之间的关系和相关性。当然，可解释性和模型理解如今至关重要，包括对用户所做的结果和决策进行适当的可视化。
 
 #### 学习因果表征
+
 超越当前 `DL` 教条中单纯的拟合本身就是一个挑战。无论是在监督还是无监督的 `DL` 中，人们都从数据中学习到一个判别性且可能有用的特征表征，但网络不一定学习到所涉及协变量之间的任何因果关系。学习因果特征表征应成为优先事项，尤其是在当今需要问责制、可解释性和可解释性的时代，而在归因气候变化的原因这一相关案例中更是如此。
 
 解决这些挑战可能在地球和气候科学中带来显著差异。我们认为，`DL` 单独并不能解决所有挑战：混合式（物理感知）机器学习和因果推断将是实现从单纯曲线拟合向发现关系、原因和反事实的确定性飞跃所必需的。
@@ -2349,6 +2218,7 @@ Gustau Camps-Valls
 ### 3. 最新进展与未来方向
 
 ##### 3.1 无监督表征学习
+
 遥感、计算机视觉或自然语言处理等领域使用的是所谓的“结构化域”，其中原始数据表征具有时间性和/或空间性成分。从几何角度看，数据可以在其原始坐标中表示，但在其中进行可视化、理解和设计算法并不方便甚至不合适，主要是由于高维度和协变量之间非线性的依赖关系。这就是为什么学习数据的替代性、通常更简单且紧凑的特征表征引起了科学界的兴趣。这就是降维领域，其中既有监督也有无监督算法。
 
 在地球科学中，自编码器一直是首选方法。自编码器在遥感中的应用实际上在广泛的应用中很普遍，包括特征提取和图像分类、光谱解混、图像融合以及变化检测。最近的方法考虑了总结方差或相关性的替代标准，并探索了稀疏性。稀疏性是良好特征表征的属性之一，在实践中非常有用：稀疏表征导致更快、更紧凑且可解释的模型。诸如稀疏受限玻尔兹曼机（`RBMs`）、稀疏自编码器（`SAE`）、稀疏编码（`SC`）、预测稀疏分解（`PSD`）、稀疏滤波和正交匹配追踪（`OMP-k`）等最先进的无监督学习方法已成功用于文献中以提取稀疏特征表征。稀疏性有两个方面：群体稀疏性和生命周期稀疏性，最近 `convNets` 已成功训练以实现两者。一种名为“强制生命周期和群体稀疏性。”（`EPLS`）的无监督算法可以通过施加两种功能稀疏形式来生成“伪标签” [13]。该方法已成功应用于遥感图像的无监督学习和多传感器数据融合的简约表征。
@@ -2356,10 +2226,6 @@ Gustau Camps-Valls
 学习特定、最终高维的密度是许多机器学习问题如回归、分类或数据表征的核心。然而，`PDF` 估计问题在考虑中等和高维数据时 notoriously 困难。在深度学习社区中，三大家族的方法负责 `PDF` 估计的大部分进展：`VAEs`、生成对抗网络（`GANs`）和归一化流（`NFs`）。近年来，`GANs` 在计算机视觉和遥感应用的背景下以非常有效的方式解决了 `PDF` 估计问题 [4,18,19]。`GANs` 已被用于生成样本以改进分类算法，以及在不同卫星之间自适应现有算法。如今有大量 `GAN` 模型和架构可用，例如 `GanZoo`。虽然 `GANs` 以最先进的方式生成数据，但已提出若干扩展以限制生成的数据具有特定特征。例如，`InfoGAN` 最大化某些潜在空间特征与目标空间之间的互信息。通过这样做，我们可以控制在生成数据时施加不同的特征，同时我们可以探索特征空间。当数据具有明显的时空结构时，如地球数据科学中，特定的 `GANs` 如 `3D-GAN` 可能更合适。专门设计用于控制生成图像特征的 `GANs` 家族是条件 `GANs`（`CondGANs`）。该 `GANs` 家族根据特定特征生成样本，我们可以例如生成针对特定感兴趣类别的样本（例如，土地覆盖类型、气候带或生物群）。在 `CondGANs` 中，我们失去了潜在空间的概念，因为在这种情况下潜在空间由条件样本定义。注意这种方法比原始 `GANs` 更强大，因为我们可以控制生成何种类型的样本。然而，这种方法是有监督的，因此我们需要有标记样本。一般来说，在遥感和地球科学应用中，获取标记样本通常代价高昂。尽管 `GANs` 具有良好（且令人惊讶的）外推能力，但仍识别出一些重要注意事项，即训练阶段选择超参数的困难，以及它们的定量评估。这些问题在地球数据问题中尤其重要。
 
 `DL` 中的迁移学习概念对于遥感应用变得非常有用。存在两种主要方法：（1）从解决类似问题获得的冻结网络出发，为一个问题重新训练网络，以及（2）将网络的一部分视为特征提取器，其从一个数据问题学习到的潜在表征有助于解决另一个问题。迁移学习与域适应密切相关，即学习数据或算法的表征或变换以适应新图像采集的统计特性，这是在不断变化的自然环境中发生的常见情况。技术并不重要以揭示是否可以学习跨域表征，但在实践中，它们对于从另一个类似问题或变量中学到的知识预测类别或生物物理参数是有用的。可能的好处是训练时间更短，以及更高的准确性。该工作利用这些技术将训练用于估计温度的 `CNN` 架构迁移以估计湿度。用于域适应的无监督 `DL` 方法考虑：（1）调整内部表征以最小化网络中某一层两个域的表征之间的统计散度准则，或（2）在训练分类器之前调整输入分布以对齐源域和目标域的输入数据分布，这通常使用公共潜在表征（如自编码器）或使用图像到图像翻译原理完成。更接近实际应用的这些方法的变体是活跃的研究课题。
-
-
-
-
 
 近期研究学习到能够编码高维数据不同部分之间底层稳定结构和共享信息的表征。这启发了对比学习框架，该框架通过潜在空间中的对比损失，尝试通过最大化同一数据样本的不同增强视图之间的一致性来寻找表征。自然（摄影）图像中出色的结果最终可在遥感图像处理和分析的背景下得到探索。
 
@@ -2395,10 +2261,6 @@ Gustau Camps-Valls
 
 ### 3.3.3 融合网络与过程模型
 
-
-
-
-
 DL 与物理可以以多种方式完全融合，正如 Reichstein *et al*. 所建议的那样。例如，通过额外正则化纳入知识可以被视为一种归纳偏置。另一种选择是学习模拟器，然后将其与纯粹数据驱动的算法结合用于模型反演。最后，还可以考虑完全耦合的网络，其中描述复杂且不确定过程的层馈入物理层，这些物理层编码了中间特征表示与目标变量之间已知的关系。将物理整合到 DL 模型中不仅使我们能够实现更好的泛化性能，更重要的是，它赋予 DL 模型物理一致性。反过来，混合化过程具有有趣的正则化效应，因为物理会剔除不合理的模型并促进更简单、更稀疏的结构。
 
 ### 3.4 解释深度神经网络
@@ -2417,77 +2279,75 @@ DL 与物理可以以多种方式完全融合，正如 Reichstein *et al*. 所�
 
 从观测中推断因果关系多年来一直是数据科学中最重要的挑战之一（参见，例如，关于该主题的优秀书籍，以及地球和气候科学领域的一篇近期观点论文）。从数据进行因果推断允许基于对支配它们的更好过程理解，对现实世界现象进行更稳健的建模。它允许更好地理解对所研究系统变化（干预）的后果，并使我们能够回答关于假设情况（反事实陈述）的问题。然而，深度学习并不能把握数据集中的因果关系，因此它实际上只充当一种出色的、复杂的插值工具。
 
-只有最近，我们才预见到朝着因果地纳入或理解 DL 模型的努力。例如，在 Bengio *et al*. [26] 中，作者实现了一个元学习目标，该目标最大化领域转移的速度，在某些假设下，这可以被视为定位因果机制变化的一种方式。在 Louizos *et al*. [27] 中，作者从观测数据中学习个体水平的因果效应，可以有效处理混杂因素。他们的方法建立在潜在变量建模之上，以同时估计潜在空间，汇总混杂因素和因果效应，使用自动编码器。然而，这些方法尚未在真实的地球观测数据中得到测试。
+
+
+只有最近，我们才预见到朝着因果地纳入或理解 `DL` 模型的努力。例如，在 `Bengio et al.` [26] 中，作者实现了一个元学习目标，该目标最大化领域转移的速度，在某些假设下，这可以被视为定位因果机制变化的一种方式。在 `Louizos et al.` [27] 中，作者从观测数据中学习个体水平的因果效应，可以有效处理混杂因素。他们的方法建立在潜在变量建模之上，以同时估计潜在空间，汇总混杂因素和因果效应，使用自动编码器。然而，这些方法尚未在真实的地球观测数据中得到测试。
 
 ## 4. 结论与展望
 
-本章讨论了 DL 方法在地球科学中应用和更广泛采用的主要挑战。我们认为 DL 必然需要 (1) 从数据中自动学习有用的特征表示，由稀疏性等合理标准指导，以考虑紧凑性从而实现快速算法；(2) 发展出完全新的网络结构，超越仅利用局部性和平稳性特征的卷积和循环网络，如空间中的基于注意力的网络、时间中的 Transformer 以及任意数据结构的几何 DL；(3) 结合物理和过程理解，以实现不仅物理一致性，还能通过领域专家获得可信度：最新进展可以从数据中学习微分方程，准确模拟辐射传输模型，并用机理模型替换（并优化）层；(4) 变得更具可解释性并易于审查，要么通过直接施加促进稀疏和基于知识的先验，要么通过开发混合 DL 模型来探索最物理合理的解的子空间；以及 (5) 解决最重要的宏大挑战和雄心勃勃的远期目标，即从数据中学习因果表示。
+本章讨论了 `DL` 方法在地球科学中应用和更广泛采用的主要挑战。我们认为 `DL` 必然需要 (1) 从数据中自动学习有用的特征表示，由稀疏性等合理标准指导，以考虑紧凑性从而实现快速算法；(2) 发展出完全新的网络结构，超越仅利用局部性和平稳性特征的卷积和循环网络，如空间中的基于注意力的网络、时间中的 `Transformer` 以及任意数据结构的几何 `DL`；(3) 结合物理和过程理解，以实现不仅物理一致性，还能通过领域专家获得可信度：最新进展可以从数据中学习微分方程，准确模拟辐射传输模型，并用机理模型替换（并优化）层；(4) 变得更具可解释性并易于审查，要么通过直接施加促进稀疏和基于知识的先验，要么通过开发混合 `DL` 模型来探索最物理合理的解的子空间；以及 (5) 解决最重要的宏大挑战和雄心勃勃的远期目标，即从数据中学习因果表示。
 
-
-
-
-
-地球与气候科学中深度学习的未来令人振奋。我们现在可以访问操作性的可微分和概率编程工具，这些工具允许优化任意网络、损失函数和物理感知的架构。此外，当前的方法能够理解所学习的潜在网络表示：可解释性只是第一站：可解释人工智能（XAI）和因果推断必须指导网络训练。我们的长期愿景是开拓新的前沿，推动研究朝着能够从地球数据中发现知识的算法发展，这是迈向更雄心勃勃的远期目标——机器推理人为气候变化——的一个垫脚石。然而，虽然机器/深度学习领域传统上进展非常迅速，但我们观察到在应对此类宏大挑战时并非如此。认知障碍仍然存在于我们的道路上：领域知识难以捉摸且难以编码，计算机科学家与物理学家之间的互动仍然是一个障碍，而在未来几年内，对协同概念的教育也将是一项艰巨的任务。本章中提出的推进方式，即混合深度学习、可解释性和因果发现，确实需要领域知识专家与计算机科学家之间持续而强有力的互动。
+地球与气候科学中深度学习的未来令人振奋。我们现在可以访问操作性的可微分和概率编程工具，这些工具允许优化任意网络、损失函数和物理感知的架构。此外，当前的方法能够理解所学习的潜在网络表示：可解释性只是第一站：可解释人工智能（`XAI`）和因果推断必须指导网络训练。我们的长期愿景是开拓新的前沿，推动研究朝着能够从地球数据中发现知识的算法发展，这是迈向更雄心勃勃的远期目标——机器推理人为气候变化——的一个垫脚石。然而，虽然机器/深度学习领域传统上进展非常迅速，但我们观察到在应对此类宏大挑战时并非如此。认知障碍仍然存在于我们的道路上：领域知识难以捉摸且难以编码，计算机科学家与物理学家之间的互动仍然是一个障碍，而在未来几年内，对协同概念的教育也将是一项艰巨的任务。本章中提出的推进方式，即混合深度学习、可解释性和因果发现，确实需要领域知识专家与计算机科学家之间持续而强有力的互动。
 
 ## Acknowledgment
 
-本研究得到了欧洲研究理事会（ERC）整合资助项目 SEDAL（用于地球观测数据分析的统计学习）项目在资助协议 647423 下的财政支持。
+本研究得到了欧洲研究理事会（`ERC`）整合资助项目 `SEDAL`（用于地球观测数据分析的统计学习）项目在资助协议 `647423` 下的财政支持。
 
 ### References
 
-1.I. Goodfellow, Y. Bengio, and A. Courville, *Deep Learning*, MIT Press, 2016.
+1. `I. Goodfellow`, `Y. Bengio`, and `A. Courville`, *Deep Learning*, `MIT Press`, 2016.
 
-2.Y. LeCun, L. Bottou, G. Orr, and K. Müller, “Efficient backprop,” in *Neural Networks: Tricks of the Trade*, Springer Berlin, pp. 9–50, 1998.
+2. `Y. LeCun`, `L. Bottou`, `G. Orr`, and `K. Müller`, “Efficient backprop,” in *Neural Networks: Tricks of the Trade*, `Springer Berlin`, pp. 9–50, 1998.
 
-3.S. Hochreiter and J. Schmidhuber, “Long short-term memory,” *Neural Comp*., vol. 9, no. 8, pp. 1735–1780, 1997.
+3. `S. Hochreiter` and `J. Schmidhuber`, “Long short-term memory,” *Neural Comp*., vol. 9, no. 8, pp. 1735–1780, 1997.
 
-4.I. Goodfellow, J. Pouget-Abadie, M. Mirza, B. Xu, D. Warde-Farley, S. Ozair, A. Courville, and Y. Bengio, “Generative adversarial nets,” in *Advances in Neural Information Processing Systems*, pp. 2672–2680, 2014.
+4. `I. Goodfellow`, `J. Pouget-Abadie`, `M. Mirza`, `B. Xu`, `D. Warde-Farley`, `S. Ozair`, `A. Courville`, and `Y. Bengio`, “Generative adversarial nets,” in *Advances in Neural Information Processing Systems*, pp. 2672–2680, 2014.
 
-5.M. Reichstein, G. Camps-Valls, B. Stevens, M. Jung, J. Denzler, N. Carvalhais, and Prabhat, “Deep learning and process understanding for data-driven earth system science,” *Nature*, vol. 566, no. 7743, pp. 195–204, Feb. 2019\. doi: 10.1038/ s41586-019-0912-1. URL [`doi.org/10.1038/s41586-019-0912-1`](https://doi.org/10.1038/s41586-019-0912-1).
+5. `M. Reichstein`, `G. Camps-Valls`, `B. Stevens`, `M. Jung`, `J. Denzler`, `N. Carvalhais`, and `Prabhat`, “Deep learning and process understanding for data-driven earth system science,” *Nature*, vol. 566, no. 7743, pp. 195–204, Feb. 2019\. doi: 10.1038/ s41586-019-0912-1. URL [`doi.org/10.1038/s41586-019-0912-1`](https://doi.org/10.1038/s41586-019-0912-1).
 
-6.L. Zhang, L. Zhang, and B. Du, “Deep learning for remote sensing data: A technical tutorial on the state of the art,” *IEEE Geosci. Remote Sens. Magaz*., vol. 4, no. 2, pp. 22–40, 2016.
+6. `L. Zhang`, `L. Zhang`, and `B. Du`, “Deep learning for remote sensing data: A technical tutorial on the state of the art,” *IEEE Geosci. Remote Sens. Magaz*., vol. 4, no. 2, pp. 22–40, 2016.
 
-7.X. X. Zhu, D. Tuia, L. Mou, G.-S. Xia, L. Zhang, F. Xu, and F. Fraundorfer, “Deep learning in remote sensing: A comprehensive review and list of resources,” *IEEE Geosci. Remote Sens. Magaz*., vol. 5, no. 4, pp. 8–36, 2017.
+7. `X. X. Zhu`, `D. Tuia`, `L. Mou`, `G.-S. Xia`, `L. Zhang`, `F. Xu`, and `F. Fraundorfer`, “Deep learning in remote sensing: A comprehensive review and list of resources,” *IEEE Geosci. Remote Sens. Magaz*., vol. 5, no. 4, pp. 8–36, 2017.
 
-8.I. Ali, F. Greifeneder, J. Stamenkovic, M. Neumann, and C. Notarnicola, “Review of machine learning approaches for biomass and soil moisture retrievals from remote sensing data,” *Remote Sensing*, vol. 7, no. 12, pp. 16398–16421, 2015.
+8. `I. Ali`, `F. Greifeneder`, `J. Stamenkovic`, `M. Neumann`, and `C. Notarnicola`, “Review of machine learning approaches for biomass and soil moisture retrievals from remote sensing data,” *Remote Sensing*, vol. 7, no. 12, pp. 16398–16421, 2015.
 
-9.D. Malmgren-Hansen, V. Laparra, A. A. Nielsen, and G. Camps-Valls, “Statistical retrieval of atmospheric profiles with deep convolutional neural networks,” *ISPRS J. Photogram. Remote Sens*., vol. 158, pp. 231–240, 2019.
+9. `D. Malmgren-Hansen`, `V. Laparra`, `A. A. Nielsen`, and `G. Camps-Valls`, “Statistical retrieval of atmospheric profiles with deep convolutional neural networks,” *ISPRS J. Photogram. Remote Sens*., vol. 158, pp. 231–240, 2019.
 
-10.S. Xingjian, Z. Chen, H. Wang, D.-Y. Yeung, W.-K. Wong, and W.-c. Woo, “Convolutional LSTM network: A machine learning approach for precipitation nowcasting,” in *Advances in Neural Information Processing Systems*, pp. 802–810, 2015.
+10. `S. Xingjian`, `Z. Chen`, `H. Wang`, `D.-Y. Yeung`, `W.-K. Wong`, and `W.-c. Woo`, “Convolutional LSTM network: A machine learning approach for precipitation nowcasting,” in *Advances in Neural Information Processing Systems*, pp. 802–810, 2015.
 
-11.E. Racah, C. Beckham, T. Maharaj, S. E. Kahou, M. Prabhat, and C. Pal, “Extremeweather: A large-scale climate dataset for semi-supervised detection, localization, and understanding of extreme weather events,” in *Advances in Neural Information Processing Systems*, pp. 3402–3413, 2017.
+11. `E. Racah`, `C. Beckham`, `T. Maharaj`, `S. E. Kahou`, `M. Prabhat`, and `C. Pal`, “Extremeweather: A large-scale climate dataset for semi-supervised detection, localization, and understanding of extreme weather events,” in *Advances in Neural Information Processing Systems*, pp. 3402–3413, 2017.
 
-12.Y.-G. Ham, J.-H. Kim, and J.-J. Luo, “Deep learning for multi-year ENSO forecasts,” *Nature*, vol. 573, no. 7775, pp. 568–572, 2019.
+12. `Y.-G. Ham`, `J.-H. Kim`, and `J.-J. Luo`, “Deep learning for multi-year ENSO forecasts,” *Nature*, vol. 573, no. 7775, pp. 568–572, 2019.
 
-13.A. Romero, C. Gatta, and G. Camps-Valls, “Unsupervised deep feature extraction for remote sensing image classification,” *IEEE Trans. Geosci. Remote Sens*. vol. 54, no. 3, pp. 1349–1362, 2015.
+13. `A. Romero`, `C. Gatta`, and `G. Camps-Valls`, “Unsupervised deep feature extraction for remote sensing image classification,” *IEEE Trans. Geosci. Remote Sens*. vol. 54, no. 3, pp. 1349–1362, 2015.
 
-14.N. Kussul, M. Lavreniuk, S. Skakun, and A. Shelestov, “Deep learning classification of land cover and crop types using remote sensing data,” *IEEE Geosci. Remote Sens. Lett*., vol. 14, no. 5, pp. 778–782, 2017.
+14. `N. Kussul`, `M. Lavreniuk`, `S. Skakun`, and `A. Shelestov`, “Deep learning classification of land cover and crop types using remote sensing data,” *IEEE Geosci. Remote Sens. Lett*., vol. 14, no. 5, pp. 778–782, 2017.
 
-15.S. Besnard, N. Carvalhais, M. A. Arain, A. Black, B. Brede, N. Buchmann, J. Chen, J. G. W. Clevers, L. P. Dutrieux, F. Gans, *et al*., “Memory effects of climate and vegetation affecting net ecosystem CO[2] fluxes in global forests,” *PloS One*, vol. 14, no. 2, e0211510, 2019.
+15. `S. Besnard`, `N. Carvalhais`, `M. A. Arain`, `A. Black`, `B. Brede`, `N. Buchmann`, `J. Chen`, `J. G. W. Clevers`, `L. P. Dutrieux`, `F. Gans`, *et al*., “Memory effects of climate and vegetation affecting net ecosystem CO[2] fluxes in global forests,” *PloS One*, vol. 14, no. 2, e0211510, 2019.
 
-16.M. Ru-wurm and M. Körner, “Multi-temporal land cover classification with sequential recurrent encoders,” *ISPRS Int. J. Geo-Inform*., vol. 7, no. 4, p. 129, 2018.
+16. `M. Ru-wurm` and `M. Körner`, “Multi-temporal land cover classification with sequential recurrent encoders,” *ISPRS Int. J. Geo-Inform*., vol. 7, no. 4, p. 129, 2018.
 
-17.G. Camps-Valls, D. Tuia, X.X. Zhu, and M. Reichstein, *Deep Learning for the Earth Sciences: A Comprehensive Approach to Remote Sensing, Climate Science and Geosciences*, Wiley & Sons, 2021.
+17. `G. Camps-Valls`, `D. Tuia`, `X.X. Zhu`, and `M. Reichstein`, *Deep Learning for the Earth Sciences: A Comprehensive Approach to Remote Sensing, Climate Science and Geosciences*, `Wiley & Sons`, 2021.
 
-18.D.P. Kingma and M. Welling, “An introduction to variational autoencoders,” arXiv preprint arXiv:1906.02691, 2019.
+18. `D.P. Kingma` and `M. Welling`, “An introduction to variational autoencoders,” arXiv preprint arXiv:1906.02691, 2019.
 
-19.J.E. Johnson, V. Laparra, M. Piles, and G. Camps-Valls, “Gaussianizing the earth: Multidimensional information measures for earth data analysis,” arXiv preprint arXiv:2010.06476, 2020.
+19. `J.E. Johnson`, `V. Laparra`, `M. Piles`, and `G. Camps-Valls`, “Gaussianizing the earth: Multidimensional information measures for earth data analysis,” arXiv preprint arXiv:2010.06476, 2020.
 
-20.M. Jaderberg, K. Simonyan, and A. Zisserman, “Spatial transformer networks,” *Advances in Neural Information Processing Systems*, pp. 2017–2025, 2015.
+20. `M. Jaderberg`, `K. Simonyan`, and `A. Zisserman`, “Spatial transformer networks,” *Advances in Neural Information Processing Systems*, pp. 2017–2025, 2015.
 
-21.M.M. Bronstein, J. Bruna, Y. LeCun, A. Szlam, and P. Vandergheynst, “Geometric deep learning: Going beyond Euclidean data,” *IEEE Signal Processing Magazine*, vol. 34, no. 4, pp. 18–42, 2017.
+21. `M.M. Bronstein`, `J. Bruna`, `Y. LeCun`, `A. Szlam`, and `P. Vandergheynst`, “Geometric deep learning: Going beyond Euclidean data,” *IEEE Signal Processing Magazine*, vol. 34, no. 4, pp. 18–42, 2017.
 
-22.D.H. Svendsen, P. Morales-Alvarez, A.B. Ruescas, R. Molina, and G. Camps-Valls “Deep Gaussian processes for parameter retrieval and model inversion,” *ISPRS Journal of Photogrammertry and Remote Sensing*, vol. 166, pp. 68–81, 2020.
+22. `D.H. Svendsen`, `P. Morales-Alvarez`, `A.B. Ruescas`, `R. Molina`, and `G. Camps-Valls` “Deep Gaussian processes for parameter retrieval and model inversion,” *ISPRS Journal of Photogrammertry and Remote Sensing*, vol. 166, pp. 68–81, 2020.
 
-23.D.H. Svendsen, L. Martino, and G. Camps-Valls, “Active emulation of computer codes with Gaussian processes — Application to remote sensing,” *Pattern Recognition*, vol. 100, no. 107103, pp. 1–12, 2020.
+23. `D.H. Svendsen`, `L. Martino`, and `G. Camps-Valls`, “Active emulation of computer codes with Gaussian processes — Application to remote sensing,” *Pattern Recognition*, vol. 100, no. 107103, pp. 1–12, 2020.
 
-24.A. Wolanin, G. Mateo-García, G. Camps-Valls, L. Gómez-Chova, M. Meroni, G. Duveiller, Y. Liangzhi, and L. Guanter, “Estimating and understanding crop yields with explainable deep learning in the Indian Wheat Belt,” *Environmental Research Letters*, vol. 15, no. 2, pp. 024019, 2020, IOP Publishing.
+24. `A. Wolanin`, `G. Mateo-García`, `G. Camps-Valls`, `L. Gómez-Chova`, `M. Meroni`, `G. Duveiller`, `Y. Liangzhi`, and `L. Guanter`, “Estimating and understanding crop yields with explainable deep learning in the Indian Wheat Belt,” *Environmental Research Letters*, vol. 15, no. 2, pp. 024019, 2020, `IOP Publishing`.
 
-25.B.A. Toms, E.A. Barnes, and I. Ebert-Uphoff, “Physically interpretable neural networks for the geosciences: Applications to earth system variability,” *Journal of Advances in Modeling Earth Systems*, vol. 12, no. 9, pp. e2019MS002002, 2020, Wiley Online Library.
+25. `B.A. Toms`, `E.A. Barnes`, and `I. Ebert-Uphoff`, “Physically interpretable neural networks for the geosciences: Applications to earth system variability,” *Journal of Advances in Modeling Earth Systems*, vol. 12, no. 9, pp. e2019MS002002, 2020, `Wiley Online Library`.
 
-26.Y. Bengio, T. Deleu, N. Rahaman, R. Ke, S. Lachapelle, O. Bilaniuk, A. Goyal, and C. Pal, “A meta-transfer objective for learning to disentangle causal mechanisms,” arXiv preprint arXiv:1901.10912, 2019.
+26. `Y. Bengio`, `T. Deleu`, `N. Rahaman`, `R. Ke`, `S. Lachapelle`, `O. Bilaniuk`, `A. Goyal`, and `C. Pal`, “A meta-transfer objective for learning to disentangle causal mechanisms,” arXiv preprint arXiv:1901.10912, 2019.
 
-27.C. Louizos, U. Shalit, J.M. Mooij, D. Sontag, R. Zemel, and M. Welling, “Causal effect inference with deep latent-variable models,” *Advances in Neural Information Processing Systems*, pp. 6446–6456, 2017.
+27. `C. Louizos`, `U. Shalit`, `J.M. Mooij`, `D. Sontag`, `R. Zemel`, and `M. Welling`, “Causal effect inference with deep latent-variable models,” *Advances in Neural Information Processing Systems*, pp. 6446–6456, 2017.
 
 © 2021 World Scientific Publishing Company
 
@@ -2497,67 +2357,58 @@ DL 与物理可以以多种方式完全融合，正如 Reichstein *et al*. 所�
 
 ## Accurate Detection of Built-Up Areas in Remote Sensing Image via Deep Learning
 
-
-
-
-
-Yihua Tan\*, Shengzhou Xiong^(†) and Pei Yan^(‡)
+`Yihua Tan*`, `Shengzhou Xiong^(†)` and `Pei Yan^(‡)`
 
 *国家多光谱信息处理重点实验室* & *人工智能与自动化学院，华中科技大学，武汉 430074，中国*  
 
-\*yhtan@hust.edu.cn*,  
+*`yhtan@hust.edu.cn`*,  
 
-^(†)*xiongshengzhou@126.com*,  
+^(†)*`xiongshengzhou@126.com`*,  
 
-^(‡)*yanpei@hust.cn*
+^(‡)*`yanpei@hust.cn`*
 
 ### Abstract
 
-近年来，随着深度学习的快速发展，深度模型已成为机器学习众多研究分支和应用领域的<|message|>主流。作为遥感数据中最重要的目标之一，建成区检测是机器学习的重要实践领域。为了展示深度模型的能力，从高分-2 遥感卫星数据中收集并标注了一个大型数据集。在以下章节中，将讨论并在该数据集上实验几种深度学习方法，包括 DSCNN、LMB-CNN 以及基于 LMB-CNN 的 FCN 模型。实验结果表明，与传统算法相比，深度模型带来了巨大的性能提升。
+近年来，随着深度学习的快速发展，深度模型已成为机器学习众多研究分支和应用领域的
+主流。作为遥感数据中最重要的目标之一，建成区检测是机器学习的重要实践领域。为了展示深度模型的能力，从高分-2 遥感卫星数据中收集并标注了一个大型数据集。在以下章节中，将讨论并在该数据集上实验几种深度学习方法，包括 `DSCNN`、`LMB-CNN` 以及基于 `LMB-CNN` 的 `FCN` 模型。实验结果表明，与传统算法相比，深度模型带来了巨大的性能提升。
 
-**关键词：** 深度学习，遥感，建成区，DSCNN，LMB-CNN，FCN
+**关键词：** 深度学习，遥感，建成区，`DSCNN`，`LMB-CNN`，`FCN`
 
-### 1.Introduction
+### 1. Introduction
 
-建成区是人类活动的主要区域，以建筑物聚集区表示，一直是遥感图像分析的重点之一。许多领域都受益于建成区范围的准确性，例如，准确的建成区有利于城市化进程的分析 \[1\]。建成区的精确定位可以为灾害评估提供便利 \[2\]。基于覆盖 35,000 km² 的遥感图像分析，已构建的用于建成区的全球人类聚居层 GHSL 是地球观测的重要组成部分 \[3, 4\]。然而，人工提取建成区确实是时间和人力资源的巨大消耗。因此，从遥感数据中自动提取建成区对于利用准确的建成区信息至关重要。通过机器学习方法自动提取建成区具有挑战性，因为建成区呈现各种风格和类型，建筑物的光谱变化和混淆、环境多样性、光照变化以及不同季节的植被覆盖难以用统一特征描述。与一般单一目标不同，建成区是闭合形状区域的概念，主要包括建筑物，但也包括非建成区元素，如草坪、小池塘和山丘，这使得分类任务相当具有挑战性。此外，待处理的广阔区域意味着大量的遥感图像，因此算法的速度对于实际应用至关重要。
-
-有多种遥感数据源可用，不同特征的数据源也衍生出各种算法。合成孔径雷达 SAR 图像 \[5\] 和极化 SAR PolSAR 图像 \[6\] 是热门的研究数据，因为雷达的主动成像模式可以提供全天候、全天时数据。多光谱图像包含几个不同的光谱段，地物光谱特征的差异成为各种光谱指数的基础 \[7–9\]。此外，高光谱图像提供了更详细的谱段划分，光谱指数也被扩展到其上 \[10\]。此外，基于可见光成像的全色图像更类似于通用计算机视觉任务的数据源，可以更多地受益于计算机视觉的研究成果 \[11, 12\]，而多源融合的假彩色图像更进一步 \[3, 13, 14\]。此外，一些数据源因获取困难而较少使用，例如包含高程信息的立体影像 \[15\]、道路网络数据 \[16, 17\]、来自 VIIRS 和 DMSP-OLS 的夜间灯光数据 \[18, 19\]，并且考虑到不同类型区域之间的温度差异，热红外遥感也被采用 \[20–22\]。全色图像和多光谱图像是最常用的数据，因其互补性，全色图像通常具有高空间分辨率但没有颜色信息，而多光谱图像则相反。全色图像和多光谱图像很容易获得，因为有许多卫星同时提供它们，如 WorldView 系列、GeoEye-1、QuickBird、IKONOS 和高分系列。以下实验将在高分-2 卫星数据上进行。
-
-建成区的提取长期以来吸引了众多学者的关注，有许多传统算法应用于此任务，包括监督算法和非监督算法。这些算法几乎包括所有常见的机器学习方法，如 SVM \[23, 24\]、CRF \[25\]、MRF \[26, 27\]、MeanShift \[28\]、图方法 \[29, 30\]，然而，由于人工特征的限制，如光谱指数 \[9\]、Harris 点 \[29, 30\] 和著名的 SIFT \[12, 31\]，这些算法的有效性有限。因此深度模型吸引了更大的关注，深度方法之所以成功，是因为其抽象的深度特征具有强大的泛化能力，适用于复杂的建成区提取。基于高分-2 卫星的大型标注数据集，将详细介绍并测试三种深度模型的性能，包含 DSCNN、LMB-CNN 和一个 FCN 模型。DSCNN 可以同时利用全色图像和多光谱图像，LMB-CNN 是一种轻量级快速模型，仅需全色图像，FCN 是一种图像分割模型，可应用于大尺寸遥感图像。实验结果表明，深度方法可以明显提高建成区提取的性能。
-
-#### 2.Related Works
+建成区是人类活动的主要区域，以建筑物聚集区表示，一直是遥感图像分析的重点之一。许多领域都受益于建成区范围的准确性，例如，准确的建成区有利于城市化进程的分析 [`1`]。建成区的精确定位可以为灾害评估提供便利 [`2`]。基于覆盖 35,000 km² 的遥感图像分析，已构建的用于建成区的全球人类聚居层 `GHSL` 是地球观测的重要组成部分 [`3, 4`]。然而，人工提取建成区确实是时间和人力资源的巨大消耗。因此，从遥感数据中自动提取建成区对于利用准确的建成区信息至关重要。通过机器学习方法自动提取建成区具有挑战性，因为建成区呈现各种风格和类型，建筑物的光谱变化和混淆、环境多样性、光照变化以及不同季节的植被覆盖难以用统一特征描述。与一般单一目标不同，建成区是闭合形状区域的概念，主要包括建筑物，但也包括非建成区元素，如草坪、小池塘和山丘，这使得分类任务相当具有挑战性。此外，待处理的广阔区域意味着大量的遥感图像，因此算法的速度对于实际应用至关重要。
 
 
 
+有多种遥感数据源可用，不同特征的数据源也衍生出各种算法。合成孔径雷达 `SAR` 图像 \[5\] 和极化 `SAR` `PolSAR` 图像 \[6\] 是热门的研究数据，因为雷达的主动成像模式可以提供全天候、全天时数据。多光谱图像包含几个不同的光谱段，地物光谱特征的差异成为各种光谱指数的基础 \[7–9\]。此外，高光谱图像提供了更详细的谱段划分，光谱指数也被扩展到其上 \[10\]。此外，基于可见光成像的全色图像更类似于通用计算机视觉任务的数据源，可以更多地受益于计算机视觉的研究成果 \[11, 12\]，而多源融合的假彩色图像更进一步 \[3, 13, 14\]。此外，一些数据源因获取困难而较少使用，例如包含高程信息的立体影像 \[15\]、道路网络数据 \[16, 17\]、来自 `VIIRS` 和 `DMSP-OLS` 的夜间灯光数据 \[18, 19\]，并且考虑到不同类型区域之间的温度差异，热红外遥感也被采用 \[20–22\]。全色图像和多光谱图像是最常用的数据，因其互补性，全色图像通常具有高空间分辨率但没有颜色信息，而多光谱图像则相反。全色图像和多光谱图像很容易获得，因为有许多卫星同时提供它们，如 `WorldView` 系列、`GeoEye-1`、`QuickBird`、`IKONOS` 和高分系列。以下实验将在高分-2 卫星数据上进行。
 
+建成区的提取长期以来吸引了众多学者的关注，有许多传统算法应用于此任务，包括监督算法和非监督算法。这些算法几乎包括所有常见的机器学习方法，如 `SVM` \[23, 24\]、`CRF` \[25\]、`MRF` \[26, 27\]、`MeanShift` \[28\]、图方法 \[29, 30\]，然而，由于人工特征的限制，如光谱指数 \[9\]、`Harris` 点 \[29, 30\] 和著名的 `SIFT` \[12, 31\]，这些算法的有效性有限。因此深度模型吸引了更大的关注，深度方法之所以成功，是因为其抽象的深度特征具有强大的泛化能力，适用于复杂的建成区提取。基于高分-2 卫星的大型标注数据集，将详细介绍并测试三种深度模型的性能，包含 `DSCNN`、`LMB-CNN` 和一个 `FCN` 模型。`DSCNN` 可以同时利用全色图像和多光谱图像，`LMB-CNN` 是一种轻量级快速模型，仅需全色图像，`FCN` 是一种图像分割模型，可应用于大尺寸遥感图像。实验结果表明，深度方法可以明显提高建成区提取的性能。
 
-近年来提出的建成区提取算法中，广泛涉及机器学习中常用的无监督和有监督算法。在无监督方法中，阈值法是最常用的方法，因为各种指数特征被广泛采用，其中光谱指数是最常见的。例如，Varshney 选择了一种基于核的阈值方法来验证几种光谱指数的性能 \[9\]。模糊阈值法被用于对文献 \[32\] 中提出的基于纹理的建成区存在指数（PanTex）进行分类，并且另一篇论文中的进一步研究比较了每个场景独立优化阈值与单一阈值 \[3\]。提出了一种双阈值滤波方法来整合形态建筑指数（MBI）和形态阴影指数（MSI）的信息 \[33\]。基于图论的方法也是主流之一，Liu *et al*. \[64\] 采用图割对基于贝叶斯的显著图进行分割。Tao *et al*. \[29\] 选择了光谱聚类和图割方法来处理建成区的候选区域以获得更准确的结果。Li *et al*. \[30\] 利用柯西图嵌入优化理论处理所提出的角点密度图。除了阈值法和图论之外，还有一些其他算法被采用，例如 Edison-Meanshift 和 K-means 算法被结合起来提取建成区 \[28\]。
+## 2.Related Works
 
-至于有监督方法，SVM、CRF 和 MRF 被广泛接受。Li *et al*. \[23\] 使用 SVM 进行特征映射并将其与数据挖掘和数据库技术相结合。LS-SVM 分类器被应用于目标分类，并在提出的新特征上取得了良好结果 \[30\]。Tao *et al*. 进一步将多核学习方法应用于组合多个特征并取得了更好的性能 \[31, 35\]。Zhong *et al*. \[25\] 使用 CRF 作为基本分类器，通过改变输入特征生成分组 CRF 并融合结果。Smits *et al*. \[26\] 应用 MRF 从高分辨率影像中更新土地覆盖图。结合 MRF 和贝叶斯模型，Yu *et al*. \[27\] 利用地图数据作为辅助信息提取建成区。除了上述方法之外，Shackelford *et al*. \[36\] 在其论文中使用了最大似然法和分层模糊分类，而 Weizman *et al*. 选择了投票理论 \[37, 38\]。
+近年来提出的建成区提取算法中，广泛涉及机器学习中常用的无监督和有监督算法。在无监督方法中，阈值法是最常用的方法，因为各种指数特征被广泛采用，其中光谱指数是最常见的。例如，`Varshney` 选择了一种基于核的阈值方法来验证几种光谱指数的性能 \[9\]。模糊阈值法被用于对文献 \[32\] 中提出的基于纹理的建成区存在指数 `PanTex` 进行分类，并且另一篇论文中的进一步研究比较了每个场景独立优化阈值与单一阈值 \[3\]。提出了一种双阈值滤波方法来整合形态建筑指数 `MBI` 和形态阴影指数 `MSI` 的信息 \[33\]。基于图论的方法也是主流之一，`Liu et al.` \[64\] 采用图割对基于贝叶斯的显著图进行分割。`Tao et al.` \[29\] 选择了光谱聚类和图割方法来处理建成区的候选区域以获得更准确的结果。`Li et al.` \[30\] 利用柯西图嵌入优化理论处理所提出的角点密度图。除了阈值法和图论之外，还有一些其他算法被采用，例如 `Edison-Meanshift` 和 `K-means` 算法被结合起来提取建成区 \[28\]。
 
-传统的建成区提取算法通常性能有限且泛化能力差，这主要是由特征的局限性造成的。值得注意的是，深度特征已被证明在几乎所有计算机视觉任务中都优于手工制作的特征。许多学者尝试将深度学习理论应用于遥感影像解译。基于深度卷积神经网络和高分辨率 Google Earth 影像，Zhang *et al*. \[39\] 提出了一种提取郊区建筑的方法。Zhou *et al*. \[40\] 讨论了 CNN 在 POLSAR 数据目标识别任务中的性能。通过对比实验，Yang *et al*. \[65\] 验证了三种新型 CNN 结构在建筑物检测中的性能。Li *et al*. \[41\] 提出了两个关键模块，L 形模块旨在分层提取互补信息，而具有嵌套连接的 V 形模块则整合这些特征以获得显著目标。Cheng *et al*. \[42\] 利用度量学习来提高 CNN 在遥感场景解译中的性能。Chen *et al*. \[43\] 和 Xu *et al*. \[44\] 将 CNN 应用于融合几种不同的遥感数据，例如高光谱影像和 LIDAR 影像。至于建成区提取任务，Li *et al*. \[45\] 提出了一种基于 CNN 的多尺度特征融合模型，并在高分辨率 SAR 影像上处理该任务。作为建成区的一种类型，城中村作为中国城市化发展的产物具有重要意义。Li *et al*. \[31\] 结合无监督学习策略和 CNN 模型来处理标记数据缺乏的问题。Bramhe *et al*. \[46\] 将在 ImageNet 上预训练的 Inception-V3 和 VGGNet 应用于 Sentinel-2 影像。基于高空间分辨率遥感影像，Li *et al*. \[47\] 采用 CNN 和 CapsNet 构建了四项实验并进行了比较分析。
+至于有监督方法，`SVM`、`CRF` 和 `MRF` 被广泛接受。`Li et al.` \[23\] 使用 `SVM` 进行特征映射并将其与数据挖掘和数据库技术相结合。`LS-SVM` 分类器被应用于目标分类，并在提出的新特征上取得了良好结果 \[30\]。`Tao et al.` 进一步将多核学习方法应用于组合多个特征并取得了更好的性能 \[31, 35\]。`Zhong et al.` \[25\] 使用 `CRF` 作为基本分类器，通过改变输入特征生成分组 `CRF` 并融合结果。`Smits et al.` \[26\] 应用 `MRF` 从高分辨率影像中更新土地覆盖图。结合 `MRF` 和贝叶斯模型，`Yu et al.` \[27\] 利用地图数据作为辅助信息提取建成区。除了上述方法之外，`Shackelford et al.` \[36\] 在其论文中使用了最大似然法和分层模糊分类，而 `Weizman et al.` 选择了投票理论 \[37, 38\]。
 
-对于建成区检测任务，几乎所有经典机器学习算法都已被采用，但收益有限。近年来有一些研究表明，深度学习在该任务中具有明显优势。自 Alexnet 赢得 2012 年 ImageNet 分类竞赛冠军 \[48\] 以来，深度学习理论取得了巨大进展，这伴随着 GPU 的快速发展。得益于 GPU 的运算能力，利用深度学习快速处理大规模遥感数据成为可能。采用深度方法提取建成区正逐渐成为主流，下面将详细描述几个实例。
+传统的建成区提取算法通常性能有限且泛化能力差，这主要是由特征的局限性造成的。值得注意的是，深度特征已被证明在几乎所有计算机视觉任务中都优于手工制作的特征。许多学者尝试将深度学习理论应用于遥感影像解译。基于深度卷积神经网络和高分辨率 `Google Earth` 影像，`Zhang et al.` \[39\] 提出了一种提取郊区建筑的方法。`Zhou et al.` \[40\] 讨论了 `CNN` 在 `POLSAR` 数据目标识别任务中的性能。通过对比实验，`Yang et al.` \[65\] 验证了三种新型 `CNN` 结构在建筑物检测中的性能。`Li et al.` \[41\] 提出了两个关键模块，`L` 形模块旨在分层提取互补信息，而具有嵌套连接的 `V` 形模块则整合这些特征以获得显著目标。`Cheng et al.` \[42\] 利用度量学习来提高 `CNN` 在遥感场景解译中的性能。`Chen et al.` \[43\] 和 `Xu et al.` \[44\] 将 `CNN` 应用于融合几种不同的遥感数据，例如高光谱影像和 `LIDAR` 影像。至于建成区提取任务，`Li et al.` \[45\] 提出了一种基于 `CNN` 的多尺度特征融合模型，并在高分辨率 `SAR` 影像上处理该任务。作为建成区的一种类型，城中村作为中国城市化发展的产物具有重要意义。`Li et al.` \[31\] 结合无监督学习策略和 `CNN` 模型来处理标记数据缺乏的问题。`Bramhe et al.` \[46\] 将在 `ImageNet` 上预训练的 `Inception-V3` 和 `VGGNet` 应用于 `Sentinel-2` 影像。基于高空间分辨率遥感影像，`Li et al.` \[47\] 采用 `CNN` 和 `CapsNet` 构建了四项实验并进行了比较分析。
 
-#### 3.数据描述
+对于建成区检测任务，几乎所有经典机器学习算法都已被采用，但收益有限。近年来有一些研究表明，深度学习在该任务中具有明显优势。自 `Alexnet` 赢得 2012 年 `ImageNet` 分类竞赛冠军 \[48\] 以来，深度学习理论取得了巨大进展，这伴随着 `GPU` 的快速发展。得益于 `GPU` 的运算能力，利用深度学习快速处理大规模遥感数据成为可能。采用深度方法提取建成区正逐渐成为主流，下面将详细描述几个实例。
 
-为了从遥感数据中提取建成区，常用的最常见的是全色影像和多光谱影像，它们通常是同步采集的，因此从 64 组高分二号影像中收集了 662,308 个样本对，这些影像对应的地理区域分布在中国 32 个不同的省级行政区，并且需要注意的是，多光谱样本包含 G 波段、R 波段和 NIR 波段数据影像。高分二号卫星是中国自主研发的首颗空间分辨率达到 1 m 的民用光学遥感卫星，它提供 1 m 分辨率的全色影像和相应的 4 m 分辨率的多光谱影像。考虑到每个样本应包含多个建筑物以具有建成区的特征，每个采集的全色样本包含 64 × 64 像素，而多光谱样本包含 16 × 16 像素。根据深度模型训练的要求，每个样本均被人工标注为城市或非城市，数据集命名为 GF-2 样本集。遵循有监督机器学习的训练规则，数据集被划分为三部分：训练集、验证集和测试集。划分比例为 6:2:2。以下深度模型均在该数据集或其全色部分上训练（见 Table 1 和 Fig. 1）。
+## 3.数据描述
 
-**Table 1:**GF-2 样本集的划分。
+为了从遥感数据中提取建成区，常用的最常见的是全色影像和多光谱影像，它们通常是同步采集的，因此从 64 组高分二号影像中收集了 662,308 个样本对，这些影像对应的地理区域分布在中国 32 个不同的省级行政区，并且需要注意的是，多光谱样本包含 `G` 波段、`R` 波段和 `NIR` 波段数据影像。高分二号卫星是中国自主研发的首颗空间分辨率达到 1 m 的民用光学遥感卫星，它提供 1 m 分辨率的全色影像和相应的 4 m 分辨率的多光谱影像。考虑到每个样本应包含多个建筑物以具有建成区的特征，每个采集的全色样本包含 `64 × 64` 像素，而多光谱样本包含 `16 × 16` 像素。根据深度模型训练的要求，每个样本均被人工标注为城市或非城市，数据集命名为 `GF-2` 样本集。遵循有监督机器学习的训练规则，数据集被划分为三部分：训练集、验证集和测试集。划分比例为 6:2:2。以下深度模型均在该数据集或其全色部分上训练（见 `Table 1` 和 `Fig. 1`）。
+
+**Table 1:** `GF-2` 样本集的划分。
 
 ![](img/p180-1.jpg)
 
-
-
-
-
 为了验证实验中涉及的算法，构建了一个全幅测试数据集，由 10 张全尺寸图像组成。 全幅测试数据集的地理区域位于中国五个不同的省份，包括江苏、云南、河北、江西和山东。 `GF-2` 样本集与测试集之间没有重叠区域。 此外，每张全色图像包含 `10240 × 10240` 像素，并配有手工标注的块级真实标签。 考虑到对比算法的速度，每张测试图像的一部分被裁剪，包含 `2048 × 2048` 像素并进行了像素级标注。 `Table 2` 显示了测试图像的基本信息。
 
-#### 4. 双流深度卷积神经网络 (DSCNN)
+## 4. 双流深度卷积神经网络 (DSCNN)
 
 `DSCNN` 模型的设计目标是结合全色图像和多光谱图像的信息。 为了通过结合全色数据和多光谱数据提高检测精度，有两个基本思路，一是通过融合全色和多光谱数据生成全色 sharpening 图像，或在特征层面上融合它们。 `DSCNN` 模型采用第二种方法，原因是全色 sharpening 图像的时间消耗。 在结构上，简单的特征融合仅在全连接层中进行。
 
-`DSCNN` 模型的细节如图 `Fig. 2` 所示。 该模型包含两个分支：上分支以全色样本作为输入，为城市样本识别提供主要信息；下分支以多光谱样本作为输入，提供辅助颜色信息以提高精度。 考虑到 Inception 模块的出色性能 [[49], [50]]，两个分支的结构均基于 `Inception V3` 模块。 尽管 Inception [[50]] 的进一步结构在许多应用中实现了轻微改进，但就性能与计算复杂度的平衡而言，`Inception V3` 更适用。 因此遵循 Szegedy *et al*. [[49]] 的设计思路，最终的 `DSCNN` 给出了如图 `Fig. 2` 所示的基于 Inception 的结构。
+`DSCNN` 模型的细节如图 `Fig. 2` 所示。 该模型包含两个分支：上分支以全色样本作为输入，为城市样本识别提供主要信息；下分支以多光谱样本作为输入，提供辅助颜色信息以提高精度。 考虑到 `Inception` 模块的出色性能 [[49], [50]]，两个分支的结构均基于 `Inception V3` 模块。 尽管 `Inception` [[50]] 的进一步结构在许多应用中实现了轻微改进，但就性能与计算复杂度的平衡而言，`Inception V3` 更适用。 因此遵循 `Szegedy et al.` [[49]] 的设计思路，最终的 `DSCNN` 给出了如图 `Fig. 2` 所示的基于 `Inception` 的结构。
 
 ![](img/p181-1.jpg)
 
@@ -2571,7 +2422,7 @@ Yihua Tan\*, Shengzhou Xiong^(†) and Pei Yan^(‡)
 
 **Figure 2:** `DSCNN` 的结构，蓝色块表示卷积层，其中的卷积核大小和输出通道数已标注。
 
-上分支的设计旨在从更高分辨率的全色图像中提取复杂的形态特征和纹理特征，由三个 Inception 模块组成。 如 `Fig. 2` 所示，下层模块的输出在它们之间进行池化操作后作为下一个模块的输入。 对于该分支，输入的全色样本包含 `64 × 64` 像素并获得 `512-dimension` 特征向量作为输出。
+上分支的设计旨在从更高分辨率的全色图像中提取复杂的形态特征和纹理特征，由三个 `Inception` 模块组成。 如 `Fig. 2` 所示，下层模块的输出在它们之间进行池化操作后作为下一个模块的输入。 对于该分支，输入的全色样本包含 `64 × 64` 像素并获得 `512-dimension` 特征向量作为输出。
 
 下分支旨在从多光谱图像中提取光谱特征，在传统应用中数据基本上用于计算简单的光谱指数，因此通过一个 `Inception V3` 模块即可拥有足够的复杂性。 参考光谱指数的思路，下分支的输入样本为伪彩色图像，正如数据描述部分所述，样本由多光谱图像的 `G`、`R`、`NR` 波段组成。 与上分支的输入数据配合，多光谱样本每个包含 `16 × 16` 像素，下分支的输出也是一个 `512-dimension` 特征向量。
 
@@ -2601,22 +2452,20 @@ Yihua Tan\*, Shengzhou Xiong^(†) and Pei Yan^(‡)
 
 对于 `DSCNN` 模型，提出了两种训练策略。 首先，联合训练两个分支，其中整个网络使用随机初始化的参数直接训练和优化。 另一种是分别训练 `DSCNN` 的两个分支，这包括两个步骤：首先，上分支单独在全色样本集上训练，下分支也在多光谱样本集上训练。 其次，用之前获得的最佳参数初始化分支，并冻结两个分支的参数，然后分类头随机初始化并进行微调。 两种训练策略的测试样本集精度已在 `Table 3` 中显示。
 
-#### 5. 轻量级多分支 CNN (LMB-CNN)
+## 5. 轻量级多分支 CNN (LMB-CNN)
 
-对于建成区提取，总是需要处理海量数据，算法的处理速度至关重要，因此需要轻量级的 CNN 结构。 一些最流行的网络如 `AlexNet` [[48]]、`MobileNet` [[53]] 和 Inception 系列 [[49], [50]] 可以提供一些设计提示 [[54]]。 根据它们成功的设计经验，所设计的 `LMB-CNN` 将遵循以下指导原则：
+对于建成区提取，总是需要处理海量数据，算法的处理速度至关重要，因此需要轻量级的 `CNN` 结构。 一些最流行的网络如 `AlexNet` [[48]]、`MobileNet` [[53]] 和 `Inception` 系列 [[49], [50]] 可以提供一些设计提示 [[54]]。 根据它们成功的设计经验，所设计的 `LMB-CNN` 将遵循以下指导原则：
 
-(1) 模型结构应尽可能简单，同时满足任务。 已在 `GF-2` 样本集上完成了建成区分类实验，并选择了几种常用网络（`AlexNet`、`MobileNet`、`Inception V3`）。 根据实验结果，`AlexNet` 的处理速度最快，而 `Inception V3` 的速度仅为其 1/5，尽管 Inception 结构性能最佳。 值得注意的是，`AlexNet` 在训练集上仅用五层卷积层就达到了 98% 的精度，对于建成区提取任务，当精度达到满意水平时，数据处理速度变得更加关键。 因此在性能和模型复杂度之间权衡，所需要模型的卷积层应约为 10 层。
+(1) 模型结构应尽可能简单，同时满足任务。 已在 `GF-2` 样本集上完成了建成区分类实验，并选择了几种常用网络（`AlexNet`、`MobileNet`、`Inception V3`）。 根据实验结果，`AlexNet` 的处理速度最快，而 `Inception V3` 的速度仅为其 1/5，尽管 `Inception` 结构性能最佳。 值得注意的是，`AlexNet` 在训练集上仅用五层卷积层就达到了 98% 的精度，对于建成区提取任务，当精度达到满意水平时，数据处理速度变得更加关键。 因此在性能和模型复杂度之间权衡，所需要模型的卷积层应约为 10 层。
 
-(2) `1 × 1` 卷积层带来诸多益处。 `1 × 1` 卷积核在 CNN 中被广泛采用 [[55], [56]]，该结构可用于增加深度和非线性，并且是处理输出通道数调整的首选。 此外，增加的消耗可以忽略不计。
-
-
-
-
+(2) `1 × 1` 卷积层带来诸多益处。 `1 × 1` 卷积核在 `CNN` 中被广泛采用 [[55], [56]]，该结构可用于增加深度和非线性，并且是处理输出通道数调整的首选。 此外，增加的消耗可以忽略不计。
 
 ### 应考虑多分支结构
-Inception 模块是最著名的多分支架构之一 [55]。`ResNet` [56] 的残差结构也被视为具有不同长度的网络路径集合。多分支结构已被大多数深度模型采用，其积极效果已被充分记录。
+
+`Inception` 模块是最著名的多分支架构之一 [55]。`ResNet` [56] 的残差结构也被视为具有不同长度的网络路径集合。多分支结构已被大多数深度模型采用，其积极效果已被充分记录。
 
 ### 批归一化层必不可少
+
 批归一化操作被提出用于解决内部协变量偏移现象 [51]。它因具有避免过拟分和提高泛化能力的能力而被广泛使用。
 
 所提出的 `LMB-CNN` 模块的基本特征是它包含三个分支。推理所提出的模型命名为轻量级多分支卷积神经网络 (`LMB-CNN`) 的原因是它遵循设计准则。在 图 3 中，图形细节得以展示。此外，还有一些有意的设计遵循上述设计准则：(1) 采用若干结构相似的块使模型简洁；(2) 模块的每个分支最多有两个卷积层以限制总层数；(3) 为降低复杂度，部分用深度可分离卷积替代普通卷积；(4) 三个分支合并以提取多种多样特征；(5) 为引入不同特征的竞争机制，选择 `MaxOut` 策略合并多个分支。
@@ -2625,7 +2474,7 @@ Inception 模块是最著名的多分支架构之一 [55]。`ResNet` [56] 的残
 
 ![](img/p185-1.jpg)
 
-**Figure 3:**`LMB-CNN` 的结构。块中显示了卷积层的核大小和数量。`BN` 层和激活层被隐藏。“`DS Conv`” 表示深度可分离卷积，而“`Conv`” 表示标准卷积。
+**Figure 3:** `LMB-CNN` 的结构。块中显示了卷积层的核大小和数量。`BN` 层和激活层被隐藏。“`DS Conv`” 表示深度可分离卷积，而“`Conv`” 表示标准卷积。
 
 ![](img/p186-1.png)
 
@@ -2646,9 +2495,12 @@ Inception 模块是最著名的多分支架构之一 [55]。`ResNet` [56] 的残
 ![](img/p187-1.png)
 
 ## 6. 全卷积网络
+
 `FCN` 在自然场景语义分割中取得了成功 [57, 58]，但它们处理的图像尺寸通常不大。这里尝试将 `FCN` 应用于大规模遥感图像。如 图 4 所示，所提方法的流程可分为三个步骤：
 
 (1)通过棋盘划分将图像划分为小块作为处理单元，并通过 `LMB-CNN` 提取每个块的深层特征。
+
+
 
 (2)根据空间位置将块的特征重新排列为多通道特征图。设计的 `FCN` 将多通道特征图分割为八个初步分割掩膜。
 
@@ -2663,10 +2515,6 @@ Inception 模块是最著名的多分支架构之一 [55]。`ResNet` [56] 的残
 **Figure 4:**所提算法的主要框架。
 
 每个块的深层特征由 `LMB-CNN` 提取，特征维度为 `256`。基于图像块的空间位置，深层特征可以重新排列为 `256` 通道特征图，类似于一系列卷积层的输出。样本图像的前九个特征图示例显示在 图 5 中。
-
-
-
-
 
 重建的特征图被视为 `FCN` 模型的输入。考虑到计算速度，`FCN` 复用了 `LMB-CNN` 的基本结构。然而，去除了池化操作和全连接层以保持特征图尺寸不变。`FCN` 模型的结构如图 图 6 所示，以一个由 sigmoid 函数激活的 8 核深度可分离卷积层作为网络的末端，该层输出八通道分割掩膜以提高分割可靠性。直观上，对多个决策进行投票比仅一个决策更好，因为不同的输出通道考虑了输入特征的不同内在特性。图 7 给出了八个输出的直观视图。 表 4 中的实验结果表明，投票策略可以减少误报和漏报。
 
@@ -2736,10 +2584,6 @@ Inception 模块是最著名的多分支架构之一 [55]。`ResNet` [56] 的残
 
 ![](img/p195-1.png)
 
-
-
-
-
 `PT`、`PF`、`NT`、`NF` 来自 表 5 中所示的混淆矩阵。`PT` 表示正真，表示预测和真实值均为建成区的样本数量。`PF`、`NF` 和 `NT` 根据其预测和真实值具有与 `PT` 相似的含义。用户精度和生产者精度分别关注建成区对应的虚警率和漏警率。其他两个指标关注整体分割精度。总体而言，总体精度表示整幅图像的分割精度。平均 IOU 表示建成区和非建成区 IOU 的平均值。这些指标是图像分割任务中最常用的指标，前三个指标在分类任务中也很常用。
 
 **表 5.** 混淆矩阵。
@@ -2802,52 +2646,83 @@ Inception 模块是最著名的多分支架构之一 [55]。`ResNet` [56] 的残
 
 9. A. Varshney and E. Rajesh, “A comparative study of built-up index approaches for automated extraction of built-up regions from remote sensing data,” *Ind J Remote Sens*., vol. 42, pp. 659–663, 2014.
 
-
-
-
 ## 参考文献
 
 10.X. Liu, A. Yue, and J. Chen, “利用机载可见光红外成像光谱仪影像的建成区增强新归一化差值指数,” *J Appl Remote Sens*., vol. 8, p. 085092, 2014.
+
 11.J. A. Benediktsson, M. Pesaresi, and K. Amason, “基于形态学变换的城市区域遥感影像分类与特征提取,” *IEEE Trans Geosci Remote Sens*., vol. 41, pp. 1940–1949, 2003.
+
 12.B. Sirmacek and C. Unsalan, “利用 SIFT 关键点和图论进行城市区域和建筑物检测,” *IEEE Trans Geosci Remote Sens*., vol. 47, pp. 1156–1167, 2009.
+
 13.G. Liu *et al*., “一种感知启发的建筑指数，用于高分辨率卫星影像中自动建成区检测,” in *Proc. IEEE Int. Geoscience and Remote Sensing Symposium, Melbourne, Australia*., 2013, pp. 3132–3135.
+
 14.Y. Chen *et al*., “利用高分辨率卫星影像的数据场进行建成区提取,” in *Proc. IEEE Int. Geoscience and Remote Sensing Symposium*, Beijing, China, 2016, pp. 437–440.
+
 15.F. Peng *et al*., “一种新的立体像对视差指数（SPDI）用于从高分辨率立体影像中检测建成区,” *Remote Sens*., vol. 9, p. 633, 2017.
+
 16.Q. Zhou, “利用道路网络数据划定建成区的方法比较研究,” *Trans. GIS*, vol. 19, pp. 848–876, 2016.
+
 17.Q. Zhou and L. Guo, “利用道路网络数据划定建成区的阈值确定的经验方法,” *Plos One*, vol. 13, p. e0194806, 2018.
+
 18.Y. Dou *et al*., “利用 VIIRS 夜光数据进行城市土地提取：三种流行方法的评估,” *Remote Sens*., vol. 9, p. 175, 2017.
+
+
+
 19.Y. Yang *et al*., “利用 DMSP/OLS 夜光数据对北京城乡交错带的空间识别,” *Remote Sens*., vol. 9, p. 1141, 2017.
+
 20.P. Zhang *et al*., “利用多季节 Landsat-8 热红外波段 10 影像快速提取建成区的策略,” *Remote Sens*., vol. 9, p. 1126, 2017.
+
 21.M. Tarawally *et al*., “沿海城市与内陆城市土地利用/覆被长期变化对地表温度响应的比较分析：塞拉利昂弗里敦和博镇案例,” *Remote Sens*., vol. 10, p. 112, 2018.
+
 22.L. Wang *et al*., “基于地表温度反演的城市建成区边界提取及时空特征,” *Remote Sens*., vol. 10, p. 473, 2018.
+
 23.J. Li and R. M. Narayanan, “遥感影像中光谱与空间信息的集成挖掘,” *IEEE Geosci. Remote Sens*., vol. 42, pp. 673–685, 2004.
+
 24.C. Li *et al*., “基于遥感影像轮廓波系数的纹理城市检测,” in *Proc. IET International Radar Conference*, Hangzhou, China, pp. 5–6, 2015.
+
 25.P. Zhong and R. Wang, “用于遥感光学影像城市区域检测的多条件随机场集成模型,” *IEEE Trans. Geosci. Remote Sens*., vol. 45, pp. 3978–3988, 2007.
+
 26.P.C. Smits and A. Annoni, “利用甚高分辨率空间成像的纹理信息更新土地覆盖图,” *IEEE Trans. Geosci. Remote Sens*., vol. 37, pp. 1244–1254, 1999.
+
 27.S. Yu, M. Berthod, and G. Giraudon, “利用地图信息对卫星影像进行稳健分析——应用于城市区域检测,” *IEEE Trans. Geosci. Remote Sens*., vol. 37, pp. 1925–1939, 1999.
+
 28.D. D. Vecchi, M. Harb, and F. Dell’Acqua, “一种基于 PCA 的混合方法用于从 Landsat 5、7 和 8 数据集中提取建成区,” in *Proc. Int. Geoscience and Remote Sensing Symposium*, Milan, Italy, 2015, pp. 1152–1154.
+
 29.C. Tao *et al*., “从多幅高分辨率遥感影像中无监督检测建成区,” *IEEE Geosci. Remote Sens. Lett*., vol. 10, pp.1300–1304, 2013.
+
 30.Y. Li *et al*., “用于从高分辨率遥感影像中检测建成区的 Cauchy 图嵌入优化,” *IEEE J. Sel. Top Appl. Earth Obs. Remote Sens*., vol. 8, pp. 2078–2096, 2015.
+
 31.Y. Li *et al*., “利用多核学习、多场融合和多假设投票从卫星影像中检测建成区,” *IEEE Geosci. Remote Sens. Lett*., vol. 12, pp. 1190–1194, 2017.
+
 32.M. Pesaresi, A. Gerhardinger, and F. Kayitakire, “一种基于各向异性旋转不变纹理测量的稳健建成区存在指数,” *IEEE J. Sel. Top Appl. Earth Obs. Remote Sens*., vol. 1, pp. 180–192, 2009.
+
 33.X. Huang and L. Zhang, “用于城市区域高分辨率影像建筑/阴影提取的形态学建筑/阴影指数,” *IEEE J. Sel. Top Appl. Earth Obs. Remote Sens*., vol. 5, pp. 161–172, 2012.
+
 34.Y. Li, X. Huang, and H. Liu, “高分辨率遥感影像城市村庄检测的无监督深度特征学习,” *Photogramm. Eng. Remote Sens*., vol. 83, pp. 567–579, 2017.
+
 35.C. Tao *et al*., “利用多核学习和图割进行城市区域检测,” in *Proc. IEEE Int. Geoscience and Remote Sensing Symposium*, Munich, Germany, 2012, pp. 83–86.
+
 36.A. K. Shackelford and C. H. Davis, “用于城市区域高分辨率多光谱数据的分层模糊分类方法,” *IEEE Trans. Geosci. Remote Sens*., vol. 41, pp. 1920–1932, 2003.
+
 37.C. Unsalan and K. L. Boyer, “利用直线统计对高分辨率全色卫星影像进行土地开发分类,” *IEEE Trans. Geosci. Remote Sens*., vol. 42, pp. 907–919, 2004.
+
 38.L. Weizman and J. J. I. G. Goldberger, “利用视觉词进行城市区域分割,” *IEEE Geosci Remote Sens Lett*., vol. 6, pp. 388–392, 2009.
+
 39.Q. Zhang *et al*., “基于 CNN 的单目高分辨率 Google Earth 影像郊区建筑检测,” in *IEEE Int. Geoscience and Remote Sensing Symposium*, pp. 661–664, 2016.
+
 40.Y. Zhou *et al*., “利用深度卷积神经网络进行极化 SAR 影像分类,” *IEEE Geosci. Remote Sens. Lett*., vol. 13, pp. 1935–1939, 2016.
+
 41.W. Li *et al*., “用于城市建成区遥感影像分类的基于深度学习的方法,” *IEEE Access*., p. 1, 2019.
+
 42.G. Cheng *et al*., “当深度学习遇见度量学习：通过学习判别性 CNN 进行遥感影像场景分类,” *IEEE Trans. Geosci. Remote Sens*., pp. 1–11, 2018.
+
 43.Y. Chen *et al*., “用于精确分类的遥感数据深度融合,” *IEEE Geosci. Remote Sens. Lett*., vol. 14, pp. 1253–1257, 2017.
+
 44.X. Xu *et al*., “基于卷积神经网络的多源遥感数据分类,” *IEEE Trans. Geosci. Remote Sens*., vol. 56, pp. 937–949, 2018.
+
 45.J. Li, R. Zhang, and Y. Li, “用于高分辨率 SAR 影像建成区检测的多尺度卷积神经网络,” in *Proc. Int. Geoscience and Remote Sensing Symposium*, Beijing, China, pp. 910–913, 2016.
+
 46.V. Bramhe, S. K. Ghosh, and P. K. Garg, “利用卷积神经网络和迁移学习从 Sentinel-2 卫星影像中提取建成区,” in *Int. Arch. Photogram., Remote Sens. Spatial Inform. Sci*., vol. XLII-3, pp. 79–85, 2018.
-
-
-
-
 
 47.C. Li, *et al*., “光学遥感图像显著目标检测的双流金字塔嵌套网络,” *IEEE Trans. Geosci. Remote Sens*., vol. 57, pp.9156–9166, 2019.
 
@@ -2907,7 +2782,7 @@ liuwf@upc.edu.cn
 
 **摘要**
 
-由于遥感图像包含的信息多样且空间结构复杂，图表示学习（GRL）因其能够学习更具代表性的数据特征而受到广泛关注。作为最具代表性的工作之一，图神经网络（GNNs）能够充分利用具有任意结构的数据的高阶相关信息，在仅有少量标记数据的情况下提高其学习性能。近年来，出现了越来越多的 GNN 模型，包括基于空间域的 GNN 和基于谱域的 GNN，并在许多领域取得了优异的性能。更典型的模型图卷积网络（GCNs）首先将卷积神经网络（CNNs）在欧几里得空间上的卷积操作推广到图上。GCN 通过谱图拉普拉斯卷积的一阶近似融合原始特征信息和节点之间复杂且高阶的数据相关关系，以学习更丰富的数据特征。然而，如何更好地保留和获取图结构数据的局部性和相似性关系一直是一个具有挑战性的任务。在本章中，我们总结了现有 GNN 的许多应用。在 GCN 与流形假设结合的框架下，提出了许多 GCN 变体，以在探索和利用数据流形的局部几何结构时精确获取图结构数据的空间结构信息。特别地，我们详细介绍了其理论分析以及 GCN 变体的一些应用，如二阶 GCN、超图 p-拉普拉斯 GCN 和流形正则化动态 GCN。
+由于遥感图像包含的信息多样且空间结构复杂，图表示学习（`GRL`）因其能够学习更具代表性的数据特征而受到广泛关注。作为最具代表性的工作之一，图神经网络（`GNNs`）能够充分利用具有任意结构的数据的高阶相关信息，在仅有少量标记数据的情况下提高其学习性能。近年来，出现了越来越多的 `GNN` 模型，包括基于空间域的 `GNN` 和基于谱域的 `GNN`，并在许多领域取得了优异的性能。更典型的模型图卷积网络（`GCNs`）首先将卷积神经网络（`CNNs`）在欧几里得空间上的卷积操作推广到图上。`GCN` 通过谱图拉普拉斯卷积的一阶近似融合原始特征信息和节点之间复杂且高阶的数据相关关系，以学习更丰富的数据特征。然而，如何更好地保留和获取图结构数据的局部性和相似性关系一直是一个具有挑战性的任务。在本章中，我们总结了现有 `GNN` 的许多应用。在 `GCN` 与流形假设结合的框架下，提出了许多 `GCN` 变体，以在探索和利用数据流形的局部几何结构时精确获取图结构数据的空间结构信息。特别地，我们详细介绍了其理论分析以及 `GCN` 变体的一些应用，如二阶 `GCN`、超图 `p`-拉普拉斯 `GCN` 和流形正则化动态 `GCN`。
 
 **关键词：**图表示学习，图神经网络，谱域，空间域，图卷积网络
 
@@ -2917,19 +2792,17 @@ liuwf@upc.edu.cn
 
 随着卫星遥感技术和传感器技术的快速发展，具有不同分辨率的大量遥感图像可以轻松获得。遥感图像已成为相关部门和机构监测地面信息的主要方法之一。同时，所获取的数据在规模和复杂性方面都大幅增加。如何从这些海量高维数据中提取最有价值的信息，是机器学习和计算机视觉领域许多研究人员面临的最常见挑战之一[1, 2]。
 
-近年来，许多流行的工作，如卷积神经网络（CNNs）[3]、主成分分析网络（PCANet）[4]、典型相关分析网络（CCANet）[5]和自动编码器[6]，已被提出并广泛应用于许多任务，从自然语言处理[7]和图像[8]到音频[9]和视频[10]。这些现有方法可以高效处理定义在欧几里得空间或规则网格上的数据。将这些模型应用于具有任意空间结构的图，如遥感图像，仍然是一个具有挑战性的任务。对于定义在非欧几里得域上的图结构数据，图的每个节点具有不同数量的邻居节点。此外，随着空间位置的变化，其高阶数据相关信息也会发生变化。因此，如何有效地、高效地分析和解释遥感图像的内容至关重要。
+近年来，许多流行的工作，如卷积神经网络（`CNNs`）[3]、主成分分析网络（`PCANet`）[4]、典型相关分析网络（`CCANet`）[5]和自动编码器[6]，已被提出并广泛应用于许多任务，从自然语言处理[7]和图像[8]到音频[9]和视频[10]。这些现有方法可以高效处理定义在欧几里得空间或规则网格上的数据。将这些模型应用于具有任意空间结构的图，如遥感图像，仍然是一个具有挑战性的任务。对于定义在非欧几里得域上的图结构数据，图的每个节点具有不同数量的邻居节点。此外，随着空间位置的变化，其高阶数据相关信息也会发生变化。因此，如何有效地、高效地分析和解释遥感图像的内容至关重要。
+
+为了解决上述问题，许多传统（浅层）图表示学习（`GRL`）[11]方法，即图嵌入[12]，在由非欧几里得空间生成的图结构数据上取得了巨大成功。图嵌入的主要目标是找到一个合适的映射函数，将高维数据中的每个节点转换为低维的潜在表示。`Deepwalk`[13]首先利用截断随机游走（深度优先搜索）获取图中每个节点的局部结构信息，然后通过`skip-gram`[14]模型学习句子中某些顶点的潜在表示。与`Deepwalk`不同，大规模信息网络嵌入（`LINE`）[15]同时使用顶点之间的阶和二阶邻近性来描述数据分布的局部结构关系，即广度优先策略。为了学习节点之间更准确的结构关系，`Node2vec`[16]通过设计带偏置的随机游走策略，利用可调参数控制图中每个节点的搜索空间范围。`ISOMAP`[17]旨在通过使用多维缩放[18]方法计算不同节点之间的测地距离来获得全局最优的局部几何结构。`LLE`[19]旨在保持数据的局部几何结构，其利用图中任意节点与其邻居节点之间的局部线性坐标来建立最终的优化目标函数。`Laplacian eigenmaps`（`LE`）[20]通过构建加权图来描述节点之间的相似性信息。换句话说，它利用图拉普拉斯算子来保持数据分布的流形结构。`Hessian eigenmaps`（`HLLE`）[21]通过对其邻域的图 Hessian 矩阵的估计获得一个矩阵，然后通过对构建的矩阵进行特征分解来获取低维空间中的局部线性坐标。与图拉普拉斯相比，图 Hessian 可以更准确地描述数据的局部几何结构，因为图 Hessian 通过预测高阶导数具有更丰富的零空间，这使得其预测结果能够随着潜在流形变化而产生相应的平滑变化[22, 23]。Liu *et al*. [24]通过引入图 `p`-Laplacian 的近似近似解决了高计算成本问题，然后提出了基于`p-Laplacian`[25, 26]正则化框架的核最小二乘（`pLapKLS`）和支持向量机（`pLapSVM`）模型用于场景识别。
 
 
 
-
-
-为了解决上述问题，许多传统（浅层）图表示学习（GRL） \[11\] 方法，即图嵌入 \[12\]，在由非欧几里得空间生成的图结构数据上取得了巨大成功。图嵌入的主要目标是找到一个合适的映射函数，将高维数据中的每个节点转换为低维的潜在表示。`Deepwalk` \[13\] 首先利用截断随机游走（深度优先搜索）获取图中每个节点的局部结构信息，然后通过 `skip-gram` \[14\] 模型学习句子中某些顶点的潜在表示。与 `Deepwalk` 不同，大规模信息网络嵌入（`LINE`） \[15\] 同时使用顶点之间的<|message|> 阶和二阶邻近性来描述数据分布的局部结构关系，即广度优先策略。为了学习节点之间更准确的结构关系，`Node2vec` \[16\] 通过设计带偏置的随机游走策略，利用可调参数控制图中每个节点的搜索空间范围。`Isometric mapping`（`ISOMAP`） \[17\] 旨在通过使用多维缩放 \[18\] 方法计算不同节点之间的测地距离来获得全局最优的局部几何结构。`Locally linear embedding`（`LLE`） \[19\] 旨在保持数据的局部几何结构，其利用图中任意节点与其邻居节点之间的局部线性坐标来建立最终的优化目标函数。`Laplacian eigenmaps`（`LE`） \[20\] 通过构建加权图来描述节点之间的相似性信息。换句话说，它利用图拉普拉斯算子来保持数据分布的流形结构。`Hessian eigenmaps`（`HLLE`） \[21\] 通过对其邻域的图 Hessian 矩阵的估计获得一个矩阵，然后通过对构建的矩阵进行特征分解来获取低维空间中的局部线性坐标。与图拉普拉斯相比，图 Hessian 可以更准确地描述数据的局部几何结构，因为图 Hessian 通过预测高阶导数具有更丰富的零空间，这使得其预测结果能够随着潜在流形变化而产生相应的平滑变化 \[22, 23\]。Liu *et al*. \[24\] 通过引入图 p-Laplacian 的近似近似解决了高计算成本问题，然后提出了基于 `p-Laplacian` \[25, 26\] 正则化框架的核最小二乘（`pLapKLS`）和支持向量机（`pLapSVM`）模型用于场景识别。
-
-随着深度学习在许多领域的大量应用，研究人员对将欧几里得域上的广义深度学习框架包括 `CNN`、`auto-encoder` 和生成对抗网络（`GANs`） \[27\] 应用于图结构数据产生了越来越多的兴趣。最近，许多流行的深度 GRL 工作，尤其是图神经网络（`GNNs`）在许多应用中取得了巨大成功，例如计算机视觉 \[28\]、自然语言处理 \[29\]、互联网 \[30\]、推荐系统 \[31\]、医疗保健 \[32\]、化学 \[33\]、物理 \[34\] 等等。现在，现有的 GNN 大致可分为两部分：基于空间域的 GNN 和基于谱域的 GNN。
+随着深度学习在许多领域的大量应用，研究人员对将欧几里得域上的广义深度学习框架包括 `CNN`、`auto-encoder` 和生成对抗网络（`GANs`）\[27\] 应用于图结构数据产生了越来越多的兴趣。最近，许多流行的深度 GRL 工作，尤其是图神经网络（`GNNs`）在许多应用中取得了巨大成功，例如计算机视觉 \[28\]、自然语言处理 \[29\]、互联网 \[30\]、推荐系统 \[31\]、医疗保健 \[32\]、化学 \[33\]、物理 \[34\] 等等。现在，现有的 GNN 大致可分为两部分：基于空间域的 GNN 和基于谱域的 GNN。
 
 受 `CNN` 的标准卷积操作的驱动，基于空间域的 GNN 也可以直接对非欧几里得数据进行卷积，以学习每个节点的全新数据表示。与 `CNN` 不同，其卷积操作可以解释为每个中心节点与其邻居节点的聚合过程。Simonovsky *et al*. \[35\] 利用边标签调整滤波器权重的值，从而在图上实现动态空间卷积。`Geodesic CNN` \[36\] 使用局部测地坐标（取代图像块）获取数据的局部各向异性结构，然后通过在流形上滑动窗口进行卷积。与 `Geodesic CNN` 相比，`anisotropic CNN` \[37\] 使用各向异性热核构建更简单的块算子。`Diffusion CNN` \[38\] 通过引入扩散扫描过程的扩散卷积为图结构数据中的每个节点学习潜在表示。
 
-谱域 GNN 通过引入卷积定理，即函数卷积的傅里叶变换是函数傅里叶变换的乘积，在具有特定结构的图上定义谱图滤波器的训练方法，以去除输入数据的噪声。与 `CNN` 不同，谱域 GNN 最典型的模型，即图卷积网络（`GCNs`） \[39\]，通过谱图卷积与一阶近似融合原始特征信息和每个节点之间复杂且高阶的数据相关关系来学习更丰富的数据特征。`Two-order GCN` \[40\] 不仅考虑了每个节点的直接关系，还通过使用切比雪夫多项式的二阶近似利用了其间接关系。`HyperGCN` \[41, 42\] 使用超图对图结构数据的更复杂且超出成对的连接关系进行编码。`Hypergraph p-Laplacian GCN` \[43\] 通过使用超图 p-Laplacian 将 `GCN` 的卷积操作扩展到超图 p-Laplacian 域，以更准确地表达图结构数据的高阶关系。`Manifold regularized dynamic GCN` \[44\] 更关注通过引入关于图结构数据局部几何分布的正则化项来优化学习到的图结构信息，以驱动目标函数随潜在样本分布流形变化。
+谱域 GNN 通过引入卷积定理，即函数卷积的傅里叶变换是函数傅里叶变换的乘积，在具有特定结构的图上定义谱图滤波器的训练方法，以去除输入数据的噪声。与 `CNN` 不同，谱域 GNN 最典型的模型，即图卷积网络（`GCNs`）\[39\]，通过谱图卷积与一阶近似融合原始特征信息和每个节点之间复杂且高阶的数据相关关系来学习更丰富的数据特征。`Two-order GCN` \[40\] 不仅考虑了每个节点的直接关系，还通过使用切比雪夫多项式的二阶近似利用了其间接关系。`HyperGCN` \[41, 42\] 使用超图对图结构数据的更复杂且超出成对的连接关系进行编码。`Hypergraph p-Laplacian GCN` \[43\] 通过使用超图 p-Laplacian 将 `GCN` 的卷积操作扩展到超图 p-Laplacian 域，以更准确地表达图结构数据的高阶关系。`Manifold regularized dynamic GCN` \[44\] 更关注通过引入关于图结构数据局部几何分布的正则化项来优化学习到的图结构信息，以驱动目标函数随潜在样本分布流形变化。
 
 在本章中，我们简要介绍了关于流形学习（ML）的一些相关工作，并详细回顾了 `GCN` 的发展历史及其理论分析。更重要的是，我们着重讨论和分析了在探索和利用数据流形局部几何结构时，如何准确获取图结构数据的空间结构信息，这对于二阶 GCN、超图 p-Laplacian GCN 和流形正则化动态 GCN 模型至关重要。与 `GCN` 相比，上述方法具有以下优点：
 
@@ -2938,10 +2811,6 @@ liuwf@upc.edu.cn
 (2) `Hypergraph p-Laplacian GCN` 通过使用超图理论与 p-Laplacian 矩阵的有效结合，将 `GCN` 在简单图上的谱图卷积操作推广到超图 p-Laplacian 域，以更好地保留数据的高阶关系。
 
 (3) `Manifold regularized dynamic GCN` 通过向其目标函数引入关于图结构数据局部几何分布的正则化项，自动更新学习到的图结构信息。
-
-
-
-
 
 大量关于遥感数据集的实验结果证明了二阶 GCN、超图 p-拉普拉斯 GCN 和流形正则化动态 GCN 相较于许多最先进的半监督学习方法的有效性。此外，我们还对一些相关未来工作进行了分析。
 
@@ -2995,13 +2864,9 @@ Liu *et al*. [26] 利用图 p-拉普拉斯描述数据的流形分布，对拉�
 
 ![figure](img/p217-1.jpg)
 
-
-
-
-
 **图 2：** 通过分别利用图拉普拉斯和图 p-拉普拉斯矩阵来拟合一维螺旋上的两个点，对半监督回归的差异，以保持数据分布的局部几何结构关系。在数据的局部几何保持中，图拉普拉斯总是使解偏向常数函数，并且对于未见数据，外推函数沿螺旋保持不变。由于图 p-拉普拉斯外推函数随测地距离的变化平滑性，它可以很好地拟合数据并完美地外推到未见数据。
 
-## 2.2 图上的谱卷积
+### 2.2 图上的谱卷积
 
 对于图结构数据，由于数据的不规则空间结构，`CNN` 的标准卷积不再有效 [61]。为了解决这个问题，Bruna *et al*. [62] 首先从谱域的角度给出了图结构数据卷积操作的定义。它表示为输入信号 `X` ∈ `R`^(`N` × `M`) 与滤波器 ![figure](img/in218-1.png) 在傅里叶域中的乘法。
 
@@ -3055,10 +2920,6 @@ Liu *et al*. [26] 利用图 p-拉普拉斯描述数据的流形分布，对拉�
 
 ![figure](img/p221-2.png)
 
-
-
-
-
 在式 (20) 中，![figure](img/in221-2.png)。Fu *et al*. [41] 依据不同类型数据库的差异重新计算了最大特征值 `λ[max]`。它可以解决由于在不同数据集上构造的超图 p-Laplacian 矩阵不同而导致的 `λ[max] = 2` [39] 的限制问题。为了进一步避免过拟合问题，Fu *et al*. [41] 利用单一参数 `θ` 替代两个滤波参数 `θ[0]` 和 `θ[1]`，即 `θ[0] = 0` 且 `θ[1] = θ`。
 
 ![figure](img/p221-3.png)
@@ -3080,6 +2941,8 @@ Liu *et al*. [26] 利用图 p-拉普拉斯描述数据的流形分布，对拉�
 现在，提出了越来越多的 GCN 变体。然而，大多数提出的模型仅在训练迭代过程中利用了静态局部几何分布。因此，这种方式无法保证其捕获的不同节点之间的样本结构关系是最优的。为了生成最优的结构信息，2019 年，Fu *et al*. [44] 通过引入流形正则化框架提出了一种动态 GCN 模型。与 GCN、二阶 GCN 和超图 p-Laplacian GCN 相比，它同时优化了权重参数和数据结构信息矩阵。然后它通过将流形正则化作为交叉熵损失函数的一项，给出了一个新颖的目标函数。
 
 ![figure](img/p223-1.png)
+
+
 
 其中 `C1` 是交叉熵损失函数。`y` 表示真实标签信息，`Y` 表示 Softamx 函数 [41] 后的概率分布矩阵。`M` 表示描述数据分布局部几何结构的矩阵，包括图 Laplacian、超图 Laplacian [43]、图 Hessian [5]、图 p-Laplacian [59] 和超图 p-Laplacian [60]。在流形正则化动态 GCN [41] 中，它利用图 Laplacian `L` 描述数据的邻接关系。因此，式 (24) 可以简化为以下问题：
 
@@ -3130,10 +2993,6 @@ SAT-6 [65] 数据集由来自六类地表覆盖的共 405,000 张遥感图像组
 ![figure](img/p226-2.jpg)
 
 其他参数总结如下：二阶 GCN：0.01（学习率），16（隐藏单元），0.5（dropout 率），5 × 10^(−4)（L2 正则化）；超图 p-Laplacian GCN：0.1（学习率），8（隐藏单元），0.4（dropout 率），5 × 10^(−5)（L2 正则化）；流形正则化动态 GCN：0.01（学习率），16（隐藏单元），0.5（dropout 率），5 × 10^(−4)（L2 正则化），0.001（`β`）。在 Table 1 中，我们报告了使用不同方法进行多次实验的平均识别准确率。
-
-
-
-
 
 从这些结果可以看出，与 GCN 相比，二阶 GCN、超图 p-Laplacian GCN 和流形正则化动态 GCN 都实现了更高的识别准确率。换句话说，与 GCN 相比，它们都显示出在局部结构保持方面的优越性。
 
@@ -3197,9 +3056,13 @@ SAT-6 [65] 数据集由来自六类地表覆盖的共 405,000 张遥感图像组
 
 22.W. Liu and D. Tao, “Multiview hessian regularization for image annotation,” *IEEE Trans. Image Process*., vol. 22, no. 7, pp. 2676–2687, 2013.
 
+23.D. Tao, L. Jin, W. Liu, and X. Li, “Hessian regularized support vector machines for mobile image annotation on the cloud,” *IEEE Trans. Multimedia*, vol. 15, no. 4, pp. 833–844, 2013.
 
+24.W. Liu, X. Ma, Y. Zhou, D. Tao, and J. Cheng, “p-Laplacian regularization for scene recognition,” *IEEE Trans. Cybernet*., vol. 49, no. 8, pp. 2927–2940, 2018.
 
+25.W. Allegretto and H. Y. Xi, “A Picone’s identity for the p-Laplacian and applications,” *Nonlin. Anal.: Theory, Meth. Appl*., vol. 32, no. 7, pp. 819–830, 1998.
 
+26.W. Liu, Z. J. Zha, Y. Wang, K. Lu, and D. Tao, “p-Laplacian regularized sparse coding for human activity recognition,” *IEEE Trans. Industr. Electr*., vol. 63, no. 8, pp. 5120–5129, 2016.
 
 ## 参考文献
 
@@ -3210,6 +3073,8 @@ SAT-6 [65] 数据集由来自六类地表覆盖的共 405,000 张遥感图像组
 25.W. Allegretto and H. Y. Xi, “A Picone’s identity for the p-Laplacian and applications,” *Nonlin. Anal.: Theory, Meth. Appl*., vol. 32, no. 7, pp. 819–830, 1998.
 
 26.W. Liu, Z. J. Zha, Y. Wang, K. Lu, and D. Tao, “p-Laplacian regularized sparse coding for human activity recognition,” *IEEE Trans. Industr. Electr*., vol. 63, no. 8, pp. 5120–5129, 2016.
+
+
 
 27.I. Goodfellow, J. Pouget-Abadie, M. Mirza, B. Xu, D. Warde-Farley, S. Ozair, and Y. Bengio, “Generative adversarial nets,” in *Advances in Neural Information Processing Systems*, pp. 2672–2680, 2014.
 
@@ -3279,10 +3144,6 @@ SAT-6 [65] 数据集由来自六类地表覆盖的共 405,000 张遥感图像组
 
 60.X. Ma, W. Liu, S. Li, D. Tao, and Y. Zhou, “Hypergraph p-Laplacian regularization for remotely sensed image recognition,” *IEEE Trans. Geosci. Remote Sens*., vol. 57, no. 3, pp. 1585–1595, 2018.
 
-
-
-
-
 61.D. I. Shuman, S. K. Narang, P. Frossard, A. Ortega, and P. Vandergheynst, “The emerging field of signal processing on graphs: Extending high-dimensional data analysis to networks and other irregular domains,” *IEEE Sig. Process. Magaz*., vol. 30, no. 3, pp. 83–98, 2013.
 
 62.J. Bruna, W. Zaremba, A. Szlam, and Y. LeCun, “Spectral networks and locally connected networks on graphs,” in *Proc. IEEE Int. Conf. Learning Representations*, 2013.
@@ -3310,25 +3171,33 @@ Chongyi Li^(\*,||), Huazhu Fu^(†,\*\*), Miao Yang^(‡,††), Runmin Cong^(�
 \* *School of Electrical and Information Engineering, Tianjin University, Tianjin 300072, China*  
 ^(†) *Inception Institute of Artificial Intelligence (IIAI), Abu Dhabi, UAE*  
 ^(‡) *School of Electronic Engineering, Jiangsu Ocean University, Lianyungang 222005, China*  
-^(§) *Institute of Information Science, Beijing Jiaotong University, Beijing 100044, China*  
+^(§) *Institute of Information Science, Beijing Jiaotong University, Beijing 100044, China*
+
+
+
 ^(¶) *Beijing Key Laboratory of Advanced Information Science and Network Technology, Beijing Jiaotong University, Beijing 100044, China*  
+
 ^(||)*lichongyi@tju.edu.cn*  
+
 ^(\*\*)*hzf@ieee.org*  
+
 ^(††) *lemonmiao@gmail.com*  
+
 ^(‡‡) *rmcong@bjtu.edu.cn*  
+
 ^(§§) *guochunle@tju.edu.cn*
 
-**Abstract**
+# Abstract
 
-视网膜图像已被临床医生广泛用于眼部疾病的早期诊断。然而，由于眼部病变和不完善的成像过程，视网膜图像的质量往往在临床上不令人满意。视网膜图像上的非均匀或不良光照阻碍了病理信息的获取，并进一步影响眼科医生的诊断。为了解决这些问题，我们提出了一种基于深度学习的视网膜图像非均匀光照去除方法 NuI-Go，该方法结合了卷积神经网络的强大能力与非均匀光照视网膜图像的特性。具体而言，所提出的 NuI-Go 由三个递归非局部编码器-解码器残差块（NEDRBs）组成，用于逐步增强退化的视网膜图像。每个 NEDRB 包含一个特征编码模块，用于捕获分层特征表示，一个非局部上下文模块，用于建模上下文信息，以及一个特征解码模块，用于恢复细节和空间维度。广泛的实验结果表明，所提出的方法在合成数据集和真实视网膜图像上均优于最先进的方法。此外，我们还进一步证明了所提出方法在提高视网膜血管分割性能方面的优势。
+视网膜图像已被临床医生广泛用于眼部疾病的早期诊断。然而，由于眼部病变和不完善的成像过程，视网膜图像的质量往往在临床上不令人满意。视网膜图像上的非均匀或不良光照阻碍了病理信息的获取，并进一步影响眼科医生的诊断。为了解决这些问题，我们提出了一种基于深度学习的视网膜图像非均匀光照去除方法 `NuI-Go`，该方法结合了卷积神经网络的强大能力与非均匀光照视网膜图像的特性。具体而言，所提出的 `NuI-Go` 由三个递归非局部编码器-解码器残差块（`NEDRBs`）组成，用于逐步增强退化的视网膜图像。每个 `NEDRB` 包含一个特征编码模块，用于捕获分层特征表示，一个非局部上下文模块，用于建模上下文信息，以及一个特征解码模块，用于恢复细节和空间维度。广泛的实验结果表明，所提出的方法在合成数据集和真实视网膜图像上均优于最先进的方法。此外，我们还进一步证明了所提出方法在提高视网膜血管分割性能方面的优势。
 
 **Keywords:** retinal image, image enhancement, quality degradation, deep learning, vessel segmentation, non-uniform illumination
 
-### 1.Introduction
+## 1.Introduction
 
-视网膜图像已被临床医生广泛用于眼部疾病的早期诊断，包括青光眼、糖尿病视网膜病变、病理性近视等 [1]。然而，由于成像过程不完善，视网膜图像常遭受非均匀或不良光照问题 [2, 3]。这种质量退化的视网膜图像严重影响眼科医生的诊断，也影响视网膜疾病的计算机辅助分析性能 [4]，例如视网膜血管分割、视盘分割和血管结构识别。然而，传统的图像增强方法，如 HE、CLAHE [5]、Gamma 校正、多尺度 Retinex 等，不能直接扩展到视网膜图像。因此，设计视网膜图像的非均匀或不良光照恢复方法具有重要意义。
+视网膜图像已被临床医生广泛用于眼部疾病的早期诊断，包括青光眼、糖尿病视网膜病变、病理性近视等 [1]。然而，由于成像过程不完善，视网膜图像常遭受非均匀或不良光照问题 [2, 3]。这种质量退化的视网膜图像严重影响眼科医生的诊断，也影响视网膜疾病的计算机辅助分析性能 [4]，例如视网膜血管分割、视盘分割和血管结构识别。然而，传统的图像增强方法，如 `HE`、`CLAHE` [5]、`Gamma` 校正、多尺度 `Retinex` 等，不能直接扩展到视网膜图像。因此，设计视网膜图像的非均匀或不良光照恢复方法具有重要意义。
 
-近年来，已提出了一些视网膜图像增强方法。然而，从传统方法到基于深度学习的方法，现有方法的性能都不令人满意。与现有的视网膜图像增强方法不同，我们的方法结合了深度网络的能力与图像物理形成模型来研究视网膜图像非均匀光照问题，从而实现更合理、更可靠的增强性能。在 Fig. 1 中，我们展示了我们 NuI-Go 的两个示例结果。如图所示，非均匀光照严重影响视网膜图像的视觉质量并遮盖了一些关键信息，如血管。我们的 NuI-Go 可以有效校正视网膜图像的光照，同时很好地保留其细节和颜色。本工作的贡献如下：
+近年来，已提出了一些视网膜图像增强方法。然而，从传统方法到基于深度学习的方法，现有方法的性能都不令人满意。与现有的视网膜图像增强方法不同，我们的方法结合了深度网络的能力与图像物理形成模型来研究视网膜图像非均匀光照问题，从而实现更合理、更可靠的增强性能。在 `Fig. 1` 中，我们展示了我们 `NuI-Go` 的两个示例结果。如图所示，非均匀光照严重影响视网膜图像的视觉质量并遮盖了一些关键信息，如血管。我们的 `NuI-Go` 可以有效校正视网膜图像的光照，同时很好地保留其细节和颜色。本工作的贡献如下：
 
 ![](img/p237-1.jpg)
 
@@ -3342,23 +3211,19 @@ Chongyi Li^(\*,||), Huazhu Fu^(†,\*\*), Miao Yang^(‡,††), Runmin Cong^(�
 
 —得益于新颖的网络架构和所提出的基于物理模型的非均匀光照合成方法，我们的方法在视网膜图像非均匀光照去除方面取得了令人印象深刻的性能，并在视网膜图像血管分割方面具有显著优势。
 
-### 2.Related Work
+## 2.Related Work
 
 近年来，已提出了大量方法来提高退化图像的质量。在本章中，我们主要关注图像光照增强方法，可分为传统图像增强方法和视网膜图像增强方法。
 
-#### 2.1 Traditional image enhancement approaches
+### 2.1 Traditional image enhancement approaches
 
+`HE`-based methods \[6–11\] 调整图像的直方图分布以改善其对比度。然而，`HE`-based 方法由于不恰当地改变图像的动态范围而倾向于过度增强图像，且某些局部 `HE` 方法耗时。不同于基于 `HE` 的方法，`Retinex` 理论 \[12\] 假设图像可分解为反射率和光照，得益于其物理解释，已被广泛应用于低光图像增强。反射分量通常被视为增强后的图像 \[13–15\]。在文献 \[15\] 中，提出了一种基于 `Retinex` 的非均匀光照增强方法，在增强细节的同时保持自然性。`Fu` *et al*. \[16\] 提出了一种加权变分模型以同时估计输入图像的反射率和光照。`Guo` *et al*. \[17\] 通过在 `RGB` 通道中搜索每个像素的最大强度来估计粗略的光照图，然后通过结构先验细化粗略的光照图。根据新的 `Retinex` 模型，`Li` et *al*. \[18\] 通过求解一个优化问题来估计光照图。然而，由于真实世界高质量图像与反射分量之间存在差距，基于 `Retinex` 的图像增强存在一些局限性。因此，基于 `Retinex` 的方法的结果看起来不自然且不真实。
 
+过去十年见证了图像光照增强的兴趣日益增加，尤其是在深度学习的出现。大部分基于深度学习的方法严重依赖于配对数据进行监督训练 \[19–27\]。通常，这些配对数据是通过合成生成的。在文献 \[28\] 中，使用了随机 `Gamma` 校正来模拟低光图像。利用合成图像块，提出了一种自动编码器网络来建立低光图像与其对应正常图像之间的关系 \[28\]。`Chen` *et al*. \[29\] 通过改变曝光时间和 `ISO` 的设置获得了配对的低/正常光图像数据集。然后，在该合成数据集上训练了一个结合 `Retinex` 理论和深度网络的深度 `RetinexNet`。`Li` *et al*. \[30\] 提出了一种用于弱光图像增强的深度模型，称为 `LightenNet`。`LightenNet` 以弱光图像作为输入并输出其光照图，随后基于 `Retinex` 模型获得增强图像。为了实现训练数据，作者根据 `Retinex` 模型对清晰图像进行降质。`Ren` *et al*. \[31\] 提出了一种通过深度混合网络进行低光图像增强的方法，该方法由两个子网络组成，用于学习清晰图像的全局内容和显著结构。此外，作者使用了来自 `MIT-Adobe FiveK` 数据集 \[32\] 的训练数据。`Wang` *et al*. \[33\] 提出了一种欠曝光照片增强网络，通过估计光照图，其中收集了一个新的欠曝光图像数据集，包括 3,000 张欠曝光图像及其对应的润色参考图像。配对训练数据存在一些局限性，例如光照条件和场景有限、理想假设和不准确的形成模型、需要复杂的照片编辑专业知识等。在真实世界条件下，在此类合成数据上训练的深度模型往往会引入令人讨厌的伪影和色偏 \[34\]。
 
+### 2.2 Retinal image enhancement approaches
 
-
-HE-based methods \[6–11\] 调整图像的直方图分布以改善其对比度。然而，HE-based 方法由于不恰当地改变图像的动态范围而倾向于过度增强图像，且某些局部 HE 方法耗时。不同于基于 HE 的方法，Retinex 理论 \[12\] 假设图像可分解为反射率和光照，得益于其物理解释，已被广泛应用于低光图像增强。反射分量通常被视为增强后的图像 \[13–15\]。在文献 \[15\] 中，提出了一种基于 Retinex 的非均匀光照增强方法，在增强细节的同时保持自然性。Fu *et al*. \[16\] 提出了一种加权变分模型以同时估计输入图像的反射率和光照。Guo *et al*. \[17\] 通过在 `RGB` 通道中搜索每个像素的最大强度来估计粗略的光照图，然后通过结构先验细化粗略的光照图。根据新的 Retinex 模型，Li et *al*. \[18\] 通过求解一个优化问题来估计光照图。然而，由于真实世界高质量图像与反射分量之间存在差距，基于 Retinex 的图像增强存在一些局限性。因此，基于 Retinex 的方法的结果看起来不自然且不真实。
-
-过去十年见证了图像光照增强的兴趣日益增加，尤其是在深度学习的出现。大部分基于深度学习的方法严重依赖于配对数据进行监督训练 \[19–27\]。通常，这些配对数据是通过合成生成的。在文献 \[28\] 中，使用了随机 Gamma 校正来模拟低光图像。利用合成图像块，提出了一种自动编码器网络来建立低光图像与其对应正常图像之间的关系 \[28\]。Chen *et al*. \[29\] 通过改变曝光时间和 ISO 的设置获得了配对的低/正常光图像数据集。然后，在该合成数据集上训练了一个结合 Retinex 理论和深度网络的深度 `RetinexNet`。Li *et al*. \[30\] 提出了一种用于弱光图像增强的深度模型，称为 `LightenNet`。`LightenNet` 以弱光图像作为输入并输出其光照图，随后基于 Retinex 模型获得增强图像。为了实现训练数据，作者根据 Retinex 模型对清晰图像进行降质。Ren *et al*. \[31\] 提出了一种通过深度混合网络进行低光图像增强的方法，该方法由两个子网络组成，用于学习清晰图像的全局内容和显著结构。此外，作者使用了来自 `MIT-Adobe FiveK` 数据集 \[32\] 的训练数据。Wang *et al*. \[33\] 提出了一种欠曝光照片增强网络，通过估计光照图，其中收集了一个新的欠曝光图像数据集，包括 3,000 张欠曝光图像及其对应的润色参考图像。配对训练数据存在一些局限性，例如光照条件和场景有限、理想假设和不准确的形成模型、需要复杂的照片编辑专业知识等。在真实世界条件下，在此类合成数据上训练的深度模型往往会引入令人讨厌的伪影和色偏 \[34\]。
-
-#### 2.2 Retinal image enhancement approaches
-
-最近，一些专门为视网膜图像增强设计的方法 \[3, 4, 35–37\] 已被提出。Feng *et al*. \[35\] 提出了一种基于 `Coutourlet` 变换的视网膜图像对比度增强方法，该方法通过非线性函数修改相应子带中的 `Contourlet` 系数。成功的原因可能是 `Contourlet` 变换由于其各向异性和方向性，在表示边缘方面比小波具有更好的性能，因此非常适合多尺度边缘增强。Saha *et al*. \[36\] 提出了一种两步方法来处理视网膜图像的非均匀或较差光照，包括光照校正算法和颜色恢复算法。主观和客观实验表明，该方法不会产生虚假颜色或伪影，并且可以提高自动化病理检测和分类的性能。Zhou *et al*. \[3\] 提出了一种基于亮度和对比度调整的视网膜图像增强方法。具体而言，通过对 `HSV`（色调、饱和度和明度）颜色空间中的值通道进行 Gamma 校正获得的亮度增益矩阵分别用于增强 `R`、`G` 和 `B`（红、绿、蓝）通道。然后在 `CIE Lab` 颜色空间的亮度通道中通过 `CLA-HE` \[5\] 增强对比度。Cheng *et al*. \[4\] 提出了一种结构保持的引导视网膜图像滤波器，称为 `SGRIF`。所提出的 `SGRIF` 由全局结构迁移步骤和全局边缘保持平滑步骤组成。
+最近，一些专门为视网膜图像增强设计的方法 \[3, 4, 35–37\] 已被提出。`Feng` *et al*. \[35\] 提出了一种基于 `Coutourlet` 变换的视网膜图像对比度增强方法，该方法通过非线性函数修改相应子带中的 `Contourlet` 系数。成功的原因可能是 `Contourlet` 变换由于其各向异性和方向性，在表示边缘方面比小波具有更好的性能，因此非常适合多尺度边缘增强。`Saha` *et al*. \[36\] 提出了一种两步方法来处理视网膜图像的非均匀或较差光照，包括光照校正算法和颜色恢复算法。主观和客观实验表明，该方法不会产生虚假颜色或伪影，并且可以提高自动化病理检测和分类的性能。`Zhou` *et al*. \[3\] 提出了一种基于亮度和对比度调整的视网膜图像增强方法。具体而言，通过对 `HSV`（色调、饱和度和明度）颜色空间中的值通道进行 `Gamma` 校正获得的亮度增益矩阵分别用于增强 `R`、`G` 和 `B`（红、绿、蓝）通道。然后在 `CIE Lab` 颜色空间的亮度通道中通过 `CLA-HE` \[5\] 增强对比度。`Cheng` *et al*. \[4\] 提出了一种结构保持的引导视网膜图像滤波器，称为 `SGRIF`。所提出的 `SGRIF` 由全局结构迁移步骤和全局边缘保持平滑步骤组成。
 
 此外，这种方法基于衰减和散射模型重建退化的视网膜图像。在文献 \[37\] 中，提出了一种非均匀光照眼底图像增强方法，该方法基于白内障物理模型减少眼底图像的模糊性，并以无伪影为前提增强图像以实现对比度完善。
 
@@ -3370,11 +3235,7 @@ HE-based methods \[6–11\] 调整图像的直方图分布以改善其对比度�
 
 ### 3.1 Our NuI-Go network
 
-
-
-
-
-我们建议以多阶段的方式处理视网膜图像非均匀光照问题，每个阶段都使用简单而有效的 `NEDRB`。请注意，添加更多阶段（`T` > `3`）带来的性能提升会变得边际化，但会以更长的训练和测试时间为代价。因此，我们选择第三阶段的结果作为最终结果。逐步结果见 Fig. 3。在每个阶段，`NEDRB` 的输入是前一个 `NEDRB` 的增强结果。这样，我们的 `NuI-Go` 可以逐步增强输入并多样化训练数据，这降低了训练大型模型的难度并提高了网络的泛化能力，从而实现更好的非均匀光照去除性能。此外，这种递归方式相比之前的网络具有以下几个优势：（1）计算高效，适用于实际应用；（2）易于训练，无需花哨的训练策略；（3）在实际应用中允许在任意阶段停止推理（即，我们的方法在推理时间和精度之间提供权衡）。下面我们解释所提出的 `NEDRB` 和关键的非局部单元。
+我们建议以多阶段的方式处理视网膜图像非均匀光照问题，每个阶段都使用简单而有效的 `NEDRB`。请注意，添加更多阶段（`T` > `3`）带来的性能提升会变得边际化，但会以更长的训练和测试时间为代价。因此，我们选择第三阶段的结果作为最终结果。逐步结果见 `Fig. 3`。在每个阶段，`NEDRB` 的输入是前一个 `NEDRB` 的增强结果。这样，我们的 `NuI-Go` 可以逐步增强输入并多样化训练数据，这降低了训练大型模型的难度并提高了网络的泛化能力，从而实现更好的非均匀光照去除性能。此外，这种递归方式相比之前的网络具有以下几个优势：（1）计算高效，适用于实际应用；（2）易于训练，无需花哨的训练策略；（3）在实际应用中允许在任意阶段停止推理（即，我们的方法在推理时间和精度之间提供权衡）。下面我们解释所提出的 `NEDRB` 和关键的非局部单元。
 
 ![](img/p241-1.jpg)
 
@@ -3394,7 +3255,7 @@ HE-based methods \[6–11\] 调整图像的直方图分布以改善其对比度�
 
 虽然非局部自相似性在传统的图像恢复任务中已证明具有良好的性能，但在基于深度学习的图像增强中，非局部特征的有效性研究甚少。此外，视网膜图像具有结构化纹理和相似的颜色，这为通过上下文校正非均匀光照区域提供了强先验。
 
-因此，我们没有采用传统编码器-解码器网络中用于提取局部上下文信息的多尺度卷积，而是将非局部单元 [42] 整合到我们的编码器-解码器结构中，将感受野扩大到整个图像。我们的直觉是将非局部特征融入局部编码器-解码器特征，以构建结合非局部和局部信息的 richer 特征表示。如 Fig. 2(右) 所示，非局部单元将某一位置的响应计算为所有空间位置特征的加权和，其中“*H* × *W* × 64”表示特征图 `X` 的高度 × 宽度 × 64 通道（在注明处进行重塑）。具体来说，它可以通过简单的卷积、softmax 等实现（对于嵌入高斯版本的非局部单元），其中未知参数可以自适应学习。利用非局部上下文信息捕获长程特征相关性的优势，我们的网络可以有效地聚焦于非均匀光照区域，并通过长程依赖（上下文建模）预测潜在的颜色和细节。
+因此，我们没有采用传统编码器-解码器网络中用于提取局部上下文信息的多尺度卷积，而是将非局部单元 [42] 整合到我们的编码器-解码器结构中，将感受野扩大到整个图像。我们的直觉是将非局部特征融入局部编码器-解码器特征，以构建结合非局部和局部信息的 richer 特征表示。如 `Fig. 2`(右) 所示，非局部单元将某一位置的响应计算为所有空间位置特征的加权和，其中“*H* × *W* × 64”表示特征图 `X` 的高度 × 宽度 × 64 通道（在注明处进行重塑）。具体来说，它可以通过简单的卷积、softmax 等实现（对于嵌入高斯版本的非局部单元），其中未知参数可以自适应学习。利用非局部上下文信息捕获长程特征相关性的优势，我们的网络可以有效地聚焦于非均匀光照区域，并通过长程依赖（上下文建模）预测潜在的颜色和细节。
 
 在我们的 `NuI-Go` 中，下采样层由 2 × 最大池化实现，而上采样层由核大小为 3 × 3、步长为 2 的转置卷积实现。所有卷积层均具有 3 × 3 的核大小并输出 64 个特征图，除结果前的卷积层外，这些卷积层的核大小为 1 × 1 并输出 3 个残差图。我们在每个卷积层前填充零以确保结果与输入图像大小相同。对于嵌入高斯版本的非局部单元，我们遵循 [42] 的实现。为了计算效率，非局部单元中的每个卷积层核大小均为 1 × 1。
 
@@ -3416,17 +3277,13 @@ HE-based methods \[6–11\] 调整图像的直方图分布以改善其对比度�
 
 ### 4.1 Non-uniform illumination retinal image synthesis
 
-在现实世界中，几乎不可能获得足够多的具有非均匀光照的视网膜图像与其对应清晰视网膜图像的配对。为了训练所提出的 `NuI-Go`，我们通过结合视网膜图像的领域知识与人眼晶状体衰减和散射模型来近似视网膜图像的非均匀光照退化模型。受人眼晶状体衰减和散射模型 [46] 的启发，当仅考虑光照效应时，视网膜图像退化可简化为 Retinex 模型 [47]：
+在现实世界中，几乎不可能获得足够多的具有非均匀光照的视网膜图像与其对应清晰视网膜图像的配对。为了训练所提出的 `NuI-Go`，我们通过结合视网膜图像的领域知识与人眼晶状体衰减和散射模型来近似视网膜图像的非均匀光照退化模型。受人眼晶状体衰减和散射模型 [46] 的启发，当仅考虑光照效应时，视网膜图像退化可简化为 `Retinex` 模型 [47]：
 
 ![](img/p244-1.png)
 
-
-
-
-
 其中 (`i`, `j`) 表示像素坐标；`I` 是观测到的视网膜图像；`R` 是视网膜图像的反射率（即期望结果）；而 `L` 是眼底相机闪光照明。 该简化模型可以描述为观测到的视网膜图像 `I` 被分解为反射率 `R` 与照明掩膜 `L` 的乘积。 因此，在本章中，我们期望从观测到的非均匀照明视网膜图像 `I` 中估计视网膜图像的反射率 `R`。
 
-根据公式 (2)，给定清晰的视网膜图像 `R`，需要一个非均匀照明掩膜 `L` 来生成非均匀照明视网膜图像 `I`。 我们首先将视网膜图像转换到 `Lab` 颜色空间，并在亮度通道中通过不同阈值搜索良好照明区域。 当像素值大于当前阈值时，将其设为 1。 或者这些像素通过 Gamma 校正作为非均匀照明像素，随机 `γ` 值范围从 0.1 到 0.5。 其目的是保留良好照明区域的原始亮度，同时使低光区域变暗作为非均匀照明掩膜。 这样操作的一个潜在原因是视网膜图像中的某些区域很少受非均匀或不良照明影响，例如视杯区域。 在本章中，我们经验性地使用五个阈值 `[0.1:0.1:0.5]`。
+根据公式 (2)，给定清晰的视网膜图像 `R`，需要一个非均匀照明掩膜 `L` 来生成非均匀照明视网膜图像 `I`。 我们首先将视网膜图像转换到 `Lab` 颜色空间，并在亮度通道中通过不同阈值搜索良好照明区域。 当像素值大于当前阈值时，将其设为 1。 或者这些像素通过 `Gamma` 校正作为非均匀照明像素，随机 `γ` 值范围从 0.1 到 0.5。 其目的是保留良好照明区域的原始亮度，同时使低光区域变暗作为非均匀照明掩膜。 这样操作的一个潜在原因是视网膜图像中的某些区域很少受非均匀或不良照明影响，例如视杯区域。 在本章中，我们经验性地使用五个阈值 `[0.1:0.1:0.5]`。
 
 之后，生成粗糙的非均匀照明掩膜。 考虑到视网膜图像通常具有平滑且区域性的非均匀照明，我们通过简单的 8 × 下采样和上采样操作对粗糙的非均匀照明掩膜进行平滑处理。 这里，其他平滑方法也可以使用。
 
@@ -3434,13 +3291,15 @@ HE-based methods \[6–11\] 调整图像的直方图分布以改善其对比度�
 
 ### 4.2 训练和实现细节
 
-我们从 Kaggle 糖尿病视网膜病变检测挑战赛 (KDRDC) 公开可用的训练集中收集了 2500 张良好照明的视网膜图像^(1)，该数据集提供了在各种成像条件下拍摄的视网膜图像。 按照之前提到的方法，我们生成了 12,500 张非均匀照明视网膜图像并将其调整为 256 × 256 以适应我们有限的内存。 我们将这些合成图像随机分为两部分：10,000 张用于训练，其余作为测试数据集（记为 Test A）。
+我们从 Kaggle 糖尿病视网膜病变检测挑战赛 (`KDRDC`) 公开可用的训练集中收集了 2500 张良好照明的视网膜图像^(1)，该数据集提供了在各种成像条件下拍摄的视网膜图像。 按照之前提到的方法，我们生成了 12,500 张非均匀照明视网膜图像并将其调整为 256 × 256 以适应我们有限的内存。 我们将这些合成图像随机分为两部分：10,000 张用于训练，其余作为测试数据集（记为 `Test A`）。
 
 ![](img/p245-1.jpg)
 
+
+
 **图 4：**不同方法下非均匀照明合成的视觉示例。 (a) 我们提出的基于物理模型和领域知识的非均匀合成方法。 从左到右分别为良好照明的视网膜图像、平滑后的照明掩膜和合成视网膜图像。 不同颜色代表照明掩膜中的不同值。 (b) 基于随机噪声的传统非均匀照明合成方法。 从左到右分别为放大细节、我们的细节（上）和传统方法的细节（下）、用于模拟非均匀照明的随机噪声图，以及通过随机噪声合成的视网膜图像。 很明显，传统的合成方法忽略了视网膜图像的特征，这导致合成视网膜图像不完美。 相比之下，我们的方法生成了具有非均匀照明的逼真视网膜图像，尤其是在视杯区域。
 
-我们使用 `TensorFlow` 在一台配备 Intel(R) `i7 6700` CPU、32GB RAM 和 NVIDIA GeForce GTX 1080Ti GPU 的 PC 上实现网络。 在训练期间，采用批量大小为 8。 滤波器权重通过 `Xavier` 初始化。 我们使用 `ADAM` 进行网络优化，并将学习率固定为 `1e^(-4)`。 我们在 `VGG-19` 网络的层 `relu5_4` 处计算感知损失。 权重 `λ` 经验性地设为 100。 `NEDRB` 和 `Nul-Go` 处理 256 × 256 大小的图像的运行时间分别为 0.088 s 和 0.34 s，这对于实际应用来说很快。
+我们使用 `TensorFlow` 在一台配备 Intel(R) `i7 6700` CPU、32GB RAM 和 NVIDIA GeForce GTX 1080Ti GPU 的 PC 上实现网络。 在训练期间，采用批量大小为 8。 滤波器权重通过 `Xavier` 初始化。 我们使用 `ADAM` 进行网络优化，并将学习率固定为 `1e^(-4)`。 我们在 `VGG-19` 网络的层 `relu5_4` 处计算感知损失。 权重 `λ` 经验性地设为 100。 `NEDRB` 和 `NuI-Go` 处理 256 × 256 大小的图像的运行时间分别为 0.088 s 和 0.34 s，这对于实际应用来说很快。
 
 ### 4.3 评估
 
@@ -3459,10 +3318,6 @@ HE-based methods \[6–11\] 调整图像的直方图分布以改善其对比度�
 我们进一步使用全参考图像质量评估指标 PSNR 和 SSIM [48] 对 **Test A** 进行定量评估，因为相应的真实图像是可用的。 较高的 PSNR 值表示像素值方面的相似性。 较高的 SSIM 值表示结果在结构特性方面更接近真实值。 **Test** A 上的平均定量分数报告在 表 1 中。
 
 如 表 1 所示，我们的 NuI-Go 在所有指标上均达到最佳性能。 此外，我们的方法在合成数据集上的平均定量分数方面比比较方法（CLAHE [5]、LIME [17]、SGF [4]）具有压倒性优势。 例如，我们的方法的平均 PSNR 值为 32.2668，而第二好的值（LIME [17] 的结果）仅为 16.3671。 对于平均 SSIM 值，其趋势与 PSNR 类似。 这样的结果表明所提出的非均匀照明去除方法的有效性。
-
-
-
-
 
 对于 `Test B`，我们采用常用的无参考图像质量评估算法 `NIQE` [49] 来评估感知质量。`NIQE` 分数越小，表示感知质量越好。此外，我们还进行了一项用户研究，以提供关于主观质量的真实反馈。我们首先从 `Test B` 中随机选择 50 张图像，然后邀请 10 名具有图像增强专业知识的参与者对不同方法的处理结果进行 1 到 5 的排序，其中 1 为最差质量，5 为最佳质量。该用户研究重复进行五次。`NIQE` [49] 和用户研究的平均值如 Table 2 所示。
 
@@ -3522,55 +3377,87 @@ HE-based methods \[6–11\] 调整图像的直方图分布以改善其对比度�
 
 3. M. Zhou, K. Jin, S. Wang, J. Ye, and D. Qiao, “Color retinal image enhancement based on luminosity and contrast adjustment,” *IEEE Trans. Biomed. Eng*., vol. 65, no. 3, pp. 521–527, 2018.
 
-
-
-
-
 ## 参考文献
 
 4.J. Cheng, Z. Li, Z. Gu, H. Fu, D. Wong, and J. Liu, “Structure-preserving guided retinal image filtering and its application for optic disc analysis,” *IEEE Trans. Med. Imag*., vol. 37, no. 11, pp. 2536–2546, 2018.
+
 5.K. Zuiderveld, *Contrast Limited Adaptive Histogram Equalization*, Academic Press, San Diego, 1995.
+
 6.D. Coltuc, P. Bolon, and J. Chassery, “Exact histogram specification,” *IEEE Trans. Image Process*., vol. 15, no. 5, pp. 1143–1152, 2006.
+
 7.H. Ibrahim and N. Kong, “Brightness preserving dynamic histogram equalization for image contrast enhancement,” *IEEE Trans. Consum. Electron*., vol. 53, no. 4, pp. 1752–1758, 2007.
+
 8.J. Stark, “Adaptive image contrast enhancement using generalizations of histogram equalization,” *IEEE Trans. Image Process*., vol. 9, no. 5, pp. 889–896, 2000.
+
 9.T. Celik and T. Tjahjadi, “Contextual and variational contrast enhancememt,” *IEEE Trans. Image Process*., vol. 20, no. 12, pp. 3431–3441, 2001.
+
 10.C. Lee, C. Lee, and C. Kim, “Contrast enhancement based on layered difference representation of 2d histograms,” *IEEE Trans. Image Process*., vol. 22, no. 12, pp. 5372–5384, 2013.
+
 11.C. Li, J. Guo, R. Cong, Y. Pang, and B. Wang, “Underwater image enhancement by dehazing with minimum information loss and histogram distribution prior,” *IEEE Trans. Image Process*., vol. 25, no. 12, pp. 5664–5677, 2016.GF
+
 12.E. Lee, “The retinex theory of color vision,” *Scientific American*, vol. 237, no. 6, pp.108–128, 1977.
+
 13.Y. Li and M. Brown, “Single image layer separation using relative smoothness,” in *Proc. IEEE Int. Conf. Comput. Vis. Pattern Rec. (CVPR)*, 2014, pp. 2752–2759.
+
 14.C. Rother, M. Kiefei, L. Zhang, B. Scholkopf, and P. Gehler, “Recovering intrinsic images with a global sparsity prior on reflectance,” in *Advances in Neural Inf. Process. Sys*., 2011, pp. 765–773,.
+
 15.S. Wang, J. Zheng, H. Hu, and B. Li, “Naturalness preserved enhancement algorithm for non-uniform illumination images,” *IEEE Trans. Image Process*., vol. 22, no. 9, pp. 3538–3548, 2013.
+
 16.X. Fu, D. Zeng, Y. Huang, X. Zhang, and X. Ding, “A weighted variational model for simultaneous reflectance and illumination estimation,” in *Proc. IEEE Int. Conf. Comput. Vis. Pattern Rec. (CVPR)*, 2016, pp. 2782–2790.
+
 17.X. Guo, Y. Li, and H. Ling, “LIME: Low-light image enhancement via illumination map estimation,” *IEEE Trans. Image Process*., vol. 26, no. 2, pp. 982–993, 2017.
+
 18.M. Li, J. Liu, W. Yang, X. Sun, and Z. Guo, “Structure-revealing low-light image enhancement via robust retinex model,” *IEEE Trans. Image Process*., vol. 27, no. 6, pp. 2828–2841, 2018.
+
 19.C. Li, C. Guo, J. Guo, P. Han, H. Fu, and R. Cong, “PDR-Net: Perception-inspired single image dehazing network with refinement,” *IEEE Trans. Image Multimedia*, vol. 22, no. 3, pp. 704–716, 2019.
+
 20.H. Fu, J. Cheng, Y. Xu, D. Wong, J. Liu, and X. Cao, “Joint optica disc and cup segmentation based on multi-lable deep network and polar transformation,” *IEEE Trans. Med. Imag*., vol. 37, no. 7, pp. 1597–1605, 2018.
+
 21.H. Fu, J. Cheng, Y. Xu, C. Zhang, D. Wong, J. Liu, and X. Cao, “Disc-aware ensemble network for glaucoma screen from fundus image,” *IEEE Trans. Med. Imag*., vol. 37, no. 11, pp. 2493–2501, 2018.
+
+
+
 22.C. Li, R. Cong, J. Hou, S. Zhang, Y. Qian, and S. Kwong, “Nested network with two-stream pyramid for salient object detection in optical remote sensing images,” *IEEE Trans. Geosci. Remote Sens*., vol. 57, no. 11, pp. 9156–9166, 2019.
+
 23.H. Fu, Y. Xu, S. Lin, D. Wong, B. Mani, M. Mahesh, T. Aung, and J. Liu, “Angle-closure detection in anterior segment OCT based on multi-level deep network,” *IEEE Trans. Cybernet*., 2019.
+
 24.C. Li, R. Cong, S. Kwong, J. Hou, H. Fu, G. Zhu, D. Zhang, and Q. Huang, “ASIF-Net: Attention steered interweave fusion network for RGB-D salient object detection,” *IEEE Trans. Cybernetics*, 2020.
+
 25.C. Guo, C. Li, J. Guo, R. Cong, H. Fu, and P. Han, “Hierarchical features driven residual learning for depth map super-resolution,” *IEEE Trans. Image Process*., vol. 28, no. 5, pp. 2425–2557, 2019.
+
 26.C. Li, S. Anwar, and F. Porikli, “Underwater scene prior inspired deep underwater image and video enhancement,” *Pattern Rec*., vol. 98, pp. 1–11, 2020.
+
 27.C. Li, J. Guo, F. Porikli, H. Fu, and Y. Pang, “A cascaded convolutional neural network for single image dehazing,” *IEEE Access*, vol. 6, pp. 24877–24887, 2018.
+
 28.K. Lore, A. Akintayo, and S. Sarkar, “LLNet: A deep autoencoder approach to natural low-light image enhancement,” *Pattern Rec*., vol. 61, pp. 650–662, 2017.
+
 29.W. Chen, W. Wang, W. Yang, and J. Liu, “Deep retinex decomposition for low-light enhancement,” in *Proc. British Mach. Vis. Conf. (CVPR)*, 2018, pp. 1–12.
+
 30.C. Li, J. Guo, F. Porikli, and Y. Pang, “LightenNet: A convolutional neural network for weakly illuminated image enhancement,” *Pattern Rec. Lett*., vol. 104, pp.15–22, 2018.
+
 31.W. Ren, S. Liu, L. Ma, Q. Xu, X. Xu, X. Cao, J. Du, and M. Yang, “Low-light image enhancement via a deep hybrid network,” *IEEE Trans. Image Process*., vol. 28, no. 9, pp. 4364–4375, 2019.
+
 32.V. Bychkovsky, S. Pairs, E. Chan, and F. Durand, “Learning photographic global tonal adjustment with a database of input/output image pairs,” in *Proc. IEEE Int. Conf. Comput. Vis. Pattern Rec. (CVPR)*, 2011, pp. 97–104.
+
 33.R. Wang, Q. Zhang, C. Fu, X. Shen, W. Zheng, and J. Jia, “Underexposed photo enhancement using deep illumination estimation,” in *Proc. IEEE Int. Conf. Comput. Vis. Pattern Rec. (CVPR)*, 2019, pp. 6849–6857,.
+
 34.C. Guo, C. Li, J. Guo, C. Loy, J. Hou, S. Kwong, and R. Cong, “Zero-reference deep curve estimation for low-light image enhancement,” in *Proc. IEEE Int. Conf. Comput. Vis. Pattern Rec. (CVPR)*, 2020.
+
 35.P. Feng, Y. Pan, B. Wei, W. Jin, and D. Mi, “Enhacing retinal image by the Contourlet transform,” *Pattern Rec. Lett*., vol. 28, no. 4, pp. 516–522, 2007.
+
 36.S. Saha, A. Fletcher, D. Xiao, and Y. Kanagasingam, “A novel method for authomated correction of non-uniform/poor illumination of retinal images without creating false artifacts,” *J. Vis. Commun. Image Rep*., vol. 51, pp. 95–103, 2018.
+
 37.A. Mitra, S. Roy, S. Soy, and S. Setua, “Enhancement and restoration of non-uniform illuminated Fundus image of retina obtained through thin layer of cataract,” *Comput. Methods Programs in Biomedicine*, vol. 156, pp. 169–178, 2018.
+
 38.W. Wu, K. Cao, C. Li, C. Qiao, and C. Loy, “Transgaga: Geometry-aware unsupervised image-to-image translation,” in *Proc. IEEE Int. Conf. Comput. Vis. Pattern Rec. (CVPR)*, 2019, pp. 8012–8021.
+
 39.Y. Deng, C. Loy, and X. Tang, “Aesthetic-driven image enhancement by adversarial learning,” in *Proc. Int. Conf. Multimedia (ACMMM)*, 2018, pp. 870–878.
+
 40.S. Gu, W. Zuo, S. Guo, Y. Chen, C. Chen, and L. Zhang, “Learning dynamic guidance for depth image enhancement,” in *Proc. IEEE Int. Conf. Comput. Vis. Pattern Rec. (CVPR)*, 2017, pp. 3769–3778.
+
 41.C. Dong, C. Loy, K. He, and X. Tang, “Image super-resolution using deep convolutional networks,” *IEEE Trans. Pattern Anal. Mach. Intell*., vol. 38, no. 2, pp. 295–307, 2015.
+
 42.X. Wang, R. Girshick, A. Gupta, and K. He, “Non-local neural networks,” in *Proc. IEEE Int. Conf. Comput. Vis. Pattern Rec. (CVPR)*, 2018, pp. 7794–7803.
-
-
-
-
 
 43.J. Johnson, A. Alahi, and L. Fei-Fei, “用于实时风格迁移和超分辨率的感知损失,” in *Proc. Eur. Conf. Comput. Vis. (ECCV)*, 2016, pp. 694–711.
 
@@ -3591,8 +3478,6 @@ HE-based methods \[6–11\] 调整图像的直方图分布以改善其对比度�
 51.J. Staal, M. Abramoff, M. Niemeijer, M. Viergever, and B. Ginneken, “彩色视网膜图像中基于脊线的血管分割,” *IEEE Trans. Med. Imag*., vol. 23, no. 4, pp. 501–509, 2004.
 
 52.A. Hoover, V. Kouznetsova, and M. Goldbaum, “通过匹配滤波器响应的分段阈值探测定位视网膜图像中的血管,” in *Proc. American Med. Inform. Asso. Symp*., 1998, pp. 931–935.
-
-________________________
 
 ^1 [`www.kaggle.eom/c/diabetic-retinopathy-//detection/`](https://www.kaggle.eom/c/diabetic-retinopathy-//detection/).
 
@@ -3626,15 +3511,13 @@ Tanveer Hussain^(\*,‡), Amin Ullah^(\*,§), Umair Haroon^(\*, ¶), Khan Muhamm
 
 在当今技术时代，用于不同诊断的医学图像自动分析日益增加。肿瘤是一种致命疾病，早期识别肿瘤与晚期识别相比有更大的治愈机会。提出了各种基于手工特征的肿瘤分割技术，以识别并根据其不同阶段对肿瘤进行分类。磁共振成像（MRI）数据已被广泛用于制作用于肿瘤分类或分割的不同算法。因此，MRI 数据在诊断人类脑肿瘤中发挥着至关重要的作用。检测和分类的传统方法通过人类视觉、感知和专家的检查手动观察 MRI 数据。因此，它取决于观察 MRI 数据的放射科医生的经验。很明显或不能保证 100%，专家做出的决定是正确的。此外，当处理大量数据时，基于专家的识别或分类被证明是不切实际的，而且不可重复。因此，使用计算机辅助工具来解决此类问题是动机所在。
 
-
-
-
-
 脑肿瘤分类大致分为两种类型，即正常、异常以及异常类别的进一步分类。在所提出的技術中，脑 MRI 是基于病理类型进行分类的，与简单的正常或异常二元分类相比，这非常困难且具有挑战性。研究人员提出了几种传统的机器学习和基于卷积神经网络（`CNN`）的方法来分割和识别脑肿瘤。基于深度学习的脑 MRI 分类包括两个主要步骤：特征提取和肿瘤分类。分类器的准确性取决于特征提取步骤，如果从 MRI 中提取的特征具有代表性并捕捉到肿瘤模式，则分类步骤会输出准确的结果。例如，在主流现有文献中，使用了几种重叠的特征提取方法来描述脑肿瘤，包括纹理特征 [1, 2]、强度值、局部二值模式、首阶统计 [3]、灰度共生矩阵（`GLCM`） [4]、小波变换 [5] 和 Gabor 滤波器 [6]。在一项研究工作 [6] 中，研究人员提出了基于新型 3D 体素分类的脑肿瘤分割技术，利用 Gabor 特征并以 `AdaBoost` 作为分类器。Selvaraj *et al*. [7] 提出了基于支持向量机（`SVM`）的 MRI 异常和正常切片分类器，其中包含首阶和二阶统计计算。Javed *et al*. [1] 将多类分类问题与模糊权重、低级纹理特征结合处理，并使用 `SVM` 进行分类。John *et al*. [5] 使用 `GLCM` 和离散小波变换进行肿瘤检测和分类，并声称其与空间域相比具有更好的准确性。低级特征和强度值能够有效表示纹理，但最近的研究证明，词袋表示在处理医学图像检索和 MRI 数据分类时具有判别性且更稳健 [8–11]。词袋技术本质上是用于文本检索领域，但可以准确地适应图像数据分析技术。基于补丁的词袋演示的重要概念实际上是强度直方图的通用形式。强度值或像素只是被图像补丁所取代，这就是显著区别。
+
+
 
 基于低级特征和词袋的检测和分类技术在处理这种精细类型的数据时并不足够成熟，无法给出令人满意的结果。因此，需要基于令人满意的结果，以便医生据此提出诊断或治疗建议。分类问题在处理 `CNNs` 时达到了更高且令人满意的准确率水平。因此，受 `CNNs` 有效使用的启发，我们提出的技術在医学成像领域中使用深度神经网络（`DNNs`），并以精确的准确率对脑肿瘤进行分类。因此，使分类领域完全自动化，从而使专家能够轻松判断病例是否处于危险状态或安全区域。除了高水平的准确性外，所提出的深度神经架构后接 `Softmax` 分类器高度压缩，从而产生非常低格式和尺寸的模型。该输出模型甚至可在智能手机和其他资源受限设备如 Raspberry Pi 等上使用。
 
-## 2.相关工作
+## 2. 相关工作
 
 放射科医生主要使用的一种分析人体内部组成的方法是基于 MRI 数据。通过 MRI 技术可以深入研究人体器官的细节、其结构以及微小组织的资讯。对各种危险疾病的治疗和识别非常有帮助。它被广泛用于脑肿瘤分割和分类为多等级或正常和异常类别。许多研究人员为这一研究领域做出了贡献，并且有大量正在进行的研究以协助放射科医生。研究人员为脑肿瘤分割和分类提供了相当数量的技术，并开发了工具和软件来协助放射科医生。一些研究人员提出了单独的分割或分类技术，甚至是两种策略的整合。近年来，研究人员提出了几种计算机辅助肿瘤检测和分类方法。例如，Arimura *et al*. [12] 提出了一种计算机辅助诊断（`CAD`）系统，以协助神经放射科医生检测脑部疾病。该方法分解为多个步骤，包括基于图像处理技术的特征提取和使用机器学习分类器进行分类。该方法纯粹基于低级特征和传统机器学习技术，准确率非常低。类似地，一些其他传统特征和基于机器学习的方法在文献 [13–15] 中提出。最近，一种基于 `SVM` 的分类器 [16] 使用首阶或二阶统计测量将脑肿瘤分类为不同等级。该系统在 21 名患者数据上实现的准确率为 80%，并将不同等级的肿瘤合并以测试算法。他们的训练步骤包括预分割的肿瘤部分，机器在这些部分上训练以分类肿瘤等级。
 
@@ -3642,11 +3525,7 @@ Tanveer Hussain^(\*,‡), Amin Ullah^(\*,§), Umair Haroon^(\*, ¶), Khan Muhamm
 
 我们提出的技術侧重于 Zulpe *et al*. [4] 的技術，并且相对于他们的技術实现了更高的准确率。所提出的技術对 `SqueezeNet` 和 `GoogLeNet` 模型进行了微调，用于脑肿瘤 MRI 分类。
 
-## 3.所提出的方法
-
-
-
-
+## 3. 所提出的方法
 
 本节探讨了所建议技术的运行机制，并以高效的方式描述了脑肿瘤分类的主要概念。所提出的系统是一个两阶段流程，包括训练阶段，其中包含加载深度卷积模型的子步骤、对现有模型进行微调，然后是最终的测试阶段。我们对两种不同的深度学习模型（`GoogLeNet` 和 `SqueezeNet`）进行微调以获得更好的结果。在第一阶段，加载轻量级 `SqueezeNet` [18] 模型，以便在实时情况下轻松处理脑肿瘤分类。最近的大多数研究人员试图专注于在不同的计算机视觉数据集上提高准确率，而忽略了高效算法的需求。存在多种架构可以实现更好的准确率，但参数过多。`SqueezeNet` 可以以 50 倍更少的参数和约 0.5 MB 的更小模型大小实现 AlexNet 级别的准确率。在第二阶段，加载 `GoogLeNet` [19] 模型，该模型也是 ILSVRC（ImageNet 大规模视觉识别竞赛）2014 年的获胜者。`SqueezeNet` 和 `GoogLeNet` 在大型 ImageNet 数据集上训练，在本系统中我们使用了这些预训练权重并添加了我们的数据来训练模型，因此模型更有效且更高效。训练过程完成后，模型将被下载并准备好通过所提出的算法运行以预测实时脑肿瘤。所提出的框架如图 图 1 所示，后续将解释每个步骤。
 
@@ -3677,6 +3556,7 @@ Tanveer Hussain^(\*,‡), Amin Ullah^(\*,§), Umair Haroon^(\*, ¶), Khan Muhamm
 **P = Train (I)**
 
 **Train (I):**
+
 ```
 1.Load the proposed CNN network architecture
 2.Resize the image into 227
@@ -3684,6 +3564,7 @@ Tanveer Hussain^(\*,‡), Amin Ullah^(\*,§), Umair Haroon^(\*, ¶), Khan Muhamm
 4.At the last Softmax layer, make a prediction
 5.Return P
 ```
+
 **label = search for the prediction in label txt file**
 
 **输出：** label
@@ -3708,8 +3589,8 @@ Tanveer Hussain^(\*,‡), Amin Ullah^(\*,§), Umair Haroon^(\*, ¶), Khan Muhamm
 
 所提出的系统在脑肿瘤 [20] 基准数据集上进行评估。该数据集由脑 T1 加权 MRI 的 2D 切片组成。这些 T1 加权 MR 图像来自中国广州南方医院和中国天津医科大学总医院，记录时间为 2005–2010 年。他们共收集了来自 233 名不同患者的 3,064 张 MRI 切片，并将其分为三个不同类别。
 
-i.  meningioma，出现在 708 张 MRI 切片中。
-ii.  glioma，出现在 1,426 张 MRI 切片中。
+i. meningioma，出现在 708 张 MRI 切片中。
+ii. glioma，出现在 1,426 张 MRI 切片中。
 iii. 垂体瘤，出现在 930 张 MRI 切片中。
 
 所有这些 MRI 切片的平面分辨率为 512 × 512。两张切片之间的间隙为 1 mm，而每张切片的厚度为 6 mm。该数据集的真实标签由这些医院的三位经验丰富的放射科医生手动分割和描绘。所有类别的样本及其突出的肿瘤如图 图 4 所示。
@@ -3722,13 +3603,9 @@ iii. 垂体瘤，出现在 930 张 MRI 切片中。
 
 **图 4：** 脑肿瘤数据集 MRI 样本，每个类别的原始和分割切片。
 
+Table 1 突出了使用不同数据集进行脑肿瘤分类的不同技术和方法，例如脑肿瘤数据集、免疫 miRNA 疾病数据集、Radiopaedia、（DS-66、DS-160、DS-255）等。免疫 miRNA 疾病数据集是从两个 curated 数据库中获取的，名为人类 miRNA 相关疾病数据库（HMDD）和 miR2Disease [24]。Radiopaedia [25] 数据集分为四个不同类别，包含 121 张 MR 图像，即脑膜瘤、胶质瘤（I）、胶质瘤（II）和胶质母细胞瘤。三个 MRI 基准数据集（DS-66、DS160 和 DS-255）分别包含 66、160 和 255 张图像，可在“哈佛医学院”网站上公开获取 [26, 27]。在 Table 1 中还提到了一些其他数据集，包括 MNIST、CIFAR-10 和 SVHN [28]。MNIST 数据集是一个数字数据集，包含 60,000 + 训练图像和 10,000 + 测试图像，每张图像大小为 28 × 28。CIFAR-10 数据集用于对象识别。CIFAR-10 数据集是 80M 分钟图像数据集的子集，它还包含 60,000 张大小为 32 × 32 的彩色图像。它包含 10 个类别，每个类别有 6,000 张图像。SVHN（街景房屋号码）是一个真实世界图像数据集，包含 73,257 张训练数字和 26,032 张测试数字。
 
-
-
-
-Table 1 突出了使用不同数据集进行脑肿瘤分类的不同技术和方法，例如脑肿瘤数据集、免疫 miRNA 疾病数据集、Radiopaedia、（DS-66、DS-160、DS-255）等。免疫 miRNA 疾病数据集是从两个 curated 数据库中获取的，名为人类 miRNA 相关疾病数据库（HMDD）和 miR2Disease \[24\]。Radiopaedia \[25\] 数据集分为四个不同类别，包含 121 张 MR 图像，即脑膜瘤、胶质瘤（I）、胶质瘤（II）和胶质母细胞瘤。三个 MRI 基准数据集（DS-66、DS160 和 DS-255）分别包含 66、160 和 255 张图像，可在“哈佛医学院”网站上公开获取 \[26, 27\]。在 Table 1 中还提到了一些其他数据集，包括 MNIST、CIFAR-10 和 SVHN \[28\]。MNIST 数据集是一个数字数据集，包含 60,000 + 训练图像和 10,000 + 测试图像，每张图像大小为 28 × 28。CIFAR-10 数据集用于对象识别。CIFAR-10 数据集是 80M 分钟图像数据集的子集，它还包含 60,000 张大小为 32 × 32 的彩色图像。它包含 10 个类别，每个类别有 6,000 张图像。SVHN（街景房屋号码）是一个真实世界图像数据集，包含 73,257 张训练数字和 26,032 张测试数字。
-
-**Table 1:**详细的相关研究工作。
+**Table 1:** 详细的相关研究工作。
 
 ![](img/p268-1.jpg)
 
@@ -3748,15 +3625,15 @@ Table 1 突出了使用不同数据集进行脑肿瘤分类的不同技术和方
 
 ![](img/p270-1.jpg)
 
-**Figure 5:**SqueezeNet 模型在 10 个 epoch 下的混淆矩阵。
+**Figure 5:** SqueezeNet 模型在 10 个 epoch 下的混淆矩阵。
 
 ![](img/p270-2.jpg)
 
-**Figure 6:**SqueezeNet 模型在 10 个 epoch 后的准确率。
+**Figure 6:** SqueezeNet 模型在 10 个 epoch 后的准确率。
 
 ![](img/p271-1.jpg)
 
-**Figure 7:**训练 30 个 epoch 的 SqueezeNet 模型的混淆矩阵。
+**Figure 7:** 训练 30 个 epoch 的 SqueezeNet 模型的混淆矩阵。
 
 #### 4.3.2 GoogLeNet 在 10 个 epoch 下的结果
 
@@ -3766,51 +3643,52 @@ Table 1 突出了使用不同数据集进行脑肿瘤分类的不同技术和方
 
 ![](img/p272-1.jpg)
 
-**Figure 8:**SqueezeNet 模型在 30 个 epoch 后的准确率。
+**Figure 8:** SqueezeNet 模型在 30 个 epoch 后的准确率。
 
 ![](img/p272-2.jpg)
 
-**Figure 9:**GoogLeNet 模型在 10 个 epoch 下的混淆矩阵。
+**Figure 9:** GoogLeNet 模型在 10 个 epoch 下的混淆矩阵。
 
 ![](img/p273-1.jpg)
 
-**Figure 10:**GoogLeNet 模型在 10 个 epoch 后的准确率。
+**Figure 10:** GoogLeNet 模型在 10 个 epoch 后的准确率。
 
 ![](img/p273-2.jpg)
 
-**Figure 11:**GoogLeNet 模型在 30 个 epoch 下的混淆矩阵。
+**Figure 11:** GoogLeNet 模型在 30 个 epoch 下的混淆矩阵。
 
 ![](img/p274-1.jpg)
 
-**Figure 12:**GoogLeNet 模型在 30 个 epoch 后的准确率。
+**Figure 12:** GoogLeNet 模型在 30 个 epoch 后的准确率。
 
 ### 4.4 与其他最先进方法的比较
 
 为了评估所提系统，我们考虑了顶尖的最先进技术，包括 GK 模糊聚类方法和用于脑肿瘤分类的混合智能方法。GK 模糊技术纯粹基于聚类，在处理医学图像数据时不是合适的选择。医学图像数据需要高度准确和可信的特征，决策完全可信，因为医学数据本质上非常精细。第二种比较方法使用离散小波变换域并提出了一种包含多个阶段的混合技术。在该方法中，他们使用了低级特征和传统的 principal component analysis。这些方法使用了小规模数据集，这些数据集对于测试数据来说不是通用的，因此无法在实时中实现。下一个方法是增强分类性能通过脑肿瘤区域划分和增强，但该方法的准确率不足。与最先进方法的比较统计结果给出在 Table 2 中。所提技术考虑了医学图像数据的精细特性，使用深度级卷积特征并保证非常高的准确率水平。基于实验结果和与最先进方法的比较，我们确信我们实现的方法是手动脑肿瘤分类方法的补充替代方案。
 
-**Table 2:**所提技术与最先进技术的比较。
+**Table 2:** 所提技术与最先进技术的比较。
 
-| **Method** || **Accuracy (%)** |
-| --- | --- |
-| GK fuzzy clustering \[3\] || 95.13 |
-| --- | --- |
-| Hybrid intelligent technique \[33\] || 97 |
-| Enhanced performance of brain tumor \[20\] || 91.28 |
-| Proposed methods || 98.43 |
+| **Method** | | **Accuracy (%)** |
+| --- | --- | --- |
+| GK fuzzy clustering [3] | | 95.13 |
+| --- | --- | --- |
+| Hybrid intelligent technique [33] | | 97 |
+| Enhanced performance of brain tumor [20] | | 91.28 |
+| Proposed methods | | 98.43 |
 
-#### 5.Conclusion
-
-
-
-
+#### 5. Conclusion
 
 ## 结论
+
+
+
 本章提出的分类技术是一种辅助放射科医生将脑肿瘤 `MRI` 图像分为三类，即脑膜瘤、胶质瘤和垂体瘤的辅助工具。所提出的分类技术基于深度学习，能够高效且准确地将 `MRI` 图像分类到各自的类别中。为了获得更好、更高效的结果，我们对两种不同的 `CNN` 模型 `SqueezeNet` 和 `GoogLeNet` 采用了迁移学习方法。我们使用这些预训练模型来产生更准确的结果，以协助放射科医生诊断脑肿瘤。我们微调的 `SqueezeNet` 模型以 73.1% 的准确率对 `MRI` 图像进行分类，而 `GoogLeNet` 实现了约 73.6% 的准确率。未来，我们将探索使用深度 `CNN` 模型对脑肿瘤进行检测和定位。此外，我们希望探索一些高效的 `CNN` 模型 [34] 和资源受限设备 [35]，以便使我们的系统在智能医疗中心 [36] 中可用。
 
 ## 致谢
+
 本工作得到了韩国政府（MSIP）资助的韩国国家研究基金会（NRF）资助项目（编号 2016R1A2 B4011712）的支持。
 
 ## 参考文献
+
 1.U. Javed, M. M. Riaz, A. Ghafoor, and T. A. Cheema, “MRI brain classification using texture features, fuzzy weighting and support vector machine,” *Prog. Electromag. Res*., vol. 53, pp. 73–88, 2013.
 
 2.S. Patil and V. Udupi, “A computer aided diagnostic system for classification of brain tumors using texture features and probabilistic neural network,” *Int. J. Comput. Sci. Eng. Inf. Technol. Res*., vol. 3, pp. 61–66, 2013.
@@ -3871,10 +3749,6 @@ Table 1 突出了使用不同数据集进行脑肿瘤分类的不同技术和方
 
 30.M. Sajjad, S. Khan, K. Muhammad, W. Wu, A. Ullah, and S. W. Baik, “Multigrade brain tumor classification using deep CNN with extensive data augmentation,” *J. Comput. Sci*., vol. 30, pp. 174–182, 2019.
 
-
-
-
-
 31.W. Ayadi, W. Elhamzi, I. Charfi, and M. Atri, “A hybrid feature extraction approach for brain MRI classification based on Bag-of-words,” *Biomed. Signal Process. Control*, vol. 48, pp. 144–152, 2019.
 
 32.S. S. R. Phaye, A. Sikka, A. Dhall, and D. R. Bathula, “Multi-level dense capsule networks,” in *Asian Conference on Computer Vision*, 2018, pp. 577–592.
@@ -3894,6 +3768,8 @@ Table 1 突出了使用不同数据集进行脑肿瘤分类的不同技术和方
 # Chapter 12
 
 ## 基于双向长短期记忆网络的包括徘徊在内的出行模式分类
+
+
 
 Nhu Khue Vuong^(\*,‡), Yong Liu^(†,§), Syin Chan^(†,¶), Chiew Tong Lau^(†,||), Zhenghua Chen^(\*,\*\*), Min Wu^(\*,††) and Xiaoli Li^(\*,‡‡)
 
@@ -3917,7 +3793,7 @@ Nhu Khue Vuong^(\*,‡), Yong Liu^(†,§), Syin Chan^(†,¶), Chiew Tong Lau^(
 
 ### Abstract
 
-出行模式分类包括徘徊对于早期识别痴呆症患者认知衰退和其他健康状况至关重要。在本章中，我们开发了机器学习（ML）和深度学习（DL）模型，以基于移动设备中可用的方向数据识别与痴呆相关的徘徊模式。特别地，我们使用深度学习中的长短期记忆网络（LSTM）和双向 LSTM 来检测直接、踱步、绕圈和随机出行模式。对来自 14 名受试者的真实数据集的实验结果表明，与传统机器学习分类器相比，深度 LSTM 分类器将分类准确率提高了 2%。结果和所提出的方法可以进一步改进，以便开发用于痴呆相关徘徊监测和管理的有用医疗保健应用。
+出行模式分类包括徘徊对于早期识别痴呆症患者认知衰退和其他健康状况至关重要。在本章中，我们开发了机器学习（ML）和深度学习（DL）模型，以基于移动设备中可用的方向数据识别与痴呆相关的徘徊模式。特别地，我们使用深度学习中的长短期记忆网络（`LSTM`）和双向 `LSTM` 来检测直接、踱步、绕圈和随机出行模式。对来自 14 名受试者的真实数据集的实验结果表明，与传统机器学习分类器相比，深度 `LSTM` 分类器将分类准确率提高了 2%。结果和所提出的方法可以进一步改进，以便开发用于痴呆相关徘徊监测和管理的有用医疗保健应用。
 
 **Keywords:** classification, dementia, dementia-related wandering, detection, wandering behavior, wandering patterns, wandering management
 
@@ -3930,10 +3806,6 @@ Nhu Khue Vuong^(\*,‡), Yong Liu^(†,§), Syin Chan^(†,¶), Chiew Tong Lau^(
 在 Martino-Saltzman *et al*. \[10\]中，定义了四种出行模式，即直接出行、踱步、绕圈和随机出行，以表征痴呆症患者的徘徊行为。\[9, 10\]中的研究结果表明，直接出行不是徘徊，而其他三种模式显示出不同严重程度的痴呆。为了对这四种出行模式进行分类，老年学研究界中通过目视检查录像带中记录的痴呆症患者的移动来进行手动方法很常见。然而，它费时费力且容易出现人为错误。此外，由于视觉观察被认为侵犯了受试者的隐私，因此需要获得知情同意。
 
 许多其他方法已被用于出行模式的自动分类，包括徘徊。诸如 RFID \[11\]和 WiFi \[12\]等定位模态已被用于跟踪和分析所经过的位置序列以识别出行模式，包括徘徊。Lin *et al*. \[13\]和 Delaunay 和 Guerin \[14\]使用了 GPS 轨迹并开发了基于 GPS 数据的算法来检测环形模式。Gochoo *et al*. \[15\]曾采用二进制被动红外传感器和深度学习（DL）对出行模式进行分类，包括徘徊。最近，来自移动和可穿戴设备的惯性传感器已被用于跟踪人员出行时的方向信息以确定出行模式 \[16\]。显然，与使用摄像机、RFID \[11\]、红外传感器 \[15\]和超宽带定位系统等其他方法相比，惯性传感器更便宜、更易获得，因此可以广泛用于监测痴呆患者 \[17\]。
-
-
-
-
 
 在本章中，我们使用移动设备中惯性传感器收集的方向数据对漫游模式进行分类。我们提出了一个框架，使用传统的机器学习分类器和深度学习分类器（例如，`LSTM`）来从方向数据中自动检测出行模式。我们对人体运动数据进行了实验，结果证明了所提出的深度学习方法在检测与痴呆相关的漫游模式方面的优越性能。本章组织如下。第 2 节提供了与痴呆相关的漫游的背景并对问题进行了公式化。第 3 节介绍了方法，随后是机器学习和深度学习方法的细节。第 4 节介绍并讨论了实验结果，而第 5 节总结了本章。
 
@@ -3985,10 +3857,6 @@ Martino-Saltzman [10] 将 PWD 的出行模式建模为直接、踱步、绕圈�
 
 #### 3.1.3 数据集描述
 
-
-
-
-
 Table 1 总结了从每个受试者收集的模式的统计信息。
 
 受试者从 1 到 14 编号，其人口统计信息包括性别和年龄（截至 2020 年）也一并报告。64% 的受试者为男性，36% 为女性。受试者的平均年龄为 44 岁。约 43% 的受试者为老年人（55 岁以上）。
@@ -4031,15 +3899,11 @@ Table 1 总结了从每个受试者收集的模式的统计信息。
 
 ### 3.3 深度学习方法
 
-我们应用深度 LSTM 网络来检测出行模式。LSTM 以使用少量门的记忆单元对时间信息进行编码的能力而闻名，从而保留具有长期依赖性的有用信息。LSTM 已被用于多种使用时间序列数据的人类活动识别，并取得了显著的性能 [20]。与痴呆症相关的出行模式的方向信号是具有时空依赖性的典型时间序列。因此，LSTM 是该问题的良好候选方案。
+我们应用深度 `LSTM` 网络来检测出行模式。`LSTM` 以使用少量门的记忆单元对时间信息进行编码的能力而闻名，从而保留具有长期依赖性的有用信息。`LSTM` 已被用于多种使用时间序列数据的人类活动识别，并取得了显著的性能 [20]。与痴呆症相关的出行模式的方向信号是具有时空依赖性的典型时间序列。因此，`LSTM` 是该问题的良好候选方案。
 
 #### 3.3.1 双向长短期记忆
 
-通用 LSTM 网络结构 [21] 如 Fig. 4(a) 所示。LSTM 通过记忆单元和若干门（输入门、遗忘门、输出门、输入调制门）解决了梯度消失和爆炸的问题，这些门具有保留具有时间依赖性的有用信息的能力。这些机制使 LSTM 网络能够捕捉到人类行走活动和出行模式的方向信号中存在的复杂时间动态。
-
-
-
-
+通用 `LSTM` 网络结构 [21] 如 Fig. 4(a) 所示。`LSTM` 通过记忆单元和若干门（输入门、遗忘门、输出门、输入调制门）解决了梯度消失和爆炸的问题，这些门具有保留具有时间依赖性的有用信息的能力。这些机制使 `LSTM` 网络能够捕捉到人类行走活动和出行模式的方向信号中存在的复杂时间动态。
 
 同时，我们还使用了双向 `LSTM`，即 `LSTM` 的改进版本，它由反向和前向层组成（Fig. 4(b)），以便同时考虑过去和未来的信息。特别是，前向层考虑方向序列的过去信息，并将过去的方向信息编码到当前状态中。反向层考虑方向序列的未来信息，并将其编码到当前状态中。该机制显然与出行模式的识别相关，因为未来的方向信号或步行步数对于确定受试者可能表现出的出行模式类型也具有意义。
 
@@ -4075,13 +3939,15 @@ Table 1 总结了从每个受试者收集的模式的统计信息。
 
 •`Accuracy` 是正确分类模式的比例与模式总数的比值。
 
-•`Recall` 是真正例率或灵敏度。它是真正例数与真正例数和假负例数之和的比值。它代表分类器找到所有正样本的能力。
 
-•`Precision` 是真正例数与真正例数和假正例数之和的比值。它代表分类器不将负样本标记为正样本的能力。
 
-•训练时间和测试时间是每个分类器训练和测试给定数据集所需的时间，单位为秒。
+`Recall` 是真正例率或灵敏度。它是真正例数与真正例数和假负例数之和的比值。它代表分类器找到所有正样本的能力。
 
-#### 4.1.2 Hardware specifications
+`Precision` 是真正例数与真正例数和假正例数之和的比值。它代表分类器不将负样本标记为正样本的能力。
+
+训练时间和测试时间是每个分类器训练和测试给定数据集所需的时间，单位为秒。
+
+### 4.1.2 Hardware specifications
 
 实验在配备 64 位 Intel Core i7-6700 `CPU`、3.4 GHz 速度、64 GB RAM 和 AMD Radeon R5 340X 显卡的台式计算机上运行。
 
@@ -4117,17 +3983,13 @@ Table 3 报告了在添加 dropout 层后模型在准确率和训练时间方面
 
 #### 4.2.3 Number of hidden nodes
 
-
-
-
-
 Table 4 报告了在改变隐藏节点数时 LSTM 模型的性能。与上述实验类似，我们将序列长度和 epoch 数分别设置为 140 和 20。该实验中也排除了 dropout 层。隐藏节点数设置为 100、128、200、256 和 300。平均而言，当隐藏节点数等于 256 时，模型达到最高的 81% 准确率。因此，在后续所有 LSTM/Bi-LSTM 模型的实验中，我们将隐藏节点数设置为 256。
 
 **Table 4:** 不同隐藏节点数下的模型性能。
 
 ![figure](img/p295-1.jpg)
 
-### 4.2.4 学习率、批次大小、epoch 数
+#### 4.2.4 学习率、批次大小、epoch 数
 
 对于学习率，我们在所有实验中均使用 Adam 优化器的默认值 0.001。对于批次大小，我们在所有实验中均将其设置为 64。
 
@@ -4187,10 +4049,6 @@ Table 4 报告了在改变隐藏节点数时 LSTM 模型的性能。与上述实
 
 8. J. Verghese, R. Holtzer, R. B. Lipton, and C. Wang, “Quantitative gait markers and incident fall risk in older adults,” *The J. Gerontol.: Ser. A*, vol. 64, no. 8, pp. 896–901, 2009.
 
-
-
-
-
 ## 参考文献
 
 9.D. L. Algase, C. Beel-Bates, and E. R. Beattie, “Wandering in long-term care,” *Ann. Long Term Care*, vol. 11, pp. 33–41, 2003.
@@ -4216,6 +4074,8 @@ Table 4 报告了在改变隐藏节点数时 LSTM 模型的性能。与上述实
 19.F. Pedregosa *et al*., “Scikit-learn: Machine learning in Python,” *J. Mach. Learn*. Res., vol. 12, pp. 2825–2830, 2011.
 
 20.S. Yousefi, H. Narui, S. Dayal, S. Ermon, and S. Valaee, “A survey on behavior recognition using WiFi channel state information,” *IEEE Commun. Mag*., vol. 55, no. 10, pp. 98–104, Oct. 2017.
+
+
 
 21.Z. Chen, L. Zhang, C. Jiang *et al*., “WiFi CSI based passive human activity recognition using attention based BLSTM,” *IEEE Trans. Mobile Comput*., pp. 1–12, October 2018.
 
@@ -4413,152 +4273,287 @@ classification tasks, 195
 
 classifier, 89
 
-
-
-
 `closed-shape regions`, 176
+
 `CNN architecture`, 44
+
 `CNN-based Decoder`, 102
+
 `coarse-to-fine scheme`, 240
+
 `color`, 237
+
 `color restoration`, 239
+
 `commercial off-the-shelf (COTS) WiFi access`, 84
+
 `commercial regions`, 96
+
 `community-dwelling elders`, 280
+
 `complex dynamics`, 38, 46
+
 `complex features`, 119
+
 `complexity`, 143, 196
+
 `complex morphological features`, 182
+
 `complex phenomena`, 68
+
 `complex structures`, 162
+
 `computer-aided analysis`, 252
+
 `computer- aided diagnosis`, 252, 259
+
 `computer-assisted tools`, 260
+
 `computer vision`, 38, 176, 263
+
 `computing complexity`, 187
+
 `confidence/trustworthiness`, 161
+
 `configurations`, 68
+
 `confusion matrix`, 94, 127, 269, 273, 299
+
 `connection`, 9
+
 `consistency`, 160
+
 `constrain`, 72
+
 `constrained learning setting`, 73
+
 `consumption of hardware resources`, 188
+
 `context`, 56, 237
+
 `continuous`, 103
+
 `contrast adjustment`, 239
+
 `Contrastive Divergence`, 11
+
 `contrastive learning`, 165
+
 `conventional machine learning`, 24
+
 `convolution`, 37
+
 `Convolution+Batch Normalization+ReLu`, 38
+
 `convolutional kernels`, 113
+
 `convolutional layers`, 12
+
 `convolutional LSTM (ConvLSTM)`, 21, 23
+
 `convolutional modes`, 65
+
 `convolutional neural network`, 3, 12, 63, 74, 79, 113
+
 `convolution kernels`, 65
+
 `convolutions`, 39
+
 `correct classification`, 191
+
 `correlation`, 110
+
 `cost-effective`, 81
+
 `cost function`, 7
+
 `covariates`, 163
+
 `cross-domain representations`, 165
+
 `cross-entropy loss`, 124, 187, 220
+
 `cross-modality supervision`, 97
+
 `CSI amplitude`, 113
+
 `CSI matrix`, 88
+
 `CSI phase`, 113
+
 `CSI-TOOL`, 120
+
 `CSI variations`, 85
+
 `CUHK Avenue`, 147
+
 `cumulative distributions`, 67
+
 `curve fitting`, 163
+
 `daily activities`, 104
+
 `dark regions`, 250
+
 `data`, 11
+
 `data analysis technique`, 122
+
 `data augmentation`, 44
+
 `data distribution`, 227
+
 `data-driven`, 4
+
 `data-driven model`, 83
+
 `data generation model`, 57, 62
+
 `data generators`, 60
+
 `data preparation`, 283
+
 `data representation`, 108
+
 `data sources`, 60, 61, 69, 203
+
 `deep architectures`, 159
+
 `deep convolutional neural networks (ConvNets)`, 31
+
 `deeper`, 149
+
 `deep features`, 188
+
 `deep Gaussian processes`, 167
+
 `deep hybrid network`, 239
+
 `deep learning`, 3, 24, 55, 102, 106, 116, 133, 175, 179, 203, 275
+
 `deep learning-based methods`, 142, 236
+
 `deep learning theory`, 202
+
 `deep LSTM networks`, 289
+
 `deep methods`, 177
+
 `deep multi-modal learning`, 98
+
 `deep mutual learning`, 133
+
 `deep neural network`, 88, 93, 259, 269
+
 `dementia`, 279, 280
+
 `denoising auto-encoder`, 6
+
 `dense layer`, 291
+
 `DenseNet`, 17
+
 `depthwise`, 186
+
 `details`, 237, 242
+
 `detection task`, 179
+
 `device faults`, 122
+
 `device-free`, 101
+
 `diagnosis`, 236
+
 `different antenna`, 87
+
 `different distances`, 130
+
 `diffusion convolution`, 212
+
 `direct`, 219
+
 `discoveries`, vii
+
 `discrete wavelet transform`, 274
+
 `discriminative characteristics`, 36
+
 `discriminative feature maps`, 41
+
 `discriminative features`, 79
+
 `discriminative information`, 50
+
 `discriminative patterns`, 87
+
 `discriminator`, 91
+
 `disease diagnostic and identification`, 4
+
 `distances`, 131
+
 `DL approaches`, 296, 300
+
 `domain`, 91
+
 `domain adaptation`, viii, 89
+
 `domain discriminator`, 92
+
 `domain expertise`, 68
+
 `domain knowledge`, 55, 74
+
 `domain knowledge-based approach`, 240
+
 `dominant position`, 202
+
 `Doppler frequency shifts`, 108
+
 `Double-Stream Deep CNN`, 180
+
 `doubly deep`, 47
+
 `downward`, 88
+
 `DRIVE`, 252
+
 `dropout`, 14, 124, 293
+
 `dropout probability`, 294
+
 `dynamical convolution`, 225
+
 `dynamic-based`, 111
+
 `dynamic changes`, 112
+
 `dynamics`, 56, 64
+
 `dynamics of human activities`, 74
+
 `early diagnosis`, 236
+
 `earth data`, 164
+
 `earth data science`, 159
+
 `edge computing`, 98
+
 `edge-preserving smoothing`, 239
+
 `edge weights`, 214
+
 `Edison-Meanshift`, 178
+
 `effect of pressure`, 71
+
 `eigendecomposition-based PCA`, 121
+
 `eigenvalues`, 216
+
 `ELU function`, 187
-
-
 
 emotion, 105
 
@@ -4692,337 +4687,477 @@ GaoFen-2
 
 satellite, 2, 175, 179
 
-gated recurrent neural networks (GRU), 19
 
-gates, 20
 
-Gaussian connection, 13
+# Glossary Index
 
-Gaussian process, 63
+`gated recurrent neural networks (GRU)`, 19
 
-GCN variants, 223
+`gates`, 20
 
-generalization, 196, 224, 240
+`Gaussian connection`, 13
 
-generalized deep learning, 211
+`Gaussian process`, 63
 
-general purpose model-agnostic
+`GCN variants`, 223
 
-methods, 169
+`generalization`, 196, 224, 240
 
-generative adversarial networks, 164
+`generalized deep learning`, 211
 
-geographic regions, 180
+`general purpose model-agnostic methods`, 169
 
-geosciences, 161
+`generative adversarial networks`, 164
 
-gestures, 104
+`geographic regions`, 180
 
-GK fuzzy clustering, 274
+`geosciences`, 161
 
-global human settlement layer, 176
+`gestures`, 104
 
-golden architecture, 64
+`GK fuzzy clustering`, 274
 
-GoogLeNet, 16, 260, 266
+`global human settlement layer`, 176
 
-GPU, 202
+`golden architecture`, 64
 
-grade of tumor, 262
+`GoogLeNet`, 16, 260, 266
 
-gradient boosting, 289
+`GPU`, 202
 
-gradient vanishing, 17
+`grade of tumor`, 262
 
-graph, 140
+`gradient boosting`, 289
 
-graph convolution, 144
+`gradient vanishing`, 17
 
-graph convolutional LSTM, 144
+`graph`, 140
 
-graph convolutional networks (GCNs), 140
+`graph convolution`, 144
 
-graph cuts, 196
+`graph convolutional LSTM`, 144
 
-graph Hessian, 228
+`graph convolutional networks (GCNs)`, 140
 
-graph Laplacian, 217
+`graph cuts`, 196
 
-graph Laplacian matrix, 221
+`graph Hessian`, 228
 
-graph neural networks, 209
+`graph Laplacian`, 217
 
-graph p-Laplacian, 217, 228
+`graph Laplacian matrix`, 221
 
-graph representation learning, 209
+`graph neural networks`, 209
 
-graphs, 166, 209
+`graph p-Laplacian`, 217, 228
 
-graph structured data, 218
+`graph representation learning`, 209
 
-grouped modalities, 65
+`graphs`, 166, 209
 
-Hadamard product, 41
+`graph structured data`, 218
 
-handcrafted, 178
+`grouped modalities`, 65
 
-handcrafted feature-based methods, 142
+`Hadamard product`, 41
 
-handcrafted features, 31, 299
+`handcrafted`, 178
 
-hardware imperfections, 84
+`handcrafted feature-based methods`, 142
 
-heights, 131
+`handcrafted features`, 31, 299
 
-hidden, 9
+`hardware imperfections`, 84
 
-hidden neurons, 6
+`heights`, 131
 
-hierarchical, 9
+`hidden`, 9
 
-hierarchical aggregation, 48
+`hidden neurons`, 6
 
-hierarchically aggregated convolutional
+`hierarchical`, 9
 
-neural network, viii, 33
+`hierarchical aggregation`, 48
 
-hierarchical rank pooling, 35
+`hierarchically aggregated convolutional neural network`, viii, 33
 
-hierarchy, 45, 50
+`hierarchical rank pooling`, 35
 
-high-dimensional data, 210
+`hierarchy`, 45, 50
 
-high dimensionality, 163
+`high-dimensional data`, 210
 
-higher-order dynamics, 33
+`high dimensionality`, 163
 
-high-order graph p-Laplacian, 215
+`higher-order dynamics`, 33
 
-high-quality data, 110
+`high-order graph p-Laplacian`, 215
 
-high stability, 132
+`high-quality data`, 110
 
-high-stability performance, 124
+`high stability`, 132
 
-histogram distribution, 238
+`high-stability performance`, 124
 
-HMDB51, 32, 42
+`histogram distribution`, 238
 
-HMDB dataset, 49
+`HMDB51`, 32, 42
 
-Hopfield networks, 11
+`HMDB dataset`, 49
 
-human action recognition, 32
+`Hopfield networks`, 11
 
-human activity, 64, 87
+`human action recognition`, 32
 
-human activity recognition, 55, 101
+`human activity`, 64, 87
 
-human brain tumors, 260
+`human activity recognition`, 55, 101
 
-human-centric, ix
+`human brain tumors`, 260
 
-human-lens attenuation, 244
+`human-centric`, ix
 
-human organs, 262
+`human-lens attenuation`, 244
 
-hybrid, 102, 107, 163
+`human organs`, 262
 
-hybrid DL, 171
+`hybrid`, 102, 107, 163
 
-hybrid intelligent, 274
+`hybrid DL`, 171
 
-hyper-edge, 214
+`hybrid intelligent`, 274
 
-Hypergraph, 214
+`hyper-edge`, 214
 
-Hypergraph p-Laplacian, 210
+`Hypergraph`, 214
 
-Hypergraph p-Laplacian GCN, 226
+`Hypergraph p-Laplacian`, 210
 
-hyperparameters, 66
+`Hypergraph p-Laplacian GCN`, 226
 
-identity mapping, 146
+`hyperparameters`, 66
 
-image-based solution, 153
+`identity mapping`, 146
 
-image classification, 160
+`image-based solution`, 153
 
-image enhancement, 236, 248
+`image classification`, 160
 
-image-level, 140
+`image enhancement`, 236, 248
 
-image light enhancement, 238
+`image-level`, 140
 
-image-like, 81
+`image light enhancement`, 238
 
-ImageNet, 43, 96
-
-ImageNet challenge, 32
-
-images, 97
-
-image vessel segmentation, 237
-
-importance, 61
-
-IMU data, 98
-
-
-
-
-inception, 5, 46, 266
-inception layers, 37
-inception module, 16, 38, 40, 182
-Inception V3, 180
-independent streams, 34
-index features, 177
-indirect relationships, 219
-indirect space local geometric, 227
-individual behavior, 122
-individuals, 126, 128, 133
-indoor environment, 102
-Inertial Measurement Unit, 80
-inertial sensors, 282, 299
-inference, 170
-information, 22
-information gain, 288
-input gate, 20
-insight, 169
-Institutional Review Board, 284
-Intel 5300 NIC card, 84, 112
-Intel WiFi Link 5300, 120
-interaction, 61, 64, 72
-interpretability, 168, 169, 171
-interpretable, 171
-intrinsic geometry structure, 216
-inversion, 168
-joint, 146, 215
-joint positions, 153
-Kaggle’s Diabetic Retinopathy
-Detection Challenge, 246
-key information, 132
-K-means, 178
-K-nearest neighbor, 215, 223
-KNN, 127
-K-order Chebyshev polynomial, 218, 228
-Kullback–Leibler divergence, 7
-labor of annotations, 91
-Laplacian, 213
-lapping, 286
-latent space, 165
-Leaky ReLU, 19
-learning algorithms, 109
-learning-based, 107
-learning causal representations, 162
-learning procedure, 11
-learning process, 75
-learning rate, 43, 295
-LeNet, 13
-Lightweight Multi-Branch CNN (LMB-CNN), 184
-Limited-memory Broyden-Fletcher-Goldfarb-Shanno, 287
-linear iterative clustering, 192
-linear kernel, 289
-line-of-sight, 85
-local geometric distribution, 219, 228
-local geometry structure, 213
-localization, 104
-localization modalities, 281
-locally connected layers, 119
-local structure, 221
-locomotion patterns, 280
-logsoftmax, 119
-longer, 38
-long-range feature correlation, 243
-long short-term memory, ix, 19, 114, 279
-long-term, 33
-long-term dependencies, 289
-long-term dynamics, 49
-long-term video, 31
-LoS path, 111
-low-density margins, 41
-low-dimensional potential
-representation, 211
-low-level features, 35, 274
-low-pass filter, 123
-low-quality activity, 132
-LSTM-based Encoder, 102
-LSTM-CNN, 106
-LSTMs, 47
-luminosity, 239
-machine generalization, vii
-machine learning, 116
-management, 280
-manifold, 212
-manifold assumptions, 210
-manifold distribution, 221
-manifold learning, 212
-manifold regularization framework, 223
-manifold regularized, 213
-manifold regularized dynamic GCN, 210, 226
-manifolds, 166
-manifold structure, 227
-manual approach, 280
-manual brain tumor classification, 274
-manual feature engineering, 5
-margin, 289
-marginal importance, 71
-masking, 290
-masks, 192
-massive amounts of data, vii
-max pooling, 147, 266
-mean, 123
-mechanism, 149
-medical image processing, 4
-medical imaging, 259
-medical resonance imaging, 260
-medical sensing, viii
-memory, 18
-memory cell unit, 21
-message-passing encoder–decoder recurrent neural network, 143
-meta-learning, 170
-mini-batch, 43
-missing alarm, 190, 191
-MNIST dataset, 269
-mobile devices, 279
-mobile phone, 284
-mobility-related, 58
-mobility-related human activities, 56
-modalities, 56, 57, 64
-modalities’ perspective, 69
-modality, 60
-model, 11
-model-based, 4, 109
-model distillation, 169
-model fitting, 228
-modeling-based, 107
-model interpretability, 162
-model transfer, 82
-monitoring, 280
-morphological building index, 178
-morphological shadow index, 178
-motion, 104
-MRI images, 275
-multi-class classification, 291
-multi-dimensional, 165
-multi-layer perceptron, 287
-multi-level dense, 268
-multi-path effect, 86, 110
-multiple kernel learning, 196
-multiple positions, 57
-multi-scale, 239
-multi-spectral, 177, 184
-multi-spectral data, 180
-multi-spectral samples, 181
-mutual information, 164
-mutual interactions, viii, 55
-neighbor, 145
-neighboring segments, 50
-neighbor nodes, 212
-network architecture, 291
-network embedding, 211
+`image-like`, 81
 
+`ImageNet`, 43, 96
 
+`ImageNet challenge`, 32
+
+`images`, 97
+
+`image vessel segmentation`, 237
+
+`importance`, 61
+
+`IMU data`, 98
+
+`inception`, 5, 46, 266
+
+`inception layers`, 37
+
+`inception module`, 16, 38, 40, 182
+
+`Inception V3`, 180
+
+`independent streams`, 34
+
+`index features`, 177
+
+`indirect relationships`, 219
+
+`indirect space local geometric`, 227
+
+`individual behavior`, 122
+
+`individuals`, 126, 128, 133
+
+`indoor environment`, 102
+
+`Inertial Measurement Unit`, 80
+
+`inertial sensors`, 282, 299
+
+`inference`, 170
+
+`information`, 22
+
+`information gain`, 288
+
+`input gate`, 20
+
+`insight`, 169
+
+`Institutional Review Board`, 284
+
+`Intel 5300 NIC card`, 84, 112
+
+`Intel WiFi Link 5300`, 120
+
+`interaction`, 61, 64, 72
+
+`interpretability`, 168, 169, 171
+
+`interpretable`, 171
+
+`intrinsic geometry structure`, 216
+
+`inversion`, 168
+
+`joint`, 146, 215
+
+`joint positions`, 153
+
+`Kaggle’s Diabetic Retinopathy Detection Challenge`, 246
+
+`key information`, 132
+
+`K-means`, 178
+
+`K-nearest neighbor`, 215, 223
+
+`KNN`, 127
+
+`K-order Chebyshev polynomial`, 218, 228
+
+`Kullback–Leibler divergence`, 7
+
+`labor of annotations`, 91
+
+`Laplacian`, 213
+
+`lapping`, 286
+
+`latent space`, 165
+
+`Leaky ReLU`, 19
+
+`learning algorithms`, 109
+
+`learning-based`, 107
+
+`learning causal representations`, 162
+
+`learning procedure`, 11
+
+`learning process`, 75
+
+`learning rate`, 43, 295
+
+`LeNet`, 13
+
+`Lightweight Multi-Branch CNN (LMB-CNN)`, 184
+
+`Limited-memory Broyden-Fletcher-Goldfarb-Shanno`, 287
+
+`linear iterative clustering`, 192
+
+`linear kernel`, 289
+
+`line-of-sight`, 85
+
+`local geometric distribution`, 219, 228
+
+`local geometry structure`, 213
+
+`localization`, 104
+
+`localization modalities`, 281
+
+`locally connected layers`, 119
+
+`local structure`, 221
+
+`locomotion patterns`, 280
+
+`logsoftmax`, 119
+
+`longer`, 38
+
+`long-range feature correlation`, 243
+
+`long short-term memory`, ix, 19, 114, 279
+
+`long-term`, 33
+
+`long-term dependencies`, 289
+
+`long-term dynamics`, 49
+
+`long-term video`, 31
+
+`LoS path`, 111
+
+`low-density margins`, 41
+
+`low-dimensional potential representation`, 211
+
+`low-level features`, 35, 274
+
+`low-pass filter`, 123
+
+`low-quality activity`, 132
+
+`LSTM-based Encoder`, 102
+
+`LSTM-CNN`, 106
+
+`LSTMs`, 47
+
+`luminosity`, 239
+
+`machine generalization`, vii
+
+`machine learning`, 116
+
+`management`, 280
+
+`manifold`, 212
+
+`manifold assumptions`, 210
+
+`manifold distribution`, 221
+
+`manifold learning`, 212
+
+`manifold regularization framework`, 223
+
+`manifold regularized`, 213
+
+`manifold regularized dynamic GCN`, 210, 226
+
+`manifolds`, 166
+
+`manifold structure`, 227
+
+`manual approach`, 280
+
+`manual brain tumor classification`, 274
+
+`manual feature engineering`, 5
+
+`margin`, 289
+
+`marginal importance`, 71
+
+`masking`, 290
+
+`masks`, 192
+
+`massive amounts of data`, vii
+
+`max pooling`, 147, 266
+
+`mean`, 123
+
+`mechanism`, 149
+
+`medical image processing`, 4
+
+`medical imaging`, 259
+
+`medical resonance imaging`, 260
+
+`medical sensing`, viii
+
+`memory`, 18
+
+`memory cell unit`, 21
+
+`message-passing encoder–decoder recurrent neural network`, 143
+
+`meta-learning`, 170
+
+`mini-batch`, 43
+
+`missing alarm`, 190, 191
+
+`MNIST dataset`, 269
+
+`mobile devices`, 279
+
+`mobile phone`, 284
+
+`mobility-related`, 58
+
+`mobility-related human activities`, 56
+
+`modalities`, 56, 57, 64
+
+`modalities’ perspective`, 69
+
+`modality`, 60
+
+`model`, 11
+
+`model-based`, 4, 109
+
+`model distillation`, 169
+
+`model fitting`, 228
+
+`modeling-based`, 107
+
+`model interpretability`, 162
+
+`model transfer`, 82
+
+`monitoring`, 280
+
+`morphological building index`, 178
+
+`morphological shadow index`, 178
+
+`motion`, 104
+
+`MRI images`, 275
+
+`multi-class classification`, 291
+
+`multi-dimensional`, 165
+
+`multi-layer perceptron`, 287
+
+`multi-level dense`, 268
+
+`multi-path effect`, 86, 110
+
+`multiple kernel learning`, 196
+
+`multiple positions`, 57
+
+`multi-scale`, 239
+
+`multi-spectral`, 177, 184
+
+`multi-spectral data`, 180
+
+`multi-spectral samples`, 181
+
+`mutual information`, 164
+
+`mutual interactions`, viii, 55
+
+`neighbor`, 145
+
+`neighboring segments`, 50
+
+`neighbor nodes`, 212
+
+`network architecture`, 291
+
+`network embedding`, 211
 
 `network pruning`, 98
 
@@ -5190,6 +5325,10 @@ network embedding, 211
 
 `potentials`, 96
 
+
+
+# Index
+
 `practical indoor environment`, 130
 
 `precision`, 292, 297
@@ -5320,212 +5459,408 @@ network embedding, 211
 
 `retinex-based methods`, 238
 
-
-
 `RF`, 296
+
 `RGB`, 34, 37
+
 `rightmost confusion matrix`, 74
+
 `rightward gesture`, 88
+
 `RNN`, 140
+
 `robust feature extractor`, 96
+
 `robustness`, 102, 109
+
 `robust recognition`, 60
+
 `salient difference`, 261
+
 `SAT-6`, 225
+
 `satellite`, 175
+
 `scattering`, 244
+
 `scattering model`, 240
+
 `scikit-learn library`, 125
+
 `segmentation`, 192, 251
+
 `segmentation reliability`, 189
+
 `segmentation tasks`, 187
+
 `semi-supervised classification`, 222
+
 `semi-supervised regression`, 217
+
 `sensing`, ix
+
 `sensing applications`, vii
+
 `sensing capabilities`, 3, 25
+
 `sensor-based`, 32
+
 `sensor fusion`, 56, 61
+
 `sensor-rich`, 74
+
 `sensor-rich environment`, 56, 59
+
 `sensors`, 55
+
 `sensors-deployment`, 71
+
 `sensory data`, 4
+
 `sequence learning`, 165
+
 `sequence length`, 290, 292, 293
+
 `sequential data`, 18
+
 `sequential datasets`, 24
+
 `shallow learning`, 108
+
 `ShanghaiTech Campus`, 147
+
 `signal propagation`, 116
+
 `signal propagation process`, 110
+
 `signal-to-noise`, 56
+
 `simple graph`, 214
+
 `size unchanged`, 189
+
 `skeleton-based action recognition`, 141
+
 `skeleton-based solution`, 153
+
 `skeletons`, 139, 143, 148
+
 `skip-gram`, 211
+
 `sleep`, 104
+
 `smart buildings`, 80
+
 `smart healthcare`, 275
+
 `smart homes`, 96
+
 `smartphones`, 58
+
 `smart sensing technology`, 80
+
 `Softmax`, 265
+
 `Softmax activation`, 291
+
 `Softmax function`, 37
+
 `source domain`, 80, 95
+
 `source-like representations`, 92
+
 `space`, 47, 143
+
 `space of architectures`, 74
+
 `sparse auto-encoder`, 6
+
 `sparse coding-based methods`, 142
+
 `sparse optical flow`, 148
+
 `spatial`, 31, 43, 82, 95, 150, 159
+
 `spatial context modeling`, 242
+
 `spatial dimension`, 242
+
 `spatial-domain-based`, 209
+
 `spatial dynamics`, 80
+
 `spatial features`, 117
+
 `spatial graph convolution`, 145
+
 `spatial learning`, 165
+
 `spatial neighbor`, 145
+
 `spatial perspective`, 56, 143
+
 `spatial–temporal graph convlutional networks`, 139, 141, 153
+
 `spatio-temporal correlation information`, 23
+
 `spatio-temporal Resnets (ST-ResNet)`, 49
+
 `spectral`, 222
+
 `spectral clustering`, 215
+
 `spectral graph convolution`, 219
+
 `spectral graph filter`, 212
+
 `spectral graph Laplacian convolution`, 209
+
 `spectral indexes`, 176, 183
+
 `spectral perspective`, 143
+
 `split channels`, 65
+
 `split modalities`, 65
+
 `SqueezeNet`, 260, 264, 270
+
 `stability`, 196, 220
+
 `stacking`, 65
+
 `standard deviation`, 123, 129
+
 `STARE`, 252
+
 `state changes`, 105
+
 `static-based`, 111
+
 `statistical features`, 287
+
 `statistics`, 285
+
 `still images`, 31
+
 `stochastic gradient descent`, 8, 43
+
 `stochastic mapping process`, 8
+
 `subcarrier`, 88
+
 `subConvNets`, 36
+
 `subjective quality`, 248
+
 `superior`, 129
+
 `superiority`, 93
+
 `super pixels`, 193
+
 `supervised`, 177
+
 `supervised algorithms`, 199
+
 `supervised learning`, 237, 252
+
 `surveillance videos`, 139
+
 `Sussex Huawei locomotion-transportation`, 55
+
 `SVHN`, 269
+
 `SVM`, 127
+
 `synthetic`, 239, 250
+
 `synthetic aperture radar`, 176
+
 `synthetic dataset`, 247
+
 `synthetic retinal image`, 245
+
 `3 ×`, 3, 39
+
 `3 × 3 × 3 kernels`, 34
+
 `target domain`, 80, 95
+
 `temporal`, 80, 159
+
 `temporal characteristics`, 25, 31
+
 `temporal CNNs`, 140
+
 `temporal CSI stream`, 87
+
 `temporal dynamics`, 33, 82, 92, 95
+
 `temporal interaction`, 35
+
 `temporal networks`, 43
+
 `temporal relationship`, 150
+
 `temporal segment networks`, 49
+
 `TensorFlow`, 24, 246
+
 `texture features`, 182
+
 `theory-driven`, 167
+
 `threshold`, 192
+
 `time`, 47, 143
+
 `time-domain`, 106
+
 `time-sequence`, 117
+
 `time-sequence signal`, 121
+
 `time series`, 282
+
 `time-series representation`, 118
+
 `time-series sensory data`, 24
+
 `trade-off`, 63
+
 `traditional ML classifiers`, 287
+
 `traditional principal component analysis`, 274
+
 `training loss`, 271
+
 `training strategies`, 242
+
 `trajectories`, 300
+
 `trajectory-pooled deep convolutional descriptors (TDD)`, 49
+
 `transfer learning`, 164, 275
+
 `transformers`, 166
+
 `transmitter`, 121, 130
+
 `transmitter–receiver (TX–RX)`, 83
+
 `transportation`, 59
 
+`travel episode`, 285, 300
 
+`travel patterns`, 279, 280, 300
 
-travel episode, 285, 300
-travel patterns, 279, 280, 300
-tree, 288
-trend of signal, 117
-trustworthiness, 168
-tsfresh library package, 287
-tumor classification, 261
-tumor segmentation, 262
-tuning, 62
-two-layer manifold regularized dynamic GCN, 225
-two-order GCN, 226
-two-order graph convolutional network, 219
-two parallel layers, 22
-two parallel networks, 32
-two stream architecture, 49
-ubiquitous deployment, 103
-UCF-101, 32, 42
-uncertainty, 162
-uniform features, 176
-unnormalized graph Laplacian operator, 215
-unsupervised, 177
-unsupervised domain adaptation (UDA), 79, 90
-unsupervised feature representations, 161
-unsupervised learning, 163
-unsupervised settings, 160
-update gate, 21
-variance, 123
-variance-based moving window, 123
-variants, 3
-vegetation indexes, 193
-VGG-19 network, 246
-VGGNet, 40
-VGG network architecture, 15
-video, 38, 50, 147
-video anomaly detection, 139
-video classification, 31
-visible, 9
-vision-based, 32, 103
-visualization, 118
-visual observation, 281
-voting strategy, 190
-wandering, 281, 299
-wandering patterns, 279, 282, 297
-wearable sensor-deployments, 56
-weights, 10
-well-lit regions, 244
-WiFi bandwidth, 84
-WiFi-based human activity recognition, 125
-WiFi-based sensing, 96
-WiFi-enabled adaptive gesture
-recognition system, 90
-WiFi infrastructure, 103
-WiFi sensing data, 84
-WiFi signals, 79, 101, 128
-wireless signals, 97
-within, 61
-World Scientific, ix
-XGB, 296
+`tree`, 288
+
+`trend of signal`, 117
+
+`trustworthiness`, 168
+
+`tsfresh library package`, 287
+
+`tumor classification`, 261
+
+`tumor segmentation`, 262
+
+`tuning`, 62
+
+`two-layer manifold regularized dynamic GCN`, 225
+
+`two-order GCN`, 226
+
+`two-order graph convolutional network`, 219
+
+`two parallel layers`, 22
+
+`two parallel networks`, 32
+
+`two stream architecture`, 49
+
+`ubiquitous deployment`, 103
+
+`UCF-101`, 32, 42
+
+`uncertainty`, 162
+
+`uniform features`, 176
+
+`unnormalized graph Laplacian operator`, 215
+
+`unsupervised`, 177
+
+`unsupervised domain adaptation (UDA)`, 79, 90
+
+`unsupervised feature representations`, 161
+
+`unsupervised learning`, 163
+
+`unsupervised settings`, 160
+
+`update gate`, 21
+
+`variance`, 123
+
+`variance-based moving window`, 123
+
+`variants`, 3
+
+`vegetation indexes`, 193
+
+`VGG-19 network`, 246
+
+`VGGNet`, 40
+
+`VGG network architecture`, 15
+
+`video`, 38, 50, 147
+
+`video anomaly detection`, 139
+
+`video classification`, 31
+
+`visible`, 9
+
+`vision-based`, 32, 103
+
+`visualization`, 118
+
+`visual observation`, 281
+
+`voting strategy`, 190
+
+`wandering`, 281, 299
+
+`wandering patterns`, 279, 282, 297
+
+`wearable sensor-deployments`, 56
+
+`weights`, 10
+
+`well-lit regions`, 244
+
+`WiFi bandwidth`, 84
+
+`WiFi-based human activity recognition`, 125
+
+`WiFi-based sensing`, 96
+
+`WiFi-enabled adaptive gesture recognition system`, 90
+
+`WiFi infrastructure`, 103
+
+`WiFi sensing data`, 84
+
+`WiFi signals`, 79, 101, 128
+
+`wireless signals`, 97
+
+`within`, 61
+
+`World Scientific`, ix
+
+`XGB`, 296

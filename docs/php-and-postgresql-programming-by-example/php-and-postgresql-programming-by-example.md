@@ -1,20 +1,12 @@
+
 # PHP 与 PostgreSQL 编程示例
-
-
-
-
-
-
-
-
-
-
 
 ## 前言
 
 通常人们使用 PHP 和 MySQL 数据库。本书提供了一种使用 PostgreSQL 数据库构建 PHP 应用的替代方案。书中描述了如何使用 PHP 与 PostgreSQL 协同工作，并通过代码示例说明其用法。
 
 Agus Kurniawan
+
 柏林，2016 年 3 月
 
 ## 1. 搭建开发环境
@@ -27,7 +19,7 @@ Agus Kurniawan
 
 它将安装所有选中的功能。完成后，你可以在“管理工具”中检查 IIS Web 服务器。你可以看到“Internet Information Services (IIS) 管理器”。点击它，然后你会得到 IIS Web 服务器对话框，如下图所示。
 
-#### 1.1.2 Ubuntu 和 Mac 上的 Apache
+### 1.1.2 Ubuntu 和 Mac 上的 Apache
 
 在 OS X 上，Apache 已经为你安装好了。在 Ubuntu 上，你可以使用以下命令安装它。
 
@@ -46,7 +38,7 @@ $ sudo apt-get install apache2
 
 在 IIS 上安装 PHP 有两种选择。你可以通过 Microsoft Web Platform Installer 安装，网址为 http://php.iis.net/。下载后，运行它，然后你会得到以下对话框。
 
-** 此对话框是 Web Platform Installer 4.6 的示例。
+*此对话框是 Web Platform Installer 4.6 的示例。
 
 ## Web Platform Installer 4.6
 
@@ -74,11 +66,11 @@ PHP（PHP: Hypertext Preprocessor 的递归缩写）是一种广泛使用的开�
 
 ![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_12_0.png)
 
-之后，点击**安装**按钮开始安装。
+之后，点击`安装`按钮开始安装。
 
 在本书中，我手动在 IIS 上安装了 PHP。你可以在 IIS Web 服务器上安装最新的 PHP。如何安装？
 
-首先，我们必须安装适用于 Windows 的 PHP。你可以从 http://windows.php.net/download/ 下载。你可以下载 x86 或 x64 版本，以及线程安全或非线程安全版本。建议下载非线程安全的 PHP。下载后，你会得到一个 ZIP 文件（特定 PHP 版本提供安装程序文件）。将其解压到特定文件夹，例如 C:\PHP。
+首先，我们必须安装适用于 Windows 的 PHP。你可以从 http://windows.php.net/download/ 下载。你可以下载 x86 或 x64 版本，以及线程安全或非线程安全版本。建议下载非线程安全的 PHP。下载后，你会得到一个 ZIP 文件（特定 PHP 版本提供安装程序文件）。将其解压到特定文件夹，例如 `C:\PHP`。
 
 以下是解压后的 PHP 示例结果。
 
@@ -94,7 +86,7 @@ PHP（PHP: Hypertext Preprocessor 的递归缩写）是一种广泛使用的开�
 
 选择“Default Web Site”和 URL http://localhost。完成后，点击“确定”按钮。
 
-如果成功，你可以看到 phpinfo() 的输出。以下是一个示例输出。
+如果成功，你可以看到 `phpinfo()` 的输出。以下是一个示例输出。
 
 ![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_16_0.png)
 
@@ -142,7 +134,7 @@ $ cd /etc/apache2/
 $ sudo cp httpd.conf httpd.conf.bak
 ```
 
-现在编辑 httpd.conf 文件。
+现在编辑 `httpd.conf` 文件。
 
 ```
 $ sudo nano httpd.conf
@@ -170,7 +162,7 @@ SetHandler application/x-httpd-php
 $ sudo apachectl restart
 ```
 
-为了测试 PHP，在 Apache 的文档根目录中创建 test.php。
+为了测试 PHP，在 Apache 的文档根目录中创建 `test.php`。
 
 对于 Mac 用户，你可以输入以下命令：
 
@@ -178,7 +170,7 @@ $ sudo apachectl restart
 $ sudo nano /Library/WebServer/Documents/test.php
 ```
 
-在 test.php 中，你可以编写以下代码：
+在 `test.php` 中，你可以编写以下代码：
 
 ```
 <?php phpinfo();
@@ -191,17 +183,22 @@ $ sudo nano /Library/WebServer/Documents/test.php
 ![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_20_0.png)
 
 | 系统 | Darwin akumpb.local 15.4.0 Darwin 内核版本 15.4.0：2016 年 2 月 26 日星期五 22:08:05 PST；root:xnu-3248.40.184-3/RELEASE_X86_64_x86_64 |
+
 | 日期 | 2016 年 3 月 24 日 06:56:14 |
+
 | 配置命令 | './configure' '--prefix=/usr/local/Cellar/php70/7.0.4' '--localstatedir=/usr/local/var' '--sysconfdir=/usr/local/etc/php/7.0' '--with-config-file-path=/usr/local/etc/php/7.0' '--with-config-file-scan-dir=/usr/local/etc/php/7.0/conf.d' '--mandir=/usr/local/Cellar/php70/7.0.4/share/man' '--enable-bcmath' '--enable-calendar' '--enable-dba' '--enable-exif' '--enable-ftp' '--enable-gd-native-ttf' '--enable-mbregex' '--enable-mbstring' '--enable-shmop' '--enable-soap' '--enable-sockets' '--enable-sysvmsg' '--enable-sysvsem' '--enable-sysvshm' '--enable-wddx' '--enable-zip' '--with-freetype-dir=/usr/local/opt/freetype' '--with-gd' '--with-gettext=/usr/local/opt/gettext' '--with-iconv-dir=/usr' '--with-icu-dir=/usr' '--with-jpeg-dir=/usr/local/opt/jpeg' '--with-kerberos=/usr' '--with-libedit' '--with-mhash' '--with-ndbm=/usr' '--with-pdo-odbc=/usr/local/opt/unixodbc' '--with-png-dir=/usr/local/opt/libpng' '--with-unixODBC=/usr/local/opt/unixodbc' '--with-xmlrpc' '--with-zlib=/usr' '--with-readline=/usr/local/opt/readline' '--without-gmp' '--without-snmp' '--with-libxml-dir=/usr/local/opt/libxml2' '--with-apxs2=/usr/sbin/apxs' '--libexecdir=/usr/local/Cellar/php70/7.0.4/libexec' '--with-bz2=/usr' '--disable-debug' '--with-openssl=/usr/local/opt/openssl' '--enable-fpm' '--with-fpm-user=_www' '--with-fpm-group=_www' '--with-curl' '--with-xsl=/usr' '--with-ldap' '--with-ldap-sasl' '--with-mysql-sock=/tmp/mysql.sock' '--with-mysqli=mysqlnd' '--with-pdo-mysql=mysqlnd' '--disable-opcache' '--enable-pcntl' '--without-pear' '--with-pgsql=/usr/local/opt/postgresql' '--with-pdo-pgsql=/usr/local/opt/postgresql' '--enable-dtrace' '--disable-phpdbg' '--enable-zend-signals' 'CC=clang' 'CXX=clang++' |
+
 | API | Apache 2.0 处理器 |
+
 | 目录支持 | 已禁用 |
+
 | 配置文件（php.ini）路径 | /usr/local/etc/php/7.0 |
+
 | 已加载的配置文件 | /usr/local/etc/php/7.0/php.ini |
+
 | 扫描此目录以查找额外的 .ini 文件 | /usr/local/etc/php/7.0/conf.d |
+
 | 已解析的额外 .ini 文件 | /usr/local/etc/php/7.0/conf.d/ext-pdo_pgsql.ini |
-
-
-
 
 ### 1.3 PostgreSQL 服务器
 
@@ -224,16 +221,27 @@ $ sudo nano /Library/WebServer/Documents/test.php
 PostgreSQL - postgres@localhost
 
 +   - pg_catalog
+
 +   - public
+
 +     - sequences
+
 +     - tables
+
 +       - employee
+
 +         - hrd_employee
+
 +           - id INTEGER
+
 +           - name CHAR(30)
+
 +           - department CHAR(30)
+
 +           - level CHAR(10)
+
 +           - created TIMESTAMP
+
 +     - routines
 
 <Filter criteria>
@@ -241,17 +249,20 @@ PostgreSQL - postgres@localhost
 0 rows
 
 | id | name | department |
+
 |---|---|---|
 
 Data DDL
 
+## 2. 连接到 PostgreSQL
+
 ### 2.1 连接到 PostgreSQL
 
-在 IIS 和 Apache 上设置 PHP 和 PostgreSQL 驱动程序后，现在我们可以测试连接到 PostgreSQL 服务器。我们可以使用 **pg_connect()** 连接 PostgreSQL 服务器数据库和 **pg_close()** 关闭连接。
+在 IIS 和 Apache 上设置 PHP 和 PostgreSQL 驱动程序后，现在我们可以测试连接到 PostgreSQL 服务器。我们可以使用 `pg_connect()` 连接 PostgreSQL 服务器数据库和 `pg_close()` 关闭连接。
 
 ### 2.2 创建 PHP 并连接到 PostgreSQL
 
-在本节中，我们创建一个名为 **hello.php** 的 PHP 文件。
+在本节中，我们创建一个名为 `hello.php` 的 PHP 文件。
 
 目标是通过数据库身份验证连接到 PostgreSQL。
 
@@ -266,9 +277,9 @@ $password = "dbtester";
 $database = "postgres";
 ```
 
-请更改 $username 和 $password 值。
+请更改 `$username` 和 `$password` 值。
 
-然后我们通过传递服务器信息使用 **pg_connect()** 连接到 PostgreSQL。
+然后我们通过传递服务器信息使用 `pg_connect()` 连接到 PostgreSQL。
 
 ```php
 // Connecting, selecting database
@@ -286,13 +297,13 @@ $stat = pg_connection_status($dbconn);
 pg_close($dbconn);
 ```
 
-代码末尾，我们使用 **pg_close()** 关闭连接。
+代码末尾，我们使用 `pg_close()` 关闭连接。
 
 保存所有代码。
 
 ### 2.3 测试
 
-将文件 hello.php 部署到 Web 服务器。我测试了 PhpStorm 工具的内置 Web 服务器。打开浏览器并输入 hello.php 文件的 URL。
+将文件 `hello.php` 部署到 Web 服务器。我测试了 PhpStorm 工具的内置 Web 服务器。打开浏览器并输入 `hello.php` 文件的 URL。
 
 以下是运行 PHP 应用程序的示例。
 
@@ -304,7 +315,9 @@ pg_close($dbconn);
 
 ### 3.1 CRUD 操作
 
-CRUD (Create, Read, Update, Delete) 操作是数据库的基本数据操作。在本章中我们将开发 PHP 应用程序来执行 CRUD 操作。我们使用现有数据库 postgres。然后，创建一个名为 **hrd_employee** 的表。以下是创建表的查询。
+
+
+CRUD (Create, Read, Update, Delete) 操作是数据库的基本数据操作。在本章中我们将开发 PHP 应用程序来执行 CRUD 操作。我们使用现有数据库 postgres。然后，创建一个名为 `hrd_employee` 的表。以下是创建表的查询。
 
 ```
 CREATE TABLE public.hrd_employee
@@ -330,7 +343,7 @@ DataGrip 的表单。
 
 ![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_32_0.png)
 
-对于数据库连接配置，我创建了一个名为 **dbinfo.php** 的 PHP 文件。以下是 dbinfo.php 的内容。
+对于数据库连接配置，我创建了一个名为 `dbinfo.php` 的 PHP 文件。以下是 `dbinfo.php` 的内容。
 
 ```php
 <?php
@@ -345,7 +358,7 @@ $connString = "host=$dbServer dbname=$database user=$username password=$
 
 请根据你的配置更改数据库参数值。
 
-你可以修改此数据库配置。下一步是创建一个名为 **CRUDDemo** 的 PHP 类。此类提供多个函数来执行 CRUD 操作。开始吧。创建名为 **CRUDDemo.php** 的 PHP 文件。然后编写此脚本。
+你可以修改此数据库配置。下一步是创建一个名为 `CRUDDemo` 的 PHP 类。此类提供多个函数来执行 CRUD 操作。开始吧。创建名为 `CRUDDemo.php` 的 PHP 文件。然后编写此脚本。
 
 ```php
 <?php
@@ -365,7 +378,7 @@ return $this->msg;
 }
 ```
 
-根据你的 **dbinfo.php** 位置，你可以更改其路径。
+根据你的 `dbinfo.php` 位置，你可以更改其路径。
 
 我们将在下一节添加一些函数来执行 CRUD 操作。
 
@@ -373,9 +386,9 @@ return $this->msg;
 
 在此场景中，我们创建新员工并尝试检索插入的 ID。PostgreSQL 驱动程序提供函数 RETURNING 来从插入的查询 SQL 语句中检索 ID。我们将使用 SQL 语句插入数据，但我们使用参数来防止 SQL 注入。
 
-我们使用函数 pg_fetch_row() 从查询 RETURNING 中获取 ID 值。代码末尾，不要忘记释放我们使用的资源并使用 pg_close() 关闭连接。
+我们使用函数 `pg_fetch_row()` 从查询 RETURNING 中获取 ID 值。代码末尾，不要忘记释放我们使用的资源并使用 `pg_close()` 关闭连接。
 
-现在我们添加函数 createEmployee() 来创建新员工。然后，编写此代码。
+现在我们添加函数 `createEmployee()` 来创建新员工。然后，编写此代码。
 
 ```php
 <?php
@@ -424,7 +437,7 @@ class CRUDDemo {
 
 保存此代码。
 
-为了测试此类，我们创建名为 **testcrud.php** 的 PHP 文件。之后，我们尝试插入 10 条数据。
+为了测试此类，我们创建名为 `testcrud.php` 的 PHP 文件。之后，我们尝试插入 10 条数据。
 
 ```php
 <?php
@@ -441,13 +454,13 @@ for($i=1;$i<=10;$i++) {
 }
 ```
 
-保存代码并尝试运行 **testcrud.php**。
+保存代码并尝试运行 `testcrud.php`。
 
 以下是 Intellij IDEA 上测试运行的示例。
 
 ![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_35_0.png)
 
-为了验证是否成功，我们可以检查数据库。如果成功，我们可以在表 hrd_employee 上看到 10 条新数据。以下是 PostgreSQL 上表 **hrd_employee** 的 10 条数据的示例。
+为了验证是否成功，我们可以检查数据库。如果成功，我们可以在表 `hrd_employee` 上看到 10 条新数据。以下是 PostgreSQL 上表 `hrd_employee` 的 10 条数据的示例。
 
 ![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_36_0.png)
 
@@ -457,11 +470,11 @@ for($i=1;$i<=10;$i++) {
 }
 ```
 
-你可以看到我们定义 $data 来保存来自 PostgreSQL 数据库的数据。
+你可以看到我们定义 `$data` 来保存来自 PostgreSQL 数据库的数据。
 
 保存此代码。
 
-现在我们测试函数 readEmployeeList()。打开文件 testcrud.php 并添加以下代码。
+现在我们测试函数 `readEmployeeList()`。打开文件 `testcrud.php` 并添加以下代码。
 
 ```php
 <?php
@@ -485,7 +498,7 @@ if($list) {
 
 保存此代码。
 
-你可以执行文件 testcrud.php。以下是输出示例。
+你可以执行文件 `testcrud.php`。以下是输出示例。
 
 ```
 /usr/local/bin/php /Users/apusk/Documents/MyBooks/pearess/php_postgresql/codes/testcrud.php
@@ -514,14 +527,11 @@ level: A4
 created: 2016-03-25 14:15:16.931068
 ```
 
-
-
-
 ### 3.4 更新数据
 
 本节将更新特定 ID 对应的数据。我们使用 UPDATE 语句并传入更新后的数据。
 
-创建一个名为 updateEmployee() 的函数，并编写以下代码。
+创建一个名为 `updateEmployee()` 的函数，并编写以下代码。
 
 ```php
 <?php
@@ -574,7 +584,7 @@ class CRUDDemo {
 
 保存此代码。
 
-现在，我们在 testcrud.php 文件中调用 updateEmployee()。在本次测试中，我们更新 ID 为 30 的员工。你也可以更改员工 ID。
+现在，我们在 `testcrud.php` 文件中调用 `updateEmployee()`。在本次测试中，我们更新 ID 为 30 的员工。你也可以更改员工 ID。
 
 ```php
 <?php
@@ -590,30 +600,41 @@ echo "Success: " . $success . "\n";
 echo "Error message: " . $obj->getMsg();
 ```
 
-保存此代码，然后运行 testcrud.php 文件。
+保存此代码，然后运行 `testcrud.php` 文件。
 
 ![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_41_0.png)
 
-如果打开 hrd_employee 表，就能看到 ID = 30 的数据已更新。
+如果打开 `hrd_employee` 表，就能看到 ID = 30 的数据已更新。
 
 |  | id | name | department | level | created (yyyy-MM-dd HH:mm:ss.ffffff) |
+
 |---|---|---|---|---|---|
+
 | 1 | 28 | person 1 | department 1 | A1 | 2016-03-25 14:15:16.876907 |
+
 | 2 | 29 | person 2 | department 2 | A2 | 2016-03-25 14:15:16.896776 |
+
 | 3 | 31 | person 4 | department 4 | A4 | 2016-03-25 14:15:16.931068 |
+
 | 4 | 32 | person 5 | department 5 | A5 | 2016-03-25 14:15:16.942084 |
+
 | 5 | 33 | person 6 | department 6 | A6 | 2016-03-25 14:15:16.957744 |
+
 | 6 | 34 | person 7 | department 7 | A7 | 2016-03-25 14:15:16.975317 |
+
 | 7 | 35 | person 8 | department 8 | A8 | 2016-03-25 14:15:16.986468 |
+
 | 8 | 36 | person 9 | department 9 | A9 | 2016-03-25 14:15:16.993604 |
+
 | 9 | 37 | person 10 | department 10 | A10 | 2016-03-25 14:15:16.999911 |
+
 | 10 | 30 | update-employee | update-department | u-level | 2016-03-25 14:15:16.913929 |
 
 ### 3.5 删除数据
 
 要删除数据，我们使用 DELETE FROM SQL 语句并传入员工 ID。
 
-创建一个名为 deleteEmployee() 的函数，并编写以下代码。
+创建一个名为 `deleteEmployee()` 的函数，并编写以下代码。
 
 ```php
 <?php
@@ -666,7 +687,9 @@ class CRUDDemo {
 
 保存此代码。
 
-现在，我们在 **testcrud.php** 文件中测试此函数。我们将删除 ID = 30 的数据。你可以更改此 ID。
+现在，我们在 `testcrud.php` 文件中测试此函数。我们将删除 ID = 30 的数据。你可以更改此 ID。
+
+
 
 ```php
 <?php
@@ -682,11 +705,11 @@ echo "Success: " . $success . "\n";
 echo "Error message: " . $obj->getMsg();
 ```
 
-保存此代码并运行 **testcrud.php**。
+保存此代码并运行 `testcrud.php`。
 
 ![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_44_0.png)
 
-打开 **hrd_employee** 表即可验证。ID = 30 的数据应该不会显示。
+打开 `hrd_employee` 表即可验证。`ID = 30` 的数据应该不会显示。
 
 | id | name | department | level | created (yyyy-MM-dd HH:mm:ss.ffffff) |
 |----|------|------------|-------|--------------------------------------|
@@ -706,15 +729,15 @@ echo "Error message: " . $obj->getMsg();
 
 ### 4.1 图像和 Blob 数据
 
-PostgreSQL 提供了 BYTEA 数据类型，可用于存储图像文件和二进制类型的数据。
+PostgreSQL 提供了 `BYTEA` 数据类型，可用于存储图像文件和二进制类型的数据。
 
-本章将介绍如何在 PostgreSQL 中处理图像文件。以下是名为 ImagesFiles 的表结构。
+本章将介绍如何在 PostgreSQL 中处理图像文件。以下是名为 `ImagesFiles` 的表结构。
 
 ![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_47_0.png)
 
-以下脚本用于创建 imagesfiles 表。
+以下脚本用于创建 `imagesfiles` 表。
 
-```
+```sql
 CREATE TABLE public.imagesfiles
 (
   id SERIAL PRIMARY KEY,
@@ -730,7 +753,7 @@ ALTER TABLE public.imagesfiles
 OWNER TO postgres;
 ```
 
-filetype 表示上传文件的图像类型。显示图像时，这一信息非常重要。更多说明请参见第 4.3 节。
+`filetype` 表示上传文件的图像类型。显示图像时，这一信息非常重要。更多说明请参见第 4.3 节。
 
 接下来，我们将创建两个 PHP 应用程序：一个用于上传图像，另一个用于列出图像数据。
 
@@ -738,7 +761,7 @@ filetype 表示上传文件的图像类型。显示图像时，这一信息非�
 
 本节将介绍使用传统的 HTML 文件表单上传图像。用户选择图像文件并点击 **Submit** 按钮后，PHP 文件会处理上传的文件并将其存储到数据库中。
 
-首先，创建 **uploadimage.html** 并编写以下脚本。
+首先，创建 `uploadimage.html` 并编写以下脚本。
 
 ```html
 <!DOCTYPE html>
@@ -763,9 +786,9 @@ filetype 表示上传文件的图像类型。显示图像时，这一信息非�
 </html>
 ```
 
-可以看到，我们使用了 multipart/form-data 表单和 file 输入控件来上传图像文件。表单采用 POST 方法，并跳转到 **upload_process.php**。
+可以看到，我们使用了 `multipart/form-data` 表单和 `file` 输入控件来上传图像文件。表单采用 `POST` 方法，并跳转到 `upload_process.php`。
 
-现在创建 **upload_process.php** 来处理上传的文件。我们将验证输入文件是否为 gif、tif、jpg 或 png 格式，并将文件大小限制在 500 KB 以下。将以下代码写入 **upload_process.php**。
+现在创建 `upload_process.php` 来处理上传的文件。我们将验证输入文件是否为 `gif`、`tif`、`jpg` 或 `png` 格式，并将文件大小限制在 500 KB 以下。将以下代码写入 `upload_process.php`。
 
 ```php
 <?php
@@ -783,12 +806,7 @@ if ((($imageType == "image/gif") || ($imageType == "image/jpg") || ($imageType =
     || ($imageType == "image/x-png") || ($imageType == "image/png"))
     && ($_FILES["file"]["size"] < 500000)
     && in_array($fileExt, $allowedExts)) {
-```
 
-
-
-
-```php
 $file_name = $_FILES['file']['tmp_name'];
 
 // open connection to database server
@@ -825,15 +843,15 @@ echo "Uploaded file was success <br>";
 }
 ```
 
-基本上它与正常插入数据类似，但对于字段 imgfile（图像数据类型），我们使用 pg_escape_bytea() 将图像文件的内容作为查询参数传递。
+基本上它与正常插入数据类似，但对于字段 `imgfile`（图像数据类型），我们使用 `pg_escape_bytea()` 将图像文件的内容作为查询参数传递。
 
-**dbinfo.php** 是一个数据库配置文件。您可以从第 3.1 节使用相同的内容。
+`dbinfo.php` 是一个数据库配置文件。您可以从第 3.1 节使用相同的内容。
 
 完成保存代码。尝试运行。
 
-在浏览器中打开文件 **uploadingimage.html**。选择图像文件然后点击提交按钮。
+在浏览器中打开文件 `uploadingimage.html`。选择图像文件然后点击提交按钮。
 
-### 上传图像文件
+#### 上传图像文件
 
 上传图像文件（JPG/PNG/TIF/GIF），文件大小最大为 500KB。
 
@@ -849,17 +867,17 @@ Uploaded file was success
 
 ### 4.3 列出图像数据
 
-现在我们构建 PHP 应用程序来显示图像数据列表。如我们所知，HTML 提供了 img 标签（<img />）来显示图像。我们使用以下格式来显示图像：
+现在我们构建 PHP 应用程序来显示图像数据列表。如我们所知，HTML 提供了 `img` 标签（`<img />`）来显示图像。我们使用以下格式来显示图像：
 
 ```
 <img src='data:image/jpeg;base64,<base64_of_imagefile>' width=200px height
 ```
 
-根据您的图像类型，我们可以更改 data 值，例如 PNG 图像文件，可更改为 image/png。 <base64_of_imagefile> 是图像的 base64 值。我们可以使用 base64_encode() 将图像转换为 base64。在从数据库获取图像数据后，我们应该调用 pg_unescape_bytea() 函数。
+根据您的图像类型，我们可以更改 `data` 值，例如 PNG 图像文件，可更改为 `image/png`。`<base64_of_imagefile>` 是图像的 base64 值。我们可以使用 `base64_encode()` 将图像转换为 base64。在从数据库获取图像数据后，我们应该调用 `pg_unescape_bytea()` 函数。
 
-现在创建一个名为 list_images.php 的 PHP 文件，并编写此代码。
+现在创建一个名为 `list_images.php` 的 PHP 文件，并编写此代码。
 
-```
+```php
 <!DOCTYPE html>
 <html>
 <head>
@@ -906,9 +924,9 @@ pg_close($conn);
 
 保存代码。
 
-现在在浏览器中打开文件 **list_images.php**。如果有数据，您可以看到结果输出，如下图所示。
+现在在浏览器中打开文件 `list_images.php`。如果有数据，您可以看到结果输出，如下图所示。
 
-### 图像文件列表
+#### 图像文件列表
 
 从数据库检索图像。
 
@@ -922,9 +940,11 @@ cvr_phpost.png
 
 您可以使用 CSS 或 JavaScript 修改以增强网站 UI。
 
+## 5. PHP 和 PostgreSQL 事务
+
 ### 5.1 PHP 和 PostgreSQL 事务
 
-PostgreSQL 驱动程序通过查询提供事务操作。我们使用 BEGIN 查询开始事务，使用 COMMIT 完成事务。否则，我们可以使用 ROLLBACK 来恢复之前的事务。
+PostgreSQL 驱动程序通过查询提供事务操作。我们使用 `BEGIN` 查询开始事务，使用 `COMMIT` 完成事务。否则，我们可以使用 `ROLLBACK` 来恢复之前的事务。
 
 如何使用这些函数？让我们编写 PHP 应用程序。
 
@@ -932,9 +952,9 @@ PostgreSQL 驱动程序通过查询提供事务操作。我们使用 BEGIN 查�
 
 为了说明事务演示，我们创建一个简单的 PHP 应用程序。我们向数据库插入 5 条数据。我们使用第 3 章的相同代码。如果其中一个失败，我们将调用回滚事务。
 
-让我们开始构建。创建一个名为 transaction_demo.php 的 PHP 文件，并编写以下代码：
+让我们开始构建。创建一个名为 `transaction_demo.php` 的 PHP 文件，并编写以下代码：
 
-```
+```php
 <?php
 
 include('dbinfo.php');
@@ -985,7 +1005,7 @@ echo "Committed Transaction and close connection.<br>";
 
 保存此代码并运行它。
 
-在浏览器中打开文件 **transaction_demo.php**。如果成功，您可以看到如下响应。
+在浏览器中打开文件 `transaction_demo.php`。如果成功，您可以看到如下响应。
 
 ![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_59_0.png)
 
@@ -1001,6 +1021,9 @@ echo "Committed Transaction and close connection.<br>";
 | 12 | 40 | person-3 | finance | B | 2016-03-26 04:42:18.799703 |
 | 13 | 41 | person-4 | finance | B | 2016-03-26 04:42:18.799703 |
 | 14 | 42 | person-5 | finance | B | 2016-03-26 04:42:18.799703 |
+
+
+
 | 15 | 43 | person-1 | finance | B | 2016-03-26 04:42:52.573706 |
 | 16 | 44 | person-2 | finance | B | 2016-03-26 04:42:52.573706 |
 | 17 | 45 | person-3 | finance | B | 2016-03-26 04:42:52.573706 |
@@ -1026,9 +1049,9 @@ echo "Committed Transaction and close connection.<br>";
 - Stored Procedure with input parameter
 - Stored Procedure with input and output parameters
 
-这些模型将在下一节中实现。首先，我们创建一个名为 **SPDemo** 的 PHP 类。然后，编写此骨架代码：
+这些模型将在下一节中实现。首先，我们创建一个名为 `SPDemo` 的 PHP 类。然后，编写此骨架代码：
 
-```
+```php
 <?php
 
 include('dbinfo.php');
@@ -1043,23 +1066,23 @@ class SPDemo {
 }
 ```
 
-将此代码保存为 **SPDemo.php**。
+将此代码保存为 `SPDemo.php`。
 
-我们将添加几个函数来访问存储过程。在本章中，我们使用 **hrd_employee** 表从 postgres 数据库。
+我们将添加几个函数来访问存储过程。在本章中，我们使用 `hrd_employee` 表从 postgres 数据库。
 
 ### 6.2 调用存储过程
 
 要使用游标从 PHP 调用存储过程，我们执行以下步骤：
 
-- Open connection to PostgreSQL using pg_connect()
+- Open connection to PostgreSQL using `pg_connect()`
 - Do a transaction BEGIN and COMMIT
-- Inside a transaction, we call pg_query_params() to call stored procedure
+- Inside a transaction, we call `pg_query_params()` to call stored procedure
 
 让我们开始。
 
-首先，我们创建存储过程，名为 **get all employees**。编写此 SQL 语句。
+首先，我们创建存储过程，名为 `get all employees`。编写此 SQL 语句。
 
-```
+```sql
 DROP FUNCTION public.get_all_employees(refcursor);
 
 CREATE OR REPLACE FUNCTION get_all_employees(ref refcursor) RETURNS refcursor AS $$
@@ -1070,16 +1093,13 @@ END;
 $$ LANGUAGE plpgsql;
 ```
 
-此存储过程调用查询以从 hrd_employee 表中检索数据。它返回一个游标。
+此存储过程调用查询以从 `hrd_employee` 表中检索数据。它返回一个游标。
 
 运行此脚本到 PostgreSQL 数据库。如果成功，您可以在数据库中看到此存储过程。
 
-
-
-
 ![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_64_0.png)
 
-现在我们创建一个新函数，名为 **getAllEmployees()**，位于 SPDemo.php 中，并编写以下代码。
+现在我们创建一个新函数，名为 `getAllEmployees()`，位于 `SPDemo.php` 中，并编写以下代码。
 
 ```php
 <?php
@@ -1141,7 +1161,7 @@ return $data;
 
 保存此代码。
 
-现在调用函数 getAllEmployees()。创建文件 PHP testsp.php 并编写以下代码：
+现在调用函数 `getAllEmployees()`。创建文件 `PHP testsp.php` 并编写以下代码：
 
 ```php
 <?php
@@ -1164,32 +1184,36 @@ echo $content . "\n";
 }
 }
 ```
-```
 
 保存此代码。
 
-你可以执行文件 **testsp.php**。以下是一个示例输出。
+你可以执行文件 `testsp.php`。以下是一个示例输出。
 
 ![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_66_0.png)
 
 ### 6.3 调用带参数的存储过程
 
-在上一节中，我们调用了不带参数的存储过程。现在我们将调用带参数的存储过程。我们创建一个名为 **get_employee_by_id** 的存储过程，然后编写以下脚本。
+在上一节中，我们调用了不带参数的存储过程。现在我们将调用带参数的存储过程。我们创建一个名为 `get_employee_by_id` 的存储过程，然后编写以下脚本。
 
-```
+```sql
 DROP FUNCTION public.get_employee_by_id(refcursor,INT);
 
 CREATE OR REPLACE FUNCTION get_employee_by_id(ref refcursor,empId INT) R
+
 BEGIN
+
     OPEN ref FOR SELECT id,name,department,level,created FROM hrd_employee
+
     RETURN ref;
+
 END;
+
 $$ LANGUAGE plpgsql;
 ```
 
 在 PostgreSQL 上将此脚本运行到 postgres 数据库。
 
-在 PHP 文件 **SPDemo.php** 中，我们创建一个函数 **getEmployeesById()** 来调用存储过程，并编写以下代码。
+在 PHP 文件 `SPDemo.php` 中，我们创建一个函数 `getEmployeesById()` 来调用存储过程，并编写以下代码。
 
 ```php
 <?php
@@ -1201,25 +1225,37 @@ class SPDemo {
     private $msg = "";
 
     public function getMsg()
+
     {
+
         return $this->msg;
+
     }
 
     public function getEmployeesById($id) {
+
         $data = array();
+
         try {
 
             global $connString;
 
             $conn = pg_connect($connString);
+
             if( $conn === false )
+
             {
+
                 $this->msg = "Unable to connect PostgreSQL Server.";
+
                 return $data;
+
             }
 
             $cursor_name = "gtm";
+
             pg_query($conn,"BEGIN");
+
             $query = "select * from get_employee_by_id($1,$2);";
 
             $params = array(&$cursor_name,&$id);
@@ -1252,9 +1288,8 @@ return $data;
 }
 }
 ```
-```
 
-现在调用函数 **getEmployeesById()**。打开 PHP 文件 testsp.php 并添加以下代码：
+现在调用函数 `getEmployeesById()`。打开 PHP 文件 `testsp.php` 并添加以下代码：
 
 ```php
 <?php
@@ -1275,7 +1310,6 @@ if($data) {
     }
 }
 ```
-```
 
 我们向函数传入 Id=40。你可以根据你自己的数据更改此值。
 
@@ -1285,9 +1319,9 @@ if($data) {
 
 ### 6.5 调用带有输入和输出参数的存储过程
 
-我们还可以调用带有输入和输出参数的存储过程。首先，我们创建一个名为 **func_compute** 的存储过程。编写以下代码。
+我们还可以调用带有输入和输出参数的存储过程。首先，我们创建一个名为 `func_compute` 的存储过程。编写以下代码。
 
-```
+```sql
 DROP FUNCTION public.func_compute(INT,OUT INT);
 
 CREATE OR REPLACE FUNCTION public.func_compute(var_a INT, OUT val_ret INT)
@@ -1301,13 +1335,12 @@ $BODY$
 LANGUAGE plpgsql VOLATILE;
 ```
 
-你可以看到我们将 **val_ret** 参数定义为 **OUT**。
+你可以看到我们将 `val_ret` 参数定义为 `OUT`。
 
-回到 PHP 文件 **SPDemo.php**，我们创建一个函数 **compute()** 并编写以下代码。
+回到 PHP 文件 `SPDemo.php`，我们创建一个函数 `compute()` 并编写以下代码。
 
 ```php
 <?php
-
 public function compute($var_a) {
     $ret = -1;
     try {
@@ -1335,17 +1368,14 @@ public function compute($var_a) {
 
 ```php
 pg_close($conn);
-
 } catch (Exception $e) {
     $this->msg = $e->getMessage();
 }
-
 return $ret;
 }
 ```
-```
 
-现在我们在 **testsp.php** 中测试这个函数。添加以下代码。
+现在我们在 `testsp.php` 中测试这个函数。添加以下代码。
 
 ```php
 <?php
@@ -1359,13 +1389,11 @@ $obj = new SPDemo();
 $val = $obj->compute(15);
 echo "func_compute(15): " . $val;
 ```
-```
 
-保存此代码并运行 **testsp.php**。以下是一个示例输出。
+保存此代码并运行 `testsp.php`。以下是一个示例输出。
 
 ![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_73_0.png)
 
 ## 源代码
 
 你可以从[http://www.aguskurniawan.net/book/phppostgres261.zip](http://www.aguskurniawan.net/book/phppostgres261.zip)下载本书的源代码。
-

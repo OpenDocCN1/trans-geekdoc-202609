@@ -1,6 +1,5 @@
+
 # PHP Laravel 入门指南
-
-
 
 ## 关于作者
 
@@ -107,9 +106,6 @@ Laravel development server started: <http://127.0.0.1:8000>
 
 ## 模板
 
-
-
-
 ## 使用 StartBootstrap Simple Sidebar 主题创建视图脚手架
 
 我们将使用 StartBootstrap Simple Sidebar Theme（一个免费的 Bootstrap 4 基础模板）来创建我们的视图脚手架。你可以在此处找到它：[`blackrockdigital.github.io/startbootstrap-simple-sidebar`](https://blackrockdigital.github.io/startbootstrap-simple-sidebar/)。在页面上右键单击并选择“查看页面源代码”以复制 HTML 代码。
@@ -215,6 +211,8 @@ Laravel development server started: <http://127.0.0.1:8000>
 
 **替换 JavaScript 引用：**
 
+
+
 ```html
 // Replace this
 <script src="vendor/jquery/jquery.min.js"></script>
@@ -299,9 +297,6 @@ body {
 ## 定义布局
 
 由于我们将在各页面间维护相似的视图，Laravel 为我们提供了一种定义主布局的方法，其他页面（称为子视图）可以从此扩展。这样，导航、头部样式、底部脚本或内容等可以保留在主视图中，扩展它的子视图可以根据我们的定义和需求来扩展和覆盖其中的某些部分。
-
-
-
 
 ## Laravel Blade 布局重构指南
 
@@ -502,9 +497,6 @@ body {
     <div class="container-fluid">
 ```
 
-
-
-
 ## 简单侧边栏
 
 菜单的初始状态在较小屏幕上将显示为折叠状态，在较大屏幕上将显示为非折叠状态。当使用下方按钮切换时，菜单将发生变化。
@@ -525,19 +517,21 @@ body {
 php artisan make:auth
 ```
 
+
+
 成功运行命令后，你将收到一条提示“Authentication scaffolding generated successfully”的消息。为确认这一点，请访问 `http://127.0.0.1:8000/login` 和 `http://127.0.0.1:8000/register`，你会发现一个可用的登录页和注册页已为我们自动生成，这不是很棒吗？
 
 在编辑器中，于 `views/auth` 目录下你会注意到注册、登录和忘记密码的新 blade 文件，同时在 `Http/Controllers` 下你将看到一个新生成的 `HomeController.php` 类。
 
 > **注意**
 >
-> Artisan 是 Laravel 自带的命令行界面。它提供了许多有用的命令，可在构建应用程序时为你提供帮助。要查看所有可用的 Artisan 命令列表，可以使用 list 命令：
+> `Artisan` 是 Laravel 自带的命令行界面。它提供了许多有用的命令，可在构建应用程序时为你提供帮助。要查看所有可用的 `Artisan` 命令列表，可以使用 `list` 命令：
+>
+> ```
+> php artisan list
+> ```
 
-```
-php artisan list
-```
-
-### 登录页
+## 登录页
 
 让我们编辑登录页以扩展我们自己的主模板。对于登录视图，我们不需要侧边导航、导航栏，且需要将登录表单居中显示在页面中间。以下是登录页代码的最终效果。
 
@@ -626,7 +620,7 @@ php artisan list
 @endsection
 ```
 
-### 注册页
+## 注册页
 
 让我们也编辑注册页，使其扩展我们自己的主布局，而非自动生成的脚手架布局。
 
@@ -661,9 +655,6 @@ php artisan list
                         {{ csrf_field() }}
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
 ```
-
-
-
 
 ### Blade 注册表单模板
 
@@ -736,7 +727,7 @@ php artisan list
 @endsection
 ```
 
-### 设置应用路由与控制器
+## 设置应用路由与控制器
 
 现在我们需要设置应用路由（位于 `routes/web.php`）并创建一个名为 `AppController.php` 的控制器。在终端或 Git Bash 中运行：
 
@@ -762,12 +753,15 @@ Route::group(['prefix' => 'app', 'middleware' => 'auth'], function ($route) {
 });
 ```
 
-#### 路由分组说明
+### 路由分组说明
 
 这里我们定义了一个路由组。Laravel 允许定义路由组，以便将相同的 URL 前缀、中间件及其他选项应用到组内的所有路由。在本例中，我们应用了前缀 `app` 和中间件 `auth`。该组内的所有 URL 都以 `/app` 开头，`auth` 中间件会阻止未登录用户访问组内的任何路由。同时注意 `name` 方法允许我们给路由起一个易于记忆的别名，这里我们将渲染仪表盘的路由命名为 `inventory.home`，并在用户访问浏览器中的 `/` 路由时通过重定向引用了它。
 
 > **Note**
 >
+
+
+
 > 中间件为过滤进入应用的 HTTP 请求提供了便捷机制。Laravel 的 `auth` 中间件验证应用用户是否已登录。如果未登录，用户将被重定向到登录页面；如果已登录，中间件将允许请求继续深入应用内部。Laravel 自带了[多种中间件](https://laravel.com/docs/5.8/middleware)，你也可以自行创建额外的中间件。
 
 Laravel 允许根据请求类型定义路由，包括 `get`、`post`、`put`、`delete` 和 `any` 等请求方法。查看页面适用 `get` 路由，提交表单适用 `post` 路由，更新表单适用 `put` 路由，删除数据库记录则适用 `delete` 路由。如果你是初学者这可能看起来很陌生，但其实这些只是 HTTP 动词。
@@ -786,7 +780,7 @@ Route::get('/', function () {
 });
 ```
 
-#### 添加控制器方法
+### 添加控制器方法
 
 接下来打开 `AppController`，在 `AppController` 类中添加 `dashboard` 方法：
 
@@ -807,11 +801,7 @@ public function dashboard()
 protected $redirectTo = '/app';
 ```
 
-### Hello Laravel Migrations, Goodbye to Labouring
-
-
-
-
+## Hello Laravel Migrations, Goodbye to Labouring
 
 ## Laravel 迁移
 
@@ -935,6 +925,7 @@ Laravel 的 `.env` 文件被包含以供使用，因此可以根据应用程序�
 > **注意**
 >
 > 在 Blade 模板中 `{{ config('app.name') }}` 等同于 `<?php echo config('app.name') ?>`，而 `<?php if( a == b) { echo 'True' }else{ echo 'False' }` 也等同于 `@if(a === b) {{ 'True' }} @else {{ 'False' }}`。
+>
 > 更多关于使用 Blade 模板的信息 `https://laravel.com/docs/5.4/blade#displaying-data` 请看这里。
 
 ### 导航栏
@@ -953,44 +944,22 @@ Laravel 的 `.env` 文件被包含以供使用，因此可以根据应用程序�
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Account Settings
                 </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">编辑个人资料</a>
+                    <a class="dropdown-item" href="#">修改密码</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        退出登录
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    </a>
+                </div>
             </li>
         </ul>
     </div>
 </nav>
 ```
-
-
-
-
-
-</a>
-
-<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-
-    <a class="dropdown-item" href="#">编辑个人资料</a>
-
-    <a class="dropdown-item" href="#">修改密码</a>
-
-    <div class="dropdown-divider"></div>
-
-    <a class="dropdown-item" href="{{ route('logout') }}"
-       onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-        退出登录
-
-        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-            {{ csrf_field() }}
-        </form>
-    </a>
-
-</div>
-
-</li>
-
-</ul>
-
-</div>
-
-</nav>
 
 ---
 
@@ -1016,7 +985,7 @@ Laravel 的 `.env` 文件被包含以供使用，因此可以根据应用程序�
 
 我们将向仪表盘添加一个通知消息，以便在用户登录时欢迎他们。打开 `resources/views/dashboard.blade.php` 并更新其内容以匹配下方代码。
 
-```
+```blade
 @extends('layout.master')
 
 @section('page-title')
@@ -1042,31 +1011,33 @@ Laravel 的 `.env` 文件被包含以供使用，因此可以根据应用程序�
 
 在进入下一节之前，让我们更新侧边栏上链接到仪表盘的 URL。打开 `resources/views/layout/partials/_sidenav.blade.php` 并使用命名路由更新菜单中的仪表盘 URL。
 
-```
+```blade
 <a href="{{route('inventory.home')}}" class="list-group-item list-group-item-action bg-light">仪表盘</a>
 ```
 
 ---
 
+
+
 使用命名路由的另一个好处是，将来如果我们决定将仪表盘 URL 从 `/app` 改为 `/app/dashboard`，我们不需要去到处我们使用过该 URL 的地方进行修改。我们只需在路由文件中进行修改，因为命名路由引用了我们所做的更改，所以我们每次都能获取到新的 URL。可以把它看作数组中的键值对，键保持不变但值发生变化，既然我们引用的是数组键，每次都能获得更新后的值。
 
-### 创建库存
+## 创建库存
 
 让我分解允许已登录用户创建新库存的步骤。这将帮助你轻松跟进。我们将按以下顺序构建此功能：
 
-*   创建库存迁移以生成 inventories 表
-*   为 inventories 表创建 Inventory 模型
-*   在模型中定义用户与多个库存之间的关系
-*   创建 Inventory Controller 类
-*   定义 GET 路由以显示创建新库存页面
-*   在 `InventoryController` 类中定义 create 方法
-*   创建一个与数据库字段匹配的表单
-*   定义 POST 路由以提交新库存
-*   为库存创建验证
-*   定义 store 方法以在数据库中创建条目
-*   重定向到新库存页面并显示成功通知
+* 创建库存迁移以生成 `inventories` 表
+* 为 `inventories` 表创建 `Inventory` 模型
+* 在模型中定义用户与多个库存之间的关系
+* 创建 `InventoryController` 类
+* 定义 GET 路由以显示创建新库存页面
+* 在 `InventoryController` 类中定义 `createInventory()` 方法
+* 创建一个与数据库字段匹配的表单
+* 定义 POST 路由以提交新库存
+* 为库存创建验证
+* 定义 `storeInventory()` 方法以在数据库中创建条目
+* 重定向到新库存页面并显示成功通知
 
-废话不多说，让我们开始吧！好吗？
+废话不多说，让我们开始吧！
 
 要创建迁移，请运行：
 
@@ -1074,13 +1045,11 @@ Laravel 的 `.env` 文件被包含以供使用，因此可以根据应用程序�
 php artisan make:migration create_inventories_table --create=inventories
 ```
 
----
+`--create` 选项用于指示该迁移是否用于创建新表。要编辑现有表，则会传递 `--table` 选项。话虽如此，让我们向迁移中添加字段。Laravel 为我们提供了创建不同数据类型的方法，例如 `string`、`int`、`longText`、`boolean`、带约束的外键等。
 
-`--create` 选项用于指示该迁移是否用于创建新表。要编辑现有表，则会传递 `--table` 选项。话虽如此，让我们向迁移中添加字段。Laravel 为我们提供了创建不同数据类型的方法，例如 string、int、longText、boolean、带约束的外键等。
+对于我们的 `inventories` 表，编辑位于 `database/migrations` 目录下的迁移文件，并更新 `up()` 方法的内容以匹配下方代码。`up()` 方法是在我们运行 `migrate` 命令创建数据库时调用的，而 `down()` 方法，你已经猜到了，是在我们运行回滚迁移命令以从数据库中删除表时调用的。
 
-对于我们的 inventories 表，编辑位于 `database/migrations` 目录下的迁移文件，并更新 `up` 方法的内容以匹配下方代码。`up` 方法是在我们运行 migrate 命令创建数据库时调用的，而 `down` 方法，你已经猜到了，是在我们运行回滚迁移命令以从数据库中删除表时调用的。
-
-```
+```php
 // up 方法
 Schema::create('inventories', function (Blueprint $table) {
     $table->increments('id');
@@ -1093,53 +1062,43 @@ Schema::create('inventories', function (Blueprint $table) {
 });
 ```
 
----
+首先，`increments()` 方法使用 "UNSIGNED INTEGER" 等效类型创建一个自增的 ID 列（主键）。
 
-首先，`increments` 方法使用 "UNSIGNED INTEGER" 等效类型创建一个自增的 ID 列（主键）。
-
-```
+```php
 $table->increments('id');
 ```
 
----
+`string()` 方法创建一个 "VARCHAR" 等效的 ITEM 列。该方法可以接受第二个参数作为大小，默认为 255。
 
-`string` 方法创建一个 "VARCHAR" 等效的 ITEM 列。该方法可以接受第二个参数作为大小，默认为 255。
-
-```
+```php
 $table->string('item');
 ```
 
----
+`integer()` 方法创建一个 "INTEGER" 等效的 QUANTITY 列。
 
-`integer` 方法创建一个 "INTEGER" 等效的 QUANTITY 列。
-
+```php
+$table->integer('quantity');
 ```
+
+`integer()` 方法创建一个 "INTEGER" 等效的 USER_ID 列。
+
+```php
 $table->integer('user_id');
 ```
 
----
+`foreign()` 方法用于指定外键约束，这些约束用于在数据库层面强制执行引用完整性。它引用 `users` 表上的 "PRIMARY KEY" ID。我们添加了 `user_id` 列，以便使用用户主键 ID 指定特定库存是由哪个用户创建的。
 
-`foreign` 方法用于指定外键约束，这些约束用于在数据库层面强制执行引用完整性。它引用 users 表上的 "PRIMARY KEY" ID。我们添加了 `user_id` 列，以便使用用户主键 ID 指定特定库存是由哪个用户创建的。
-
-```
+```php
 $table->foreign('user_id')->references('id')->on('users');
 ```
 
----
+`softDeletes()` 方法添加可为空的 `deleted_at` 列以支持软删除。这确保了一旦我们调用 Laravel 查询构建器的 `delete()` 方法，当前时间戳将被添加到 `inventories` 表的该行上，而不是从表中删除该行。这将有助于我们构建回收站功能。
 
-`softDeletes` 方法添加可为空的 `deleted_at` 列以支持软删除。这确保了一旦我们调用 Laravel 查询构建器的 delete 方法，当前时间戳将被添加到 inventories 表的该行上，而不是从表中删除该行。这将有助于我们构建回收站功能。
-
-```
+```php
 $table->softDeletes();
 ```
 
----
-
-
-
-
-
-`timestamps` 方法会添加可为空的 `created_at` 和 `updated_at` “TIMESTAMP” 列。当创建新行时，`created_at` 列会使用当前时间戳进行更新，而 `updated_at` 则在行更新时进行更新。最后，从终端或 git bash 运行 `migrate` 命令。
+`timestamps()` 方法会添加可为空的 `created_at` 和 `updated_at` “TIMESTAMP” 列。当创建新行时，`created_at` 列会使用当前时间戳进行更新，而 `updated_at` 则在行更新时进行更新。最后，从终端或 git bash 运行 `migrate` 命令。
 
 ```
 php artisan migrate
@@ -1157,9 +1116,9 @@ php artisan migrate
 | created_at | timestamp | YES | | NULL | |
 | updated_at | timestamp | YES | | NULL | |
 
-现在让我们继续为 `inventories` 表创建 Inventory 模型。
+现在让我们继续为 `inventories` 表创建 `Inventory` 模型。
 
-### 创建 Inventory 模型并定义关系
+## 创建 Inventory 模型并定义关系
 
 Laravel 模型代表其所对应的底层数据表的逻辑结构和关系。它允许你轻松查询表中的数据，以及插入新数据。每个表对应一个模型，这使你能够使用 Laravel ORM（对象关系映射）来与该表进行交互。
 
@@ -1171,7 +1130,7 @@ php artisan make:model Inventory
 
 在 `app` 目录下，你会找到 `Inventory.php` 类。这是生成模型的默认存储位置。你可以将它们归组在 `app/Models` 目录或任何你想要的位置，但为保持简单，我们将其留在此处。
 
-接下来，让我们在模型中定义该表的关系。同样，Laravel 允许我们在多个表上定义不同类型的关系。你可以在对应表的模型中使用 `hasMany` 方法定义一对多关系，使用 `hasOne` 方法定义一对一关系，使用 `belongsToMany` 方法定义多对多关系，以及其他几种关系。
+接下来，让我们在模型中定义该表的关系。同样，Laravel 允许我们在多个表上定义不同类型的关系。你可以在对应表的模型中使用 `hasMany()` 方法定义一对多关系，使用 `hasOne()` 方法定义一对一关系，使用 `belongsToMany()` 方法定义多对多关系，以及其他几种关系。
 
 在我们的案例中，一个用户可以创建/拥有多个库存，反之，一个库存将属于一个用户，因此我们有用户 `hasMany` 库存和库存 `belongsTo` 用户。让我们在模型中定义这一点。
 
@@ -1179,7 +1138,7 @@ php artisan make:model Inventory
 >
 > 要了解更多关于在数据库中创建不同列类型的可用方法，可以查看 [Laravel 文档](https://laravel.com/docs/5.4/migrations#creating-columns) 中的可用列类型。
 
-在我们的 `app/User.php` 模型类中，添加 `inventories` 方法。
+在我们的 `app/User.php` 模型类中，添加 `inventories()` 方法。
 
 ```php
 public function inventories()
@@ -1201,7 +1160,7 @@ public function ownedBy()
 
 ```php
 protected $guarded = ['id'];
-`
+```
 
 暂时不要困惑。`guarded` 属性是 Laravel `Model` 类（我们的 `Inventory` 模型类继承自该类）已定义的一个继承受保护属性。Laravel 允许你使用查询构造器，只需传入一个包含你想要插入的数据的数组，即可将数据批量赋值到数据库中。
 
@@ -1230,9 +1189,9 @@ class Inventory extends Model
 }
 ```
 
-### 定义路由、Inventory 控制器和请求验证
+## 定义路由、Inventory 控制器和请求验证
 
-让我们处理创建库存的业务逻辑。首先，运行 artisan 命令创建一个 Inventory 控制器。为此，请运行以下命令：
+让我们处理创建库存的业务逻辑。首先，运行 artisan 命令创建一个 `InventoryController`。为此，请运行以下命令：
 
 ```
 php artisan make:controller InventoryController
@@ -1279,15 +1238,15 @@ Route::group(['prefix' => 'app', 'middleware' => 'auth'], function ($route) {
 });
 ```
 
-接下来，让我们创建一个表单请求验证来验证发送到 `storeInventory` 方法的请求。我们将为即将创建的创建表单中用户输入的两个字段定义验证规则。一个经验法则是永远不要信任用户输入，并始终致力于验证它们。要创建我们的表单请求，请运行以下命令：
+接下来，让我们创建一个表单请求验证来验证发送到 `storeInventory()` 方法的请求。我们将为即将创建的创建表单中用户输入的两个字段定义验证规则。一个经验法则是永远不要信任用户输入，并始终致力于验证它们。要创建我们的表单请求，请运行以下命令：
 
 ```
 php artisan make:request StoreInventory
 ```
 
-一个新类 `StoreInventory.php` 将在 `app/Http/Requests` 目录下创建。编辑此文件。首先，在 `authorize` 方法下，将 `return false` 改为 `return true`。现在让我们为表单中将包含的两个输入字段 `item` 和 `quantity` 定义规则。
+一个新类 `StoreInventory.php` 将在 `app/Http/Requests` 目录下创建。编辑此文件。首先，在 `authorize()` 方法下，将 `return false` 改为 `return true`。现在让我们为表单中将包含的两个输入字段 `item` 和 `quantity` 定义规则。
 
-我们希望 `item` 字段始终为不超过 255 个字符的字符串（这是 mysql `VARCHAR` 的最大长度，以避免 mysql 截断数据），`quantity` 字段应为整数，不允许超过 100（假设我们永远不想创建库存超过 100 件的库存）。这两个字段均为必填。将 `rules` 方法中返回的空数组替换为下方内容：
+我们希望 `item` 字段始终为不超过 255 个字符的字符串（这是 mysql `VARCHAR` 的最大长度，以避免 mysql 截断数据），`quantity` 字段应为整数，不允许超过 100（假设我们永远不想创建库存超过 100 件的库存）。这两个字段均为必填。将 `rules()` 方法中返回的空数组替换为下方内容：
 
 ```php
 return [
@@ -1300,10 +1259,7 @@ return [
 >
 > 要了解更多 Laravel 中可用的验证规则，请访问官方 Laravel 文档的 [可用验证规则](https://laravel.com/docs/5.4/validation#available-validation-rules) 部分。
 
-### 创建库存表单和列出库存
-
-
-
+## 创建库存表单和列出库存
 
 在 `app/resources/views` 目录下创建新文件 `new-inventory.blade.php`，该子视图将继承主布局并包含创建库存的表单。将以下代码复制到文件中：
 
@@ -1344,9 +1300,10 @@ return [
 @endsection
 ```
 
----
+
 
 在新库存视图中有几点需要注意：
+
 1. 表单向命名路由 `inventory.store` 提交 `POST` 请求，我们之前在 `web.php` 文件中将其定义为 `POST` 路由。
 2. 你会注意到一个 `if` 语句检查字段是否未通过 `StoreInventory.php` 规则中定义的验证。Laravel 会自动重定向回创建库存页面，并在请求中携带错误消息，因此我们的 `if` 语句检查字段错误是否存在并显示第一个验证失败的错误。
 
@@ -1354,7 +1311,7 @@ return [
 
 在此，我想谈谈一个非常有趣的话题，乍看之下可能会让人困惑，尤其是如果你是初学者的话。
 
-#### 依赖注入与控制器
+### 依赖注入与控制器
 
 依赖注入是一种技术，其中一个对象为另一个对象提供其依赖项。“依赖项”是指可在另一个对象中使用的对象。例如，如果你有一个包含 `start`、`accelerate` 和 `horn` 方法的 `Car` 类，以及一个包含 `repair`、`setNextRepairDate` 和 `testDrive` 方法的 `AutoShop` 类。你最初可能会想把属于 `AutoShop` 类的所有方法都塞进 `Car` 类里，但通过 DI（依赖注入），我们可以遵循 SOLID 设计模式中的单一职责原则。在我们的例子中，我们可以将 `Car` 对象注入到 `AutoShop` 类中，并在 `testDrive` 方法中调用 `accelerate` 方法，因为试驾汽车需要你加速汽车。
 
@@ -1366,7 +1323,7 @@ Laravel 允许你通过控制器构造函数（构造函数注入）和控制器
 >
 > 要了解更多关于依赖注入的信息，请访问 Laravel 文档 [此处](https://laravel.com/docs/5.4/controllers#dependency-injection-and-controllers)。
 
-#### 库存列表视图
+### 库存列表视图
 
 在 `app/resources/views` 目录下创建新文件 `view-inventories.blade.php` 并粘贴以下代码。
 
@@ -1413,8 +1370,6 @@ Laravel 允许你通过控制器构造函数（构造函数注入）和控制器
 @endsection
 ```
 
----
-
 接下来更新 `layout/partials/_sidenav.blade.php`，以添加创建和登出路由以便于导航。
 
 ```blade
@@ -1436,11 +1391,7 @@ Laravel 允许你通过控制器构造函数（构造函数注入）和控制器
 </div>
 ```
 
----
-
 很快你将从控制器中看到，包含数据库中所有库存列表的库存对象数组是如何传递给视图的。我们使用 Blade 模板的 `@foreach` 指令遍历数组，并为每个条目显示项目、数量和操作按钮。这里有一个奇怪的地方需要注意，即 `method_field` 用于表单方法伪造。
-
-
 
 ## HTML 表单不支持 PUT、PATCH 或 DELETE 操作
 
@@ -1503,8 +1454,6 @@ class InventoryController extends Controller
 }
 ```
 
----
-
 #### 导入类
 
 我们使用 PHP `use` 关键字导入了 `Inventory` 模型类和 `StoreInventory` 表单请求类。
@@ -1513,8 +1462,6 @@ class InventoryController extends Controller
 use App\Http\Requests\StoreInventory;
 use App\Inventory;
 ```
-
----
 
 #### 依赖注入属性
 
@@ -1528,8 +1475,6 @@ public function __construct(Inventory $inventory)
     $this->inventory = $inventory;
 }
 ```
-
----
 
 #### 方法注入与表单验证
 
@@ -1551,8 +1496,6 @@ public function storeInventory(StoreInventory $storeInventory)
 }
 ```
 
----
-
 #### 查询所有库存
 
 这里我们通过调用库存模型的 `all()` 方法从数据库获取所有库存。还有其他方法，如 `latest()` 以降序获取，`first()` 获取匹配 where 条件的第一行，`select()` 选择要返回的字段以及 `get()` 方法。Laravel 为我们提供了更多查询构建器，使从数据库查询数据变得方便，在大多数情况下你不必编写或尝试记住任何 SQL 查询。
@@ -1564,8 +1507,6 @@ public function viewInventories()
     return view('view-inventories',compact('inventories'));
 }
 ```
-
----
 
 ### 删除库存的两个概念
 
@@ -1583,7 +1524,7 @@ $route->delete('/inventories/{inventory}/drop','InventoryController@drop')->name
 {{ route('inventory.delete',$inventory->id) }}
 ```
 
----
+
 
 #### 控制器中的删除逻辑
 
@@ -1595,12 +1536,11 @@ $route->delete('/inventories/{inventory}/drop','InventoryController@drop')->name
 public function drop(Inventory $inventory)
 {
     $inventory->delete();
+
     return redirect()->route('inventory.all')
         ->with('message','New inventory successfully added!');
 }
 ```
-
----
 
 ### 显示通知消息
 
@@ -1613,8 +1553,6 @@ public function drop(Inventory $inventory)
     </div>
 @endif
 ```
-
----
 
 ### 测试功能
 
@@ -1645,16 +1583,12 @@ class AppController extends Controller
     public function dashboard(Inventory $inventory)
     {
         $count = $inventory->count();
-        return view('dashboard',compact('count'));
+        return view('dashboard', compact('count'));
     }
 }
 ```
 
----
-
 以及 `dashboard.blade.php` 文件的第 11 行。
-
-
 
 ## 构建回收站功能
 
@@ -1715,6 +1649,7 @@ public function purgeItem($inventory)
                     {{ session('message') }}
                 </div>
             @endif
+
             <table class="table table-hover table-bordered">
                 <thead>
                     <tr>
@@ -1830,15 +1765,6 @@ public function updateInventory(StoreInventory $storeInventory, Inventory $inven
 
 
 
-
-</div>
-
-</div>
-
-@endsection
-
----
-
 请编辑您现有的库存之一，通过清空 `quantity` 字段来测试验证是否正常工作。然后将 `quantity` 字段的先前值更改为新值并提交表单，您应该会被重定向到库存列表页面，并显示成功通知。
 
 在我的例子中，我将 Playstation 的数量从 4 更新为 6。
@@ -1863,7 +1789,6 @@ crontab -e
 //替换为您的目录路径
 //在终端运行 which php 命令以了解执行路径
 * * * * * /path-php-bin/php /path-to-inventory-app-directory/artisan schedule:run >> /dev/null 2>&1
-
 //这是我的配置示例
 * * * * * /usr/local/bin/php ~/Sites/inventory-app/artisan schedule:run >> /dev/null 2>&1
 ```
@@ -1890,12 +1815,19 @@ php artisan make:job ClearTrash
 namespace App\Jobs;
 
 use App\Inventory;
+
 use DateInterval;
+
 use DateTime;
+
 use Illuminate\Bus\Queueable;
+
 use Illuminate\Queue\SerializesModels;
+
 use Illuminate\Queue\InteractsWithQueue;
+
 use Illuminate\Contracts\Queue\ShouldQueue;
+
 use Illuminate\Foundation\Bus\Dispatchable;
 
 class ClearTrash implements ShouldQueue
@@ -1979,13 +1911,10 @@ php artisan make:mail TrashNotification --markdown email/trash-notification
 ```blade
 @component('mail::message')
 ## 通知
-
 这是一条友好的通知，旨在通知您我刚刚完成了库存回收站的清理。
-
 @component('mail::button', ['url' => route('inventory.trash')])
 查看回收站
 @endcomponent
-
 谢谢，<br>
 {{ config('app.name') }}
 @endcomponent
@@ -2017,42 +1946,35 @@ class ClearTrash implements ShouldQueue
      *
      * @return void
      */
-```
-
-
-
-
-
-```php
-public function __construct()
-{
-    //
-}
-
-/**
- * 执行任务。
- *
- * @param Inventory $inventory
- * @return void
- * @throws \Exception
- */
-public function handle(Inventory $inventory)
-{
-    $now = new DateTime('now');
-    $threeMinutesDiff = new DateInterval('PT03M');
-    $threeMinutesAgo = $now->sub($threeMinutesDiff)->format('Y-m-d H:i:s');
-
-    $inventories = $inventory->onlyTrashed()
-        ->where('deleted_at', '<=', $threeMinutesAgo)
-        ->get();
-
-    foreach ($inventories as $inventory) {
-        $inventory->forceDelete();
+    public function __construct()
+    {
+        //
     }
 
-    if ($inventories->count() > 0) {
-        Mail::to('oluwafemialofe@gmail.com') // 替换为您的邮箱
-            ->send(new \App\Mail\TrashNotification());
+    /**
+     * 执行任务。
+     *
+     * @param Inventory $inventory
+     * @return void
+     * @throws \Exception
+     */
+    public function handle(Inventory $inventory)
+    {
+        $now = new DateTime('now');
+        $threeMinutesDiff = new DateInterval('PT03M');
+        $threeMinutesAgo = $now->sub($threeMinutesDiff)->format('Y-m-d H:i:s');
+        $inventories = $inventory->onlyTrashed()
+            ->where('deleted_at', '<=', $threeMinutesAgo)
+            ->get();
+
+        foreach ($inventories as $inventory) {
+            $inventory->forceDelete();
+        }
+
+        if ($inventories->count() > 0) {
+            Mail::to('oluwafemialofe@gmail.com') // 替换为您的邮箱
+                ->send(new \App\Mail\TrashNotification());
+        }
     }
 }
 ```
@@ -2072,4 +1994,3 @@ public function handle(Inventory $inventory)
 如果您在本书的任何阶段需要帮助，或者需要我协助 Laravel 项目，请随时发送邮件至 oluwafemialofe@gmail.com。
 
 Sabali!
-

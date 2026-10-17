@@ -1,84 +1,48 @@
+
 # 生物识别的机器学习：概念、算法与应用（可持续计算中的认知数据科学）
 
-
-
-### Contributors
+## Contributors
 
 Numbers in parentheses indicate the pages on which the authors' contributions begin.
 
-Sumitav Acharya 143 ^() Department of Computer Science and Engineering, National Institute of Science and Technology, Berhampur, India
+- Sumitav Acharya 143 ^() Department of Computer Science and Engineering, National Institute of Science and Technology, Berhampur, India
+- A. Anandh 105 ^() Department of Computer Science and Engineering, Kamaraj College of Engineering and Technology, Madurai, India
+- Saurabh Bilgaiyan 155 ^() School of Computer Engineering, KIIT Deemed to be University, Bhubaneswar, Odisha, India
+- P.V.S.S.R. Chandra Mouli 65 ^() Department of Computer Science, Central University of Tamil Nadu, Thiruvarur, India
+- Manisha P. Dale 1 ^() MES College of Engineering, Savitribai Phule Pune University, Pune, India
+- Rupam Das 155 ^() School of Electronics Engineering, KIIT, Deemed to be University, Bhubaneswar, India
+- K. Devendran 87 ^() Computer Science and Engineering, Kongu Engineering College, Erode, Tamil Nadu, India
+- Sachit Dhamija 155 ^() School of Electronics Engineering, KIIT, Deemed to be University, Bhubaneswar, India
+- R. Jai Ganesh 129 ^() K. Ramakrishnan College of Technology, Trichy, India
+- G.K. Kamalam 177 ^() Department of Information Technology, Kongu Engineering College, Erode, Tamil Nadu, India
+- Vaishali H. Kamble 1 ^() AISSMS IOIT, Savitribai Phule Pune University, Pune, India
+- M. Kavitha 129 ^() K. Ramakrishnan College of Technology, Trichy, India
+- P. Keerthika 87, 177 ^() Department of Computer Science and Engineering, Kongu Engineering College, Erode, Tamil Nadu, India
+- Chirag Kyal 29 ^() Department of Computer Science and Engineering, National Institute of Science and Technology, Berhampur, India
+- K. Logeswaran 177 ^() Department of Information Technology, Kongu Engineering College, Erode, Tamil Nadu, India
+- V.M. Manikandan 201 ^() Computer Science and Engineering, SRM University-AP, Amaravati, Andhra Pradesh, India
+- R. Manjula Devi 87, 177 ^() Department of Computer Science and Engineering, Kongu Engineering College, Erode, Tamil Nadu, India
+- Bhabani Shankar Prasad Mishra 47, 155 ^() School of Computer Engineering, KIIT Deemed to be University, Bhubaneswar, India
+- Subhashree Mishra 47 ^() School of Computer Engineering, KIIT Deemed to be University, Bhubaneswar, Odisha, India
+- Samrat Mondal 217 ^() Department of Computer Science and Engineering, Indian Institute of Technology Patna, Bihta, India
+- H. Muthukrishnan 177 ^() Department of Information Technology, Kongu Engineering College, Erode, Tamil Nadu, India
+- K. Muthulakshmi 105 ^() Department of Computer Science and Engineering, Kamaraj College of Engineering and Technology, Madurai, India
+- Madhumita Panda 47 ^() Master of Computer Applications, Seemanta Engineering College, Jharpokharia, India
+- Suryakanta Panda 217 ^() Department of Computer Science and Engineering, Indian Institute of Technology Patna, Bihta, India
+- Harsh Poddar 29 ^() Department of Computer Science and Engineering, National Institute of Science and Technology, Berhampur, India
+- R. Ramya 105 ^() Department of Computer Science and Engineering, Kamaraj College of Engineering and Technology, Madurai, India
+- Motahar Reza 29, 143 ^() Department of Mathematics, GITAM Deemed to be University, Hyderabad, India
+- C. Sagana 87 ^() Computer Science and Engineering, Kongu Engineering College, Erode, Tamil Nadu, India
+- M. Sangeetha 87 ^() Computer Science and Engineering, Kongu Engineering College, Erode, Tamil Nadu, India
+- Partha Pratim Sarangi 47, 87 ^() School of Computer Engineering, KIIT Deemed to be University, Bhubaneswar, India
+- Priyanshu Sarmah 155 ^() School of Electronics Engineering, KIIT, Deemed to be University, Bhubaneswar, India
+- K. Sentamilselvan 177 ^() Department of Information Technology, Kongu Engineering College, Erode, Tamil Nadu, India
+- P. Suresh 87, 177 ^() Department of Information Technology, Kongu Engineering College, Erode, Tamil Nadu, India
+- S. Venkatesh 105 ^() Microland, Bengaluru, India
+- Dilip Kumar Yadav 65 ^() Department of Computer Applications, National Institute of Technology, Jamshedpur, India
+- Gaurav Yadav 65 ^() Department of Computer Applications, National Institute of Technology, Jamshedpur, India
 
-A. Anandh 105 ^() Department of Computer Science and Engineering, Kamaraj College of Engineering and Technology, Madurai, India
-
-Saurabh Bilgaiyan 155 ^() School of Computer Engineering, KIIT Deemed to be University, Bhubaneswar, Odisha, India
-
-P.V.S.S.R. Chandra Mouli 65 ^() Department of Computer Science, Central University of Tamil Nadu, Thiruvarur, India
-
-Manisha P. Dale 1 ^() MES College of Engineering, Savitribai Phule Pune University, Pune, India
-
-Rupam Das 155 ^() School of Electronics Engineering, KIIT, Deemed to be University, Bhubaneswar, India
-
-K. Devendran 87 ^() Computer Science and Engineering, Kongu Engineering College, Erode, Tamil Nadu, India
-
-Sachit Dhamija 155 ^() School of Electronics Engineering, KIIT, Deemed to be University, Bhubaneswar, India
-
-R. Jai Ganesh 129 ^() K. Ramakrishnan College of Technology, Trichy, India
-
-G.K. Kamalam 177 ^() Department of Information Technology, Kongu Engineering College, Erode, Tamil Nadu, India
-
-Vaishali H. Kamble 1 ^() AISSMS IOIT, Savitribai Phule Pune University, Pune, India
-
-M. Kavitha 129 ^() K. Ramakrishnan College of Technology, Trichy, India
-
-P. Keerthika 87, 177 ^() Department of Computer Science and Engineering, Kongu Engineering College, Erode, Tamil Nadu, India
-
-Chirag Kyal 29 ^() Department of Computer Science and Engineering, National Institute of Science and Technology, Berhampur, India
-
-K. Logeswaran 177 ^() Department of Information Technology, Kongu Engineering College, Erode, Tamil Nadu, India
-
-V.M. Manikandan 201 ^() Computer Science and Engineering, SRM University-AP, Amaravati, Andhra Pradesh, India
-
-R. Manjula Devi 87, 177 ^() Department of Computer Science and Engineering, Kongu Engineering College, Erode, Tamil Nadu, India
-
-Bhabani Shankar Prasad Mishra 47, 155 ^() School of Computer Engineering, KIIT Deemed to be University, Bhubaneswar, India
-
-Subhashree Mishra 47 ^() School of Computer Engineering, KIIT Deemed to be University, Bhubaneswar, Odisha, India
-
-Samrat Mondal 217 ^() Department of Computer Science and Engineering, Indian Institute of Technology Patna, Bihta, India
-
-H. Muthukrishnan 177 ^() Department of Information Technology, Kongu Engineering College, Erode, Tamil Nadu, India
-
-K. Muthulakshmi 105 ^() Department of Computer Science and Engineering, Kamaraj College of Engineering and Technology, Madurai, India
-
-Madhumita Panda 47 ^() Master of Computer Applications, Seemanta Engineering College, Jharpokharia, India
-
-Suryakanta Panda 217 ^() Department of Computer Science and Engineering, Indian Institute of Technology Patna, Bihta, India
-
-Harsh Poddar 29 ^() Department of Computer Science and Engineering, National Institute of Science and Technology, Berhampur, India
-
-R. Ramya 105 ^() Department of Computer Science and Engineering, Kamaraj College of Engineering and Technology, Madurai, India
-
-Motahar Reza 29, 143 ^() Department of Mathematics, GITAM Deemed to be University, Hyderabad, India
-
-C. Sagana 87 ^() Computer Science and Engineering, Kongu Engineering College, Erode, Tamil Nadu, India
-
-M. Sangeetha 87 ^() Computer Science and Engineering, Kongu Engineering College, Erode, Tamil Nadu, India
-
-Partha Pratim Sarangi 47, 87 ^() School of Computer Engineering, KIIT Deemed to be University, Bhubaneswar, India
-
-Priyanshu Sarmah 155 ^() School of Electronics Engineering, KIIT, Deemed to be University, Bhubaneswar, India
-
-K. Sentamilselvan 177 ^() Department of Information Technology, Kongu Engineering College, Erode, Tamil Nadu, India
-
-P. Suresh 87, 177 ^() Department of Information Technology, Kongu Engineering College, Erode, Tamil Nadu, India
-
-S. Venkatesh 105 ^() Microland, Bengaluru, India
-
-Dilip Kumar Yadav 65 ^() Department of Computer Applications, National Institute of Technology, Jamshedpur, India
-
-Gaurav Yadav 65 ^() Department of Computer Applications, National Institute of Technology, Jamshedpur, India
-
-### Preface
+## Preface
 
 Partha Pratim Sarangi
 
@@ -90,11 +54,7 @@ Bhabani Shankar Prasad Mishra
 
 Banshidhar Majhi
 
-
-
-
-
-### Machine Learning Approaches in Biometric Systems: Research Advances and Applications
+## Machine Learning Approaches in Biometric Systems: Research Advances and Applications
 
 Biometric systems automatically recognize identities by utilizing human physiological and behavioral characteristics. Advances in sensor technology have attracted the attention of numerous researchers, driving the introduction of a large number of novel biometric traits, providing privacy and security guarantees for various application systems ranging from industry to healthcare. Over the past few decades, to improve recognition performance, a large number of machine learning algorithms have been applied to various biometric scenarios. The core significance of machine learning algorithms lies in determining individual identities by associating biometric patterns with corresponding enrolled users. However, in high-security applications, security and recognition accuracy are the primary concerns, which can be addressed by designing multimodal biometric systems. As the name suggests, multimodal biometrics fuse two or more different biometric traits (e.g., fingerprint, iris, face, palmprint, etc.), and their working principle is similar to unimodal biometrics, with only an added information fusion module. Given the increasing number of biometric systems and their applications, the field still requires extensive in-depth research and development.
 
@@ -102,81 +62,83 @@ Currently, a large number of biometric systems exhibit limited recognition rates
 
 This book specifically explores current research advances in the field of biometrics and biometric-based applications, aiming to improve personal identification performance. The book consists of 12 chapters, each elaborating on the concepts and fundamentals of recent hot topics in biometrics, reviewing the latest methodologies, revealing experimental results, and comparing them with state-of-the-art technologies to highlight their effectiveness in recognition and future directions. Furthermore, the content of this book is organized according to recognized biometric traits and a few novel traits, combined with biometric security and latest applications, making each chapter independently readable. The content of each chapter is briefly introduced below.
 
-#### Chapter “Machine Learning Approach for longitudinal face recognition of children”
+### Chapter “Machine Learning Approach for longitudinal face recognition of children”
 
-This chapter introduces a novel application utilizing face biometrics for children's identity recognition. Face recognition for children under 6 years old helps provide them with medical services and assists in finding missing children. The authors constructed a new face database, collecting individuals' face images over a period of time (specifically intervals of several months), named the Longitudinal Face Database. Experiments extensively used various machine learning classifiers, such as Support Vector Machines (`SVM`), K-Nearest Neighbors (`KNN`), Logistic Regression (`LR`), Decision Trees, Gaussian Naive Bayes, and Convolutional Neural Networks (`CNN`). Comparative experimental results demonstrated the effectiveness and superiority of the proposed `CNN`-based method in improving accuracy. Finally, the authors suggest expanding the database scale and improving the model as possible future research directions.
 
-#### Chapter “TBFR: Thermal Biometric Face Recognition—A Noncontact Face Biometry”
+
+# This chapter introduces a novel application utilizing face biometrics for children's identity recognition
+
+Face recognition for children under 6 years old helps provide them with medical services and assists in finding missing children. The authors constructed a new face database, collecting individuals' face images over a period of time (specifically intervals of several months), named the Longitudinal Face Database. Experiments extensively used various machine learning classifiers, such as Support Vector Machines (`SVM`), K-Nearest Neighbors (`KNN`), Logistic Regression (`LR`), Decision Trees, Gaussian Naive Bayes, and Convolutional Neural Networks (`CNN`). Comparative experimental results demonstrated the effectiveness and superiority of the proposed `CNN`-based method in improving accuracy. Finally, the authors suggest expanding the database scale and improving the model as possible future research directions.
+
+## Chapter “TBFR: Thermal Biometric Face Recognition—A Noncontact Face Biometry”
 
 This chapter proposes a novel thermal face recognition method aimed at eliminating the effects of illumination intensity variations, pose, accessories, aging, and other factors present in existing face biometric systems. The authors fused facial geometric features with pre-trained `ResNet-50` features to improve recognition performance. Experimental results show that this method is more robust compared to existing methods.
 
-#### Chapter “Multimodal Biometric Recognition using Human Ear and Profile Face: An Improved Approach”
+## Chapter “Multimodal Biometric Recognition using Human Ear and Profile Face: An Improved Approach”
 
 This chapter explores an improved ear biometric method based on handcrafted features of the ear and profile face under feature-level fusion and score-level fusion schemes. Recently, Convolutional Neural Network models for ear biometrics have been proposed, with experimental results showing performance comparable to state-of-the-art methods. However, deep learning-based biometric applications require a large number of training images, massive memory for data processing, and huge computational complexity, at the cost of improved recognition rates. The authors of this chapter focus on a multimodal approach based on the ear and profile face, aiming to improve recognition performance by reducing processing complexity. The effectiveness and superiority of the method were verified through multiple sets of comparative experiments.
 
-#### Chapter “Statistical Measures for Palmprint Image Enhancement”
+## Chapter “Statistical Measures for Palmprint Image Enhancement”
 
 This chapter reviews image enhancement methods in palmprint images and their quality assessment metrics. The databases most commonly used in palmprint image enhancement techniques are discussed in detail. Image enhancement plays a key role in the preprocessing step of biometric systems, providing better recognition performance for improving accuracy and recognition rates.
 
-#### Chapter “Retina Biometrics for Personal Authentication”
+## Chapter “Retina Biometrics for Personal Authentication”
 
 This chapter attempts to explore retina biometrics using the `ANFIS` model. It focuses on discussing the `ANFIS`-based Retina Biometric Authentication System (`ARBAS`) and its significance. Additionally, this chapter provides readers with the knowledge base required to select appropriate feature sets and sufficient techniques to conduct robust research in this field.
 
-#### Chapter “Gender Recognition from facial Images using Multi-Channel Deep Learning Framework”
+## Chapter “Gender Recognition from facial Images using Multi-Channel Deep Learning Framework”
 
 This chapter demonstrates a multi-channel deep learning framework based on an automated gender recognition method. The authors attempt to extract discriminative features from raw face images of `GoogleNet`. They fused feature vectors from two sources: one obtained from feature images generated by `LDP` filters, and the other obtained directly from raw face images, both fed as input into `GoogleNet`. Finally, `CCA/DCA` is used to merge the feature sets as input to the `SVM` classifier to achieve gender recognition for given input images. The book conducts a series of experiments and provides a comprehensive and detailed explanation of the experimental results.
 
-#### Chapter “Implementation of Cardiac Signal for Biometric Recognition from Facial Video”
+## Chapter “Implementation of Cardiac Signal for Biometric Recognition from Facial Video”
 
 This chapter explores the Heartbeat Signal from Facial Video (`HSFV`) as biological evidence for recognizing individual identities. This chapter provides motivation and knowledge support for researchers to open up novel research directions in the field of biometrics.
 
-
-
-
-
-### 基于人体生物特征情绪强度的学生实时情绪投入度跟踪
+## 基于人体生物特征情绪强度的学生实时情绪投入度跟踪
 
 章节“基于人体生物特征情绪强度的学生实时情绪投入度跟踪”描述了一种利用 `FAU`（面部动作单元）检测课堂上走神面孔的自动方法。此外，本章涵盖了跟踪的多个方面，范围从学生进入教室开始。作者呈现的实验结果可为学生面部图像的情绪检测和识别取得优异结果。
 
-### 基于面部识别表情的考勤监控与情绪检测——深度 CNN 方法
+## 基于面部识别表情的考勤监控与情绪检测——深度 CNN 方法
 
 章节“基于面部识别表情的考勤监控与情绪检测——深度 CNN 方法”探讨了在新的在线课堂环境中考勤统计和评估学生情绪的挑战。在本章中，借助先进的机器学习方法，作者介绍了一种基于生物特征的自动考勤和面部表情识别系统。
 
-### 机器学习和深度学习技术在网络安全中有效性的当代综述
+## 机器学习和深度学习技术在网络安全中有效性的当代综述
 
 章节“机器学习和深度学习技术在网络安全中有效性的当代综述”基于高效的机器学习和深度学习技术，回顾了生物识别技术在网络安全中的实用性。本综述的目的是让读者掌握利用不同机器学习技术进行网络安全系统生物特征认证和识别的基本概念。
 
-### 基于加密方案的可逆数据隐藏技术在智能环境中的安全生物特征认证系统
+## 基于加密方案的可逆数据隐藏技术在智能环境中的安全生物特征认证系统
 
 章节“基于加密方案的可逆数据隐藏技术在智能环境中的安全生物特征认证系统”引入了可逆数据隐藏（`RDH`）方案的概念，以实现安全的在线生物特征数据通信。在基于 `RDH` 的加密方案中，通过在图像中隐藏重要信息对生物特征图像进行加密。在本章中，作者提出了一种新模型，其中压缩指纹数据被用作秘密消息，并通过基于可逆数据隐藏的加密方案嵌入面部图像中。为了保持通信安全，`RDH` 方案后获得的加密图像将以安全方式传输给云服务提供商。
 
-### 面向云基础医疗系统的高效且不可追踪认证协议
+## 面向云基础医疗系统的高效且不可追踪认证协议
 
 章节“面向云基础医疗系统的高效且不可追踪认证协议”提供了 `Telecare Medical Information System (TMIS)`，这在大流行情况下（例如 Covid-19）非常重要。在该技术中，患者的移动设备在与医生通信中起主要作用。此外，需要相互认证和密钥协商方案，以保护重要信息免受不安全通信通道中对手的任何恶意活动侵害。在本章中，作者提出了一种生物特征哈希技术，为患者和医生之间的通信提供安全认证和密钥协商。
 
 最后，我们希望包括研究生、研究学者、青年研究人员、学者和行业专业人士在内的读者能发现本书贡献的章节发人深省，并希望这项工作能激励未来的研究突破，进一步推进基于机器学习的生物识别应用。
 
-### 致谢
+## 致谢
 
 编辑衷心感谢所有贡献者的持续努力和及时提交章节。没有章节作者的合作，本书无法完成。所有章节均经过多轮审阅，以促进最终章节的入选。审稿人宝贵的建议和指导帮助作者完善了各个章节。同时也感谢审稿人提升了本书章节的质量。
 
 编辑想向 Elsevier 的 Sonnini Ruiz Yura 表示感谢，感谢她多年来的鼓励。我们要衷心感谢 Elsevier 的 Andrae Akeh 和 Judith Clarisse Punzalan 在本书筹备过程中的耐心。此外，我们要感谢 Elsevier 的 Swapna Srinivasan 在本书最终筹备阶段的真诚帮助和耐心。最后，我们要向我们的家人和朋友表示感激，感谢他们所有的支持。
 
-## 第 1 章：儿童纵向面部识别的机器学习方法
+# 第 1 章：儿童纵向面部识别的机器学习方法
 
-Vaishali H. Kamble^(a)；Manisha P. Dale^(b)  
-^a AISSMS IOIT，Savitribai Phule Pune University，Pune，India  
+Vaishali H. Kamble^(a)；Manisha P. Dale^(b)
+
+^a AISSMS IOIT，Savitribai Phule Pune University，Pune，India
+
 ^b MES College of Engineering，Savitribai Phule Pune University，Pune，India
 
-### 摘要
+## 摘要
 
 个人的面部是一种流行且被广泛接受的生物特征，可用于执行成人和儿童的身份识别。儿童是社会中**最宝贵且最脆弱**的群体；他们应持续处于监督之下。根据印度的一项调查，6 岁以下儿童占总人口的 13.12%。儿童的安全和医疗保健是所有国家的重要方面。儿童自动面部识别是帮助识别失踪儿童的有用调查工具。尽管儿童面部发育从母体子宫内 3 个月开始，但它与身体其他部位的发育**不成比例**。因此，6 岁以下儿童的识别仍是一个开放的研究问题。在本章中，对儿童识别的机器学习和深度学习技术进行了比较。同一时段数据库的最高识别准确率达到 97%，跨时段数据库达到 94%。
 
-#### 关键词
+### 关键词
 
 生物识别；儿童识别；`CNN`；面部；机器学习
 
-### 1：引言
+## 1：引言
 
 个人的面部是一种流行且被广泛接受的生物特征，可用于执行成人和儿童的身份识别。儿童是社会中**最宝贵且最脆弱**的群体；因此他们应持续处于监督之下。所有国家都重视儿童的安全和医疗保健 ¹
 
@@ -192,24 +154,19 @@ Sahar Siddique 利用扩展新生儿数据库和儿童多模态生物特征数�
 
 3.  在本工作中，我们从基础层面到优化层面实现了 `CNN`。首先，针对同一时段和跨时段采用三层卷积层的 `CNN`。进一步，通过数据增强对 `CNN` 进行修改，并采用带有 `L2` 核正则化和批量归一化的六层卷积模型以提高准确率。
 
+4.  我们比较了不同特征提取和分类技术在识别模式下的有效性。此外，我们针对儿童数据库优化了 `CNN` 以提高准确率。我们将所提 `CNN` 的识别性能与使用分类技术的传统基于 `PCA` 和 `LDA` 的方法进行了比较。
 
-
-
-## 4. 我们比较了不同特征提取和分类技术在识别模式下的有效性。此外，我们针对儿童数据库优化了 CNN 以提高准确率。我们将所提 CNN 的识别性能与使用分类技术的传统基于 PCA 和 LDA 的方法进行了比较。
-
-### 2: 儿童人脸识别的人脸模态
+## 2: 儿童人脸识别的人脸模态
 
 人类可以通过其固有生物特征的分析和测量来识别。利用生物特征识别人类的科学称为生物识别。
 
 生物识别基于人类的两个显著特征：
 
 1.  **生理特征**：人脸、指纹、虹膜、掌纹、足迹、掌静脉、耳朵、DNA 等。
+
 2.  **行为特征**：声音、步态、签名等。
 
 图 Fig. 1 显示了 2019 年印度生物识别市场调查中不同生物识别模态使用情况的图表。
-
-
-
 
 ![Fig. 1 Indian biometric market share in US million](img/Fig.1)
 
@@ -219,7 +176,7 @@ Sahar Siddique 利用扩展新生儿数据库和儿童多模态生物特征数�
 
 人脸是一个 3D 模型，我们可以通过其特征（如眼睛、脸型和肤色）来识别它。自动人脸识别基于一个人的 2D 照片。1964 年和 1965 年，Woody Bledsoe 与 Helen Chan 和 Charles Bisson 一起，首次利用计算机识别人脸。如今，成人人脸识别的准确率已达到 99.63% 的极高水平。
 
-##### 表 1
+### 表 1
 
 | 受试者 | FNIR | FPIR |
 | :--- | :--- | :--- |
@@ -227,29 +184,33 @@ Sahar Siddique 利用扩展新生儿数据库和儿童多模态生物特征数�
 | 幼童 | 0.4 | 介于 0.2 和 0.05 之间 |
 | 青春期前 | 0.29 | 0.05 |
 
-儿童面部发育：Farkas 等人的论文研究表明，在儿童面部发育的前 2 年，嘴宽增加而嘴高减小。嘴型从“花蕾状”变为更成人的类型。面部特征的生长在第一年非常快，第二年减缓。从 3 岁到 9 岁，后续变化缓慢且不规律。
+
+
+# 儿童面部发育
+
+Farkas 等人的论文研究表明，在儿童面部发育的前 2 年，嘴宽增加而嘴高减小。嘴型从“花蕾状”变为更成人的类型。面部特征的生长在第一年非常快，第二年减缓。从 3 岁到 9 岁，后续变化缓慢且不规律。
 
 儿童识别还有其他困难，例如他们通常处于玩耍心情，这会导致表情和姿态变化。尽管成人监督和激励有助于提高数据采集质量，但幼儿的注意力持续时间非常有限。正面人脸采集过程中仅允许表情变化。如果通过目视检查采集到的图像发现姿态、光照或模糊等其他变化，则需要重新采集图像。
 
 因此，数据采集过程中保持平静极为推荐。数据采集所需时间也比成人数据采集更长。由于这些障碍，公开可用的儿童数据库很少。
 
-### 3: 儿童人脸数据库
+## 3: 儿童人脸数据库
 
 本节讨论各种模态的儿童数据库。大多数数据库包含两个或更多会话。但出于安全原因，大多数不用于研究目的。
 
-#### 3.1: 新生儿人脸数据库
+### 3.1: 新生儿人脸数据库
 
 新生儿人脸数据库是由 Bharadwaj 等人采集的首个用于新生儿人脸识别的纵向数据库。
 
-#### 3.2: 新生儿、婴儿和幼儿纵向人脸数据库 (NITL)
+### 3.2: 新生儿、婴儿和幼儿纵向人脸数据库 (NITL)
 
 该数据库由 Best-Rowden 等人采集，对象为印度儿童。
 
-#### 3.3: 儿童多模态生物识别数据库 (CMBD)
+### 3.3: 儿童多模态生物识别数据库 (CMBD)
 
 该数据库属于 IIIT Delhi，由 Basak 等人采集。
 
-#### 3.4: 扩展新生儿人脸数据库
+### 3.4: 扩展新生儿人脸数据库
 
 Siddiqui 等人在印度采集了该数据库。
 
@@ -259,7 +220,7 @@ Siddiqui 等人在印度采集了该数据库。
 
 ![Fig. 3 Sample images of two children row wise after time span from FG-NET database](img/Fig.3)
 
-研究儿童人脸识别的主要障碍是缺乏公开数据库。我们采集了自己的数据库。我们大多从学前学校采集儿童人脸图像，少部分来自邻里。我们已获得学前学校的采集许可。同时也获得了家长关于为研究目的使用其子女生物识别细节的同意。儿童图像使用分辨率大于 2000 万像素的手机相机采集。数据库分两个会话采集。首次采集的所有图像称为同会话数据库。第二次采集的所有图像称为跨会话数据库。同一人采集图像的时间跨度为 2 到 8 个月。数据库中儿童的年龄范围为 2 个月至 5 岁。每个会话中，每个受试者约采集 6 张图像。为使图像尺寸一致，我们使用了 224 × 224 的图像尺寸。我们数据库的样本图像如图 4 所示。
+研究儿童人脸识别的主要障碍是缺乏公开数据库。我们采集了自己的数据库。我们大多从学前学校采集儿童人脸图像，少部分来自邻里。我们已获得学前学校的采集许可。同时也获得了家长关于为研究目的使用其子女生物识别细节的同意。儿童图像使用分辨率大于 2000 万像素的手机相机采集。数据库分两个会话采集。首次采集的所有图像称为同会话数据库。第二次采集的所有图像称为跨会话数据库。同一人采集图像的时间跨度为 2 到 8 个月。数据库中儿童的年龄范围为 2 个月至 5 岁。每个会话中，每个受试者约采集 6 张图像。为使图像尺寸一致，我们使用了 `224 × 224` 的图像尺寸。我们数据库的样本图像如图 4 所示。
 
 ![Fig. 4 Sample images of two children row wise after time span from own database](img/Fig.4)
 
@@ -279,7 +240,7 @@ Siddiqui 等人在印度采集了该数据库。
 
 ![Fig. 6 Database of cross-session face images of children](img/Fig.6)
 
-### 4: 儿童人脸识别
+## 4: 儿童人脸识别
 
 通用人脸识别系统以人脸图像为输入。后续阶段为预处理，使人脸图像适合不同的机器学习算法。特征提取是分类前的关键步骤。通用人脸识别系统如图 7 所示。
 
@@ -291,7 +252,7 @@ Siddiqui 等人在印度采集了该数据库。
 
 ![Fig. 8 Longitudinal face recognition methods’ study](img/Fig.8)
 
-#### 4.1: 数据库预处理
+### 4.1: 数据库预处理
 
 根据儿童人脸识别文献研究，预处理是手动进行的。
 
@@ -301,15 +262,15 @@ Siddiqui 等人在印度采集了该数据库。
 
 根据研究观察，手动裁剪的图像效果较好。因此，我们手动裁剪所有图像，使其尺寸一致。PCA 和 LDA 特征提取算法中进行 RGB 到灰度的转换。CNN 使用 RGB 图像。
 
-#### 4.2: COTS——商用现成人脸匹配器
+### 4.2: COTS——商用现成人脸匹配器
 
 它是包含特征提取的完整解决方案。大多数儿童人脸识别研究都是使用 COTS 匹配器进行的。
 
-### 5: 特征提取技术
+## 5: 特征提取技术
 
 特征提取是一个过程，其主要目标是从数据库图像中减少特征数量。系统仅凭这些特征即可识别不同人员的人脸图像。特征可以是一条线、两眼之间的距离、一个点、嘴唇与眼睛之间的距离等。此外，它还能从现有特征中创建新特征。新创建的特征数量较少，有助于降低计算复杂度。特征提取技术的性能取决于其利用这些减少后的特征识别原始图像的效果。此处，我们总结了用于儿童人脸识别的机器学习特征提取算法。这些算法的性能完全依赖于特征提取。
 
-#### 5.1: PCA——主成分分析
+### 5.1: PCA——主成分分析
 
 PCA 是一种简单且广泛使用的基于外观的算法。它是一种无监督学习算法，意味着 PCA 在其算法中不使用类别标签。在新生儿人脸识别的初步研究中，Bharadwaj 等人指出，降低图像分辨率可以提高 PCA 的性能。
 
@@ -320,7 +281,7 @@ S = {Γ₁, Γ₂, Γ₃, … Γₘ}
 ```
 (si1_e (1))
 
-设每张图像大小为 224 × 224 像素。将其转换为 M × N 维的向量。现在图像向量大小为 50,176。计算平均人脸。平均人脸向量 (Ψ) 需使用公式 (2) 计算。
+设每张图像大小为 `224 × 224` 像素。将其转换为 M × N 维的向量。现在图像向量大小为 50,176。计算平均人脸。平均人脸向量 (Ψ) 需使用公式 (2) 计算。
 
 ```
 Ψ = (1/M) Σₙ₌₁ᴹ Γₙ
@@ -340,9 +301,6 @@ S = {Γ₁, Γ₂, Γ₃, … Γₘ}
 
 然后，协方差矩阵 C 通过以下方式获得，
 
-
-
-
 $$
 C = \frac{1}{M}\sum_{n = 1}^{M}\varphi_{n}\ \varphi_{n}^{T}
 $$
@@ -351,26 +309,9 @@ $$
 C = AA^{T}\quad N^{2} \times N^{2}\ \text{matrix},
 $$
 
-
-
-
-## 5.1: PCA—主成分分析
-
-进入`/path/to/xxx`目录，找到`xxx.json`。
-
-在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`。
-
-在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
-
-之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-
 其中 $A = [\varphi_1, \varphi_2, \varphi_3, \varphi_4, \dots, \varphi_M]$ 为 $N² \times M$ 矩阵。
 
-进一步计算协方差矩阵的特征向量和特征值。公式 (4) 中的协方差矩阵 $C$ 维度极高。对于 $224 \times 224$ 的图像，必须计算 $50,176 \times 50,176$ 的矩阵并得到 50,176 个特征脸。从计算角度看，这效率不高，因为大多数特征脸对任务无用。
+进一步计算协方差矩阵的特征向量和特征值。公式 (4) 中的协方差矩阵 $C$ 维度极高。对于 `224 × 224` 的图像，必须计算 `50,176 × 50,176` 的矩阵并得到 50,176 个特征脸。从计算角度看，这效率不高，因为大多数特征脸对任务无用。
 
 因此，我们转而考虑矩阵 $L = AA^T$（$M \times M$ 矩阵）。
 
@@ -400,7 +341,7 @@ PCA 降低数据维度，在小型数据库上效果更好。因未使用类别�
 
 **图 14 同一会话数据库的混淆矩阵。**
 
-## 5.2: LDA—线性判别算法
+### 5.2: LDA—线性判别算法
 
 LDA 是有监督学习算法，即使用类别标签。LDA 是 PCA 的增强版，最适合类别分离。它利用类内散度矩阵和类间散度矩阵。Tiwari 等人将 FLDA 用于婴儿人脸识别，在 10 个类别上用 $l_2$-norm 取得良好准确率。
 
@@ -440,13 +381,13 @@ LDA 特征提取配合线性回归分类器，在跨会话数据库上准确率�
 
 **图 15 跨会话数据库的混淆矩阵。**
 
-### 6: 机器学习分类方法
+## 6: 机器学习分类方法
 
 机器学习分类指对数据的自动分类或归类。本研究针对多类别儿童识别，详述多分类技术。图 16 展示不同分类技术。
 
 **图 16 不同分类技术。**
 
-#### 6.1: 逻辑回归
+### 6.1: 逻辑回归
 
 逻辑回归是主要用于二分类的统计方法，通过 Sigmoid 函数由线性回归推导而来。
 
@@ -483,19 +424,19 @@ $$d(x,y) = \left( \sum_{i=1}^{n} |x_i - y_i|^p \right)^{\frac{1}{p}}$$
 
 $p=1$ 时为 Manhattan 距离，$p=2$ 为 Euclidean 距离，$p=\infty$ 为 Chebyshev 距离。
 
-#### 6.3: 决策树
+### 6.3: 决策树
 
 决策树是有监督学习算法。数据不断分裂成更小部分直到达到类别。使用节点、边、叶节点等术语。分类时先计算数据库熵，反映不确定性；熵越小分类效果越好。计算每个特征的信息增益，衡量分裂后不确定性降低程度。选择信息增益最高的特征分裂数据库，重复直到所有节点处理完毕。图 17 给出决策树分类器基本结构及实现。
 
 **图 17 决策树基本结构与实现。**
 
-#### 6.4: 支持向量机
+### 6.4: 支持向量机
 
 SVM 是有监督学习算法，用于图像分类。目标是寻找正确超平面分隔特征。正确超平面使两类或多类数据点间隔最大。图 18 给出三个超平面 A、B、C，超平面 B 到两类数据点边距最大，故为正确分类超平面。多分类使用多类 SVM。
 
 **图 18 支持向量机分类器。**
 
-#### 6.5: 高斯朴素贝叶斯
+### 6.5: 高斯朴素贝叶斯
 
 朴素贝叶斯分类器基于贝叶斯定理，假设图像特征间强独立。属概率分类器，实现简单，广泛用于机器学习分类。贝叶斯定理如公式 (16) 所示。
 
@@ -504,7 +445,7 @@ $$P(A|B) = \frac{P(B|A)P(A)}{P(B)}$$
 
 高斯朴素贝叶斯是朴素贝叶斯的一种分类模型。连续数据服从正态（高斯）分布，故用高斯朴素贝叶斯分类连续数据。高斯模式下从训练库计算均值和标准差更容易。
 
-### 7: 深度学习方法
+## 7: 深度学习方法
 
 深度学习是机器学习分支，融合特征提取与分类。在大数据集上优于传统机器学习算法。儿童人脸识别采用 CNN。CNN 第一层学习线条、边缘等低级特征；层数加深则学习高级特征，故深度学习擅长高级特征提取。
 
@@ -512,7 +453,7 @@ $$P(A|B) = \frac{P(B|A)P(A)}{P(B)}$$
 
 **图 19 优化 CNN 模型架构。**
 
-### 8: 结果
+## 8: 结果
 
 表 2 测试不同机器学习分类技术在儿童人脸 PCA 与 LDA 特征上的表现。数据库按 7:3 划分，70% 训练，30% 测试。同会话：训练 357 张，测试 153 张，共 510 张。跨会话：训练 339 张，测试 146 张，共 485 张。跨会话准确率见表 3。
 
@@ -521,9 +462,6 @@ $$P(A|B) = \frac{P(B|A)P(A)}{P(B)}$$
 **同会话下 PCA 与 LDA 特征提取配合机器学习分类技术。**
 
 **分类器** (images/B9780323852098000110/f01-01-9780323852098.jpg)
-
-
-
 
 ## 图 1 印度生物识别市场份额（单位：百万美元）⁴
 
@@ -536,17 +474,16 @@ $$P(A|B) = \frac{P(B|A)P(A)}{P(B)}$$
 ##### 表 1
 
 | 受试者 | FNIR | FPIR |
+
+
+
+| 年龄组 | 嘴宽比例 | 嘴高比例 |
 | :--- | :--- | :--- |
 | 婴儿 | 0.7 | 0.2 |
 | 儿童 | 0.4 | 介于 0.2 和 0.05 之间 |
+| 学龄前儿童 | 0.29 | 0.05 |
 
-
-
-
-
-# 学龄前儿童 0.29 0.05
-
-## 儿童面部发育
+# 儿童面部发育
 
 Farkas 等人的论文研究表明，在儿童面部发育的前 2 年中，嘴宽增加而嘴高减小。嘴部形状从“花蕾状”转变为更成人的类型。面部特征在第一年生长非常迅速，第二年增长速度减缓。从 3 岁到 9 岁，后续变化缓慢且不规则 ⁶。
 
@@ -576,11 +513,11 @@ Siddiqui 等人从印度收集了该数据库 ¹¹。
 
 其他数据库如 CFA、CLF、UTKFace 和 VADANA 均为私有。大多数并非专注于儿童人脸识别研究。CFA 年龄跨度为 2 岁至 20 岁。CLF 年龄跨度为 2–20 岁，VADANA 年龄跨度为 0–18 岁。UTKFace 年龄跨度为 0–32 岁。公开可用的人脸数据库有 ITWCC、ITWCC-D1、Adience 和 FG-NET。
 
-在公开可用的数据库中，FG-NET 有 82 个受试者。总人脸图像 1002 张，年龄跨度 0–69 岁。它包含儿童人脸图像，但每个特定年龄仅有一张图像。我们需要同一特定年龄的多张图像来训练模型。FG-NET 数据库的部分图像如 图 3 所示。
+在公开可用的数据库中，FG-NET 有 82 个受试者。总人脸图像 1002 张，年龄跨度 0–69 岁。它包含儿童人脸图像，但每个特定年龄仅有一张图像。我们需要同一特定年龄的多张图像来训练模型。FG-NET 数据库的部分图像如图 3 所示。
 
 ![图 3 FG-NET 数据库中两名儿童随时间跨度的样本图像（按行排列）。](img/f01-03-9780323852098.jpg "fig:")
 
-研究儿童人脸识别的主要障碍是缺乏公开数据库。我们收集了自己的数据库。我们大部分儿童人脸图像从学前学校收集，部分来自邻里。我们已获得学前学校的图像采集许可。同时也获得了家长关于将其孩子的生物识别细节用于研究目的的同意。儿童图像使用分辨率大于 2000 万像素的手机相机采集。数据库分两个会话采集。首次采集的所有图像称为同会话数据库。二次采集的所有图像称为跨会话数据库。同一人采集图像的时间跨度为 2 至 8 个月。数据库中儿童年龄范围为 2 个月至 5 岁。每个会话中，每个受试者约采集 6 张图像。为使图像尺寸一致，我们使用了 224 × 224 的图像尺寸。我们数据库的样本图像如 图 4 所示。
+研究儿童人脸识别的主要障碍是缺乏公开数据库。我们收集了自己的数据库。我们大部分儿童人脸图像从学前学校收集，部分来自邻里。我们已获得学前学校的图像采集许可。同时也获得了家长关于将其孩子的生物识别细节用于研究目的的同意。儿童图像使用分辨率大于 2000 万像素的手机相机采集。数据库分两个会话采集。首次采集的所有图像称为同会话数据库。二次采集的所有图像称为跨会话数据库。同一人采集图像的时间跨度为 2 至 8 个月。数据库中儿童年龄范围为 2 个月至 5 岁。每个会话中，每个受试者约采集 6 张图像。为使图像尺寸一致，我们使用了 `224 × 224` 的图像尺寸。我们数据库的样本图像如图 4 所示。
 
 ![图 4 自建数据库中两名儿童随时间跨度的样本图像（按行排列）。](img/f01-04-9780323852098.jpg "fig:")
 
@@ -602,13 +539,13 @@ Siddiqui 等人从印度收集了该数据库 ¹¹。
 
 ## 4：儿童人脸识别
 
-通用人脸识别系统以人脸图像为输入。后续阶段为预处理，使人脸图像适合不同的机器学习算法。特征提取是分类前的关键步骤。通用人脸识别系统如 图 7 所示。
+通用人脸识别系统以人脸图像为输入。后续阶段为预处理，使人脸图像适合不同的机器学习算法。特征提取是分类前的关键步骤。通用人脸识别系统如图 7 所示。
 
 ![图 7 儿童人脸识别框图。](img/f01-07-9780323852098.jpg "fig:")
 
-本研究比较了所采集同会话和跨会话数据的人脸识别准确率。详细研究了 PCA 和 LDA 两种特征提取技术。为保证识别算法的鲁棒性，还采用了五折交叉验证和留一法验证。分类采用不同的机器学习分类器，如支持向量机、线性判别分析、高斯朴素贝叶斯、K-近邻、决策树、逻辑回归和随机森林。
+本研究比较了所采集同会话和跨会话数据的人脸识别准确率。详细研究了 `PCA` 和 `LDA` 两种特征提取技术。为保证识别算法的鲁棒性，还采用了五折交叉验证和留一法验证。分类采用不同的机器学习分类器，如支持向量机、线性判别分析、高斯朴素贝叶斯、K-近邻、决策树、逻辑回归和随机森林。
 
-本章用于儿童人脸识别的各种方法如 图 8 所示。
+本章用于儿童人脸识别的各种方法如图 8 所示。
 
 ![图 8 纵向人脸识别方法研究。](img/f01-08-9780323852098.jpg "fig:")
 
@@ -616,15 +553,15 @@ Siddiqui 等人从印度收集了该数据库 ¹¹。
 
 根据儿童人脸识别文献研究，预处理是手动进行的 ¹²。
 
-预处理步骤包括人脸归一化、统一图像尺寸、基于眼睛对齐以及强度归一化。根据特征提取算法的需要，人脸图像被手动裁剪为不同尺寸。图 9 显示了手动裁剪图像的样本。本研究中，为 PCA 和 LDA 算法进行灰度转换，CNN 使用 RGB 图像。每个受试者的裁剪图像（5–10 张）存放在单独文件夹中。最后，所有受试者文件夹放在一个数据库文件夹中。
+预处理步骤包括人脸归一化、统一图像尺寸、基于眼睛对齐以及强度归一化。根据特征提取算法的需要，人脸图像被手动裁剪为不同尺寸。图 9 显示了手动裁剪图像的样本。本研究中，为 `PCA` 和 `LDA` 算法进行灰度转换，`CNN` 使用 RGB 图像。每个受试者的裁剪图像（5–10 张）存放在单独文件夹中。最后，所有受试者文件夹放在一个数据库文件夹中。
 
 ![图 9 预处理后的图像。](img/f01-09-9780323852098.jpg "fig:")
 
-根据研究观察，手动裁剪图像效果较好。因此，我们手动裁剪所有图像，使其尺寸一致。PCA 和 LDA 特征提取算法中进行 RGB 转灰度处理。CNN 使用 RGB 图像。
+根据研究观察，手动裁剪图像效果较好。因此，我们手动裁剪所有图像，使其尺寸一致。`PCA` 和 `LDA` 特征提取算法中进行 RGB 转灰度处理。`CNN` 使用 RGB 图像。
 
 ### 4.2：COTS——商用现成人脸匹配器
 
-它是包含特征提取的完整解决方案。大多数儿童人脸识别研究使用 COTS 匹配器 ¹³。
+它是包含特征提取的完整解决方案。大多数儿童人脸识别研究使用 `COTS` 匹配器 ¹³。
 
 ## 5：特征提取技术
 
@@ -632,62 +569,54 @@ Siddiqui 等人从印度收集了该数据库 ¹¹。
 
 ### 5.1：PCA——主成分分析
 
-PCA 是一种简单且广泛使用的基于外观的算法。它是一种无监督学习算法，即 PCA 算法中不使用类标签。在新生儿人脸识别的初步研究中，Bharadwaj 等人指出，降低图像分辨率可提高 PCA 性能 ¹⁴。
+`PCA` 是一种简单且广泛使用的基于外观的算法。它是一种无监督学习算法，即 `PCA` 算法中不使用类标签。在新生儿人脸识别的初步研究中，Bharadwaj 等人指出，降低图像分辨率可提高 `PCA` 性能 ¹⁴。
 
-PCA 用于人脸识别时，通过预处理图像准备人脸图像数据库。
+`PCA` 用于人脸识别时，通过预处理图像准备人脸图像数据库。
 
-`S = {Γ[1], Γ[2], Γ[3], … Γ[M]}`
+```
+S = {Γ[1], Γ[2], Γ[3], … Γ[M]}
+```
 
-![si1_e](img/si1_e.png) (1)
-
-设每张图像大小为 224 × 224 像素。将其转换为 M × N 维向量。此时图像向量大小为 50,176。计算平均人脸。平均人脸向量 (Ψ) 通过公式 (2) 计算。
+设每张图像大小为 `224 × 224` 像素。将其转换为 `M × N` 维向量。此时图像向量大小为 50,176。计算平均人脸。平均人脸向量 (`Ψ`) 通过公式 (2) 计算。
 
 ```
 Ψ = (1/M) Σ_{n=1}^{M} Γ_n
 ```
 
-![si2_e](img/si2_e.png) (2)
-
-儿童平均人脸图像如 图 10 所示。
+儿童平均人脸图像如图 10 所示。
 
 ![图 10 儿童平均人脸图像。](img/f01-10-9780323852098.jpg "fig:")
 
 从原始人脸中减去平均人脸向量，结果存储在变量中，
 
-`φ[i] = Γ[i] − Ψ`
+```
+φ[i] = Γ[i] − Ψ
+```
 
-![si3_e](img/si3_e.png) (3)
-
-然后，协方差矩阵 C 通过以下方式获得，
+然后，协方差矩阵 `C` 通过以下方式获得，
 
 ```
 C = (1/M) Σ_{n=1}^{M} φ_n φ_n^T
 C = A A^T  N² × N² 矩阵，
 ```
 
-![si4_e](img/si4_e.png) (4)
-
 其中 `A = [φ[1], φ[2], φ[3], φ[4], … φ[M]]` N² × M 矩阵。
 
-进一步计算协方差矩阵的特征向量和特征值。公式 (4) 中的协方差矩阵 C 维度很高。对于 224 × 224 图像，必须计算 50,176 × 50,176 矩阵并得出 50,176 个特征脸。从计算角度看这效率不高，因为大多数特征脸对我们的任务无用。
+进一步计算协方差矩阵的特征向量和特征值。公式 (4) 中的协方差矩阵 `C` 维度很高。对于 `224 × 224` 图像，必须计算 `50,176 × 50,176` 矩阵并得出 50,176 个特征脸。从计算角度看这效率不高，因为大多数特征脸对我们的任务无用。
 
-因此，我们考虑矩阵（M × M 矩阵）。
+因此，我们考虑矩阵（`M × M` 矩阵）。
 
-`现在计算 L = A A^T 的特征向量 v[i]，`
+现在计算 `L = A A^T` 的特征向量 `v[i]`，
 
-![si5_e](img/si5_e.png) (5)
-
-L 的 M 个特征向量用于求出 C 的 M 个特征向量，它们构成特征脸基，儿童的 90 个特征脸如 图 11 所示。
+`L` 的 `M` 个特征向量用于求出 `C` 的 `M` 个特征向量，它们构成特征脸基，儿童的 90 个特征脸如图 11 所示。
 
 ```
 u_i = Σ_{i=1}^{M} v_i φ_i
 ```
 
-![si6_e](img/si6_e.png) (6)
+![图 11 特征脸示例。](img/f01-11-9780323852098.jpg "fig:")
 
-![图 11 特征脸示例。](img/f01-11-9780323852098.jpg "fig:"")
-
-仅保留 K 个特征向量（对应 K 个最大特征值），特征值低的其他特征脸可省略，因为它们仅解释人脸特征的一小部分。图 12 显示了儿童人脸的 PCA 投影。
+仅保留 `K` 个特征向量（对应 `K` 个最大特征值），特征值低的其他特征脸可省略，因为它们仅解释人脸特征的一小部分。图 12 显示了儿童人脸的 `PCA` 投影。
 
 ![图 12 儿童的 PCA 投影。](img/f01-12-9780323852098.jpg "fig:")
 
@@ -695,19 +624,19 @@ u_i = Σ_{i=1}^{M} v_i φ_i
 
 ![图 13 特征值与主成分关系图。](img/f01-13-9780323852098.jpg "fig:")
 
-PCA 降低数据维度，对小型数据库效果较好。因未使用类别成员信息（无监督学习），同类和异类样本处理方式相同。
+`PCA` 降低数据维度，对小型数据库效果较好。因未使用类别成员信息（无监督学习），同类和异类样本处理方式相同。
 
-混淆矩阵可作为性能参数。它显示预测准确率与实际准确率。同会话 PCA 特征提取结合 SVM 分类准确率为 76%。其混淆矩阵如下 图 14 所示。
+混淆矩阵可作为性能参数。它显示预测准确率与实际准确率。同会话 `PCA` 特征提取结合 `SVM` 分类准确率为 76%。其混淆矩阵如下图 14 所示。
 
 ![图 14 同会话数据库混淆矩阵。](img/f01-14-9780323852098.jpg "fig:")
 
 ### 5.2：LDA——线性判别分析
 
-LDA 是一种有监督学习算法，即使用类标签。LDA 是对 PCA 方法的改进。它最适合类别分离。它使用类内散度矩阵和类间散度矩阵。Tiwari 等人将 FLDA 用于婴儿人脸识别，在 10 个类别下使用 l² − 范数获得了良好准确率 ¹⁵。
+`LDA` 是一种有监督学习算法，即使用类标签。`LDA` 是对 `PCA` 方法的改进。它最适合类别分离。它使用类内散度矩阵和类间散度矩阵。Tiwari 等人将 `FLDA` 用于婴儿人脸识别，在 10 个类别下使用 `l² − 范数` 获得了良好准确率 ¹⁵。
 
-假设有 C 个类别，μ[i] 为第 i 类的均值向量，i = 1,2,3, …, C。M[i] 为第 i 类内的样本数，i = 1,2,3, …, C。
+假设有 `C` 个类别，`μ[i]` 为第 `i` 类的均值向量，`i = 1,2,3, …, C`。`M[i]` 为第 `i` 类内的样本数，`i = 1,2,3, …, C`。
 
-设 M = Σ[i=0]^C M[i] 为总样本数。
+设 `M = Σ[i=0]^C M[i]` 为总样本数。
 
 现在，散度矩阵通过类内矩阵与类间矩阵计算。
 
@@ -715,85 +644,73 @@ LDA 是一种有监督学习算法，即使用类标签。LDA 是对 PCA 方法�
 S_w = Σ_{i=1}^{C} Σ_{j=1}^{M} (Xj - μ_i) (Xj - μ_i)^T
 ```
 
-![si7_e](img/si7_e.png) (7)
-
 ```
 S_b = Σ_{i=1}^{C} (μ_i - μ) (μ_i - μ)^T
 ```
 
-![si8_e](img/si8_e.png) (8)
-
-其中 `μ = (1/C) Σ_{i=1}^{C} μ_i` ![si9_e](img/si9_e.png) 为整个数据集的均值。
+其中 `μ = (1/C) Σ_{i=1}^{C} μ_i` 为整个数据集的均值。
 
 数据投影由公式 (9) 给出，
 
-`y = U^T x`
-
-![si10_e](img/si10_e.png) (9)
+```
+y = U^T x
+```
 
 其中 `U^T` 为投影矩阵。
 
-LDA 计算使类间散度最大化且类内散度最小化的变换
+`LDA` 计算使类间散度最大化且类内散度最小化的变换
 
 ```
 max |U^T S_b U| / |U^T S_w U| = max |S̃_b| / |S̃_w|  特征值乘积
 ```
 
-![si11_e](img/si11_e.png) (10)
+`S̃_b`，`S̃_w`：投影数据 `y` 的散度矩阵。
 
-`S̃_b,` ![si12_e](img/si12_e.png) `S̃_w` ![si13_e](img/si13_e.png)：投影数据 y 的散度矩阵。
+`LDA` 对大型数据库效果最佳。因使用标签，类间分类效果好。`LDA` 结果对小型数据库非最优。
 
-LDA 对大型数据库效果最佳。因使用标签，类间分类效果好。LDA 结果对小型数据库非最优。
-
-LDA 特征提取结合线性回归分类器，跨会话数据库准确率达 84%。其混淆矩阵如下 图 15 所示。
+`LDA` 特征提取结合线性回归分类器，跨会话数据库准确率达 84%。其混淆矩阵如下图 15 所示。
 
 ![图 15 跨会话数据库混淆矩阵。](img/f01-15-9780323852098.jpg "fig:")
 
 ## 6：机器学习分类方法
 
-机器学习分类指数据的自动分类或归类。本研究执行多类别儿童识别。因此详细介绍多分类技术。不同分类技术如 图 16 所示。
+机器学习分类指数据的自动分类或归类。本研究执行多类别儿童识别。因此详细介绍多分类技术。不同分类技术如图 16 所示。
 
 ![图 16 不同分类技术。](img/f01-16-9780323852098.jpg "fig:")
 
 ### 6.1：逻辑回归
 
-逻辑回归是一种统计方法，主要用于二分类。它通过 Sigmoid 函数从线性回归推导而来。
+逻辑回归是一种统计方法，主要用于二分类。它通过 `Sigmoid` 函数从线性回归推导而来。
 
 线性回归方程。
 
-`y = β0 + β1 X1 + β2 X2 + … + βn Xn`
+```
+y = β0 + β1 X1 + β2 X2 + … + βn Xn
+```
 
-![si14_e](img/si14_e.png) (11)
+其中 `y` 为因变量，`X1, X2, … Xn` 为自变量。
 
-其中 y 为因变量，X1, X2, … Xn 为自变量。
-
-Sigmoid 函数：
+`Sigmoid` 函数：
 
 ```
 S(x) = 1 / (1 + e^{-x})
 ```
 
-![si15_e](img/si15_e.png) (12)
-
-将 Sigmoid 函数应用于线性回归得到逻辑回归方程。
+将 `Sigmoid` 函数应用于线性回归得到逻辑回归方程。
 
 ```
 S(x) = 1 / (1 + e^{-β0 + β1 X1 + β2 X2 + … + βn Xn})
 ```
 
-![si16_e](img/si16_e.png) (13)
-
-该方程输出始终在 0 和 1 之间。多项逻辑回归可用于多分类。它使用 Softmax 函数进行多分类。
+该方程输出始终在 0 和 1 之间。多项逻辑回归可用于多分类。它使用 `Softmax` 函数进行多分类。
 
 ```
 ŷ = softmax(xW + b)
 ```
 
-![si17_e](img/si17_e.png) (14)
-
 ### 6.2：K-近邻
 
-它是一种有监督学习算法，分类不使用概率，而是使用距离度量。KNN 算法基于特征相似性搜索。它认为相似特征总是彼此靠近。KNN 算法中，K 为最近邻数量。K 的选择由用户决定；通常为奇数。K 值多为 n 的平方根。KNN 使用的距离度量有闵可夫斯基距离、曼哈顿距离和欧氏距离。
+它是一种有监督学习算法，分类不使用概率，而是使用距离度量。`KNN` 算法基于特征相似性搜索。它认为相似特征总是彼此靠近。`KNN` 算法中，`K` 为最近邻数量。`K` 的选择由用户决定；通常为奇数。`K` 值多为 `n` 的平方根。`KNN` 使用的距离度量有闵可夫斯基距离、曼哈顿距离和欧氏距离。
 
 闵可夫斯基距离方程为通式，可推导出曼哈顿和欧氏距离。
 
@@ -801,19 +718,17 @@ S(x) = 1 / (1 + e^{-β0 + β1 X1 + β2 X2 + … + βn Xn})
 d(x,y) = (Σ_{i=1}^{n} |x_i - y_i|^p)^{1/p}
 ```
 
-![si18_e](img/si18_e.png) (15)
-
 `p = 1`，曼哈顿距离；`p = 2`，欧氏距离；`p = ∞`，切比雪夫距离。
 
 ### 6.3：决策树
 
-它是一种有监督学习算法。该算法持续将数据分割成更小部分直到达到其类别。它使用节点、边和叶节点等术语。决策树分类器中，首先计算数据库的熵。它告诉我们数据库的不确定性程度。不确定性值越小，分类结果越好。计算每个特征的信息增益。这表明分割数据库后不确定性减少了多少。最后计算所有特征的信息增益，按信息增益最高的特征分割数据库。过程重复直到所有节点清晰。决策树分类器的基本结构及实现如 图 17 所示。
+它是一种有监督学习算法。该算法持续将数据分割成更小部分直到达到其类别。它使用节点、边和叶节点等术语。决策树分类器中，首先计算数据库的熵。它告诉我们数据库的不确定性程度。不确定性值越小，分类结果越好。计算每个特征的信息增益。这表明分割数据库后不确定性减少了多少。最后计算所有特征的信息增益，按信息增益最高的特征分割数据库。过程重复直到所有节点清晰。决策树分类器的基本结构及实现如图 17 所示。
 
 ![图 17 决策树基本结构与实现。](img/f01-17-9780323852098.jpg "fig:")
 
 ### 6.4：支持向量机
 
-它是一种有监督学习算法。我们将其用于图像分类。SVM 旨在为数据库特征找到正确的超平面。正确超平面是使两个或更多数据点间间隔最大化的超平面。借助这些超平面，我们能分类不同数据点。图 18 给出了分离数据点的三个超平面 A、B 和 C。超平面 B 到两个数据点的间隔最大。因此，B 是分离这两类的正确超平面。分类两类以上使用多类 SVM ¹⁶。
+它是一种有监督学习算法。我们将其用于图像分类。`SVM` 旨在为数据库特征找到正确的超平面。正确超平面是使两个或更多数据点间间隔最大化的超平面。借助这些超平面，我们能分类不同数据点。图 18 给出了分离数据点的三个超平面 A、B 和 C。超平面 B 到两个数据点的间隔最大。因此，B 是分离这两类的正确超平面。分类两类以上使用多类 `SVM` ¹⁶。
 
 ![图 18 支持向量机分类器。](img/f01-18-9780323852098.jpg "fig:")
 
@@ -825,39 +740,33 @@ d(x,y) = (Σ_{i=1}^{n} |x_i - y_i|^p)^{1/p}
 P(A | B) = P(B | A) P(A) / P(B)
 ```
 
-![si19_e](img/si19_e.png) (16)
-
 高斯朴素贝叶斯是朴素贝叶斯的一种分类模型。连续数据服从正态（高斯）分布。因此，我们使用高斯朴素贝叶斯对连续数据分类。在高斯模式下，从训练数据库计算均值和标准差更容易。
 
 ## 7：深度学习方法
 
-深度学习是机器学习的一个分支，结合了特征提取和分类过程。在大数据集上表现优于机器学习算法。儿童人脸识别使用 CNN。CNN 第一层学习人脸图像的低级特征，如线条和边缘。随着 CNN 层数增加，学习高级特征。因此，深度学习方法擅长高级特征。
+深度学习是机器学习的一个分支，结合了特征提取和分类过程。在大数据集上表现优于机器学习算法。儿童人脸识别使用 `CNN`。`CNN` 第一层学习人脸图像的低级特征，如线条和边缘。随着 `CNN` 层数增加，学习高级特征。因此，深度学习方法擅长高级特征。
 
-本研究从基础到优化级实现了 CNN。首先 CNN 有 3 个卷积层，随后为同会话和跨会话数据库增加到 6 层。激活函数用 ReLU，全连接层用 Softmax。损失函数为稀疏分类交叉熵损失。训练集 70%，测试集 30%。CNN 架构如 图 19 所示。
+本研究从基础到优化级实现了 `CNN`。首先 `CNN` 有 3 个卷积层，随后为同会话和跨会话数据库增加到 6 层。激活函数用 `ReLU`，全连接层用 `Softmax`。损失函数为稀疏分类交叉熵损失。训练集 70%，测试集 30%。`CNN` 架构如图 19 所示。
 
 ![图 19 CNN 优化模型架构。](img/f01-19-9780323852098.jpg "fig:")
 
 ## 8：结果
 
-表 2 中，针对儿童人脸图像的 PCA 和 LDA 特征测试了不同的机器学习分类技术。数据库按 70% 和 30% 划分。即 70% 人脸图像用于训练，30% 用于测试。同会话中，357 张图像用于训练，153 张用于测试，总计 510 张。跨会话中，339 张用于训练，146 张用于测试，总计 485 张。跨会话准确率见 表 3。
+表 2 中，针对儿童人脸图像的 `PCA` 和 `LDA` 特征测试了不同的机器学习分类技术。数据库按 70% 和 30% 划分。即 70% 人脸图像用于训练，30% 用于测试。同会话中，357 张图像用于训练，153 张用于测试，总计 510 张。跨会话中，339 张用于训练，146 张用于测试，总计 485 张。跨会话准确率见表 3。
 
-#### 表 2
-
-
-
-
-
-# 利用机器学习分类技术进行 PCA 和 LDA 特征提取以实现同一会话识别
+#### 表 2：利用机器学习分类技术进行 PCA 和 LDA 特征提取以实现同一会话识别
 
 | 特征提取 | 分类器 | 验证准确率 |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | 三个卷积层，随后是最大池化和 softmax 激活函数 | 全连接层 | 0.76 |
 
 ![图 21 基础 CNN 人脸识别在跨会话下的模型准确率和损失。](img/f01-21-9780323852098.jpg)
 
 **图 21** 基础 CNN 人脸识别在跨会话下的模型准确率和损失。
 
-为进一步提升结果，采用了数据增强技术。数据增强是一种在不收集新数据的情况下增加数据库多样性的技术。裁剪、填充和翻转是数据增强中使用的技术。训练图像数量越多，模型准确率越高。采用了六层卷积模型，配合 `L2` 核正则化和批量归一化。定制 CNN 在同一会话下的验证准确率见 **表 10** 并展示在 **图 22** 中，跨会话下的验证准确率见 **表 11** 和 **图 23**。
+为进一步提升结果，采用了数据增强技术。数据增强是一种在不收集新数据的情况下增加数据库多样性的技术。裁剪、填充和翻转是数据增强中使用的技术。训练图像数量越多，模型准确率越高。采用了六层卷积模型，配合 `L2` 核正则化和批量归一化。定制 `CNN` 在同一会话下的验证准确率见**表 10** 并展示在**图 22** 中，跨会话下的验证准确率见**表 11** 和**图 23**。
+
+
 
 ## 表 10：定制 CNN 在同一会话下的准确率
 
@@ -882,7 +791,9 @@ P(A | B) = P(B | A) P(A) / P(B)
 所提出方法的优势如下所示：
 
 1.  **收集了约 81 位受试者同一会话和 48 位受试者跨会话的纵向数据库，此类数据库并不容易获取。** 大多数数据库均为同一会话数据。
+
 2.  **该算法用于识别模式，而文献中的大多数工作使用验证模式。**
+
 3.  **本文实现的最大跨会话识别准确率为 95%，与文献报道相当。**
 
 ## 9：讨论与结论
@@ -903,15 +814,13 @@ P(A | B) = P(B | A) P(A) / P(B)
 
 ## 第 2 章：热成像生物特征人脸识别 (TBFR)：一种非接触式面部生物测量技术
 
-**Chirag Kyal**[^a]；**Harsh Poddar**[^a]；**Motahar Reza**[^b]  
-[^a]: 计算机科学与工程系，国家科学技术学院，Berhampur，印度  
+**Chirag Kyal**[^a]；**Harsh Poddar**[^a]；**Motahar Reza**[^b]
+
+[^a]: 计算机科学与工程系，国家科学技术学院，Berhampur，印度
+
 [^b]: 数学系，GITAM 视同大学，海得拉巴，印度
 
 ### 摘要
-
-
-
-
 
 个人面部是一种重要的生物特征，可用于实时基于计算机的生物特征授权。为了创建此类系统，会采集各个领域中的人脸数据作为输入：可获取或生成可见光、热成像、素描或融合图像。这些领域各有优缺点。就可见光图像而言，系统主要受困于光照强度变化、姿态、配饰、衰老等问题。另一方面，热成像领域对光照不敏感，使其在这些问题上占据优势。正因如此，它不仅吸引了计算机科学家或研究人员，还吸引了心理学家和神经科学家投身于这一研发领域。在本工作中，提出了一种用于热红外图像的新型人脸识别算法。因其在非接触式人脸生物识别技术中的适应性，该系统被命名为热生物特征人脸识别（`TBFR`）系统。热人脸识别需要基于标准坐标借助基准地标进行人脸预对齐，这是一个非常关键的步骤。热图像的低分辨率、低对比度以及包含的纹理信息稀少，给检测图像对齐所需的基准地标带来了严峻挑战。为克服这一问题，在 `NVIE` 数据集图像上手动标注了 73 个生物特征地标点。这些地标信息随后被用于训练基于深度学习的地标检测架构，以实现自动人脸和地标预测。选择 `UCH Thermal Temporal Face`（`UCH-TTF`）和 `PUCV Thermal Temporal Face`（`PUCV-TTF`）数据库作为探针集，`NVIE` 数据库作为图库图像语料库。接着，将标注后的人脸图像裁剪为若干四边形块，并使用深度卷积神经网络从每个四边形切割中提取特征向量。最后，引入子空间几何和多种聚类算法，根据生物特征区分这些特征向量。实验结果证明，`TBFR` 的性能和准确优于最先进方法。
 
@@ -928,7 +837,9 @@ P(A | B) = P(B | A) P(A) / P(B)
 本章的主要贡献如下：
 
 *   我们提出了一种用于热红外图像的新型人脸识别算法。我们将其命名为热生物特征人脸识别（`TBFR`）。为了拥有能够解决此问题的算法，首先检测热红外人脸，然后基于标准坐标借助 73 个基准地标点对热人脸进行对齐。
+
 *   利用这些标注图像，训练了一个基于深度学习的模型以专门处理标注任务。随后，标注图像被用于提取与人脸几何相关的附加信息，这些信息稍后与从 `ResNet-50` 层获得的特征向量融合。这些信息的融合在准确分类个人方面占据优势，从而构成了一种最先进的算法。
+
 *   我们提出的方法相比其他方法获得了更好的人脸识别性能。利用热成像的人脸识别实验在多个公开现有数据库上进行验证，以证明所提出的特征提取、特征融合和人员识别算法的有效性。
 
 #### 1.2：章节组织
@@ -958,7 +869,9 @@ P(A | B) = P(B | A) P(A) / P(B)
 通过在可见光领域检测人脸，解决了各种问题。但这并非完美解决方案，因此无法解决某些问题，例如：
 
 1.  在光照不足的场所检测人脸；
+
 2.  区分真实人脸和打印图像的能力 [[22]](#fn22)；
+
 3.  识别图像中的各种压力和情绪类型 [[23]](#fn23)。
 
 与可见光图像不同，热成像相机具备检测物体发出的热辐射的能力。图 2 描绘了我们之前工作 [[24]](#fn24) 中提出的热人脸检测的详细实现。
@@ -974,10 +887,6 @@ P(A | B) = P(B | A) P(A) / P(B)
 借助现代基于深度学习的方法，可以解决热成像领域捕获的人脸图像相关的各种问题。目前，几种类型的卷积神经网络主导着研究领域。
 
 对于面部地标定位任务，有三个数据集，即 `USTC-NVIE` [[26]](#fn26)。
-
-
-
-
 
 ![Fig. 3 Seventy-three landmark points with their coordinate in the face.](img/f02-03-9780323852098.jpg)
 
@@ -1021,10 +930,6 @@ P(A | B) = P(B | A) P(A) / P(B)
 
 为了执行最终的生物识别步骤，我们采用了基于深度神经网络架构的子空间聚类方法 [²⁹]。
 
-
-
-
-
 #### 3.6 最终生物特征聚类人脸
 
 为了考虑人脸识别的挑战和困难，这些挑战和困难包含面部表情变化、光照变化、不同角度的旋转、尺度变化等，基于深度神经网络架构的子空间聚类技术已被应用于 `UCH-TTF`、`PUCV-TTF` 和 `USTC-NVIE` 数据集。如图 8 所示，已以高精度达成良好的一致性。
@@ -1040,7 +945,9 @@ P(A | B) = P(B | A) P(A) / P(B)
 热成像人脸数据库的选择在 TBFR 模型的训练和测试评估中起着重要作用。数据集因各种原因而有所不同，例如记录距离、热成像相机质量、红外波段、面部表情、记录环境和姿态。我们在三个标准热成像数据集上进行了所提的生物特征识别。所有三个数据集的样本如图 9 所示。我们在以下部分展示数据集的详细信息：
 
 *   **UCH 热成像时序人脸 (UCH-TTF) 数据库**
+
 *   **PUCV 热成像时序人脸 (PUCV-TTF) 数据库**
+
 *   **USTC-NVIE 数据库**
 
 ![Fig. 9 Samples of (A) UCH-TTF database, (B) PUCV-TTF database, and (C) USTC-NVIE database.](img/f02-09-9780323852098.jpg)
@@ -1061,6 +968,8 @@ P(A | B) = P(B | A) P(A) / P(B)
 
 ![Fig. 13 Error comparison for PUCV-TTF dataset with different deep learning methods.](img/f02-13-9780323852098.jpg)
 
+
+
 ![Fig. 14 Accuracy comparison for UCH-TTF dataset with different deep learning methods.](img/f02-14-9780323852098.jpg)
 
 ![Fig. 15 Error comparison for UCH-TTF dataset with different deep learning methods.](img/f02-15-9780323852098.jpg)
@@ -1069,30 +978,25 @@ P(A | B) = P(B | A) P(A) / P(B)
 
 ![Fig. 17 Error comparison for USTC-NVIE dataset with different deep learning methods.](img/f02-17-9780323852098.jpg)
 
-##### 4.2.2 方法对比
+### 4.2.2 方法对比
 
-我们将所提算法框架的性能与其他最先进的方法（如 DrunkSpace 分类器）进行了比较。
+我们将所提算法框架的性能与其他最先进的方法（如 `DrunkSpace` 分类器）进行了比较。
 
-**表 2**
-
-
-
-
-# 性能准确率对比
+**表 2** 性能准确率对比
 
 不同现有方法与我们提出方法的性能准确率对比。
 
 | 最先进方法 | 准确率 (%) |
 | --- | --- |
-| DrunkSpace 分类器 [³⁷ | 86.96 |
-| GHFR [³⁸ | 95.38 |
-| PSO-TFRS [³⁹ | 99.34 |
-| TFR-PI [⁴⁰ | 99.71 |
-| TBFR (proposed) | 99.85 |
+| `DrunkSpace` 分类器 [³⁷] | 86.96 |
+| `GHFR` [³⁸] | 95.38 |
+| `PSO-TFRS` [³⁹] | 99.34 |
+| `TFR-PI` [⁴⁰] | 99.71 |
+| `TBFR` (proposed) | 99.85 |
 
-由于从热成像图像中识别人脸需要大量的训练数据，我们鼓励研究人员使用其他数据集和真实场景测试该方法。本研究仅限于 PUCV-TTF、UCH-TTF 和 USTC-NVIE 数据集，且仅考虑正常的正面热成像人脸来训练模型。对于具有巨大背景噪声、倾斜和遮挡的人脸图像，仍有改进空间。
+由于从热成像图像中识别人脸需要大量的训练数据，我们鼓励研究人员使用其他数据集和真实场景测试该方法。本研究仅限于 `PUCV-TTF`、`UCH-TTF` 和 `USTC-NVIE` 数据集，且仅考虑正常的正面热成像人脸来训练模型。对于具有巨大背景噪声、倾斜和遮挡的人脸图像，仍有改进空间。
 
-### 5: 结论
+### 5 结论
 
 热传感器对光照变化的鲁棒性已吸引了全球研究人员和商业团体的关注，将其作为可见光谱安全系统的替代方案。它们能够在黑暗环境中运行。此外，研究表明红外相机能够捕捉新的解剖和生理人脸信息，如面部血管网络、热特征和血管结构。这些特征可能因人而异，因此有潜力作为生物特征识别特征。遵循相同的理念，本章提出了一种基于热成像的生物特征人脸识别系统。深度学习和特征融合的概念被广泛用于为所提系统提供更强的鲁棒性。为了应对不同人员具有相似热特征的情况，将与个人面部几何相关的附加信息与从 `ResNet-50` 模型获得的特征向量进行了融合。实验获得的结果令人满意，因此优于现有的最先进算法。
 
@@ -1106,26 +1010,26 @@ Partha Pratim Sarangi^(a)；Madhumita Panda^(b)；Subhashree Mishra^(a)；Bhaban
 
 ### 摘要
 
-多模态生物特征系统近来在非受控场景下的人体身份识别方面受到广泛关注。本章提出了一种通过融合耳部和侧脸生物特征的改进多模态生物特征识别方法。首先，利用可控金字塔变换将两种模态分别分解为预定义数量的尺度和方向，然后使用基于直方图的局部描述符从每个子带中提取纹理特征。采用了三种流行的局部描述符——局部方向模式、二值统计图像特征和局部相位量化，并比较它们的有效性以探索最具判别力的纹理描述符。最后，利用 kNN 分类器，在特征级和得分级上融合两种模态的局部描述符以实现个体识别。在两个标准数据集——Notre Dame 大学 E 集 (UND-E) 和 J2 集 (UND-J2) 上进行了多组实验，结果表明，采用得分级融合的多模态方法优于特征级融合。此外，其准确率高于单模态耳部识别和最先进的多模态生物特征识别。
+多模态生物特征系统近来在非受控场景下的人体身份识别方面受到广泛关注。本章提出了一种通过融合耳部和侧脸生物特征的改进多模态生物特征识别方法。首先，利用可控金字塔变换将两种模态分别分解为预定义数量的尺度和方向，然后使用基于直方图的局部描述符从每个子带中提取纹理特征。采用了三种流行的局部描述符——局部方向模式、二值统计图像特征和局部相位量化，并比较它们的有效性以探索最具判别力的纹理描述符。最后，利用 `kNN` 分类器，在特征级和得分级上融合两种模态的局部描述符以实现个体识别。在两个标准数据集——Notre Dame 大学 E 集 (`UND-E`) 和 J2 集 (`UND-J2`) 上进行了多组实验，结果表明，采用得分级融合的多模态方法优于特征级融合。此外，其准确率高于单模态耳部识别和最先进的多模态生物特征识别。
 
 #### 关键词
 
 生物特征识别；多模态生物特征识别；耳部和侧脸；可控金字塔变换；特征级融合；得分级融合
 
-### 1: 引言
+### 1 引言
 
 近年来，生物特征识别已成为各种安全和取证应用中人体身份识别的替代程序。指纹、人脸、虹膜、掌纹、耳部、指静脉模式、语音、签名和步态等生物特征模态是个体身份识别和隐私保护中最流行、应用最广泛的生物特征模态 [⁴¹]
 
-为了提高所提方法的判别能力，本章对耳部和侧脸图像使用了可控金字塔变换 (SPT) 滤波器组。这些 SPT 滤波器将两幅图像分别分解为预定义数量的不同尺度和方向的子带。随后，将所有子带划分为若干个不重叠的块，并在每个块上分别提取局部特征（如局部二值模式 (LDP)、局部相位量化 (LPQ) 和二值统计图像特征 (BSIF)）以生成直方图。这些直方图经过归一化并拼接以表示图像。然后，利用卡方相似度度量探索了特征级和得分级融合以提高识别性能。所提方法的主要贡献概述如下：
+为了提高所提方法的判别能力，本章对耳部和侧脸图像使用了可控金字塔变换 (`SPT`) 滤波器组。这些 `SPT` 滤波器将两幅图像分别分解为预定义数量的不同尺度和方向的子带。随后，将所有子带划分为若干个不重叠的块，并在每个块上分别提取局部特征（如局部二值模式 (`LDP`)、局部相位量化 (`LPQ`) 和二值统计图像特征 (`BSIF`)）以生成直方图。这些直方图经过归一化并拼接以表示图像。然后，利用卡方相似度度量探索了特征级和得分级融合以提高识别性能。所提方法的主要贡献概述如下：
 
 1.  (i) 我们提出了一种多模态生物特征识别系统，以耳部和侧脸图像作为输入，与单模态耳部生物特征识别相比获得了改进的识别结果。
-2.  (ii) 应用 SPT 将耳部和侧脸图像分别分解为沿不同尺度和方向的一组子带。每个子带进一步划分为若干个块，并计算每个块的局部纹理描述符以统一表示特征向量。
-3.  (iii) 我们探索了三种基于直方图的局部纹理描述符 LDP、LPQ 和 BSIF 的有效性，以提取更具判别力的方向信息并得出其中最优者。为获得更好的识别性能，我们还研究了特征级和得分级融合方案。
-4.  (iv) 在两个基准数据集 UND-E 和 UND-J2 上进行了大量实验，以评估所提方法的有效性。采用得分级融合获得的结果优于基于耳部的单模态和最先进的多模态生物特征识别。
+2.  (ii) 应用 `SPT` 将耳部和侧脸图像分别分解为沿不同尺度和方向的一组子带。每个子带进一步划分为若干个块，并计算每个块的局部纹理描述符以统一表示特征向量。
+3.  (iii) 我们探索了三种基于直方图的局部纹理描述符 `LDP`、`LPQ` 和 `BSIF` 的有效性，以提取更具判别力的方向信息并得出其中最优者。为获得更好的识别性能，我们还研究了特征级和得分级融合方案。
+4.  (iv) 在两个基准数据集 `UND-E` 和 `UND-J2` 上进行了大量实验，以评估所提方法的有效性。采用得分级融合获得的结果优于基于耳部的单模态和最先进的多模态生物特征识别。
 
-本章其余部分组织如下：第 2 节 介绍相关工作。第 3 节 简要描述用于特征提取的 SPT 和三种局部纹理描述符。第 4 节 详细描述所提多模态识别方法。第 5 节 讨论实验和结果，最后在第 6 节 得出结论。
+本章其余部分组织如下：第 2 节介绍相关工作。第 3 节简要描述用于特征提取的 `SPT` 和三种局部纹理描述符。第 4 节详细描述所提多模态识别方法。第 5 节讨论实验和结果，最后在第 6 节得出结论。
 
-### 2: 相关工作
+### 2 相关工作
 
 关于耳部生物特征识别最近结构最完善、最全面的综述由文献 [⁴²] 发表
 
@@ -1149,36 +1053,31 @@ Sarangi 和 Panda [⁵¹]
 
 早期方法达到的识别准确率仍有潜在提升空间。所提基于耳部和侧脸的多模态框架显著提高了识别性能。
 
-### 3: 背景
+### 3 背景
 
 在本工作中，我们使用 Sarangi 等人 [⁵²] 的方法从侧脸图像中定位耳部区域
 
-
-
-
 ![Fig. 1 A sample side face image with extracted ear and profile face images from UND-J2 dataset.](img/f03-01-9780323852098.jpg)
 
-图 1 来自 UND-J2 数据集的样本侧面图像，包含提取的耳部和侧脸图像。
+图 1 来自 `UND-J2` 数据集的样本侧面图像，包含提取的耳部和侧脸图像。
 
 #### 3.1 可操纵金字塔变换
 
-SPT [⁵³]
+`SPT` [⁵³]
 
 ![Fig. 2 Decomposition of an ear image using SPT with three scales and four orientations.](img/f03-02-9780323852098.jpg)
 
-图 2 使用具有三个尺度和四个方向的 SPT 对耳部图像进行分解。
+图 2 使用具有三个尺度和四个方向的 `SPT` 对耳部图像进行分解。
 
 #### 3.2 局部纹理描述符
 
-在基于 SPT 的耳部和侧脸图像分解之后，局部纹理描述符在非受控条件下从子带中提取判别信息更为稳健。文献中 [⁵⁴]
+在基于 `SPT` 的耳部和侧脸图像分解之后，局部纹理描述符在非受控条件下从子带中提取判别信息更为稳健。文献中 [⁵⁴]
 
 ### 4 提出的多模态生物识别
 
 所提出的方法包含五个阶段：预处理、局部特征提取、多模态融合和人员识别，这些在算法 1 中进行了解释，所提出的流程如图 3 所示。
 
-#### 算法 1
-
-所提出的多模态生物识别。
+#### 算法 1 所提出的多模态生物识别
 
 **输入：** 给定分割后的耳部和侧脸图像的训练集和测试集
 
@@ -1189,19 +1088,19 @@ SPT [⁵³]
 3. 对训练和测试图像的每个子带应用基于块的局部纹理描述符。
 4. 连接分块直方图以获取训练和测试特征向量集。
 5. 对每个耳部测试特征向量执行
-6.       使用公式 (2) 通过卡方度量计算测试特征向量与所有训练特征向量之间的匹配得分。
-7.       基于匹配得分使用 kNN 分类器确定耳部测试样本的识别身份。
+6. &nbsp;&nbsp;&nbsp;&nbsp;使用公式 (2) 通过卡方度量计算测试特征向量与所有训练特征向量之间的匹配得分。
+7. &nbsp;&nbsp;&nbsp;&nbsp;基于匹配得分使用 `kNN` 分类器确定耳部测试样本的识别身份。
 8. 结束循环
 9. 对每个侧脸测试特征向量执行
-10.       使用公式 (2) 通过卡方度量计算测试特征向量与所有训练特征向量之间的匹配得分。
-11.       基于匹配得分使用 kNN 分类器确定侧脸测试样本的识别身份。
+10. &nbsp;&nbsp;&nbsp;&nbsp;使用公式 (2) 通过卡方度量计算测试特征向量与所有训练特征向量之间的匹配得分。
+11. &nbsp;&nbsp;&nbsp;&nbsp;基于匹配得分使用 `kNN` 分类器确定侧脸测试样本的识别身份。
 12. 结束循环
-13. 计算耳部和侧脸生物识别模态的准确率和 EER。
+13. 计算耳部和侧脸生物识别模态的准确率和 `EER`。
 14. 对每个耳部和侧脸匹配得分执行
-15.       使用公式 (5) 基于加权求和规则的得分级融合计算融合匹配得分。
-16.       基于融合匹配得分使用 kNN 分类器确定每个样本的识别身份
+15. &nbsp;&nbsp;&nbsp;&nbsp;使用公式 (5) 基于加权求和规则的得分级融合计算融合匹配得分。
+16. &nbsp;&nbsp;&nbsp;&nbsp;基于融合匹配得分使用 `kNN` 分类器确定每个样本的识别身份
 17. 结束循环
-18. 评估所提出识别方法的总体准确率 (%) 和 EER (%)。
+18. 评估所提出识别方法的总体准确率 (%) 和 `EER` (%)。
 
 ![Fig. 3 Pipeline of the proposed method.](img/f03-03-9780323852098.jpg)
 
@@ -1222,11 +1121,11 @@ G(u, v, σ) = 1 / (√(2π) σ) * exp(- (u² - v²) / (2σ²))
 
 #### 4.2 基于分块 SPT-BSIF 描述符的特征提取
 
-在本工作中，我们在耳部和侧脸图像上采用三尺度六方向的可操纵金字塔滤波器组，将图像分解为 18 个不同尺度和方向的子带。然后，将所有子带划分为若干个不重叠的块，并对所有块应用 BSIF 特征提取器。所有块的归一化直方图纹理描述符被连接以形成 (`SPT-BSIF`) 特征向量。最后，我们分别获得了耳部和侧脸的两个归一化特征向量 `F[Ear]` 和 `F[PF]`。
+在本工作中，我们在耳部和侧脸图像上采用三尺度六方向的可操纵金字塔滤波器组，将图像分解为 18 个不同尺度和方向的子带。然后，将所有子带划分为若干个不重叠的块，并对所有块应用 `BSIF` 特征提取器。所有块的归一化直方图纹理描述符被连接以形成 (`SPT-BSIF`) 特征向量。最后，我们分别获得了耳部和侧脸的两个归一化特征向量 `F[Ear]` 和 `F[PF]`。
 
 #### 4.3 匹配与分类
 
-在执行分类之前，通过两个步骤计算所有探针样本的匹配得分：(1) 使用公式 (2) 中给出的卡方度量，将每个探针图像与所有图库图像进行比较以生成一组匹配得分；(2) 使用 kNN 分类器为每个探针样本获得单个匹配得分。
+在执行分类之前，通过两个步骤计算所有探针样本的匹配得分：(1) 使用公式 (2) 中给出的卡方度量，将每个探针图像与所有图库图像进行比较以生成一组匹配得分；(2) 使用 `kNN` 分类器为每个探针样本获得单个匹配得分。
 
 ```
 χ(F₁, F₂) = Σₖ₌₁ᴺ (f₁,ₖ - f₂,ₖ)² / (f₁,ₖ + f₂,ₖ)
@@ -1258,7 +1157,7 @@ F_Fused = F_Ear ∪ F_PF
 
 #### 4.6 得分级融合
 
-在得分级融合中，耳部匹配得分 `S[Ear]` 和侧脸匹配得分 `S[PF]` 分别使用卡方距离度量计算，并基于公式 (5) 进行融合，以获得用于通过 kNN 分类器识别个体的融合得分。
+在得分级融合中，耳部匹配得分 `S[Ear]` 和侧脸匹配得分 `S[PF]` 分别使用卡方距离度量计算，并基于公式 (5) 进行融合，以获得用于通过 `kNN` 分类器识别个体的融合得分。
 
 ```
 S_Fused = (A_Ear × S_Ear + A_PF × S_PF) / (A_Ear + A_PF)
@@ -1270,68 +1169,62 @@ S_Fused = (A_Ear × S_Ear + A_PF × S_PF) / (A_Ear + A_PF)
 
 ### 5 实验与结果
 
-在本节中，我们展示各种实验以证明所提出方法的有效性。首先，我们讨论实验中使用的 UND-E 和 UND-J2 数据集，以及调整可操纵金字塔滤波器组和局部特征提取器（即 `LDP`、`LPQ` 和 `BSIF`）不同参数的实验设置。其次，我们对耳部和侧脸特征集进行特征级融合和得分级融合实验。第三，我们将所提出方法的识别准确率与在 UND-E 和 UND-J2 数据集上实现的现有方法进行比较。
+在本节中，我们展示各种实验以证明所提出方法的有效性。首先，我们讨论实验中使用的 `UND-E` 和 `UND-J2` 数据集，以及调整可操纵金字塔滤波器组和局部特征提取器（即 `LDP`、`LPQ` 和 `BSIF`）不同参数的实验设置。其次，我们对耳部和侧脸特征集进行特征级融合和得分级融合实验。第三，我们将所提出方法的识别准确率与在 `UND-E` 和 `UND-J2` 数据集上实现的现有方法进行比较。
 
 #### 5.1 数据集
 
-UND-E [⁵⁶]
+`UND-E` [⁵⁶]
 
-UND-J2 [⁵⁷]
+`UND-J2` [⁵⁷]
 
 ![Fig. 4 Dataset sample images of some subjects' ear and profile face from UND-E (first row) and UND-J2 (second row).](img/f03-04-9780323852098.jpg)
 
-
-
-
-
-图 4 UND-E（第一行）和 UND-J2（第二行）数据集中部分受试者耳部和侧脸的样本图像。
+图 4 `UND-E`（第一行）和 `UND-J2`（第二行）数据集中部分受试者耳部和侧脸的样本图像。
 
 #### 5.2 实验设置
 
-在所有实验中，从 UND-E 和 UND-J2 数据集的每个受试者中选取了三个样本。两个数据集均采用全对全测试策略，形成了三种可能的训练-测试集组合；即每次选择一个样本作为测试样本，其余两个样本用于训练。
+在所有实验中，从 `UND-E` 和 `UND-J2` 数据集的每个受试者中选取了三个样本。两个数据集均采用全对全测试策略，形成了三种可能的训练-测试集组合；即每次选择一个样本作为测试样本，其余两个样本用于训练。
 
-在所有实验中，均使用三尺度六方向的 SPT 以获得更好的结果。在实验中，探索了 SPT 与特征描述符的三种不同组合，分别为 `SPT-LDP`、`STP-LPQ` 和 `SPT-BSIF`。最后，在特征层面或得分层面执行融合，以提高识别性能。
+在所有实验中，均使用三尺度六方向的 `SPT` 以获得更好的结果。在实验中，探索了 `SPT` 与特征描述符的三种不同组合，分别为 `SPT-LDP`、`STP-LPQ` 和 `SPT-BSIF`。最后，在特征层面或得分层面执行融合，以提高识别性能。
 
 #### 5.3 结果
 
-所提方法的识别性能在单模态生物识别（使用耳部和侧脸）以及基于特征层面融合和得分层面融合的多模态生物识别方面进行了评估。在实验中，使用 `SPT-LDP`、`SPT-LPQ` 和 `SPT-BSIF` 特征提取器生成判别性特征向量。在实验中，通过卡方距离度量利用 `kNN` 分类器获得探针特征向量与图库特征向量的匹配，以实现个体识别。识别性能以准确率（Accuracy）和等错误率（EER）的百分比来衡量。单模态（耳部和侧脸）和多模态（特征层面融合和得分层面融合）生物识别在 UND-E 和 UND-J2 数据集上的性能结果如表 1 所示。
+所提方法的识别性能在单模态生物识别（使用耳部和侧脸）以及基于特征层面融合和得分层面融合的多模态生物识别方面进行了评估。在实验中，使用 `SPT-LDP`、`SPT-LPQ` 和 `SPT-BSIF` 特征提取器生成判别性特征向量。在实验中，通过卡方距离度量利用 `kNN` 分类器获得探针特征向量与图库特征向量的匹配，以实现个体识别。识别性能以准确率（Accuracy）和等错误率（`EER`）的百分比来衡量。单模态（耳部和侧脸）和多模态（特征层面融合和得分层面融合）生物识别在 `UND-E` 和 `UND-J2` 数据集上的性能结果如表 1 所示。
 
-**表 1**
-
-所提方法在 UND-E 和 UND-J2 数据集上针对不同局部纹理描述符的平均识别结果。
+**表 1** 所提方法在 `UND-E` 和 `UND-J2` 数据集上针对不同局部纹理描述符的平均识别结果。
 
 | 数据集 | 描述符 | 结果 | 耳部 | 侧脸 | 特征融合 | 得分融合 |
 | --- | --- | --- | --- | --- | --- | --- |
-| UND-E | SPT-LDP | 准确率 (%) | 93.87 | 91.17 | 96.47 | 99.95 |
-| | | EER (%) | 6.12 | 8.82 | 3.52 | 0.04 |
-| | SPT-LPQ | 准确率 (%) | 97.36 | 93.86 | 98.42 | 99.97 |
-| | | EER (%) | 2.63 | 7.02 | 1.75 | 0.02 |
-| | SPT-BSIF | 准确率 (%) | 97.73 | 94.73 | 98.47 | 99.98 |
-| | | EER (%) | 1.67 | 5.26 | 1.59 | 0.01 |
-| UND-J2 | SPT-LDP | 准确率 (%) | 94.13 | 90.2 | 97.79 | 99.92 |
-| | | EER (%) | 5.86 | 9.79 | 2.20 | 0.07 |
-| | SPT-LPQ | 准确率 (%) | 97.06 | 91.66 | 97.86 | 99.95 |
-| | | EER (%) | 93 | 8.33 | 2.13 | 0.05 |
-| | SPT-BSIF | 准确率 (%) | 97.54 | 90.35 | 98.24 | 99.97 |
-| | | EER (%) | 2.45 | 9.64 | 1.75 | 0.04 |
+| `UND-E` | `SPT-LDP` | 准确率 (%) | 93.87 | 91.17 | 96.47 | 99.95 |
+| | | `EER` (%) | 6.12 | 8.82 | 3.52 | 0.04 |
+| | `SPT-LPQ` | 准确率 (%) | 97.36 | 93.86 | 98.42 | 99.97 |
+| | | `EER` (%) | 2.63 | 7.02 | 1.75 | 0.02 |
+| | `SPT-BSIF` | 准确率 (%) | 97.73 | 94.73 | 98.47 | 99.98 |
+| | | `EER` (%) | 1.67 | 5.26 | 1.59 | 0.01 |
+| `UND-J2` | `SPT-LDP` | 准确率 (%) | 94.13 | 90.2 | 97.79 | 99.92 |
+| | | `EER` (%) | 5.86 | 9.79 | 2.20 | 0.07 |
+| | `SPT-LPQ` | 准确率 (%) | 97.06 | 91.66 | 97.86 | 99.95 |
+| | | `EER` (%) | 93 | 8.33 | 2.13 | 0.05 |
+| | `SPT-BSIF` | 准确率 (%) | 97.54 | 90.35 | 98.24 | 99.97 |
+| | | `EER` (%) | 2.45 | 9.64 | 1.75 | 0.04 |
 
 <div class="small_device"> <p class="table_fig"><img src="images/B9780323852098000031/t0010.png" alt="表 1" /></p></div>
 
 **粗体数值表示最佳性能。**
 
-所提方法通过单独使用耳部和侧脸进行单模态身份识别，并通过特征层面融合和得分层面融合将两种模态结合用于多模态身份识别。表 1 中的高亮数值表示实验中准确率和 EER 方面的最佳结果。实验结果表明，在耳部生物识别中，分别在 UND-E 和 UND-J2 数据集上获得了准确率（97.73% 和 97.54%）和 EER（1.67% 和 2.45%）。在实验中，与各单一模态相比，将耳部模态与侧脸结合使用特征层面融合和得分层面融合可获得令人鼓舞的识别性能。此外，还观察到，与特征层面融合的准确率（98.47% 和 98.24%）及 EER（1.59% 和 1.75%）相比，所提方法使用得分层面融合在 UND-E 和 UND-J2 数据集上分别提供了显著更高的准确率（99.98% 和 99.97%）和 EER（0.01% 和 0.04%）。此外，在三种不同的特征提取器组合中，直方图描述符 `SPT-LPQ` 和 `SPT-BSIF` 的性能优于 `STP-LDP`，且基于 `SPT-BSIF` 特征描述符的所提方法优于所有其他特征描述符。所提识别方法在 UND-E 和 UND-J2 数据集上的 ROC 曲线分别如图 5A 和 B 所示。
+所提方法通过单独使用耳部和侧脸进行单模态身份识别，并通过特征层面融合和得分层面融合将两种模态结合用于多模态身份识别。表 1 中的高亮数值表示实验中准确率和 `EER` 方面的最佳结果。实验结果表明，在耳部生物识别中，分别在 `UND-E` 和 `UND-J2` 数据集上获得了准确率（97.73% 和 97.54%）和 `EER`（1.67% 和 2.45%）。在实验中，与各单一模态相比，将耳部模态与侧脸结合使用特征层面融合和得分层面融合可获得令人鼓舞的识别性能。此外，还观察到，与特征层面融合的准确率（98.47% 和 98.24%）及 `EER`（1.59% 和 1.75%）相比，所提方法使用得分层面融合在 `UND-E` 和 `UND-J2` 数据集上分别提供了显著更高的准确率（99.98% 和 99.97%）和 `EER`（0.01% 和 0.04%）。此外，在三种不同的特征提取器组合中，直方图描述符 `SPT-LPQ` 和 `SPT-BSIF` 的性能优于 `STP-LDP`，且基于 `SPT-BSIF` 特征描述符的所提方法优于所有其他特征描述符。所提识别方法在 `UND-E` 和 `UND-J2` 数据集上的 ROC 曲线分别如图 5A 和 B 所示。
 
 ![图 5 UND-E 和 UND-J2 数据集的 ROC 曲线。](img/f03-05a-9780323852098.jpg)
 
-图 5 UND-E 和 UND-J2 数据集的 ROC 曲线。
 
-#### 5.4 与最先进方法的比较
+
+## 图 5 UND-E 和 UND-J2 数据集的 ROC 曲线
+
+### 5.4 与最先进方法的比较
 
 表 2 提供了所提方法与现有技术的详细比较，这些现有技术均在 UND-E 和 UND-J2 数据集上实现。选择这两个数据集的原因是：（i）与 USTB 相比，两者都包含更多人的侧脸图像。（ii）由于受试者众多，可以对所提方法进行彻底评估。（iii）UND-E 图像具有大的光照变化，UND-J2 图像分辨率较低，识别个体具有挑战性。实验结果表明，基于得分层面融合的识别准确率高于耳部和侧脸生物识别的特征层面融合。在所有实验中，我们使用了两张图库（训练）图像和一张探针（测试）图像。实践表明，每个受试者更多的图库图像可以提高识别准确率。根据表 2 中的识别准确率，证明所提方法的性能显著优于上述现有方法。
 
-**表 2**
-
-所提方法与近期相关方法在 UND-E 和 UND-J2 数据集上的平均性能结果比较。
+**表 2** 所提方法与近期相关方法在 UND-E 和 UND-J2 数据集上的平均性能结果比较。
 
 | 数据集 | 作者 | 结果 | 特征融合 | 得分融合 |
 | --- | --- | --- | --- | --- |
@@ -1345,7 +1238,7 @@ UND-J2 [⁵⁷]
 | | | EER (%) | 1.73 | – |
 | | 所提方法 | 准确率 (%) | 98.47 | 99.98 |
 | | | EER (%) | 1.59 | 0.01 |
-| UND-J2 | Rathore 等 [[62]](#fn62) | 准确率 (%) | 95.71 | 96.02 |
+| UND-J2 | Rathore 等 [[62]](#fn62) | 准准确率 (%) | 95.71 | 96.02 |
 | | | EER (%) | 5.09 | 4.39 |
 | | Sarangi 等 [[63]](#fn63) | 准确率 (%) | 97.06 | 99.58 |
 | | | EER (%) | 2.93 | 0.42 |
@@ -1358,20 +1251,17 @@ UND-J2 [⁵⁷]
 
 **粗体数值表示最佳性能。**
 
-#### 5.5 讨论
-
-
-
+### 5.5 讨论
 
 我们工作的主要目标是融合耳部和侧脸模态，以提高识别性能。其基本原理如下：（1）虽然已有许多利用耳部模态的多模态方法被研究，但基于耳部和侧脸的多模态生物识别研究尚显不足。（2）耳部和侧脸模态具有兼容的特征向量，适合进行特征级和分数级融合。（3）生物特征模态通过使用单一传感器同时采集，从而降低了传感器成本和注册时间。
 
-### 6：结论
+## 6 结论
 
 在本章中，我们提出了一种基于 SPT 和局部纹理描述符的改进型多模态耳部和侧脸生物识别身份认证方法。对三种局部描述符 LDP、LPQ 和 BSIF 的有效性进行了比较。最后，利用两种独立的融合技术——特征级融合和分数级融合——整合了耳部和侧脸的特征向量。实验结果表明，所提出的多模态识别方法在非受控环境下取得了优于单一耳部和侧脸生物识别的性能。采用 BSIF 特征描述符的提出方法获得了与最先进的多模态生物识别技术相比极具前景的识别准确率。未来，通过探索各种非手工设计特征以及其他有效的融合方案，可以设计出更高效的多模态生物识别系统。
 
-### 参考文献
+## 参考文献
 
-## 第 4 章：掌纹图像增强的统计度量
+## 第 4 章 掌纹图像增强的统计度量
 
 Gaurav Yadav^(a)；Dilip Kumar Yadav^(a)；P.V.S.S.R. Chandra Mouli^(b) ^a 计算机应用系，国家理工学院，贾姆谢德布尔，印度
 
@@ -1385,7 +1275,7 @@ Gaurav Yadav^(a)；Dilip Kumar Yadav^(a)；P.V.S.S.R. Chandra Mouli^(b) ^a 计�
 
 掌纹；生物识别；增强；图像质量；统计度量
 
-### 1：引言
+### 1 引言
 
 从本质上讲，图像的视觉改善增强了用户对图像的分析和可解释性。在数字图像处理中，它发挥着不可或缺的作用。在日常生活中，总是需要精确识别和验证物体，且要求高准确性，在此背景下，图像增强变得至关重要。图像增强旨在改变图像的特性，以便为特定观察者实现特定的期望目的 ⁶⁵
 
@@ -1409,7 +1299,7 @@ Gaurav Yadav^(a)；Dilip Kumar Yadav^(a)；P.V.S.S.R. Chandra Mouli^(b) ^a 计�
 
 在日常生活中，经常需要正确识别和验证个人身份；显然，识别过程中需要高精度 ⁶⁷
 
-### 2：掌纹图像增强
+### 2 掌纹图像增强
 
 在数字图像处理中 ⁶⁸
 
@@ -1421,11 +1311,13 @@ Gaurav Yadav^(a)；Dilip Kumar Yadav^(a)；P.V.S.S.R. Chandra Mouli^(b) ^a 计�
 
 掌纹图像的特征：
 
-包含脊线模式和谷线。特征包括主线、皱纹和基准点。易于通过低分辨率扫描仪获取。
+- 包含脊线模式和谷线。
+- 特征包括主线、皱纹和基准点。
+- 易于通过低分辨率扫描仪获取。
 
 一些问题如噪声数据、普适性、类间差异和攻击（欺骗）可以被研究。与手指相比，掌部区域大得多。更具独特性。离线掌纹图像不需要单独的图像增强技术。
 
-#### 2.1：基于空间域的增强
+#### 2.1 基于空间域的增强
 
 直接处理图像像素以进行增强的方法称为基于空间域的增强。基于空间域的增强是通过直接操作图像的像素来实现的。
 
@@ -1437,7 +1329,7 @@ g(m,n) = T[F(m,n)]
 
 空间域图像增强技术如下：
 
-##### 2.1.1：幂律变换
+##### 2.1.1 幂律变换
 
 在幂律变换中 ⁷²
 
@@ -1447,9 +1339,9 @@ s = c^(γ)
 
 ![si10_e](img/si10_e.png) (2)
 
-其中 c 为正常数，s 为输出，γ为正常数。
+其中 `c` 为正常数，`s` 为输出，`γ` 为正常数。
 
-##### 2.1.2：负像素
+##### 2.1.2 负像素
 
 负像素 ⁷³
 
@@ -1459,7 +1351,7 @@ s = L - 1
 
 ![si11_e](img/si11_e.png) (3)
 
-##### 2.1.3：对数变换
+##### 2.1.3 对数变换
 
 为了将有限范围的低输入灰度值映射到更宽范围的值，采用对数或 log 变换 ⁷⁴
 
@@ -1469,91 +1361,103 @@ s = c log(r+1)
 
 ![si12_e](img/si12_e.png) (4)
 
-
-
 其中 `c` 为常数；`s` 为输出图像；`r` 为像素值。因此，1 被应用于输入图像的每个像素。因为，如果输入图像的像素强度为 0，则 `log (0) = 无穷大`。负变换和对数变换获得低对比度直方图分量。由于直方图分量偏向灰度等级的中间，图像质量显得较差。幂律变换产生较暗的图像。
 
-#### 2.2：基于频域的增强
+#### 2.2 基于频域的增强
 
 基于图像正交变换的操作称为频域技术 ⁷⁵
 
-`G(m,n) = H(m,n) * F(m,n)`
+```
+G(m,n) = H(m,n) * F(m,n)
+```
 
-![si13_e](img/si13_e.png)  (5)
+![si13_e](img/si13_e.png) (5)
 
 已知有四种频域图像增强方法，如下所示。
 
-##### 2.2.1：高斯低通滤波器 (GLPF)
+##### 2.2.1 高斯低通滤波器 (GLPF)
 
 高斯低通滤波器的常见用途是消除噪声和平滑图像。在高斯低通滤波器中，频率系数不会被突然切断，而是采用更平滑的截止过程 ⁷⁶
 
-`H(m,n) = e^(-D²(m, n)/2D[0]²)`
+```
+H(m,n) = e^(-D²(m, n)/2D[0]²)
+```
 
-![si14_e](img/si14_e.png)  (6)
+![si14_e](img/si14_e.png) (6)
 
-##### 2.2.2：高斯高通滤波器 (GHPF)
+##### 2.2.2 高斯高通滤波器 (GHPF)
 
 下面给出的方程表示 GHPF 的传递函数。其定义如下：
 
-`H(m,n) = 1 - e^(-D²(m, n)/2D[0]²)`
+```
+H(m,n) = 1 - e^(-D²(m, n)/2D[0]²)
+```
 
-![si15_e](img/si15_e.png)  (7)
+![si15_e](img/si15_e.png) (7)
 
-##### 2.2.3：巴特沃斯低通滤波器 (BLPF)
+##### 2.2.3 巴特沃斯低通滤波器 (BLPF)
 
 BLPF 用于频域中的图像平滑。它去除数字图像中的高频噪声并保留低频分量。巴特沃斯滤波器是一种在通带区域频率响应平坦的滤波器。BLPF 的传递函数见公式 (8)。其定义如下：
 
-$H\left( {m,n} \right) = \frac{1}{1 + \left\lbrack {D\left( {m,n} \right)/D_{0}} \right\rbrack^{2r}}$
+```
+H(m,n) = 1 / (1 + (D(m,n)/D[0])^(2r))
+```
 
-![si16_e](img/si16_e.png)  (8)
+![si16_e](img/si16_e.png) (8)
 
 其中 `r` 代表阶数，`D[0]` 为具有截止频率的原点距离。
 
-##### 2.2.4：巴特沃斯高通滤波器 (BHPF)
+##### 2.2.4 巴特沃斯高通滤波器 (BHPF)
 
 为了在频域中锐化图像，使用了 BHPF。锐化技术用于增强数字图像中的精细细节和突出边缘。此方法保留高频分量并去除输入图像的低频分量。BLPF 是 BHPF 的反向操作。BHPF 的传递函数见公式 (9)。其定义如下：
 
-$H\left( {m,n} \right) = \frac{1}{1 + \left\lbrack {D_{0}/D\left( {m,n} \right)} \right\rbrack^{2r}}$
+```
+H(m,n) = 1 / (1 + (D[0]/D(m,n))^(2r))
+```
 
-![si17_e](img/si17_e.png)  (9)
+![si17_e](img/si17_e.png) (9)
 
-#### 2.3：图像复原
+#### 2.3 图像复原
 
 它通过减少噪声和恢复丢失的分辨率来改变图像的外观，有助于使用不同的图像校正方法更好地可视化图像 ⁷⁷
 
-##### 2.3.1：中值滤波器 (MF)
+##### 2.3.1 中值滤波器 (MF)
 
 MF 被称为一种非线性数字滤波方法。MF 用于从输入图像或信号中去除噪声。在 MF 中，特定像素被其邻域像素的中值所替代 ⁷⁸
 
-##### 2.3.2：对比度受限自适应直方图均衡化 (CLAHE)
+##### 2.3.2 对比度受限自适应直方图均衡化 (CLAHE)
 
 CLAHE 是自适应直方图均衡化的推广 ⁷⁹
 
-##### 2.3.3：去相关拉伸 (DS)
+##### 2.3.3 去相关拉伸 (DS)
 
 DS 具有逐像素和线性的功能。此外，逐像素过程的特定因子取决于真实图像数据和目标图像数据对应值的对应值。向量 `a` 属于 `A`。`a` 表示 `A` 每个波段中给定的像素值。这里，`A` 是输入图像。然后，它被转换为像素 `b`，其中 `b` 对应输出图像 `B` 中的值。
 
-`b = T * (a - m) + m_target`
+```
+b = T * (a - m) + m_target
+```
 
-![si18_e](img/si18_e.png)  (10)
+![si18_e](img/si18_e.png) (10)
 
-##### 2.3.4：二维自适应滤波器
+##### 2.3.4 二维自适应滤波器
 
 自适应滤波器 ⁸⁰
 
-`e2 = E{(f - f̂,)2}`
+```
+e2 = E{(f - f̂)²}
+```
 
-![si19_e](img/si19_e.png)  (11)
+![si19_e](img/si19_e.png) (11)
 
-##### 2.3.5：二维序统计滤波器
+##### 2.3.5 二维序统计滤波器
 
 序统计滤波器 (OSF) 利用序统计的线性组合来估计数据的均值。长期以来，统计学家已将序统计滤波器视为估计器，但后来由 Bovik 等人重新命名并应用于图像处理问题的分析中 ⁸¹
 
-##### 2.3.6：调整后的图像
+##### 2.3.6 调整后的图像
 
 图像调整映射图像强度值。亮度调整被视为基本图像处理操作。期望的亮度变化被添加到每个颜色分量中。映射值使得 1% 的值在高和低输入图像强度处饱和。通过此过程增加输出图像的对比度。
 
-### 3：统计度量
+### 3 统计度量
 
 对于大多数图像处理应用，图像特征计算很重要，它是图像的一种特征，用于测试图像相对于理想或完美图像的感知退化。需要对增强图像的内容进行评估以及统计质量度量。指标可以是定性的，也可以是定量的。由于人眼视觉的局限性，通常使用定性测试来直观地增加图像的可解释性。
 
@@ -1561,9 +1465,7 @@ DS 具有逐像素和线性的功能。此外，逐像素过程的特定因子�
 
 通过实施“图像质量度量”来评估多种图像增强技术的质量。图像质量评估分为两类：客观图像质量测量和主观图像质量测量。在主观质量测量中，图像质量通过取决于人眼观察的直方图来衡量。质量（客观）参数基于统计质量度量。主观内容计算是一个耗时、繁琐、昂贵、不适合实际应用且因人而异的过程。因此，有必要使用客观图像质量测量。七种与质量相关的度量指标用于计算客观图像质量 ⁸²
 
-表 1
-
-图像质量的不同参数集。
+**表 1** 图像质量的不同参数集。
 
 | 序号 | 图像质量度量 | 图像质量 |
 | --- | --- | --- |
@@ -1574,8 +1476,6 @@ DS 具有逐像素和线性的功能。此外，逐像素过程的特定因子�
 | 5 | 结构内容 (SC) | 较低值代表较高质量 |
 | 6 | 归一化绝对误差 (NAE) | 较大值代表较低质量 |
 | 7 | 最大差值 (MD) | 较高值代表较高质量 |
-
-
 
 在本文中，我们讨论了利用空域和频域增强技术、以最小误差进行掌纹图像质量评估的优良度量。这使其更适合特定任务。多种定量图像质量度量 [⁸³]
 
@@ -1602,13 +1502,15 @@ DS 具有逐像素和线性的功能。此外，逐像素过程的特定因子�
 
 #### 3.2 客观图像质量评估
 
+
+
 对于数学算法，执行客观计算。可以将客观图像质量度量 (IQM) 指标分为相应的三类：（i）全参考 (FR)；（ii）降低参考；以及（iii）无参考 [⁸⁵]
 
-### 4 讨论与分析
+## 4 讨论与分析
 
 讨论了多种用于掌纹增强的现有方法和统计度量。近年来提出了相当数量的掌纹数据集。表 3 包含掌纹图像数据集库中的一些最新贡献。表 3 中提到了 11K Hands、CASIA、Bosphorus、IITD 和 GPDS150 手部数据集及其数量和左右手信息。图 2 展示了来自 IITD 数据集的掌纹图像 [⁸⁶]
 
-#### 表 3：不同的掌纹图像数据库
+### 表 3：不同的掌纹图像数据库
 
 | 数据集名称 | 图像总数 | 手部侧面 | 左/右手 | 尺寸 (像素) |
 | --- | --- | --- | --- | --- |
@@ -1622,17 +1524,15 @@ DS 具有逐像素和线性的功能。此外，逐像素过程的特定因子�
 
 ![图 1](img/f04-01-9780323852098.jpg)
 
+图 1 来自 Afifi 提出的 11K Hands 数据集的样本掌纹图像 ⁹²
 
-
-图 1 来自 Afifi 提出的 11K Hands 数据集的样本掌纹图像 ⁹² ![图 2 (A) 和 (B) 分别代表原始掌纹图像和调整大小后的掌纹图像。出自 M.M. El-Seddek, M.S. Morsy, F.W. Zaki, Processing and classification of palmprint images, in: 2014 31st National Radio Science Conference (NRSC), IEEE, 2014 Apr 28, pp. 150–156.](img/f04-02-9780323852098.jpg)
+![图 2 (A) 和 (B) 分别代表原始掌纹图像和调整大小后的掌纹图像。出自 M.M. El-Seddek, M.S. Morsy, F.W. Zaki, Processing and classification of palmprint images, in: 2014 31st National Radio Science Conference (NRSC), IEEE, 2014 Apr 28, pp. 150–156.](img/f04-02-9780323852098.jpg)
 
 图 2 (A) 和 (B) 分别代表原始掌纹图像和调整大小后的掌纹图像。出自 M.M. El-Seddek, M.S. Morsy, F.W. Zaki, Processing and classification of palmprint images, in: 2014 31st National Radio Science Conference (NRSC), IEEE, 2014 Apr 28, pp. 150–156.
 
 在许多情况下，高光谱掌纹图像具有高分辨率。表 4 包含了不同掌纹图像增强技术之间的比较，图像质量参数是基于 Khandizod 和 Deshmukh ⁹³ 在 PolyU 数据库上获得的观察结果呈现的。
 
-#### 表 4
-
-几种不同图像增强技术的比较。
+### 表 4：几种不同图像增强技术的比较
 
 | 序号 | 使用的技术 | MSE | PSNR | NK | AD | SC | MD | NAE |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -1649,9 +1549,7 @@ DS 具有逐像素和线性的功能。此外，逐像素过程的特定因子�
 
 基于 A.G. Khandizod, R.R. Deshmukh, Comparative analysis of image enhancement technique for hyperspectral palmprint images, Int. J. Comput. Appl. 121(23) (2015) 30–35 的观察结果。
 
-#### 表 5
-
-所实现的不同增强技术和掌纹识别系统的性能总结。
+### 表 5：所实现的不同增强技术和掌纹识别系统的性能总结
 
 | 参考文献 | 使用的增强技术 | 匹配方式 | 实现所用数据库 | 结果（准确率） |
 | --- | --- | --- | --- | --- |
@@ -1663,13 +1561,13 @@ DS 具有逐像素和线性的功能。此外，逐像素过程的特定因子�
 
 <div class="small_device"> <p class="table_fig"><img src="images/B9780323852098000109/t0030.png" alt="表 5" /></p></div>
 
-### 5: 结论
+## 5 结论
 
 掌纹图像包含大量相关的特征和信息。本章讨论了各种掌纹图像增强方法，这些方法被实施以提高掌纹图像的质量。图像质量统计度量决定了掌纹图像的质量。图像调整和去相关扩展了相应的直方图部分。一幅图像是低对比度还是良好对比度，取决于人类的感知，因为基于人类观察的增强评估是主观测量。客观质量测量用于评估最佳的掌纹图像增强技术。本章讨论了不同的图像增强技术。为了提高掌纹图像质量并评估图像质量，本章介绍并讨论了常用的统计度量。由于主观分析因人而异，且取决于他们对图像的解读基础，因此难以依赖主观分析。这往往会成为一个耗时且有偏见的过程。
 
 ### 参考文献
 
-## 第 5 章：用于个人认证的视网膜生物识别
+# 第 5 章：用于个人认证的视网膜生物识别
 
 R. Manjula Devi^(a)；P. Keerthika^(a)；P. Suresh^(b)；Partha Pratim Sarangi^(c)；M. Sangeetha^(a)；C. Sagana^(a)；K. Devendran^(a) ^a 计算机科学与工程系，Kongu Engineering College，Erode，Tamil Nadu，India
 
@@ -1677,17 +1575,15 @@ R. Manjula Devi^(a)；P. Keerthika^(a)；P. Suresh^(b)；Partha Pratim Sarangi^(
 
 ^c 计算机工程学院，KIIT Deemed to be University，Bhubaneswar，India
 
-### 摘要
+## 摘要
 
-生物识别认证是基于生物识别度量对每个个体的身份进行认证的过程。在所有可用的生物识别度量中，视网膜生物识别被视为一种安全的方法，因为它为每个人提供独特的模板，且在人的一生中不会改变。在这项工作中，提出了一种基于 ANFIS 的视网膜生物识别认证系统 (ARBAS) 的高效生物识别视网膜识别方法，用于个人认证，并在名为 VARIA 数据库的实时数据集上进行了验证，该数据库包含在不同时间从不同人员收集的视网膜图像样本。使用视网膜的认证过程经历两个阶段：注册阶段和认证阶段。在注册阶段，扫描各人的视网膜；基于视网膜的提取特征导出生物识别模式，并将模板存储在数据库中以供将来使用。在认证阶段，扫描人的视网膜；从中提取生物识别模式，并将提取的模式与数据库中存储的模式进行关联。如果模式匹配，则将用户认证为授权用户。ARBAS 在 VARIA 数据库上分别实现了 2.78% 和 2.94% 的 FRR 和 FAR。
+生物识别认证是基于生物识别度量对每个个体的身份进行认证的过程。在所有可用的生物识别度量中，视网膜生物识别被视为一种安全的方法，因为它为每个人提供独特的模板，且在人的一生中不会改变。在这项工作中，提出了一种基于 `ANFIS` 的视网膜生物识别认证系统 (`ARBAS`) 的高效生物识别视网膜识别方法，用于个人认证，并在名为 `VARIA` 数据库的实时数据集上进行了验证，该数据库包含在不同时间从不同人员收集的视网膜图像样本。使用视网膜的认证过程经历两个阶段：注册阶段和认证阶段。在注册阶段，扫描各人的视网膜；基于视网膜的提取特征导出生物识别模式，并将模板存储在数据库中以供将来使用。在认证阶段，扫描人的视网膜；从中提取生物识别模式，并将提取的模式与数据库中存储的模式进行关联。如果模式匹配，则将用户认证为授权用户。`ARBAS` 在 `VARIA` 数据库上分别实现了 2.78% 和 2.94% 的 `FRR` 和 `FAR`。
 
-#### 关键词
+### 关键词
 
-视网膜生物识别；生物识别认证；ANFIS；VARIA 数据集；ARBAS
+视网膜生物识别；生物识别认证；`ANFIS`；`VARIA` 数据集；`ARBAS`
 
-### 1: 引言
-
-
+## 1 引言
 
 如今，互联网已成为全球日常生活中至关重要且不可避免的一部分，这使其面临更多威胁和不安全因素。互联网使用量的增加以及计算机/移动设备融入我们的日常生活，取决于个人需求和目标。随着计算机和互联网对日常生活的融合度不断加深，大量敏感和个人数据已通过互联网以数字化方式共享。与此同时，对提升安全级别和认证系统以识别人员身份的需求持续增长，并在采购、机密私人数据监管、电子支付、股票获取、银行业务和进入企业大楼等众多医疗和金融领域引发了极大兴趣。因此，有必要保护敏感和个人数据/系统，防止未经授权的人员访问。
 
@@ -1705,7 +1601,7 @@ R. Manjula Devi^(a)；P. Keerthika^(a)；P. Suresh^(b)；Partha Pratim Sarangi^(
 
 近年来，基于各种生物特征的众多认证系统已被开发出来，如虹膜、手指、掌纹、面部和耳朵。在不同的生物特征中，视网膜是本文考虑用于个人认证的生物特征之一，因为它具有唯一性和稳定性。由于视网膜无法伪造且位于眼球内部，因此被视为识别个人非常安全且稳定的来源。通过在认证方法中提取视网膜血管网络以进行个体识别，实现了模式匹配。视网膜血管网络不存在完全的遗传决定性，因为同卵双胞胎也不存在相似模式。即使在基因上无法区分的双胞胎中，从视网膜提取的特征也能有效区分个体，因为视网膜模式具有高度独特的特性。对每个人而言，眼球后部的血管都具有特定模式。利用各种图像处理技术，对血管网络进行分割，随后利用分割组件对视网膜图像进行识别。
 
-### 2：基于生物特征的认证系统框架
+## 2 基于生物特征的认证系统框架
 
 基于生物特征的认证系统工作流程经历两个阶段：注册阶段和认证阶段。在图 2 所示的注册阶段，从各个个体采集的生物特征数据经过预处理以提取特征。根据提取的特征生成模板，并将提取的特征累积存储在数据库中，以供未来进一步处理时用于认证目的。
 
@@ -1719,55 +1615,51 @@ R. Manjula Devi^(a)；P. Keerthika^(a)；P. Suresh^(b)；Partha Pratim Sarangi^(
 
 图 3 认证阶段。
 
-### 3：相关工作
+## 3 相关工作
 
 生物特征模式识别问题的标准流程包含以下一系列不同阶段：采集、图像质量评估、预处理、感兴趣区域确定（模板）、特征提取和生物特征比对。
 
 文献中可找到各种形式的生物特征认证系统，包括指纹识别、眼部视网膜/虹膜识别、耳朵识别、气味识别、静脉识别、人脸识别、步态识别、打字识别、语音/说话人认证、手部几何识别、签名识别等。
 
-#### 3.1：人脸认证
+### 3.1 人脸认证
 
-人脸认证系统采集一个人的面部图像并从中提取面部特征，这些特征将用于认证过程。有人提出了一种专门用于活体检测的面部认证方法，该方法结合特征描述子使用基于模糊的 SVM 分类器，允许从整个物体中选择特定区域，并从特定物体区域提取特征，从而减少处理时间和特征提取的复杂性 ¹⁰⁰
+人脸认证系统采集一个人的面部图像并从中提取面部特征，这些特征将用于认证过程。有人提出了一种专门用于活体检测的面部认证方法，该方法结合特征描述子使用基于模糊的 `SVM` 分类器，允许从整个物体中选择特定区域，并从特定物体区域提取特征，从而减少处理时间和特征提取的复杂性 ¹⁰⁰
 
-#### 3.2：虹膜认证
+### 3.2 虹膜认证
 
-虹膜认证系统使用虹膜扫描仪从人眼采集虹膜图像，并基于虹膜边缘、瞳孔位置及其边缘提取虹膜的独特模式。NeuroBiometric 是一种基于眨眼的高效生物特征认证系统，采用基于事件的神经形态视觉传感器。该视觉传感器基于瞬态眨眼信号引入，利用从眨眼数据构建的生物特征特征，如能量特征、速度特征、持续时间特征、频率特征和比率特征。NeuroBiometric 已被证明具有鲁棒性和安全性，且具有极低的误报率 ¹⁰¹
+虹膜认证系统使用虹膜扫描仪从人眼采集虹膜图像，并基于虹膜边缘、瞳孔位置及其边缘提取虹膜的独特模式。`NeuroBiometric` 是一种基于眨眼的高效生物特征认证系统，采用基于事件的神经形态视觉传感器。该视觉传感器基于瞬态眨眼信号引入，利用从眨眼数据构建的生物特征特征，如能量特征、速度特征、持续时间特征、频率特征和比率特征。`NeuroBiometric` 已被证明具有鲁棒性和安全性，且具有极低的误报率 ¹⁰¹
 
-#### 3.3：掌纹认证
-
-
-
-# 掌纹认证
+### 3.3 掌纹认证
 
 掌纹认证是基于手掌表面的主要纹线、沟谷、皱纹和脊线等独特特征进行的。通过结合基于掌部几何和掌静脉匹配的掌静脉认证与掌部几何识别方法，并利用直觉模糊评价，构建了生物特征认证系统的广义网模型 ¹⁰²。
 
-#### 3.4：指纹认证
+### 3.4 指纹认证
 
 指纹识别系统通过检查按压在光滑表面上的手指来工作。系统会扫描手指的脊线和沟谷，脊线和沟谷终止或交汇处的一系列独特点被称为细节点。这些细节点是指纹识别系统用于比对的关键点。为了识别个人身份，系统会利用人手指尖表面的沟谷（细节点）和脊线。
 
-得益于传感器技术的飞速发展，一种用于手持电子设备的新型生物特征认证系统应运而生，该系统具有鲁棒性。该系统通过智能融合手指的三维运动与大脑活动，利用新一代传感器消费电子（CE）设备以及 `Random Forest (RF)`（随机森林）和 `Hidden Markov Model (HMM)`（隐马尔可夫模型）等分类器来验证签名 ¹⁰³。
+得益于传感器技术的飞速发展，一种用于手持电子设备的新型生物特征认证系统应运而生，该系统具有鲁棒性。该系统通过智能融合手指的三维运动与大脑活动，利用新一代传感器消费电子（`CE`）设备以及 `Random Forest (RF)`（随机森林）和 `Hidden Markov Model (HMM)`（隐马尔可夫模型）等分类器来验证签名 ¹⁰³。
 
-#### 3.5：耳部
+### 3.5 耳部
 
 耳廓的形状和组织结构对每个人来说都是独特的。耳部识别方法侧重于匹配耳廓显著点到耳部基准位置的距离。一种基于融合的多模态生物特征认证系统已被提出，该系统利用指纹和耳部图像，通过 `Binary Robust Invariant Scalable Keypoints (BRISK)`（二进制鲁棒不变可缩放关键点）和 `Speed Up Robust Features (SURF)`（加速鲁棒特征）等特征提取技术对图像进行预处理和增强 ¹⁰⁴。
 
-#### 3.6：语音
+### 3.6 语音
 
 语音也是一种生理特征，因为每个人的音调不同，但语音识别通常被归类为行为生物特征，主要研究一个人说话的方式。一种面向应用的认证系统已被开发出来，它分为训练阶段和识别阶段两个阶段，利用说话人语音验证进行认证 ¹⁰⁵。
 
-#### 3.7：签名
+### 3.7 签名
 
 签名认证检查用户签署签名的方式。除了签名静态形状的特征外，签名过程中的其他特征也被用于验证，如速度、压力和笔速。一种基于区块链的新型安全认证技术被提出，旨在加强对极其敏感的医疗数据的保护，这些数据在医院和患者之间传输。为了在基于云服务器的环境中结合医疗物联网网络实现敏感医疗数据的安全传输，采用了 `Lamport Merkle Digital Signature (LMDS)`（兰波特-默克尔数字签名）来执行签名的创建和认证 ¹⁰⁶。
 
-#### 3.8：击键动力学
+### 3.8 击键动力学
 
 击键动力学是一种生物特征，用于通过打字节奏验证个人身份，它既能应对专业打字员，也能应对新手的双指打字法。个人击键操作难以模仿，可用于身份认证。此外，在不干扰用户舒适度的前提下，对击键动力学的研究极大地提高了计算机系统使用的安全等级，通过分类器的技能选择，显著增强了用户识别能力 ¹⁰⁷。
 
-#### 3.9：步态
+### 3.9 步态
 
 一个人行走的基本方式即步态生物特征，它是一种复杂的时空生物特征。然而，步态并不旨在具有高度独特性，但适用于某些低安全性应用场景中的验证。利用循环、前馈和混合神经网络架构构建分类器模型，基于对行走方式（步态）的监控进行用户认证，该模型使用加速度计和陀螺仪数据执行步态验证，并研究监控用户步态的时间长度如何影响预测准确性 ¹⁰⁸。
 
-### 4：视网膜解剖
+## 4 视网膜解剖
 
 在本章中，视网膜作为最独特且最安全的模态之一，被建议用于生物特征认证系统，因为它受到人眼内部的严密保护 ¹⁰⁹。
 
@@ -1775,22 +1667,21 @@ R. Manjula Devi^(a)；P. Keerthika^(a)；P. Suresh^(b)；Partha Pratim Sarangi^(
 
 **图 4 视网膜结构。**
 
+
+
 视网膜包含以下视网膜成分：中央凹、黄斑、视盘、静脉和动脉。黄斑位于视网膜的中心。黄斑呈椭圆形，具有色素区，其直径为 5.5 毫米（0.22 英寸）。当黄斑受损时，视力会变得模糊。它负责高分辨率的中央色觉，这在良好的光照条件下也是可行的。视网膜的下一个重要成分是中央凹，它位于黄斑区的正中央。中央凹负责提供敏锐的中央视力。敏锐的中央视力也被称为中央凹视力。这种视力对于人类的主要活动至关重要，如与用眼相关的阅读和驾驶。接下来，视神经是将人眼与大脑连接起来的神经，由超过 100 万根神经纤维组成。它用于传递光线照射视网膜产生的信号。青光眼是由高眼压引起的疾病，会损害视神经。
 
 在视盘处，所有中央视网膜血管从其中心发出。它们越过边缘并向外辐射，为视网膜提供光照。视网膜中央动脉穿过视盘延伸向视网膜。它为形成视神经的所有神经纤维供血。视网膜中央静脉是一条穿过视神经的静脉。约一半的视神经纤维传递来自中央凹的信息，而视神经中另一半神经纤维传递来自视网膜其余部分的信息。在科学技术进步的帮助下，视网膜采集设备已得到开发，这对视网膜生物特征认证系统的生产做出了重大贡献。
 
-### 5：基于 ANFIS 的视网膜生物特征认证系统 (ARBAS)
+## 5：基于 ANFIS 的视网膜生物特征认证系统 (ARBAS)
 
 `ANFIS` 代表自适应网络模糊推理系统 ¹¹⁰。
 
 `ANFIS` 是一种本质上非常基础的数据学习技术。`ANFIS` 利用模糊逻辑，通过高度互联的神经网络处理元素转换输入，以获得所需的输出。权重被分配给这些连接，以将数值输入映射到相应的输出。`ANFIS` 网络已成功应用于模式识别、基于规则的过程控制、分类任务以及上述类似问题等研究领域。通过应用神经网络的学习方法来调整模糊推理系统（FIS）的参数。整个 `ARBAS` 框架经历两个阶段：训练阶段和测试阶段。
 
-#### 5.1：训练阶段
+### 5.1：训练阶段
 
-
-
-
-# 眼底相机与 ANFIS 架构
+#### 眼底相机与 ANFIS 架构
 
 眼底相机也称为视网膜相机。它配备了一台连接在精密低倍显微镜上的相机，用于拍摄眼球内表面。视网膜血管、黄斑、后极（也称为眼底）、视盘和视网膜构成了眼球的内表面。基于间接检眼镜，使用眼底相机进行光学设计。视角是用于描述眼底相机的透镜的光学接受角。
 
@@ -1800,7 +1691,7 @@ R. Manjula Devi^(a)；P. Keerthika^(a)；P. Suresh^(b)；Partha Pratim Sarangi^(
 
 **图 5** 不同视角下的视网膜不同视图。
 
-在 图 6 所示的训练阶段中，眼底相机被用于从一组人眼中捕捉视网膜眼底图像。在图像预处理中，人眼视网膜图像中的血管使用基于数学形态学的边缘检测进行分割。使用 Canny 边缘检测技术，提取了中央凹的边缘。一旦提取了边缘，就测量了中央凹的直径。同样，提取了其他特征并作为数据集存储。（参见 图 7。）
+在图 6 所示的训练阶段中，眼底相机被用于从一组人眼中捕捉视网膜眼底图像。在图像预处理中，人眼视网膜图像中的血管使用基于数学形态学的边缘检测进行分割。使用 `Canny` 边缘检测技术，提取了中央凹的边缘。一旦提取了边缘，就测量了中央凹的直径。同样，提取了其他特征并作为数据集存储。（参见图 7。）
 
 ![图 6 使用 Canny 边缘检测进行中央凹提取。](img/f05-06-9780323852098.jpg)
 
@@ -1814,7 +1705,7 @@ R. Manjula Devi^(a)；P. Keerthika^(a)；P. Suresh^(b)；Partha Pratim Sarangi^(
 
 一旦提取了特征，它就会被转换为数据集以供进一步处理。一旦使用足够的视网膜图像完成了数据集的创建，它就会作为输入提供给 `ANFIS` 进行训练。一旦训练完成，`ANFIS` 训练模型就准备好进行评估了。
 
-为了演示 `ANFIS` 架构的工作过程，网络结构如 图 8 所示。基于一阶 Sugeno 模型，定义了以下两条模糊 IF-THEN 规则：
+为了演示 `ANFIS` 架构的工作过程，网络结构如图 8 所示。基于一阶 Sugeno 模型，定义了以下两条模糊 IF-THEN 规则：
 
 $$
 \begin{array}{l}
@@ -1902,26 +1793,23 @@ $$O_{i}^{4} = \overline{w_{i}}f_{i} = \overline{w_{i}}\left( {p_{i}x + q_{i}y + 
 
 ##### 步骤 5：综合层
 
-
-
-
 本层中仅有一个固定节点。通过使用公式(7) 对所有输入信号求和，在本层计算总体输出。
 
 ```
-$O\_{i}^{5} = \\sum\\limits\_{i}\\overline{w\_{i}}f\_{i} = \\frac{\\sum\_{i}w\_{i}f\_{f}}{\\sum\_{i}w\_{i}}$
+$O\_{i}^{5} = \sum\limits\_{i}\overline{w\_{i}}f\_{i} = \frac{\sum\_{i}w\_{i}f\_{f}}{\sum\_{i}w\_{i}}$
 ```
 
-![si8\_e](img/si8_e.png) (7)
+![si8_e](img/si8_e.png) (7)
 
-#### 5.2：测试阶段
+### 5.2：测试阶段
 
-在图 9 所示的测试阶段中，使用眼底相机从人眼中提取视网膜眼底图像。然后，利用基于数学形态学的边缘检测对人眼视网膜图像中的血管进行分割。接着，从分割后的图像中提取特征以执行测试。将提取的特征输入 ANFIS 训练模型，以判断给定图像是合法用户还是非法用户。
+在图 9 所示的测试阶段中，使用眼底相机从人眼中提取视网膜眼底图像。然后，利用基于数学形态学的边缘检测对人眼视网膜图像中的血管进行分割。接着，从分割后的图像中提取特征以执行测试。将提取的特征输入 `ANFIS` 训练模型，以判断给定图像是合法用户还是非法用户。
 
 ![图 9 ARBAS 测试阶段。](img/f05-09-9780323852098.jpg)
 
-图 9 ARBAS 测试阶段。
+**图 9** ARBAS 测试阶段。
 
-#### 5.3：认证系统的性能指标
+### 5.3：认证系统的性能指标
 
 为了衡量生物识别认证系统的性能，准确率是衡量该系统成败最重要的因素之一。准确率是衡量系统准确匹配个体生物特征信息并避免错误匹配不同人员生物特征信息能力的指标。
 
@@ -1931,41 +1819,41 @@ $O\_{i}^{5} = \\sum\\limits\_{i}\\overline{w\_{i}}f\_{i} = \\frac{\\sum\_{i}w\_{
 
     真接受率缩写为 `TAR`。也称为真匹配率（`TMR`）。它衡量生物识别认证系统正确接受授权用户访问尝试的概率。它表示授权人员实例被认证系统正确识别的百分比。为了使认证系统更成功，该指标必须最大化，计算方法见公式(8)。
 
-```
-$\\mathit{TAR} = \\frac{\\mathit{Number}\\mspace{6mu}\\mathit{of}\\mspace{6mu}\\mathit{authorized}\\mspace{6mu}\\mathit{user}\\mspace{6mu}\\mathit{instance}\\mspace{6mu}\\mathit{that}\\mspace{6mu}\\mathit{is}\\mspace{6mu}\\mathit{correctly}\\mspace{6mu}\\mathit{accepted}}{\\mathit{Total}\\mspace{6mu}\\mathit{number}\\mspace{6mu}\\mathit{of}\\mspace{6mu}\\mathit{authorised}\\mspace{6mu}\\mathit{user}\\mspace{6mu}\\mathit{instance}}$
-```
+    $$
+    \mathit{TAR} = \frac{\mathit{Number}\mspace{6mu}\mathit{of}\mspace{6mu}\mathit{authorized}\mspace{6mu}\mathit{user}\mspace{6mu}\mathit{instance}\mspace{6mu}\mathit{that}\mspace{6mu}\mathit{is}\mspace{6mu}\mathit{correctly}\mspace{6mu}\mathit{accepted}}{\mathit{Total}\mspace{6mu}\mathit{number}\mspace{6mu}\mathit{of}\mspace{6mu}\mathit{authorised}\mspace{6mu}\mathit{user}\mspace{6mu}\mathit{instance}}
+    $$
 
-![si9\_e](img/si9_e.png) (8)
+    ![si9_e](img/si9_e.png) (8)
 
 *   **真拒绝率**
 
     真拒绝率缩写为 `TRR`。也称为真非匹配率（`TNMR`）。它衡量生物识别认证系统正确拒绝未授权用户访问尝试的可能性。它表示未授权用户实例被认证系统正确拒绝的百分比。为了使认证系统更成功，该指标必须最大化，计算方法见公式(9)。
 
-```
-$\\mathit{TRR} = \\frac{\\mathit{Number}\\mspace{6mu}\\mathit{of}\\mspace{6mu}\\mathit{unauthorized}\\mspace{9mu}\\mathit{user}\\mspace{6mu}\\mathit{instance}\\mspace{6mu}\\mathit{that}\\mspace{6mu}\\mathit{is}\\mspace{6mu}\\mathit{correctly}\\mspace{6mu}\\mathit{rejected}}{\\mathit{Total}\\mspace{6mu}\\mathit{number}\\mspace{6mu}\\mathit{of}\\mspace{6mu}\\mathit{unauthorised}\\mspace{6mu}\\mathit{user}\\mspace{6mu}\\mathit{instance}}\\qquad$
-```
+    $$
+    \mathit{TRR} = \frac{\mathit{Number}\mspace{6mu}\mathit{of}\mspace{6mu}\mathit{unauthorized}\mspace{9mu}\mathit{user}\mspace{6mu}\mathit{instance}\mspace{6mu}\mathit{that}\mspace{6mu}\mathit{is}\mspace{6mu}\mathit{correctly}\mspace{6mu}\mathit{rejected}}{\mathit{Total}\mspace{6mu}\mathit{number}\mspace{6mu}\mathit{of}\mspace{6mu}\mathit{unauthorised}\mspace{6mu}\mathit{user}\mspace{6mu}\mathit{instance}}
+    $$
 
-![si10\_e](img/si10_e.png) (9)
+    ![si10_e](img/si10_e.png) (9)
 
 *   **假接受率**
 
     `FAR` 是假接受率的缩写。也称为欺诈率、假匹配率或第二类错误。它衡量生物识别认证系统错误接受未授权用户访问尝试的可能性。它表示未授权用户实例被认证系统错误接受的百分比。为了使认证系统更成功，该指标必须最小化。计算 `FAR` 的公式见公式(10)。
 
-```
-$\\mathit{FAR} = \\frac{\\mathit{Number}\\mspace{6mu}\\mathit{of}\\mspace{6mu}\\mathit{unauthorized}\\mspace{6mu}\\mathit{user}\\mspace{6mu}\\mathit{instance}\\mspace{6mu}\\mathit{that}\\mspace{6mu}\\mathit{is}\\mspace{6mu}\\mathit{incorrectly}\\mspace{6mu}\\mathit{accepted}}{\\mathit{Total}\\mspace{6mu}\\mathit{number}\\mspace{6mu}\\mathit{of}\\mspace{6mu}\\mathit{unauthorised}\\mspace{6mu}\\mathit{user}\\mspace{6mu}\\mathit{instance}}\\mspace{9mu}$
-```
+    $$
+    \mathit{FAR} = \frac{\mathit{Number}\mspace{6mu}\mathit{of}\mspace{6mu}\mathit{unauthorized}\mspace{6mu}\mathit{user}\mspace{6mu}\mathit{instance}\mspace{6mu}\mathit{that}\mspace{6mu}\mathit{is}\mspace{6mu}\mathit{incorrectly}\mspace{6mu}\mathit{accepted}}{\mathit{Total}\mspace{6mu}\mathit{number}\mspace{6mu}\mathit{of}\mspace{6mu}\mathit{unauthorised}\mspace{6mu}\mathit{user}\mspace{6mu}\mathit{instance}}
+    $$
 
-![si11\_e](img/si11_e.png) (10)
+    ![si11_e](img/si11_e.png) (10)
 
 *   **假拒绝率**
 
     `FRR` 是假拒绝率的缩写。也称为冒犯率、假非匹配率（`FNMR`）或第一类错误。它衡量生物识别认证系统错误拒绝授权用户访问尝试的概率。它表示授权用户实例被认证系统错误拒绝的百分比。为了使认证系统更成功，该指标必须最小化。计算 `FRR` 的公式见公式(11)。
 
-```
-$\\mathit{FRR} = \\frac{\\mathit{Number}\\mspace{6mu}\\mathit{of}\\mspace{6mu}\\mathit{authorized}\\mspace{6mu}\\mathit{user}\\mspace{6mu}\\mathit{instance}\\mspace{6mu}\\mathit{that}\\mspace{6mu}\\mathit{is}\\mspace{6mu}\\mathit{incorrectly}\\mspace{6mu}\\mathit{rejected}}{\\mathit{Total}\\mspace{6mu}\\mathit{number}\\mspace{6mu}\\mathit{of}\\mspace{6mu}\\mathit{authorised}\\mspace{6mu}\\mathit{user}\\mspace{6mu}\\mathit{instance}}\\mspace{45mu}$
-```
+    $$
+    \mathit{FRR} = \frac{\mathit{Number}\mspace{6mu}\mathit{of}\mspace{6mu}\mathit{authorized}\mspace{6mu}\mathit{user}\mspace{6mu}\mathit{instance}\mspace{6mu}\mathit{that}\mspace{6mu}\mathit{is}\mspace{6mu}\mathit{incorrectly}\mspace{6mu}\mathit{rejected}}{\mathit{Total}\mspace{6mu}\mathit{number}\mspace{6mu}\mathit{of}\mspace{6mu}\mathit{authorised}\mspace{6mu}\mathit{user}\mspace{6mu}\mathit{instance}}
+    $$
 
-![si12\_e](img/si12_e.png) (11)
+    ![si12_e](img/si12_e.png) (11)
 
 *   **等错误率**
 
@@ -1977,22 +1865,24 @@ $\\mathit{FRR} = \\frac{\\mathit{Number}\\mspace{6mu}\\mathit{of}\\mspace{6mu}\\
 
 ![图 10 FAR 与 FRR 对比。](img/f05-10-9780323852098.jpg)
 
-图 10 FAR 与 FRR 对比。
+**图 10** FAR 与 FRR 对比。
 
-#### 5.4：实验设置
-
-
+### 5.4：实验设置
 
 为了使用视网膜生物特征进行个人身份认证，可以使用 VARIA 数据库。它包含 233 张视网膜图像，这些图像是为认证目的而收集的。这些图像来自 139 位不同的个体。借助拓普康 TRC-NW100 非散瞳眼底照相机采集了视网膜图像。以视神经乳头为中心的分辨率设置为 768 × 584。VARIA 数据库文件夹包含一个目录和一个文本文件。该目录包含所有采集到的视网膜图像。名为 `index.txt` 的文本文件将来自同一个体的图像进行了分组 ¹¹¹。
 
 在 VARIA 数据库的 233 张视网膜图像中，70%（163 张视网膜图像）用于训练，剩余 30%（70 张视网膜图像）用于测试。测试数据集中的 70 张视网膜图像按以下方式划分，并针对不同组合进行了测试（表 1）。
 
-##### 表 1
+#### 表 1
 
 实验结果。
 
 | 测试数据集中已认证图像数量 | 测试数据集中未认证图像数量 | TAR% | TRR% | FRR% | FAR% |
-| :--- | :--- | :--- | :--- | :--- | :--- |
+
+
+
+| | | | | | |
+|---|---|---|---|---|---|
 | 30 | 40 | 100.00 | 97.50 | 0.00 | 2.50 |
 | 31 | 39 | 96.77 | 97.44 | 3.23 | 2.56 |
 | 32 | 38 | 96.88 | 97.37 | 3.13 | 2.63 |
@@ -2008,100 +1898,97 @@ $\\mathit{FRR} = \\frac{\\mathit{Number}\\mspace{6mu}\\mathit{of}\\mspace{6mu}\\
 
 <div class="small_device"> <p class="table_fig"><img src="images/B9780323852098000055/t0010.png" alt="表 1" /></p></div>
 
-从上述结果可知，ARBAS 实现的平均误接纳率 (FAR) 为 2.86%。同时，其平均误拒率 (FRR) 为 2.82%。此外，视网膜认证系统获得的总体准确率为 97.16%。
+从上述结果可知，`ARBAS` 实现的平均误接纳率 (`FAR`) 为 2.86%。同时，其平均误拒率 (`FRR`) 为 2.82%。此外，视网膜认证系统获得的总体准确率为 97.16%。
 
-### 6: 结论
+## 6: 结论
 
-近年来，基于各种生物特征的认证系统已得到开发，例如虹膜、指纹、掌纹、人脸和耳朵。在不同的生物特征中，提出了一种基于 ANFIS 的视网膜生物特征认证系统 (ARBAS) 的高效视网膜生物特征识别方法，用于人员认证，并在名为 VARIA 数据库的实时数据集上进行了验证，其中 70% 用于训练，30% 用于测试。根据不同实验的输出结果，结论是 ARBAS 实现的 FRR 和 FAR 分别为 2.82% 和 2.86%。视网膜认证系统获得的总体准确率为 97.16%。
+近年来，基于各种生物特征的认证系统已得到开发，例如虹膜、指纹、掌纹、人脸和耳朵。在不同的生物特征中，提出了一种基于 `ANFIS` 的视网膜生物特征认证系统 (`ARBAS`) 的高效视网膜生物特征识别方法，用于人员认证，并在名为 `VARIA` 数据库的实时数据集上进行了验证，其中 70% 用于训练，30% 用于测试。根据不同实验的输出结果，结论是 `ARBAS` 实现的 `FRR` 和 `FAR` 分别为 2.82% 和 2.86%。视网膜认证系统获得的总体准确率为 97.16%。
 
-### 参考文献
+## 参考文献
 
-## 第 6 章：基于多通道深度学习框架的面部图像性别识别
+# 第 6 章：基于多通道深度学习框架的面部图像性别识别
 
-R. Ramya^(a)；A. Anandh^(a)；K. Muthulakshmi^(a)；S. Venkatesh^(b)    ^a 计算机科学与工程系，Kamaraj 工程技术学院，马杜赖，印度
+`R. Ramya`^(a)；`A. Anandh`^(a)；`K. Muthulakshmi`^(a)；`S. Venkatesh`^(b)    ^a 计算机科学与工程系，`Kamaraj` 工程技术学院，马杜赖，印度
 
-^b Microland，班加罗尔，印度
+^b `Microland`，班加罗尔，印度
 
-### 摘要
+## 摘要
 
-自动性别识别是计算机视觉领域一个极具吸引力的研究方向。它有许多应用领域，如生物特征识别、人机交互、人口统计、零售店、监控等。其目的是通过一个人的外貌、行为和其他方面来识别性别。我们提出的基于卷积神经网络 (CNN) 的方法不使用原始面部图像来学习特征。首先，从原始图像构建特征图像以表示一组显著特征。然后，使用基于 CNN 的网络提取更多显著特征，其中特征图像作为输入。接着，将提取的显著特征融合在一起，作为输入提供给分类器——支持向量机，以识别性别。我们提出的新型框架使用 Adience 基准数据集进行测试，并满足了既定的功能需求。这项工作表明，使用以特征图像为输入的基于 CNN 的方法，可以实现有效的性别识别，且学习到的特征更有利于有效分类。该框架能够处理在完全不同环境下捕获的人脸。它可应用于多种视觉模式识别问题。
+自动性别识别是计算机视觉领域一个极具吸引力的研究方向。它有许多应用领域，如生物特征识别、人机交互、人口统计、零售店、监控等。其目的是通过一个人的外貌、行为和其他方面来识别性别。我们提出的基于卷积神经网络 (`CNN`) 的方法不使用原始面部图像来学习特征。首先，从原始图像构建特征图像以表示一组显著特征。然后，使用基于 `CNN` 的网络提取更多显著特征，其中特征图像作为输入。接着，将提取的显著特征融合在一起，作为输入提供给分类器——支持向量机 (`SVM`)，以识别性别。我们提出的新型框架使用 `Adience` 基准数据集进行测试，并满足了既定的功能需求。这项工作表明，使用以特征图像为输入的基于 `CNN` 的方法，可以实现有效的性别识别，且学习到的特征更有利于有效分类。该框架能够处理在完全不同环境下捕获的人脸。它可应用于多种视觉模式识别问题。
 
-#### 关键词
+### 关键词
 
 软生物特征；性别识别；卷积神经网络；深度学习；迁移学习
 
-### 1: 简介
+## 1: 简介
 
-人类将能力和智能融入每个物理对象的思维，是各领域飞速发展的主要原因。创新思想的涌现与领域无关。寻找现有问题的新颖或改进解决方案始终是追求的目标。人工智能和机器学习这两项技术助力研究人员在这一追求中前行。机器学习的重点是从输入数据构建模型并产生预期输出 ¹¹²。
+人类将能力和智能融入每个物理对象的思维，是各领域飞速发展的主要原因。创新思想的涌现与领域无关。寻找现有问题的新颖或改进解决方案始终是追求的目标。人工智能 (`AI`) 和机器学习 (`ML`) 这两项技术助力研究人员在这一追求中前行。机器学习的重点是从输入数据构建模型并产生预期输出 ¹¹²。
 
-微调算法用于评估模型并提高输出准确性。工业界使用的少数评估指标包括准确率、精确率和 F1 分数。最复杂的现有问题具有非线性模型，并由 n 维矩阵表示 ¹¹³。
+微调算法用于评估模型并提高输出准确性。工业界使用的少数评估指标包括准确率、精确率和 `F1` 分数。最复杂的现有问题具有非线性模型，并由 `n` 维矩阵表示 ¹¹³。
 
-作为机器学习的一个子集，深度学习已经出现并解决了大多数复杂的分类问题 ¹¹⁴。
+作为机器学习的一个子集，深度学习 (`DL`) 已经出现并解决了大多数复杂的分类问题 ¹¹⁴。
 
-神经网络被称为深度学习模型的基本构建模块。网络中的每个神经元都像人脑一样运作。它们使用反向传播方法进行训练。它具有一个或几个隐藏层来解决给定问题。单层神经网络模型称为感知机模型，也称为浅层神经网络。卷积神经网络、前馈神经网络和循环神经网络是机器学习工程师广泛使用的几种网络。CNN 在信号和图像处理方面有应用 ¹¹⁵。
+神经网络 (`NN`) 被称为深度学习模型的基本构建模块。网络中的每个神经元都像人脑一样运作。它们使用反向传播 (`backpropagation`) 方法进行训练。它具有一个或几个隐藏层来解决给定问题。单层神经网络模型称为感知机 (`Perceptron`) 模型，也称为浅层神经网络。卷积神经网络 (`CNN`)、前馈神经网络 (`FNN`) 和循环神经网络 (`RNN`) 是机器学习工程师广泛使用的几种网络。`CNN` 在信号和图像处理方面有应用 ¹¹⁵。
 
-计算机视觉 (CV) 这一令人惊叹的研究领域从数字图像和视频中获得高层理解 ¹¹⁶。
+计算机视觉 (`CV`) 这一令人惊叹的研究领域从数字图像和视频中获得高层理解 ¹¹⁶。
 
 无现金、无卡、免接触等理念改善了客户体验和满意度，但也同样带来了安全隐患。网络入侵、欺诈交易、非法移民和航空恐怖主义等问题要求专家 24*7 保持警惕。这些安全妥协可通过稳定的生物特征技术消除。指纹、虹膜、人脸识别、掌纹和静脉检测是一些高度便捷的主流系统，帮助企业/个人实现唯一访问。它们旨在识别个体独特的生理和行为特征。生物特征输入作为图像被采集，计算机驱动的图像识别系统自动识别和分类主体。软生物特征通常用于识别主体的特征，即身高、性别、发色和肤色 ¹¹⁷。
 
-
-
-
-# 性别识别与辨识系统
+## 性别识别与辨识系统
 
 性别识别是权利分配、财产登记、养老金资格和婚姻等方面的关键机制。各种自动化性别识别系统普遍用于对主体进行分类，每个系统都有其独特的解决方案及其局限性。由于人脸识别系统在安全领域的重要性日益增加，性别识别系统也利用了这一点。复杂的训练数据和从训练人脸图像数据中提取的复杂特征处理，能够准确预测性别。图像可通过机器学习算法提取的各种特征进行分析 ¹¹⁸。
 
-深度卷积神经网络模型在超大数据集上训练可能需要数天甚至数周。迁移学习的引入规避了对大量新数据的需求。在某一任务上训练好的模型可用于处理新的相似任务。在迁移学习中，旧任务已拥有大量标记的训练数据，而新任务只需少量数据即可。在新任务上训练模型的过程非常快，通过这种迁移学习可以获得更准确、更有效的模型。本文提出的系统引入了多通道深度学习框架（`MC-DLF`）。该系统从预处理后的输入图像集中提取两组特征。一组特征通过迁移学习方法提取，另一组通过浅层 CNN 提取。从新构建的特征集中提取的显著特征将被融合，然后传递给 SVM 分类器。这种集成方法提升了预测准确率，构建了一个稳定的性别识别系统。
+深度卷积神经网络模型在超大数据集上训练可能需要数天甚至数周。迁移学习 (`TL`) 的引入规避了对大量新数据的需求。在某一任务上训练好的模型可用于处理新的相似任务。在迁移学习中，旧任务已拥有大量标记的训练数据，而新任务只需少量数据即可。在新任务上训练模型的过程非常快，通过这种迁移学习可以获得更准确、更有效的模型。本文提出的系统引入了多通道深度学习框架（`MC-DLF`）。该系统从预处理后的输入图像集中提取两组特征。一组特征通过迁移学习方法提取，另一组通过浅层 `CNN` 提取。从新构建的特征集中提取的显著特征将被融合，然后传递给 `SVM` 分类器。这种集成方法提升了预测准确率，构建了一个稳定的性别识别系统。
 
-### 2：文献综述
+## 2：文献综述
 
-Zhang 等人 ¹¹⁹ 进行了步态分析。
+`Zhang` 等人 ¹¹⁹ 进行了步态分析。
 
-Tapia 和 Arellano ¹²⁰。
+`Tapia` 和 `Arellano` ¹²⁰。
 
-Jonsson 和 Soderberg ¹²¹。
+`Jonsson` 和 `Soderberg` ¹²¹。
 
-Zen 等人 ¹²² 提出了一个三阶段迁移学习框架。
+`Zen` 等人 ¹²² 提出了一个三阶段迁移学习框架。
 
-性别识别的局部深度神经网络研究启动了图像局部斑块的识别工作。这种定位降低了训练时间的计算成本，因为原始方法每张图像使用 100 个斑块。Liao 等人 ¹²³ 提出了九斑块模型，并将其应用于 LFW 和 Adience 数据库。
+性别识别的局部深度神经网络研究启动了图像局部斑块的识别工作。这种定位降低了训练时间的计算成本，因为原始方法每张图像使用 100 个斑块。`Liao` 等人 ¹²³ 提出了九斑块模型，并将其应用于 `LFW` 和 `Adience` 数据库。
 
-Afshin Dehghan 等人提出了一种名为 `DAGER` 的基于 CNN 的方法。整个数据集已被处理，并将年龄、性别和情绪作为第一输出层进行估计。使用了视界受限数据集，与 Adience 数据库方法采用五折交叉验证不同，该模型在无需进一步微调的情况下应用于所有折。他们将模型应用于 `Kairos` 和 `Face++` 等实时 API。模型准确率通过混淆矩阵获得。针对每个任务——年龄、性别和情绪识别——的深度训练方法都有独立的网络，且计算成本低廉。实验针对每个任务分别进行，分类基于组合输出结果。
+`Afshin Dehghan` 等人提出了一种名为 `DAGER` 的基于 `CNN` 的方法。整个数据集已被处理，并将年龄、性别和情绪作为第一输出层进行估计。使用了视界受限数据集，与 `Adience` 数据库方法采用五折交叉验证不同，该模型在无需进一步微调的情况下应用于所有折。他们将模型应用于 `Kairos` 和 `Face++` 等实时 `API`。模型准确率通过混淆矩阵获得。针对每个任务——年龄、性别和情绪识别——的深度训练方法都有独立的网络，且计算成本低廉。实验针对每个任务分别进行，分类基于组合输出结果。
 
-Li 等人 ¹²⁴ 提出了多模态 2D 和 3D 面部表情识别。
+`Li` 等人 ¹²⁴ 提出了多模态 `2D` 和 `3D` 面部表情识别。
 
-Raza 等人 ¹²⁵ 进行了行人解析。
+`Raza` 等人 ¹²⁵ 进行了行人解析。
 
-Duan 等人 ¹²⁶ 引入了一种包含卷积神经网络（`CNN`）和极限学习机（`ELM`）的混合结构。
+`Duan` 等人 ¹²⁶ 引入了一种包含卷积神经网络（`CNN`）和极限学习机（`ELM`）的混合结构。
 
-Arora 和 Bhatia ¹²⁷。
+`Arora` 和 `Bhatia` ¹²⁷。
 
-为了从人脸图片中识别性别，Azzopardi 等人 ¹²⁸。
+为了从人脸图片中识别性别，`Azzopardi` 等人 ¹²⁸。
 
-Rai 和 Khanna ¹²⁹。
+`Rai` 和 `Khanna` ¹²⁹。
 
-常见的实验分析未考虑到作为神经网络输入的人脸图片通常包含典型数据集中未定义的实质性损坏。在这项工作中，Greco 等人 ¹³⁰。
+常见的实验分析未考虑到作为神经网络输入的人脸图片通常包含典型数据集中未定义的实质性损坏。在这项工作中，`Greco` 等人 ¹³⁰。
 
-由于社交网络和多媒体网络日益普及，年龄和性别识别的研究受到研究人员的更多关注。最近，Duc-Quang 等人 ¹³¹。
+由于社交网络和多媒体网络日益普及，年龄和性别识别的研究受到研究人员的更多关注。最近，`Duc-Quang` 等人 ¹³¹。
 
-年龄和性别识别已成为网络、安全和护理的重要组成部分。它常用于儿童的年龄特定内容访问控制。社交媒体利用它投放嵌入式广告和推销以扩大影响力。人脸识别已发展到相当程度，我们必须将其映射到任何方法中，以采用完全不同的途径获得更多有用结果。Rafique 等人 ¹³²。
+年龄和性别识别已成为网络、安全和护理的重要组成部分。它常用于儿童的年龄特定内容访问控制。社交媒体利用它投放嵌入式广告和推销以扩大影响力。人脸识别已发展到相当程度，我们必须将其映射到任何方法中，以采用完全不同的途径获得更多有用结果。`Rafique` 等人 ¹³²。
 
-Mathivanan 和 Poornima ¹³³。
+`Mathivanan` 和 `Poornima` ¹³³。
 
-Gurnani 等人 ¹³⁴。
+`Gurnani` 等人 ¹³⁴。
 
-Cheng 等人 ¹³⁵。
+`Cheng` 等人 ¹³⁵。
 
-Saeed 等人 ¹³⁶。
+`Saeed` 等人 ¹³⁶。
 
-Afifi 和 Abdelhamed ¹³⁷。
+`Afifi` 和 `Abdelhamed` ¹³⁷。
 
-Cornia ¹³⁸。
+`Cornia` ¹³⁸。
 
-Qawaqneh 等人 ¹³⁹。
+`Qawaqneh` 等人 ¹³⁹。
 
-### 3：基础知识
+## 3：基础知识
 
-#### 3.1：深度学习
+### 3.1：深度学习
 
 尖端技术对生活各方面的影响不容忽视。深度学习和机器学习是这一影响的核心两大技术。`AGI`（通用人工智能）是深度学习的终极技术。这些变革的发起者正在改变人类生存和交流的环境，如工业革命、网络安全和监控。它们处于中间阶段；正逐步进入我们的日常生活，如医疗进步、气候变化监测、农业增产、智能设备和电网建设。
 
@@ -2115,31 +2002,27 @@ Qawaqneh 等人 ¹³⁹。
 
 深度学习是一种利用人工神经网络进行机器学习的过程，该网络由三个按层级排列的主要层组成。网络输入通过输入层，数据在隐藏层（也称为计算层）中转换和激活，期望的输出通过输出层演化而出。该过程在层级结构的每一层中持续进行，从给定的训练数据构建更复杂的信息。这是一种对许多现实应用非常有用的学习方法，如股票预测、多分类等。
 
-架构中用于数据转换的隐藏层数量被称为“深度”。此类学习架构通常采用贪婪逐层方法构建。各种深度学习架构，如反卷积网络、深度卷积神经网络、深度信念网络和 `RNN`。生成对抗网络、深度残差网络和神经调谐机被用于各个领域。这些架构利用多层提取更多显著特征。
+架构中用于数据转换的隐藏层数量被称为“深度”。此类学习架构通常采用贪婪逐层方法构建。各种深度学习架构，如反卷积网络、深度卷积神经网络、深度信念网络和 `RNN`。生成对抗网络 (`GAN`)、深度残差网络 (`ResNet`) 和神经调谐机被用于各个领域。这些架构利用多层提取更多显著特征。
 
+### CNN：一种流行的 ANN 类型
 
-
-
-
-# CNN：一种流行的 ANN 类型
-
-CNN 是 ANN 的流行类型之一。普通 ANN 用于处理高度结构化数值数据的应用，而 CNN 则处理图像。它是一种深度前馈网络。前馈网络优于感知机。典型的 CNN 通常包含约 10 个卷积、线性整流激活和子采样三元组层 (CRS)，后接 2 个全连接 (FC) 层。CNN 主要用于图像相关的识别和分类。与其他图像处理算法相比，CNN 需要的预处理较少。
+`CNN` 是 `ANN` 的流行类型之一。普通 `ANN` 用于处理高度结构化数值数据的应用，而 `CNN` 则处理图像。它是一种深度前馈网络。前馈网络优于感知机。典型的 `CNN` 通常包含约 10 个卷积、线性整流激活和子采样三元组层 (`CRS`)，后接 2 个全连接 (`FC`) 层。`CNN` 主要用于图像相关的识别和分类。与其他图像处理算法相比，`CNN` 需要的预处理较少。
 
 在深度学习中，每一层通过自主学习信息，将输入转换为更抽象和融合的表示。每一层上的神经元使这种抽象成为可能。神经网络上有各种单元。它们包括输入单元、含噪与反馈输入单元、输出单元、匹配输入/输出单元、循环单元、记忆单元、卷积单元、隐藏单元和概率隐藏单元。它能学习如何在各个层级中放置特征。
 
-#### 3.2：预训练网络
+### 3.2：预训练网络
 
-深度神经网络 (DNN) 是分析任务的有效途径，因为它们能将低层级的简单特征转化为高层级的稠密特征。尽管 DNN 在将低层级特征转化为高层级特征方面优于浅层神经网络，但存在一个限制：需要估算许多网络因子或超参数。借助预训练的、现成的深度 CNN 模型，可以消除这一限制。这些预训练的、现成的深度 CNN 模型保持了用于识别问题的最佳泛化能力。对于识别任务，最好使用经过微调的预训练模型，即一种迁移学习方法。
+深度神经网络 (`DNN`) 是分析任务的有效途径，因为它们能将低层级的简单特征转化为高层级的稠密特征。尽管 `DNN` 在将低层级特征转化为高层级特征方面优于浅层神经网络，但存在一个限制：需要估算许多网络因子或超参数。借助预训练的、现成的深度 `CNN` 模型，可以消除这一限制。这些预训练的、现成的深度 `CNN` 模型保持了用于识别问题的最佳泛化能力。对于识别任务，最好使用经过微调的预训练模型，即一种迁移学习方法。
 
-借助多样且大规模的数据集，CNN 在预训练期间学习如何提取特征。迁移学习使用已经在大型数据集上训练好的网络层，这些层可针对新数据集进行微调。通过迁移学习，可对预训练网络进行精细调整。随机初始化的权重被用于从头训练一个全新的网络。前者比后者更容易、更快，收敛快得多，训练更快，并能给出准确且更好的预测结果。利用这一点，学到的特征可以轻松迁移到仅有少量训练图像的新任务中。这种技术在现实中效果很好，因为它允许网络使用预先学到的特征，以新颖的组合对它们进行混合匹配，并用于对新图像集进行分类。事实上，普遍认为现在不应再从头训练 CNN。
+借助多样且大规模的数据集，`CNN` 在预训练期间学习如何提取特征。迁移学习使用已经在大型数据集上训练好的网络层，这些层可针对新数据集进行微调。通过迁移学习，可对预训练网络进行精细调整。随机初始化的权重被用于从头训练一个全新的网络。前者比后者更容易、更快，收敛快得多，训练更快，并能给出准确且更好的预测结果。利用这一点，学到的特征可以轻松迁移到仅有少量训练图像的新任务中。这种技术在现实中效果很好，因为它允许网络使用预先学到的特征，以新颖的组合对它们进行混合匹配，并用于对新图像集进行分类。事实上，普遍认为现在不应再从头训练 `CNN`。
 
-我们将预训练网络用作特征提取器，其中层激活值被用作特征。这些作为特征提取的激活值被输入到 SVM（另一种领先的学习分类器模型）中。
+我们将预训练网络用作特征提取器，其中层激活值被用作特征。这些作为特征提取的激活值被输入到 `SVM`（另一种领先的学习分类器模型）中。
 
-文献中现成存在各种预训练网络，如 ZFNet、VGGNet、GoogLeNet、AlexNet 和 ResNet，可用于执行识别任务。通过对预训练网络进行微调以获得更高的成功率，可以提取各种与表达相关的特征。本研究使用了 GoogLeNet 和 AlexNet。在使用这两个网络学习详细信息时，最终分类器层的学习率设为 0.01。
+文献中现成存在各种预训练网络，如 `ZFNet`、`VGGNet`、`GoogLeNet`、`AlexNet` 和 `ResNet`，可用于执行识别任务。通过对预训练网络进行微调以获得更高的成功率，可以提取各种与表达相关的特征。本研究使用了 `GoogLeNet` 和 `AlexNet`。在使用这两个网络学习详细信息时，最终分类器层的学习率设为 0.01。
 
-#### 3.3：AlexNet
+### 3.3：AlexNet
 
-AlexNet 是首个在大型数据集 ImageNet ¹⁴⁰ 上取得成功的 CNN。
+`AlexNet` 是首个在大型数据集 `ImageNet` ¹⁴⁰ 上取得成功的 `CNN`。
 
 $$
 f\left( x \right) = \tanh\left( x \right) = 2 \ast \frac{1}{1 + e^{- 2x}} - 1
@@ -2151,7 +2034,7 @@ $$
 
 **图 2 AlexNet 架构。**
 
-这种 tanh 函数是一种饱和非线性函数，由于指数函数计算代价高昂，因此训练速度较慢。因此，AlexNet 使用了如公式 (2) 所示的非饱和非线性函数 ReLU，其训练更快且计算效率更高。
+这种 `tanh` 函数是一种饱和非线性函数，由于指数函数计算代价高昂，因此训练速度较慢。因此，`AlexNet` 使用了如公式 (2) 所示的非饱和非线性函数 `ReLU`，其训练更快且计算效率更高。
 
 $$
 f(x) = \text{ReLU}(x) = \max(0, x)
@@ -2159,52 +2042,52 @@ $$
 
 ![si2_e](img/si2_e.png) (2)
 
-据称 ReLU 的速度快六倍，且不需要输入归一化来防止饱和。但为了实现泛化，会进行一种称为亮度归一化的局部响应归一化。局部响应归一化 (LRN) 是 ConvNets 中特征图的一种对比度增强过程。根据实现细节，它也可以仅是亮度归一化，这对具有无界输出的 ReLU 单元尤为重要。这种归一化导致一种侧向抑制形式，这在真实神经元中也能发现。AlexNet 使用 ReLU 代替 tanh 来增加非线性，从而在相同精度水平下提升了速度。为解决过拟合问题，它使用了 Dropout。为减少过拟合并学习鲁棒特征，每个隐藏神经元的输出初始以 0.5 的概率被固定为零。LRN 操作受真实生物神经网络中侧向抑制过程的启发，这种过程在较小的局部邻域内产生神经元间某种形式的竞争。Dropout 操作仅应用于 AlexNet 架构的前两个全连接层，因为每次应用所需的收敛迭代次数都会增加两倍。被丢弃的神经元将不参与前向传播，因此也不参与反向传播。因此，它减少了神经元的共适应，因为每个神经元都无法依赖其他神经元。池化层用于汇总同一核映射中相邻神经元的输出。为减小网络规模，它采用重叠池化层。观察 AlexNet 系统时，初始层具有 11 × 11 的滤波器，后续层具有 5 × 5 的滤波器。每个卷积层后都有最大池化。
+据称 `ReLU` 的速度快六倍，且不需要输入归一化来防止饱和。但为了实现泛化，会进行一种称为亮度归一化的局部响应归一化。局部响应归一化 (`LRN`) 是 `ConvNets` 中特征图的一种对比度增强过程。根据实现细节，它也可以仅是亮度归一化，这对具有无界输出的 `ReLU` 单元尤为重要。这种归一化导致一种侧向抑制形式，这在真实神经元中也能发现。`AlexNet` 使用 `ReLU` 代替 `tanh` 来增加非线性，从而在相同精度水平下提升了速度。为解决过拟合问题，它使用了 `Dropout`。为减少过拟合并学习鲁棒特征，每个隐藏神经元的输出初始以 0.5 的概率被固定为零。`LRN` 操作受真实生物神经网络中侧向抑制过程的启发，这种过程在较小的局部邻域内产生神经元间某种形式的竞争。`Dropout` 操作仅应用于 `AlexNet` 架构的前两个全连接层，因为每次应用所需的收敛迭代次数都会增加两倍。被丢弃的神经元将不参与前向传播，因此也不参与反向传播。因此，它减少了神经元的共适应，因为每个神经元都无法依赖其他神经元。池化层用于汇总同一核映射中相邻神经元的输出。为减小网络规模，它采用重叠池化层。观察 `AlexNet` 系统时，初始层具有 11 × 11 的滤波器，后续层具有 5 × 5 的滤波器。每个卷积层后都有最大池化。
 
-AlexNet 模型使用随机梯度下降进行训练，该方法以特定的动量值和权重衰减值最小化交叉熵损失函数。所有层的学习率初始设为 0.01，当验证错误率不再随当前学习率改善时，再手动调整。
+`AlexNet` 模型使用随机梯度下降 (`SGD`) 进行训练，该方法以特定的动量值和权重衰减值最小化交叉熵损失函数。所有层的学习率初始设为 0.01，当验证错误率不再随当前学习率改善时，再手动调整。
 
-#### 3.4：GoogLeNet
+### 3.4：GoogLeNet
 
-在 2015 年 ImageNet 大规模视觉识别挑战赛中，GoogLeNet ¹⁴¹
+在 2015 年 `ImageNet` 大规模视觉识别挑战赛中，`GoogLeNet` ¹⁴¹
 
 ![图 3 GoogLeNet 架构。](img/f06-03-9780323852098.jpg)
 
 **图 3 GoogLeNet 架构。**
 
-预训练的 GoogLeNet 增加了具有更多非线性的 Inception 模块。该 Inception 模块用作区域分类器。它通过将多框预测与选择性搜索方法相结合，改进了区域建议步骤。中间有一些 SoftMax 层用于训练目的，提供正则化，并缓解梯度消失问题。这些被用作辅助分类器。GoogLeNet 旨在捕捉特征图堆栈中的稀疏相关模式并提供计算效率。它通过批量归一化正则化训练，从而降低了辅助分类器的重要性。在降低空间分辨率的同时，它增加了特征图的数量。
+预训练的 `GoogLeNet` 增加了具有更多非线性的 `Inception` 模块。该 `Inception` 模块用作区域分类器。它通过将多框预测与选择性搜索方法相结合，改进了区域建议步骤。中间有一些 `SoftMax` 层用于训练目的，提供正则化，并缓解梯度消失问题。这些被用作辅助分类器。`GoogLeNet` 旨在捕捉特征图堆栈中的稀疏相关模式并提供计算效率。它通过批量归一化 (`BN`) 正则化训练，从而降低了辅助分类器的重要性。在降低空间分辨率的同时，它增加了特征图的数量。
 
+它是探索 `CNN` 中使用的层不必按顺序排列这一概念的模型之一。通过使用 `Inception` 模块，它证明了不同的层结构可以带来特征提取的性能和计算优势。网络中的集体参数为 679.77 万，其中大部分参数归因于网络的 `Inception` 模块。事实上，这个数字相当庞大，这反过来使 `GoogLeNet` 成为一个非常复杂且高容量的深度网络。作为末端全连接层的替代方案，`GoogLeNet` 使用全局平均池化 (`GAP`)，因此它不太容易过拟合，并节省了大量参数。与最大池化层类似，`GAP` 层用于减小 `3D` 张量的空间维度。然而，`GAP` 层实现了一种更极端的降维形式，即维度为 `h × w × d` 的张量被缩减为维度为 `1 × 1 × d` 的大小。为了将每个 `h × w` 特征图减少为单个数字，`GAP` 层计算每个 `hw` 个值的平均值。
 
+## 4: 提出的系统
 
-
-它是探索 CNN 中使用的层不必按顺序排列这一概念的模型之一。通过使用 Inception 模块，它证明了不同的层结构可以带来特征提取的性能和计算优势。网络中的集体参数为 679.77 万，其中大部分参数归因于网络的 Inception 模块。事实上，这个数字相当庞大，这反过来使 GoogLeNet 成为一个非常复杂且高容量的深度网络。作为末端全连接层的替代方案，GoogLeNet 使用全局平均池化，因此它不太容易过拟合，并节省了大量参数。与最大池化层类似，GAP 层用于减小 3D 张量的空间维度。然而，GAP 层实现了一种更极端的降维形式，即维度为 `h × w × d` 的张量被缩减为维度为 `1 × 1 × d` 的大小。为了将每个 `h × w` 特征图减少为单个数字，GAP 层计算每个 `hw` 个值的平均值。
-
-### 4: 提出的系统
-
-图 4 展示了提出的多通道深度学习框架 (MC-DLF) 的轮廓。预处理后，从人脸图像构建 LDP 图像。LDP 特征图像被组织为 `220*170` 的尺寸。利用特征图像，通过微调的预训练 AlexNet/GoogLeNet 和一个浅层 CNN 进行特征提取。使用 CCA/DCA 进行特征融合。然后，将融合的特征集作为输入提供给 SVM 分类器，以识别给定图像的性别。
+图 4 展示了提出的多通道深度学习框架 (`MC-DLF`) 的轮廓。预处理后，从人脸图像构建 `LDP` 图像。`LDP` 特征图像被组织为 `220*170` 的尺寸。利用特征图像，通过微调的预训练 `AlexNet`/`GoogLeNet` 和一个浅层 `CNN` 进行特征提取。使用 `CCA`/`DCA` 进行特征融合。然后，将融合的特征集作为输入提供给 `SVM` 分类器，以识别给定图像的性别。
 
 ![Fig. 4 Proposed Framework.](img/f06-04-9780323852098.jpg)
 
 图 4 提出的框架。
 
-#### 4.1: 步骤
+### 4.1: 步骤
 
 我们提出的框架所涉及的步骤如下所示。
 
 | 算法步骤 |
 | --- |
-| (a) 预处理后，从人脸图像构建 LDP 图像。(b) 图像被组织为 `220*170` 的尺寸。(c) 从预处理图像中提取两组特征。一组特征提取通过迁移学习方法完成，另一组通过浅层 CNN 完成，即使用微调的预训练 AlexNet/GoogLeNet 和一个浅层 CNN 提取特征。(d) 使用 CCA/DCA 进行特征融合。(e) 然后，将融合的特征集作为输入提供给 SVM 分类器，以识别给定图像的性别。 |
+
+
+
+| (a) 预处理后，从人脸图像构建 LDP 图像。(b) 图像被组织为 `220*170` 的尺寸。(c) 从预处理图像中提取两组特征。一组特征提取通过迁移学习方法完成，另一组通过浅层 CNN 完成，即使用微调的预训练 `AlexNet`/`GoogLeNet` 和一个浅层 CNN 提取特征。(d) 使用 CCA/DCA 进行特征融合。(e) 然后，将融合的特征集作为输入提供给 SVM 分类器，以识别给定图像的性别。 |
 
 <div class="small_device"> <p class="table_fig"><img src="images/B9780323852098000092/t0030.png" alt="Unlabelled Table" /></p></div>
 
-#### 4.2: 特征图像形成
+### 4.2 特征图像形成
 
 不使用原始人脸图像来学习人脸特征，而是使用特征图像，因为它们在初始层面代表了一些显著特征。特征图像形成的过程在后续章节中解释。
 
-#### 4.3: 局部方向模式 (LDP) 图像形成
+### 4.3 局部方向模式 (LDP) 图像形成
 
-##### 4.3.1: 边缘方向幅度计算
+#### 4.3.1 边缘方向幅度计算
 
-对于输入人脸图像中的每个像素，使用 图 5 中所示的八个不同罗盘方向上的 Kirsch 掩模 `K[ij]^z` 计算边缘方向幅度。在所有八个罗盘方向上应用 Kirsch 掩模后获得的结果如 图 6 所示。每个方向代表边缘幅度。图 7 说明了输入图像及其对应的 LDP 图像。
+对于输入人脸图像中的每个像素，使用图 5 中所示的八个不同罗盘方向上的 Kirsch 掩模 `K[ij]^z` 计算边缘方向幅度。在所有八个罗盘方向上应用 Kirsch 掩模后获得的结果如图 6 所示。每个方向代表边缘幅度。图 7 说明了输入图像及其对应的 LDP 图像。
 
 ![Fig. 5 Kirsch edge masks that are used in different compass directions.](img/f06-05-9780323852098.jpg)
 
@@ -2218,7 +2101,7 @@ AlexNet 模型使用随机梯度下降进行训练，该方法以特定的动量
 
 图 7 图像及其对应的 LDP 图像。
 
-##### 4.3.2: 最高边缘方向幅度识别
+#### 4.3.2 最高边缘方向幅度识别
 
 从尺寸为 `n * p` 的输入图像 `I` 中计算最大边缘方向幅度 `E`，使用公式 (3)。
 
@@ -2230,7 +2113,7 @@ $E_{i,j} = \max_{z = 1,2,\ldots,8}\sum\limits_{l = - 1}^{1}\sum\limits_{k = - 1}
 
 其中 `i` 和 `j` 分别从 2 到 `n − 1` 和 2 到 `p − 1`。它是基于所有罗盘方向上的八个 Kirsch 核系列 `k` 计算的。它取决于产生最重要边缘幅度的掩模。
 
-##### 4.3.3: LDP 图像计算
+#### 4.3.3 LDP 图像计算
 
 设 `Kirsch[i]` 为应用所有八个 Kirsch 核 `K[i]` (`i = 1, 2 … 8`) 后得到的响应。设最高边缘幅度表示为 `Kirsch[max]`。所有像素的 LDP 值使用公式 (4) 计算。
 
@@ -2242,24 +2125,22 @@ $\begin{matrix} {\mathit{LDP} = \sum\limits_{i = 0}^{7}b\left( {\mathit{Kirsch}_
 
 由于图像是通过考虑所有八个方向生成的，因此产生了一个鲁棒的特征图像。
 
-### 5: 浅层 CNN
+### 5 浅层 CNN
 
-本工作中采用的浅层 CNN 结构如 图 8 所示。CNN 包含三个卷积层以及三个池化层。在 表 1 中，列举了每个 CNN 层采用的参数。为了将特征图像集转换为可学习的 3D 滤波器集，采用了卷积层。为了减小特征图的维度并消除冗余细节，采用池化层来完成下采样。
+本工作中采用的浅层 CNN 结构如图 8 所示。CNN 包含三个卷积层以及三个池化层。在表 1 中，列举了每个 CNN 层采用的参数。为了将特征图像集转换为可学习的 3D 滤波器集，采用了卷积层。为了减小特征图的维度并消除冗余细节，采用池化层来完成下采样。
 
 ![Fig. 8 Architecture of shallow CNN.](img/f06-08-9780323852098.jpg)
 
 图 8 浅层 CNN 架构。
 
-**表 1**
+**表 1** 浅层 CNN 中使用的参数。
 
-浅层 CNN 中使用的参数。
-
-| 参数 | | Conv1 | | Pool1 | | Conv2 | | Pool2 | | Conv3 | | Pool3 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 滤波器尺寸 | | `3*3` | | `2*2` | | `3*3` | | `2*2` | | `3*3` | | `2*2` |
-| 滤波器数量 | | 16 | | | | 32 | | | | 64 | | |
-| 步长 | | 1 | | 2 | | 1 | | 2 | | 1 | | 2 |
-| 填充 | | 1 | | 0 | | 1 | | 0 | | 1 | | 0 |
+| 参数 | Conv1 | Pool1 | Conv2 | Pool2 | Conv3 | Pool3 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 滤波器尺寸 | `3*3` | `2*2` | `3*3` | `2*2` | `3*3` | `2*2` |
+| 滤波器数量 | 16 | | 32 | | 64 | |
+| 步长 | 1 | 2 | 1 | 2 | 1 | 2 |
+| 填充 | 1 | 0 | 1 | 0 | 1 | 0 |
 
 <div class="small_device"> <p class="table_fig"><img src="images/B9780323852098000092/t0010.png" alt="Table 1" /></p></div>
 
@@ -2267,9 +2148,7 @@ $\begin{matrix} {\mathit{LDP} = \sum\limits_{i = 0}^{7}b\left( {\mathit{Kirsch}_
 
 归一化层被用在中间，以改进训练过程并减少网络对初始化的依赖。它对流经网络的梯度值进行归一化。
 
-### 6: 特征融合
-
-
+### 6 特征融合
 
 在识别系统中，融合可以发生在特征层面或分类器层面。由于特征向量包含关于输入图像的丰富信息，因此特征层面的融合被认为优于分类器层面的融合。
 
@@ -2282,7 +2161,9 @@ $\begin{matrix} {\mathit{LDP} = \sum\limits_{i = 0}^{7}b\left( {\mathit{Kirsch}_
 其旨在找出两个不同特征集之间的关联 ¹⁴²
 
 $$
+
 S = \begin{pmatrix} \operatorname{var}(x) & \operatorname{cov}(x,y) \\ \operatorname{cov}(y,x) & \operatorname{var}(y) \end{pmatrix} = \begin{pmatrix} S_{xx} & S_{xy} \\ S_{yx} & S_{yy} \end{pmatrix}
+
 $$
 
 ![si5_e](img/si5_e.png)  (5)
@@ -2290,7 +2171,9 @@ $$
 然后，使用公式 (6) 计算非零特征值 `G[1]` 和 `G[2]`。
 
 $$
+
 G_{1} = S_{xx}^{-\frac{1}{2}}S_{xy}S_{yy}^{-1}S_{yx}S_{xx}^{-\frac{1}{2}} \quad G_{2} = S_{yy}^{-\frac{1}{2}}S_{yx}S_{xx}^{-1}S_{xy}S_{yy}^{-\frac{1}{2}}
+
 $$
 
 ![si6_e](img/si6_e.png)  (6)
@@ -2298,7 +2181,9 @@ $$
 然后，求出投影矩阵 `W[x]` 和 `W[y]`，它们代表与非零特征值对应的排列特征向量。最后，为了增加两个特征向量之间的成对关联，使用公式 (7) 求出变换后特征向量的线性组合。
 
 $$
+
 X^{*} = W[x]^{T}X \quad Y^{*} = W[y]^{T}Y
+
 $$
 
 ![si7_e](img/si7_e.png)  (7)
@@ -2312,7 +2197,9 @@ $$
 设 `n` 为总样本数，`c` 为类别数，`p` 和 `q` 分别为特征向量 `X` 和 `Y` 中的特征数。`n` 个数据矩阵列必须分成 `c` 个不同的类，其中 `n[i]` 列属于第 `i` 类，如公式 (8) 所示。
 
 $$
+
 n = \sum_{i=1}^{c}n_{i}
+
 $$
 
 ![si8_e](img/si8_e.png)  (8)
@@ -2320,7 +2207,9 @@ $$
 设 `x[ij]` 为 `X` 中第 `i` 类第 `j` 个样本的特征向量。设 $\overline{x_{i}}$![si9_e](img/si9_e.png) 和 $\overline{x}$![si10_e](img/si10_e.png) 分别为第 `i` 类中 `x[ij]` 特征向量的均值和整个特征集的均值。然后，求出类间散度矩阵 `S[bx]`，由公式 (9) 定义。
 
 $$
+
 S_{bx}(p \times p) = \phi_{bx}\phi_{bx}^{T}
+
 $$
 
 ![si11_e](img/si11_e.png)  (9)
@@ -2328,7 +2217,9 @@ $$
 其中
 
 $$
+
 \phi_{bx(p \times c)} = \left[ {\sqrt{n_{1}}(\overline{x_{1}} - \overline{x}), \sqrt{n_{2}}(\overline{x_{2}} - \overline{x}), \ldots, \sqrt{n_{c}}(\overline{x_{c}} - \overline{x})} \right]
+
 $$
 
 ![si12_e](img/si12_e.png)
@@ -2336,7 +2227,9 @@ $$
 为了对类间散度矩阵 `S[bx]` 进行对角化，并将数据矩阵 `X` 的大小从 `p` 降至 `r`，使用公式 (10) 求出变换矩阵 `W[bx]`。
 
 $$
+
 W[bx]^{T}S[bx]W[bx] = I
+
 $$
 
 ![si13_e](img/si13_e.png)  (10)
@@ -2346,7 +2239,9 @@ $$
 变换后的特征向量由公式 (11) 给出。
 
 $$
+
 X' = W[bx]^{T}X
+
 $$
 
 ![si14_e](img/si14_e.png)  (11)
@@ -2358,7 +2253,9 @@ $$
 变换后的特征向量 `X'` 和 `Y'` 之间的集间协方差矩阵由公式 (12) 给出。
 
 $$
+
 S_{xy}' = X'Y'^{T}
+
 $$
 
 ![si15_e](img/si15_e.png)  (12)
@@ -2366,14 +2263,16 @@ $$
 为了对角化 `S'[xy]`，使用奇异值分解求出变换 `W[cx]` 和 `W[cy]`。因此，最终变换后的特征集使用公式 (13) 求出。
 
 $$
+
 \tilde{X} = W[cx]^{T}X' \quad \text{and} \quad \tilde{Y} = Y'
+
 $$
 
 ![si16_e](img/si16_e.png)  (13)
 
 ### 7 实验结果与讨论
 
-以下描述了所使用的数据集以及使用我们提出的方法获得的实验结果的讨论。首先，为 Adience 基准数据集中所有可用的面部图像形成特征 LDP 图像数据库。然后，使用 CNN、AlexNet 和 GoogLeNet 从输入图像中进行特征提取。然后，使用 CCA/DCA 进行特征融合。数据库构建、特征提取和特征融合均使用 Matlab 完成。使用 CNN 提取的特征总数为 36,288。使用微调后的 GoogLeNet 和 AlexNet 提取的特征数为 1000。然后，将融合后的特征作为输入提供给使用 Weka 工具的 SVM 分类器以获得结果。
+以下描述了所使用的数据集以及使用我们提出的方法获得的实验结果的讨论。首先，为 Adience 基准数据集中所有可用的面部图像形成特征 LDP 图像数据库。然后，使用 CNN、`AlexNet` 和 `GoogLeNet` 从输入图像中进行特征提取。然后，使用 CCA/DCA 进行特征融合。数据库构建、特征提取和特征融合均使用 Matlab 完成。使用 CNN 提取的特征总数为 36,288。使用微调后的 `GoogLeNet` 和 `AlexNet` 提取的特征数为 1000。然后，将融合后的特征作为输入提供给使用 Weka 工具的 SVM 分类器以获得结果。
 
 #### 7.1 Adience 数据集
 
@@ -2381,9 +2280,9 @@ $$
 
 ### 8 单通道方法
 
-最初，实验的进行方式是将每张面部图像及其对应的 LDP 特征图像单独输入到三个网络中，即 GoogLeNet、AlexNet 和浅层 CNN。
+最初，实验的进行方式是将每张面部图像及其对应的 LDP 特征图像单独输入到三个网络中，即 `GoogLeNet`、`AlexNet` 和浅层 CNN。
 
-图 9 显示了使用单通道方法获得的准确率。从结果推断，将 LDP 图像输入 GoogLeNet 的表现优于其他方法。
+图 9 显示了使用单通道方法获得的准确率。从结果推断，将 LDP 图像输入 `GoogLeNet` 的表现优于其他方法。
 
 ![图 9 使用单通道方法获得的准确率（百分比）。](img/f06-09-9780323852098.jpg)
 
@@ -2391,14 +2290,9 @@ $$
 
 ### 9 提出的 MC-DLF 方法
 
-表 2 和 图 10 说明了使用提出的 MC-DLF 方法时达到的准确率，其中原始图像及其等效的 LDP 特征图像作为输入。从结果推断，浅层 CNN 和 GoogLeNet 结合 CCA 产生更好的结果。
+表 2 和图 10 说明了使用提出的 MC-DLF 方法时达到的准确率，其中原始图像及其等效的 LDP 特征图像作为输入。从结果推断，浅层 CNN 和 `GoogLeNet` 结合 CCA 产生更好的结果。
 
-表 2
-
-使用我们的 MC-DLF 方法获得的准确率（百分比）。
-
-
-
+**表 2** 使用我们的 MC-DLF 方法获得的准确率（百分比）。
 
 | 浅层 CNN 和 AlexNet (CCA) | 浅层 CNN 和 AlexNet (DCA) | 浅层 CNN 和 GoogLeNet (CCA) | 浅层 CNN 和 GoogLeNet (DCA) |
 | --- | --- | --- | --- |
@@ -2410,11 +2304,9 @@ $$
 
 图 10 使用我们的 MC-DLF 方法获得的准确率（百分比）。
 
-表 3 展示了建议的 MC-DLF 方法在使用各种核函数通过 SVM 评估时的性能比较。
+**表 3** 展示了建议的 MC-DLF 方法在使用各种核函数通过 SVM 评估时的性能比较。
 
-#### 表 3
-
-使用各种核函数评估特征的性能——MC-DLF 方法。
+#### 表 3 使用各种核函数评估特征的性能——MC-DLF 方法。
 
 | 核函数 | 准确率（%） |
 | --- | --- |
@@ -2422,11 +2314,9 @@ $$
 | 归一化多项式 | 90.56 |
 | RBF | 90.32 |
 
-建议方法与其他最先进方法之间的比较见 表 4。
+建议方法与其他最先进方法之间的比较见表 4。
 
-#### 表 4
-
-与最先进方法的比较。
+#### 表 4 与最先进方法的比较。
 
 | 作者 | 使用的方法 | 准确率 |
 | --- | --- | --- |
@@ -2439,9 +2329,9 @@ $$
 
 <div class="small_device"> <p class="table_fig"><img src="images/B9780323852098000092/t0025.png" alt="表 4" /></p></div>
 
-### 10：总结
+### 10 总结
 
-在这项工作中，从预处理后的输入图像集中提取了两组特征。一组特征提取是通过迁移学习方法，另一组是通过浅层 CNN。LDP 图像是在预处理后由人脸图像构建的。LDP 特征图像被组织为 `220*170` 的尺寸。此外，可以训练更大的模型，训练时间也会减少。因此，从特征图像中使用微调的预训练 AlexNet/GoogLeNet 和浅层 CNN 提取特征。特征融合使用 CCA/DCA 完成。然后，将融合特征集作为输入提供给 SVM 分类器以识别给定图像的性别。这种集成提高了预测准确率，并形成了一个稳定的性别识别系统。在 MC-DLF 方法中，原始图像及其对应的 LDP 图像（特征图像）被用于提取特征。从结果可以推断，当使用特征图像作为输入时，系统表现更好。由于建议的方法使用了执行边缘分析的特征图像，它通过去除非基于边缘特征引起的歧义，实现了最佳的性别识别。由于 LDP 特征图像对边缘和形状进行了建模，它们能更好地表征分类任务。通过将 LDP 特征图像作为输入提供给建议的方法，提取了显著的学习特征。因此，这些学习到的特征更有利于有效分类。
+在这项工作中，从预处理后的输入图像集中提取了两组特征。一组特征提取是通过迁移学习方法，另一组是通过浅层 CNN。LDP 图像是在预处理后由人脸图像构建的。LDP 特征图像被组织为 `220*170` 的尺寸。此外，可以训练更大的模型，训练时间也会减少。因此，从特征图像中使用微调的预训练 `AlexNet`/`GoogLeNet` 和浅层 CNN 提取特征。特征融合使用 CCA/DCA 完成。然后，将融合特征集作为输入提供给 SVM 分类器以识别给定图像的性别。这种集成提高了预测准确率，并形成了一个稳定的性别识别系统。在 MC-DLF 方法中，原始图像及其对应的 LDP 图像（特征图像）被用于提取特征。从结果可以推断，当使用特征图像作为输入时，系统表现更好。由于建议的方法使用了执行边缘分析的特征图像，它通过去除非基于边缘特征引起的歧义，实现了最佳的性别识别。由于 LDP 特征图像对边缘和形状进行了建模，它们能更好地表征分类任务。通过将 LDP 特征图像作为输入提供给建议的方法，提取了显著的学习特征。因此，这些学习到的特征更有利于有效分类。
 
 ### 参考文献
 
@@ -2455,46 +2345,45 @@ M. Kavitha; R. Jai Ganesh  ^() K. Ramakrishnan 技术学院，印度特里奇
 
 #### 关键词
 
-心跳信号；生物识别认证；面部视频；ECG；MAHNOB-HCI 统计数据；RGB 摄像头；ROI 提取
 
-### 1：引言
+
+# 心跳信号；生物识别认证；面部视频；ECG；MAHNOB-HCI 统计数据；RGB 摄像头；ROI 提取
+
+## 1：引言
 
 术语“生物特征”涉及利用个体的有机、物理或社会特征来识别或确认其身份。生物特征被定义为“生命测量”，生物特征创新利用通过摄像头和过滤图像捕获的人体部位图像。多模态生物特征涉及至少两种生物特征模态的组合 ¹⁴⁸
 
 ### 心电图生物特征个人识别工具
 
-这项工作管理心电图 (ECG) 生理信号的可靠性，以协助人体识别。在一个计划的定义证明基础上，专注于布局对齐和灵活量化，测试了一个由来自 Physionet 的 50 个受试者的 ECG 组成的 250 个 ECG 记录的测试集合。存在随时间变化的各种生物信号发生短期变化的不必要风险，这也可能威胁生物特征保护。由于发展，外部框架上的心血管能力信息倾向于有争议。无论如何，即使没有干扰，就某种早先建立的生物特征布局而言，ECG 信号也可能变得不稳定。其背后的解释是身体生理学以及大脑科学对心脏功能的快速影响。沿着这些相同的线路，对受试者内部变异性范例的评估是 ECG 生物特征研究的关键部分。
+这项工作管理心电图 (`ECG`) 生理信号的可靠性，以协助人体识别。在一个计划的定义证明基础上，专注于布局对齐和灵活量化，测试了一个由来自 `Physionet` 的 50 个受试者的 `ECG` 组成的 250 个 `ECG` 记录的测试集合。存在随时间变化的各种生物信号发生短期变化的不必要风险，这也可能威胁生物特征保护。由于发展，外部框架上的心血管能力信息倾向于有争议。无论如何，即使没有干扰，就某种早先建立的生物特征布局而言，`ECG` 信号也可能变得不稳定。其背后的解释是身体生理学以及大脑科学对心脏功能的快速影响。沿着这些相同的线路，对受试者内部变异性范例的评估是 `ECG` 生物特征研究的关键部分。
 
-Lacewell 等 ¹⁴⁹ 的相关工作
+#### Lacewell 等 ¹⁴⁹ 的相关工作
 
-Gemma Piella 等 ¹⁵⁰ 的相关工作
+#### Gemma Piella 等 ¹⁵⁰ 的相关工作
 
-远距离估计生理活动可以给临床和情感处理应用带来显著优势。最近的探索提出了各种程序，利用人脸记录进行脉搏（心率，或 HR）的不显眼识别。这些方法依赖于由于心血管活动引起的面部不显眼的遮盖变化或发展，这些对人眼不可见，但可以被机械化摄像头识别。提出了一些理论，如信号准备和人工智能 (AI)。无论如何，这些系统是针对特定数据集进行区分的，因此在方法执行方面没有共识。在本文中，我们描述并评估了书面记录中的几种方法。在每个阶段，根据其使用公共数据库的表现，对估计值进行剖析和调查。
-
-
-
+远距离估计生理活动可以给临床和情感处理应用带来显著优势。最近的探索提出了各种程序，利用人脸记录进行脉搏（心率，或 `HR`）的不显眼识别。这些方法依赖于由于心血管活动引起的面部不显眼的遮盖变化或发展，这些对人眼不可见，但可以被机械化摄像头识别。提出了一些理论，如信号准备和人工智能 (`AI`)。无论如何，这些系统是针对特定数据集进行区分的，因此在方法执行方面没有共识。在本文中，我们描述并评估了书面记录中的几种方法。在每个阶段，根据其使用公共数据库的表现，对估计值进行剖析和调查。
 
 几个世纪以来，人们一直利用身体特征来相互辨识，如面部、语音和步态。19 世纪时，德里警察总部刑事识别科主管阿方斯·贝蒂永建立并制定了利用不同身体测量值来识别罪犯的方法。同样，随着他的思想普及，在 19 世纪末，它被指纹独特性这一无疑更伟大、更可行的发现所掩盖。不久后，几个重要的立法部门理解了首先“交换”罪犯指纹并将其存入数据库的概念。此后，可在犯罪现场“提取”额外的指纹，并与数据库中的指纹同步以识别个人身份。鉴于生物识别技术源于其在执法领域识别罪犯的广泛应用，如今它越来越多地用于众多非执法应用中以实现个体识别。所提系统使用基本的视频采集网络摄像头，并利用信号处理方案调整面部图像的颜色，这可在心跳辅助下执行，以便后续改进。建议的生物识别技术无需任何重要传感器即可工作。它完整且持续，独特地体现了任何活人的心脏运作方式。且极难伪造；与其传统对应物相比，在标准上将具有超稳定性。本文提出了一种利用这一新型生物识别技术进行个体验证的方法，该方法采用充分的信号处理程序和以分类为主的选择系统 ¹⁵¹。
 
-### 2: 基于面部视频的生物识别系统
+## 2: 基于面部视频的生物识别系统
 
-基于面部视频的心脏信号用于人体识别的建议框图如 图 1 所示。步骤讨论如下。
+基于面部视频的心脏信号用于人体识别的建议框图如图 1 所示。步骤讨论如下。
 
 ![图 1 建议的框图系统。](img/f07-01-9780323852098.jpg)
 
-图 1 建议的框图系统。
+**图 1** 建议的框图系统。
 
-#### 2.1: 人脸检测与视频采集
+### 2.1: 人脸检测与视频采集
 
-建议的方法要求利用红、绿、蓝 (RGB) 摄像头获取面部视频。由于主要基于心跳信号分析的面部视频无限框架主要使用直接网络摄像头进行视频获取，因此此处该方法选择基于网络摄像头的视频获取方法 ¹⁵²。
+建议的方法要求利用红、绿、蓝 (`RGB`) 摄像头获取面部视频。由于主要基于心跳信号分析的面部视频无限框架主要使用直接网络摄像头进行视频获取，因此此处该方法选择基于网络摄像头的视频获取方法 ¹⁵²。
 
 ![图 2 从 RGB 轨迹获得的含噪心跳信号。](img/f07-02-9780323852098.jpg)
 
-图 2 从 RGB 轨迹获得的含噪心跳信号。
+**图 2** 从 `RGB` 轨迹获得的含噪心跳信号。
 
-#### 2.2: 特征提取
+### 2.2: 特征提取
 
-我们从 Radon 图像中提取特征，因为这些快照在基于 ECG 的游戏计划中已被证实能带来适当的结果。要制作此类图像，我们需要一条路径图，该图可通过从面部视频获取的重复心跳信号创建。复制的数量相当于视频中投影的数量 ¹⁵³。
+我们从 `Radon` 图像中提取特征，因为这些快照在基于 `ECG` 的游戏计划中已被证实能带来适当的结果。要制作此类图像，我们需要一条路径图，该图可通过从面部视频获取的重复心跳信号创建。复制的数量相当于视频中投影的数量 ¹⁵³。
 
 ```
 [*f*(*a*,*b*)] = ∫[−∞]^∞ *f*(*a*′cos cos *Ɵ* − *b*′sin sin *Ɵ*,*a*′sin sin *Ɵ* − *b*′cos cos *Ɵ*)*d**y*′………
@@ -2502,7 +2391,7 @@ Gemma Piella 等 ¹⁵⁰ 的相关工作
 
 ![si1_e](img/si1_e.png)  (1)
 
-其中 *Ɵ* 是 Radon 空间中一条线从线心与主轴的距离向量所形成的点，且：
+其中 *Ɵ* 是 `Radon` 空间中一条线从线心与主轴的距离向量所形成的点，且：
 
 ```
 [*a*′*b*′] = [*Ɵ*−sin sin *Ɵ* sin sin *Ɵ* cos cos *Ɵ*] [*a* *b*]
@@ -2510,7 +2399,7 @@ Gemma Piella 等 ¹⁵⁰ 的相关工作
 
 ![si2_e](img/si2_e.png)  (2)
 
-我们利用著名的闵可夫斯基距离度量来计算 Radon 图像 *R* 的 *m* × *n* 像素的成对距离：
+我们利用著名的闵可夫斯基距离度量来计算 `Radon` 图像 *R* 的 *m* × *n* 像素的成对距离：
 
 ```
 $d_{\mathit{st}} = \sqrt[p]{\sum_{i = 1}^{n} \mid \mathit{Rsi} - \mathit{Rti} \mid}p$
@@ -2520,11 +2409,11 @@ $d_{\mathit{st}} = \sqrt[p]{\sum_{i = 1}^{n} \mid \mathit{Rsi} - \mathit{Rti} \m
 
 其中 *R[s]* 和 *R[t]* 是代表 *R* 的每个行向量的行向量。
 
-#### 2.3: 识别
+### 2.3: 识别
 
 我们使用基于决策树的框架进行识别。这是一种流程图状的结构，包含三种区域：(i) 内部节点倾向于对一个属性进行测试；(ii) 分支代表测试的结果；(iii) 叶节点倾向于一个类别标签，这是通过在内部节点隔离所有特征而得出的决定。在使用树（试验阶段）之前，必须对其进行训练。在训练阶段，使用训练数据的特征向量来构建节点并生成决策树。在试验阶段，试验数据的特征向量经历内部节点中的测试，最终获得一个类别名称，其中一个类别代表一个待识别的主体。数据的训练/试验划分在初步结果中说明。
 
-#### 2.4: 实现算法
+### 2.4: 实现算法
 
 *   步骤 1 输入数据：`EEG_data`；
 *   步骤 2 输出数据：`model result`、`features result`；
@@ -2549,28 +2438,25 @@ $d_{\mathit{st}} = \sqrt[p]{\sum_{i = 1}^{n} \mid \mathit{Rsi} - \mathit{Rti} \m
 *   步骤 21 `Else`；
 *   步骤 22 `Save features result`（保存特征结果）。
 
-### 3: 结果与讨论
+## 3: 结果与讨论
 
-#### 3.1: 实验环境
+### 3.1: 实验环境
 
 为测试框架的性能，我们使用了公开可访问的 `MAHNOB-HCI` 数据库。该数据库已收集完成，包含由连接到 PC 的简单摄像机（如网络摄像头）捕获的面部记录。该数据库包含两类数据：`Feeling Elicitation Experiment (EEE)`（情绪诱发实验）和 `Verifiable Tagging Experiment (ITE)`（可验证标注实验）。其中，来自 `EEE` 的视频片段为正面人脸视频统计数据，适合我们的试验。因此，我们从 `MAHNOB-HCI` 数据库中选择了 `EEE` 视频片段作为我们的生物识别识别结构的面部记录。图 3 中展示了来自 `MAHNOB-HCI` 数据库的一些视频片段的描述。该数据库从 30 个受试者中产生了 3810 个面部记录。然而，并非所有这些记录都适合我们的试验，原因是时长短、文件缺失以及某些记录中面部被遮挡（额头）。因此，我们选择了 351 个适合我们研究的记录。这些记录来自 18 个受试者（每个受试者 16-20 个记录）。我们在新颖的重叠测试中，使用每个视频的前 20 秒进行测试，并用 80% 的数据进行规划。
 
 ![图 3 面部视频片段的面部捕捉。](img/f07-03-9780323852098.jpg)
 
+### 3.2 性能评估
 
+在利用关联数据生成选择树之后，我们利用试验数据进行了确认效果分析。每个测试的功能源自面部视频心跳信号（`HSFV`），已在选择树中通过定位方案集中的最佳匹配来实现远程处理。所提 `HSFV` 生物特征识别的性能通过判据指标进行了评估，这些指标包括误正识别率（`FPIR`）和误负识别率。`FPIR` 表示测试被误判为某一主体的概率。在评估中，若在 N 个基础样本中存在真正例、真负例、假正例和假负例 ID。
 
+从结果中可以指出一个重要因素：`TPIR` 和准确率在特性上存在显著差异。这是因为真正例和真负例的开端与胜出在数量上基本占优，且系统实现了高真负批准速度，这通过特异性和灵敏度估算得以体现。这表明，除提供高性能外，所提生物特征识别可能还需要在特征提取和组织评分计算这两个阶段进行改进。尽管基于接触的 `ECG` 和 `PCG` 生物特征识别在某些本地数据库上获得了 90% 以上的精度，但我们认为它们与我们系统的简短对比对其公平性而言是不均衡的，因为它们使用实质性的接触式传感器，可提供心跳信号的细致评估；而我们使用非接触式传感器（网络摄像头），仅能获得通过接触式传感器获取的那些心跳信号的估值。这表明，至少在其意外发展的这一初期阶段，我们的非接触式系统未能超越那些基于接触的系统，这似乎是合理的。
 
-#### 3.2 性能评估
+### 3.3 用于情绪识别的生理数据集比较
 
-在利用关联数据生成选择树之后，我们利用试验数据进行了确认效果分析。每个测试的功能源自面部视频心跳信号（HSFV），已在选择树中通过定位方案集中的最佳匹配来实现远程处理。所提 HSFV 生物特征识别的性能通过判据指标进行了评估，这些指标包括误正识别率（FPIR）和误负识别率。FPIR 表示测试被误判为某一主体的概率。在评估中，若在 N 个基础样本中存在真正例、真负例、假正例和假负例 ID。
+在实验设置过程中，情绪的引入看起来非常困难，而生物信号数据可以与 `EEG` 信号结合进行处理。由此提议了一种获取数据的替代来源。此处使用了开放数据集。表 1 根据研究数据列出了数据集清单。另一方面，未清理的实验数据旨在创建一个包含在 `MAHNOB-HCI` 中的数据集。此处 `MAHNOB-HCI` 数据集被用作带有观察者标记效价的开放数据集，用于连续情绪识别。
 
-从结果中可以指出一个重要因素：TPIR 和准确率在特性上存在显著差异。这是因为真正例和真负例的开端与胜出在数量上基本占优，且系统实现了高真负批准速度，这通过特异性和灵敏度估算得以体现。这表明，除提供高性能外，所提生物特征识别可能还需要在特征提取和组织评分计算这两个阶段进行改进。尽管基于接触的 ECG 和 PCG 生物特征识别在某些本地数据库上获得了 90% 以上的精度，但我们认为它们与我们系统的简短对比对其公平性而言是不均衡的，因为它们使用实质性的接触式传感器，可提供心跳信号的细致评估；而我们使用非接触式传感器（网络摄像头），仅能获得通过接触式传感器获取的那些心跳信号的估值。这表明，至少在其意外发展的这一初期阶段，我们的非接触式系统未能超越那些基于接触的系统，这似乎是合理的。
-
-#### 3.3 用于情绪识别的生理数据集比较
-
-在实验设置过程中，情绪的引入看起来非常困难，而生物信号数据可以与 EEG 信号结合进行处理。由此提议了一种获取数据的替代来源。此处使用了开放数据集。表 1 根据研究数据列出了数据集清单。另一方面，未清理的实验数据旨在创建一个包含在 MAHNOB-HCI 中的数据集。此处 MAHNOB-HCI 数据集被用作带有观察者标记效价的开放数据集，用于连续情绪识别。
-
-##### 表 1：不同数据集编号下的情绪识别比较
+#### 表 1：不同数据集编号下的情绪识别比较
 
 | 数据库编号 | 部分编号 | 自然/诱发 | 声音 | 视频 | 外周 | EEG | 标签 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -2580,13 +2466,13 @@ $d_{\mathit{st}} = \sqrt[p]{\sum_{i = 1}^{n} \mid \mathit{Rsi} - \mathit{Rti} \m
 | DEEP | 32 | 诱发 | 否 | 是 | 是 | 是 | 否 |
 | MAHNOB-HCI | 28 | 诱发 | 是 | 是 | 是 | 是 | 效价 |
 
-MAHNOB-HCI 数据集包含 20 个用于诱发持久情绪的视频。参与者在初步分析中通过自我评估记录感受，协助了视频采集。摘录中的 20 个源视频包含厌恶、大笑、兴奋、恐惧、悲伤和中性情绪。每个视频片段持续约 34–117 秒。研究中有 27 名稳定参与者：13 名男性和 16 名女性。EEG 信号采用 32 个激活电极采集，电极位置符合 Biosemi Active II 和 10-20 国际系统要求。参与者面部以 720 × 580 分辨率、60 帧/秒的速度拍摄，并与 EEG 信号同步。数据集输出详细列于表 2。共制作了 239 条记录，每条记录均有自己的标签和详细信息。图 4 提供了使用 MAHNOB-HCI 数据集的标注标记测试结果示例。实线描绘了目标效价随时间的变化，虚线描绘了 GA-LSTM 预测的效价。标注标记阈值范围为 0.1 到 0.1。图 5A 描绘了正效价随时间的变化，而图 5B 描绘了负效价随时间的变化。GA-LSTM 结果与目标结果通常相同。不寻常的是，GA-LSTM 效价在正或负效价陈述后，趋向于比目标效价更快地向中性值移动。其解释是标注数据不平衡。由于乐观标注多于消极标注，模型受前者影响更大，导致负效价或唤醒度无法正确回归。此外，良好情绪几乎不可能通过面部表情标记，而消极情绪因个体差异大而难以标记。因此，面部表情标记过程对情绪的消极表达敏感。
+`MAHNOB-HCI` 数据集包含 20 个用于诱发持久情绪的视频。参与者在初步分析中通过自我评估记录感受，协助了视频采集。摘录中的 20 个源视频包含厌恶、大笑、兴奋、恐惧、悲伤和中性情绪。每个视频片段持续约 34–117 秒。研究中有 27 名稳定参与者：13 名男性和 16 名女性。`EEG` 信号采用 32 个激活电极采集，电极位置符合 `Biosemi Active II` 和 10-20 国际系统要求。参与者面部以 720 × 580 分辨率、60 帧/秒的速度拍摄，并与 `EEG` 信号同步。数据集输出详细列于表 2。共制作了 239 条记录，每条记录均有自己的标签和详细信息。图 4 提供了使用 `MAHNOB-HCI` 数据集的标注标记测试结果示例。实线描绘了目标效价随时间的变化，虚线描绘了 `GA-LSTM` 预测的效价。标注标记阈值范围为 0.1 到 0.1。图 5A 描绘了正效价随时间的变化，而图 5B 描绘了负效价随时间的变化。`GA-LSTM` 结果与目标结果通常相同。不寻常的是，`GA-LSTM` 效价在正或负效价陈述后，趋向于比目标效价更快地向中性值移动。其解释是标注数据不平衡。由于乐观标注多于消极标注，模型受前者影响更大，导致负效价或唤醒度无法正确回归。此外，良好情绪几乎不可能通过面部表情标记，而消极情绪因个体差异大而难以标记。因此，面部表情标记过程对情绪的消极表达敏感。
 
-##### 表 2：MAHNOB-HCI 数据集
+#### 表 2：MAHNOB-HCI 数据集
 
 | 测试人数 | 共 27 人：男 15；女 12 |
 | :--- | :--- |
-| 记录值 | 32 通道 EEG、外周生理信号、使用 6 个摄像头采集的面部和身体视频、眼动和音频 |
+| 记录值 | 32 通道 `EEG`、外周生理信号、使用 6 个摄像头采集的面部和身体视频、眼动和音频 |
 | 报告 | 刺激、激动、优越性和可预测性、情绪关键词 |
 | 评分范围 | 1–9 |
 | 视频数量 | 20 |
@@ -2594,37 +2480,37 @@ MAHNOB-HCI 数据集包含 20 个用于诱发持久情绪的视频。参与者�
 
 ![图 4 基于 HSFV 生物特征的认证系统性能。](img/f07-04-9780323852098.jpg)
 
-**图 4** 基于 HSFV 生物特征的认证系统性能。
+**图 4** 基于 `HSFV` 生物特征的认证系统性能。
 
 ![图 5 MAHNOB-HCI 测试结果。(A) 正效价和 (B) 负效价。](img/f07-05-9780323852098.jpg)
 
-**图 5** MAHNOB-HCI 测试结果。(A) 正效价和 (B) 负效价。
+**图 5** `MAHNOB-HCI` 测试结果。(A) 正效价和 (B) 负效价。
 
-### 4 结论与未来工作
+## 4 结论与未来工作
 
-本章提出面部视频心跳信号作为一种新的生物特征用于人员验证。利用变换矩阵在复现 HSFV 的瀑布方法论上提取特征。从 Radon 图像中推导双边闵可夫斯基距离作为特征。采用基于决策树的监督方法进行认证。所提生物特征及其认证机制证明了其生物特征识别能力。然而，在该生物特征应用于实际系统之前，仍需调查和解决若干问题。例如，在实际场景中，需要确定可用于认证的视频有效长度。通过管理面部欺骗，将面部与 HSFV 结合可能产生有趣的结果。处理时间、为减少准确率与接受率之间差异而进行的特征优化、以及尝试用于计算匹配得分的替代度量，这些都是必须探讨的事项。这些均可作为拓展现有研究的潜在未来方向。
+本章提出面部视频心跳信号作为一种新的生物特征用于人员验证。利用变换矩阵在复现 `HSFV` 的瀑布方法论上提取特征。从 `Radon` 图像中推导双边闵可夫斯基距离作为特征。采用基于决策树的监督方法进行认证。所提生物特征及其认证机制证明了其生物特征识别能力。然而，在该生物特征应用于实际系统之前，仍需调查和解决若干问题。例如，在实际场景中，需要确定可用于认证的视频有效长度。通过管理面部欺骗，将面部与 `HSFV` 结合可能产生有趣的结果。处理时间、为减少准确率与接受率之间差异而进行的特征优化、以及尝试用于计算匹配得分的替代度量，这些都是必须探讨的事项。这些均可作为拓展现有研究的潜在未来方向。
 
 ### 参考文献
 
+---
 
+# 第 8 章：利用人体生物特征情绪强度实时追踪学生情感投入度
 
+**Sumitav Acharya**^a; **Motahar Reza**^b
 
+^a 计算机科学与工程系，国家科学技术学院，贝拉姆普尔，印度
 
-## 第 8 章：利用人体生物特征情绪强度实时追踪学生情感投入度
+^b 数学系，`GITAM` 视同大学，海得拉巴，印度
 
-Sumitav Acharya^a; Motahar Reza^b  
-^a 计算机科学与工程系，国家科学技术学院，贝拉姆普尔，印度  
-^b 数学系，GITAM 视同大学，海得拉巴，印度
-
-### 摘要
+## 摘要
 
 本章阐述了利用人类情绪强度追踪学生在课堂中的情感投入度的实用性，这属于行为生物特征识别的一部分。行为生物特征识别处理人类活动的模式。它包括物理和情感生物特征，这些特征标志着一种用于识别行为的特质。在课堂上，学生分心是行为生物特征识别的因素之一。其程度和持续时间各不相同。学生投入度常被视为解决表现低下、冷漠、脱离及高不及格率等问题的信号之一。情绪与我们的面部表情交织在一起，由 43 块面部肌肉调节，而这些肌肉本身又由两条面神经管理。利用 `FAU`（面部动作单元）考察了课堂上呈现心不在焉面容的主要特征。这涵盖了追踪的多个方面，范围从学生进入教室时捕获第一帧开始，然后在其留在课堂期间对相应结构进行区分。在我们的方法中，最初通过标注分心面部数据集来识别面部关键点。随后，利用负责的像素值和标签对其进行训练，以帮助机器识别分心/未分心面部的相关特征。处理完数据集后，我们串联了两个模型来训练分心数据集，一个是基于卷积神经网络的自定义深度情绪网络，另一个是用于保持对称性的 `Reversed-NN`。因此，在输出层，我们将两者的输出串联起来，以识别面部是否分心/未分心。该流程支持在实时摄像头中部署模型，以追踪学生的行为生物特征。在数据库上进行的实验强化了可用于生物特征识别目的的“拟议特征”。
 
-#### 关键词
+### 关键词
 
 行为生物特征识别；机器学习；`FAU`（面部动作单元）；计算机视觉；深度情绪-CNN；`Reversed-NN`（神经网络）；生物特征识别
 
-### 1：引言
+## 1：引言
 
 了解人类举止是判断力的象征，它展示了面部动作或表情的视觉证据。人类情绪强度 ¹⁵⁴
 
@@ -2632,41 +2518,43 @@ Sumitav Acharya^a; Motahar Reza^b
 
 尽管存在多种专注于学生投入度追踪的方法，但它们基于基于部分的方法，即分析面部的不同运动。我们的主要目标是利用动作单元关联面部的显著特征，找出那些导致分心面容的特征，并据此进行分类。我们模型的多功能方法论支持与学生注意力相关的各种新兴关注点 ¹⁵⁶
 
-### 2：相关工作
+## 2：相关工作
 
 众所周知，行为生物特征识别涉及基于独特行为特质识别个体。它开启了一个特质的新视野，正如我们在日常认证策略中所见，范围涵盖从语音识别、击键动力学到手写签名识别。这些策略主要装备于许多现代应用中，以追踪其用户的行为。但在这里，我们通过面部情绪识别来追踪个体的情绪行为。因此，通过情绪追踪学生的投入度是我们发现的一种此类应用。现有的技术方法代表了投入度检测的流程，主要分为三大类：自动、半自动和手动。一般来说，基于机器的系统提升了观察力，即通过瞳孔运动、面部情绪特征可以提取特征以识别课堂上投入的学生。现在投入度检测更多地关注面部表情、基于部分的方法（阐述通过不同动作单元分析面部的技术，也称为 `FACS`）和基于外观的方法。
 
-Zewe Serpell 和 Yi-Ching Lin 进行的研究 ¹⁵⁷
+### Zewe Serpell 和 Yi-Ching Lin 进行的研究 ¹⁵⁷
 
-### 3：方法论
+## 3：方法论
 
 我们的工作流围绕三个层次的阶段展开。初始阶段处理图像数据获取与预处理 ¹⁵⁸
 
 ![图 1 解释方法论的框图。](img/f08-01-9780323852098.jpg)
 
-图 1 解释方法论的框图。
+**图 1** 解释方法论的框图。
 
-#### 3.1：初始数据集准备的预处理步骤
+### 3.1：初始数据集准备的预处理步骤
 
 预处理是图像的增强过程，旨在抑制不必要的损伤，进一步增加进一步处理所需的图像特征 ¹⁵⁹
+
+
 
 该算法指出，不完美的像素通常被替换为附近像素值的平均值。鉴于存在多种预处理受损图像的技术，范围从高斯模糊技术、傅里叶变换（主要用于图像滤波、压缩和重建）到几何变换（改变像素的位置）等。
 
 我们的数据集包含多张基于输入图像的 364*321 分辨率图像，我们执行了各种预处理步骤，即调整大小、归一化、高斯模糊技术等。
 
-1.  **1** 每张输入图像均调整大小至 48*48，以在模型中保持一致性。特定阈值下的背景对象被视为第二阶段预处理的输入。
-2.  **2** 然后我们对图像执行归一化，改变像素强度值的范围。
-3.  **3** 然后应用高斯模糊技术以去除不需要的噪声。
+1. **1** 每张输入图像均调整大小至 48*48，以在模型中保持一致性。特定阈值下的背景对象被视为第二阶段预处理的输入。
+2. **2** 然后我们对图像执行归一化，改变像素强度值的范围。
+3. **3** 然后应用高斯模糊技术以去除不需要的噪声。
 
-#### 3.2：特征提取技术
+### 3.2：特征提取技术
 
 在我们的工作中，我们使用了提升型 `LBP`（局部二值模式）作为特征提取技术，因为与标准 `LBP` 方法相比，它所需的计算时间更少。在此方法中，两张面部图像对应 `LBP` 之间的卡方距离主要用于分类。该技术在我的数据集上达到了 96.72% 的准确率。
 
-#### 3.3：解读 FACS 数据库
+### 3.3：解读 FACS 数据库
 
-面部动作编码系统是一种基于部分的方法技术，通过考虑面部部分来分析人类情绪。首先，该标准由解剖学家 Carl-Herman Hjortsjö 揭示，后来被 Ekman 和 Wallace V. Friesen 采纳并于 1978 年发布 ¹⁶⁰
+面部动作编码系统是一种基于部分的方法技术，通过考虑面部部分来分析人类情绪。首先，该标准由解剖学家 Carl-Herman Hjortsjö 揭示，后来被 Ekman 和 Wallace V. Friesen 采纳并于 1978 年发布 ¹⁶⁰。
 
-该编码系统还帮助面试官在与候选人交流时分析面部行为。使用 `FACS` ¹⁶¹
+该编码系统还帮助面试官在与候选人交流时分析面部行为。使用 `FACS` ¹⁶¹。
 
 让我们探索数据库中的一些内容：
 
@@ -2680,17 +2568,13 @@ Zewe Serpell 和 Yi-Ching Lin 进行的研究 ¹⁵⁷
 
 图 3 分心数据集示例。
 
-#### 3.4：分步算法
+### 3.4：分步算法
 
-1.  **1.** 准备数据集
-    1.  **1.1** 初始预处理
-    2.  **1.2** `data[]` <- 从带标签的 csv 加载
+1. **1.** 准备数据集
+   1. **1.1** 初始预处理
+   2. **1.2** `data[]` <- 从带标签的 csv 加载
 
-
-
-
-
-#### 3.5：训练与实时分类
+### 3.5：训练与实时分类
 
 从数据集中提取瓶颈特征后，我们根据像素值训练标签。因此，从某种意义上说，像素值表示主要标志特定行为特征（分心/未分心）的区域。对我们自制数据集中的图像进行编码。提取了三列，一列是标签，第二列是字符串（像素值），并伴有预测信息。你只需处理该数据集进行训练，然后在给定数据集上进行测试。模型架构见图 4。
 
@@ -2702,21 +2586,21 @@ Zewe Serpell 和 Yi-Ching Lin 进行的研究 ¹⁵⁷
 
 就训练目的而言，我们设定批次大小为 64，各训练 25 个周期。而最后将两个模型拼接的阶段，批次大小为 32，各训练 3 个周期。
 
-正如图 4 中的模型通过拼接镜像和正常图像来促进对称性，每张图像都会经过后续的卷积层 ¹⁶²
+正如图 4 中的模型通过拼接镜像和正常图像来促进对称性，每张图像都会经过后续的卷积层 ¹⁶²。
 
-#### 3.6：该方法的优缺点
+### 3.6：该方法的优缺点
 
 首先列出我们策略的优点：
 
-*   在本章中，我们拼接了两层模型以提高准确率。一个是自定义深度情感网络，另一个是反转神经网络（Reversed-NN），用于考虑现实场景中的对称性处理。
-*   我们的模型在真实课堂环境中对分心面部进行分类，平均准确率达到 95.7%，超越了现有模型。
+* 在本章中，我们拼接了两层模型以提高准确率。一个是自定义深度情感网络，另一个是反转神经网络（Reversed-NN），用于考虑现实场景中的对称性处理。
+* 我们的模型在真实课堂环境中对分心面部进行分类，平均准确率达到 95.7%，超越了现有模型。
 
 不足之处：
 
-*   我认为我们模型的劣势在于数据集的异质性。对于未来的工作，我们必须考虑涵盖不同地区人脸的多种多样的数据集，并在此基础上提取其面部特征。
-*   在多样化数据集之上弄清模型准确率。
+* 我认为我们模型的劣势在于数据集的异质性。对于未来的工作，我们必须考虑涵盖不同地区人脸的多种多样的数据集，并在此基础上提取其面部特征。
+* 在多样化数据集之上弄清模型准确率。
 
-### 4：结果与讨论
+## 4：结果与讨论
 
 工作流程使用 `Python-3.7.9` 实现，利用了 `OpenCV`、`Tensorflow` 和 `Keras` 等各种计算机视觉库。整个工作在 `Intel Core i5 4th Gen 4210U` 处理器上完成并进行了检验。对于实时预测，模型已与 GUI 连接。流程如下：打开应用程序，提示启动摄像头，随后实时预测随之进行。GUI 作为一个独立应用程序，利用情感强度触发模型对学生行为进行实时跟踪。图 5 和 图 6 解释了 GUI 结果。
 
@@ -2728,7 +2612,7 @@ Zewe Serpell 和 Yi-Ching Lin 进行的研究 ¹⁵⁷
 
 图 6 实时未分心图像的 GUI 结果。
 
-### 5：结论
+## 5：结论
 
 提出了一种适当的解决方案，用于跟踪学生在课堂学习时的行为属性。该解决方案开启了多种应用，范围涵盖从学生身份验证和表现记录、增强培训能力到减少失败措施。通过这项研究，我们不仅旨在通过自定义深度情感网络提高性能，而且计算时间的降低也十分显著。研究的大部分集中于利用 FACS 数据库提取面部的主导特征，然后通过实施模型将其与行为生物识别技术映射，以区分指定类别。采用的技术显示出利用情感强度对分心面部进行分类的近乎同等良好的效果，并在模型性能上获得了显著提升。我们的方法在考虑多样化数据集以实现全流程自动化方面有所欠缺，对我们的模型和该领域的进一步改进将有利于跟踪课堂上的学生参与度。
 
@@ -2749,10 +2633,6 @@ Priyanshu Sarmah^(a)；Rupam Das^(a)；Sachit Dhamija^(a)；Saurabh Bilgaiyan^(b
 面部识别；CNN；机器学习；情绪检测；面部表情检测；深度学习；序列模型；HOG
 
 ### 1：引言
-
-
-
-
 
 COVID-19 大流行影响了全球人民的健康，并给教育领域带来了挑战。为遵守社交距离规范，全球各地的教育机构均已关闭。各机构尝试将课程转移到线上，以维持课程和讲座的连续性，从而缓解这一问题。许多供师生进行视频会议的软件可供教育机构用于开展在线课程。虽然此类举措促进了在线学习，但线上课程也带来了自身的一系列问题。本章旨在阐述解决部分关键挑战的技术框架。
 
@@ -2796,10 +2676,6 @@ Happy 等人 ¹⁶⁸。
 
 为了在给定图像中定位人脸，我们将图像转换为灰度图，因为彩色数据对于定位人脸是不必要的。图 1 演示了这一步骤。
 
-
-
-
-
 ##### 3.1.2：评估
 
 为了评估所用质量估计与我们提出框架的对比情况，我们使用了扩展 Yale 数据库 B ¹⁷¹。
@@ -2818,15 +2694,11 @@ Happy 等人 ¹⁶⁸。
 | 2. | Rahmad 等 ¹⁷³ | 79.0 |
 | 3. | 提出的框架 | 97.2 |
 
-
-
-
-
 #### 3.2：情绪识别
 
 情绪检测的过程是通过识别面部表情来进行的，因为这是在线课堂期间监控的一个便利方面。情绪检测的一个实际实现是在学生的计算机上安装此类软件，该软件将在在线讲座期间运行。该软件会在预定义的时间间隔内检查学生的面部表情，并将学生可能感受到的心情或情绪传达给教师。以这种方式，该软件不要求通过互联网连接传输学生面部的图像。相反，软件在学生的计算机上本地运行算法，以获得检测到的面部表情的概率值。概率值提供了学生基于其表情感受某种情绪的可能性。这些数字通过互联网连接发送到教师的计算机。它还为教师提供“主要”面部表情，即学生最可能感受到的情绪，以及计算出的最高概率所对应的情绪。通过采取这一措施，框架可以在不需要占用大量带宽的情况下执行其预期功能，而带宽可能是不可靠的互联网连接。这使得教师即使无法看到学生，也能继续接收哪怕是基本形式的学生反馈，以改进他们的讲座。
 
-该实现假设有七种基本情绪，算法可将检测到的面部表情分类到这七种情绪中。这些情绪是——愤怒、恐惧、厌恶、中性、快乐、悲伤和惊讶。为了检测面部表情并将其归类为七种情绪类别之一，学生的图像需要经过预处理。这涉及人脸检测、调整大小和裁剪。人脸检测由`Haar cascade classifiers`（Haar 级联分类器）执行，这是 Viola 和 Jones 在其 2003 年的论文中提出的 ¹⁷⁴。
+该实现假设有七种基本情绪，算法可将检测到的面部表情分类到这七种情绪中。这些情绪是——愤怒、恐惧、厌恶、中性、快乐、悲伤和惊讶。为了检测面部表情并将其归类为七种情绪类别之一，学生的图像需要经过预处理。这涉及人脸检测、调整大小和裁剪。人脸检测由 `Haar cascade classifiers`（Haar 级联分类器）执行，这是 Viola 和 Jones 在其 2003 年的论文中提出的 ¹⁷⁴。
 
 由于训练自定义神经网络是一个计算密集型过程，该实现采用了迁移学习。`Bottleneck features`（瓶颈特征）是从预训练的 `VGG-16` 卷积神经网络（`CNN`）创建的。该网络包含在 `ImageNet` 数据库上训练的权重。我们的序贯模型使用这些 `bottleneck features` 在提供的数据集上进行训练。
 
@@ -2836,11 +2708,11 @@ Happy 等人 ¹⁶⁸。
 
 预处理期间执行了以下步骤：
 
-*   将输入的 3 通道 `RGB` 图像转换为 1 通道灰度图像（如适用）。这样做是为了在训练期间不存在偏差，即彩色图像混杂在一些灰度图像中。此外，模型的结果不依赖于图像的颜色。
-*   在每张图像中，通过实现来自 `OpenCV` 库的级联分类器来检测人脸，这些分类器基于 `Haar-like features`（类 Haar 特征）。级联分类器使用若干正样本（包含人脸或物体的图像）和任意负样本（不包含人脸或物体的图像）进行训练。`OpenCV` 包含若干预训练的级联分类器，用于图像处理以检测人脸的正面视图和上半身。
-*   图像被裁剪为 `Haar cascade classifiers` 检测到的人脸区域。
-*   图像被调整为 224 × 224 像素的分辨率，这是 `VGG-16` 模型所需的分辨率。
-*   最后，为了符合 `VGG-16` 的 3 通道规范，将 1 通道（灰度）图像转换为 3 通道图像，以使用预训练模型的权重。然后，将图像保存到磁盘。
+* 将输入的 3 通道 `RGB` 图像转换为 1 通道灰度图像（如适用）。这样做是为了在训练期间不存在偏差，即彩色图像混杂在一些灰度图像中。此外，模型的结果不依赖于图像的颜色。
+* 在每张图像中，通过实现来自 `OpenCV` 库的级联分类器来检测人脸，这些分类器基于 `Haar-like features`（类 Haar 特征）。级联分类器使用若干正样本（包含人脸或物体的图像）和任意负样本（不包含人脸或物体的图像）进行训练。`OpenCV` 包含若干预训练的级联分类器，用于图像处理以检测人脸的正面视图和上半身。
+* 图像被裁剪为 `Haar cascade classifiers` 检测到的人脸区域。
+* 图像被调整为 224 × 224 像素的分辨率，这是 `VGG-16` 模型所需的分辨率。
+* 最后，为了符合 `VGG-16` 的 3 通道规范，将 1 通道（灰度）图像转换为 3 通道图像，以使用预训练模型的权重。然后，将图像保存到磁盘。
 
 ##### 3.2.2：Haar 级联分类器
 
@@ -2852,14 +2724,16 @@ Happy 等人 ¹⁶⁸。
 
 我们利用 `Haar features` 识别人脸的属性有：
 
-1.  **鼻梁和眼睛**：鼻梁区域和眼睛的相邻矩形可以产生一个 `Haar feature`，因为通常鼻梁区域比较暗的眼睛要亮，如图 10 所示；
-    ![Fig. 10 阴影矩形如何对应鼻部区域。](img/f09-10-9780323852098.jpg)
-    **图 10 阴影矩形如何对应鼻部区域。**
-2.  **眼部区域比上颊暗**：眼部区域和位置较低的上颊的相邻矩形被用于另一个 `Haar feature`。
+1. **鼻梁和眼睛**：鼻梁区域和眼睛的相邻矩形可以产生一个 `Haar feature`，因为通常鼻梁区域比较暗的眼睛要亮，如图 10 所示；
+   ![Fig. 10 阴影矩形如何对应鼻部区域。](img/f09-10-9780323852098.jpg)
+   **图 10 阴影矩形如何对应鼻部区域。**
+2. **眼部区域比上颊暗**：眼部区域和位置较低的上颊的相邻矩形被用于另一个 `Haar feature`。
 
 图像区域位于黑白相邻矩形之下。位于白色矩形下的像素密度之和减去位于灰色矩形下的像素密度之和。在图 9 的 C 中，鼻梁区域可占据中央灰色矩形，而眼部区域占据相邻的白色矩形。该滤波器有三个矩形，其中侧向位置的白色矩形中的像素密度之和从中央位置的灰色矩形中减去。D 中使用的滤波器可以减去对角线位置区域之间的像素密度 ¹⁷⁷。
 
 ##### 3.2.3：VGG-16 网络与建模
+
+
 
 `VGG-16` 网络结构由 Simonyan 和 Zisserman 开发，并提交至 `ILSVRC—2014` 竞赛，在 `ImageNet` 数据集上达到了 92.7% 的准确率 ¹⁷⁸。
 
@@ -2873,13 +2747,9 @@ Happy 等人 ¹⁶⁸。
 
 由于训练 `CNN` 涉及的硬件限制，采用了迁移学习。迁移学习利用带有 `ImageNet` 权重的预训练 `VGG-16` 模型层来配合新数据集进行训练。但是，它不更新层的权重以生成所需的 `bottleneck features`。为了创建 `bottleneck features`，仅使用了前五组卷积层和池化层，即从 `VGG-16` 架构中排除了全连接层和分类层。`bottleneck features` 存储在 `NumPy` 数组中。
 
+### 3.2.4 测试与结果
 
-
-
-
-##### 3.2.4：测试与结果
-
-用于训练的序贯模型包含五个全连接层、一个用于调整过拟合的 Dropout 层以及一个批量归一化层。前四个全连接层分别包含 512、256、128 和 64 个 ReLU 激活单元。ReLU 是一种非线性激活函数，可表示如下：
+用于训练的序贯模型包含五个全连接层、一个用于调整过拟合的 `Dropout` 层以及一个批量归一化层。前四个全连接层分别包含 512、256、128 和 64 个 `ReLU` 激活单元。`ReLU` 是一种非线性激活函数，可表示如下：
 
 $$a = \mathit{ReLU}\left( b \right) = \left\{ \begin{matrix} {b;\mspace{27mu}\text{if}\ b \geq 0} \\ {0;\mspace{27mu}\text{if}\ b < 0} \\ \end{matrix} \right.$$
 
@@ -2889,21 +2759,21 @@ $$a = \mathit{ReLU}\left( b \right) = \left\{ \begin{matrix} {b;\mspace{27mu}\te
 
 测试数据集从原始的 30,000 张图像池中获取，按 90:10 的比例划分训练集和测试集。每张图像都按前述顺序进行了预处理：转换为灰度图，随后进行人脸检测、裁剪和调整大小。
 
-Dropout 率降低至 0.7 以保持较低的训练损失；例如，较低的 Dropout 率（0.4）会显著增加最后几个周期的训练损失，同时也会降低测试准确率。当批量归一化层放在第三个全连接层之后时，效果最好。该序贯模型在训练数据集上达到了 89.58% 的准确率，在测试数据集上达到了 89.2% 的准确率。训练期间，学习率设置为 0.001。使用的损失函数是带有 Adam 优化器的分类交叉熵损失。
+`Dropout` 率降低至 0.7 以保持较低的训练损失；例如，较低的 `Dropout` 率（0.4）会显著增加最后几个周期的训练损失，同时也会降低测试准确率。当批量归一化层放在第三个全连接层之后时，效果最好。该序贯模型在训练数据集上达到了 89.58% 的准确率，在测试数据集上达到了 89.2% 的准确率。训练期间，学习率设置为 0.001。使用的损失函数是带有 `Adam` 优化器的分类交叉熵损失。
 
-图 12 和 图 13 分别展示了在序贯模型的训练和测试验证过程中，准确率和分类交叉熵损失随周期变化的图表。结果发现，在第 13 个周期之后，测试验证损失开始增加，而相应的准确率没有显著提高。这暗示发生了过拟合，因为训练准确率在第 13 个周期后仍在持续提高。
+图 12 和图 13 分别展示了在序贯模型的训练和测试验证过程中，准确率和分类交叉熵损失随周期变化的图表。结果发现，在第 13 个周期之后，测试验证损失开始增加，而相应的准确率没有显著提高。这暗示发生了过拟合，因为训练准确率在第 13 个周期后仍在持续提高。
 
 ![图 12 显示训练和验证每个周期准确率的图表。](img/f09-12-9780323852098.jpg)
 
-图 12 显示训练和验证每个周期准确率的图表。
+**图 12 显示训练和验证每个周期准确率的图表。**
 
 ![图 13 显示训练和验证每个周期损失的图表。](img/f09-13-9780323852098.jpg)
 
-图 13 显示训练和验证每个周期损失的图表。
+**图 13 显示训练和验证每个周期损失的图表。**
 
-表 2 和 表 3 分别显示了模型在测试时的召回率矩阵和精确率矩阵。召回率，也称为灵敏度，可定义为模型预测的正确正样本数量与训练时定义的正样本总数之比。召回率矩阵表中的每个数字代表这一比率。召回率意味着该比率定义了模型能预测多少正确的值。精确率可定义为正确预测的正样本数量与模型预测的正样本总数之比。它本质上是定义预测有多正确的比率。精确率矩阵表中的每个数字代表这一比率。
+表 2 和表 3 分别显示了模型在测试时的召回率矩阵和精确率矩阵。召回率，也称为灵敏度，可定义为模型预测的正确正样本数量与训练时定义的正样本总数之比。召回率矩阵表中的每个数字代表这一比率。召回率意味着该比率定义了模型能预测多少正确的值。精确率可定义为正确预测的正样本数量与模型预测的正样本总数之比。它本质上是定义预测有多正确的比率。精确率矩阵表中的每个数字代表这一比率。
 
-###### 表 2：召回率矩阵——检测到的情绪分类为 7 个类别
+#### 表 2：召回率矩阵——检测到的情绪分类为 7 个类别
 
 | 期望/真实面部表情 | 检测到的面部表情 |
 | --- | --- |
@@ -2918,7 +2788,7 @@ Dropout 率降低至 0.7 以保持较低的训练损失；例如，较低的 Dro
 
 <div class="small_device"> <p class="table_fig"><img src="images/B9780323852098000018/t0015.png" alt="表 2" /></p></div>
 
-###### 表 3：精确率矩阵——检测到的情绪分类为 7 个类别
+#### 表 3：精确率矩阵——检测到的情绪分类为 7 个类别
 
 | 期望/真实面部表情 | 检测到的面部表情 |
 | --- | --- |
@@ -2939,18 +2809,15 @@ Dropout 率降低至 0.7 以保持较低的训练损失；例如，较低的 Dro
 
 该序贯模型在执行 7 类分类问题时实现了高准确率，该问题涉及将检测到的面部表情分类为 7 个类别之一——愤怒、厌恶、恐惧、开心、中性、悲伤和惊讶。模型及其权重已保存到磁盘，以便对任意拍摄的照片实施情绪检测。
 
-
-
-
 为了进行真实世界的测试，在低分辨率相机设置和 1280 × 720 像素分辨率（这是大多数笔记本电脑的标准配置）的笔记本网络摄像头上，拍摄了少量受试者的多张照片。这些照片的受试者是坐在书桌前、距离屏幕舒适、在自然室内光照下的人员。这样做是为了模拟在线课堂场景，即学生坐在椅子上，网络摄像头固定在书桌高度的电脑上。摄像头或笔记本电脑与受试者面部的距离在 75 到 90 厘米之间。在图像 1280 × 720 像素的分辨率下，这个距离在人脸检测后能提供良好的图像裁剪，得到模型所需的 224 × 224 像素分辨率，同时保留图像中足够的细节。这些图像中的每一张都经过了预处理并生成了瓶颈特征，然后被输入到序列模型中。序列模型的输出为七个情绪类别中的每一个提供了一组概率列表。结果发现，当受试者的面部光照良好，或光照足以辨别基本面部特征时，模型能达到高准确率并正确分类面部表情。对于光线昏暗的受试者，模型对检测到的情绪获得的准确率较低。在搭载英特尔酷睿 i5-7200U 处理器（集成显卡）和 8GB 内存的笔记本电脑上生成的预测主导概率在 87% 到 79% 之间。从图像预处理到输出，这些结果始终能在 45 秒内稳定获得（图 14）。
 
 ![图 14 描述情绪检测过程的流程图。](img/f09-14-9780323852098.jpg)
 
-图 14 描述情绪检测过程的流程图。
+**图 14 描述情绪检测过程的流程图。**
 
 在将我们的框架与其他合适的实现（如 Minaee 等人 ¹⁸¹ 基于注意力的卷积网络）进行比较时……
 
-### 4：结论与未来工作
+## 4 结论与未来工作
 
 本章利用人脸识别和情绪检测技术，提出了解决疫情期间在线课程广泛采用所带来挑战的方案。
 
@@ -2974,69 +2841,67 @@ P. Suresh^(a)；K. Logeswaran^(a)；P. Keerthika^(b)；R. Manjula Devi^(b)；K. 
 
 网络安全；网络攻击；机器学习；入侵检测；深度学习；生物识别；分类
 
-### 1：引言
+### 1 引言
 
 如今，许多组织要求员工远程工作和/或限制出差。此外，黑客利用这一点加强了他们的行动。随着越来越多的员工继续在家工作，维持和保持严格的安全控制可能会更加困难。由于支持互联网的设备增加，攻击面也随之扩大，这导致风险增加。此外，攻击者变得更加先进，创造出绕过安全措施的零日漏洞和恶意软件，使它们能够长时间不被发现。零日漏洞是以前未曾观察到的威胁，但也是成熟攻击手法的变体 ¹⁸²
 
 由于全球互联和利用云存储来存储个人信息和其他数据，网络安全风险正在增长。由于云应用程序/服务缺乏配置，组织遭受日益复杂的网络犯罪分子的网络攻击。网络威胁能够在公司的任何阶段产生。网络诈骗（如网络钓鱼和勒索软件）会损害敏感数据 ¹⁸³
 
-
-
 如今，无论是个人、小型企业还是大型公司，都在所有方面依赖计算机。当计算机与云计算相结合时，云安全、移动电话和物联网中的风险会因网络安全风险而影响到每个人。由于攻击者日益高明以及黑客可利用的工具增多，网络安全已成为当今最具挑战性的领域之一。它是算法、技术和策略的集合，这些要素协同工作，通过保护网络、资源、应用程序和数据的隐私性、机密性和可用性来保障其安全。恶意软件、数据泄露、社会工程学、网络钓鱼、SQL 注入、内部威胁、拒绝服务攻击和高级持续性威胁都是常见的网络安全威胁 ¹⁸⁴
 
 本章涵盖了机器学习和深度学习技术在网络安全中的各种应用。它还探讨了机器学习和深度学习技术在网络安全系统的设计、运行和发展中的应用，以及该领域未来的研究与开发前景。增强网络安全系统功能的各类生物识别应用也在本章中有所介绍。本章讨论了机器学习和深度学习技术如何应用于危害系统、网络、应用程序和数据的各类攻击。它还提供了利用机器学习和深度学习方法识别网络攻击的深入分析。此外，它还论述了机器学习和深度学习技术在网络安全架构中的应用，以及各类新应用的训练过程。
 
-#### 1.1：网络攻击的类别
+#### 1.1 网络攻击的类别
 
 犯罪分子的手段日益复杂，以下是每天影响众多社区的几种攻击。网络威胁包括勒索软件攻击，它劫持关键业务工具以勒索赎金解锁；也包括秘密行动，黑客入侵系统以窃取宝贵数据。
 
-##### 1.1.1：恶意软件
+##### 1.1.1 恶意软件
 
 恶意软件一词指代勒索软件、病毒和间谍软件等恶意程序。它通常通过利用系统缺陷渗透网络，例如点击电子邮件中的可疑链接或下载危险程序。一旦进入网络，恶意软件可窃取机密信息、在系统内生成更多恶意软件，甚至阻断对关键网络组件的访问 ¹⁸⁵
 
-##### 1.1.2：网络钓鱼
+##### 1.1.2 网络钓鱼
 
 网络钓鱼是指发送看似来自知名、可信来源的恶意消息。为消除疑虑并诱使受害者点击危险链接，这些消息会使用与企业相同的徽标、名称等。点击钓鱼链接后，网络犯罪分子便能获取登录凭证和信用卡号等机密数据 ¹⁸⁶
 
-##### 1.1.3：社会工程学
+##### 1.1.3 社会工程学
 
 社会工程学是通过心理操纵诱导人们泄露机密数据的手段。网络钓鱼是其一种形式，犯罪分子利用人们天生的好奇心或信任感牟利。语音操纵是社会工程学的典型例子，犯罪分子获取个人语音并加以篡改，致电其亲友索要个人或机密数据 ¹⁸⁷
 
-##### 1.1.4：中间人攻击
+##### 1.1.4 中间人攻击
 
 当攻击者拦截双方之间的信息流动时，就会发生中间人攻击。例如，犯罪分子可能将自己置于公共 Wi-Fi 网络与用户计算机之间。如果受害者未使用安全的 Wi-Fi 连接，网络犯罪分子还可能在不被发现的情况下窃取受害者的所有详细信息 ¹⁸⁸
 
-##### 1.1.5：零日攻击
+##### 1.1.5 零日攻击
 
 此类攻击日益普遍。此类攻击发生在网络漏洞披露与补丁方案应用之间的时间窗口内。大多数组织会出于公开和安全的原则宣布发现其网络安全存在问题，但黑客会利用这个机会在组织发布安全修复前发动攻击 ¹⁸⁹
 
-### 2：生物识别技术在网络安全中的应用
+### 2 生物识别技术在网络安全中的应用
 
 生物识别技术是未来数据保护和网络安全的理想选择。为获得对受保护设备的访问权限，生物识别保护使用特定的身体特征。生物识别保护采用人脸、虹膜和指纹识别等方法来验证个人身份并监控对机密数据的访问，而非使用可能被泄露或窃取的密码。生物识别扫描仪是采集数据以验证个人身份的专用硬件设备 ¹⁹⁰
 
 ![Fig. 1 Taxonomy of biometrics.](img/f10-01-9780323852098.jpg)
 
-图 1 生物识别技术分类。
+**图 1 生物识别技术分类。**
 
 然而，在一个日益无纸化的世界中，不得不开发出更复杂的方法来识别和认证个人。鉴于全球恐怖主义、网络黑客攻击和复杂有组织犯罪手段的风险日益上升，这一点尤为真实。生物识别安全已确立为认证、识别和验证方面最先进的可用技术。生物识别认证的基本原理是每个人都是独特的，并可通过内在或行为特征来界定。生物识别技术可基于特定面部特征、指纹、签名、DNA 识别个人，从而提供一种安全便捷的认证方法 ¹⁹¹
 
 生物识别学是通过测量和统计分析研究个人身体和行为特征的学科。生物识别是基于一个或多个生理或行为特征来区分个人的手段。该信息用于识别用户并授予访问权限。用户青睐生物识别系统，因为信息载体始终随身携带，不会丢失或被伪造 ¹⁹²
 
-#### 2.1：指纹扫描
+#### 2.1 指纹扫描
 
 人类指纹由手指表面的脊和谷组成，因人而异，可用于识别个人。手指表皮上层段称为脊，下层段称为谷。脊和沟的各种模式、细节特征点决定了指纹的唯一性 ¹⁹³
 
 ![Fig. 2 Fingerprint identification process.](img/f10-02-9780323852098.jpg)
 
-图 2 指纹识别过程。
+**图 2 指纹识别过程。**
+
+
 
 光学和超声波等新技术正在开发中，用于在用户识别过程中采集指纹以进行认证。识别指纹使用两种关键算法：细节特征匹配和模式匹配。细节特征匹配通过匹配提取的细节特征来寻找一位用户指纹与另一位用户指纹的差异。用户向设备注册时，可采集其手指表面的细节特征位置和方向。指纹识别设备通过比较显示的细节特征图像与访问时提供的图像来验证用户身份。模式匹配不是比较某个特定点，而是比较手指的所有表面。它关注手指表面的厚度、密度和曲率。采用此方法时，手指表面图像将包括细节特征点周围区域、低曲率半径区域和异常脊组合 ¹⁹⁴
 
-
-
 使用指纹识别设备具有广泛的优势。该系统易于运行和设置。它需要低成本设备且功耗低。然而，该系统也存在一些缺点。如果手指表面有损伤和标记，识别会变得更加困难。设备通常要求用户手指表面具有特征点或细节以进行图像匹配。这将成为算法安全性的绊脚石。指纹认证系统通常用于广泛的应用，如手机、笔记本电脑和其他设备。这类系统主要用于法律系统，以记录用户详细信息并核实其身份¹⁹⁵
 
-#### 2.2：语音识别
+## 2.2：语音识别
 
 图 3 展示了语音识别方法的流程图。在语音识别中，将口语短语与数字原型进行比较。它用于安全系统，如门禁控制和考勤监控，以识别和认证用户。设备生成的数字模板极有可能被正确解读。一个人的语音的生理和行为特征是独特的。喉咙、口腔、鼻腔、喉部的大小和形状以及体重影响生理方面。语言、教育水平和居住地都影响行为特征，可能导致独特的语调、口音和方言¹⁹⁶
 
@@ -3048,25 +2913,25 @@ P. Suresh^(a)；K. Logeswaran^(a)；P. Keerthika^(b)；R. Manjula Devi^(b)；K. 
 
 语音识别系统易于设置，所需设备极少。麦克风、电话麦克风甚至电脑麦克风都是此类设备的例子。然而，仍有一些变量可能影响系统效率。首先，用户录制语音到数据库时的表现至关重要。因此，会要求人员重复说一段简短的短语和/或句子；因此，机器可以更可靠地分析他们的声音。未经授权的用户能够录制授权用户的声音并通过认证过程以获得设备访问控制。为了防止通过录音设备非法访问，语音识别系统将在认证期间要求人员重复设备生成的随机句子/单词¹⁹⁷
 
-##### 2.2.1：语音说话人识别
+### 2.2.1：语音说话人识别
 
 确定匿名说话人身份的过程称为识别。在说话人识别中，语音将与 N 个模式进行 1:N（多对一）匹配。说话人识别系统还可用于对话中的说话人分类，并在用户不知情的情况下检查用户是否已在系统中注册等。在取证应用中，通常从说话人识别方法开始生成最佳匹配列表，然后经过一系列验证步骤以找到确定的模式。
 
-##### 2.2.2：语音说话人验证
+### 2.2.2：语音说话人验证
 
 它是利用语音作为评估说话人身份以进行访问控制的手段。这里，当用户的语音与称为声纹或语音模型的单个原型匹配时，会发生 1:1 匹配。说话人认证常用于允许访问电话银行等系统。这些系统在用户知情的情况下工作，通常需要他们的参与。
 
-#### 2.3：人脸识别
+## 2.3：人脸识别
 
 它使用面部特征进行人员身份的识别和验证。这里，使用高分辨率摄像头捕获面部的二维或三维图像。计算眉毛、眼睛、鼻子、下巴、嘴唇、耳朵的轮廓及其之间的距离，并可根据面部旋转、倾斜、面部表情等修改图像。一个人的面部图像存储在数据库中，这是比较不同人员照片所必需的¹⁹⁸
 
 人脸是生物识别安全系统中用于识别用户的最简单特征之一。这项技术常用是因为它不涉及用户与计算机之间的物理交互。对于认证，摄像头检查用户的面部并将其与数据库进行比较。它也易于设置，不需要任何昂贵的硬件。面部扫描软件常用于许多安全系统，包括物理访问控制和设备用户账户。然而，它不如其同类（如视网膜、虹膜或 DNA）独特。因此，它通常与其他机器特征结合使用¹⁹⁹
 
-#### 2.4：签名识别
+## 2.4：签名识别
 
 它是通过分析笔迹风格（特别是签名）来验证个人身份的过程。使用一支笔和一个连接到计算机的特殊设备来匹配和验证模式。高质量设备可以记录签名速度、压力和时间等行为特征。个人必须在平板上多次书写以收集数据。签名识别算法提取时间、压力、速度、笔画方向、签名路径和大小。算法给这些点分配不同的权重。静态和动态数字手写签名认证是两种主要风格²⁰⁰
 
-#### 2.5：虹膜扫描与识别
+## 2.5：虹膜扫描与识别
 
 它是扫描虹膜图案的过程。虹膜因其独特性被转换为数字代码。由于虹膜上可能出现老年斑和变色，因此使用黑白图像。人眼的虹膜是眼中一个细长的圆形结构，调节瞳孔的大小和直径。它还调节到达视网膜的光量，以保护眼睛的视网膜。虹膜颜色是因人而异的变量，由遗传决定。一个人的虹膜颜色决定了其眼睛的颜色²⁰¹
 
@@ -3078,10 +2943,7 @@ P. Suresh^(a)；K. Logeswaran^(a)；P. Keerthika^(b)；R. Manjula Devi^(b)；K. 
 
 虹膜识别系统是当今广泛使用的安全系统。它独特且能快速识别用户。尽管设备需要昂贵的设备，但它也是识别客户最简单、最快捷的方式。在验证过程中，用户与设备之间不应有物理接触²⁰²
 
-#### 2.6：静脉识别
-
-
-
+## 2.6：静脉识别
 
 该技术采用模式识别技术，基于在手指皮下部分发现的人类静脉样本照片。由于静脉模型位于皮肤表面之下，因此无法伪造。指静脉识别通过捕获指静脉样本并利用红外线将其与模型进行匹配来工作。图 5 展示了指静脉扫描和识别系统。
 
@@ -3093,7 +2955,7 @@ P. Suresh^(a)；K. Logeswaran^(a)；P. Keerthika^(b)；R. Manjula Devi^(b)；K. 
 
 专家们更加关注静脉识别系统，因为它们拥有许多其他生物识别技术所缺乏的附加功能。它具有更高级别的防护，能够更好地保障信息安全和访问控制 ²⁰⁴。
 
-#### 2.7：DNA 生物识别系统
+## 2.7：DNA 生物识别系统
 
 图 6 说明了 DNA 匹配过程。生物识别认证最可靠的方法是使用一个人的 DNA 密码。它基于人类脱氧核糖核酸链的特殊序列。该过程从 DNA 样本的制备开始，如口腔拭子、唾液、精液、血液和其他组织。对样本进行分析，建立 DNA 概况，并通过与另一个样本比较来验证身份。由于每个人的 DNA 都不同，因此很难模仿这一特征。每个人的 DNA 都携带从父母那里遗传来的遗传特征。这种 DNA 在人体的每个细胞中都被复制。DNA 分析可以计算出在多个不同位点重复的变异数目串联重复（VNTR）的数量。一个人的 DNA 概况由 VNTR 的数量组成。该系统需要时间，因为它有更复杂的步骤来从每个人身上采集 DNA。首先，它必须采集每个人提供的物理样本中的 DNA。然后，必须将样本分解成包含 VNTR 的微小片段。随后，计算并排列每个 DNA 片段的大小，然后与其他样本进行匹配 ²⁰⁵。
 
@@ -3103,7 +2965,7 @@ P. Suresh^(a)；K. Logeswaran^(a)；P. Keerthika^(b)；R. Manjula Devi^(b)；K. 
 
 DNA 生物识别系统具有高度唯一性，超过一个人拥有相似 DNA 概况的可能性极小，且该技术仍相对较新，很少在公共场合使用。它需要使用大量昂贵的设备，以有效地分解 DNA 并分析 DNA 的特定特征来建立 DNA 概况。为了采集用户的 DNA 数据，系统可能还需要从他们那里获取物理样本（头发、血液等）。导致该系统使用不足的另一个因素是时间。系统完成建立和检查每个人 DNA 概况的所有过程需要相当长的时间。由于这些缺点和障碍，与其他生物识别系统不同，它没有被广泛使用。未来，这种独特且改进的生物识别技术将用于日常生活 ²⁰⁶。
 
-### 3：网络攻击与机器学习
+# 3：网络攻击与机器学习
 
 机器学习擅长某些任务，例如轻松扫描海量数据并利用统计学进行分析。网络安全系统产生海量数据，因此该技术如此有用也就不足为奇了。机器学习已成为网络安全的关键组成部分。机器学习通过模式识别、实时网络犯罪可视化和彻底的渗透测试，主动预防网络威胁并增强安全基础设施。在海量数据和网络安全专业知识稀缺的时代，机器学习似乎是唯一的选择。图 7 展示了使用 ML/DL 方法的网络安全系统框图 ²⁰⁷。
 
@@ -3115,7 +2977,7 @@ DNA 生物识别系统具有高度唯一性，超过一个人拥有相似 DNA �
 
 深度学习技术可应用于各种目的，如入侵检测和防御系统、恶意软件检测、垃圾邮件检测、网络流量监控、网站篡改检测和用户行为分析。在这些领域，DL 相比其他方法显示出了重大进展。通常，深度学习方法分为两大类，即监督深度学习和无监督深度学习方法。监督 DL 算法包括全连接前馈深度神经网络（FNN）、卷积前馈深度神经网络（CNN）和循环深度神经网络（RNN）。无监督 DL 算法包括深度置信网络（DBN）和堆叠自编码器（SAE） ²⁰⁹。
 
-### 4：ML 和 DL 在网络安全中的应用
+# 4：ML 和 DL 在网络安全中的应用
 
 网络安全系统 ML 模型的分类法如图 8 所示。机器学习已成为网络安全的关键组成部分。通过模式识别、实时网络犯罪可视化和彻底的渗透测试，机器学习主动消除网络威胁并增强安全基础设施。以下是可用于执行网络安全任务的各种方法 ²¹⁰。
 
@@ -3123,79 +2985,73 @@ DNA 生物识别系统具有高度唯一性，超过一个人拥有相似 DNA �
 
 图 8 网络安全 ML 模型分类法。
 
-#### 4.1：回归
-
-
-
+## 4.1：回归
 
 它也被称为预测。利用当前的数据信息以获取对新数据的感知。它被用于网络安全中的欺诈检测。特征（如可疑交易总额、位置等）决定了欺诈行为的可能性。当涉及回归的技术方面时，有两大类需要考虑：机器学习和深度学习。
 
-#### 4.2：分类
+## 4.2：分类
 
 分类过程也很简单。假设你有两堆照片，每堆按形式分类（例如，狗和猫）。垃圾邮件过滤器将垃圾邮件与其他邮件分开，可被视为网络安全方面的一个例子。垃圾邮件过滤器绝对是应用于网络安全任务的第一个机器学习解决方案。在特定组别的示例已知的情况下，监督学习技术常用于分类。一开始，所有类别都应被指定。当数据量更大时，深度学习方法表现更好。然而，它们消耗更多能源，特别是如果它们用于生产环境并定期重新训练系统的话 ²¹¹
 
-#### 4.3：聚类
+## 4.3：聚类
 
 聚类和分组有些相似，但有一个巨大的区别。没有关于数据分组的详细信息。无法知道这些信息是否可以被分类。这被称为无监督学习。取证分析被认为是聚类的最佳任务。事件的原因、路径和后果都是未知的。为了发现异常，必须对所有行为进行分类。它可用于在恶意软件检测解决方案中区分合法文件与异常值（例如，恶意软件安全或受保护的电子邮件网关）。用户活动分析是另一个可以使用聚类的有趣领域。在这种情况下，程序用户聚集在一起，以确定他们是否被分配到特定组别。通常，聚类通常不用于解决特定的网络安全任务，因为它只是流水线中的一个子任务 ²¹²
 
-#### 4.4：关联规则学习
+## 4.4：关联规则学习
 
 它是一种基于规则的机器学习方法，可用于发现关系。该理论可专门用于网络安全中的事件响应。如果一个组织经历了一波事件并提供了不同类型的响应，系统会学习针对特定事件的一种响应形式。如果风险评估软件根据漏洞的定义为新漏洞分配风险值，它也可能是有利的。该系统利用历史漏洞数据库的数据来发现漏洞关联规律，并将其应用于漏洞风险评估。该系统将基于历史数据库定义攻击规则，并可应用于检测系统中的攻击 ²¹³
 
-#### 4.5：降维
+## 4.5：降维
 
 它是极其重要的过程之一，网络安全系统高度需要它，以减少分类特征并提高预测模型的准确性。它可以帮助应对并消除不必要的功能 ²¹⁴
 
-#### 4.6：生成模型
+## 4.6：生成模型
 
 生成模型的角色与前面描述的那些不同。这些模型将基于先前的决策模拟真实数据，而某些任务处理当前的知识和相关决策。进攻性网络防护的基本任务是创建一个输入参数列表，以评估特定应用程序的注入漏洞。它是一种无监督学习方法，可以通过考虑大量现有样本来针对某种现象进行训练，然后生成新样本。此类的最佳例子是生成对抗网络、深度自回归网络和变分自编码器 ²¹⁵
 
-### 5：基于机器学习的网络安全系统
+# 5：基于机器学习的网络安全系统
 
-#### 5.1：使用机器学习的网络防护系统
+## 5.1：使用机器学习的网络防护系统
 
 网络安全是一组专注于特定协议的解决方案，例如以太网、无线网络和虚拟网络（如 SDN）。入侵检测系统（IDS）解决方案通常被称为网络安全 ²¹⁶
 
-#### 5.2：用于端点防护的机器学习
+## 5.2：用于端点防护的机器学习
 
 端点检测与响应（EDR）是最新一代杀毒软件。最好从进程的行为中学习属性/特征。机器学习解决方案将根据端点类型（如服务器、工作站和物联网设备）而有所不同。端点有其自身的特征集，但有些任务是通用的，例如回归以预测可执行进程的下一个设备调用并将其与实际调用进行比较，分类将应用程序/程序分类为恶意软件和间谍软件等类别，以及用于稳定电子邮件网关上的恶意软件安全的聚类 ²¹⁷
 
-#### 5.3：用于应用安全的机器学习
+## 5.3：用于应用安全的机器学习
 
 机器学习算法可应用于各种应用程序，如 Web 应用程序、数据库和云应用程序，以提供安全性。在不久的将来，无法开发出一种能高效应对所有威胁的通用机器学习模型 ²¹⁸
 
-#### 5.4：用于用户行为的机器学习
+## 5.4：用于用户行为的机器学习
 
 用户与实体行为分析（UEBA）利用海量数据集来建模网络中人类和机器的典型与非典型行为。它通过识别此类基线，用于识别可疑活动、潜在风险和常规杀毒程序无法检测到的攻击。由于它分析不同的行为趋势，它可以检测非恶意软件攻击 ²¹⁹
 
 用户行为是一种动态层和无监督学习问题，专注于通用攻击和训练分类器的能力。在大多数情况下，没有标记数据集或关于要寻找什么的指示。因此，为所有用户设计一个通用算法是用户行为行业的一项艰巨任务。回归和分组可用于识别用户行为中的异常（例如，在异常时间登录），聚类可用于隔离用户群体并检测异常值，而分类可用于识别不同用户 ²²⁰
 
-#### 5.5：用于进程行为的机器学习
+## 5.5：用于进程行为的机器学习
 
 最后但同样重要的是进程领域。为了发现异常，在处理业务流程时最好先了解它。业务流程可能差异很大，因为欺诈可能发生在银行和零售系统中，也可能发生在制造工厂的车间里。两者截然不同，且需要大量的领域知识。要在机器学习中取得成果，需要特征工程。同样，每种方法都有其自身的特征集。一般来说，进程领域的活动包括回归，它预测下一个用户行为并检测信用卡欺诈等异常值；分类检测已识别形式的欺诈；聚类比较业务流程并检测异常值 ²²¹
 
-### 6：基于深度学习的网络安全系统
+# 6：基于深度学习的网络安全系统
 
-#### 6.1：入侵检测/入侵防御（ID/IP）系统
+## 6.1：入侵检测/入侵防御（ID/IP）系统
 
 ID/IP 系统检测网络中的恶意活动，防止入侵者访问网络，并提醒用户。公认的签名和常见攻击形式常被用于识别它们。这在数据泄露等风险情况下很有用。通常，机器学习算法最初被用于执行此任务。然而，这些方法导致系统产生大量误报，使防护团队的工作更加困难并导致过度疲劳 ²²²
 
-
-
-
-# 用于入侵检测与防御的深度学习
+### 用于入侵检测与防御的深度学习
 
 深度学习（DL）、卷积神经网络（CNN）和循环神经网络（RNN）可用于构建更先进的 ID/IP 系统，通过更准确地评估流量并区分恶意与非恶意网络活动。令人印象深刻的解决方案包括下一代防火墙（NGFW）、Web 应用防火墙（WAF）和 UEBA。为了识别已知威胁，ID/IP 系统使用基于规则和基于特征的控制。对手可以通过更改恶意软件特征轻松绕过传统的网络 ID/IP 系统。基于深度神经网络的系统已被用于解决传统安全用例，如恶意软件和间谍软件检测 ²²³
 
-#### 6.2：恶意软件检测
+## 6.2：恶意软件检测
 
 标准防火墙通过基于特征的检测方案来检测恶意软件。公司维护一个已识别威胁的数据库，并定期更新以纳入新近出现的威胁。虽然该策略对这类威胁效果良好，但难以应对更复杂的威胁。DL 算法无需调用现有特征或攻击样本即可检测更复杂的威胁。相反，它们学习网络行为，并能发现可能预示着不良行为者或恶意软件存在的可疑活动 ²²⁴
 
-#### 6.3：社会工程学与垃圾邮件检测
+## 6.3：社会工程学与垃圾邮件检测
 
 社会工程学攻击通常需要心理操纵，以说服毫无戒备的消费者或员工泄露机密或敏感信息。通常，社会工程学包含一封电子邮件或其他联系方式，在受害者心中灌输紧迫感、恐惧或其他相关情绪，导致受害者泄露机密信息或点击恶意链接 ²²⁵
 
-#### 6.4：网络流量分析
+## 6.4：网络流量分析
 
 在分析 HTTPS 流量以搜索恶意行为时，深度学习算法显示出了良好的效果。这在应对各类网络威胁（如 SQL 注入和 DoS 攻击）方面极为有用 ²²⁶
 
@@ -3207,7 +3063,9 @@ Alice 与目标服务器之间的通信过程如图 9 所示。Alice 通过请�
 
 TOR 的创建旨在保护用户隐私。企业网络通过不允许安装 TOR 客户端或阻断入口节点 IP 地址来封锁 TOR 流量。然而，对手和恶意软件有多种方式接入 TOR 网络并利用其发送数据和信息。封锁 IP 地址并非明智之举。对手可能生成不同的 IP 来进行通信。可通过分析流量数据包来检测 TOR 流量。此项检测可在 TOR 节点上进行，也可在客户端与入口节点之间进行。每个流由源地址、源端口、目的地址和目的端口组成的元组构成。
 
-##### 6.4.1：实验数据
+
+
+### 6.4.1 实验数据
 
 数据研究所用数据获自新不伦瑞克大学。其数据由对大学互联网流量回顾分析所得特征组成。表 1 显示了从数据中提取的元数据。除这些之外，还使用了其他基于流的参数。图 10 描绘了数据集中的一个代表性示例。
 
@@ -3232,7 +3090,7 @@ TOR 的创建旨在保护用户隐私。企业网络通过不允许安装 TOR �
 
 **图 11** 使用 DL 网络进行流量检测。
 
-隐藏层数量从 2 到 10 不等。N = 5 被认为是最佳数量。所有隐藏层均使用 ReLU 作为激活函数。隐藏层默认为稠密层，维度为 100。输出节点由 Sigmoid 函数激活。DL 模块在后端使用 Keras 和 TensorFlow 进行训练。FFN 使用二元交叉熵损失进行优化。模型使用不同的轮数进行训练。图 12 描绘了一次训练模拟，随着轮数增加，效率提升且损失值最小化。
+隐藏层数量从 2 到 10 不等。`N = 5` 被认为是最佳数量。所有隐藏层均使用 `ReLU` 作为激活函数。隐藏层默认为稠密层，维度为 100。输出节点由 `Sigmoid` 函数激活。`DL` 模块在后端使用 `Keras` 和 `TensorFlow` 进行训练。`FFN` 使用二元交叉熵损失进行优化。模型使用不同的轮数进行训练。图 12 描绘了一次训练模拟，随着轮数增加，效率提升且损失值最小化。
 
 ![图 12 网络训练过程统计。](img/f10-12-9780323852098.jpg)
 
@@ -3252,16 +3110,13 @@ TOR 的创建旨在保护用户隐私。企业网络通过不允许安装 TOR �
 
 <div class="small_device"> <p class="table_fig"><img src="images/B9780323852098000079/t0015.png" alt="表 2" /></p></div>
 
-
-
-
 在各种分类器中，随机森林（RF）和基于深度学习（DL）的方法表现优于其他方法。该性能基于 55,000 个训练场景。与传统的基于 DL 的系统相反，本实验使用的数据集相对有限。随着训练数据的增长，基于 DL 和 RF 的分类器输出均有所改善。另一方面，对于大型数据集，基于 DL 的分类器通常优于其他分类器，并且可推广至同类应用。例如，若需要某分类器检测 TOR 所使用的应用，仅需重新训练输出层，而其他层将保持不变。
 
-##### 6.5：网站篡改检测
+### 6.5 网站篡改检测
 
 篡改攻击会改变网站的内容，从而修改网站的外观。这是对企业、机构和政府网站及 Web 应用程序最重大的威胁之一。基于深度学习的解决方案可通过利用正常和被篡改的网页作为训练数据来构建检测配置文件，从而执行检测 ²²⁹
 
-### 7：结论与未来展望
+## 7 结论与未来展望
 
 一方面，机器学习在保护计算机系统方面并非**灵丹妙药**。毫无疑问，存在许多可解释性问题，尤其是在深度学习算法的情况下。然而，随着数据量的增加和专家数量的减少，机器学习是唯一的解决方案。它当前行之有效，在不久的将来也将被需要。最好立即着手开始。另一个值得注意的要点是，黑客越来越多地在攻击中使用机器学习。
 
@@ -3269,9 +3124,9 @@ TOR 的创建旨在保护用户隐私。企业网络通过不允许安装 TOR �
 
 ### 参考文献
 
-## 第 11 章：基于加密方案的可逆数据隐藏技术在智能环境中的安全生物特征认证系统
+## 第 11 章 基于加密方案的可逆数据隐藏技术在智能环境中的安全生物特征认证系统
 
-V.M. Manikandan ^()计算机科学与工程，SRM 大学-AP，阿马拉瓦蒂，安得拉邦，印度
+V.M. Manikandan ^() 计算机科学与工程，SRM 大学-AP，阿马拉瓦蒂，安得拉邦，印度
 
 ### 摘要
 
@@ -3281,7 +3136,7 @@ V.M. Manikandan ^()计算机科学与工程，SRM 大学-AP，阿马拉瓦蒂，
 
 可逆数据隐藏；生物特征认证；云计算；信息安全；图像加密
 
-### 1：引言
+### 1 引言
 
 过去几年来，基于人脸识别的认证系统被部署在各种场所，以确保授权人员进入受限区域。即使在今天，物联网（IoT）控制的智能家庭中基于人脸识别的认证也非常普遍 ²³⁰
 
@@ -3310,9 +3165,6 @@ V.M. Manikandan ^()计算机科学与工程，SRM 大学-AP，阿马拉瓦蒂，
 *   在生物特征安全领域引入了 RDH 方案。
 *   拟议方案在加密过程中将压缩的指纹细节嵌入人脸图像中。这确保了指纹的安全通信并保护了人脸图像的机密性。
 *   我们引入了游程编码和 Elias gamma 编码过程用于指纹压缩。
-
-
-
 
 The rest of this chapter is organized as follows: Section 2 discusses the literature review in detail; Section 3 details the proposed scheme; Section 4 gives the illustrative description; Section 5 details the experimental study and result analysis; Section 6 concludes the chapter.
 
@@ -3349,59 +3201,62 @@ This section details the proposed scheme. The scheme will be used for a biometri
 
 | Step 1 | Capture a color face image using a camera |
 | :--- | :--- |
-| Step 2 | Capture a fingerprint using a fingerprint scanner |
-| Step 3 | Convert the fingerprint image (grayscale) to its corresponding binary image |
-| Step 4 | Apply run-length encoding to the binary fingerprint |
-| Step 5 | Encode the run-length sequence using the Elias gamma coding process |
-| Step 6 | Hide the compressed fingerprint details in the face image with the help of RDH through encryption to obtain an encrypted image with hidden data |
-| Step 7 | Transmit the encrypted face image with fingerprint details to the cloud service provider |
 
-One of the limitations of the RDH scheme is the low embedding rate. The fingerprint data is compressed to ensure that the RDH scheme does not face any difficulty in embedding the details in the face image. All three color planes (i.e., R, G, and B) are extracted separately from the face image, and each plane is processed separately while embedding the fingerprint data. Each color plane will be divided into non-overlapping blocks, and one bit of data from the compressed fingerprint details will be embedded in each block. The output of the data hiding phase will finally result in an encrypted image. The encrypted image can be securely transmitted to the cloud service provider for storage or authentication purposes. The cloud will process the received data and send an authentication control message back to the client to activate certain hardware modules, allowing the user to enter the restricted area. The sequence of operations at the sender side is given in Algorithm 1.
 
-**Algorithm 1: Proposed Algorithm for Hiding Fingerprint Data in Face Image**
 
-| Input | Face image F (RGB format), Fingerprint image P, and Encryption keys K[1] and K[2] |
+## 算法流程
+
+| 步骤 | 描述 |
 | :--- | :--- |
-| Output | Encrypted face image E with embedded compressed version of P |
+| Step 2 | 使用指纹扫描仪采集指纹 |
+| Step 3 | 将指纹图像（灰度）转换为对应的二值图像 |
+| Step 4 | 对二值指纹应用游程长度编码 |
+| Step 5 | 使用 Elias gamma 编码过程对游程长度序列进行编码 |
+| Step 6 | 通过加密借助 RDH 将压缩指纹细节隐藏在人脸图像中，获得包含隐藏数据的加密图像 |
+| Step 7 | 将包含指纹细节的加密人脸图像传输给云服务提供商 |
 
-| 1 | Convert P to its corresponding binary image by thresholding and retain in P. |
-| 2 | Find the run-length encoding sequence L from the binary fingerprint image P. |
-| 3 | Encode the run-length sequence L using the Elias gamma coding scheme to obtain P^c. |
-| 4 | Find all three color planes R, G, and B from the given face image F. Let these three color planes be represented as F^R, F^G, F^B. |
-| 5 | Generate two pseudo-random integer matrices M⁰ and M¹ based on encryption keys K[1] and K[2]. |
+RDH 方案的一个局限性是嵌入率低。为确保 RDH 方案在将细节嵌入人脸图像时不遇到困难，指纹数据会被压缩。人脸图像的所有三个颜色平面（即 R、G 和 B）被分别提取，并在嵌入指纹数据时分别处理。每个颜色平面将被划分为非重叠块，每个块中嵌入一位来自压缩指纹细节的数据。数据隐藏阶段的输出最终将生成一幅加密图像。该加密图像可安全地传输给云服务提供商，用于存储或认证目的。云端将处理接收到的数据，并向客户端发回认证控制消息以激活特定硬件模块，允许用户进入受限区域。发送端的操作序列见 Algorithm 1。
 
+### Algorithm 1: Proposed Algorithm for Hiding Fingerprint Data in Face Image
 
-
-
+| 项目 | 描述 |
+| :--- | :--- |
+| **Input** | 人脸图像 `F`（RGB 格式）、指纹图像 `P`、加密密钥 `K[1]` 和 `K[2]` |
+| **Output** | 嵌入了 `P` 压缩版本的加密人脸图像 `E` |
+| 1 | 通过阈值处理将 `P` 转换为对应的二值图像并保留在 `P` 中。 |
+| 2 | 从二值指纹图像 `P` 中找到游程长度编码序列 `L`。 |
+| 3 | 使用 Elias gamma 编码方案对游程长度序列 `L` 进行编码以获得 `P^c`。 |
+| 4 | 从给定人脸图像 `F` 中找到所有三个颜色平面 R、G 和 B。设这三个颜色平面分别表示为 `F^R`、`F^G`、`F^B`。 |
+| 5 | 基于加密密钥 `K[1]` 和 `K[2]` 生成两个伪随机整数矩阵 `M⁰` 和 `M¹`。 |
 
 #### 算法描述
 
 | 步骤 | 描述 |
 | :--- | :--- |
-| 6 | 将图像颜色平面 $F^R, F^G, F^B$ 划分为大小为 $B \times B$ 像素的非重叠块。假设 $F^K[x,y]$ 表示图像块，其中 $1 \le x \le \lfloor R/B \rfloor$ 且 $1 \le y \le \lfloor C/B \rfloor$ 且 $K \in \{R, G, B\}$。每个颜色平面将有 $N$ 个块，其中 $N = \lfloor R/B \rfloor \times \lfloor C/B \rfloor$。人脸图像中的总块数将为 $3N$。 |
-| 7 | $S = (F^R, F^G, F^B)$ |
-| 8 | $K = 1$ |
-| 9 | While $L \neq \phi$ do |
-| 10 | 从列表 $S$ 中移除第一个颜色平面 $F^K$ 并将其保存在 $G$ 中 |
-| 11 | While $x \le R-B$ do |
-| 12 | While $y \le C-B$ do |
-| 13 | $b = P^c[K]$ // 从 $P^c$ 访问第 $K$ 位 |
-| 14 | If $b == 0$ then |
-| 15 | 使用 $M⁰[x,y]$ 通过逐像素 XOR 运算加密图像块 $G[x,y]$ |
-| 16 | ElseIf $b == 1$ then |
-| 17 | 使用 $M¹[x,y]$ 通过逐像素 XOR 运算加密图像块 $G[x,y]$ |
+| 6 | 将图像颜色平面 `F^R`、`F^G`、`F^B` 划分为大小为 `B × B` 像素的非重叠块。假设 `F^K[x,y]` 表示图像块，其中 `1 ≤ x ≤ ⌊R/B⌋` 且 `1 ≤ y ≤ ⌊C/B⌋` 且 `K ∈ {R, G, B}`。每个颜色平面将有 `N` 个块，其中 `N = ⌊R/B⌋ × ⌊C/B⌋`。人脸图像中的总块数将为 `3N`。 |
+| 7 | `S = (F^R, F^G, F^B)` |
+| 8 | `K = 1` |
+| 9 | While `L ≠ φ` do |
+| 10 | 从列表 `S` 中移除第一个颜色平面 `F^K` 并将其保存在 `G` 中 |
+| 11 | While `x ≤ R-B` do |
+| 12 | While `y ≤ C-B` do |
+| 13 | `b = P^c[K]` // 从 `P^c` 访问第 `K` 位 |
+| 14 | If `b == 0` then |
+| 15 | 使用 `M⁰[x,y]` 通过逐像素 XOR 运算加密图像块 `G[x,y]` |
+| 16 | ElseIf `b == 1` then |
+| 17 | 使用 `M¹[x,y]` 通过逐像素 XOR 运算加密图像块 `G[x,y]` |
 | 18 | EndIf |
-| 19 | $y = y + 1$ |
+| 19 | `y = y + 1` |
 | 20 | EndWhile |
-| 21 | $x = x + 1$ |
+| 21 | `x = x + 1` |
 | 22 | EndWhile |
-| 23 | 将 $G[x, y]$ 保留在 $F^K$ 的对应位置 |
-| 24 | $K = K + 1$ |
+| 23 | 将 `G[x, y]` 保留在 `F^K` 的对应位置 |
+| 24 | `K = K + 1` |
 | 25 | EndWhile |
-| 26 | 组合所有更新后的 $F^K$ 以获得最终加密图像 $E$ |
-| 27 | Output $E$ |
+| 26 | 组合所有更新后的 `F^K` 以获得最终加密图像 `E` |
+| 27 | Output `E` |
 
-<div class="small_device"> <p class="table_fig"><img src="images/B978032385209800002X/t0020.png" alt="Unlabelled Table" /></p></div>
+![Unlabelled Table](images/B978032385209800002X/t0020.png)
 
 在 Fig. 2 中给出了所提方案的说明性示例。输入将是彩色人脸图像和指纹图像，输出将是包含压缩指纹数据的加密人脸图像。
 
@@ -3414,7 +3269,7 @@ One of the limitations of the RDH scheme is the low embedding rate. The fingerpr
 | 步骤 | 描述 |
 | :--- | :--- |
 | Step 1 | 从加密图像中分离出每个颜色平面 |
-| Step 2 | 一次考虑一个平面，并将该平面划分为大小为 $B \times B$ 像素的非重叠块 |
+| Step 2 | 一次考虑一个平面，并将该平面划分为大小为 `B × B` 像素的非重叠块 |
 | Step 3 | 按行优先线性顺序访问块，一次考虑一个图像块 |
 | Step 4 | 尝试使用加密密钥 `K[1]` 和 `K[2]` 生成的伪随机矩阵解密选定的图像块，以获得两个不同的块 `B[1]` 和 `B[2]` |
 | Step 5 | 使用 Algorithm 2 中定义的算法计算 `B[1]` 和 `B[2]` 中相邻像素之间的相关性。假设 `M[1]` 和 `M[2]` 是由 Algorithm 2 获得的度量值 |
@@ -3426,11 +3281,11 @@ One of the limitations of the RDH scheme is the low embedding rate. The fingerpr
 
 提取的指纹和恢复的人脸图像将用于进一步的人脸识别和指纹识别。云服务提供商可以使用任何高效算法进行人脸识别或指纹识别。这些方案的讨论超出了本研究范围。
 
-##### Algorithm 2: Finding the adjacency relationship between pixels
+### Algorithm 2: Finding the adjacency relationship between pixels
 
 | 项目 | 描述 |
 | :--- | :--- |
-| **Input** | 大小为 $B \times B$ 的图像块 `C` |
+| **Input** | 大小为 `B × B` 的图像块 `C` |
 | **Output** | `C` 中像素邻接属性的度量值，记为 `M` |
 | Step 1 | 对图像块 `C` 应用量化以获得 `C^Q`，其值范围为 0 到 64 |
 | Step 2 | 从 `C^Q` 中找到直方图 `H` |
@@ -3439,19 +3294,19 @@ One of the limitations of the RDH scheme is the low embedding rate. The fingerpr
 
 我们用来区分正确恢复的图像块和错误解密块的关键思想是分析量化后的块。量化过程会将接近的像素值归入同一个桶中。在自然图像（人脸图像）块中，图像块中的像素将非常接近，因此直方图的峰值将很高。但在错误恢复的图像块中，像素将呈随机分布。
 
-### 4: Illustrative examples
+## 4: Illustrative examples
 
 为了更好地理解使用游程长度编码和 Elias gamma 编码过程组合进行指纹压缩，此处讨论一个说明性示例。
 
 | 步骤 | 描述 |
 | :--- | :--- |
-| Step 1 | 假设指纹 `F` 是一个大小为 $16 \times 16$ 位的小图像，如下所示：<br>![t11-01-9780323852098](img/t11-01-9780323852098.jpg) |
+| Step 1 | 假设指纹 `F` 是一个大小为 `16 × 16` 位的小图像，如下所示：<br>![t11-01-9780323852098](img/t11-01-9780323852098.jpg) |
 | Step 2 | 假设游程长度编码过程将按列优先线性顺序考虑 `F` 的像素值。基本上，第一个位值作为参考，然后游程长度编码过程识别连续 1 或 0 的数量。游程长度编码序列如下：<br>![t11-02-9780323852098](img/t11-02-9780323852098.jpg) |
 | Step 3 | 游程长度序列将使用 Elias gamma 编码过程进行编码。要编码一个需要 `N` 位的数字 `P`，我们将在该数字前添加 `(N - 1)` 个 0 作为前缀。表示一个 `N` 位二进制数需要 `2·N - 1` 个位。<br>![t11-03-9780323852098](img/t11-03-9780323852098.jpg) |
 
-在上述示例中，原始指纹图像的位数为 $16 \times 16 = 256$ 位。最终 Elias gamma 编码序列的位数为 185，压缩比为 1.38。我们可以考虑为实时应用使用其他更好的二值图像压缩技术。
+在上述示例中，原始指纹图像的位数为 `16 × 16 = 256` 位。最终 Elias gamma 编码序列的位数为 185，压缩比为 1.38。我们可以考虑为实时应用使用其他更好的二值图像压缩技术。
 
-### 5: Experimental study and result analysis
+## 5: Experimental study and result analysis
 
 在本文中，我们提出了一种通过加密实现 RDH 方案的应用，用于从用户端到云服务提供商的生物特征数据安全传输。所提算法使用 `Matlab 2020b` 实现，并使用了 `SOCOFing` 指纹数据集和 `UTKFace` 数据集 ²⁴⁵。
 
@@ -3459,21 +3314,19 @@ One of the limitations of the RDH scheme is the low embedding rate. The fingerpr
 
 1.  **Compressed ratio (CR)**：压缩比定义如下：
 
-
-
-
 $$\\mathit{CR} = \\frac{\\textit{原始指纹图像中的总比特数}}{\\textit{压缩后指纹图像中的比特数}}$$
 
 ![si1_e](img/si1_e.png)
 
-#### 2. 安全性分析
+### 2. 安全性分析
+
 加密图像的随机性通过熵和直方图分析进行评估。
 
-#### 3. 基于直方图度量的原始图像块与错误解密块分类分析
+### 3. 基于直方图度量的原始图像块与错误解密块分类分析
 
 #### A. 压缩比分析
 
-在所提方案中，我们使用了游程编码序列和 Elias gamma 编码过程来压缩二值指纹图像。SOCOFing 数据集中指纹图像的尺寸为 103 × 96，在原始二值表示中需要 9888 位。游程编码过程利用了相邻比特中的冗余。对于随机选取的 100 张图像，压缩后获得的压缩比在 图 3 中以图形方式展示。
+在所提方案中，我们使用了游程编码序列和 Elias gamma 编码过程来压缩二值指纹图像。SOCOFing 数据集中指纹图像的尺寸为 `103 × 96`，在原始二值表示中需要 9888 位。游程编码过程利用了相邻比特中的冗余。对于随机选取的 100 张图像，压缩后获得的压缩比在图 3 中以图形方式展示。
 
 #### B. 安全性分析
 
@@ -3483,7 +3336,7 @@ $$\\mathit{CR} = \\frac{\\textit{原始指纹图像中的总比特数}}{\\textit
 
 根据所提方案，我们可以使用任何随机流生成器用于加密目的。为了仿真目的，我们使用了 `RC4` 随机流生成器。所提方案可使用任何安全的随机流生成器用于加密目的。为了分析加密过程的安全性，我们使用了直方图分析和熵。
 
-四幅样本人脸图像及其所有直方图如 图 4 所示。为了表明我们在 RDH 过程后获得的最终加密图像在像素分布上具有足够的随机性，我们绘制了加密图像的直方图，如 图 5 所示。
+四幅样本人脸图像及其所有直方图如图 4 所示。为了表明我们在 RDH 过程后获得的最终加密图像在像素分布上具有足够的随机性，我们绘制了加密图像的直方图，如图 5 所示。
 
 ![图 4 原始人脸图像及其直方图。](img/f11-04-9780323852098.jpg)
 
@@ -3493,7 +3346,7 @@ $$\\mathit{CR} = \\frac{\\textit{原始指纹图像中的总比特数}}{\\textit
 
 **图 5** 通过加密过程进行 RDH 后获得的人脸图像及其对应的直方图。
 
-从随机选取的 50 张人脸图像在数据隐藏过程后获得的熵度量如 图 6 所示。可以看出，对于所有这些图像，加密过程后的熵值均为最大值（非常接近 8），而与原始图像的熵无关。`E1` 度量表示原始人脸图像的熵，`E2` 表示通过加密过程进行数据隐藏后获得的熵。
+从随机选取的 50 张人脸图像在数据隐藏过程后获得的熵度量如图 6 所示。可以看出，对于所有这些图像，加密过程后的熵值均为最大值（非常接近 8），而与原始图像的熵无关。`E1` 度量表示原始人脸图像的熵，`E2` 表示通过加密过程进行数据隐藏后获得的熵。
 
 #### C. 新直方图度量分析
 
@@ -3503,7 +3356,7 @@ $$\\mathit{CR} = \\frac{\\textit{原始指纹图像中的总比特数}}{\\textit
 
 我们用于数据提取和图像恢复的关键思想是一种基于直方图的度量。利用直方图的峰值来区分原始图像块和错误恢复的块。请注意，在云服务提供商端，他们知道用户在数据隐藏和图像加密过程中使用了两个不同的密钥。但他们不知道选定块使用了哪种流密码进行加密。因此，他们将尝试解密过程后获得的两个块分别创建直方图，并分析新获得块的直方图。在人脸图像中，一个块内的像素极有可能高度相近。为了描绘使用基于直方图的度量来恢复图像块的原因，我们绘制了从正确恢复的图像块 (`OM`) 和错误恢复的图像块 (`WM`) 中观察到的峰值。
 
-从 图 7 可以观察到，正确恢复块的度量值始终高于错误恢复块。
+从图 7 可以观察到，正确恢复块的度量值始终高于错误恢复块。
 
 ![图 7 图像恢复过程中获得的基于直方图的度量。](img/f11-07-9780323852098.jpg)
 
@@ -3515,28 +3368,27 @@ $$\\mathit{CR} = \\frac{\\textit{原始指纹图像中的总比特数}}{\\textit
 *   所提方案中使用了一种新的直方图度量，用于在接收端识别正确恢复的块。该度量工作高效，实验研究表明该度量能够将自然图像块与错误恢复的解密块区分开来。
 *   由于通过加密的 RDH 方案将指纹细节嵌入人脸图像是本章首次引入，因此省略了所提方案的比较研究。
 
-### 6: 结论
+## 6: 结论
 
 在本章中，我们提出了一个安全框架，可用于双层生物特征认证过程，其中云服务提供商可能负责验证任务。通过网络从客户端向云服务提供商发送生物特征数据（如人脸图像或指纹）是不安全的。因此，所提方案利用通过加密过程的 RDH 方案将压缩的指纹数据隐藏在人脸图像中。主要优势在于传输给客户端的最终图像将以加密图像的形式呈现，且指纹细节已隐藏其中。所提方案还结合使用了游程编码方案和 Elias gamma 编码过程来压缩指纹数据。所提方案可用于需要安全多生物特征验证的领域。
 
-### 参考文献
+## 参考文献
 
-## 第 12 章：面向基于云的医疗系统的高效且不可追踪的认证协议
+# 第 12 章：面向基于云的医疗系统的高效且不可追踪的认证协议
 
 **Suryakanta Panda; Samrat Mondal** ^() 印度理工学院巴特那分校计算机科学与工程系，比哈，印度
 
-### 摘要
+## 摘要
 
 远程医疗信息系统 (TMIS) 将医疗服务延伸至偏远地区，患者无需亲自去医院即可咨询医生。由于通信信道不安全，TMIS 中患者医疗数据的安全性和隐私保护是一个主要关注点。已设计出多种协议以确保患者的安全性和隐私。然而，这些协议大多存在各种安全漏洞，不适合实际使用。为克服这些安全漏洞，我们利用生物特征哈希为 TMIS 提出了一种新的安全增强型协议，具有较低的计算开销。安全性分析和性能分析表明，我们的协议实现了所有必需的安全属性，且比其他相关协议更高效。
 
-#### 关键词
+### 关键词
+
+
 
 TMIS; WBAN; 远程医疗; 认证; 生物特征哈希
 
-### 1: 引言
-
-
-
+## 1 引言
 
 医疗行业中信息和通信技术的实现通过互联网提供远程和自我监测医疗服务。特别是无线体域网（WBAN）和云计算的指数级增长增强了远程医疗服务，同时也降低了患者的医疗支出和时间。WBAN 是一种围绕人体的低功耗无线个人域网，由各种可穿戴医疗传感器和一个个人移动设备组成 [²⁴⁶]。
 
@@ -3556,7 +3408,7 @@ TMIS; WBAN; 远程医疗; 认证; 生物特征哈希
 
 因此，在远程医疗信息系统（TMIS）中，需要一种使用生物特征哈希的轻量级认证和密钥协商协议。
 
-#### 1.1 贡献
+### 1.1 贡献
 
 为满足 TMIS 中的安全需求，我们提出了一种用于云环境中医疗数据交换的改进型轻量级认证协议。本工作的主要研究贡献如下。
 
@@ -3566,7 +3418,7 @@ TMIS; WBAN; 远程医疗; 认证; 生物特征哈希
 *   会话密钥仅使用哈希运算和异或运算建立，因此计算开销小、重量轻。
 *   性能分析表明，与其他现有协议相比，所提协议更高效。
 
-### 2 相关工作
+## 2 相关工作
 
 认证和密钥协商方案领域的研究人员提出了许多认证协议，以向基于云的医疗数据提供完整性和机密性。2014 年，Chen 等人 [²⁵⁰]...
 
@@ -3580,23 +3432,23 @@ TMIS; WBAN; 远程医疗; 认证; 生物特征哈希
 *   Kumar 等人的协议 [²⁵⁶]
 *   Chandrakar 等人的协议 [²⁵⁷]
 
-### 3 系统模型和安全目标
+## 3 系统模型和安全目标
 
 本节简要讨论所提认证协议的网络模型、威胁模型和安全目标。
 
-#### 3.1 网络模型
+### 3.1 网络模型
 
-我们基于云的医疗系统网络模型如 图 1 所示。该模型包含五个主要实体：(1) 可穿戴传感器节点，(2) 移动设备，(3) 云服务器，(4) 医生，(5) 认证服务器。患者的生理信息由移动设备通过可穿戴传感器收集并传输到云服务器（CS）。然后，医生从云服务器获取生理信息。所有患者和医生都需要在受信任的认证服务器（AS）注册，以便在它们之间执行安全通信。
+我们基于云的医疗系统网络模型如图 1 所示。该模型包含五个主要实体：(1) 可穿戴传感器节点，(2) 移动设备，(3) 云服务器，(4) 医生，(5) 认证服务器。患者的生理信息由移动设备通过可穿戴传感器收集并传输到云服务器（CS）。然后，医生从云服务器获取生理信息。所有患者和医生都需要在受信任的认证服务器（AS）注册，以便在它们之间执行安全通信。
 
 ![图 1 网络模型](img/f12-01-9780323852098.jpg)
 
 图 1 网络模型。
 
-#### 3.2 威胁模型
+### 3.2 威胁模型
 
 在本工作中，我们遵循广泛使用的 Dolev-Yao 威胁模型 [²⁵⁸]。
 
-#### 3.3 安全目标
+### 3.3 安全目标
 
 *   **认证**：在接受任何消息之前，所有参与者都应能够验证发送者的声称身份。它可防止冒充攻击、中间人攻击等安全协议攻击。
 *   **报告机密性**：在 TMIS 中，保护患者健康信息的机密性至关重要。除指定医疗专业人员外，任何内部人员和外部人员都不应能获取秘密报告。
@@ -3604,25 +3456,23 @@ TMIS; WBAN; 远程医疗; 认证; 生物特征哈希
 *   **患者匿名性**：应隐藏患者的真实身份，即窃听传输消息后，任何对手都无法将消息与特定患者关联，也无法判断两条消息是否来自同一患者。
 *   **患者不可链接性**：患者与其医生之间的关联或关系应保密。否则，会危及患者的隐私和匿名性。
 
-#### 3.4 生物特征哈希
-
-
+### 3.4 生物特征哈希
 
 生物特征模板对每个人来说都是永久且唯一的。因此，一旦泄露，就无法为同一个人生成新的模板。因此，有必要保护生物特征模板免受对手的攻击。生物特征哈希是一种通过将生物特征数据转换为二进制字符串来确保生物特征模板安全的方法。因此，它存储的是生物特征数据的转换或修改版本，并泄露较少的原始生物特征数据信息。它使用密钥和不可逆函数来转换或随机化生物特征数据。使用密钥的优势在于，可以通过更改密钥来撤销或修改转换后的生物特征数据 ²⁶⁰。
 
 从生物特征数据获取生物特征哈希的步骤如下。
 
-1.  (i) 使用特征提取过程从生物特征数据中获取特征向量。
-2.  (ii) 利用用户提供的密钥生成一组伪随机向量。
-3.  (iii) 应用 Gram-Schmidt 过程使生成的伪随机向量正交归一化。
-4.  (iv) 计算生物特征特征向量与正交归一化向量之间的内积。
-5.  (v) 使用预定阈值计算生物哈希位串。如果得到的内积大于预定阈值，则设置位为 1，否则设置位为 0。
+1.  使用特征提取过程从生物特征数据中获取特征向量。
+2.  利用用户提供的密钥生成一组伪随机向量。
+3.  应用 Gram-Schmidt 过程使生成的伪随机向量正交归一化。
+4.  计算生物特征特征向量与正交归一化向量之间的内积。
+5.  使用预定阈值计算生物哈希位串。如果得到的内积大于预定阈值，则设置位为 1，否则设置位为 0。
 
-### 4: 提出的协议
+## 4 提出的协议
 
 在本节中，我们提出了一种利用云计算进行医疗数据交换的新型安全增强协议。表 1 解释了本章中使用的所有符号。我们提出的协议由四个阶段组成，具体描述如下。
 
-#### 表 1：所用符号的解释
+### 表 1：所用符号的解释
 
 | 符号 | 描述 |
 | --- | --- |
@@ -3639,30 +3489,34 @@ TMIS; WBAN; 远程医疗; 认证; 生物特征哈希
 | `⊕` | 异或操作 |
 | `TS[i]` | 时刻 i 的时间戳 |
 
-#### 4.1: 注册阶段
+### 4.1 注册阶段
 
 在该阶段，所有参与者向可信 `AS` 注册。注册阶段可分为医生注册和患者注册。
 
-##### 4.1.1: 医生注册
+#### 4.1.1 医生注册
 
 *   **步骤 1：** 医生通过安全方式将其唯一身份标识 `ID[D]` 和注册请求发送给 `AS`。
 *   **步骤 2：** `AS` 接受医生的注册请求后，计算 `A[1] = h(ID[D]∥α)`，其中 `α` 是 `AS` 的密钥。然后，`AS` 通过安全信道将 `A[1]` 发送给医生，并存储医生的 `ID[D]`。
 *   **步骤 3：** 医生收到 `A[1]` 后，提取其生物特征哈希 (`R[D]`) 并选择一个密码 (`PW[D]`)。然后，计算 `DP[1] = h(PW[D]∥R[D])`，`DP[2] = A[1] ⊕ DP[1]`。最后，医生在其设备中存储 `h(DP[1])`、`DP[2]`。
 
-##### 4.1.2: 患者注册
+#### 4.1.2 患者注册
 
 *   **步骤 1：** 患者通过安全信道将唯一伪身份标识 `SID[P]` 和医生的身份标识 `ID[D]` 连同注册请求一起发送给 `AS`。
 *   **步骤 2：** `AS` 收到患者的注册请求后，检索与 `ID[D]` 对应的 `A[1]`，并计算 `A[2] = h(SID[P]∥A[1])`，`A[3] = h(r∥A[1])`，其中 `r` 是一个随机数。最后，`AS` 通过安全信道将 `A[2]`、`A[3]`、`r` 发送给患者。
 *   **步骤 3：** 患者收到 `A[2]`、`A[3]`、`r` 后，提取其生物特征哈希 (`R[U]`) 并选择一个密码 (`PW`)。然后，计算 `P[1] = h(PW∥R[U])`，`P[2] = A[2] ⊕ P[1]`，`P[3] = A[3] ⊕ P[1]`。最后，患者在其移动设备中存储 `h(P[1])`、`P[2]`、`P[3]`、`r`。
 
-#### 4.2: 患者数据上传阶段 (PUP)
+### 4.2 患者数据上传阶段 (PUP)
 
 该阶段执行以下步骤，在建立相互认证后将加密的传感器信息上传到云端，并将密钥传达给医生以进行解密。
 
 *   **步骤 1：** 首先，患者收集所有传感器信息，记为 `M[B]`。然后，选择一个随机密钥 `kp`。计算 `E[B] = {M[B]}[kp]`，`P[4] = h(M[B]∥R[1]∥ID[D]∥SID[P])`，其中 `R[1]` 是一个随机数。然后，将 `M[0] = {E[B], SID[P], P[4]}` 上传到 `CS`。
+
     之后，当医生在线可用时，患者将密码和生物特征哈希输入移动设备。然后，移动设备计算 `h(PW∥R[U])` 并将其与 `P[1]` 进行验证。如果验证通过，移动设备检索 `A[3] = P[1] ⊕ P[3]`。接着，计算 `P[5] = A[3] ⊕ R[1]`，`P[6] = h(R[1]) ⊕ SID[P]`，`P[7] = h(SID[P]∥ID[D]∥r∥R[1]∥TS[0])`。最后，发送 `M[1] = {P[5], P[6], P[7], r, TS[0]}` 给医生。
+
 *   **步骤 2：** 医生收到消息 `M[1]` 后，验证时间戳 `TS[0]`。然后，将其密码 (`PW[D]`) 和生物特征哈希 (`R[D]`) 输入其设备。然后，设备计算 `h(PW[D]∥R[D])` 并将其与存储的 `DP[1]` 进行验证。如果验证通过，设备检索 `A[1] = DP[1] ⊕ DP[2]`。接着，医生提取 `R[1] = P[5] ⊕ h(r∥A[1])`，`SID[P] = P[6] ⊕ h(R[1])` 并验证 `P[7]`。验证成功后，生成两个随机数 `r′` 和 `R[2]`。然后，计算 `D[1] = h(r′∥A[1])`，`D[2] = h(h(SID[P]∥A[1])∥R[1]) ⊕ R[2]`，`D[3] = h(R[2]) ⊕ D[1]`，`D[4] = h(h(SID[P]∥A[1])) ⊕ r′ ⊕ R[2]`，`D[5] = h(R[1]∥R[2]∥r′∥TS[1])`，`SK = h(R[1]∥R[2])`。最后，医生发送消息 `M[2] = {D[2], D[3], D[4], D[5], TS[1]}` 给患者。
+
 *   **步骤 3：** 患者收到消息 `M[2]` 后，验证 `TS[1]` 并提取 `R[2] = h(A[2]∥R[1]) ⊕ D[2]`，`D[1] = h(R[2]) ⊕ D[3]`，`r′ = h(A[2]) ⊕ R[2] ⊕ D[4]`。然后，计算并验证 `D[5]`。如果验证通过，则计算 `SK = h(R[1]∥R[2])`，`P[3]′ = D[1] ⊕ P[1]`。最后，用 `P[3]′` 替换 `P[3]`，用 `r′` 替换 `r`。
+
 *   **步骤 4：** 在认证医生并建立会话密钥后，患者使用会话密钥 `SK` 加密 `kp` 并将其发送给医生。最后，患者计算 `PK[i] = A[2] ⊕ kp` 并存储 `PK[i]`。
 
 图 2 展示了该阶段的所有步骤。
@@ -3671,31 +3525,27 @@ TMIS; WBAN; 远程医疗; 认证; 生物特征哈希
 
 图 2 患者数据上传阶段。
 
-#### 4.3: 治疗阶段 (TP)
+### 4.3 治疗阶段 (TP)
 
 *   **步骤 1：** 医生向 `CS` 发送其身份标识 `ID[D]`、患者的伪身份标识 `SID[P]` 以及请求。
 *   **步骤 2：** `CS` 收到医生的请求后，将患者的数据 `M[3] = {E[B], P[4], TS[2]}` 发送给医生。
 *   **步骤 3：** 医生收到 `M[3]` 后，验证时间戳 `TS[2]` 并解密 `E[B]`。然后，验证 `P[4]`。如果验证通过，医生查阅患者的报告 `M[B]` 并准备诊断报告 `M[D]`。然后，将 `M[D]` 加密为 `E[D] = {M[D]}[kp]` 并计算 `D[6] = h(M[D]∥ID[D]∥R[2]∥SID[P])`。之后，医生将 `E[D]` 和 `D[6]` 上传到 `CS`。
 
-#### 4.4: 复查阶段 (CP)
+### 4.4 复查阶段 (CP)
 
 *   **步骤 1：** 患者向 `CS` 发送下载请求及其伪身份标识 `SID[P]` 以获取诊断报告。
 *   **步骤 2：** `CS` 收到请求后，将 `E[D]`、`D[6]` 发送给患者。
+*   **步骤 3：** 患者向移动设备输入其密码和生物特征哈希值。然后，移动设备计算 `h(PW∥R[U])` 并将其与 `P[1]` 进行验证。如果验证通过，移动设备检索 `A[2] = P[1] ⊕ P[2]`、`kp = PK[i] ⊕ A[2]`。然后，患者使用密钥 `kp` 从接收到的 `E[D]` 中检索 `M[D]`。接着，验证 `D[6]`。如果验证通过，患者信任来自医生的接收诊断报告 `M[D]`。然后，计算 `P[8] = h(M[D]∥PW∥SID[P])`。最后，将 `P[8]` 与相应的 `E[D]` 一起存储在 CS 中以备将来参考。
 
-
-
-
-*   步骤 3：患者向移动设备输入其密码和生物特征哈希值。然后，移动设备计算 `h(PW∥R[U])` 并将其与 `P[1]` 进行验证。如果验证通过，移动设备检索 `A[2] = P[1] ⊕ P[2]`、`kp = PK[i] ⊕ A[2]`。然后，患者使用密钥 `kp` 从接收到的 `E[D]` 中检索 `M[D]`。接着，验证 `D[6]`。如果验证通过，患者信任来自医生的接收诊断报告 `M[D]`。然后，计算 `P[8] = h(M[D]∥PW∥SID[P])`。最后，将 `P[8]` 与相应的 `E[D]` 一起存储在 CS 中以备将来参考。
-
-### 5: 安全分析
+## 5 安全分析
 
 本节同时采用形式化安全分析和非形式化安全分析，证明我们提出的协议是安全的，并能抵御各种已知攻击。
 
-#### 5.1: 基于真实-随机模型的形式化安全分析
+### 5.1 基于真实-随机模型的形式化安全分析
 
 本节应用广泛接受的真实-随机（ROR）模型 [[261]](#fn261)，展示我们协议的形式化安全分析。
 
-##### 5.1.1: 安全模型
+#### 5.1.1 安全模型
 
 本节描述 ROR 安全模型。根据该安全模型，定义了各种查询和预言机，如下所示：
 
@@ -3726,38 +3576,44 @@ Adv_P^ake(A) ≤ q_b² / H_1 + q_h² / H_2 + 2q_s / |D_1 ∥ D_2|
 为证明定义了一系列从 `G_0` 到 `G_3` 的游戏。在每个游戏 `G_i` 中，攻击者 `A` 尝试预测 `c` 的正确值。设 `Succ_i` 表示该事件，`Pr[Succ_i]` 表示相应的概率。
 
 *   **游戏 G_0**：它模拟攻击者 `A` 对我们协议 `P` 的实际攻击。最初，比特 `c` 随机选择。因此，根据定义我们有
-    ```
-    Adv_P^ake = 2 ⋅ Pr[Succ_0] - 1.
-    ```
+
+
+
+```
+Adv_P^ake = 2 ⋅ Pr[Succ_0] - 1.
+```
+
 *   **游戏 G_1**：为了提高获胜优势，攻击者 `A` 使用 `Execute(Π^i, Π^j)` 查询发起窃听攻击。然后，在 `Test(Π^i)` 预言机中，`A` 必须确定 `c` 的值。由于 `SK` 由 `R_1` 和 `R_2` 计算得出，`A` 试图从 `M_1`、`M_2` 中检索 `R_1` 和 `R_2`。我们知道 `R_1 = P_5 ⊕ A_3`。因此，要提取 `R_1`，`A` 需要患者的密码和生物特征以及移动设备。没有 `R_1` 无法提取 `R_2`。因此，窃听攻击不会提高获胜优势，我们有
+
     ```
     Pr[Succ_1] = Pr[Succ_0].
     ```
+
 *   **游戏 G_2**：在该游戏中，攻击者 `A` 试图借助 `Send()`、`Hash` 预言机和 `Biohash` 预言机误导参与者实例接受伪造消息。它考虑了 `P` 中可能出现的所有碰撞。由于每条消息都包含时间戳、随机数等随机因素，攻击者将无法找到任何碰撞。因此，根据生日悖论，我们得到
+
     ```
     |Pr[Succ_2] - Pr[Succ_1]| ≤ q_b² / (2|H_1|) + q_b² / (2|H_2|).
     ```
+
 *   **游戏 G_3**：该游戏模拟与患者移动设备丢失相关的风险。通过查询 `CorruptMD()` 预言机，`A` 检索存储的凭证，如 `P_1`、`P_2`、`P_3`。然后，`A` 尝试猜测密码和生物特征哈希。由于密码字典和生物特征模板的大小分别为 `|D_1|` 和 `|D_2|`，我们有
+
     ```
     |Pr[Succ_3] - Pr[Succ_2]| ≤ q_s / (|D_1||D_2|).
     ```
 
-
-
-
 完成所有游戏后，A 在猜测 c 时没有获得任何优势。因此，我们有
 
-$$
-\begin{array}{r} {Pr\lbrack{Succ}\_{3}\rbrack = \frac{1}{2}.} \\ \end{array}
-$$
+```
+Pr[Succ_3] = 1/2.
+```
 
 ![si10_e](img/si10_e.png) (6)
 
 因此，通过结合公式 (2)–(6)，我们得到
 
-$$
-\begin{array}{r} {{Adv}\_{P}^{ake}(A) \leq \frac{q\_{b}^{2}}{H\_{1}} + \frac{q\_{h}^{2}}{H\_{2}} + \frac{2q\_{s}}{|D\_{1} \parallel D\_{2}|}.} \\ \end{array}
-$$
+```
+Adv_P^ake(A) ≤ q_b²/H_1 + q_h²/H_2 + 2q_s/|D_1 ∥ D_2|.
+```
 
 ![si11_e](img/si11_e.png) (7)
 
@@ -3765,35 +3621,35 @@ $$
 
 因此，攻击者无法获得非微不足道的优势，我们的协议实现了语义安全。
 
-#### 5.2：非正式安全分析
+#### 5.2 非正式安全分析
 
 在本节中，我们将非正式地探讨我们提出的协议如何抵抗各种已知攻击。
 
-##### 5.2.1：提供患者隐私
+##### 5.2.1 提供患者隐私
 
 患者的传感器报告 `M[B]` 和诊断报告 `M[D]` 使用密钥 `kp` 加密并存储在 CS 中。密钥 `kp` 仅在患者和医生之间共享，因此任何第三方（包括 CS 的特权内部人员）都无法解密患者的机密报告。此外，患者的伪身份 `SID[P]` 不是固定的，并且可以因医生而异。因此，攻击者无法从 `SID[P]` 获取患者的真实身份，从而保障了患者的社会生活安全。
 
-##### 5.2.2：抵抗健康报告伪造攻击
+##### 5.2.2 抵抗健康报告伪造攻击
 
 在治疗阶段，医生通过计算和验证 `P[4]` 来检查患者传感器报告 `M[B]` 的完整性。要伪造 `P[4]`，攻击者需要 `R[1]`，而 `R[1]` 仅在医生和患者之间秘密共享。因此，攻击者无法在没有 `R[1]` 的情况下创建伪造的传感器报告 `M[B]'`。同样，在检查阶段，患者通过计算和验证 `D[6]` 来检查诊断报告 `M[D]` 的完整性。要伪造 `D[6]`，攻击者需要 `R[2]`，而 `R[2]` 仅在医生和患者之间秘密共享。因此，攻击者无法在没有 `R[2]` 的情况下创建伪造的诊断报告。因此，所提出的协议能抵抗健康报告伪造攻击。
 
-##### 5.2.3：抵抗中间人攻击
+##### 5.2.3 抵抗中间人攻击
 
 在我们协议的每个阶段中，接收方在接受消息前都会检查消息的真实性。在真实性检查中，使用了一个与发送方身份相关联的秘密变量。例如，在患者数据上传阶段，`R[1]` 与患者的伪身份相关联，而 `R[2]` 与医生的身份相关联。由于哈希函数的不可逆特性，攻击者无法分离现有的秘密变量并创建一个新的。因此，我们的协议能抵抗中间人攻击和冒充攻击。
 
-##### 5.2.4：抵抗重放攻击
+##### 5.2.4 抵抗重放攻击
 
 在我们的协议中，我们使用随机数和时间戳在每个会话中生成不同的通信消息。消息的接收方可以在完整性检查期间验证时间戳。由于在不可逆哈希操作中使用了秘密值，攻击者无法伪造 `P[7]` 和 `D[5]` 中使用的时间戳。因此，我们的协议能抵抗重放攻击。
 
-##### 5.2.5：抵抗移动设备被盗攻击
+##### 5.2.5 抵抗移动设备被盗攻击
 
 存储在患者手机中的患者凭证使用密码和生物特征进行加密。此外，在检查阶段，患者接收加密的诊断报告。要解密加密的诊断报告，患者需要 `kp`，而 `kp` 受患者密码和生物特征信息保护。因此，移动设备被盗不会给攻击者带来任何优势。
 
-##### 5.2.6：提供不可否认性
+##### 5.2.6 提供不可否认性
 
 接收到消息 `M[2]` 后，如果 `D[5]` 的验证成功，医生无法否认其参与。因为只有指定医生能从消息 `M[1]` 中检索 `R[1]`。同样，如果会话密钥 `SK` 建立成功，患者无法否认其参与。因为只有患者能从 `M[2]` 中检索 `R[2]`。在治疗阶段，可以通过验证 `P[4]` 来确保患者的参与。同样，在结账阶段，可以通过验证 `D[6]` 来确保医生的参与。因此，我们的协议提供了不可否认性属性，并使一方确信另一方的参与。
 
-#### 5.3：协议仿真
+#### 5.3 协议仿真
 
 我们协议中的会话密钥协商过程以及患者和医生之间的认证是使用 AVISPA（一种协议仿真工具）[[262]](#fn262) 进行仿真的。
 
@@ -3801,13 +3657,11 @@ $$
 
 图 3 AVISPA 工具结果。
 
-### 6：性能分析
+### 6 性能分析
 
 本节将我们提出的协议与其他为云辅助医疗数据交换设计的现有协议的性能进行评估。分析协议时考虑了所有阶段的计算成本。计算成本以执行时间表示。表 2 根据 Chiou 等人的实验结果 [[263]](#fn263) 总结了不同加密操作的执行时间。
 
-**表 2**
-
-不同加密操作的执行时间。
+**表 2** 不同加密操作的执行时间。
 
 | 符号 | 描述 |
 | --- | --- |
@@ -3818,11 +3672,9 @@ $$
 | `T[M]` | 计算椭圆曲线标量点乘法所需的时间（`T[M] ≈ 0.0503 s`） |
 | `T[SGV]` | 生成和验证签名所需的时间（`T[SGV] ≈ 0.3317 s`） |
 
-我们根据 表 2 中给出的度量，在 表 3 中总结了我们协议和其他相关协议的计算成本。我们可以注意到，所提出的协议仅使用计算效率高的加密操作，即对称加密/解密和哈希函数。因此，与其他协议相比，所提出的协议所需的执行时间非常少。
+我们根据表 2 中给出的度量，在表 3 中总结了我们协议和其他相关协议的计算成本。我们可以注意到，所提出的协议仅使用计算效率高的加密操作，即对称加密/解密和哈希函数。因此，与其他协议相比，所提出的协议所需的执行时间非常少。
 
-**表 3**
-
-计算成本比较。
+**表 3** 计算成本比较。
 
 | | Chen 等人 [[264]](#fn264) | Chiou 等人 [[265]](#fn265) | Mohit 等人 [[266]](#fn266) | Kumar 等人 [[267]](#fn267) | Chandrakar 等人 [[268]](#fn268) | 我们的协议 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -3831,38 +3683,23 @@ $$
 | TP | `2T[SGV] + 1T[M] + 2T[BP] + 7T[S] + 4T[AS] + 2T[H]` | `2T[SGV] + 4T[M] + 4T[BP] + 4T[S] + 6T[H]` | `2T[SGV] + 2T[S] + 9T[H]` | `2T[SGV] + 6T[S] + 10T[H]` | `5T[SGV] + 5T[S] + 22T[H]` | `2T[S] + 2T[H]` |
 | CP | – | `1T[SGV] + 2T[BP] + 2T[S] + 8T[H]` | `1T[SGV] + 2T[S] + 5T[H]` | `1T[SGV] + 6T[S] + 10T[H]` | `2T[SGV] + 2T[S] + 8T[H]` | `1T[S] + 2T[H]` |
 
-
-
-
 最后，我们在表 4 中列出了安全属性的对比。结果表明，我们的协议提供了所有基本功能，以抵御现有协议所讨论的所有已知攻击。
 
-#### 表 4
+#### 表 4 安全特性对比。
 
-安全特性对比。
-
-| 安全特性 || Chen et al. [²⁶⁹] || Chiou et al. [²⁷⁰] || Mohit et al. [²⁷¹] || Kumar et al. [²⁷²] || Chandrakar et al. [²⁷³] || 我们的协议 |
-
+| 安全特性 | Chen et al. [²⁶⁹] | Chiou et al. [²⁷⁰] | Mohit et al. [²⁷¹] | Kumar et al. [²⁷²] | Chandrakar et al. [²⁷³] | 我们的协议 |
 | --- | --- | --- | --- | --- | --- | --- |
-
-| 提供患者匿名性 || 否 || 否 || 否 || 是 || 否 || 是 |
-
-| --- | --- | --- | --- | --- | --- | --- |
-
-| 提供不可否认性 || 否 || 是 || 是 || 是 || 是 || 是 |
-
-| 抵抗检查报告伪造攻击 || 是 || 是 || 否 || 否 || 是 || 是 |
-
-| 抵抗报告泄露攻击 || 是 || 否 || 否 || 否 || 是 || 是 |
-
-| 抵抗冒充攻击 || 否 || 是 || 是 || 是 || 是 || 是 |
-
-| 抵抗移动设备丢失 || 否 || 否 || 否 || 否 || 否 || 是 |
-
-| 支持远程医疗 || 否 || 是 || 是 || 是 || 是 || 是 |
+| 提供患者匿名性 | 否 | 否 | 否 | 是 | 否 | 是 |
+| 提供不可否认性 | 否 | 是 | 是 | 是 | 是 | 是 |
+| 抵抗检查报告伪造攻击 | 是 | 是 | 否 | 否 | 是 | 是 |
+| 抵抗报告泄露攻击 | 是 | 否 | 否 | 否 | 是 | 是 |
+| 抵抗冒充攻击 | 否 | 是 | 是 | 是 | 是 | 是 |
+| 抵抗移动设备丢失 | 否 | 否 | 否 | 否 | 否 | 是 |
+| 支持远程医疗 | 否 | 是 | 是 | 是 | 是 | 是 |
 
 <div class="small_device"> <p class="table_fig"><img src="images/B9780323852098000067/t0025.png" alt="Table 4" /></p></div>
 
-### 7: 结论
+### 7 结论
 
 在本章中，我们提出了一种新的安全增强型密钥协商协议，用于通过云环境进行医疗数据交换。我们提出的协议通过改进先前的工作，提供了更好的安全性和隐私性。使用 `AVISPA` 工具对所提协议进行正式安全分析的仿真表明该协议是安全的。非正式安全分析表明，该协议实现了所需的安全属性，并能抵抗各种已知攻击。安全性和性能分析表明，我们的协议不仅确保了安全属性，还提高了计算效率。未来，我们希望进一步增强我们提出的协议，以便患者无需重复加密相同数据，即可将其敏感生理信息共享给多位医生。
 
@@ -3875,80 +3712,97 @@ $$
 ### A
 
 `AdaBoost` 111–112, 167
+
 `自适应网络模糊推理系统 (ANFIS)` 95–102
+
 `Adience 数据集` 6, 123
+
 `调整后的图像` 73
+
 `仿射变换` 9
+
 `AlexNet 模型` 35, 111–112, 115–116, 115f
+
 `基于 ANFIS 的视网膜生物特征认证系统 (ARBAS)`
-组合层 99
-解模糊层 99
-一阶 Sugeno 模型 96–97
-眼底相机 95–96
-模糊化层 97
-蕴含层 98
-归一化层 98
-认证系统的性能指标 100–101
-测试阶段 99
-训练阶段 95–99
+
+- 组合层 99
+- 解模糊层 99
+- 一阶 Sugeno 模型 96–97
+- 眼底相机 95–96
+- 模糊化层 97
+- 蕴含层 98
+- 归一化层 98
+- 认证系统的性能指标 100–101
+- 测试阶段 99
+- 训练阶段 95–99
+
 `愤怒情绪` 171–172
+
 `通用人工智能 (AGI)` 112
+
 `人工智能 (AI)` 131, 177–178
+
 `人工神经网络 (ANN)` 113
+
 `关联规则学习` 190
+
 `认证服务器 (AS)` 220
+
 `AVISPA` 230
 
 ### B
 
 `带阈值的双直方图均衡化 (BHEWT)` 68
+
 `二进制鲁棒不变可缩放关键点 (BRISK)` 92
+
 `生物特征认证` 88
-认证阶段 89, 90f
-数据隐藏 202
-加密方案 202–203
-注册阶段 89, 89f
-人脸认证系统 90
-指纹认证 91
-指纹识别 202
-图像加密过程 202
-虹膜认证系统 90–91
-击键动力学 93
-掌纹认证 91
-提出的方案 205–208, 207f
-结果分析
-压缩比 (CR) 210
-基于直方图的度量 211
-安全性分析 210
-可逆数据隐藏
-云服务提供商 203
-加密图像上 204
-医学图像传输 203
-自然图像上 204
-通过加密 204, 204t
-签名认证 92
-语音 92
+
+- 认证阶段 89, 90f
+- 数据隐藏 202
+- 加密方案 202–203
+- 注册阶段 89, 89f
+- 人脸认证系统 90
+- 指纹认证 91
+- 指纹识别 202
+- 图像加密过程 202
+- 虹膜认证系统 90–91
+- 击键动力学 93
+- 掌纹认证 91
+- 提出的方案 205–208, 207f
+- 结果分析
+  - 压缩比 (CR) 210
+  - 基于直方图的度量 211
+  - 安全性分析 210
+- 可逆数据隐藏
+  - 云服务提供商 203
+  - 加密图像上 204
+  - 医学图像传输 203
+  - 自然图像上 204
+  - 通过加密 204, 204t
+- 签名认证 92
+- 语音 92
+
 `生物特征哈希` 222
+
 `生物特征识别`，面部视频
-DWT 策略 130
-心电图 (ECG) 129–130
-情绪识别，生理数据集用于 136–139
-实验环境 135–136
-人脸检测与视频采集 132
-特征提取 133
-识别 134
-实现，算法 134
-性能评估 136
-提出的模块系统 131, 132f
+
+- DWT 策略 130
+- 心电图 (ECG) 129–130
+- 情绪识别，生理数据集用于 136–139
+- 实验环境 135–136
+- 人脸检测与视频采集 132
+- 特征提取 133
+- 识别 134
+- 实现，算法 134
+- 性能评估 136
+- 提出的模块系统 131, 132f
+
 `布尔数组` 143–144
+
 `巴特沃斯高通滤波器 (BHPF)` 71
+
 `巴特沃斯低通滤波器 (BLPF)` 71
-
-### C
-
-
-
-## 索引
 
 ### C
 
@@ -3967,6 +3821,7 @@ DWT 策略 130
 **CLF** 6
 
 **基于云的医疗系统** 219–220
+
 - 认证技术 218
 - 生物特征哈希 218
 - 检查阶段 (CP) 225
@@ -4003,6 +3858,7 @@ DWT 策略 130
 **对比度受限自适应直方图均衡化 (CLAHE)** 72
 
 **卷积神经网络 (CNN)** 2, 19, 26, 30, 106, 109, 111–112, 114, 155–157, 192
+
 - 情绪识别
   - “主要”面部表情 165–166
   - Haar 级联分类器 167–168
@@ -4028,6 +3884,7 @@ DWT 策略 130
 ### D
 
 **网络安全** 177–179
+
 - 生物特征识别
   - 指纹扫描 181
   - 保护 179–180
@@ -4067,294 +3924,199 @@ DWT 策略 130
   - 进程行为 192
   - 回归 188
   - 用户行为 191–192
-- 签名识别 184
-- 静脉识别 185–186
-- 网站篡改检测 197
-
-**网络威胁** 177–178
-
-
-
-
-### D
-
-**DAGER** 109
-
-**数据增强** 23
-
-**去相关拉伸 (DS)** 72
-
-**深度学习 (DL)**
-- 网络安全
-- 关联规则学习 190
-- 分类 188–189
-- 聚类 189–190
-- 降维 190
-- 生成模型 190
-- 入侵检测/入侵防御 (ID/IP) 系统 192
-- 恶意软件检测 193
-- 网络流量分析 193–196
-- 回归 188
-- 社会工程学和垃圾邮件检测 193
-- 性别识别 112–114
-- 机器学习 5–7
-
-**深度神经网络 (DNN)** 114
-
-**深度子空间聚类** 36–37
-
-**DenseNet** 35
-
-**判别相关性分析 (DCA)** 122–123
-
-**厌恶情绪** 171–172
-
-**分布式拒绝服务 (DDoS)** 191
-
-**DNA 生物特征系统** 186–187
-
-**Dolev-Yao 威胁模型** 220–221
-
-**DrunkSpace 分类器** 41, 44t
-
-**DWT 策略** 130
-
-### E
-
-**心电图 (ECG)** 129–130
-
-**Elias Gamma 编码过程** 210
-
-**情绪识别** 156
-- 警觉水平 158
-- 生物特征识别，面部视频 136–139
-- 基于卷积神经网络 (CNN) 的方法
-  - “主要”面部表情 165–166
-  - Haar 级联分类器 167–168
-  - 图像采集与预处理 166–167
-  - 测试与结果 170–174
-  - 迁移学习 166
-  - VGG-16 网络与建模 168–170
-- 学习者监控系统 158
-
-**端点检测与响应 (EDR)** 191
-
-**熵优化掌纹增强 (EOPE)** 69
-
-**等错误率 (EER)** 55, 101
-
-**欧氏距离** 17–18
-
-**扩展新生儿面部数据库** 1–2, 6–7
-
-**极限学习机 (ELM)** 109
-
-### F
-
-**人脸检测、视频采集与** 132
-
-**“面部关键点估计”算法** 161
-
-**面部动作编码系统 (FACS)** 143, 146–147
-
-**面部肌电图 (FEMG)** 146–147
-
-**面部表情检测技术** 156
-
-**人脸识别** 156
-- 考勤登记 157, 159–160, 174
-- 基于卷积神经网络 (CNN) 的方法
-  - 评估 164–165
-  - 人脸采集、处理与 160–163
-  - 基于图像的考勤系统 159
-- 网络安全 183–184
-- 训练数据集 157–158
-
-**面部软生物特征** 111
-
-**误接受率 (FAR)** 55, 100
-
-**误拒识率** 136
-
-**误正识率 (FPIR)** 136
-
-**误拒率 (FRR)** 55, 101
-
-**特征提取**
-- 生物特征识别，面部视频 133
-- 基于分块的 SPT-BSIF 描述符，多模态生物特征 53–54
-- 热成像生物特征人脸识别 (TBFR)，非接触式面部生物测量 33–35
-
-**特征级融合** 55
-
-**FERPlus 数据集** 158–159
-
-**FG-NET** 2, 6, 6f
-
-**指纹扫描** 181
-
-**形式安全分析、真实或随机模型** 226–228
-
-**傅里叶变换** 145
-
-**全空间线性判别分析 (FSLDA)** 49
-
-**模糊推理系统 (FIS)** 95
-
-### G
-
-**GA-LSTM** 138–139
-
-**Gamma 参数** 164
-
-**高斯模糊技术** 145
-
-**高斯高通滤波器 (GHPF)** 71
-
-**高斯低通滤波器 (GLPF)** 71
-
-**性别识别** 105–107
-- Adience 数据集 123
-- AlexNet 115–116, 115f
-- 深度学习 112–114
-- 基于步态的软生物特征 107
-- GoogLeNet 116–117
-- 预训练网络 114–115
-- 建议的 MC-DLF 方法 124
-- 建议的系统
-  - 特征图像形成 118
-  - 局部方向模式 (LDP) 图像形成 118–120
-  - 步骤 118
-- 单通道方法 124
-- SURF 描述符 110
-
-**基于生成对抗网络 (GAN) 的算法** 108
-
-**GHFR** 41, 44t
-
-**全局平均池化 (GAP)** 111
-
-**GoogLeNet** 112, 115–117
-
-**图形用户界面 (GUI)** 150
-
-### H
-
 
 
 
 ## 索引
 
+### A
+- **签名识别** 184
+- **静脉识别** 185–186
+- **网站篡改检测** 197
+
+### B
+- **网络威胁** 177–178
+
+### D
+- **DAGER** 109
+- **数据增强** 23
+- **去相关拉伸 (DS)** 72
+- **深度学习 (DL)**
+  - 网络安全
+  - 关联规则学习 190
+  - 分类 188–189
+  - 聚类 189–190
+  - 降维 190
+  - 生成模型 190
+  - 入侵检测/入侵防御 (ID/IP) 系统 192
+  - 恶意软件检测 193
+  - 网络流量分析 193–196
+  - 回归 188
+  - 社会工程学和垃圾邮件检测 193
+  - 性别识别 112–114
+  - 机器学习 5–7
+- **深度神经网络 (DNN)** 114
+- **深度子空间聚类** 36–37
+- **DenseNet** 35
+- **判别相关性分析 (DCA)** 122–123
+- **厌恶情绪** 171–172
+- **分布式拒绝服务 (DDoS)** 191
+- **DNA 生物特征系统** 186–187
+- **Dolev-Yao 威胁模型** 220–221
+- **DrunkSpace 分类器** 41, 44t
+- **DWT 策略** 130
+
+### E
+- **心电图 (ECG)** 129–130
+- **Elias Gamma 编码过程** 210
+- **情绪识别** 156
+  - 警觉水平 158
+  - 生物特征识别，面部视频 136–139
+  - 基于卷积神经网络 (CNN) 的方法
+    - “主要”面部表情 165–166
+    - Haar 级联分类器 167–168
+    - 图像采集与预处理 166–167
+    - 测试与结果 170–174
+    - 迁移学习 166
+    - VGG-16 网络与建模 168–170
+  - 学习者监控系统 158
+- **端点检测与响应 (EDR)** 191
+- **熵优化掌纹增强 (EOPE)** 69
+- **等错误率 (EER)** 55, 101
+- **欧氏距离** 17–18
+- **扩展新生儿面部数据库** 1–2, 6–7
+- **极限学习机 (ELM)** 109
+
+### F
+- **人脸检测、视频采集与** 132
+- **“面部关键点估计”算法** 161
+- **面部动作编码系统 (FACS)** 143, 146–147
+- **面部肌电图 (FEMG)** 146–147
+- **面部表情检测技术** 156
+- **人脸识别** 156
+  - 考勤登记 157, 159–160, 174
+  - 基于卷积神经网络 (CNN) 的方法
+    - 评估 164–165
+    - 人脸采集、处理与 160–163
+    - 基于图像的考勤系统 159
+  - 网络安全 183–184
+  - 训练数据集 157–158
+- **面部软生物特征** 111
+- **误接受率 (FAR)** 55, 100
+- **误拒识率** 136
+- **误正识率 (FPIR)** 136
+- **误拒率 (FRR)** 55, 101
+- **特征提取**
+  - 生物特征识别，面部视频 133
+  - 基于分块的 SPT-BSIF 描述符，多模态生物特征 53–54
+  - 热成像生物特征人脸识别 (TBFR)，非接触式面部生物测量 33–35
+- **特征级融合** 55
+- **FERPlus 数据集** 158–159
+- **FG-NET** 2, 6, 6f
+- **指纹扫描** 181
+- **形式安全分析、真实或随机模型** 226–228
+- **傅里叶变换** 145
+- **全空间线性判别分析 (FSLDA)** 49
+- **模糊推理系统 (FIS)** 95
+
+### G
+- **GA-LSTM** 138–139
+- **Gamma 参数** 164
+- **高斯模糊技术** 145
+- **高斯高通滤波器 (GHPF)** 71
+- **高斯低通滤波器 (GLPF)** 71
+- **性别识别** 105–107
+  - Adience 数据集 123
+  - AlexNet 115–116, 115f
+  - 深度学习 112–114
+  - 基于步态的软生物特征 107
+  - GoogLeNet 116–117
+  - 预训练网络 114–115
+  - 建议的 MC-DLF 方法 124
+  - 建议的系统
+    - 特征图像形成 118
+    - 局部方向模式 (LDP) 图像形成 118–120
+    - 步骤 118
+  - 单通道方法 124
+  - SURF 描述符 110
+- **基于生成对抗网络 (GAN) 的算法** 108
+- **GHFR** 41, 44t
+- **全局平均池化 (GAP)** 111
+- **GoogLeNet** 112, 115–117
+- **图形用户界面 (GUI)** 150
+
 ### H
-
-**Haar 级联分类器** 157, 166–168, 174
-
-**面部视频心跳信号 (HSFV)** 136, 138f
-
-**隐马尔可夫模型 (HMM)** 91
-
-**直方图均衡化 (HE) 方法** 68
-
-**直方图归一化** 9
-
-**方向梯度直方图 (HOG) 算法**
-- 计算机视觉算法 160
-- 人脸模式 161, 161f
-- 特征提取，在训练集和测试集中 157–158
-- 实现 164–165, 165t
-
-**人体生物特征情绪强度**
-- 行为生物特征识别 144–145
-- 分心驾驶数据集 143–144
-- 方法论
-  - 优势 150
-  - 劣势 150
-  - 特征提取技术 146
-  - 初始数据集准备，预处理步骤 145–146
-  - 解读 FACS 数据库 146–147
-  - 分步算法 147–149
-  - 训练和实时分类 149–150
+- **Haar 级联分类器** 157, 166–168, 174
+- **面部视频心跳信号 (HSFV)** 136, 138f
+- **隐马尔可夫模型 (HMM)** 91
+- **直方图均衡化 (HE) 方法** 68
+- **直方图归一化** 9
+- **方向梯度直方图 (HOG) 算法**
+  - 计算机视觉算法 160
+  - 人脸模式 161, 161f
+  - 特征提取，在训练集和测试集中 157–158
+  - 实现 164–165, 165t
+- **人体生物特征情绪强度**
+  - 行为生物特征识别 144–145
+  - 分心驾驶数据集 143–144
+  - 方法论
+    - 优势 150
+    - 劣势 150
+    - 特征提取技术 146
+    - 初始数据集准备，预处理步骤 145–146
+    - 解读 FACS 数据库 146–147
+    - 分步算法 147–149
+    - 训练和实时分类 149–150
 
 ### I
-
-**ImageNet 数据集** 158–159
-
-**Inception 模块** 158
-
-**基于云的医疗系统非正式安全分析**
-- 抵抗健康报告伪造攻击 229
-- 抵抗中间人攻击 229
-- 提供不可否认性 230
-- 提供患者隐私保护 228–229
-- 抵抗重放攻击 229
-- 抵抗移动设备被盗攻击 229
-
-**红外 (IR) 图像** 29–31
-
-**物联网** 201
-
-**入侵检测/入侵防御 (ID/IP) 系统** 192
-
-**虹膜扫描仪与识别** 184–185
-
-**ITWCC-D1** 6
+- **ImageNet 数据集** 158–159
+- **Inception 模块** 158
+- **基于云的医疗系统非正式安全分析**
+  - 抵抗健康报告伪造攻击 229
+  - 抵抗中间人攻击 229
+  - 提供不可否认性 230
+  - 提供患者隐私保护 228–229
+  - 抵抗重放攻击 229
+  - 抵抗移动设备被盗攻击 229
+- **红外 (IR) 图像** 29–31
+- **物联网** 201
+- **入侵检测/入侵防御 (ID/IP) 系统** 192
+- **虹膜扫描仪与识别** 184–185
+- **ITWCC-D1** 6
 
 ### J
-
-**日本女性面部表情 (JAFFE) 数据集** 158–159
+- **日本女性面部表情 (JAFFE) 数据集** 158–159
 
 ### K
-
-**卡尔曼滤波器** 158
-
-**卡罗林斯卡定向情绪面孔 (KDEF) 数据集** 158–159
-
-**Keras** 194–196
-
-**核典型相关分析 (KCCA)** 49–50
-
-**核费舍尔判别分析 (KFDA)** 49
-
-**K 折交叉验证** 20
-
-**Kirsch 掩模** 118
+- **卡尔曼滤波器** 158
+- **卡罗林斯卡定向情绪面孔 (KDEF) 数据集** 158–159
+- **Keras** 194–196
+- **核典型相关分析 (KCCA)** 49–50
+- **核费舍尔判别分析 (KFDA)** 49
+- **K 折交叉验证** 20
+- **Kirsch 掩模** 118
 
 ### L
-
-**Lamport Merkle 数字签名 (LMDS)** 92
-
-**留一法交叉验证** 21–25
-
-**线性回归方程** 17
-
-**局部二值模式 (LBP)** 50, 146
-
-**局部对比度掌纹增强 (LCPE) 解决方案** 68
-
-**局部方向模式 (LDP)**
-- 图像形成 118–120
-- 边缘方向幅度计算 118
-- 特征融合
-  - 典型相关分析 (CCA) 121–122
-  - 判别相关分析 (DCA) 122–123
-- 最高边缘方向幅度识别 118–120
-- 图像计算 120
-- 浅层 CNN 120
-
-**局部响应归一化 (LRN)** 116
-
-**对数变换** 70
-
-**LSTM** 30
+- **Lamport Merkle 数字签名 (LMDS)** 92
+- **留一法交叉验证** 21–25
+- **线性回归方程** 17
+- **局部二值模式 (LBP)** 50, 146
+- **局部对比度掌纹增强 (LCPE) 解决方案** 68
+- **局部方向模式 (LDP)**
+  - 图像形成 118–120
+  - 边缘方向幅度计算 118
+  - 特征融合
+    - 典型相关分析 (CCA) 121–122
+    - 判别相关分析 (DCA) 122–123
+  - 最高边缘方向幅度识别 118–120
+  - 图像计算 120
+  - 浅层 CNN 120
+- **局部响应归一化 (LRN)** 116
+- **对数变换** 70
+- **LSTM** 30
 
 ### M
-
-
-
-
-
 #### 机器学习 (ML)
-
 ##### 相关主题
 - 儿童人脸数据库 5–7
 - 分类方法 18
@@ -4422,10 +4184,7 @@ DWT 策略 130
 - 多项式逻辑回归 17
 - 多补丁性别识别方法 111
 
----
-
 ### N
-
 #### 自然语言处理 (NLP)
 193
 
@@ -4456,133 +4215,109 @@ DWT 策略 130
 #### 非线性数字滤波方法
 参见 中值滤波器 (MF)
 
----
-
 ### O
-
 #### OpenFace 模型
 163
 
----
-
 ### P
-
-
-
-
-
-## 索引
-
-### P
-
-- **掌纹图像增强** [65–67]
-  - 行为特征 [65–66]
-  - 生物特征识别 [65–66]
-  - 数字图像处理 [65–68]
-  - 指纹 [66]
+- **掌纹图像增强** 65–67
+  - 行为特征 65–66
+  - 生物特征识别 65–66
+  - 数字图像处理 65–68
+  - 指纹 66
   - 基于频域的增强
-    - 巴特沃斯高通滤波器 (BHPF) [71]
-    - 巴特沃斯低通滤波器 (BLPF) [71]
-    - 傅里叶变换 [70–71]
-    - 高斯高通滤波器 (GHPF) [71]
-    - 高斯低通滤波器 (GLPF) [71]
-  - 基于频域的技术 [65–66]
-  - 直方图均衡化 (HE) 方法 [68]
-  - 高光谱成像 [67]
+    - 巴特沃斯高通滤波器 (BHPF) 71
+    - 巴特沃斯低通滤波器 (BLPF) 71
+    - 傅里叶变换 70–71
+    - 高斯高通滤波器 (GHPF) 71
+    - 高斯低通滤波器 (GLPF) 71
+  - 基于频域的技术 65–66
+  - 直方图均衡化 (HE) 方法 68
+  - 高光谱成像 67
   - 图像复原
-    - 调整后的图像 [73]
-    - 对比度受限自适应直方图均衡化 (CLAHE) [72]
-    - 去相关拉伸 (DS) [72]
-    - 中值滤波器 (MF) [72]
-    - 点扩散函数 (PSF) [72]
-    - 2D 自适应滤波器 [72–73]
-    - 2D 顺序统计滤波器 [73]
-  - 生理特征 [65–66]
-  - 递归直方图均衡化 (RHE) 算法 [68–69]
-  - Sobel 边缘检测 [68]
+    - 调整后的图像 73
+    - 对比度受限自适应直方图均衡化 (CLAHE) 72
+    - 去相关拉伸 (DS) 72
+    - 中值滤波器 (MF) 72
+    - 点扩散函数 (PSF) 72
+    - 2D 自适应滤波器 72–73
+    - 2D 顺序统计滤波器 73
+  - 生理特征 65–66
+  - 递归直方图均衡化 (RHE) 算法 68–69
+  - Sobel 边缘检测 68
   - 基于空域的增强
-    - 对数变换 [70]
-    - 负片法 [70]
-    - 幂律变换 [69]
-  - 基于空域的技术 [65–66]
-  - 空域滤波方法 [67–68]
-- **统计量** [77–79]
-  - 用于图像质量 [74], [75–76t]
-  - 客观图像质量评价 [77]
-  - 主观图像质量评价 [77]
-- **患者数据上传阶段 (PUP)** [223–224]
-- **行人解析** [109]
-- **PERCLOS 标准** [158]
-- **个人识别码 (PINs)** [29]
-- **网络钓鱼** [179]
-- **点扩散函数 (PSF)** [72]
-- **幂律变换** [69]
-- **精度矩阵** [170–171], [172t]
-- **预训练网络** [114–115]
-- **主成分分析 (PCA)** [157–158]
-- **PSO-TFRS** [41], [44t]
-- **PUCV 热成像时序人脸 (PUCV-TTF) 数据库** [39]
-- **Python-3.7.9** [150]
+    - 对数变换 70
+    - 负片法 70
+    - 幂律变换 69
+  - 基于空域的技术 65–66
+  - 空域滤波方法 67–68
+- **统计量** 77–79
+  - 用于图像质量 74, 75–76t
+  - 客观图像质量评价 77
+  - 主观图像质量评价 77
+- **患者数据上传阶段 (PUP)** 223–224
+- **行人解析** 109
+- **PERCLOS 标准** 158
+- **个人识别码 (PINs)** 29
+- **网络钓鱼** 179
+- **点扩散函数 (PSF)** 72
+- **幂律变换** 69
+- **精度矩阵** 170–171, 172t
+- **预训练网络** 114–115
+- **主成分分析 (PCA)** 157–158
+- **PSO-TFRS** 41, 44t
+- **PUCV 热成像时序人脸 (PUCV-TTF) 数据库** 39
+- **Python-3.7.9** 150
 
 ### R
-
-- **随机森林 (RF) 分类器** [91], [196]
-- **真实或随机 (ROR) 安全模型** [226–228]
+- **随机森林 (RF) 分类器** 91, 196
+- **真实或随机 (ROR) 安全模型** 226–228
 - **实时摄像头，人体生物特征情绪强度**
-  - 优势 [150]
-  - 劣势 [150]
-  - 特征提取技术 [146]
-  - 初始数据集准备，预处理步骤 [145–146]
-  - 解读 FACS 数据库 [146–147]
-  - 分步算法 [147–149]
-  - 训练与实时分类 [149–150]
-- **召回矩阵** [170–172], [171t]
-- **修正线性单元 (ReLU)** [37], [115–116], [168–169]
-- **循环神经网络 (RNNs)** [192]
-- **递归直方图均衡化 (RHE) 算法** [68–69]
-- **红、绿、蓝 (RGB) 摄像头** [132]
-- **区域注意力网络 (RAN)** [173–174]
-- **感兴趣区域 (ROI)** [132]
+  - 优势 150
+  - 劣势 150
+  - 特征提取技术 146
+  - 初始数据集准备，预处理步骤 145–146
+  - 解读 FACS 数据库 146–147
+  - 分步算法 147–149
+  - 训练与实时分类 149–150
+- **召回矩阵** 170–172, 171t
+- **修正线性单元 (ReLU)** 37, 115–116, 168–169
+- **循环神经网络 (RNNs)** 192
+- **递归直方图均衡化 (RHE) 算法** 68–69
+- **红、绿、蓝 (RGB) 摄像头** 132
+- **区域注意力网络 (RAN)** 173–174
+- **感兴趣区域 (ROI)** 132
 - **注册阶段，基于云的医疗系统**
-  - 医生注册 [222–223]
-  - 患者注册 [223]
-- **回归，网络安全** [188]
-- **残差网络-50** [35–36]
-- **视网膜生物特征识别，个人认证** [87–89]
-  - 解剖结构 [93–94]
+  - 医生注册 222–223
+  - 患者注册 223
+- **回归，网络安全** 188
+- **残差网络-50** 35–36
+- **视网膜生物特征识别，个人认证** 87–89
+  - 解剖结构 93–94
   - 基于 ANFIS 的视网膜生物特征认证系统 (ARBAS)
-    - 认证系统的性能指标 [100–101]
-    - 测试阶段 [99]
-    - 训练阶段 [95–99]
-  - 认证阶段 [89], [90f]
-  - 耳部 [92]
-  - 注册阶段 [89], [89f]
-  - 人脸认证系统 [90]
-  - 指纹认证 [91]
-  - 步态 [93]
-  - 虹膜认证系统 [90–91]
-  - 击键动力学 [93]
-  - 掌纹认证 [91]
-  - 签名认证 [92]
-  - VARIA 数据库 [102]
-  - 声纹 [92]
+    - 认证系统的性能指标 100–101
+    - 测试阶段 99
+    - 训练阶段 95–99
+  - 认证阶段 89, 90f
+  - 耳部 92
+  - 注册阶段 89, 89f
+  - 人脸认证系统 90
+  - 指纹认证 91
+  - 步态 93
+  - 虹膜认证系统 90–91
+  - 击键动力学 93
+  - 掌纹认证 91
+  - 签名认证 92
+  - VARIA 数据库 102
+  - 声纹 92
 - **可逆数据隐藏 (RDH)，生物特征认证系统**
-  - 云服务提供商 [203]
-  - 在加密图像上 [204]
-  - 医学图像传输 [203]
-  - 在自然图像上 [204]
-  - 通过加密 [204], [204t]
+  - 云服务提供商 203
+  - 在加密图像上 204
+  - 医学图像传输 203
+  - 在自然图像上 204
+  - 通过加密 204, 204t
 
 ### S
-
-
-
-
-
-## 索引
-
-### S
-
 - **悲伤情绪** 171–172
 - **扫描仪** 179–180
 - **散度矩阵** 15
@@ -4612,7 +4347,6 @@ DWT 策略 130
 - **支持向量机 (SVM)** 31, 157–158
 
 ### T
-
 - **Takagi-Sugeno 模糊推理方法** 95
 - **Tanh 函数** 115
 - **远程医疗信息系统 (TMIS)** 218–220
@@ -4639,6 +4373,13 @@ DWT 策略 130
 - **真接受率 (TAR)** 100
 - **真随机与时间戳生成器 (TRSG)** 91
 - **真拒绝率 (URR)** 100
+
+
+
+## 索引
+
+### 二
+
 - **二维自适应滤波器** 72–73
 - **二维顺序统计滤波器** 9, 73
 
@@ -4680,7 +4421,7 @@ DWT 策略 130
 
 ---
 
-### 参考文献
+## 参考文献
 
 1.  **[1]** Gray J.E., Suresh G., Ursprung R., Edwards W.H., Nickerson J., Shinno P.H. *新生儿重症监护室患者误识别：风险量化。* **Pediatrics.** 2006;117:e6–e47.↩
 
@@ -4698,107 +4439,103 @@ DWT 策略 130
 
 8.  **[5]** Bharadwaj S., Bhatt H.S., Singh R., Vatsa M., Singh S.K. *新生儿人脸识别：一项初步研究。* 发表于：生物特征识别：理论、应用与系统 (BTAS)，2010 年第四届 IEEE 国际会议，美国华盛顿特区；2010.↩
 
+## 参考文献
 
+9.  **[3]** Best-Rowden L., Hoole Y., Jain A. *新生儿、婴儿和幼儿的自动人脸识别：纵向评估。* 发表于：生物识别特别兴趣小组 (BIOSIG)，2016 年，国际会议，德国达姆施塔特；2016 年。↩
+
+10.  **[8]** Basak P., De S., Agarwal M., Malhotra A., Vatsa M., Singh R. *面向幼儿和学龄前儿童的多模态生物识别。* 发表于：IEEE 国际生物识别联合会议 (IJCB)；2017 年 10 月：627–633。↩
+
+11.  **[2]** Siddiqui S., Vatsa M., Singh R. *面向新生儿、幼儿和学龄前儿童的人脸识别：一种深度学习方法。* 发表于：国际模式识别会议；2018 年。↩
+
+12.  **[2]** Siddiqui S., Vatsa M., Singh R. *面向新生儿、幼儿和学龄前儿童的人脸识别：一种深度学习方法。* 发表于：国际模式识别会议；2018 年。↩
+
+13.  **[3]** Best-Rowden L., Hoole Y., Jain A. *新生儿、婴儿和幼儿的自动人脸识别：纵向评估。* 发表于：生物识别特别兴趣小组 (BIOSIG)，2016 年，国际会议，德国达姆施塔特；2016 年。↩
+
+14.  **[5]** Bharadwaj S., Bhatt H.S., Singh R., Vatsa M., Singh S.K. *新生儿人脸识别：一项初步研究。* 发表于：生物识别：理论、应用与系统 (BTAS)，2010 年第四届 IEEE 国际会议，美国华盛顿特区；2010 年。↩
+
+15.  **[17]** Tiwari S., Kumar S., Singh S.K., Singh A. 发表于：*利用多模态生物识别进行新生儿识别。* IGI Global；2015 年：4347–4357。 [`www.igi-global.com/viewtitlesample.aspx?id=112877&ptid=76156&t=Newborn%20Recognition%20Using%20Multimodal%20Biometric&isxn=9781466658882`](https://www.igi-global.com/viewtitlesample.aspx?id=112877&ptid=76156&t=Newborn%20Recognition%20Using%20Multimodal%20Biometric&isxn=9781466658882)。↩
+
+16.  **[19]** Chandran P.S., Byju N.B., Deepak R.U., Nishakumari K.N., Devanand P., Sasi P.M. *基于深度学习和多类 SVM 的失踪儿童识别系统。* 发表于：*2018 年 IEEE 智能计算系统最新进展会议 (RAICS)，特里凡得琅，12 月 6-8 日。* 2018 年。↩
+
+17.  **[1]** Jain A.K., Bolle R., Pankanti S. *生物识别：网络社会中的个人身份识别。* Springer Science & Business Media；2006 年；第 479 卷。↩
+
+18.  **[8]** T. de Freitas PereiraAnjos A., Marcel S. 利用领域特定单元的异构人脸识别。 *IEEE Trans. Inf. Forensics Secur.* 2018 年；14(7)：1803–1816。↩
+
+19.  **[10]** Jian B.-L., Chen C.-L., Huang M.-W., Yau H.-T. 基于红外热成像序列的情绪特定面部激活图。 *IEEE Access.* 2019 年；7：48046–48052。↩
+
+20.  **[19]** Cao B., Wang N., Li J., Gao X. 基于数据增强的异构人脸识别联合学习。 *IEEE Trans. Neural Netw. Learn. Syst.* 2018 年；30(6)：1731–1743。↩
+
+21.  **[14]** Kyal C.K., Poddar H., Reza M. *利用 GPU 加速情绪关键点定位和并行深度情绪网络，从自发热成像序列中进行人类情绪识别。* 发表于：Gupta D., Khanna A., Bhattacharyya S., Hassanien A.E., Anand S., Jaiswal A. (编)。新加坡：Springer；2021 年：931–943。*创新计算与通信国际会议。*↩
+
+22.  **[23]** Cho M.-Y., Jeong Y.-S. 真实人脸与假冒人脸在光照条件下的人脸识别性能比较。 *J. Internet Serv. Inf. Secur.* 2014 年；4(4)：82–90。↩
+
+23.  **[24]** Salas Y.S., Bermudez D.V., Peña A.M.L., Gomez D.G., Gevers T. 改进结合图像分割的 HOG：应用于人体检测。 发表于：Springer；2012 年：178–189。*智能视觉系统高级概念国际会议。*↩
+
+24.  **[25]** Kyal C.K., Poddar H., Reza M. *利用 MPI 模型和特征提取方法，通过热红外相机检测人脸。* 发表于：2018 年：1–5。*2018 年第四届计算通信与自动化国际会议 (ICCCA)。*↩
+
+25.  **[25]** Kyal C.K., Poddar H., Reza M. *利用 MPI 模型和特征提取方法，通过热红外相机检测人脸。* 发表于：2018 年：1–5。*2018 年第四届计算通信与自动化国际会议 (ICCCA)。*↩
+
+26.  **[26]** Wang S., Liu Z., Lv S., Lv Y., Wu G., Peng P., Chen F., Wang X. *用于表情识别和情绪推断的自然可见光与红外面部表情数据库。* *IEEE Trans. Multimed.* 2010 年；12(7)：682–691。↩
+
+27.  **[28]** Simonyan K., Zisserman A. *用于大规模图像识别的极深卷积网络。* *CoRR.* 2015 年；abs/1409.1556。↩
+
+28.  **[29]** He K., Zhang X., Ren S., Sun J. *用于图像识别的深度残差学习。* 发表于：2016 年：770–778。*IEEE 计算机视觉与模式识别会议论文集。*↩
+
+29.  **[32]** Ji P., Zhang T., Li H., Salzmann M., Reid I. *深度子空间聚类网络。* 发表于：2017 年：24–33。*神经信息处理系统进展。*↩
+
+30.  **[32]** Ji P., Zhang T., Li H., Salzmann M., Reid I. *深度子空间聚类网络。* 发表于：2017 年：24–33。*神经信息处理系统进展。*↩
+
+31.  **[30]** Krizhevsky A., Sutskever I., Hinton G.E. *利用深度卷积神经网络进行 ImageNet 分类。* 发表于：2012 年：1097–1105。*神经信息处理系统进展。*↩
+
+32.  **[11]** Vigneau G.H., Verdugo J.L., Castro G.F., Pizarro F., Vera E. *时间变化条件下的热成像人脸识别。* *IEEE Access.* 2017 年；5：9663–9672。↩
+
+33.  **[27]** Hermosilla G., Verdugo J.L., Farias G., Vera E., Pizarro F., Machuca M. *利用红外面部图像进行人脸识别和醉酒分类。* *J. Sens.* 2018 年；2018 年：1–8。doi:10.1155/2018/5813514。↩
+
+34.  **[26]** Wang S., Liu Z., Lv S., Lv Y., Wu G., Peng P., Chen F., Wang X. *用于表情识别和情绪推断的自然可见光与红外面部表情数据库。* *IEEE Trans. Multimed.* 2010 年；12(7)：682–691。↩
+
+35.  **[30]** Krizhevsky A., Sutskever I., Hinton G.E. *利用深度卷积神经网络进行 ImageNet 分类。* 发表于：2012 年：1097–1105。*神经信息处理系统进展。*↩
+
+36.  **[27]** Hermosilla G., Verdugo J.L., Farias G., Vera E., Pizarro F., Machuca M. *利用红外面部图像进行人脸识别和醉酒分类。* *J. Sens.* 2018 年；2018 年：1–8。doi:10.1155/2018/5813514。↩
+
+37.  **[27]** Hermosilla G., Verdugo J.L., Farias G., Vera E., Pizarro F., Machuca M. *利用红外面部图像进行人脸识别和醉酒分类。* *J. Sens.* 2018 年；2018 年：1–8。doi:10.1155/2018/5813514。↩
+
+38.  **[21]** Peng C., Gao X., Wang N., Li J. *异构人脸识别的图表示。* *IEEE Trans. Pattern Anal. Mach. Intell.* 2016 年；39(2)：301–312。↩
+
+39.  **[20]** Hermosilla G., Rojas M., Mendoza J., Farias G., Pizarro F.T., San Martin C., Vera E. *人脸识别系统中热成像与可见光描述符融合的粒子群优化。* *IEEE Access.* 2018 年；6：42800–42811。↩
+
+40.  **[17]** Lin S.D., Chen K., Chen W. *基于生理信息的热成像人脸识别。* 发表于：IEEE；2019 年：3497–3501。*2019 年 IEEE 国际图像处理会议 (ICIP)。*↩
+
+41.  **[1]** Zhang D.D. *生物识别技术导论。* 发表于：Springer；2000 年：1–21。*自动生物识别。*↩
+
+## 参考文献
+
+42.  **[17]** Pflug A., Busch C. 耳部生物识别：检测、特征提取和识别方法综述。*Biometrics IET*。2012；1(2)：114–129。↩
+
+43.  **[27]** Yuan L.、Mu Z.、Liu Y. 基于人脸侧脸和耳部的多模态识别。出自：IEEE；2006：5 页。*2006 年第一届航空航天系统与控制国际研讨会*。↩
+
+44.  **[28]** Xu X.、Mu Z. 基于耳部和侧脸融合的多模态识别。出自：IEEE；2007：598–603。*第四届图像与图形国际会议 (ICIG 2007)*。↩
+
+45.  **[29]** Xu X.、Mu Z. 基于 KCCA 的耳部和侧脸多模态识别特征融合方法。出自：IEEE；2007：620–623。*IEEE 自动化与物流国际会议*。↩
+
+46.  **[30]** Xu X.-N.、Mu Z.-C.、Yuan L. 基于 KFDA 的耳部和侧脸融合多模态识别特征级融合方法。出自：IEEE；1306–1310。*小波分析与模式识别国际会议 (ICWAPR)*。2007；第 3 卷。↩
+
+47.  **[31]** Pan X.、Cao Y.、Xu X.、Lu Y.、Zhao Y. 基于 KFDA 的耳部和人脸多模态识别。出自：IEEE；2008：965–969。*国际音频、语言与图像处理会议 (ICALIP)*。↩
+
+48.  **[13]** Rathore R.、Prakash S.、Gupta P. 基于耳部和侧脸的高效人体识别系统。出自：IEEE；2013：1–6。*第六届 IEEE 生物识别理论、应用与系统国际会议 (BTAS)*。↩
+
+49.  **[32]** I.S. Youssef, A.A. Abaza, M.E. Rasmy, A.M. Badawi, 基于人脸侧脸和耳部的多模态生物识别系统，见：人类与活动识别生物识别与监视技术 XI，第 9075 卷，国际光学与光子学学会，2014，第 907506 页。↩
+
+50.  **[33]** Sarangi P.P.、Mishra B.S.P.、Dehuri S. 基于人耳和侧脸的多模态生物识别识别。出自：IEEE；2018：1–6。*第四届信息技术最新进展国际会议 (RAIT)*。↩
+
+51.  **[16]** Sarangi P.P.、Panda M. 结合人耳和侧脸生物识别进行身份识别。出自：13。*安全与隐私：ICSP 2020 精选论文集*。2021；第 744 卷。↩
+
+52.  **[34]** Sarangi P.P.、Panda M.、Mishra B.S.P.、Dehuri S. 基于改进豪斯多夫距离的自动耳部定位技术。出自：Springer；2016：229–240。*计算机视觉与图像处理国际会议*。↩
+
+53.  **[36]** Freeman W.T.、Adelson E.H. 等。可导向滤波器的设计与使用。*IEEE Trans. Pattern Anal. Mach. Intell*。1991；13(9)：891–906。↩
 
 
 
 ### 参考文献
-
-9.  \[3\] Best-Rowden L., Hoole Y., Jain A. *新生儿、婴儿和幼儿的自动人脸识别：纵向评估。* 发表于：生物识别特别兴趣小组 (BIOSIG)，2016 年，国际会议，德国达姆施塔特；2016 年。↩
-
-10.  \[8\] Basak P., De S., Agarwal M., Malhotra A., Vatsa M., Singh R. *面向幼儿和学龄前儿童的多模态生物识别。* 发表于：IEEE 国际生物识别联合会议 (IJCB)；2017 年 10 月：627–633。↩
-
-11.  \[2\] Siddiqui S., Vatsa M., Singh R. *面向新生儿、幼儿和学龄前儿童的人脸识别：一种深度学习方法。* 发表于：国际模式识别会议；2018 年。↩
-
-12.  \[2\] Siddiqui S., Vatsa M., Singh R. *面向新生儿、幼儿和学龄前儿童的人脸识别：一种深度学习方法。* 发表于：国际模式识别会议；2018 年。↩
-
-13.  \[3\] Best-Rowden L., Hoole Y., Jain A. *新生儿、婴儿和幼儿的自动人脸识别：纵向评估。* 发表于：生物识别特别兴趣小组 (BIOSIG)，2016 年，国际会议，德国达姆施塔特；2016 年。↩
-
-14.  \[5\] Bharadwaj S., Bhatt H.S., Singh R., Vatsa M., Singh S.K. *新生儿人脸识别：一项初步研究。* 发表于：生物识别：理论、应用与系统 (BTAS)，2010 年第四届 IEEE 国际会议，美国华盛顿特区；2010 年。↩
-
-15.  \[17\] Tiwari S., Kumar S., Singh S.K., Singh A. 发表于：*利用多模态生物识别进行新生儿识别。* IGI Global；2015 年：4347–4357。 [`www.igi-global.com/viewtitlesample.aspx?id=112877&ptid=76156&t=Newborn%20Recognition%20Using%20Multimodal%20Biometric&isxn=9781466658882`](https://www.igi-global.com/viewtitlesample.aspx?id=112877&ptid=76156&t=Newborn%20Recognition%20Using%20Multimodal%20Biometric&isxn=9781466658882)。↩
-
-16.  \[19\] Chandran P.S., Byju N.B., Deepak R.U., Nishakumari K.N., Devanand P., Sasi P.M. *基于深度学习和多类 SVM 的失踪儿童识别系统。* 发表于：*2018 年 IEEE 智能计算系统最新进展会议 (RAICS)，特里凡得琅，12 月 6-8 日。* 2018 年。↩
-
-17.  \[1\] Jain A.K., Bolle R., Pankanti S. *生物识别：网络社会中的个人身份识别。* Springer Science & Business Media；2006 年；第 479 卷。↩
-
-18.  \[8\] T. de Freitas PereiraAnjos A., Marcel S. 利用领域特定单元的异构人脸识别。 *IEEE Trans. Inf. Forensics Secur.* 2018 年；14(7)：1803–1816。↩
-
-19.  \[10\] Jian B.-L., Chen C.-L., Huang M.-W., Yau H.-T. 基于红外热成像序列的情绪特定面部激活图。 *IEEE Access.* 2019 年；7：48046–48052。↩
-
-20.  \[19\] Cao B., Wang N., Li J., Gao X. 基于数据增强的异构人脸识别联合学习。 *IEEE Trans. Neural Netw. Learn. Syst.* 2018 年；30(6)：1731–1743。↩
-
-21.  \[14\] Kyal C.K., Poddar H., Reza M. *利用 GPU 加速情绪关键点定位和并行深度情绪网络，从自发热成像序列中进行人类情绪识别。* 发表于：Gupta D., Khanna A., Bhattacharyya S., Hassanien A.E., Anand S., Jaiswal A. (编)。新加坡：Springer；2021 年：931–943。*创新计算与通信国际会议。*↩
-
-22.  \[23\] Cho M.-Y., Jeong Y.-S. 真实人脸与假冒人脸在光照条件下的人脸识别性能比较。 *J. Internet Serv. Inf. Secur.* 2014 年；4(4)：82–90。↩
-
-23.  \[24\] Salas Y.S., Bermudez D.V., Peña A.M.L., Gomez D.G., Gevers T. 改进结合图像分割的 HOG：应用于人体检测。 发表于：Springer；2012 年：178–189。*智能视觉系统高级概念国际会议。*↩
-
-24.  \[25\] Kyal C.K., Poddar H., Reza M. *利用 MPI 模型和特征提取方法，通过热红外相机检测人脸。* 发表于：2018 年：1–5。*2018 年第四届计算通信与自动化国际会议 (ICCCA)。*↩
-
-25.  \[25\] Kyal C.K., Poddar H., Reza M. *利用 MPI 模型和特征提取方法，通过热红外相机检测人脸。* 发表于：2018 年：1–5。*2018 年第四届计算通信与自动化国际会议 (ICCCA)。*↩
-
-26.  \[26\] Wang S., Liu Z., Lv S., Lv Y., Wu G., Peng P., Chen F., Wang X. *用于表情识别和情绪推断的自然可见光与红外面部表情数据库。* *IEEE Trans. Multimed.* 2010 年；12(7)：682–691。↩
-
-27.  \[28\] Simonyan K., Zisserman A. *用于大规模图像识别的极深卷积网络。* *CoRR.* 2015 年；abs/1409.1556。↩
-
-28.  \[29\] He K., Zhang X., Ren S., Sun J. *用于图像识别的深度残差学习。* 发表于：2016 年：770–778。*IEEE 计算机视觉与模式识别会议论文集。*↩
-
-29.  \[32\] Ji P., Zhang T., Li H., Salzmann M., Reid I. *深度子空间聚类网络。* 发表于：2017 年：24–33。*神经信息处理系统进展。*↩
-
-30.  \[32\] Ji P., Zhang T., Li H., Salzmann M., Reid I. *深度子空间聚类网络。* 发表于：2017 年：24–33。*神经信息处理系统进展。*↩
-
-31.  \[30\] Krizhevsky A., Sutskever I., Hinton G.E. *利用深度卷积神经网络进行 ImageNet 分类。* 发表于：2012 年：1097–1105。*神经信息处理系统进展。*↩
-
-32.  \[11\] Vigneau G.H., Verdugo J.L., Castro G.F., Pizarro F., Vera E. *时间变化条件下的热成像人脸识别。* *IEEE Access.* 2017 年；5：9663–9672。↩
-
-33.  \[27\] Hermosilla G., Verdugo J.L., Farias G., Vera E., Pizarro F., Machuca M. *利用红外面部图像进行人脸识别和醉酒分类。* *J. Sens.* 2018 年；2018 年：1–8。doi:10.1155/2018/5813514。↩
-
-34.  \[26\] Wang S., Liu Z., Lv S., Lv Y., Wu G., Peng P., Chen F., Wang X. *用于表情识别和情绪推断的自然可见光与红外面部表情数据库。* *IEEE Trans. Multimed.* 2010 年；12(7)：682–691。↩
-
-35.  \[30\] Krizhevsky A., Sutskever I., Hinton G.E. *利用深度卷积神经网络进行 ImageNet 分类。* 发表于：2012 年：1097–1105。*神经信息处理系统进展。*↩
-
-36.  \[27\] Hermosilla G., Verdugo J.L., Farias G., Vera E., Pizarro F., Machuca M. *利用红外面部图像进行人脸识别和醉酒分类。* *J. Sens.* 2018 年；2018 年：1–8。doi:10.1155/2018/5813514。↩
-
-37.  \[27\] Hermosilla G., Verdugo J.L., Farias G., Vera E., Pizarro F., Machuca M. *利用红外面部图像进行人脸识别和醉酒分类。* *J. Sens.* 2018 年；2018 年：1–8。doi:10.1155/2018/5813514。↩
-
-38.  \[21\] Peng C., Gao X., Wang N., Li J. *异构人脸识别的图表示。* *IEEE Trans. Pattern Anal. Mach. Intell.* 2016 年；39(2)：301–312。↩
-
-39.  \[20\] Hermosilla G., Rojas M., Mendoza J., Farias G., Pizarro F.T., San Martin C., Vera E. *人脸识别系统中热成像与可见光描述符融合的粒子群优化。* *IEEE Access.* 2018 年；6：42800–42811。↩
-
-40.  \[17\] Lin S.D., Chen K., Chen W. *基于生理信息的热成像人脸识别。* 发表于：IEEE；2019 年：3497–3501。*2019 年 IEEE 国际图像处理会议 (ICIP)。*↩
-
-41.  \[1\] Zhang D.D. *生物识别技术导论。* 发表于：Springer；2000 年：1–21。*自动生物识别。*↩
-
-
-
-
-
-### 参考文献
-
-42. [17] Pflug A., Busch C. 耳部生物识别：检测、特征提取和识别方法综述。*Biometrics IET*。2012；1(2)：114–129。↩
-
-43. [[27]](#B9780323852098000031.xhtml#cf0190) Yuan L.、Mu Z.、Liu Y. 基于人脸侧脸和耳部的多模态识别。出自：IEEE；2006：5 页。*2006 年第一届航空航天系统与控制国际研讨会*。↩
-
-44. [[28]](#B9780323852098000031.xhtml#cf0195) Xu X.、Mu Z. 基于耳部和侧脸融合的多模态识别。出自：IEEE；2007：598–603。*第四届图像与图形国际会议 (ICIG 2007)*。↩
-
-45. [[29]](#B9780323852098000031.xhtml#cf0200) Xu X.、Mu Z. 基于 KCCA 的耳部和侧脸多模态识别特征融合方法。出自：IEEE；2007：620–623。*IEEE 自动化与物流国际会议*。↩
-
-46. [[30]](#B9780323852098000031.xhtml#cf0205) Xu X.-N.、Mu Z.-C.、Yuan L. 基于 KFDA 的耳部和侧脸融合多模态识别特征级融合方法。出自：IEEE；1306–1310。*小波分析与模式识别国际会议 (ICWAPR)*。2007；第 3 卷。↩
-
-47. [[31]](#B9780323852098000031.xhtml#cf0210) Pan X.、Cao Y.、Xu X.、Lu Y.、Zhao Y. 基于 KFDA 的耳部和人脸多模态识别。出自：IEEE；2008：965–969。*国际音频、语言与图像处理会议 (ICALIP)*。↩
-
-48. [13] Rathore R.、Prakash S.、Gupta P. 基于耳部和侧脸的高效人体识别系统。出自：IEEE；2013：1–6。*第六届 IEEE 生物识别理论、应用与系统国际会议 (BTAS)*。↩
-
-49. [32] I.S. Youssef, A.A. Abaza, M.E. Rasmy, A.M. Badawi, 基于人脸侧脸和耳部的多模态生物识别系统，见：人类与活动识别生物识别与监视技术 XI，第 9075 卷，国际光学与光子学学会，2014，第 907506 页。↩
-
-50. [33] Sarangi P.P.、Mishra B.S.P.、Dehuri S. 基于人耳和侧脸的多模态生物识别识别。出自：IEEE；2018：1–6。*第四届信息技术最新进展国际会议 (RAIT)*。↩
-
-51. [16] Sarangi P.P.、Panda M. 结合人耳和侧脸生物识别进行身份识别。出自：13。*安全与隐私：ICSP 2020 精选论文集*。2021；第 744 卷。↩
-
-52. [[34]](#B9780323852098000031.xhtml#cf0235) Sarangi P.P.、Panda M.、Mishra B.S.P.、Dehuri S. 基于改进豪斯多夫距离的自动耳部定位技术。出自：Springer；2016：229–240。*计算机视觉与图像处理国际会议*。↩
-
-53. [[36]](#B9780323852098000031.xhtml#cf0250) Freeman W.T.、Adelson E.H. 等。可导向滤波器的设计与使用。*IEEE Trans. Pattern Anal. Mach. Intell*。1991；13(9)：891–906。↩
 
 54. [7] Hassaballah M.、Alshazly H.A.、Ali A.A. 基于局部二值模式的耳部识别：比较实验研究。*Expert Syst. Appl*。2019；118：182–200。↩
 
@@ -4845,10 +4582,6 @@ DWT 策略 130
 75. [47] Ackar H.、Abd Almisreb A.、Saleh M.A. 图像增强技术综述。*Southeast Eur. J. Soft Comput*。2019；8(1)。↩
 
 76. [[49]](#B9780323852098000109.xhtml#cf0260) Haddad R.A.、Akansu A.N. 一类用于语音和图像处理的快速高斯二项式滤波器。*IEEE Trans. Signal Process*。1991；39(3)：723–727。↩
-
-
-
-
 
 ### 参考文献
 
@@ -4916,10 +4649,6 @@ DWT 策略 130
 
 108. \[14\] Ichtiaroglou E. *基于深度学习模型、加速度计与陀螺仪数据的步态验证。* 2020.↩
 
-
-
-
-
 ### 参考文献
 
 109. [\[19\]](#B9780323852098000055.xhtml#cf0195) Abramoff M.D., Garvin M.K., Sonka M. 视网膜成像与图像分析。*IEEE Rev. Biomed. Eng.* 2010;3:169–208. doi:10.1109/RBME.2010.2084567.↩
@@ -4930,69 +4659,67 @@ DWT 策略 130
 
 112. \[1\] Duan M., Li K., Yang C., Li K. 一种用于年龄和性别分类的混合深度学习 CNN–ELM。*Neurocomputing.* 2018;275:448–461.↩
 
-113. [\[2\]](#B9780323852098000092.xhtml#cf0050) Schmidt J., Marques M.R.G., Botti S., Marques M.A.L. 固态材料科学中机器学习的最新进展与应用。*NPJ Comput. Mater.* 2019;5:1–36.↩
-
-114. [\[5\]](#B9780323852098000092.xhtml#cf0060) Nguyen G., Dlugolinsky S., Bobák M., Tran V., Garcí Á.L., Heredia I., Malík P., Hluchý L. 面向大规模数据挖掘的机器学习与深度学习框架及库：综述。*Artif. Intell. Rev.* 2019;52:77–124.↩
-
-115. [\[6\]](#B9780323852098000092.xhtml#cf0065) Xin M., Wang Y. 基于深度卷积神经网络的图像分类模型研究。*EURASIP J. Image Video Process.* 2019;40:1–11.↩
-
-116. [\[7\]](#B9780323852098000092.xhtml#cf0070) Wiley V., Lucas T. 计算机视觉与图像处理：论文综述。*Int. J. Artif. Intell. Res.* 2018;2(1):28–36.↩
-
-117. [\[9\]](#B9780323852098000092.xhtml#cf0080) Abdelwhab A., Viriri S. 用于人体识别的软生物特征综述。载于：*机器学习与生物识别。* 2018:doi:10.5772/intechopen.76021 书籍章节。↩
-
-118. [\[10\]](#B9780323852098000092.xhtml#cf0085) Anandh A., Mala K., Suresh Babu R. 结合全局与局部语义特征的交互反馈式图像检索分析。*Measur. Control.* 2020;53(1–2):3–17. doi:10.1177/0020294018824122.↩
-
-119. [\[12\]](#B9780323852098000092.xhtml#cf0095) Zhang Y., Huang Y., Liang W., Shiqi Y. 基于联合 CNN 方法的步态生物识别综合研究。*Pattern Recogn.* 2019;93:228–236.↩
-
-120. [\[13\]](#B9780323852098000092.xhtml#cf0100) Tapia J.E., Arellano C. 用于合成 NIR 眼周图像的软生物特征编码条件 GAN。*Futur. Gener. Comput. Syst.* 2019;97:503–511.↩
-
-121. [\[14\]](#B9780323852098000092.xhtml#cf0105) Jonsson A., Soderberg E. 使用深度卷积神经网络识别自发面部表情。硕士论文 2018.E25.↩
-
-122. [\[15\]](#B9780323852098000092.xhtml#cf0110) Zen G., Porzi L., Sangineto E., Ricci E., Sebe N. 学习用于面部表情分析和手势识别的个性化模型。*IEEE Trans. Multimedia.* 2016;18(4):775–788.↩
-
-123. [\[16\]](#B9780323852098000092.xhtml#cf0115) Liao Z., Petridis S., Pantic M. 用于年龄和性别分类的局部深度神经网络。*Comput. Vis. Pattern Recognit.* 2017.↩
-
-124. [\[17\]](#B9780323852098000092.xhtml#cf0120) Li H., Sun J., Xu Z., Chen L. 基于深度融合卷积神经网络的多模态 2D+3D 面部表情识别。*IEEE Trans. Multimedia.* 2017;19:2816–2831.↩
-
-125. [\[18\]](#B9780323852098000092.xhtml#cf0125) Raza M., Sharif M., Yasmin M., Khan M.A., Saba T., Fernandes S.L. 基于深度学习中堆叠自编码器的外观行人性别识别。*Futur. Gener. Comput. Syst.* 2018;88:28–39.↩
-
-126. \[1\] Duan M., Li K., Yang C., Li K. 一种用于年龄和性别分类的混合深度学习 CNN–ELM。*Neurocomputing.* 2018;275:448–461.↩
-
-127. [\[19\]](#B9780323852098000092.xhtml#cf0135) Arora S., Bhatia M.P.S. 一种基于深度学习的鲁棒性别识别方法。载于：第九届计算、通信与网络技术国际会议 (ICCCNT)；2018:1–6.↩
-
-128. [\[20\]](#B9780323852098000092.xhtml#cf0140) Azzopardi G., Greco A., Saggese A., Vento M. 融合领域特定与可训练特征以实现从人脸图像中的性别识别。*IEEE Access.* 2018;6:24171–24183.↩
-
-129. [\[21\]](#B9780323852098000092.xhtml#cf0145) Rai P., Khanna P. 一种高效鲁棒的性别分类系统。载于：计算智能与通信网络国际会议 (CICN)；2015.↩
-
-130. [\[22\]](#B9780323852098000092.xhtml#cf0150) Greco A., Saggese A., Vento M., Vigilante V. 野外性别识别：针对损坏图像的鲁棒性评估。*J. Ambient. Intell. Humaniz. Comput.* 2020.↩
-
-131. [\[23\]](#B9780323852098000092.xhtml#cf0155) Duc-Quang V., Phung T.-T.-T., Wang C.Y., Wang J.-C. 使用多任务 CNN 进行年龄和性别识别。载于：亚太信号与信息处理协会年度峰会暨会议 (APSIPA ASC)；2019.↩
-
-132. [\[24\]](#B9780323852098000092.xhtml#cf0160) Rafique I., Hamid A., Naseer S., Asad M., Awais M., Yasir T. 使用深度卷积神经网络进行年龄和性别预测。载于：创新计算国际会议 (ICIC)；2019.↩
-
-133. [\[25\]](#B9780323852098000092.xhtml#cf0165) Mathivanan P., Poornima K. 用于性别分类技术的生物特征认证：综述。*J. Inst. Eng. (India): B.* 2017;99:79–85.↩
-
-134. \[26\] Gurnani A., Shah K., Gajjar V., Mavani V., Khandhediya Y. SAF-BAGE：面部软生物特征分类的显著方法——年龄、性别与面部表情。载于：IEEE 计算机视觉应用冬季会议；2019:1–9.↩
-
-135. [\[27\]](#B9780323852098000092.xhtml#cf0175) Cheng J., Li Y., Wang J., Le Y., Wang S. 利用有效面部区块实现鲁棒性别识别。*Tsinghua Sci. Technol.* 2019;24(3):333–345.↩
-
-136. [\[28\]](#B9780323852098000092.xhtml#cf0180) Saeed K., Datta S., Chaki N. 一种构建用于法医生物识别高分辨率图像的颗粒级特征提取方法，适用于小训练数据集。*IEEE Access.* 2020;8:123556–123570.↩
-
-137. [\[29\]](#B9780323852098000092.xhtml#cf0185) Afifi M., Abdelhamed A. AFIF4：基于孤立面部特征与有雾人脸的 AdaBoost 融合的深度性别分类。*J. Vis. Commun. Image Represent.* 2019;62:77–86.↩
-
-138. [\[30\]](#B9780323852098000092.xhtml#cf0190) Cornia M. 一种用于显著性预测的深度多层级网络。载于：模式识别 (ICPR)，第 23 届 IEEE 国际会议；2016.↩
-
-139. [\[31\]](#B9780323852098000092.xhtml#cf0195) Qawaqneh Z., Mallouh A.A., Barkana B.D. 基于 VGG-face 模型的深度卷积神经网络年龄估计。*Comput. Vis. Pattern Recognit.* 2017 arXiv 预印本 arXiv:1709.01664.↩
-
-140. [\[32\]](#B9780323852098000092.xhtml#cf0205) Krizhevsky A., Sutskever I., Hinton G.E. 使用深度卷积神经网络进行 ImageNet 分类。载于：第 25 届神经信息处理系统国际会议论文集；2012:1097–1105.↩
-
-141. [\[33\]](#B9780323852098000092.xhtml#cf0225) Szegedy C., Liu W., Jia Y., Sermanet P., Reed S., Anguelov D., Erhan D., Vanhoucke V., Rabinovich A. 卷积走得更深。载于：IEEE 计算机视觉与模式识别会议论文集；2015:1–9.↩
-
-
-
 
 
 ### 参考文献
+
+113. [[2]](#B9780323852098000092.xhtml#cf0050) Schmidt J., Marques M.R.G., Botti S., Marques M.A.L. 固态材料科学中机器学习的最新进展与应用。*NPJ Comput. Mater.* 2019;5:1–36.↩
+
+114. [[5]](#B9780323852098000092.xhtml#cf0060) Nguyen G., Dlugolinsky S., Bobák M., Tran V., Garcí Á.L., Heredia I., Malík P., Hluchý L. 面向大规模数据挖掘的机器学习与深度学习框架及库：综述。*Artif. Intell. Rev.* 2019;52:77–124.↩
+
+115. [[6]](#B9780323852098000092.xhtml#cf0065) Xin M., Wang Y. 基于深度卷积神经网络的图像分类模型研究。*EURASIP J. Image Video Process.* 2019;40:1–11.↩
+
+116. [[7]](#B9780323852098000092.xhtml#cf0070) Wiley V., Lucas T. 计算机视觉与图像处理：论文综述。*Int. J. Artif. Intell. Res.* 2018;2(1):28–36.↩
+
+117. [[9]](#B9780323852098000092.xhtml#cf0080) Abdelwhab A., Viriri S. 用于人体识别的软生物特征综述。载于：*机器学习与生物识别。* 2018:doi:10.5772/intechopen.76021 书籍章节。↩
+
+118. [[10]](#B9780323852098000092.xhtml#cf0085) Anandh A., Mala K., Suresh Babu R. 结合全局与局部语义特征的交互反馈式图像检索分析。*Measur. Control.* 2020;53(1–2):3–17. doi:10.1177/0020294018824122.↩
+
+119. [[12]](#B9780323852098000092.xhtml#cf0095) Zhang Y., Huang Y., Liang W., Shiqi Y. 基于联合 CNN 方法的步态生物识别综合研究。*Pattern Recogn.* 2019;93:228–236.↩
+
+120. [[13]](#B9780323852098000092.xhtml#cf0100) Tapia J.E., Arellano C. 用于合成 NIR 眼周图像的软生物特征编码条件 GAN。*Futur. Gener. Comput. Syst.* 2019;97:503–511.↩
+
+121. [[14]](#B9780323852098000092.xhtml#cf0105) Jonsson A., Soderberg E. 使用深度卷积神经网络识别自发面部表情。硕士论文 2018.E25.↩
+
+122. [[15]](#B9780323852098000092.xhtml#cf0110) Zen G., Porzi L., Sangineto E., Ricci E., Sebe N. 学习用于面部表情分析和手势识别的个性化模型。*IEEE Trans. Multimedia.* 2016;18(4):775–788.↩
+
+123. [[16]](#B9780323852098000092.xhtml#cf0115) Liao Z., Petridis S., Pantic M. 用于年龄和性别分类的局部深度神经网络。*Comput. Vis. Pattern Recognit.* 2017.↩
+
+124. [[17]](#B9780323852098000092.xhtml#cf0120) Li H., Sun J., Xu Z., Chen L. 基于深度融合卷积神经网络的多模态 2D+3D 面部表情识别。*IEEE Trans. Multimedia.* 2017;19:2816–2831.↩
+
+125. [[18]](#B9780323852098000092.xhtml#cf0125) Raza M., Sharif M., Yasmin M., Khan M.A., Saba T., Fernandes S.L. 基于深度学习中堆叠自编码器的外观行人性别识别。*Futur. Gener. Comput. Syst.* 2018;88:28–39.↩
+
+126. [[1]](#B9780323852098000092.xhtml#cf0130) Duan M., Li K., Yang C., Li K. 一种用于年龄和性别分类的混合深度学习 CNN–ELM。*Neurocomputing.* 2018;275:448–461.↩
+
+127. [[19]](#B9780323852098000092.xhtml#cf0135) Arora S., Bhatia M.P.S. 一种基于深度学习的鲁棒性别识别方法。载于：第九届计算、通信与网络技术国际会议 (ICCCNT)；2018:1–6.↩
+
+128. [[20]](#B9780323852098000092.xhtml#cf0140) Azzopardi G., Greco A., Saggese A., Vento M. 融合领域特定与可训练特征以实现从人脸图像中的性别识别。*IEEE Access.* 2018;6:24171–24183.↩
+
+129. [[21]](#B9780323852098000092.xhtml#cf0145) Rai P., Khanna P. 一种高效鲁棒的性别分类系统。载于：计算智能与通信网络国际会议 (CICN)；2015.↩
+
+130. [[22]](#B9780323852098000092.xhtml#cf0150) Greco A., Saggese A., Vento M., Vigilante V. 野外性别识别：针对损坏图像的鲁棒性评估。*J. Ambient. Intell. Humaniz. Comput.* 2020.↩
+
+131. [[23]](#B9780323852098000092.xhtml#cf0155) Duc-Quang V., Phung T.-T.-T., Wang C.Y., Wang J.-C. 使用多任务 CNN 进行年龄和性别识别。载于：亚太信号与信息处理协会年度峰会暨会议 (APSIPA ASC)；2019.↩
+
+132. [[24]](#B9780323852098000092.xhtml#cf0160) Rafique I., Hamid A., Naseer S., Asad M., Awais M., Yasir T. 使用深度卷积神经网络进行年龄和性别预测。载于：创新计算国际会议 (ICIC)；2019.↩
+
+133. [[25]](#B9780323852098000092.xhtml#cf0165) Mathivanan P., Poornima K. 用于性别分类技术的生物特征认证：综述。*J. Inst. Eng. (India): B.* 2017;99:79–85.↩
+
+134. [[26]](#B9780323852098000092.xhtml#cf0170) Gurnani A., Shah K., Gajjar V., Mavani V., Khandhediya Y. SAF-BAGE：面部软生物特征分类的显著方法——年龄、性别与面部表情。载于：IEEE 计算机视觉应用冬季会议；2019:1–9.↩
+
+135. [[27]](#B9780323852098000092.xhtml#cf0175) Cheng J., Li Y., Wang J., Le Y., Wang S. 利用有效面部区块实现鲁棒性别识别。*Tsinghua Sci. Technol.* 2019;24(3):333–345.↩
+
+136. [[28]](#B9780323852098000092.xhtml#cf0180) Saeed K., Datta S., Chaki N. 一种构建用于法医生物识别高分辨率图像的颗粒级特征提取方法，适用于小训练数据集。*IEEE Access.* 2020;8:123556–123570.↩
+
+137. [[29]](#B9780323852098000092.xhtml#cf0185) Afifi M., Abdelhamed A. AFIF4：基于孤立面部特征与有雾人脸的 AdaBoost 融合的深度性别分类。*J. Vis. Commun. Image Represent.* 2019;62:77–86.↩
+
+138. [[30]](#B9780323852098000092.xhtml#cf0190) Cornia M. 一种用于显著性预测的深度多层级网络。载于：模式识别 (ICPR)，第 23 届 IEEE 国际会议；2016.↩
+
+139. [[31]](#B9780323852098000092.xhtml#cf0195) Qawaqneh Z., Mallouh A.A., Barkana B.D. 基于 VGG-face 模型的深度卷积神经网络年龄估计。*Comput. Vis. Pattern Recognit.* 2017 arXiv 预印本 arXiv:1709.01664.↩
+
+140. [[32]](#B9780323852098000092.xhtml#cf0205) Krizhevsky A., Sutskever I., Hinton G.E. 使用深度卷积神经网络进行 ImageNet 分类。载于：第 25 届神经信息处理系统国际会议论文集；2012:1097–1105.↩
+
+141. [[33]](#B9780323852098000092.xhtml#cf0225) Szegedy C., Liu W., Jia Y., Sermanet P., Reed S., Anguelov D., Erhan D., Vanhoucke V., Rabinovich A. 卷积走得更深。载于：IEEE 计算机视觉与模式识别会议论文集；2015:1–9.↩
 
 142. [[34]](#B9780323852098000092.xhtml#cf0275) Sun Q.S., Zeng S.G., Liu Y., Heng P.A., Xia D.S. 一种特征融合新方法及其在图像识别中的应用。*Pattern Recogn.* 2005;38:2437–2448.↩
 
@@ -5000,7 +4727,7 @@ DWT 策略 130
 
 144. [[36]](#B9780323852098000092.xhtml#cf0330) Eidinger E., Enbar R., Hassner T. 非受限人脸的年龄与性别估计。*IEEE Trans. Inf. Forensics Secur.* 2014;9(12):2170–2179 关于野外面部生物识别的专刊。↩
 
-145. [26] Gurnani A., Shah K., Gajjar V., Mavani V., Khandhediya Y. *SAF-BAGE：面部软生物特征分类的显著方法——年龄、性别与面部表情。* 载于：IEEE 计算机视觉冬季应用会议；2019:1–9.↩
+145. [[26]](#B9780323852098000092.xhtml#cf0170) Gurnani A., Shah K., Gajjar V., Mavani V., Khandhediya Y. *SAF-BAGE：面部软生物特征分类的显著方法——年龄、性别与面部表情。* 载于：IEEE 计算机视觉冬季应用会议；2019:1–9.↩
 
 146. [[37]](#B9780323852098000092.xhtml#cf0015) Gil L., Hassner T. *使用卷积神经网络进行年龄与性别分类。* 载于：IEEE 计算机视觉与模式识别会议研讨会论文集；2015.↩
 
@@ -5020,25 +4747,29 @@ DWT 策略 130
 
 154. [[1]](#B9780323852098000080.xhtml#cf0020) Tian Y., Kanade T., Cohn J.F. 面部表情分析的动作单元识别。*IEEE Trans. Pattern Anal. Mach. Intell.* 2001;23(2):97–115.↩
 
-155. [2] Tong Y., Liao W., Ji Q. 通过利用其动态和语义关系进行面部动作单元识别。*IEEE Trans. Pattern Anal. Mach. Intell.* 2007;9(10):1683–1699.↩
+155. [[2]](#B9780323852098000080.xhtml#cf0025) Tong Y., Liao W., Ji Q. 通过利用其动态和语义关系进行面部动作单元识别。*IEEE Trans. Pattern Anal. Mach. Intell.* 2007;9(10):1683–1699.↩
 
-156. [4] Paul A., Mcvitty D. 学生投入的含义：对政策与实践的启示。载于：Curaj A., Matei L., Pricopie R., Salmi J., Scott P. 编。*欧洲高等教育区。* Cham：Springer；2015:doi:10.1007/978-3-319-20877-0_232.↩
+156. [[4]](#B9780323852098000080.xhtml#cf0035) Paul A., Mcvitty D. 学生投入的含义：对政策与实践的启示。载于：Curaj A., Matei L., Pricopie R., Salmi J., Scott P. 编。*欧洲高等教育区。* Cham：Springer；2015:doi:10.1007/978-3-319-20877-0_232.↩
 
 157. [[13]](#B9780323852098000080.xhtml#cf0075) Whitehill J., Serpell Z., Lin Y.-C., Foster A., Movellan J. 投入的面孔：基于面部表情自动识别学生投入度。*IEEE Trans. Affect. Comput.* 2014;5:86–98.↩
 
-158. [8] Mahfouz A., Mahmoud T.M., Eldin A.S. 智能手机上行为生物特征认证综述。*J. Inf. Secur. Appl.* 2017;37:28–37.↩
+158. [[8]](#B9780323852098000080.xhtml#cf0040) Mahfouz A., Mahmoud T.M., Eldin A.S. 智能手机上行为生物特征认证综述。*J. Inf. Secur. Appl.* 2017;37:28–37.↩
 
-159. [8] Mahfouz A., Mahmoud T.M., Eldin A.S. 智能手机上行为生物特征认证综述。*J. Inf. Secur. Appl.* 2017;37:28–37.↩
+159. [[8]](#B9780323852098000080.xhtml#cf0040) Mahfouz A., Mahmoud T.M., Eldin A.S. 智能手机上行为生物特征认证综述。*J. Inf. Secur. Appl.* 2017;37:28–37.↩
 
-160. [5] Bougourzi F., Mokrani K., Ruichek Y., Dornaika F., Ouafi A., Taleb-Ahmed A. 变换浅层特征融合用于面部表情识别。*IET Image Process.* 2019;13(9):1479–1489.↩
+160. [[5]](#B9780323852098000080.xhtml#cf0030) Bougourzi F., Mokrani K., Ruichek Y., Dornaika F., Ouafi A., Taleb-Ahmed A. 变换浅层特征融合用于面部表情识别。*IET Image Process.* 2019;13(9):1479–1489.↩
 
-161. [7] Adatrao S., Mittal M. *不同图像预处理技术在利用霍夫变换确定圆形标记质心中的应用分析。* 载于：2016 年第 2 届信号处理前沿国际会议 (ICFSP)，华沙；2016:110–115.↩
+161. [[7]](#B9780323852098000080.xhtml#cf0045) Adatrao S., Mittal M. *不同图像预处理技术在利用霍夫变换确定圆形标记质心中的应用分析。* 载于：2016 年第 2 届信号处理前沿国际会议 (ICFSP)，华沙；2016:110–115.↩
 
-162. [20] Liu S., Deng W. *基于极深卷积神经网络的小样本量图像分类。* 载于：2015 年第 3 届 IAPR 亚洲模式识别会议 (ACPR) 论文集，吉隆坡；2015:730–734.↩
+162. [[20]](#B9780323852098000080.xhtml#cf0080) Liu S., Deng W. *基于极深卷积神经网络的小样本量图像分类。* 载于：2015 年第 3 届 IAPR 亚洲模式识别会议 (ACPR) 论文集，吉隆坡；2015:730–734.↩
 
 163. [[1]](#B9780323852098000018.xhtml#cf0045) Rani J., Garg K. 基于面部表情的情绪检测——综述。*Int. J. Adv. Res. Comput. Sci. Softw. Eng.* 2014;4(4).↩
 
 164. [[2]](#B9780323852098000018.xhtml#cf0050) Zhao Q., Ye M. *人脸识别在远程教育认证系统中的应用与实现。* 载于：2010 年网络与数字社会国际会议 5 月 30 日（第 1 卷，第 487–489 页）；IEEE；2010.↩
+
+
+
+### 参考文献
 
 165. [3] Budi S., Karnalim O., Handoyo E.D., Santoso S., Toba H., Nguyen H., Malhotra V. *IBAtS——基于图像的考勤系统：一种低成本的课堂学生考勤记录解决方案。* 载于：2018 IEEE 国际多媒体研讨会 (ISM) 12 月 10 日；IEEE；2018:259–266.↩
 
@@ -5055,10 +4786,6 @@ DWT 策略 130
 171. [[15]](#B9780323852098000018.xhtml#cf0250) Georghiades A.S., Belhumeur P.N., Kriegman D.J. 从少到多：用于变化光照和姿态下人脸识别的光照锥模型。*IEEE Trans. Pattern Anal. Mach. Intell.* 2001;23(6):643–660.↩
 
 172. [4] Allagwail S., Elbkosh A., 2020. 基于方向梯度直方图的对称人脸训练样本人脸识别。载于：第三届工程科学与技术会议 (CEST-2020)。↩
-
-
-
-
 
 ### 参考文献
 
@@ -5084,7 +4811,7 @@ DWT 策略 130
 
 183. [[3]](#B9780323852098000079.xhtml#cf0055) Jang-Jaccard J., Nepal S. 网络安全新兴威胁综述。 *J. Comput. Syst. Sci.* 2014 年；80(5):973–993。↩
 
-184. [[6]](#B9780323852098000079.xhtml#cf0070) Lakshmanarao A., Shashi M. 机器学习在网络安全中应用综述。 *Int. J. Sci. Technol. Res.* 2020 年。;9:1。 (访问于 2021 年 3 月 29 日)。 [在线]。 可用： [www.ijstr.org](http://www.ijstr.org)。↩
+184. [[6]](#B9780323852098000079.xhtml#cf0070) Lakshmanarao A., Shashi M. 机器学习在网络安全中应用综述。 *Int. J. Sci. Technol. Res.* 2020 年。;9:1。 (访问于 2021 年 3 月 29 日)。 [在线]。 可用： [`www.ijstr.org`](http://www.ijstr.org)。↩
 
 185. [[7]](#B9780323852098000079.xhtml#cf0075) Das R., Morris T.H. *机器学习与网络安全。* 2018 年。doi:10.1109/ICCECE.2017.8526232。↩
 
@@ -5124,10 +4851,6 @@ DWT 策略 130
 
 203. [[26]](#B9780323852098000079.xhtml#cf0200) Kingma D.P., Welling M. *自编码变分贝叶斯。* (访问于 2021 年 3 月 29 日)。 [在线]。 可用： [`arxiv.org/abs/1312.6114v10`](https://arxiv.org/abs/1312.6114v10)。 2014 年 12 月。↩
 
-
-
-
-
 ### 参考文献
 
 204. [\[27\]](#B9780323852098000079.xhtml#cf0205) Barton B., Byciuk S., Harris C., Schumack D., Webster K. *生物识别技术的新兴网络风险*。search.proquest.com，（访问日期：2021 年 4 月 1 日）。[在线]。可用：[`search.proquest.com/openview/d7bce659133b0156dd55b8030d73140f/1?pq-origsite=gscholar&cbl=47271`](https://search.proquest.com/openview/d7bce659133b0156dd55b8030d73140f/1?pq-origsite=gscholar&cbl=47271). 2005.↩
@@ -5144,47 +4867,41 @@ DWT 策略 130
 
 210. [\[33\]](#B9780323852098000079.xhtml#cf0250) Dong B., Wang X. 用于网络入侵检测的深度学习方法与传统方法的比较。*2016 年第 8 届 IEEE 通信软件与网络国际会议 (ICCSN)*。2016:581–585.↩
 
-211. [\[34\]](#B9780323852098000079.xhtml#cf0255) Zong W., Chow Y., Susilo W. *网络入侵检测数据的降维与可视化*。（访问日期：2021 年 3 月 29 日）。[在线]。可用：[`ro.uow.edu.au/eispapers1https://ro.uow.edu.au/eispapers1/2992:https://ro.uow.edu.au/eispapers1/2992`](https://ro.uow.edu.au/eispapers1https://ro.uow.edu.au/eispapers1/2992:https://ro.uow.edu.au/eispapers1/2992). 2019.↩
-
-212. [\[35\]](#B9780323852098000079.xhtml#cf0260) Ford V., Siraj A. *机器学习在网络安全中的应用*。载于：第 27 届工业与工程计算机应用国际会议；CAINE；2014.↩
-
-213. [\[36\]](#B9780323852098000079.xhtml#cf0265) Javaid A., Niyaz Q., Sun W., Alam M. 用于网络入侵检测系统的深度学习方法。*EAI 认可的安全与安全交易*。EAI 认可的安全与安全交易；doi:10.4108/eai.3-12-2015.2262516. 2015；第 3 卷.↩
-
-214. [\[37\]](#B9780323852098000079.xhtml#cf0270) Mohammadi S., Mirvaziri H., Ghazizadeh-Ahsaee M., Karimipour H. 基于组合特征选择算法的网络入侵检测。*J Inf. Secur. Appl.* 2019;44:80–88.↩
-
-215. [\[37\]](#B9780323852098000079.xhtml#cf0270) Mohammadi S., Mirvaziri H., Ghazizadeh-Ahsaee M., Karimipour H. 基于组合特征选择算法的网络入侵检测。*J Inf. Secur. Appl.* 2019;44:80–88.↩
-
-216. [\[39\]](#B9780323852098000079.xhtml#cf0285) Morris T., Das R., Morris T.H. *机器学习与网络安全*。ieeexplore.ieee.org 2017. doi:10.1109/ICCECE.2017.8526232.↩
-
-217. [\[41\]](#B9780323852098000079.xhtml#cf0295) Gupta B., Sheng Q. *计算机与网络安全的机器学习：原理、算法与实践*。佛罗里达州博卡拉顿：CRC Press, Taylor & Francis；2019.↩
-
-218. [\[42\]](#B9780323852098000079.xhtml#cf0300) Thomas M.V., Chandrasekaran K. 云计算环境中的身份与访问管理。载于：*身份盗窃*。IGI Global；2016:38–68.↩
-
-219. [\[44\]](#B9780323852098000079.xhtml#cf0310) Katzir Z., Elovici Y. 量化用于网络安全的机器学习分类器的弹性。*Expert Syst. Appl.* 2018. Elsevier，（访问日期：2021 年 4 月 1 日）。[在线]。可用：[`www.sciencedirect.com/science/article/pii/S0957417417306590?casa:token=lN1zUweaI8EAAAAA:c-NJXxNTizg7jPPyNIHslS9dCGUdxueAdzzP0\_tBGLixbGwKU1lacdLQG5Do5K1vkJ-WyjrpW6Q`](https://www.sciencedirect.com/science/article/pii/S0957417417306590?casa:token=lN1zUweaI8EAAAAA:c-NJXxNTizg7jPPyNIHslS9dCGUdxueAdzzP0_tBGLixbGwKU1lacdLQG5Do5K1vkJ-WyjrpW6Q).↩
-
-220. [\[46\]](#B9780323852098000079.xhtml#cf0320) Buczak A., Guven E. 用于网络安全入侵检测的数据挖掘和机器学习方法综述。*IEEE Commun. Surv. Tutorials.* 2015. ieeexplore.ieee.org，（访问日期：2021 年 4 月 1 日）。[在线]。可用：[`ieeexplore.ieee.org/abstract/document/7307098/`](https://ieeexplore.ieee.org/abstract/document/7307098/).↩
-
-221. [\[47\]](#B9780323852098000079.xhtml#cf0325) Niyaz Q., Sun W., Javaid A.Y., Alam M. 用于网络入侵检测系统的深度学习方法。*EAI Endorsed Trans. Secur. Saf.* 2015; doi:10.4108/eai.3-12-2015.2262516.↩
-
-222. [\[48\]](#B9780323852098000079.xhtml#cf0330) Amit I., Matherly J., Hewlett W., Xu Z., Meshi Y., Weinberger Y. *网络安全中的机器学习——问题、挑战与数据集*。（访问日期：2021 年 4 月 1 日）。[在线]。可用：[`www.virustotal.com/`](https://www.virustotal.com/). 2019.↩
-
-223. [\[49\]](#B9780323852098000079.xhtml#cf0335) Anwar S., Mohamad Zain J., Zolkipli M.F., Inayat Z., Khan S., Anthony B., Chang V. 从入侵检测到入侵响应系统：基础、需求与未来方向。*Algorithms.* 2017;10(2):39.↩
-
-224. [\[50\]](#B9780323852098000079.xhtml#cf0340) Sarker I.H., Kayes A.S.M., Badsha S., Alqahtani H., Watters P., Ng A. 网络安全数据科学：从机器学习视角的概述。*J. Big Data.* 2020;7(1):41. doi:10.1186/s40537-020-00318-5.↩
-
-225. [\[51\]](#B9780323852098000079.xhtml#cf0345) Aydos M., Yavanoglu O. *面向机器学习算法的网络安全数据集综述 Logo 检测与分类视图项目 数据隐私视图项目 面向机器学习算法的网络安全数据集综述*。ieeexplore.ieee.org 2017. doi:10.1109/BigData.2017.8258167.↩
-
-226. [\[53\]](#B9780323852098000079.xhtml#cf0355) Lashkari A.H., Gil G.D., Saiful M., Mamun I., Ghorbani A.A. *基于时间特征的 Tor 流量表征*。2017. doi:10.5220/0006105602530262.↩
-
-227. [\[54\]](#B9780323852098000079.xhtml#cf0360) Rila L. 基于生物识别的认证系统中的拒绝访问。载于：*计算机科学讲座笔记（含人工智能讲座笔记子系列与生物信息学讲座笔记子系列）*。19–29. doi:10.1007/3-540-45831-x\_2. 2002；第 2437 卷.↩
-
-228. [\[53\]](#B9780323852098000079.xhtml#cf0355) Lashkari A.H., Gil G.D., Saiful M., Mamun I., Ghorbani A.A. *基于时间特征的 Tor 流量表征*。2017. doi:10.5220/0006105602530262.↩
-
-229. [\[54\]](#B9780323852098000079.xhtml#cf0360) Rila L. 基于生物识别的认证系统中的拒绝访问。载于：*计算机科学讲座笔记（含人工智能讲座笔记子系列与生物信息学讲座笔记子系列）*。19–29. doi:10.1007/3-540-45831-x\_2. 2002；第 2437 卷.↩
 
 
+### 参考文献
 
+211. [[34]](#B9780323852098000079.xhtml#cf0255) Zong W., Chow Y., Susilo W. *网络入侵检测数据的降维与可视化*。（访问日期：2021 年 3 月 29 日）。[在线]。可用：[`https://ro.uow.edu.au/eispapers1/2992`](https://ro.uow.edu.au/eispapers1/2992). 2019.↩
 
+212. [[35]](#B9780323852098000079.xhtml#cf0260) Ford V., Siraj A. *机器学习在网络安全中的应用*。载于：第 27 届工业与工程计算机应用国际会议；CAINE；2014.↩
+
+213. [[36]](#B9780323852098000079.xhtml#cf0265) Javaid A., Niyaz Q., Sun W., Alam M. 用于网络入侵检测系统的深度学习方法。*EAI 认可的安全与安全交易*。EAI 认可的安全与安全交易；doi:10.4108/eai.3-12-2015.2262516. 2015；第 3 卷.↩
+
+214. [[37]](#B9780323852098000079.xhtml#cf0270) Mohammadi S., Mirvaziri H., Ghazizadeh-Ahsaee M., Karimipour H. 基于组合特征选择算法的网络入侵检测。*J Inf. Secur. Appl.* 2019;44:80–88.↩
+
+215. [[39]](#B9780323852098000079.xhtml#cf0285) Morris T., Das R., Morris T.H. *机器学习与网络安全*。ieeexplore.ieee.org 2017. doi:10.1109/ICCECE.2017.8526232.↩
+
+216. [[41]](#B9780323852098000079.xhtml#cf0295) Gupta B., Sheng Q. *计算机与网络安全的机器学习：原理、算法与实践*。佛罗里达州博卡拉顿：CRC Press, Taylor & Francis；2019.↩
+
+217. [[42]](#B9780323852098000079.xhtml#cf0300) Thomas M.V., Chandrasekaran K. 云计算环境中的身份与访问管理。载于：*身份盗窃*。IGI Global；2016:38–68.↩
+
+218. [[44]](#B9780323852098000079.xhtml#cf0310) Katzir Z., Elovici Y. 量化用于网络安全的机器学习分类器的弹性。*Expert Syst. Appl.* 2018. Elsevier，（访问日期：2021 年 4 月 1 日）。[在线]。可用：[`https://www.sciencedirect.com/science/article/pii/S0957417417306590?casa:token=lN1zUweaI8EAAAAA:c-NJXxNTizg7jPPyNIHslS9dCGUdxueAdzzP0_tBGLixbGwKU1lacdLQG5Do5K1vkJ-WyjrpW6Q`](https://www.sciencedirect.com/science/article/pii/S0957417417306590?casa:token=lN1zUweaI8EAAAAA:c-NJXxNTizg7jPPyNIHslS9dCGUdxueAdzzP0_tBGLixbGwKU1lacdLQG5Do5K1vkJ-WyjrpW6Q).↩
+
+219. [[46]](#B9780323852098000079.xhtml#cf0320) Buczak A., Guven E. 用于网络安全入侵检测的数据挖掘和机器学习方法综述。*IEEE Commun. Surv. Tutorials.* 2015. ieeexplore.ieee.org，（访问日期：2021 年 4 月 1 日）。[在线]。可用：[`https://ieeexplore.ieee.org/abstract/document/7307098/`](https://ieeexplore.ieee.org/abstract/document/7307098/).↩
+
+220. [[47]](#B9780323852098000079.xhtml#cf0325) Niyaz Q., Sun W., Javaid A.Y., Alam M. 用于网络入侵检测系统的深度学习方法。*EAI Endorsed Trans. Secur. Saf.* 2015; doi:10.4108/eai.3-12-2015.2262516.↩
+
+221. [[48]](#B9780323852098000079.xhtml#cf0330) Amit I., Matherly J., Hewlett W., Xu Z., Meshi Y., Weinberger Y. *网络安全中的机器学习——问题、挑战与数据集*。（访问日期：2021 年 4 月 1 日）。[在线]。可用：[`https://www.virustotal.com/`](https://www.virustotal.com/). 2019.↩
+
+222. [[49]](#B9780323852098000079.xhtml#cf0335) Anwar S., Mohamad Zain J., Zolkipli M.F., Inayat Z., Khan S., Anthony B., Chang V. 从入侵检测到入侵响应系统：基础、需求与未来方向。*Algorithms.* 2017;10(2):39.↩
+
+223. [[50]](#B9780323852098000079.xhtml#cf0340) Sarker I.H., Kayes A.S.M., Badsha S., Alqahtani H., Watters P., Ng A. 网络安全数据科学：从机器学习视角的概述。*J. Big Data.* 2020;7(1):41. doi:10.1186/s40537-020-00318-5.↩
+
+224. [[51]](#B9780323852098000079.xhtml#cf0345) Aydos M., Yavanoglu O. *面向机器学习算法的网络安全数据集综述 Logo 检测与分类视图项目 数据隐私视图项目 面向机器学习算法的网络安全数据集综述*。ieeexplore.ieee.org 2017. doi:10.1109/BigData.2017.8258167.↩
+
+225. [[53]](#B9780323852098000079.xhtml#cf0355) Lashkari A.H., Gil G.D., Saiful M., Mamun I., Ghorbani A.A. *基于时间特征的 Tor 流量表征*。2017. doi:10.5220/0006105602530262.↩
+
+226. [[54]](#B9780323852098000079.xhtml#cf0360) Rila L. 基于生物识别的认证系统中的拒绝访问。载于：*计算机科学讲座笔记（含人工智能讲座笔记子系列与生物信息学讲座笔记子系列）*。19–29. doi:10.1007/3-540-45831-x_2. 2002；第 2437 卷.↩
 
 ### 参考文献
 
@@ -5208,63 +4925,53 @@ DWT 策略 130
 
 239. [20] Puteaux P., Puech W. 一种用于加密图像大容量可逆数据隐藏的高效 MSB 预测法。*IEEE Trans. Inf. Forensics Secur.* 2018;13(7):1670–1681.↩
 
-240. [8] Manikandan V.M., Masilamani V. 一种基于熵的加密过程中的可逆数据隐藏新方法。载于：2019 年 IEEE 第 1 届能源、系统与信息处理国际会议 (ICESIP)；IEEE；2019。↩
+240. [9] Manikandan V.M., Masilamani V. 利用机器学习的加密过程中的可逆数据隐藏方案。*Procedia Comput. Sci.* 2018;133:348–356.↩
 
-241. [8] Manikandan V.M., Masilamani V. 一种基于熵的加密过程中的可逆数据隐藏新方法。载于：2019 年 IEEE 第 1 届能源、系统与信息处理国际会议 (ICESIP)；IEEE；2019。↩
+241. [10] Manikandan V.M., Bini A.A. 一种带有分块预检查的改进加密可逆数据隐藏方案。*Procedia Comput. Sci.* 2020;171:951–958.↩
 
-242. [9] Manikandan V.M., Masilamani V. 利用机器学习的加密过程中的可逆数据隐藏方案。*Procedia Comput. Sci.* 2018;133:348–356.↩
+242. [23] Sokoto Coventry 指纹数据集 (SOCOFing)。[`https://www.kaggle.com/ruizgara/socofing`](https://www.kaggle.com/ruizgara/socofing)，（访问于 2020 年 11 月）。↩
 
-243. [10] Manikandan V.M., Bini A.A. 一种带有分块预检查的改进加密可逆数据隐藏方案。*Procedia Comput. Sci.* 2020;171:951–958.↩
+243. [[1]](#B9780323852098000067.xhtml#cf0060) Sharavanan P.T., Sridharan D., Kumar R. 一种基于 ECDSA 框架的物联网无线体域网隐私保护安全跨层协议设计。*J. Med. Syst.* 2018;42(10):196.↩
 
-244. [8] Manikandan V.M., Masilamani V. 一种基于熵的加密过程中的可逆数据隐藏新方法。载于：2019 年 IEEE 第 1 届能源、系统与信息处理国际会议 (ICESIP)；IEEE；2019。↩
+244. [[4]](#B9780323852098000067.xhtml#cf0075) Shen J., Gui Z., Ji S., Shen J., Tan H., Tang Y. 面向无线体域网的云辅助轻量级无证书匿名认证协议。*J. Netw. Comput. Appl.* 2018;106:117–123.↩
 
-245. [23] Sokoto Coventry 指纹数据集 (SOCOFing)。[`https://www.kaggle.com/ruizgara/socofing`](https://www.kaggle.com/ruizgara/socofing)，（访问于 2020 年 11 月）。↩
+245. [[8]](#B9780323852098000067.xhtml#cf0095) Reddy A.G., Yoon E.-J., Das A.K., Yoo K.-Y. 面向使用智能卡的移动网络环境的带密钥协商的轻量级认证。*IET Inf. Secur.* 2016;10(5):272–282.↩
 
-246. [[1]](#B9780323852098000067.xhtml#cf0060) Sharavanan P.T., Sridharan D., Kumar R. 一种基于 ECDSA 框架的物联网无线体域网隐私保护安全跨层协议设计。*J. Med. Syst.* 2018;42(10):196.↩
+246. [[9]](#B9780323852098000067.xhtml#cf0100) Panda S., Kumari M., Mondal S. SGP：一种抵抗智能手机肩窥攻击的安全图形密码系统。载于：Springer；2018:129–145。*国际信息系统安全会议。*↩
 
-247. [[4]](#B9780323852098000067.xhtml#cf0075) Shen J., Gui Z., Ji S., Shen J., Tan H., Tang Y. 面向无线体域网的云辅助轻量级无证书匿名认证协议。*J. Netw. Comput. Appl.* 2018;106:117–123.↩
+247. [11] Chen C.-L., Yang T.-T., Shih T.-F. 一种基于云环境的安全医疗数据交换协议。*J. Med. Syst.* 2014;38(9):112.↩
 
-248. [[8]](#B9780323852098000067.xhtml#cf0095) Reddy A.G., Yoon E.-J., Das A.K., Yoo K.-Y. 面向使用智能卡的移动网络环境的带密钥协商的轻量级认证。*IET Inf. Secur.* 2016;10(5):272–282.↩
+248. [13] Chen C.-L., Yang T.-T., Chiang M.-L., Shih T.-F. 一种面向医疗环境的基于云的隐私认证方案。*J. Med. Syst.* 2014;38(11):143.↩
 
-249. [[9]](#B9780323852098000067.xhtml#cf0100) Panda S., Kumari M., Mondal S. SGP：一种抵抗智能手机肩窥攻击的安全图形密码系统。载于：Springer；2018:129–145。*国际信息系统安全会议。*↩
+249. [14] Chiou S.-Y., Ying Z., Liu J. 面向医疗环境的基于云的隐私认证方案的改进。*J. Med. Syst.* 2016;40(4):101.↩
 
-250. [11] Chen C.-L., Yang T.-T., Shih T.-F. 一种基于云环境的安全医疗数据交换协议。*J. Med. Syst.* 2014;38(9):112.↩
+250. [6] Mohit P., Amin R., Karati A., Biswas G.P., Khan M.K. 一种面向云计算医疗系统的标准相互认证协议。*J. Med. Syst.* 2017;41(4):50.↩
 
-251. [11] Chen C.-L., Yang T.-T., Shih T.-F. 一种基于云环境的安全医疗数据交换协议。*J. Med. Syst.* 2014;38(9):112.↩
+251. [15] Li C.-T., Shih D.-H., Wang C.-C. 面向远程医疗信息系统的云辅助相互认证与隐私保护协议。*Comput. Methods Prog. Biomed.* 2018;157:191–203.↩
 
-252. [13] Chen C.-L., Yang T.-T., Chiang M.-L., Shih T.-F. 一种面向医疗环境的基于云的隐私认证方案。*J. Med. Syst.* 2014;38(11):143.↩
+252. [16] Kumar V., Jangirala S., Ahmad M. 面向云计算医疗系统的高效相互认证框架。*J. Med. Syst.* 2018;42(8):142.↩
 
-253. [14] Chiou S.-Y., Ying Z., Liu J. 面向医疗环境的基于云的隐私认证方案的改进。*J. Med. Syst.* 2016;40(4):101.↩
+253. [18] Chandrakar P., Sinha S., Ali R. 面向医疗监测系统的基于云的认证协议。*J. Ambient Intell. Humaniz. Comput.* 2020;11:3431–3447.↩
 
-254. [6] Mohit P., Amin R., Karati A., Biswas G.P., Khan M.K. 一种面向云计算医疗系统的标准相互认证协议。*J. Med. Syst.* 2017;41(4):50.↩
+254. [[20]](#B9780323852098000067.xhtml#cf0230) Dolev D., Yao A. 公钥协议的安全性。*IEEE Trans. Inf. Theory.* 1983;29(2):198–208.↩
 
-255. [15] Li C.-T., Shih D.-H., Wang C.-C. 面向远程医疗信息系统的云辅助相互认证与隐私保护协议。*Comput. Methods Prog. Biomed.* 2018;157:191–203.↩
+255. [[22]](#B9780323852098000067.xhtml#cf0240) Yan X., Li W., Li P., Wang J., Hao X., Gong P. 一种面向远程医疗信息系统的安全生物特征认证方案。*J. Med. Syst.* 2013;37(5):1–6.↩
 
-256. [16] Kumar V., Jangirala S., Ahmad M. 面向云计算医疗系统的高效相互认证框架。*J. Med. Syst.* 2018;42(8):142.↩
+256. [[23]](#B9780323852098000067.xhtml#cf0245) Topcu B., Karabat C., Azadmanesh M., Erdogan H. 基于稀疏恢复的生物特征哈希实用安全性与隐私攻击。*EURASIP J. Adv. Signal Process.* 2016;2016(1):100.↩
 
-257. [18] Chandrakar P., Sinha S., Ali R. 面向医疗监测系统的基于云的认证协议。*J. Ambient Intell. Humaniz. Comput.* 2020;11:3431–3447.↩
+257. [[25]](#B9780323852098000067.xhtml#cf0265) Abdalla M., Fouque P.-A., Pointcheval D. 三方设置下的基于密码的认证密钥交换。载于：Springer；2005:65–84。*国际公钥密码学研讨会。*↩
 
-258. [[20]](#B9780323852098000067.xhtml#cf0230) Dolev D., Yao A. 公钥协议的安全性。*IEEE Trans. Inf. Theory.* 1983;29(2):198–208.↩
+258. [26] AVISPA：互联网安全协议与应用自动验证，[`http://www.avispa-project.org/`](http://www.avispa-project.org/)（访问于 2019 年 9 月）。↩
 
-259. [[22]](#B9780323852098000067.xhtml#cf0240) Yan X., Li W., Li P., Wang J., Hao X., Gong P. 一种面向远程医疗信息系统的安全生物特征认证方案。*J. Med. Syst.* 2013;37(5):1–6.↩
 
-260. [[23]](#B9780323852098000067.xhtml#cf0245) Topcu B., Karabat C., Azadmanesh M., Erdogan H. 基于稀疏恢复的生物特征哈希实用安全性与隐私攻击。*EURASIP J. Adv. Signal Process.* 2016;2016(1):100.↩
 
-261. [[25]](#B9780323852098000067.xhtml#cf0265) Abdalla M., Fouque P.-A., Pointcheval D. 三方设置下的基于密码的认证密钥交换。载于：Springer；2005:65–84。*国际公钥密码学研讨会。*↩
-
-262. [26] AVISPA：互联网安全协议与应用自动验证，[`http://www.avispa-project.org/`](http://www.avispa-project.org/)（访问于 2019 年 9 月）。↩
+### 参考文献
 
 263. [14] Chiou S.-Y., Ying Z., Liu J. 面向医疗环境的基于云的隐私认证方案的改进。*J. Med. Syst.* 2016;40(4):101.↩
 
 264. [11] Chen C.-L., Yang T.-T., Shih T.-F. 一种基于云环境的安全医疗数据交换协议。*J. Med. Syst.* 2014;38(9):112.↩
 
 265. [14] Chiou S.-Y., Ying Z., Liu J. 面向医疗环境的基于云的隐私认证方案的改进。*J. Med. Syst.* 2016;40(4):101.↩
-
-
-
-
-
-### 参考文献
 
 266. [6] Mohit P., Amin R., Karati A., Biswas G.P., Khan M.K. A standard mutual authentication protocol for cloud computing based health care system. *J. Med. Syst.* 2017;41(4):50.↩
 
@@ -5281,4 +4988,3 @@ DWT 策略 130
 272. [16] Kumar V., Jangirala S., Ahmad M. An efficient mutual authentication framework for healthcare system in cloud computing. *J. Med. Syst.* 2018;42(8):142.↩
 
 273. [18] Chandrakar P., Sinha S., Ali R. Cloud-based authenticated protocol for healthcare monitoring system. *J. Ambient Intell. Humaniz. Comput.* 2020;11:3431–3447.↩
-

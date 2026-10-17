@@ -1,13 +1,11 @@
-## 生物科学深度学习
 
-
+# 生物科学深度学习
 
 ![](img/default_cover.jpeg)
 
 ![image](img/9783960103516.jpg)
 
-
-关于本书——以及许多其他 O’Reilly 书籍——您也可以下载相应的 PDF 格式电子书。只需成为 oreilly.plus^+ 会员即可：[www.oreilly.plus](http://www.oreilly.plus)
+关于本书——以及许多其他 O’Reilly 书籍——您也可以下载相应的 PDF 格式电子书。只需成为 `oreilly.plus^+` 会员即可：[www.oreilly.plus](http://www.oreilly.plus)
 
 ---
 
@@ -39,7 +37,7 @@
 
 ## 显微镜学简介
 
-#### 现代光学显微镜
+### 现代光学显微镜
 
 ### 衍射极限
 
@@ -109,7 +107,7 @@
 
 ## 生成模型在生命科学中的应用
 
-#### 为核心结构开发新思路
+### 为核心结构开发新思路
 
 #### 蛋白质设计
 
@@ -188,14 +186,14 @@
 表示应由用户提供的值或由上下文确定的值替换的文本。
 
 | ![image](img/cat.jpg) || 此图标表示提示或建议。 |
+
 | --- | --- |
+
 | ![image](img/crow.jpg) || 此图标表示一般性说明。 |
+
 | ![image](img/insert.jpg) || 此元素象征警告。 |
 
 ## 使用代码示例
-
-
-
 
 Ergänzendes Material (z. B. Codebeispiele, Übungen usw.) steht unter `https://github.com/deepchem/DeepLearningLifeSciences` zum Download bereit.
 
@@ -205,7 +203,7 @@ Wir freuen uns über Quellenangaben, verlangen diese aber nicht. Eine Quellenang
 
 Wenn Sie glauben, dass Ihre Nutzung von Codebeispielen über das gewöhnliche Maß hinausgeht oder außerhalb der oben vorgestellten Nutzungsbedingungen liegt, kontaktieren Sie uns bitte unter `kommentar@oreilly.de`.
 
-## Danksagung
+## 致谢
 
 Wir möchten uns bei Nicole Tache, unserer Lektorin bei O’Reilly, bedanken. Weiterhin danken wir den Tech- und Beta-Reviewern für ihre wertvollen Beiträge zum Buch. Darüber hinaus möchten wir Karl Leswing und Zhenqin (Michael) Wu für ihre Beiträge zum Programmcode und Johnny Israeli für die wertvollen Ratschläge zum Kapitel über Genomik danken.
 
@@ -217,20 +215,24 @@ Pat bedankt sich bei seiner Frau Andrea und seinen Töchtern Alee und Maddy für
 
 Abschließend möchten wir uns bei der Open-Source-Community von DeepChem für die Ermutigung und Unterstützung während des gesamten Projekts bedanken.
 
-# KAPITEL 1
+# 第 1 章
 
-# Warum Biowissenschaften?
+# 为什么是生物科学？
 
 Einsatzgebiete für all diejenigen mit technischem Verständnis und Leidenschaft für Daten gibt es viele, aber nur wenige Gebiete haben eine so grundlegende Auswirkung wie die biomedizinische Forschung. Der Beginn der modernen Medizin hat die Natur der menschlichen Existenz grundlegend verändert. In den letzten 20 Jahren wurden wir Zeuge, wie Innovationen das Leben unzähliger Menschen verändert haben. Bei ihrem ersten Auftreten im Jahr 1981 war HIV/Aids eine zumeist tödliche Krankheit. Die kontinuierliche Weiterentwicklung antiretroviraler Therapien hat die Lebenserwartung betroffener Patienten erheblich verlängert. Andere Krankheiten, wie zum Beispiel Hepatitis C, die vor einem Jahrzehnt noch als nicht behandelbar galt, können nun geheilt werden. Fortschritte in der Genetik ermöglichen die Identifikation und, hoffentlich bald, die Behandlung einer Vielzahl von Erkrankungen. Dank innovativer Diagnostik und Instrumentierung können Mediziner Krankheiten im menschlichen Körper spezifisch identifizieren und gezielt behandeln. Viele dieser Durchbrüche haben von rechnergestützten Methoden profitiert und werden durch diese weiter vorangetrieben.
 
-## Warum Deep Learning?
+## 为什么是深度学习？
 
 Algorithmen für Machine Learning sind inzwischen ein wichtiger Bestandteil des Alltags, vom Onlineshopping bis Social Media. Informatiker entwickeln Algorithmen, die es digitalen Assistenten wie Amazon Echo oder Google Home ermöglichen, Sprache zu verstehen. Fortschritte im Machine Learning haben die Übersetzung von Webseiten im laufenden Betrieb ermöglicht. Des Weiteren hat Machine Learning viele Bereiche der Physik und Biowissenschaften beeinflusst. Algorithmen werden auf alles angewandt, von der Entdeckung neuer Galaxien aus Teleskopaufnahmen bis zur Klassifizierung subatomarer Wechselwirkungen am Large Hadron Collider.
 
-Eine der Triebfedern dieser technologischen Fortschritte war die Entwicklung einer Klasse von Methoden des Machine Learning, die als Deep Neural Networks bekannt sind. Während die technologischen Voraussetzungen für künstliche neuronale Netze in den 1950er-Jahren entwickelt und in den 1980er-Jahren verfeinert wurden, entfaltete sich deren volles Potenzial erst in den letzten zehn Jahren mit der Weiterentwicklung der Computerhardware. Im nächsten Kapitel werden wir eine umfassendere Übersicht über Deep Neural Networks geben, es ist jedoch wichtig, die aus der Anwendung von Deep Learning entstandenen Fortschritte zu würdigen:
+Eine der Triebfedern dieser technologischen Fortschritte war die Entwicklung einer Klasse von Methoden des Machine Learning, die als Deep Neural Networks bekannt sind. Während die technologischen Voraussetzungen für künstliche neuronale Netze in den 1950er-Jahren entwickelt und in den 1980er-Jahren verfeinert wurden, entfaltete sich deren volles Potenzial erst in den letzten zehn Jahren mit der Weiterentwicklung der Computerhardware. Im nächsten Kapitel werden wir eine umfassendere Übersicht über Deep Neural Networks geben, es ist jedoch wichtig, die aus der Anwendung von Deep Learning entstandenen Fortschritte zu würdigen：
 
-*   Viele der Entwicklungen bei der Spracherkennung, die in Mobiltelefonen, Computern, Fernsehern und anderen mit dem Internet verbundenen Geräten allgegenwärtig sind, wurden durch Deep Learning vorangetrieben.
-*   Die Bilderkennung ist eine Schlüsselkomponente für selbstfahrende Autos, die Internetsuche und andere Anwendungen. Viele der Deep-Learning-Entwicklungen, die Anwendungen für Privatkunden vorangetrieben haben, werden jetzt in der biomedizinischen Forschung eingesetzt, zum Beispiel um Tumorzellen verschiedenen Typen zuzuordnen.
+*   许多语音识别的发展，这些发展在手机、电脑、电视和其他联网设备中无处不在，都是由深度学习推动的。
+
+*   图像识别是自动驾驶汽车、互联网搜索和其他应用的关键组件。许多推动消费者应用的深度学习发展现在被用于生物医学研究，例如将肿瘤细胞分配给不同的类型。
+
+
+
 *   Empfehlungssysteme sind zu einer Schlüsselkomponente des Onlineerlebnisses geworden. Unternehmen wie Amazon wenden Deep Learning an, um ihre Kunden, die ein bestimmtes Produkt gekauft haben, dazu zu bewegen, zusätzliche Einkäufe zu tätigen. Netflix geht ähnlich vor, um Filme vorzuschlagen, die ein Nutzer möglicherweise ebenfalls sehen möchte. Viele der Ideen, die hinter diesen Empfehlungssystemen stehen, werden verwendet, um neue Moleküle zu identifizieren, die als Ausgangspunkte für neue Wirkstoffentdeckungen dienen könnten.
 *   Übersetzungen waren einst die Domäne sehr komplexer statistischer Computerprogramme. In den letzten Jahren hat Deep Learning die Systeme, die jahrelang manuell kuratiert wurden, übertroffen. Viele der gleichen Ideen werden nun genutzt, um Konzepte aus der wissenschaftlichen Literatur zu extrahieren und Wissenschaftler auf Publikationen aufmerksam zu machen, die sie möglicherweise übersehen hätten.
 
@@ -240,16 +242,13 @@ Die hier genannten sind nur einige der Innovationen, die durch die Anwendung von
 
 Wie bereits erwähnt, hat sich die grundlegende Art der Biowissenschaften verändert. Die Verfügbarkeit von Robotik sowie miniaturisierte Experimente haben zu einem drastischen Anstieg der experimentellen Daten, die erstellt werden können, geführt. In den 1980er-Jahren führte ein Biologe ein einzelnes Experiment durch, das nur ein einzelnes Ergebnis lieferte. Dieses konnte dann meist manuell unter Zuhilfenahme eines Taschenrechners verarbeitet werden. Spulen wir zur heutigen Biologie vor, dann verfügen wir über Instrumente, die in ein oder zwei Tagen Millionen experimenteller Datenpunkte erzeugen können. Die Gensequenzierung beispielsweise, in der riesige Datensätze entstehen, ist kostengünstig und routinemäßig geworden.
 
-
-
-
 # 基因测序与数据科学的进展
 
 基因测序的进步促成了数据库的开发，这些数据库将个人的遗传基因组与多种健康影响（如糖尿病、癌症和囊性纤维化等遗传性疾病）联系起来。借助用于分析和挖掘这些数据的分析方法，科学家们正在建立对这些疾病成因的理解，并利用这些知识开发新疗法。
 
-过去主要依赖人工观察的领域，如今使用的数据集已无法再通过人工进行评估。如今，**机器学习**被常规用于对细胞图像进行分类。这些机器学习模型的结果被用于识别和分类癌症肿瘤，以及评估潜在癌症疗法的效果。
+过去主要依赖人工观察的领域，如今使用的数据集已无法再通过人工进行评估。如今，`机器学习`被常规用于对细胞图像进行分类。这些机器学习模型的结果被用于识别和分类癌症肿瘤，以及评估潜在癌症疗法的效果。
 
-实验技术的进步促成了多个数据库的建立，这些数据库对化学品的结构及其对各种生物过程或活性的影响进行编目。这些结构-活性关系（SARs）构成了一个被称为*化学信息学*的科学分支的基础。科学家们利用这些海量数据集构建预测模型，这些模型将推动下一代药物研发。
+实验技术的进步促成了多个数据库的建立，这些数据库对化学品的结构及其对各种生物过程或活性的影响进行编目。这些结构-活性关系（SARs）构成了一个被称为`化学信息学`的科学分支的基础。科学家们利用这些海量数据集构建预测模型，这些模型将推动下一代药物研发。
 
 这些海量数据需要新一代科学家，他们既精通科学又精通计算机科学。同时具备这两个领域知识的人，有潜力在大型数据集中发掘模式和趋势，并成为明天的科学发现者。
 
@@ -257,19 +256,15 @@ Wie bereits erwähnt, hat sich die grundlegende Art der Biowissenschaften verän
 
 在本书的前几章中，我们将概述深度学习及其在生命科学中的应用。我们从机器学习开始，它被定义为“让计算机通过编程从数据中学习的科学（与艺术）”。^(1)
 
-第 2 章简要介绍了深度学习。我们从一个示例开始，展示如何利用这种机器学习类型执行线性回归等简单任务，随后过渡到常用于解决生命科学实际问题的更复杂模型。在机器学习中，数据集最初会被划分为用于开发模型的训练数据集和用于评估模型性能的测试数据集。在第 2 章中，我们将讨论关于预测模型训练和验证的一些细节。模型生成后，通常可以通过调整多个参数（也称为*超参数*）来优化其性能。本章概述了这一过程。深度学习并非一种独立的技术，而是包含一系列相关方法。第 2 章最后介绍了一些最重要的深度学习变体。
+第 2 章简要介绍了深度学习。我们从一个示例开始，展示如何利用这种机器学习类型执行线性回归等简单任务，随后过渡到常用于解决生命科学实际问题的更复杂模型。在机器学习中，数据集最初会被划分为用于开发模型的训练数据集和用于评估模型性能的测试数据集。在第 2 章中，我们将讨论关于预测模型训练和验证的一些细节。模型生成后，通常可以通过调整多个参数（也称为`超参数`）来优化其性能。本章概述了这一过程。深度学习并非一种独立的技术，而是包含一系列相关方法。第 2 章最后介绍了一些最重要的深度学习变体。
 
-第 3 章介绍了 **DeepChem**，这是一个专门开发的开源程序库，旨在简化为各种生命科学应用创建深度学习模型的过程。在概述 DeepChem 之后，我们将展示第一个编程示例，演示如何使用 DeepChem 库构建一个预测分子毒性的模型。在第二个编程示例中，我们将展示如何使用 DeepChem 对图像进行分类，这是现代生物学中常见的任务。正如简要提到的，深度学习被用于各种成像应用，范围涵盖从癌症诊断到青光眼检测。这些具体应用的介绍随后将引出对深度学习方法内部工作原理的解释。
+第 3 章介绍了 `DeepChem`，这是一个专门开发的开源程序库，旨在简化为各种生命科学应用创建深度学习模型的过程。在概述 DeepChem 之后，我们将展示第一个编程示例，演示如何使用 DeepChem 库构建一个预测分子毒性的模型。在第二个编程示例中，我们将展示如何使用 DeepChem 对图像进行分类，这是现代生物学中常见的任务。正如简要提到的，深度学习被用于各种成像应用，范围涵盖从癌症诊断到青光眼检测。这些具体应用的介绍随后将引出对深度学习方法内部工作原理的解释。
 
 第 4 章概述了如何将机器学习应用于分子。我们从分子入手，分子是构成我们周围一切事物的基本单元。虽然分子可以比作积木，但它们并非刚性的。相反，分子是柔性的并表现出动态行为。为了能够使用深度学习等分析方法表征分子，我们必须能够在计算机中表示分子。这些编码类似于将图像表示为像素集合的方式。在第 4 章的第二部分中，我们将描述一系列分子表示方法，以及如何在深度学习模型中使用这些表示。
 
 第 5 章介绍生物物理学领域，该领域将物理定律应用于生物学现象。我们从蛋白质入手，蛋白质是使生命成为可能的分子机器。预测药物对身体影响的关键在于理解药物与蛋白质的相互作用。为了理解这些效应，我们首先概述蛋白质是如何构建的以及蛋白质结构有何不同。蛋白质是其三维结构决定生物学功能的实体。为了让机器学习模型预测药物分子对蛋白质功能的影响，我们必须将这种三维结构转换为机器学习程序可处理的形式。在第 5 章的第二部分中，我们将探讨一系列表示蛋白质结构的方法。有了这些知识，我们将查看另一个代码示例，其中我们使用深度学习来预测药物分子与蛋白质相互作用的程度。
 
 遗传学已成为现代医学的关键组成部分。肿瘤基因测序已实现个性化癌症疗法，并有潜力彻底改变医学。曾经复杂且极其昂贵的基因测序如今已司空见惯，并常规开展。我们甚至已达到这样一个阶段：狗主人可以通过低成本的基因检测来确定其宠物的谱系。在第 6 章中，我们将概述遗传学和基因组学，从 DNA 和 RNA（蛋白质合成的模板）介绍起。最新发现揭示，DNA 和 RNA 之间的相互作用比最初设想的要复杂得多。在第 6 章的后半部分，我们将展示一些代码示例，演示如何利用深度学习预测影响 DNA 和 RNA 相互作用的多个因素。
-
-
-
-
 
 # 深度学习在生命科学中的进展与应用
 
@@ -281,15 +276,15 @@ Wie bereits erwähnt, hat sich die grundlegende Art der Biowissenschaften verän
 
 ## 药物发现与生成模型
 
-如前所述，机器学习是寻找新药物的重要组成部分。科学家应用深度学习来评估药物分子与蛋白质之间的相互作用。这些相互作用可以引发生物学反应，从而对患者产生治疗效果。我们迄今为止讨论的模型是*判别模型*。基于分子的一系列特性，模型预测另一个特性。这些预测需要一个输入分子，它可以来自现有分子数据库或科学家的想象。如果我们不必依赖现有的或想象出来的分子，而是拥有一个能够「发明」新分子的计算机程序，那会怎样？第 9 章介绍了深度学习的另一种方法，即*生成模型*。生成模型首先在可用分子上训练，随后用于生成新分子。生成这些分子的深度学习程序也可以受到其他预测新分子活性的模型的影响。
+如前所述，机器学习是寻找新药物的重要组成部分。科学家应用深度学习来评估药物分子与蛋白质之间的相互作用。这些相互作用可以引发生物学反应，从而对患者产生治疗效果。我们迄今为止讨论的模型是`判别模型`。基于分子的一系列特性，模型预测另一个特性。这些预测需要一个输入分子，它可以来自现有分子数据库或科学家的想象。如果我们不必依赖现有的或想象出来的分子，而是拥有一个能够「发明」新分子的计算机程序，那会怎样？第 9 章介绍了深度学习的另一种方法，即`生成模型`。生成模型首先在可用分子上训练，随后用于生成新分子。生成这些分子的深度学习程序也可以受到其他预测新分子活性的模型的影响。
 
 ## 可解释性与模型准确性
 
-到目前为止，我们将深度学习模型视为「黑箱」。模型接收输入数据并生成预测，但没有任何关于预测是如何或为什么产生的解释。这种预测在许多情况下可能是次优的。如果我们有一个用于诊断的深度学习模型，通常希望了解诊断背后的原因。对诊断原因的解释能给医生对预测更多的信心，也会影响治疗决策。深度学习的一个历史遗留问题是，尽管模型通常可靠，但难以解释。目前正在开发一些技术，旨在让用户了解哪些因素导致了预测。第 10 章概述了其中一些实现人类理解预测模型的技术。预测模型的另一个重要方面是预测的准确性。了解模型的准确性有助于我们确定可以在多大程度上依赖该模型。由于机器学习可能用于挽救生命的诊断，因此理解模型准确性至关重要。在第 10 章的最后一部分，我们概述了一些用于评估模型准确性的技术。
+到目前为止，我们将深度学习模型视为`黑箱`。模型接收输入数据并生成预测，但没有任何关于预测是如何或为什么产生的解释。这种预测在许多情况下可能是次优的。如果我们有一个用于诊断的深度学习模型，通常希望了解诊断背后的原因。对诊断原因的解释能给医生对预测更多的信心，也会影响治疗决策。深度学习的一个历史遗留问题是，尽管模型通常可靠，但难以解释。目前正在开发一些技术，旨在让用户了解哪些因素导致了预测。第 10 章概述了其中一些实现人类理解预测模型的技术。预测模型的另一个重要方面是预测的准确性。了解模型的准确性有助于我们确定可以在多大程度上依赖该模型。由于机器学习可能用于挽救生命的诊断，因此理解模型准确性至关重要。在第 10 章的最后一部分，我们概述了一些用于评估模型准确性的技术。
 
 ## 案例研究：使用 DeepChem 进行虚拟筛选
 
-在第 11 章中，我们将展示一个使用 DeepChem 的真实案例研究。在该示例中，我们使用一种称为「虚拟筛选」的程序来识别发现新药物的可能起点。新药发现是一个复杂的过程，通常始于一种称为*筛选*的技术。通过筛选可以识别出可优化并最终生成药物的分子。筛选可以通过实验进行，即在微型生物测试（也称为分析）中测试数百万个分子，或者使用计算机进行虚拟筛选。虚拟筛选利用已知药物或其他生物活性分子来训练机器学习模型。然后使用该模型来预测大量分子的活性。得益于机器学习方法的高速度，通常可以在几天内处理数亿个分子。
+在第 11 章中，我们将展示一个使用 DeepChem 的真实案例研究。在该示例中，我们使用一种称为`虚拟筛选`的程序来识别发现新药物的可能起点。新药发现是一个复杂的过程，通常始于一种称为`筛选`的技术。通过筛选可以识别出可优化并最终生成药物的分子。筛选可以通过实验进行，即在微型生物测试（也称为分析）中测试数百万个分子，或者使用计算机进行虚拟筛选。虚拟筛选利用已知药物或其他生物活性分子来训练机器学习模型。然后使用该模型来预测大量分子的活性。得益于机器学习方法的高速度，通常可以在几天内处理数亿个分子。
 
 ## 展望：未来潜力与挑战
 
@@ -309,16 +304,13 @@ Wie bereits erwähnt, hat sich die grundlegende Art der Biowissenschaften verän
 
 *   `**x**` 包含图像中所有像素的颜色。如果图像中描绘了一只猫，`*f*(**x**)` 结果为 1，否则为 0。
 
-
-
-
 ## 多层感知机
 
 一个简单的方法是将多个线性变换串联起来。例如，我们可以编写如下公式：
 
 **y** = **M**[2]*φ*(**M**[1]**x** + **b**[1]) + **b**[2]
 
-仔细观察一下我们在这里做了什么。我们从一个普通的线性变换 **M**[1]**x** + **b**[1] 开始。随后将结果传递给一个非线性函数 *φ*(*x*)，然后对该结果应用第二个线性变换。该方程 *φ*(*x*) 被称为 *激活函数*，是构成此函数特性的关键部分。如果没有它，模型仍将是线性的，并不比之前的模型更强大。线性组合的线性组合本身无非还是原始输入的线性组合！通过引入非线性，我们使模型能够学习范围大得多的函数。
+仔细观察一下我们在这里做了什么。我们从一个普通的线性变换 **M**[1]**x** + **b**[1] 开始。随后将结果传递给一个非线性函数 *φ*(*x*)，然后对该结果应用第二个线性变换。该方程 *φ*(*x*) 被称为 `激活函数`，是构成此函数特性的关键部分。如果没有它，模型仍将是线性的，并不比之前的模型更强大。线性组合的线性组合本身无非还是原始输入的线性组合！通过引入非线性，我们使模型能够学习范围大得多的函数。
 
 我们不必局限于两个线性变换。我们可以堆叠任意数量的层：
 
@@ -332,10 +324,7 @@ Wie bereits erwähnt, hat sich die grundlegende Art der Biowissenschaften verän
 
 **y** = *φ**n*
 
-该模型称为 *多层感知机*，简称 MLP。中间步骤 *h*[*i*] 称为 *隐藏层*。该名称指的是这些既不是输入也不是输出，而只是计算结果时使用的中间值。请注意，我们还为每个 *φ*(*x*) 添加了一个索引。这表明不同层可以使用不同的非线性函数。
-
-
-
+该模型称为 `多层感知机`，简称 MLP。中间步骤 *h*[*i*] 称为 `隐藏层`。该名称指的是这些既不是输入也不是输出，而只是计算结果时使用的中间值。请注意，我们还为每个 *φ*(*x*) 添加了一个索引。这表明不同层可以使用不同的非线性函数。
 
 ## 多层感知机作为层的堆叠
 
@@ -345,13 +334,13 @@ Wie bereits erwähnt, hat sich die grundlegende Art der Biowissenschaften verän
 
 *图 2-2：被视为层堆叠的多层感知机，其中信息从一层流向下一层。*
 
-多层感知机及其变体有时也被称为*神经网络*。这个名称反映了机器学习与神经生物学之间的相似性。一个生物神经元与许多其他神经元相连。它接收来自它们的信号，对这些信号求和，然后根据结果发送自己的信号。简而言之，MLP 的工作方式就像您大脑中的神经元一样！
+多层感知机及其变体有时也被称为`神经网络`。这个名称反映了机器学习与神经生物学之间的相似性。一个生物神经元与许多其他神经元相连。它接收来自它们的信号，对这些信号求和，然后根据结果发送自己的信号。简而言之，MLP 的工作方式就像您大脑中的神经元一样！
 
 ## 激活函数
 
 激活函数 `φ(x)` 应该是什么样的？令人惊讶的答案是，大多数情况下这无关紧要。当然，这不完全符合事实。显然它很重要，但没有您预期的那么重要。几乎任何函数（单调、连续可微）都能起作用。多年来，人们测试了许多不同的函数，虽然有些效果比其他的好，但几乎所有函数都能提供不错的结果。
 
-如今最流行的激活函数可能是*修正线性单元*（ReLU），`φ(x) = max(0, x)`。如果您不确定该使用哪个函数，这是一个不错的选择。其他常见的选择包括*双曲正切*，`tanh(x)`，和*逻辑斯谛 Sigmoid 函数*，`φ(x) = 1 / (1 + e^(–x))`。所有提到的函数均可见于图 2-3。
+如今最流行的激活函数可能是`修正线性单元`（ReLU），`φ(x) = max(0, x)`。如果您不确定该使用哪个函数，这是一个不错的选择。其他常见的选择包括`双曲正切`，`tanh(x)`，和`逻辑斯谛 Sigmoid 函数`，`φ(x) = 1 / (1 + e^(–x))`。所有提到的函数均可见于图 2-3。
 
 ![image](img/p13-2.png)
 
@@ -359,40 +348,43 @@ Wie bereits erwähnt, hat sich die grundlegende Art der Biowissenschaften verän
 
 ## 宽度和深度
 
-我们还必须为 MLP 选择两个属性：它的*宽度*和*深度*。对于线性模型，没有选择的余地。由于 `x` 和 `y` 的长度，`M` 和 `b` 的大小已经固定。对于隐藏层，情况并非如此。宽度指的是隐藏层的大小。我们可以为每个 `h[i]` 选择任意长度。根据问题的不同，它们可以比输入和输出向量大得多，也可以小得多。
+我们还必须为 MLP 选择两个属性：它的`宽度`和`深度`。对于线性模型，没有选择的余地。由于 `x` 和 `y` 的长度，`M` 和 `b` 的大小已经固定。对于隐藏层，情况并非如此。宽度指的是隐藏层的大小。我们可以为每个 `h[i]` 选择任意长度。根据问题的不同，它们可以比输入和输出向量大得多，也可以小得多。
 
-深度指的是模型中层的数量。仅有一个隐藏层的模型被称为*浅层*模型。具有许多隐藏层的模型被称为*深层*模型。事实上，这就是“深度学习”一词的由来；简单来说，它意味着“使用多层模型的机器学习”。
+深度指的是模型中层的数量。仅有一个隐藏层的模型被称为`浅层`模型。具有许多隐藏层的模型被称为`深层`模型。事实上，这就是“深度学习”一词的由来；简单来说，它意味着“使用多层模型的机器学习”。
 
 为您的模型选择层的数量和宽度，既需要艺术也需要科学。或者用更正式的说法：“这仍然是一个活跃的研究领域。”通常归结为尝试许多组合，看看哪种有效。然而，有一些原则可能会为您提供指导，或者至少帮助您事后理解您的结果：
 
 1.  **具有单个隐藏层的 MLP 是通用近似器。**
+
     这意味着它可以逼近任何函数（在一定范围内）。从某种意义上说，永远不需要超过一个隐藏层。这已经足以映射您想要的任何方程。不幸的是，这个结果附带一个巨大的限制：近似的精度取决于隐藏层的宽度，为了针对特定问题获得足够的精度，可能需要一个非常宽的层。这引出了第二个原则。
 
 2.  **深层模型往往比浅层模型需要更少的参数。**
+
     这个说法故意保留了一些模糊性。对于某些特殊情况，可以做出更严格的陈述，但作为一般准则，它仍然成立。换句话说，每个任务都需要一个具有特定深度的模型来达到可接受的精度。在深度较低时，层的所需宽度（以及因此而来的参数总数）会迅速增加。这听起来好像应该总是首选深层模型而不是浅层模型。不幸的是，这在一定程度上被第三个原则所反驳。
 
 3.  **深层模型通常比浅层模型更难训练。**
-    直到 2007 年左右，大多数机器学习模型都是浅层的。虽然深层模型的理论优势已为人所知，但科学家们未能成功训练它们。从那时起，一系列进步提高了深层模型的实用性。这些包括更好的训练算法、更容易训练的新模型，当然还有更强大的计算机与更大的数据集相结合，模型可以在其上进行训练。正是从这些进步中，“深度学习”诞生了。尽管有所改进，但一般原则依然存在：深层模型通常比浅层模型更难训练。
 
-### 训练模型
 
-这使我们进入下一个问题：究竟如何训练模型？MLP 为我们提供了一个（大多数情况下）通用的模型，可用于任何问题。（稍后我们将介绍其他更专业的模型类型。）首先，我们需要一个类似通用的算法，以便为给定任务找到模型参数的最优值。我们如何着手？
 
-首先，我们当然需要用于训练的数据，也称为*训练数据集*。它应由大量 `(x, y)` 对组成，也称为*数据点*。每个数据点描述模型的一个输入，以及当该输入发生时相应的输出应是什么样子。例如，训练数据集可以是一个图像集合，连同标签指示每个图像是否包含猫。
+直到 2007 年左右，大多数机器学习模型都是浅层的。虽然深层模型的理论优势已为人所知，但科学家们未能成功训练它们。从那时起，一系列进步提高了深层模型的实用性。这些包括更好的训练算法、更容易训练的新模型，当然还有更强大的计算机与更大的数据集相结合，模型可以在其上进行训练。正是从这些进步中，“深度学习”诞生了。尽管有所改进，但一般原则依然存在：深层模型通常比浅层模型更难训练。
+
+## 训练模型
+
+这使我们进入下一个问题：究竟如何训练模型？`MLP` 为我们提供了一个（大多数情况下）通用的模型，可用于任何问题。（稍后我们将介绍其他更专业的模型类型。）首先，我们需要一个类似通用的算法，以便为给定任务找到模型参数的最优值。我们如何着手？
+
+首先，我们当然需要用于训练的数据，也称为**训练数据集**。它应由大量 `(x, y)` 对组成，也称为**数据点**。每个数据点描述模型的一个输入，以及当该输入发生时相应的输出应是什么样子。例如，训练数据集可以是一个图像集合，连同标签指示每个图像是否包含猫。
 
 接下来，定义误差函数 `L(y, ŷ)`，其中 `y` 是模型的实际输出，`ŷ` 是训练数据集中指定的目标值。这样就可以衡量模型是否正确地复现了训练数据。随后对训练数据集中的每个数据点求平均：
 
 平均误差 = 
+
 ```
 (1/N) * Σ[i=1..N] L(y[i], ŷ[i])
 ```
 
 当参数接近时 `L(y, ŷ)` 应该很小，当它们相距甚远时应该很大。换句话说，我们获取训练数据集中的每个数据点，尝试将其作为模型输入，并查看输出与目标值有多接近。然后对整个训练数据集求平均。
 
-必须为每个问题选择合适的误差函数。一个常见的选择是欧几里得距离（也称为 *L*[2] 范数），`L(y, ŷ) = ||y - ŷ||₂`。（在这个数学表达式中，`y[i]` 代表向量 `y` 的第 *i* 个分量。）如果 `y` 代表概率分布，交叉熵 `L(y, ŷ) = – Σ[i] y[i] log ŷ[i]` 是一个流行的选择。其他可能性也是可以想象的，并不存在唯一的“最佳”选择，因为这取决于具体问题。
-
-
-
+必须为每个问题选择合适的误差函数。一个常见的选择是欧几里得距离（也称为 **L**[2] 范数），`L(y, ŷ) = ||y - ŷ||₂`。（在这个数学表达式中，`y[i]` 代表向量 `y` 的第 *i* 个分量。）如果 `y` 代表概率分布，交叉熵 `L(y, ŷ) = – Σ[i] y[i] log ŷ[i]` 是一个流行的选择。其他可能性也是可以想象的，并不存在唯一的“最佳”选择，因为这取决于具体问题。
 
 # 模型改进与验证
 
@@ -438,8 +430,6 @@ Wie bereits erwähnt, hat sich die grundlegende Art der Biowissenschaften verän
 
 其次，不存在普遍“最佳”的正则化方法。一切取决于具体任务。毕竟，训练算法不知道自己在过拟合。它只知道训练数据。它不知道真实数据与训练数据有何不同。因此，它能做的最好的事就是创建一个很好地拟合训练数据的模型。如果这不是您想要的，就由您来告知它。
 
-
-
 这是每种正则化方法的核心：以某种方式影响训练过程，使某些模型类型优于其他类型。您规定了一个“好”模型应具备哪些属性，以及它与过拟合模型有何不同，然后告知训练算法偏好具有这些属性的模型。当然，这些假设往往更多是隐性的而非显性的。选择某种特定正则化方法时所做的假设可能并不显而易见。但它们始终存在。
 
 最简单的正则化技术之一是缩短模型的训练时间。在训练开始时，模型倾向于捕捉训练数据的粗略特征，这些特征推测也适用于真实数据。训练运行得越久，它就越有可能开始捕捉训练数据中单个数据点的精细细节。通过限制训练步数，模型过拟合的机会就更少。换句话说，假设“好”的参数值不会与训练开始时的值有太大差异。
@@ -480,9 +470,7 @@ Wie bereits erwähnt, hat sich die grundlegende Art der Biowissenschaften verän
 
 ### 卷积神经网络
 
-*Convolutional Neural Networks*（简称 CNNs）是最早广泛用于深度学习的模型类别之一。它们是为图像处理和图像理解而开发的。对于许多问题，它们仍然是一个极佳的选择，这些问题涉及在矩形网格中采样的连续数据：音频信号（1-D）、图像（2-D）、体积 MRI 数据（3-D）等。
-
-
+*Convolutional Neural Networks*（简称 **CNNs**）是最早广泛用于深度学习的模型类别之一。它们是为图像处理和图像理解而开发的。对于许多问题，它们仍然是一个极佳的选择，这些问题涉及在矩形网格中采样的连续数据：音频信号（1-D）、图像（2-D）、体积 MRI 数据（3-D）等。
 
 它们也是完全配得上“神经网络”这一术语的一类模型。CNN 的设计最初源于对猫视觉皮层工作机制的启发。（自深度学习诞生以来，猫在其中扮演了核心角色。）从 1950 年代到 1980 年代的研究表明，视觉是通过一系列层来处理的。第一层中的每个神经元接收来自视野一小块区域（其`感受野`）的输入。不同的神经元专门用于识别特定的局部模式或特征，如垂直或水平线条。第二层的细胞接收来自第一层局部细胞簇的输入，并组合它们的信号，以便在更大的感受野中捕捉更复杂的模式。每一层都可以看作是原始图像的一种新表征，其描述形式比前一层包含更大、更抽象的模式。
 
@@ -492,7 +480,7 @@ CNN 反映了这种设计，将输入图像通过一系列层进行传递。从�
 
 ### 循环神经网络
 
-`循环神经网络`（简称 RNN）则有所不同。通常它们用于处理由一系列元素组成的数据：文本文件中的单词、DNA 分子中的碱基等。序列的元素被逐个送入网络的输入端。但随后网络做了一件完全不同的事：每一层的输出在下一步被反馈到其自身的输入中！因此 RNN 拥有一种记忆。当序列的一个元素（单词、DNA 碱基等）被送入网络时，每一层的输入不仅取决于该元素，还取决于所有先前的元素（参见图 2-4）。
+`循环神经网络`（简称 **RNN**）则有所不同。通常它们用于处理由一系列元素组成的数据：文本文件中的单词、DNA 分子中的碱基等。序列的元素被逐个送入网络的输入端。但随后网络做了一件完全不同的事：每一层的输出在下一步被反馈到其自身的输入中！因此 RNN 拥有一种记忆。当序列的一个元素（单词、DNA 碱基等）被送入网络时，每一层的输入不仅取决于该元素，还取决于所有先前的元素（参见图 2-4）。
 
 ![image](img/p22-1.png)
 
@@ -512,12 +500,11 @@ CNN 反映了这种设计，将输入图像通过一系列层进行传递。从�
 
 *   `TensorFlow for Deep Learning` ([`http://shop.oreilly.com/product/0636920065869.do`](http://shop.oreilly.com/product/0636920065869.do)) 由 Bharath Ramsundar 和 Reza Zadeh 编写（O’Reilly 出版），为从业者提供深度学习入门，旨在传授核心概念，而不深究这些模型背后的数学基础。对于对深度学习实践方面感兴趣的人来说，是一本有用的书。
 
-## 第 3 章
+# 第 3 章
 
-## 使用 DeepChem 进行机器学习
+# 使用 DeepChem 进行机器学习
 
 本章简要介绍使用 DeepChem 进行机器学习，DeepChem 是一个构建在 `TensorFlow` 平台之上的库，旨在促进深度学习在生物科学中的应用。DeepChem 提供了大量适用于生物科学应用的模型、算法和数据集。在本书的后续内容中，我们将使用 DeepChem 进行案例研究。
-
 
 
 
@@ -535,7 +522,7 @@ Für den Rest dieses Kapitels gehen wir davon aus, dass `DeepChem` auf Ihrem Com
 
 |   || Sollte es für Sie nicht möglich sein, auf einen Mac oder Linux-Rechner zuzugreifen oder mit `WSL` zu arbeiten, würden wir uns freuen, wenn Sie uns dabei helfen, `DeepChem` auch unter Windows verfügbar zu machen. Bitte wenden Sie sich mit spezifischen Problemen an die Autoren. Wir werden versuchen, diese zu beheben. Wir hoffen, diese Einschränkung in einer zukünftigen Auflage dieses Buchs beseitigt zu haben und Windows für zukünftige Leser zu unterstützen. |
 
-### DeepChem-Datensätze
+## DeepChem-Datensätze
 
 `DeepChem` nutzt die grundlegende Abstraktion des Objekts `Dataset`, um die verwendeten Daten für Machine Learning zu verpacken. Ein `Dataset` enthält die Information zu einer Datenreihe: zu den Eingabevektoren `x`, den Zielausgabevektoren `y` sowie möglicherweise weiteren Angaben wie etwa einer Beschreibung der einzelnen Datenpunkte. Es gibt Unterklassen von `Dataset`, die verschiedenen Arten der Datenspeicherung entsprechen. Insbesondere das `NumpyDataset`-Objekt dient als praktischer Wrapper für `NumPy`-Arrays und wird ausgiebig genutzt. In diesem Abschnitt werden wir das `NumpyDataset` in einer einfachen Codefallstudie verwenden. Der gesamte Code kann in den interaktiven Python-Interpreter eingegeben werden.
 
@@ -613,7 +600,7 @@ Out : True
 
 | --- | --- |
 
-### Trainieren eines Modells zur Vorhersage der Toxizität von Molekülen
+## Trainieren eines Modells zur Vorhersage der Toxizität von Molekülen
 
 In diesem Abschnitt werden wir vorführen, wie sich `DeepChem` nutzen lässt, um ein Modell zur Vorhersage der Toxizität von Molekülen zu trainieren. In einem späteren Kapitel klären wir dann, wie die Toxizitätsvorhersage für Moleküle im Detail funktioniert. Im Folgenden verwenden wir es jedoch als Blackbox-Beispiel, um zu zeigen, wie sich Machine-Learning-Probleme mit `DeepChem`-Modellen lösen lassen. Beginnen wir mit zwei benötigten Importen:
 
@@ -677,12 +664,11 @@ In : len(tox21_tasks)
 Out: 12
 ```
 
+### Jede der zwölf Aufgaben entspricht einem biologischen Experiment
 
 
 
-# 每十二个任务中的每一个都对应一个生物学实验
-
-在这种情况下，任务分别代表一个 `酶测定`，用于测量 Tox21 数据集中的分子是否与相关的 `生物学靶点` 结合。NR-AR 等术语对应这些靶点。这里每个靶点都是一种特定的酶，据推测与治疗分子可能引起的毒性反应有关。
+在这种情况下，任务分别代表一个`酶测定`，用于测量 Tox21 数据集中的分子是否与相关的`生物学靶点`结合。NR-AR 等术语对应这些靶点。这里每个靶点都是一种特定的酶，据推测与治疗分子可能引起的毒性反应有关。
 
 ## 需要多少生物学知识？
 
@@ -694,7 +680,7 @@ Out: 12
 
 # 检查 Tox21 数据集
 
-接下来我们来看看 `tox21_datasets`。复数形式的使用表明这是一个包含多个 `dc.data.Dataset` 对象的元组：
+接下来我们来看看`tox21_datasets`。复数形式的使用表明这是一个包含多个`dc.data.Dataset`对象的元组：
 
 ```
 In : tox21_datasets
@@ -705,7 +691,7 @@ Out:
 <deepchem.data.datasets.DiskDataset at 0x7f9804c5a518>)
 ```
 
-列出的数据集对应您在前一章中遇到的训练集、验证集和测试集。您可能已经注意到，这些是 `DiskDataset` 对象。`dc.molnet` 模块将这些数据集缓存到磁盘，这样您就不必反复处理 Tox21 数据集。为了正确拆分这些数据集，我们使用：
+列出的数据集对应您在前一章中遇到的训练集、验证集和测试集。您可能已经注意到，这些是`DiskDataset`对象。`dc.molnet`模块将这些数据集缓存到磁盘，这样您就不必反复处理 Tox21 数据集。为了正确拆分这些数据集，我们使用：
 
 ```
 train_dataset, valid_dataset, test_dataset = tox21_datasets
@@ -713,7 +699,7 @@ train_dataset, valid_dataset, test_dataset = tox21_datasets
 
 ## 分析数据集形状
 
-在处理新数据集时，首先查看其形状非常有用。为此可以使用 `shape` 属性：
+在处理新数据集时，首先查看其形状非常有用。为此可以使用`shape`属性：
 
 ```
 In : train_dataset.X.shape
@@ -726,7 +712,7 @@ In : test_dataset.X.shape
 Out: (784, 1024)
 ```
 
-`train_dataset` 总共包含 6,264 行，每行关联一个长度为 1,024 的特征向量。同理，`valid_dataset` 和 `test_dataset` 分别包含 783 行和 784 行。现在让我们简要看一下这些数据集的 `y` 向量：
+`train_dataset`总共包含 6,264 行，每行关联一个长度为 1,024 的特征向量。同理，`valid_dataset`和`test_dataset`分别包含 783 行和 784 行。现在让我们简要看一下这些数据集的`y`向量：
 
 ```
 In : np.shape(train_dataset.y)
@@ -739,13 +725,13 @@ In : np.shape(test_dataset.y)
 Out: (784, 12)
 ```
 
-每个条目有十二个数据点，也称为 `标签`。这些对应我们已经介绍的十二个任务。在我们的数据集中，行对应分子，任务对应生化测定，每个标签是特定测定针对特定分子的结果。我们希望教会模型预测这些结果。
+每个条目有十二个数据点，也称为`标签`。这些对应我们已经介绍的十二个任务。在我们的数据集中，行对应分子，任务对应生化测定，每个标签是特定测定针对特定分子的结果。我们希望教会模型预测这些结果。
 
 ## 处理缺失标签
 
 然而，存在一个复杂因素：在当前的实验性 Tox21 数据集中，并非每个分子都在每个生物学实验中接受过测试。也就是说，其中一些标签是无意义的占位符。对于某些分子的某些属性，根本没有数据，因此在训练和测试模型时，我们必须忽略数组中的这些元素。
 
-我们如何知道哪些标签实际上被测量过？通过查看数据集的 `w` 字段，它包含 `权重`。每当我们计算模型的误差函数时，会在对任务和数据点求和之前乘以 `w`。这可用于多种目的——其中包括标记缺失数据。如果一个标签的权重为 0，则该标签对误差没有影响，并在训练期间被忽略。我们现在要确定数据集中有多少标签是实际测量过的：
+我们如何知道哪些标签实际上被测量过？通过查看数据集的`w`字段，它包含`权重`。每当我们计算模型的误差函数时，会在对任务和数据点求和之前乘以`w`。这可用于多种目的——其中包括标记缺失数据。如果一个标签的权重为 0，则该标签对误差没有影响，并在训练期间被忽略。我们现在要确定数据集中有多少标签是实际测量过的：
 
 ```
 In : train_dataset.w.shape
@@ -768,22 +754,20 @@ Out: 13002
 
 # 检查 Transformer
 
-最后我们来检查 `transformers`，即函数 `load_tox21()` 返回的最后一个输出。`Transformer` 是一个以某种形式转换数据集的对象。DeepChem 提供了许多可以有意义地处理数据的 Transformer。因此，MoleculeNet 中的数据加载例程总是会输出应用于数据的 Transformer 列表，以便稍后必要时能将数据还原为原始形式。让我们看看在这种情况下得到什么：
+最后我们来检查`transformers`，即函数`load_tox21()`返回的最后一个输出。`Transformer`是一个以某种形式转换数据集的对象。DeepChem 提供了许多可以有意义地处理数据的 Transformer。因此，MoleculeNet 中的数据加载例程总是会输出应用于数据的 Transformer 列表，以便稍后必要时能将数据还原为原始形式。让我们看看在这种情况下得到什么：
 
 ```
 In : transformers
 Out: [<deepchem.trans.transformers.BalancingTransformer at 0x7f99dd73c6d8>]
 ```
 
-这里数据是通过 `BalancingTransformer` 进行转换的。该类用于纠正不平衡数据。在 Tox21 的情况下，只有极少数分子与其靶点结合。事实上，超过 90% 的标签值为 0。这意味着模型可以通过简单地始终预测 0（无论输入如何）来达到 90% 以上的准确率。然而，这种模型将完全无用！不平衡数据——即某些类别在训练数据中比其他类别更少见——是分类任务中的常见问题。
+这里数据是通过`BalancingTransformer`进行转换的。该类用于纠正不平衡数据。在 Tox21 的情况下，只有极少数分子与其靶点结合。事实上，超过 90% 的标签值为 0。这意味着模型可以通过简单地始终预测 0（无论输入如何）来达到 90% 以上的准确率。然而，这种模型将完全无用！不平衡数据——即某些类别在训练数据中比其他类别更少见——是分类任务中的常见问题。
 
+幸运的是，有一个简单的解决方案：可以调整数据集的权重矩阵来补偿这一点。`BalancingTransformer`调整单个数据点的权重，使得分配给每个类的总权重相等。因此，误差函数不会系统性地偏向某一类。只有当模型学会正确区分类别时，误差才能降低。
 
+既然我们已经研究了 Tox21 数据集，现在可以探究如何在这些数据集上训练模型。DeepChem 有一个名为`dc.models`的子模块，其中包含各种专门为生命科学设计的模型。这些不同的模型都继承自父类`dc.models.Model`，该类提供了一个遵循 Python 常规约定的通用 API。如果您已经使用过其他 Python 机器学习库，会发现许多`dc.models.Model`方法都很熟悉。
 
-幸运的是，有一个简单的解决方案：可以调整数据集的权重矩阵来补偿这一点。`BalancingTransformer` 调整单个数据点的权重，使得分配给每个类的总权重相等。因此，误差函数不会系统性地偏向某一类。只有当模型学会正确区分类别时，误差才能降低。
-
-既然我们已经研究了 Tox21 数据集，现在可以探究如何在这些数据集上训练模型。DeepChem 有一个名为 `dc.models` 的子模块，其中包含各种专门为生命科学设计的模型。这些不同的模型都继承自父类 `dc.models.Model`，该类提供了一个遵循 Python 常规约定的通用 API。如果您已经使用过其他 Python 机器学习库，会发现许多 `dc.models.Model` 方法都很熟悉。
-
-在本章中，我们不会真正详细探讨这些模型的构建细节。相反，我们将给出一个基本 DeepChem 模型实例化的示例，即 `dc.models.MultitaskClassifier`。该模型创建一个全连接网络（一个 MLP），将输入特征映射到多个预测。这对于*多任务*学习很有用，即每个数据点有多个标签。它非常适合我们的 Tox21 数据集，因为我们总共有十二个不同的实验（Assay），想要同时预测。在 DeepChem 中创建 `MultitaskClassifier` 的方法如下：
+在本章中，我们不会真正详细探讨这些模型的构建细节。相反，我们将给出一个基本 DeepChem 模型实例化的示例，即`dc.models.MultitaskClassifier`。该模型创建一个全连接网络（一个 MLP），将输入特征映射到多个预测。这对于*多任务*学习很有用，即每个数据点有多个标签。它非常适合我们的 Tox21 数据集，因为我们总共有十二个不同的实验，想要同时预测。在 DeepChem 中创建`MultitaskClassifier`的方法如下：
 
 ```
 model = dc.models.MultitaskClassifier(n_tasks=12,
@@ -791,23 +775,23 @@ model = dc.models.MultitaskClassifier(n_tasks=12,
     layer_sizes=[1000])
 ```
 
-让我们简要了解一下这里的各种选项。`n_tasks` 是任务的数量，`n_features` 是每个数据点的输入特征数量。正如我们已经看到的，Tox21 数据集有十二个任务，每个数据点有 1,024 个特征。`layer_sizes` 是一个列表，用于设定网络中全连接隐藏层的数量及其各自的宽度。在本例中，我们定义了一个包含 1,000 个神经元的隐藏层。
+让我们简要了解一下这里的各种选项。`n_tasks`是任务的数量，`n_features`是每个数据点的输入特征数量。正如我们已经看到的，Tox21 数据集有十二个任务，每个数据点有 1,024 个特征。`layer_sizes`是一个列表，用于设定网络中全连接隐藏层的数量及其各自的宽度。在本例中，我们定义了一个包含 1,000 个神经元的隐藏层。
 
-现在我们已经创建了模型，如何在 Tox21 数据集上对其进行训练？每个 `Model` 对象都有一个 `fit()` 方法，用于将模型拟合到 `Dataset` 对象中包含的数据上。要调用 `MultitaskClassifier`，只需以下命令：
+现在我们已经创建了模型，如何在 Tox21 数据集上对其进行训练？每个`Model`对象都有一个`fit()`方法，用于将模型拟合到`Dataset`对象中包含的数据上。要调用`MultitaskClassifier`，只需以下命令：
 
 ```
 model.fit(train_dataset, nb_epoch=10)
 ```
 
-我们添加了 `nb_epoch=10`。这会导致梯度下降在训练过程中进行十个周期。一个*周期*对应于对数据集中所有元素的一次完整遍历。为了训练模型，训练数据被分成批次，并为每个批次执行一步梯度下降。在理想情况下，您会在数据用完之前得到一个优化良好的模型。现实中，通常数据不足，导致在模型优化完成前数据就用完了。因此必须重复使用数据并对数据集进行额外的遍历。这样可以用较少的数据量训练模型，但使用的周期越多，得到过拟合模型的可能性就越大。
+我们添加了`nb_epoch=10`。这会导致梯度下降在训练过程中进行十个周期。一个*周期*对应于对数据集中所有元素的一次完整遍历。为了训练模型，训练数据被分成批次，并为每个批次执行一步梯度下降。在理想情况下，您会在数据用完之前得到一个优化良好的模型。现实中，通常数据不足，导致在模型优化完成前数据就用完了。因此必须重复使用数据并对数据集进行额外的遍历。这样可以用较少的数据量训练模型，但使用的周期越多，得到过拟合模型的可能性就越大。
 
-接下来，我们评估训练好的模型的性能。要评估模型工作得有多好，必须选择一个度量标准。DeepChem 类 `dc.metrics.Metric` 提供了一种指定模型度量标准的通用方法。对于 Tox21，ROC AUC 分数是一个合理的指标。但请注意以下细微差别：存在多个 Tox21 任务。我们为哪一个计算 ROC AUC？一个好的做法是计算所有任务的平均 ROC AUC 分数：
+接下来，我们评估训练好的模型的性能。要评估模型工作得有多好，必须选择一个度量标准。DeepChem 类`dc.metrics.Metric`提供了一种指定模型度量标准的通用方法。对于 Tox21，ROC AUC 分数是一个合理的指标。但请注意以下细微差别：存在多个 Tox21 任务。我们为哪一个计算 ROC AUC？一个好的做法是计算所有任务的平均 ROC AUC 分数：
 
 ```
 metric = dc.metrics.Metric(dc.metrics.roc_auc_score, np.mean)
 ```
 
-由于我们指定了 `np.mean`，将输出所有任务 ROC AUC 分数的平均值。DeepChem 模型支持评估函数 `model.evaluate()`，它根据给定的数据集和度量标准评估模型的性能。
+由于我们指定了`np.mean`，将输出所有任务 ROC AUC 分数的平均值。DeepChem 模型支持评估函数`model.evaluate()`，它根据给定的数据集和度量标准评估模型的性能。
 
 ### ROC AUC
 
@@ -840,10 +824,7 @@ Out: {'mean-roc_auc_score': 0.7915464001982299}
 
 ## 案例研究：训练 MNIST 模型
 
-在前一节中，我们介绍了使用 DeepChem 训练机器学习模型的基础知识，但我们使用了预制的模型类 `dc.models.MultitaskClassifier`。有时人们想创建一种新的模型架构，而不是使用预制模型。在本节中，我们将介绍如何在 MNIST 数据集上训练卷积神经网络。我们不像上一节那样使用预制模型，而是这次自己定义完整的深度学习架构。为此，我们引入 `dc.models.TensorGraph` 类，它在 DeepChem 中提供了一个构建深度架构的框架。
-
-
-
+在前一节中，我们介绍了使用 DeepChem 训练机器学习模型的基础知识，但我们使用了预制的模型类`dc.models.MultitaskClassifier`。有时人们想创建一种新的模型架构，而不是使用预制模型。在本节中，我们将介绍如何在 MNIST 数据集上训练卷积神经网络。我们不像上一节那样使用预制模型，而是这次自己定义完整的深度学习架构。为此，我们引入`dc.models.TensorGraph`类，它在 DeepChem 中提供了一个构建深度架构的框架。
 
 | ![image](img/crow.jpg) || **Wann ergeben Modelle aus der Konserve Sinn?** In diesem Abschnitt wenden wir eine benutzerdefinierte Architektur auf MNIST an. Im vorangegangenen Beispiel haben wir stattdessen eine Architektur aus »der Konserve« (d.h. vordefiniert) verwendet. Wann ist die jeweilige Alternative sinnvoll? Liegt eine gut getestete, vordefinierte Architektur für eine Fragestellung vor, ist es wahrscheinlich sinnvoll, diese zu verwenden. Arbeiten Sie dagegen an einem neuen Datensatz, für den noch keine solche Architektur erstellt wurde, müssen Sie diese häufig selbst definieren. Es ist wichtig, mit der Verwendung von vordefinierten und benutzerdefinierten Architekturen vertraut zu sein. Daher haben wir in diesem Kapitel jeweils ein Beispiel aufgeführt. |
 
@@ -855,13 +836,15 @@ Der MNIST-Datensatz (siehe Abbildung 3-2) benötigt ein Machine-Learning-Modell,
 
 ![image](img/p35-1.png)
 
-*Abbildung 3-2: Ein Beispiel aus dem MNIST-Datensatz, der handgeschriebene Ziffern enthält. (Quelle: GitHub, [`github.com/mnielsen/rmnist/blob/master/data/rmnist\_10.png`](https://github.com/mnielsen/rmnist/blob/master/data/rmnist_10.png))*
+*Abbildung 3-2: Ein Beispiel aus dem MNIST-Datensatz, der handgeschriebene Ziffern enthält. (Quelle: GitHub, [`github.com/mnielsen/rmnist/blob/master/data/rmnist_10.png`](https://github.com/mnielsen/rmnist/blob/master/data/rmnist_10.png))*
 
 In Bezug auf Machine Learning bietet der MNIST-Datensatz keine besondere Herausforderung. Jahrzehntelange Forschung hat Algorithmen auf dem neuesten Stand der Technik hervorgebracht, die auf den Testdaten dieses Datensatzes eine Genauigkeit von fast 100 % erreichen. Infolgedessen ist der MNIST-Datensatz nicht mehr für Forschungszwecke geeignet, bietet aber ein gutes pädagogisches Werkzeug.
 
+
+
 | ![image](img/crow.jpg) || **Ist DeepChem nicht nur für die Biowissenschaften geeignet?** Wie in diesem Kapitel bereits erwähnt, ist es durchaus möglich, andere Deep-Learning-Pakete für Anwendungen in den Biowissenschaften zu verwenden. Ebenso ist es möglich, mit DeepChem allgemeine Machine-Learning-Systeme zu erstellen. Obwohl das Erstellen eines Filmempfehlungssystems in DeepChem komplizierter sein kann als mit spezialisierten Werkzeugen, ist es durchaus machbar. Und das aus gutem Grund: In mehreren Studien wurde die Verwendung von Algorithmen für Empfehlungssysteme zur Vorhersage molekularer Bindungen untersucht. Machine-Learning-Architekturen, die in einem Bereich eingesetzt werden, lassen sich in der Regel auf andere Bereiche übertragen. Daher ist es wichtig, die für innovatives Arbeiten erforderliche Flexibilität beizubehalten. |
 
-| --- | --- |
+---
 
 ### Eine Konvolutionsarchitektur für MNIST
 
@@ -931,13 +914,9 @@ label = layers.Label(shape=(None, 10))
 
 MNIST enthält Bilder im Format 28 × 28 cm. Diese bilden abgeflachte Feature-Vektoren der Länge 784. Die Labels haben eine zweite Dimension der Größe 10, da es zehn mögliche Ziffernwerte gibt, und der zugehörige Vektor liegt als One-Hot-Codierung vor. Beachten Sie, dass `None` als Eingabedimension verwendet wird. In Systemen, die auf TensorFlow beruhen, codiert der Wert `None` häufig die Fähigkeit einer bestimmten Ebene, Eingaben einer beliebigen Größe in dieser Dimension zu akzeptieren. Anders ausgedrückt, unser Objekt `feature` ist in der Lage, Eingaben der Form `(20, 784)` und `(97, 784)` gleichermaßen zu akzeptieren. In diesem Fall entspricht die erste Dimension der Batchgröße, sodass unser Modell Batches mit beliebig vielen Datenpunkten annehmen kann.
 
-
-
-
-
 | ![image](img/crow.jpg) || **One-Hot-Codierung** Der MNIST-Datensatz enthält kategoriale Daten. Das bedeutet, jeder Wert stammt aus einer endlichen Liste möglicher Werte. In diesem Fall sind unsere möglichen Werte die Ziffern 0 bis 9. Wie können diese Werte von unserem Modell gelesen werden? Eine naheliegende Antwort wäre, eine einzelne Zahl einzugeben, die die Werte 0 bis 9 annehmen kann. Aus verschiedenen technischen Gründen funktioniert diese Vorgehensweise jedoch selten gut. Als Alternative wird deshalb oft die `One-Hot-Codierung` eingesetzt. Jedes Label im MNIST-Datensatz ist ein Vektor der Länge 10, in dem ein einzelnes Element auf 1 und alle anderen Elemente auf 0 gesetzt werden. Steht die 1 an der nullten Stelle, hat das Label den Wert 0. Steht die 1 an der neunten Stelle, hat das Label den Wert 9. |
 
-| --- | --- |
+---
 
 Um Konvolutionsschichten auf unsere Eingabe anwenden zu können, müssen wir die flachen Merkmalsvektoren in Matrizen der Form `(28, 28)` umwandeln. Hierfür benutzen wir eine `Reshape`-Schicht:
 
@@ -954,6 +933,8 @@ in_layers=make_image)
 conv2d_2 = layers.Conv2D(num_outputs=64, activation_fn=tf.nn.relu,
 in_layers=conv2d_1)
 ```
+
+
 
 Die Klasse `Conv2D` führt eine 2-D-Faltung für jeden Wert der Eingabe durch, der anschließend an die `ReLU`-Aktivierungsfunktion übergeben wird. Wir verwenden `in_layers`, um vorangegangene Ebenen als Eingaben an nachfolgende Schichten zu übergeben. Zum Schluss wenden wir `Dense`-Ebenen (vollständig verbunden) auf die Ausgaben des Convolution-Layers an. Da jedoch die Ausgabe der `Conv2D`-Schichten in 2-D erfolgt, müssen wir zuerst eine `Flatten`-Ebene anwenden, um unsere Eingabe auf eine Dimension zu reduzieren (genauer gesagt, erzeugt die `Conv2D`-Ebene eine 2-D-Ausgabe *für jeden Datenpunkt*, sodass ihre Ausgabe aus drei Dimensionen besteht; die `Flatten`-Schicht reduziert diese auf eine einzelne Dimension pro Datenpunkt bzw. insgesamt zwei Dimensionen):
 
@@ -978,7 +959,7 @@ model.set_loss(loss)
 
 Beachten Sie, dass die `SoftMaxCrossEntropy`-Ebene sowohl die Labels als auch die Ausgaben der letzten `Dense`-Schicht als Eingaben akzeptiert. Es berechnet den Wert der Fehlerfunktion für jeden Datenpunkt, den wir im Anschluss über alle Datenpunkte mitteln müssen, um den endgültigen Fehler zu erhalten. Dies erfolgt mit der Ebene `ReduceMean`, die wir durch Aufruf von `model.set_loss()` als Fehlerfunktion unseres Modells festlegen.
 
-### **SoftMax und SoftMaxCrossEntropy**
+### SoftMax und SoftMaxCrossEntropy
 
 Häufig soll ein Modell eine Wahrscheinlichkeitsverteilung ausgeben. Für MNIST möchten wir die Wahrscheinlichkeiten jeder der zehn Ziffern eines gegebenen Eingabebilds erhalten. Jede Ausgabe muss positiv sein, und sie müssen sich zu 1 aufsummieren. Eine einfache Möglichkeit, das zu erreichen, besteht darin, das Modell beliebige Zahlen berechnen zu lassen und diese dann durch die Funktion `Softmax` zu leiten:
 
@@ -1020,22 +1001,14 @@ test_scores = model.evaluate(test_dataset, [metric])
 
 Wir erhalten eine ausgezeichnete Performance: Die Genauigkeit beträgt 0.999 für die Trainingsdaten und 0.991 für die Testdaten. Unser Modell identifiziert mehr als 99 % der Datenpunkte im Testdatensatz korrekt.
 
-| ![image](img/cat.jpg) || **Versuchen Sie, Zugriff auf eine GPU zu erhalten** Wie Sie in diesem Kapitel gesehen haben, kommt es vor, dass Deep-Learning-Code ziemlich langsam läuft! Auf einem guten Laptop kann das Trainieren eines Convolutional Neural Network mehr als eine Stunde dauern. Das liegt daran, dass dieser Code eine große Anzahl linearer algebraischer Operationen auf Bilddaten ausführt. Die meisten CPUs sind für diese Art von Berechnungen nicht ausgelegt. |
+| ![image](img/cat.jpg) | | **Versuchen Sie, Zugriff auf eine GPU zu erhalten** Wie Sie in diesem Kapitel gesehen haben, kommt es vor, dass Deep-Learning-Code ziemlich langsam läuft! Auf einem guten Laptop kann das Trainieren eines Convolutional Neural Network mehr als eine Stunde dauern. Das liegt daran, dass dieser Code eine große Anzahl linearer algebraischer Operationen auf Bilddaten ausführt. Die meisten CPUs sind für diese Art von Berechnungen nicht ausgelegt. |
+| --- | --- | --- |
+| | | Versuchen Sie, nach Möglichkeit Zugriff auf einen modernen Grafikprozessor zu erhalten. Diese wurden ursprünglich für Videospiele entwickelt, finden heutzutage jedoch für viele Arten von numerischen Berechnungen Verwendung. Die meisten modernen Deep-Learning-Workloads werden auf GPUs viel schneller ausgeführt. Auch die Beispiele dieses Buchs lassen sich mit GPUs einfacher ausführen. |
+| | | Machen Sie sich aber keine Sorgen, wenn der Zugriff auf eine GPU nicht möglich ist. Sie werden die Beispiele dennoch durchführen können – es dauert möglicherweise nur etwas länger (während Sie darauf warten, dass der Code vollständig ausgeführt wird, könnten Sie einen Kaffee trinken oder ein Buch lesen). |
 
-| --- | --- |
-
-|   || Versuchen Sie, nach Möglichkeit Zugriff auf einen modernen Grafikprozessor zu erhalten. Diese wurden ursprünglich für Videospiele entwickelt, finden heutzutage jedoch für viele Arten von numerischen Berechnungen Verwendung. Die meisten modernen Deep-Learning-Workloads werden auf GPUs viel schneller ausgeführt. Auch die Beispiele dieses Buchs lassen sich mit GPUs einfacher ausführen. |
-
-|   || Machen Sie sich aber keine Sorgen, wenn der Zugriff auf eine GPU nicht möglich ist. Sie werden die Beispiele dennoch durchführen können – es dauert möglicherweise nur etwas länger (während Sie darauf warten, dass der Code vollständig ausgeführt wird, könnten Sie einen Kaffee trinken oder ein Buch lesen). |
-
-### **Fazit**
+### Fazit
 
 In diesem Kapitel haben Sie gelernt, wie Sie mit der `DeepChem`-Bibliothek einige einfache Machine-Learning-Systeme implementieren. Im weiteren Verlauf dieses Buchs nutzen wir `DeepChem` als die Bibliothek unserer Wahl. Bleiben Sie entspannt, sollten Sie bisher kein klares Verständnis von den Grundlagen der Bibliothek haben. Es werden noch viele weitere Beispiele folgen.
-
-
-
-
-在接下来的章节中，我们将介绍在生物科学数据集上进行有效机器学习所需的基本概念。在下一章中，我们将向您介绍分子机器学习。
 
 # 第 4 章
 
@@ -1052,35 +1025,32 @@ In diesem Kapitel haben Sie gelernt, wie Sie mit der `DeepChem`-Bibliothek einig
 在深入研究分子机器学习之前，了解究竟什么是分子会很有帮助。这个问题听起来有点傻，因为像 H[2]O 和 CO[2] 这样的分子连小孩子都知道。答案不是显而易见的吗？事实上，我们很长一段时间都不知道分子竟然存在。让我们做个思想实验：你如何说服一个怀疑的外星人，存在被称为分子的物体？答案相当复杂。你很可能不得不拿出质谱仪！
 
 | ![image](img/crow.jpg) | | **质谱法**弄清楚特定样品中存在哪些分子可能非常困难。目前最流行的方法是质谱法。质谱法的基本思想是用电子轰击样品。通过这种轰击，分子会分裂成碎片。通常这些碎片会*电离*——即获得或失去电子而带电。这些带电碎片在电场驱动下，根据其质荷比进行分离。检测到的带电碎片的分布被称为*谱图*。图 4-1 说明了这一过程。从检测到的碎片集合中，通常可以确定原始样品中的确切分子。然而，这一过程仍然是有损且困难的。许多科学家目前正在研究如何利用深度学习算法改进质谱法，以便更容易地从检测到的带电谱图中识别出原始分子。 |
-
-| --- | --- |
-
-|   | | 请注意这一认识的复杂性！分子是复杂的对象，其精确确定非常困难。 |
+| --- | --- | --- |
+| | | 请注意这一认识的复杂性！分子是复杂的对象，其精确确定非常困难。 |
 
 让我们首先假设，分子是一组通过物理力相互连接的原子。分子是能够参与化学反应的化学化合物的最小基本单位。分子中的原子通过*化学键*相互连接，化学键将它们结合在一起并限制它们彼此的相对运动。分子有各种尺寸，由少数原子到数千个原子组成。图 4-2 展示了一个分子的简单表示。
 
 ![image](img/p45-1.png)
 
-*图 4-1：质谱仪示意图。(来源：Wikimedia, [`commons.wikimedia.org/wiki/File:Mass\_Spectrometer\_Schematic.svg`](https://commons.wikimedia.org/wiki/File:Mass_Spectrometer_Schematic.svg))*
+*图 4-1：质谱仪示意图。(来源：Wikimedia, [`commons.wikimedia.org/wiki/File:Mass_Spectrometer_Schematic.svg`](https://commons.wikimedia.org/wiki/File:Mass_Spectrometer_Schematic.svg))*
 
 ![image](img/p45-2.png)
 
 *图 4-2：咖啡因分子的简单球棍模型表示。原子显示为彩色球体（黑色代表碳，红色代表氧，蓝色代表氮，白色代表氢），由象征化学键的棍子连接。*
 
+
+
 在进行了这一基本描述后，我们将在接下来的章节中更深入地探讨分子化学的各个方面。您不必在第一次阅读本章后就内化所有这些概念，但拥有一些基础化学知识会有所帮助。
 
-| ![image](img/insert.jpg) | | **分子是动态量子对象**我们刚才给出了基于原子和键的分子简化描述。非常重要的是要记住，每个分子内部发生的事情远不止这些。首先，分子是动态对象，因此某个分子内的所有原子都在快速相互移动。键本身会伸长和收缩，其长度可以快速波动。分子原子断裂并重新连接是很常见的现象。当我们讨论分子构象时，将了解更多关于分子动力学的内容。 |
+### 分子是动态量子对象
 
-| --- | --- |
+我们刚才给出了基于原子和键的分子简化描述。非常重要的是要记住，每个分子内部发生的事情远不止这些。首先，分子是动态对象，因此某个分子内的所有原子都在快速相互移动。键本身会伸长和收缩，其长度可以快速波动。分子原子断裂并重新连接是很常见的现象。当我们讨论分子构象时，将了解更多关于分子动力学的内容。
 
-|   | | 更奇怪的是，分子是量子。有很多方式可以说明一种结构是量子，但简单来说，重要的是要注意，“原子”和“键”远不如简单的球棍模型所暗示的那样定义明确。它们的定义并非唯一。您目前不必掌握这些复杂性，但请注意，我们对分子的描述非常模糊。这可能会产生实际影响，因为根据学习任务的不同，可能需要以不同的方式描述分子。 |
+更奇怪的是，分子是量子。有很多方式可以说明一种结构是量子，但简单来说，重要的是要注意，“原子”和“键”远不如简单的球棍模型所暗示的那样定义明确。它们的定义并非唯一。您目前不必掌握这些复杂性，但请注意，我们对分子的描述非常模糊。这可能会产生实际影响，因为根据学习任务的不同，可能需要以不同的方式描述分子。
 
 ### 什么是分子键？
 
 您可能已经有一段时间没接触化学基础了。因此，我们将反复花时间复习基本化学概念。最基本的问题是：什么是化学键？
-
-
-
 
 构成日常生活的分子由原子组成，通常包含非常多的原子。这些原子通过化学键相互连接。这些键通过共享电子，简直是将原子“粘”在了一起。存在多种不同类型的分子键，包括共价键，以及各种非共价键。
 
@@ -1141,9 +1111,6 @@ In diesem Kapitel haben Sie gelernt, wie Sie mit der `DeepChem`-Bibliothek einig
 ### 分子手性
 
 一些分子（包括许多药物）以两种互为镜像的形式存在。这被称为*手性*。如图 4-9 所示，手性分子同时具有“右手”形式（也称为“R”构型）和“左手”形式（也称为“S”构型）。
-
-
-
 
 ![image](img/p50-2.png)
 
@@ -1206,9 +1173,6 @@ arr = feat.featurize(mols)
 显然，这种特征化对于某些任务比其他任务更有用。它最适合基于分子相对一般性质的预测。它不太适合预测取决于原子精确排列的性质。
 
 ### 图卷积
-
-
-
 
 上一节解释的特征化方法是由人类设计的。专家会仔细思考如何表示分子，以便将其作为机器学习模型的输入，然后手动编程实现该表示。相反，是否有可能让模型自行发现如何最好地表示分子？这毕竟正是机器学习的核心：我们不再手动设计函数，而是尝试根据数据自动构建函数。
 
@@ -1288,17 +1252,17 @@ predicted_solubility = model.predict_on_batch(x)
 
 ### MoleculeNet
 
-我们已经从 `molnet` 模块加载了两个数据集：上一章的毒性数据集 `Tox21` 和本章的 Delaney 溶解度数据集。`MoleculeNet` 是一个对分子机器学习有用的大型数据集集合。正如 图 4-10 所示，它包含各种分子性质的数据。范围从可以用量子力学计算的物理性质，到人体内相互作用的信息，如毒性和副作用。
+
+
+我们已经从 `molnet` 模块加载了两个数据集：上一章的毒性数据集 `Tox21` 和本章的 Delaney 溶解度数据集。`MoleculeNet` 是一个对分子机器学习有用的大型数据集集合。正如图 4-10 所示，它包含各种分子性质的数据。范围从可以用量子力学计算的物理性质，到人体内相互作用的信息，如毒性和副作用。
 
 ![image](img/p56-1.png)
 
 *图 4-10：MoleculeNet 包含来自分子科学不同领域的许多不同数据集。科学家们发现预测分子的物理、生物物理和生理以及量子性质很有用*。
 
+在开发新的机器学习方法时，MoleculeNet 可作为一组基准值集合，用于测试这些方法。在 [`moleculenet.ai`](http://moleculenet.ai) 上，您可以查看各种标准模型在各个数据集上的表现，并比较您自己的模型与既定方法相比的表现如何。
 
-
-在开发新的机器学习方法时，MoleculeNet 可作为一组基准值集合，用于测试这些方法。在 *[`moleculenet.ai`](http://moleculenet.ai)* 上，您可以查看各种标准模型在各个数据集上的表现，并比较您自己的模型与既定方法相比的表现如何。
-
-#### SMARTS 字符串
+### SMARTS 字符串
 
 在许多常用应用中，如文本处理，我们想要搜索特定的字符串。在化学信息学中，我们会遇到类似的情况，即我们想要确定分子的原子是否匹配特定模式。为此有许多用例：
 
@@ -1309,7 +1273,7 @@ predicted_solubility = model.predict_on_batch(x)
 
 SMARTS 是 SMILES 的扩展，我们已经介绍过 SMILES，SMARTS 用于创建查询。可以将 SMARTS 模式想象为文本搜索中的正则表达式。例如，在文件系统搜索中，可以指定 `foo*.bar`，它将找到 `foo.bar`、`foo3.bar` 和 `foolish.bar`。SMILES 字符串也可以用作 SMARTS 字符串。SMILES 字符串 `CCC` 也是一个有效的 SMARTS 字符串，可找到三个相邻脂肪族碳原子的序列。以下代码示例展示了如何从 SMILES 字符串定义分子、显示这些分子，并高亮显示与 SMARTS 模式匹配的原子。
 
-首先，我们导入所需的库，并根据 SMILES 字符串列表创建一个分子列表。结果见 图 4-11：
+首先，我们导入所需的库，并根据 SMILES 字符串列表创建一个分子列表。结果见图 4-11：
 
 ```
 from rdkit import Chem
@@ -1323,7 +1287,7 @@ mol_list = [Chem.MolFromSmiles(x) for x in smiles_list]
 
 *图 4-11：从 SMILES 生成的化学结构*。
 
-现在我们可以查看哪些 SMILES 字符串匹配 SMARTS 模式 `CCC`（见 图 4-12）：
+现在我们可以查看哪些 SMILES 字符串匹配 SMARTS 模式 `CCC`（见图 4-12）：
 
 ```
 query = Chem.MolFromSmarts("CCC")
@@ -1337,7 +1301,7 @@ MolsToGridImage(mols=mol_list, molsPerRow=4, highlightAtomLists=match_list)
 
 在这张图中有几点值得注意。首先，SMARTS 表达式仅匹配第一个结构。其他结构均不包含三个相邻的碳原子。还请注意，SMARTS 模式与该图中第一个分子匹配的方式可能不止一种——它可以通过从第一个、第二个或第三个碳原子开始，匹配三个相邻的碳原子。RDKit 包含用于显示所有可能的 SMARTS 匹配的附加功能，但我们现在不介绍这些功能。
 
-可以使用额外的通配符来匹配特定的原子组。就像在文本中一样，星号 (`*`) 可用于查找任意原子。SMARTS 模式 `C*C` 查找一个连接到某原子上的脂肪族碳，该原子再连接到另一个脂肪族碳（见 图 4-13）：
+可以使用额外的通配符来匹配特定的原子组。就像在文本中一样，星号 (`*`) 可用于查找任意原子。SMARTS 模式 `C*C` 查找一个连接到某原子上的脂肪族碳，该原子再连接到另一个脂肪族碳（见图 4-13）：
 
 ```
 query = Chem.MolFromSmarts("C*C")
@@ -1349,7 +1313,7 @@ MolsToGridImage(mols=mol_list, molsPerRow=4, highlightAtomLists=match_list)
 
 *图 4-13：匹配 SMARTS 表达式 "C*C" 的分子*。
 
-SMARTS 语法可以扩展，以仅允许特定的原子组。例如，字符串 `C[C,O,N]C` 查找连接到碳、氧或氮的碳，后者再连接到另一个碳（见 图 4-14）：
+SMARTS 语法可以扩展，以仅允许特定的原子组。例如，字符串 `C[C,O,N]C` 查找连接到碳、氧或氮的碳，后者再连接到另一个碳（见图 4-14）：
 
 ```
 query = Chem.MolFromSmarts("C[C,N,O]C")
@@ -1379,27 +1343,23 @@ SMARTS 的功能远不止这简短介绍所描述的内容。有兴趣的读者�
 | --- | --- | --- |
 | | | 目前，用于处理多靶点药理学的计算方法尚不够成熟，因此检测多靶点药理学效应的金标准仍然是动物和人体实验。然而，随着计算方法的进一步发展，这种状况在未来几年内可能会发生改变。 |
 
-
-
-
-
-# 蛋白质结构与机器学习
+### 蛋白质结构与机器学习
 
 因此，我们的目标是开发学习算法，能够可靠地预测特定分子何时会与特定蛋白质发生相互作用。我们该如何实现这一点？首先，我们可以采用前一章分子机器学习的一些方法，尝试构建一个针对特定蛋白质的模型。如果我们向这样一个模型提供一个数据集，包含分子及其是否结合到特定蛋白质的标注，它将学会预测新分子的结合能力。然而，这种想法需要大量数据。理想情况下，我们需要一种算法，能够在没有新蛋白质大量数据的情况下工作。
 
 事实证明，诀窍在于利用蛋白质的物理学特性。正如我们在下一节将了解到的，关于蛋白质分子的物理结构已知颇多。利用现代实验技术，可以创建蛋白质三维状态的快照。这些三维快照可以输入学习算法，并用于预测结合情况。此外，还可以获取蛋白质与小分子（通常称为`配体`）相互作用的快照（更广为人知的是`结构`）。如果本节内容显得抽象，请不必担心。您将在本章看到大量实用的代码示例。
 
-首先，让我们更好地了解蛋白质及其在生物学中的功能。随后，我们转向计算机科学领域，介绍一些表征蛋白质系统的算法，这些算法能将生物物理系统转化为向量或张量以供学习。在本章的最后一部分，我们将进行一个详细的案例研究，构建一个蛋白质-配体结合相互作用模型。为此，我们将介绍`PDBBind`数据集，它包含一系列实验确定的蛋白质-配体结构。我们将首先演示如何使用`DeepChem`对该数据集进行特征化，然后构建一些模型（既有复杂的也有简单的），并研究它们的性能。
+首先，让我们更好地了解蛋白质及其在生物学中的功能。随后，我们转向计算机科学领域，介绍一些表征蛋白质系统的算法，这些算法能将生物物理系统转化为向量或张量以供学习。在本章的最后一部分，我们将进行一个详细的案例研究，构建一个蛋白质-配体结合相互作用模型。为此，我们将介绍 `PDBBind` 数据集，它包含一系列实验确定的蛋白质-配体结构。我们将首先演示如何使用 `DeepChem` 对该数据集进行特征化，然后构建一些模型（既有复杂的也有简单的），并研究它们的性能。
 
-## 为何称为生物物理学？
+### 为何称为生物物理学？
 
 据说生物学建立在化学之上，化学建立在物理学之上。乍一看，生物学和物理学似乎相距甚远。但正如我们在本章将看到的，物理定律构成了所有生物学机制的核心。此外，蛋白质结构研究在很大程度上关键地依赖于使用在物理学中得到改进的实验程序。控制纳米级机器（因为蛋白质正是纳米级机器）既需要理论也需要实践的物理学技巧。
 
-## 深度学习与物理学
+### 深度学习与物理学
 
 有趣的是，本章涵盖的深度学习算法与用于探索粒子物理系统或进行物理模拟的深度学习架构有着惊人的相似之处。虽然这些主题超出了本书的范围，但我们鼓励感兴趣的读者进一步探索。
 
-## 蛋白质结构
+### 蛋白质结构
 
 蛋白质是完成细胞大部分工作的微型机器。尽管体积微小，它们却可以非常复杂。一个典型的蛋白质由数千个精确排列的原子组成。
 
@@ -1407,49 +1367,45 @@ SMARTS 的功能远不止这简短介绍所描述的内容。有兴趣的读者�
 
 此外，您还应了解它如何与其他分子相互作用。很少有机器孤立工作。汽车与乘客、行驶的道路以及使其移动的能源发生相互作用。大多数分子也是如此。它们作用于分子（例如催化化学反应）、受其他分子影响（例如调节其活性）并从其他分子获取能量。所有这些相互作用都取决于两个分子中原子的特定空间排列。为此，您必须理解原子在空间中是如何排列的。
 
-不幸的是，不能简单地在显微镜下观察蛋白质；它们小得多。相反，科学家们不得不开发复杂而精密的方法来确定蛋白质结构。目前有三种此类方法：`X 射线晶体学`、`核磁共振`（简称`NMR`）和`低温电子显微镜`（简称`低温-EM`）。
+不幸的是，不能简单地在显微镜下观察蛋白质；它们小得多。相反，科学家们不得不开发复杂而精密的方法来确定蛋白质结构。目前有三种此类方法：`X 射线晶体学`、`核磁共振`（简称 `NMR`）和 `低温电子显微镜`（简称 `低温-EM`）。
 
-`X 射线晶体学`是最古老的方法，至今仍是最常用的。已知蛋白质结构中约 90%是通过这种方法确定的。在晶体学中，培养所需蛋白质的晶体（许多蛋白质分子以规则重复的模式紧密堆积）。然后用 X 射线照射晶体，测量散射光，并分析结果以确定单个分子的结构。尽管取得了成功，但此方法有许多局限性。即使在最有利的条件下，它也缓慢且昂贵。许多蛋白质不形成晶体，使得晶体学成为不可能。将蛋白质压入晶体可能会改变其结构，因此结果可能偏离活细胞中的结构。许多蛋白质是柔性的，可以采取不同的结构。然而，晶体学只产生单一的刚性快照。但即使存在这些限制，它也是一个非常重要的工具。
+`X 射线晶体学` 是最古老的方法，至今仍是最常用的。已知蛋白质结构中约 90% 是通过这种方法确定的。在晶体学中，培养所需蛋白质的晶体（许多蛋白质分子以规则重复的模式紧密堆积）。然后用 X 射线照射晶体，测量散射光，并分析结果以确定单个分子的结构。尽管取得了成功，但此方法有许多局限性。即使在最有利的条件下，它也缓慢且昂贵。许多蛋白质不形成晶体，使得晶体学成为不可能。将蛋白质压入晶体可能会改变其结构，因此结果可能偏离活细胞中的结构。许多蛋白质是柔性的，可以采取不同的结构。然而，晶体学只产生单一的刚性快照。但即使存在这些限制，它也是一个非常重要的工具。
 
-`NMR`是第二常用的方法。它作用于溶液中的蛋白质，因此不需要培养晶体。这使其成为无法结晶蛋白质的重要替代方案。与产生单一刚性快照的晶体学不同，`NMR`生成一系列结构，代表蛋白质在溶液中可以采取的形状谱系。这是一个非常重要的优势，因为它揭示了蛋白质如何移动。不幸的是，`NMR`有其自身的局限性。它需要高浓度溶液，因此主要局限于小的、高溶解度的蛋白质。
+`NMR` 是第二常用的方法。它作用于溶液中的蛋白质，因此不需要培养晶体。这使其成为无法结晶蛋白质的重要替代方案。与产生单一刚性快照的晶体学不同，`NMR` 生成一系列结构，代表蛋白质在溶液中可以采取的形状谱系。这是一个非常重要的优势，因为它揭示了蛋白质如何移动。不幸的是，`NMR` 有其自身的局限性。它需要高浓度溶液，因此主要局限于小的、高溶解度的蛋白质。
 
-`低温-EM`近年来作为确定蛋白质结构的第三种可能性出现。在此方法中，蛋白质分子被速冻，随后用电子显微镜成像。单张图像的分辨率太低，无法辨别精确细节。然而，如果将许多不同的图像拼合在一起，最终可以产生一个分辨率远高于单张电子显微镜图像的结构。经过数十年的方法和技术持续改进，`低温-EM`正逼近原子级分辨率。与晶体学和`NMR`不同，它也适用于无法结晶的大型蛋白质。
+`低温-EM` 近年来作为确定蛋白质结构的第三种可能性出现。在此方法中，蛋白质分子被速冻，随后用电子显微镜成像。单张图像的分辨率太低，无法辨别精确细节。然而，如果将许多不同的图像拼合在一起，最终可以产生一个分辨率远高于单张电子显微镜图像的结构。经过数十年的方法和技术持续改进，`低温-EM` 正逼近原子级分辨率。与晶体学和 `NMR` 不同，它也适用于无法结晶的大型蛋白质。
 
 `蛋白质数据库`（`PDB`，[`https://www.rcsb.org/`](https://www.rcsb.org/)）是已知蛋白质结构的中央数据库。目前它包含超过 142,000 个结构，如图 5-1 所示。
 
 ![image](img/p64-1.png)
 
-
-
-
-
-# 图 5-1：枯草杆菌 CapD 蛋白的一种晶体结构，即炭疽病的病原体。确定细菌蛋白的结构可以成为设计新型抗生素的有效工具。更广泛地说，识别治疗相关蛋白的结构是现代药物发现中最重要的步骤之一。
+**图 5-1：枯草杆菌 CapD 蛋白的一种晶体结构，即炭疽病的病原体。确定细菌蛋白的结构可以成为设计新型抗生素的有效工具。更广泛地说，识别治疗相关蛋白的结构是现代药物发现中最重要的步骤之一。**
 
 这看起来可能很多，但远少于我们真正想要的。已知蛋白质的数量要大得多，且不断有新的被发现。对于您想要研究的每一种蛋白质，其结构很有可能仍未被解析。此外，人们希望每种蛋白质都有多种结构，而不仅仅是一种。许多蛋白质可以以多种功能不同的状态存在（例如“活性”和“非活性”状态）。因此，人们想要了解每种状态的结构。如果一种蛋白质结合其他分子，人们希望获得其每一种结合形式的结构，以便准确地看到它们是如何结合的。PDB（蛋白质数据库）是一个极好的资源，但该领域整体上仍处于“低数据阶段”。我们拥有的数据远少于我们想要的，挑战之一是如何充分利用现有数据。这种情况可能还将持续几十年。
 
-## 蛋白质序列
+### 蛋白质序列
 
 到目前为止，本章主要讨论了蛋白质结构，但尚未涉及蛋白质是如何在原子层面构建的。蛋白质由称为*氨基酸*的基本构建模块组成。这些氨基酸由共享一个共同核心但连接有不同“侧链”的分子组成（参见图 5-2）。这些不同的侧链改变了蛋白质的行为。
 
 ![image](img/p65-1.png)
 
-**图 5-2：** 氨基酸是蛋白质结构的构建模块。该图展示了一些常见氨基酸的化学结构。（改编自 Wikimedia，[`commons.wikimedia.org/wiki/File:Overview_proteinogenic_amino_acids-DE.svg`](https://commons.wikimedia.org/wiki/File:Overview_proteinogenic_amino_acids-DE.svg)）
+**图 5-2：氨基酸是蛋白质结构的构建模块。该图展示了一些常见氨基酸的化学结构。（改编自 Wikimedia，[`commons.wikimedia.org/wiki/File:Overview_proteinogenic_amino_acids-DE.svg`](https://commons.wikimedia.org/wiki/File:Overview_proteinogenic_amino_acids-DE.svg)）**
 
 蛋白质是一串相互连接的氨基酸链（参见图 5-3）。氨基酸链的起始端通常称为 N-末端，末端称为 C-末端。短的氨基酸链通常称为*肽*，长的链称为*蛋白质*。肽太小，无法具有复杂的 3-D 结构，但蛋白质结构可以非常复杂。
 
 ![image](img/p66-1.png)
 
-**图 5-3：** 一条由四个氨基酸组成的链，左侧为 N-末端，右侧为 C-末端。（来源：Wikipedia，[`en.wikipedia.org/wiki/N-terminus#/media/File:Tetrapeptide_structural_formulae_v.1.png`](https://en.wikipedia.org/wiki/N-terminus#/media/File:Tetrapeptide_structural_formulae_v.1.png)）
+**图 5-3：一条由四个氨基酸组成的链，左侧为 N-末端，右侧为 C-末端。（来源：Wikipedia，[`en.wikipedia.org/wiki/N-terminus#/media/File:Tetrapeptide_structural_formulae_v.1.png`](https://en.wikipedia.org/wiki/N-terminus#/media/File:Tetrapeptide_structural_formulae_v.1.png)）**
 
 值得注意的是，虽然大多数蛋白质采取刚性形式，但也存在本质上无序的蛋白质，其区域部分不采取固定形状（参见图 5-4）。
 
 ![image](img/p66-2.png)
 
-**图 5-4：** SUMO-1 蛋白的快照。蛋白质的中央核心是有序的，而 N-末端和 C-末端区域是无序的。像 SUMO-1 这样本质上无序的蛋白质在计算上难以处理。
+**图 5-4：SUMO-1 蛋白的快照。蛋白质的中央核心是有序的，而 N-末端和 C-末端区域是无序的。像 SUMO-1 这样本质上无序的蛋白质在计算上难以处理。**
 
 在本章的后续部分，我们将主要关注具有刚性 3-D 形状的蛋白质。处理没有固定形状的柔性结构对于现代分析方法来说仍然是一个挑战。
 
-## 我们能否通过计算预测 3-D 结构？
+### 我们能否通过计算预测 3-D 结构？
 
 读完上一节后，人们可能会问，为什么不使用算法直接预测感兴趣的蛋白质分子的结构，而要依赖复杂的物理实验呢？这是一个好问题，事实上，人们已经致力于蛋白质结构的计算预测几十年了。
 
@@ -1457,28 +1413,27 @@ SMARTS 的功能远不止这简短介绍所描述的内容。有兴趣的读者�
 
 第二种主要方法是*物理建模*。利用物理定律的知识，人们尝试探索蛋白质可能采取的许多不同构象，并预测哪一种最稳定。该过程需要巨大的计算时间。直到大约十年前，这还是不可能的。即使在今天，它也仅适用于小型、快速折叠的蛋白质。此外，为了加速计算，需要物理近似，但这会降低结果的准确性。物理建模经常能预测出正确的结构，但并非总是如此。
 
-## 蛋白质结合简介
+### 蛋白质结合简介
 
 到目前为止，本章我们已经详细讨论了蛋白质结构，但尚未过多涉及蛋白质如何与其他分子相互作用（参见图 5-5）。
 
 ![image](img/p67-1.png)
 
-**图 5-5：** 一个嵌入在细胞膜中的蛋白质传递信号。（来源：Wikimedia，[`simple.wikipedia.org/wiki/Signal_transduction#/media/File:The_External_Reactions_and_the_Internal_Reactions.jpg`](https://simple.wikipedia.org/wiki/Signal_transduction#/media/File:The_External_Reactions_and_the_Internal_Reactions.jpg)）
+**图 5-5：一个嵌入在细胞膜中的蛋白质传递信号。（来源：Wikimedia，[`simple.wikipedia.org/wiki/Signal_transduction#/media/File:The_External_Reactions_and_the_Internal_Reactions.jpg`](https://simple.wikipedia.org/wiki/Signal_transduction#/media/File:The_External_Reactions_and_the_Internal_Reactions.jpg)）**
 
 在实践中，蛋白质经常结合小分子。有时这种结合行为是蛋白质功能的核心：某种蛋白质的主要任务可能就是结合特定分子。例如，细胞中的信号转导通常通过蛋白质结合另一个分子的机制来传递信息。在其他情况下，结合蛋白质的分子是外源的：可能是我们设计用来操纵蛋白质的药物，也可能是损害其功能的毒素。
 
 了解分子如何、在何处以及何时结合蛋白质的细节，对于理解其功能和开发药物至关重要。如果我们能利用人体内细胞的信号机制，就能在体内触发期望的医疗反应。
 
-
-
-
-# 计算预测很难
+### 计算预测很难
 
 计算预测很难，因为蛋白质结合涉及许多高度特异性的相互作用。少数原子位置的微小变化就能决定一个分子是否结合到蛋白质上。此外，许多蛋白质是柔性的且在不断运动。蛋白质可能在特定构象下能够结合分子，但在其他构象下则不能。反过来，结合又可能导致蛋白质构象的进一步变化，从而改变其功能。
 
 在本章其余部分中，我们将把理解蛋白质结合的挑战作为一个激励性的计算示例。我们将深入探讨当前的深度学习和机器学习方法，以对结合行为进行预测。
 
-## 生物物理特性
+### 生物物理特性
+
+
 
 正如前一章所讨论的，将机器学习应用于新领域的关键步骤之一，是弄清楚如何将训练数据转换（或汇总）为适合学习算法的格式。我们介绍了几种表征单个小分子的方法。我们能否将这些技术改编用于生物物理系统？
 
@@ -1520,47 +1475,43 @@ SMARTS 的功能远不止这简短介绍所描述的内容。有兴趣的读者�
 
 ### 盐桥
 
-
-
-
-
-## Salzbrücken
-
-Eine Salzbrücke ist eine nicht kovalente Anziehung zweier Aminosäuren, wobei eine positiv und die andere negativ geladen ist (siehe Abbildung 5-7). Sie kombiniert sowohl Ionen- als auch Wasserstoffbindungen. Obwohl diese Bindungen relativ schwach sind, können sie dabei helfen, die Struktur eines Proteins zu stabilisieren, indem sie zwischen entfernten Aminosäuren in der Proteinsequenz interagieren.
+盐桥是一种非共价吸引力，作用于两个氨基酸之间，其中一个带正电，另一个带负电（见图 5-7）。它结合了离子键和氢键。虽然这些键相对较弱，但它们可以通过在蛋白质序列中相距较远的氨基酸之间相互作用，帮助稳定蛋白质的结构。
 
 ![image](img/p71-1.png)
 
-*Abbildung 5-7: Die Abbildung einer Salzbrücke zwischen Glutaminsäure und Lysin. Die Salzbrücke ist eine Kombination aus einer ionisch-elektrostatischen Wechselwirkung und einer Wasserstoffbrücke und dient zur Stabilisierung der Struktur. (Quelle: Wikimedia, [`commons.wikimedia.org/wiki/File:Revisited\_Glutamic\_Acid\_Lysine\_salt\_bridge.png`](https://commons.wikimedia.org/wiki/File:Revisited_Glutamic_Acid_Lysine_salt_bridge.png))*
+*图 5-7：谷氨酸和赖氨酸之间盐桥的示意图。盐桥是离子静电相互作用和氢键的组合，用于稳定结构。（来源：Wikimedia, [`commons.wikimedia.org/wiki/File:Revisited_Glutamic_Acid_Lysine_salt_bridge.png`](https://commons.wikimedia.org/wiki/File:Revisited_Glutamic_Acid_Lysine_salt_bridge.png))*
 
-Der `Grid-Featurizer` versucht, Salzbrücken zu entdecken, indem er explizit nach Paaren von Aminosäuren (wie Glutaminsäure und Lysin) sucht, die für solche Wechselwirkungen bekannt sind und die in der 3-D-Struktur nah beieinanderliegen.
+`Grid-Featurizer` 通过显式搜索已知会产生此类相互作用的氨基酸对（如谷氨酸和赖氨酸），并检查它们在三维结构中是否彼此靠近，来尝试发现盐桥。
 
-## π-π-Wechselwirkungen
+### π-π 相互作用
 
-π-π-Wechselwirkungen sind eine Form nicht kovalenter Bindung zwischen `aromatischen Ringen` (siehe Abbildung 5-8). Hierbei handelt es sich um planare, ringförmige Strukturen, die in vielen biologischen Molekülen, einschließlich DNA und RNA, vorkommen. Daneben kommen in den Seitenketten einiger Aminosäuren vor, darunter Phenylalanin, Tyrosin und Tryptophan.
+π-π 相互作用是 `芳香环` 之间的一种非共价键合形式（见图 5-8）。这些是存在于许多生物分子（包括 DNA 和 RNA）中的平面环状结构。此外，它们也存在于某些氨基酸的侧链中，包括苯丙氨酸、酪氨酸和色氨酸。
 
 ![image](img/p72-1.png)
 
-*Abbildung 5-8: Ein aromatischer Ring im Benzolmolekül. Solche Ringstrukturen sind für ihre außergewöhnliche Stabilität bekannt. Darüber hinaus liegen bei aromatischen Ringen alle Atome in einer Ebene. Im Gegensatz dazu befinden sich die Atome heterogener Ringe nicht auf einer Ebene*.
+*图 5-8：苯分子中的芳香环。此类环状结构以其卓越的稳定性著称。此外，芳香环中所有原子都位于同一平面。相比之下，杂环的原子不在同一平面上。*
 
-Grob gesagt, treten π-π-Wechselwirkungen auf, wenn zwei aromatische Ringe aufeinander »stapeln«. Abbildung 5-9 zeigt einige der Interaktionen zwischen zwei Benzolringen. Ebenso wie Ionenbrücken können solche stapelnden Wechselwirkungen zur Stabilisierung verschiedener makromolekularer Strukturen beitragen. Wichtig ist, dass π-π-Wechselwirkungen in Protein-Ligand-Interaktionen zu finden sind, da aromatische Ringe häufig in kleinen Molekülen vorkommen. Der `Grid-Featurizer` zählt diese Wechselwirkungen, indem er das Vorliegen von aromatischen Ringen erkennt und die Abstände zwischen ihren Schwerpunkten sowie die Winkel zwischen den beiden Ebenen überprüft.
+粗略地说，当两个芳香环相互“堆叠”时，就会发生 π-π 相互作用。图 5-9 展示了两个苯环之间的一些相互作用。与离子键类似，这种堆叠相互作用有助于稳定各种大分子结构。重要的是，π-π 相互作用存在于蛋白质-配体相互作用中，因为芳香环常见于小分子中。`Grid-Featurizer` 通过检测芳香环的存在，并检查它们质心之间的距离以及两个平面之间的角度来计算这些相互作用。
 
 ![image](img/p72-2.png)
 
-*Abbildung 5-9: Verschiedene nicht kovalente Wechselwirkungen von aromatischen Ringen. Bei der verschobenen Wechselwirkung sind die Zentren der beiden aromatischen Ringe geringfügig voneinander versetzt. Bei den Interaktionen Edge-to-Face liegt der Rand eines aromatischen Rings auf dem Gesicht des anderen. Die Sandwich-Konfiguration hat zwei direkt gestapelte Ringe, ist jedoch energetisch ungünstiger als verschobene oder Edge-to-Face-Interaktionen, da gleich geladene Bereiche eng zusammenwirken*.
+*图 5-9：芳香环的各种非共价相互作用。在偏移堆叠中，两个芳香环的中心略微错开。在边缘-面相互作用中，一个芳香环的边缘位于另一个的平面上。三明治构型具有两个直接堆叠的环，但能量上不如偏移或边缘-面相互作用有利，因为同性电荷区域紧密相互作用。*
 
-Inzwischen fragen Sie sich vermutlich, weshalb diese Interaktion als π-π-Wechselwirkungen bezeichnet wird. Der Name bezieht sich auf die π-Bindungen, eine Form der kovalenten chemischen Bindung, bei der sich die Elektronenorbitale zweier kovalent gebundener Atome überlappen. In einem aromatischen Ring sind alle Atome im Ring Teil einer gemeinsamen π-Bindung. Diese gemeinsame Bindung ist für die Stabilität des aromatischen Rings verantwortlich und erklärt auch viele seiner einzigartigen chemischen Eigenschaften.
+到目前为止，您可能想知道为什么这种相互作用被称为 π-π 相互作用。该名称指的是 π 键，一种共价化学键形式，其中两个共价结合原子的电子轨道重叠。在芳香环中，环上的所有原子都是共享 π 键的一部分。这种共享键负责芳香环的稳定性，也解释了其许多独特的化学性质。
 
-Für die Nichtchemiker unter Ihnen: Es ist nicht schlimm, wenn diese Darstellung noch keinen Sinn ergibt. `DeepChem` entfernt viele dieser Implementierungsdetails, sodass Sie sich bei der Entwicklung nicht oft um π-π-Wechselwirkungen kümmern müssen. Es ist jedoch hilfreich, zu wissen, dass diese Wechselwirkungen bestehen und eine wichtige Rolle in der zugrunde liegenden Chemie spielen.
+对于非化学家来说：如果这还讲不通也没关系。`DeepChem` 封装了许多此类实现细节，因此您在开发时不必经常担心 π-π 相互作用。不过，了解这些相互作用的存在及其在基础化学中的重要作用是有帮助的。
 
-| ![image](img/insert.jpg) | | **Komplexe Geometrien und Momentaufnahmen** In diesem Abschnitt haben wir mehrere Interaktionen hinsichtlich der statisch geometrischen Konfigurationen vorgestellt. Es ist wichtig, zu verstehen, dass Bindungen dynamische Einheiten sind und dass sich diese Bindungen in realen physikalischen Systemen mit rasanter Geschwindigkeit dehnen, dass sie reißen, brechen und sich neu ordnen. Denken Sie daran und beachten Sie, dass, wenn jemand sagt, dass eine Salzbrücke existiert, tatsächlich gemeint ist, dass eine Salzbrücke in einem statistisch durchschnittlichen Sinn wahrscheinlich häufiger an einem bestimmten Ort vorhanden ist als nicht. |
+| ![image](img/insert.jpg) | | **复杂的几何构型与快照** 在本节中，我们从静态几何构型的角度介绍了多种相互作用。重要的是要理解，键是动态实体，在真实的物理系统中，这些键以惊人的速度伸展、断裂并重组。请记住这一点：当有人说盐桥存在时，实际上意味着在统计平均意义上，盐桥在特定位置出现的频率高于不出现的频率。 |
 
-## Fingerabdrücke
+## 指纹
 
-Vielleicht können Sie sich noch an die kreisförmigen Fingerabdrücke aus dem vorherigen Kapitel erinnern. Diese Fingerabdrücke zählen die Anzahl bestimmter Fragmente eines Moleküls und verwenden anschließend eine Hash-Funktion, um diese Anzahl in einen Vektor gegebener Länge einzupassen. Diese Fragmentzahlen können ebenfalls für 3-D-Molekülkomplexe verwendet werden. Obwohl das bloße Zählen der Fragmente oft nicht ausreicht, um die Geometrie des Systems zu berechnen, kann das Wissen über vorhandene Fragmente dennoch nützlich für `Machine-Learning-Systeme` sein. Dies könnte möglicherweise auf die Tatsache zurückzuführen sein, dass das Vorliegen bestimmter Fragmente ein starkes Indiz für einige molekulare Ereignisse ist.
+您可能还记得上一章讨论的圆形指纹。这些指纹计算分子中特定片段的数量，随后使用哈希函数将这些计数映射到给定长度的向量中。这些片段计数同样可用于三维分子复合物。虽然仅计算片段通常不足以捕捉系统的几何结构，但了解存在哪些片段对于 `Machine-Learning-Systeme` 仍然可能有用。这可能归因于特定片段的存在是某些分子事件的强有力指标。
 
-## Einige Details zur Implementierung
+## 一些实现细节
 
-Um nach chemischen Merkmalen wie Wasserstoffbrücken zu suchen, muss `dc.feat.RdkitGridFeaturizer` in der Lage sein, effektiv mit der Geometrie des Moleküls zu arbeiten. `DeepChem` verwendet die `RDKit`-Bibliothek, um jedes Molekül, Protein und jeden Liganden in ein gemeinsames In-Memory-Objekt zu laden. Diese Moleküle werden anschließend in `NumPy`-Arrays umgewandelt, die die räumliche Anordnung aller Atome enthalten. Zum Beispiel kann ein Molekül mit `N` Atomen als `NumPy`-Array der Form `(N, 3)` dargestellt werden, wobei jede Zeile die Position eines Atoms im 3-D-Raum symbolisiert.
+为了有效地搜索氢键等化学特征，`dc.feat.RdkitGridFeaturizer` 必须能够高效地处理分子的几何结构。`DeepChem` 使用 `RDKit` 库将每个分子、蛋白质和配体加载到一个共享的内存对象中。随后，这些分子被转换为包含所有原子空间排列的 `NumPy` 数组。例如，一个包含 `N` 个原子的分子可以表示为形状为 `(N, 3)` 的 `NumPy` 数组，其中每一行代表一个原子在三维空间中的位置。
+
+
 
 Um (grob) eine Suche nach Wasserstoffbrücken durchzuführen, müssen dann lediglich alle Atompaare betrachtet werden, die nahe genug beieinanderliegen, um eine Wasserstoffbrücke bilden zu können (wie Sauerstoff und Wasserstoff). Die gleiche analytische Taktik wird zum Erkennen anderer Bindungsarten verwendet. Für den Umgang mit aromatischen Ringen gibt es einen speziellen Code, mit dem das Vorhandensein aromatischer Ringe in der Struktur erkannt und deren Schwerpunkte berechnet werden können.
 
@@ -1572,16 +1523,13 @@ Man kann sich leicht vorstellen, dass Featurisierung eines bestimmten Moleküls 
 
 Tatsächlich funktioniert das mit einigen zusätzlichen Schritten. Das `(N, 3)`-Array unterscheidet nicht zwischen Atomtypen, daher muss ein weiteres Array bereitgestellt werden, das die Ordnungszahl jedes Atoms auflistet. Eine zweite implementierungsorientierte Anmerkung ist, dass das Berechnen paarweiser Abstände zwischen zwei Positionsarrays der Form `(N, 3)` sehr rechenintensiv sein kann. Es ist daher hilfreich, in einem zuvor erfolgten Schritt »Nachbarlisten« zu erstellen, die benachbarte Atome in der Nähe eines bestimmten Atoms auflisten.
 
-
-
-
 # PDBBind 案例研究
 
 在完成这一介绍后，我们现在可以开始通过一些代码示例来处理生物物理数据集。首先，我们将介绍 PDBBind 数据集及结合自由能预测问题。随后，我们将展示一些代码示例，用于在 PDBBind 数据集中开发特征，并传授如何构建相应的机器学习模型。我们将通过评估结果来结束本案例研究。
 
 ## PDBBind 数据集
 
-PDBBind 数据集包含大量生物分子晶体结构及其结合亲和力。在此我们首先需要澄清一些专业术语。生物分子是指任何具有生物学研究意义的分子。这不仅包括蛋白质，还包括核酸（如 DNA 和 RNA）、脂质以及较小的类药物分子。生物分子系统的很大一部分多样性源于不同生物分子之间的相互作用（正如我们已经详细讨论过的那样）。结合亲和力是指两个相互作用分子形成复合物的实验测定亲和力。如果形成此类复合物在能量上是有利的，这些分子将以这种形式存在的时间比其他形式更长。
+PDBBind 数据集包含大量生物分子晶体结构及其结合亲和力。在此我们首先需要澄清一些专业术语。生物分子是指任何具有生物学研究意义的分子。这不仅包括蛋白质，还包括核酸（如 `DNA` 和 `RNA`）、脂质以及较小的类药物分子。生物分子系统的很大一部分多样性源于不同生物分子之间的相互作用（正如我们已经详细讨论过的那样）。结合亲和力是指两个相互作用分子形成复合物的实验测定亲和力。如果形成此类复合物在能量上是有利的，这些分子将以这种形式存在的时间比其他形式更长。
 
 PDBBind 数据集收集了大量生物分子复合物的结构。其中绝大多数是蛋白质-配体复合物，但数据集也包含蛋白质-蛋白质、蛋白质-核酸和核酸-配体复合物。为了我们的目的，我们将重点关注蛋白质-配体复合物。完整数据集包含近 15,000 个此类复合物，而“Refined”（精炼）集和“Core”（核心）集则是较小但经过清理的复合物子集。每个复合物都附带一项结合亲和力的实验测量值。PDBBind 数据集的学习任务是在已知蛋白质-配体结构的情况下，预测复合物的结合亲和力。
 
@@ -1606,8 +1554,6 @@ PDBBind 的数据源自*蛋白质数据库*。请注意，PDB 中的数据（因
 仅凭文本很难理解 PDB 文件的内容，因此我们将对蛋白质进行可视化。我们将使用 NGLview（[`github.com/arose/nglview`](https://github.com/arose/nglview)）可视化包，它能很好地集成到 Jupyter Notebook 中。您可以在随章节提供的 Jupyter Notebook（同样位于代码仓库中）中编辑并交互可视化的蛋白质。图 5-10 显示了在 Notebook 中生成的一个蛋白质-配体复合物（2D3U）的可视化结果。
 
 ![image](img/p77-1.png)
-
-
 
 # 图 5-10：来自 PDBBind 数据集的 2D3U 蛋白-配体复合物的可视化
 
@@ -1710,12 +1656,11 @@ print(test_scores)
 
 本节提供了使用具有网格特征化的 MLP 在 DeepChem 中对蛋白-配体结构进行建模的代码示例。请注意，存在多种替代的深度学习架构，可产生相似的效果。已有一系列工作利用 3D 卷积神经网络，基于基于体素的特征化来预测蛋白-配体结合相互作用。其他工作则使用了上一章所述图卷积的变体来处理大分子复合物。
 
-
-
-
 ## Wo liegen die Unterschiede dieser Architekturen?
 
 Bisher scheinen die meisten von ihnen eine ähnliche Vorhersagekraft zu haben. Wir verwenden `Grid Featurization`, weil es eine optimierte Implementierung in `DeepChem` gibt, aber andere Modelle können diese Anforderungen ebenfalls erfüllen. Zukünftige Versionen von `DeepChem` werden für diesen Zweck vermutlich zusätzliche Architekturen enthalten.
+
+
 
 Für den `Random Forest` erhalten wir einen Score von `0.979` auf den Trainingsdaten, der Score für die Testdaten liegt jedoch bei nur `0.133`. Die Trainingsdaten werden hervorragend reproduziert, die Testdaten jedoch nur sehr schlecht vorhergesagt. Offensichtlich haben wir es mit starkem `Overfitting` zu tun.
 
@@ -1727,7 +1672,7 @@ Den Korrelationskoeffizienten zu kennen, ist ein wichtiger erster Schritt, um un
 
 *Abbildung 5-12: Wahre gegen vorhergesagte Labels beim Ausführen auf den Testdaten.*
 
-# Fazit
+## Fazit
 
 In diesem Kapitel haben Sie gelernt, wie Sie `Deep Learning` auf biophysikalische Systeme anwenden können, insbesondere auf das Problem der Vorhersage der Bindungsaffinität von Protein-Ligand-Systemen. Vielleicht sind Sie neugierig zu erfahren, wie allgemein die Fähigkeiten sind, die Sie gelernt haben. Könnten die gleichen Modelle und Techniken angewendet werden, um andere biophysikalische Datensätze zu verstehen? Hierzu geben wir eine kurze Übersicht.
 
@@ -1761,29 +1706,29 @@ Dies bringt uns zu den beiden Bereichen *Genetik* und *Genomik*. Die Genetik beh
 
 Selbst wenn Sie kein Biologe sind, haben Sie sich wahrscheinlich zu irgendeinem Zeitpunkt mit den Grundlagen der Funktionsweise von Genomen beschäftigt. Zunächst werfen wir einen Blick auf die vereinfachte Darstellung der Genomik, wie sie auch in Einführungskursen gelehrt wird. Anschließend werden wir einige der Unterschiede zeigen, die unterstreichen, dass die Realität deutlich komplizierter ist.
 
+## DNA ist ein Polymer
 
-
-
-
-# DNA ist ein Polymer
-
-DNA ist ein Polymer: eine lange Kette sich wiederholender, aneinandergereihter Einheiten. DNA besteht aus vier solcher Einheiten (genannt *Basen*): Adenin, Cytosin, Guanin und Thymin. Diese werden mit `A`, `C`, `G` und `T` abgekürzt (siehe Abbildung 6-1). Fast die gesamte Information eines lebenden Organismus ist letztendlich in dem spezifischen Muster dieser vier sich wiederholenden Basen codiert, aus denen sein Genom besteht.
+DNA ist ein Polymer: eine lange Kette sich wiederholender, aneinandergereihter Einheiten. DNA besteht aus vier solcher Einheiten (genannt *Basen*): Adenin, Cytosin, Guanin und Thymin. Diese werden mit `A`, `C`, `G` und `T` abgekürzt (siehe Abbildung 6-1).
 
 ![image](img/p86-1.png)
 
-*Abbildung 6-1: Die Struktur eines DNA-Moleküls. Es besteht aus zwei Ketten, die sich jeweils aus vielen A-, C-, G- und T-Basen zusammensetzen. Die beiden Ketten ergänzen sich: Jedes C in einer Kette steht einem G der anderen gegenüber, und jedes A in einer Kette steht einem T in der anderen gegenüber. (Quelle: Wikimedia, [`en.wikipedia.org/wiki/Molecular\_Structure\_of\_Nucleic\_Acids:\_A\_Structure\_for\_Deoxyribose\_Nucleic\_Acid#/media/File:DNA-structure-and-bases.png`](https://en.wikipedia.org/wiki/Molecular_Structure_of_Nucleic_Acids:_A_Structure_for_Deoxyribose_Nucleic_Acid#/media/File:DNA-structure-and-bases.png))*
+
+
+# Abbildung 6-1: Die Struktur eines DNA-Moleküls
+
+Es besteht aus zwei Ketten, die sich jeweils aus vielen A-, C-, G- und T-Basen zusammensetzen. Die beiden Ketten ergänzen sich: Jedes C in einer Kette steht einem G der anderen gegenüber, und jedes A in einer Kette steht einem T in der anderen gegenüber. (Quelle: Wikimedia, [`en.wikipedia.org/wiki/Molecular_Structure_of_Nucleic_Acids:_A_Structure_for_Deoxyribose_Nucleic_Acid#/media/File:DNA-structure-and-bases.png`](https://en.wikipedia.org/wiki/Molecular_Structure_of_Nucleic_Acids:_A_Structure_for_Deoxyribose_Nucleic_Acid#/media/File:DNA-structure-and-bases.png))
 
 ## Proteine als Hardware
 
-Wenn DNA die Software ist, dann sind Proteine die wichtigste Hardware. Proteine sind winzige Maschinen, die fast alle Arbeiten in einer Zelle ausführen. Proteine sind ebenfalls Polymere, die aus sich wiederholenden Elementen, den *Aminosäuren*, bestehen. Es gibt 20 kanonische Aminosäuren, und ihre physiologischen Eigenschaften variieren stark. Manche sind groß und andere klein. Einige sind elektrisch geladen und andere nicht. Einige ziehen Wasser an, andere stoßen es ab. Reihen sich die richtigen Aminosäuren in der richtigen Reihenfolge auf, falten sie sich selbsttätig in eine 3-D-Form, sodass alle Teile richtig positioniert sind, um als Maschine zu funktionieren.
+Wenn DNA die Software ist, dann sind Proteine die wichtigste Hardware. Proteine sind winzige Maschinen, die fast alle Arbeiten in einer Zelle ausführen. Proteine sind ebenfalls Polymere, die aus sich wiederholenden Elementen, den `Aminosäuren`, bestehen. Es gibt 20 kanonische Aminosäuren, und ihre physiologischen Eigenschaften variieren stark. Manche sind groß und andere klein. Einige sind elektrisch geladen und andere nicht. Einige ziehen Wasser an, andere stoßen es ab. Reihen sich die richtigen Aminosäuren in der richtigen Reihenfolge auf, falten sie sich selbsttätig in eine 3-D-Form, sodass alle Teile richtig positioniert sind, um als Maschine zu funktionieren.
 
 ## Speicherung der Aminosäuresequenzen
 
-Eine der Hauptaufgaben der DNA ist die Speicherung der Aminosäuresequenzen für die Proteine eines Organismus. Dies erfolgt auf einfache und unkomplizierte Weise. Bestimmte DNA-Abschnitte entsprechen bestimmten Proteinen. Jede aus drei DNA-Basen bestehende Sequenz (genannt *Kodon*) entspricht einer Aminosäure. Beispielsweise zeigt das Muster `AAA` die Aminosäure Lysin an, während `GCC` für Alanin steht.
+Eine der Hauptaufgaben der DNA ist die Speicherung der Aminosäuresequenzen für die Proteine eines Organismus. Dies erfolgt auf einfache und unkomplizierte Weise. Bestimmte DNA-Abschnitte entsprechen bestimmten Proteinen. Jede aus drei DNA-Basen bestehende Sequenz (genannt `Kodon`) entspricht einer Aminosäure. Beispielsweise zeigt das Muster `AAA` die Aminosäure Lysin an, während `GCC` für Alanin steht.
 
 ## Von DNA zum Protein
 
-Um von der DNA zum Protein zu gelangen, wird ein weiteres Molekül, die RNA, benötigt, die als Informationsüberträger dient, um Informationen von einem Teil der Zelle zu einem anderen zu transportieren. Die RNA ist ein weiteres Polymer und chemisch der DNA sehr ähnlich. Sie besteht ebenfalls aus vier Basen, die in willkürlicher Reihenfolge miteinander verkettet werden können. Um ein Protein zu erstellen, müssen die Informationen zweimal kopiert werden. Zuerst wird die DNA-Sequenz in eine entsprechende RNA-Sequenz *transkribiert*, dann wird das RNA-Molekül in ein Proteinmolekül *übersetzt*. Das RNA-Molekül, das die Information trägt, wird *Boten-RNA*, kurz *mRNA*, genannt.
+Um von der DNA zum Protein zu gelangen, wird ein weiteres Molekül, die RNA, benötigt, die als Informationsüberträger dient, um Informationen von einem Teil der Zelle zu einem anderen zu transportieren. Die RNA ist ein weiteres Polymer und chemisch der DNA sehr ähnlich. Sie besteht ebenfalls aus vier Basen, die in willkürlicher Reihenfolge miteinander verkettet werden können. Um ein Protein zu erstellen, müssen die Informationen zweimal kopiert werden. Zuerst wird die DNA-Sequenz in eine entsprechende RNA-Sequenz *transkribiert*, dann wird das RNA-Molekül in ein Proteinmolekül *übersetzt*. Das RNA-Molekül, das die Information trägt, wird *Boten-RNA*, kurz `mRNA`, genannt.
 
 ## Regulationsmechanismen
 
@@ -1813,9 +1758,6 @@ Im vorherigen Abschnitt erwähnten wir, dass ein bestimmter DNA-Abschnitt einem 
 
 Das klingt alles sehr kompliziert, nicht? Lesen Sie weiter, wir haben gerade erst angefangen! Die Evolution wählt Mechanismen aus, die funktionieren, ohne sich darum zu kümmern, ob sie einfach sind oder leicht zu verstehen. Das führt zu sehr komplizierten Systemen. Wollen wir diese verstehen, müssen wir uns der Komplexität stellen.
 
-
-
-
 # RNA: 不仅仅是信息传递者
 
 传统上，RNA 仅被视为信息传递者，但早在基因组学研究的早期，生物学家就知道这并不完全正确。`mRNA` 翻译成蛋白质的过程由 `Ribosome`（核糖体）完成，核糖体是由蛋白质和 RNA 组成的复杂分子机器。另一种名为 `Transfer-RNA`（简称 `tRNA`）的分子在翻译过程中也扮演着关键角色。这些分子通过识别 `mRNA` 中的三碱基模式并添加正确的氨基酸到不断生长的蛋白质链上，从而定义了「遗传密码」。半个多世纪以来，我们已知至少存在三种 RNA：`mRNA`、核糖体 RNA 和 `tRNA`。
@@ -1827,19 +1769,21 @@ Das klingt alles sehr kompliziert, nicht? Lesen Sie weiter, wir haben gerade ers
 *   `Ribozyme`（核酶）是能像酶一样催化化学反应的 RNA 分子。化学反应是活细胞中发生的一切生命活动的基础。因此催化剂至关重要。通常由蛋白质承担这一功能，但我们现在知道，有时 RNA 也能承担此任。
 *   `Riboswitches`（核糖开关）是由两部分组成的 RNA 分子。一部分充当 `mRNA`，而另一部分能够结合小分子。结合发生时，`mRNA` 的翻译要么被启用，要么被阻止。这又是一个调控机制，根据细胞内特定小分子的浓度来调节蛋白质的生产。
 
+
+
 当然，所有这些不同的 RNA 都必须被合成出来，而 DNA 包含了相应的蓝图。因此，DNA 不仅仅是一串编码的蛋白质序列。它还包含 RNA 序列、`Transkriptionsfaktoren`（转录因子）及其他调控分子的结合位点、关于如何对 `mRNAs` 进行剪接的指令，以及各种化学修饰——这些修饰影响 DNA 如何缠绕在组蛋白上，以及哪些基因会被转录。
 
 当核糖体将 `mRNA` 翻译成蛋白质后会发生什么？一些蛋白质能自发折叠成正确的三维结构，但许多其他蛋白质需要被称为 `Chaperone`（伴侣蛋白）的蛋白质协助。翻译后，蛋白质通常还需要额外的化学修饰。随后，成熟的蛋白质必须被运输到细胞中能发挥作用的位置，并在不再需要时被降解。这些过程中的每一个都受到额外调控机制的控制，并涉及与许多其他分子的相互作用。
 
 如果这听起来令人望而生畏，那是因为它确实如此！活着的生物体比人类制造的任何机器都要复杂得多。想要理解它，*理应*让你感到畏惧！
 
-这正是 Machine Learning（机器学习）成为如此强大工具的原因。我们拥有海量数据，这些数据由一个极其复杂且几乎未被理解的过程生成。我们想要发掘埋藏在数据中的细微模式。这正是 Deep Learning（深度学习）擅长的任务类型！
+这正是 `Machine Learning`（机器学习）成为如此强大工具的原因。我们拥有海量数据，这些数据由一个极其复杂且几乎未被理解的过程生成。我们想要发掘埋藏在数据中的细微模式。这正是 `Deep Learning`（深度学习）擅长的任务类型！
 
-事实上，Deep Learning 非常适合这一任务。经典统计方法难以表征基因组的复杂性。它们往往依赖于简化假设。例如，它们寻找变量间的线性关系，或试图仅用少数几个其他变量来建模因变量。然而，基因组学包含数百个变量之间复杂的非线性关系：这正是 Deep Neural Network（深度神经网络）能有效描述的关系类型。
+事实上，`Deep Learning` 非常适合这一任务。经典统计方法难以表征基因组的复杂性。它们往往依赖于简化假设。例如，它们寻找变量间的线性关系，或试图仅用少数几个其他变量来建模因变量。然而，基因组学包含数百个变量之间复杂的非线性关系：这正是 `Deep Neural Network`（深度神经网络）能有效描述的关系类型。
 
 ## Transkriptionsfaktor-Bindung（转录因子结合）
 
-作为基因组学的一个应用示例，我们将利用 Deep Learning 来研究转录因子结合问题。如前所述，`TFs` 是结合 DNA 的蛋白质。通过结合，它们影响附近基因被转录成 RNA 的概率。但 `TF` 如何知道该结合在哪里？正如遗传学中常见的那样，这个问题有一个简单的答案，但伴随着许多复杂性。
+作为基因组学的一个应用示例，我们将利用 `Deep Learning` 来研究转录因子结合问题。如前所述，`TFs` 是结合 DNA 的蛋白质。通过结合，它们影响附近基因被转录成 RNA 的概率。但 `TF` 如何知道该结合在哪里？正如遗传学中常见的那样，这个问题有一个简单的答案，但伴随着许多复杂性。
 
 每个 `TF` 都有一个特定的 DNA 序列，称为 *Bindungsstellenmotiv*（结合位点基序），它结合于此。结合位点基序通常很短，一般由十个碱基或更少组成。无论 `TF` 的基序在基因组的何处出现，`TF` 都会结合其上。
 
@@ -1849,7 +1793,7 @@ Das klingt alles sehr kompliziert, nicht? Lesen Sie weiter, wir haben gerade ers
 
 其他分子也扮演重要角色。`TFs` 常与其他分子相互作用，这些相互作用会影响 DNA 结合。例如，一个 `TF` 可能结合另一个分子，形成的复合物随后结合的 DNA 基序与该 `TF` 单独结合时不同。
 
-生物学家花费数十年时间理清这些细节并建立 `TF` 结合模型。我们将尝试利用 Deep Learning 从数据中学习模型。
+生物学家花费数十年时间理清这些细节并建立 `TF` 结合模型。我们将尝试利用 `Deep Learning` 从数据中学习模型。
 
 ### Ein Konvolutionsmodell für die TF-Bindung（用于 TF 结合的卷积模型）
 
@@ -1857,12 +1801,9 @@ Das klingt alles sehr kompliziert, nicht? Lesen Sie weiter, wir haben gerade ers
 
 片段采用 One-Hot 编码（独热编码）表示。每个碱基对应四个数字，其中一个为 1，其余为 0。碱基是 `A`、`C`、`G` 还是 `T`，由 1 的位置指示。
 
-
-
-
 # 使用卷积神经网络进行数据处理
 
-为了处理数据，我们使用一个卷积神经网络，就像我们在第 3 章中识别手写数字时所做的那样。实际上，这两个模型非常相似。这一次我们使用 1-D 卷积，因为我们面对的是 1-D 数据（DNA 序列）而不是 2-D 数据（图像）。然而，模型的基本组件是相同的：输入、多个卷积层、一个或多个用于计算输出的 Dense 层（全连接层），以及作为误差函数的交叉熵。
+为了处理数据，我们使用一个卷积神经网络，就像我们在第 3 章中识别手写数字时所做的那样。实际上，这两个模型非常相似。这一次我们使用 1-D 卷积，因为我们面对的是 1-D 数据（DNA 序列）而不是 2-D 数据（图像）。然而，模型的基本组件是相同的：输入、多个卷积层、一个或多个用于计算输出的 `Dense` 层（全连接层），以及作为误差函数的交叉熵。
 
 ## 模型创建与输入定义
 
@@ -1894,11 +1835,11 @@ for i in range(3):
 
 我们将卷积核的大小设为 10，并将每层的滤波器数量（= 输出数量）指定为 15。第一层接收原始特征（每个碱基四个数值）作为输入。总共有 40 个输入值，因为每次都会考虑连续十个碱基的区域。对于每个区域，这 40 个值通过一个卷积核转换为 15 个输出值。第二层同样每次考虑十个碱基，但输入是由第一层创建的 15 个值。为每个碱基计算一组新的 15 个值，以此类推。
 
-为了防止过拟合，我们在每个卷积层后添加一个 Dropout 层。Dropout 概率设置为 0.5，因此每次有 50% 的输出值被随机设为 0。
+为了防止过拟合，我们在每个卷积层后添加一个 `Dropout` 层。`Dropout` 概率设置为 0.5，因此每次有 50% 的输出值被随机设为 0。
 
 ## 输出计算
 
-接下来，我们使用一个 Dense 层来计算输出：
+接下来，我们使用一个 `Dense` 层来计算输出：
 
 ```
 logits = layers.Dense(out_channels=1, in_layers=layers.Flatten(prev))
@@ -1942,7 +1883,7 @@ for i in range(20):
 
 *图 6-2：训练过程中 ROC AUC 分数的变化，训练数据（虚线）和验证数据（实线）。*
 
-ROC AUC 分数 0.75 还不错，但也不算特别好。通过改进模型，我们大概能提高它。为此，我们可以尝试改变各种超参数：卷积层的数量、每层的核大小、每层的滤波器数量、Dropout 率等。我们可以尝试许多不同的组合，或许能找到一个性能更好的组合。
+ROC AUC 分数 0.75 还不错，但也不算特别好。通过改进模型，我们大概能提高它。为此，我们可以尝试改变各种超参数：卷积层的数量、每层的核大小、每层的滤波器数量、`Dropout` 率等。我们可以尝试许多不同的组合，或许能找到一个性能更好的组合。
 
 但我们也知道，模型能变得多好是有限度的。唯一考虑的输入值是 DNA 序列。然而，转录因子结合还取决于许多其他因素：可及性、甲基化、形状、其他分子的存在等。任何忽略这些因素的模型在其预测能力上都会受限。因此，我们添加第二个输入，并测试结果是否因此得到改善。
 
@@ -1956,10 +1897,7 @@ ROC AUC 分数 0.75 还不错，但也不算特别好。通过改进模型，我
 
 我们在上一节分析的数据基于一种名为 `HepG2` 的特定细胞的实验。实验确定了转录因子 `JUND` 在基因组中结合的位点。结果受染色质可及性的影响。如果某个区域在 `HepG2` 细胞中几乎总是不可及的，那么 `JUND` 在那里结合的可能性就非常小，即使 DNA 序列本身原本是一个理想的结合位点。因此，让我们尝试将可及性纳入我们的模型。
 
-
-
-
-首先，我们加载相关数据。这些数据包含在一个文本文件中，其中每一行对应我们数据集的一个样本（第 22 号染色体的 101 碱基片段）。每一行包含样本 ID，后跟一个数字，指示该区域在 HepG2 细胞中有多容易被访问。我们将其读入一个 Python 字典：
+首先，我们加载相关数据。这些数据包含在一个文本文件中，其中每一行对应我们数据集的一个样本（第 22 号染色体的 101 碱基片段）。每一行包含样本 ID，后跟一个数字，指示该区域在 `HepG2` 细胞中有多容易被访问。我们将其读入一个 Python 字典：
 
 ```
 span_accessibility = {}
@@ -1975,7 +1913,7 @@ for line in open('accessibility.txt'):
 accessibility = layers.Feature(shape=(None, 1))
 ```
 
-接下来，我们将可访问性值纳入计算。为此有多种方法。在本例中，我们使用一种特别简单的方法。在前一节中，我们将最后一个卷积层的输出展平，然后将其作为输入传给一个计算结果的 Dense 层。
+接下来，我们将可访问性值纳入计算。为此有多种方法。在本例中，我们使用一种特别简单的方法。在前一节中，我们将最后一个卷积层的输出展平，然后将其作为输入传给一个计算结果的 `Dense` 层。
 
 ```
 logits = layers.Dense(out_channels=1, in_layers=layers.Flatten(prev))
@@ -1992,7 +1930,7 @@ logits = layers.Dense(out_channels=1, in_layers=prev)
 
 此时存在一个问题：我们的模型有两个不同的特征层！到目前为止，我们的模型恰好有一个特征层、一个标签层，以及可能还有一个权重层。它们通过调用 `fit(dataset)` 进行训练，该方法会自动将正确的数据与每一层关联：数据集的 X 对应特征，y 对应标签，w 对应权重。然而，当模型拥有多个特征时，这行不通。
 
-借助 DeepChem 的一项高级功能，可以解决这个问题。我们不再向模型传递数据集，而是可以编写一个 Python 生成器函数，用于迭代批次。每个批次由一个字典表示，其键为输入层，其值为将用于这些层的 NumPy 数组：
+借助 `DeepChem` 的一项高级功能，可以解决这个问题。我们不再向模型传递数据集，而是可以编写一个 Python 生成器函数，用于迭代批次。每个批次由一个字典表示，其键为输入层，其值为将用于这些层的 NumPy 数组：
 
 ```
 def generate_batches(dataset, epochs):
@@ -2039,6 +1977,8 @@ for i in range(20):
 
 生物学家已经开发出许多用于选择 siRNA 序列的启发式规则。例如，最开始的碱基应该是 A 或 G，G 和 C 碱基应占序列的 30% 到 50% 等。这些经验法则很有帮助，但也许机器学习能做得更好。
 
+
+
 我们使用一个包含 2,431 个 siRNA 分子的文库来训练模型，每个分子长 21 个碱基。^(1) 每个分子都经过实验测试，并被标记为 0 到 1 之间的值，指示其沉默目标基因的有效程度。较小的值表示无效分子，而较高的值表示更有效的分子。模型以序列为输入，尝试预测有效性。
 
 创建模型使用以下代码：
@@ -2049,24 +1989,16 @@ features = layers.Feature(shape=(None, 21, 4))
 labels = layers.Label(shape=(None, 1))
 prev = features
 for i in range(2):
-```
-
-
-
-prev = layers.Conv1D(filters=10, kernel_size=10,
-activation=tf.nn.relu, padding='same',
-in_layers=prev)
-
-prev = layers.Dropout(dropout_prob=0.3, in_layers=prev)
-
+    prev = layers.Conv1D(filters=10, kernel_size=10,
+                         activation=tf.nn.relu, padding='same',
+                         in_layers=prev)
+    prev = layers.Dropout(dropout_prob=0.3, in_layers=prev)
 output = layers.Dense(out_channels=1, activation_fn=tf.sigmoid,
-in_layers=layers.Flatten(prev))
-
+                      in_layers=layers.Flatten(prev))
 model.add_output(output)
-
 loss = layers.ReduceMean(layers.L2Loss(in_layers=[labels, output]))
-
 model.set_loss(loss)
+```
 
 与我们用于 TF 结合的模型相比，该模型仅有少数差异。由于使用了较短的序列且训练数据较少，因此减小了模型规模。它只有两个卷积层，每层十个滤波器，而不是 15 个。此外不需要权重，因为每个样本在优化过程中应贡献相同的权重。
 
@@ -2086,7 +2018,7 @@ for i in range(20):
 
 对于 TF 结合，我们使用 ROC AUC 来评估模型，它衡量模型将数据准确分为两类的能力。这适用于分类模型，但对于回归模型没有意义。因此我们使用皮尔逊相关系数。这是一个介于 -1 和 1 之间的数值，其中 0 意味着模型完全不提供信息，1 意味着模型完美复现了实验数据。
 
-结果见 图 6-4。验证数据的值在 50 个周期后达到峰值 0.65。训练数据的值继续上升。然而，由于验证数据的值不再改善，这属于过拟合。考虑到模型的简单性和有限的训练数据量，0.65 的相关系数已经相当不错。虽然在更大数据集上训练的更复杂模型表现略好，但这已经是一个值得尊敬的成绩。
+结果见图 6-4。验证数据的值在 50 个周期后达到峰值 0.65。训练数据的值继续上升。然而，由于验证数据的值不再改善，这属于过拟合。考虑到模型的简单性和有限的训练数据量，0.65 的相关系数已经相当不错。虽然在更大数据集上训练的更复杂模型表现略好，但这已经是一个值得尊敬的成绩。
 
 ![image](img/p99-1.png)
 
@@ -2102,11 +2034,11 @@ for i in range(20):
 
 ## 显微镜中的机器学习
 
-在本章中，我们介绍用于显微镜的深度学习技术。在这类应用中，我们试图理解显微镜图像的生物学结构。例如，我们想要计数图像中特定的细胞类型，或识别特定的细胞器。显微镜是生命科学最基本的工具之一，显微镜的进步极大地推动了人类科学。能够直观地检查细胞等生物对象，能比教科书上枯燥的讨论建立起对生命潜在机制更深刻的理解。核和细胞骨架的生动可视化（如 图 7-1 所示）产生的理解远比教科书上的枯燥讨论深刻得多。
+在本章中，我们介绍用于显微镜的深度学习技术。在这类应用中，我们试图理解显微镜图像的生物学结构。例如，我们想要计数图像中特定的细胞类型，或识别特定的细胞器。显微镜是生命科学最基本的工具之一，显微镜的进步极大地推动了人类科学。能够直观地检查细胞等生物对象，能比教科书上枯燥的讨论建立起对生命潜在机制更深刻的理解。核和细胞骨架的生动可视化（如图 7-1 所示）产生的理解远比教科书上的枯燥讨论深刻得多。
 
 ![image](img/p101-1.png)
 
-*图 7-1：人类 SK8/18-2 细胞。这些细胞经过染色以突出其细胞核和细胞骨架，并使用荧光显微镜成像。（来源：Wikimedia，[`commons.wikimedia.org/wiki/File:SK8-18-2_human_derived_cells,_fluorescence_microscopy_(29942101073).jpg`](https://commons.wikimedia.org/wiki/File:SK8-18-2_human_derived_cells,_fluorescence_microscopy_(29942101073).jpg))*
+*图 7-1：人类 SK8/18-2 细胞。这些细胞经过染色以突出其细胞核和细胞骨架，并使用荧光显微镜成像。（来源：Wikimedia，[`commons.wikimedia.org/wiki/File:SK8-18-2_human_derived_cells,_fluorescence_microscopy_(29942101073).jpg`](https://commons.wikimedia.org/wiki/File:SK8-18-2_human_derived_cells,_fluorescence_microscopy_(29942101073).jpg)）*
 
 问题在于深度学习在显微镜领域能发挥什么作用。直到最近，显微镜图像只能通过人工（通常是博士生或博士后）手动检查有用模式来分析。较新的工具，如 CellProfiler ([`cellprofiler.org/`](https://cellprofiler.org/))，使生物学家能够自动构建处理图像数据的流水线。
 
@@ -2117,8 +2049,6 @@ for i in range(20):
 然而，自动化显微镜系统始终面临一系列限制。首先，复杂的视觉任务无法由现有的图像识别流水线执行。此外，为分析正确制备样本，要求进行实验的科学家具备丰富的经验。由于上述原因，尽管自动化显微镜能实现复杂的新实验，但它仍是一种小众方法。
 
 因此，深度学习有望扩展 CellProfiler 等工具的能力。如果深度学习方法能执行更复杂的分析，自动化显微镜将成为一个有效得多的工具。因此，深度显微镜学引起了极大的研究兴趣，正如我们在本章后续将看到的那样。
-
-
 
 深度学习技术的希望在于，自动化显微镜流程因此将变得更加灵活。深度学习系统在执行人类图像分析师几乎所有任务方面极具前景。此外，早期研究结果表明，深度学习技术有可能显著扩展低成本显微镜硬件的能力，从而使廉价显微镜能够执行目前仅靠先进且昂贵设备才能完成的分析。
 
@@ -2134,7 +2064,7 @@ for i in range(20):
 
 ![image](img/p103-1.png)
 
-*图 7-2：列文虎克显微镜的复原图。列文虎克对其透镜磨制工艺的关键细节保密，直到 1950 年代，美国和苏联的科学家才成功复原出该显微镜。（来源：Wikimedia，[`en.wikipedia.org/wiki/Antonie\_van\_Leeuwenhoek#/media/File:Leeuwenhoek\_Microscope.png`](https://en.wikipedia.org/wiki/Antonie_van_Leeuwenhoek#/media/File:Leeuwenhoek_Microscope.png))*
+*图 7-2：列文虎克显微镜的复原图。列文虎克对其透镜磨制工艺的关键细节保密，直到 1950 年代，美国和苏联的科学家才成功复原出该显微镜。（来源：Wikimedia，[`en.wikipedia.org/wiki/Antonie_van_Leeuwenhoek#/media/File:Leeuwenhoek_Microscope.png`](https://en.wikipedia.org/wiki/Antonie_van_Leeuwenhoek#/media/File:Leeuwenhoek_Microscope.png)）*
 
 高分辨率光学显微镜的发明引发了微生物学的一场革命。显微镜技术的普及以及放大观察细胞、细菌和其他微生物的能力，催生了微生物学和致病疾病模型。显微镜学对现代生命科学的影响怎么估量都不为过。
 
@@ -2148,18 +2078,15 @@ for i in range(20):
 
 ![image](img/p105-1.png)
 
-*图 7-3：花粉颗粒：(a) 花粉颗粒的光学切片荧光图像，(b) 组合图像，(c) 多个花粉颗粒的组合图像。（来源：Wikimedia，[`commons.wikimedia.org/wiki/File:Optical\_sectioning\_of\_pollen.jpg`](https://commons.wikimedia.org/wiki/File:Optical_sectioning_of_pollen.jpg))*
+*图 7-3：花粉颗粒：(a) 花粉颗粒的光学切片荧光图像，(b) 组合图像，(c) 多个花粉颗粒的组合图像。（来源：Wikimedia，[`commons.wikimedia.org/wiki/File:Optical_sectioning_of_pollen.jpg`](https://commons.wikimedia.org/wiki/File:Optical_sectioning_of_pollen.jpg)）*
 
 ![image](img/p105-2.png)
 
-*图 7-4：明斯基原始专利中的一幅图像，展示了一台共聚焦扫描显微镜。明斯基因其在人工智能领域的开创性工作而更为人所知。（来源：Wikimedia，[`en.wikipedia.org/wiki/Confocal\_microscopy#/media/File:Minsky\_Confocal\_Reflection\_Microscope.png`](https://en.wikipedia.org/wiki/Confocal_microscopy#/media/File:Minsky_Confocal_Reflection_Microscope.png))*
+*图 7-4：明斯基原始专利中的一幅图像，展示了一台共聚焦扫描显微镜。明斯基因其在人工智能领域的开创性工作而更为人所知。（来源：Wikimedia，[`en.wikipedia.org/wiki/Confocal_microscopy#/media/File:Minsky_Confocal_Reflection_Microscope.png`](https://en.wikipedia.org/wiki/Confocal_microscopy#/media/File:Minsky_Confocal_Reflection_Microscope.png)）*
 
 设计良好的光学切片显微镜擅长捕获生物系统的 3-D 图像，因为可以利用扫描聚焦于多个图像部分。这些聚焦图像可通过算法拼接，获得精美的 3-D 重建。
 
 下一节将探讨光学显微镜的一些基本局限性，以及为克服这些局限而开发的一些技术。虽然这些内容目前与深度学习没有直接关系（我们将讨论原因），但我们认为它们能为当今显微镜学面临的挑战提供宝贵的理解。当您希望利用机器学习协助设计下一代显微镜系统时，这些知识将大有裨益。如果您想直接上手实践，建议跳至后续章节，我们将在那里探讨实际应用。
-
-
-
 
 | ![image](img/crow.jpg) || **深度学习不能做什么？** 显而易见，深度学习能对显微镜产生影响，因为深度学习擅长处理图像，而显微镜的核心在于图像获取。但也值得探讨，在显微镜的哪些领域，深度学习目前作用不大。正如我们在本章中将看到的，为显微成像准备样本可能相当繁琐。此外，样本制备需要极高的技巧，因为实验者必须能够正确固定样本。深度学习如何实现该过程的自动化或加速？ |
 
@@ -2209,9 +2136,6 @@ for i in range(20):
 
 #### 超分辨率显微镜
 
-
-
-
 在本章中，已经介绍了几种克服衍射极限的方法，包括使用波长更高的光和探针来实现更高的分辨率。然而，在 20 世纪下半叶，取得了一个科学突破，其基础是认识到存在许多克服衍射极限的方法。这些方法被称为超分辨率显微镜方法：
 
 ### 功能性超分辨率显微镜
@@ -2224,25 +2148,31 @@ for i in range(20):
 
 ### 随机性超分辨率显微镜
 
-生物系统中的发光分子受随机运动支配。这意味着，如果对发光粒子的运动进行时间上的跟踪，这些测量值可以平均以估计其真实位置。存在各种方法（例如 STORM、PALM 和 BALM 显微镜），它们对这一基本思路进行了改进。这些超分辨率方法对现代生物学和化学产生了巨大影响，因为它们使相对廉价的光学显微镜能够研究纳米级系统的行为。2014 年诺贝尔化学奖授予了功能性超分辨率方法的先驱者。
+
+
+# 生物系统中的发光分子受随机运动支配
+
+这意味着，如果对发光粒子的运动进行时间上的跟踪，这些测量值可以平均以估计其真实位置。存在各种方法（例如 `STORM`、`PALM` 和 `BALM` 显微镜），它们对这一基本思路进行了改进。这些超分辨率方法对现代生物学和化学产生了巨大影响，因为它们使相对廉价的光学显微镜能够研究纳米级系统的行为。2014 年诺贝尔化学奖授予了功能性超分辨率方法的先驱者。
 
 | ![image](img/crow.jpg) | | **深度超分辨率方法** 近期研究已开始利用深度学习方法来实现超分辨率成像。^(1) 这些方法通过支持从稀疏、快速获取的图像中进行重建，提高了超分辨率显微镜的速度。尽管仍处于起步阶段，但这显示出作为深度学习未来有前景的应用领域。 |
 
 ---
 
+## 近场显微镜
+
 近场显微镜是另一种超分辨率方法，它利用样本中的局部电磁信息。这些“倏逝波”不遵循衍射极限，从而实现更高的分辨率。然而，缺点是显微镜必须从极靠近样本的地方（样本周围一个光波长范围内）收集光线。这导致尽管近场方法非常有趣，但实际应用仍然具有挑战性。直到最近，也才有可能制造出具有负折射率的“超材料”。实际上，这些材料的特性意味着倏逝近场波可以被放大，从而实现距离样本较远处的成像。该领域的研究仍处于起步阶段，但非常令人兴奋。
 
-#### 深度学习与衍射极限？
+### 深度学习与衍射极限？
 
 许多迹象表明，深度学习可以促进超分辨率显微镜的普及。一些出版物已经表明，深度学习算法可以加速超分辨率图像的创建，并利用相对廉价的硬件实现超分辨率。（脚注中引用了这样一份出版物。）
 
 这些迹象特别令人信服，因为深度学习可以有效地执行图像锐化等任务。^(2) 这表明，可能有可能开发一系列基于深度学习的超分辨率工具，从而大大简化此类方法的采用。目前，这项研究尚不成熟，且尚无令人满意的工具。然而，我们希望这种情况在未来几年内会有所改变。
 
-### 为显微镜准备生物样本
+# 为显微镜准备生物样本
 
 生物科学显微镜中最重要的步骤之一是样本制备。这可能是一个高度复杂的过程，需要相当的实验技巧。在本节中，我们将讨论一些样本制备方法，并解释这些方法如何失败并产生意外的实验伪影。
 
-#### 样本染色
+## 样本染色
 
 早期的光学显微镜提供了微观物体的放大视图。这种能力提高了对微小物体的理解，但无法为了对比而突出显示图像的特定区域。这促使了化学染料的发展，使科学家能够将图像区域作为对比来观察。
 
@@ -2260,13 +2190,9 @@ for i in range(20):
 
 | | | 这一挑战变得越来越紧迫，因为许多细菌菌株通过水平基因转移等过程获得了革兰氏阴性耐药性，且在经历了数十年的稳定后，由细菌感染导致的死亡人数再次上升。 |
 
+| | | 完全有可能将我们已经介绍的用于分子设计的深度学习方法，与您在本章学习的一些成像方法相结合，以解决该问题。我们鼓励那些对这些可能性感到好奇的人进一步探索这一领域。 |
 
-
-
-
-|   || 完全有可能将我们已经介绍的用于分子设计的深度学习方法，与您在本章学习的一些成像方法相结合，以解决该问题。我们鼓励那些对这些可能性感到好奇的人进一步探索这一领域。 |
-
-#### 样本固定
+## 样本固定
 
 大型生物样本（如组织）如果任其自生自灭，往往会迅速降解。样本中的代谢过程会消耗并破坏样本中器官、细胞和细胞器的结构。“固定”过程旨在阻止这一进程，并稳定样本的内部结构，以便对其进行成像。已经开发出多种`固定剂`来辅助这一过程。`固定剂`的主要任务之一是使蛋白质变性并使蛋白酶失活。否则，这些酶会消化样本。
 
@@ -2274,7 +2200,7 @@ for i in range(20):
 
 `灌注`是一种用于固定大型动物（如小鼠）组织样本的方法。实验者将固定液注入心脏，待小鼠死亡后再取出组织样本。该程序使固定剂能通过自然途径在组织中扩散，通常能产生更好的结果。
 
-#### 样本切片
+## 样本切片
 
 观察生物样本的一个重要环节是切取薄切片以便在显微镜下观察。有许多复杂的工具可辅助这一过程，其中包括`切片机`（参见图 7-8），它可将生物样本切成薄片以便于观察。然而，用这种方法切割非常小的物体很困难。对于此类物体，最好使用`共聚焦显微镜`等方法。
 
@@ -2282,13 +2208,13 @@ for i in range(20):
 
 ![image](img/p114-01.png)
 
-*图 7-8：一幅 1770 年的图表，展示了一台切片机。（来源：Wikimedia，[`commons.wikimedia.org/wiki/File:Cummings\_1774\_Microtome.jpg`](https://commons.wikimedia.org/wiki/File:Cummings_1774_Microtome.jpg))*
+*图 7-8：一幅 1770 年的图表，展示了一台切片机。（来源：Wikimedia，[`commons.wikimedia.org/wiki/File:Cummings_1774_Microtome.jpg`](https://commons.wikimedia.org/wiki/File:Cummings_1774_Microtome.jpg))*
 
-#### 荧光显微镜
+## 荧光显微镜
 
 `荧光显微镜`是一种基于荧光现象的光学显微镜，在此现象中，样本吸收一种波长的光，并发射另一种波长的光。这是一种自然的物理现象。例如，许多矿物在暴露于紫外光下时会发出荧光。然而，在生物学中这变得尤为有趣。许多细菌在其蛋白质吸收高能光并发射低能光时，会自然发出荧光。
 
-##### 荧光团与荧光标记
+### 荧光团与荧光标记
 
 `荧光团`是一种能在特定波长下重新发射光的化学化合物。这些化合物对生物学至关重要，因为它们使实验者能够详细成像细胞的特定成分。在实验中，`荧光团`通常被施加到特定细胞上。图 7-9 展示了一种常见`荧光团`的分子结构。
 
@@ -2302,15 +2228,15 @@ for i in range(20):
 
 ![image](img/p115-01.jpg)
 
-*图 7-10：人类淋巴细胞细胞核的图像，其中第 13 和 21 号染色体用 DAPI（一种常用的荧光染料）染色以发射光线。（来源：Wikimedia，[`commons.wikimedia.org/wiki/File:FISH\_13\_21.jpg`](https://commons.wikimedia.org/wiki/File:FISH_13_21.jpg))*
+*图 7-10：人类淋巴细胞细胞核的图像，其中第 13 和 21 号染色体用 DAPI（一种常用的荧光染料）染色以发射光线。（来源：Wikimedia，[`commons.wikimedia.org/wiki/File:FISH_13_21.jpg`](https://commons.wikimedia.org/wiki/File:FISH_13_21.jpg))*
 
 `荧光显微镜`可以成为一种精密仪器，用于成像单分子结合等事件。例如，蛋白质与配体的结合（如第 5 章所述）可通过荧光分析检测。
 
-#### 样本制备伪影
+## 样本制备伪影
 
 重要的是要理解，样本制备可能是一个极其棘手的过程。样本制备过程中经常会出现待成像对象的失真，这可能导致困惑。一个有趣的例子是`中间体`，将在下面的警示中描述。
 
-##### 中间体：一个虚构的细胞器
+### 中间体：一个虚构的细胞器
 
 为电子显微镜固定细胞会产生一种伪影，即革兰氏阳性菌中的`中间体`（参见图 7-11）。最初人们认为，由样本制备引起的细胞壁内陷代表天然结构，而非伪影。
 
@@ -2318,25 +2244,21 @@ for i in range(20):
 
 ![image](img/p116-01.png)
 
-*图 7-11：中间体是为电子显微镜制备样本时产生的伪影，早先曾被认为代表细胞中的真实结构。（根据 Wikimedia，[`en.wikipedia.org/wiki/Mesosome#/media/File:Mesosome\_formation.svg`](https://en.wikipedia.org/wiki/Mesosome#/media/File:Mesosome_formation.svg))*
-
-
-
-
+*图 7-11：中间体是为电子显微镜制备样本时产生的伪影，早先曾被认为代表细胞中的真实结构。（根据 Wikimedia，[`en.wikipedia.org/wiki/Mesosome#/media/File:Mesosome_formation.svg`](https://en.wikipedia.org/wiki/Mesosome#/media/File:Mesosome_formation.svg))*
 
 | ![image](img/crow.jpg) || **微观样本的来源** 在设计用于处理显微镜图像的系统时，了解样本的来源非常重要。每张图像都应附带其采集条件的信息。其中可能包括拍摄图像的设备、监督图像采集过程的技术人员、成像的样本以及采集样本的地点。对生物学进行“调试”非常困难。像上述警告中描述的问题可能会在数十年内都未被发现。请确保您的图像有足够的来源元数据，以避免出现重大问题。 |
 
 ---
 
-### 深度学习应用
+# 深度学习应用
 
 在本节中，我们将简要介绍深度学习在显微镜学中的各种应用，如细胞计数、细胞分割和计算分析的创建。正如本章前面所述，这只是深度显微镜学可能应用的一部分。然而，熟悉这些基本应用将为您提供开发自己应用所需的理解。
 
-#### 细胞计数
+## 细胞计数
 
 一项简单的任务是计算给定图像中的细胞数量。您可能会想，为什么这会是一项有趣的任务。对于许多生物学实验来说，了解干预后存活的细胞数量非常有用。例如，细胞来自癌细胞系，而干预措施是一种抗癌疗法。成功的干预会减少存活癌细胞的数量，因此拥有一个无需人工干预即可确定这些细胞数量的深度学习系统将非常有帮助。
 
-##### 什么是细胞系？
+### 什么是细胞系？
 
 在生物学中，研究特定类型的细胞通常很有用。针对一组细胞进行实验的第一步是拥有足够数量的此类细胞。细胞系是指从单一来源培养并能在实验室条件下无限增殖的细胞。
 
@@ -2352,7 +2274,7 @@ for i in range(20):
 
 *图 7-12：果蝇细胞。请注意，显微镜图像中的成像条件可能与照片中的成像条件有显著差异。（来源：Cell Image Library, [`cellimagelibrary.org/images/21780`](http://cellimagelibrary.org/images/21780))*
 
-##### 在 DeepChem 中实现细胞计数
+### 在 DeepChem 中实现细胞计数
 
 本节介绍如何使用 `DeepChem` 创建用于细胞计数的深度学习模型。首先，我们加载并准备一个用于细胞计数的数据集。为此，我们使用 `Broad Bioimage Benchmark Collection`（BBBC，[`data.broadinstitute.org/bbbc/`](https://data.broadinstitute.org/bbbc/)）。
 
@@ -2411,9 +2333,6 @@ loss = layers.ReduceSum(layers.L2Loss(in_layers=(output, labels)))
 model.set_loss(loss)
 ```
 
-
-
-
 请注意，我们使用 `L2Loss` 将模型作为回归任务进行训练。尽管细胞数量是整数，但一张图像中包含的细胞数量没有上限。
 
 训练此模型需要一定的计算资源（稍后详述）。因此，我们建议首先使用我们的预训练模型。该模型开箱即用，可直接进行预测。关于下载预训练模型的说明位于本书配套的代码仓库中（*[`github.com/deepchem/DeepLearningLifeSciences`](https://github.com/deepchem/DeepLearningLifeSciences)*）。下载完成后，您可以将预训练权重加载到模型中：
@@ -2440,6 +2359,8 @@ model.fit(train_dataset, nb_epoch=50)
 
 此任务需要相当大的算力。在性能良好的 GPU 上，该过程应在约一小时内完成。在纯 CPU 系统上可能无法训练此模型。
 
+
+
 训练完成后，请在验证集和测试集上检查模型的准确率。其表现是否与预训练模型相当？
 
 ## 细胞分割
@@ -2455,62 +2376,53 @@ model.fit(train_dataset, nb_epoch=50)
 然而，分割对机器学习模型的要求远高于单纯的计数。为了准确区分细胞区域和非细胞区域，学习过程必须更加精确。因此，让分割方法在机器学习中奏效，比单纯计数细胞更难，这并不令人惊讶。在本章后续内容中，我们还将尝试使用一个分割模型。
 
 | ![image](img/crow.jpg) | | **分割掩膜从何而来？** 正如我们所见，分割掩膜是复杂的结构。通常不存在好的算法（深度学习方法除外）来创建此类掩膜。我们如何获取优化此类分割方法所需的训练数据？一种方法是使用合成数据，如图 7-13 所示。由于细胞图像是合成生成的，因此掩膜也可以合成生成。然而，这一实用技巧有其局限性，因为学到的分割方法仅局限于类似的图像。 |
+
 | --- | --- | --- |
+
 | | | 一种更通用的方法是让人工生成合适的分割掩膜。类似的程序已广泛用于训练自动驾驶汽车。在这项任务中，区分行人和路标至关重要，因此有大量人力投入以生成所需的训练数据。随着显微镜领域机器学习的重要性日益增加，类似的程序很可能也将在该领域变得重要。 |
 
 ### DeepChem 中的细胞分割实现
 
-在本节中，我们将在之前用于细胞计数的同一 BBBC005 数据集上训练一个细胞分割模型。然而，存在一个关键差异。在细胞计数任务中，每张图像有一个计数值作为标签。而在细胞分割中，每个标签本身就是一张图像。这意味着细胞分割模型更像是一种“图像转换”，而非简单的分类或回归模型。我们首先下载该数据集。为此，我们使用以下命令从 BBBC 网站获取分割掩膜：
+在本节中，我们将在之前用于细胞计数的同一 `BBBC005` 数据集上训练一个细胞分割模型。然而，存在一个关键差异。在细胞计数任务中，每张图像有一个计数值作为标签。而在细胞分割中，每个标签本身就是一张图像。这意味着细胞分割模型更像是一种“图像转换”，而非简单的分类或回归模型。我们首先下载该数据集。为此，我们使用以下命令从 `BBBC` 网站获取分割掩膜：
 
 ```
 wget https://data.broadinstitute.org/bbbc/BBBC005/BBBC005_v1_ground_truth.zip
-
 unzip BBBC005_v1_ground_truth.zip
 ```
 
-Ground-truth 数据集大小约为 10 MB，因此下载起来应该比完整的 BBBC005 数据集容易得多。接下来，我们将此数据集加载到 DeepChem 中。幸运的是，`ImageLoader` 的设计使其能够无需太多额外工作即可处理图像分割数据集：
+`Ground-truth` 数据集大小约为 10 MB，因此下载起来应该比完整的 `BBBC005` 数据集容易得多。接下来，我们将此数据集加载到 `DeepChem` 中。幸运的是，`ImageLoader` 的设计使其能够无需太多额外工作即可处理图像分割数据集：
 
-```
+```python
 image_dir = 'BBBC005_v1_images'
-
 label_dir = 'BBBC005_v1_ground_truth'
-
-rows = ('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
-'M', 'N', 'O', 'P')
-
+rows = ('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P')
 blurs = (1, 4, 7, 10, 14, 17, 20, 23, 26, 29, 32, 35, 39, 42, 45, 48)
-
 files = []
 labels = []
-
 for f in os.listdir(label_dir):
     if f.endswith('.TIF'):
         for row, blur in zip(rows, blurs):
             fname = f.replace('_F1', '_F%d'%blur).replace('_A', '_%s'%row)
             files.append(os.path.join(image_dir, fname))
             labels.append(os.path.join(label_dir, f))
-
 loader = dc.data.ImageLoader()
 dataset = loader.featurize(files, labels)
 ```
 
 数据集加载并处理完毕后，我们可以构建深度学习模型。和之前一样，我们将该数据集分别划分为训练集、验证集和测试集：
 
-```
+```python
 splitter = dc.splits.RandomSplitter()
-train_dataset, valid_dataset, test_dataset = splitter.train_valid_test_split(
-dataset, seed=123)
+train_dataset, valid_dataset, test_dataset = splitter.train_valid_test_split(dataset, seed=123)
 ```
 
 我们可以使用什么模型进行图像分割？仅使用简单的卷积神经网络是不够的，因为我们的输出同样是一张图像（分割掩膜）。幸运的是，已有研究探讨了适合此任务的模型。`U-Net` 模型使用一系列堆叠的卷积，逐步将原始图像“下采样”然后再“上采样”，如图 7-14 所示。该模型非常适合图像分割。
 
 ![image](img/p123-01.png)
 
-*图 7-14：用于生物医学图像分割的 U-Net 架构示意图（基于弗赖堡大学的研究，[`lmb.informatik.uni-freiburg.de/people/ronneber/u-net/`](https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/))。*
+*图 7-14：用于生物医学图像分割的 `U-Net` 架构示意图（基于弗赖堡大学的研究，[`lmb.informatik.uni-freiburg.de/people/ronneber/u-net/`](https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/))。*
 
-我们现在在 DeepChem 中实现 `U-Net`：
-
-
+我们现在在 `DeepChem` 中实现 `U-Net`：
 
 # 医学中的深度学习
 
@@ -2518,39 +2430,27 @@ dataset, seed=123)
 
 ```python
 learning_rate = dc.models.tensorgraph.optimizers.ExponentialDecay(0.01, 0.9, 250)
-
-model = dc.models.TensorGraph(learning_rate=learning_rate,
-                              model_dir='segmentation')
-
+model = dc.models.TensorGraph(learning_rate=learning_rate, model_dir='segmentation')
 features = layers.Feature(shape=(None, 520, 696, 1)) / 255.0
 labels = layers.Label(shape=(None, 520, 696, 1)) / 255.0
-
 # 三次下采样
 conv1 = layers.Conv2D(16, kernel_size=5, stride=2, in_layers=features)
 conv2 = layers.Conv2D(32, kernel_size=5, stride=2, in_layers=conv1)
 conv3 = layers.Conv2D(64, kernel_size=5, stride=2, in_layers=conv2)
-
 # 1x1 卷积（瓶颈层）
 conv4 = layers.Conv2D(64, kernel_size=1, stride=1, in_layers=conv3)
-
 # 三次上采样（带跳跃连接）
 concat1 = layers.Concat(in_layers=[conv3, conv4], axis=3)
 deconv1 = layers.Conv2DTranspose(32, kernel_size=5, stride=2, in_layers=concat1)
-
 concat2 = layers.Concat(in_layers=[conv2, deconv1], axis=3)
 deconv2 = layers.Conv2DTranspose(16, kernel_size=5, stride=2, in_layers=concat2)
-
 concat3 = layers.Concat(in_layers=[conv1, deconv2], axis=3)
 deconv3 = layers.Conv2DTranspose(1, kernel_size=5, stride=2, in_layers=concat3)
-
 # 计算输出
 concat4 = layers.Concat(in_layers=[features, deconv3], axis=3)
-logits = layers.Conv2D(1, kernel_size=5, stride=1, activation_fn=None,
-                       in_layers=concat4)
+logits = layers.Conv2D(1, kernel_size=5, stride=1, activation_fn=None, in_layers=concat4)
 output = layers.Sigmoid(logits)
-
 model.add_output(output)
-
 loss = layers.ReduceSum(layers.SigmoidCrossEntropy(in_layers=(labels, logits)))
 model.set_loss(loss)
 ```
@@ -2565,23 +2465,21 @@ model.restore()
 
 ```python
 scores = []
-
 for x, y, w, id in test_dataset.itersamples():
     y_pred = model.predict_on_batch([x]).squeeze()
     scores.append(np.mean((y > 0) == (y_pred > 0.5)))
-
 print(np.mean(scores))
 ```
 
 输出值应约为 `0.9899`。这意味着近 99% 的像素被正确预测！这是一个不错的结果，但请记住，这只是一个非常简单的示例。基于图像亮度阈值的图像处理算法可能效果同样好。然而，此处展示的步骤也应适用于更复杂的图像数据集。
 
-在研究了预训练模型之后，我们要训练一个 U-Net 50 个周期：
+在研究了预训练模型之后，我们要训练一个 `U-Net` 50 个周期：
 
 ```python
 model.fit(train_dataset, nb_epoch=50, checkpoint_interval=100)
 ```
 
-该训练计算量大，在性能良好的 GPU 上将运行数小时。在 CPU 系统上可能无法训练此模型。训练完成后，请自行评估结果。您能达到预训练模型的准确度吗？
+该训练计算量大，在性能良好的 `GPU` 上将运行数小时。在 `CPU` 系统上可能无法训练此模型。训练完成后，请自行评估结果。您能达到预训练模型的准确度吗？
 
 ## 计算辅助分析
 
@@ -2612,16 +2510,13 @@ model.fit(train_dataset, nb_epoch=50, checkpoint_interval=100)
 [³]: 脚注引用 3
 [⁴]: 脚注引用 4
 
-
-
-
 ## 计算机辅助诊断与医学中的早期 AI 方法
 
 首先，我们简要回顾一下早期的计算机辅助方法。我们将探讨这些方法的一些局限性，随后开始介绍当前用于医学的深度学习方法。在此过程中，我们将阐述这些新方法如何规避旧方法的一些基本局限。我们将以对在医学中应用深度学习的伦理考量的讨论来结束本章。
 
 ## 计算机辅助诊断
 
-计算机辅助诊断系统的开发是 AI 研究的一个重点。早期的尝试使用了手工制作的科学数据库。^(1) 在这些系统中，专科医生被要求记录因果推理规则（参见图 8-1 中的示例）。
+计算机辅助诊断系统的开发是 `AI` 研究的一个重点。早期的尝试使用了手工制作的科学数据库。^(1) 在这些系统中，专科医生被要求记录因果推理规则（参见图 8-1 中的示例）。
 
 这些系统通过置信因子为处理不确定性提供了基本支持。
 
@@ -2636,10 +2531,11 @@ THEN
 There is suggestive evidence (0.7) that the identity of the organism is streptococus. (h1)
 ```
 
-*图 8-1：MYCIN 是最早用于诊断细菌感染的专家系统之一。这是一个 MYCIN 推理规则的示例（萨里大学，[`www.computing.surrey.ac.uk/ai/PROFILE/mycin.html#Certainity%20Factors`](http://www.computing.surrey.ac.uk/ai/PROFILE/mycin.html#Certainity%20Factors)）。*
+*图 8-1：`MYCIN` 是最早用于诊断细菌感染的专家系统之一。这是一个 `MYCIN` 推理规则的示例（萨里大学，[`www.computing.surrey.ac.uk/ai/PROFILE/mycin.html#Certainity%20Factors`](http://www.computing.surrey.ac.uk/ai/PROFILE/mycin.html#Certainity%20Factors)）。*
 
 > **专家系统后来怎么样了？**
-> 尽管专家系统取得了一些显著的成功，但构建这些系统非常耗费精力。规则必须由专家仔细获取，并由受过训练的“知识工程师”维护。即使某些专家系统在特定领域取得了显著成果，但总体而言，它们过于薄弱，未能广泛普及。尽管如此，专家系统对计算机科学产生了重大影响，现代技术（SQL、XML、贝叶斯网络等）的许多核心思想都可追溯至此。
+>
+> 尽管专家系统取得了一些显著的成功，但构建这些系统非常耗费精力。规则必须由专家仔细获取，并由受过训练的“知识工程师”维护。即使某些专家系统在特定领域取得了显著成果，但总体而言，它们过于薄弱，未能广泛普及。尽管如此，专家系统对计算机科学产生了重大影响，现代技术（`SQL`、`XML`、贝叶斯网络等）的许多核心思想都可追溯至此。
 >
 > 请思考一下。尽管专家系统曾经非常流行，但如今它们主要作为历史遗存而存在。极有可能，当今大多数流行的技术终将步其后尘。这是计算机科学的一个特性，而非缺陷。该行业自我革新迅速；如果当今的工具无法完成某项任务，其替代品将能胜任。同时，我们可以确信，当今技术的算法基础将在明天的工具中延续。
 
@@ -2658,65 +2554,63 @@ There is suggestive evidence (0.7) that the identity of the organism is streptoc
 *图 8-2：一个简单的贝叶斯网络示例，用于推断某特定位置的草地是否湿润。（来源：Wikimedia，[`commons.wikimedia.org/wiki/File:SimpleBayesNet.svg`](https://commons.wikimedia.org/wiki/File:SimpleBayesNet.svg)）*
 
 > **用户友好性促进接受度**
+>
 > 专家系统和贝叶斯网络未能普及。部分原因在于开发者对这两种系统都有不佳的体验。构建贝叶斯网络或专家系统时，开发者始终需要有医生在场协助。此外，系统的有效性关键取决于开发团队从医生那里获取有价值见解的能力。
 >
+
+
+
 > 将其与深度网络进行比较。对于给定的数据类型（图像、分子、文本等）和特定的学习任务，有多种指标可用。要创建一个功能系统，开发者只需遵循经过验证的统计方法（如本书或其他书籍所述）。这大大降低了对专家知识的依赖。这种简化解释了深度网络获得更广泛接受的部分原因。
 
-## 电子健康档案
+# 电子健康档案
 
 最初，医院为患者保存纸质档案。这些档案包含患者的检查、药物和其他治疗记录，以便医生能一眼掌握患者的健康状况。不幸的是，纸质病历导致了各种困难。医院间的数据传输需要大量工作，且纸质档案难以建立索引或搜索。
 
 因此，在过去几十年里，许多国家投入巨大努力，从纸质病历转向电子患者档案（ePA，英文 EHR）。在美国，《平价医疗法案》的通过显著加速了这一接受进程，如今大多数大型美国医疗服务提供者都将患者数据存储在 EHR 系统中。
 
+# EHR 系统的广泛接受
 
+EHR 系统的广泛接受引发了用于处理 EHR 数据的机器学习研究热潮。这些系统使用大量数据来训练模型，这些模型除其他功能外，还能预测患者的结果和风险。在许多方面，这些 EHR 模型是专家系统和贝叶斯网络的智力继承者。正如早期的系统一样，EHR 模型也试图支持诊断过程。然而，早期系统旨在通过实时诊断辅助医生，而较新的系统（大多）满足于在后台工作。
 
-
-
-# Die große Akzeptanz von EHR-Systemen
-
-Die große Akzeptanz von EHR-Systemen hat einen Boom in der Machine-Learning-Forschung für die Verarbeitung von EHR-Daten ausgelöst. Diese Systeme verwenden große Datenmengen, um Modelle zu trainieren, die unter anderem in der Lage sind, Ergebnisse und Risiken für Patienten vorherzusagen. In vielerlei Hinsicht sind diese EHR-Modelle die intellektuellen Nachfolger der Expertensysteme und Bayes’schen Netze. Ebenso wie die früheren Systeme versuchen auch EHR-Modelle, den Diagnoseprozess zu unterstützen. Während frühere Systeme jedoch die Ärzte mit Echtzeitdiagnosen unterstützen wollten, begnügen sich die neueren Systeme (meistens) mit der Arbeit im Hintergrund.
-
-Viele Projekte haben versucht, robuste Modelle anhand von EHR-Daten zu entwickeln. Obwohl einige beachtliche Erfolge verzeichnet werden konnten, bleiben die EHR-Daten eine Herausforderung. Aufgrund von datenschutzrechtlichen Bedenken sind nicht viele große EHR-Datensätze öffentlich verfügbar. Deshalb war bisher nur eine kleine Gruppe von Forschern in der Lage, diese Systeme zu entwickeln. Des Weiteren sind EHR-Daten in der Regel chaotisch. Da die Informationen von Ärzten und Krankenschwestern manuell eingegeben werden, sind viele EHR-Daten unvollständig und nicht einheitlich. Die Entwicklung robuster Modelle, die mit fehlenden Daten umgehen können, erweist sich als schwierig.
+许多项目尝试基于 EHR 数据开发稳健的模型。尽管取得了一些显著成功，但 EHR 数据仍然是一个挑战。由于数据隐私顾虑，没有许多大型公开可用的 EHR 数据集。因此，此前只有少数研究人员群体能够开发这些系统。此外，EHR 数据通常很混乱。由于信息由医生和护士手动输入，许多 EHR 数据不完整且不统一。开发能够处理缺失数据的稳健模型被证明是困难的。
 
 ## ICD-10-Codes
 
-Die ICD-10 ist eine Reihe von »Codes« für Krankheiten und Symptome. Diese Codes haben in den letzten Jahren breite Anwendung gefunden, da sie es Versicherern und Regierungsbehörden ermöglichen, Standardpraktiken, Behandlungen und Behandlungskosten für Krankheiten festzulegen.
+ICD-10 是一套用于疾病和症状的“代码”。这些代码近年来得到广泛应用，因为它们使保险公司和政府机构能够为疾病制定标准实践、治疗方法和治疗成本。
 
-Die ICD-10-Codes »quantisieren« (diskretisieren) das hochdimensionale stetige Spektrum menschlicher Krankheiten. Das Standardisieren ermöglicht Ärzten, Patienten zu vergleichen und zu gruppieren. Aus diesem Grund werden sich solche Codes wahrscheinlich als wichtig für Entwickler von EHR-Systemen und -Modellen erweisen. Wenn Sie an einer Datenbank für ein neues EHR-System arbeiten, sollten Sie sich überlegen, wo Sie Ihre Codes ablegen!
+ICD-10 代码将人类疾病的高维连续谱“量化”（离散化）。标准化使医生能够比较和分组患者。因此，此类代码可能对 EHR 系统和模型的开发者至关重要。如果您正在为新的 EHR 系统处理数据库，应考虑将代码存放在何处！
 
-### Fast Healthcare Interoperability Resources (FHIR)
+### 快速医疗互操作资源 (FHIR)
 
-Die **Fast Healthcare Interoperability Resources** (FHIR)-Spezifikation wurde entwickelt, um klinische Daten in einem standardisierten und anpassungsfähigen Format darstellen zu können.^[3] Jüngste Publikationen von Google haben gezeigt, wie rohe EHR-Daten automatisch in das FHIR-Format umgewandelt werden können.^[4] Die Verwendung dieses Formats ermöglicht die Entwicklung von Strukturen, die auf beliebige EHR-Daten angewendet werden können. Dies bedeutet, dass Open-Source-Tools für diese Daten Plug-and-play-fähig sind. Auch wenn sich diese Arbeit noch im Anfangsstadium befindet, stellt sie einen spannenden Fortschritt für das Gebiet dar. Obwohl das Standardisieren auf den ersten Blick langweilig erscheint, ist es die Grundlage für zukünftige Fortschritte, da damit größere Datenmengen produktiv bearbeitet werden können.
+**快速医疗互操作资源** (FHIR) 规范旨在以标准化且可调整的格式表示临床数据。^[3] Google 近期的出版物展示了如何将原始 EHR 数据自动转换为 FHIR 格式。^[4] 使用此格式支持开发可应用于任意 EHR 数据的结构。这意味着这些数据的开源工具即插即用。尽管这项工作仍处于早期阶段，但它代表了该领域令人兴奋的进展。虽然标乍看之下似乎枯燥，但它是未来进步的基础，因为它支持对更大数据量进行高效处理。
 
-Dieser Zustand beginnt sich jedoch zu verändern. Verbesserte Tools, sowohl für die Vorverarbeitung als auch für das Lernen, ermöglichen nach und nach ein effektives Lernen auf EHR-Systemen. Das `DeepPatient`-System trainiert einen Entrauschungs-Autoencoder auf Patientenakten, um eine Patientendarstellung zu erzeugen, die es anschließend zur Ergebnisvorhersage verwendet.^[5] Hierbei wird eine Patientenakte aus ungeordneten Textinformationen in einen Vektor umgewandelt. Diese Vorgehensweise der Umwandlung unterschiedlicher Datentypen in Vektoren ist im Deep Learning erfolgreich und scheint auch für EHR-Systeme geeignet zu sein. Etliche Modelle, die auf EHR-Systemen beruhen, sind in der Literatur erschienen. Viele davon beginnen, die neuesten Tools von Deep Learning zu integrieren, wie etwa Recurrent Networks oder das Reinforcement Learning. Auch wenn diese Modelle noch nicht ausgereift sind, geben sie Hinweise darauf, wie sich das Feld in den nächsten Jahren entwickeln wird.
+然而，这种状况开始发生变化。改进的工具，无论是用于预处理还是学习，都逐渐支持在 EHR 系统上进行有效学习。`DeepPatient` 系统在患者记录上训练去噪自编码器以生成患者表示，随后将其用于结果预测。^[5] 此处将患者记录从无序文本信息转换为向量。这种将不同数据类型转换为向量的方法在深度学习中很成功，似乎也适用于 EHR 系统。许多基于 EHR 系统的模型已出现在文献中。其中许多开始集成深度学习的最新工具，如循环网络或强化学习。尽管这些模型尚不成熟，但它们暗示了该领域在未来几年的发展方向。
 
-## Was ist mit unüberwachtem Lernen?
+## 无监督学习如何？
 
-Der Großteil dieses Buchs befasst sich mit Methoden des überwachten Lernens. Es gibt jedoch auch eine ganze Klasse »unüberwachter« Methoden, die nicht die gleiche Abhängigkeit wie beaufsichtigte Methoden aufweisen. Bisher haben wir unüberwachtes Lernen noch nicht als Konzept eingeführt, aber die Grundidee ist, dass Datenpunkte keine Labels mehr haben. Beispielsweise haben wir eine Reihe von EHR-Daten, aber keine Angaben zum Ergebnis. Was können wir tun?
+本书大部分内容涉及监督学习方法。然而，还存在一整类“无监督”方法，它们不表现出与监督方法相同的依赖性。到目前为止，我们尚未将无监督学习作为一个概念引入，但基本思想是数据点不再拥有标签。例如，我们有一系列 EHR 数据，但没有结果信息。我们能做什么？
 
-Die einfachste Antwort lautet, dass wir die Datensätze *gruppieren* können. Stellen Sie sich vor, wir hätten »Zwillings«-Patienten, deren EHR-Aufzeichnungen identisch sind. Es scheint einleuchtend, zu behaupten, dass die Ergebnisse dieser beiden Patienten ähnlich sein werden. Unüberwachte Lernmethoden wie *k*-Means oder Autoencoder setzen eine anspruchsvollere Version dieser Grundidee um. In Kapitel 9 werden Sie ein Beispiel dafür sehen.
+最简单的答案是我们可以对记录进行“分组”。想象一下，我们有“双胞胎”患者，他们的 EHR 记录完全相同。断言这两个患者的结果将相似似乎是合理的。`k`-Means 或自编码器等无监督学习方法实现了这一基本思想的复杂版本。您将在第 9 章看到一个示例。
 
-Unüberwachte Lernmethoden können überzeugende Erkenntnisse liefern, diese Methoden resultieren aber zuweilen auch in Zufallstreffern. Obwohl es durchaus überzeugende Anwendungsfälle wie `DeepPatient` gegeben hat, sind unüberwachte Methoden im Großen und Ganzen immer noch so knifflig, dass sie noch keine breite Anwendung finden. Die Arbeit an Möglichkeiten zur Stabilisierung unüberwachten Lernens bleibt ein dringendes (und herausforderndes) bestehendes Problem.
+无监督学习方法可以提供令人信服的见解，但这些方法有时也会导致偶然发现。尽管已有像 `DeepPatient` 这样令人信服的用例，但总体而言，无监督方法仍然棘手到尚未得到广泛应用。致力于稳定无监督学习的方法仍然是一个紧迫（且具有挑战性）的未解决问题。
 
-## Worin liegen die Gefahren großer EHR-Datenbanken?
+## 大型 EHR 数据库有哪些危险？
 
-Etliche große Institutionen streben an, alle ihre Patienten in EHR-Systemen anzulegen. Was geschieht, wenn diese großen Datenmengen standardisiert (möglicherweise in einem Format wie FHIR) und interoperabel werden? Anwendungen, wie die Suche nach Patienten mit einem bestimmten Krankheitsbild, würden unterstützt. Diese gezielten Suchfunktionen können Ärzten dabei helfen, Behandlungen für Patienten zu finden, insbesondere für Patienten mit seltenen Erkrankungen.
+许多大型机构致力于在 EHR 系统中登记其所有患者。当这些大量数据被标准化（可能采用 FHIR 等格式）并实现互操作时会发生什么？搜索具有特定疾病特征的患者等应用将得到支持。这些有针对性的搜索功能可以帮助医生为患者寻找治疗方案，特别是针对罕见疾病的患者。
 
-Man braucht jedoch nicht viel Fantasie, um zu sehen, dass große Datenmengen auch zu missbräuchlichen Zwecken verwendet werden könnten. Zum Beispiel könnten Versicherungen diese Systeme nutzen, um Patienten mit höherem Risiko die Versicherung vorzeitig zu verweigern, oder Top-Chirurgen, die eine hohe Überlebensrate der Patienten anstreben, könnten vermeiden, Patienten zu operieren, die das System als Risikopatienten einstuft. Wie schützen wir uns vor diesen Gefahren?
+然而，不需要太多想象力就能看出，大量数据也可能被用于滥用目的。例如，保险公司可能利用这些系统拒绝为高风险患者承保，或者追求高患者存活率的顶级外科医生可能避免为系统判定为高风险的患者做手术。我们如何防范这些危险？
 
-Viele der Fragen, die von Machine-Learning-Systemen aufgeworfen werden, können nicht von ihnen beantwortet werden. Vielmehr liegen die Antworten auf diese Fragen in der Gesetzgebung, die unlauteres Verhalten von Ärzten, Versicherungen und anderen verbietet.
+机器学习系统引发的许多问题无法由它们自己回答。相反，这些问题的答案在于立法，即禁止医生、保险公司和其他人的不当行为。
 
-### Helfen EHRs Ärzten wirklich?
+### EHR 真的能帮助医生吗？
 
-Obwohl EHRs offensichtlich bei der Entwicklung von Lernalgorithmen helfen, gibt es weniger überzeugende Beweise dafür, dass EHRs tatsächlich die Situation für Ärzte verbessern. Heutige EHR-Systeme erfordern umfangreiche manuelle Dateneingaben durch Ärzte. Für Patienten bedeutet das, dass der Arzt den größten Teil seiner Konsultation damit verbringt, den Computer anzusehen und nicht mehr den vor ihm sitzenden Patienten.
+虽然 EHR 显然有助于学习算法的开发，但缺乏令人信服的证据表明 EHR 实际上改善了医生的处境。当今的 EHR 系统要求医生进行大量手动数据录入。对患者而言，这意味着医生将咨询的大部分时间花在盯着电脑屏幕上，而不是面前的患者。
 
-Dieser Zustand macht sowohl Patienten als auch Ärzte unglücklich.^[6] Ärzte fühlen sich ausgebrannt, da sie den größten Teil ihrer Zeit mit der Dateneingabe anstatt der Patientenversorgung verbringen, und Patienten fühlen sich vernachlässigt. Dieses Missverhältnis kann hoffentlich von zukünftigen Deep-Learning-basierten Systemen verbessert werden.
+这种状况让患者和医生都不开心。^[6] 医生因将大部分时间花在数据录入而非患者护理上而感到职业倦怠，患者则感到被忽视。希望未来基于深度学习的系统能改善这种失衡。
+
+
 
 Beachten Sie jedoch, dass es möglich ist, dass sich die nächste Generation von Deep-Learning-Tools für Ärzte als ebenso lästig und nutzlos erweisen könnte. Auch die Entwickler von EHR-Systemen wollten keine schlechten Systeme schaffen.
-
-
-
-
 
 ### 深度放射学
 
@@ -2733,8 +2627,11 @@ Beachten Sie jedoch, dass es möglich ist, dass sich die nächste Generation von
 我们认为，一对一取代医生的风险仍然很低，但存在系统性取代的风险。这是什么意思？新创公司正在研究新的商业模式，其中深度学习系统执行大部分扫描分析，仅涉及少数医生。
 
 | ![image](img/insert.jpg) | | **深度学习真的在学医学吗？** 一项深入分析调查了模型究竟从医学图像中学到了什么。不幸的是，在许多情况下，模型似乎也捕捉到了图像的非医学因素。例如，模型可能隐性地学会识别扫描进行的诊所。由于某些诊所常用于较严重或较轻微的病例，模型看起来似乎学到了有用信息，但实际上通常毫无用处。 |
+
 | --- | --- | --- |
+
 | | | 在这种情况下可以做什么？这仍在讨论中，但已出现一些方法。一种是利用不断增长的模型可解释性文献，来研究模型到底学到了什么。在第 10 章中，我们将探讨几种模型可解释性方法。 |
+
 | | | 另一种方法是进行使用模型的前瞻性临床试验。前瞻性研究仍然是测试拟议医疗干预的金标准，这很可能也适用于深度学习方法。 |
 
 #### X 光片和 CT 扫描
@@ -2749,25 +2646,23 @@ X 光检查——严格来说是 X 线摄影——利用 X 射线查看体内内
 
 ![image](img/p136-02.png)
 
-*图 8-5：从下至上的一个人脑 CT 扫描。请注意 CT 如何能很好地呈现 3-D 信息。（来源：Wikimedia，[`commons.wikimedia.org/wiki/File:Computed\_tomography\_of\_human\_brain\_-\_large.png`](https://commons.wikimedia.org/wiki/File:Computed_tomography_of_human_brain_-_large.png))*
+*图 8-5：从下至上的一个人脑 CT 扫描。请注意 CT 如何能很好地呈现 3-D 信息。（来源：Wikimedia，[`commons.wikimedia.org/wiki/File:Computed_tomography_of_human_brain_-_large.png`](https://commons.wikimedia.org/wiki/File:Computed_tomography_of_human_brain_-_large.png))*
 
 值得注意的是，所有 X 光扫描均已知与癌症有关。因此，共同目标是通过限制所需扫描数量，将患者的辐射暴露降至最低。这尤其影响 CT 检查，患者必须长时间暴露于辐射下以收集足够数据。开发了多种信号处理算法以减少所需扫描数量。一些近期论文利用深度学习进一步最小化 CT 所需的扫描数量。
 
 目前，深度学习在该领域主要仍用于扫描分类。例如，卷积神经网络已被用于根据大脑 CT 扫描对阿尔茨海默病的进展进行分类。^(8) 其他论文称能通过胸部 X 光片以近乎医生的准确度诊断肺炎。^(9) 同样，深度学习也被用于实现乳腺 X 光片分类的高准确度。^(10)
 
 | ![image](img/insert.jpg) | | **达到人类准确度很难！** 当论文声称所提出的系统达到近乎人类的准确度时，这意味着什么？通常，作者选择一个指标（如 ROC AUC），一组无关医生致力于用标注标记选定的测试数据集。然后将模型在该测试数据集上的准确度与“平均”医生的准确度进行比较（通常为医生评分的平均值或中位数）。 |
+
 | --- | --- | --- |
+
 | | | 这是一个相当复杂的过程，很多地方可能出错。首先，所选指标可能起作用。因此，好的分析会考虑不同指标，以确保结论经得起潜在变异的考验。 |
 
+| | | Zweitens gibt es erhebliche Unterschiede zwischen den Ärzten. Es lohnt sich, zu prüfen, ob es ausreicht, nur den »Durchschnitt« zu betrachten. Eine bessere Metrik könnte sein, zu prüfen, ob der Algorithmus in der Lage ist, den »besten« Arzt zu schlagen. |
 
+| | | Drittens kann es äußerst schwierig sein, sicherzustellen, dass der Testdatensatz nicht »kontaminiert« ist (siehe Warnung in Kapitel 7). Es kann vorkommen, dass die Scans desselben Patienten versehentlich sowohl im Trainings- als auch im Testdatensatz landen. Weist das Modell eine sehr hohe Genauigkeit auf, lohnt es sich, mehrfach sicherzustellen, dass dies nicht der Fall ist. Jedem von uns ist bestimmt schon ein derartiger Fehler unterlaufen. |
 
-
-
-|   || Zweitens gibt es erhebliche Unterschiede zwischen den Ärzten. Es lohnt sich, zu prüfen, ob es ausreicht, nur den »Durchschnitt« zu betrachten. Eine bessere Metrik könnte sein, zu prüfen, ob der Algorithmus in der Lage ist, den »besten« Arzt zu schlagen. |
-
-|   || Drittens kann es äußerst schwierig sein, sicherzustellen, dass der Testdatensatz nicht »kontaminiert« ist (siehe Warnung in Kapitel 7). Es kann vorkommen, dass die Scans desselben Patienten versehentlich sowohl im Trainings- als auch im Testdatensatz landen. Weist das Modell eine sehr hohe Genauigkeit auf, lohnt es sich, mehrfach sicherzustellen, dass dies nicht der Fall ist. Jedem von uns ist bestimmt schon ein derartiger Fehler unterlaufen. |
-
-|   || Viertens bedeutet »menschliche Genauigkeit« oft nicht viel. Wie bereits erwähnt, erreichten einige Expertensysteme und Bayes’sche Netze bei ein paar Aufgaben eine Genauigkeit, die der des Menschen sehr nahekommt. Sie hatten jedoch keine weitreichenden Auswirkungen auf die Medizin. Der Grund hierfür ist, dass Ärzte eine Vielzahl von Aufgaben ausführen, die eng miteinander verknüpft sind. Ein Arzt kann beim Lesen eines Scans schlechter sein als ein Deep Network, dafür ist er in der Lage, unter Verwendung anderer Informationen eine viel bessere Diagnose zu stellen. Beachten Sie, dass die Aufgaben häufig künstlich sind und möglicherweise nicht dem Klinikalltag entsprechen. Prospektive klinische Studien von Deep-Learning-Systemen an damit einverstandenen Patienten sind erforderlich, um die Wirksamkeit dieser Methoden besser einschätzen zu können. |
+| | | Viertens bedeutet »menschliche Genauigkeit« oft nicht viel. Wie bereits erwähnt, erreichten einige Expertensysteme und Bayes’sche Netze bei ein paar Aufgaben eine Genauigkeit, die der des Menschen sehr nahekommt. Sie hatten jedoch keine weitreichenden Auswirkungen auf die Medizin. Der Grund hierfür ist, dass Ärzte eine Vielzahl von Aufgaben ausführen, die eng miteinander verknüpft sind. Ein Arzt kann beim Lesen eines Scans schlechter sein als ein Deep Network, dafür ist er in der Lage, unter Verwendung anderer Informationen eine viel bessere Diagnose zu stellen. Beachten Sie, dass die Aufgaben häufig künstlich sind und möglicherweise nicht dem Klinikalltag entsprechen. Prospektive klinische Studien von Deep-Learning-Systemen an damit einverstandenen Patienten sind erforderlich, um die Wirksamkeit dieser Methoden besser einschätzen zu können. |
 
 #### Histologie
 
@@ -2775,36 +2670,37 @@ In der Histologie werden Gewebeproben untersucht, die häufig anhand von Mikrosk
 
 #### MRT-Scans
 
-Die Magnetresonanztomografie (MRT) ist eine weitere Scanmethode, die häufig von Ärzten genutzt wird. Anstelle von Röntgenstrahlen werden starke Magnetfelder für die Bildgebung verwendet. Ein Vorteil von MRT-Aufnahmen ist daher die geringere Strahlenbelastung. Allerdings erfordern diese Scans häufig, dass sich die Patienten in einem lauten und beengten MRT-Gerät befinden. Diese Erfahrung ist für einige Patienten erheblich unangenehmer als eine Röntgenaufnahme.
+Die Magnetresonanztomografie (MRT) ist eine weitere Scanmethode, die häufig von Ärzten genutzt wird. Anstelle von Röntgenstrahlen werden starke Magnetfelder für die Bildgebung verwendet. Ein Vorteil von MRT-Aufnahmen ist daher die geringere Strahlenbelastung. Allerdings erfordern diese Scans häufig, dass sich die Patienten in einem lauten und beengten MRT-Gerät befinden. Diese Erfahrung是为一些患者 erheblich unangenehmer als eine Röntgenaufnahme。
 
-Ebenso wie die CT ist die MRT in der Lage, 3-D-Bilder zu erstellen. Und wie bei CT-Scans haben mehrere Deep-Learning-Studien versucht, diesen Prozess zu vereinfachen. Einige der frühen Studien behaupten, dass Deep-Learning-Methoden die traditionellen Verfahren der Signalverarbeitung verbessern können, um MRT-Bilder mit weniger Scanzeit zu rekonstruieren. Des Weiteren wurde bei mehreren Studien versucht, Deep Networks zum Klassifizieren, Segmentieren und Verarbeiten von MRT-Bildern zu verwenden, wobei einige überzeugende Erfolge erzielt werden konnten.
+Ebenso wie die CT ist die MRT in der Lage, 3-D-Bilder zu erstellen。Und wie bei CT-Scans haben mehrere Deep-Learning-Studien versucht, diesen Prozess zu vereinfachen。一些早期的研究声称，Deep-Learning-Methoden可以改进传统的信号处理程序，以更少的扫描时间重建 MRT 图像。此外，在多项研究中尝试使用 Deep Networks 对 MRT 图像进行分类、分割和处理，并取得了一些令人信服的成功。
 
-| ![image](img/crow.jpg) || **Deep Learning in der Signalverarbeitung?** Sowohl für CT- als auch für MRT-Scans haben wir erwähnt, dass Deep Networks verwendet wurden, um die Bildrekonstruktion effektiver zu gestalten. Beide Anwendungen sind Beispiele für den allgemeinen Trend, Deep Learning in der Signalverarbeitung einzusetzen. Ein weiteres Beispiel dafür ist auch die superauflösende Mikroskopie. |
+| ![image](img/crow.jpg) || **Deep Learning in der Signalverarbeitung?** Sowohl für CT- als auch für MRT-Scans haben wir erwähnt, dass Deep Networks verwendet wurden, um die Bildrekonstruktion effektiver zu gestalten。Beide Anwendungen sind Beispiele für den allgemeinen Trend, Deep Learning in der Signalverarbeitung einzusetzen。Ein weiteres Beispiel dafür ist auch die superauflösende Mikroskopie。 |
 
 | --- | --- |
 
-|   || Grundlegend betrachtet, ist die Arbeit zur Verbesserung der Methoden der Signalverarbeitung sehr aufregend, da die Signalverarbeitung ein sehr mathematisches Gebiet ist. Schon die Tatsache, dass Deep Learning hier neue Wege eröffnet, ist bahnbrechend! Allerdings sollte auch erwähnt werden, dass gebräuchliche Algorithmen der Signalverarbeitung häufig eine sehr gute Ausgangslage bieten. Anders als bei der Bildklassifizierung bieten die Deep-Learning-Methoden daher noch keine Verbesserung der Genauigkeit in diesem Bereich. Es wird derzeit jedoch aktiv geforscht. Aufgrund der breiten Palette möglicher Anwendungen dieser Methoden wäre es nicht überraschend, wenn die Bemühungen auf lange Sicht sogar noch einflussreicher wären als die der einfachen Bildverarbeitung. |
+| | | Grundlegend betrachtet, ist die Arbeit zur Verbesserung der Methoden der Signalverarbeitung sehr aufregend, da die Signalverarbeitung ein sehr mathematisches Gebiet ist。Schon die Tatsache, dass Deep Learning hier neue Wege eröffnet, ist bahnbrechend! Allerdings sollte auch erwähnt werden, dass gebräuchliche Algorithmen der Signalverarbeitung häufig eine sehr gute Ausgangslage bieten。Anders als bei der Bildklassifizierung bieten die Deep-Learning-Methoden daher noch keine Verbesserung der Genauigkeit in diesem Bereich。Es wird derzeit jedoch aktiv geforscht。由于这些方法广泛的可能应用，长期来看，这些努力甚至可能比简单的图像处理更有影响力。 |
 
-Es gibt noch viele weitere Arten von Scans, die Ärzte verwenden. Angesichts der vielen Deep-Learning-Anwendungen, die von leistungsfähigen Open-Source-Tools unterstützt werden, kann man darauf wetten, dass für jede dieser Arten ein oder zwei Studien vorliegen, die versuchen, Deep Learning zu nutzen. Beispielsweise wurde Deep Learning beim Ultraschall, für Elektrokardiogramme (EKG), in der Hautkrebserkennung usw. angewendet.
+Es gibt noch viele weitere Arten von Scans，die Ärzte verwenden。Angesichts der vielen Deep-Learning-Anwendungen，die von leistungsfähigen Open-Source-Tools unterstützt werden，可以预期，对于每一种扫描类型，都有一两项研究试图利用 Deep Learning。例如，Deep Learning 已在超声波、心电图 (EKG)、皮肤癌检测等方面得到应用。
 
-Convolutional Neural Networks sind ein außerordentlich leistungsfähiges Werkzeug, da sich viele menschliche Aktivitäten um die Verarbeitung komplexer visueller Informationen drehen. Darüber hinaus hat die Zunahme von Open-Source-Frameworks dazu geführt, dass sich weltweit Forscher dem Wettbewerb angeschlossen haben, Deep-Learning-Methoden auf neue Bildtypen anzuwenden. In vielerlei Hinsicht ist diese Art der Forschung relativ einfach (zumindest rechnerisch), da Standardwerkzeuge ohne großen Aufwand angewendet werden können.
+Convolutional Neural Networks 是一个异常强大的工具，因为许多人类活动都围绕复杂视觉信息的处理展开。此外，Open-Source-Frameworks 的增多导致全球研究人员加入了竞争，将 Deep-Learning-Methoden 应用于新的图像类型。在许多方面，这种研究相对简单（至少在计算上），因为可以毫不费力地应用标准工具。
 
 ### Lernmodelle als Therapeutika
+
+
+
+# Deep Learning in der Medizin: Therapeutische Anwendungen und Fallstudie zur diabetischen Retinopathie
 
 Bisher haben wir in diesem Kapitel gelernt, dass Lernmodelle gute Helfer für Ärzte sein können, die diese bei der Diagnose und der Scaninterpretation unterstützen. Es gibt jedoch Hinweise darauf, dass Lernmodelle nicht nur Helfer, sondern sogar eigenständige therapeutische Instrumente sein könnten.
 
 Wie würde das wohl funktionieren? Eine der größten Stärken des Deep Learning besteht darin, dass es nun erstmals möglich ist, Software herzustellen, die auf wahrnehmbaren Daten beruht. Aus diesem Grund können Machine-Learning-Systeme möglicherweise als »Augen« und »Ohren« für Patienten mit Behinderungen dienen. Ein visuelles System könnte Patienten mit einer Sehbehinderung und ein Audioverarbeitungssystem könnte hörgeschädigten Patienten dabei helfen, sich leichter in der Welt zurechtzufinden. Diese Systeme sind mit Herausforderungen konfrontiert, da sie in Echtzeit effektiv arbeiten müssen. Alle Modelle, die wir in diesem Buch bisher betrachtet haben, waren Systeme, die sich für die Bereitstellung auf einem Backend-Server eignen, und keine Modelle, die der Bereitstellung auf einem Live-Gerät dienen können. Der Umgang mit Machine Learning in der Produktion bietet eine Reihe von Herausforderungen, auf die wir hier nicht eingehen werden. Wir ermutigen jedoch interessierte Leser, sich selbstständig mit dem Thema zu befassen.
 
-Wir weisen ebenfalls darauf hin, dass es eine separate Klasse softwaregesteuerter Therapeutika gibt, die die großen Auswirkungen moderner Software auf das menschliche Gehirn nutzen. Jüngste Forschungsergebnisse zeigen, dass Anwendungen wie Facebook, Google, WeChat usw. stark abhängig machen können. Diese Apps sind in leuchtenden Farben gestaltet und sollen viele der Zentren in unserem Gehirn ansprechen, die auch auf Spielautomaten reagieren. Die Erkenntnis wächst, dass die digitale Abhängigkeit für viele Patienten ein großes Problem darstellt.^(11) Es gibt aber Beweise, dass Apps auch für gute Zwecke eingesetzt werden können. Wir gehen nicht ins Detail, da es den Rahmen dieses Buchs sprengen würde, nur so viel – es gibt Apps, die als therapeutische Maßnahme für Patienten mit Depressionen und anderen Erkrankungen eingesetzt werden.
+Wir weisen ebenfalls darauf hin, dass es eine separate Klasse softwaregesteuerter Therapeutika gibt, die die großen Auswirkungen moderner Software auf das menschliche Gehirn nutzen. Jüngste Forschungsergebnisse zeigen, dass Anwendungen wie `Facebook`, `Google`, `WeChat` usw. stark abhängig machen können. Diese Apps sind in leuchtenden Farben gestaltet und sollen viele der Zentren in unserem Gehirn ansprechen, die auch auf Spielautomaten reagieren. Die Erkenntnis wächst, dass die digitale Abhängigkeit für viele Patienten ein großes Problem darstellt.^(11) Es gibt aber Beweise, dass Apps auch für gute Zwecke eingesetzt werden können. Wir gehen nicht ins Detail, da es den Rahmen dieses Buchs sprengen würde, nur so viel – es gibt Apps, die als therapeutische Maßnahme für Patienten mit Depressionen und anderen Erkrankungen eingesetzt werden.
 
-### Diabetische Retinopathie
+## Diabetische Retinopathie
 
 Bisher haben wir in diesem Kapitel die theoretische Anwendung von Deep Learning in der Medizin besprochen. In diesem Abschnitt wenden wir uns der praktischen Anwendung zu. Wir werden ein Modell entwickeln, das für die Überwachung des Krankheitsverlaufs bei Patienten mit diabetischer Retinopathie eingesetzt wird.
 
-
-
-
-# 糖尿病视网膜病变
+### 糖尿病视网膜病变
 
 糖尿病视网膜病变是一种因糖尿病导致眼部健康受损的疾病。特别是在发展中国家，它是导致失明的主要原因之一。`Fundus`（眼底）是眼睛内部与晶状体相对的区域。为了诊断糖尿病视网膜病变，医生会查看患者眼底的照片并进行人工标注。大量工作投入到了“视网膜成像”中，开发了获取 `Fundus` 图像的方法（参见图 8-6）。
 
@@ -2817,6 +2713,7 @@ Bisher haben wir in diesem Kapitel die theoretische Anwendung von Deep Learning 
 此外，与 EHR 数据（电子健康记录）不同，`Fundus` 照片仅包含极少的患者机密信息，因此更容易获得大规模的 `Fundus` 图像数据集。基于这些原因，已有多项机器学习研究和竞赛使用糖尿病视网膜病变数据集进行。Kaggle 举办了一场竞赛（*[`www.kaggle.com/c/diabetic-retinopathy-detection`](https://www.kaggle.com/c/diabetic-retinopathy-detection)*），旨在构建糖尿病视网膜病变的优质模型，并整理了一个高分辨率 `Fundus` 图像数据集。在本节剩余部分，您将学习如何使用 DeepChem 在 Kaggle 的*糖尿病视网膜病变*（DR）数据集上构建分类器。
 
 > **Kaggle 的 DR 数据集在哪里？**
+>
 > Kaggle 竞赛的条款禁止我们在 DeepChem 服务器上提供数据。因此，您必须直接从 Kaggle 网站下载数据。注册 Kaggle 后，您可以通过其 API 下载数据集。完整数据集相当大（80 GB）。如果您的网络连接不支持完整下载，也可以仅下载部分数据。
 >
 > 有关下载数据集的更多信息，请参阅与本书关联的 GitHub 仓库（*[`github.com/deepchem/DeepLearningLifeSciences`](https://github.com/deepchem/DeepLearningLifeSciences)*）。图像加载功能要求训练数据具有特定的目录结构。关于该目录格式的详细信息也可在 GitHub 仓库中找到。
@@ -2824,6 +2721,7 @@ Bisher haben wir in diesem Kapitel die theoretische Anwendung von Deep Learning 
 第一步是预处理并加载原始数据。我们裁剪每张图像，仅保留包含视网膜的中间正方形区域。随后将该中间正方形调整大小为 512 × 512。
 
 > **处理高分辨率图像**
+>
 > 医学和科学领域的许多图像数据集包含超高分辨率图像。尽管直接在这些高分辨率图像上训练深度学习模型很诱人，但这通常是一项计算密集型任务。问题之一在于大多数现代 GPU 显存有限。这意味着使用标准硬件几乎无法训练超高分辨率模型。此外，大多数图像处理系统（目前）期望其输入具有特定形状。因此，必须对高分辨率图像进行裁剪。
 >
 > 幸运的是，裁剪和调整图像大小几乎不影响机器学习模型的性能。同样常见的做法是从每张源图像自动生成一系列增强图像。对于本案例研究，我们对图像执行了一些标准增强操作。我们建议您熟悉增强代码，因为它对您自己的项目可能很有用。
@@ -2884,11 +2782,11 @@ model.evaluate(test, metrics)
 
 这将产生以下结果：
 
-
-
+```
 computed_metrics: `[0.9339595787076572]`
 
 computed_metrics: `[0.8494075470551462]`
+```
 
 Auf unserem Testdatensatz erreicht das Modell eine Genauigkeit von 93,4 %. Nicht schlecht! (Beachten Sie, dass dieser Testdatensatz nicht dem Kaggle-Testdatensatz entspricht. Für unsere Zwecke haben wir einfach nur Kaggles Trainingsdatensatz in je einen Trainings-, Validierungs- und Testdatensatz unterteilt. Sie können Ihr Modell jedoch gern bei Kaggle einreichen, um es auf seinem Testdatensatz zu bewerten.) Was ist, wenn Sie das gesamte Modell von Grund auf trainieren wollen? Auf einem guten GPU-System dauert das zwar ein bis zwei Tage, ist aber nicht weiter kompliziert:
 
@@ -2908,50 +2806,47 @@ Wir trainieren das Modell für 100 Epochen und halten in regelmäßigen Abständ
 
 In vielerlei Hinsicht kann Machine Learning größere Auswirkungen auf die Medizin haben als viele der anderen Anwendungen, die wir bisher gesehen haben. Diese anderen Anwendungen hatten vielleicht Auswirkungen auf Ihre Arbeit, aber Gesundheitssysteme, die auf Machine Learning beruhen, werden Ihre persönlichen Erfahrungen im Gesundheitswesen ändern, ebenso wie die Erfahrungen von Millionen, wenn nicht Milliarden anderer Menschen. Aus diesem Grund sollten wir uns auch mit den ethischen Konsequenzen befassen.
 
-#### Ethische Überlegungen
+### Ethische Überlegungen
 
 Die Trainingsdaten für diese Systeme werden in absehbarer Zeit verfälscht sein. Wahrscheinlich werden die Trainingsdaten aus den medizinischen Systemen entwickelter Länder stammen. Die erstellten Modelle könnten aber auch in Teilen der Welt eingesetzt werden, in denen es noch an robusten medizinischen Systemen mangelt, sie wären dort aber erheblich ungenauer.
 
-Des Weiteren ist das Sammeln von Patientendaten mit möglichen ethischen Problemen verbunden. Die Medizin blickt auf eine lange und bewegte Geschichte zurück, in der Experimente ohne Zustimmung, insbesondere an Menschen aus Randgruppen, durchgeführt wurden. Denken Sie an den Fall von Henrietta Lacks ([`rebeccaskloot.com/the-immortal-life/`](http://rebeccaskloot.com/the-immortal-life/)), einer afroamerikanischen Krebspatientin aus Baltimore in den 1950er-Jahren. Eine Zelllinie, die aus einer Gewebeprobe ihres Tumors (»HeLa«) kultiviert wurde, wurde zu einem biologischen Standardwerkzeug, das in Tausenden von Forschungsarbeiten verwendet wurde – dennoch erreichte keiner der Erlöse aus dieser Forschung jemals ihre Familie. Weder setzte der Arzt von Frau Lacks ihre Familie über die entnommenen Proben in Kenntnis, noch holte er eine Einwilligung ein. Erst in den 1970er-Jahren erfuhr ihre Familie von der HeLa-Zelllinie, als sie von Forschern kontaktiert wurde, die weitere Proben entnehmen wollten.
-
-Wie könnte sich so ein Fall in Zeiten des Deep Learning wiederholen? Patientenakten könnten möglicherweise verwendet werden, um ein Modell zu trainieren, ohne die Zustimmung des betroffenen Patienten oder seiner Familie einzuholen. Ein realistischerer Fall wäre, dass ein Patient oder dessen Familie veranlasst wird, auf ihre Rechte an den Daten zu verzichten in der Hoffnung auf Heilung in letzter Minute.
-
-Diese Beispiele sind beunruhigend. Keiner von uns möchte feststellen, dass die Rechte eines geliebten Familienmitglieds durch Kliniken oder gewinnorientierte Start-ups verletzt wurden. Wie können diese ethischen Verstöße verhindert werden? Sollten Sie an der Datenerhebung beteiligt sein, fragen Sie sich, woher die Daten stammen. Wurden alle relevanten Gesetze berücksichtigt? Wenn Sie Wissenschaftler oder Entwickler in einem Unternehmen oder einer Forschungseinrichtung sind, verfügen Sie über Fähigkeiten, die Sie innerhalb der Organisation wirksam einsetzen können. Wenn Sie Stellung beziehen, könnten Sie andere Kollegen ebenfalls dazu motivieren. Und wenn sich Ihre Einrichtung weigert, zuzuhören, werden Ihre Fähigkeiten Ihnen ermöglichen, einen neuen Arbeitgeber zu finden, der sich hohen ethischen Standards verschreibt.
-
-#### Arbeitsplatzverluste
-
-Bei den meisten in anderen Kapiteln dieses Buchs behandelten Bereichen handelt es sich um wissenschaftliche Nischendisziplinen. Daher ist die Wahrscheinlichkeit gering, dass Fortschritte in diesen Bereichen zu Verlusten von Arbeitsplätzen führen könnten. Vielmehr ist damit zu rechnen, dass es hier zu einem Beschäftigungswachstum kommen wird, da diese relativ kleinen Bereiche viel mehr Entwicklern und Wissenschaftlern zugänglich werden.
-
-Im Gesundheitswesen und in der Medizin ist das anders. Das Gesundheitswesen ist eine der größten Branchen weltweit. Millionen von Ärzten und Krankenschwestern, technischem Personal und weiteren Menschen kümmern sich um die Bedürfnisse der Weltbevölkerung. Was geschieht, wenn ein Großteil dieser Arbeitskräfte durch Deep-Learning-Tools ersetzt werden kann?
-
-Ein Großteil der Medizin ist zutiefst menschlich. Ein vertrauenswürdiger Hausarzt, der auf die Interessen seiner Patienten achtet, ist für einen Erkrankten von grundlegender Bedeutung. Sehr wahrscheinlich ist, dass sich die Pflegeerfahrung vieler Patienten verbessern wird, indem ein Großteil der Routinearbeit automatisiert wird.
-
-In den USA beschleunigte die Gesundheitsreform im Jahr 2010 (Affordable Care Act) den Einsatz von EHR-Systemen. Viele Ärzte haben sich darüber beklagt, dass diese Systeme sehr lästig sind und viele unnötige administrative Maßnahmen erfordern. Teilweise ist dies auf minderwertige Software zurückzuführen und wird durch behördliche Auflagen weiter verschlechtert, die es Gesundheitseinrichtungen erschweren, auf bessere Alternativen umzusteigen. Teilweise liegt es aber auch an den Einschränkungen moderner Software. Die Verwendung von Deep-Learning-Systemen für einen intelligenteren Umgang mit Informationen könnte die Belastung der Ärzte verringern und ihnen ermöglichen, mehr Zeit mit Patienten zu verbringen.
-
-Darüber hinaus können die Gesundheitssysteme der meisten Länder nicht mit denen in den USA und Europa mithalten. Die zunehmende Verfügbarkeit von Open-Source-Tools und zugänglichen Datensätzen wird es Regierungen und Unternehmen anderer Länder ermöglichen, ihre Einwohner zu versorgen.
-
-#### Zusammenfassung
-
-In diesem Kapitel haben wir gezeigt, wie Machine-Learning-Methoden auf Fragestellungen in der Medizin angewendet werden können. Zunächst haben wir Ihnen einen Überblick über klassische Methoden, wie Expertensysteme und Bayes’sche Netze, gegeben und haben anschließend neuere Anwendungen, wie die elektronische Patientenakte und medizinische Scans, vorgestellt. Wir haben das Kapitel mit einer Fallstudie zum Training eines Klassifikators abgeschlossen, der den Krankheitsverlauf von diabetischer Retinopathie in betroffenen Patienten vorhersagt. In mehreren Randbemerkungen haben wir auch die Herausforderungen für Lernsysteme im Gesundheitswesen angesprochen. Auf einige dieser Herausforderungen kommen wir in Kapitel 10 zurück, wenn wir uns mit der Interpretierbarkeit von Deep-Learning-Systemen befassen.
-
-## KAPITEL 9
-
-## Generative Modelle
-
-Alle Fragestellungen, mit denen wir uns bisher befasst haben, betreffen die Umsetzung von Eingaben in Ausgaben. Sie erstellen ein Modell, das eine Eingabe annimmt und eine Ausgabe erzeugt. Anschließend trainieren und optimieren Sie Ihr Modell, um die bestmögliche Ausgabe zu erzielen.
 
 
+## 伦理问题与患者数据收集
 
+医学拥有漫长而曲折的历史，其中包括未经同意进行实验的案例，尤其是针对边缘群体。以 Henrietta Lacks 的案例为例（[`rebeccaskloot.com/the-immortal-life/`](http://rebeccaskloot.com/the-immortal-life/)），她是一位 1950 年代巴尔的摩的非裔美国癌症患者。从她的肿瘤组织样本（"HeLa"）培养出的细胞系成为一种生物学标准工具，被数千篇研究论文使用——但这项研究的收益从未惠及她的家人。Lacks 女士的医生既未告知其家人已提取样本，也未征得同意。直到 1970 年代，当研究人员联系他们索取更多样本时，家人才得知 HeLa 细胞系的存在。
 
-# 生成模型
+在深度学习时代，此类案件如何重演？患者记录可能被用于训练模型，而未经患者或其家属同意。更现实的情况是，患者或其家属在寄望于最后时刻治愈的希望下，被迫放弃数据权利。
 
-*生成模型*则截然不同。它们不使用数据点作为输入，而是生成数据点作为输出。您可以使用一堆猫咪照片来训练模型，它将学会创建新的猫咪图片。或者您用已知药物分子库对其进行训练，它将学会生成新的“类药”分子，这些分子可用作虚拟筛选的候选物。换句话说，生成模型是基于一组数据点进行训练的，这些数据点源自某个（可能未知、极有可能非常复杂的）概率分布。其任务是从同一概率分布中生成新的数据点。
+这些例子令人不安。我们都不愿发现亲人的权利遭到诊所或营利性初创公司的侵犯。如何防止这些伦理违规？如果您参与数据收集，请追问数据来源。是否遵守了所有相关法律？如果您是企业或研究机构的科学家或开发者，您拥有可在组织内有效发挥作用的技能。如果您表明立场，可能激励其他同事也这样做。如果机构拒不倾听，您的技能将助您找到一家恪守高标准职业道德的新雇主。
 
-在本章中，我们将首先介绍两种最常见的生成模型类型：*变分自编码器*和*生成对抗网络*。随后，我们将探讨这些模型在生命科学中的一些应用，并查看一些代码示例。
+## 工作岗位流失
+
+本书其他章节涉及的大多属于科学小众领域，因此这些领域的进步不太可能导致失业；反而预计会带来就业增长，因为这些相对较小的领域将向更多开发者和科学家开放。
+
+医疗健康领域情况不同。医疗健康是全球最大行业之一。数百万医生、护士、技术人员及其他从业者照顾着世界人口的需求。如果深度学习工具能取代这部分劳动力的大半，会发生什么？
+
+医疗实践大多深植于人性。一位关注患者利益、值得信赖的家庭医生对患者至关重要。极有可能的是，通过自动化大量常规工作，许多患者的护理体验将得到改善。
+
+在美国，2010 年的医疗改革（"Affordable Care Act"）加速了 EHR 系统的采用。许多医生抱怨这些系统非常繁琐，要求执行许多不必要的行政任务。这部分源于劣质软件，并因监管要求而恶化，这些要求使医疗机构难以切换到更好的替代方案。部分原因也在于现代软件的局限性。利用深度学习系统更智能地处理信息，可减轻医生负担，让他们花更多时间陪伴患者。
+
+此外，大多数国家的医疗体系无法与美国和欧洲相比。开源工具和可获取数据集的日益普及，将使其他国家的政府和企业能够为其居民提供服务。
+
+## 小结
+
+本章展示了如何将机器学习方法应用于医学问题。我们首先概述了专家系统和贝叶斯网络等经典方法，随后介绍了电子健康记录和医学扫描等较新应用。最后通过一个案例研究，训练一个分类器来预测糖尿病视网膜病变患者的病情发展。在若干旁注中，我们也提到了医疗健康领域学习系统面临的挑战。其中一些挑战将在第 10 章讨论深度学习系统的可解释性时再次探讨。
+
+# 第 9 章 生成模型
+
+迄今为止我们处理的所有问题，都涉及将输入映射为输出。您构建一个接受输入并产生输出的模型，然后训练并优化它以获得最佳输出。
+
+**生成模型**则截然不同。它们不以数据点作为输入，而是生成数据点作为输出。您可以用一堆猫咪照片训练模型，它将学会创建新的猫咪图片；或者用已知药物分子库训练，它将学会生成新的"类药"分子，可作为虚拟筛选的候选物。换句话说，生成模型基于一组数据点进行训练，这些数据点源自某个（可能未知、极可能非常复杂的）概率分布。其任务是从同一概率分布中生成新的数据点。
+
+本章将首先介绍两种最常见的生成模型类型：**变分自编码器** 和 **生成对抗网络**。随后，我们将探讨这些模型在生命科学中的一些应用，并查看代码示例。
 
 ## 变分自编码器
 
-*自编码器*是一种试图使其输出与输入相同的模型。它基于一组数据点进行训练，并调整模型参数，使输出尽可能接近输入。
+**自编码器** 是一种试图使其输出与输入相同的模型。它基于一组数据点进行训练，并调整模型参数，使输出尽可能接近输入。
 
 这听起来很平凡。为什么它不直接学会将输入原封不动地传递给输出呢？如果真能做到，那确实平凡。但自编码器通常具有能防止这种情况的架构。在大多数情况下，数据必须通过一个瓶颈层，如图 9-1 所示。例如，输入和输出可能各包含 1000 个数值，但中间有一个仅包含 10 个数值的隐藏层。因此，模型被迫学习压缩输入值，以便用 10 个数字表示 1000 个数字。
 
@@ -2959,79 +2854,77 @@ Alle Fragestellungen, mit denen wir uns bisher befasst haben, betreffen die Umse
 
 *图 9-1：变分自编码器的结构*。
 
-如果模型必须处理任意输入，这将是不可能的。无法丢弃 99% 的信息却仍能重建输入！但我们不关心任意输入，只关心特定输入（以及与之相似的其他输入）。在所有可想象的图像中，看起来像猫的不到 1%。自编码器不必对所有可能的输入都起作用，只需对源自特定概率分布的那些输入起作用。它必须学习该分布的“结构”，弄清如何用少得多的信息来表示该分布，然后能够根据压缩信息重建数据点。
+如果模型必须处理任意输入，这将是不可能的。无法丢弃 99% 的信息却仍能重建输入！但我们不关心任意输入，只关心特定输入（以及与之相似的其他输入）。在所有可想象的图像中，看起来像猫的不到 1%。自编码器不必对所有可能的输入都起作用，只需对源自特定概率分布的那些输入起作用。它必须学习该分布的"结构"，弄清如何用少得多的信息来表示该分布，然后能够根据压缩信息重建数据点。
 
-让我们拆解一下模型。作为瓶颈的中间层被称为自编码器的*潜在空间*。压缩后的数据点在此表示。自编码器的前半部分称为*编码器*。其任务是将数据点转换为压缩表示。后半部分称为*解码器*，它接收压缩表示并将其转换回原始数据量。
+让我们拆解一下模型。作为瓶颈的中间层被称为自编码器的 **潜在空间**。压缩后的数据点在此表示。自编码器的前半部分称为 **编码器**，其任务是将数据点转换为压缩表示。后半部分称为 **解码器**，它接收压缩表示并将其转换回原始数据量。
 
-这给了我们一个初步线索，说明自编码器如何用于生成建模。*解码器*接收向量并将其转换为数据点，因此我们可以选择随机向量（为向量的每个分量选择一个随机值）并将其通过*解码器*传递。如果一切顺利，*解码器*应该能产生全新的输出，同时仍类似于其训练所用的数据。
+这给了我们一个初步线索，说明自编码器如何用于生成建模。**解码器** 接收向量并将其转换为数据点，因此我们可以选择随机向量（为向量的每个分量选择一个随机值）并将其通过 **解码器** 传递。如果一切顺利，**解码器** 应该能产生全新的输出，同时仍类似于其训练所用的数据。
 
-虽然这行得通，但效果不太好。问题在于*编码器*只能在*潜在空间*的一个小区域内生成向量。如果我们选择位于*潜在空间*某处的向量，可能会得到与训练数据不相似的输出。换句话说，*解码器*只学会了针对*编码器*生成的特定潜在向量工作，而不适用于任意向量。
+虽然这行得通，但效果不太好。问题在于 **编码器** 只能在 **潜在空间** 的一个小区域内生成向量。如果我们选择位于 **潜在空间** 某处的向量，可能会得到与训练数据不相似的输出。换句话说，**解码器** 只学会了针对 **编码器** 生成的特定潜在向量工作，而不适用于任意向量。
 
-为了克服这个问题，*变分自编码器*（VAE）包含两个额外特性。首先，在误差函数中添加了一项，强制潜在向量遵循特定分布。在大多数情况下，它们被限制为均值为 0、方差为 1 的高斯分布。我们不允许*编码器*随意生成向量。我们强制按已知分布生成向量。因此，如果我们从同一分布中选择随机向量，可以假设*解码器*将良好工作。
+为了克服这个问题，**变分自编码器**（VAE）包含两个额外特性。首先，在误差函数中添加了一项，强制潜在向量遵循特定分布。在大多数情况下，它们被限制为均值为 0、方差为 1 的高斯分布。我们不允许 **编码器** 随意生成向量，而是强制按已知分布生成向量。因此，如果我们从同一分布中选择随机向量，可以假设 **解码器** 将良好工作。
 
-其次，我们在训练期间向潜在向量添加随机噪声。*编码器*将输入值转换为潜在向量，我们在其通过*解码器*之前对其进行轻微扰动。因此我们仍非常接近原始输入值。这防止了*解码器*对潜在向量的确切细节过于敏感。如果我们仅略微改变它，输出也仅会略微改变。
+其次，我们在训练期间向潜在向量添加随机噪声。**编码器** 将输入值转换为潜在向量，我们在其通过 **解码器** 之前对其进行轻微扰动。因此我们仍非常接近原始输入值。这防止了 **解码器** 对潜在向量的确切细节过于敏感。如果我们仅略微改变它，输出也仅会略微改变。
 
 这些变化带来了显著更好的结果。VAE 是生成建模中流行的工具：它们为许多问题提供了出色的结果。
 
 ## 生成对抗网络
 
-*生成对抗网络*（GAN）与 VAE 非常相似。它使用完全相同的*解码器*结构将潜在向量转换为数据点（在 GAN 中称为*生成器*而非*解码器*这一细微差别除外）。然而，训练方式不同。随机向量被传递给*生成器*，输出被直接评估以检查其遵循预期分布的程度。最终创建一个误差函数来衡量生成的数据点与训练数据的匹配程度，随后利用该误差函数优化模型。
+**生成对抗网络**（GAN）与 VAE 非常相似。它使用完全相同的 **解码器** 结构将潜在向量转换为数据点（在 GAN 中称为 **生成器** 而非 **解码器** 这一细微差别除外）。然而，训练方式不同。随机向量被传递给 **生成器**，输出被直接评估以检查其遵循预期分布的程度。最终创建一个误差函数来衡量生成的数据点与训练数据的匹配程度，随后利用该误差函数优化模型。
 
 乍一听这非常简单，实则不然。您能创建一个误差函数来判断一张图片有多像猫吗？当然不能！您甚至不知道从何下手。GAN 从数据中学习误差函数，因此我们无需自行开发。
 
-如图 9-2 所示，GAN 由两部分组成。*生成器*从随机向量生成人工数据点。第二部分称为*判别器*，它试图将生成的数据点与真实训练数据区分开。一个数据点被用作输入，并计算一个概率，指示其是否来自训练数据。因此，*判别器*充当*生成器*的误差函数。
+如图 9-2 所示，GAN 由两部分组成。**生成器** 从随机向量生成人工数据点。第二部分称为 **判别器**，它试图将生成的数据点与真实训练数据区分开。一个数据点被用作输入，并计算一个概率，指示其是否来自训练数据。因此，**判别器** 充当 **生成器** 的误差函数。
 
 ![image](img/p150-01.png)
 
 *图 9-2：生成对抗网络的结构*。
 
-两部分同时训练。*生成器*接收随机向量，其输出被送入*判别器*。*生成器*的参数被调整以使*判别器*的输出尽可能接近 1，而*判别器*的参数被设置为使输出尽可能接近 0。此外，来自训练数据集的数据点被送入*判别器*，其参数被调整以使输出接近 1。
+两部分同时训练。**生成器** 接收随机向量，其输出被送入 **判别器**。**生成器** 的参数被调整以使 **判别器** 的输出尽可能接近 1，而 **判别器** 的参数被设置为使输出尽可能接近 0。此外，来自训练数据集的数据点被送入 **判别器**，其参数被调整以使输出接近 1。
 
+这是"对抗性"方面。可以将其想象为生成器和判别器之间的竞争。判别器持续尝试区分真实数据点与生成的数据点，而生成器则试图欺骗判别器。
 
-
-
-这是“对抗性”方面。可以将其想象为生成器和判别器之间的竞争。判别器持续尝试区分真实数据点与生成的数据点，而生成器则试图欺骗判别器。
-
-与 VAEs 类似，GANs 也被用于生成式建模，并在许多问题上取得了良好结果。这两种模型各有优劣。粗略地说，GANs 倾向于生成质量更高的**数据**，而 VAEs 则倾向于生成质量更高的**分布**。也就是说，GAN 生成的单个数据点更类似于训练数据点，而 VAE 生成的数据点分布范围更倾向于与训练数据集的范围相匹配。但请不要过于字面地理解这一说法。一如既往，一切取决于具体问题和模型细节。此外，还提出了无数两种方法的变体。甚至还有结合了 VAE 与 GAN 的模型，以兼得两者之长。这是一个仍在活跃发展的研究领域，新想法层出不穷。
+与 VAE 类似，GAN 也被用于生成式建模，并在许多问题上取得了良好结果。这两种模型各有优劣。粗略地说，GAN 倾向于生成质量更高的 **数据**，而 VAE 则倾向于生成质量更高的 **分布**。也就是说，GAN 生成的单个数据点更类似于训练数据点，而 VAE 生成的数据点分布范围更倾向于与训练数据集的范围相匹配。但请不要过于字面地理解这一说法。一如既往，一切取决于具体问题和模型细节。此外，还提出了无数两种方法的变体。甚至还有结合了 VAE 与 GAN 的模型，以兼得两者之长。这是一个仍在活跃发展的研究领域，新想法层出不穷。
 
 ### 生成式模型在生命科学中的应用
 
-在熟悉了生成式模型的基础知识后，我们现在来探讨其应用。简化来说，生成式模型拥有几项“超能力”。首先，它们实现了一种“创造力”的假象。可以根据学习到的分布生成新数据。这为创造性过程提供了强有力的补充，可衔接现有的药物或蛋白质设计工作。其次，利用生成式模型建模复杂系统的能力，可能使科学家能够深入理解复杂的生物学过程。我们将在本节中更详细地探讨上述想法。
 
-#### 为核心结构开发新思路
+
+# 生成式模型的应用
+
+在熟悉了生成式模型的基础知识后，我们现在来探讨其应用。简化来说，生成式模型拥有几项“超能力”。首先，它们实现了一种“创造力”的假象，可以根据学习到的分布生成新数据。这为创造性过程提供了强有力的补充，可衔接现有的药物或蛋白质设计工作。其次，利用生成式模型建模复杂系统的能力，可能使科学家能够深入理解复杂的生物学过程。我们将在本节中更详细地探讨上述想法。
+
+## 为核心结构开发新思路
 
 现代药物发现的一个关键环节是构思新药物。这通常每半年进行一次，由经验丰富的化学家提出对核心结构的修改建议。通常会将当前分子系列的图像投影到屏幕上，在场的资深化学家会针对分子的核心结构提出修改意见。部分建议分子会被实际合成并测试，这一过程不断重复，直到找到合适的分子或项目被终止。这一过程优势巨大，因为它依赖于资深化学家的直觉，他们能识别潜在结构的问题（例如可能类似于他们之前见过的、导致大鼠不明原因肝衰竭的化合物），而这些问题用算法可能难以察觉。
 
 同时，这一过程也存在局限。优秀且经验丰富的化学家数量稀缺。此外，制药部门若缺乏药物发现知识，自行开展这一过程极具挑战性。分子结构的生成式模型有助于克服这些限制。若在合适的分子数据上训练模型，它可能快速提出新的替代化合物。此类模型可通过提出人类设计师未曾注意到的新化学方向，来改进现有流程。正如我们在本章后续将看到的，然而此类算法也存在局限性。
 
-#### 蛋白质设计
+## 蛋白质设计
 
-开发新酶和蛋白质如今是一门大生意。工程酶常用于现代制造业。（您的洗衣液极有可能含有酶！）但总体而言，开发新酶被证明颇具挑战。一些早期工作表明，深度学习模型在从蛋白质序列预测蛋白质功能方面取得了一定成功。完全可以设想，利用生成式模型提出具有所需性质的新蛋白质序列。
+开发新酶和蛋白质如今是一门大生意。工程酶常用于现代制造业（您的洗衣液极有可能含有酶！）。但总体而言，开发新酶被证明颇具挑战。一些早期工作表明，深度学习模型在从蛋白质序列预测蛋白质功能方面取得了一定成功。完全可以设想，利用生成式模型提出具有所需性质的新蛋白质序列。
 
 与小分子设计相比，引入生成式模型用于此目的可能更具影响力。与小分子不同，专家很难预测突变对特定蛋白质的影响。使用生成式模型可实现蛋白质设计，提供超越当今专家能力范围的方向。
 
-#### 科学发现的工具
+## 科学发现的工具
 
 生成式模型可成为科学发现的有力工具。例如，一个正确的组织发育过程生成式模型（[`www.ncbi.nlm.nih.gov/pmc/articles/PMC6119234/`](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6119234/)）对发育生物学家或基础研究极具价值。可以利用生成式模型运行模拟，创建“合成实验”，在其中研究不同环境条件下的组织发育。这目前仍属于畅想，因为我们需要能在初始条件改变时依然有效工作的生成式模型。这还需要进一步研究。尽管如此，这一前景令人振奋，因为生成式建模可让生物学家构建复杂发育和生理过程的强大模型，并检验他们关于这些系统如何形成的假设。
 
-#### 生成式建模的未来
+## 生成式建模的未来
 
-生成式模型极具挑战性！早期的 GANs 仅能生成模糊图像，勉强能辨认出人脸。而最新的 GANs（截至本书撰写时）能生成难以与真实照片区分的人脸图像。未来十年，这些模型的进一步发展极有可能实现生成式视频。这些发展将对现代社会产生深远影响。上个世纪以来，照片常被常规用作犯罪、质量等方面的“证据”。随着生成式工具的进步，这些将不再能作为证据站得住脚，因为任意图像都可以被“PS”。这将给刑事司法和国际关系带来巨大挑战。
+生成式模型极具挑战性！早期的 `GANs` 仅能生成模糊图像，勉强能辨认出人脸。而最新的 `GANs`（截至本书撰写时）能生成难以与真实照片区分的人脸图像。未来十年，这些模型的进一步发展极有可能实现生成式视频。这些发展将对现代社会产生深远影响。上个世纪以来，照片常被常规用作犯罪、质量等方面的“证据”。随着生成式工具的进步，这些将不再能作为证据站得住脚，因为任意图像都可以被“PS”。这将给刑事司法和国际关系带来巨大挑战。
 
-同时，高保真视频的出现极有可能在现代科学中引发一场革命。想象一下高质量的胚胎发育生成式模型！人们可以模拟 CRISPR 基因编辑的影响，或比以往任何时候都更详细地理解发育过程。科学其他领域也将受益于生成式模型的改进。生成式建模推测将成为物理学和气候科学中的重要工具，实现对复杂系统更强大的模拟。但必须强调，这些进展目前仍属于畅想。在这些模型具备所需稳定性之前，仍需大量基础研究。
+同时，高保真视频的出现极有可能在现代科学中引发一场革命。想象一下高质量的胚胎发育生成式模型！人们可以模拟 `CRISPR` 基因编辑的影响，或比以往任何时候都更详细地理解发育过程。科学其他领域也将受益于生成式模型的改进。生成式建模推测将成为物理学和气候科学中的重要工具，实现对复杂系统更强大的模拟。但必须强调，这些进展目前仍属于畅想。在这些模型具备所需稳定性之前，仍需大量基础研究。
 
-### 使用生成式模型
-
-
-
+# 使用生成式模型
 
 ## 代码示例：训练用于分子生成的 VAE
 
-接下来，我们来看一个代码示例。我们将训练一个 VAE 来生成新分子。具体来说，它将输出 SMILES 字符串。与我们讨论过的其他表示方法相比，这种输出格式有不同的优缺点。一方面，处理 SMILES 字符串非常简单。每一个都只是来自固定字母表的一系列字符。这允许我们使用一个非常简单的模型来处理它们。另一方面，SMILES 字符串必须符合复杂的语法。如果模型没有学会语法的所有细微之处，它生成的大多数字符串将是无效的，且不对应任何分子。
+接下来，我们来看一个代码示例。我们将训练一个 `VAE` 来生成新分子。具体来说，它将输出 `SMILES` 字符串。与我们讨论过的其他表示方法相比，这种输出格式有不同的优缺点。一方面，处理 `SMILES` 字符串非常简单。每一个都只是来自固定字母表的一系列字符。这允许我们使用一个非常简单的模型来处理它们。另一方面，`SMILES` 字符串必须符合复杂的语法。如果模型没有学会语法的所有细微之处，它生成的大多数字符串将是无效的，且不对应任何分子。
 
 ### 加载训练数据
 
-首先，我们需要一组 SMILES 字符串来训练模型。幸运的是，MoleculeNet 为我们提供了大量选择。在本例中，我们使用 MUV 数据集。训练数据集包含 74,469 个大小和结构各异的分子。我们首先加载它：
+首先，我们需要一组 `SMILES` 字符串来训练模型。幸运的是，`MoleculeNet` 为我们提供了大量选择。在本例中，我们使用 `MUV` 数据集。训练数据集包含 74,469 个大小和结构各异的分子。我们首先加载它：
 
 ```python
 import deepchem as dc
@@ -3045,7 +2938,7 @@ train_smiles = train_dataset.ids
 
 ### 定义词汇表
 
-接下来，我们定义模型将使用的词汇表。SMILES 字符串中允许哪些字符（或“Token”）？字符串可以有多长？我们可以通过创建一个包含训练分子中出现的所有字符的排序列表，从训练数据中确定它们：
+接下来，我们定义模型将使用的词汇表。`SMILES` 字符串中允许哪些字符（或“Token”）？字符串可以有多长？我们可以通过创建一个包含训练分子中出现的所有字符的排序列表，从训练数据中确定它们：
 
 ```python
 tokens = set()
@@ -3060,7 +2953,7 @@ max_length = max(len(s) for s in train_smiles)
 
 ### 创建模型
 
-下一步是创建模型。我们应该为编码器和解码器选择什么架构？这仍然是一个活跃的研究领域。已经发表了各种提出不同模型的出版物。在本例中，我们使用 DeepChem 的 `AspuruGuzikAutoEncoder` 类，它实现了一个特定的已发表模型。编码器使用卷积神经网络，解码器使用循环网络。如果您对细节感兴趣，可以阅读该出版物（[`arxiv.org/abs/1610.02415`](https://arxiv.org/abs/1610.02415)）。但为了跟随本示例，这并非必需。另请注意，我们对学习率使用 `ExponentialDecay`。初始速率设置为 `0.001`，并在每个 epoch 后减少一小部分（乘以 `0.95`）。这有助于优化过程更平滑地进行：
+下一步是创建模型。我们应该为编码器和解码器选择什么架构？这仍然是一个活跃的研究领域。已经发表了各种提出不同模型的出版物。在本例中，我们使用 `DeepChem` 的 `AspuruGuzikAutoEncoder` 类，它实现了一个特定的已发表模型。编码器使用卷积神经网络，解码器使用循环网络。如果您对细节感兴趣，可以阅读该出版物（[`arxiv.org/abs/1610.02415`](https://arxiv.org/abs/1610.02415)）。但为了跟随本示例，这并非必需。另请注意，我们对学习率使用 `ExponentialDecay`。初始速率设置为 `0.001`，并在每个 epoch 后减少一小部分（乘以 `0.95`）。这有助于优化过程更平滑地进行：
 
 ```python
 from deepchem.models.tensorgraph.optimizers import Adam, ExponentialDecay
@@ -3077,7 +2970,7 @@ model.set_optimizer(Adam(learning_rate=learning_rate))
 
 ### 训练模型
 
-接下来我们训练模型。`AspuruGuzikAutoEncoder` 不使用采用 `Dataset` 的标准 `fit()` 方法，而是提供自己的 `fit_sequences()` 方法。需要一个生成 Token 序列（在我们的例子中是 SMILES 字符串）的 Python 生成器对象。我们训练 50 个 epoch：
+接下来我们训练模型。`AspuruGuzikAutoEncoder` 不使用采用 `Dataset` 的标准 `fit()` 方法，而是提供自己的 `fit_sequences()` 方法。需要一个生成 Token 序列（在我们的例子中是 `SMILES` 字符串）的 Python 生成器对象。我们训练 50 个 epoch：
 
 ```python
 def generate_sequences(epochs):
@@ -3092,7 +2985,7 @@ model.fit_sequences(generate_sequences(50))
 
 现在模型应该能够生成全新的分子了。我们只需要选择随机潜在向量并将它们通过解码器。我们创建一个大小为 1,000 个向量的批次，每个向量长度为 196（这对应于模型潜在空间的大小）。
 
-如前所述，并非所有输出都是有效的 SMILES 字符串。实际上，只有很小一部分是有效的。幸运的是，我们可以使用 RDKit 来过滤掉无效的：
+如前所述，并非所有输出都是有效的 `SMILES` 字符串。实际上，只有很小一部分是有效的。幸运的是，我们可以使用 `RDKit` 来过滤掉无效的：
 
 ```python
 import numpy as np
@@ -3113,10 +3006,10 @@ for m in molecules:
 
 ## 分析生成模型的输出
 
-除了无效输出的问题外，输出的 SMILES 字符串所对应的许多分子可能也不具备药物分子的特征。因此，我们必须开发策略，以便快速识别出不具药物样性质的分子。这些策略最好通过一个实际例子来解释。假设这些是来自我们生成模型的 SMILES 字符串：
+除了无效输出的问题外，输出的 `SMILES` 字符串所对应的许多分子可能也不具备药物分子的特征。因此，我们必须开发策略，以便快速识别出不具药物样性质的分子。这些策略最好通过一个实际例子来解释。假设这些是来自我们生成模型的 `SMILES` 字符串：
 
 ```python
-smiles_list = 
+smiles_list = [
     'CCCCCCNNNCCOCC',
     'O=C(O)C(=O)ON/C=N/CO',
     'C/C=N/COCCNSCNCCNN',
@@ -3149,7 +3042,7 @@ smiles_list =
 ]
 ```
 
-我们分析的第一步是检查这些分子，以确定是否有我们想要丢弃的。我们可以使用 RDKit 中的一些功能（它包含在 DeepChem 中）来检查这些字符串所代表的分子。为了评估这些字符串，我们必须首先将它们转换为分子对象。我们通过以下列表推导式来实现：
+我们分析的第一步是检查这些分子，以确定是否有我们想要丢弃的。我们可以使用 `RDKit` 中的一些功能（它包含在 `DeepChem` 中）来检查这些字符串所代表的分子。为了评估这些字符串，我们必须首先将它们转换为分子对象。我们通过以下列表推导式来实现：
 
 ```python
 molecules = [Chem.MolFromSmiles(x) for x in smiles_list]
@@ -3180,24 +3073,20 @@ print(len(good_mol_list))
 
 此列表推导式将我们的列表从 29 个减少到 23 个分子。
 
+## 评估生成的分子
 
+我们可以使用一系列其他计算属性来评估生成分子的质量。多篇近期关于生成式模型的出版物利用计算分子属性来决定保留或丢弃哪些生成的分子。确定分子是否类似于已知药物或具有“药物样”特性的更常用方法之一是药物样定量估计（`QED`）。`QED` 指标由 Bickerton 等人发表，通过将为每个分子计算的一系列属性与已上市药物中相同属性的分布进行比较来评估分子。该分数介于 0 和 1 之间，值越接近 1 被认为越具药物样特性。
 
-
-
-# Bewertung generierter Moleküle
-
-Wir können eine Reihe anderer berechneter Eigenschaften verwenden, um die Qualität der erzeugten Moleküle zu bewerten. Mehrere kürzlich erschienene Publikationen generativer Modelle nutzen berechnete Moleküleigenschaften, um zu bestimmen, welche der erzeugten Moleküle beibehalten oder verworfen werden sollen. Eine der geläufigeren Methoden zur Bestimmung, ob Moleküle bekannten Arzneimitteln ähneln oder »wirkstoffartig« sind, ist die quantitative Abschätzung der Arzneimittelähnlichkeit (QED). Die QED-Metrik, die von Bickerton und Kollegen veröffentlicht wurde^1, bewertet Moleküle durch Vergleichen einer Reihe von Eigenschaften, die für jedes Molekül berechnet wurden, mit Verteilungen der gleichen Eigenschaften in vermarkteten Arzneimitteln. Dieser Score liegt zwischen 0 und 1, wobei Werte, die näher bei 1 liegen, als wirkstoffartiger angesehen werden.
-
-Wir können `RDKit` wie folgt verwenden, um QED-Werte für unsere verbleibenden Moleküle zu berechnen und nur die Moleküle mit `QED > 0.5` beizubehalten:
+我们可以按如下方式使用 `RDKit` 为剩余分子计算 `QED` 值，并仅保留 `QED > 0.5` 的分子：
 
 ```python
 qed_list = [QED.qed(x) for x in good_mol_list]
 
-final_mol_list = [(a,b) for a,b in
-zip(good_mol_list,qed_list) if b > 0.5]
+final_mol_list = [(a, b) for a, b in
+zip(good_mol_list, qed_list) if b > 0.5]
 ```
 
-Im letzten Schritt visualisieren wir die chemischen Strukturen von `final_mol_list` und die entsprechenden QED-Scores:
+在最后一步中，我们可视化 `final_mol_list` 的化学结构及其相应的 `QED` 分数：
 
 ```python
 MolsToGridImage([x[0] for x in final_mol_list],
@@ -3206,64 +3095,63 @@ subImgSize=(250, 250),
 legends=[f"{x[1]:.2f}" for x in final_mol_list])
 ```
 
-Die Ergebnisse sehen Sie in Abbildung 9-3.
+结果见下图：
 
 ![image](img/p157-01.png)
 
-*Abbildung 9-3: Chemische Strukturen der erzeugten Moleküle und ihre QED-Scores*.
+*图 9-3: 生成分子的化学结构及其 QED 分数*。
 
-Obwohl diese Strukturen gültig sind und einigermaßen hohe QED-Werte aufweisen, können sie dennoch chemisch instabil sein. Strategien zur Identifizierung und Entfernung solcher problematischen Moleküle werden im folgenden Abschnitt besprochen.
+虽然这些结构有效且具有相当高的 `QED` 值，但它们仍可能在化学上不稳定。识别和移除此类问题分子的策略将在下一节讨论。
 
-# Fazit
+# 总结
 
-Obwohl generative Modelle ein interessantes Mittel darstellen, um Ideen für neue Moleküle zu erhalten, müssen noch einige Schlüsselfragen geklärt werden, um ihre allgemeine Anwendbarkeit sicherzustellen. Zunächst gilt es sicherzustellen, dass die erzeugten Moleküle chemisch stabil sind und synthetisiert werden können. Eine aktuelle Methode zur Bewertung der Qualität von Molekülen, die mit einem generativen Modell hergestellt werden, besteht darin, den Anteil der generierten Moleküle zu beobachten, der den Standardregeln der chemischen Wertigkeit entspricht. Anders gesagt, es wird sichergestellt, dass jedes Kohlenstoffatom vier Bindungen, jedes Sauerstoffatom zwei Bindungen, jedes Fluoratom eine Bindung usw. aufweist. Diese Faktoren werden besonders dann wichtig, wenn eine `SMILES`-Darstellung aus einem `Latent Space` decodiert wird. Obwohl ein generatives Modell möglicherweise die Grammatik von `SMILES` gelernt hat, könnten Nuancen fehlen.
 
-Die Tatsache, dass ein Molekül den üblichen Wertigkeitsregeln entspricht, garantiert nicht unbedingt, dass es chemisch stabil ist. In einigen Fällen kann ein generatives Modell Moleküle herstellen, die funktionelle Gruppen enthalten, von denen bekannt ist, dass sie sich leicht zersetzen. Ein Beispiel hierfür sehen Sie in Abbildung 9-4. Es ist bekannt, dass die eingekreiste funktionelle Gruppe, die als Halbacetal bekannt ist, sich leicht zersetzt.
+
+# 生成模型的挑战与展望
+
+虽然生成模型是获取新分子构思的有趣手段，但仍需解决一些关键问题，以确保其普遍适用性。首先，必须保证生成的分子在化学上稳定且可合成。评估生成模型产出分子质量的一种当前方法，是观察符合标准化学价规则的生成分子比例。换言之，需确保每个碳原子有四个键、每个氧原子有两个键、每个氟原子有一个键等。当从 `Latent Space` 解码 `SMILES` 表示时，这些因素尤为重要。尽管生成模型可能已学会 `SMILES` 的语法，但可能缺乏细微之处。
+
+分子符合常规价规则，并不一定保证其化学稳定。在某些情况下，生成模型可能产出包含已知易分解官能团的分子。图 9-4 即为一例。圈出的半缩醛官能团众所周知极易分解。
 
 ![image](img/p158-01.png)
 
-*Abbildung 9-4: Ein Molekül mit einer instabilen Gruppe*.
+**图 9-4：含有不稳定基团的分子。**
 
-Die Wahrscheinlichkeit, dass dieses Molekül existiert und chemisch stabil ist, ist sehr gering. Es gibt Dutzende solcher chemischen Funktionalitäten, von denen bekannt ist, dass sie instabil oder reaktiv sind. Bei der Synthese von Molekülen in einem Wirkstoffentwicklungsprojekt sollten Chemiker diese funktionellen Gruppen vermeiden. Eine Möglichkeit, dieses »Wissen« einem generativen Modell zu vermitteln, besteht darin, eine Reihe von Filtern bereitzustellen, mit denen die Ausgabe des Modells nachbearbeitet und möglicherweise problematische Moleküle entfernt werden können. In Kapitel 11 werden wir einige dieser Filter und ihre Verwendung im virtuellen Screening näher betrachten. Viele der Methoden zur Identifizierung potenziell problematischer Screening-Verbindungen können auch zur Bewertung virtueller Moleküle verwendet werden, die ein generatives Modell erstellt.
+此分子存在且化学稳定的概率极低。已知有数十种此类不稳定或活泼的化学官能团。在药物开发项目的分子合成中，化学家应避免这些官能团。将此类“知识”传递给生成模型的一种方法，是提供一组过滤器，对模型输出进行后处理，移除潜在问题分子。第 11 章将深入探讨这些过滤器及其在虚拟筛选中的应用。许多用于识别潜在问题筛选化合物的方法，也可用于评估生成模型创建的虚拟分子。
 
-Um die biologische Aktivität eines von einem generativen Modell erzeugten Moleküls zu testen, muss dieses Molekül zuerst von einem Chemiker synthetisiert werden. Die Wissenschaft der organisch-chemischen Synthese blickt auf eine mehr als hundertjährige Geschichte zurück. In diesem Zeitraum haben Chemiker Tausende von chemischen Reaktionen entwickelt, um Medikamente und wirkstoffähnliche Moleküle zu synthetisieren. Die Synthese eines arzneimittelähnlichen Moleküls erfordert üblicherweise zwischen fünf und zehn chemische Reaktionen, die oft als »Schritte« bezeichnet werden. Während einige arzneimittelähnliche Moleküle leicht synthetisiert werden können, kann der Vorgang bei komplexeren Arzneimittelmolekülen mehr als 20 Schritte erfordern. Trotz der mehr als 50-jährigen Arbeit an der Automatisierung der Planung organischer Synthesen ist ein Großteil des Prozesses immer noch durch menschliche Intuition und anschließendes Ausprobieren bestimmt.
+要测试生成模型产出分子的生物活性，首先必须由化学家将其合成。有机化学合成科学拥有百年历史，化学家已开发出数千种化学反应以合成药物和类药分子。合成一个类药分子通常需要 5 到 10 个化学反应（常称“步骤”）。虽部分类药分子易于合成，但复杂药物分子可能需 20 步以上。尽管自动化有机合成规划研究已超 50 年，但该过程很大程度上仍由人类直觉和试错决定。
 
-Glücklicherweise bieten die jüngsten Entwicklungen im Bereich des Deep Learning neue Möglichkeiten für die Planung der Synthese von wirkstoffartigen Molekülen. Mehrere Forschergruppen haben Methoden veröffentlicht, die Deep Learning verwenden, um Wege vorzuschlagen, die zur Synthese von Molekülen verwendet werden können. Als Eingabe erhält das Modell ein Molekül, das oft als *Produkt* bezeichnet wird, und die Schritte, die zur Synthese dieses Moleküls verwendet wurden. Durch Training mit Tausenden von Produktmolekülen und den zur Synthese verwendeten Schritten kann ein `Deep Neural Network` die Beziehung zwischen Produktmolekülen und Reaktionsschritten erlernen. Erhält das Modell ein neues Molekül, schlägt es eine Reihe von Reaktionen vor, die zur Synthese des Moleküls verwendet werden könnten. Bei einem Versuch wurden die von diesen Modellen erzeugten Synthesewege Chemikern zur Bewertung vorgelegt. Diese Bewerter waren der Ansicht, dass die von solchen Modellen generierten Routen qualitativ mit den von Chemikern generierten Routen vergleichbar waren.
+幸运的是，深度学习的最新进展为类药分子合成规划提供了新可能。多个研究小组已发表利用深度学习提出分子合成路线的方法。模型输入为一个分子（常称*产物*）及合成该分子所用的步骤。通过数千个产物分子及其合成步骤的训练，`Deep Neural Network` 可学习产物分子与反应步骤间的关系。输入新分子时，模型会提出一组可能用于合成该分子的反应。在一项测试中，这些模型生成的合成路线提交化学家评估，结果认为其质量与化学家生成的路线相当。
 
-Die Anwendung von Deep Learning auf die organische Synthese ist ein relativ neues Forschungsgebiet. Es bleibt zu hoffen, dass hier eine Weiterentwicklung stattfindet und diese Modelle zu einem wichtigen Werkzeug für organische Chemiker werden. In nicht allzu ferner Zukunft könnte diese Funktion für die Syntheseplanung mit der Robotik kombiniert werden, um eine voll automatisierte Plattform zu schaffen. Es gibt jedoch Schwierigkeiten, die überwunden werden müssen.
+将深度学习应用于有机合成是相对较新的研究领域。期待该领域持续发展，使这些模型成为有机化学家的重要工具。在不远的将来，此功能或可与机器人技术结合，创建全自动化平台。但仍有困难待克服。
 
-Ein mögliches Hindernis für die Akzeptanz von Deep Learning in der organischen Synthese ist die Datenverfügbarkeit. Die meisten Informationen, die zum Trainieren dieser Modelle verwendet werden, befinden sich in Datenbanken, die Eigentum einer kleinen Anzahl von Organisationen sind. Beschließen diese Organisationen, die Daten lediglich für interne Zwecke zu verwenden, bleiben nur sehr wenige Alternativen übrig.
+阻碍深度学习在有机合成中被采纳的一个可能障碍是数据可用性。训练这些模型所用的大部分信息存储在少数组织拥有的专有数据库中。若这些组织决定仅将数据用于内部目的，留下的替代方案将寥寥无几。
 
-
-
-
-另一个可能限制生成模型进步的因素，是用于分子生成的预测模型的质量。无论使用何种架构来开发生成模型，都必须采用一个函数来评估生成的分子，并引导对新分子的搜索。在某些情况下，我们或许能够开发出可靠的预测模型。在其他情况下，模型可能不太可靠。虽然我们可以使用外部验证数据集来测试模型，但往往难以确定预测模型的适用范围。这个范围也被称为“应用领域”，指的是模型在其训练所用分子之外进行外推的程度。由于这个应用领域没有被精确定义，因此很难判断模型在生成模型产生的新颖分子上表现如何。
+另一个可能限制生成模型进步的因素，是用于分子生成的预测模型的质量。无论采用何种架构开发生成模型，都必须使用一个函数来评估生成的分子，并引导对新分子的搜索。在某些情况下，我们或许能开发出可靠的预测模型；在其他情况下，模型可能不太可靠。虽可使用外部验证数据集测试模型，但往往难以确定预测模型的适用范围。此范围也称“应用领域”，指模型在其训练分子之外进行外推的程度。因应用领域未被精确定义，故难以判断模型在生成模型产生的新颖分子上表现如何。
 
 生成模型是一种相对较新的方法，未来几年该领域将如何发展将会很有趣。我们利用深度学习预测有机合成路线和构建预测模型的能力越强，生成模型就会变得越强大。
 
-# 第 10 章
+# 第 10 章：解读深度学习模型
 
-# 解读深度学习模型
+迄今为止，我们已见过许多训练深度学习模型以解决问题的示例。流程始终相同：收集数据、构建模型、训练模型，直到在训练集和测试集上获得正确结果。随后我们自我祝贺，宣布任务完成，转向下一个挑战。毕竟，我们拥有了一个能为输入产生正确预测的模型。
 
-到目前为止，我们已经看到了许多训练深度学习模型以解决问题的示例。流程总是相同的：收集数据，构建模型，训练模型，直到在训练集和测试集上获得正确结果。然后我们自我祝贺，宣布任务完成，转向下一个挑战。毕竟，我们拥有了一个能为输入产生正确预测的模型。
-
-但这往往只是开始！一旦模型训练完成，你可能会问自己许多重要问题。模型是如何工作的？输入的哪些特征导致了特定的预测？能否信任模型的预测？它们有多准确？是否存在模型可能失效的情况？它究竟“学习”了什么？而这能否带来对训练数据的新见解？
+但这往往只是开始！模型训练完成后，你可能会自问许多重要问题：模型是如何工作的？输入的哪些特征导致了特定预测？能否信任模型的预测？它们有多准确？是否存在模型可能失效的情况？它究竟“学习”了什么？而这能否带来对训练数据的新见解？
 
 所有这些问题都属于*可解释性*的范畴。它涵盖了你对模型的一切期望，甚至更多。这是一个非常广泛的主题，所用方法多种多样，正如它们试图回答的问题一样。方法太多，无法在一章中全部容纳，因此我们将重点关注其中一些更重要的方法。
 
-为此，我们将回顾前几章的示例。当时我们只是训练模型进行预测，检查准确率，然后认为工作完成。现在我们将更深入地研究它们，看看还能学到什么。
+为此，我们将回顾前几章的示例。当时我们只是训练模型进行预测、检查准确率，然后认为工作完成。现在我们将更深入地研究它们，看看还能学到什么。
 
 ## 解释预测
 
 假设你训练了一个模型来识别不同车辆类型的照片。你在测试数据集上运行它，发现它能正确区分汽车、船只、火车和飞机。它是否已准备好投入生产？你能信任它未来也能提供正确结果吗？
 
-也许可以。但如果错误结果会导致严重后果，你可能希望进行进一步验证。了解模型*为何*做出特定预测会很有帮助。它真的是在观察车辆，还是在关注照片中无关的方面？汽车照片通常包含道路。飞机在天空中呈现剪影。火车照片通常显示轨道，船只照片则显示大量水面。如果模型实际上识别的是背景而非车辆，它可能在测试数据上表现良好，却在意外情况下失效。天空中呈剪影的船只可能被分类为飞机，而在水边行驶的汽车可能被分类为船只。
+也许可以。但如果错误结果会导致严重后果，你可能希望进行进一步验证。了解模型*为何*做出特定预测会很有帮助。它真的是在观察车辆，还是在关注照片中无关的方面？汽车照片通常包含道路。飞机在天空中呈剪影。火车照片通常显示轨道，船只照片则显示大量水面。如果模型实际上识别的是背景而非车辆，它可能在测试数据上表现良好，却在意外情况下失效。天空中呈剪影的船只可能被分类为飞机，而在水边行驶的汽车可能被分类为船只。
 
 如果模型过度关注特定细节，也会产生问题。也许它识别的根本不是“汽车”图像，而是包含“车牌”的图像。或者它擅长识别救生圈，并学会将其与船只图像关联。在大多数情况下这行得通，但如果一辆汽车驶过游泳池，背景中出现救生圈，就会失败。
 
 解释模型为何做出预测是可解释性的一个重要方面。如果模型将一张照片分类为汽车，你希望确信该预测是基于汽车本身，而非因为看到了道路，或仅基于汽车的一小部分。简而言之，你关心它是否*出于正确的理由*给出了正确答案。这能让你有信心它对未来的输入也能正常工作。
 
-作为一个具体示例，让我们看看第 8 章中的糖尿病视网膜病变模型。该模型以视网膜图像为输入，预测患者糖尿病视网膜病变的存在及严重程度。输入和输出之间有数十个层对象和超过八百万个训练参数。我们想知道为何特定输入导致特定输光，但无法从模型本身看出来，因为其复杂性超出了人类的理解范围。
+作为一个具体示例，让我们看看第 8 章中的糖尿病视网膜病变模型。该模型以视网膜图像为输入，预测患者糖尿病视网膜病变的存在及严重程度。输入和输出之间有数十个层对象和超过八百万个训练参数。我们想知道为何特定输入导致特定输出，但无法从模型本身看出来，因为其复杂性超出了人类的理解范围。
 
 已开发出许多方法来回答这个问题。我们将应用其中最简单的一种，称为*显著性映射*。^(1) 该方法本质上是询问输入的哪些像素对于确定输出最重要（或最“显著”）。从某种意义上说，*每个*像素自然都很重要。输出是所有输入的一个高度复杂的非线性函数。在理想图像中，每个像素都包含疾病迹象。但在现实中，只有极小部分像素符合此条件，我们想知道是哪些像素。
 
@@ -3288,38 +3176,27 @@ model.restore()
 X = test.X
 y = test.y
 for i in range(10):
+    prediction = np.argmax(model.predict_on_batch([X[i]]))
+    print('True class: %d, Predicted class: %d' % (y[i], prediction))
 ```
 
+输出如下：
 
-
-
-## Saliency Mapping und Eingabeoptimierung
-
-```python
-prediction = np.argmax(model.predict_on_batch([X[i]]))
-
-print('True class: %d, Predicted class: %d' % (y[i], prediction))
 ```
-
-Die Ausgabe sieht wie folgt aus:
-
 True class: 0, Predicted class: 0
-
 True class: 2, Predicted class: 2
-
 True class: 0, Predicted class: 0
-
 True class: 0, Predicted class: 0
-
 True class: 3, Predicted class: 0
-
 True class: 2, Predicted class: 2
-
 True class: 0, Predicted class: 0
-
 True class: 0, Predicted class: 0
-
 True class: 0, Predicted class: 0
+```
+
+## 显著性映射与输入优化
+
+
 
 True class: 2, Predicted class: 2
 
@@ -3381,22 +3258,21 @@ Beim Betrachten dieser Sequenzen fällt uns sofort das Muster auf, das das Model
 
 *Abbildung 10-4: Das bekannte Bindungsmotiv für JUND, dargestellt als Positionsgewichtungsmatrix. Die Höhe jedes Buchstabens gibt die Wahrscheinlichkeit an, mit der diese Base an der entsprechenden Position erscheint*.
 
-
-
-
 那条错误预测了结合位点的序列不包含此模式。相反，它由多个紧密相邻的 `TGAC` 模式重复组成。它看起来像是一个结合基序的开头，但从未跟随一个 `TCA`。显然，我们的模型已经学会了识别正确的结合基序，但当多个不完整的版本紧密相邻时，也会被误导。
 
 训练数据并不总是能反映可能输入的全部范围。如果您的训练数据集仅包含车辆照片，您就无法知道模型对其他照片会有何反应。它可能会自信地将雪花图像标记为船。甚至可能存在根本不像照片的输入——也许是简单的几何图案或随机噪声——模型会将其分类为船。要测试这种可能性，我们不能依赖现有的输入。相反，模型必须告诉我们它在寻找什么。为此，我们从一个完全随机的输入开始，然后使用优化算法对其进行修改，以改进模型的输出。
 
 我们在 TF 结合模型上演示这一点。首先，我们生成一个随机序列并计算模型的预测：
 
-```
+```python
 best_sequence = np.random.randint(4, size=101)
 
 best_score = float(model.predict_on_batch([dc.metrics.to_one_hot(best_sequence, 4)]))
 ```
 
 为了对其进行优化，我们在序列中随机选择一个位置和一个要设置的新碱基。如果该更改改善了输出，我们就保留它。否则，我们丢弃该更改并尝试其他内容：
+
+
 
 ```
 for step in range(1000):
@@ -3453,7 +3329,7 @@ print(np.sqrt(np.mean((test_dataset.y - y_pred)**2)))
 
 请注意，我们仅在观察训练数据集。这种不确定性可以完全通过训练期间可用的信息来确定。这意味着我们可以训练一个模型来预测它！我们可以给模型添加更多输出：对于它预测的每个值，也输出该预测中不确定性的估计。
 
-现在看 图 10-7。我们重复了十次训练，得到了十个不同的模型。我们用每个模型预测测试数据集中十个分子的溶解度。所有模型均使用相同的数据进行训练，且所有模型在训练数据集上的误差相似！尽管如此，根据使用哪个模型，我们得到的每个分子的溶解度各不相同。
+现在看图 10-7。我们重复了十次训练，得到了十个不同的模型。我们用每个模型预测测试数据集中十个分子的溶解度。所有模型均使用相同的数据进行训练，且所有模型在训练数据集上的误差相似！尽管如此，根据使用哪个模型，我们得到的每个分子的溶解度各不相同。
 
 ![image](img/p170-01.png)
 
@@ -3462,8 +3338,6 @@ print(np.sqrt(np.mean((test_dataset.y - y_pred)**2)))
 这是一种完全不同类型的不确定性，称为*认知不确定性*（epistemic uncertainty）。这种不确定性源于许多不同的模型都能同样好地拟合训练数据，而我们不知道哪个是“最好”的。
 
 衡量认知不确定性的一种简单方法是训练许多模型并比较它们的结果，如图 10-7 所示。然而，这通常难以实现。如果您有一个大型复杂模型，其训练需要数周时间，您就不想重复多次该过程。
-
-
 
 一种明显更快的替代方案是训练一个带有 Dropout 的单一模型，随后使用不同的 Dropout 掩码多次预测每个输出。通常 Dropout 仅在训练期间应用。在此过程中，训练的每一步中每一层 50% 的输出会被随机设为 0。在测试数据集中，我们本应将*每个*输出乘以 0.5。但我们不这样做。相反，我们随机将一半的输出设为 0，并使用不同的随机掩码重复该过程，以获得不同的预测。预测值之间的差异能提供对认知不确定性的一个相当不错的估计。
 
@@ -3518,8 +3392,6 @@ y_pred, y_std = model.predict_uncertainty(test_dataset)
 
 基于配体的虚拟筛选寻找功能类似于已知分子的分子。它用于改进现有分子的功能、避免与已知分子相关的药理学风险或开发新分子。通常，LBVS 从一组通过实验方法识别的已知分子开始。然后利用计算方法开发一个基于实验数据的模型。随后使用该模型虚拟筛选大量分子，以寻找新的化学起点。
 
-
-
 在本章中，我们将通过一个用于 LBVS（基于配体的虚拟筛选）的虚拟筛选工作流的实际示例来引导您。我们将讨论运行所需的代码，以及分析过程中决策背后的思维过程。我们将使用已知能与特定蛋白结合的分子，以及假定不结合的分子，来训练一个卷积神经网络，旨在识别能与该蛋白结合的新分子。
 
 ### 准备数据集
@@ -3542,14 +3414,14 @@ from rdkit.Chem import rdmolops # 更多分子性质
 import seaborn as sns # 创建图表
 ```
 
-在本示例中，分子以 SMILES 字符串表示。有关 SMILES 的更多信息，请参见第 4 章。我们将一个 SMILES 文件读入 Pandas DataFrame，并向 DataFrame 添加一个 RDKit 分子。虽然 SMILES 文件技术上不是 *csv* 文件，但只要指定分隔符（在本例中为空格），就可以使用 Pandas 函数 `read_CSV()` 读取它：
+在本示例中，分子以 SMILES 字符串表示。有关 SMILES 的更多信息，请参见第 4 章。我们将一个 SMILES 文件读入 Pandas DataFrame，并向 DataFrame 添加一个 RDKit 分子。虽然 SMILES 文件技术上不是 *csv* 文件，但只要指定分隔符（在本例中为空格），就可以使用 Pandas 函数 `read_csv()` 读取它：
 
 ```
-active_df = pd.read_CSV("mk01/actives_final.ism",header=None,sep=" ")
-active_rows,active_cols = active_df.shape
-active_df.columns = ["SMILES","ID","ChEMBL_ID"]
-active_df["label"] = ["Active"]*active_rows
-PandasTools.AddMoleculeColumnToFrame(active_df,"SMILES","Mol")
+active_df = pd.read_csv("mk01/actives_final.ism", header=None, sep=" ")
+active_rows, active_cols = active_df.shape
+active_df.columns = ["SMILES", "ID", "ChEMBL_ID"]
+active_df["label"] = ["Active"] * active_rows
+PandasTools.AddMoleculeColumnToFrame(active_df, "SMILES", "Mol")
 ```
 
 接下来，我们定义一个函数，用于将计算出的性质添加到 DataFrame 中：
@@ -3580,24 +3452,24 @@ active_df.head()
 我们对非活性分子执行相同的操作：
 
 ```
-decoy_df = pd.read_CSV("mk01/decoys_final.ism",header=None,sep=" ")
-decoy_df.columns = ["SMILES","ID"]
+decoy_df = pd.read_csv("mk01/decoys_final.ism", header=None, sep=" ")
+decoy_df.columns = ["SMILES", "ID"]
 decoy_rows, decoy_cols = decoy_df.shape
-decoy_df["label"] = ["Decoy"]*decoy_rows
-PandasTools.AddMoleculeColumnToFrame(decoy_df,"SMILES","Mol")
+decoy_df["label"] = ["Decoy"] * decoy_rows
+PandasTools.AddMoleculeColumnToFrame(decoy_df, "SMILES", "Mol")
 add_property_columns_to_df(decoy_df)
 ```
 
-为了创建模型，我们需要一个包含活性和非活性分子的 DataFrame。我们使用 Pandas 函数 `append` 将两个 DataFrame 合并，并创建一个名为 `tmp_df` 的新 DataFrame：
+为了创建模型，我们需要一个包含活性和非活性分子的 DataFrame。我们使用 Pandas 函数 `concat` 将两个 DataFrame 合并，并创建一个名为 `tmp_df` 的新 DataFrame：
 
 ```
-tmp_df = active_df.append(decoy_df)
+tmp_df = pd.concat([active_df, decoy_df])
 ```
 
 为了比较活性和非活性分子的性质，我们使用小提琴图。小提琴图是箱线图的一种变体。小提琴图显示频率分布的镜像水平视图。在理想情况下，我们会看到活性和非活性分子具有相似的分布。结果如图 11-1 所示：
 
 ```
-sns.violinplot(tmp_df["label"],tmp_df["mw"])
+sns.violinplot(tmp_df["label"], tmp_df["mw"])
 ```
 
 ![image](img/p178-01.png)
@@ -3609,7 +3481,7 @@ sns.violinplot(tmp_df["label"],tmp_df["mw"])
 我们同样使用小提琴图来比较 LogP 分布（见图 11-2）。在这里分布也很相似，非活性分子的值略低于活性分子：
 
 ```
-sns.violinplot(tmp_df["label"],tmp_df["logP"])
+sns.violinplot(tmp_df["label"], tmp_df["logP"])
 ```
 
 ![image](img/p179-01.png)
@@ -3619,7 +3491,7 @@ sns.violinplot(tmp_df["label"],tmp_df["logP"])
 最后，我们也来看一下形式电荷的比较（见图 11-3）：
 
 ```
-sns.violinplot(new_tmp_df["label"],new_tmp_df["charge"])
+sns.violinplot(tmp_df["label"], tmp_df["charge"])
 ```
 
 ![image](img/p179-02.png)
@@ -3635,45 +3507,45 @@ charged = decoy_df[decoy_df["charge"] != 0]
 通过 `shape` 可以显示 DataFrame 的行数和列数。因此，通过 `shape[0]` 我们可以获得行数。我们将包含带电分子的 DataFrame 的行数除以包含所有非活性分子的 DataFrame 的行数：
 
 ```
-charged.shape[0]/decoy_df.shape[0]
+charged.shape[0] / decoy_df.shape[0]
 ```
-
-
 
 结果为 0.162，意味着大约 16% 的非活性分子带电荷。这是因为这两个数据集的创建方式不统一。我们可以通过修改非活性分子的化学结构来中和其电荷，从而解决该问题。利用 RDKit Cookbook (*[`www.rdkit.org/docs/Cookbook.html`](https://www.rdkit.org/docs/Cookbook.html)*) 中的 `NeutraliseCharges()` 函数即可轻松实现：
 
-```
+
+
+```python
 from neutralize import NeutraliseCharges
 ```
 
 我们现在创建一个新的 DataFrame，包含非活性分子的 SMILES 字符串、ID 和标签：
 
-```
+```python
 revised_decoy_df = decoy_df[["SMILES","ID","label"]].copy()
 ```
 
 利用这个新 DataFrame，我们可以用分子中性形式的 SMILES 字符串替换原始的 SMILES 字符串。函数 `NeutraliseCharges` 返回两个值。第一个包含分子中性形式的 SMILES 字符串，第二个是一个布尔变量，指示分子是否被修改。因为我们只需要 SMILES 字符串，所以仅使用 `NeutraliseCharges` 返回元组的第一个元素。
 
-```
+```python
 revised_decoy_df["SMILES"] = [NeutraliseCharges(x)[0] for x in revised_decoy_df["SMILES"]]
 ```
 
 一旦替换了 SMILES 字符串，我们就可以向新 DataFrame 添加分子列并重新计算属性：
 
-```
+```python
 PandasTools.AddMoleculeColumnToFrame(revised_decoy_df,"SMILES","Mol")
 add_property_columns_to_df(revised_decoy_df)
 ```
 
 接下来，我们将包含活性分子的 DataFrame 追加到包含修订后的中性分子的 DataFrame 后面：
 
-```
+```python
 new_tmp_df = active_df.append(revised_decoy_df)
 ```
 
 现在我们再次创建小提琴图，以比较形式电荷的分布（参见 图 11-4）：
 
-```
+```python
 sns.violinplot(new_tmp_df["label"],new_tmp_df["charge"])
 ```
 
@@ -3683,7 +3555,7 @@ sns.violinplot(new_tmp_df["label"],new_tmp_df["charge"])
 
 正如我们从图中所见，数据集中仅剩下少数带电荷的非活性分子。我们再次创建一个仅包含带电荷分子的 DataFrame，并检查其中还剩下多少带电荷分子：
 
-```
+```python
 charged = revised_decoy_df[revised_decoy_df["charge"] != 0]
 charged.shape[0]/revised_decoy_df.shape[0]
 ```
@@ -3692,7 +3564,7 @@ charged.shape[0]/revised_decoy_df.shape[0]
 
 为了能在 DeepChem 中使用这些数据集，我们必须将分子作为 *csv* 文件输出，该文件需包含每个分子的 SMILES 字符串、ID、名称以及一个指示其为活性 (1) 还是非活性 (0) 分子的数字：
 
-```
+```python
 active_df["is_active"] = [1] * active_df.shape[0]
 revised_decoy_df["is_active"] = [0] * revised_decoy_df.shape[0]
 combined_df = active_df.append(revised_decoy_df)[["SMILES","ID","is_active"]]
@@ -3707,7 +3579,7 @@ combined_df.head()
 
 最后一步是将 `combined_df` 作为 *csv* 文件输出。`index=False` 可防止行号作为第一列被写入 *csv* 文件：
 
-```
+```python
 combined_df.to_csv("dude_erk1_mk01.CSV",index=False)
 ```
 
@@ -3715,7 +3587,7 @@ combined_df.to_csv("dude_erk1_mk01.CSV",index=False)
 
 现在我们的数据已格式化完毕，可以用来训练图卷积模型。首先导入所需的库。虽然其中一些库已在第一节中导入，但若要开始读取 *csv* 文件，我们需要全部导入：
 
-```
+```python
 import deepchem as dc # DeepChem 库
 from deepchem.models import GraphConvModel # 图卷积
 import numpy as np # NumPy 用于数值运算
@@ -3727,7 +3599,7 @@ from rdkit.Chem import PandasTools # Pandas 中的化学结构
 
 下一步，我们定义一个用于创建 `GraphConvModel` 的函数。在本例中，我们需要一个分类模型。因为我们稍后想在另一个数据集上应用该模型，所以应创建一个用于保存模型的目录。请根据您的文件系统调整路径 (`model_dir`)：
 
-```
+```python
 def generate_graph_conv_model():
     batch_size = 128
     model = GraphConvModel(1, batch_size=batch_size, mode='classification', model_dir="/tmp/mk01/model_dir")
@@ -3736,7 +3608,7 @@ def generate_graph_conv_model():
 
 我们现在需要上一节创建的 *csv* 文件：
 
-```
+```python
 dataset_file = "dude_erk2_mk01.CSV"
 tasks = ["is_active"]
 featurizer = dc.feat.ConvMolFeaturizer()
@@ -3746,13 +3618,13 @@ dataset = loader.featurize(dataset_file, shard_size=8192)
 
 现在我们可以构建模型了。我们将读取的数据集分别拆分为训练集和验证集，以便评估模型。为此我们使用 `RandomSplitter`（DeepChem 提供了多种拆分数据的方法，例如 `ScaffoldSplitter`，它根据分子的化学骨架拆分数据；以及 `ButinaSplitter`，它先对数据进行聚类，再拆分使得训练集和验证集包含不同的簇）：
 
-```
+```python
 splitter = dc.splits.RandomSplitter()
 ```
 
 通过拆分数据集，我们可以在训练集上训练模型，随后在验证集上进行检查。为了评估模型，我们需要合适的指标。在本例中，数据是不平衡的：活性分子数量少，非活性分子数量多。因此我们需要一种能处理不平衡数据的指标。马修斯相关系数 (MCC) 就是一种这样的指标：
 
-```
+```python
 metrics = [
     dc.metrics.Metric(dc.metrics.matthews_corrcoef, np.mean, mode="classification")
 ]
@@ -3760,7 +3632,7 @@ metrics = [
 
 为了评估模型性能，我们执行十折交叉验证，在训练数据上训练模型，随后在验证数据上验证：
 
-```
+```python
 training_score_list = []
 validation_score_list = []
 transformers = []
@@ -3782,7 +3654,7 @@ print(validation_score_list)
 
 为了直观展示性能，我们使用箱线图（参见 图 11-5）：
 
-```
+```python
 sns.boxplot(
     ["training"] * cv_folds + ["validation"] * cv_folds,
     training_score_list + validation_score_list
@@ -3795,23 +3667,21 @@ sns.boxplot(
 
 正如预期所示，图表表明训练集上的性能优于验证集——但验证集的性能也相当不错。因此，我们可以信任我们的模型。
 
-
-
 同样地，可视化我们模型的结果也很有帮助。为此，我们为验证数据生成预测：
 
-```
+```python
 pred = [x.flatten() for x in model.predict(valid_dataset)]
 ```
 
 为了简化处理，我们创建一个包含预测结果的 Pandas DataFrame：
 
-```
+```python
 pred_df = pd.DataFrame(pred, columns=["neg", "pos"])
 ```
 
 我们向该 DataFrame 进一步添加分子的状态（1 = 活性，0 = 非活性）和 SMILES 字符串：
 
-```
+```python
 pred_df["active"] = [int(x) for x in valid_dataset.y]
 pred_df["SMILES"] = valid_dataset.ids
 ```
@@ -3824,7 +3694,7 @@ pred_df["SMILES"] = valid_dataset.ids
 
 我们可以使用箱线图来比较活性和非活性分子的预测值（参见图 11-6）。
 
-```
+```python
 sns.boxplot(pred_df.active, pred_df.pos)
 ```
 
@@ -3834,19 +3704,19 @@ sns.boxplot(pred_df.active, pred_df.pos)
 
 我们的模型运行良好：我们可以清晰地看到活性（1）和非活性（0）分子之间的分离。构建预测模型时，重要的是要更仔细地检查被预测为活性的非活性分子（**假阳性**），以及被预测为非活性的活性分子（**假阴性**）。正如我们从箱线图中所见，我们的活性分子中只有一个获得了较低的正类得分。为了进行更详细的检查，我们创建一个新的 DataFrame，其中包含所有正类得分 < 0.5 的活性分子：
 
-```
+```python
 false_negative_df = pred_df.query("active == 1 & pos < 0.5").copy()
 ```
 
 为了研究这些分子的化学结构，我们使用 RDKit 中的 `PandasTools` 模块：
 
-```
+```python
 PandasTools.AddMoleculeColumnToFrame(false_negative_df, "SMILES", "Mol")
 ```
 
 新的 DataFrame 如下所示（参见图 11-7）：
 
-```
+```python
 false_negative_df
 ```
 
@@ -3858,7 +3728,7 @@ false_negative_df
 
 我们采用类似的方法来研究假阳性分子，这些分子本身是非活性的，但获得了正类得分 > 0.5（参见图 11-8）。在这里，与真阳性分子的化学结构进行比较也能给我们提供线索：
 
-```
+```python
 false_positive_df = pred_df.query("active == 0 & pos > 0.5").copy()
 PandasTools.AddMoleculeColumnToFrame(false_positive_df, "SMILES", "Mol")
 false_positive_df
@@ -3870,13 +3740,13 @@ false_positive_df
 
 在训练模型期间，评估模型性能对我们很重要。因此，我们在一部分数据上训练模型，在另一部分上进行验证。现在我们已完成性能评估，想要获得最高效的模型。为此，我们使用所有数据训练模型：
 
-```
+```python
 model.fit(dataset)
 ```
 
 我们获得了 91% 的准确率。在最后一步中，我们将模型保存在之前创建的目录中，以便将其用于未来的预测：
 
-```
+```python
 model.save()
 ```
 
@@ -3890,7 +3760,7 @@ model.save()
 
 调用 `-h` 可查看脚本的可用选项和参数。
 
-```
+```bash
 rd_filters.py -h
 ```
 
@@ -3911,7 +3781,7 @@ Options:
 
 要将脚本应用于名为 `zinc_100k.smi` 的输入文件，请指定文件名和输出文件的前缀。`filter` 以过滤模式调用脚本并识别潜在的问题分子。`--prefix` 指定输出文件名以 `zinc` 为前缀。
 
-```
+```bash
 rd_filters.py filter --in zinc_100k.smi --prefix zinc
 ```
 
@@ -3927,21 +3797,22 @@ Elapsed time 15.89 seconds
 此输出意味着：
 
 *   该脚本在 24 个 CPU 核心上运行。它并行地在多个 CPU 核心上运行，使用的核心数可通过 `-np` 设置。
+
 *   该脚本使用“Inpharmatica”规则集，该规则集涵盖了广泛的化学功能性，这些功能性在生物学分析中被证明是有问题的。更多信息请参阅 `rd_filters.py` 的文档。
+
 *   通过过滤器的 SMILES 字符串被写入名为 `zinc.smi` 的文件。我们将使用此文件作为预测模型的输入。
+
 *   关于哪些分子触发了特定结构警示的详细信息被写入名为 `zinc.CSV` 的文件。
-*   69% 的分子通过了过滤器，31% 被判定为有问题。
+
+*   69% 的分子通过了过滥器，31% 被判定为有问题。
 
 我们首先查看导致 31% 分子被拒绝的原因。这可以让我们了解是否需要调整某个过滤器。我们显示 `zinc.CSV` 的前几行（参见表 11-4）。
 
-```
+```python
 import pandas as pd
 df = pd.read_CSV("zinc.CSV")
 df.head()
 ```
-
-
-
 
 # 表 11-4：基于 zinc.CSV 的 DataFrame 的前几行
 
@@ -3950,13 +3821,20 @@ df.head()
 该 DataFrame 有六列：
 
 - **SMILES**：每个分子的 SMILES 字符串。
+
 - **NAME**：输入文件中列出的分子名称。
+
 - **FILTER**：分子被拒绝的原因，如果分子通过了过滤器则为 OK。
+
 - **MW**：分子的分子量。默认情况下，分子量超过 500 的分子会被丢弃。
+
 - **LogP**：分子的计算辛醇/水分配系数。默认情况下，LogP 超过 5 的分子会被剔除。
+
 - **HBD**：氢键供体的数量。默认情况下，拥有超过 5 个供体的分子会被丢弃。
 
 借助 Python `collections` 库中的 `Counter` 类，我们可以确定哪些过滤器导致移除了最多的分子（参见 表 11-5）：
+
+
 
 ```python
 from collections import Counter
@@ -3977,14 +3855,14 @@ count_df.head()
 | 10 | Filter93_acetyl_urea > O | 1541 |
 | 11 | Filter78_bicyclic_lmide > O | 825 |
 
-表中标记为 OK 的第一行表示通过所有过滤器的分子数量。这适用于我们输入的 69,156 个分子。大多数分子（19,330 个）因含有 1,2-二羰基而被剔除。此类分子可与丝氨酸和半胱氨酸等蛋白质残基反应并形成共价键。我们可以通过在 `filter_collection.CSV` 文件（它是 `rd_filters.py` 的输出）中搜索字符串 `Filter41_12_dicarbonyl` 来找到识别这些分子的 SMARTS 模式。该 SMARTS 模式为 `*C(=O)C(=O)*`，含义如下：
+表中标记为 `OK` 的第一行表示通过所有过滤器的分子数量。这适用于我们输入的 69,156 个分子。大多数分子（19,330 个）因含有 1,2-二羰基而被剔除。此类分子可与丝氨酸和半胱氨酸等蛋白质残基反应并形成共价键。我们可以通过在 `filter_collection.CSV` 文件（它是 `rd_filters.py` 的输出）中搜索字符串 `Filter41_12_dicarbonyl` 来找到识别这些分子的 SMARTS 模式。该 SMARTS 模式为 `*C(=O)C(=O)*`，含义如下：
 
 - 任意原子，连接至
-- 羰基碳（C(=O)），连接至
-- 羰基碳（C(=O)），连接至
+- 羰基碳（`C(=O)`），连接至
+- 羰基碳（`C(=O)`），连接至
 - 任意原子
 
-为确保一切按预期工作，我们来查看一下数据。为此，我们使用 RDKit 函数 `MolsToGridImage()` 的 `highlightAtomLists` 选项来高亮显示 1,2-二酮官能团（参见 图 11-9）：
+为确保一切按预期工作，我们来查看一下数据。为此，我们使用 RDKit 函数 `MolsToGridImage()` 的 `highlightAtomLists` 选项来高亮显示 1,2-二酮官能团（参见图 11-9）：
 
 ```python
 from rdkit import Chem
@@ -4009,13 +3887,13 @@ Draw.MolsToGridImage(mol_list,
 
 我们创建的 `GraphConvModel` 现在可用于筛选分子。应用模型分几个步骤进行：
 
-1.  从磁盘加载模型。
-2.  创建特征化器。
-3.  读取并生成要通过模型的分子的特征。
-4.  检查预测分数。
-5.  检查得分最高的分子的化学结构。
-6.  对选定的分子进行聚类。
-7.  将每个簇中选定的分子输出到 `csv` 文件。
+1. 从磁盘加载模型。
+2. 创建特征化器。
+3. 读取并生成要通过模型的分子的特征。
+4. 检查预测分数。
+5. 检查得分最高的分子的化学结构。
+6. 对选定的分子进行聚类。
+7. 将每个簇中选定的分子输出到 `csv` 文件。
 
 首先导入所需的库：
 
@@ -4052,7 +3930,7 @@ rows, cols = df.shape
 df["Val"] = [0] * rows
 ```
 
-我们再次显示 DataFrame 的前几行（参见 表 11-6），以确保一切正确：
+我们再次显示 DataFrame 的前几行（参见表 11-6），以确保一切正确：
 
 ```python
 df.head()
@@ -4091,7 +3969,7 @@ pred_df = pd.DataFrame([x.flatten() for x in pred],
                        columns=["Neg", "Pos"])
 ```
 
-Seaborn 库中的分布图提供了分数分布的概览。遗憾的是，虚拟筛选中没有明确的规则规定分子从多少分以上视为活性。最佳策略通常是检查分数分布并选择得分最高的分子。如果我们看 图 11-10，会发现只有少数分子的分数超过 0.3。我们将此值作为可能值得进一步实验研究的分子的初步截断值。
+Seaborn 库中的分布图提供了分数分布的概览。遗憾的是，虚拟筛选中没有明确的规则规定分子从多少分以上视为活性。最佳策略通常是检查分数分布并选择得分最高的分子。如果我们看图 11-10，会发现只有少数分子的分数超过 0.3。我们将此值作为可能值得进一步实验研究的分子的初步截断值。
 
 我们可以将带有分数的 DataFrame 与带有 SMILES 字符串的 DataFrame 合并。这使我们能够查看得分最高的分子的化学结构：
 
@@ -4100,7 +3978,7 @@ combo_df = df.join(pred_df, how="outer")
 combo_df.sort_values("Pos", inplace=True, ascending=False)
 ```
 
-正如您已经看到的，通过添加分子列，我们可以检查命中分子的化学结构（参见 图 11-11）。
+正如您已经看到的，通过添加分子列，我们可以检查命中分子的化学结构（参见图 11-11）。
 
 ![image](img/p193-01.png)
 
@@ -4108,35 +3986,32 @@ combo_df.sort_values("Pos", inplace=True, ascending=False)
 
 ![image](img/p193-02.png)
 
+**图 11-11：得分最高的分子的化学结构**。
 
+许多命中分子看起来很相似。我们查看更多的分子（参见图 11-12）：
 
-
-# Abbildung 11-11: Chemische Strukturen der Moleküle mit den höchsten Scores
-
-Es sieht so aus, als wären viele der Treffer ähnlich. Wir betrachten einige weitere Moleküle (siehe Abbildung 11-12):
-
-```
+```python
 Draw.MolsToGridImage(combo_df.Mol[:10], molsPerRow=5,
-legends=["%.2f" % x for x in combo_df.Pos[:10]])
+                     legends=["%.2f" % x for x in combo_df.Pos[:10]])
 ```
 
 ![image](img/p194-01.png)
 
-# Abbildung 11-12: Skelettformeln der Moleküle mit den höchsten Scores. Die Werte unterhalb der Strukturen sind Scores des Modells
+**图 11-12：得分最高的分子的骨架式。结构下方的数值为模型分数**。
 
-Tatsächlich sind viele der Moleküle sehr ähnlich und könnten in unserem Screen *überflüssig* werden. Eine Möglichkeit, effizienter zu sein, besteht darin, die Moleküle zu clustern und nur das Molekül mit dem höchsten Score jedes Clusters zu screenen. In RDKit wurde die `Butina-Clustering-Methode` implementiert, eine der am häufigsten verwendeten Methoden in der Cheminformatik. Bei der `Butina-Clustering-Methode` werden Moleküle auf der Grundlage ihrer chemischen Ähnlichkeit gruppiert, die anhand eines Vergleichs von Bitvektoren (Arrays von Einsen und Nullen) berechnet wird, die auch als *chemischer Fingerabdruck* bezeichnet werden und das Vorhandensein oder Fehlen von Mustern verbundener Atome in einem Molekül darstellen. Diese Bitvektoren werden normalerweise mithilfe des *Tanimoto-Koeffizienten* verglichen, der wie folgt definiert wird:
+实际上，许多分子非常相似，在我们的筛选中可能会变得*多余*。一种提高效率的方法是对分子进行聚类，仅筛选每个簇中得分最高的分子。RDKit 实现了 `Butina` 聚类方法，这是化学信息学中最常用的方法之一。在 `Butina` 聚类方法中，根据分子的化学相似性对分子进行分组，该相似性通过比较位向量（由 1 和 0 组成的数组）计算得出，这些位向量也称为*化学指纹*，表示分子中连接原子模式的存在或缺失。这些位向量通常使用*塔尼本系数* 进行比较，其定义如下：
 
-Tanimoto = ![image](img/p194-02.png)
+$$ \text{Tanimoto} = \frac{|A \cap B|}{|A \cup B|} $$
 
-Der Zähler der Gleichung ist der Schnittpunkt oder die Anzahl der Bits, die in den beiden Bitvektoren `A` und `B` 1 sind. Der Nenner ist die Anzahl der Bits, die entweder in Vektor `A` oder Vektor `B` 1 sind. Der `Tanimoto-Koeffizient` liegt zwischen 0, was bedeutet, dass die Moleküle keine gemeinsamen Atommuster aufweisen, und 1, was bedeutet, dass alle in Molekül `A` enthaltenen Muster auch in Molekül `B` enthalten sind. Als Beispiel betrachten wir die in Abbildung 11-13 gezeigten Bitvektoren. Die Schnittmenge der beiden Vektoren beträgt 3 Bit, während die Vereinigungsmenge 5 beträgt. Der `Tanimoto-Koeffizient` beträgt dann 3/5 oder 0.6. Beachten Sie, dass das hier gezeigte Beispiel zu Demonstrationszwecken vereinfacht wurde. In der Praxis enthalten diese Bitvektoren Hunderte oder sogar Tausende von Bits.
+公式的分子是交集，即向量 `A` 和 `B` 中均为 1 的位数。分母是向量 `A` 或 `B` 中为 1 的位数。`塔尼本系数` 介于 0（表示分子没有共同的原子模式）和 1（表示分子 `A` 中包含的所有模式也都包含在分子 `B` 中）之间。例如，考虑图 11-13 所示的位向量。两个向量的交集为 3 位，并集为 5 位。则 `塔尼本系数` 为 3/5 或 0.6。请注意，此处所示示例为演示目的而简化。实际应用中这些位向量包含数百甚至数千位。
 
 ![image](img/p195-01.png)
 
-# Abbildung 11-13: Berechnung eines Tanimoto-Koeffizienten
+**图 11-13：塔尼本系数的计算**。
 
-Es ist nur wenig Code zum Clustern von Molekülen erforderlich. Der einzige Parameter, der für das `Butina-Clustering` erforderlich ist, ist der Cut-off des Clusters. Ist der `Tanimoto-Koeffizient` zweier Moleküle größer als der Cut-off, werden die Moleküle demselben Cluster zugeordnet. Ist der Koeffizient kleiner als der Cut-off, werden die Moleküle verschiedenen Clustern zugeteilt:
+聚类分子只需少量代码。`Butina` 聚类所需的唯一参数是簇的截断值。如果两个分子的 `塔尼本系数` 大于截断值，则将它们分配到同一簇；如果小于截断值，则分配到不同簇：
 
-```
+```python
 def butina_cluster(mol_list, cutoff=0.35):
     fp_list = [
         rdmd.GetMorganFingerprintAsBitVect(m, 3, nBits=2048)
@@ -4158,30 +4033,32 @@ def butina_cluster(mol_list, cutoff=0.35):
     return cluster_id_list
 ```
 
-Bevor wir clustern, erstellen wir ein neues DataFrame, das nur die 100 Moleküle mit den höchsten Scores enthält. Da `combo_df` bereits sortiert ist, benötigen wir nur noch `head`, um die ersten 100 Zeilen des DataFrame auszuwählen:
+在聚类之前，我们创建一个新的 DataFrame，仅包含得分最高的 100 个分子。由于 `combo_df` 已排序，我们只需用 `head` 选取前 100 行：
 
-```
+```python
 best_100_df = combo_df.head(100).copy()
 ```
 
-Jetzt können wir eine neue Spalte erstellen, die die Cluster-ID für jedes Molekül enthält:
+现在我们可以创建一个新列，包含每个分子的簇 ID：
 
-```
+```python
 best_100_df["Cluster"] = butina_cluster(best_100_df.Mol)
 best_100_df.head()
 ```
 
-Wir werfen einen erneuten Blick auf die Daten. Zusätzlich zum SMILES-String, dem Molekülnamen und den vorhergesagten Werten haben wir nun auch eine Cluster-ID (siehe Abbildung 11-14).
+我们再次查看数据。除了 SMILES 字符串、分子名称和预测值外，我们现在还有一个簇 ID（参见图 11-14）。
 
 ![image](img/p196-01.png)
 
-# Abbildung 11-14: Die ersten Zeilen des geclusterten Datensatzes
+**图 11-14：聚类后数据集的前几行**。
 
-Wir verwenden die Pandas-Funktion `unique`, um die Anzahl der eindeutigen Cluster zu ermitteln. In unserem Fall sind es 55:
+我们使用 Pandas 的 `unique` 函数来确定唯一簇的数量。在本例中为 55 个：
 
-```
+```python
 len(best_100_df.Cluster.unique())
 ```
+
+
 
 Letztendlich möchten wir diese Moleküle erwerben und experimentell screenen. Dazu müssen wir eine `csv`-Datei mit den Molekülen erstellen, die wir erwerben möchten. Mit der Funktion `drop_duplicates` wählen wir ein Molekül pro Cluster. Standardmäßig durchläuft die Funktion den Datensatz von oben nach unten und entfernt alle Zeilen mit Cluster-IDs, die bereits vorkamen:
 
@@ -4211,13 +4088,9 @@ Die so gewonnenen Moleküle können wir nun experimentell testen. Der nächste S
 
 Sobald die Proben vorbereitet sind, werden sie in biologischen Assays getestet. Diese Assays decken einen weiten Bereich ab, von der Hemmung des Bakterienwachstums bis zur Verhinderung der Proliferation von Krebszellen. Auch wenn das Testen dieser Moleküle der letzte Schritt in unserem Beispiel ist, ist es noch lange nicht das Ende eines Projekts in der Wirkstoffforschung. Nachdem die biologischen Assays mit den durch virtuelles Screening identifizierten Molekülen durchgeführt wurden, werden die Ergebnisse analysiert. Finden wir experimentell aktive Moleküle, identifizieren und testen wir normalerweise andere ähnliche Moleküle, die es uns ermöglichen, die Beziehung zwischen verschiedenen Teilen des Moleküls und der biologischen Aktivität, die wir messen, zu verstehen. Bei dieser Optimierung werden häufig Hunderte oder sogar Tausende von Molekülen synthetisiert und getestet, um diejenigen mit der gewünschten Kombination aus Sicherheit und biologischer Aktivität zu identifizieren.
 
-# KAPITEL 12
+# Kapitel 12: Chancen und Perspektiven
 
-# Chancen und Perspektiven
-
-
-
-# 生命科学与深度学习
+## 生命科学与深度学习
 
 生命科学正以惊人的速度推进，或许比科学的任何其他领域都要快。深度学习亦是如此：它是计算机科学中最令人振奋、进展最迅速的领域之一。这两者的结合有可能以令人兴奋且深远的方式改变世界。其影响已初显端倪，但与未来几十年预期将发生的变化相比，微不足道。深度学习与生物学的融合能造福巨大，也能酿成大祸。
 
@@ -4255,9 +4128,6 @@ Sobald die Proben vorbereitet sind, werden sie in biologischen Assays getestet. 
 
 若个性化医疗实现其潜力，计算机将扮演核心角色。必须分析海量数据，远超人类处理极限，以预测每一种可能的治疗如何与患者独特的生物学特性及病情状态相互作用。深度学习非常适合此类任务。
 
-
-
-
 正如我们在第 10 章中讨论的那样，可解释性和可阐释性对于该应用至关重要。如果计算机给出诊断并推荐治疗方案，医生必须对两者进行复核，并决定是否信任它们。模型必须解释它是如何得出结论的，并以医生能够理解和验证的方式呈现证据。
 
 不幸的是，数据量和生物系统的复杂性最终将超越人类理解这些解释的能力。如果模型“解释”说患者 17 个基因上独特的突变组合使得某种特定治疗对其有效，则无法指望任何医生再次核查这一点。这会产生必须解决的实际、法律和伦理问题。在医生不理解推荐理由的情况下开具治疗方案，何时是正确的？忽略计算机的建议而开具其他方案，何时又是正确的？如果处方治疗无效或导致危及生命的副作用，谁来负责？
@@ -4292,8 +4162,6 @@ Sobald die Proben vorbereitet sind, werden sie in biologischen Assays getestet. 
 
 至少在某些情况下，答案是：**是的！** 这已针对多种大脑功能得到证明，包括视觉、^(1) 听觉^(2) 和运动感觉的处理。在每种情况下，都训练了一个神经网络来执行一项任务。随后将其与相应的大脑区域进行比较，发现它与该区域的行为非常吻合。例如，网络中的特定层可用于精确预测视觉皮层或听觉皮层中特定区域的行为。
 
-
-
 这相当令人印象深刻。这些模型并非被“设计”来匹配特定的大脑区域。对于每种情况，研究人员只是创建了一个通用模型，并使用梯度下降法对其进行训练以执行一项功能——而找到的解决方案实质上被证明与通过数百万年进化发现的解决方案完全相同。确切地说，神经网络比专门为此开发的其他模型更贴合大脑系统！
 
 要进一步推进这种方法，我们可能需要开发全新的架构。`Convolutional Neural Networks` 直接受视觉皮层启发，因此 `CNN` 能够作为其模型是合情合理的。但推测还有其他大脑区域以不同方式工作。推测这将导致神经科学与深度学习之间持续不断的互动；对大脑的发现会揭示出对深度学习有用的架构，而这些架构反过来又可作为模型，以更好地理解大脑。
@@ -4311,6 +4179,8 @@ Sobald die Proben vorbereitet sind, werden sie in biologischen Assays getestet. 
 ## 脚注
 
 ### 第 1 章 为什么是生物科学？
+
+
 
 1 Furbush, James. »Machine Learning: A Quick and Simple Definition.« [*https://www.oreilly.com/ideas/machine-learning-a-quick-and-simple-definition*](https://www.oreilly.com/ideas/machine-learning-a-quick-and-simple-definition). 2018.
 
@@ -4364,18 +4234,15 @@ Sobald die Proben vorbereitet sind, werden sie in biologischen Assays getestet. 
 
 1 Simonyan, K., A. Vedaldi und A. Zisserman. »Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps.« [Arxiv.org](http://Arxiv.org) (*[`arxiv.org/abs/1312.6034`](https://arxiv.org/abs/1312.6034)*). 2014.
 
-
-
-
-## KAPITEL 12 Chancen und Perspektiven
+## 第 12 章 机遇与展望
 
 1 Yamins, Daniel L. K. et al. »Performance-Optimized Hierarchical Models Predict Neural Responses in Higher Visual Cortex.« *Proceedings of the National Academy of Sciences* 111:8619–8624. [`doi.org/10.1073/pnas.1403112111`](https://doi.org/10.1073/pnas.1403112111). 2014.
 
 2 Kell, Alexander J. E. et al. »A Task-Optimized Neural Network Replicates Human Auditory Behavior, Predicts Brain Responses, and Reveals a Cortical Processing Hierarchy.« *Neuron* 98:630–644. [`doi.org/10.1016/j.neuron.2018.03.044`](https://doi.org/10.1016/j.neuron.2018.03.044). 2018.
 
-## Index
+## 索引
 
-### Symbole
+### 符号
 
 `π-π-Wechselwirkungen` 71
 
@@ -4385,7 +4252,7 @@ Visualisierung von 77
 
 `3-D-Protein-Momentaufnahme` *siehe* Proteine, Strukturen
 
-## A
+### A
 
 `Adam-Algorithmus` 17
 
@@ -4547,38 +4414,37 @@ Bindungsstellenmotiv 90
 
 Biologie
 
-Chancen für Deep Learning in der Forschung 204
-
-Kenntnis der 29
-
-biologische Ziele, Bindung von Molekülen mit 29
-
-Biophysik 4
-
-Grund für den Namen 62
-
-biophysikalisches Machine Learning 61–83
-
-Featurization 68–74
-
-atomare Featurization 74
-
-Grid Featurization 69–74
-
-PDBBind-Fallstudie 74–82
-
-Merkmale für den PDBBind-Datensatz entwickeln 78–82
-
-Proteinstruktur 63–68
 
 
+# Chancen für Deep Learning in der Forschung 204
 
+# Kenntnis der 29
 
-# Primer zur Proteinbindung 67
+# biologische Ziele, Bindung von Molekülen mit 29
 
-# Proteinsequenz 65
+# Biophysik 4
 
-## rechnergestützte Vorhersage von 66
+# Grund für den Namen 62
+
+# biophysikalisches Machine Learning 61–83
+
+## Featurization 68–74
+
+### atomare Featurization 74
+
+### Grid Featurization 69–74
+
+### PDBBind-Fallstudie 74–82
+
+#### Merkmale für den PDBBind-Datensatz entwickeln 78–82
+
+### Proteinstruktur 63–68
+
+#### Primer zur Proteinbindung 67
+
+#### Proteinsequenz 65
+
+##### rechnergestützte Vorhersage von 66
 
 # Biowissenschaften
 
@@ -4684,7 +4550,7 @@ Proteinstruktur 63–68
 
 ### Trainings-, Validierungs- und Testdatensätze, die in DeepChem zur Vorhersage der Toxizität von Molekülen verwendet werden 29
 
-# Trainingsdatensatz 15
+## Trainingsdatensatz 15
 
 ### Verarbeiten und Bereinigen, Herausforderungen von 31
 
@@ -4722,21 +4588,21 @@ Proteinstruktur 63–68
 
 ### Einführung in 9–24
 
-# Hyperparameteroptimierung 19
+#### Hyperparameteroptimierung 19
 
-### lineare Modelle 10–12
+#### lineare Modelle 10–12
 
-### mathematische Funktionen für die meisten Fragestellungen 9
+#### mathematische Funktionen für die meisten Fragestellungen 9
 
-### mehrlagige Perzeptronen 12–15
+#### mehrlagige Perzeptronen 12–15
 
-### Modelle trainieren 15–17
+#### Modelle trainieren 15–17
 
-### Modelle, andere Arten von 20–23
+#### Modelle, andere Arten von 20–23
 
-### Regularisierung 18
+#### Regularisierung 18
 
-# Validierung 17
+#### Validierung 17
 
 ### Entwickeln von Antibiotika für gramnegative Bakterien 113
 
@@ -4746,13 +4612,13 @@ Proteinstruktur 63–68
 
 ### in der Genomik 85–99
 
-## Bindung des Transkriptionsfaktors 90–93
+#### Bindung des Transkriptionsfaktors 90–93
 
-#### einzigartige Eignung von Deep Learning 89
+##### einzigartige Eignung von Deep Learning 89
 
-# RNA-Interferenz 96–99
+#### RNA-Interferenz 96–99
 
-## Zugänglichkeit von Chromatin 93–96
+#### Zugänglichkeit von Chromatin 93–96
 
 ### in der Medizin 127–146
 
@@ -4782,9 +4648,6 @@ Proteinstruktur 63–68
 
 ## Deep Neural Networks 1
 
-
-
-
 # 索引
 
 ## A
@@ -4808,8 +4671,11 @@ Proteinstruktur 63–68
 **实现**
 
 * *细胞分割的实现见* 122–124
+
 * *细胞计数的实现见* 118–120
+
 * *用于糖尿病视网膜病变的卷积模型实现见* 142
+
 * *用于生成新分子的 VAE 模型实现见* 153
 
 **开发分子特征** 51–53
@@ -4818,18 +4684,18 @@ Proteinstruktur 63–68
 
 **使用带有网格特征化的 MLP 预测蛋白-配体结合，替代方案** 80
 
-**糖尿病视网膜病变模型，解释预测** 162–164
-
 **MultitaskRegressor 模型** 79
 
 **RdkitGridFeaturizer** 70
 
 * *为 PDBBind 特征化创建* 78
+
 * *实现细节* 73
 
 **训练 MNIST 模型，案例研究** 34–41
 
 * *用于 MNIST 的卷积架构* 36–41
+
 * *MNIST 数字识别数据集* 35
 
 **训练预测分子毒性的模型** 27–34
@@ -4849,8 +4715,11 @@ Proteinstruktur 63–68
 **糖尿病视网膜病变** 140–144
 
 * *处理高分辨率图像* 142
+
 * *在 DeepChem 中实现用于...的卷积模型* 142
+
 * *糖尿病视网膜病变 Kaggle 数据集* 141
+
 * *使用显著性映射解释模型预测* 162–164
 
 **数字成瘾** 140
@@ -4862,9 +4731,13 @@ Proteinstruktur 63–68
 **DNA** 85
 
 * *实际操作功能描述* 87–90
+
 * *DNA、RNA 和蛋白质* 85–87
+
 * *遗传学与基因组学* 85
+
 * *RNA 与...的相互作用* 5
+
 * *...的可及性* 94
 
 **Dropout** 19, 55, 79, 92, 93, 98, 168, 171
@@ -4888,14 +4761,19 @@ Proteinstruktur 63–68
 **电子显微镜** 108
 
 * *微观系统的惊人图像* 108
+
 * *现代透射电子显微镜的组件* 108
 
 **电子健康记录 (EHR)** 130–133
 
 * *大型 EHR 数据库的危害* 132
+
 * *ICD-10 编码与...* 131
+
 * *对医生无帮助* 133
+
 * *将 EHR 数据转换为 FHIR 格式* 131
+
 * *将无监督学习方法用于 EHR 数据* 132
 
 **推荐系统** 2
@@ -4931,6 +4809,7 @@ Proteinstruktur 63–68
 **专家系统** 127
 
 * *...的局限性* 128
+
 * *未获广泛接受* 129
 
 **ExponentialDecay (DeepChem)** 154
@@ -4942,26 +4821,36 @@ Proteinstruktur 63–68
 **特征化** 28
 
 * *生物物理* 68–74
+
     * *原子特征化* 74
+
     * *网格特征化* 69–74
+
 * *用于分子* 191
+
 * *GraphConv，DeepChem 特征提取器* 197
+
 * *为 PDBBind 数据集开发特征* 78–82
+
     * *创建 RdkitGridFeaturizer* 78
+
 * *开发分子特征* 51–53
+
     * *从数据中学习* 53
+
     * *连接指纹 (ECFPs)* 52
+
     * *分子描述符* 53
+
     * *使用 DeepChem 将 SMILES 字符串转换为图卷积* 55
+
 * *分子* 43
 
 **错误**
 
 * *多种因素导致模型预测中出现...* 169
+
 * *预测中的实际误差与模型不确定性估计的对比* 171
-
-
-
 
 # Mittlere quadratische Wurzel (RMSE) 168
 
@@ -5037,11 +4926,13 @@ Proteinstruktur 63–68
 
 #### Anwendungen in den Biowissenschaften 151–153
 
-### Proteindesign 152
 
-### Tool für wissenschaftliche Entdeckungen 152
 
-### Zukunft generativer Modellierung 152
+# Proteindesign 152
+
+# Tool für wissenschaftliche Entdeckungen 152
+
+# Zukunft generativer Modellierung 152
 
 ## Arbeiten mit 153
 
@@ -5182,9 +5073,6 @@ Proteinstruktur 63–68
 #### Vorhersagen erklären 161–164
 
 # ionische Bindung
-
-
-
 
 # 索引
 
@@ -5406,9 +5294,6 @@ Metriken 40, 130
 
 Bewerten, wie gut ein Modell funktioniert 33
 
-
-
-
 # Matthews-Korrelationskoeffizient (MCC) 183
 
 nahezu menschliche Genauigkeit und 137
@@ -5513,9 +5398,11 @@ MNIST-Ziffernerkennungsdatensatz, Trainieren eines Modells auf 35–41
 
 #### Eingaben optimieren 165–168
 
-#### Interpretierbarkeit, Erklärbarkeit und reale Konsequenzen 172
 
-#### Vorhersagen erklären 161–164
+
+# Interpretierbarkeit, Erklärbarkeit und reale Konsequenzen 172
+
+## Vorhersagen erklären 161–164
 
 ### linear 10–12
 
@@ -5563,7 +5450,7 @@ MNIST-Ziffernerkennungsdatensatz, Trainieren eines Modells auf 35–41
 
 ### mit VAE 153
 
-### Untersuchen von SMILES-Strings, die darstellen 156
+### Untersuchen von `SMILES-Strings`, die darstellen 156
 
 ### generative Modelle molekularer Strukturen 151
 
@@ -5603,7 +5490,7 @@ MRT-Scans 138
 
 ### Deep Learning in der Signalverarbeitung 139
 
-MultitaskClassifier, DeepChem-Modell 32
+`MultitaskClassifier`, DeepChem-Modell 32
 
 Anpassung 32
 
@@ -5616,8 +5503,6 @@ Neural Networks 21
 *siehe auch* Convolutional Neural Networks
 
 Erstellen zur Vorhersage der Protein-Ligand-Bindung 79
-
-
 
 # Mehrlagige Perzeptronen und ihre Varianten 13
 
@@ -5673,11 +5558,11 @@ Erstellen zur Vorhersage der Protein-Ligand-Bindung 79
 
 # Decoy_df-DataFrame untersuchen 177
 
-# Erstellen eines neuen DataFrame für SMILES-Strings, IDs und Labels für inaktive Moleküle 180
+# Erstellen eines neuen DataFrame für `SMILES-Strings`, IDs und Labels für inaktive Moleküle 180
 
 # Hinzufügen berechneter Eigenschaften aktiver und inaktiver Moleküle zu 177
 
-# Option shape gibt die Anzahl an Zeilen und Spalten zurück 180
+# Option `shape` gibt die Anzahl an Zeilen und Spalten zurück 180
 
 # Parameter
 
@@ -5773,7 +5658,7 @@ Erstellen zur Vorhersage der Protein-Ligand-Bindung 79
 
 # NumpyDataset-Objekt 26
 
-# Script rd_filters.py 187
+# Script `rd_filters.py` 187
 
 # PyTorch 25
 
@@ -5827,13 +5712,11 @@ Erstellen zur Vorhersage der Protein-Ligand-Bindung 79
 
 # Receiver Operating Characteristic 33
 
-# *Siehe auch* ROC AUC Score
+*Siehe auch* ROC AUC Score
 
 # Rechnergestützte Assays in der Mikroskopie 124
 
 # Rechnergestützte Vorhersage von Proteinstrukturen 66
-
-
 
 # Vorhersage von Strukturen für Protein-Ligand-Komplexe 76
 
@@ -5913,7 +5796,7 @@ einschließlich der Zugänglichkeit von Chromatin 95
 
 # Signalverarbeitung, Deep Learning in der 139
 
-Simplified Molecular-Input Line-Entry System *siehe* SMILES-Strings
+Simplified Molecular-Input Line-Entry System *siehe* `SMILES-Strings`
 
 siRNA *siehe* short interfering RNA
 
@@ -5963,15 +5846,19 @@ Entwicklungen, die von Deep Learning vorangetrieben werden 2
 
 # Struktur-Aktivitäts-Beziehungen (SARs) 3
 
-# strukturbasiertes virtuelles Screening 175
 
-# Strukturen 62
+
+# 索引
+
+## S
+
+**strukturbasiertes virtuelles Screening** 175
+
+**Strukturen** 62
 
 Bestimmung der Struktur von biomolekularen Komplexen, Schwierigkeitsgrad von 76
 
-# Sucht, digital 140
-
-# superauflösende Mikroskopie 110
+**superauflösende Mikroskopie** 110
 
 Deep-Learning-Methoden für 111
 
@@ -5979,94 +5866,91 @@ Methoden 110
 
 Nahfeldmethoden 111
 
+**Sucht, digital** 140
+
 ## T
 
-# Tanimoto-Koeffizient 194
+**Tanimoto-Koeffizient** 194
 
-# TensorFlow
+**TensorFlow**
 
 mit DeepChem 25
 
 tf.data-Dientsprogramme zum Laden von Datensätzen 27
 
-# Testdatensatz 17
+**Testdatensatz** 17
 
 TFs *siehe* Transkriptionsfaktor (TFs)
 
-# Therapeutika, Lernmodelle als 139
+**Therapeutika, Lernmodelle als** 139
 
-# Thymin (T) 86
+**Thymin (T)** 86
 
 Ersatz durch Uracil in der DNA-Transkription zur RNA 96
 
-# tiefe Modelle 14
+**tiefe Modelle** 14
 
 vs. flache Modelle 14
 
-# Toxizität von Molekülen, Trainieren eines Modells zur Vorhersage 27–34
+**Toxizität von Molekülen, Trainieren eines Modells zur Vorhersage** 27–34
 
-# Trainingsdatensatz 15
+**Trainingsdatensatz** 15
 
-# Transfer-RNAs (tRNAs) 88
+**Transfer-RNAs (tRNAs)** 88
 
-# Transformer 31
+**Transformer** 31
 
-# Transkriptionsfaktor (TFs) 87
+**Transkriptionsfaktor (TFs)** 87
 
 Konvolutionsmodell für die TF-Bindung Eingaben optimieren 165–168
 
 TF-Bindung vorhersagen 90–93
 
-# Transmissionselektronenmikroskop 108
+**Transmissionselektronenmikroskop** 108
 
 ## U
 
-# Überlegungen zum Verlust von Arbeitsplätzen für Deep Learning in der Medizin 145
+**Überlegungen zum Verlust von Arbeitsplätzen für Deep Learning in der Medizin** 145
 
-# Übersetzung, Entwicklungen durch Deep Learning 2
+**Übersetzung, Entwicklungen durch Deep Learning** 2
 
-# U-Net-Architektur für die Bildsegmentierung 122
+**U-Net-Architektur für die Bildsegmentierung** 122
 
-# Trainieren eines U-Net 124
+**Trainieren eines U-Net** 124
 
-# universeller Approximator 14
+**universeller Approximator** 14
 
-# Unsicherheit, vorhersagen 168–172
+**Unsicherheit, vorhersagen** 168–172
 
-# unüberwachtes Lernen
+**unüberwachtes Lernen**
 
 mit EHR-Daten 132
 
-# Uracil (U) 96
+**Uracil (U)** 96
 
 ## V
 
 VAEs *siehe* Variational Autoencoder (VAEs)
 
-# Validierung 17
+**Validierung** 17
 
-# Validierungsdatensatz 20
+**Validierungsdatensatz** 20
 
-# van Leeuwenhoek, Anton 103
+**van Leeuwenhoek, Anton** 103
 
-# Variational Autoencoder (VAEs) 147–149
+**Variational Autoencoder (VAEs)** 147–149
 
 Trainieren zum Erzeugen neuer Moleküle 153
 
 vs. GANs 150
 
-# Vektoren 9
+**Vektoren** 9
 
 Bias in linearen Modellen 10
 
-# VGG-Architektur 133
+**VGG-Architektur** 133
 
-
-
-
-# 索引
-
-## V
+## V (中文索引)
 
 **生成式视频** 153
 
@@ -6157,7 +6041,7 @@ Bias in linearen Modellen 10
 
 ## Bharath Ramsundar
 
-**Bharath Ramsundar** 是 Datamined 的联合创始人兼 CTO，该公司是一家区块链企业，致力于实现大规模生物数据集的创建。Datamined 旨在生成加速生物技术领域持续 AI 热潮所必需的数据集。Bharath 还是 `DeepChem.io` 的首席开发者和创始人，这是一个基于 `TensorFlow` 的开源软件包，旨在让制药药物发现领域也能使用深度学习。他也是 `MoleculeNet 基准套件` 的联合创始人。
+**Bharath Ramsundar** 是 `Datamined` 的联合创始人兼 CTO，该公司是一家区块链企业，致力于实现大规模生物数据集的创建。`Datamined` 旨在生成加速生物技术领域持续 AI 热潮所必需的数据集。Bharath 还是 `DeepChem.io` 的首席开发者和创始人，这是一个基于 `TensorFlow` 的开源软件包，旨在让制药药物发现领域也能使用深度学习。他也是 `MoleculeNet 基准套件` 的联合创始人。
 
 Bharath 拥有加州大学伯克利分校 EECS 和数学专业的 B.A. 和 B.S. 学位，并曾作为数学专业的毕业生代表。最近，他在斯坦福大学 Pande 课题组的资助下，在斯坦福大学完成了计算机科学博士学位的所有课程（仅剩论文未完成）。期间他获得了赫兹基金会奖学金，这是科学领域最负盛名的研究生奖学金。
 
@@ -6175,13 +6059,7 @@ Pat 是《药物化学杂志》编辑委员会成员，此前曾在《分子信�
 
 **Vijay Pande, PhD,** 是 `Andreessen Horowitz` 的活跃合伙人。他领导针对位于生物学与计算机科学交叉领域公司的风险投资，包括将计算、机器学习和人工智能应用于生物学和医疗保健，以及应用新的变革性科学进展。他还是斯坦福大学生物工程学兼职教授，为开创性的计算方法及其在医学和生物学中的应用提供指导，这已催生出 200 多篇出版物、两项专利和两种新型药物疗法。
 
-
-
-
-
-# Vijay
-
-Vijay 是 Folding@Home 分布式计算项目的创始人，该项目致力于疾病研究，突破了计算机科学技术（如分布式系统、机器学习和异构计算架构）在生物学和医学领域的开发与应用边界，涵盖基础研究和新疗法开发两大方向。他还是 Globavir Biosciences 的联合创始人，在那里他将自己在斯坦福大学和 Folding@Home 的研究成果转化为一家成功的初创公司，并发现了治疗登革热和埃博拉病毒的药物。少年时期，他是电子游戏初创公司 Naughty Dog Software（即《Crash Bandicoot》（古惑狼）的开发商）的第一位员工。
+Vijay 是 `Folding@Home` 分布式计算项目的创始人，该项目致力于疾病研究，突破了计算机科学技术（如分布式系统、机器学习和异构计算架构）在生物学和医学领域的开发与应用边界，涵盖基础研究和新疗法开发两大方向。他还是 `Globavir Biosciences` 的联合创始人，在那里他将自己在斯坦福大学和 `Folding@Home` 的研究成果转化为一家成功的初创公司，并发现了治疗登革热和埃博拉病毒的药物。少年时期，他是电子游戏初创公司 `Naughty Dog Software`（即《Crash Bandicoot》（古惑狼）的开发商）的第一位员工。
 
 # 版权页
 
@@ -6198,4 +6076,3 @@ O'Reilly 封面上的许多动物都濒临灭绝，但每一种都对维持地�
 本书封面设计由 Karen Montgomery 和 Michael Oreal 完成，他们使用了 *Wood's Illustrated Natural History* 中的一幅版画。封面使用 Gilroy 和 Guardian Sans 字体，正文使用 Linotype Birka，标题使用 Adobe Myriad Condensed，等宽代码字体使用 LucasFonts TheSans Mono Condensed。
 
 ![image](http://www.dpunkt.de/rez)
-

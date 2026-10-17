@@ -1,169 +1,33 @@
+
 # PHP MySQL Web 开发 Dummies 全书初学者指南
-
-
 
 ![Image 1](img/index-1_1.jpg)
 
-
-
-
-
-
-
-
-
-
-
 ## 作者致谢
+
 首先，我想向开源社区表示谢意。如果没有那些慷慨花时间回答初学者问题，我永远无法学会这软件软件。当然，我想感谢让这一切可能的家人和朋友。
 
 ## 献词
+
 本书献给每一个觉得它好用的人。
 
 ## 关于作者
+
 **Janet Valade** 是 `PHP & MySQL For Dummies` 的作者，该书已出版第三版。此外，Janet 还编写了 *Spring into Dynamic Websites* 并合著了 *Mastering Web Design*。她在计算机领域拥有 20 多年的经验。在此之前，Janet 曾在大学环境中担任系统分析师，负责数据存档的安装和运行。在任期间，她开发并举办了各种技术主题的研讨会。
 
 ## 出版者致谢
+
 我们对这本书感到自豪；请通过我们的在线注册表单 [www.dummies.com/register/](http://www.dummies.com/register/) 向我们提供反馈。帮助本书上市的人员包括：
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ### 使用 `Mail_IMAP` 扩展 (465)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 例如，这一行是长代码块中的第 35 行，它在右边栏有一个行号标注：
-
 
 本小书描述了如何编写执行你网站所需任务的 `PHP` 脚本。你将了解到如何显示和处理表单，这是动态 Web 网站上经常执行的任务。我们提供了并解释了常用应用程序示例脚本，例如登录页面、在线目录和购物车。
 
 ## 伴随网站
 
 我们将书中展示的大多数代码示例放在 Dummies.com 网站上，这样你就不需要输入长代码块。将你的浏览器指向 `www.dummies.com/go/php&mysqlaio` 来下载代码样本。
-
-
-
 
 # 设置你的开发环境
 
@@ -172,11 +36,17 @@
 PHP 和 MySQL 是构建动态 Web 应用程序的流行组合。PHP 是一种专为 Web 设计的脚本语言，其特性使得 Web 设计和编程变得更容易。MySQL 是一种快速、易用的 RDBMS（关系型数据库管理系统），用于许多网站。MySQL 和 PHP 组合在一起具有多个优势：
 
 - ✦**它们是免费的。** 在性价比方面，免费是无可比拟的。
+
 - ✦**它们面向 Web。** 两者都是专为网站使用而设计的。两者都有一系列专注于构建动态网站的功能。
+
 - ✦**它们易于使用。** 两者的设计目标都是为了快速建立网站。
+
 - ✦**它们速度很快。** 两者的设计都以速度为主要目标。它们共同提供了向用户交付动态 Web 页面的最快方法之一。
+
 - ✦**它们之间通信良好。** `PHP` 内置了与 `MySQL` 通信的特性。你不需要了解技术细节；将其交给 `PHP` 即可。
+
 - ✦**两者都有广泛的支持。** 两者拥有庞大的用户群。由于它们经常成对使用，因此通常拥有相同的用户群。许多人可以提供帮助，包括电子邮件讨论列表上具有共同使用 `MySQL` 和 `PHP` 经验的人。
+
 - ✦**它们是可以自定义的。** 两者都是开源的，因此程序员可以修改 `PHP` 和 `MySQL` 软件以适应自己的特定环境。
 
 在构建 Web 应用程序之前，你需要设置好开发环境。在本章中，我们将介绍你需要的工具以及如何获取这些工具。
@@ -186,7 +56,9 @@ PHP 和 MySQL 是构建动态 Web 应用程序的流行组合。PHP 是一种专
 为了搭建你的动态网站，你需要访问以下三个软件工具：
 
 - ✦**Web 服务器**：向世界传送你的 Web 页的软件。
+
 - ✦`PHP`：你将用它编写程序为你的网站提供动态功能的脚本语言。
+
 - ✦`MySQL`：用于存储你的 Web 数据库应用程序信息的 RDBMS。
 
 ## 为你的网站选择托管主机
@@ -202,16 +74,14 @@ PHP 和 MySQL 是构建动态 Web 应用程序的流行组合。PHP 是一种专
 然而，如果你对互联网连接不是足够了解，你需要在其他地方进行研究。大多数人不会在自己的地方托管网站。Web 托管通常由以下者之一提供：
 
 - ✦**公司：** 也许你正在为一家公司创建一个网站，无论是作为员工还是承包商。公司的 IT 部门通常提供此类服务。
+
 - ✦**教育机构：** 学校或大学允许学生、教职员工和其他机构在其计算机上放置网站。
+
 - ✦**Web 托管公司：** 你可以付费将网站存放在 Web 托管公司的计算机上。
 
 `PHP` 和 `MySQL` 有许多选项，但 IT 部门设置的方式可能不适合你。如果你需要更改 `PHP` 或 `MySQL` 选项，你需要请求 IT 进行更改；你无法自己更改。例如，安装 `PHP` 时必须启用 `MySQL` 支持，因此如果 `PHP` 与 `MySQL` 的通信不正常，IT 可能需要重新安装启用了 `MySQL` 支持的 `PHP`。
 
 随着需求的产生，你会经常与 IT 人员打交道。例如，你可能需要更改选项，可能需要信息帮助解释错误消息，或者你可能需要报告 Web 软件的问题。因此，与 IT 人员建立良好的关系会让你的生活更轻松。经常给他们带些美味的饼干和甜甜圈。
-
-
-
-
 
 # 为你的网站选择主机
 
@@ -224,6 +94,7 @@ PHP 和 MySQL 是构建动态 Web 应用程序的流行组合。PHP 是一种专
 ## Web 托管公司
 
 ## Web 托管
+
 此外，许多网站允许你输入域名并查看其注册所有者。这些网站使用一个名为 `whois` 的工具进行域名数据库搜索。在 Google 上搜索域名 `whois` 的结果超过了 1700 万次。你可以进行 `whois` 搜索的地方有 `Allwhois.com` (`www.allwhois.com`) 和 `BetterWhois.com` (`www.betterwhois.com`)。
 
 每个域名必须是唯一的才能作为地址。因此，域名注册系统确保了没有两个位置使用相同的域名。只要符合标准，任何人都可以注册任何域名。在 Google 上搜索域名的结果超过了 8500 万次。
@@ -241,26 +112,34 @@ PHP 和 MySQL 是构建动态 Web 应用程序的流行组合。PHP 是一种专
 在为你的网站寻找 Web 托管公司时，请确保它提供以下内容：
 
 - **PHP 和 MySQL：** 并非所有公司都提供这些工具。你可能需要为可以使用 `PHP` 和 `MySQL` 的网站支付更多费用；有时你必须为 `MySQL` 数据库支付额外费用。
+
 - **较新版本的 PHP：** 有时提供的 `PHP` 版本不是最新版本。在本文写作时，`PHP 6` 即将发布。然而，即使在发布后，你可能也难以找到提供 `PHP 6` 的 Web 托管公司。事实上，你可能会发现大多数 Web 托管公司仍然提供 `PHP 4`，尽管我们希望这种情况很快 way。请花时间寻找一家至少提供 `PHP 5` 的 Web 托管公司，如果可用的话，最好是 `PHP 6`。一些 Web 托管公司提供 `PHP 4`，但会为要求的客户提供 `PHP 5`（或 `6`）。
 
 选择 Web 托管公司时的其他考虑因素还有：
 
 - **可靠性：** 你需要一个可以依赖的 Web 托管公司——一个不会明天破产消失，且运行在用口香胶和铁丝固定在一起的旧计算机上的公司。如果公司的停机时间超过运行时间，为了省去麻烦，去找其他地方。
+
 - **速度：** 下载缓慢的网页是一个问题，因为用户会失去不性并去他处。页面缓慢可能是因为 Web 托管公司创业时资金紧张，缺乏良好的设备，或者由于公司太成功，导致设备被新客户压力。无论如何，交付网页太慢的 Web 托管公司都是不可接受的。
+
 - **技术支持：** 一些 Web 托管公司没有人可以回答问题或排除故障。技术支持通常只通过电子邮件提供，如果响应时间短，这是可以接受的。有时你可以测试公司支持的质量。
+
 - **备份：** `备份` 是你的网页文件和数据库的副本，存储以防文件或数据库丢失。你想要确保公司对你的应用程序进行定期、频繁的备份。你还想知道在出现问题后，需要多久通过备份将你的网站恢复正常运行。
+
 - **功能：** 根据你网站的用途选择功能。通常，托管公司会将功能组合成方案——功能越多，成本越高。需要考虑的一些功能包括：
+
     - **磁盘空间：** 你的网站需要多少 MB 或 GB 的磁盘空间？媒体文件（如图形或音乐文件）可能很大。
+
     - **数据传输：** 一些托管公司会向用户收取发送网页的费用。如果你预计网站会有大量流量，这项成本应该是一个考虑因素。
+
     - **电子邮件地址：** 许多托管公司为你的网站提供若干电子邮件地址。例如，如果你的网站是 `LolaDesigner.com`，你可以允许用户向 `me@LolaDesigner.com` 发送电子邮件。
+
     - **软件：** 托管公司提供各种 Web 开发软件。`PHP` 和 `MySQL` 是我们讨论的软件。一些托管公司可能提供其他数据库，某些可能提供其他开发工具，如 FrontPage 扩展、购物车软件和信用卡验证。
+
     - **统计数据：** 通常你可以获得有关你网站流量的统计数据，例如用户数量、访问时间、按页面访问等。
+
 - **域名：** 每个网站都有一个浏览器用于查找该站的域名。每个域名都通过小额费用注册，以便只有一个站点可以使用它。一些 Web 托管公司允许你使用独立注册的域名，一些则要求你使用他们的域名。例如，假设你的名字是 `Lola Designer`，你希望你的网站是 `LolaDesigner.com`。一些 Web 托管公司允许你的域名为 `LolaDesigner.com`。通常情况下，使用你自己的域名会让你的网站看起来更专业。
 
-
-
-
-对于大多数 Web 托管公司，你对自己的 Web 环境没有控制权。Web 托管公司提供的是对其最有利的环境——可能是为了便于维护、低成本以及最大限地减少客户流失。你的环境大部分都由公司设定，你无法进行更改。你只能请求公司进行更改。公司通常不愿更改一个已经正常运行的设置，因为担心更改可能会给公司系统或其他客户带来问题。
+对于大多数 Web 托管公司，你对自己的 Web 环境没有控制权。Web 托管公司提供的是对其最有利的环境——可能是为了便于维护、低成本以及最大限度地减少客户流失。你的环境大部分都由公司设定，你无法进行更改。你只能请求公司进行更改。公司通常不愿更改一个已经正常运行的设置，因为担心更改可能会给公司系统或其他客户带来问题。
 
 对 MySQL 数据库的访问是通过一套账户和密码系统控制的，这些系统必须手动维护，从而给托管公司带来了额外的工作。由于由于原因，许多托管公司要么不提供 MySQL，要么对其收取额外费用。此外，PHP 有许多选项可以设置、取消或赋予各种值。托管公司根据其需求决定选项设置，而这些设置对你的目的可能是理想的，也可能不理想。
 
@@ -279,14 +158,19 @@ PHP 和 MySQL 是构建动态 Web 应用程序的流行组合。PHP 是一种专
 为了使用 Web 软件工具并构建动态 Web 网站，你需要从 Web 托管主机获取以下信息：
 
 - **Web 页面的位置：** 你需要知道将 页面文件放在哪里。托管主机人员需要提供安装文件所需的目录的名称和位置。此外，你还需要知道如何安装文件——复制、通过 FTP（文件传输协议）传输或使用其他方法。你可能需要用户 ID 和密码来安装文件。
+
 - **默认文件名：** 当用户将浏览器指向 URL 时，系统会向他们发送文件。Web 服务器设置为当 URL 指向目录时发送一个具有特定名称的文件。自动发送的文件是 `default file`（默认文件）。通常默认文件被命名为 `index.htm` 或 `index.html`，但有时也会使用其他名称，如 `default.htm`。你需要知道你的默认文件应该命名为什么。
+
 - **MySQL 账户：** 对 MySQL 数据库的访问通过账户名和密码系统控制。提供 Web 主机的组织会为你创建一个具有适当权限的 MySQL 账户，并给你 MySQL 账户名和密码。（MySQL 账户在第三书中有详细介绍。）
+
 - **MySQL 数据库的位置：** MySQL 数据库不需要与 Web 网站位于同一台计算机上。如果 MySQL 数据库位于 Web 网站之外的计算机上，你需要知道查找数据库的 `hostname`（主机名，例如 `thor.companyname.com`）。
+
 - **PHP 文件扩展名：** 安装 PHP 时，Web 服务器会被指令为在具有特定扩展名的文件中寻找 PHP 语句。通常使用的扩展名是 `.php` 或 `.phtml`，但也可以使用其他扩展名。没有正确扩展名的文件中的 PHP 语句将无法处理。找出你的 PHP 程序应该使用哪种扩展名。
 
 当你知道你的 Web 网站将位于何处时，你需要设置你的开发环境。你不想在访问者查看它的位置开发你的 Web 网站，因为你不希望他们在页面完成并达到完美之前看到它们。以下是开发 Web 页面的两个常用地方：
 
 - **在托管 Web 网站的计算机上：** 你可以在向世界提供 Web 网站的同一台计算机上创建 Web 页面文件。为此，请为开发创建一个子目录。当文件完成并准备好公开时，将文件传输到公众查看 Web 页面的主 Web 网站目录。
+
 - **在本地计算机上：** 你可以设置一台本地计算机进行开发。你可以在本地计算机上安装 Web 网站软件。然后你在你的计算机上创建 Web 页面文件，并通过你的本地 Web 服务器查看它们。当文件让你满意后，你可以将它们传输到托管你 Web 网站的计算机上的公共 Web 网站。
 
 在本地计算机上开发很常见。你可以使用你熟悉的编辑器和软件。有些人使用文本编辑器，另一些人使用集成开发环境（IDE），例如 `Dreamweaver`。然而，要在本地机器上开发，你需要在上面安装 Web 服务器、PHP 和 MySQL。本书剩余章节将提供安装 Web 服务器、PHP 和 MySQL 的详细说明。
@@ -300,19 +184,24 @@ PHP 和 MySQL 是构建动态 Web 应用程序的流行组合。PHP 是一种专
 在你设置好计算机后，你需要安装 Web 服务器。你的第一步是决定安装哪个 Web 服务器。答案几乎总是 Apache。Apache 具有以下优势：
 
 - **它是免费的：** 我们还需要说什么呢？
+
 - **它在多种操作系统上运行：** Apache 运行在 Windows、Linux、Mac OS、FreeBSD 和大多数 Unix 变上。
+
 - **它是受欢迎的：** 根据 `http://news.netcraft.com/archives/web_server_survey.html` 和 `www.securityspace.com/s_survey/data/` 的调查，大约有 60% 的 Web 网站使用 Apache。如果它运行不好，这就不可能是真的。这意味着大量的用户群体可以提供帮助。
+
 - **它是可靠的：** 只要你的计算机运行，Apache 就会运行。Apache 的紧急问题非常罕见。
+
 - **它是可的：** 开源许可允许程序员修改 Apache 软件，根据需要添加或修改模块以适应他们自己的环境。
+
 - **它是安全的：** 你可以找到与 Apache 配合运行的免费软件将其转换为 SSL（安全套接层）服务器。如果你将该网站用于电子商务，安全是一个至关的问题。
 
 在安装大多数 Linux 发行版时，会自动安装 Apache。所有最新的 Mac 都预装了 Apache。然而，你可能需要安装更新版本的 Apache。Apache 提供了一个适用于 Windows 安装程序，可以为你安装并配置 Apache。截至本文编写，Apache 提供三个版本：1.3、2.0 和 2.2。
 
-
-
 org）提供了信息、软件下载、不断更新的详尽文档以及各种操作系统的安装说明。
 
-还有其他 Web 服务器可供选择微软提供了 `IIS`（互联网信息服务），它是互联网上第二流行的 Web 服务器，约占 27% 的网站。太阳微系统公司（Sun Microsystems）提供了一个 Web 服务器，但其服务的互联网份额不到 3%。虽然还有其他 Web 服务器，但它们的用户群更小。
+
+
+还有其他 Web 服务器可供选择。微软提供了 `IIS`（互联网信息服务），它是互联网上第二流行的 Web 服务器，约占 27% 的网站。太阳微系统公司（Sun Microsystems）提供了一个 Web 服务器，但其服务的互联网份额不到 3%。虽然还有其他 Web 服务器，但它们的用户群更小。
 
 ## 安装 MySQL
 
@@ -328,13 +217,11 @@ org）提供了信息、软件下载、不断更新的详尽文档以及各种�
 
 你可能需要也可能不需要安装 `PHP`。与 `MySQL` 一样，Linux 或 Mac OS 上通常已经安装了 `PHP`。有时它已安装但尚未激活。然而，已安装的版本可能是旧版本，在这种情况下，你应该安装较新版本。本微型书籍的第 2 章提供了检查 `PHP` 是否已安装以及确定安装了哪个版本的说明。
 
-### 第 1 章
-
-### 跟进 PHP 和 MySQL 的变化
+## 跟进 PHP 和 MySQL 的变化
 
 `PHP` 以 Zip 包格式提供给 Windows，只需解压到正确位置即可。Linux 通过 `RPMs` 提供 `PHP`。你可以通过 `PKG` 文件为 Mac OS 获取 `PHP`。安装 `PHP` 后，你需要配置你的 Web 服务器来处理 `PHP` 代码。本微型书籍的第 2 章提供了安装 `PHP` 和配置你的 Web 服务器环境的说明。
 
-### 获取软件帮助
+## 获取软件帮助
 
 `Apache`、`PHP` 和 `MySQL` 是开源软件。当你遇到问题时，你没有可以拨打的电话号码，但这并不意味着你无法获得帮助。开源软件的人们互相帮助。
 
@@ -342,16 +229,15 @@ org）提供了信息、软件下载、不断更新的详尽文档以及各种�
 
 你可以在以下位置加入邮件列表：
 
-✦ `www.php.net/mailing-lists.php`
-
-✦ `http://lists.mysql.com`
-✦ `http://httpd.apache.org/lists.html`
+- `www.php.net/mailing-lists.php`
+- `http://lists.mysql.com`
+- `http://httpd.apache.org/lists.html`
 
 邮件列表还有可搜索的问答存档。你极不可能是第一个遇到这个问题的人，所以你很可能会在存档中找到已经被解答的问题。
 
-加入邮件列表，这些列表通常流量很大。当你刚接触 `PHP` 和 `MySQL` 时，讨论列表上的大量邮件会将非常有价值的信息带入你的电子邮箱箱；通过阅读这些信息，你可以学到很多。很快，你可能就能根据自己的经验来帮助他人了。
+加入邮件列表，这些列表通常流量很大。当你刚接触 `PHP` 和 `MySQL` 时，讨论列表上的大量邮件会将非常有价值的信息带入你的电子邮箱；通过阅读这些信息，你可以学到很多。很快，你可能就能根据自己的经验来帮助他人了。
 
-### 跟进 PHP 和 MySQL 的变化
+## 跟进 PHP 和 MySQL 的变化
 
 `PHP` 和 `MySQL` 是开源软件。如果你只使用过大型软件发行商（如 `Microsoft`、`Corel` 或 `Adobe`）的软件，你会发现开源软件是一个完全不同的物种。它由一组程序员开发，他们在业余时间编写代码，为了乐趣且免费。没有公司办公室。
 
@@ -364,19 +250,22 @@ org）提供了信息、软件下载、不断更新的详尽文档以及各种�
 ## 第 2 章：安装 PHP
 
 ### 本章内容
-* 检查是否需要安装 PHP
-* 在 Windows、Mac OS 或 Linux 上安装 PHP
-* 配置 PHP
-* 测试 PHP
-* 激活 MySQL
-* 排除 PHP 和 MySQL 安装故障
+
+- 检查是否需要安装 PHP
+- 在 Windows、Mac OS 或 Linux 上安装 PHP
+- 配置 PHP
+- 测试 PHP
+- 激活 MySQL
+- 排除 PHP 和 MySQL 安装故障
 
 # 安装 PHP
+
 你可能需要也可能不需要安装 `PHP`。与 `MySQL` 一样，`PHP` 通常已经安装了。例如，大多数最新的 Linux 和 Mac 发行版会自动安装 `PHP`。Windows 操作系统不提供 `PHP`。
 
 你可以检查是否需要安装 `PHP`。如果目前没有安装，或者你有一个需要更新的旧版本，你就需要安装 `PHP`。
 
 安装 PHP 包括以下步骤，在本章中进行了详细解释：
+
 1. 检查并确定是否需要安装 PHP。
 2. 获取 PHP 软件，通常是通过从网站下载。
 3. 安装 PHP。
@@ -386,15 +275,14 @@ org）提供了信息、软件下载、不断更新的详尽文档以及各种�
 7. 激活 MySQL 支持。
 
 ### 检查 PHP 安装
+
 要查看是否已安装 PHP，请在硬盘上搜索任何 PHP 文件：
 
-✦ **Linux/Unix/Mac:** 输入以下命令：
-
-```
-find / -name "php*"
-```
-
-✦ **Windows:** 使用查找功能（选择开始 -> 查找）搜索 `php\*`。
+- **Linux/Unix/Mac:** 输入以下命令：
+  ```
+  find / -name "php*"
+  ```
+- **Windows:** 使用查找功能（选择开始 -> 查找）搜索 `php\*`。
 
 通常情况下，Windows 电脑上没有安装 PHP。
 
@@ -404,16 +292,13 @@ find / -name "php*"
 
 你可以在本章稍后“测试 PHP”节中描述的测试程序来测试 PHP 是否就绪。该节中的测试将确定 PHP 是否已安装并告诉你你安装了哪个版本。
 
-
-
-
 自 10.3 版本以来大多数 Mac OS X 版本都预装了 PHP，但 Apache 可能没有配置好以处理 PHP 代码。如果 PHP 已经安装在你的 Mac 上但似乎无法运行，请尝试按照本章后面部分“为 PHP 配置 Web 服务器”章节中的说明进行。
 
 编辑 `httpd.conf` 文件可能是你让 PHP 运行起来唯一需要的操作。
 
 # 获取 PHP
 
-在编写本文时，有两个版本的 PHP 可用：`PHP 4` 和 `PHP 5`。当 `PHP 6` 发布后，可能一段时间内会有三个版本的 `PHP`可用。如果你是第一次安装 `PHP` 并创建你的第一个网站，你应该下载 `PHP 5`，或者在你阅读此本书时已有 `PHP 6` 的话下载 `PHP 6`。只有在你需要维护或修改带有现有代码的现有网站时，才应该安装旧版本的 `PHP`。为一个版本的 `PHP` 编写可能可能修改才能运行在另一个版本的 `PHP` 上。如果你有大量代码，可能希望在一段时间内更新代码。
+在编写本文时，有两个版本的 PHP 可用：`PHP 4` 和 `PHP 5`。当 `PHP 6` 发布后，可能一段时间内会有三个版本的 `PHP` 可用。如果你是第一次安装 `PHP` 并创建你的第一个网站，你应该下载 `PHP 5`，或者在你阅读此书时已有 `PHP 6` 的话下载 `PHP 6`。只有在你需要维护或修改带有现有代码的现有网站时，才应该安装旧版本的 `PHP`。为一个版本的 `PHP` 编写的代码可能需要修改才能运行在另一个版本的 `PHP` 上。如果你有大量代码，可能希望在一段时间内更新代码。
 
 ## 从 PHP 官网下载
 
@@ -425,7 +310,7 @@ find / -name "php*"
 
 ### 获取 Windows 版 PHP
 
-你可以轻松地从 PHP 官网 `www.php.net` 下载的二进制文件中安装 PHP。你可以下载一个包含所有必要文件的 `Zip` 压缩，或者一个可以运行以安装所有 PHP 文件的安装程序。
+你可以轻松地从 PHP 官网 `www.php.net` 下载的二进制文件中安装 PHP。你可以下载一个包含所有必要文件的 `Zip` 压缩包，或者一个可以运行以安装所有 PHP 文件的安装程序。
 
 PHP 文档建议从 `Zip` 文件安装 PHP，以便更好地理解安装过程，并在以后更方便地添加扩展。本章中的指南提供了从 `Zip` 文件安装 PHP 的说明。
 
@@ -438,7 +323,7 @@ PHP 文档建议从 `Zip` 文件安装 PHP，以便更好地理解安装过程�
 
 ### 获取 Linux 版 PHP
 
-大多数最新的 Linux 版本都包含 PHP。如果你需要安装 PHP 或升级到较新版本，大多数 Linux 发行版在它们的网站上提供了软件，你可以下载并安装到特定的 Linux 系统中。此外，大多数 Linux 系统提供了专门用于下载和安装软件的实用。例如，Fedora 提供了 `yum` 工具，可以从 Fedora 官网下载并安装软件。请参考你的 Linux 发行版的文档了解如何在你的 Linux 发行版上下载和安装软件。
+大多数最新的 Linux 版本都包含 PHP。如果你需要安装 PHP 或升级到较新版本，大多数 Linux 发行版在它们的网站上提供了软件，你可以下载并安装到特定的 Linux 系统中。此外，大多数 Linux 系统提供了专门用于下载和安装软件的实用工具。例如，Fedora 提供了 `yum` 工具，可以从 Fedora 官网下载并安装软件。请参考你的 Linux 发行版的文档了解如何在你的 Linux 发行版上下载和安装软件。
 
 在某些情况下，你可能需要手动安装 PHP。网站提供的软件可能不是最新的，或者不符合你的需求。要手动安装，你需要从 PHP 官网 `www.php.net` 下载源代码。
 
@@ -452,15 +337,15 @@ PHP 文档建议从 `Zip` 文件安装 PHP，以便更好地理解安装过程�
 
 ### 获取合一安装工具包
 
-你可以获得一些工具包，它们可以在一个程序中包含并安装 PHP、`MySQL` 和 Apache。这些工具包可以极地简化安装过程。
+你可以获得一些工具包，它们可以在一个程序中包含并安装 PHP、`MySQL` 和 Apache。这些工具包可以极大地简化安装过程。
 
 然而，提供的软件可能不包含你需要的功能和扩展。
 
 `XAMPP` 是流行的合一安装工具包，包含了 Apache、`PHP` 和 `MySQL`。它还安装了 `phpMyAdmin`，一个用于管理 `MySQL` 数据库的工具。`XAMPP` 为 Windows（包括 Vista）提供了稳定版本，并适用于多个版本的 Linux。此外，Mac 和 Solaris 也有 `XAMPP` 版本，但这些版本目前较新，测试和开发程度较少。你可以在 `www.apachefriends.org/en/xampp.html` 获取 `XAMPP`。本微型书籍第 5 章提供了使用 `XAMPP` 安装软件的说明。
 
-`WAMP5` 是一个流行的 Windows 安装包，提供了最新版本的 Apache 2.2、`PHP 5` 和 MySQL 5。像 `XAMPP` 一样，`WAMP5` 也安装了 `phpMyAdmin` 工具。`WAMP5` 网站说明它兼容 Windows Vista。`WAMP5` 不支持 Windows98/Me。你可以在 `www.en.wampserver.com` 获取 `WAMP5`。
+`WAMP5` 是一个流行的 Windows 安装包，提供了最新版本的 Apache 2.2、`PHP 5` 和 MySQL 5。像 `XAMPP` 一样，`WAMP5` 也安装了 `phpMyAdmin` 工具。`WAMP5` 网站说明它兼容 Windows Vista。`WAMP5` 不支持 Windows 98/Me。你可以在 `www.en.wampserver.com` 获取 `WAMP5`。
 
-`MAMP` 是一个适用于 Mac 安装包，为 Mac OS X 安装 Apache、`PHP` 和 `MySQL`。这个免费包在你的 Mac PowerBook 或 iMac 上安装本地服务器环境。`MAMP` 主要作为你本地计算机的 `PHP` 开发环境创建，不应作为互联网的生产服务器。你可以在 `www.mamp.info` 获取 `MAMP`。
+`MAMP` 是一个适用于 Mac 的安装包，为 Mac OS X 安装 Apache、`PHP` 和 `MySQL`。这个免费包在你的 Mac PowerBook 或 iMac 上安装本地服务器环境。`MAMP` 主要作为你本地计算机的 `PHP` 开发环境创建，不应作为互联网的生产服务器。你可以在 `www.mamp.info` 获取 `MAMP`。
 
 ## 验证下载的文件
 
@@ -472,7 +357,7 @@ PHP 官网提供了下载后验证软件的方法，作为一种安全措施，�
 
 `MD5: 6112f6a730c680a4048dbab40e4107b3`
 
-下载的 PHP 文件需要提供与下载页面显示的相同 MD5 签名。你使用电脑上的软件来检查下载文件的 MD5 签名。你的 Linux 或 Mac 系统包含了检查 MD5 签名的软件。在 Windows 上，你可能需要下载并安装 MD5 软件。你可以在 `www.fourmilab.ch/md5` 找到检查 MD5 签软件。
+下载的 PHP 文件需要提供与下载页面显示的相同 MD5 签名。你使用电脑上的软件来检查下载文件的 MD5 签名。你的 Linux 或 Mac 系统包含了检查 MD5 签名的软件。在 Windows 上，你可能需要下载并安装 MD5 软件。你可以在 `www.fourmilab.ch/md5` 找到检查 MD5 签名软件。
 
 你可以在命令行提示符（如 Windows 中的命令行窗口）检查下载文件的 MD5 签名。你可能位于文件所在的目录。要检查 MD5 签名，输入：
 
@@ -484,23 +369,19 @@ md5 filename
 
 显示出一个签名。此处的签名应与 PHP 官网下载页面文件名下方显示的签名相同。
 
-
-
-
-
-winMd5Sum 是一个简单的开源（免费）Windows 程序，带有图形界面，允许你通过点击按钮和拖放文件名来检查 MD5 签名，而无需在命令提示符窗口中输入命令。你可以在 www.nullriver.com/index/products/winmd5sum 获取它。
+winMd5Sum 是一个简单的开源（免费）Windows 程序，带有图形界面，允许你通过点击按钮和拖放文件名来检查 MD5 签名，而无需在命令提示符窗口中输入命令。你可以在 `www.nullriver.com/index/products/winmd5sum` 获取它。
 
 你可以通过类似的步骤验证 Apache 和 MySQL 的下载包。
 
 # 安装 PHP
 
-尽管 PHP 运行在许多平台上，但我们描述了在 Unix、Linux、Mac 和 Windows 上安装 PHP，这些平台代表了互联网上大多数的网站。PHP 可以与多个 Web 服务器配合运行，但这些说明主要关注 Apache 和 Internet 信息服务器 (IIS)，因为由于它们共同支持了互联网上几乎 90% 的网站。如果你需要其他操作系统或 Web 服务器的安装说明，请参阅 PHP 网站 www.php.net。
+尽管 PHP 运行在许多平台上，但我们描述了在 Unix、Linux、Mac 和 Windows 上安装 PHP，这些平台代表了互联网上大多数的网站。PHP 可以与多个 Web 服务器配合运行，但这些说明主要关注 Apache 和 Internet 信息服务器 (IIS)，因为它们共同支持了互联网上几乎 90% 的网站。如果你需要其他操作系统或 Web 服务器的安装说明，请参阅 PHP 网站 `www.php.net`。
 
 本章提供了 PHP 5 和 6 的安装说明。如果你正在安装更早版本，会有一些细微差异，请阅读 PHP 分发包附带的 `install.txt` 文件。
 
- 在 Unix 和 Linux 上安装
+## 在 Unix 和 Linux 上安装
 
-你可以将 PHP 安装为 Apache 模块或作为独立的解释器。如果你在 Web 页面中使用 PHP 作为脚本语言来与数据库交互，请将 PHP 安装为 Apache 模块。作为模块，PHP 运行更快且更安全。我们在书中书中讨论作为独立解释器的 PHP。
+你可以将 PHP 安装为 Apache 模块或作为独立的解释器。如果你在 Web 页面中使用 PHP 作为脚本语言来与数据库交互，请将 PHP 安装为 Apache 模块。作为模块，PHP 运行更快且更安全。我们在书中讨论作为独立解释器的 PHP。
 
 我们在接下来的几节中提供了在 Linux 和 Unix 上编译和安装 PHP 的逐步说明。在开始安装程序之前，请完整阅读所有步骤。
 
@@ -508,23 +389,19 @@ winMd5Sum 是一个简单的开源（免费）Windows 程序，带有图形界�
 
 在开始安装 PHP 之前，请检查以下内容：
 
-- **✦ Apache 模块 mod_so 已安装。** 它通常是安装的。要显示所有模块的列表，请在命令行输入以下内容：
+- **Apache 模块 `mod_so` 已安装。** 它通常是安装的。要显示所有模块的列表，请在命令行输入以下内容：
+  ```bash
+  httpd -l
+  ```
+  你可能需要进入 `httpd` 所在的目录才能运行命令。输出通常会显示一长串模块。对于 PHP，你只需要关注 `mod_so`。如果 `mod_so` 未加载，则必须使用 `enable-module=so` 选项重新安装 Apache。
 
-```bash
-httpd -l
-```
+- **`apxs` 工具已安装。** 安装 Apache 时会安装 `apxs` 工具。你应该能够找到一个名为 `apxs` 的文件。如果 Apache 已经在 Linux 上安装，或者是从某个 Linux 发行版网站安装的，`apxs` 可能没有被安装。某些 Apache 安装包含两个安装包：一个用于基础 Apache 服务器，另一个用于 Apache 开发工具。包含 `apxs` 的开发工具可能需要安装。
 
-你可能需要进入 `httpd` 所在的目录才能运行命令。输出通常会显示一长串模块。对于 PHP，你只需要关注 `mod_so`。如果 `mod_so` 未加载，则必须使用 `enable-module=so` 选项重新安装 Apache。
-
-- **✦ apxs 工具已安装。** 安装 Apache 时会安装 `apxs` 工具。你应该能够找到一个名为 `apxs` 的文件。如果 Apache 已经在 Linux 上安装，或者是从某个 Linux 发行版网站安装的，`apxs` 可能没有被安装。某些 Apache 安装包含两个安装包：一个用于基础 Apache 服务器，另一个用于 Apache 开发工具。包含 `apxs` 的开发工具可能需要安装。
-
-- **✦ Apache 版本是较新的。** 请参阅本迷你书籍的第 1 章关于 Apache 版本的讨论。要检查版本，输入以下内容：
-
-```bash
-httpd -v
-```
-
-你可能需要进入 `httpd` 所在的目录才能运行命令。在写作时，PHP 网站不建议在 Linux 或 Unix 上将 Apache 2 与 PHP 使用。对于生产环境网站，使用 Apache 1.3 可能比使用 Apache 2 更好。通过检查 www.php.net/manual/en/install.unix.apache2.php 关注 PHP 与 Apache 2 的状态。
+- **Apache 版本是较新的。** 请参阅本迷你书籍的第 1 章关于 Apache 版本的讨论。要检查版本，输入以下内容：
+  ```bash
+  httpd -v
+  ```
+  你可能需要进入 `httpd` 所在的目录才能运行命令。在写作时，PHP 网站不建议在 Linux 或 Unix 上将 Apache 2 与 PHP 使用。对于生产环境网站，使用 Apache 1.3 可能比使用 Apache 2 更好。通过检查 `www.php.net/manual/en/install.unix.apache2.php` 关注 PHP 与 Apache 2 的状态。
 
 # 安装
 
@@ -533,20 +410,19 @@ httpd -v
 1. **切换到下载源码的目录（例如 `cd /usr/src`）。** 你会看到一个名为 `php-` 的文件，后面跟着版本号和 `.tar.gz`。该文件包含许多文件的 tar 包。
 
 2. **解压 tar 包。** PHP 6.0.0 版本的命令是：
-
-```bash
-gunzip -c php-6.0.0.tar.gz | tar -xf –
-```
-
-将创建一个名为 `php-6.0.0` 的新目录，其中包含几个子目录。
+   ```bash
+   gunzip -c php-6.0.0.tar.gz | tar -xf –
+   ```
+   将创建一个名为 `php-6.0.0` 的新目录，其中包含几个子目录。
 
 3. **进入解压 tar 包后创建的新目录。** 例如，输入 `cd php-6.0.0`。
 
 4. **输入 configure 命令。** `configure` 命令由 `./configure` 加上你想使用的配置选项组成。最短的 configure 命令是：
+   ```bash
+   ./configure --with-apxs
+   ```
 
-```bash
-./configure --with-apxs
-```
+
 
 如果你使用 Apache 2，请使用选项 `--with-apxs`。你可能想在 `configure` 命令中使用其他配置选项。可用的配置选项将在本文的“Unix/Linux/Mac 安装选项”中讨论。对于本书，你需要启用支持，这通过配置选项来实现。
 
@@ -558,17 +434,13 @@ gunzip -c php-6.0.0.tar.gz | tar -xf –
 
 6. **输入 `make install`。**
 
-
-
-
-
 ✦ 开发者工具光盘中的文件已安装完毕。此光盘是 Mac OS X 主程序发行版的补充。如果你找不到该光盘，可以从 Apple Developer Connection 网站 `developer.apple.com/tools/macosxtools.html` 下载这些工具。
 
 # 安装
 
 要在 Mac OS 上安装 PHP，请按照以下步骤操作：
 
-1. **切换到你下载 PHP 的目录（例如，`cd-/usr/src`）。**
+1. **切换到你下载 PHP 的目录（例如，`cd /usr/src`）。**
 
    你将看到一个名为 `php-` 的文件，后面紧跟版本名和 `tar.gz`。
 
@@ -594,16 +466,19 @@ cd php-6.0.0
 
 `configure` 命令由 `./configure` 加上所有必要的选项组成。最少选项集如下：
 
-* *位置选项（Location options）：* 因为 Mac 存储文件的位置与 PHP 默认位置不同，你需要告诉 PHP 文件的所在位置。使用以下选项：
+* **位置选项（Location options）：** 因为 Mac 存储文件的位置与 PHP 默认位置不同，你需要告诉 PHP 文件的所在位置。使用以下选项：
 
   `--prefix=/usr`
+
   `--sysconfdir=/etc`
+
   `--localstatedir=/var`
+
   `--mandir=/usr/share/man`
 
-* *zlib 选项：* `--with-zlib`。
+* **zlib 选项：** `--with-zlib`。
 
-* *Apache 选项：* 如果你安装 PHP 是为了配合 Apache 使用，请使用以下选项：`--with-apxs` 或 `--with-apxs2`。
+* **Apache 选项：** 如果你安装 PHP 是为了配合 Apache 使用，请使用以下选项：`--with-apxs` 或 `--with-apxs2`。
 
 最可能的配置命令是：
 
@@ -635,24 +510,24 @@ cd php-6.0.0
 
 | 选项 | 含义 |
 | :--- | :--- |
-| `prefix=**` | 设置 PHP 主目录，默认是 `/usr/local`。 |
-| `exec-prefix=**` | 安装架构相关文件，默认是 `PREFIX/`。 |
-| `bindir=**` | 安装可执行文件，默认是 `PREFIX/`。 |
-| `infodir=**` | 安装帮助文档，默认是 `PREFIX/`。 |
-| `mandir=**` | 安装手册文件，默认是 `PREFIX/`。 |
-| `with-config-file-path=**` | 设置查找配置文件 (`php.ini`) 的路径。如果没有此选项，PHP 在默认位置查找。 |
-| `disable-libxml` | 禁用默认的 XML 支持。 |
-| `enable-ftp` | 启用 FTP。 |
-| `enable-magic-quotes` | 启用引号的反斜杠转义。 |
-| `with-apxs=**` | 使用位于 `FILE` 的 apx 工具构建 Apache 模块。 |
-| `with-apxs2=**` | 使用位于 `FILE` 的 apx2 工具构建 Apache 模块。 |
-| `with-mysql=**` | 对 MySQL 4.0 或早期版本的支持。 |
-| `with-mysqli=**` | 对 MySQL 4.1 或更高版本的支持。 |
-| `with-openssl=**` | 为安全服务器启用 OpenSSL 支持。需要 OpenSSL 0.9.5 版本。 |
-| `with-oci8=**` | 对 Oracle 7 或更高版本的支持。 |
-| `with-oracle=**` | 对更早版本 Oracle 的。 |
-| `with-pgsql=**` | 对 PostgreSQL 数据库的支持。 |
-| `with-servlet=**` | 包含 servlet。Java 扩展必须编译为共享 .dll。 |
+| `--prefix=**` | 设置 PHP 主目录，默认是 `/usr/local`。 |
+| `--exec-prefix=**` | 安装架构相关文件，默认是 `PREFIX/`。 |
+| `--bindir=**` | 安装可执行文件，默认是 `PREFIX/`。 |
+| `--infodir=**` | 安装帮助文档，默认是 `PREFIX/`。 |
+| `--mandir=**` | 安装手册文件，默认是 `PREFIX/`。 |
+| `--with-config-file-path=**` | 设置查找配置文件 (`php.ini`) 的路径。如果没有此选项，PHP 在默认位置查找。 |
+| `--disable-libxml` | 禁用默认的 XML 支持。 |
+| `--enable-ftp` | 启用 FTP。 |
+| `--enable-magic-quotes` | 启用引号的反斜杠转义。 |
+| `--with-apxs=**` | 使用位于 `FILE` 的 apx 工具构建 Apache 模块。 |
+| `--with-apxs2=**` | 使用位于 `FILE` 的 apx2 工具构建 Apache 模块。 |
+| `--with-mysql=**` | 对 MySQL 4.0 或早期版本的支持。 |
+| `--with-mysqli=**` | 对 MySQL 4.1 或更高版本的支持。 |
+| `--with-openssl=**` | 为安全服务器启用 OpenSSL 支持。需要 OpenSSL 0.9.5 版本。 |
+| `--with-oci8=**` | 对 Oracle 7 或更高版本的支持。 |
+| `--with-oracle=**` | 对更早版本 Oracle 的。 |
+| `--with-pgsql=**` | 对 PostgreSQL 数据库的支持。 |
+| `--with-servlet=**` | 包含 servlet。Java 扩展必须编译为共享 .dll。 |
 
 # 在 Windows 上安装
 
@@ -665,9 +540,6 @@ PHP 运行在 Windows 98/Me 以及 Windows NT/2000/XP/Vista 上。你可以使�
 该 Zip 文件名为 `php`，后面紧跟版本号和 `win32.zip`，例如 `php6.0.0-Win32.zip`。如果你双击该文件，它会在你电脑上处理 Zip 文件的软件中打开（如 WinZip 或 PKZIP）。选择提取菜单项并选择要提取文件的目录。
 
 C:\php 是一个很好的安装选择，因为许多配置文件假设 PHP 安装在那里，所以默认设置更有可能是正确的。
-
-
-
 
 相关说明在本章稍后部分的“在 Windows 上启用 MySQL 支持”节中提供。
 
@@ -690,6 +562,7 @@ C:\php 是一个很好的安装选择，因为许多配置文件假设 PHP 安�
 按照以下步骤为你的系统配置 PHP：
 
 1. **打开 `httpd.conf` 文件以便进行修改。**
+
 2. **配置 Apache 加载 PHP 模块。**
 
 找到 `LoadModule` 语句列表。寻找以下行：`LoadModule php6_module libexec/libphp6.so`
@@ -697,6 +570,7 @@ C:\php 是一个很好的安装选择，因为许多配置文件假设 PHP 安�
 如果没有该行，请添加它。如果行开头有井号（`#`），请删除井号。
 
 对于 PHP 5，该行应为
+
 `LoadModule php5_module libexec/libphp5.so`
 
 3. **配置 Apache 识别 PHP 扩展。**
@@ -728,9 +602,11 @@ C:\php 是一个很好的安装选择，因为许多配置文件假设 PHP 安�
 2. **激活 PHP 模块。**
 
 在文件中查找模块语句部分并定位到以下行：
+
 `#LoadModule php6_module “c:/php/php6apache2.dll"`
 
 删除行开头的 `#` 以激活模块。如果你正在安装 PHP 5，则需要以下行：
+
 `LoadModule php5_module “c:/php/php5apache2.dll"`
 
 如果你使用的是 Apache 1.3 而不是 Apache 2，模块名称为 `php6apache.dll` 或 `php5apache.dll`。
@@ -756,26 +632,37 @@ C:\php 是一个很好的安装选择，因为许多配置文件假设 PHP 安�
 1. **进入管理控制台。**
 
 你可以通过选择开始➪程序➪管理工具➪互联网信息管理器或开始➪控制面板➪管理工具➪互联网信息管理器来进入。
+
 2. **右键点击你的网站（例如默认网站）。**
+
 3. **选择属性。**
+
 4. **点击主目录选项卡。**
+
 5. **点击配置按钮。**
+
 6. **点击映射选项卡。**
+
 7. **点击添加。**
+
 8. **在可执行框中，输入 PHP 解释器的路径。** 例如，输入 `c:\php\php-cgi.exe`。
+
 9. **在扩展框中，输入 .php。**
+
 10. **勾选脚本引擎框。**
+
 11. **点击确定。**
 
 如果你希望处理 .php 之外的任何扩展，请重复步骤 6 到 10。
 
- 配置 PHP
+## 配置 PHP
 
 PHP 使用名为 `php.ini` 的文件设置来控制某些行为。PHP 在启动时查找 `php.ini` 并使用找到设置。
 
 如果 PHP 找不到该文件，它将使用一组默认设置。`php.ini` 的默认位置位于此处（除非你在安装期间更改了它）：
 
 - **Windows**: 系统目录，取决于 Windows 版本：Windows 98/Me/XP 为 `windows`；Windows NT/2000 有为 `winnt`
+
 - **Unix, Linux 和 Mac**: `/usr/local/lib`
 
 如果在安装期间没有安装 `php.ini` 文件，你需要安装它。PHP 分发包包含一个带有默认设置的配置文件，名为 `php.ini-dist`。将此文件复制到相应的位置（例如上述的默认位置），并重命名为 `php.ini`。
@@ -783,12 +670,14 @@ PHP 使用名为 `php.ini` 的文件设置来控制某些行为。PHP 在启动�
 如果你有之前的 PHP 版本（例如 PHP 4.3），在用 PHP 5 或 6 的 `php.ini` 文件覆盖它之前，请对 `php.ini` 文件进行备份。然后你可以查看当前使用的设置，并在新的 `php.ini` 中更改这些设置。
 
 1. **打开 `php.ini` 文件进行编辑。**
+
 2. **更改你想更改的设置。** 步骤 3、4 和 5 提到某些在特定环境下*应该*更改的特定设置。
 
 3. **如果你在使用 PHP 5 或更早版本，关闭魔法引号。**
 
 查找以下行：
-`magic_quotes-gpc On`
+
+`magic_quotes_gpc = On`
 
 将 `On` 改为 `Off`。
 
@@ -800,11 +689,7 @@ PHP 使用名为 `php.ini` 的文件设置来控制某些行为。PHP 在启动�
 
 查找此行：
 
-
-
-
-
-```ini
+```
 ;cgi.force_redirect = 1
 ```
 
@@ -834,9 +719,11 @@ PHP 使用名为 `php.ini` 的文件设置来控制某些行为。PHP 在启动�
 
 此目录及其子目录就是你的*Web 空间（Web space）*。
 
+
+
 Apache 将此目录称为*文档根（document root）*。Apache 的默认 Web 空间是 Apache 安装目录下的 `htdocs`。对于 IIS，它是 `Inetpub\wwwroot`。在 Linux 中，它可能是 `/var/www/html`。通过配置 Web 服务器，可以将 Web 空间设置为不同的目录。如果你使用 Web 托管公司，工作人员将提供目录名称。
 
-2. **在你的 Web 空间某处创建一个名为 test.php 的文件。**
+## 在你的 Web 空间某处创建一个名为 test.php 的文件
 
 ```html
 <html>
@@ -846,7 +733,7 @@ Apache 将此目录称为*文档根（document root）*。Apache 的默认 Web �
 <body>
 <p>This is an HTML line</p>
 <?php
-echo “<p>This is a PHP line</p>”;
+echo "<p>This is a PHP line</p>";
 phpinfo();
 ?>
 </body>
@@ -855,7 +742,9 @@ phpinfo();
 
 该文件必须保存在你的 Web 空间中，Web 服务器才能找到它。
 
-3. **运行在第 2 步中创建的 test.php 文件。即在浏览器地址栏中输入你的 Web 服务器的主机，后跟文件名（例如 www.myfinecompany.com/test.php）。**
+## 运行在第 2 步中创建的 test.php 文件
+
+即在浏览器地址栏中输入你的 Web 服务器的主机，后跟文件名（例如 `www.myfinecompany.com/test.php`）。
 
 如果你的 Web 服务器、PHP 和 `test.php` 文件都在你正在测试的本地电脑上，你可以输入 `localhost/test.php`。
 
@@ -867,7 +756,7 @@ phpinfo();
 
 # 激活 MySQL 支持
 
-基础 PHP 软件由一组核心功能和提供额外功能的可选扩展组成。MySQL 支持由扩展提供。在 PHP 4 中，MySQL 支持是默认提供的，但从 PHP 5.0 开始，你必须在激活 MySQL 支持后，PHP 才能与 MySQL 数据库交互。（有关 PHP 扩展的更多信息，请参见书籍 V。）PHP 提供了两个支持 MySQL 的扩展：`mysql` 扩展和 `mysqli`（MySQL Improved）扩展。你需要激活哪种扩展取决于你使用的 PHP 和 MySQL 版本。适用于 PHP 4、5 和 6 的 `mysql` 扩展提供了与 MySQL 4.0 及更早版本进行交互的函数。在 PHP 5 中添加的 `mysqli` 扩展提供了与 MySQL 4.1 及更高版本进行交互的函数。你也可以在较版本的 MySQL 中使用 `mysql` 函数，但它们无法访问 MySQL 后期版本中添加的一些新功能。
+基础 PHP 软件由一组核心功能和提供额外功能的可选扩展组成。MySQL 支持由扩展提供。在 PHP 4 中，MySQL 支持是默认提供的，但从 PHP 5.0 开始，你必须在激活 MySQL 支持后，PHP 才能与 MySQL 数据库交互。（有关 PHP 扩展的更多信息，请参见书籍 V。）PHP 提供了两个支持 MySQL 的扩展：`mysql` 扩展和 `mysqli`（MySQL Improved）扩展。你需要激活哪种扩展取决于你使用的 PHP 和 MySQL 版本。适用于 PHP 4、5 和 6 的 `mysql` 扩展提供了与 MySQL 4.0 及更早版本进行交互的函数。在 PHP 5 中添加的 `mysqli` 扩展提供了与 MySQL 4.1 及更高版本进行交互的函数。你也可以在较新版本的 MySQL 中使用 `mysql` 函数，但它们无法访问 MySQL 后期版本中添加的一些新功能。
 
 ## 在 Linux 和 Mac OS 上激活 MySQL 支持
 
@@ -892,11 +781,11 @@ phpinfo();
 
 ### 为 MySQL 支持配置 PHP
 
-要为 MySQL 支持配置 PHP，请执行以下步骤：*
+要为 MySQL 支持配置 PHP，请执行以下步骤：
 
-1. **打开 php.ini 文件。**
+1. **打开 `php.ini` 文件。**
 2. **找到扩展列表。**
-3. **找到你想要使用的 MySQL 扩展所在的行，例如** `extension=php_mysqli.dll`
+3. **找到你想要使用的 MySQL 扩展所在的行，例如 `extension=php_mysqli.dll`**
 4. **删除该行开头的分号。**
 
 ### 设置 MySQL 文件
@@ -915,7 +804,7 @@ phpinfo();
 
 **图 2-2：** 检查你的环境变量。
 
-5. **在系统变量窗中点击 Path。** 你可能需要向下滚动找到 `Path` 变量所在的行。
+5. **在系统变量窗中点击 `Path`。** 你可能需要向下滚动找到 `Path` 变量所在的行。
 6. **点击编辑按钮。** 打开如图 2-3 所示的编辑系统变量对话框。
 
 **图 2-3：** 编辑系统变量。
@@ -929,18 +818,13 @@ phpinfo();
 - `ext\php_mysqli.dll`（适用于 MySQL 4.1 或更高版本）
 - `ext\php_mysql.dll`（适用于 MySQL 4.0 或更早版本）
 
-[/content]
-将文件复制到主目录，例如 `C:\php`。第二个所需文件名为 `libmysql.dll`，应该已经在主 PHP 目录中。如果不在，你需要找到它并将其复制那里。如果它不在你的 PHP 目录，它通常随 MySQL 安装，因此可以在安装 MySQL 的目录中查找它，可能在 bin 子目录中，例如 `C:\Program Files\MySQL\MySQL Server 5.0\bin`。
-
-
-
-
+将文件复制到主目录，例如 `C:\php`。第二个所需文件名为 `libmysql.dll`，应该已经在主 PHP 目录中。如果不在，你需要找到它并将其复制那里。如果它不在你的 PHP 目录，它通常随 MySQL 安装，因此可以在安装 MySQL 的目录中查找它，可能在 `bin` 子目录中，例如 `C:\Program Files\MySQL\MySQL Server 5.0\bin`。
 
 你可以将文件复制到已在系统路径中的目录，例如 `c:\windows` 或 `c:\windows\system32`，而不是像本节描述的那样修改系统路径以包含 PHP 主目录，并将文件复制到主目录。然而，尽管这种方法更简单、步骤更少，但在将来升级 PHP 时可能会导致问题。所有版本的 `.dll` 文件文件名相同。如果你将当前版本的文件保留在 PHP 主目录中，而不是将其复制到公共目录，你只需用新版本替换整个主目录即可。这样就不会混淆不同版本的 `.dll` 文件。
 
 ## MySQL 支持
 
-要检查 MySQL 是否已激活，请按照本章前面“测试 PHP”部分的说明运行 `test.php`get。输出应包含一个显示 MySQL 设置的部分，如图 2-4 所示。如果输出中没有出现 MySQL 部分，请查看下一节“故障排除”。
+要检查 MySQL 是否已激活，请按照本章前面“测试 PHP”部分的说明运行 `test.php`。输出应包含一个显示 MySQL 设置的部分，如图 2-4 所示。如果输出中没有出现 MySQL 部分，请查看下一节“故障排除”。
 
 ### 故障排除
 
@@ -954,13 +838,12 @@ phpinfo();
 
 如果你在 `php.ini` 文件中更改了设置，但更改似乎对 PHP 操作没有产生预期效果，可能是由于以下两个原因之一：
 
-✦ **你没有重启 Web 服务器。** 如果是这样，只需重启 Web 服务器即可使更改生效。
-
-✦ **你可能没有在 PHP 读取它的位置编辑 `php.ini` 文件。** 你可以检查 PHP 正在读取哪个 `php.ini` 文件。你可能有多个 `php.ini` 文件，或者可能将其存储在了错误的位置。当使用 `phpinfo()` 语句测试 PHP 时（如“测试 PHP”节所示），PHP 会输出许多变量值和设置。顶部设置之一是 `Configuration File Path`，它显示了 PHP 查找配置文件的路径。如果路径以文件名结尾，则该文件就是 PHP 使用的配置文件。如果路径以目录名结尾，PHP 正在该目录中查找配置文件但未找到，因此 PHP 正在使用默认配置。
+- **你没有重启 Web 服务器。** 如果是这样，只需重启 Web 服务器即可使更改生效。
+- **你可能没有在 PHP 读取它的位置编辑 `php.ini` 文件。** 你可以检查 PHP 正在读取哪个 `php.ini` 文件。你可能有多个 `php.ini` 文件，或者可能将其存储在了错误的位置。当使用 `phpinfo()` 语句测试 PHP 时（如“测试 PHP”节所示），PHP 会输出许多变量值和设置。顶部设置之一是 `Configuration File Path`，它显示了 PHP 查找配置文件的路径。如果路径以文件名结尾，则该文件就是 PHP 使用的配置文件。如果路径以目录名结尾，PHP 正在该目录中查找配置文件但未找到，因此 PHP 正在使用默认配置。
 
 ### 显示错误消息：未定义函数 (Undefined function)
 
-你可能会看到错误消息，说明你调用了未定义的函数。此消息意味着你正在调用 PHP 识别的函数。你可能拼错了函数名，或者可能调用了某个未激活的扩展中的函数。
+你可能会看到错误消息，说明你调用了未定义的函数。此消息意味着你正在调用 PHP 无法识别的函数。你可能拼错了函数名，或者可能调用了某个未激活的扩展中的函数。
 
 你可能会看到关于 mysql 函数的错误消息，类似于以下：
 
@@ -984,13 +867,10 @@ Fatal error: Call to undefined function mysqli_connect()
 
 当你查看 `phpinfo()` 的输出时，没有看到 `mysql` 或 `mysqli` 扩展部分。然而，在你的 `php.ini` 文件中，一个或两个扩展都已激活。某些可能的原因是：
 
-✦ **在更改 `php.ini` 中的设置后没有重启服务器。**
-
-✦ **你正在编辑错误的 `php.ini` 文件。** 检查 `phpinfo()` 输出以获取 PHP 读取设置的文件位置。
-
-✦ **必要的 `.dll` 文件不在系统路径中指定的目录中。**
-
-✦ **PHP 正在读取的 MySQL `.dll` 文件适用于不同版本的 PHP。** 有时候当你更新 PHP 时，并没有替换 `.dll` 文件。例如，假设你正在运行 PHP 5.0，且 `php_mysqli.dll` 位于 `c:\windows\system32`。你升级到 PHP 6.0。你将 `.dll` 文件从 `ext` 复制到 PHP 主目录，并将 `c:\php` 添加到系统路径末尾。然而，你忘记从当前位置删除旧的 `.dll` 文件。当 PHP 启动时，它首先遇到旧的 `.dll` 文件，因为 `system32` 目录在路径的第一位，PHP 尝试使用旧文件。由于无法使用旧文件，PHP 未激活 mysqli 扩展。
+- **在更改 `php.ini` 中的设置后没有重启服务器。**
+- **你正在编辑错误的 `php.ini` 文件。** 检查 `phpinfo()` 输出以获取 PHP 读取设置的文件位置。
+- **必要的 `.dll` 文件不在系统路径中指定的目录中。**
+- **PHP 正在读取的 MySQL `.dll` 文件适用于不同版本的 PHP。** 有时候当你更新 PHP 时，并没有替换 `.dll` 文件。例如，假设你正在运行 PHP 5.0，且 `php_mysqli.dll` 位于 `c:\windows\system32`。你升级到 PHP 6.0。你将 `.dll` 文件从 `ext` 复制到 PHP 主目录，并将 `c:\php` 添加到系统路径末尾。然而，你忘记从当前位置删除旧的 `.dll` 文件。当 PHP 启动时，它首先遇到旧的 `.dll` 文件，因为 `system32` 目录在路径的第一位，PHP 尝试使用旧文件。由于无法使用旧文件，PHP 未激活 mysqli 扩展。
 
 ### 显示空白页面或仅显示 HTML 输出
 
@@ -1002,10 +882,6 @@ Fatal error: Call to undefined function mysqli_connect()
 
 双检查 Apache 指令是否输入正确以及位置是否正确。在做出任何更改后务必重启 Web 服务器。
 
-
-
-
-
 要使用 MySQL 数据库，你需要一个可以与 MySQL 服务器通信的软件。在安装 MySQL 时，系统会自动安装 `mysql` 客户端程序。该程序允许你管理 MySQL 数据库。然而，`mysql` 客户端是一个命令行、基于文本的程序。你可能更喜欢带有图形化用户界面（GUI）的程序，允许你拖动物体并点击按钮。如果是这样，你可以安装一些额外的 GUI 软件，它们提供了方便的 MySQL 数据库管理。
 
 在本章中，我们将讨论 `phpMyAdmin`，这是一种流行的用于管理 MySQL 数据库的 Web 程序。我们还将讨论由 MySQL 开发人员并提供的两个管理程序，它们可以作为 `phpMyAdmin` 的替代方案。使用哪种管理程序（如果有的话）取决于个人选择。你可能想尝试所有的程序，看看最喜欢哪一个。
@@ -1014,7 +890,7 @@ Fatal error: Call to undefined function mysqli_connect()
 
 你可能需要或不需要安装 MySQL。在很多情况下，MySQL 已经安装好了。例如，大多数最新的 Linux 和 Mac 发行版会自动安装 MySQL。Windows 操作系统并不提供 MySQL。
 
-在安装 MySQL 之前，请确保你确实需要安装它。它可能已经在你的电脑上运行，或者可能已经安装但但没有运行。例如，许多 Linux 发行版会自动安装 MySQL。
+在安装 MySQL 之前，请确保你确实需要安装它。它可能已经在你的电脑上运行，或者可能已经安装但没有运行。例如，许多 Linux 发行版会自动安装 MySQL。
 
 以下是检查 MySQL 当前是否运行的方法：
 
@@ -1031,9 +907,11 @@ Fatal error: Call to undefined function mysqli_connect()
 即使 MySQL 当前没有运行，它也可能已经安装但尚未启动。以下是检查你的电脑上是否安装了 MySQL 的方法：
 
 * **Linux/Unix/Mac:** 输入以下内容：
+
 ```bash
-find / -name “mysql*"
+find / -name "mysql*"
 ```
+
 如果找到了名为 `mysql` 的目录，说明 MySQL 已安装。
 
 * **Windows:** 如果你没有在当前服务列表中找到 MySQL，请寻找 MySQL 目录或文件。你可以通过选择开始➪搜索来查找。
@@ -1044,25 +922,42 @@ find / -name “mysql*"
 
 # 获取 MySQL
 
-在 Linux/Unix/Mac 上启动 MySQL，请遵循以下步骤：
+## 在 Linux/Unix/Mac 上启动 MySQL
+
+请遵循以下步骤：
 
 1. **切换到目录 `mysql/bin`。**
-   这是你你在检查 MySQL 是否已安装时应该找到的目录。
+
+   这是你在检查 MySQL 是否已安装时应该找到的目录。
+
 2. **输入 `mysqld_safe &`。**
+
    当此命令完成后，将显示提示符。
+
 3. **通过输入 `ps -ax` 检查 MySQL 服务器是否已启动。**
+
    在出现的程序列表中，寻找名为 `mysqld` 的程序。如果你找到了它，说明 MySQL 正在运行。
 
-在 Windows 上启动 MySQL，请遵循以下步骤：
+## 在 Windows 上启动 MySQL
+
+请遵循以下步骤：
 
 1. **打开命令提示符窗口。**
+
    在 Windows XP 中，选择开始➪所有程序➪工具➪命令提示符。
+
 2. **切换到 MySQL 安装的文件夹。**
+
    例如，输入 `cd C:\Program Files\MySQL\MySQL Server 5.0`。
+
    你的光标现在位于 MySQL 文件夹中。
+
 3. **通过输入 `cd bin` 切换到子文件夹。**
-   你的光标现在位于 bin 子文件夹中。
+
+   你的光标现在位于 `bin` 子文件夹中。
+
 4. **通过输入 `mysqld --install` 启动 MySQL 服务器。**
+
    MySQL 服务器作为 Windows 服务启动。你可以按照之前的描述进入服务列表来检查安装情况，并确保 MySQL 现在出现在服务列表中且其状态为 `Started`（已启动）。
 
 如果你的电脑上没有安装 MySQL，你需要从 www.mysql.com 下载并安装它。本章的剩余部分将提供相关说明。
@@ -1080,11 +975,13 @@ MySQL 以二进制文件的形式提供——这些是已经针对特定操作�
 
 要获取 MySQL，请访问 www.mysql.com 并点击 Download（下载）链接。找到你需要的版本（例如 5.0 版本）以及你需要的版本（例如社区版）。每个版本都有许多文件可用，并按操作系统组织。
 
+
+
 ## 获取 Windows 版 MySQL
 
-Windows 二进制文件带有带有程序程序提供，该安装程序将安装、配置并启动 MySQL。在你所需版本的 MySQL 网站下载页面上，找到 Windows 部分。
+Windows 二进制文件带有安装程序，该安装程序将安装、配置并启动 MySQL。在你所需版本的 MySQL 网站下载页面上，找到 Windows 部分。
 
-在 Windows 部分，点击你想要下载的文件旁边的下载链接。你可以下载 Windows Essentials（精简版），这是一个满足大多数需求的小文件；也可以 Windows Complete（完整版），这是一个包含更多可选软件（如嵌入式服务器和基准测试套件）较大的包。
+在 Windows 部分，点击你想要下载的文件旁边的下载链接。你可以下载 Windows Essentials（精简版），这是一个满足大多数需求的小文件；也可以下载 Windows Complete（完整版），这是一个包含更多可选软件（如嵌入式服务器和基准测试套件）的较大包。
 
 ## 获取 Linux 和 Unix 版 MySQL
 
@@ -1092,14 +989,9 @@ Windows 二进制文件带有带有程序程序提供，该安装程序将安装
 
 许多 Linux 系统（如 Fedora、SuSE 和 Ubuntu）包含内置工具，可以为你下载并安装 MySQL，通常是最新版本。
 
-在很多情况下，安装由 Linux 发行版提供的 MySQL 比从 MySQL 网站下载并安装是一个更简单、更高效的选择。如果你需要安装 MySQL（例如系统上的 MySQL 版本较旧），请检查你 Linux 发行版的网站。
+在很多情况下，安装由 Linux 发行版提供的 MySQL 比从 MySQL 网站下载并安装是一个更简单、更高效的选择。如果你需要安装 MySQL（例如系统上的 MySQL 版本较旧），请检查你 Linux 发行版的网站，以查看其是否提供了一种简单安装当前版本 MySQL 的方法。
 
-
-
-
-以查看其是否提供了一种简单安装当前版本 MySQL 的方法。
-
-#### 环境：MySQL 软件包
+### 环境：MySQL 软件包
 
 此外，`RPM` 文件可能已经存在于你的 Linux 操作系统附带的光盘中。从光盘安装 `RPM` 文件可以节省你下载的麻烦，但如果你光盘上的 MySQL 版本不是最新版本，你可能仍然想要下载 `RPM` 文件。
 
@@ -1119,7 +1011,7 @@ Mac OS X 10.2 及更高版本包含 MySQL。如果你需要在你的机器上安
 
 ## 获取合一安装工具件
 
-你可以获取一些可以在一次程序中安装 PHP、MySQL 和 Apache 的工具件。这些工具件可以极地简化安装过程。然而，提供的软件可能不包含你需要的特性和扩展。
+你可以获取一些可以在一次程序中安装 PHP、MySQL 和 Apache 的工具件。这些工具件可以极大地简化安装过程。然而，提供的软件可能不包含你需要的特性和扩展。
 
 ## 安装 MySQL
 
@@ -1127,13 +1019,13 @@ Mac OS X 10.2 及更高版本包含 MySQL。如果你需要在你的机器上安
 
 `XAMPP` 提供了 Windows（包括 Windows Vista）以及多个 Linux 版本的稳定版本。此外，还有 Mac 和 Solaris 的 `XAMPP` 版本，但这些版本目前较新，测试和开发尚不够完善。`XAMPP` 可以在 `www.apachefriends.org/en/xampp.html` 获取。本微型教程第 5 章提供了安装 `XAMPP` 的说明。
 
-`WAMP5` 是一个流行的 Windows 安装工具件，提供了最新版本的 Apache 2.2、PHP 5 和 MySQL 5。它还安装了 `phpMyAdmin`，一个用于管理 MySQL 数据库的工具。`WAMP5` 网站表示兼容 Vista。`WAMP5` 不在 Windows 98/Me 上运行`WAMP5` 可以在 `www.en.wampserver.com` 获取。
+`WAMP5` 是一个流行的 Windows 安装工具件，提供了最新版本的 Apache 2.2、PHP 5 和 MySQL 5。它还安装了 `phpMyAdmin`，一个用于管理 MySQL 数据库的工具。`WAMP5` 网站表示兼容 Vista。`WAMP5` 不在 Windows 98/Me 上运行。`WAMP5` 可以在 `www.en.wampserver.com` 获取。
 
 `MAMP` 是一个适用于 Mac 的工具件，为 Mac OS X 安装 Apache、PHP 和 MySQL。这个免费包在你的 Mac PowerBook 或 iMac 上安装本地服务器环境。`MAMP` 主要作为你本地计算机的 PHP 开发环境而创建，不应作为互联网的生产服务器使用。你可以在 `www.mamp.info` 获取 `MAMP`。
 
 ## 验证下载的文件
 
-MySQL 官网提供了在你下载后验证软件的方法，这作为一种安全预防措施，以确保文件没有被坏人篡改。基本上，验证 PHP、MySQL 和 Apache 文件使用的是的是相同的过程。你可以在本微型教程第 2 章中关于“验证下载的文件”的章节中找到验证文件的说明。
+MySQL 官网提供了在你下载后验证软件的方法，这作为一种安全预防措施，以确保文件没有被坏人篡改。基本上，验证 PHP、MySQL 和 Apache 文件使用的是相同的过程。你可以在本微型教程第 2 章中关于“验证下载的文件”的章节中找到验证文件的说明。
 
 ## 安装 MySQL
 
@@ -1155,25 +1047,33 @@ Windows 版 MySQL 包含两个向导：
 要在 Windows 上设置 MySQL，请遵循以下步骤：
 
 1. **双击你下载的安装程序 (.msi) 文件。**
+
    文件名为 `mysql-essential-`，后跟版本号，最后是 `-win32.msi`，例如 `mysql-essential-5.0.37-win32.msi`。
-   显示如图 3-1 所示的界面。***注意：*** 如果你从 Windows NT/2000/XP/Vista 系统安装，请确保你登录了具有管理员权限的账户。在 Vista 中，你可能需要右键点击文件名并选择“以管理员身份运行”。
+
+   显示如图 3-1 所示的界面。**注意：** 如果你从 Windows NT/2000/XP/Vista 系统安装，请确保你登录了具有管理员权限的账户。在 Vista 中，你可能需要右键点击文件名并选择“以管理员身份运行”。
 
 2. **点击下一步 (Next)。**
+
    你会看到一个选择安装类型的屏幕。
 
 3. **选择“典型 (Typical)”然后点击下一步 (Next)。**
+
    打开“准备安装程序”界面。将显示当前设置。
 
 4. **点击安装 (Install)。**
+
    开始安装 MySQL。当安装完成后，会打开“注册 (Sign-Up)”屏幕。
 
 5. **点击跳过注册 (Skip Signup)然后点击下一步 (Next)。**
+
    出现“向导完成 (Wizard Completed)”屏幕，如图 3-2 所示。
 
 6. **如果你是第一次安装此版本的服务器，请勾选“现在配置 MySQL (Configure the MySQL Now)”选框。**
+
    如果你正在升级 MySQL 服务器，例如从 MySQL 5.0.18 升级到 5.0.22，你可能不需要配置服务器。向导将赋予它与现有版本相同的配置。然而，如果你升级到一个新的主版本，例如从 MySQL 5.0 升级到 MySQL 5.1，你需要运行 `配置向导`。
 
 7. **点击完成 (Finish)。**
+
    如果你勾选了现在配置 MySQL，`配置向导`将立即启动。将在下一节中解释。如果你没有选择，`安装向导` 将停止运行。
 
 ##### 运行 MySQL 配置向导
@@ -1186,32 +1086,21 @@ MySQL 提供了一个 `配置向导`。如果你在最后的设置界面上勾�
 
 1. **选择“开始 -> 所有程序 -> MySQL -> MySQL Server 5.0 -> MySQL Server Instance Config Wizard”。**
 
-`配置向导` 启动，如图 3-3 所示。
-
-
-
-
-配置向导。
+   `配置向导` 启动，如图 3-3 所示。
 
 2. **如果你安装了多个版本的 MySQL，将会出现屏幕，你可以点击想要配置的版本。然后点击 Next（下一步）。**
 
-打开 MySQL Server Configuration 窗口。
+   打开 MySQL Server Configuration 窗口。
 
 3. **点击 Standard Configuration（标准配置），然后点击 Next。**
 
-打开 Windows Options 窗口。
+   打开 Windows Options 窗口。
 
 4. **选择 Install as a Windows Service（作为 Windows 服务安装）选项。**
 
-如果你使用的是 Windows 98/Me，无法安装为 Windows 服务。相反，请选择 Add Bin Directory to Windows PATH 选项，并跳到第 7 步。
+   如果你使用的是 Windows 98/Me，无法安装为 Windows 服务。相反，请选择 Add Bin Directory to Windows PATH 选项，并跳到第 7 步。
 
-![Image 11](img/index-85_1.jpg)
-
-07_167779 bk01ch03.qxp 12/17/07 8:06 PM Page 56
-
-56
-
-安装 MySQL
+   ![Image 11](img/index-85_1.jpg)
 
 5. **在 Service Name（服务名称）文本框中，输入 `mysql50`。**
 
@@ -1219,79 +1108,69 @@ MySQL 提供了一个 `配置向导`。如果你在最后的设置界面上勾�
 
 7. **点击 Next。**
 
-打开 Security Options（安全选项）窗口，如图 3-4 所示。
+   打开 Security Options（安全选项）窗口，如图 3-4 所示。
 
-**图 3-4：**
+   **图 3-4：**
 
-MySQL 配置向导中的 Security Options 窗口。
+   MySQL 配置向导中的 Security Options 窗口。
 
 8. **选择 Modify Security Settings（修改安全设置）复选框。**
 
 9. **在 New Root Password（新根密码）文本框中输入密码。在 Confirm（确认）文本框中重新输入相同的密码。**
 
-如果之前配置过 MySQL，此屏幕会要求输入当前密码。
+   如果之前配置过 MySQL，此屏幕会要求输入当前密码。
 
-你现在正在为 MySQL 服务器的 root 账户设置密码。你必须使用 root 账户访问 MySQL 数据库。你需要记住你在这里输入的密码。
+   你现在正在为 MySQL 服务器的 root 账户设置密码。你必须使用 root 账户访问 MySQL 数据库。你需要记住你在这里输入的密码。
 
 10. **如果你正在设置一个只有你可以访问的开发环境，可以选择 Create an Anonymous Account（创建匿名账户）复选框。**
 
-匿名账户非常方便。但是，如果互联网可以访问你的 MySQL 服务器，请不要创建匿名账户。这是一个安全风险。
+    匿名账户非常方便。但是，如果互联网可以访问你的 MySQL 服务器，请不要创建匿名账户。这是一个安全风险。
 
 11. **点击 Next。**
 
-打开 Ready to Execute（准备执行）窗口。
+    打开 Ready to Execute（准备执行）窗口。
 
 12. **点击 Execute（执行）。**
 
-配置完成后将出现一条消息。
+    配置完成后将出现一条消息。
 
-07_167779 bk01ch03.qxp 12/17/07 8:06 PM Page 57
+### 在 Linux 上通过 RPM 文件安装 MySQL
 
-安装 MySQL
+可以使用 RPM 在 Linux 上安装 MySQL。虽然 RPM 代表 *Red Hat Package Manager*，但 RPM 在大多数 Linux 发行版中可用，而不仅仅是 `Red Hat` 环境。
 
-57
-
-## 第一部分
-
-在 Linux 上通过 RPM 文件安装 MySQL
-
-### 第 3 章
-
-可以使用 RPM 在 Linux 上安装 MySQL。虽然 RPM 代表 *Red Hat Package Manager*，但 RPM 在大多数 Linux 发行版中可用，而不是 **Red Hat 环境**。
-
-### 设置 MySQL
+#### 设置 MySQL
 
 要从 MySQL 网站提供的 RPM 文件在 Linux 上安装 MySQL，请按照以下步骤操作：
 
 1. **切换到保存下载文件的目录。**
 
-例如，输入 `cd /usr/src/mysql`。
+   例如，输入 `cd /usr/src/mysql`。
 
-有一个文件名为 `MySQL-server-`，后面跟着版本号，最后是 `.i386.rpm`。第二个文件名称相同，但中间是 `client` 而不是 `server`。
+   有一个文件名为 `MySQL-server-`，后面跟着版本号，最后是 `.i386.rpm`。第二个文件名称相同，但中间是 `client` 而不是 `server`。
 
 2. **通过输入以下命令安装 RPM：**
 
-```
-rpm -i listofpackages
-```
+   ```
+   rpm -i listofpackages
+   ```
 
-例如，命令可能是：
+   例如，命令可能是：
 
-```
-rpm -i MySQL-server-5.0.35-0.i386.rpm MySQL-client-5.0.35-0.i386.rpm
-```
+   ```
+   rpm -i MySQL-server-5.0.35-0.i386.rpm MySQL-client-5.0.35-0.i386.rpm
+   ```
 
-此命令安装 MySQL 软件包。它设置了你需要的 MySQL 账户和组名，并在 `/var/lib/mysql` 创建了数据目录。它还会启动 MySQL 服务器，并在 `/etc/rc.d` 中创建相应的条目，以便 MySQL 在每次每次启动时自动启动。
+   此命令安装 MySQL 软件包。它设置了你需要的 MySQL 账户和组名，并在 `/var/lib/mysql` 创建了数据目录。它还会启动 MySQL 服务器，并在 `/etc/rc.d` 中创建相应的条目，以便 MySQL 在每次启动时自动启动。
 
-你需要使用具有权限成功运行 `rpm` 命令的账户，例如 root 账户。
+   你需要使用具有权限成功运行 `rpm` 命令的账户，例如 root 账户。
 
 3. **要测试 MySQL 是否运行正常，输入以下内容：**
 
-```
-bin/mysqladmin --version
-```
+   ```
+   bin/mysqladmin --version
+   ```
 
-你应该能看到 MySQL 服务器的版本号。
+   你应该能看到 MySQL 服务器的版本号。
 
 ### 从 PKG 文件在 Mac 上安装 MySQL
 
@@ -1299,37 +1178,31 @@ bin/mysqladmin --version
 
 1. **为 MySQL 创建名为 `mysql` 的用户和组供其运行。**
 
-在大多数较新的 Mac OS X 版本中，该用户和组已经存在了。
-
-07_167779 bk01ch03.qxp 12/17/07 8:06 PM Page 58
-
-58
-
-安装 MySQL
+   在大多数较新的 Mac OS X 版本中，该用户和组已经存在了。
 
 2. **切换到下载 MySQL 的目录 —— 例如，`/usr/local`。**
 
-你会看到名为 `mysql-` 的包，后面跟着版本号、操作系统版本和 `dmg`，例如 `mysql-5.0.37-osx10.4-powerpc.dmg`。如果下载的文件没有 `.dmg` 扩展名，请重命名文件名以添加 `.dmg` 扩展名。
+   你会看到名为 `mysql-` 的包，后面跟着版本号、操作系统版本和 `dmg`，例如 `mysql-5.0.37-osx10.4-powerpc.dmg`。如果下载的文件没有 `.dmg` 扩展名，请重命名文件名以添加 `.dmg` 扩展名。
 
 3. **在 Finder 中双击其图标挂载磁盘映像。**
 
 4. **双击包图标安装 MySQL PKG。**
 
-包安装程序运行并安装包。它将 MySQL 安装在目录 `/usr/local/mysql-`，后面跟着版本号。
+   包安装程序运行并安装包。它将 MySQL 安装在目录 `/usr/local/mysql-`，后面跟着版本号。
 
-它还会安装一个符号链接 `/usr/local/mysql/`，指向 MySQL 安装所在的目录。它通过运行脚本 `mysql_install_db` 初始化数据库，该脚本会创建
+   它还会安装一个符号链接 `/usr/local/mysql/`，指向 MySQL 安装所在的目录。它通过运行脚本 `mysql_install_db` 初始化数据库，该脚本会创建
 
 5. **如有，更改目录的所有者。**
 
-安装 MySQL 的目录（例如 `/usr/local/mysql-5.0.37`）应该由 root 所有。两个目录都应该属于 `mysql`。使用以下命令：
+   安装 MySQL 的目录（例如 `/usr/local/mysql-5.0.37`）应该由 root 所有。两个目录都应该属于 `mysql`。使用以下命令：
 
-```
-sudo chown -R mysql /usr/local/mysql-5.0.37
-```
+   ```
+   sudo chown -R mysql /usr/local/mysql-5.0.37
+   ```
 
 6. **安装 MySQL 启动项。**
 
-为了让服务器在计算机启动时启动，你需要安装启动项，它包含在 MySQL 磁盘映像中。
+   为了让服务器在计算机启动时启动，你需要安装启动项，它包含在 MySQL 磁盘映像中。
 
 ### 从源码文件安装 MySQL
 
@@ -1339,79 +1212,79 @@ sudo chown -R mysql /usr/local/mysql-5.0.37
 
 1. **为 MySQL 创建名为 `mysql` 的用户和组供其运行。**
 
-```
-groupadd mysql
-useradd -g mysql
-```
+   ```
+   groupadd mysql
+   useradd -g mysql
+   ```
 
-***注意：*** 不同版本的 Unix 命令语法可能略有不同，或者它们可能被称为 `addgroup` 和 `adduser`。***注意：*** 最近的 Linux 发行版和 Mac 已经创建了 mysql 账户。
+   **注意：** 不同版本的 Unix 命令语法可能略有不同，或者它们可能被称为 `addgroup` 和 `adduser`。**注意：** 最近的 Linux 发行版和 Mac 已经创建了 mysql 账户。
 
 2. **切换到下载源码 tarball 的目录 —— 例如，`/usr/local`。**
 
-你会看到名为 `mysql-` 的文件，后面跟着版本号和 `.tar.gz` —— 例如，`mysql-5.0.35.tar.gz`。该文件是一个 tarball。
+   你会看到名为 `mysql-` 的文件，后面跟着版本号和 `.tar.gz` —— 例如，`mysql-5.0.35.tar.gz`。该文件是一个 tarball。
 
 3. **通过输入命令解压 tarball：**
 
-```
-gunzip -c *filename* | tar -xvf –
-```
+   ```
+   gunzip -c *filename* | tar -xvf –
+   ```
 
-例如：
+   例如：
 
-```
-gunzip -c mysql-5.0.35.tar.gz | tar -xvf –
-```
+   ```
+   gunzip -c mysql-5.0.35.tar.gz | tar -xvf –
+   ```
 
-你会看到一个新的名为 `mysql-*version` 的目录 —— 例如 `mysql-5.0.35`，其中包含文件和子目录。你必须使用允许在 `/usr/local` 创建文件的账户。
+   你会看到一个新的名为 `mysql-*version` 的目录 —— 例如 `mysql-5.0.35`，其中包含文件和子目录。你必须使用允许在 `/usr/local` 创建文件的账户。
 
 4. **进入新目录。**
 
-例如，你可能输入 `cd mysql-5.0.35`。
+   例如，你可能输入 `cd mysql-5.0.35`。
 
 5. **输入：**
 
-```
-./configure --prefix=/usr/local/mysql
-```
+   ```
+   ./configure --prefix=/usr/local/mysql
+   ```
 
-你会看到几行输出。输出将告诉你 `configure` 完成。这可能需要一些时间。
+   你会看到几行输出。输出将告诉你 `configure` 完成。这可能需要一些时间。
 
 6. **输入 `make`：**
 
-```
-make
-```
+   ```
+   make
+   ```
 
-你会看到很多行输出。输出将告诉你 `make` 完成。`make` 可能会运行一段时间。
+   你会看到很多行输出。输出将告诉你 `make` 完成。`make` 可能会运行一段时间。
 
 7. **输入 `make install`：**
 
-```
-make install
-```
+   ```
+   make install
+   ```
 
-在 Mac 上，输入 `sudo make install`。
+   在 Mac 上，输入 `sudo make install`。
 
-`make install` 完成很快。
+   `make install` 完成很快。
 
-***注意：*** 你可能需要以 root 身份运行此命令。
+   **注意：** 你可能需要以 root 身份运行此命令。
 
 8. **输入 `scripts/mysql_install_db`：**
 
-
-
-
-此命令运行一个初始化你的 MySQL 数据库的脚本。
+   此命令运行一个初始化你的 MySQL 数据库的脚本。
 
 ### 配置 MySQL
 
 9. **确保你的 MySQL 目录的所有权和组关系正确。使用这些命令设置所有权：**
 
-```
-chown -R root /usr/local/mysql
-chown -R mysql /usr/local/mysql/data
-chgrp -R mysql /usr/local/mysql
-```
+   ```
+   chown -R root /usr/local/mysql
+   chown -R mysql /usr/local/mysql/data
+   chgrp -R mysql /usr/local/mysql
+   ```
+
+
+
 这些命令将 `root` 设置为数据目录外的所有 MySQL 目录的所有者，并将 `mysql` 设置为数据目录的所有者。所有 MySQL 目录都属于 `mysql` 组。
 
 10. **使用以下命令启动 MySQL 服务器：** *在 Mac 上：*
@@ -1420,9 +1293,10 @@ chgrp -R mysql /usr/local/mysql
 cd /usr/local/mysql
 sudo ./bin/mysqld_safe
 ```
-如有，输入你的密码。按 Ctrl+Z，然后输入：`bg`
 
-最后，按 Ctrl+D 或输入 `exit`。
+如有，输入你的密码。按 `Ctrl+Z`，然后输入：`bg`
+
+最后，按 `Ctrl+D` 或输入 `exit`。
 
 *在 Linux/Unix 上：*
 
@@ -1435,7 +1309,7 @@ bin/mysqld_safe --user=mysql &
 
 ### 配置 MySQL
 
-MySQL 在启动时会读取配置文件。如果你使用默认设置或安装程序，你可能不需要向配置文件中添加任何内容。然而，如果你将 MySQL 安装在非标准位置，或者希望将数据库存储在默认位置之外，你可能需要编辑配置文件。配置文件名为 `my.ini` 或 `my.cnf`。如果你使用 Windows，它位于你的系统目录（如 Windows 或 Winnt）；在 Linux、Unix 和 Mac 上，它位于 `/etc`。该文件包含几个部分和命令。在`mysqld` 部分中的以下命令有时需要更改：
+MySQL 在启动时会读取配置文件。如果你使用默认设置或安装程序，你可能不需要向配置文件中添加任何内容。然而，如果你将 MySQL 安装在非标准位置，或者希望将数据库存储在默认位置之外，你可能需要编辑配置文件。配置文件名为 `my.ini` 或 `my.cnf`。如果你使用 Windows，它位于你的系统目录（如 Windows 或 Winnt）；在 Linux、Unix 和 Mac 上，它位于 `/etc`。该文件包含几个部分和命令。在 `mysqld` 部分中的以下命令有时需要更改：
 
 ```ini
 [mysqld]
@@ -1449,7 +1323,7 @@ basedir="C:/Program Files/MySQL/MySQL Server 5.0/"
 datadir="C:/Program Files/MySQL/MySQL Server 5.0/Data/"
 ```
 
-行开头的 `#` 使该行变为注释。`basedir` 行告诉 MySQL 服务器 安装 安装什么位置。`datadir` 行告诉服务器数据库所在地。你可以更改端口号，让服务器在不同的端口上监听数据库查询。
+行开头的 `#` 使该行变为注释。`basedir` 行告诉 MySQL 服务器安装位置。`datadir` 行告诉服务器数据库所在地。你可以更改端口号，让服务器在不同的端口上监听数据库查询。
 
 ## 启动和停止 MySQL 服务器
 
@@ -1468,9 +1342,13 @@ datadir="C:/Program Files/MySQL/MySQL Server 5.0/Data/"
 要停止或启动 MySQL 服务器，请执行以下操作：
 
 1. **选择开始** ➔ **控制面板** ➔ **管理工具** ➔ **服务。**
+
 将出现所有当前服务的列表。
+
 2. **在字母顺序列表中滚动，并点击你想停止或启动的 MySQL 服务。**
+
 服务名称左侧会出现“停止”或“启动”链接。
+
 3. **点击停止或启动。**
 
 如果你在列表中没有找到 MySQL 服务器，可以使用配置向导（如本章前面的“运行 MySQL 配置向导”节所述）将其设置为服务。
@@ -1480,9 +1358,13 @@ datadir="C:/Program Files/MySQL/MySQL Server 5.0/Data/"
 有时你可能在关闭服务器时遇到困难。你可以按照以下方法手动关闭服务器：
 
 1. **通过选择开始** ➔ **程序** ➔ **附件** ➔ **命令提示符** 打开一个命令提示符（可能称为 DOS）窗口。
+
 2. **切换到 MySQL 安装目录下的 `bin` 目录。**
+
 例如，你可能输入 `cd c:\Program Files\MySQL\MySQL Server 5.0\bin`。
-3. **输入 `mysqladmin -u root -p shutdown`****
+
+3. **输入 `mysqladmin -u root -p shutdown`**
+
 在此命令中，账户是 `root`。`-p` 表示密码，因此系统会提示你输入密码。如果你指定的账户不需要密码，请省略 `-p`。
 
 #### Windows 98/Me
@@ -1490,9 +1372,12 @@ datadir="C:/Program Files/MySQL/MySQL Server 5.0/Data/"
 如果你正在使用 Windows 98/Me，则无法将 MySQL 设置为服务。然而，你可以按照以下方法手动启动服务器：
 
 1. **通过选择开始** ➔ **程序** ➔ **附件** ➔ **命令提示符** 打开命令提示符（可能称为 DOS）窗口。
+
 2. **切换到 MySQL 安装目录下的 `bin` 目录。**
+
 例如，你可能输入 `cd c:\Program Files\MySQL\MySQL Server 5.0\bin`。
-3. **输入 `mysqld`****如果此命令失败，请输入 `mysqld-nt`。你输入的程序名称取决于 MySQL 版本。
+
+3. **输入 `mysqld`** 如果此命令失败，请输入 `mysqld-nt`。你输入的程序名称取决于 MySQL 版本。
 
 如果服务器启动，则不会显示任何消息。服务器运行时，必须保持此窗口打开。如果你关闭窗口，服务器将关闭，尽管它有时不会立即关闭。如果服务器无法启动，将显示错误消息。
 
@@ -1511,6 +1396,7 @@ mysql_server restart
 ```bash
 mysqladmin –u root –p shutdown
 ```
+
 `-p` 会导致 `mysqladmin` 提示密码。如果账户不需要密码，请包含 `-p`。
 
 ## 测试 MySQL
@@ -1518,17 +1404,18 @@ mysqladmin –u root –p shutdown
 你可以通过在命令行输入以下命令来测试 MySQL 是否正在运行：
 
 1. **切换到 MySQL 安装目录。**
+
 例如，输入 `cd c:\program files\mysql\mysql server 5.0`。
+
 注意：在 Windows 中，请打开命令提示符窗口以提供输入命令的地方。
+
 2. **切换到 `bin` 子目录** (`cd bin`)。
-3. **输入 `mysqladmin version`****
+
+3. **输入 `mysqladmin version`**
 
 提供 MySQL 版本信息的输出显示在屏幕上。
 
 你可以通过连接到 MySQL 来进一步测试其是否准备就绪。
-
-
-
 
 来自 MySQL 客户端的服务器。在安装 MySQL 时，还会安装一个名为 `mysql` 的简单基于文本的程序。由于该程序与服务器连接，因此它被称为客户端。该程序连接到 MySQL 服务器并与服务器交换消息。该程序位于 MySQL 安装目录下的 `bin` 子目录中。
 
@@ -1541,7 +1428,9 @@ mysqladmin –u root –p shutdown
    在 Windows 中，打开命令提示符窗口，然后输入路径\文件名（例如 `c:\Program Files\MySQL\MySQL Server 5.0\bin\mysql`）。
 
    如果您不需要使用用户名或密码，执行此命令将启动客户端。如果您需要输入用户名、密码或两者都输入，请使用以下参数：
+
    - `-u user`：`user` 是您的 MySQL 账户名。
+
    - `-p`：此参数会提示您输入 MySQL 账户的密码。
 
    例如，如果您位于 `mysql` 客户端所在的目录，命令可能看起来像：`mysql -u root -p`。
@@ -1603,6 +1492,7 @@ SET PASSWORD FOR ‘some_user’@’some_host’ = OLD_PASSWORD('newpwd');
 要纠正此问题，请按如下方式启动服务器：
 
 - **Windows：** 选择 开始 ➔ 控制面板 ➔ 管理工具 ➔ 服务。找到 MySQL 服务并点击启动。
+
 - **Linux/Mac：** 输入 `mysql.server start`。您可能需要处于 `mysql.server` 脚本所在的目录。
 
 # MySQL 错误日志
@@ -1610,6 +1500,7 @@ SET PASSWORD FOR ‘some_user’@’some_host’ = OLD_PASSWORD('newpwd');
 MySQL 在启动或停止时会将消息写入日志文件。当发生错误时，它也会写入消息。如果 MySQL 意外停止，您应该始终在错误日志中寻找线索。
 
 以下是您可能在错误日志中找到的一些消息：
+
 ```
 070415 17:17:01 InnoDB: Started; log sequence number 0 189675
 070415 18:01:05 InnoDB: Starting shutdown
@@ -1622,6 +1513,7 @@ MySQL 在启动或停止时会将消息写入日志文件。当发生错误时�
 MySQL 提供了两个实用程序来管理 MySQL 数据库：MySQL Administrator 和 MySQL Query Browser。这些程序并非您的 MySQL 工作所必需的，但它们提供了帮助您管理数据库的功能。这些程序运行在 Windows、Linux 和 Mac OS 上。
 
 - **MySQL Administrator** 提供了您管理数据库所需的功能。您可以添加和删除 MySQL 账户、添加和管理密码、添加和删除权限、启动和停止 MySQL 服务器、查看日志、制作和恢复备份以及执行其他管理任务。
+
 - **MySQL Query Browser** 提供了一个图形界面，类似于浏览器界面，您可以在其中对数据库执行 SQL 查询。您可以使用按钮和拖放功能构建 SQL 查询。
 
 这两个程序都包含在一个文件中（并带有其他程序），您可以从 MySQL 网站下载并安装。
@@ -1638,9 +1530,6 @@ MySQL 提供了两个实用程序来管理 MySQL 数据库：MySQL Administrator
 
 许多网络托管公司都提供 phpMyAdmin 供您在访问其计算机上的数据库时使用。
 
-
-
-
 在安装 `phpMyAdmin` 之前，你必须安装 `MySQL` 和 `PHP`。如果你安装了 `XAMPP`，可能在安装过程中已经安装了 `phpMyAdmin`。如果没有，你可以卸载 `XAMPP` 并重新安装包含 `phpMyAdmin` 的版本。安装 `XAMPP` 的说明请参考第 5 章。
 
 后续章节提供了在你安装了 Web 服务器、`MySQL` 和 `PHP` 之后，下载、安装和测试 `phpMyAdmin` 本身的说明。
@@ -1650,7 +1539,9 @@ MySQL 提供了两个实用程序来管理 MySQL 数据库：MySQL Administrator
 你可以通过从 phpMyAdmin 网站下载获取 `phpMyAdmin`。按照以下步骤操作：
 
 1. 访问 `www.phpmy.net`。
+
 2. 找到左上角标题为 `Downloads`（下载）的框。
+
 3. 点击 `Latest Stable`（最新稳定版）下的 Zip 链接。
 
 下载 `phpmyadmin-version-all-languages-utf8only.zip` 文件。（例如，版本 2.10.3 的文件名为 `phpmyadmin-2.10.3-all-languages-utf8only.zip`）。
@@ -1660,6 +1551,7 @@ MySQL 提供了两个实用程序来管理 MySQL 数据库：MySQL Administrator
 要安装 `phpMyAdmin`，你需要解压下载的文件，并将文件存储在 Web 服务器查找 Web 页面文件的目录（文档根）中。然后配置 `phpMyAdmin` 与你的 `MySQL` 安装进行通信。按照以下步骤安装 `phpMyAdmin`：
 
 1. 切换到存储已下载的 `phpMyAdmin` 文件的目录。
+
 2. 将 `.zip` 文件中的文件解压到 Web 服务器查找 Web 页面文件的目录中。
 
 Windows 上 `Apache` 的默认文档根是 `Apache` 安装目录下的 `htdocs`；如果你更改了默认的 `Apache` 文档根，请将 `phpMyAdmin` 文件解压到新的文档根。`IIS` 的默认目录是 `inetpub\wwwroot`。在 Linux 中，可能是 `/var/www/html`。
@@ -1667,8 +1559,11 @@ Windows 上 `Apache` 的默认文档根是 `Apache` 安装目录下的 `htdocs`�
 解压文件后，你将得到一个与 Zip 文件同名的目录，例如 `phpmyadmin-2.10.3-all-languages-utf8only`。该目录包含多个子目录和文件。
 
 3. 将目录重命名为 `phpMyAdmin`。
+
 4. 进入该新目录。
+
 5. 创建一个新文件夹并命名为 `config`。
+
 6. 启动浏览器并访问 `http://localhost/phpMyAdmin/scripts/setup.php`。
 
 出现 `phpMyAdmin` 设置 Web 页面，如图 3-5 所示。
@@ -1683,13 +1578,21 @@ Windows 上 `Apache` 的默认文档根是 `Apache` 安装目录下的 `htdocs`�
 
 页面出现 `Add Server` 部分，如图 3-6 所示。
 
+
+
+## 配置 phpMyAdmin 服务器
+
 8. 在 `ServerHostname` 字段中输入名称。大多数情况下，你可以输入 `localhost`。
+
 9. 在 `Account Name` 字段中输入 `root`。
+
 10. 在 `Password` 字段中输入 `root` 账户的密码。这是你在安装 `MySQL` 时为 `root` 创建的密码。
+
 11. 点击 `Add Server` 部分底部的绿色 `Add` 按钮。
+
 12. 滚动到 `Configuration` 部分并再次点击 `Save`（保存）按钮。
 
-你刚刚添加的服务器已保存到配置文件中。再次显示 `File Saved` 。
+你刚刚添加的服务器已保存到配置文件中。再次显示 `File Saved`。
 
 13. 将 `config` 目录中的 `config.inc.php` 文件复制到 `phpMyAdmin` 目录中。
 
@@ -1708,16 +1611,14 @@ Windows 上 `Apache` 的默认文档根是 `Apache` 安装目录下的 `htdocs`�
 `phpMyAdmin` 允许你管理 `MySQL` 数据库。有关使用 `phpMyAdmin` 的信息请见第三部分。
 
 **图 3-7：** phpMyAdmin 主 Web 页面。
+
 **图 3-6：** phpMyAdmin Add Server 部分。
+
 **图 3-5：** phpMyAdmin 错误页面。
 
 此错误消息表示，图 3-8 所示的用户被拒绝访问 `phpMyAdmin`。注意图 3-8 中的错误消息在标题后带有一个小小的问号（?）。如果你点击该问号，将打开相应的文档。
 
 检查 `config.inc.php` 文件以查看当前的账户和密码。
-
-
-
-
 
 你可以通过在浏览器中查看 Web 页面来测试计算机上是否安装了 Web 服务器。打开浏览器，在地址栏中输入 `localhost` 或你的计算机域名（例如，`mycompany.com`）。如果已安装 Web 服务器，将会显示一个 Web 页面。例如，Apache 欢迎界面会显示以下文本：
 
@@ -1734,19 +1635,11 @@ Windows 上 `Apache` 的默认文档根是 `Apache` 安装目录下的 `htdocs`�
 
 即使你没有正在运行的 Web 服务器，你的计算机上可能安装了 Web 服务器但尚未启动。如果是这样，你只需要启动 Web 服务器。例如，所有最近的 Mac 都安装了 Apache，但它可能需要启动。请参考本章稍后关于获取和安装 Apache 的说明。
 
-## 安装和配置 Apache
-
-所有最近版本的 Mac OS X 都预装了 Apache。大多数 Linux 发行版也包含 Apache。然而，你可能想自己安装 Apache 以获取更新的版本，或使用不同的选项进行安装。
-
-Windows 不带 Apache。你必须自己进行安装。
-
-要检查 Apache 是否已安装，请按照本章前面“测试你的 Web 服务器”节中的描述，在浏览器地址栏中输入 URL（例如 `localhost`）。如果尚未尚未安装 Apache，则会显示错误信息。
-
-## 获取 Apache
+### 获取 Apache
 
 Apache 是一个开源 Web 服务器，你可以免费下载它。
 
-### 选择 Apache 版本
+#### 选择 Apache 版本
 
 Apache 目前有三个版本可用：`Apache 1.3`、`Apache 2.0` 和 `Apache 2.2`。这三个版本都得到了支持和升级。PHP 软件可以在所有三个版本上运行，但某些其他与 PHP 相关的软件在 `Apache 2.0` 或 `Apache 2.2` 上可能会出现问题。在 Windows 上，`Apache 2.0` 和 `Apache 2.2` 不支持 Windows 9x 安装程序；它们需要 `Windows NT`、`2000`、`XP` 或 `Vista`。
 
@@ -1756,7 +1649,7 @@ Apache 目前有三个版本可用：`Apache 1.3`、`Apache 2.0` 和 `Apache 2.2
 
 在编写时，当前的发布版本为 `Apache 2.2.4`、`2.0.59` 和 `1.3.37`。尝试安装你所选 Apache 版本的最新发布版，以便你的 Apache 服务器包含所有最新的安全修复和漏洞修复。`Apache 1.3` 不再添加新功能，但仍在修复漏洞，并正在解决安全问题。新版本的 `Apache 1.3` 仍在持续发布，但频率低于 `Apache 2.0` 或 `Apache 2.2`。
 
-### 从 Apache 网站下载
+#### 从 Apache 网站下载
 
 适用于所有操作系统的 Apache 均可在 Apache 官方网站上获取。你可以下载源代码并在你的操作系统上进行编译。在 Linux 和 Mac 上编译和安装源代码并不困难，但在 Windows 上需要专家知识和软件。
 
@@ -1764,17 +1657,17 @@ Windows 提供了`二进制文件`——即编译好的、开箱即用的文件�
 
 要从 Apache 网站获取 Apache，请访问 `http://httpd.apache.org`。滚动到你想要下载的 Apache 版本部分并点击 `Download`。随后将显示一个包含当前版本下载链接的下载页面。
 
-### 获取 Windows 版 Apache
+#### 获取 Windows 版 Apache
 
 Windows 二进制文件带有一个安装程序，该程序将安装、配置并启动 Apache。在 Apache 网站下载页上，找到你需要的 Apache 版本部分。点击 `Win32 Binary (MSI Installer)` 链接下载安装程序文件。
 
 虽然也可以以 `Zip` 格式下载 `Win32` 源代码，但从源代码编译和安装 Apache 非常困难，应仅供高级用户尝试。
 
-### 获取 Linux 版 Apache
+#### 获取 Linux 版 Apache
 
 大多数 Linux 发行版都包含 Apache。如果你需要安装 Apache 或升级到新版本，大多数发行版都提供了下载和安装的软件。此外，大多数 Linux 系统提供了相应的工具。例如，Fedora 提供了 `yum` 工具。请参考你 Linux 发行版的文档了解如何下载和安装。在某些情况下，你可能需要手动安装。网站提供的软件可能不是最新的，或者不符合你的需求。要手动安装，你需要从 Apache 网站 `http://httpd.apache.org` 下载源代码。你可以从源码编译并安装 Apache。具体操作方法请参见本章稍后“在 Linux 和 Mac 上从源码安装 Apache”节。
 
-### 获取 Mac 版 Apache
+#### 获取 Mac 版 Apache
 
 所有最近版本的 Mac OS X 都预装了 Apache。如果你通过在浏览器地址栏输入 `localhost` 来测试 Apache 但没有显示页面，说明它可能已安装但未启动。要了解如何启动 Apache，请参见本章稍后“在 Mac 上安装 Apache”节。
 
@@ -1785,9 +1678,6 @@ Windows 二进制文件带有一个安装程序，该程序将安装、配置并
 你可以获取某些一次性安装 PHP、MySQL 和 Apache 的工具包。这些包可以极大地简化安装过程。然而，提供的软件可能并不包含你所需的特性和扩展。
 
 XAMPP 是一个流行的集成安装包，它包含了 Apache、PHP 和 MySQL。XAMPP 为 Windows 和多个 Linux 版本提供了稳定版本。此外，Mac 和 Solaris 也有 XAMPP 版本可用，但这些版本目前较新且尚不完善。XAMPP 位于 `www.apachefriends.org/en/xampp`。使用 XAMPP 安装软件的说明请参见本文书的第 4 章或第 5 章。
-
-
-
 
 包含了 Apache 2.2、PHP 5 和 MySQL 5 版本。它还安装了 `phpMyAdmin`，这是一个用于管理您的 `MySQL` 数据库的工具。WAMP5 网站表示它兼容 Vista。WAMP5 不支持 Windows 98/Me。您可以在 `www.en.wampserver.com` 访问 WAMP5。
 
@@ -1812,37 +1702,53 @@ Apache 网站提供了在下载软件后验证软件的方法，这是一种安�
 要安装 Apache，请按照以下步骤操作：
 
 1. **双击您下载的文件。**
+
    文件名为 `apache_`，后跟版本号和 `win32-x86-no_ssl.msi`。例如，`apache_2.0.59-win32-x86-no_ssl.msi`。
+
    *注意：* 在 Vista 中，您可能需要右键点击文件并选择“以管理员身份运行”。
+
    Apache 安装向导启动，并出现欢迎界面。
 
 2. **点击“下一步”。**
+
    显示许可协议。
 
 3. **选择“我接受许可协议中的条款”并点击“下一步”。**
+
    如果您不接受这些条款，则无法安装软件。将显示关于 Apache 的信息屏幕。
 
 4. **点击“下一步”。**
+
    将显示一个请求信息的屏幕。
 
 5. **输入所需信息并点击“下一步”。**
+
    请求的信息有：
+
    - *域名名称：* 输入您的域名，例如 `MyFineCompany.com`。如果您是为了测试而安装 Apache，并且计划仅从安装该程序的机器访问它，可以输入 `localhost`。
+
    - *服务器名称：* 输入您安装 Apache 的服务器名称，例如 `www.MyFineCompany.com` 或 `s1.mycompany.com`。如果您是为了测试而安装 Apache，并且计划仅从安装该程序的机器访问它，可以输入 `localhost`。
+
    - *电子邮件：* 输入您希望接收有关 Web 服务器电子邮件的地址，例如 `WebServer@MyFineCompany.com`。
+
    - *运行模式：* 选择您希望 Apache 作为服务运行（在计算机启动时自动启动），还是希望在需要它时手动启动 Apache。在大多数情况下，您希望 Apache 作为服务运行。
+
    将显示“安装类型”屏幕。
 
 6. **选择一种安装类型并点击“下一步”。**
+
    在大多数情况下，您应该选择“完全”。只有深谙 Apache 的高级用户才应该选择“自定义”。如果您选择“自定义”，屏幕将与下方描述的屏幕略有不同。将显示一个显示 Apache 安装位置的屏幕。
 
 7. **选择您想要安装 Apache 的目录并点击“下一步”。**
+
    您将看到 Apache 的默认安装目录，通常为 `C:\Program Files\Apache Group`。如果没问题，点击“下一步”。如果您想将 Apache 安装在不同的目录，点击“更改”并选择一个不同的目录，点击“确定”，然后点击“下一步”。出现的屏幕显示向导已准备好安装 Apache。
 
 8. **点击“安装”。**
+
    如果需要，您可以在继续安装之前返回并更改之前输入的任何信息。屏幕将显示进度。安装完成后，将出现一个屏幕，说明向导已成功完成安装。
 
 9. **点击“完成”退出安装向导。**
+
    Apache 根据您的操作系统安装在计算机上。如果您在 Windows NT/2000/XP/Vista 上安装，它将默认作为服务安装，并在计算机启动时自动启动。如果您在 Windows 95/98/Me 上安装，则需要手动启动或对其进行设置。请参本章后面的“启动和停止 Apache”部分。
 
 ### 在 Mac 上安装 Apache
@@ -1853,17 +1759,22 @@ Apache 网站提供了在下载软件后验证软件的方法，这是一种安�
 
 ### 在 Linux 和 Mac 上从源码安装 Apache
 
-您可以在 Linux、 Mac 上从源码安装 Apache。您需要下载源代码并进行编译。从源码安装 Apache，请按照以下步骤操作：
+您可以在 Linux、Mac 上从源码安装 Apache。您需要下载源代码并进行编译。从源码安装 Apache，请按照以下步骤操作：
 
 1. **进入下载文件的目录。**
+
    下载的文件名为 `apache-`，后跟版本号和 `tar.gz`。
 
 2. **使用类似下面的命令解压压缩包：**
+
    Mac:
+
    ```bash
    untar -xzf httpd-2.0.59.tar.gz
    ```
+
    Linux:
+
    ```bash
    gunzip -c httpd-2.0.59.tar.gz | tar -xf
    ```
@@ -1871,54 +1782,62 @@ Apache 网站提供了在下载软件后验证软件的方法，这是一种安�
 3. **使用 `cd` 命令进入解压创建的新目录（例如 `cd httpd_2.0.59`）。**
 
 4. **输入配置命令。**
-   `configure` 命令由 `./configure` 以及所有必要的选项组成。要将 PHP 作为模块，，使用相应的配置命令：
+
+   `configure` 命令由 `./configure` 以及所有必要的选项组成。要将 PHP 作为模块，使用相应的配置命令：
+
    对于 Linux 或 Unix：
+
    ```bash
    ./configure --enable-so
    ```
+
    对于 Mac：
+
    ```bash
    ./configure --enable-module=most --enable-shared=max
    ```
+
    可以使用其他选项。您可能需要使用的重要安装选项之一是 `prefix`，它设置您希望安装 Apache 的位置。默认情况下，Apache 安装在 `/usr/local/apache` 或 `/usr/local/apache2`。您可以使用以下行更改安装位置：
+
    ```bash
    ./configure --prefix=/software/apache
    ```
+
    您可以通过以下行查看所有可用选项：
+
    ```bash
    ./configure --help
    ```
+
    此脚本可能需要一段时间才能运行完毕。运行时，它会显示输出。脚本结束后，将显示系统提示符。
+
    如果 `configure` 遇到问题，它会显示描述性错误信息。
 
 5. **输入 `make` 构建 Apache 服务器。**
 
+   `make` 命令可能需要运行几分钟。它在运行时会显示消息，期间偶尔会停顿以等待进程完成运行。
 
+6. **输入以下命令安装 Apache：**
 
+   对于 Linux 或 Unix，输入：
 
-`make` 命令可能需要运行几分钟。它在运行时会显示消息，期间偶尔会停顿以等待进程完成运行。
+   ```bash
+   make install
+   ```
 
-### 6. **输入以下命令安装 Apache：**
+   对于 Mac，输入：
 
-对于 Linux 或 Unix，输入：
+   ```bash
+   sudo make install
+   ```
 
-```bash
-make install
-```
+7. **启动 Apache Web 服务器。**
 
-对于 Mac，输入：
+   详情请见下一节。
 
-```bash
-sudo make install
-```
+8. **在浏览器中输入你的网站的 URL（例如 www.mysite.com 或 `localhost`）来测试 Apache。**
 
-### 7. **启动 Apache Web 服务器。**
-
-详情请见下一节。
-
-### 8. **在浏览器中输入你的网站的 URL（例如 www.mysite.com 或 `localhost`）来测试 Apache。**
-
-如果一切顺利，你将看到一个告诉 Apache 正在运行的 Web 页面。
+   如果一切顺利，你将看到一个告诉 Apache 正在运行的 Web 页面。
 
 ---
 
@@ -1929,6 +1848,8 @@ sudo make install
 在安装 Apache 时，你可能需要启动它。或者也可能不需要。它可能已经在运行了。但是，每当你更改 Apache 或 PHP 的配置设置时，你都需要在新设置生效之前重启 Apache。
 
 ### 在 Windows 上启动和停止 Apache
+
+
 
 在 Windows NT、2000、XP 或 Vista 上安装 Apache 时，它会自动作为服务安装并启动。它是准备好可用的。在 Windows 95、98 和 Me 上，你必须使用菜单手动启动 Apache。
 
@@ -1999,15 +1920,13 @@ sudo /usr/local/apache2/bin/apachectl restart (Mac)
 sudo /usr/local/apache/bin/apachectl stop
 ```
 
-
-
 要更改任何设置，请编辑 `httpd.conf` 文件。在 Windows 上，你可以通过“开始➪程序➪Apache HTTPD Server➪配置 Apache Server➪编辑 Apache httpd.conf 文件”菜单访问此文件。点击此菜单项时，`httpd.conf` 文件将在 `记事本`中打开。
 
 `httpd.conf` 文件包含注释（以 `#` 开头的行），用于描述各个指令，但在更改任何指令之前，请务必确保理解它们的功能。所有指令在 Apache 网站上均有文档。
 
 ## 安装和配置 Apache
 
-在添加或更改文件名和路径时，请使用正斜杠，即使是在 Windows 上也是如此。Apache 可以自动识别。此外，除非路径包含特殊字符，否则路径不需要引号。冒号（:`）是一个特殊字符；下划线（`_`）和连字符（`-`）不是。
+在添加或更改文件名和路径时，请使用正斜杠，即使是在 Windows 上也是如此。Apache 可以自动识别。此外，除非路径包含特殊字符，否则路径不需要引号。冒号（`:`）是一个特殊字符；下划线（`_`）和连字符（`-`）不是。
 
 例如，要指定 Windows 目录，你可以使用如下内容：`c:/temp/mydir`。
 
@@ -2063,7 +1982,7 @@ IIS 包含在操作系统中，但不会自动安装。你需要按照以下步�
 6. 点击`确定`。
 7. 完成安装向导请求的信息。
 
-## 第 5 章：使用 XAMPP 包搭建你的 Web 开发环境
+# 第 5 章：使用 XAMPP 包搭建你的 Web 开发环境
 
 ### 下载和安装 XAMPP
 
@@ -2074,6 +1993,7 @@ XAMPP 有适用于 Windows 的稳定版本（包括 Windows Vista）以及多个
 #### 获取 XAMPP
 
 你可以从 `www.apachefriends.org/en/xampp-windows.html` 下载适用于 Windows 的 XAMPP。截至本书，XAMPP 的当前版本为 1.6.2。该版本安装了内容：
+
 * `MySQL` 5.0.41
 * `PHP` 5.2.2
 * `PHP` 4.4.7
@@ -2087,6 +2007,7 @@ XAMPP 有适用于 Windows 的稳定版本（包括 Windows Vista）以及多个
 #### 安装 XAMPP
 
 下载 XAMPP 后，按照以下步骤进行安装：
+
 1. 导航到保存下载的 XAMPP 文件的位置。该名为类似 `xampp-win32-1.6.2-installer.exe`。
 2. 双击该文件。安装向导启动。
 3. 阅读并点击接几个屏幕，直到出现“选择安装位置”屏幕，如图 5-1 所示。
@@ -2094,9 +2015,6 @@ XAMPP 有适用于 Windows 的稳定版本（包括 Windows Vista）以及多个
 ### 测试和配置你的开发环境
 
 ### 排除你的 XAMPP 安装问题
-
-
-
 
 # 选择
 
@@ -2123,9 +2041,11 @@ XAMPP 有适用于 Windows 的稳定版本（包括 Windows Vista）以及多个
 安装向导的 XAMPP Options 界面。
 
 ![Image 18](img/index-119_1.jpg)
+
 ![Image 19](img/index-119_2.jpg)
 
 09_167779 bk01ch05.qxp 12/17/07 8:07 PM Page 90
+
 90 安装 XAMPP
 
 6. **点击 Install（安装）按钮。**
@@ -2149,6 +2069,7 @@ XAMPP 安装完成界面。
 ![Image 20](img/index-120_1.jpg)
 
 09_167779 bk01ch05.qxp 12/17/07 8:07 PM Page 91
+
 91 使用 XAMPP 控制面板
 
 8. **点击 OK。**
@@ -2160,11 +2081,15 @@ XAMPP 安装完成界面。
 ### 显示以下问题：
 
 **W**
+
 现在启动 XAMPP 控制面板吗？
 
 **Set**
+
 **eb Development**
+
 **Environment**
+
 **ting Up Y**
 
 屏幕显示 Yes（是）和 No（否）按钮。
@@ -2192,6 +2117,7 @@ XAMPP 控制面板图标。
 ![Image 21](img/index-121_1.jpg)
 
 09_167779 bk01ch05.qxp 12/17/07 8:07 PM Page 92
+
 92 测试你的开发环境
 
 **图 5-6:**
@@ -2217,6 +2143,7 @@ XAMPP 控制面板。
 ![Image 22](img/index-122.jpg)
 
 09_167779 bk01ch05.qxp 12/17/07 8:07 PM Page 93
+
 93 测试你的环境
 
 **第一册**
@@ -2236,11 +2163,14 @@ XAMPP 控制面板。
 
 显示 XAMPP 界面，提供了语言选择。在某些情况下，XAMPP 已经设置了语言选择，不再询问。在这种情况下，你不需要执行第 3 步，因为浏览器已经处于图 5-7 所示的页面。
 
+
+
 **图 5-7:**
 
 XAMPP 界面。
 
 09_167779 bk01ch05.qxp 12/17/07 8:07 PM Page 94
+
 94 测试你的环境
 
 点击页面左侧面板中的 `Status`（状态）链接。
@@ -2262,9 +2192,6 @@ XAMPP 界面。
 1. **找到需要保存 PHP 脚本的目录。**
 
 该目录及其子目录就是你的 *Web 空间*。这是 Apache 在你输入 `localhost` 时查找脚本的地方。该目录被称为 `htdocs`，位于你安装 XAMPP 的目录中，例如 `c:\xampp\htdocs`。
-
-
-
 
 你可以在 Apache 配置文件中更改你的 Web 空间位置。关于更改 Apache 配置，将在本章后面的“配置 Apache”章节进行介绍。
 
@@ -2316,26 +2243,33 @@ XAMPP 将 `php.ini` 文件存储在主 XAMPP 文件夹下的 `apache\bin`目录�
 要配置 PHP，请遵循以下步骤：
 
 1. **使用文本编辑器打开 `php.ini` 文件进行编辑。**
+
 2. **编辑你想要更改的设置。** 步骤 3 和 4 提到了某些特定设置，如果你在使用指定的环境，应该始终更改这些设置。
+
 3. **仅在你使用 PHP 5 或更早版本时，关闭魔术引用（magic quotes）。**
 
 查找以下行：
+
 ```
 magic_quotes-gpc On
 ```
+
 将 `On` 改为 `Off`。
 
 4. **仅在你使用 PHP 5 或更高版本时，设置你的本地时区。**
 
 找到该行：
+
 ```
 ;date.timezone =
 ```
+
 删除行开头的分号。在等号后添加你的本地时区代码。例如，该行可能是 `date.timezone = America/Los_Angeles`。
 
 你可以在 `www.php.net/manual/en/timezones.php` 找到时区代码列表。
 
 5. **保存 `php.ini` 文件**
+
 6. **重启 Apache 以使新设置生效。**
 
 通常，剩余的默认设置允许 PHP 正常运行，但你可能出于特定原因需要编辑这些设置中的某些。在讨论可能需要你更改设置的话题时，我们在书中会讨论 `php.ini` 文件中的设置。
@@ -2359,15 +2293,16 @@ MySQL 在安装时会创建一个配置文件。大多数人不需要更改 MySQ
 如果你觉得你犯了错误并想重新安装 XAMPP，你需要在重新安装之前卸载它。要重新安装 XAMPP，请遵循以下步骤：
 
 1. **在 XAMPP 控制面板中停止 Apache 和 MySQL。** 参考本章早些“使用 XAMPP 控制面板”节。如果你在卸载 XAMPP 之前没有停止 Apache 和 MySQL，在重新安装时可能会遇到困难。特别是如果你将 Apache 和 MySQL 作为服务启动了。
+
 2. **通过选择开始 > 所有程序 > Apache Friends > XAMPP > 卸载启动卸载。** 卸载程序的第一个界面将打开。
+
 3. **浏览屏幕并回答问题。** 点击“下一步”按钮浏览屏幕；通过选择相应的选项来回答问题。可以通过点击相应的选项保存你创建的任何数据库或 Web 页面。XAMPP 完全卸载后将显示一条消息。
+
 4. **从头重新启动安装程序。** 详情请参考早之前的“安装 XAMPP”节。
 
 ### 故障排除
 
-有时，当你查看 XAMPP 控制面板时，会发现 Apache 和/或 MySQL 列在列表中但未运行，且 Svc 复选框未勾选。这意味着 XAMPP 在安装期间未能将 Apache 或 MySQL 作为服务启动。
-
-
+有时，当你查看 XAMPP 控制面板时，会发现 Apache 和/或 MySQL 列在列表中但未运行，且 `Svc` 复选框未勾选。这意味着 XAMPP 在安装期间未能将 Apache 或 MySQL 作为服务启动。
 
 将 MySQL 和 Apache 作为服务运行是最好的，但并不是必须的。你可以在不勾选 `Svc` 复选框的情况下启动它们，你的开发环境就能正常工作。你只需要在每次启动电脑时在控制面板中重启 MySQL 和 Apache 即可。当 `MySQL` 和 `Apache` 都作为服务运行时，它们会在电脑启动时自动启动。在大多数情况下，你可以使用本节描述的方法在控制面板将它们作为服务启动。
 
@@ -2382,6 +2317,7 @@ MySQL 在安装时会创建一个配置文件。大多数人不需要更改 MySQ
 如果你在未勾选 `Svc` 复选框启动并停止后，仍然无法将 `MySQL` 和/或 `Apache` 作为服务启动，可以在不作为服务的情况下运行它们。它们会正常运行，你的开发环境也能工作——你只需要在启动电脑时记得重新启动它们。
 
 ![Image 24](img/index-130_1.jpg)
+
 ![Image 25](img/index-130_2.png)
 
 ## 第二卷
@@ -2391,8 +2327,11 @@ MySQL 在安装时会创建一个配置文件。大多数人不需要更改 MySQ
 #### 内容概览
 
 **第 1 章：PHP 基础 ... 103**
+
 **第 2 章：构建 PHP 脚本 ... 151**
+
 **第 3 章：PHP 与你的操作系统 ... 197**
+
 **第 4 章：面向对象编程 ... 229**
 
 ## 第 1 章：PHP 基础
@@ -2400,9 +2339,13 @@ MySQL 在安装时会创建一个配置文件。大多数人不需要更改 MySQ
 ### 本章内容
 
 - 在 HTML 文件中添加 PHP 部分
+
 - 编写 PHP 语句
+
 - 使用 PHP 变量和常量
+
 - 使用数组
+
 - 为你的脚本编写文档
 
 `PHP` 是一种专门为 Web 设计脚本语言。它具有帮助你开发动态应用程序的功能。根据 `www.php` 的 Netcraft 调查，它的流行性持续增长。
@@ -2422,9 +2365,13 @@ Web 服务器配置为期望某些文件扩展名包含 PHP 语句。扩展名�
 Web 服务器的工作原理如下：
 
 1. Web 服务器开始在 HTML 模式下扫描文件。它假设所有语句都是 HTML。
+
 2. 当 Web 服务器遇到 PHP 开启标签 (`<?php`) 时，它切换到 PHP 模式。
+
 3. Web 服务器原样处理 PHP 语句。
+
 4. 当 Web 服务器遇到 PHP 结束标签 (`?>`) 时，它返回 HTML 模式。
+
 5. Web 服务器继续扫描 HTML 并将其发送到浏览器。此循环一直持续到文件末尾。
 
 `PHP` 语句不会包含在发送到浏览器的输出中，因此用户永远看不到任何 PHP 语句。例如，在这个简单的 PHP 语句中：
@@ -2440,9 +2387,6 @@ Web 服务器的工作原理如下：
 ```
 
 这是一个普通的 HTML 语句。该 HTML 语句被传递给用户的浏览器。浏览器将该语句解释为 HTML 代码，并显示一个包含一个段落——Hello World 的 Web 页面。
-
-
-
 
 PHP 在用于网页时是一种 `embedded`（嵌入式）脚本语言。这意味着 PHP 代码被嵌入在 HTML 代码中。你使用 HTML 标签来包裹嵌入在 HTML 文件中的 PHP 语言——就像你使用其他 HTML 标签一样。你创建和编辑包含 PHP 的网页的方法与你创建和编辑普通 HTML 页面的方法相同。
 
@@ -2529,6 +2473,7 @@ echo “<p>Hello World again!</p>”
 `Simple statements`（简单语句）是 PHP 执行一个简单动作的指令。列表 1-2 显示的 `echo` 语句是一个简单的 PHP 语句，指示 PHP 输出双引号之间的文本。PHP 简单语句遵循以下规则：
 
 - **PHP 语句以分号或 PHP 结束标签结束。** PHP 不忽略空格或行尾。它会继续读取语句直到遇到分号或 PHP 结束标签，无论该语句跨越多少行。
+
 - **PHP 语句可以使用大写或小写编写。** 在 `echo` 语句中，`Echo`、`echo`、`ECHO` 和 `eCHo` 对 PHP 来说都是相同的。
 
 以下示例包含两个产生相同输出的 echo 语句：
@@ -2538,32 +2483,36 @@ echo “<p>Hello World</p>”;
 echo “<p>World</p>”;
 ```
 
-PHP 读取语句直到遇到分号，因此两个语句产生产生输出：
+
+
+# PHP 读取语句
+
+PHP 读取语句直到遇到分号，因此两个语句产生输出：
 
 ```php
-<?php echo “<p>Hello World!</p>” ?>
+<?php echo "<p>Hello World!</p>" ?>
 ```
 
 PHP 读取语句直到到达结束标签，PHP 将该标签视为语句的结束。下一个示例也产生相同的输出：
 
 ```php
 <?php
-echo “<p>Hello</p>”;
-echo “<p>World</p>”;
+echo "<p>Hello</p>";
+echo "<p>World</p>";
 ?>
 ```
 
-此示例在一行内包含两个 echo 语句，只要你用分号分隔了语句即可。
+此示例在一行内包含两个 `echo` 语句，只要你用分号分隔了语句即可。
 
-### 使用复杂语句
+## 使用复杂语句
 
 有时，一组简单语句会被组合成一个 `block`（块）。块由大括号 `{` 和 `}` 包裹。一个语句块一起执行。块的一个常见用途是 `conditional block`（条件块），在其中语句仅在特定条件为真时才执行。例如，你可能希望脚本执行以下操作：
 
 ```php
 if (the sky is blue)
 {
-put leash on dragon;
-take dragon for a walk in the park;
+    put leash on dragon;
+    take dragon for a walk in the park;
 }
 ```
 
@@ -2571,20 +2520,17 @@ take dragon for a walk in the park;
 
 使用块的 PHP 语句（例如 `if` 语句，我们将在本微型教程第 2 章解释）是 `complex statements`（复杂语句）。PHP 知道预期一个或多个块，并在复杂语句中寻找最后一个块的结束大括号。注意在结束括号之前有一个分号。这个分号是必须的，但在结束大括号之后不需要分号。
 
-
-
-
 通常情况下，每个 PHP 简单语句都写在单独中，并以分号结尾。一个例外是输出长文本字符串的 `echo` 语句。你不需要在行尾结束语句并在下一行开始新语句。你可以将语句跨越几行编写，只要确保在最后一行的末尾加上分号结束语句即可。此外，将第一行之后的行进行缩进也是一个好习惯，这样可以清晰地显示额外的行是同一个语句的一部分，如下所示：
 
 ```php
-echo “This is a really, really, really, really
-long statement”;
+echo "This is a really, really, really, really
+long statement";
 ```
 
 在编写语句块时，编码风格规定你应对块中的语句进行缩进，以清晰地显示块的开始和结束。例如，在下面的条件语句示例中，块中的简单语句被缩进了：
 
 ```php
-if(the sky is blue)
+if (the sky is blue)
 {
     put leash on dragon;
     take dragon for a walk in the park;
@@ -2593,18 +2539,18 @@ if(the sky is blue)
 
 PHP 不需要缩进，但它有助于人类阅读代码。
 
-## 在网页上显示内容
+## 左大括号的放置
 
 左大括号的放置通常有两种样式，如下所示：
 
 ```php
-if(the sky is blue)
+if (the sky is blue)
 {
     put leash on dragon;
     take dragon for a walk in the park;
 }
 
-if(the sky is blue) {
+if (the sky is blue) {
     put leash on dragon;
     take dragon for a walk in the park;
 }
@@ -2631,12 +2577,12 @@ if(the sky is blue) {
 
 | echo 语句 | 输出 |
 | :--- | :--- |
-| `echo “Hello”;` | Hello |
+| `echo "Hello";` | Hello |
 | `echo 123;` | 123 |
-| `echo “Hello”,”World!”;` | HelloWorld! |
+| `echo "Hello","World!";` | HelloWorld! |
 | `echo Hello World!;` | 无效；会导致错误消息 |
-| `echo “Hello World!”;` | Hello World! |
-| `echo ‘Hello World!’;` | Hello World! |
+| `echo "Hello World!";` | Hello World! |
+| `echo 'Hello World!';` | Hello World! |
 
 `echo` 语句输出发送到浏览器的文本。浏览器将该文本视为 HTML 并以这种方式进行处理。因此，你需要确保你的输出是有效的 HTML 代码，用于描述你想让用户看到的网页。
 
@@ -2654,21 +2600,23 @@ PHP 允许一些格式化输出的特殊字符，但它们不是 HTML 标签。P
 
 | echo 语句 | HTML 源代码 | 网页显示 |
 | :--- | :--- | :--- |
-| `echo “Hello World!”;` | Hello World! | Hello World! |
-| `echo “Hello World!”;` | Hello World! | Hello World! |
-| `echo “Here I am!”;` | Here I am! | Here I am! |
-| `echo “Hello World!\n”;` | Hello World! | Hello World! |
-| `echo “Here I am!”;` | Here I am | Here I am! |
-| `echo “Hello World!”;` | Hello World!<br /> | Hello World! |
-| `echo “<br />”;` | Here I am!” | Here I am! |
-| `echo “Here I am!”;` | Here I am! | Here I am! |
-| `echo “Hello”;` | Hello World!<br /> | Hello World! |
-| `echo “ World!\n”;` | Here I am!” | Here I am! |
-| `echo “Here I am!”;` | Here I am! | Here I am! |
+| `echo "Hello World!";` | Hello World! | Hello World! |
+| `echo "Hello World!";` | Hello World! | Hello World! |
+| `echo "Here I am!";` | Here I am! | Here I am! |
+| `echo "Hello World!\n";` | Hello World! | Hello World! |
+| `echo "Here I am!";` | Here I am | Here I am! |
+| `echo "Hello World!";` | Hello World!<br /> | Hello World! |
+| `echo "<br />";` | Here I am!" | Here I am! |
+| `echo "Here I am!";` | Here I am! | Here I am! |
+| `echo "Hello";` | Hello World!<br /> | Hello World! |
+| `echo " World!\n";` | Here I am!" | Here I am! |
+| `echo "Here I am!";` | Here I am! | Here I am! |
 
 表 1-2 总结了三个阶段之间的差异。
 
-## PHP 基础
+# PHP 基础
+
+## 变量
 
 *变量*是用于存储信息的容器。变量有一个名称，信息存储在变量中。例如，你可能会将变量命名为 `$age` 并在其中存储数字 12。信息存储在变量后，可以在脚本的后续部分中使用。
 
@@ -2682,12 +2630,9 @@ PHP 允许一些格式化输出的特殊字符，但它们不是 HTML 标签。P
 - 变量名必须以字母或下划线开头。不能以数字开头。
 - 大写字母和小写字母是不相同的。例如，`$firstname` 和 `$Firstname` 不是同一个变量。如果你将信息存储在 `$firstname` 中，你无法通过变量名 `$firstName` 访问该信息。
 
+在命名变量时，请使用能清晰说明变量中包含信息的名称。使用像 `$var1`、`$var2`、`$A` 或 `$B` 这样的变量名无法提高脚本的清晰度。虽然 PHP 不关心你如何命名变量，也不会将其混淆，但尝试理解脚本的人将很难跟踪哪个变量存储了什么信息。像 `$firstName`、`$age` 和 `$orderTotal` 这样的变量名更具描述性且更有帮助。
 
-
-
-# 在命名变量时，请使用能清晰说明变量中包含信息的名称。使用像 `$var1`、 `$var2`、 `$A` 或 `$B` 这样的变量名无法提高脚本的清晰度。虽然 PHP 不关心你如何命名变量，也不会将其混淆，但尝试理解脚本的人将很难跟踪哪个变量存储了什么信息。像 `$firstName`、 `$age` 和 `$orderTotal` 这样的变量名更具描述性且更有帮助。
-
-## 创建并为变量赋值
+### 创建并为变量赋值
 
 变量可以存储数字或字符字符串。你使用单个等号（`=`）向变量中存储信息。例如，以下四个 PHP 语句为变量分配信息：
 
@@ -2695,7 +2640,7 @@ PHP 允许一些格式化输出的特殊字符，但它们不是 HTML 标签。P
 $age = 12;
 $price = 2.55;
 $number = -2;
-$name = “Little Bo Peep”;
+$name = "Little Bo Peep";
 ```
 
 注意字符字符串被引号括起来，而数字没有。我们将在本章节后面的“理解数据类型”部分更多地讨论如何使用数字和字符。
@@ -2703,7 +2648,7 @@ $name = “Little Bo Peep”;
 每当你将信息放入一个之前不存在的变量时，你就创建了该变量。例如，假设你使用了以下 PHP 语句：
 
 ```php
-$firstname = “George”;
+$firstname = "George";
 ```
 
 如果该语句是你第一次提到 `$firstname` 变量，那么该语句将创建该变量并将其设置为“George”。如果你有一条之前的语句将 `$firstname` 设置为“Mary”，那么该语句会将 `$firstname` 的值改为“George”。
@@ -2711,38 +2656,39 @@ $firstname = “George”;
 你也可以从变量中移除信息。例如，以下语句从变量 `$age` 中取出信息：
 
 ```php
-$age = “”;
+$age = "";
 ```
 
 变量 `$age` 存在，但不包含任何值。这并不意味着 `$age` 被设置为 `0`（零），因为 `0` 是一个值。这意味着 `$age` 不存储任何信息。它包含一个长度为 0 的字符串。
 
-你甚至可以进一步通过使用此语句销销该变量：
+你甚至可以进一步通过使用此语句销毁该变量：
+
 ```php
 unset($age);
 ```
 
 在执行该语句后，变量 `$age` 不再存在了。
 
-## 使用 PHP 变量
+### 使用 PHP 变量
 
-### 使用变量变量
+#### 使用变量变量
 
 PHP 允许你使用动态变量名，称为“变量变量”。你可以使用存储在另一个变量中的值来为变量命名。也就是说，一个变量包含了另一个变量的名字。例如，假设你想创建一个名为 `$city` 且值为 Los Angeles 的变量。
 
 ```php
-$name_of_the_variable = “city”;
+$name_of_the_variable = "city";
 ```
 
 该语句创建了一个包含你想要给变量命名的变量。然后，你使用以下语句：
 
 ```php
-$$name_of_the_variable = “Los Angeles”;
+$$name_of_the_variable = "Los Angeles";
 ```
 
 注意变量名开头额外的美元符号（`$`）字符。这表示一个变量变量。该语句创建了一个以 `$name_of_the_variable` 中的值为名字的新变量，结果如下：
 
 ```php
-$city = “Los Angeles”;
+$city = "Los Angeles";
 ```
 
 `$name_of_the_variable` 的值没有改变。
@@ -2754,10 +2700,10 @@ $city = “Los Angeles”;
 ```php
 $Reno = 360000;
 $Pasadena = 138000;
-$cityname = “Reno”;
-echo “The size of $cityname is ${$cityname}”;
-$cityname = “Pasadena”;
-echo “The size of $cityname is ${$cityname}”;
+$cityname = "Reno";
+echo "The size of $cityname is ${$cityname}";
+$cityname = "Pasadena";
+echo "The size of $cityname is ${$cityname}";
 ```
 
 该代码的输出是：
@@ -2771,7 +2717,7 @@ The size of Pasadena is 138000
 
 在 `$$cityname` 中如果不使用大括号，PHP 会将 `$cityname` 转换为其值，并将额外的 `$` 放在它前面，作为前一个字符串的一部分。
 
-### 显示变量值
+#### 显示变量值
 
 你可以使用以下任何语句显示变量中的值：
 
@@ -2779,7 +2725,7 @@ The size of Pasadena is 138000
 - `print_r`
 - `var_dump`
 
-#### 在 echo 语句中使用变量
+##### 在 echo 语句中使用变量
 
 你可以使用 `echo` 语句在 Web 上显示变量的值。例如，如果你在 PHP 部分使用以下 PHP 语句：
 
@@ -2803,18 +2749,13 @@ Web 页面上的输出是：Your age is 12.。
 | :--- | :--- |
 | `echo $string1;` | Hello |
 | `echo $string1,$string2;` | HelloWorld! |
-| `echo “$string1 $string2”;` | Hello World! |
+| `echo "$string1 $string2";` | Hello World! |
 | `echo $string1,$string2;` | Hello World! |
-| `echo “$string1 $string2”;` | Hello! World! |
-
-
-
+| `echo "$string1 $string2";` | Hello! World! |
 
 当脚本中的多处需要一个值且该值在脚本执行过程中不会改变时，就会使用常量。该值在脚本开始时设置在常量。在整个脚本中使用常量而不是变量，可以确保该值不会被意外修改。通过给它命名，你可以立即知道该信息的含义。而且，通过在脚本开始时设置一次常量（而不是在整个脚本中使用该值），如果需要，你可以在一个地方更改常量的值，而不需要在脚本的许多地方搜索该值并进行修改。
 
 例如，你可能会设置一个代表公司名称的常量以及另一个代表公司地址的常量，并在需要的地方使用它们。那么，如果公司搬迁了，你只需要更改脚本开头公司地址常量的值，而无需找到并修改脚本中所有输出公司名称的地方。
-
-# 理解数据类型
 
 你通过 `define` 语句来设置常量。格式为 `define("常量名", "常量值");`。
 
@@ -2826,19 +2767,13 @@ define("COMPANY","My Fine Company");
 
 在脚本中需要公司名称的地方使用常量：`echo COMPANY;`
 
-## 第二部分
-
-## 第一章
-
 当你输出一个常量时，不能将其包含在引号中。如果你这样做，输出的是常量的名称，而不是它的值。你可以像前一个示例那样直接输出它，或者将其包含在括号中。
-
-## PHP 基础
 
 你可以使用任何可以用于变量的名称来命名常量。
 
-常量名称的前面没有美元符号 (`$`)。按照惯例，常量的名称全部使用大写字母，这样你可以轻松识别出常量，但 PHP 本身并不关心你给常量起什么名字。你没非要使用大写，这只是为了清晰。你可以在其中存储字符串或数字。以下语句对 PHP 来说是完全没：`define ("AGE",29);`。
+常量名称的前面没有美元符号 (`$`)。按照惯例，常量的名称全部使用大写字母，这样你可以轻松识别出常量，但 PHP 本身并不关心你给常量起什么名字。你没非要使用大写，这只是为了清晰。你可以在其中存储字符串或数字。以下语句对 PHP 来说是完全没问题的：`define ("AGE",29);`。
 
-### 理解数据类型
+## 理解数据类型
 
 存储在变量或常量中的值是以特定类型的数据存储的。PHP 提供了八种数据类型：
 
@@ -2857,7 +2792,7 @@ define("COMPANY","My Fine Company");
 
 ```php
 $var1 = 123;
-$var2 = “123";
+$var2 = "123";
 ```
 
 `var1` 的值被存储为整数。`var2` 的值被存储为字符串，因为它包含在引号中。
@@ -2867,7 +2802,7 @@ PHP 在需要时会自动转换数据类型。例如，如果你加上两个变�
 有时，你可能希望将值存储为与 PHP 自动存储的不同的类型。你可以通过*类型转换 (cast)* 为变量设置数据类型，如下：
 
 ```php
-$var3 = “222”;
+$var3 = "222";
 $var4 = (int) $var3;
 ```
 
@@ -2899,6 +2834,8 @@ PHP 允许对数字执行算术运算。你通过两个数字和一个算术运�
 
 你也可以对包含数字的变量执行算术运算，如下：
 
+
+
 ```php
 $n1 = 1;
 $n2 = 2;
@@ -2919,62 +2856,63 @@ PHP 将 `$n2` 转换为浮点数并将两个值相加。
 
 PHP 提供了五种算术运算符：
 
-| 运算符 |  |
+| 运算符 | 说明 |
 | :--- | :--- |
 | `+` | 两个数字相加。 |
 | `-` | 从第一个数字减去第二个数字。 |
-| `\*` | 两个数字相乘。 |
+| `*` | 两个数字相乘。 |
 | `/` | 将第一个数字除以第二个数字。 |
-| `%` | 求第一个数字除以第二个数字的数。这被称为取模。 |
+| `%` | 求第一个数字除以第二个数字的余数。这被称为取模。 |
 
 你可以一次执行多个算术运算。例如，运算的顺序很重要。PHP 先执行乘法和除法，然后执行加法和减法。因此，PHP 从左到右执行：
 
 ```php
-$result = 1 + 2 \* 4;
+$result = 1 + 2 * 4;
 ```
 
 你可以通过括号改变算术运算的顺序。括号内的算术先执行。例如，你可以用括号写之前的语句：
 
 ```php
-$result = (1 + 2) \* 4;
+$result = (1 + 2) * 4;
 ```
 
 ### 将数字格式化为金额
 
-通常你处理的数字是金额，例如产品价格。你希望客户在网页上以正确的格式看到价格。换句话说，金额应该始终保留两位。然而，PHP 以最高效率存储和显示数字。如果数字是 10.00，它会被显示为 10。为了将数字格式化，你可以使用 `sprintf`。以下语句将数字格式化为金额格式：
+通常你处理的数字是金额，例如产品价格。你希望客户在网页上以正确的格式看到价格。换句话说，金额应该始终保留两位。然而，PHP 以最高效率存储和显示数字。如果数字是 `10.00`，它会被显示为 `10`。为了将数字格式化，你可以使用 `sprintf`。以下语句将数字格式化为金额格式：
 
 ```php
-$newvariablename = sprintf(“%01.2f”, $oldvariablename);
+$newvariablename = sprintf("%01.2f", $oldvariablename);
 ```
 
 例如，以下语句以正确的格式显示金额：
 
 ```php
 $price = 25;
-$f_price = sprintf(“%01.2f”,$price);
-echo “$f_price”;
+$f_price = sprintf("%01.2f", $price);
+echo "$f_price";
 ```
 
 你在网页上看到：
 
+```text
 25.00
+```
 
-如果你用 `var_dump($f_price)` 显示变量，输出为 `string(5) “25.00”`。
-
-
-
-
+如果你用 `var_dump($f_price)` 显示变量，输出为 `string(5) "25.00"`。
 
 如果你想在数字中使用逗号来分隔千分位，可以使用 `number_format`。以下语句创建了一个带有逗号的美元格式数字：
 
 ```php
 $price = 25000;
 $f_price = number_format($price, 2);
-echo “$f_price”;
+echo "$f_price";
 ```
 
 你会在网页上看到以下内容：
+
+```text
 25,000.00
+```
 
 `number_format` 语句中的 `2` 将格式设置为保留两位小数。你可以使用任何数字来获取任意位数的小数。
 
@@ -2982,31 +2920,34 @@ echo “$f_price”;
 
 ## 第二部分：第一章
 
-`character string`（字符字符串）一系列字符。字符包括字母、数字和标点符号。当数字被用作字符时，它只是一个存储的字符，与字母相同。它不能用于算术运算。例如，`PHP Basics` 中的电话号码被存储为字符字符串，因为它只需要被存储——而不是进行加法或乘法。
+`character string`（字符字符串）是一系列字符。字符包括字母、数字和标点符号。当数字被用作字符时，它只是一个存储的字符，与字母相同。它不能用于算术运算。例如，`PHP Basics` 中的电话号码被存储为字符字符串，因为它只需要被存储——而不是进行加法或乘法。
 
 ### 将字符串赋值给变量
 
 将字符字符串存储在变量中时，通过使用双引号或单引号告诉 PHP 字符串的开始和结束。例如，以下两个语句产生相同的结果：
 
 ```php
-$string = “Hello World!”;
-$string = ‘Hello World!’;
+$string = "Hello World!";
+$string = 'Hello World!';
 ```
 
 假设你想要存储如下所示的字符串：
 
 ```php
-$string = ‘It is Sally’s house’;
+$string = 'It is Sally\'s house';
 echo $string;
 ```
 
-这些语句无法工作，因为当 PHP 看到 Sally 后面的 '（单引号）时，它认为这是字符串的结束，从而显示以下内容：
-It is Sally
+这些语句无法工作，因为当 PHP 看到 Sally 后面的 `'`（单引号）时，它认为这是字符串的结束，从而显示以下内容：
 
-你需要告诉 PHP 将单引号（`‘`）解释为撇号，而不是字符串的结束。你可以在单引号前面使用反斜杠（`\\`）来实现这一点。反斜杠告诉 PHP 该单引号没有特殊含义；它只是一个撇号。这被称为字符*转义*（escaping）。使用以下语句显示整个字符串：
+```text
+It is Sally
+```
+
+你需要告诉 PHP 将单引号（`'`）解释为撇号，而不是字符串的结束。你可以在单引号前面使用反斜杠（`\`）来实现这一点。反斜杠告诉 PHP 该单引号没有特殊含义；它只是一个撇号。这被称为字符*转义*（escaping）。使用以下语句显示整个字符串：
 
 ```php
-$string = ‘It is Sally\'s house’;
+$string = 'It is Sally\'s house';
 echo $string;
 ```
 
@@ -3014,87 +2955,110 @@ echo $string;
 
 ### 在字符串中使用单引号和双引号
 
-单引号字符串和双引号字符串的处理方式不同。单引号字符串是按字面意思存储的，`\\’` 除外，后者会被存储为撇号。在双引号字符串中，变量和某些特殊字符在字符串存储之前会被求值。以下是代码中使用双引号或单引号时最重要的区别：
+单引号字符串和双引号字符串的处理方式不同。单引号字符串是按字面意思存储的，`\'` 除外，后者会被存储为撇号。在双引号字符串中，变量和某些特殊字符在字符串存储之前会被求值。以下是代码中使用双引号或单引号时最重要的区别：
 
-✦ **处理变量：** 如果你将变量包含在双引号中，PHP 将使用变量的值。然而，如果你将变量包含在单引号中，PHP 将使用字面变量名。例如，如果你使用以下语句：
+* **处理变量：** 如果你将变量包含在双引号中，PHP 将使用变量的值。然而，如果你将变量包含在单引号中，PHP 将使用字面变量名。例如，如果你使用以下语句：
 
 ```php
 $month = 12;
-$result1 = “$month”;
-$result2 = ‘$month’;
+$result1 = "$month";
+$result2 = '$month';
 echo $result1;
-echo “<br />”;
+echo "<br />";
 echo $result2;
 ```
 
 输出为：
+
+```text
 12
 $month
+```
 
 更多示例请参考本章前面的表 1-3。
 
-✦ **换行：** 特殊字符 `\n` 告诉 PHP 开始换行。当你使用双引号时，PHP 在 `\n` 处换行；使用单引号时，`\n` 是字面字符串。例如，使用以下语句时：
+* **换行：** 特殊字符 `\n` 告诉 PHP 开始换行。当你使用双引号时，PHP 在 `\n` 处换行；使用单引号时，`\n` 是字面字符串。例如，使用以下语句时：
 
 ```php
-$string1 = “String\ndouble quotes”;
-$string2 = ‘String\nsingle quotes’;
+$string1 = "String\ndouble quotes";
+$string2 = 'String\nsingle quotes';
 ```
 
 `string1` 的输出是：
+
+```text
 String
 double quotes
-而 `string2` 的输出是：
-String\single quotes
+```
 
-✦ **插入制表符：** 特殊字符 `\t` 告诉 PHP 插入一个制表符。当你使用双引号时，PHP 在 `\t` 处插入制表符，但使用单引号时，`\t` 是字面字符串。例如，使用以下语句时：
+而 `string2` 的输出是：
+
+```text
+String\nsingle quotes
+```
+
+* **插入制表符：** 特殊字符 `\t` 告诉 PHP 插入一个制表符。当你使用双引号时，PHP 在 `\t` 处插入制表符，但使用单引号时，`\t` 是字面字符串。例如，使用以下语句时：
 
 ```php
-$string1 = “String\tdouble quotes”;
-$string2 = ‘String\tsingle quotes’;
+$string1 = "String\tdouble quotes";
+$string2 = 'String\tsingle quotes';
 ```
 
 `string1` 的输出是：
-String double quotes
+
+```text
+String	double quotes
+```
+
 而 `string2` 的输出是：
-String\single quotes
+
+```text
+String\tsingle quotes
+```
 
 包裹整个字符串的引号决定了变量和特殊字符的处理，即使字符串内部还有其他的引号。例如，看以下语句：
 
 ```php
 $number = 10;
-$string1 = “There are $number people in line.”;
-$string2 = ‘There are $number people waiting.’;
-echo $string1,”<br />”;
+$string1 = "There are $number people in line.";
+$string2 = 'There are $number people waiting.';
+echo $string1, "<br />";
 echo $string2;
 ```
 
 输出如下：
+
+```text
 There are 10 people in line.
 There are $number waiting.
+```
 
 ### 连接字符串
 
 你可以使用点（`.`）来连接字符串，这个过程被称为*拼接*（concatenation）。例如，你可以通过以下语句连接字符串：
 
 ```php
-$string1 = ‘Hello’;
-$string2 = ‘World!’;
-$stringall = $string1.$string2;
+$string1 = 'Hello';
+$string2 = 'World!';
+$stringall = $string1 . $string2;
 echo $stringall;
 ```
 
-`echo` 语句的输出是 HelloWorld!
+`echo` 语句的输出是 `HelloWorld!`。
 
 注意 Hello 和 World 之间没有空格。这是因为在连接的两个字符串中没有包含空格。你可以通过连接语句而不是之前的语句在单词之间添加空格：
 
 ```php
-$stringall = “Hello”;
-$stringall .= “ World!”;
+$stringall = "Hello";
+$stringall .= " World!";
 echo $stringall;
 ```
 
 echo 语句的输出是：
+
+```text
 Hello World!
+```
 
 你也可以拆分字符串。你可以在指定的字符处分离它们，或者在字符串中查找子字符串。你可以使用函数对字符串进行这些操作。我们将在第二章中介绍函数。
 
@@ -3125,7 +3089,10 @@ echo $herevariable;
 ```
 
 echo 语句的输出如下：
+
+```text
 The distance between Los Angeles and Pasadena is 10 miles.
+```
 
 但要注意，PHP 对 `ENDSTRING` 非常挑剔。当它第一次出现时，`ENDSTRING`（在本例中为 ENDOFTEXT）必须出现在行末尾，后面不能有任何内容，甚至是空格。而最后一行的 `ENDSTRING` 必须出现在行的开头，前面不能有任何内容，甚至是空格，除了分号外不能有任何内容。如果违反了这些规则，PHP 将无法识别结束字符串，并在整个脚本中继续寻找。它最终会显示一个解析错误，行号为脚本的最后一行。
 
@@ -3143,19 +3110,14 @@ PHP 将变量设置为布尔数据类型。布尔值用于在条件语句（如 
 
 以下值被 PHP 评估为假：
 
-✦ 单词 `false`
-✦ 整数 `0`
-✦ 浮点数 `0.0`
-
-
-
-
-
-*✦ 一个空字符串
-*✦ 值为 0 的字符串
-*✦ 一个空数组
-*✦ 一个空对象
-*✦ NULL 值
+* 单词 `false`
+* 整数 `0`
+* 浮点数 `0.0`
+* 一个空字符串
+* 值为 `0` 的字符串
+* 一个空数组
+* 一个空对象
+* `NULL` 值
 
 如果变量包含的值不被求值为假（false），则它被赋值为值 `true`。
 
@@ -3178,14 +3140,14 @@ $var1 = NULL;
 创建数组简单的方法是在变量名末尾加上方括号 `[]` 并为其赋值一个值。例如，假设你在脚本之前的任何地方都没有引用过 `$cities`，以下语句将创建一个名为 `$cities` 的数组：
 
 ```php
-$cities[1] = “Phoenix”;
+$cities[1] = "Phoenix";
 ```
 
 此时，名为 `$cities` 的数组已经创建，并且它只有一个值：Phoenix。接下来，你使用以下语句：
 
 ```php
-$cities[2] = “Tucson”;
-$cities[3] = “Flagstaff”;
+$cities[2] = "Tucson";
+$cities[3] = "Flagstaff";
 ```
 
 现在，数组 `$cities` 包含了三个值：Phoenix、Tucson 和 Flagstaff。
@@ -3193,39 +3155,39 @@ $cities[3] = “Flagstaff”;
 数组可以被视为 `key/value pairs`（键值对）列表。每个键值对被称为 `element`（元素）。要获取特定的值，你需要在括号中指定 `key`（键）。在前面的数组中，键是数字——1、2 和 3。然而，你也可以使用单词作为键。例如，以下语句创建了一个州首的数组：
 
 ```php
-$capitals['CA'] = “Sacramento”;
-$capitals['TX'] = “Austin”;
-$capitals['OR'] = “Salem”;
+$capitals['CA'] = "Sacramento";
+$capitals['TX'] = "Austin";
+$capitals['OR'] = "Salem";
 ```
 
 你可以使用快捷方法，而不是为每个数字编写单独的赋值语句。其中一种快捷方法使用以下语句：
 
 ```php
-$cities[] = “Phoenix”;
-$cities[] = “Tucson”;
-$cities[] = “Flagstaff”;
+$cities[] = "Phoenix";
+$cities[] = "Tucson";
+$cities[] = "Flagstaff";
 ```
 
-当你使用这种快捷方法创建数组时，值会自动分配从数字 0 开始的序列号作为键。例如，以下语句 
+当你使用这种快捷方法创建数组时，值会自动分配从数字 0 开始的序列号作为键。例如，以下语句
 
 ```php
-echo “$cities[0]”;
+echo "$cities[0]";
 ```
 
 会输出 Phoenix。
 
 在带有数字索引的数组中，第一个值的索引是 0，除非你刻意将其设置为不同的数字。在处理数组时，一个常见的错误是将第一个数字认为是 1 而不是 0。
 
-一个更 get 快捷方法是使用以下语句：
+一个更快捷方法是使用以下语句：
 
 ```php
-$cities = array( “Phoenix”，“Tucson”，“Flagstaff”);
+$cities = array("Phoenix", "Tucson", "Flagstaff");
 ```
 
 该语句创建了与前面的快捷方法相同的数组，并且带有数字索引的键。你可以使用类似的语句来创建以单词作为键的数组。例如，以下语句创建了州首的数组：
 
 ```php
-$capitals = array( “CA” => “Sacramento”, “TX” => “Austin”, “OR” => “Salem” );
+$capitals = array("CA" => "Sacramento", "TX" => "Austin", "OR" => "Salem");
 ```
 
 ### 查看数组
@@ -3236,7 +3198,7 @@ $capitals = array( “CA” => “Sacramento”, “TX” => “Austin”, “OR
 echo $capitals['TX'];
 ```
 
-如果你在一个由双引号括的较长的 echo 语句中包含数组值，你可能需要将数组值的名称括在大括号中：`echo “The capital of Texas is {$capitals['TX']}<br />”。`。你可以通过 `print_r` 或 `var_dump` 语句查看任何数组的结构和值。要显示 `$capitals` 数组，可以使用以下语句之一：
+如果你在一个由双引号括的较长的 echo 语句中包含数组值，你可能需要将数组值的名称括在大括号中：`echo "The capital of Texas is {$capitals['TX']}<br />"`。你可以通过 `print_r` 或 `var_dump` 语句查看任何数组的结构和值。要显示 `$capitals` 数组，可以使用以下语句之一：
 
 ```php
 print_r($capitals);
@@ -3258,9 +3220,9 @@ Array
 
 ```text
 array(3) {
-  ["CA"]=>string(10) “Sacramento”
-  ["TX"]=>string(6) “Austin”
-  ["OR"]=>string(5) “Salem”
+  ["CA"]=>string(10) "Sacramento"
+  ["TX"]=>string(6) "Austin"
+  ["OR"]=>string(5) "Salem"
 }
 ```
 
@@ -3269,9 +3231,9 @@ array(3) {
 当你在 Web 页面上显示 `print_r` 或 `var_dump` 的输出时，它是以 HTML 格式显示的，这意味着它显示为一长行。为了在 Web 上以我们在这里描述的有用格式查看输出，可以使用以下语句发送 HTML 标签，告诉浏览器按接收到的内容显示文本而不进行更改：
 
 ```php
-echo “<pre>”;
+echo "<pre>";
 print_r($capitals);
-echo “</pre>”;
+echo "</pre>";
 ```
 
 ### 从数组中删除值
@@ -3279,16 +3241,16 @@ echo “</pre>”;
 有时你需要完全从数组中删除一个元素。例如，假设你有如下一个包含五个元素的数组：
 
 ```php
-$cities[0] = Phoenix
-$cities[1] = Tucson
-$cities[2] = Flagstaff
-$cities[3] = Tempe
-$cities[4] = Prescott
+$cities[0] = "Phoenix";
+$cities[1] = "Tucson";
+$cities[2] = "Flagstaff";
+$cities[3] = "Tempe";
+$cities[4] = "Prescott";
 ```
 
-现在你决定不再想包含 Tempe，因此你使用以下语句尝试从数组中移除 Tempe：`$cities[3] = "";”。`
+现在你决定不再想包含 Tempe，因此你使用以下语句尝试从数组中移除 Tempe：`$cities[3] = "";`。
 
-尽管此语句将 `$cities[4]` 设置为空空字符串，但它并没有从数组中删除该元素。你仍然拥有一个包含五个元素的数组，但五个值中的一个是空的。要从数组中完全删除该元素，你需要使用以下语句用 `unset` 取消它：
+尽管此语句将 `$cities[3]` 设置为空字符串，但它并没有从数组中删除该元素。你仍然拥有一个包含五个元素的数组，但五个值中的一个是空的。要从数组中完全删除该元素，你需要使用以下语句用 `unset` 取消它：
 
 ```php
 unset($cities[3]);
@@ -3297,15 +3259,15 @@ unset($cities[3]);
 现在你的数组只有四个元素了，如下：
 
 ```php
-$cities[0] = Phoenix
-$cities[1] = Tucson
-$cities[2] = Flagstaff
-$cities[4] = Prescott
+$cities[0] = "Phoenix";
+$cities[1] = "Tucson";
+$cities[2] = "Flagstaff";
+$cities[4] = "Prescott";
 ```
 
 ## 排序数组
 
-数组最用的特性之一是 PHP 可以为它们进行排序。
+数组最常用的特性之一是 PHP 可以为它们进行排序。
 
 PHP 最初按照你创建元素的顺序存储数组元素。
 
@@ -3320,9 +3282,9 @@ sort($cities);
 该语句对值进行排序并分配新的数字键。数字在前，大写字母在后，小写字母最后。例如，考虑前面提到的 `$cities` 数组：
 
 ```php
-$cities[0] = “Phoenix”;
-$cities[1] = “Tucson”;
-$cities[2] = “Flagstaff”;
+$cities[0] = "Phoenix";
+$cities[1] = "Tucson";
+$cities[2] = "Flagstaff";
 ```
 
 在执行以下 `sort` 语句后：
@@ -3330,9 +3292,9 @@ $cities[2] = “Flagstaff”;
 数组变为
 
 ```php
-$cities[0] = “Flagstaff”;
-$cities[1] = “Phoenix”;
-$cities[2] = “Tucson”;
+$cities[0] = "Flagstaff";
+$cities[1] = "Phoenix";
+$cities[2] = "Tucson";
 ```
 
 如果你使用 `sort()` 对以单词作为键的数组进行排序，键将变为数字，单词键将被丢弃。
@@ -3340,51 +3302,46 @@ $cities[2] = “Tucson”;
 要对以单词作为键的数组进行排序，使用 `asort` 语句。该语句按值对数组进行排序并为每个值保留原始键。例如，考虑前面提到的州首数组：
 
 ```php
-$capitals['CA'] = “Sacramento 明天
-$capitals['TX'] = “Austin 明天
-$capitals['OR'] = “Salem 明天
+$capitals['CA'] = "Sacramento";
+$capitals['TX'] = "Austin";
+$capitals['OR'] = "Salem";
 ```
 
 在执行以下 `asort` 语句后：
 
 数组变为：
 
+
+
 ```php
-$capitals['TX'] = “Austin 明天
-$capitals['CA'] = “Sacramento 明天
-$capitals['OR'] = “Salem 明天
+$capitals['TX'] = "Austin 明天";
+$capitals['CA'] = "Sacramento 明天";
+$capitals['OR'] = "Salem 明天";
 ```
 
 注意当元素重新排序时，键与值保持。
 
 现在元素按字母顺序排列，正确的州键仍然对应相应的州首。如果键是数字，这些数字现在将变成不同的顺序。你不太可能对数字为键的数组使用 `asort`。
 
-
-
-
 按值倒序排序；并将新数字分配为键
 
-`arsort($arrayname*)`
+`arsort($arrayname)`
 
 按值倒序排序；保留原有键
 
-`ksort($arrayname*)`
+`ksort($arrayname)`
 
 按键排序
 
-`krsort($arrayname*)`
+`krsort($arrayname)`
 
 按键倒序排序
 
-`usort($arrayname*, functionname)`
+`usort($arrayname, functionname)`
 
 通过函数排序（参见本章后面 `functionname` 章节中的“使用函数”）
 
-11_167779 bk02ch01.qxp 12/17/07 8:08 PM Page 133
-
 ## 使用数组
-
-133
 
 ### 从数组中获取值
 
@@ -3392,10 +3349,11 @@ $capitals['OR'] = “Salem 明天
 
 ```php
 $CAcapital = $capitals['CA'];
-echo $CAcapital ;
+echo $CAcapital;
 ```
 
 这些语句的输出是：
+
 Sacramento
 
 如果你使用不存在的数组元素，将显示一个通知（notice）。（请参阅**第二卷**中在本章第 1 章中“理解 PHP 错误消息”部分关于通知的内容。）例如，假设你使用了以下语句：
@@ -3419,37 +3377,40 @@ $CAcapital = $capitals['CAx'];
 `list` 语句从数组中获取值并将它们放入变量中。以下语句包含一个 `list` 语句：
 
 ```php
-$flowerInfo = array (“Rose”, “red”, 12.00);
-list($firstvalue,$secondvalue) = $flowerInfo;
-echo $firstvalue,”<br />”;
-echo $secondvalue,”<br />”;
+$flowerInfo = array("Rose", "red", 12.00);
+list($firstvalue, $secondvalue) = $flowerInfo;
+echo $firstvalue, "<br />";
+echo $secondvalue, "<br />";
 ```
 
 第一行创建了 `$flowerInfo` 数组。第三行设置了名为 `$firstvalue` 和 `$secondvalue` 的两个变量，并将 `$flowerInfo` 中的两个值复制到这两个新变量中，就像你使用了以下两个语句一样：
 
 ```php
-$firstvalue=$flowerInfo[0];
-$secondvalue=$flowerInfo[1];
+$firstvalue = $flowerInfo[0];
+$secondvalue = $flowerInfo[1];
 ```
 
 `flowerInfo` 中的第三个值没有复制到变量中，因为 `list` 语句包含了两个变量。`echo` 语句的输出是：
+
 Rose
+
 red
 
 你可以使用 `extract` 从以单词作为键的数组检索所有值。每个值都被复制到与键同名的变量中。例如，假设 `$flowerInfo` 数组如下所示创建：
 
 ```php
-$flowerInfo = array (“variety”=>”Rose”, “color”=>”red”, “cost”=>12.00);
+$flowerInfo = array("variety" => "Rose", "color" => "red", "cost" => 12.00);
 ```
 
 以下语句从 `$flowerInfo` 中获取所有信息并将其输出：
 
 ```php
 extract($flowerInfo);
-echo “variety is $variety; color is $color; cost is $cost”;
+echo "variety is $variety; color is $color; cost is $cost";
 ```
 
 这些语句的输出为：
+
 variety is Rose; color is red; cost is 12.00;
 
 ### 遍历数组
@@ -3464,599 +3425,78 @@ variety is Rose; color is red; cost is 12.00;
 你可以使用指针手动遍历数组。要这样做，请将你的数组视为一个列表。想象一个指针指向列表中的一个值。指针会停在一个值上，直到你移动它。在你移动它之后，它会停在那里，直到你再次移动它。你可以使用以下指令移动指针：
 
 * `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-11_167779 bk02ch01.qxp 12/17/07 8:08 PM Page 134
-
-## 使用数组
-
-135
-
-#### 手动遍历数组
-
-你可以使用指针手动遍历数组。要这样做，请将你的数组视为一个列表。想象一个指针指向列表中的一个值。指针会停在一个值上，直到你移动它。在你移动它之后，它会停在那里，直到你再次移动它。你可以使用以下指令移动指针：
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-135
-
-## 使用数组
-
-#### 手动遍历数组
-
-你可以使用指针手动遍历数组。要这样做，请将你的数组视为一个列表。想象一个指针指向列表中的一个值。指针会停在一个值上，直到你移动它。在你移动它之后，它会停在那里，直到你再次移动它。你可以使用以下指令移动指针：
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-134
-
-## 使用数组
-
-135
-
-#### 手动遍历数组
-
-你可以使用指针手动遍历数组。要这样做，请将你的数组视为一个列表。想象一个指针指向列表中的一个值。指针会停在一个值上，直到你移动它。在你移动它之后，它会停在那里，直到你再次移动它。你可以使用以下指令移动指针：
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-135
-
-## 使用数组
-
-#### 手动遍历数组
-
-你可以使用指针手动遍历数组。要这样做，请将你的数组视为一个列表。想象一个指针指向列表中的一个值。指针会停在一个值上，直到你移动它。在你移动它之后，它会停在那里，直到你再次移动它。你可以使用以下指令移动指针：
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
+* `next($arrayname)`: 将指针移动到下一个值
+* `previous($arrayname)`: 将指针移动到上一个值
+* `end($arrayname)`: 将指针移动到最后一个值
+* `reset($arrayname)`: 将指针移动到第一个值
 
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
-
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
 
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
 
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
+## 数组指针操作函数
 
-* `current($arrayname)`: 指向当前值
 - `next($arrayname)`: 将指针移动到下一个值
 - `previous($arrayname)`: 将指针移动到上一个值
 - `end($arrayname)`: 将指针移动到最后一个值
 - `reset($arrayname)`: 将指针移动到第一个值
+- `current($arrayname)`: 指向当前值
 
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
 
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
 
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
+## 数组指针函数
 
-* `current($arrayname)`: 指向当前值
-- `next($arrayname)`: 将指针移动到下一个值
-- `previous($arrayname)`: 将指针移动到上一个值
-- `end($arrayname)`: 将指针移动到最后一个值
-- `reset($arrayname)`: 将指针移动到第一个值
+- `previous($arrayname)`：将指针移动到上一个值
+- `end($arrayname)`：将指针移动到最后一个值
+- `reset($arrayname)`：将指针移动到第一个值
+- `current($arrayname)`：指向当前值
+- `next($arrayname)`：将指针移动到下一个值
 
 ## 多维数组
 
 在这一章早前的章节中，我们描述的是单个键值列表的数组。然而，在某些情况下，你可能想存储具有多个键的值。例如，假设你想按州和县存储城市，如下所示：
 
 ```php
-$cities['AZ']['Maricopa'] = Phoenix;
-$cities['AZ']['Cochise'] = Tombstone;
-$cities['AZ']['Yuma'] = Yuma;
-$cities['OR']['Multnomah'] = Portland;
-$cities['OR']['Tillamook'] = Tillamook;
-$cities['OR']['Wallowa'] = Joseph;
+$cities['AZ']['Maricopa'] = 'Phoenix';
+$cities['AZ']['Cochise'] = 'Tombstone';
+$cities['AZ']['Yuma'] = 'Yuma';
+$cities['OR']['Multnomah'] = 'Portland';
+$cities['OR']['Tillamook'] = 'Tillamook';
+$cities['OR']['Wallowa'] = 'Joseph';
 ```
 
-**第二卷**
+这种数组是**多维**数组，因为它就像是数组的数组，具有以下结构：
 
-这种数组是*多维*数组，因为它就像是数组的数组，具有以下结构：
-
-
-
-
-
-## PHP 基础
+### PHP 基础
 
 `$cities` 键值
 
-键值
-
-AZ Maricopa Phoenix
-
-Cochise Tombstone
-
-Yuma Yuma
-
-OR Multnomah Portland
-
-Tillamook Tillamook
-
-Wallowa Joseph
+| 键值 | 键值 | 键值 |
+| :--- | :--- | :--- |
+| AZ | Maricopa | Phoenix |
+|  | Cochise | Tombstone |
+|  | Yuma | Yuma |
+| OR | Multnomah | Portland |
+|  | Tillamook | Tillamook |
+|  | Wallowa | Joseph |
 
 `$cities` 是一个二维数组。
 
-PHP 还可以理解深度四、五、六或更多层级的多维数组。然而，当人们尝试理解深度超过三层的数组时，往往会感到头疼。随着维数的增加，混淆的可能性也会之增加。请尽量保持你的多维数组在于管理的范围内。
+PHP 还可以理解深度四、五、六或更多层级的多维数组。然而，当人们尝试理解深度超过三层的数组时，往往会感到头疼。随着维数的增加，混淆的可能性也会随之增加。请尽量保持你的多维数组在于管理的范围内。
 
 你可以使用处理一维数组相同的步骤从多维数组中获取值。例如，你可以通过此语句直接访问值：
 
 ```php
-$city = $cities['AZ']['Yuma']];
+$city = $cities['AZ']['Yuma'];
 ```
 
 你也可以输出该值：
 
 ```php
-echo $cities['OR']['Wallowa']];
+echo $cities['OR']['Wallowa'];
 ```
 
-然而，如果你在双引号内组合该值，则需要使用大括号来包裹变量名。变量名开头的 `$` 必须紧跟在 `{` 后面，不能有空格，如下：`echo “A city in Multnomah County, Oregon, is {$cities['OR']['Multnomah']}”;`
+然而，如果你在双引号内组合该值，则需要使用大括号来包裹变量名。变量名开头的 `$` 必须紧跟在 `{` 后面，不能有空格，如下：`echo "A city in Multnomah County, Oregon, is {$cities['OR']['Multnomah']}";`
 
-## 使用日期和时间
-
-输出是
+输出是：
 
 俄勒冈州 Multnomah 县有一个城市 Portland
 
@@ -4065,28 +3505,25 @@ echo $cities['OR']['Wallowa']];
 因为二维数组（如 `$cities`）包含两个数组，因此需要两个 `foreach` 语句来遍历它。以下语句从多维数组获取值并在 HTML 表格中输出它们：
 
 ```php
-foreach( $cities as $state )
-{
-    foreach( $state as $county => $city )
-    {
-        echo “$city, $county county <br />”;
+foreach ($cities as $state) {
+    foreach ($state as $county => $city) {
+        echo "$city, $county county <br />";
     }
 }
 ```
 
 第一个 `foreach` 语句遍历 `$cities` 多维数组，并将一个包含县/城市键值对的数组存储在变量 `$state` 中。第二个 `foreach` 语句遍历存储在 `$state` 中的数组。这些语句将给你以下输出：
 
+```text
 Phoenix, Maricopa county
-
 Tombstone, Cochise county
-
 Yuma, Yuma county
-
 Portland, Multnomah county
-
 Tillamook, Tillamook county
-
 Joseph, Wallowa county
+```
+
+## 使用日期和时间
 
 日期和时间可以是 Web 数据库应用中的重要元素。PHP 能够识别日期和时间并以不同于普通字符串的方式处理它们。计算机以一种名为 `timestamp`（时间戳）的格式存储日期时间。然而，这不是你希望看到的日期格式。PHP 将你表示的日期转换为计算机理解的时间戳，并将时间戳转换为人们熟悉的格式。PHP 使用内置函数处理日期时间。
 
@@ -4096,17 +3533,15 @@ Joseph, Wallowa county
 
 随着 PHP 5.1 的发布，PHP 在 `php.ini` 中增加了默认本地时区的设置。如果你不设置默认时区，PHP 将进行猜测，有时结果是 GMT。此外，PHP 会显示一条消息建议你设置本地时区。
 
-## 第一章
+#### 设置默认时区步骤
 
-要设置默认时区，请遵循以下步骤：
+1. 用文本编辑器打开 `php.ini`。
+2. 向下滚动到标题为 `[Date]` 的部分。
+3. 找到设置 `date.timezone =`。
+4. 如果该行以分号（`;`）开头，删除分号。
+5. 在等号后添加时区代码。
 
-1. **用文本编辑器打开 `php.ini`。**
-2. **向下滚动到标题为 `[Date]` 的部分。**
-3. **找到设置 `date.timezone =`。**
-4. **如果该行以分号（`;`）开头，删除分号。**
-5. **在等号后添加时区代码。**
-
-你可以在 PHP 在线手册的附录 H（网址 www.php.net/manual/en/timezones.php）查看时区代码列表。例如，你可以通过以下设置将默认时区设置为太平洋时间：
+你可以在 PHP 在线手册的附录 H（网址 `www.php.net/manual/en/timezones.php`）查看时区代码列表。例如，你可以通过以下设置将默认时区设置为太平洋时间：
 
 ```ini
 date.timezone = America/Los_Angeles
@@ -4117,7 +3552,7 @@ date.timezone = America/Los_Angeles
 你可以使用此语句查看当前哪个是你的默认时区：
 
 ```php
-$def = date_default_timezone_get()
+$def = date_default_timezone_get();
 echo $def;
 ```
 
@@ -4126,7 +3561,7 @@ echo $def;
 你最常用的函数是 `date`，它将日期或时间从时间戳格式转换为你指定的格式。通用格式为：
 
 ```php
-$mydate = date("*format*",$timestamp);
+$mydate = date("*format*", $timestamp);
 ```
 
 `$timestamp` 是一个存储了时间戳的变量。你之前已经按照在本节稍后描述的方法，使用 PHP 函数将时间戳存储在变量中。如果没有包含 `$timestamp`，则从操作系统获取并使用当前时间。因此，你可以通过以下代码获取今天的日期：
@@ -4135,9 +3570,9 @@ $mydate = date("*format*",$timestamp);
 $today = date("Y/m/d");
 ```
 
-如果今天是 2006 年 8 月 10 日，此语句返回 2006/08/10
+如果今天是 2006 年 8 月 10 日，此语句返回 `2006/08/10`。
 
-`format` 是一个字符串，指定了你想存储在变量中的日期格式。例如，格式 “y-m-d”返回 06-08-10，而 “M.d.Y”返回 Aug.10.2006。表 1-6 列出了可以在格式字符串中使用的一些符号。（符号符号列表请参见 www.php.net/manual/en/function.date.php 的文档）。日期部分可以用连字符（-）、点（.）、斜杠（/）或空格分隔。
+`format` 是一个字符串，指定了你想存储在变量中的日期格式。例如，格式 `y-m-d` 返回 `06-08-10`，而 `M.d.Y` 返回 `Aug.10.2006`。表 1-6 列出了可以在格式字符串中使用的一些符号。（符号列表请参见 `www.php.net/manual/en/function.date.php` 的文档）。日期部分可以用连字符（`-`）、点（`.`）、斜杠（`/`）或空格分隔。
 
 #### 表 1-6：日期格式符号
 
@@ -4160,17 +3595,16 @@ $today = date("Y/m/d");
 | i | 分钟，带导零 | 59 |
 | s | 秒，带导零 | 59 |
 | a | am 或 pm 小写 | am |
-| A | AM 或 pm 大写 | AM |
+| A | AM 或 PM 大写 | AM |
 
+### 获取时间戳
 
-
-
+你可以使用 `strtotime()` 函数将英文文本日期描述转换为时间戳：
 
 ```php
-$importantDate = strtotime("2 weeks ago"); # current time
+$importantDate = strtotime("2 weeks ago"); // current time
 $importantDate = strtotime("next year gmt");
-
-$importantDate = strtotime("this 4am"); # 4 AM today
+$importantDate = strtotime("this 4am"); // 4 AM today
 ```
 
 如果你想知道 `$importantDate` 是多久以前，你可以将其从 `$today` 中减去。例如：
@@ -4179,13 +3613,11 @@ $importantDate = strtotime("this 4am"); # 4 AM today
 $timeSpan = $today - $importantDate;
 ```
 
-或者使用以下语句
+或者使用以下语句来找出从重要日期到现在的小时数：
 
 ```php
-$timeSpan =($($today - $importantDate)/60)/60
+$timeSpan = (($today - $importantDate) / 60) / 60;
 ```
-
-来找出从重要日期到现在的的小数。
 
 ## 理解 PHP 错误消息
 
@@ -4195,11 +3627,11 @@ $timeSpan =($($today - $importantDate)/60)/60
 
 PHP 可以显示五种类型的消息。每种类型的消息都会显示遇到错误的文件以及 PHP 遇到问题的行号。不同类型的错误会在错误消息中提供额外信息。消息类型有：
 
-- **解析错误 (Parse error)：** 解析错误是 PHP 在执行前扫描脚本时发现的语法错误。
-- **致命错误 (Fatal error)：** PHP 遇到了会导致脚本停止执行的严重错误。
-- **警告 (Warning)：** PHP 发现了一个问题，但该问题的严重程度不足阻止脚本运行。
-- **通知 (Notice)：** PHP 看到一个可能可能是错误也可能完全没问题的情况。
-- **严格 (Strict)：** 严格消息是在 PHP 5 中引入的，用于警告编码标准问题。
+- **解析错误**：PHP 在执行前扫描脚本时发现的语法错误。
+- **致命错误**：PHP 遇到了会导致脚本停止执行的严重错误。
+- **警告**：PHP 发现了一个问题，但该问题的严重程度不足阻止脚本运行。
+- **通知**：PHP 看到一个可能是错误也可能完全没问题的情况。
+- **严格**：PHP 5 中引入，用于警告编码标准问题。
 
 当你使用编码实践不佳或已被更好的代码取代的语言时，就会收到严格消息。
 
@@ -4209,27 +3641,35 @@ PHP 可以显示五种类型的消息。每种类型的消息都会显示遇到�
 
 在开始运行脚本之前，PHP 会扫描脚本以检查语法错误。当它遇到错误时，会显示解析错误消息。解析错误是致命错误，会导致脚本无法开始运行。解析错误看起来如下：
 
-`Parse error:** parse error, error, in c:\test.php on line 6`
+```text
+Parse error: parse error in c:\test.php on line 6
+```
 
-通常情况下，你收到此错误消息是因为忘记了分号、括号或大括号。显示的错误提供了尽可能多的信息。例如，可能会显示以下内容：`Parse error:** parse error, unexpected T_ECHO, expecting ‘,’ or ‘;’, in c:\test.php on line 6`
+通常情况下，你收到此错误消息是因为忘记了分号、括号或大括号。显示的错误提供了尽可能多的信息。例如，可能会显示以下内容：
+
+```text
+Parse error: parse error, unexpected T_ECHO, expecting ',' or ';' in c:\test.php on line 6
+```
 
 此错误意味着 PHP 在预期逗号或分号的地方发现了一个 `echo` 语句，这可能意味着你忘记了上一行末的分号。
 
-`T_ECHO` 是一个标记（token）。标记代表 PHP 语言的不同部分。
+`T_ECHO` 是一个标记。标记代表 PHP 语言的不同部分。
 
-有些标记如 `T_ECHO` 或 `T_IF` 比较清晰。其他的则更晦晦。请参考 PHP 在线手册（`www.php.net/manual/en/tokens.php`）第 1 章附录中的解析标记列表及其含义。
+有些标记如 `T_ECHO` 或 `T_IF` 比较清晰。其他的则更晦涩。请参考 PHP 在线手册（`www.php.net/manual/en/tokens.php`）附录中的解析标记列表及其含义。
 
 ### 理解致命错误
 
 当 PHP 在脚本执行期间遇到阻止脚本继续执行的严重错误时，会显示致命错误消息。脚本停止运行并显示包含尽可能信息的消息以帮助你识别问题。
 
-产生致命错误消息的一个问题是调用了不存在的函数（函数在本本书的第 2 章中解释）。如果你在 PHP 脚本中拼写错了函数名，你会看到类似下面的致命错误消息：
+产生致命错误消息的一个问题是调用了不存在的函数（函数在本书的第 2 章中解释）。如果你在 PHP 脚本中拼写错了函数名，你会看到类似下面的致命错误消息：
 
-`Fatal error:** Call to undefined function xxx() in C:\Program Files\Apache Group\Apache2\htdocs\PHPandMySQL\info.php on line 10`
+```text
+Fatal error: Call to undefined function xxx() in C:\Program Files\Apache Group\Apache2\htdocs\PHPandMySQL\info.php on line 10
+```
 
 在这种情况下，PHP 找不到你在第 10 行调用的 `xxx()` 函数。
 
-我们使用*致命错误 (fatal errors)* 术语将此类错误与其他错误区分开来。然而，PHP 只是（混乱地）将它们称为错误。你不会在手册中找到致命错误这个术语。此外，显示此类错误所需的关键字是 `E_ERROR`。（我们将在本章后面的“显示选定的消息”部分中介绍这一点。）
+我们使用**致命错误**术语将此类错误与其他错误区分开来。然而，PHP 只是（混乱地）将它们称为错误。你不会在手册中找到致命错误这个术语。此外，显示此类错误所需的关键字是 `E_ERROR`。（我们将在本章后面的“显示选定的消息”部分中介绍这一点。）
 
 ### 理解警告
 
@@ -4237,7 +3677,9 @@ PHP 可以显示五种类型的消息。每种类型的消息都会显示遇到�
 
 如果你尝试使用无效的用户名或密码连接 MySQL 数据库，你会看到以下警告消息：
 
-`Warning:** mysql_connect() [function.mysql-connect]: Access denied for user ‘root’@’localhost’ (using password: YES) in C:\Program Files\Apache Group\Apache2\htdocs\test.php on line 9`
+```text
+Warning: mysql_connect() [function.mysql-connect]: Access denied for user 'root'@'localhost' (using password: YES) in C:\Program Files\Apache Group\Apache2\htdocs\test.php on line 9
+```
 
 连接数据库的尝试失败了，但脚本并没有停止。它继续执行其他的 PHP 语句。这条语句需要修正。
 
@@ -4245,15 +3687,17 @@ PHP 可以显示五种类型的消息。每种类型的消息都会显示遇到�
 
 通知是指 PHP 看到一个可能是错误也可能完全没问题的情况。通知和警告一样不会导致脚本停止运行。与警告相比，通知指示严重问题的概率小得多。通知只是告诉你正在做不寻常的事情，并让你再次检查你所做的事，以确保你真的想这样做。
 
-你可能收到通知的一个常见原因是是你正在输出不存在的变量。以下是你可能看到的看到的示例：
+你可能收到通知的一个常见原因是你正在输出不存在的变量。以下是你可能看到的示例：
 
-`Notice:**Undefined variable: age in testing.php on line 9`
+```text
+Notice: Undefined variable: age in testing.php on line 9
+```
 
 ### 理解严格消息
 
 严格消息警告编码标准。它们指出编码实践不佳或已被更好的代码取代的语言。严格错误类型是在 PHP 5 中添加的。严格消息不会停止脚本的执行。然而，修改你的代码使其不再显示任何严格消息，会让脚本在未来更加可靠。某些被严格消息强调的语言在未来可能会被完全移除。
 
-某些严格消息引用了已弃用（deprecated）的 PHP 语言特性。弃用函数是已被新函数取代的旧函数。弃用函数仍然受支持，但在未来会被移除。PHP 可能会添加单独的错误类型 `E_DEPRECATED` 来识别此类错误，以便 `E_STRICT` 和 `E_DEPRECATED` 消息能够识别不同类型的问题。
+某些严格消息引用了已弃用的 PHP 语言特性。弃用函数是已被新函数取代的旧函数。弃用函数仍然受支持，但在未来会被移除。PHP 可能会添加单独的错误类型 `E_DEPRECATED` 来识别此类错误，以便 `E_STRICT` 和 `E_DEPRECATED` 消息能够识别不同类型的问题。
 
 ### 显示错误消息
 
@@ -4263,26 +3707,27 @@ PHP 可以显示五种类型的消息。每种类型的消息都会显示遇到�
 - 不显示任何错误消息。
 - 抑制单个错误消息。
 
-你可以通过 `php.ini` 文件中的设置或脚本中的 PHP 语句来告诉 PHP 是否显示错误消息或显示哪些错误消息。`php.ini` 中的设置会你所有脚本设置错误处理。脚本中的语句仅为该脚本设置错误处理。
-
-
-
+你可以通过 `php.ini` 文件中的设置或脚本中的 PHP 语句来告诉 PHP 是否显示错误消息或显示哪些错误消息。`php.ini` 中的设置会对你所有脚本设置错误处理。脚本中的语句仅为该脚本设置错误处理。
 
 错误消息默认显示在你的 Web 页面上。在 Web 页面显示错误消息存在安全风险。在开发网站时，你可以开启错误消息以便修复错误，但当 Web 页面完成并准备好公众查看时，你可以关闭错误消息。
 
 你可以在 `php.ini` 文件中关闭网站所有脚本的所有错误消息。找到以下设置：
 
-`display_errors = On`
+```ini
+display_errors = On
+```
 
 将 `On` 改为 `Off`。
 
-你可以使用以下语句在单个脚本中关闭错误：`ini_set("display_errors","off")`。
+你可以使用以下语句在单个脚本中关闭错误：`ini_set("display_errors", "off");`。
 
-更改设置不会以任何方式改变错误本身；它只会改变错误消息是否显示。致命错误（fatal error）仍然会停止脚本，只是不会在 Web 页面上显示消息。
+更改设置不会以任何方式改变错误本身；它只会改变错误消息是否显示。致命错误仍然会停止脚本，只是不会在 Web 页面上显示消息。
+
+
 
 处理错误消息的一种方法是在 `php.ini` 中关闭它们，并在开发期间在每个单独的脚本中开启。然后，当网站准备好公开时，你可以移除开启错误消息的 `ini_set` 语句。
 
-### 显示特定的消息
+## 显示特定的消息
 
 你可以通过 `php.ini` 中的以下设置来指定想要显示的错误消息类型：
 
@@ -4300,11 +3745,11 @@ PHP 可以显示五种类型的消息。每种类型的消息都会显示遇到�
 
 你还可以使用的其他代码是 `E_WARNING`（意味着所有警告）和 `E_ERROR`（意味着所有致命运行时错误）。
 
-你也可以为单个脚本设置要显示的消息类型。你可以在脚本中添加一条语句，仅为该脚本设置错误报告级别。在脚本开头添加以下语句：`error_reporting(*errorSetting)`。
+你也可以为单个脚本设置要显示的消息类型。你可以在脚本中添加一条语句，仅为该脚本设置错误报告级别。在脚本开头添加以下语句：`error_reporting(*errorSetting*)`。
 
 例如，要查看除严格模式以外的所有错误，请使用：`error_reporting(E_ALL)`。
 
-### 抑制单个错误消息
+## 抑制单个错误消息
 
 你可以在 PHP 语句中停止对单个错误消息的显示。通常情况下，这不是一个好主意。你想看到错误消息并修复问题。然而，偶尔抑制单个通知（notice）是防止难看的消息显示在 Web 页面上的简单方法。
 
@@ -4320,7 +3765,7 @@ echo @$news1;
 
 然而，变量名前的 `@` 阻止了通知的显示。此功能应该极少使用，但在某些情况下它是很有用的。
 
-### 记录错误消息
+## 记录错误消息
 
 你可以将错误消息存储在日志文件中。这会产生错误的永久记录，无论它们是否显示在 Web 页面上。记录消息需要两个设置：
 
@@ -4339,7 +3784,7 @@ echo @$news1;
 
 此语句仅为此脚本设置错误日志。
 
-### 指定日志文件
+## 指定日志文件
 
 你通过 `php.ini` 中的设置来指定 PHP 记录错误消息的文件。找到该设置：
 
@@ -4355,13 +3800,13 @@ echo @$news1;
 
 你可以通过在脚本开头包含以下语句为单个脚本指定日志文件：
 
-`ini_set("error_log"," "c:\php\logs\errs.log ")`
+`ini_set("error_log","c:\php\logs\errs.log")`
 
 此语句仅为该脚本设置日志文件。
 
-### 在你的 PHP 脚本中添加注释
+## 在你的 PHP 脚本中添加注释
 
-`Comments`（注释）是嵌入在脚本本身的注记。在脚本中添加描述其用途和功能的说明性注释是关重要的。这对于“彩票因素”（lottery factor）来说很重要——也就是说，如果你中了大奖并逃往法国蔚埃尔海岸过奢华的生活，将有其他人来完成这项工作。新人员需要知道你的脚本应该做什么以及它是如何工作的。实际上，注释对你也有好处。明年你可能需要修改脚本，因为那些细节早已深埋在脑中，被更近的项目所覆盖。
+`Comments`（注释）是嵌入在脚本本身的注记。在脚本中添加描述其用途和功能的说明性注释是关键的。这对于“彩票因素”（lottery factor）来说很重要——也就是说，如果你中了大奖并逃往法国蔚埃尔海岸过奢华的生活，将有其他人来完成这项工作。新人员需要知道你的脚本应该做什么以及它是如何工作的。实际上，注释对你也有好处。明年你可能需要修改脚本，因为那些细节早已深埋在脑中，被更近的项目所覆盖。
 
 尽情使用注释。PHP 会忽略注释；注释是给人类看的。
 
@@ -4404,8 +3849,6 @@ PHP 还有短注释格式。你可以通过井号（`#`）或双正斜杠（`//`
 // 这是注释行 2
 ```
 
-
-
 将忽略从 `#` 或 `//` 到行尾的所有内容。这对于注释特定的语句非常有用，如下例所示：`$average = $orderTotal/$nItems; // 计算平均价格` 有时你想强调某条注释。下面的格式可以让注释非常醒目：
 
 ######################################
@@ -4418,9 +3861,9 @@ PHP 注释不会包含在发送到用户浏览器的 HTML 代码中。用户看�
 
 在脚本中尽可能根据需要使用注释，以使其逻辑清晰。然而，使用过多的注释是一个错误。不要对脚本中的每一行或你所做的每件事都进行注释。如果你的脚本中满了注释，重要的注释可能会在迷宫中丢失。使用注释来标记章节并解释异常或复杂的代码——而不是显而易见的代码。
 
-## 第 2 章：构建 PHP 脚本
+# 第 2 章：构建 PHP 脚本
 
-### 本章内容
+## 本章内容
 
 - 在代码中设置条件
 - 使用条件语句
@@ -4519,26 +3962,19 @@ PHP 提供了几种你可以用于比较值的比较运算符。表 2-1 显示�
 is_int($number)
 ```
 
-
-
-
 如果 `$number` 中的值是一个整数，则该比较为真。PHP 提供的其他测试如下：
 
-✦ `is_array($var2)`: 检查 `$var2` 是否为数组
+- `is_array($var2)`: 检查 `$var2` 是否为数组
+- `is_float($number)`: 检查 `$number` 是否为浮点数
+- `is_null($var1)`: 检查 `$var1` 是否等于 0
+- `is_numeric($string)`: 检查 `$string` 是否为数字字符串
+- `is_string($string)`: 检查 `$string` 是否为字符串
 
-✦ `is_float($number)`: 检查 `$number` 是否为浮点数
-
-✦ `is_null($var1)`: 检查 `$var1` 是否等于 0
-
-✦ `is_numeric($string)`: 检查 `$string` 是否为数字字符串
-
-✦ `is_string($string)`: 检查 `$string` 是否为字符串。你也可以通过在表达式前面使用感叹号（`!`）来测试否定情况。例如，如果变量完全不存在，则述语句将返回真：
+你也可以通过在表达式前面使用感叹号（`!`）来测试否定情况。例如，如果变量完全不存在，则述语句将返回真：
 
 ```php
-!isset($*varname*)
+!isset($varname)
 ```
-
-## 设置条件
 
 ## 使用正则表达式进行模式匹配
 
@@ -4564,13 +4000,13 @@ PHP 支持兼容 Perl 的正则表达式（PCRE）。以下章节描述了一些
 
 另一方面，特殊字符在模式中具有特殊含义，例如用作通配符的星号（`*`）。表 2-2 显示了你可以在模式中使用的特殊字符。
 
-### 表 2-2：模式中使用的特殊字符
+**表 2-2：模式中使用的特殊字符**
 
 | 字符 | 含义 | 示例 | 匹配 | 不匹配 |
 |--- |--- |--- |--- |--- |
 | `^` | 行首。 | `^c` | cat | my cat |
 | `$` | 行尾。 | `c$` | tic | stick |
-| `.` | 任意单个字符。 | `..` | 任何包含至少两个字符的字符串 |
+| `.` | 任意单个字符。 | `..` | 任何包含至少两个字符的字符串 | |
 | `?` | 前一个字符是可选的。 | `mea?n` | mean, men | moan |
 | `( )` | 将字面字符分组必须精确匹配的字符串。 | `m(ea)n` | mean | men, mn |
 | `\[ \]` | 包围一组可选的字面字符。 | `m\[ea\]n` | men, man | mean, mn |
@@ -4586,47 +4022,68 @@ PHP 支持兼容 Perl 的正则表达式（PCRE）。以下章节描述了一些
 字面字符和特殊字符组合成模式，有时是长而复杂的模式。将字符串与模式进行比较，如果匹配，则比较为真。以下是一些示例模式，并对模式进行了拆解，以及一些示例匹配和不匹配的字符串。
 
 ### 示例 1
+
 ```text
 ^\[A-Za-z\].*
 ```
+
 此模式定义了以字母开头的字符串。
+
 - `^\[A-Za-z\]`: 模式的第一部分规定字符串以字母开头。
+
+
+
 - `\.`: 模式的第二部分告诉 PHP 寻找字面上的点。
 - `*`: 匹配任何包含一个或多个字符的字符串。
 
 ### 示例 2
+
 ```text
 Dear(Tom|Tommy)
 ```
+
 此模式定义了具有两个部分的字符串：
+
 - `Dear`: 模式的第一部分只是字面量。
 - `(Tom|Tommy)`: 第二部分定义了 Tom 或 Tommy。
+
 表达式 `Dear(Tom|Tommy)` 匹配以下字符串：`Dear Tom` 和 `Dear Tommy`。
-表达式 `Dear(Tom|Tommy)` 不匹配以下字符串：`Dear Tommys`（等等，原文有错误/断开，但遵循逻辑）。
+
+表达式 `Dear(Tom|Tommy)` 不匹配以下字符串：`Dear Tommys`。
 
 ### 示例 3
+
 ```text
 ^\[0-9\]{5}(\-[0-9\]{4})?
 ```
+
 此模式定义了任何 ZIP 编码并包含几个部分：
+
 - `^\[0-9\]{5}`: 模式的第一部分描述了任何五个数字的字符串。
 - `\-`: 斜杠表示连字符是字面量。
 - `\[0-9\]{4}`: 模式的部分告诉 PHP 接下来的字符应该是四个数字。
 - `( )`: 这些字符将最后部分分组并使其变为可选。
+
 表达式 `^\[0-9\]{5}(\-[0-9\]{4})?` 匹配以下字符串：`90001` 和 `90002-4323`。
+
 表达式 `^\[0-9\]{5}(\-[0-9\]{4})?` 不匹配以下字符串：`9001` 和 `12-4321`。
 
 ### 示例 4
+
 ```text
 ^.+@\.com$
 ```
+
 此模式定义了任何嵌入 @ 并以 .com 结尾的字符串。换句话说，它定义了电子邮件的格式。此表达式包含几个部分：
+
 - `^.+`: 模式的第一部分描述了 `@` 之前的任何一个或多个字符。
-- `@`: 这是字面上的 `@` 符号。@` 不是特殊字符，前面不需要加 `\`。
+- `@`: 这是字面上的 `@` 符号。`@` 不是特殊字符，前面不需要加 `\`。
 - `.+`: 这是任何一个或多个字符的字符串。
 - `\.`: 斜杠表示 PHP 应寻找字面上的点。
 - `com$`: 定义了结尾的字面字符串 `com`，`$` 表示字符串的结束。
+
 表达式 `^.+@\.com$` 匹配以下字符串：`you@yourcompany.com` 和 `johndoe@somedomain.com`。
+
 表达式 `^.+@\.com$` 不匹配以下字符串：`you@yourcompany.net`、`you@.com` 和 `@you.com`。
 
 ## 使用 PHP 函数进行模式匹配
@@ -4639,12 +4096,9 @@ preg_match("pattern", value);
 
 模式必须封装在一对*分隔符*（delimiters）中——封装模式的字符。通常使用正斜杠（`/`）作为分隔符。
 
-
-
-
 然而，你可以使用任何非字母数字字符，反斜杠（`\`）除外。例如，为了检查用户在表单中输入的名称，可以将模式与名称（存储在变量 `$name` 中）进行匹配，如下：
 
-```
+```php
 preg_match("/^[A-Za-z’ -]++$/",$name)
 ```
 
@@ -4658,7 +4112,7 @@ preg_match("/^[A-Za-z’ -]++$/",$name)
 
 你可以通过在 `[]` 内部使用连字符来指定字符范围。
 
-当你这样做时（例如 `A-Z`），连字符并不代表字面字符。由于你也想将连字符作为允许的字符串字面字符包含在内内，你需要添加一个不位于任何两个字符之间的连字符。在这种情况下，连字符包含在字面字符列表的末尾。
+当你这样做时（例如 `A-Z`），连字符并不代表字面字符。由于你也想将连字符作为允许的字符串字面字符包含在内，你需要添加一个不位于任何两个字符之间的连字符。在这种情况下，连字符包含在字面字符列表的末尾。
 
 ## 构建 PHP 脚本
 
@@ -4666,7 +4120,7 @@ preg_match("/^[A-Za-z’ -]++$/",$name)
 
 如果模式本身包含正斜杠，则分隔符不能是正斜杠。你必须使用另一个字符作为分隔符，例如：
 
-```
+```php
 preg_match("#^[A-Za-z’ -/]++$#",$name)
 ```
 
@@ -4694,104 +4148,7 @@ preg_match("#^[A-Za-z’ -/]++$#",$name)
 
 你可以根据需要串联任意数量的比较。使用 `and` 的比较首先测试，使用 `xor` 的比较接着测试，最后测试 `or` 的比较。例如，以下条件包含了三个比较：
 
-```
-$resCity == “Reno” or $resState == “NV” and $name == “Sally”
-```
-
-如果客户的名字是 Sally 且她住在 NV，则该语句为真。如果她住在 Reno，无论她的名字是什么，该语句也为真。
-
-如果她住在 NV 但名字不是 Sally，则该条件不成立。你得到这些结果是因为脚本按照以下顺序检查条件：
-
-1. 比较 `and`。脚本检查 `$resState` 查看是否等于 `NV`，并检查 `$name` 查看其是否等于 `Sally`。如果两者都匹配，则条件为真，脚本不需要检查 `or`。如果变量中只有一个或两个都不等于指定值，则继续测试。
-2. 比较 `or`。脚本检查 `$resCity` 查看其是否等于 `Reno`。如果是，则条件为真。如果不是，则条件为假。
-
-你可以通过括号来改变比较的顺序。括号内的连接词首先求值。例如，你可以用括号重重写之前的语句：
-
-```
-($resCity == “Reno or $resState == “NV”) and $name == “Sally”
-```
-
-# 使用条件语句
-
-括号改变了检查条件的顺序。现在 `or` 首先被检查，因为它在括号内。如果客户的名字是 Sally 且她住在 Reno 或 NV 之一，则该条件语句为真。你得到这些结果是因为脚本按如下方式检查条件：
-
-1. 比较 `or`。脚本检查 `$resCity` 是否等于 `Reno` 或 `$resState` 是否等于 `NV`。如果不是，整个条件为假，测试停止。如果是，则条件的这一部分为真。然而，`and` 另一侧的比较也必须为真，因此测试继续。
-2. 比较 `and`。
-
-[content]
-如果客户的名字是 Sally 且她住在 Reno 或 NV 之一，则该条件语句为真。（*注：原文示例代码中括号内似乎漏了一个引号，翻译时遵循原文逻辑或根据上下文修正，此处保持结构逻辑*）
-
-```
-($resCity == “Reno or $resState == “NV”) and $name == “Sally”
-```
-（注：此处原文代码 `Reno or` 似乎存在引号错误，翻译保留原意并结构）
-
-# 使用条件语句
-
-括号改变了检查条件的顺序。现在 `or` 首先被检查，因为它在括号内。如果客户的名字是 Sally 且她住在 Reno 或 NV 之一，则该条件语句为真。你得到这些结果是因为脚本按如下方式检查条件：
-
-1. 比较 `or`。脚本检查 `$resCity` 是否等于 `Reno` 或 `$resState` 是否等于 `NV`。如果不是，整个条件为假，测试停止。如果是，则条件的这一部分为真。然而，`and` 另一侧的比较也必须为真，因此测试继续。
-2. 比较 `and`。
-
-（注：由于原文文本在结尾处出现了重复，我已根据高级工程师逻辑进行了去重和整合，确保不重复且逻辑完整。）
-
----
-**由于你提供的原始文本在最后一段“Using Conditional Statements” 之后出现了大量的重复和逻辑断层，以下是我为你整理的完整、不重复的翻译版本：**
-
-[content]
-然而，你可以使用任何非字母数字字符，反斜杠（`\`）除外。例如，为了检查用户在表单中输入的名称，可以将模式与名称（存储在变量 `$name` 中）进行匹配，如下：
-
-```
-preg_match("/^[A-Za-z’ -]++$/",$name)
-```
-
-## 设置条件
-
-该语句中的模式执行以下操作：
-
-- ✦ 用正斜杠（`/`）括围模式。
-- ✦ 使用 `^` 和 `$` 分别表示字符串的开始和结束。这意味着字符串中的所有字符都必须匹配该模式。
-- ✦ 用 `[]` 括围字符串中允许的所有字面字符。不允许出现其他字符。允许的字符包括大写和小写字母、单引号（`’`）、空格和连字符（`-`）。
-
-你可以通过在 `[]` 内部使用连字符来指定字符范围。
-
-当你这样做时（例如 `A-Z`），连字符并不代表字面字符。由于你也想将连字符作为允许的字符串字面字符包含在内内，你需要添加一个不位于任何两个字符之间的连字符。在这种情况下，连字符包含在字面字符列表的末尾。
-
-## 构建 PHP 脚本
-
-- ✦ 在 `[]` 中的字面字符列表后跟一个 `+`。加号表示字符串可以包含 `[]` 内任意数量的字符，但必须包含一个字符。
-
-如果模式本身包含正斜杠，则分隔符不能是正斜杠。你必须使用另一个字符作为分隔符，例如：
-
-```
-preg_match("#^[A-Za-z’ -/]++$#",$name)
-```
-
-## 连接多个比较
-
-通常你需要询问一个一个问题来确定你的条件。例如，假设你的公司为不同的产品提供不同语言的目录。你需要知道客户想看哪种类型的目录*以及*他或她需要用什么语言查看。这需要你连接比较，其通用格式如下：
-
-`comparison1` and|or|xor `comparison2` and|or|xor `comparison3` and|or|xor ...`
-
-比较通过以下三个单词之一进行连接：
-
-- ✦ `and`: 两个比较都为真。
-- ✦ `or`: 比较中的一个或两个都为真。
-- ✦ `xor`: 比较中的一个为真，但不同两个为真。
-
-### 表 2-3: 多重比较
-
-| 条件 | 如果 . . . 则为真 |
-| :--- | :--- |
-| `$ageBobby == 21 or $ageBobby == 22` | Bobby 年龄为 21 或 22 岁。 |
-| `$ageSally > 29 and $state ==“OR”` | Sally 大于 29 岁且住在俄勒冈州。 |
-| `$ageSally > 29 or $state == “OR”` | Sally 大于 29 岁或住在俄勒冈州或两者都是。 |
-| `$city == “Reno” xor $state == “OR”` | 城市是里诺或州是俄勒冈州，但不同时满足。 |
-| `$name != “Sam” and $age < 13` | 名称不是 Sam 且年龄小于 13 岁。 |
-
-你可以根据需要串联任意数量的比较。使用 `and` 的比较首先测试，使用 `xor` 的比较接着测试，最后测试 `or` 的比较。例如，以下条件包含了三个比较：
-
-```
+```php
 $resCity == “Reno” or $resState == “NV” and $name == “Sally”
 ```
 
@@ -4804,8 +4161,8 @@ $resCity == “Reno” or $resState == “NV” and $name == “Sally”
 
 你可以通过括号来改变比较的顺序。括号内的连接词首先求值。例如，你可以用括号重写之前的语句：
 
-```
-($resCity == “Reno or $resState == “NV”) and $name == “Sally”
+```php
+($resCity == “Reno” or $resState == “NV”) and $name == “Sally”
 ```
 
 # 使用条件语句
@@ -4815,11 +4172,7 @@ $resCity == “Reno” or $resState == “NV” and $name == “Sally”
 1. 比较 `or`。脚本检查 `$resCity` 是否等于 `Reno` 或 `$resState` 是否等于 `NV`。如果不是，整个条件为假，测试停止。如果是，则条件的这一部分为真。然而，`and` 另一侧的比较也必须为真，因此测试继续。
 2. 比较 `and`。
 
-（注：原文后续部分存在重复，此处已根据逻辑完成翻译并整合。）
-
-
-
-✦ else: 此部分也是可选的。只允许一个 `else`。此部分不测试条件，而是执行语句块。
+✦ `else`: 此部分也是可选的。只允许一个 `else`。此部分不测试条件，而是执行语句块。
 
 只有当 `if` 部分和所有 `elseif` 部分都不为真时，脚本才会进入 `else` 部分。
 
@@ -4851,25 +4204,30 @@ else
     $grade = “F”;
     $message = “Doom is upon you!";
 }
-echo $message.\\n”;
-echo “Your grade is $grade\\n”;
+echo $message.\n”;
+echo “Your grade is $grade\n”;
 ```
 
 `if` 条件语句的执行过程如下：
 
 1. 将 `$score` 中的值与 `92` 进行比较。
-   如果 `$score` 大于 92，则 `$grade` 被设置为 `A`， `$message` 被设置为 `Excellent!`，并且脚本跳到 `echo` 语句。如果 `$score` 为 92 或更小，则 `$grade` 和 `$message` 不被赋值，脚本跳到 `elseif` 部分。
+
+   如果 `$score` 大于 92，则 `$grade` 被设置为 `A`，`$message` 被设置为 `Excellent!`，并且脚本跳到 `echo` 语句。如果 `$score` 为 92 或更小，则 `$grade` 和 `$message` 不被赋值，脚本跳到 `elseif` 部分。
 
 2. 将 `$score` 中的值与 `92` 和 `83` 进行比较。
+
    如果 `$score` 小于 92 且大于 83，则 `$grade` 和 `$message` 被赋值，脚本跳到 `echo` 语句。如果 `$score` 小于 83，则 `$grade` 和 `$message` 不被赋值，脚本跳到第二个 `elseif` 部分。
 
 3. 将 `$score` 中的值与 `83` 和 `74` 进行比较。
+
    如果 `$score` 小于 83 且大于 74，则 `$grade` 和 `$message` 被赋值，脚本跳到 `echo` 语句。如果 `$score` 为 74 或更小，则 `$grade` 和 `$message` 不被赋值，脚本跳到下一个 `elseif` 部分。
 
 4. 将 `$score` 中的值与 `74` 和 `62` 进行比较。
+
    如果 `$score` 小于 74 且大于 62，则 `$grade` 和 `$message` 被赋值，脚本跳到 `echo` 语句。如果 `$score` 为 62 或更小，则 `$grade` 和 `$message` 不被赋值，脚本跳到 `else` 部分。
 
-5. `$grade` 被设置为 `F`， `$message` 被设置为 `Doom is upon you!`。
+5. `$grade` 被设置为 `F`，`$message` 被设置为 `Doom is upon you!`。
+
    脚本继续执行 `echo` 语句。
 
 当 `if` 条件语句的任何部分要执行的语句块只包含一条语句时，就不需要大括号。例如，假设前面的示例在块中只有一条语句，如下所示：
@@ -4895,11 +4253,13 @@ $grade = “A”;
 你可以通过在条件的开头放置一个感叹号（`!`）来编写一个 `if` 语句，使得语句块在条件为假时被执行。例如，你可以使用以下 `if` 语句：
 
 ```php
-if (preg_match("/^S\[a-z\]*/",$string))
+if (preg_match("/^S[a-z]*/",$string))
 {
-    $list[]=$string.\\n”;
+    $list[]=$string.\n”;
 }
 ```
+
+
 
 这个 `if` 语句创建了一个以 S 开头的字符串数组。更具体地说，如果 `$string` 匹配一个指定开头为大写 S 且后跟若干个小写字母的模式，则该条件为真并执行语句块。但是，如果你在条件的开头放置一个感叹号，情况就会发生巨大变化。
 
@@ -4981,9 +4341,6 @@ $salestax = $orderTotalCost * $salestaxrate;
 
 `break` 语句对于结束 `case` 部分至关重要。如果一个 `case` 部分没有包含 `break` 语句，脚本在 `case` 部分结束时不会停止执行。脚本将越过 `case` 部分的边界继续执行，进入下一个 `case` 部分，直到遇到 `break` 语句或 `switch` 语句结束。对于除了最后一个 `case` 之外每一个 `case` 部分来说都是一个问题，因为它会执行匹配部分之后的语句。
 
-
-
-
 在某些少数情况下，你可能希望当 `Scripts` 切换变量匹配第一个 case 部分的值时执行两个 case 部分，这样你可以在第一个 case 部分中省略 `break` 语句。这并不是常见的情况，但偶尔可以解决问题。
 
 `switch` 语句中的最后一个 case 部分实际上不需要 `break` 语句。你可以省略它。不过，为了代码的清晰和一致性，包含它是一个好主意。
@@ -5002,7 +4359,7 @@ $salestax = $orderTotalCost * $salestaxrate;
 
 最基础的 `for` 循环基于计数器。你设置计数器的起始值、结束值，以及设置在每次执行语句块时计数器的增量。
 
-#### 构建 for 循环
+### 构建 for 循环
 
 一个基础 `for` 循环的通用格式如下：
 
@@ -5029,11 +4386,12 @@ for ($i=1;$i<=3;$i++)
 ```
 
 这些语句的输出如下：
+
 1. Hello World!
 2. Hello World!
 3. Hello World!
 
-#### 嵌套 for 循环
+### 嵌套 for 循环
 
 你可以在 `for` 循环内部嵌套 `for` 循环。假设你想打印从 1 到 9 的乘法表。你可以使用以下语句：
 
@@ -5050,6 +4408,7 @@ for($i=1;$i<=9;$i++)
 ```
 
 输出如下：
+
 Multiply by 1
 1 x 1 = 1
 1 x 2 = 2
@@ -5066,7 +4425,7 @@ Multiply by 3
 3 x 1 = 3
 以此此类推。
 
-#### 设计高级 for 循环
+### 设计高级 for 循环
 
 `for` 循环的结构非常灵活。`for` 循环可以用于任何目的。
 
@@ -5075,14 +4434,8 @@ Multiply by 3
 只要某些条件为真，`while` 循环就会持续重复。循环的工作原理如下：
 
 1.  你设置一个条件。
-
-
-
-
-
-2. 条件在每个循环的顶部进行测试。
-
-3. 如果条件为真，循环将重复。如果条件为假，循环将停止。
+2.  条件在每个循环的顶部进行测试。
+3.  如果条件为真，循环将重复。如果条件为假，循环将停止。
 
 以下是 while 循环的通用格式：
 
@@ -5123,15 +4476,15 @@ apple
 
 脚本执行这些语句的过程如下：
 
-1. 在开始循环之前设置变量。`$fruit` 是一个包含三个值的数组，`$testvar` 是一个设置为“no”的测试变量，`$k` 是一个设置为 0 的计数变量。
-2. 循环开始测试 `$testvar != “yes”` 是否为真。因为 `$testvar` 被设置为“no”，所以该语句为真，循环继续。
-3. 测试 `if` 语句中的条件。`$fruit[$k] == “apple”` 是否为真？此时，`$k` 为 0，因此脚本检查 `$fruit[0]`。由于 `$fruit[0]` 是“orange”，所以该语句为假。`if` 块中的语句不执行，因此脚本跳到 `else` 语句。
-4. 执行 `else` 块中的语句。`else` 块输出行“orange is not an apple”。这是输出的第一行。
-5. `$k` 增加 1。现在 `$k` 等于 1。
-6. 到达循环底部。流程回到 while 循环的顶部。
-7. 再次测试条件 `$testvar != “yes”`。`$testvar != “yes”` 是否为真？因为 `$testvar` 还没有改变且仍设置为“no”，它是真的，所以循环继续。
-8. 再次测试 `if` 语句中的条件。`$fruit[$k] == “apple”` 是否为真？此时，`$k` 为 1，因此脚本检查 `$fruit[1]`。由于 `$fruit[1]` 是“apple”，所以该语句为真。循环进入 `if` 块。
-9. 执行 `if` 块中的语句。这些语句将 `$testvar` 设置为“yes”并输出“apple”。这是输出的第二行。
+1.  在开始循环之前设置变量。`$fruit` 是一个包含三个值的数组，`$testvar` 是一个设置为“no”的测试变量，`$k` 是一个设置为 0 的计数变量。
+2.  循环开始测试 `$testvar != “yes”` 是否为真。因为 `$testvar` 被设置为“no”，所以该语句为真，循环继续。
+3.  测试 `if` 语句中的条件。`$fruit[$k] == “apple”` 是否为真？此时，`$k` 为 0，因此脚本检查 `$fruit[0]`。由于 `$fruit[0]` 是“orange”，所以该语句为假。`if` 块中的语句不执行，因此脚本跳到 `else` 语句。
+4.  执行 `else` 块中的语句。`else` 块输出行“orange is not an apple”。这是输出的第一行。
+5.  `$k` 增加 1。现在 `$k` 等于 1。
+6.  到达循环底部。流程回到 while 循环的顶部。
+7.  再次测试条件 `$testvar != “yes”`。`$testvar != “yes”` 是否为真？因为 `$testvar` 还没有改变且仍设置为“no”，它是真的，所以循环继续。
+8.  再次测试 `if` 语句中的条件。`$fruit[$k] == “apple”` 是否为真？此时，`$k` 为 1，因此脚本检查 `$fruit[1]`。由于 `$fruit[1]` 是“apple”，所以该语句为真。循环进入 `if` 块。
+9.  执行 `if` 块中的语句。这些语句将 `$testvar` 设置为“yes”并输出“apple”。这是输出的第二行。
 10. `$k` 再次增加。现在 `$k` 等于 2。
 11. 再次到达循环底部。流程再次回到 while 循环的顶部。
 12. 最后一次测试条件 `$testvar != “yes”`。`$testvar != “yes”` 是否为真？因为 `$testvar` 已经改变且现在设置为“yes”，它是假的。循环停止。
@@ -5208,7 +4561,7 @@ while ( $testvar != “yes” )
 
 在上面的示例中，`$k` 在循环内部被重置为 0。这意味着 `$k` 始终为 0，且 `$fruit[$k]` 始终是“orange”，而不是“apple”。因此 `$testvar` 永远不会设置为“yes”，条件 `$testvar != “yes”` 始终为真。循环将永远运行。
 
-导致无限循环的另一个常见错误是在本该使用双等号 (==) 时误用了单等号 (=)。单等号将值存储在变量中；双等号用于测试两个值是否相等。以下使用单等号的条件始终为真：
+导致无限循环的另一个常见错误是在本该使用双等号 (`==`) 时误用了单等号 (`=`)。单等号将值存储在变量中；双等号用于测试两个值是否相等。以下使用单等号的条件始终为真：
 
 ```php
 while ($testvar = “yes”)
@@ -5217,18 +4570,13 @@ while ($testvar = “yes”)
 }
 ```
 
-
-
-
 该条件简单地将 `$testvar` 设置为“yes”。这并不是一个可以为假的问题。你可能想写的是：`while ($testvar == “yes”)`
 
 这是一个询问 `$testvar` 是否等于“yes”的问题，其答案可以是真（true）或假（false）。
 
 另一个常见的错误是漏掉了递增计数器的语句。例如，在本节之前的脚本中，如果你漏掉了 `$k++;` 语句，`$k` 将始终为 0，导致结果是无限循环。
 
-# 使用循环重复操作
-
-## 跳出循环
+# 跳出循环
 
 有时，你可能希望脚本跳出循环。PHP 提供了两个语句来实现此目的：
 
@@ -5257,6 +4605,7 @@ echo “First line after loop\n\n”;
 ```
 
 该语句的输出如下：
+
 ```
 Last line in loop: counter=1
 Last line in loop: counter=2
@@ -5267,6 +4616,8 @@ First line after loop
 注意，第一个循环在 `break` 语句处结束。它停止循环并立即跳转到循环之后的语句。但 `continue` 语句并非如此。
 
 以下代码给出了 `continue` 语句的示例：
+
+
 
 ```php
 $counter = 0;
@@ -5284,6 +4635,7 @@ echo “First line after loop\n”;
 ```
 
 该语句的输出如下：
+
 ```
 Last line in loop: counter=1
 Last line in loop: counter=2
@@ -5309,7 +4661,7 @@ if ($test4infinity > 100 )
 
 ## 使用函数
 
-应用程序通常在脚本的不同点或不同的脚本中执行相同的任务。函数的设计允许你在不同的位置重用相同的代码。*函数*是一组执行特定任务的 PHP 语句。你可以在任何需要执行该任务的地方使用函数。
+应用程序通常在脚本的不同点或不同的脚本中执行相同的任务。函数的设计允许你在不同的位置重用相同的代码。`函数`是一组执行特定任务的 PHP 语句。你可以在任何需要执行该任务的地方使用函数。
 
 例如，假设你在整个网站中频繁通过以下语句显示你的公司 Logo：
 
@@ -5322,8 +4674,6 @@ echo “<p style=’font-style: italic’>quality products</p>”;
 与其在脚本中每个需要显示 Logo 的地方都输入这些代码，你可以创建一个包含这些语句的函数并将其命名为 `display_logo`。然后，你只需要在需要显示 Logo 的时候使用该函数即可。使用函数的形式如下：`display_logo();`。
 
 你可以看到，使用这一行代码节省大量的大量的工作，并且比在每个需要 Logo 的地方输入 `echo` 语句更容易易读和理解。
-
-### 脚本
 
 ### 创建函数
 
@@ -5356,7 +4706,7 @@ function display_logo()
 
 ### 在函数中使用变量
 
-你可以在函数内部创建并使用变量。这种变量对于函数来说是*局部*的。然而，该变量在函数外部是不可用的；主脚本无法访问。如果你想在函数外部使用该变量，必须将其设为全局变量（global）。例如，变量 `$name` 在以下函数中创建：
+你可以在函数内部创建并使用变量。这种变量对于函数来说是`局部`的。然而，该变量在函数外部是不可用的；主脚本无法访问。如果你想在函数外部使用该变量，必须将其设为全局变量（`global`）。例如，变量 `$name` 在以下函数中创建：
 
 ```php
 function format_name()
@@ -5402,8 +4752,6 @@ function format_name()
 }
 format_name();
 ```
-
-
 
 由于代码没有在函数外部包含全局声明（`global`），函数内部的 `$last_name` 和 `$first_name` 与函数外创建的 `$last_name` 和 `$first_name` 是不同的变量。函数内部的变量 `$last_name` 和 `$first_name` 在你命名它们时创建，且没有值。因此，`$name` 只输出一个逗号，如下：
 
@@ -5555,12 +4903,9 @@ function format_name($first_name,$last_name)
 
 该函数期望接收两个值。假设你向它传递了两个值。...（此处原文后续似乎存在逻辑混乱或重复的乱码，已按预期逻辑翻译翻译）
 
-
-
-
 如果你想让函数将值返回给主脚本，请使用 `return` 语句。主脚本可以将该值放入变量中，或以处理任何值的方式使用它。
 
-## 使用函数
+## 从函数返回值
 
 要从函数返回一个值，请在函数内部编写 `return` 语句。通用格式如下：
 
@@ -5663,7 +5008,7 @@ return false;
 
 ## 组织脚本
 
-## 使用内置函数
+### 使用内置函数
 
 PHP 的许多内置函数是 PHP 如此强大且实用的原因之一。PHP 包含的函数都是普通函数。它们与你自己创建的函数没有区别。只是 PHP 已经为你完成了所有工作。
 
@@ -5678,7 +5023,7 @@ empty($varname)
 
 PHP 在线文档在 `www.php.net/manual/en/funcref.php` 描述了所有内置函数。此外，PHP 文档提供了一个搜索功能，当你只记得函数名但记不住确切语法时它非常有用。在 Web 页面顶部的“Search For”文本框中输入函数名，并在下拉列表中选择 `Function List`。
 
-## 组织脚本
+### 使用 include 文件进行组织
 
 脚本是一系列 PHP 语句，每条语句执行一个操作。PHP 从脚本开始并按顺序执行每条语句。某些语句是复杂语句，会条件性或重复地执行简单语句。
 
@@ -5696,14 +5041,13 @@ PHP 在线文档在 `www.php.net/manual/en/funcref.php` 描述了所有内置函
 *检查用户名和密码的语句*
 ```
 
-
-
-
 无论你何时需要执行该任务。创建和使用函数在本章稍后的“使用函数”部分中已经讨论过。
 
 另一种重用代码的方法是将代码存储在单独的文件中并在需要的地方将该文件引入脚本。你可以通过 `include` 语句将外部文件引入脚本，这将在本书章节稍后的“使用 include 文件进行组织”部分进行讨论。
 
-# 使用函数组织
+### 使用函数组织
+
+
 
 频繁使用函数来组织你的脚本。当你的脚本需要在脚本中的重复位置、应用程序中的不同脚本、甚至不同的应用程序中执行相同任务时，函数非常有用。当你写好执行该任务的函数并确认它可以正常工作后，你可以在任何需要的地方使用它。
 
@@ -5722,6 +5066,7 @@ function1();
 ```
 
 即使是下面这一行也比它可以提供的信息要少：
+
 ```
 getData();
 ```
@@ -5737,7 +5082,9 @@ getAllCustomerNames();
 `include` 语句将文件的内容引入你的脚本。因此，你可以将语句放入外部文件——一个与你的脚本文件分离的文件——并使用 `include` 语句在脚本的任何位置插入该文件。`include` 语句对于存储重复的语句非常有用。以下是使用 include 文件组织脚本的几种方法：
 
 - **将所有或大部分 HTML 放入 include 文件中。** 例如，如果你的脚本向浏览器发送表单，将表单的 HTML 放入外部文件中。当你需要发送表单时，使用 `include` 语句。如果表单显示多次，将 HTML 放入 include 文件是一个好主意。即使表单只显示一次这也是个好主意，因为它让你的脚本更容易阅读。
+
 - **将你的函数放入 include 文件中。** 你不需要在脚本中函数语句；可以将它们放在 include 文件中。如果你有很多函数，可以将相关的函数组织到几个 include 文件中，例如 `data_functions.inc` 和 `form_functions.inc`。在脚本顶部使用 `include` 语句，只读取脚本中使用的函数。
+
 - **存储 Web 网站所有文件共有的语句。** 大多数 Web 网站都有许多具有共同元素的网页。例如，所有网页都以 `<html>`、`<head>` 和 `<body>` 标签开头。如果你将公共语句存储在 include 文件，你可以在每个网页中包含它们，确保你的所有页面看起来都一样。
 
 例如，你可能在 include 文件中有以下语句：
@@ -5756,15 +5103,18 @@ getAllCustomerNames();
 
 ## 包含文件
 
-你使用 `include` 语句将外部文本文件的内容引入脚本。`include` 语句的格式为：`include("*filename*");`
+你使用 `include` 语句将外部文本文件的内容引入脚本。`include` 语句的格式为：`include("filename");`
 
 文件可以有任何名称。我们喜欢使用 `.inc` 扩展名，这样我们一看到名称就知道它是 include 文件。这有助于 Web 网站的组织和清晰度。
 
 PHP 提供了四种类型的 include 语句：
 
 - `include`：包含并评估指定的文件。如果找不到指定的文件，会显示警告。
+
 - `require`：执行与 `include` 语句相同的操作，区别是当找不到指定文件时，除了产生警告外还会产生致命错误（fatal error），并在该停止脚本。
+
 - `include_once`：执行与 `include` 语句相同的操作，区别是文件只包含一次。如果文件已经包含，则不会再次包含。在某些脚本中，文件可能会被包含多次，导致函数重复定义、变量重新赋值和其他可能的问题。
+
 - `require_once`：执行与 `require` 语句相同的操作，区别是文件只包含一次。如果文件已经包含，则不会再次包含。此语句防止了文件被多次包含时可能发生的问题。
 
 外部文件在 `include` 语句所在的位置引入脚本。文件内容作为 HTML 代码而非 PHP 读取。因此，如果你想在 include 文件中使用 PHP 语句，你必须在 include 文件中包含 PHP 标签。
@@ -5775,7 +5125,7 @@ PHP 提供了四种类型的 include 语句：
 
 你可以如下所示使用变量名作为文件名：
 
-`include("$filename*");`
+`include("$filename");`
 
 例如，你可能想在不同的日期显示不同的消息。你可能将这些消息存储在以显示信息的日期命名的文件中。例如，你可以有一个名为 `Sun.inc` 的文件，内容如下：
 
@@ -5791,10 +5141,6 @@ include("$today".".inc");
 ```
 
 在第一条语句之后，`$today` 包含缩写形式的星期。`date` 语句在本书中的第一章讨论。第二条语句使用存储在 `$today` 中的日期包含正确的文件。如果 `$today` 包含 `Sun`，则语句包含名为 `Sun.inc` 的文件。
-
-
-
-
 
 ## 组织脚本
 
@@ -5847,23 +5193,19 @@ include("secretpasswords.inc");
 include("d:\hidden\secretpasswords.inc");
 ```
 
-
-
-
-
 通常你想要获取有关某个文件的信息。PHP 提供了了一些函数，允许你在脚本内部查找文件信息。
 
 你可以使用 `file_exists` 语句来判断文件是否存在，如下所示：
 
 ```php
-$result = file_exists(“stuff.txt”);
+$result = file_exists("stuff.txt");
 ```
 
-在执行该语句后，$result 包含 `true` 或 `false`。该函数通常用于条件语句中，例如下：
+在执行该语句后，`$result` 包含 `true` 或 `false`。该函数通常用于条件语句中，例如下：
 
 ```php
-if(!file_exists(“stuff.txt”)) {
-echo “File not found!\\n”;
+if(!file_exists("stuff.txt")) {
+echo "File not found!\n";
 }
 ```
 
@@ -5876,34 +5218,52 @@ echo “File not found!\\n”;
 ### 表 3-1：获取文件信息的函数
 
 | 函数 | 作用 | 输出 |
+
 | :--- | :--- | :--- |
-| `is_file(“stuff.txt”)` | 测试该文件是否为普通文件，而不是目录或其他特殊类型 | `true` 或 `false` |
-| `is_dir(“stuff.txt”)` | 测试该文件是否为目录 | `true` 或 `false` |
-| `is_executable(“do.txt”)` | 测试该文件是否可执行 | `true` 或 `false` |
-| `is_writable(“stuff.txt”)` | 测试你是否可以写入该文件 | `true` 或 `false` |
-| `is_readable(“stuff.txt”)` | 测试你是否可以读取该文件 | `true` 或 `false` |
-| `fileatime(“stuff.txt”)` | 返回文件最后访问的时间 | `Unix timestamp` (如 `1057196122`) 或 `false` |
-| `filectime(“stuff.txt”)` | 返回文件创建的时间 | `Unix timestamp` 或 `false` |
-| `filemtime(“stuff.txt”)` | 返回文件最后修改的时间 | `Unix timestamp` 或 `false` |
-| `filegroup(“stuff.txt”)` | 返回文件的组 ID | 组 ID 的 `Integer` 或 `false` |
-| `fileowner(“stuff.txt”)` | 返回文件所有者的用户 ID | 用户 ID 的 `Integer` 或 `false` |
-| `filesize(“stuff.txt”)` | 返回以字节计算的大小 | `Integer` 或 `false` |
-| `filetype(“stuff.txt”)` | 返回文件类型 | `File type`（如 `file, dir, link, char`），若错误或无法识别类型则返回 `false` |
-| `basename(“/t1/do.txt”)` | 从路径中返回文件名 | `do.txt` |
-| `dirname(“/t1/do.txt”)` | 从路径中返回目录名 | `/t1` |
+
+| `is_file("stuff.txt")` | 测试该文件是否为普通文件，而不是目录或其他特殊类型 | `true` 或 `false` |
+
+| `is_dir("stuff.txt")` | 测试该文件是否为目录 | `true` 或 `false` |
+
+| `is_executable("do.txt")` | 测试该文件是否可执行 | `true` 或 `false` |
+
+| `is_writable("stuff.txt")` | 测试你是否可以写入该文件 | `true` 或 `false` |
+
+| `is_readable("stuff.txt")` | 测试你是否可以读取该文件 | `true` 或 `false` |
+
+| `fileatime("stuff.txt")` | 返回文件最后访问的时间 | `Unix timestamp` (如 `1057196122`) 或 `false` |
+
+| `filectime("stuff.txt")` | 返回文件创建的时间 | `Unix timestamp` 或 `false` |
+
+| `filemtime("stuff.txt")` | 返回文件最后修改的时间 | `Unix timestamp` 或 `false` |
+
+| `filegroup("stuff.txt")` | 返回文件的组 ID | 组 ID 的 `Integer` 或 `false` |
+
+| `fileowner("stuff.txt")` | 返回文件所有者的用户 ID | 用户 ID 的 `Integer` 或 `false` |
+
+| `filesize("stuff.txt")` | 返回以字节计算的大小 | `Integer` 或 `false` |
+
+| `filetype("stuff.txt")` | 返回文件类型 | `File type`（如 `file, dir, link, char`），若错误或无法识别类型则返回 `false` |
+
+| `basename("/t1/do.txt")` | 从路径中返回文件名 | `do.txt` |
+
+| `dirname("/t1/do.txt")` | 从路径中返回目录名 | `/t1` |
 
 返回关于路径/文件名有用信息的函数是 `pathinfo()`。你可以使用以下语句：
 
 ```php
-$pinfo = pathinfo(“/topdir/nextdir/stuff.txt”);
+$pinfo = pathinfo("/topdir/nextdir/stuff.txt");
 ```
 
-在执行该语句后，$pinfo` 是一个包含以下内容的数组：
+在执行该语句后，`$pinfo` 是一个包含以下内容的数组：
+
 - `$pinfo[dirname]` = `/topdir/nextdir`
+
 - `$pinfo[basename]` = `stuff.txt`
+
 - `$pinfo[extension]` = `txt`
 
-当你使用表 3-1 中的任意一个函数测试文件时，任何输入错误（例如文件名拼写错误）都会导致 `false` 结果。例如，如果 “tyme” 是一个文件而不是目录，`is_dir(“tyme”)` 将返回 `false`。但是，如果 “tyme” 不存在（因为你本想输入 “type”），它也会返回 `false`。
+当你使用表 3-1 中的任意一个函数测试文件时，任何输入错误（例如文件名拼写错误）都会导致 `false` 结果。例如，如果 “tyme” 是一个文件而不是目录，`is_dir("tyme")` 将返回 `false`。但是，如果 “tyme” 不存在（因为你本想输入 “type”），它也会返回 `false`。
 
 表 3-1 中的某些函数会返回 Unix 时间戳。你可以按照第 1 章所述，使用 `date` 函数将这些时间戳转换为日期。
 
@@ -5912,29 +5272,29 @@ $pinfo = pathinfo(“/topdir/nextdir/stuff.txt”);
 你可以将现有文件复制到新文件中。复制后，你将拥有具有不同名称的文件副本。复制文件对于备份重要文件很有用。要复制文件，使用 `copy` 语句，如下：
 
 ```php
-copy(“fileold.txt”,”filenew.txt”);
+copy("fileold.txt","filenew.txt");
 ```
 
 该语句将现有文件 `fileold.txt` 复制到 `filenew.txt`。如果已经存在名为 `filenew.txt` 的文件，它会被被覆盖。如果你不想覆盖现有文件，可以使用以下语句来防止：
 
 ```php
-if(!file_exists(“filenew.txt”)) {
-copy(“fileold.txt”,”filenew.txt”);
+if(!file_exists("filenew.txt")) {
+copy("fileold.txt","filenew.txt");
 } else {
-echo “File already exists!\n”;
+echo "File already exists!\n";
 }
 ```
 
 你可以使用路径名作为目标将文件复制到不同的目录，如下：
 
 ```php
-copy(“fileold.txt”,”newdir/filenew.txt”);
+copy("fileold.txt","newdir/filenew.txt");
 ```
 
 你可以使用 `rename` 语句重命名文件，如下：
 
 ```php
-rename(“oldname.txt”,”newname.txt”);
+rename("oldname.txt","newname.txt");
 ```
 
 如果你尝试将文件重命名为已存在的文件名，会显示警告且文件不会被重命名：`Warning: rename(fileold.txt,filenew.txt): File exists`
@@ -5942,7 +5302,7 @@ rename(“oldname.txt”,”newname.txt”);
 要删除不需要的文件，使用 `unlink` 语句，如下：
 
 ```php
-unlink(“badfile”);
+unlink("badfile");
 ```
 
 在执行该语句后，文件将被删除。如果文件不存在，`unlink` 不会报错。注意拼写。
@@ -5956,7 +5316,7 @@ unlink(“badfile”);
 要创建一个目录，使用 `mkdir` 函数，如下：
 
 ```php
-mkdir(“testdir”);
+mkdir("testdir");
 ```
 
 该语句在脚本所在的目录下创建一个名为 `testdir` 的目录。如果已存在同名目录，会显示警告且不会创建：`Warning: mkdir(testdir): File exists` in test.php on line 5
@@ -5964,10 +5324,10 @@ mkdir(“testdir”);
 你可以通过以下语句先检查目录是否存在：
 
 ```php
-if(!is_dir(“mynewdir”)) {
-mkdir(“mynewdir”);
+if(!is_dir("mynewdir")) {
+mkdir("mynewdir");
 } else {
-echo “Directory already exists!”
+echo "Directory already exists!"
 }
 ```
 
@@ -5976,13 +5336,13 @@ echo “Directory already exists!”
 要在另一个目录中创建目录，使用完整路径，如下：
 
 ```php
-mkdir(“/topdir/nextdir/mynewdir”);
+mkdir("/topdir/nextdir/mynewdir");
 ```
 
 你可以使用相对路径创建一个目录，如下：
 
 ```php
-mkdir("../mynewdir”);
+mkdir("../mynewdir");
 ```
 
 ### 构建目录下所有文件的列表
@@ -5992,7 +5352,7 @@ mkdir("../mynewdir”);
 PHP 提供了打开和读取目录的函数。要打开目录，使用 `opendir` 语句，如下：
 
 ```php
-$dh = opendir(“/topdir/testdir”);
+$dh = opendir("/topdir/testdir");
 ```
 
 如果你尝试打开一个不存在的目录，会显示警告：`Warning: opendir(testdir): failed to open dir: Invalid argument` in test13.php on line 5
@@ -6003,16 +5363,15 @@ $dh = opendir(“/topdir/testdir”);
 $filename = readdir($dh);
 ```
 
-在执行该语句后，$filename` 包含一个文件名。存储在 `$filename` 中的只有文件名，而不是文件的完整路径。要读取目录中的所有文件名，你可以使用 `while` 循环，如下：
+
+
+在执行该语句后，`$filename` 包含一个文件名。存储在 `$filename` 中的只有文件名，而不是文件的完整路径。要读取目录中的所有文件名，你可以使用 `while` 循环，如下：
 
 ```php
 while($filename = readdir($dh)) {
-echo $filename.”\\n”;
+    echo $filename.”\n”;
 }
 ```
-
-
-
 
 假设你想创建一个图像库，在网页中显示指定目录下的所有图像。你可以使用 `opendir` 和 `readdir` 函数来实现这一目标。列表 3-1 显示了一个创建图像库的脚本。
 
@@ -6026,23 +5385,23 @@ echo $filename.”\\n”;
 * 中的所有图像文件。
 */
 
-echo “<html><head><title>Image Gallery</title></head>
-<body>”;
-$dir = “../test1/testdir/”; // 8
+echo "<html><head><title>Image Gallery</title></head>
+<body>";
+$dir = "../test1/testdir/"; // 8
 $dh = opendir($dir); // 9
 while($filename = readdir($dh)) // 10
 {
-$filepath = $dir.$filename; // 12
-if(is_file($filepath) and ereg("\\.jpg$”,$filename)) // 13
-{
-$gallery[] = $filepath;
-}
+    $filepath = $dir.$filename; // 12
+    if(is_file($filepath) and ereg("\.jpg$",$filename)) // 13
+    {
+        $gallery[] = $filepath;
+    }
 }
 sort($gallery); // 16
 foreach($gallery as $image) // 17
 {
-echo “<hr />”;
-echo “<img src=’$image’ /><br />”;
+    echo "<hr />";
+    echo "<img src='$image' /><br />";
 }
 ?>
 </body></html>
@@ -6050,12 +5409,18 @@ echo “<img src=’$image’ /><br />”;
 
 注意列表 3-1 中某些行末尾的行号。后续对脚本及其工作原理的讨论将引用脚本中的行号：
 
-- **8**：此行将目录名称存储在 `$dir` 中，供程序后续使用。注意目录名称末尾包含了 `/`。即使在 Windows 下也不要使用 `\`\`。
+- **8**：此行将目录名称存储在 `$dir` 中，供程序后续使用。注意目录名称末尾包含了 `/`。即使在 Windows 下也不要使用 `\`。
+
 - **9**：此行打开目录。
+
 - **10**：此行启动了一个 `while` 循环，读取目录中的每个文件名。
+
 - **12**：此行创建了变量 `$filepath`，它是文件的完整路径。如果第 8 行目录名末尾没有包含 `/`，则 `$filepath` 将是一个无效路径。
+
 - **13**：此行通过查找 `.jpg` 扩展名来检查文件是否为图形文件。如果文件具有 `.jpg` 扩展名，则将完整文件路径添加到名为 `$gallery` 的数组中。
+
 - **16**：此行对数组进行排序，以便按字母顺序显示图像。
+
 - **17**：此行启动 `foreach` 循环，在网页中显示图像。
 
 ### 使用操作系统命令
@@ -6068,9 +5433,12 @@ echo “<img src=’$image’ /><br />”;
 
 PHP 允许你通过任何一种方法使用系统命令或运行其他语言的程序：
 
-- **反引号（backticks）**：PHP 执行两个反引号（`` `` ``）之间的系统命令并显示结果。
+- **反引号（backticks）**：PHP 执行两个反引号（`` ` ``）之间的系统命令并显示结果。
+
 - **system 函数**：此函数执行系统命令，显示输出，并返回输出的最后一行。
+
 - **exec 函数**：此函数执行系统命令，将输出存储在数组中，并返回输出的最后一行。
+
 - **passthru 函数**：此函数执行系统命令并显示输出。
 
 你可以执行任何可以在系统提示符中输入的命令。该命令将按原样执行。你可以执行简单命令：`ls` 或 `dir`，`rename` 或 `mv`，`rm` 或 `del`。如果你的操作系统允许管道或重定向输出，你可以在 PHP 中执行的系统命令中进行管道或重定向。如果你的操作系统允许在一行中输入两个命令，你可以将两个命令放入你从 PHP 执行的单条命令中。以下示例命令在 PHP 中执行是有效的，取决于操作系统：
@@ -6085,14 +5453,14 @@ dir > dirfile
 sort < unsortedfile.txt
 ```
 
-在某些情况下，你想运行一个需要很长时间才能完成的系统命令。你可以在后台运行该系统命令（如果你的操作系统支持），同时让 PHP 继续执行脚本。如果你这样做，你需要将输出重定向到文件，而不是返回给脚本，这样 PHP 可以在系统命令完成之前继续运行。后续章节将详细详细描述上述方法。
+在某些情况下，你想运行一个需要很长时间才能完成的系统命令。你可以在后台运行该系统命令（如果你的操作系统支持），同时让 PHP 继续执行脚本。如果你这样做，你需要将输出重定向到文件，而不是返回给脚本，这样 PHP 可以在系统命令完成之前继续运行。后续章节将详细描述上述方法。
 
 ### 使用反引号
 
-执行系统命令的一种简单方法是将命令放在两个反引号（`` `` ``）之间，如下：
+执行系统命令的一种简单方法是将命令放在两个反引号（`` ` ``）之间，如下：
 
 ```php
-$result = `dir c:\\php`;;
+$result = `dir c:\\php`;
 ```
 
 变量 `$result` 包含语句的输出——在这种情况下，是 `c:\php` 目录下的文件列表。如果你 `echo $result`，将显示以下输出：
@@ -6129,14 +5497,14 @@ Directory of c:\php
 08/30/2007 07:11 AM 669,318 php5embed.lib
 ```
 
-当安全模式（safe\_mode）启用时，反引号操作符会被禁用。在安装 PHP 时，安全模式默认设置为 Off。除非 PHP 管理员故意开启，否则安全模式不会设置为 On。
+当安全模式（`safe_mode`）启用时，反引号操作符会被禁用。在安装 PHP 时，安全模式默认设置为 Off。除非 PHP 管理员故意开启，否则安全模式不会设置为 On。
 
 ### 使用 system 函数
 
 `system` 函数执行系统命令，显示输出，并返回系统命令输出的最后一行。要执行系统命令，请使用以下语句：
 
 ```php
-$result = system(“dir c:\\php”);
+$result = system("dir c:\\php");
 ```
 
 当此语句执行时，目录列表将被显示，并且 `$result` 包含命令输出的最后一行。如果你 `echo $result`，你会看到类似下面的的内容：
@@ -6145,15 +5513,12 @@ $result = system(“dir c:\\php”);
 11 Dir(s) 566,263,808 bytes free
 ```
 
-
-
-
 `exec` 函数执行系统命令但不会显示输出。相反，输出可以存储在数组中，输出的每一行将成为数组中的一个元素。函数返回输出的最后一行。
 
 也许你只是想知道一个目录中有多少文件和空闲字节。通过以下语句，你可以执行命令而无需将输出保存到数组中：
 
 ```php
-$result = exec(“dir c:\\php”);
+$result = exec("dir c:\\php");
 ```
 
 命令执行了，但输出没有显示。变量 `$result` 包含了输出的最后一行。如果你执行 `echo $result`，显示内容类似于：
@@ -6163,7 +5528,7 @@ $result = exec(“dir c:\\php”);
 该输出是 `dir` 命令输出的最后一行。如果你想将 `dir` 命令的所有输出存储在数组中，请使用以下命令：
 
 ```php
-$result = exec(“dir c:\\php”,$dirout);
+$result = exec("dir c:\\php",$dirout);
 ```
 
 执行此语句后，数组 `$dirout` 目录列表，每个项目占一行。你可以按照如下方式显示目录列表：
@@ -6171,7 +5536,7 @@ $result = exec(“dir c:\\php”,$dirout);
 ```php
 foreach($dirout as $line)
 {
-    echo “$line\\n”;
+    echo "$line\n";
 }
 ```
 
@@ -6184,10 +5549,15 @@ Volume in drive C has no label.
 Directory of c:\\php
 
 10/10/2007 05:43 PM <DIR> .
+
 10/10/2007 05:43 PM <DIR> ..
+
 10/10/2007 04:53 PM <DIR> dev
+
 10/10/2007 04:53 PM <DIR> ext
+
 10/10/2007 04:53 PM <DIR> extras
+
 08/30/2007 07:11 AM 417,792 fdftk.dll
 
 你也可以使用以下语句从输出数组中获取特定元素：
@@ -6200,6 +5570,7 @@ echo $dirout[7];
 输出如下：
 
 Directory of C:\\PHP
+
 10/10/2007 04:53 PM <DIR> dev
 
 ## 使用 passthru 函数
@@ -6207,7 +5578,7 @@ Directory of C:\\PHP
 `passthru` 函数执行系统命令并按照其返回的原样显示输出。要执行系统命令，请使用以下语句：
 
 ```php
-passthru(“dir c:\\php”);
+passthru("dir c:\\php");
 ```
 
 该语句显示了目录列表，但不返回任何内容。因此，你不需要变量来存储返回的数据。
@@ -6221,48 +5592,44 @@ passthru(“dir c:\\php”);
 你可以通过在正在执行的系统命令后添加几个额外的字符来返回或显示操作系统的错误消息。在大多数操作系统上，如果你在系统命令后添加字符 `2>&1`，错误消息将发送到输出所在。例如，你可以使用以下语句：
 
 ```php
-$result = system(“di c:\\php”);
+$result = system("di c:\\php");
 ```
 
 当系统命令执行时，`system` 函数显示目录。然而，注意 `dir` 被写错了，它是 `di` 而不是 `dir`。不存在名为 `di` 的系统命令，因此系统命令无法执行，什么也没有显示。假设你改用了以下语句：
 
 ```php
-$result = system(“di c:\\php 2>&1”);
+$result = system("di c:\\php 2>&1");
 ```
 
 在这种情况下，显示了错误消息。在 Windows XP 上，显示的错误消息如下：
 
-`‘di’ is not recognized as an internal or external command, our operable program or batch file.`
+`'di' is not recognized as an internal or external command, our operable program or batch file.`
 
 请确保 `2>&1` 中不包含任何空格。该格式要求字符连在一起，不能有任何空格。
 
 ## 理解安全问题
 
-当你执行系统命令时，你允许用户在你的计算机上执行某项操作。如果系统命令是 `dir c:\\php`，那是没问题的。但如果系统命令是 `rm /bin/*` 或 `del c:\\\*.*`，你将对结果感到不悦。在使用脚本之外执行系统命令的函数时，你需要非常小心。
+当你执行系统命令时，你允许用户在你的计算机上执行某项操作。如果系统命令是 `dir c:\\php`，那是没问题的。但如果系统命令是 `rm /bin/*` 或 `del c:\\*.*`，你将对结果感到不悦。在使用脚本之外执行系统命令的函数时，你需要非常小心。
 
 只要你只执行自己编写的命令（例如 `dir` 或 `ls`），你就是安全的。但当你开始执行包含用户发送数据的命令时，你需要极其小心。例如，假设你有一个应用程序，用户在表单中输入名称，然后你的应用程序会根据用户发送的名称创建一个目录。用户在名为 `directoryName` 的表单字段中输入 `Smith`。你处理表单的脚本有如下命令：
 
 ```php
-$directoryName = $_POST['directoryName`];
-exec(“mkdir $directoryName”);
+$directoryName = $_POST['directoryName'];
+exec("mkdir $directoryName");
 ```
 
 由于 `$directoryName = Smith`，执行的系统命令是 `mkdir Smith`。该目录被创建了。
-
-
-
-
 
 **Warning**: `ftp_login()` 期望参数 1 为资源，但在 `d:\test1\test13.php` 第 `9` 行给了布尔值
 
 该警告不会停止程序。登录会失败，但脚本会继续执行，这可能不是你想要的结果。因为你脚本的其他部分可能依赖于成功的 FTP 连接，你可能想在函数失败时停止脚本。以下语句会在函数失败时停止脚本：
 
 ```php
-$connect = ftp_connect(“janet.valade.com”)
-or die(“Can’t connect to server”);
+$connect = ftp_connect("janet.valade.com")
+or die("Can't connect to server");
 
 $login_result = ftp_login($connect,$userid,$passwd)
-or die(“Can’t login to server”);
+or die("Can't login to server");
 ```
 
 登录 FTP 服务器后，你可以向其发送请求以完成各种任务，例如获取目录列表或上传和下载文件，如接下来的章节所描述。
@@ -6274,7 +5641,7 @@ or die(“Can’t login to server”);
 一个常见的任务是获取目录列表。`ftp_nlist` 语句从远程计算机获取目录列表并将其存储在数组中，如下所示：
 
 ```php
-$filesArr = ftp_nlist($connect,”data”);
+$filesArr = ftp_nlist($connect,"data");
 ```
 
 括号中的第二个参数是目录名称。如果你不知道目录的名称，可以请求 FTP 服务器向你发送当前目录的名称，如下：
@@ -6289,7 +5656,7 @@ $filesArr = ftp_nlist($connect,$directory_name);
 ```php
 foreach($filesArr as $value)
 {
-    echo “$value\n”;
+    echo "$value\n";
 }
 ```
 
@@ -6298,7 +5665,7 @@ foreach($filesArr as $value)
 你可以使用 `ftp_get` 函数从远程计算机下载文件。在登录 FTP 服务器后，以下语句将从远程计算机下载文件：
 
 ```php
-ftp_get($connect,”newfile.txt”,”data.txt”,FTP_ASCII);
+ftp_get($connect,"newfile.txt","data.txt",FTP_ASCII);
 ```
 
 第一个文件名 `newfile.txt` 是文件下载到你的计算机后将拥名称。第二个文件名 `data.txt` 是你想要下载的文件的现有名称。
@@ -6310,7 +5677,7 @@ ftp_get($connect,”newfile.txt”,”data.txt”,FTP_ASCII);
 你可以使用名为 `ftp_put` 的类似函数上传文件。以下语句上传文件：
 
 ```php
-ftp_put($connect,”newfile.txt”,”data.txt”,FTP_ASCII);
+ftp_put($connect,"newfile.txt","data.txt",FTP_ASCII);
 ```
 
 第一个文件名 `newfile.txt` 是文件上传到远程计算机后将拥有的名称。第二个文件名 `data.txt` 是你想要上传的文件的现有名称。
@@ -6332,12 +5699,12 @@ ftp_close($connect);
 * : 通过 FTP 下载目录中所有 .txt
 * 扩展名的文件
 */
-include(“ftpstuff.inc”);
-$dir_name = “data/”;
+include("ftpstuff.inc");
+$dir_name = "data/";
 $connect = ftp_connect($servername)
-or die(“Can’t connect to FTP server”);
+or die("Can't connect to FTP server");
 $login_result = ftp_login($connect,$userID,$passwd)
-or die(“Can’t log in”);
+or die("Can't log in");
 $filesArr = ftp_nlist($connect,$dir_name);
 foreach($filesArr as $value)
 {
@@ -6349,7 +5716,7 @@ foreach($filesArr as $value)
         }
         else
         {
-            echo “File $value already exists!\n”;
+            echo "File $value already exists!\n";
         }
     }
 }
@@ -6357,15 +5724,17 @@ ftp_close($connect);
 ?>
 ```
 
+
+
 该脚本从远程计算机获取目录列表并存储在 `$filesArr` 中。`foreach` 语句遍历 `$filesArr` 中的文件名，并检查每个文件是否具有 `.txt` 扩展名。当文件具有 `.txt` 扩展名时，脚本会测试本地计算机上是否已存在该命名的文件。如果不存在该命名的文件，则下载该文件；如果存在该文件，则打印消息且不下载文件。
 
 列表 3-2 中的脚本包含一个名为 `ftpstuff.inc` 的文件。该文件包含了 FTP 到服务器所需的信息。`ftpstuff.inc` 文件包含类似下面的代码：
 
 ```php
 <?php
-$servername = “yourserver”;
-$userID = “youruserid”;
-$passwd = “yourpassword”;
+$servername = "yourserver";
+$userID = "youruserid";
+$passwd = "yourpassword";
 ?>
 ```
 
@@ -6378,29 +5747,27 @@ $passwd = “yourpassword”;
 | 函数 | 功能 |
 | :--- | :--- |
 | `ftp_cdup($connect)` | 返回上级目录。 |
-| `ftp_chdir($connect, “directoryname”)` | 切换远程计算机目录。 |
+| `ftp_chdir($connect, "directoryname")` | 切换远程计算机目录。 |
 | `ftp_close($connect)` | 关闭 FTP 连接。 |
-| `ftp_connect(“servername”)` | 打开与计算机的连接。`servername` 可以是域名或 IP 地址。 |
-| `ftp_delete($connect, “path/filename”)` | 删除远程计算机上的文件。 |
-| `ftp_exec($connect, “command”)` | 在远程计算机上执行系统命令。 |
-| `ftp_fget($connect,$fh, “data.txt”,FTP_ASCII)` | 将远程计算机的内容下载到打开的文件。`$fh` 是打开文件的句柄。 |
-| `ftp_fput($connect,”new.txt”,$fh,FTP_ASCII)` | 将打开的文件上传到远程计算机。`$fh` 是打开文件的句柄。 |
-| `ftp_get($connect,”d.txt”,“sr.txt”,FTP_ASCII)` | 从远程计算机下载文件。`sr.txt` 是下载的文件名，`d.txt` 是文件名。 |
-| `ftp_login($connect, $userID,$password)` | 登录 FTP 服务器。 |
-| `ftp_mdtm($connect, “filename.txt”)` | 获取文件最后修改的时间。 |
-| `ftp_mkdir($connect, “directoryname”)` | 在远程计算机上创建新目录。 |
-| `ftp_nlist($connect, “directoryname”)` | 获取远程目录中的文件列表。返回数组。 |
-| `ftp_put($connect,”d.txt”,”sr.txt”,FTP_ASCII)` | 上传文件到远程计算机。`sr.txt` 是要上传的文件名，`d.txt` 是远程计算机上的文件名。 |
+| `ftp_connect("servername")` | 打开与计算机的连接。`servername` 可以是域名或 IP 地址。 |
+| `ftp_delete($connect, "path/filename")` | 删除远程计算机上的文件。 |
+| `ftp_exec($connect, "command")` | 在远程计算机上执行系统命令。 |
+| `ftp_fget($connect, $fh, "data.txt", FTP_ASCII)` | 将远程计算机的内容下载到打开的文件。`$fh` 是打开文件的句柄。 |
+| `ftp_fput($connect, "new.txt", $fh, FTP_ASCII)` | 将打开的文件上传到远程计算机。`$fh` 是打开文件的句柄。 |
+| `ftp_get($connect, "d.txt", "sr.txt", FTP_ASCII)` | 从远程计算机下载文件。`sr.txt` 是下载的文件名，`d.txt` 是文件名。 |
+| `ftp_login($connect, $userID, $password)` | 登录 FTP 服务器。 |
+| `ftp_mdtm($connect, "filename.txt")` | 获取文件最后修改的时间。 |
+| `ftp_mkdir($connect, "directoryname")` | 在远程计算机上创建新目录。 |
+| `ftp_nlist($connect, "directoryname")` | 获取远程目录中的文件列表。返回数组。 |
+| `ftp_put($connect, "d.txt", "sr.txt", FTP_ASCII)` | 上传文件到远程计算机。`sr.txt` 是要上传的文件名，`d.txt` 是远程计算机上的文件名。 |
 | `ftp_pwd($connect)` | 获取远程计算机当前目录的名称。 |
-| `ftp_rename($connect, “oldname”,“newname”)` | 重命名远程计算机上的文件。 |
-| `ftp_rmdir($connect, “directoryname”)` | 删除远程计算机上的目录。 |
-| `ftp_size($connect, “filename.txt”)` | 返回远程计算机上文件的大小。 |
+| `ftp_rename($connect, "oldname", "newname")` | 重命名远程计算机上的文件。 |
+| `ftp_rmdir($connect, "directoryname")` | 删除远程计算机上的目录。 |
+| `ftp_size($connect, "filename.txt")` | 返回远程计算机上文件的大小。 |
 | `ftp_systype($connect)` | 返回远程文件服务器的系统类型（例如 Unix）。 |
 
-
-
-
 2. 将数据写入文件或从文件中检索数据。
+
 3. 关闭文件。
 
 这些步骤将在后续章节中进行详细讨论。
@@ -6412,7 +5779,7 @@ $passwd = “yourpassword”;
 在向文件中写入或从文件中读取信息之前，第一步是打开文件。以下是打开文件的语句的通用格式：
 
 ```php
-$fh = fopen(“filename”,”mode”);
+$fh = fopen("filename", "mode");
 ```
 
 变量 `$fh` 被称为文件句柄（file handle），用于向已打开的文件写入数据或从其读取数据的语句，以便 PHP 知道要向哪个文件写入或从哪个文件读取。`$fh` 包含了标识打开文件位置的信息。
@@ -6437,7 +5804,7 @@ $fh = fopen(“filename”,”mode”);
 你可以使用以下语句打开 `file1.txt` 来读取文件中的信息：
 
 ```php
-$fh = fopen(“file1.txt”,”r”);
+$fh = fopen("file1.txt", "r");
 ```
 
 根据此语句，PHP 在当前目录中查找 `file1.txt`，该目录就是你的 PHP 脚本所在的目录。如果找不到文件，可能会显示或不显示类似的警告消息，这取决于设置的错误级别，如本微型教程第 1 章所述：
@@ -6449,7 +5816,7 @@ $fh = fopen(“file1.txt”,”r”);
 你可能希望在文件无法打开时停止脚本。你需要使用 `die` 语句手动完成操作，如下：
 
 ```php
-$fh = fopen(“file1.txt”,”r”) or die(“Can’t open file”);
+$fh = fopen("file1.txt", "r") or die("Can't open file");
 ```
 
 ### 以写入模式打开文件
@@ -6457,7 +5824,7 @@ $fh = fopen(“file1.txt”,”r”) or die(“Can’t open file”);
 你可以使用以下类型的语句在指定的目录中打开文件以存储信息：
 
 ```php
-$fh = fopen(“c:/testdir/file1.txt”,”w”);
+$fh = fopen("c:/testdir/file1.txt", "w");
 ```
 
 如果文件不存在，它将在指定的目录中创建。然而，如果目录不存在，则不会创建该目录并会显示警告。（你必须在尝试向该目录写入文件之前先创建该目录。）
@@ -6465,8 +5832,8 @@ $fh = fopen(“c:/testdir/file1.txt”,”w”);
 在尝试向目录写入文件之前，你可以使用以下语句检查该目录是否存在：
 
 ```php
-if(is_dir(“c:/tester”)) {
-    $fh = fopen(“c:/testdir/file1.txt”,”w”);
+if (is_dir("c:/tester")) {
+    $fh = fopen("c:/testdir/file1.txt", "w");
 }
 ```
 
@@ -6477,7 +5844,7 @@ if(is_dir(“c:/tester”)) {
 你也可以通过以下语句打开另一个网站上的文件：
 
 ```php
-$fh = fopen(“http://example.com/file.txt”,”r”);
+$fh = fopen("http://example.com/file.txt", "r");
 ```
 
 你只能在读取模式下 URL，而不是写入模式。
@@ -6505,9 +5872,9 @@ fwrite($fh, datatosave);
 例如，你可以使用以下语句：
 
 ```php
-$today = date(“Y-m-d”);
-$fh = fopen(“file.txt”,”a”);
-fwrite($fh,”today\n”);
+$today = date("Y-m-d");
+$fh = fopen("file.txt", "a");
+fwrite($fh, "today\n");
 fclose($fh);
 ```
 
@@ -6522,9 +5889,9 @@ $line = fgets($fh);
 在此语句中，`$fh` 是指向打开文件的指针。`fgets` 读取直到遇到行尾或文件结束，并将结果存储在 `$line` 中。
 
 ```php
-while(!feof($fh)) {
+while (!feof($fh)) {
     $line = fgets($fh);
-    echo “$line”;
+    echo "$line";
 }
 ```
 
@@ -6533,9 +5900,9 @@ while(!feof($fh)) {
 在某些情况下，你不希望包含换行符。如果是这样，你需要使用以下语句将其删除：
 
 ```php
-while(!feof($fh)) {
+while (!feof($fh)) {
     $line = rtrim(fgets($fh));
-    echo “$line”;
+    echo "$line";
 }
 ```
 
@@ -6550,9 +5917,9 @@ $line = fgets($fh, n);
 此语句告诉 PHP 读取长度为 `n-1` 的字符串，直到遇到行尾或文件结束。例如，读取四个字符串：
 
 ```php
-while(!feof($fh)) {
-    $char4 = fgets($fh,5);
-    echo “$char4\n”;
+while (!feof($fh)) {
+    $char4 = fgets($fh, 5);
+    echo "$char4\n";
 }
 ```
 
@@ -6561,19 +5928,16 @@ while(!feof($fh)) {
 通常将整个文件放在数组中非常方便。你可以通过以下语句实现：
 
 ```php
-$fh = fopen(“file2.txt”,”r”);
-while(!feof($fh)) {
+$fh = fopen("file2.txt", "r");
+while (!feof($fh)) {
     $content[] = fgets($fh);
 }
 fclose($fh);
 ```
 
-
-
-
 结果是一个数组 `$content`，其中文件的每一行都作为该数组的一个元素。数组的键值是数字。
 
-PHP 提供了一个快捷函数，可以打开文件并将整个内容读取到一个数组中，数组中的每个元素包含一行。以下语句产生的结果与之前的五行代码相同：`$content = file(“file2.txt”);`
+PHP 提供了一个快捷函数，可以打开文件并将整个内容读取到一个数组中，数组中的每个元素包含一行。以下语句产生的结果与之前的五行代码相同：`$content = file("file2.txt");`
 
 该语句打开 `file2.txt`，将每一行放入数组 `$content` 的一个元素中，然后关闭文件。
 
@@ -6583,7 +5947,7 @@ PHP 提供了一个快捷函数，可以打开文件并将整个内容读取到�
 
 你可以通过以下语句引导 `file` 函数自动打开你包含目录（include directory）中的文件（在本本微型书籍的第 2 章中描述）：
 
-`$content = file(“file2.txt”,1);`
+`$content = file("file2.txt", 1);`
 
 `1` 告诉 PHP 在包含目录中查找 `file2.txt`，而不是当前目录。
 
@@ -6591,7 +5955,7 @@ PHP 提供了一个快捷函数，可以打开文件并将整个内容读取到�
 
 有时，将文件的整个内容放入一个长字符串中是非常有用的。例如，你可能想将文件内容发送到电子邮件中。PHP 提供了一个将文件读取到字符串的函数，如下：
 
-`$content = file_get_contents(“file2.txt”,1);`
+`$content = file_get_contents("file2.txt", 1);`
 
 `file_get_contents` 函数的作用与 `file` 函数相同，不同之处在于它将文件的整个内容放入字符串而不是数组。在执行此语句后，你可以如下所示 `echo` `$content`：`echo $content;`
 
@@ -6622,96 +5986,13 @@ CSV（逗号分隔值）文件——也称为逗号分隔文件——是用于�
 
 #### 理解逗号分隔格式
 
-CSV 文件用于传输可以结构化的信息。CSV 文件用于传输可以结构化的信息。CSV 文件用于传输可以结构化的信息。CSV 文件用于传输可以结构化的信息。CSV 文件用于传输可以结构化的信息。 (抱歉，我将根据示例中的逻辑进行翻译)
 
-[content] `[/content] 
-翻译[content] `[/content] 
 
-在执行此语句后，你可以 `echo` `$content` 如下：
+# CSV 文件
 
-```
-2007-10-22
-2007-10-22
-```
+CSV 文件用于传输可以结构化的信息。
 
-译文]如下：
-
-[content]
-在执行此语句后，你可以 `echo` `$content` 如下：`echo $content;`
-
-输出结果如下：
-
-```
-2007-10-22
-2007-10-22
-```
-
-输出之所以分行显示，是因为换行符被读取并存储为字符串的一部分。因此，当你 `echo` 字符串时，你也 `echo` 了换行符，这些换行符会开启新的一行。
-[/content]
-
-(注：由于用户提供的待翻译文本包含大量重复段落，我将严格遵守“不要重复输出原文”的原则，对逻辑内容进行去重翻译。)
-
----
-
-**由于你提供的待翻译文本存在大量的段落重复（例如某些段落出现了三、四次），以下是去重后的完整译文：**
-
-[content]
-结果是一个数组 `$content`，其中文件的每一行都作为该数组的一个元素。数组的键值是数字。
-
-PHP 提供了一个快捷函数，可以打开文件并将整个内容读取到一个数组中，数组中的每个元素包含一行。以下语句产生的结果与之前的五行代码相同：`$content = file(“file2.txt”);`
-
-该语句打开 `file2.txt`，将每一行放入数组 `$content` 的一个元素中，然后关闭文件。
-
-如果你打开的文件非常大，`file` 函数可能会减慢你脚本的运行速度。文件的大小取决于计算机可用内存量。如果你的脚本看起来运行很慢，请尝试使用 `fgets` 而不是 `file` 来读取文件，看看这是否能加快速度。
-
-## 与其他程序交换数据
-
-你可以通过以下语句引导 `file` 函数自动打开你包含目录中的文件（在本本微型书籍的第 2 章中描述）：
-
-`$content = file(“file2.txt”,1);`
-
-`1` 告诉 PHP 在包含目录中查找 `file2.txt`，而不是当前目录。
-
-## 将文件读取到字符串
-
-有时，将文件的整个内容放入一个长字符串中是非常有用的。例如，你可能想将文件内容发送到电子邮件中。PHP 提供了一个将文件读取到字符串的函数，如下：
-
-`$content = file_get_contents(“file2.txt”,1);`
-
-`file_get_contents` 函数的作用与 `file` 函数相同，不同之处在于它将文件的整个内容放入字符串而不是数组。在执行此语句后，你可以如下所示 `echo` `$content`：`echo $content;`
-
-输出结果如下：
-
-```
-2007-10-22
-2007-10-22
-```
-
-输出之所以分行显示，是因为换行符被读取并存储为字符串的一部分。因此，当你 `echo` 字符串时，你也 `echo` 了换行符，这些换行符会开启新的一行。
-
-`file_get_contents` 函数是在 4.3.0 版本中引入的。在旧版本的 PHP 中并不可用。
-
-## 与其他程序交换数据
-
-你有时需要向其他程序提供信息，或从其他程序向 PHP 读取信息。扁平文件（Flat files）对于此类任务特别有用。
-
-### 在扁平文件中交换数据
-
-几乎所有的软件都具有从扁平文件中读取信息或将信息写入扁平文件的能力。例如，默认情况下，你的文字处理器以它自己的格式保存文档，这种格式只有文字处理器才能理解。然而，你可以选择将文档保存为文本格式。文本文档是一个扁平文件，包含可以被其他软件读取的文本。你的文字处理器也可以读取文本文件，即使是其他软件编写的文件。
-
-当你的 PHP 脚本将信息保存到文本文件中时，任何具有读取文件能力的软件都可以读取这些信息。例如，任何文本文件都可以被大多数文字处理软件读取。然而，某些软件要求文本文件具有特定格式。例如，一个地址簿软件程序可能会从扁平文件中读取数据，但要求信息位于指定位置——例如，一行的前 20 个字符被读取为姓名，后 20 个字符读取为街道地址，依此类推。你需要知道软件对扁平文件要求的格式。然后在你的 PHP 脚本中，如在本章前面的“写入文件”部分讨论的那样，使用 `fwrite` 语句以正确的格式写入扁平文件。
-
-### 在逗号分隔格式中交换数据
-
-一个 CSV（逗号分隔值）文件——也称为逗号分隔文件——是用于软件程序之间传输信息的常用格式。
-
-#### 理解逗号分隔格式
-
-CSV 文件用于传输可以结构化的信息。CSV 文件用于传输可以结构化的信息。 (此处由于原文重复已去重)
-
-CSV 文件用于传输可以结构化的信息。 (去重)
-
-使用逗号分隔符可以传输可以结构化的数据。 (去重) 
+使用逗号分隔符可以传输可以结构化的数据。
 
 一个 CSV 文件示例如下：
 
@@ -6721,24 +6002,21 @@ Mary Jones,5678 Pine St.,Bigger City,ME,11111
 Luis Rojas,1234 Elm St.,Biggest City,TX,8888
 ```
 
-#### 创建逗号分隔文件
+## 创建逗号分隔文件
 
 以下语句创建了逗号分隔文件：
 
 ```php
 <?php
-$fh = fopen(“addressbook.txt”,”a”);
+$fh = fopen("addressbook.txt","a");
 
 for ($i=0;$i<3;$i++)
 {
-    fwrite($fh,$address[$i].”n”);
+    fwrite($fh,$address[$i]."n");
 }
 
 fclose($fh);
 ```
-
-
-
 
 ```php
 while(!feof($fh_in)) {
@@ -6752,17 +6030,15 @@ while(!feof($fh_in)) {
 fclose($fh_in);
 fclose($fh_out);
 } else {
-    echo “File doesn’t exist\n”;
+    echo "File doesn't exist\n";
     return false;
 }
-echo “Conversion completed!\n”;
+echo "Conversion completed!\n";
 return true;
 }
 convert($myfile);
 ?>
 ```
-
-13_167779 bk02ch03.qxp 12/17/07 8:08 PM Page 225
 
 以下点对应列表 3-3 中的行号：
 
@@ -6781,9 +6057,7 @@ convert($myfile);
 
 ## 使用 SQLite
 
-从 PHP 5.0 开始，PHP 默认包含了 `SQLite` 软件。`SQLite` 设计用于使用 `SQL` 查询在平坦文件中存储数据。（`SQL` 将将在本书的第 1 章中解释。）
-
-13_167779 bk02ch03.qxp 12/17/07 8:08 PM Page 226 Using SQLite
+从 `PHP` 5.0 开始，`PHP` 默认包含了 `SQLite` 软件。`SQLite` 设计用于使用 `SQL` 查询在平坦文件中存储数据。（`SQL` 将将在本书的第 1 章中解释。）
 
 `SQLite` 是在平面文件中存储数据的一种快速、简单的方法。然而，它比数据库不安全，且无法处理非常复杂的数据。在大多数情况下，你应该将数据存储在 `MySQL` 中，但你有时可能想将数据存储在平面文件中。例如，你可能想以一种其他程序（如 `Excel`）可以读取的格式写入数据。
 
@@ -6794,13 +6068,11 @@ convert($myfile);
 3. 如果数据存在，使用 `PHP` 处理检索的数据。
 4. 关闭数据文件。
 
-
-
-
+# 面向对象编程
 
 面向对象编程开发了新的概念和新术语来表示这些概念。理解这些术语是通往面向对象程序的道路。
 
-# 对象与类
+## 对象与类
 
 面向对象程序的基本元素是 `objects`（对象）。将对象理解为物理对象是最容易的。例如，汽车就是一个对象。汽车拥有 `properties`（属性，也称为 `attributes`），如颜色、型号、引擎和轮胎。
 
@@ -6810,7 +6082,7 @@ convert($myfile);
 
 例如，银行账户并不是你可以握在手中的东西，但它可以被视为一个对象。计算机账户或贷款也是如此。文件通常是一个对象。数据库也是如此。电子邮件、地址、歌曲、电视节目、会议和日期都可以是对象。Web 应用程序中的对象可能是目录、目录项、购物车、客户、订单或客户列表。
 
-`class`（类）是作为模板或模式的 PHP 代码，用于创建对象。类定义了对象的属性（attributes）。它还定义了对象可以做的事情——它的职责。
+`class`（类）是作为模板或模式的 `PHP` 代码，用于创建对象。类定义了对象的属性（attributes）。它还定义了对象可以做的事情——它的职责。
 
 例如，你写了一个类，定义汽车为四个轮子和一个引擎，该类列出了汽车可以做的事情，比如前进和停车。然后，根据该类，你可以编写类似下面的语句来创建一个汽车对象：
 
@@ -6846,9 +6118,6 @@ $myCar = new Car();
 
 子类可以包含与父类同相同的方法。在这种情况下，子类的方法对子对象具有优先级。如果你愿意，可以为子对象指定父类的方法，但如果不指定，则使用子类的方法。
 
-
-
-
 涵盖它们所有的职责，而不侵入其他对象的职责。对于复杂的项目，你可能需要先进行一些模型构建和测试，才能有足够的信心认为你的项目计划包含了所需的所有对象。
 
 开发面向对象的脚本包括以下步骤，接下来的章节将详细介绍这些步骤：
@@ -6857,13 +6126,9 @@ $myCar = new Car();
 2. 为每个对象选择属性和方法。
 3. 创建对象并使其投入使用。
 
-## 第二卷
+## 选择对象
 
-## 第 4 章
-
-### 选择对象
-
-#### 面向对象编程
+### 面向对象编程
 
 你的第一个任务是为你的编程项目开发一份所需的对象列表。如果你是独立工作且项目较小，那么这些对象可能是显而易见的。然而，如果你正在处理一个大型、复杂的项目，选择对象列表可能会更加困难。例如，如果你的项目是开发一个管理银行所有任务的软件，那么你可能的对象列表将非常大：账户、柜员、钱币、支票本、垃圾桶、保镖、金库、报警系统、客户、贷款、利息等等。但你需要所有这些对象吗？你的脚本要对大堂前面的垃圾桶要做什么？或者对保镖做什么？嗯，也许你的脚本需要为保镖安排班次。
 
@@ -6873,7 +6138,7 @@ $myCar = new Car();
 
 例如，如果你的项目涉及造汽车，你的汽车项目可能需要为汽车的每个部分都创建一个对象。另一方面，如果你的项目涉及停车库的交通控制，你可能只需要一个可以移动的汽车对象；汽车的零件对于这个项目来说并不重要。
 
-### 为每个对象选择属性和方法
+## 为每个对象选择属性和方法
 
 当你有了一份完整的对象列表后，就可以开始为每个对象开发属性列表了。问问自己你需要了解每个对象的什么信息。例如，对于一个汽车维修项目，你可能需要知道诸如汽车最后一次维修的时间、维修历史、任何事故、零件详情等信息。对于一个涉及停车库交通的项目，你可能只需要知道汽车的大小。汽车在停车库中占了多少空间？
 
@@ -6881,21 +6146,25 @@ $myCar = new Car();
 
 然而，再多想一下，或者进行一些测试，可能会发现你遗漏的活动。例如，账户存储了关于所有者的信息，如姓名和地址。你记得在客户搬家时包含一个更新这些信息的方法吗？与移动资金相比，这看起来可能是是微不足道的，但如果你无法做到这一点，它看起来就不微不足道了。
 
-### 创建和使用对象
+## 创建和使用对象
 
 在你决定了对象的设计后，就可以创建并使用该对象。创建和使用对象的步骤如下：
 
 1. **编写类语句（class statement）。**
-类语句是一个 PHP 语句，它是对象的蓝图。类语句有一个语句块，其中包含了对象拥的所有属性和方法的 PHP 代码。
+
+   类语句是一个 `PHP` 语句，它是对象的蓝图。类语句有一个语句块，其中包含了对象拥有的所有属性和方法的 `PHP` 代码。
 
 2. **在要使用的脚本中包含该类。**
-在你想使用该类的脚本中包含它。
+
+   在你想使用该类的脚本中包含它。
 
 3. **基于类创建对象。**
-根据类创建一个对象。这被称为实例化。
+
+   根据类创建一个对象。这被称为实例化。
 
 4. **使用对象。**
-在你创建了新对象后，可以使用它。你可以在类语句内部使用任何方法。
+
+   在你创建了新对象后，可以使用它。你可以在类语句内部使用任何方法。
 
 ## 定义类
 
@@ -6913,7 +6182,7 @@ class className
 }
 ```
 
-你可以使用任何有效的标识符作为类名，除了 `stdClass`。PHP 内部使用了 `stdClass`，所以不能不能这个名称。
+你可以使用任何有效的标识符作为类名，除了 `stdClass`。`PHP` 内部使用了 `stdClass`，所以不能使用这个名称。
 
 所有的属性设置和方法定义都在大括号内。如果你想让一个类成为属性和方法的子类，使用类似的语句：
 
@@ -6944,7 +6213,7 @@ class Car
 }
 ```
 
-PHP 不需要你声明变量。在本书讨论的其他 PHP 脚本中，变量没有声明，直接使用。你也可以在类中这样做。但是，在类中声明属性要好得多。
+`PHP` 不需要你声明变量。在本书讨论的其他 `PHP` 脚本中，变量没有声明，直接使用。你也可以在类中这样做。但是，在类中声明属性要好得多。
 
 忽略这一点是糟糕的编程习惯。
 
@@ -6952,43 +6221,35 @@ PHP 不需要你声明变量。在本书讨论的其他 PHP 脚本中，变量�
 
 - `public`：可以从类外部访问，无论是通过脚本还是另一个类。
 - `private`：从类外部无法访问，无论是通过脚本还是另一个类。
-- `protected`：从类外部无法访问，除非是是拥有受保护属性或方法的类的子类。
+- `protected`：从类外部无法访问，除非是拥有受保护属性或方法的类的子类。
 
 `public` 关键字应该很少使用。类应该编写为通过方法来访问属性。
 
-
-
-
-
 如果你想为属性设置默认值，可以这样做，但允许的值是有限制的。你可以声明一个简单值，但不能声明计算后的值，详见以下示例：
 
-✦ 允许以下变量声明作为默认值：`private $color = “black”;`
-
+✦ 允许以下变量声明作为默认值：
+`private $color = "black";`
 `private $gas = 10;`
-
 `private $tires = 4;`
 
-✦ *不允许*以下变量声明作为默认值：`private $color = “blue”.” black”;`
-
+✦ *不允许*以下变量声明作为默认值：
+`private $color = "blue"." black";`
 `private $gas = 10 - 3;`
-
-`private $tires = 2 \* 2;`
-
-# 定义一个类
+`private $tires = 2 * 2;`
 
 在变量声明中允许使用数组，只要值是简单的，如下所示：
 
-`private $doors = array(“front”,”back”);`
+`private $doors = array("front","back");`
 
 在创建对象时设置或更改变量的值，请使用构造函数（在本章稍后的“编写构造函数” 节中有描述）或你为此目的编写的方法。
 
-## 使用 $this 访问属性
+### 使用 $this 访问属性
 
 在类内部，`$this` 是一个特殊变量，指向 `Book II` 同一类的属性。`$this` 不能在类外部使用。它被设计用于类内部的语句，以访问同一类内部的变量。
 
 使用 `$this` 的格式如下：
 
-`$this-> *varname*`
+`$this->varname`
 
 例如，在一个具有属性 `$totalCost` 的 `CustomerOrder` 类中，你通过以下方式访问 `$totalCost`：
 
@@ -6997,16 +6258,14 @@ PHP 不需要你声明变量。在本书讨论的其他 PHP 脚本中，变量�
 使用 `$this` 指的是类内部的 `$totalCost`。你可以在以下任何语句中使用所示的 `$this`：
 
 `$this->totalCost = 200.25;`
-
 `if($this->totalCost > 1000)`
-
 `product[$this->size] = $price`
 
-如你所见，你在所有情况下使用 `$this-> *varname*` 的方式与你使用 `$ *varname` 的方式相同。
+如你所见，你在所有情况下使用 `$this->varname` 的方式与你使用 `$varname` 的方式相同。
 
 注意美元符号（`$`）出现在它之前，但在 `gas` 之前没有。不要在 `totalCost` 之前使用美元符号——例如 `$this->$totalCost`——因为这会改变你语句的含义。你可能会或可能不会收到错误消息，但它所指的不是当前类内部的变量 `$totalCost`。
 
-## 添加方法
+### 添加方法
 
 方法定义了对象可以做什么，它们在类中的编写格式与你编写函数的格式相同。例如，你的 `CustomerOrder` 可能需要一个方法将项目添加到订单的总成本中。你可以有一个名为 `total` 的变量，其中包含当前的总成本。你可以写一个方法，将项目的价格加到总成本中。你可以如下所示将此类方法添加到你的类中：
 
@@ -7017,7 +6276,7 @@ class CustomerOrder
     function addItem($amount)
     {
         $this->total = $this->total + $amount;
-        echo “$amount was added; current total is $this->total”;
+        echo "$amount was added; current total is $this->total";
     }
 }
 ```
@@ -7025,6 +6284,8 @@ class CustomerOrder
 这看起来和任何其他函数一样，但它是一个方法，因为它在类内部。你可以在此本小型书籍的第 2 章找到关于编写函数的详细信息。
 
 和函数一样，方法接受传递给它们的值。传递的值需要正确的数据类型才能在函数中使用。（关于数据类型的讨论请参见本小型书籍的第 1 章）。例如，在例中，`$amount` 需要是一个数字。你的方法应该包含一个检查，确保该值是一个数字。例如，你可能这样写方法：
+
+
 
 ```php
 class CustomerOrder
@@ -7035,25 +6296,25 @@ class CustomerOrder
         if(is_numeric($amount))
         {
             $this->total = $this->total + $amount;
-            echo “$amount added; current total is $this->total”;
+            echo "$amount added; current total is $this->total";
         }
         else
         {
-            echo “value passed is not a number.”;
+            echo "value passed is not a number.";
         }
     }
 }
 ```
 
-如果传递的值是整数、浮点数或数字字符串，则会加上该金额。如果不是，则显示错误消息。`$total` 中的和是一个浮点数，因为它被赋值了一个带有小数数字。当传递的金额加到 `$sum` 时，PHP 会自动将其转换为浮点数。
+如果传递的值是整数、浮点数或数字字符串，则会加上该金额。如果不是，则显示错误消息。`$total` 中的和是一个浮点数，因为它被赋值了一个带有小数数字。当传递的金额加到 `$total` 时，PHP 会自动将其转换为浮点数。
 
-当你编写方法时，PHP 允许你指定传递的值必须是数组或特定对象。指定预期的内容被称为*类型提示*。如果传递的值不是指定的类型，将显示错误消息。你不需要在方法中添加语句来检查数组或对象数据类型。例如，你可以指定传递给函数的数组，如下所示：
+当你编写方法时，PHP 允许你指定传递的值必须是数组或特定对象。指定预期的内容被称为**类型提示**。如果传递的值不是指定的类型，将显示错误消息。你不需要在方法中添加语句来检查数组或对象数据类型。例如，你可以指定传递给函数的数组，如下所示：
 
 ```php
 class AddingMachine
 {
     private $total = 0;
-    addNumbers(array $numbers)
+    function addNumbers(array $numbers)
     {
         for($i=0;$i<=sizeof($numbers);$i++)
         {
@@ -7063,7 +6324,7 @@ class AddingMachine
 }
 ```
 
-如果你尝试向此方法传递一个不是数组的值，将显示一条类似下面的 `Book II` 错误消息。
+如果你尝试向此方法传递一个不是数组的值，将显示一条类似下面的错误消息。
 
 ```
 Catchable fatal error: Argument 1 passed to AddingMachine::addNumbers() must be an array, integer given,...
@@ -7078,7 +6339,7 @@ class ShoppingCart
 {
     private $items = array();
     private $n_items = 0;
-    function addItem( Item $item )
+    function addItem(Item $item)
     {
         $this->items[] = $item;
         $this->n_items = $this->n_items + 1;
@@ -7086,11 +6347,11 @@ class ShoppingCart
 }
 ```
 
-`ShoppingCart` 类将项目存储为 `Item` 对象的数组。`addItem` 方法被定义为接收一个对象。方法可以声明为 public、private 或 protected，就像属性可以一样。如果没有指定关键字，public 是默认的访问方法。PHP 提供了一些名称以 `__` 开头的特殊方法。PHP 在内部处理这些方法。本章讨论了这些方法中的三个：`__construct`、`__destruct` 和 `__clone`。
+`ShoppingCart` 类将项目存储为 `Item` 对象的数组。`addItem` 方法被定义为接收一个对象。方法可以声明为 `public`、`private` 或 `protected`，就像属性可以一样。如果没有指定关键字，`public` 是默认的访问方法。PHP 提供了一些名称以 `__` 开头的特殊方法。PHP 在内部处理这些方法。本章讨论了这些方法中的三个：`__construct`、`__destruct` 和 `__clone`。
 
 ## 理解公共和私有属性及方法
 
-属性和方法可以是公共的（public）或私有的（private）。公共意味着类内部的方法或属性可以被作为该类的脚本或从另一个类访问。例如，以下类有一个公共属性和一个公共方法：
+属性和方法可以是公共的（`public`）或私有的（`private`）。公共意味着类内部的方法或属性可以被作为该类的脚本或从另一个类访问。例如，以下类有一个公共属性和一个公共方法：
 
 ```php
 class Car
@@ -7099,7 +6360,7 @@ class Car
     function addGas($amount)
     {
         $this->gas = $this->gas + $amount;
-        echo “$amount added to gas tank”;
+        echo "$amount added to gas tank";
     }
 }
 ```
@@ -7140,10 +6401,7 @@ Fatal error: Cannot access private property car::$gas in c:\testclass.php on lin
 
 现在，向汽车加油的唯一方法是使用 `addGas` 方法。因为 `addGas` 方法是类语句的一部分，它可以访问私有属性。
 
-
-
-
-同样，你可以将方法设置为私有（private）或保护（protected）。在这种情况下，你希望外部世界使用 `addGas` 方法。然而，你可能希望确保人们购买了添加的汽油。你不希望汽车里有偷来的汽油。你可以编写以下类：
+同样，你可以将方法设置为私有（`private`）或保护（`protected`）。在这种情况下，你希望外部世界使用 `addGas` 方法。然而，你可能希望确保人们购买了添加的汽油。你不希望汽车里有偷来的汽油。你可以编写以下类：
 
 ```php
 class Car
@@ -7153,7 +6411,7 @@ class Car
     private function addGas($amount)
     {
         $this->gas = $this->gas + $amount;
-        echo "$amount gallons added to gas tank”;
+        echo "$amount gallons added to gas tank";
     }
 
     function buyGas($amount)
@@ -7178,6 +6436,7 @@ $new_car->buyGas(5);
 ```
 
 你会看到以下输出：
+
 5 gallons added to gas tank
 
 尽可能隐藏类的大部分内容是一项良好的编程习惯。将所有属性都设为私有。只有在方法绝对需要公开时，你才将它们设置为公共。
@@ -7186,7 +6445,7 @@ $new_car->buyGas(5);
 
 `constructor`（构造函数）是 PHP 5 引入的特殊方法，当使用类作为模板创建对象时执行。构造函数不是必须的，如果你不想在创建对象时设置任何属性值或执行任何操作，就不需要使用构造函数。类只允许一个构造函数。
 
-构造函数有一个特殊的名称，以便 PHP 知道在创建对象时执行该方法。构造函数命名为 `__construct`（两个下划线）。构造方法的形式 get 所示：
+构造函数有一个特殊的名称，以便 PHP 知道在创建对象时执行该方法。构造函数命名为 `__construct`（两个下划线）。构造方法的形式如下所示：
 
 ```php
 function __construct()
@@ -7291,36 +6550,33 @@ class Form
 ?>
 ```
 
-
-
-[content]
 类代码需要位于使用该类的脚本中。最常见的情况下，类存储在一个单独的包含文件中，并包含在任何使用该类的脚本中。
 
 要使用对象，你首先从类创建对象。然后，该对象就可以执行类中所包含的任何方法。创建对象被称为实例化（`instantiating`）对象。正如你可以使用模式来创建许多相似但个体的连衣裙一样，你可以使用类来创建许多相似但个体的对象。要创建一个对象，使用具有以下格式的语句：
 
 `objectname` = new `classname`( `value`, `value`,...); 某些创建对象的有效语句如下：
 
-`Joe` = new Person(`male`);
+`$Joe` = new `Person`(`male`);
 
-`car_Joe` = new Car(`red`);
+`$car_Joe` = new `Car`(`red`);
 
-`car_Sam` = new Car(`green`);
+`$car_Sam` = new `Car`(`green`);
 
-`customer1` = new Customer(`Smith`,`Joe`,`custID`);
+`$customer1` = new `Customer`(`Smith`,`Joe`,`custID`);
 
 对象被存储在变量名中，并执行构造器方法。然后，你可以使用具有以下格式的语句调用类中的任何方法：
 
-`Joe->goToWork()`;
+`$Joe->goToWork()`;
 
-`car_Joe->park(`illegal`)`;
+`$car_Joe->park(`illegal`)`;
 
-`car_Sam->paintCar(`blue`)`;
+`$car_Sam->paintCar(`blue`)`;
 
-`name` = `customer1->getName()`;
+`$name` = `$customer1->getName()`;
 
 从同一个类创建的不同对象是独立的个体。
 
-Sam 的车被成了蓝色，但 Joe 的车仍然是红色的。Joe 收到了一罚单，但这并没有影响 Sam。
+Sam 的车被漆成了蓝色，但 Joe 的车仍然是红色的。Joe 收到了一张罚单，但这并没有影响 Sam。
 
 列表 4-2 中的脚本显示了如何使用在前一节创建并在列表 4-1 中所示的 `Form` 类。
 
@@ -7331,34 +6587,27 @@ Sam 的车被成了蓝色，但 Joe 的车仍然是红色的。Joe 收到了一�
 /* Script name: buildForm
 * Description: 使用 form 创建简单的 HTML 表单
 */
-![Image 26](img/index-276_1.jpg)
-
-14_167779 bk02ch04.qxp 12/17/07 8:09 PM Page 247
-
-在脚本中使用类
-247
-
-require_once(“Form.class”);
-echo “<html><head><title>Phone form</title></head><body>”; $phone_form = new Form(“process.php”,”Submit Phone”);
-$phone_form->addField(“first_name”,”First Name”);
-$phone_form->addField(“last_name”,”Last Name”);
-$phone_form->addField(“phone”,”Phone”);
-echo “<h3>Please fill out the following form:</h3>”; $phone_form->displayForm();
-echo “</body></html>”;
+require_once("Form.class");
+echo "<html><head><title>Phone form</title></head><body>";
+$phone_form = new Form("process.php","Submit Phone");
+$phone_form->addField("first_name","First Name");
+$phone_form->addField("last_name","Last Name");
+$phone_form->addField("phone","Phone");
+echo "<h3>Please fill out the following form:</h3>";
+$phone_form->displayForm();
+echo "</body></html>";
 ?>
 ```
 
 首先，脚本将包含 `Form` 类的文件引入脚本中。
 
-类存储在 `Form.class` 文件中。脚本创建了一个名为 `phone_form` 的新 `Book II` 对象。通过 `addField` 方法增加了三个字段。通过 `displayForm` 方法显示表单。注意，此脚本中输出了一些额外的 HTML 代码。这些 HTML 代码可以同样容易地通过 `Object-Oriented Programming` 添加 `displayForm` 方法中。
+类存储在 `Form.class` 文件中。脚本创建了一个名为 `phone_form` 的新对象。通过 `addField` 方法增加了三个字段。通过 `displayForm` 方法显示表单。注意，此脚本中输出了一些额外的 HTML 代码。这些 HTML 代码可以同样容易地通过 `Object-Oriented Programming` 添加到 `displayForm` 方法中。
 
 脚本使用 `Form` 类创建了一个带有三个字段的表单。图 4-1 显示了生成的网页。
 
 **图 4-1：**
-由列表 4-2 中的脚本显示的表单。
 
-14_167779 bk02ch04.qxp 12/17/07 8:09 PM Page 248
-248 在抽象类和接口中使用抽象方法
+由列表 4-2 中的脚本显示的表单。
 
 ## 抽象类和接口中的抽象方法
 
@@ -7376,7 +6625,9 @@ echo “</body></html>”;
 
 如果子类没有实现抽象方法，将会发生错误。
 
-抽象方法指定了传递的值。抽象方法必须是公开的（public）。以下代码显示了抽象方法的使用。抽象类名为 `Message`。该类定义了两个子类。
+抽象方法指定了传递的值。抽象方法必须是公开的（`public`）。以下代码显示了抽象方法的使用。抽象类名为 `Message`。该类定义了两个子类。
+
+
 
 ```php
 abstract class Message
@@ -7393,7 +6644,7 @@ class GiantMessage extends Message
 {
     public function displayMessage($color)
     {
-        echo “<h1 style='color:$color'>$this->message_content</h1>”;
+        echo "<h1 style='color:$color'>$this->message_content</h1>";
     }
 }
 
@@ -7401,25 +6652,26 @@ class BigMessage extends Message
 {
     public function displayMessage($color)
     {
-        echo “<h2 style='color:$color'>$this->message_content</h2>”;
+        echo "<h2 style='color:$color'>$this->message_content</h2>";
     }
 }
 ```
 
-`Book II`
-第 4 章
-`面向对象编程`
-抽象类 `Message` 包含了抽象方法 `displayMessage`。两个子类：`GiantMessage` 和 `BigMessage`。在 `GiantMessage` 中，显示为 `<h1>` 标签。在 `BigMessage` 中，显示为 `<h2>` 标签。因此，两个子类都实现了抽象方法，但实现方式不同。如果子类没有实现抽象方法，将会发生错误。
+# Book II
+
+## 第 4 章：面向对象编程
+
+抽象类 `Message` 包含了抽象方法 `displayMessage()`。两个子类：`GiantMessage` 和 `BigMessage`。在 `GiantMessage` 中，显示为 `<h1>` 标签。在 `BigMessage` 中，显示为 `<h2>` 标签。因此，两个子类都实现了抽象方法，但实现方式不同。如果子类没有实现抽象方法，将会发生错误。
 
 ### 使用接口
 
 接口只包含抽象方法。接口的功能通过指定类必须实现的方法来强制执行模式。
 
-接口不能与脚本中的类同名。接口中的所有方法必须是公开的（public）。当类实现接口时，接口中的所有方法都必须在类中实现。如果某个方法没有被实现，将会发生致命错误。
+接口不能与脚本中的类同名。接口中的所有方法必须是公开的（`public`）。当类实现接口时，接口中的所有方法都必须在类中实现。如果某个方法没有被实现，将会发生致命错误。
 
-在类中实现接口的格式如下：`classname` implements `interfacename`。
+在类中实现接口的格式如下：`classname implements interfacename`。
 
-你可以在类中实现多个接口，如下：`classname` implements `interfacename1, interfacename2`。
+你可以在类中实现多个接口，如下：`classname implements interfacename1, interfacename2`。
 
 ```php
 interface Moveable
@@ -7433,7 +6685,7 @@ class Car
     function __construct($amt)
     {
         $this->gas = $amt;
-        echo “<p>At creation, Car contains $this->gas gallons of gas</p>”;
+        echo "<p>At creation, Car contains $this->gas gallons of gas</p>";
     }
 }
 
@@ -7443,35 +6695,28 @@ class Sedan extends Car implements Moveable
     public function moveForward($distance)
     {
         $this->gas = $this->gas - round(($distance/$this->mileage),2);
-        echo “<p>After moving forward $distance miles, Sedan contains $this->gas gallons of gas.</p>”;
+        echo "<p>After moving forward $distance miles, Sedan contains $this->gas gallons of gas.</p>";
     }
 }
 ```
 
-
-
-
-当对象 `$my_car` 创建时，显示第一条语句。由于 `Sedan` 类没有构造函数，因此 `Car` 类中的构造函数会运行并产生第一行输出。第二条语句在使用 `moveForward` 方法时显示。
+当对象 `$my_car` 创建时，显示第一条语句。由于 `Sedan` 类没有构造函数，因此 `Car` 类中的构造函数会运行并产生第一行输出。第二条语句在使用 `moveForward()` 方法时显示。
 
 ## 防止对类或方法进行更改
 
 你可能希望某个类完全按照你编写的方式使用。你可以使用 `final` 关键字来防止创建更改方法实现的子类，如下：
 
-```
+```php
 final class classname
 ```
-
-## 第二卷
-
-### 第四章
 
 当类被定义为 `final` 时，无法创建子类。你也可以将一个方法定义为 `final`，如下：
 
 ```php
-final public moveForward()
+final public function moveForward()
 ```
 
-如果子类包含一个与父类中 `final` 方法同名的方法，将显示错误信息，类似于以下：`Fatal error: Cannot override final method Car::moveForward()`。在这种情况下，父类 `Car` 包含一个定义为 `final` 的方法 `moveForward`。子类 `Sedan` 继承了 `Car`。然而，`Sedan` 类定义了一个方法 `moveForward`，该方法名与父类 `Car` 类中的 `final` 方法相同。这是不允许允许的。
+如果子类包含一个与父类中 `final` 方法同名的方法，将显示错误信息，类似于以下：`Fatal error: Cannot override final method Car::moveForward()`。在这种情况下，父类 `Car` 包含一个定义为 `final` 的方法 `moveForward()`。子类 `Sedan` 继承了 `Car`。然而，`Sedan` 类定义了一个方法 `moveForward()`，该方法名与父类 `Car` 类中的 `final` 方法相同。这是不允许的。
 
 ## 使用异常处理错误
 
@@ -7485,9 +6730,9 @@ PHP 提供了一个名为 `Exception` 的错误处理类。你可以使用这个
 throw new Exception("message");
 ```
 
-该语句会创建一个 `Exception` 对象并在对象中存储一条消息。`Exception` 对象有一个 `getMessage` 方法，你可以用它来获取你存储的消息。
+该语句会创建一个 `Exception` 对象并在对象中存储一条消息。`Exception` 对象有一个 `getMessage()` 方法，你可以用它来获取你存储的消息。
 
-在你的类定义中，你在方法中包含代码，以便在某些条件发生时创建 `Exception`。例如，以下 `Car` 类中的 `addGas` 方法会按如下所示检查燃油量是否超过了汽车油箱能容纳的量：
+在你的类定义中，你在方法中包含代码，以便在某些条件发生时创建 `Exception`。例如，以下 `Car` 类中的 `addGas()` 方法会按如下所示检查燃油量是否超过了汽车油箱能容纳的量：
 
 ```php
 class Car
@@ -7528,12 +6773,9 @@ catch(Exception $e)
 - `try`: 在 `try` 块中，你包含了任何认为可能触发异常的语句。在这个脚本中，添加过多的燃油可能会触发异常。
 - `catch`: 当你使用该类时，检查是否抛出了异常并执行指定的动作。
 
+`get_class()` 函数返回一个数组。`properties` 数组包含属性名作为键以及默认值作为值。`methods` 数组包含数字键，并以方法名为值。如果属性或方法是私有的，除非是在类内部执行的，否则该函数将不会返回其名称。
 
-
-
-`get_class_` 函数返回一个数组。`properties` 数组包含属性名作为键以及默认值作为值。`methods` 数组包含数字键，并以方法名为值。如果属性或方法是私有的，除非是在类内部执行的，否则该函数将不会返回其名称。
-
-✦ 你可以使用 PHP 5 中引入的 `instanceof` 符来测试一个对象、其父类或它们实现的接口是否由指定的类创建，如下所示：
+✦ 你可以使用 PHP 5 中引入的 `instanceof` 操作符来测试一个对象、其父类或它们实现的接口是否由指定的类创建，如下所示：
 
 ```php
 if($objectname instanceof "classname")
@@ -7564,7 +6806,7 @@ unset($myCar);
 
 在 `$myCar` 被 unset 之后，该对象将不再存在。
 
-PHP 提供了一个在对象被销毁时自动运行的方法。你将此方法添加到类中并将其命名为 `__destruct`。例如，下面的类包含一个 `__destruct` 方法：
+PHP 提供了一个在对象被销毁时自动运行的方法。你将此方法添加到类中并将其命名为 `__destruct()`。例如，下面的类包含一个 `__destruct()` 方法：
 
 ```php
 class Bridge
@@ -7584,11 +6826,12 @@ unset($bigBridge);
 ```
 
 这些语句的输出是：
+
 `The bridge is destroyed`
 
-当对象被 unset 时，`__destruct` 方法会输出该内容。
+当对象被 unset 时，`__destruct()` 方法会输出该内容。
 
-`__destruct` 方法并不是必须的。它只是在你想在对象销毁时执行某些语句时供你使用。例如，你可能关闭某些文件或将某些信息复制到数据库中。
+`__destruct()` 方法并不是必须的。它只是在你想在对象销毁时执行某些语句时供你使用。例如，你可能关闭某些文件或将某些信息复制到数据库中。
 
 # 第三册
 
@@ -7618,11 +6861,11 @@ MySQL 是网站中最常用的数据库，它的开发目标是快速和轻量�
 
 ### MySQL 如何工作
 
-MySQL 软件由 MySQL 服务器、若干个辅助管理 MySQL 数据库的实用程序，以及 MySQL 服务器需要的一些辅助软件（你不需要了解这些）。
+MySQL 软件由 MySQL 服务器、若干个辅助管理 MySQL 数据库的实用程序，以及 MySQL 服务器需要的一些辅助软件（你不需要了解这些）组成。
 
 系统的核心是 MySQL 服务器。
 
-MySQL 服务器是数据库系统的管理器。它处理你所有的数据库指令。例如，如果你想创建一个新数据库，你会向 MySQL 服务器发送一条消息，说“创建一个新数据库并命名为 newdata *.*`”。然后 MySQL 服务器会在其数据目录中创建一个子目录，将新子目录命名为 `newdata`，并将所需格式的必要文件放入 `newdata` 子目录中。同样，要向该数据库添加数据，你会向 MySQL 服务器发送一条消息，给它数据并告诉它你想将数据添加到哪里。
+MySQL 服务器是数据库系统的管理器。它处理你所有的数据库指令。例如，如果你想创建一个新数据库，你会向 MySQL 服务器发送一条消息，说“创建一个新数据库并命名为 newdata”。然后 MySQL 服务器会在其数据目录中创建一个子目录，将新子目录命名为 `newdata`，并将所需格式的必要文件放入 `newdata` 子目录中。同样，要向该数据库添加数据，你会向 MySQL 服务器发送一条消息，给它数据并告诉它你想将数据添加到哪里。
 
 在向 MySQL 服务器传递指令之前，它必须处于运行状态并等待请求。MySQL 服务器通常被设置为在计算机启动时启动并一直运行。这是网站的常用设置。但是，没有必要将其设置为在计算机启动时启动。如果你需要，你可以在任何需要访问数据库时手动启动它。当它运行时，MySQL 服务器会持续监听发送给它的消息。安装和启动 MySQL 服务器将在第一册的第 3 章中讨论。
 
@@ -7648,9 +6891,6 @@ MySQL 是一个关系型数据库管理系统（RDBMS）。你的 MySQL 服务�
 
 SQL 几乎就是英语；它主要由英语单词组成，组合成听起来类似于英语句子的单词字符串。通常（幸运的是），你不需要理解任何奥秘的技术语言就能编写可以运行的 SQL 查询。
 
-
-
-
 每个查询的第一个单词是它的名称，它是一个动词（动作词），告诉 MySQL 你想做什么。我们在本迷你书中讨论的查询有 `CREATE`、`DROP`、`ALTER`、`SHOW`、`INSERT`、`LOAD`、`SELECT`、`UPDATE` 和 `DELETE`。这些基础词汇足以在网站上创建并操作数据库。
 
 查询名称后面是一些单词和短语——有些是必须的，有些是可选的——告诉 MySQL 如何执行该操作。例如，你总是需要告诉 MySQL 要创建什么，并且总是需要告诉它向哪个插入插入或从哪个表中查询数据。
@@ -7661,18 +6901,12 @@ SQL 几乎就是英语；它主要由英语单词组成，组合成听起来类�
 SELECT lastName FROM Member
 ```
 
-## 第三部分
-
-## 第一章
-
 此查询检索名为 `Member` 表中存储的所有姓氏。
-
-## 介绍 MySQL
 
 更复杂的查询（如下所示）看起来没那么像英语：
 
 ```sql
-SELECT lastName,firstName FROM Member WHERE state=”CA” AND city=”Fresno” ORDER BY lastName
+SELECT lastName,firstName FROM Member WHERE state="CA" AND city="Fresno" ORDER BY lastName
 ```
 
 此查询检索所有住在 Fresno 的成员的姓和名，然后按照姓的字母顺序对它们进行排序。尽管这个查询看起来不太像英语，但它仍然非常清晰。
@@ -7689,9 +6923,9 @@ SELECT lastName,firstName FROM Member WHERE state=”CA” AND city=”Fresno”
 
 你可以在 SQL 语句的任何地方换行，也可以将整个语句写在一行上。
 
-*   **引号：** 注意在前面的查询中，`CA` 和 `Fresno` 被包含在双引号（""）中。`CA` 和 `Fresno` 是一系列被称为*文本字符串*或*字符字符串*的字符。（我们将在本章稍后详细解释字符串）。你正在要求 MySQL 将 SQL 查询中的文本字符串与数据库已存储的文本字符串进行比较。当你比较存储在数值列中的数字（如整数）时，不需要将数字括在引号内。（在本迷你书第 3 章，我们将解释你可以存储在 MySQL 中的数据类型。）
+*   **引号：** 注意在前面的查询中，`CA` 和 `Fresno` 被包含在双引号（`""`）中。`CA` 和 `Fresno` 是一系列被称为*文本字符串*或*字符字符串*的字符。（我们将在本章稍后详细解释字符串）。你正在要求 MySQL 将 SQL 查询中的文本字符串与数据库已存储的文本字符串进行比较。当你比较存储在数值列中的数字（如整数）时，不需要将数字括在引号内。（在本迷你书第 3 章，我们将解释你可以存储在 MySQL 中的数据类型。）
 
-## 发送 SQL 查询
+#### 发送 SQL 查询
 
 向 MySQL 发送 SQL 查询，我们涵盖了三种方法：
 
@@ -7702,57 +6936,81 @@ SELECT lastName,firstName FROM Member WHERE state=”CA” AND city=”Fresno”
 要使用 `mysql` 客户端，请遵循以下步骤：
 
 1.  **找到 mysql 客户端。** 默认情况下，mysql 客户端位于 MySQL 安装的目录。在 Unix/Linux 中，默认是 `/usr/local/bin`。在 Windows 中，默认是 `C:\Program Files\MySQL\MySQL Server 5.0\bin`。
-2.  **启动客户端。** 在 Unix 和 Linux 中，输入路径/文件名（例如 `/usr/local/bin/mysql`）。在 Windows 中，打开命令行窗口并输入路径文件名（例如 `C:\Program Files\MySQL\MySQL Server 5.0\bin\mysql`）。如果你不需要用户名或密码，此命令将启动客户端。如果你需要输入账户或密码或两者，请使用以下参数：
-    *   `-u user`：`user` 是你的 MySQL 用户名。
-    *   `-p`：此参数提示你输入 MySQL 账户密码。
-    例如，如果你在客户端所在的目录下，命令可能如下：
-    ```
-    mysql -u root -p
-    ```
-3.  **如果你跨网络启动 mysql 客户端访问数据库，请在 mysql 命令后使用以下参数：**
-    *   `-h host`：`host` 是 MySQL 所在机器的名称。
-    例如，如果你在客户端所在的目录下，命令可能如下：
-    ```bash
-    mysql -h mysqlhost.mycompany.com -u root -p
-    ```
-4.  **在提示时输入密码。**  启动，你会看到：
-    ```
-    Welcome to the MySQL monitor. Commands end with ; or \g.
-    Your MySQL connection id is 459 to server version: 5.0.15
-    Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
-    mysql>
-    ```
-5.  **选择你想使用的数据库。** 在 mysql 提示符下，输入以下内容：
-    ```sql
-    use databasename
-    ```
 
 
+
+## 2. 启动客户端
+
+在 Unix 和 Linux 中，输入路径/文件名（例如 `/usr/local/bin/mysql`）。在 Windows 中，打开命令行窗口并输入路径文件名（例如 `C:\Program Files\MySQL\MySQL Server 5.0\bin\mysql`）。如果你不需要用户名或密码，此命令将启动客户端。如果你需要输入账户或密码或两者，请使用以下参数：
+
+*   `-u user`：`user` 是你的 MySQL 用户名。
+*   `-p`：此参数提示你输入 MySQL 账户密码。
+
+例如，如果你在客户端所在的目录下，命令可能如下：
+
+```
+mysql -u root -p
+```
+
+## 3. 跨网络启动 mysql 客户端
+
+如果你跨网络启动 mysql 客户端访问数据库，请在 mysql 命令后使用以下参数：
+
+*   `-h host`：`host` 是 MySQL 所在机器的名称。
+
+例如，如果你在客户端所在的目录下，命令可能如下：
+
+```bash
+mysql -h mysqlhost.mycompany.com -u root -p
+```
+
+## 4. 输入密码
+
+在提示时输入密码。启动后，你会看到：
+
+```
+Welcome to the MySQL monitor. Commands end with ; or \g.
+Your MySQL connection id is 459 to server version: 5.0.15
+Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
+mysql>
+```
+
+## 5. 选择数据库
+
+选择你想使用的数据库。在 mysql 提示符下，输入以下内容：
+
+```sql
+use databasename
+```
 
 某些 SQL 查询（例如 `SHOW DATABASES`）并不要求你选择数据库。对于这些查询，你可以跳过第 5 步。
 
-6. **在 mysql 提示符处，输入你的 SQL 查询并在最后加上分号（`;`），然后按回车键（Enter）。**
+## 6. 执行 SQL 查询
 
-如果你忘记在查询末尾输入分号（`;`），`mysql` 客户端将不会执行查询。相反，它会继续显示提示符（`mysq>`），直到你输入分号为止。
+在 mysql 提示符处，输入你的 SQL 查询并在最后加上分号（`;`），然后按回车键（Enter）。
+
+如果你忘记在查询末尾输入分号（`;`），`mysql` 客户端将不会执行查询。相反，它会继续显示提示符（`mysql>`），直到你输入分号为止。
 
 查询的响应将显示在屏幕上。
 
-7. **要退出 mysql 客户端，在提示符处输入 `quit` 然后按回车键（Enter`）。**
+## 7. 退出 mysql 客户端
+
+要退出 mysql 客户端，在提示符处输入 `quit` 然后按回车键（Enter）。
 
 你可以使用 `mysql` 客户端发送你自己编写的 SQL 查询，它会返回查询的响应。管理软件也可以发送你编写的查询，我们将在下一节中介绍。然而，管理软件具有许多 `mysql` 客户端不具备的额外功能。
 
-### 使用管理软件
+## 使用管理软件
 
-你可以决定使用其中一个管理软件软件包与 MySQL 通信。如上一节所述，这些软件包提供了图形用户界面，其功能比 `mysql` 客户端提供的多得多。MySQL 在其网站上提供了两个软件软件包：`MySQL Administrator` 和 `MySQL Query Browser` 供你下载和使用。另一个流行的软件包是 `phpMyAdmin`，它是用 PHP 编写并通过浏览器访问的管理软件。在书中，我们主要讨论使用 `phpMyAdmin` 进行 MySQL 管理。
+你可以决定使用其中一个管理软件包与 MySQL 通信。如上一节所述，这些软件包提供了图形用户界面，其功能比 `mysql` 客户端提供的多得多。MySQL 在其网站上提供了两个软件包：`MySQL Administrator` 和 `MySQL Query Browser` 供你下载和使用。另一个流行的软件包是 `phpMyAdmin`，它是用 PHP 编写并通过浏览器访问的管理软件。在书中，我们主要讨论使用 `phpMyAdmin` 进行 MySQL 管理。
 
 `phpMyAdmin` 软件包提供了大量功能。你可以使用以下方法之一与 MySQL 通信：
 
-* **发送 SQL 查询：**你可以构建自己的 SQL 查询，并使用 `phpMyAdmin` 将查询发送到 MySQL 服务器。
-* **使用 phpMyAdmin 功能：**你可以使用各种 `phpMyAdmin` 功能来执行任务，例如创建数据库或向数据库表添加数据。当你点击 `phpMyAdmin` 按钮执行任务时，`phpMyAdmin` 会为你构建 SQL 查询并将其发送 MySQL。在使用 `phpMyAdmin` 功能时，你不需要了解 SQL 语法。在本节中，我们将描述如何使用 `phpMyAdmin` 向 MySQL 服务器发送 SQL 查询。在本书的后续章节中，当我们描述如何执行任务时，我们会告诉你是如何使用 `phpMyAdmin` 功能完成任务的。例如，当我们讨论创建数据库时，我们会同时描述要使用的 SQL 查询以及如何使用 `phpMyAdmin` 功能来创建数据库。
+* **发送 SQL 查询：** 你可以构建自己的 SQL 查询，并使用 `phpMyAdmin` 将查询发送到 MySQL 服务器。
+* **使用 phpMyAdmin 功能：** 你可以使用各种 `phpMyAdmin` 功能来执行任务，例如创建数据库或向数据库表添加数据。当你点击 `phpMyAdmin` 按钮执行任务时，`phpMyAdmin` 会为你构建 SQL 查询并将其发送 MySQL。在使用 `phpMyAdmin` 功能时，你不需要了解 SQL 语法。在本节中，我们将描述如何使用 `phpMyAdmin` 向 MySQL 服务器发送 SQL 查询。在本书的后续章节中，当我们描述如何执行任务时，我们会告诉你是如何使用 `phpMyAdmin` 功能完成任务的。例如，当我们讨论创建数据库时，我们会同时描述要使用的 SQL 查询以及如何使用 `phpMyAdmin` 功能来创建数据库。
 
 要使用 `phpMyAdmin` 发送 SQL 查询，请遵循以下步骤：
 
-### 第 1 章
+## 第 1 章
 
 1. **打开浏览器并访问 phpMyAdmin 主页。** 例如，取决于你安装 `phpMyAdmin` 的方式，你可能需要在浏览器中输入以下 URL：
 
@@ -7778,14 +7036,14 @@ localhost/phpmyadmin
 
 `phpMyAdmin` 会显示消息，告知你刚刚输入的查询状态。例如，它可能会告诉你该查询创建了一个数据库。或者消息可能会提示由于你的语法错误导致查询无法运行。
 
-### MySQL MySQL
+## MySQL 安全系统
 
 你需要控制对数据的访问。你需要决定谁可以查看数据，谁可以更改数据。如果坏人获取了你的私人信息（如信用卡号），你就会面临问题。你需要保护你的数据。MySQL 提供了一套保护数据的安全系统，包括：
 
 * **账户（Accounts）：** 没有账户无法访问数据。账户有一个用户必须使用的名称。此外，每个账户指定了访问来源，例如仅限本地计算机。
 * **权限（Permissions）：** MySQL 使用权限来指定谁可以做什么。例如，账户可以配置为允许选择数据但不插入或更新数据。或者，账户可以配置为更改特定表的数据。
 
-你可以使用 SQL 查询创建和删除账户、添加和更改密码、添加和移除权限。你可以使用上一节描述的方法发送 查询。你还可以使用 `phpMyAdmin` 提供的功能管理账户。
+你可以使用 SQL 查询创建和删除账户、添加和更改密码、添加和移除权限。你可以使用上一节描述的方法发送查询。你还可以使用 `phpMyAdmin` 提供的功能管理账户。
 
 ## 第 2 章：管理 MySQL
 
@@ -7797,33 +7055,31 @@ localhost/phpmyadmin
 * **备份和恢复数据库**
 * **获取最新版本的 MySQL**
 
-MySQL 是一个数据库管理软件。它管理着你构建动态网站所需的所需的数据库。你的目标是在数据库中存储数据或从数据库中检索数据。你可以直接存储和检索（见本书第 3 和第 4 章），也可以从 PHP 脚本中存储和检索（见本书第 5 章）。此外，需要 MySQL 管理员来确保 MySQL 正确高效地工作。我们在本章中介绍 MySQL 管理。
+MySQL 是一个数据库管理软件。它管理着你构建动态网站所需的数据库。你的目标是在数据库中存储数据或从数据库中检索数据。你可以直接存储和检索（见本书第 3 和第 4 章），也可以从 PHP 脚本中存储和检索（见本书第 5 章）。此外，需要 MySQL 管理员来确保 MySQL 正确高效地工作。我们在本章中介绍 MySQL 管理。
 
 ### 理解管理员职责
 
-管理 MySQL 涵盖了确保 MySQL 能够高效、安全地执行数据管理任务的任务。取决于你如何访问 MySQL，你可能负责部分或全部管理任务。如果你在 托管公司的计算机上使用 MySQL，则由托管公司执行大部分或全部管理任务。
+管理 MySQL 涵盖了确保 MySQL 能够高效、安全地执行数据管理任务的任务。取决于你如何访问 MySQL，你可能负责部分或全部管理任务。如果你在托管公司的计算机上使用 MySQL，则由托管公司执行大部分或全部管理任务。
 
 然而，如果你在本地计算机上使用 MySQL，你就是管理员，完全负责 MySQL 的管理工作。
 
-
-
 如果 `MySQL` 运行在 Web 托管计算机上，你不需要启动或停止服务器。
 
-## 对你数据的默认访问
+### 对你数据的默认访问
 
-✦ **创建和维护 MySQL 用户账户。** 没有账户，任何人无法访问你数据库中的数据。需要安装和删除账户，添加或删除密码，并为账户分配或移除权限。我们将在本章稍后的“设置 MySQL 账户”节中描述用户账户的管理。
+* **创建和维护 MySQL 用户账户。** 没有账户，任何人无法访问你数据库中的数据。需要安装和删除账户，添加或删除密码，并为账户分配或移除权限。我们将在本章稍后的“设置 MySQL 账户”节中描述用户账户的管理。
 
-如果你在 Web 托管公司使用 `MySQL`，你可能被允许或不被创建或更改 `MySQL` 账户。你可能被限制只能拥有一个定义了权限的账户。
+    如果你在 Web 托管公司使用 `MySQL`，你可能被允许或不被允许创建或更改 `MySQL` 账户。你可能被限制只能拥有一个定义了权限的账户。
 
-✦ **备份数据。** 你需要保留数据的备份副本，以防数据丢失或损坏。如果你在 Web 托管公司使用 `MySQL`，你需要向该公司咨询他们的备份程序。
+* **备份数据。** 你需要保留数据的备份副本，以防数据丢失或损坏。如果你在 Web 托管公司使用 `MySQL`，你需要向该公司咨询他们的备份程序。
 
-你可能仍然想保留一份自己的备份，以防他们的备份程序失效。你可以在本章稍后的“备份你的数据库”节中阅读有关备份数据库的知识。
+    你可能仍然想保留一份自己的备份，以防他们的备份程序失效。你可以在本章稍后的“备份你的数据库”节中阅读有关备份数据库的知识。
 
-✦ **更新 MySQL。** 在需要时安装新的 `MySQL` 版本。如果 `MySQL` 运行在 Web 托管计算机上，则你不需要负责更新。
+* **更新 MySQL。** 在需要时安装新的 `MySQL` 版本。如果 `MySQL` 运行在 Web 托管计算机上，则你不需要负责更新。
 
-我们将在本章稍后的“升级 MySQL”节中讨论升级 `MySQL`。
+    我们将在本章稍后的“升级 MySQL”节中讨论升级 `MySQL`。
 
-## 对你数据的默认访问
+### 对你数据的默认访问
 
 安装 `MySQL` 时，会安装一个名为 `root` 的默认 `MySQL` 账户。
 
@@ -7835,16 +7091,16 @@ MySQL 是一个数据库管理软件。它管理着你构建动态网站所需�
 
 因此，在大多数情况下，你希望创建一个权限较少的账户，用于通过 `PHP` 脚本访问数据。
 
-## 控制对你数据的访问
+### 控制对你数据的访问
 
 你需要控制对数据库中信息的访问。你需要决定谁可以查看数据，谁可以更改数据。想象一下，如果你的竞争对手能够更改你在线产品目录中的信息或复制你的客户列表——你很快就会破产。显然，你需要保护你的数据。
 
 幸运的是，`MySQL` 提供了一个安全系统来保护你的数据。没有账户，任何人无法访问你数据库中的数据。每个 `MySQL` 账户具有以下属性：
 
-✦ 节点
-✦ `hostname` —— 账户可以访问 `MySQL` 服务器的机器
-✦ 密码
-✦ 一组权限
+* `username` —— 账户名称
+* `hostname` —— 账户可以访问 `MySQL` 服务器的机器
+* 密码
+* 一组权限
 
 要访问你的数据，某人必须使用有效的账户名并知道与该账户关联的密码。此外，他们必须从允许的计算机进行连接。`root` 账户是一个拥有所有权限的特殊账户。
 
@@ -7859,15 +7115,11 @@ MySQL 是一个数据库管理软件。它管理着你构建动态网站所需�
 
 `root` 账户拥有所有权限。你使用该账户来管理你的 `MySQL` 数据库。你不需要拥有所有权限的账户来访问你的 `MySQL` 数据库或添加和检索数据。因此，在大多数情况下，你希望创建一个权限较少的账户，用于通过 `PHP` 脚本访问数据。
 
-
-
 安装 MySQL 时，它会自动安装一个具有所有权限的账户：`root@localhost`。根据你的操作系统，该账户在安装时可能没有设置密码。任何登录到安装了 MySQL 的计算机的人都可以使用名为 `root` 的账户访问 MySQL 并对其进行任何操作。（当然，`root` 是一个广为人知的账户名称，因此该账户是不安全的。如果你是 MySQL 管理员，请立即为此账户添加密码。）
 
-在某些操作系统上，除了 `root@localhost` 之外还会自动安装额外的账户。例如，在 Windows 上，可能会安装一个名为 `root@%` 的账户，且没有任何密码保护。这个具有所有权限的 root 账户可以被任何机器上的任何人使用。你应该立即删除这个 `Administering` 账户，或者至少给它设置密码。
+在某些操作系统上，除了 `root@localhost` 之外还会自动安装额外的账户。例如，在 Windows 上，可能会安装一个名为 `root@%` 的账户，且没有任何密码保护。这个具有所有权限的 root 账户可以被任何机器上的任何人使用。你应该立即删除这个账户，或者至少给它设置密码。
 
-## MySQL
-
- 密码
+## MySQL 密码
 
 每个账户都设置了密码。如果没有为账户提供密码，则密码为空，这意味着不需要密码。
 
@@ -7879,12 +7131,12 @@ MySQL 对密码的长度没有限制，但有时系统上的其他软件会将�
 
 以下列表提供了一些关于选择尽可能难以破解密码的建议：
 
-- 使用六到八个字符。
-- 包含以下各项中的至少一个或多个——大写字母、小写字母、数字和标点符号。
-- 不要使用你的账户名或其账户名的任何变体。
-- 不要包含字典中的任何单词，包括外语言字典。
-- 不要包含姓名。
-- 不要使用电话号码或日期。
+* 使用六到八个字符。
+* 包含以下各项中的至少一个或多个——大写字母、小写字母、数字和标点符号。
+* 不要使用你的账户名或其账户名的任何变体。
+* 不要包含字典中的任何单词，包括外语字典。
+* 不要包含姓名。
+* 不要使用电话号码或日期。
 
 好的密码是难以猜测且容易记忆的。如果太难记忆，你可能需要将其写下来，这违背了设置密码的初衷。创建好密码的一种方法是使用喜欢的短语的首字母。例如，你可以使用短语“All for one! One for all!”组成密码 `Afo!Ofa!`。
 
@@ -7913,7 +7165,7 @@ MySQL 使用账户权限来指定谁可以做什么。任何使用有效账户�
 | ALL | 所有权限 |
 | ALTER | 可以修改表结构 |
 | CREATE | 可以创建新数据库或表 |
-| DELETE | 可以删除表中的 |
+| DELETE | 可以删除表中的数据 |
 | DROP | 可以删除数据库或表 |
 | FILE | 可以在服务器上读写文件 |
 | GRANT | 可以更改 MySQL 账户的权限 |
@@ -7927,9 +7179,7 @@ MySQL 使用账户权限来指定谁可以做什么。任何使用有效账户�
 
 ### 设置 MySQL 账户
 
-### Administering
-
-账户通过账户名和允许从该账户访问 MySQL 的计算机名称来标识。当你创建一个新账户时，你将其指定为 `accountname@hostname.`。你可以在创建账户时指定密码，也可以在稍后添加密码。你可以在创建账户时设置权限，也可以在稍后添加权限。
+账户通过账户名和允许从该账户访问 MySQL 的计算机名称来标识。当你创建一个新账户时，你将其指定为 `accountname@hostname`。你可以在创建账户时指定密码，也可以在稍后添加密码。你可以在创建账户时设置权限，也可以在稍后添加权限。
 
 所有账户信息存储在名为 `mysql` 的数据库中，该数据库在安装 MySQL 时自动创建。要添加新账户或更改任何账户信息，你必须使用对 `mysql` 数据库具有相应权限的账户。
 
@@ -7939,34 +7189,42 @@ MySQL 使用账户权限来指定谁可以做什么。任何使用有效账户�
 
 安装 MySQL 时，它会自动创建一个名为 `mysql` 的数据库。用于保护数据的信息都存储在这个数据库中，包括账户名、主机名、密码和权限。
 
-权限存储在列中。**host 表**：该表根据主机控制对数据库的访问。每个列名的命名格式为 `privilege_priv`，其中 `privilege` 是特定的权限。例如，包含 ALTER 权限的列命名为 `alter_priv`。
+权限存储在列中。
+
+#### host 表
+
+该表根据主机控制对数据库的访问。每个列名的命名格式为 `privilege_priv`，其中 `privilege` 是特定的权限。例如，包含 ALTER 权限的列命名为 `alter_priv`。
 
 每个权限列的值为 `Y` 或 `N`，表示是或否。因此，例如，在用户表中，MySQL 检查 host 表以查看该数据库是否存在该用户的记录。通过这种方式，你可以允许某些主机访问数据库，而不允许其他主机访问。
 
 例如，假设你有两个数据库：`db1` 和 `db2`。如果 `alter_priv` 账户字段包含 `Y`，则该账户可以执行 ALTER 查询。如果 `db1` 数据库包含敏感信息，你只想让某些人看到它。`db2` 数据库包含你想让所有人看到的信息。如果在 db 表中为 `db1` 有了一行主机字段为空的记录，你可以在 host 表中有针对 `db1` 的两行。一个...
 
+#### user 表
+
+`user` 表：此表存储权限。其中一行可以为所有从特定主机连接的用户授予适用于所有数据库和表的权限，同时它也为每个有效账户包含了一行，其中包含 `user`、`hostname` 和 `password` 列。另一行可以拒绝从任何其他主机连接的用户的访问权限。
+
+#### tables_priv 表
+
+`tables_priv` 表：此表存储适用于特定表的权限。MySQL 服务器会拒绝在该表中不存在的账户的连接。
+
+#### columns_priv 表
+
+`columns_priv` 表：此表存储适用于特定列的权限。
+
+#### db 表
 
 
 
+`db` table: 此表存储适用于特定数据库的权限。它包含一个对应数据库的行，为账户名和主机名授予权限。该账户必须在 `user` 表中存在才能授予权限。
 
-## user 表
-`user table`: 此表存储权限。其中一行可以为所有从特定主机连接的用户授予适用于所有数据库和表的权限，同时它也为每个有效账户包含了一行，其中包含 `user`、`hostname` 和 `password` 列。另一行可以拒绝从任何其他主机连接的用户的访问权限。
-
-## tables_priv 表
-`tables_priv` table: 此表存储适用于特定表的权限。MySQL 服务器会拒绝在该表中不存在的账户的连接。
-
-## columns_priv 表
-`columns_priv` table: 此表存储适用于特定列的权限。
-
-## db 表
-`db` table: 此表存储适用于特定数据库的权限。它包含一个对应数据库的行，为账户名和主机名授予权限。该账户必须在 user 表中存在才能授予权限。
-
-### 设置 MySQL 账户
+## 设置 MySQL 账户
 
 ### 识别当前存在的账户
+
 要查看账户信息，你可以执行 SQL 查询，使用 `mysql` 客户端或 `phpMyAdmin`（如本微型教程第 1 章关于发送 SQL 查询的节所述），或者你可以使用 `phpMyAdmin` 的功能。要查看你的数据库当前存在哪些账户，你需要一个拥有必要权限的账户。
 
 ### 使用 SQL 查询显示账户信息
+
 所有账户名都存储在名为 `mysql` 的数据库名为 `user` 的表中。要查看账户信息，你可以在名为 `mysql` 的数据库上执行以下查询：
 
 ```sql
@@ -7978,6 +7236,7 @@ SELECT * FROM user
 此消息意味着你的账户被允许选择 `mysql` 数据库。或者你可能会收到提示你没有 `SELECT` 权限的错误消息。尽管这个消息很烦人，但它表明公司有着良好的安全措施。不过，这也意味着你无法查看你的账户拥有哪些权限。你必须询问你的 MySQL 管理员，或者通过尝试查询并查看是否被允许执行这些查询来自行找出。
 
 ### 通过 phpMyAdmin 显示账户信息
+
 你可以通过 `phpMyAdmin` 显示账户列表。在 `phpMyAdmin` 主页上，点击 `Privileges`（权限）链接。会出现账户概述页面（如图 2-1 所示），显示一个显示账户信息的表格。图 2-1 中的页面显示了三个用户账户及其账户信息和权限。
 
 ![Image 2-1]
@@ -7985,9 +7244,11 @@ SELECT * FROM user
 ## 管理
 
 ## 添加账户
+
 通过 `phpMyAdmin` 访问 MySQL 的优方法是设置一个具有权限的账户。如果你使用 IT 部门或 Web 托管公司，它拥有的权限可能比需要的少。如果你需要创建一个账户，可以使用 `CREATE USER` 查询（在 5.0 版本中）或 `GRANT` 查询。
 
 ### 使用 SQL 查询创建账户
+
 要创建一个或多个用户，你可以使用 `CREATE USER` 查询：
 
 ```sql
@@ -8003,6 +7264,7 @@ GRANT ALL PRIVILEGES ON *.* TO 'accountname'@'hostname' IDENTIFIED BY 'password'
 账户被设置为 `password`。如果你以后需要更改密码，请使用 `SET PASSWORD` 查询。
 
 ### 通过 phpMyAdmin 创建账户
+
 你可以按照以下步骤通过 `phpMyAdmin` 创建新账户：
 
 1. 在 `phpMyAdmin` 页面上，点击 `Privileges`（权限）链接。
@@ -8014,43 +7276,47 @@ GRANT ALL PRIVILEGES ON *.* TO 'accountname'@'hostname' IDENTIFIED BY 'password'
 7. 填写所有所需信息后，点击页面右下角的 `Go` 按钮。
 
 会出现带有如下消息的页面：You have added a new user（你已添加新用户）。
+
 8. 点击页面顶部的 `Privileges` 链接。
 
 ## 添加和更改密码
+
 密码并不是一成不变的。你可以为现有账户添加或更改密码。与本节中的任何其他操作一样，你可以使用 SQL 查询或 `phpMyAdmin` 功能添加或更改密码。
 
 ### 使用 SQL 查询更改密码
+
 你可以使用 `SET PASSWORD` 查询添加或更改密码：
 
 ```sql
 SET PASSWORD FOR 'username'@'hostname' = PASSWORD('password');
 ```
 
-
-
-
-
 `SET PASSWORD FOR *username*@ *hostname* = PASSWORD('')` 使用 phpMyAdmin 更改密码
 
 你可以使用 phpMyAdmin 的功能为现有账户添加或更改密码。要更改密码，请按照以下步骤操作：
 
-1. **在 phpMyAdmin 主页上，点击 Privileges（权限）链接。**
+1. 在 phpMyAdmin 主页上，点击 Privileges（权限）链接。
+
 将打开 User Overview（用户概览）页面，列出所有当前账户（参见图 2-1）。
 
-2. **点击想要更改密码的账户所在表格行末尾的铅笔图标。**
+2. 点击想要更改密码的账户所在表格行末尾的铅笔图标。
+
 将出现该账户的 User 页面。账户名称显示在页面顶部。页面上会出现不同的部分，用于设置你可以更改的账户设置。
 
 ![Image 33](img/index-310_1.jpg)
 
-3. **滚动到 Change Password（更改密码）部分。**
+3. 滚动到 Change Password（更改密码）部分。
+
 你可以使用此区域的字段来更改密码，如图 2-2 所示。
 
-4. **选择首选选项。**
+4. 选择首选选项。
+
 选择“No Password”（无密码）或“Password”（密码）对应的单选按钮。如果你选择了 No Password，请直接跳转到第 6 步。
 
-5. **如果你在第 4 步选择了 Password，点击 Password 文本框并输入密码，然后点击 Re-type（再次输入）文本框输入相同的密码。**
+5. 如果你在第 4 步选择了 Password，点击 Password 文本框并输入密码，然后点击 Re-type（再次输入）文本框输入相同的密码。
 
-6. **点击 Change Password 部分底部橙色条右侧的 Go 按钮。**
+6. 点击 Change Password 部分底部橙色条右侧的 Go 按钮。
+
 相同的网页将重新出现，页面顶部显示以下消息：用户 `*username*`@`*host*` 的密码已成功更改。
 
 ## 第 2 章：管理 MySQL
@@ -8060,11 +7326,13 @@ SET PASSWORD FOR 'username'@'hostname' = PASSWORD('password');
 ### 设置 MySQL 账户
 
 ### 更改权限
+
 每个账户都有一组权限，规定了账户用户可以做什么不能做什么。你可以在创建账户时设置权限，也可以随时更改账户的权限。
 
 表 2-1 显示了你可以为账户设置的最有用的价值的权限。
 
 ### 使用 SQL 查询更改权限
+
 你可以通过发送以下查询来查看账户的当前权限：
 
 `SHOW GRANTS ON *accountname*@ *hostname*`
@@ -8078,10 +7346,13 @@ SET PASSWORD FOR 'username'@'hostname' = PASSWORD('password');
 你还可以使用 `GRANT` 查询创建新账户或更改密码。你需要填写以下信息：
 
 - `*privilege* (*columns*)`：你必须列出至少一个权限。你可以通过在权限后的括号中列出列名，将每个权限限制为一个列或多个列。如果你不列出列名，则权限将授予表（或表）中的所有列。你可以根据需要列出任意权限和列，并用逗号隔开。你可以在表 2-1 中查看出的出的权限。例如，一个 `GRANT` 查询可能开头如下：
+
 `GRANT select (firstName,lastName), update, insert (birthdate) ...`
 
 - `*tablename*`：授予权限的表（或表）名称（名称）。你需要包含至少一个表。你可以列出多个表并用逗号隔开。`*tablename*` 的可能值为：
+
     - `tablename`：当前数据库中名为 `*tablename` 的整个表。你可以使用星号 (`*`) 表示当前数据库中的所有表。如果你使用星号且未选择当前数据库，则权限将授予所有数据库中的所有表。
+
     - `databasename.tablename`：`*databasename.*` 中名为 `*tablename` 的整个表。你可以在数据库名或表名处使用星号 (`*`) 来表示所有数据库或表。使用 `*.*` 将授予所有数据库中所有表的权限。
 
 - `*accountname*@ *hostname`：如果账户已存在，则将授予其所指的权限。如果账户不存在，则将其添加。账户通过 `*accountname` 和 `*hostname` 配对来标识。如果存在一个具有指定账户名但主机名不同的账户，则不会更改现有账户，而是创建一个新账户。
@@ -8091,6 +7362,7 @@ SET PASSWORD FOR 'username'@'hostname' = PASSWORD('password');
 例如，为名为 `ProductCatalog` 的在线目录数据库的 PHP 脚本添加一个新账户的 `GRANT` 查询可能是：`GRANT select ON ProductCatalog.* TO phpuser@localhost IDENTIFIED BY ‘A41!14a!’`
 
 要移除权限，使用 `REVOKE` 查询。其通用格式为：
+
 `REVOKE *privilege* (*columns*) ON *tablename* FROM *accountname*@ *hostname`
 
 你需要填写适当的信息。你可以使用以下 `REVOKE` 查询移除账户的所有权限：
@@ -8098,22 +7370,27 @@ SET PASSWORD FOR 'username'@'hostname' = PASSWORD('password');
 `REVOKE all ON *.* FROM *accountname*@ *hostname*`
 
 ### 使用 phpMyAdmin 更改权限
+
 要查看账户的当前权限，点击 phpMyAdmin 主页上的 `Privileges` 链接。将出现 Account Overview 页面，列出所有账户及其权限。
 
 要更改账户的权限，请按照以下步骤操作：
 
-1. **点击想要更改权限的账户所在表格行末尾的铅笔图标。**
+1. 点击想要更改权限的账户所在表格行末尾的铅笔图标。
+
 将出现该账户的 User 页面。账户名称显示在页面顶部，下方 Global Setting（全局设置）部分。当前权限已勾选。
 
-2. **更改设置。**勾选想要添加的权限复选框，取消勾选想要移除的权限复选框。
+2. 更改设置。勾选想要添加的权限复选框，取消勾选想要移除的权限复选框。
 
-3. **点击部分底部橙色条右侧的 Go 按钮。**
+3. 点击部分底部橙色条右侧的 Go 按钮。
+
 相同的网页将重新出现，页面顶部显示以下消息：你已更新 `*username*`@`*host*` 的权限。
 
 ## 移除账户
+
 你可能想要移除账户。在大多数情况下，拥有无人使用的账户不会产生负面影响。但是，如果你认为某个账户已被破解，出于安全考虑可能可能移除它。
 
 ### 使用 SQL 查询移除账户
+
 要移除账户，可以使用 `DROP USER` 查询（在 MySQL 4.1.1 中引入），如下：
 
 `DROP USER *accountname*@ *hostname*, *accountname*@ *hostname*, ...`
@@ -8123,19 +7400,18 @@ SET PASSWORD FOR 'username'@'hostname' = PASSWORD('password');
 `DROP USER` 的行为随 MySQL 版本而变化。从 MySQL 5.0.2 开始，它删除账户以及所有相关的记录，包括授予账户特定数据库或表的记录。然而，在 MySQL 5.0.2 之前的版本中，`DROP USER` 只删除没有权限的账户。因此，在旧版本中，你必须移除账户的所有权限（包括数据库或表权限），才能删除该账户。
 
 ### 使用 phpMyAdmin 移除账户
+
 要移除一个或多个 MySQL 账户，请按照以下步骤操作：
 
-1. **在 phpMyAdmin 主页上，点击 Privileges 链接。**
+1. 在 phpMyAdmin 主页上，点击 Privileges 链接。
+
 打开 User Overview 页面，列出所有账户。
 
-2. **勾选想要移除的账户前面的复选框。**
+2. 勾选想要移除的账户前面的复选框。
 
-3. **滚动到 Remove Selected Users（移除所选用户）部分。**
+3. 滚动到 Remove Selected Users（移除所选用户）部分。
 
 ## 备份你的数据库
-
-
-
 
 4. 点击移除删除用户（Remove Selected Users）部分底部橙色条右侧的 Go（Go）按钮。
 
@@ -8176,10 +7452,13 @@ SET PASSWORD FOR 'username'@'hostname' = PASSWORD('password');
 1. 使用 `mysqldump` 备份你的数据库，请遵循以下步骤：
 2. 进入 `MySQL` 安装目录。例如，`cd /usr/local/mysql`。
 3. 输入以下命令：
+
 ```
 mysqldump -u root -p database_name > backup_file.sql
 ```
+
 在 `mysqldump -u root -p database_name > backup_file.sql` 中，进行以下替换：
+
 * `-u root`：指定用户 `root`。
 * `-p`：告诉程序提示密码。
 * `database_name`：你想要备份的数据库名称。
@@ -8190,8 +7469,6 @@ mysqldump -u root -p database_name > backup_file.sql
 ```
 mysql -u root -p database_name < backup_file.sql
 ```
-
-
 
 6. **如果“结构”（Structure）复选框以及结构部分顶部的四个复选框未被勾选，请选中它们。**
 
@@ -8233,6 +7510,8 @@ mysql -u root -p database_name < backup_file.sql
 
 你可以用存储在备份副本中的数据替换损坏的表。
 
+
+
 然而，在某些情况下，数据库可能会完全丢失。例如，如果存放数据库的计算机故障且无法修复，你当前的数据库就丢失了——但你的数据并没有永远消失。你可以用新计算机替换故障计算机，并从备份副本恢复数据库。
 
 你可以用存储在备份副本中的数据库替换当前的数据库表。备份副本包含了制作副本时数据的快照。当然，你不会获得备份副本创建之后对数据库所做的任何更改；你必须手动重新创建这些更改。
@@ -8248,15 +7527,21 @@ mysql -u root -p database_name < backup_file.sql
 首先，按照以下步骤编辑备份文件：
 
 1. **在文本编辑器中打开备份文件。**
+
 2. **找到显示“服务器版本”（Server Versions）的行。**
+
 3. **如果你想重建整个数据库，请在步骤 2 找到的行下方添加以下语句：**
+
 ```sql
 CREATE DATABASE IF NOT EXISTS *databasename*
 ```
+
 4. **在步骤 3 的行下方，添加一行以指定要将表添加到哪个数据库中：**
+
 ```sql
 USE *databasename*
 ```
+
 5. **检查重建表的语句块。**
 
 如果你不想重建某个表，请在每条重建该表的行开头添加 `--`（两个连字符）。这些连字符将这些行标记为注释。
@@ -8264,22 +7549,27 @@ USE *databasename*
 6. **检查每个表的 INSERT 语句行。**
 
 如果你不想向任何表添加数据，请注释掉执行 `INSERT` 数据的行。
+
 7. **保存编辑后的备份文件。**
 
-在备份文件包含你想要用于重建数据库或表（s）的语句后，你可以使用 `mysql` 客户端执行备份文件中的 SQL 语句。只需遵循以下步骤：
+在备份文件包含你想要用于重建数据库或表的语句后，你可以使用 `mysql` 客户端执行备份文件中的 SQL 语句。只需遵循以下步骤：
 
 1. **从命令行提示符，切换到 MySQL 安装目录下的 bin 子目录。**
 
 例如，你可能输入 `cd /usr/local/mysql` 或 `cd C:\Files\MySQL Server 5.0\bin`。
 
 2. **输入此命令（这将发送备份文件中的 SQL 查询）：**
+
 ```bash
 mysql -u *accountname* -p < *backupfilename*
 ```
+
 将 *accountname* 替换为具有 CREATE 权限的帐户。如果账户不需要密码，请省略 `-p`。如果你使用 `-p`，系统会提示输入密码。使用备份文件的完整路径和文件名。例如：
+
 ```bash
 mysql -u root -p < C:\Files\MySQL Server 5.0\bin\bak\ProductCatalog.bak
 ```
+
 恢复表可能需要一些时间。等待命令完成。如果发生问题，会显示错误信息。如果没有问题，没有任何输出。命令完成后，会出现提示符。
 
 你的数据库现在恢复到制作副本时的所有数据。如果数据在制作后发生了变化，你将丢失这些更改。例如，如果在备份后增加了更多数据，这些新数据不会被恢复。如果你知道创建备份后做了更改，可以手动进行操作。
@@ -8291,20 +7581,22 @@ mysql -u root -p < C:\Files\MySQL Server 5.0\bin\bak\ProductCatalog.bak
 1. **如果尚未选择数据库，请从数据库下拉列表中选择一个。**
 
 如果你要恢复的数据库不存在，请按照本微型书籍第 3 章所述创建一个空数据库。
+
 2. **点击主面板顶部的“导入”（Import）标签。**
 
 这些标签出现在 phpMyAdmin 主页或任何页面的顶部。打开导入页面。
+
 3. **在“导入”部分，点击“浏览”并导航到包含 SQL 语句的文件。**
 
 你选择的文件将通过浏览按钮插入字段。
+
 4. **滚动到“导入文件格式”（Format of Imported File）部分并选择 SQL。**
+
 5. **在“SQL 兼容模式”（SQL Compatibility Mode）下拉列表中选择正确的设置。**
 
 默认值是 None。如果你是从 MySQL 5.0 或更高版本创建的文件导入，None 是正确的设置。你可以从旧版本 MySQL 创建的文件或其他少数其他来源导入文件。如果你是从这些来源之一导入文件，请从下拉列表中选择正确的来源。
+
 6. **点击“执行”（Go）按钮。**
-
-
-
 
 文件已导入。导入可能需要一些时间，取决于正在还原的数据库的大小。完成后，导入页面将重新出现，并在顶部显示此类消息：导入已完成，已执行 9 次查询。
 
@@ -8312,25 +7604,22 @@ mysql -u root -p < C:\Files\MySQL Server 5.0\bin\bak\ProductCatalog.bak
 
 在某些情况下，你可能不想完全按照要还原的文件中所定义方式来还原数据库。你可能不想还原所有的表或所有数据。你可以编辑你正在还原的文件，以便 `Book III` 能够按照你想要的方式还原数据。例如，你可以注释掉 `Chapter 2` 中某个你不需要还原的表的结构和数据 SQL 语句。若要注释掉任何 SQL 语句，请在行的开头添加 `--`（两个连字符）。
 
-## MySQL
-
-## 升级 MySQL
+## MySQL 升级
 
 `MySQL` 的新版本会定期发布，你可以从一个 `MySQL` 版本升级到较新版本。你可以在 `MySQL` 手册中找到升级信息，地址为 `http://dev.mysql.com/doc/refman/5.0/en/upgrade.html`。
 
 然而，升级时有一些特殊的考虑因素。作为预防措施，在升级之前，请备份当前的数据库，包括 `mysql` 数据库中的 `GRANT` 表。
 
-`MySQL` 建议不要跳版本升级。如果你想从一个版本升级到高出一个版本以上的版本（例如从 `MySQL 4.0` 升级到 `MySQL 5.0`），你应该先升级到下一个版本。在该版本运行正常后，你可以升级到下一个版本，以此此类推。换句话说，先从 `4.0` 升级到 `4.1`，然后从 `4.1` 升级到 `5.0`。
+`MySQL` 建议不要跳版本升级。如果你想从一个版本升级到高出一个版本以上的版本（例如从 `MySQL 4.0` 升级到 `MySQL 5.0`），你应该先升级到下一个版本。在该版本运行正常后，你可以升级到下一个版本，以此类推。换句话说，先从 `4.0` 升级到 `4.1`，然后从 `4.1` 升级到 `5.0`。
 
-偶尔，`MySQL` 的新版本会引入不兼容的更改。某些版本引入了对 `GRANT` 表结构的更改。例如，`MySQL 4.1` 了密码加密方法，要求在 `GRANT` 表中使用更长的密码字段。
+偶尔，`MySQL` 的新版本会引入不兼容的更改。某些版本引入了对 `GRANT` 表结构的更改。例如，`MySQL 4.1` 更改了密码加密方法，要求在 `GRANT` 表中使用更长的密码字段。
 
 升级到新版本后，你应该运行 `mysql_upgrade` 脚本。它会修复你的文件并在必要时升级系统表。在 `MySQL` `5.0.19` 之前的版本中，`mysql_upgrade` 脚本不在 Windows 上运行；它仅在 Unix 上运行。在 Windows 上，对于 `5.0.19` 之前的 `MySQL` 版本，你可以运行名为 `mysql_fix_privileges_tables` 的脚本。该脚本会升级系统表，但不会执行 `mysql_upgrade` 执行的完整表检查和修复。
 
-## 第三章：设计与构建
-
-### 数据库
+## 第三章：设计与构建数据库
 
 ### 本章
+
 * 规划你的数据库
 * 设计示例数据库
 * 构建你的数据库
@@ -8343,19 +7632,23 @@ mysql -u root -p < C:\Files\MySQL Server 5.0\bin\bak\ProductCatalog.bak
 构建完成后，你就拥有了一个实用的空数据库，等待你填充数据。你可以在本微型书籍的第 4 章中阅读有关添加和检索数据的知识。
 
 ## 设计数据库
+
 设计数据库包括识别你需要的数据，并按照数据库软件要求的方式组织数据。
 
 ### 选择数据
+
 要设计数据库，你首先必须识别哪些信息属于其中。数据库必须包含网站实现其功能所需的数据。
 
 以下是几个例子：
-* 一个在线线目录需要一个包含产品信息的数据库。
-* 一个在线线订单应用程序需要一个可以存放客户信息和订单信息的数据库。
+
+* 一个在线目录需要一个包含产品信息的数据库。
+* 一个在线订单应用程序需要一个可以存放客户信息和订单信息的数据库。
 * 旅游网站需要一个包含目的地、预订、票价、时间表等信息的数据库。
 
 在许多情况下，你的应用程序可能包含一项从用户那里收集信息的任务。在网站上购物的客户必须提供他们的地址、电话号码、信用卡信息和其他数据以完成订单。这些信息必须至少保存到订单填写完毕。通常，网站会保留客户信息以方便未来的订单，这样客户在下一次下订单时就无需重新输入这些信息。这些信息还为运营网站的企业提供了营销机会，例如向客户发送营销优惠信息或时事通讯。
 
 客户数据库可能会收集以下客户信息：
+
 * 姓名
 * 地址
 * 电话号码
@@ -8364,14 +7657,15 @@ mysql -u root -p < C:\Files\MySQL Server 5.0\bin\bak\ProductCatalog.bak
 
 你必须平衡“收集所有你能想到的潜在有用信息的冲动”与“用户不愿提供个人信息”——以及他们对避免看起来过于耗时的表单的抵触之间的关系。
 
-一种折中方案是要求一些可选信息。不介意的用户可以输入这些信息，但反对的用户可以留空表单的相应。你也可以提供激励措施：表单越长，你激励用户填写它所需的激励措施就越强。一个短表单可能会提供一次赢得好莱坞之旅的抽奖活动。
+一种折中方案是要求一些可选信息。不介意的用户可以输入这些信息，但反对的用户可以留空表单的相应字段。你也可以提供激励措施：表单越长，你激励用户填写它所需的激励措施就越强。一个短表单可能会提供一次赢得好莱坞之旅的抽奖活动。
 
 花时间列出一份你需要存储在数据库中的信息的完整清单。虽然你可以在开发数据库后对数据库进行更改和添加信息，但从一开始就包含这些信息更容易，避免更改数据库的额外工作。此外，如果你在数据库在使用后再添加信息，早期用户的信息是不完整的。例如，如果你修改表单现在询问用户的年龄，那么已经填写表单的用户就没有年龄。
 
 ### 组织数据
+
 `MySQL` 是一个 `RDBMS`（关系型数据库管理系统），这意味着数据被组织成表。（有关 `MySQL` 的更多信息请参见本微型书籍的第一章。）
 
-RDBMS 表的组织方式与你熟悉的表相似——即行和列，如下表所示
+RDBMS 表的组织方式与你熟悉的表相似——即行和列，如下表所示：
 
 | 列 1 | 列 2 | 列 3 | 列 4 |
 | :--- | :--- | :--- | :--- |
@@ -8381,6 +7675,7 @@ RDBMS 表的组织方式与你熟悉的表相似——即行和列，如下表�
 | 行 4 | | | |
 
 特定行和列交叉的单个单元格被称为字段。每个表的核心是一个对象（事物），你想存储关于它的信息。以下是一些对象的例子：
+
 * 客户
 * 书籍
 * 产品
@@ -8395,57 +7690,65 @@ RDBMS 表的组织方式与你熟悉的表相似——即行和列，如下表�
 * 周
 
 ### 构建
+
 你为每个对象创建一个表。表名应使用描述性单词或术语清楚地标识其包含的对象，并遵循以下指南：
+
 * 名称必须是字符字符串，包含字母、数字、下划线或美元符号，但不包含空格。
 * 习惯上使用单数形式命名表。因此，客户表的名称可以是 `Customer`，而包含客户订单的表可以命名为 `CustomerOrder`。
-
-
-
-
-
-✦ 大小写在 Linux 和 Unix 上是有区别的，但在 Windows 上没有。`CustomerOrder` 和 `Customerorder` 对 Windows 来说是相同的——但对 Linux 或 Unix 却不是。
+* 大小写在 Linux 和 Unix 上是有区别的，但在 Windows 上没有。`CustomerOrder` 和 `Customerorder` 对 Windows 来说是相同的——但对 Linux 或 Unix 却不是。
 
 在数据库术语中，一个对象是一个 `entity`（实体），而实体拥有 `attributes`（属性）。在表中，每行代表一个 `entity`，而列则包含每个实体的 `attributes`。例如，在客户表中，每行包含单个客户的信息。列中包含的某些属性可能包括名、姓、电话号码和年龄。
 
 按照以下步骤将数据组织成表格：
 
 1. **为数据库命名。**
+
 为你的应用程序分配一个数据库名称。例如，你可能会将包含某个社区住户信息的数据库命名为 `HouseholdDirectory`。
 
 2. **识别对象。**
+
 查看你想要存储在数据库中的信息列表（如前面的节所述）。分析你的列表并识别出对象。例如，`HouseholdDirectory` 数据库可能需要存储以下内容：
-• 每个家庭成员的名字
-• 房屋地址
-• 电话号码
-• 每个家庭成员的年龄
-• 每个家庭成员最喜欢的早餐麦片
+
+* 每个家庭成员的名字
+* 房屋地址
+* 电话号码
+* 每个家庭成员的年龄
+* 每个家庭成员最喜欢的早餐麦片
 
 当你仔细分析此列表时，你会意识到你正在存储关于两个对象的信息：家庭和家庭成员。地址和电话号码通常针对家庭，但名字、年龄和最喜欢的麦片是针对每个特定家庭成员的。
 
 3. **为每个对象定义并命名表。**
-例如，`HouseholdDirectory` 数据库需要一个名为 `Household` 的表和一个名为 `HouseholdMember` 表。
+
+例如，`HouseholdDirectory` 数据库需要一个名为 `Household` 的表和一个名为 `HouseholdMember` 的表。
 
 4. **识别每个对象的属性。**
+
 分析你的信息列表，并识别你为每个对象需要存储的属性。将要存储的信息拆分为最小的合理单元。例如，在表中存储人的姓名时，你可以将姓名拆分为名和姓。这样做可以让你能够按姓进行排序，如果将名和姓放在一起，这样做将变得困难。你甚至可以将名字拆分为名、中间名和姓，尽管没有多少应用程序需要单独使用中间名。
 
 5. **为第 4 步中识别出的每个独立属性定义并命名列。**
+
 为每列给一个能清晰辨别该列中信息的名称。列名应该是一个单词，且没有空格。例如，你可能会有名为 `firstName` 和 `lastName` 的列，或者 `first_name` 和 `last_name`。
 
-MySQL 和 SQL 保留了一些单词供自身使用，你不能将这些单词用列名。这些单词目前用于 SQL 语句或预留供以后使用。你不能使用 `ADD`、`ALL`、`AND`、`CREATE`、`DROP`、`GROUP`、`ORDER`、`RETURN`、`SELECT`、`SET`、`TABLE`、`USE`、`WHERE` 以及更多单词作为列名。完整的保留列表请参阅 `www.mysql.com` 上的在线 MySQL 手册。
+`MySQL` 和 `SQL` 保留了一些单词供自身使用，你不能将这些单词用作列名。这些单词目前用于 SQL 语句或预留供以后使用。你不能使用 `ADD`、`ALL`、`AND`、`CREATE`、`DROP`、`GROUP`、`ORDER`、`RETURN`、`SELECT`、`SET`、`TABLE`、`USE`、`WHERE` 以及更多单词作为列名。完整的保留列表请参阅 `www.mysql.com` 上的在线 MySQL 手册。
 
 6. **识别主键。**
+
 表中的每行都需要一个唯一标识符。在设计表时，决定哪列存储唯一标识符，称为 `primary key`（主键）。在许多情况下，你会包含一个与另一个表的主键匹配的列。例如，在表 3-1 中，主键是 `cust_id`。
 
-7. **定义定义。**
+7. **定义默认值。**
+
 在输入数据时可以为列定义默认值。例如，如果不提供值，MySQL 将分配默认值。
 
 8. **识别需要数据的列。**
+
 你可以指定某些列允许为 `NULL`（空）。
 
-### 设计数据库
-设计良好的数据库将每条信息只存储在一个地方。存储在多个地方是低效的，而且如果你需要更改一处的信息但忘记更改另一处，就会产生问题。如果你发现自己在自己在几行中存储了相同的数据，你可能需要重新组织表格。例如，假设你正在存储关于书籍的数据，包括出版者的地址。当你输入数据时，你发现自己在许多行中输入相同的地址。更有效的方法是将书籍信息存储在一个表中，将出版社信息存储在另一个表中。你可以定义两个表：`Book` 和 `BookPublisher`。在 `Book` 表中，你会有 `title`、`author`、`pub_date` 和 `price` 列。在 `BookPublisher` 表中，你会有 `name`、`streetAddress` 和 `city` 等列。
+### 设计良好的数据库
+
+设计良好的数据库将每条信息只存储在一个地方。存储在多个地方是低效的，而且如果你需要更改一处的信息但忘记更改另一处，就会产生问题。如果你发现自己在几行中存储了相同的数据，你可能需要重新组织表格。例如，假设你正在存储关于书籍的数据，包括出版者的地址。当你输入数据时，你发现自己在许多行中输入相同的地址。更有效的方法是将书籍信息存储在一个表中，将出版社信息存储在另一个表中。你可以定义两个表：`Book` 和 `BookPublisher`。在 `Book` 表中，你会有 `title`、`author`、`pub_date` 和 `price` 列。在 `BookPublisher` 表中，你会有 `name`、`streetAddress` 和 `city` 等列。
 
 ### 创建表之间的关系
+
 数据库中的某些表是相关的。通常情况下，一个表中的某行与另一个表中的几行相关。你需要在一个表中有一列来存储与另一个表主键匹配的数据。需要具有两个相关表的数据库常见应用程序是客户订单应用程序。例如，一个表包含客户信息，如 `name`、`address` 和 `phone`。每个客户可以有从零到多个订单。你可以将订单信息存储在带有客户信息的表中，但每当客户下单时，就会创建一个新行，且每个新行都包含客户的所有信息。你可以更高效地将订单存储在一个单独表中，可能命名为 `CustomerOrder`。（你不能仅将表命名为 `Order`，因为那是保留字）。在 `CustomerOrder` 表中，你包含一个包含来自 `Customer` 表某行主键的列，这样订单就与 `Customer` 表中的正确行相关。这种关系如表 3-1 和表 3-2 所示。
 
 示例中的 `Customer` 表如表 3-1 所示。每个客户都有唯一的 `cust_id`。相关的 `CustomerOrder` 表如表 3-2。它具有与 `Customer` 表中相同的 `cust_id` 列。通过该列，`CustomerOrder` 表中的订单信息连接到 `Customer` 表中相关的客户姓名和电话号码。
@@ -8455,34 +7758,31 @@ MySQL 和 SQL 保留了一些单词供自身使用，你不能将这些单词用
 order_no | cust_id | item_name | cost
 ---|---|---|---
 87-222 | 27895 | T-Shirt | 20.00
+87-223 | 27895 | Shoes | 40.00
+87-224 | 12345 | Jeans | 35.50
+87-225 | 34521 | Jeans | 35.50
+87-226 | 27895 | Hat | 15.00
 ```
-
-
-
-
-
-| 87-223 | 27895 | Shoes | 40.00 |
-| 87-224 | 12345 | Jeans | 35.50 |
-| 87-225 | 34521 | Jeans | 35.50 |
-| 87-226 | 27895 | Hat | 15.00 |
 
 在此示例中，与 `Customer` 表和 `CustomerOrder` 表相关的列具有相同的名称。它们可以有不同的名称，只要这些列包含相同的数据即可。
 
 # 存储不同类型的数据
 
-MySQL 根据你告诉 MySQL 预期的信息类型以不同的格式存储信息。MySQL 允许在不同的方式中使用不同类型的数据。主要数据类型是字符数据、数值数据以及日期和时间数据。
+`MySQL` 根据你告诉 `MySQL` 预期的信息类型以不同的格式存储信息。`MySQL` 允许在不同的方式中使用不同类型的数据。主要数据类型是字符数据、数值数据以及日期和时间数据。
 
 ## 字符数据
 
-第三卷
-### 第 3 章
-
 最常见的数据类型是 `character` 数据（以字符字符串形式存储的数据），它只能在字符串中进行操作。你存储的大部分信息都是字符数据——例如，客户名称、地址、电话号码和宠物描述。你可以移动和打印字符数据。两个字符字符串可以组合在一起（拼接），可以从较长的字符串中选择子字符串，并且可以用一个字符串替换另一个。
 
-字符数据可以以固定长度或变长长度格式存储：
+字符数据可以以固定长度或变长格式存储：
 
-*   **固定长度格式**：在这种格式下，MySQL 为数据预留了固定空间。如果数据比固定长度长，则只存储符合条件的字符——末尾剩余的字符不会被存储。如果字符串比固定长度短，则多出的空间将留空并浪费。
-*   **变长长度格式**：在这种格式下，MySQL 将字符串存储在与字符串长度相同的字段中。你指定一个字符串长度，但如果字符串本身比指定的长度短，MySQL 只使用所需的空间，而不是将额外的空间留空。如果字符串比指定的空间长，则多出的字符不会被存储。
+* **固定长度格式**：在这种格式下，`MySQL` 为数据预留了固定空间。如果数据比固定长度长，则只存储符合条件的字符——末尾剩余的字符不会被存储。如果字符串比固定长度短，则多出的空间将留空并浪费。
+
+
+
+## 变长长度格式
+
+在这种格式下，MySQL 将字符串存储在与字符串长度相同的字段中。你指定一个字符串长度，但如果字符串本身比指定的长度短，MySQL 只使用所需的空间，而不是将额外的空间留空。如果字符串比指定的空间长，则多出的字符不会被存储。
 
 如果字符字符串的长度变化很小，请使用固定长度格式。
 
@@ -8490,9 +7790,9 @@ MySQL 根据你告诉 MySQL 预期的信息类型以不同的格式存储信息�
 
 ## 数值数据
 
-另一种常见的数据类型是 `numerical` 数据——以数字形式存储的数据。你可以存储小数（例如 10.5, 2.34567, 23456.7）以及整数（例如 1, 2, 248）。当你将数据存储为数字时，你可以在数值运算中使用该数据，例如加法、减法和平方。然而，如果你不计划将数据用于数值运算，你应该将其字符字符串存储，因为程序员将将其作为字符字符串使用。不需要转换。例如，你可能不需要相加用户电话号码中的数字，因此将电话号码存储为字符字符串。
+另一种常见的数据类型是 `numerical` 数据——以数字形式存储的数据。你可以存储小数（例如 10.5, 2.34567, 23456.7）以及整数（例如 1, 2, 248）。当你将数据存储为数字时，你可以在数值运算中使用该数据，例如加法、减法和平方。然而，如果你不计划将数据用于数值运算，你应该将其作为字符字符串存储，因为程序员将其作为字符字符串使用，不需要转换。例如，你可能不需要相加用户电话号码中的数字，因此将电话号码存储为字符字符串。
 
-MySQL 存储正数和负数，但你可以告诉 MySQL 只存储正数。如果你的数据永远为负数，请将数据存储为 `unsigned`（数字前不带 + 或 – 号）。例如，城市人口或文档的页数永远不会为负。
+MySQL 存储正数和负数，但你可以告诉 MySQL 只存储正数。如果你的数据永远为正数，请将数据存储为 `unsigned`（数字前不带 + 或 – 号）。例如，城市人口或文档的页数永远不会为负。
 
 MySQL 提供了一种特定的数值列类型，称为 `auto-increment column`（自增列）。如果没有提供特定数字，该类型的列会自动填充顺序数字。例如，当添加一个表行并在自增列中输入 5 时，下一行的该列将自动分配为 6，除非指定了不同的数字。当你需要唯一数字时（例如产品号或订单号），你可能会发现自增列非常实用。
 
@@ -8518,20 +7818,21 @@ MySQL 提供了一种特定的数值列类型，称为 `auto-increment column`�
 | `INT(length)` | 整数，范围为 –2147483648 到 2147483647。 |
 | `INT UNSIGNED` | 整数，范围为 0 到 4294967295。 |
 | `BIGINT` | 大整数。符号范围为 –9223372036854775808 到 9223372036854775807。 |
-| `DECIMAL(length, dec)` | 十进制，其中 `length` 是用于显示数字的字符数，`dec` 是允许的小位数。例如，12.34 的 `length` 为 5，`dec` 为 2。 |
+| `DECIMAL(length, dec)` | 十进制，其中 `length` 是用于显示数字的字符数，`dec` 是允许的小数位数。例如，12.34 的 `length` 为 5，`dec` 为 2。 |
 | `DATE` | 带有年、月、日的日期值。显示格式为 YYYY-MM-DD（例如 2008-04-03）。 |
 | `TIME` | 带有时、分、秒的时间值。显示格式为 HH:MM:SS。 |
 | `DATETIME` | 日期和时间存储在一起。显示格式为 YYYY-MM-DD HH:MM:SS。 |
 | `ENUM("val1", "val2"...)` | 只可以存储列出的值。最多可以列出 65535 个值。 |
 | `SERIAL` | `BIGINT UNSIGNED NOT NULL AUTO_INCREMENT` 的快捷名称。 |
 
-MySQL 允许许多不在表 3-3 中的数据类型，但你可能并不不需要。有关可用数据类型的描述，请参阅 MySQL 在线手册：http://dev.mysql.com/doc/refman/5.0/en/data-types.html。
+MySQL 允许许多不在表 3-3 中的数据类型，但你可能并不需要。有关可用数据类型的描述，请参阅 MySQL 在线手册：`http://dev.mysql.com/doc/refman/5.0/en/data-types.html`。
 
 # 设计示例数据库
 
-在本节中，我们设计一个包含订单信息的示例数据库。我们将在本章以及本本书第 4 章中使用该数据库来展示如何构建和使用数据库。
+在本节中，我们设计一个包含订单信息的示例数据库。我们将在本章以及本书第 4 章中使用该数据库来展示如何构建和使用数据库。
 
 创建你想为每个客户存储的以下信息列表：
+
 * 姓名
 * 地址
 * 电话号码
@@ -8539,25 +7840,27 @@ MySQL 允许许多不在表 3-3 中的数据类型，但你可能并不不需要
 * 电子邮件地址
 
 此外，你需要在客户下单时收集产品信息。对于每个订单，你需要收集以下信息：
+
 * 下单日期
-* 订单中每个项目的的产品信息
+* 订单中每个项目的产品信息
 
 在此示例中，产品是 T 恤。因此，对于每个项目你需要以下信息：
+
 * 识别特定产品的编号（例如目录号）
 * 尺码
 * 价格
 * 颜色
 
-
-
-
 你通过遵循本章早期“组织数据”部分介绍的步骤来设计数据库：
 
 1. **命名你的数据库。**
-订单信息数据库命名为 `CustomerOrderInformation`。*
+
+订单信息数据库命名为 `CustomerOrderInformation`。
 
 2. **识别对象。**
+
 信息列表如下：
+
 * 客户名称
 * 客户地址
 * 电话号码
@@ -8572,12 +7875,15 @@ MySQL 允许许多不在表 3-3 中的数据类型，但你可能并不不需要
 前六项信息属于客户，因此对象是 `Customer`。订单日期属于订单，因此另一个对象是 `CustomerOrder`。剩余的信息属于订单中的每个项目，因此对象是 `OrderItem`。
 
 3. **为每个对象定义并命名表。**
-`CustomerOrderInformation`数据库需要一个名为 `Customer` 的表。
-`CustomerOrderInformation`数据库需要一个名为 `CustomerOrder` 的表。
-`CustomerOrderInformation`数据库需要一个名为 `OrderItem` 的表。
+
+`CustomerOrderInformation` 数据库需要一个名为 `Customer` 的表。
+`CustomerOrderInformation` 数据库需要一个名为 `CustomerOrder` 的表。
+`CustomerOrderInformation` 数据库需要一个名为 `OrderItem` 的表。
 
 4. **识别每个对象的属性。**
+
 详细查看信息列表：
+
 * **ID：** 一个属性（每个客户的 ID）。
 * **名称：** 两个属性（名字和姓）。
 * **地址：** 四个属性（街道地址、城市、州和邮编）。
@@ -8591,7 +7897,9 @@ MySQL 允许许多不在表 3-3 中的数据类型，但你可能并不不需要
 * **价格：** 一个属性。
 
 5. **定义并命名列。**
+
 `Customer` 表每个客户有一行，列如下：
+
 * `customerID`
 * `firstName`
 * `lastName`
@@ -8603,11 +7911,13 @@ MySQL 允许许多不在表 3-3 中的数据类型，但你可能并不不需要
 * `phone`
 
 `CustomerOrder` 表每个订单有一行，列如下：
+
 * `CustomerID`：此列链接到 `Customer` 表。该值在 `Customer` 表中是唯一的，但在表中不是唯一的。
 * `orderID`
 * `orderDate`
 
 `OrderItem` 表订单中的每个项目有一行，列包括：
+
 * `catalogID`
 * `orderID`：此列链接到 `CustomerOrder` 表。该值在 `CustomerOrder` 表中是唯一的，但在表中不是唯一的。
 * `size`
@@ -8615,29 +7925,37 @@ MySQL 允许许多不在表 3-3 中的数据类型，但你可能并不不需要
 * `price`
 
 6. **识别主键。**
+
 `Customer` 表的主键是 `customerID`。因此，`customerID` 必须是唯一的。`CustomerOrder` 表的主键是 `orderID`。`OrderItem` 表的主键是 `orderID` 和 `catalogID`。
 
 7. **定义默认值。**
+
 任何表都没有定义默认值。
 
 8. **识别强制列。**
+
 以下列永远不允许为空：
+
 * `customerID`
 * `orderID`
 * `catalogID`
+
 这些是主键列。在表中不允许缺少这些值的行。
 
 9. **决定存储每个属性的数据类型。**
+
 * **数值：** `CustomerID` 和 `orderID` 是数值类型。
 * **日期：** `OrderDate` 是日期类型。
 * **字符：** 所有剩余字段都是字符类型。
 
 ### 记录你的设计
-你可能花费了大量时间为你的数据库做设计决策。在此时，这些决策已经牢牢固定在你的脑海中。你可能认为不会忘记。但假设发生了危机；你有两个月没有回到这个项目。如果你没有记录最初做出的决策，你就必须重新分析数据并做出所有的设计决策。*现在就写下来。*
 
-记录表的结构、列名以及所有设计决策。你的文档应该以表格格式描述每个表，每个列一行，每个设计决策一列。例如，你的列应该是列名、数据类型和描述。名为 `CustomerOrder Information` 的数据库示例设计中的三个表记录在表 3-4、表 3-5 和表 3-6 中。
+你可能花费了大量时间为你的数据库做设计决策。在此时，这些决策已经牢牢固定在你的脑海中。你可能认为不会忘记。但假设发生了危机；你有两个月没有回到这个项目。如果你没有记录最初做出的决策，你就必须重新分析数据并做出所有的设计决策。**现在就写下来。**
+
+记录表的结构、列名以及所有设计决策。你的文档应该以表格格式描述每个表，每个列一行，每个设计决策一列。例如，你的列应该是列名、数据类型和描述。名为 `CustomerOrderInformation` 的数据库示例设计中的三个表记录在表 3-4、表 3-5 和表 3-6 中。
 
 ### 表 3-4：Customer 表
+
 | 列名 | 类型 | 描述 |
 | :--- | :--- | :--- |
 | `customerID` | `SERIAL` | 客户唯一 ID（主键） |
@@ -8652,6 +7970,7 @@ MySQL 允许许多不在表 3-3 中的数据类型，但你可能并不不需要
 | `phone` | `CHAR(15)` | 客户电话号码 |
 
 #### 表 3-5：CustomerOrder 表
+
 | 列名 | 类型 | 描述 |
 | :--- | :--- | :--- |
 | `orderID` | `SERIAL` | 用户的唯一 ID（主键） |
@@ -8659,6 +7978,7 @@ MySQL 允许许多不在表 3-3 中的数据类型，但你可能并不不需要
 | `orderDate` | `DATETIME` | 订单下单日期时间 |
 
 ### 表 3-6：OrderItem 表
+
 | 列名 | 类型 | 描述 |
 | :--- | :--- | :--- |
 | `catalogID` | `VARCHAR(15)` | 产品编号（主键） |
@@ -8667,9 +7987,7 @@ MySQL 允许许多不在表 3-3 中的数据类型，但你可能并不不需要
 | `size` | `VARCHAR(10)` | 项目尺寸 |
 | `price` | `DECIMAL(9,2)` | 项目价格 |
 
-
-
-在此查询中，将 `databasename` 替换为你为数据库命名的名称。例如，要创建本章设计的示例数据库，请以下 SQL 语句：
+在此查询中，将 `databasename` 替换为你为数据库命名的名称。例如，要创建本章设计的示例数据库，请使用以下 SQL 语句：
 
 ```sql
 CREATE DATABASE CustomerOrderInformation
@@ -8703,7 +8021,7 @@ CREATE DATABASE IF NOT EXISTS CustomerOrderInformation
 DROP DATABASE databasename
 ```
 
-请谨慎使用 `DROP`，因为它是不可逆的。删除数据库后，该数据库将永久消失。其中的任何数据也会之消失。
+请谨慎使用 `DROP`，因为它是不可逆的。删除数据库后，该数据库将永久消失。其中的任何数据也会随之消失。
 
 如果数据库不存在，将返回错误信息。你可以通过以下查询防止错误信息：
 
@@ -8723,7 +8041,7 @@ DROP DATABASE IF EXISTS databasename
 
 会出现一个页面，顶部有以下语句：Database `databasename` has been created。页面的一个部分显示了所使用的 SQL 查询。SQL 查询部分下方，页面显示消息：`No tables found in database.`（数据库中未找到表）。该消息下方有字段，你可以使用它们立即创建表。创建表的细节将在本章稍后的“向数据库添加表”章节中讨论。
 
-（注：此处由于原文逻辑略有跳调，已按原文逻辑完整翻译）
+（注：此处由于原文逻辑略有跳跃，已按原文逻辑完整翻译）
 
 ## 向数据库添加表
 
@@ -8772,6 +8090,7 @@ PRIMARY KEY(columnname)
 列表 3-1 显示了用于创建 `CustomerOrderInformation` 数据库中的 `Customer` 表的 `CREATE TABLE` 查询。如果你愿意，可以单行输入此查询。MySQL 不在乎你使用多少行。列表 3-1 这种易读的格式也有助于你发现拼写错误。
 
 列表 3-1：创建表的 SQL 查询
+
 ```sql
 CREATE TABLE Customer (
 CustomerID SERIAL,
@@ -8790,12 +8109,9 @@ PRIMARY KEY(customer)
 
 记住不要在列名中使用任何 MySQL 保留字，正如我们在本章较早的“组织数据”部分讨论的那样。如果你在列名中使用保留字，MySQL 会给你一个类似下所示错误信息：
 
-```
+
+
 You have an error in your SQL syntax near ‘order var(20))’ at line 1
-```
-
-
-
 
 此错误消息显示了它不接受的列定义以及发现该错误定义的行。然而，该消息并没有告诉你问题究竟是什么。你的 SQL 语法中被它引用的错误是将 MySQL 保留字 `order` 用作了列名。
 
@@ -8805,11 +8121,11 @@ You have an error in your SQL syntax near ‘order var(20))’ at line 1
 CREATE TABLE IF NOT EXISTS tablename
 ```
 
-## 第三卷
+# 第三卷
 
 如果表不存在，该查询将创建它。如果表已经存在，`Chapter 3` 查询不会创建它，但也不会返回错误消息。
 
-### 构建数据库
+## 构建数据库
 
 ### 设计
 
@@ -8836,35 +8152,30 @@ EXPLAIN tablename
 
 要使用 phpMyAdmin 创建表，请按照以下步骤操作：
 
-1. **从数据库下拉列表中选择一个数据库。** 打开数据库页面。
-2. **定位到数据库 `databasename` 上的 Create New Table（创建新表）部分。**
-3. **在 Name（名称）字段中输入新表的名称。**
-4. **在 Number of Fields（字段数量）字段中输入新表所需的字段数量。**
-5. **点击 Go 按钮.** 打开一个页面，你可以在其中定义所有字段，如图 3-1 所示。
-6. **逐个定义所有字段。** 每个字段都在表的一行中。对每个字段执行以下操作：
+1.  **从数据库下拉列表中选择一个数据库。** 打开数据库页面。
+2.  **定位到数据库 `databasename` 上的 Create New Table（创建新表）部分。**
+3.  **在 Name（名称）字段中输入新表的名称。**
+4.  **在 Number of Fields（字段数量）字段中输入新表所需的字段数量。**
+5.  **点击 Go 按钮.** 打开一个页面，你可以在其中定义所有字段，如图 3-1 所示。
+6.  **逐个定义所有字段。** 每个字段都在表的一行中。对每个字段执行以下操作：
     *   在 Field（字段）列中输入字段名称。
     *   在 Type（类型）列的下拉列表中选择日期类型。
     *   如果数据类型（如 `VARCHAR`）需要长度，在 Length（长度）列中输入数字。
     *   在 Null（空）列的下拉列表中选择 `NULL` 或 `NOT NULL`。
     *   如果你想设置默认值，在 Default（默认）列中输入你想使用的默认值。
     *   如果该字段是主键，选择列标题带有密钥图标的第一个单选按钮。
-7. **点击位于最后一个表定义行下方的 Save（保存）按钮。** 打开表页面，顶部显示如下消息：Table `databasename`.`tablename` 已创建。该页面还显示了用于创建该表的 SQL 查询。在此查询下方，有一个部分提供了一个包含所有字段及其定义的表格。如果需要，你可以在此时间点添加或删除字段，或更改任何定义。
-8. **要添加更多表，点击左侧面板中的数据库名称。然后对每个表重复步骤 2 到 7。**
+7.  **点击位于最后一个表定义行下方的 Save（保存）按钮。** 打开表页面，顶部显示如下消息：Table `databasename`.`tablename` 已创建。该页面还显示了用于创建该表的 SQL 查询。在此查询下方，有一个部分提供了一个包含所有字段及其定义的表格。如果需要，你可以在此时间点添加或删除字段，或更改任何定义。
+8.  **要添加更多表，点击左侧面板中的数据库名称。然后对每个表重复步骤 2 到 7。**
 
 你也可以创建一个现有表副本的副本表。只需遵循以下步骤即可：
 
-1. **打开你想要复制的表的页面。** 点击左侧面板中的表名。如果未选择数据库，请从数据库下拉列表中选择正确的数据库 `Book III`。
-
-### 第 3 章
-
-你选择的表的表页面将打开。
-
-2. **点击页面顶部的 Operations（操作）。** 打开 Operations 页面。
-3. **向下滚动到 Copy Table to (`database.table`)（复制表到）部分。**
-4. **在 Copy 部分顶部的下拉列表中选择你想要创建表的数据库。**
-5. **在下拉列表右侧的字段中，输入你想给新表命名的名称。**
-6. **选择 Structure Only（仅结构）单选按钮。**
-7. **点击 Go 按钮。** 显示一个页面，顶部显示如下消息：Table `tablename` 已复制到 `tablename`。
+1.  **打开你想要复制的表的页面。** 点击左侧面板中的表名。如果未选择数据库，请从数据库下拉列表中选择正确的数据库 `Book III`。
+2.  **点击页面顶部的 Operations（操作）。** 打开 Operations 页面。
+3.  **向下滚动到 Copy Table to (`database.table`)（复制表到）部分。**
+4.  **在 Copy 部分顶部的下拉列表中选择你想要创建表的数据库。**
+5.  **在下拉列表右侧的字段中，输入你想给新表命名的名称。**
+6.  **选择 Structure Only（仅结构）单选按钮。**
+7.  **点击 Go 按钮。** 显示一个页面，顶部显示如下消息：Table `tablename` 已复制到 `tablename`。
 
 当创建新表的数据库页面打开状态时，新表将列在左侧面板中。当你点击新表名时，将打开表页面，显示与你复制的表中相同的字段。
 
@@ -8886,7 +8197,9 @@ DROP TABLE tablename
 
 显示包含你想删除的表的数据库页面。你可以通过从下拉列表中选择数据库或点击左侧面板中的数据库名称来显示该页面。数据库中包含的表显示在一个表格中。表格的第二列标记为 Action（操作），显示了你可以对表执行的操作的图标。最后一个图标是一个红色的 X。点击此图标即可删除表。
 
-## 更改数据库结构你的你的数据库并不是一成不变的。你可以更改任何表的名称；在任何表中添加、删除或重命名列；或者更改任何列的数据类型或其他属性。
+## 更改数据库结构
+
+你的数据库并不是一成不变的。你可以更改任何表的名称；在任何表中添加、删除或重命名列；或者更改任何列的数据类型或其他属性。
 
 更改数据库并不是罕见发生。你可能因为许多原因想要更改你的数据库。例如，假设你在一个包含公司所有员工姓名的数据库中将列 `lastName` 定义为 `VARCHAR(20)`。此时，20 个字符对于姓来说似乎足够了。但你刚刚收到了一份宣布新首席执行官 John Schwartzheimer-Losertman 的备忘录。哎，MySQL 将他的名字截断为前 20 个字母，Schwartzheimer-er —— 老板。
 
@@ -8894,13 +8207,13 @@ DROP TABLE tablename
 
 ### 使用 SQL 查询更改数据库结构
 
-你可以使用 `ALTER` 查询来更改数据库结构。该查询的基本格式为 `ALTER TABLE tablename,`，后跟指定的更改。表 3-7 显示了你可以做的更改。
+你可以使用 `ALTER` 查询来更改数据库结构。该查询的基本格式为 `ALTER TABLE tablename`，后跟指定的更改。表 3-7 显示了你可以做的更改。
 
 **表 3-7：使用 ALTER 查询可以做的更改**
 
-| 更改 |  |
+| 更改 | 说明 |
 | :--- | :--- |
-| `ADD columnname` | 添加一个列；`definition` 包含数据类型和可选定义。 |
+| `ADD columnname definition` | 添加一个列；`definition` 包含数据类型和可选定义。 |
 | `ALTER columnname SET DEFAULT value` | 更改列的默认值。 |
 | `ALTER columnname DROP DEFAULT` | 移除列的默认值。 |
 | `CHANGE columnname newcolumnname definition` | 更改列的定义并重命名列；`definition` 包含数据类型和可选定义。 |
@@ -8908,14 +8221,11 @@ DROP TABLE tablename
 | `MODIFY columnname definition` | 更改列的定义；`definition` 包含数据类型和可选定义。 |
 | `RENAME newtablename` | 重命名表。 |
 
-
-
+### 使用 phpMyAdmin 更改数据库结构
 
 你可以使用 phpMyAdmin 的功能更改数据库结构。首先，打开显示所有表字段及其定义的页面。你可以通过点击左侧面板中的表名来打开此页面。如果没有选择包含该表的数据库，你必须先从左侧面板的 `Database` 下拉列表中选择它进行选择。
 
 `Table` 页面显示所选表中的所有字段。每个字段显示在单独的一行中。每行的最后一列标记为 `Action`，包含多个可以对该字段执行的操作的图标。要更改该字段，请点击铅笔图标。
-
-### 更改数据库结构
 
 你可以一次更改多个字段。勾选想要更改的所有字段名称前的复选框。然后，点击表下方的铅笔图标。
 
@@ -8925,9 +8235,9 @@ DROP TABLE tablename
 
 当所有字段都按照你的要求设置完成后，点击表下方的 `Save` 按钮。`Table` 页面重新出现，并显示新的字段定义。
 
-## 第 4 章：使用数据库
+# 第 4 章：使用数据库
 
-### 本章内容
+## 本章内容
 
 - 在数据库中存储数据
 - 从数据库中查看和检索数据
@@ -8951,7 +8261,7 @@ DROP TABLE tablename
 
 你可以通过 `SQL` 查询或 `phpMyAdmin` 功能与数据库交互，正如本微型书籍第 1 章讨论的那样。本章解释了如何使用 `SQL` 查询或 `phpMyAdmin` 功能向你的数据库中添加、查看、检索、更新和删除信息。
 
-### 向数据库中添加信息
+## 向数据库中添加信息
 
 每个数据库都需要数据。例如，你可能想向数据库中添加数据，以便用户查看。或者，你可能想创建一个空数据库供用户输入数据。在哪种情况下，数据都会被添加到数据库中。
 
@@ -8973,30 +8283,25 @@ DROP TABLE tablename
 
 你使用 `INSERT` 查询向数据库添加新行。该查询告诉 MySQL 要向哪个表添加该行，以及字段的取值是什么。该查询的通用格式为：
 
-```
+```sql
 INSERT INTO tablename (columnname, columnname,...,columnname) VALUES (value, value,...,value)
 ```
 
 以下规则适用于 `INSERT` 查询：
 
-- ✦ **值的列出顺序必须与列名的列出顺序相同。** 值列表中的第一个值被插入到列列表中的第一个列中；值列表中的第二个值被插入到第二个列中；以此此类推。
+- ✦ **值的列出顺序必须与列名的列出顺序相同。** 值列表中的第一个值被插入到列列表中的第一个列中；值列表中的第二个值被插入到第二个列中；以此类推。
 - ✦ **允许列出部分列名列表。** 你不需要列出所有列。未列出的列将赋予其默认值，或者如果没有定义默认值，则留空。记住，任何定义为 `NOT NULL` 的列必须包含值，否则查询将失败。
 - ✦ **不要求列出列名。** 如果你正在为所有列输入值，则完全不需要列出列。如果没有列出列，MySQL 将按照它们在表中出现的顺序查找所有列的值。
 - ✦ **列列表和值列表的长度必须相同。** 如果列列表比值列表长或短，你会得到这样的错误消息：列数与值数不匹配（Column count）。
 
 以下 `INSERT` 查询向 `Customer` 表添加了一行：
 
+```sql
+INSERT INTO Customer (lastName, street, city, state, zip, email, phone, fax)
+VALUES ("Contrary", "1234 Garden St", "Garden", "NV", "88888", "maryc@hergarden.com", "(555) 555-5555", "")
 ```
-INSERT INTO Customer (lastName, street,city,state,zip,email,phone,fax)
-VALUES (“Contrary”,”1234 Garden St”,”Garden”,”NV”,”88888”,“maryc@hergarden.com”，“(555) 555-5555”,””)
-```
 
-注意 `firstName` 没有在列名列表中。`firstName` 字段没有输入值。如果 `firstName` 被定义为 `NOT NULL`，MySQL
-
-
-
-
-不会允许这样做。此外，如果 `firstName` 的定义包含默认值，则会输入默认值，但由于它没有包含，该字段将留空。请注意 `fax` 存储的值是一个空字符串。
+注意 `firstName` 没有在列名列表中。`firstName` 字段没有输入值。如果 `firstName` 被定义为 `NOT NULL`，MySQL 不会允许这样做。此外，如果 `firstName` 的定义包含默认值，则会输入默认值，但由于它没有包含，该字段将留空。请注意 `fax` 存储的值是一个空字符串。
 
 要查看你输入的数据并确保输入正确，请使用 SQL 查询从数据库中检索数据。我们将在本章后尾的“从数据库中检索信息”部分详细阐述这些 SQL 查询。简而言之，以下查询将检索 `Customer` 表中的所有数据：
 
@@ -9006,38 +8311,33 @@ SELECT * FROM Customer
 
 ![Image 37](img/index-351_1.jpg)
 
-# 向数据库添加信息
-
-## 使用 phpMyAdmin 添加数据行
+### 使用 phpMyAdmin 添加数据行
 
 你可以通过使用 phpMyAdmin 的功能并向字段中输入内容来添加行数据，具体如下：
 
-1. **打开你想要输入数据的数据库页面。**
-   如果数据库名称显示在左侧面板中，请点击数据库名称，或者从数据库下拉列表中选择它。数据库页面会显示数据库中所有表的列表，每行一个表，如图 4-1 所示。
-
-2. **点击你想要插入数据的表的“插入”图标。**
-   该行的第二列标记为 `Action`。第四个图标显示箭头指向某些数据，这就是 `Insert` 图标。
-   点击 `Insert` 图标时，会打开一个页面，你可以在字段中输入值，如图 4-2 所示。
+1.  **打开你想要输入数据的数据库页面。**
+    如果数据库名称显示在左侧面板中，请点击数据库名称，或者从数据库下拉列表中选择它。数据库页面会显示数据库中所有表的列表，每行一个表，如图 4-1 所示。
+2.  **点击你想要插入数据的表的“插入”图标。**
+    该行的第二列标记为 `Action`。第四个图标显示箭头指向某些数据，这就是 `Insert` 图标。
+    点击 `Insert` 图标时，会打开一个页面，你可以在字段中输入值，如图 4-2 所示。
 
 **图 4-1:** phpMyAdmin 数据库页面。
+
 ![Image 38](img/index-352_1.jpg)
 
 **图 4-2:** phpMyAdmin 数据输入页面。
 
-3. **在 Value 列的字段中输入值。**
-   如果你需要，可以同时输入行。第二行的字段显示在第一行字段之后（图 4-2 未显示）。你可以选择第二行字段上方的 `Ignore`（忽略）复选框仅输入一行。
-
-4. **在数据输入行下方的左侧下拉列表中，选择 Insert as New Row（插入新行）。****
-
-5. **在右侧下拉列表中，选择 Go Back to Previous Page（返回上一页）选项或 Insert Another New Row（插入另一行新行）选项。**
-
-6. **点击 Go（执行）按钮。**
-   如果你的数据输入存在错误，可以点击 `Reset`（重置）按钮将值置为空并重新输入数据。
+3.  **在 Value 列的字段中输入值。**
+    如果你需要，可以同时输入行。第二行的字段显示在第一行字段之后（图 4-2 未显示）。你可以选择第二行字段上方的 `Ignore`（忽略）复选框仅输入一行。
+4.  **在数据输入行下方的左侧下拉列表中，选择 Insert as New Row（插入新行）。**
+5.  **在右侧下拉列表中，选择 Go Back to Previous Page（返回上一页）选项或 Insert Another New Row（插入另一行新行）选项。**
+6.  **点击 Go（执行）按钮。**
+    如果你的数据输入存在错误，可以点击 `Reset`（重置）按钮将值置为空并重新输入数据。
 
 数据库页面再次显示，顶部有以下消息：`Inserted rows: 1`（插入行：1）。消息下方显示了执行插入行的 SQL 查询。查询下方再次列出了表。
 
-7. **如果你想查看表中的数据，点击表行 Action 列中的 Browse（浏览）图标。**
-   `Browse` 图标是第一个图标，显示项目列表（参考图 4-1）。当你点击 `Browse` 图标时，会打开一个页面显示表中所有数据的列表。
+7.  **如果你想查看表中的数据，点击表行 Action 列中的 Browse（浏览）图标。**
+    `Browse` 图标是第一个图标，显示项目列表（参考图 4-1）。当你点击 `Browse` 图标时，会打开一个页面显示表中所有数据的列表。
 
 ## 添加大量数据
 
@@ -9055,9 +8355,11 @@ Classic	Abbey Road	9.99
 
 你可以通过在包含字段分隔符但之间不留数据的情况下，在数据文件中留空某个字段。如果该字段未定义为 `NOT NULL`，则该字段为空。如果该字段被定义为 `NOT NULL`，则加载数据文件将失败并返回错误消息。
 
-## 使用 SQL 查询从文件添加数据
+### 使用 SQL 查询从文件添加数据
 
 假设你有大量数据需要输入且这些数据已在计算机文件中，你可以将数据从现有的计算机文件传输到数据库。由于数据库中的数据是按行和列组织的，因此读取的文本文件必须指明每列数据的开始和结束位置，以及一行的结束位置。
+
+
 
 为了指示列，使用特定字符分隔每列的数据。默认情况下，MySQL 寻找制表符（tab）来分隔字段。然而，如果制表符对你的数据文件不起作用，你可以选择不同的字符来分隔字段，并告诉 MySQL 使用不同制表符的字符来分隔字段。同样默认情况下，行尾是行的结束——尽管如果你需要，你可以选择一个字符来指示行尾。`Inventory` 表的数据文件可能如下：
 
@@ -9070,9 +8372,6 @@ Classic	Abbey Road	9.99
 字段之间带有制表符的数据文件是制表符分隔文件。另一种常见格式是逗号分隔文件，用逗号分隔字段。如果你的数据是其他格式，你需要将它转换为分隔文件。要将另一个软件文件中的数据转换为分隔文件，请查看该软件的手册，或咨询了解数据当前格式的本地专家。许多程序（如 Excel、Access 和 Oracle）都允许你将数据输出为分隔文件。对于文本文件，你可能可以使用编辑器或文字处理器的“查找替换”功能将其转换为分隔格式。对于真正棘手的文件，你可能需要程序员的帮助。
 
 你可以通过在包含字段分隔符但之间不留数据的情况下，在数据文件中留空某个字段。如果该字段未定义为 `NOT NULL`，则该字段为空。如果该字段被定义为 `NOT NULL`，则加载数据文件将失败并返回错误消息。
-
-
-
 
 要查看你加载的数据——以确保其正确性——请使用从数据库中检索数据的 SQL 查询。我们将在稍后的章节“查看数据库中的数据”中详细描述这些类型的 SQL 查询。
 
@@ -9087,24 +8386,31 @@ SELECT * FROM Customer
 你可以使用 phpMyAdmin 的导入功能将数据从文件加载到表中，步骤如下：
 
 1. **点击左侧面板中的表名打开表（Table）页面。**
+
 如果没有选择数据库，你需要从 `Database` 下拉列表中选择数据库。
 
 2. **点击 Import（导入）选项卡。**
+
 将打开 `Import` 页面。
 
 3. **在 File to import（要导入的文件）部分，点击 Browse（浏览）按钮并导航到数据文件。**
 
 4. **向下滚动到 Format of Imported File（导入文件格式）部分并点击 `CSV` 单选按钮。**
+
 你必须在 `Table` 页面点击 `Import` 选项卡才能看到此选项。如果你在 `Database` 页面点击 `Import` 选项卡，将无法看到 `CSV` 选项。
+
 当你点击 `CSV` 单选按钮时，会出现 `CSV` 相关选项。
 
 5. **如有必要，设置 CSV 选项值。**
+
 分隔字段的字符默认为 `;`（分号）。如果你的数据文件包含不同的分隔符（例如逗号），你可以对其进行更改。如果你的数据文件字段是用制表符（tab）分隔的，请输入 `\t`。
 
 6. **如有必要，输入列名列表。**
+
 如果数据文件中的字段顺序与数据库表相同，你可以留空列名。如果你只输入部分列，或者需要更改列的顺序，可以在 `columns` 字段中填写用逗号分隔的列名列表。
 
 7. **点击 Go（执行）按钮。**
+
 `Import` 页面将重新显示，并在顶部显示以下消息：`Import has been successfully finished, 3 queries executed.`。在消息下方，页面将显示用于插入数据的执行语句。
 
 ### 查看数据库中的数据
@@ -9118,45 +8424,45 @@ SELECT * FROM Customer
 ```sql
 SELECT * FROM tablename
 ```
+
 此查询获取表中的所有数据。你可以通过浏览输出结果发现表中有多少条记录，并对数据有一个大致的了解。
-
-**第三卷**
-
-## 第 4 章
-
-你可以通过以下查询精确查看表中到底有多少条记录：**使用数据库（Using the Database）**
-
-```sql
-SELECT COUNT(*) FROM tablename
-```
-此查询输出表中包含的记录数。
 
 #### 使用 phpMyAdmin 浏览数据
 
 你可以按照以下步骤使用 phpMyAdmin 查看表中的所有数据：
 
 1. **点击左侧面板中的表名打开表（Table）页面。**
+
 如果没有选择数据库，请点击数据库名称或从 `Database` 下拉列表中选择数据库。
+
 `Table` 页面会显示表中的字段列表及其定义。
 
 2. **勾选你想要浏览的所有字段名称前的复选框。**
-你可以点击字段列表下方的 `Check All（全选）链接一次性选择所有字段。
+
+你可以点击字段列表下方的 `Check All（全选）` 链接一次性选择所有字段。
 
 3. **点击 Browse（浏览）图标。**
+
 该图标是字段列表下方 `Check All/Uncheck All` 链接后显示的图标行中的第一个。该图标看起来像项目列表。
+
 结果页面显示并在顶部带有类似以下的消息：`Showing rows 0 - 12 (13 total, Query took 0.0019 sec).`。
+
 接下来，页面将显示用于获取结果的查询。
 
 4. **向下滚动到 Query Results（查询结果）部分。**
+
 数据库表中的数据将表格形式显示在网页上。
 
 5. **（可选）如果你愿意，可以更改数据列表的一些后续选项：**
-- 你可以更改每页显示的行数、从第几行开始列表以及/或字段的列表顺序（水平或垂直），然后点击 `Show（显示）按钮。页面将根据新参数重新显示。
-- 你可以更改表的排序顺序——升序或降序——并点击 `Go（执行）按钮。页面将按新的排序顺序重新显示。
+
+- 你可以更改每页显示的行数、从第几行开始列表以及/或字段的列表顺序（水平或垂直），然后点击 `Show（显示）` 按钮。页面将根据新参数重新显示。
+
+- 你可以更改表的排序顺序——升序或降序——并点击 `Go（执行）` 按钮。页面将按新的排序顺序重新显示。
 
 6. **要打印数据列表，请点击该部分顶部的 Print（打印）链接。**
 
 7. **要将数据以若干种格式之一存储在单独文件中，请点击 Export（导出）链接。**
+
 本微型教程的第 2 章介绍了 `Export` 功能。
 
 ### 从数据库中检索信息
@@ -9169,12 +8475,9 @@ SELECT COUNT(*) FROM tablename
 
 要检索特定信息，请列出包含你所需信息的列。例如：
 
-
-
-
 `SELECT columnname,columnname,columnname,... FROM tablename` 此查询用于从指定列的所有行中检索值。例如，以下查询将从存储在 `Customer` 表的 `lastName` 和 `firstName` 列中检索所有的姓氏和名字：
 
-```
+```sql
 SELECT lastName,firstName FROM Customer
 ```
 
@@ -9182,20 +8485,21 @@ SELECT lastName,firstName FROM Customer
 
 在选择列时，你可以对这些列执行数学操作。例如，你可以使用以下 `SELECT` 查询来将两个列相加：
 
-```
+```sql
 SELECT col1+col2 FROM tablename
 ```
 
 或者，你可以使用以下查询：
 
-```
+```sql
 SELECT price,price*1.08 FROM Inventory
 ```
 
 结果是原始价格以及加了 8% 销售税后的价格。
 
 你可以在选择列时更改该列的名称，如下所示：
-```
+
+```sql
 SELECT price,price*1.08 AS priceWithTax FROM Inventory
 ```
 
@@ -9207,14 +8511,15 @@ SELECT price,price*1.08 AS priceWithTax FROM Inventory
 
 | SQL 格式 | 信息描述 |
 | :--- | :--- |
-| `AVG(*columnname*)` | 返回 `columnname` 中所有值的平均值 |
-| `COUNT(*columnname*)` | 返回 `columnname` 不为空的行数 |
-| `MAX(*columnname*)` | 返回 `columnname` 中的最大值 |
-| `MIN(*columnname*)` | 返回 `columnname` 中的最小值 |
-| `SUM(*columnname*)` | 返回 `columnname` 中所有值的和 |
+| `AVG(columnname)` | 返回 `columnname` 中所有值的平均值 |
+| `COUNT(columnname)` | 返回 `columnname` 不为空的行数 |
+| `MAX(columnname)` | 返回 `columnname` 中的最大值 |
+| `MIN(columnname)` | 返回 `columnname` 中的最小值 |
+| `SUM(columnname)` | 返回 `columnname` 中所有值的和 |
 
 例如，查找 `Inventory` 表中最高价格的查询是：
-```
+
+```sql
 SELECT MAX(price) FROM Inventory
 ```
 
@@ -9227,13 +8532,17 @@ SELECT MAX(price) FROM Inventory
 在 `SELECT` 查询中，`ORDER BY` 和 `GROUP BY` 影响数据交付你的顺序：
 
 - `ORDER BY`：要进行排序，请在 `SELECT` 查询中添加此短语：`ORDER BY columnname`。数据按 `columnname` 升序排序。例如，如果 `columnname` 是 `lastName`，数据将按姓氏的字母顺序交付给你。你可以在列名之前添加单词 `DESC` 来进行降序排序。例如：
-```
+
+```sql
 SELECT * FROM Customers ORDER BY DESC
 ```
+
 - `GROUP BY`：要进行分组，请使用以下短语：`GROUP BY columnname`。具有相同 `columnname` 值的行将被分在一起。例如，使用此查询对具有相同 `Category` 值的行分组：
-```
+
+```sql
 SELECT * FROM Inventory GROUP BY Category
 ```
+
 你可以在同一个查询中使用 `GROUP BY` 和 `ORDER BY`。
 
 ### 从特定行检索数据
@@ -9241,7 +8550,9 @@ SELECT * FROM Inventory GROUP BY Category
 通常情况下，你不需要表中的所有信息。你只需要来自所选行的信息。有三个 SQL 单词经常用于指定以下内容的来源：
 
 - `WHERE`：允许你从具有特定特征的对象请求信息。例如，你可以请求住在加利福尼亚州的客户名称，或者你可以只列出属于特定类别的产品。
+
 - `LIMIT`：允许你限制检索信息的行数。例如，你可以只请求表中的前三行信息。
+
 - `DISTINCT`：允许你仅从相同行中的某一行请求信息，从而将响应限制为每个成员一条记录。这将回答“客户是否登录过？”，而不是“客户登录了多少次？”。
 
 ### 使用 WHERE 子句
@@ -9265,11 +8576,7 @@ SELECT * FROM Inventory GROUP BY Category
 | `column LIKE value` | `zip LIKE "9%"` | 选择所有邮政码以 9 开头的行（注意：`value` 可以包含通配符 `%` 匹配任意字符串和 `_` 匹配任意字符） |
 | `column NOT LIKE value` | `zip NOT LIKE "9%"` | 选择所有邮政码不以 9 开头的行 |
 
-
-
-
-
-# 从数据库检索信息
+### 从数据库检索信息
 
 ```sql
 SELECT lastName,firstName FROM Customer
@@ -9309,6 +8616,7 @@ SELECT DISTINCT Category FROM Product
 `SELECT` 查询中可以使用两个单词来合并来自两个或多个表的信息：
 
 - `UNION`：从一个或多个表中检索行，并将它们一个接一个存储在单个结果集中。例如，如果你的查询从一个表选取了 6 行，从另一张表选取了 5 行，结果将包含 11 行。
+
 - `JOIN`：将表并排组合，并从两个表中都检索信息。
 
 ### `UNION`
@@ -9318,6 +8626,9 @@ SELECT DISTINCT Category FROM Product
 你可以根据需要组合任意数量的 `SELECT` 查询。`SELECT` 查询可以包含任何有效的 `SELECT` 格式，包括 `WHERE` 子句、`LIMIT` 子句等。查询的规则是：
 
 - 所有 `SELECT` 查询必须选择相同数量的列。
+
+
+
 - 查询中选择的列必须包含相同类型的数据。
 
 结果集包含第一个查询的所有行，然后是第二个查询的所有行，依此类推。结果集中使用的列名是第一个 `SELECT` 查询中的列名。
@@ -9369,24 +8680,23 @@ SELECT columnnamelist FROM table1 RIGHT JOIN table2
 ON table1.col1=table2.col2
 ```
 
-
-
-
 在这三个查询中，`table1` 和 `table2` 是要连接的表。你可以连接两个以上的表。在这两个查询中，`col1` 和 `col2` 是用于匹配以连接表的列名。表是根据这些列中的数据进行匹配的。这两列的可以相同，也可以不同，但它们必须包含相同类型的数据。
 
 作为内连接和外连接的示例，请考虑一个包含两个表的服装目录。一张表是 `Product`，包含 `Name` 和 `Type` 两个列，存储以下数据：
 
-Name | Type
-T-shirt | Shirt
-Dress shirt | Shirt
-Jeans | Pants
+| Name | Type |
+| --- | --- |
+| T-shirt | Shirt |
+| Dress shirt | Shirt |
+| Jeans | Pants |
 
 第二张表是 `Color`，包含 `Name` 和 `Color` 两个列，存储以下数据：
 
-Name | Color
-T-shirt | white
-T-shirt | red
-Loafer | black
+| Name | Color |
+| --- | --- |
+| T-shirt | white |
+| T-shirt | red |
+| Loafer | black |
 
 ## 第三卷
 
@@ -9400,9 +8710,10 @@ SELECT * FROM Product,Color WHERE Product.Name = Color.Name
 
 你将得到包含四个列的结果表：`Name`（来自 `Product`）、`Type`、`Name`（来自 `Color`）和 `Color`。
 
-Name | Type | Name | Color
-T-shirt | Shirt | T-shirt | white
-T-shirt | Shirt | T-shirt | red
+| Name | Type | Name | Color |
+| --- | --- | --- | --- |
+| T-shirt | Shirt | T-shirt | white |
+| T-shirt | Shirt | T-shirt | red |
 
 注意，结果表中只出现了 `T-shirt` —— 因为在连接操作之前，只有 `T-shirt` 同时存在于两个原始表中。另一方面，假设你使用以下查询进行左外连接：
 
@@ -9412,11 +8723,12 @@ SELECT * FROM Product LEFT JOIN Color ON Product.Name=Color.Name
 
 你将得到以下结果表，具有相同的四个列——`Name`（来自 `Product`）、`Type`、`Name`（来自 `Color`）和 `Color`——但行不同：
 
-Name | Type | Name | Color
-T-shirt | Shirt | T-shirt | white
-T-shirt | Shirt | T-shirt | red
-Dress | Shirt | <NULL> | <NULL>
-Jeans | Pants | <NULL> | <NULL>
+| Name | Type | Name | Color |
+| --- | --- | --- | --- |
+| T-shirt | Shirt | T-shirt | white |
+| T-shirt | Shirt | T-shirt | red |
+| Dress | Shirt | <NULL> | <NULL> |
+| Jeans | Pants | <NULL> | <NULL> |
 
 此表有四行。它的前两行与内连接相同，但额外增加了两行——这些行于左侧的 `Product` 表中，但在 `Color` 表中不存在。注意，来自 `Color` 表的列在最后两行是空的。
 
@@ -9428,10 +8740,11 @@ SELECT * FROM Product RIGHT JOIN Color ON Product.petName=Color.Name
 
 你将得到以下结果表，具有相同的四个列，但行仍然不同：
 
-petName | petType | petName | petColor
-T-Shirt | Shirt | T-shirt | white
-T-shirt | Shirt | T-shirt | red
-<NULL> | <NULL> | Loafers | Black
+| petName | petType | petName | petColor |
+| --- | --- | --- | --- |
+| T-Shirt | Shirt | T-shirt | white |
+| T-shirt | Shirt | T-shirt | red |
+| <NULL> | <NULL> | Loafers | Black |
 
 注意，这些结果包含了右侧 `Color` 表的所有行，但不包含 `Product` 表的。注意 `Product` 表列中的空白，因为它没有 `Loafers` 这一行。
 
@@ -9475,18 +8788,18 @@ WHERE lastName="Contrary"
 在 phpMyAdmin 中，你可以通过显示信息并直接修改来更新信息，如下：
 
 1. **点击左侧面板中的表名打开表页面。**
+
    如果未选择包含表的数据库，请点击数据库名称或从数据库下拉列表中选择它。表页面将打开，显示表中的字段列表。
 
 2. **点击页面顶部的浏览（Browse）图标。**
+
    表中的所有数据都列在一个行列结构的表格中。
 
 3. **点击你想更新的行的更改（Change）图标。**
+
    更改图标看起来像一支铅笔，出现在行中复选框之后。
 
-
-
-
-✦ **表数据：** 点击页面顶部的“清空（Empty)”选项卡删除表中的所有数据。
+✦ **表数据：** 点击页面顶部的“清空（Empty）”选项卡删除表中的所有数据。
 
 ## 第三卷
 
@@ -9494,15 +8807,15 @@ WHERE lastName="Contrary"
 
 ✦ **字段：** 点击字段行中的“删除（Drop）”图标删除字段。“删除使用数据库（Using the Database）”图标是位于字段行末尾“操作（Action）”列图标行末端的大红色 X。此操作将从表中删除该列，以及该列中的所有数据。
 
-`phpMyAdmin` 中的“浏览（Browse）”页面列出了表中的所有数据。你可以通过点击表页面中的“浏览（Browse)”链接来显示浏览页面。从该页面，你可以按照以下方式删除表或表中的任何行数据：
+`phpMyAdmin` 中的“浏览（Browse）”页面列出了表中的所有数据。你可以通过点击表页面中的“浏览（Browse）”链接来显示浏览页面。从该页面，你可以按照以下方式删除表或表中的任何行数据：
 
-✦ **表：** 点击页面顶部的“删除（Drop)”选项卡删除整个表。
+✦ **表：** 点击页面顶部的“删除（Drop）”选项卡删除整个表。
 
-✦ **表数据：** 点击页面顶部的“清空（Empty)”选项卡删除表中的所有数据。
+✦ **表数据：** 点击页面顶部的“清空（Empty）”选项卡删除表中的所有数据。
 
 ✦ **行：** 点击数据行中的“删除（Drop）”图标删除该行。删除图标是位于数据行开头附近的大红色 X。
 
-当你在 `phpMyAdmin` 的大多数地方点击“删除（Drop)”链接或图标时，会弹出一个警告窗口，确认你确实想要删除这些数据。
+当你在 `phpMyAdmin` 的大多数地方点击“删除（Drop）”链接或图标时，会弹出一个警告窗口，确认你确实想要删除这些数据。
 
 你必须在操作之前点击“是（Yes）”或“确定（OK）”。
 
@@ -9530,14 +8843,7 @@ PHP 语言提供的函数使得与 MySQL 通信变得极其简单。你使用 PH
 
 你不需要了解与 MySQL 通信的细节；PHP 会处理这些细节。你只需要知道 SQL 查询以及如何使用 PHP 函数。
 
-字体 与 MySQL 通信的 PHP 函数
-
-我们通过向 MySQL 服务器发送消息来与数据库交互。正如本微型教程第 1 章所解释，消息是用 SQL 语言编写的，这是一种大多数数据库管理系统都能理解的标准计算机语言。
-
-
-
-
-# 与 MySQL 通信
+### 与 MySQL 通信
 
 在开发过程中，你可能希望使用描述性的消息，例如 `Couldn’t connect to server`，但在应用程序投入使用后，可以使用更适合客户的通用消息，例如 `The Catalog is not available at the moment. Please try again later.`。
 
@@ -9548,17 +8854,17 @@ PHP 语言提供的函数使得与 MySQL 通信变得极其简单。你使用 PH
 以下语句连接到本地计算机上的 MySQL 服务器，使用一个名为 `phpuser` 的 MySQL 账户，该账户不需要密码：
 
 ```php
-$cxn = mysqli_connect(“localhost”,”phpuser”,””,”Customer”) or die (“Couldn’t connect to server.”);
+$cxn = mysqli_connect("localhost","phpuser","","Customer") or die ("Couldn't connect to server.");
 ```
 
 出于安全考虑，你应该将连接信息存储在变量中，并在连接语句中使用这些变量，如下：
 
 ```php
-$host=”localhost”;
-$user=”phpuser”;
-$password=””;
-$dbname = “Customer”;
-$cxn = mysqli_connect($host,$user,$password,$dbname) or die (“Couldn’t connect to server.”);
+$host="localhost";
+$user="phpuser";
+$password="";
+$dbname = "Customer";
+$cxn = mysqli_connect($host,$user,$password,$dbname) or die ("Couldn't connect to server.");
 ```
 
 为了更高的安全性，你可以将连接信息的赋值语句放在隐藏位置的单独文件中，这样账户名和密码甚至不会出现在脚本中。你通过使用 `include` 语句从文件中插入账户信息，该方法如第二卷第 2 章所述。
@@ -9570,8 +8876,6 @@ $cxn = mysqli_connect($host,$user,$password,$dbname) or die (“Couldn’t conne
 ```php
 mysqli_close($connectionname);
 ```
-
-
 
 例如，要关闭前面示例中的连接，请使用此语句：
 
@@ -9586,23 +8890,24 @@ mysqli_close($cxn);
 要与数据库交互，请将你的 SQL 查询放入变量中，并使用函数 `mysqli_query` 将其发送到 MySQL 服务器如下例所示：
 
 ```php
-$query = “SELECT \* FROM Customer”;
-$result = mysqli_query($cxn,$query) or die (“Couldn’t execute query.”);
+$query = "SELECT * FROM Customer";
+$result = mysqli_query($cxn,$query) or die ("Couldn't execute query.");
 ```
 
 查询将在当前连接的所选数据库上执行。
 
 ## 第三卷
 
-变量 `$result` 留有执行查询结果的信息。
-
 ## 第 5 章
+
+变量 `$result` 留有执行查询结果的信息。
 
 信息取决于 PHP 脚本查询是否从数据库获取信息：
 
 ## 通信
 
 - **对于不获取任何数据的查询：** 变量 `$result` 包含有关查询是否执行成功的信息。如果成功，`$result` 被设置为 `true`；如果未成功，`$result` 被设置为 `false`。某些不返回数据的查询是 `INSERT` 和 `UPDATE`。
+
 - **对于返回数据的查询：** 变量 `$result` 包含一个结果标识符，用于指定返回数据的位置，而不是返回的数据本身。某些返回数据的查询是 `SELECT` 和 `SHOW`。
 
 在将查询字符串赋值给 `$query` 时，单引号和双引号的使用可能会有点困惑。你实际上在两个层级使用了引号：用于 `$query` 的引号以及查询语句本身的引号。以下指南可以帮助你避免问题：
@@ -9614,9 +8919,9 @@ $result = mysqli_query($cxn,$query) or die (“Couldn’t execute query.”);
 以下示例显示了查询语句：
 
 ```php
-$query = “SELECT FROM Customer”;
-$query = “SELECT FROM Customer WHERE lastName=’Smith”;
-$query = “UPDATE Customer SET lastName=’”;
+$query = "SELECT FROM Customer";
+$query = "SELECT FROM Customer WHERE lastName='Smith";
+$query = "UPDATE Customer SET lastName='";
 ```
 
 查询字符串本身不包含分号；分号出现在语句的末尾，这是可以接受的。
@@ -9625,15 +8930,17 @@ $query = “UPDATE Customer SET lastName=’”;
 
 有时，你想同时发送两个或多个查询。MySQL 允许这样做，但你需要使用不同的函数来发送。你可以通过 `mysqli_query` 函数发送由分号隔开的查询：
 
+
+
 ```php
-$query = “SELECT \* FROM Cust;SELECT \* FROM OldCust”;
+$query = "SELECT * FROM Cust;SELECT * FROM OldCust";
 mysqli_query($cxn,$query);
 ```
 
 发送多个查询可能比发送单个查询不安全。如果你使用带有外部数据的创建来使用 `multi_query` 函数，请务必彻底验证外部数据。例如，假设你显示一个请求用户输入表的表单，你创建查询如下：
 
 ```php
-$query = “SELECT \* FROM Friend”;
+$query = "SELECT * FROM Friend";
 ```
 
 用户输入了表名：
@@ -9645,14 +8952,14 @@ Friend;DELETE TABLE Friend
 那么你的查询变为：
 
 ```php
-$query = “SELECT \* FROM Friend;DELETE TABLE Friend”;
+$query = "SELECT * FROM Friend;DELETE TABLE Friend";
 ```
 
 如果你使用 `multi_query` 函数发送此查询，该查询是不正确的。你可能不想删除该表。你通常编写一个可以实现目标且更安全的查询。
 
 ## 选择数据库
 
-如果你没有在连接函数中选择数据库，可以通过 `mysqli_select_db` 函数选择数据库。你可以在脚本的任何时候使用此函数选择不同的数据库。格式为 `mysqli_select_db($cxn,”databasename”) or die (“message”)`。
+如果你没有在连接函数中选择数据库，可以通过 `mysqli_select_db` 函数选择数据库。你可以在脚本的任何时候使用此函数选择不同的数据库。格式为 `mysqli_select_db($cxn,"databasename") or die ("message")`。
 
 如果你使用的是 mysql 函数而不是 mysqli 函数，你必须在一个单独的函数中使用 `mysql_select_db` 选择。本章后面的“将 mysqli 函数转换为 mysql 函数”部分将进行详细说明。
 
@@ -9665,13 +8972,10 @@ $query = “SELECT \* FROM Friend;DELETE TABLE Friend”;
 例如，你可以通过以下语句选择 Customer 数据库：
 
 ```php
-mysqli_select_db($cxn,”Customer”) or die (“Couldn’t select database.”);
+mysqli_select_db($cxn,"Customer") or die ("Couldn't select database.");
 ```
 
-如果 `mysqli_select_db` 无法选择数据库，脚本将停止运行并向浏览器发送 `Couldn’t select database.`。
-
-
-
+如果 `mysqli_select_db` 无法选择数据库，脚本将停止运行并向浏览器发送 `Couldn't select database.`。
 
 你使用 PHP 语言的 `mysqli` 函数（如 `mysqli_connect` 和 `mysqli_query`）与 MySQL 数据库交互。在使用这些语句时，有时会发生错误。你可能在输入时出现错误，例如写错了数据库名称。有时，会出现你无法避免的问题，例如数据库或网络宕机。你需要在脚本中包含处理错误情况的代码。
 
@@ -9682,21 +8986,21 @@ mysqli_select_db($cxn,”Customer”) or die (“Couldn’t select database.”)
 例如，假设你正在使用一个名为 `root` 的账户访问数据库，由于你在语句中写了拼写错误，如下：
 
 ```php
-$host = “localhost”;
-$user = “rot”;
-$password = “”;
+$host = "localhost";
+$user = "rot";
+$password = "";
 $cxn = mysqli_connect($host,$user,$password)
 ```
 
 由于你输入的是“rot”而不是“root”，你会看到一条类似下面的警告信息：
 
-`Warning: Access denied for user: ‘rot@localhost’ (Using password: NO) ...`
+`Warning: Access denied for user: 'rot@localhost' (Using password: NO) ...`
 
 前面的错误消息包含了你解决问题所需的信息——它显示了包含拼写错误的账户名。然而，在脚本运行且客户正在使用它时，你不希望用户看到显示你用户 ID 的技术错误消息。你希望关闭 PHP 错误或将其发送到错误日志文件中。然后你可以使用 `die` 语句停止脚本并向用户显示一条礼貌的消息，如下：
 
 ```php
 $cxn = mysqli_connect($host,$user,$password)
-or die(“The Catalog is not available at the moment. Please try again later.”);
+or die("The Catalog is not available at the moment. Please try again later.");
 ```
 
 当 `mysqli_query()` 函数失败时，MySQL 会返回一个包含失败原因信息的错误消息。然而，除非你显式显示它，否则该消息不会显示。同样，你可能想在开发脚本时查看这些消息，但可能不想向公众显示它们。你可以使用以下函数显示返回的 MySQL 错误：
@@ -9708,16 +9012,16 @@ mysqli_error($cxn)
 例如，你可能会将该函数包含在代码中，如下：
 
 ```php
-$query = “SELECT \* FROM Cust”;
+$query = "SELECT * FROM Cust";
 $result = mysqli_query($cxn,$query)
-or die (“Error: “.mysqli_error($cxn));
+or die ("Error: ".mysqli_error($cxn));
 ```
 
 # 使用其他有用的 mysqli 函数
 
 在这个示例中，如果函数调用失败，`die` 语句将显示 MySQL 错误，可能如下所示：
 
-`Error: Table ‘catalog.cust’ doesn’t exist`
+`Error: Table 'catalog.cust' doesn't exist`
 
 偶尔，你可能想在函数失败时执行额外的操作，例如删除变量或关闭数据库连接。你可以通过条件语句执行此类操作：
 
@@ -9735,6 +9039,7 @@ if(!$result = mysqli_query($cxn,$query))
 注意 `if` 语句中的 `!`（感叹号）。`!` 表示“非”。换句话说，如果赋值语句不为真，则 `if` 语句为真。
 
 ## 第 5 章
+
 ### 在 PHP 脚本中使用其他有用的 mysqli 函数
 
 其他有用的 `mysqli` 函数供你在 PHP 脚本中使用。以下小节描述了如何使用 `mysqli` 函数来计算查询返回的行数、确定最后自动生成的记录、计算受查询影响的行数以及转义字符。
@@ -9746,12 +9051,12 @@ if(!$result = mysqli_query($cxn,$query))
 登录页面经常使用此函数。当用户尝试登录时，他她在 HTML 表单中输入账户和密码。你的 PHP 脚本随后会在数据库中检查账户和密码。如果找到，说明用户名和密码是有效的。你可能会使用类似下面的代码：
 
 ```php
-$query = “SELECT \* FROM ValidUser WHERE acct = ‘$_POST[userID] AND password = ‘$password’”;
+$query = "SELECT * FROM ValidUser WHERE acct = '$_POST[userID]' AND password = '$password'";
 $result = mysqli_query($cxn,$query);
-$n = $mysqli_num_rows($result);
+$n = mysqli_num_rows($result);
 if($n < 1)
 {
-    echo “User name and password are not valid”;
+    echo "User name and password are not valid";
     exit();
 }
 ```
@@ -9767,10 +9072,10 @@ if($n < 1)
 一种你需要知道该数字的情况是当你将订单和订单项存储在单独表中时。如果你将 `orderID` 字段定义为 `AUTO_INCREMENT` 字段，MySQL 会向该字段添加数字。然而，你需要将此数字存储在 `OrderItem` 表中，以便将项目与订单连接。你可能会使用类似下面的代码：
 
 ```php
-$query = “INSERT INTO CustomerOrder (customerID,orderDate) VALUES ($customerID,$date)”;
+$query = "INSERT INTO CustomerOrder (customerID,orderDate) VALUES ($customerID,$date)";
 $result = mysqli_query($cxn,$query);
 $orderID = mysqli_insert_id($cxn);
-$query = “INSERT INTO OrderItem (orderID,color,size,price) VALUES ($orderID,$color,$size,$price))”; // 注意：此处原文括号似乎有误
+$query = "INSERT INTO OrderItem (orderID,color,size,price) VALUES ($orderID,$color,$size,$price)"; // 注意：此处原文括号似乎有误
 ```
 
 在第一个查询中，未指定 `orderID`，因此 MySQL 在字段中存储下一个序列号。在第二个查询中，上一个查询插入的 `orderID` 被插入第二个表中。
@@ -9780,7 +9085,7 @@ $query = “INSERT INTO OrderItem (orderID,color,size,price) VALUES ($orderID,$c
 某些 SQL 查询更改数据库但不返回任何数据。例如，`UPDATE` 查询可以更改表中的数据，但不会返回任何数据。在这种情况下，`UPDATE` 查询可能会影响一行、多行或零行。例如，以下是一个 `UPDATE` 查询：
 
 ```php
-$query = “UPDATE Customer SET lastName = “Smyth” WHERE lastName = “Smith””;
+$query = "UPDATE Customer SET lastName = 'Smyth' WHERE lastName = 'Smith'";
 ```
 
 该查询将把表中所有姓 Smith 的姓氏改为 Smyth。
@@ -9789,12 +9094,10 @@ $query = “UPDATE Customer SET lastName = “Smyth” WHERE lastName = “Smith
 
 假设你想设置表中的一个字段，以标识通过测试的学生。你可能还想知道有多少学生通过了测试。你可能会使用类似下面的代码：
 
-
-
-
 ```php
 $query = "UPDATE Student SET status='pass' WHERE score > 50";
 ```
+
 ## 第 5 章
 
 ```php
@@ -9815,11 +9118,11 @@ echo "$passed students passed";
 
 在这段代码中，表中任何分数高于 50 分的学生都通过了测试。变量 `$passed` 包含了分数足以使其 `status` 字段被更新为 "pass" 的学生人数。
 
-## 转义字符
+#### 转义字符
 
 当你向数据库中存储任何字符串信息时，需要对特殊字符进行转义。正如第四卷中所解释的样，这是一项至关重要的安全措施。
 
-PHP 6 之前的版本提供了一项名为“魔幻引用”（magic quotes）的功能，它可以自动转义 `$_POST` 和 `$_GET` 数组中的所有字符串。单引号、双引号、反斜杠和空字符都会被转义。该功能旨在帮助初学者，通过 `php.ini` 中的 `magic_quotes-gpc` 设置进行控制，并在 PHP 4 和 PHP 5 中默认开启。在 PHP 6 中，魔幻引用功能不再可用。
+PHP 6 之前的版本提供了一项名为“魔幻引用”（magic quotes）的功能，它可以自动转义 `$_POST` 和 `$_GET` 数组中的所有字符串。单引号、双引号、反斜杠和空字符都会被转义。该功能旨在帮助初学者，通过 `php.ini` 中的 `magic_quotes_gpc` 设置进行控制，并在 PHP 4 和 PHP 5 中默认开启。在 PHP 6 中，魔幻引用功能不再可用。
 
 魔幻引用功能会导致大量低效且不必要的转义。它有时还会导致不符合预期的转义。通常情况下，我们建议你在 `php.ini` 文件中关闭魔幻引用。这将在第二卷第一章中进行更详细的讨论。
 
@@ -9859,7 +9162,7 @@ mysql_query("SQL statement",cxn);
 
 对于所有函数，`mysqli` 的功能和语法相似但并不完全相同。特别是，`mysqli` 函数连接 MySQL 服务器的过程与 `mysql` 函数不同。
 
-表 5-1：mysqli 和 mysql 函数的语法
+**表 5-1：mysqli 和 mysql 函数的语法**
 
 ```php
 mysqli_connect($host,$user,$password,$dbname);
@@ -9869,17 +9172,14 @@ mysql_connect($host,$user,$password);
 mysql_select_db($dbname);
 ```
 
-
-
-
-访问。此外，客户希望感到在输入信息（他们的订单）后，管理和处理该订单交易的过程也是安全且具有容错性的。
-
 ### 服务器管理员
+
 `server administrator`（即负责维护网站运行的 Web 服务器的人员）对安全也有自己独特的视角。虽然服务器管理员可能对驱动网站的实际代码表示担忧，但他们可能更担心服务器本身的安全，包括确保机器安装了所有安全补丁，并防止外部未经授权的物理访问以及诸如环境问题等安全威胁。（温度控制系统发生故障，其带来的安全威胁可能与任何病毒一样大！）
 
 很有可能，你将使用第三方服务来托管你支持 PHP 和 MySQL 的 Web 网站，因此你可以将服务器管理问题留给……嗯，留给服务器管理员吧！尽管如此，你仍然应该意识到这些人人员必须解决的特殊安全问题。此外，你还应该了解如何在自己的编程中利用 Web 服务器的安全性（正如你通过本微型书籍的章节将发现的那样）。
 
 ### 网站开发者
+
 很有可能，你扮演的是网站开发者的角色。而且在许多方面，你在宏大的安全方程式中所扮演的角色是最复杂的。为什么会这样呢？作为开发者，你经常会发现自己处于安全问题的最底层。
 
 然而，不应将其视为负面影响，而应该享受作为开发者所拥有的机会：编写利用服务器安全性的安全代码，并编写足够智能、在系统发生错误时仍保持安全（且关键的是，能传达出安全感）的代码。诚然，这是一项巨大的责任，但你应该并且能够通过对大安全图景的良好认知以及有效的规划来有效地应对这一责任。
@@ -9890,27 +9190,31 @@ mysql_select_db($dbname);
 
 22_167779 bk04ch01.qxp 12/17/07 8:13 PM Page 361
 
-理解安全威胁
+## 理解安全威胁
 
 #### 电子商务高速公路上的荒凉路段
 
 为什么网站的容错性与安全有什么关系？实际上关系很大，特别是从终端用户或客户的角度来看。可以从汽车的安全功能来考虑。你拥有明显的实际信息，让客户知道他们输入的敏感信息已安全地接收并处理。没有什么比通过 Web 表单输入敏感信息、点击“提交”按钮，结果却返回一个没有任何指示接下来会发生什么的空白页面更令人心恼（且更令人不安）的了；在电子商务网站中，这来自于一套完善的屏幕消息进度。你拥有汽车显而易见的安全功能。你有自动门锁和远程进入恐慌报警等明显的问题。但当不可想象的事情发生时，你希望得到另一种安全感。在汽车中，这一点做得很到位。
 
-理解安全威胁
+### 理解安全威胁
 
 361
 
-
-
-
 ### 数据被意外修改或更改
+
 在应用程序开发中，你需要注意的另一个安全威胁是数据的意外修改。虽然关键数据被错误修改并不等同于数据丢失或泄露，但它可能比单纯丢失数据更糟糕。想象一下，你开发了一个 `MySQL` 数据库，用于跟踪某种即将上市的新药的关键药物试验结果。在这个数据库中，你存储了试验参与者的各种属性，包括他们的性别、年龄、在试验不同阶段对药物的反应等。现在，想象某一天——因为你编写的 `PHP` 代码出现了一个问题——执行了一条数据库查询，将数据库中所有男性患者的年龄更新为同一个值。如果数据库只包含几条记录，这可能不是什么大问题。但如果数据库包含几千条记录记录呢？正如你可以想象的，纠正如此大规模的数据修改将花费大量时间，从而可能危及药物试验的顺利进行。
 
 ### 恶意外部攻击
+
+
+
+# 恶意外部攻击
+
 恶意外部攻击是指未经授权的入侵者使用蠕虫、病毒或其他恶意代码，试图访问你的系统，并（通常情况下）窥探/窃取/修改/删除你的机密信息。涉及此类安全威胁的许多问题将由服务器管理员负责，因为他们必须确保 Web 服务器已安装最新的软件补丁并采取了物理保护。然而，解决这一安全威胁的很大一部分也取决于你，即开发者：编写糟糕的代码会为入侵者提供易于操作的路径。（在这里，代码定义为可以在网站内执行的 `PHP` 和 `MySQL` 查询。）
 
-### 前述任何一个项目中均未包含的一百种情况
-不，我们并不是试图在这一项表现得自以为（好吧，也许有一；这是一本非常厚的书，我们必须保持内容的趣味性！）。严肃地说，基于独特的政治、社会和环境因素以及“你说他说”的情况，将会出现海量的安全威胁排列。这些排列将产生于这里列出的所有点的组合。如果这听起来像是在暗示传言可以被视为一种安全威胁，那么恭喜你读出了言外之意并捕捉到了我们的安全威胁偏移。流言确实可能是非常强大的东西，如果流传关于你的网站或应用程序不安全的传言，你必须在源头上扼杀这种流言。遗憾的是，这本书不是关于媒体舆论控制的。
+## 前述任何一个项目中均未包含的一百种情况
+
+不，我们并不是试图在这一项表现得自以为是（好吧，也许有一点；这是一本非常厚的书，我们必须保持内容的趣味性！）。严肃地说，基于独特的政治、社会和环境因素以及“你说他说”的情况，将会出现海量的安全威胁排列。这些排列将产生于这里列出的所有点的组合。如果这听起来像是在暗示传言可以被视为一种安全威胁，那么恭喜你读出了言外之意并捕捉到了我们的安全威胁偏移。流言确实可能是非常强大的东西，如果流传关于你的网站或应用程序不安全的传言，你必须在源头上扼杀这种流言。遗憾的是，这本书不是关于媒体舆论控制的。
 
 然而，为了重申我们之前关于在出现问题时制定行动计划重要性的警告：你应该准备好应对针对你的网站或应用程序感知安全性的攻击，即使你知道并不存在真正的安全威胁。
 
@@ -9929,8 +9233,11 @@ mysql_select_db($dbname);
 好消息是，一份有效的安全策略不需要长达数百页。事实上，如果一份非常有效的安全策略能够有效地处理以下每个组成部分，它可能只有几页长：
 
 - **你的安全策略使命宣言：** 安全对你的公司或组织有多重要？你认为安全的价值有多大？在你的公司或组织每天处理的使命关键问题的优先级层级中，安全排在第几位？在时间和人力资源有限的情况下，修复安全漏洞是在优化你的生产线效率之前，还是在修好客户服务呼叫中心损坏的电话线之后？只有你才能决定安全在你的优先级中的位置。
+
 - **你日常处理安全的行动计划：** 从确保物理安全和维护数据的安全远程访问，到描述具体的数据保护措施（包括病毒保护和数据备份与恢复），你的安全策略应该包含多个章节，简要描述你的日常安全协议和流程。
+
 - **负责执行你安全策略的人员：** 谁是负责执行前一个项目中的行动计划的人？
+
 - **你处理安全相关问题的计划：** 这是一个良好的安全策略真正发挥作用的地方：当你的公司或组织发生安全相关事件时，哪项行动计划会立即生效？确保该行动计划不仅能纠正安全漏洞，还能传达该纠正措施的有效性。它还应该确保使用你网站或应用程序的客户的信任。
 
 ### 安全策略示例
@@ -9939,88 +9246,89 @@ mysql_select_db($dbname);
 
 我们为显然是虚构的“ABC Web 开发”公司编写了以下示例策略。尽管它是虚构的，但与任何真实公司的相似之处完全是巧合，不应对任何真实公司做出任何直接推断。
 
-第一节：ABC Web 开发：安全使命宣言。这是一个安全使命宣言的示例：
+#### 第一节：ABC Web 开发：安全使命宣言
 
+这是一个安全使命宣言的示例：
 
-
-
-
-ABC Web Development 的每一个人都非常重视安全，我们为自己能够确保完全符合您对保护敏感应用程序代码和数据的预期而感到自豪。
+> ABC Web Development 的每一个人都非常重视安全，我们为自己能够确保完全符合您对保护敏感应用程序代码和数据的预期而感到自豪。
 
 即使是像这里这样简单的安全使命声明，也能清晰地传达你对安全的重视，以及你如何向客户和委托人承认其重要性。
 
-## 第 2 节：负责安全的人员识别
+#### 第 2 节：负责安全的人员识别
 
 在制定安全使命声明的同时，明确识别组织中负责安全的人员通常也是一个好主意。
 
 对于 ABC Web Development 公司而言，安全责任由以下个人和小组承担：
 
-*   `Network administrators`：这些人员负责维护网络 Web 服务器，并确保这些服务器保持最新的安全补丁和防病毒定义更新。
-*   `Application developers`：与网络管理员一起，应用程序开发人员负责在安全编程方面遵循所有最佳实践，并在其生成的代码中充分利用 Web 服务器的安全功能。
-*   `Application architect`：这些人员负责监督整个应用程序开发过程，并完成和管理涉及应用程序开发的安全策略、相关文档以及变更控制策略策略。
+- `Network administrators`：这些人员负责维护网络 Web 服务器，并确保这些服务器保持最新的安全补丁和防病毒定义更新。
+- `Application developers`：与网络管理员一起，应用程序开发人员负责在安全编程方面遵循所有最佳实践，并在其生成的代码中充分利用 Web 服务器的安全功能。
+- `Application architect`：这些人员负责监督整个应用程序开发过程，并完成和管理涉及应用程序开发的安全策略、相关文档以及变更控制策略。
 
-## 第 3 节：确保物理安全
+#### 第 3 节：确保物理安全
 
-本节详细说明了此类物理安全问题，例如进入建筑基础设施的权限；纸质记录的销；对敏感计算机硬件的访问（即服务器机房或主数据中心）；等。
+本节详细说明了此类物理安全问题，例如进入建筑基础设施的权限；纸质记录的锁；对敏感计算机硬件的访问（即服务器机房或主数据中心）等。
 
 关于防止未经授权访问的章节表述可以通过简短的编号列表简要描述，如下：
 
-1.  关于 ABC Web Development 主楼内特定安全区域访问权限的具体人员说明已在醒目位置张。
-2.  所有 ABC Web Development 员工都应主动监控限制区域的访问情况。
-3.  为了维修或交付对限制区域的访问应降至最低，且进入人员应理解 ABC Web Development 的保密要求。
-4.  任何涉及非 ABC 人员的现场支持合同都应包含关于隐私、保密和标准的条款。
-5.  将实施 ABC Web Development 员工的身份证。
-6.  所有 ABC Web Development 员工应明确理解锁门窗程序。尽管这一程序应该普遍执行，但 `Security Officer` 有责任监控这些物理安全行动。在 `Security Officer` 缺席的情况下，由 `Security Officer` 的指定人员负责执行此程序。
-7.  在 ABC Web Development 员工离职时，将从离职员工处收回所有办公室钥匙。
-8.  ABC Web development 大楼经理将维护钥匙登记和日志。
-9.  一旦员工因任何原因离职，将立即强制取消其电子系统的访问权限。
+1. 关于 ABC Web Development 主楼内特定安全区域访问权限的具体人员说明已在醒目位置张贴。
+2. 所有 ABC Web Development 员工都应主动监控限制区域的访问情况。
+3. 为了维修或交付对限制区域的访问应降至最低，且进入人员应理解 ABC Web Development 的保密要求。
+4. 任何涉及非 ABC 人员的现场支持合同都应包含关于隐私、保密和标准的条款。
+5. 将实施 ABC Web Development 员工的身份证。
+6. 所有 ABC Web Development 员工应明确理解锁门窗程序。尽管这一程序应该普遍执行，但 `Security Officer` 有责任监控这些物理安全行动。在 `Security Officer` 缺席的情况下，由 `Security Officer` 的指定人员负责执行此程序。
+7. 在 ABC Web Development 员工离职时，将从离职员工处收回所有办公室钥匙。
+8. ABC Web development 大楼经理将维护钥匙登记和日志。
+9. 一旦员工因任何原因离职，将立即强制取消其电子系统的访问权限。
 
 此列表中的许多项目基于常识。尽管如此，在问题出现时，花时间在您的安全策略中快速明确这些内容可以产生决定性的影响。
 
-## 第 4 节：防病毒和补丁管理策略
+#### 第 4 节：防病毒和补丁管理策略
 
 作为一名负责的开发者和服务器管理员，你采取措施确保你的服务器和工作站及时更新到最新的防病毒定义文件和安全补丁。尽管如此，你应该在安全策略中包含一个章节，概述你如何处理这一关键问题的具体细节。该章节不需要详尽的逐步步骤列表，而是：
 
-*   `Definition of patch management`：ABC Development 网络由运行来自许多供应商各种软件的计算机（包括客户端和服务器）组成。人们频繁尝试识别并利用这些产品中的安全漏洞。ABC Web Development `Security Manager Network Administrator` 将负责监控这些每月列表，以及来自其他机构的通信，以确定其对网络可能的影响。
-*   `Procedures for addressing infected/compromised machines`：当一台计算机被确定为受感染时，将检查该机器的防病毒和安全日志以确定严重性。例如，如果防病毒软件已隔离了文件，这可能意味着威胁已遏制；然而，如果防病毒软件没有隔离文件，则意味着存在更大污染的可能，受影响的机器将被完全移除。在最坏的情况下（即多台 ABC 服务器被感染），将立即实施此处指示的指令。
+- **`Definition of patch management`**：ABC Development 网络由运行来自许多供应商各种软件的计算机（包括客户端和服务器）组成。人们频繁尝试识别并利用这些产品中的安全漏洞。ABC Web Development `Security Manager Network Administrator` 将负责监控这些每月列表，以及来自其他机构的通信，以确定其对网络可能的影响。
+- **`Procedures for addressing infected/compromised machines`**：当一台计算机被确定为受感染时，将检查该机器的防病毒和安全日志以确定严重性。例如，如果防病毒软件已隔离了文件，这可能意味着威胁已遏制；然而，如果防病毒软件没有隔离文件，则意味着存在更大污染的可能，受影响的机器将被完全移除。在最坏的情况下（即多台 ABC 服务器被感染），将立即实施此处指示的指令。
 
-## 第 5 节：备份与灾难恢复
+#### 第 5 节：备份与灾难恢复
 
 没有人喜欢思考在灾难后必须恢复网络（以及其中包含的敏感数据）；不幸的是，这种行动计划是常有的事。在我们一位作者居住的地方，一家小型互联网服务提供商（ISP）其主数据中心遭遇了灾难性的火灾。令人惊讶的是，该提供商仅离线了几天，而且非常奇的是，客户没有经历任何数据丢失。（我们可以证明这一点，因为其中一位作者就是其客户！）
 
 在服务离线期间，该 ISP 仍然设法通过外部来源和在其外呼语音信箱系统中保留定期更新消息来传达情况。当提供商恢复在线并恢复正常的电子邮件服务时，它在向客户清晰传达损害范围方面做得非常好，并对该 ISP 实施的非常有效的灾难恢复计划提供了见解。（该 ISP 有一个离线备份数据中心，可以从中恢复所有敏感数据。）
 
+##### 数据备份方法
 
+一种有效的数据备份方法是同时使用差异备份和全量备份。例如，从周一到周四，每天晚上执行一次差异备份。在这种情况下，`Differential` 被定义为自上一个晚上上次全量备份以来任何被更改或更新的文件。差异备份涵盖所有网络服务器。这些差异备份将至少存储两周，然后被覆盖。在周五晚上，执行一次每周全量备份（在此情况下 `weekly` 被定义为从周五到周五），捕获所有网络服务器上的所有数据。这些每周备份至少存储两周，然后被覆盖。在每个月的最后一个周五，执行一次每月全量备份以代替每周备份。每月备份存储六个月，然后进行回收。
 
+任何负责过备份管理工作的人都会告诉你，数据备份的过程可能是枯燥的，因为备份硬件和软件往往会出现不可理喻的故障。（译者注：它们往往会以无法解释的原因无法正常工作。）但正如我们之前关于 ISP 灾难性火灾的案例所所示，在任何有效的安全策略中，拥有一个可靠的敏感数据备份流程是绝对必须的。
 
+##### 所有网络硬件（服务器）清单
 
-## 数据备份方法
-一种有效的数据备份方法是同时使用差异备份和全量备份。例如，从周一到周四，每天晚上执行一次差异备份。在这种情况下，`Differential` 被定义为自上一个晚上上次全量备份以来任何被更改或更新的文件。差异备份涵盖所有网络服务器。这些差异备份将至少存储两周，然后被覆盖。在周五晚上，执行一次每周全量备份（在此情况下 `weekly` 被定义为从周五到周五），捕所有网络服务器上的所有数据。这些每周备份至少存储两周，然后被覆盖。在每个月的最后一个周五，执行一次每月全量备份以代替每周备份。每月备份存储六个月，然后进行回收。
-
-任何负责过备份管理工作的人都会告诉你，数据备份的过程可能是枯燥的，因为备份硬件和软件往往会出现不可理性的故障。（译者注：它们往往会以无法解释的原因无法正常工作。）但正如我们之前关于 ISP 灾难性火灾的案例所所示，在任何有效的安全策略中，拥有一个可靠的敏感数据备份流程是绝对必须的。
-
-## 所有网络硬件（服务器）清单
 在典型的安全策略中，你应该为你 Web 基础设施中的每台服务器提供特定的供应商和型号信息。
 
 例如，你可以提供一个表格，详细列出所有网络硬件，列包括硬件型号、序列号、保修类型、保修过期日期、供应商网站和客户服务电话号码。
 
-## 优先级服务器列表及其在意外事件后的恢复上线顺序
+##### 优先级服务器列表及其在意外事件后的恢复上线顺序
+
 鉴于本章充满了我们要求你想象的各种不愉快场景，这里又是一个例子：想象你的房子着火了。在家里所有的物品中（当然，不包括你的家人成员，因为他们是你的首要任务），你会优先抓住哪一或两样东西作为重点物品拿走？这是一个很难的问题，但你必须快速回答。在你的安全策略中设立一个“恢复优先级”子章节是至关重要的，这与“房子着火”的问题类似。在发生意外事件后，哪些服务器（以及相应的应用程序/系统）应该是首要恢复上线的？
 
-## 第 6 节：变更控制流程
+#### 第 6 节：变更控制流程
+
 如果你是一个典型的 Web 开发人员，你永远不会对自己编写的任何代码感到完全满意。很多时候（我们是指很多时候），我们从深睡中醒来时，脑子里会有一个关于如何编写特定解决方案的更好主意。这暗示了某种内在心理状态，还是仅仅证明了我们睡眠很浅，我们宁愿不回答。
 
-但是，我们知道的是，在整个技术领域特别是 Web 开发中，变化是不可避免且快速万变的的。如果你想在 Web 开发领域中保持领先地位（特别是在快速变化的 `PHP` 和 `MySQL` 开源社区中），你必须准备好接受并实施变更。
+但是，我们知道的是，在整个技术领域特别是 Web 开发中，变化是不可避免且快速万变的。如果你想在 Web 开发领域中保持领先地位（特别是在快速变化的 `PHP` 和 `MySQL` 开源社区中），你必须准备好接受并实施变更。
 
 尽管如此，你始终应该通过严谨且文档完备的流程对已建立的系统实施变更。在本章稍早之前，我们讨论了敏感数据被意外修改或更改的安全威胁。可能没有哪个地方的风险比在没有经过适当审查和测试的情况下实施代码更改更大。（当代码更改没有经过清晰的审查和测试时，数据丢失、机密数据泄露以及其他安全风险也会大大增加。）为了应对实施变更带来的危险，你的安全策略应该包含一个关于变更控制流程的章节。你的变更控制流程应包含以下信息：
 
-### 实施后变更控制的定义
-在系统引入生产环境后，必须建立一套特定的程序和协议，以确保以最高效、最有组织的方式对该系统进行更改或更新。必须考虑到系统所支持的所有流程并进行周密的规划，以便更改或更新能使系统符合所有既定的机构政策和程序。此外，这种规划对于确保更改或更新经过充分测试也关重要，以避免出现无计划的系统停机。
+##### 实施后变更控制的定义
 
-### 特定应用背景下“变更”与“更新”的定义
+在系统引入生产环境后，必须建立一套特定的程序和协议，以确保以最高效、最有组织的方式对该系统进行更改或更新。必须考虑到系统所支持的所有流程并进行周密的规划，以便更改或更新能使系统符合所有既定的机构政策和程序。此外，这种规划对于确保更改或更新经过充分测试也很重要，以避免出现无计划的系统停机。
+
+##### 特定应用背景下“变更”与“更新”的定义
+
 在特定应用程序的背景下，`change` 和 `update` 的典型定义包括：原始应用程序代码的修改；可能影响生产系统性能、可用性和数据完整性的任何硬件修改；与 Web 应用程序交互或对接的其他系统（如底层 `MySQL` 数据库）的任何修改；以及管理系统内部信息的流程修改。
 
-### 实施前必须批准变更的人员
+##### 实施前必须批准变更的人员
+
 在确定需要更改或更新后，应使用应用程序设计文档对更改进行完整描述，并由指定人员完成并批准。此类人员可能包括开发人员、网络/服务器管理员、安全官和其他技术管理人员。
 
 我们在这里提到的应用程序设计文档（我们在稍后会描述）包含了系统测试、培训、项目开发时间以及在考虑更改生产系统时应解决的关键问题的特定章节。特别是对于服务大量用户、处理和存储敏感数据的应用程序，这些变更控制和设计文档应在实施到现网环境之前完成并通过。
@@ -10034,53 +9342,34 @@ ABC Web Development 的每一个人都非常重视安全，我们为自己能够
 3. **需求定义**：此章节解决如下问题：
    - 新应用程序代码的功能需求是什么？
    - 新代码的性能需求是什么？
+   - 新代码的信息化需求是什么？
+   - 新代码的可维护性需求是什么？
+4. **实施前的变更管理**：如果在开发新代码之前，由现有系统代码支持的流程需要进行任何形式的更改，则本节应描述这些所需的变更以及促进这些变更的方法。可以将本节想象成道路施工队处理大型公路改修项目的方式。在大多数情况下，当道路维修时，主路线并不会完全关闭；而是通过重新规划车道来确保交通继续。同样的原理也适用于这里：在实施代码更改时，可能会导致其他底层系统变化，这些变化（例如）可能临时禁用应用程序的特定部分，以避免潜在的故障。
+5. **供应商需求**：假设现有使用了特定的第三方软件或硬件，代码的更改是否会导致这些软件或硬件出现操作性问题？如果你是 Windows 用户，对这个问题可能有些经验：例如，在从 Windows XP 升级到 Windows Vista 之前，你需要知道你的底层硬件（即你的个人电脑）是否支持新操作系统的要求。显然，这是一个你希望在实施变更*之前*回答的问题！
+6. **系统安全**：本节应概括性地描述新代码的安全模型。变更是否会影响单个用户的访问角色？代码更改将如何影响应用程序的其他部分，或链接到正在更改的程序的应用程序？简而言之，本节应该概述你的双重检查计划，以确保你的代码更改没有留下安全漏洞。
+7. **系统代码文档**：显然，新代码的工作方式与现有代码不同（甚至可以说更好！），否则你不会进行更改的。尽管如此，新代码应该有完整的文档记录，以便自 `Book IV` 成立以来未参与该应用程序的未来开发者能够清晰地理解所有代码功能。
+8. **运营支持计划**：变更的发生往往伴随着对新的 `General Security Considerations` 培训的需求，更不用说对所有系统代码进行测试了。你的文档的部分应该概述谁负责开发或领导此类培训以及对新系统代码进行质量保证（QA）测试。
+9. **业务连续性/回滚计划**：简而言之，如果你实施了新代码，结果……事情并没有完全按照你预想的那样运行，你的计划是什么？如何恢复（或 `rollback`）到应用程序代码的最新且稳定的版本？在回滚过程中，系统支持的流程将如何继续进行？如果发生系统停机，将如何通知？所有这些问题都需要在本节中解决。
 
-
-
-
-
-# 开发安全策略
-
-- 新代码的信息化需求是什么？
-- 新代码的可维护性需求是什么？
-
-## 4. 实施前的变更管理
-如果在开发新代码之前，由现有系统代码支持的流程需要进行任何形式的更改，则本节应描述这些所需的变更以及促进这些变更的方法。可以将本节想象成道路施工队处理大型公路改修项目的方式。在大多数情况下，当道路维修时，主路线并不会完全关闭；而是通过重新规划车道来确保交通继续。同样的原理也适用于这里：在实施代码更改时，可能会导致其他底层系统变化，这些变化（例如）可能临时禁用应用程序的特定部分，以避免潜在的故障。
-
-## 5. 供应商需求
-假设现有使用了特定的第三方软件或硬件，代码的更改是否会导致这些软件或硬件出现操作性问题？如果你是 Windows 用户，对这个问题可能有些经验：例如，在从 Windows XP 升级到 Windows Vista 之前，你需要知道你的底层硬件（即你的个人电脑）是否支持新操作系统的要求。显然，这是一个你希望在实施变更*之前*回答的问题！
-
-## 6. 系统安全
-本节应概括性地描述新代码的安全模型。变更是否会影响单个用户的访问访问角色？代码更改将如何影响应用程序的其他部分，或链接到正在更改的程序的应用程序？简而言之，本节应该概述你的双重检查计划，以确保你的代码更改没有留下安全漏洞。
-
-## 7. 系统代码文档
-显然，新代码的工作方式与现有代码不同（甚至可以说更好！），否则你不会进行更改的。尽管如此，新代码应该有完整的文档记录，以便自 `Book IV` 成立以来未参与该应用程序的未来开发者能够清晰地理解所有代码功能。
-
-## 第一章
-
-## 8. 运营支持计划
-变更的发生往往伴随着对新的 `General Security` 培训的需求，更说对所有系统代码进行测试了。你的 `Considerations` 文档的部分应该概述谁负责开发或领导此类培训以及对新系统代码进行质量保证（QA）测试。
-
-## 9. 业务连续性/回滚计划
-简而言之，如果你实施了新代码，结果……事情并没有完全按照你预想的那样运行，你的计划是什么？如何恢复（或 `rollback`）到应用程序代码的最新且稳定的版本？在回滚过程中，系统支持的流程将如何继续进行？如果发生系统停机，将如何通知？所有这些问题都需要在本节中解决。
-
-# 变更管理：发布通知！
+## 变更管理：发布通知！
 
 在任何更改之前，沟通是绝对至关重要的。我们所说的沟通不是指变更的每一个细节，但你应该沟通足够的信息，让他们知道以下重要事项：不仅是开发者之间，而且——更重要的是——与使用系统的人进行沟通。
 
 ### 为什么要实施此变更？
+
 没有什么比经常使用一个系统，却在某天登录时发现一切完全改变了，且没有任何关于变更到来的通知更令人沮丧的。根据受众的不同，这些信息不需要过于技术化，但应该传达对变更的总体描述，特别是当应用程序代码的更改将导致系统外观或功能的显著差异时。
 
 从安全的角度来看，适当的沟通也至关重要。想象特定系统代码的更改会导致数据存储方式的改变。对于这个例子，如果系统的更改导致只存储账户的最后四位数字而不是整个号码会怎样？从表面上看，这似乎不是一个大问题，因为关于（在这种情况下是）客户账户的其他身份识别信息可以通过搜索客户的姓氏、地址等轻松获取。但如果存储提交给应用程序信息的底层 `MySQL` 数据库也被另一个应用程序使用，而该应用程序需要完整的账户号码呢？
 
 ### 变更何时实施？
+
 你不想在要实施变更的前一天晚上才发送首次重大变更通知。用户需要充足的提前时间为系统停机做准备，并调整他们自己的工作计划。这在电子商务网站上尤其如此。你最不希望的是变更在客户交易过程中实施。另一个应用程序的用户也会发现自己经历了严重的系统问题，因为在不考虑整个应用程序的情况下进行此类变更，结果可能是错误或数据丢失。
 
 ### 变更需要新的培训吗？
+
 如果代码更改如此重大，以至于系统外观和功能的发生变化可能会困扰用户，你应该考虑开发培训材料（用户指南）。更新现有的系统文档（如 `FAQ` 类型的知识列表和其他在线文档）是必须的。在涉及变更控制时，沟通没有多少限制。你不想用每一个细节来淹没用户。
 
-
-
+## 密码认证
 
 本质上，`password` 仅仅是一个只有你才知道的字符字符串。如果你是唯一知道这串字符的人，那么任何在提示时输入该字符串的人都必然是你本人。对吧？
 
@@ -10088,7 +9377,11 @@ ABC Web Development 的每一个人都非常重视安全，我们为自己能够
 
 使用密码认证的一个大问题是，密码可能会丢失、被盗或被猜中。
 
-## 丢失的密码
+### 丢失的密码
+
+
+
+# 密码丢失
 
 密码丢失给开发者带来了一点不便，但它们并不是真正的安全问题。当用户丢失或忘记密码时，他们只会来找你。在那时，用户并不关心安全性，他们只想让你帮你解决问题，以便他们重新回到你的在线商店下单。针对密码丢失问题，你可以使用两种常见解决方案中的一种。
 
@@ -10101,37 +9394,38 @@ ABC Web Development 的每一个人都非常重视安全，我们为自己能够
 
 将丢失的密码重置为随机字符串比简单找回现有密码更安全，但这种方法对开发者和用户来说都涉及更多工作。用户需要登录并更改密码——希望是一个他们能记住的东西！——在此之前他们才能对你的应用程序进行任何其他操作。这种方法还需要更多的编程，因为你需要一个随机密码生成程序，以及一段在用户登录后立即引导用户更改密码的代码。
 
-## 被盗或被猜中的密码
+# 被盗或被猜中的密码
 
 密码的安全性取决于其所有者。用户必须在记忆一串字符的能力与保持账户安全的需求之间取得平衡。
 
 易记忆的密码（如名字、生日或其他有意义的单词）也很被他人猜中。
 
-例如，假设 Bob Jones 正在为他的电子邮件账户创建密码。他的用户名是 `BJones`，所以他选择 `BJones` 作为密码。这很有道理——使用这个密码，他只需要记住一个信息，而不是两个。Joe Smith 是 Bob 的同事之一，他想向整个公司通讯录发送一封不当的邮件，但他不想被抓到。当 Bob 在开会时，Joe 尝试登录 Bob 的电子邮件账户。他知道 Bob 的用户名，因为公司里的每个用户名都是以相同的方式构建的——名字的首字母，后面跟着姓氏。Joe 尝试的第一个密码之一就是 `BJones`。*Voilà*——Joe 进去了，而 Bob 却因为 Joe 的不当邮件遭了埋备。
+例如，假设 `Bob Jones` 正在为他的电子邮件账户创建密码。他的用户名是 `BJones`，所以他选择 `BJones` 作为密码。这很有道理——使用这个密码，他只需要记住一个信息，而不是两个。`Joe Smith` 是 `Bob` 的同事之一，他想向整个公司通讯录发送一封不当的邮件，但他不想被抓到。当 `Bob` 在开会时，`Joe` 尝试登录 `Bob` 的电子邮件账户。他知道 `Bob` 的用户名，因为公司里的每个用户名都是以相同的方式构建的——名字的首字母，后面跟着姓氏。`Joe` 尝试的第一个密码之一就是 `BJones`。*Voilà*——`Joe` 进去了，而 `Bob` 却因为 `Joe` 的不当邮件遭了埋备。
 
 显然，像示例中这样简单的密码太不安全了，不值得。什么构成了安全的密码？最安全的密码包含以下元素的部分或全部：
 
 * **小写字母**：`a–z`
 * **大写字母**：`A–Z`
 * **数字**：`0–9`
-* **特殊符号**：`!@#$%^&\*( )-/<>`（以及其他符号）
+* **特殊符号**：`!@#$%^&*() -/<>`（以及其他符号）
 * **长度**：密码越长，越难被猜中。理想情况下，密码长度至少为六到八个字符。
 * **随机性**：随机字符集合比字典单词要难猜得多，即使该字典单词包含了大小写字母的混合，并用数字或符号代替了字母。
 
-在邮件事件之后，Bob 能够证明在发送邮件时他不在电脑前，因此他没有被埋备。然而，他确实收到了系统管理员和经理关于密码和加密的彻底讲解和备忘录。决心不让他的电子邮件账户再次被破解，Bob 立即将密码更改为 `jfEi\*2m@fKls`。
+在邮件事件之后，`Bob` 能够证明在发送邮件时他不在电脑前，因此他没有被埋备。然而，他确实收到了系统管理员和经理关于密码和加密的彻底讲解和备忘录。决心不让他的电子邮件账户再次被破解，`Bob` 立即将密码更改为 `jfEi*2m@fKls`。
 
 他知道自己无法记住这样一个随机字符串，所以考虑将其写下来，直到他能背下来为止。他检查了备忘录中的建议，发现写下密码是绝对不允许的，因此他需要依靠记忆。
 
-在致电技术支持要求每天重置密码一周后，系统管理员建议 Bob 选择一个既安全又好记的密码。创建这种密码的一种方法是想出一个短语，然后将每个单词的首字母组合成一个字符串。例如，**B**ob **N**eeds **A M**uch **B**etter **P**assword 变成 `BNAMBP`。
+在致电技术支持要求每天重置密码一周后，系统管理员建议 `Bob` 选择一个既安全又好记的密码。创建这种密码的一种方法是想出一个短语，然后将每个单词的首字母组合成一个字符串。例如，**B**ob **N**eeds **A M**uch **B**etter **P**assword 变成 `BNAMBP`。
 
-接下来，Bob 对该字符串进行了以下更改以确保其安全：
+接下来，`Bob` 对该字符串进行了以下更改以确保其安全：
+
 1. 用 `2` 代替第一个 `B`（因为 `B` 是字母表中的第二个字母）
 2. 将 `A` 更改为 `@`
 3. 将 `M` 改为小写
 
 结果是 `2N@mBP`。
 
-## 存储密码
+# 存储密码
 
 让用户创建安全且易记的密码只是战斗的一半。你的应用程序需要通过将用户输入的密码与已知密码副本对比，来决定是否授予用户访问权限。密码通常以两种方式之一存储在应用程序中：
 
@@ -10140,15 +9434,13 @@ ABC Web Development 的每一个人都非常重视安全，我们为自己能够
 
 你的应用程序可能已经在使用数据库来存储用户信息、会话数据和其他信息，因此在那里也存储身份验证信息也是合理的。事实上，如果你已经在存储用户信息，你可能只需要在用户表中添加一个密码列即可。在决定了在哪里存储身份验证信息后，你需要决定是明文存储还是进行加密。我们将在本章节随后的单向加密部分介绍加密密码。
 
-## 图像识别
+# 图像识别
 
 破解者用来破解账户的工具之一是简单的暴力破解。他们不会坐在键盘前一个晚上尝试猜密码，而是将过程自动化，让他们的计算机（更可能是他们通过网络劫持的他人的计算机）系统地撞击，直到命中正确的字符组合。
 
-暴力破解对于破解弱密码很有用，但它对于创建黑客可以用来发送垃圾邮件的账户更为有效。这是一个它是如何工作的示例。Jane Andersen 运营着 People Named Jane 博客。她设置应用程序要求访问者在发布评论之前创建账户。这一要求消除了她博客中的一些垃圾邮件。但她注意到系统中出现了许多显然虚假的账户，这些账户全被用来在她文章的评论中发布垃圾信息。
+暴力破解对于破解弱密码很有用，但它对于创建黑客可以用来发送垃圾邮件的账户更为有效。这是一个它是如何工作的示例。`Jane Andersen` 运营着 People Named Jane 博客。她设置应用程序要求访问者在发布评论之前创建账户。这一要求消除了她博客中的一些垃圾邮件。但她注意到系统中出现了许多显然虚假的账户，这些账户全被用来在她文章的评论中发布垃圾信息。
 
-破解者可以自动化创建账户的过程，创建账户的速度比人类管理员删除的速度快。尽管 Jane 最终删除了大多数虚假账户，但某些账户留存了足够的时间，让破解者利用它们在 Jane 的博客上到处发布廉价处方药广告。
-
-
+破解者可以自动化创建账户的过程，创建账户的速度比人类管理员删除的速度快。尽管 `Jane` 最终删除了大多数虚假账户，但某些账户留存了足够的时间，让破解者利用它们在 `Jane` 的博客上到处发布廉价处方药广告。
 
 除了每天花 24 小时删除虚假用户账户之外，还能如何防止这种情况的发生呢？要求新用户执行一项对人类来说简单但对计算机来说极其困难的任务。最常见的任务是要求访问者识别图像中编码的字母和数字组合。这些字符通常是模糊、倾斜或被划掉的。
 
@@ -10169,9 +9461,9 @@ ABC Web Development 的每一个人都非常重视安全，我们为自己能够
 在应用程序中实现 `CAPTCHA` 的第一步是选择一个难以破解的。弱的 `CAPTCHA` 具有以下部分或全部特征：
 
 * 固定字体
-*✦ 对齐的字符
-*✦ 字符位置固定
-*✦ 旋转固定
+* ✦ 对齐的字符
+* ✦ 字符位置固定
+* ✦ 旋转固定
 * 无变形
 * 无纹理背景
 * 固定颜色
@@ -10183,13 +9475,13 @@ ABC Web Development 的每一个人都非常重视安全，我们为自己能够
 
 `第五卷第 2 章` 有更多关于 `PEAR` 的信息。
 
-## 数字身份
+# 数字身份
 
 密码和 `CAPTCHA` 可以帮助判断是否应该授予用户访问特权资源的权限。结合用户名，你可以使用这些方法来验证用户的身份。然而，当你脱离用户必须登录应用程序的情景时，这个系统就会开始失效。
 
 发送电子邮件是一个很好的例子，在那种情况下，使用用户名、密码和 `CAPTCHA` 的系统无法提供足够的数据安全。用户必须向邮件服务器提供用户名和密码，但实际上，大多数人将这些信息保存在自己的电子邮件客户端中并一直运行。许多人发现，让电子邮件客户端在后台运行并在其在新邮件到达时自动下载，比不断登录和注销更方便。遗憾的是，这种便利是有代价的。即使是疏松的破解者也能轻易拦截电子邮件、修改它们并发送出去。大多数电子邮件都是未加密发送的，因为发送未加密的消息更快且消耗的资源更少，而且绝大多数邮件并不值得花精力去加密。
 
-## 数字签名
+# 数字签名
 
 那么包含敏感信息的电子邮件呢？对于这些消息，接收者必须能够验证两点：
 
@@ -10204,7 +9496,7 @@ ABC Web Development 的每一个人都非常重视安全，我们为自己能够
 
 与我们稍后将讨论的普通公密钥加密不同，数字签名不能防止破解者拦截和读取消息。数字签名并不是为了模糊消息内容；它只是验证发送者的身份以及消息是否完整送达。数字签名通过通过产生摘要的相同算法来验证消息的完整性。如果该算法的结果与摘要匹配，则消息可能没有修改过。
 
-## 数字证书
+# 数字证书
 
 数字证书与数字签名（我们在上一节中讨论过的）类似，但数字证书验证的是服务器身份，而不是个人。它们通常用于电子商务交易，向用户确保他们确实正在与他们认为的公司或网站进行交易。
 
@@ -10214,15 +9506,11 @@ ABC Web Development 的每一个人都非常重视安全，我们为自己能够
 
 第三方证书颁发机构提供这种保证。颁发机构在发布数字证书之前验证个人或组织的身份。如果你信任该颁发机构，就可以信任带有该证书的网站。
 
-## 探索加密
+# 探索加密
 
 加密是所有数字签名和数字证书的基础。以下章节将介绍加密的基本知识。
 
-### 基础概念和术语
-
-
-
-
+## 基础概念和术语
 
 首先，你需要掌握这些词汇。加密是那些似乎仅仅为了困扰所有人而故意使用缩写和晦涩术语的话题之一。在我们讨论加密技术之前，你需要理解两个基本概念，我们将在接小节节涵盖这两个概念。
 
@@ -10254,37 +9542,33 @@ ABC Web Development 的每一个人都非常重视安全，我们为自己能够
 
 ### 哈希函数
 
-数字签名和证书使用哈希函数（通常是 MD5 或 SHA）。哈希函数是*确定性的*——相同的消息总是产生相同的摘要。遗憾的是，尽管公钥加密相当安全，但它非常消耗资源且缓慢。为了加快这一过程，可以使用哈希函数创建一个摘要。如果消息通过哈希函数的结果相匹配，你就知道消息已经送达。
+数字签名和证书使用哈希函数（通常是 `MD5` 或 `SHA`）。哈希函数是*确定性的*——相同的消息总是产生相同的摘要。遗憾的是，尽管公钥加密相当安全，但它非常消耗资源且缓慢。为了加快这一过程，可以使用哈希函数创建一个摘要。如果消息通过哈希函数的结果相匹配，你就知道消息已经送达。
 
 加密方法是任何关注安全的人头疼的主要原因之一，这并不是秘密，但只要你记住以下几点，你就能占据先机：
 
-- 为了确保消息完整无误，请使用哈希函数创建一个摘要，然后用你的私钥加密该摘要。
-- 为了保证消息确实来自你，使用你的私钥对其进行数字签名。
-- 为了确保你的消息只能被预期接收者读取，使用接收者的公钥对其进行加密。
+* 为了确保消息完整无误，请使用哈希函数创建一个摘要，然后用你的私钥加密该摘要。
+* 为了保证消息确实来自你，使用你的私钥对其进行数字签名。
+* 为了确保你的消息只能被预期接收者读取，使用接收者的公钥对其进行加密。
 
-## 第 3 章：创建安全环境
+# 第 3 章：创建安全环境
 
-### 本章内容
+## 本章内容
 
 即使是最安全的 Web 应用程序，如果运行在不安全的环境中，也可能被破解——就像如果你留着窗户锁车门是没用的一样。
 
-你可以通过确保你的 PHP 应用运行在相当安全的服务器上来最容易地保护它。Web 服务器从本质上是不安全的，因为为了提供服务，它们必须允许对某些文件和应用程序的匿名访问。但是，你可以采取几个简单的步骤防止恶意用户滥用 Web 服务器。
+你可以通过确保你的 `PHP` 应用运行在相当安全的服务器上来最容易地保护它。Web 服务器从本质上是不安全的，因为为了提供服务，它们必须允许对某些文件和应用程序的匿名访问。但是，你可以采取几个简单的步骤防止恶意用户滥用 Web 服务器。
 
-根据 NetCraft 2007 年 9 月的调查，两大 Web 服务器 Apache 和 Internet Information Server (IIS) 共同服务了互联网上 85% 的网站。在本章中，我们将引导你保护每种服务器。
+根据 NetCraft 2007 年 9 月的调查，两大 Web 服务器 `Apache` 和 `Internet Information Server (IIS)` 共同服务了互联网上 85% 的网站。在本章中，我们将引导你保护每种服务器。
 
-### 安全 Apache
+## 安全 Apache
 
-保护 Apache Web 服务器是一个很广泛的话题，因此，我们与其尝试将所有内容挤进一个章节，不如专注于在它运行 PHP 应用时让 Apache 更安全的两种方法：使用 SuExec 和 ModSecurity。
+保护 `Apache` Web 服务器是一个很广泛的话题，因此，我们与其尝试将所有内容挤进一个章节，不如专注于在它运行 `PHP` 应用时让 `Apache` 更安全的两种方法：使用 `SuExec` 和 `ModSecurity`。
 
-#### 使用 SuExec  PHP 应用
+### 使用 SuExec  PHP 应用
 
-如果你的应用程序运行在 Apache 上（互联网上超过一半的网站都是如此），你可能想考虑在 Apache 配置中启用 SuExec。`SuExec` 是 Apache 自带的一个机制，它使脚本作为脚本所有者的用户身份运行，而不是作为 Web 服务器用户的身份运行。
+如果你的应用程序运行在 `Apache` 上（互联网上超过一半的网站都是如此），你可能想考虑在 `Apache` 配置中启用 `SuExec`。`SuExec` 是 `Apache` 自带的一个机制，它使脚本作为脚本所有者的用户身份运行，而不是作为 Web 服务器用户的身份运行。
 
-
-
-
-
-在非 SuExec 环境下，所有脚本都以 Web 服务器本身相同的用户 ID 运行。遗憾的是，一个有漏洞的脚本就可以让恶意用户获得整个 Web 服务器的后门访问，包括运行在同一服务器上托管的其他网站的脚本。
+在非 `SuExec` 环境下，所有脚本都以 Web 服务器本身相同的用户 ID 运行。遗憾的是，一个有漏洞的脚本就可以让恶意用户获得整个 Web 服务器的后门访问，包括运行在同一服务器上托管的其他网站的脚本。
 
 `SuExec` 试图通过将 Web 应用限制在各自的区域，并以所有者的用户 ID 而非 Web 服务器的用户 ID 运行它们来解决此问题。例如，此脚本将在 `jsmith` 的用户 ID 下运行：
 
@@ -10292,15 +9576,15 @@ ABC Web Development 的每一个人都非常重视安全，我们为自己能够
 
 恶意用户可以利用此脚本，但他或她将只能访问 `jsmith` 用户允许使用的文件和程序。服务器上的其他所有用户将免受 `jsmith` 不安全脚本的侵害。
 
-遗憾的是，要让 `SuExec` 与虚拟主机（即物理位于同一台 Web 服务器上的多个独立 Web 网站）正常工作可能是非常复杂的。`SuExec` 设计用于运行位于 Web 服务器文档根目录下的脚本。大多数虚拟主机的设置方式是每个独立的 Web 网站都有自己的文档根，且每个网站的文档根并不位于 Web 服务器的文档根目录下。要绕过此限制，系统管理员必须在 Apache 文件中每个虚拟主机的文档根添加到 Web 服务器的文档根变量中。
+遗憾的是，要让 `SuExec` 与虚拟主机（即物理位于同一台 Web 服务器上的多个独立 Web 网站）正常工作可能是非常复杂的。`SuExec` 设计用于运行位于 Web 服务器文档根目录下的脚本。大多数虚拟主机的设置方式是每个独立的 Web 网站都有自己的文档根，且每个网站的文档根并不位于 Web 服务器的文档根目录下。要绕过此限制，系统管理员必须在 `Apache` 文件中每个虚拟主机的文档根添加到 Web 服务器的文档根变量中。
 
-`SuExec` 还要求 PHP 脚本以 `CGI`（通用网关接口）运行，这比在 `Apache` 下作为预编译模块运行 `PHP` 要慢得多。`CGI` 是 Web 应用的第一种可行模型，目前仍用于简单脚本。然而，一旦你离开 `PHP` 脚本领域并开始编写全功能应用程序，你将需要预编译 `PHP` 带来的性能提升。
+`SuExec` 还要求 `PHP` 脚本以 `CGI`（通用网关接口）运行，这比在 `Apache` 下作为预编译模块运行 `PHP` 要慢得多。`CGI` 是 Web 应用的第一种可行模型，目前仍用于简单脚本。然而，一旦你离开 `PHP` 脚本领域并开始编写全功能应用程序，你将需要预编译 `PHP` 带来的性能提升。
 
 对于相当简单的 Web 服务器，`SuExec` 可以防止一个不安全的应用程序破坏所有其他内容。然而，在具有虚拟服务器、预编译模块以及几十个或数百个用户的更复杂环境中，你需要一个更健壮的安全模型。
 
 `ModSecurity`（我们将在下一节中介绍）是 Web 服务器安全的一次巨大飞跃，特别是对于运行虚拟服务器和预编译 `PHP` 的服务器。
 
-# ModSecurity
+## ModSecurity
 
 `ModSecurity` 是一个任何 `Apache` 服务器都不应缺失的开源模块。它是一个健壮的过滤引擎，监控传入的请求（包括 `GET` 和 `POST`），并剔除可能给服务器及其应用程序带来问题的请求。如果你的服务器正在运行 `SuExec`，`ModSecurity` 是一条极佳的第一道防线——在 Web 服务器安全方面，防线越多越好！
 
@@ -10316,6 +9600,8 @@ ABC Web Development 的每一个人都非常重视安全，我们为自己能够
 
 ## 减少服务器的足迹
 
+
+
 保护 `IIS` 服务器的第一大步是减少服务器在 Web 上的“足迹”，即访问你服务器的入口数量。服务器与外部世界的入口点应尽可能少；每个开放的端口都是黑客的机会。一个好的规则是，如果你绝对不需要某个端口开放，就应该显式地关闭它。
 
 如果你正在运行由你本地管理的专用服务器，应该从禁用 `SMP` 和 `Netbios` 开始。禁用这些网络协议可以阻止服务器作为文件/打印服务器运行。它还能防止服务器通过网络进行管理。如果你需要远程管理服务器，就不能完全禁用这些服务，请禁用任何你需要的子组件，例如 `NNTP`、`SMTP`、`FTP`、`BITS`、`Internet printing` 等。默认情况下，这些服务中的大多数是禁用的。
@@ -10324,20 +9610,21 @@ ABC Web Development 的每一个人都非常重视安全，我们为自己能够
 
 按照以下步骤禁用不需要的服务：
 
-1. **选择“开始” ➪“管理工具” ➪“服务 MMC”。**
+1. 选择“开始” ➪ “管理工具” ➪ “服务 MMC”。
 
 在弹出的“服务”窗口中，找到你想要禁用的服务，如图 3-1 所示。
 
 ![Image 41](img/index-415_1.jpg)
+
 ![Image 42](img/index-415_2.jpg)
 
 **图 3-1：** 在服务窗口中突出显示你想禁用的服务。
 
-2. **双击你要禁用的服务的名称。**
+2. 双击你要禁用的服务的名称。
 
 出现“计算机浏览器属性”对话框。
 
-3. **在“启动类型”下拉列表中，选择“禁用”（如图 3-2 所示），然后点击“确定”。**
+3. 在“启动类型”下拉列表中，选择“禁用”（如图 3-2 所示），然后点击“确定”。
 
 关闭“计算机浏览器属性”对话框。
 
@@ -10347,46 +9634,46 @@ ABC Web Development 的每一个人都非常重视安全，我们为自己能够
 
 在禁用了你可以不需要的服务后，你接下来需要在非系统驱动器上设置你的 Web 根目录。这样做可以防止黑客访问你的系统文件。他们只能访问该驱动器上的文件，这意味着你阻止了目录遍历攻击（这种攻击涉及黑客导航目录结构访问他们不应访问的服务器部分）。要在非系统驱动器上设置 Web 根目录，请按照以下步骤操作：
 
-1. **选择“开始” ➪“我的电脑”，然后在弹出的“我的电脑”窗口中双击一个辅助硬盘。**
+1. 选择“开始” ➪ “我的电脑”，然后在弹出的“我的电脑”窗口中双击一个辅助硬盘。
 
 你选择的硬盘可以是虚拟驱动器，但将 Web 根托管在独立的物理硬盘上更好。这样，如果主硬盘故障，你至少没有丢失存储在 Web 根中的数据。
 
-2. **在 Windows 资源管理器中，导航到将托管 Web 根的驱动器。右键点击该驱动器并选择“新建”➪“文件夹”，创建一个 Web 根文件夹。**
+2. 在 Windows 资源管理器中，导航到将托管 Web 根的驱动器。右键点击该驱动器并选择“新建” ➪ “文件夹”，创建一个 Web 根文件夹。
 
 你可以为此文件夹命名任何名称，只要在创建 Web 站点属性时将该文件夹设置为 Web 根即可。
 
-3. **右键点击新文件夹并选择“共享和安全”，为该文件夹设置访问控制列表 (ACL)。**
+3. 右键点击新文件夹并选择“共享和安全”，为该文件夹设置访问控制列表 (`ACL`)。
 
 你可能想创建一个“Web 作者”组，并赋予读取、写入、修改和列出文件夹内容的权限，这可以通过打开控制面板并点击“管理工具”来实现。点击“用户和组”并创建一个新组。然后，同样的方法创建一个仅限读取和执行权限的“Web 用户”组。
 
-4. **在 Web 根文件夹下为你计划托管的每个 Web 站点设置子文件夹。**
+4. 在 Web 根文件夹下为你计划托管的每个 Web 站点设置子文件夹。
 
-5. **为每个 Web 站点创建一个用户，并授予该用户访问其相应子文件夹的权限——而不是任何其他 Web 站点的子文件夹。**
-
-
-
-
+5. 为每个 Web 站点创建一个用户，并授予该用户访问其相应子文件夹的权限——而不是任何其他 Web 站点的子文件夹。
 
 3. 按照网站创建向导中的提示进行操作。
 
-4. 在向导的网站主目录屏幕上，勾选 `Allow Anonymous Access to This Web site`（允许访问此网站）复框（除非你希望每个访问网站的用户都登录），并为每个网站输入你创建的子文件夹路径，如图 3-4 所示。
+4. 在向导的网站主目录屏幕上，勾选 `Allow Anonymous Access to This Web site`（允许访问此网站）复选框（除非你希望每个访问网站的用户都登录），并为每个网站输入你创建的子文件夹路径，如图 3-4 所示。
 
-5. 点击 `OK` 向导。
+5. 点击 `OK` 完成向导。
 
-**图 3-4:**
+**图 3-4：**
+
 输入为网站创建的子文件夹路径。
 
-现在，你需要为每个网站设置单独的应用程序池（或沙箱）。设置这些程序池可以将不安全的应用程序限制在它自己的池中，从而限制其对系统可能造成的破坏。这与 Apache 的 `SuExec` 非常相似，因为它导致应用程序以拥有应用程序池的用户 ID 运行，而不是以 IIS 运行的系统用户运行。
+现在，你需要为每个网站设置单独的应用程序池（或沙箱）。设置这些程序池可以将不安全的应用程序限制在它自己的池中，从而限制其对系统可能造成的破坏。这与 Apache 的 `SuExec` 非常相似，因为它导致应用程序以拥有应用程序池的用户 ID 运行，而不是以 `IIS` 运行的系统用户运行。
 
 要设置应用程序池，请按照以下步骤操作：
 
 1. 选择 `开始` ➪ `管理工具` ➪ `Internet 信息服务管理器`。
+
 出现 `Internet 信息服务管理器` 窗口。
 
 2. 右键点击 `Application Pools`（应用程序池），然后选择 `New` ➪ `Application Pool`（应用程序池），如图 3-5 所示。
+
 打开 `Application Pool Wizard` 向导。
 
-**图 3-5:**
+**图 3-5：**
+
 打开新的应用程序池向导。
 
 3. 按照提示创建新的应用程序池。在向导的最后一个屏幕上点击 `OK`。
@@ -10398,75 +9685,86 @@ ABC Web Development 的每一个人都非常重视安全，我们为自己能够
 ### 创建安全环境
 
 4. 右键点击新创建的应用程序池并选择 `Properties`（属性）。
+
 出现 `Application pool name`（应用程序池名称）属性。
 
 5. 点击 `Identity`（标识）选项卡打开 `Identity` 对话框，如图 3-6 所示。
-默认选中 `Predefined`（预定义）单按钮。
 
-**图 3-6:**
+默认选中 `Predefined`（预定义）单选按钮。
+
+**图 3-6：**
+
 属性对话框。
 
-6. 选择 `Configurable`（可配置）单按钮，并在 `User Name`（用户名）和 `Password`（密码）文本框中输入拥有应用程序池权限的用户及其密码，如图 3-7 所示。点击 `OK`。
+6. 选择 `Configurable`（可配置）单选按钮，并在 `User Name`（用户名）和 `Password`（密码）文本框中输入拥有应用程序池权限的用户及其密码，如图 3-7 所示。点击 `OK`。
 
-**图 3-7:**
+**图 3-7：**
+
 已输入用户和密码的属性对话框。
 
 7. 右键点击 `Web Sites` 文件夹中的网站并选择 `Properties`（属性）。
+
 出现 `Web Site Name`（网站名称）属性对话框。
 
 8. 点击 `Web Site Name` 属性对话框中的 `Home Directory`（主目录）选项卡，如图 3-8 所示。
 
-**图 3-8:**
+**图 3-8：**
+
 属性对话框的主目录选项卡。
 
 9. 从 `Application Pool`（应用程序池）下拉列表中选择你刚刚创建的应用程序池，如图 3-9 所示，并点击 `OK`。
+
 现在应用程序池已与网站关联。
 
-**图 3-9:**
+**图 3-9：**
+
 选择应用程序池。
 
 10. 点击 `Web sites` 文件夹，然后点击你正在操作的网站。
 
-如果你尚未 Web 根目录下创建此文件夹，则需要创建。
+如果你尚未在 Web 根目录下创建此文件夹，则需要创建。
 
 11. 右键点击网站并选择 `Properties`（属性）；在出现的属性框中，点击 `Home Directory`（主目录）选项卡，如图 3-10 所示。
 
-**图 3-10:**
+**图 3-10：**
+
 属性对话框。
 
 12. 从 `Permissions`（权限）下拉列表中选择相应的级别，如图 3-11 所示。除非你有充分理由允许可执行文件，否则请将此级别设置为 `Read`（读取）。
 
-保护 IIS 的最后一步工作是按照以下步骤仅启用所需的扩展（如 ASP）：
+保护 `IIS` 的最后一步工作是按照以下步骤仅启用所需的扩展（如 `ASP`）：
 
 1. 选择 `开始` ➪ `管理工具` ➪ `Internet 信息服务管理器`。
+
 出现 `Internet 信息服务管理器` 窗口。
 
 2. 选择 `Service Extensions`（服务扩展）图标，如图 3-12 所示。
 
-**图 3-12:**
+**图 3-12：**
+
 服务扩展屏幕。
 
 3. 选择你想要修改的扩展，然后根据需要点击 `Allow`（允许）或 `Prohibit`（禁止）按钮。
 
 4. 右键点击 `Web Sites` 文件夹中的网站并选择 `Properties`（属性）；在出现的属性对话框中，选择 `Home Directory`（主目录）选项卡，如图 3-13 所示。
 
-**图 3-13:**
+**图 3-13：**
+
 属性选项卡。
 
 5. 在 `Home Directory` 选项卡中，点击 `Configuration`（配置）按钮。确保谓词设置正确，如图 3-14 所示。
 
-**图 3-14:**
+**图 3-14：**
+
 属性选项卡。
 
 6. 从 `Application Pool` 下拉列表中选择你刚刚创建的应用程序池，如图 3-15 所示，并点击 `OK`。
 
-**图 3-15:**
+**图 3-15：**
+
 选择应用程序池。
 
-
-
-
-仅采用几项良好的编程实践就可以消除绝大多数应用程序安全漏洞。诚然，某些受过高教育、手段老练的人会致力于破解应用程序，但你的应用程序更有可能被那些无所事事的高中生攻破。为什么呢？因为 PHP Web 应用程序中几乎所有的安全漏洞都是基于于几个疏忽的编程实践——
+仅采用几项良好的编程实践就可以消除绝大多数应用程序安全漏洞。诚然，某些受过高教育、手段老练的人会致力于破解应用程序，但你的应用程序更有可能被那些无所事事的高中生攻破。为什么呢？因为 PHP Web 应用程序中几乎所有的安全漏洞都是基于几个疏忽的编程实践——
 
 其中大多数失败都发生在错误处理、变量清洗和文件上传这“三大”领域。
 
@@ -10499,13 +9797,13 @@ INSERT INTO users VALUES (John; drop table users);
 你的脚本可能包含以下语句来测试用户名和密码：
 
 ```php
-$sql = “SELECT \* FROM User WHERE userID = ‘$_POST[userID]’ AND password = ‘$_POST[password]’”;
+$sql = "SELECT * FROM User WHERE userID = '$_POST[userID]' AND password = '$_POST[password]'";
 ```
 
 如果你在不更改代码的情况下插入用户输入的代码，你将得到以下 SQL 查询：
 
 ```php
-$sql = “SELECT \* FROM User WHERE username = ‘John’ OR ‘foo’ = ‘foo’ -- ‘ AND password = ‘$_POST[password]’”;
+$sql = "SELECT * FROM User WHERE username = 'John' OR 'foo' = 'foo' -- ' AND password = '$_POST[password]'";
 ```
 
 此查询允许用户在没有用户名或密码的情况下登录。在第一个子句中，`foo =` 使得后续查询变得有效。
@@ -10513,9 +9811,6 @@ $sql = “SELECT \* FROM User WHERE username = ‘John’ OR ‘foo’ = ‘foo�
 ### 测试意外情况
 
 （注：原文后续为大量重复内容，已去重）
-
-
-
 
 坏人明明必须从列表中进行选择，他们是如何向你发送恶意数据的呢？这并不难。坏人只需要在自己的浏览器中显示你的表单并将其保存到他的计算机上。然后他对其进行编辑，更改你的选择列表或单选按钮中的数据以符合他的目的。
 
@@ -10531,7 +9826,7 @@ $sql = “SELECT \* FROM User WHERE username = ‘John’ OR ‘foo’ = ‘foo�
 
 ## 第四章
 
-###  HTML 特殊字符
+### HTML 特殊字符
 
 有时候，你想允许用户在你的应用程序中输入 HTML。例如，一个《安全的 PHP 编程》博客评论系统通常允许用户发布超链接。
 
@@ -10580,7 +9875,7 @@ $unsafe_to = $_POST['to'];
 $success = sanitize_and_send($subj, $mesg, $unsafe_to);
 
 function sanitize_and_send($subj, $mesg, $unsafe_to) {
-    if($unsafe_to !~ ^.*(\\||,).*$) {
+    if($unsafe_to !~ ^.*(\\|,).*$) {
         $to = $_POST["to"];
         mail($to, $subj, $mesg);
     }
@@ -10601,7 +9896,7 @@ file_uploads = On
 
 某些应用程序需要让用户上传文件。（第六卷第 1 章展示了一个允许用户上传文件的第 4 章脚本。）遗憾的是，这一需求也导致了产生严重安全问题的潜在风险。恶意用户可以：
 
-- ✦ 发起拒绝服务 (DoS) 攻击
+- ✦ 发起拒绝服务 (`DoS`) 攻击
 - ✦ 覆盖现有文件
 - ✦ 在服务器上放置恶意代码以备后日之用
 
@@ -10609,7 +9904,7 @@ file_uploads = On
 
 ### 避免对文件系统的 DoS 攻击
 
-文件上传引发了 DoS 攻击的可能，因为恶意用户可以上传极大的文件，并在过程中耗尽文件系统中所有的可用资源。上传大文件可以通过阻止服务器写入临时文件或虚拟内存交换文件来有效地导致服务器崩溃。你可以在 `php.ini` 中限制文件大小，但这样做无法防止每秒尝试上传数百个 2MB 文件的脚本攻击。
+文件上传引发了 `DoS` 攻击的可能，因为恶意用户可以上传极大的文件，并在过程中耗尽文件系统中所有的可用资源。上传大文件可以通过阻止服务器写入临时文件或虚拟内存交换文件来有效地导致服务器崩溃。你可以在 `php.ini` 中限制文件大小，但这样做无法防止每秒尝试上传数百个 2MB 文件的脚本攻击。
 
 你确实应该在 `php.ini` 中对文件大小设置限制（请参考本迷你书第 3 章获取更多关于 `php.ini` 的信息）。你还应该为上传的文件创建一个独立的专用系统。这个独立的系统可以将任何恶意行为与服务器的其他部分隔离开。上传文件系统可能会被垃圾文件填，导致应用程序的文件功能不可用——但至少整个服务器不会崩溃。
 
@@ -10620,21 +9915,22 @@ file_uploads = On
 虽然你可能无法过滤所有的恶意上传，但你可以减少那些最明显的攻击。以下是验证文件的一些方法：
 
 - **验证文件名扩展名**。这种检查不是最稳健的测试（因为人们可以很容易地重命名扩展名），但它执行简单，并且可以捕捉一些试图通过你的图像上传函数上传 `spam_sender.php` 等文件的低级破解者。
+
 - **测试你预期的基本文件类型**。例如，如果你期望的是图像，可以使用 `is_binary()` 函数来过滤掉文本文件（如 PHP 脚本），如下所示：
+
+
+
 ```php
 $input = $_POST['input_file'];
 
 if (is_binary($input)) {
     // 正常继续
-}else {
+} else {
     // 拒绝文件、重定向浏览器等
 }
 ```
-- **使用杀毒软件（如 F-Prot，可用于 www.f-prot.com）对文件进行扫描**。
 
-
-
-
+- 使用杀毒软件（如 `F-Prot`，可用于 `www.f-prot.com`）对文件进行扫描。
 
 # 在不损害文件系统的情况下上传文件
 
@@ -10658,11 +9954,11 @@ $login_result = ftp_login($connection_id, $ftp_username, $ftp_password);
 
 // 检查连接
 if ((!$connection_id) || (!$login_result)) {
-    echo “FTP 连接失败！”;
-    echo “尝试为用户 $ftp_username 连接 $ftp_server";
+    echo "FTP 连接失败！";
+    echo "尝试为用户 $ftp_username 连接 $ftp_server";
     exit;
 } else {
-    echo “已连接到 $ftp_server，用户为 $ftp_username”;
+    echo "已连接到 $ftp_server，用户为 $ftp_username";
 }
 
 // 上传文件
@@ -10670,9 +9966,9 @@ $upload = ftp_put($connection_id, $destination_file, $source_file, FTP_BINARY);
 
 // 检查上传状态
 if (!$upload) {
-    echo “FTP 上传失败！”;
+    echo "FTP 上传失败！";
 } else {
-    echo “已将 $source_file 上传到 $ftp_server 并命名为 $destination_file”;
+    echo "已将 $source_file 上传到 $ftp_server 并命名为 $destination_file";
 }
 
 // 关闭 FTP 流
@@ -10682,11 +9978,11 @@ ftp_close($conn_id);
 
 以下是最通的 FTP 函数及其参数：
 
-✦ `ftp_connect( string $host [, int $port [, int $timeout ] )`: 连接到 FTP 服务器 —— 在此情况下，即你的 Web 服务器。
-✦ `ftp_login( resource $ftp_stream, string $username, string $password )`: 向 FTP 服务器发送登录凭据。
-✦ `ftp_put( resource $ftp_stream, string $remote_file, string $local_file, int $mode [, int $startpos ] )`: 将文件从本地机器上传到服务器。
-✦ `ftp_get( resource $ftp_stream, string $local_file, string $remote_file, int $mode [, int $resumepos ] )`: 从服务器获取文件并发送到本地机器。
-✦ `ftp_close( resource $ftp_stream ):`: 关闭与服务器的连接。
+- `ftp_connect(string $host [, int $port [, int $timeout ] )`: 连接到 FTP 服务器 —— 在此情况下，即你的 Web 服务器。
+- `ftp_login(resource $ftp_stream, string $username, string $password )`: 向 FTP 服务器发送登录凭据。
+- `ftp_put(resource $ftp_stream, string $remote_file, string $local_file, int $mode [, int $startpos ] )`: 将文件从本地机器上传到服务器。
+- `ftp_get(resource $ftp_stream, string $local_file, string $remote_file, int $mode [, int $resumepos ] )`: 从服务器获取文件并发送到本地机器。
+- `ftp_close(resource $ftp_stream ):`: 关闭与服务器的连接。
 
 一旦完成操作，你就需要关闭 FTP 流；否则，你将拥有一个易受劫持的开放连接。
 
@@ -10698,9 +9994,11 @@ ftp_close($conn_id);
 
 1. **在上传文件系统中创建一个权限为 700 的临时目录（所有者拥有读、写、执行权限，其他人无权限）。** 确保该目录的所有者与运行应用程序的用户相同。
 2. **在上传之前，使用 `chmod()` 函数通过程序将权限更改为 777（所有用户均拥有读、写、执行权限），如下所示:**
+
    ```php
    chmod("/temp/tempfile.gif", 777);
    ```
+
 3. **使用 FTP 函数上传文件。** 参阅本章前面的“使用 FTP 函数确保安全文件上传”部分。
 4. **上传后立即将权限改回 700，以缩短攻击机会窗口。**
 5. **验证文件。**
@@ -10726,11 +10024,8 @@ eval("mv /tempfiles/jsmith_image.gif /my_application/images/jsmith_image.gif");
 
 这种混淆手段无法阻止坚定的攻击者，但它可以为你的文件上传增加一层安全保护。
 
-
-
-
-
 # 防止跨站脚本攻击
+
 # 保持你的技术栈更新
 
 电子商务应用程序要求你比其他类型的应用程序更深入地考虑安全性。如果你不经意在博客应用程序中留下了安全漏洞，最坏的情况是你的服务器变成垃圾邮件发送者的乐场。这并不愉快，但也不是世界末日。然而，如果你的电子商务应用程序遭到破译，你就将客户暴露在信用卡欺诈和身份盗窃的风险之中。当你进入电子商务世界时，你面对的是一个全新级别的安全挑战。
@@ -10749,9 +10044,9 @@ eval("mv /tempfiles/jsmith_image.gif /my_application/images/jsmith_image.gif");
 
 根据你的企业规模，你的数据库可能与你的 Web 服务器位于同一台物理机器上，也可能位于独立的服务器上。无论何种，请密切关注以下几个关键信息：
 
-✦ 运行数据库的用户
-✦ 连接到数据库时使用的密码
-✦ 每个用户被授予的权限
+- 运行数据库的用户
+- 连接到数据库时使用的密码
+- 每个用户被授予的权限
 
 ### 选择数据库用户
 
@@ -10769,7 +10064,7 @@ eval("mv /tempfiles/jsmith_image.gif /my_application/images/jsmith_image.gif");
 
 上一节涵盖了以自己的用户身份运行数据库。在这一节中，我们稍微转换一下，讨论真正的数据库用户——即在数据库内部创建、具有管理数据库以及访问或修改数据权限的用户。
 
-你需要一个负责数据库整体维护的`administrator user`。这个用户——仅此此用户——需要完全权限。同时，为你的电子商务应用程序创建一个权限受限的用户。根据你的应用程序，该用户可能需要在 `Order` 表上有 `INSERT`、`UPDATE` 和 `SELECT` 权限，但在 `Product` 表上只有 `SELECT` 权限。
+你需要一个负责数据库整体维护的 `administrator user`。这个用户——仅此此用户——需要完全权限。同时，为你的电子商务应用程序创建一个权限受限的用户。根据你的应用程序，该用户可能需要在 `Order` 表上有 `INSERT`、`UPDATE` 和 `SELECT` 权限，但在 `Product` 表上只有 `SELECT` 权限。
 
 作为一个一般原则，尽可能授予尽可能少的权限以允许每个用户执行其操作。在分配 `GRANT` 权限时要格外小心，因为该权限允许用户将其权限授予其他用户。
 
@@ -10777,7 +10072,7 @@ eval("mv /tempfiles/jsmith_image.gif /my_application/images/jsmith_image.gif");
 
 在设置好数据库和用户之后，你需要一种让应用程序连接到数据库的方法。在 PHP 中，你通过以下方式建立连接：
 
-```
+```php
 mysql_connect($server, $username, $password, $new_flags);
 ```
 
@@ -10793,20 +10088,12 @@ mysql_connect($server, $username, $password, $new_flags);
 
 `MySQL` 具有几种内置加密方案：
 
-✦ `AES_ENCRYPT()` 和 `AES_DECRYPT()`：这些函数使用高级加密标准 (AES) 算法进行加密。默认情况下，AES 使用 128 位加密。
-
-✦ `ENCODE()` 和 `DECODE()`：使用操作系统的随机数生成器生成二进制字符串。这些函数对于短字符串效果，但对于密码来说通常不够强大。它们取决于操作系统的随机数生成器。
-
-✦ `DES_ENCRYPT()` 和 `DES_DECRYPT()`：使用三重数据加密标准算法进行加密。
-
-✦ `ENCRYPT()` 和 `DECRYPT()`：这些函数调用底层的 `crypt()` 系统函数。
-
-✦ `MD5()`：为字符串计算 MD5（消息摘要算法 5）校验和。MD5 的攻击漏洞已知，这使得该方法在加密敏感数据时不是理想的方案。
-
-✦ `SHA1()`：为字符串计算 SHA1（安全哈希算法）校验和。SHA1 的攻击漏洞也是为人知的。
-
-
-
+- `AES_ENCRYPT()` 和 `AES_DECRYPT()`：这些函数使用高级加密标准 (AES) 算法进行加密。默认情况下，AES 使用 128 位加密。
+- `ENCODE()` 和 `DECODE()`：使用操作系统的随机数生成器生成二进制字符串。这些函数对于短字符串效果，但对于密码来说通常不够强大。它们取决于操作系统的随机数生成器。
+- `DES_ENCRYPT()` 和 `DES_DECRYPT()`：使用三重数据加密标准算法进行加密。
+- `ENCRYPT()` 和 `DECRYPT()`：这些函数调用底层的 `crypt()` 系统函数。
+- `MD5()`：为字符串计算 MD5（消息摘要算法 5）校验和。MD5 的攻击漏洞已知，这使得该方法在加密敏感数据时不是理想的方案。
+- `SHA1()`：为字符串计算 SHA1（安全哈希算法）校验和。SHA1 的攻击漏洞也是为人知的。
 
 安全套接层，或 `SSL`，是用于在公共网络发送加密信息的行业标准技术。它是多种技术的结合，这些技术共同工作确保信息在传输过程中没有被截获或篡改。
 
@@ -10849,35 +10136,41 @@ mysql_connect($server, $username, $password, $new_flags);
 为了演示如何创建数字证书，我们使用 `OpenSSL Library` 的 `openssl` 工具（可从 `www.openssl.org` 获取）。只需遵循以下步骤：
 
 1. 在命令提示符处输入以下命令为自己的证书颁发机构生成私钥：
-```
-openssl genrsa -des3 -out ca.key 1024
-```
+
+   ```
+   openssl genrsa -des3 -out ca.key 1024
+   ```
 
 2. 输入以下命令根据你在第 1 步创建的密钥创建 CA 证书。此命令提示你输入证书中区别名称（Distinguished Name）部分的信息：
-```
-openssl req -new -x509 -days 365 -key ca.key -out ca.cert
-```
+
+   ```
+   openssl req -new -x509 -days 365 -key ca.key -out ca.cert
+   ```
 
 3. 使用以下命令为服务器生成新的私钥：
-```
-openssl genrsa -des3 -out server.key 1024
-```
+
+   ```
+   openssl genrsa -des3 -out server.key 1024
+   ```
 
 4. 输入以下命令创建证书签名请求（CSR）。此命令提示你输入关于服务器的各种信息，包括通用名称（Common Name），即 SSL 服务器的完全限定域名：
-```
-openssl req -new -key server.key -out server.csr
-```
+
+   ```
+   openssl req -new -key server.key -out server.csr
+   ```
 
 5. 将 CSR 发送到证书颁发机构进行签名。你使用以下语句将 CSR 发送到你自己的 CA：
-```
-openssl x509 -CA ca.crt -CAkey ca.key -in server.csr -req -out server.crt -set_serial `date +%s` -days 365
-```
+
+   ```
+   openssl x509 -CA ca.crt -CAkey ca.key -in server.csr -req -out server.crt -set_serial `date +%s` -days 365
+   ```
 
 6. 使用以下命令验证证书上的签名和细节：
-```
-openssl verify -CAfile ca.crt server.crt
-openssl x509 -in server.crt -text
-```
+
+   ```
+   openssl verify -CAfile ca.crt server.crt
+   openssl x509 -in server.crt -text
+   ```
 
 确保 `server.key` 和 `ca.key` 文件仅对 root 用户可读。只有 `.crt` 文件应该是全局可读的，通过设置文件权限允许所有用户读取权限。
 
@@ -10889,29 +10182,30 @@ openssl x509 -in server.crt -text
 
 ### 保持会话安全
 
+
+
+# 会话技术
+
 会话技术是现代 Web 应用在 HTTP 这种无状态的世界跟踪状态的方法。会话数据存储在 `$_SESSION` 数组中。当用户向 Web 服务器发送请求时，他们包含了会话 ID，这允许应用程序检索并使用他们的会话数据。会话的工作原理在第六册第 2 章详细解释。
 
 除非用户禁用了 cookie，否则会话 ID 通过 cookie 从浏览器传递到 Web 服务器。如果禁用了 cookie，可以通过 URL 或 POST 表单传递会话 ID。
 
-### 使用 cookie
+## 使用 cookie
 
 通常，cookie 存储用户硬盘上的微文件。会话 cookie 仅保留在内存中，因此如果用户关闭浏览器，会话将失效。如果用户并非有意关闭浏览器，他们需要重新登录，但为了防止会话劫持或固定，这是一个很微小的代价。
 
 在不使用 HTML 表单的情况下，通过 URI 传递会话 ID 是为禁用 cookie 的用户提供会话的唯一方法，但这也要危险得多，因为会话 ID 是明文传递的，被称为使用透明会话 ID。网络嗅探者可以轻而易举地获取会话 ID。更大的风险是合法用户可以复制 URI 并将其发送（通常通过不安全的电子邮件或即时通讯工具）给另一个人，其他人随后可以恢复第一个用户的会话。
 
 除非你有充分的理由去照顾不接受 cookie 的用户，否则请始终在 cookie 中存储会话信息。通过在 `php.ini` 文件中放置以下行可以将这些信息存储在 cookie 中：
-```
+
+```php
 ini_set('session.use_only_cookies', TRUE);
 ini_set('session.use_trans_sid', FALSE);
 ```
 
 如果你有一个敏感的应用程序，你应该使用 SSL。通过 SSL，你的浏览器/服务器之间的通信是加密的，无论如何传递，都没有人嗅探到你的会话 ID。
 
-### 设置会话超时
-
-
-
-
+## 设置会话超时
 
 会话可以设置为在一段时间后超时或失效。这是一个好主意，因为这样如果用户离开了你的应用程序，当恶意用户路过并尝试使用你的应用程序时（伪装成那个离开的合法用户），应用程序将自动使会话失效，从而有效地将用户从系统上注销。
 
@@ -10942,7 +10236,7 @@ if( !empty($_POST['passwd']) && $_POST['passwd'] == $passwd) {
 
 ### 跨站脚本 (XSS)
 
-*跨站脚本*（或简称 XSS）是安全领域中的一个热门词汇，似乎每隔几天就会发现一个新的 XSS 漏洞..。在本节中，我们将揭开这些炒作，并准确解释 XSS 攻击是如何运作的，以及如何防止它们。
+*跨站脚本*（或简称 XSS）是安全领域中的一个热门词汇，似乎每隔几天就会发现一个新的 XSS 漏洞。在本节中，我们将揭开这些炒作，并准确解释 XSS 攻击是如何运作的，以及如何防止它们。
 
 #### XSS 攻击是如何工作的
 
@@ -10982,10 +10276,6 @@ disable_functions eval
 
 如果你确实期望用户提供 HTML，你仍然应该进行过滤。明确允许一组严格的 HTML 标签子集——例如 `<em>`、`<strong>`、`<i>`、`<b>` 和 `<p>`。在存储或使用它们之前，你的应用程序应该拒绝任何其他内容。
 
-
-
-
-
 # 保持更新
 
 为了确保应用程序尽可能安全，你可以采取的最关键步骤之一是确保运行着底层软件的最新稳定版本——包括 PHP、你的 Web 服务器以及你的操作系统。定期检查补丁和维护发布，或者订阅供应商的更新馈送，这样当补丁和新版本发布时，你就能及时获知。
@@ -11004,11 +10294,9 @@ disable_functions eval
 * ✦ CERT: www.cert.org
 * ✦ OWASP: www.owasp.org
 
-# 第五卷
+# 第五卷：PHP 扩展
 
-## PHP 扩展
-
-### 目录摘要
+## 目录摘要
 
 * **第 1 章：扩展简介 ... 423**
 * **第 2 章：使用 PEAR ... 429**
@@ -11019,6 +10307,7 @@ disable_functions eval
 # 第 1 章：扩展简介
 
 ### 本章内容
+
 * 将扩展整合到 PHP 整体架构中
 * 确定加载了哪些扩展
 * 加载扩展
@@ -11026,23 +10315,29 @@ disable_functions eval
 PHP 本身是一门非常精简的语言。它实际上并没有做什么——而这恰恰是它该有的样子，这样 PHP 就不会加载你不需要的功能。PHP 社区的开发者创建了许多代码库，为基础 PHP 语言添加或扩展了功能。本章将为你提供所需的背景知识，让你能够使用 PHP 扩展，而无需花费下一个一个月去研究如何解析 XML 或生成图像。
 
 ### 扩展如何融入 PHP 架构
+
 以下是 PHP 扩展的三种基本类型：
 
 * **Zend 扩展 (Zend extensions)：** 这些扩展修改了 PHP 的基本性质。Zend 负责将人类可读的 PHP 解析并解释为机器级指令。除非你极其熟悉编程语言设计，并且擅长对 PHP 语言进行“手术”，否则你可以完全不管扩展。只需意识到这些扩展是可用的，并且如果你真的想做，可以在编译 PHP 时带有 Zend 扩展以修改 PHP 的核心即可。
-* **内置扩展 (Built-in extensions)：**这种类型的扩展比 Zend 扩展要令人生畏得多。内置扩展是提供某些功能的代码库。这些扩展如此实用，以至于每个人最终都会使用它们，因此 PHP 开发团队直接将它们与 PHP 绑在一起起。在大多数情况下，你可以在不支持任何特定扩展的情况下编译 PHP。例如，如果你不打算生成图像，就不需要 `GD` 扩展，不带上它编译 PHP 可以节省资源。
+
+* **内置扩展 (Built-in extensions)：** 这种类型的扩展比 Zend 扩展要令人生畏得多。内置扩展是提供某些功能的代码库。这些扩展如此实用，以至于每个人最终都会使用它们，因此 PHP 开发团队直接将它们与 PHP 绑在一起起。在大多数情况下，你可以在不支持任何特定扩展的情况下编译 PHP。例如，如果你不打算生成图像，就不需要 `GD` 扩展，不带上它编译 PHP 可以节省资源。
+
 * **外部扩展 (External extensions)：** 有时，某个扩展是为了解决一个非常特定的问题。另一些扩展尚未获得足够的普及以被提升为内置扩展。无论如何，你都可以找到许多非常有用的扩展，等待你将它们包含在下一个应用中。
 
 ### 找出加载了哪些扩展
+
 使用扩展的第一步是确定你需要的扩展是内置的，还是你需要加载它。PHP 提供了几种方法来获取所需的信息，具体取决于你想想知道什么。
 
-#### get_loaded_extensions()
+#### `get_loaded_extensions()`
+
 `get_loaded_extensions()` 函数返回一个包含所有编译到你的 PHP 开发环境中的 PHP 函数的数组。该函数可以在命令行中使用：
 
-```
+```bash
 php -r 'print_r(get_loaded_extensions());'
 ```
 
 结果应该像这样：
+
 ```
 $ Array
 (
@@ -11068,7 +10363,8 @@ $ Array
 
 `get_loaded_extensions()` 函数也可以在脚本中用于交付已加载扩展的数组。
 
-#### extension_loaded()
+#### `extension_loaded()`
+
 有时你不需要知道所有信息，只需要一个对“这个扩展可用吗？”的直接回答。`extension_loaded()` 函数提供的正是这个——一个针对简单问题的布尔值回答。你可以在应用程序代码中动态加载扩展。只需在脚本顶部放置以下代码行即可：
 
 ```php
@@ -11077,29 +10373,29 @@ if (!extension_loaded($extension)) {
 }
 ```
 
-#### php -m
+#### `php -m`
+
 如果你正盯着命令行，不知道哪些扩展可用，`php -m` 函数比 `get_loaded_extensions()` 提供了更简洁的界面。要使用 `php -m`，请在命令行输入：
 
-```
+```bash
 php -m
 ```
 
-#### php --re extension
+#### `php --re extension`
+
 当你知道需要的扩展已加载后，你可能想要一些用法信息。命令行开关 `--re extension`（如下代码行所示）可以为指定的扩展提供熟悉的用法语句：
 
-```
+```bash
 php --re curl
 ```
 
-#### php --ri extension
+#### `php --ri extension`
+
 `php --ri` 与 `--re` 标志相似，不同在于 `--ri` 提供的是给定扩展的配置信息。
 
 ### 加载扩展
+
 如果你需要的扩展没有内置在 PHP 中，你需要通过使用 `require()` 或 `include()` 函数以编程方式加载它。这两个函数的作用几乎相同——它们作为你想要加载的扩展的占位符。
-
-
-
-
 
 # 第五卷：PHP 扩展
 
@@ -11139,12 +10435,14 @@ echo $message;
 
 当你的应用程序比几个包含某些扩展的脚本更复杂时，请通过使用 `include_once()` 或 `require_once()` 来应对这种复杂性。这些函数在尝试重新加载之前会检查给定的扩展是否已经加载。如果你的代码尝试包含一个已经加载的扩展，PHP 在函数被重复定义时会抛出一个致命错误。
 
-## 第 2 章：使用 PEAR
+# 第 2 章：使用 PEAR
 
 ### 本章内容
+
 本书的第一章讨论了 PHP 扩展如何为该语言添加许多功能并让你的生活变得更轻松。但等一下——还有更好的！PEAR（即 PHP 扩展应用程序库）是一个扩展和代码库，你可以在应用程序中使用它。在本章中，你将了解到 PEAR 到底是什么、如何设置它，以及如何在你的应用程序中使用 PEAR 包。
 
 ### 介绍 PEAR
+
 PEAR 不仅仅是一种健康的零食，它也是一种健康的编程方式。为什么呢？因为 PEAR 允许你忽略运行应用程序时需要的大部分代码。你可以花费几个小时来研究连接应用程序到数据库的最佳且安全的方法，你也可以花费一个月的时间从零开始创建它——那将浪费你的时间和精力。你最好使用现有代码，并将时间花在应用程序的实际功能上。
 
 PEAR 是一个用于开发和发布应用程序的五部分工具包。PEAR 工具包包括：
@@ -11158,6 +10456,7 @@ PEAR 是一个用于开发和发布应用程序的五部分工具包。PEAR 工�
 在你花费时间安装和配置 PEAR 之前，请观察一下并自行判断这些包、编码标准和社区支持是否是你加速开发所需的工具。很有可能，你会发现至少有一个扩展能让你惊奇自己在没有它的情况下是如何编写代码的，但每个应用程序和每个开发者都是不同的。不要因为大家都在谈论它就跑去获取 PEAR。
 
 ### PEAR 库
+
 包库是 PEAR 的核心内容。你可以通过 `http://pear.php.net/packages.php` 浏览该库。截至写此本文时，你可以在 49 个类别中找到 450 个包。PEAR 中的大多数包都是与基础设施相关的——它们处理数据库连接、身份验证和缓存等脏活。如果你应用程序的某个特定元素让你头疼，请检查一下 PEAR 库。可能已经有人写了你需要的代码。在 PEAR 库中你可以找到的不只是硬核后端模块。你还可以找到更轻量的内容，包括图像库、Web 服务、文本模块，甚至如果你感兴趣的话，还有化学模块。
 
 如果你点击 PEAR 库中包的名称，将出现包信息页，提供你决定是否要使用该代码所需的所有信息。页面上需要注意的一些重要规范包括：
@@ -11165,16 +10464,25 @@ PEAR 是一个用于开发和发布应用程序的五部分工具包。PEAR 工�
 - **摘要 (Summary)**：对包及其用途的简要描述。
 - **许可证 (License)**：大多数包根据某种形式的 GNU 公共许可协议 (GPL) 发行。
 - **当前版本 (Current release)**：最新的版本号、发布时间以及指向该包开发路径的链接。
+
+
+
 - **错误摘要 (Bug summary)**：告诉你当前开启了多少个 bug、该包的维护排名、关闭 bug 平均需要多长时间，以及最旧的未修复 bug。
+
 - **描述 (Description)**：对包进行更深入的描述。
+
 - **维护者 (Maintainers)**：负责维护包和修复 bug 的开发者列表。
+
 - **更多信息 (More Information)**：浏览源码树、RSS 发布馈送和下载统计数据的链接。
+
 - **依赖此包的包 (Packages that depend on this package)**：任何依赖于当前包的包的链接。
 
-### 设置 PEAR
+## 设置 PEAR
+
 包信息页还包含下载包、查看文档和报告 bug 的链接。
 
-### 代码分发和包维护
+## 代码分发和包维护
+
 PEAR 是一个社区活动，基于“给出一个包，取一个包”的理论。欢迎你从库中使用任何需要的代码，如果你开发了一个其他人可能认为有用的 PHP 模块，我们鼓励你向世界分享它。PEAR 库提供了一种让你的代码供社区使用的简单方法。你任何想要提交的代码必须满足以下要求：
 
 - 你的代码必须符合 PEAR 编码标准。
@@ -11184,10 +10492,6 @@ PEAR 是一个社区活动，基于“给出一个包，取一个包”的理论
 - 你必须以纯文本或 DocBook XML 文件提供文档。
 - 你必须为你的代码提供回归测试。
 - 你必须愿意维护和支持你的包。
-
-
-
-
 
 上述列表对于某些人来说可能要求过高，但这些要求实际上都是为了整个社区的利益。如果没有编码标准、开源许可、文档、回归测试以及对维护模块的承诺，PEAR 库将迅速充斥 Bug、缺乏文档且无人维护的代码——这会违背 PEAR 的初衷。毕竟，如果你知道在使用前必须先进行调试，你也就不会费劲去使用一个 PEAR 包了，对吧？在这种情况下，你可能更倾向于自己编写代码——至少你熟悉这种编码风格，并且知道这些代码的意图是什么。
 
@@ -11230,9 +10534,13 @@ PEAR 有三个主要的公共列表：
 通过 Web 前端安装 PEAR 包管理器，请遵循以下步骤：
 
 1. **将浏览器指向 `http://pear.php.net/go-pear`。**
+
    你的浏览器将以纯文本显示 PHP 源码。
+
 2. **选择文件 ➪另存为或文件 ➪保存页面为**（取决于你的浏览器）。将文件保存为 `go-pear.php`。
+
 3. **将刚刚保存的 `go-pear.php` 文件上传到你的服务器并在浏览器中打开。**
+
    例如，如果你的域名是 `my-application.com`，你应该打开 `http://my-application.com/go-pear.php`。
 
 不要忘记通过将 PEAR 目录的权限设置为 `0600` 或 `0644` 来保护服务器上的 PEAR 目录。如果你不确定使用哪一个，请询问你的系统管理员。
@@ -11256,7 +10564,9 @@ PEAR 有三个主要的公共列表：
 如果你倾向于使用 FTP（或其安全兄弟 SFTP 或 FTPS）来安装 PEAR 管理器，请遵循这些简单的步骤：
 
 1. **在安装 PEAR 管理器之前，确保你的本地机器上运行着 PHP `5.0` 或更高版本，并安装了 `openssl` 或 `ssh2` 扩展。**
+
    你需要在本地机器上使用 PHP，是因为你会在机器上创建并维护 PEAR 仓库的本地备份。你可以在本地对包进行更改（安装、更新和删除），并将远程主机同步到本地副本。
+
 2. **通过命令行输入以下命令，验证你的本地机器上已安装 PEAR 管理器的命令行界面版本：**
 
 ```bash
@@ -11264,22 +10574,19 @@ $ whereis pear
 ```
 
 你应该看到类似的结果的结果：
+
 `/usr/bin/pear`
 
-
-
-
-
 如果你没有看到这一行或类似的内容，说明你没有 PEAR 管理器。在继续之前，请在本地下载并安装管理器。请记住，你需要的是 `pear` 命令而不是 Web 界面。
-
-# 下载和安装 PEAR 包管理器
 
 3. **使用 PEAR 命令行安装程序在你的本地机器上安装 `PEAR_RemoteInstaller` 包，如下所示：** `$ pear install PEAR_RemoteInstaller`
 
 4. **验证你是否通过 `ftp` 拥有远程主机的写入权限。**
+
 你可以通过一种简单的方法来测试此权限——如果你可以通过 `ftp` 登录到远程主机，并创建或上传一个文件，说明你一切就绪了。
 
 5. **找到你主目录的完整路径。**
+
 如果你不知道主目录的完整路径，请将以下脚本上传到你的 Web 主机。运行此脚本，它将显示你主目录的完整路径：
 
 ```php
@@ -11289,15 +10596,19 @@ echo dirname(__FILE__);
 ```
 
 6. **为本地机器和远程主机创建自定义配置文件。**
+
 要创建此文件，你需要选择一个存储本地仓库的位置，例如 Windows 上的 `C:\PEAR` 或 Linux、Unix 或 Mac 上的 `/home/username/PEAR`。创建本地目录，然后进入该目录并运行 `pear config-create` 脚本。语法取决于你的本地仓库是在 Windows 还是 Linux/Unix/Mac 机器上。Windows 语法为 `pear config-create -w C:\remote\pear remote.ini`。在 Linux、Unix 或 Mac 上上，使用 `config-create /home/mylocaluser/remote.conf` 格式。最后，再次运行 `config-create` 脚本为远程主机创建配置文件：`pear config-create /home/username/pear .pearrc`。
 
 7. **将远程配置文件 `.pearrc` 上传到你的远程主机。**
 
 8. **在本地配置文件中设置 `remote_config` 指向远程主机上 `.pearrc` 文件的位置。**
+
 最简单的方法是使用 `pear –c` 命令：`pear –c remote.ini config-set remote_config ftp://user:pass@myremotehost.com/.pearrc`。
+
 如果你的本地机器是 Linux/Unix/Mac 设备，请将 `remote.ini` 更改为 `remote.conf`。如果你使用的是安全 FTP，请将流协议从 `ftp://` 更改 `ftps://` 或 `ssh2.sftp://`。
 
 9. **使用 `remote-install`、`remote-uninstall`、`remote-upgrade` 和 `remote-upgrade-all` 命令管理你的包：** `$ pear remote_upgrade_all`
+
 这些命令的工作方式与对应的本地命令完全相同，但它们还会同步远程仓库。
 
 # 安装 PEAR 包
@@ -11309,20 +10620,31 @@ echo dirname(__FILE__);
 **图 2-3：** 记录用于安装过程的包名。
 
 ### 从命令行安装 PEAR 包
+
 打开命令行窗口（Windows）或 shell（Linux/Unix/Mac）并输入以下命令：
+
 `pear install package_name`
 
 如果你想使用的包状态不是稳定（stable），你必须通过以下方式之一强制安装：
 
 * **使用 `–beta` 标记：**
+
   `pear install package_name-beta`
+
 * **使用 `config-set` 命令设置首选状态：**
+
   `pear config-set preferred_state beta`
+
   `pear install package_name`
+
   `pear config-set preferred_state stable`
+
 * **使用 `-d` 切换设置首选状态：**
+
   `pear -d preferred_state=beta install package_name`
+
 * **强制安装：**
+
   `pear install -f package_name`
 
 你只需要启动安装并放松即可——PEAR 命令行安装程序会处理剩下的细节。
@@ -11332,47 +10654,59 @@ echo dirname(__FILE__);
 如果你处于共享主机环境且没有服务器的 shell 权限怎么办？你也可以使用 Web 前端执行包管理。首先，你需要按照以下步骤安装 Web 安装包：
 
 1. **从 PEAR 库下载 `.tar.gz` 格式的 `PEAR_Frontend_Web` 包。**
+
 2. **在你的 Web 根目录下创建一个名为 `PEAR_installer` 的目录（或其他你认为合理的其他名称）。**
+
 3. **将 `.tar.gz` 文件上传到你的 Web 主机。**
+
 4. **使用你的 FTP 客户端或文件管理器解压文件。**
+
 如果你的 FTP 客户端或文件管理器没有提供解压功能，你必须在本地解压，然后通过 FTP 将文件传输到服务器。
+
 5. **将你的 Web 浏览器指向你在步骤 2 中创建的目录。** 例如，如果你将目录命名为 `PEAR_installer` 且域名为 `example.com`，完整 URL 应该是 `http://www.example.com/PEAR_installer`。
+
 6. **点击左列的配置图标打开配置页面，验证安装程序发现了正确的路径。**
+
 如果路径不正确，配置页面为你提供了修复机会。
 
 使用包管理链接在你的服务器上安装、删除、升级和搜索已安装的包。Web 安装器为执行最常见的包管理任务提供了一个直观的界面。
 
 ### 通过 CVS 安装
+
 在正常开发中，你不需要通过 CVS 安装包。CVS 版本不是发布包，因此在支持或保证方面，它们只有几个警告外别无其他。最重要的是，CVS 版本没有来自维护者的支持，它们可能会破坏 PEAR 安装器中的 `UPGRADE` 功能。使用风险自负。
 
 虽然你已经准备好了且有些紧张，但在某些情况下你确实需要 CVS 版本：
+
 * 维护者针对你的特定应用程序向你推荐了它。
 * 你正在帮助开发该包。
 * 你绝对无法离开尚未进入最新发布版本的前沿功能。
 
 如果你决定使用 CVS 版本，请按照以下步骤获取：
+
 1. **获取以下必要的工具（如果你尚未拥有）：**
+
    * `autoconf` 版本 2.13。
    * `automake` 1.4 或更高版本。
    * `libtool` 1.4.x 或更高版本，但不是 1.4.2。
    * `bison` 1.28、1.35、1.75、2.0 或更高版本。
    * `flex` 2.5.4 版本，但不能更高。
    * 如果你正在帮助某个包的开发，你还需要 `re2c` 0.9.11 或更高版本，或 `HEAD` 0.12.0 或更高版本。
+
 2. **通过将以下代码放入你的 `/.cvsrc` 文件，在你的 Web 服务器或本地开发机上配置 CVS：**
+
 ```
 cvs -z3
 update -d -P
 checkout -P
 diff –u
 ```
+
 3. **从 PEAR CVS 服务器获取包：**
+
 ```
 cvs -d :pserver:cvsread@cvs.php.net:/repository
 checkout pear/package_name
 ```
-
-
-
 
 4. 确保 `package.xml` 文件中的文件集项与你现有的文件和目录结构匹配。
 
@@ -11387,13 +10721,13 @@ pear package *path to package.xml*
 在命令行中输入以下命令，使用 PEAR 安装器中的 `uninstall` 命令：
 
 ```bash
-pear uninstall *package\_name*
+pear uninstall *package_name*
 ```
 
 7. 像安装任何其他 PEAR 包一样，通过输入以下命令来安装新创建的包：
 
 ```bash
-pear install *package\_name*
+pear install *package_name*
 ```
 
 如果你以后决定安装该包的发布版本，务必先卸载 CVS 版本，以避免版本混淆。
@@ -11412,12 +10746,16 @@ Echo $today->getDate();
 
 务必阅读你安装的任何包的文档，以便了解哪些功能是可用的。很有可能，除非你想做非常独特的事情，否则你总能找到一个内置函数来完成任务。
 
-## 第 3 章：使用 XML 扩展
+# 第 3 章：使用 XML 扩展
 
-### 本章内容
+## 本章内容
+
 - 介绍文档对象模型 (DOM)
 - 使用 XML Schema 验证数据
 - 使用 XSLT 更改文档类型
+
+
+
 - 使用 XPath 搜索 XML 文档
 
 XML 是数据存储和处理工具的“瑞士军刀”。它小巧、便携，并且几乎可以完成你需要的任何事情（除了打开豆头罐）。
@@ -11425,10 +10763,13 @@ XML 是数据存储和处理工具的“瑞士军刀”。它小巧、便携，�
 本章将引导你了解使用 PHP 操作 XML 文档的细节，从文档对象模型（简称 DOM）开始。从那里，我们介绍了三个最著名的 XML 技术：XML Schema、XSLT 和 XPath。
 
 ### 理解文档对象模型
+
 文档对象模型 (DOM) 定义了 XML 的基本结构。PHP 的最新版本完全按照 W3C 在 `www.w3.org/dom` 发布的 DOM/XML 标准实现。
 
 ### 读取 DOM
+
 你可以通过两种方式从 DOM 中提取有用信息：
+
 - 遍历文档树
 - 按 ID 或名称进行搜索
 
@@ -11447,27 +10788,32 @@ foreach( $nodes as $item ) {
 如果你在 XML 文档结构中按 ID 划分关键元素，你可以使用 `getElementByID()` 函数进行更精确的搜索。只需将前一个示例中的 `getElementsByTagName()` 函数调用替换为 `getElementByID()` 即可。
 
 ### 写入 DOM
+
 你可能发现搜索 DOM 中的特定信息很有用，但当你使用 PHP 写入 DOM 时，它才会真正大放异彩。手动编写 XML 最多也是枯燥的。通过 PHP，你可以指定文档的结构，并让脚本执行将原始数据转换为 XML 的实际工作。PHP 内置的 XML 支持提供了许多工具，用于创建和填充 XML 文档：
+
 - `createElement()`：接受两个参数——名称和值
 - `createProcessingInstruction()`：插入处理指令
 - `createTextNode()`：创建文本节点
 - `createCDATASection()`：创建 CDATA 段
 - `createAttribute()`：创建属性
 
-例如，以下代码创建一个带有“War and Peace”元素的 文档：
+例如，以下代码创建一个带有“War and Peace”元素的文档：
 
 ```php
 $xmlDoc = new DOMDocument();
 $xmlDoc->appendChild(
     $xmlDoc->createElement('War and Peace')
-);```
+);
+```
 
 注意 `appendChild()` 函数的结果被添加到了文档中。
 
 ### 使用 Schema 进行验证
+
 `Schema` 是验证文档结构的 W3C 标准。使用 Schema 允许验证整个文档的有效性，也可以指定单个元素的类型。
 
 **示例 3-1：一个 Schema 文档**
+
 ```xml
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <xsd:annotation>
@@ -11501,6 +10847,7 @@ $xmlDoc->appendChild(
 ```
 
 **示例 3-1（继续）**
+
 ```xml
 <xsd:complexType name="SectionType">
     <xsd:sequence>
@@ -11521,14 +10868,9 @@ $xmlDoc->appendChild(
 </xsd:complexType>
 ```
 
-前面的代码列表包含了几个常见项。例如，标签 `<xsd:element name="linktitle2" type="xsd:string">`
+前面的代码列表包含了几个常见项。例如，标签 `<xsd:element name="linktitle2" type="xsd:string" minOccurs="0"/>` 定义了一个可以在相应的 XML 文档使用的元素。它还指定了数据类型（string）以及该数据类型必须出现的次数。在这种情况下，最小出现次数为 0（零），因此它是一个可选元素。此示例还定义了复杂类型，例如 `SectionType`，它们由较小的元素组成。
 
-
-
-
-`minOccurs="0"/>` 定义了一个可以在相应的 XML 文档使用的元素。它还指定了数据类型（string）以及该数据类型必须出现的次数。在这种情况下，最小出现次数为 0（零），因此它是一个可选元素。此示例还定义了复杂类型，例如 `SectionType`，它们由较小的元素组成。
-
-本书没有空间对 XML Schema 进行详尽介绍，因此请利用网络和书店中一些优秀的教程。由 Lucinda Dykes 和 Ed Tittel 出版的第 4 版《*XML For Dummies*（Wiley Publishing, Inc.）是一个很好的起点。
+本书没有空间对 XML Schema 进行详尽介绍，因此请利用网络和书店中一些优秀的教程。由 Lucinda Dykes 和 Ed Tittel 出版的第 4 版《XML For Dummies》（Wiley Publishing, Inc.）是一个很好的起点。
 
 创建好 schema 之后，就是时候使用它来验证传入的 XML 文档了。始终对进入你应用程序的任何 XML 进行验证，特别是来自外部源的。否则，你只是在盲目信任数据就是你预期的那样。信任可能是一种很好的美德，但在编写应用程序时并非如此！
 
@@ -11544,7 +10886,7 @@ $dom_object->schemaValidate("./my_schema.xsd");
 
 `schemaValidate()` 返回一个 `Boolean` 值：如果 XML 验证成功则返回 true，否则返回 false。
 
-## 第 3 章：使用 XML
+### 第 3 章：使用 XML
 
 在验证过程中遇到的错误会以 PHP 警告（warnings）的形式抛出，因此在生产环境中使用 `schemaValidate()` 之前，请确保已禁用警告。你不希望外部用户看到 XML 验证警告，因为这些警告通常包含敏感的服务器信息，例如你的 schema 文档的路径。
 
@@ -11557,20 +10899,26 @@ $dom_object->schemaValidate("./my_schema.xsd");
 PHP 内置了 `XSLT` 功能，只要在编译 PHP 时使用了 `--xsl` 关即可。要使用 PHP 的 `XSLT` 函数，请遵循以下步骤：
 
 1. 创建一个 `XSLTProcessor` 对象和一个 `DOM` 文档对象：
+
 ```php
 $xslt_processor = new XSLTProcessor();
 $DOMdocument = new DOMDocument();
 ```
+
 2. 将你的 `XSLT` 样式表导入到对象中：
+
 ```php
 $xslt_processor->importStylesheet("./stylesheet.xsl");
 ```
+
 3. 将你的 XML 文档转换为另一种格式：
+
 ```php
 $xslt_processor->transformToDoc($DOMdocument);
 $xslt_processor->transformToURI($DOMdocument, $uri);
 $xslt_processor->transformToXML($DOMdocument);
 ```
+
 要将 XML 转换为 HTML，请使用 `transformToXML()` 或 `transformToURI()` 方法。
 
 ## 使用 XPath 搜索 XML 文档
@@ -11607,14 +10955,19 @@ $xslt_processor->transformToXML($DOMdocument);
 如果你需要提取 Janet Valade 编写的每本书的标题，你可以遍历每本书并将作者元素与字符串“Janet Valade”进行比较。这种方法相当慢，而且你作为开发者必须花费额外的精力。与其重新发明这个轮子，不如使用 `XPath` 精确地找到你需要的信息。按照以下步骤使用 `XPath` 查找图书馆中有多少书是 Janet Valade 写的：
 
 1. 创建一个 `domXPath` 对象：
+
 ```php
 $xpath = new domXPath($dom_object);
 ```
+
 2. 在对象上执行 XPath 查询，返回一个结果数组：
+
 ```php
 $authors = $xpath->query("/library/book/author");
 ```
+
 3. 遍历数组以找到精确结果：
+
 ```php
 $found_books = 0;
 foreach ($authors as $author) {
@@ -11630,13 +10983,10 @@ print("Found " . $found_books . " books by Janet Valade.");
 ## 第 4 章：使用 GD 处理图像
 
 ### 本章
+
 - 配置 GD
 - 使用 GD 调整图像的大小和颜色
 - 使用 GD 在图像上添加文本
-
-
-
-
 
 但是，如果你需要根据页面内容包含更改的图像该怎么办？你可以创建几十个独立的图像文件，然后根据页面内容包含它们。但这种解决方案依赖于你能够预判所有需要的每张图像。这也是一种让你的文件系统充满几乎完全相同的文件的好方法。
 
@@ -11672,6 +11022,8 @@ WBMP Support enabled
 
 密切注意示例的最后三行。那些是系统支持的图像类型。要启用未列出的图像类型，你必须按照如下方式重新编译 `PHP` 并包含对其他图像类型的支持：
 
+
+
 ```
 ./configure ‘--with-gd’ ‘--with-png-dir=/usr’ ‘--with-jpeg-dir=/usr’ ‘--with-freetype-dir=/usr’ ‘--with-zlib-dir=/usr’
 ```
@@ -11681,7 +11033,7 @@ WBMP Support enabled
 `GD` 支持 `FreeType`、`Postscript` 和 `TrueType` 字体，这取决于你系统中安装的库。再次，从命令行检查如下例所示的 `phpinfo()`，查看你哪些可用。此示例的最后两行表示已启用 `FreeType` 支持。
 
 ```
-$php -r ‘phpinfo();’
+$ php -r ‘phpinfo();’
 
 phpinfo()
 
@@ -11706,37 +11058,15 @@ FreeType Linkage with freetype
 
 图像处理是非常消耗资源的，这可能会让你的应用程序运行得像爬行一样，甚至导致整个 Web 服务器崩溃。请务必在 `php.ini` 中设置足够高的 `memory_limit` 以避免此类问题。设置到多少才够高？遗憾的是，这取决于你的硬件以及你正在进行多少图像处理。你必须通过不断尝试调整 `memory_limit`，直到在你的系统中找到完美的平衡点。
 
-如果你允许用户上传自己的图像，调整大小将是你考虑的问题。你会有用户上传他们自己的图像，调整大小将是你考虑的问题。由于此，创建这些图像将耗费你一整天的时间，占用大量的存储空间，可能还会让你头疼。或者，你可以将百分比（以及其他一些信息）发送给 `GD`，让它动态创建饼图。
-
-图像处理是非常消耗资源的，这可能会让你的应用程序运行得像爬行一样，甚至导致整个 Web 服务器崩溃。请务必在 `php.ini` 中设置足够高的 `memory_limit` 以避免此类问题。设置到多少才够高？遗憾的是，这取决于你的硬件以及你正在进行多少图像处理。你必须通过不断尝试调整 `memory_limit`，直到在你的系统中找到完美的平衡点。
-
-如果你允许用户上传自己的图像，调整大小将是你考虑的问题。你会有用户上传他们自己的图像，调整大小将是你考虑的问题。由于此，创建这些图像将耗费你一整天的时间，占用大量的存储空间，可能还会让你头疼。或者，你可以将百分比（以及其他一些信息）发送给 `GD`，让它动态创建饼图。
-
-图像处理是非常消耗资源的，这可能会让你的应用程序运行得像爬行一样，甚至导致整个 Web 服务器崩溃。请务必在 `php.ini` 中设置足够高的 `memory_limit` 以避免此类问题。设置到多少才够高？遗憾的是，这取决于你的硬件以及你正在进行多少图像处理。你必须通过不断尝试调整 `memory_limit`，直到在你的系统中找到完美的平衡点。
-
-如果你允许用户上传自己的图像，调整大小将是你考虑的问题。你会有用户上传他们自己的图像，调整大小将是你考虑的问题。由于此，创建这些图像将耗费你一整天的时间，占用大量的存储空间，可能还会让你头疼。或者，你可以将百分比（以及其他一些信息）发送给 `GD`，让它动态创建饼图。
-
-图像处理是非常消耗资源的，这可能会让你的应用程序运行得像爬行一样，甚至导致整个 Web 服务器崩溃。请务必在 `php.ini` 中设置足够高的 `memory_limit` 以避免此类问题。设置到多少才够高？遗憾的是，这取决于你的硬件以及你正在进行多少图像处理。你必须通过不断尝试调整 `memory_limit`，直到在你的系统中找到完美的平衡点。
-
-如果你允许用户上传自己的图像，调整大小将是你考虑的问题。你会有用户上传他们自己的图像，调整大小将是你考虑的问题。由于此，创建这些图像将耗费你一整天的时间，占用大量的存储空间，可能还会让你头疼。或者，你可以将百分比（以及其他一些信息）发送给 `GD`，让它动态创建饼图。
-
-图像处理是非常消耗资源的，这可能会让你的应用程序运行得像爬行一样，甚至导致整个 Web 服务器崩溃。请务必在 `php.ini` 中设置足够高的 `memory_limit` 以避免此类问题。设置到多少才够高？遗憾的是，这取决于你的硬件以及你正在进行多少图像处理。你必须通过不断尝试调整 `memory_limit`，直到在你的系统中找到完美的平衡点。
-
-如果你允许用户上传自己的图像，调整大小将是你考虑的问题。你会有用户上传他们自己的图像，调整大小将是你考虑的问题。由于此，创建这些图像将耗费你一整天的时间，占用大量的存储空间，可能还会让你头疼。或者，你可以将百分比（以及其他一些信息）发送给 `GD`，让它动态创建饼图。
-
-图像处理是非常消耗资源的，这可能会让你的应用程序运行得像爬行一样，甚至导致整个 Web 服务器崩溃。请务必在 `php.ini` 中设置足够高的 `memory_limit` 以避免此类问题。设置到多少才够高？遗憾的是，这取决于你的硬件以及你正在进行多少图像处理。你必须通过不断尝试调整 `memory_limit`，直到在你的系统中找到完美的平衡点。
-
-如果你允许用户上传自己的图像，调整大小将是你考虑的问题。你会有用户上传他们自己的图像，调整大小将是你考虑的问题。由于此，创建这些图像将耗费你一整天的时间，占用大量的存储空间，可能还会让你头疼。或者，你可以将百分比（以及其他一些信息）发送给 `GD`，让它动态创建饼图。
-
 ### 颜色处理
 
-颜色是当你处理图像时非常实用的概念。在 Web 开发中，颜色通常通过红色、、、蓝、RGB。。。。
+颜色是当你处理图像时非常实用的概念。在 Web 开发中，颜色通常通过红色、绿色、蓝色、RGB 表示。
 
-颜色颜色是是是，，，。。。。。。。。。。。。。。。。。。。。。。。。。。。，，。，，。。。。。。。。。。。。。。章章，，，为了避免创建一个创建的图像，而不是红色。你更好的做法是告诉 `GD` “我想要这张图像，而不是红色。”
+颜色是为了避免创建一个创建的图像，而不是红色。你更好的做法是告诉 `GD` “我想要这张图像，而不是红色。”
 
 ### 通道
 
-在数字图形世界中，颜色被描述*通道*或*索引*。
+在数字图形世界中，颜色被描述为*通道*或*索引*。
 
 任何给定的图像至少有三个通道：每个用于红、绿、蓝。你通过在三个通道中放置十进制值来指定颜色的色调，如下所示。最后一列十六进制值是将十进制值转换为十六进制的简单转换。为什么？写六个十六进制字符比写九个十进制要容易。当数值到达计算机时，它们都会转换为二进制，所以我们人类选择并不重要。
 
@@ -11750,36 +11080,34 @@ FreeType Linkage with freetype
 使用颜色通道的一种常用方法是更改按钮的颜色。这样做，请遵循以下步骤：
 
 1.  使用 `ImageCreateTrueColor()` 方法创建一个图像句柄：
+
     ```php
     $image = imagecreatetruecolor(300, 150);
     ```
+
 2.  创建你想使用的颜色：
+
     ```php
     $red = imagecolorallocate($image, 255,0,0);
     $green = imagecolorallocate($image, 0,255,0);
     $blue = imagecolorallocate($image, 0,0,255);
     ```
+
 3.  使用 `imagefill()` 方法用选定的颜色填充图像：
+
     ```php
     if($color == ‘blue’) {
         $image = imagefill($image, 0, 0, $blue);
     } elseif ($color == ‘green’) {
+        $image = imagefill($image, 0, 0, $green);
+    } else {
+        $image = imagefill($image, 0, 0, $red);
+    }
     ```
-
-
-
-
-
-```php
-$image = imagefill($image, 0, 0, $green);
-} else {
-    $image = imagefill($image, 0, 0, $red);
-}
-```
 
 此时，`$image` 已经根据 `$color` 中存储的值填充了我们所需的任何颜色。
 
-使用 alpha 通道
+#### 使用 alpha 通道
 
 上一节描述了最后三个通道——红、绿、蓝。但那个难以捉摸的 alpha 通道呢？alpha 通道是预留用于过滤或掩码信息的 8 位通道。通常，它用于描述图形的透明度。值为 `10000000`（对于人类读者来说是 `128`）的 alpha 通道大约有 50% 的透明度。
 
@@ -11801,24 +11129,22 @@ $red = imagecolorallocatealpha($image, 255,0,0,64);
 
 首先，你可以使用 `ImageColorAt()` 函数检查图像中特定像素的颜色值：
 
-## 第 4 章
-
 ```php
-$color_index = ImageColorAt(image, x, y)
+$color_index = ImageColorAt($image, $x, $y)
 ```
 
-`ImageColorAt()` 需要三个参数：图像句柄、要检查的像素的 `x` 坐标和 `y` 坐标。它返回一个索引，你可以将该索引传递另一个函数 `ImageColorsForIndex()`，该函数会给你一个 RGB 值：
+`ImageColorAt()` 需要三个参数：图像句柄、要检查的像素的 `x` 坐标和 `y` 坐标。它返回一个索引，你可以将该索引传递给另一个函数 `ImageColorsForIndex()`，该函数会给你一个 RGB 值：
 
 ```php
 $color_values = ImageColorsForIndex($image, $color_index)
 ```
 
-其中 `$image` 是图像句柄，$color_index` 是 `ImageColorAt()` 函数的结果。`ImageColorsForIndex` 返回一个带有三个或四个键的数组（取决于你是否有 alpha 索引）：
+其中 `$image` 是图像句柄，`$color_index` 是 `ImageColorAt()` 函数的结果。`ImageColorsForIndex` 返回一个带有三个或四个键的数组（取决于你是否有 alpha 索引）：
 
-* Alpha：仅适用于 32 位图像
-* 红
-* 绿
-* 蓝
+*   Alpha：仅适用于 32 位图像
+*   红
+*   绿
+*   蓝
 
 你很有可能不会以单个像素为单位来操作颜色，但如果你想将图像中的绿色圆改为红色，这些函数将会非常有用。你只需要循环遍历像素，并在每次发现绿色像素时进行修改，如下例所示：
 
@@ -11838,10 +11164,10 @@ while($x <= $image_width) {
 
 在使用 GD 时会遇到的最常见任务之一是向图像添加文本，例如按钮图形。根据你想要使用的字体库，你需要这些函数之一：
 
-* `ImageString()` 使用五种内置的 GD 字体。
-* `ImageStringUp()` 垂直打印。
-* `ImageTTFText()` 使用 TrueType 字体。
-* `ImagePSText()` 使用 PostScript 字体。
+*   `ImageString()` 使用五种内置的 GD 字体。
+*   `ImageStringUp()` 垂直打印。
+*   `ImageTTFText()` 使用 TrueType 字体。
+*   `ImagePSText()` 使用 PostScript 字体。
 
 每个函数都需要一组略有不同的参数。（当然了，没有什么是简单的，对吧？）接下来的子节描述了每个 `Image` 函数的参数。
 
@@ -11849,19 +11175,25 @@ while($x <= $image_width) {
 
 `ImageString()` 函数使用以下参数：
 
-`ImageString($image, $font_number, $x, $y, $text, $text_color)`` 大部分参数应该是自显易懂的——`ImageString()` 需要一个图像句柄、使用的字体编号、在图像上放置文本的 `x` 和 `y` 坐标以及字体颜色。对于接下来的示例，假设你有一个（使用 `ImageCreateTrueColor()` 创建，如“通道”部分之前描述的）名为 `$image` 的图像。你想在图像的左上角用红色添加文本“hello world”。使用 `ImageString()` 的代码如下：
+`ImageString($image, $font_number, $x, $y, $text, $text_color)`
+
+大部分参数应该是自显易懂的——`ImageString()` 需要一个图像句柄、使用的字体编号、在图像上放置文本的 `x` 和 `y` 坐标以及字体颜色。对于接下来的示例，假设你有一个（使用 `ImageCreateTrueColor()` 创建，如“通道”部分之前描述的）名为 `$image` 的图像。你想在图像的左上角用红色添加文本“hello world”。使用 `ImageString()` 的代码如下：
 
 ```php
 if (!ImageString($image, 1, 0,0,'hello world',$red)) {
     die('could not add text to image');
 }
-```我们将方法调用封装在 `if()` 语句中，因为 `ImageString` 返回一个布尔值——成功为真，失败为假。
+```
+
+我们将方法调用封装在 `if()` 语句中，因为 `ImageString` 返回一个布尔值——成功为真，失败为假。
 
 #### 使用 `ImageTTFText()` 参数
 
 `ImageTTFText()` 有自己的一组参数：
 
-`ImageTTFText($image, $size, $angle, $x, $y, $text_color, $path_to_TT_Font, $text)`` 使用此示例，向图像添加“hello world”的代码为：
+`ImageTTFText($image, $size, $angle, $x, $y, $text_color, $path_to_TT_Font, $text)`
+
+使用此示例，向图像添加“hello world”的代码为：
 
 ```php
 $text_coordinates = ImageTTFText($image, 1,45,0,0,$red,'/fonts/myfont.ttf','hello world')
@@ -11890,10 +11222,9 @@ ImagePSText($image, 'hello world', $font, 50, $red, $white, 0,0);
 
 我们在短短的一个章节中包含了大量信息，但它足够让你开始了。当你准备好深入研究 GD 时，很好的起点是位于 www.php.net/manual/en/ref.image.php 的可用文档。
 
+## 第 4 章
 
-
-
-PHP 邮件扩展简单地为底层邮件服务器提供了一个良好的接口。需要澄清的是，PHP 邮件扩展实际上并不会处理发送电子邮件的任务。它们不需要这样做，因为几乎每个 Web 服务器都安装了邮件服务器。为什么要重复发明一个特别棘手的轮子（轮子）呢？然而，通过 PHP 直接向邮件服务器发送命令将非常复杂，而且是一个安全噩梦。这正是邮件扩展大显身手的地方。它们将通过邮件服务器发送消息的复杂性封装在了几个简单的函数调用中。
+PHP 邮件扩展简单地为底层邮件服务器提供了一个良好的接口。需要澄清的是，PHP 邮件扩展实际上并不会处理发送电子邮件的任务。它们不需要这样做，因为几乎每个 Web 服务器都安装了邮件服务器。为什么要重复发明一个特别棘手的轮子呢？然而，通过 PHP 直接向邮件服务器发送命令将非常复杂，而且是一个安全噩梦。这正是邮件扩展大显身手的地方。它们将通过邮件服务器发送消息的复杂性封装在了几个简单的函数调用中。
 
 ## 电子邮件
 
@@ -11903,10 +11234,10 @@ PHP 邮件扩展简单地为底层邮件服务器提供了一个良好的接口�
 
 为了通过 PHP 发送电子邮件，你要做的第一件事是检查本节列出的配置指令，以确保其配置正确。如果你运行的是标准的 Sendmail 安装，那么很有可能一切都准备就绪。但以防万一，这里是 PHP 邮件的配置指令：
 
-- `SMTP`: 默认值为“localhost”。你可以在 `php.ini` 文件中更改此设置。要了解如何修改 `php.ini` 中的设置，请参阅第四本书第 3 章。修改 `SMTP` 设置仅在 Windows 环境下是必要的。
-- `SMTP_port`: 默认值为 25。你可以在 `php.ini` 中更改此设置。再次，这种修改仅在 Windows 服务器上是必要的。运行 Mac、Linux 或 Unix 的服务器会自动检测正确的端口号。
-- `sendmail_from`: 默认值为 NULL。当从 Windows 发送邮件时，这是插入到 Header 中“From:” 和“Return-Path:” 字符串中的字符串。
-- `sendmail_path`: 默认值为 NULL。PHP 会尽力为你寻找 Sendmail，但如果你在非标准位置安装了 Sendmail，或者你正在使用其他邮件服务器，你应该修改 `sendmail_path` 设置。将默认值替换为 Sendmail 或另一个邮件服务器的路径。
+*   `SMTP`: 默认值为“localhost”。你可以在 `php.ini` 文件中更改此设置。要了解如何修改 `php.ini` 中的设置，请参阅第四本书第 3 章。修改 `SMTP` 设置仅在 Windows 环境下是必要的。
+*   `SMTP_port`: 默认值为 25。你可以在 `php.ini` 中更改此设置。再次，这种修改仅在 Windows 服务器上是必要的。运行 Mac、Linux 或 Unix 的服务器会自动检测正确的端口号。
+*   `sendmail_from`: 默认值为 NULL。当从 Windows 发送邮件时，这是插入到 Header 中“From:” 和“Return-Path:” 字符串中的字符串。
+*   `sendmail_path`: 默认值为 NULL。PHP 会尽力为你寻找 Sendmail，但如果你在非标准位置安装了 Sendmail，或者你正在使用其他邮件服务器，你应该修改 `sendmail_path` 设置。将默认值替换为 Sendmail 或另一个邮件服务器的路径。
 
 就是这样——你已经完成了，PHP 已经准备好发送电子邮件了。
 
@@ -11914,15 +11245,17 @@ PHP 邮件扩展简单地为底层邮件服务器提供了一个良好的接口�
 
 PHP 中的 `mail()` 函数非常直接。给它一个收件者、主题行和消息，它就发了。当然，`mail()` 也提供了指定许多更多 Header 的选项。以下是 `mail()` 接受的参数列表：
 
-- `To`: 电子邮件的接收者。你可以在这里放置多个接收者，用逗号分隔。
-- `Subject`: 主题行。确保这不包含换行符，否则邮件无法正常发送。
-- `Message`: 电子邮件的内容。
-- `Additional_headers`: 这是可选的，直接传递给邮件服务器。`Additional_headers` 数组允许你指定额外的 Header，例如 `cc`（抄送）、`bcc`（密抄）等。你设置的额外 Header 取决于你的邮件服务器。请参考你的邮件服务器文档查看它接受哪些额外 Header。
-- `Additional_parameters`: 另一个直接发送到邮件服务器的可选参数。它允许你将信封者等额外参数直接发送给 Sendmail。
+
+
+- `To`：电子邮件的接收者。你可以在这里放置多个接收者，用逗号分隔。
+- `Subject`：主题行。确保这不包含换行符，否则邮件无法正常发送。
+- `Message`：电子邮件的内容。
+- `Additional_headers`：这是可选的，直接传递给邮件服务器。`Additional_headers` 数组允许你指定额外的 Header，例如 `cc`（抄送）、`bcc`（密抄）等。你设置的额外 Header 取决于你的邮件服务器。请参考你的邮件服务器文档查看它接受哪些额外 Header。
+- `Additional_parameters`：另一个直接发送到邮件服务器的可选参数。它允许你将信封者等额外参数直接发送给 Sendmail。
 
 `mail()` 函数最基础（最常用）的用法如下：
 
-```
+```php
 $to = "sysadmin@example.com";
 $subj = "Intuder Alert!";
 $message = "Unauthorized access detected. You might want to look at the log.";
@@ -11930,11 +11263,12 @@ mail($to, $subj, $message);
 ```
 
 当然，你也可以将所有信息放在一行中：
+
 ```php
 mail("sysadmin@example.com", "Intuder Alert!", "Unauthorized access detected. You might want to look at the log.");
 ```
 
-但当你想要发送给多个接收者或你的消息超过了好几个单词时，将 `mail()` 函数放在同一行就会变得繁琐。前面的示例假设你正在向一个已知的接收者（在这种情况下是系统管理员）发送自动生成的消息。但如果你想向未知的接收者发送电子邮件呢，例如刚刚在你的网站上注册账户的新用户呢？在发送该电子邮件之前，你可能需要做几件事，例如验证用户的电子邮件地址并对发送的消息进行个性化。在这种情况下，先定义变量比将所有信息都放入函数调用要有意义得多。下面的代码示例演示了你如何向新用户发送欢迎邮件。为了简洁起见，我们假设你已经验证了 `POST` 数组中的所有数据。
+但当你想要发送给多个接收者或你的消息超过了好几个单词时，将 `mail()` 函数放在同一行就会变得繁琐。前面的示例假设你正在向一个已知的接收者（在这种情况下是系统管理员）发送自动生成的消息。但如果你想向未知的接收者发送电子邮件呢，例如刚刚在你的网站上注册账户的新用户呢？在发送该电子邮件之前，你可能需要做几件事，例如验证用户的电子邮件地址并对发送的消息进行个性化。在这种情况下，先定义变量比将所有信息都放入函数调用要有意义得多。下面的代码示例演示了你如何向新用户发送欢迎邮件。为了简洁起见，我们假设你已经验证了 `$_POST` 数组中的所有数据。
 
 ```php
 $to = $_POST['email'];
@@ -11951,10 +11285,10 @@ mail($to, $subject, $body);
 
 曾经几何，人们只期待简单的文本电子邮件。如今，用户期望电子邮件——尤其是企业发送的邮件——能与相关的网站一样美观且具有交互性。这意味着 PHP 优秀且简单易用的 `mail()` 函数是过时新闻了吗？完全不是！这意味着你必须出大杀器了：PEAR 的 `Mail_Mime` 包。你可以在 http://pear.php.net/package/Mail_Mime 获取 `Mail_Mime`。关于从 PEAR 安装包的更多信息，请参考本迷你书的第 2 章。`Mail_Mime` 需要比 `mail()`更多的参数：
 
-- `Text`: 消息的纯文本版本。
-- `HTML`: 消息的 HTML 版本。
-- `File`: 如果你想发送附件，请设置此项。
-- `Headers`: 自定义 Header 数组。
+- `Text`：消息的纯文本版本。
+- `HTML`：消息的 HTML 版本。
+- `File`：如果你想发送附件，请设置此项。
+- `Headers`：自定义 Header 数组。
 
 发送 MIME 编码的电子邮件还需要多个步骤，但结果是值得的。列表 5-1 提供了一个 MIME 编码电子邮件的示例。
 
@@ -11994,8 +11328,6 @@ $mail->send('postmaster@localhost', $headers, $body);
 
 使用 `Mail_Queue` 包需要你做一些准备工作。
 
-
-
 首先，你需要在数据库中建立一个表来存储队列中的消息，直到需要发送它们。接下来，如果你将所有配置信息放在一个单独的配置文件中，你的工作将会变得简单得多，你可以在需要队列或发送消息时随时包含该文件。
 
 最后，你将需要设置 cron job（定时任务）或其他方法来按计划发送队列中的消息。
@@ -12003,12 +11335,15 @@ $mail->send('postmaster@localhost', $headers, $body);
 这并没像听起来那么复杂——就像所有棘手的问题一样，你所做的只是将其拆分解为易于处理的小块：
 
 1. **建立一个数据库表来存储电子邮件消息和时间戳信息。**
+
    你需要在表中存储基础的邮件信息，如收件人、主题和消息内容。你可能还想跟踪消息创建的时间、发送时间、额外的标头（headers）等。
 
 2. **使用你喜欢的文本编辑器，创建一个像列表 5-2 所示的配置文件，以存储 `Mail_Queue` 所需的信息，包括数据库访问信息和邮件服务器选项。**
+
    请参阅本节稍后的列表 5-2。
 
 3. **编写一个发送电子邮件的脚本（列表 5-3 提供了一个脚本示例）。**
+
    你将通过 cron job 定期运行此脚本。
 
 4. **使用 `Mail_Queue` 类中的 `put()` 函数从应用程序内部向队列添加消息，如下代码所示：**
@@ -12022,6 +11357,7 @@ $queue->put($from, $to, $headers, $body);
 列表 5-2 是 `Mail_Queue` 的示例配置文件。我们将此文件命名为 `Mail_Queue_Config.php`。
 
 #### 列表 5-2：`Mail_Queue_Config.php` 文件
+
 ```php
 <?php
 
@@ -12040,7 +11376,6 @@ $mail_options['driver'] = 'smtp';
 $mail_options['host'] = 'smtp.example.com';
 $mail_options['port'] = 25;
 $mail_options['localhost'] = 'localhost'; // 可选
-Mail_smtp 参数
 $mail_options['auth'] = false;
 $mail_options['username'] = '';
 $mail_options['password'] = '';
@@ -12051,6 +11386,7 @@ $mail_options['password'] = '';
 列表 5-3 显示了发送队列消息的脚本。
 
 #### 列表 5-3：发送队列消息的脚本
+
 ```php
 <?php
 
@@ -12067,61 +11403,78 @@ $mail_queue->sendMailsInQueue($max);
 
 ?>
 ```
+
 真的非常简单！
 
 ### 访问 IMAP 和 mBox 邮箱
+
 发送邮件很有用，但你还可以进一步，为你的用户提供像 Hotmail 或 Gmail 那样的完整的 Web 体验。有三种协议允许用户访问其邮箱：
 
-- **POP3：** 邮局协议第 3 版（Post Office Protocol, version 3）。主要用于发送和下载电子邮件到如 Microsoft Outlook 之类的本地客户端。POP3 是之前章节中 `mail()` 函数使用的协议。
-- **IMAP：** 互联网消息访问协议（Internet Message Access Protocol）。旨在供那些在线访问邮箱并将消息存储在服务器的用户使用。
-- **mBox：** Unix 风格的邮箱。最初设计为用户直接访问的本地邮箱，现在仍在使用。
+- **POP3**：邮局协议第 3 版（Post Office Protocol, version 3）。主要用于发送和下载电子邮件到如 Microsoft Outlook 之类的本地客户端。POP3 是之前章节中 `mail()` 函数使用的协议。
+- **IMAP**：互联网消息访问协议（Internet Message Access Protocol）。旨在供那些在线访问邮箱并将消息存储在服务器的用户使用。
+- **mBox**：Unix 风格的邮箱。最初设计为用户直接访问的本地邮箱，现在仍在使用。
 
 #### 使用 Mail_IMAP 扩展
+
 `Mail_IMAP` 扩展包含许多函数，但日常使用只需要其中几个。我们为每个函数提供了代码示例。假设你有一个名为 `$imap` 的 `Mail_IMAP` 对象：
 
 - `connect()`：打开用户的邮箱，代码如下：
-  `$imap->connect(imap://user:password@mail.example.com:143/INBOX);`
-- `close()`：断邮箱断连接：
+
+  `$imap->connect('imap://user:password@mail.example.com:143/INBOX');`
+
+- `close()`：断开邮箱连接：
+
   `$imap->close();`
+
 - `getHeaders()`：获取邮箱中消息的标头：
+
   `$imap->getHeaders($message_id);`
+
 - `getBody()`：获取消息正文：
+
   `$imap->getBody($message_id);`
+
 - `messageCount()`：显示邮箱中的消息数量：
+
   `$x = $imap->messageCount();`
+
 - `delete()`：标记删除消息：
+
   `$imap->delete($message_id);`
+
 - `expunge()`：永久删除由 `delete()` 函数标记的消息：
+
   `$imap->expunge();`
 
 这七个函数允许你建立一个不错的 Web 邮件系统。如果你对使用 `Mail_IMAP` 扩展的其他功能感兴趣，可以深入此处：http://pear.php.net/manual/en/package.mail-imap.php。
 
 #### 使用 Mail_MBox 扩展
-`Mail_MBox` 与 `Mail_IMAP` ，提供一组与用户邮箱交互的函数。访问邮箱的基本流程如下：
+
+`Mail_MBox` 与 `Mail_IMAP` 一样，提供一组与用户邮箱交互的函数。访问邮箱的基本流程如下：
 
 1. 实例化 `Mail_Mbox` 对象并填充用户 mBox 的路径，如下所示：
+
    `$mbox = new Mail_Mbox('/home/user1/mbox');`
+
 2. 调用 `open()` 函数打开 mBox：
+
    `$mbox->open();`
+
 3. 通过 `get()` 函数检索消息。`size()` 函数可以告诉你每条消息的大小，在这里也很有用：
-   `$number_of_messages = $mbox->size();`
-   `for($x=0; $x <= $number_of_messages; $x++) {`
-   `$mbox->get($x);`
-   `}`
+
+   ```php
+   $number_of_messages = $mbox->size();
+
+   for($x=0; $x <= $number_of_messages; $x++) {
+       $mbox->get($x);
+   }
+   ```
+
 4. 调用 `close()` 函数关闭 mBox：
+
    `$mbox->close();`
 
 `Mail_Mbox` 还提供了通过 `insert()` 函数向 mBox 添加消息以及通过 `remove()` 函数移除消息的功能。
-
-
-
-HTML 表单对于交互式 Web 网站非常重要。在你之前的经验中，你可能已经在网页上显示过静态的 HTML 表单。
-
-也就是说，内容是预定义的且无法改变的单。在本节中，你将看到如何通过 PHP 脚本显示静态 HTML 表单。
-
-![Image 67](img/index-499_1.jpg)
-
-34_167779 bk06ch01.qxp 12/17/07 8:55 PM Page 470
 
 # 使用静态 HTML 表单
 
@@ -12129,21 +11482,21 @@ HTML 表单对于交互式 Web 网站非常重要。在你之前的经验中，�
 
 要使用 PHP 显示表单，你可以采取以下方法之一：
 
-✦ **使用 `echo` 语句输出表单的 HTML 代码。** 例如：
+- **使用 `echo` 语句输出表单的 HTML 代码。** 例如：
 
 ```php
 <?php
 
-echo “<form action=’process_form.php’
-method=’POST’>\\n
-<input type=’text’ name=’fullname’ />\\n
-<input type=’submit’ value=’Submit Name’ />\\n
-</form>\\n”;
+echo "<form action='process_form.php'
+method='POST'>\n
+<input type='text' name='fullname' />\n
+<input type='submit' value='Submit Name' />\n
+</form>\n";
 
 ?>
 ```
 
-✦ **在 PHP 区域之外使用原生 HTML。** 对于纯静态表单，没有理由将其包含在 PHP 区域中。例如：
+- **在 PHP 区域之外使用原生 HTML。** 对于纯静态表单，没有理由将其包含在 PHP 区域中。例如：
 
 ```php
 <?php
@@ -12152,10 +11505,10 @@ statements in PHP section
 
 ?>
 
-<form action=”process_form.php” method=”POST”>
+<form action="process_form.php" method="POST">
 
-<input type=”text” name=”fullname” />
-<input type=”submit” value=”Submit Name” />
+<input type="text" name="fullname" />
+<input type="submit" value="Submit Name" />
 </form>
 
 <?php
@@ -12175,8 +11528,6 @@ statements in PHP section
 
 Joe Customer 填写了 HTML 表单。他点击了“Submit Name”按钮。现在得到了想要的信息——他的名字。那么，信息在哪里？你如何获取它？
 
-34_167779 bk06ch01.qxp 12/17/07 8:55 PM Page 471
-
 你通过运行一个接收表单信息的脚本来获取表单信息。当用户点击提交按钮时，PHP 会自动运行脚本。表单标签中的 `action` 参数告诉 PHP 运行哪个脚本。
 
 例如，在前面的脚本中，参数 `action=process_form.php` 告诉 PHP 在用户点击提交按钮运行时名为 `process_form.php` 的脚本。`action` 属性中提供的脚本名称可以是你编写的任何脚本，用于显示、存储或其他使用表单提交时接收到的表单数据。你可以使用任何有效的 PHP 脚本名称对其命名。
@@ -12184,8 +11535,6 @@ Joe Customer 填写了 HTML 表单。他点击了“Submit Name”按钮。现�
 当用户点击提交按钮时，`action` 属性指定的脚本就会运行，该脚本中的语句可以从 PHP 内置数组获取表单信息，并在 PHP 语句中使用这些信息。包含表单信息的内置数组是 `$_POST`、`$_GET` 和 `$_REQUEST`，它们是全局数组（superglobal arrays），即可以在脚本任何地方使用的特殊用途数组。
 
 当表单使用 POST 方法时，表单字段的信息存储在 `$_POST` 数组中。`$_GET` 数组包含作为 URL 部分传递的变量，包括通过 GET 方法从表单传递的字段。`$_REQUEST` 数组包含通过 `$_POST` 和 `$_GET` 同时传递的变量。
-
-
 
 使用单独的文件来维护和修改脚本会更容易。当你想要更改表单的外观时，只需要编辑包含定义表单代码的文件。你不会意外改变脚本的逻辑。同样地，你可以在不影响表单外观的情况下更改脚本的逻辑。此外，如果你需要在脚本的不同位置显示表单，只需要在需要显示的地方包含定义该表单的文件即可。你不需要将显示表单的全部代码都添加到你的 PHP 脚本中。
 
@@ -12220,6 +11569,8 @@ include("form_English.inc");
 表单脚本包含了 HTML 和 CSS 代码，这些代码用于显示包含表单的 Web 页面。网页的外观和感觉在该文件中定义。列表 1-3 显示了列表 1-2 中的逻辑脚本所包含的文件，其目的是显示一个收集 Web 访客电话号码的表单。
 
 ### 列表 1-3：一个定义表单的脚本
+
+
 
 ```php
 <?php
@@ -12273,9 +11624,6 @@ echo "<input type='submit' value='$submit' />";
 </html>
 ```
 
-
-
-
 # 478 显示动态 HTML 表单
 
 如果你在数据库中存储了用户信息，你可能希望将数据库中的信息显示在表单字段中。例如，你可能会向用户显示这些信息，以便他们进行任何更改。或者，你可能会显示客户上次在线订单的收货地址，这样他们就不需要重新输入地址。列表 1-4 显示了 `form_phone_values_db.inc` 文件，该文件包含了显示带有数据库信息的表单的代码。此表单与图 1-2 显示的表单相似，不同在于此表单包含了信息（从数据库检索），而表单字段是空的。
@@ -12294,28 +11642,28 @@ echo "<input type='submit' value='$submit' />";
 * 姓名和电话号码，并将它们显示在表单中。
 */
 
-$labels = array ( “first_name” => “First Name”,
-“middle_name” => “Middle Name”,
-“last_name” => “Last Name”,
-“phone” => “Phone”);
-$submit = “Submit Phone Number”;
-$last_name = “Contrary”; // 用户名
+$labels = array ( "first_name" => "First Name",
+"middle_name" => "Middle Name",
+"last_name" => "Last Name",
+"phone" => "Phone");
+$submit = "Submit Phone Number";
+$last_name = "Contrary"; // 用户名
 
-include(“dbstuff.inc”);
+include("dbstuff.inc");
 
 $cxn = mysqli_connect($host,$user,$passwd,$databname)
-or die (“couldn’t connect to server”);
-$query = “SELECT * FROM phone
-WHERE last_name='$last_name’”;
+or die ("couldn't connect to server");
+$query = "SELECT * FROM phone
+WHERE last_name='$last_name'";
 $result = mysqli_query($cxn,$query)
-or die (“Couldn’t execute query.”);
+or die ("Couldn't execute query.");
 $customer = mysqli_fetch_assoc($result);
 
 ?>
 
 <html>
 <head><title>Customer Phone Number</title>
-<style type=’text/css’>
+<style type='text/css'>
 <!--
 #form {
 margin: 1.5em 0 0 0;
@@ -12334,22 +11682,22 @@ text-align: right;
 </head>
 <body>
 <h3>Please enter your phone number below.</h3>
-<form action=’process_form.php’ method=’POST’>
-<div id=’form’>
+<form action='process_form.php' method='POST'>
+<div id='form'>
 <?php
 /* 显示表单字段的循环 */
 foreach($labels as $field => $label)
 {
-echo “<div id=’field’><label for=’$field’>$label</label>
-<input id=’$field’ name=’$field’ type=’text’
-size=’50%’ maxlength=’65’
-value={$customer[$field]} /> </div>\\n”;
+echo "<div id='field'><label for='$field'>$label</label>
+<input id='$field' name='$field' type='text'
+size='50%' maxlength='65'
+value={$customer[$field]} /> </div>\n";
 }
-echo “</div>\\n”;
-echo “<input style=’margin-left: 33%’ type=’submit’
-value=’$submit’ />\\n”;
+echo "</div>\n";
+echo "<input style='margin-left: 33%' type='submit'
+value='$submit' />\n";
 ?>
-</form></</body>
+</form></body>
 </html>
 ```
 
@@ -12358,6 +11706,7 @@ value=’$submit’ />\\n”;
 差异显示如下几所示：
 
 - 第 12–20 行创建了一个数组，存储从数据库检索的姓名和电话号码。第 12 行存储了一个用户姓氏，用于从数据库检索信息。第 13 行包含了一个包含连接数据库时所需的用户名、密码和数据库名的文件。第 14–20 行检索姓名和地址并存储在 `$customer` 数组中。
+
 - 这一行为 `<input>` 标签添加 `value` 属性，以便在表单字段中显示值。
 
 图 1-3 显示了列表 1-4 脚本生成的网页。表单中的信息是存储在数据库中的信息。
@@ -12367,6 +11716,7 @@ value=’$submit’ />\\n”;
 **图 1-3:** 显示用户名和电话号码的表单。
 
 当用户点击图 1-3 显示的表单中的提交按钮时，`process_form.php` 脚本将运行并显示以下内容：
+
 1. `first_name = Mary`
 2. `middle_name = Quite`
 3. `last_name = Contrary`
@@ -12408,40 +11758,37 @@ HTML 中可以使用的一种字段类型是选择列表。用户不再在字段
 
 <html>
 <head><title>Categories</title></head>
-<<body>
+<body>
 <?php
-include(“dbstuff.inc”);
+include("dbstuff.inc");
 $cxn = mysqli_connect($host,$user,$password,$database)
-or die (“couldn’t connect to server”);
-$query = “SELECT DISTINCT cat FROM Product ORDER BY cat”;
+or die ("couldn't connect to server");
+$query = "SELECT DISTINCT cat FROM Product ORDER BY cat";
 $result = mysqli_query($cxn,$query)
-or die (“Couldn’t execute query.”);
+or die ("Couldn't execute query.");
 /* 创建包含选择列表的表单 */
-echo “<form action=’process_form.php’ method=’POST’
-style=’margin-left: 2em’>
-<label for=’cat’
-style=’font-weight: bold’>Category:</label>
-<select id=’cat’ name=’cat’
-style=’margin-top: 3em’>\\n”;
+echo "<form action='process_form.php' method='POST'
+style='margin-left: 2em'>
+<label for='cat'
+style='font-weight: bold'>Category:</label>
+<select id='cat' name='cat'
+style='margin-top: 3em'>\n";
 while($row = mysqli_fetch_assoc($result))
 {
 extract($row);
-echo “<option value=’$cat’>$cat</option>”;
+echo "<option value='$cat'>$cat</option>";
 }
-echo “</select>\\n”;
-echo “<input type=’submit’ style=’margin-left: 3em’
-value=’Select category’ />
-</form>\\n”;
+echo "</select>\n";
+echo "<input type='submit' style='margin-left: 3em'
+value='Select category' />
+</form>\n";
 ?>
 </body>
 </html>
 ```
 
-
-
-
-
 ## 在查询中使用 DISTINCT
+
 `DISTINCT` 导致查询每个类别只出现一次。如果没有 `DISTINCT`，如果某个类别在数据库中出现多次，查询将返回多次该类别。
 
 ![Image 72](img/index-512_1.jpg)
@@ -12449,91 +11796,102 @@ value=’Select category’ />
 ## 显示动态 HTML 表单
 
 ### 在查询中使用 ORDER BY
+
 类别按字母顺序排序。
 
 ### 循环之前的 echo 语句
+
 `<form>` 和 `<select>` 标签在 `while` 循环开始之前被 `echo` 输出了，因为它们只需要 `echo` 一次。
 
 ### 循环中的 echo 语句
+
 `<option>` 标签在循环中被 `echo` 输出 —— 数据库中的每个类别对应一个。没有项目被标记为选中，因此列表中的第一个项目会被自动选中。
 
 ### 循环后的 echo 语句
+
 结束标签 `</form>` 和 `</select>` 标签在循环结束后被 `echo` 输出，因为它们只需要 `echo` 一次。
 
 此脚本生成的选择列表比图 1-5 中之前显示的 **第六卷** 选择列表长，因为数据-**第 1 章**数据库中有更多的类别。在此脚本中选中了“衣服”选项，是因为它是列表中的第一个**动态表单**项目 —— 而而不是因为它像在生成图 1-5 的 HTML 标签 **构建与** **处理** 中那样被特意选中的。此脚本生成的下拉列表按字母顺序排列，如图 1-6 所示。
 
 **图 1-6：**
+
 目录的动态选择列表。
 
 你还可以使用 PHP 变量来设置当选择框显示时选中哪个选项。例如，假设你想让用户从月、日、年选择列表中选择日期。你认为大多数人会选择今天的日期，因此你希望在选择框显示时默认选中今天的日期。列表 1-6 显示了文件 `form_date.inc`，它显示了一个选择日期的表单并自动选中今天的日期。
 
-要显示此表单，你需要运行列表 1-2 显示的 `displayForm.php` 脚本，并将脚本中的 `include` 语句改为：`include(“form_date.inc”)`。
+要显示此表单，你需要运行列表 1-2 显示的 `displayForm.php` 脚本，并将脚本中的 `include` 语句改为：`include("form_date.inc")`。
 
 这包含了由列表 1-6 代码生成的显示表单的文件。
 
 ### 列表 1-6：构建日期选择列表
+
 ```php
 <?php
 /* Program name: form_date.inc
 * Description: Code displays a selection list that
 * customers can use to select a date.
 */
-echo “<html>
+echo "<html>
 <head><title>Select a date</title></head>
-<body>”;
+<body>";
 
-$monthName = array(1 => “January”, “February”, “March”,
-“April”, “May”, “June”, “July”,
-“August”, “September”, “October”,
-“November”, “December”);
-$today = time(); //stores today’s date
-$f_today = date(“M-d-Y”,$today); //formats today’s date echo “<div style = ‘text-align: center’\n”;
+$monthName = array(1 => "January", "February", "March",
+"April", "May", "June", "July",
+"August", "September", "October",
+"November", "December");
+$today = time(); //stores today's date
+$f_today = date("M-d-Y",$today); //formats today's date
+echo "<div style = 'text-align: center'\n";
 
-echo “<h3>Today is $f_today</h3><hr />\n”; echo “<form action=’process_form.php’ method=’POST’\n”;
+echo "<h3>Today is $f_today</h3><hr />\n";
+echo "<form action='process_form.php' method='POST'\n";
 
 /* build selection list for the month */
-$todayMO = date(“n”,$today); //get the month from $today echo “<select name=’dateMonth’>\n”;
+$todayMO = date("n",$today); //get the month from $today
+echo "<select name='dateMonth'>\n";
 
 for ($n=1;$n<=12;$n++)
 {
-echo “ <option value=$n”;
+echo " <option value=$n";
 if ($todayMO == $n)
 {
-echo “ selected”;
+echo " selected";
 }
-echo “ > $monthName[$n]\n</option>”;
+echo " > $monthName[$n]\n</option>";
 }
-echo “</select>\\n”;
+echo "</select>\n";
 
 /* build selection list for the day */
-$todayDay= date(“d”,$today); //get the day from $today echo “<select name=’dateDay’>\n”;
+$todayDay= date("d",$today); //get the day from $today
+echo "<select name='dateDay'>\n";
 
 for ($n=1;$n<=31;$n++)
 {
-echo “ <option value=$n”;
+echo " <option value=$n";
 if ($todayDay == $n )
 {
-echo “ selected”;
+echo " selected";
 }
-echo “ > $n</option>\n”;
+echo " > $n</option>\n";
 }
 
-echo “</select>\\n”;
+echo "</select>\n";
 
 /* build selection list for the year */
-$startYr = date(“Y”, $today); //get the year from $today echo “<select name=’dateYear’>\n”;
+$startYr = date("Y", $today); //get the year from $today
+echo "<select name='dateYear'>\n";
 
 for ($n=$startYr;$n<=$startYr+3;$n++)
 {
-echo “ <option value=$n”;
+echo " <option value=$n";
 if ($startYr == $n )
 {
-echo “ selected”;
+echo " selected";
 }
-echo “ > $n</option>\n”;
+echo " > $n</option>\n";
 }
-echo “</select>\\n”;
-echo “</form></div>\n”;
+echo "</select>\n";
+echo "</form></div>\n";
 ?>
 </body></html>
 ```
@@ -12541,200 +11899,41 @@ echo “</form></div>\n”;
 列表 1-6 代码生成的网页如图 1-7 所示。月份选择列表显示数字。日期的选择列表显示日期。年份选择列表显示年份。
 
 ## 构建单选按钮列表
+
 你可能想使用单选按钮而不是选择列表。例如，你可以为你的目录类别显示单选按钮列表，并让用户选择他们感兴趣的类别的按钮。
 
 单选按钮的格式为 `<input=”radio” name=”**” value=”***`。你可以按照之前构建动态选择相同的方式，构建一个代表数据库中所有类别的动态单选按钮列表。列表 1- 显示了 `formform_radio.`，这是一个基于数据库中类别的单选按钮列表。
 
 ### 列表 1-7：构建单选按钮列表
+
 ```php
 <?php
 /* Program name: form_radio.inc
 * Description: Program displays a list of radio
 * buttons from database info.
 */
-echo “<html>
+echo "<html>
 <head><title>Radio Buttons</title></head>
-<body>”;
+<body>";
 ```
 
 
-
-
-
-```php
-include(“dbstuff.inc”);
-
-$cxn = mysqli_connect($host,$user,$password,$database) or die (“Couldn’t connect to server”);
-
-$query = “SELECT DISTINCT cat FROM Product ORDER BY cat”;
-
-$result = mysqli_query($cxn,$query) or die (“Couldn’t execute query.”);
-
-echo “<div style=’margin-left: .5in; margin-top: .5in’>
-<p style=’font-weight: bold’>您对哪种产品感兴趣?</p>
-<p>请从以下列表中选择一个类别：</p>\\n”;
-
-/* 创建包含单选按钮的表单 */
-echo “<form action=’process_form.php’ method=’POST’\\n”; *(续)*
-```显示动态 HTML 表单
-
-**列表 1-7（续）**
-
-```php
-while($row = mysqli_fetch_assoc($result))
-{
-    extract($row);
-    echo “<input type=’radio’ name=’category’ value=’$cat’ />$cat\\n”;
-    echo “<br />\\n”;
-}
-echo “<p><input type=’submit’ value=’Select category’ /></form></div>\\n”;
-?>
-</body></html>
-```
-
-此文件生成的 Web 页面如图 1-8 所示。
-
-**图 1-8：** 由 `form_radio.inc` 中的代码生成的单选按钮列表。
-
-## 构建复选框列表
-
-你可能想在表单中使用复选框。复选框与选择列表和单选按钮不同，它们允许用户选择多个选项。例如，如果你用复选框显示产品类别列表，用户可以选择两个、三个或更多类别。
-
-列表 1-8 中的文件 `form_checkbox.inc` 创建了一了一个复选框列表。要显示此表单，你需要运行列表 1-2 所示的脚本 `displayForm.php`，并将脚本中的 `include` 语句改为 `include(“form_checkbox.inc”);`。这包含了显示列表 1-8 代码生成的表单的文件。
-
-**列表 1-8：构建复选框列表**
-
-```php
-<?php
-/* 程序名: form_checkbox.inc
-* 描述: 程序从数据库信息中显示
-* 复选框列表。 */
-echo “<html>
-<head><title>复选框</title></head>
-<body style=’margin: .5in’>”;
-include(“dbstuff.inc”);
-$cxn = mysqli_connect($host,$user,$passwd,$databname) or die (“couldn’t connect to server”);
-$query = “SELECT DISTINCT cat FROM Product ORDER BY cat”;
-$result = mysqli_query($cxn,$query) or die (“Couldn’t execute query.”);
-echo “<h3>您对哪些产品感兴趣？ <span style=’font-size: 80%; font-weight: normal’>(可根据需要勾选)</span></h3>\\n”;
-/* 创建包含复选框的表单 */
-echo “<fieldset>
-<legend style=’font-weight: bold’>产品</legend>
-<form action=’process_form.php’ method=’POST’>
-<ul style=’list-style: none’>\\n”;
-while($row = mysqli_fetch_assoc($result))
-{
-    extract($row);
-    echo “<li><input type=’checkbox’ name=’interest[$cat]’ id=’$cat’ value=’$cat’ /><label for=’$cat’ style=’font-weight: bold’>$cat</label></li>\\n”;
-}
-echo “</ul></fieldset>
-echo “<p><input type=’submit’ value=’Select Categories’ ?></p></form></body></html>";
-?>
-```
-
-注意，输入字段使用 `$interest` 数组作为名称，因为可以选择多个复选框。此脚本会在数组中创建一个元素，为每个选中的复选框对应一个键/值对。例如，如果用户同时选了 `furniture` 和 `toys`，将创建如下数组：
-`$interest[Furniture]=Furniture`
-`$interest[Toys]=Toys`
-
-处理表单的脚本在 POST 数组中获取这些选择，如下：
-`$_POST['interest']['Furniture']`
-`$_POST['interest']['Toys']`
-
-**图 1-9：** 由 `form_checkbox.inc` 生成的 Web 页面。
-
-假设 Joe Customer 填写了一个 HTML 表单，从列表中选择并在文本字段中输入信息。当他点击提交按钮时，`<form>` 标签的 `action` 属性中的脚本（如 `action=process_form.php`）就会运行并接收来自表单的信息。处理表单信息是 PHP 优秀特性之一。你不需要担心表单数据——只需从内置数组中获取它并使用即可。表单数据在处理脚本中以诸如 `$_POST` 或 `$_GET` 数组的形式可用。数组元素的键是表单中输入字段的名称。例如，如果你在表单中输出以下字段 `echo “<input type=’text’ name=’firstName’ />”;`，处理脚本可以使用变量 `$_POST['firstName']`，它包含了用户在字段中输入的文本。
-
-用户从下拉列表或单选按钮选择的信息同样可以用于处理。例如，如果你的表单包含以下单选按钮列表，`echo “<input type=’radio’ name=’pet’ value=’dog’ />\\n”; echo “<input type=’radio’ name=’pet’ value=’cat’ />\\n”;，你可以访问 `$_POST['pet']`，它取决于用户选择了 `dog` 还是 `cat`。
-
-处理复选框的方式略有不同，因为用户可以选择多个。正如列表 1-8 所示，复选框的数据可以存储在数组中，以便所有复选框都可用。例如，如果你的表单包含以下复选框列表，`echo “<input type=’checkbox’ name=’interest[$dog]’ value=’dog’ />\\n”; echo “<input type=’checkbox’ name=’interest[$cat]’ value=’cat’ />\\n”;，你可以通过多维变量 `$_POST['interest']` 访问数据，其包含：
-`$_POST['interest']['dog']=dog`
-`$_POST['interest']['cat']=cat`
-
-现在你在 `$_POST` 或 `$_GET` 数组中获得了所需的所有信息。好吧，也许并不是。Joe Customer 可能输入了错误的信息、乱码，甚至输入了会对你或使用你网站的人造成问题的恶意信息。在使用这些信息存入数据库之前，你想对其进行检查以确保它是你想要的信息。
-
-检查数据被称为*验证*（validating）数据。验证包括：
-
-- **检查空字段**：你可以要求用户在字段中输入信息。如果字段为空，会通知用户该字段是必填的，然后重新显示表单以便用户输入缺失的信息。
-- **检查信息的格式**：你可以检查信息以确保其格式正确。例如，`ab3&*xx` 显然不是有效的邮政编码。检查格式对于识别安全问题也很重要。安全问题将在第四部分进行详细讨论。
-
-## 检查空字段
-
-当你创建表单时，可以决定哪些字段是必填的，哪些是可选的。你的决定在 PHP 脚本中实现。你检查需要信息的字段。如果必填字段为空，向用户发送消息指示该字段是必填的，然后重新显示表单。
-
-检查空字段的通用过程如下：
-
-```php
-if(empty($_POST['last_name']))
-{
-    echo “您没有输入姓氏。
-
-姓氏是必填的。<br />\\n”;
-    redisplay the form;
-    exit();
-}
-```
-
-
-
-
-
-注意 `if` 语句末尾的退出语句，它会停止脚本的执行。如果没有 `exit` 语句，脚本将继续执行 `if` 语句之后的语句。换句话说，如果没有 `exit` 语句，脚本将显示表单，然后继续 `echo` 欢迎语句和菜单。
-
-在许多情况下，你想检查表单中的所有字段。你可以通过遍历数组 `$_POST` 来实现这一点。以下语句检查数组中是否存在任何空字段：
-
-```php
-foreach($_POST as $value)
-{
-    if($value == "")
-    {
-        echo “You have not filled in all the fields.\n”;
-        redisplay the form;
-        exit();
-    }
-}
-echo “Welcome”;
-```
-
-当你重新显示 Web 表单时，请确保它包含了用户已经输入的信息。如果用户必须重新输入正确的信息，他们可能会感到很沮败并离开你的网站。
-
-在某些情况下，你可能要求用户填写大部分但不是所有的字段。例如，你可能在表单中要求传真号码，或者提供一个中间名字段，但你并不是真的想将你网站的注册限制在有中间名和传真号的用户。在这种情况下，你可以如下所示对非必需字段进行特殊处理：
-
-## 处理来自表单的信息
-
-```php
-foreach($_POST as $field => $value)
-{
-    if($field == "")
-    {
-        if($field != “fax” and $field != “middle_name”)
-        {
-            echo “You have not filled in $field\n”;
-            display the form;
-            exit();
-        }
-    }
-}
-echo “Welcome”;
-```
 
 # 第六卷
+
 ## 第一章
 
-注意，内部的 `if` 条件语句仅在字段既不是传真字段又不是中间名字段时才为真。对于这两个字段，脚本 **Dynamic Forms** 不会显示错误消息并停止。
-
-#### 构建与处理
+### 构建与处理
 
 作为一个示例，列表 1-9 和 1-10 显示并处理了本章之前显示的电话表单。列表 1-9 显示了 `form_phone_values.inc`，它包含表单的显示代码。逻辑代码显示在列表 1-10 中。
 
 逻辑代码既显示表单并处理表单中提交的信息。在单个脚本中执行这两个任务比创建两个单独的脚本更高效。要在脚本中处理提交的信息，`<form>` 标签的 `action` 属性指定了当前文件。你可以通过提供脚本名称来实现，也可以通过 PHP 提供的变量来指定当前文件，如下：
 
 ```html
-<form action=”$_SERVER['PHP_SELF']” method='POST’>
+<form action="$_SERVER['PHP_SELF']" method='POST'>
 ```
 
 `$_SERVER` 超全局数组中键名为 `PHP_SELF` 的元素包含了当前运行脚本的路径/文件名。
-
-列表 1-9 中的显示代码与列表 1-2 中的代码显示相同的表单。显示代码经过了微调。表单包含一个隐藏字段，用于列表 1-10 中的逻辑代码。
 
 ### 列表 1-9：显示带有隐藏字段的表单
 
@@ -12742,17 +11941,17 @@ echo “Welcome”;
 <?php
 /* Program name: form_phone_values.inc
 * Description: 定义一个表单来收集用户的
-*姓名和电话号码。
+* 姓名和电话号码。
 */
-$labels = array( “first_name” => “First Name”,
-“middle_name” => “Middle Name”,
-“last_name” => “Last Name”,
-“phone” => “Phone”);
-$submit = “Submit Phone Number”;
+$labels = array( "first_name" => "First Name",
+"middle_name" => "Middle Name",
+"last_name" => "Last Name",
+"phone" => "Phone");
+$submit = "Submit Phone Number";
 ?>
 <html>
 <head><title>Customer Phone Number</title>
-<style type=’text/css’>
+<style type='text/css'>
 <!--
 #form {
 margin: 1.5em 0 0 0;
@@ -12772,8 +11971,8 @@ text-align: right;
 <body>
 <h3>Please enter your phone number below.</h3>
 <?php
-echo “<form action=’$_SERVER[PHP_SELF]’ method=’POST’>
-<div id=’form’”;
+echo "<form action='$_SERVER[PHP_SELF]' method='POST'>
+<div id='form'";
 if(isset($message))
 {
     echo $message;
@@ -12781,21 +11980,19 @@ if(isset($message))
 /* 循环显示表单字段 */
 foreach($labels as $field => $label)
 {
-    echo “<div id=’field’><label for=’$field’>$label</label>
-<input id=’$field’ name=’$field’ type=’text’
-size=’50%’ maxlength=’65’
-value=’”.@$$field.”’ /></div>\n”;
+    echo "<div id='field'><label for='$field'>$label</label>
+<input id='$field' name='$field' type='text'
+size='50%' maxlength='65'
+value='".@$$field."' /></div>\n";
 }
-echo “<input type=’hidden’ name=’sent’ value=’yes’ />\n”; 
-echo “<input style=’margin-left: 33%’ type=’submit’
-value=’$submit’ />\n”;
+echo "<input type='hidden' name='sent' value='yes' />\n"; 
+echo "<input style='margin-left: 33%' type='submit'
+value='$submit' />\n";
 ?>
 </form></body></html>
 ```
 
 列表 1-9 中的显示代码与列表 1-2 中的代码显示相同的表单。显示代码经过了微调。表单包含一个隐藏字段，用于列表 1-10 中的逻辑代码。
-
-`<form>` 标签的 `action` 属性显示 `$_SERVER['PHP_SELF']`，它指定了当前脚本。在列表 1-10 显示的脚本解释中，以下数字指的是列表中的行号：
 
 `<form>` 标签的 `action` 属性显示 `$_SERVER['PHP_SELF']`，它指定了当前脚本。在列表 1-10 显示的脚本解释中，以下数字指的是列表中的行号：
 
@@ -12806,14 +12003,14 @@ value=’$submit’ />\n”;
 /* Program name: check.php
 * Description: 程序检查表单中的所有空字段。
 */
-if(isset($_POST['sent']) && $_POST['sent'] == “yes”)
+if(isset($_POST['sent']) && $_POST['sent'] == "yes")
 {
     /* 检查中间名以外的每个空字段 */
     foreach($_POST as $field => $value)
     {
         if($value == "")
         {
-            if($field != “middle_name”)
+            if($field != "middle_name")
             {
                 $blank_array[] = $field;
             } // 不是中间名
@@ -12823,26 +12020,26 @@ if(isset($_POST['sent']) && $_POST['sent'] == “yes”)
     /* 如果有任何字段为空，创建错误消息并重新显示表单 */
     if(@sizeof($blank_array) > 0)
     {
-        $message = “<p style=’color: red; margin-bottom: 0; font-weight: bold;>你没有填写一个或多个字段。必须填写：
-<ul style=’color: red; margin-top: 0; list-style: none’>”;
+        $message = "<p style='color: red; margin-bottom: 0; font-weight: bold;>你没有填写一个或多个字段。必须填写：
+<ul style='color: red; margin-top: 0; list-style: none'>";
         /* 显示缺失的信息 */
         foreach($blank_array as $value)
         {
-            $message .= “<li>$value</li>”;
+            $message .= "<li>$value</li>";
         }
-        $message .= “</ul>”;
+        $message .= "</ul>";
         
         /* 重新显示表单 */
         extract($good_data);
-        include(“form_phone_values.inc”);
+        include("form_phone_values.inc");
         exit();
     } // 如果字段为空
 
-    echo “所有必要字段都已填写。”;
+    echo "所有必要字段都已填写。";
 } // 如果提交
 else
 {
-    include(“form_phone_values.inc”);
+    include("form_phone_values.inc");
 }
 ?>
 ```
@@ -12856,46 +12053,203 @@ else
 - 行 15：不是中间名
 - 行 18：字段为空
 - 行 22：遍历 `$_POST`
-- 行 25：`if(@sizeof($blank_array) > 0)`
-- 行 40：`include(“form_phone_values.inc”);`
-- 行 41：`exit();`
-- 行 42：如果字段为空
-- 行 44：`echo “所有必要字段都已填写。”`
-- 行 46：`else`
+
+---
+
+### 显示动态 HTML 表单
+
+**列表 1-7（续）**
+
+```php
+while($row = mysqli_fetch_assoc($result))
+{
+    extract($row);
+    echo "<input type='radio' name='category' value='$cat' />$cat\n";
+    echo "<br />\n";
+}
+echo "<p><input type='submit' value='Select category' /></form></div>\n";
+?>
+</body></html>
+```
+
+此文件生成的 Web 页面如图 1-8 所示。
+
+**图 1-8：** 由 `form_radio.inc` 中的代码生成的单选按钮列表。
+
+### 构建复选框列表
+
+你可能想在表单中使用复选框。复选框与选择列表和单选按钮不同，它们允许用户选择多个选项。例如，如果你用复选框显示产品类别列表，用户可以选择两个、三个或更多类别。
+
+列表 1-8 中的文件 `form_checkbox.inc` 创建了一个复选框列表。要显示此表单，你需要运行列表 1-2 所示的脚本 `displayForm.php`，并将脚本中的 `include` 语句改为 `include("form_checkbox.inc");`。这包含了显示列表 1-8 代码生成的表单的文件。
+
+**列表 1-8：构建复选框列表**
+
+```php
+<?php
+/* 程序名: form_checkbox.inc
+* 描述: 程序从数据库信息中显示
+* 复选框列表。 */
+echo "<html>
+<head><title>复选框</title></head>
+<body style='margin: .5in'>";
+include("dbstuff.inc");
+$cxn = mysqli_connect($host,$user,$passwd,$databname) or die ("couldn't connect to server");
+$query = "SELECT DISTINCT cat FROM Product ORDER BY cat";
+$result = mysqli_query($cxn,$query) or die ("Couldn't execute query.");
+echo "<h3>您对哪些产品感兴趣？ <span style='font-size: 80%; font-weight: normal'>(可根据需要勾选)</span></h3>\n";
+/* 创建包含复选框的表单 */
+echo "<fieldset>
+<legend style='font-weight: bold'>产品</legend>
+<form action='process_form.php' method='POST'>
+<ul style='list-style: none'>\n";
+while($row = mysqli_fetch_assoc($result))
+{
+    extract($row);
+    echo "<li><input type='checkbox' name='interest[$cat]' id='$cat' value='$cat' /><label for='$cat' style='font-weight: bold'>$cat</label></li>\n";
+}
+echo "</ul></fieldset>
+echo "<p><input type='submit' value='Select Categories' ?></p></form></body></html>";
+?>
+```
+
+注意，输入字段使用 `$interest` 数组作为名称，因为可以选择多个复选框。此脚本会在数组中创建一个元素，为每个选中的复选框对应一个键/值对。例如，如果用户同时选了 `furniture` 和 `toys`，将创建如下数组：
+
+`$interest[Furniture]=Furniture`
+
+`$interest[Toys]=Toys`
+
+处理表单的脚本在 POST 数组中获取这些选择，如下：
+
+`$_POST['interest']['Furniture']`
+
+`$_POST['interest']['Toys']`
+
+**图 1-9：** 由 `form_checkbox.inc` 生成的 Web 页面。
+
+假设 Joe Customer 填写了一个 HTML 表单，从列表中选择并在文本字段中输入信息。当他点击提交按钮时，`<form>` 标签的 `action` 属性中的脚本（如 `action=process_form.php`）就会运行并接收来自表单的信息。处理表单信息是 PHP 优秀特性之一。你不需要担心表单数据——只需从内置数组中获取它并使用即可。表单数据在处理脚本中以诸如 `$_POST` 或 `$_GET` 数组的形式可用。数组元素的键是表单中输入字段的名称。例如，如果你在表单中输出以下字段 `echo "<input type='text' name='firstName' />";`，处理脚本可以使用变量 `$_POST['firstName']`，它包含了用户在字段中输入的文本。
+
+用户从下拉列表或单选按钮选择的信息同样可以用于处理。例如，如果你的表单包含以下单选按钮列表，`echo "<input type='radio' name='pet' value='dog' />\n"; echo "<input type='radio' name='pet' value='cat' />\n";`，你可以访问 `$_POST['pet']`，它取决于用户选择了 `dog` 还是 `cat`。
+
+处理复选框的方式略有不同，因为用户可以选择多个。正如列表 1-8 所示，复选框的数据可以存储在数组中，以便所有复选框都可用。例如，如果你的表单包含以下复选框列表，`echo "<input type='checkbox' name='interest[$dog]' value='dog' />\n"; echo "<input type='checkbox' name='interest[$cat]' value='cat' />\n";`，你可以通过多维变量 `$_POST['interest']` 访问数据，其包含：
+
+`$_POST['interest']['dog']=dog`
+
+`$_POST['interest']['cat']=cat`
+
+现在你在 `$_POST` 或 `$_GET` 数组中获得了所需的所有信息。好吧，也许并不是。Joe Customer 可能输入了错误的信息、乱码，甚至输入了会对你或使用你网站的人造成问题的恶意信息。在使用这些信息存入数据库之前，你想对其进行检查以确保它是你想要的信息。
+
+检查数据被称为*验证*（validating）数据。验证包括：
+
+- **检查空字段**：你可以要求用户在字段中输入信息。如果字段为空，会通知用户该字段是必填的，然后重新显示表单以便用户输入缺失的信息。
+- **检查信息的格式**：你可以检查信息以确保其格式正确。例如，`ab3&*xx` 显然不是有效的邮政编码。检查格式对于识别安全问题也很重要。安全问题将在第四部分进行详细讨论。
+
+### 检查空字段
+
+当你创建表单时，可以决定哪些字段是必填的，哪些是可选的。你的决定在 PHP 脚本中实现。你检查需要信息的字段。如果必填字段为空，向用户发送消息指示该字段是必填的，然后重新显示表单。
+
+检查空字段的通用过程如下：
+
+```php
+if(empty($_POST['last_name']))
+{
+    echo "您没有输入姓氏。
+
+姓氏是必填的。<br />\n";
+    redisplay the form;
+    exit();
+}
+```
+
+注意 `if` 语句末尾的退出语句，它会停止脚本的执行。如果没有 `exit` 语句，脚本将继续执行 `if` 语句之后的语句。换句话说，如果没有 `exit` 语句，脚本将显示表单，然后继续 `echo` 欢迎语句和菜单。
+
+在许多情况下，你想检查表单中的所有字段。你可以通过遍历数组 `$_POST` 来实现这一点。以下语句检查数组中是否存在任何空字段：
+
+```php
+foreach($_POST as $value)
+{
+    if($value == "")
+    {
+        echo "You have not filled in all the fields.\n";
+        redisplay the form;
+        exit();
+    }
+}
+echo "Welcome";
+```
+
+当你重新显示 Web 表单时，请确保它包含了用户已经输入的信息。如果用户必须重新输入正确的信息，他们可能会感到很沮败并离开你的网站。
+
+在某些情况下，你可能要求用户填写大部分但不是所有的字段。例如，你可能在表单中要求传真号码，或者提供一个中间名字段，但你并不是真的想将你网站的注册限制在有中间名和传真号的用户。在这种情况下，你可以如下所示对非必需字段进行特殊处理：
+
+### 处理来自表单的信息
+
+```php
+foreach($_POST as $field => $value)
+{
+    if($field == "")
+    {
+        if($field != "fax" and $field != "middle_name")
+        {
+            echo "You have not filled in $field\n";
+            display the form;
+            exit();
+        }
+    }
+}
+echo "Welcome";
+```
+
+注意，内部的 `if` 条件语句仅在字段既不是传真字段又不是中间名字段时才为真。对于这两个字段，脚本 **Dynamic Forms** 不会显示错误消息并停止。
 
 
 
+- 第 25 行：`if(@sizeof($blank_array) > 0)`
+- 第 40 行：`include("form_phone_values.inc");`
+- 第 41 行：`exit();`
+- 第 42 行：如果字段为空
+- 第 44 行：`echo "所有必要字段都已填写。"`
+- 第 46 行：`else`
 
+### 9
 
-### **9**
 启动一个 `foreach` 语句，遍历 `$_POST` 数组。
+
 表单中的所有信息都在该数组中。
 
-### **11**
+### 11
+
 启动一个 `if` 语句，如果字段为空，则执行。
 
-### **13**
+### 13
+
 启动一个 `if` 语句，如果字段不是 `middle_name` 则执行。`middle_name` 不是必填字段，因此允许为空。如果空字段不是 `middle_name`，则该字段名将存储在名为 `$blank_array` 的数组中（第 15 行）。
 
-### **18**
+### 18
+
 启动一个 `else` 语句，如果字段不为空则执行。
+
 数据将经过清洗并存储在 `$good_data` 中，以便安全地显示在表单中。
 
 ## 第六卷
 
-### **25**
-通过检查**第 1 章**中的 `$blank_array` 是否包含任何元素，确定是否发现了任何空字段。如果发现一个或多个空字段，脚本将构建一条错误信息**动态表单构建与**并将其存储在 `$message` 中。显示表单（第 40 和第 41 行）。错误信息显示在表单顶部，$good_data` 中的信息显示在字段中。退出语句（第 42 行）在表单显示后停止脚本。用户必须点击提交按钮继续。
+### 25
 
-### **44**
+通过检查**第 1 章**中的 `$blank_array` 是否包含任何元素，确定是否发现了任何空字段。如果发现一个或多个空字段，脚本将构建一条错误信息**动态表单构建与**并将其存储在 `$message` 中。显示表单（第 40 和第 41 行）。错误信息显示在表单顶部，`$good_data` 中的信息显示在字段中。退出语句（第 42 行）在表单显示后停止脚本。用户必须点击提交按钮继续。
+
+### 44
+
 如果没有发现空字段，则第 25 行的 `if` 语句将不执行。第 44 行的 `echo` 语句将显示所有字段均正常的消息。
 
-### **46**
+### 46
+
 开始一个 `else` 语句，该语句在脚本首次运行时执行，在用户提交表单之前执行。显示空表单。
+
 不要忘记退出语句。如果没有退出语句，脚本将继续运行并在显示表单后显示“所有必填字段均包含信息”。
 
 图 1-10 显示了用户未输入名字或中间名时生成的网页。请注意，缺失信息列表不包含中间名（Middle Name），因为中间名不是必填的。此外，请注意用户最初输入表单的信息仍然显示在表单字段中。
 
 ### 检查信息的格式
+
 每当用户必须在表单中输入信息时，你都可以预见到会有数量的拼写错误。你可以在提交表单时检测出其中的一些错误，向用户指出错误，然后要求他们重新输入信息。例如，如果用户在邮政编码（ZIP）字段中输入 `8899776`，你就知道这是错误的。这个信息太长不能作为邮政编码，也太短不能作为 ZIP+4 代码。
 
 ![Image 76](img/index-527_1.jpg)
@@ -12907,6 +12261,7 @@ else
 如果你检查每个字段是否符合预期的格式，你就可以捕获拼写错误并防止大多数恶意内容。检查信息是一项平衡工作。你希望尽可能捕获错误数据，但不想阻止合法信息。例如，当你检查电话号码时，你可能会将其限制为数字。这种检查的问题是，它会过滤掉表单中 `555-5555` 或 `(888) 555-5555` 的合法数字，因此你还需要允许连字符 (`-`)、括号 (`()`) 和空格。你可能会将字段限制为 14 个字符长度，包括括号、空格和连字符，但这会过滤掉包含分机的海外号码。底线是：你需要仔细考虑对于任何字段你想要接受或过滤掉哪些信息。你可以使用正则表达式（即模式）来检查字段信息。你将字段中的信息与模式进行比较，看其是否匹配。如果不匹配，则字段中的信息是错误的，用户必须重新输入（有关正则表达式的更多信息请参阅第二卷第 2 章）。
 
 通常，使用这些语句来检查字段：
+
 ```php
 if(!preg_match("pattern",$variable)) {
     echo error message;
@@ -12915,28 +12270,30 @@ if(!preg_match("pattern",$variable)) {
 }
 echo "Welcome";
 ```
+
 `preg_match` 函数将模式与 `$variable` 中的输入值进行匹配，其中模式是一个正则表达式。注意 `if` 语句中的条件是负的。也就是说，`!`（感叹号）表示“不”。因此 `if` 语句实际上说是：如果变量中的值不匹配模式，则执行 `if` 块。
 
 ### 动态表单的构建与处理
+
 例如，假设你想检查一个包含用户姓氏的输入字段。你可以预期姓名会包含字母而不是数字，并可能包含撇号和连字符（如 `O’Hara` 和 `Smith-Jones`）以及空格（如 `Van Dyke`）。此外，很难想象一个名字会超过 50 个字符。因此，你可以使用以下语句来检查姓名：
+
 ```php
-if(!preg_match("/[A-Za-z’ -]{1,50}/",$last_name)) {
+if(!preg_match("/[A-Za-z' -]{1,50}/",$last_name)) {
     echo error message;
     display form;
     exit();
 }
 ```
+
 如果你想将连字符 (`-`) 作为允许字符的一部分放在方括号 `[]` 中，你必须将将其放在列表的开头或结尾。否则，如果你把它放在两个字符之间，脚本将其解释为两个字符之间的范围，例如 `A–Z`。
 
 你还需要检查多选字段。虽然多选可以防止诚实用户犯错，但不能防止有恶意的聪明用户向字段中输入意外数据。你可以使用以下类型的正则检查多选字段的可接受输出：
+
 ```php
 if(!preg_match("/male|female)/",$gender))
 ```
+
 如果字段包含 `male` 或 `female` 以外的任何内容，则执行 `if` 块。第 11 行所示 `checkFormat.php` 脚本检查字段信息的格式。第 9 行的 `form_values.inc` 文件显示并处理表单。该脚本只检查格式，不检查必填字段。在大多数情况下，你希望像第 10 行的 `checkBlanks.php` 脚本那样既检查空字段，又检查格式。
-
-
-
-
 
 ```php
 } // endif not blank
@@ -12959,14 +12316,14 @@ if(@sizeof($error_array) > 0) // errors are found
 {
 
 /* create error message */
-$message = “<ul style=’color: red; list-style: none’ >”; foreach($error_array as $value)
+$message = "<ul style='color: red; list-style: none' >"; foreach($error_array as $value)
 
 {
 
-$message .= “<li>$value</li>”;
+$message .= "<li>$value</li>";
 }
 
-$message .= “</ul>”;
+$message .= "</ul>";
 
 /* redisplay form */
 extract($good_data);
@@ -12977,7 +12334,7 @@ extract($bad_data);
 
 ## Book VI
 
-include(“form_phone_values.inc”);
+include("form_phone_values.inc");
 
 ## Chapter 1
 
@@ -12989,7 +12346,7 @@ exit();
 
 ## Dynamic Forms
 
-echo “All required fields contain valid information”;
+echo "All required fields contain valid information";
 
 ➝**59**
 
@@ -13003,7 +12360,7 @@ else
 
 {
 
-include(“form_phone_values.inc”);
+include("form_phone_values.inc");
 
 }
 
@@ -13013,21 +12370,27 @@ include(“form_phone_values.inc”);
 对 `Listing 1-11` 后续说明中的数字指的是代码列表中的行号：
 
 ➝**6**
+
 开始一个 `if` 语句来检查隐藏字段。如果隐藏字段存在，说明表单是由用户提交的。执行 `if` 语句。如果隐藏字段不存在，说明脚本是首次运行，不是由用户提交表单启动的，脚本将跳转到第 61 行的 `else` 语句。
 
 ➝**9**
+
 开始一个 `foreach` 语句遍历 `$_POST` 数组。表单中的所有信息都在数组中。
 
 ➝**11**
+
 开始一个 `if` 语句，如果字段不为空则执行。这是必要的，因为这样就不会对允许为空的字段进行无效格式的测试。
 
 ➝**13**
+
 创建包含匹配正确格式模式的变量。`$name_patt` 包含匹配名称变量的模式；`$phone_patt` 包含匹配电话号码的模式。
 
 ➝**15**
+
 开始一个 `if` 语句，针对名称字段执行。注意匹配模式后面跟着一个 `i`，这意味着忽略大小写。
 
 ➝**17**
+
 开始一个 `if` 语句，测试名称字段中的数据是否匹配模式。如果数据不匹配模式，则将错误消息添加到名为 `$error_array` 的数组中，并将数据进行清洗后添加到名为 `$bad_data` 的数组中。如果数据匹配模式，则执行 `else` 语句（第 22 行），将数据添加到名为 `$good_data` 的数组中。
 
 ![Image 77](img/index-531_1.jpg)
@@ -13037,26 +12400,30 @@ include(“form_phone_values.inc”);
 502 Processing Information from the Form
 
 ➝**27**
+
 开始一个 `if` 语句，针对包含电话号码的字段执行。
 
 ➝**29**
+
 开始一个 `if` 语句，测试电话字段中的数据是否匹配模式。如果数据不匹配模式，则将错误消息添加到名为 `$error_array` 的数组中，并将数据进行清洗后添加到名为 `$bad_data` 的数组中。如果数据匹配模式，则执行 `else` 语句，将数据添加到名为 `$good_data` 的数组中。
 
 ➝**44**
+
 通过检查 `$error_array` 是否包含任何元素来确定是否发现了无效格式。如果发现一个或多个无效格式，脚本将构造错误消息并存储在 `$message` 中。显示表单（第 54–56 行）。错误消息显示在表单顶部，来自 `$good_data` 和 `$bad_data` 的信息显示在字段中。`exit` 语句（第 57 行）在表单显示后停止脚本。用户必须点击提交按钮继续。
 
 ➝**59**
+
 如果没有发现无效格式，则第 44 行的 `if` 语句将不执行。第 59 行的 `echo` 语句显示一条所有字段都包含有效格式的消息。
 
 ➝**61**
+
 开始一个 `else` 语句，在脚本首次运行时执行，即在用户提交表单之前。显示空白表单。
 
 图 1-11 中的 Web 页面是用户无意输入电话号码乱码时产生的。
 
 **图 1-11:**
+
 处理带有错误信息的表单的结果。
-
-
 
 34_167779 bk06ch01.qxp 12/17/07 8:55 PM Page 503
 
@@ -13071,6 +12438,7 @@ include(“form_phone_values.inc”);
 ## Book VI
 
 **Listing 1-12: 显示带有两个按钮的表单**
+
 ```html
 <html>
 <head><title>Two Buttons</title></head>
@@ -13086,6 +12454,7 @@ include(“form_phone_values.inc”);
 ```
 
 **Listing 1-13: 处理两个按钮**
+
 ```php
 <?php
 /* Program name: processTwoButtons.php
@@ -13096,35 +12465,35 @@ if(isset($_POST["sent"]) && $_POST["sent"] == "yes")
 
 include("dbstuff.inc");
 $cxn = mysqli_connect($host,$user,$password,$database)
-or die (“Couldn’t connect to server”);
+or die ("Couldn't connect to server");
 
 if($_POST["display_button"] == "Show Address")
 {
 
-$query = “SELECT street,city,state,zip FROM Customer
-WHERE last_name=$_POST["last_name"]”;
+$query = "SELECT street,city,state,zip FROM Customer
+WHERE last_name=$_POST["last_name"]";
 $result = mysqli_query($cxn,$query)
-or die (“Couldn’t execute query.”);
+or die ("Couldn't execute query.");
 
 $row = mysqli_fetch_assoc($result);
 
 extract($row);
 
-echo “$street<br />$city, $state $zip”;
+echo "$street<br />$city, $state $zip";
 
 }
 
 else
 {
 
-$query = “SELECT phone FROM Customer
-WHERE last_name=$_POST["last_name"]”;
+$query = "SELECT phone FROM Customer
+WHERE last_name=$_POST["last_name"]";
 $result = mysqli_query($cxn,$query)
-or die (“Couldn’t execute query.”);
+or die ("Couldn't execute query.");
 
 $row = mysqli_fetch_assoc($result);
 
-echo “Phone: {$row['phone']}”;
+echo "Phone: {$row['phone']}";
 
 }
 
@@ -13142,13 +12511,9 @@ include("form_two.inc");
 
 `Listing 1-13` 中的脚本 `processTwoButtons.php` 处理了 `Listing 1-12` 中的表单。该文件生成的表单如图 1-12 所示。注意提交按钮有一个名称：`display_button`。用户点击哪个按钮都会设置 `display_button` 的值。如果用户点击地址按钮，脚本将输出表单中提交名称对应的地址；如果用户点击 Show Number 按钮，脚本将输出电话号码。
 
-创建一个允许客户上传文件的表单
+## 创建一个允许客户上传文件的表单
 
 有时你想从用户那里接收整个信息文件，例如求职网站的个人简历或相册网站的图片。或者，假设你正在根据销售部门提供信息构建目录。除了产品的描述文字外，你还希望销售部门提供产品图片。你可以提供一个供销售部门用于上传图像文件的表单。
-
-
-
-
 
 # 使用表单上传文件
 
@@ -13186,6 +12551,8 @@ $_FILES['fieldname']['size']
 ```
 
 例如，假设你使用上一节所示的以下字段来上传文件：
+
+
 
 ```html
 <input type="file" name="user_file" />
@@ -13281,10 +12648,6 @@ else {
 ?>
 ```
 
-
-
-
-
 # 第 2 章：创建信息
 
 ## 在网页上获取信息
@@ -13298,7 +12661,9 @@ else {
 大多数网站都包含多个页面。静态多页网站提供了一个由链接（有时看起来像按钮）组成的导航系统，用户点击这些链接可以在网站中移动并找到所需的页面。动态 Web 页面可以使用链接从一个页面移动到另一个页面，但也会使用额外的方法。PHP 脚本中使用以下方法将用户从网站的某一个页面移动到另一个页面：
 
 - **输出链接**：当用户点击链接时，链接会将用户引导到新页面。
+
 - **使用表单**：当用户点击提交按钮时，表单将用户从一个页面移动到另一个页面。当用户点击提交按钮时，会执行显示新页面的 PHP 脚本。
+
 - **重定向用户**：PHP 提供了 `header()` 函数，不需要用户操作即可将其进入新页面。
 
 ### 输出链接
@@ -13346,7 +12711,7 @@ Web 服务器和浏览器通过 HTTP 头部进行通信。*头部*是在浏览�
 header("Location: URL");
 ```
 
-header 语句向 Web 服务器发送消息 Location: URL。作为响应，位于 URL 的文件将被发送给用户。以下两个语句都是有效的 header 语句：
+`header` 语句向 Web 服务器发送消息 Location: URL。作为响应，位于 URL 的文件将被发送给用户。以下两个语句都是有效的 `header` 语句：
 
 ```php
 header("Location: newpage.php");
@@ -13355,11 +12720,11 @@ header("Location: http://company.com/catalog/catalog.php");
 
 ### 必须在输出之前的语句
 
-某些 PHP 语句只能在向浏览器发送任何输出之前使用。本章中描述的所有 header 语句、`setcookie()` 语句和会话函数必须在发送任何输出之前。如果在发送输出后使用这些语句之一，可能会看到以下消息：
+某些 PHP 语句只能在向浏览器发送任何输出之前使用。本章中描述的所有 `header` 语句、`setcookie()` 语句和会话函数必须在发送任何输出之前。如果在发送输出后使用这些语句之一，可能会看到以下消息：
 
 **Warning**: Cannot modify header information - headers already sent by (output started at /test.php:2) in **/test.php** on line **3**
 
-该消息提供了文件名并指示了哪一行发送了之前的输出。或者你可能根本看不到任何消息；新页面可能根本不会出现。以下语句执行失败，因为头部消息不是第一个输出——在 header 语句之前有一个 HTML 部分：
+该消息提供了文件名并指示了哪一行发送了之前的输出。或者你可能根本看不到任何消息；新页面可能根本不会出现。以下语句执行失败，因为头部消息不是第一个输出——在 `header` 语句之前有一个 HTML 部分：
 
 ```php
 <body>
@@ -13369,14 +12734,11 @@ header("Location: http://janetscompany.com");
 </body>
 ```
 
-
-
-
-如你所见，HTML `<body>` 标签是在头部 header 语句之前发送的。以下语句可以运行，尽管它们并没有太大意义，因为 HTML 行位于 header 语句之后——也就是说，在用户被带到另一个页面之后：
+如你所见，HTML `<body>` 标签是在 `header` 语句之前发送的。以下语句可以运行，尽管它们并没有太大意义，因为 HTML 行位于 `header` 语句之后——也就是说，在用户被带到另一个页面之后：
 
 ```php
 <?php
-header(“Location: http://janetscompany.com”);
+header("Location: http://janetscompany.com");
 ?>
 
 <body>
@@ -13388,7 +12750,7 @@ header(“Location: http://janetscompany.com”);
 
 ```php
 <?php
-header“Location: http://company.com”);
+header("Location: http://company.com");
 ?>
 
 <html>
@@ -13402,13 +12764,13 @@ header“Location: http://company.com”);
 
 ```php
 <?php
-if($typeAcct == “admin”)
+if($typeAcct == "admin")
 {
-    header：“Location: AdminPage.php”);
+    header("Location: AdminPage.php");
 }
 else
 {
-    header：“Location: SiteHomePage.php”);
+    header("Location: SiteHomePage.php");
 }
 ?>
 ```
@@ -13420,6 +12782,7 @@ else
 无论用户如何从一个页面跳转到另一个页面，你可能需要第一个页面的信息在下一个页面可用。通过 PHP，你可以通过以下方法之一在页面之间移动信息：
 
 - **使用 HTML 表单传递信息：** 你可以在表单中传递信息。当你需要从用户那里收集信息时，这种方法最为合适。
+
 - **在 URL 中添加信息：** 你可以在新页面 URL 的末尾添加特定信息。当你只需要传递少量信息时，这种方法最为合适。
 
 使用这些方法传递的信息会被传递到下一个页面。然而，如果用户去第三个页面，除非你再次使用这些方法从第二个页面传递到第三个页面，否则信息将不可用。如果你想让信息在多个 Web 页面上可用，可以将其存储在 cookie 或 session 中，这样它在任何 Web 页面都可用。这将在本章节后面讨论。
@@ -13453,8 +12816,11 @@ echo $_GET['city'] . ", " . $_GET['state'];
 在 URL 中传递信息很容易的，特别是对于少量信息而言。然而，这种方法存在一些缺点，包括一些安全问题（安全问题将在第四书中进行更详细讨论）。以下是你可能不想在 URL 中传递信息的原因：
 
 - **全世界都能看到它。** URL 显示在浏览器的地址栏中，这意味着你添加到 URL 中的信息也会被显示出来。如果信息需要安全性，你不希望它被这样公开显示。例如，如果你正在将密码从一个页面移动到下一个页面，你可能不想在 URL 中传递它。
+
 - **用户在 URL 中发送信息和你发送一样容易。** 例如，假设用户在登录你的限制性网站后，你在 URL 中添加了 `auth=yes`。在每个 Web 页面上，你检查 `$_GET['auth']` 是否等于 yes。如果是，你就允许用户查看 Web 页面。然而，任何用户都可以浏览器中输入 `http://www.yoursite.com/page.php?auth=yes` 而无需登录即可进入。
+
 - **用户可以收藏 URL。** 你可能不希望用户保存添加到 URL 中的信息。
+
 - **URL 的长度是有限的。** 限制取决于不同的浏览器和浏览器版本，但限制总是存在的。因此，如果你正在传递大量信息，URL 可能没有空间存放它们。
 
 ### 一个向 URL 添加信息的登录应用程序
@@ -13463,9 +12829,6 @@ echo $_GET['city'] . ", " . $_GET['state'];
 
 登录脚本显示一个请求用户 ID 和密码的小表单。
 
-
-
-
 显示表单的文件如列表 2-2 所示。包含显示和处理登录表单逻辑的脚本如列表 2-3 所示。
 
 ![Image 81](img/index-547_1.jpg)
@@ -13473,6 +12836,8 @@ echo $_GET['city'] . ", " . $_GET['state'];
 ### 从一个页面向另一个页面传递信息
 
 **列表 2-2：显示登录表单的文件**
+
+
 
 ```php
 <?php
@@ -13487,24 +12852,25 @@ if(isset($message))
 echo $message;
 }
 
-echo “<form action=’$_SERVER[PHP_SELF]’
-method=’POST’ style=’margin: .5in’\n
-<p><label for=’user_name’ style=’font-weight: bold; padding-bottom: 1em’>User ID: </label>
-<input type=’text’ name=’user_name’ id=’user_name’
-value='$user_name’ />\n</p>
-<p><label for=’password’ style=’
-font-weight: bold’>Password: </label>
-<input type=’password’ name=’password’ id=’password’
-value='$password’ />\n</p>
-<p><input type=’submit’ value=’Log in’>\n</p>
-<input type=’hidden’ name=’sent’ value=’yes’ />
-</form>\n”;
+echo "<form action='$_SERVER[PHP_SELF]'
+method='POST' style='margin: .5in'\n
+<p><label for='user_name' style='font-weight: bold; padding-bottom: 1em'>User ID: </label>
+<input type='text' name='user_name' id='user_name'
+value='$user_name' />\n</p>
+<p><label for='password' style='
+font-weight: bold'>Password: </label>
+<input type='password' name='password' id='password'
+value='$password' />\n</p>
+<p><input type='submit' value='Log in'>\n</p>
+<input type='hidden' name='sent' value='yes' />
+</form>\n";
 ?>
 ```
 
 该表单显示了用户 ID 和密码的两个字段。它还传递了一个名为 `sent` 的隐藏字段，以便处理脚本检查表单是否已提交。由表单文件显示的 Web 页面如图 2-2 所示。
 
 **图 2-2：**
+
 简单的登录表单。
 
 列表 2-3 中的脚本显示并处理图 2-2 所示的表单。
@@ -13517,7 +12883,7 @@ value='$password’ />\n</p>
 /* Program name: login_url.php
 * Description: Logs in user.
 */
-if(isset($_POST['sent']) && $_POST['sent'] == “yes”)
+if(isset($_POST['sent']) && $_POST['sent'] == "yes")
 {
 /* check each field for blank fields */
 foreach($_POST as $field => $value)
@@ -13533,46 +12899,46 @@ $good_data[$field]=strip_tags(trim($value));
 } // end of foreach loop for $_POST
 if(@sizeof($blank_array) > 0) // blank fields found
 {
-$message = “<p style=’color: red; margin-bottom: 0;
-font-weight: bold’>
-You must enter both a user id and a password.</p>”;
+$message = "<p style='color: red; margin-bottom: 0;
+font-weight: bold'>
+You must enter both a user id and a password.</p>";
 /* redisplay form */
 extract($blank_array);
 extract($good_data);
-include(“form_log.inc");
+include("form_log.inc");
 exit();
 } // end if blanks found
 
-include(“dbstuff.inc");
+include("dbstuff.inc");
 $cxn = mysqli_connect($host,$user,$password,$database)
-or die (“couldn’t connect to server”);
-$query = “SELECT first_name FROM Customer
-WHERE user_name=’$_POST[user_name]’
-AND password=md5('$_POST[password]’”)
+or die ("couldn't connect to server");
+$query = "SELECT first_name FROM Customer
+WHERE user_name='$_POST[user_name]'
+AND password=md5('$_POST[password]')";
 $result = mysqli_query($cxn,$query)
-or die (“Couldn’t execute query.”);
+or die ("Couldn't execute query.");
 $n_row = mysqli_num_rows($result);
 if($n_row < 1) // if login unsuccessful
 {
-$message = “<p style=’color: red; margin-bottom: 0;
-font-weight: bold’>
-User ID and Password not found.</p>”;
+$message = "<p style='color: red; margin-bottom: 0;
+font-weight: bold'>
+User ID and Password not found.</p>";
 extract($_POST);
-include(“form_log.inc");
+include("form_log.inc");
 exit();
 }
 else //if login successful
 {
 $row=mysqli_fetch_assoc($result);
-header(“Location: secret_page_url.php?first_name=
-$row[first_name]”);
+header("Location: secret_page_url.php?first_name=
+$row[first_name]");
 }
 } // end if submitted
 else // first time script is run
 {
 $user_name = "";
 $password = "";
-include(“form_log.inc");
+include("form_log.inc");
 }
 ?>
 ```
@@ -13602,9 +12968,9 @@ include(“form_log.inc");
 <head><title>Secret Page with GET</title></head>
 <body>
 <?php
-echo “<p style=’text-align: center; margin: .5in’>
+echo "<p style='text-align: center; margin: .5in'>
 Hello, {$_GET['first_name']}<br />
-Welcome to the secret page</p>”;
+Welcome to the secret page</p>";
 ?>
 </body>
 </html>
@@ -13612,14 +12978,11 @@ Welcome to the secret page</p>”;
 
 该脚本为登录的用户显示一个欢迎页面。通过显示在 URL 中传递的用户姓名，实现了消息的个性化。图 2-3 显示了列表 2-4 脚本显示的 Web 页面。
 
-
-
-
 用于设置用户会话并在服务器上存储会话信息的函数；这些信息可以从任何 Web 页面访问。这种方法对于预计用户将查看许多页面的会话非常有用。
 
 ### 在 cookies 中存储信息
 
-你可以将信息存储为 `cookies`，它们是包含 `variable`= `value`（键值对）的小量信息，类似于你可以添加到 URL 中的键值对。用户的浏览器会将 cookies 存储在用户的计算机上。然后，你的脚本就可以从网站的任何 Web 页面使用 cookie 中存储的信息。
+你可以将信息存储为 `cookies`，它们是包含 `variable` = `value`（键值对）的小量信息，类似于你可以添加到 URL 中的键值对。用户的浏览器会将 cookies 存储在用户的计算机上。然后，你的脚本就可以从网站的任何 Web 页面使用 cookie 中存储的信息。
 
 Cookies 最初设计用于在短时间内存储少量信息。除非你专门设置 cookie 的有效期较长，否则 cookie 在用户关闭浏览器时就会消失。
 
@@ -13642,10 +13005,11 @@ setcookie("state", "CA");
 当用户移动到下一个页面时，cookie 信息将可以在名为 `$_COOKIE` 的内置数组可用。下一个 Web 页面可以使用以下语句显示来自 cookie 的信息：
 
 ```php
-echo "Your home state is ".$COOKIE['state'];
+echo "Your home state is ".$_COOKIE['state'];
 ```
 
 该语句的输出如下：
+
 `Your home state is CA`
 
 在设置 cookie 的脚本中无法使用该 cookie。用户必须转到另一个页面或重新显示当前页面，cookie 信息才能可用。
@@ -13709,9 +13073,6 @@ if (submitted) {
 ?>
 ```
 
-
-
-
 该数字是一个非常长的无意义数字，对用户是唯一的，没有人可能猜到。会话 ID（session ID）存储在名为 `PHPSESSID` 的 PHP 系统变量中。
 
 ### 1. PHP 将你想要为会话保存的变量存储在服务器上的文件中。
@@ -13734,7 +13095,7 @@ if (submitted) {
 
 你应该在每个 Web 页面的开始处打开会话。使用 `session_start` 函数打开会话，如下：
 
-```
+```php
 session_start();
 ```
 
@@ -13782,18 +13143,20 @@ unset($_SESSION['varname']);
 * 它会设置一个名为 `SID` 的常量。该常量包含一个 `variable=value` 对，看起来像 `PHPSESSID=longstringofnumbers`。这串长数字就是会话 ID。
 * 它可能会或可能将会话 ID 数字从一个页面移动到下一个页面，取决于 `trans-sid` 是否开启。如果开启了 `trans-sid`，PHP 将传递会话 ID 数字；如果没有开启，PHP 则不会传递会话 ID 数字。
 
-`trans-sid` 默认关闭的。你可以通过编辑 `php.ini` 文件来开启它。搜索以 `session.use_trans_sid =` 开头的行。
+
+
+`trans-sid` 默认关闭。你可以通过编辑 `php.ini` 文件来开启它。搜索以 `session.use_trans_sid =` 开头的行。
 
 如果设置为 `0`，则 `trans_sid` 关闭；如果设置为 `1`，则 `trans_sid` 开启。要开启该设置，请将 `0` 改为 `1`。你可能必须在该设置生效之前重新启动 Web 服务器。
 
 开启 `trans-sid` 有优缺点：
 
-* **优点：**当用户禁用 cookie 时，会话可以无缝工作。你可以更容易地编写会话脚本，而无需担心用户的浏览器。
-* **缺点：**会话 ID 数字经常通过 URL 传递。在某些情况下出于安全考虑，会话 ID 数字不应显示在浏览器地址中。此外，当会话 ID 数字在 URL 中时，用户可以将其收藏。这时，如果用户使用该书签返回你的网站，当前的会话 ID 数字可能会与之前的访问发生混淆并产生问题。
+* **优点：** 当用户禁用 cookie 时，会话可以无缝工作。你可以更容易地编写会话脚本，而无需担心用户的浏览器。
+* **缺点：** 会话 ID 数字经常通过 URL 传递。在某些情况下出于安全考虑，会话 ID 数字不应显示在浏览器地址中。此外，当会话 ID 数字在 URL 中时，用户可以将其收藏。这时，如果用户使用该书签返回你的网站，当前的会话 ID 数字可能会与之前的访问发生混淆并产生问题。
 
-#### 开启 trans-sid 的会话
+### 开启 trans-sid 的会话
 
-当 `trans-sid` 开启且用户禁用了 cookie 时，PHP 自动在 URL 或隐藏字段中发送会 ID 数字。如果用户通过链接、`header` 函数或使用 `GET` 方法的表单进入下一个页面，会话 ID 数字将添加到 URL 中。如果用户通过使用 `POST` 方法的表单进入下一个页面，会话 ID 数字将通过隐藏字段传递。PHP 识别 `PHPSESSID` 为会话 ID 数字，并在无需特殊编程的情况下处理会话。
+当 `trans-sid` 开启且用户禁用了 cookie 时，PHP 自动在 URL 或隐藏字段中发送会话 ID 数字。如果用户通过链接、`header` 函数或使用 `GET` 方法的表单进入下一个页面，会话 ID 数字将添加到 URL 中。如果用户通过使用 `POST` 方法的表单进入下一个页面，会话 ID 数字将通过隐藏字段传递。PHP 识别 `PHPSESSID` 为会话 ID 数字，并在无需特殊编程的情况下处理会话。
 
 会话 ID 数字仅添加到你网站页面的 URL 中。如果下一个页面的 URL 包含服务器名称，PHP 假设它是另一个网站，不会添加会话 ID 数字。例如，假设你的链接语句如下：
 
@@ -13804,7 +13167,7 @@ unset($_SESSION['varname']);
 
 PHP 为第一个链接添加会话 ID 数字，但不会为第二个链接添加。
 
- 未开启 trans-sid 的会话
+### 未开启 trans-sid 的会话
 
 当 `trans-sid` *未*开启且用户禁用了 cookie 时，PHP *不会*向下一个页面发送会话 ID 数字。相反，你必须自己发送会话 ID。
 
@@ -13814,15 +13177,13 @@ PHP 为第一个链接添加会话 ID 数字，但不会为第二个链接添加
 <a href="nextpage.php?<?php echo SID?>">next page</a>
 ```
 
-此链接语句在文件名末尾包含问号（`?`并将常量 `SID` 添加到 URL 中。`SID` 包含会话 ID 数字。
+此链接语句在文件名末尾包含问号（`?`）并将常量 `SID` 添加到 URL 中。`SID` 包含会话 ID 数字。
 
 `echo SID` 的输出类似于：
 
 ```
 PHPSESSID=877c22163d8df9deb342c7333cfe38a7
 ```
-
-
 
 因此，下一页的 URL 如下：
 
@@ -13835,15 +13196,10 @@ PHPSESSID=877c22163d8df9deb342c7333cfe38a7
 
 $PHPSESSID = session_id();
 
-echo “<form action=’nextpage.php’ method=’POST’>
-
-<input type=’hidden’ name=’PHPSESSID’
-
-value='$PHPSESSID’ />
-
-<input type=’submit’ value=’Next Page’ />
-
-</form>”;
+echo "<form action='nextpage.php' method='POST'>
+<input type='hidden' name='PHPSESSID' value='$PHPSESSID' />
+<input type='submit' value='Next Page' />
+</form>";
 
 ?>
 ```
@@ -13872,18 +13228,18 @@ session_start();
 
 // 第 6-47 行与列表 2-3 中的第 5-46 行相同。
 
-else //如果登录成功
+else // 如果登录成功
 {
     $row = mysqli_fetch_assoc($result);
     $_SESSION['first_name'] = $row['first_name'];
-    $_SESSION['auth'] = “yes”;
-    header(“Location: secret_page_session.php”);
+    $_SESSION['auth'] = "yes";
+    header("Location: secret_page_session.php");
 } // 提交结束
 else // 首次运行脚本
 {
     $user_name = "";
     $password = "";
-    include(“form_log.inc”);
+    include("form_log.inc");
 }
 
 ?>
@@ -13907,19 +13263,17 @@ else // 首次运行脚本
 */
 
 session_start();
-if($_SESSION['auth'] != “yes”)
+if($_SESSION['auth'] != "yes")
 {
-    header(“Location: login_session.php”);
+    header("Location: login_session.php");
     exit();
 }
-echo “<html>
+echo "<html>
 <head><title>Secret Page with Session</title></head>
-<body>”;
-echo “<p style=’text-align: center; margin: .5in’>
-
+<body>";
+echo "<p style='text-align: center; margin: .5in'>
 Hello, {$_SESSION['first_name']}<br />
-
-Welcome to the secret page</p>”;
+Welcome to the secret page</p>";
 ?></body></html>
 ```
 
@@ -13954,11 +13308,9 @@ Welcome to the secret page</p>”;
 - 许多网站需要限制信息的访问范围。例如，公司信息可能仅限于公司员工或部门成员。
 - 信息是出售的，因此信息需要限制给支付过费用的人员。
 
-
-
 将输入的用户名和密码与数据库中的用户名和密码进行比较。如果匹配成功，则从网站向客户发送 Web 页面。如果没有找到匹配项，则给客户尝试其他登录的机会。
 
-# 创建用户数据库
+## 创建用户数据库
 
 应用程序设计要求一个存储用户信息的数据库。数据库是该应用程序的核心。该数据库用于存储所有允许访问网站的用户的用户名和密码。通常，数据库还用于存储更多关于客户的信息。
 
@@ -13968,15 +13320,15 @@ Welcome to the secret page</p>”;
 
 此类应用程序最适用于向客户销售产品的网站。用户数据库被命名为 `Customer`。
 
-## 设计 Customer 数据库
+### 设计 Customer 数据库
 
 你的第一个设计任务是选择你想要存储在 `Customer` 数据库中的信息。至少，你需要存储一个用户可以用于登录的用户名和密码。了解用户账户是何时创建的也很有用。在决定用户注册期间收集哪些信息时，你需要在收集所有你所能想到的潜在有用信息的冲动，与用户避免看起来太耗时的表单的意愿以及他们提供个人信息的抵触之间取得平衡。一种折中方案是询问一些可选信息。不介意的用户会填写，而反对的用户只需留空即可。
 
-## 构建登录应用程序
+### 构建登录应用程序
 
-你的网站执行其功能需要某些信息。例如，用户可以很容易看到，一个网站要向他们发送某些东西就需要名称和地址。然而，他们可能看不到你为什么需要电话号码。即使你要求提供，有时也可以输入虚假号码。所以，除非你有像员工这样的受限制的听众（他们必须提供你要求的一切内容），否则请仔细考虑要收集哪些信息。用户在不耐烦时很容易离开你的网站。这不像他们开车几英路来到你的商店并寻找停车位。他们只需点击一下即可离开。对于本章的示例应用程序，我们假设网站是一个销售产品的在线商店。因此，我们需要收集客户的联系信息。大多数客户愿意向信誉良好的零售商提供电话号码，因为他们意识到订单可能会需要的问题。本节其余部分将讨论信息的细节及其在 MySQL 数据库中的存储。数据库只包含一张表。客户信息存储在表中，每个客户有一条记录（行）。表所需的字段如 3-1 所示。
+你的网站执行其功能需要某些信息。例如，用户可以很容易看到，一个网站要向他们发送某些东西就需要名称和地址。然而，他们可能看不到你为什么需要电话号码。即使你要求提供，有时也可以输入虚假号码。所以，除非你有像员工这样的受限制的听众（他们必须提供你要求的一切内容），否则请仔细考虑要收集哪些信息。用户在不耐烦时很容易离开你的网站。这不像他们开车几英里来到你的商店并寻找停车位。他们只需点击一下即可离开。对于本章的示例应用程序，我们假设网站是一个销售产品的在线商店。因此，我们需要收集客户的联系信息。大多数客户愿意向信誉良好的零售商提供电话号码，因为他们意识到订单可能会需要的问题。本节其余部分将讨论信息的细节及其在 MySQL 数据库中的存储。数据库只包含一张表。客户信息存储在表中，每个客户有一条记录（行）。表所需的字段如表 3-1 所示。
 
-### 表 3-1 数据库表：Customer
+#### 表 3-1 数据库表：Customer
 
 | 变量名 | 类型 | 说明 |
 | :--- | :--- | :--- |
@@ -13995,7 +13347,7 @@ Welcome to the secret page</p>”;
 
 该表有 12 个字段。前三个字段 `user_name`、`password` 和 `create_date` 是必须的，且不能为空。其余字段包含客户的姓名、地址、电话和传真，允许留空。第一个字段 `user_name` 是主键。
 
-## 构建 Customer 数据库
+### 构建 Customer 数据库
 
 你可以使用第三卷第一章中讨论的任何方法创建 MySQL 数据库。以下 SQL 语句创建此数据库：
 
@@ -14023,7 +13375,7 @@ CREATE TABLE Customer (
 );
 ```
 
-## 访问 Customer 数据库
+### 访问 Customer 数据库
 
 PHP 提供了 MySQL 函数，用于从你的 PHP 脚本访问数据库。MySQL 函数接收访问数据库所需的信息，例如 MySQL 账户名和密码。MySQL 账户名和密码与你拥有的任何其他账户名或密码无关，例如登录系统的密码。
 
@@ -14038,25 +13390,25 @@ $database = "CustomerDirectory";
 ?>
 ```
 
-
-
 登录页的代码由两个文件组成：定义页面外观和感觉的代码，以及为页面提供特定信息的代码。
 
-# 编写登录页代码
+## 编写登录页代码
 
 登录 Web 页面提供了两个表单：登录表单和注册表单并排显示。创建登录页的代码在一个名为 `form_login_reg.inc` 的独立文件中，如列表 3-1 所示。
 
-**图 3-1：**
+### 图 3-1
 
 登录 Web 页面。
 
-36_167779 bk06ch03.qxp 12/17/07 8:24 PM Page 539
+> 36_167779 bk06ch03.qxp 12/17/07 8:24 PM Page 539
 
-## 构建登录 Web 页面
+### 构建登录 Web 页面
 
 此文件包含定义 Web 页面外观的代码。它包含了表单的 HTML 和 CSS 代码，以及根据文件开头创建的两个数组的元素输出表单字段的 PHP 部分。循环为数组中的每个元素显示一个表单字段。
 
-**列表 3-1：定义两个并排 HTML 表单的文件**
+## 列表 3-1：定义两个并排 HTML 表单的文件
+
+
 
 ```php
 <?php
@@ -14146,7 +13498,7 @@ $fields_2 = array(
             $type = "password";
           else
             $type = "text";
-          echo "<div id='field>
+          echo "<div id='field'>
           <label for='$field'>$value</label>
           <input id='$field' name='$field' type='$type'
           value='".$$field."' size='20' maxlength='50' />
@@ -14158,7 +13510,7 @@ $fields_2 = array(
     </form>
     <p style='text-align: center; margin: 1em'>If you already have an account, log in.</p>
     <p style='text-align: center; margin: 1em'>If you do not have an account, register now.</p>
-  </div
+  </div>
   <div id="reg">
     <form action=<?php echo $_SERVER['PHP_SELF']?> method="POST">
       <fieldset style='border: 2px solid #000000'>
@@ -14172,7 +13524,7 @@ $fields_2 = array(
         {
           if($field == "state")
           {
-            echo "<div id='field>
+            echo "<div id='field'>
             <label for='$field'>$value</label>
             <select name='state' id='state'>";
             $stateName=getStateName();
@@ -14187,7 +13539,7 @@ $fields_2 = array(
           }
           else
           {
-            echo "<div id='field>
+            echo "<div id='field'>
             <label for='$field'>$value</label>
             <input id='$field' name='$field' type='text'
             value='".$$field."' size='20' maxlength='50' />
@@ -14203,9 +13555,6 @@ $fields_2 = array(
 </body>
 ```
 
-
-
-
 一个 `else` 语句开始，如果字段名称不为 `state`，则执行该语句。回输出带有标签的文本字段的 HTML。
 
 ➝ `145`
@@ -14220,13 +13569,13 @@ $fields_2 = array(
 
 从第 `147` 行到末尾包含了结束注册表单和 Web 页面的 HTML 代码。
 
-在 `form_login_reg.inc` 中，注册表单中的 `state` 字段是一个下拉列表。创建该列表的代码使用了存储在 `functions.inc` 文件中的两个函数，该文件在第 `7` 行被包含。列表 `3-2` 显示了这两个所需的两个函数代码。
+在 `form_login_reg.inc` 中，注册表单中的 `state` 字段是一个下拉列表。创建该列表的代码使用了存储在 `functions.inc` 文件中的两个函数，该文件在第 `7` 行被包含。列表 3-2 显示了这两个所需的两个函数代码。
 
 36_167779 bk06ch03.qxp 12/17/07 8:24 PM Page 544
 
 544 构建登录 Web 页面
 
-**列表 3-2：创建州份名称和代码数组的函数**
+### 列表 3-2：创建州份名称和代码数组的函数
 
 ```php
 <?php
@@ -14234,11 +13583,11 @@ $fields_2 = array(
 function getStateCode()
 {
 
-$stateCode = array(1=> “AL” ,
-“AK” ,
-“AZ” ,
+$stateCode = array(1=> "AL" ,
+"AK" ,
+"AZ" ,
 ...
-“WY” );
+"WY" );
 
 return $stateCode;
 }
@@ -14246,11 +13595,11 @@ return $stateCode;
 function getStateName()
 {
 
-$stateName = array(1=> “Alabama”,
-“Alaska”,
-“Arizona”,
+$stateName = array(1=> "Alabama",
+"Alaska",
+"Arizona",
 ...
-“Wyoming” );
+"Wyoming" );
 
 return $stateName;
 }
@@ -14265,7 +13614,7 @@ return $stateName;
 当按照如下方式包含 `form_login_reg.inc` 文件时，将显示登录 Web 页面：
 
 ```php
-include(“form_login_reg.inc”);
+include("form_login_reg.inc");
 ```
 
 字段通过所示的 `foreach` 循环进行显示：
@@ -14273,33 +13622,30 @@ include(“form_login_reg.inc”);
 ```php
 foreach($fields_1 as $field => $value)
 {
-if(preg_match(“/pass/i”,$field))
-    $type = “password”;
+if(preg_match("/pass/i",$field))
+    $type = "password";
 else
-    $type = “text”;
-echo “<div id=’field’>
-<label for=’$field’>$value</label>
-<input id=’$field’ name=’$field’ type=’$type’
-value=’”.@$$field.”’ size=’20’ maxlength=’15’ />
-</div\\n”;
+    $type = "text";
+echo "<div id='field'>
+<label for='$field'>$value</label>
+<input id='$field' name='$field' type='$type'
+value='".@$$field."' size='20' maxlength='15' />
+</div>\n";
 }
 ```
 
-36_167779 bk06ch03.qxp 12/17/07 8:24 PM Page 545
-
-545 构建登录脚本
-
-循环输出每个字段的 HTML 代码。在此循环中，`$field` 是字段名，例如 `first_name`，而 `$value` 是字段标签，例如 `First Name`。当首次显示字段时，字段是空的。然而，如果用户提交了带有错误的表单并且你重新显示表单，你希望重新显示的表单包含用户输入的信息。为了做到，你在 `<input>` 标签的 `value` 参数中使用变量，例如 `value=”$first_name”`。
+循环输出每个字段的 HTML 代码。在此循环中，`$field` 是字段名，例如 `first_name`，而 `$value` 是字段标签，例如 `First Name`。当首次显示字段时，字段是空的。然而，如果用户提交了带有错误的表单并且你重新显示表单，你希望重新显示的表单包含用户输入的信息。为了做到，你在 `<input>` 标签的 `value` 参数中使用变量，例如 `value="$first_name"`。
 
 在此表单文件的代码中，`<input>` 标签的 `value` 属性是变量 `$$field`。因此，当循环中 `$field` 的值为 `first_name` 时，变量变量变为 `$first_name`，代码变为：
 
-**第六卷**
+#### 第六卷
+
 ### 第 3 章
 
 #### 构建登录
 
 ```php
-value=’”.@$first_name.”’ size=’20’ maxlength=’15’ />
+value='".@$first_name."' size='20' maxlength='15' />
 ```
 
 你可以在第二卷第 1 章中阅读更多关于变量变量的内容。`@` 是 `Application`（应用），用于抑制当字段为空时在表单中显示任何错误消息。
@@ -14308,7 +13654,7 @@ value=’”.@$first_name.”’ size=’20’ maxlength=’15’ />
 
 ```php
 extract($_POST);
-include(“form_login_reg.inc”);
+include("form_login_reg.inc");
 ```
 
 然而，在不进行清理的情况下直接从显示信息是一个安全问题（参见第 IV 章获取更多信息）。明智的做法是在重新显示之前对其进行清理：
@@ -14327,286 +13673,362 @@ $first_name = strip_tags(trim($_POST[
 
 ```php
 switch (Button)
-case “Login”:
+case "Login":
     1 测试用户名是否存在于数据库中。
     2 测试密码是否正确。
     3 登录成功后，显示受保护页面。
-case “Register”:
+case "Register":
     1 测试所有字段是否已填写。
     2 测试信息格式是否正确。
     3 注册成功后，将其存入数据库。
-case “default”:
+case "default":
     带有带有字段的登录页面。
+```
 
 ### 列表 3-3：应用代码
 
 ```php
 <?php
+
 /* 程序: Login_reg.php
+
 Desc: 用户登录的主程序。提供了两个选项：(1) 使用现有名称登录 (2) 注册新用户。名称和密码存储在 MySQL 数据库中。 */
+
 session_start();
+
 switch ($_POST['Button']) {
-case “Login”:
-    include(“stuff.inc”);
+
+case "Login":
+
+    include("stuff.inc");
+
     $cxn = mysqli_connect($host,$user,$password)
-    or die(“connect failed”);
-    $sql = “SELECT user_name FROM Customer WHERE user_name=$_POST['fusername'] AND password=md5($_POST['fpassword']$)”;
+
+    or die("connect failed");
+
+    $sql = "SELECT user_name FROM Customer WHERE user_name=$_POST['fusername'] AND password=md5($_POST['fpassword']$)";
+
     $result = mysqli_query($cxn,$sql)
-    or die(“Query failed”);
+
+    or die("Query failed");
+
     $num = mysqli_num_rows($result);
+
     if($num > 0) {
-        $_SESSION['auth']=”yes”;
+
+        $_SESSION['auth']="yes";
+
         $_SESSION['logname'] = $_POST['fusername'];
-        header(“Location: SecretPage.php”);
+
+        header("Location: SecretPage.php");
+
     } else {
-        $message_1=”登录名 ‘$_POST['fusername']’存在，但你没有输入正确的密码！请重试。”;
+
+        $message_1="登录名 ‘$_POST['fusername']’存在，但你没有输入正确的密码！请重试。";
+
         $fusername = strip_tags(trim($_POST['fusername']));
-        include(“form_login_reg.inc”);
+
+        include("form_login_reg.inc");
+
     }
+
 } elseif($num == 0) {
-    $message_1=”输入的用户名不存在！请重试。”;
-    include(“form_login_reg.inc”);
+
+    $message_1="输入的用户名不存在！请重试。";
+
+    include("form_login_reg.inc");
+
 }
+
 break;
 
-case “Register”:
+case "Register":
+
     /* 检查空值 */
+
     foreach($_POST as $field => $value) {
-        if ($field != “fax”) {
-            if ($value == “”) {
+
+        if ($field != "fax") {
+
+            if ($value == "") {
+
                 $blanks[] = $field;
+
             } else {
+
                 $good_data[$field] = strip_tags(trim($value));
+
             }
+
         }
+
     }
+
     *(继续)*
+
     if(isset($blanks)) {
-        $message_2 = “以下字段为空，请输入需要的信息：”;
+
+        $message_2 = "以下字段为空，请输入需要的信息：";
+
         foreach($blanks as $value) {
-            $message_2 .=$value, “;
+
+            $message_2 .=$value, ";
+
         }
+
         extract($good_data);
-        include(“form_login_reg.inc”);
+
+        include("form_login_reg.inc");
+
         exit();
+
     }
+
     /* 验证数据 */
+
     foreach($_POST as $field => $value) {
+
         if(!empty($value)) {
-            if(preg_match(“/name/i”,$field) and
+
+            if(preg_match("/name/i",$field) and
+
 ```
 
-
-
-
 ```php
+
 if (!preg_match("/user/i",$field) and
+
 !preg_match("/log/i",$field))
+
 {
+
     if (!preg_match("/^[A-Za-z' -]{1,50}$/",$value))
+
     {
+
         $errors[] = "$value is not a valid name. ";
+
     }
+
 }
 
 if(preg_match("/street/i",$field) or
+
 preg_match("/addr/i",$field) or
+
 preg_match("/city/i",$field))
+
 {
+
     if(!preg_match("/^[A-Za-z0-9.,' -]{1,50}$/",
+
 $value))
+
     {
+
         $errors[] = "$value is not a valid address
+
 or city. ";
+
     }
+
 }
 
 if(preg_match("/state/i",$field))
+
 {
+
     if(!preg_match("/^[A-Z][A-Z]$/",$value))
+
     {
-        $errors[] = "$value is not a valid state
-code. ";
-    }
+```
+
+
+
+# 第六卷
+## 第三章
+
+### PHP 登录注册脚本分析
+
+以下代码展示了 `Login_reg.php` 脚本的核心逻辑，包含表单验证、数据库交互、会话管理及邮件发送功能。
+
+```php
+$errors[] = "$value is not a valid state code. ";
+
 }
 
-if(preg_match("/email/i",$field))
-{
-    if(!preg_match("/^.+@.+\..+$/",$value))
-    {
-        $errors[] = "$value is not a valid email
-address. ";
-    }
 }
 
-if(preg_match("/zip/i",$field))
-{
-    if(!preg_match("/^[0-9]{5,5}(\-[0-9]{4,4})?$/",
-$value))
-    {
+if (preg_match("/email/i", $field)) {
+
+    if (!preg_match("/^.+@.+\..+$/", $value)) {
+
+        $errors[] = "$value is not a valid email address. ";
+
+    }
+
+}
+
+if (preg_match("/zip/i", $field)) {
+
+    if (!preg_match("/^[0-9]{5,5}(\-[0-9]{4,4})?$/", $value)) {
+
         $errors[] = "$value is not a valid zipcode. ";
+
     }
+
 }
 
-if(preg_match("/phone/i",$field) or
-preg_match("/fax/i",$field))
-{
-    if(!preg_match("/^[0-9)(xX -]{7,20}$/",$value))
-    {
-        $errors[] = "$value is not a valid phone
-number. ";
+if (preg_match("/phone/i", $field) or preg_match("/fax/i", $field)) {
+
+    if (!preg_match("/^[0-9)(xX -]{7,20}$/", $value)) {
+
+        $errors[] = "$value is not a valid phone number. ";
+
     }
+
 } // end if not empty
+
 } // end foreach POST
 
-foreach($_POST as $field => $value)
-{
+foreach ($_POST as $field => $value) {
+
     $field = strip_tags(trim($value));
+
 }
 
-if(@is_array($errors))
-{
+if (@is_array($errors)) {
+
     $message_2 = "";
-    foreach($errors as $value)
-    {
-        $message_2 .= $value." Please try again<br />";
+
+    foreach ($errors as $value) {
+
+        $message_2 .= $value . " Please try again<br />";
+
     }
+
     include("form_login_reg.inc");
+
     exit();
+
 } // end if errors are found
 
 /* check to see if user name already exists */
+
 include("dbstuff.inc");
-$cxn = mysqli_connect($host,$user,$password,$database)
-or die("Couldn’t connect to server");
-$sql = "SELECT user_name FROM Customer
-WHERE user_name='$user_name'";
-$result = mysqli_query($cxn,$sql)
-or die("Query died: user_name.");
+
+$cxn = mysqli_connect($host, $user, $password, $database) or die("Couldn't connect to server");
+
+$sql = "SELECT user_name FROM Customer WHERE user_name='$user_name'";
+
+$result = mysqli_query($cxn, $sql) or die("Query died: user_name.");
+
 $num = mysqli_num_rows($result);
-if($num > 0)
-{
+
+if ($num > 0) {
+
     $message_2 = "$user_name already used. Select another User Name.";
+
     include("form_login_reg.inc");
+
     exit();
+
 } // end if user name exists
-else
-{
+
+else {
+
     $today = date("Y-m-d");
-    $sql = "INSERT INTO Customer (user_name,create_date,
-password,first_name,last_name,street,city,
-state,zip,phone,email) VALUES ('$user_name','$today',md5('$password'),
-'$first_name', '$last_name','$street','$city',
-'$state','$zip','$phone','$email')";
-    mysqli_query($cxn,$sql);
-    $_SESSION['auth']="yes";
+
+    $sql = "INSERT INTO Customer (user_name, create_date, password, first_name, last_name, street, city, state, zip, phone, email) VALUES ('$user_name', '$today', md5('$password'), '$first_name', '$last_name', '$street', '$city', '$state', '$zip', '$phone', '$email')";
+
+    mysqli_query($cxn, $sql);
+
+    $_SESSION['auth'] = "yes";
+
     $_SESSION['logname'] = $user_name;
+
     /* send email to new Customer */
+
     $emess = "You have successfully registered. ";
+
     $emess .= "Your new user name and password are: ";
+
     $emess .= "\n\t$user_name\n\t";
+
     $emess .= "$password\n\n";
+
     $emess .= "We appreciate your interest. \n\n";
+
     $emess .= "If you have any questions or problems,";
+
     $emess .= " email@ourstore.com";
+
     $subj = "Your new customer registration";
-    $mail($email,$subj,$emess);
+
+    $mail($email, $subj, $emess);
+
     header("Location: SecretPage.php");
+
 } // end else no errors found
+
 break;
+
 default:
+
     include("form_login_reg.inc");
+
 } // end switch
+
 ?>
 ```
+
+### 代码行号详细说明
 
 下文说明中的数字指的是列表 3-3 中的行号：
 
-**9**: 开始一个 PHP 会话（session）。
+*   **第 9 行**：启动一个 PHP 会话（`session_start()`）。
+*   **第 10 行**：开始控制脚本剩余部分的 `switch` 语句。该语句测试 `$_POST` 全局数组中 `Button` 元素的值。只有当用户点击了表单中的某个提交按钮时，`Button` 元素才存在。
+*   **第 12 行**：开始当 `Button` 元素值为 `Login` 时执行的 `case` 分支。即当用户点击标记为 `Login` 的提交按钮时。从此行到第 50 行的语句都是 `Login` 分支的一部分。该分支块将提交的用户名和密码与数据库中存储的用户名和密码进行对比。
+*   **第 13–15 行**：连接到数据库。包含数据库连接信息的文件 `dbstuff.inc`。
+*   **第 16–19 行**：构建并执行一条 SQL 查询，从数据库中根据用户提交的用户名查询记录。
+*   **第 20 行**：检查与用户提交的用户名匹配的记录数量。可能是 0 或 1，因为数据库不允许重复用户名。
+*   **第 21 行**：如果记录数大于 0，则进入 `if` 分支。该分支块检查用户输入的密码是否正确。
+*   **第 23–28 行**：构建并执行一条 SQL 查询，根据用户提交的用户名查询密码记录。
+*   **第 29 行**：如果找到了记录，则进入 `if` 分支，这意味着密码正确。设置两个会话变量（`$_SESSION['auth']` 和 `$_SESSION['logname']`）并显示受保护页面内容。
+*   **第 35 行**：如果未找到记录，则进入 `else` 分支，这意味着密码错误。创建错误消息并重新显示登录页面，包含错误信息。
+*   **第 44 行**：如果未找到用户提交的用户名，则进入 `elseif` 分支。创建错误消息并重新显示登录页面。
+*   **第 52 行**：开始当 `Button` 值为 `Register` 时执行的 `case` 分支。即用户点击了 Register 提交按钮。从此行到第 195 行的语句构成了 `Register` 块。
+*   **第 54 行**：开始 `foreach` 循环，检查表单中的每个字段是否为空。`foreach` 循环结束于第 67 行。
+*   **第 56 行**：如果字段为空，则进入 `if` 分支。该 `if` 语句是必要的，因为手机字段不是必须的，允许为空。该 `if` 分支检查值是否为空。如果是，则将字段添加到 `$blanks` 数组中；如果不为空，则清洗值并添加到 `$good_data` 数组中，以字段名为键。
+*   **第 68 行**：如果 `$blanks` 是一个数组，则进入 `if` 分支——即如果任何字段为空。
+*   **第 70–75 行**：创建错误消息，其中包含空白字段的名称。
+*   **第 76 行**：重新显示登录表单，顶部显示错误消息，并在字段中显示 `$good_data` 数组中的值。
+*   **第 78 行**：`exit` 语句停止脚本。如果没有 `exit` 语句，脚本将在显示表单后继续执行后续语句。
+*   **第 81 行**：开始 `foreach` 循环，检查每个字段中信息的格式。`foreach` 循环结束于第 139 行。
+*   **第 83 行**：如果值不为空，则进入 `if` 分支。脚本之前的第 55–77 行已经处理了空白字段的信息。因此，到达此行时为空的字段都是允许为空的字段。
+*   **第 144 行**：开始一个 `if` 块，该块在 `$errors` 数组存在时执行，这意味着至少发现了一个错误。错误处理块在第 153 行结束。
+*   **第 146–150 行**：创建一个错误消息。
+*   **第 151 行**：重新显示表单，包括错误消息。
+*   **第 152 行**：一个 `exit` 语句停止脚本，防止执行后续语句。
+*   **第 156 行**：开始处理当字段信息完全正确时的字段信息部分。只有当所有必填字段都包含数据，且所有数据都经过测试并确认有效后，脚本才会到达这一行。
+*   **第 156–163 行**：创建并执行一个查询，以根据用户输入的用户名选择记录。数据库中不允许重复的用户名。
+*   **第 164 行**：开始一个 `if` 块，如果找到记录则执行该块，这意味着用户名已被占用。创建一条错误消息并重新显示表单（包括错误消息）。一个 `exit` 语句停止脚本。
+*   **第 171 行**：开始一个 `else` 块，如果没有找到记录则执行该块，这意味着用户名未被占用。它是可用的。
+*   **第 173 行**：存储今天的日期（`$today = date("Y-m-d")`）。
+*   **第 174–180 行**：构建并执行 SQL 查询，将新记录插入数据库中。
+*   **第 181 行**：存储一个会话变量（`$_SESSION['auth'] = "yes"`），表示用户登录成功。
+*   **第 182 行**：存储一个带有用户新用户名的会话变量（`$_SESSION['logname']`）。
+*   **第 184–192 行**：创建并向新用户发送电子邮件。
+*   **第 193 行**：显示受保护的 Web 页面内容——在此情况下为 `SecretPage.php`。
+*   **第 197 行**：开始默认分支情况（`default case`）块。如果之前的两个情况都不成立，则执行此块——即既没有点击 `Login`（登录）按钮，也没有点击 `Registration`（注册）按钮。此块仅显示带有空白表单字段的登录页面。
 
-**10**: 开始控制脚本剩余部分的 `switch` 语句。该 `switch` 语句测试 `$_POST` 全局数组中 `Button` 元素的值。只有当用户点击了表单中的某个提交按钮时，`Button` 元素才存在。
+### 受保护页面脚本
 
-**12**: 开始当 `Button` 元素值为 `Login` 时执行的 `case` 分支。即当用户点击标记为 `Login` 的提交按钮时。从此行到第 50 行的语句都是 `Login` 分支的一部分。该分支块将提交的用户名和密码与数据库中存储的用户名和密码进行对比。
+当用户通过脚本 `Login_reg.php` 显示的登录页面成功登录或注册时，将显示图 3-2 所示的页面。
 
-**13**: 连接到数据库（第 13–15 行）。包含数据库连接信息的文件。
+该页面脚本是你受保护 Web 网站的一部分，你不希望用户在未登录的情况下看到它。受保护 Web 网站（或网站部分）中的页面与其他任何页面没有区别。你只是想将它们限制为已登录的成员。为了实现这一点，你可以在每个页面的顶部启动会话并检查用户是否登录。
 
-**16**: 第 16–19 行构建并执行一条 SQL 查询，从数据库中根据用户提交的用户名查询记录。
-
-**20**: 检查与用户提交的用户名匹配的记录数量。可能可能是 0 或 1，因为数据库不允许重复用户名。
-
-**21**: 如果记录数大于 0，则进入 `if` 分支。该分支块检查用户输入的密码正确。
-
-**23**: 第 23–28 行构建并执行一条 SQL 查询，根据用户提交的用户名查询密码记录。
-
-**29**: 如果找到了记录，则进入 `if` 分支，这意味着密码正确。设置两个会话变量并显示受保护页面内容。
-
-**35**: 如果未找到记录，则进入 `else` 分支，这意味着密码错误。创建错误消息并重新显示登录页面，包含错误信息。
-
-**44**: 如果未找到用户提交的用户名，则进入 `elseif` 分支。创建错误消息并重新显示登录页面。
-
-**52**: 开始当 `Button` 值为 `Register` 时执行的 `case` 分支。即用户点击了 Register 提交按钮。从此行到第 195 行的语句构成了 `Register` 块。
-
-**54**: 开始 `foreach` 循环，检查表单中的每个字段是否为空。`foreach` 循环结束于第 67 行。
-
-**56**: 如果字段为空，则进入 `if` 分支。该 `if` 语句是必要的，因为手机字段不是必须的，允许为空。该 `if` 分支检查值是否为空。如果是，则将字段添加到 `$blanks` 数组中；如果不为空，则清洗值并添加到 `$good_data` 数组中，以字段名为键。
-
-**68**: 如果 `$blanks` 是一个数组，则进入 `if` 分支——即如果任何字段为空。
-
-**70**: 第 70–75 行创建错误消息，其中包含空白字段的名称。
-
-**76**: 重新显示登录表单，顶部显示错误消息，并在字段中显示 `$good_data` 数组中的值。
-
-**78**: `exit` 语句停止脚本。如果没有 `exit` 语句，脚本将在显示表单后继续执行后续语句。
-
-**81**: 开始 `foreach` 循环，检查每个字段中信息的格式。`foreach` 循环结束于第 139 行。
-
-**83**: 如果值不为空，则进入 `if` 分支。脚本之前的第 55–77 行已经处理了空白字段的信息。因此，到达此行时为空的字段都是允许为空的字段。
-
-
-
-
-启动一个 `foreach` 循环来处理每个字段，移除任何开头或结尾的空格以及任何 HTML 标签，并将结果值存储在与字段名同名的变量中。
-
-➝ **144** 开始一个 `if` 块，该块在 `$errors` 数组存在时执行，这意味着至少发现了一个错误。错误处理块在第 153 行结束。
-
-➝ **146** 在第 146–150 行之间创建了一个错误消息。
-
-➝ **151** 重新显示表单，包括错误消息。
-
-➝ **152** 一个 `exit` 语句停止脚本，防止执行后续语句。
-
-➝ **156** 开始处理当字段信息完全正确时的字段信息部分。只有当所有必填字段都包含数据，且所有数据都经过测试并确认有效后，脚本才会到达这一行。
-
-第 156–163 行创建并执行一个查询，以根据用户输入的用户名选择记录。数据库中不允许重复的用户名。
-
-➝ **164** 开始一个 `if` 块，如果找到记录则执行该块，这意味着用户名已被占用。创建一条错误消息并重新显示表单（包括错误消息）。一个 `exit` 语句停止脚本。
-
-➝ **171** 开始一个 `else` 块，如果没有找到记录则执行该块，这意味着用户名未被占用。它是可用的。
-
-![Image 84](img/index-582_1.jpg)
-
-➝ **173** 存储今天的日期。
-
-➝ **174** 第 174–180 行构建并执行 SQL 查询，将新记录插入数据库中。
-
-➝ **181** 存储一个会话变量，表示用户登录成功。
-
-➝ **182** 存储一个带有用户新用户名的会话变量。
-
-➝ **184** 第 184–192 行创建并向新用户发送电子邮件。
-
-➝ **193** 显示受保护的 Web 页面内容——在此情况下为 `SecretPage.php`。
-
-# 第六卷
-## 第三章
-
-➝ **197** 开始默认分支情况（default case）块。如果之前的两个情况都不成立，则执行此块——即既没有点击 `Login`（登录）按钮，也没有点击 `Registration`（注册）按钮。此块仅显示带有空白表单字段的登录 Web 页面。
-
-当用户通过脚本 `Login_reg.php` 显示的登录 页面成功登录或注册时，将显示图 3-2 所示的 页面。
-
-该 页面脚本是你受保护 Web 网站的一部分，你不希望用户在未登录的情况下看到它。受保护 Web 网站（或网站部分）中的 页面与其他任何其他页面没有区别。你只是想将它们限制为已登录的成员。为了实现这一点，你可以在每个页面的顶部启动会话并检查用户是否登录。
-
-**图 3-2：** 用户登录成功后显示的 页面。
+**图 3-2：** 用户登录成功后显示的页面。
 
 显示图 3-2 中页面的脚本由列表 3-4 的 `SecretPage.php` 脚本显示。
 
@@ -14614,14 +14036,15 @@ default:
 
 ```php
 <?php
+
 /* File: SecretPage.php
-* Desc: 当用户成功登录或注册时
-* 显示欢迎页面。
+* Desc: 当用户成功登录或注册时显示欢迎页面。
 */
+
 session_start();
 
 // 第 6 行
-if($_SESSION['auth'] != "yes")
+if ($_SESSION['auth'] != "yes")
 // 第 7 行
 {
     header("Location: Login_reg.php");
@@ -14629,93 +14052,15 @@ if($_SESSION['auth'] != "yes")
 }
 
 // 第 11 行
-echo "<head><title>Secret Page</title></head>
-<body>";
-echo "<p style='text-align: center; font-size: 1.5em;
-font-weight: bold; margin-top: 1em'>
-用户 ID, ".$SESSION['logname'].", 已
-成功登录";
+echo "<head><title>Secret Page</title></head><body>";
+
+echo "<p style='text-align: center; font-size: 1.5em; font-weight: bold; margin-top: 1em'>
+用户 ID, " . $_SESSION['logname'] . ", 已成功登录";
+
 ?>
+
 </body>
 ```
-
-启动一个 `foreach` 循环来处理每个字段，移除任何开头或结尾的空格以及任何 HTML 标签，并将结果值存储在与字段名同名的变量中。
-
-➝ **144** 开始一个 `if` 块，该块在 `$errors` 数组存在时执行，这意味着至少发现了一个错误。错误处理块在第 153 行结束。
-
-➝ **146** 在第 146–150 行之间创建了一个错误消息。
-
-➝ **151** 重新显示表单，包括错误消息。
-
-➝ **152** 一个 `exit` 语句停止脚本，防止执行后续语句。
-
-➝ **156** 开始处理当字段信息完全正确时的字段信息部分。只有当所有必填字段都包含数据，且所有数据都经过测试并确认有效后，脚本才会到达这一行。
-
-第 156–163 行创建并执行一个查询，以根据用户输入的用户名选择记录。数据库中不允许重复的用户名。
-
-➝ **164** 开始一个 `if` 块，如果找到记录则执行该块，这意味着用户名已被占用。创建一条错误消息并重新显示表单（包括错误消息）。一个 `exit` 语句停止脚本。
-
-➝ **171** 开始一个 `else` 块，如果没有找到记录则执行该块，这意味着用户名未被占用。它是可用的。
-
-![Image 84](img/index-582_1.jpg)
-
-➝ **173** 存储今天的日期。
-
-➝ **174** 第 174–180 行构建并执行 SQL 查询，将新记录插入数据库中。
-
-➝ **181** 存储一个会话变量，表示用户登录成功。
-
-➝ **182** 存储一个带有用户新用户名的会话变量。
-
-➝ **184** 第 184–192 行创建并向新用户发送电子邮件。
-
-➝ **193** 显示受保护的 Web 页面内容——在此情况下为 `SecretPage.php`。
-
-# 第六卷
-## 第三章
-
-➝ **197** 开始默认分支情况（default case）块。如果之前的两个情况都不成立，则执行此块——即既没有点击 `Login`（登录）按钮，也没有点击 `Registration`（注册）按钮。此块仅显示带有空白表单字段的登录 页面。
-
-当用户通过脚本 `Login_reg.php` 显示的登录 页面成功登录或注册时，将显示图 3-2 所示的 页面。
-
-该 页面脚本是你受保护 Web 网站的一部分，你不希望用户在未登录的情况下看到它。受保护 Web 网站（或网站部分）中的 页面与其他任何其他页面没有区别。你只是想将它们限制为已登录的成员。为了实现这一点，你可以在每个页面的顶部启动会话并检查用户是否登录。
-
-**图 3-2：** 用户登录成功后显示的 页面。
-
-显示图 3-2 中页面的脚本由列表 3-4 的 `SecretPage.php` 脚本显示。
-
-**列表 3-4：用户登录成功时运行的脚本**
-
-```php
-<?php
-/* File: SecretPage.php
-* Desc: 当用户成功登录或注册时
-* 显示欢迎页面。
-*/
-session_start();
-
-// 第 6 行
-if($_SESSION['auth'] != "yes")
-// 第 7 行
-{
-    header("Location: Login_reg.php");
-    exit();
-}
-
-// 第 11 行
-echo "<head><title>Secret Page</title></head>
-<body>";
-echo "<p style='text-align: center; font-size: 1.5em;
-font-weight: bold; margin-top: 1em'>
-用户 ID, ".$SESSION['logname'].", 已
-成功登录";
-?>
-</body>
-```
-
-*(注：由于您提供的待翻译文本后半部分存在重复，根据“注意不要重复输出原文”的原则，此处译文仅翻译了第一遍出现的内容。如果需要翻译后续的重复部分，请告知。)*
-
-
 
 
 
@@ -14723,10 +14068,9 @@ font-weight: bold; margin-top: 1em'>
 
 为了实现其基本功能，该在线目录应用程序应该：
 
-✦ 显示用户可以选择的产品分类。
-✦ 显示用户所选类别中的产品。它应该显示客户在购买时所需的所有产品信息。
-
-它应该一次显示一个页面，如果产品列表很长，则提供“下一页”和“上一页”链接。
+- 显示用户可以选择的产品分类。
+- 显示用户所选类别中的产品。它应该显示客户在购买时所需的所有产品信息。
+- 它应该一次显示一个页面，如果产品列表很长，则提供下一页和上一页链接。
 
 # 创建目录数据库
 
@@ -14738,13 +14082,13 @@ font-weight: bold; margin-top: 1em'>
 
 你的第一个设计任务是选择你想要存储的信息。你存储的内容取决于产品的类型。你需要存储客户在决定购买何种产品时可能用到的任何信息。商店主了解产品以及客户需要了解的内容，可以提供这些信息以及产品的图片。可能需要存储的信息包括：
 
-✦ **产品名称：** 一个描述性名称，让客户知道产品是什么。
-✦ **产品 ID：** 在大多数情况下，产品名称不是唯一的，因此你通常需要存储一个 `product number`，即用于标识产品的唯一数字。
-✦ **产品描述：** 对产品的文本描述。
-✦ **尺寸：** 产品可能有不同的尺寸。即使只有一种尺寸，客户出于某些目的也需要关于尺寸信息。例如，你可能只卖一种尺寸的咖啡桌，但客户仍然需要知道尺寸，以便判断它是否能放在他们的客厅里。
-✦ **颜色：** 产品可能有几种颜色。
-✦ **价格：** 客户肯定想知道产品多少钱！
-✦ **产品可用性：** 客户可能还想知道产品是何时添加到目录的、是否有货，或者何时到货。
+- **产品名称：** 一个描述性名称，让客户知道产品是什么。
+- **产品 ID：** 在大多数情况下，产品名称不是唯一的，因此你通常需要存储一个 `product number`，即用于标识产品的唯一数字。
+- **产品描述：** 对产品的文本描述。
+- **尺寸：** 产品可能有不同的尺寸。即使只有一种尺寸，客户出于某些目的也需要关于尺寸信息。例如，你可能只卖一种尺寸的咖啡桌，但客户仍然需要知道尺寸，以便判断它是否能放在他们的客厅里。
+- **颜色：** 产品可能有几种颜色。
+- **价格：** 客户肯定想知道产品多少钱！
+- **产品可用性：** 客户可能还想知道产品是何时添加到目录的、是否有货，或者何时到货。
 
 你可以向数据库中的产品条目中添加仅供你内部使用的信息。例如，你可能会添加关于向你供产品的公司信息。这些信息存储在数据库中，但永远不会显示给客户。
 
@@ -14761,7 +14105,7 @@ font-weight: bold; margin-top: 1em'>
 | `type` | `VARCHAR(20)` | 二级分类名称。 |
 | `description` | `VARCHAR(255)` | 产品描述。 |
 | `price` | `DECIMAL(7,2)` | 产品价格。所有价格按每磅的价格输入。 |
-| `pix` | `VARCHAR(20)` | 包含产品图片的图形文件名。默认值：Missing.jpg |
+| `pix` | `VARCHAR(20)` | 包含产品图片的图形文件名。默认值：`Missing.jpg` |
 
 该表有八个字段。除了 `description` 和 `price` 之外，所有字段均为必填（`NOT NULL`）且不能为空。`description` 和 `price` 字段在输入产品时允许留空。稍后添加 `description` 和 `price`。
 
@@ -14769,7 +14113,7 @@ font-weight: bold; margin-top: 1em'>
 
 这个数字在客户订产品时使用。这是一个 `AUTO_INCREMENT` 字段，因此当产品被添加到数据库时，`MySQL` 会为其顺序分配数字。在某些商店中，会分配并输入有意义的产品 ID 数字，而不仅仅是顺序数字。
 
-`pix` 字段定义了一个默认文件名（`Missing.jpg`）。如果某行的该字段没有输入文件名，`MySQL` 将将默认文件名存储在该字段中。
+`pix` 字段定义了一个默认文件名（`Missing.jpg`）。如果某行的该字段没有输入文件名，`MySQL` 将默认文件名存储在该字段中。
 
 ## 构建目录数据库
 
@@ -14783,14 +14127,25 @@ CREATE DATABASE FurnitureCatalog
 
 ```sql
 CREATE TABLE Furniture (
+
   prod_number SERIAL,
+
   name VARCHAR(20) NOT NULL,
+
   date_added DATE NOT NULL,
+
   category VARCHAR(20) NOT NULL,
+
   type VARCHAR(20) NOT NULL,
+
   description VARCHAR(255),
+
   price DECIMAL(7,2),
-  pix VARCHAR(20) NOT NULL DEFAULT "Missing.jpg", PRIMARY KEY(prod_number) 
+
+  pix VARCHAR(20) NOT NULL DEFAULT "Missing.jpg",
+
+  PRIMARY KEY(prod_number) 
+
 );
 ```
 
@@ -14802,14 +14157,19 @@ CREATE TABLE Furniture (
 
 ```php
 <?php
+
 $host = "localhost";
+
 $user = "admin";
+
 $passwd = "xy.34W";
+
 $database = "FurnitureCatalog";
+
 ?>
 ```
 
-注意文件开头（`<?php`）和结尾（`?>））的 `PHP` 标签。如果你没有包含标签，信息可能会显示在 Web 页面上供全世界看到，这完全不是你想要的。此数据库旨在存储所有产品的信息。你可以以任何常用的数据库方式输入产品信息。
+注意文件开头（`<?php`）和结尾（`?>`）的 `PHP` 标签。如果你没有包含标签，信息可能会显示在 Web 页面上供全世界看到，这完全不是你想要的。此数据库旨在存储所有产品的信息。你可以以任何常用的数据库方式输入产品信息。
 
 # 构建目录 Web 页面
 
@@ -14819,10 +14179,7 @@ $database = "FurnitureCatalog";
 
 你无疑见过很多 Web 目录。你可能已经确切知道想要的设计，但请记住，最适合你的设计在很大程度上取决于你目录产品的类型和数量。
 
-本章的目录提供家具。每个产品显示的信息是名称、描述、价格和图片。这些信息可以轻松地跨屏幕显示一行或两。其他产品可能需要更多或更少的屏幕空间。
-
-
-
+本章的目录提供家具。每个产品显示的信息是名称、描述、价格和图片。这些信息可以轻松地跨屏幕显示一行或两行。其他产品可能需要更多或更少的屏幕空间。
 
 你需要设计两种不同类型的页面：一个显示分类的索引页以及一个显示特定分类下产品的产品页。
 
@@ -14832,14 +14189,12 @@ $database = "FurnitureCatalog";
 
 索引 Web 页面提供了一个表单，允许用户选择分类。用户点击分类的单选按钮，然后点击 `Select Category`（选择分类）提交表单。当用户点击按钮时，将显示所选分类的产品 Web 页。
 
-索引页的代码存储在一个单独的文件，当应用程序需要显示目录索引页时包含该文件。因此，定义 Web 页的代码与提供应用程序逻辑的 PHP 代码是的。
+索引页的代码存储在一个单独的文件，当应用程序需要显示目录索引页时包含该文件。因此，定义 Web 页的代码与提供应用程序逻辑的 PHP 代码是分离的。
 
 **图 4-1：**
 在线目录应用程序显示的索引页。
 
 ![Image 86](img/index-590_1.jpg)
-
-37_167779 bk06ch04.qxp 12/17/07 8:24 PM Page 561
 
 ## 构建目录 Web 页面
 
@@ -14852,7 +14207,7 @@ $database = "FurnitureCatalog";
 **图 4-2：**
 在线目录显示的产品页。
 
-产品页显示了两个产品的信息。页面右上角显示了该分类找到了多少产品。用户可以通过点击页面底部的 `Next 2` 按钮查看接两个产品，通过点击 `Previous` 查看之前的项目。还提供了一个按钮，允许客户返回分类页并选择不同的分类。
+产品页显示了两个产品的信息。页面右上角显示了该分类找到了多少产品。用户可以通过点击页面底部的 `Next 2` 按钮查看接下来两个产品，通过点击 `Previous` 查看之前的项目。还提供了一个按钮，允许客户返回分类页并选择不同的分类。
 
 产品页的代码存储在一个单独的文件中，索引页代码相同。当应用程序脚本需要显示产品页时，会显示该文件。
 
@@ -14866,51 +14221,65 @@ $database = "FurnitureCatalog";
 
 ```php
 <?php
+
 /* File: page_furniture_index.inc
 * Desc: Displays 目录的分类.
 */
+
 ?>
+
 <html>
+
 <head><title>The Furniture Shop</title>
+
 <style type='text/css'>
 <!--
 ul li {
-list-style: none;
-font-weight: bold;
-padding-top: .5em;
-font-size: 1.2em;
+  list-style: none;
+  font-weight: bold;
+  padding-top: .5em;
+  font-size: 1.2em;
 }
 ul li.level2 {
-margin-left: -1em;
-font-weight: normal;
-font-size: .9em;
+  margin-left: -1em;
+  font-weight: normal;
+  font-size: .9em;
 }
 -->
 </style>
+
 </head>
+
 <body style="margin: .2in">
+
 <?php
+
 echo "<h1 style='text-align: center'>The Furniture Shop</h1>
 <hr />";
+
 /* 创建包含选择列表的表单 */
-echo "<form action='$_SERVER[PHP_SELF]'' method='POST'>\n";
+echo "<form action='$_SERVER[PHP_SELF]' method='POST'>\n";
 echo "<ul>\n";
+
 foreach($furn_categories as $key => $subarray)
 {
-echo "<li>$key</li>\n";
-echo "<ul>\n";
-foreach($subarray as $type)
-{
-echo "<li class='level2'>
+  echo "<li>$key</li>\n";
+  echo "<ul>\n";
+  foreach($subarray as $type)
+  {
+    echo "<li class='level2'>
 <input type='radio' name='interest' value='$type' />
 <label for='$type'>$type</label></li>\n";
-} // end type
-echo "</ul>\n";
+  } // end type
+  echo "</ul>\n";
 } // end category
+
 echo "</ul>\n";
 echo "<input type='submit' name='Products' value='Select Category' />\n";
+
 ?>
-</</body>
+
+</body>
 </html>
 ```
 
@@ -14941,200 +14310,143 @@ echo "<input type='submit' name='Products' value='Select Category' />\n";
 
 ```php
 <?php
+
 /* File: page_furniture_products.inc
 * Desc: 显示目录的产品页.
 */
+
 $table_heads = array(
-"prod_number" => "编号",
-"name" => "项目",
-"description" => "描述",
-"price" => "价格",
-"pix" => "图片"
+  "prod_number" => "编号",
+  "name" => "项目",
+  "description" => "描述",
+  "price" => "价格",
+  "pix" => "图片"
 );
+
 ?>
+
 <html>
 <head><title>The Furniture Shop</title></head>
 <body style="margin: .2in .2in 0">
+
 <?php
+
 echo "<h1 style='text-align: center'>The Furniture Shop</h1>
-<h2 style='size: larger'>{$POST['interest']}</h2>\n"; echo "<p style='text-align: right'>找到了 $n_products 个产品)</p>\n";
+<h2 style='size: larger'>{$_POST['interest']}</h2>\n";
+echo "<p style='text-align: right'>找到了 $n_products 个产品)</p>\n";
+
 echo "<table style='width: 100%'>\n";
-echo "<<tr>\n";
+echo "<tr>\n";
+
 foreach($table_heads as $heading)
 {
-echo "<th>$heading</th>";
+  echo "<th>$heading</th>";
 }
+
 echo "</tr>\n";
-for ($i=$n_start;$i<=$n_end;$i++)
+
+for ($i=$n_start; $i<=$n_end; $i++)
 {
-echo "<tr>";
-echo "<td style='text-align: right; padding-right: .5in'>{$products[$i]['prod_number']}</td>\n";
-echo "<td>{$products[$i]['name']}</td>\n";
-echo "<td>{$products[$i]['description']}</td>\n"; echo "<td style='text-align: center'>${$products[$i]['price']}</td>\n";
-echo "</tr>";
+  echo "<tr>";
+  echo "<td style='text-align: right; padding-right: .5in'>{$products[$i]['prod_number']}</td>\n";
+  echo "<td>{$products[$i]['name']}</td>\n";
+  echo "<td>{$products[$i]['description']}</td>\n";
+  echo "<td style='text-align: center'>{$products[$i]['price']}</td>\n";
+  echo "<td style='text-align: center'>
+<img src='images/{$products[$i]['pix']}'
+width='55' height='60' /></td>\n";
+  echo "</tr>\n";
 }
+
 echo "</table>";
-?>
-```
-```
 
+echo "<form action='$_SERVER[PHP_SELF]' method='POST'>\n";
+echo "<input type='hidden' name='n_end' value='$n_end'>\n";
+echo "<input type='hidden' name='interest' value='{$_POST['interest']}'>";
 
-
-
-```php
-echo “<td style=’text-align: center’>
-
-<img src=’images/{$products[$i][‘pix’]}’
-
-width=’55’ height=’60’ /></td>\\n”;
-
-echo “</tr>\\n”;
-
-}
-
-echo “<form action=’$_SERVER[PHP_SELF]’ method='POST’>\\n”;
-
-echo “<input type=’hidden’ name=’n_end’ value=’$n_end’>\\n”;
-
-echo “<input type=’hidden’ name=interest
-
-value=’$_POST[interest]’>”;
-
-echo “<tr><td colspan=’2’ style=’padding: 5’> <input
-
-type=’submit’ value=’Select another category’ /></td>
-
-<td colspan=’3’ style=’text-align: right’>”;
+echo "<tr><td colspan='2' style='padding: 5'> <input
+type='submit' value='Select another category' /></td>
+<td colspan='3' style='text-align: right'>";
 
 if($n_end > $n_per_page)
-
 {
-
-echo “<input type=’submit’ name=’Products’
-
-value=’Previous’>”;
-
+  echo "<input type='submit' name='Products' value='Previous'>";
 }
 
 if($n_end < $n_products)
-
 {
-
-echo “<input type=’submit’ name=’Products’
-
-value=’Next $n_per_page’>”;
-
+  echo "<input type='submit' name='Products' value='Next $n_per_page'>";
 }
 
-echo “</td></tr></form></table>”;
+echo "</td></tr></form></table>";
 
 ?>
 
-</body></html>
+</body>
+</html>
 ```
 
 ---
 
 以下数字对应列表 4-2 中的行号：
 
-➝**5**
-创建数组 `$table_heads`，该数组包含产品显示中表格列的标题。在文件开头此结构化数组中创建标题，使得数据易于查看和维护。
+- **5** 创建数组 `$table_heads`，该数组包含产品显示中表格列的标题。在文件开头此结构化数组中创建标题，使得数据易于查看和维护。
+- **16** 为 Web 页面顶部输出一个 `<h1>` 和一个 `<h2>` 标签（第 16–17 行）。
+- **19** 在 Web 页面右上角显示找到的产品数量。
+- **22** 开始一个 `foreach` 循环，输出表格的表头。
+- **27** 开始一个 `for` 循环，输出产品的表格行。`for` 循环的起始值存储在变量 `$n_start` 中，结束值存储在变量 `$n_end` 中。这些值在应用程序脚本中计算并存储在变量中。值从名为 `$products` 的数组设置到表格单元格中，该数组是在应用程序脚本中创建的。
+- **40** 结束 `for` 循环。
+- **41** 
 
-➝**16**
-为 Web 页面顶部输出一个 `<h1>` 和一个 `<h2>` 标签（第 16–17 行）。
 
-➝**19**
-在 Web 页面右上角显示找到的产品数量。
-
-➝**22**
-开始一个 `foreach` 循环，输出表格的表头。
-
-➝**27**
-开始一个 `for` 循环，输出产品的表格行。
-
-`for` 循环的起始值存储在变量 `$n_start` 中，结束值存储在变量 `$n_end` 中。这些值在应用程序脚本中计算并存储在变量中。值从名为 `$products` 的数组设置到表格单元格中，该数组是在应用程序脚本中创建的。
-
-➝**40**
-结束 `for` 循环。
-
-➝**41**
 通过输出 `<form>` 标签开始一个表单。
 
 ➝**42**
+
 第 42–44 行向表单添加两个隐藏字段——`n_end` 和 `interest`。当所有产品无法放入单个 Web 页面时，需要这些信息来显示额外的产品页面。
 
 ➝**45**
+
 第 45–47 行输出一个提交按钮，允许用户返回索引 Web 页面。
 
 ➝**48**
+
 开始一个 `if` 语句，如果当前显示的产品页面不是第一页，则执行该语句。`if` 块显示“上页”（Previous）按钮。
 
 ➝**53**
+
 开始一个 `if` 语句，如果当前显示的最后一个产品不是数组中的最后一个产品，则执行该语句。`if` 块显示“下一个”（Next）按钮。
 
 ### 显示目录 Web 页面
 
 当使用以下语句之一包含所需的 Web 页面文件时，就会显示该目录 Web 页面：
 
-`include(“page_furniture_index.inc”);`
-
-`include(“page_furniture_products.inc”);`
-
-Web 页面显示从目录数据库中检索的信息。Web 页面文件从数组显示产品信息。索引 Web 页面文件显示来自名为 `$furn_categories` 的数组的信息。
-
-目录 Web 页面只要所需的 Web 页面文件被以下语句之一包含，就会显示：
-
-`include(“page_furniture_index.inc”);`
-
-`include(“page_furniture_products.inc”);`
+```
+include("page_furniture_index.inc");
+include("page_furniture_products.inc");
+```
 
 Web 页面显示从目录数据库中检索的信息。Web 页面文件从数组显示产品信息。索引 Web 页面文件显示来自名为 `$furn_categories` 的数组的信息。
-
-目录 Web 页面只要所需的 Web 页面文件被以下语句之一包含，就会显示：
-
-`include(“page_furniture_index.inc”);`
-
-`include(“page_furniture_products.inc”);`
-
-Web 页面显示从目录数据库中检索的信息。Web 页面文件从数组显示产品信息。索引 Web 页面文件显示来自名为 `$furn_categories` 的数组的信息。
-
-目录 Web 页面只要所需的 Web 页面文件被以下语句之一包含，就会显示：
-
-`include(“page_furniture_index.inc”);`
-
-`include(“page_furniture_products.inc”);`
-
-Web 页面显示从目录数据库中检索的信息。Web 页面文件从数组显示产品信息。索引 Web 页面文件显示来自名为 `$furn_categories` 的数组的信息。
-
-目录 Web 页面只要所需的 Web 页面文件被以下语句之一包含，就会显示：
-
-`include(“page_furniture_index.inc”);`
-
-`include(“page_furniture_products.inc”);`
-
-Web 页面显示从目录数据库中检索的信息。Web 页面文件从数组显示产品信息。索引 Web 页面文件显示来自名为 `$furn_categories` 的数组的信息。
-
-[注：由于原始文本中存在大量重复段落，译文已根据逻辑提取核心内容的翻译。]
 
 ### 构建目录应用程序脚本
 
-目录应用程序脚本包含显示产品页面的逻辑。[此处对应原文中重复描述部分，已翻译核心逻辑。]
+目录应用程序脚本包含显示产品页面的逻辑。
 
 ### 列表 4-3: 目录应用程序
 
-列表 4-3 显示了目录应用程序的 own：
+列表 4-3 显示了目录应用程序的代码：
 
 ```php
 <?php
 /* Program: Catalog.php
 * Desc: Displays a catalog of products when the user selects a category.
 */
-include(“dbstuff.inc”);
+include("dbstuff.inc");
 
 $n_per_page = 2;
 if(isset($_POST['Products'])) {
     if(!isset($_POST['n_end'])) {
-        header(“location:furniture.php”);
+        header("location:furniture.php");
         exit();
     } else {
         $n_start = $_POST['n_end'] - $n_per_page;
@@ -15145,8 +14457,8 @@ if(isset($_POST['Products'])) {
 $n_end = $n_start + $n_per_page - 1;
 
 $cxn = mysqli_connect($host,$user,$database);
-$query = “SELECT DISTINCT category,type FROM Furniture WHERE type=$_POST[interest]’ ORDER BY category,type”;
-$result = mysqli_query($cxn,$query) or die (“query died: category”);
+$query = "SELECT DISTINCT category,type FROM Furniture WHERE type=$_POST[interest]' ORDER BY category,type";
+$result = mysqli_query($cxn,$query) or die ("query died: category");
 
 $products = [];
 $n=1;
@@ -15159,65 +14471,74 @@ $n_products = sizeof($products);
 if($n_end > $n_products) {
     $n_end = $n_products;
 }
-include(“page_furniture_products.inc”);
+include("page_furniture_products.inc");
 ?>
 ```
 
-
-
-
-
-开始一个 if 语句，如果这并不是第一个显示的产品页面，则执行。变量 `n_end` 是产品页面表单中的一个隐藏字段，因此如果 `$_POST[n_end]` 存在，说明用户在产品页面显示时点击了页面上的按钮。if 块会检查按了哪个按钮。
+开始一个 `if` 语句，如果这并不是第一个显示的产品页面，则执行。变量 `n_end` 是产品页面表单中的一个隐藏字段，因此如果 `$_POST[n_end]` 存在，说明用户在产品页面显示时点击了页面上的按钮。`if` 块会检查按了哪个按钮。
 
 ➝**21**
-开始一个 if 语句，如果点击了“Previous”（上一个）按钮则执行。`$n_start` 被设置为点击按钮页面的前一个页面的开头。`$n_start` 是网页显示时要首先显示的产品编号。
+
+开始一个 `if` 语句，如果点击了“Previous”（上一个）按钮则执行。`$n_start` 被设置为点击按钮页面的前一个页面的开头。`$n_start` 是网页显示时要首先显示的产品编号。
 
 ➝**25**
-开始一个 else 语句，如果*没有*点击“Previous”（上一个）按钮，则执行，这意味着“Next”（下一个）按钮*被*点击了。`$n_start` 被设置为点击按钮的页面上显示的最后一个产品之后的下一个产品。
+
+开始一个 `else` 语句，如果*没有*点击“Previous”（上一个）按钮，则执行，这意味着“Next”（下一个）按钮*被*点击了。`$n_start` 被设置为点击按钮的页面上显示的最后一个产品之后的下一个产品。
 
 ➝**30**
-开始一个 else 块，如果这是第一次显示产品页面，则执行。它将 `n_start` 设置为 1。
+
+开始一个 `else` 块，如果这是第一次显示产品页面，则执行。它将 `n_start` 设置为 1。
 
 ➝**34**
-使用第 19–33 行 if 语句中设置的 `$n_start` 值来计算 `$n_end` 的值，该值为产品网页显示时显示的最后一个产品。将 `$n_end` 设置为 `$n_start` 加上页面上要显示的产品数，减一。
+
+使用第 19–33 行 `if` 语句中设置的 `$n_start` 值来计算 `$n_end` 的值，该值为产品网页显示时显示的最后一个产品。将 `$n_end` 设置为 `$n_start` 加上页面上要显示的产品数，减一。
 
 ➝**35**
+
 第 35–39 行构建并执行一个查询，检索所选类别中所有产品的信息。
 
 ➝**40**
+
 将计数器设置为 1。
 
 ➝**41**
-开始一个 while 循环，获取从数据库中检索的所有产品信息行。
+
+开始一个 `while` 循环，获取从数据库中检索的所有产品信息行。
 
 ➝**43**
-开始一个 foreach 循环，构建名为 `$products` 的数组，该数组包含从数据库中检索的所有产品信息。
+
+开始一个 `foreach` 循环，构建名为 `$products` 的数组，该数组包含从数据库中检索的所有产品信息。
 
 ➝**49**
+
 第 49–53 行确保 `$n_end` 不大于产品总数。如果 `$n_end` 超过产品总数，则将 `$n_end` 设置最后一个产品。
 
 ➝**54**
+
 显示产品页面。
 
 ➝**57**
-启动一个 else 块，如果没有点击“Product”（产品）按钮，则执行。可能是既没有点击任何按钮，就是点击了“Select Another Category”（选择另一个类别）按钮。此块显示带有产品类别的索引页。
+
+启动一个 `else` 块，如果没有点击“Product”（产品）按钮，则执行。可能是既没有点击任何按钮，就是点击了“Select Another Category”（选择另一个类别）按钮。此块显示带有产品类别的索引页。
 
 ➝**59**
+
 第 60–63 行构建并执行一个查询，检索数据库中的所有类别。
 
 ➝**64**
-开始一个 while 循环，构建包含所有家具类别的数组 `$furn_categories`。
+
+开始一个 `while` 循环，构建包含所有家具类别的数组 `$furn_categories`。
 
 ➝**68**
+
 显示展示家具类别的索引 Web Page。
 
 此脚本会自动显示目录数据库中的所有信息。索引部分从数据库中检索所有类别；产品部分检索所有属于所选类别的产品。当你向目录数据库中添加任何产品时，脚本会自动检索并显示新产品。当向数据库中添加新产品时，不需要对脚本进行任何更改。
 
-# 第 5 章：构建
+# 第 5 章：构建购物车
 
-### 购物车
+## 本章内容
 
-### 本章内容
 - **设计购物车**
 - **构建购物车数据库**
 - **为 Web 页面编写代码**
@@ -15229,42 +14550,36 @@ include(“page_furniture_products.inc”);
 
 本章描述的在线订购系统需要你构建一个包含若干表的 MySQL 数据库。你可以使用 SQL 语句或使用 phpMyAdmin 创建数据库。创建数据库和向其中添加数据的方法将在第三本书中讨论。
 
-### 设计购物车
+## 设计购物车
 
 允许你在线购买物品的 Web 应用程序被称为“*购物车*”（shopping cart），其命名自你在杂货店里推着并装满待购物品的推车。在线购买应用程序以类似的方式运行，允许你将物品放入购物车。然而，该应用程序不仅仅是提供一个跟踪你所添加物品的购物车。它还会收集完成购买所需的信息（例如你的地址），并处理订单和你的信用卡订单。它还必须协调或包含一个待售的产品目录。虽然在技术上将该程序称为“在线订购系统”更准确，但它更常地被称为购物车。
 
 购物车可以通过许多方式实现。你的首要任务是决定如何实现你的购物车。
 
-#### 做出设计决策
+### 做出设计决策
 
 在设计用户界面之前，你必须做出一些基本的编程设计决策。务必考虑以下因素：
 
 - **客户登录**：许多商店要求客户在购买前进行注册并登录。客户注册为商店提供了有关客户的信息，例如电话号码和电子邮箱。要求登录还允许提供在不登录的情况下无法实现的功能。例如，在不要求客户登录的情况下，无法提供允许客户跟踪其订单的功能。另一方面，许多客户会避免注册。某些客户怀疑他们的信息可能被用于不当目的，例如不请的推销电话或电子邮件。其他客户对这个过程不耐烦，会转到更简单的网站。因此，要求登录可能会导致商店损失一些订单。本章中的应用程序不需要客户登录。任何人都可以购买产品。本微型书籍第 3 章提供了一个登录应用程序，如果你需要，可以将其添加到此应用程序。
 
-- **支付方式**：客户如何购买产品？最简单的方法是将订单信息通过电子邮件发送销售部门并向客户结算。或者，你可以在发货前要求用户提供支票。然而，大多数网站都会在网站上接受支付。网站可以快速接受并处理信用卡支付。有些网站接受 PayPal 支付，作为信用卡支付的补充或替代。PayPal 是一个互联网网站网站它提供了人们可以在互联网上发送或接收资金的账户。（例如，你可以使用 PayPal 账户购买 eBay 物品。）除了提供账户设置外，PayPal 还提供了你可以通过 PayPal 轻松接受支付的商家工具。参见 `www.paypal.com`。本章中的应用程序仅接受信用卡。
+- **支付方式**：客户如何购买产品？最简单的方法是将订单信息通过电子邮件发送销售部门并向客户结算。或者，你可以在发货前要求用户提供支票。然而，大多数网站都会在网站上接受支付。网站可以快速接受并处理信用卡支付。有些网站接受 PayPal 支付，作为信用卡支付的补充或替代。PayPal 是一个互联网网站，它提供了人们可以在互联网上发送或接收资金的账户。（例如，你可以使用 PayPal 账户购买 eBay 物品。）除了提供账户设置外，PayPal 还提供了你可以通过 PayPal 轻松接受支付的商家工具。参见 `www.paypal.com`。本章中的应用程序仅接受信用卡。
 
 - **信用卡处理**：接受信用卡支付会引发安全问题。如果客户向你发送信用卡号，你需要实施 SSL（安全套接层）来确保安全。如果你存储信用卡号，你需要实施强大的安全措施。存储信用卡号可以让客户购买更快、更方便（因为他们的信用卡信息已存档），但增加了坏分子获取重要信息的机会。此外，某些客户不希望将信用卡信息存储在你的网站上。一种可能的解决方案（用于一些在线商店）是允许客户决定是否让你存储他们的信用卡信息。
 
-
-
-
-
 本章中的应用程序不会保存信用卡信息。这些信息会被接收、使用，然后被丢弃，不会存储在数据库中。
 
-## 第六卷
-
-✦ **运费：** 向客户发送购买商品需要花费费用。`Chapter 5` 中最容易实现的解决方案是使用单一的标准的运费和手续费。在总额上增加一个金额是一个简单的程序步骤。更复杂的 `Shopping Car`（购物车）解决方案是尝试计算实际运费，让客户选择所使用的运输类型，并根据你的 `ZIP code` 到客户邮政编码的距离来计算运费。客户会喜欢更准确的费用，但编程需要花费更多的时间和精力。
+- **运费**：向客户发送购买商品需要花费费用。`Chapter 5` 中最容易实现的解决方案是使用单一的标准的运费和手续费。在总额上增加一个金额是一个简单的程序步骤。更复杂的 `Shopping Cart`（购物车）解决方案是尝试计算实际运费，让客户选择所使用的运输类型，并根据你的 `ZIP code` 到客户邮政编码的距离来计算运费。客户会喜欢更准确的费用，但编程需要花费更多的时间和精力。
 
 本章中的应用程序收取的运费是每件物品的固定费用。
 
-✦ **购物车：** 在客户继续购物但在提交订单之前，你可以使用几种机制来存储购物车。客户在最后凑齐最终订单时，需要能够从购物车中添加和删除商品。以下是存储购物车内容最常用的技术：
+- **购物车**：在客户继续购物但在提交订单之前，你可以使用几种机制来存储购物车。客户在最后凑齐最终订单时，需要能够从购物车中添加和删除商品。以下是存储购物车内容最常用的技术：
 
-*   `Database table`：更安全，但开销更大。
-*   `Cookies`：客户可能禁用了 Cookie。
-*   `Session variables`：在共享服务器上安全性较低。
-*   `Text file`：简单，但安全性较低。
+  *   `Database table`：更安全，但开销更大。
+  *   `Cookies`：客户可能禁用了 Cookie。
+  *   `Session variables`：在共享服务器上安全性较低。
+  *   `Text file`：简单，但安全性较低。
 
-有时也会使用其他不常用的方法。
+  有时也会使用其他不常用的方法。
 
 本章中的应用程序将购物车商品存储在 `MySQL` 数据库中。
 
@@ -15327,7 +14642,7 @@ include(“page_furniture_products.inc”);
 
 #### Furniture 表
 
-应用程序使用了我们在微型书籍 `Chapter 4` 中设计并解释的在线目录中的 `Furniture` 表。应用程序可以从该数据库访问表。然而，为了简化设计，我们将 `Food` 表添加到了 `OnlineOrders` 数据库（我们在本章中设计并解释）。参见 `Table 5-3`。
+应用程序使用了我们在微型书籍 `Chapter 4` 中设计并解释的在线目录中的 `Furniture` 表。应用程序可以从该数据库访问表。然而，为了简化设计，我们将 `Furniture` 表添加到了 `OnlineShop` 数据库（我们在本章中设计并解释）。参见 `Table 5-3`。
 
 #### 数据库表：Furniture
 
@@ -15336,16 +14651,16 @@ include(“page_furniture_products.inc”);
 | `catalog_number` | `SERIAL` | 由 `MySQL` 顺序分配的商品识别码。（主键） |
 | `name` | `VARCHAR(40)` | 单个商品的名称 |
 | `date_added` | `DATE` | 商品加入目录的日期 |
+
+
+
 | `category` | `VARCHAR(20)` | 第一级分类名称 |
 | `type` | `VARCHAR(20)` | 第二级分类名称 |
 | `description` | `VARCHAR(255)` | 商品描述 |
 | `price` | `DECIMAL(7,2)` | 商品价格。所有价格均按每磅输入。 |
 | `pix` | `VARCHAR(20)` | 包含图片的图形文件文件名。默认值为 `Missing.jpg`。 |
 
-
-
-
-该表共有八个字段。除了 `description` 和 `price` 之外，所有字段均为必填（`NOT NULL`）且不能为空为空。在输入产品时，`description` 和 `price` 字段允许为空。`description` 和 `price` 可以在之后添加。
+该表共有八个字段。除了 `description` 和 `price` 之外，所有字段均为必填（`NOT NULL`）且不能为空。在输入产品时，`description` 和 `price` 字段允许为空。`description` 和 `price` 可以在之后添加。
 
 `catalog_number` 字段是唯一标识产品的编号。该字段定义为 `SERIAL`，这是一个 MySQL 术语，意味着 `BIGINT`、`UNSIGNED`、`NOT NULL` 和 `AUTO_INCREMENT`。
 
@@ -15369,7 +14684,7 @@ include(“page_furniture_products.inc”);
 CREATE TABLE CustomerOrder (
     order_number INT(6) NOT NULL AUTO_INCREMENT,
     order_date DATE NOT NULL,
-    submitted ENUM(“yes”,”no”),
+    submitted ENUM("yes","no"),
     ship_name VARCHAR(50),
     ship_street VARCHAR(50),
     ship_city VARCHAR(50),
@@ -15401,15 +14716,13 @@ CREATE TABLE Furniture (
     type VARCHAR(20) NOT NULL,
     description VARCHAR(255) NOT NULL,
     price DECIMAL(7,2) NOT NULL,
-    pix VARCHAR(20) NOT NULL DEFAULT “Missing.jpg”, PRIMARY KEY(catalog_number) );
+    pix VARCHAR(20) NOT NULL DEFAULT "Missing.jpg",
+    PRIMARY KEY(catalog_number) );
 ```
 
 ### 访问购物车数据库
 
 PHP 提供了 MySQL 函数，用于你从 PHP 脚本访问数据库。（注：原文此处为大量重复句子，译文略）
-
-
-
 
 此网页与本微型书籍第 4 章中在线目录的网页相同，不同之处提供了一个按钮，客户可以点击该按钮查看当前购物车的内容。
 
@@ -15417,28 +14730,19 @@ PHP 提供了 MySQL 函数，用于你从 PHP 脚本访问数据库。（注：�
 
 另一种类型的目录网页显示所选类别下产品的信息。购物车的商品页面与上一节描述的产品页面相似（见图 4-2），但它增加了一些组件，如图 5-2 所示。
 
-## 第六卷
-
-## 第 5 章
 ### 购物车
-
-### 构建一个 t
 
 **图 5-2：** 购物车显示的商品页面。
 
 注意此页面上的以下新增：
 
-*   **查看购物车按钮（View Cart button）：** 页面右上角添加了一个新的提交按钮——查看购物车。此按钮允许客户查看其购物车当前的内容。该按钮也添加到了分类页面。
-*   **数量列（Quantity column）：** 此列允许客户输入每件商品所需的数量。家具目录允许用户指定所需的商品数量。商品在数量字段显示为 0（零）。客户可以更改数量。
-*   **添加商品按钮（Add Items button）：** 添加了一个新按钮——添加商品到购物车。
+*   **查看购物车按钮：** 页面右上角添加了一个新的提交按钮——查看购物车。此按钮允许客户查看其购物车当前的内容。该按钮也添加到了分类页面。
+*   **数量列：** 此列允许客户输入每件商品所需的数量。家具目录允许用户指定所需的商品数量。商品在数量字段显示为 0（零）。客户可以更改数量。
+*   **添加商品按钮：** 添加了一个新按钮——添加商品到购物车。
 
 页面上新增的元素是为了让客户可以选择要购买的商品。
 
 ![Image 89](img/index-611_1.jpg)
-
-38_167779 bk06ch05.qxp 12/17/07 8:24 PM Page 582
-
-582 构建购物车网页
 
 ## 购物车网页
 
@@ -15448,9 +14752,9 @@ PHP 提供了 MySQL 函数，用于你从 PHP 脚本访问数据库。（注：�
 
 购物车提供了三个客户可以点击的按钮：
 
-*   **继续购物（Continue Shopping）：** 将客户返回目录分类页面。
-*   **提交订单（Submit Order）：** 提交购物车中商品的订单。
-*   **更新购物车（Update Cart）：** 允许客户更改购物车中的商品。客户可以更改“数量”列中的商品数量并点击此按钮。购物车将根据更改后的数量重新显示。如果将数字改为 0（零），该商品将从购物车中移除。
+*   **继续购物：** 将客户返回目录分类页面。
+*   **提交订单：** 提交购物车中商品的订单。
+*   **更新购物车：** 允许客户更改购物车中的商品。客户可以更改“数量”列中的商品数量并点击此按钮。购物车将根据更改后的数量重新显示。如果将数字改为 0（零），该商品将从购物车中移除。
 
 注意购物车中当前有三个商品。在图 5-2 所示的商品页面中仅选择了两个商品。购物车中显示的第一个商品之前已存储在购物车中；后两个商品是添加进去的。
 
@@ -15461,19 +14765,9 @@ PHP 提供了 MySQL 函数，用于你从 PHP 脚本访问数据库。（注：�
 ![Image 90](img/index-612_1.jpg)
 ![Image 91](img/index-612_2.jpg)
 
-38_167779 bk06ch05.qxp 12/17/07 8:24 PM Page 583
+**图 5-4：** 运输信息表
 
-583 构建购物车网页
-
-**图 5-4：** 运信息表
-
-## 第六卷
 ### 由购物车显示
-
-## 第 5 章
-### 购物车
-
-### 构建一个 t
 
 我们为此示例应用程序简化了运输信息表单。
 
@@ -15485,16 +14779,12 @@ PHP 提供了 MySQL 函数，用于你从 PHP 脚本访问数据库。（注：�
 
 **图 5-5：** 购物车显示的摘要网页。
 
-38_167779 bk06ch05.qxp 12/17/07 8:24 PM Page 584
-
-584 构建购物车网页
-
 摘要页面提供了四个客户可以点击的按钮：
 
-*   **继续购物（Continue Shopping）：** 将客户返回第一个目录页面，显示产品分类，同时保留订单中的信息。
-*   **编辑运输信息（Edit Shipping Information）：** 将客户返回运输信息表单并显示显示信息，以便客户可以根据需要更改运输信息。
-*   **取消订单（Cancel Order）：** 取消订单。
-*   **提交订单（Submit Order）：** 提交摘要页上的订单。在最终提交之后，客户无法进行更改。
+*   **继续购物：** 将客户返回第一个目录页面，显示产品分类，同时保留订单中的信息。
+*   **编辑运输信息：** 将客户返回运输信息表单并显示显示信息，以便客户可以根据需要更改运输信息。
+*   **取消订单：** 取消订单。
+*   **提交订单：** 提交摘要页上的订单。在最终提交之后，客户无法进行更改。
 
 家具商店必须为住在德克萨斯州的客户收取销售税。因此，摘要页显示销售税。如果地址在另一个州，则不收取销售税。
 
@@ -15525,15 +14815,15 @@ PHP 提供了 MySQL 函数，用于你从 PHP 脚本访问数据库。（注：�
 <title>The Furniture Shop</title>
 <style type="text/css">
 ul {
-list-style: none;
-font-weight: bold;
-padding-top: .5em;
-font-size: 1.2em;
+    list-style: none;
+    font-weight: bold;
+    padding-top: .5em;
+    font-size: 1.2em;
 }
 ul.level2 {
-margin-left: -1em;
-font-weight: normal;
-font-size: .9em;
+    margin-left: -1em;
+    font-weight: normal;
+    font-size: .9em;
 }
 </style>
 </head>
@@ -15550,15 +14840,13 @@ echo "<hr>";
 echo "<ul>";
 foreach($furn_categories as $key => $subarray)
 {
-echo "<li>$key</li>";
-echo "<ul>";
-foreach($subarray as $type)
-{
-echo "<li class='level2>
-<input type='radio' name='interest' id='$type' value='$type>
-<label for='$type'>$type</label></li>";
-} // 结束 foreach type
-echo "</ul>";
+    echo "<li>$key</li>";
+    echo "<ul>";
+    foreach($subarray as $type)
+    {
+        echo "<li class='level2'><input type='radio' name='interest' id='$type' value='$type'><label for='$type'>$type</label></li>";
+    } // 结束 foreach type
+    echo "</ul>";
 } // 结束 foreach category
 echo "</ul>";
 echo "<input type='submit' name='Products' value='Select Category' style='margin-left: .5in'>";
@@ -15569,13 +14857,9 @@ echo "</form>";
 </html>
 ```
 
-38_167779 bk06ch05.qxp 12/17/07 8:24 PM Page 586
-
-586 构建购物车网页
-
 此文件与本微型书籍第 4 章中所示分类网页相同，不同在于第 27-30 行。这些行添加了一个按钮，客户可以点击它查看当前购物车中的商品。有关此文件中代码的逐行解释，请参阅本微型书籍第 4 章。
 
-## 产品信息网页
+### 产品信息网页
 
 定义产品信息网页的代码位于名为 `shop_page_products.inc` 的文件中，如代码列表 5-2 所示。
 
@@ -15595,146 +14879,52 @@ $table_heads = array("prod_number" => "Product Number",
 );
 ?>
 <html>
-```
-
-
-
-
-
 <head><title>家具商店</title></head>
-
-<body style=’margin: .2in .2in 0’>
-
+<body style='margin: .2in .2in 0'>
 <?php
-
-echo “<form action=’Shop_cart.php’ method=’POST'>\n
-
-➝`18`
-
-<p style=’text-align: right’\n
-
-<input type=’submit’ name=’Cart’
-
-value=’查看购物车’>\n
-
-</form>\n”;
-
-➝`22`
-
-echo “<h1 style=’text-align: center’>家具商店</h1
-
-<h2 style=’size: larger’>{$_POST['interest']}</</h2>\n”; echo “<p style=’text-align: right’>
-
-（找到 $n_products 个产品）\n”;
-
-echo “<table style=’width: 100%’\n”;
-
-echo “<tr>\n\";
+echo "<form action='Shop_cart.php' method='POST'>\n";
+echo "<p style='text-align: right'>\n";
+echo "<input type='submit' name='Cart' value='查看购物车'>\n";
+echo "</form>\n";
+echo "<h1 style='text-align: center'>家具商店</h1>\n";
+echo "<h2 style='size: larger'>{$_POST['interest']}</h2>\n";
+echo "<p style='text-align: right'>(找到 $n_products 个产品)\n";
+echo "<table style='width: 100%'>\n";
+echo "<tr>\n";
 foreach($table_heads as $heading)
-
 {
-
-echo “<th>$heading</th>”;
-
+    echo "<th>$heading</th>";
 }
-
-echo “</tr>\n\";
-
-echo “<form action=’$_SERVER[PHP_SELF]’ method=’POST’\n”; for($i=$n_start;$i<=$n_end;$i++)
-
+echo "</tr>\n";
+echo "<form action='$_SERVER[PHP_SELF]' method='POST'>\n";
+for($i=$n_start;$i<=$n_end;$i++)
 {
-
-echo “<tr>”;
-
-38_167779 bk06ch05.qxp 12/17/07 8:24 PM Page 587
-
-构建购物车网页页面
-
-587
-
-echo “<td style=’padding-right: .5in; text-align: right’>
-
-{$products[$i]['catalog_number']}</td>\n”;
-
-echo “<td>{$products[$i]['name']}</td>\n”;
-
-echo “<td>{$products[$i]['description']}</td>\n”; echo “<td style=’text-align: center’>
-
-\${$products[$i]['price']}</td>\n”;
-
-echo “<td style=’text-align: center’>
-
-<img src=’images/{$products[$i]['pix']}’
-
-width=’55’ height=’60’></td>\n”;
-
-echo “<td style=’text-align: center’><input type=’text’➝`47`
-
-name=’item{$products[$i]['catalog_number']}’
-
-value=’0’ size=’4’></td>\n”;
-
-➝`49`
-
-echo “</tr>”;
-
+    echo "<tr>";
+    echo "<td style='padding-right: .5in; text-align: right'>{$products[$i]['catalog_number']}</td>\n";
+    echo "<td>{$products[$i]['name']}</td>\n";
+    echo "<td>{$products[$i]['description']}</td>\n";
+    echo "<td style='text-align: center'>\${$products[$i]['price']}</td>\n";
+    echo "<td style='text-align: center'><img src='images/{$products[$i]['pix']}' width='55' height='60'></td>\n";
+    echo "<td style='text-align: center'><input type='text' name='item{$products[$i]['catalog_number']}' value='0' size='4'></td>\n";
+    echo "</tr>";
 }
-
-## 第六卷
-
-## 第 5 章
-
-echo “<input type=’hidden’ name=’n_end’ value=’$n_end’\n”; echo “<input type=’hidden’ name=’interest’
-
-value=’$_POST[interest]’\n”;
-
-**购物车**
-
-**构建一个**
-
-echo “<tr>
-
-<td colspan=’2’ style=’padding: 5’> <input
-
-type=’submit’
-
-value=’选择另一个类别’></td>\n”;
-
-echo “<td><input type=’submit’ name=’Products’
-
-➝`58`
-
-**t**
-
-value=’将项目添加到购物车’>”;
-
-➝`59`
-
-echo “<td colspan=’3’ style=’text-align: right’\n”; if($n_end > $n_per_page)
-
+echo "<input type='hidden' name='n_end' value='$n_end'>\n";
+echo "<input type='hidden' name='interest' value='$_POST[interest]'>\n";
+echo "<tr><td colspan='2' style='padding: 5'><input type='submit' value='选择另一个类别'></td>\n";
+echo "<td><input type='submit' name='Products' value='将项目添加到购物车'></td>\n";
+echo "<td colspan='3' style='text-align: right'>\n";
+if($n_end > $n_per_page)
 {
-
-echo “<input type=’submit’ name=’Products’
-
-value=’上页’>\n”;
-
+    echo "<input type='submit' name='Products' value='上页'>\n";
 }
-
 if($n_end < $n_products)
-
 {
-
-echo “<input type=’submit’ name=’Products’
-
-value=’下一步 $n_per_page’>\n”;
-
+    echo "<input type='submit' name='Products' value='下一步 $n_per_page'>\n";
 }
-
-echo “</td></form></tr></table>\n”;
-
+echo "</td></form></tr></table>\n";
 ?>
-
 </div></body></html>
+```
 
 列表 5-2 中的文件与本微型书籍第 4 章中定义产品信息的文件相似，但有以下不同：
 
@@ -15744,462 +14934,349 @@ echo “</td></form></tr></table>\n”;
 
 **添加了一个按钮**：在第 `58` 行和 `59` 行的表单中添加了一个新按钮——将项目添加到购物车。该按钮的名称为 `Products`。当客户点击此按钮时，脚本将处理选择的项目并显示购物车页面。
 
+
+
+# 购物车页面
+
 购物车页面显示当前存储在购物车中的项目。客户可以更改订购数量。客户可以返回目录添加更多项目或提交订单。购物车通过将项目存储在 MySQL 表中来实现。当客户首次将项目添加到购物车时，系统会分配一个订单号，该订单号存储在数据库和会话变量中，用于从数据库中检索订单信息。该文件根据会话变量中的订单号检索并显示存储在数据库中的订单信息。定义购物车页面的文件存储在名为 `shop_page.inc` 的文件中，如列表 5-3 所示。列表之后提供了代码的说明。
 
-**列表 5-3：定义购物车页面的文件**
+## 列表 5-3：定义购物车页面的文件
 
-```
+```php
 <?php
 /*File: shop_page.inc
 *Desc: 定义显示购物车的 HTML 页面。项目显示在带有价格的表格中。可以更改数量。 */
 include("Vars.inc");
 
-➝`7`
-$table_headers = array( “Item”,”Cat No”,”Furniture”,
-
-➝`8`
-“Amount”,”Price”,”Total);
+$table_headers = array( "Item","Cat No","Furniture",
+"Amount","Price","Total");
 $order_number = $_SESSION['order_number'];
 
-➝`10`
 $table_name = $order_number;
 
-➝`11`
 $cxn = mysqli_connect($host,$user,$passwd,$database);
-$sql_1 = “SELECT * FROM $table_name WHERE catalog_number='$order_number’”
+$sql_1 = "SELECT * FROM $table_name WHERE catalog_number='$order_number'"
 $result = mysqli_query($cxn,$sql_1);
 $n_row = mysqli_num_rows($result);
 
 if($n_row > 0) {
-echo “<form action=’Shop_cart.php’ method=’POST'>\n
+echo "<form action='Shop_cart.php' method='POST'>\n
 
-➝`18`
+<p style='text-align: right'\n
 
-<p style=’text-align: right’\n
+<input type='submit' name='Cart'
+value='查看购物车'>\n
 
-<input type=’submit’ name=’Cart’
+</form>\n";
 
-value=’查看购物车’>\n
+echo "<h1 style='text-align: center'>家具商店</h1
+<h2 style='size: larger'>{$_POST['interest']}</</h2>\n"; echo "<p style='text-align: right'>
+（找到 $n_products 个产品）\n";
 
-</form>\n”;
+echo "<table style='width: 100%'\n";
 
-➝`22`
-
-echo “<h1 style=’text-align: center’>家具商店</h1
-
-<h2 style=’size: larger’>{$_POST['interest']}</</h2>\n”; echo “<p style=’text-align: right’>
-
-（找到 $n_products 个产品）\n”;
-
-echo “<table style=’width: 100%’\n”;
-
-echo “<tr>\n\";
+echo "<tr>\n\";
 foreach($table_heads as $heading)
-
 {
-
-echo “<th>$heading</th>”;
-
+echo "<th>$heading</th>";
 }
+echo "</tr>\n\";
 
-echo “</tr>\n\";
-
-echo “<form action=’$_SERVER[PHP_SELF]’ method=’POST’\n”; for($i=$n_start;$i<=$n_end;$i++)
-
+echo "<form action='$_SERVER[PHP_SELF]' method='POST'\n"; for($i=$n_start;$i<=$n_end;$i++)
 {
-
-echo “<tr>”;
-
-echo “<td style=’padding-right: .5in; text-align: right’>
-
-{$products[$i]['catalog_number']}</td>\n”;
-
-echo “<td>{$products[$i]['name']}</td>\n”;
-
-echo “<td>{$products[$i]['description']}</td>\n”; echo “<td style=’text-align: center’>
-
-\${$products[$i]['price']}</td>\n”;
-
-echo “<td style=’text-align: center’>
-
-<img src=’images/{$products[$i]['pix']}’
-
-width=’55’ height=’60’></td>\n”;
-
-echo “<td style=’text-align: center’><input type=’text’➝`47`
-
-name=’item{$products[$i]['catalog_number']}’
-
-value=’0’ size=’4’></td>\n”;
-
-➝`49`
-
-echo “</tr>”;
-
+echo "<tr>";
+echo "<td style='padding-right: .5in; text-align: right'>
+{$products[$i]['catalog_number']}</td>\n";
+echo "<td>{$products[$i]['name']}</td>\n";
+echo "<td>{$products[$i]['description']}</td>\n"; echo "<td style='text-align: center'>
+\${$products[$i]['price']}</td>\n";
+echo "<td style='text-align: center'>
+<img src='images/{$products[$i]['pix']}'
+width='55' height='60'></td>\n";
+echo "<td style='text-align: center'><input type='text'
+name='item{$products[$i]['catalog_number']}'
+value='0' size='4'></td>\n";
+echo "</tr>";
 }
-
 while($row = mysqli_fetch_assoc($result)) {
 foreach($row as $field => $value) {
-if($field != “catalog_number”) {
+if($field != "catalog_number") {
 $items[$n][$field]=$value;
 }
 }
 $n++;
 }
-
-echo “<tr>
-
-<td colspan=’2’ style=’padding: 5’> <input
-
-type=’submit’
-
-value=’选择另一个类别’></td>\n”;
-
-echo “<td><input type=’submit’ name=’Products’
-
-➝`58`
-
-**t**
-
-value=’将项目添加到购物车’>”;
-
-➝`59`
-
-echo “<td colspan=’3’ style=’text-align: right’\n”; if($n_end > $n_per_page)
-
+echo "<tr>
+<td colspan='2' style='padding: 5'> <input
+type='submit'
+value='选择另一个类别'></td>\n";
+echo "<td><input type='submit' name='Products'
+value='将项目添加到购物车'>";
+echo "<td colspan='3' style='text-align: right'\n"; if($n_end > $n_per_page)
 {
-
-echo “<input type=’submit’ name=’Products’
-
-value=’上页’>\n”;
-
+echo "<input type='submit' name='Products'
+value='上页'>\n";
 }
-
 if($n_end < $n_products)
-
 {
-
-echo “<input type=’submit’ name=’Products’
-
-value=’下一步 $n_per_page’>\n”;
-
+echo "<input type='submit' name='Products'
+value='下一步 $n_per_page'>\n";
 }
-
-echo “</td></form></tr></table>\n”;
-
+echo "</td></form></tr></table>\n";
 ?>
 ```
 
-
-
-
-
 包含包含访问数据库所需信息的文件。
 
-➝**8**
+➝ `include("Vars.inc")`
 
 创建一个包含购物车项目表表头的数组。
 
-➝**10**
+➝ `$table_headers = array(...)`
 
 从会话变量中获取订单号。当订单存储在数据库时，订单号会被存储在会话变量中，该操作发生在用户点击“添加到购物车”按钮时。订单号用于在数据库中标识这笔订单。
 
-➝**11**
+➝ `$order_number = $_SESSION['order_number']`
 
 将订单号存储在变量 `$table_name` 中。
 
-➝**12**
+➝ `$table_name = $order_number`
 
 第 12–16 行从数据库的 `OrderItem` 表中获取所有项目。（换句话说，这些行获取了当前存储在购物车中的所有项目。）
 
-➝**17**
+➝ `$cxn = mysqli_connect(...); $sql_1 = ...; $result = mysqli_query(...); $n_row = mysqli_num_rows($result);`
 
 将 `$n_rows` 设置为该订单在数据库中找到的项目数量。
 
-38\_167779 bk06ch05.qxp 12/17/07 8:24 PM Page 591
-
-构建购物车网页
-
-591
-
-➝**18**
+➝ `$n_row = mysqli_num_rows($result)`
 
 启动一个 if 块，当指定的订单号在数据库中没有项目时，则显示一条消息和一个链接。
 
-➝**24**
+➝ `if($n_row > 0) { ... }`
 
 设置项目数量的计数器。
 
-➝**25**
+➝ `$n = 0;` (隐含初始化)
 
 启动一个 while 循环，创建一个名为 `$items` 的数组，其中包含关于项目的所有信息。家具名称从目录中获取并添加到数组中。
 
-➝**45**
+➝ `while($row = mysqli_fetch_assoc($result)) { ... }`
 
 在购物车网页的顶部区域显示表头和其他项目。
 
-➝**54**
+➝ `echo "<h1 ...>家具商店</h1 ...` 等
 
 显示包含购物车项目的表单 `<form>` 标签。
 
-## 第六卷
+➝ `echo "<form action='$_SERVER[PHP_SELF]' method='POST'\n";`
 
-➝**56**
+启动一个 foreach 循环，显示购物车项目表的表头。
 
-启动一个 foreach 循环，显示**第 5 章**中购物车项目表的表头。
-
-**购物车**
-
-➝**62**
+➝ `foreach($table_heads as $heading)`
 
 启动一个 for 循环，遍历 `$items` 数组，在购物车网页中显示每一行。循环从当前的 `$item` 元素显示该行中的每个项目。价格被格式化为美元金额。计算订单总价并存储在 `$order_total` 中。循环在第 81 行结束。
 
-**t**
-
-➝**82**
+➝ `for($i=$n_start;$i<=$n_end;$i++) { ... }`
 
 将总价格式化为美元格式。
 
-➝**84**
+➝ `number_format($order_total, 2)` (示例)
 
 第 84–87 行显示订单的总成本。
 
-➝**90**
+➝ `echo "总计: $$order_total";` (示例)
 
 第 90 行到末尾显示提交按钮。
 
-出运表单网页
+➝ `echo "<input type='submit' ...>";`
+
+# 出运表单网页
 
 当客户点击提交订单按钮时，会显示一个表单，客户可以在其中输入运输产品所需的出运信息，包括姓名、地址和电话号码。表单还会收集信用卡信息。
 
 出运表单网页的代码存储在名为 `shop_form_shipinfo.inc` 的文件中，如列表 5-4 所示。列表之后提供了代码的解释。
 
-**列表 5-4：定义出运表单的文件**
+## 列表 5-4：定义出运表单的文件
+
+
+
+# 列表 5-4: 定义配送信息表单的文件
 
 ```php
 <?php
 
 /* File: shop_form_shipinfo.inc
-* Desc: 包含用于收集订单
-* 出运运的表单代码。
-*/
+ * Desc: 包含用于收集订单出运信息的表单代码。
+ */
 include("functions.inc");
 
-➝**6**
 include("Vars.inc");
 
-➝**7**
-$ship_info = array("email" => "Email Address",
+$ship_info = array(
+    "email" => "Email Address",
+    "ship_name" => "Name",
+    "ship_street" => "Street",
+    "ship_city" => "City",
+    "ship_state" => "State",
+    "ship_zip" => "Zip",
+    "phone" => "Phone",
+    "cc_type" => "Credit Type",
+    "cc_number" => "Credit Number",
+    "cc_exp" => "Expiration Date"
+);
 
-➝**8**
-"ship_name" => "Name",
-
-*(继续)*
-38\_167779 bk06ch05.qxp 12/17/07 8:24 PM Page 592
-592 构建购物车网页
-**列表 5-4（继续）**
-"ship_street" => "Street",
-"ship_city" => "City",
-"ship_state" => "State",
-"ship_zip" => "Zip",
-"phone" => "Phone",
-"cc_type" => "Credit Type",
-"cc_number" => "Credit Number",
-"cc_exp" => "Expiration Date"
-)
-➝**19**
 $cc_types = array(
-"visa" => "Visa",
-"mc" => "Master Card",
-"amex" => "American Express"
+    "visa" => "Visa",
+    "mc" => "Master Card",
+    "amex" => "American Express"
 );
-➝**23**
+
 $length = array(
-"email" => 55,
-"ship_name" => 40,
-"ship_street" => 55,
-"ship_city" => 40,
-"ship_zip" => 10,
-"phone" => 15,
-"cc_number" => 20
+    "email" => 55,
+    "ship_name" => 40,
+    "ship_street" => 55,
+    "ship_city" => 40,
+    "ship_zip" => 10,
+    "phone" => 15,
+    "cc_number" => 20
 );
-➝**31**
-$months = array (
-"January", "February", "March",
-"April", "May", "June",
-"July", "August", "September", "October", "November", "December"
+
+$months = array(
+    "January", "February", "March",
+    "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
 );
-➝**36**
+
 $today = time("Y-m-d");
-➝**37**
-if(!isset($_POST) or $_POST['Ship'] == "Edit Shipping Information" ) {
-$cxn = mysqli_connect($host,$user,$passwd,$database);
-➝**40**
-$sql = "SELECT ship_name,ship_street,ship_city,ship_state,ship_zip,phone,email FROM CustomerOrder WHERE order_number = '{$SESSION['order_number']}'";
-$result = mysqli_query($cxn,$sql) or die("Error: ".mysqli_error($cxn));
-$n = mysqli_num_rows($result);
-➝**47**
-if($n > 0)
-{
-$row = mysqli_fetch_assoc($result);
-extract($row);
+
+if (!isset($_POST) || $_POST['Ship'] == "Edit Shipping Information") {
+    $cxn = mysqli_connect($host, $user, $passwd, $database);
+    $sql = "SELECT ship_name, ship_street, ship_city, ship_state, ship_zip, phone, email FROM CustomerOrder WHERE order_number = '{$_SESSION['order_number']}'";
+    $result = mysqli_query($cxn, $sql) or die("Error: " . mysqli_error($cxn));
+    $n = mysqli_num_rows($result);
+
+    if ($n > 0) {
+        $row = mysqli_fetch_assoc($result);
+        extract($row);
+    }
 }
-➝**53**
 ?>
-<head><title>Furniture Order: Shipping Information</title>
-<style type="text/css">
-<!--
-#form {
-margin: 1.5em 0 0;
-padding: 0;
-}
-#field {padding-bottom: 1em;}
-label {
-font-weight: bold;
-float: left;
-width: 20%;
-text-align: right;
-clear: left;
-margin-right: 1em;
-}
--->
-</style>
+<head>
+    <title>Furniture Order: Shipping Information</title>
+    <style type="text/css">
+        <!--
+        #form {
+            margin: 1.5em 0 0;
+            padding: 0;
+        }
+        #field { padding-bottom: 1em; }
+        label {
+            font-weight: bold;
+            float: left;
+            width: 20%;
+            text-align: right;
+            clear: left;
+            margin-right: 1em;
+        }
+        -->
+    </style>
 </head>
 
-➝**73**
-## 第六卷
-<h2 align='center'>Furniture Shop: Shipping Information</h2> **第 5 章**
-<p style='font-style: italic;font-weight: bold'>请填写下方信息
+<h2 align='center'>Furniture Shop: Shipping Information</h2>
+<p style='font-style: italic; font-weight: bold'>请填写下方信息</p>
 <?php
-**购物车**
-**构建一**
-echo "<form action='$_SERVER['PHP_SELF']' method='POST'>
+echo "<form action='$_SERVER['PHP_SELF']' method='POST'>\n";
+echo "<div id='form'>\n";
 
-➝**78**
-<div id='form'>\n";
-if(isset($message))
-{
-echo "<p style=\"font-weight: bold; font-style: italic; font-size: 90%; color: red\">$message</p>";
+if (isset($message)) {
+    echo "<p style=\"font-weight: bold; font-style: italic; font-size: 90%; color: red\">$message</p>";
 }
-foreach($ship_info => $value)
-{
-➝**86**
-if($field == "state")
-{
-echo "<div id='field'>
+
+foreach ($ship_info as $field => $value) {
+    if ($field == "ship_state") {
+        echo "<div id='field'>
 <label for='$field'>State:</label>
 <select name='$field'>";
-$stateName=getStateName();
-$stateCode=getStateCode();
-for ($n=1;$n<=50;$n++)
-{
-echo "<option value='$n'>$stateName[$n];
-if($scode == $_POST['state'])
-echo " selected";
-echo ">\n";
-}
-echo "</select></div>";
-}
-elseif($field == "cc_type")
-➝**107**
-echo "<div id='field'>
+        $stateName = getStateName();
+        $stateCode = getStateCode();
+        for ($n = 1; $n <= 50; $n++) {
+            echo "<option value='$n'>$stateName[$n]";
+            if ($stateCode[$n] == $_POST['state'])
+                echo " selected";
+            echo ">\n";
+        }
+        echo "</select></div>";
+    } elseif ($field == "cc_type") {
+        echo "<div id='field'>
 <label for='$field'>Credit Type:</label>
 <select name='$field'>";
-foreach($cc_types => $value)
-{
-echo "<option value='$field'>$value\n";
-}
-echo "</select></div>";
-}
-elseif($field == "exp")
-➝**19**
-echo "<div id='field'>
+        foreach ($cc_types as $key => $value) {
+            echo "<option value='$key'>$value\n";
+        }
+        echo "</select></div>";
+    } elseif ($field == "cc_exp") {
+        echo "<div id='field'>
 <label for='$field'>Expiration:</label>
 <select name='field_mo'>";
-for($n=1;$n<=12;$n++)
-{
-echo "<option value='$n'>{$months[$n]}\n";
-}
-echo "</select>\n";
-echo "<select name='field_da'>";
-for($n=1;$n<=31;$n++)
-{
-echo "<option value='$n'>$n\n";
-}
-echo "</select>\n";
-echo "<select name='field_yr'>";
-$start_yr=date("Y",$today);
-for($n=$start_yr;$n<=$start_yr+5;$n++)
-{
-echo "<option value='$n'>$n\n";
-}
-echo "</select></div>";
-}
-else
-➝**144**
-{
-echo "<div id='field'>
+        for ($n = 1; $n <= 12; $n++) {
+            echo "<option value='$n'>{$months[$n - 1]}\n";
+        }
+        echo "</select>\n";
+        echo "<select name='field_da'>";
+        for ($n = 1; $n <= 31; $n++) {
+            echo "<option value='$n'>$n\n";
+        }
+        echo "</select>\n";
+        echo "<select name='field_yr'>";
+        $start_yr = date("Y", $today);
+        for ($n = $start_yr; $n <= $start_yr + 5; $n++) {
+            echo "<option value='$n'>$n\n";
+        }
+        echo "</select></div>";
+    } else {
+        echo "<div id='field'>
 <label for='$field'>$value:</label>
 <input type='text' id='$field' name='$field'
-value=''.@$field.'
+value='" . @$$field . "'
 size='{$length[$field]}'
-maxsize='{$length[$field]}' />
+maxlength='{$length[$field]}' />
 </div>\n";
-}
-}
-}
+    }
 }
 ?>
 <p style="margin-top: .05in">
-➝**156**
 <input style='margin-left: 33%' type="submit"
 name="Summary" value="Continue" />
-</form></</body></html>
-38\_167779 bk06ch05.qxp 12/17/07 8:24 PM Page 594
-594 构建购物车网页
-**列表 5-4（继续）**
+</form></body></html>
 
+## 代码说明
 
+点击了“编辑配送信息”按钮。此区块从数据库获取配送信息，而不是从表单获取。配送信息存储在以字段名命名的变量中。该区块结束于第 53 行。
 
-点击了“编辑配送信息”（Edit Shipping Information）按钮。此区块从数据库获取配送信息，而不是从表单获取。配送信息存储在以字段名命名的变量中。该区块结束于第 53 行。
-
-➝**40**
 第 40–46 行创建并执行了一个 SQL 查询，从数据库中选择配送信息。
 
-➝**47**
 检查是否找到了任何配送信息。
 
-➝**48**
-开始一个 if 块，如果找到了配送信息则执行该块。如果是，则将信息提取到以字段名命名的变量中。
+开始一个 `if` 块，如果找到了配送信息则执行该块。如果是，则将信息提取到以字段名命名的变量中。
 
-➝**55**
 开始一个 HTML 块，定义表单的 `<head>` 部分。它包含了显示表单所需的样式。`<head>` 部分继续到第 73 行。
 
-➝**74**
 第 74–76 行显示表单顶部的标题。
 
-➝**78**
 为配送信息表单显示 `<form>` 标签。
 
-➝**80**
-开始一个 if 块，检查变量 `$message` 是否存在。如果应用程序脚本在处理表单信息时发现错误，则创建此变量。如果是，该块将在表单开头显示该消息。
+开始一个 `if` 块，检查变量 `$message` 是否存在。如果应用程序脚本在处理表单信息时发现错误，则创建此变量。如果是，该块将在表单开头显示该消息。
 
-➝**86**
-开始一个 foreach 循环，遍历 `$ship_info` 数组并回显显示表单的 HTML。
+开始一个 `foreach` 循环，遍历 `$ship_info` 数组并回显显示表单的 HTML。
 
-➝**88**
-开始一个 if 块，当字段名称为 `ship_state` 时执行该块。第 88–106 行显示一个包含各州的下拉列表。第 93 和 94 行调用了存储在 `functions.inc` 文件中的函数，该文件在第 6 行被包含。
+开始一个 `if` 块，当字段名称为 `ship_state` 时执行该块。第 88–106 行显示一个包含各州的下拉列表。第 93 和 94 行调用了存储在 `functions.inc` 文件中的函数 `getStateName()` 和 `getStateCode()`，该文件在第 6 行被包含。
 
-➝**107**
-开始一个 elseif 块，当字段名称为 `cc_type` 时执行该块。第 107–118 行创建了一个包含客户可以选择的信用卡类型的下拉列表。
+开始一个 `elseif` 块，当字段名称为 `cc_type` 时执行该块。第 107–118 行创建了一个包含客户可以选择的信用卡类型的下拉列表。
 
-➝**119**
-开始一个 elseif 块，当字段名称为 `cc_exp` 时执行该块。（该字段包含信用卡过期日期。）第 119–143 行创建了一个客户可以选择的日期的下拉列表。
+开始一个 `elseif` 块，当字段名称为 `cc_exp` 时执行该块。（该字段包含信用卡过期日期。）第 119–143 行创建了一个客户可以选择的日期的下拉列表。
 
-➝**144**
-开始一个 else 块，适用于任何其他字段。表单中会为所有剩余字段显示文本输入行。
+开始一个 `else` 块，适用于任何其他字段。表单中会为所有剩余字段显示文本输入行。
 
-➝**156**
 HTML 部分的第一行，用于显示提交按钮和表单的结束标签。
 
 # 摘要 Web 页面
@@ -16212,77 +15289,66 @@ HTML 部分的第一行，用于显示提交按钮和表单的结束标签。
 
 ```php
 <?php
-/*File: shop_page_summary.inc
-*Desc: Defines an HTML page that displays a summary
-* of the order.
-*/
+
+/* File: shop_page_summary.inc
+ * Desc: Defines an HTML page that displays a summary
+ * of the order.
+ */
+
 include("Vars.inc");
-$table_headers = array( “Item”，“Cat No”,”Furniture”,
-➝**7**
-“Amount”，“Price”，“Total”);
+
+$table_headers = array("Item", "Cat No", "Furniture", "Amount", "Price", "Total");
+
 $order_number = $_SESSION['order_number'];
-➝**9**
+
 $shipping_rate = .25;
-➝**10**
+
 $table_name = $order_number;
-➝**11**
-$cxn = mysqli_connect($host,$user,$passwd,$database);
-➝**12**
-$sql_ord = “SELECT * FROM OrderItem
-WHERE order_number='$$order_number’”;
-$result = mysqli_query($cxn,$sql_ord)
-or die(“sql_ord: “.mysqli_error($cxn));
+
+$cxn = mysqli_connect($host, $user, $passwd, $database);
+
+$sql_ord = "SELECT * FROM OrderItem WHERE order_number = '$order_number'";
+$result = mysqli_query($cxn, $sql_ord) or die("sql_ord: " . mysqli_error($cxn));
 $n_row = mysqli_num_rows($result);
-➝**17**
-if($n_row < 1)
-➝**18**
-{
-echo “Shopping Cart is currently empty<br>\n
-<a href=’Shop_products.php’>Continue
-Shopping</a>\n”;
-exit();
+
+if ($n_row < 1) {
+    echo "Shopping Cart is currently empty<br>\n<a href='Shop_products.php'>Continue Shopping</a>\n";
+    exit();
 }
-$n=1;
-➝**24**
-while($row = mysqli_fetch_assoc($result))
-➝**25**
-{
-foreach($row as $field => $value)
-{
-if($field != “order_number”)
-{
-$items[$n][$field]=$value;
-if($field == “catalog_number”)
-{
-$sql_name = “SELECT name,type FROM furniture WHERE
-catalog_number = ‘$row[catalog_number]’”;
-$result2 = mysqli_query($cxn,$sql_name)
-or die(“sql_name: “.mysqli_error($cxn));
-$row = mysqli_fetch_row($result2);
-$items[$n]["name"]=$row[0].” “.$row[1];
+
+$n = 1;
+
+while ($row = mysqli_fetch_assoc($result)) {
+    foreach ($row as $field => $value) {
+        if ($field != "order_number") {
+            $items[$n][$field] = $value;
+            if ($field == "catalog_number") {
+                $sql_name = "SELECT name, type FROM furniture WHERE catalog_number = '$row[catalog_number]'";
+                $result2 = mysqli_query($cxn, $sql_name) or die("sql_name: " . mysqli_error($cxn));
+                $row2 = mysqli_fetch_row($result2);
+                $items[$n]["name"] = $row2[0] . " " . $row2[1];
+            }
+        }
+    }
+    $n++;
 }
-}
-}
-}
-$n++;
-}
-echo “<html>
-➝**45**
-<head><title>Order Summary</title></head>\n
-<body>\n”;
-echo “<h2 style=’text-align: center’>Order Summary</h2>\n”;
-echo “<p style=’position: absolute; margin-top: .25in; font-weight: bold>Ship to:</p>”;
-echo “<p style=’position: absolute; margin-top: .25in; margin-left: .75in’>$ship_name<br>";
-echo “$ship_street<br>
-$ship_city, $ship_state
-$ship_state<br>
+
+echo "<html>
+<head><title>Order Summary</title></head>\n<body>\n";
+
+echo "<h2 style='text-align: center'>Order Summary</h2>\n";
+
+echo "<p style='position: absolute; margin-top: .25in; font-weight: bold'>Ship to:</p>";
+
+echo "<p style='position: absolute; margin-top: .25in; margin-left: .75in'>$ship_name<br>
+$ship_street<br>
+$ship_city, $ship_state $ship_zip<br>
 $phone<br>
-$email<br>
-➝**56**
-echo “<p style=’position: absolute; margin-top: .25in; font-weight: bold>Ship to:</p>”;
+$email<br>";
+
+echo "<p style='position: absolute; margin-top: .25in; font-weight: bold'>Ship to:</p>";
 ...
 ```
-
 
 
 
@@ -16343,7 +15409,7 @@ echo “<p style=’position: absolute; margin-top: .25in; font-weight: bold>Shi
 - **购物车：** 购物车存储客户选择的项目信息。客户放入购物车的项目信息存储在数据库中，并为订单分配一个订单号并保存到会话变量中，以便从数据库中检索订单信息。客户可以随时查看购物车中的当前项目。在提交订单之前，客户可以随时添加、删除项目或更改项目数量。
 - **订单：** 购物车收集有关订单的信息。它收集完成客户购买所需的信息。所有订单项目的价格被相加。提供了一个表单来收集和验证收货信息。所有成本和费用（包括运费和销售税在内）都经过计算并应用于订单总额。收集并处理信用卡信息。
 
-购物车的功能的功能由三个 PHP 脚本提供，每个脚本负责一个领域，如下：
+购物车的功能由三个 PHP 脚本提供，每个脚本负责一个领域，如下：
 
 ## 提供产品信息
 
@@ -16357,23 +15423,34 @@ echo “<p style=’position: absolute; margin-top: .25in; font-weight: bold>Shi
 
 ## 处理订单
 
-脚本 `Shop_order.php` 处理订单。该脚本显示一个收集完成订单所需的表单，如姓名、地址和信用卡信息。脚本验证表单信息并将其存入数据库。显示一个允许客户确认订单的摘要 Web 页面。当客户点击按钮时，脚本执行相应的操作。如果客户提交订单，脚本处理信用卡信息并在批准后启动履行订单程序。如果客户取消订单，脚本移除订单信息
+脚本 `Shop_order.php` 处理订单。该脚本显示一个收集完成订单所需的表单，如姓名、地址和信用卡信息。脚本验证表单信息并将其存入数据库。显示一个允许客户确认订单的摘要 Web 页面。当客户点击按钮时，脚本执行相应的操作。如果客户提交订单，脚本处理信用卡信息并在批准后启动履行订单程序。如果客户取消订单，脚本移除订单信息。
 
 提供产品信息的脚本显示目录并将客户的选择存储在购物车中。`Shop_products.php` 使用嵌套 if 语句组织，取决于客户点击了哪个提交按钮。以下是其结构概览：
 
-```
+```php
 if (button named Products) {
+
     if (button is Add Items to Shopping Cart) {
+
         1. 确定订单号
+
         如果当前订单存在，则获取。如果不存在，
         在数据库中创建新订单并将新订单号设置为当前订单。
+
         2. 将项目存入数据库。
+
         3. 将控制权交给 ShoppingCart.php，它显示购物车。
+
     } else {
+
         显示目录产品页
+
     }
+
 } else {
+
     显示目录类别页
+
 }
 ```
 
@@ -16384,14 +15461,7 @@ if (button named Products) {
 - **客户在浏览器中输入 `Shop_products.php` 的 URL：** 由于这是购物车的第一个脚本，它在浏览器启动时运行正常。在这种情况下，没有点击按钮，因此脚本跳转到最后的 else 语句并显示目录首页。
 - **客户点击“添加到购物车”按钮：** 该按钮名为 Products，因此脚本进入第一个 if 块。if 块中的第一个 if 检查按钮的值。按钮匹配测试值，因此脚本进入第一个内部 if 块，将项目添加到现有订单中，或在没有当前订单时创建新订单。然后它启动第二个脚本 `Shop_cart.php`，它显示购物车。
 - **客户点击“下一个”或“上一个”：** 这些按钮名为 Products，因此脚本进入第一个 if 块。然而，按钮值不匹配内部 if 语句，因此脚本进入内部 else 块，显示目录产品页中的下一个或上一个项目。
-
-
-
-
-
-✦ 客户点击 `Select Another Category`（选择另一个类别）按钮。此按钮没有名称，因此脚本将跳转到最后的 `else` 语句并显示目录索引页。
-
-列表 5-6 显示了 `Shop_products.php` 的代码 —— 这是购物车中的第一个脚本。列表之后对代码 string 了解释。
+- **客户点击 `Select Another Category`（选择另一个类别）按钮：** 此按钮没有名称，因此脚本将跳转到最后的 `else` 语句并显示目录索引页。
 
 ### 列表 5-6：提供产品信息的脚本
 
@@ -16406,130 +15476,105 @@ if (button named Products) {
 * version is used with a shopping cart for
 * purchasing items.
 */
+
 $n_per_page = 2;
+➝ **10**
 
-➝**10**
 session_start();
+➝ **11**
 
-➝**11**
-include(“Vars.inc”);
-if(isset($_POST['Products']) &&
+include("Vars.inc");
+➝ **13**
 
-➝**13**
-isset($_POST['interest']))
+if (isset($_POST['Products']) && isset($_POST['interest'])) {
+➝ **14**
 
-➝**14**
-{
-if($_POST['Products'] == “Add Items to Shopping Cart”)
+    if ($_POST['Products'] == "Add Items to Shopping Cart") {
+➝ **16**
 
-➝**16**
-{
-if(!isset($_SESSION['order_number']))
+        if (!isset($_SESSION['order_number'])) {
+➝ **18**
 
-➝**18**
-{
-$cxn=mysqli_connect($host,$user,$passwd,$database);
-$today = date(“Y-m-d”);
-$sql_order = “INSERT INTO CustomerOrder (order_date)
-VALUES (‘$today’)”;
-$result = mysqli_query($cxn,$sql_order)
-or die(“sql_order”.mysqli_error($xn));
-$order_number = mysqli_insert_id($cxn);
-$_SESSION['order_number'] = $order_number;
-$n_items = 0;
-}
-else
-{
-$order_number = $_SESSION['order_number'];
-$n_items = $_SESSION['n_items'];
-}
-foreach($_POST as $field => $value)
+            $cxn = mysqli_connect($host, $user, $passwd, $database);
+            $today = date("Y-m-d");
+            $sql_order = "INSERT INTO CustomerOrder (order_date) VALUES ('$today')";
+            $result = mysqli_query($cxn, $sql_order) or die("sql_order" . mysqli_error($cxn));
+            $order_number = mysqli_insert_id($cxn);
+            $_SESSION['order_number'] = $order_number;
+            $n_items = 0;
+        } else {
+            $order_number = $_SESSION['order_number'];
+            $n_items = $_SESSION['n_items'];
+        }
 
-➝**35**
-{
-if(substr($field,0,4) == “item” && $value > 0)
+        foreach ($_POST as $field => $value) {
+➝ **35**
 
-➝**37**
-{
-$n_items++;
-$catalog_number =
-substr($field,4,strlen($field)-4);
+            if (substr($field, 0, 4) == "item" && $value > 0) {
+➝ **37**
 
-➝**41**
-$cxn =
-mysqli_connect($host,$user,$passwd,$database);
-$sql_price = “SELECT price FROM Furniture WHERE
-catalog_number=’$catalog_number’”;
-$result = mysqli_query($cxn,$sql_price)
-or die(“sql_price: “.mysqli_error($cxn));
-$row = mysqli_fetch_assoc($result);
+                $n_items++;
+                $catalog_number = substr($field, 4, strlen($field) - 4);
+➝ **41**
 
-➝**48**
-$sql_item = “INSERT INTO OrderItem
-(order_number,item_number,catalog_number,
-quantity,price) VALUES
-($order_number,$n_items,$catalog_number,
-$value,{$row['price']})”;
-$result = mysqli_query($cxn,$sql_item)
-or die(“sql_item: “.mysqli_error($cxn));
-}
-$_SESSION['n_items'] = $n_items;
+                $cxn = mysqli_connect($host, $user, $passwd, $database);
+                $sql_price = "SELECT price FROM Furniture WHERE catalog_number='$catalog_number'";
+                $result = mysqli_query($cxn, $sql_price) or die("sql_price: " . mysqli_error($cxn));
+                $row = mysqli_fetch_assoc($result);
+➝ **48**
 
-➝**58**
-header(“Location: Shop_cart.php”);
-exit();
-}
-else
-{
-if(isset($_POST['n_end']))
-{
-if($_POST['Products'] == “Previous”)
-{
-$n_start = $_POST['n_end']-($n_per_page);
-}
-else
-{
-$n_start = $_POST['n_end'] + 1;
-}
-}
-else
-{
-$n_start = 1;
-}
-$n_end = $n_start + $n_per_page -1;
-$cxn = mysqli_connect($host,$user,$passwd,$database);
-$query_food = “SELECT * FROM Furniture WHERE
-type='$_POST['interest']’ ORDER name”;
-$result = mysqli_query($cxn,$query_food)
-or die (“query_food: “.mysqli_error($cxn));
-$n=1;
-while($row = mysqli_fetch_assoc($result))
-{
-foreach($row as $field => $value)
-{
-$products[$n]=$value;
-}
-$n++;
-}
-$n_products = sizeof($products);
-if($n_end > $n_products)
-{
-$n_end = $n_products;
-}
-include(“shop_page_products.inc”);
-}
-else
-{
-$cxn = mysqli_connect($host,$user,$passwd,$database);
-$sql_cat = “SELECT DISTINCT category,type FROM Furniture
-ORDER BY category,type”;
-$result = mysqli_query($cxn,$sql_cat)
-or die (“sql_cat: “.mysqli_error($cxn));
-while($row = mysqli_fetch_array($result))
-{
-$furn_categories[$row['category']]=$row['type'];
-}
-include(“shop_page_index.inc”);
+                $sql_item = "INSERT INTO OrderItem (order_number, item_number, catalog_number, quantity, price) VALUES ($order_number, $n_items, $catalog_number, $value, {$row['price']})";
+                $result = mysqli_query($cxn, $sql_item) or die("sql_item: " . mysqli_error($cxn));
+            }
+        }
+
+        $_SESSION['n_items'] = $n_items;
+➝ **58**
+
+        header("Location: Shop_cart.php");
+        exit();
+    } else {
+        if (isset($_POST['n_end'])) {
+            if ($_POST['Products'] == "Previous") {
+                $n_start = $_POST['n_end'] - ($n_per_page);
+            } else {
+                $n_start = $_POST['n_end'] + 1;
+            }
+        } else {
+            $n_start = 1;
+        }
+
+        $n_end = $n_start + $n_per_page - 1;
+        $cxn = mysqli_connect($host, $user, $passwd, $database);
+        $query_food = "SELECT * FROM Furniture WHERE type='$_POST['interest']' ORDER name";
+        $result = mysqli_query($cxn, $query_food) or die("query_food: " . mysqli_error($cxn));
+        $n = 1;
+
+        while ($row = mysqli_fetch_assoc($result)) {
+            foreach ($row as $field => $value) {
+                $products[$n] = $value;
+            }
+            $n++;
+        }
+
+        $n_products = sizeof($products);
+
+        if ($n_end > $n_products) {
+            $n_end = $n_products;
+        }
+
+        include("shop_page_products.inc");
+    }
+} else {
+    $cxn = mysqli_connect($host, $user, $passwd, $database);
+    $sql_cat = "SELECT DISTINCT category, type FROM Furniture ORDER BY category, type";
+    $result = mysqli_query($cxn, $sql_cat) or die("sql_cat: " . mysqli_error($cxn));
+
+    while ($row = mysqli_fetch_array($result)) {
+        $furn_categories[$row['category']] = $row['type'];
+    }
+
+    include("shop_page_index.inc");
 }
 ?>
 ```
@@ -16538,7 +15583,7 @@ include(“shop_page_index.inc”);
 
 - **10**: 设置每页显示的项目数量。
 - **11**: 开启会话。客户在整个在线订购过程中保持会话状态。
-- **13**: 第 13–14 行开始一个 `if` 块，如果在 `$_POST` 数组中找到了产品按钮且客户选择了了一个类别，则执行该块。该 `if` 块持续到第 101 行。
+- **13**: 第 13–14 行开始一个 `if` 块，如果在 `$_POST` 数组中找到了产品按钮且客户选择了一个类别，则执行该块。该 `if` 块持续到第 101 行。
 - **16**: 开始一个 `if` 块，当用户点击“Add Items to Shopping Cart”（将项目加入购物车）时执行。
 - **18**: 开始一个 `if` 块，当会话中没有 `order_number` 时执行。该块连接数据库、获取当前日期并向 `CustomerOrder` 表插入订单。获取新生成的订单号并存入会话，并将 `$n_items` 设置为 0。`else` 分支则从会话中获取已有的订单号和项目数量。
 - **35**: 开始一个 `foreach` 循环，遍历 `$_POST` 数组。
@@ -16550,14 +15595,9 @@ include(“shop_page_index.inc”);
 - **62**: 开始一个 `else` 块，当 `Products` 按钮不是“Add Items to Shopping Cart”时执行。如果设置了 `n_end`，则根据是否是“Previous”（上一个）计算起始位置 `$n_start`；否则起始位置为 1。计算结束位置 `$n_end`。连接数据库并根据客户感兴趣的类型查询家具数据，并将结果填充到 `$products` 数组。如果结束位置超过总数，则进行限制。最后包含 `shop_page_products.inc`。
 - **102**: `else` 分支。它会连接数据库并从 `Furniture` 表中查询唯一的类别和类型，按类别和类型排序。将类别和类型存入 `$furn_categories` 数组，最后包含 `shop_page_index.inc`。
 
-
-
-
-
 ```php
-if(!isset($_SESSION['order_number']) or empty($_SESSION['order_number']))
-{
-    echo “Shopping Cart is currently empty<br>\n<a href='Shop_products.php'>Continue Shopping</a>\n”; 
+if (!isset($_SESSION['order_number']) || empty($_SESSION['order_number'])) {
+    echo "Shopping Cart is currently empty<br>\n<a href='Shop_products.php'>Continue Shopping</a>\n";
     exit();
 }
 ```
@@ -16567,62 +15607,99 @@ if(!isset($_SESSION['order_number']) or empty($_SESSION['order_number']))
 ## 第 5 章
 
 ```php
-switch (@$_POST['Cart'])
-{
+switch (@$_POST['Cart']) {
     # 购物车
-    case “Continue Shopping”:
+    case "Continue Shopping":
         # 构建一个
-        header(“Location: Shop_products.php”);
+        header("Location: Shop_products.php");
         break;
-    case “Update Cart”:
-        $cxn = mysqli_connect($host,$user,$passwd,$database);
+
+    case "Update Cart":
+        $cxn = mysqli_connect($host, $user, $passwd, $database);
         $order_number = $_SESSION['order_number'];
         $n = 1;
+
         /* 更新数据库中的数量 */
-        foreach($_POST['quantity'] as $field => $value)
-        {
-            $sql_quant = “UPDATE OrderItem SET quantity='$value’ WHERE item_number= ‘$n’ AND order_number='$order_number’”;
-            $result = mysqli_query($cxn,$sql_quant) or die(“sql_quant: “.mysqli_error($cxn));
+        foreach ($_POST['quantity'] as $field => $value) {
+            $sql_quant = "UPDATE OrderItem SET quantity='$value' WHERE item_number='$n' AND order_number='$order_number'";
+            $result = mysqli_query($cxn, $sql_quant) or die("sql_quant: " . mysqli_error($cxn));
             $n++;
         }
+
         /* 删除数量为 0 的项目 */
-        $sql_del = “DELETE FROM OrderItem WHERE quantity=’0’ AND order_number='$order_number’”;
-        $result = mysqli_query($cxn,$sql_del) or die(“sql_del: “.mysqli_error($cxn));
+        $sql_del = "DELETE FROM OrderItem WHERE quantity='0' AND order_number='$order_number'";
+        $result = mysqli_query($cxn, $sql_del) or die("sql_del: " . mysqli_error($cxn));
+
         /* 重新编号数据库中的项目。首先，将项目放入数组。接下来，删除数据库中的所有项目。然后，使用新的编号重新插入项目。 */
-        $sql_getnew = “SELECT \* from OrderItem WHERE order_number='$order_number’”;
-        $result = mysqli_query($cxn,$sql_getnew) or die(“sql_getnew: “.mysqli_error($cxn));
+        $sql_getnew = "SELECT * from OrderItem WHERE order_number='$order_number'";
+        $result = mysqli_query($cxn, $sql_getnew) or die("sql_getnew: " . mysqli_error($cxn));
         $n_rows = mysqli_num_rows($result);
-        if($n_rows < 1)
-        {
-            echo “Shopping Cart is currently empty<br>\n*(continued)*<a href='Shop_products.php'>Continue Shopping</a>\n”; 
-            exit();
-        }
-        while($row = mysqli_fetch_assoc($result))
-        {
-            $items_new[]=$row;
-        }
-        $sql_del2 = “DELETE FROM OrderItem WHERE order_number='$order_number’”;
-        $result = mysqli_query($cxn,$sql_del2) or die(“sql_del2: “.mysqli_error($cxn));
-        for($i=0;$i<sizeof($items_new);$i++)
-        {
-            $sql_ord = “INSERT INTO OrderItem (order_number,item_number,catalog_number,quantity,price) VALUES($order_number,$i+1,$items_new[$i]['catalog_number'],$items_new[$i]['quantity'],$items_new[$i]['price'])”;
-            $result = mysqli_query($cxn,$sql_ord) or die(“sql_ord: “.mysqli_error($cxn));
-        }
-        $_SESSION['n_items'] = $i;
-        include(“shop_page_cart.inc”);
-        break;
-    case “Submit Order”:
-        header(“Location: Shop_order.php?from=cart”);
-        exit();
-        break;
-    default:
-        include(“shop_page_cart.inc”);
-        break;
+
+        if ($n_rows < 1) {
+```
+
+
+
+# 构建购物车脚本
+
+## 列表 5-7: 购物车脚本片段
+
+```php
+echo “Shopping Cart is currently empty<br>\n*(continued)*<a href='Shop_products.php'>Continue Shopping</a>\n”;
+
+exit();
+
 }
+
+while($row = mysqli_fetch_assoc($result))
+
+{
+
+    $items_new[]=$row;
+
+}
+
+$sql_del2 = “DELETE FROM OrderItem WHERE order_number='$order_number’”;
+
+$result = mysqli_query($cxn,$sql_del2) or die(“sql_del2: “.mysqli_error($cxn));
+
+for($i=0;$i<sizeof($items_new);$i++)
+
+{
+
+    $sql_ord = “INSERT INTO OrderItem (order_number,item_number,catalog_number,quantity,price) VALUES($order_number,$i+1,$items_new[$i]['catalog_number'],$items_new[$i]['quantity'],$items_new[$i]['price'])”;
+
+    $result = mysqli_query($cxn,$sql_ord) or die(“sql_ord: “.mysqli_error($cxn));
+
+}
+
+$_SESSION['n_items'] = $i;
+
+include(“shop_page_cart.inc”);
+
+break;
+
+case “Submit Order”:
+
+    header(“Location: Shop_order.php?from=cart”);
+
+    exit();
+
+    break;
+
+default:
+
+    include(“shop_page_cart.inc”);
+
+    break;
+
+}
+
 ?>
 ```
 
-在接后的讨论中，数字指的是列表 5-7 中的行号：
+在后续的讨论中，数字指的是列表 5-7 中的行号：
+
 - **5**: 启动会话，为用户维护订单。
 - **7**: 开始一个 `if` 块，当不存在当前订单时执行，显示一条消息和通往目录页的链接。
 - **14**: 针对名为 `Cart` 的按钮值启动一个 `switch` 语句。
@@ -16643,6 +15720,7 @@ switch (@$_POST['Cart'])
 购物车的第三方脚本在客户提交时处理订单。它收集客户输入的信息并显示确认页面，允许客户编辑配送信息或取消订单。脚本通过一系列 `if/elseif` 语句组织，根据客户点击的按钮及其值执行代码。
 
 以下是脚本的结构概述：
+
 - `if (no order exists)`: 显示购物车为空以及返回目录索引页的链接。
 - `if (started from shopping cart)`: 显示配送信息表。
 - `elseif (button name = “Summary”)`:
@@ -16661,203 +15739,365 @@ switch (@$_POST['Cart'])
         - `case: Cancel Order`: 显示取消页面，销毁会话。
         - `case: Submit Order`: 将订单状态设置为已提交，处理信用卡信息，显示订单确认页面。
 
-列表 5-8 显示了购物车第三方脚本 `Shop_order.php` 的代码。
-
 ## 列表 5-8: 处理订单的脚本
 
 ```php
 <?php
+
 /*
+
 * Program name: Shop_order.php
+
 * Description: 在提交时处理订单。
+
 */
+
 session_start();
+
 include(“Vars.inc”);
+
 if(!isset($_SESSION['order_number']))
+
 {
+
     echo “No order number found<br>\n<a href='Shop_products.php'>Continue shopping</a>”; 
+
     exit();
+
 }
+
 if(@$_GET['from'] == “cart”)
+
 {
+
     include(“shop_form_shipinfo.inc”);
+
     exit();
+
 }
+
 elseif(isset($_POST['Summary']))
+
 {
+
     foreach($_POST as $field => $value)
+
     {
+
         if ($value == "")
+
         {
+
             $blanks[] = $field;
+
         }
+
         else
+
         {
+
             $good_data[$field] = strip_tags(trim($value));
+
         }
+
     }
+
     if(isset($blanks))
+
     {
+
         $message = “The following fields are blank. Please enter the required information: “;
+
         foreach($blanks as $value)
+
         {
+
             $message .=$value, “;
+
         }
+
         extract($good_data);
+
         include(“shop_form_shipinfo.inc”);
+
         exit();
+
     }
+
     foreach($_POST as $field => $value)
+
     {
+
         if($field != “Summary”)
+
         {
+
             if(preg_match("/name/i”,$field))
+
             {
+
                 if (!preg_match("/^[A-Za-z’ -]{1,50}$/",$value))
+
                 {
+
                     $errors[] = “$value is not a valid name.”;
+
                 }
+
             }
+
             if(preg_match("/street/i”,$field)or preg_match("/addr/i”,$field) or preg_match("/city/i”,$field))
+
             {
+
                 if(!preg_match("/^[A-Za-z0-9.,’ -]{1,50}$/",$value))
+
                 {
+
                     $errors[] = “$value is not a valid address or city.”;
+
                 }
+
             }
+
             if(preg_match("/state/i”,$field))
+
             {
+
                 if(!preg_match("/^[A-Za-z]/",$value))
+
                 {
+
                     $errors[] = “$value is not a valid state.”;
+
                 }
+
             }
+
         }
+
     }
+
 }
-}
+
 ?>
 ```
-
-
-
-
-# 构建购物车脚本
 
 ## 列表 5-8 (续)
 
 ```php
 if(preg_match("/email/i",$field))
-{
-    if(!preg_match("/^.+@.+\.+\+$/",$value))
-    {
-        $errors[]="$value is not a valid email address.";
-    }
-}
-if(preg_match("/zip/i",$field))
-{
-    if(!preg_match("/^[0-9]{5,5}(\-[0-9]{4,4})?$/",$value))
-    {
-        $errors[] = "$value is not a valid zipcode.";
-    }
-}
-if(preg_match("/phone/i",$field))
-{
-    if(!preg_match("/^[0-9)(xX -]{7,20}$/",$value))
-    {
-        $errors[]="$value is not a valid phone number.";
-    }
-}
-if(preg_match("/cc_number/",$field))
-{
-    $value = trim($value);
-    $value = ereg_replace(' ','','',$value);
-    $value = ereg_replace('-',','','$value);
-    $_POST['cc_number'] = $value;
-    if($_POST['cc_type'] == "visa")
-    {
-        if(!preg_match("/^[4]{1,1}[0-9]{12,15}$/",$value))
-        {
-            $errors[]="$value is not a valid Visa number.";
-        }
-    }
-    elseif($_POST['cc_type'] == "mc")
-    {
-        if(!preg_match("/^[5]{1,1}[0-9]{15,15}$/",$value))
-        {
-            $errors[] = "$value is not a valid Mastercard number.";
-        }
-    }
-    else
-    {
-        if(!preg_match("/^[3]{1,1}[0-9]{14,14}$/",$value))
-        {
-            $errors[] = "$value is not a valid American Express number.";
-        }
-    }
-    $field = strip_tags(trim($value));
-}
-if(@is_array($errors))
-{
-    $message = "";
-    foreach($errors as $value)
-    {
-        $message .= $value." Please try again<br />";
-    }
-    include("shop_form_shipinfo.inc");
-    exit();
-}
-/* 当所有字段都正确时处理数据 */
-```
 
-**购物车 - 构建一个**
+{
+
+    if(!preg_match("/^.+@.+\.+\+$/",$value))
+
+    {
+
+        $errors[]="$value is not a valid email address.";
+
+    }
+
+}
+
+if(preg_match("/zip/i",$field))
+
+{
+
+    if(!preg_match("/^[0-9]{5,5}(\-[0-9]{4,4})?$/",$value))
+
+    {
+
+        $errors[] = "$value is not a valid zipcode.";
+
+    }
+
+}
+
+if(preg_match("/phone/i",$field))
+
+{
+
+    if(!preg_match("/^[0-9)(xX -]{7,20}$/",$value))
+
+    {
+
+        $errors[]="$value is not a valid phone number.";
+
+    }
+
+}
+
+if(preg_match("/cc_number/",$field))
+
+{
+
+    $value = trim($value);
+
+    $value = ereg_replace(' ','','',$value);
+
+    $value = ereg_replace('-',','','$value);
+
+    $_POST['cc_number'] = $value;
+
+    if($_POST['cc_type'] == "visa")
+
+    {
+
+        if(!preg_match("/^[4]{1,1}[0-9]{12,15}$/",$value))
+
+        {
+
+            $errors[]="$value is not a valid Visa number.";
+
+        }
+
+    }
+
+    elseif($_POST['cc_type'] == "mc")
+
+    {
+
+        if(!preg_match("/^[5]{1,1}[0-9]{15,15}$/",$value))
+
+        {
+
+            $errors[] = "$value is not a valid Mastercard number.";
+
+        }
+
+    }
+
+    else
+
+    {
+
+        if(!preg_match("/^[3]{1,1}[0-9]{14,14}$/",$value))
+
+        {
+
+            $errors[] = "$value is not a valid American Express number.";
+
+        }
+
+    }
+
+    $field = strip_tags(trim($value));
+
+}
+
+if(@is_array($errors))
+
+{
+
+    $message = "";
+
+    foreach($errors as $value)
+
+    {
+
+        $message .= $value." Please try again<br />";
+
+    }
+
+    include("shop_form_shipinfo.inc");
+
+    exit();
+
+}
+
+/* 当所有字段都正确时处理数据 */
 
 $cxn = mysqli_connect($host,$user,$passwd,$database);
-foreach($_POST as $field => $value)
-{
-    if(!eregi("cc_",$field) && $field != "Summary")
-    {
-        $value = mysqli_real_escape_string($cxn,$value);
-        $updates[] = "$field = '$value'";
-    }
-}
-$update_string = implode($updates,",",");
-$sql_ship = "UPDATE CustomerOrder SET $update_string WHERE order_number='{$SESSION['order_number']}'";
-$result = mysqli_query($cxn,$sql_ship) or die(mysqli_error($cxn));
-extract($_POST);
-include("shop_page_summary.inc");
-}
-elseif(isset($_POST['Ship']))
-{
-    include("shop_form_shipinfo.inc");
-}
-elseif(isset($_POST['Final']))
-{
-    switch ($_POST['Final'])
-    {
-        case "Continue Shopping":
-            header("Location: Shop_products.php");
-            break;
-        case "Cancel Order":
-            #include("shop_page_cancel.inc");
-            unset($_SESSION['order_number']);
-            session_destroy();
-            exit();
-            break;
-        case "Submit Order":
-            $cxn = mysqli_connect($host,$user,$passwd,$database);
-            $sql = "UPDATE CustomerOrder SET submitted='yes' WHERE order_number='{$SESSION['order_number']}'";
-            $result = mysqli_query($cxn,$sql) or die("Error: ".mysqli_error($cxn));
-            #processCCInfo();
-            #sendOrder();
-            #include("shop_page_accept.inc");
-            #email();
-            break;
-    }
-}
-?>
 
-```在接下来的列表中，我们解释了 `Listing 5-8` 中的行行：
+foreach($_POST as $field => $value)
+
+{
+
+    if(!eregi("cc_",$field) && $field != "Summary")
+
+    {
+
+        $value = mysqli_real_escape_string($cxn,$value);
+
+        $updates[] = "$field = '$value'";
+
+    }
+
+}
+
+$update_string = implode($updates,",",");
+
+$sql_ship = "UPDATE CustomerOrder SET $update_string WHERE order_number='{$SESSION['order_number']}'";
+
+$result = mysqli_query($cxn,$sql_ship) or die(mysqli_error($cxn));
+
+extract($_POST);
+
+include("shop_page_summary.inc");
+
+}
+
+elseif(isset($_POST['Ship']))
+
+{
+
+    include("shop_form_shipinfo.inc");
+
+}
+
+elseif(isset($_POST['Final']))
+
+{
+
+    switch ($_POST['Final'])
+
+    {
+
+        case "Continue Shopping":
+
+            header("Location: Shop_products.php");
+
+            break;
+
+        case "Cancel Order":
+
+            #include("shop_page_cancel.inc");
+
+            unset($_SESSION['order_number']);
+
+            session_destroy();
+
+            exit();
+
+            break;
+
+        case "Submit Order":
+
+            $cxn = mysqli_connect($host,$user,$passwd,$database);
+
+            $sql = "UPDATE CustomerOrder SET submitted='yes' WHERE order_number='{$SESSION['order_number']}'";
+
+            $result = mysqli_query($cxn,$sql) or die("Error: ".mysqli_error($cxn));
+
+            #processCCInfo();
+
+            #sendOrder();
+
+            #include("shop_page_accept.inc");
+
+            #email();
+
+            break;
+
+    }
+
+}
+
+?>
+```
+
+在接下来的列表中，我们解释了 `Listing 5-8` 中的行：
 
 - `if` 语句开始当前订单。
 - `if` 语句显示目录页面。
@@ -16878,6 +16118,9 @@ elseif(isset($_POST['Final']))
 - `if` 语句设置订单状态。
 - `case` 语句在 `Final` 的值为 `Cancel Order`（取消订单）时执行。
 - `case` 语句在 `Final` 的值为 `Submit Order`（提交订单）时执行。
+
+
+
 - `function` 调用处理信用卡信息。
 - `function` 调用发送订单。
 - `include` 语句显示订单确认（或未接受）页面。
@@ -16908,11 +16151,6 @@ elseif(isset($_POST['Final']))
 - `implode` 函数合并数组。
 - `mysqli_query` 函数执行 SQL 语句。
 - `mysqli_error` 函数获取错误。
-
-
-
-
-
 - **181** 调用一个向客户发送电子邮件的函数。此函数调用被注释掉了，因为我们没有提供电子邮件功能。你需要编写一个函数来创建并发送特定于你业务的电子邮件消息。发送电子邮件的细节将在第 V 卷第 5 章中详细介绍。
 - **182** 销毁会话。用户在摘要页面上点击“提交订单”按钮后，无法对订单进行任何更改。
 
@@ -16961,7 +16199,6 @@ elseif(isset($_POST['Final']))
 - `===`（三等号）比较运算符，153
 - `;`（分号）特殊字符，170
 - `‘`（单引号）特殊字符，116, 123, 153, 254, 124, 402
-
 - 抽象类，248–249
 - 访问控制列表 (ACL)，387
 - 拒绝访问错误消息，64–65
@@ -17009,11 +16246,8 @@ elseif(isset($_POST['Final']))
 - `basename("/t1/do.txt")`
 - `break`
 - `bindir-DIR*` PHP 配置
+
 ...
-
-
-
-
 
 # “无法连接到”错误
 
@@ -17085,14 +16319,12 @@ alpha 通道，454
 更改
 关于，255
 通道，453–454
-控制过程，369–371
 面向对象
 颜色索引，454–455
 MySQL 账户权限，
 编程 (OOP)，
 概述，452–453
 282–284
-230–231
 `columns_priv` 表，276
 端口 (Apache)，85
 概述，230–231
@@ -17295,87 +16527,6 @@ ASCII，153
 启动 MySQL，49, 61
 测试 MySQL，63
 
-索引
-约定，书籍，2–3
-开发环境，95–97
-添加到 PHP 脚本，
-34–35
-转换
-HTML 特殊字符，
-已定义，148–149
-通信
-GD 扩展，449–451
-mysqli 函数到 mysql 函数，354–355
-与 MySQL 通，260–267,
-MySQL，61, 97
-PHP，36, 96
-社区支持 (PHP)，
-开源软件，49
-PHP 用于 MySQL，
-支持，40
-没有 PHP 会话的，528–529
-使用 PHP 发送电子邮件，460
-检索信息，
-432–433
-保存信息，523
-比较
-PHP Web Server，35
-Windows 上的 Web Server，
-34–36
-对象，254–255
-设置过期时间，
-值，152–154
-购物车，573
-比较，合并
-多个，159–161
-连接到 MySQL 服务器，345–347
-522–526
-完全自动
-连接
-`copy statement`，200–201
-复制
-文件，200–201
-计算机与人类的分离
-构造函数，242
-(CAPTCHA)，377–378
-continue 语句，177
-复杂语句，
-108–109
-计数 MySQL
-受影响行，353
-查询返回的行，351–352
-连接，125
-显示错误消息，65
-条件块，108
-条件语句
-已定义，151
-if 语句，161
-switch 语句，165
-已定义，152
-设置 MySQL，50
-配置
-数据访问，271–275
-Apache，85
-Windows，97
-Linux，33–34
-Linux，63
-Windows，55–56
-MySQL 账户权限
-230–231
-`columns_priv` 表，276
-端口 (Apache)，85
-设置 (Apache)，84–85
-父类，232
-来自多个地方的
-Web 空间位置
-防止更改，251
-表，334–338
-(Apache)，85
-在脚本中使用，246–247
-
-
-
-
 # 数据库中的组织
 
 - 概述，316
@@ -17383,12 +16534,12 @@ Web 空间位置
 - 设计，296–300
 - 语句，134
 - 恢复，290–293
-
 - 39_167779 bindex.qxp 12/17/07 9:05 PM 第 623 页
 
 # 索引
 
 ### 数据库
+
 - 购物车，577–579
 - `DES_DECRYPT()` 加密
 - 添加信息，结构，260, 316–318
@@ -17454,15 +16605,137 @@ Web 空间位置
 - 本地计算机，17–19
 
 ## 开发环境
+
 - 配置 Apache，97
 - 配置 MySQL，97
 - 概述，319
 - 配置 PHP，96–97
+
+
+
+# 傻呆版 PHP & MySQL Web 开发全方位参考手册
+
+## 索引
+
+### A
+
+- `Alpha()` 方法，454
+- 在图像中添加文本，455–457
+- 向...添加文本，470–472
+- 添加到 URL，515–516
+- 可访问性，377–378
+- 访问邮箱箱，433–435
+- 账户，277–278
+- 算术运算符，121–122
+- 执行算术运算，159–161
+- 启动 Apache，81–82
+- 重启 Apache，82
+- 停止 Apache，82–83
+- 开发环境 (IDE)，17
+- 集成开发环境 (IDE)，17
+- 错误信息，397–401
+- 带有 if 语句的错误信息，397–401
+- 异常，251–253
+- 构建，162–164
+- 组件，162–164
+- 已定义，161–151
+- 配置，449–451
+- 配置，35–36
+- 配置 PHP，33–34
+- 图像处理，451–457
+- `header()` 函数，513–514
+- `getBody()` 函数，466
+- `get_class_` 函数，255
+- `getElementByID()` 函数，442
+- `getElementByID()`，442
+- `getElementsByTagName()`，442
+- `getElementsByTagName`，442
+- `get_loaded_extensions()` 函数，424
+- `getHeaders()` 函数，465
+- `ftp_login`，211
+- `ftp_get`，212–214
+- `ftp_get($connect, "stuff.txt", "d.txt", "sr.txt", organization)`，199
+- `filemtime("stuff.txt")`，199
+- `filegroup("stuff.txt")`，199
+- `fwrite`，218
+- `is_float($number)`，154
+- `is_int($number)`，154
+- `is_binary()`，404
+- `is_null($var1)`，154
+- `is_numeric($string)`，154
+- `is_string($string)`，154
+- `is_array($var2)`，154
+- `is_dir("stuff.txt")`，199
+- `is_executable("do.txt")`，199
+- `is_file("stuff.txt")`，199
+- `is_writable("stuff.txt")`，199
+- `isset($varname)`，154
+- `htmlentities()`，400–402
+- `htmlentities()` 函数，400–402
+- HTML 表单，400–402
+- 特殊字符，401–402
+- 特殊字符，401–402
+- `header()`，513
+- `headers`，513
+- HTTP 头部，重定向会话，513–514
+- `httpd.conf` 文件，84
+- Web 主机，10
+- 宿主机表，276
+- 主机名，271
+- `htdocs`，94, 195
+- 首页，560
+- 继承，232
+- `INSERT` 权限，275
+- `INSERT` 查询，261–262
+- 插入制表符，124–125
+- 插入图像，455–457
+- 安装，86
+- 安装 MySQL，272–273
+- 安装 Web 服务器，73
+- 无限循环，175–176
+- 图像识别，377–378
+- 信息 源代码，79–80
+- 实现，377–378
+- 实现图像识别，377–378
+- 使用源代码组织脚本，111–112
+- `preg_match()`，158, 499
+- (安全) 函数，函数，424
+- `getStateCodes()`，191
+- `getStateNames()`，191
+- 全局变量，180
+- `rename()`，408
+- `script_tags()`，399, 400
+- `session_regenerate_id()`，417
+- 静态，469–476
+- `GRANT` 权限，275, 282–283
+- 授予权限，411
+- `session_start`，527
+- `setcookie()`，523–524
+- (XML) 函数
+- `createAttribute()`，442
+- `createCDATASection()`，442
+- `createElement()`，442
+- `createProcessing()`，442
+- `Instruction()`，442
+- `createTextNode()`，442
+- `GROUP BY`，331
+- 日期格式符号，140
+- 图标，书，6
+- h/H 日期格式符号，140
+- IDE (集成开发环境)，17
+- 识别当前 MySQL 账户，277–278
+- 对话框，389–390
+- g/G 日期格式符号，140
+- GD 扩展
+- 函数，382
+- 否定，164–165
+
+### D
+
 - 集成 MySQL，267–268
 - 文件，200–201
 - XAMPP 页面，93–94
 - 从数组移除信息，340–341
-- 130–131
 - 选择，16–17
 - 使用 phpMyAdmin 恢复，292–293
 - 定义，158
@@ -17470,19 +16743,14 @@ Web 空间位置
 - 测试 phpMyAdmin，94
 - 使用 mysql 对话框恢复，291–292
 - 获取文件系统信息，404
-- 328–338
 - 安全，409–412
 - 弃用函数，144
 - 选择，349
-
-##39_167779 bindex.qxp 12/17/07 9:05 页
-
-## PHP & MySQL Web Development All-In-One Desk For Dummies 身份，389–390
+- PHP & MySQL Web Development All-In-One Desk For Dummies 身份，389–390
 - 错误消息，65, 145–146
 - 属性，392
 - 定义，167
 - `do..while` 循环，提交按钮，503–504
-- 174–175
 - 从网站下载数字证书，145–146
 - 选择的消息，145–146
 - 静态 HTML 表单，470–476
@@ -17494,30 +16762,28 @@ Web 空间位置
 - 语句，117–118
 - 站点，412–414
 - 变量，116–118
-- 77
 - PEAR 包管理器，116–118
 - 使用 `print_r` 变量，116–118
 - 使用 `var_dump` 变量
-- 433–436
-- 目录，`apache\bin`,96
+- 目录，`apache\bin`，96
 - 来自 PHP 网站的语句，22–23
 - 构建文件列表，202–203
 - 页面内容，110–113
 - 验证文件，24–25, 52, XAMPP，88
 - `DISTINCT`，332–334
 - `FTP` (文件传输协议)，310–311
-- `FTP` (文件传输协议)212
+- `FTP` (文件传输协议)，212
 - `DNS` (域名系统)，10
 - `DROP` 权限，275
 - `DROP` 查询，261–262
-- `DROP` USER 查询，284
+- `DROP USER` 查询，284
 - 文档对象模型
-- `Dykes, Lucinda, *XML For Dummies,*`444
+- `Dykes, Lucinda, *XML For Dummies,*` 444
 - 查看 DOM (文档对象模型)
 - `dirname("/t1/do.txt")` 函数，199
 - 文档根，38
 - `DocumentRoot` 指令，85
-- `$` (美元符号)31
+- `$` (美元符号)，31
 - 禁用服务，385–386
 - 灾难恢复，367–369
 - 磁盘空间，14
@@ -17527,8 +16793,7 @@ Web 空间位置
 - `error_reporting(error Setting)` 语句，146
 - `echo` 语句在页面显示内容，110
 - 显示变量，116–118
-- 123, 353–354
-- 为表单输出 HTML，
+- 为表单输出 HTML，123, 353–354
 - `ENUM("val1", "val2"...)` MySQL 数据类型，303
 - 枚举，数据，302
 - 环境变量，41
@@ -17601,15 +16866,12 @@ Web 空间位置
 - 文档对象模型
 - 文档根
 - 文档根指令
-- `Dykes, Lucinda, *XML For Dummies,*`444
+- `Dykes, Lucinda, *XML For Dummies,*` 444
 
+### P
 
+#### PHP 基础
 
-
-
-# 傻呆版 PHP & MySQL Web 开发全方位参考手册
-
-## PHP 基础
 - 关闭, 145
 - 检查已加载, 424–426
 - 方案, 412
@@ -17620,7 +16882,8 @@ Web 空间位置
 - GD, 449–457
 - 强度, 381
 
-## 函数与语句
+#### 函数与语句
+
 - `error_log = $filename`
 - 加载, 426–427
 - `end($arrayname)`
@@ -17630,7 +16893,8 @@ Web 空间位置
 - `error_log setting`, 147
 - `Mail_IMAP`, 465–466
 
-## 文件
+#### 文件
+
 - `file_exists` 语句,
   - 以写入模式打开
 - `Mail_Mbox`, 466
@@ -17656,13 +16920,15 @@ Web 空间位置
   - 读取到数组中, 220–221
   - 读取到字符串中, 221
   - 逐个读取, 219–220
--- 致命错误
+- 致命错误
   - 二进制, 24, 50, 75
   - 已定义, 142
   - 处理, 143
   - 容错, 359–360
   - 关闭, 218
-## 文件操作与数组
+
+#### 文件操作与数组
+
 - `fclose($fh)` 语句, 218
   - 重命名, 200–201
   - 复制, 200–201
@@ -17759,68 +17025,76 @@ Web 空间位置
 
 
 
-
-
 # 索引
 
-## A
-- `Alpha()` 方法, 454
-- 在图像中添加文本, 455–457
-- 向...添加文本, 470–472
-- 添加到 URL, 515–516
-- 可访问性, 377–378
-- 访问邮箱箱, 433–435
-- 账户, 277–278
-- 算术运算符, 121–122
-- 执行算术运算, 159–161
-- 启动 Apache, 81–82
-- 重启 Apache, 82
-- 停止 Apache, 82–83
-- 开发环境 (IDE), 17
-- 集成开发环境 (IDE), 17
-- 错误信息, 397–401
-- 带有 if 语句的错误信息, 397–401
-- 异常, 251–253
-- 构建, 162–164
-- 组件, 162–164
-- 已定义, 161–151
-- 配置, 449–451
-- 配置, 35–36
-- 配置 PHP, 33–34
-- 图像处理, 451–457
-- `header()` 函数, 513–514
-- `getBody()` 函数, 466
-- `get_class_` 函数, 255
-- `getElementByID()` 函数, 442
-- `getElementByID()`, 442
-- `getElementsByTagName()`, 442
-- `getElementsByTagName`, 442
-- `get_loaded_extensions()` 函数, 424
-- `getHeaders()` 函数, 465
-- `ftp_login`, 211
-- `ftp_get`, 212–214
-- `ftp_get($connect, "stuff.txt", "d.txt", "sr.txt", organization)`, 199
-- `filemtime("stuff.txt")`, 199
-- `filegroup("stuff.txt")`, 199
-- `fwrite`, 218
-- `is_float($number)`, 154
-- `is_int($number)`, 154
-- `is_binary()`, 404
-- `is_null($var1)`, 154
-- `is_numeric($string)`, 154
-- `is_string($string)`, 154
-- `is_array($var2)`, 154
-- `is_dir("stuff.txt")`, 199
-- `is_executable("do.txt")`, 199
-- `is_file("stuff.txt")`, 199
-- `is_writable("stuff.txt")`, 199
-- `isset($varname)`, 154
-- `htmlentities()`, 400–402
-- `htmlentities()` 函数, 400–402
-- HTML 表单, 400–402
-- 特殊字符, 401–402
-- 特殊字符, 401–402
-- `header()`, 513
+## 嵌套
+- 165
+
+## IIS (Internet 信息服务器)
+- 449–457
+
+## heredoc 语句
+- 126
+
+## GET 方法
+- 471
+
+## 颜色处理
+- 454–455
+
+## 图像
+- 452–457
+
+## 故障输出
+- 45
+
+## 错误信息
+- 44
+
+## 键对
+- 128
+
+## 列表语句
+- 132
+
+## 函数与变量
+- `krsort($arrayname*)`
+- `ksort($arrayname)`
+- `LIMIT` 关键字, 331, 334
+- `libmysql.dll 文件`, 40
+- L 日期格式符号, 140
+
+## 列表
+- 482–483
+  - 复选框, 484–485
+  - 单选按钮, 487–488
+  - 选择列表, 489–490
+  - 空字段, 493–495
+  - 隐藏字段, 495–497
+  - 提交按钮, 500–502
+  - 显示表单, 503–504
+  - 显示 HTML 表单, 512
+  - 显示带有隐藏字段的表单, 493–495
+  - 显示带有提交按钮的表单, 503–504
+
+## MySQL
+- 激活 MySQL, 40
+- 检查 安装, 48–49
+- PHP PHP 安装, 31–32
+- 检查 Cookie, 523–526
+- 检查数据库, 328–338
+- 格式, 450–451
+- 合并多个表, 334–338
+- 从表单获取, 515–522
+- 从图像获取, 58–60
+- 从文件获取, 58–60
+- 从源代码获取, 79–80
+- 使用信息, 515
+- 全局变量, 180
+- `GRANT` 权限, 275, 282
+- 哈希, 382
+- 函数, 382
+- `header()` 函数, 513
 - `headers`, 513
 - HTTP 头部, 重定向会话, 513–514
 - `httpd.conf 文件`, 84
@@ -17857,12 +17131,12 @@ Web 空间位置
 - `session_start`, 527
 - `setcookie()`, 523–524
 - (XML) 函数
-- `createAttribute()`, 442
-- `createCDATASection()`, 442
-- `createElement()`, 442
-- `createProcessing()`, 442
-- `Instruction()`, 442
-- `createTextNode()`, 442
+  - `createAttribute()`, 442
+  - `createCDATASection()`, 442
+  - `createElement()`, 442
+  - `createProcessing()`, 442
+  - `Instruction()`, 442
+  - `createTextNode()`, 442
 - `GROUP BY`, 331
 - 日期格式符号, 140
 - 图标, 书, 6
@@ -17872,7 +17146,7 @@ Web 空间位置
 - 对话框, 389–390
 - g/G 日期格式符号, 140
 - GD 扩展
-- 函数, 382
+  - 函数, 382
 - 否定, 164–165
 - 嵌套, 165
 - IIS (Internet 信息服务器), 449–457
@@ -17954,114 +17228,13 @@ Web 空间位置
 - `session_start`, 527
 - `setcookie()`, 523–524
 - (XML) 函数
-- `createAttribute()`, 442
-- `createCDATASection()`, 442
-- `createElement()`, 442
-- `createProcessing()`, 442
-- `Instruction()`, 442
-- `createTextNode()`, 442
+  - `createAttribute()`, 442
+  - `createCDATASection()`, 442
+  - `createElement()`, 442
+  - `createProcessing()`, 442
+  - `Instruction()`, 442
+  - `createTextNode()`, 442
 - `GROUP BY`, 331
-- 日期格式符号, 140
-- 图标, 书, 6
-- h/H 日期格式符号, 140
-- IDE (集成开发环境), 17
-- 识别当前 MySQL 账户, 277–278
-- 对话框, 389–390
-- g/G 日期格式符号, 140
-- GD 扩展
-- 函数, 382
-- 否定, 164–165
-- 嵌套, 165
-- IIS (Internet 信息服务器), 449–457
-- heredoc 语句, 126
-- GET 方法, 471
-- 颜色处理, 454–455
-- 图像, 452–457
-- 故障输出, 45
-- 错误信息, 44
-- 键对, 128
-- 列表语句, 132
-- `krsort($arrayname*)`
-- `ksort($arrayname)`
-- `LIMIT` 关键字, 331, 334
-- `libmysql.dll 文件`, 40
-- L 日期格式符号, 140
-- 列表, 482–483
-- 复选框, 484–485
-- 单选按钮, 487–488
-- 选择列表, 489–490
-- 空字段, 493–495
-- 隐藏字段, 495–497
-- 提交按钮, 500–502
-- 显示表单, 503–504
-- 显示 HTML 表单, 512
-- 显示带有隐藏字段的表单, 493–495
-- 显示带有提交按钮的表单, 503–504
-- 激活 MySQL, 40
-- 检查 安装, 48–49
-- PHP PHP 安装, 31–32
-- 检查 Cookie, 523–526
-- 检查数据库, 328–338
-- 格式, 450–451
-- 格式, 450–451
-- 合并多个表, 334–338
-- 从表单获取, 515–522
-- 从图像获取, 58–60
-- 从文件获取, 58–60
-- 从源代码获取, 79–80
-- 使用信息, 515
-- 全局变量, 180
-- `GRANT` 权限, 275, 282
-- 哈希, 382
-- 函数, 382
-- `header()` 函数, 513
-- `headers`, 513
-- HTTP 头部, 重定向会话, 513–514
-- `httpd.conf 文件`, 84
-- Web 主机, 10
-- 宿主机表, 276
-- 主机名, 271
-- `htdocs`, 94, 195
-- 首页, 560
-- 继承, 232
-- `INSERT` 权限, 275
-- `INSERT` 查询, 261–262
-- 插入制表符, 124–125
-- 插入图像, 455–457
-- 安装, 86
-- 安装 MySQL, 272–273
-- 安装 Web 服务器, 73
-- 无限循环, 175–176
-- 图像识别, 377–378
-- 信息 源代码, 79–80
-- 实现, 377–378
-- 实现图像识别, 377–378
-- 使用源代码组织脚本, 111–112
-- `preg_match()`, 158, 499
-- (安全) 函数, 函数, 424
-- `getStateCodes()`, 191
-- `getStateNames()`, 191
-- 全局变量, 180
-- `rename()`, 408
-- `script_tags()`, 399, 400
-- `session_regenerate_id()`, 417
-- 静态, 469–476
-- `GRANT` 权限, 275, 282–283
-- 授予权限, 411
-- `session_start`, 527
-- `setcookie()`, 523–524
-- (XML) 函数
-- `createAttribute()`, 442
-- `createCDATASection()`, 442
-- `createElement()`, 442
-- `createProcessing()`, 442
-- `Instruction()`, 442
-- `createTextNode()`, 442
-- `GROUP BY`, 331
-
-
-
-
 
 # 购物车 Web 开发
 
@@ -18115,7 +17288,7 @@ Web 空间位置
 - `定义双边表单的脚本`, 474–475
 - `显示表单字段的脚本`, 472–473
 - `显示登录表单的脚本`, 474
-- `显示逻辑代码的脚本（与产品页面显示分离）, 473
+- `显示逻辑代码的脚本（与产品页面显示分离）`, 473
 - `显示无字段表单的脚本`, 512–513
 - `显示并处理登录表单的脚本`, 519–521
 - `从 Cookies 获取信息的脚本`, 525–526
@@ -18230,10 +17403,6 @@ Web 空间位置
 - RPM 文件, 57
 - 摘要页
 
-
-
-
-
 # 索引
 
 ## Apache
@@ -18337,11 +17506,25 @@ Web 空间位置
 - 错误信息, 145–146
 - 错误处理, 142–143
 - 解析错误, 142–143
+
+
+
+# 索引
+
+## 致命错误
 - 致命错误, 142–143
+
+## 严格消息
 - 严格消息, 142–144
+
+## 警告
 - 警告, 142–143
+
+## 错误信息的类型
 - 错误信息的类型, 142–144
-- error_log =, 396
+
+## 配置指令
+- `error_log =`, 396
 
 ## FTP
 - FTP 安装, 435–436
@@ -18349,7 +17532,7 @@ Web 空间位置
 ## 文件
 - 文件, 201–204
 - 文件, 192–196
-- 另一个 Web 网站上的文件, 217–217
+- 另一个 Web 网站上的文件, 217
 - 读模式下的文件, 216–217
 - 写模式下的文件, 217
 - 文件处理, 104
@@ -18370,11 +17553,11 @@ Web 空间位置
 ## 处理
 - 处理, 142–143
 
-## if
+## if 语句
 - if 语句, 165
 - if 语句, 161–165
 
-## 无限
+## 无限循环
 - 无限循环, 175–176
 
 ## 信息
@@ -18436,8 +17619,8 @@ Web 空间位置
 
 ## 打开
 - 开源软件, 19–20
-- open_basedir =, 395
-- opendir 语句, 202–203
+- `open_basedir =`, 395
+- `opendir` 语句, 202–203
 - 打开, 191–192
 - 打开, 527
 
@@ -18454,7 +17637,7 @@ Web 空间位置
 - 概述, 537
 
 ## ORDER BY
-- ORDER BY, 331
+- `ORDER BY`, 331
 
 ## 排序
 - 排序, 575–576
@@ -18523,7 +17706,7 @@ Web 空间位置
 - 变量内容, 154
 - 变量, 375–376
 
-#### Windows
+### Windows
 - 在 Linux 控制
 - 在 Windows 控制, 61–62
 
@@ -18542,29 +17725,29 @@ Web 空间位置
 - Web 网站, 333
 - Web 网站, 430
 
-#### Windows
+### Windows
 - 在 Linux 安装, 26–28
 - 在 Mac OS 安装, 32–33
 - 在 Unix 和 Windows 安装, 32–33
 - 在 Windows 安装, 23
 
---- `exec()`, 205
--- `passthru()`, 205, 208
--- `system()`, 205, 207
--- `pathinfo()`, 200
--- `php-m()`, 425
--- `preg_match()`, 158
--- `print_r()`, 31
--- `phpinfo()`, 38
--- `open_basedir =`, 395
--- `error_log =`, 396
--- `expose_php = off`, 395
--- `register_globals =`, 395
--- `$PHPSESSID`, 528
+---
 
+## 函数与命令参考
 
-
-
+- `exec()`, 205
+- `passthru()`, 205, 208
+- `system()`, 205, 207
+- `pathinfo()`, 200
+- `php-m()`, 425
+- `preg_match()`, 158
+- `print_r()`, 31
+- `phpinfo()`, 38
+- `open_basedir =`, 395
+- `error_log =`, 396
+- `expose_php = off`, 395
+- `register_globals =`, 395
+- `$PHPSESSID`, 528
 
 # 备份数据库
 
@@ -18691,7 +17874,7 @@ Web 空间位置
 - `whois`, 12
 - `XML documents with XPath`, 446–447
 
- 关系型数据库管理系统 (RDBMS), 9, 260
+关系型数据库管理系统 (RDBMS), 9, 260
 
 - `ps -A command`, 83
 - `public`, 236–237
@@ -18743,35 +17926,25 @@ Web 空间位置
 - `session variables`, 573
 - `setcookie function`, 524
 - `setcookie statement`, 514-
-- `session timeouts`, 416
-- `session IDs, regenerate`, 417
-- `setting options in php.ini`, 395-395–396
-- `software updates`, 419–420
-- `threats`, 361–363
-- `separating display code from logic code`, 190
-- `using a class in a`, 246–247
-- `script_tags() function`, 399, 400
-- `date format symbol`, 140
-- `whois`, 12
-- `XML documents with XPath`, 446–447
-
-
 
 
 
 # 索引
 
-## 会话 (sessions)
+## 会话
+
 - `scheme`, 412
 - `添加数据`, 579
 - `关闭 PHP`, 527
 
 ## `SHAI (安全哈希算法)`, 412
+
 - `构建`, 577–578
 - `安全性`, 415–417
 
 ## `CustomerOrder` 表, 575
-- `购物车变量`,
+
+- `购物车变量`
 - `运费`, 购物车
 - `设计`, 574–577
 - 573
@@ -18780,8 +17953,9 @@ Web 空间位置
 - `超时`, 416
 
 ## 购物车脚本
+
 - `在 Linux/Unix/Mac 上启动 Apache`, 81–82
-- `Windows  Apache`, 81
+- `Windows Apache`, 81
 - `SQL（结构化查询语言）格式`
     - `产品信息`, `AVG(*columnname*)`, 330
     - 600–606
@@ -18795,6 +17969,7 @@ Web 空间位置
         - `通过文件添加数据`, 325–326
         - `在...中添加数据行`, 321
         - `向数据库添加表`, 311–313
+
 - `SHOW DATABASES` 查询, 309
 - `$fh = fopen("*filename*", "*mode")`, 216
 - `SHOW 查询`, 261–262
@@ -18903,7 +18078,8 @@ Web 空间位置
 - `(string)`, 120
 - `strict`, 142
 
-## 
+## 其他
+
 - `try 块`, 252–253
 - `SQL 查询信息`, 339
 - `添加图像`, 455–457
@@ -18912,6 +18088,7 @@ Web 空间位置
 - `字符串`, 262
 
 ## 文件
+
 - `PHP`, 19–20
 - `文件`, 215, 573, 145
 - `从 MySQL 安装源文件`, 58–60
@@ -18922,6 +18099,7 @@ Web 空间位置
 - `sprintf`, 122
 
 ## SQL 信息
+
 - `TSV (制表符分隔值)`
 - `制表符文件`, 224–225
 - `字符字符串`, 123–124
@@ -18943,7 +18121,7 @@ Web 空间位置
 - `格式`, 330
 - `标签`, 112
 - `<form>`, 493
-- `Linux/Mac  Apache`, 82–83
+- `Linux/Mac Apache`, 82–83
 - `测试`
 - `错误`, 508
 - `数据`, 302
@@ -18976,10 +18154,6 @@ Web 空间位置
 - `显示变量`, 44–45
 - `SQL 信息`, 116–118
 
-
-
-
-
 # 产品信息
 
 - 从数组、语句中删除：193–194
@@ -18988,9 +18162,11 @@ Web 空间位置
 - `||`（垂直线）模式
 
 ## 生产阶段
+
 - 111
 
 ## 从函数返回
+
 - 字符：156, 161
 - 保护：553–554
 - 186–188
@@ -18998,11 +18174,13 @@ Web 空间位置
 - 返回表单：591–596
 
 ## MySQL
+
 - `VARCHAR(length)`
 - 连接：271
 - 摘要：596–600
 
 ## 数据
+
 - 数据类型：303
 - 下载的文件：24–25, 52, 77
 - Web 根目录，安全：387–395
@@ -19010,6 +18188,7 @@ Web 空间位置
 - `var_dump` 语句：116
 
 ## Web 服务器
+
 - Verisign: 413
 - 为 PHP 配置：33–36
 - 在 Windows 上配置：34–36
@@ -19031,6 +18210,7 @@ Web 空间位置
 - 添加到 URL：516–517
 
 ## 网站（功能与扩展）
+
 - 将字符串赋值给：123–124
 - `w`，日期格式符号：140
 - 二进制文件：24
@@ -19042,6 +18222,7 @@ Web 空间位置
 - WAMP5：24, 52, 77
 
 ## 警告
+
 - PHP：22–23
 - 字符：401–402
 - 定义：142
@@ -19082,6 +18263,7 @@ Web 空间位置
 - 使用 `echo` 语句：110–113
 
 ## Web 托管
+
 - 公司网站：11
 - 定义：10
 - 教育机构：12–13
@@ -19137,6 +18319,7 @@ Web 空间位置
 - XSS 页面：418
 
 ## 网站（搜索工具）
+
 - Allwhois：12
 - `winMd5Sum`:25
 - BetterWhois：12
@@ -19155,6 +18338,7 @@ Web 空间位置
 - Y，日期格式符号：140
 
 ## XML
+
 - 扩展
 - XSLT（扩展样式表对象模型 (DOM)）：441–443
 - 转换：
@@ -19171,4 +18355,3 @@ Web 空间位置
 - Z
 - 版本：87
 - Zend 引擎扩展：423
-

@@ -1,23 +1,15 @@
+
 # Go 编程示例
-
-
-
-
-
-
-
-
-
 
 ## 前言
 
 Go 由 Robert Griesemer、Rob Pike 和 Ken Thompson 于 2007 年在 Google 创建。本书是 Go 编程语言的参考资料。它描述了语言的所有元素并通过代码示例说明其用法。Agus Kurniawan Berlin & Depok, 2015 年 2 月
 
-# 1. 开发环境
+## 1. 开发环境
 
 本章介绍 Go 的入门。Go 的官方网站可在 [`golang.org/`](https://golang.org/) 找到。什么是 Go？根据网站上的信息，我们可以知道它是什么。Go 是一种开源编程语言，使构建简单、可靠且高效的软件变得容易。
 
-## 1.1 安装
+### 1.1 安装
 
 Go 应用的安装很简单。对于 Windows 和 Mac 平台，你可以从 Go 网站 [`golang.org/doc/install`](http://golang.org/doc/install) 下载安装文件。运行它并按照安装说明进行操作。
 
@@ -39,17 +31,13 @@ $ go version
 
 示例输出可在下图中看到，Mac 平台。
 
-
-
-
-
 ![mac2](img/mac2.png)
 
 在 Windows 平台上运行程序的输出。
 
 ![go_win](img/go_win.png)
 
-## 1.2 开发工具
+### 1.2 开发工具
 
 基本上，你可以使用任何文本编辑器来编写 Go 代码。以下是文本编辑器的列表：
 
@@ -62,7 +50,7 @@ $ go version
 
 ![ch1-1](img/ch1-1.png)
 
-## 1.3 Hello World
+### 1.3 Hello World
 
 如何开始使用 Go？嗯，很容易。首先，创建一个名为 `hello` 的文件夹。
 
@@ -96,15 +84,15 @@ $ go run main.go
 
 ![ch1-4](img/ch1-4.png)
 
-## 1.4 Go 包
+### 1.4 Go 包
 
 有很多你可以使用的 Go 包。Go 包的列表可以在此链接上看到 [`golang.org/pkg/`](https://golang.org/pkg/)。在本书中，我们将探索一些 Go 标准包。我们也尝试构建自己的 Go 包。
 
-# 2. Go 编程语言
+## 2. Go 编程语言
 
 本章解释了 Go 编程语言的基础。
 
-## 2.1 常见规则
+### 2.1 常见规则
 
 Go 语言以“C 家族”作为主要语言，但我们在语法末尾不写“;”。以下是语法规则：
 
@@ -114,11 +102,11 @@ syntax_code2
 syntax_code3
 ```
 
-## 2.2 变量
+### 2.2 变量
 
 在本节中，我们探讨如何在 Go 中定义变量并为其赋值。
 
-### 2.2.1 声明变量
+#### 2.2.1 声明变量
 
 要声明一个名为 `myvar` 的变量且数据类型为 `data_type1`，你可以编写以下脚本：
 
@@ -146,7 +134,7 @@ var (
 
 一旦声明，这些变量就可以用来存储任何类型的数据。
 
-### 2.2.2 为变量赋值
+#### 2.2.2 为变量赋值
 
 你已经声明的变量可以通过等号 `=` 来赋值。例如，将变量 `str` 赋值为字符串值 `"Hello World"`，你会这样写：
 
@@ -171,7 +159,7 @@ country := "DE"
 val := 15
 ```
 
-### 2.2.3 演示
+#### 2.2.3 演示
 
 为了说明在 Go 中声明变量，创建一个名为 `vardemo` 的文件夹。然后，创建一个名为 `main.go` 的文件。
 
@@ -242,7 +230,7 @@ $ go run main.go
 
 ![ch2-1](img/ch2-1.png)
 
-## 2.3 注释
+### 2.3 注释
 
 你可以用编写注释来解释代码的工作方式。要做到这一点，你可以使用 `//` 和 `/* */` 语法。以下是示例代码：
 
@@ -262,7 +250,7 @@ mn = 2.45
 fmt.Println("value of str= ",str)
 ```
 
-## 2.4 算术运算
+### 2.4 算术运算
 
 Go 支持相同的四种基本算术运算，如加法、减法、乘法和除法。为了测试，创建一个文件夹 `arithdemo`。然后，创建一个名为 `main.go` 的文件。
 
@@ -309,7 +297,7 @@ $ go run main.go
 
 ![ch2-2](img/ch2-2.png)
 
-## 2.5 数学函数
+### 2.5 数学函数
 
 Go 提供了 `math` 库，你可以在 [`golang.org/pkg/math/`](https://golang.org/pkg/math/) 上阅读它。为了说明，我们尝试使用几个数学函数。
 
@@ -353,7 +341,7 @@ $ go run main.go
 
 ![ch2-3](img/ch2-3.png)
 
-## 2.6 自增和自减
+### 2.6 自增和自减
 
 Go 有用于自增和自减的特殊语法。
 
@@ -398,7 +386,7 @@ $ go run main.go
 
 ![ch2-4](img/ch2-4.png)
 
-## 2.7 从键盘获取输入
+### 2.7 从键盘获取输入
 
 在 `fmt` 库中，它提供了一个从键盘获取输入的功能。我们可以使用 `Scanf()`。
 
@@ -439,13 +427,9 @@ $ go run main.go
 
 ![ch2-5](img/ch2-5.png)
 
-## 2.8 比较运算符
+### 2.8 比较运算符
 
 你可能需要确定变量或值之间的相等性或差异。以下是比较运算符的列表：
-
-
-
-
 
 ```
 ==       is equal to
@@ -458,7 +442,7 @@ $ go run main.go
 
 这是一个比较用法的示例代码。
 
-``` 
+```
 package main
 
 import "fmt"
@@ -485,7 +469,7 @@ func main() {
 
 ![ch2-6](img/ch2-6.png)
 
-## 2.9 逻辑运算符
+### 2.9 逻辑运算符
 
 这些运算符可用于确定变量或值之间的逻辑关系。
 
@@ -521,11 +505,11 @@ func main() {
 
 ![ch2-7](img/ch2-7.png)
 
-## 2.10 决策
+### 2.10 决策
 
 在 Go 中构建决策有两种方法。我们可以使用 `if..then` 和 `switch..case`。
 
-### 2.10.1 if..then
+#### 2.10.1 if..then
 
 `if..then` 的语法模型可表述如下：
 
@@ -565,7 +549,7 @@ func main() {
 
 ![ch2-8](img/ch2-8.png)
 
-### 2.10.2 switch..case
+#### 2.10.2 switch..case
 
 `switch..case` 可按如下方式声明：
 
@@ -581,6 +565,8 @@ switch option {
 ```
 
 以下是 `switch..case` 用法的示例代码：
+
+
 
 ```
 package main
@@ -616,7 +602,7 @@ func main() {
 
 ## 2.11 迭代 - for
 
-当我们执行重复性活动时，迭代操作很有用。以下是 for 语法。
+当我们执行重复性活动时，迭代操作很有用。以下是 `for` 语法。
 
 ```
 for initialization;conditional;increment/decrement {
@@ -903,10 +889,6 @@ $ cd mapdemo
 
 我们将定义映射变量。然后，设置它们的值并在终端上显示它们。创建一个名为 `main.go` 的文件。编写此代码。
 
-
-
-
-
 ```
 package main
 
@@ -1113,6 +1095,8 @@ func  fibonacci(n int) int {
 
 我们可以重写第 4.1 到 4.7 节的代码并在主入口中使用它们。将此代码写入 `main.go` 文件。
 
+
+
 ```
 package main
 
@@ -1275,10 +1259,6 @@ $ go run main.go
 
 为了测试，我们在 `main.go` 文件上添加以下代码。
 
-
-
-
-
 ```
 package main
 
@@ -1316,11 +1296,11 @@ func main(){
 
 尝试构建并运行它。程序输出的示例显示在下图中。
 
-![ch5-2](img/ch5-2.png)  
+![ch5-2](img/ch5-2.png)
 
 ## 5.2 Demo: 单向链表
 
-在本节中，我们可以从头开始创建一个单向链表。你可以阅读你的数据结构书籍来了解单向链表是什么。你也可以在维基百科上阅读它，[`en.wikipedia.org/wiki/Linked\_list#Singly\_linked\_lists`](http://en.wikipedia.org/wiki/Linked_list#Singly_linked_lists) 。
+在本节中，我们可以从头开始创建一个单向链表。你可以阅读你的数据结构书籍来了解单向链表是什么。你也可以在维基百科上阅读它，[`en.wikipedia.org/wiki/Linked\_list#Singly\_linked\_lists`](http://en.wikipedia.org/wiki/Linked_list#Singly_linked_lists)。
 
 现在我们可以使用 Go 创建一个单向链表。首先，我们创建文件夹，linkedlist。
 
@@ -1345,9 +1325,9 @@ type Node struct {
 }
 ```
 
-next 是指针变量，它引用下一个指针变量的内存地址。
+`next` 是指针变量，它引用下一个指针变量的内存地址。
 
-我们创建一个函数，add()，我们在单向链表上插入新数据。以下是 add() 函数的实现。
+我们创建一个函数，`add()`，我们在单向链表上插入新数据。以下是 `add()` 函数的实现。
 
 ```
 func add(list *Node,data int) *Node {
@@ -1369,7 +1349,7 @@ func add(list *Node,data int) *Node {
 }
 ```
 
-我们也可以显示单向链表的内容。创建一个函数，display()，并编写此代码。
+我们也可以显示单向链表的内容。创建一个函数，`display()`，并编写此代码。
 
 ```
 func display(list *Node){
@@ -1384,7 +1364,7 @@ func display(list *Node){
 }
 ```
 
-在主入口中，我们将单向链表定义为指针变量，称为 head。我们向指针列表中添加五个数据。然后，我们显示所有数据。为 main() 函数编写以下代码。
+在主入口中，我们将单向链表定义为指针变量，称为 `head`。我们向指针列表中添加五个数据。然后，我们显示所有数据。为 `main()` 函数编写以下代码。
 
 ```
 func main(){
@@ -1407,7 +1387,7 @@ func main(){
 }
 ```
 
-保存此文件。  
+保存此文件。
 
 尝试构建并运行它。
 
@@ -1418,7 +1398,7 @@ $ go run main.go
 
 程序输出的示例可以在下图中看到。
 
-![ch5-3](img/ch5-3.png)  
+![ch5-3](img/ch5-3.png)
 
 # 6. 结构体和结构体方法
 
@@ -1428,7 +1408,7 @@ $ go run main.go
 
 我们可以使用结构体扩展我们的对象。如果你有 C/C++ 经验，我们在 Go 语言中使用结构体方法。
 
-要定义一个结构体，我们可以使用 struct 关键字，例如，我们为结构体对象定义 struct_name。
+要定义一个结构体，我们可以使用 `struct` 关键字，例如，我们为结构体对象定义 `struct_name`。
 
 ```
 type struct_name struct {
@@ -1436,14 +1416,14 @@ type struct_name struct {
 }
 ```
 
-为了说明，我们创建一个结构体，Employee。首先，我们通过创建一个名为 structdemo 的文件夹来构建一个新项目。
+为了说明，我们创建一个结构体，`Employee`。首先，我们通过创建一个名为 `structdemo` 的文件夹来构建一个新项目。
 
 ```
 $ mkdir structdemo
 $ cd structdemo
 ```
 
-然后，创建一个名为 **main.go** 的文件。首先，我们定义我们的包和一个结构体，Employee。
+然后，创建一个名为 **main.go** 的文件。首先，我们定义我们的包和一个结构体，`Employee`。
 
 ```
 package main
@@ -1462,9 +1442,9 @@ type Employee struct {
 }
 ```
 
-Employee 结构体有四个字段：id、name、country 和 created。
+`Employee` 结构体有四个字段：`id`、`name`、`country` 和 `created`。
 
-要在 Go 中使用结构体，我们可以使用 new() 实例化我们的结构体对象。然后，我们设置其值。
+要在 Go 中使用结构体，我们可以使用 `new()` 实例化我们的结构体对象。然后，我们设置其值。
 
 在 **main.go** 文件的入口点编写此代码。
 
@@ -1513,30 +1493,27 @@ $ go run main.go
 
 程序输出的示例：
 
-![ch6-1](img/ch6-1.png)  
+![ch6-1](img/ch6-1.png)
 
 ## 6.2 方法
 
-我们通过传递结构体对象在我们的结构体对象中定义方法。为了说明，我们创建 Circle 结构体对象，它具有以下方法：
+我们通过传递结构体对象在我们的结构体对象中定义方法。为了说明，我们创建 `Circle` 结构体对象，它具有以下方法：
 
-*   display()
-
-*   area()
-
-*   circumference()
-
-*   moveTo()
+* `display()`
+* `area()`
+* `circumference()`
+* `moveTo()`
 
 如何实现？
 
-创建一个名为 structmethod 的文件夹。
+创建一个名为 `structmethod` 的文件夹。
 
 ```
 $ mkdir structmethod
 $ cd structmethod
 ```
 
-下一步是创建一个名为 **main.go** 的文件。导入我们的包并定义 Circle 结构体对象。
+下一步是创建一个名为 **main.go** 的文件。导入我们的包并定义 `Circle` 结构体对象。
 
 ```
 package main
@@ -1553,7 +1530,7 @@ type Circle struct {
 }
 ```
 
-Circle 结构体有三个字段：x、y 和 r。
+`Circle` 结构体有三个字段：`x`、`y` 和 `r`。
 
 基本上，我们可以以创建函数相同的方式创建结构体方法。我们在方法名称前面传递我们的结构体对象。以下是我们结构体方法的实现。
 
@@ -1599,7 +1576,7 @@ $ go run main.go
 
 程序输出的示例：
 
-![ch6-2](img/ch6-2.png)  
+![ch6-2](img/ch6-2.png)
 
 # 7. 字符串操作
 
@@ -1610,22 +1587,24 @@ $ go run main.go
 我们已经将字符串用作数据类型。以下是处理字符串数据并在终端上打印的示例代码。
 
 ```
-    // simple string demo
-    var str string
-    str = "Hello world"
-    fmt.Println(str)
+// simple string demo
+var str string
+str = "Hello world"
+fmt.Println(str)
 ```
 
-在本节中，我们尝试操作字符串数据。我们将探索 strconv，[`golang.org/pkg/strconv/`](http://golang.org/pkg/strconv/) 和 strings，[`golang.org/pkg/strings/`](http://golang.org/pkg/strings/) 包的几个函数。
 
-首先，我们通过创建一个名为 stringdemo 的文件夹来构建一个新项目。
+
+在本节中，我们尝试操作字符串数据。我们将探索 `strconv`，[`golang.org/pkg/strconv/`](http://golang.org/pkg/strconv/) 和 `strings`，[`golang.org/pkg/strings/`](http://golang.org/pkg/strings/) 包的几个函数。
+
+首先，我们通过创建一个名为 `stringdemo` 的文件夹来构建一个新项目。
 
 ```
 $ mkdir stringdemo
 $ cd stringdemo
 ```
 
-创建一个名为 **main.go** 的文件。导入 fmt、strcov 和 strings 包。
+创建一个名为 `main.go` 的文件。导入 `fmt`、`strcov` 和 `strings` 包。
 
 ```
 package main
@@ -1641,7 +1620,7 @@ import (
 
 ## 7.2 拼接字符串
 
-如果你有一组字符串，你可以将其拼接成一个字符串。你可以使用 + 运算符和 fmt.Sprintf() 函数。以下是示例代码
+如果你有一组字符串，你可以将其拼接成一个字符串。你可以使用 `+` 运算符和 `fmt.Sprintf()` 函数。以下是示例代码
 
 ```
     str1 := "hello"
@@ -1655,11 +1634,9 @@ import (
 
 ## 7.3 字符串转数字
 
-有时你想执行数学运算但输入数据是字符串类型。要将字符串类型转换为数字，你可以使用 strcov.ParseInt() 将字符串转为整型，以及 strcov.ParseFloat() 将字符串转为浮点型。
+有时你想执行数学运算但输入数据是字符串类型。要将字符串类型转换为数字，你可以使用 `strcov.ParseInt()` 将字符串转为整型，以及 `strcov.ParseFloat()` 将字符串转为浮点型。
 
-以下是实现字符串到数字转换的示例代码。  
-
-
+以下是实现字符串到数字转换的示例代码。
 
 ```go
     fmt.Println("----demo String To Numeric----")
@@ -1874,7 +1851,7 @@ $ go run main.go
 
 ## 8.1 Getting Started
 
-我们可以使用 `io` 包来处理 I/O 文件，`http://golang.org/pkg/io/` 。
+我们可以使用 `io` 包来处理 I/O 文件，`http://golang.org/pkg/io/`。
 
 为了说明，我们可以尝试读写文本文件。首先，我们创建一个名为 `fileio` 的文件夹。
 
@@ -1993,10 +1970,6 @@ $ cd errorhandle
 
 然后，创建一个文件 `main.go`，并写入此代码。
 
-
-
-
-
 ```go
 package main
 
@@ -2037,6 +2010,8 @@ $ go run main.go
 Go 提供了 `defer` 语法以确保我们的程序完整运行。`panic()` 可用于在我们的程序中引发错误。
 
 为了说明，我们在之前的项目中 `main.go` 上添加 `demoPanic()` 函数。然后，我们在主入口调用 `demoPanic()`。
+
+
 
 ```go
 package main
@@ -2345,10 +2320,6 @@ func Multiply(a,b int) int {
 
 现在我们将从主入口调用 `simplemath.go` 中的三个函数。创建一个新文件，名为 `main.go`，并编写此代码。
 
-
-
-
-
 ```go
 package main
 
@@ -2514,7 +2485,9 @@ $ cd goroutines
 
 创建一个文件 `maing.go`，并写入此代码。
 
-```
+
+
+```go
 package main
 
 import (
@@ -2576,7 +2549,7 @@ $ go run main.go
 
 示例输出可在下图看到。
 
-![ch11-1](img/ch11-1.png)  
+![ch11-1](img/ch11-1.png)
 
 你可以看到程序由于所有代码都在后台运行而随机执行。
 
@@ -2584,7 +2557,7 @@ $ go run main.go
 
 我们可以在 Go 中同步后台代码。其中一个解决方案是使用 `sync` 库。本节我们使用 `sync.Mutex.Lock` 和 `sync.Mutex.Unlock` 进行同步。
 
-为说明起见，创建一个名为 syncgoroutines 的新项目。
+为说明起见，创建一个名为 `syncgoroutines` 的新项目。
 
 ```
 $ mkdir syncgoroutines
@@ -2593,7 +2566,7 @@ $ cd syncgoroutines
 
 创建一个文件 `main.go`，并写入此代码。
 
-```
+```go
 package main
 
 import (
@@ -2674,13 +2647,13 @@ $ go run main.go
 
 示例输出可在下图看到。
 
-![ch11-2](img/ch11-2.png)  
+![ch11-2](img/ch11-2.png)
 
 ## 11.4 通道
 
 我们可以在 Go 中创建通道，然后使用这些通道在 Goroutines 之间通信。为说明起见，我们创建一个保存数字数据的通道。要向通道插入数据，我们可以使用 `channel <-`。否则，我们可以使用 `<- channel` 从通道获取数据。
 
-为测试，创建一个名为 simplechannel 的新项目。  
+为测试，创建一个名为 `simplechannel` 的新项目。
 
 ```
 $ mkdir simplechannel
@@ -2689,7 +2662,7 @@ $ cd simplechannel
 
 创建一个文件 `main.go`，并写入此代码。
 
-```
+```go
 package main
 
 import (
@@ -2727,7 +2700,7 @@ $ go run main.go
 
 示例输出可在下图看到。
 
-![ch11-3](img/ch11-3.png)  
+![ch11-3](img/ch11-3.png)
 
 # 12. 编码
 
@@ -2735,21 +2708,13 @@ $ go run main.go
 
 ## 12.1 入门
 
-在本章中，我们探索编码包，[`golang.org/pkg/encoding/`](http://golang.org/pkg/encoding/) 。以下是我们演示如何使用编码包的列表：
+在本章中，我们探索编码包，[`golang.org/pkg/encoding/`](http://golang.org/pkg/encoding/)。以下是我们演示如何使用编码包的列表：
 
 *   Base64
-
 *   十六进制
-
 *   JSON
-
 *   XML
-
 *   CSV
-
-
-
-
 
 For testing, you can create a new project, called `encoding`.
 
@@ -2760,7 +2725,7 @@ $ cd encoding
 
 Create a file, `main.go`. Firstly, we import our Go packages for the demo. Write this code.
 
-```
+```go
 package main
 
 import (
@@ -2780,7 +2745,7 @@ The first demo is to work with base64 encoding. We can use `base64` package, [`g
 
 For testing, we encode a string message to base64. Then, we decode base64 message to original message. Create a function, called `demoBase64()`. Call this function to main entry.
 
-```
+```go
 func main(){
 
     message := "hello,go (*w3hu%#"
@@ -2825,7 +2790,7 @@ The second demo is to encode and decode string to Hexademical. We can use `hex` 
 
 Create a function, called `demoHex()`. The following is implementation of encoding/decoding Hexadecimal.
 
-```
+```go
 func main(){
 
     message := "hello,go (*w3hu%#"
@@ -2862,7 +2827,7 @@ The third demo is to construct and parse JSON data. In Go, we can use `json` pac
 
 Now you can create a function, called `demoJson()`, and write this code.
 
-```
+```go
 func main(){
 
     demoJson()
@@ -2910,6 +2875,8 @@ A sample output can be seen in Figure below.
 The fourth demo is to read and write XML data. We xml package, [`golang.org/pkg/encoding/xml/`](http://golang.org/pkg/encoding/xml/). In this demo, we construct XML from a struct which has nested struct. In XML data nested struct can be converted to XML attribute and value.
 
 Now you can create a function, called `demoXml()`, and write this code.
+
+
 
 ```
 func main(){
@@ -2985,10 +2952,6 @@ Employee 7;employee7@email.com;DE
 Create a function, `demoCsv()`. This function will read CSV file, `demo.csv`, and convert these data to array of struct. After that, we write array of struct to a new CSV file, called `employee.csv`.
 
 The following is implementation of reading/writing CSV file.
-
-
-
-
 
 ```go
 func main(){
@@ -3086,7 +3049,9 @@ func demoCsv(){
 在本章中，我们将探索如何使用 Go 实现哈希。本书中使用的哈希算法如下：
 
 * MD5
+
 * SHA256
+
 * 带密钥的哈希（`HMAC`）
 
 下一个主题是使用 Go 实现密码学。我们将探索对称和非对称密码学。
@@ -3236,8 +3201,6 @@ $ go run main.go
 有许多算法可以实现对称密码学。在本节中，我们使用 AES 算法。高级加密标准（`AES`）是由美国国家标准与技术研究院（`NIST`）于 2001 年制定的电子数据加密规范，[`en.wikipedia.org/wiki/Advanced_Encryption_Standard`](http://en.wikipedia.org/wiki/Advanced_Encryption_Standard)。
 
 为了说明，我们创建两个函数 `encrypt_symmetric_crpyto()` 和 `decrypt_symmetric_crpyto()`。以下是 `encrypt_symmetric_crpyto()` 的实现。
-
-
 
 
 
@@ -3504,10 +3467,6 @@ func main(){
 
 你也可以打开 `private.rsa.key` 查看我们的 RSA 私钥值。
 
-
-
-
-
 ![ch12-5](img/ch12-5.png)
 
 # 14. 数据库编程
@@ -3594,6 +3553,8 @@ $ go run main.go
 
 ## 14.4 查询
 
+
+
 在本节中，我们尝试向表中插入数据。以下是我们在 MySQL 上的表结构。
 
 ![ch14-3](img/ch14-3.png)
@@ -3655,7 +3616,7 @@ func insertData(){
 
 ## 15.2 Hello World
 
-入门时，我们创建一个简单的应用程序来获取本地计算机中的 IP 地址列表。我们可以使用 `net` 包并调用 `Interfaces()` 来获取本地计算机中网络接口的列表。每个网络接口都提供有关 IP 地址的信息。
+入门时，我们创建一个简单的应用程序来获取本地计算机中的 IP 地址列表。我们可以使用 `net` 包并调用 `net.Interfaces()` 来获取本地计算机中网络接口的列表。每个网络接口都提供有关 IP 地址的信息。
 
 在本节中，我们尝试获取本地 IP 地址。首先，我们可以创建一个名为 `netdemo` 的新项目。
 
@@ -3779,7 +3740,7 @@ func handleClient(conn net.Conn) {
 
 ### 15.3.2 客户端 Socket
 
-客户端 socket 是连接到服务器然后向/从服务器发送/接收数据的客户端应用程序。我们应该知道目标服务器的 IP 地址和端口。我们可以调用 `Dial()` 来连接到服务器。使用 `Write()` 发送数据。
+客户端 socket 是连接到服务器然后向/从服务器发送/接收数据的客户端应用程序。我们应该知道目标服务器的 IP 地址和端口。我们可以调用 `net.Dial()` 来连接到服务器。使用 `conn.Write()` 发送数据。
 
 在本节中，我们构建客户端应用。首先，我们可以创建一个名为 `netclient` 的新项目。
 
@@ -3835,4 +3796,3 @@ func main() {
 ## 联系方式
 
 如果您对本书有任何问题，请通过 `aguskur@hotmail.com` 联系我。我的博客：`http://blog.aguskurniawan.net`
-

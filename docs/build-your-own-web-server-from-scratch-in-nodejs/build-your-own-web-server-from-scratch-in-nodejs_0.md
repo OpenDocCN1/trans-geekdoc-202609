@@ -1,80 +1,63 @@
+
 # Node.JS 从零构建 Web 服务器指南
 
-
-
-
-
 ## James Smith
+
 build-your-own.org
 
 通过编写你自己的 `Web Server`，学习网络编程、HTTP 协议及其应用。
 
 **James Smith**
+
 build-your-own.org
 
-
-
-
-
-
-
-
 ## 7.4 讨论：缓冲区写入
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # 引言
 
 ## 1.1 为什么需要引言
 
 ### 为什么需要引言
+
 从零开始构建一个 Web 服务器是非常有感的，但这不应该是你的唯一目标。有很多博客文章向你展示一个“玩具级服务器”，但你如何超越玩具阶段呢？
 
 ### 网络编程
+
 该项目在不使用任何依赖的情况下使用 Node.js，但许多概念是`语言无关`的，因此对任何语言的学习者来说都非常有价值。
 
 ### 协议与通信
+
 第一步是 `socket` 编程。传输的数据必须符合 `HTTP` 标准。
 
 ### HTTP 详情
+
 你已经了解 `HTTP`，例如 `GET` 和 `POST` 方法以及相关状态码。
 
-## 1.2 构建你的底层 (Build Your Scratch)
+## 1.2 构建你的底层
 
 ### 构建你的底层
+
 大多数人每天使用 `HTTP`，但很少有人理解其内部原理。这本书 `Build Your Own` 深入探讨了 `socket` 的细节。
 
 ### 网络编程
+
 该项目在不使用任何依赖的情况下使用 Node.js，但许多概念是`语言无关`的，因此对任何语言的学习者来说都非常有价值。
 
 ## 1.3 本书
 
 ### 本书
+
 从零开始构建一个 Web 服务器是非常有感的，但这不应该是你的唯一目标。有很多博客文章向你展示一个“玩具级服务器”，但你如何超越玩具阶段呢？
 
 ### 以项目为中心
+
 让你的 Web 服务器运行起来是非常有感的，但这不应该是你的唯一目标。有很多博客文章向你展示一个“玩具级服务器”，但你如何超越玩具阶段呢？
 
 ## 1.4 服务器
 
 ### 服务器
+
 该项目在不使用任何依赖的情况下使用 Node.js，但许多概念是`语言无关`的，因此对任何语言的学习者来说都非常有价值。
-
-
-
 
 正如你可能已经知到的，HTTP 协议位于 TCP 协议之上。TCP 本身是如何详细工作的并不是我们关注的；我们关于 TCP 需要了解的是，它是一个用于传输原始字节的双向通道——它是 HTTP 或 SSH 等其他应用协议的载体。
 
@@ -167,8 +150,9 @@ Payload 和头部之间用一个空行隔开。`GET` 请求没有 payload，所�
 
 自 HTTP/1.1 之后还有进一步的发展。与 SPDY 相关的 `HTTP/2` 是 HTTP 的下一次迭代。除了压缩头部等增量式改进外，它还具有两个新能力：
 
-- *Server push*（服务器推送），即在客户端请求之前就向其发送资源。
-- 在单个 TCP 连接上进行多个请求的 *Multiplexing*（多路复用），这是解决*头部阻塞 (head-of-line blocking)* 的尝试。
+- `Server push`（服务器推送），即在客户端请求之前就向其发送资源。
+
+- 在单个 TCP 连接上进行多个请求的 `Multiplexing`（多路复用），这是解决*头部阻塞 (head-of-line blocking)* 的尝试。
 
 有了这些新特性，`HTTP/2` 不再是一个简单的请求-响应协议。这就是为什么我们从 HTTP/1.1 开始，因为它足够简单且易理解。
 
@@ -239,24 +223,14 @@ TCP 之下是 IP 层。每个 IP 数据包由三个部分组成：
 - 如果数据包丢失了怎么办？
 - 乱序包怎么办？
 
-
-
-
 `UDP` 与 `TCP` 处于同一层，但仍然像底层一样基于数据包。`UDP` 只是在 `IP` 数据包上添加了端口号。
 
-8
-
-2024-02-02
-
-03. 代码实现一个 TCP 服务器
-
-**TCP 字节流 vs UDP 数据包**
+### TCP 字节流 vs UDP 数据包
 
 关键区别：边界。
 
-• `UDP`: 从套接字的每次 `read` 对应于对端的一次 `write`。
-
-• `TCP`: 没有这种对应关系！数据是连续的字节流。
+- `UDP`: 从套接字的每次 `read` 对应于对端的一次 `write`。
+- `TCP`: 没有这种对应关系！数据是连续的字节流。
 
 `TCP` 根本没有保留边界的机制。
 
@@ -266,7 +240,7 @@ TCP 之下是 IP 层。每个 IP 数据包由三个部分组成：
 
 套接字编程中的第一个新手陷阱是“合并与拆分 TCP 数据包”，因为不存在所谓的“TCP 数据包”。需要通过在字节流中强制设定边界来解释 `TCP` 数据。
 
-**字节流 vs. 数据包：以 DNS 为例**
+### 字节流 vs. 数据包：以 DNS 为例
 
 为了帮助你理解字节流的影响，让我们以 `DNS` 协议（域名到 IP 地址的查找）为例。
 
@@ -282,28 +256,39 @@ TCP 之下是 IP 层。每个 IP 数据包由三个部分组成：
 
 | len1 | msg1 | len2 | msg2 | ... |
 
-[报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM5) @ [build-your-own.org](https://build-your-own.org)
-
-9
-
-2024-02-02
-
-03. 代码实现一个 TCP 服务器
-
-**TCP 从握手开始**
+### TCP 从握手开始
 
 要建立 `TCP` 连接，应该有一个和一个服务器（忽略同时发生的情况）。服务器在特定地址（IP + 端口）等待客户端，这一步被称为 `bind & listen`。然后客户端可以 `connect` 到该地址。`connect` 操作涉及三次握手（`SYN`、`SYN-ACK`、`ACK`），但这不是我们关注的，因为操作系统透明地完成了它。操作系统完成握手后，连接可以被服务器 `accepted`。
 
-**TCP 是双向且全双工的**
+### TCP 是双向且全双工的
 
 一旦建立，`TCP` 连接就可以用作双向字节流，每个方向有两个通道。许多协议如 `HTTP/1.1` 是这种请求-响应模式的，对端要么在发送请求/响应，要么在接收响应/请求。但 `TCP` 不限于此。
 
-（注：原文中后续大量重复的段落已去重，以符合文档专业性）
+## 3.2 编写 TCP 服务器
 
+### 第 1 步：创建服务器
 
+Node.js 提供了 `net` 模块用于 TCP 编程。我们使用 `net.createServer()` 创建一个服务器。
 
+```javascript
+import * as net from "net";
 
-'connection' 参数被称为一个 `event`（事件），你可以在其上注册回调函数。监听套接字（socket）上还有其他事件。例如，有一个 'error' 事件，当发生错误时，它会被触发。
+let server = net.createServer();
+```
+
+### 第 2 步：监听连接
+
+服务器需要绑定到地址并开始监听。
+
+```javascript
+server.listen(3000, () => {
+  console.log('server listening on port 3000');
+});
+```
+
+### 第 3 步：处理连接事件
+
+`'connection'` 参数被称为一个 `event`（事件），你可以在其上注册回调函数。监听套接字（socket）上还有其他事件。例如，有一个 `'error'` 事件，当发生错误时，它会被触发。
 
 ```javascript
 server.on('error', (err: Error) => { throw err; });
@@ -311,11 +296,11 @@ server.on('error', (err: Error) => { throw err; });
 
 在这里，我们简单地抛出异常并终止程序。你可以通过在同一个地址和端口上运行 2 个服务器来测试这一点，第二个服务器将会失败。
 
-由于这本书不是一份手册，我们不会在此处列出所有内容。请阅读 [Node.js 文档-](https://nodejs.org/api/net.html#class-netserver)[1](https://nodejs.org/api/net.html#class-netserver)来查找其他可能有用的事件。
+由于这本书不是一份手册，我们不会在此处列出所有内容。请阅读 [Node.js 文档](https://nodejs.org/api/net.html#class-netserver) 来查找其他可能有用的事件。
 
-## 第 4 步：读取与写入
+### 第 4 步：读取与写入
 
-从连接接收的数据也通过回调函数传递。从套接字读取数据的相关事件是 'data' 事件和 'end' 事件。每当数据从对方到达时，'data' 事件就会被触发；当对方结束传输时，'end' 事件就会被触发。
+从连接接收的数据也通过回调函数传递。从套接字读取数据的相关事件是 `'data'` 事件和 `'end'` 事件。每当数据从对方到达时，`'data'` 事件就会被触发；当对方结束传输时，`'end'` 事件就会被触发。
 
 ```javascript
 socket.on('end', () => {
@@ -335,13 +320,85 @@ socket.on('data', (data: Buffer) => {
 
 `socket.end()` 方法结束传输并关闭套接字。在这里，当数据包含字母“q”时，我们调用 `socket.end()`，这样我们可以轻松地测试这种场景。
 
-[[1](https://nodejs.org/api/net.html#class-netserver)](https://nodejs.org/api/net.html#class-netserver)
+```javascript
+socket.on('data', (data: Buffer) => {
+  console.log('data:', data);
+  socket.write(data); // 回显数据。
+  // 如果数据包含 'q' 则主动关闭连接
+  if (data.includes('q')) {
+    console.log('closing.');
+    socket.end();
+    // 这将发送 FIN 并关闭连接。
+  }
+});
+```
+
+当传输从任何一方结束时，套接字会被运行时自动关闭。`net.Socket` 上还有一个 `'error'` 事件，用于报告 IO 错误。该事件也会导致运行时关闭套接字。
+
+### 第 6 步：测试
+
+这是我们回声服务器的完整代码。
+
+```javascript
+import * as net from "net";
+
+function newConn(socket: net.Socket): void {
+  console.log('new connection', socket.remoteAddress, socket.remotePort);
+  socket.on('end', () => {
+    // 收到 FIN。连接将自动关闭。
+    console.log('EOF.');
+  });
+  socket.on('data', (data: Buffer) => {
+    console.log('data:', data);
+    socket.write(data); // 回显数据。
+    // 如果数据包含 'q' 则主动关闭连接
+    if (data.includes('q')) {
+      console.log('closing.');
+      socket.end();
+      // 这将发送 FIN 并关闭连接。
+    }
+  });
+}
+
+let server = net.createServer();
+server.on('error', (err: Error) => { throw err; });
+server.on('connection', newConn);
+server.listen(3000, () => {
+  console.log('server listening on port 3000');
+});
+```
+
+当传输从任何一方结束时，套接字会被运行时自动关闭。`net.Socket` 上还有一个 `'error'` 事件用于报告 IO 错误。该事件也会导致运行时关闭套接字。
+
+
+
+```javascript
+socket.on('end', () => {
+  // 收到 FIN。连接将自动关闭。
+  console.log('EOF.');
+});
+
+socket.on('data', (data: Buffer) => {
+  console.log('data:', data);
+  socket.write(data); // 回显数据。
+});
+```
+
+`socket.write()` 方法将数据发回对方。
+
+### 第 5 步：关闭连接
+
+`socket.end()` 方法结束传输并关闭套接字。在这里，当数据包含字母“q”时，我们调用 `socket.end()`，这样我们可以轻松地测试这种场景。
+
+[1](https://nodejs.org/api/net.html#class-netserver)
 
 [报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
 
 13
+
 2024-02-02
-03. 代码实现一个 TCP 服务器
+
+## 03. 代码实现一个 TCP 服务器
 
 ```javascript
 socket.on('data', (data: Buffer) => {
@@ -356,7 +413,7 @@ socket.on('data', (data: Buffer) => {
 });
 ```
 
-当传输从任何一方结束时，套接字会被运行时自动关闭。`net.Socket` 上还有一个 'error' 事件，用于报告 IO 错误。该事件也会导致运行时关闭套接字。
+当传输从任何一方结束时，套接字会被运行时自动关闭。`net.Socket` 上还有一个 `'error'` 事件，用于报告 IO 错误。该事件也会导致运行时关闭套接字。
 
 ### 第 6 步：测试
 
@@ -388,100 +445,15 @@ server.on('error', (err: Error) => { throw err; });
 server.on('connection', newConn);
 ```
 
-当传输从任何一方结束时，套接字会被运行时自动关闭。`net.Socket` 上还有一个 'error' 事件用于报告 IO 错误。该事件也会导致运行时关闭套接字。
-
-[/content]
-
-*(注：由于提供的待翻译文本后半部分存在大量重复和乱码化片段（如 Step 4-Step 6 的重复内容），根据“千万不要重复输出原文”的原则，上述译文已针对逻辑完整且唯一的部分进行了翻译。以下是针对原始文本后半部分的完整翻译：)*
-
-[content]
-
-## 第 4 步：读取与写入
-
-从连接接收的数据也通过回调函数传递。从套接字读取数据的相关事件是 'data' 事件和 'end' 事件。每当数据从对方到达时，'data' 事件就会被触发；当对方结束传输时，'end' 事件就会被触发。
-
-```javascript
-socket.on('end', () => {
-  // 收到 FIN。连接将自动关闭。
-  console.log('EOF.');
-});
-
-socket.on('data', (data: Buffer) => {
-  console.log('data:', data);
-  socket.write(data); // 回显数据。
-});
-```
-
-`socket.write()` 方法将数据发回对方。
-
-### 第 5 步：关闭连接
-
-`socket.end()` 方法结束传输并关闭套接字。在这里，当数据包含字母“q”时，我们调用 `socket.end()`，这样我们可以轻松地测试这种场景。
-
-[[1](https://nodejs.org/api/net.html#class-netserver)](https://nodejs.org/api/net.html#class-netserver)
-
-[报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
-
-13
-2024-02-02
-03. 代码实现一个 TCP 服务器
-
-```javascript
-socket.on('data', (data: Buffer) => {
-  console.log('data:', data);
-  socket.write(data); // 回显数据。
-  // 如果数据包含 'q' 则主动关闭连接
-  if (data.includes('q')) {
-    console.log('closing.');
-    socket.end();
-    // 这将发送 FIN 并关闭连接。
-  }
-});
-```
-
-当传输从任何一方结束时，套接字会被运行时自动关闭。`net.Socket` 上还有一个 'error' 事件，用于报告 IO 错误。该事件也会导致运行时关闭套接字。
-
-### 第 6 步：测试
-
-这是我们回声服务器的完整代码。
-
-```javascript
-import * as net from "net";
-
-function newConn(socket: net.Socket): void {
-  console.log('new connection', socket.remoteAddress, socket.remotePort);
-  socket.on('end', () => {
-    // 收到 FIN。连接将自动关闭。
-    console.log('EOF.');
-  });
-  socket.on('data', (data: Buffer) => {
-    console.log('data:', data);
-    socket.write(data); // 回显数据。
-    // 如果数据包含 'q' 则主动关闭连接
-    if (data.includes('q')) {
-      console.log('closing.');
-      socket.end();
-      // 这将发送 FIN 并关闭连接。
-    }
-  });
-}
-
-let server = net.createServer();
-server.on('error', (err: Error) => { throw err; });
-server.on('connection', newConn);
-```
-
-当传输从任何一方结束时，套接字会被运行时自动关闭。`net.Socket` 上还有一个 'error' 事件用于报告 IO 错误。该事件也会导致运行时关闭套接字。
+当传输从任何一方结束时，套接字会被运行时自动关闭。`net.Socket` 上还有一个 `'error'` 事件用于报告 IO 错误。该事件也会导致运行时关闭套接字。
 
 *(注：由于原文中从 Step 6 之后出现了大量重复的描述和乱码片段，译文已按要求去除了重复部分。)*
 
-
-
 Promise 可以被视为管理回调的另一种方式。它们也被描述为 `asynchronous`（异步），意味着结果是通过回调传递的。这些 API 不会阻塞事件循环，因为 JS 代码不会等待结果；相反，JS 代码会返回运行时，当结果就绪时，运行时会调用回调来继续你的程序。
 
-与之相反的是 `synchronous`（同步）API，它会阻塞调用的操作系统线程以等待结果的产生。例如，让我们来看 `fs` 模块的文档，文件 API 在[所有 3 种](https://nodejs.org/api/fs.html)[](#index_split_000.html#p22) 中可用。
+与之相反的是 `synchronous`（同步）API，它会阻塞调用的操作系统线程以等待结果的产生。例如，让我们来看 `fs` 模块的文档，文件 API 在[所有 3 种](https://nodejs.org/api/fs.html)中可用。
 
-```
+```javascript
 // promise
 filehandle.read([options]);
 
@@ -498,11 +470,12 @@ fs.readSync(fd, buffer[, options]);
 
 IO 不仅仅是磁盘文件和网络。在 GUI 系统中，来自鼠标和键盘的用户输入也是 IO。而且事件循环并不是 Node.js 运行时特有的；Web 浏览器所有其他 GUI 应用程序底层也使用事件循环。你可以将 GUI 编程经验转移到网络编程，反之亦然。
 
-[[3]https://nodejs.org/api/fs.html](https://nodejs.org/api/fs.html)
+[3](https://nodejs.org/api/fs.html)
 
 [报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
 
 17
+
 2024-02-02
 
 ## 03. 代码一个 TCP 服务器
@@ -547,13 +520,14 @@ async function newConn(socket) {
 18
 
 ## 第 04 章
+
 ## Promise 与事件
 
 在本章中，我们将再次实现回显服务器，但将使用基于 Promise 的风格，这是本书其余部分的基础。这一决定将在后文解释。
 
 ## 4.1 async 和 await 简介
 
-让我们快速浏览 JS 中的 async/await 和 `Promise` 类型，以防你尚不熟悉它们。
+让我们快速浏览 JS 中的 `async`/`await` 和 `Promise` 类型，以防你尚不熟悉它们。
 
 ### 使用回调
 
@@ -608,8 +582,8 @@ function do_something_prmoise() {
 
 回调在 JS 中是不可避免的。在创建 promise 对象时，会将一个 `executor` 回调作为参数传递，以接收两个回调：
 
-- `resolve()`导致 `await` 语句返回一个值。
-- `reject()`导致 `await` 语句抛出一个异常。
+- `resolve()` 导致 `await` 语句返回一个值。
+- `reject()` 导致 `await` 语句抛出一个异常。
 
 当结果可用或操作失败时，你必须调用其中一个。这可能发生在执行器函数之外，因此你可能需要存储这些结果。
 
@@ -621,6 +595,7 @@ Promise 的术语：
 - **Pending**（进行中）：未就决。
 
 19
+
 2024-02-02
 
 ## 04. Promise 与事件
@@ -650,7 +625,7 @@ Promise 的术语：
 
 `net` 模块未提供基于 Promise 的 API，因此我们需要实现上一节中的假设 API。
 
-```javascript
+```typescript
 function soRead(conn: TCPConn): Promise<Buffer>;
 function soWrite(conn: TCPConn, data: Buffer): Promise<void>;
 ```
@@ -658,19 +633,16 @@ function soWrite(conn: TCPConn, data: Buffer): Promise<void>;
 [报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
 
 20
+
 2024-02-02
 
 ### 步骤 1：分析解决方案
 
 `soRead` 函数返回一个带有 socket 数据的 promise。它依赖 3 个事件。
 
-1. 'data' 事件完成 promise。
-2. 在读取 socket 时，我们还需要知道是否发生了 EOF。因此，'end' 事件也会完成 promise。指示 EOF 的常用方法是返回零长度的数据。
-
-
-
-
-**3. 还有一个 'error' 事件，当此事件发生时，我们想要拒绝该 promise，否则 promise 将永远挂起。**
+1. `'data'` 事件完成 promise。
+2. 在读取 socket 时，我们还需要知道是否发生了 EOF。因此，`'end'` 事件也会完成 promise。指示 EOF 的常用方法是返回零长度的数据。
+3. 还有一个 `'error'` 事件，当此事件发生时，我们想要拒绝该 promise，否则 promise 将永远挂起。
 
 为了通过这些事件解析或拒绝 promise，必须将 promise 存储在某个地方。
 
@@ -683,7 +655,7 @@ type TCPConn = {
   // JS socket 对象
   socket: net.Socket;
   // 当前读取操作 promise 的回调函数
-  reader: null|{
+  reader: null | {
     resolve: (value: Buffer) => void,
     reject: (reason: Error) => void,
   };
@@ -745,19 +717,21 @@ const server = net.createServer({
 
 与 `'data'` 事件不同，`'end'` 和 `'error'` 事件无法暂停，并且会在发生时立即触发。我们可以通过将它们存储在包装对象并在 `soRead` 中检查它们来处理。
 
+
+
 ```typescript
 // 一个基于 promise 的 TCP 套接 API。
 type TCPConn = {
   // JS socket 对象
   socket: net.Socket;
   // 来自 'error' 事件
-  err: null|Error;
+  err: null | Error;
   // 来自 'end' 事件
   ended: boolean;
   // 当前读取操作 promise 的回调函数
-  reader: null|{
-    resolve: (value: Buffer) => void,
-    reject: (reason: Error) => void,
+  reader: null | {
+    resolve: (value: Buffer) => void;
+    reject: (reason: Error) => void;
   };
 };
 
@@ -765,7 +739,10 @@ type TCPConn = {
 // 从 net.Socket 创建包装器
 function soInit(socket: net.Socket): TCPConn {
   const conn: TCPConn = {
-    socket: socket, err: null, ended: false, reader: null,
+    socket: socket,
+    err: null,
+    ended: false,
+    reader: null,
   };
   socket.on('data', (data: Buffer) => {
     // 省 ...
@@ -804,7 +781,7 @@ function soRead(conn: TCPConn): Promise<Buffer> {
       return;
     }
     // 保存 promise 回调
-    conn.reader = {resolve: resolve, reject: reject};
+    conn.reader = { resolve: resolve, reject: reject };
     // 恢复 'data' 事件以便稍后完成 promise。
     conn.socket.resume();
   });
@@ -853,7 +830,7 @@ async function newConn(socket: net.Socket): Promise<void> {
 }
 ```
 
-我们还将代码封装在 `try-catch` 块中，因为当 promise 被拒绝时`await` 语句会抛出异常。尽管在生产代码中你可能希望实际处理错误而不是使用通用的异常处理器。
+我们还将代码封装在 `try-catch` 块中，因为当 promise 被拒绝时 `await` 语句会抛出异常。尽管在生产代码中你可能希望实际处理错误而不是使用通用的异常处理器。
 
 ```typescript
 // 回声服务器
@@ -885,7 +862,7 @@ type TCPListener = {
 
 function soListen(...): TCPListener;
 
-function soAccept(listener: TCPListner): Promise<TCPConn>;
+function soAccept(listener: TCPListener): Promise<TCPConn>;
 ```
 
 ## 4.5 讨论：背压
@@ -898,10 +875,6 @@ function soAccept(listener: TCPListner): Promise<TCPConn>;
 
 **生产者受消费者限制**
 
-
-
-
-
 只要有异步通信，就有连接生产者和消费者的队列或缓冲区。在物理世界中，队列和缓冲区的大小是有边界的，无法存储无限的数据。异步通信的一个问题是，**当生产者生产速度大于消费者速度时会发生什么**？必须有一种机制来防止队列或缓冲区溢出。这种机制在网络应用中通常被称为 `backpressure`（背压）。
 
 ## TCP 中的背压：流量控制
@@ -909,8 +882,8 @@ function soAccept(listener: TCPListner): Promise<TCPConn>;
 TCP 中的背压被称为 `flow control`（流量控制）。
 
 - 消费者 TCP 栈将接收到的数据存储在接收缓冲区中，供应用程序消费。
-- 生产者 TCP 栈可以发送的数据量受生产者 TCP 栈知的 `window`（窗口）限制，当 `window` 满时，它将`pause`发送数据。
-- 消费者 TCP 栈管理 `window`；当应用程序从接收缓冲区中提取数据时，它会向前`move` `window` 并通知生产者 TCP 栈`resume`（恢复）发送。
+- 生产者 TCP 栈可以发送的数据量受生产者 TCP 栈知的 `window`（窗口）限制，当 `window` 满时，它将 `pause` 发送数据。
+- 消费者 TCP 栈管理 `window`；当应用程序从接收缓冲区中提取数据时，它会向前 `move` `window` 并通知生产者 TCP 栈 `resume`（恢复）发送。
 
 流量控制的效果：`TCP` 可以暂停和恢复传输，从而使消费者的接收缓冲区保持边界。
 
@@ -1000,7 +973,8 @@ TCP
 
 - 如果你坚持使用 `promises` 和 `async/await`，很难创建上述的竞态条件，因为事情是按顺序发生的。
 - 使用基于回调的代码，不仅更难理解代码执行的顺序，也更难控制顺序。简之，回调更难读，且编写时更容易出错。
- 使用 使用基于 `promise` 的风格时，背压是自然存在的。这类似于使用阻塞 IO 编码（这在 `Node.js` 中无法实现）。
+
+使用基于 `promise` 的风格时，背压是自然存在的。这类似于使用阻塞 IO 编码（这在 `Node.js` 中无法实现）。
 
 我们已经学习了 `socket` API 的基础。让我们进入下一个主题：协议。
 
@@ -1073,6 +1047,7 @@ while (need_more_data()) {
 ```
 
 每当通过合并追加新数据时，旧数据都会被复制。为了分摊拷贝成本，使用了*动态数组*：
+
 - C++: `std::vector` 和 `std::string`。
 - Python: `bytearray`。
 - Go: `slice`。
@@ -1081,12 +1056,11 @@ while (need_more_data()) {
 
 `buffer` 必须比需要的数据大，以便利用额外容量分摊拷贝。`DynBuf` 类型存储实际的数据长度。
 
-```
+```typescript
 // 一个动态大小的缓冲区
-
 type DynBuf = {
-  data: Buffer,
-  length: number,
+  data: Buffer;
+  length: number;
 };
 ```
 
@@ -1094,7 +1068,6 @@ type DynBuf = {
 
 ```typescript
 // append data to DynBuf
-
 function bufPush(buf: DynBuf, data: Buffer): void {
   const newLen = buf.length + data.length;
   if (buf.data.length < newLen) {
@@ -1109,7 +1082,6 @@ function bufPush(buf: DynBuf, data: Buffer): void {
 
 ```typescript
 // append data to DynBuf
-
 function bufPush(buf: DynBuf, data: Buffer): void {
   const newLen = buf.length + data.length;
   if (buf.data.length < newLen) {
@@ -1117,10 +1089,6 @@ function bufPush(buf: DynBuf, data: Buffer): void {
   }
 }
 ```
-
-
-
-
 
 [报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
 
@@ -1153,13 +1121,15 @@ buf.length = newLen;
 
 ### 步骤 1：服务器循环
 
-从高层来说来说，服务器应该是一个循环。
+从高层来说，服务器应该是一个循环。
 
 1. 从传入的字节流中解析并移除一个完整的消息。
    - 向缓冲区中追加一些数据。
    - 如果消息不完整，则继续循环。
 2. 处理消息。
 3. 发送响应。
+
+
 
 ```javascript
 async function serveClient(socket: net.Socket): Promise<void> {
@@ -1264,10 +1234,6 @@ while (true) {
 
 考虑一个典型的现代网页，……（文本根据提供的片段继续进行技术解构）。
 
-
-
-
-
 ## 5.6 结论：网络编程基础
 
 到目前为止我们学到的总结：
@@ -1281,6 +1247,7 @@ while (true) {
 [报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
 
 # 第 06 章
+
 ## HTTP 语义与语法
 
 HTTP 非常具有人类可读性，这意味着你可以通过查看示例而不是规范来构建服务器。然而，这种方法会导致产生 Bug 的“玩具代码”，而且你并学不到什么东西。因此，你需要查阅规范——一系列 `RFC` 文档。
@@ -1294,10 +1261,11 @@ HTTP 非常具有人类可读性，这意味着你可以通过查看示例而不
     - `URI`。
     - 头部字段（Header fields）列表，一组键值对。
     - 负载体（Payload body），紧跟请求头之后。特殊情况：`GET` 和 `HEAD` 没有负载。
+
 - 一个 HTTP 响应包含：
     - 状态码（Status code），主要用于指示请求是否成功。
     - 头部字段列表。
-    - 可的负载体。
+    - 可选的负载体。
 
 这些内容从 `HTTP/1.0` 到 `HTTP/3` 大多数是相同的。
 
@@ -1349,6 +1317,7 @@ HTTP 语义大多关于头部字段的解释，这在 [RFC](https://www.rfc-edit
 ```
 
 它被解析为 3 块：
+
 - `4\r\nHTTP\r\n`
 - `5\r\n`
 - `0\r\n`
@@ -1358,6 +1327,7 @@ HTTP 语义大多关于头部字段的解释，这在 [RFC](https://www.rfc-edit
 ### 理想情况
 
 总结来说，`HTTP` 允许：
+
 1. 存在 `Transfer-Encoding: chunked`。
 2. `Content-Length: number`有效。
 3. 如果两者都不存在，使用连接剩余部分。
@@ -1385,7 +1355,7 @@ start-line
 = request-line / status-line
 ```
 
-这表示：HTTP 消息可以是请求消息或响应消息。消息以请求行或状态行开始，随后是多个头部字段，然后是空行，最后是可选的负载体。行与 `CRLF` 分隔，`CRLF` 是 ASCII 字符串 `\r\n`。BNF 语言比英语更简洁且歧歧义。
+这表示：HTTP 消息可以是请求消息或响应消息。消息以请求行或状态行开始，随后是多个头部字段，然后是空行，最后是可选的负载体。行与 `CRLF` 分隔，`CRLF` 是 ASCII 字符串 `\r\n`。BNF 语言比英语更简洁且歧义更少。
 
 ### 头部字段
 
@@ -1423,12 +1393,7 @@ field-content
 [ 1*( SP / HTAB / field-vchar ) field-vchar ]
 ```
 
-
-
-
-
 `field-vchar`
-
 = `VCHAR` / `obs-text`
 
 `obs-text`= `%x80-FF`
@@ -1439,22 +1404,13 @@ field-content
 
 [报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
 
-42
-2024-02-02
-
-# 06. HTTP 语义与语法
-
-某些头部字段有额外的解释规则，例如逗号分隔的值或引用字符串。目前，我们只需要让它们保持原样，直到我们需要用到它们为止。
-
-HTTP 规范非常庞，本章只涵盖了实现 HTTP 服务器最重要的部分，我们将在下一章中进行。
-
 ## 6.6 常见头部字段
 
 许多头部字段要么被应用程序解释，要么被可选的 HTTP 特性使用，与我们的实现没有直接关系。你可以通过浏览器开发者工具中检查 HTTP 头部来熟悉它们。
 
 表 1：常见头部字段。（C 代表客户端，S 代表服务器。）
 
-| 头部字段 | 由谁提供 |  |
+| 头部字段 | 由谁提供 | 描述 |
 | :--- | :--- | :--- |
 | `Content-Length: 60` | C/S | 已讨论。 |
 | `Transfer-Encoding: chunked` | C/S | 已讨论。 |
@@ -1469,7 +1425,7 @@ HTTP 规范非常庞，本章只涵盖了实现 HTTP 服务器最重要的部分
 | `Set-Cookie: k=v` | S | HTTP cookie。 |
 | `Cookie: k=v` | C | HTTP cookie。 |
 | `Date` | C/S | 不怎么有用。 |
-| `Expect: 100-continue` | C | 一个一个冷门的特性。 |
+| `Expect: 100-continue` | C | 一个冷门的特性。 |
 | `Host: example.com` | C/S | URL 的主机名。 |
 | `Last-Modified` | S | 用于缓存验证和 304 Not Modified。 |
 | `If-Modified-Since` | C | 验证 `Last-Modified`。 |
@@ -1484,16 +1440,6 @@ HTTP 规范非常庞，本章只涵盖了实现 HTTP 服务器最重要的部分
 | `Trailer: Foo` | C/S | 冷门特性：负载之后的头部字段。 |
 | `User-Agent: Foo` | C | 客户端软件。 |
 | `Server: Foo` | S | 服务器软件。 |
-
-[报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
-
-43
-2024-02-02
-
-# 06. HTTP 语义与语法
-
-| 头部字段 | 由谁提供 | 描述 |
-| :--- | :--- | :--- |
 | `Upgrade: websocket` | C/S | 创建 WebSocket。 |
 | `Access-Control-*` | S | 跨资源共享 (CORS)。 |
 | `Origin` | C | CORS。 |
@@ -1502,38 +1448,43 @@ HTTP 规范非常庞，本章只涵盖了实现 HTTP 服务器最重要的部分
 ## 6.7 HTTP 方法
 
 ### 只读方法
+
 最重要的 HTTP 方法是 `GET` 和 `POST`。为什么我们需要不同的 HTTP 方法？除了 `POST` 可以携带负载而 `GET` 不能的事实外，将只读操作与写操作分开也是一个好主意。只读方法被称为“安全”方法：
+
 - `GET`。
-- `HEAD`，类似于 `GET` 但没有响应。
+- `HEAD`，类似于 `GET` 但没有响应体。
 - `OPTIONS`，很少使用，用于识别允许的方法和 CORS。
 
 ### 可缓存性
+
 将只读操作与写操作分开的一个原因是只读操作通常是可以缓存的。另一方面，缓存写操作没有意义，因为它们会改变状态。然而，缓存性的规则比不同的 HTTP 方法更复杂：
-- `GET` 和 `HEAD` 被认为是可缓存的。但 `OPTIONS 不是，因为它有特殊用途。
+
+- `GET` 和 `HEAD` 被认为是可缓存的。但 `OPTIONS` 不是，因为它有特殊用途。
 - 状态码也会影响缓存性。
 - `Cache-Control` 头部可以影响缓存性。
 - `POST` 通常不可缓存，除非使用了冷门头部（`Content-Location`）且存在某些缓存指令。
 - 不同实现有不同的缓存规则。[5](https://www.rfc-editor.org/rfc9110.html)
 
-[报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
-
-44
-2024-02-02
-
-# 06. HTTP 语义与语法
-
 ### CRUD 与资源
+
 你可能奇怪为什么会有这么多 HTTP 方法。难道 `GET` 和 `POST` 不够吗？事实上，许多应用程序正是这样做的。HTTP 添加更多方法是因为人们将 HTTP 想象成管理“资源”的协议。例如，论坛用户可以像操作资源一样操作帖子：
+
 - 通过 `PUT` 创建帖子。
 - 通过 `GET` 读取帖子。
+
+
+
 - 通过 `PATCH` 更新帖子。
 - 通过 `DELETE` 删除帖子。
+
 这 4 个动词通常被称为 **CRUD**。
 
 ### 等幂性
+
 但为什么要将 CRUD 作为 HTTP 方法呢？论坛用户可能会将帖子移动到另一个论坛，HTTP 是否应该包含一个 `MOVE` 方法？镜像任意英语动词并不是定义 HTTP 方法的好理由。更好的理由之一是定义操作的等幂性。
 
 等幂操作是可以重复产生相同效果的操作。这意味着你可以安全地重试操作直到它成功。例如，如果你通过 SSH `rm` 一个文件，在看到结果之前连接断开了，那么你不知道文件的状态，但你可以一直盲目地再次 `rm`（如果真的是同一个文件）：
+
 - 如果你失败了，可能会再次失败。
 - 如果之前的 `rm` 失败了但这次成功了，你的意图就实现了。
 - 如果之前的 `rm` 成功了，再次执行也没有害。
@@ -1541,20 +1492,21 @@ HTTP 规范非常庞，本章只涵盖了实现 HTTP 服务器最重要的部分
 HTTP 中的等幂操作可能导致不同的状态码，就像 `rm` 的返回码一样。
 
 HTTP 中的等幂性：
+
 - 只读方法（`GET` 和 `HEAD`）显然是等幂的。
 - `PUT` 和 `DELETE` 是等幂的，删除文件。
 - `POST` 和 `PATCH` 没有被定义为等幂。它们可能或不是。
 
 浏览器中的等幂性：
+
 - 如果你通过 `POST` 提交 `<form>` 然后刷新页面，浏览器会警告你不要提交可能非等幂的表单。
-- HTML 表单限制于 `GET` 和 `POST`[6](https://softwareengineering.stackexchange.com/a/211790).](#index_split_000.html#p50)。你需要 AJAX 来使用这些等幂方法。
+- HTML 表单限制于 `GET` 和 `POST`[6](https://softwareengineering.stackexchange.com/a/211790)。你需要 AJAX 来使用这些等幂方法。
 
 [6](https://softwareengineering.stackexchange.com/a/211790)
 
 [报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
 
-45
-2024-02-02
+---
 
 # 06. HTTP 语义与语法
 
@@ -1564,24 +1516,20 @@ HTTP 中的等幂性：
 
 通用 HTTP 方法总结。
 
-| 动词 | 安全 | 等幂 | 可缓存 | <form> | CRUD | 请求体 | 响应体 |
+| 动词 | 安全 | 等幂 | 可缓存 | `<form>` | CRUD | 请求体 | 响应体 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| GET | 是 | 是 | 是 | 是 | 读取 |  | 是 |
-| HEAD | 是 | 是 | 是 | 否 | 读取 |  | 否 |
+| GET | 是 | 是 | 是 | 是 | 读取 | | 是 |
+| HEAD | 是 | 是 | 是 | 否 | 读取 | | 否 |
 | POST | 否 | 否 | * | 是 | - | 是 | 是 |
 | PATCH | 否 | 否 | * | 否 | 更新 | 是 | 是 |
 | PUT | 否 | 是 | 否 | 否 | 创建 | 是 | 否 |
 | DELETE | 否 | 是 | 否 | 否 | 删除 | 可能 | 可能 |
 
-注：可缓存 POST 或 PATCH 是可能的，但很少支持。
+注：可缓存 `POST` 或 `PATCH` 是可能的，但很少支持。
 
-HTTP 的设计允许从 telnet 发送请求，因此你可以通过尝试来学习它。然而，文本协议也有缺点。
+HTTP 的设计允许从 `telnet` 发送请求，因此你可以通过尝试来学习它。然而，文本协议也有缺点。
 
 **文本通常具有歧义**
-
-
-
-
 
 一个缺点是，人类可读格式通常机器可读性较低，因为它们比所需的更灵活。考虑 HTTP 负载长度的确定方式：
 
@@ -1593,11 +1541,7 @@ HTTP 是一个简单的协议，简单意味着它易于观察。为它编写代
 
 [报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
 
-46
-
-2024-02-02
-
-06. HTTP 语义与语法
+---
 
 ## 文本更容易且容易出错
 
@@ -1618,9 +1562,9 @@ HTTP/2 是二进制的，并且比 HTTP/1.1 更复杂，但解析该协议仍然
 
 分隔符的一个问题是数据不能包含分隔符本身。未能强制执行此规则会导致某些注入攻击。
 
-如果恶意客户端可以欺骗有错误的服务器输出包含 `CRLF` 的头部字段值，且该头部字段是最后一个字段，那么负载体将从攻击者控制的字段值部分开始。这被称为 [“HTTP 响应响应[7]](https://en.wikipedia.org/wiki/HTTP_response_splitting)。
+如果恶意客户端可以欺骗有错误的服务器输出包含 `CRLF` 的头部字段值，且该头部字段是最后一个字段，那么负载体将从攻击者控制的字段值部分开始。这被称为 [“HTTP 响应拆分”[7]](https://en.wikipedia.org/wiki/HTTP_response_splitting)。
 
-适当的 HTTP 服务器/客户端必须禁止头部字段中的 `CRLF`，因为没有办法对其进行编码。然而，对于许多通用数据格式，情况并非如此。例如，JSON 使用 `{}[],: ` 来分隔元素，但 JSON 字符串可以包含任意字符，因此字符串被`quoted` 以避免与分隔符产生歧义。但引号本身也是分隔符，因此需要 `escape sequences` 来编码引号。
+适当的 HTTP 服务器/客户端必须禁止头部字段中的 `CRLF`，因为没有办法对其进行编码。然而，对于许多通用数据格式，情况并非如此。例如，JSON 使用 `{}[],: ` 来分隔元素，但 JSON 字符串可以包含任意字符，因此字符串被 `quoted` 以避免与分隔符产生歧义。但引号本身也是分隔符，因此需要 `escape sequences` 来编码引号。
 
 这就是为什么你需要一个 JSON 库来生成 JSON，而不是将字符串拼接在一起。HTTP 的定义没有 JSON 那么完善且更复杂，所以请注意规范。
 
@@ -1628,11 +1572,7 @@ HTTP/2 是二进制的，并且比 HTTP/1.1 更复杂，但解析该协议仍然
 
 [报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
 
-47
-
-2024-02-02
-
-06. HTTP 语义与语法
+---
 
 ## 二进制协议中的长度前缀数据
 
@@ -1641,21 +1581,19 @@ HTTP/2 是二进制的，并且比 HTTP/1.1 更复杂，但解析该协议仍然
 - 分块编码（chunked encoding）。尽管长度仍然被分隔。
 - HTTP/2 帧格式。没有任何分隔符。
 - [MessagePack[8]](https://github.com/msgpack/blob/master.md) 格式。
-- [JSON[8]](https://github.com/msgpack/blob/master.md) 序列化。 
+- [JSON[8]](https://github.com/msgpack/blob/master.md) 序列化。
 
 [报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
 
-48
+---
 
-2024-02-02
-
-07. 代码 HTTP 服务器
+# 07. 代码 HTTP 服务器
 
 **第 07 章：编码**
 
 代码被分为较小的步骤。我们的第一步是定义 HTTP 消息的结构。
 
-###  1 ：类型与结构
+### 步骤 1：类型与结构
 
 ```typescript
 type HTTPReq = {
@@ -1683,7 +1621,7 @@ async function serveClient(conn: TCPConn): Promise<void> {
   const buf: Buffer = Buffer.alloc(0);
   while (true) {
     // 尝试获取 HTTP 头部
-    const msg: null|HTTPReq = cutMessage(buf);
+    const msg: null | HTTPReq = cutMessage(buf);
     if (!msg) {
       // 需要更多数据
       const data = await soRead(conn);
@@ -1733,7 +1671,6 @@ async function newConn(socket: net.Socket): Promise<void> {
       try {
         await writeHTTPResp(conn, resp);
       } catch (exc) { /* 忽略 */ }
-      }
     }
   } finally {
     socket.destroy();
@@ -1745,16 +1682,14 @@ async function newConn(socket: net.Socket): Promise<void> {
 
 HTTP 头部以 `\r\n\r\n` 结束，这就是我们确定其长度的方式。
 
-
-
-
 在理论上，header 的大小没有限制，但在实践中是有限制的。因为我们需要在内存中解析并存储 header，而内存是有限的。
 
 ```javascript
 // 一个 HTTP header 的最大长度
 const kMaxHeaderLen = 1024 * 8;
 
-// 如果可能，从 buffer 头部解析并移除一个 header 函数 cutMessage(buf: DynBuf): null|HTTPReq {
+// 如果可能，从 buffer 头部解析并移除一个 header
+function cutMessage(buf: DynBuf): null | HTTPReq {
   // header 的结束由 '\r\n\r\n' 标记
   const idx = buf.data.subarray(0, buf.length).indexOf('\r\n\r\n');
   if (idx < 0) {
@@ -1778,7 +1713,7 @@ const kMaxHeaderLen = 1024 * 8;
 为了解析 HTTP header，由于我们在 buffer 中有了完整的 header，我们可以首先通过 CRLF 将数据分割若干行。然后我们可以逐个处理每一行。
 
 ```javascript
-// 解析 HTTP 请求头头
+// 解析 HTTP 请求头
 function parseHTTPReq(data: Buffer): HTTPReq {
   // 将数据拆分为行
   const lines: Buffer[] = splitLines(data);
@@ -1797,7 +1732,10 @@ function parseHTTPReq(data: Buffer): HTTPReq {
   // header 以空行结束
   console.assert(lines[lines.length - 1].length === 0);
   return {
-    method: method, uri: uri, version: version, headers: headers,
+    method: method,
+    uri: uri,
+    version: version,
+    headers: headers,
   };
 }
 ```
@@ -1824,7 +1762,7 @@ function readerFromReq(conn: TCPConn, buf: DynBuf, req: HTTPReq): BodyReader {
     }
   }
   const bodyAllowed = !(req.method === 'GET' || req.method === 'HEAD');
-  const chunked = fieldGet(req.headers, 'Transfer-Encoding')?.?.equals(Buffer.from('chunked')) || false;
+  const chunked = fieldGet(req.headers, 'Transfer-Encoding')?.equals(Buffer.from('chunked')) || false;
   if (!bodyAllowed && (bodyLen < 0 || chunked)) {
     throw new Error('body not allowed.');
   }
@@ -1843,11 +1781,16 @@ function readerFromReq(conn: TCPConn, buf: DynBuf, req: HTTPReq): BodyReader {
   }
 }
 ```
+
 *(注：由于提供的原文中代码块部分存在一些逻辑错乱或重复，翻译时已根据语意尽可能还原了注释，并保持了代码结构)*
 
 ### 步骤 6：请求处理
 
 现在我们可以根据 URI 处理请求。这里我们将展示示例响应。
+
+
+
+# 07. 代码实现一个基础的 HTTP 服务器
 
 ```javascript
 // 一个请求处理器
@@ -1895,7 +1838,7 @@ function readerFromMemory(data: Buffer): BodyReader {
 }
 ```
 
-### 步骤 7：发送响应
+## 步骤 7：发送响应
 
 处理请求后，我们可以发送响应头和响应体（如果有的话）。在本章中，我们将处理已知长度的负载体；分块编码留给后面的章节。我们只需要添加 `Content-Length` 字段。
 
@@ -1907,13 +1850,10 @@ async writeHTTPResp(conn: TCPConn, resp: HTTPRes): Promise<void> {
   }
   // 设置 "Content-Length" 字段
   console.assert(!fieldGet(resp.headers, 'Content-Length'));
-  resp.headers.push(Buffer.from(\`Content-Length: ${resp.body.length}\`));
+  resp.headers.push(Buffer.from(`Content-Length: ${resp.body.length}`));
   // 写入头
 }
 ```
-
-
-
 
 ```javascript
 await soWrite(conn, encodeHTTPResp(resp));
@@ -1938,10 +1878,7 @@ while (true) {
 
 [报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
 
-57
-2024-02-02
-
-# 07. 代码实现一个基础的 HTTP 服务器
+---
 
 ## 步骤 8：审查服务器循环
 
@@ -1977,14 +1914,11 @@ async function serveClient(conn: TCPConn): Promise<void> {
 
 ## 7.2 测试
 
-简单的测试用例是使用 `curl` 发起请求。服务器应该用“hello world”问候你。你也可以向 `'/echo` 路径 POST 数据，服务器会将数据回显给你。
+简单的测试用例是使用 `curl` 发起请求。服务器应该用“hello world”问候你。你也可以向 `/echo` 路径 POST 数据，服务器会将数据回显给你。
 
 [报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
 
-58
-2024-02-02
-
-07. 代码实现一个基础的 HTTP 服务器
+---
 
 ```bash
 curl -s --data-binary 'hello' http://127.0.0.1:1234/echo
@@ -2036,6 +1970,7 @@ await soWrite(conn, Buffer.from('\r\n'));
 在开发网络应用时：
 
 1. 通过合并数据来避免小写入。
+
 2. 禁用纳格算法。这通常是默认开启的。在 `Node.js` 中可以禁用：
 
 ```javascript
@@ -2052,10 +1987,7 @@ const server = net.createServer({
 
 [报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
 
-60
-2024-02-02
-
-07. 代码实现一个基础的 HTTP 服务器
+---
 
 ```typescript
 // 将数据追加到内部缓冲区
@@ -2083,12 +2015,11 @@ type BufferedWriter = {
 function createBufferedWriter(conn: TCPConn): BufferedWriter;
 ```
 
-这类似于 Go 语言中的 `bufio.Writer`。这种方案比在 socket 代码中添加缓冲更灵活，因为缓冲包装器也适用于其他形式的 IO。Go 标准库的设计具有定义良好的接口 [(io.Writer[1]](https://pkg.go.dev/io#Writer))](#index_split_000.html#p66)，使得缓冲写入器可以无缝替换非缓冲写入器。
-
-
-
+这类似于 Go 语言中的 `bufio.Writer`。这种方案比在 socket 代码中添加缓冲更灵活，因为缓冲包装器也适用于其他形式的 IO。Go 标准库的设计具有定义良好的接口 [`io.Writer`](https://pkg.go.dev/io#Writer)，使得缓冲写入器可以无缝替换非缓冲写入器。
 
 从历史上看，万维网（WWW）主要由带有超链接的静态网页组成，`HTTP` 最初也是为此设计的。随后出现了提供动态内容的 Web 应用，这正是本章将考虑的内容。
+
+# 08. 动态内容与流式传输
 
 ## 8.1 分块传输编码 (Chunked Transfer Encoding)
 
@@ -2100,19 +2031,19 @@ function createBufferedWriter(conn: TCPConn): BufferedWriter;
 
 ```
 chunked-body
-= \*chunk
+= *chunk
 last-chunk
 trailer-section
 CRLF
 chunk
-= chunk-size \[ chunk-ext \] CRLF
+= chunk-size [ chunk-ext ] CRLF
 chunk-data CRLF
 chunk-size
-= 1\*HEXDIG
+= 1*HEXDIG
 last-chunk
-= 1\*("0") \[ chunk-ext \] CRLF
+= 1*("0") [ chunk-ext ] CRLF
 chunk-data
-= 1\*OCTET ; a sequence of chunk-size octets
+= 1*OCTET ; a sequence of chunk-size octets
 ```
 
 添加一个示例作为参考：
@@ -2126,8 +2057,6 @@ chunk-data
 - 每个分块以一个十六进制数字开头并以 `CRLF` 结束；这是分块数据的长度。
 - 随后的分块数据也以 `CRLF` 结束；这个 `CRLF` 除了让协议具有人类可读性外没有作用。
 - 零长度的分块标记着 `HTTP` 体的结束。我们经常看到这种约定！
-
-## 0. 动态内容与流式传输
 
 ### 冷门的 HTTP 特性
 
@@ -2210,7 +2139,11 @@ async function produce_response() {
 
 ### 作为生产者的 JS 生成器
 
-JavaScript 生成器非常适合生产者-消费者模型。下面是一个生成器示例。
+
+
+# JavaScript 生成器非常适合生产者-消费者模型
+
+下面是一个生成器示例。
 
 ```typescript
 type BufferGenerator = AsyncGenerator<Buffer, void, void>;
@@ -2225,7 +2158,7 @@ async function *countSheep(): BufferGenerator {
 }
 ```
 
-### 从 JS 生成器读取
+## 从 JS 生成器读取
 
 为响应生成器添加一个新的 URI 处理器。`readerFromGenerator()` 函数将 JS 生成器转换为 `BodyReader`。
 
@@ -2262,15 +2195,11 @@ case '/sheep':
 
 分块编码主要用于响应而不是请求。网络浏览器总是知道上传的长度，除非客户端 JS 使用了实验性的 Streams API。
 
+使用 `ReadableStream` 来发送请求。为了支持此类客户端，让我们添加代码来读取分块（chunked）请求。
 
+[1](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream)
 
-
-
-使用 `ReadableStream`(https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream) 来`发送请求`(https://developer.mozilla.org/en-US/docs/Web/API/fetch#body)。为了支持此类客户端，让我们添加代码来读取分块（chunked）请求。
-
-[\[1](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream)
-
-[\[2](https://developer.mozilla.org/en-US/docs/Web/API/fetch#body)
+[2](https://developer.mozilla.org/en-US/docs/Web/API/fetch#body)
 
 [报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
 
@@ -2360,15 +2289,15 @@ async function* readChunks(conn: TCPConn, buf: DynBuf): BufferGenerator {
 
 分块请求可以使用 `curl http://127.0.0.1:1234` 进行测试。`curl` 将在不知道请求长度的情况下读取数据。
 
-## 8.5 讨论：使用数据包获调试
+## 8.5 讨论：使用数据包捕获调试
 
-一直在编写复杂的代码。了解如何调试代码是非常重要的。添加 `print` 语句是检查情况的一种快速方法，但对于网络应用程序，有更廉价的方法：数据包获工具如 `tcpdump`、`grep` 和 `wireshark`。
+一直在编写复杂的代码。了解如何调试代码是非常重要的。添加 `print` 语句是检查情况的一种快速方法，但对于网络应用程序，有更廉价的方法：数据包捕获工具如 `tcpdump`、`grep` 和 `wireshark`。
 
 ### 使用 `tcpdump` 捕获并检查数据
 
 示例：`tcpdump -X -i lo port 1234`
 
-- `-X` 标志让 `tcpdump` 进行十六转储。
+- `-X` 标志让 `tcpdump` 进行十六进制转储。
 - `-i lo` 标志限制网络接口。我们只关心到 `127.0.0.1:1234` 的连接。
 - `port 1234` 是过滤无关数据包的布尔表达式。
 
@@ -2419,14 +2348,11 @@ async function* readChunks(conn: TCPConn, buf: DynBuf): BufferGenerator {
 - 使用真实数据学习新协议。
 - 查看你自己的实现中哪些问题。
 
-8.6 讨论：WebSocket
+## 8.6 讨论：WebSocket
 
-**轮询更新**
+### 轮询更新
 
-某些 Web 应用需要从服务器接收实时更新。实现此功能最原始的方法是通过*轮询*。客户端 JS 定期发起 AJAX 请求以检查更新。这浪费了资源，且无法用于低延迟场景。
-
-
-
+某些 Web 应用需要从服务器接收实时更新。实现此功能最原始的方法是通过轮询。客户端 JS 定期发起 AJAX 请求以检查更新。这浪费了资源，且无法用于低延迟场景。
 
 轮询的实现可以不那么简单：服务器可以保持连接，仅在有新更新时才发送响应。如果我们进一步考虑，分块编码（chunked encoding）允许在单个响应中包含无限次更新。这被称为长轮询（long polling）。
 
@@ -2454,7 +2380,7 @@ server
 
 ### WebSocket 不是请求-响应
 
-`WebSocket` 的另一个贡献是双向和**全双工**（`full-duplex`）通信，这意味着客户端和服务器可以同时互相发送消息。技术上，你可以通过两个 HTTP 连接（一个用于推送，一个用于拉取）[模拟双向消息[3]](https://en.wikipedia.org/wiki/BOSH_(protocol\)) 而不使用 `WebSocket`。但 `WebSocket` 可以让客户端和服务器的操作都变得更简单。
+`WebSocket` 的另一个贡献是双向和全双工（`full-duplex`）通信，这意味着客户端和服务器可以同时互相发送消息。技术上，你可以通过两个 HTTP 连接（一个用于推送，一个用于拉取）模拟双向消息而不使用 `WebSocket`。但 `WebSocket` 可以让客户端和服务器的操作都变得更简单。
 
 ### 08. 动态内容与流
 
@@ -2558,9 +2484,13 @@ if (uri.startsWith('/files/')) {
 
 `r` 标志用于以只读模式打开文件。如果文件不存在或无法访问，`fs.open()` 将抛出异常。
 
+
+
+# 09. 文件 IO 与 资源管理
+
 ```javascript
 async function serveStaticFile(path: string): Promise<HTTPRes> {
-  let fp: null|FileHandle = null;
+  let fp: null | FileHandle = null;
   try {
     // 打开文件
     fp = await fs.open(path, 'r');
@@ -2575,7 +2505,7 @@ async function serveStaticFile(path: string): Promise<HTTPRes> {
 }
 ```
 
-### 步骤 2：stat() 文件
+## 步骤 2：stat() 文件
 
 `stat()` 方法用于从文件中检索元数据。它包含了文件类型（普通文件、目录）、大小和其他信息。
 
@@ -2590,15 +2520,15 @@ if (!stat.isFile()) {
 const size = stat.size;
 ```
 
-还有一个 `fs.stat(path)` 函数，它接受路径而不是句柄。它可以在不打开文件的情况下进行 stat。然而，在句柄上使用 `stat` 更好。因为路径可能会指向不同的文件，这属于`竞态条件`[1](https://en.wikipedia.org/wiki/Time-of-check_to_time-use)。先打开文件可以确保你操作的是同一个文件。
+还有一个 `fs.stat(path)` 函数，它接受路径而不是句柄。它可以在不打开文件的情况下进行 stat。然而，在句柄上使用 `stat` 更好。因为路径可能会指向不同的文件，这属于`竞态条件`[^1]。先打开文件可以确保你操作的是同一个文件。
 
-### 步骤 3：构建 BodyReader
+## 步骤 3：构建 BodyReader
 
 `readerStaticFile()` 函数从文件句柄返回一个 `BodyReader`。在我们之前将 `fp` 设置为 `null` 是重要的，因为 `BodyReader` 稍后会读取文件，`finally` 块在此之后无法再关闭文件。
 
 ```javascript
 async function serveStaticFile(path: string): Promise<HTTPRes> {
-  let fp: null|FileHandle = null;
+  let fp: null | FileHandle = null;
   try {
     // 打开文件
     fp = await fs.open(path, 'r');
@@ -2607,7 +2537,7 @@ async function serveStaticFile(path: string): Promise<HTTPRes> {
     const reader: BodyReader = readerStaticFile(fp, size);
     fp = null;
     // 现在由读取器负责关闭它
-    return {code: 200, headers: [], body: reader};
+    return { code: 200, headers: [], body: reader };
   } catch (exc) {
     // ...
   } finally {
@@ -2617,33 +2547,7 @@ async function serveStaticFile(path: string): Promise<HTTPRes> {
 }
 ```
 
-
-
-
-# 09. 文件 IO 与 资源管理
-
-```typescript
-function readerFromStaticFile(fp: fs.FileHandle, size: number): BodyReader {
-  let got = 0;
-  // 目前读取的字节数
-  return {
-    length: size,
-    read: async (): Promise<Buffer> => {
-      const r: fs.FileReadResult<Buffer> = await fp.read();
-      got += r.bytesRead;
-      if (got > size || (got < size && r.bytesRead === 0)) {
-        // 不幸的情况：文件大小发生了变化。
-        // 无法继续，因为我们已经发送了 Content-Length。
-        throw new Error('file size changed, abandon it!');
-      }
-      // 注意：自动分配的缓冲区可能更大
-      return r.buffer.subarray(0, r.bytesRead);
-    },
-  };
-}
-```
-
-## 第 4 ：确保文件已关闭
+## 第 4 步：确保文件已关闭
 
 如果处理函数成功返回了 `BodyReader`，文件仍然处于打开状态，后续必须关闭。我们将在 `BodyReader` 接口中添加一个 `close()` 函数来执行清理工作。
 
@@ -2696,7 +2600,7 @@ JS 是一种带垃圾回收（GC）的语言，它让你免于手动分配和释
 - 代码作用域：在退出前终止资源。
 - 对象：在自身被终止时终止资源。
 
-所有权可以是静态的或动态的。动态意味着所有者随时间变化。无论你做什么，资源始终只有一个所有。
+所有权可以是静态的或动态的。动态意味着所有者随时间变化。无论你做什么，资源始终只有一个所有者。
 
 ### 由函数或作用域拥有的资源
 
@@ -2709,10 +2613,6 @@ JS 是一种带垃圾回收（GC）的语言，它让你免于手动分配和释
 
 除了 Go 之外，所有这些机制都提供了函数级清理。
 
-### 由某些实体拥有的资源
-
-在 `serveStaticFile()` 函数中，打开的文件最初由函数拥有，所以函数必须关闭它。整个函数被封装在 `try-finally` 块中，清理代码放在函数的末尾。
-
 ### 所有权可以转移
 
 在 `serveStaticFile()` 函数中，当 `BodyReader` 返回时，文件被置为 `null`。这确保了资源只有一个所有者。
@@ -2721,12 +2621,9 @@ JS 是一种带垃圾回收（GC）的语言，它让你免于手动分配和释
 
 当一个对象拥有资源时，它必须由另一个对象或代码作用域拥有。
 
-
-
-
 这也会执行 `finally` 块。你甚至可以使用特殊类型的异常来通知生成器你打算在途中途终止它，这样生成器就可以处理这种特殊情况。
 
-Python 生成器有[类似的方法[3]](https://docs.python.org/3/reference/expressions.html#generator.close)[](#index_split_001.html#p86)。令人惊讶的是[4]](https://docs.python.org/2.5/whatsnew/pep-342.html)[](#index_split_001.html#p86)，Python 的垃圾回收器会自动为生成器执行 `finally` 块，尽管关于 GC 是否应该处理非内存业务尚存争议。
+Python 生成器有[类似的方法[^3]](https://docs.python.org/3/reference/expressions.html#generator.close)。令人惊讶的是[^4]，Python 的垃圾回收器会自动为生成器执行 `finally` 块，尽管关于 GC 是否应该处理非内存业务尚存争议。
 
 # 9.4 讨论：复用缓冲区
 
@@ -2734,26 +2631,14 @@ Python 生成器有[类似的方法[3]](https://docs.python.org/3/reference/expr
 
 `readerFromStaticFile()` 函数为每次读取分配并返回一个新缓冲区。这并不高效，因为缓冲区的分配是有成本的：
 
-1. 内存内存分配器的成本。对于许多实现来说，这种成本在大多数情况下是 `constant` 的。在最好的情况下，分配器要么从空列表中返回对象，要么从大内存块中分配。
+1. 内存分配器的成本。对于许多实现来说，这种成本在大多数情况下是 `constant` 的。在最好的情况下，分配器要么从空列表中返回对象，要么从大内存块中分配。
 2. 零初始化的成本。随缓冲区大小 `linearly` 增长。
 
 ## 使用未初始化的缓冲区
 
 由于减少了系统调用的次数，通常希望使用较大的缓冲区以获得更高的吞吐量。然而，分配过大的缓冲区具有线性的初始化成本，这可以通过在 Node.JS 中使用 `uninitialized` 缓冲区来避免。
 
-[[2\]https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Generator/retu](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator/return)
-
-[rn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator/return)
-
-[\[3\]https://docs.python.org/3/reference/expressions.html#generator.close](https://docs.python.org/3/reference/expressions.html#generator.close)
-
-[\[4\]https://docs.python.org/2.5/whatsnew/pep-342.html](https://docs.python.org/2.5/whatsnew/pep-342.html)
-
-[报告错误 | 提问](https://forms.gle/UKo4bncuMGTM7) @ [build-your-own.org](https://build-your-own.org)
-
-# 09. 文件 IO 与资源管理
-
-```
+```javascript
 const buf = Buffer.allocUnsafe(65536);
 ```
 
@@ -2761,16 +2646,16 @@ const buf = Buffer.allocUnsafe(65536);
 
 ## 复用缓冲区
 
-在某些语言（如 Go 或 Python）中，很难获取未初始化的缓冲区。你可以对对同一个缓冲区进行多次 IO 操作。
+在某些语言（如 Go 或 Python）中，很难获取未初始化的缓冲区。你可以对同一个缓冲区进行多次 IO 操作。
 
-```
+```typescript
 function readerFromStaticFile(fp: fs.FileHandle, size: number): BodyReader {
   const buf = Buffer.allocUnsafe(65536);
   // 每次读取复用
   return {
     length: size,
     read: async (): Promise<Buffer> => {
-      const r = await fp.read({buffer: buf});
+      const r = await fp.read({ buffer: buf });
       // ...
       return r.buffer.subarray(0, r.bytesRead);
     },
@@ -2787,20 +2672,20 @@ function readerFromStaticFile(fp: fs.FileHandle, size: number): BodyReader {
 - 从池中获取内容的成本可能比内存分配器还要低。
 - 不同的代码路径都能从中受益。真实的分配更少。
 
-对象池的代码非常简单。Node.JS 的 `Buffer` 类型使用了内置池[5]](https://nodejs.org/api/buffer.html#static-method-bufferallocunsafesize)，但仅用于 `small` 缓冲区。Go 标准库也包含了对象池[6]](https://pkg.go.dev/sync#Pool)。
+对象池的代码非常简单。Node.JS 的 `Buffer` 类型使用了内置池[^5]，但仅用于 `small` 缓冲区。Go 标准库也包含了对象池[^6]。
 
 ## 复用缓冲区时注意生存
 
 缓冲区可以由生产者或消费者分配。在我们看到的所有情况下，生产者分配缓冲区并将其返回给任何使用数据的人。这可能会产生问题，因为在下次 `read()` 运行时，缓冲区可能仍被引用和使用。
 
-```
+```typescript
 function readerFromStaticFile(fp: fs.FileHandle, size: number): BodyReader {
   const buf = Buffer.allocUnsafe(65536);
   // 每次读取复用
   return {
     length: size,
     read: async (): Promise<Buffer> => {
-      const r = await fp.read({buffer: buf});
+      const r = await fp.read({ buffer: buf });
       // 注意：缓冲区的生命周期不明确！
       return r.buffer.subarray(0, r.bytesRead);
     },
@@ -2808,9 +2693,9 @@ function readerFromStaticFile(fp: fs.FileHandle, size: number): BodyReader {
 }
 ```
 
-让我们应用资源管理的教训：谁拥有缓冲区？对于本章的代码，我们知道生产者（`BodyReader`）返回的缓冲区被写入套字，我们在调用下次 `read()` 之前会等待写入完成，因此生产者是引用缓冲区的唯一地方，我们可以推断消费者不需要拥有缓冲区，因此缓冲区复用是有效的。然而，对于更复杂的消费者，这可能不成立！
+让我们应用资源管理的教训：谁拥有缓冲区？对于本章的代码，我们知道生产者（`BodyReader`）返回的缓冲区被写入套接字，我们在调用下次 `read()` 之前会等待写入完成，因此生产者是引用缓冲区的唯一地方，我们可以推断消费者不需要拥有缓冲区，因此缓冲区复用是有效的。然而，对于更复杂的消费者，这可能不成立！
 
-另一种是消费者分配缓冲区，只要数据是原地处理的，缓冲区的生命周期就是的，因此消费者是唯一的所有者。
+另一种是消费者分配缓冲区，只要数据是原地处理的，缓冲区的生命周期就是明确的，因此消费者是唯一的所有者。
 
 ```javascript
 // 伪代码！
@@ -2826,9 +2711,7 @@ while (more_data()) {
 
 在 Golang 中，从 `io.Reader` 接口拉取数据时，缓冲区由消费者提供。这在设计上鼓励了缓冲区复用并抑制了不必要的分配。
 
-# 第 10 章：范围请求 (Range Requests)
-
-下一步是为文件服务器添加范围请求，这将允许断点续传传输。
+# 第 10 章：范围请求
 
 ## 10.1 范围请求如何工作
 
@@ -2859,20 +2742,15 @@ while (more_data()) {
 服务器还必须处理异常的情况：
 
 - 如果交集为空，服务器返回状态码 416 (Range Not Satisfiable)。
-
-
-
-
-
 - 如果任何一个范围无效，服务器将忽略该 Header 字段（并提供完整文件）。
 
-## 范围请求（Range Requests）是可选的
+## 范围请求是可选的
 
 一旦你开始为 HTTP 服务器添加功能，你就会发现大多数 HTTP 特性都是可选的，而可选功能可能会让情况变得比看起来更复杂。
 
 服务器可能完全不支持范围请求，即使支持，它们也不适用于所有请求。例如，对于动态生成的内容返回范围响应是没有意义的，因为内容的长度预先是不可知的，服务器无法判断请求是否超出了范围。
 
-## 范围响应（Range Responses）通过 206 状态码指示
+## 范围响应通过 206 状态码指示
 
 客户端如何知道服务器是否支持范围请求？这就是 `206 (Partial Content)` 部分内容状态码的作用，它表示返回的是部分响应而不是完整响应（`200 OK`）。
 
@@ -2880,13 +2758,23 @@ while (more_data()) {
 
 如上例所示，有效范围可能与请求的范围不同，因此服务器需要告诉客户端返回的确切范围。这就是 `Content-Range` 头部字段的工作。它包含了响应的有效范围以及内容的总长度。
 
- 10. 范围请求
-
-`Content-Range: bytes 12-34/1234`
+```text
+Content-Range: bytes 12-34/1234
+```
 
 该头部字段也用于 `416 (Range Not Satisfiable)` 响应，告诉客户端内容的正确长度。
 
-`Content-Range: bytes */1234`
+```text
+Content-Range: bytes */1234
+```
+
+[^1]: https://en.wikipedia.org/wiki/Time-of-check_to_time-use
+[^3]: https://docs.python.org/3/reference/expressions.html#generator.close
+[^4]: https://docs.python.org/2.5/whatsnew/pep-342.html
+[^5]: https://nodejs.org/api/buffer.html#static-method-bufferallocunsafesize
+[^6]: https://pkg.go.dev/sync#Pool
+
+
 
 ## 宣告`范围支持（Range Support）`
 
@@ -2912,20 +2800,22 @@ Range: bytes=0-5,8-13
 HTTP/1.1 206 Partial Content
 Accept-Ranges: bytes
 Content-Length: 227
-```
+Content-Type: multipart/byteranges; boundary=SEPARATOR1234567
 
- 10. 范围请求
+--SEPARATOR1234567
+Content-Type: text/html; charset=UTF-8
+Content-Range: bytes 0-5/1234
 
-`Content-Type: multipart/byteranges; boundary=SEPARATOR1234567`
-`--SEPARATOR1234567`
-`Content-Type: text/html; charset=UTF-8`
-`Content-Range: bytes 0-5/1234`
 <html>
-`--SEPARATOR1234567`
-`Content-Type: text/html; charset=UTF-8`
-`Content-Range: bytes 8-13/1234`
+
+--SEPARATOR1234567
+Content-Type: text/html; charset=UTF-8
+Content-Range: bytes 8-13/1234
+
 <head>
-`--SEPARATOR1234567--`
+
+--SEPARATOR1234567--
+```
 
 该响应与单范围响应完全不同：
 
@@ -2934,24 +2824,17 @@ Content-Length: 227
 相反，它使用了 `Content-Type: multipart/byteranges; boundary=x`。
 
 - 响应采用新的消息格式编码：
+
   - 由 `Content-Type` 头部字段指示。
+
   - 多个部分由随机字符串分隔符分隔。
 
-
-
-
-[报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
-
-89
-
-2024-02-02
+---
 
 ## 10. Range 请求 (Range Requests)
 
-```
+```javascript
 await writeHTTPBody(conn, res.body);
-
-}
 
 } finally {
 
@@ -2963,12 +2846,9 @@ await writeHTTPBody(conn, res.body);
 
 无论如何 `BodyReader` 都会被关闭，因为在我们的案例中 `BodyReader` 仍然拥有一个文件资源。你也可以在请求处理器中处理 `HEAD` 方法并尽早关闭文件（从根本上就不创建 `BodyReader`）。
 
-[报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
+---
 
-90
-
-# 11 章
-# HTTP 缓存
+# 第 11 章：HTTP 缓存
 
 2024-02-02
 
@@ -2987,9 +2867,9 @@ Web 浏览器默认会缓存响应，即使服务器没有投入太大精力。
 1. 服务器在 `Last-Modified` 头部字段中返回文件的文件系统修改时间。
 2. 客户端缓存响应以及时间戳。
 3. 客户端在复用缓存响应之前对其进行验证，发送将 `If-Modified-Since` 头部字段设置为缓存时间戳的请求：
-- 如果服务器上的文件已修改（由不同的时间戳指示），服务器将照常返回响应。
-- 如果服务器不支持此验证方法并忽略该字段，也照常返回。
-- 如果服务器上的时间戳相同，服务器返回状态码 `304`（未修改），此状态码没有负载，只需告诉客户端复用缓存。
+   - 如果服务器上的文件已修改（由不同的时间戳指示），服务器将照常返回响应。
+   - 如果服务器不支持此验证方法并忽略该字段，也照常返回。
+   - 如果服务器上的时间戳相同，服务器返回状态码 `304`（未修改），此状态码没有负载，只需告诉客户端复用缓存。
 4. 如果状态码为 `304`，客户端将复用缓存响应；或者使用正常响应并更新缓存。
 
 ### 通过 ETag 验证 (Validate by ETag)
@@ -2997,10 +2877,6 @@ Web 浏览器默认会缓存响应，即使服务器没有投入太大精力。
 时间戳的分率仅为一秒，对于某些用例是不够的，而且文件时间戳并不是识别内容的可靠方法。另一种识别内容的方法是通过 `ETag` 头部。它的工作方式与 `Last-Modified` 相同，但其值是任意的，你可以使用内容的哈希值或版本号。
 
 `ETag` 通过 `If-None-Match` 进行验证，这类似于 `If-Modified-Since`。
-
-91
-
-2024-02-02
 
 ### 范围请求验证 (Validate for Range Requests)
 
@@ -3044,14 +2920,6 @@ if (ifr && parseHTTPDate(ifr.toString('latin1')) !== ts) {
 // 使用 hrange 检查请求范围 ...
 ```
 
-[报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
-
-92
-
-2024-02-02
-
-11 HTTP 缓存
-
 `ETag` 可能需要一个独立的子系统来跟踪内容（无论是哈希值还是版本号），因此我们不会编写代码。
 
 ## 11.2 讨论：服务端缓存控制 (Discussion: Server-Side Cache Control)
@@ -3081,14 +2949,6 @@ if (ifr && parseHTTPDate(ifr.toString('latin1')) !== ts) {
 
 单凭 `max-age` 指令对缓存所示的寿命并没有提供足够的控制，因为表格使用了模糊的词汇“maybe”和“should”，它们之间有何区别？
 
-[RFC 9111](https://www.ietf.org/rfc/rfc9111)
-
-93
-
-2024-02-02
-
-11 HTTP 缓存
-
 浏览器通常会复用新鲜项，但即使缓存是新鲜的，它可能会重新验证项，这发生在用户点击刷新按钮时。
 
 但为什么“验证过期项”是“应该”？如果设置 TTL 的效果无法保证，它的意义何在？事实上有两层保证：
@@ -3111,12 +2971,6 @@ if (ifr && parseHTTPDate(ifr.toString('latin1')) !== ts) {
 `immutable` 指令是一种优化；它告诉客户端即使在刷新时也不要重新验证新鲜项。这可以在 URL 是不可变的时使用，例如通过其哈希值检索资源时。不过并非所有浏览器都实现了这一点。
 
 **启发式缓存 (Heuristic Caching)**
-
-
-
-
-
-# 11. HTTP 缓存
 
 即使有了这些指令，客户端仍然拥有很大的自由度。如果没有实际用例，仅凭规范无法实现实用的软件。当服务器完全不使用 `Cache-Control` 时，客户端的自由度达到最高。这在网络浏览器中被称为[启发式](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching#heuristic_caching) [缓存[2]](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching#heuristic_caching)。
 
@@ -3149,6 +3003,8 @@ RFC 仅以非常松散的定义定义了预期的缓存行为。对于开发或�
 - [AWS CloudFront[4]](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
 - [Azure CDN[5]](https://learn.microsoft.com/en-us/azure/cdn/cdn-how-caching-works)
 - [Google Cloud CDN[6]](https://cloud.google.com/cdn/docs/caching)
+
+---
 
 # 第 12 章：压缩与流 API
 
@@ -3204,6 +3060,8 @@ HTTP 压缩与其他功能一样，是可选的，因此客户端必须显式请
 
 ### 使用 `Transfer-Encoding` 压缩
 
+
+
 还有另一种罕用/受支持的压缩方法。`Transfer-Encoding` 通常用于分块传输，它也可以压缩负载。
 
 `Transfer-Encoding: gzip, chunked`
@@ -3211,10 +3069,6 @@ HTTP 压缩与其他功能一样，是可选的，因此客户端必须显式请
 上述头部字段意味着负载先经过 gzip 压缩，然后进行分块传输。
 
 它与 `Content-Encoding` 有什么区别？区别在于 `Transfer-Encoding` **不是**内容的属性，因此范围请求可以作用于 `Transfer-Encoding`，但不能作用于 `Content-Encoding`。
-
-
-
-
 
 与其他晦涩的 HTTP 特性不同，使用 `Transfer-Encoding` 进行压缩实际上更实用，因此更为优，但遗憾的是实现上却走向了反面。
 
@@ -3228,10 +3082,13 @@ HTTP 压缩与其他功能一样，是可选的，因此客户端必须显式请
 | `Accept-Encoding` | `Content-Encoding` | 是 |
 | `TE` | `Transfer-Encoding` | 支持（否） |
 
-## 12.2 使用管道进行数据处理
+## 12. 压缩与流 API
 
-### 数据处理与 IO
-我们将使用内置的 [`zlib[4]`](https://nodejs.org/api/zlib.html) 模块来压缩响应体。压缩数据有 2 类 API，最简单的是输入作为单个 buffer 提供并将压缩后的数据作为单个 buffer 返回。如果输入很大，这种方法将不起作用，因为它可能无法放入内存。而且即使不考虑内存问题，延迟也会很糟糕。
+### 12.1 使用管道进行数据处理
+
+#### 数据处理与 IO
+
+我们将使用内置的 [`zlib`](https://nodejs.org/api/zlib.html) 模块来压缩响应体。压缩数据有 2 类 API，最简单的是输入作为单个 buffer 提供并将压缩后的数据作为单个 buffer 返回。如果输入很大，这种方法将不起作用，因为它可能无法放入内存。而且即使不考虑内存问题，延迟也会很糟糕。
 
 ```javascript
 zlib.gzip(buffer, callback);
@@ -3248,16 +3105,8 @@ const obj = zlib.createGzip();
 
 实时处理数据的方法是使用可以同时*读取*和*写入*的有状态处理器，这与我们处理 socket 的方式类似。
 
-[[4]https://nodejs.org/api/zlib.html](https://nodejs.org/api/zlib.html)
+### 12.2 用于组合数据处理器的 Unix 管道
 
-[报告错误 | 提问问题](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
-
-99
-2024-02-02
-
-## 12. 压缩与流 API
-
-### 用于组合数据处理器的 Unix 管道
 拥有多个数据处理步骤是常见的，而 Unix 管道是编程和组合这些步骤的一种*高层*方式。一个具体的例子是：
 
 ```bash
@@ -3265,39 +3114,36 @@ tar -c -f - ./directory | gzip | nc 1.2.3.4 1234
 ```
 
 它通过 2 个管道连接 3 个步骤：
+
 1. `tar`，归档生产者。
 2. `gzip`，消耗归档并产生 gzip 数据。
 3. `nc`，消耗 gzip 数据并通过网络发送。
 
 管道自动将输出连接到输入，而无需用户编写代码在步骤之间移动数据。
 
-### 抽象管道
+#### 抽象管道
+
 我们可以在 HTTP 服务器中使用一种类似管道的抽象：
 
 `produce-response | gzip-compress | chunk-encode | write-to-socket`
 
-这种模式有如下：
+这种模式有如下优点：
+
 - 无需显式读取和写入数据；编写的代码更少！
 - 背压是自动的（如果每个处理器都实现得当）。
 - 正如我们所看到的，它不容易出错。
 
-## 12.3 探索 Node.JS 中的流 API
+### 12.3 探索 Node.JS 中的流 API
 
-### 流接口列表
-Node.JS 中确实存在管道，你可以通过 [Stream API[5]](https://nodejs.org/api/stream.html)[](#index_split_001.html#p105) 管道化内容
+#### 流接口列表
+
+Node.JS 中确实存在管道，你可以通过 [Stream API](https://nodejs.org/api/stream.html) 管道化内容。
 
 ```javascript
 import * as stream from "stream";
 ```
 
 它定义了一组你可以实现的接口。
-
-[[5]https://nodejs.org/api/stream.html](https://nodejs.org/api/stream.html)
-
-[报告错误 | 提问问题](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
-
-100
-2024-02-02
 
 | 名称 | 说明 | 示例 |
 | :--- | :--- | :--- |
@@ -3310,7 +3156,8 @@ import * as stream from "stream";
 
 一些内置的 Node.JS 模块已经实现了它们，如表所示。
 
-### 在流接口上使用管道
+#### 在流接口上使用管道
+
 我们探索这些抽象的目标是在它们上使用管道。
 
 ```javascript
@@ -3335,15 +3182,12 @@ function pipeline(
 ): Promise<void>;
 ```
 
-## 12.4 实现 HTTP 压缩
+### 12.4 实现 HTTP 压缩
+
 `zlib` 模块为压缩对象实现了 `stream.Duplex`。这是一个学习如何 Node.JS Stream API 的绝佳机会。
 
-[报告错误 | 提问问题](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
+#### 步骤 1：检查头部字段并启用压缩
 
-101
-2024-02-02
-
-### 步骤 1：检查头部字段并启用压缩
 根据头部字段操作。我们将在客户端请求时实现压缩。
 
 ```typescript
@@ -3358,7 +3202,8 @@ function enableCompression(req: HTTPReq, res: HTTPRes): void {
 }
 ```
 
-### 步骤 2：理解没有管道时的注意事项
+#### 步骤 2：理解没有管道时的注意事项
+
 如果不使用 `pipeline()` 函数，你可能会这样构思方案：
 
 ```typescript
@@ -3377,27 +3222,25 @@ function gzipFilter(reader: BodyReader): BodyReader {
 ```
 
 遗憾的是，这种伪代码由于两个原因不起工作：
+
 1. 压缩器实现了背压，这意味着如果你写入大量输入，代码将阻塞直到输入被处理并*排空*。但在上面的伪代码中，数据是在写入完成后才被排空的，这是一种死锁情况！（我们在“管道化请求”部分讨论过类似的死锁。）
 2. 大多数数据压缩方法本质上需要缓存；1 次输入不会产生 1 个压缩输出。在没有足够数据的情况下，压缩器不会产生输出，因为它还没有决定如何压缩数据。从压缩器读取将阻塞在等待更多数据！
 
 在 Unix 管道中，读取和写入发生在不同的进程中，管道是*同时*填充和排空的，因此不会出现上述方案中的死锁。这就是为什么我提到管道抽象的使用不容易出错。
 
-### 步骤 3：实现 `stream.Readable`
+#### 步骤 3：实现 `stream.Readable`
+
 我们回到了正轨。在使用 `pipeline()` 函数之前，我们必须为数据源 `BodyReader` 实现 `stream.Readable` 接口。
 
 以下是实现 `stream.Readable` 的方法：
+
 1. `stream.Readable` 有一个内部队列，使用 `push()` 方法将数据添加到队列，然后数据即可消费。
 2. 你应该何时向队列添加数据？你需要实现一个 `read()` 回调，该回调会在队列为空且有人在消费时被调用。这对于维护背压至关重要。
-
-
-
-
-
-### 3. 使用 `destroy()` 方法将错误传递给消费者。
+3. 使用 `destroy()` 方法将错误传递给消费者。
 
 ```javascript
 function body2stream(reader: BodyReader): stream.Readable {
-  let self: null|stream.Readable = null;
+  let self: null | stream.Readable = null;
   // make TS happy
   self = new stream.Readable({
     read: async () => {
@@ -3413,16 +3256,9 @@ function body2stream(reader: BodyReader): stream.Readable {
 }
 ```
 
-[报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
+> **注意**：`push()` 方法使用 `null` 来标记流的结束，这与我们正在使用的（0 长度缓冲区）不同。
 
-103
-2024-02-02
-
-## 12. 压缩与 Stream API
-
-注意：`push()` 方法使用 `null` 来标记流的结束，这与我们正在使用的（0 长度缓冲区）不同。
-
-#### 步骤 4：创建管道（Pipe）
+#### 步骤 4：创建管道
 
 让我们尝试在 `BodyReader` 和 `compressor` 之间建立一个管道。
 
@@ -3452,13 +3288,6 @@ function gzipFilter(reader: BodyReader): BodyReader {
 现在管道已经在运行了，我们可以从 `compressor` 读取输出。记得 `net.Socket` 也是一个 `stream.Readable`；`soRead()` 函数可以在不修改的情况下使用（除了类型注解），因为各种套接字事件（如 `'data'` 和 `'end'`）、`pause()` 和 `resume()` 方法实际上定义在 `stream.Readable` 上。
 
 但 `stream.Readable` 接口已经有一个基于 promise 的读取方法。它的 `iterator()` 方法返回一个 `AsyncIterator`，你可以像使用生成器一样在 `for await...of` 循环中使用它。`AsyncIterator` 还有一个类似于生成器的 `next()` 方法。
-
-[报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
-
-104
-2024-02-02
-
-12. 压缩与 Stream API
 
 ```javascript
 function gzipFilter(reader: BodyReader): BodyReader {
@@ -3501,26 +3330,21 @@ try {
 
 压缩可以工作。但有一个问题：当你测试 `/echo` 或 `/sheep` URI 时，响应没有立即出现。这是由于 `compressor` 的缓冲导致的。从“缓冲区写入”讨论中，我们知道必须有一种方法来 `flush` 缓冲区强制 `compressor` 输出。
 
-[报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
-
-105
-2024-02-02
-
-12. 压缩与 Stream API
-
 `gz.flush(callback);`
 
 但由于使用了 `pipeline()` 而不是显式的 `IO`，没有地方插入 `flush()` 调用。不过有一个选项可以让 `compressor` 自动刷新。
 
-`const gz = zlib.createGzip({flush: zlib.constants.SYNC_FLUSH`
+`const gz = zlib.createGzip({flush: zlib.constants.SYNC_FLUSH});`
 
 频繁刷新 `compressor` 会降低压缩效率。因此，让应用程序控制是否刷新是一个好主意。例如，在提供静态文件时，不需要刷新 `compressor`，因为数据生成得尽可能快。
 
 对于生成非常小数据块的应用程序，可能根本不压缩压缩，因为频繁刷新效果不好。
 
-## 12.5 讨论：重构为 Stream
+### 12.5 讨论：重构为 Stream
 
 你可以尝试重构代码以使用更多的流和管道。首先，替换 `BodyReader` 接口中的 `read()` 函数。
+
+
 
 ```typescript
 // 从/向 HTTP body 读取/写入数据的接口
@@ -3543,60 +3367,48 @@ type BodyReader = {
 [报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
 
 106
+
 2024-02-02
 
-12. 压缩与 Stream API
+## 12. 压缩与 Stream API
 
 响应请求的整个过程变成一系列管道：`produce-response | gzip-compress | chunk-encode | write-to-socket`
 
-#### 12.6 讨论：水位（High Water Mark）与背压
+### 12.6 讨论：水位（High Water Mark）与背压
 
-##### 单项队列
+#### 单项队列
 
 我们维护背压的方法是等待队列或缓冲区排空。从生产者和消费者的角度，队列有 2 个状态：
 
 | 队列 | 可以产生 | 可以消费 |
-|---|---|---|
+| :--- | :---: | :---: |
 | 空闲 | 是 | 否 |
 
 这限制了队列最多只能有 1 个项目或 1 次待处理写入。
 
-##### 高水位背压
+#### 高水位背压
 
 然而，某些背压实现稍微复杂一些——队列限制字节数而不是仅仅 1 次写入。这个限制通常被称为水位。使用水位进行背压时，队列有 3 个状态：
 
 | 队列 | 可以产生 | 可以消费 |
-|---|---|---|
+| :--- | :---: | :---: |
 | 空 | 是 | 否 |
 | 半 | 是 | 是 |
 | 满 | 否 | 是 |
 
 这更像 Unix 管道，Unix 管道是一个边界缓冲区，只要它未满就可以向其中添加更多字节；不需要等待它完全排空。
 
-##### 使用队列批处理数据
+#### 使用队列批处理数据
 
 使用水位而不是单项队列的原因是队列可以合并多次小写入。例如，当数据从队列移动到套接字时，有一些可能的优化：
 
-[报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
+- 队列可以是单个缓冲区；每当你向它写入时，数据都会追加到缓冲区。这会自动合并多次小写入，并将所有数据一次性发送到套接字。
+- 队列存储单个缓冲区对象，在发送到套接字之前，可以将多个缓冲区合并为一个较大的缓冲区。
+- 队列存储单个缓冲区对象，可以使用 `writev()` 系统调用一次性发送多个缓冲区，而无需手动合并。
 
-107
-2024-02-02
+所有优化都实现了之前讨论的半透明缓冲。另请参见：`stream.Writable._writev()`
 
-12. 压缩与 Stream API
-
-• 队列可以是单个缓冲区；每当你向它写入时，数据都会追加到缓冲区。这会自动合并多次小写入，并将所有数据一次性发送到套接字。
-
-• 队列存储单个缓冲区对象，在发送到套接字之前，可以将多个缓冲区合并为一个较大的缓冲区。
-
-• 队列存储单个缓冲区对象，可以使用 `writev()[6]](https://linux.die.net/man/2/writev) 系统调用一次性发送多个缓冲区，而无需手动合并。
-
-
-
-
-
-所有优化都实现了之前讨论的半透明缓冲。另请参见：[stream.Writable._writev[7](https://nodejs.org/api/stream.html#writable_writevchunks-callback)[](#index_split_001.html#p113)
-
-## Node.JS 中的高水位标记 (High Water Mark)
+## Node.js 中的高水位标记
 
 `stream.Readable` 和 `stream.Writable` 都有一个内置的高水位标记，在实现它们时，可以通过 `highWaterMark` 选项进行更改。对于高吞吐量应用，通常使用较大的值是很有意义的。
 
@@ -3608,35 +3420,29 @@ const r = new stream.Readable({
 });
 ```
 
-在使用高水位标记处理背压（backpressure）时，请检查 `Readable.push()` 和 `Writable.write()` 的返回值：
+在使用高水位标记处理背压时，请检查 `Readable.push()` 和 `Writable.write()` 的返回值：
 
-- 当队列满时，它们返回 `false`，因此你可以等待它排空（drain）。
+- 当队列满时，它们返回 `false`，因此你可以等待它排空。
 - 否则，你可以向其中推入更多数据。
 
 我们没有使用它们的返回值，是因为我们简单地将高水位标记视为 0，并在每次写入后排空队列。
 
-表 5：流 中的高水位标记。
+表 5：流中的高水位标记。
 
 | 接口 | 背压指示器 | 等待队列排空 |
 | :--- | :--- | :--- |
 | `Readable` | `.push(data)` | 通过 `read()` 回调 |
 | `Writable` | `.write(data, cb)` | 通过 'drain' 事件。 |
 
-流 接口支持但不强制要求背压；即使队列满了，你仍然可以向它们推入数据，这对于初学者来说是一个性能陷阱（footgun）。
-
-[[6](https://linux.die.net/man/2/writev)](https://linux.die.net/man/2/writev)
-
-[[7](https://nodejs.org/api/stream.html#writable_writevchunks-callback)](https://nodejs.org/api/stream.html#writable_writevchunks-callback)
+流接口支持但不强制要求背压；即使队列满了，你仍然可以向它们推入数据，这对于初学者来说是一个性能陷阱。
 
 [报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
 
 108
 
-**第 13 章**
+# 第 13 章 WebSocket 与并发
 
-# WebSocket 与并发
-
-让我们探索一些不同的东西 —— WebSocket [(RFC6455[1](https://datatracker.ietf.org/doc/html/rfc6455))](#index_split_001.html#p114) 我们还将仔细查看生产者-消费者问题，因为它们在网络应用中很常见。
+让我们探索一些不同的东西 —— WebSocket (RFC6455) 我们还将仔细查看生产者-消费者问题，因为它们在网络应用中很常见。
 
 ## 13.1 建立 WebSocket
 
@@ -3650,7 +3456,7 @@ const r = new stream.Readable({
 
 ### 从 HTTP/1.1 升级
 
- WebSocket 以 HTTP 头部开始，这是它与 HTTP 唯一的共同点。客户端使用 `Upgrade: websocket` 头部字段表示意图创建一个 WebSocket，服务器通过此头部和状态码 101 响应，表示 WebSocket 已建立。连接的其余部分将由 WebSocket 协议接管。
+WebSocket 以 HTTP 头部开始，这是它与 HTTP 唯一的共同点。客户端使用 `Upgrade: websocket` 头部字段表示意图创建一个 WebSocket，服务器通过此头部和状态码 101 响应，表示 WebSocket 已建立。连接的其余部分将由 WebSocket 协议接管。
 
 示例：
 
@@ -3667,98 +3473,6 @@ Sec-WebSocket-Accept: s3pPLMBiTxa9kYGhZK+Oo=
 ```
 
 如果服务器对 WebSocket 一无所知，它将像普通的 HTTP 请求一样响应。这是扩展的一种方式。
-
-[[6](https://linux.die.net/man/2/writev)](https://linux.die.net/man/2/writev)
-
-[[7](https://nodejs.org/api/stream.html#writable_writevchunks-callback)](https://nodejs.org/api/stream.html#writable_writevchunks-callback)
-
-[报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
-
-108
-
-**第 13 章**
-
-# WebSocket 与并发
-
-让我们探索一些不同的东西 —— WebSocket [(RFC6455[1](https://datatracker.ietf.org/doc/html/rfc6455))](#index_split_001.html#p114) 我们还将仔细查看生产者-消费者问题，因为它们在网络应用中很常见。
-
-## 13.1 建立 WebSocket
-
-### 高层概述
-
-我们已经在“动态内容”章节中讨论过 WebSocket。从用户的角度来看，WebSocket 是：
-
-- 一个双向、全双工通道。
-- 基于消息的，而不是字节流。
-- 对现有 HTTP 服务器的扩展。
-
-### 从 HTTP/1.1 升级
-
- WebSocket 以 HTTP 头部开始，这是它与 HTTP 唯一的共同点。客户端使用 `Upgrade: websocket` 头部字段表示意图创建一个 WebSocket，服务器通过此头部和状态码 101 响应，表示 WebSocket 已建立。连接的其余部分将由 WebSocket 协议接管。
-
-示例：
-
-```
-GET /chat HTTP/1.1
-Upgrade: websocket
-Connection: Upgrade
-Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
-
-HTTP/1.1 101 Switching Protocols
-Upgrade: websocket
-Connection: Upgrade
-Sec-WebSocket-Accept: s3pPLMBiTxa9kYGhZK+Oo=
-```
-
-如果服务器对 WebSocket 一无所知，它将像普通的 HTTP 请求一样响应。这是扩展的一种方式。
-
-[[6](https://linux.die.net/man/2/writev)](https://linux.die.net/man/2/writev)
-
-[[7](https://nodejs.org/api/stream.html#writable_writevchunks-callback)](https://nodejs.org/api/stream.html#writable_writevchunks-callback)
-
-[报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
-
-108
-
-**第 13 章**
-
-# WebSocket 与并发
-
-让我们探索一些不同的东西 —— WebSocket [(RFC6455[1](https://datatracker.ietf.org/doc/html/rfc6455))](#index_split_001.html#p114) 我们还将仔细查看生产者-消费者问题，因为它们在网络应用中很常见。
-
-## 13.1 建立 WebSocket
-
-### 高层概述
-
-我们已经在“动态内容”章节中讨论过 WebSocket。从用户的角度来看，WebSocket 是：
-
-- 一个双向、全双工通道。
-- 基于消息的，而不是字节流。
-- 对现有 HTTP 服务器的扩展。
-
-### 从 HTTP/1.1 升级
-
- WebSocket 以 HTTP 头部开始，这是它与 HTTP 唯一的共同点。客户端使用 `Upgrade: websocket` 头部字段表示意图创建一个 WebSocket，服务器通过此头部和状态码 101 响应，表示 WebSocket 已建立。连接的其余部分将由 WebSocket 协议接管。
-
-示例：
-
-```
-GET /chat HTTP/1.1
-Upgrade: websocket
-Connection: Upgrade
-Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
-
-HTTP/1.1 101 Switching Protocols
-Upgrade: websocket
-Connection: Upgrade
-Sec-WebSocket-Accept: s3pPLMBiTxa9kYGhZK+Oo=
-```
-
-如果服务器对 WebSocket 一无所知，它将像普通的 HTTP 请求一样响应。这是扩展的一种方式。
-
-[[6](https://linux.die.net/man/2/writev)](https://linux.die.net/man/2/writev)
-
-[[7](https://nodejs.org/api/stream.html#writable_writevchunks-callback)](https://nodejs.org/api/stream.html#writable_writevchunks-callback)
 
 [报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
 
@@ -3797,7 +3511,7 @@ function wsAccept(key) {
 
 2024-02
 
-### 13.2 WebSocket 协议
+## 13.2 WebSocket 协议
 
 ### 帧格式
 
@@ -3810,7 +3524,7 @@ function wsAccept(key) {
 | FIN | | | |
 | RSV1 | | | |
 | Op | | | | |
-| | | | | | | | | | | | | |  0 1 2 3 4 5 6 7 | 0 1 2 3 4 5 6 7 | 0 1 2 3 4 5 6 7 | 0 1 2 3 4 5 6 7 |
+| | | | | | | | | | | | | | 0 1 2 3 4 5 6 7 | 0 1 2 3 4 5 6 7 | 0 1 2 3 4 5 6 7 | 0 1 2 3 4 5 6 7 |
 | 掩码位 | | | | | | | | | | | | | | |
 
 注意：处理帧比处理 HTTP 要简单得多：
@@ -3821,35 +3535,28 @@ function wsAccept(key) {
    - 0 到 125 的长度存储在该 7 位整数中。
    - 126 表示后续为 16 位大端整数。
    - 127 表示后续为 64 位大端整数。
-4. 如果 `MASK` 位被设置，则后续有一个 4 字节随机掩码。该 4 字节掩码与负载数据进行异或。掩码必须用于客户端到服务器的帧，但反向则不然。掩码的目的是防止一种类型的[缓存攻击](http://www.adambarth.com/papers/2011/huang-chen-barth-rescorla-jackson.pdf)。
+4. 如果 `MASK` 位被设置，则后续有一个 4 字节随机掩码。该 4 字节掩码与负载数据进行异或。掩码必须用于客户端到服务器的帧，但反向则不然。掩码的目的是防止一种类型的缓存攻击。
 
 ### 帧类型
 
-数据消息的 码：
+数据消息的 opcode：
 
-- `0x01`: 文本数据消息。用于应用程序。
-- `0x02`: 二进制数据消息。用于应用程序。
-- `0x00`: 消息分片。稍后讨论。
+- `0x01`：文本数据消息。用于应用程序。
+- `0x02`：二进制数据消息。用于应用程序。
+- `0x00`：消息分片。稍后讨论。
 
 文本和二进制的区分取决于应用程序。
 
-控制消息的 码：
+控制消息的 opcode：
 
-- `0x08`: 用于优雅终止的控制消息。可选负载包含状态码和字符串消息。
-
-
-
-` 标签中似乎中断了（到 `Event`.` 处结束），我将针对你提供的**已给出文本**进行翻译。
-
-[content]
-
+- `0x08`：用于优雅终止的控制消息。可选负载包含状态码和字符串消息。
 - `0x09` 和 `0x10`：Ping 和 pong，即心跳包。用于保持连接活跃和探测断开连接。对于应用程序可以是透明的。
 
-## 分片消息
+### 分片消息
 
-WebSocket 还支持在不预知消息长度的情况下发送消息，类似于 HTTP 中的分块传输编码（chunked transfer encoding）。一个“逻辑”数据消息可以被分成多个帧（frames），但应用程序看到的是合并后的消息。
+WebSocket 还支持在不预知消息长度的情况下发送消息，类似于 HTTP 中的分块传输编码。一个“逻辑”数据消息可以被分成多个帧，但应用程序看到的是合并后的消息。
 
-- 第一帧的操作码（opcode）为 `0x01` 或 `0x02`，其余帧使用 `0x00`。
+- 第一帧的操作码为 `0x01` 或 `0x02`，其余帧使用 `0x00`。
 - 最后一帧设置了 `FIN` 标志。
 - 只有数据消息（opcode `0x01` 和 `0x02`）可以被分片。
 - 不同消息的帧不能交替出现，控制消息除外。
@@ -3862,15 +3569,17 @@ WebSocket 还支持在不预知消息长度的情况下发送消息，类似于 
 
 类似于分块传输编码的设计，你可以将任意大小的数据作为单条消息流传输。但许多实现将消息数据表示为单个缓冲区，因此消息大小存在限制。
 
-## 13. WebSocket 与并发
+## 13.3 并发性编程简介
 
-### 13.3 并发性编程简介
+### 竞态条件
 
-#### 竞态条件
 
-在基于消息的设计中，由单个消费者消费多个消息源的情况很常见，例如多个并发任务通过单个 WebSocket 发送消息。
 
-由于 WebSocket 消息被序列化为单个 TCP 字节流，对套接字的并发写入会破坏协议。
+# WebSocket 与并发
+
+在基于消息的设计中，由单个消费者消费多个消息源的情况很常见，例如多个并发任务通过单个 `WebSocket` 发送消息。
+
+由于 `WebSocket` 消息被序列化为单个 `TCP` 字节流，对套接字的并发写入会破坏协议。
 
 让我们用一个假设的示例来来说明这个问题。
 
@@ -3886,22 +3595,22 @@ async function send(conn, msg) {
 
 这在并发编程中被称为 `race condition`（竞态条件）。注意，这与单线程运行时或 CPU 核心数*完全无关*。
 
-#### 原子操作
+## 原子操作
 
 你可能认为解决方案是每条消息只使用 1 次套接字写入。然而，这种解决方案是……
 
 - 仅在套接字写入是原子的情况下正确，而这可能无法保证。
-- 并不总是可行且不方便。考虑到 WebSocket 消息可以被分片并像流一样使用。
+- 并不总是可行且不方便。考虑到 `WebSocket` 消息可以被分片并像流一样使用。
 
-#### 使用互斥锁实现互斥
+## 使用互斥锁实现互斥
 
 一种解决方案是使用锁（`mutex`）来限制对套接字的并发写入。
 
 在并发访问的情况下，一个任务持有 `lock`，其他任务在 `await` 语句处阻塞，释放锁将解除其中一个等待者的阻塞。`mutex` 是许多并发环境中 `synchronization primitives`（同步原语）之一。
 
-#### 使用队列多路用
+## 使用队列多路用
 
-防止并发访问的另一种解决方案是使用队列。队列接收来自并发生产者的 WebSocket 消息，由一个专用任务从队列中消费并写入套接字。
+防止并发访问的另一种解决方案是使用队列。队列接收来自并发生产者的 `WebSocket` 消息，由一个专用任务从队列中消费并写入套接字。
 
 ```javascript
 // 伪代码
@@ -3921,13 +3630,13 @@ async function single_consumer() {
 
 `mutex` 也是队列的一种形式，它不传递数据，而是传递控制权。
 
-#### 使用阻塞队列进行流量控制
+## 使用阻塞队列进行流量控制
 
-JS 数组是一个可以 `push` 和 `pop` 的队列。但它对并发编程并不可好用。作为消费者，你如何知道队列何时不为空呢？这需要一种机制，允许消费者等待生产者。
+`JS` 数组是一个可以 `push` 和 `pop` 的队列。但它对并发编程并不可好用。作为消费者，你如何知道队列何时不为空呢？这需要一种机制，允许消费者等待生产者。
 
 这种机制可以在队列中实现！这就是为什么上面的伪代码使用 `await` 来从队列中消费数据。这被称为 `blocking queue`（阻塞队列），因为当队列为空时，消费者会被阻塞。
 
-此外，反压（backpressure）要求队列的容量是有边界的。这通过让生产者在队列满时发生阻塞来实现。与 Node.JS 中的 `Stream` API 相比，这消除了不强制要求反压的“陷阱”。
+此外，反压（backpressure）要求队列的容量是有边界的。这通过让生产者在队列满时发生阻塞来实现。与 `Node.JS` 中的 `Stream` API 相比，这消除了不强制要求反压的“陷阱”。
 
 ```typescript
 // 生产者和消费者都可以阻塞。
@@ -3939,14 +3648,14 @@ type Queue<T> = {
 
 `blocking queue` 不仅在生产者和消费者之间传递数据，还传递 `control`，这类似于 `mutex`。事实上，虽然传递数据很方便，但在并发编程中传递控制权是更基础的。
 
-#### 使用可关闭队列进行取消
+## 使用可关闭队列进行取消
 
 阻塞队列在阻塞行为上与 Unix 管道（pipe）相似。有一点不同：管道是可以被 `closed` 的！
 
 - 如果由生产者关闭，消费者将获得 `EOF`。
 - 如果由消费者关闭，生产者在写入时会收到错误。
 
-在并发编程中，有时你需要任务退出工作。例如，如果 WebSocket 在应用程序任务阻塞它（读取或写入）时被关闭，任务应该被唤醒（获取 `EOF` 或错误），而不是永远挂起。
+在并发编程中，有时你需要任务退出工作。例如，如果 `WebSocket` 在应用程序任务阻塞它（读取或写入）时被关闭，任务应该被唤醒（获取 `EOF` 或错误），而不是永远挂起。
 
 如果任务是队列的消费者，你可以在队列中放入特殊值来通知消费者退出。但对于等待队列的生产者来说，这并不容易。幸运的是，我们可以向 Unix 管道学习——添加一个 `close()` 方法来解除所有生产者和消费者的阻塞。
 
@@ -3962,7 +3671,7 @@ type Queue<T> = {
 
 我们可以向生产者抛出异常并向消费者返回 null，模拟关闭的管道。
 
-#### 阻塞队列作为同步原语
+## 阻塞队列作为同步原语
 
 同步原语是用于阻塞和解除阻塞任务（传递控制权）的东西。
 
@@ -3973,15 +3682,11 @@ type Queue<T> = {
 - `Condition variable`。
 - `Event`。
 
-除了传统的同步原语之外，Golang 还采用 `channel` 作为其主要的同步原语，它与我们讨论的阻塞队列非常相似。
+除了传统的同步原语之外，`Golang` 还采用 `channel` 作为其主要的同步原语，它与我们讨论的阻塞队列非常相似。
 
+`Node.JS` 并不包含这些同步原语，并发问题通常被掩盖在大量的回调中。幸运的是，随着 `async/await` 的加入，这些原语可以复制到 `JS` 中。但我们必须先使用 promises 和回调创建它们。
 
-
-
-
-Node.JS 并不包含这些同步原语，并发问题通常被掩盖在大量的回调中。幸运的是，随着 `async/await` 的加入，这些原语可以复制到 JS 中。但我们必须先使用 promises 和回调创建它们。
-
-### 步骤 1：分析问题
+## 步骤 1：分析问题
 
 考虑一个仅具有 `push` 和 `pop` 且没有缓冲能力的阻塞队列。该队列应该被多个生产者和多个消费者使用，这比生成器更通用。
 
@@ -4002,7 +3707,7 @@ type Queue<T> = {
 - 它要么存储一个回调来等待生产者，
 - 或者调用正在等待的生产者的回调。
 
-### 步骤 2：Push 和 Pop
+## 步骤 2：Push 和 Pop
 
 可能会有多个等待中的生产者或消费者，因此我们需要在列表中存储它们的回调。
 
@@ -4039,7 +3744,7 @@ function createQueue<T>(): Queue<T> {
         }
       });
     },
-    popFront: Promise<T> => {
+    popFront: () => Promise<T> {
       return new Promise<T>((take: Taker) => {
         if (producers.length) { // 生产者正在等待
           producers.shift()!(take);
@@ -4053,7 +3758,7 @@ function createQueue<T>(): Queue<T> {
 }
 ```
 
-### 步骤 3：关闭队列
+## 步骤 3：关闭队列
 
 `close()` 方法稍后会非常有用。
 
@@ -4088,7 +3793,7 @@ close: () => {
 }
 ```
 
-### 步骤 4：添加缓冲区
+## 步骤 4：添加缓冲区
 
 该队列对于我们的目的已经足够。对于其他某些情况，队列可能需要缓冲固定数量的项而不阻塞生产者。这留给你们作为一个练习。
 
@@ -4096,11 +3801,11 @@ close: () => {
 function createQueue<T>(capacity: number): Queue<T>;
 ```
 
-## WebSocket 服务器
+# WebSocket 服务器
 
-### 步骤 1：设计消息接口
+## 步骤 1：设计消息接口
 
-WebSocket 消息在应用中表示为 `WSMsg` 类型。负载数据使用 `read()` 函数进行，类似于 `BodyReader` 接口，支持任意大小的消息并实时接收数据。
+`WebSocket` 消息在应用中表示为 `WSMsg` 类型。负载数据使用 `read()` 函数进行，类似于 `BodyReader` 接口，支持任意大小的消息并实时接收数据。
 
 ```typescript
 const WS_DATA_TEXT = 0x01;
@@ -4116,7 +3821,7 @@ type WSMsg = {
 
 虽然 `read()` 函数不需要将整个消息都存储在内存中，但它确实有一个缺点：应用程序必须确保消息数据被消费，否则下一帧将无法解析。
 
-### 步骤 2：设计应用接口
+## 步骤 2：设计应用接口
 
 `WSServer` 是用于发送和接收数据消息的应用接口。
 
@@ -4135,7 +3840,7 @@ type WSServer = {
 
 你也可以使用回调来传递消息而不是主动读取它们。但这会让背压（backpressure）变得不明显，因为你还需要 `pause()` 和 `resume()` 方法。这就是为什么我们早期就放弃了基于回调的 IO。
 
-### 步骤 3：设计服务器任务
+## 步骤 3：设计服务器任务
 
 与请求-响应模式不同，发送和接收是独立的。因此，我们需要：
 
@@ -4145,11 +3850,12 @@ type WSServer = {
 这两个任务与应用任务并发运行。使用两个队列连接这两个任务与应用（发送和接收）。另一个队列用于连接 `wsServerSend()` 到 socket。
 
 `App <= qrecv (Queue) <= wsServerRecv <= reqBody (BodyReader)`
+
 `App => qsend (Queue) => wsServerSend => qsock (Queue) => resBody (BodyReader)`
 
-可能会有多个应用任务通过单个 WebSocket 产生或消费数据，但读取和写入 socket 的任务必须是顺序的。这是一个通过传递数据解决并发问题的示例。
+可能会有多个应用任务通过单个 `WebSocket` 产生或消费数据，但读取和写入 socket 的任务必须是顺序的。这是一个通过传递数据解决并发问题的示例。
 
-### 步骤 4：启动服务器任务
+## 步骤 4：启动服务器任务
 
 让我们为上一步步骤编写代码。
 
@@ -4190,17 +3896,7 @@ function createWSServer(reqBody: BodyReader): [WSServer, BodyReader] {
 
 注册在 promise 上的 `finally()` 回调行为类似于 `try-finally` 块。这用于关闭队列，以便任务不会永远挂在队列中。
 
-
-
-
-注意：如果你没有 `await` 一个异步函数，那么使用 `catch()` 回调来捕获异常是关重要的，否则你的程序将会崩溃。在这种情况下，我们简单地记录了并忽略了异常，但有时你需要传播错误。
-
-[报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
-
-121
-2024-02-02
-
-# 13. WebSocket 与并发
+注意：如果你没有 `await` 一个异步函数，那么使用 `catch()` 回调来捕获异常是关键的，否则你的程序将会崩溃。在这种情况下，我们简单地记录了并忽略了异常，但有时你需要传播错误。
 
 ## 第 5 步：向 Socket 消息
 
@@ -4223,8 +3919,9 @@ async function wsServerSend(
 ```
 
 注意这与使用 Unix 管道有多么相似：
-• 输入和输出的统一接口。
-• 可组合性。
+
+- 输入和输出的统一接口。
+- 可组合性。
 
 ## 第 6 步：从 Socket 解析帧
 
@@ -4237,6 +3934,8 @@ async function wsServerRecv(
 ```
 
 我们将使用另一个队列将帧数据发送到 `WSMsg` 的 `read()` 函数中。
+
+
 
 ```javascript
 // 创建一个 WSMsg
@@ -4252,8 +3951,10 @@ await qrecv.pushBack(msg);
 [报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
 
 122
+
 2024-02-02
-13. WebSocket 与并发
+
+# 13. WebSocket 与并发
 
 一个数据消息可以跨越多个帧，因此我们需要在循环之外存储队列，并在更多帧到达时馈送队列。请记住在设置 `FIN` 标志或退出循环时，确保队列已关闭。
 
@@ -4273,7 +3974,7 @@ try {
 
 ## 第 7 步：与 HTTP 服务器集成
 
-请求要么作为 WebSocket 处理，要么作为 HTTP 请求处理。这在 `getWSApp()` 中决决定，它返回一个应用逻辑函数或 null。
+请求要么作为 WebSocket 处理，要么作为 HTTP 请求处理。这在 `getWSApp()` 中决定，它返回一个应用逻辑函数或 null。
 
 ```javascript
 type WSApplication = (ws: WSServer) => Promise<void>;
@@ -4282,9 +3983,10 @@ function getWSApp(req: HTTPReq): null|WSApplication
 ```
 
 WebSockets 的处理方式不同：
-• 请求由 `handleWS()` 处理，它调用应用函数。
-• socket 的其余部分数据将传递给协议，而不通过 `readerFromEOF()` 函数进行进一步处理。
-• 响应直接写入 socket。因此，不要用响应压缩、额外的标头字段和分块编码来搞乱它。
+
+- 请求由 `handleWS()` 处理，它调用应用函数。
+- socket 的其余部分数据将传递给协议，而不通过 `readerFromEOF()` 函数进行进一步处理。
+- 响应直接写入 socket。因此，不要用响应压缩、额外的标头字段和分块编码来搞乱它。
 
 ```javascript
 // 处理消息并发送响应
@@ -4296,8 +3998,10 @@ const wsapp: null|WSApplication = getWSApp(msg);
 [报告错误 | 提问](https://forms.gle/UKo4bncUnuMGBrTM7) @ [build-your-own.org](https://build-your-own.org)
 
 123
+
 2024-02-02
-13. WebSocket 与并发
+
+# 13. WebSocket 与并发
 
 ```javascript
 if (wsapp) {
@@ -4328,9 +4032,10 @@ if (msg.version === '1.0' || wsapp) {
 ```
 
 `handleWS()` 函数将这一切整合在一起：
-• 启动任务处理协议。
-• 启动应用任务。
-• 返回 Upgrade 标头。
+
+- 启动任务处理协议。
+- 启动应用任务。
+- 返回 Upgrade 标头。
 
 ```javascript
 async function handleWS(
@@ -4356,8 +4061,9 @@ async function handleWS(
 ## 第 8 步：测试与调试
 
 使用浏览器创建 WebSocket。记得使用数据抓包工具。Wireshark 可以拆解帧，所以你可以
-• 学习帧的正确格式。
-• 查看你生成的帧存在什么问题。
+
+- 学习帧的正确格式。
+- 查看你生成的帧存在什么问题。
 
 ## 13.6 讨论：浏览器中的 WebSocket
 
@@ -4372,18 +4078,23 @@ WebSocket 在客户端和服务器的功能上是对称的。因此应用接口 
 存在另一种 API 设计[8](https://developer.chrome.com/docs/capabilities/web-apis/websocketstream) 使用 `async/await` 进行读写，这是我们采取的方向。
 
 [6] https://developer.mozilla.org/en-US/docs/Web/API/message_event
+
 [7] https://developer.mozilla.org/en-US/docs/Web/API/send
+
 [8] https://developer.chrome.com/docs/capabilities/web-apis/websocketstream
 
 125
+
 2024-02-02
-13. WebSocket 与并发
+
+# 13. WebSocket 与并发
 
 ### 应用层背压
 
 缺少背压可能是网络编程中的第二大错误。但即使浏览器中无法实现背压，应用程序也可以在更高层实现：
-• 消费者向生产者确认已处理的消息。
-• 生产者根据确认信息来实现流量控制。
+
+- 消费者向生产者确认已处理的消息。
+- 生产者根据确认信息来实现流量控制。
 
 运行在 WebSocket 之上的消息协议可以实现背压，例如 [RSocket[9](https://rsocket.io/about/protocol#flow-control)].](#index_split_001.html#p131)
 
@@ -4396,19 +4107,15 @@ WebSocket 在客户端和服务器的功能上是对称的。因此应用接口 
 ## 13.7 结论：我们学到了什么
 
 自基础 HTTP 服务器以来重要的主题：
-• HTTP 语义：
 
-
-
-
-
-- Content-Length 与分块传输编码。
-- 范围请求（Range requests）。
-- 缓存。
-- 压缩。
-- 基于所有权的手动资源管理。
-- Buffer 使用技巧。
-- 生产者-消费者问题和背压的抽象：
+- HTTP 语义：
+  - Content-Length 与分块传输编码。
+  - 范围请求（Range requests）。
+  - 缓存。
+  - 压缩。
+  - 基于所有权的手动资源管理。
+  - Buffer 使用技巧。
+  - 生产者-消费者问题和背压的抽象：
     - 生成器（Generators）。
     - 流（Streams）。
     - 阻塞队列（Blocking queues）。
@@ -4441,255 +4148,269 @@ WebSocket 在客户端和服务器的功能上是对称的。因此应用接口 
 - [封面]
 - [目录]
 - [01. 引言]
-    - [1.1 为什么要编写 Web 服务器?]
-        - 网络编程
-        - 协议与通信
-        - 深入理解 HTTP
-    - [1.2 从零开始构建你的 X]
-    - [1.3 本书]
-        - 以项目为中心
-        - 章节末尾
-        - Node.js 和 TypeScript
-        - 系列书籍
+  - [1.1 为什么要编写 Web 服务器?]
+    - 网络编程
+    - 协议与通信
+    - 深入理解 HTTP
+  - [1.2 从零开始构建你的 X]
+  - [1.3 本书]
+    - 以项目为中心
+    - 章节末尾
+    - Node.js 和 TypeScript
+    - 系列书籍
 - [02. HTTP 概览]
-    - [2.1 概述]
-    - [2.2 示例说明 HTTP]
-    - [2.3 HTTP 的演进]
-        - HTTP/1.0：原型
-        - HTTP/1.1：生产就绪且易于理解
-        - HTTP/2：新功能
-        - HTTP/3：更大的雄心
-    - [2.4 命令行工具]
+  - [2.1 概述]
+  - [2.2 示例说明 HTTP]
+  - [2.3 HTTP 的演进]
+    - HTTP/1.0：原型
+    - HTTP/1.1：生产就绪且易于理解
+    - HTTP/2：新功能
+    - HTTP/3：更大的雄心
+  - [2.4 命令行工具]
 - [03. 编写一个 TCP 服务器]
-    - [3.1 TCP 快速回顾]
-        - 协议分层
-        - TCP 字节流 vs 数据包
-        - 字节流 vs 数据包：以 DNS 为例
-        - TCP 通过握手开始
-        - TCP 是双向全双工的
-        - TCP 通过两次握手结束
-    - [3.2 Socket 原始语]
-        - 通过不透明句柄应用 Socket
-        - 监听 Socket (Listening Socket) 与连接 Socket (Connection Socket)
-        - 传输结束
-        - Socket 原始语列表
-    - [3.3 Node.js 中的 Socket API]
-        - 步骤 1：创建一个监听 Socket
-        - 步骤 2：接受新连接
-        - 步骤 3：错误处理
-        - 步骤 4：读与写
-        - 步骤 5：关闭连接
-        - 步骤 6：测试它
-    - [3.4 讨论：半开连接]
-    - [3.5 讨论：事件循环与并发]
-        - JS 代码在事件循环中运行
-        - JS 代码与运行时共享单个操作系统线程
-        - Node.JS 中的并发是基于事件的
-    - [3.6 讨论：异步 vs. 同步]
-        - 阻塞与非阻塞 IO
-        - Node.js 中的 IO 是异步的
-        - 网络编程之外的事件驱动编程
-    - [3.7 讨论：基于 Promise 的 IO]
+  - [3.1 TCP 快速回顾]
+    - 协议分层
+    - TCP 字节流 vs 数据包
+    - 字节流 vs 数据包：以 DNS 为例
+    - TCP 通过握手开始
+    - TCP 是双向全双工的
+    - TCP 通过两次握手结束
+  - [3.2 Socket 原始语]
+    - 通过不透明句柄应用 Socket
+    - 监听 Socket (Listening Socket) 与连接 Socket (Connection Socket)
+    - 传输结束
+    - Socket 原始语列表
+  - [3.3 Node.js 中的 Socket API]
+    - 步骤 1：创建一个监听 Socket
+    - 步骤 2：接受新连接
+    - 步骤 3：错误处理
+    - 步骤 4：读与写
+    - 步骤 5：关闭连接
+    - 步骤 6：测试它
+  - [3.4 讨论：半开连接]
+  - [3.5 讨论：事件循环与并发]
+    - JS 代码在事件循环中运行
+    - JS 代码与运行时共享单个操作系统线程
+    - Node.JS 中的并发是基于事件的
+  - [3.6 讨论：异步 vs. 同步]
+    - 阻塞与非阻塞 IO
+    - Node.js 中的 IO 是异步的
+    - 网络编程之外的事件驱动编程
+  - [3.7 讨论：基于 Promise 的 IO]
 - [04. Promise 与事件]
-    - [4.1 async 和 await 简介]
-        - 使用回调函数
-        - 使用 Promise 和 await
-        - 创建 Promise
-    - [4.2 理解 async 和 await]
-        - 普通函数通过 `return` 将控制权交给运行时
-        - async 函数通过 `await` 将控制权交给运行时
-        - 调用 async 函数启动新任务
-    - [4.3 从事件到 Promise]
-        - 步骤 1：分析解决方案
-        - 步骤 2：处理 'data' 事件
-        - 步骤 3：处理 'end' 和 'error' 事件
-        - 步骤 4：写入 Socket
-    - [4.4 使用 async 和 await]
-    - [4.5 讨论：背压]
-        - 等待 Socket 写入完成
-        - 生产者被消费者限制颈
-        - TCP 中的背压：流量控制
-        - 应用之间的背压
-        - 无界队列是陷阱 (Footguns)
-    - [4.6 讨论：事件与有序执行]
-    - [4.7 结论：Promise vs. 回调]
+  - [4.1 async 和 await 简介]
+    - 使用回调函数
+    - 使用 Promise 和 await
+    - 创建 Promise
+  - [4.2 理解 async 和 await]
+    - 普通函数通过 `return` 将控制权交给运行时
+    - async 函数通过 `await` 将控制权交给运行时
+    - 调用 async 函数启动新任务
+  - [4.3 从事件到 Promise]
+    - 步骤 1：分析解决方案
+    - 步骤 2：处理 'data' 事件
+    - 步骤 3：处理 'end' 和 'error' 事件
+    - 步骤 4：写入 Socket
+  - [4.4 使用 async 和 await]
+  - [4.5 讨论：背压]
+    - 等待 Socket 写入完成
+    - 生产者被消费者限制颈
+    - TCP 中的背压：流量控制
+    - 应用之间的背压
+    - 无界队列是陷阱 (Footguns)
+  - [4.6 讨论：事件与有序执行]
+  - [4.7 结论：Promise vs. 回调]
 - [05. 一个简单的网络协议]
-    - [5.1 消息回显服务器]
-    - [5.2 动态 Buffer]
-        - 动态缓冲区的需求
-        - 编写动态 Buffer
-    - [5.3 实现消息协议]
-        - 步骤 1：服务器循环
-        - 步骤 2：拆分消息
-        - 步骤 3：处理请求
-    - [5.4 讨论：流水线请求 (Pipelined Requests)]
-        - 通过流水线请求减少延迟
-        - 支持流水线请求
-        - 流水线导致的死锁
-    - [5.5 讨论：更智能的 Buffer]
-        - 从头部移除数据
-        - 使用固定大小 Buffer 而无需重新分配
-    - [5.6 结论：网络编程基础]
+  - [5.1 消息回显服务器]
+  - [5.2 动态 Buffer]
+    - 动态缓冲区的需求
+    - 编写动态 Buffer
+  - [5.3 实现消息协议]
+    - 步骤 1：服务器循环
+    - 步骤 2：拆分消息
+    - 步骤 3：处理请求
+  - [5.4 讨论：流水线请求 (Pipelined Requests)]
+    - 通过流水线请求减少延迟
+    - 支持流水线请求
+    - 流水线导致的死锁
+  - [5.5 讨论：更智能的 Buffer]
+    - 从头部移除数据
+    - 使用固定大小 Buffer 而无需重新分配
+  - [5.6 结论：网络编程基础]
 - [06. HTTP 语义与语法]
-    - [6.1 高层结构]
-    - [6.2 Content-Length]
-        - HTTP Header 的长度
-        - HTTP Body 的长度
-    - [6.3 分块传输编码]
-        - 随地生成并发送数据
-        - 协议的另一层
+  - [6.1 高层结构]
+  - [6.2 Content-Length]
+    - HTTP Header 的长度
+    - HTTP Body 的长度
+  - [6.3 分块传输编码]
+    - 随地生成并发送数据
+    - 协议的另一层
+  - [6.4 HTTP 中的歧义]
+    - 消息体长度的理想情况
+    - 注意异常情况
+  - [6.5 HTTP 消息格式]
+    - 学习 BNF 语言
+    - HTTP 头部字段
+  - [6.6 常见头部字段]
+  - [6.7 HTTP 方法]
+    - 只读方法
+    - 可缓存性
+    - CRUD 与资源
+    - 等幂性
+    - HTTP 方法对比
+  - [6.8 讨论：文本 vs. 二进制]
+    - 文本通常具有歧义性
+    - 文本处理更容易且容易出错
+  - [6.9 讨论：分隔符]
+    - 分隔符数据中的序列化错误
+    - 二进制协议中的长度前缀数据
+- [07. 代码：一个基础 HTTP 服务器]
+  - [7.1 开始编码]
+    - 步骤 1：类型与结构
+    - 步骤 2：服务器循环
+    - 步骤 3：拆分头部
+    - 步骤 4：解析头部
+    - 步骤 5：读取正体
+    - 步骤 6：请求处理器
+    - 步骤 7：发送响应
+    - 步骤 8：回顾服务器循环
+  - [7.2 测试]
+    - 大尺寸 HTTP 消息
+    - 连接复用与管道化
+  - [7.3 讨论：Nagle 算法]
+    - 优化：合并小规模写入
+    - 过早优化
+    - 人在实践中的实际做法
+  - [7.4 讨论：缓冲写入器]
+    - 替代方案：让缓冲变为半透明
+    - 替代方案：添加缓冲封装
+- [08. 动态内容与流式传输]
+  - [8.1 分块传输编码]
+    - 分块消息格式
+    - 冷门的 HTTP 特性
+  - [8.2 生成分块响应]
+  - [8.3 JS 生成器]
+    - 生产者、消费者与队列
+    - 作为生产者的 JS 生成器
+    - 从 JS 生成器消费数据
+  - [8.4 读取分块请求]
+    - 作为生产者的解析器
+    - 解码格式
+    - 分块编码产生字节流
+  - [8.5 讨论：使用数据包捕获调试]
+    - 使用 `tcpdump` 捕获并检查数据
+    - 使用 `Wireshark` 分析数据包
+    - 使用 `ngrep` 搜索数据包
+  - [8.6 讨论：WebSocket]
+    - 轮询更新
+    - 实时推送
+    - WebSocket 是基于消息的
+    - WebSocket 不是请求-响应模式
+- [09. 文件 IO 与资源管理]
+  - [9.1 `Node.JS` 中的文件 IO]
+  - [9.2 提供文件服务]
+    - 步骤 0：为静态文件添加处理器
+    - 步骤 1：打开与关闭文件
+    - 步骤 2：`stat()` 文件
 
 
 
+# 9.3 讨论：手动资源管理
 
-# 分块（Chunks）并非消息
+## 资源由某些对象所有
 
-## 6.4 HTTP 中的歧义
-### 消息体长度的理想情况
-### 注意异常情况
+## 资源由函数或作用域所有
 
-## 6.5 HTTP 消息格式
-### 学习 BNF 语言
-### HTTP 头部字段
+## 所有权可以转移
 
-## 6.6 常见头部字段
+## 所有者是链式结构
 
-## 6.7 HTTP 方法
-### 只读方法
-### 可缓存性
-### CRUD 与资源
-### 等幂性
-### HTTP 方法对比
+## 如何在生成器中进行清理
 
-## 6.8 讨论：文本 vs. 二进制
-### 文本通常具有歧义性
-### 文本处理更容易且容易出错
+# 9.4 讨论：复用缓冲区
 
-## 6.9 讨论：分隔符
-### 分隔符数据中的序列化错误
-## 二进制协议中的长度前缀数据
+## 缓冲区分配存在成本
 
-# 07. 代码：一个基础 HTTP 服务器
-## 7.1 开始编码
-### 步骤 1：类型与结构
-### 步骤 2：服务器循环
-### 步骤 3：拆分头部
-### 步骤 4：解析头部
-### 步骤 5：读取正体
-### 步骤 6：请求处理器
-### 步骤 7：发送响应
-### 步骤 8：回顾服务器循环
+## 使用未初始化的缓冲区
 
-## 7.2 测试
-### 大尺寸 HTTP 消息
-### 连接复用与管道化
+## 复用大缓冲区
 
-## 7.3 讨论：Nagle 算法
-### 优化：合并小规模写入
-### 过早优化
-### 人在实践中的实际做法
+## 池化缓冲区
 
-## 7.4 讨论：缓冲写入器
-### 替代方案：让缓冲变为半透明
-### 替代方案：添加缓冲封装
+## 复用缓冲区时注意生命周期
 
-# 08. 动态内容与流式传输
-## 8.1 分块传输编码
-### 分块消息格式
-### 冷门的 HTTP 特性
+# 10. 范围请求
 
-## 8.2 生成分块响应
-
-## 8.3 JS 生成器
-### 生产者、消费者与队列
-### 作为生产者的 JS 生成器
-### 从 JS 生成器消费数据
-
-## 8.4 读取分块请求
-### 作为生产者的解析器
-### 解码格式
-### 分块编码产生字节流
-
-## 8.5 讨论：使用数据包捕获调试
-### 使用 `tcpdump` 捕获并检查数据
-### 使用 `Wireshark` 分析数据包
-### 使用 `ngrep` 搜索数据包
-
-## 8.6 讨论：WebSocket
-### 轮询更新
-### 实时推送
-### WebSocket 是基于消息的
-### WebSocket 不是请求-响应模式
-
-# 09. 文件 IO 与资源管理
-## 9.1 `Node.JS` 中的文件 IO 
-## 9.2 提供文件服务
-### 步骤 0：为静态文件添加处理器
-### 步骤 1：打开与关闭文件
-### 步骤 2：`stat()` 文件
-### 步骤 3：构建 `BodyReader`
-### 步骤 4：确保文件已关闭
-
-## 9.3 讨论：手动资源管理
-### 资源由某些对象所有
-### 资源由函数或作用域所有
-### 所有权可以转移
-### 所有者是链式结构
-### 如何在生成器中进行清理
-
-## 9.4 讨论：复用缓冲区
-### 缓冲区分配存在成本
-### 使用未初始化的缓冲区
-### 复用大缓冲区
-### 池化缓冲区
-### 复用缓冲区时注意生命周期
-
-# 10. 范围请求（Range Requests）
 ## 10.1 范围请求的工作原理
+
 ### `Range` 头部字段语法
+
 ### 有效范围及示例
+
 ### 范围请求是可选的
+
 ### 206 表示范围响应
+
 ### `Content-Range` 返回有效范围
+
 ### 宣告支持 `Range`
+
 ### 使用 `HEAD` 方法进行探测
+
 ### 使用多部分消息处理多个范围
+
 ### 讨论：多部分消息在技术上有必要吗？
+
 ### 客户端可能的场景
 
 ## 10.2 实现范围请求
-### 步骤 1：解析 Range 头部字段
+
+### 步骤 1：解析 `Range` 头部字段
+
 ### 步骤 2：读取文件部分
+
 ### 步骤 3：生成范围响应
+
 ### 步骤 4：添加 `HEAD` 方法
 
 # 11. HTTP 缓存
+
 ## 11.1 缓存校验器
+
 ### 通过时间验证
+
 ### 通过 `ETag` 验证
+
 ### 针对范围请求验证
+
 ### 校验头部总结
+
 ### 实现时间验证器
 
 ## 11.2 讨论：服务端缓存控制
+
 ### 何时重新验证缓存
+
 ### 控制 TTL（生存时间）
+
 ### 让客户端始终检查服务器
+
 ### 防止缓存
+
 ### 减少有效验证
+
 ### 启发式缓存
+
 ### 非客户端缓存
 
+## 共享与私有缓存
 
+## 云端缓存
 
+# 12. 压缩与 Stream API
 
+## 12.1 HTTP 压缩的工作原理
 
-# 共享与私有缓存
-# 云端缓存
-
-## 12. 压缩与 Stream API
-
-### 12.1 HTTP 压缩的工作原理
 - 通过 `Accept-Encoding` 进行协商
 - 使用 `Content-Encoding` 压缩
 - 压缩与 `Content-Length`
@@ -4698,18 +4419,21 @@ WebSocket 在客户端和服务器的功能上是对称的。因此应用接口 
 - 压缩与 Range 请求
 - 使用 `Transfer-Encoding` 压缩
 
-### 12.2 使用 Pipes 进行数据处理
+## 12.2 使用 Pipes 进行数据处理
+
 - 数据处理与 IO
 - Unix Pipes 用于组合的数据处理器
 - 抽象 Pipes
 
-### 12.3 在 Node.JS 中探索 Stream API
+## 12.3 在 Node.JS 中探索 Stream API
+
 - Stream 接口列表
 - 在 Stream 接口上使用 Pipes
 
-### 12.4 实现 HTTP 压缩
+## 12.4 实现 HTTP 压缩
+
 - 第 1 步：检查头部字段并启用压缩
-- 第 2 步：理解不使用 Pipes 的陷阱（Gotchas）
+- 第 2 步：理解不使用 Pipes 的陷阱
 - 第 3 步：实现 `stream.Readable`
 - 第 4 步：创建一个 Pipe
 - 第 5 步：从 `stream.Readable` 中读取数据
@@ -4718,54 +4442,83 @@ WebSocket 在客户端和服务器的功能上是对称的。因此应用接口 
 
 ## 12.5 讨论：重构为 Stream
 
-### 12.6 讨论：高水位（High Water Mark）
+## 12.6 讨论：高水位
+
 - 单队列
-- 基于高水位的背压（Backpressure）
+- 基于高水位的背压
 - 使用队列进行批处理
 - Node.JS 中的高水位
 
-## 13. WebSocket 与并发
+# 13. WebSocket 与并发
 
 ## 13.1 建立 WebSocket
-- 概述
-- 从 HTTP 升级
-- 握手
-- 头部字段
 
-### 13.2 WebSocket 协议
-- 帧格式（Frame Format）
-- 帧类型
-- 分段消息
+### 概述
 
-### 13.3 并发编程简介
-- 竞态条件
-- 原子操作
-- 使用互斥锁（Mutexes）互斥
-- 使用队列多复用
-- 使用队列流控
-- 使用队列实现取消
-- 阻塞队列作为同步原语
+### 从 HTTP 升级
 
-### 13.4 编写阻塞队列
-- 第 1 步：分析问题
-- 第 2 步：推送（Push）与弹出（Pop）
-- 第 3 步：关闭队列
-- 第 4 步：添加缓冲区
+### 握手
 
-### 13.5 WebSocket 服务器
-- 第 1 步：设计消息接口
-- 第 2 步：设计服务器应用接口
-- 第 3 步：设计服务器任务
-- 第 4 步：启动服务器任务
-- 第 5 步：向 Socket 消息
-- 第 6 步：从 Socket 解析帧
-- 第 7 步：与 HTTP 服务器集集成
-- 第 8 步：测试与调试
+### 头部字段
+
+## 13.2 WebSocket 协议
+
+### 帧格式
+
+### 帧类型
+
+### 分段消息
+
+## 13.3 并发编程简介
+
+### 竞态条件
+
+### 原子操作
+
+### 使用互斥锁互斥
+
+### 使用队列多复用
+
+### 使用队列流控
+
+### 使用队列实现取消
+
+### 阻塞队列作为同步原语
+
+## 13.4 编写阻塞队列
+
+### 第 1 步：分析问题
+
+### 第 2 步：推送与弹出
+
+### 第 3 步：关闭队列
+
+### 第 4 步：添加缓冲区
+
+## 13.5 WebSocket 服务器
+
+### 第 1 步：设计消息接口
+
+### 第 2 步：设计服务器应用接口
+
+### 第 3 步：设计服务器任务
+
+### 第 4 步：启动服务器任务
+
+### 第 5 步：向 Socket 消息
+
+### 第 6 步：从 Socket 解析帧
+
+### 第 7 步：与 HTTP 服务器集成
+
+### 第 8 步：测试与调试
 
 ## 13.6 讨论：浏览器中的 WebSocket
-- 浏览器中的 WebSocket 没有背压
-- 应用层背压
-- 消息大小限制
+
+### 浏览器中的 WebSocket 没有背压
+
+### 应用层背压
+
+### 消息大小限制
 
 ## 13.7 结论：我们学到了什么
-

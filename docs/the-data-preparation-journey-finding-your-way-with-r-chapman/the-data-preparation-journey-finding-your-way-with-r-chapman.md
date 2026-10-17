@@ -1,33 +1,33 @@
+
 # 数据准备之旅：R 找到你的方向
 
-# *前言*
+## 前言
 
 人们经常指出，帕累托原则¹适用于数据科学——80%的时间花在数据收集和准备上，其余20%花在建模、数据可视化和沟通等“有趣的事情”上。
 
 关于这20%的材料并不缺乏——教科书、期刊文章、博客文章、在线课程、播客等。这并不是说另外80%没有材料。但这些材料分散在各处，分布在特定技术的文章和特定领域的书籍中，还有 Stack Overflow 问题和各种博客文章。本书作为一本旅行指南：为那些寻求理解数据准备核心要素的读者，介绍并指引一些分散的资源。希望它像灯塔一样，既引导你朝正确的方向前进，又防止你搁浅。
 
-本书将介绍数据准备的原则，并将其置于遵循典型数据科学或统计工作流程的系统化方法中。在此背景下，读者将使用统计与数据科学编程语言 R 来实践解决数据问题的方案。这些方案将包括复杂真实数据的示例。
+本书将介绍数据准备的原则，并将其置于遵循典型数据科学或统计工作流程的系统化方法中。在此背景下，读者将使用统计与数据科学编程语言 `R` 来实践解决数据问题的方案。这些方案将包括复杂真实数据的示例。
 
 > 在《探索性数据分析》中，Tukey 写道：“数据分析者既需要工具，也需要理解。本书的目的就是提供这两者。”（Tukey, 1977, p.1）我谦逊地希望本书也能为你提供工具和理解。
 
-## 你，读者
+### 你，读者
 
 你可能是一位在物理科学、社会科学或人文学科工作的学者，正在（或将要）将数据分析作为研究的一部分。你可能在商业环境中工作，根据你从客户互动中收集的数据中得出的洞察来做出重要决策。作为一名公务员，你可能正在创建
 
 ¹ https://en.wikipedia.org/wiki/Pareto_principle
 
-
 证据是政府或其他公共机构用来为政策和项目决策提供信息。本书中描述的原则和实践无论在何种背景下都适用。
 
-假设本书的读者对 R（无论是 base 还是 tidyverse 或其他包）或支持该工作的另一种编程语言中的基本数据操作函数有实践性了解。如果您能够按变量中的特定值进行筛选并选择所需的列，了解字符字符串和数值（"1" 或 1）之间的区别，并且能够通过对其他变量的操作创建新变量，那么我们就开始了。
+假设本书的读者对 `R`（无论是 `base` 还是 `tidyverse` 或其他包）或支持该工作的另一种编程语言中的基本数据操作函数有实践性了解。如果您能够按变量中的特定值进行筛选并选择所需的列，了解字符字符串和数值（`"1"` 或 `1`）之间的区别，并且能够通过对其他变量的操作创建新变量，那么我们就开始了。
 
-本书在很大程度上依赖于 R Markdown，尤其是在描述文档和 tidyverse 包方面。熟悉两者将非常有帮助。
+本书在很大程度上依赖于 `R Markdown`，尤其是在描述文档和 `tidyverse` 包方面。熟悉两者将非常有帮助。
 
-如果您尚未掌握这些知识，我建议您学习 Hadley Wickham、Mine Çetinkaya-Rundel 和 Garrett Grolemund 合著的 *《R 数据科学（第2版）》*（Wickham et al., 2023b）。本书可在 [4ds.hadley.nz](https://r4ds.hadley.nz/) 免费获取，将为您提供良好的起点。
+如果您尚未掌握这些知识，我建议您学习 Hadley Wickham、Mine Çetinkaya-Rundel 和 Garrett Grolemund 合著的 *《R 数据科学（第2版）》*（Wickham et al., 2023b）。本书可在 [`https://r4ds.hadley.nz/`](https://r4ds.hadley.nz/) 免费获取，将为您提供良好的起点。
 
 虽然这里涵盖的一些主题可能与 *《R 数据科学》* 以及其他入门书籍和类似资源中出现的内容相似，但希望本书中的示例能提供更多背景并让您接触到更大的技术挑战。
 
-# Outline
+## Outline
 
 本书的前三章提供了一些基础，即数据准备过程中的要素，将有助于指导我们的思考和工作，包括数据文档（或记录保存）。
 
@@ -37,9 +37,9 @@
 
 最后 [第13章](#) 提供了简短的总结并提出了问题：“接下来去哪里？”
 
-²[https://r4ds.hadley.nz/](https://r4ds.hadley.nz/)
+²[`https://r4ds.hadley.nz/`](https://r4ds.hadley.nz/)
 
-# Acknowledgements
+## Acknowledgements
 
 我谨此感谢所有为书中引用的书籍、文章、博客文章和 R 包做出贡献的人。 同时感谢我在 MNP 的现任同事、在 BC Stats 的前任同事，以及在维多利亚大学商业智能与数据分析项目中的同事和学生。 这个社区中人们的热情——有些我很熟悉，有些则是我从未谋面的世界各地的人——帮助维持了我自己的兴趣，而没有这种兴趣，我就不会写这本书。
 
@@ -49,17 +49,18 @@
 
 最后，感谢我的家人对这个项目始终如一的热情。
 
-# Land Acknowledgement
+## Land Acknowledgement
 
 我怀着敬意承认 Lekwungen 语族人民，他们的传统领土是我生活和工作的地方，以及 Songhees、Esquimalt 和 W̱SÁNEĆ 人民，他们与这片土地的历史联系至今仍在延续。
 
-# Some important details
+## Some important details
 
-# License
+### License
 
 Martin Monkman[^3] 的此项作品采用知识共享署名-非商业性使用-禁止演绎 4.0 国际（CC BY-NC-ND 4.0）许可[^4] 许可。
 
 [^3]: https://github.com/MonkmanMH
+
 [^4]: https://creativecommons.org/licenses/by-nc-nd/4.0/
 
 ```
@@ -68,7 +69,7 @@ install.packages("bookdown")
 # devtools::install_github("rstudio/bookdown")
 ```
 
-# Cover image
+## Cover image
 
 封面图像是我家附近的一个路标：Fisgard 灯塔，标志着加拿大不列颠哥伦比亚省维多利亚市 Esquimalt 港的入口。 （位置：48.4307, -123.4477）
 
@@ -76,7 +77,7 @@ install.packages("bookdown")
 
 ![](img/b86622d1e9ca82b3cbec45faaffaaf26_15_0.png)
 
-# About the Author
+## About the Author
 
 我的职业简介写道：“Martin Monkman 拥有三十年的专业经验，通过从现有来源收集数据以及原始收集（包括调查），然后使用数据科学和统计方法生成理解，并通过报告和可视化传达这些信息，从而支持基于证据的政策和业务管理决策。”
 
@@ -90,23 +91,25 @@ install.packages("bookdown")
 
 ## Introduction
 
-## 1.1 The origin of data
+### 1.1 The origin of data
 
 数据正在激增，作为科学研究的一部分而被收集（无论是测量亚原子粒子还是早期宇宙中的星系，植物生长或动物的迁徙，人们的社会经济特征或他们在城市中生活和工作的地方），以及用于开展世界业务的工具。
 
 今天，关于 *你* 的数据可能在你以下情况下被收集：
 
 - 在咖啡馆买一杯咖啡。这至少会产生三种类型的数据：关于您点的饮料类型、通过奖励计划了解您的咖啡习惯，以及关于财务交易——这些数据由商店用于衡量销售额，由您用于管理个人预算。
-- 使用流媒体服务观看电影或收听音乐。服务提供商会建立关于您偏好的个人资料，然后可用于推荐您可能也会喜欢的内容。服务还可以使用所有订阅者的汇总数据来评估其平台上内容的成功程度，并向内容创作者付款。
-- 续期您的驾照。关于您的信息，如出生日期、身高、体重和当前地址会被记录下来，您随后可将其用作身份证明以验证您的身份。发证机构还可汇总使用数据来估计每月有多少人续期驾照，并经常（当然是安全地！）与其他机构共享数据。在不列颠哥伦比亚省，发证机构会将数据库中的部分内容，如您的当前地址，与省级选举机构共享，后者使用这些信息来维护省内合格选民的最新名单。（Elections BC, 2018，第 70 页）
-- 前往您的工作或学习地点，通过手机的移动来捕捉。汇总的位置和移动信息可用于多种目的，包括 GPS 系统用来指示区域
 
+- 使用流媒体服务观看电影或收听音乐。服务提供商会建立关于您偏好的个人资料，然后可用于推荐您可能也会喜欢的内容。服务还可以使用所有订阅者的汇总数据来评估其平台上内容的成功程度，并向内容创作者付款。
+
+- 续期您的驾照。关于您的信息，如出生日期、身高、体重和当前地址会被记录下来，您随后可将其用作身份证明以验证您的身份。发证机构还可汇总使用数据来估计每月有多少人续期驾照，并经常（当然是安全地！）与其他机构共享数据。在不列颠哥伦比亚省，发证机构会将数据库中的部分内容，如您的当前地址，与省级选举机构共享，后者使用这些信息来维护省内合格选民的最新名单。（Elections BC, 2018，第 70 页）
+
+- 前往您的工作或学习地点，通过手机的移动来捕捉。汇总的位置和移动信息可用于多种目的，包括 GPS 系统用来指示区域
 
 道路拥堵，或让您知道下一班公交车何时到达您所在的车站。
 
 - 参与调查问卷，或许会询问您对各个政党纲领及这些政党代表人士的看法。
 
-## 1.2 分析数据：数据科学流程
+### 1.2 分析数据：数据科学流程
 
 关于组织“数据驱动”好处的论述已有很多，当良好的数据分析带来更优决策时尤其如此。数据分析的应用场景毫无止境。在私营部门，企业可以通过分析来展开竞争（Davenport 和 Harris, 2007），其中包括零售商（Colson 等, 2017）和供应链管理（Ashton, 2018）。它同样可用于公共部门：在疫情期间，数据分析可以为公共卫生策略提供信息支持（Polonsky 等, 2019）。
 
@@ -120,24 +123,29 @@ install.packages("bookdown")
 
 通才型数据科学家在该工作流中会参与所有步骤（Monkman, 2019）；在本书中，我们将重点关注从“导入”到“整理”再到“转换”这些步骤。我们还将看到“可视化”如何成为探索性数据分析的重要部分，这是一种在清理数据之前识别数据潜在问题的策略。
 
-## 1.3 现实世界中的数据
+### 1.3 现实世界中的数据
 
-大多数数据科学和统计学教科书使用的示例数据集都格式规整、易于导入。安斯库姆四重奏（Anscombe, 1973）是一个著名的示例数据集，专为产生特定的统计结果而设计；它包含在 R 的基础版本中（R Core Team, 2021）。其他数据集可能是为用作教学示例而摘录的（Bryan, 2017），或是因其统计特性而被选用（Horst 等, 2022），或是作为展示某种方法论或技术的示例而编译（Kuhn, 2020），又或是用于清理、验证和汇总更大规模数据集合（Friendly 等, 2020）。
+大多数数据科学和统计学教科书使用的示例数据集都格式规整、易于导入。安斯库姆四重奏（Anscombe, 1973）是一个著名的示例数据集，专为产生特定的统计结果而设计；它包含在 `R` 的基础版本中（R Core Team, 2021）。其他数据集可能是为用作教学示例而摘录的（Bryan, 2017），或是因其统计特性而被选用（Horst 等, 2022），或是作为展示某种方法论或技术的示例而编译（Kuhn, 2020），又或是用于清理、验证和汇总更大规模数据集合（Friendly 等, 2020）。
 
 但在现实生活中，我们接触到的数据往往与这些教科书中的示例截然不同。
 
 > *课堂数据就像泰迪熊；真实数据则像一只嘴里滴着鲑鱼血的大灰熊¹。*
 
--   数据可能以不同格式存储——电子表格、数据库、特定软件的文件格式、网站和 PDF 文件。无论是什么文件格式，我们都需要有工具来访问这些数据。
--   数据可能以不整洁的布局存储（Wickham, 2014），或者结构不一致。
--   我们可能会收到来自多个来源的数据，因此最终会出现两个文件，它们具有相同的值，但编码方式不同。例如，我在加拿大的家乡省份可以被表示为“British Columbia”、“B.C.”或“BC”。这三种写法都是准确的，但如果这些变体在数据源之间不一致（甚至更成问题的是在同一变量中不一致），就会引发问题。更别提日期格式了——我们稍后再讨论。
--   数据可能存在尚未被发现的错误。它可能不完整、不一致，或者存在数据录入错误和拼写错误。
--   数据可能存在偏差……而且偏差有很多不同类型。
--   数据可能来自行政来源，并且是为研究以外的目的而收集的。在这些情况下，你可能需要转换该数据，以使其符合研究问题的要求。
+- 数据可能以不同格式存储——电子表格、数据库、特定软件的文件格式、网站和 PDF 文件。无论是什么文件格式，我们都需要有工具来访问这些数据。
+
+- 数据可能以不整洁的布局存储（Wickham, 2014），或者结构不一致。
+
+- 我们可能会收到来自多个来源的数据，因此最终会出现两个文件，它们具有相同的值，但编码方式不同。例如，我在加拿大的家乡省份可以被表示为“British Columbia”、“B.C.”或“BC”。这三种写法都是准确的，但如果这些变体在数据源之间不一致（甚至更成问题的是在同一变量中不一致），就会引发问题。更别提日期格式了——我们稍后再讨论。
+
+- 数据可能存在尚未被发现的错误。它可能不完整、不一致，或者存在数据录入错误和拼写错误。
+
+- 数据可能存在偏差……而且偏差有很多不同类型。
+
+- 数据可能来自行政来源，并且是为研究以外的目的而收集的。在这些情况下，你可能需要转换该数据，以使其符合研究问题的要求。
 
 本书将介绍必要的步骤，以确保你能以允许你开展数据科学流程其余部分的方式组装你的数据，包括与其他可能寻求在进一步分析中使用该数据的数据分析师共享数据。
 
-## 1.4 数据收集
+### 1.4 数据收集
 
 在我们开始数据科学工作流之前——在我们到达“导入”步骤之前——必须有人收集数据。本书不涉及数据收集的过程，这是一个既宽广又深入的课题。其中包括确定数据将支持的研究问题（或假设）或业务需求，设计要捕获的实验或业务流程（这两者都可能包括调查问卷），以及开展实验（包括实地工作）或实施业务数据收集。数据收集过程的细节往往是特定于领域的，因此我鼓励你去寻找针对你所选学科领域的参考资料。
 
@@ -146,11 +154,14 @@ install.packages("bookdown")
 本章内容：
 
 - 数据准备流程
+
 - 数据质量的原则，以及脏数据如何成为数据质量的一部分
+
 - 理解什么使数据“干净”或“脏”，以及为什么上下文很重要
+
 - 理解整洁数据的原则
 
-## 2.1 数据准备流程
+### 2.1 数据准备流程
 
 当我们开始数据准备之路时，首先应该思考我们想要达到的目标。
 
@@ -160,17 +171,22 @@ Ellis 和 Leek 的文章“如何共享数据进行协作”（Ellis 和 Leek, 2
 
 在数据准备阶段结束时，在可视化和建模开始之前，应当具备：
 
-## 2.2 数据质量
+### 2.2 数据质量
 
 数据准备过程的一部分是问：“数据的*质量*如何？”
 
 一个有助于构建你对此思考的参考资源是加拿大统计局的*《质量指南》*（Statistics Canada, 2019）。与世界各地其他官方统计机构一样，加拿大统计局的声音建立在向尽可能广泛的受众提供高质量数据之上。他们确定了数据质量的六个要素。
 
 - 相关性：数据满足用户需求并与用户关心的问题相关联的程度。
+
 - 及时性和准时性：信息参考期间与数据可用日期之间的延迟。
+
 - 准确性和可靠性：准确性“是信息正确描述其旨在衡量现象的程度。”
+
 - 可访问性和清晰度：“用户能够了解该信息（包括元数据）存在、找到它、查看它并将其导入自己的工作环境的难易程度。”
+
 - 可解释性：“正确解释和使用统计信息所需的补充信息和元数据的可用性。”
+
 - 一致性和可比性：“在广泛的分析框架内，随时间推移，该信息可以与其他统计信息可靠地组合和比较的程度。”
 
 在我们的数据准备过程中，我们希望确保自己的工作是可访问和可解释的；这正是文档化的动机。
@@ -178,33 +194,34 @@ Ellis 和 Leek 的文章“如何共享数据进行协作”（Ellis 和 Leek, 2
 另一种“数据质量”分类法见（Wang 等, 1995）。高质量的数据是：
 
 - 可访问的
+
 - 可解释的
+
 - 有用的
+
 - 可信的
-
-
-
-
 
 “脏数据”是指在*可信度*维度上有所欠缺的数据，具体而言，就是评估数据是否完整、一致和准确。需要特别指出的是，这些类别并非互斥；一个变量可能同时存在不一致和不准确的问题。
 
-## 完整
+#### 完整
 
 就我们的目的而言，“完整”是指每条记录中的各个值是否有缺失（内部完整性）。
 
 “完整”并不意味着总体中的每一个成员都出现在数据中。通过精心设计的样本，总体中的一个子集有可能提供关于该总体的准确度量。此外，我们也有可能判断这些记录是否准确地代表了整体。
 
-## 一致
+#### 一致
 
 如果相同的值以相同的方式被记录，我们就认为该度量是“一致”的。
 
 一致性的一些示例：
 
 - 单位一致。一个例子是温度，确保数值统一以摄氏度报告，而不是混用华氏度和开尔文。另一个例子可能是在面向国际受众的调查或表单中，受访者可能以本国货币填写薪水。
+
 - 拼写一致。我在加拿大的家乡省份是“British Columbia”，但经常被缩写为“B.C.”或“BC”。再想想美国薪资保障计划（PPP）申请中“Philadelphia”被拼写出的57种不同方式。（Au, 2020a）
+
 - 在某些情况下，数据收集的方式可能会引入记录值的差异。这可以适用于从科学仪器（如空气质量传感器）的变异性（Khreis et al., 2008），到人们对不同媒介进行的调查作出回应方式的差异（Abeysundera, 2015）（Holbrook et al., 2003）（St-Pierre and Béland, 2004）。
 
-## 准确
+#### 准确
 
 当我们说“准确”时，我们指的是数据中记录的值就是所测量的值。
 
@@ -212,15 +229,20 @@ Ellis 和 Leek 的文章“如何共享数据进行协作”（Ellis 和 Leek, 2
 
 - 使用默认（或哨兵）值，将其作为占位符插入以代替缺失或“未知”的值。这有时是数据收集或数据库软件的一部分，导致本应为“unknown”的值被输入为默认值。这可能是数据录入验证过程要求必须有输入（也就是说，字段必须有条目才能继续数据录入），或者要求特定格式（如日期格式）的输入所导致的后果。在这些情况下，哨兵值可能被输入进去，而不是显式的“NA”。
 
-  > 安全文献数据库 SafeLit Foundation 的主管 Lawrence Davis 博士……告诉我，“在美国大多数州，警方事故报告的质量充其量只能算勉强可用作研究工具。……数据质量检查很少进行，而当质量被评估时，也发现存在不足。例如，在路易斯安那州，20世纪80年代的大多数事故中，大部分乘员是出生于1950年1月1日的男性。几乎所有涉及事故的车辆都是1960年款。”但实际上并非如此。这些只是默认设置。（Perez, 2019, p.190）
+> 安全文献数据库 SafeLit Foundation 的主管 Lawrence Davis 博士……告诉我，“在美国大多数州，警方事故报告的质量充其量只能算勉强可用作研究工具。……数据质量检查很少进行，而当质量被评估时，也发现存在不足。例如，在路易斯安那州，20世纪80年代的大多数事故中，大部分乘员是出生于1950年1月1日的男性。几乎所有涉及事故的车辆都是1960年款。”但实际上并非如此。这些只是默认设置。（Perez, 2019, p.190）
 
 - 数据录入错误。最常见的可能是笔误，即输入了错误的值。另一种类型是我们所说的“变量错位错误”（即数值被移到了相邻的一列，这种情况在地址记录中屡见不鲜，比如城市名可能会出现在州/省那一列）。
+
 - 数值被软件自动转换。微软的 Excel 电子表格程序是其中最著名的，它会把许多非日期值转换为日期格式，并赋予新值来存储数据。例如，输入字符串“SEPT1”会被转换为当年的9月1日。有记载的证据表明，这种软件行为曾导致基因研究出现错误。（Zeeberg et al., 2004），（Abeysooriya et al., 2021）
+
 - 日期可能存储为数值（或“序列号”），表示从某个固定起点开始经过的天数——而该起点因操作系统而异。例如，Windows 版 Excel 使用1900年1月1日作为第一天，而早期的 Macintosh 电脑以及由此而来的 Macintosh 版 Excel 则使用1904年1月1日作为起始日期。因此，同一个日期会被存储为不同的值¹。（https://docs.microsoft.com/en-us/office/troubleshoot/excel/1900-and-1904-date-system）
 
-  1. “Excel 中1900和1904日期系统的区别”
+1. “Excel 中1900和1904日期系统的区别”
 
-- 矛盾。例如，假设同一个人被录入到两个数据库中，但当我们比较时发现出生日期不同，这可能是因为非 ISO8601 格式的录入：07-08-79 和 08-07-79 具有相同的数字，但一个可能是 mm-dd-yy，另一个可能是 dd-mm-yy……我们只是不知道哪个是正确的。或者是否有一个是笔误？
+
+
+- 矛盾。例如，假设同一个人被录入到两个数据库中，但当我们比较时发现出生日期不同，这可能是因为非 ISO8601 格式的录入：`07-08-79` 和 `08-07-79` 具有相同的数字，但一个可能是 `mm-dd-yy`，另一个可能是 `dd-mm-yy`……我们只是不知道哪个是正确的。或者是否有一个是笔误？
+
 - 文化无知（暂时找不到更好的术语）。
 
   > “Prawo Jazdy”被认为是一个波兰人名字，被爱尔兰警察（Garda Síochána）列在警方刑事数据库中，称其在爱尔兰犯下超过50起交通违规。一份2007年的备忘录指出，调查显示 prawo jazdy [pra.v jaz.d] 在波兰语中是“驾照”的意思，错误是由于警察在开具交通罚单时，将波兰驾照上印制的这个短语误认为是人名而造成的。（Wikipedia contributors, 2021）
@@ -233,7 +255,7 @@ Ellis 和 Leek 的文章“如何共享数据进行协作”（Ellis 和 Leek, 2
 - 每个观测值必须有一行。
 - 每个值必须有一个单元格。（Wickham, 2014）
 
-在许多情况下，要实现整洁结构可能需要使用 {tidyr} 包的 pivot_() 函数对数据进行重塑（Wickham, 2021b）。在其他情况下，数据中的每个单元格可能有多个变量，需要将其拆分（例如地址）为每个变量单独的列。
+在许多情况下，要实现整洁结构可能需要使用 `{tidyr}` 包的 `pivot_()` 函数对数据进行重塑（Wickham, 2021b）。在其他情况下，数据中的每个单元格可能有多个变量，需要将其拆分（例如地址）为每个变量单独的列。
 
 其他常见的不属于上述四大数据质量类别的结构性问题包括：
 
@@ -244,7 +266,7 @@ Ellis 和 Leek 的文章“如何共享数据进行协作”（Ellis 和 Leek, 2
 | Canada | 14,785,584 | 33,390,141 |
 | United States | 157,553,000 | 301,139,947 |
 
-更好的结构是设置一个“year”变量和另一个“population”变量。这种整洁结构还可以容纳这些年份内测量的其他变量，而不是在单独的表中显示。
+更好的结构是设置一个 `year` 变量和另一个 `population` 变量。这种整洁结构还可以容纳这些年份内测量的其他变量，而不是在单独的表中显示。
 
 | country | year | population | life expectancy |
 |---|---|---|---|
@@ -262,9 +284,6 @@ Ellis 和 Leek 的文章“如何共享数据进行协作”（Ellis 和 Leek, 2
 如果数据不符合我们的标准或质量要求，我们就需要清洗数据。这听起来似乎不太有趣。我们不是想成为数据科学家、商业智能专家或学术科学家，去发掘隐藏在数据中的洞见吗？我们不是想进行分析吗？
 
 有一种强有力的观点认为，数据清洗过程是分析过程的基本组成部分，或者相应的说法是：任何分析过程都需要数据清洗。
-
-
-
 
 Randy Au 曾写道：“数据清洗的行为会对数据施加价值观/判断/解释，这些数据旨在让下游分析算法能够运行并给出结果。这与进行数据分析完全相同。事实上，‘清洗’只是走向完整数据分析过程中的一系列可复用数据转换。”（Au, 2020a）
 
@@ -356,16 +375,13 @@ Knuth 写道：“让我们改变对程序构建的传统态度：不要想象�
 
 在笔记中使用平实的语言也能促使你再次思考刚刚编写的代码。向想象中的未来读者（或你的橡皮鸭）解释代码，可能会帮助你找到更好的代码编写方式。
 
-
-
-
 ### 3.3.2 指令列表
 
 指令列表是一种描述性文本，用来描述各部分代码在做什么。
 
 在《如何共享数据进行协作》中，Ellis 和 Leek（Ellis and Leek, 2017）提出，代码功能的高层级概要至关重要。以下是对他们前两个步骤的改写：
 
-- 步骤 1：获取原始数据文件，使用参数 $a = 1, b = 2$ 运行汇总代码
+- 步骤 1：获取原始数据文件，使用参数 `$a = 1, b = 2$` 运行汇总代码
 - 步骤 2：分别对每个样本运行代码
 
 接下来应用 Knuth 的“文学编程”（Literate Programming）理念，每一步后面都应该紧跟着实现该步骤的代码。R Markdown 格式非常适合这类工作；文本描述后面可以跟一段 R 代码，然后再跟另一对文本描述/R 代码块，以此类推。
@@ -429,7 +445,7 @@ head(gapminder_gdp)
 ## 6 Australia      0.704
 ```
 
-最后，使用 {gt} 包创建表格并设置其格式（Iannone et al., 2023）
+最后，使用 `{gt}` 包创建表格并设置其格式（Iannone et al., 2023）
 
 ```
 gapminder_gdp |>
@@ -467,7 +483,7 @@ gapminder_gdp |>
 | 意大利 | 1.66 |
 | 墨西哥 | 1.30 |
 
-来源：{gapminder} 包
+来源：`{gapminder}` 包
 
 ```
 # note: other table formatting to consider:
@@ -534,27 +550,26 @@ SFBrigade 是一个旧金山的志愿者公民科技组织，它为他们的项�
 
 - 1. 告诉他们它是什么（结合上下文）。
 - 2. 向他们展示它在实际使用中的样子。
+
+
+
 - 3. 向他们展示如何使用它。
 - 4. 告诉他们任何其他相关细节。
 
-一个例子是 R 包 {palmerpenguins}，它在 GitHub 页面上有一个全面的 README。³
+一个例子是 R 包 `{palmerpenguins}`，它在 GitHub 页面上有一个全面的 README。³
 
 ### 3.4.2 记录目录结构
 
-你的文档（可能作为 README 文件的一部分）可以包含一张显示目录结构的图。{fs} 包（Hester et al., 2020）有一个函数 dir_tree()，它可以生成项目文件夹中文件夹结构和文件的树状图。
+你的文档（可能作为 README 文件的一部分）可以包含一张显示目录结构的图。`{fs}` 包（Hester et al., 2020）有一个函数 `dir_tree()`，它可以生成项目文件夹中文件夹结构和文件的树状图。
 
-```
 ```r
 library(fs)
-```
 ```
 
 默认情况下，它会显示当前目录下的所有子文件夹和文件。
 
-```
 ```r
 fs::dir_tree(path = "project_template")
-```
 ```
 
 ## project_template
@@ -574,9 +589,9 @@ fs::dir_tree(path = "project_template")
 ##      \-- readme.md
 ```
 
-recurse = 参数指定树状图将绘制的目录结构深度。指定 recurse = FALSE 会将显示内容限制为当前目录内的文件和子文件夹。
+`recurse =` 参数指定树状图将绘制的目录结构深度。指定 `recurse = FALSE` 会将显示内容限制为当前目录内的文件和子文件夹。
 
-```
+```r
 fs::dir_tree(path = "project_template", recurse = FALSE)
 ```
 
@@ -590,9 +605,9 @@ fs::dir_tree(path = "project_template", recurse = FALSE)
 ## \-- scripts
 ```
 
-还可以通过使用整数（而不是 FALSE 或 TRUE）来指定层数。
+还可以通过使用整数（而不是 `FALSE` 或 `TRUE`）来指定层数。
 
-```
+```r
 fs::dir_tree(path = "project_template", recurse = 2)
 ```
 
@@ -608,9 +623,6 @@ fs::dir_tree(path = "project_template", recurse = 2)
 ## +-- output
 ## |   \-- readme.md
 ```
-
-
-
 
 ```
 ## +-- readme.md
@@ -709,7 +721,7 @@ Marwick、Boettinger 和 Mullen 提供了一些文件结构可能是什么样子
 
    > “我的主要导入建议：使用**导入函数的参数尽可能快地尽可能深入**。*[特别强调。]* 初学者代码通常有很多不必要的导入后调整。阅读导入函数的文档并充分利用参数来控制导入。” (Bryan and The STAT 545 TAs, 2019, Chapter 9: Writing and reading files)
 
-   实际上，这意味着导入函数的第一次迭代几乎肯定不会产生你想要的结果。我们很快就会看到一些例子，但这可能体现在变量名称或值的存储方式、缺失值的表示方式或电子表格的几何结构上。read 函数中的参数将允许你解决所有这些问题，甚至更多。返回并向函数添加参数，然后再次运行代码，反复运行，直到达到所需的位置。
+   实际上，这意味着导入函数的第一次迭代几乎肯定不会产生你想要的结果。我们很快就会看到一些例子，但这可能体现在变量名称或值的存储方式、缺失值的表示方式或电子表格的几何结构上。`read` 函数中的参数将允许你解决所有这些问题，甚至更多。返回并向函数添加参数，然后再次运行代码，反复运行，直到达到所需的位置。
 
 2. 纯文本很无聊，但在长远来看是一种更灵活、更适应性强的格式；“今天的输出是明天的输入” (Bryan and The STAT 545 TAs, 2019, Chapter 9: Writing and reading files)
 
@@ -737,9 +749,6 @@ Marwick、Boettinger 和 Mullen 提供了一些文件结构可能是什么样子
 
 1. 使用导入函数的参数尽可能快地尽可能深入。
 2. 在导入步骤结束时检查你的结果——不要等到后来才发现出了问题。
-
-
-
 
 # 5 导入数据：纯文本文件
 
@@ -872,6 +881,9 @@ readLines(authors_path)
 | `fwf_widths(widths = c(), col_names = c())` | 每个变量的字符长度及其名称的列表 |
 | `fwf_positions(start = , end = , col_names = c())` | 每个变量起始和结束的字符位置及其名称 |
 | `fwf_cols(variable1_name = c(), variable2_name = c())` | 名称后跟每个变量的起始和结束位置 |
+
+
+
 | `fwf_cols(variable1_name = width, variable2_name = width)` | 名称后跟每个变量的宽度 |
 
 下面的示例将详细说明这些参数。
@@ -906,8 +918,6 @@ read_fwf(authors_path,
       authors_path,
 ```
 
-
-
 ```
     col_names = c("first", "last", "state", "unique_id")
     )
@@ -922,9 +932,9 @@ read_fwf(authors_path,
 ## 3 Walt  Whitman   NY    LW-1752-TD08
 ```
 
-注意，{readr} 会像处理 CSV 文件一样推断变量类型。虽然我们不会在这些示例中实现它，但同样地，read_fwf() 允许我们使用 col_types 规范，以及 na、skip 等参数。有关所有细节，请参阅 https://readr.tidyverse.org/reference/read_fwf.html 上的 read_fwf() 参考文档。
+注意，`{readr}` 会像处理 CSV 文件一样推断变量类型。虽然我们不会在这些示例中实现它，但同样地，`read_fwf()` 允许我们使用 `col_types` 规范，以及 `na`、`skip` 等参数。有关所有细节，请参阅 https://readr.tidyverse.org/reference/read_fwf.html 上的 `read_fwf()` 参考文档。
 
-使用这三个作者姓名读取这个固定宽度文件是可行的，但它很容易出错。只要有一个人名字包含三个或更多组成部分（首字母、空格或连字符，如 Ursula K. Le Guin¹ 或 Ta-Nehisi Coates²），或者有一些缺失值，不一致的结构就会使 read_fwf() 解析器出错。
+使用这三个作者姓名读取这个固定宽度文件是可行的，但它很容易出错。只要有一个人名字包含三个或更多组成部分（首字母、空格或连字符，如 Ursula K. Le Guin¹ 或 Ta-Nehisi Coates²），或者有一些缺失值，不一致的结构就会使 `read_fwf()` 解析器出错。
 
 在下面的示例中，我们读取一个更长的作者姓名列表：
 
@@ -946,9 +956,10 @@ fwf_empty(authors2_path,
 ## [1] "first"     "last"      "state"     "unique_id"
 ```
 
-如返回的“begin”和“end”值所示，fwf_empty() 函数只找到了三列。
+如返回的“begin”和“end”值所示，`fwf_empty()` 函数只找到了三列。
 
 ¹ https://en.wikipedia.org/wiki/Ursula_K._Le_Guin
+
 ² https://en.wikipedia.org/wiki/Ta-Nehisi_Coates
 
 当我们使用读取函数时，它找到三列：
@@ -1018,12 +1029,16 @@ i Specify the column types or set `show_col_types = FALSE` to quiet this message
 更可靠的方法是精确指定每一列的宽度。请注意，在下面的示例中，我们只指定“name”，而不将其拆分为 first 和 last。
 
 | 变量 | 宽度 | 起始位置 | 结束位置 |
+
 |----------|-------|----------------|--------------|
+
 | name     | 20    | 1              | 20           |
+
 | state    | 10    | 21             | 30           |
+
 | uniqueID | 12    | 31             | 42           |
 
-可以使用 fwf_widths 参数指定每列的宽度：
+可以使用 `fwf_widths` 参数指定每列的宽度：
 
 ```r
 read_fwf(authors2_path,
@@ -1055,7 +1070,7 @@ i Specify the column types or set `show_col_types = FALSE` to quiet this message
 
 **图 5.5** *read_fwf 消息。*
 
-第三种选择是使用 fwf_positions() 提供两个位置列表，第一个包含起始位置，第二个包含结束位置。第一个变量 name 从位置 1 开始，到位置 20 结束；第二个变量 unique_id 从位置 31 开始，到位置 42 结束。注意，我们不会读取 state 变量，它占据了从 21 到 30 的十列。
+第三种选择是使用 `fwf_positions()` 提供两个位置列表，第一个包含起始位置，第二个包含结束位置。第一个变量 name 从位置 1 开始，到位置 20 结束；第二个变量 unique_id 从位置 31 开始，到位置 42 结束。注意，我们不会读取 state 变量，它占据了从 21 到 30 的十列。
 
 ```r
 read_fwf(authors2_path,
@@ -1118,7 +1133,7 @@ i Specify the column types or set `show_col_types = FALSE` to quiet this message
 
 **图 5.7** *read_fwf 消息。*
 
-最后，{readr} 提供了第五种读取固定宽度文件的方法，它类似于我们见过的第二种方法，将名称和宽度值聚合在一起。
+最后，`{readr}` 提供了第五种读取固定宽度文件的方法，它类似于我们见过的第二种方法，将名称和宽度值聚合在一起。
 
 ```r
 read_fwf(authors2_path,
@@ -1155,11 +1170,11 @@ i Specify the column types or set `show_col_types = FALSE` to quiet this message
 
 加拿大统计局提供了加拿大/美国联合健康调查（JCUSH）的公共使用微观数据文件（PUMF），该调查是于 2002 年底和 2003 年初进行的一项电话调查。调查共有 8,688 名受访者，其中 3,505 名加拿大人和 5,183 名美国人。可用的数据文件是匿名的，因此我们可以访问个人回答，这将有助于进一步分析。
 
-该调查的网页，包括 PUMF 文件、数据字典和方法说明，位于：https://www150.statcan.gc.ca/n1/pub/82m0022x/2003001/4069119-eng.htm
-
-PUMF 是一个名为“JCUSH.txt”的固定宽度文件。这个文件比上面的作者姓名示例大得多。共有 8,688 条记录，每条记录对应一名调查受访者。数据还包含 366 个变量，其中包括指定变量（如受访者唯一识别号和所在国家）、调查问题答复，以及在调查后数据处理过程中计算出的派生变量。
 
 
+该调查的网页，包括 PUMF 文件、数据字典和方法说明，位于：`https://www150.statcan.gc.ca/n1/pub/82m0022x/2003001/4069119-eng.htm`
+
+PUMF 是一个名为“`JCUSH.txt`”的固定宽度文件。这个文件比上面的作者姓名示例大得多。共有 8,688 条记录，每条记录对应一名调查受访者。数据还包含 366 个变量，其中包括指定变量（如受访者唯一识别号和所在国家）、调查问题答复，以及在调查后数据处理过程中计算出的派生变量。
 
 以下是第一条记录的前 40 个字符的示例：
 
@@ -1176,22 +1191,34 @@ readLines(dpjr::dpjr_data("JCUSH.txt"), n = 1)
 以下是数据字典中一个变量——最高后中学教育程度——的呈现方式：
 
 | 变量名称 | SDJ1GHED | 长度 | 1 | 位置 | 502 |
+
 | 问题名称 |  |  |  |  | |
+
 | 概念 | 最高后中学教育程度 - (G) |  |  |  | |
+
 | 问题 |  |  |  |  | |
+
 | 总体 | 所有受访者 |  |  |  | |
+
 | 备注 | 基于 EDJ1_02. |  |  |  | |
+
 | 内容 | 代码 | 样本 | 人口 |  | |
+
 | 中学以下 | 1 | 1,357 | 28,015,770 |  | |
+
 | 高中毕业或同等学历 (GED) | 2 | 2,798 | 81,272,698 |  | |
+
 | 职业证书/职业学校/社区学院/CEGEP | 3 | 1,451 | 32,707,506 |  | |
+
 | 大学或学院证书（含本科以下） | 4 | 2,806 | 79,483,995 |  | |
+
 | 未说明 | 9 | 276 | 8,984,053 |  | |
+
 | 总计 |  | 8,688 | 230,464,023 |  | |
 
 图 5.9 JCUSH 健康调查示例。
 
-变量 SDJ1GHED 在数据中长度为 1 个字符，位置为 502。该变量可能只有 1 个字符长，但结合内容表中的信息，它就成为了一条非常有价值的信息。
+变量 `SDJ1GHED` 在数据中长度为 1 个字符，位置为 502。该变量可能只有 1 个字符长，但结合内容表中的信息，它就成为了一条非常有价值的信息。
 
 对于我们的分析问题，我们将读取四个变量：唯一的家庭识别号、国家、总体健康结果和教育水平。对于变量名称，我们将使用数据字典中使用的相同名称：
 
@@ -1206,7 +1233,7 @@ readLines(dpjr::dpjr_data("JCUSH.txt"), n = 1)
 - 从 Excel 电子表格导入数据
 - 提取以 Excel 格式编码的数据
 
-## 6.1 引言
+### 6.1 引言
 
 电子表格和类似的数据表或许是数据最常见的提供方式。由于它们起源于会计工作表的电子版本，因此具有表格结构，适用于数据收集、存储、分析以及共享（即发布）等其他情况。某种形式的电子表格软件在购买新电脑时通常是标准配置，而 Microsoft Excel 是其中最常见的。Google 还提供了一个基于网络的电子表格工具 Google Sheets，其工作原理大致相同。
 
@@ -1218,24 +1245,24 @@ Broman 和 Woo（Broman and Woo, 2017）提供了在电子表格中进行良好�
 
 “将格式作为数据”和“将格式作为信息”这两种存储信息的方法会使我们难以进行分析。Excel 文件还可以包含各种各样的数据格式类型。例如，使用 Excel 时你会发现，前导或尾随的空白会使数字变成字符，即使单元格被赋予了 Excel 数字格式。
 
-{readxl} 包（Wickham and Bryan, 2019）旨在解决读取 Excel 文件的许多挑战。要访问 {readxl} 中的函数，我们使用 library() 函数将包加载到活动项目中：
+`{readxl}` 包（Wickham and Bryan, 2019）旨在解决读取 Excel 文件的许多挑战。要访问 `{readxl}` 中的函数，我们使用 `library()` 函数将包加载到活动项目中：
 
 ```
 library(readxl)
 ```
 
-{readxl} 会尝试弄清每个变量的情况，但与 {readr} 类似，如果返回的结果与分析所需不同，你可以覆盖其中一些自动决策。我们将使用的 {readxl} 参数包括以下内容：
+`{readxl}` 会尝试弄清每个变量的情况，但与 `{readr}` 类似，如果返回的结果与分析所需不同，你可以覆盖其中一些自动决策。我们将使用的 `{readxl}` 参数包括以下内容：
 
 | 参数 | 用途 |
 |---|---|
-| sheet = "" | 用字符字符串指定要读取的 Excel 工作簿中的工作表名称 |
-| range = "" | 定义要读取的矩形；请参阅下面的示例了解语法选项 |
-| skip = 0 | 指定要跳过的行数；默认值为 0 |
-| n_max = Inf | 要读取的记录的最大数量；默认值为 Inf（无穷大），解释为文件的最后一行 |
+| `sheet = ""` | 用字符字符串指定要读取的 Excel 工作簿中的工作表名称 |
+| `range = ""` | 定义要读取的矩形；请参阅下面的示例了解语法选项 |
+| `skip = 0` | 指定要跳过的行数；默认值为 0 |
+| `n_max = Inf` | 要读取的记录的最大数量；默认值为 Inf（无穷大），解释为文件的最后一行 |
 
-对于本示例，我们将使用一些模拟数据，这类数据是数据分析师在进行人力资源数据分析以支持业务决策时可能遇到的类型。文件“cr25_human_resources.xlsx”位于“cr25”文件夹中。
+对于本示例，我们将使用一些模拟数据，这类数据是数据分析师在进行人力资源数据分析以支持业务决策时可能遇到的类型。文件“`cr25_human_resources.xlsx`”位于“`cr25`”文件夹中。
 
-由于 Excel 文件可以包含多个工作表，因此我们需要指定要读取的工作表。{readxl} 函数 excel_sheets() 会为我们列出它们：
+由于 Excel 文件可以包含多个工作表，因此我们需要指定要读取的工作表。`{readxl}` 函数 `excel_sheets()` 会为我们列出它们：
 
 ```
 excel_sheets(dpjr::dpjr_data("cr25/cr25_human_resources.xlsx"))
@@ -1246,9 +1273,9 @@ excel_sheets(dpjr::dpjr_data("cr25/cr25_human_resources.xlsx"))
 ## [3] "df_HR_transaction" "df_HR_train"
 ```
 
-我们示例中需要的是“df_HR_main”，它包含 999 名员工各自的员工 ID、姓名、出生日期和性别。
+我们示例中需要的是“`df_HR_main`”，它包含 999 名员工各自的员工 ID、姓名、出生日期和性别。
 
-在我们的 read_excel() 函数中，我们可以指定工作表的名称或基于其在 Excel 文件中位置的编号。虽然默认读取第一个工作表，但明确指定通常是良好的做法，因为 Excel 用户容易重新排列工作表的顺序（包括添加新工作表）。而且由于他们似乎不太可能重命名工作表，这也是我们使用名称而非编号的另一个原因。
+在我们的 `read_excel()` 函数中，我们可以指定工作表的名称或基于其在 Excel 文件中位置的编号。虽然默认读取第一个工作表，但明确指定通常是良好的做法，因为 Excel 用户容易重新排列工作表的顺序（包括添加新工作表）。而且由于他们似乎不太可能重命名工作表，这也是我们使用名称而非编号的另一个原因。
 
 ```
 df_HR_main <- 
@@ -1294,81 +1321,123 @@ head(df_HR_main)
 
 ```
 ```r
+
 df_HR_main <-
+
   read_excel(
+
     path = dpjr::dpjr_data("cr25/cr25_human_resources.xlsx"),
+
     sheet = "df_HR_main",
+
     range = "B5:E1004"
+
   )
 
 head(df_HR_main)
+
 ```
 ```
 
 ```
 ```text
+
 ## # A tibble: 6 x 4
+
 ##   emp_id date_of_birth             name              gender
+
 ##   <chr>  <dttm>                   <chr>             <chr>
+
 ## 1 ID001  1981-05-27 00:00:00 Avril Lavigne       Female
+
 ## 2 ID002  1973-09-24 00:00:00 Katy Perry          Female
+
 ## 3 ID003  1966-11-29 00:00:00 Chester Bennington Male
+
 ## 4 ID004  1982-09-17 00:00:00 Chris Cornell       Male
+
 ## 5 ID005  1976-07-17 00:00:00 Bryan Adams         Male
+
 ## 6 ID006  1965-07-03 00:00:00 Courtney Love       Female
+
 ```
 ```
 
-`range` 参数还提供了使用 Excel 的行号-列号指定方式的选项，这会将上述 range = "B5:E1004" 改为 range = "R5C2:R1004C5"（“B”指第二列，“E”指第五列）。
+`range` 参数还提供了使用 Excel 的行号-列号指定方式的选项，这会将上述 `range = "B5:E1004"` 改为 `range = "R5C2:R1004C5"`（“B”指第二列，“E”指第五列）。
 
 ```
 ```r
+
 df_HR_main <-
+
   read_excel(
-```
-
-
-
 
 ```
+
+
+
+
+```
+
 path = dpjr::dpjr_data("cr25/cr25_human_resources.xlsx"),
+
 sheet = "df_HR_main",
+
 range = "R5C2:R1004C5"
+
 )
+
 ```
 
 在 `read_excel()` 函数中，还有多种其他方式来定义数据矩形区域，在不同情境下可能更为合适。例如，如果表格底部不断有新行添加，使用 `range = anchored("B5", dim =c(NA, 4))` 这种指定方式可能更受青睐。这将从单元格 B5 开始，然后读取尽可能多的数据行（`c()` 函数中的“NA”表示行数不限定）以及四列数据。
 
 ```
+
 df_HR_main <- 
+
   read_excel(
+
     path = dpjr::dpjr_data("cr25/cr25_human_resources.xlsx"),
+
     sheet = "df_HR_main",
+
     range = anchored("B5", dim =c(NA, 4))
+
   )
 
 head(df_HR_main)
+
 ```
 
 ```
+
 ## # A tibble: 6 x 4
+
 ##   emp_id date_of_birth       name            gender
+
 ##   <chr>  <dttm>              <chr>           <chr>
+
 ## 1 ID001  1981-05-27 00:00:00 Avril Lavigne   Female
+
 ## 2 ID002  1973-09-24 00:00:00 Katy Perry      Female
+
 ## 3 ID003  1966-11-29 00:00:00 Chester Bennington Male
+
 ## 4 ID004  1982-09-17 00:00:00 Chris Cornell   Male
+
 ## 5 ID005  1976-07-17 00:00:00 Bryan Adams     Male
+
 ## 6 ID006  1965-07-03 00:00:00 Courtney Love   Female
+
 ```
 
 `read_excel()` 的另一个出色特性是，对于它识别为日期的变量，会返回日期类型（S3：POSIXct）。
 
 ¹ 更多选项，请参阅 https://readxl.tidyverse.org/articles/sheet-geometry.html
 
-## 6.2 扩展示例
+### 6.2 扩展示例
 
-很多时候，Excel 文件远比上述情况复杂。在下面的例子中，我们将读取英国国家统计局发布的一个 Excel 文件中的某个工作表，该文件取自 2021 年英格兰和威尔士人口普查。文件 “census2021firstresultsenglandwales1.xlsx” 包含按地方当局（地区）划分的人口数据，并包含有关数据的说明工作表，以及按性别和五岁年龄组划分的人口数据表，同时还有人口密度和家庭户数。
+很多时候，Excel 文件远比上述情况复杂。在下面的例子中，我们将读取英国国家统计局发布的一个 Excel 文件中的某个工作表，该文件取自 2021 年英格兰和威尔士人口普查。文件 “`census2021firstresultsenglandwales1.xlsx`” 包含按地方当局（地区）划分的人口数据，并包含有关数据的说明工作表，以及按性别和五岁年龄组划分的人口数据表，同时还有人口密度和家庭户数。
 
 我们的重点是 “P01” 工作表，其中包含按性别划分的人口。数据的前几行如下所示：
 
@@ -1376,14 +1445,20 @@ head(df_HR_main)
 
 **图 6.1** *英国人口普查数据。*
 
-我们要使用的正是 {readxl} 包中的 `read_excel()` 函数。第一项是文件路径。该函数的默认行为是读取 Excel 文件中的第一个工作表，这不是我们想要的，因此我们使用 `sheet =` 参数来指定 “P01”。我们还将使用 `n_max = 10` 参数仅读取工作表中的前 10 行。
+我们要使用的正是 `{readxl}` 包中的 `read_excel()` 函数。第一项是文件路径。该函数的默认行为是读取 Excel 文件中的第一个工作表，这不是我们想要的，因此我们使用 `sheet =` 参数来指定 “P01”。我们还将使用 `n_max = 10` 参数仅读取工作表中的前 10 行。
 
 ```
+
 uk_census_pop <- readxl::read_excel(
+
   dpjr::dpjr_data("census2021firstresultsenglandwales1.xlsx"),
+
   sheet = "P01",
+
   n_max = 10
+
 )
+
 ```
 
 uk_census_pop
@@ -1397,37 +1472,50 @@ uk_census_pop
 `read_excel()` 的另一个用于指定包含我们数据的矩形区域的参数是 `skip =`。由于我们的目视检查显示，我们感兴趣的数据的标题行从第七行开始，我们将使用它来跳过前 6 行。
 
 ```
+
 uk_census_pop <- readxl::read_excel(
+
   dpjr::dpjr_data("census2021firstresultsenglandwales1.xlsx"),
+
   sheet = "P01",
+
   n_max = 10,
+
   skip = 6
+
 )
 
 head(uk_census_pop)
+
 ```
 
 ```
+
 ##  7 E0600002 Middlesbrough      143900  7.3 e4 7.09e4
+
 ##  8 E0600057 Northumberland     320600  1.64e5 1.57e5
+
 ##  9 E0600003 Redcar and Cle~   136500  7.05e4 6.61e4
+
 ## 10 E0600004 Stockton-on-Te~  196600  1.00e5 9.65e4
+
 ## # i 365 more rows
-```
+
+
 
 数据已被正确读取，包括数据变量以正确的格式读取。但这丢失了一项重要信息：地理层级。在 Excel 文件中，层级的级别通过缩进表示。我们的下一个挑战是捕获该信息，并将其转化为可用的数据。
 
 ### 6.2.1 将 Excel 格式作为数据
 
-关于这些数据，有一点值得注意：Area name 变量是分层的，包含一系列小计。较低（较小）的层级包含层次结构中下一较高层级的组成区域，这些层级通过区域名称值中的缩进来表示。层级越低，区域名称的缩进越多。
+关于这些数据，有一点值得注意：`Area name` 变量是分层的，包含一系列小计。较低（较小）的层级包含层次结构中下一较高层级的组成区域，这些层级通过区域名称值中的缩进来表示。层级越低，区域名称的缩进越多。
 
 层级的具体情况如下：
 
 - “England and Wales” 的值包含总人口，即英格兰（Excel 的第 8 行）和威尔士（第 360 行）的总和。
-- 英格兰（但不包括威尔士）再进一步细分为九个国家以下地区（在 Area code 变量的前三个字符中编码为 “E12”）。
+- 英格兰（但不包括威尔士）再进一步细分为九个国家以下地区（在 `Area code` 变量的前三个字符中编码为 “E12”）。
 - 这些地区再划分为更小的单位，但这些单位的描述各不相同。这些单位包括单一管理区（E06）、伦敦自治市（E09）、郡（E10）和大都会郡（E11）；为便于说明，我们将这一级别简称为“郡”。
 - 郡级以下进一步划分为非都市区（E07），而大都会郡则细分为大都会区（E08）。上图显示泰恩-威尔（E11 大都会郡，第 18 行）被细分，从盖茨黑德开始，而坎布里亚郡（E10 郡，第 31 行）也被细分，从阿勒代尔开始。
-- 威尔士划分为单一管理区，在 Area code 变量的前三个字符中编码为 “W06”。在威尔士，没有中间的地区层级，因此这些单一管理区与英格兰的单一管理区处于同一级别。“地方当局区、郡和单一管理区（2021 年 4 月）英国地图³。
+- 威尔士划分为单一管理区，在 `Area code` 变量的前三个字符中编码为 “W06”。在威尔士，没有中间的地区层级，因此这些单一管理区与英格兰的单一管理区处于同一级别。“地方当局区、郡和单一管理区（2021 年 4 月）英国地图³。
 
 2 英国行政地理的层级可在 [ONS “行政地理”页面](https://www.ons.gov.uk/methodology/geography/ukgeographies/administrativegeography) 上的 “英格兰” 和 “威尔士” 链接中查找。
 
@@ -1441,7 +1529,7 @@ head(uk_census_pop)
 
 有了这样的结构，我们就可以在 `group_by()` 函数中使用不同的区域分组。
 
-正如我们之前看到的，{readxl} 的 `read_excel()` 函数会忽略格式，因此无法从字符中辨别层级。
+正如我们之前看到的，`{readxl}` 的 `read_excel()` 函数会忽略格式，因此无法从字符中辨别层级。
 
 让我们探索一些方法来提取嵌入在数据和格式中的信息，并利用这些信息来修剪重复的行。
 
@@ -1455,10 +1543,9 @@ head(uk_census_pop)
 
 为此，我们可以设计一个正则表达式，使用 “^” 字符来识别开头的字母 “E”。（请记住，“E” 代表英格兰，“W” 代表威尔士。）然后，在第 2 个字符位置（第一组方括号内）是 0 或 1，在第 3 个字符位置（第二组方括号内）是 6、9、0 或 1 之一。
 
-```
+```r
 county_pop <- uk_census_pop |>
   filter(str_detect(area_code, "^E[01][6901]"))
-
 dplyr::glimpse(county_pop, width = 65)
 ```
 
@@ -1472,7 +1559,7 @@ dplyr::glimpse(county_pop, width = 65)
 
 我们可以通过 `distinct()` 函数检查正则表达式是否按预期工作，仅检查 area_code 字符串的前三个字符：
 
-```
+```r
 county_pop  |>
   distinct(str_sub(area_code, 1, 3))
 ```
@@ -1487,12 +1574,9 @@ county_pop  |>
 
 另一种方法是创建所需三字符代码的列表，然后在主数据中创建一个新变量，并根据这个 UA 代码列表进行筛选：
 
-
-
 ```r
 # create list of UA three-character codes
 county_list <- c("E06", "E09", "E10", "E11")
-
 county_pop <- uk_census_pop |>
   # create three character area prefix
   mutate(area_code_3 = str_sub(area_code, 1, 3)) |>
@@ -1543,17 +1627,17 @@ county_pop |>
 
 接下来，我们需要读取 Excel 文件中存储的每种格式的详细信息——格式“14”具有特殊特征，包括单元格中的缩进数量。
 
-为此，我们使用 {tidyxl} 函数 xlsx_formats()。我们只需要指定文件的路径。“Excel 为整个工作簿只定义一个这样的字典，因此每种格式组合只记录一次。两个具有相同格式但位于不同工作表中的单元格，将具有相同的格式代码，引用该字典中的相同条目”⁴。
+为此，我们使用 `{tidyxl}` 函数 `xlsx_formats()`。我们只需要指定文件的路径。“Excel 为整个工作簿只定义一个这样的字典，因此每种格式组合只记录一次。两个具有相同格式但位于不同工作表中的单元格，将具有相同的格式代码，引用该字典中的相同条目”⁴。
 
-下面的代码读取格式并将结果分配给一个新对象 uk_census_formats。
+下面的代码读取格式并将结果分配给一个新对象 `uk_census_formats`。
 
 ```r
 uk_census_formats <- xlsx_formats(
-  dpjr::dpjr_data("census2021firstresultsenglandwales1.xlsx"),
+  dpjr::dpjr_data("census2021firstresultsenglandwales1.xlsx")
 )
 ```
 
-在我们的环境中检查 uk_census_formats 对象时，我们看到它包含两个列表，一个名为“local”，另一个名为“style”。如果我们查看“local”内部，会看到一个名为“alignment”的列表，其中包含“indent”——这就是我们要找的。
+在我们的环境中检查 `uk_census_formats` 对象时，我们看到它包含两个列表，一个名为“local”，另一个名为“style”。如果我们查看“local”内部，会看到一个名为“alignment”的列表，其中包含“indent”——这就是我们要找的。
 
 你可能已经注意到，这些列表中有 62 个元素，而不是 382 个（Excel 文件中的行数），也不是代表工作表 P01 中每个活动单元格的 1,888 个。62 表示整个 Excel 文件（跨所有工作表）中存在的不同格式的数量。
 
@@ -1570,7 +1654,7 @@ indent
 ## [51] 0 0 0 0 0 0 0 0 1 2 4 3 0
 ```
 
-⁴Duncan Garmonsway，对 {tidyxl} 包存储库中第 84 号问题的回复，2022-05-26。https://github.com/nacnudus/tidyxl/issues/84
+⁴Duncan Garmonsway，对 `{tidyxl}` 包存储库中第 84 号问题的回复，2022-05-26。https://github.com/nacnudus/tidyxl/issues/84
 
 ![](img/b86622d1e9ca82b3cbec45faaffaaf26_79_0.png)
 
@@ -1578,13 +1662,13 @@ indent
 
 这表明，对于文件中使用的大多数各种单元格格式，大多数缩进为零，但有些具有 1、2、3 或 4 个缩进。
 
-回到对象 uk_census。我们感兴趣的是从第八行开始的数据，因此我们需要对其进行筛选。
+回到对象 `uk_census`。我们感兴趣的是从第八行开始的数据，因此我们需要对其进行筛选。
 
-要使 {tidyxl} 函数正常工作，第一列需要定义层次结构。为此，我们将使用 `!=` 运算符将其选中。
+要使 `{tidyxl}` 函数正常工作，第一列需要定义层次结构。为此，我们将使用 `!=` 运算符将其选中。
 
-behead_if() 函数识别数据透视表中的一级表头，并将其作为数据的一部分。与 {tidyr} 包的 pivot_longer() 函数类似，它根据表头为每一行创建一个新变量。在英国人口普查数据中，表头通过格式中的缩进数量来区分。
+`behead_if()` 函数识别数据透视表中的一级表头，并将其作为数据的一部分。与 `{tidyr}` 包的 `pivot_longer()` 函数类似，它根据表头为每一行创建一个新变量。在英国人口普查数据中，表头通过格式中的缩进数量来区分。
 
-让我们通过将“left-up”位置值赋给一个新变量 field0 来测试这一点。对于 uk_census 对象中的每一行，都会评估与 local_format_id 相关联的缩进数量；如果为零，则会发生以下情况：从数值开始，函数先向左查找，然后向上查找，直到找到缩进数量更少的值。例如，“England”行有一个缩进，因此函数会向左和向上查找，直到找到格式中缩进为零的值；该单元格的值会被赋给变量 field0（用于零缩进）。
+让我们通过将“left-up”位置值赋给一个新变量 `field0` 来测试这一点。对于 `uk_census` 对象中的每一行，都会评估与 `local_format_id` 相关联的缩进数量；如果为零，则会发生以下情况：从数值开始，函数先向左查找，然后向上查找，直到找到缩进数量更少的值。例如，“England”行有一个缩进，因此函数会向左和向上查找，直到找到格式中缩进为零的值；该单元格的值会被赋给变量 `field0`（用于零缩进）。
 
 ```r
 uk_census |>
@@ -1650,11 +1734,10 @@ uk_census_behead <- uk_census |>
   behead(direction = "left", name = "field4")
 ```
 
-在下面的代码中，新增的是列标题的赋值。在英国人口普查数据中，结构并不是特别复杂，但 {tidyr} 也可以处理标题中的嵌套层次结构。
+在下面的代码中，新增的是列标题的赋值。在英国人口普查数据中，结构并不是特别复杂，但 `{tidyr}` 也可以处理标题中的嵌套层次结构。
 
 ```r
 # from the previous chunk:
-
 uk_census_behead <- uk_census |>
   dplyr::filter((row >= 7)) |>
   filter(col != 1) |>
@@ -1685,41 +1768,68 @@ glimpse(uk_census_behead, width = 65)
 ## Rows: 1,125
 ## Columns: 30
 ## $ sheet              <chr> "P01", "P01", "P01", "P01", "P01", ~
+
+
+
 ## $ address            <chr> "C8", "D8", "E8", "C9", "D9", "E9", ~
+
 ## $ row                <int> 8, 8, 8, 9, 9, 9, 10, 10, 10, 11, 1~
+
 ## $ col                <int> 3, 4, 5, 3, 4, 5, 3, 4, 5, 3, 4, 5,~
+
 ## $ is_blank           <lgl> FALSE, FALSE, FALSE, FALSE, FALSE, ~
+
 ## $ content            <chr> "59597300", "30420100", "29177200", ~
+
 ## $ data_type          <chr> "numeric", "numeric", "numeric", "n~
+
 ## $ error              <chr> NA, NA, NA, NA, NA, NA, NA, NA, NA,~
+
 ## $ logical            <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA,~
+
 ## $ numeric            <dbl> 59597300, 30420100, 29177200, 56489,~
+
 ## $ date               <dttm> NA, NA, NA, NA, NA, NA, NA, NA, NA~
+
 ## $ character          <chr> NA, NA, NA, NA, NA, NA, NA, NA, NA,~
+
 ## $ character_formatted <list> <NULL>, <NULL>, <NULL>, <NULL>, <N~
+
 ## $ formula            <chr> NA, NA, NA, NA, NA, NA, NA, NA, NA,~
+
 ## $ is_array           <lgl> FALSE, FALSE, FALSE, FALSE, FALSE, ~
+
 ## $ formula_ref        <chr> NA, NA, NA, NA, NA, NA, NA, NA, NA,~
+
 ## $ formula_group     <int> NA, NA, NA, NA, NA, NA, NA, NA, NA,~
+
 ## $ comment            <chr> NA, NA, NA, NA, NA, NA, NA, NA, NA,~
+
 ## $ height             <dbl> 15.6, 15.6, 15.6, 15.6, 15.6, 15.6,~
+
 ## $ width              <dbl> 14.71, 12.43, 12.43, 14.71, 12.43, ~
+
 ## $ row_outline_level  <dbl> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,~
+
 ## $ col_outline_level  <dbl> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,~
+
 ## $ style_format       <chr> "Normal", "Normal", "Normal", "Norm~
+
 ## $ local_format_id    <int> 33, 33, 33, 33, 33, 33, 33, 33, 33,~
+
 ## $ field0             <chr> "England and Wales", "England and W~
+
 ## $ field1             <chr> NA, NA, NA, "England", "England", "~
+
 ## $ field2             <chr> NA, NA, NA, NA, NA, "North East~
+
 ## $ field3             <chr> NA, NA, NA, NA, NA, NA, NA, NA, NA,~
+
 ## $ field4             <chr> NA, NA, NA, NA, NA, NA, NA, NA, NA,~
+
 ## $ gender             <chr> "All persons", "Females", "Males", ~
-```
 
-我们还可以结合使用 select() 和 slice_head() 来查看我们感兴趣的变量的前几行。
-
-
-
+我们还可以结合使用 `select()` 和 `slice_head()` 来查看我们感兴趣的变量的前几行。
 
 ```r
 uk_census_behead |>
@@ -1773,7 +1883,7 @@ uk_census_behead |>
 
 ## 6.2 扩展示例
 
-对数据尾部（上文）的检查揭示了 Excel 文件结构存在问题，这（在很大程度上）反映了层级关系的本质。这不是 {tidyr} 和 {unpivotr} 函数的问题！这些函数完全正确地执行了操作。值是从“left-up”找到的值中提取的。
+对数据尾部（上文）的检查揭示了 Excel 文件结构存在问题，这（在很大程度上）反映了层级关系的本质。这不是 `{tidyr}` 和 `{unpivotr}` 函数的问题！这些函数完全正确地执行了操作。值是从“left-up”找到的值中提取的。
 
 首先引起我注意的是，`field2`——地区——对于威尔士应该是 NA，但它被分配给了 South West，即数据中最后一个英格兰地区。
 
@@ -1797,7 +1907,7 @@ uk_census |>
 | 4  | D361    | 33              | numeric   | <NA>             | 35200   |
 | 5  | E361    | 33              | numeric   | <NA>             | 33700   |
 
-然后我们可以用它来检查缩进格式的详细信息，我们已将其捕获在 formats 对象中。
+然后我们可以用它来检查缩进格式的详细信息，我们已将其捕获在 `formats` 对象中。
 
 ```r
 uk_census_formats$local$alignment$indent[60]
@@ -1900,28 +2010,50 @@ field3_split
 ```r
 uk_census_behead_revised |>
   mutate(subtotal_row = case_when(
-    field3 %in% field3_split$field3 & is.na(field4) ~ "subtotal",
-    TRUE ~ NA_character_
-  )) |>
-  relocate(subtotal_row)
-```
 
+
+
+`field3` %in% `field3_split$field3` & is.na(`field4`) ~ "subtotal",
+
+`TRUE` ~ `NA_character_`
+
+)) |>
+
+`relocate(subtotal_row)`
+
+```
 ```text
+
 ## # A tibble: 1,125 x 8
+
 ##   subtotal_row field0      field1 field2 field3 field4
+
 ##   <chr>        <chr>       <chr>  <chr>  <chr>  <chr>
+
 ## 1 subtotal     England and… <NA>   <NA>   <NA>   <NA>
+
 ## 2 subtotal     England and… <NA>   <NA>   <NA>   <NA>
+
 ## 3 subtotal     England and… <NA>   <NA>   <NA>   <NA>
+
 ## 4 subtotal     England and… Engla… <NA>   <NA>   <NA>
+
 ## 5 subtotal     England and… Engla… <NA>   <NA>   <NA>
+
 ## 6 subtotal     England and… Engla… <NA>   <NA>   <NA>
+
 ## 7 subtotal     England and… Engla… North… <NA>   <NA>
+
 ## 8 subtotal     England and… Engla… North… <NA>   <NA>
+
 ## 9 subtotal     England and… Engla… North… <NA>   <NA>
+
 ## 10 <NA>        England and… Engla… North… Count… <NA>
+
 ## # ℹ 1,115 more rows
+
 ## # ℹ 2 more variables: gender <chr>, numeric <dbl>
+
 ```
 
 ### 方法 3 - 构建对照表
@@ -1930,13 +2062,11 @@ uk_census_behead_revised |>
 
 对于英国人口普查数据，我们将创建两个单独的对照表。我们将把这些表保存为 CSV 文件，以便在其他需要时随时使用，从而使数据的过滤和汇总更加高效。
 
-对于第一个表，我们将构建一个包含每种行政区域类型及其相关三位数字代码的表。这是在 R 中使用 {tibble} 包（Müller and Wickham, 2021）以编程方式完成的。我们将使用 `tribble()` 函数，它将布局转置，使其类似于最终的表格结构。
+对于第一个表，我们将构建一个包含每种行政区域类型及其相关三位数字代码的表。这是在 R 中使用 `{tibble}` 包（Müller and Wickham, 2021）以编程方式完成的。我们将使用 `tribble()` 函数，它将布局转置，使其类似于最终的表格结构。
 
 除了区域代码前缀和行政区域类型的名称外，该表还编码了层级中的级别。
 
-
-
-
+```
 uk_region_table <- tribble(
   # header row
   ~"area_code_3", ~"category", ~"geo_level",
@@ -1954,22 +2084,37 @@ uk_region_table <- tribble(
 )
 
 uk_region_table
+```
 
 ```
 ## # A tibble: 11 x 3
+
 ##   area_code_3 category           geo_level
+
 ##   <chr>       <chr>                  <dbl>
+
 ## 1 K04         England & Wales           0
+
 ## 2 E92         England                   1
+
 ## 3 E12         Region                    2
+
 ## 4 E09         London Borough            3
+
 ## 5 E10         County                    3
+
 ## 6 E07         Non-Metropolitan District 4
+
 ## 7 E06         Unitary Authority         3
+
 ## 8 E11         Metropolitan County       3
+
 ## 9 E08         Metropolitan District     4
+
 ## 10 W92        Wales                     1
+
 ## 11 W06        Unitary Authority         3
+
 ```
 
 该表可以保存为 CSV 文件以供将来参考：
@@ -1978,21 +2123,29 @@ uk_region_table
 write_csv(uk_region_table, "data_output/uk_region_table.csv")
 ```
 
-下一步是使用 mutate() 函数从数据框 uk_census_pop 中的区域代码变量中提取唯一值，然后使用该新变量将数据框与前一个代码块中创建的 uk_region_table 进行连接。
+下一步是使用 `mutate()` 函数从数据框 `uk_census_pop` 中的区域代码变量中提取唯一值，然后使用该新变量将数据框与前一个代码块中创建的 `uk_region_table` 进行连接。
 
 ```
 uk_census_pop_geo <- uk_census_pop |>
+
 # select(area_code, area_name) |>
+
   mutate(area_code_3 = str_sub(uk_census_pop$area_code, 1, 3)) |>
+
   # join with classification table
+
   left_join(
+
     uk_region_table,
+
     by = c("area_code_3" = "area_code_3")
+
   )
 
 glimpse(uk_census_pop_geo, width = 65)
 ```
 
+```
 ## Rows: 375
 ## Columns: 8
 ## $ area_code   <chr> "K04000001", "E92000001", "E12000001", "E06~
@@ -2003,19 +2156,24 @@ glimpse(uk_census_pop_geo, width = 65)
 ## $ area_code_3  <chr> "K04", "E92", "E12", "E06", "E06", "E06", "~
 ## $ category     <chr> "England & Wales", "England", "Region", "Un~
 ## $ geo_level    <dbl> 0, 1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4~
+```
 
 由于级别现在已编码在数据框的相关行中，可以根据级别变量进行筛选以计算英格兰和威尔士的总人口。
 
 ```
 uk_census_pop_geo |>
+
   filter(geo_level == 3) |>
+
   summarize(total_population = sum(all_persons))
 ```
 
+```
 ## # A tibble: 1 x 1
 ##   total_population
 ##   <dbl>
 ## 1         59597300
+```
 
 可以从我们之前创建的截断表派生出一个更复杂的对应表。该过程的两个步骤是：
 
@@ -2024,17 +2182,29 @@ uk_census_pop_geo |>
 
 ```
 uk_census_geo_code <- uk_census_behead_revised |>
+
   # select field variables
+
   select(contains("field")) |>
+
   distinct() |>
+
   # create variable with lowest-level value
+
   mutate(area_name = case_when(
+
     !is.na(field4) ~ field4,
+
     !is.na(field3) ~ field3,
+
     !is.na(field2) ~ field2,
+
     !is.na(field1) ~ field1,
+
     !is.na(field0) ~ field0,
+
     TRUE ~ NA_character_
+
   ))
 
 uk_census_geo_code
@@ -2042,39 +2212,54 @@ uk_census_geo_code
 
 ```
 ## # A tibble: 375 x 6
+
 ##   field0     field1 field2 field3 field4 area_name
+
 ##   <chr>      <chr>  <chr>  <chr>  <chr>  <chr>
+
 ## 1 England and W~ <NA>   <NA>   <NA>   <NA>   England ~
+
 ## 2 England and W~ Engla~ <NA>   <NA>   <NA>   England
+
 ## 3 England and W~ Engla~ North~ <NA>   <NA>   North Ea~
+
 ## 4 England and W~ Engla~ North~ Count~ <NA>   County D~
+
 ## 5 England and W~ Engla~ North~ Darli~ <NA>   Darlingt~
+
 ## 6 England and W~ Engla~ North~ Hartl~ <NA>   Hartlepo~
+
 ## 7 England and W~ Engla~ North~ Middl~ <NA>   Middlesb~
+
 ## 8 England and W~ Engla~ North~ North~ <NA>   Northumb~
+
 ## 9 England and W~ Engla~ North~ Redca~ <NA>   Redcar a~
+
 ## 10 England and W~ Engla~ North~ Stock~ <NA>   Stockton~
+
 ## # i 365 more rows
 ```
 
-第三步是从 uk_census_pop 表中连接区域代码变量。
+第三步是从 `uk_census_pop` 表中连接区域代码变量。
 
 ```
 uk_census_geo_code <- uk_census_geo_code |>
+
   left_join(
+
     select(uk_census_pop, area_name, area_code),
+
     by = "area_name"
+
   ) |>
 ```
 
-## 6.2 扩展示例
+### 6.2 扩展示例
 
 ```
-```r
 relocate(area_name, area_code)
 
 uk_census_geo_code
-```
 ```
 
 ```
@@ -2100,7 +2285,6 @@ uk_census_geo_code
 通过连接之前创建的 `uk_region_table`，向该表添加地理级别值。
 
 ```
-```r
 uk_census_geo_code <- uk_census_geo_code |>
   # select(area_code, area_name) |>
   mutate(area_code_3 = str_sub(uk_census_pop$area_code, 1, 3)) |>
@@ -2112,7 +2296,6 @@ uk_census_geo_code <- uk_census_geo_code |>
 
 uk_census_geo_code
 ```
-```
 
 ```
 ```text
@@ -2123,7 +2306,6 @@ uk_census_geo_code
 ##  2  England         E92000001 Engla~ Engla~ <NA>   <NA>
 ##  3  North East      E12000001 Engla~ Engla~ North~ <NA>
 ```
-
 ```
 ##  4 County Durham  E06000047 Engla~ Engla~ North~ Count~
 ##  5 Darlington     E06000005 Engla~ Engla~ North~ Darli~
@@ -2159,6 +2341,8 @@ uk_census_pop_90 <- readxl::read_excel(
 head(uk_census_pop_90)
 ```
 
+
+
 ```
 ## # A tibble:  6 x 22
 ##   area_code area_name       all_persons
@@ -2167,9 +2351,6 @@ head(uk_census_pop_90)
 ## 2 E92000001 England              56489800
 ## 3 E12000001 North East           2647100
 ```
-
-
-
 
 ```text
 ## 4 E06000047 County Durham              522100
@@ -2184,10 +2365,10 @@ head(uk_census_pop_90)
 ## #   aged_30_to_34_years <dbl>, ...
 ```
 
-下面的 filter() 步骤执行以下操作：
+下面的 `filter()` 步骤执行以下操作：
 
-- 选择感兴趣的区域代码和人口类别，
-- 加入详细的地理描述，
+- 选择感兴趣的区域代码和人口类别。
+- 加入详细的地理描述。
 - 过滤等级 3 的值，但这会留下进一步细分为城市类别的 UA 地区。
 
 ```r
@@ -2211,11 +2392,11 @@ uk_census_pop_90 |>
   slice_head(n = 10)
 ```
 
-*# 一个 tibble：10 × 3*
+\# 一个 tibble：10 × 3
 
-列类型：area_name `<chr>`, aged_90_years_and_over `<dbl>`, pct_90_plus `<dbl>`
+列类型：`area_name` `<chr>`, `aged_90_years_and_over` `<dbl>`, `pct_90_plus` `<dbl>`
 
-| # | area_name | aged_90_years_and_over | pct_90_plus |
+| # | `area_name` | `aged_90_years_and_over` | `pct_90_plus` |
 |---|-----------|------------------------|------------|
 | 1 | Dorset [note 10] | 6300 | 1.7 |
 | 2 | East Sussex | 8100 | 1.5 |
@@ -2232,7 +2413,7 @@ uk_census_pop_90 |>
 
 本章中：
 
-- 从包含标记数据格式的统计软件包导入调查数据，重点关注 SPSS
+- 从包含标记数据格式的统计软件包导入调查数据，重点关注 SPSS。
 - 从 Excel 文件导入调查数据，包括由调查软件创建的数据字典，并根据数据字典创建标签。
 - 导入纯文本数据并应用统计软件包的语法来应用标签并以统计软件数据格式输出，重点关注 SPSS。
 
@@ -2242,15 +2423,15 @@ uk_census_pop_90 |>
 
 这些程序的一个特点是变量及其相关值可以被标记。如果你熟悉 R，值标记在概念上类似于因子标签的使用。这些标签可以携带大量细节，而你可能 otherwise 难以轻松获取。
 
-R 包 {haven}（Wickham and Miller, 2021）提供了读取这三种类型文件¹ 的功能。我们还将使用与 {haven} 相关的其他包。
+R 包 `{haven}`（Wickham and Miller, 2021）提供了读取这三种类型文件¹ 的功能。我们还将使用与 `{haven}` 相关的其他包。
+
+¹ `{haven}` 的参考页面在这里：https://haven.tidyverse.org/index.html
 
 ```r
 library(haven)
 ```
 
-¹{haven} 的参考页面在这里：https://haven.tidyverse.org/index.html
-
-在下面的示例中，我们将使用 {palmer-penguins} 数据（Horst et al., 2022; Horst, 2020）中的数据版本。我们将使用 SPSS 格式的文件；对于 SAS 和 Stata 格式的方法类似，只是细节有所不同。例如，haven::read_() 函数仅随扩展名而变化；Stata 数据文件扩展名为 “.dta”，因此读取函数为 read_dta()：
+在下面的示例中，我们将使用 `{palmer-penguins}` 数据（Horst et al., 2022; Horst, 2020）中的数据版本。我们将使用 SPSS 格式的文件；对于 SAS 和 Stata 格式的方法类似，只是细节有所不同。例如，`haven::read_()` 函数仅随扩展名而变化；Stata 数据文件扩展名为 “`.dta`”，因此读取函数为 `read_dta()`：
 
 ```r
 haven::read_dta(dpjr::dpjr_data("penguins.dta"))
@@ -2262,7 +2443,7 @@ SAS 文件的等效代码如下：
 haven::read_sas(dpjr::dpjr_data("penguins.sas"))
 ```
 
-以下是读取同一数据文件 SPSS “.sav” 格式并将其分配给 R 对象 penguins_sav 的代码：
+以下是读取同一数据文件 SPSS “`.sav`” 格式并将其分配给 R 对象 `penguins_sav` 的代码：
 
 ```r
 penguins_sav <- haven::read_sav(dpjr::dpjr_data("penguins.sav"))
@@ -2270,11 +2451,11 @@ penguins_sav <- haven::read_sav(dpjr::dpjr_data("penguins.sav"))
 penguins_sav
 ```
 
-*# 一个 tibble：344 × 8*
+\# 一个 tibble：344 × 8
 
-列：species `<dbl+lbl>`, island `<dbl+lbl>`, bill_length_mm `<dbl>`, bill_depth_mm `<dbl>`, flipper_length_mm `<dbl>`, body_mass_g `<dbl>`, sex `<dbl+lbl>`, year `<dbl>`
+列：`species` `<dbl+lbl>`, `island` `<dbl+lbl>`, `bill_length_mm` `<dbl>`, `bill_depth_mm` `<dbl>`, `flipper_length_mm` `<dbl>`, `body_mass_g` `<dbl>`, `sex` `<dbl+lbl>`, `year` `<dbl>`
 
-| # | species | island | bill_length_mm | bill_depth_mm |
+| # | `species` | `island` | `bill_length_mm` | `bill_depth_mm` |
 |---|---------|--------|----------------|---------------|
 | 1 | 1 [Adelie] | 3 [Torgersen] | 39.1 | 18.7 |
 | 2 | 1 [Adelie] | 3 [Torgersen] | 39.5 | 17.4 |
@@ -2287,27 +2468,23 @@ penguins_sav
 | 9 | 1 [Adelie] | 3 [Torgersen] | 34.1 | 18.1 |
 | 10 | 1 [Adelie] | 3 [Torgersen] | 42 | 20.2 |
 
-*… 还有 334 行，以及 4 个更多变量：flipper_length_mm `<dbl>`, body_mass_g `<dbl>`, sex `<dbl+lbl>`, year `<dbl>`*
+… 还有 334 行，以及 4 个更多变量：`flipper_length_mm` `<dbl>`, `body_mass_g` `<dbl>`, `sex` `<dbl+lbl>`, `year` `<dbl>`
 
-你会注意到 .sav 版本的企鹅数据框中变量的值与从 .csv 版本读取的值不同。所有变量，包括那些原本为字符字符串的变量，都是数值。
+你会注意到 `.sav` 版本的企鹅数据框中变量的值与从 `.csv` 版本读取的值不同。所有变量，包括那些原本为字符字符串的变量，都是数值。
 
-例如，在变量“species”中，值是一列“1”、“2”和“3”，而不是物种名称。
+例如，在变量 `species` 中，值是一列“1”、“2”和“3”，而不是物种名称。
 
-还请注意，在变量描述中，对于那些带有 SPSS 标签的变量，它包含 <S3: haven_labelled>。
+还请注意，在变量描述中，对于那些带有 SPSS 标签的变量，它包含 `<S3: haven_labelled>`。
 
-### 7.1.1 {labelled}
+### 7.1.1 `{labelled}`
 
-一旦我们使用其中一个 {haven} 函数将 SAS、SPSS 或 Stata 数据读入 R，包 {labelled}（Larmarange, 2022）就为我们提供了处理变量标签、值标签和定义缺失值的强大工具。
+一旦我们使用其中一个 `{haven}` 函数将 SAS、SPSS 或 Stata 数据读入 R，包 `{labelled}`（Larmarange, 2022）就为我们提供了处理变量标签、值标签和定义缺失值的强大工具。
 
 ```r
 library(labelled)
 ```
 
-我们将使用的第一个函数是 look_for()，它返回我们数据中变量的标签、列类型和值。
-
-```r
-look_for(penguins_sav)
-```
+我们将使用的第一个函数是 `look_for()`，它返回我们数据中变量的标签、列类型和值。
 
 | pos | variable | label | col_type | missing | values |
 |-----|----------|-------|----------|---------|--------|
@@ -2320,15 +2497,15 @@ look_for(penguins_sav)
 | 7 | sex | – | dbl+lbl | 11 | [1] female, [2] male |
 | 8 | year | – | dbl | 0 | |
 
-在此视图中，我们可以在“values”列中看到物种名称。还请注意，“col_type”列显示“dbl+lbl”：双精度和标签。在此数据框中，未定义任何标签。
+在此视图中，我们可以在“values”列中看到物种名称。还请注意，“col_type”列显示“`dbl+lbl`”：双精度和标签。在此数据框中，未定义任何标签。
 
-函数 var_label() 允许我们为变量添加描述性标签。在下一个代码块中，我们为 species 变量添加标签：
+函数 `var_label()` 允许我们为变量添加描述性标签。在下一个代码块中，我们为 `species` 变量添加标签：
 
 ```r
 var_label(penguins_sav$species) <- "Penguin species"
 ```
 
-我们可以使用 look_for() 函数看到标签现在已纳入数据框：
+我们可以使用 `look_for()` 函数看到标签现在已纳入数据框：
 
 ```r
 look_for(penguins_sav)
@@ -2345,7 +2522,7 @@ look_for(penguins_sav)
 | 7 | sex | – | dbl+lbl | 11 | [1] female, [2] male |
 | 8 | year | – | dbl | 0 | |
 
-也可以添加多个标签。请注意，在此示例中，为“dbl+lbl”和“dbl”类型都添加了标签。
+也可以添加多个标签。请注意，在此示例中，为“`dbl+lbl`”和“`dbl`”类型都添加了标签。
 
 ```r
 var_label(penguins_sav) <- list(island = "Island of record",
@@ -2367,22 +2544,19 @@ look_for(penguins_sav)
 | 7 | sex | – | dbl+lbl | 11 | [1] female, [2] male |
 | 8 | year | – | dbl | 0 | |
 
-
-
-
 #### 7.1.1.1 使用标签
 
-{haven} 创建的数据框中的标签可以使用 unlabelled() 函数转换为因子类型。
+`{haven}` 创建的数据框中的标签可以使用 `unlabelled()` 函数转换为因子类型。
 
 如果我们使用来自 SPSS 文件的 penguins 数据框统计每个物种的企鹅数量，我们会看到以下内容：
 
-```
+```r
 penguins_sav |>
   group_by(species) |>
   tally()
 ```
 
-```
+```text
 ## # A tibble: 3 x 2
 ##   species       n
 ##   <dbl+lbl> <int>
@@ -2391,18 +2565,18 @@ penguins_sav |>
 ## 3 3 [Gentoo]   124
 ```
 
-在这个版本中，“species” 变量保留了数值。
+在这个版本中，“`species`” 变量保留了数值。
 
-通过应用 unlabelled() 函数，“haven_labelled” 类型的变量被转换为因子类型，并且标签（即物种名称）现在显示在我们的汇总表中：
+通过应用 `unlabelled()` 函数，“`haven_labelled`” 类型的变量被转换为因子类型，并且标签（即物种名称）现在显示在我们的汇总表中：
 
-```
+```r
 penguins_sav |>
   unlabelled() |>
   group_by(species) |>
   tally()
 ```
 
-```
+```text
 ## # A tibble: 3 x 2
 ##   species       n
 ##   <fct>    <int>
@@ -2411,31 +2585,34 @@ penguins_sav |>
 ## 3 Gentoo   124
 ```
 
-另一种方法是显式更改变量类型，在 mutate() 和 mutate_if() 中的一个 mutate 函数内部使用 to_factor 转换。在此第一个示例中，变量 species 从 labelled 转换为因子类型。
+另一种方法是显式更改变量类型，在 `mutate()` 和 `mutate_if()` 中的一个 `mutate` 函数内部使用 `to_factor` 转换。在此第一个示例中，变量 `species` 从 labelled 转换为因子类型。
 
-```
+```r
 penguins_sav |>
   mutate(species = as_factor(species)) |>
   group_by(species) |>
   tally()
 ```
 
+```text
 ## # A tibble: 3 x 2
 ##   species       n
 ##   <fct>     <int>
 ## 1 Adelie      152
 ## 2 Chinstrap    68
 ## 3 Gentoo      124
-
-在这个第二个变体中，mutate_if(is.labelled) 函数转换了所有标记的变量。
-
 ```
+
+在这个第二个变体中，`mutate_if(is.labelled)` 函数转换了所有标记的变量。
+
+```r
 penguins_sav |>
   mutate_if(is.labelled, to_factor) |>
   group_by(species, island) |>
   tally()
 ```
 
+```text
 ## # A tibble: 5 x 3
 ## # Groups:   species [3]
 ##   species island       n
@@ -2445,8 +2622,9 @@ penguins_sav |>
 ## 3 Adelie  Torgersen   52
 ## 4 Chinstrap Dream     68
 ## 5 Gentoo  Biscoe     124
+```
 
-## 7.1.2 读取 SPSS 调查文件：“Video”
+### 7.1.2 读取 SPSS 调查文件：“Video”
 
 标记数据框的功能在处理调查数据时非常有益。数据框可以包含表单中捕获的变量代码、与这些值关联的值，以及标签中的问题文本。
 
@@ -2454,23 +2632,24 @@ penguins_sav |>
 
 ²https://www.sheffield.ac.uk/mash/statistics/datasets
 
-## 7.1 统计软件
+![img](img/b86622d1e9ca82b3cbec45faaffaaf26_104_0.png)
 
-![](img/b86622d1e9ca82b3cbec45faaffaaf26_104_0.png)
+*图 7.2 SPSS 变量视图。*
 
-## 图 7.2 SPSS 变量视图。
+![img](img/b86622d1e9ca82b3cbec45faaffaaf26_104_1.png)
 
-![](img/b86622d1e9ca82b3cbec45faaffaaf26_104_1.png)
+*图 7.3 SPSS 变量标签。*
 
-## 图 7.3 SPSS 变量标签。
+
+
 
 ![](img/b86622d1e9ca82b3cbec45faaffaaf26_105_0.png)
 
 ## 图 7.4 SPSS 值标签。
 
-R 包 {haven} 允许我们捕获所有这些信息。
+R 包 `{haven}` 允许我们捕获所有这些信息。
 
-## 7.1.2.1 将 SPSS 数据读入 R
+### 7.1.2.1 将 SPSS 数据读入 R
 
 第一步，我们将使用默认参数从 SPSS 文件中读取数据。
 
@@ -2482,15 +2661,25 @@ df_video
 ```
 
 ## # A tibble: 20 x 17
+
 ##   Person Gender Heardofcondition Set `@1st`
+
 ##   <dbl> <dbl+lbl> <dbl+lbl> <dbl> <dbl+lbl>
+
 ## ## 1 1 1 [Male] 1 [Yes] 1 4 [Demonst~
+
 ## ## 2 2 2 [Female] 1 [Yes] 1 4 [Demonst~
+
 ## ## 3 3 2 [Female] 2 [No] 1 4 [Demonst~
+
 ## ## 4 4 2 [Female] NA 1 4 [Demonst~
+
 ## ## 5 5 2 [Female] 2 [No] 1 4 [Demonst~
+
 ## ## 6 6 2 [Female] 1 [Yes] 11 1 [General~
+
 ## ## 7 7 2 [Female] 1 [Yes] 11 1 [General~
+
 ```
 ##  8        8 1 [Male]     1 [Yes]               11 1 [General~
 ##  9        9 2 [Female] NA                     11 1 [General~
@@ -2514,29 +2703,31 @@ df_video
 ## ##   DEMOUnderstandingCONDITION <dbl+lbl>, ...
 ```
 
-其中一些变量名以 @（at 符号）开头——这会在后面给我们带来一些麻烦，因此让我们使用 {janitor} 包（Firke，2021）³ 中的 clean_names() 函数来清理它们。
+其中一些变量名以 @（at 符号）开头——这会在后面给我们带来一些麻烦，因此让我们使用 `{janitor}` 包（Firke，2021）³ 中的 `clean_names()` 函数来清理它们。
 
 ```
 df_video <- janitor::clean_names(df_video)
 ```
 
-现在，我们可以使用 {labelled} 中的 look_for() 函数来查看数据框的内容：
+现在，我们可以使用 `{labelled}` 中的 `look_for()` 函数来查看数据框的内容：
 
 ```
 look_for(df_video)
 ```
 
-## 7.1.2.2 处理缺失值
+### 7.1.2.2 处理缺失值
 
 非常经常，SPSS 文件会有“用户定义缺失值”。在视频调查文件中，它们被编码为“NA”。但通常，调查结果的分析会有多种类型的“缺失值”：
 
 - 受访者留空问题
+
 - 受访者因跳逻辑而未回答问题（换句话说，受访者未看到该问题）
+
 - 分析人员在计算其他类别响应的百分比时，可能决定将“不知道”或“不适用”编码为“缺失”。
 
 根据具体情况，你可能希望统计其中一些。例如，如果有大量“不知道”和“不适用”响应，你可能希望分析其中哪一个（它们意味着完全不同的事情！）如果它们都被编码为“NA”，你就失去了获得该见解的能力。
 
-在下面的代码中，向 read_spss() 函数添加 user_na = TRUE 参数可保留原始值。
+在下面的代码中，向 `read_spss()` 函数添加 `user_na = TRUE` 参数可保留原始值。
 
 ```
 df_video <- read_spss(dpjr::dpjr_data("Video_SPSS.sav"), user_na = TRUE)
@@ -2584,9 +2775,9 @@ df_video
 
 第一个版本中为“NA”的内容现在变为“0”。
 
-## 7.1.2.3 探索数据
+### 7.1.2.3 探索数据
 
-attributes() 函数为我们提供了一种查看变量详细信息的途径。
+`attributes()` 函数为我们提供了一种查看变量详细信息的途径。
 
 首先，我们可以查看整个数据框的属性。
 
@@ -2622,10 +2813,9 @@ attributes(df_video)
 ## [17] "total_ddemo"
 ```
 
-³{janitor} 的参考页面在这里：http://sfirke.github.io/janitor/
+³`{janitor}` 的参考页面在这里：http://sfirke.github.io/janitor/
 
-
-或者，我们可以使用美元符号（$）方法来指定单个变量；在本例中，即 heardofcondition：
+或者，我们可以使用美元符号（`$`）方法来指定单个变量；在本例中，即 `heardofcondition`：
 
 ```r
 attributes(df_video$heardofcondition)
@@ -2666,11 +2856,11 @@ attributes(df_video$heardofcondition)$labels
 ##   0   1   2
 ```
 
-### 7.1.3 因子
+#### 7.1.3 因子
 
 因子的行为与标签不同：因子不会同时保留标签和值。相反，它们显示值并保留排序顺序（该顺序可以自动设置，也可以在代码中定义）。
 
-在下面的代码中，我们将把 df_video 数据框中的所有变量设置为因子。在第一个代码块中没有额外参数。
+在下面的代码中，我们将把 `df_video` 数据框中的所有变量设置为因子。在第一个代码块中没有额外参数。
 
 ```r
 (df_video_factor <- as_factor(df_video))
@@ -2709,13 +2899,15 @@ attributes(df_video$heardofcondition)$labels
 ## #   total_a_gen <dbl>, total_bdoc <dbl>, ...
 ```
 
-在第二个代码块中，levels 参数设置为“both”。
+在第二个代码块中，`levels` 参数设置为“both”。
 
 ```r
 (df_video_both <- as_factor(df_video, levels="both"))
 ```
 
-```
+
+
+```r
 ## # A tibble: 20 × 17
 ##   person gender       heardofcondition   set x1st   x2nd
 ##     <dbl> <fct>      <fct>          <dbl> <fct> <fct>
@@ -2757,7 +2949,7 @@ attributes(df_video$heardofcondition)$labels
 - 各条记录，其中变量以数值编码。
 - 一份单独的“代码簿”，其中包含与每个数值相关联的标签。
 
-在下面的示例中，Palmer 企鹅数据（Horst, 2020）被存储在一个 Excel 文件中。该 Excel 文件的第一个工作表包含数据，其中三个字符变量（species、island 和 sex）的值已被转换为数字代码。例如，在 species 变量中，Adelie 企鹅用数值“1”表示，Chinstrap 用“2”表示，Gentoo 用“3”表示。
+在下面的示例中，Palmer 企鹅数据（Horst, 2020）被存储在一个 Excel 文件中。该 Excel 文件的第一个工作表包含数据，其中三个字符变量（`species`、`island` 和 `sex`）的值已被转换为数字代码。例如，在 `species` 变量中，Adelie 企鹅用数值“1”表示，Chinstrap 用“2”表示，Gentoo 用“3”表示。
 
 ```r
 penguins_path <- dpjr::dpjr_data("penguins_labelled.xlsx")
@@ -2767,9 +2959,9 @@ penguins_data <- read_excel(penguins_path, sheet = "penguins_values")
 head(penguins_data)
 ```
 
-看一眼数据框就会发现，species、island 和 sex 变量都被编码为数值型变量。与我们在本章前面读取的“.sav”文件不同，这个数据框并没有把标签作为变量的一部分来携带。
+看一眼数据框就会发现，`species`、`island` 和 `sex` 变量都被编码为数值型变量。与我们在本章前面读取的`.sav`文件不同，这个数据框并没有把标签作为变量的一部分来携带。
 
-我们可以编写一些代码，使用 {labelled} 包中的 val_labels() 函数来应用标签并更改变量类型：
+我们可以编写一些代码，使用 `{labelled}` 包中的 `val_labels()` 函数来应用标签并更改变量类型：
 
 ```r
 # assign the species names as labels
@@ -2785,7 +2977,7 @@ attr(penguins_data$species, "labels")
 
 我们还可以使用 R 读取这些值并以编程方式应用它们。这将节省时间和精力，并降低录入错误的风险，尤其是在变量较多、且这些变量有大量值需要标记的情况下。
 
-如果我们回到 Excel 文件“penguins_labelled.xlsx”，会发现该文件中的第二个工作表名为“penguins_codebook_source”。该工作表包含 SPSS 在使用“DISPLAY DICTIONARY”语法（或“File > Display Data File Information > Working File”GUI 菜单序列）生成“字典”（即代码簿）时创建的输出。其中包含每个变量的信息，包括该变量是名义变量还是尺度变量。
+如果我们回到 Excel 文件 `penguins_labelled.xlsx`，会发现该文件中的第二个工作表名为 `penguins_codebook_source`。该工作表包含 SPSS 在使用 `DISPLAY DICTIONARY` 语法（或 `File > Display Data File Information > Working File` GUI 菜单序列）生成“字典”（即代码簿）时创建的输出。其中包含每个变量的信息，包括该变量是名义变量还是尺度变量。
 
 我们特别关注的是与每个变量相关的值。这些信息保存在“变量值”标题下；对于 penguins 数据文件，它出现在 Excel 工作表的第 36 行。
 
@@ -2793,18 +2985,18 @@ attr(penguins_data$species, "labels")
 
 | 变量 | 值 | 标签 |
 |---|---|---|
-| species | 1 | Adelie |
-| species | 2 | Chinstrap |
-| species | 3 | Gentoo |
-| island | 1 | Biscoe |
-| island | 2 | Dream |
-| island | 3 | Torgersen |
-| sex | 1 | female |
-| sex | 2 | male |
+| `species` | 1 | Adelie |
+| `species` | 2 | Chinstrap |
+| `species` | 3 | Gentoo |
+| `island` | 1 | Biscoe |
+| `island` | 2 | Dream |
+| `island` | 3 | Torgersen |
+| `sex` | 1 | female |
+| `sex` | 2 | male |
 
 *图 7.5 来自 penguins SPSS 输出的“变量值”。*
 
-首先，我们读取 Excel 文件第二个工作表中包含代码簿的特定数据矩形区域的内容。请注意，我们从第 37 行开始读取，因此“Value”和“Label”会被分配为我们的变量名。在这段代码中，使用了“anchored”方法：先指定 Excel 单元格的左上角，然后在 dim 参数中指定要读取的行数和列数。
+首先，我们读取 Excel 文件第二个工作表中包含代码簿的特定数据矩形区域的内容。请注意，我们从第 37 行开始读取，因此 `Value` 和 `Label` 会被分配为我们的变量名。在这段代码中，使用了 `anchored` 方法：先指定 Excel 单元格的左上角，然后在 `dim` 参数中指定要读取的行数和列数。
 
 ```r
 penguins_path <- dpjr::dpjr_data("penguins_labelled.xlsx")
@@ -2818,16 +3010,13 @@ penguins_code
 
 我们已经读取了 SPSS 输出并保存到 Excel 文件中的表格，但还需要进行额外的数据整理。
 
-管道中的第一步是重命名变量。不仅“Variable”列被赋予了 value 这个名称，而且值列的名称被解释为空白，并被赋给了变量名 ...2。
+管道中的第一步是重命名变量。不仅 `Variable` 列被赋予了 `value` 这个名称，而且值列的名称被解释为空白，并被赋给了变量名 `...2`。
 
-第二步是使用 {dplyr} 包中的 fill() 函数来填充 variable 变量中的缺失值。fill() 的默认填充方向为向下。
-
-
-
+第二步是使用 `{dplyr}` 包中的 `fill()` 函数来填充 `variable` 变量中的缺失值。`fill()` 的默认填充方向为向下。
 
 因此，我们不需要将方向作为参数来指定。稍后我们将探讨清理数据的其他方案。
 
-```
+```r
 penguins_code <- penguins_code |>
   # rename variables
   rename(Value = "variable",
@@ -2843,12 +3032,12 @@ penguins_code
 
 此时，有两种可能的解决方案：
 
-- 1. 将“penguins_code”数据框中的值连接起来，使得除了包含数值的变量外，还有一个包含字符串的变量。
-- 2. 使用 {labelled} 包中的函数，将变量转换为“labelled”类型，这样数值保持不变，并应用标签。在这种情况下，最终状态与直接读取 SPSS 文件相同。
+- 1. 将 `penguins_code` 数据框中的值连接起来，使得除了包含数值的变量外，还有一个包含字符串的变量。
+- 2. 使用 `{labelled}` 包中的函数，将变量转换为 `labelled` 类型，这样数值保持不变，并应用标签。在这种情况下，最终状态与直接读取 SPSS 文件相同。
 
-## 最后一步：连接变量
+### 最后一步：连接变量
 
-```
+```r
 penguins_code_wide <- penguins_code |>
   # mutate(row_num = row_number()) |>
   pivot_wider(names_from = c(variable), values_from = variable_label)
@@ -2866,9 +3055,9 @@ penguins_code_wide
 
 在本章中，我们将探讨数据收集者这样做的两种情况。但他们并非以多种格式发布微观数据，而是发布了一个压缩包，其中包含原始文本扁平文件，以及应用变量名、变量标签和值标签的语法（代码）文件。如果我们拥有其中一种专有软件工具的许可证⁴，那自然很好，但如果我们使用的是 R 呢？
 
-幸运的是，有一个包提供了读取原始文本文件并应用 SPSS 语法来创建带有标签变量的 R 对象的函数：{memisc} (Elff 等, 2021)。
+幸运的是，有一个包提供了读取原始文本文件并应用 SPSS 语法来创建带有标签变量的 R 对象的函数：`{memisc}` (Elff 等, 2021)。
 
-```
+```r
 library(memisc)
 ```
 
@@ -2876,67 +3065,67 @@ library(memisc)
 
 我们的第一个示例使用加拿大统计局（Statistics Canada）收集并发布的国家出行调查（NTS）数据（Statistics Canada, 2021）。
 
-步骤 1 - 下载 2020 参考期的“SPSS”zip 文件，并将其解压到项目子文件夹“data”中。这将创建一个子文件夹，因此文件路径现在是“data\2020-spss”。
+步骤 1 - 下载 2020 参考期的“SPSS”zip 文件，并将其解压到项目子文件夹 `data` 中。这将创建一个子文件夹，因此文件路径现在是 `data\2020-spss`。
 
-该 zip 文件不包含 SPSS 格式的数据文件（.sav）。相反，该文件夹为三个调查组成部分（人员、出行和访问）各提供了一个固定宽度的文本文件，以及相应的 SPSS 语法文件，这些语法文件可用于将文件读入正确的变量，并应用变量和值标签。
+该 zip 文件不包含 SPSS 格式的数据文件（`.sav`）。相反，该文件夹为三个调查组成部分（人员、出行和访问）各提供了一个固定宽度的文本文件，以及相应的 SPSS 语法文件，这些语法文件可用于将文件读入正确的变量，并应用变量和值标签。
 
-在本例中，我们将使用 2020 年 NTS 的“Person”文件。加拿大统计局提供的原始数据文件是“PERSON_NTS2020_PUMF.txt”。
+在本例中，我们将使用 2020 年 NTS 的“Person”文件。加拿大统计局提供的原始数据文件是 `PERSON_NTS2020_PUMF.txt`。
 
 步骤 2 - 使用 SPSS 语法文件（在 R 中）
 
-该压缩包还包括带有“.sps”扩展名的独立 SPSS 语法文件。由于加拿大是一个双语国家，加拿大统计局发布两个版本
+该压缩包还包括带有 `.sps` 扩展名的独立 SPSS 语法文件。由于加拿大是一个双语国家，加拿大统计局发布两个版本
+
 ⁴或者我们可以承诺给一块巧克力棒来贿赂的朋友。
+
 的标签语法文件，一个为英文，另一个为法文。它们可以通过文件扩展名之前的最后一个字母来区分。这些文件是：
 
-- 变量标签：“Person_NTS2020_Pumf_vare.sps”（等效的带有法语变量标签的文件是“Person_NTS2020_Pumf_varf.sps”。）
-- 变量值：“Person_NTS2020_Pumf_vale.sps”
-- 缺失值：“Person_NTS2020_Pumf_miss.sps”
+- 变量标签：`Person_NTS2020_Pumf_vare.sps`（等效的带有法语变量标签的文件是 `Person_NTS2020_Pumf_varf.sps`。）
+- 变量值：`Person_NTS2020_Pumf_vale.sps`
+- 缺失值：`Person_NTS2020_Pumf_miss.sps`
 
-这种结构与 {memisc} 函数配合得很好，这些文件不需要任何进一步的处理。（正如我们将在第二个示例中看到的，情况并非总是如此。）
+这种结构与 `{memisc}` 函数配合得很好，这些文件不需要任何进一步的处理。（正如我们将在第二个示例中看到的，情况并非总是如此。）
 
 由于加拿大统计局提供了其他年份的数据，我们将有意识地编写灵活的代码，以便日后以最少的更改重新运行我们的代码。因此，我们将把数据的年份赋为一个对象。
 
-```
+```r
 nts_year <- "2020"
 ```
 
-现在，在定义各个输入文件的位置时，我们可以多种方式使用这个包含年份编号的对象。请注意，此代码使用 {glue} 包中的 glue() 函数来创建文件名字符串，并使用 {here} 包中的 here() 函数来确定相对于我们的 RStudio 项目位置的文件路径。
+现在，在定义各个输入文件的位置时，我们可以多种方式使用这个包含年份编号的对象。请注意，此代码使用 `{glue}` 包中的 `glue()` 函数来创建文件名字符串，并使用 `{here}` 包中的 `here()` 函数来确定相对于我们的 RStudio 项目位置的文件路径。
 
-```
+```r
 # define locations of input files
 
 nts_year_format <- glue(nts_year, "-SPSS")
 
 input_folder <- here("data", nts_year_format)
 input_folder
-```
 ## [1] "E:/github_book/data_preparation_journey/data/2020-SPSS"
-
 ```
+
+```r
 layout_folder <- here("data", nts_year_format, "Layout_cards")
 layout_folder
-```
 ##      [1]      "E:/github_book/data_preparation_journey/data/2020-SPSS/Layout_cards"
-
 ```
+
+```r
 # use the above to create objects with file names and paths
 
 data_file_1 <- glue("PERSON_NTS", nts_year, "_PUMF.txt")
 data_file <- glue(input_folder, "/Data_Données/", data_file_1)
 data_file
+## E:/github_book/data_preparation_journey/data/2020-SPSS/Data_Données/PERSON_NTS2020_PUMF.txt
 ```
-##
-E:/github_book/data_preparation_journey/data/2020-SPSS/Data_Données/PERSON_NTS2020_PUMF.txt
 
-```
+```r
 columns_file_1 <- glue("Person_NTS", nts_year, "_Pumf_i.sps")
 columns_file <- glue(layout_folder, columns_file_1, .sep = "/")
 columns_file
+## E:/github_book/data_preparation_journey/data/2020-SPSS/Layout_cards/Person_NTS2020_Pumf_i.sps
 ```
-##
-E:/github_book/data_preparation_journey/data/2020-SPSS/Layout_cards/Person_NTS2020_Pumf_i.sps
 
-```
+```r
 variable_labels_1 <- glue("Person_NTS", nts_year, "_Pumf_vare.sps")
 variable_labels <- glue(layout_folder, variable_labels_1, .sep = "/")
 
@@ -2947,9 +3136,9 @@ missing_values_1 <- glue("Person_NTS", nts_year, "_Pumf_miss.sps")
 missing_values <- glue(layout_folder, missing_values_1, .sep = "/")
 ```
 
-下一步是使用 memisc::spss.fixed.file() 导入过程来创建数据集的定义。
+下一步是使用 `memisc::spss.fixed.file()` 导入过程来创建数据集的定义。
 
-```
+```r
 # read file, create datafile with nested lists
 nts_person_2020 <- memisc::spss.fixed.file(
   data_file,
@@ -2962,17 +3151,20 @@ nts_person_2020 <- memisc::spss.fixed.file(
 )
 ```
 
-```
+```r
 # convert the resulting object into a "data.set" format
 nts_person_2020_ds <- memisc::as.data.set(nts_person_2020)
 ```
 
-然后，使用 as_haven() 函数将数据集对象转换为 tibble。这个 tibble 已分配了所有变量和值标签，可通过 {labelled} 包中的函数进行访问。
+
+
+然后，使用`as_haven()`函数将数据集对象转换为`tibble`。这个`tibble`已分配了所有变量和值标签，可通过`{labelled}`包中的函数进行访问。
 
 ```
 nts_person_2020_hav <- memisc::as_haven(nts_person_2020_ds)
 nts_person_2020_hav
 ```
+
 ```
 ## # A tibble: 79,771 x 13
 ##   pumfid verd ate  refyear  quarter inf_q01 inf_q02
@@ -2996,7 +3188,7 @@ nts_person_2020_hav
 
 在最后一步中，我们将数据框保存为 SPSS、Stata 和 RDS 文件以供将来使用。
 
-对于 Stata 用户来说，一个重要说明是有一个“version”参数，它允许我们创建可被旧版 Stata 读取的文件（默认是 Stata 15）。
+对于 Stata 用户来说，一个重要说明是有一个`version`参数，它允许我们创建可被旧版 Stata 读取的文件（默认是 Stata 15）。
 
 ```
 # export haven format table as SPSS .sav file
@@ -3005,9 +3197,6 @@ haven::write_sav(nts_person_2020_hav,
 
 # export haven format table as Stata .dta file
 ```
-
-
-
 
 ```
 haven::write_dta(nts_person_2020_hav,
@@ -3019,9 +3208,7 @@ readr::write_rds(nts_person_2020_hav,
     here("data_output", "nts_person_2020.rds"))
 ```
 
-# 8
-
-## 导入数据：PDF文件
+# 8 导入数据：PDF文件
 
 本章内容：
 
@@ -3038,9 +3225,9 @@ PDF文件格式提供了强大的功能和灵活性，可以创建高质量的�
 
 <sup>1</sup>维基百科条目“PDF”（Wikipedia contributors, 2022b）
 
-幸运的是，其他数据科学家已经应对了从PDF文件中读取数据表格的挑战，并为我们提供了可用的工具。其中一个包是{pdftools}（Ooms, 2022）。
+幸运的是，其他数据科学家已经应对了从PDF文件中读取数据表格的挑战，并为我们提供了可用的工具。其中一个包是`{pdftools}`（Ooms, 2022）。
 
-除{pdftools}外，本章我们还将使用数据操作包{dplyr}和{tidyr}，以及文本处理包{stringr}（Wickham, 2019b）。
+除`{pdftools}`外，本章我们还将使用数据操作包`{dplyr}`和`{tidyr}`，以及文本处理包`{stringr}`（Wickham, 2019b）。
 
 ```
 # 读取PDF文件内容
@@ -3056,7 +3243,7 @@ library(stringr)
 
 ### 8.1.1 开始入门
 
-要从PDF文件中读取数据，我们从一个{palmerpenguins}（Horst et al., 2022; Horst, 2020）数据摘要中读取数据。
+要从PDF文件中读取数据，我们从一个`{palmerpenguins}`（Horst et al., 2022; Horst, 2020）数据摘要中读取数据。
 
 虽然这是针对单页上的单个表格，但如果每页上每个表格的结构相同，同样的方法也适用于跨多页的多个表格。过程始终相同：从最小的单元开始，然后向外扩展。
 
@@ -3065,9 +3252,9 @@ library(stringr)
 - 如果有多个结构相同的表格，则下一步通过循环处理每个表格。
 - 一旦你成功处理了单页，就可以循环处理多页。
 
-我们使用来自{pdftools}包的pdf_text()函数读取文件的全部内容，并将内容分配给环境中的一个R对象。
+我们使用来自`{pdftools}`包的`pdf_text()`函数读取文件的全部内容，并将内容分配给环境中的一个R对象。
 
-接下来，我们使用str()函数显示新对象结构的摘要。
+接下来，我们使用`str()`函数显示新对象结构的摘要。
 
 ```
 penguin_summary <- pdf_text(dpjr::dpjr_data("penguin_summary.pdf"))
@@ -3081,13 +3268,13 @@ str(penguin_summary)
 chr " species island mean_flipper_length_mm mean_body_mass_g\n\n1 Adelie Biscoe 188.795"| __truncated__
 ```
 
-## 图 8.1 来自PDF文件的企鹅数据。
+**图 8.1 来自PDF文件的企鹅数据。**
 
 这样我们得到的结果是单个字符串，包含文件内容。在此示例中，只有一页，因此只有一个字符串。如果你处理的是多页文档，每一页都会有自己的字符串。
 
-在视觉浏览此输出时，我们看到变量名以species开头。在最后一个变量mean_body_mass_g之后有两个换行符，表示为“\n”（读作“反斜杠n”）。我们将使用这些换行符作为解析过程的一部分。
+在视觉浏览此输出时，我们看到变量名以`species`开头。在最后一个变量`mean_body_mass_g`之后有两个换行符，表示为`\n`（读作“反斜杠n”）。我们将使用这些换行符作为解析过程的一部分。
 
-查看页面内容的另一种方法是使用cat()函数（来自{base R}），它按打印方式显示内容：
+查看页面内容的另一种方法是使用`cat()`函数（来自`{base R}`），它按打印方式显示内容：
 
 ```
 cat(penguin_summary)
@@ -3107,7 +3294,7 @@ cat(penguin_summary)
 ## 5 Gentoo Biscoe 217.1870 5076.016
 ```
 
-接下来，我们使用strsplit()函数（来自{base R}）将长字符串拆分为单独的行。正如我们注意到的，每一行末尾都有两个“\n”字符对；如果在strsplit()函数中只使用一个，则数据行之间会出现额外的行。
+接下来，我们使用`strsplit()`函数（来自`{base R}`）将长字符串拆分为单独的行。正如我们注意到的，每一行末尾都有两个`\n`字符对；如果在`strsplit()`函数中只使用一个，则数据行之间会出现额外的行。
 
 ```
 penguin_summary_2 <- penguin_summary |>
@@ -3137,7 +3324,7 @@ penguin_summary_3 <- penguin_summary_2[[1]] |>
   str_remove("^\\d ")
 ```
 
-接下来，我们创建一个包含变量名的列表对象，以便将名称与最终表格中的数据分开。这通过将包含名称的行（第1行，使用方括号[1]标识）分配给一个单元素向量来完成。
+接下来，我们创建一个包含变量名的列表对象，以便将名称与最终表格中的数据分开。这通过将包含名称的行（第1行，使用方括号`[1]`标识）分配给一个单元素向量来完成。
 
 ```
 penguin_variable_vector <- as.vector(penguin_summary_3[1])
@@ -3149,7 +3336,7 @@ penguin_variable_vector
 ## [1] "species    island    mean_flipper_length_mm mean_body_mass_g"
 ```
 
-下一步是在有一个或多个空白的位置将此向量拆分为4个单独的元素，这些空白通过正则表达式“\s+”标识。“\s”匹配单个空格，添加“+”将其扩展为“一个或多个”前面的字符。
+下一步是在有一个或多个空白的位置将此向量拆分为4个单独的元素，这些空白通过正则表达式`\s+`标识。`\s`匹配单个空格，添加`+`将其扩展为“一个或多个”前面的字符。
 
 这将返回另一个嵌套列表。
 
@@ -3164,7 +3351,7 @@ penguin_variable_list
 ## [3] "mean_flipper_length_mm" "mean_body_mass_g"
 ```
 
-为了获得我们所需的结构，我们对结果应用unlist()函数。
+为了获得我们所需的结构，我们对结果应用`unlist()`函数。
 
 ```
 penguin_variable_names <- unlist(penguin_variable_list)
@@ -3176,7 +3363,7 @@ penguin_variable_names
 ## [3] "mean_flipper_length_mm" "mean_body_mass_g"
 ```
 
-可以通过将字符串拆分包装在unlist()中将这两个步骤合并为一个：
+可以通过将字符串拆分包装在`unlist()`中将这两个步骤合并为一个：
 
 ```
 penguin_variable_names <-
@@ -3220,7 +3407,7 @@ penguin_table
 ## 5 Gentoo   Biscoe          217.1870    5076.016
 ```
 
-循环创建了一个只有一列value的tibble。我们将应用separate()函数将value拆分为之前分配给对象penguin_variable_names的每个变量名。拆分基于原始字符串中一个或多个空格的位置，使用“\s+”正则表达式。
+循环创建了一个只有一列`value`的`tibble`。我们将应用`separate()`函数将`value`拆分为之前分配给对象`penguin_variable_names`的每个变量名。拆分基于原始字符串中一个或多个空格的位置，使用`\s+`正则表达式。
 
 ```
 penguin_table <- tidyr::separate(
@@ -3236,10 +3423,6 @@ penguin_table
 ```
 ## # A tibble: 5 x 4
 ##   species   island   mean_flipper_length_mm mean_body_mass_g
-```
-
-
-```
 ##  <chr>  <chr>  <chr>  <chr>
 ## 1 Adelie  Biscoe  188.7955  3709.659
 ## 2 Adelie  Dream  189.7321  3688.393
@@ -3250,7 +3433,7 @@ penguin_table
 
 还有最后一步：将值的变量类型更改为数值。
 
-```r
+```
 penguin_table <- penguin_table |>
   mutate(
     across(
@@ -3265,12 +3448,19 @@ penguin_table
 *# 一个 tibble：5 x 4*
 
 | 物种 | 岛屿 | 平均鳍足长度_mm | 平均体重_g |
+
 |---|---:|---:|---:|
+
 | `<chr>` | `<chr>` | `<dbl>` | `<dbl>` |
+
 | Adelie | Biscoe | 189. | 3710. |
+
 | Adelie | Dream | 190. | 3688. |
+
 | Adelie | Torgersen | 191. | 3706. |
+
 | Chinstrap | Dream | 196. | 3733. |
+
 | Gentoo | Biscoe | 217. | 5076. |
 
 ### 8.1.2 扩展示例：渡轮交通
@@ -3279,9 +3469,9 @@ penguin_table
 
 该报告以 PDF 文件形式发布，共 101 页，包含书面文本和数据表的混合内容。
 
-{pdftools} 使我们能够从本地副本或网络下载和读取文件。下面的代码块显示了从 URL 下载文件的代码。
+`{pdftools}`使我们能够从本地副本或网络下载和读取文件。下面的代码块显示了从 URL 下载文件的代码。
 
-```r
+```
 # download file from web URL
 download.file(
   url = "https://www.bcferries.com/web_image/h29/h7a/8854124527646.pdf",
@@ -3290,26 +3480,24 @@ download.file(
 )
 ```
 
-一旦文件下载完成，我们就可以使用 pdf_text() 函数读取文件，并将其内容分配给我们环境中的 R 对象。当然，我们也可以选择读取已下载的文件。
+一旦文件下载完成，我们就可以使用`pdf_text()`函数读取文件，并将其内容分配给我们环境中的 R 对象。当然，我们也可以选择读取已下载的文件。
 
-```r
+```
 # alternative, from the {dpjr} package
 bcf <- pdf_text(dpjr::dpjr_data("bcferries_2021.pdf"))
 ```
 
 上述代码会生成一个包含 101 个字符字符串的向量——原始文档的每一页对应一个。我们可以使用 R 的方括号访问器语法访问每一页。以下是查看第一页内容的代码：
 
-```r
+```
 bcf[1]
 ```
 
-```
-[1] "British Columbia Ferry Services Inc.\n\n              Annual Report\n              to the\nBritish Columbia Ferries Commissioner\n\n  Year Ended March 31, 2021\n"
-```
+
 
 **图 8.2** *BC Ferries PDF 文件的标题页。*
 
-使用 cat() 函数：
+使用`cat()`函数：
 
 ```r
 cat(bcf[1])
@@ -3325,9 +3513,9 @@ cat(bcf[1])
 ##     Year Ended March 31, 2021
 ```
 
-## 8.1 *PDF 文件*
+### 8.1 PDF 文件
 
-如果我们比较这两个输出，会发现第一个显示了字符“\\n”，它表示行尾。这些字符在 cat() 版本中用于渲染布局。
+如果我们比较这两个输出，会发现第一个显示了字符`\\n`，它表示行尾。这些字符在`cat()`版本中用于渲染布局。
 
 该年度报告涵盖的期间捕捉到了 COVID-19 大流行第一年期间对旅行的深远影响，并且报告中与之前的大流行前一年在车辆和乘客数量方面进行了比较。让我们从比较系统中每条航线乘客数量的表格中提取数据。该表格位于 PDF 文件的第 11 页：
 
@@ -3369,7 +3557,7 @@ bcf_11
 
 现在我们有一个对象，它是一个单一的文本字符串。我们想要的所有数据都在其中，但要提取我们想要的列并以可用的格式呈现，需要一些技巧。
 
-使用 `\n` 换行字符，我们可以将这个单一值拆分为页面上存在的行数。
+使用`\n`换行字符，我们可以将这个单一值拆分为页面上存在的行数。
 
 ```r
 # break into lines
@@ -3404,9 +3592,9 @@ bcf_11_lines[[1]][13]
 tester <- bcf_11_lines[[1]][13:14]
 ```
 
-我们如何将其拆分为单独的部分？这里 {stringr} 包和我们对正则表达式的了解就派上用场了。我们希望在多个空格处拆分字符串。如果在每个空格处拆分，我们会得到很多列。因此，我们是在空格出现的地方进行分隔（或拆分）。
+我们如何将其拆分为单独的部分？这里`{stringr}`包和我们对正则表达式的了解就派上用场了。我们希望在多个空格处拆分字符串。如果在每个空格处拆分，我们会得到很多列。因此，我们是在空格出现的地方进行分隔（或拆分）。
 
-查找任何空白字符的正则表达式是 `\s`，要查找任意数量的空白字符，我们需要加上加号 `+`。请记住，在 R 中，我们需要转义反斜杠，因此我们的正则表达式表示为 `\\s+`。
+查找任何空白字符的正则表达式是`\s`，要查找任意数量的空白字符，我们需要加上加号`+`。请记住，在 R 中，我们需要转义反斜杠，因此我们的正则表达式表示为`\\s+`。
 
 ```r
 test_result <- str_split(tester, "\\s+")
@@ -3467,15 +3655,12 @@ as_tibble(test_result, .name_repair = "unique")
 | `"(3,546,013)"` | `"(1,629,097)"` |
 | `"39,230,411"` | `"25,150,326"` |
 | `"91,309,787"` | `"48,775,753"` |
+| `"(52,079,376)"` | `"(23,625,427)"` |
+| `"87.6%"` | `"81.8%"` |
+| `"87.2%"` | `"87.3%"` |
+| `"86.6%"` | `"86.2%"` |
 
-
-
-## 8 "(52,079,376)" "(23,625,427)"
-## 9 "87.6%" "81.8%"
-## 10 "87.2%" "87.3%"
-## 11 "86.6%" "86.2%"
-
-```
+```r
 bcf_table <- tibble(value = NULL)
 
 for (j in 1:2) {
@@ -3486,13 +3671,15 @@ for (j in 1:2) {
 bcf_table
 ```
 
+```
 ## # A tibble: 2 x 1
 ##   value
 ##   <chr>
 ## 1 " 1"           2,578,221      6,124,234      (3,546,0~
 ## 2 " 2"           1,669,054      3,298,151      (1,629,0~
-
 ```
+
+```r
 bcf_table_2 <- tidyr::separate(bcf_table, value,
                                into = bcf_col_names,
                                "\\s+")
@@ -3500,6 +3687,7 @@ bcf_table_2 <- tidyr::separate(bcf_table, value,
 glimpse(bcf_table_2, width = 65)
 ```
 
+```
 ## Rows: 2
 ## Columns: 11
 ## $ blank                <chr> "", ""
@@ -3513,16 +3701,17 @@ glimpse(bcf_table_2, width = 65)
 ## $ pct_sailings_10_mins_fy2019 <chr> "87.6%", "81.8%"
 ## $ pct_sailings_10_mins_fy2020 <chr> "87.2%", "87.3%"
 ## $ pct_sailings_10_mins_fy2021 <chr> "86.6%", "86.2%"
+```
 
 太好了！（我本应保留我在得到这个结果之前所做的所有失败尝试——很多尝试彻底失败了，或者我只完成了其中一两步就卡住了。）
 
 除了……所有变量都是字符类型，因为使用了作为千位分隔符的逗号和百分号。
 
-让我们回到 tester 对象，看看我们能否使用 {stringr} 函数 str_remove_all() 来去掉逗号。（注意 str_remove() 只会删除指定字符串的第一个实例。）
+让我们回到`tester`对象，看看我们能否使用`{stringr}`函数`str_remove_all()`来去掉逗号。（注意`str_remove()`只会删除指定字符串的第一个实例。）
 
 为本次练习的目的，我们不会担心括号中的数字，它们是前两个变量之间的差值（由于它们为负数，因此采用会计格式样式，用括号表示）。我们不会处理百分比，但百分号可以用与逗号相同的方式删除。
 
-```
+```r
 # remove all commas
 str_remove_all(tester, ",")
 ```
@@ -3533,7 +3722,7 @@ str_remove_all(tester, ",")
 
 现在让我们把所有这些结合起来，以捕获完整的表格。
 
-```
+```r
 # read the relevant rows and remove the commas
 bcf_data <- bcf_11_lines[[1]][13:42]
 bcf_data <- str_remove_all(bcf_data, ",")
@@ -3565,6 +3754,7 @@ for (j in 1:30) {
 bcf_table
 ```
 
+```
 ## # A tibble: 30 x 1
 ##   value
 ##   <chr>
@@ -3579,14 +3769,15 @@ bcf_table
 ## 9 "      28         917       7585      (666~
 ## 10 "Northern Routes  34090     100403    (66313)~ 
 ## # i 20 more rows
-
 ```
+
+```r
 bcf_table_2 <- tidyr::separate(bcf_table, value,
     into = bcf_col_names,
     "\\s\\s+")
 ```
 
-```
+```r
 bcf_table_2
 ```
 
@@ -3599,6 +3790,8 @@ bcf_table_2
 - 有路线类型的小计行
 - 一个空白行
 - 差异列
+
+
 
 ```
 bcf_table_3 <- bcf_table_2 |>
@@ -3620,7 +3813,7 @@ mutate(passengers_fy2021 = as.numeric(passengers_fy2021),
 bcf_table_3
 ```
 
-如果我们需要按路线类型创建小计，最好有一个单独的变量来表示。这里就可以使用 {dplyr} 中的 case_when() 函数。
+如果我们需要按路线类型创建小计，最好有一个单独的变量来表示。这里就可以使用 `{dplyr}` 中的 `case_when()` 函数。
 
 ```
 bcf_table_3 <- bcf_table_3 |>
@@ -3638,7 +3831,7 @@ route %in% c("10", "11", "28") ~ "northern",
 ))
 ```
 
-bcf_table_3
+`bcf_table_3`
 
 ![](img/b86622d1e9ca82b3cbec45faaffaaf26_136_1.png)
 
@@ -3669,11 +3862,10 @@ mutate(pct_change =
 
 我们的分析：COVID-19 大流行对旅行产生了 *巨大的* 影响。2021 财年涵盖 2020 年 4 月 1 日至 2021 年 3 月 31 日的期间，几乎正好从严格的旅行限制开始实施。尽管在 12 个月期间后期限制开始放宽，但主要路线的旅行量下降了近一半。
 
-# 9
-
-# 数据来源网络
+# 9 数据来源网络
 
 本章内容：
+
 - 从网络存储库导入数据
 
 ## 9.1 引言
@@ -3688,7 +3880,7 @@ mutate(pct_change =
 
 利用 API 的 R 包有两种类型。第一种是专门针对特定数据源的，例如统计机构。除了获取数据外，这些包通常还具有额外的函数，可以为我们完成大量初始数据操作，使其成为 R 中有用的格式。
 
-第二种类型超出了本书的范围，它们允许我们连接到原始数据源。对于这些来源，我们通常需要在使用数据之前进行一些整理。如果你有兴趣了解更多关于在 R 中创建与提供 API 的网站连接的内容，R 包 {httr2}(Wickham, 2023) 可能是一个不错的起点。
+第二种类型超出了本书的范围，它们允许我们连接到原始数据源。对于这些来源，我们通常需要在使用数据之前进行一些整理。如果你有兴趣了解更多关于在 R 中创建与提供 API 的网站连接的内容，R 包 `{httr2}`(Wickham, 2023) 可能是一个不错的起点。
 
 ## 9.2 用于直接连接的 R 包
 
@@ -3696,7 +3888,7 @@ mutate(pct_change =
 
 ### 9.2.1 国家统计局（英国）
 
-我们的第一个示例将是 {onsr}，它直接从英国国家统计局下载数据（Vasilopoulos, 2022）。
+我们的第一个示例将是 `{onsr}`，它直接从英国国家统计局下载数据（Vasilopoulos, 2022）。
 
 ```
 library(onsr)
@@ -3704,7 +3896,7 @@ library(onsr)
 
 对于此，我们希望获得零售销售的时间序列数据。
 
-我们可能想做的第一件事是探索我们感兴趣领域中有哪些可用内容。ons_datasets() 函数提供了当前可用的数据的完整列表。
+我们可能想做的第一件事是探索我们感兴趣领域中有哪些可用内容。`ons_datasets()` 函数提供了当前可用的数据的完整列表。
 
 ```
 datasets <- ons_datasets()
@@ -3716,9 +3908,7 @@ datasets |>
 
 从中我们将选择“按价值和数量计的英国零售销售数据，经季节性调整和未经季节性调整”，其 id 值为“retail-sales-index”。
 
-ons_ids() 函数提供了从 ons_datasets 函数获得的 id 列的列表。
-
-
+`ons_ids()` 函数提供了从 `ons_datasets` 函数获得的 id 列的列表。
 
 Another option is the `ons_browse_qmi()` function, which opens the relevant ONS page in your web browser software.
 
@@ -3732,13 +3922,13 @@ Finally, we will use the relevant id value in an `ons_get()` function to retriev
 df_retail_sales <- ons_get(id = "retail-sales-index")
 ```
 
-There are 42,400 rows in this data (as of 2023-06-14), with multiple variables for each month. Your analysis will require further filtering and selecting, but with the {onsr} package providing the access to the data, you are well on your way.
+There are 42,400 rows in this data (as of 2023-06-14), with multiple variables for each month. Your analysis will require further filtering and selecting, but with the `{onsr}` package providing the access to the data, you are well on your way.
 
 ### 9.2.2 加拿大统计局
 
 加拿大统计局，加拿大政府的一个部门，提供了一个名为“CANSIM”的社会经济时间序列数据库。发布到数据库中的数据是加拿大统计局定期收集的大部分汇总数据，例如劳动力调查（我们从中获得失业率更新）、消费者价格指数调查（关于通货膨胀）以及从怀孕和出生到预期寿命和死亡的健康相关信息。
 
-包 {cansim}（von Bergmann 和 Shkolnik，2021）使用加拿大统计局创建的 API，以便直接下载数百个数据表和数千个单独的时间序列。
+包 `{cansim}`（von Bergmann 和 Shkolnik，2021）使用加拿大统计局创建的 API，以便直接下载数百个数据表和数千个单独的时间序列。
 
 ```
 library(cansim) # access Statistics Canada's CANSIM data repository
@@ -3781,9 +3971,9 @@ We could use the filters and fiddle around making sure we got the right selectio
 
 我们可以使用过滤器并反复调整以确保获得正确的选择然后下载数据，但如果下个月必须这样做效率会很低。我们也可以先点击“下载选项”按钮并选择“下载整个表...”，但同样，这不是最高效的方式，因为我们必须执行几个手动步骤，然后将文件打开到 R 中并过滤以选择我们想要的系列。
 
-This is where the {cansim} package comes in.
+This is where the `{cansim}` package comes in.
 
-这就是 {cansim} 包发挥作用的地方。
+这就是 `{cansim}` 包发挥作用的地方。
 
 ### 第 1 步：下载数据。
 
@@ -3793,9 +3983,9 @@ This is where the {cansim} package comes in.
 travellers <- get_cansim("24-10-0050-01")
 ```
 
-We will come back to filtering and variable selection along with working with date fields later, but here’s the code in R using the functions of the {dplyr} package to filter for the British Columbia cases during the month of June 2019:
+We will come back to filtering and variable selection along with working with date fields later, but here’s the code in R using the functions of the `{dplyr}` package to filter for the British Columbia cases during the month of June 2019:
 
-我们稍后会回到过滤和变量选择以及处理日期字段，但以下是使用 {dplyr} 包的函数在 R 中过滤 2019 年 6 月不列颠哥伦比亚省案例的代码：
+我们稍后会回到过滤和变量选择以及处理日期字段，但以下是使用 `{dplyr}` 包的函数在 R 中过滤 2019 年 6 月不列颠哥伦比亚省案例的代码：
 
 ```
 travellers_bc <- 
@@ -3819,9 +4009,11 @@ One of the features of CANSIM and other similar tables is that the individual se
 
 CANSIM 和其他类似表格的一个特点是各个系列都有一个唯一标识符。在 CANSIM 的情况下，这些被称为“向量编号”。将此表向右滚动，您会看到一个名为 VECTOR 的变量。经不列颠哥伦比亚省进入加拿大的欧洲旅行者的向量标识符（有时即使它是一个字符字符串也称为“向量编号”！）是 v1277198032。
 
-The {cansim} package also gives us a function to select a single vector number, so we can be more efficient still. We can speed up the download time and skip the filtering steps to get to the one we want. (Note that this function requires us to enter a start date, and converts the reference date variable to the YYYY-MM-DD format.)
 
-{cansim} 包还为我们提供了一个函数来选择单个向量编号，这样我们可以更高效。我们可以加快下载时间并跳过过滤步骤以获取我们想要的。（请注意，此函数要求我们输入开始日期，并将参考日期变量转换为 YYYY-MM-DD 格式。）
+
+The `{cansim}` package also gives us a function to select a single vector number, so we can be more efficient still. We can speed up the download time and skip the filtering steps to get to the one we want. (Note that this function requires us to enter a start date, and converts the reference date variable to the YYYY-MM-DD format.)
+
+`{cansim}` 包还为我们提供了一个函数来选择单个向量编号，这样我们可以更高效。我们可以加快下载时间并跳过过滤步骤以获取我们想要的。（请注意，此函数要求我们输入开始日期，并将参考日期变量转换为 YYYY-MM-DD 格式。）
 
 ```
 get_cansim_vector("v1277198032", start_time = "2015-01-01")
@@ -3831,13 +4023,13 @@ This table has the shortcoming of not including the “GEO” or “Country of r
 
 此表的缺点是不包括“GEO”或“居住国”变量，因此我们需要确保已充分记录所访问的内容。
 
-The {cansim} package includes other very useful functions if you find yourself exploring Statistics Canada data sets.
+The `{cansim}` package includes other very useful functions if you find yourself exploring Statistics Canada data sets.
 
-如果您发现自己正在探索加拿大统计局数据集，{cansim} 包包含其他非常有用的函数。
+如果您发现自己正在探索加拿大统计局数据集，`{cansim}` 包包含其他非常有用的函数。
 
-The function get_cansim_table_overview() provides an abstract about the data table.
+The function `get_cansim_table_overview()` provides an abstract about the data table.
 
-函数 get_cansim_table_overview() 提供有关数据表的摘要。
+函数 `get_cansim_table_overview()` 提供有关数据表的摘要。
 
 ```
 get_cansim_table_overview("24-10-0050-01")
@@ -3849,23 +4041,30 @@ The following is an incomplete list (in alphabetical order by name) of other pac
 
 以下是按名称字母顺序排列的不完整列表，其中包含为提供对特定网络资源的直接访问而开发的其他包。
 
-- {bcdata} (Teucher et al., 2023) has tools to search, query, and download tabular and ‘geospatial’ data from the British Columbia Data Catalogue.
-- {fredr} (Boysel and Vaughan, 2023) connects to the “Federal Reserve Economic Data”, or FRED, hosted by the Federal Reserve Bank of St. Louis. This data repository has (according to Wikipedia) over 800,000 economic time series from various sources.
-- {opendatatoronto} (Gelfand and City of Toronto, 2022) provides a direct connection to the City of Toronto Open Data Portal.
-- The {readabs} (Cowgill et al., 2023) package downloads and tidies data from the Australian Bureau of Statistics.
-- {RBNZ} (Watson, 2020) downloads data from the Reserve Bank of New Zealand Website.
-- {tidycensus} (Walker et al., 2023) has tools that connect to the United States Census Bureau and returns tidyverse-ready dataframes with the option of adding geographic details to allow for mapping. (See also (Walker, 2023).)
+- `{bcdata}` (Teucher et al., 2023) has tools to search, query, and download tabular and ‘geospatial’ data from the British Columbia Data Catalogue.
+
+- `{fredr}` (Boysel and Vaughan, 2023) connects to the “Federal Reserve Economic Data”, or FRED, hosted by the Federal Reserve Bank of St. Louis. This data repository has (according to Wikipedia) over 800,000 economic time series from various sources.
+
+- `{opendatatoronto}` (Gelfand and City of Toronto, 2022) provides a direct connection to the City of Toronto Open Data Portal.
+
+- The `{readabs}` (Cowgill et al., 2023) package downloads and tidies data from the Australian Bureau of Statistics.
+
+- `{RBNZ}` (Watson, 2020) downloads data from the Reserve Bank of New Zealand Website.
+
+- `{tidycensus}` (Walker et al., 2023) has tools that connect to the United States Census Bureau and returns tidyverse-ready dataframes with the option of adding geographic details to allow for mapping. (See also (Walker, 2023).)
 
 # 10 连接到关系数据库
 
 In this chapter:
 
 - Importing data directly from relational databases (SQL)
+
 - Using relational data as part of the data preparation workflow
 
 本章内容：
 
 - 直接从关系数据库（SQL）导入数据
+
 - 将关系数据作为数据准备工作流程的一部分使用
 
 ## 10.1 关系数据
@@ -3883,28 +4082,35 @@ While SQL is the most commonly used query language, there are R packages that al
 虽然 SQL 是最常用的查询语言，但有 R 包允许我们
 
 - Connect to a database,
+
 - Write the code for our queries in R,
+
 - Run the query, and
+
 - Do our work in an R environment.
 
 - 连接到数据库，
+
 - 在 R 中编写查询代码，
+
 - 运行查询，并
+
 - 在 R 环境中进行工作。
-
-
 
 在 R Markdown 或 Quarto 文档中编写代码时，如果更倾向于 SQL，你也可以灵活地使用 SQL 编写代码。
 
-本练习复现了 Hadley Wickham 和 Garrett Grolemund 所著《R数据科学》中“关系数据”一章所述的连接操作（Wickham and Grolemund, 2016）。这里我们不使用 R 的 {nycflights13} 包（Wickham and RStudio, 2021），而是使用同一数据库的 SQLite 版本。
+本练习复现了 Hadley Wickham 和 Garrett Grolemund 所著《R数据科学》中“关系数据”一章所述的连接操作（Wickham and Grolemund, 2016）。这里我们不使用 R 的 `{nycflights13}` 包（Wickham and RStudio, 2021），而是使用同一数据库的 SQLite 版本。
 
-该数据库中有五个独立的表格。数据库中的 `flights` 表包含了 2013 年从纽约市出发的所有 336,776 架次航班。数据来自美国运输统计局（US Bureau of Transportation Statistics），并在 ?flights 中进行了说明。
+该数据库中有五个独立的表格。数据库中的 `flights` 表包含了 2013 年从纽约市出发的所有 336,776 架次航班。数据来自美国运输统计局（US Bureau of Transportation Statistics），并在 `?flights` 中进行了说明。
 
 数据库中的其他表包括：
 
 - `airlines` 允许你通过缩写代码查找完整的航空公司名称，
+
 - `airports` 提供每个机场的信息，由 `faa` 机场代码标识，
+
 - `planes` 提供每架飞机的信息，由 `tailnum` 标识，
+
 - `weather` 提供纽约市每个机场每小时的天气情况。
 
 这些表与 `flights` 表通过共同的变量相互*关联*。这些变量被称为“键”变量。
@@ -3921,7 +4127,7 @@ While SQL is the most commonly used query language, there are R packages that al
 
 SQL 是一种广泛用于在关系数据库中操作和提取数据的语言。因此，有很多关系数据库采用这种格式构建。大多数情况下，这些数据库会存放在网络服务器上，但对于较小的数据库，你可以将文件安装在本地计算机上。
 
-在 R 中，我们可以使用 {dbplyr} 包（Wickham et al., 2023a）来访问 SQL 数据库和 SQL 函数。此外，我们需要 {DBI}（Müller, 2022）和 {RSQLite}（Müller et al., 2023）来建立与 RSQLite 数据库的连接。
+在 R 中，我们可以使用 `{dbplyr}` 包（Wickham et al., 2023a）来访问 SQL 数据库和 SQL 函数。此外，我们需要 `{DBI}`（Müller, 2022）和 `{RSQLite}`（Müller et al., 2023）来建立与 RSQLite 数据库的连接。
 
 ```
 library(dbplyr)
@@ -3929,7 +4135,7 @@ library(DBI)
 library(RSQLite)
 ```
 
-下面的代码建立与数据库的连接，并将连接（而不是数据表！）赋给对象 con_nycf（表示“Connection to New York City Flights”，即“到纽约市航班的连接”）。你会注意到，{RSQLite} 函数 SQLite() 位于 {DBI} 函数 dbConnect() 内部。{DBI} 包支持多种不同的数据库类型，包括广泛使用的 MySQL 和 Postgres。
+下面的代码建立与数据库的连接，并将连接（而不是数据表！）赋给对象 `con_nycf`（表示“Connection to New York City Flights”，即“到纽约市航班的连接”）。你会注意到，`{RSQLite}` 函数 `SQLite()` 位于 `{DBI}` 函数 `dbConnect()` 内部。`{DBI}` 包支持多种不同的数据库类型，包括广泛使用的 MySQL 和 Postgres。
 
 ```
 # establish the connection to the database file
@@ -3940,9 +4146,10 @@ dbListTables(con_nycf)
 ```
 
 ## [1] "airlines"   "airports"   "flights"    "planes"
+
 ## [5] "sqlite_stat1" "sqlite_stat4" "weather"
 
-现在我们已经有了数据库连接，可以使用 {dplyr} 函数 tbl() 建立到特定表的连接。请注意，flights 对象不是表本身，而是到表的连接。
+现在我们已经有了数据库连接，可以使用 `{dplyr}` 函数 `tbl()` 建立到特定表的连接。请注意，`flights` 对象不是表本身，而是到表的连接。
 
 ```
 flights <- tbl(con_nycf, "flights")
@@ -3950,14 +4157,14 @@ flights <- tbl(con_nycf, "flights")
 
 ### 10.1.2 提交查询
 
-现在环境中的“flights”对象已经建立，我们可以编写 R 代码来创建航班的一个子集——即飞往西雅图的航班。同样，flights_SEA 对象不是数据框，而是一组创建连接和查询的指令。
+现在环境中的“flights”对象已经建立，我们可以编写 R 代码来创建航班的一个子集——即飞往西雅图的航班。同样，`flights_SEA` 对象不是数据框，而是一组创建连接和查询的指令。
 
 ```
 flights_SEA <- flights |>
   filter(dest == "SEA")
 ```
 
-我们还可以使用 {dbplyr} 的 show_query() 函数来生成 R 代码的 SQL 翻译：
+我们还可以使用 `{dbplyr}` 的 `show_query()` 函数来生成 R 代码的 SQL 翻译：
 
 ```
 flights_SEA <- flights |>
@@ -3972,7 +4179,7 @@ flights_SEA <- flights |>
 ## WHERE (`dest` = 'SEA')
 ```
 
-在 SQL 中，我们使用 SELECT 来选择我们想要的列（或变量）（你会注意到这与 {dplyr} 中的术语相同）。星号“*”是一个通配符，用于选择所有表。
+在 SQL 中，我们使用 SELECT 来选择我们想要的列（或变量）（你会注意到这与 `{dplyr}` 中的术语相同）。星号“*”是一个通配符，用于选择所有表。
 
 FROM 表示我们要从哪个表中获取列。
 
@@ -4016,13 +4223,13 @@ SEA
 
 ### 10.1.3 在 R 代码中使用 SQL
 
-除了编写原生 R 代码之外，我们还可以在 R 代码中嵌入 SQL。在下面的示例中，R Markdown 文档中的 R 代码块使用了 dbSendQuery() 函数。在这个函数内部，我们首先指定所使用的连接，然后在引号内编写 SQL 代码："SELECT * FROM flights WHERE dest = 'SEA'"。
+除了编写原生 R 代码之外，我们还可以在 R 代码中嵌入 SQL。在下面的示例中，R Markdown 文档中的 R 代码块使用了 `dbSendQuery()` 函数。在这个函数内部，我们首先指定所使用的连接，然后在引号内编写 SQL 代码："SELECT * FROM flights WHERE dest = 'SEA'"。
 
-该查询指令被保存为对象 SEA_sql。
+该查询指令被保存为对象 `SEA_sql`。
 
-该 R 代码块随后还有一行使用 dbFetch() 函数来执行 SQL 查询。
+该 R 代码块随后还有一行使用 `dbFetch()` 函数来执行 SQL 查询。
 
-dbSendQuery() 和 dbFetch() 都是 {DBI} 包中的函数。
+`dbSendQuery()` 和 `dbFetch()` 都是 `{DBI}` 包中的函数。
 
 ```
 SEA_sql <- dbSendQuery(con_nycf,
@@ -4051,11 +4258,13 @@ WHERE dest = 'SEA'
 
 可变连接是一种基于*键*上匹配的观测值来合并两个表中的变量的连接。
 
+
+
 在这段 R 代码中，我们按航空公司名称创建了从纽约飞往西雅图的航班的汇总表。完整的航空公司名称不在 `flights` 表中；要获取该名称，我们需要将 `airlines` 表中的航空公司名称连接到 `flights` 表的西雅图汇总数据上。
 
 第一步是建立到 `airlines` 表的连接。
 
-```
+```r
 # establish connection to airlines table
  airlines <- tbl(con_nycf, "airlines")
 ```
@@ -4064,7 +4273,7 @@ WHERE dest = 'SEA'
 
 该表还使用 `{gt}` 包（Iannone et al., 2023）进行了出版级格式设置；核心的 `gt()` 函数只是第一步，该包还提供了许多其他格式化选项。
 
-```
+```r
 # join and summary table
 flights_SEA_summary <- flights_SEA |>
 # select(-origin, -dest) |>
@@ -4087,7 +4296,7 @@ flights_SEA_summary |>
 
 下面的 SQL 代码返回相同的表。我们可以看出代码编写方式的一个不同之处——它“由内向外”执行，第三步先于第一步和第二步，而不是像我们在 R 管道中习惯的线性方式。
 
-```
+```sql
 -- 3. select `name` variable from joined table and apply count
 SELECT `name`, COUNT(*) AS `n`
 FROM (
@@ -4117,15 +4326,15 @@ ORDER BY `n` DESC
 | JetBlue Airways | 514 |
 | American Airlines Inc. | 365 |
 
-这些连接（join）使用的术语与你在{dplyr}中熟悉的术语类似。这个左连接将返回flights表中的所有记录，以及airlines表中与之匹配的变量。
+这些连接（join）使用的术语与你在 `{dplyr}` 中熟悉的术语类似。这个左连接将返回 `flights` 表中的所有记录，以及 `airlines` 表中与之匹配的变量。
 
-为了指定连接的关键变量，我们使用SQL术语ON。请注意，我们指定的表名和变量名之间用句点分隔。
+为了指定连接的关键变量，我们使用 SQL 术语 `ON`。请注意，我们指定的表名和变量名之间用句点分隔。
 
-如需了解更多关于使用SQL（尤其是SQLite）的信息，强烈推荐托马斯·尼尔德（Thomas Nield）的《SQL入门》（Nield, 2016）。
+如需了解更多关于使用 SQL（尤其是 SQLite）的信息，强烈推荐托马斯·尼尔德（Thomas Nield）的《SQL入门》（Nield, 2016）。
 
-## 10.3 使用{tidylog}包
+## 10.3 使用 `{tidylog}` 包
 
-任何表连接的重要环节都是检查结果，看它是否符合我们的预期。{tidylog}包（Elders and Oldoni, 2020）
+任何表连接的重要环节都是检查结果，看它是否符合我们的预期。`{tidylog}` 包（Elders and Oldoni, 2020）
 
 该包的作者承认，这一功能会为处理过程增加一些计算和时间开销，但这可能是值得的。如果使用得当，它返回的信息可以立即指示代码是否正常工作。这在编写代码的早期阶段尤其如此——当你确信得到预期结果时，可以移除这些函数。
 
@@ -4133,11 +4342,11 @@ ORDER BY `n` DESC
 library("tidylog")
 ```
 
-运行library(tidylog)函数后，结果会自动生成。
+运行 `library(tidylog)` 函数后，结果会自动生成。
 
-美国职业棒球大联盟（Major League Baseball）的球队在美国和加拿大的城市进行比赛（目前只有多伦多！），但吸引了来自世界各地的顶尖球员。在这个示例中，代码创建了一个汇总表，显示2001赛季击球手的出生国家。为此，我们将使用R包中存储的数据，该数据包含Lahman棒球数据库（以最初创建该数据库的肖恩·拉赫曼[Sean Lahman]的名字命名）（Friendly et al., 2020）。
+美国职业棒球大联盟（Major League Baseball）的球队在美国和加拿大的城市进行比赛（目前只有多伦多！），但吸引了来自世界各地的顶尖球员。在这个示例中，代码创建了一个汇总表，显示 2001 赛季击球手的出生国家。为此，我们将使用 R 包中存储的数据，该数据包含 Lahman 棒球数据库（以最初创建该数据库的肖恩·拉赫曼[Sean Lahman]的名字命名）（Friendly et al., 2020）。
 
-此轮运行完成后，{tidylog}包会生成关于连接、分组和计数（tally）函数的一些汇总信息。
+此轮运行完成后，`{tidylog}` 包会生成关于连接、分组和计数（`tally`）函数的一些汇总信息。
 
 ```r
 ## start with the Batting table
@@ -4198,12 +4407,12 @@ Lahman::Batting |>
 
 在本章中：
 
-- 探索性数据分析以识别问题，包括{skimr}包
-- 使用{validate}包进行结构化测试
+- 探索性数据分析以识别问题，包括 `{skimr}` 包
+- 使用 `{validate}` 包进行结构化测试
 
 ## 11.1 识别脏数据
 
-在第2章前面，我们介绍了与“脏数据”相关的挑战。
+在第 2 章前面，我们介绍了与“脏数据”相关的挑战。
 
 **第一个挑战：** 我们如何发现数据中存在的问题？
 
@@ -4211,11 +4420,11 @@ Lahman::Batting |>
 
 “数据验证”一词有时指在数据收集时应用的验证（例如，在基于网络的调查工具中），在其他情况下，它指确保数据满足指定条件的编程方法。在这两种情况下，我们都可以将数据验证视为一种质量控制形式，从快速的健全性检查到严格的编程测试。（White et al., 2013）
 
-收集过程中的数据验证可以通过使用下拉框来消除拼写错误，或通过要求输入的文本匹配特定模式的输入字段来实现。例如，加拿大邮政编码始终遵循以下模式：大写字母（但并非所有字母）、0到9的数字、大写字母、空格、数字、大写字母和数字。邮政编码的第一个字母指定一个地区；在纽芬兰与拉布拉多省，邮编以字母“A”开头，而在育空地区以“Y”开头，这为可能的验证增加了另一个维度。电子数据收集还可以强制要求在提交前完成某项内容的填写。
+收集过程中的数据验证可以通过使用下拉框来消除拼写错误，或通过要求输入的文本匹配特定模式的输入字段来实现。例如，加拿大邮政编码始终遵循以下模式：大写字母（但并非所有字母）、0 到 9 的数字、大写字母、空格、数字、大写字母和数字。邮政编码的第一个字母指定一个地区；在纽芬兰与拉布拉多省，邮编以字母“A”开头，而在育空地区以“Y”开头，这为可能的验证增加了另一个维度。电子数据收集还可以强制要求在提交前完成某项内容的填写。
 
 这些强加的验证规则带有风险，需要深思熟虑地实施。强迫一个人填写字段可能会导致捏造的值，这可能比缺失字段更糟糕。想象一下强迫某人报告他们的收入——他们可能不乐意分享这些信息，为了满足字段要求，可能会输入“1”或一个荒谬的大数字，两者都不准确。在这种情况下，表单最好提供一个“不愿回答”的选项，让受访者有一个不会扭曲最终结果的选项。
 
-在这里的工作中，我们将重点放在数据收集后的检查和验证上。分析人员可以在数据提供给下一步骤之前指定参数。这些参数可以表示为规则或假设，并基于对主题的了解。（van der Loo and de Jonge, 2018，第6章：数据验证）
+在这里的工作中，我们将重点放在数据收集后的检查和验证上。分析人员可以在数据提供给下一步骤之前指定参数。这些参数可以表示为规则或假设，并基于对主题的了解。（van der Loo and de Jonge, 2018，第 6 章：数据验证）
 
 我们可能评估的内容包括：
 
@@ -4228,9 +4437,9 @@ Lahman::Batting |>
 
 ## 11.2 探索性数据分析
 
-识别脏数据的一种方法是通过*探索性数据分析*（EDA）过程。（Tukey, 1977）EDA过程首先旨在帮助指导我们的分析，但它还有一个额外的好处，即提供关于数据污染方式的线索。
+识别脏数据的一种方法是通过 *探索性数据分析*（EDA）过程。（Tukey, 1977）EDA 过程首先旨在帮助指导我们的分析，但它还有一个额外的好处，即提供关于数据污染方式的线索。
 
-EDA由两类技术组成：
+EDA 由两类技术组成：
 
 - 汇总统计
 - 数据可视化
@@ -4243,9 +4452,9 @@ EDA由两类技术组成：
 - 过宽或过窄的数据范围
 - 数据的单位
 
-（改编自（Zumel and Mount, 2019，第54页））
+（改编自（Zumel and Mount, 2019，第 54 页））
 
-在此示例中，我们将查看一些关于公司员工的合成数据。数据存储在Excel文件的多个工作表中；我们将探索“df_HR_train”工作表中的数据，该工作表记录某人是否已完成强制培训课程。
+在此示例中，我们将查看一些关于公司员工的合成数据。数据存储在 Excel 文件的多个工作表中；我们将探索“`df_HR_train`”工作表中的数据，该工作表记录某人是否已完成强制培训课程。
 
 ```r
 readxl::excel_sheets(dpjr::dpjr_data("cr25/cr25_human_resources.xlsx"))
@@ -4256,13 +4465,13 @@ readxl::excel_sheets(dpjr::dpjr_data("cr25/cr25_human_resources.xlsx"))
 ## [4] "df_HR_train"
 ```
 
-一旦将数据读入我们的环境，我们就可以使用一些EDA方法来检查数据。
+一旦将数据读入我们的环境，我们就可以使用一些 EDA 方法来检查数据。
 
 ```r
 df_HR_train <- readxl::read_excel(dpjr::dpjr_data("cr25/cr25_human_resources.xlsx"), sheet = "df_HR_train")
 ```
 
-我们可以使用dplyr::glimpse()函数开始调查。此函数返回数据框的维度、变量类型以及每个变量的前几个值。
+我们可以使用 `dplyr::glimpse()` 函数开始调查。此函数返回数据框的维度、变量类型以及每个变量的前几个值。
 
 ```r
 glimpse(df_HR_train, width = 65)
@@ -4278,13 +4487,9 @@ glimpse(df_HR_train, width = 65)
 ## $ train_history <chr> "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", ~
 ```
 
-
-
-
-
 由于原始 Excel 文件中的“NA”字符串，以 `train_` 开头的变量被存储为字符类型 `_<chr>_`。如果改为逻辑类型存储，这类变量在我们的分析中会更有用。一种选择是在我们环境中对现有对象修改变量类型，或者（采用“在导入阶段尽可能处理”的方法）我们可以重新读取文件内容并在此时应用变量类型定义。第二种方案还让我们能够明确地将那些编码为其他字符的变量定义为 NA。这里 NA 表示为“NA”，但在其他数据中，你可能会遇到“not available”、“9999”、“-”以及许多其他可能性。
 
-```
+```r
 df_HR_train <- 
   readxl::read_excel(
     dpjr::dpjr_data("cr25/cr25_human_resources.xlsx"),
@@ -4308,7 +4513,7 @@ glimpse(df_HR_train, width = 65)
 
 现在这些变量都以适合其表示内容的类型存储，应用 R 的 `summary()` 函数为我们提供了另一种查看数据的方式。
 
-```
+```r
 summary(df_HR_train)
 ```
 
@@ -4337,7 +4542,7 @@ summary(df_HR_train)
 
 图表可以向我们展示大量无法在汇总统计中表达的信息。让我们来探索 `df_HR_main` 工作表中的出生日期变量。
 
-```
+```r
 df_HR_main <-
   read_excel(
     path = dpjr::dpjr_data("cr25/cr25_human_resources.xlsx"),
@@ -4359,11 +4564,13 @@ A tibble: 6 × 4
 | ID005 | 1976-07-17 00:00:00 | Bryan Adams | Male |
 | ID006 | 1965-07-03 00:00:00 | Courtney Love | Female |
 
-我们将再次使用 glimpse() 和 summary() 函数来开始探索：
+我们将再次使用 `glimpse()` 和 `summary()` 函数来开始探索：
 
-```
+```r
 glimpse(df_HR_main)
 ```
+
+
 
 ```
 ## Rows: 999
@@ -4432,7 +4639,7 @@ df_HR_main |>
 
 有 10 个案例的出生日期为 1901-01-01。这正是我们使用哨兵值时可能看到的模式。
 
-另一种调查方法是根据出生日期推导出一个单独的“年龄”变量，并使用箱线图按某个分类变量对年龄进行可视化，以便更明显地看出异常值。我们猜想出生日期的“1901-01-01”哨兵值可能与某个职业类别有关。利用关系数据库的“连接”技能，我们将“transaction”表中的职业变量连接起来，并在绘图中使用职业作为分组变量。你会注意到 transaction 表的结构不适合我们的分析需求，因此我们必须先进行一些数据整理。
+另一种调查方法是根据出生日期推导出一个单独的“年龄”变量，并使用箱线图按某个分类变量对年龄进行可视化，以便更明显地看出异常值。我们猜想出生日期的“1901-01-01”哨兵值可能与某个职业类别有关。利用关系数据库的“连接”技能，我们将`transaction`表中的职业变量连接起来，并在绘图中使用职业作为分组变量。你会注意到`transaction`表的结构不适合我们的分析需求，因此我们必须先进行一些数据整理。
 
 ```
 # step 1; read transaction table, which contains occupation
@@ -4470,15 +4677,11 @@ geom_boxplot()
 
 探索性数据分析使用可视化和数据摘要扫描来发现潜在脏数据，而验证则是一种结构化的测试过程。
 
-### 11.3.1 {validate} 包
+### 11.3.1 `{validate}` 包
 
-与其他数据分析主题一样，R 用户社区的人们也遇到了脏数据问题，并编写和共享了一些函数来帮助我们其他人。{validate} 包（van der Loo and de Jonge, 2021, van der Loo et al. (2022)）由方法学家编写并维护，他们供职于
+与其他数据分析主题一样，R 用户社区的人们也遇到了脏数据问题，并编写和共享了一些函数来帮助我们其他人。`{validate}` 包（van der Loo and de Jonge, 2021, van der Loo et al. (2022)）由方法学家编写并维护，他们供职于荷兰统计局，并为我们提供了编写结构化验证测试的工具。
 
-
-
-荷兰统计局，并为我们提供了编写结构化验证测试的工具。
-
-我们将在此包中研究的第一个函数是 `check_that()`，使用 {palmerpenguins}（Horst 等，2022；Horst，2020）中的数据。我们知道包中的数据是整洁干净的——它们已经经过验证过程。
+我们将在此包中研究的第一个函数是 `check_that()`，使用 `{palmerpenguins}`（Horst 等，2022；Horst，2020）中的数据。我们知道包中的数据是整洁干净的——它们已经经过验证过程。
 
 ```
 library(tidyverse)
@@ -4543,7 +4746,7 @@ penguins |>
 
 ### 范围：
 
-我们知道 {palmerpenguins} 数据来自 2007-2009 年三个季度的测量。我们可以编写一个验证测试，确保 year 变量在该范围内。
+我们知道 `{palmerpenguins}` 数据来自 2007-2009 年三个季度的测量。我们可以编写一个验证测试，确保 `year` 变量在该范围内。
 
 ```
 check_penguins <- check_that(penguins, year >= 2007 & year <= 2009)
@@ -4552,7 +4755,7 @@ summary(check_penguins)
 
 | 名称 | 项目数 | 通过 | 失败 | 缺失值 | 错误 | 警告 | 表达式 |
 |------|-------|--------|-------|-----|-------|---------|------------|
-| V1 | 344 | 344 | 0 | 0 | FALSE | FALSE | year - 2007 >= -1e-08 & year - 2009 <= 1e-08 |
+| V1 | 344 | 344 | 0 | 0 | FALSE | FALSE | `year - 2007 >= -1e-08 & year - 2009 <= 1e-08` |
 
 如果我们只检查某一年呢？
 
@@ -4563,7 +4766,7 @@ summary(check_penguins)
 
 | 名称 | 项目数 | 通过 | 失败 | 缺失值 | 错误 | 警告 | 表达式 |
 |------|-------|--------|-------|-----|-------|---------|------------|
-| V1 | 344 | 120 | 224 | 0 | FALSE | FALSE | abs(year - 2009) <= 1e-08 |
+| V1 | 344 | 120 | 224 | 0 | FALSE | FALSE | `abs(year - 2009) <= 1e-08` |
 
 输出在“通过”列中给出了该年份的案例数，在“失败”列中给出了不在该年份的案例数。
 
@@ -4571,7 +4774,7 @@ summary(check_penguins)
 
 我们知道有些物种只在三个岛屿之一上被测量过。巴布亚企鹅只在比斯科岛上取样，而我们样本中的帽带企鹅只来自梦想岛。数据是否反映了这一点？
 
-在第一个测试（标记为 g，代表巴布亚企鹅）中，如果不是巴布亚企鹅，就会被纳入通过；如果是巴布亚企鹅，则必须在比斯科岛才能通过。在 c（代表帽带企鹅）测试中，我们将对帽带企鹅做同样的操作，它们应该都在梦想岛上。
+在第一个测试（标记为 `g`，代表巴布亚企鹅）中，如果不是巴布亚企鹅，就会被纳入通过；如果是巴布亚企鹅，则必须在比斯科岛才能通过。在 `c`（代表帽带企鹅）测试中，我们将对帽带企鹅做同样的操作，它们应该都在梦想岛上。
 
 ```
 check_penguins <-
@@ -4584,8 +4787,8 @@ summary(check_penguins)
 
 | 名称 | 项目数 | 通过 | 失败 | 缺失值 | 错误 | 警告 | 表达式 |
 |------|-------|--------|-------|-----|-------|---------|------------|
-| g | 344 | 344 | 0 | 0 | FALSE | FALSE | species != "Gentoo" | (island == "Biscoe") |
-| c | 344 | 344 | 0 | 0 | FALSE | FALSE | species != "Chinstrap" | (island == "Dream") |
+| g | 344 | 344 | 0 | 0 | FALSE | FALSE | `species != "Gentoo" \| (island == "Biscoe")` |
+| c | 344 | 344 | 0 | 0 | FALSE | FALSE | `species != "Chinstrap" \| (island == "Dream")` |
 
 输出现在包含两个测试的结果。两个测试的所有案例都通过，没有失败。
 
@@ -4620,11 +4823,11 @@ summary(check_penguins)
 
 | 名称 | 项目数 | 通过 | 失败 | 缺失值 | 错误 | 警告 | 表达式 |
 |------|-------|--------|-------|-----|-------|---------|------------|
-| V1 | 344 | 344 | 0 | 0 | FALSE | FALSE | species != "Gentoo" | (island == "Biscoe" & (species != "Chinstrap" | (island == "Dream"))) |
+| V1 | 344 | 344 | 0 | 0 | FALSE | FALSE | `species != "Gentoo" \| (island == "Biscoe" & (species != "Chinstrap" \| (island == "Dream")))` |
 
-### 图 11.1 check_penguins。
+### 图 11.1 `check_penguins`。
 
-我们还可以根据一个已定义的列表进行测试。如果我们需要评估数据的列表非常庞大，这种策略会很有效。想象一下检查你所在地区每个城镇的名称拼写。如果你在现有数据文件中预定义了这些名称的列表，该列表可以被读入你的 R 环境，并针对该列表运行测试。在这个简短的示例中，创建了一个名为 island_list 的对象，并针对该列表的内容运行验证检查。
+我们还可以根据一个已定义的列表进行测试。如果我们需要评估数据的列表非常庞大，这种策略会很有效。想象一下检查你所在地区每个城镇的名称拼写。如果你在现有数据文件中预定义了这些名称的列表，该列表可以被读入你的 R 环境，并针对该列表运行测试。在这个简短的示例中，创建了一个名为 `island_list` 的对象，并针对该列表的内容运行验证检查。
 
 ```
 island_list <- c("Biscoe", "Dream", "Torgersen")
@@ -4638,11 +4841,11 @@ summary(check_penguins)
 
 | 名称 | 项目数 | 通过 | 失败 | 缺失值 | 错误 | 警告 | 表达式 |
 |------|-------|--------|-------|-----|-------|---------|------------|
-| V1 | 344 | 344 | 0 | 0 | FALSE | FALSE | species != "Adelie" | (island %in% island_list) |
+| V1 | 344 | 344 | 0 | 0 | FALSE | FALSE | `species != "Adelie" \| (island %in% island_list)` |
 
 _如果我们没有将梦想岛包括在发现阿德利企鹅的岛屿列表中，会怎样？_
 
-{validator} 还允许我们在 `check_that()` 函数中检查变量类型。由于 R 将数据框列存储为单一类型，因此只会返回一个通过/失败评估。
+`{validator}` 还允许我们在 `check_that()` 函数中检查变量类型。由于 R 将数据框列存储为单一类型，因此只会返回一个通过/失败评估。
 
 ```
 summary(check_that(penguins, is.integer(year)))
@@ -4650,11 +4853,11 @@ summary(check_that(penguins, is.integer(year)))
 
 ![](img/b86622d1e9ca82b3cbec45faaffaaf26_167_0.png)
 
-**图 11.2** _summary(check_that(penguins))_.
+**图 11.2** `summary(check_that(penguins))`.
 
-### 11.3.2 badpenguins
+### 11.3.2 `badpenguins`
 
-“badpenguins.rds” 文件向原始的 “penguins” 表添加了五只虚构的企鹅，包括测量数据。让我们加载数据文件 “badpenguins.rds”（一个 R 数据文件），并运行之前使用过的一些测试：
+`badpenguins.rds` 文件向原始的 `penguins` 表添加了五只虚构的企鹅，包括测量数据。让我们加载数据文件 `badpenguins.rds`（一个 R 数据文件），并运行之前使用过的一些测试：
 
 ```
 badpenguins <- read_rds(dpjr_data("badpenguins.rds"))
@@ -4663,6 +4866,8 @@ badpenguins <- read_rds(dpjr_data("badpenguins.rds"))
 ```
 tail(badpenguins)
 ```
+
+
 
 ```
 ## # A tibble: 6 x 8
@@ -4677,7 +4882,7 @@ tail(badpenguins)
 ## # i 2 more variables: sex <fct>, year <chr>
 ```
 
-```
+```r
 check_penguins <- check_that(badpenguins, year >= 2007 & year <= 2009)
 
 summary(check_penguins)
@@ -4685,9 +4890,9 @@ summary(check_penguins)
 
 | 名称 | 项目数 | 通过 | 失败 | 缺失值 | 错误 | 警告 | 表达式 |
 |------|-------|--------|-------|-----|-------|---------|------------|
-| V1 | 349 | 344 | 5 | 0 | FALSE | FALSE | year >= 2007 & year <= 2009 |
+| V1 | 349 | 344 | 5 | 0 | FALSE | FALSE | `year >= 2007 & year <= 2009` |
 
-```
+```r
 check_penguins <- check_that(badpenguins, island %in% island_list)
 
 summary(check_penguins)
@@ -4695,22 +4900,20 @@ summary(check_penguins)
 
 | 名称 | 项目数 | 通过 | 失败 | 缺失值 | 错误 | 警告 | 表达式 |
 |------|-------|--------|-------|-----|-------|---------|------------|
-| V1 | 349 | 344 | 5 | 0 | FALSE | FALSE | island %in% island_list |
+| V1 | 349 | 344 | 5 | 0 | FALSE | FALSE | `island %in% island_list` |
 
 在这两种情况下，我们都会得到 5 个“失败”。
 
 ### 11.3.3 调查失败
 
-我们如何检查哪些记录失败了？
+我们如何检查哪些记录了失败？
 
 {validate} 还提供了另外两个函数，`validator()` 和 `confront()`，它们让我们能够
 
 - 同时运行多项检查，以及
-
-
 - 生成一份详细的逐记录说明，指出哪些记录未通过我们的测试。
 
-首先，我们使用 `validator()` 将测试的语法分配给对象“penguin_tests”。
+首先，我们使用 `validator()` 将测试的语法分配给对象`penguin_tests`。
 
 ```r
 penguin_tests <- validator(
@@ -4755,9 +4958,9 @@ summary(penguin_confront)
 
 | 名称 | 项目数 | 通过 | 失败 | 缺失数 | 错误 | 警告 | 表达式 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| V1 | 349 | 344 | 5 | 0 | FALSE | FALSE | island %in% island_list |
-| V2 | 349 | 344 | 5 | 0 | FALSE | FALSE | year >= 2007 & year <= 2009 |
-| V3 | 349 | 342 | 1 | 6 | FALSE | FALSE | body_mass_g <= 8500 |
+| V1 | 349 | 344 | 5 | 0 | FALSE | FALSE | `island %in% island_list` |
+| V2 | 349 | 344 | 5 | 0 | FALSE | FALSE | `year >= 2007 & year <= 2009` |
+| V3 | 349 | 342 | 1 | 6 | FALSE | FALSE | `body_mass_g <= 8500` |
 
 让我们查看 `confront()` 函数对我们的 `badpenguins` 数据结果的最后十行。第 340 行到第 344 行是原始干净企鹅数据集中的原始数据；第 345 行到第 349 行是坏企鹅。第一个坏企鹅在全部三个测试中均失败，而其他企鹅在前两个测试中失败，第三个测试的值为“NA”。
 
@@ -4799,7 +5002,7 @@ violating(badpenguins, penguin_confront)
 
 一个 tibble：5 × 8（5 行）
 
-图 11.3 violating(badpenguins)。
+图 11.3 `violating(badpenguins)`。
 
 现在我们知道了未通过测试的案例的详细信息，我们可以根据我们正在进行的研究的理解，对如何处理这些案例做出一些决定。
 
@@ -4830,7 +5033,7 @@ violating(badpenguins, penguin_confront)
 
 日期在您的数据中可能表示为三种独立字段的方式之一，一个用于年份，一个用于月份，一个用于日期。这些可以组合成单个日期变量，使用 `make_date()`，或单个日期时间变量，使用 `make_datetime()`。
 
-在 {Lahman}（Friendly et al., 2020）表“People”中，每个球员的出生日期存储为三个独立变量。它们可以使用 `make_date()` 合并为一个变量：
+在 {Lahman}（Friendly et al., 2020）表`People`中，每个球员的出生日期存储为三个独立变量。它们可以使用 `make_date()` 合并为一个变量：
 
 ```r
 Lahman::People |>
@@ -4946,19 +5149,16 @@ lfs_canada_employment |>
 
 一个 tibble：4 × 2；列 `year(REF_DATE)` 和 `mean(VALUE)` 均为 `<dbl>`。
 
-| 年(REF_DATE) | 平均(VALUE) |
+| 年(`REF_DATE`) | 平均(`VALUE`) |
 | ---: | ---: |
 | 2011 | 17244. |
 | 2012 | 17476. |
 | 2013 | 17712. |
 | 2014 | 17783. |
 
-
-
-
 在第二次分析中，我们可能感兴趣的是判断加拿大劳动力是否存在季节性变化：
 
-```
+```r
 lfs_canada_employment |>
   group_by(month(REF_DATE)) |>
   summarize(mean(VALUE))
@@ -4996,7 +5196,9 @@ R 提供了一些处理字符串的强大工具。尤其是 {stringr}（Wickham,
 
 学习基础知识的一个绝佳资源是 {stringr} 包网站上名为“正则表达式”的指南，网址为 stringr.tidyverse.org¹。
 
-下面是一些有用的正则表达式匹配函数。请注意，方括号括起正则表达式以标识单个字符。在下面的示例中，三组方括号“[a][b][c]”包含三个独立的字符位置，而“[abc]”则标识一个单个字符。
+下面是一些有用的正则表达式匹配函数。请注意，方括号括起正则表达式以标识单个字符。在下面的示例中，三组方括号`[a][b][c]`包含三个独立的字符位置，而`[abc]`则标识一个单个字符。
+
+
 
 | 字符 | 作用 |
 |---|---|
@@ -5089,27 +5291,27 @@ pc_kimberley <- c("V1A2B3", "V1A 2B3", "v1a 2B3xyz", "v1a-2b3")
 
 ### 12.3.2 使用 {stringr} 进行数据清理
 
-借助正则表达式的强大功能，我们可以使用 {stringr} 包中的函数来筛选、选择并清理数据。
+借助正则表达式的强大功能，我们可以使用 `{stringr}` 包中的函数来筛选、选择并清理数据。
 
 ```
 library(stringr)
 ```
 
-与许多 R 包一样，参考页对包中的函数提供了很好的解释，并提供了展示这些函数实际示例的指南。{stringr} 的参考页是 stringr.tidyverse.org³。
+与许多 R 包一样，参考页对包中的函数提供了很好的解释，并提供了展示这些函数实际示例的指南。`{stringr}` 的参考页是 stringr.tidyverse.org³。
 
-让我们看看 {stringr} 中特别适合清理任务的一些函数。
+让我们看看 `{stringr}` 中特别适合清理任务的一些函数。
 
 ³https://stringr.tidyverse.org/
 
-### 12.3.2.1 字符串特征
+#### 12.3.2.1 字符串特征
 
 | 函数 | 用途 |
 |---|---|
-| str_subset() | 字符型；返回包含匹配项的所有字符串 |
-| str_which() | 数值型；返回匹配项在向量中的位置 |
-| str_detect() | 逻辑型；若找到模式则返回 TRUE |
+| `str_subset()` | 字符型；返回包含匹配项的所有字符串 |
+| `str_which()` | 数值型；返回匹配项在向量中的位置 |
+| `str_detect()` | 逻辑型；若找到模式则返回 TRUE |
 
-{stringr} 函数 str_subset() 和 str_which() 返回具有该模式的字符串，要么返回整个字符串，要么返回其位置。
+`{stringr}` 函数 `str_subset()` 和 `str_which()` 返回具有该模式的字符串，要么返回整个字符串，要么返回其位置。
 
 ```
 # which strings have the postal code pattern?
@@ -5125,7 +5327,7 @@ str_which(pc_kimberley, postalcode)
 
 ## [1] 1 2 4
 
-{stringr} 中的另一个函数 str_detect() 检测模式是否存在，并返回逻辑值（真或假）。在这里，我们使用包含加拿大邮政编码正则表达式的 postalcode 对象来测试这四个邮政编码的列表。
+`{stringr}` 中的另一个函数 `str_detect()` 检测模式是否存在，并返回逻辑值（真或假）。在这里，我们使用包含加拿大邮政编码正则表达式的 `postalcode` 对象来测试这四个邮政编码的列表。
 
 ```
 str_detect(string = pc_kimberley, pattern = postalcode)
@@ -5148,7 +5350,7 @@ str_detect(string = pc_kimberley, pattern = postalcode)
 
 所有字符串中都有匹配加拿大邮政编码结构的部分。我们怎样才能提取匹配的部分呢？
 
-如果我们重新运行 str_subset() 和 str_which() 函数，会看到现在四个字符串都被返回了。
+如果我们重新运行 `str_subset()` 和 `str_which()` 函数，会看到现在四个字符串都被返回了。
 
 ```
 # which strings have the pattern?
@@ -5164,7 +5366,7 @@ str_which(pc_kimberley, postalcode)
 
 ## [1] 1 2 3 4
 
-借助这两个函数，我们可以识别哪些字符串包含我们要查找的字符。要获取特定的字符串，我们可以使用 str_extract()：
+借助这两个函数，我们可以识别哪些字符串包含我们要查找的字符。要获取特定的字符串，我们可以使用 `str_extract()`：
 
 ```
 pc_kimberley_all <- str_extract(pc_kimberley, postalcode)
@@ -5173,7 +5375,7 @@ pc_kimberley_all
 
 ## [1] "V1A2B3"  "V1A 2B3" "v1a 2B3"  "v1a-2b3"
 
-### 12.3.2.2 替换与拆分函数
+#### 12.3.2.2 替换与拆分函数
 
 我们怎样才能清理这个列表，使我们的邮政编码格式一致？
 
@@ -5181,17 +5383,14 @@ pc_kimberley_all
 
 下表展示了我们将使用的函数。
 
-
-
-
 | 函数 | 用途 |
 |---|---|
-| str_match() | 提取匹配文本以及括号内的匹配部分 |
-| str_replace() and str_replace_all() | 用新文本替换匹配项 |
-| str_remove() and str_remove_all() | 删除匹配项 |
-| str_split() | 在模式处拆分字符串 |
+| `str_match()` | 提取匹配文本以及括号内的匹配部分 |
+| `str_replace()` and `str_replace_all()` | 用新文本替换匹配项 |
+| `str_remove()` and `str_remove_all()` | 删除匹配项 |
+| `str_split()` | 在模式处拆分字符串 |
 
-第一步将使用 stringr::str_remove() 函数移除模式为 " " 的空格。此步骤随后将使用 pattern = "-" 重复。
+第一步将使用 `stringr::str_remove()` 函数移除模式为 " " 的空格。此步骤随后将使用 `pattern = "-"` 重复。
 
 ```
 str_remove(string = pc_kimberley_all,
@@ -5207,7 +5406,7 @@ pc_kimberley_clean <- str_remove(string = pc_kimberley_all,
     pattern = "[ -]")
 ```
 
-第二步将大写字母。用于此目的的 {stringr} 函数是 str_to_upper。（还有并行的 str_to_lower、str_to_title 和 str_to_sentence 函数。）
+第二步将大写字母。用于此目的的 `{stringr}` 函数是 `str_to_upper()`。（还有并行的 `str_to_lower`、`str_to_title` 和 `str_to_sentence` 函数。）
 
 ```
 pc_kimberley_clean <- str_to_upper(pc_kimberley_clean)
@@ -5216,7 +5415,7 @@ pc_kimberley_clean
 
 ## [1] "V1A2B3" "V1A2B3" "V1A2B3" "V1A2B3"
 
-如果这是在数据框中，这些函数可以添加到 mutate() 函数中，并在管道序列中应用，如下所示。
+如果这是在数据框中，这些函数可以添加到 `mutate()` 函数中，并在管道序列中应用，如下所示。
 
 ```
 # convert string to tibble
@@ -5246,9 +5445,9 @@ pc_kimberley_tbl |>
 ## 4 v1a-2b3    v1a-2b3    v1a2b3    V1A2B3
 ```
 
-## 12.3.2.3  拆分和合并字符串
+#### 12.3.2.3 拆分和合并字符串
 
-下面，我们使用 str_split() 函数根据逗号和空格位置拆分地址。
+下面，我们使用 `str_split()` 函数根据逗号和空格位置拆分地址。
 
 ```
 UVic_address <- 
@@ -5268,7 +5467,7 @@ str_split(UVic_address, ", ")
 ## [4] "\n  V8P 5C2"
 ```
 
-{stringr} 包含三个用于合并字符串的有用函数。str_c() 将多个字符串折叠成单个字符串，用我们指定的内容分隔（默认为无，即 ""）。
+`{stringr}` 包含三个用于合并字符串的有用函数。`str_c()` 将多个字符串折叠成单个字符串，用我们指定的内容分隔（默认为无，即 ""）。
 
 下面我们将把地址的各个部分合并成一个字符串，各部分之间用逗号和空格分隔。
 
@@ -5285,7 +5484,7 @@ str_c(UVic_address_components, collapse = ", ")
 
 ## [1] "Continuing Studies, 3800 Finnerty Rd, Victoria, BC, V8P 5C2"
 
-str_flatten_comma() 是得到相同结果的快捷方式：
+`str_flatten_comma()` 是得到相同结果的快捷方式：
 
 ```
 str_flatten_comma(UVic_address_components)
@@ -5293,7 +5492,7 @@ str_flatten_comma(UVic_address_components)
 
 ## [1] "Continuing Studies, 3800 Finnerty Rd, Victoria, BC, V8P 5C2"
 
-请注意 str_flatten 也可以使用，但我们需要显式指定分隔符：
+请注意 `str_flatten` 也可以使用，但我们需要显式指定分隔符：
 
 ```
 str_flatten(UVic_address_components, collapse = ", ")
@@ -5301,7 +5500,7 @@ str_flatten(UVic_address_components, collapse = ", ")
 
 ## [1] "Continuing Studies, 3800 Finnerty Rd, Victoria, BC, V8P 5C2"
 
-这些函数还具有参数 last =，允许我们指定最终分隔符：
+这些函数还具有参数 `last =`，允许我们指定最终分隔符：
 
 ```
 str_flatten(UVic_address_components, collapse = ", ", last = " ")
@@ -5309,7 +5508,7 @@ str_flatten(UVic_address_components, collapse = ", ", last = " ")
 
 ## [1] "Continuing Studies, 3800 Finnerty Rd, Victoria, BC V8P 5C2"
 
-## 12.3.3 示例：按 NAICS 代码划分的劳工统计局
+### 12.3.3 示例：按 NAICS 代码划分的劳工统计局
 
 在本示例中，我们将使用正则表达式过滤美国劳工统计局发布的就业数据表。该表显示
 
@@ -5331,9 +5530,12 @@ bls_employment_naics21 <- bls_employment |>
   filter(str_detect(`Series ID`, "CEU1021"))
 ```
 
-gt(
-  bls_employment_naics21
-)
+`gt(`
+
+  `bls_employment_naics21`
+
+`)`
+
 ```
 
 | 系列 ID | 年度 2019 | 年度 2020 |
@@ -5352,11 +5554,17 @@ gt(
 如果我们只选择第九位为零的值会怎样？
 
 ```
-gt(
-bls_employment_naics21 |>
-  # remove the ones that have a zero in the 5th spot from the end
-  filter(str_detect(`Series ID`, "00001$"))
-)
+
+`gt(`
+
+`bls_employment_naics21 |>`
+
+  `# remove the ones that have a zero in the 5th spot from the end`
+
+  `filter(str_detect(`Series ID`, "00001$"))`
+
+`)`
+
 ```
 
 | 系列 ID | 年度 2019 | 年度 2020 |
@@ -5368,25 +5576,42 @@ bls_employment_naics21 |>
 
 这不太正确——它包含了“21”部门汇总。
 
-让我们使用 str_detect() 函数开头的感叹号过滤掉“21”之后为零的行。
+让我们使用 `str_detect()` 函数开头的感叹号过滤掉“21”之后为零的行。
 
 ```
+
 # NAICS 212
+
 bls_employment_naics21 |>
-  # use the exclamation mark to filter those that don't match
-  filter(!str_detect(`Series ID`, "CEU0210"))
-```
+
+
+
+# use the exclamation mark to filter those that don't match
+
+`filter(!str_detect(`Series ID`, "CEU0210"))`
 
 ```
+```
+
 ## # A tibble: 6 x 3
+
 ##   `Series ID`   `Annual 2019` `Annual 2020`
+
 ##   <chr>                 <dbl>         <dbl>
+
 ## 1 CEU1021100001          144.          130.
+
 ## 2 CEU1021200001          190.          176.
+
 ## 3 CEU1021210001           50.5          39.8
+
 ## 4 CEU1021220001           42.2          41.4
+
 ## 5 CEU1021230001           97.8          95.1
+
 ## 6 CEU1021300001          344           247.
+
+```
 ```
 
 这不起作用，因为它保留了从 2121 开始的四位数行业。
@@ -5397,18 +5622,27 @@ bls_employment_naics21 |>
 
 ```
 # NAICS 212
+
 bls_employment_naics21 |>
+
   # remove the ones that have a zero in the 5th spot from the end
+
   # - add any digit from 1-9, leave the following digit as 0
+
   filter(str_detect(`Series ID`, "[1-9]00001$"))
 ```
 
 ```
 ## # A tibble: 3 x 3
+
 ## `Series ID` `Annual 2019` `Annual 2020`
+
 ## <chr>       <dbl>         <dbl>
+
 ## 1 CEU1021100001 144. 130.
+
 ## 2 CEU1021200001 190. 176.
+
 ## 3 CEU1021300001 344 247.
 ```
 
@@ -5416,29 +5650,37 @@ bls_employment_naics21 |>
 
 ```
 # NAICS 212
+
 bls_employment_naics21 |>
+
   # remove the ones that have a zero in the 6th spot from the end
+
   # - add any digit that is not a zero
+
   filter(str_detect(`Series ID`, "[^0]00001$"))
 ```
 
 ```
 ## # A tibble: 3 x 3
+
 ## `Series ID` `Annual 2019` `Annual 2020`
+
 ## <chr>       <dbl>         <dbl>
+
 ## 1 CEU1021100001 144. 130.
+
 ## 2 CEU1021200001 190. 176.
+
 ## 3 CEU1021300001 344 247.
 ```
 
-这里还有一个最终选项，使用 str_sub() 在 str_detect() 函数内部指定位置。
+这里还有一个最终选项，使用 `str_sub()` 在 `str_detect()` 函数内部指定位置。
 
-在继续之前，让我们单独查看 str_sub() 函数的结果。在此代码中，该函数从“Series ID”变量的第 8 和第 9 个位置提取所有字符字符串，结果是长度为两个字符的字符串。
-
-
+在继续之前，让我们单独查看 `str_sub()` 函数的结果。在此代码中，该函数从“Series ID”变量的第 8 和第 9 个位置提取所有字符字符串，结果是长度为两个字符的字符串。
 
 ```r
 # extract the character strings in the 8th & 9th position
+
 str_sub(bls_employment_naics21$`Series ID`, start = 8, end = 9)
 ```
 
@@ -5446,14 +5688,19 @@ str_sub(bls_employment_naics21$`Series ID`, start = 8, end = 9)
 ## [1] "00" "10" "20" "21" "22" "23" "30"
 ```
 
-从括号内部开始，我们有 str_sub() 函数来创建这些两字符字符串。接下来是带有正则表达式的 str_detect()，它识别第一位为非零数字、第二位为零的那些。表格随后会被过滤，只保留检测到的那些行。
+从括号内部开始，我们有 `str_sub()` 函数来创建这些两字符字符串。接下来是带有正则表达式的 `str_detect()`，它识别第一位为非零数字、第二位为零的那些。表格随后会被过滤，只保留检测到的那些行。
 
 ```r
 # NAICS 212
+
 bls_employment_naics21_3digit <- bls_employment_naics21 |>
+
   # filter those that match the regex in the 8th & 9th position
+
   filter(str_detect(
+
     str_sub(`Series ID`, start = 8, end = 9),
+
     "[^0][0]"
   ))
 
@@ -5468,13 +5715,17 @@ bls_employment_naics21_3digit
 
 清理此表格的最后一步是将它放入整洁的结构中。目前它违反了整洁数据的第二原则，即每个观测值构成一行。 (Wickham, 2014, p.4) 在这种情况下，每一年都应有自己的行，而不是为每一年分别设置一列。
 
-我们可以使用 {tidyr} (Wickham, 2021b) 包的 pivot_longer() 函数来实现：
+我们可以使用 `{tidyr}` (Wickham, 2021b) 包的 `pivot_longer()` 函数来实现：
 
 ```r
 bls_employment_naics21_3digit |>
+
   pivot_longer(
+
     cols = contains("Annual"),
+
     names_to = "year",
+
     values_to = "employment")
 ```
 
@@ -5514,7 +5765,7 @@ gt(head(noc_table))
 
 此变量结合了两个值：三位 NOC 代码和职业的标题。
 
-我们将使用 {tidyr} 函数 `separate_wider_delim()` 将其拆分为两个变量。该函数为我们提供了命名分离后产生的新列的参数，以及用于识别分离点的字符字符串，在本例中为“：”。**不要忘记空格！**
+我们将使用 `{tidyr}` 函数 `separate_wider_delim()` 将其拆分为两个变量。该函数为我们提供了命名分离后产生的新列的参数，以及用于识别分离点的字符字符串，在本例中为“：”。**不要忘记空格！**
 
 此函数还具有参数 `cols_remove =`。默认设置为 TRUE，会删除原始列。设置为 FALSE 时会保留原始列；我们这里不会使用，但可能有用。
 
@@ -5522,10 +5773,15 @@ gt(head(noc_table))
 
 ```r
 noc_table_clean <- noc_table |>
+
   tidyr::separate_wider_delim(
+
     cols = noc_occupation_title,
+
     delim = ": ",
+
     names = c("noc", "occupation_title")
+
   )
 
 gt(head(noc_table_clean))
@@ -5546,12 +5802,15 @@ gt(head(noc_table_clean))
 
 此变量在开头有一个被表示为方块的字符，并且方块与第一个字母之间还有一个空格。
 
-这里我们可以使用 {stringr} 函数 str_remove_all()。（请记住，str_remove() 函数只删除该字符的第一个实例。）
+这里我们可以使用 `{stringr}` 函数 `str_remove_all()`。（请记住，`str_remove()` 函数只删除该字符的第一个实例。）
 
 ```r
 noc_table_clean <- noc_table_clean |>
+
   mutate(
+
     certification_training_requirements =
+
       str_remove_all(certification_training_requirements, "□ ")
   )
 
@@ -5584,24 +5843,38 @@ gt(head(noc_table_clean))
 
 ```r
 noc_table_clean <- noc_table_clean |>
+
   # remove commas
+
   mutate(
+
     employment =
+
       str_remove_all(employment, ",")
   ) |>
+
   # replace with NA
+
   mutate(
+
     employment =
+
       str_replace_all(employment, "-\\*", replacement = NA_character_)
   ) |>
+
   # convert to numeric
+
   mutate(
+
     employment =
+
       as.numeric(employment)
   )
 
 gt(head(noc_table_clean))
 ```
+
+
 
 | noc | occupation_title | certification_training_requirements | employment |
 |:---|:---|:---|:---|
@@ -5618,7 +5891,7 @@ gt(head(noc_table_clean))
 
 我们有时会遇到想要将现有变量重新编码为其他类别的情况。一个例子是当有少数几个类别占了大部分总量时，将较小的类别汇总为“其他”会使表格或图表更易于阅读。一个例子是加拿大 13 个省和地区的总人口：人口最多的四个省（安大略省、魁北克省、不列颠哥伦比亚省和阿尔伯塔省）约占全国人口的 85%……加拿大的另外 15% 人口分布在九个省和地区。我们可能希望展示一个只有五行 的表格，将最小的九个省和地区归为一行。
 
-我们可以用 {dplyr} 中的一个函数 case_when() 来实现。
+我们可以用 `{dplyr}` 中的一个函数 `case_when()` 来实现。
 
 ```r
 canpop <- read_csv(dpjr::dpjr_data("canpop.csv"))
@@ -5641,12 +5914,9 @@ canpop
 | Nunavut | 35944 |
 | Yukon | 35874 |
 
-
-
-
 在第一个解决方案中，我们分别对最大的几个省份进行命名：
 
-```
+```r
 canpop |>
   mutate(pt_grp = case_when(
     # evaluation ~ new value
@@ -5680,7 +5950,7 @@ canpop |>
 
 但这样需要输入很多内容。一种更简洁的做法是，将省份名称放入一个列表，然后用原始变量 `province_territory` 的值重新编码我们的新变量：
 
-```
+```r
 canpop |>
   mutate(pt_grp = case_when(
     province_territory %in%
@@ -5712,13 +5982,12 @@ canpop |>
 
 我们还可以使用比较操作来创建一个人口阈值，本例中为四百万：
 
-```
+```r
 canpop <- canpop |>
   mutate(pt_grp = case_when(
     population > 4000000 ~ province_territory,
     TRUE ~ "other"
   ))
-
 canpop
 ```
 
@@ -5743,7 +6012,7 @@ canpop
 
 无论我们选择哪种方法，这个新变量都可以用来对表格进行分组：
 
-```
+```r
 canpop |>
   group_by(pt_grp) |>
   summarize(pt_pop = sum(population)) |>
@@ -5765,8 +6034,8 @@ canpop |>
 
 当我们开始在自己的数据中创建新变量时，了解一些已经存在的分类系统会很有用。这样，你可以：
 
--   免去自行设计变量分类的麻烦，并且
--   确保你的分析可以与其他结果进行比较。
+- 免去自行设计变量分类的麻烦，并且
+- 确保你的分析可以与其他结果进行比较。
 
 当然，这些分类系统是针对特定学科领域的。
 
@@ -5804,7 +6073,7 @@ canpop |>
 
 不过，更常见的情况是，这个变量会被捕获并保存为名为 `gender` 或 `sex` 的变量，而且通常是以字符串形式存储。上表的源数据最初可能如下所示：
 
-```
+```r
 tb2 <- tb |> 
   dplyr::rename(gender = female) |>
   mutate(gender = case_when(
@@ -5824,10 +6093,8 @@ tb2
 
 ⁴ 注：此表中的数据与 *因果推断：混音带* 中显示的数据不同，因为该来源中的数据值是随机生成的。
 
-
-
 ```
-##  <chr>  <dbl>  <dbl>  <dbl> <dbl>
+##   <chr>  <dbl>  <dbl>  <dbl> <dbl>
 ## 1 male  -0.786  0  -0.555 0.162
 ## 2 female 2.81  1  4.93 11.6
 ## 3 female -0.977  1  -4.23 -5.86
@@ -5840,16 +6107,17 @@ tb2
 ## 10 female 0.0128  1  -1.85 -2.54
 ```
 
-### 12.5.1 {fastDummies}
 
-由于这种类型的数据转换很常见，因此创建了包 {fastDummies}（Kaplan and Schlegel, 2020），其中包含函数 dummy_cols()（如果您喜欢多打字，也可以是 dummy_columns()），用于创建指示变量。
 
-如果您使用 tidymodels 管道，则 {recipes} 包（Kuhn and Wickham, 2022）包含 step_dummy() 函数，其实现的效果与 fastDummies::dummy_cols() 大致相同。推荐阅读 Max Kuhn 和 Julia Silge 所著的《Tidy modelling with R》（Kuhn and Silge, 2022）；其中第 8 章“Feature Engineering with recipes”介绍了指示变量的创建。
+### 12.5.1 `fastDummies`
 
-```
+由于这种类型的数据转换很常见，因此创建了包 `{fastDummies}`（Kaplan and Schlegel, 2020），其中包含函数 `dummy_cols()`（如果您喜欢多打字，也可以是 `dummy_columns()`），用于创建指示变量。
+
+如果您使用 tidymodels 管道，则 `{recipes}` 包（Kuhn and Wickham, 2022）包含 `step_dummy()` 函数，其实现的效果与 `fastDummies::dummy_cols()` 大致相同。推荐阅读 Max Kuhn 和 Julia Silge 所著的《Tidy modelling with R》（Kuhn and Silge, 2022）；其中第 8 章“Feature Engineering with recipes”介绍了指示变量的创建。
+
+```r
 tb2_indicator <- tb2 |>
   fastDummies::dummy_cols()
-
 glimpse(tb2_indicator, width = 65)
 ```
 
@@ -5868,16 +6136,15 @@ glimpse(tb2_indicator, width = 65)
 ## $ gender_male      <int> 1, 0, 0, 1, 1, 0, 0, 1, 0, 0
 ```
 
-变量 gender 现在已被转换为两个额外变量 gender_female 和 gender_male。 新变量的名称是原始变量名和值的拼接，以下划线分隔。
+变量 `gender` 现在已被转换为两个额外变量 `gender_female` 和 `gender_male`。新变量的名称是原始变量名和值的拼接，以下划线分隔。
 
-当 gender 的值为“female”时，gender_female 的值被赋为“1”，而当 gender 为“male”时，gender_female 为“0”。这与原始数据中的情况相平行。gender_male 则相反；gender 的值为“male”的行中，gender_male 的值为“1”。
+当 `gender` 的值为“female”时，`gender_female` 的值被赋为“1”，而当 `gender` 为“male”时，`gender_female` 为“0”。这与原始数据中的情况相平行。`gender_male` 则相反；`gender` 的值为“male”的行中，`gender_male` 的值为“1”。
 
-在多元回归模型中，如果包含多个指示变量，则可能出现多重共线性，因为它们互为逆。 因此，dummy_cols() 函数中的一个重要选项组围绕着移除除一个之外的所有创建变量。 参数 remove_first_dummy = TRUE 正是如此； 在这种情况下，gender_female 变量不会出现在最终结果中。 这是因为新的指示变量按字母顺序创建（“female”在“male”之前），并且第一个被丢弃。
+在多元回归模型中，如果包含多个指示变量，则可能出现多重共线性，因为它们互为逆。因此，`dummy_cols()` 函数中的一个重要选项组围绕着移除除一个之外的所有创建变量。参数 `remove_first_dummy = TRUE` 正是如此；在这种情况下，`gender_female` 变量不会出现在最终结果中。这是因为新的指示变量按字母顺序创建（“female”在“male”之前），并且第一个被丢弃。
 
-```
+```r
 tb2_indicator <- tb2 |>
   fastDummies::dummy_cols(remove_first_dummy = TRUE)
-
 glimpse(tb2_indicator, width = 65)
 ```
 
@@ -5892,27 +6159,28 @@ glimpse(tb2_indicator, width = 65)
 ## $ gender_male     <int> 1, 0, 0, 1, 1, 0, 0, 1, 0, 0
 ```
 
-请注意，该参数的结果可以通过将字符变量转换为因子来控制。 为了匹配原始数据框，我们将保留变量 gender_female。
+请注意，该参数的结果可以通过将字符变量转换为因子来控制。为了匹配原始数据框，我们将保留变量 `gender_female`。
 
-```
+```r
 # create new tb table with "gender" as factor
 tb3 <- tb2 |>
   mutate(gender = as.factor(gender))
-
 levels(tb3$gender)
 ```
 
-## [1] "female" "male"
-
-请注意，默认顺序为字母顺序，因此“female”仍排在第一位。 当应用参数 remove_first_dummy = TRUE 时，我们得到的结果与之前相同。
-
 ```
+## [1] "female" "male"
+```
+
+请注意，默认顺序为字母顺序，因此“female”仍排在第一位。当应用参数 `remove_first_dummy = TRUE` 时，我们得到的结果与之前相同。
+
+```r
 tb3_1 <- tb3 |>
   fastDummies::dummy_cols(remove_first_dummy = TRUE)
-
 glimpse(tb3_1, width = 65)
 ```
 
+```
 ## Rows: 10
 ## Columns: 6
 ## $ gender       <fct> male, female, female, male, male, female~
@@ -5921,27 +6189,25 @@ glimpse(tb3_1, width = 65)
 ## $ occupation   <dbl> -0.5551, 4.9340, -4.2303, 3.9487, 2.1148~
 ## $ wage         <dbl> 0.1616, 11.6113, -5.8595, 10.4124, 4.774~
 ## $ gender_male  <int> 1, 0, 0, 1, 1, 0, 0, 1, 0, 0
-
-通过使用 {forcats}(Wickham, 2021a) 包中的 fct_relevel() 函数，我们可以指定任意顺序。
-
 ```
+
+通过使用 `{forcats}`(Wickham, 2021a) 包中的 `fct_relevel()` 函数，我们可以指定任意顺序。
+
+```r
 # reorder levels
-
 tb3$gender <- fct_relevel(tb3$gender, "male", "female")
-
 levels(tb3$gender)
 ```
 
-## [1] "male"  "female"
-
-重新运行相同的代码，gender_male 变量将被丢弃。
-
 ```
+## [1] "male"  "female"
+```
+
+重新运行相同的代码，`gender_male` 变量将被丢弃。
+
+```r
 tb3_2 <- tb3 |>
   fastDummies::dummy_cols(remove_first_dummy = TRUE)
-```
-
-```
 glimpse(tb3_2, width = 65)
 ```
 
@@ -5956,12 +6222,11 @@ glimpse(tb3_2, width = 65)
 ## $ gender_female <int> 0, 1, 1, 0, 0, 1, 1, 0, 1, 1
 ```
 
-fastDummies::dummy_cols() 中还有一个选项 remove_most_frequent_dummy = TRUE。 在我们的数据中，编码为“female”的观测值更多，因此变量 gender_female 不包含在内。
+`fastDummies::dummy_cols()` 中还有一个选项 `remove_most_frequent_dummy = TRUE`。在我们的数据中，编码为“female”的观测值更多，因此变量 `gender_female` 不包含在内。
 
-```
+```r
 tb2_frequent <- tb2 |>
   fastDummies::dummy_cols(remove_most_frequent_dummy = TRUE)
-
 glimpse(tb2_frequent, width = 65)
 ```
 
@@ -5976,12 +6241,11 @@ glimpse(tb2_frequent, width = 65)
 ## $ gender_male   <int> 1, 0, 0, 1, 1, 0, 0, 1, 0, 0
 ```
 
-函数中的另一个参数是 remove_selected_columns。 默认值为 FALSE，但如果将参数设置为 TRUE，则源列将从输出中排除。
+函数中的另一个参数是 `remove_selected_columns`。默认值为 `FALSE`，但如果将参数设置为 `TRUE`，则源列将从输出中排除。
 
-```
+```r
 tb2_select <- tb2 |>
   fastDummies::dummy_cols(remove_selected_columns = TRUE)
-
 glimpse(tb2_select, width = 65)
 ```
 
@@ -5999,25 +6263,22 @@ glimpse(tb2_select, width = 65)
 ## $ gender_male       <int> 1, 0, 0, 1, 1, 0, 0, 1, 0, 0
 ```
 
-dummy_cols() 的一些重要注意事项
+`dummy_cols()` 的一些重要注意事项
 
 - 该函数会为字符或因子变量中的每个取值创建相同数量的指示变量
 - 除非另有指定，否则该函数会为数据中的所有字符和因子变量创建指示变量。
 
-让我们看看 dummy_cols() 在 {palmer-penguins} 中的两个变量上的表现：
+让我们看看 `dummy_cols()` 在 `{palmer-penguins}` 中的两个变量上的表现：
 
-```
+```r
 library(palmerpenguins)
-
 set.seed(1729) # Ramanujan's taxicab number: 1^3 + 12^3 = 9^3 + 10^3
-
 penguin_subset <- penguins |>
   slice_sample(n = 6) |>
   dplyr::select(species, island) |>
   arrange(species)
-```
-
 penguin_subset
+```
 
 ```
 ## # A tibble: 6 x 2
@@ -6031,16 +6292,12 @@ penguin_subset
 ## 6 Gentoo  Biscoe
 ```
 
-```
 ```r
 penguin_subset_1 <- penguin_subset |>
   fastDummies::dummy_cols()
-
 glimpse(penguin_subset_1, width = 65)
 ```
-```
 
-```
 ```
 ## Rows: 6
 ## Columns: 8
@@ -6053,39 +6310,28 @@ glimpse(penguin_subset_1, width = 65)
 ## $ island_Dream     <int> 0, 0, 1, 0, 0, 0
 ## $ island_Torgersen <int> 0, 1, 0, 0, 0, 0
 ```
-```
 
-首先，您会注意到我们从两个因子变量 species 和 island 开始；现在我们对两者都有指示变量。
+首先，您会注意到我们从两个因子变量 `species` 和 `island` 开始；现在我们对两者都有指示变量。
 
 并且由于有三种企鹅物种和三个岛屿，因此我们对两个原始变量各有三个指示变量。
 
-当源数据中有多个字符或因子变量时，我们可以使用选项 `select_columns` 控制哪些变量接受 `dummy_cols()` 处理。 在下面的示例中，结果为我们提供了 species 的指示变量，但不包括 island。
+当源数据中有多个字符或因子变量时，我们可以使用选项 `select_columns` 控制哪些变量接受 `dummy_cols()` 处理。在下面的示例中，结果为我们提供了 `species` 的指示变量，但不包括 `island`。
 
-此外，与其丢弃第一个创建的变量，我们可以使用参数 `remove_most_frequent_dummy = TRUE` 指定移除出现频率最高的取值。 由于在我们的数据样本中 Gentoo 企鹅的数量更多，因此指示变量 `species_Gentoo` 未被创建。
+此外，与其丢弃第一个创建的变量，我们可以使用参数 `remove_most_frequent_dummy = TRUE` 指定移除出现频率最高的取值。由于在我们的数据样本中 Gentoo 企鹅的数量更多，因此指示变量 `species_Gentoo` 未被创建。
 
-```
 ```r
 penguin_subset_2 <- penguin_subset |>
   fastDummies::dummy_cols(
     select_columns = "species",
     remove_most_frequent_dummy = TRUE)
-
 glimpse(penguin_subset_2, width = 65)
 ```
-```
 
-```
 ```
 ## Rows: 6
 ## Columns: 4
 ## $ species <fct> Adelie, Adelie, Chinstrap, Gentoo, Ge~
 ## $ island  <fct> Biscoe, Torgersen, Dream, Biscoe, Bis~
-```
-
-
-
-
-```
 ## $ species_Adelie  <int> 1, 1, 0, 0, 0, 0
 ## $ species_Chinstrap <int> 0, 0, 1, 0, 0, 0
 ```
@@ -6104,7 +6350,7 @@ glimpse(penguin_subset_2, width = 65)
 
 我们的第一步是读取数据。请注意，代码使用 Excel 命名约定来定义要读取的矩形区域，并省略了工作表顶部的标题行和底部的注释。
 
-```
+```r
 tuition_data <- 
   readxl::read_excel(dpjr::dpjr_data("intl_tuition_fees_bc.xlsx"),
                      sheet = "Report",
@@ -6118,9 +6364,11 @@ tuition_data <-
 ## #   `AY 2020/21` <dbl>, `AY 2021/22` <dbl>
 ```
 
-下一步是使用 {tidyr} 包中的 drop_na() 函数来删除任何包含 NA 值的行。在本例中，我们希望删除那些仅在第一列包含地区名称而其他列没有值的标题行。
+下一步是使用 `{tidyr}` 包中的 `drop_na()` 函数来删除任何包含 NA 值的行。在本例中，我们希望删除那些仅在第一列包含地区名称而其他列没有值的标题行。
 
 这两种解决方案产生相同的结果：
+
+
 
 ```
 drop_na(tuition_data_filled)
@@ -6151,7 +6399,7 @@ tuition_data_filled |>
 ## #   `AY 2019/20` <dbl>, `AY 2020/21` <dbl>, `AY 2021/22` <dbl>
 ```
 
-值得注意的是，drop_na() 函数提供了一个参数，我们可以指定列。这使我们可以灵活地删除某些特定变量中有“NA”的行，同时保留那些在该变量中有值但在其他变量中没有值的行。
+值得注意的是，`drop_na()`函数提供了一个参数，我们可以指定列。这使我们可以灵活地删除某些特定变量中有“NA”的行，同时保留那些在该变量中有值但在其他变量中没有值的行。
 
 ### 12.6.2 缺失数值
 
@@ -6186,7 +6434,7 @@ ggplot(naics721_sal, aes(x = ref_year, y = VALUE)) +
 
 ![](img/b86622d1e9ca82b3cbec45faaffaaf26_210_0.png)
 
-我们的第一种方法是直接删除那些缺少值的年份。这可能有助于某些计算（例如，在 mean() 函数中加上 na.rm = TRUE 参数就是如此），但这会产生误导性的图形——2009 年和 2015 年点之间的距离将与 2015 年和 2016 年之间的距离相同。
+我们的第一种方法是直接删除那些缺少值的年份。这可能有助于某些计算（例如，在`mean()`函数中加上`na.rm = TRUE`参数就是如此），但这会产生误导性的图形——2009 年和 2015 年点之间的距离将与 2015 年和 2016 年之间的距离相同。
 
 ```
 naics721_sal |>
@@ -6208,9 +6456,9 @@ naics721_sal |>
 
 或者，我们可以用上一个有效条目来填充该序列。
 
-与我们上面看到的文本情况类似，同样的 fill() 函数也可以应用于数值变量。我们首先创建一个变量 new_value，它保存与现有变量相同的值；fill() 函数将应用于 new_value。
+与我们上面看到的文本情况类似，同样的`fill()`函数也可以应用于数值变量。我们首先创建一个变量`new_value`，它保存与现有变量相同的值；`fill()`函数将应用于`new_value`。
 
-```
+```r
 # fill down
 naics721_sal_new <- naics721_sal |>
   mutate(value_fill = VALUE) |>
@@ -6252,12 +6500,9 @@ ggplot(naics721_sal_new, aes(x = ref_year, y = value_fill)) +
   geom_line()
 ```
 
-
-
-
 ![](img/b86622d1e9ca82b3cbec45faaffaaf26_212_0.png)
 
-有几种不同的选项可以决定填充方向；默认值是 .direction = "down"。
+有几种不同的选项可以决定填充方向；默认值是`.direction = "down"`。
 
 ```r
 # specified
@@ -6277,7 +6522,7 @@ naics721_sal |>
 
 对于R用户来说，{forecast}包提供了面向时间序列的插补填充函数。（Hyndman et al., 2023; Hyndman and Khandakar, 2008）
 
-{forecast}包中的na.interp()函数为我们提供了一种比简单扩展已知值更好的方法来填充时间序列中的缺失值。默认情况下，该函数使用线性插值来计算两个非缺失值之间的值。下面是一个简单的例子：
+{forecast}包中的`na.interp()`函数为我们提供了一种比简单扩展已知值更好的方法来填充时间序列中的缺失值。默认情况下，该函数使用线性插值来计算两个非缺失值之间的值。下面是一个简单的例子：
 
 ```r
 x <- c(1, NA, 3)
@@ -6288,7 +6533,7 @@ x
 ## [1]  1 NA  3
 ```
 
-从1到3的序列中间有一个NA值。na.interp()函数会填充这个缺失值。
+从1到3的序列中间有一个`NA`值。`na.interp()`函数会填充这个缺失值。
 
 ```r
 forecast::na.interp(x)
@@ -6331,7 +6576,7 @@ forecast::na.interp(y)
 
 你会注意到，该函数计算出的替换值构成了一个线性序列。
 
-对于我们的受薪雇员人数，当我们用这个函数创建一个新值value_interp时，结果如下：
+对于我们的受薪雇员人数，当我们用这个函数创建一个新值`value_interp`时，结果如下：
 
 ```r
 naics721_sal <- naics721_sal |>
@@ -6380,7 +6625,7 @@ ggplot(naics721_sal, aes(x = ref_year, y = value_interp)) +
 
 ![](img/b86622d1e9ca82b3cbec45faaffaaf26_215_0.png)
 
-na.interp()函数还能够创建非线性模型。
+`na.interp()`函数还能够创建非线性模型。
 
 其他时间序列缺失值插补函数的示例可以在{imputeTS}包中找到（Moritz and Bartz-Beielstein, 2017），该包提供了多种插补算法和绘图函数。一个关于使用R进行时间序列分析的绝佳资源，其中包含关于缺失值插补的章节，是（Hyndman and Athanasopoulos, 2021）。
 
@@ -6411,6 +6656,8 @@ jcush <- readr::read_fwf(dslabs::dslabs_data("JCUSH.txt"),
 head(jcush)
 ```
 
+
+
 ```
 ## # A tibble: 6 x 4
 ##   SAMPLEID    SPJ1_TYP GHJ1DHDI SDJ1GHED
@@ -6427,6 +6674,7 @@ head(jcush)
 
 | 名称 | 变量 | 代码 | 值 |
 |---|---|---|---|
+
 | SAMPLEID | 家庭标识符 | 唯一编号 |  |
 | SPJ1_TYP | 样本类型 [国家] | 1 | 加拿大 |
 |  |  | 2 | 美国 |
@@ -6442,7 +6690,7 @@ head(jcush)
 |  |  | 4 | 大学或学院证书（含学士以下） |
 |  |  | 9 | 未说明 |
 
-变量GHJ1DHDI包含了受访者对其整体健康状况的自我评估。以下是响应的汇总表：
+变量`GHJ1DHDI`包含了受访者对其整体健康状况的自我评估。以下是响应的汇总表：
 
 ```r
 jcush |>
@@ -6464,7 +6712,7 @@ jcush |>
 
 但如果我们将值标签附加到数据框上，会更加有用和高效。
 
-一种策略是创建一个新的因子变量，使用值描述代替数值表示。为此，我们将使用{forcats}包中的fct_recode()函数（Wickham, 2021a）。
+一种策略是创建一个新的因子变量，使用值描述代替数值表示。为此，我们将使用`{forcats}`包中的`fct_recode()`函数（Wickham, 2021a）。
 
 ```r
 library(forcats)
@@ -6486,7 +6734,7 @@ mutate(
 )
 ```
 
-levels()函数允许我们查看标签。请注意，由于我们指定了原始值“9”为NULL，它不会出现在列表中。
+`levels()`函数允许我们查看标签。请注意，由于我们指定了原始值“9”为NULL，它不会出现在列表中。
 
 ```r
 levels(jcush_forcats$health_desc_fct)
@@ -6496,7 +6744,7 @@ levels(jcush_forcats$health_desc_fct)
 ## [1] "Poor"    "Fair"    "Good"    "Very Good" "Excellent"
 ```
 
-当我们按新变量对结果进行计数时，GHJ1DHDI中值为9的记录会显示为“NA”。
+当我们按新变量对结果进行计数时，`GHJ1DHDI`中值为9的记录会显示为“NA”。
 
 ```r
 jcush_forcats |>
@@ -6517,7 +6765,7 @@ jcush_forcats |>
 ## 6         9 <NA>                12
 ```
 
-另一种选项由{haven}包提供（Wickham and Miller, 2021）。
+另一种选项由`{haven}`包提供（Wickham and Miller, 2021）。
 
 ```r
 library(haven)
@@ -6536,7 +6784,7 @@ jcush_haven <- jcush |>
   ))
 ```
 
-请注意，我们的新变量是“S3: haven_labelled”类，ls.str()函数会将其显示为“dbl+lbl”：
+请注意，我们的新变量是“S3: haven_labelled”类，`ls.str()`函数会将其显示为“dbl+lbl”：
 
 ```
 ls.str(jcush_haven)
@@ -6552,7 +6800,7 @@ ls.str(jcush_haven)
 
 **图 12.5 ls.str(jcush_haven)。**
 
-levels() 函数可用于检查此 mutate 的结果。
+`levels()` 函数可用于检查此 mutate 的结果。
 
 ```
 head(jcush_haven$health_desc_lab)
@@ -6582,7 +6830,7 @@ head(jcush_haven$health_desc_lab)
 ##     9 Not Stated
 ```
 
-另一种选择是使用 {labelled} 包（Larmarange，2022）中的函数。
+另一种选择是使用 `{labelled}` 包（Larmarange，2022）中的函数。
 
 ```
 jcush_labelled <- jcush |>
@@ -6619,7 +6867,7 @@ head(jcush_labelled$health_desc_lab)
 ##     9 Not Stated
 ```
 
-该包还允许使用 var_lab() 函数为变量附加描述性名称。
+该包还允许使用 `var_lab()` 函数为变量附加描述性名称。
 
 # 13 回顾
 
@@ -6630,7 +6878,7 @@ head(jcush_labelled$health_desc_lab)
 值得重申的一些要点：
 
 - 你得到的数据不会是你需要的数据。准备好进行分析需要付出努力——深思熟虑的努力。
-- 准备数据的过程不是线性的、分步的过程。它涉及迭代并返回到之前的步骤以解决数据问题。迭代始于 *import* 步骤，并贯穿 *validation* 和 *cleaning*。
+- 准备数据的过程不是线性的、分步的过程。它涉及迭代并返回到之前的步骤以解决数据问题。迭代始于 `import` 步骤，并贯穿 `validation` 和 `cleaning`。
 - 准备过程中的每一个要素都需要你作为研究者，基于你对如何最好地实现研究目标的判断做出决策。从定义要导入哪些变量到如何解决数据中的缺失值，你必须根据数据的使用方式做出明智而深思熟虑的决策。
 - 尽可能快地使用导入函数走得尽可能远。导入后需要做的更改越少越好。
 - 将数据整理成整洁的结构至关重要。
@@ -6690,9 +6938,6 @@ Bryan, J. and The STAT 545 TAs (2019). Stat 545.
 
 Colson, E., Coffey, B., Rached, T., and Cruz, L. (2017). 算法之旅：数据科学如何融入 Stitch Fix 的面料. Accessed: 2020-07-09.
 
-
-
-
 Conway, D. (2010). 数据科学维恩图。访问日期：2020-07-04。
 
 Cowgill, M., Meers, Z., Lee, J., and Diviny, D. (2023). *readabs：从澳大利亚统计局下载和整理时间序列数据*。R包版本 0.4.13.901。
@@ -6702,6 +6947,8 @@ Cunningham, S. (2021). *因果推断：混音带*。耶鲁大学出版社。
 Davenport, T. H. and Harris, J. G. (2007). *基于分析竞争：制胜的新科学*。哈佛商学院出版社。
 
 Dowle, M., Srinivasan, A., Gorecki, J., Chirico, M., Stetsenko, P., Short, T., Lianoglou, S., Antonyan, E., Bonsch, M., Parsonage, H., Ritchie, S., Ren, K., Tan, X., Saporta, R., Seiskari, O., Dong, X., Lang, M., Iwasaki, W., Wenchel, S., Broman, K., Schmidt, T., Arenburg, D., Smith, E., Cocquemas, F., Gomez, M., Chataignon, P., Blaser, N., Selivanov, D., Riabushenko, A., Lee, C., Groves, D., Possenriede, D., Parages, F., Toth, D., Yaramaz-David, M., Perumal, A., Sams, J., Morgan, M., Quinn, M., Javrucebo, Marc Outins, Storey, R., Saraswat, M., Jacob, M., Schubmehl, M., Vaughan, D., Hocking, T., Silvestri, L., Barrett, T., Hester, J., Damico, A., Freundt, S., Simons, D., de Andrade, E. S., Miller, C., Meldgaard, J. P., Tlapak, V., Ushey, K., Eddelbuettel, D., and Schwen, B. (2023). *data.table：‘data.frame’的扩展*。R包版本 1.14.8。
+
+
 
 Elders, B. and Oldoni, D. (2020). *tidylog：为‘dplyr’和‘tidyr’函数记录日志*。R包版本 1.0.2。
 
@@ -6815,9 +7062,6 @@ Suits, D. B. (1957). 虚拟变量在回归方程中的应用。《美国统计�
 
 Teucher, A., Albers, S., Hazlitt, S., and Province of British Columbia (2023). *bcdata：从BC数据目录搜索和检索数据*。R包版本 0.4.1。
 
-
-
-
 Tukey, J. W. (1977). 探索性数据分析. Addison-Wesley.
 
 联合国统计司 (2020). 统计分类. 技术报告, 联合国. 访问时间: 2020-09-07.
@@ -6893,46 +7137,36 @@ Zeeberg, B. R., Riss, J., Kane, D. W., Bussey, K. J., Uchio, E., Linehan, W. M.,
 - 对照表, 71, 127
 - 转换表, 参见 对照表
 
+
+
 - 数据验证, 9, 58, 137, 145, 147
 - 虚拟变量, 参见 指示变量
-
 - EDA, 参见 探索性数据分析
 - Excel, 47, 55
 - 探索性数据分析, 2, 138
-
 - 指示变量, 182–184, 187, 188
 - ISO 8601, 155
-
 - 加拿大/美国联合健康调查 (JCUSH), 42, 199
-
 - 标签变量, 25, 30, 45, 79, 84, 94, 97, 101
-
 - 缺失值, 6, 8, 30, 37, 89, 138, 139, 141, 189
-
 - NAICS, 参见 北美行业分类系统
 - 国家职业代码, 173
 - 全国旅行调查 (NTS), 98
 - NOC, 参见 国家职业代码
 - 北美行业分类系统, 168, 169, 181
-
 - 独热编码, 参见 指示变量
-
-- palmerpenguins, 22, 25, 32, 80, 95, 104, 146, 147, 187
+- `palmerpenguins`, 22, 25, 32, 80, 95, 104, 146, 147, 187
 - 便携式文档格式 (PDF), 3, 103, 109
 - Prawo Jazdy, 10
 - 公共使用微观数据文件, 42, 98
 - PUMF, 参见 公共使用微观数据文件
-
-- regex, 参见 正则表达式
+- `regex`, 参见 正则表达式
 - 正则表达式, 56, 106–108, 113, 159, 162, 163, 165, 174
 - 关系数据库, 127, 144
 - 可重现性, 13, 15
-
 - SAS, 79, 94, 97, 198
 - 哨兵值, 8, 139, 141, 143, 145
 - SPSS, 25, 79, 84–86, 88, 89, 94–97, 198
 - SQL, 127, 130–134
 - Stata, 79, 97, 198
-
 - 整洁数据, 10, 11, 25, 172
-

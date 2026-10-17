@@ -1,23 +1,5 @@
+
 # 数据分析的 Python：初学者基础指南，学习应用于数据分析的 Python 编程代码语言，Pandas、Numpy 和 IPython 软件库
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # Introduction
 
@@ -43,30 +25,29 @@ In 2001, Gartner defined Big data as "Data that contains greater variety arrivin
 
 ## The “Vs” of Big data
 
-Volume – To be classified as big data, the volume of the given data set must be substantially larger than traditional data sets. These data sets are primarily composed of unstructured data with limited structured and semi-structured data. The unstructured data or the data with unknown value can be collected from input sources such as webpages, search history, mobile applications, and social media platforms. The size and customer base of the company is usually proportional to the volume of the data acquired by the company.
+### Volume
+To be classified as big data, the volume of the given data set must be substantially larger than traditional data sets. These data sets are primarily composed of unstructured data with limited structured and semi-structured data. The unstructured data or the data with unknown value can be collected from input sources such as webpages, search history, mobile applications, and social media platforms. The size and customer base of the company is usually proportional to the volume of the data acquired by the company.
 
-
-
-
-
-## Velocity
+### Velocity
 数据能够被收集并采取行动的速度是大数据速度的首要因素。公司越来越多地使用本地和基于云的服务器的组合来提高数据收集的速度。现代的“智能产品和设备”需要实时访问消费者数据，以便能够为他们提供更具吸引力和增强的用户体验。
 
-## Variety
+### Variety
 传统上，数据集主要包含结构化数据，而非结构化和半结构化数据量很低，但大数据的出现催生了新的非结构化数据类型，如视频、文本和音频，这些数据类型需要复杂的工具和技术来清理和处理，以便从中提取有意义的见解。
 
-## Veracity
+### Veracity
 另一个必须考虑的大数据分析的“V”是真实性。这指的是数据的“可信度或质量”。例如，像“Facebook”和“Twitter”这样的社交媒体平台，以及包含 hashtag、缩写和各种打字错误的博客和帖子，会显著降低数据集的可靠性和准确性。
 
-## Value
+### Value
 数据已演变为一种具有内在价值的自身货币。就像传统货币一样，大数据的最终价值与从中获得的洞察力成正比。
 
 ## History of Big Data
+
 大量数据的起源可以追溯到 1960 年代和 1970 年代，当时第三次工业革命刚刚开始启动，关系数据库的开发也随之开始，同时数据中心的建设也在进行。但大数据的概念最近才成为焦点，主要是由于像 Google 和 Yahoo 这样的免费搜索引擎、像 YouTube 这样的免费在线娱乐服务以及像 Facebook 这样的社交媒体平台的出现。2005 年，企业开始认识到通过这些平台和服务产生的大量用户数据，并在同一年，一个名为 `Hadoop` 的开源框架被开发出来，用于收集和分析公司可用的这些大型数据倾倒。在同一时期，一种非关系型或分布式数据库 `NoSQL` 开始流行起来，因为它能够存储和提取非结构化数据。`Hadoop` 使公司能够以较高的便利性和相对较低的成本处理大数据。
 
 如今，随着尖端技术的兴起，不仅人类，而且机器也在产生数据。智能设备技术如 `Internet of things` (`IoT`) 和 `Internet of systems` (`IoS`) 使大数据的量急剧增加。我们的日常家用物品和智能设备都连接到互联网，能够跟踪和记录我们的使用模式以及我们与这些产品和服务的互动，并将所有这些数据直接输入大数据。机器学习技术的出现进一步增加了每天产生的数据量。据估计，到 2020 年，每人每秒将产生 `1.7 MB` 的数据。随着大数据将继续增长，其可用性仍有许多需要跨越的界限。
 
 ## Importance of Big Data
+
 要从数据集中获得可靠和可信的信息，拥有一个完整的数据集非常重要，而这正是大数据技术所实现的。我们拥有的数据越多，就能从中提取越多的信息和细节。为了获得问题的 360 度全景及其潜在解决方案，大数据的未来非常光明。以下是大数据使用的一些示例：
 
 **Product development** – 大型和小型电子商务企业越来越多地依赖大数据来了解客户需求和期望。公司可以通过使用其过去和现有产品和服务的主要特征来开发预测模型，以推出新产品和服务，并生成描述这些特征与这些产品和服务商业成功之间关系的模型。例如，一家领先的快速制造商业用品公司 `Procter & Gamble` 在新产品发布准备期间广泛使用从社交媒体网站、测试市场和焦点小组收集的大数据。
@@ -86,54 +67,62 @@ Volume – To be classified as big data, the volume of the given data set must b
 “大数据的重要性并不在于你有多少数据，而在于你用它做什么。你可以从任何来源获取数据并分析它，以找到答案，从而实现 1) 成本降低，2) 时间缩短，3) 新产品开发和优化产品，以及 4) 智能决策。”- `SAS`
 
 ## The Functioning of Big Data
+
 从大数据中获得洞察需要三个重要行动：
 
 **Integration** – 传统的 `ETL` (`Extract, Transform, Load`) 等数据集成方法无法从大数据核心的各种不相关来源和应用程序中汇集数据。需要先进的工具和技术来分析比传统数据集大得多的指数级大数据集。通过从这些不同的来源集成大数据，公司能够分析和提取有价值的见解来发展和维护其业务。
 
-
-
-
-
-## 管理
+**管理**
 大数据管理可以被定义为“对大量结构化和非结构化数据的组织、管理和治理”。大数据需要高效且廉价的存储，这可以通过本地服务器、云端服务器或两者结合来实现。公司能够无缝地从世界各地访问所需数据，然后根据需要使用所需的处理引擎对这些数据进行处理。目标是确保数据的质量处于高水平，并且可以被所需的工具和应用程序轻松访问。大数据来自各种各样的 Dale 来源，包括社交媒体平台、搜索引擎、历史记录和通话记录。大数据通常包含大量非结构化数据和半结构化数据，这些数据以多种格式存储。为了能够处理和存储这种复杂的数据，公司需要比传统关系数据库和数据仓库平台更强大、更先进的数据管理软件。
 
 市场上出现了新的平台，能够将大数据与传统数据仓库系统结合起来，形成“逻辑数据仓库架构”。作为这项工作的一部分，公司需要决定哪些数据必须为监管目的和合规性而安全存储，哪些数据必须保留以供未来分析使用，以及哪些数据没有未来用途可以处置。这一过程被称为“数据分类”，它允许快速高效地分析数据子集，以便纳入公司的即时决策过程。
 
-## 分析
+**分析**
 一旦大数据被收集并易于访问，就可以使用先进的分析工具和技术对其进行分析。这种分析将提供有价值的见解和可操作的信息。大数据可以被探索以做出发现并使用人工智能和机器学习算法开发数据模型。
 
 ## 数据类型
+
 现在你已经了解了大数据的概念，让我们来看一下不同类型的数据，以便你能够根据需要处理的数据类型选择最合适的分析工具和算法。数据类型的最高层面可以分为两类：定性和定量。
 
 ### 定性数据
+
+
+
 任何无法测量只能通过为对象添加定性特征而主观观察的数据称为“定性数据”。使用不可测量的特征对对象进行分类会产生定性数据。例如，属性如颜色、气味、质地和味道。定性数据有三种类型：
+
 * “二元或二项数据” – 数据值表示互斥事件，其中只有两个类别或选项中的一个是正确且适用的。例如，真或假，是或否，正或负。考虑一个装有混合茶包的盒子。你尝试所有不同的口味，并将你喜欢的归为“好”，不喜欢的归为“坏”。在这种情况下，“好或坏”将被归类为二项数据类型。这种数据类型广泛用于开发用于预测分析的统计模型。
+
 * “名义或无序数据” – 缺乏“隐含或自然价值”的数据特征可称为名义数据。考虑一盒 M&M 糖。你可以在工作表中记录盒中每个 M&M 的颜色，这将作为名义数据。这种数据广泛用于评估数据集中使用“卡方分析”等技术的统计差异，这可以告诉你盒中每种颜色 M&M 数量的“统计显著差异”。
+
 * “有序或顺序数据” – 这种数据类型的特征确实具有一定的“隐含或自然价值”，例如小、中或大。例如，像“Yelp”、“Amazon”和“Trip Advisor”这样的网站上的在线评论具有 1 到 5 的评分等级，意味着 5 星评分优于 4 星，优于 3 星，依此类推。
 
 ### 定量数据
+
 数据的任何可以客观测量的特征称为“定量数据”。使用可测量的特征对对象进行分类并赋予其数值会产生定量数据。例如，产品价格、温度、尺寸如长度等。定量数据有两种类型：
+
 * “连续数据” – 可以定义到更低级别的数据值，例如公里、米、厘米等测量单位，称为连续数据类型。例如，你可以按重量购买一袋杏仁，如 500g 或 8 盎司。这属于连续数据类型，主要用于测试和验证不同类型的假设，例如评估杏仁袋上打印的重量准确性。
+
 * “离散数据” – 无法被分割和降低到更高精度水平的数值数据值，例如一个人拥有的汽车数量只能以不可分割的数字计算（你不能拥有 1.5 或 2.3 辆车），称为离散数据类型。例如，你可以按包装内冰淇淋棒的数量购买另一袋冰淇淋棒，如四根或六根。这属于离散数据类型，可以与连续数据类型结合使用来执行回归分析，以验证冰淇淋盒的总重量（连续数据）是否与包装内的冰淇淋棒数量（离散数据）相关。
 
 ## 大数据分析
+
 由于大数据的固有目的是被分析，因此大数据和大数据分析这两个术语经常被互换使用。“大数据分析”可以被定义为一套定性和定量方法，可用于检查大量非结构化、结构化和半结构化数据，以发现数据模式和有价值的隐藏洞察。大数据分析是通过使用机器学习算法和自动化分析技术来分析大数据以收集指标、关键绩效指标和数据趋势的科学，这些指标和趋势很容易在原始数据的洪流中丢失。“大数据分析”涉及的不同步骤是：
 
 ### 收集数据需求
+
 了解需要收集哪些信息或数据以满足业务目标和目标非常重要。数据组织对于高效准确的数据分析也至关重要。数据可以组织的类别包括性别、年龄、人口统计、位置、种族和收入。还必须决定用于分析的所需数据类型（定性和定量）以及数据值（可以是数字或字母数字）。
 
 ### 收集数据
+
 原始数据可以从不同的来源收集，例如社交媒体平台、计算机、摄像机、其他软件应用程序、公司网站，甚至第三方数据提供商。大数据分析本质上需要大量数据，其中大部分是非结构化数据，只有少量结构化和半结构化数据。
 
 ### 数据组织和分类
+
 根据公司的基础设施，数据组织可以在简单的 Excel 电子表格上完成，也可以使用能够处理统计数据的许多工具和应用程序。数据必须根据大数据分析过程第一步收集的数据需求进行组织和分类。
 
 ### 清理数据
+
 为了充分、快速地执行大数据分析，确保数据集没有任何冗余和错误非常重要。只有满足数据需求的完整数据集才应进入最终分析步骤。数据预处理是必需的，以确保只有高质量的数据被分析，公司资源得到充分利用。
-
-
-
-
 
 “大数据是高容量、高速度和/或高多样性的信息资产，需要具有成本效益、创新的信息处理形式，以实现增强的洞察力、决策制定和流程自动化。”
 
@@ -144,17 +133,21 @@ Volume – To be classified as big data, the volume of the given data set must b
 根据分析完成后预期实现洞察的不同，可以采用以下四种大数据分析方法中的任何一种：
 
 ### 预测分析
+
 这种分析是为了生成公司未来计划的预测和预估而进行的。通过完成对公司大数据的预测分析，可以更精确地预测并推导出公司未来的状态。业务高管对这种分析非常感兴趣，以确保公司的日常运营与公司的未来愿景保持一致。
 
 例如，要在公司的销售部门部署先进的分析工具和应用，第一步是分析数据的领先来源。一旦认为来源分析已完成，就必须分析销售团队的沟通渠道类型和数量。随后使用机器学习算法对客户数据进行分析，以深入了解现有客户群如何与公司的产品或服务进行互动。这种预测分析将以部署基于人工智能的工具来推动公司销售的增长而告终。
 
 ### 规范分析
+
 主要通过聚焦业务规则和建议来生成选择性分析路径的分析，该路径由行业标准规定以提升公司绩效。这种分析的目标是了解组织各个部门的复杂性，以及公司应采取哪些措施，以便通过规定的分析路径从其客户数据中获得洞察。这使公司能够通过对其现有和未来的大数据分析流程提供清晰的关注点，从而拥抱领域特异性和简洁性。
 
 ### 描述性分析
+
 公司接收并存储的所有传入数据都可以进行分析，以根据获得的结果生成有见地的描述。这种分析的目标是识别数据模式和当前市场趋势，公司可以采用这些趋势来发展其业务。例如，信用卡公司通常需要对所有潜在客户进行风险评估结果，以便能够预测客户未能按时偿还信用卡付款的可能性，并决定是否应批准客户的信用卡申请。这种风险评估主要基于客户的信用历史，但也考虑其他影响因素，包括客户曾向其申请信用的其他金融机构的意见、客户收入和财务表现，以及他们的数字足迹和社交媒体资料。
 
 ### 诊断分析
+
 顾名思义，这种分析是为了“诊断”或理解某个事件为何发生，以及如何防止该事件在未来再次发生或在需要时复制该事件。例如，网络营销策略和活动通常采用社交媒体平台来获得宣传并提高其声誉。并非所有活动都如预期般成功；因此，从失败的活动中吸取教训同样重要，甚至更为重要。公司可以通过收集与活动相关的“社交媒体提及”数据、活动页面浏览量、个人在活动页面上花费的平均时间、活动的社交媒体粉丝和关注者数量、在线评论和其他相关指标，对其活动进行诊断分析，以了解活动为何失败，以及如何使未来的活动更有效。
 
 大数据分析可以使用以下列出的一个或多个工具进行：
@@ -178,10 +171,6 @@ Volume – To be classified as big data, the volume of the given data set must b
 数据挖掘可以定义为“探索和分析大量数据以收集有意义的模式和规则的过程”。数据挖掘属于数据科学的范畴，并被广泛用于构建基于人工智能的机器学习模型，例如搜索引擎算法。虽然“挖掘数据”以发现隐藏模式和预测未来事件的过程由来已久，并被称为“数据库中的知识发现”，但“数据挖掘”一词直到 1990 年代才被创造。
 
 数据挖掘由三个基础且高度交织的科学学科组成，即“统计学”（数据关系的数学研究）、“机器学习算法”（可以进行训练并具有学习能力的算法）和“人工智能”（可以表现出类人智能的机器）。随着大数据的出现，数据挖掘技术已发展以跟上“大数据无限潜力”和经济实惠的计算能力的步伐。曾经被认为繁琐、劳动密集且耗时的工作已使用现代计算系统的先进处理速度和能力实现了自动化。
-
-
-
-
 
 ## 数据挖掘概述
 
@@ -249,10 +238,6 @@ Volume – To be classified as big data, the volume of the given data set must b
 
 新数据生成的“速度”或速度的飙升带来了存储需求增加的挑战。“多样性”或收集和存储的不同数据类型需要先进的数据挖掘能力，以便能够同时处理多种数据格式。无法处理此类高度可变大数据的工具由于其效率低下以及无法将非结构化和结构化数据一起分析而提供的价值较低。
 
-
-
-
-
 大数据的大量数据不仅对存储提出了挑战，而且由于数据挖掘工具和算法的速度大幅下降，及时识别正确的数据更具挑战性。更进一步的是，数据“真实性”表示并非所有收集的数据都是准确的，数据可能不完整甚至有偏见。数据挖掘工具在分析大量或大数据时难以及时提供高质量的结果。
 
 #### 2. 模型过载
@@ -269,19 +254,19 @@ Volume – To be classified as big data, the volume of the given data set must b
 
 ## 数据挖掘趋势
 
-## 提高计算速度
+### 提高计算速度
 
 随着大数据量和复杂性的增加，数据挖掘工具需要更强大、更快的计算机来高效分析数据。现有的统计技术如 `clustering` 只能处理仅数千个输入数据且变量数量有限的情况。然而，公司正在收集数百万个新数据观测值，包含数百个变量，使得分析对于计算系统来说过于复杂。大数据将继续爆炸式增长，需要足够强大的超级计算机来快速高效地分析不断增长的大数据。
 
-## 语言标准化
+### 语言标准化
 
 数据科学社区正在积极寻求为数据挖掘过程标准化一种语言。这项持续的努力将使分析师通过掌握一种标准数据挖掘语言，方便地使用各种数据挖掘平台。
 
-## 科学挖掘
+### 科学挖掘
 
 数据挖掘技术在工业界的成功引起了科学和学术研究界的关注。例如，心理学家使用 `association analysis` 来捕捉并识别人类行为模式以用于研究目的。经济学家使用保护性分析算法通过分析当前市场变量来预测未来市场趋势。
 
-## Web 挖掘
+### Web 挖掘
 
 Web 挖掘可以定义为“使用数据挖掘的类似技术发现隐藏的数据模式和链条，并将其直接应用于互联网的过程。”Web 挖掘的三种主要类型是：`content mining`、`usage mining` 和 `structure mining`。例如，`Amazon` 使用 Web 挖掘来了解客户与其网站和移动应用程序的互动，以便为客户提供更具吸引力和增强的用户体验。
 
@@ -307,6 +292,8 @@ Web 挖掘可以定义为“使用数据挖掘的类似技术发现隐藏的数�
 
 ## 数据分析策略
 
+
+
 数据科学主要用于决策制定，通过使用 `predictive causal analytics`、`prescriptive analytics` 和机器学习进行精确预测。
 
 ### 预测因果分析
@@ -330,10 +317,6 @@ Web 挖掘可以定义为“使用数据挖掘的类似技术发现隐藏的数�
 # 第 2 章：Python 及数据分析库基础
 
 ## Python
-
-
-
-
 
 Python 是一种非常实用的软件编程语言，正迅速成为大数据分析的标准。它是免费的开源代码，并在多个操作系统上完全标准化，包括 `Windows`、`MacOS` 和 `Linux`。Python 被誉为一种极其多才多艺、简单易用易学的编程语言，非常适合软件编程初学者。在 1980 年代，Python 由 Guido van Rossum 在 `Center Wiskunde & Informatica (CWI), Netherlands` 开发，作为 `ABC language` 的继任者，并具备管理和与 `Amoeba operating system` 交互的能力。它于 1989 年年底发布。在 2000 年底，Python v2.0 引入了多种增强功能，例如 `cycle-detecting garbage collector` 和对 `Unicode` 的支持。2008 年 12 月，Python v3.0 发布了。我，这导致了 Python 的彻底修订，使其更具向后兼容性。Python v3.0 的几个主要特性已被恢复到版本 `2.6.x` 和 `2.7.x`。
 
@@ -374,10 +357,6 @@ Python 是数据分析和机器学习领域首选的语言，这归功于持续�
 ## Scikit-Learn
 
 `Scikit-Learn` 已发展成为使用 Python 进行机器学习的黄金标准，提供各种各样的 `supervised and unsupervised machine learning algorithms`。它被誉为迄今为止最用户友好和最简洁的机器学习库之一。例如，决策树、聚类、线性和逻辑回归以及 K-means。Scikit-learn 使用几个基本的 Python 库：`NumPy` 和 `SciPy`，并添加了一组用于数据挖掘任务的算法，包括分类、回归和聚类。它还能够在几行代码内实现诸如特征选择、数据转换和集成方法等任务。
-
-
-
-
 
 ## Scikit-Learn 概述
 
@@ -495,11 +474,9 @@ print(np.sqrt(x))
 
 
 
-
-
 在 Python 上开发 `SciPy` 的另一个优势是，在开发高级程序和特定应用时，可以方便地使用强大的编程语言。 使用 `SciPy` 的科学应用受益于全球开发者的贡献，在无数软件生态位中开发额外的模块。 一切成果都已对 Python 程序员开放，从数据库子程序和类到 `parallel programming to the web`。 这些强大的工具与 `SciPy` 数学库一起提供。
 
-#### IPython (增强交互式控制台)
+### IPython (增强交互式控制台)
 
 `IPython (Interactive Python)` 是用于交互式计算的接口或命令 shell，可使用多种编程语言。 `IPython` 最初专门为 Python 创建，支持 introspection、富媒体、shell 语法、tab 补全和历史记录。 `IPython` 提供的一些功能包括：`interactive shells (terminal and Qt-based)`；基于浏览器的 notebook 界面，支持代码、文本、数学、内联绘图和其他媒体；支持交互式数据可视化和使用 GUI 工具包；可嵌入到您自己的项目中的灵活解释器；并行计算工具。 `IPython` 的架构提供 `parallel and distributed computing.` `IPython` 允许开发、执行、调试和交互式监控并行应用程序，因此 `I (Interactive) in IPython.` 底层架构可以轻松分离并行性，使 `IPython` 能够协助多种并行风格，包括：`Single program, various information (SPMD) parallelism`，`Multiple programs, various data (MIMD) parallelism`，`Message passing using MPI`，`Task parallelism`，`Data parallelism`，这些方法的组合甚至自定义用户定义策略。
 
@@ -507,11 +484,11 @@ print(np.sqrt(x))
 
 `IPython` 通常源自 `SciPy stack libraries`，例如 `NumPy` 和 `SciPy`，经常与各种 `Scientific Python distributions` 之一组合安装。 `IPython` 也可以与选定的 `SciPy stack libraries` 集成，主要为 `matplotlib`，在使用 `Jupyter notebook` 时会生成内联图表。 为了自定义富对象显示，Python 库可以实现 `IPython-specific hooks.` 例如，如果在 `IPython` 上下文中使用，`SymPy` 可以实现 `rendering of mathematical expressions as rendered LaTeX.`
 
-#### SymPy (符号数学)
+### SymPy (符号数学)
 
 由 Ondřej Čertík 和 Aaron Meurer 开发，`SymPy` 是 `an open-source Python library for symbolic computation.` 它作为独立应用和/或作为库以及通过 `SymPy Live` 或 `SymPy Gamma` 在线应用，为其他应用提供代数计算能力。 `SymPy` 易于安装和测试，因为它完全用 Python 开发，依赖有限。 `SymPy` 涉及从微积分、代数、离散数学和量子物理到基本符号算术的特性。 计算结果可以格式化为 `LaTeX` 代码。 结合在广泛使用的编程语言中简单、可扩展的代码库，`SymPy` 提供的易用性使其成为一个入门门槛相对较低的计算机代数系统。
 
-#### Pandas (数据结构和分析)
+### Pandas (数据结构和分析)
 
 `Pandas` 提供高度直观且用户友好的高级数据结构。 `Pandas` 在机器学习算法开发者社区中获得了流行，内置了数据聚合、分组和过滤技术以及时间序列分析结果。 Pandas 库有两个主要结构：一维 `Series` 和二维 `Data Frames.`
 
@@ -532,7 +509,7 @@ print(np.sqrt(x))
 
 Pandas 提供的两种数据类型结构为：`Pandas DataFrame` 和 `Pandas Series.`
 
-##### Pandas DataFrame
+#### Pandas DataFrame
 
 它被定义为 `2-D labeled data structure with columns of a potentially different type`。 它与 Excel 电子表格非常相似，如下图所示，具有用于分析、修改和从数据中提取有价值见解的多个相似功能。 您可以通过输入来自 `Excel`、`CSV` 和 `MySQL database` 等的数据集来创建 `Pandas DataFrame`。
 
@@ -587,10 +564,6 @@ df.age.dtype       # DataFrame.ColumnName
 df.name.dtype      # DataFrame.ColumnName
 ```
 
-
-
-
-
 你可以使用下面的代码通过使用“head ( )”函数查看“Pandas DataFrame”中可用的记录或前五行的前五行，以及使用“tail ( )”函数查看最后五行。例如，要查看数据的最初三行，可以使用下面的代码：
 
 ```
@@ -621,11 +594,11 @@ ser = pd.Series(data)
 print(ser)
 ```
 
-## Seaborn (data visualization)
+### Seaborn (data visualization)
 
 Seaborn 源自 Matplotlib 库，是一款极受欢迎的可视化库。它是一个高级库，可以生成特定类型的图表，包括热力图、时间序列和箱形图。
 
-## TensorFlow
+### TensorFlow
 
 TensorFlow 可以被定义为一个机器学习平台，提供端到端服务，拥有各种免费和开源资源。它具有多层节点系统，允许快速构建、训练和部署具有大型数据集的人工神经网络。它被誉为“一种简单灵活的架构，可以快速将新想法从概念到代码再到最先进的模型并发表”。例如，Google 在其图像识别和语音识别工具和技术中使用 TensorFlow 库。
 
@@ -672,21 +645,17 @@ TensorFlow 的两个基本组件是：
 
 ### Unsupervised Machine Learning Algorithms
 
-
-
-
-
 公司经常遇到需要生成标记和分类的训练数据集的数据源不可用的情况。在这些情况下，使用无监督机器学习算法是理想的。无监督机器学习算法用于识别机器如何创建“推断函数”以从未标记和未分类的数据堆中阐明隐藏结构的方法。这些算法能够探索数据以在信息量中识别结构。
 
 与监督机器学习算法不同，无监督算法在识别正确输出方面失败，尽管它们在探索输入数据和进行推断方面与监督学习算法一样高效。这些算法可用于识别数据异常值、生成定制和个性化产品推荐，以及使用诸如 `self-organizing maps`、`singular value decomposition` 和 `k-means clustering` 等技术对文本主题进行分类。例如，识别具有共同购物属性的客户，可将其细分为特定群体，并针对其实施相似的营销策略和活动。因此，无监督学习算法在在线营销领域极受欢迎。
 
-## 半监督机器学习算法
+### 半监督机器学习算法
 
 半监督机器学习算法具有高度的通用性，能够利用标记和未标记数据集进行学习和自我训练。这些算法是监督学习和无监督学习算法的“混合”。通常，训练数据集主要由未标记数据组成，并包含少量标记数据。分析方法包括 `prediction`、`regression` 和 `classification` 与半监督学习算法相结合使用，可使机器显著提高其学习准确性和训练能力。
 
 这些算法广泛用于从原始数据生成标记训练数据集高度资源密集且对公司而言成本效益较低的情况。因此，为了避免额外的人力和设备成本，公司在其系统中使用半监督学习算法。例如，人脸识别应用程序需要大量分散在多个输入源中的人脸数据。从网络摄像头等来源获取的原始数据的预处理、处理、分类和标记需要大量人力，以及数千小时的工作才能用作训练数据集。
 
-## 强化机器学习算法
+### 强化机器学习算法
 
 强化机器学习算法的独特性在于它从环境中学习。这些算法执行操作并勤勉地记录每次操作的结果，该结果要么是失败导致错误，要么是成功执行后的奖励。区分强化学习算法的两个主要特征是 `trial and error` 研究方法和 `delayed reward`。机器通过使用各种计算反复分析输入数据，并为每次正确或预期的输出发送强化信号，最终优化最终结果。系统开发了简单的动作和奖励反馈循环，以评估、记录和学习哪些操作是成功的并在更短时间内导致准确结果。这些算法的使用使系统能够在特定上下文的约束条件下自动确定理想行为，从而提高其能力和最大化其性能。因此，强化机器学习算法在游戏行业、机器人工程以及导航系统中被广泛使用。
 
@@ -696,7 +665,9 @@ TensorFlow 的两个基本组件是：
 
 ### 应用
 
-机器学习用于开发先进的推荐引擎和模型，这些模型可以通过分析和现有数据来预测和预测未来事件。例如，`Google` 正在使用先进的机器学习算法开发其自动驾驶汽车。虚拟个人和家庭助手设备，如 `Amazon Alexa`、`Google Home` 和 `Apple HomePod` 都由先进的机器学习算法驱动，与人工智能技术密切协作。
+
+
+机器学习用于开发先进的推荐引擎和模型，这些模型可以通过分析和现有数据来预测和预测未来事件。例如，`Google`正在使用先进的机器学习算法开发其自动驾驶汽车。虚拟个人和家庭助手设备，如`Amazon Alexa`、`Google Home`和`Apple HomePod`都由先进的机器学习算法驱动，与人工智能技术密切协作。
 
 大数据具有更广泛的适用性，可用于一般研究目的，以收集有关特定业务查询的信息，例如收集销售数据、构建消费者画像和金融研究，以及工业领域其他应用。
 
@@ -724,19 +695,15 @@ TensorFlow 的两个基本组件是：
 
 ## 客户分析
 
-根据 SAS 的定义，客户分析可以定义为“流程和技术 bad 使组织获得必要的客户洞察力，以便提供预期、相关且及时的优惠。”客户分析是所有营销活动的核心，是 `predictive modeling`、`data visualization`、`information management` 和 `segmentation` 等技术的总称。
+根据 SAS 的定义，客户分析可以定义为“流程和技术 bad 使组织获得必要的客户洞察力，以便提供预期、相关且及时的优惠。”客户分析是所有营销活动的核心，是`predictive modeling`、`data visualization`、`information management`和`segmentation`等技术的总称。
 
 ### 客户分析的重要性
 
-
-
-
-
-## 客户分析已发展成为营销行业的支柱
+客户分析已发展成为营销行业的支柱
 
 这是“智慧消费者”出现的直接结果，该消费者比以往任何时候都更具意识、更互联，并且愿意在瞬间将业务转移到别处。智慧客户可以无缝访问各种信息，包括市场上最好的产品和服务，以及他们可以在哪里找到最好的交易来最大化他们的资金。因此，公司需要主动，能够在与产品互动时预测消费者行为，并处于能够采取必要行动将潜在客户转化为付费客户的位置。为了生成更准确的客户行为预测和预测，公司必须对其客户的购买习惯和生活方式选择有充分的了解。这些接近准确的预测将为公司提供竞争优势，并有助于在销售和营销漏斗中实现更高的转化率。
 
-## 当今市场上最好的客户分析解决方案之一
+当今市场上最好的客户分析解决方案之一
 
 当今市场上最好的客户分析解决方案之一是“SAS Customer Intelligence”，其声称具有以下应用：
 
@@ -759,43 +726,39 @@ TensorFlow 的两个基本组件是：
 
 对于“Amazon”、“Apple”和“Netflix”等工业巨头而言，分析客户活动和行为是其日常运营的基础。规模较小的企业越来越多地效仿他们，在其业务模式中实施预测分析。为公司开发一套定制的预测模型不仅资本密集，而且需要大量的人力和时间。像“AgilOne”这样的营销公司提供相对简单的预测模型类型，可广泛应用于各工业领域。他们已确定三种主要类型的预测模型来分析客户行为，即：
 
-“`Propensity models`” – 这些模型用于生成客户行为的“真实或准确”预测。一些最常见的倾向模型包括：“predictive lifetime value”、“propensity to buy”、“propensity to turn”、“propensity to convert”、“likelihood of engagement”和“propensity to unsubscribe”。
+`Propensity models` – 这些模型用于生成客户行为的“真实或准确”预测。一些最常见的倾向模型包括：`predictive lifetime value`、`propensity to buy`、`propensity to turn`、`propensity to convert`、`likelihood of engagement`和`propensity to unsubscribe`。
 
-“`Cluster models`” – 这些模型用于根据性别、年龄、购买历史和人口统计等共同属性对客户进行分离和分组。一些最常见的聚类模型包括 "product-based or category base clustering"、"behavioral customs clustering" 和 "brand based clustering"。
+`Cluster models` – 这些模型用于根据性别、年龄、购买历史和人口统计等共同属性对客户进行分离和分组。一些最常见的聚类模型包括 `product-based or category base clustering`、`behavioral customs clustering` 和 `brand based clustering`。
 
-“`Collaborative filtering`” – 这些模型用于根据先前的客户活动和行为生成产品和服务推荐以及推荐广告。一些最常见的协同过滤模型包括 "upsell"、"cross-sell" 和 "next sell" 推荐。
+`Collaborative filtering` – 这些模型用于根据先前的客户活动和行为生成产品和服务推荐以及推荐广告。一些最常见的协同过滤模型包括 `upsell`、`cross-sell` 和 `next sell` 推荐。
 
-公司用于执行客户行为预测分析的最重要工具是 "`regression analysis`" ，它允许公司在特定产品的销售与购买客户所显示的特定属性之间建立相关性。这是通过采用 "`regression coefficients`" 实现的，这些系数是描述客户行为受不同变量影响程度的数值，并为产品的未来销售开发 "`likelihood score`"。
+公司用于执行客户行为预测分析的最重要工具是 `regression analysis`，它允许公司在特定产品的销售与购买客户所显示的特定属性之间建立相关性。这是通过采用 `regression coefficients` 实现的，这些系数是描述客户行为受不同变量影响程度的数值，并为产品的未来销售开发 `likelihood score`。
 
 ### 使用 Scikit-Learn 库进行预测数据分析
 
-为了了解 `Scikit-Learn` 库在“预测数据分析”或机器学习模型开发中的使用方式，让我们使用来自 IBM Watson 仓库的“`Sales_Win_Loss` 数据集”，其中包含一家汽车零部件批发供应商销售活动获得的数据。我们将构建一个机器学习模型来预测哪个销售活动会获胜，哪个会造成损失。
+为了了解 `Scikit-Learn` 库在“预测数据分析”或机器学习模型开发中的使用方式，让我们使用来自 IBM Watson 仓库的 `Sales_Win_Loss` 数据集，其中包含一家汽车零部件批发供应商销售活动获得的数据。我们将构建一个机器学习模型来预测哪个销售活动会获胜，哪个会造成损失。
 
-数据集可以使用 `Pandas` 导入，并使用 `Pandas` 技术如“`head()`”、“`tail()`”和“`dtypes()`”进行探索。来自“`Seaborn`”的绘图技术将用于可视化数据。为了处理数据，将使用 `Scikit-Learn` 的“`preprocessing.LabelEncoder()`”以及“`train_test_split()`”将数据集划分为训练子集和测试子集。
+数据集可以使用 `Pandas` 导入，并使用 `Pandas` 技术如 `head()`、`tail()` 和 `dtypes()` 进行探索。来自 `Seaborn` 的绘图技术将用于可视化数据。为了处理数据，将使用 `Scikit-Learn` 的 `preprocessing.LabelEncoder()` 以及 `train_test_split()` 将数据集划分为训练子集和测试子集。
 
-为了从我们的数据集生成预测，将使用三种不同的算法，即“`Linear Support Vector Classification` 和 `K-nearest neighbor classifier`。”为了比较这些算法的性能，将使用 `Scikit-Learn` 库技术“`accuracy_score`”。模型性能得分可以使用“`Yellowbrick`”可视化和 `Scikit-Learn` 进行可视化。
+为了从我们的数据集生成预测，将使用三种不同的算法，即 `Linear Support Vector Classification` 和 `K-nearest neighbor classifier`。为了比较这些算法的性能，将使用 `Scikit-Learn` 库技术 `accuracy_score`。模型性能得分可以使用 `Yellowbrick` 可视化和 `Scikit-Learn` 进行可视化。
 
 #### 安装 Scikit-Learn
 
-`Scikit-Learn` 的最新版本可以在“`Scikit-Learn.org`”上找到，并需要“`Python`（版本 >= 3.5）；`NumPy`（版本 >= 1.11.0）；`SciPy`（版本 >= 0.17.0）；`joblib`（版本 >= 0.11）”。Scikit-learn 的绘图功能或函数以“`plot_`”开头，并需要“`Matplotlib`（版本 >= 1.5.1）”。某些 `Scikit-Learn` 示例可能需要额外的应用程序：“`Scikit-Image`（版本 >= 0.12.3），`Pandas`（版本 >= 0.18.0）”。
+`Scikit-Learn` 的最新版本可以在 `Scikit-Learn.org` 上找到，并需要 `Python`（版本 >= 3.5）；`NumPy`（版本 >= 1.11.0）；`SciPy`（版本 >= 0.17.0）；`joblib`（版本 >= 0.11）。Scikit-learn 的绘图功能或函数以 `plot_` 开头，并需要 `Matplotlib`（版本 >= 1.5.1）。某些 `Scikit-Learn` 示例可能需要额外的应用程序：`Scikit-Image`（版本 >= 0.12.3），`Pandas`（版本 >= 0.18.0）。
 
-在事先安装了 "`NumPy`" 和 "`SciPy`" 的情况下，安装 `Scikit-Learn` 的最佳方法是使用“`pip`: `pip install -U scikit-learn`”或“`conda`: `conda install scikit-learn`。”
+在事先安装了 `NumPy` 和 `SciPy` 的情况下，安装 `Scikit-Learn` 的最佳方法是使用 `pip`: `pip install -U scikit-learn` 或 `conda`: `conda install scikit-learn`。
 
-必须确保在使用 `pip` 时利用了“`binary wheels`”，并且“`NumPy`”和“`SciPy`”未从源代码重新编译，这可能在使用特定操作系统和硬件设置时发生（例如“`Linux on a Raspberry Pi`”）。从源代码开发“`NumPy`”和“`SciPy`”往往很复杂（特别是在 Windows 上）；因此，它们需要仔细设置，确保线性代数例程的优化执行是可实现的。
+必须确保在使用 `pip` 时利用了 `binary wheels`，并且 `NumPy` 和 `SciPy` 未从源代码重新编译，这可能在使用特定操作系统和硬件设置时发生（例如 `Linux on a Raspberry Pi`）。从源代码开发 `NumPy` 和 `SciPy` 往往很复杂（特别是在 Windows 上）；因此，它们需要仔细设置，确保线性代数例程的优化执行是可实现的。
 
 #### 导入数据集
 
-要导入来自 IBM Watson 仓库的“`Sales_Win_Loss` 数据集”，第一步是使用 "`import pandas as pd`" 导入 "`Pandas`" 模块。
+要导入来自 IBM Watson 仓库的 `Sales_Win_Loss` 数据集，第一步是使用 `import pandas as pd` 导入 `Pandas` 模块。
 
-然后，我们利用变量 `URL` 作为“`https://community.watsonanalytics.com/wp content/uploads/2015/04/WA_Fn-UseC_-Sales-Win-Loss.csv`”，以便数据集可以存储并下载到该 URL。
+然后，我们利用变量 `URL` 作为 `https://community.watsonanalytics.com/wp content/uploads/2015/04/WA_Fn-UseC_-Sales-Win-Loss.csv`，以便数据集可以存储并下载到该 URL。
 
-现在，将使用“`read_csv()` as `sales_data = pd.read_csv(url)`”技术来读取上述由 `Pandas` 模块提供的 "`CSV or comma-separated values`" 文件。CSV 文件随后将被转换为 `Pandas` 数据框架，返回变量为 "`sales_data`" ，框架将存储在其中。
+现在，将使用 `read_csv()` as `sales_data = pd.read_csv(url)` 技术来读取上述由 `Pandas` 模块提供的 `CSV or comma-separated values` 文件。CSV 文件随后将被转换为 `Pandas` 数据框架，返回变量为 `sales_data`，框架将存储在其中。
 
-
-
-
-
-对于新的‘Pandas’用户来说，上面代码中提到的 `pd.read_csv()` 技术会生成一个名为“data framework”的表格数据结构，其中每一行的索引包含在第一列中，而每一列的标签/名称在第一行中取自位于初始列中的数据集的名称。在上面的代码片段中，`sales data` 变量导致一个如下面图片所示的表格。
+对于新的 `Pandas` 用户来说，上面代码中提到的 `pd.read_csv()` 技术会生成一个名为“data framework”的表格数据结构，其中每一行的索引包含在第一列中，而每一列的标签/名称在第一行中取自位于初始列中的数据集的名称。在上面的代码片段中，`sales data` 变量导致一个如下面图片所示的表格。
 
 ![](img/00008.jpeg)
 
@@ -803,7 +766,7 @@ TensorFlow 的两个基本组件是：
 
 通过这一步，你已成功存储了数据集的副本并将其转换为"Pandas"框架！
 
-现在，使用 `head() as Sales_data.head()` 技术，可以显示数据框架中的记录，如下所示，以“感受”数据集中包含的信息。
+现在，使用 `head()` as `Sales_data.head()` 技术，可以显示数据框架中的记录，如下所示，以“感受”数据集中包含的信息。
 
 ![](img/00009.jpeg)
 
@@ -815,9 +778,9 @@ TensorFlow 的两个基本组件是：
 
 这里将使用一些第三方 Python 库来帮助我们处理数据，以便我们可以有效地使用这些数据与 Scikit-Learn 的强大算法。前面部分中用于查看导入数据集的一些初始记录的相同的 `head()` 技术也可以在这里使用。事实上，`head` 实际上能够做的不止是显示数据记录，并且可以自定义 `head()` 技术以仅显示选定的记录，使用诸如 `sales_data.head(n=2)` 的命令。此命令将有选择地显示数据集的前 2 条记录。乍一看，很明显字符串数据包含在诸如 `Supplies Group` 和 `Region,` 的列中，而诸如 `Opportunity Resultthe` `Opportunity Number,` 等列则由整数值组成。还可以看到在' Opportunity Number' 列中为每条记录提供了唯一标识符。
 
-同样，要从表格底部显示选定的记录，可以使用 `tail() as sales_data.tail()`。
+同样，要从表格底部显示选定的记录，可以使用 `tail()` as `sales_data.tail()`。
 
-要查看数据集中可用的不同数据类型，可以使用 Pandas 技术 `dtypes() as sales_data.dtypes`。有了这些信息，可以列出数据框架中可用的数据列及其各自的数据类型。例如，我们可以确定 `object` 数据类型在 `Supplies Subgroup` 列中，而 `integer data type` 在 `Client Size By Revenue.` 列中。因此，我们了解了包含整数值或字符串数据的列。
+要查看数据集中可用的不同数据类型，可以使用 Pandas 技术 `dtypes()` as `sales_data.dtypes`。有了这些信息，可以列出数据框架中可用的数据列及其各自的数据类型。例如，我们可以确定 `object` 数据类型在 `Supplies Subgroup` 列中，而 `integer data type` 在 `Client Size By Revenue.` 列中。因此，我们了解了包含整数值或字符串数据的列。
 
 ## Data Visualization
 
@@ -877,11 +840,10 @@ Step 3 – 要将分类列转换为数值，请使用命令：
 
 
 
-
-
 要了解不同特征之间的交互作用以及这些特征如何影响目标变量，机器学习算法必须学习一组信息。为此，我们需要将完整的数据集拆分为两个子集。一个子集将作为训练数据集，用于训练我们的算法以构建机器学习模型。另一个子集将作为测试数据集，用于测试机器学习模型生成的预测的准确性。
 
 ### 第一阶段
+
 本阶段的第一阶段是使用以下步骤分离特征变量和目标变量：
 
 步骤 1 – 要选择排除特定列的数据，请使用命令 `select columns other than 'Opportunity Number', 'Opportunity Result'cols = [col for col in sales_data.columns if col not in ['Opportunity Number','Opportunity Result']]` 。
@@ -893,6 +855,7 @@ Step 3 – 要将分类列转换为数值，请使用命令：
 `Opportunity Number` 列被删除，因为它只是作为每个记录的唯一标识符。`Opportunity Result` 包含我们想要生成的预测，因此它成为我们的 `target` 变量，并且可以从此阶段的数据集中移除。上述代码的第一行将选择除 `Opportunity Number` & `Opportunity Result` 之外的所有列。这些列随后被分配给 `cols` 变量。然后使用 `cols` 变量中的列，开发了一个新的数据框架。这将成为 `feature set.` 接下来，使用 `sales_data` 数据框架中的 `Opportunity Result` 列开发了一个名为 `target` 的新数据框架。
 
 ### 第二阶段
+
 本阶段的第二阶段是使用以下步骤将日期框架分离为训练和测试子集。根据数据集和所需的预测，需要相应地将其拆分为训练和测试子集。对于本次练习，我们将使用 75% 的数据作为训练子集，其余 25% 将用于测试子集。我们将利用 `Scikit-Learn` 中的 `train_test_split()` 技术，使用以下步骤和代码来分离信息：
 
 步骤 1 – 要导入所需的模块，请使用命令 `from sklearn.model_selection import train_test_split`。
@@ -906,6 +869,7 @@ Step 3 – 要将分类列转换为数值，请使用命令：
 `Scikit-Learn` 提供的 `machine_learning_map` 被广泛用于为数据集选择最合适的 ML 算法。对于本次练习，我们将使用 `Linear Support Vector Classification` 和 `K-nearest neighbors' classifier` 算法。
 
 ### 线性支持向量分类
+
 `Linear Support Vector Classification` 或 `Linear SVC` 是 `Support Vector Machine (SVM)` 算法的子类，我们已在本书记载的第 2 章 `Machine Learning Algorithms` 中对其进行了回顾。使用 Linear SVC，数据可以划分为不同的平面，以便算法可以识别所有数据类的最佳组结构。
 
 以下是构建我们第一个 ML 模型的该算法的步骤和代码：
@@ -921,9 +885,11 @@ Step 3 – 要将分类列转换为数值，请使用命令：
 通过上面的代码，第一步导入了所需的模块。然后我们使用 `svc_model` 对象和 `random_state` 为 `0` 开发了一种类型的 Linear SVC。在步骤 3 中，`Linear SVC` 算法在训练数据集上进行训练，随后用于为测试数据中的目标生成预测。最后使用 `accuracy_score()` 技术来验证模型的 `accuracy score`，例如可以显示为 `LinearSVC accuracy: 0.777811004785`。
 
 ### K-最近邻分类器
+
 `k-nearest neighbors (k-NN)` 算法被称为 `用于模式识别中分类和回归的非参数方法。` 在分类和回归的情况下，`输入由特征空间中最接近的 k 个训练示例组成。` K-NN 是一种 `基于实例的学习` 或 `惰性学习` 形式，其中函数仅在本地估计，并且所有计算都推迟到分类为止。输出由以下事实驱动，即是否使用 `k-NN` 的分类或回归方法：
 
 * `k-nearest neighbors classification` - `output` 是类的成员。`object` 通过其邻居的多数投票进行分类，将对象分配给其最近的 `k-neighbors` 中最常见的类，其中 `k` 表示一个小的正整数。如果 k= 1，则 `object` 只是分配给最近邻居的类。
+
 * `k-nearest neighbors regression` - 输出是对象的属性值，该值计算为 k 个最近邻居值的平均值。
 
 一种对分类和回归都有帮助的方法是为邻居的贡献分配权重，以允许更近的邻居在平均值中做出更大的贡献，而远处的邻居则贡献较少。例如，一个已知的 `weighting scheme` 是为每个邻居分配权重 `1/d`，其中 `d` 表示与邻居的距离。邻居是从一组对象中选择的，这些对象的 `class`（对于 `k-NN classification`）或对象的特征值（对于 `k-NN regression`）是已知的。
@@ -943,10 +909,6 @@ Step 3 – 要将分类列转换为数值，请使用命令：
 现在我们已经介绍了首选算法，可以轻松选择准确率分数最高的模型。在 Scikit-Learn 中，可以使用 `Yellowbrick library`，它提供技术来直观地描绘各种评分技术。
 
 ## 使用散点图进行数据可视化
-
-
-
-
 
 散点图可以被定义为“一种二维数据可视化，使用点来表示两个不同变量获得的值——一个沿 x 轴绘制，另一个沿 y 轴绘制。”它也被称为“散点图”或“散点图表”。例如，下图中的“散点图”描绘了一组虚构的儿童身高和体重测量值。图中每个“点”都用来代表一个个体，其身高沿“x 轴”测量，体重沿“y 轴”测量。
 
@@ -981,7 +943,9 @@ Step 3 – 要将分类列转换为数值，请使用命令：
 人工智能营销可以被定义为你使用人工智能常量如机器学习在可用客户数据上以预测客户的需求和期望，同时显著改善客户旅程的方法。在人工智能营销解决方案提供的大数据洞察的帮助下，营销人员能够在几乎不需要额外努力的情况下提升其活动表现和投资回报率。使人工智能营销如此强大的关键要素是：
 
 * 大数据 - 营销公司能够以最少的手工工作聚合和细分大量数据转储的能力被称为大数据。营销人员随后可以利用所需的媒介，确保在正确的时间向目标受众传递适当的信息。
+
 * 机器学习 - 机器学习平台使营销人员能够识别趋势或常见情况并收集有效的洞察和响应，从而破译根本原因和重复事件的概率。
+
 * 直观平台 – 超快且易于操作的应用程序是人工智能营销不可或缺的。人工智能技术能够解读情绪并像人类一样交流，使基于人工智能的平台能够理解开放式内容，如电子邮件回复和社交媒体。
 
 ### 预测分析
@@ -997,10 +961,6 @@ Step 3 – 要将分类列转换为数值，请使用命令：
 ### 推荐引擎
 
 推荐引擎迅速发展成为人气最爱，并受到客户和营销公司的同样喜爱。“Apple Music”已经比你的伴侣更了解你的音乐品味，而 Amazon 总是为你呈现一份你可能有兴趣购买的产品清单。这种能够筛选数百万个可用选项并聚焦于个人需求的发现助手，对于拥有庞大实体和数字库存的大公司来说被证明是不可或缺的。
-
-
-
-
 
 1998 年，瑞典计算语言学家 Jussi Karlgren 在题为“Digital bookshelves”的报告中探讨了对客户行为进行聚类以预测未来行为的做法。同样，亚马逊也实施了协同过滤为其客户生成推荐。通过预测分析系统对消费者数据的收集和分析，结合个人资料信息和人口统计数据，系统能够根据消费者对产品的喜欢和不喜欢等活动实时不断学习和适应。例如，公司“Sky”已实施基于预测分析的模型，能够根据观众的模式推荐内容。聪明的客户不仅希望从其音乐和按需娱乐供应商那里获得这种增强体验，也希望从所有其他电子商务网站获得。
 
@@ -1026,13 +986,11 @@ Step 3 – 要将分类列转换为数值，请使用命令：
 
 随着人工智能技术的引入，对基于程序的广告的竞价和定位变得显著更高效。程序化广告可以定义为“购买和出售广告库存的自动化流程，通过该流程将广告商连接到出版商的交易所。”为了允许在社交媒体渠道、移动设备以及电视上对库存进行实时竞价，使用了人工智能技术。这也回到了预测分析以及对过去只能事后确定的数据的建模能力。人工智能能够协助确定在一天中的最佳时间投放特定广告、广告转化为销售的概率、用户的接受程度以及与广告互动的可能性。
 
+
+
 程序化公司有能力收集和分析访问客户的数据和行为，以优化实时活动并更精确地定位受众。程序化媒体购买包括使用“需求方平台”来促进在公开市场上购买广告库存的过程，以及使用“数据管理平台”为营销公司提供触达目标受众的能力。为了使营销代表能够就其潜在客户做出明智的决策，数据管理平台旨在收集和分析大量网站“Cookie 数据”。例如，搜索引擎营销（SEM）广告由 Facebook、Twitter 和 Google 等渠道实施。为了高效管理网站和应用程序观众的庞大库存，程序化广告为竞争对手提供了显著优势。Google 和 Facebook 成为高效有效广告的黄金标准，并致力于提供用户友好的平台，让非技术营销公司能够在线启动、运行和衡量其举措和活动。
 
 ## 视觉搜索和图像识别
-
-
-
-
 
 人工智能驱动的图像识别和分析技术的飞速发展带来了令人惊叹的视觉搜索功能。随着 Google Lens 等技术的推出以及 Pinterest 等平台的出现，人们现在可以使用视觉搜索功能找到彼此在视觉上相似的结果。视觉搜索的工作方式与传统的基于文本的搜索相同，后者会显示相似主题的结果。主要零售商和营销公司越来越多地使用视觉搜索来提供增强且更具吸引力的客户体验。视觉搜索可用于改进商品陈列，并根据产品的风格而不是消费者的过去行为或购买记录提供产品推荐。
 
@@ -1066,10 +1024,6 @@ Target 和 Asos 在其电子商务网站的视觉搜索技术开发方面投入�
 
 ## 用户体验个性化
 
-
-
-
-
 按需娱乐用户对丰富且引人入胜的个性化用户体验的期望日益增长。领先的按需娱乐平台之一 Netflix 推出了名为 “Meson” 的基于人工智能的工作流管理和调度应用，由各种 “machine learning pipelines” 组成，这些管道能够创建、训练和验证个性化算法，为用户提供个性化推荐。Netflix 与南加州大学合作开发了一种新的机器学习算法，名为 “Dynamic Optimizer”，该算法可压缩视频以实现高质量流媒体播放，同时不降低图像质量。这种人工智能技术通过优化视频流畅度和清晰度，解决了发展中国家和移动设备用户的流媒体问题。
 
 IBM Watson 近期与 IRIS.TV 合作，为 CBS、《好莱坞报道者》和 Hearst Digital Media 等媒体公司提供面向企业的服务，通过追踪和改善其客户与网络内容的互动。IBM Watson 正在提升 IRIS.TV 公司的机器学习算法，使其能够从用户搜索历史中“学习”并推荐类似内容。据报道，《好莱坞报道者》使用 IRIS.TV 应用后，在三个月内实现了观看量或留存率提升 50% 或一份小幅 PDF。
@@ -1093,4 +1047,3 @@ IBM Watson 近期与 IRIS.TV 合作，为 CBS、《好莱坞报道者》和 Hear
 您现在已准备好通过利用本书中描述的所有免费和开源数据库来创建自己的预测分析模型。为了充分利用本书，我建议您下载这些免费资源并进行动手练习，以巩固您对所解释概念的理解。数据分析技能始终需求旺盛，拥有大量高薪工作机会。希望本书能让您更接近梦想的工作！
 
 最后，如果您觉得本书在任何方面对您有用，欢迎在 Amazon 上留下评论！
-

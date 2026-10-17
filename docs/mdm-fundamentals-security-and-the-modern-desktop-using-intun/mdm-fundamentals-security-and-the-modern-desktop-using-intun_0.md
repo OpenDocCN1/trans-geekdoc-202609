@@ -1,6 +1,5 @@
+
 # MDM 基础、安全与现代桌面：Intune、Autopilot 与 Azure 管理、部署及保护 Windows 10 指南
-
-
 
 ![](img/cover.jpg)
 
@@ -38,615 +37,7 @@ Jeremy 是 `MDMandGPanswers.com` 和 PolicyPak Software 的创始人。《Comput
 
 在 `www.MDMandGPanswers.com` 获取他的签名版书籍，并了解更多关于 Jeremy 的组策略和 MDM 大师班培训。在 `www.policypak.com` 了解如何保护您的桌面和应用程序、管理 Windows 10 的所有领域，并通过 MDM 服务部署所有组策略设置。
 
-| 105 | `#c03.xhtml#Page_105` |
-| 106 | `#c03.xhtml#Page_106` |
-| 107 | `#c03.xhtml#Page_107` |
-| 108 | `#c03.xhtml#Page_108` |
-| 109 | `#c03.xhtml#Page_109` |
-| 110 | `#c03.xhtml#Page_110` |
-| 111 | `#c03.xhtml#Page_111` |
-| 112 | `#c03.xhtml#Page_112` |
-| 113 | `#c03.xhtml#Page_113` |
-| 114 | `#c03.xhtml#Page_114` |
-| 115 | `#c03.xhtml#Page_115` |
-| 117 | `#c04.xhtml#Page_117` |
-| 118 | `#c04.xhtml#Page_118` |
-| 119 | `#c04.xhtml#Page_119` |
-| 120 | `#c04.xhtml#Page_120` |
-| 121 | `#c04.xhtml#Page_121` |
-| 122 | `#c04.xhtml#Page_122` |
-| 123 | `#c04.xhtml#Page_123` |
-| 124 | `#c04.xhtml#Page_124` |
-| 125 | `#c04.xhtml#Page_125` |
-| 126 | `#c04.xhtml#Page_126` |
-| 127 | `#c04.xhtml#Page_127` |
-| 128 | `#c04.xhtml#Page_128` |
-| 129 | `#c04.xhtml#Page_129` |
-| 130 | `#c04.xhtml#Page_130` |
-| 131 | `#c04.xhtml#Page_131` |
-| 132 | `#c04.xhtml#Page_132` |
-| 133 | `#c04.xhtml#Page_133` |
-| 135 | `#c05.xhtml#Page_135` |
-| 136 | `#c05.xhtml#Page_136` |
-| 137 | `#c05.xhtml#Page_137` |
-| 138 | `#c05.xhtml#Page_138` |
-| 139 | `#c05.xhtml#Page_139` |
-| 140 | `#c05.xhtml#Page_140` |
-| 141 | `#c05.xhtml#Page_141` |
-| 142 | `#c05.xhtml#Page_142` |
-| 143 | `#c05.xhtml#Page_143` |
-| 144 | `#c05.xhtml#Page_144` |
-| 145 | `#c05.xhtml#Page_145` |
-| 146 | `#c05.xhtml#Page_146` |
-| 147 | `#c05.xhtml#Page_147` |
-| 148 | `#c05.xhtml#Page_148` |
-| 149 | `#c05.xhtml#Page_149` |
-| 150 | `#c05.xhtml#Page_150` |
-| 151 | `#c05.xhtml#Page_151` |
-| 152 | `#c05.xhtml#Page_152` |
-| 153 | `#c06.xhtml#Page_153` |
-| 154 | `#c06.xhtml#Page_154` |
-| 155 | `#c06.xhtml#Page_155` |
-| 156 | `#c06.xhtml#Page_156` |
-| 157 | `#c06.xhtml#Page_157` |
-| 158 | `#c06.xhtml#Page_158` |
-| 159 | `#c06.xhtml#Page_159` |
-| 160 | `#c06.xhtml#Page_160` |
-| 161 | `#c06.xhtml#Page_161` |
-| 162 | `#c06.xhtml#Page_162` |
-| 163 | `#c06.xhtml#Page_163` |
-| 164 | `#c06.xhtml#Page_164` |
-| 165 | `#c06.xhtml#Page_165` |
-| 166 | `#c06.xhtml#Page_166` |
-| 167 | `#c06.xhtml#Page_167` |
-| 168 | `#c06.xhtml#Page_168` |
-| 169 | `#c06.xhtml#Page_169` |
-| 170 | `#c06.xhtml#Page_170` |
-| 171 | `#c06.xhtml#Page_171` |
-| 172 | `#c06.xhtml#Page_172` |
-| 173 | `#c06.xhtml#Page_173` |
-| 174 | `#c06.xhtml#Page_174` |
-| 175 | `#c06.xhtml#Page_175` |
-| 176 | `#c06.xhtml#Page_176` |
-| 177 | `#c06.xhtml#Page_177` |
-| 178 | `#c06.xhtml#Page_178` |
-| 179 | `#c06.xhtml#Page_179` |
-| 180 | `#c06.xhtml#Page_180` |
-| 181 | `#c06.xhtml#Page_181` |
-| 182 | `#c06.xhtml#Page_182` |
-| 183 | `#c06.xhtml#Page_183` |
-| 184 | `#c06.xhtml#Page_184` |
-| 185 | `#c06.xhtml#Page_185` |
-| 186 | `#c06.xhtml#Page_186` |
-| 187 | `#c06.xhtml#Page_187` |
-| 188 | `#c06.xhtml#Page_188` |
-| 189 | `#c06.xhtml#Page_189` |
-| 190 | `#c06.xhtml#Page_190` |
-| 191 | `#c06.xhtml#Page_191` |
-| 192 | `#c06.xhtml#Page_192` |
-| 193 | `#c06.xhtml#Page_193` |
-| 194 | `#c06.xhtml#Page_194` |
-| 195 | `#c06.xhtml#Page_195` |
-| 196 | `#c06.xhtml#Page_196` |
-| 197 | `#c06.xhtml#Page_197` |
-| 198 | `#c06.xhtml#Page_198` |
-| 199 | `#c06.xhtml#Page_199` |
-| 200 | `#c06.xhtml#Page_200` |
-| 201 | `#c06.xhtml#Page_201` |
-| 202 | `#c06.xhtml#Page_202` |
-| 203 | `#c06.xhtml#Page_203` |
-| 204 | `#c06.xhtml#Page_204` |
-| 205 | `#c06.xhtml#Page_205` |
-| 206 | `#c06.xhtml#Page_206` |
-| 207 | `#c06.xhtml#Page_207` |
-| 208 | `#c06.xhtml#Page_208` |
-| 209 | `#c06.xhtml#Page_209` |
-| 210 | `#c06.xhtml#Page_210` |
-| 211 | `#c06.xhtml#Page_211` |
-| 212 | `#c06.xhtml#Page_212` |
-| 213 | `#c06.xhtml#Page_213` |
-| 214 | `#c06.xhtml#Page_214` |
-| 215 | `#c06.xhtml#Page_215` |
-| 216 | `#c06.xhtml#Page_216` |
-| 217 | `#c06.xhtml#Page_217` |
-| 218 | `#c06.xhtml#Page_218` |
-| 219 | `#c06.xhtml#Page_219` |
-| 220 | `#c06.xhtml#Page_220` |
-| 221 | `#c06.xhtml#Page_221` |
-| 222 | `#c06.xhtml#Page_222` |
-| 223 | `#c06.xhtml#Page_223` |
-| 224 | `#c06.xhtml#Page_224` |
-| 225 | `#c06.xhtml#Page_225` |
-| 226 | `#c06.xhtml#Page_226` |
-| 227 | `#c06.xhtml#Page_227` |
-| 228 | `#c06.xhtml#Page_228` |
-| 229 | `#c06.xhtml#Page_229` |
-| 230 | `#c06.xhtml#Page_230` |
-| 231 | `#c06.xhtml#Page_231` |
-| 233 | `#c07.xhtml#Page_233` |
-| 234 | `#c07.xhtml#Page_234` |
-| 235 | `#c07.xhtml#Page_235` |
-| 236 | `#c07.xhtml#Page_236` |
-| 237 | `#c07.xhtml#Page_237` |
-| 238 | `#c07.xhtml#Page_238` |
-| 239 | `#c07.xhtml#Page_239` |
-| 240 | `#c07.xhtml#Page_240` |
-| 241 | `#c07.xhtml#Page_241` |
-| 242 | `#c07.xhtml#Page_242` |
-| 243 | `#c07.xhtml#Page_243` |
-
 **注意**：原始列表中缺失页码 14、74、116、134、232，此处按原文保留缺失状态。
-
-
-
-256. 244
-
-257. 245
-
-258. 246
-
-259. 247
-
-260. 248
-
-261. 249
-
-262. 250
-
-263. 251
-
-264. 252
-
-265. 253
-
-266. 254
-
-267. 255
-
-268. 256
-
-269. 257
-
-270. 258
-
-271. 259
-
-272. 260
-
-273. 261
-
-274. 262
-
-275. 263
-
-276. 264
-
-277. 265
-
-278. 266
-
-279. 267
-
-280. 268
-
-281. 269
-
-282. 270
-
-283. 271
-
-284. 272
-
-285. 273
-
-286. 274
-
-287. 275
-
-288. 276
-
-289. 277
-
-290. 278
-
-291. 279
-
-292. 280
-
-293. 281
-
-294. 282
-
-295. 283
-
-296. 284
-
-297. 285
-
-298. 286
-
-299. 287
-
-300. 288
-
-301. 289
-
-302. 290
-
-303. 291
-
-304. 292
-
-305. 293
-
-306. 294
-
-307. 295
-
-308. 296
-
-309. 297
-
-310. 298
-
-311. 299
-
-312. 300
-
-313. 301
-
-314. 302
-
-315. 303
-
-316. 304
-
-317. 305
-
-318. 306
-
-319. 307
-
-320. 308
-
-321. 309
-
-322. 310
-
-323. 311
-
-324. 312
-
-325. 313
-
-326. 314
-
-327. 315
-
-328. 316
-
-329. 317
-
-330. 318
-
-331. 319
-
-332. 320
-
-333. 321
-
-334. 322
-
-335. 323
-
-336. 324
-
-337. 325
-
-338. 326
-
-339. 327
-
-340. 328
-
-341. 329
-
-342. 330
-
-343. 331
-
-344. 332
-
-345. 333
-
-346. 334
-
-347. 335
-
-348. 336
-
-349. 337
-
-350. 338
-
-351. 339
-
-352. 340
-
-353. 341
-
-354. 342
-
-355. 343
-
-356. 344
-
-357. 345
-
-358. 346
-
-359. 347
-
-360. 348
-
-361. 349
-
-362. 350
-
-363. 351
-
-364. 352
-
-365. 353
-
-366. 354
-
-367. 355
-
-368. 356
-
-369. 357
-
-370. 358
-
-371. 359
-
-372. 360
-
-373. 361
-
-374. 362
-
-375. 363
-
-376. 364
-
-377. 365
-
-378. 366
-
-379. 367
-
-380. 368
-
-381. 369
-
-382. 370
-
-383. 371
-
-384. 372
-
-385. 373
-
-386. 374
-
-387. 375
-
-388. 376
-
-389. 377
-
-390. 378
-
-391. 379
-
-392. 380
-
-393. 381
-
-394. 382
-
-395. 383
-
-396. 384
-
-397. 385
-
-398. 386
-
-399. 387
-
-400. 388
-
-401. 389
-
-402. 390
-
-403. 391
-
-404. 392
-
-405. 393
-
-406. 395
-
-407. 396
-
-408. 397
-
-409. 398
-
-410. 399
-
-411. 400
-
-412. 401
-
-413. 402
-
-414. 403
-
-415. 404
-
-416. 405
-
-417. 406
-
-418. 407
-
-419. 408
-
-420. 409
-
-421. 410
-
-422. 411
-
-423. 412
-
-424. 413
-
-425. 414
-
-426. 415
-
-427. 416
-
-428. 417
-
-429. 418
-
-430. 419
-
-431. 420
-
-432. 421
-
-433. 422
-
-434. 423
-
-435. 424
-
-436. 425
-
-437. 426
-
-438. 427
-
-439. 428
-
-440. 429
-
-441. 430
-
-442. 431
-
-443. 432
-
-444. 433
-
-445. 434
-
-446. 435
-
-447. 436
-
-448. 437
-
-449. 439
-
-450. 440
-
-451. 441
-
-452. 442
-
-453. 443
-
-454. 444
-
-455. 445
-
-456. 446
-
-457. 447
-
-458. 448
-
-459. 449
-
-460. 450
-
-461. 451
-
-462. 452
-
-463. 453
-
-464. 454
-
-465. 455
-
-466. 456
-
-467. 457
-
-468. 458
-
-469. 459
-
-470. 460
-
-471. 461
-
-472. 462
-
-473. 463
-
-474. 464
-
-475. 465
-
-476. 466
-
-477. 467
-
-478. 468
-
-479. 469
-
-480. 470
-
-481. 471
-
-482. 473
-
-483. 474
-
-484. 475
-
-485. 476
-
-486. 477
-
-487. 478
-
-488. 479
-
-489. 480
-
 
 
 
@@ -722,10 +113,6 @@ Stephen L. Rose
 
 因此，我看到几类组织。也许你现在就属于其中一类，或者你的观点可能会随时间改变：
 
-
-
-
-
 ### EMM 和 MDM 重新定义
 
 EMM 代表企业移动性管理。它仅指以现代方式管理移动设备所需的所有工具、人员和资源。简而言之，EMM 是“概念”。
@@ -792,10 +179,6 @@ EMM 代表企业移动性管理。它仅指以现代方式管理移动设备所�
 *   `AAD` 是 Azure Active Directory。稍后将详细探讨，但这是微软基于云的身份服务。
 *   `DJ++` 是机器同时加入本地 `AD` 并使用 `AAD` 时的简略术语。时机成熟时我会再次提及。
 
-
-
-
-
 ### 工作场所加入
 
 工作场所加入是指计算机既不由本地 AD 管理，也不由 Azure Active Directory 管理。这是一种向组织外部人员提供某些资源和应用程序访问权限的方式，但这些设备并非完全受管。
@@ -856,23 +239,27 @@ EMM 代表企业移动性管理。它仅指以现代方式管理移动设备所�
 
 #### Azure 信息保护（和权利管理）
 
-人力资源部的 Sally 刚刚将嵌入薪资信息的组织架构图发送给了“太多的人”。坏事做尽，Sally，真坏。现在怎么办？好吧，如果你使用的是 Azure 信息保护（AIP），则可以根据内容自动对文档进行分类和保护。例如，假设文档中包含*机密*一词。当该文档被发送邮件时，数据实际上会保留在发件公司，而非收件公司。于是 Sally 的“大乌龙”变成了 Sally 的“大无事”。在此了解有关 Azure 信息保护（和权利管理）的更多信息，因为我不会在本书中涵盖它：
+
+
+# 人力资源部的 Sally 刚刚将嵌入薪资信息的组织架构图发送给了“太多的人”
+
+坏事做尽，Sally，真坏。现在怎么办？好吧，如果你使用的是 Azure 信息保护（AIP），则可以根据内容自动对文档进行分类和保护。例如，假设文档中包含*机密*一词。当该文档被发送邮件时，数据实际上会保留在发件公司，而非收件公司。于是 Sally 的“大乌龙”变成了 Sally 的“大无事”。在此了解有关 Azure 信息保护（和权利管理）的更多信息，因为我不会在本书中涵盖它：
 
 `https://docs.microsoft.com/en-us/azure/information-protection/`
 
-#### 单一登录
+## 单一登录
 
 目前，人力资源部的 Sally 拥有本地 AD 登录凭据，很快也将拥有 Azure AD 登录凭据，还有一个外部薪资系统的登录，另一个在 `Dropbox.com`，还有一个（又一个）在 `Salesforce.com`。如果她能使用她的 Azure AD 账户对这些外部应用程序实现单一登录 (SSO)，那该有多好？那肯定很酷。但既然我不会在本书中涵盖这一点，这里有一个演练示例，展示如何使用 Azure AD 与像 Salesforce 这样的外部应用程序实现单一登录：
 
 `https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/salesforce-tutorial`
 
-#### 用户自助服务
+## 用户自助服务
 
 用户喜欢忘记密码。再做一次密码重置是超级无聊的。因此，Office 365 和 Azure AD 都提供了一种让用户执行自助密码重置的方法。既然我不会涵盖它，如果你想设置它和/或查看快速演练，请查看：
 
 `https://docs.microsoft.com/en-us/azure/active-directory/authentication/quickstart-sspr`
 
-#### 双因素身份验证
+## 双因素身份验证
 
 Azure AD 有一种方式让某些资源要求第二重身份验证。要么是生物识别身份验证，如指纹或 YubiKey，要么是接听电话或短信。这是 Azure 多因素身份验证，你可以在此了解更多：
 
@@ -880,10 +267,7 @@ Azure AD 有一种方式让某些资源要求第二重身份验证。要么是�
 
 对我来说，这些额外的 Azure 服务非常、非常有趣。但它们不是本书针对你的重点。我们的任务：我们将专注于使用 MDM 服务和其他 Azure 服务来管理 Windows 10 PC。
 
-### 如何知道本书买回去后 80 秒内不会过时？
-
-
-
+# 如何知道本书买回去后 80 秒内不会过时？
 
 如果有一件事我们可以确定，那就是这个云服务的新世界似乎比我们大多数人能应对的速度还要快。
 
@@ -905,7 +289,7 @@ Azure AD 有一种方式让某些资源要求第二重身份验证。要么是�
 
 毕竟，你是一名 IT 专业人员。
 
-### 关于组策略与 MDM 的最后说明
+# 关于组策略与 MDM 的最后说明
 
 我意识到这可能是我在书店（更可能是 Amazon、Safari 或你正在用来阅读此介绍的任何平台）抓住你注意力的最后机会。如果你认识我，看过我的演讲，了解我的作品，你现在可能在想：“我想他弃用组策略了，现在 Jeremy 转向 MDM 了？”
 
@@ -933,7 +317,7 @@ Azure AD 有一种方式让某些资源要求第二重身份验证。要么是�
 
 我把选择权留给你。
 
-### 关于我、本书、PolicyPak 及更多
+# 关于我、本书、PolicyPak 及更多
 
 我管理 Windows 系统从蹒跚学步时就开始了。好吧，不完全是，但差不多。1994 年我成为世界上首批 MCSE 之一，并花费多年时间担任各种规模组织的顾问。
 
@@ -948,8 +332,7 @@ Azure AD 有一种方式让某些资源要求第二重身份验证。要么是�
 *   从云服务复制文件并保持其最新。
 *   移除本地管理员权限，并提升需要 UAC 提示的进程和应用程序。
 *   动态管理 Windows 10 开始屏幕和任栏。
-
-……以及更多。
+*   ……以及更多。
 
 所以我将努力走钢丝。经你允许，我将不时描述 PolicyPak 何时能增强某种情境、或解决开箱即用功能无法解决的问题。我将展示解决实际问题的真实示例。
 
@@ -972,9 +355,6 @@ Azure AD 有一种方式让某些资源要求第二重身份验证。要么是�
 在第一章中，我们将了解什么是 MDM、它的来源，以及它与其表亲组策略有何不同。
 
 我认为最好的起点就在新页面的顶部。就在这一页。
-
-
-
 
 ## 微软向 EMM 和 MDM 的转型
 
@@ -1064,9 +444,6 @@ Azure AD 有一种方式让某些资源要求第二重身份验证。要么是�
 
 “无需加入域”这一理念的另一个微妙之处在于：坏人可能随时已经潜入你的本地网络。在过去，我们假设防火墙足以保护我们免受互联网上坏人的侵害。但现在，假设坏人*此刻*就已经在你的网络内部，这是一个合理的假设。如果这是真的，让机器加入域实际上可能会*加剧*问题。
 
-
-
-
 如果坏人突破防线进入 DC，他们可以大量导出用户的密码哈希，然后进行暴力破解攻击。他们还可以入侵一个终端，通过漏洞利用或像 `Mimikatz` 这样的工具成为管理员，然后在机器间跳转，这就是所谓的“传递哈希”攻击。
 
 在我的组策略书籍（`www.GPanswers.com/book`）中，我展示了如何设置 Microsoft Local Admin Password Solution (LAPS) 来创建唯一的、轮换的密码，以缓解这类攻击。
@@ -1087,30 +464,44 @@ Azure AD 有一种方式让某些资源要求第二重身份验证。要么是�
 
 除此之外，还有无数个新的 Windows 子版本。以下是至少五个有趣的版本：
 
-*   **Windows on ARM：** ARM 是通常在手机中发现的处理器类型。以前它们性能尚可且电池续航尚可。现在，ARM 处理器更强大，续航更好。因此，微软敏锐地捕捉到这一趋势，重新设计了你熟知和喜爱的 Windows，并想出了一种在 ARM 处理器（也称为 Snapdragon 处理器）上转译 x86 指令的方法。结果？没有 Intel/AMD 芯片的新笔记本电脑。这些笔记本电脑可以全天候运行甚至更久。你可以在此了解更多关于该平台的信息：
-    `https://docs.microsoft.com/en-us/windows/arm/`
-    以及此处的一些 ARM 笔记本电脑的初步测试：
-    `https://www.zdnet.com/article/windows-10-on-arm-tests-say-snapdragon-845-could-bring-big-speed-boost`
 
-*   **Windows 10 in S Mode：** 一个安全版本的 Windows 10，仅限运行 Windows Store 应用。可以从 Windows 10 in S Mode 单向升级到 Windows Pro 或 Enterprise，这是单程票。如果想再回退，需要格式化硬盘。如果你想了解更多关于 Windows 10 in S Mode 的信息，可以在此找到 Ignite 2017 的演讲：
-    `https://www.youtube.com/watch?v=BkGURA_ywRI`
 
-*   **Windows HoloLens (and HoloLens2)：** 你见过这东西；它看起来像二十二世纪的滑雪护目镜。我在演示场景下用过两三次，谁知道呢。也许它们会流行起来。不管怎样，HoloLens 内置了 MDM。
+# Windows 新事物
 
-*   **Windows 10 IoT (Internet of Things)：** MDM 也内置在这个版本中，所以你在“普通” Windows 上做的事，也可以在一张名片大小的运行 Windows 的 PC 上做。这是一个小伙子在 Raspberry Pi3 上安装 Windows 10 IoT 版本的自制视频：
-    `https://www.youtube.com/watch?v=DxeasYy6kqs`
+## Windows on ARM
+ARM 是通常在手机中发现的处理器类型。以前它们性能尚可且电池续航尚可。现在，ARM 处理器更强大，续航更好。因此，微软敏锐地捕捉到这一趋势，重新设计了你熟知和喜爱的 Windows，并想出了一种在 ARM 处理器（也称为 Snapdragon 处理器）上转译 x86 指令的方法。结果？没有 Intel/AMD 芯片的新笔记本电脑。这些笔记本电脑可以全天候运行甚至更久。你可以在此了解更多关于该平台的信息：
 
-*   **Windows (codename) Polaris：** 这可能是一个完全不包含任何旧版 Windows 组件的版本。所以完全没有 Win32 子系统。在我写作时它还不存在，但也许一两年或三年后会有。或者永远没有。但这是有可能的。
+`https://docs.microsoft.com/en-us/windows/arm/`
 
-### 不是 Windows 的新事物（如 Mac 和 Chromebook）
+以及此处的一些 ARM 笔记本电脑的初步测试：
+
+`https://www.zdnet.com/article/windows-10-on-arm-tests-say-snapdragon-845-could-bring-big-speed-boost`
+
+## Windows 10 in S Mode
+一个安全版本的 Windows 10，仅限运行 Windows Store 应用。可以从 Windows 10 in S Mode 单向升级到 Windows Pro 或 Enterprise，这是单程票。如果想再回退，需要格式化硬盘。如果你想了解更多关于 Windows 10 in S Mode 的信息，可以在此找到 Ignite 2017 的演讲：
+
+`https://www.youtube.com/watch?v=BkGURA_ywRI`
+
+## Windows HoloLens (and HoloLens2)
+你见过这东西；它看起来像二十二世纪的滑雪护目镜。我在演示场景下用过两三次，谁知道呢。也许它们会流行起来。不管怎样，HoloLens 内置了 MDM。
+
+## Windows 10 IoT (Internet of Things)
+MDM 也内置在这个版本中，所以你在“普通” Windows 上做的事，也可以在一张名片大小的运行 Windows 的 PC 上做。这是一个小伙子在 Raspberry Pi3 上安装 Windows 10 IoT 版本的自制视频：
+
+`https://www.youtube.com/watch?v=DxeasYy6kqs`
+
+## Windows (codename) Polaris
+这可能是一个完全不包含任何旧版 Windows 组件的版本。所以完全没有 Win32 子系统。在我写作时它还不存在，但也许一两年或三年后会有。或者永远没有。但这是有可能的。
+
+# 不是 Windows 的新事物（如 Mac 和 Chromebook）
 
 看看现在孩子们在学校用什么。可能是真正的 Windows PC，也可能是 Mac 或 Chromebook。所有这些设备都内置了 MDM。与其拥有管理 Windows 世界和非 Windows 世界的分散工具，不如拥有一个统一的工具在一个地方处理所有设备。
 
-### 尚不存在的非 Windows 新事物
+# 尚不存在的非 Windows 新事物
 
 谁知道未来会带来什么。因此，将 MDM 引擎放入其中，对于当今存在的以及尚未被梦想出的设备，无论是 Windows 还是非 Windows，似乎都将保持一种标准。
 
-### 组策略与 MDM 对比
+# 组策略与 MDM 对比
 
 想要对比新旧是很自然的。成熟稳健对比新兴成长。在本节中，我将解释组策略在哪些方面表现出色，MDM 在哪些方面表现出色，以及它们各自在哪些方面还需要一点改进和帮助。
 
@@ -1132,8 +523,6 @@ MDM 正在重建以处理现代场景。是的，其中一些场景与我们熟�
 
 所以在我写作时，确实有些管理员看着 MDM 里的设置，举起双手说，“好吧，我无法用 MDM 做 X，所以我无法处理那个。”
 
-
-
 这里有一些答案：一个（无耻的自我推销）答案是查看 PolicyPak MDM，其一个关键功能是使您能够导出真正的组策略 ADMX、组策略安全设置和组策略首选项设置，并将它们（几乎全部）与您的 MDM 服务配合使用。这绝对是一个选项。详情请见 `https://www.policypak.com/products/policypak-mdm-edition.html`。
 
 另一个选项是“将就用”。这听起来很疯狂，但请再听我解释一下。假设您要从一座带马厩的大房子搬到一个精心设计的漂亮公寓。这里会有一些利弊。您那座带马厩的大房子很棒，您拥有无限的土地，可以随心所欲地对房子进行任何操作。但当东西坏了，您得自己想办法修。当您搬到公寓时，一方面，您必须缩减规模（即带过去的东西变少了），但这可能值得用来换取更少出错的权衡。如果您的公寓经过精心策划，新福利就会不时出现，比如新的会所、新的健身器材，等等。嘿，也许这个公寓没有您习惯的马厩，但它有免费的内置保龄球馆！而且只需少量额外费用，您就可以上舞蹈课。如果水管坏了，别人会修。您只需每月付账单，然后……嘿，也许您能习惯这种生活。所以，在没有组策略中完全相同的设置或流程的情况下生活可能也没问题。也许您根本不需要那个设置，或者它在非加域世界里讲不通。又或者有一个 PowerShell 脚本变通方案（虽然我个人真的不喜欢这个选项，相比于真正的设置）。但无论如何，“将就用”都应该作为您新“公寓生活现实”的一部分进行分析和处理。
@@ -1142,8 +531,8 @@ MDM 正在重建以处理现代场景。是的，其中一些场景与我们熟�
 
 此外，应该注意的是，“您想要的有趣东西”需要两个部分：
 
-*   您的功能首先必须由 Windows 10 产品团队启用策略。
-*   该策略随后需要在 MDM 中实现。
+* 您的功能首先必须由 Windows 10 产品团队启用策略。
+* 该策略随后需要在 MDM 中实现。
 
 这。将。会。很。慢。
 
@@ -1151,7 +540,7 @@ MDM 中的设置覆盖率将随着时间的推移而增加。它会的。但不�
 
 既然我已经谈到了最重要的方面——设置，让我们来探讨组策略和 MDM 之间的其他差异。
 
-### 历史与开发时间
+## 历史与开发时间
 
 组策略自 2000 年 Windows 2000 发布以来就已存在。其引擎曾有一些棘手的领域，直到 Vista 发布左右才被解决。组策略还收购了一家名为 DesktopStandard 的公司，并将其 PolicyMaker 程序作为组策略首选项重新发布，将组策略中可能的设置增加到数千个，并对许多最常配置的桌面区域提供了近乎无限的配置。
 
@@ -1161,13 +550,13 @@ MDM 中的设置覆盖率将随着时间的推移而增加。它会的。但不�
 
 相比之下，MDM 的核心组件在 Windows 8.0 中出现，但即使按 Microsoft 自己的说法，直到 Windows 10 发布（2015 年 7 月 29 日）才真正完全成熟。从那时起，MDM 增加了对管理员最想要的一些重要设置的覆盖，MDM 引擎也得到了更多的开发投入。
 
-### 策略定向
+## 策略定向
 
 如果您用过组策略，肯定了解 LSDOU 定向、组筛选、WMI 筛选和组策略首选项项目级定向。这些项目提供了大量方法，可将策略定向到计算机上的特定用户、组和条件。
 
 另一方面，MDM 有一种包含或排除组、最低和最高操作系统版本、Windows 健康证明等方式。我们将在第 3 章中看到这一点。
 
-### 所需基础设施和采购
+## 所需基础设施和采购
 
 因此，组策略“开箱即带”本地 AD。您只需搭建本地 AD 即可免费获得组策略。AD 是目录和标识服务，组策略是用户和设备管理引擎。
 
@@ -1177,13 +566,13 @@ MDM 中的设置覆盖率将随着时间的推移而增加。它会的。但不�
 
 稍后，为了开始，我们将注册一个免费的 90 天 Azure AD Premium 账户，以便您可以完成本书中的练习。当我们在下一章注册“云套餐”时，将获得 Azure AD Premium。
 
-## MDM：核心、协议和活动部件
+# MDM：核心、协议和活动部件
 
 MDM 是我们赋予端点接收设置和执行工作的活动部件的名称。但在所有这些之下，在端点上，有协议和活动部件在执行实际工作。
 
 让我们将其分解以了解 MDM 的各个部分。
 
-### OMA-DM：协议
+## OMA-DM：协议
 
 组策略使用 Kerberos 和 SMB 来协调其认证用户或计算机、然后下载指令的工作。
 
@@ -1201,11 +590,9 @@ OMA-DM 处理机器加入 MDM 系统的方面，这正确地称为*注册*。OMA
 
 Microsoft 为 Windows 10 支持的规范可以在以下位置找到：
 
-
-
 `https://docs.microsoft.com/en-us/windows/client-management/mdm/oma-dm-protocol-support`
 
-#### CSP：配置服务提供程序
+### CSP：配置服务提供程序
 
 对我来说，MDM 最有趣的部分是 CSP（配置服务提供程序）。这些是 Windows 10 MDM 实现中内置的微型接收器。它们接受 OMA-DM 指令（XML 格式），进行处理，然后……bingo，客户端上就会发生相应操作。
 
@@ -1241,7 +628,7 @@ Microsoft 为 Windows 10 支持的规范可以在以下位置找到：
 
 `https://docs.microsoft.com/en-us/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers`
 
-##### WMI-to-CSP Bridge（WMI 到 CSP 桥接器）
+#### WMI-to-CSP Bridge（WMI 到 CSP 桥接器）
 
 Windows 10 有一个小妙招，用于在机器没有 MDM 服务可通信时使用。它叫 `WMI-to-CSP Bridge`。
 
@@ -1259,7 +646,7 @@ MDM Bridge WMI Provider 文档：
 
 `https://docs.microsoft.com/en-us/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider`
 
-### MDM 服务
+## MDM 服务
 
 选择作为服务的 MDM 系统将在下一章讨论；但这里有个大秘密。这个秘密太大了，保护得太严实了，我简直不敢相信它居然保密了这么久。
 
@@ -1273,9 +660,11 @@ MDM Bridge WMI Provider 文档：
 
 所以所有 MDM 提供商必须按下相同的按钮，远程使用 `OMA-DM` 协议，拨动 CSP 的比特位来完成相同的工作。仅此而已。
 
-不过这里有个有趣的警告：不同的 MDM 厂商可能会在其 UI 中以不同方式暴露并“美化”可用的 CSP 设置。我们将在 第 3 章 看到更多相关内容。但简短的说法是：有些厂商在将可用的 CSP 设置以漂亮的可点击 MDM UI 形式呈现方面做得比其他厂商好。
 
-我听这被称为“First Class”（一等）设置。所以如果你的 MDM 提供商没有将某个特定设置作为“First Class”可点击设置提供，你总是可以手动探测并设置该设置。我听这被称为“Third Class”（三等）设置。同样，我们将在 第 3 章 看到这一点。
+
+不过这里有个有趣的警告：不同的 MDM 厂商可能会在其 UI 中以不同方式暴露并“美化”可用的 CSP 设置。我们将在**第 3 章**看到更多相关内容。但简短的说法是：有些厂商在将可用的 CSP 设置以漂亮的可点击 MDM UI 形式呈现方面做得比其他厂商好。
+
+我听这被称为“First Class”（一等）设置。所以如果你的 MDM 提供商没有将某个特定设置作为“First Class”可点击设置提供，你总是可以手动探测并设置该设置。我听这被称为“Third Class”（三等）设置。同样，我们将在**第 3 章**看到这一点。
 
 稍微眯眯眼，你可以扩展 MDM 服务，使其超出原本预期的功能。事实上，MDM 服务有一些附加产品。请看下一节了解如何实现。
 
@@ -1299,8 +688,6 @@ Intune 本身也是由某种“内置”第三方工具组成的。它叫 `Intun
 
 另一个 MDM 扩展的例子是我们用 `PolicyPak MDM` 的方式。为 200% 明确起见，`PolicyPak MDM` *不是* 像 Microsoft Intune 或 Workspace ONE 那样的独立 MDM 服务。相反，`PolicyPak MDM` 的目标是添加到你现有的 MDM 服务（无论你选了哪个）之上，并用它“做更多”事情。
 
-
-
 例如，我们允许您将本地组策略指令（以及用于 Windows 10 管理的其他 PolicyPak 神奇设置）应用到您的 Windows 10 计算机上。我们是如何做到的？我们将指令封装到一个 MSI 中，然后利用 MDM 的 CSP 部署 MSI 文件，将您所需的配置交付到计算机上。这种通过 MSI 进行的交付魔法使您能够交付全范围的组策略设置和 PolicyPak 的额外设置（管理浏览器、移除管理员权限、驯服 Java 等）——这些都是 MDM 或 Windows 原生功能无法自然实现的。
 
 此外，通过 MDM 服务安装 SCCM 代理也可以扩展您的 MDM 服务。这样一来，您就可以像以前一样做所有 SCCM 的事情，例如将 MDM 计算机的详细清单汇总到您的 SCCM 控制台中。
@@ -1319,9 +706,9 @@ Intune 本身也是由某种“内置”第三方工具组成的。它叫 `Intun
 
 `https://docs.microsoft.com/en-us/windows/client-management/mdm/new-in-windows-mdm-enrollment-management`
 
-在 Twitter 上 @jeremymoskowitz 告诉我您在本章（第 1 章）学到的一件事。使用标签 #mdmbook。
+在 Twitter 上 @jeremymoskowitz 告诉我您在本章（**第 1 章**）学到的一件事。使用标签 #mdmbook。
 
-例如……“@jeremymoskowitz，在您的 #mdmbook 第 1 章中，我学到了……”。然后只需告诉我一件很酷的事。
+例如……“@jeremymoskowitz，在您的 #mdmbook **第 1 章**中，我学到了……”。然后只需告诉我一件很酷的事。
 
 我迫不及待想收到您的推文。
 
@@ -1384,15 +771,9 @@ Microsoft 基于云的身份服务是 Microsoft Azure AD，有四种版本：Fre
 同时，您可能好奇如何购买 Azure AD Premium 和/或开始免费试用。确实，为了充分利用本书中的示例，您需要开始 Azure AD Premium 试用。现在不要购买或做任何 Azure AD 的事！但如果您想，可以看看试用页面 `https://azure.microsoft.com/en-us/trial/get-started-active-directory/`。同样，现在别做，但如果和当您准备好购买 Azure AD 时，我建议您与您的 Microsoft 许可人员合作，帮助您建立企业协议。或者您可以与经销商或合作伙伴合作。Microsoft 正在推行一个新想法，如果您开始“全面拥抱”云并想用 Microsoft 作为现代管理的一站式商店，这可能讲得通。Microsoft 365 是一个“套餐”，包含以下产品：
 
 *   Azure AD Premium。（同样，Premium 部分是进行自动注册所需的。）
-
 *   Enterprise Mobility + Security，它本身包含大量云服务：
-
     *   Microsoft Intune（管理 PC 和手机；这是本书中我们将最多使用的产品。）
-
     *   Azure Information Protection（防止 HR 的 Sally 发送机密信息。）
-
-
-
 
 ## Microsoft 365 组件与 Intune 部署指南
 
@@ -1479,6 +860,8 @@ Intune 是 Microsoft 管理 Windows 10 和其他支持 MDM 设备的首选云方
 
 因此，你可以单独购买 Intune。
 
+
+
 你也可以购买包含 Intune 的 Enterprise Mobility + Security 套件（如前所述）。要查看仅购买 Intune 与购买 Enterprise Mobility + Security 套件的区别，此处有一份不错的对比表：`www.microsoft.com/en-us/cloud-platform/microsoft-intune-pricing`。
 
 总结如下：
@@ -1504,10 +887,6 @@ Intune 是 Microsoft 管理 Windows 10 和其他支持 MDM 设备的首选云方
 接下来是创建第一个用户和公司名称。我使用的信息可见 Figure 2.4。请注意，公司名称必须在全球所有特殊的“`.onmicrosoft.com`”域中唯一。我将 `Fabrikam1000.onmicrosoft.com` 作为我的域名，贯穿本书及 `www.MDMandGPanswers.com` 的持续示例中使用。
 
 ![Figure 2.4 Create your first user and company name.](img/c02f004.jpg)
-
-
-
-
 
 ## 图 2.4：创建你的第一个用户和公司名称
 
@@ -1621,9 +1000,6 @@ MDM 注册分两步：
 
 ![图 2.8 这是开启 Intune 的点击位置。](img/c02f008.jpg)
 
-
-
-
 **图 2.8** 这是你单击以启用 Intune 的位置。
 
 ![图 2.9 启用 MDM，并可选择为所有用户启用 MAM。](img/c02f009.jpg)
@@ -1706,36 +1082,40 @@ MDM 注册分两步：
 
 手动将第一个用户添加到 Azure AD 只需片刻。
 
-回到 Azure 门户，首先单击“用户”或“添加用户”，如 **图 2.14** 所示。如果你迷路了，找不到 Azure AD，只需输入 `aad.portal.azure.com`，你应该就会被传送回 Azure 世界。
+
+
+# 回到 Azure 门户
+
+首先单击“用户”或“添加用户”，如**图 2.14**所示。如果你迷路了，找不到 Azure AD，只需输入`aad.portal.azure.com`，你应该就会被传送回 Azure 世界。
 
 ![图 2.14 手动将用户添加到 Azure Active Directory](img/c02f014.jpg)
 
 **图 2.14** 手动将用户添加到 Azure Active Directory
 
-然后，输入用户信息。我将添加一个名为 Jack Tors 的人，如 **图 2.15** 所示。请注意，我必须显式拼写他的用户名，目前该用户名必须以 `fabrikam1000.onmicrosoft.com` 结尾。稍后，我们将设置可选的自定义域名。
+然后，输入用户信息。我将添加一个名为 Jack Tors 的人，如**图 2.15**所示。请注意，我必须显式拼写他的用户名，目前该用户名必须以`fabrikam1000.onmicrosoft.com`结尾。稍后，我们将设置可选的自定义域名。
 
 ![图 2.15 在 Azure AD 中创建你的第一个用户。](img/c02f015.jpg)
 
 **图 2.15** 在 Azure AD 中创建你的第一个用户。
 
-Jack 现已创建，但没有许可证。要为他分配许可证，请返回“用户”➢“活动许可证”，找到刚创建的用户 Jack Tors。然后指定位置并分配许可证，如 **图 2.16** 所示。
+Jack 现已创建，但没有许可证。要为他分配许可证，请返回“用户”➢“活动许可证”，找到刚创建的用户 Jack Tors。然后指定位置并分配许可证，如**图 2.16**所示。
 
 ![图 2.16 每个用户都需要许可证。](img/c02f016.jpg)
 
 **图 2.16** 每个用户都需要许可证。
 
-### 将你的第一台 Windows 10 计算机注册到 MDM
+## 将你的第一台 Windows 10 计算机注册到 MDM
 
 这里有个有点坏的消息。你可能，是的，可能不得不（惊呼！）真正教用户如何执行所谓的 MDM 注册。从技术上讲，你是加入 Azure AD，而 MDM 注册正在后台为你自动发生。
 
-因此称为 *auto-enrollment*（自动注册）。
+因此称为`auto-enrollment`（自动注册）。
 
 这可能发生在两种情况下：
 
-*   Windows 计算机全新开箱，也称为开箱即用体验，或 OOBE
+*   Windows 计算机全新开箱，也称为开箱即用体验，或`OOBE`
 *   Windows 计算机已在运行并使用了一段时间
 
-OOBE 非常……简单。如 **图 2.17** 所示，只需提供用户名和密码，几次单击后（未显示），Windows 就完成并准备好大显身手了。
+`OOBE`非常……简单。如**图 2.17**所示，只需提供用户名和密码，几次单击后（未显示），Windows 就完成并准备好大显身手了。
 
 ![图 2.17 你可以给某人用户名和密码，以“开箱即用”即 OOBE 的方式注册计算机。](img/c02f017.jpg)
 
@@ -1743,9 +1123,7 @@ OOBE 非常……简单。如 **图 2.17** 所示，只需提供用户名和密�
 
 但这一切结束后（别怪传信人），注册计算机的人会成为本地管理员。等等，别慌。如果你愿意，可以更改此行为；请参阅侧边栏“在 Azure 和 Intune 中限制用户和设备”。
 
-
-
-此外，当我们讨论使用 Autopilot 分发新机器时，将会解决这个问题。但那要等到第 8 章！但就目前而言，这是事实：如果有人通过开箱即用体验 (OOBE) 以这种方式注册机器，他们就会成为该机器上的本地管理员。
+此外，当我们讨论使用 Autopilot 分发新机器时，将会解决这个问题。但那要等到第 8 章！但就目前而言，这是事实：如果有人通过开箱即用体验 (`OOBE`) 以这种方式注册机器，他们就会成为该机器上的本地管理员。
 
 好的。深呼吸，让我们继续前进。
 
@@ -1755,7 +1133,7 @@ OOBE 非常……简单。如 **图 2.17** 所示，只需提供用户名和密�
 *   第二件事是用户为了完成 MDM 注册必须执行的“所有手动点击操作”。
 *   第三件事是一种小捷径方法，可将用户必须执行的步骤降至最低。
 
-### 在 Azure 和 Intune 中限制用户和设备
+### 侧边栏：在 Azure 和 Intune 中限制用户和设备
 
 任何仅凭用户名和密码注册机器的人都会自动成为 Windows 10 机器的本地管理员：这是个极其糟糕的主意。
 
@@ -1794,7 +1172,7 @@ OOBE 非常……简单。如 **图 2.17** 所示，只需提供用户名和密�
 
 这些示例使用的是 Windows 10 1809 版本；在未来的 Windows 版本中，你的体验可能会略有不同。但这是我今天要展示的内容。
 
-假装你是一个标准用户（即没有任何本地管理员权限），转到开始栏并输入 `MDM`。对我而言，我发誓我不是在编造，我还得到了一些关于改变意识的药物 MDMA 的不错推荐。但是，擦除 MDMA 中推荐的“A”将会得到你在图 2.18 中看到的内容。
+假装你是一个标准用户（即没有任何本地管理员权限），转到开始栏并输入`MDM`。对我而言，我发誓我不是在编造，我还得到了一些关于改变意识的药物 MDMA 的不错推荐。但是，擦除 MDMA 中推荐的“A”将会得到你在**图 2.18**中看到的内容。
 
 ![图 2.18 使用 Windows 搜索查找 MDM 设置 ](img/c02f018.jpg)
 
@@ -1804,7 +1182,7 @@ OOBE 非常……简单。如 **图 2.17** 所示，只需提供用户名和密�
 
 再说一次，也许只是我遇到了这个问题，但在 1809 版本中，点击“仅注册到 MDM”（左侧选项或右侧大链接）实际上*什么也没做*，只是把我带到了 Windows 设置页面（真棒）。（我甚至尝试以本地管理员身份操作，但完全没有任何反应。）
 
-现在，作为这个假装的用户，在 Windows 设置中我必须再次输入 `MDM`，你将看到图 2.19 中的内容。
+现在，作为这个假装的用户，在 Windows 设置中我必须再次输入`MDM`，你将看到**图 2.19**中的内容。
 
 ![图 2.19 使用设置应用 ](img/c02f019.jpg)
 
@@ -1814,7 +1192,7 @@ OOBE 非常……简单。如 **图 2.17** 所示，只需提供用户名和密�
 
 好的。（记住，你要尝试像用户那样思考，而且是标准用户。）那么让我们试试“访问工作或学校”。好的！这个管用。该页面上有一个大大的 +（加号）和“连接”字样。太好了，点击它。
 
-然后你将看到图 2.20 中的大而漂亮的对话框，你会期望用户在其中输入他们的 Azure AD 帐户信息。
+然后你将看到**图 2.20**中的大而漂亮的对话框，你会期望用户在其中输入他们的 Azure AD 帐户信息。
 
 ![图 2.20 “设置工作或学校帐户”对话框。正等着“吞噬”你的最终用户呢。 ](img/c02f020.jpg)
 
@@ -1822,7 +1200,7 @@ OOBE 非常……简单。如 **图 2.17** 所示，只需提供用户名和密�
 
 然后，他们使用从邮件中获得的用户名和密码登录。
 
-在处理过程中，它看起来会像图 2.21。
+在处理过程中，它看起来会像**图 2.21**。
 
 ![图 2.21 当连接到 Azure AD 发生时，你会看到类似这样的内容。 ](img/c02f021.jpg)
 
@@ -1830,7 +1208,7 @@ OOBE 非常……简单。如 **图 2.17** 所示，只需提供用户名和密�
 
 你会收到一条“一切就绪”的消息并有机会点击“完成”。当你这样做时，你会像印第安纳·琼斯在《夺宝奇兵》中那样，直接、准确、毫无悬念地掉进蛇坑里。
 
-这是一个错误图标的示例，见图 2.22。它看起来像 Windows 旗帜图标。如果你希望完成 MDM 注册，这是你不想看到的。
+这是一个错误图标的示例，见图**2.22**。它看起来像 Windows 旗帜图标。如果你希望完成 MDM 注册，这是你不想看到的。
 
 ![图 2.22 注册后出现 Windows 图标意味着你只是“工作区加入”，并未真正完成 MDM 注册。 ](img/c02f022.jpg)
 
@@ -1838,7 +1216,7 @@ OOBE 非常……简单。如 **图 2.17** 所示，只需提供用户名和密�
 
 你怎么知道你*实际上*没有完成 MDM 注册？只因为你正在读这本书。因为对我来说，一个漂亮的 Windows 旗帜看起来像是好事。但实际上它是错误的，不足以完成 MDM 注册。
 
-但你可以自己验证：点击该旗帜，点击“管理你的帐户”，并在浏览器（如 Edge）中打开该页面。你将在图 2.23 中看到，计算机仅仅是*工作区加入*，而非 MDM 注册。
+但你可以自己验证：点击该旗帜，点击“管理你的帐户”，并在浏览器（如 Edge）中打开该页面。你将在**图 2.23**中看到，计算机仅仅是*工作区加入*，而非 MDM 注册。
 
 ![图 2.23 你不想只是工作区加入。你想要的是 MDM 注册，下文将解释。 ](img/c02f023.jpg)
 
@@ -1846,17 +1224,13 @@ OOBE 非常……简单。如 **图 2.17** 所示，只需提供用户名和密�
 
 要了解你刚才做了什么，这再次被称为“工作区加入”，请参阅边栏“什么是工作区加入？”。
 
-### 什么是工作区加入
+### 侧边栏：什么是工作区加入
 
-如果你在图 2.22 中没有完成 MDM 注册，那么你*实际上*在那里做了什么？
-
-
-
-
+如果你在**图 2.22**中没有完成 MDM 注册，那么你*实际上*在那里做了什么？
 
 ## 要做的事：MDM 注册
 
-正如你在图 2.23 中所见，当你点击进入以进行进一步检查时，它被称为“工作区加入”，这实际上是真正进行 MDM 注册的两部分流程中的第 1 部分。换句话说，MDM 注册分为两部分：加入 Azure AD（即工作区加入）和注册到 MDM。
+正如你在**图 2.23**中所见，当你点击进入以进行进一步检查时，它被称为“工作区加入”，这实际上是真正进行 MDM 注册的两部分流程中的第 1 部分。换句话说，MDM 注册分为两部分：加入 Azure AD（即工作区加入）和注册到 MDM。
 
 那个巨大、诱人的窗口是你输入用户名的地方，它实际上只负责第 1 部分，即工作区加入部分，而非 MDM 注册部分。
 
@@ -1880,11 +1254,11 @@ OOBE 非常……简单。如 **图 2.17** 所示，只需提供用户名和密�
 
 ![](img/c02uf004.jpg)
 
-如果你跟着我钻进了蛇洞，让我们来个干净的开端。首先，回到客户端，点击 Windows 徽标图标，就像你在图 2.22（和 2.23）中看到的那样。然后点击“断开连接”，再点击“是”。然后，在这里的 Azure AD 门户中，点击计算机本身，然后点击“删除”并确认“是”。
+如果你跟着我钻进了蛇洞，让我们来个干净的开端。首先，回到客户端，点击 Windows 徽标图标，就像你在**图 2.22**（和 **2.23**）中看到的那样。然后点击“断开连接”，再点击“是”。然后，在这里的 Azure AD 门户中，点击计算机本身，然后点击“删除”并确认“是”。
 
 砰。跳出了蛇坑。
 
-## 要做的事：MDM 注册
+## 要做的事：MDM 注册（正确方法）
 
 蛇坑：坏。宝藏：好。
 
@@ -1892,33 +1266,33 @@ OOBE 非常……简单。如 **图 2.17** 所示，只需提供用户名和密�
 
 而且，印第安纳·琼斯不是普通用户，他是英雄……一位本地管理员。（我就叫他管理员吧，但你会知道我的意思是本地管理员。）
 
-所以，以标准用户身份注销机器，再以管理员身份登录。当你这样做时，你将能够敲三下门并找到秘密之门。确实，图 2.24 就是秘密之门，X 标记了地点。嗯，不是 X，而是一个椭圆。
+所以，以标准用户身份注销机器，再以管理员身份登录。当你这样做时，你将能够敲三下门并找到秘密之门。确实，**图 2.24**就是秘密之门，X 标记了地点。嗯，不是 X，而是一个椭圆。
 
 ![图 2.24 只需点击“将此设备加入 Azure Active Directory”即可进行 MDM 注册。](img/c02f024.jpg)
 
 **图 2.24** 只需点击“将此设备加入 Azure Active Directory”即可进行 MDM 注册。
 
-在继续之前，请看看图 2.24 和图 2.20 的区别。看到了吗，作为标准用户，你甚至没有机会找到宝藏（标记为“将此设备加入 Azure Active Directory”）。
+在继续之前，请看看**图 2.24**和**图 2.20**的区别。看到了吗，作为标准用户，你甚至没有机会找到宝藏（标记为“将此设备加入 Azure Active Directory”）。
 
 现在，因为你是管理员，点击宝藏“将此设备加入 Azure Active Directory”。
 
-然后，且仅在此刻，在下一页（未显示）中，你将输入 Jack 的用户名和密码。一旦完成，你将看到即将发生的事情的预确认，如图 2.25 所示。点击“加入”以注册。
+然后，且仅在此刻，在下一页（未显示）中，你将输入 Jack 的用户名和密码。一旦完成，你将看到即将发生的事情的预确认，如**图 2.25**所示。点击“加入”以注册。
 
 ![图 2.25 MDM 注册的预确认](img/c02f025.jpg)
 
 **图 2.25** MDM 注册的预确认
 
-然后可以看到图 2.26 所示的确认页面。
+然后可以看到**图 2.26**所示的确认页面。
 
 ![图 2.26 说明现在可以使用 onmicrosoft.com 账户直接登录到此计算机](img/c02f026.jpg)
 
-**图 2.26** 说明现在可以使用 `onmicrosoft.com` 账户直接登录到此计算机
+**图 2.26** 说明现在可以使用`onmicrosoft.com`账户直接登录到此计算机
 
-最后，你的 MDM 金子在等着你。你可以看到公文包图标，如图 2.27 所示，表明已成功进行 MDM 注册。
+最后，你的 MDM 金子在等着你。你可以看到公文包图标，如**图 2.27**所示，表明已成功进行 MDM 注册。
 
 ![image](img/note.jpg) 如果你看到的是 Windows 图标而不是显示真正 MDM 注册的公文包图标，请尝试等待一天并重试。有时在告诉 Azure AD 谁是 MDM 权威后需要一些时间。比如 24–48 小时。
 
-现在在你的 Windows 10 机器上，注销，并以 `JackTors1000@fabrikam1000.onmicrosoft.com` 登录，如图 2.28 所示。
+现在在你的 Windows 10 机器上，注销，并以`JackTors1000@fabrikam1000.onmicrosoft.com`登录，如**图 2.28**所示。
 
 ![图 2.27 公文包图标意味着你已成功注册到 MDM。](img/c02f027.jpg)
 
@@ -1963,11 +1337,7 @@ OOBE 非常……简单。如 **图 2.17** 所示，只需提供用户名和密�
 *   预先创建 Azure AD 账户，并且
 *   通过电子邮件向所有人发送分步加入说明，并且
 
-
-
-
-
-## MDM 注册深度链接
+### MDM 注册深度链接
 
 祈祷用户能正确遵循步骤，执行实际的 MDM 注册，而不是 Azure Workplace 加入，这并不可靠。有更好的方法。不过请注意，MDM 注册只能由管理员执行，标准用户无法操作。
 
@@ -1975,9 +1345,11 @@ OOBE 非常……简单。如 **图 2.17** 所示，只需提供用户名和密�
 
 `ms-device-enrollment:?mode=mdm`
 
-你可以将该字符串复制粘贴到浏览器中（如图 2.28 所示），或使用 `Windows + R` 打开“运行”对话框并直接输入。
+你可以将该字符串复制粘贴到浏览器中（如**图 2.28**所示），或使用`Windows + R`打开“运行”对话框并直接输入。
 
 ![图 2.28 在运行对话框中输入深度链接](img/c02uf006.jpg)
+
+
 
 这样做可以绕过查找“设置”应用、知道输入什么来发现 MDM 部分以及避开陷阱的所有步骤。简而言之：让用户直接到达 MDM 注册的“宝藏”处。如图 2.29 所示，只需在 Microsoft Edge 浏览器窗口中输入神奇的语法，即可直接开始注册。
 
@@ -2079,35 +1451,31 @@ OOBE 非常……简单。如 **图 2.17** 所示，只需提供用户名和密�
 
 现在，这里有一个关于**不该做什么**的重大警告。
 
-
-
-
-
 ![image](img/warning.jpg) 如果你查看 Microsoft 文档，可能会说要将 `EnterpriseEnrollment.company_domain.com` 放入 CNAME 主机字段。这完全是错误的。这比你需要放入字段的内容要多。因为在 GoDaddy（或其他域名服务商）中，你已经在编辑域名本身，比如 `Fabrikam1000.com`。所以你不需要将 `EnterpriseEnrollment.fabirkam1000.com` 的完整 FQDN 输入到 CNAME 主机字段中；只需输入 `EnterpriseEnrollment` 即可。同理，关于要求输入 `EnterpriseRegistration.company_domain.com` 的指导也是错误的。只需将 `EnterpriseRegistration` 放入 CNAME 主机字段。不理解这一点让我在第一次设置时浪费了好几个小时。
 
 你可能需要等待几分钟让其生效，但我发现一旦设置正确，它会立即生效。然后你就可以开始测试了。
 
 按相反的顺序，你首先想运行 CNAME 测试。
 
-这可以在 Intune 门户 ➢ 设备注册 ➢ Windows 注册 ➢ CNAME 验证中找到，如 图 2.37 所示。
+这可以在 Intune 门户 ➢ 设备注册 ➢ Windows 注册 ➢ CNAME 验证中找到，如图 2.37 所示。
 
 ![Figure 2.37 Testing the CNAME before continuing](img/c02f037.jpg)
 
 **图 2.37** 继续之前测试 CNAME
 
-回到 Azure AD ➢ “自定义域名”，然后选择你的域名，如 `Fabrikam1000.com`，点击“验证”按钮（未显示）。在 图 2.38（左）中，你应该会看到“验证成功”，但“主域”设置为“否”。只需点击“设为主域”，你将得到 图 2.38（右）所示的结果。
+回到 Azure AD ➢ “自定义域名”，然后选择你的域名，如 `Fabrikam1000.com`，点击“验证”按钮（未显示）。在图 2.38（左）中，你应该会看到“验证成功”，但“主域”设置为“否”。只需点击“设为主域”，你将得到图 2.38（右）所示的结果。
 
 ![Figure 2.38 The goal is to validate the domain first (left). Then change the default primary domain to the custom domain (right).](img/c02f038a.jpg)
 
 **图 2.38** 目标是先验证域（左）。然后将默认主域更改为自定义域（右）。
 
-现在当你手动将新用户添加到 Azure AD 时，自定义域名（在我的例子中是 `@fabrikam1000.com`）将被接受作为该用户用户名的一部分，如 图 2.39 所示。请随意添加一个新用户，如 Anthony Kissel (`kissel@fabrikam1000.com`)，这也可以在 图 2.39 中看到。
+现在当你手动将新用户添加到 Azure AD 时，自定义域名（在我的例子中是 `@fabrikam1000.com`）将被接受作为该用户用户名的一部分，如图 2.39 所示。请随意添加一个新用户，如 Anthony Kissel (`kissel@fabrikam1000.com`)，这也可以在图 2.39 中看到。
 
 ![Figure 2.39 The user name field will not permit you to add a domain you don't own. You'll see the check box light up green if you have correctly made the custom domain.](img/c02f039.jpg)
 
 **图 2.39** 如果你不拥有某个域，用户名字段将不允许你添加它。如果你已正确设置自定义域，你会看到复选框亮起绿灯。
 
-保存用户后，你将看到用户列表，如 图 2.40 所示。
+保存用户后，你将看到用户列表，如图 2.40 所示。
 
 ![Figure 2.40 You can see your new user with the custom domain name.](img/c02f040.jpg)
 
@@ -2117,7 +1485,7 @@ OOBE 非常……简单。如 **图 2.17** 所示，只需提供用户名和密�
 
 此时，如果你想将 frank@fabrikam1000.onmicrosoft.com 更改为 frank@fabrikam1000.com，以及将 Jack 的帐户也更改为使用 `fabrikam1000.com`，你当然可以，这也是我现在要做的。只需点击名称，然后更改他们的用户名。它将接受你选定的新自定义域名。
 
-请记住，即使你将新用户添加到了 Azure AD，他们仍未获得使用任何服务的许可。我发现最简单的方法是直接输入 `https://portal.office.com` 跳转到配置用户许可证的地方。然后点击“用户” ➢ “活动用户”，选择一个用户进行编辑。➢ “编辑用户”，然后点击“许可证和应用”。你将看到类似 图 2.41 的内容（虽然你的可能不同）。然后选择一个位置（如美国），并为新用户分配许可证。
+请记住，即使你将新用户添加到了 Azure AD，他们仍未获得使用任何服务的许可。我发现最简单的方法是直接输入 `https://portal.office.com` 跳转到配置用户许可证的地方。然后点击“用户” ➢ “活动用户”，选择一个用户进行编辑。➢ “编辑用户”，然后点击“许可证和应用”。你将看到类似图 2.41 的内容（虽然你的可能不同）。然后选择一个位置（如美国），并为新用户分配许可证。
 
 ![Figure 2.41 Assign your new user a license.](img/c02f041.jpg)
 
@@ -2133,7 +1501,7 @@ OOBE 非常……简单。如 **图 2.17** 所示，只需提供用户名和密�
 ms-device-enrollment:?mode=mdm
 ```
 
-现在，这次以 Anthony Kissel 的身份注册，他现在使用的是 `fabrikam1000.com` 帐户，如 图 2.42 所示。
+现在，这次以 Anthony Kissel 的身份注册，他现在使用的是 `fabrikam1000.com` 帐户，如图 2.42 所示。
 
 ![Figure 2.42 Now you can have local Windows admins enroll users using your custom domain name!](img/c02f042.jpg)
 
@@ -2157,7 +1525,7 @@ ms-device-enrollment:?mode=mdm
 
 在本示例中，我将假设你有一个单一的本地域，名为 `Fabrikam.com`（正如我在本书开头页面推荐的）。如果你在现实生活中拥有更复杂的环境，那也没关系；你可以使用上述 URL 找到你的场景并尝试操作。
 
-**不要**首先下载 Azure AD Connect 工具。不，不要。不要从那里开始。相反，在你的本地 AD 中，运行“Active Directory 域和信任关系”工具。然后右键点击根节点并选择“属性”。然后在“UPN 后缀”选项卡中，添加你（现已验证）的 Azure AD 域名。在 图 2.43 中，我添加了 `fabrikam1000.com` 并点击了“确定”。
+**不要**首先下载 Azure AD Connect 工具。不，不要。不要从那里开始。相反，在你的本地 AD 中，运行“Active Directory 域和信任关系”工具。然后右键点击根节点并选择“属性”。然后在“UPN 后缀”选项卡中，添加你（现已验证）的 Azure AD 域名。在图 2.43 中，我添加了 `fabrikam1000.com` 并点击了“确定”。
 
 ![Figure 2.43 You need to add the name of your verified Azure AD domain here in on-prem AD Domains and Trusts. It took me eight hours to figure this out, and I could find no documentation on this. So, I hope this step saves you those eight hours.](img/c02f043.jpg)
 
@@ -2165,15 +1533,11 @@ ms-device-enrollment:?mode=mdm
 
 或者，你也可以添加你的 `onmicrosoft.com` 名称，如 `fabrikam1000.onmicrosoft.com`。那也行得通，但既然我费心购买并验证了 `Fabrikam1000.com`，我就使用这个。
 
-
-
-
-
 ## 添加 UPN 后缀后的后续步骤
 
 添加 UPN 后缀后，你现在可以继续下载 Azure AD Connect 并直接将其安装在本地 AD 域的 DC 上。你也可以使用一台备用服务器，但就我和本书而言，我是将其直接安装在域控制器上。下载地址为 `http://go.microsoft.com/fwlink/?LinkId=615771`。
 
-运行后，你将首先看到欢迎屏幕。下一个屏幕如 图 2.44 所示，解释了“快速设置”。
+运行后，你将首先看到欢迎屏幕。下一个屏幕如图 2.44 所示，解释了“快速设置”。
 
 ![Figure 2.44 Use Express Settings to connect your (simple) on-prem AD to Azure AD.](img/c02f044.jpg)
 
@@ -2183,7 +1547,7 @@ ms-device-enrollment:?mode=mdm
 
 也就是说，为了避免我深入探讨该工具的每一个细节，并能让你通过示例快速上路，快速设置对于我们的用例来说已经足够。
 
-在下一个屏幕上，你将提供 Azure AD 凭据（如 图 2.45 所示）；这是你设置 E5 试用版时使用的凭据。然后你将提供本地 AD 凭据，如 图 2.46 所示。
+在下一个屏幕上，你将提供 Azure AD 凭据（如图 2.45 所示）；这是你设置 E5 试用版时使用的凭据。然后你将提供本地 AD 凭据，如图 2.46 所示。
 
 ![Figure 2.45 Give it the credentials you used when setting up your E5 account.](img/c02f045.jpg)
 
@@ -2193,25 +1557,27 @@ ms-device-enrollment:?mode=mdm
 
 **图 2.46** 提供本地 AD 域管理员凭据。
 
-现在当你到达 Azure AD 登录配置页面时，你应该看到添加到本地 AD 的 UPN 名称与 Azure AD 域名匹配，如 图 2.47 所示。此外在 图 2.47 中，Azure AD Connect 程序有一个小 Bug，要求你勾选“继续而不使用任何已验证域”复选框，即使你确实拥有已验证域。等你阅读此书时，它可能已经修复。
+现在当你到达 Azure AD 登录配置页面时，你应该看到添加到本地 AD 的 UPN 名称与 Azure AD 域名匹配，如图 2.47 所示。此外在图 2.47 中，Azure AD Connect 程序有一个小 Bug，要求你勾选“继续而不使用任何已验证域”复选框，即使你确实拥有已验证域。等你阅读此书时，它可能已经修复。
 
 ![Figure 2.47 Be sure your UPN and Azure names match as Verified.](img/c02f047.jpg)
 
 **图 2.47** 确保你的 UPN 和 Azure 名称作为“已验证”匹配。
 
-单击“下一步”，然后启动该过程。当过程完成时，你将收到通知，如 图 2.48 所示。
+
+
+单击“下一步”，然后启动该过程。当过程完成时，你将收到通知，如图 2.48 所示。
 
 ![Figure 2.48 The AD Connect sync wizard is complete.](img/c02f048.jpg)
 
 **图 2.48** AD Connect 同步向导已完成。
 
-等待几分钟。然后，你可以刷新 Azure AD 管理中心并查看结果。我发现查看结果的最佳方式不是点击 图 2.49 中圈出的刷新按钮，而是刷新整个页面（见箭头），然后点击“用户”再点击“所有用户”。搞定。
+等待几分钟。然后，你可以刷新 Azure AD 管理中心并查看结果。我发现查看结果的最佳方式不是点击图 2.49 中圈出的刷新按钮，而是刷新整个页面（见箭头），然后点击“用户”再点击“所有用户”。搞定。
 
 ![Figure 2.49 Refresh the page to see the newly synced users. Note new users are coming from Windows Server AD.](img/c02f049.jpg)
 
 **图 2.49** 刷新页面以查看新同步的用户。注意新用户来自 Windows Server AD。
 
-你还将在 图 2.49 的“来源”列中看到哪些用户是从哪个源创建的：Azure Active Directory 还是 Windows Server AD。
+你还将在图 2.49 的“来源”列中看到哪些用户是从哪个源创建的：Azure Active Directory 还是 Windows Server AD。
 
 ### 更改用户的后缀
 
@@ -2219,9 +1585,10 @@ ms-device-enrollment:?mode=mdm
 
 为什么会这样？因为你的本地 AD 用户需要已经明确地在使用该后缀，*只有那样*你才会在同步后看到它。
 
-要更改它，对于单个用户，请使用“Active Directory 用户和计算机”，找到一个账户，如 EastSalesUser1，如 图 2.50 所示。然后点击“帐户”选项卡，以便执行两个步骤：
+要更改它，对于单个用户，请使用“Active Directory 用户和计算机”，找到一个账户，如 EastSalesUser1，如图 2.50 所示。然后点击“帐户”选项卡，以便执行两个步骤：
 
 *   **步骤 1：** 实际上在“用户登录名”字段中输入一个名称。通常这将是他们已在使用、熟知且喜爱的名称。
+
 *   **步骤 2：** 下拉并选择你之前在“Active Directory 域和信任关系”中指定的自定义域名。在我的例子中，是 `Fabrikam1000.com`。
 
 ![Figure 2.50 Each user needs to have the correct suffix in on-prem AD for it to be synchronized to Azure AD.](img/c02f050.jpg)
@@ -2230,7 +1597,7 @@ ms-device-enrollment:?mode=mdm
 
 你可以等待一段时间，更改将自然发生。
 
-或者你可以实时查看更改发生。要查看它们，请找到 Azure AD Connect 文件夹并启动同步服务，如 图 2.51 所示。
+或者你可以实时查看更改发生。要查看它们，请找到 Azure AD Connect 文件夹并启动同步服务，如图 2.51 所示。
 
 ![Figure 2.51 Launching the Synchronization Service](img/c02f051.jpg)
 
@@ -2250,13 +1617,13 @@ Start-AdSyncSyncCycle -policytype delta
 Start-AdSyncSyncCycle -policytype initial
 ```
 
-你可以在 图 2.52 中看到这两个命令运行的结果。
+你可以在图 2.52 中看到这两个命令运行的结果。
 
 ![Figure 2.52 Using PowerShell to force an AD to AAD sync](img/c02f052.jpg)
 
 **图 2.52** 使用 PowerShell 强制执行 AD 到 AAD 同步
 
-完成后，刷新 Azure AD 并再次查看所有用户。仔细注意，你指定的那个用户现在拥有了正确的用户名：EastSalesUser1@fabrikam1000.com，而不再是 `onmicrosoft.com` 那个，如 图 2.53 所示。
+完成后，刷新 Azure AD 并再次查看所有用户。仔细注意，你指定的那个用户现在拥有了正确的用户名：EastSalesUser1@fabrikam1000.com，而不再是 `onmicrosoft.com` 那个，如图 2.53 所示。
 
 ![Figure 2.53 See that your one user has successfully come over from on-prem AD to Azure AD.](img/c02f053.jpg)
 
@@ -2281,17 +1648,13 @@ Get-ADUser -Filter * -SearchBase 'ou=Sales,dc=fabrikam,dc=com'
 
 然后，使用前面的技术重新同步本地 AD 到 Azure AD，搞定。
 
-现在每个人在 Azure AD 中都拥有了从本地 AD 填充的完全正确的用户名，如 图 2.54 所示。
+现在每个人在 Azure AD 中都拥有了从本地 AD 填充的完全正确的用户名，如图 2.54 所示。
 
 ![Figure 2.54 After the on-prem AD PowerShell command, then a sync to Azure AD, all accounts now show your custom domain name.](img/c02f054.jpg)
 
 **图 2.54** 执行本地 AD PowerShell 命令后，再同步到 Azure AD，所有账户现在都显示你的自定义域名。
 
 ### 在 Azure AD 中删除账户
-
-
-
-
 
 ## 尝试删除同步用户
 
@@ -2314,7 +1677,7 @@ Connect-MSolService
 Remove-MsolUser -userprincipalname yourguy@fabrikam1000.com
 ```
 
-结果可见 图 2.55。
+结果可见图 2.55。
 
 ![图 2.55 如何清除从本地 AD 同步的用户](img/c02f055.jpg)
 
@@ -2332,9 +1695,9 @@ Remove-MsolUser -userprincipalname yourguy@fabrikam1000.com
 
 同样，本节所有步骤均为可选，但从长远来看，你可能需要考虑这个有趣的想法：你可以让本地 AD 同步所有现有的 Windows 10 账户，并将它们推送到 Azure AD。
 
-**超级大警告：** 虽然这能让所有 Windows 10 电脑注册到 Azure AD，但它**不会**神奇地让它们同时注册到你的 MDM 服务。别担心：我们在 第 4 章 中设置该功能（具有讽刺意味的是，我们使用组策略来实现）。
+**超级大警告：** 虽然这能让所有 Windows 10 电脑注册到 Azure AD，但它**不会**神奇地让它们同时注册到你的 MDM 服务。别担心：我们在第 4 章 中设置该功能（具有讽刺意味的是，我们使用组策略来实现）。
 
-说到组策略，你可以用它来预先阻止某些 Windows 10 电脑从本地 AD 同步到 Azure AD。该策略设置位于：`Computer` ➢ `Policies` ➢ `Admin Templates` ➢ `Windows Components` ➢ `Device Registration` ➢ **Register domain-joined computers as devices**（如 图 2.56 所示）。当你将此策略设置为 **Disabled**（是的，是禁用）时，获取该策略的电脑将忽略我们即将执行的“魔法”。
+说到组策略，你可以用它来预先阻止某些 Windows 10 电脑从本地 AD 同步到 Azure AD。该策略设置位于：`Computer` ➢ `Policies` ➢ `Admin Templates` ➢ `Windows Components` ➢ `Device Registration` ➢ **Register domain-joined computers as devices**（如图 2.56 所示）。当你将此策略设置为 **Disabled**（是的，是禁用）时，获取该策略的电脑将忽略我们即将执行的“魔法”。
 
 因此，建议你在执行后续步骤**之前**，将 **Register domain-joined computers as devices** 组策略设置预先分发到你想要排除的机器上。（再做个无耻广告：如果你想知道并验证该设置是否已到达所有目标机器，可以使用 PolicyPak 组策略合规性报告器的付费版，它会告诉你哪些本地机器获得了哪些 GPO 和设置，从而消除猜测……但我跑题了。）
 
@@ -2354,7 +1717,7 @@ $aadAdminCred = Get-Credential
 Initialize-ADSyncDomainJoinedComputerSync –AdConnectorAccount frank@fabrikam1000.com -AzureADCredentials $aadAdminCred
 ```
 
-这些 PowerShell 命令的结果可见 图 2.57 的第一部分。接着，如果你想验证是否真正生效，可以运行以下验证检查 PowerShell 命令（这些行也在上述微软 URL 中）：
+这些 PowerShell 命令的结果可见图 2.57 的第一部分。接着，如果你想验证是否真正生效，可以运行以下验证检查 PowerShell 命令（这些行也在上述微软 URL 中）：
 
 ```
 $scp = New-Object System.DirectoryServices.DirectoryEntry
@@ -2366,17 +1729,17 @@ $scp.Keywords
 
 **图 2.57** 你需要专门设置 Azure AD 以同步 Windows 10 电脑
 
-你可以在 图 2.57 的第二个代码块中看到结果，它会输出一些内容，包括我的域名 `fabrikam1000.onmicrosoft.com`！
+你可以在图 2.57 的第二个代码块中看到结果，它会输出一些内容，包括我的域名 `fabrikam1000.onmicrosoft.com`！
 
 现在，你网络上的 Windows 10 机器（1607 及更高版本）将自动收到通知并自我注册到 Azure AD……无论是新加入域的，还是现有的 Windows 10 机器，在重启和/或登录时均会如此。
 
-你也可以见证这一过程。在 Windows 10 系统重启后，且 Azure AD Connect 自然发生几次同步后，当你检查所有设备时，应该能看到新的 Windows 10 电脑弹出到 Azure AD 中，如 图 2.58 所示的 W10-1703-PRO-64 电脑。如果你查看 Join Type，它会显示“Hybrid Azure AD joined”。
+你也可以见证这一过程。在 Windows 10 系统重启后，且 Azure AD Connect 自然发生几次同步后，当你检查所有设备时，应该能看到新的 Windows 10 电脑弹出到 Azure AD 中，如图 2.58 所示的 W10-1703-PRO-64 电脑。如果你查看 Join Type，它会显示“Hybrid Azure AD joined”。
 
 ![图 2.58 如何查看混合 Azure AD 加入的机器](img/c02f058.jpg)
 
 **图 2.58** 如何查看混合 Azure AD 加入的机器
 
-回到 Windows 10 机器上，你需要查看它们是否收到信号以神奇地执行 Azure AD 加入。当你在 Windows 10 机器上运行命令 `dsregcmd /status` 时，可能会看到 图 2.59 所示内容，其中清楚地显示 `AzureADJoined` 为 `NO`。
+回到 Windows 10 机器上，你需要查看它们是否收到信号以神奇地执行 Azure AD 加入。当你在 Windows 10 机器上运行命令 `dsregcmd /status` 时，可能会看到图 2.59 所示内容，其中清楚地显示 `AzureADJoined` 为 `NO`。
 
 ![图 2.59 机器自动 Azure AD 加入前的状态](img/c02f059.jpg)
 
@@ -2384,7 +1747,7 @@ $scp.Keywords
 
 随后，过一段时间后，Windows 10 机器上会发生变化。
 
-你可以在 图 2.60 中看到该变化，随着你不断运行 `dsregcmd /status`。该命令会显示大量你不关心的信息。但关键是第一行：`AzureADJoined` 设置为 `YES`，如 图 2.60 所示。
+你可以在图 2.60 中看到该变化，随着你不断运行 `dsregcmd /status`。该命令会显示大量你不关心的信息。但关键是第一行：`AzureADJoined` 设置为 `YES`，如图 2.60 所示。
 
 ![图 2.60 机器自动 Azure AD 加入后的状态](img/c02f060.jpg)
 
@@ -2395,23 +1758,25 @@ $scp.Keywords
 此外，如果你想查看所有已加入 Azure AD 的电脑，可以使用以下几个 PowerShell 命令。
 
 *   `Install-Module msonline`
+
 *   `Connect-msolservice`，随后在提示时输入 Frank 的管理员凭据。
+
 *   `Get-MSoLDevice -all` 将显示已加入 Azure AD 的机器。
-*   或使用 `Get-MSOLDevice -all | Select displayname, objectid` 获取更美观的视图，如 图 2.61 所示。
+
+*   或使用 `Get-MSOLDevice -all | Select displayname, objectid` 获取更美观的视图，如图 2.61 所示。
 
 ![图 2.61 你可以通过 get-msoldevice PowerShell cmdlet 查看加入 Azure AD 的电脑](img/c02f061.jpg)
 
 **图 2.61** 你可以通过 `get-msoldevice` PowerShell cmdlet 查看加入 Azure AD 的电脑
-
-
-
 
 这些就是基础知识，也是让机器同时实现 AD 加入和 Azure AD 加入的方法。同样，这有一个很酷的术语，我们称之为 `DJ++`。现在你已经是个高手并完成了设置，可以在鸡尾酒会上随意提这个缩写了。
 
 话虽这么说，还有更多信息，包括各种额外的“魔法技巧”，如下所示：
 
 *   处理多个林同步到 Azure AD
+
 *   使用旧版 2008 域控制器，而非 Server 2016 及更高版本
+
 *   将 Windows 7 机器纳入 Azure AD
 
 这些指南（再次）可在以下位置找到：
@@ -2435,14 +1800,23 @@ $scp.Keywords
 好了。你做到了。让我们回顾一下你所做的一切：
 
 *   你获取了 Azure AD 账户，无论是独立账户，还是搭配 Enterprise Mobility + Security，或是搭配 Microsoft 365。
+
 *   你获取了 MDM 服务，并将其与 Azure AD 关联。
+
 *   你设置了所有组件以启用 MDM 自动注册。
+
 *   你深入“Workplace Join”的“蛇坑”，了解到它其实并非真正的 MDM。
+
 *   你实际上使用 MDM 注册了一些机器，无论是漫长的手动方法，还是使用深层链接。
+
 *   此外，你还可以选择……
+
     *   摆脱“`onmicrosoft.com`”命名模式，改用自定义名称。
-    *   将本地 AD 同步到 Azure AD。
-    *   让你的 Windows 10 机器自动执行 `DJ++` 加入。
+
+
+
+*   将本地 AD 同步到 Azure AD。
+*   让你的 Windows 10 机器自动执行 `DJ++` 加入。
 
 我认为可以公正地说，你在本章完成了大量工作。而我们才刚刚开始。
 
@@ -2529,10 +1903,6 @@ MDM 领域没有 GPO 这回事。那不是一个“东西”。
 现在就试试吧。
 
 因此，创建 MDM 策略的第一步是创建容器，即用于承载这些策略的配置文件。
-
-
-
-
 
 ## 使用 Intune
 
@@ -2632,10 +2002,6 @@ MDM 领域没有 GPO 这回事。那不是一个“东西”。
 
 ![图 3.10 某些 MDM 策略适用于用户和设备两者。](img/c03f010.jpg)
 
-
-
-
-
 ### 策略 CSP
 
 可以说，你的 MDM 服务在 Windows 10 上进行的最大量操作，将是下发存在于策略 CSP 中的策略。确实，你可以在图 3.10 中看到策略 CSP 中部分类别的简略列表，从 Autoplay、Bitlocker、BITS、Bluetooth 等开始。
@@ -2693,6 +2059,8 @@ MDM 领域没有 GPO 这回事。那不是一个“东西”。
 
 **图 3.13** 在注册表的 PolicyManager 部分查看 MDM 设置 AllowCortana。
 
+
+
 如果你随后移除该配置文件并重新同步，你将得到图 3.14 中所示的结果，其中 `AllowCortana` 随后恢复，并被设回 1。
 
 ![图 3.14 移除 MDM 配置文件后 AllowCortana 返回 1（已启用）](img/c03f014.jpg)
@@ -2701,7 +2069,7 @@ MDM 领域没有 GPO 这回事。那不是一个“东西”。
 
 你可能直到注销并重新登录才会看到 Cortana 重新“复活”。
 
-#### ADMX 支持的策略
+### ADMX 支持的策略
 
 因此，在上一节中，我们在文档中找到了一个策略设置，然后碰巧也在 MDM 用户界面中找到了可以图形化点击的对应项。砰：它生效了。
 
@@ -2725,9 +2093,6 @@ MDM 领域没有 GPO 这回事。那不是一个“东西”。
 
 不能。
 
-
-
-
 如果您想要提供精选列表中不存在的某个内置 ADMX 首选设置，您的 MDM 服务*似乎*允许您这样做。但实际上不行。您无法将操作系统 ADMX 文件导入 MDM 服务，并交付任意在组策略中自然生效的组策略设置（伤心脸）。请记住，只有那些精选设置才是真正被允许的。
 
 允许的是支持第三方 ADMX 设置的应用程序的第三方 ADMX 设置。我们也将探讨这一点。
@@ -2738,7 +2103,7 @@ MDM 领域没有 GPO 这回事。那不是一个“东西”。
 
 现在让我们一起探索这两种方式。
 
-#### 通过 Intune 使用 Administrative Templates 节点
+### 通过 Intune 使用 Administrative Templates 节点
 
 在 Microsoft Ignite 2018 大会上，微软宣布了在 Intune 中通过简单的点击操作即可访问某些 Admin Template 设置的技术预览版。在预览版中，Administrative Templates 节点位于配置文件类型内，如图 3.15 所示。
 
@@ -2768,7 +2133,7 @@ MDM 领域没有 GPO 这回事。那不是一个“东西”。
 
 我知道这项工作正在进行中，请持续关注其进展。我预计此部分会首先针对 Office、IE 和 OneDrive 设置得到改进，然后扩展到其他精选的 ADMX 支持设置。
 
-#### 无 GUI 的 PolicyCSP 项目的 Custom URIs
+### 无 GUI 的 PolicyCSP 项目的 Custom URIs
 
 因此，如果您的 MDM 服务没有提供一种巧妙的点击式方法来查找和配置 ADMX 支持的策略设置，那么是时候弄脏手来处理这些“第三类”设置了。
 
@@ -2819,9 +2184,6 @@ MDM 领域没有 GPO 这回事。那不是一个“东西”。
 现在，当我们查看图 3.20 时，这是一个仅包含 Enabled 和 Disabled 的简单策略，没有什么花哨的地方，这也是我们要首先处理的目标。因此，我们的任务是向该策略设置交付“Enabled”，但使用的是 MDM 而非组策略。
 
 我们现在需要将已知的所有信息片段和所需使用的片段收集起来，将它们全部组合在一起。
-
-
-
 
 ### 配置自定义 OMA-URI 策略
 
@@ -2889,7 +2251,7 @@ MDM 领域没有 GPO 这回事。那不是一个“东西”。
 *   `https://www.petervanderwoude.nl/post/allow-users-to-connect-remotely-to-this-computer-via-windows-10-mdm-admx-style/`
 *   `https://www.petervanderwoude.nl/post/deep-dive-configuring-windows-10-admx-backed-policies/`
 
-#### 引入第三方 ADMX 文件
+### 引入第三方 ADMX 文件
 
 有时你可能需要分发微软“非内置”的策略。在组策略领域，这些通常以（旧）ADM 或较新的 ADMX 格式提供。
 
@@ -2902,9 +2264,13 @@ MDM 领域没有 GPO 这回事。那不是一个“东西”。
 
 还有一些其他的，但这些是你可能已在现有组策略中使用的重量级应用。你的 MDM 服务有方法引入第三方 ADMX 文件并将那些设置分发到 Windows 10 机器。
 
-在组策略领域，引入 ADMX 文件的概念称为*使用* ADM 或 ADMX 文件。现在在 MDM 中，*只是为了与众不同*称为*引入*，对我来说听起来有点恶心。但这只是我个人感觉。
 
-无论如何，记住之前的约定：微软维护的所有 ADMX 支持策略，嘛，都是来自微软的，正如我说的，（几乎）保证按预期工作。但对于第三方 ADMX 文件，微软态度较随意，不维护，因此不保证它们按预期工作。请记住，微软发布了我之前提到的管理模板技术预览版。截至目前，无法通过引入以点击方式添加 ADMX 模板。我衷心怀疑他们会添加此功能，似乎很容易实现。我无法展示分步操作，因为目前无内容可展示。但请留意这一可能性。
+
+# 引入第三方 ADMX 文件
+
+在组策略领域，引入 ADMX 文件的概念称为“使用” ADM 或 ADMX 文件。现在在 MDM 中，只是为了与众不同称为“引入”，对我来说听起来有点恶心。但这只是我个人感觉。
+
+无论如何，记住之前的约定：微软维护的所有 ADMX 支持策略，都是来自微软的，正如我说的，（几乎）保证按预期工作。但对于第三方 ADMX 文件，微软态度较随意，不维护，因此不保证它们按预期工作。请记住，微软发布了我之前提到的管理模板技术预览版。截至目前，无法通过引入以点击方式添加 ADMX 模板。我衷心怀疑他们会添加此功能，似乎很容易实现。我无法展示分步操作，因为目前无内容可展示。但请留意这一可能性。
 
 因此，目前步骤相当繁琐（又是）。
 
@@ -2912,7 +2278,7 @@ MDM 领域没有 GPO 这回事。那不是一个“东西”。
 
 引入第三方 ADMX 分两步：
 
-*   将第三方 ADMX 文件复制到自定义 OMA-URI
+*   将第三方 ADMX 文件复制到自定义 `OMA-URI`
 *   设置来自 ADMX 文件的值（与上一节所做几乎完全相同）
 
 开始此示例，我将使用 Foxit Reader 的 ADMX，但同样，大多数第三方 ADMX 文件应适用。
@@ -2921,18 +2287,15 @@ MDM 领域没有 GPO 这回事。那不是一个“东西”。
 
 *   **Google Chrome 及其 ADMX**：就要付印时，Chrome 获得了通过 MDM 遵循其 ADMX 的能力。官方分步说明见 `https://support.google.com/chrome/a/answer/9102677`。注意，并非每个 Chrome 设置在非域加入机器上实际生效。（PolicyPak 团队一成员花时间弄清哪些项目在非域加入机器上“完全正常”工作。若想查看，见：`https://kb.policypak.com/kb/article/284-which-items-in-chrome-will-and-will-not-work-when-nondomain-joined`。）
 
-
-
-
 Adobe Reader 的策略支持简直糟糕透顶。我无法理解，但它只有极少数策略，我测试的几个完全无法按预期工作，而且许多所谓的策略实际上只是首选项。因此 UI 无法锁定，所以我不会在这里使用它。
 
 Microsoft Office 有一些策略可以锁定，其他的则不行。此外，ADMX 文件到处都是，对于一个简单的示例来说过于复杂。
 
-你可能想知道 MDM 引擎如何知道接受什么、丢弃什么。答案其实非常简单优雅。如果你查看 Microsoft 随操作系统附带的 ADMX 项目，所有策略设置都会写入类似`HKLM or HKCU / Software / Policies / Microsoft / <something>`的注册表项。
+你可能想知道 MDM 引擎如何知道接受什么、丢弃什么。答案其实非常简单优雅。如果你查看 Microsoft 随操作系统附带的 ADMX 项目，所有策略设置都会写入类似 `HKLM or HKCU / Software / Policies / Microsoft / <something>` 的注册表项。
 
 Adobe、Chrome、Firefox、Office、PolicyPak 等都附带 ADMX 文件来对其产品进行最终调整，但正如你所料，它们不会将值写入 Microsoft 操作系统子键。因此，所有这些设置都会被 MDM 写入并遵守，因为 MDM 系统并不负责策划这些设置。
 
-对于我们的工作示例，我选择了 Foxit Reader 及其 ADMX 文件。如果你想跟着测试，在你的 Windows 10 终端上手动安装最新版 Foxit Reader（撰写本文时为 9.2 版）。只需访问`www.foxitsoftware.com/pdf-reader/`下载标准版并安装。同样，在由 MDM 管理的 Windows 10 终端上安装，并采用所有默认设置（未展示）。
+对于我们的工作示例，我选择了 Foxit Reader 及其 ADMX 文件。如果你想跟着测试，在你的 Windows 10 终端上手动安装最新版 Foxit Reader（撰写本文时为 9.2 版）。只需访问 `www.foxitsoftware.com/pdf-reader/` 下载标准版并安装。同样，在由 MDM 管理的 Windows 10 终端上安装，并采用所有默认设置（未展示）。
 
 安装后在 Windows 10 机器上运行 Foxit Reader，花一点时间查看自动更新状态：依次转到“文件” ➢ “首选项”，然后点击“更新程序”。你应该能看到图 3.25 所示内容，程序设置为下载更新并让用户选择是否安装。
 
@@ -2950,9 +2313,9 @@ Adobe、Chrome、Firefox、Office、PolicyPak 等都附带 ADMX 文件来对其�
 
 **图 3.26** 如何使用组策略设置 Foxit Reader 停止自动更新
 
-因此，要通过 MDM 实现此目的，请先用记事本打开 Foxit ADMX 文件并准备好。然后使用 Intune 等 MDM 服务创建一个新配置文件，再创建一个自定义 OMA-URI 策略，就像我们之前做的那样；只是这次要清楚表明你在为 Foxit Reader 做配置。
+因此，要通过 MDM 实现此目的，请先用记事本打开 Foxit ADMX 文件并准备好。然后使用 Intune 等 MDM 服务创建一个新配置文件，再创建一个自定义 `OMA-URI` 策略，就像我们之前做的那样；只是这次要清楚表明你在为 Foxit Reader 做配置。
 
-在 OMA-URI 字段中，你需要指定一个特殊语法，表示你即将提供一个完整的 ADMX 文件。语法如下：
+在 `OMA-URI` 字段中，你需要指定一个特殊语法，表示你即将提供一个完整的 ADMX 文件。语法如下：
 
 ```
 ./Device/Vendor/MSFT/Policy/ConfigOperations/ADMXInstall/{AppName}/
@@ -2961,11 +2324,11 @@ Adobe、Chrome、Firefox、Office、PolicyPak 等都附带 ADMX 文件来对其�
 
 好吧，这给我们出了个小难题。我们需要找出并填入以下值：
 
-*   `AppName`：可以是任何名称，但最好用能描述我们正在做什么的名称。我将其命名为`FoxitReader`。
-*   `SettingType`：尽管这看起来可能是不同的关键字，但在实践中，引入 ADMX 时，这必须始终是单词`Policy`。
-*   `FileUid`或`AdmxFileName`：也可以是任何名称，但建议命名为你正在使用的 ADMX 文件名。所以我将使用值`FoxitReaderADMX`。
+*   `AppName`：可以是任何名称，但最好用能描述我们正在做什么的名称。我将其命名为 `FoxitReader`。
+*   `SettingType`：尽管这看起来可能是不同的关键字，但在实践中，引入 ADMX 时，这必须始终是单词 `Policy`。
+*   `FileUid` 或 `AdmxFileName`：也可以是任何名称，但建议命名为你正在使用的 ADMX 文件名。所以我将使用值 `FoxitReaderADMX`。
 
-将所有内容组合在一起（并决定在用户端执行）将得到如下 OMA-URI：
+将所有内容组合在一起（并决定在用户端执行）将得到如下 `OMA-URI`：
 
 ```
 ./Device/Vendor/MSFT/Policy/ConfigOperations/ADMXInstall/FoxitReader/
@@ -2974,7 +2337,7 @@ Policy/FoxitReaderAMX
 
 太棒了！
 
-![image](img/warning.jpg) 无论稍后你想分发用户还是计算机（设备）策略，ADMX 文件本身必须用`./Device`（如上所示）描述，而非`./User`。同样，稍后你将决定分发用户还是计算机设置；但 ADMX 文件本身必须指定为`./Device`。
+![image](img/warning.jpg) 无论稍后你想分发用户还是计算机（设备）策略，ADMX 文件本身必须用 `./Device`（如上所示）描述，而非 `./User`。同样，稍后你将决定分发用户还是计算机设置；但 ADMX 文件本身必须指定为 `./Device`。
 
 现在，回到 MDM 领域，创建一个新配置文件来包含 Foxit 策略，如图 3.27 所示。提醒一下，在 Intune 中，你需点击“设备配置 - 配置文件” ➢ “创建配置文件”。然后选择图 3.27 所示设置。
 
@@ -2982,15 +2345,15 @@ Policy/FoxitReaderAMX
 
 **图 3.27** 使用自定义类型创建 Foxit 策略配置文件。
 
-然后，在 OMA-URI 设置视图中，给它一个名称，粘贴你 10 秒前制作的 OMA-URI，提供字符串数据类型，然后是有趣的部分……将*所有*Foxit ADMX 内容粘贴到“值”字段中（见图 3.28），然后点击“确定”（未显示）。这会将整个 ADMX 文件保存到配置文件中。
+然后，在 `OMA-URI` 设置视图中，给它一个名称，粘贴你 10 秒前制作的 `OMA-URI`，提供字符串数据类型，然后是有趣的部分……将*所有* Foxit ADMX 内容粘贴到“值”字段中（见图 3.28），然后点击“确定”（未显示）。这会将整个 ADMX 文件保存到配置文件中。
 
 随后，所有这些可能的 ADMX 定义都会被分发到终端。（这是一个有趣且鲜为人知的点，几页后将变得非常重要。详见侧边栏“替换终端上的现有 ADMX 设置”。）
 
 ![Figure 3.28 Adding an ADMX file as a custom OMA-URI. The whole ADMX file gets downloaded to the client.](img/c03f028.jpg)
 
-**图 3.28** 作为自定义 OMA-URI 添加 ADMX 文件。整个 ADMX 文件将下载到客户端。
+**图 3.28** 作为自定义 `OMA-URI` 添加 ADMX 文件。整个 ADMX 文件将下载到客户端。
 
-接下来，你需要深入 ADMX 文件内部找到要分发的值。在图 3.29 中，我认为我找到了正确的项，因为其名称包含“Disable”和“Updater”字样。所以我相当确定`PREF_DisableUpdater`就是正确的项。
+接下来，你需要深入 ADMX 文件内部找到要分发的值。在图 3.29 中，我认为我找到了正确的项，因为其名称包含“Disable”和“Updater”字样。所以我相当确定 `PREF_DisableUpdater` 就是正确的项。
 
 ![Figure 3.29 Find the policy setting within the ADMX you want to deliver.](img/c03f029.jpg)
 
@@ -3012,10 +2375,10 @@ Policy/FoxitReaderAMX
 
 很好，又是一个需要拼凑的谜题。各部分如下：
 
-*   `AppName`：应与配置 ADMX 文件引入时使用的应用名称相同。记得我用的是`FoxitReaderADMX`。
-*   `SettingType`：同样，这始终只是单词`Policy`。
-*   `CategoryPathFromADMX`：在图 3.29 中，我高亮了两个区域。一个是策略名称，另一个是`parentCategory`。这就是这里要填的内容；在我们的例子中称为`PREFERENCES`。但这还不够，因为任何设置可能有一个或多个`parentCategory`（或完全没有`parentCategory`）。我花了一段时间追踪 Foxit ADMX 文件，第一次甚至弄错了。但有两个父类别：一个是图 3.29 中高亮的，还有一个（未显示）在文件顶部称为`FOXIT`。
-*   `SettingFromADMX`：这是我们要配置的设置，也见于图 3.29。在我们的例子中是`PREF_DisableUpdater`。
+*   `AppName`：应与配置 ADMX 文件引入时使用的应用名称相同。记得我用的是 `FoxitReaderADMX`。
+*   `SettingType`：同样，这始终只是单词 `Policy`。
+*   `CategoryPathFromADMX`：在图 3.29 中，我高亮了两个区域。一个是策略名称，另一个是 `parentCategory`。这就是这里要填的内容；在我们的例子中称为 `PREFERENCES`。但这还不够，因为任何设置可能有一个或多个 `parentCategory`（或完全没有 `parentCategory`）。我花了一段时间追踪 Foxit ADMX 文件，第一次甚至弄错了。但有两个父类别：一个是图 3.29 中高亮的，还有一个（未显示）在文件顶部称为 `FOXIT`。
+*   `SettingFromADMX`：这是我们要配置的设置，也见于图 3.29。在我们的例子中是 `PREF_DisableUpdater`。
 
 将所有内容组合在一起，我们得到：
 
@@ -3031,16 +2394,13 @@ FoxitReader∼Policy∼FOXIT∼PREFERENCES/PREF_DisableUpdater
 FoxitReader∼Policy∼FOXIT∼PREFERENCES/PREF_DisableUpdater
 ```
 
-
-
-
-### 关于 ADMX 文件设置的说明
+## 关于 ADMX 文件设置的说明
 
 请注意，并非每个 ADMX 文件都会在用户端和计算机端都完美地拥有相同的设置，但 Foxit Reader 的这个文件确实如此。
 
-现在，你可以将第二个策略添加到配置文件中。为此，请在 OMA-URI 设置边栏选项卡中单击**添加**，然后当出现**添加行**时，你可以添加禁用 Foxit Updater 的策略。
+现在，你可以将第二个策略添加到配置文件中。为此，请在 `OMA-URI` 设置边栏选项卡中单击**添加**，然后当出现**添加行**时，你可以添加禁用 Foxit Updater 的策略。
 
-你将填入 10 秒前创建的名称、用户或设备 OMA-URI（我的示例中将使用设备），将其数据类型设为 String，然后在 Value 中输入 `<enabled/>`，中间不带空格。如果你想在计算机端分发该设置，可以看到 图 3.30（左侧）中的策略；如果你想在用户端分发该设置，可以看到 图 3.30（右侧）中的策略。
+你将填入 10 秒前创建的名称、用户或设备 `OMA-URI`（我的示例中将使用设备），将其数据类型设为 String，然后在 Value 中输入 `<enabled/>`，中间不带空格。如果你想在计算机端分发该设置，可以看到图 3.30（左侧）中的策略；如果你想在用户端分发该设置，可以看到图 3.30（右侧）中的策略。
 
 ![Figure 3.30 Add the value to disable Foxit Updater. You can deliver the value to Device (left) or User (right).](img/c03f030a.jpg)
 
@@ -3048,7 +2408,7 @@ FoxitReader∼Policy∼FOXIT∼PREFERENCES/PREF_DisableUpdater
 
 单击**保存**以保存该值，然后再次单击以保存配置文件。接着将其分配给**所有设备**。请注意，即使你希望设置影响用户端，你也必须将配置文件分配给设备。是不是很奇怪？这是因为 ADMX 设置本身的 URI（`./User` 或 `./Device`）会在设置分发到设备端后发挥作用。
 
-回到你的 Windows 10 计算机上，如果 Foxit Reader 仍在打开状态，请将其关闭。然后与 MDM 服务同步。你应该会看到 图 3.31 所示的内容，显示你引入的自定义 ADMX 设置。
+回到你的 Windows 10 计算机上，如果 Foxit Reader 仍在打开状态，请将其关闭。然后与 MDM 服务同步。你应该会看到图 3.31 所示的内容，显示你引入的自定义 ADMX 设置。
 
 ![Figure 3.31 You can see the ingested custom ADMX policies in the MDM sync (after you close and reopen the page).](img/c03f031.jpg)
 
@@ -3056,7 +2416,7 @@ FoxitReader∼Policy∼FOXIT∼PREFERENCES/PREF_DisableUpdater
 
 然后打开 Foxit Reader，转到**文件** ➢ **首选项** ➢ **更新程序**。
 
-你应该会看到 Foxit Reader 的 UI 被锁定，用户无法进行配置，如 图 3.32 所示。
+你应该会看到 Foxit Reader 的 UI 被锁定，用户无法进行配置，如图 3.32 所示。
 
 ![Figure 3.32 Successful lockout of Foxit reader with ingested ADMX file](img/c03f032.jpg)
 
@@ -3064,13 +2424,13 @@ FoxitReader∼Policy∼FOXIT∼PREFERENCES/PREF_DisableUpdater
 
 你可以检查几个位置，查看设置是否已写入注册表（请注意，这些也是很好的故障排除步骤）。
 
-请记住，ADMX 定义本质上是分发到客户端并在本地存储的。位置在哪里？在 `HKLM\Software\Microsoft\PolicyManager\AdmxDefault\{GUID}` 中，正如你在 图 3.33 中所见。你应该会看到我们分发下去的完整 Foxit Reader ADMX。
+请记住，ADMX 定义本质上是分发到客户端并在本地存储的。位置在哪里？在 `HKLM\Software\Microsoft\PolicyManager\AdmxDefault\{GUID}` 中，正如你在图 3.33 中所见。你应该会看到我们分发下去的完整 Foxit Reader ADMX。
 
 ![Figure 3.33 The entire ADMX downloaded into the Registry](img/c03f033.jpg)
 
 **图 3.33** 完整的 ADMX 已下载到注册表中
 
-接着，我们要验证的实际内容——组策略写入的位置，可以在 图 3.34 中看到。你要找的是 `HKLM\Software\Policies\Foxit\Reader 9.0\Preferences`，并查看 DisableUpdate 是否设置为 0（这有点不寻常；大多数编写良好的 ADMX 文件通常会将 DisableUpdate 设置为 1，但我可以接受）。
+接着，我们要验证的实际内容——组策略写入的位置，可以在图 3.34 中看到。你要找的是 `HKLM\Software\Policies\Foxit\Reader 9.0\Preferences`，并查看 `DisableUpdate` 是否设置为 0（这有点不寻常；大多数编写良好的 ADMX 文件通常会将 `DisableUpdate` 设置为 1，但我可以接受）。
 
 ![Figure 3.34 The Group Policy location is written to by the ADMX.](img/c03f034.jpg)
 
@@ -3084,7 +2444,7 @@ FoxitReader∼Policy∼FOXIT∼PREFERENCES/PREF_DisableUpdater
 *   `https://docs.microsoft.com/en-us/windows/client-management/mdm/win32-and-centennial-app-policy-configuration`
 *   `https://www.petervanderwoude.nl/post/deep-dive-ingesting-third-party-admx-files/`
 
-#### 替换终结点上的现有 ADMX 设置
+### 替换终结点上的现有 ADMX 设置
 
 好的，让我们稍微展望一下未来。
 
@@ -3092,21 +2452,21 @@ FoxitReader∼Policy∼FOXIT∼PREFERENCES/PREF_DisableUpdater
 
 随后，你使用 MDM 服务推出 Foxit Reader 9.3，其中包含一些可通过 ADMX 控制的功能。也许 Foxit Reader 9.3 有一个新设置（我在这里编造一个），即主题颜色。
 
-“太棒了！”你心想，“我只需更新并覆盖我之前放入配置文件中的 ADMX 定义（回到 图 3.28）！当我粘贴更新后的 ADMX 设置时，我就能获得管理 Foxit Reader 9.3 所提供的酷炫新主题颜色策略设置的能力了！”
+“太棒了！”你心想，“我只需更新并覆盖我之前放入配置文件中的 ADMX 定义（回到图 3.28）！当我粘贴更新后的 ADMX 设置时，我就能获得管理 Foxit Reader 9.3 所提供的酷炫新主题颜色策略设置的能力了！”
 
 砰。直接掉进蛇坑里了！
 
 我本来也猜不到会有这种行为，但显然 MDM 引擎无法处理这种情况。
 
-当你尝试整体替换自定义应用程序的 ADMX 定义时，它就是不起作用。
-
-追查此事，我在 PolicyCSP 文档中发现了一个非常“细则”式的推理：
+追查此事，我在 `PolicyCSP` 文档中发现了一个非常“细则”式的推理：
 
 `https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-configuration-service-provider`
 
 引述如下：
 
 > Policy/ConfigOperations/ADMXInstall/AppName/Preference/UniqueID 在 Windows 10 版本 1703 中添加。指定包含要导入的首选项的应用程序 ADMX 文件的唯一 ID。支持的操作为 Add 和 Get。不支持 Delete。
+
+
 
 你看到问题了吗？**“不支持 Delete。”**
 
@@ -3123,7 +2483,9 @@ FoxitReader∼Policy∼FOXIT∼PREFERENCES/PREF_DisableUpdater
 那么如何摆脱这个困境？以我目前来看，有三个答案：
 
 *   **选择 1：** 为较新的应用程序专门创建一个新配置文件。
+
 *   **选择 2：** 预先运行某种自定义清理 PowerShell 脚本，手动从注册表中清除数据。你的目标是移除存储 ADMX 内容的 `HKLM\Software\Microsoft\PolicyManager\AdmxDefault\{GUID}` 数据。
+
 *   **选择 3：** 使用 PolicyPak MDM，通过 PolicyPak Admin Templates Manager、PolicyPak Preferences Manager 或 PolicyPak Application Manager 来分发设置（视情况而定）。当需要更改值时，**PolicyPak 只需更改它即可**。
 
 也许这在 Windows 的某个后续版本中就会修复。也许等到你读到这本书时已经解决了……也可能没有。但我要确保如果这是“那些不容易快速修复的问题”之一，你也知道了。
@@ -3132,18 +2494,15 @@ FoxitReader∼Policy∼FOXIT∼PREFERENCES/PREF_DisableUpdater
 
 到目前为止，在本书中，我们已经创建了一些测试配置文件，然后将它们链接到 All Users 或 All Computers，这两个是 Intune 中存在的默认组。
 
-
-
-
-
 ## MDM 服务中的组管理
 
-MDM 服务还允许你创建特定的**Assigned（已分配）**组和 **Dynamic（动态）**组。
+MDM 服务还允许你创建特定的 **Assigned（已分配）** 组和 **Dynamic（动态）** 组。
 
 - **Assigned 组**：你直接指定将特定用户或计算机放入其中。
+
 - **Dynamic 组**：你设置条件，当条件适用时，用户或计算机会自动被评估并包含在组内。
 
-在 Intune 中，你可以通过主 Intune 刀片上的 **Groups** 节点来创建组，如 图 3.35 所示。
+在 Intune 中，你可以通过主 Intune 刀片上的 **Groups** 节点来创建组，如图 3.35 所示。
 
 ![Figure 3.35 How to start to create groups in Intune](img/c03f035.jpg)
 
@@ -3153,7 +2512,7 @@ MDM 服务还允许你创建特定的**Assigned（已分配）**组和 **Dynamic
 
 Assigned 组的含义就是你直接指定哪些用户或计算机在组内。这些类似于本地 AD 安全组，但主要用于定位 Intune 配置文件的应用目标。
 
-要创建 Assigned 组，只需将组类型下拉为 **Security**，提供组名称和可选描述，然后将成员身份类型指定为 **Assigned**，如 图 3.36 所示。接着，选择要添加到组的成员即可。
+要创建 Assigned 组，只需将组类型下拉为 **Security**，提供组名称和可选描述，然后将成员身份类型指定为 **Assigned**，如图 3.36 所示。接着，选择要添加到组的成员即可。
 
 再简单不过了。
 
@@ -3165,13 +2524,13 @@ Assigned 组的含义就是你直接指定哪些用户或计算机在组内。�
 
 Dynamic 组则另当别论。
 
-如前 图 3.36 所示，你必须指定组类型（为 Security）和组名称，提供可选描述，然后指定 **Dynamic User** 或 **Dynamic Device**，如下图所示。
+如前图 3.36 所示，你必须指定组类型（为 Security）和组名称，提供可选描述，然后指定 **Dynamic User** 或 **Dynamic Device**，如下图所示。
 
 ![](img/c03uf004.jpg)
 
 规则分为两种类型：**Simple（简单）** 和 **Advanced（高级）**。
 
-Simple 规则功能有限，通常很容易理解其逻辑。在 图 3.37 中，我正在为设备创建一个 Dynamic 组，条件为 `displayName Contains Computer`。
+Simple 规则功能有限，通常很容易理解其逻辑。在图 3.37 中，我正在为设备创建一个 Dynamic 组，条件为 `displayName Contains Computer`。
 
 ![Figure 3.37 Creating a Dynamic computer or user group](img/c03f037.jpg)
 
@@ -3179,7 +2538,7 @@ Simple 规则功能有限，通常很容易理解其逻辑。在 图 3.37 中，
 
 如果 Intune 能直接显示哪些计算机（或用户）会被添加就好了；但它做不到。相反，你必须返回 **Groups - All groups**，然后选择刚创建的 Dynamic 组。
 
-接着，你可以一眼看到该组包含的设备（或用户）数量，或通过点击 **Members** 查看实际成员（两者均见 图 3.38）。
+接着，你可以一眼看到该组包含的设备（或用户）数量，或通过点击 **Members** 查看实际成员（两者均见图 3.38）。
 
 ![Figure 3.38 See the number of devices or users in a Dynamic group and/or click Members to see all of them.](img/c03f038.jpg)
 
@@ -3187,7 +2546,7 @@ Simple 规则功能有限，通常很容易理解其逻辑。在 图 3.37 中，
 
 #### 高级动态规则
 
-我之前提到过 Advanced 规则，设置起来可能比较棘手，但正如你所料，功能强大得多。幸运的是，微软提供了优秀的参考文档，直接在规则创建器内进行了宣传，如 图 3.39 所示。
+我之前提到过 Advanced 规则，设置起来可能比较棘手，但正如你所料，功能强大得多。幸运的是，微软提供了优秀的参考文档，直接在规则创建器内进行了宣传，如图 3.39 所示。
 
 ![Figure 3.39 Advanced rules utilize a query language, and you can learn more about the query language at the link.](img/c03f039.jpg)
 
@@ -3204,7 +2563,7 @@ Simple 规则功能有限，通常很容易理解其逻辑。在 图 3.37 中，
 (device.deviceOSVersion -startsWith “10.0.17758”)
 ```
 
-你可以在 图 3.40 中看到该查询。
+你可以在图 3.40 中看到该查询。
 
 ![Figure 3.40 Use this query to find only Windows 1809 machines.](img/c03f040.jpg)
 
@@ -3214,7 +2573,7 @@ Simple 规则功能有限，通常很容易理解其逻辑。在 图 3.37 中，
 
 Dynamic 组是一个不错的功能，也是个好主意。
 
-话虽如此，可用于查询并创建 Dynamic 组的实际字段略显有限。完整列表可见 图 3.41，在执行 Simple 或 Advanced 动态规则时均可看到。
+话虽如此，可用于查询并创建 Dynamic 组的实际字段略显有限。完整列表可见图 3.41，在执行 Simple 或 Advanced 动态规则时均可看到。
 
 ![Figure 3.41 The full list of fields you can use for Dynamic groups](img/c03f041.jpg)
 
@@ -3224,7 +2583,7 @@ Dynamic 组是一个不错的功能，也是个好主意。
 
 因为 Dynamic 组嘛，顾名思义是动态的，这意味着成员资格会不断评估新的匹配项。这可能需要一点时间。
 
-在 图 3.42 中，你可以看到 **“Membership last updated”** 值。当它更新时，你可以合理地确信你正确编写的查询会找到并纳入新计算机。
+在图 3.42 中，你可以看到 **“Membership last updated”** 值。当它更新时，你可以合理地确信你正确编写的查询会找到并纳入新计算机。
 
 ![Figure 3.42 You can see the “Membership last updated” value for your Dynamic group.](img/c03f042.jpg)
 
@@ -3241,11 +2600,12 @@ Dynamic 组是一个不错的功能，也是个好主意。
 以下是一些关于 Dynamic 组的优质资源和文章：
 
 - `https://blogs.technet.microsoft.com/pauljones/2017/08/28/dynamic-group-membership-in-azure-active-directory-part-1/`
+
 - `https://blogs.technet.microsoft.com/pauljones/2017/08/29/dynamic-group-membership-in-azure-active-directory-part-2/`
 
 ### 在 Intune 中利用组
 
-现在你已经掌握了 Assigned 或 Dynamic 组，可以像 图 3.43 中那样使用它们。也就是说，我不再针对 **All Devices**，而是使用我那个很酷的组 **“Computers with ‘Computer’ in the Name”**。
+现在你已经掌握了 Assigned 或 Dynamic 组，可以像图 3.43 中那样使用它们。也就是说，我不再针对 **All Devices**，而是使用我那个很酷的组 **“Computers with ‘Computer’ in the Name”**。
 
 ![Figure 3.43 You can select groups which will accept settings.](img/c03f043.jpg)
 
@@ -3262,10 +2622,6 @@ Dynamic 组是一个不错的功能，也是个好主意。
 更不用说他们可能会改变主意，以层次结构显示 Administrative Template 设置（也许？），以及通过某种尚未交付的精美界面引入自定义和第三方 ADMX 文件。
 
 话说回来，有个小注记：你始终可以在 `https://docs.microsoft.com/en-us/intune/whats-new` 查看 Intune 的最新动态。
-
-
-
-
 
 # 第 4 章  
 
@@ -3329,10 +2685,9 @@ Intune 连接器使管理员能够继续使用其本地 SCCM 控制台，并执�
 
 因此，充实 Microsoft 共同管理的所有细节超出了本书范围和我要涵盖的内容。但你可能确实拥有本地 SCCM，并希望启用 SCCM 和 Intune 共同管理，需要弄清 Microsoft 在谈论什么，并能理解他们的目标以及为什么希望你踏上 SCCM 和 Intune 共同管理之路。
 
-在本书中，我*不*假设你拥有 SCCM。我是说，也许你有，那对你来说很棒。但我认为要求你搭建一个 SCCM 环境仅为尝试共同管理，未免负担过重。但如果你已有 SCCM 且对共同管理感兴趣，一个很棒的（虽然漫长且艰巨）六部分演练可从此处开始：`www.scconfigmgr.com/2017/11/23/how-to-setup-co-management-part-1/`。
 
 
-
+在本书中，我不假设你拥有 SCCM。我是说，也许你有，那对你来说很棒。但我认为要求你搭建一个 SCCM 环境仅为尝试共同管理，未免负担过重。但如果你已有 SCCM 且对共同管理感兴趣，一个很棒的（虽然漫长且艰巨）六部分演练可从此处开始：`www.scconfigmgr.com/2017/11/23/how-to-setup-co-management-part-1/`。
 
 ![image](img/note.jpg) 微软对此的营销活动称为“只需 4 次点击”，这有点……嗯，肯定不止四次点击，这是肯定的。但你可以通过官方文档链接查看他们的观点：
 
@@ -3414,34 +2769,31 @@ Intune 连接器使管理员能够继续使用其本地 SCCM 控制台，并执�
 
 ### 排查混合 MDM 注册故障
 
-
-
 坦白说，我第一次尝试让混合 MDM 注册工作时遇到了很多麻烦。新机器对我来说似乎工作得很完美。我的意思是，我会先拿一台全新的机器，既未注册到 MDM，也未加入本地 AD。然后我只需执行本地域加入。这些效果很好：它们拾取了 GPO，获取了计划任务，并执行了注册。
 
 但一些现有的、已加入 AD 的机器却让我头疼不已。对于其中一些已加入 AD 的机器，退出本地 AD 并重新加入有所帮助，执行 Azure AD 增量同步也有帮助。
 
 如果你遇到错误或自动注册未发生，可以尝试以下几点：
 
-*   首先要记住，AD 用户——准确说是他们在 Azure AD 中的“镜像”账户——需要获得 Azure AD Premium 和 Intune 的许可。因此，如果你想让本地 `Fabrikam.com` 的标准用户 EastSalesUser2 执行自动注册，则 `EastSalesUser2@fabrikam1000.com` 需要激活其 Azure 许可证。你可以在 `office.portal.com` 内完成此操作，将 EM+S、E3 或 E5 许可证分配给登录的等效 AD 用户。
-
-*   标准用户无法在任务计划程序中看到任务，这很遗憾，因为那里包含了关于任务上次运行的所有有趣信息。作为变通方法，以标准用户身份登录后，运行管理员命令提示符，然后使用 MMC 添加任务计划程序。现在你应该能看到“上次运行结果”字段，它能让你深入了解各种错误代码的发生情况，如下图所示。
+* 首先要记住，AD 用户——准确说是他们在 Azure AD 中的“镜像”账户——需要获得 Azure AD Premium 和 Intune 的许可。因此，如果你想让本地 `Fabrikam.com` 的标准用户 EastSalesUser2 执行自动注册，则 `EastSalesUser2@fabrikam1000.com` 需要激活其 Azure 许可证。你可以在 `office.portal.com` 内完成此操作，将 EM+S、E3 或 E5 许可证分配给登录的等效 AD 用户。
+* 标准用户无法在任务计划程序中看到任务，这很遗憾，因为那里包含了关于任务上次运行的所有有趣信息。作为变通方法，以标准用户身份登录后，运行管理员命令提示符，然后使用 MMC 添加任务计划程序。现在你应该能看到“上次运行结果”字段，它能让你深入了解各种错误代码的发生情况，如下图所示。
 
     ![](img/c04uf001.jpg)
 
-*   仔细检查通过 `dsregcmd /status` 查看时，`MdmUrl` 和 `MdmtoURL` 字段是否已填充。如果没有，请返回 第 2 章，查看如何使用 Azure AD 同步进行增量同步，然后再等待一两个小时。一旦这些字段填充完毕，应该就能开始工作。如果它们始终不填充，你可能需要向 Microsoft 开具支持工单。
+* 仔细检查通过 `dsregcmd /status` 查看时，`MdmUrl` 和 `MdmtoURL` 字段是否已填充。如果没有，请返回第 2 章，查看如何使用 Azure AD 同步进行增量同步，然后再等待一两个小时。一旦这些字段填充完毕，应该就能开始工作。如果它们始终不填充，你可能需要向 Microsoft 开具支持工单。
 
     ![](img/c04uf002.jpg)
 
 以下是我在排查混合 Azure 域加入与自动 MDM 注册时使用的其他一些链接：
 
-*   `https://social.technet.microsoft.com/Forums/en-US/d2bda796-eef4-452a-b622-7c7463218555/mdm-enrollment-error-0x8018002b-on-windows-10-1709?forum=microsoftintuneprod`
-*   `https://docs.microsoft.com/en-us/windows/desktop/mdmreg/mdm-registration-constants`
-*   `https://docs.microsoft.com/en-us/intune-user-help/troubleshoot-your-windows-10-device-windows`
-*   `https://t3chn1ck.wordpress.com/2018/07/09/auto-mdm-enroll-failed-the-system-tried-to-delete-the-join-of-a-drive-that-is-not-joined/`
+* `https://social.technet.microsoft.com/Forums/en-US/d2bda796-eef4-452a-b622-7c7463218555/mdm-enrollment-error-0x8018002b-on-windows-10-1709?forum=microsoftintuneprod`
+* `https://docs.microsoft.com/en-us/windows/desktop/mdmreg/mdm-registration-constants`
+* `https://docs.microsoft.com/en-us/intune-user-help/troubleshoot-your-windows-10-device-windows`
+* `https://t3chn1ck.wordpress.com/2018/07/09/auto-mdm-enroll-failed-the-system-tried-to-delete-the-join-of-a-drive-that-is-not-joined/`
 
 我刚才提供的框架应该足以让你自行尝试。也就是说，Microsoft 关于此内容的官方演练（包含一些额外信息和基本故障排除步骤）可在以下位置找到：
 
-*   `https://docs.microsoft.com/en-us/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy`
+* `https://docs.microsoft.com/en-us/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy`
 
 ## 协同管理策略……谁胜出：MDM 还是组策略？
 
@@ -3457,7 +2809,7 @@ Intune 连接器使管理员能够继续使用其本地 SCCM 控制台，并执�
 
 ### 关于 MdmWinsOverGp
 
-在 图 4.10 中，你可以看到 DeviceManagement-Enterprise-Diagnostics-Provider 日志，具体是操作日志，其中显示了事件 ID 2220，提示“MdmWinsOverGp Policy value is (0x0)”，这意味着“你无法知道谁将会胜出”。
+在图 4.10 中，你可以看到 DeviceManagement-Enterprise-Diagnostics-Provider 日志，具体是操作日志，其中显示了事件 ID 2220，提示“MdmWinsOverGp Policy value is (0x0)”，这意味着“你无法知道谁将会胜出”。
 
 ![图 4.10 事件 ID 2220 显示谁胜出，组策略 vs. MDM。](img/c04f010.jpg)
 
@@ -3473,19 +2825,19 @@ Intune 连接器使管理员能够继续使用其本地 SCCM 控制台，并执�
 
 如果你想查看此设置，请按以下步骤操作，但拜托请读完本节末尾后再尝试。
 
-你首先需要创建一个新配置文件，或使用现有的。我将创建一个新的，如 图 4.11 所示。
+你首先需要创建一个新配置文件，或使用现有的。我将创建一个新的，如图 4.11 所示。
 
 ![图 4.11 创建新配置文件以容纳新的 MDM 策略。](img/c04f011.jpg)
 
 **图 4.11** 创建新配置文件以容纳新的 MDM 策略。
 
-然后，添加以下自定义值（如 图 4.12 所示）：
+然后，添加以下自定义值（如图 4.12 所示）：
 
-*   名称：ControlPolicyConflict
-*   说明：（此项可选。）
-*   OMA-URI：`./Vendor/MSFT/Policy/Config/ControlPolicyConflict/MdmWinsOverGp`
-*   数据类型：Integer
-*   值：1
+* 名称：ControlPolicyConflict
+* 说明：（此项可选。）
+* OMA-URI：`./Vendor/MSFT/Policy/Config/ControlPolicyConflict/MdmWinsOverGp`
+* 数据类型：Integer
+* 值：1
 
 ![图 4.12 设置 MDM 胜过组策略的自定义值](img/c04f012.jpg)
 
@@ -3495,13 +2847,13 @@ Intune 连接器使管理员能够继续使用其本地 SCCM 控制台，并执�
 
 我目前不建议你这样做；我只是向你展示*如何*操作。
 
-当你选择启用此设置时，你会知道自己操作正确，因为在查看 MDM 报告时，你会看到 图 4.13 所示的结果。
+当你选择启用此设置时，你会知道自己操作正确，因为在查看 MDM 报告时，你会看到图 4.13 所示的结果。
 
 ![图 4.13 如何知道你已开启 MDM 胜过组策略](img/c04f013.jpg)
 
 **图 4.13** 如何知道你已开启 MDM 胜过组策略
 
-![image](img/warning.jpg) 此处有一个特大的警告：在 Windows 1803 中，当你将此值写入终结点时，永远无法回退。此设置不支持“删除”。这是一条单向桥。也就是说，在 1809 及更高版本中，你可以改变主意并更改设置，这将恢复原始行为。
+![image](img/warning.jpg) 此处有一个特大的警告：在 Windows 1803 中，当你将此值写入终结点时，永远无法回退。此设置不支持“删除”。这是一条单向桥。也就是说，在 1809 及更高版本中，你可以改变主意并更改设置，这将恢复原始行为。
 
 ### MdmWinsOverGp：基于 Windows 1809 的真实测试
 
@@ -3511,22 +2863,18 @@ Intune 连接器使管理员能够继续使用其本地 SCCM 控制台，并执�
 
 #### 测试 1：未配置 MDMWinsOverGP 时，将 MDM 项设为“已禁用”，将相应的组策略设置设为“已启用”。
 
-1.  分配 MDM 策略，使 Cortana **已禁用**。
-2.  刷新 MDM，确认 Cortana 确实已禁用。
-3.  创建组策略设置，使 Cortana **已启用**。
-4.  将组策略设置分配给同一台 Win10 1809 设备。刷新组策略。
+1. 分配 MDM 策略，使 Cortana **已禁用**。
+2. 刷新 MDM，确认 Cortana 确实已禁用。
+3. 创建组策略设置，使 Cortana **已启用**。
+4. 将组策略设置分配给同一台 Win10 1809 设备。刷新组策略。
 
-*   **测试 1 结果：Cortana 显示为已禁用。感觉像是 MDM 胜出了。**
+* **测试 1 结果：** Cortana 显示为已禁用。感觉像是 MDM 胜出了。
 
 对我来说，这完全出乎意料。既然未配置 MdmWinsOverGp，我原本预期组策略会默认胜出。
 
 但事实并非如此。
 
 因为 Cortana 的 MDM 策略先被写入，组策略后被写入，MDM 机制中的某些东西将设置锁定在原位，导致 MDM 胜出，这目前对我来说讲不通。
-
-
-
-
 
 #### 测试 2：未配置 MDMWinsOverGP 时，将组策略设置为“已启用”，然后将相应的 MDM 设置设置为“已禁用”。
 
@@ -3549,6 +2897,8 @@ Intune 连接器使管理员能够继续使用其本地 SCCM 控制台，并执�
 2. 刷新组策略并验证 Cortana 确实已启用。
 3. 创建 MDM 策略以**禁用** Cortana。
 4. 将 MDM 策略分配给 Win10 1809 设备。刷新 MDM。
+
+
 
 * **测试 3 结果：** `Cortana` 变为禁用状态。MDM 胜出。
 
@@ -3636,17 +2986,13 @@ AADDC 是一种在云中创建“伪”域的方式，供你现有的本地服�
 
 记住，为确保值是确定性的，你必须翻转开关让 MDM 专门胜过组策略，否则你实际上无法知晓机器的最终状态。
 
-
-
-
-
 向我发推 `@jeremymoskowitz` 并提及 第 4 章，加上标签 `#mdmbook`。告诉我你从本章获得了什么收获。我非常喜欢收到你的推文！
 
 下一章见，我们将讨论有助于将组策略实际迁移到 MDM 的工具，以及一些排查 MDM 故障的技巧和窍门。
 
 # 第 5 章
 
-MDM 迁移与 MDM 故障排查
+## MDM 迁移与 MDM 故障排查
 
 在前几章中，你了解了 Policy CSP 及其与组策略的关系：一些策略内置于 Policy CSP 中，而另一些则由 ADMX 提供支持。
 
@@ -3662,7 +3008,7 @@ MDM 迁移与 MDM 故障排查
 
 你可以在此处找到该工具：`https://github.com/WindowsDeviceManagement/MMAT.`
 
-你可以在 图 5.1 中看到网页及下载方法。
+你可以在图 5.1 中看到网页及下载方法。
 
 ![图 5.1 从 GitHub 下载 MMAT。](img/c05f001.jpg)
 
@@ -3680,7 +3026,7 @@ MDM 迁移与 MDM 故障排查
 
 公平地说，到目前为止，本书中我还没有要求你创建太多 GPO，因此在你的测试实验室中，该工具不会有太多内容可报告。但这是一个在真实环境中运行非常安全的工具；它只是读取设置，不会向组策略领域写回任何内容。因此，你可能想在真实环境的机器上，或另一个可能已经应用了大量 GPO 的测试实验室中尝试一下。
 
-因此，在一台安装了 RSAT 的 Windows 10 计算机上，下载 MMAT 并将其解压到你选择的位置，例如 `c:\MMAT`。然后运行它，看看结果如何。以管理员身份运行 PowerShell。然后运行以下 PowerShell 命令，如 图 5.2 所示
+因此，在一台安装了 RSAT 的 Windows 10 计算机上，下载 MMAT 并将其解压到你选择的位置，例如 `c:\MMAT`。然后运行它，看看结果如何。以管理员身份运行 PowerShell。然后运行以下 PowerShell 命令，如图 5.2 所示：
 
 ```
 Set-ExecutionPolicy Unrestricted -Scope Process
@@ -3698,11 +3044,11 @@ $VerbosePreference="Continue"
 
 还有一些其他可选标志：
 
-*   如果你想检查整个域中的所有 GPO，请在最后一条命令末尾添加 `-targetdomain fabrikam.com`。
-*   如果你想检查 Bob 的电脑，请在最后一条命令末尾添加 `-targetComputer BobsPC`。
-*   如果你想检查 Sally 上次使用 Bob 电脑时的情况，请在最后一条命令末尾添加 `-targetUser Sally -targetComputer BobsPC`。
+* 如果你想检查整个域中的所有 GPO，请在最后一条命令末尾添加 `-targetdomain fabrikam.com`。
+* 如果你想检查 Bob 的电脑，请在最后一条命令末尾添加 `-targetComputer BobsPC`。
+* 如果你想检查 Sally 上次使用 Bob 电脑时的情况，请在最后一条命令末尾添加 `-targetUser Sally -targetComputer BobsPC`。
 
-MMAT 会分析 Bob 电脑的组策略内部配置一段时间，然后完成，如 图 5.3 所示。
+MMAT 会分析 Bob 电脑的组策略内部配置一段时间，然后完成，如图 5.3 所示。
 
 ![图 5.3 MMAT 的 PowerShell 执行完成。](img/c05f003.jpg)
 
@@ -3710,7 +3056,7 @@ MMAT 会分析 Bob 电脑的组策略内部配置一段时间，然后完成，�
 
 MMAT 的输出结果在名为 `MDMMigrationAnalysis.html` 的文件中，你可以在任何浏览器中查看。
 
-输出分为计算机端和用户端。接着，你会看到支持的设置显示为绿色（如 图 5.4 所示），不支持的设置显示为红色（未显示）。在报告的后面部分，浅绿色部分会显示“需要自定义 ADMX 的策略”，所以我们之前已经讲过这个话题，这很好。最后，列出了 MMAT 读取的 GPO 列表，因为这取决于你如何运行 MMAT（例如针对单台机器运行，还是针对域中所有 GPO 运行）。
+输出分为计算机端和用户端。接着，你会看到支持的设置显示为绿色（如图 5.4 所示），不支持的设置显示为红色（未显示）。在报告的后面部分，浅绿色部分会显示“需要自定义 ADMX 的策略”，所以我们之前已经讲过这个话题，这很好。最后，列出了 MMAT 读取的 GPO 列表，因为这取决于你如何运行 MMAT（例如针对单台机器运行，还是针对域中所有 GPO 运行）。
 
 ![图 5.4 MMAT 输出示例](img/c05f004.jpg)
 
@@ -3718,40 +3064,36 @@ MMAT 的输出结果在名为 `MDMMigrationAnalysis.html` 的文件中，你可�
 
 此外，我之前说过，但值得重申：
 
-*   并非组策略中的每个设置都能转换为 MDM，也不一定都应该转换。例如，仅适用于 XP 而不适用于 Windows 10 的设置，迁移到 MDM 领域毫无意义。
-*   仅仅因为你看到某个已部署的组策略设置*可以*转换，并不意味着你应该将其转换到 MDM。你需要分析具体情况，判断迁移到 MDM 是否合理，或者如果迁移到 MDM，是否应将其保留在原地。
-*   某些设置看起来合理且值得迁移到 MDM，但这些设置可能尚未作为精选设置在 MDM 中提供。
-*   MMAT 不会读取 GPO 并神奇地为你生成漂亮的 MDM 设置。如果你想这么做，那部分艰苦的工作还是得你自己来完成。
-*   每当 Windows 发布新版并重新更新 MMAT 时，请务必重新下载 MMAT。当 Windows 和 MMAT 都更新后，你会看到昨天无法转换的设置如今已可在 MDM 领域中使用。请注意，这并不意味着该设置在 MDM 服务的 UI 中是一等的可点击设置；它可能是三等设置，需要你手动构建 OMA-URI。
+* 并非组策略中的每个设置都能转换为 MDM，也不一定都应该转换。例如，仅适用于 XP 而不适用于 Windows 10 的设置，迁移到 MDM 领域毫无意义。
+* 仅仅因为你看到某个已部署的组策略设置*可以*转换，并不意味着你应该将其转换到 MDM。你需要分析具体情况，判断迁移到 MDM 是否合理，或者如果迁移到 MDM，是否应将其保留在原地。
+* 某些设置看起来合理且值得迁移到 MDM，但这些设置可能尚未作为精选设置在 MDM 中提供。
+* MMAT 不会读取 GPO 并神奇地为你生成漂亮的 MDM 设置。如果你想这么做，那部分艰苦的工作还是得你自己来完成。
+* 每当 Windows 发布新版并重新更新 MMAT 时，请务必重新下载 MMAT。当 Windows 和 MMAT 都更新后，你会看到昨天无法转换的设置如今已可在 MDM 领域中使用。请注意，这并不意味着该设置在 MDM 服务的 UI 中是一等的可点击设置；它可能是三等设置，需要你手动构建 OMA-URI。
 
 MMAT 是一个有用的工具，我建议你查看以下 MMAT 资源以获取更多信息：
 
-*   MMAT 的 PDF 指南只有七页，但包含大量有用的信息和技巧。
-*   Ignite 2017 视频：`www.youtube.com/watch?v=QtqLW2Rp2lU`
-*   `https://www.petervanderwoude.nl/post/mdm-migration-analysis-tool/`
+* MMAT 的 PDF 指南只有七页，但包含大量有用的信息和技巧。
+* Ignite 2017 视频：`www.youtube.com/watch?v=QtqLW2Rp2lU`
+* `https://www.petervanderwoude.nl/post/mdm-migration-analysis-tool/`
 
 ## MDM 故障排查
 
-
-
-
-
-## MDM 问题不会自动跳出来让你发现
+### MDM 问题不会自动跳出来让你发现
 
 MDM 故障排查的关键在于知道去哪里查找正确的信息。我们将按顺序探索这些位置：
 
-*   分析 MDM 服务报告
-*   查看 MDM 引擎中的“MDM 高级诊断报告”
-*   调查事件日志以获取有价值的信息
-*   利用 Microsoft 和第三方 Web 资源来协助我们
+* 分析 MDM 服务报告
+* 查看 MDM 引擎中的“MDM 高级诊断报告”
+* 调查事件日志以获取有价值的信息
+* 利用 Microsoft 和第三方 Web 资源来协助我们
 
 现在让我们来逐一检查这些角度。
 
-## MDM 服务报告、诊断日志和事件日志
+### MDM 服务报告、诊断日志和事件日志
 
 在本节中，我们将按照我通常建议你开始故障排查的顺序，介绍三个主要的排查位置。你可以跳跃式地按不同于我呈现的顺序调查这些领域。但我认为我有一份不错的路线图，能让你踏上成功排查故障的正轨。
 
-## 来自 MDM 服务的交付报告
+### 来自 MDM 服务的交付报告
 
 MDM 与始终开机的机器配合良好，与非始终开机的机器配合得也相当不错。换句话说，MDM 服务器和 Windows 10 设备始终在通信（前提是它们处于开机状态），因此你应该始终能洞察正在发生的事情。
 
@@ -3763,7 +3105,7 @@ MDM 与始终开机的机器配合良好，与非始终开机的机器配合得�
 
 ![](img/c05uf001.jpg)
 
-你也可以点击“设备状态”或“用户状态”，查看该配置文件是否已送达以及送达时间，如 图 5.5 所示。
+你也可以点击“设备状态”或“用户状态”，查看该配置文件是否已送达以及送达时间，如图 5.5 所示。
 
 ![图 5.5 查看报告中的“上次状态更新”](img/c05f005.jpg)
 
@@ -3771,7 +3113,7 @@ MDM 与始终开机的机器配合良好，与非始终开机的机器配合得�
 
 如果你将用户设置部署到设备，则这些设备上的所有用户都将获得该设置。如果你将设备设置部署到用户，则该设置将应用于用户登录的所有计算机。
 
-## 高级诊断报告和解决冲突
+### 高级诊断报告和解决冲突
 
 我们现在已经两次查看了出现在 Windows 10 端点上的 MDM 高级诊断报告。同样，这类似于 `GPResult`，但面向 MDM。
 
@@ -3779,27 +3121,29 @@ MDM 与始终开机的机器配合良好，与非始终开机的机器配合得�
 
 此报告中有许多类别，但你需要重点关注以下三个：
 
-*   **托管策略：** 如前所示，这将显示设备上与默认值不同的已配置项目列表。
-*   **被组策略阻止：** 这将显示在组策略中配置、在 MDM 中也配置的项目列表，以及谁胜出。
-*   **非托管策略：** 所有其他项目。这实际上很有意思，因为如果有任何（非自定义的）内容是你想要更改的，此列表始终是最新的！
+* **托管策略：** 如前所示，这将显示设备上与默认值不同的已配置项目列表。
+* **被组策略阻止：** 这将显示在组策略中配置、在 MDM 中也配置的项目列表，以及谁胜出。
+* **非托管策略：** 所有其他项目。这实际上很有意思，因为如果有任何（非自定义的）内容是你想要更改的，此列表始终是最新的！
 
 现在让我们逐一查看这三个部分。
 
-### 高级 MDM 报告的“托管策略”部分
+#### 高级 MDM 报告的“托管策略”部分
 
-在 图 5.6 中，你可以看到我聚焦于报告的“托管策略”部分。我有两种使用此部分的方法。第一种方法，我可以看到我想通过 MDM 专门设置的值。例如，在 图 5.6 中，你可以看到我设置了浏览器主页，还禁用了 Cortana。
+在图 5.6 中，你可以看到我聚焦于报告的“托管策略”部分。我有两种使用此部分的方法。第一种方法，我可以看到我想通过 MDM 专门设置的值。例如，在图 5.6 中，你可以看到我设置了浏览器主页，还禁用了 Cortana。
 
 ![图 5.6 使用高级 MDM 报告查看已设置的值](img/c05f006.jpg)
 
 **图 5.6** 使用高级 MDM 报告查看已设置的值
 
-### 高级 MDM 报告的“被阻止组策略”部分
+#### 高级 MDM 报告的“被阻止组策略”部分
 
-回在 第 4 章 中，我们讨论了如何专门强制 MDM 胜过组策略。当你选择启用此功能并下发 `MdmWinsOverGP` 设置时，“被阻止的组策略”报告就会亮起。
+回在第 4 章中，我们讨论了如何专门强制 MDM 胜过组策略。当你选择启用此功能并下发 `MdmWinsOverGP` 设置时，“被阻止的组策略”报告就会亮起。
+
+
 
 不想吹毛求疵，但不存在“组策略”这种复数说法。准确说应该是“被阻止的组策略设置”，但我只能深呼吸，放下这个执念。
 
-不管怎样，正如你在 图 5.7 中所见，当你拨动开关让 MDM 胜过组策略时，报告部分会亮起并显示冲突。请记住，默认情况下，同一台机器上的组策略和 MDM 结果是非确定性的。只有当你拨动开关让 MDM 胜出时，你才能知道实际结果。
+不管怎样，正如你在图 5.7 中所见，当你拨动开关让 MDM 胜过组策略时，报告部分会亮起并显示冲突。请记住，默认情况下，同一台机器上的组策略和 MDM 结果是非确定性的。只有当你拨动开关让 MDM 胜出时，你才能知道实际结果。
 
 ![图 5.7 你可以看到哪些组策略设置被 MDM 覆盖了。](img/c05f007.jpg)
 
@@ -3811,7 +3155,7 @@ MDM 与始终开机的机器配合良好，与非始终开机的机器配合得�
 
 ### 高级 MDM 报告的“非托管策略”部分
 
-使用此报告的另一种方法是在高级 MDM 设置报告的“非托管策略”部分寻找*有趣的*值，如 图 5.8 所示。
+使用此报告的另一种方法是在高级 MDM 设置报告的“非托管策略”部分寻找*有趣的*值，如图 5.8 所示。
 
 ![图 5.8 “非托管策略”部分](img/c05f008.jpg)
 
@@ -3837,14 +3181,10 @@ MDM 高级诊断报告还需要一点额外的工作，才能赶上组策略的�
 
 正如我们刚才所见，仅拥有发生冲突的机器的访问权限，无法揭示设置的来源。确实，设置可能来自许多来源，包括任何给定的组策略对象 MDM（任何给定的配置文件）。
 
-但如果设置来自 MDM，你可以使用 Intune 等 MDM 服务来尝试揭示配置文件之间的冲突。例如，在这个例子中，我有两个配置文件，如 图 5.9 所示：
+但如果设置来自 MDM，你可以使用 Intune 等 MDM 服务来尝试揭示配置文件之间的冲突。例如，在这个例子中，我有两个配置文件，如图 5.9 所示：
 
 *   “开始菜单：隐藏‘视频’”
 *   “开始菜单：显示‘视频’”
-
-
-
-
 
 ## 图 5.9 两个配置文件可以具有不同的设置并以同一用户或设备为目标
 
@@ -3917,7 +3257,6 @@ MDM 高级诊断报告还需要一点额外的工作，才能赶上组策略的�
 在里面您会找到两个分支：
 
 *   **Admin：** 这描述了计算机与 MDM 服务之间的通信对话：它们何时开始对话、说了什么，以及是否有任何错误。
-
 *   **Operational：** 这是由于该对话而发生的事情。我希望将来这能更详细，但这里的错误可以让您走上正确的道路。
 
 此日志中找到的项目示例可见于**第 4 章**“共同管理和共同策略管理”中的**图 4.10**。
@@ -3957,7 +3296,6 @@ MDM 高级诊断报告还需要一点额外的工作，才能赶上组策略的�
 每当 MDM 设置已应用（在同一设置通过 GPO 设置之前），MDM 总是胜出，无论 `MdmWinsOverGP` 如何配置或未配置。但是，如果 MDM 设置和 GPO 设置同时应用于同一设置，则适用以下规则：
 
 *   如果启用了 `MDMWinsOverGP`，MDM 胜出。
-
 *   如果未配置或禁用了 `MDMWinsOverGP`，您不知道什么会胜出。
 
 ## 其他杂项说明、陷阱和注意事项
@@ -3987,9 +3325,6 @@ MDM 高级诊断报告还需要一点额外的工作，才能赶上组策略的�
 **有趣的见解：** 这是我唯一能找到的解释了配置文件何时由 Intune 部署，以及 MDM 设备何时会“回传”以拾取它的地方（iPhone、Android、Windows 10 等）。
 
 对于 Windows 10 的时间安排，这是来自该网站的引语：
-
-
-
 
 > 作为设备注册的 Windows PC：前 30 分钟每 3 分钟一次，之后每 8 小时一次。对于没有用户关联的设备，注册后立即进行的同步频率可能从数小时到一天或更久不等。Intune 会以不同间隔发送请求，要求设备与服务签入。不过，最终还是取决于设备是否签入。初始注册后，根据设备注册类型以及分配给设备的策略和配置文件，设备完成签入所需的时间是不可预测的。但是，一旦设备完成注册并应用了所有初始策略，设备通常大约每 6 小时检查一次新策略。
 
@@ -4065,11 +3400,19 @@ MDM 高级诊断报告还需要一点额外的工作，才能赶上组策略的�
 
 **Win32 应用（EXE）** 有些应用程序不以 MSI 文件形式发布。它们作为 EXE 完全没问题。Acrobat Reader 和 Firefox 直接作为 EXE 发布。这些被称为 Win32 应用程序，我们将看到如何使用 MDM 服务部署它们。
 
-**AppX、Windows 应用商店和 Microsoft Store for Business 应用程序** 也称为 *Metro* 或 *通用 Windows 平台 (UWP) 应用程序*，AppX 包是你通常在 Windows 应用商店中找到的那种应用程序。我们将探讨部署业务线 (LOB) 应用以及已打包就绪、可在 Windows 应用商店或 Microsoft Store for Business 中直接使用的项目的思路。
 
-**MSIX** 这是新来的小伙伴。MSIX 是 Microsoft 新一代应用程序打包技术。其理念是结合 MSI 和 AppX 的优势，并增加额外的酷炫功能。MSIX 支持首次在 Windows 10 1809 中引入。也就是说，它随后被向后移植到了 1803 和 1709，供仍在使用这些版本的客户使用。
 
-**Microsoft Office** 如果不谈 Microsoft Office，软件部署的讨论就不完整。Office 在人类历史上一直是最难部署的东西之一。借助 MDM，如果你使用 Office 365 ProPlus，这变得非常简单，几乎是点点鼠标即可完成。但如果你想安装基于 MSI 的 Office，那又是另一番光景了。
+# AppX、Windows 应用商店和 Microsoft Store for Business 应用程序
+
+也称为 *Metro* 或 *通用 Windows 平台 (UWP) 应用程序*。AppX 包是你通常在 Windows 应用商店中找到的那种应用程序。我们将探讨部署业务线 (LOB) 应用以及已打包就绪、可在 Windows 应用商店或 Microsoft Store for Business 中直接使用的项目的思路。
+
+# MSIX
+
+这是新来的小伙伴。MSIX 是 Microsoft 新一代应用程序打包技术。其理念是结合 MSI 和 AppX 的优势，并增加额外的酷炫功能。MSIX 支持首次在 Windows 10 1809 中引入。也就是说，它随后被向后移植到了 1803 和 1709，供仍在使用这些版本的客户使用。
+
+# Microsoft Office
+
+如果不谈 Microsoft Office，软件部署的讨论就不完整。Office 在人类历史上一直是最难部署的东西之一。借助 MDM，如果你使用 Office 365 ProPlus，这变得非常简单，几乎是点点鼠标即可完成。但如果你想安装基于 MSI 的 Office，那又是另一番光景了。
 
 我还将向你展示如何部署 PowerShell 脚本来处理一次性项目并下载常青包（稍后详述）。我还将展示 `PolicyPak Scripts Manager` 和 `PolicyPak File Delivery Manager` 如何为你的 MDM 系统增添砖加瓦，填补文件交付和安装的空白。
 
@@ -4082,10 +3425,6 @@ MDM 高级诊断报告还需要一点额外的工作，才能赶上组策略的�
 我之所以这么说，是因为 Intune 过去曾有（且一些人仍依赖）Intune“软件客户端”，它也有（准确说是曾有）自己的一套软件安装方法。
 
 一些人称之为“Silverlight”方法，但这并不准确。他们的意思是，这种方法源自基于 Silverlight 的原始 Intune 门户。但 Intune 客户端软件本身并没有任何 Silverlight 成分。
-
-
-
-
 
 ## 遗憾的是，关于此项目仍有大量微软内容
 
@@ -4193,7 +3532,7 @@ MDM 高级诊断报告还需要一点额外的工作，才能赶上组策略的�
 
 同样，我无法在书中详细介绍 VMware Workspace ONE 和 Microsoft Intune 的分步说明。但我们在本章剩余部分使用的一般概念应该能合理地适用于任何 MDM 服务，包括 VMware Workspace ONE。
 
-## 使用 MDM 部署 MSI 应用程序
+# 使用 MDM 部署 MSI 应用程序
 
 让我们开始使用 Intune 或 Workspace ONE 等 MDM 服务部署 MSI 应用程序的旅程。
 
@@ -4203,7 +3542,7 @@ MDM 高级诊断报告还需要一点额外的工作，才能赶上组策略的�
 
 考虑到这一点，让我们开始部署一个简单的 .MSI。之前我让你下载 7-Zip 的旧版和新版 MSI 并妥善保存。现在是时候先使用旧版本了。
 
-### 部署你的第一个 MSI 应用程序
+## 部署你的第一个 MSI 应用程序
 
 在 Intune 中，首先点击“客户端应用”，然后点击“应用”，如图 6.1 所示。然后，在新窗格中，点击“添加”，再选择“其他” ➢ “业务线应用”（见图 6.2）。
 
@@ -4211,30 +3550,25 @@ MDM 高级诊断报告还需要一点额外的工作，才能赶上组策略的�
 
 对于 MSI 应用程序，你需要选择一个文件并将其上传到 Intune。你将选择之前下载并放在管理工作站上的 7-Zip MSI。
 
-
-
-
 选择文件后，但在上传之前，系统会要求您指定应用信息，如图 6.3 所示。唯一必填的字段是“说明”和“发布者”。对于此测试，还请将“设备上下文”指定为应用安装上下文，这会将其安装到系统上的“所有用户”配置文件中，以便系统上的每个用户都能使用它。
 
 ![图 6.3 对于 MSI 应用程序，仅“说明”和“发布者”是必填字段。 ](img/c06f003.jpg)
 
 **图 6.3** 对于 MSI 应用程序，仅“说明”和“发布者”是必填字段。
 
-#### 面向用户或计算机以及安装上下文
+### 面向用户或计算机以及安装上下文
 
 在图 6.4 以及本章后面的其他一些对话框中，您可以看到将业务线应用程序分配给“使此应用成为所有用户的必需应用”或“使此应用成为所有设备的必需应用”的位置。此外，您还可以指定特定组（用户组或设备组）作为目标。
 
 此外，在这些选项下方还有一个下拉菜单，用于启用安装*上下文*。也就是说，应用程序是为用户安装还是为设备安装。以下是这些设置的快速指南：
 
-将其设置为“使此应用成为所有用户的必需应用”，将在拥有 Azure AD 帐户和 Intune 许可证的用户登录时，将包分发到设备上。
-
-将其设置为“使此应用成为所有设备的必需应用”，将在任何用户登录时（有效的 Azure AD 帐户甚至本地用户），将包分发到设备上。
+*   将其设置为“使此应用成为所有用户的必需应用”，将在拥有 Azure AD 帐户和 Intune 许可证的用户登录时，将包分发到设备上。
+*   将其设置为“使此应用成为所有设备的必需应用”，将在任何用户登录时（有效的 Azure AD 帐户甚至本地用户），将包分发到设备上。
 
 至于用户与设备*上下文*；这决定了应用程序实际如何安装。
 
-设备上下文将使应用程序安装为任何登录的用户都能看到该应用。设备上下文为整个设备安装应用程序（包括所有当前和未来的用户）。
-
-用户上下文将使应用程序仅按用户安装，前提是该用户属于该组。但使用用户上下文时，一次只会为一个用户安装一个应用程序。
+*   设备上下文将使应用程序安装为任何登录的用户都能看到该应用。设备上下文为整个设备安装应用程序（包括所有当前和未来的用户）。
+*   用户上下文将使应用程序仅按用户安装，前提是该用户属于该组。但使用用户上下文时，一次只会为一个用户安装一个应用程序。
 
 以下是实际含义。
 
@@ -4252,7 +3586,7 @@ MSI 应用程序（与 MSIX 应用程序不同）可能有也可能没有用户�
 
 如果您有多余的时间，我建议为您的软件添加一个徽标，这样它在公司门户中看起来会很漂亮（您稍后将看到）。它接受任何标准的 PNG 文件。
 
-将剩余字段留空，然后单击“确定”（未显示）。单击“添加以完成”（同样未显示）。然后单击“分配”➢“添加组”以指定哪些用户或计算机应接受此包。
+将剩余字段留空，然后单击“确定”（未显示）。单击“添加以完成”（同样未显示）。然后单击“分配” ➢ “添加组”以指定哪些用户或计算机应接受此包。
 
 让我们将其部署到所有设备（这将意味着这些设备上的所有用户）。请注意，在现实生活中，您通常不希望将大多数软件部署到所有设备，除非您真的非常想这样做。对于我们的测试，部署到所有设备完全没问题。为此，请在“添加组”窗格中的“分配类型”下选择“必需”，如图 6.4 所示。然后，在“分配”窗格中，在“使此应用成为所有设备的必需应用”旁边单击“是”，如分配窗格所示。您可以忽略“选定组”和“选择要包含的组”选项，因为既然您已将此包定向到所有设备，这些选项就不需要了。单击“分配”窗格中的“确定”以继续（未显示），然后在“添加组”窗格中单击“确定”以保存（同样未显示）。
 
@@ -4268,7 +3602,7 @@ MSI 应用程序（与 MSIX 应用程序不同）可能有也可能没有用户�
 
 回到您的终端设备，如果您没有以任何特定用户身份登录，请以您在第 1 章：企业移动性和 MDM 基础知识中在 Azure AD 中创建的用户身份登录，例如 Anthony Kissel（在我的环境中为 kissel@fabrikam1000.com）。
 
-然后，如果需要，请转到“设置”➢“访问工作或学校”，单击公文包或 Windows 旗帜图标并选择“信息”。然后与您的 MDM 服务同步。如果一切顺利，稍后您应该会看到图 6.6 中的内容，其中已安装 7-Zip（由于其名称中带有 #，它会冒泡到顶部），并且应用程序现在出现在基本 MDM 报告中。
+然后，如果需要，请转到“设置” ➢ “访问工作或学校”，单击公文包或 Windows 旗帜图标并选择“信息”。然后与您的 MDM 服务同步。如果一切顺利，稍后您应该会看到图 6.6 中的内容，其中已安装 7-Zip（由于其名称中带有 #，它会冒泡到顶部），并且应用程序现在出现在基本 MDM 报告中。
 
 ![图 6.6 请看 7-Zip 安装到“开始”菜单并出现在基本 MDM 报告中。 ](img/c06f006.jpg)
 
@@ -4276,9 +3610,9 @@ MSI 应用程序（与 MSIX 应用程序不同）可能有也可能没有用户�
 
 请注意，在“应用程序”类别中，您可能会看到 GUID 而不是漂亮的应用程序名称；我不确定原因。
 
-运行 7-Zip 并选择“帮助”➢“关于”，验证您获得的是 16.04 版本。
+运行 7-Zip 并选择“帮助” ➢ “关于”，验证您获得的是 16.04 版本。
 
-### MSI 应用程序部署技巧和窍门
+## MSI 应用程序部署技巧和窍门
 
 以下是关于 MSI 安装的一些小旁注：
 
@@ -4290,15 +3624,15 @@ MDM 目前只能部署所谓的基本或简单 MSI。有些 MSI 非常复杂，�
 
 这是受支持的，位置应在编辑包的配置项时看到的“命令行参数”块中（请参阅图 6.3），但由于空间限制未在那里显示。在我的测试中，我发现“命令行参数”块并不总是有效。我与产品团队进行了沟通，等您读到这本书时，该问题应该已修复。
 
-
-
-![image](img/note.jpg) 如果使用命令行参数不起作用，请检查名为 `EnableUserControl` 的设置，该设置可以通过组策略自定义 OMA-URI 交付，或通过注册表项交付。对于某些被视为安全的 MSI 属性，你需要设置计算机以允许在 `MSIEXEC` 运行时在命令行上覆盖这些值。某些应用程序可能存在这种情况。
+![image](img/note.jpg) **注意：** 如果使用命令行参数不起作用，请检查名为 `EnableUserControl` 的设置，该设置可以通过组策略自定义 OMA-URI 交付，或通过注册表项交付。对于某些被视为安全的 MSI 属性，你需要设置计算机以允许在 `MSIEXEC` 运行时在命令行上覆盖这些值。某些应用程序可能存在这种情况。
 
 这通常仅适用于按用户安装或双模式（按用户和按计算机）的应用。按计算机安装的应用在系统上下文中安装，不应受此策略约束（也不需要此策略）。对于确实需要此策略的应用，如果你没有预先设置此策略，MSI 安装日志将显示类似如下的行：“忽略不允许的属性 INSTALLDIR。” 关于 `EnableUserControl` 的详细信息，请参阅 `https://docs.microsoft.com/en-us/windows/desktop/Msi/enableusercontrol`。
 
 可在此处查看一个示例，演示如何使用此设置将 7-Zip 安装到特定的安装目录。
 
 ![](img/c06uf011.jpg)
+
+
 
 ### MSI 更新
 
@@ -4415,15 +3749,13 @@ MSI 安装故障排除可以有多种形式。说实话，关于此主题的权�
 
 ![image](img/tip.jpg) 此外，你可能想要点击“管理”➢“设置”➢“购物”，在“购物体验”中，将“显示离线应用”设置为“开”（默认为“关”）。这将启用具有特殊许可方式（称为离线许可应用）的应用程序在用户选择这些应用程序之一时显示。离线许可应用具有神奇的能力，可以在离线状态下部署商业版应用商店应用，例如在映像过程中，通过 `DISM` 或 Windows 映像和配置设计器 (`WICD`)。`WICD` 显示在第 8 章：使用配置设计器和 Autopilot 进行推出和刷新。在 `https://docs.microsoft.com/en-us/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app` 了解有关离线许可应用的更多信息。
 
-
-
-随后，你需要将商业版 Microsoft Store 连接到 Intune。首先转到 **Client Apps** | **Microsoft Store for Business**。然后单击 **Enable**、**Save**，接着单击 **Open the business store**，如 图 6.11 所示。
+随后，你需要将商业版 Microsoft Store 连接到 Intune。首先转到 **Client Apps** | **Microsoft Store for Business**。然后单击 **Enable**、**Save**，接着单击 **Open the business store**，如图 6.11 所示。
 
 ![Figure 6.11 How to enable the Microsoft Store for Business within Intune](img/c06f011.jpg)
 
 **图 6.11** 如何在 Intune 中启用商业版 Microsoft Store
 
-进入商业版 Microsoft Store 后，你需要对其进行“设置”，表明你想将其与 Intune 或 Workspace ONE（或你使用的任何 MDM）关联。单击 **Manage** ➢ **Settings** ➢ **Distribute**（请参阅 图 6.12）。如有需要可更改专用存储名称，但“必须执行”的操作是激活 **Microsoft Intune** 和 **Microsoft Intune Enrollment**。
+进入商业版 Microsoft Store 后，你需要对其进行“设置”，表明你想将其与 Intune 或 Workspace ONE（或你使用的任何 MDM）关联。单击 **Manage** ➢ **Settings** ➢ **Distribute**（请参阅图 6.12）。如有需要可更改专用存储名称，但“必须执行”的操作是激活 **Microsoft Intune** 和 **Microsoft Intune Enrollment**。
 
 ![Figure 6.12 You must activate (at least) Microsoft Intune Enrollment, preferably both.](img/c06f012.jpg)
 
@@ -4437,13 +3769,13 @@ MSI 安装故障排除可以有多种形式。说实话，关于此主题的权�
 
 ![](img/c06uf012.jpg)
 
-然后，在 图 6.13 中，我通过单击 **Get the app** 添加了 VLC Media Player。
+然后，在图 6.13 中，我通过单击 **Get the app** 添加了 VLC Media Player。
 
 ![Figure 6.13 The VLC app in the Microsoft Store (and getting it ready for Microsoft Store for Business)](img/c06f013.jpg)
 
 **图 6.13** Microsoft Store 中的 VLC 应用（并使其为商业版 Microsoft Store 做好准备）
 
-此外，趁此机会，请获取名为 **Company Portal** 的应用程序（请参阅 图 6.14）。
+此外，趁此机会，请获取名为 **Company Portal** 的应用程序（请参阅图 6.14）。
 
 ![Figure 6.14 The Company Portal app in the Microsoft Store (and getting it ready for Microsoft Store for Business)](img/c06f014.jpg)
 
@@ -4451,7 +3783,7 @@ MSI 安装故障排除可以有多种形式。说实话，关于此主题的权�
 
 ![image](img/note.jpg) 选择应用程序后，可能会出现商业版 Microsoft Store 协议。
 
-转眼间，你就“拥有”了一个应用，如 图 6.15 所示。
+转眼间，你就“拥有”了一个应用，如图 6.15 所示。
 
 ![Figure 6.15 You now have the application available for use within your company store.](img/c06f015.jpg)
 
@@ -4459,23 +3791,23 @@ MSI 安装故障排除可以有多种形式。说实话，关于此主题的权�
 
 继续“逛逛”挑选几个项目。既然你只是试用，目前建议只获取免费应用，而非付费应用。
 
-也许有更好的方法来执行后续步骤，但我未能找到高效的途径。简而言之，在你逛完店并收集了一堆应用后，仍然必须逐个“批准”它们以便在你的存储中工作。我发现在商业版 Microsoft Store 的 **Manage** ➢ **Products & services** ➢ **Apps & software** 中可以执行此操作，如 图 6.16 所示，然后单击我新购买的应用，如 VLC。
+也许有更好的方法来执行后续步骤，但我未能找到高效的途径。简而言之，在你逛完店并收集了一堆应用后，仍然必须逐个“批准”它们以便在你的存储中工作。我发现在商业版 Microsoft Store 的 **Manage** ➢ **Products & services** ➢ **Apps & software** 中可以执行此操作，如图 6.16 所示，然后单击我新购买的应用，如 VLC。
 
 ![Figure 6.16 Seeing all the apps in the store, even though they are not ready yet in your private store collection](img/c06f016.jpg)
 
 **图 6.16** 查看存储中的所有应用，即使它们尚未在你的专用存储集合中就绪
 
-随后，在应用程序内部，单击 **Private store availability** 并选择 **Everyone**，以指定任何人都可以获取它，如 图 6.17 所示。
+随后，在应用程序内部，单击 **Private store availability** 并选择 **Everyone**，以指定任何人都可以获取它，如图 6.17 所示。
 
 ![Figure 6.17 Each application needs to be accepted into your company collection.](img/c06f017.jpg)
 
 **图 6.17** 每个应用程序都需要被接受加入你的公司集合。
 
-回到 Intune 的商业版 Microsoft Store 页面，单击 **Sync** 按钮，就像在 图 6.11 中那样（位于该窗口标题 3 下方）。
+回到 Intune 的商业版 Microsoft Store 页面，单击 **Sync** 按钮，就像在图 6.11 中那样（位于该窗口标题 3 下方）。
 
 它会提示同步需要一段时间，对我而言确实总是如此。进度条年份从（不开玩笑）1969 年开始，等到最终完成同步时才跳转到现代年份。
 
-同步完成后，返回 **Client apps - Apps**，你将看到放入专用存储中的任何应用，如 图 6.18 所示（是的，我知道我的屏幕截图比你的可能包含更多项目）。
+同步完成后，返回 **Client apps - Apps**，你将看到放入专用存储中的任何应用，如图 6.18 所示（是的，我知道我的屏幕截图比你的可能包含更多项目）。
 
 ![Figure 6.18 See your Microsoft Store for Business apps available for delivery.](img/c06f018.jpg)
 
@@ -4483,7 +3815,7 @@ MSI 安装故障排除可以有多种形式。说实话，关于此主题的权�
 
 此时，一切就绪。你可以像之前的讨论中那样，将应用分配给用户、设备或组。现在对 VLC 和 Company Store 执行此操作，并将其分配给 **All devices**。
 
-应用程序到达设备的结果正如你所料，在 MDM 客户端与服务器同步后发生。请查看 图 6.19，了解 VLC 如何悄无声息地添加到计算机上。
+应用程序到达设备的结果正如你所料，在 MDM 客户端与服务器同步后发生。请查看图 6.19，了解 VLC 如何悄无声息地添加到计算机上。
 
 ![Figure 6.19 Applications delivered from the Windows Store for Business](img/c06f019.jpg)
 
@@ -4524,10 +3856,7 @@ MSI 安装故障排除可以有多种形式。说实话，关于此主题的权�
 
 我要做个预测：如果你在 2019 年阅读本书，你可能从未听说过它，或者只是偶然听闻。但我认为当你在 2020 年及以后阅读本书时，你将完全了解 MSIX，因为你届时可能已经在使用它了。
 
-话虽如此，解释 MSIX 最快的方法可以用 图 6.20 来总结。
-
-
-
+话虽如此，解释 MSIX 最快的方法可以用图 6.20 来总结。
 
 ![Figure 6.20 MSIX format enables you to take multiple package types, wrap them up, and then deliver them in MSI-like style.](img/c06f020.jpg)
 
@@ -4537,21 +3866,33 @@ MSI 安装故障排除可以有多种形式。说实话，关于此主题的权�
 
 实际上，MSIX 格式有三种主要方式会变得流行：
 
-*   **方式 #1：** 应用程序供应商加入行列并开始使用它。主要的 MSI 重打包工具（如 Advanced Installer）已经支持制作 MSIX 包。
-*   **方式 #2：** 人们用它来包装现有的 Win32 `.EXE` 应用程序，并将它们重新打包为 MSIX 格式。然后通过 MDM 部署这些 MSIX 包。然而，Intune 现在内置了交付 Win32 `.EXE` 文件的方法，但并非每个 MDM 厂商都有此方法。因此，MSIX 可以成为那些非 Intune 客户的桥梁。
-*   **方式 #3：** MSIX 格式将成为在 Windows 应用商店上传应用程序的新标准方式。现有的 `.APPX` 应用商店包可以更新为应用的新 MSIX 版本。很棒！
+
+
+* **方式 #1：** 应用程序供应商加入行列并开始使用它。主要的 MSI 重打包工具（如 `Advanced Installer`）已经支持制作 MSIX 包。
+
+* **方式 #2：** 人们用它来包装现有的 Win32 `.EXE` 应用程序，并将它们重新打包为 MSIX 格式。然后通过 MDM 部署这些 MSIX 包。然而，Intune 现在内置了交付 Win32 `.EXE` 文件的方法，但并非每个 MDM 厂商都有此方法。因此，MSIX 可以成为那些非 Intune 客户的桥梁。
+
+* **方式 #3：** MSIX 格式将成为在 Windows 应用商店上传应用程序的新标准方式。现有的 `.APPX` 应用商店包可以更新为应用的新 MSIX 版本。很棒！
 
 MSIX 格式的优点在于它一次性兑现了多项承诺：
 
-*   MSI 通常无法做到每次都完美安装并完美移除。MSIX 应用程序在安装时真正应当被沙箱化，在退役时被完美移除。
-*   你可以获取许多现有的 MSI 并将它们转换为 MSIX 格式。
-*   Win32 `.EXE` 同理；你可以快速转换并得到 MSIX 格式。同样，正如我们稍后将看到的，Intune 中有一种 Win32 EXE 部署方法，我们也将花时间介绍它。
-*   你还可以将 UWP（AppX 包）打包为 MSIX。
-*   已熟悉 App-V 及同类包（如 ThinApp）的客户，对 MSIX 包的工作原理已有一定了解。MSIX 应用程序对文件和注册表具有轻量级虚拟化。并且，在未来的某个世界里，现有的 App-V 包很可能可以转换为 MSIX。
-*   MSIX 对共享相同文件的包很智能，磁盘上只会写入一个文件。并且，通过网络，MSIX 包之间的任何重复文件甚至不会被下载，从而节省带宽。
-*   MSIX 包按块下载，具体来说是变更的块，而不是作为一个庞大的整块文件。因此，如果你的 MSIX 包发生变化，且你需要快速推送出去，客户端只会下载变更部分，而不是再次下载整个包。
-*   MSIX 应用程序具有更好的整体安全性：它们具有防篡改保护，并依赖于由你进行数字签名（稍后你将看到），因此很明显这是你的应用。
-*   MSIX（作为一种打包技术）不仅适用于 Windows，还可跨平台用于 iOS、Android、MacOS 和 Linux。（这是不是让你大开眼界？）
+* MSI 通常无法做到每次都完美安装并完美移除。MSIX 应用程序在安装时真正应当被沙箱化，在退役时被完美移除。
+
+* 你可以获取许多现有的 MSI 并将它们转换为 MSIX 格式。
+
+* Win32 `.EXE` 同理；你可以快速转换并得到 MSIX 格式。同样，正如我们稍后将看到的，Intune 中有一种 Win32 EXE 部署方法，我们也将花时间介绍它。
+
+* 你还可以将 UWP（AppX 包）打包为 MSIX。
+
+* 已熟悉 App-V 及同类包（如 `ThinApp`）的客户，对 MSIX 包的工作原理已有一定了解。MSIX 应用程序对文件和注册表具有轻量级虚拟化。并且，在未来的某个世界里，现有的 App-V 包很可能可以转换为 MSIX。
+
+* MSIX 对共享相同文件的包很智能，磁盘上只会写入一个文件。并且，通过网络，MSIX 包之间的任何重复文件甚至不会被下载，从而节省带宽。
+
+* MSIX 包按块下载，具体来说是变更的块，而不是作为一个庞大的整块文件。因此，如果你的 MSIX 包发生变化，且你需要快速推送出去，客户端只会下载变更部分，而不是再次下载整个包。
+
+* MSIX 应用程序具有更好的整体安全性：它们具有防篡改保护，并依赖于由你进行数字签名（稍后你将看到），因此很明显这是你的应用。
+
+* MSIX（作为一种打包技术）不仅适用于 Windows，还可跨平台用于 iOS、Android、MacOS 和 Linux。（这是不是让你大开眼界？）
 
 总之，MSIX 成为几乎所有你可能已拥有的事物的通用包类型——无论是你今天在 Windows 上拥有的、明天在 Windows 上将拥有的，还是在其他平台上的内容。
 
@@ -4559,8 +3900,9 @@ MSIX 格式最初仅适用于 Windows 1809 及更高版本。但正如我在简�
 
 ![image](img/tip.jpg) 以下文章和博客文章中有两份很好的优势总结：
 
-*   `https://redmondmag.com/articles/2018/08/07/microsoft-previews-msix-packaging-tool.aspx`
-*   `https://blogs.flexera.com/application-readiness/2018/08/msix-the-new-super-package/`
+* `https://redmondmag.com/articles/2018/08/07/microsoft-previews-msix-packaging-tool.aspx`
+
+* `https://blogs.flexera.com/application-readiness/2018/08/msix-the-new-super-package/`
 
 此外，如果你想看专家关于 MSIX 及其与 App-V 关系的观点，请参阅 `http://www.tmurgent.com/TmBlog/?p=2778`。
 
@@ -4568,15 +3910,19 @@ MSIX 格式最初仅适用于 Windows 1809 及更高版本。但正如我在简�
 
 以下是答案：
 
-*   检测和更新传统的 MSI 和 Win32 应用安装可能具有挑战性。将 MSI 或 Win32 应用重新打包为 MSIX 应用，通过利用所有 UWP 应用所用的原生应用标识和版本控制方案，解决了此检测和版本控制问题。
-*   有时并非每个应用程序都是打包为 MSIX 的完美候选者。MSIX 格式是新的且“正在兴起”。因此，我建议你至少尝试将你的 `.EXE` 和 `.MSI` 重新打包为 MSIX 格式，以获得所有很酷的 MSIX 格式优势。并请记住，MSI 包（通过 MSI 方法部署）必须是简单的应用程序。如果你的应用程序很复杂，那么重新打包为 MSIX 后可能更容易部署……或者，也许不行。
-*   正如你将看到的，每个 MSIX 包都必须经过签名。因此，获取一个现有的、准备好部署的应用程序，并将其重新打包为 MSIX 可能会稍微困难一些。换句话说，对于某些应用程序，只是“保持原样”然后通过 Win32 方法部署（同样，稍后探讨）是一条更快的路径。
+* 检测和更新传统的 MSI 和 Win32 应用安装可能具有挑战性。将 MSI 或 Win32 应用重新打包为 MSIX 应用，通过利用所有 UWP 应用所用的原生应用标识和版本控制方案，解决了此检测和版本控制问题。
+
+* 有时并非每个应用程序都是打包为 MSIX 的完美候选者。MSIX 格式是新的且“正在兴起”。因此，我建议你至少尝试将你的 `.EXE` 和 `.MSI` 重新打包为 MSIX 格式，以获得所有很酷的 MSIX 格式优势。并请记住，MSI 包（通过 MSI 方法部署）必须是简单的应用程序。如果你的应用程序很复杂，那么重新打包为 MSIX 后可能更容易部署……或者，也许不行。
+
+* 正如你将看到的，每个 MSIX 包都必须经过签名。因此，获取一个现有的、准备好部署的应用程序，并将其重新打包为 MSIX 可能会稍微困难一些。换句话说，对于某些应用程序，只是“保持原样”然后通过 Win32 方法部署（同样，稍后探讨）是一条更快的路径。
 
 也就是说，有一些关键指标表明应用程序*不是* MSIX 的良好候选者。其中一些问题将是具有以下特征的应用：
 
-*   运行后需要管理员权限。
-*   创建服务或必须作为服务运行。
-*   写入安装目录/目录。
+* 运行后需要管理员权限。
+
+* 创建服务或必须作为服务运行。
+
+* 写入安装目录/目录。
 
 因此，总之，如果你有时间，尝试进入 MSIX 领域将是最佳实践。尝试先将你的应用程序转换为 MSIX 格式，看看是否运行良好。如果不行，嘿……你可以根据需要回退到 `.MSI` 部署方法或 Win32 部署方法。
 
@@ -4612,18 +3958,9 @@ MSI 打包工具位于 Windows 应用商店中。你可以在 **Figure 6.21** �
 
 此示例假设你有一个 `c:\Temp\` 目录用于存放证书。作为管理员，运行以下三行 PowerShell 代码，从 `Fabrikam1000.com` 创建你自己的自签名 PFX 证书，密码为 `p@ssw0rd`。
 
-```
+```powershell
 $cert = New-SelfSignedCertificate -DnsName fabrikam1000.com -Type CodeSigning
 -CertStoreLocation Cert:\CurrentUser\My\
-```
-
-
-
-
-
-### 将应用程序重新打包为 MSIX 格式
-
-```powershell
 $CertPassword = ConvertTo-SecureString -String "p@ssw0rd" -Force -AsPlain
 Export-PfxCertificate -Cert "cert:\CurrentUser\My\$($cert.Thumbprint)" -FilePath "c:\temp\test.pfx" -Password $CertPassword
 ```
@@ -4641,7 +3978,9 @@ PowerShell 命令的结果如图 6.22 所示，其中 `test.pfx` 文件已生成
 然后在下一个屏幕上，输入你拥有的所有内容：
 
 * Notepad++ .EXE 安装程序的路径
+
 * `test.pfx` 代码签名证书的路径
+
 * 代码签名证书的密码
 
 ![Figure 6.23 Create your MSIX package by clicking on “Application package.”](img/c06f023.jpg)
@@ -4740,9 +4079,6 @@ Notepad++ 通常不安装在 `c:\NotePadPlusPlusMSIX`，但我打算把它安装
 
 ![image](img/tip.jpg) 这些 MSIX 包安装程序也可以通过 PowerShell 命令 `Add-AppXPackage` 进行脚本化安装。
 
-
-
-
 现在有趣的是，你会在设置的“应用和功能”中看到该应用程序（如图 6.34 左侧所示），但在控制面板的“程序和功能”（即“卸载或更改程序”）中却找不到它（如图 6.34 右侧所示）。
 
 ![图 6.34 Notepad++ MSIX 包可以在“应用和功能”中看到，但在控制面板“程序和功能”中会显示为缺失。](img/c06f034.jpg)
@@ -4755,9 +4091,11 @@ Notepad++ 通常不安装在 `c:\NotePadPlusPlusMSIX`，但我打算把它安装
 
 让我们回顾一下：
 
-*   你创建了一个证书来为 MSIX 签名。
-*   你创建了 MSIX 包。
-*   你安装了它，然后又将其移除。
+* 你创建了一个证书来为 MSIX 签名。
+
+* 你创建了 MSIX 包。
+
+* 你安装了它，然后又将其移除。
 
 那么机器上还剩下什么？其实只有一样东西：本地计算机存储中的 PFX 证书。
 
@@ -4774,6 +4112,10 @@ Notepad++ 通常不安装在 `c:\NotePadPlusPlusMSIX`，但我打算把它安装
 第一种类型是 Windows 企业证书。就像《高地人》里说的，“只能有一个”。这是一种 `.CER` 证书类型。上传后，它将覆盖已有的任何内容，因此如果你选择这样做，请务必小心。你可以在 Intune ➢ “客户端应用” ➢ “Windows 企业证书”中执行此操作。结果如下所示。
 
 ![](img/c06uf013.jpg)
+
+
+
+## 第二种证书类型是代码签名证书
 
 第二种证书类型是代码签名证书，它更适合确保应用程序能够完成其代码签名链。此证书类型位于设备配置中的配置文件选项内。正如你所见，配置文件类型为“受信任的证书”。然后你可以选择将文件放置在哪个存储区中；通常“计算机证书存储 - 受信任的根证书颁发机构”是正确的选择，但你可能有其他需求。
 
@@ -4815,20 +4157,20 @@ Notepad++ 通常不安装在 `c:\NotePadPlusPlusMSIX`，但我打算把它安装
 
 **图 6.39** 你的 MSIX 应用程序出现在基本 MDM 报表中。
 
-### 更多 MSIX 详情（为追求卓越者准备）
+## 更多 MSIX 详情（为追求卓越者准备）
 
 在 2018 年 Ignite 大会上，有大量关于 MSIX 的会话。观看这些会话的最快方法是打开 YouTube，然后搜索会话 ID。
 
 搞定。更多 MSIX 干货。以下是值得查看的会话：
 
-*   BRK2467: MSIX inside and out
-*   演讲者：John Vintzel 和 Nona Sirakova
-*   BRK3220: MSIX – Accelerating Windows 10 and app deployment
-*   演讲者：Andrew Clinick 和 Dian Hartono
-*   BRK2318: Updating your existing Configuration Manager apps to MSIX
-*   演讲者：Sharla Akers 和 Avi Prasad
-*   THR3097: Getting started with the MSIX Packaging Tool
-*   演讲者：Sharla Akers 和 Peyman Zanjani
+*   **BRK2467**: MSIX inside and out
+*   **演讲者**: John Vintzel 和 Nona Sirakova
+*   **BRK3220**: MSIX – Accelerating Windows 10 and app deployment
+*   **演讲者**: Andrew Clinick 和 Dian Hartono
+*   **BRK2318**: Updating your existing Configuration Manager apps to MSIX
+*   **演讲者**: Sharla Akers 和 Avi Prasad
+*   **THR3097**: Getting started with the MSIX Packaging Tool
+*   **演讲者**: Sharla Akers 和 Peyman Zanjani
 
 此外，官方 MSIX 文档可在 `http://aka.ms/MSIX` 找到，MSI 技术社区可在 `http://aka.ms/MSIXCommunity` 找到。
 
@@ -4844,22 +4186,19 @@ Office 2019 独立产品与 Microsoft 365 附带的 Office 365 专业增强版�
 
 **表 6.1** **Office 2019 与 Office 365 专业增强版对比**
 
-| Office 2019 | | Office 365 专业增强版 |
+| Office 2019 | Office 365 专业增强版 |
 | --- | --- |
-| 客户端内协作受限 | | 实时共同创作、@提及等 |
-
-
-
+| 客户端内协作受限 | 实时共同创作、@提及等 |
+| 有限的云集成 | 云和 AI 驱动的功能 |
+| 静态功能；ProPlus 的子集 | 功能更丰富，每月都在变得更好 |
+| 仅安全和质量更新 | 安全性随威胁演进而进化 |
+| 每个许可证一台 PC | 五台 PC/Mac + 五台平板/移动设备 + Web 版 |
 
 ### 部署 Office 365
 
 #### 功能对比
 
-| 有限的云集成 | 云和 AI 驱动的功能 |
-|---------------------------|-------------------------------|
-| 静态功能；ProPlus 的子集 | 功能更丰富，每月都在变得更好 |
-| 仅安全和质量更新 | 安全性随威胁演进而进化 |
-| 每个许可证一台 PC | 五台 PC/Mac + 五台平板/移动设备 + Web 版 |
+（已合并至上表）
 
 #### 背景
 
@@ -4869,14 +4208,14 @@ Office 2019 独立产品与 Microsoft 365 附带的 Office 365 专业增强版�
 
 无论如何，Office 365 现在只有“即点即用”版本，它将直接从 Microsoft 按需下载所需内容，并自行保持功能更新。请记住，独立版 Office 2019 基本上是“定型且烘焙完成”的，不会更新功能，只会修复问题。一旦激活（联网或离线），它就不必再与 Microsoft 核对。
 
-但是，Office 2019 和 Office 365 关系非常紧密，如果你已经拥有 Office 2019，迁移到 Office 365 应该相对快速。你可以在 Ignite 2018 会议 BRK3260：What’s new in Microsoft Office 2019 for IT deployment 中了解更多相关信息（记得在 YouTube 上搜索“BRK3260”）。
+但是，Office 2019 和 Office 365 关系非常紧密，如果你已经拥有 Office 2019，迁移到 Office 365 应该相对快速。你可以在 Ignite 2018 会议 **BRK3260**: What's new in Microsoft Office 2019 for IT deployment 中了解更多相关信息（记得在 YouTube 上搜索“BRK3260”）。
 
 此外，在同一个会议中，他们抛出了一个“微型重磅炸弹”（至少对我来说）。多年来，Microsoft 一直建议在 32 位或 64 位机器上安装 32 位版 Office。在该演讲的 26:00 处，他们正式将建议更改为大多数情况下部署 64 位版。全新机器将获得你指定的任何版本，但现有机器将升级到相同的位数（我就喜欢这个词）。正如你所料，如果你想添加 Visio 或 Project，请务必添加与你要部署在机器上的底层 Office 软件相同位级的版本。你可能会想到两个问题：
 
 *   我应该切换吗？
 *   如何切换？
 
-对于“应该切换吗？”这个问题，答案是视情况而定。除非你有某些已知的仅限 32 位的插件（且在 64 位下实际会损坏），否则你至少应该测试运行 64 位版，然后逐步推广。至于“如何切换？”这个问题，稍后你将看到用于移除**任何**先前 Office 分发版的标记。勾选该标记后，机器将变为“Office 裸机”状态，此时你可以随意指定想要的版本：32 位或 64 位 Office 365。
+对于“应该切换吗？”这个问题，答案是视情况而定。除非你有某些已知的仅限 32 位的插件（且在 64 位下实际会损坏），否则你至少应该测试运行 64 位版，然后逐步推广。至于“如何切换？”这个问题，稍后你将看到用于移除`任何`先前 Office 分发版的标记。勾选该标记后，机器将变为“Office 裸机”状态，此时你可以随意指定想要的版本：32 位或 64 位 Office 365。
 
 具有讽刺意味的是，曾经最难部署的应用程序之一，正逐渐变得最容易部署。过去可能需要 800 亿次点击才能以恰当方式打包 Office，现在只需片刻就能通过 Intune 推出 Office 的基础功能，这应该能满足几乎所有需求。我无法保证你公司需要的某些晦涩 Office 组件不会在 Intune 部署 UI 中缺失。
 
@@ -4956,10 +4295,6 @@ Office 2019 独立产品与 Microsoft 365 附带的 Office 365 专业增强版�
 
 此功能如其名，消除了最终用户的这一小负担。一些公司要求启用此功能，以免员工接受 EULA，而是将法律责任转移给部署软件的公司。
 
-
-
-
-
 ### 使用共享计算机激活
 
 如果你有在不同计算机间漫游的用户，此选项适合你。包含 Microsoft 对所有这些设置描述的页面位于 `https://docs.microsoft.com/en-us/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus`。
@@ -4970,7 +4305,7 @@ Office 2019 独立产品与 Microsoft 365 附带的 Office 365 专业增强版�
 
 Office 将升级为计算机上已安装的语言（如果有）或操作系统语言。如果需要，你可以在此处添加其他语言。
 
-你可以在 图 6.44 中查看我的设置。
+你可以在图 6.44 中查看我的设置。
 
 ![图 6.44 Office 应用套件设置边栏选项卡](img/c06f044.jpg)
 
@@ -4982,7 +4317,7 @@ Office 将升级为计算机上已安装的语言（如果有）或操作系统�
 
 就写作时而言，你无法做到这一点。没有方法让 Intune 了解这是你想要的。但我有理由相信，等到你阅读此文时，你将具备向 Intune 提供 Office 配置 XML 以执行特殊操作的能力。请参阅标题为“Office 部署工具和 Office 策略配置工具”的边栏。
 
-获得配置文件后，将其分配给用户或计算机，然后……等待奇迹发生。在我的示例中，我可以看到 Word 和 Excel 已添加到 Windows 10“开始”菜单（如 图 6.45 所示），以及“设置”➢“应用和功能”（或“控制面板”中较旧的“添加/删除程序”）中。
+获得配置文件后，将其分配给用户或计算机，然后……等待奇迹发生。在我的示例中，我可以看到 Word 和 Excel 已添加到 Windows 10“开始”菜单（如图 6.45 所示），以及“设置”➢“应用和功能”（或“控制面板”中较旧的“添加/删除程序”）中。
 
 ![图 6.45 同步后，稍等片刻，Office 将根据你的规范进行安装。](img/c06f045.jpg)
 
@@ -5002,6 +4337,8 @@ Office 将升级为计算机上已安装的语言（如果有）或操作系统�
 
 如果你查看内部，将看到安装软件时使用的所有参数，如发布渠道、版本、用于 `RemoveMSI` 的标志等。复制粘贴在此以便你了解我的意思，如下所示：
 
+
+
 ```
 <Configuration><Add Channel="FirstReleaseDeferred" ForceUpgrade="TRUE"
  OfficeClientEdition="64"><Product ID="O365ProPlusRetail">
@@ -5017,13 +4354,13 @@ Office 将升级为计算机上已安装的语言（如果有）或操作系统�
 
 #### Status（状态）
 
-我的状态是 0。这通常意味着“良好”或无错误。
+我的状态是 `0`。这通常意味着“良好”或无错误。
 
 #### FinalStatus（最终状态）
 
-我的最终状态是 70，大家都知道这意味着“成功”。
+我的最终状态是 `70`，大家都知道这意味着“成功”。
 
-等等。你是说你不知道错误代码 70 意味着成功？
+等等。你是说你不知道错误代码 `70` 意味着成功？
 
 好吧。我也不知道。但我查看了 Office CSP，代码就在那里！其他错误和状态代码也可以在该页面找到，如果你想知道为什么事情失败或未按预期安装，这非常有用。
 
@@ -5076,29 +4413,25 @@ OCPS 仅适用于 Office 365，不适用于 Office 2019 等批量许可版本的
 
 ## 使用 MDM 部署 Win32 应用
 
-每年 Microsoft 都会针对 Intune 发布重大公告。在 2018 年 Ignite 大会上，Microsoft 的重大公告是能够使用 Intune 部署 .EXE 和复杂的 MSI，Microsoft 统称之为 Win32 应用程序。
-
-
-
-
+每年 Microsoft 都会针对 Intune 发布重大公告。在 2018 年 Ignite 大会上，Microsoft 的重大公告是能够使用 Intune 部署 `.EXE` 和复杂的 `.MSI`，Microsoft 统称之为 Win32 应用程序。
 
 ### 这在哪些场景下有用？
 
-很多应用程序并没有预先打包为 MSI 或 MSIX 格式。其中一些关键应用包括 Adobe Reader（以及直到最近的 Mozilla Firefox）。为什么某些供应商不提供 MSI 格式的安装包有点令人费解，因为几乎整个软件界的其他厂商都以 MSI 形式发布软件，但……好吧，就这样吧。
+很多应用程序并没有预先打包为 `.MSI` 或 `.MSIX` 格式。其中一些关键应用包括 Adobe Reader（以及直到最近的 Mozilla Firefox）。为什么某些供应商不提供 `.MSI` 格式的安装包有点令人费解，因为几乎整个软件界的其他厂商都以 `.MSI` 形式发布软件，但……好吧，就这样吧。
 
 ### 回到 2018 年 Ignite 大会的公告
 
-当我听到这项关于通过 Intune 部署 Win32 应用程序的重大公告时，我有点困惑，因为实际上没有什么能阻止我们在此之前就（几乎）做到这一点——只需将我们的 EXE 封装进 MSIX 中即可，而且这在公告发布前就已经受支持了。
+当我听到这项关于通过 Intune 部署 Win32 应用程序的重大公告时，我有点困惑，因为实际上没有什么能阻止我们在此之前就（几乎）做到这一点——只需将我们的 `.EXE` 封装进 `.MSIX` 中即可，而且这在公告发布前就已经受支持了。
 
-总体思路（重申我之前表达过的观点）是，我仍然建议首先尝试使用 MSIX 进行部署，而不是使用我们将在下一节讨论的方法。虽然将 `.EXE` 或复杂的 `.MSI` 应用程序封装进 MSIX 需要花费一些时间，但其巨大的优势在于（近乎有保证的）MSIX 包的正确卸载，更不用说增量下载和我之前提到的其他 MSIX 优势了。
+总体思路（重申我之前表达过的观点）是，我仍然建议首先尝试使用 `.MSIX` 进行部署，而不是使用我们将在下一节讨论的方法。虽然将 `.EXE` 或复杂的 `.MSI` 应用程序封装进 `.MSIX` 需要花费一些时间，但其巨大的优势在于（近乎有保证的）`.MSIX` 包的正确卸载，更不用说增量下载和我之前提到的其他 `.MSIX` 优势了。
 
-但同样，正如我之前所言，并非每个包都适合进行 MSIX 封装。
+但同样，正如我之前所言，并非每个包都适合进行 `.MSIX` 封装。
 
 Win32 部署功能有趣的是，它并非 MDM 原生支持（像 `.MSI` 或 `.MSIX` 那样），而是 Intune *在 MDM 之上*添加的功能。
 
 我知道这很奇怪，因为这两样东西（MDM 引擎和 Intune）都是来自微软的，对吧？但在内部运作上并非如此。内部有 MDM 引擎团队（他们的技术通常可供任何 MDM 厂商使用）。然后是 Intune 团队，他们使用 MDM 引擎团队提供的功能，并不时需要绕过限制和/或添加自己的功能。
 
-回到 第 1 章“使用第三方工具扩展 MDM 服务”部分，我谈到了这一点。即任何人都可以通过 MDM 平台向 Windows 本身添加一点“魔法”。我提到 Intune 已在通过 Intune 管理扩展这样做。我还提到（目前）Intune 管理扩展有两项功能：一项是运行 PowerShell 脚本，另一项就是我们要讨论的部署 Win32 应用程序。未来他们可能会添加更多功能，但目前随产品发布的就是这两项。
+回到第 1 章“使用第三方工具扩展 MDM 服务”部分，我谈到了这一点。即任何人都可以通过 MDM 平台向 Windows 本身添加一点“魔法”。我提到 Intune 已在通过 Intune 管理扩展这样做。我还提到（目前）Intune 管理扩展有两项功能：一项是运行 PowerShell 脚本，另一项就是我们要讨论的部署 Win32 应用程序。未来他们可能会添加更多功能，但目前随产品发布的就是这两项。
 
 以下是使其工作的基本步骤：
 
@@ -5124,7 +4457,7 @@ Win32 部署功能有趣的是，它并非 MDM 原生支持（像 `.MSI` 或 `.M
 
 `https://github.com/Microsoft/Intune-Win32-App-Packaging-Tool`
 
-你可以参考 图 6.46 了解如何操作。
+你可以参考图 6.46 了解如何操作。
 
 ![图 6.46 下载 Microsoft Intune Win32 内容准备工具](img/c06f046.jpg)
 
@@ -5170,7 +4503,7 @@ MaintenanceService=False
 
 并将其保存为 `c:\FirefoxSetup\install.ini`。
 
-最终结果将是在文件夹中包含这三个元素，如 图 6.47 所示。
+最终结果将是在文件夹中包含这三个元素，如图 6.47 所示。
 
 ![图 6.47 将安装程序和安装命令放在同一文件夹中](img/c06f047.jpg)
 
@@ -5178,7 +4511,7 @@ MaintenanceService=False
 
 在继续之前，你可能想要预先测试一下 `install.cmd` 和 `install.ini` 是否完全正确无误。这样，如果有任何错误或拼写错误，你现在就能发现并解决，而不必等到后续步骤。当你预检运行时，你应该能看到 Firefox 已安装，在“添加/删除程序”中 *找不到* Mozilla Maintenance Service，且 Firefox 不应在桌面上创建快捷方式。
 
-你还需要知道并准备好应用程序的产品版本。稍后当我们尝试“检测” Firefox 是否已安装在机器上时，你会明白为什么需要这个值。通过右键点击 `Firefox.exe` 本身（而非任何快捷方式），查看产品版本即可获取该值，如 图 6.48 所示。
+你还需要知道并准备好应用程序的产品版本。稍后当我们尝试“检测” Firefox 是否已安装在机器上时，你会明白为什么需要这个值。通过右键点击 `Firefox.exe` 本身（而非任何快捷方式），查看产品版本即可获取该值，如图 6.48 所示。
 
 ![图 6.48 查看已安装的 Firefox 并获取其文件版本](img/c06f048.jpg)
 
@@ -5188,13 +4521,9 @@ MaintenanceService=False
 
 `"%programfiles%\mozilla firefox\uninstall\helper.exe" -ms`
 
-你可以在 图 6.49 中看到我对其进行的测试，……没错。果不其然，执行此命令后 Firefox 被彻底卸载了。
+你可以在图 6.49 中看到我对其进行的测试，……没错。果不其然，执行此命令后 Firefox 被彻底卸载了。
 
 ![图 6.49 预测试应用程序的卸载程序](img/c06f049.jpg)
-
-
-
-
 
 ### 准备 Win32 应用程序内容
 
@@ -5206,19 +4535,19 @@ MaintenanceService=False
 *   安装文件，如 `"Firefox Setup 60.3.0esr.exe"`
 *   输出文件夹，如 `c:\firefoxout`
 
-你可以在 图 6.50 中看到此过程。
+你可以在图 6.50 中看到此过程。
 
 ![图 6.50 运行 Win32 内容准备工具](img/c06f050.jpg)
 
 **图 6.50** 运行 Win32 内容准备工具
 
-一切结束后，你应该会看到大量输出信息飞快滚过，并出现一条漂亮的“Done!!!”消息，如 图 6.51 所示。
+一切结束后，你应该会看到大量输出信息飞快滚过，并出现一条漂亮的“Done!!!”消息，如图 6.51 所示。
 
 ![图 6.51 Win32 内容准备工具完成](img/c06f051.jpg)
 
 **图 6.51** Win32 内容准备工具完成
 
-你可以在 `c:\firefoxout` 文件夹中看到打包结果，这是一个名为 `install.intunewin` 的单个文件，如 图 6.52 所示。
+你可以在 `c:\firefoxout` 文件夹中看到打包结果，这是一个名为 `install.intunewin` 的单个文件，如图 6.52 所示。
 
 ![图 6.52 Win32 内容准备工具的最终结果](img/c06f052.jpg)
 
@@ -5228,13 +4557,13 @@ MaintenanceService=False
 
 ### 将 .intunewin 文件添加到 Intune
 
-回到 Intune 和“客户端应用”，再次单击“添加”。然后在“添加应用”中，你将选择“Windows 应用 (Win32)”，如 图 6.53 所示。虽然等到你阅读此内容时，它很可能已不再处于预览状态。
+回到 Intune 和“客户端应用”，再次单击“添加”。然后在“添加应用”中，你将选择“Windows 应用 (Win32)”，如图 6.53 所示。虽然等到你阅读此内容时，它很可能已不再处于预览状态。
 
 ![图 6.53 选择 Windows 应用 (Win32) 以部署 Win32 应用](img/c06f053.jpg)
 
 **图 6.53** 选择 Windows 应用 (Win32) 以部署 Win32 应用
 
-这样做后，你将看到一系列需要配置的项目，我们将在本节中逐一介绍（请参阅 图 6.54）。
+这样做后，你将看到一系列需要配置的项目，我们将在本节中逐一介绍（请参阅图 6.54）。
 
 ![图 6.54 需要为 Win32 应用配置的项目类别](img/c06f054.jpg)
 
@@ -5259,7 +4588,7 @@ MaintenanceService=False
 
 #### 程序
 
-你可以在 图 6.55 中看到这些条目。这是你输入安装和卸载命令的地方。我喜欢将所有内容放在引号中，因为这样几乎总能更好地工作。在本示例中，我将使用我为安装创建的 `"install.cmd"` 命令，以及我为卸载摸索出的 `"%programfiles%\mozilla firefox\uninstall\helper.exe" -ms`。
+你可以在图 6.55 中看到这些条目。这是你输入安装和卸载命令的地方。我喜欢将所有内容放在引号中，因为这样几乎总能更好地工作。在本示例中，我将使用我为安装创建的 `"install.cmd"` 命令，以及我为卸载摸索出的 `"%programfiles%\mozilla firefox\uninstall\helper.exe" -ms`。
 
 ![图 6.55 指定之前创建的用于安装的 CMD 文件，以及发现的可卸载 Firefox 的字符串](img/c06f055.jpg)
 
@@ -5267,7 +4596,9 @@ MaintenanceService=False
 
 #### 要求
 
-如 图 6.56 所示，大多数项目不言自明，且许多是可选的。但你可以指定，例如，64 位包可能不应在 32 位系统上运行。你还可以指定最低 Windows 10 版本，如 1607。
+如图 6.56 所示，大多数项目不言自明，且许多是可选的。但你可以指定，例如，64 位包可能不应在 32 位系统上运行。你还可以指定最低 Windows 10 版本，如 1607。
+
+
 
 ![图 6.56 最低要求为“操作系统架构”和“最低操作系统”](img/c06f056.jpg)
 
@@ -5281,13 +4612,13 @@ MaintenanceService=False
 
 对我来说，最简单的方法是手动在机器上安装应用程序，然后四处查看什么可以作为一个好的检测规则。
 
-还记得在 图 6.48 中，我们验证了 Firefox 属性的内部版本号吗？我们看到我的内部版本号是 60.3.0。太好了！我们现在就需要这条信息。你将按 图 6.57 所示输入此信息。警告：不要像我第一次那样犯错（哎呀！），使用 Firefox 的“文件版本”。你要找的是“产品版本”，而不是“文件版本”！
+还记得在图 6.48 中，我们验证了 Firefox 属性的内部版本号吗？我们看到我的内部版本号是 60.3.0。太好了！我们现在就需要这条信息。你将按图 6.57 所示输入此信息。警告：不要像我第一次那样犯错（哎呀！），使用 Firefox 的“文件版本”。你要找的是“产品版本”，而不是“文件版本”！
 
 ![图 6.57 输入确保能检测到应用程序的信息](img/c06f057.jpg)
 
 **图 6.57** 输入确保能检测到应用程序的信息
 
-此外，由于我们使用的是纯 64 位版本的 Firefox，你将保持“在 64 位客户端上与 32 位应用关联”为“否”，这也如 图 6.57 所示。简而言之，仅当你在 64 位计算机上部署 32 位应用时，才需要将此开关切换为“是”，其他任何组合都不需要。（我第一次尝试时犯了这个错，所以别学我。）
+此外，由于我们使用的是纯 64 位版本的 Firefox，你将保持“在 64 位客户端上与 32 位应用关联”为“否”，这也如图 6.57 所示。简而言之，仅当你在 64 位计算机上部署 32 位应用时，才需要将此开关切换为“是”，其他任何组合都不需要。（我第一次尝试时犯了这个错，所以别学我。）
 
 另一种有用的检测方法是 MSI 产品代码，并确认特定的 MSI 包确实已安装在机器上。这在这里不适用，因为我们部署的是 EXE。但如果你好奇，这里有两种获取包的 MSI 产品代码的方法：
 
@@ -5304,7 +4635,7 @@ Format-Table IdentifyingNumber, Name, LocalPackage -AutoSize
 
 #### 返回代码
 
-返回代码可见于 图 6.58。此配置项预置了最常见的返回代码；但如果你碰巧知道你的应用程序可能会抛出特定值，可以在此处进行设置。
+返回代码可见于图 6.58。此配置项预置了最常见的返回代码；但如果你碰巧知道你的应用程序可能会抛出特定值，可以在此处进行设置。
 
 ![图 6.58 返回代码](img/c06f058.jpg)
 
@@ -5322,19 +4653,15 @@ Format-Table IdentifyingNumber, Name, LocalPackage -AutoSize
 
 但你不会。如果你仔细遵循了上述步骤。
 
-在我们之前配置的应用程序的“分配”边栏选项卡中，将其设为分配给所有设备的“必需”应用程序（类似于 图 6.36 所示）。
+在我们之前配置的应用程序的“分配”边栏选项卡中，将其设为分配给所有设备的“必需”应用程序（类似于图 6.36 所示）。
 
-现在该同步回 Intune 并等待奇迹发生了。首先会安装 Intune 管理扩展。然后，Firefox 应该会通过 Intune 管理扩展作为管道合理快速地安装。结果可见于 图 6.59。
-
-
-
-
+现在该同步回 Intune 并等待奇迹发生了。首先会安装 Intune 管理扩展。然后，Firefox 应该会通过 Intune 管理扩展作为管道合理快速地安装。结果可见于图 6.59。
 
 ![Figure 6.59 The Microsoft Intune Management Extension and Firefox were installed.](img/c06f059.jpg)
 
 **Figure 6.59** Microsoft Intune Management Extension 和 Firefox 已安装。
 
-现在，Intune Management Extension 服务安装完成后（如 图 6.60 所示），它会自动配置为每小时检查一次。或者，如果你在某台计算机上手动重启该服务，就会强制它再次检查。据我所知，目前没有计划更改轮询周期或使其可配置。
+现在，Intune Management Extension 服务安装完成后（如图 6.60 所示），它会自动配置为每小时检查一次。或者，如果你在某台计算机上手动重启该服务，就会强制它再次检查。据我所知，目前没有计划更改轮询周期或使其可配置。
 
 ![Figure 6.60 The (now installed) Microsoft Intune Management Extension, which is in charge of Win32 apps and PowerShell scripts](img/c06f060.jpg)
 
@@ -5346,7 +4673,7 @@ Format-Table IdentifyingNumber, Name, LocalPackage -AutoSize
 
 如果你想要，可以使用封装工具部署单个简单的 `.EXE` 或单个 `.MSI`。
 
-对于单个 `.EXE`（如 Acrobat Reader），安装命令可能类似于 `"AcroRdrDC.exe" /sAll /rs /l /msi /norestart`。而卸载命令则如 图 6.61 所示为 `"AcroRdrDC.exe" /Sall /uninstall`。
+对于单个 `.EXE`（如 Acrobat Reader），安装命令可能类似于 `"AcroRdrDC.exe" /sAll /rs /l /msi /norestart`。而卸载命令则如图 6.61 所示为 `"AcroRdrDC.exe" /Sall /uninstall`。
 
 ![Figure 6.61 How to install and uninstall the AcroReader .EXE](img/c06f061.jpg)
 
@@ -5356,25 +4683,30 @@ Format-Table IdentifyingNumber, Name, LocalPackage -AutoSize
 
 ![](img/c06uf018.jpg)
 
-Win32 部署故障排除始于一个问题：你的计算机是否如 图 6.59 和 6.60 所示安装了 Intune Management Extension 服务？如果该服务缺失，意味着你的任何 Win32 应用程序部署都将无法工作。这是 Win32 部署方法进入系统的唯一桥梁。
+Win32 部署故障排除始于一个问题：你的计算机是否如图 6.59 和 6.60 所示安装了 Intune Management Extension 服务？如果该服务缺失，意味着你的任何 Win32 应用程序部署都将无法工作。这是 Win32 部署方法进入系统的唯一桥梁。
 
 然后，如果你看到了 Intune Management Extension，可以认为 Intune 至少正在尝试下载文件。之后，在 `c:\ProgramData\Microsoft\IntuneManagementExtension\Logs` 中有一个名为 `IntuneManagementExtension.log` 的不错的日志（可能还有其他日志）。
 
 然而，除非你使用 CMTrace 工具（属于 SCCM 客户端工具的一部分，可在任何 SCCM 部署中找到），否则该日志有点难以阅读。什么？你没有 SCCM，也不想为了这个小工具专门搭建 SCCM？好吧，CMTrace 仍然是 System Center 2012 R2 Configuration Manager Toolkit 的一部分，可从 `https://www.microsoft.com/en-us/download/details.aspx?id=50012` 下载。详细信息请访问 `https://docs.microsoft.com/sccm/core/support/tools`。
 
-在 图 6.62 中，你可以看到我在 CMTrace 和记事本中查看 `IntuneManagementExtension.log` 的情况。
+在图 6.62 中，你可以看到我在 CMTrace 和记事本中查看 `IntuneManagementExtension.log` 的情况。
 
 ![Figure 6.62 The IntuneManagmentExtension.log in CMTrace and Notepad](img/c06f062.jpg)
 
-**Figure 6.62** CMTrace 和记事本中的 `IntuneManagmentExtension.log`
+**Figure 6.62** CMTrace 和记事本中的 `IntuneManagementExtension.log`
 
 以下是我推荐的 Win32 部署资源：
 
 *   从 Win32 应用管理文档开始：`https://docs.microsoft.com/en-us/intune/apps-win32-app-management`。
+
 *   继续阅读 Intune Management Extension 文档：`https://docs.microsoft.com/en-us/intune/intune-management-extension`。
+
 *   如果你在 Win32 和/或 Intune Management Extension 方面遇到困难，MVP Oliver Kieselbach 的三部分系列文章有一些极好的信息可能帮你化险为夷：`https://oliverkieselbach.com/2017/11/29/deep-dive-microsoft-intune-management-extension-powershell-scripts/`（以及他的第 2 部分和第 3 部分）。
+
 *   另一篇关于 Win32 应用程序和 Intune 的文章可在以下网址找到：`http://www.scconfigmgr.com/2018/09/24/deploy-win32-applications-with-microsoft-intune/`。
+
 *   2018 年 Ignite 大会关于此主题的演讲可在 YouTube 上搜索关键字“BRK3285”找到。
+
 *   此外，还有一种方法可以将 Win32 应用程序部署日志拉回 Intune，以便你可以从“现场”的各种计算机上查看出了什么问题。有关这些详细信息（和其他应用程序安装故障排除步骤），请查看 `https://docs.microsoft.com/en-us/intune/troubleshoot-app-install`。
 
 ## 使用 MDM 服务部署脚本
@@ -5396,9 +4728,13 @@ Win32 部署故障排除始于一个问题：你的计算机是否如 图 6.59 �
 我发现了一些示例脚本（来自其他 MVP 聪明人，如 Aaron Parker 和 Eric Haavarstein），它们可以做到这一点：
 
 *   安装最新 Notepad++：`https://xenappblog.com/2018/download-and-install-latest-notepad/`
+
 *   安装最新 Citrix Receiver：`https://stealthpuppy.com/deploy-citrix-receiver-intune/#.W3I6AOhJFbc`
+
 *   安装最新 Google Chrome Enterprise：`https://xenappblog.com/2018/download-and-install-latest-google-chrome-enterprise/`
+
 *   安装最新 Mozilla Firefox ESR：`https://xenappblog.com/2018/download-and-install-latest-mozilla-firefox/`
+
 *   一堆有趣的脚本：`https://github.com/haavarstein/Applications/tree/master/Misc`
 
 这些脚本有时被称为*常青*脚本，因为它们运行时总是下载最新的更新源。
@@ -5406,10 +4742,6 @@ Win32 部署故障排除始于一个问题：你的计算机是否如 图 6.59 �
 ### 使用 Intune 部署脚本（部署软件的脚本）
 
 从好的方面来看，这是一种独特的方式，只需将计算机指向某个应用程序的源，当计算机“诞生”或从未运行过该脚本时，bingo！这些计算机将神奇地自动获得应用程序的最新版本！从坏的方面来看，你某种程度上失去了测试应用程序最新版本**然后**再推出的能力。
-
-
-
-
 
 ## PowerShell 脚本部署的挑战与局限
 
@@ -5421,13 +4753,13 @@ Win32 部署故障排除始于一个问题：你的计算机是否如 图 6.59 �
 
 ### 在 Intune 中部署脚本
 
-在 Intune 中，点击 **Device Configuration** ➢ **PowerShell scripts**。然后选择 **Add PowerShell Script**。脚本需要采用 `.PS1` 格式。上传并按 图 6.63 所示进行配置。你唯一需要做的选择是：是否以 System 或 User 身份运行脚本，以及如果你的脚本已签名，是否希望 Intune 仅在签名有效时运行脚本。图 6.63 中显示的默认值 `No` 和 `No`，对于使用我之前推荐的脚本进行测试来说已经足够了。
+在 Intune 中，点击 `Device Configuration` ➢ `PowerShell scripts`。然后选择 `Add PowerShell Script`。脚本需要采用 `.PS1` 格式。上传并按图 6.63 所示进行配置。你唯一需要做的选择是：是否以 System 或 User 身份运行脚本，以及如果你的脚本已签名，是否希望 Intune 仅在签名有效时运行脚本。图 6.63 中显示的默认值 `No` 和 `No`，对于使用我之前推荐的脚本进行测试来说已经足够了。
 
 ![Figure 6.63 Uploading and configuring the Chrome evergreen download script](img/c06f063.jpg)
 
 **Figure 6.63** Uploading and configuring the Chrome evergreen download script
 
-你可以在 图 6.64 中看到我通过 Intune 运行“Install Google Chrome”和“Install Citrix Receiver”PowerShell 脚本的结果。
+你可以在图 6.64 中看到我通过 Intune 运行“Install Google Chrome”和“Install Citrix Receiver”PowerShell 脚本的结果。
 
 ![Figure 6.64 See the applications installed after Intune deploys the PowerShell scripts.](img/c06f064.jpg)
 
@@ -5438,7 +4770,9 @@ Win32 部署故障排除始于一个问题：你的计算机是否如 图 6.59 �
 关于 Microsoft Intune Management Extension 执行 PowerShell 脚本的一些精彩深度解析信息，可以在以下页面找到：
 
 *   `https://oliverkieselbach.com/2017/11/29/deep-dive-microsoft-intune-management-extension-powershell-scripts/`
+
 *   `https://oliverkieselbach.com/2018/02/12/part-2-deep-dive-microsoft-intune-management-extension-powershell-scripts/`
+
 *   这篇文章还有第三部分，我在讨论 Win32 部署方法的资源时已经提到过。第三部分位于 `https://oliverkieselbach.com/2018/10/02/part-3-deep-dive-microsoft-intune-management-extension-win32-apps/`。
 
 从 Oliver 的调查中有几个有趣的收获。
@@ -5448,11 +4782,16 @@ Win32 部署故障排除始于一个问题：你的计算机是否如 图 6.59 �
 PowerShell 脚本在放弃并失败之前有三次尝试机会，之后不会再重试。如果你的 PowerShell 脚本失败、挂起等，我认为有两种变通方法：
 
 *   **选项 1**：修复脚本，然后删除分发原始脚本的配置文件并重新部署。这行得通，因为 Intune 会将其视为新脚本。
+
 *   **选项 2**：修改注册表项 `HKLM\SOFTWARE\Microsoft\IntuneManagementExtension\Policies\{UserGUID}\{ScriptGUID}\DownloadCount` 和 `Result`。你可以将 `DownloadCount` 设回 `0`，并删除 `Result` 中的值（留空字符串）。然后重启 Intune 管理服务，它应该会尝试重试。建议在测试期间使用此第二种选项。例如，假设你有一个清理硬盘的脚本，但它反复失败。好吧，在你将其大规模推送到 10,000 台机器之前，务必确保它在一两台机器上正常工作，如果测试期间遇到麻烦，你现在知道如何重置重试计数了。
 
 之后你就可以放心地推送到 10,000 台机器了。
 
 ### Intune Management Extension 的局限性
+
+
+
+# PowerShell 功能存在一些真正的局限性
 
 PowerShell 功能存在一些真正的局限性（不仅在于部署软件，而是各方面）。以下是 Intune PowerShell 功能当前的局限性列表（可能会随时间变化）。
 
@@ -5486,22 +4825,19 @@ Microsoft 会克服这些局限性吗？也许吧。
 *   你可以对脚本进行排序。
 *   它利用项目级定位 (ILT) 来检测条件何时为真（而不是让你尝试将其烘焙进脚本中）。
 
-PolicyPak Scripts 最大的超能力是部署“On Apply”（应用时）和“On Revert”（还原时）脚本的能力。例如，在 图 6.65 中，我在脚本应用时将快捷方式放置在桌面上。
+PolicyPak Scripts 最大的超能力是部署“On Apply”（应用时）和“On Revert”（还原时）脚本的能力。例如，在图 6.65 中，我在脚本应用时将快捷方式放置在桌面上。
 
 ![Figure 6.65 PolicyPak Scripts lets you deploy batch, PowerShell, VB Script, or JavaScript type scripts.](img/c06f065.jpg)
 
 **Figure 6.65** PolicyPak Scripts lets you deploy batch, PowerShell, VB Script, or JavaScript type scripts.
 
-在 图 6.66 中，我配置同一策略在策略**不再适用**时运行脚本以删除快捷方式。
+在图 6.66 中，我配置同一策略在策略**不再适用**时运行脚本以删除快捷方式。
 
 ![Figure 6.66 You can decide what script to run when a policy no longer applies.](img/c06f066.jpg)
 
 **Figure 6.66** You can decide what script to run when a policy no longer applies.
 
-并且，“On Apply”脚本可以设置为 Always（始终）、Once（一次）或 Once when forced（强制时一次），如 图 6.67 所示。这些设置很实用，具体取决于你的情况，比如用户不断删除你的快捷方式，或进行你希望始终重新应用的更改。
-
-
-
+并且，“On Apply”脚本可以设置为 Always（始终）、Once（一次）或 Once when forced（强制时一次），如图 6.67 所示。这些设置很实用，具体取决于你的情况，比如用户不断删除你的快捷方式，或进行你希望始终重新应用的更改。
 
 ![Figure 6.67 When to apply or reapply scripts with PolicyPak Scripts Manager](img/c06f067.jpg)
 
@@ -5598,7 +4934,7 @@ PolicyPak File Delivery Manager 下载完文件后，比如像前面的例子中
 
 # Chapter 7
 
-企业状态漫游和 OneDrive for Business
+## 企业状态漫游和 OneDrive for Business
 
 如果你爱一样东西，就把它放自由。
 
@@ -5615,9 +4951,6 @@ PolicyPak File Delivery Manager 下载完文件后，比如像前面的例子中
 
 都无所谓。
 
-
-
-
 ![image](img/tip.jpg) 如果你想了解有趣的硬盘灾难案例，请查看此链接：
 
 `https://www.itnews.com.au/news/kroll-ontrack-dishes-out-top-ten-data-disasters-161908`
@@ -5629,13 +4962,9 @@ PolicyPak File Delivery Manager 下载完文件后，比如像前面的例子中
 OneDrive 本身拥有一些非常引人注目的功能和优势。我最喜欢的有：
 
 *   **OneDrive 按需文件**：用户无需在设备上存储 100% 的项目，而是可以在本地拥有完全可搜索的占位符文件，这些文件不占用磁盘空间。文件一旦被打开，就会同步到本地设备，从而确保始终拥有同步的本地版和云端版。如果你愿意，甚至可以选择让某个文件始终在本地设备上可用，以应对没有网络连接的情况。这对于 Surface Go 等存储空间仅 64GB 的移动及准移动设备来说非常棒。本章稍后我将演示此功能。
-
 *   **文件还原**：恶意软件令人头疼。当用户点击受感染的文件时，它会开始级联加密硬盘上的所有文件、每个驱动器号，以及它能触及的“所有东西”。OneDrive 的文件还原功能允许用户（或管理员）点击发起“时间点还原”，将文件从灾难发生前的时间点“起死回生”。本章稍后我将演示此功能。
-
 *   **文件预览器**：如果文件在 OneDrive 中，市场部的 Jane 如何知道文件长什么样？例如，如果 Jane 看到 `.XD` 文件类型，她能知道里面是什么吗？借助 OneDrive，内置了预览器。这样 Jane 只需点击 `.XD` 文件……bingo……它就是 Adobe XD 文件的线框预览（来自 Adobe XD，一个她从未听说过的真实程序，`https://helpx.adobe.com/xd/help/faq.html`）。但至少她无需预装 Adobe XD 就能大致了解文件内容。不错。OneDrive 目前支持超过 400 种不同的文件预览器，未来还会增加更多。
-
 *   **告别驱动器映射**：OneDrive 构建于 SharePoint 之上（稍后我会详细解释）。因此，Microsoft 提供了一个工具，让你能够吸纳现有的文件共享并将其转存到 SharePoint 文档库中。目标？不再需要驱动器号，只需使用 OneDrive 访问文件（以前这些文件通过驱动器号访问）。
-
 *   OneDrive 还拥有令人难以置信、震撼人心的人工智能功能。用户可以进行通用搜索，例如搜索单词 `school`，任何包含单词 `school` 的图片（只要清晰到足以识别）以及任何包含单词 `school` 的视频都会被找出来。简直太震撼了。
 
 当然，我们首先得把数据迁移过去，这正是本章的重点。在下一章，我们将讨论获取新设备，届时云端的所有文件和状态将再次出现，仿佛什么都没发生过。
@@ -5673,6 +5002,8 @@ OneDrive 本身拥有一些非常引人注目的功能和优势。我最喜欢�
 
 稍后我们会介绍，OneDrive 可以通过多种方式部署。
 
+
+
 目前，我不希望你盲目冲动地部署 OneDrive 客户端。
 
 但我确实需要你准备一台安装了最新版 OneDrive 客户端的机器，以便提取一些关键文件。
@@ -5704,8 +5035,6 @@ OneDrive 客户端的大部分管理都是通过组策略完成的。
 
 ### 获取 OneDrive 许可（随 Office 365）
 
-
-
 由于 OneDrive for Business 随 Office 365 提供，具体取决于你在本书开篇是如何起步的，你可能拥有 Office 365，也可能没有。如果没有，且你只想学学门道，那得花点钱。
 
 每位用户每月一杯星巴克拿铁的钱。
@@ -5715,7 +5044,6 @@ OneDrive 客户端的大部分管理都是通过组策略完成的。
 如果你正在跟随本书学习，只是想体验 OneDrive 的运作方式，那就为两个用户购买以便跟随本章示例操作。以下是购买对象：
 
 *   任意你喜欢的本地 AD 用户，如 `EastSalesUser1`。请记住，回在第 2 章“设置 Azure AD 和 MDM”中，你使用了 `Azure AD Connect` 将本地 AD 账户同步到 Azure AD。
-
 *   任意纯 Azure AD 用户，如 `Jack Tors`。请记住，Jack 是“完全诞生于云端”。他完全没有任何本地用户账户。而像他这样纯在 Azure AD 中创建的账户不会向后同步到本地 AD。Jack 彻头彻尾是云端用户！
 
 如果你不确定哪些账户可能是合适的候选者，请查看第 2 章中的 `图 2.49`。计划是：你将把 Office 365 Business Essentials 分配给一位来源为 Windows Server AD 的用户，把另一个许可证分配给一位来源为 Azure Active Directory 的用户。同样，请参阅 `图 2.49` 以回顾我的意思。
@@ -5725,11 +5053,8 @@ OneDrive 客户端的大部分管理都是通过组策略完成的。
 为这两类账户各分配一个 Azure 账户和一个 Office 365 Business Essentials 许可证，将使我们能够探索以下场景：
 
 *   对于 `EastSalesUser1`，你可以模拟拥有一台旧机器（Windows 7 或 Windows 10），并为他提供一台新（或较新）的 Windows 10 机器，让所有文件神奇地出现在你的本地用户群面前。
-
 *   对于 `Jack Tors`，你可以模拟完全没有本地 AD 的环境。让 Jack 登录任何纯 MDM 注册的机器，并从任何地方获取文件。
-
 *   第三个场景是 `EastSalesUser1` 完全脱离其本地 Active Directory，但仍能从任何地方获取其文件。
-
 *   对于 `Jack Tors` 或 `EastSalesUser1`，关键的 Windows 10 操作系统设置和保存在 Windows 通用应用程序 (UWP) 中的数据将随他们漫游，每当他们登录到一台新电脑时。
 
 提醒一下，起初 `EastSalesUser1` 必须登录到 `DJ++` 机器。同样，你在第 2 章中设置了 `DJ++` 机器，当时你现有的本地域加入机器使用组策略将自身引导加入 Azure 并注册到 MDM。
@@ -5763,15 +5088,10 @@ OneDrive 客户端的大部分管理都是通过组策略完成的。
 那么，启用 ESR 后，究竟有哪些内容会在计算机间漫游？列表如下：
 
 *   UWP 应用程序数据（前提是应用程序支持；有些支持，有些不支持）
-
 *   操作系统设置和个性化（如桌面、图标等）
-
 *   辅助功能
-
 *   语言设置
-
 *   Edge 浏览器设置
-
 *   凭据
 
 然而，某些用户可能同时拥有消费者 Microsoft 账户和企业 Azure 账户，并在**同一台机器**上使用这两个账户。什么？普通用户使用你 IT 部门的电脑访问 Windows 消费者商店下载游戏或绘图应用？请看图 7.5 了解用户如何做到这一点的示例。
@@ -5803,9 +5123,6 @@ ESR 仅面向企业。
 点击“保存”，搞定。你已将其开启。
 
 快速提示：Windows 10 电脑需要重启，每位用户需再次登录，魔法才会生效。此外，如果这不立即生效，请等待过夜后再试。
-
-
-
 
 首先尝试做什么？我建议以 `EastSalesUser1` 身份登录到你的 DJ++ 机器，并将桌面背景更改为另一张内置图片，如 图 7.7 所示。
 
@@ -5890,18 +5207,17 @@ fsLogix 技术修复了 VDI 固有的一些关键问题，可能是漫游配置�
 
 话虽如此，如果你不读也完全没关系。我不会依赖你已经读过它；它只是对我们的谈话有点有用的预先铺垫。
 
+
+
 所以，只是为了设定你的期望，本章不会详尽涵盖 OneDrive 的所有内容，而是讨论我认为你需要以最快速度入门的项目。例如，我不会涉及以下任何内容：
 
 *   如何在手机等设备上推出或使用任何 OneDrive 应用程序
 *   如何在 Mac 上推出或使用 OneDrive
 *   如何在推出后让你的用户接受培训和/或采用 OneDrive。作为一个快速提示，最终用户应前往 `https://aka.ms/learnonedrive`、`https://Aka.ms/productivitylibrary` 和 `https://docs.microsoft.com/en-us/onedrive/`（在“最终用户”部分）获取一些 OneDrive 教程，一旦你一切就绪并开始运行。
 
+我也不会介绍旧版的 `Groove.exe` 同步客户端，虽然可能存在一些特殊情况，你仍需使用它。如果你使用的是 SharePoint 2016 或更早版本的本地部署，则仍需维护 `Groove.exe` 客户端。
 
-
-
-我也不会介绍旧版的“Groove.exe”同步客户端，虽然可能存在一些特殊情况，你仍需使用它。如果你使用的是 SharePoint 2016 或更早版本的本地部署，则仍需维护 Groove.exe 客户端。
-
-早些时候，当我让你预先授予 Office 365 Business Essentials 许可证时（回顾 图 7.3），*未显示*的是，OneDrive 甚至未列在构成 Office 365 的迷你许可证子许可证中。（为了好玩，去看看构成 Office 365 的子许可证。*Kaizala for Office 365* 是什么鬼？我以前不知道！我不得不去查了一下！）
+早些时候，当我让你预先授予 Office 365 Business Essentials 许可证时（回顾图 7.3），*未显示*的是，OneDrive 甚至未列在构成 Office 365 的迷你许可证子许可证中。（为了好玩，去看看构成 Office 365 的子许可证。`Kaizala for Office 365` 是什么鬼？我以前不知道！我不得不去查了一下！）
 
 然而，当该列表展开时，SharePoint 位于子列表中；只是在底部。而 OneDrive 实际上是 SharePoint 的一部分。换句话说，当用户获得 SharePoint 许可证时，*这*才开启了他们使用 OneDrive 的能力，这就是为什么你没看到它作为子许可证列出的原因。
 
@@ -5926,7 +5242,7 @@ fsLogix 技术修复了 VDI 固有的一些关键问题，可能是漫游配置�
 
 ### 通过管理中心管理 OneDrive 和 SharePoint
 
-对于 OneDrive 的云端管理，你需要找到它的管理中心。如 图 7.8 所示，在“管理中心” ➢ OneDrive 下找到它。
+对于 OneDrive 的云端管理，你需要找到它的管理中心。如图 7.8 所示，在“管理中心” ➢ OneDrive 下找到它。
 
 ![Figure 7.8 Locating OneDrive admin center](img/c07f008.jpg)
 
@@ -5934,13 +5250,13 @@ fsLogix 技术修复了 VDI 固有的一些关键问题，可能是漫游配置�
 
 你也可以直接跳转到 OneDrive 的管理控制台 `admin.onedrive.com`。
 
-稍后我们还将使用 SharePoint 管理中心，所以我在这里也在 图 7.8 中指出了它的位置。请记住，除非你像我之前那样至少分配了一个 Office 365 许可证，否则你不会在“管理中心”看到 SharePoint 或 OneDrive。
+稍后我们还将使用 SharePoint 管理中心，所以我在这里也在图 7.8 中指出了它的位置。请记住，除非你像我之前那样至少分配了一个 Office 365 许可证，否则你不会在“管理中心”看到 SharePoint 或 OneDrive。
 
 暂时这里没什么可做的；只是为将来参考指出来。
 
 ### 按用户管理设置
 
-管理 OneDrive 设置的另一个重要位置是按用户管理，如 图 7.9 所示。你可以在 Office 管理中心内找到它们。例如，你可以更改“外部共享”，比如仅针对某一个人移除匿名共享。
+管理 OneDrive 设置的另一个重要位置是按用户管理，如图 7.9 所示。你可以在 Office 管理中心内找到它们。例如，你可以更改“外部共享”，比如仅针对某一个人移除匿名共享。
 
 ![Figure 7.9 The per-user OneDrive settings](img/c07f009.jpg)
 
@@ -5972,7 +5288,7 @@ fsLogix 技术修复了 VDI 固有的一些关键问题，可能是漫游配置�
 
 `https://fabrikam1000.SharePoint.com/SitePages/Home.aspx`
 
-到达那里后，如 图 7.10 所示，点击“网站内容” ➢ 新建 ➢ “文档库”。
+到达那里后，如图 7.10 所示，点击“网站内容” ➢ 新建 ➢ “文档库”。
 
 给它起个名字，比如 ZDrive、YDrive，或任何你喜欢的名字。记住，我的目标是替换现有的驱动器号，所以我会想用一个让我的用户熟悉的名字。你可以使用任何合理的名字。
 
@@ -6001,7 +5317,7 @@ fsLogix 技术修复了 VDI 固有的一些关键问题，可能是漫游配置�
 
 我将使用图形界面版。
 
-我发现从我的 Windows 10 管理工作站运行效果很好。下载是一个小安装程序，随后会下载一个较大的安装程序。你可以在 图 7.11 中看到小安装程序，完成并运行后，你可以在 图 7.12 中看到我提供 Frank Rizzo 的凭据给程序以启动整个过程。
+我发现从我的 Windows 10 管理工作站运行效果很好。下载是一个小安装程序，随后会下载一个较大的安装程序。你可以在图 7.11 中看到小安装程序，完成并运行后，你可以在图 7.12 中看到我提供 Frank Rizzo 的凭据给程序以启动整个过程。
 
 ![Figure 7.11 The download of the SharePoint Migration Tool](img/c07f011.jpg)
 
@@ -6011,56 +5327,53 @@ fsLogix 技术修复了 VDI 固有的一些关键问题，可能是漫游配置�
 
 **图 7.12** 使用 Frank 的凭据运行 SharePoint 迁移工具
 
-该过程非常简单。选择文件共享的内容（如 图 7.13 所示），
+该过程非常简单。选择文件共享的内容（如图 7.13 所示），
 
 ![Figure 7.13 Using the SharePoint Migration Tool for a whole file share](img/c07f013.jpg)
 
 **图 7.13** 使用 SharePoint 迁移工具迁移整个文件共享
 
-然后，如 图 7.14 所示，给它你的本地共享名称，如 `\\dc2016\share`。
-
-
-
+然后，如图 7.14 所示，给它你的本地共享名称，如 `\\dc2016\share`。
 
 ## 使用 SharePoint 迁移工具迁移本地文件共享
 
 ![Figure 7.14 Selecting your on-prem share](img/c07f014.jpg)
 
-**Figure 7.14** 选择您的本地共享
+**图 7.14** 选择您的本地共享
 
-接下来，如 **Figure 7.15** 所示，您将选择要迁移内容的 SharePoint Online 站点（会自动填充）并选择一个文档库（大多数情况下只需选择 Documents）。
+接下来，如图 7.15 所示，您将选择要迁移内容的 SharePoint Online 站点（会自动填充）并选择一个文档库（大多数情况下只需选择 Documents）。
 
 ![Figure 7.15 Selecting the SharePoint Online site and document library](img/c07f015.jpg)
 
-**Figure 7.15** 选择 SharePoint Online 站点和文档库
+**图 7.15** 选择 SharePoint Online 站点和文档库
 
-如果需要，还有一些基本和高级设置（未显示）。例如，您可以仅执行扫描（这是一种验证，而不是实际执行工作），以及限制上传的文件类型（例如，不上传 .MP3 文件）。
+如果需要，还有一些基本和高级设置（未显示）。例如，您可以仅执行扫描（这是一种验证，而不是实际执行工作），以及限制上传的文件类型（例如，不上传 `.MP3` 文件）。
 
-按下 Start 后，您将看到 **Figure 7.16** 所示内容。
+按下 Start 后，您将看到图 7.16 所示内容。
 
 ![Figure 7.16 The SharePoint Migration Tool scans, then copies the files from the source to the destination.](img/c07f016.jpg)
 
-**Figure 7.16** SharePoint 迁移工具扫描，然后将文件从源复制到目标。
+**图 7.16** SharePoint 迁移工具扫描，然后将文件从源复制到目标。
 
-全部完成后，您将看到 **Figure 7.17** 所示内容。
+全部完成后，您将看到图 7.17 所示内容。
 
 ![Figure 7.17 On-Prem file share to SharePoint migration completed](img/c07f017.jpg)
 
-**Figure 7.17** 本地文件共享到 SharePoint 的迁移已完成
+**图 7.17** 本地文件共享到 SharePoint 的迁移已完成
 
 现在您在 SharePoint 上有了内容，可以通过 OneDrive 查看。
 
-如果您返回 `fabrikam1000.SharePoint.com` 并点击 ZDrive 站点，应该能看到文档已成功迁移上去。还要注意 **Figure 7.18** 中显示的 Sync 按钮，我们稍后会用到。暂时不要点击它；只需知道它在那里。
+如果您返回 `fabrikam1000.SharePoint.com` 并点击 ZDrive 站点，应该能看到文档已成功迁移上去。还要注意图 7.18 中显示的 Sync 按钮，我们稍后会用到。暂时不要点击它；只需知道它在那里。
 
 ![Figure 7.18 Your files have been migrated up using the SharePoint Migration Tool. The Sync button will expose the library ID used a bit later.](img/c07f018.jpg)
 
-**Figure 7.18** 您的文件已使用 SharePoint 迁移工具迁移上去。Sync 按钮稍后将显示库 ID。
+**图 7.18** 您的文件已使用 SharePoint 迁移工具迁移上去。Sync 按钮稍后将显示库 ID。
 
-您可能不需要立即更改任何内容，但如果您想查看 ZDrive 库的权限，请选择“Site contents”，右键单击并选择 Settings（如 **Figure 7.19** 所示），然后选择 Permissions for this document library（未显示）。
+您可能不需要立即更改任何内容，但如果您想查看 ZDrive 库的权限，请选择“Site contents”，右键单击并选择 Settings（如图 7.19 所示），然后选择 Permissions for this document library（未显示）。
 
 ![Figure 7.19 Right-click over your library and select Settings to set permissions.](img/c07f019.jpg)
 
-**Figure 7.19** 右键单击您的库并选择 Settings 以设置权限。
+**图 7.19** 右键单击您的库并选择 Settings 以设置权限。
 
 您可能会想：“这很棒，Jeremy，但我不想让 123GB 的数据自动下载并落在我的机器上。”稍后我们将设置 Files On-Demand 来防止这种情况发生。（这也是我们暂缓安装 OneDrive 客户端的原因。）
 
@@ -6080,19 +5393,19 @@ fsLogix 技术修复了 VDI 固有的一些关键问题，可能是漫游配置�
 
 您要查找的策略设置同时存在于用户端和计算机端。这意味着，您可以指定此设置影响计算机（从而影响该计算机上的所有用户）或特定用户（无论他们漫游到何处）。
 
-我将在计算机端进行演示：`Computer Configuration` ➢ `Administrative Templates` ➢ `OneDrive` ➢ **Configure team site libraries to sync automatically**。示例请参见 **Figure 7.20**。
+我将在计算机端进行演示：`Computer Configuration` ➢ `Administrative Templates` ➢ `OneDrive` ➢ **Configure team site libraries to sync automatically**。示例请参见图 7.20。
 
 ![Figure 7.20 Use the Configure team site libraries to sync automatically policy setting to specify the library ID in the Value section.](img/c07f020.jpg)
 
-**Figure 7.20** 使用“Configure team site libraries to sync automatically”策略设置在 Value 部分指定库 ID。
+**图 7.20** 使用“Configure team site libraries to sync automatically”策略设置在 Value 部分指定库 ID。
 
 您可以看到我输入了一个值名称（顺便说一句，用户并不真正使用或看到它，但最好还是与库名称匹配）。我还输入了一个值。一个代表我的租户和库 ID 的超长字符串。我是怎么得到的呢？
 
-在 Sync 按钮下方（我们之前在 SharePoint 的库信息中见过），您可以点击“Copy library ID”，如 **Figure 7.21** 所示。仅此而已。这就是您需要的*此库*的秘密握手。
+在 Sync 按钮下方（我们之前在 SharePoint 的库信息中见过），您可以点击“Copy library ID”，如图 7.21 所示。仅此而已。这就是您需要的*此库*的秘密握手。
 
 ![Figure 7.21 Grabbing the library ID](img/c07f021.jpg)
 
-**Figure 7.21** 获取库 ID
+**图 7.21** 获取库 ID
 
 该字符串看起来如下所示：
 
@@ -6103,13 +5416,13 @@ tenantId=2d8180fa%abcde%2D42f5%2Db95c%2abcdeabcdbfd0&siteId=%7B55760d6e%
 2DABCDF001F7%7D&webUrl=https%3A%2F%2Ffabrikam1000%2ESharePoint%2Ecom&version=1
 ```
 
-在 Group Policy 中，只需为您想通过 OneDrive 公开的每个库放置一行，如 **Figure 7.22** 所示。
+在 Group Policy 中，只需为您想通过 OneDrive 公开的每个库放置一行，如图 7.22 所示。
 
 ![Figure 7.22 The Registry item that is created for each Team Site Automounted library](img/c07f022.jpg)
 
-**Figure 7.22** 为每个 Team Site Automount 库创建的注册表项
+**图 7.22** 为每个 Team Site Automount 库创建的注册表项
 
-结果如 **Figure 7.22** 所示。即，在 `HKLM\Software\Policies\Microsoft\OneDrive\TennantAutoMount` 处创建了一个注册表项。
+结果如图 7.22 所示。即，在 `HKLM\Software\Policies\Microsoft\OneDrive\TennantAutoMount` 处创建了一个注册表项。
 
 ### 在 MDM 中设置 Team Site Automount
 
@@ -6119,22 +5432,20 @@ tenantId=2d8180fa%abcde%2D42f5%2Db95c%2abcdeabcdbfd0&siteId=%7B55760d6e%
 
 您需要的设置在计算机端只是一个单纯的注册表设置。
 
-目前尚无（且到您阅读本书时肯定会有、且最简单的）Intune 中的 Administrative Template 项来配置 Team Site Automount。OneDrive 的 Administrative Templates 可见于 **Figure 7.23**。确实，我们稍后会用到其中一些。但正如您所见，目前没有任何设置与我们在 Group Policy 中看到的 **Configure team site libraries to sync automatically** 设置相对应。
+目前尚无（且到您阅读本书时肯定会有、且最简单的）Intune 中的 Administrative Template 项来配置 Team Site Automount。OneDrive 的 Administrative Templates 可见于图 7.23。确实，我们稍后会用到其中一些。但正如您所见，目前没有任何设置与我们在 Group Policy 中看到的 **Configure team site libraries to sync automatically** 设置相对应。
+
+
 
 ![Figure 7.23 The Intune Administrative Template settings for OneDrive](img/c07f023.jpg)
 
 **Figure 7.23** Intune 中 OneDrive 的 Administrative Template 设置
 
-如果我判断有误，等您读到这儿时 Intune 中仍没有 **Configure team site libraries to sync automatically** 设置，请记住，有无数种方法可以将任何“普通注册表设置”推送到 Intune（或任何其他 MDM 服务）。以下是几种选择：
+如果我判断有误，等您读到这儿时 Intune 中仍没有 `Configure team site libraries to sync automatically` 设置，请记住，有无数种方法可以将任何“普通注册表设置”推送到 Intune（或任何其他 MDM 服务）。以下是几种选择：
 
 *   以下是一个脚本，可用于通过任何 MDM 服务执行 Team Site Automount：
     `https://www.cyberdrain.com/automatically-mapping-SharePoint-sites-in-the-onedrive-for-business-client/`
 *   您可以引入 OneDrive ADMX，并应用您在 **Chapter 3** “MDM Profiles, Policies, and Groups” 中学到的知识，引入 OneDrive ADMX 并创建自定义 OMA-URI。此博客提供了所有详细信息：
     `https://deploywindows.com/2018/11/05/ingest-onedrive-group-policies-manage-settings-in-an-awesome-intune-way/`
-
-
-
-
 *   您可以使用 PolicyPak 管理模板或 PolicyPak 首选项来配置该设置，并通过 MDM 进行交付（更多内容请参见第 11 章，“MDM 附加工具：免费与付费”）。
 
 但正如我所说，我打赌所有基于组策略的 OneDrive 设置最终都会进入 Intune 的管理模板功能中，希望等您读到这本书时已经实现了。
@@ -6182,7 +5493,7 @@ OneDrive 存储（及后端服务）只是这桩“婚姻”的一方。
 
 **图 7.24** 显示发布环的 OneDrive 同步客户端页面
 
-默认情况下，任何 OneDrive 同步客户端都会尝试将自身更新到最新的生产环。OneDrive 同步客户端始终在检查可用更新。当 OneDrive 同步客户端运行时，它每 24 小时执行一次此操作。但它还有一个备选方案：有一个 Windows 10 计划任务也会更新 OneDrive 同步客户端（即使 OneDrive 已关闭且未启动）。您可以在此处阅读有关 OneDrive 同步客户端更新流程（关于发布环）的更多信息：`https://docs.microsoft.com/en-us/onedrive/sync-client-update-process`.
+默认情况下，任何 OneDrive 同步客户端都会尝试将自身更新到最新的生产环。OneDrive 同步客户端始终在检查可用更新。当 OneDrive 同步客户端运行时，它每 24 小时执行一次此操作。但它还有一个备选方案：有一个 Windows 10 计划任务也会更新 OneDrive 同步客户端（即使 OneDrive 已关闭且未启动）。您可以在此处阅读有关 OneDrive 同步客户端更新流程（关于发布环）的更多信息：`https://docs.microsoft.com/en-us/onedrive/sync-client-update-process`。
 
 话虽如此，您可能想要使用最保守的企业环，而不是功能更多、经过更多消费者测试但不一定经过充分实战检验的生产环。
 
@@ -6207,8 +5518,6 @@ OneDrive for Windows 10 默认始终按用户安装；这有点不寻常。按�
 这种按用户模式的缺点是：当多人使用同一台机器，或机器为 RDS 或 VDI 时。问题在于现在您有了大量 OneDrive 实例，不同用户可能安装了不同版本，以及一堆其他问题……所有这些都使用同一台核心机器。
 
 因此，OneDrive 团队宣布了即将推出的“按计算机”安装 OneDrive，专门针对这些情况。它刚在本书付印时发布，所以我无法提前测试。也就是说，关于它的文档可以在 `https://docs.microsoft.com/en-us/onedrive/per-machine-installation` 找到。
-
-
 
 看起来很简单。只需运行 `OneDriveSetup.exe /allusers`，一切就绪。OneDrive 不再由每个用户单独保持更新，而是由一个作为系统运行的计划任务负责更新，该任务会持续检查更新。
 
@@ -6322,9 +5631,6 @@ OneDrive 通过组策略和 MDM 进行管理的功能非常强大。强大到我
 
 **图 7.29** 如何手动开始同步 SharePoint 站点
 
-
-
-
 ## 如何手动开始同步 SharePoint 站点
 
 **图 7.29** 如何手动开始同步 SharePoint 站点
@@ -6342,6 +5648,8 @@ OneDrive 通过组策略和 MDM 进行管理的功能非常强大。强大到我
 很简单。
 
 查看云中文件的属性便知晓详情，如图 7.31 所示。
+
+
 
 ![图 7.30 OneDrive 客户端同步显示设备上的文件和按需文件。](img/c07f030.jpg)
 
@@ -6457,9 +5765,6 @@ Windows 10 1809 及更高版本拥有一项很酷的功能：如果在一定天�
 
 因此，你需要为即将消耗的带宽做计划。首先阅读并实施此处的一些技巧和方法：`aka.ms/bandwidthplanning`。
 
-
-
-
 如果你这样做，就能使用组策略中最不常用的功能之一——服务质量 (QoS) 策略，它可以对数据包进行优先级排序。除此之外，你还可以使用 OneDrive 来指定最大上传带宽。关键的策略设置名为 **Set the maximum upload bandwidth that OneDrive.exe uses**。在用户端的组策略中，可参见 Figure 7.25；在计算机端，可参见 Figure 7.27。对于 Intune，可参见 Figure 7.23。
 
 由于在组策略中，此设置既可配置在用户端也可配置在计算机端，我建议使用计算机端。这将影响计算机上的每个 OneDrive 实例，从而保持配置更加一致。
@@ -6501,6 +5806,7 @@ Silent 顾名思义，无提示，直接执行。
 同样，有多种方法可以实现：
 
 *   Intune 中的可点击方式（推出时）。无论是旋钮还是管理模板设置
+
 *   引入 ADMX 模板（我们在 Chapter 2 中讨论过）并使用它来配置设置。基本说明见：
 
 `https://tech.nicolonsky.ch/onedrive-known-folder-move-ms-intune/`
@@ -6563,8 +5869,6 @@ Documents 和 Pictures 文件夹的表现类似。
 
 加密勒索软件，拿这个吧！！
 
-
-
 ![image](img/note.jpg) 最好一开始就拦截所有能拦截的恶意软件。因此，请考虑结合 `SecureRun(TM)` 使用 `PolicyPak Least Privilege Manager`，它在这方面效果极好。
 
 #### 在路上工作，以及获取分叉文件
@@ -6572,9 +5876,13 @@ Documents 和 Pictures 文件夹的表现类似。
 以下是一个常见场景：
 
 *   Sally 在路上，正在处理她的 OneDrive 文档。假设文件名为 `myFile.txt`。
+
 *   Sally 随后离线。
+
 *   Sally 在离线状态下继续编辑。进行了一堆更改并关闭了文件。
+
 *   留在总部的 Fred 修改了 Sally 正在打开的同一文档 (`myFile.txt`)。Fred 进行并保存了他的更改，并将设置存储在 OneDrive 中。
+
 *   Sally 重新上线……文件分叉了！
 
 那么，什么是文件*分叉*？
@@ -6584,10 +5892,14 @@ Documents 和 Pictures 文件夹的表现类似。
 在这种情况下，会发生以下情况：
 
 *   Fred 的副本“获胜”。在此场景下，OneDrive 文件是“事实来源”。
+
 *   Sally 的文件“失败”。Sally 的文件被重命名为 `myFile-COMPUTER1.txt`。
+
 *   因为该文件是由 OneDrive 同步客户端新创建的，所以它会被上传到 OneDrive 服务。
 
 结果？Sally 的 OneDrive 中会有 `myFile.txt`（实际上来自 Fred），而在 Sally 的电脑本地以及 OneDrive 中，都会看到一个新文件 `myFile-Computer1.txt`。
+
+
 
 现在，如果你看到这种情况发生，那很可能就是上述原因。
 
@@ -6595,7 +5907,7 @@ Documents 和 Pictures 文件夹的表现类似。
 
 ![](img/c07uf006.jpg)
 
-你可以通过策略设置**用户可以选择如何处理冲突中的 Office 文件**，来更改 Office 2016 及更高版本的此行为。
+你可以通过策略设置`用户可以选择如何处理冲突中的 Office 文件`，来更改 Office 2016 及更高版本的此行为。
 
 ## 结束语
 
@@ -6636,9 +5948,7 @@ Documents 和 Pictures 文件夹的表现类似。
 
 在你这么做之前，请在 Twitter 上 @jeremymoskowitz 并带上标签 #mdmbook，告诉我你在第 7 章学到了什么！
 
-# 第 8 章  
-
-使用 Configuration Designer 和 Autopilot 进行推出与刷新
+# 第 8 章 使用 Configuration Designer 和 Autopilot 进行推出与刷新
 
 此时在本书中，你已经拥有了一个相当不错的“分层蛋糕”：
 
@@ -6665,7 +5975,7 @@ Documents 和 Pictures 文件夹的表现类似。
 
 **场景 3** 你可以直接向 Jack 发货一台新的、未配置的电脑（正好你办公室里有库存）。他第二天就能收到。
 
-**场景 4：** 你可以与戴尔、联想等 OEM 合作伙伴合作，直接向 Jack 发货一台新机器。
+**场景 4** 你可以与戴尔、联想等 OEM 合作伙伴合作，直接向 Jack 发货一台新机器。
 
 在所有情况下，Jack 的新机器都必须配置为符合你们的企业标准。当然，我们希望尽可能自动化配置过程。
 
@@ -6700,15 +6010,6 @@ Documents 和 Pictures 文件夹的表现类似。
 WCD 有两种形式：
 
 *   作为 Windows ADK (Assessment and Deployment Kit，评估和部署工具包) 的一部分
-
-
-
-
-
-## Windows Configuration Designer (WCD)
-
-### 获取 WCD
-
 *   可在 Windows 应用商店作为应用下载
 
 本书将使用 Windows 应用商店应用。原因？它始终保持最新，且安装更加容易。
@@ -6735,7 +6036,7 @@ WCD 有两种形式：
 *   指定 Wi-Fi 参数
 *   配置邮件配置文件
 *   运行 PowerShell 脚本
-*   配置“始终开启 VPN”客户端
+*   配置`始终开启 VPN`客户端
 *   移除 OEM 预装软件
 
 你能做镜像部署过程中的*所有*事情吗？不，不能做所有事，但能做很多——通常是最重要的那些事。
@@ -6810,10 +6111,6 @@ WCD 有两种形式：
 
 **图 8.7** PPKG 文件可包含证书
 
-
-
-
-
 ### 你可以单击“完成”，并在保存前查看 .PPKG 文件的摘要
 
 你可以选择使用密码保护该包，这并非坏主意，但为了演示方便，本例中我不打算这么做。
@@ -6831,7 +6128,6 @@ WCD 高级面板开启了更多设置选项和功能。其中一些非常棒且�
 不过，我有两点关于高级编辑器的警告：
 
 1.  我们一直在使用的简单编辑器将对同一个 `.PPKG` 文件变得不可用。也就是说，如果你使用高级编辑器进行高级配置，将无法再次对该文件使用简单编辑器。
-
 2.  使用高级编辑器保存包时，你需要明确指定你是 IT 管理员，而不是 OEM 或其他供应商类型。你可以在 图 8.9 中看到这一点。如果你稍后进行任何更新，还需要更新版本号，否则现有设备将忽略任何它们以前见过的（版本号相同的）文件。
 
 ![图 8.9 在高级视图中导出包要求你指定你是 IT 管理员并指定版本。](img/c08f009.jpg)
@@ -6889,12 +6185,11 @@ Jack 只需在机器首次启动时，插入装有 `.PPKG` 文件的 U 盘并开
     ![](img/c08uf001.jpg)
 
 *   我想加入 Azure AD 并自动注册到 MDM 并下载所有策略。这已完成，但未展示。
-
 *   我想让机器获得名为 `Fabrikam*Number` 的名称。这已完成，但未展示。
-
 *   我想立即安装一个特殊应用程序 `PuTTY`。这已完成，并显示在 图 8.12 中。
-
 *   我想立即在机器上放置一个特殊证书。这已完成，但未展示。
+
+
 
 ## 关于 WCD 的最终想法
 
@@ -6928,15 +6223,11 @@ Autopilot 的核心在于：你不再需要从工厂拿到一台崭新的机器�
 
 直接直发设备，开机，稍等片刻。搞定。新机器，让我们开始工作吧！
 
-
-
-
-
 ### Autopilot 概述
 
 Autopilot 是一项由 Microsoft 运行的基于云的服务，用于存储硬件 ID。当一台机器首次开机并在你的 Autopilot 中注册时，神奇的事情就会发生。Autopilot 将指定一些最终的设置说明，将最终用户的交互减少到几次甚至零次点击，机器即可准备好供使用。
 
-那么，让我用简单的术语来拆解一下什么是 Autopilot，如 图 8.13 所示。
+那么，让我用简单的术语来拆解一下什么是 Autopilot，如图 8.13 所示。
 
 1.  Windows 10 设备拥有唯一的硬件标识符（也称为硬件哈希）。我将其简称为硬件 ID。如果你拥有并想要管理该设备，你（或 OEM 硬件供应商或 IT 服务提供商）会将该硬件 ID 预先填入 Autopilot 服务中。（稍后我将解释如何操作。）Windows 机器被发货给最终用户。Windows 10 机器可以直接从 Lenovo、HP 或 Dell 等 OEM 处交付，或者你可以在现有机器上自行操作（需稍作准备）。
 
@@ -6956,7 +6247,7 @@ Autopilot 是一项由 Microsoft 运行的基于云的服务，用于存储硬�
 
 过一会，用户先生/女士所需的一切都会准备就绪，以便高效工作：来自 MDM 服务的应用、策略、脚本、Windows 更新、Windows 功能等。
 
-Autopilot 的妙处在于，当机器完成 MDM 注册后，最终用户可以只是一个标准的最终用户，而*不是*管理员（如果你愿意，也可以配置为本地管理员）。如果你还记得在 第 2 章 "设置 Azure AD 和 MDM" 中，当我们通过开箱即用体验手动将机器注册到 MDM 时，执行注册的人变成了本地管理员。同样，在 第 2 章 中，当我们通过"设置工作或学校账户"选项手动将机器注册到 MDM 时，那个人也变成了本地管理员。
+Autopilot 的妙处在于，当机器完成 MDM 注册后，最终用户可以只是一个标准的最终用户，而*不是*管理员（如果你愿意，也可以配置为本地管理员）。如果你还记得在**第 2 章 "设置 Azure AD 和 MDM"**中，当我们通过开箱即用体验手动将机器注册到 MDM 时，执行注册的人变成了本地管理员。同样，在**第 2 章**中，当我们通过"设置工作或学校账户"选项手动将机器注册到 MDM 时，那个人也变成了本地管理员。
 
 这不好。你不想要那样。
 
@@ -6986,7 +6277,7 @@ Autopilot 确实有一些先决条件。如果你一直在跟随书中的示例�
 
 `https://docs.microsoft.com/en-us/windows/deployment/windows-Autopilot/windows-Autopilot-requirements-licensing`
 
-为什么需要这些订阅？首先，你需要在 AAD 注册后进行 MDM 自动注册，这是一项 AAD Premium 功能。正如我在 第 2 章 中所说，在你决定购买什么（甚至调查什么）之前，自动注册是"必备项"。第二个原因是你可以获得自定义品牌；即使用你自己的公司名称、公司徽标、自定义帮助文本等；我们稍后将探讨这一点。
+为什么需要这些订阅？首先，你需要在 AAD 注册后进行 MDM 自动注册，这是一项 AAD Premium 功能。正如我在**第 2 章**中所说，在你决定购买什么（甚至调查什么）之前，自动注册是"必备项"。第二个原因是你可以获得自定义品牌；即使用你自己的公司名称、公司徽标、自定义帮助文本等；我们稍后将探讨这一点。
 
 此外，通常单独购买 AAD Premium 和 Intune 没有任何意义，因为 Enterprise Mobility + Security E3 比 AAD Premium 和 Intune 更便宜。
 
@@ -7020,15 +6311,11 @@ Intune 有一个 Autopilot 边栏选项卡，你可以直接在其中放入 ID�
 
 `https://osddeployment.dk/2017/07/07/how-to-use-windows-Autopilot-from-microsoft-partner-center-csp/`
 
-
-
-
-
 ##### Microsoft 365 Business
 
 这适用于中小型企业，通常少于 300 个席位。拥有此订阅的组织也可以参与其中。
 
-正如我所说，Autopilot 实际上是其自己的服务，但在 Intune 中有一个管理它的位置。在 Intune 中最快到达那里的方法是 **设备注册** ➢ **Windows 注册**，您可以在那里看到一个名为 **Windows Autopilot 部署计划** 的部分，如 图 8.14 所示。
+正如我所说，Autopilot 实际上是其自己的服务，但在 Intune 中有一个管理它的位置。在 Intune 中最快到达那里的方法是**设备注册** ➢ **Windows 注册**，您可以在那里看到一个名为 **Windows Autopilot 部署计划** 的部分，如图 8.14 所示。
 
 ![图 8.14 Windows Intune 中的 Autopilot 部分](img/c08f014.jpg)
 
@@ -7067,7 +6354,7 @@ Intune 有一个 Autopilot 边栏选项卡，你可以直接在其中放入 ID�
 Install-Script -name Get-WindowsAutopilotInfo
 ```
 
-对任何提示回答“是”（请参阅 图 8.15）。
+对任何提示回答“是”（请参阅图 8.15）。
 
 ![图 8.15 运行 Get-WindowsAutopilotInfo PowerShell 脚本](img/c08f015.jpg)
 
@@ -7080,7 +6367,7 @@ Set-ExecutionPolicy Unrestricted
 Get-WindowsAutopilotInfo -outputfile c:\out1.csv
 ```
 
-然后用记事本打开该文件，如 图 8.16 所示，以检查它。
+然后用记事本打开该文件，如图 8.16 所示，以检查它。
 
 ![图 8.16 检查 Autopilot 硬件 ID](img/c08f016.jpg)
 
@@ -7090,9 +6377,9 @@ Get-WindowsAutopilotInfo -outputfile c:\out1.csv
 
 #### 将设备 CSV 文件上传到 Autopilot
 
-回到 图 8.14 所示的屏幕，寻找并单击 **设备** 类别。
+回到图 8.14 所示的屏幕，寻找并单击 **设备** 类别。
 
-接下来您将能够单击 **导入**，然后提供您的 CSV 文件。您可以在 图 8.17 中看到这一点。
+接下来您将能够单击 **导入**，然后提供您的 CSV 文件。您可以在图 8.17 中看到这一点。
 
 ![图 8.17 向 Autopilot 提供您的 CSV 文件。](img/c08f017.jpg)
 
@@ -7100,7 +6387,7 @@ Get-WindowsAutopilotInfo -outputfile c:\out1.csv
 
 在本示例中，我导入了一个硬件 ID，但您一次最多可以导入 175 个 ID。然后耐心等待。此过程需要一段时间才能完成。
 
-完成后，它将看起来类似于 图 8.18 所示。
+完成后，它将看起来类似于图 8.18 所示。
 
 ![图 8.18 您的设备显示为在 Autopilot 中已注册。](img/c08f018.jpg)
 
@@ -7127,13 +6414,15 @@ Windows 订阅激活来拯救您！
 
 #### 版本升级和 S 模式切换
 
-您可能熟悉 Windows 10 S 模式。我们在 第 1 章 中曾极简略地讨论过这一点。Windows 10 S 模式是一种购买计算机的方式，该计算机将非常安全（因此得名 *S*），并且仅信任通过 Windows 应用商店下载和购买的应用程序，而不信任尝试在计算机上安装的如 Win32 应用程序之类的程序。
 
-这很棒，直到您遇到某个阻碍，发现在某些计算机上，您确实需要 Windows 10 Pro 或 Enterprise。如果您的应用程序不在 Windows 应用商店中，或者需要驱动程序来驱动某种不寻常的硬件，就会发生这种情况。正如我在 第 1 章 中所述，从 Windows S 到 Windows Pro 或 Enterprise 存在单向升级路径。
+
+您可能熟悉 Windows 10 S 模式。我们在**第 1 章**中曾极简略地讨论过这一点。Windows 10 S 模式是一种购买计算机的方式，该计算机将非常安全（因此得名 *S*），并且仅信任通过 Windows 应用商店下载和购买的应用程序，而不信任尝试在计算机上安装的如 Win32 应用程序之类的程序。
+
+这很棒，直到您遇到某个阻碍，发现在某些计算机上，您确实需要 Windows 10 Pro 或 Enterprise。如果您的应用程序不在 Windows 应用商店中，或者需要驱动程序来驱动某种不寻常的硬件，就会发生这种情况。正如我在**第 1 章**中所述，从 Windows S 到 Windows Pro 或 Enterprise 存在单向升级路径。
 
 而且，您可以使用 Intune 对一台或多台计算机执行此操作。
 
-您可以通过 **版本升级配置文件** 来执行此操作，如下所示。
+您可以通过**版本升级配置文件**来执行此操作，如下所示。
 
 ![](img/c08uf002.jpg)
 
@@ -7141,14 +6430,11 @@ Windows 订阅激活来拯救您！
 
 ![](img/c08uf003.jpg)
 
-最后，您可以指定 **无配置**、**保持 S 模式** 或 **切换**。
+最后，您可以指定**无配置**、**保持 S 模式**或**切换**。
 
 ![](img/c08uf004.jpg)
 
 请注意，Windows S 模式切换仅适用于 Windows 10 1809 及更高版本。
-
-
-
 
 请记住，这真的是一条单程路。如果您希望再次回退到 Windows 10 S 模式，则需要格式化硬盘并重新安装 Windows 10 S 模式。
 
@@ -7156,7 +6442,7 @@ Windows 订阅激活来拯救您！
 
 #### 为 Autopilot 计算机创建组
 
-还记得 第 3 章 “MDM 配置文件、策略和组” 中提到的创建组的想法吗？
+还记得**第 3 章**“MDM 配置文件、策略和组”中提到的创建组的想法吗？
 
 它们现在派上大用场了。（如果您不记得相关内容，或者跳过了该章节也没关系。我们将在此一起完成。）
 
@@ -7179,13 +6465,13 @@ Windows 订阅激活来拯救您！
 
 但我建议您阅读完本节和下一节，因为最终您可能只想创建并使用动态组。
 
-如果您想创建分配的组，请返回 Azure Active Directory 控制台，创建一个分配的组并选取一个或多个序列号，如 图 8.19 所示。我将我的组命名为“Autopilot Assigned”。
+如果您想创建分配的组，请返回 Azure Active Directory 控制台，创建一个分配的组并选取一个或多个序列号，如**图 8.19**所示。我将我的组命名为“Autopilot Assigned”。
 
 ![图 8.19 您可以直接分配给 Autopilot 序列号。](img/c08f019.jpg)
 
 **图 8.19** 您可以直接分配给 Autopilot 序列号。
 
-正如您在 图 8.19 中所见，您可以分配并点击非常具体的序列号，将它们添加到组中。然后（稍后）您将把此组关联到一个配置文件。
+正如您在**图 8.19**中所见，您可以分配并点击非常具体的序列号，将它们添加到组中。然后（稍后）您将把此组关联到一个配置文件。
 
 请注意，计算机用于 Autopilot 后，神奇的是，机器的显示将从序列号变为分配的计算机名。
 
@@ -7197,7 +6483,7 @@ Windows 订阅激活来拯救您！
 
 或者，您可能只想将 100% 的 Autopilot 设备扫入一个大组中，以便批量管理。在现实世界中您可能不想这样做，但这是一个让您快速上手的好练习。
 
-为此，您将使用 Azure AD 组并创建一个动态设备组，如 图 8.20 所示。
+为此，您将使用 Azure AD 组并创建一个动态设备组，如**图 8.20**所示。
 
 ![图 8.20 为所有 Autopilot 设备创建动态组](img/c08f020.jpg)
 
@@ -7211,7 +6497,7 @@ Windows 订阅激活来拯救您！
 
 如果您阅读时有点困难，在 `-any` 后面有一个空格、一个下划线、另一个空格，然后是 `-contains`。
 
-您可以在 图 8.20 中看到我使用此动态查询。
+您可以在**图 8.20**中看到我使用此动态查询。
 
 您也可以针对 PurchaseOrder 进行特定查询：
 
@@ -7239,7 +6525,7 @@ Windows 订阅激活来拯救您！
 
 #### 设置您的 Autopilot 部署配置文件
 
-接下来是设置您的 Autopilot 部署配置文件。您可以在 图 8.14 中看到“部署配置文件”的链接。单击那里，然后单击“创建配置文件”。这样做会显示“创建配置文件”边栏选项卡，如 图 8.21 所示。
+接下来是设置您的 Autopilot 部署配置文件。您可以在**图 8.14**中看到“部署配置文件”的链接。单击那里，然后单击“创建配置文件”。这样做会显示“创建配置文件”边栏选项卡，如**图 8.21**所示。
 
 ![图 8.21 “创建配置文件”和“开箱即用体验 (OOBE)”边栏选项卡](img/c08f021.jpg)
 
@@ -7253,7 +6539,7 @@ Windows 订阅激活来拯救您！
 *   **“部署模式”**：可以是“用户驱动”或“自部署”。我们将在第一次尝试中使用“用户驱动”。本章稍后我们将进行“自部署”。
 *   **“加入 Azure AD 方式”**：可以是“Azure AD 加入”或“混合 Azure AD 加入”。我们将在第一次尝试中使用“Azure AD 加入”。
 
-在 OOBE 边栏选项卡中（同样可见于 图 8.21），您将能够执行以下操作：
+在 OOBE 边栏选项卡中（同样可见于**图 8.21**），您将能够执行以下操作：
 
 *   **“最终用户许可协议 (EULA)”**：显示或隐藏
 *   **隐私设置**：显示或隐藏
@@ -7261,20 +6547,17 @@ Windows 订阅激活来拯救您！
 *   **“用户帐户类型”**：管理员或标准用户
 *   **“应用计算机名模板”**：否或是
 
-正如您在 图 8.21 中所见，我决定隐藏所有内容，将用户设为标准用户，并按生成类似 `Fabrikam2898` 的格式命名。单击“保存”（未显示）以继续。
+正如您在**图 8.21**中所见，我决定隐藏所有内容，将用户设为标准用户，并按生成类似 `Fabrikam2898` 的格式命名。单击“保存”（未显示）以继续。
 
-在尝试之前的最后一步是将您的 Autopilot 配置文件与您想要作为目标的组关联起来。单击“分配”，然后选择您之前创建的设备组之一。我将选择我的“Autopilot (All)”组，它将始终包含每个 Autopilot 设备（请参阅 图 8.22）。
+在尝试之前的最后一步是将您的 Autopilot 配置文件与您想要作为目标的组关联起来。单击“分配”，然后选择您之前创建的设备组之一。我将选择我的“Autopilot (All)”组，它将始终包含每个 Autopilot 设备（请参阅**图 8.22**）。
 
 ![图 8.22 将 Autopilot 配置文件分配给 Azure AD 组。](img/c08f022.jpg)
-
-
-
 
 #### 将 Autopilot 配置文件分配给 Azure AD 组
 
 **图 8.22** 将 Autopilot 配置文件分配给 Azure AD 组。
 
-为保险起见，你可以点击“已分配的设备”，查看哪些设备应获取此配置文件，如图 8.23 所示。
+为保险起见，你可以点击“已分配的设备”，查看哪些设备应获取此配置文件，如**图 8.23**所示。
 
 ![图 8.23 查看哪些设备将获取你创建的 Autopilot 配置文件。](img/c08f023.jpg)
 
@@ -7298,13 +6581,13 @@ Windows 订阅激活来拯救您！
 
 ##### 设置注册选项
 
-在 Intune 中，你需要定义机器从 Autopilot 下载所有“核心内容” 时的用户体验外观和感觉。
+在 Intune 中，你需要定义机器从 Autopilot 下载所有“核心内容”时的用户体验外观和感觉。
 
 为此，请点击 `设备注册 ➢ Windows 注册 ➢ 注册状态页面`。
 
 然后点击默认配置文件，它会影响所有用户和设备。请注意，你可以创建一个新配置文件并进行选择性设置，但我在这里不打算这么做。
 
-在默认配置文件中，选择“设置”，如图 8.24 所示。
+在默认配置文件中，选择“设置”，如**图 8.24**所示。
 
 如果你愿意，可以在这里探索一下，但就目前而言，我建议你在初始测试飞行中保留默认值。你可以设置为：在将控制权交给最终用户开始工作之前，让机器等待某些条件变为真。这些选项见图 8.25，但同样，我建议你暂时不要开启它们。
 
@@ -7316,7 +6599,7 @@ Windows 订阅激活来拯救您！
 
 **图 8.25** 其他注册选项（本章不建议使用，但在实际部署中很有用）
 
-让我们看看图 8.25 中显示的一些策略。
+让我们看看**图 8.25**中显示的一些策略。
 
 **在安装完所有应用和配置文件之前阻止设备使用** 选中此项后，将显示其余选项。正如预期的那样，必须下载完所有应用程序和配置文件，机器才算准备好供最终用户使用。
 
@@ -7330,7 +6613,7 @@ Windows 订阅激活来拯救您！
 
 `https://blogs.technet.microsoft.com/mniehaus/2018/12/06/blocking-for-app-installation-using-enrollment-status-page/`
 
-这里还有一些其他设置，但同样，我建议你使用图 8.24 中所示的默认值。
+这里还有一些其他设置，但同样，我建议你使用**图 8.24**中所示的默认值。
 
 ##### Autopilot 的 Azure AD 品牌
 
@@ -7340,7 +6623,7 @@ Windows 订阅激活来拯救您！
 
 要访问 Azure AD 品牌设置，请点击 `Azure ➢ Azure Active Directory ➢ 公司品牌`。实际上有两个字段你可能想要填充：方形徽标字段和矩形徽标字段。方形徽标可见于各个区域，但矩形徽标字段是你几乎必须填充的。自部署模式实际上需要矩形徽标！方形徽标应为 240×240。矩形徽标应为 280×60。此外，你可能需要调整和微调徽标以减小尺寸。使用 Paint.NET、GIMP 或 Snagit 等工具减小物理尺寸和磁盘占用大小，使其足够小以被接受。
 
-在图 8.26 中，你可以看到我添加了一堆徽标，包括方形和矩形。如果我多花点时间，可以做得完美，但对于我的目的来说，这些已经足够好，稍后我们会看到它们。
+在**图 8.26**中，你可以看到我添加了一堆徽标，包括方形和矩形。如果我多花点时间，可以做得完美，但对于我的目的来说，这些已经足够好，稍后我们会看到它们。
 
 ![图 8.26 配置 Azure AD 品牌，你将在 Autopilot 中看到它](img/c08f026.jpg)
 
@@ -7368,8 +6651,8 @@ Windows 订阅激活来拯救您！
 
 现在，你之前可能用过 Sysprep，但这里有几个快速提示：
 
-*   Sysprep 现在可以运行 99 次，之后才需要替换整个 Windows 映像。因此，如果你使用的是虚拟机（例如 VMware Workstation 或 Hyper-V），我建议你在运行 Sysprep 前先创建快照。然后让 Sysprep 执行“关机”选项。然后在机器关机后再创建一个快照。（这样你就可以随时测试和重复测试 Autopilot 了。）
-*   图 8.27 中显示的“一般化”标志可能会有问题。如果你安装了任何 Windows 应用商店应用，必须先卸载它们，此操作才能生效。
+*   Sysprep 现在可以运行 99 次，之后才需要替换整个 Windows 映像。因此，如果你使用的是虚拟机（例如 `VMware Workstation` 或 `Hyper-V`），我建议你在运行 Sysprep 前先创建快照。然后让 Sysprep 执行“关机”选项。然后在机器关机后再创建一个快照。（这样你就可以随时测试和重复测试 Autopilot 了。）
+*   **图 8.27**中显示的“一般化”标志可能会有问题。如果你安装了任何 Windows 应用商店应用，必须先卸载它们，此操作才能生效。
 *   如果 Sysprep 就是不配合，别在上面花一个小时。直接换下一种方法。正如我所说，还有其他方法可以将机器“拍平”。
 
 ![图 8.27 使用 Sysprep 返回 OOBE](img/c08f027.jpg)
@@ -7378,13 +6661,9 @@ Windows 订阅激活来拯救您！
 
 如果 Sysprep 就是不想为你工作，这里有几个快速旁注：
 
-
-
-
-
 #### 重置电脑
 
-您可以使用“设置”应用程序中的“重置此电脑”功能来启动完整的电脑重置。这比 Sysprep 耗时更长，但您可以无限次地执行此操作。您可以在图 8.28 中看到启动此操作的按钮。
+您可以使用“设置”应用程序中的“重置此电脑”功能来启动完整的电脑重置。这比 Sysprep 耗时更长，但您可以无限次地执行此操作。您可以在**图 8.28**中看到启动此操作的按钮。
 
 ![图 8.28 单击“开始”以重置此电脑并提供管理员凭据；然后按照提示操作。](img/c08f028.jpg)
 
@@ -7402,17 +6681,19 @@ Windows 订阅激活来拯救您！
 
 在开始之前，您想要让其执行此体验的用户（以及任何用户）必须拥有将设备加入 Azure AD 的权限。在我的示例中，我将使用 Jack Tors，一位普通用户（而不是像 Frank Rizzo 那样的管理员）。
 
+
+
 因此，如果您在提供凭据加入 Azure AD 时 Autopilot 不工作，请查看第 2 章中的边栏“在 Azure 和 Intune 中限制用户和设备”，在屏幕截图中，您可以查看并验证特定用户（或所有用户）是否有能力将设备加入 Azure AD。此外，在同一个边栏中，您可以看到用户可注册的最大设备数量。同样的道理适用：请确保他们没有达到该限制。
 
-#### 关于 Autopilot 的注意事项（1809 及更高版本与 1803 及更早版本）
+### 关于 Autopilot 的注意事项（1809 及更高版本与 1803 及更早版本）
 
 Windows 1809 及更高版本与 Windows 1803 及更早版本之间存在细微差别。
 
 如果在设备向 Autopilot 注册之前将其连接到 Internet，它将下载一个“非 Autopilot 设备”配置文件。在 Windows 10 1809 及更高版本中，重新启动计算机将导致其尝试再次下载 Autopilot 配置文件设置以取得成功。
 
-但在 Windows 10 1803 及更早版本中，您将需要再次重置、运行 Sysprep 通用化或重新映像。
+但在 Windows 10 1803 及更早版本中，您将需要再次重置、运行 `Sysprep` 通用化或重新映像。
 
-#### 演示示例 Autopilot 体验
+### 演示示例 Autopilot 体验
 
 OOBE 启动后的前三个屏幕并不那么有趣，并且截至撰写本文时，在用户部署模式下，您无法将其关闭。这些初始屏幕如下：
 
@@ -7452,7 +6733,7 @@ Autopilot 的最终结果是……一个崭新漂亮的桌面：
 
 有趣的是，您可能想返回 Azure AD 组查看，您创建的组最初只显示序列号而不是计算机名称，现在将显示实际的计算机名称，如 `Fabrikam7542`。
 
-#### 自动将硬件 ID 收集到 Autopilot 中
+### 自动将硬件 ID 收集到 Autopilot 中
 
 好的：Autopilot 正常工作了；生活很美好。
 
@@ -7490,9 +6771,6 @@ Autopilot 的最终结果是……一个崭新漂亮的桌面：
 
 单击“属性”，然后在“将所有目标设备转换为 Autopilot”旁边选择“是”，如图 8.34 所示。然后单击保存。
 
-
-
-
 Autopilot 和 Intune 随后将相互通信，但仅针对这个特定组。在它们完成“讨论”（无论两个云服务聊些什么）后，目标是获取动态组中的计算机，读取其硬件 ID，并将它们传送到 Autopilot。
 
 然后，如果这些计算机将来确实需要被**彻底清除**，那你就手握王牌，因为计算机的硬件 ID 已经在 Autopilot 中了！
@@ -7511,7 +6789,7 @@ Autopilot 和 Intune 随后将相互通信，但仅针对这个特定组。在�
 
 **图 8.35** 在 Autopilot 中查看新导入的设备
 
-#### Autopilot：重置、退役、擦除和全新开始
+### Autopilot：重置、退役、擦除和全新开始
 
 机器。变慢。随时间。结束。
 
@@ -7523,7 +6801,7 @@ Autopilot 和 Intune 随后将相互通信，但仅针对这个特定组。在�
 
 所以在接下来的章节中，我们将了解“重置、退役、擦除和全新开始”。
 
-##### Autopilot 重置：本地重置和远程重置
+#### Autopilot 重置：本地重置和远程重置
 
 Autopilot 重置有两种类型：本地重置和远程重置。
 
@@ -7583,13 +6861,13 @@ Autopilot 重置有两种类型：本地重置和远程重置。
 
 ![](img/c08uf011.jpg)
 
-##### 退役 PC
+#### 退役 PC
 
 退役按钮可见于图 8.37，标记为 (2)。
 
 退役 PC 基本上将其从 Intune 中移除。这**不会**擦除 PC。你只是在 Intune 中看不到它了，因为你不再管理它。机器上的任何 MDM 策略被移除；一些设置会回退，其他可能会保留。机器上的软件通常会保留。存储在设备上的用户个人数据将保留。
 
-##### 擦除 PC（以前称为 `Factory Reset`）
+#### 擦除 PC（以前称为 `Factory Reset`）
 
 擦除按钮可见于图 8.37，标记为 (3)。
 
@@ -7603,7 +6881,7 @@ MDM 擦除功能有两种方法：保留注册状态和用户帐户……或不�
 
 关于此功能的文档位于 `https://docs.microsoft.com/en-us/intune/devices-wipe`。
 
-##### MDM 全新开始（又称 Clean PC）
+#### MDM 全新开始（又称 Clean PC）
 
 全新开始按钮可见于图 8.37，标记为 (4)。
 
@@ -7614,8 +6892,6 @@ MDM 擦除功能有两种方法：保留注册状态和用户帐户……或不�
 而且，如果你选择*不*保留用户数据，实际上也会将其从 Azure AD 和 MDM 服务中取消注册，所以使用此功能时要小心。
 
 只有设备在 Autopilot 中已建立，它才会神奇地重新连接并仍由 MDM 管理。
-
-
 
 当你重新登录时，可以在桌面上看到一个名为“已删除应用”的 HTML 文档，其中列出了实际被清理掉的应用程序。
 
@@ -7635,7 +6911,7 @@ MDM 擦除功能有两种方法：保留注册状态和用户帐户……或不�
 | 不保留数据的 Clean PC | 擦除，丢弃预配包 | 全新开始 |
 | 保留用户数据的 Clean PC | 擦除，丢弃预配包，保留用户数据 | 全新开始 |
 
-#### 将特定用户关联到特定硬件 ID
+### 将特定用户关联到特定硬件 ID
 
 Autopilot 的一个小魔法技巧是将特定用户与特定硬件 ID（或多个硬件 ID）“联姻”，如 图 8.38 所示。
 
@@ -7651,7 +6927,7 @@ Autopilot 的一个小魔法技巧是将特定用户与特定硬件 ID（或多�
 
 **图 8.39** 计算机启动 Autopilot 且用户与硬件 ID 关联时的结果
 
-#### Autopilot 自部署模式
+### Autopilot 自部署模式
 
 另一个非常有趣且实用的 Autopilot 场景称为*自部署模式*。自部署模式主要用于设备上没有特定用户的情况。可能存在多个匿名用户。或者根本没有用户的场景。以下类型的设备通常属于此类：
 
@@ -7659,9 +6935,7 @@ Autopilot 的一个小魔法技巧是将特定用户与特定硬件 ID（或多�
 *   单应用自助终端，如学校的考试应用程序
 *   多应用自助终端，如商店中的应用程序。一个用于销售，一个用于库存，等等。仅包含某人完成工作所需的内容，别无其他。
 
-可能还有其他适用于 Autopilot 自部署模式的场景，但这些是最常见的候选者。
-
-尽管 Autopilot 自部署模式适用于各种场景，但我只想专注于其中一个，以便我们集中精力。想象一下数字标牌的完美设置场景：
+可能还有其他适用于 Autopilot 自部署模式的场景，但我只想专注于其中一个，以便我们集中精力。想象一下数字标牌的完美设置场景：
 
 *   它从制造商处发货。
 *   设施工作人员拆箱并将其安装到墙上。
@@ -7674,30 +6948,30 @@ Autopilot 的一个小魔法技巧是将特定用户与特定硬件 ID（或多�
 1.  这些机器可能没有任何键盘或鼠标，因此所有 OOBE 问题的答案都必须在 Autopilot 配置文件中预先填充。
     *   这个问题（无键盘）相对容易克服。Autopilot 自部署模式的配置文件可以方便地处理所有 OOBE 问题。
 2.  请记住，机器上没有用户（同样，即使你想指定用户，可能也没有键盘来执行此操作）。因此，需要一种替代机制来进行身份验证。
-    *   这个问题（无用户）稍微棘手一些。因此，既然你不使用用户向 Azure 验证设备，设备就必须自我验证。它使用一种非常安全的机制来实现这一点。但怎么做呢？通常，作为用户，你会使用用户名和密码（或类似的密码替代凭据）。
-    *   计算机并没有真正的密码。那么你能用什么？
-    *   当然是使用计算机的 **TPM 2.0 芯片**！
 
-当 Autopilot 需要证明设备不是冒充者时，会使用 TPM 2.0 芯片（它使用 TPM 证明）。一旦 TPM 与 Autopilot 完成握手，设备才被允许在不提供任何凭据的情况下加入组织的 AAD 租户。还记得硬件 ID 吗？TPM 标识信息嵌入其中，然后用于设备匹配。
 
-此处有个快速提示：如果你想完整尝试这些步骤，尽管请便。但请注意，如果你使用任何类型的虚拟机（如 Hyper-V 或 VMware Workstation），即使这些虚拟机使用（虚拟）TPM 2.0 芯片，也会（按设计）失败。这是 Autopilot 自部署中的一项“按设计”的限制。
 
-换句话说，你必须打开一台笔记本电脑或 PC——是的，一台**真正的**带有 TPM 2.0 芯片的笔记本电脑或 PC——才能完整测试此过程。对于此测试，你需要预装 Windows 10 1809 或更高版本，并验证 TPM 2.0 芯片已就绪。
+*   这个问题（无用户）稍微棘手一些。因此，既然你不使用用户向 Azure 验证设备，设备就必须自我验证。它使用一种非常安全的机制来实现这一点。但怎么做呢？通常，作为用户，你会使用用户名和密码（或类似的密码替代凭据）。
+*   计算机并没有真正的密码。那么你能用什么？
+*   当然是使用计算机的 `TPM 2.0 芯片`！
 
-![image](img/warning.jpg) 请注意，并非所有带有 TPM 芯片的机器都配备 TPM 2.0 芯片，甚至没有妥善就绪的 TPM 2.0 芯片。首先，许多机器配备 TPM 1.2。有些可以通过大量工作升级到 TPM 2.0。相信我，我试过，无法让联想 T430 的 TPM 1.2 芯片升级到 TPM 2.0。此外，作为旁注，有些 TPM 2.0 芯片**完全不支持** TPM 证明。有些默认禁用证明。还有一些必须通过刷新固件来支持它。我通过一台配备 TPM 2.0 芯片的联想 V330 吃过这个亏，它一直不配合，直到我刷新升级了固件。然后，bingo……TPM 2.0 正确显示已准备好进行证明。
+当 Autopilot 需要证明设备不是冒充者时，会使用 `TPM 2.0 芯片`（它使用 TPM 证明）。一旦 TPM 与 Autopilot 完成握手，设备才被允许在不提供任何凭据的情况下加入组织的 AAD 租户。还记得硬件 ID 吗？TPM 标识信息嵌入其中，然后用于设备匹配。
 
-你可以在 Windows 安全中心的设置应用中，在“安全处理器详细信息”部分看到这一点，如 图 8.40 所示。
+此处有个快速提示：如果你想完整尝试这些步骤，尽管请便。但请注意，如果你使用任何类型的虚拟机（如 Hyper-V 或 VMware Workstation），即使这些虚拟机使用（虚拟）`TPM 2.0 芯片`，也会（按设计）失败。这是 Autopilot 自部署中的一项“按设计”的限制。
+
+换句话说，你必须打开一台笔记本电脑或 PC——是的，一台**真正的**带有 `TPM 2.0 芯片`的笔记本电脑或 PC——才能完整测试此过程。对于此测试，你需要预装 Windows 10 1809 或更高版本，并验证 `TPM 2.0 芯片`已就绪。
+
+![image](img/warning.jpg) 请注意，并非所有带有 TPM 芯片的机器都配备 `TPM 2.0 芯片`，甚至没有妥善就绪的 `TPM 2.0 芯片`。首先，许多机器配备 TPM 1.2。有些可以通过大量工作升级到 `TPM 2.0`。相信我，我试过，无法让联想 T430 的 TPM 1.2 芯片升级到 `TPM 2.0`。此外，作为旁注，有些 `TPM 2.0 芯片`**完全不支持** TPM 证明。有些默认禁用证明。还有一些必须通过刷新固件来支持它。我通过一台配备 `TPM 2.0 芯片`的联想 V330 吃过这个亏，它一直不配合，直到我刷新升级了固件。然后，bingo……`TPM 2.0` 正确显示已准备好进行证明。
+
+你可以在 Windows 安全中心的设置应用中，在“安全处理器详细信息”部分看到这一点，如图 8.40 所示。
 
 ![图 8.40 Autopilot 自部署模式需要支持证明功能的 TPM 2.0 芯片。](img/c08f040.jpg)
 
-**图 8.40** Autopilot 自部署模式需要支持证明功能的 TPM 2.0 芯片。
+**图 8.40** Autopilot 自部署模式需要支持证明功能的 `TPM 2.0 芯片`。
 
 此外，如果你真的希望完全没有任何疑问屏幕，那么最好配合有线以太网连接使用。当你使用以太网时，这种来自 Autopilot 的部署确实是*零接触*的。另一方面，如果在设置时没有有线以太网，因此必须选择 Wi-Fi 网络，则会提示你进行选择，从而需要键盘和鼠标。
 
-##### 关闭自部署设备的警告
-
-
-
+### 关闭自部署设备的警告
 
 IT 领域的每个人都见过这种情况：机场、火车站或其他公共场所的某台可怜的机器提示进行更新，或者在收到某个 Windows 更新后，乞求重启以解脱痛苦。这是我朋友 Matt 发给我的一个例子，显示了一台无助的 Windows 7 机器停留在特拉华州的车辆管理局。（你的朋友也会给你发送搞砸了的 Windows 电脑照片吗？）
 
@@ -7711,7 +6985,7 @@ IT 领域的每个人都见过这种情况：机场、火车站或其他公共�
 
 如果你好奇，该组策略设置位于“计算机配置” ➢ “策略” ➢ “管理模板” ➢ “Windows 组件” ➢ “Windows 更新” ➢ **“在活动时间内关闭更新的自动重启”**。而 ADMX 支持的 MDM 设置称为 `Update/ActiveHoursEnd`。
 
-##### 为 Autopilot 自部署设备做准备
+### 为 Autopilot 自部署设备做准备
 
 在现实世界中，你可能会购买一批机器，然后将它们运送到需要的地方。正如我在“为 Autopilot 创建动态组”部分所述，硬件 ID 可以与订单 ID 关联，而订单 ID 反过来可用作相似设备的通用标记（销售部门机器、市场部门机器等）。
 
@@ -7773,7 +7047,7 @@ IT 领域的每个人都见过这种情况：机场、火车站或其他公共�
 
 **图 8.46** 专门将自部署设备从用户驱动设备中排除
 
-##### 测试自部署 Autopilot 设备
+### 测试自部署 Autopilot 设备
 
 测试此类设备类似于我们之前所做的测试。你需要通过重置、Sysprep、重新安装，或者可能在 OOBE 开始前拍摄了快照来清除机器。
 
@@ -7781,12 +7055,9 @@ IT 领域的每个人都见过这种情况：机场、火车站或其他公共�
 
 至此，你已达成目标：一台设备自行注册到 Autopilot。
 
-请记住，如果你完成了 95% 的过程却出了岔子，很有可能是 TPM 2.0 芯片存在问题（未就绪、未初始化等）。
+请记住，如果你完成了 95% 的过程却出了岔子，很有可能是 `TPM 2.0 芯片`存在问题（未就绪、未初始化等）。
 
-
-
-
-请记住，你正在测试的机器可能根本没有“正确的”TPM 芯片。许多设备仍在使用 TPM 1.2 芯片，这类芯片根本不兼容。此外，即使芯片标记为 TPM 2.0，也不意味着它能执行证明部分，而这对于握手过程是必需的。我在几台配备 TPM 2.0 芯片的笔记本电脑上测试时，流程进行了 95%才发现这些笔记本没有“正确类型”的 TPM 2.0 芯片，证明功能无法按预期工作，令人沮丧！如果你走到这一步仍无法工作，请尝试刷新升级 TPM 固件以支持证明功能。在这种情况下，请返回图 8.40 所示的示例机器界面重新检查：是否有 TPM 2.0？是否支持证明？是否使用的是物理机而非虚拟机？
+请记住，你正在测试的机器可能根本没有“正确的”TPM 芯片。许多设备仍在使用 TPM 1.2 芯片，这类芯片根本不兼容。此外，即使芯片标记为 `TPM 2.0`，也不意味着它能执行证明部分，而这对于握手过程是必需的。我在几台配备 `TPM 2.0 芯片`的笔记本电脑上测试时，流程进行了 95%才发现这些笔记本没有“正确类型”的 `TPM 2.0 芯片`，证明功能无法按预期工作，令人沮丧！如果你走到这一步仍无法工作，请尝试刷新升级 TPM 固件以支持证明功能。在这种情况下，请返回图 8.40 所示的示例机器界面重新检查：是否有 `TPM 2.0`？是否支持证明？是否使用的是物理机而非虚拟机？
 
 ![图 8.47 使用以太网时，Autopilot 对自部署机器不提问](img/c08f047.jpg)
 
@@ -7800,7 +7071,7 @@ IT 领域的每个人都见过这种情况：机场、火车站或其他公共�
 
 `https://www.petervanderwoude.nl/post/windows-Autopilot-self-deploying-mode/`
 
-#### 额外积分：制作自部署的 Kiosk 机器
+### 额外积分：制作自部署的 Kiosk 机器
 
 自部署机器很酷，但关键在于你如何利用它。
 
@@ -7809,19 +7080,19 @@ IT 领域的每个人都见过这种情况：机场、火车站或其他公共�
 *   使用网页的场景（如机场航班显示屏、股票行情显示器等）
 *   将用户锁定在特定应用程序中
 
-如果要使用网页，应使用所谓的`Edge Kiosk 模式`。这是一个涉及大量细节和选项的复杂主题，篇幅过长，请自行查阅：
+如果要使用网页，应使用所谓的 `Edge Kiosk 模式`。这是一个涉及大量细节和选项的复杂主题，篇幅过长，请自行查阅：
 
 `https://docs.microsoft.com/en-us/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#use-microsoft-intune-or-other-mdm-service`
 
 我提到的第二个选项是使用 Windows 应用商店中的应用程序。注意，不是 Windows 消费者商店。你必须像第 6 章中那样，将该应用预先暂存到你的 Windows 商业应用商店中。
 
-稍后我将提供相关配置的 URL。但请注意，该博客条目已过时。它推荐使用`Kiosk 浏览器应用程序`，该应用可从消费者 Windows 商店下载（当然，你随后可以将其暂存到 Windows 商业应用商店）。
+稍后我将提供相关配置的 URL。但请注意，该博客条目已过时。它推荐使用 `Kiosk 浏览器应用程序`，该应用可从消费者 Windows 商店下载（当然，你随后可以将其暂存到 Windows 商业应用商店）。
 
 但还有另一种选择。
 
-正如两段前所述，`Edge`（现在）自带 Kiosk 模式，支持多标签页、打印等增强场景。其设置比 Windows 商店中的 Kiosk 浏览器应用程序更复杂。
+正如两段前所述，`Edge`（现在）自带 Kiosk 模式，支持多标签页、打印等增强场景。其设置比 Windows 商店中的 `Kiosk 浏览器应用程序`更复杂。
 
-但如果你只想在 Kiosk 上显示简单的网页，Kiosk 浏览器应用程序依然有效且是完美的选择。
+但如果你只想在 Kiosk 上显示简单的网页，`Kiosk 浏览器应用程序`依然有效且是完美的选择。
 
 因此，如果你愿意，可以遵循以下说明，从 Windows 消费者商店挑选任意应用程序，将其导入 Windows 商业应用商店，然后让自部署机器运行该 Windows 应用。以下是一些实用的 URL：
 
@@ -7831,9 +7102,9 @@ IT 领域的每个人都见过这种情况：机场、火车站或其他公共�
 
 `https://www.petervanderwoude.nl/post/single-full-screen-kiosk-browser-app-in-kiosk-mode/`
 
-此外，在 YouTube 上搜索`BRK3016`（标题为“Shared Devices for Kiosk and Firstline workers (with Windows 10 and Intune)”）和`THR3003`（标题为“Specialized device deployments for Windows 10 with Microsoft Intune”）可以找到相关的优秀演讲。
+此外，在 YouTube 上搜索 `BRK3016`（标题为“Shared Devices for Kiosk and Firstline workers (with Windows 10 and Intune)”）和 `THR3003`（标题为“Specialized device deployments for Windows 10 with Microsoft Intune”）可以找到相关的优秀演讲。
 
-#### Autopilot 混合 Azure AD 加入
+### Autopilot 混合 Azure AD 加入
 
 还有一个最终的 Autopilot 场景我想与你一起设置。
 
@@ -7855,7 +7126,7 @@ IT 领域的每个人都见过这种情况：机场、火车站或其他公共�
 4.  设备注册到 MDM（本例中为 Intune）。
 5.  Intune 通过一个新组件——脱机域加入连接器（`ODJ 连接器`）联系你的本地 AD，我们也将在本节中探讨。
 6.  Intune 下发一个称为脱机域加入 Blob（`ODJ Blob`）的对象；这也是我们将要探讨的内容。
-7.  计算机使用 ODJ Blob 完成加入。
+7.  计算机使用 `ODJ Blob` 完成加入。
 8.  现在已加入域，可以获取组策略或其他本地/AD 特定的内容。
 
 ![图 8.48 混合 Azure AD 加入流程图](img/c08f048.jpg)
@@ -7864,7 +7135,7 @@ IT 领域的每个人都见过这种情况：机场、火车站或其他公共�
 
 让我们进行设置，你可以亲眼看到它的工作原理。
 
-##### 什么是 ODJ Blob？
+#### 什么是 ODJ Blob？
 
 如果机器当前未连接到 LAN，技术人员无法通过网络将其加入域，该如何加入机器？
 
@@ -7872,21 +7143,21 @@ IT 领域的每个人都见过这种情况：机场、火车站或其他公共�
 
 这个概念在本地 AD 领域已存在很久（自 Windows 7 以来），称为脱机域加入（`ODJ`）。
 
-使用 ODJ，你可以在 Active Directory 中为计算机创建预留。然后让计算机使用该预留。
+使用 `ODJ`，你可以在 Active Directory 中为计算机创建预留。然后让计算机使用该预留。
 
-很容易亲自尝试，以便在几分钟后我们加入 Intune 时理解自动发生的过程。在任意已加入 AD 的机器上，运行以下命令为名为`testjoin01`的“尚未加入域”的计算机预留空间：
+很容易亲自尝试，以便在几分钟后我们加入 Intune 时理解自动发生的过程。在任意已加入 AD 的机器上，运行以下命令为名为 `testjoin01` 的“尚未加入域”的计算机预留空间：
 
 ```
 djoin /provision /domain fabrikam.com /machine testjoin01 /savefile provision.txt
 ```
 
-该输出文件`provision.txt`在技术上称为 ODJ Blob，你可以用记事本查看。命令和文件如图 8.49 所示。
+该输出文件 `provision.txt` 在技术上称为 `ODJ Blob`，你可以用记事本查看。命令和文件如图 8.49 所示。
 
 ![图 8.49 创建和检查脱机域加入（ODJ）Blob](img/c08f049.jpg)
 
-**图 8.49** 创建和检查脱机域加入（ODJ）Blob
+**图 8.49** 创建和检查脱机域加入（`ODJ`）Blob
 
-然后转到一台未加入域但与你的 Active Directory 在同一网络上的机器。当然，先将 ODJ Blob 文件复制过去。然后，使用提升的命令提示符，认领该预留。使用以下命令：
+然后转到一台未加入域但与你的 Active Directory 在同一网络上的机器。当然，先将 `ODJ Blob` 文件复制过去。然后，使用提升的命令提示符，认领该预留。使用以下命令：
 
 ```
 djoin /requestodj /loadfile provision.txt /windowspath c:\windows /localos
@@ -7896,60 +7167,63 @@ djoin /requestodj /loadfile provision.txt /windowspath c:\windows /localos
 
 ![图 8.50 使用 ODJ Blob 手动执行域加入](img/c08f050.jpg)
 
-**图 8.50** 使用 ODJ Blob 手动执行域加入
+**图 8.50** 使用 `ODJ Blob` 手动执行域加入
 
 客户端重启后，当客户端首次能够联系本地 Active Directory 时，它们会同步，奇迹发生：机器现在真正加入了域。
-
-
-
 
 有关脱机域加入的完整文档可在此处找到（但对于我们要做的事情，你实际上并不需要它们）：
 
 `https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd392267(v=ws.10)`
 
-这里的要点是，Intune 将为你完成所有繁重的工作来创建预留和 ODJ Blob，然后将其下载并应用到目标计算机上，从而自动将计算机加入 Active Directory。
+这里的要点是，Intune 将为你完成所有繁重的工作来创建预留和 `ODJ Blob`，然后将其下载并应用到目标计算机上，从而自动将计算机加入 Active Directory。
 
 但 Intune 有一个陷阱。请稍等片刻，马上揭晓。
 
-##### 为混合 Azure AD 加入准备 Active Directory
+#### 为混合 Azure AD 加入准备 Active Directory
+
+
+
+# 混合 Azure AD 加入
 
 混合 Azure AD 加入涉及一些赛前准备工作。
 
-第 2 章 中的可选步骤之一是使用 Azure AD Connect 工具设置 AAD 同步。如果你没有执行此操作，但想让本地 AD 与 Azure AD “联姻”，那么你可以翻回 第 2 章 查看标题为“自动将本地 AD 同步到 Azure AD”的部分。
+## 准备工作
 
-然后，在此之后，你首先需要告诉本地 Active Directory，允许网络上的*某台计算机*将*其他* *计算机*加入你的域。
+第 2 章中的可选步骤之一是使用 Azure AD Connect 工具设置 AAD 同步。如果你没有执行此操作，但想让本地 AD 与 Azure AD“联姻”，那么你可以翻回第 2 章查看标题为“自动将本地 AD 同步到 Azure AD”的部分。
 
-本地 Active Directory 通常不是这样工作的；通常是*人*将计算机加入 Active Directory。但你可以委婉地向 Active Directory 解释，是的，允许另一台*计算机*创建计算机记录并执行其他计算机的加入操作确实没问题。
+然后，在此之后，你首先需要告诉本地 Active Directory，允许网络上的`某台计算机`将`其他``计算机`加入你的域。
+
+本地 Active Directory 通常不是这样工作的；通常是`人`将计算机加入 Active Directory。但你可以委婉地向 Active Directory 解释，是的，允许另一台`计算机`创建计算机记录并执行其他计算机的加入操作确实没问题。
 
 真的没问题，Active Directory。
 
 要让 Active Directory 了解这一点，你将委派创建计算机对象以及管理其属性和权限的能力。在大多数 Active Directory 中，计算机加入域后神奇出现的位置是 Computers 容器（是的，我是指容器……它不是 OU）。
 
-这通常是你开始委派的地方。也有可能这不是你的默认位置（可以通过古老但依然好用的命令 `redircmp` 来更改）。如果你不确定 Computers 文件夹是否是将计算机加入 Active Directory 时的出现位置，那就加入一台试试。然后找到它。一旦你知道了默认位置，右键单击它并选择“委派控制”，如 图 8.51 所示。
+这通常是你开始委派的地方。也有可能这不是你的默认位置（可以通过古老但依然好用的命令 `redircmp` 来更改）。如果你不确定 Computers 文件夹是否是将计算机加入 Active Directory 时的出现位置，那就加入一台试试。然后找到它。一旦你知道了默认位置，右键单击它并选择“委派控制”，如图 8.51 所示。
 
 ![Figure 8.51 Delegate Control over your known default location. If it’s not the Computers folder, then be sure to do it on your redirected location.](img/c08f051.jpg)
 
 **图 8.51** 对已知默认位置委派控制。如果不是 Computers 文件夹，请务必在重定向的位置上执行此操作。
 
-然后，在“委派控制向导”内部，你需要更改视图，以便它允许你查找计算机。（同样，这对 Active Directory 来说很不寻常，所以默认情况下它不显示计算机。）在 图 8.52 所示的屏幕中，你将单击“对象类型”，然后勾选“计算机”。
+然后，在“委派控制向导”内部，你需要更改视图，以便它允许你查找计算机。（同样，这对 Active Directory 来说很不寻常，所以默认情况下它不显示计算机。）在图 8.52 所示的屏幕中，你将单击“对象类型”，然后勾选“计算机”。
 
 ![Figure 8.52 Enable Computers as an Object Type.](img/c08f052.jpg)
 
 **图 8.52** 启用计算机作为对象类型。
 
-然后，如 图 8.53 所示，搜索你计划安装 Intune Connector for Active Directory 的那台计算机的名称。这可以是 Active Directory 中的域控制器或成员服务器。我选的是我的 DC。
+然后，如图 8.53 所示，搜索你计划安装 Intune Connector for Active Directory 的那台计算机的名称。这可以是 Active Directory 中的域控制器或成员服务器。我选的是我的 DC。
 
 ![Figure 8.53 Specify the computer where you plan to install the Intune Connector for Active Directory.](img/c08f053.jpg)
 
 **图 8.53** 指定计划安装 Intune Connector for Active Directory 的计算机。
 
-然后，在“委派控制向导”中，选择“计算机对象”，如 图 8.54 所示，同时勾选“在该文件夹中创建选定的对象”和“在该文件夹中删除选定的对象”，然后单击“下一步”。
+然后，在“委派控制向导”中，选择“计算机对象”，如图 8.54 所示，同时勾选“在该文件夹中创建选定的对象”和“在该文件夹中删除选定的对象”，然后单击“下一步”。
 
 ![Figure 8.54 Specify that the computer can perform the selected delegated items.](img/c08f054.jpg)
 
 **图 8.54** 指定该计算机可以执行选定的委派项目。
 
-最后，你将指定该计算机可以操作权限。在向导的下一页中，选择“完全控制”，如 图 8.55 所示。这将自动勾选所有其他复选框。
+最后，你将指定该计算机可以操作权限。在向导的下一页中，选择“完全控制”，如图 8.55 所示。这将自动勾选所有其他复选框。
 
 ![Figure 8.55 Select Full Control on the Permission page.](img/c08f055.jpg)
 
@@ -7957,15 +7231,15 @@ djoin /requestodj /loadfile provision.txt /windowspath c:\windows /localos
 
 最后一页是向导的复查。单击“完成”，一切就绪。
 
-##### 安装 Intune Connector for Active Directory
+## 安装 Intune Connector for Active Directory
 
-现在，让我们回到 Intune。在这里你将找到并下载 Intune Connector for Active Directory。转到 Intune ➢ 设备注册 ➢ Windows 注册 ➢ Intune Connector for Active Directory。然后单击步骤 2 中的链接，如 图 8.56 所示。
+现在，让我们回到 Intune。在这里你将找到并下载 Intune Connector for Active Directory。转到 `Intune` ➢ `设备注册` ➢ `Windows 注册` ➢ `Intune Connector for Active Directory`。然后单击步骤 2 中的链接，如图 8.56 所示。
 
 ![Figure 8.56 Downloading the Intune Connector for Active Directory](img/c08f056.jpg)
 
 **图 8.56** 下载 Intune Connector for Active Directory
 
-回到本地服务器上，是时候安装它了。你可以在 DC 或成员服务器上执行此操作。这是一个简单的 MSI，不需要太长时间。你可以在 图 8.57 中看到 MSI 和打开屏幕。
+回到本地服务器上，是时候安装它了。你可以在 DC 或成员服务器上执行此操作。这是一个简单的 MSI，不需要太长时间。你可以在图 8.57 中看到 MSI 和打开屏幕。
 
 ![Figure 8.57 Installing the Intune Connector for Active Directory](img/c08f057.jpg)
 
@@ -7973,7 +7247,7 @@ djoin /requestodj /loadfile provision.txt /windowspath c:\windows /localos
 
 单击完成安装后，你应该会看到一条“安装成功完成”消息（未显示）和一个“立即配置”按钮（也未显示）。此外，如果需要，开始菜单中也有一个项目供你重新访问。
 
-只需单击登录按钮（见 图 8.58），然后提供主全局 Azure 管理员 Frank Rizzo 的凭据（他还需要一个 Intune 许可证才能使其工作）。完成后，你应该会看到 图 8.58 所示的内容。
+只需单击登录按钮（见图 8.58），然后提供主全局 Azure 管理员 Frank Rizzo 的凭据（他还需要一个 Intune 许可证才能使其工作）。完成后，你应该会看到图 8.58 所示的内容。
 
 ![Figure 8.58 After you give the Global Admin’s credentials, you will get a success message from the connector.](img/c08f058.jpg)
 
@@ -7981,19 +7255,19 @@ djoin /requestodj /loadfile provision.txt /windowspath c:\windows /localos
 
 此时，我们几乎准备好尝试了。
 
-##### 验证 Intune Connector for Active Directory 的安装
+## 验证 Intune Connector for Active Directory 的安装
 
-安装 Intune Connector 后，正如我们刚才所做的，你可以花点时间查看 Windows 的服务，确认它存在且正在运行。它称为 Intune ODJConnector Service，可在 图 8.59 中看到。
+安装 Intune Connector 后，正如我们刚才所做的，你可以花点时间查看 Windows 的服务，确认它存在且正在运行。它称为 Intune ODJConnector Service，可在图 8.59 中看到。
 
 ![Figure 8.59 Inspecting the Intune ODJConnector Service](img/c08f059.jpg)
 
 **图 8.59** 检查 Intune ODJConnector Service
 
-你也可以在同一台计算机上查看 ODJConnector Service 的日志。你需要查看 Windows 的事件查看器 ➢ 应用程序和服务日志，然后是 ODJ Connector Service，如 图 8.60 所示。
+你也可以在同一台计算机上查看 ODJConnector Service 的日志。你需要查看 Windows 的事件查看器 ➢ 应用程序和服务日志，然后是 ODJ Connector Service，如图 8.60 所示。
 
-你可以看到来自 ODJ Connector Service 的有趣事件日志，如 图 8.61 所示，以防你需要进行故障排除。
+你可以看到来自 ODJ Connector Service 的有趣事件日志，如图 8.61 所示，以防你需要进行故障排除。
 
-最后，回到 Intune 中，你最终应该会看到你正在使用的计算机被标记为正在执行同步，如 图 8.62 所示。这花了我大约 10 分钟，而且“刷新”按钮实际上并没有为我刷新。我不得不按 F5 刷新实际页面。
+最后，回到 Intune 中，你最终应该会看到你正在使用的计算机被标记为正在执行同步，如图 8.62 所示。这花了我大约 10 分钟，而且“刷新”按钮实际上并没有为我刷新。我不得不按 F5 刷新实际页面。
 
 ![Figure 8.60 Finding the ODJ Service event log](img/c08f060.jpg)
 
@@ -8003,53 +7277,49 @@ djoin /requestodj /loadfile provision.txt /windowspath c:\windows /localos
 
 **图 8.61** 来自 ODJ Connector Service 的事件日志项
 
-
-
-
-
 ![Figure 8.62 The Intune Connector should show you the connection, if it’s active, and last sync time.](img/c08f062.jpg)
 
-**Figure 8.62** Intune 连接器应显示连接状态（如果处于活动状态）和上次同步时间。
+**图 8.62** Intune 连接器应显示连接状态（如果处于活动状态）和上次同步时间。
 
 请注意，如果你预计会有大量计算机尝试执行此操作，则可以配置多个连接器。例如，如果你正在进行全公司范围的设备刷新，并预计所有人将在同几天内收到新计算机，则可能需要多个连接器来分担负载。请注意，目前无法删除连接器。你只需卸载稍早安装的本地组件，Intune 连接器窗格将检测到同步时间未更新，并停止尝试使用该连接器。
 
-##### 创建并使用 Autopilot 混合 AD 加入配置文件
+## 创建并使用 Autopilot 混合 AD 加入配置文件
 
-接下来，你将创建一个 Windows Autopilot 配置文件，专门用于你希望执行 MDM 注册*并*加入本地 Active Directory 的计算机。在 `Intune` ➢ `设备注册` ➢ `Windows 注册` ➢ `Windows Autopilot 部署配置文件` 中，你将创建一个新配置文件。然后，如 **图 8.63** 所示，你将选择“用户驱动”和“混合 Azure AD 加入”。
+接下来，你将创建一个 Windows Autopilot 配置文件，专门用于你希望执行 MDM 注册*并*加入本地 Active Directory 的计算机。在 `Intune` ➢ `设备注册` ➢ `Windows 注册` ➢ `Windows Autopilot 部署配置文件` 中，你将创建一个新配置文件。然后，如图 8.63 所示，你将选择“用户驱动”和“混合 Azure AD 加入”。
 
 ![Figure 8.63 You can select User-Driven and “Hybrid Azure AD joined” to enroll in both MDM and on-Prem Active Directory at the same time.](img/c08f063.jpg)
 
-**Figure 8.63** 你可以选择“用户驱动”和“混合 Azure AD 加入”，以同时注册到 MDM 和本地 Active Directory。
+**图 8.63** 你可以选择“用户驱动”和“混合 Azure AD 加入”，以同时注册到 MDM 和本地 Active Directory。
 
 ![image](img/tip.jpg) 在此场景中，我们将 ODJ 场景应用于所有计算机。如果你想更进一步，可以使用“包含”和“排除”组按例外情况分配 Autopilot 配置文件。基本要点可在此处找到：
 
 `https://blogs.technet.microsoft.com/mniehaus/2018/12/30/assigning-Autopilot-profiles-by-exception/`
 
-关于 **图 8.63** 中显示为灰色的“应用计算机名称模板”字段，有个小小的警告。你可以先保存，然后返回到此字段并尝试使用它来自动命名计算机。请勿尝试使用它。还有另一个地方可以做这件事，就在域加入配置文件中。
+关于图 8.63 中显示为灰色的“应用计算机名称模板”字段，有个小小的警告。你可以先保存，然后返回到此字段并尝试使用它来自动命名计算机。请勿尝试使用它。还有另一个地方可以做这件事，就在域加入配置文件中。
 
-##### 创建并使用域加入设备配置文件
+## 创建并使用域加入设备配置文件
 
 创建 Autopilot 配置文件只是其中的一部分。
 
 还有第二部分。它称为域加入配置文件。这回到了 Intune 的设备配置，你现在已经做过几次了。转到 `Intune` ➢ `设备配置` ➢ `配置文件`，然后选择“创建配置文件”。
 
-输入你选择的名称，如“脱机域加入策略”，对于“平台”，选择“Windows 10 及更高版本”，最后，在“配置文件类型”中选择“域加入”，如 **图 8.64** 所示。
+输入你选择的名称，如“脱机域加入策略”，对于“平台”，选择“Windows 10 及更高版本”，最后，在“配置文件类型”中选择“域加入”，如图 8.64 所示。
 
 ![Figure 8.64 Create a Domain Join profile to tell the machine how to connect to your Active Directory.](img/c08f064.jpg)
 
-**Figure 8.64** 创建域加入配置文件，以告知计算机如何连接到你的 Active Directory。
+**图 8.64** 创建域加入配置文件，以告知计算机如何连接到你的 Active Directory。
 
-接下来，你必须单击“设置”类别（请参阅 **图 8.64**），生成的窗口如 **图 8.65** 所示。这些设置表示计算机名称前缀（我选择了 `DJPP-`，意为“域加入++”）和本地 AD 域名 `Fabrikam.com`。
+接下来，你必须单击“设置”类别（请参阅图 8.64），生成的窗口如图 8.65 所示。这些设置表示计算机名称前缀（我选择了 `DJPP-`，意为“域加入++”）和本地 AD 域名 `Fabrikam.com`。
 
 ![Figure 8.65 The Domain Join settings for the device configuration profile](img/c08f065.jpg)
 
-**Figure 8.65** 设备配置配置文件的域加入设置
+**图 8.65** 设备配置配置文件的域加入设置
 
 我将“组织单位”留空，因为我使用“Computers”文件夹作为它们加入本地 AD 后的放置点。
 
 至此，你已准备好进行测试！
 
-##### 执行混合 AD 加入
+## 执行混合 AD 加入
 
 因此，前面我说过，将 ODJ Blob 与 Intune 配合使用有一个限制。
 
@@ -8068,51 +7338,45 @@ djoin /requestodj /loadfile provision.txt /windowspath c:\windows /localos
 
 OOBE 将启动，你将提供凭据，如 `EastSalesUser1@fabrikam1000.com`，这是你自动同步到 Azure AD 的本地帐户之一。
 
-当你这样做时，外观不会与往常有太大不同，但如果你与设置页面交互，可以看到 **图 8.66** 中的内容。
+当你这样做时，外观不会与往常有太大不同，但如果你与设置页面交互，可以看到图 8.66 中的内容。
 
 ![Figure 8.66 You can see that you’ve joined Active Directory here.](img/c08f066.jpg)
 
-**Figure 8.66** 你可以看到此处已加入 Active Directory。
+**图 8.66** 你可以看到此处已加入 Active Directory。
 
-下次启动计算机时，你应该能够以任何 Active Directory 用户（如 EastSalesUser1）的身份登录，但不能以任何“仅诞生于云端”的 Azure Active Directory 用户（如 Jack Tors）的身份登录。常见屏幕如 **图 8.67** 所示。
+下次启动计算机时，你应该能够以任何 Active Directory 用户（如 EastSalesUser1）的身份登录，但不能以任何“仅诞生于云端”的 Azure Active Directory 用户（如 Jack Tors）的身份登录。常见屏幕如图 8.67 所示。
 
 此时，你的计算机将经历一些反复过程进行设置，并尝试连接到你的 MDM 服务以进行注册。
 
 然后，计算机将从 MDM 下载任何新策略和软件，正如你之前所见。接着，你将获得一个如预期那样为 EastSalesUser1 准备好的完整桌面。
 
-回到本地 AD 中，你应该能在“Computers”文件夹中看到你的计算机，如 **图 8.68** 所示。
+回到本地 AD 中，你应该能在“Computers”文件夹中看到你的计算机，如图 8.68 所示。
 
 ![Figure 8.67 With Hybrid joined Windows 10 machines, you must log on with an on-prem Active Directory account; an Azure AD account won’t work.](img/c08f067.jpg)
 
-**Figure 8.67** 对于混合加入的 Windows 10 计算机，你必须使用本地 Active Directory 帐户登录；Azure AD 帐户将无法工作。
+**图 8.67** 对于混合加入的 Windows 10 计算机，你必须使用本地 Active Directory 帐户登录；Azure AD 帐户将无法工作。
 
 ![Figure 8.68 Computers appear in the Computers folder after they join Active Directory.](img/c08f068.jpg)
 
-**Figure 8.68** 计算机加入 Active Directory 后会出现在“Computers”文件夹中。
+**图 8.68** 计算机加入 Active Directory 后会出现在“Computers”文件夹中。
 
-##### 排查混合 AD 加入问题
+## 排查混合 AD 加入问题
 
 执行混合 AD 加入时，你可能会遇到一些问题。你最有可能遇到的首要问题是终结点无法访问域控制器以执行最终握手。
 
 再次强调：终结点计算机需要“视线”连接到域控制器——就是现在，就在 OOBE 期间。这不能稍后再发生。
 
-发生这种情况时，计算机会持续尝试约 30 分钟，然后你将看到如 **图 8.69** 所示的 80070774 消息。
+发生这种情况时，计算机会持续尝试约 30 分钟，然后你将看到如图 8.69 所示的 80070774 消息。
 
 当我未能意识到需要设备配置配置文件时，我也遇到了 80070774 错误；我以为仅拥有 Autopilot 配置文件就足够了。其实不然。因此，请确保你两者都有。
 
 ![Figure 8.69 The 80070774 message means the computer cannot complete the ODJ handshake with a DC.](img/c08f069.jpg)
 
-
-
-
-
-## 图 8.69
-
-80070774 消息意味着计算机无法与 DC 完成 ODJ 握手。
+**图 8.69** 80070774 消息意味着计算机无法与 DC 完成 ODJ 握手。
 
 另一种常见情况是计算机已进行 MDM 注册。发生这种情况时，你会看到一个类似但不同的错误消息，如图 8.70 所示。
 
-![图 8.70 计算机已进行 MDM 注册时的错误消息](img/c08f070.jpg)
+![Figure 8.70 Error message when the computer is already MDM enrolled](img/c08f070.jpg)
 
 **图 8.70** 计算机已进行 MDM 注册时的错误消息
 
@@ -8128,17 +7392,19 @@ OOBE 将启动，你将提供凭据，如 `EastSalesUser1@fabrikam1000.com`，�
 
 `https://www.petervanderwoude.nl/post/hybrid-azure-ad-join-with-windows-Autopilot/`
 
+
+
 #### 关于混合 AD 加入的最终思考
 
 你可能会认为像 Jack Tors 这样“天生纯云端”的人，可以神奇地使用我们刚才用混合 AD 加入的那台机器。
 
 但事实并非如此。
 
-设备只能加入其中之一：要么加入 Active Directory，要么加入 Azure Active Directory。
+设备只能加入其中之一：要么加入 `Active Directory`，要么加入 `Azure Active Directory`。
 
-如果计算机加入了 Active Directory，该设备*也可以*向 Azure AD 注册以获得混合 Azure AD 加入状态。同样，这是通过你在 第 2 章 中设置的 Azure AD Connect 实现的。使用混合 AD 加入的计算机时，用户仍始终使用其本地 AD 凭据登录。当他们这样做时，将简单地同时获得其本地 Kerberos 令牌和一个 Azure AD 令牌。Azure AD 令牌可实现对受 AAD 保护资源的单一登录及其他优势。
+如果计算机加入了 `Active Directory`，该设备*也可以*向 `Azure AD` 注册以获得混合 Azure AD 加入状态。同样，这是通过你在 **第 2 章** 中设置的 `Azure AD Connect` 实现的。使用混合 AD 加入的计算机时，用户仍始终使用其本地 AD 凭据登录。当他们这样做时，将简单地同时获得其本地 `Kerberos` 令牌和一个 `Azure AD` 令牌。`Azure AD` 令牌可实现对受 AAD 保护资源的单一登录及其他优势。
 
-反之，如果计算机严格加入 Azure Active Directory（而非本地 Active Directory），用户必须使用仅限云端的 Azure AD 凭据登录，从而访问基于云的资源。但如果 Windows 检测到有可用的 AD 域控制器，据我所知，它也会获取一张 Kerberos 票据，可用于访问本地资源。
+反之，如果计算机严格加入 `Azure Active Directory`（而非本地 `Active Directory`），用户必须使用仅限云端的 `Azure AD` 凭据登录，从而访问基于云的资源。但如果 Windows 检测到有可用的 AD 域控制器，据我所知，它也会获取一张 `Kerberos` 票据，可用于访问本地资源。
 
 因此，总结如下：
 
@@ -8149,15 +7415,13 @@ OOBE 将启动，你将提供凭据，如 `EastSalesUser1@fabrikam1000.com`，�
 
 如果你想详细了解这一“魔术”，请参阅以下文章：
 
-`https://docs.microsoft.com/en-us/azure/active-directory/devices/azuread-join-sso`
-
-`https://blogs.technet.microsoft.com/mniehaus/2018/01/19/afraid-of-windows-10-with-azure-ad-join-try-it-out-part-1/`
-
-`https://blogs.technet.microsoft.com/mniehaus/2018/02/21/afraid-of-windows-10-with-azure-ad-join-try-it-out-part-2/`
+*   `https://docs.microsoft.com/en-us/azure/active-directory/devices/azuread-join-sso`
+*   `https://blogs.technet.microsoft.com/mniehaus/2018/01/19/afraid-of-windows-10-with-azure-ad-join-try-it-out-part-1/`
+*   `https://blogs.technet.microsoft.com/mniehaus/2018/02/21/afraid-of-windows-10-with-azure-ad-join-try-it-out-part-2/`
 
 #### Autopilot 白手套服务
 
-到目前为止，我们在所有场景中看到的要点都是相同的：新 PC 从工厂诞生。机器自带 Windows 运行所需的一切。但它没有应用程序、设置或策略。所有这些东西都在 Autopilot 完成工作且 Intune 介入并从 Internet 下载这些组件后才到来。
+到目前为止，我们在所有场景中看到的要点都是相同的：新 PC 从工厂诞生。机器自带 Windows 运行所需的一切。但它没有应用程序、设置或策略。所有这些东西都在 Autopilot 完成工作且 `Intune` 介入并从 Internet 下载这些组件后才到来。
 
 好的，很好。但如果你有 900MB 的应用程序要安装呢？
 
@@ -8179,19 +7443,19 @@ OOBE 将启动，你将提供凭据，如 `EastSalesUser1@fabrikam1000.com`，�
 
 使用白手套服务的另一个额外好处与我们在上一节探讨的混合 Azure AD 加入功能有关。它消除了该场景中的一个大问题：如果用户从制造商处直接收到一台新 PC，然后，比如说，试图在星巴克进行 Autopilot，他如何加入其本地 AD 域？答案：他无法做到。但有了白手套服务，因为机器已预配并被拦截，这是在将其发回给用户之前将其加入本地 AD 的绝佳时机。当然，这意味着在所有可能性中，你必须是拦截机器的一方（而非你的 OEM），然后确保它具有加入本地 AD 所需的视线连接能力。并且，当用户收到机器时，他们也需要与本地 DC 的视线连接，以便登录本地 AD。
 
-白手套服务在 Windows 10 1903 及更高版本中可用。
+白手套服务在 `Windows 10 1903` 及更高版本中可用。
 
 要使用白手套服务，你已经需要理解并使用我们之前设置的用户驱动模式和混合 Azure AD 场景。它与那些场景协同工作，只是启用该场景的另一个复选框而已。
 
 白手套服务有一些要求：
 
-*   与 Autopilot“自部署”场景一样，它使用相同的证明握手。这意味着它需要 TPM 2.0 芯片，且该芯片必须支持证明。
+*   与 Autopilot“自部署”场景一样，它使用相同的证明握手。这意味着它需要 `TPM 2.0` 芯片，且该芯片必须支持证明。
 *   白手套服务需要物理硬件，无法在虚拟机上运行。
 *   机器在白手套服务过程中必须具有物理以太网连接。无法使用 Wi-Fi，因为否则它将不得不提示用户选择语言、区域和键盘，而这些只能由最终用户选择。
 
 要设置白手套服务，你需要在部署配置文件中设置一项名为“允许白手套 OOBE”的项目（未显示）。
 
-当机器在预配并开机后被拦截时，它开始执行正常的 Windows Autopilot 例程，并检查其硬件哈希是否已在租户中注册……你的租户。如果由于某种原因机器未被拦截，那也没关系。一切照常工作。但在期望的拦截发生时，操作员（同样，是你、你的 OEM 或合作伙伴）会按五次 Windows 键，然后选择 Windows Autopilot 预配，如图 8.71 所示。
+当机器在预配并开机后被拦截时，它开始执行正常的 `Windows Autopilot` 例程，并检查其硬件哈希是否已在租户中注册……你的租户。如果由于某种原因机器未被拦截，那也没关系。一切照常工作。但在期望的拦截发生时，操作员（同样，是你、你的 OEM 或合作伙伴）会按五次 `Windows` 键，然后选择 `Windows Autopilot` 预配，如图 8.71 所示。
 
 ![图 8.71 OOBE 开始且按下五次 Windows 键后的 Autopilot 预配](img/c08f071.jpg)
 
@@ -8208,10 +7472,6 @@ OOBE 将启动，你将提供凭据，如 `EastSalesUser1@fabrikam1000.com`，�
 白手套服务的官方文档位于 `https://docs.microsoft.com/en-us/windows/deployment/windows-autopilot/white-glove`。
 
 #### 最终 Autopilot 资源
-
-
-
-
 
 显然，微软正在大力投资 Autopilot。这是一件大事，一个极佳的游戏规则改变者，并阐述了一系列无法仅靠本地基础设施实现的场景。
 
@@ -8253,7 +7513,7 @@ Windows 将持续*升级*。
 
 如果你不知道我在说什么，微软已经改变了其相较于以往 Windows 版本的升级节奏。还记得你安装了 XP，然后除了补丁 10 年都不碰它吗？那些日子基本结束了。
 
-现在有了 Windows 10，在大多数情况下，你需要确保 Windows 能够获取更新，否则它就会失去支持。明确地说，那台运行“旧版 Windows 10”的机器不会像我想的那样（如果我停止支付每月 6.25 美元）直接停止工作。它只是失去支持而已。
+现在有了 `Windows 10`，在大多数情况下，你需要确保 Windows 能够获取更新，否则它就会失去支持。明确地说，那台运行“旧版 Windows 10”的机器不会像我想的那样（如果我停止支付每月 6.25 美元）直接停止工作。它只是失去支持而已。
 
 那么，到底哪些版本的 Windows 支持多长时间？
 
@@ -8275,9 +7535,9 @@ Windows 将持续*升级*。
 
 #### 理解功能更新、发布节奏和名称
 
-总体目标是每年发布两个 Windows 10 大版本。这些版本的目标发布月份为 3 月和 9 月。也许它们能赶上这些确切的月份，也许不能。而且，有时会遇到一些小插曲，比如 Windows 1809 的推出（指 2018 年第 9 个月，即 10 月）。所以这个版本于 10 月开始推出，但因升级过程中导致机器损坏而被叫停。直到 2019 年 1 月才最终推出。但它仍被称为 Windows 1809 版本！
+总体目标是每年发布两个 `Windows 10` 大版本。这些版本的目标发布月份为 3 月和 9 月。也许它们能赶上这些确切的月份，也许不能。而且，有时会遇到一些小插曲，比如 `Windows 1809` 的推出（指 2018 年第 9 个月，即 10 月）。所以这个版本于 10 月开始推出，但因升级过程中导致机器损坏而被叫停。直到 2019 年 1 月才最终推出。但它仍被称为 `Windows 1809` 版本！
 
-这就是为什么会有这么多 Windows 10 版本的原因。年份和月份被拼凑在一起。所以你会看到诸如以下名称的版本：
+这就是为什么会有这么多 `Windows 10` 版本的原因。年份和月份被拼凑在一起。所以你会看到诸如以下名称的版本：
 
 *   `1607`
 *   `1703`
@@ -8288,7 +7548,7 @@ Windows 将持续*升级*。
 
 以此类推。
 
-也就是说，微软似乎也在稍微转换方向，使用不同的代号来引用构建名称。像 `19H1`、`19H2` 和 `20H1` 这样的名称是不同的，它们更多地代表发布*时间框架*。我认为这是由于 `1809` 版本发生的事情造成的，它发布了，然后被撤回，又重新发布。如果他们维持 `1809` 这个名称，它将指代原始发布*日期*，而不是发布的*时间框架%。话虽如此，在我写作时，Windows `1903` 的最终名称似乎是……Windows `1903`，而不是 Windows `19H1`。
+也就是说，微软似乎也在稍微转换方向，使用不同的代号来引用构建名称。像 `19H1`、`19H2` 和 `20H1` 这样的名称是不同的，它们更多地代表发布*时间框架*。我认为这是由于 `1809` 版本发生的事情造成的，它发布了，然后被撤回，又重新发布。如果他们维持 `1809` 这个名称，它将指代原始发布*日期*，而不是发布的*时间框架%。话虽如此，在我写作时，`Windows 1903` 的最终名称似乎是……`Windows 1903`，而不是 `Windows 19H1`。
 
 Windows 还有其他名称。
 
@@ -8314,7 +7574,7 @@ Windows 还有其他名称。
 | Windows 10 家庭版 | | 18 个月 | | 18 个月 |
 | Office 365 专业增强版 | | 18 个月 | | 18 个月 |
 
-所有当前受支持的 Windows 10 企业版和教育版功能更新 `1607`、`1703`、`1709` 和 `1803` 将在发布日期后获得 30 个月的支持。
+所有当前受支持的 `Windows 10` 企业版和教育版功能更新 `1607`、`1703`、`1709` 和 `1803` 将在发布日期后获得 30 个月的支持。
 
 3 月（H1）版本的生命周期注定比 9 月（H2）版本短。
 
@@ -8322,10 +7582,7 @@ Windows 还有其他名称。
 
 这有点违反直觉，但想法是有些客户确实想每年进行两次功能更新，而其他客户不想每年进行两次功能更新。如果你部署 9 月版本，你只需每两年半（30 个月）被迫进行一次功能更新。但如果你雄心勃勃，想把所有功能（安全、外观等）都用上，那你反正已经每年升级两次了，所以 3 月版本在 18 个月就结束了也没关系，因为你反正已经在做每年两次的功能更新了！
 
-换种说法，它让想要保持最新（并利用这些功能）的客户能够做到，同时也让想要推迟功能更新一段时间的客户能够做到。如果你还在摸索 Windows 10 的门道，明智的做法是使用 9 月时间框架发布的版本，这能给你最长的跑道来应对强制升级。一旦你找到了窍门，就可以用 3 月和 9 月版本进行每年两次的升级了。
-
-
-
+换种说法，它让想要保持最新（并利用这些功能）的客户能够做到，同时也让想要推迟功能更新一段时间的客户能够做到。如果你还在摸索 `Windows 10` 的门道，明智的做法是使用 9 月时间框架发布的版本，这能给你最长的跑道来应对强制升级。一旦你找到了窍门，就可以用 3 月和 9 月版本进行每年两次的升级了。
 
 如果你仔细查看表 9.1，会发现一条细则。即，Windows 的 30 个月生命周期仅提供给企业版和教育版，不提供给专业版。而且，该 30 个月的生命周期仅针对这些客户的 H2 版本提供。
 
@@ -8333,15 +7590,15 @@ Windows 还有其他名称。
 
 *   企业版和教育版可选择 18 个月或 30 个月的周期。
 *   企业版和教育版可选择 H1 或 H2 版本。如果选择 H2 版本，即表示选择加入 30 个月的周期。
-*   如果客户使用的是 Windows 10 专业版，则必须每 18 个月升级一次才能保持在支持范围内。
+*   如果客户使用的是 `Windows 10` 专业版，则必须每 18 个月升级一次才能保持在支持范围内。
 
-![image](img/note.jpg) 此处可从时间与金钱的角度进行考量。你可以说：“对于使用 Windows 10 专业版的公司而言，每 18 个月升级一次的成本（人力成本）更高。”因此，鼓励组织购买企业版或教育版的一个理由是：虽然购买企业版需要花钱，但能节省持续的 Windows 10 升级人力成本（专业版 18 个月对比企业版 30 个月）。
+![image](img/note.jpg) 此处可从时间与金钱的角度进行考量。你可以说：“对于使用 `Windows 10` 专业版的公司而言，每 18 个月升级一次的成本（人力成本）更高。”因此，鼓励组织购买企业版或教育版的一个理由是：虽然购买企业版需要花钱，但能节省持续的 `Windows 10` 升级人力成本（专业版 18 个月对比企业版 30 个月）。
 
 如果想阅读关于此节奏变更的官方公告，可查看此处：
 
 `https://www.microsoft.com/en-us/microsoft-365/blog/2018/09/06/helping-customers-shift-to-a-modern-desktop/`
 
-如果想查看 Windows 10 发布以来微软推出的所有内容，可查看每个版本的“更改日志”：
+如果想查看 `Windows 10` 发布以来微软推出的所有内容，可查看每个版本的“更改日志”：
 
 `https://docs.microsoft.com/en-us/windows/whats-new/`
 
@@ -8351,7 +7608,7 @@ Windows 还有其他名称。
 
 我在一份幻灯片中看到一个有趣的演示图表，并在网上找到了一个副本，展示了每个版本都新增了*大量*功能。希望当你看到此处时该链接仍然有效，但请注意它始终会过时。无论如何，这是一个直观展示新增和改进功能的图表，你或许可以在此看到：`https://imgur.com/nhftbo9`。
 
-但事实也是，在某个时间点，你必须进行升级。你不能像对待 Windows XP 那样拖延。这就是规则。除非你部署 Windows 10 LTSC。详见侧边栏。
+但事实也是，在某个时间点，你必须进行升级。你不能像对待 Windows XP 那样拖延。这就是规则。除非你部署 `Windows 10 LTSC`。详见侧边栏。
 
 另一个值得了解的实用链接是“Windows 生命周期事实表”，它解释了所有当前受支持的版本、其发布日期（即可用性日期）和终止服务日期，这些日期对于家庭版和专业版 SKU 与企业版和教育版 SKU 是不同的。
 
@@ -8363,26 +7620,28 @@ Windows 还有其他名称。
 
 Windows 诞生后，生命周期为 18 或 30 个月。
 
-除非是 Windows 10 LTSC。LTSC 代表 `Long-Term Servicing Channel`（长期服务通道）。LTSC 与常规 Windows 10 大同小异，但又不完全相同。
+除非是 `Windows 10 LTSC`。LTSC 代表 `Long-Term Servicing Channel`（长期服务通道）。LTSC 与常规 `Windows 10` 大同小异，但又不完全相同。
 
-首先，Windows 10 LTSC 旨在用于 MRI 机器、取款机、销售终端 (POS) 机器、安防摄像头机器及其他“专用设备”类型的计算场景。换句话说，你设置好 Windows 10，安装上你的单一用途软件，然后就不用再操心了。
+首先，`Windows 10 LTSC` 旨在用于 MRI 机器、取款机、销售终端 (POS) 机器、安防摄像头机器及其他“专用设备”类型的计算场景。换句话说，你设置好 `Windows 10`，安装上你的单一用途软件，然后就不用再操心了。
 
 长达 10 年。字面意义上的 10 年。
 
-Windows 10 LTSC 的新版本大约每三年发布一次。
+`Windows 10 LTSC` 的新版本大约每三年发布一次。
 
 哇！如果这么好，为什么不是人人都用它？
 
-有些人确实在用，但他们可能用得不对，也可能用得对。Windows 10 LTSC 不适合所有人的原因在于：持续更新的 Office 365 ProPlus 不支持在 Windows 10 LTSC 上运行，尽管 Office 2019 受支持。且 LTSC 不包含新版 Microsoft Edge 浏览器。
+
+
+有些人确实在用，但他们可能用得不对，也可能用得对。Windows 10 LTSC 不适合所有人的原因在于：持续更新的 `Office 365 ProPlus` 不支持在 Windows 10 LTSC 上运行，尽管 `Office 2019` 受支持。且 LTSC 不包含新版 `Microsoft Edge` 浏览器。
 
 此外，还有一点真的会让人措手不及：LTSC 实际上与硬件的“硅级别”绑定。其含义是，如果你使用特定版本的 LTSC，该版本可能无法在尚未面世的新型现代 Intel 芯片上运行！这意味着如果你使用 LTSC 构建了“完美的黄金映像机器”，然后购买了一些新款台式机或笔记本电脑，Windows 可能根本无法工作！太疯狂了！
 
 所以 LTSC 确实有其优势——再次强调，主要针对那些没有特定用户的单一用途机器。MRI 机器、取款机等是此用途最明显的机器类型。但也有一些更微妙的理由使用 LTSC。如需更多信息并查看 LTSC 是否为合适选择，可参考以下两个资源：
 
-*   `博客：https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/LTSC-What-is-it-and-when-should-it-be-used/ba-p/293181`
-*   视频：企业中 LTSC 的优缺点。在 YouTube 上搜索代码 THR3006 即可找到。
+*   博客：`https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/LTSC-What-is-it-and-when-should-it-be-used/ba-p/293181`
+*   视频：企业中 LTSC 的优缺点。在 YouTube 上搜索代码 `THR3006` 即可找到。
 
-### 理解 Windows 修补节奏（质量更新）
+## 理解 Windows 修补节奏（质量更新）
 
 这比功能更新节奏更容易理解。
 
@@ -8400,34 +7659,32 @@ Windows 10 LTSC 的新版本大约每三年发布一次。
 
 如果想了解更多，请查看这两篇精彩的博客文章：
 
-`https://blogs.windows.com/windowsexperience/2018/12/10/windows-monthly-security-and-quality-updates-overview`
-`https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Windows-10-update-servicing-cadence/ba-p/222376`
+*   `https://blogs.windows.com/windowsexperience/2018/12/10/windows-monthly-security-and-quality-updates-overview`
+*   `https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Windows-10-update-servicing-cadence/ba-p/222376`
 
-### 面向企业的 Windows 预览体验计划
+## 面向企业的 Windows 预览体验计划
 
 作为对刚才讨论内容的一个补充，还有面向企业的 Windows 预览体验计划。面向企业的 Windows 预览体验计划旨在让你预览可能需要规划和推出的功能。
 
-例如，在我最初撰写本章时，Windows 预览体验版刚刚发布了 Windows Sandbox（Windows 沙盒）功能，它就像一个迷你虚拟机，如果你进行小规模测试，用完即弃。随后，该功能随 Windows 10 1903 正式发布。
+例如，在我最初撰写本章时，Windows 预览体验版刚刚发布了 `Windows Sandbox`（Windows 沙盒）功能，它就像一个迷你虚拟机，如果你进行小规模测试，用完即弃。随后，该功能随 Windows 10 1903 正式发布。
 
 关键在于，你可以在功能被汇总并最终发布到半年频道之前，提前预览这些即将推出的建议功能。你可以据此做出明智的决策，决定是否推出，以及/或者如果认为其中有实用功能，为最终用户制定培训计划。
 
 ![image](img/tip.jpg) 要查看配置计算机使用预览体验版的组策略、MDM 和 SCCM 设置，请访问 `https://Aka.ms/manage-builds`。
 
-### Office 服务
+## Office 服务
 
-Windows 和 Office 如同表亲。它们相似，但各有风格。当然它们配合良好。因此，Office 365 ProPlus 拥有自己的部署节奏。以下是大致情况。
+Windows 和 Office 如同表亲。它们相似，但各有风格。当然它们配合良好。因此，`Office 365 ProPlus` 拥有自己的部署节奏。以下是大致情况。
 
-**月度频道** 前沿版本，包含所有最新功能。
+### 月度频道
 
+前沿版本，包含所有最新功能。
 
-
-
-
-#### 半年频道
+### 半年频道
 
 每年更新两次，通常在 1 月和 7 月。这是主流频道，大多数客户应以此为目标。半年频道的功能更新将在其支持到期前存活 18 个月。
 
-#### 半年频道（目标版）
+### 半年频道（目标版）
 
 同样每年更新两次，但包含从月度频道汇总的功能。这些更新在 3 月和 9 月发布。其理念是你可以将此版本交给测试人员验证宏，确保不寻常的 Office 集成在最终升级到下一个半年频道（1 月和 7 月发布）时不会出问题。半年频道（目标版）更新仅存活四个月，因为它们不面向所有人，仅面向你的测试人员。因此，实际上仅支持半年频道（目标版）的最新版本。
 
@@ -8439,9 +7696,9 @@ Windows 和 Office 如同表亲。它们相似，但各有风格。当然它们�
 
 `https://docs.microsoft.com/en-us/officeupdates/update-history-office365-proplus-by-date`
 
-![image](img/tip.jpg) 顺便提一下，Office 2019 独立版本及其支持。其支持日期截止到 2025 年 10 月 14 日。
+![image](img/tip.jpg) 顺便提一下，`Office 2019` 独立版本及其支持。其支持日期截止到 2025 年 10 月 14 日。
 
-### 减少功能更新和质量更新的网络影响
+## 减少功能更新和质量更新的网络影响
 
 你肯定不希望 10,000 台本地机器同时向微软请求质量更新。你更不希望 10,000 台本地机器同时向微软请求功能更新。
 
@@ -8457,7 +7714,7 @@ Windows 和 Office 如同表亲。它们相似，但各有风格。当然它们�
 
 这被称为 **Windows 10 交付优化**。
 
-它适用于 Windows 10、Office ProPlus 365、驱动程序下载和 Windows 应用商店内容。并可通过组策略或 MDM 进行管理。
+它适用于 Windows 10、`Office ProPlus 365`、驱动程序下载和 Windows 应用商店内容。并可通过组策略或 MDM 进行管理。
 
 说实话，如果你完全不做任何配置，交付优化也能很好地工作。正如我所说，其默认行为是从本地局域网上的其他电脑拉取。如果你想折腾，可以做各种高级配置，比如手动挑选一个专用组让电脑从中拉取（即使它们在不同的局域网）。还有一些配置可用于优化带宽利用率等。
 
@@ -8467,13 +7724,11 @@ Windows 和 Office 如同表亲。它们相似，但各有风格。当然它们�
 
 如果你想了解如何管理交付优化，以下是我最推荐的资源：
 
-`https://docs.microsoft.com/en-us/windows/deployment/update/waas-delivery-optimization`
+*   `https://docs.microsoft.com/en-us/windows/deployment/update/waas-delivery-optimization`
+*   `https://docs.microsoft.com/en-us/intune/delivery-optimization-windows`
+*   `https://docs.microsoft.com/en-us/windows/deployment/update/waas-optimize-windows-10-updates`
 
-`https://docs.microsoft.com/en-us/intune/delivery-optimization-windows`
-
-`https://docs.microsoft.com/en-us/windows/deployment/update/waas-optimize-windows-10-updates`
-
-另一个好资源是在 YouTube 上搜索 BRK3019，这是一个交付优化的深度探讨视频。
+另一个好资源是在 YouTube 上搜索 `BRK3019`，这是一个交付优化的深度探讨视频。
 
 还有一个额外的精巧插件可以帮助消耗*更多*带宽。等等，为什么我想消耗更多带宽？实际上，你想消耗的是*闲置*带宽。思路是你可以智能地下载更新（及其他内容），利用原本闲置的带宽（并在需要带宽时停止下载）。你可以通过以下链接了解更多关于这个名字奇特的协议 **LEDBAT**（低额外延迟后台传输）及其演示：
 
@@ -8483,7 +7738,7 @@ Windows 和 Office 如同表亲。它们相似，但各有风格。当然它们�
 
 `https://blogs.technet.microsoft.com/networking/category/windows-transports/ledbat/`
 
-### OneDrive 服务（重访）
+## OneDrive 服务（重访）
 
 提醒一下，OneDrive 也会像 第 7 章 “企业状态漫游和 OneDrive for Business” 中所述那样频繁更新。
 
@@ -8491,7 +7746,7 @@ Windows 和 Office 如同表亲。它们相似，但各有风格。当然它们�
 
 你可以通过以下链接查看当前状态，即预览体验环、生产环和企业环的 OneDrive 版本：`https://bit.ly/2glxd8Q`。
 
-### 为 Windows、Office 和 OneDrive 创建你自己的环
+## 为 Windows、Office 和 OneDrive 创建你自己的环
 
 航班、环、频道、发布、节奏。
 
@@ -8520,16 +7775,12 @@ Windows 和 Office 如同表亲。它们相似，但各有风格。当然它们�
 
 *   公司 1% 的设备（或更少），如开发人员的测试机、模拟生产机器的 IT 员工测试机，应获取以下内容：
     *   面向企业的 Windows 预览体验计划版本
-    *   Office 365 ProPlus 月度频道版本
+    *   `Office 365 ProPlus` 月度频道版本
     *   OneDrive 预览体验环版本
 
 *   5% 的真实用户（IT 员工和“亲友团”，即“出问题时能通情达理的人”）应获取以下内容：
 
-
-
-
-
-#### Windows 更新策略与部署环境
+### Windows 更新策略与部署环境
 
 *   **5% 的公司人员**（开发人员和 IT 测试人员）应立即获取：
     *   Windows 10 H1 或 H2 版本发布后立即获取（发布后前 30 天内）
@@ -8562,7 +7813,7 @@ Windows 和 Office 如同表亲。它们相似，但各有风格。当然它们�
 
 关于如何配置“谁应该获取哪个版本的 OneDrive”，我已经在 OneDrive 章节（第 7 章：“企业状态漫游和 OneDrive for Business”）中介绍其组策略和 ADMX 设置时讲过，所以这里不再重复。详见 第 7 章 中的“OneDrive 客户端版本和预览版”部分。但既然我还没讲 Windows 或 Office 升级设置，现在我们就来讲讲。
 
-##### Windows Update for Business
+## Windows Update for Business
 
 同样，在崭新的世界里，不再有 `WSUS` 服务器。取而代之的是，你只是在控制延迟——即这些机器**最终**将安装更新和升级的“时间”。
 
@@ -8596,15 +7847,17 @@ Windows 和 Office 如同表亲。它们相似，但各有风格。当然它们�
 
 在组策略中，你需要转到 `计算机配置` ➢ `策略` ➢ `管理模板` ➢ `Windows 组件` ➢ `Windows Update` ➢ `Windows Update for Business`。所有设置都在里面。有关组策略 `WUfB` 设置的“演练”，请参阅：
 
+
+
 `https://docs.microsoft.com/en-us/windows/deployment/update/waas-wufb-group-policy#configure-windows-update-for-business-in-windows-10-version-1607`
 
-在 MDM 领域，你需要使用一个特殊的配置文件。在 `Intune` ➢ `软件更新` ➢ `Windows 10 更新预览版` 中找到它。然后创建一个配置文件，如 图 9.2 所示。
+在 MDM 领域，你需要使用一个特殊的配置文件。在 `Intune` ➢ `软件更新` ➢ `Windows 10 更新预览版` 中找到它。然后创建一个配置文件，如图 9.2 所示。
 
 ![图 9.2 在 Intune 中设置 WUfB 策略](img/c09f002.jpg)
 
 **图 9.2** 在 Intune 中设置 WUfB 策略
 
-完成后保存（未显示）。然后选择“分配”并分配给一组计算机，例如你之前创建的名称中包含“Computer”的计算机组，如 图 9.3 所示。
+完成后保存（未显示）。然后选择“分配”并分配给一组计算机，例如你之前创建的名称中包含“Computer”的计算机组，如图 9.3 所示。
 
 ![图 9.3 将 Windows 10 更新预览版分配给一组计算机](img/c09f003.jpg)
 
@@ -8616,13 +7869,11 @@ Windows 和 Office 如同表亲。它们相似，但各有风格。当然它们�
 
 *   Windows 即服务快速指南：
     `https://docs.microsoft.com/en-us/windows/deployment/update/waas-quick-start`
+
 *   “使用 Microsoft Intune 和 Windows Update for Business 保持 Windows 10 设备最新”是我发现的一篇小佳作。此材料对组策略和 MDM 都很棒。可在以下位置找到：
     `https://www.microsoft.com/en-us/itshowcase/keeping-windows-10-devices-up-to-date-with-microsoft-intune-and-windows-update-for-business`
+
 *   `WUfB` 和 `Intune` 的简单文档可在此处找到：
-
-
-
-
 
 #### 参考资源
 
@@ -8633,13 +7884,13 @@ Windows 和 Office 如同表亲。它们相似，但各有风格。当然它们�
 
 总而言之，你的目标是使用组策略或 MDM（二选一，切勿同时使用）向大量计算机指明：在执行自动升级时应使用哪个服务通道、延迟接收更新多少天以及活动时段。
 
-#### 使用管理模板控制 Office 365 通道
+## 使用管理模板控制 Office 365 通道
 
 类似于使用 WUfB 设置控制计算机获取哪个 Windows 通道，你也将为 Office 365 ProPlus 执行类似操作。
 
 这些设置同时存在于组策略和 MDM 中。
 
-##### 组策略中的设置
+### 组策略中的设置
 
 在组策略中，当你将组策略存储（本地或中央存储）更新为最新的 Office ADMX 文件时即可找到这些设置。（上次检查 URL 为 `www.microsoft.com/en-us/download/details.aspx?id=49030`，但建议在页面中搜索“Administrative Template files (ADMX/ADML) and Office Customization Tool for Office 365 ProPlus, Office 2019, and Office 2016”。）更新存储后，所需的 Office 策略位于：`计算机配置` ➢ `策略` ➢ `管理模板` ➢ `Microsoft Office 2016 (Machine)` ➢ `更新`。关键的组策略设置是 **Update Channel**（更新通道），如图 9.4 所示。
 
@@ -8649,7 +7900,7 @@ Windows 和 Office 如同表亲。它们相似，但各有风格。当然它们�
 
 其他设置记录于此：`https://docs.microsoft.com/en-us/deployoffice/configure-update-settings-for-office-365-proplus`
 
-##### MDM 中的设置
+### MDM 中的设置
 
 在 MDM 中，这些设置配置为 ADMX 支持的策略设置。在 Intune 中，这些相同设置位于管理模板部分，非常方便，无需自行摸索自定义 URI。起始步骤：转到 `Intune` ➢ `设备配置配置文件` ➢ `创建配置文件`。命名，选择平台为 `Windows 10 and later`，配置文件类型选择 `Administrative Templates`。
 
@@ -8665,7 +7916,7 @@ Windows 和 Office 如同表亲。它们相似，但各有风格。当然它们�
 
 包含故障排除步骤的优秀博客文章（关于通过 Intune 管理模板设置管理 Office 设置）：`https://www.petervanderwoude.nl/post/easily-controlling-the-office-update-channel-by-using-administrative-templates/`
 
-### Office 和应用程序就绪
+## Office 和应用程序就绪
 
 Windows 10 与旧版 Windows 的整体兼容性无与伦比。很少有人会说：“我有个旧的 Windows XP 应用程序，该死的东西拒绝在 Windows 10 上启动。” 虽然会发生，但很少见。以下是该领域最常见的两种情况：
 
@@ -8686,7 +7937,7 @@ Windows 10 与旧版 Windows 的整体兼容性无与伦比。很少有人会说
 
 让我们从 Office 开始，然后回溯到应用程序。
 
-#### Office 365 就绪工具包
+### Office 365 就绪工具包
 
 Office 365 就绪工具包的任务是：在单台计算机上手动运行，或通过脚本在多台计算机上运行，返回一份漂亮的电子表格，列出包含 VBA 宏和需要关注的 Office 外接程序的文档。
 
@@ -8720,21 +7971,17 @@ Office 365 就绪工具包完整文档：`https://docs.microsoft.com/en-us/Deplo
 
 ![图 9.9 就绪工具包开始创建报告](img/c09f009.jpg)
 
-
-
-
-
 #### 就绪工具包报告
 
 **图 9.9** 就绪工具包开始创建报告。
 
-完成后，报告会在 Excel 中显示，具有讽刺意味的是，它本身使用了一堆宏，必须启用这些宏才能查看完整结果。经典操作。请单击“启用内容”，如 图 9.10 所示。
+完成后，报告会在 Excel 中显示，具有讽刺意味的是，它本身使用了一堆宏，必须启用这些宏才能查看完整结果。经典操作。请单击“启用内容”，如图 9.10 所示。
 
 ![图 9.10 单击“启用内容”以显示报告。](img/c09f010.jpg)
 
 **图 9.10** 单击“启用内容”以显示报告。
 
-最后，Excel 电子表格将显示大量关于 VBA 和加载项详细信息。这些都位于 Excel 底部的选项卡中（未显示）。一个很实用的报告——加载项就绪报告，可以在 图 9.11 中看到。
+最后，Excel 电子表格将显示大量关于 VBA 和加载项详细信息。这些都位于 Excel 底部的选项卡中（未显示）。一个很实用的报告——加载项就绪报告，可以在图 9.11 中看到。
 
 ![图 9.11 加载项就绪报告](img/c09f011.jpg)
 
@@ -8746,7 +7993,7 @@ Office 365 就绪工具包完整文档：`https://docs.microsoft.com/en-us/Deplo
 
 因此，图 9.11 中的此报告旨在指示你是否需要寻找更新或开始物色替代品。
 
-#### 应用运行状况分析器
+### 应用运行状况分析器
 
 如果能有一份快速的应用程序就绪报告，了解某个应用程序在从 Windows 7 迁移到 Windows 10，或从旧版 Windows 10 迁移到新版 Windows 10 时（现在你需要经常这样做）是否会出现异常，那该多好啊？
 
@@ -8762,7 +8009,7 @@ Office 365 就绪工具包完整文档：`https://docs.microsoft.com/en-us/Deplo
 *   操作系统版本违规
 *   框架依赖（.NET、VC++、Silverlight）
 
-应用运行状况分析器的示例输出可见于 图 9.12。
+应用运行状况分析器的示例输出可见于图 9.12。
 
 ![图 9.12 在单台计算机上以交互模式使用应用运行状况分析器](img/c09f012.jpg)
 
@@ -8772,7 +8019,7 @@ Office 365 就绪工具包完整文档：`https://docs.microsoft.com/en-us/Deplo
 
 有关应用运行状况分析器的更多信息，请在 YouTube 上搜索 THR3092，观看 Deepam Dubey 和 Aniket Sapre 在 Ignite 2018 上的演讲。
 
-### 桌面分析
+## 桌面分析
 
 如果你决定这“云东西”不适合你（或暂时还不适合），并决定在可预见的未来继续使用本地部署，我仍建议你调查桌面分析，简称 DA。
 
@@ -8784,7 +8031,7 @@ DA 的工作是帮助你着眼过去、现在和未来，了解 Windows 和 Offi
 
 桌面分析是 Windows Analytics 的下一代产品。但它已重命名，因为它的功能不止于 Windows，还包括 Office。
 
-#### 桌面分析简介
+### 桌面分析简介
 
 DA 的工作是了解你的世界：你的 Windows、你的应用和你的 Office。一旦它了解了你的世界，它就可以就你*应该*做什么提出建议。这非常强大。
 
@@ -8796,7 +8043,7 @@ DA 并不实际执行工作。DA 告知你*将如何*开展工作。通过 DA，
 
 ![](img/c09uf002.jpg)
 
-#### 准备、试点和部署阶段
+### 准备、试点和部署阶段
 
 部署计划有三个阶段：
 
@@ -8810,7 +8057,7 @@ DA 并不实际执行工作。DA 告知你*将如何*开展工作。通过 DA，
 
 部署阶段是你处理其余计算机的时候。正如你所料，目标是在部署发生前，在试点组中预先发现所有问题。但即使在部署阶段，也可能会出现一些问题。
 
-#### 桌面分析的最终思考
+### 桌面分析的最终思考
 
 请记住，桌面分析是 Windows Analytics 的下一代产品。如果你已经设置了 Windows Analytics，那你处于有利位置，等你读到这本书时，应该（也许）会有可用的迁移路径。如果没有，我建议暂缓部署 Windows Analytics，等桌面分析完全准备就绪后再妥善部署。
 
@@ -8822,7 +8069,7 @@ DA 最初应连接到 SCCM，以及 Intune 和 Azure（不久后）。我不清�
 
 此外，你可能想看看微软关于桌面分析的愿景，可在 YouTube 上搜索 Ignite 2018 会话代码 BRK2417 或 BRK2417R。另一个有用的演讲是“Windows 10 和 Microsoft Office 365 专业增强版生命周期和服务更新”，Ignite 会话代码 BRK3039。
 
-### 设备合规性和运行状况证明
+## 设备合规性和运行状况证明
 
 你应该欢迎尖叫用户打来的服务台电话。
 
@@ -8830,12 +8077,13 @@ DA 最初应连接到 SCCM，以及 Intune 和 Azure（不久后）。我不清�
 
 因为当你开启设备合规性后，如果你愿意，可以在设备不满足某些最低合规标准时，自动限制其对 Azure AD 的访问。
 
-
-
-
 例如，BitLocker 可能会以某种方式被移除并禁用，或者 Windows Defender 或其他防病毒软件可能被关闭，等等。你不希望这些系统在未修复的情况下四处游荡。此外，你可以建立一个“可接受的 Windows 10”最低标准。因此，如果有人发现一台 8 年前的旧笔记本电脑塞在抽屉里，上面运行着 Windows 10，则不允许它接入你的网络。
 
 在所有这些情况下，修正措施都相对简单：纠正违规状况，一切恢复正常。
+
+
+
+# 建立 Windows 10 合规性策略
 
 建立 Windows 10 合规性策略非常容易，这也是本节的内容。
 
@@ -8845,7 +8093,7 @@ DA 最初应连接到 SCCM，以及 Intune 和 Azure（不久后）。我不清�
 
 **图 9.13** “设备合规性”部分在左侧，但 Intune 的默认状态值在右侧显示合规设备的状态。
 
-现在本节是关于*合规性*和*证明*。
+现在本节是关于**合规性**和**证明**。
 
 合规性通常意味着对这些值进行报告。你将看到这些值被很好地汇总到报告中，并且可以点击深入查看。
 
@@ -8853,7 +8101,7 @@ DA 最初应连接到 SCCM，以及 Intune 和 Azure（不久后）。我不清�
 
 话不多说，让我们看看合规性策略。
 
-#### 开始使用合规性策略
+## 开始使用合规性策略
 
 要设置合规性策略，需要几个步骤。
 
@@ -8863,13 +8111,13 @@ DA 最初应连接到 SCCM，以及 Intune 和 Azure（不久后）。我不清�
 
 最后，你可以向不合规用户发送一些警报。
 
-##### 默认合规或不合规
+### 默认合规或不合规
 
 你必须做出的第一个决定是：“如果我有零合规性策略，设备仍然合规吗？”这有点棘手，因为你可以争辩说零合规性策略可能意味着发生了一些可疑的事情（比如恶意管理员删除了所有合规性策略）。
 
 因此，我建议你首先将“将未分配合规性策略的设备标记为”设置为“不合规”，这与默认值不同。要到达那里，请使用 `Intune ➢ 设备合规性 ➢ 合规性策略设置`，选择第一项，并将其更改为“不合规”，如图所示。
 
-##### 创建合规性策略
+### 创建合规性策略
 
 在本例中，我将说明：“如果计算机未启用 BitLocker，则它不合规。”现在，我们在本书中尚未设置 BitLocker（尚未），因此，所有加入的计算机（如果你一直在跟随操作）应该还没有启用 BitLocker。因此，一旦策略设置并启用，所有 Windows 10 计算机都应该是不合规的。
 
@@ -8923,7 +8171,7 @@ DA 最初应连接到 SCCM，以及 Intune 和 Azure（不久后）。我不清�
 
 **图 9.19** 如果你选择发送电子邮件模板，用户收到的示例电子邮件
 
-##### 合规性策略的结果
+### 合规性策略的结果
 
 回到设备合规性的 `概述` 窗格，一些神奇的事情应该开始发生。如果没有，你可以点击概述窗格上的 `同步报告`（未显示）来刷新数据；请注意，对我来说花了一段时间才真正更新并返回结果。
 
@@ -8941,15 +8189,13 @@ DA 最初应连接到 SCCM，以及 Intune 和 Azure（不久后）。我不清�
 
 ![](img/c09uf006.jpg)
 
-
-
 客户端还可以在公司门户应用中查看其状态（我们在第 6 章中部署了该应用）。点击运行应用程序后，用户可以查看自己计算机的状态，看到类似于图 9.20 的内容。
 
 ![图 9.20 最终用户在使用公司门户应用时看到的问题视图](img/c09f020.jpg)
 
 **图 9.20** 最终用户在使用公司门户应用时看到的问题视图
 
-##### 设备证明何时生效？
+### 设备证明何时生效？
 
 我是通过惨痛教训才发现这一点的，但即使你开启了 BitLocker，然后与 MDM 同步 200 次，你也不会看到设备提示从不合规变为合规。
 
@@ -8983,7 +8229,7 @@ BitLocker 的设备证明仅在设备重启后，然后再次与 Intune 同步�
 
 `https://docs.microsoft.com/en-us/intune/device-compliance-get-started`
 
-##### Intune 中的自动设备清理
+### Intune 中的自动设备清理
 
 随着时间的推移，计算机会诞生。计算机也会消亡。而它们的僵尸尸体将继续存在，萦绕在每份报告和 Intune 中你点击的每个地方。
 
@@ -8999,7 +8245,7 @@ BitLocker 的设备证明仅在设备重启后，然后再次与 Intune 同步�
 
 `https://osddeployment.dk/2018/07/08/automatic-device-cleanup-in-intune/`
 
-### 关于 Windows 健康与幸福的最终思考
+## 关于 Windows 健康与幸福的最终思考
 
 你的幸福掌握在你自己手中。
 
@@ -9015,9 +8261,7 @@ Microsoft 为你提供了工具来保持 Windows 的健康和快乐。这正是�
 
 所以，敬请期待，下一章见。
 
-# 第 10 章
-
-安全基线、BitLocker、AppLocker 和条件访问
+# 第 10 章 安全基线、BitLocker、AppLocker 和条件访问
 
 在 MDM 和 Azure 的现代托管世界中，Windows 10 安全主题本身可以写成一整本书。我不能承诺我会坐下来写一整本关于该主题的书，但如果我或我信任的人出了一本，我会通过 `MDMandGPanswers.com` 告诉你。
 
@@ -9036,11 +8280,8 @@ Microsoft 为你提供了工具来保持 Windows 的健康和快乐。这正是�
 在本章中，我们将学习如何使用以下“老派”项目，但带有我们的 MDM “新派”风格：
 
 *   **安全基线**：来自 Microsoft 的预定义建议，用于更改操作系统行为以提高安全性。
-
 *   **BitLocker**：全盘加密，所以当 Jack 把笔记本电脑落在出租车后座上时（见第 7 章，“企业状态漫游和 OneDrive for Business”），几乎不可能获取该硬盘上的数据。
-
 *   **AppLocker**（和/或 PolicyPak Least Privilege Manager）：防止用户运行他们不该运行的应用程序
-
 *   **条件访问**：基于合规性和证明（我们在上一章解决了这些）来实际阻止对资源的访问
 
 我们可以增加这里所做的内容吗？肯定可以。只需在 Bing 或 Google 上搜索“Windows security tools”，感受一下能得到多少命中数。（我搜索时，不开玩笑，得到了 7.2 亿次命中。）
@@ -9056,8 +8297,6 @@ Microsoft 为你提供了工具来保持 Windows 的健康和快乐。这正是�
 安全基线是一大堆设置，一次性端上桌。建议一次性全部采用，但如果你那样做，就像真正的自助餐一样，你会肚子疼，我是说，电脑会出问题。
 
 安全基线有两种形式：以组策略对象形式提供的预定义建议，你可以在本地使用；以及现在，你可以在 Intune 等 MDM 服务中使用的预定义建议，如图 10.1 所示。
-
-
 
 在以下章节中，我们将简要了解基线的核心概念。基线内部包含数十项设置，我并不打算逐一深入探讨。确实，我不会建议你直接说“就这样部署吧！”，因为这在现实环境中可能会引入破坏性变更。不过，对于本书及你的测试实验室示例来说，部署测试基线以了解其运作方式是相对安全的。但在现实世界中，你需要逐项检查每个条目，并自问：“这适用于我吗？这能让我更安全（且不破坏任何东西）吗？”
 
@@ -9107,31 +8346,33 @@ Microsoft 为你提供了工具来保持 Windows 的健康和快乐。这正是�
 
 ![Figure 10.5 Assigning a security baseline to a group](img/c10f005.jpg)
 
-**Figure 10.5** 将安全基线分配给组
 
-执行此操作后，你会看到组内所有计算机出现，其“分配状态”变为“挂起”，如 **Figure 10.6** 所示。
+
+## 将安全基线分配给组
+
+执行此操作后，你会看到组内所有计算机出现，其“分配状态”变为“挂起”，如图 10.6 所示。
 
 ![Figure 10.6 See the computers lined up to get the baseline.](img/c10f006.jpg)
 
-**Figure 10.6** 查看排队等待获取基线的计算机。
+**图 10.6** 查看排队等待获取基线的计算机。
 
 此时你可以等待，或强制刷新。
 
 ### 同步客户端以获取基线
 
-强制刷新的最快方法是前往客户端进行同步，如你之前所见，如 **Figure 10.7** 所示（同样位于“设置”应用 ➢ “访问工作或学校”）。
+强制刷新的最快方法是前往客户端进行同步，如你之前所见，如图 10.7 所示（同样位于“设置”应用 ➢ “访问工作或学校”）。
 
-同步后，你应该会看到大量 CSP 设置生效，如 **Figure 10.7** 所示。每个类别都在探测 CSP，基本 MDM 客户端报告会显示你探测了什么。
+同步后，你应该会看到大量 CSP 设置生效，如图 10.7 所示。每个类别都在探测 CSP，基本 MDM 客户端报告会显示你探测了什么。
 
 ![Figure 10.7 After you Sync with MDM, which delivers a baseline](img/c10f007.jpg)
 
-**Figure 10.7** 与 MDM 同步后，后者分发基线
+**图 10.7** 与 MDM 同步后，后者分发基线
 
 现在你可以快速测试，亲自验证是否生效。
 
 ### 测试基线
 
-许多安全基线设置难以直观查看或立即测试。但有少数可以。最简单的或许是查看是否真正为 Edge 启用了 SmartScreen，这在 **Figure 10.4** 中已展示。仔细观察，**Figure 10.4** 中有一项已启用的设置名为“要求 Microsoft Edge 使用 SmartScreen”。
+许多安全基线设置难以直观查看或立即测试。但有少数可以。最简单的或许是查看是否真正为 Edge 启用了 SmartScreen，这在图 10.4 中已展示。仔细观察，图 10.4 中有一项已启用的设置名为“要求 Microsoft Edge 使用 SmartScreen”。
 
 SmartScreen 的职责是，嗯……在用户尝试下载和/或运行内容时，智能拦截恶意内容。好，让我们看看实际效果。
 
@@ -9139,23 +8380,21 @@ SmartScreen 的职责是，嗯……在用户尝试下载和/或运行内容时�
 
 ![image](img/tip.jpg) 如果你没听说过 EICAR 标准，其大意是：这些是已知安全但伪装成恶意的文件，安全和防病毒程序会识别它们。这样你就能用测试文件触发测试，而无需使用真实病毒或恶意软件。在 `https://en.wikipedia.org/wiki/EICAR_test_file` 了解更多关于 EICAR 的信息。
 
-在 **Figure 10.8** 中，可以看到 Edge 遵循 SmartScreen 设置，阻止了伪装成恶意的文件下载。
+在图 10.8 中，可以看到 Edge 遵循 SmartScreen 设置，阻止了伪装成恶意的文件下载。
 
 ![Figure 10.8 See that Edge has been configured to honor SmartScreen via the security baselines.](img/c10f008.jpg)
 
-**Figure 10.8** 可见 Edge 已通过安全基线配置为遵循 SmartScreen。
+**图 10.8** 可见 Edge 已通过安全基线配置为遵循 SmartScreen。
 
 ### 基线的报告与监控
 
-目前，“安全基线”部分的报告功能仍在完善中。截至写作时，你可以在基线内查看“监视”部分，如 **Figure 10.9** 所示。
+目前，“安全基线”部分的报告功能仍在完善中。截至写作时，你可以在基线内查看“监视”部分，如图 10.9 所示。
 
 ![Figure 10.9 The Monitor section within a baseline](img/c10f009.jpg)
 
-**Figure 10.9** 基线内的“监视”部分
+**图 10.9** 基线内的“监视”部分
 
 我预计此监视和报告部分很快会得到改进。
-
-
 
 但现在，你可以看到“设备状态”、“用户状态”和“按设置状态”。前两者只是告诉你基线是否已完全交付给用户组或计算机组。最后一份报告“按设置状态”会告诉你你想要应用的设置是否真的已应用。还有一列名为“冲突”。冲突列旨在告诉你设备配置文件与基线配置文件之间何时发生冲突。然后你可以调整或从其中一个配置文件中删除该设置。
 
@@ -9168,19 +8407,15 @@ SmartScreen 的职责是，嗯……在用户尝试下载和/或运行内容时�
 #### 其他资源
 
 *   关于 Intune 配合 Windows 10 安全基线的官方文档可在此处找到：
-
     `https://docs.microsoft.com/en-us/intune/security-baselines`
 
 *   关于监视、报告和故障排除的更多详细信息可在此处找到：
-
     `https://docs.microsoft.com/en-us/intune/security-baselines-monitor`
 
 *   基于组策略的安全基线版本可在此处找到：
-
     `https://docs.microsoft.com/en-us/windows/security/threat-protection/security-compliance-toolkit-10`
 
 *   一个包含演练并展示冲突（及如何解决）的优秀博客文章可在此处找到：
-
     `https://osddeployment.dk/2019/01/27/start-using-intune-security-baseline/`
 
 #### VMware Workspace ONE 与安全基线
@@ -9257,12 +8492,9 @@ BitLocker：直接启用吧。
 
 **图 10.12** 为主驱动器启用 BitLocker 加密并允许标准用户加密驱动器
 
-
-
-
 ![Figure 10.13 Forcing BitLocker encryption for removable drives and storing the recovery information to Azure AD](img/c10f013.jpg)
 
-**Figure 10.13** 强制对可移动驱动器进行 BitLocker 加密并将恢复信息存储到 Azure AD
+**图 10.13** 强制对可移动驱动器进行 BitLocker 加密并将恢复信息存储到 Azure AD
 
 然后，正如你所料，与 Intune 同步。
 
@@ -9270,11 +8502,11 @@ BitLocker：直接启用吧。
 
 嗯，这取决于你*是谁*。更具体地说，当你收到策略时，你是以何种身份登录的——标准用户还是本地管理员。
 
-如果你在收到策略时是标准用户，*似乎完全没有任何反应*。但实际上，在底层，BitLocker 加密已启动并正在执行其任务，如 **Figure 10.14** 所示。
+如果你在收到策略时是标准用户，*似乎完全没有任何反应*。但实际上，在底层，BitLocker 加密已启动并正在执行其任务，如图 10.14 所示。
 
 ![Figure 10.14 No indication BitLocker has started for a Standard User, but the drive begins encryption](img/c10f014.jpg)
 
-**Figure 10.14** 标准用户无任何 BitLocker 已启动的迹象，但驱动器开始加密
+**图 10.14** 标准用户无任何 BitLocker 已启动的迹象，但驱动器开始加密
 
 如果你在收到策略时是管理员，你会收到一个简单的弹出通知，提示 BitLocker 加密已开始（此处不展示）。
 
@@ -9284,7 +8516,7 @@ BitLocker：直接启用吧。
 
 设备所有权问题是个真正的棘手难题。虽然有办法绕过它，但你必须深思熟虑，并使用 Autopilot 向最终用户部署全新机器。
 
-如果你还记得 **Chapter 2** “Set Up Azure AD and MDM” 中的内容，当我们通过开箱即用体验 (OOBE) 手动将机器注册到 MDM 时，执行注册的人会成为本地管理员，这也意味着他们成为了设备所有者。同样，也在 **Chapter 2** 中，当我们通过“设置工作或学校账户”手动将机器注册到 MDM 时，该人员也会成为本地管理员，并且当时他们也成为了设备所有者。
+如果你还记得第 2 章“Set Up Azure AD and MDM”中的内容，当我们通过开箱即用体验 (OOBE) 手动将机器注册到 MDM 时，执行注册的人会成为本地管理员，这也意味着他们成为了设备所有者。同样，也在第 2 章中，当我们通过“设置工作或学校账户”手动将机器注册到 MDM 时，该人员也会成为本地管理员，并且当时他们也成为了设备所有者。
 
 只有当我们使用 Autopilot 时，奇迹才会发生：当机器通过 Autopilot 完成 MDM 注册后，最终用户在设备上只是一个标准用户，而……*他们*成为了设备所有者。
 
@@ -9299,7 +8531,7 @@ BitLocker：直接启用吧。
 
 根据你的目标机器，你需要稍微不同地设置 BitLocker 设置。
 
-请注意，如果你跟随 Autopilot 章节（**Chapter 8** “Rollouts and Refreshes with Configuration Designer and Autopilot”）进行了操作，那么你可能拥有各种 Autopilot 部署配置文件。我建议暂时取消分鐵除“所有设备”配置文件以外的所有配置文件，然后再继续，这将执行基本的用户驱动体验。这样你就不会因冲突的 Autopilot 配置文件或异常、复杂的 Autopilot 场景而陷入麻烦。还请记住，如果虚拟机拥有虚拟 TPM 2.0 芯片，此方法也适用于虚拟机。
+请注意，如果你跟随 Autopilot 章节（第 8 章“Rollouts and Refreshes with Configuration Designer and Autopilot”）进行了操作，那么你可能拥有各种 Autopilot 部署配置文件。我建议暂时取消分配除“所有设备”配置文件以外的所有配置文件，然后再继续，这将执行基本的用户驱动体验。这样你就不会因冲突的 Autopilot 配置文件或异常、复杂的 Autopilot 场景而陷入麻烦。还请记住，如果虚拟机拥有虚拟 TPM 2.0 芯片，此方法也适用于虚拟机。
 
 ![](img/c10uf002.jpg)
 
@@ -9327,7 +8559,7 @@ Jack 成为设备所有者，一切皆大欢喜。
 
 `https://blogs.technet.microsoft.com/home_is_where_i_lay_my_head/2016/03/14/automatic-BitLocker-on-windows-10-during-azure-ad-join/`
 
-但关键点如下；这很奇怪，请耐心往下看。具有讽刺意味的是，Intune 配置文件中的 Windows 加密设置需要将“加密设备”设置为“未配置”，如 **Figure 10.15** 所示。
+但关键点如下；这很奇怪，请耐心往下看。具有讽刺意味的是，Intune 配置文件中的 Windows 加密设置需要将“加密设备”设置为“未配置”，如图 10.15 所示。
 
 有两篇博客文章给了我这个配方：
 
@@ -9338,7 +8570,11 @@ Jack 成为设备所有者，一切皆大欢喜。
 让我基于你在本书中已完成的设置，通过一个视角来为你拆解：
 
 *   *不要* 重复使用你之前创建的包含 BitLocker 设置的设备配置文件。相反，创建一个全新的 Windows 10 设备配置文件，并配置“终结点保护”策略设置。（博客中的 MVP 报告称，如果在使用现有配置文件时应用这些设置，将不会生效！但我没有尝试过。）
-*   在“Windows 加密”设置窗格中，这很奇怪：将“加密设备”设置保留为“未配置”。这是关键步骤！请参阅 **Figure 10.15**。
+
+*   在“Windows 加密”设置窗格中，这很奇怪：将“加密设备”设置保留为“未配置”。这是关键步骤！请参阅图 10.15。
+
+
+
 *   请选择将“其他磁盘加密警告”设置为“阻止”，将“允许标准用户在 Azure AD 加入期间启用加密”设置为“允许”。
 *   配置该页面上你希望的其他设置。
 *   为 Autopilot 创建一个新的 Azure AD 组或使用现有组。我将把我的新 BitLocker 与 Autopilot 配置文件分配给 **Chapter 8** “Rollouts and Refreshes with Configuration Designer and Autopilot” 中的 Autopilot（所有设备）组，这将作用于每台 Autopilot 设备。
@@ -9357,9 +8593,6 @@ Jack 成为设备所有者，一切皆大欢喜。
 基本上，你可以使用 PowerShell 脚本方法以 SYSTEM 身份操控 BitLocker，用户对此毫不知情。
 
 除非绝对必要，我不会建议以这种方式操作，但具体细节和脚本请见此处。
-
-
-
 
 但你似乎会获得额外的好处：标准用户会在其配置文件中看到自己的密钥，而不是设备所有者的密钥。以下是两篇表达此方法的博客文章：
 
@@ -9438,8 +8671,6 @@ Jack Tors 因为在开会前遇到了 BitLocker 蓝屏而惊慌失措。他手�
 **图 10.19** 标准用户无法备份自己的 BitLocker 密钥。但使用带有 PolicyPak Least Privilege Manager 的 PolicyPak MDM，你可以克服标准用户的 UAC 提示，启用此类场景。
 
 ### BitLocker 最终思考与其他资源
-
-
 
 如果在测试期间，你发现 BitLocker 没有按预期自动启动，也许你正在做我曾经做过的事：我（哎呀）在电脑里留了一张 DVD；确切地说，是虚拟机的“虚拟 DVD”驱动器加载了一个 ISO 文件。当你这样做时，BitLocker 不会启动，直到移除 DVD 并重新启动计算机，正如事件日志中所述，具体是在 BitLocker - API 的事件日志中，如图 10.20 所示。
 
@@ -9531,9 +8762,11 @@ sc.exe config appidsvc start=auto
 
 下一站：Intune。
 
+
+
 好吧，不完全是。首先我们必须检查导出的文件并进行裁剪。然后我们将进入 Intune 并提供裁剪好的 AppLocker XML 文件。
 
-#### 裁剪 AppLocker XML
+### 裁剪 AppLocker XML
 
 让我们检查 AppLocker 导出的输出。你将看到我在 Notepad++ 中查看 XML 的屏幕截图（因此左侧会显示行号）。AppLocker 奇怪的地方在于，你不能直接拿导出的 XML 原样“硬塞”进 Intune。那行不通！你需要仔细找到类别类型的开头和结尾；在我们的示例中，是“可执行规则”。所以在图 10.25 中，你可以看到一行左右确切要复制并粘贴到 Intune 中的内容（稍后）。
 
@@ -9541,12 +8774,9 @@ sc.exe config appidsvc start=auto
 
 **图 10.25** 分离出用于 Intune 的 AppLocker 部分
 
+### 将 AppLocker XML 片段添加到 Intune
 
-
-
-#### 将 AppLocker XML 片段添加到 Intune
-
-现在是时候创建自定义 OMA-URI 来配置 AppLocker CSP 了。创建一个新配置文件，如 图 10.26 所示，并为“配置文件类型”选择“自定义”。
+现在是时候创建自定义 OMA-URI 来配置 AppLocker CSP 了。创建一个新配置文件，如图 10.26 所示，并为“配置文件类型”选择“自定义”。
 
 ![图 10.26 创建自定义配置文件类型](img/c10f026.jpg)
 
@@ -9557,9 +8787,9 @@ sc.exe config appidsvc start=auto
 *   **名称**：可以是任意内容
 *   **OMA-URI**：必须为 `./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/{anything unique at all}/EXE/Policy`（稍后详述）
 *   **数据类型**：字符串
-*   **值**：来自 图 10.25 的高亮片段
+*   **值**：来自图 10.25 的高亮片段
 
-OMA-URI 需要一点解释。首先，它必须完全按照我展示的拼写，且严格区分大小写。然后，在我写的“anything unique at all”位置，你需要填入一个对你有意义的值。你可以使用自行生成的 GUID、名称或其他任何内容。在 图 10.27 中，你可以看到我的唯一值是 `Basics01`，以匹配我的名称。
+OMA-URI 需要一点解释。首先，它必须完全按照我展示的拼写，且严格区分大小写。然后，在我写的“anything unique at all”位置，你需要填入一个对你有意义的值。你可以使用自行生成的 GUID、名称或其他任何内容。在图 10.27 中，你可以看到我的唯一值是 `Basics01`，以匹配我的名称。
 
 ![图 10.27 将修剪后的 AppLocker 片段粘贴到“值”字段中。高亮部分必须是未再次使用的唯一值，这是正确删除 AppLocker 策略所必需的。](img/c10f027.jpg)
 
@@ -9569,7 +8799,7 @@ OMA-URI 需要一点解释。首先，它必须完全按照我展示的拼写，
 
 在同步设置之前，在目标计算机上预先部署 Chrome Portable，以便你知道有一个被阻止的项目。完成后，将一台计算机同步到 Intune，让我们看看当你尝试运行 Chrome 时会发生什么。
 
-你应该会看到 图 10.28 中的内容，AppLocker 已阻止 Chrome Portable。如果你想以本地管理员身份查看应用程序标识服务，你会发现当我们通过 AppLocker CSP 和 Intune 向 AppLocker 发送指令时，该服务会自动启用。
+你应该会看到图 10.28 中的内容，AppLocker 已阻止 Chrome Portable。如果你想以本地管理员身份查看应用程序标识服务，你会发现当我们通过 AppLocker CSP 和 Intune 向 AppLocker 发送指令时，该服务会自动启用。
 
 ![图 10.28 AppLocker 通过 Intune 获取指令后的结果。注意当数据传递给 AppLocker CSP 时，应用程序标识服务会自动启用。](img/c10f028.jpg)
 
@@ -9603,7 +8833,7 @@ AppLocker 无法实现一些人希望它实现的“魔法”。
 
 PolicyPak Least Privilege Manager 的白名单功能始于一个称为 PolicyPak SecureRun™ 的概念。SecureRun™ 从一个前提开始：只有经过批准的人员才能运行软件。
 
-因此，PolicyPak SecureRun™ 不像 AppLocker 那样处理“好位置”与“坏位置”的混乱业务，而是完全关注“谁”。在 图 10.29 中，你只需开启 PolicyPak SecureRun™，默认的“好人”就可以运行他们想要的任何内容。这包括本地管理员、SYSTEM 和安装程序。
+因此，PolicyPak SecureRun™ 不像 AppLocker 那样处理“好位置”与“坏位置”的混乱业务，而是完全关注“谁”。在图 10.29 中，你只需开启 PolicyPak SecureRun™，默认的“好人”就可以运行他们想要的任何内容。这包括本地管理员、SYSTEM 和安装程序。
 
 ![图 10.29 使用 PolicyPak Least Privilege Manager SecureRun™ 执行白名单管理](img/c10f029.jpg)
 
@@ -9613,21 +8843,18 @@ PolicyPak Least Privilege Manager 的白名单功能始于一个称为 PolicyPak
 
 这里的秘诀在于每个 NTFS 文件在创建时都会设置一个所有者。以下两个易于理解的示例向你展示其工作原理：
 
-示例一：使用 Intune 部署软件：
+**示例一：使用 Intune 部署软件**
 
-*   使用 Intune 通过 MSI 或 MSIX 或你在 第 6 章“部署软件和脚本”中学到的任何其他方法安装 DogFoodMaker 12。通常 SYSTEM 执行工作，因此拥有其安装文件的所有权。
+*   使用 Intune 通过 MSI 或 MSIX 或你在第 6 章“部署软件和脚本”中学到的任何其他方法安装 DogFoodMaker 12。通常 SYSTEM 执行工作，因此拥有其安装文件的所有权。
 *   当像 Jack 这样的标准用户运行 DogFoodMaker 12 时，一切按预期运行，SYSTEM 是安装文件的所有者，Jack 完全可以运行这些文件。
 *   当 Jack 上网下载游戏、浏览器或其他应用程序时，Jack 作为下载者成为该下载文件的所有者。
 *   Jack 尝试运行最近下载的应用程序，但……他不在“好人”名单上，并且……被当场阻止。
 *   但 Jack 仍然可以运行通过 Intune（或 SCCM 等）正确安装的任何内容。
 
-示例二：有时需要本地安装软件：
+**示例二：有时需要本地安装软件**
 
 *   想象计算机有两个定期登录的人员：教师和学生。
 *   教师作为“好人”在 SecureRun™ 列表上。学生不在。
-
-
-
 
 教师随后可以连接 Internet，根据需要下载并运行软件。如果该软件需要本地管理员权限才能完全安装，您可以使用 `PolicyPak Least Privilege Manager` 创建规则来绕过 UAC 提示。
 
@@ -9752,12 +8979,11 @@ Azure 条件访问的第一部分根本不在 Azure 中。
 
 而是“授予访问权限”连接到您想要强制用户遵守的内容。我们要表达的是：当机器不合规时，我们要阻止访问。因此，正确的复选框是“要求设备标记为合规”。
 
-
-
-
 ## 测试 Azure 条件访问策略
 
 你需要打破常规。也就是说，你需要让设备处于不合规状态，从而触发 Intune 的合规性策略，进而触发 Azure 条件访问策略。依我看，有以下几种方法可以做到这一点。
+
+
 
 ### 方法一：如果你的机器因启用了 BitLocker 而处于合规状态
 
@@ -9818,10 +9044,6 @@ Intune、Azure 和 Windows 10 客户端相关的安全功能还有更多吗？
 ### Windows 10 安全功能入门
 
 这是一个关于 Microsoft Windows 10 安全功能文档的良好起始页面：`https://docs.microsoft.com/en-us/windows/security/index.`
-
-
-
-
 
 ## 综述
 
@@ -9929,10 +9151,6 @@ MDM 附加工具：免费与付费
 *   允许用户管理自己的应用程序
 *   同步、远程锁定或重置设备
 
-
-
-
-
 #### 用户获取帮助和支持
 
 设置完成后，当用户运行“公司门户”应用时，他们可以看到您的品牌标识，如图 11.2 所示。
@@ -10001,7 +9219,9 @@ MDM 附加工具：免费与付费
 
 **图 11.8** 用户可以查看可用应用程序（非强制要求的应用）。
 
-也就是说，如果您在公司门户中没有看到预期的完整应用列表，很可能有充分的理由。首先，请记住应用程序可以是*已分配*或*未分配*。已分配意味着将尝试安装它。但您也可以不分配应用程序，仅使其*可供注册设备使用*。
+
+
+也就是说，如果您在公司门户中没有看到预期的完整应用列表，很可能有充分的理由。首先，请记住应用程序可以是`已分配`或`未分配`。`已分配`意味着将尝试安装它。但您也可以不分配应用程序，仅使其`可供注册设备使用`。
 
 关于如何使应用程序可供注册设备使用的提醒，请参阅图 11.9，其中显示了如何在 Intune 中将应用程序设置为“可供注册设备使用”。
 
@@ -10037,21 +9257,17 @@ MDM 附加工具：免费与付费
 
 ## Microsoft Graph 和 Graph 资源管理器
 
-如果您在 Azure 和 MDM 领域摸索了一段时间，可能听说过 *graph* 这个词。Graph 只是一个大型数据库，您可以通过编程方式查询它，以了解有趣的事物或让它做有趣的事情。
+如果您在 Azure 和 MDM 领域摸索了一段时间，可能听说过 `graph` 这个词。Graph 只是一个大型数据库，您可以通过编程方式查询它，以了解有趣的事物或让它做有趣的事情。
 
 什么样的有趣事情？那取决于您。
 
 但很大程度上，您在 Azure 和 Intune 中看到的点点击击项目，实际上只是底层数据库中的条目。您也可以查询它们。您的程序员也可以。
 
-所以，每当您想，“哎呀，在 Azure 和 Intune 中做*这项*工作（添加用户、报告状态、部署应用程序等）要点 802 次鼠标”时，您可以重新构想为：“嘿，Alice，你能不能用 Graph API 把这 802 次点击编程成三次……或者如果我用命令行，变成零次？”
+所以，每当您想，“哎呀，在 Azure 和 Intune 中做这项工作（添加用户、报告状态、部署应用程序等）要点 802 次鼠标”时，您可以重新构想为：“嘿，Alice，你能不能用 Graph API 把这 802 次点击编程成三次……或者如果我用命令行，变成零次？”
 
 官方 Graph API 文档可以在这里找到：
 
 `https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-graph-api`
-
-
-
-
 
 ### Microsoft Graph Explorer
 
@@ -10180,9 +9396,6 @@ Graph API 不仅适用于 Intune；它还适用于 Azure AD、Office 365、企�
 
 既然我们要专注于 MDM，为什么要提到所有三个版本？
 
-
-
-
 嗯，因为如果你喜欢 PolicyPak 的功能，可能想要利用不止一个版本来全面覆盖需求。PolicyPak 配合 MDM 托管设备的主要用例如下：
 
 ### 将几乎所有组策略、组策略首选项和组策略安全设置迁移到 MDM
@@ -10197,7 +9410,7 @@ Graph API 不仅适用于 Intune；它还适用于 Azure AD、Office 365、企�
 
 ### 为应用程序指定正确的设置（PolicyPak Application Manager）
 
-应用程序通过 Intune 部署。太棒了！现在这些应用程序实际上*并未*正确配置。
+应用程序通过 Intune 部署。太棒了！现在这些应用程序实际上并未正确配置。
 
 糟糕。使用 `PolicyPak Application Manager` 在这些应用程序旁提供“当下的正确设置”。太棒了！
 
@@ -10246,16 +9459,16 @@ Graph API 不仅适用于 Intune；它还适用于 Azure AD、Office 365、企�
 安装简单，如下所示：
 
 *   **你的电脑：** 拥有组策略管理控制台以创建和编辑组策略及 PolicyPak 项目。在那里安装 `PolicyPak 管理控制台 MSI`。你可以看到图 11.17 所示的结果。
-
 *   **终结点电脑：** 使用 Intune 或其他 MDM 部署 `PolicyPak 客户端扩展 (CSE)`。
-
 *   **PolicyPak 许可证文件：** 它是一个 MSI。上传到 Intune 并部署到客户端电脑。
 
 想要一份可爱的概览动画，请查看：
 
 `https://www.policypak.com/video/policypak-and-mdm-deploying-real-group-policy-and-extra-policypak-settings-overview.html`
 
-获得所需设置后，只需将它们导出为 XML。（稍后我们会做更多此类操作。）拥有“XML 篮子”后，你需要将它们打包成一个 `.MSI` 文件。PolicyPak 有一个名为 `Group Policy Exporter utility`（组策略导出工具）的工具正好能做这件事。
+
+
+获得所需设置后，只需将它们导出为 XML。（稍后我们会做更多此类操作。）拥有“XML 篮子”后，你需要将它们打包成一个 `.MSI` 文件。PolicyPak 有一个名为 `Group Policy Exporter utility` 的工具正好能做这件事。
 
 所以，计划如下：
 
@@ -10290,14 +9503,11 @@ Graph API 不仅适用于 Intune；它还适用于 Azure AD、Office 365、企�
 
 **图 11.18** 使用 `PolicyPak Admin Templates Manager` 创建并导出组策略 ADMX 设置
 
-
-
-
-设置可以是用户端或计算机端，并可轻松导出为 XML。而且，如果您有任何第三方 ADMX 模板，可以立即使用它们（也可见于图 11.18）并导出这些设置。这样，每个组策略 ADMX 设置都涵盖在内、可用，且可导出到 MDM。请记住：Microsoft 的 Policy CSP 仅适用于精选设置；而使用 PolicyPak Admin Templates Manager，其超能力在于您可以真正利用您需要的 `any` ADMX 设置。
+设置可以是用户端或计算机端，并可轻松导出为 XML。而且，如果您有任何第三方 ADMX 模板，可以立即使用它们（也可见于图 11.18）并导出这些设置。这样，每个组策略 ADMX 设置都涵盖在内、可用，且可导出到 MDM。请记住：Microsoft 的 Policy CSP 仅适用于精选设置；而使用 `PolicyPak Admin Templates Manager`，其超能力在于您可以真正利用您需要的 `any` ADMX 设置。
 
 如果您有组策略首选项设置，如快捷方式、服务、电源设置、注册表设置、环境变量、设备限制、计划任务等，您可以使用 PolicyPak 内置向导导出这些设置，如图 11.19 所示。
 
-对于组策略安全设置，过程类似。在包含安全设置的 GPO 中，只需使用 PolicyPak Security Settings Manager 导出现有的组策略安全设置，如图 11.20 所示。大多数安全设置将被导出。有些不会。您可以在图 11.20 中看到这一点。
+对于组策略安全设置，过程类似。在包含安全设置的 GPO 中，只需使用 `PolicyPak Security Settings Manager` 导出现有的组策略安全设置，如图 11.20 所示。大多数安全设置将被导出。有些不会。您可以在图 11.20 中看到这一点。
 
 ![图 11.19 将组策略首选项设置导出为 XML 文件](img/c11f019.jpg)
 
@@ -10307,7 +9517,7 @@ Graph API 不仅适用于 Intune；它还适用于 Azure AD、Office 365、企�
 
 **图 11.20** 将组策略安全设置导出为 XML
 
-此时，您可以使用 PolicyPak Exporter 工具将 XML 打包生成 MSI。然后通过 Intune 部署该 MSI。
+此时，您可以使用 `PolicyPak Exporter` 工具将 XML 打包生成 MSI。然后通过 Intune 部署该 MSI。
 
 说真的，就这么简单。
 
@@ -10317,35 +9527,35 @@ Graph API 不仅适用于 Intune；它还适用于 Azure AD、Office 365、企�
 
 ### 使用 PolicyPak 克服 UAC 提示
 
-我们在第 10 章中看到过 PolicyPak，当时我们讨论了在需要管理 BitLocker 时如何克服 UAC 提示。标准用户无法备份自己的 BitLocker 恢复密钥，在该章中我展示了如何使用 PolicyPak Least Privilege Manager 来克服这一问题。
+我们在第 10 章中看到过 PolicyPak，当时我们讨论了在需要管理 BitLocker 时如何克服 UAC 提示。标准用户无法备份自己的 BitLocker 恢复密钥，在该章中我展示了如何使用 `PolicyPak Least Privilege Manager` 来克服这一问题。
 
 然而，几乎肯定会有这样一些情况：您部署的应用程序，怎么说呢，又旧又难搞。或者可能是新但也难搞。当用户运行它时，应用程序会显示一个 UAC 提示，这会阻止用户按设计运行它，或者完全阻止用户运行它。
 
-要克服此问题，您可以使用 PolicyPak Least Privilege Manager 提升顽固应用程序的权限以绕过 UAC 提示（图 11.21）。
+要克服此问题，您可以使用 `PolicyPak Least Privilege Manager` 提升顽固应用程序的权限以绕过 UAC 提示（图 11.21）。
 
 ![图 11.21 运行需要 UAC 提示的应用程序](img/c11f021.jpg)
 
 **图 11.21** 运行需要 UAC 提示的应用程序
 
-使用 PolicyPak Least Privilege Manager，您只需设置规则。在图 11.22 中，我创建了一条规则，意思是：“每当我看到 TreeSizeFree 版本高于 4.0.3 左右，且由 JAM Software GmbH 签名时，则以提升的权限运行。”
+使用 `PolicyPak Least Privilege Manager`，您只需设置规则。在图 11.22 中，我创建了一条规则，意思是：“每当我看到 TreeSizeFree 版本高于 4.0.3 左右，且由 JAM Software GmbH 签名时，则以提升的权限运行。”
 
 ![图 11.22 使用 PolicyPak Least Privilege Manager 克服 UAC 提示](img/c11f022.jpg)
 
-**图 11.22** 使用 PolicyPak Least Privilege Manager 克服 UAC 提示
+**图 11.22** 使用 `PolicyPak Least Privilege Manager` 克服 UAC 提示
 
-当我想将其与 Intune 配合使用时，只需导出为 XML，并使用 PolicyPak Exporter 将其打包成 MSI。
+当我想将其与 Intune 配合使用时，只需导出为 XML，并使用 `PolicyPak Exporter` 将其打包成 MSI。
 
-您还可以使用 PolicyPak Least Privilege Manager 提升可能执行需要管理员权限操作的脚本、提升需要管理员权限的控制面板小程序（如设备管理器），以及提升需要管理员权限的 MSI 应用程序安装。
+您还可以使用 `PolicyPak Least Privilege Manager` 提升可能执行需要管理员权限操作的脚本、提升需要管理员权限的控制面板小程序（如设备管理器），以及提升需要管理员权限的 MSI 应用程序安装。
 
 此外，如果您的用户在外场工作并下载了一些您 `想` 允许他们安装的内容，他们会收到质询代码提示，如图 11.23 所示。
 
 ![图 11.23 PolicyPak Least Privilege Manager 请求/响应代码对话框](img/c11f023.jpg)
 
-**图 11.23** PolicyPak Least Privilege Manager 请求/响应代码对话框
+**图 11.23** `PolicyPak Least Privilege Manager` 请求/响应代码对话框
 
 然后，他们将质询代码读给服务台或其他授权人员听，愿望即可实现。无需本地管理员权限，使您的计算机尽可能安全。
 
-您可以查看 PolicyPak Least Privilege Manager 基础视频和 PolicyPak Least Privilege Manager 管理员审批（质询代码）视频，请访问：`https://kb.policypak.com/kb/article/172-kill-local-admin-rights-run-applications-with-least-privilege` 和 `https://kb.policypak.com/kb/article/191-01-admin-approval-demo/`。
+您可以查看 `PolicyPak Least Privilege Manager` 基础视频和 `PolicyPak Least Privilege Manager` 管理员审批（质询代码）视频，请访问：`https://kb.policypak.com/kb/article/172-kill-local-admin-rights-run-applications-with-least-privilege` 和 `https://kb.policypak.com/kb/article/191-01-admin-approval-demo/`。
 
 ### 使用 PolicyPak 阻止和允许 UWP 应用程序
 
@@ -10353,13 +9563,13 @@ Graph API 不仅适用于 Intune；它还适用于 Azure AD、Office 365、企�
 
 也许您想允许消费者版 Microsoft Store，但允许用户安装和运行来自特定供应商的应用程序——例如，放行所有 Adobe 产品但阻止其他所有内容。
 
-借助 PolicyPak Least Privilege Manager 以及阻止和允许 UWP 应用程序、但允许特定供应商或应用程序通过的能力，这简直易如反掌。
+借助 `PolicyPak Least Privilege Manager` 以及阻止和允许 UWP 应用程序、但允许特定供应商或应用程序通过的能力，这简直易如反掌。
 
 此功能的端到端视频可在此处找到：
 
 `https://www.policypak.com/video/policypak-manage-block-and-allow-windows-universal-uwp-applications.html`
 
-此外，特别提醒使用 Windows 10 专业版的用户：PolicyPak Least Privilege Manager 可以阻止消费者版 Microsoft Store（通常无法通过其他方式实现）。此外，如果您想这么做，也可以阻止 Microsoft Edge 的运行。
+此外，特别提醒使用 Windows 10 专业版的用户：`PolicyPak Least Privilege Manager` 可以阻止消费者版 Microsoft Store（通常无法通过其他方式实现）。此外，如果您想这么做，也可以阻止 Microsoft Edge 的运行。
 
 我经常被问到这两个问题。
 
@@ -10369,29 +9579,23 @@ Graph API 不仅适用于 Intune；它还适用于 Azure AD、Office 365、企�
 
 以下是三个可以协同工作以管理应用程序、浏览器和 Java 的组件的超快速概述。
 
-*   **PolicyPak Application Settings Manager：** 拥有 500 个预配置的 Pak，可管理您可能部署到 Windows 10 桌面的几乎每个应用程序中的几乎每个设置。请参阅图 11.24，了解 PolicyPak Application Settings Manager 如何管理 Firefox、Internet Explorer、Chrome 和 Java 以及大量其他应用程序的几乎所有设置。
-
-*   **PolicyPak Browser Router：** 现在您有两个浏览器，Internet Explorer 和 Edge。很可能还有 Chrome 和 Firefox。某些网站仅根据打开它们的浏览器不同，工作效果就会更好。在图 11.25 中，您可以看到如何创建 PolicyPak Browser Router“路由”来指定特定网站（或模式）将使用正确的浏览器打开。
-
-*   **PolicyPak Java Rules Manager：** 旧应用程序很糟糕。但许多需要 Java。且需要特定版本的 Java。借助 PolicyPak Java Rules Manager，您可以强制特定 Web 应用程序与特定版本的 Java 匹配。请参阅图 11.26。
+*   **PolicyPak Application Settings Manager：** 拥有 500 个预配置的 Pak，可管理您可能部署到 Windows 10 桌面的几乎每个应用程序中的几乎每个设置。请参阅图 11.24，了解 `PolicyPak Application Settings Manager` 如何管理 Firefox、Internet Explorer、Chrome 和 Java 以及大量其他应用程序的几乎所有设置。
+*   **PolicyPak Browser Router：** 现在您有两个浏览器，Internet Explorer 和 Edge。很可能还有 Chrome 和 Firefox。某些网站仅根据打开它们的浏览器不同，工作效果就会更好。在图 11.25 中，您可以看到如何创建 `PolicyPak Browser Router`“路由”来指定特定网站（或模式）将使用正确的浏览器打开。
+*   **PolicyPak Java Rules Manager：** 旧应用程序很糟糕。但许多需要 Java。且需要特定版本的 Java。借助 `PolicyPak Java Rules Manager`，您可以强制特定 Web 应用程序与特定版本的 Java 匹配。请参阅图 11.26。
 
 要点很简单：尽可能简单地部署您的应用程序和浏览器。然后在顶层叠加您需要的策略设置，以确保正确的外观和设置，随后在正确的时间将它们交付给正确的人员。
 
 ![图 11.24 使用 PolicyPak Application Settings Manager 管理您的浏览器和桌面应用程序设置](img/c11f024.jpg)
 
-**图 11.24** 使用 PolicyPak Application Settings Manager 管理您的浏览器和桌面应用程序设置
-
-
-
-
+**图 11.24** 使用 `PolicyPak Application Settings Manager` 管理您的浏览器和桌面应用程序设置
 
 ![Figure 11.25 Use PolicyPak Browser Router to define which browser is best for what website or website pattern. Additionally, define which IE document mode to use for IE as necessary.](img/c11f025.jpg)
 
-**Figure 11.25** 使用 PolicyPak Browser Router 定义哪种浏览器最适合哪个网站或网站模式。此外，根据需要定义 IE 使用哪种 IE 文档模式。
+**Figure 11.25** 使用 `PolicyPak Browser Router` 定义哪种浏览器最适合哪个网站或网站模式。此外，根据需要定义 IE 使用哪种 IE 文档模式。
 
 ![Figure 11.26 Map a specific website to a specific version of Java using PolicyPak Java Rules Manager.](img/c11f026.jpg)
 
-**Figure 11.26** 使用 PolicyPak Java Rules Manager 将特定网站映射到特定版本的 Java。
+**Figure 11.26** 使用 `PolicyPak Java Rules Manager` 将特定网站映射到特定版本的 Java。
 
 ### 使用 PolicyPak 管理 Windows 功能（和可选功能）
 
@@ -10407,9 +9611,9 @@ Graph API 不仅适用于 Intune；它还适用于 Azure AD、Office 365、企�
 
 ### 通过 Intune（或任何 MDM）部署 PolicyPak
 
-获得所需的策略后，你可以使用附带的 PolicyPak Exporter 实用程序将它们打包成 MSI。
+获得所需的策略后，你可以使用附带的 `PolicyPak Exporter` 实用程序将它们打包成 MSI。
 
-然后，回到 Intune（或任何 MDM）中，你只需应用 **Chapter 6** 所学的知识。上传 PolicyPak Client-Side Extension MSI 并面向所有计算机。上传 PolicyPak 许可证文件并面向所有计算机。最后，上传一个或多个导出的 XML 捆绑包（现在是 MSI 文件）。你可以在 **Figure 11.28** 中看到此过程。
+然后，回到 Intune（或任何 MDM）中，你只需应用 **Chapter 6** 所学的知识。上传 `PolicyPak Client-Side Extension` MSI 并面向所有计算机。上传 `PolicyPak` 许可证文件并面向所有计算机。最后，上传一个或多个导出的 XML 捆绑包（现在是 MSI 文件）。你可以在 **Figure 11.28** 中看到此过程。
 
 当然，你可以有多个设置捆绑包。为内部销售部门指定一个，为外勤销售部门指定一个，为 IT 部门指定一个，为 HR 部门指定一个，依此类推。
 
@@ -10422,9 +9626,9 @@ Graph API 不仅适用于 Intune；它还适用于 Azure AD、Office 365、企�
 
 ![Figure 11.28 Upload and target the PolicyPak Client-Side Extension, PolicyPak license file, and the PolicyPak settings.](img/c11f028.jpg)
 
-**Figure 11.28** 上传并面向 PolicyPak Client-Side Extension、PolicyPak 许可证文件和 PolicyPak 设置。
+**Figure 11.28** 上传并面向 `PolicyPak Client-Side Extension`、`PolicyPak` 许可证文件和 `PolicyPak` 设置。
 
-简而言之，我们有很多人在使用 PolicyPak。有些人使用 PolicyPak Group Policy 版本来管控他们的本地机器。然后他们获取 PolicyPak MDM Edition，将导出的策略分发给 Intune 或任何 MDM 服务使用。
+简而言之，我们有很多人在使用 PolicyPak。有些人使用 `PolicyPak Group Policy` 版本来管控他们的本地机器。然后他们获取 `PolicyPak MDM Edition`，将导出的策略分发给 Intune 或任何 MDM 服务使用。
 
 请访问 `www.PolicyPak.com` 了解所有详情，真正填补你管理 Windows 10 所需的空白。
 
@@ -10442,7 +9646,7 @@ Graph API 不仅适用于 Intune；它还适用于 Azure AD、Office 365、企�
 * **Per Larsen:** `https://github.com/PerLarsen1975`
 * **Eric Haavarstein:** `https://github.com/haavarstein/Applications`
 
-这三个仓库都包含可以在 Intune 中实现有趣功能的有趣脚本。通常这些脚本使用 PowerShell 方法，利用了你在 **Chapter 6** 中了解到的 Intune Management Extension。
+这三个仓库都包含可以在 Intune 中实现有趣功能的有趣脚本。通常这些脚本使用 PowerShell 方法，利用了你在 **Chapter 6** 中了解到的 `Intune Management Extension`。
 
 这些脚本值得一看且很有用。我想说的是，因为 Azure 和 Intune 在不断变化，有时脚本可能会被 Azure 和 Intune 中某种“点点点击点击”的功能取代，从而使脚本变得不再必要。例如，有一大堆启用 BitLocker 的脚本，自从 Intune 现在为大多数情况提供了相当不错的 BitLocker 启用支持以来，这些脚本其实已无用武之地，而在“过去”它并不支持。还有更多例子，但这个最先浮现在脑海中。
 
@@ -10458,9 +9662,11 @@ Graph API 不仅适用于 Intune；它还适用于 Azure AD、Office 365、企�
 
 ### Yodamiitti Intune Management GUI
 
-MVP Petri Paavola 创建了一个名为 Yodamiitti Intune Management GUI 的工具。我认为它的发音是 *Yoda-meet-ee*，但既然是芬兰语，谁也说不准。
+MVP Petri Paavola 创建了一个名为 `Yodamiitti Intune Management GUI` 的工具。我认为它的发音是 *Yoda-meet-ee*，但既然是芬兰语，谁也说不准。
 
 你可以在此下载并试用：
+
+
 
 `https://github.com/petripaavola/yodamiitti_intunemanagementgui_communityedition`
 
@@ -10489,9 +9695,6 @@ MVP Petri Paavola 创建了一个名为 Yodamiitti Intune Management GUI 的工�
 仅查看 **Figure 11.32** 所示的“设备”选项卡，你就可以看到所有设备、上次同步时间、所有者（即 userPrincipalName）等。你还可以按住 Ctrl 键多选设备，然后单击“设备操作”>“RebootNow”（未显示）。
 
 ![Figure 11.32 You can multi-select devices in Yodamiitti and perform actions upon them.](img/c11f032.jpg)
-
-
-
 
 **图 11.32** 你可以在 `Yodamiitti` 中多选设备并对它们执行操作。
 
@@ -10743,6 +9946,241 @@ MVP Petri Paavola 创建了一个名为 Yodamiitti Intune Management GUI 的工�
 
         *   `Office Policy Configuration tool` (Office 策略配置工具), 204–205
 
+# 索引
+
+## A
+
+*   XML 配置文件，204–205
+
+*   Win32 应用，206–207
+
+    *   分配应用，216–217
+
+    *   内容准备，210–211
+
+    *   Win32 内容准备工具，207–208，210–211
+
+*   Win32 应用 (EXE)
+
+    *   Intune 管理扩展，216–217
+
+    *   .intunewin 文件，211–215
+
+    *   故障排除，217–219
+
+*   应用程序部署，Win32 应用 (EXE)，208–210
+
+*   Workspace ONE，159–160
+
+*   AppLocker，396
+
+    *   CSP，82
+
+    *   规则，Intune 和，420–421
+
+    *   白名单和
+
+        *   应用程序标识服务，419
+
+        *   组策略规则，417–419
+
+        *   规则，默认，418
+
+        *   测试，419–420
+
+    *   XML 片段
+
+        *   Intune 和，421–423
+
+        *   裁剪，420–421
+
+*   App-V，179
+
+*   AppX，153
+
+    *   应用程序部署，Microsoft Store for Business，170–178
+
+*   ARM
+
+    *   笔记本电脑，5
+
+    *   Windows 和，5
+
+*   分配的组，Autopilot，304
+
+*   “分配”边栏选项卡，80
+
+*   攻击，传递哈希，4
+
+*   自动注册
+
+    *   AAD 令牌策略和，123
+
+    *   组策略和，122–127
+
+    *   混合注册，123–125
+
+    *   设置，25–49
+
+    *   Windows 10 计算机，34–38
+
+*   Autopilot，293
+
+    *   Azure AD 品牌化，310–311
+
+    *   BitLocker，通过 Intune 启用，408–411
+
+    *   CSV 文件，300–303
+
+    *   部署，文件设置，306–308
+
+    *   设备
+
+        *   CSV 文件更新，300–303
+
+        *   硬件 ID，296–297
+
+        *   注册，296–299
+
+        *   目标定位，318–319
+
+    *   注册，选项，308–310
+
+    *   组，303
+
+        *   分配的组，304
+
+        *   动态组，304–306
+
+    *   硬件 ID
+
+        *   自动收集，317–323
+
+        *   关联用户，329
+
+        *   手动获取，298–299
+
+    *   混合 Azure AD 加入，339–340
+
+        *   设备配置文件，351–353
+
+        *   执行加入，351–353
+
+        *   配置文件，349–350
+
+        *   故障排除加入，354–355
+
+    *   基础设施，294–295
+
+    *   Intune，297
+
+    *   本地管理员，295
+
+    *   PC，退役，327
+
+    *   PC 重置，313
+
+    *   PC 清除，327
+
+    *   重置
+
+        *   本地 Autopilot 重置，324–325
+
+        *   远程 Autopilot 重置，325–327
+
+    *   场景，高级，SCCM 和，320–323
+
+    *   自部署模式，330–333
+
+        *   设备测试，337–338
+
+        *   准备设备以进行，333–337
+
+        *   自助服务终端机器，338–339
+
+        *   警告，332
+
+    *   逐步演练，314–317
+
+    *   Sysprep，312–313
+
+    *   White Glove，356–358
+
+    *   Windows 重装，313–314
+
+    *   清除，325–326
+
+*   Azure AD，2
+
+    *   帐户，删除，66–67
+
+    *   Active Directory 域和信任工具，59
+
+    *   Autopilot 配置文件分配，307–308
+
+    *   BitLocker 密钥恢复，413–414
+
+    *   品牌化，Autopilot，310–311
+
+    *   条件访问，426–427
+
+        *   分配，428–430
+
+        *   客户端应用，430
+
+        *   云应用，428–430
+
+        *   条件，428–430
+
+        *   授予，431–432
+
+        *   会话，431–432
+
+        *   设置，427–428
+
+        *   测试策略，432–434
+
+    *   Connect 同步向导，62
+
+    *   Connect 运行状况，72
+
+    *   设备所有者，405
+
+    *   设备设置，36–37
+
+    *   域名，自定义，50–58
+
+    *   动态组，16
+
+    *   注册，用户，26–29
+
+    *   ESR (Enterprise State Roaming，企业状态漫游)，241–243
+
+    *   快速设置，60
+
+    *   混合 Azure AD 加入计算机，70–72
+
+    *   加入此设备，43–44
+
+    *   MobileIron，25
+
+    *   移动性 (MDM 和 MAM) 页面，29
+
+    *   设置，38–42
+
+    *   登录，45–46
+
+        *   配置页面，61–64
+
+    *   同步服务，64–65
+
+    *   用户
+
+        *   添加，33–34
+
+        *   许可，34
+
+        *   限制，36–37
 
 
 
@@ -10750,124 +10188,8 @@ MVP Petri Paavola 创建了一个名为 Yodamiitti Intune Management GUI 的工�
 
 ## A
 
-*   XML 配置文件，204–205
-*   Win32 应用，206–207
-    *   分配应用，216–217
-    *   内容准备，210–211
-    *   Win32 内容准备工具，207–208，210–211
-*   Win32 应用 (EXE)
-    *   Intune 管理扩展，216–217
-    *   .intunewin 文件，211–215
-    *   故障排除，217–219
-*   Workspace ONE，159–160
-*   应用程序部署，Win32 应用 (EXE)，208–210
-*   AppLocker，396
-    *   CSP，82
-    *   规则，Intune 和，420–421
-    *   白名单和
-        *   应用程序标识服务，419
-        *   组策略规则，417–419
-        *   规则，默认，418
-        *   测试，419–420
-    *   XML 片段
-        *   Intune 和，421–423
-        *   裁剪，420–421
-*   App-V，179
-*   AppX，153
-    *   应用程序部署，Microsoft Store for Business，170–178
-*   ARM
-    *   笔记本电脑，5
-    *   Windows 和，5
-*   分配的组，Autopilot，304
-*   “分配”边栏选项卡，80
-*   攻击，传递哈希，4
-*   自动注册
-    *   AAD 令牌策略和，123
-    *   组策略和，122–127
-    *   混合注册，123–125
-    *   设置，25–49
-    *   Windows 10 计算机，34–38
-*   Autopilot，293
-    *   Azure AD 品牌化，310–311
-    *   BitLocker，通过 Intune 启用，408–411
-    *   CSV 文件，300–303
-    *   部署，文件设置，306–308
-    *   设备
-        *   CSV 文件更新，300–303
-        *   硬件 ID，296–297
-        *   注册，296–299
-        *   目标定位，318–319
-    *   注册，选项，308–310
-    *   组，303
-        *   分配的组，304
-        *   动态组，304–306
-    *   硬件 ID
-        *   自动收集，317–323
-        *   关联用户，329
-        *   手动获取，298–299
-    *   混合 Azure AD 加入，339–340
-        *   设备配置文件，351–353
-        *   执行加入，351–353
-        *   配置文件，349–350
-        *   故障排除加入，354–355
-    *   基础设施，294–295
-    *   Intune，297
-    *   本地管理员，295
-    *   PC，退役，327
-    *   PC 重置，313
-    *   PC 清除，327
-    *   重置
-        *   本地 Autopilot 重置，324–325
-        *   远程 Autopilot 重置，325–327
-    *   场景，高级，SCCM 和，320–323
-    *   自部署模式，330–333
-        *   设备测试，337–338
-        *   准备设备以进行，333–337
-        *   自助服务终端机器，338–339
-        *   警告，332
-    *   逐步演练，314–317
-    *   Sysprep，312–313
-    *   White Glove，356–358
-    *   Windows 重装，313–314
-    *   清除，325–326
-*   Azure AD，2
-    *   帐户，删除，66–67
-    *   Active Directory 域和信任工具，59
-    *   Autopilot 配置文件分配，307–308
-    *   BitLocker 密钥恢复，413–414
-    *   品牌化，Autopilot，310–311
-    *   条件访问，426–427
-        *   分配，428–430
-        *   客户端应用，430
-        *   云应用，428–430
-        *   条件，428–430
-        *   授予，431–432
-        *   会话，431–432
-        *   设置，427–428
-        *   测试策略，432–434
-    *   Connect 同步向导，62
-    *   Connect 运行状况，72
-    *   设备所有者，405
-    *   设备设置，36–37
-    *   域名，自定义，50–58
-    *   动态组，16
-    *   注册，用户，26–29
-    *   ESR (Enterprise State Roaming，企业状态漫游)，241–243
-    *   快速设置，60
-    *   混合 Azure AD 加入计算机，70–72
-    *   加入此设备，43–44
-    *   MobileIron，25
-    *   移动性 (MDM 和 MAM) 页面，29
-    *   设置，38–42
-    *   登录，45–46
-        *   配置页面，61–64
-    *   同步服务，64–65
-    *   用户
-        *   添加，33–34
-        *   许可，34
-        *   限制，36–37
-    *   工作区加入，41–42
-    *   Workspace ONE，25
+*   工作区加入，41–42
+*   Workspace ONE，25
 *   Azure AD Basic，9
 *   Azure AD Connect，58–63，59
 *   Azure AD Premium，2，16–17
@@ -10898,197 +10220,182 @@ MVP Petri Paavola 创建了一个名为 Yodamiitti Intune Management GUI 的工�
         *   自动化，414
         *   Azure AD，413–414
 
-
-
-
-
-# 索引
-
 ## P
 
-*   **PowerShell** 及，414
+*   `PowerShell` 及，414
 *   电话宣读，413–414
 
 ## B
 
-*   **边栏**，30
-*   **预装软件**，282，284–285
+*   `边栏`，30
+*   `预装软件`，282，284–285
     *   删除，286
-*   **被阻止的组策略报告**，141–143
-*   **BrowserFavorite CSP**，82
+*   `被阻止的组策略报告`，141–143
+*   `BrowserFavorite CSP`，82
 
 ## C
 
-*   **证书部署**，191–192
-*   **CertManager**，191
-*   **Chromebook**，5–6
-*   **CIS 基准**，安全基线，404
-*   **Citrix Endpoint Management**，15
-*   **Citrix Receiver**，220
-*   **Clean PC**，328
-*   **CMTrace**，218
-*   **CNAME**，域名，自定义，53–55
-*   **共同管理**，117–121
-    *   **MobileIron**，121
-    *   **VMware** 及，121
-    *   **工作负载**，119–120
-*   **命令行参数**，MSI，166
-*   **公司门户应用**，173
-*   **合规性策略**，384–385
+*   `证书部署`，191–192
+*   `CertManager`，191
+*   `Chromebook`，5–6
+*   `CIS 基准`，安全基线，404
+*   `Citrix Endpoint Management`，15
+*   `Citrix Receiver`，220
+*   `Clean PC`，328
+*   `CMTrace`，218
+*   `CNAME`，域名，自定义，53–55
+*   `共同管理`，117–121
+    *   `MobileIron`，121
+    *   `VMware` 及，121
+    *   `工作负载`，119–120
+*   `命令行参数`，MSI，166
+*   `公司门户应用`，173
+*   `合规性策略`，384–385
     *   创建策略，385–388
     *   结果，389–390
-*   **条件访问**，396
-*   **冲突报告**，144–147
-*   **共同策略管理**，122
+*   `条件访问`，396
+*   `冲突报告`，144–147
+*   `共同策略管理`，122
     *   自动注册，组策略及，122–127
-    *   **MdmWinsOverGp**，127–133
-*   **Cortana**，阻止，85–87
-*   **创建配置文件对话框**，78
-*   **CSE**（客户端扩展），10
-*   **CSP**（配置服务提供程序），9–10，82
-    *   **AppLocker**，10，82
-    *   **BitLocker**，82
-    *   **BrowserFavorite**，82
-    *   **DevDetail**，82
-    *   **Firewall CSP**，10
-    *   **Policy CSP**，10，84–87
-    *   **PXLogical**，82
-    *   **SUPL**，82
-    *   **Windows 版本**，10
-    *   **WMI 到 CSP 桥接**，11
-*   **CSV 文件**，设备，Autopilot 及，300–303
-*   **精选设置**，6
+    *   `MdmWinsOverGp`，127–133
+*   `Cortana`，阻止，85–87
+*   `创建配置文件对话框`，78
+*   `CSE`（客户端扩展），10
+*   `CSP`（配置服务提供程序），9–10，82
+    *   `AppLocker`，10，82
+    *   `BitLocker`，82
+    *   `BrowserFavorite`，82
+    *   `DevDetail`，82
+    *   `Firewall CSP`，10
+    *   `Policy CSP`，10，84–87
+    *   `PXLogical`，82
+    *   `SUPL`，82
+    *   `Windows 版本`，10
+    *   `WMI 到 CSP 桥接`，11
+*   `CSV 文件`，设备，Autopilot 及，300–303
+*   `精选设置`，6
 
 ## D
 
-*   **DA**（桌面分析），381–382
-    *   **部署计划**，382–383
-        *   **阶段**，383
-*   **DC01**，2
-*   **调试日志**，148–149
-*   **Delivery Optimization**，Office，366
-*   **交付报告**，MDM 服务，140–141
-*   **部署计划**，382–383
-    *   **阶段**，383
-*   **DesktopStandard**，8
-*   **DevDetail CSP**，82
-*   **设备合规性**，384–385
-*   **设备配置**，冲突，145–146
-*   **设备限制**，78–79
-    *   **所有设备**，80
-*   **设备**
-    *   **证明**，390–392
-    *   **Autopilot**，CSV 文件更新，300–303
-    *   **BitLocker**
+*   `DA`（桌面分析），381–382
+    *   `部署计划`，382–383
+        *   `阶段`，383
+*   `DC01`，2
+*   `调试日志`，148–149
+*   `Delivery Optimization`，Office，366
+*   `交付报告`，MDM 服务，140–141
+*   `部署计划`，382–383
+    *   `阶段`，383
+*   `DesktopStandard`，8
+*   `DevDetail CSP`，82
+*   `设备合规性`，384–385
+*   `设备配置`，冲突，145–146
+*   `设备限制`，78–79
+    *   `所有设备`，80
+*   `设备`
+    *   `证明`，390–392
+    *   `Autopilot`，CSV 文件更新，300–303
+    *   `BitLocker`
         *   启用，405–408
-        *   **HSTI**（硬件安全测试接口），409
-        *   **HTSI/InstantGo**，410–411
-        *   **InstantGo**，409
-        *   **非 HSTI/非 InstantGo**，409–410
-    *   **清理**，392
-    *   **上下文**，部署及，162–163
-    *   **注册**，149–150
-    *   **硬件 ID**，296–297
-    *   **Intune**，疑难解答，150
-    *   **所有者**，405
-    *   **注册到 Autopilot**，296–299
-    *   **自部署模式**（Autopilot），333–337
-    *   **状态报告**，140–141
-*   **诊断报告**
-    *   **被阻止的组策略**，142–143
-    *   **托管策略**，141–142
-    *   **非托管策略**，143
-*   **DM**（设备管理），9
-*   **域控制器**，2
-*   **域名**
-    *   **自定义**，50–58
-    *   **GoDaddy**，自定义，52–54
-*   **域**，2
-    *   **加入**，4
-    *   **Win10Computer**，加入，2–3
-*   **驱动程序**，MSIX Packaging Tool，184–185
+        *   `HSTI`（硬件安全测试接口），409
+        *   `HTSI/InstantGo`，410–411
+        *   `InstantGo`，409
+        *   `非 HSTI/非 InstantGo`，409–410
+    *   `清理`，392
+    *   `上下文`，部署及，162–163
+    *   `注册`，149–150
+    *   `硬件 ID`，296–297
+    *   `Intune`，疑难解答，150
+    *   `所有者`，405
+    *   `注册到 Autopilot`，296–299
+    *   `自部署模式`（Autopilot），333–337
+    *   `状态报告`，140–141
+*   `诊断报告`
+    *   `被阻止的组策略`，142–143
+    *   `托管策略`，141–142
+    *   `非托管策略`，143
+*   `DM`（设备管理），9
+*   `域控制器`，2
+*   `域名`
+    *   `自定义`，50–58
+    *   `GoDaddy`，自定义，52–54
+*   `域`，2
+    *   `加入`，4
+    *   `Win10Computer`，加入，2–3
+*   `驱动程序`，MSIX Packaging Tool，184–185
 *   `dsregcmd /status` 命令，122
-*   **动态组**，16，109–111
-    *   **高级动态规则**，111–112
-    *   **Autopilot**，304–306
-    *   **收集硬件 ID**，317–318
-    *   **成员身份**，113
-    *   **疑难解答**，113
+*   `动态组`，16，109–111
+    *   `高级动态规则`，111–112
+    *   `Autopilot`，304–306
+    *   `收集硬件 ID`，317–318
+    *   `成员身份`，113
+    *   `疑难解答`，113
 
 ## E
 
-*   **EMM**（企业移动性），1
-*   **EMS**（企业移动性 + 安全性），17，21
-    *   **Azure 高级威胁分析**，17
-    *   **Azure 高级威胁防护**，17
-    *   **Azure 信息保护**，17
-    *   **E3**，18
-    *   **E5**，18
-        *   **注册**，21–22
-        *   **试用成功**，22
-        *   **用户 ID**，22
-    *   **Intune**，17，20
-    *   **Microsoft Cloud App Security**，17
-    *   **Microsoft Identity Manager**，17
+*   `EMM`（企业移动性），1
+*   `EMS`（企业移动性 + 安全性），17，21
+    *   `Azure 高级威胁分析`，17
+    *   `Azure 高级威胁防护`，17
+    *   `Azure 信息保护`，17
+    *   `E3`，18
+    *   `E5`，18
+        *   `注册`，21–22
+        *   `试用成功`，22
+        *   `用户 ID`，22
+    *   `Intune`，17，20
+    *   `Microsoft Cloud App Security`，17
+    *   `Microsoft Identity Manager`，17
 *   `<enabled />`，94
-*   **加密**
-    *   **BitLocker**，通过 Intune 启用，404–412
-    *   **设备所有者**，405
-*   **终结点**，4
-    *   **ADMX 设置**，106
-*   **注册**，9
-    *   **AAD 令牌策略**，123
-    *   **自动注册**，设置，25–49
-    *   **Autopilot**，308–309
-    *   **计算机**，29–32
-    *   **深层链接**，47–49
-    *   **设备**，149–150
-    *   **混合**，123–125
-    *   **Intune**
-        *   **Intune Connector for Active Directory**，345–346
-        *   **Microsoft Store for Business Applications**，171–172
-    *   **预确认**，44
-    *   **快捷方式**，47–49
-    *   **用户**，26–29
-*   **错误代码**，列表，151–152
-*   **ESR**（企业状态漫游），239–240
-    *   **背景图片**，242
-    *   **Edge 收藏夹**，242
-    *   **Microsoft UE-V**（用户体验虚拟化），243–244
-    *   **设置**，241–244
-    *   **同步设置**，Windows，240
-    *   **启用**，241–242
-*   **事件日志**，148–149
-*   **常青脚本**，220
-*   **.EXE**（Win32 应用），153
-    *   **7-Zip**，156–157
-    *   **下载**，155–156
-    *   **Firefox ESE**（延长服务版本），155–156
-
-
-
-
+*   `加密`
+    *   `BitLocker`，通过 Intune 启用，404–412
+    *   `设备所有者`，405
+*   `终结点`，4
+    *   `ADMX 设置`，106
+*   `注册`，9
+    *   `AAD 令牌策略`，123
+    *   `自动注册`，设置，25–49
+    *   `Autopilot`，308–309
+    *   `计算机`，29–32
+    *   `深层链接`，47–49
+    *   `设备`，149–150
+    *   `混合`，123–125
+    *   `Intune`
+        *   `Intune Connector for Active Directory`，345–346
+        *   `Microsoft Store for Business Applications`，171–172
+    *   `预确认`，44
+    *   `快捷方式`，47–49
+    *   `用户`，26–29
+*   `错误代码`，列表，151–152
+*   `ESR`（企业状态漫游），239–240
+    *   `背景图片`，242
+    *   `Edge 收藏夹`，242
+    *   `Microsoft UE-V`（用户体验虚拟化），243–244
+    *   `设置`，241–244
+    *   `同步设置`，Windows，240
+    *   `启用`，241–242
+*   `事件日志`，148–149
+*   `常青脚本`，220
+*   `.EXE`（Win32 应用），153
+    *   `7-Zip`，156–157
+    *   `下载`，155–156
+    *   `Firefox ESE`（延长服务版本），155–156
 
 ## F
 
-*   **文件分叉**，OneDrive，278–279
-
-*   **文件**
+*   `文件分叉`，OneDrive，278–279
+*   `文件`
     *   文件共享迁移到 SharePoint，248–249
         *   SharePoint 迁移工具，250–253
     *   PolicyPak File Delivery Manager，153
     *   还原，OneDrive，276–279
-
-*   **Firefox**
+*   `Firefox`
     *   ESR（Extended Service Release，延长支持版本），155–156
     *   Firefox ESR `.EXE`，208–210
     *   Mozilla Maintenance Service，209
-
-*   **防火墙 CSP**，10
-
-*   **航班**，367–370
-
-*   **Foxit Reader**
+*   `防火墙 CSP`，10
+*   `航班`，367–370
+*   `Foxit Reader`
     *   ADMX 文件，97–107
     *   `AppName`，102
     *   `CategoryPathFromADMX`，102
@@ -11097,38 +10404,26 @@ MVP Petri Paavola 创建了一个名为 Yodamiitti Intune Management GUI 的工�
     *   `SettingFromADMX`，102
     *   `SettingType`，102
     *   更新，自动，98–99
-
-*   **Foxit Updater**，禁用，103
-
-*   **全新开始**，328
-
-*   **fsLogix**，244
-
-*   **全盘加密**，BitLocker，在 Intune 中启用，404–412
+*   `Foxit Updater`，禁用，103
+*   `全新开始`，328
+*   `fsLogix`，244
+*   `全盘加密`，BitLocker，在 Intune 中启用，404–412
 
 ## G
 
-*   **GitHub**，MMAT 下载，136
-
-*   **GoDaddy**，域名，自定义，52–54
-
-*   **Google Chrome**，96
+*   `GitHub`，MMAT 下载，136
+*   `GoDaddy`，域名，自定义，52–54
+*   `Google Chrome`，96
     *   ADMX，108
     *   企业版，220
-
-*   **GPMC**，MMAT 和，136
-
-*   **GPO（组策略对象）**，77
+*   `GPMC`，MMAT 和，136
+*   `GPO`（组策略对象），77
     *   MDM 报告，143
     *   MMAT 和，136–138
-
-*   **GPsvc**，96
-
-*   **GPupdate**，76–77
-
-*   **Graph API**，448–454
-
-*   **组策略**，1，75–76
+*   `GPsvc`，96
+*   `GPupdate`，76–77
+*   `Graph API`，448–454
+*   `组策略`，1，75–76
     *   管理模板设置，6
     *   ADMX，92–93
     *   AppLocker，白名单和，417–419
@@ -11148,12 +10443,9 @@ MVP Petri Paavola 创建了一个名为 Yodamiitti Intune Management GUI 的工�
         *   PolicyMaker 和（DesktopStandard），8
     *   安全设置，导出，7
     *   定向，8
-
-*   **组策略管理模板**，策略设置，1
-
-*   **组策略 ADMX**，导出，7
-
-*   **组**
+*   `组策略管理模板`，策略设置，1
+*   `组策略 ADMX`，导出，7
+*   `组`
     *   Autopilot，303
         *   分配的组，304
         *   动态组，304–306
@@ -11164,36 +10456,27 @@ MVP Petri Paavola 创建了一个名为 Yodamiitti Intune Management GUI 的工�
 
 ## H
 
-*   **Haavarstein, Eric**，467
-
-*   **硬件**，ID
+*   `Haavarstein, Eric`，467
+*   `硬件`，ID
     *   Autopilot，296–297
     *   关联用户，329
-
-*   **收集 ID**，Autopilot，317–323
-
-*   **HSTI（硬件安全测试接口）**，BitLocker 设备，409
-
-*   **HTSI/InstantGo**，BitLocker 设备，410–411
-
-*   **混合 Azure AD 加入设备**，67–72
+*   `收集 ID`，Autopilot，317–323
+*   `HSTI`（硬件安全测试接口），BitLocker 设备，409
+*   `HTSI/InstantGo`，BitLocker 设备，410–411
+*   `混合 Azure AD 加入设备`，67–72
     *   AD 准备，342–345
     *   Autopilot 和，339–340
-
-*   **混合注册**，123–125
+*   `混合注册`，123–125
     *   故障排除，126
 
 ## I
 
-*   **ILT（项级定位）**，223
-
-*   **安装**
+*   `ILT`（项级定位），223
+*   `安装`
     *   上下文，部署和，162–163
     *   Intune Connector for Active Directory，347–349
-
-*   **InstantGo**，BitLocker 设备，409
-
-*   **Intune**，11，15，20
+*   `InstantGo`，BitLocker 设备，409
+*   `Intune`，11，15，20
     *   管理模板节点，88–90
     *   应用程序部署，20，157
         *   应用程序类型，158
@@ -11240,345 +10523,6 @@ MVP Petri Paavola 创建了一个名为 Yodamiitti Intune Management GUI 的工�
     *   Microsoft Store for Business 应用程序，注册，171–172
     *   MSIX 部署，191–195，192–194
     *   ODJConnector 服务，347–348
-    *   PC 管理，20
-    *   策略，故障排除，150–151
-    *   PowerShell，20
-    *   SCCM，20
-        *   共同管理，117–121
-    *   脚本，部署，220–223
-    *   安全基线，397
-        *   创建，397–399
-        *   组，分配，399–400
-    *   自助服务门户，20
-    *   Silverlight 和，154
-
-
-
-
-
-## I
-
-*   软件客户端，154
-*   UI，30
-*   用户，限制，36–37
-*   VPN 配置文件，20
-*   Wi-Fi，20
-*   Win32 应用，207–217
-    *   `.intunewin` 文件，211–215
-*   Win32 应用 (EXE)，153
-    *   应用程序部署，206–219
-    *   旧版安装，180
-    *   MSIX，206–207
-*   Yodamiitti Intune 管理 GUI，468–470
-
-*   Intune 连接器，117
-*   适用于 Active Directory 的 Intune 连接器，345–346
-    *   安装验证，347–349
-*   Intune for Education，23–24
-*   Intune 管理扩展，11，12
-    *   限制，222–223
-    *   故障排除，222
-*   Intune MDM 机构，32
-*   `IntuneWinAppUtil.exe`，210–211
-*   iOS，与 MSIX，179
-*   IT 路线图，435
-
-## J
-
-*   JavaScript，脚本部署，PolicyPak Scripts 和，224
-*   将此设备加入 Azure Active Directory，43–44
-
-## K
-
-*   KFM（已知文件夹移动），246，269–271
-    *   与带宽控制，272
-    *   与组策略，272–273
-    *   手动移动，271–272
-    *   与 MDM，273–275
-    *   策略设置，272–275
-    *   查看其工作情况，275–276
-
-## L
-
-*   实验室环境，计算机名称
-    *   `DC01`，2
-    *   `WIN10Computer.fabrikam.com`，2
-    *   `WIN10-NDJ-1`，2
-    *   `WIN10-NDJ-2`，2
-*   LAPS（本地管理员密码解决方案），4
-*   Larsen, Per，467
-*   `LGPO` 工具，安全基线和，404
-*   许可
-    *   Intune for Education，24
-    *   OneDrive，237–239
-    *   用户
-        *   Azure AD，34
-        *   域名，自定义，57–58
-*   业务线应用，161，162
-*   Linux，与 MSIX，179
-*   LOB（业务线）应用，153
-*   本地 Autopilot 重置，324–325
-*   徽标，163
-*   日志
-    *   收集，远程，149
-    *   `MdmWinsOverGp`，149
-
-## M
-
-*   MacOS，与 MSIX，179
-*   Mac，5–6
-*   MDM
-    *   与不断变化的需求，5
-    *   CPS，9–11
-    *   策划设置，6
-    *   域，加入，4
-    *   组策略比较，6–9
-    *   历史，8
-    *   基础设施，要求，8–9
-    *   Internet，4
-    *   Intune，2，15
-    *   Mobile Device Manager Plus，16
-    *   MobileIron，15
-    *   需求，3–6
-    *   Office 365，15
-    *   内置 Office 365，18–19
-    *   OMA-DM，9
-    *   PolicyPak，7
-    *   报表，139–140
-        *   高级，141–143
-        *   交付报表，140–141
-        *   设备状态，140–141
-        *   诊断报表，高级，141
-        *   用户，140–141
-    *   服务，11–12
-    *   设置，搜索，38–39
-    *   目标定位，8
-    *   第三方工具，12–13
-    *   VMware，2
-        *   Workspace ONE，15
-    *   Workspace One，2
-    *   与工作方式，3
-*   MDM 同步，76–77
-*   MDM 故障排除，过时信息，147
-*   `MdmWinsOverGp`，127–133
-    *   日志，149
-*   Metro，153
-*   Microsoft Graph Explorer，448–454
-*   Microsoft Store for Business，Autopilot 硬件 ID，297
-*   Microsoft Store for Business 应用程序，153
-    *   激活，170–172
-    *   AppX 应用程序部署，170–171
-        *   交付的应用程序，177
-        *   公司门户应用，173
-        *   交付可用性，176
-        *   包下载，172–178
-        *   专用应用商店可用性，175
-        *   查看应用，174
-        *   VLC Media player，172–173
-    *   使用者 Windows 应用商店，阻止，177–178
-    *   Intune，注册，171–172
-*   Microsoft UE-V（用户体验虚拟化），243–244
-*   迁移。*另请参阅* MMAT (MDM 迁移和分析工具)
-*   MMAT (MDM 迁移和分析工具)，135
-    *   GitHub 下载，136
-    *   与 GPMC，136
-    *   与 GPO，136–138
-    *   Ignite 2017 视频，139
-    *   输出
-        *   计算机端，138
-        *   用户端，138
-    *   PDF 指南，139
-    *   PowerShell 命令，137–138
-        *   完成，138
-    *   RSAT，136
-    *   升级，136
-*   Mobile Device Manager Plus，16
-*   MobileIron，2，12，15
-    *   Azure AD，25
-    *   共同管理，121
-*   MobileIron Bridge，12，219
-*   Mozilla Firefox，96
-*   Mozilla Firefox ESR，220
-*   Mozilla 维护服务，209
-*   MSI，13，153
-    *   应用程序部署
-        *   基本 MSI，165
-        *   说明字段，162
-        *   设备上下文，162–163
-        *   事件查看器，170
-        *   安装上下文，162–163
-        *   发布者字段，162
-        *   所有设备必需，164
-        *   简单 MSI，165
-        *   故障排除，168–170
-    *   基本，165
-    *   命令行参数，166
-    *   旧版安装，180
-    *   MSIX Packaging Tool，157
-    *   MSP（修补程序），166
-
-
-
-
-
-## M
-
-*   MST（转换），166
-*   撤销包，167–168
-*   简单，165
-*   卸载，168
-*   升级，167
-
-*   .MSI，PolicyPak File Delivery Manager，228–229
-
-*   MSIX，153，178
-    *   App-V，179
-    *   优势，180
-    *   阻止，179
-    *   证书导入向导，189–190
-    *   代码签名证书，182–183
-        *   部署，191–192
-        *   受信任的根证书颁发机构，189
-    *   部署，Intune 和，191–195
-    *   未来，179
-    *   Ignite 2018 会议，195
-    *   导入，Intune，192–194
-    *   打包工具，157
-        *   应用程序部署，186
-        *   下载，181
-        *   驱动程序，184–185
-        *   首次启动任务，185
-        *   安装失败，187–188
-        *   安装屏幕，185
-        *   Notepad++ .EXE 安装程序，182–183，185
-        *   包，181–187
-        *   预测试，187–190
-        *   test.pfx 代码签名证书，182–183
-    *   PFX 证书，181–182
-    *   UWP 和，179
-    *   Win32 应用，206–207
-
-*   MSP（补丁），166
-*   MST（转换），166
-
-## N
-
-*   非 HTSI/非 InstantGo BitLocker 设备，409–410
-*   Notepad++，220
-
-## O
-
-*   OCPS（Office 客户端策略服务），205
-*   ODB（OneDrive for Business），244–245
-    *   已知文件夹移动，246
-*   ODJ Blob，341–342
-*   ODJConnector 服务，347–348
-*   Office，153
-    *   32 位版本，197
-    *   64 位版本，197
-    *   基于 MSI，153
-    *   目标通道，368
-*   Office 365，15
-    *   Azure AD，2
-    *   通道，管理模板和，373–375
-    *   EMS（企业移动性 + 安全性），17
-        *   E3，18
-        *   E5，18
-    *   Intune，20
-    *   内置 MDM 管理，18–19
-    *   OneDrive，许可，237–239
-*   Office 365 Business Essentials，ODB（OneDrive for Business），245
-*   Office 365 ProPlus
-    *   应用程序部署，196–197
-        *   应用套件设置，199–202
-        *   应用程序选择，199
-        *   配置，198–199
-    *   安装，202–203
-    *   OCPS（Office 客户端策略服务），205
-    *   Office 21019 对比，196
-    *   Office 自定义工具，204
-    *   Office 部署工具，204–205
-    *   Office 策略配置工具，204–205
-    *   注册表，终结点，203
-*   Office 365 就绪工具包，376–380
-*   适用于 Windows 10 的 Office 365 套件，197
-*   Office 2019，Office 365 ProPlus 对比，196
-*   Office 部署工具，204–205
-*   Office 策略配置工具，204–205
-*   Office 维护
-    *   交付优化，366
-    *   功能更新，网络影响降低，365–367
-    *   月度通道，365
-    *   环，367–370
-    *   半年通道，365
-        *   目标版，365
-*   Office 更新通道策略，373
-*   Office XML 配置文件，204
-*   OMA（开放移动联盟），9，93
-*   OMA-DM（开放移动联盟-设备管理），9
-*   OMA-URI
-    *   自定义，93–94
-    *   日志，远程收集，149
-*   OneDrive，233
-    *   账户配置，262–263
-    *   管理中心，246–247
-    *   ADMX 文件，236–237
-    *   AI（人工智能），234
-    *   部署，261
-    *   驱动器映射，234
-    *   文件分叉，278–279
-    *   文件预览，234
-    *   文件还原，234，276–279
-    *   按需文件，234
-    *   按需文件，263–268
-    *   安装
-        *   Windows 7，261
-        *   Windows 10，260–261
-    *   KFM（已知文件夹移动），269–271
-        *   带宽控制和，272
-        *   组策略和，272–273
-        *   手动移动，271–272
-        *   MDM 和，273–275
-        *   策略设置，272–275
-        *   查看效果，275–276
-    *   许可，237–239
-    *   管理
-        *   组策略和，262–264
-        *   MDM 和，262–264
-    *   每用户设置，247
-    *   SharePoint 库，248
-        *   权限，253–254
-    *   SharePoint Online，248
-    *   团队站点自动装载，257
-        *   组策略，254–256
-        *   MDM 设置，256–257
-    *   Windows 10，264–268
-*   OneDrive 个人版，244
-*   OneDrive for Business。*请参阅* ODB（OneDrive for Business）
-*   OneDrive 维护
-    *   预览版，367–370
-    *   环，367–370
-*   OneDrive 同步客户端，257–258
-    *   企业环，258
-    *   组策略，用户端设置，260
-    *   预览体验环，258
-    *   生产环，259
-    *   版本，258–259
-*   本地 AD
-    *   Azure AD Connect，58–63
-    *   快速设置，60
-*   OOBE（开箱即用体验），34–35
-*   Owen, Steven，错误代码，151–152
-
-## P
-
-*   Paavola, Petri，468
-*   包
-    *   MSIX 打包工具，创建包，181–187
-    *   撤销，167–168
-*   Parker, Aaron，467
-
-
 
 
 
@@ -11618,31 +10562,40 @@ MVP Petri Paavola 创建了一个名为 Yodamiitti Intune Management GUI 的工�
     *   **BitLocker**，密钥管理，414–415
     *   **浏览器路由器**，464，465
     *   **下载**，457
-    *   **导出工具**，466–467
-    *   **Windows 功能管理器**，466
-    *   **组云版**，455
-    *   **组 MDM 版**，455
-    *   **组策略版**，1，455
-        *   **域**，2
-    *   **组策略导出到 MDM**，458–461
-    *   **安装**，457–458
-    *   **Intune**，部署和，466–467
-    *   **Java 规则管理器**，464，465
-    *   **脚本**，部署，223–226
-    *   **脚本管理器**，153
-        *   **ILT（项目级定位）**，225–226
-    *   **SecureRun**，425–426
-    *   **UAC 提示和**，461–463
-    *   **用例**，455–456
-    *   **UWP 应用程序和**，463
-    *   **白名单**，**最小权限管理器**和，423–426
-    *   **Windows 功能**，466
+
+
+
+# 索引
+
+## P
+
+*   **导出工具**，466–467
+*   **Windows 功能管理器**，466
+*   **组云版**，455
+*   **组 MDM 版**，455
+*   **组策略版**，1，455
+    *   **域**，2
+*   **组策略导出到 MDM**，458–461
+*   **安装**，457–458
+*   **Intune**，部署和，466–467
+*   **Java 规则管理器**，464，465
+*   **脚本**，部署，223–226
+*   **脚本管理器**，153
+    *   **ILT（项目级定位）**，225–226
+*   **SecureRun**，425–426
+*   **UAC 提示和**，461–463
+*   **用例**，455–456
+*   **UWP 应用程序和**，463
+*   **白名单**，**最小权限管理器**和，423–426
+*   **Windows 功能**，466
+
 *   **PolicyPak 文件传递管理器**，153，226–227
     *   **下载**
         *   **.EXE**，228–229
         *   **.MSI**，228–229
         *   **非常用文件类型**，227–228
         *   **ZIP**，229–231
+
 *   **PolicyPak MDM**，7，12
 *   **PowerShell**，219
     *   **AAD 同步**，65
@@ -11655,6 +10608,7 @@ MVP Petri Paavola 创建了一个名为 Yodamiitti Intune Management GUI 的工�
     *   **脚本部署**，220–223
         *   **PolicyPak 脚本**和，224
     *   **脚本**，153，219
+
 *   **PPKG 文件**
     *   **实施**，290
         *   **自动**，**OOBE**，290
@@ -11662,12 +10616,14 @@ MVP Petri Paavola 创建了一个名为 Yodamiitti Intune Management GUI 的工�
     *   **结果**，292
     *   **WCD（Windows 配置设计器）**，288
     *   **机器上的 Windows**，291
+
 *   **预确认注册**，44
 *   **预装软件**，284–285
 *   **配置文件**，77–78
     *   **冲突**，144–147
     *   **设备限制**，78–79
     *   **保存**，79–80
+
 *   **[Protection.office.com](http://Protection.office.com)**，436
 *   **协议**，**OMA-DM**，9
 *   **PuTTY**，287–288
@@ -11703,6 +10659,7 @@ MVP Petri Paavola 创建了一个名为 Yodamiitti Intune Management GUI 的工�
     *   **Intune 共同管理**，117–121
     *   **Intune 设备注册**，37
     *   **工作负载**，共同管理和，119–120
+
 *   **脚本**
     *   **Citrix Receiver**，220
     *   **部署**，219–220
@@ -11714,6 +10671,7 @@ MVP Petri Paavola 创建了一个名为 Yodamiitti Intune Management GUI 的工�
     *   **Notepad++**，220
     *   **PolicyPak 脚本管理器**，153
     *   **PowerShell**，153，219
+
 *   **安全基线**，395
     *   **CIS 基准**，404
     *   **客户端同步**，400–401
@@ -11725,12 +10683,14 @@ MVP Petri Paavola 创建了一个名为 Yodamiitti Intune Management GUI 的工�
     *   **安全配置框架**，396
     *   **测试**，401–402
     *   **VMware Workspace ONE**，403–404
+
 *   **安全配置框架**，396
 *   **自部署模式**，330–333
     *   **设备测试**，337–338
     *   **设备**，准备，333–337
     *   **自助服务机**，338–339
     *   **警告**，332
+
 *   **服务**，359
 *   **设置**，精选，6
 *   **SharePoint**
@@ -11738,174 +10698,172 @@ MVP Petri Paavola 创建了一个名为 Yodamiitti Intune Management GUI 的工�
     *   **库**，248
         *   **创建**，248
 
+## S（续）
 
-
-
-
-## S
-
-*   权限，253–254
-*   ODB (OneDrive for Business)，245
-    *   手动同步，265–267
-*   SharePoint 迁移工具，248，250–253
-*   SharePoint Online，OneDrive 和，248
-*   快捷方式，注册，47
-*   Signature Edition PC，282–283
-*   Silverlight，154
-*   简单编辑器，289
-*   存储感知，267–268
-*   SUPL CSP，82
-*   同步按钮，77
-*   Sysprep，Autopilot，312–313
+*   **权限**，253–254
+*   **ODB (OneDrive for Business)**，245
+    *   **手动同步**，265–267
+*   **SharePoint 迁移工具**，248，250–253
+*   **SharePoint Online**，OneDrive 和，248
+*   **快捷方式**，注册，47
+*   **Signature Edition PC**，282–283
+*   **Silverlight**，154
+*   **简单编辑器**，289
+*   **存储感知**，267–268
+*   **SUPL CSP**，82
+*   **同步按钮**，77
+*   **Sysprep**，Autopilot，312–313
 
 ## T
 
-*   目标定位，8
-*   任务计划程序，自动注册和，123–124
-*   模板，管理模板节点，Intune，88–90
-*   第三类设置，87
-*   第三方 ADMX 文件，引入，96–107
-*   Toast 通知，32
-*   TPM 2.0 芯片，330–331
-    *   测试自部署 Autopilot 设备，337–338
-*   故障排除
-    *   冲突，143–146
-    *   调试日志，148–149
-    *   交付报告，140–141
-    *   诊断报告
-        *   已阻止的组策略，142–143
-        *   托管策略，141–142
-        *   非托管策略，143
-    *   断开连接，151
-    *   错误代码列表，151–152
-    *   事件日志，148–149
-    *   Ignite 2016 演讲，151
-    *   Intune
-        *   设备配置文件，150
-        *   策略，150–151
-    *   Intune 管理扩展，222
-    *   日志，收集，远程，149
-    *   MSI 应用程序部署
-        *   事件查看器，170
-        *   日志位置，168–169
-        *   注册表状态，169
-        *   Windows 状态代码，169–170
-    *   注销，151
-    *   Win32 应用部署，217–219
+*   **目标定位**，8
+*   **任务计划程序**，自动注册和，123–124
+*   **模板**，管理模板节点，Intune，88–90
+*   **第三类设置**，87
+*   **第三方 ADMX 文件**，引入，96–107
+*   **Toast 通知**，32
+*   **TPM 2.0 芯片**，330–331
+    *   **测试自部署 Autopilot 设备**，337–338
+*   **故障排除**
+    *   **冲突**，143–146
+    *   **调试日志**，148–149
+    *   **交付报告**，140–141
+    *   **诊断报告**
+        *   **已阻止的组策略**，142–143
+        *   **托管策略**，141–142
+        *   **非托管策略**，143
+    *   **断开连接**，151
+    *   **错误代码列表**，151–152
+    *   **事件日志**，148–149
+    *   **Ignite 2016 演讲**，151
+    *   **Intune**
+        *   **设备配置文件**，150
+        *   **策略**，150–151
+    *   **Intune 管理扩展**，222
+    *   **日志**，收集，远程，149
+    *   **MSI 应用程序部署**
+        *   **事件查看器**，170
+        *   **日志位置**，168–169
+        *   **注册表状态**，169
+        *   **Windows 状态代码**，169–170
+    *   **注销**，151
+    *   **Win32 应用部署**，217–219
 
 ## U
 
-*   UAC 提示，375
-*   卸载，MSI，168
-*   非托管策略报告，143
-*   UPD (用户配置文件磁盘)，244
-*   升级，MSI，167
-*   UPN 名称，更新，66
-*   URI (统一资源标识符)，93
-*   URI，自定义，90–96
-    *   PolicyCSP 项，无 GUI，90–96
-*   用户
-    *   Azure AD，添加，33–34
-    *   域名
-        *   自定义，56–57
-        *   后缀更改，63–65
-    *   许可，34
-    *   OneDrive 设置，247
-    *   状态报告，140–141
-*   Uservoice，7
-*   UWP (通用 Windows 平台) 应用程序，153
-    *   MSIX 和，179
+*   **UAC 提示**，375
+*   **卸载**，**MSI**，168
+*   **非托管策略报告**，143
+*   **UPD (用户配置文件磁盘)**，244
+*   **升级**，**MSI**，167
+*   **UPN 名称**，更新，66
+*   **URI (统一资源标识符)**，93
+*   **URI**，自定义，90–96
+    *   **PolicyCSP 项**，无 GUI，90–96
+*   **用户**
+    *   **Azure AD**，添加，33–34
+    *   **域名**
+        *   **自定义**，56–57
+        *   **后缀更改**，63–65
+    *   **许可**，34
+    *   **OneDrive 设置**，247
+    *   **状态报告**，140–141
+*   **Uservoice**，7
+*   **UWP (通用 Windows 平台) 应用程序**，153
+    *   **MSIX** 和，179
 
 ## V
 
-*   VB 脚本，脚本部署，PolicyPak 脚本和，224
-*   供应商，9
-*   VHD (虚拟磁盘文件)，244
-*   VLC Media Player，172–173
-*   VMware
-    *   协同管理，121
-    *   Hyper-V，2
-    *   Workstation，2
-*   VMware Workspace ONE，15，24–25
-    *   应用程序部署，159–160
-    *   Azure AD，25
-    *   安全基线，403–404
+*   **VB 脚本**，脚本部署，**PolicyPak 脚本**和，224
+*   **供应商**，9
+*   **VHD (虚拟磁盘文件)**，244
+*   **VLC Media Player**，172–173
+*   **VMware**
+    *   **协同管理**，121
+    *   **Hyper-V**，2
+    *   **Workstation**，2
+*   **VMware Workspace ONE**，15，24–25
+    *   **应用程序部署**，159–160
+    *   **Azure AD**，25
+    *   **安全基线**，403–404
 
 ## W
 
-*   WCD (Windows 配置设计器)，282–283
-    *   账户管理页面，287
-    *   添加应用程序页面，287–288
-    *   添加证书页面，288–289
-    *   管理员凭据，287
-    *   高级编辑器，289–290
-    *   应用程序，添加，287–288
-    *   批量令牌，287
-    *   下载，Windows 应用商店，283
-    *   包，导出，290
-    *   PPKG 文件，288
-        *   实施，290–291
-        *   结果，292
-    *   预配桌面服务，284–286
-    *   预配任务，284–285
-    *   设置网络页面，286–287
-    *   用途，284
-*   WDAG (Windows Defender Application Guard)，437
-*   白名单
-    *   AppLocker 和
-        *   应用程序标识服务，419
-        *   组策略规则，417–419
-        *   规则，418
-        *   测试，419–420
-    *   PolicyPak，最低权限管理器，423–426
-*   WICD (Windows 映像和配置设计器)，171
+*   **WCD (Windows 配置设计器)**，282–283
+    *   **账户管理页面**，287
+    *   **添加应用程序页面**，287–288
+    *   **添加证书页面**，288–289
+    *   **管理员凭据**，287
+    *   **高级编辑器**，289–290
+    *   **应用程序**，添加，287–288
+    *   **批量令牌**，287
+    *   **下载**，Windows 应用商店，283
+    *   **包**，导出，290
+    *   **PPKG 文件**，288
+        *   **实施**，290–291
+        *   **结果**，292
+    *   **预配桌面服务**，284–286
+    *   **预配任务**，284–285
+    *   **设置网络页面**，286–287
+    *   **用途**，284
+
+*   **WDAG (Windows Defender Application Guard)**，437
+*   **白名单**
+    *   **AppLocker** 和
+        *   **应用程序标识服务**，419
+        *   **组策略规则**，417–419
+        *   **规则**，418
+        *   **测试**，419–420
+    *   **PolicyPak**，**最低权限管理器**，423–426
+
+*   **WICD (Windows 映像和配置设计器)**，171
 *   `WIN10Computer.fabrikam.com`，2
 *   `WIN10-NDJ-1`，2
 *   `WIN10-NDJ-2`，2
-*   Win32 应用 (EXE)，153
-    *   应用程序部署，206–207
-        *   分配应用，216–217
-        *   内容准备，210–211
-        *   Firefox ESR .EXE，208–210
-        *   Intune 管理扩展，216–217
+
+*   **Win32 应用 (EXE)**，153
+    *   **应用程序部署**，206–207
+        *   **分配应用**，216–217
+        *   **内容准备**，210–211
+        *   **Firefox ESR .EXE**，208–210
+        *   **Intune 管理扩展**，216–217
         *   `.intunewin` 文件，211–215
-        *   故障排除，217–219
-        *   Win32 内容准备工具，210–211
-    *   传统安装，180
-    *   MSIX，206–207
-*   Win32 内容准备工具，207–208，210–211
-*   Windows
-    *   节奏变更，360–363
-        *   修补节奏，364
-    *   通道，368
-    *   CSP，10
-    *   版本升级，301–303
-    *   功能更新，360–362
-        *   网络影响降低，365–367
-    *   修补节奏，364
-    *   重装，Autopilot，313–314
-    *   发布时间范围，361
-    *   版本，360–363
-    *   RS (Red Stone)，361
-    *   升级，361
-    *   Uservoice，7
-    *   版本，4–5
-*   Windows 10
-    *   ARM 和，5
-    *   Azure AD，自动加入，67–72
-    *   注册，34–38
-    *   HoloLens，5
-    *   IoT (物联网)，5
-    *   OneDrive，260–261，264–268
-    *   密码，35
-    *   预阻止，68
-    *   质量更新，364
-    *   安全性，435
-    *   升级，MDM 设置，136
+        *   **故障排除**，217–219
+        *   **Win32 内容准备工具**，210–211
+    *   **传统安装**，180
+    *   **MSIX**，206–207
 
+*   **Win32 内容准备工具**，207–208，210–211
 
+*   **Windows**
+    *   **节奏变更**，360–363
+        *   **修补节奏**，364
+    *   **通道**，368
+    *   **CSP**，10
+    *   **版本升级**，301–303
+    *   **功能更新**，360–362
+        *   **网络影响降低**，365–367
+    *   **修补节奏**，364
+    *   **重装**，Autopilot，313–314
+    *   **发布时间范围**，361
+    *   **版本**，360–363
+    *   **RS (Red Stone)**，361
+    *   **升级**，361
+    *   **Uservoice**，7
+    *   **版本**，4–5
 
-
+*   **Windows 10**
+    *   **ARM** 和，5
+    *   **Azure AD**，自动加入，67–72
+    *   **注册**，34–38
+    *   **HoloLens**，5
+    *   **IoT (物联网)**，5
+    *   **OneDrive**，260–261，264–268
+    *   **密码**，35
+    *   **预阻止**，68
+    *   **质量更新**，364
+    *   **安全性**，435
+    *   **升级**，MDM 设置，136
 
 # 索引
 
@@ -11954,4 +10912,3 @@ MVP Petri Paavola 创建了一个名为 Yodamiitti Intune Management GUI 的工�
 # WILEY 最终用户许可协议
 
 请访问 [www.wiley.com/go/eula](http://www.wiley.com/go/eula) 以获取 Wiley 的电子书最终用户许可协议。
-

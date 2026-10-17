@@ -1,36 +1,18 @@
+
+
 # 现代 Web 开发终极 Laravel：使用 Laravel 的 MVC、身份验证、API 和云部署构建健壮且交互的企业级 Web 应用（英文版）
-
-
 
 ![](img/cover.jpg)
 
 ![image](img/cover.jpg)
 
-
-
-
 ![](img/line.jpg)
 
-
-
-
-
 ![](img/line.jpg)
-
 
 ![](img/logo.jpg)
 
-
-
-
-
-
-
-
-
-
-
-# 献给
+## 献给
 
 *我亲爱的母亲*
 
@@ -38,54 +20,39 @@
 
 *我的力量与支持系统*
 
-# 关于作者
+## 关于作者
 
 `Drishti Jain` 拥有佐治亚理工学院的计算机科学硕士学位，以及印度浦拉纳库明斯工程学院的计算机工程学士学位。她曾荣获毕业届计算机工程专业“最优秀毕业生”称号，并被列入学院的获奖者名单。她曾在顶尖的产品型公司和金融科技机构工作，同时通过其发起的计划 `SkillUp with Drishti` 和她的非营利组织 `Samyak Drishti Foundation` 致力于机会和知识的民主化。
 
 她是一位享誉的国际技术演讲者，曾在全球 100 多场技术会议上发表演讲，包括在美国、英国、欧洲、新加坡、哥伦比亚、泰国、巴西和印度的技术会议。她活跃于 Laravel 生态系统，受邀在 `LARACON` 演讲，与 Laravel 核心团队、Laravel 创作者以及 Laravel India 播客共享平台。她在 PHP 生态系统的贡献非常丰富，包括在美国 `PHP UK`、`Scotland PHP` 和 `PHPTEK` 等会议上演讲，以及参加在新加坡的 `PHPConf.Asia`。
 
-她活跃于技术社区，经常通过各种博客、教程、研讨会、演讲和社交媒体上的帖子分享她的知识。你可以在这里找到她...
-
-
-
-
-
+她活跃于技术社区，经常通过各种博客、教程、研讨会、演讲和社交媒体上的帖子分享她的知识。你可以在这里找到她……
 
 本章深入探讨了模型-视图-控制器（MVC）架构，揭示其在 Web 开发中的重要性。理解 Laravel 如何遵循 MVC 原则，并深入探索控制器、模型和视图。发现让 Laravel 成为卓越框架的关键特性和设计模式。
 
-
 本章将带你开启 Laravel 路由和视图的之旅，这些是 Web 开发中的至关组件。探索路由的复杂性，包括可选参数、路由组和跨源资源共享。学习如何创建和优化视图，提升你构建动态且吸引人的 Web 应用程序的能力。
-
 
 本章探索了控制器和 Blade，它们是 Laravel 开发中的关键元素。深入研究资源控制器、重定向、指令和 Blade 模板。深度理解这些组件如何协同工作以创建健壮且可维护的 Web 应用程序。
 
-
 本章通过 Eloquent 和 Query Builder 解开了数据库操作的神秘面。学习执行常见的 Eloquent 操作，利用查询构造器方法，并理解让 Laravel 数据库交互无缝衔接约定和事件。
-
 
 本章赋予你处理用户验证、实现授权策略以及保护应用程序的知识。探索 Laravel 内置的身份验证系统，自定义逻辑并实施用户数据安全的最佳实践。
 
-
 本章将带你进入 API 开发领域。从理解 REST API 到探索 Laravel Passport，本章为你的应用程序创建健壮且可扩展的 API 提供了工具。
-
 
 本章指导你完成 Laravel 中必要的测试和调试实践。探索测试生命周期、HTTP 测试和有效的调试技术，以确保你的应用程序的可靠性和稳定性。
 
-
 本章重点关注 Laravel 的电子邮件和通知功能。学习生成和发送通知，自定义电子邮件组件，并探索用于实时通信的广播通知。
 
-
-本章通过教授如何将 Laravel 应用程序部署到云端来结束这段之旅。理解云部署的基础，探索不同的云提供商，并掌握使用 Laravel Vapor 进行高效且可扩展的部署。
+本章通过教授如何将 Laravel 应用程序部署到云端来结束这段旅程。理解云部署的基础，探索不同的云提供商，并掌握使用 Laravel Vapor 进行高效且可扩展的部署。
 
 本书是一本实战指南，充满了实用示例、真实世界场景和最佳实践。我希望这段 Laravel 之旅能使你具备构建尖端 Web 应用程序的能力，并增强你在动态的 Web 开发领域的技能。编码愉快！
 
-# 下载代码
+## 下载代码
 
-包含代码包和彩色图片
+包含代码包和彩色图片。
 
-请点击链接或扫描二维码下载书籍的
-
-`Code Bundles and Images`：
+请点击链接或扫描二维码下载书籍的 `Code Bundles and Images`：
 
 # [`github.com/ava-orange-education/Ultimate-Laravel-for-Modern-Web-Development`](https://github.com/ava-orange-education/Ultimate-Laravel-for-Modern-Web-Development)
 
@@ -95,28 +62,23 @@
 
 ![](img/qr.jpg)
 
-# 错误列表
+## 错误列表
 
 如果你在书中发现任何错误，请通过 `errata@orangeava.com` 与我们联系。我们非常重视你的反馈，这有助于帮助我们改进内容。
 
-# 你知道吗
+## 你知道吗
 
-你知过 Orange Education 提供每本书的电子版吗？你也可以在 `www.orangeava.com` 上找到它们。更多详细信息，请通过 `info@orangeava.com` 与我们联系。
+你知道 Orange Education 提供每本书的电子版吗？你也可以在 `www.orangeava.com` 上找到它们。更多详细信息，请通过 `info@orangeava.com` 与我们联系。
 
-
-
-# 你有意与我们合作写作吗？
+## 你有意与我们合作写作吗？
 
 如果你在某个领域拥有专业知识，并对编写或贡献书籍感兴趣，请致信 `business@orangeava.com`。我们欢迎来自技术专家的建议。
 
-# 评论
+## 评论
 
 请留下你的评价。在你阅读并使用这本书后，为什么不在购买的网站上留下评价呢？潜在读者可以查看并根据你的无偏见意见做出购买决策。我们 Orange Education 非常想知道你对我们产品的看法。
 
-
-
-
-Laravel 了一了一系列功能丰富的特性，这些特性简化了开发过程，并允许开发者专注于应用程序的核心功能。该框架既适用于 Web 开发领域的初学者，也适用于该领域的专家。
+Laravel 提供了一系列功能丰富的特性，这些特性简化了开发过程，并允许开发者专注于应用程序的核心功能。该框架既适用于 Web 开发领域的初学者，也适用于该领域的专家。
 
 Laravel 是一个 PHP Web 框架，提供了构建现代全栈 Web 应用的能力。
 
@@ -126,60 +88,67 @@ Laravel 是一个 PHP Web 框架，提供了构建现代全栈 Web 应用的能�
 
 在不断变化的技术版图中，有许多框架涌入市场。在本章的这一节中，我们将探索是什么让 Laravel 在其他应用开发框架中脱颖而出且独特的。
 
-## 可扩展性
+### 可扩展性
 
 PHP 是一种可扩展的语言，Laravel 为诸如 `Redis` 等快速分布式缓存系统提供了内置支持，使得框架支持水平扩展。过去的 Laravel 应用已经能够扩展到每月处理数亿请求。
 
-Laravel 平台（如 `Laravel Vapor`）为 Laravel 开发提供了无服务器（serverless）能力。它由 Amazon Web Services (AWS) 驱动，使得在 Laravel 开发中引入 AWS 功能变得简单且易维护。
+Laravel 平台（如 `Laravel Vapor`）为 Laravel 开发提供了无服务器（serverless）能力。它由 Amazon Web Services（AWS）驱动，使得在 Laravel 开发中引入 AWS 功能变得简单且易维护。
 
-## MVC 架构
+### MVC 架构
 
-Laravel 框架基于模型-视图-控制器模式（MVC 模式），这使得应用程序的业务逻辑和表现层分离，通过提高性能增强了框架的强大。这一概念在本书的 *第 2 章，Laravel 中的 MVC 架构* 中进行了深入讨论。
+Laravel 框架基于模型-视图-控制器模式（MVC 模式），这使得应用程序的业务逻辑和表现层分离，通过提高性能增强了框架的强大。这一概念在本书的*第 2 章，Laravel 中的 MVC 架构*中进行了深入讨论。
 
-## 社区
+### 社区
 
 Laravel 拥有一个强大且活跃的社区。该项目开源的，拥有活跃的贡献者、讨论论坛和强大的开发者社区。Laravel 社区的实力使得框架的新开发者能够找到良好的文档，并方便他们使用 Laravel 进行学习和开发。此外，Laravel 被许多开发者采用，导致在开发过程中遇到问题时需求和支持增加。这降低了新手开发者的入门门槛，并营造了一个友好且支持的环境。
 
-## 类依赖管理
+### 类依赖管理
 
 Laravel 框架由反转控制容器（IoC 容器）驱动，它实现了类依赖管理。它通过无需配置自动解析类的能力使框架变得强大。
 
 依赖关系在运行时处理，这提供了灵活性，因为依赖实现可以轻松更换。IoC 容器解析依赖的两种方式是 `Closure` 回调和自动解析。
 
-## Eloquent ORM
+### Eloquent ORM
 
-Laravel 框架启用了 Eloquent 对象关系映射（ORM），允许 Laravel 开发者使用 PHP 语法而非 SQL 语法进行编写。它为处理应用程序数据库提供了一种实现 `ActiveRecord` 的极佳且优的方式。Eloquent ORM 在本书的 *第 5 章，使用 Eloquent ORM 和查询构造器* 中有更深入的。
+Laravel 框架启用了 Eloquent 对象关系映射（ORM），允许 Laravel 开发者使用 PHP 语法而非 SQL 语法进行编写。它为处理应用程序数据库提供了一种实现 `ActiveRecord` 的极佳且优的方式。Eloquent ORM 在本书的*第 5 章，使用 Eloquent ORM 和查询构造器*中有更深入的讨论。
 
-Laravel 是一个强大、健壮且开发者友好的框架，提供了开发应用程序的现代能力*图 1.1* 展示了让开发者偏爱 Laravel 的核心支柱。
+Laravel 是一个强大、健壮且开发者友好的框架，提供了开发应用程序的现代能力。*图 1.1*展示了让开发者偏爱 Laravel 的核心支柱。
 
 ![](img/Figure-1.1.jpg)
 
-**图 1.1:** Laravel 的核心支柱
+**图 1.1：** Laravel 的核心支柱
 
 Laravel 还提供了以下功能：
 
-*   **URL 路由配置**
-    允许在同一网页中查看链接内容，而不是重定向到链接。通过 Laravel 内置的文件配置，它被加载到框架中并为应用程序用户提供无缝体验。
+- **URL 路由配置**
 
-*   **邮件服务**
-    Laravel 拥有 `Swiftmailer` 库，能够为单个电子邮件账户提供清晰直接的 API 配置。它提供了驱动程序，允许通过云服务和本地服务发送消息。
-    部分驱动程序包括 `SMTP`、`Mailgun`、`Mandrill`、`SparkPost`、PHP 的 `mail` 和 `Sendmail` 函数以及 Amazon `SES`。
+  允许在同一网页中查看链接内容，而不是重定向到链接。通过 Laravel 内置的文件配置，它被加载到框架中并为应用程序用户提供无缝体验。
 
-*   **消息队列系统**
-    Laravel 通过其内置的队列系统启用并驱动了消息队列系统，这是一个能够在后台运行任务的简单 API。它还支持 `Redis`、`SQS` 等许多其他消息队列。
+- **邮件服务**
 
-*   **调度**
-    Laravel 提供了自定义任务和作业的能力，无需开发者在系统级别进行设置。Laravel `CRON` 任务是 Laravel 内置的实用，以用户友的方式提供了调度功能。
+  Laravel 拥有 `Swiftmailer` 库，能够为单个电子邮件账户提供清晰直接的 API 配置。它提供了驱动程序，允许通过云服务和本地服务发送消息。
 
-*   **身份验证与授权**
-    让 Laravel 框架深受喜爱的关键因素是能够轻松控制资源的访问并组织身份验证逻辑。
-    Laravel 站点所有者可以无缝简化身份验证，框架在处理授权和验证时为所有者提供了灵活性安全性。
+  部分驱动程序包括 `SMTP`、`Mailgun`、`Mandrill`、`SparkPost`、PHP 的 `mail` 和 `Sendmail` 函数以及 Amazon `SES`。
+
+- **消息队列系统**
+
+  Laravel 通过其内置的队列系统启用并驱动了消息队列系统，这是一个能够在后台运行任务的简单 API。它还支持 `Redis`、`SQS` 等许多其他消息队列。
+
+- **调度**
+
+  Laravel 提供了自定义任务和作业的能力，无需开发者在系统级别进行设置。Laravel `CRON` 任务是 Laravel 内置的实用工具，以用户友好的方式提供了调度功能。
+
+- **身份验证与授权**
+
+  让 Laravel 框架深受喜爱的关键因素是能够轻松控制资源的访问并组织身份验证逻辑。
+
+  Laravel 站点所有者可以无缝简化身份验证，框架在处理授权和验证时为所有者提供了灵活性和安全性。
 
 ## Laravel 的独特特性
 
-Laravel 在整个开发者生态系统中被广泛采用，已成为开发者开发应用程序的首选框架。让 Laravel 独特之处在于它多多化的特性。让我们探索 Laravel 的这些独特特性。
+Laravel 在整个开发者生态系统中被广泛采用，已成为开发者开发应用程序的首选框架。让 Laravel 独特之处在于它多样化的特性。让我们探索 Laravel 的这些独特特性。
 
-## 种子（Database Seeding）
+### 种子（Database Seeding）
 
 Laravel 框架能够使用种子类（seed classes）用种子数据填充数据库表。这些种子类存储在 `database/seeders` 目录下，并定义了一个默认的 `DatabaseSeeder` 类。
 
@@ -211,28 +180,37 @@ class DatabaseSeeder extends Seeder
 }
 ```
 
-## 本地化
+### 本地化
 
 为了全球化并适应全球范围内不同语言的用户，Laravel 提供了本地化功能，能够获取不同语言的字符串。这使得 Laravel 应用程序支持多种语言。
 
 实现翻译字符串有两种方式：
 
-*   `lang` 目录
-    语言字符串必须存储在 `lang` 目录。同时也支持为应用程序支持的每种语言包含子目录。通过此功能，Laravel 可以管理内置特性的翻译字符串，例如验证错误消息。
+- `lang` 目录
 
-    `/lang`
-    `/en`
-    `messages.php`
-    `/es`
-    `messages.php`
+  语言字符串必须存储在 `lang` 目录。同时也支持为应用程序支持的每种语言包含子目录。通过此功能，Laravel 可以管理内置特性的翻译字符串，例如验证错误消息。
 
-*   **JSON 文件**
-    翻译字符串也可以放置在 JSON 文件中，必须存储在 `lang` 目录结构中。在这种方法中，应用程序支持的每种语言将位于单独的 JSON 文件，列在 `lang` 目录下。
-    在处理大量翻译字符串时，必须优先这种方法。
+  `lang`
 
-    `/lang`
-    `en.json`
-    `es.json`
+  `en`
+
+  `messages.php`
+
+  `es`
+
+  `messages.php`
+
+- **JSON 文件**
+
+  翻译字符串也可以放置在 JSON 文件中，必须存储在 `lang` 目录结构中。在这种方法中，应用程序支持的每种语言将位于单独的 JSON 文件，列在 `lang` 目录下。
+
+  在处理大量翻译字符串时，必须优先这种方法。
+
+  `lang`
+
+  `en.json`
+
+  `es.json`
 
 在这种情况下，配置本地区域（locale）也是非常简单的。默认情况下，应用程序的默认语言存储在 `config/app.php` 配置文件的 `locale` 配置选项中。
 
@@ -252,20 +230,18 @@ Route::get('/greeting/{locale}', function (string $locale) {
 });
 ```
 
-
-
 配置回退语言（fallback language）也是一种良好的做法。这应该在 `config/app.php` 文件中进行配置。
 
 设置回退语言的语法如下：
 
-```
-‘falback_locale’ => ‘<language>’
+```php
+'fallback_locale' => '<language>'
 ```
 
 例如，将回退语言设置为英语：
 
-```
-‘falback_locale’ => ‘en’
+```php
+'fallback_locale' => 'en'
 ```
 
 要确定当前的语言区域（locale），可以使用 `currentLocale` 和 `isLocale` 方法，如下：
@@ -275,24 +251,24 @@ use Illuminate\Support\Facades\App;
 
 $locale = App::currentLocale();
 
-if (App::isLocale(‘es’)) {
+if (App::isLocale('es')) {
     // …
 }
 ```
 
 # 最新版本发布变更
 
-#latest-version-release-changes
+`#latest-version-release-changes`
 
 Laravel 10 是目前使用的 Laravel 版本。如果你已经有了旧版本的 Laravel，可以继续对其进行升级。或者，如果你是新用户，请参考本章节的下一节了解如何安装 Laravel。
 
-# 如何升级
+## 如何升级
 
 为了将任何现有 Laravel 项目升级到 Laravel 10，更新依赖项是最关键的一步。升级文档可以在 [`laravel.com/docs/10.x/upgrade`](https://laravel.com/docs/10.x/upgrade) 获取。
 
 让我们探索如何升级到 Laravel 10 以获取最新功能，并对我们现有的 Laravel 应用进行必要的更改。
 
-# 依赖项
+## 依赖项
 
 Laravel 需要 PHP `8.1.0` 或更高版本以及 Composer `2.20` 或更高版本。
 
@@ -300,11 +276,11 @@ Laravel 需要 PHP `8.1.0` 或更高版本以及 Composer `2.20` 或更高版本
 
 | 依赖项 | 版本 |
 | --- | --- |
-| laravel/framework | ¹⁰.0 |
-| laravel/sanctum | ³.2 |
-| doctrine/dbal | ³.0 |
-| spatie/laravel-ignition | ².0 |
-| laravel/passport | ¹¹.0 |
+| `laravel/framework` | `¹⁰.0` |
+| `laravel/sanctum` | `³.2` |
+| `doctrine/dbal` | `³.0` |
+| `spatie/laravel-ignition` | `².0` |
+| `laravel/passport` | `¹¹.0` |
 
 **表 1.1：** Laravel 10 的 `composer.json` 依赖项
 
@@ -312,61 +288,64 @@ Laravel 需要 PHP `8.1.0` 或更高版本以及 Composer `2.20` 或更高版本
 
 | 依赖项 | 版本 |
 | --- | --- |
-| nunomaduro/collision | ⁷.0 |
-| phpunit/phpunit | ¹⁰.0 |
+| `nunomaduro/collision` | `⁷.0` |
+| `phpunit/phpunit` | `¹⁰.0` |
 
 **表 1.2：** 如果使用 PHPUnit 10，Laravel 10 的 `composer.json` 依赖项
 
 此外，请验证应用程序使用的任何其他第三方包是否支持 Laravel 10。
 
-## 最小稳定性
+### 最小稳定性
 
-`composer.json` 中的 `minimum-stability` 设置需要设置为 `stable:`：
+`composer.json` 中的 `minimum-stability` 设置需要设置为 `stable`：
 
-```
-“minimum-stability”: “stable”,
+```json
+"minimum-stability": "stable",
 ```
 
 `minimum-stability` 的默认值现在是 `stable`；因此你也可以选择完全删除它。
 
-## 公共路径绑定
+### 公共路径绑定
 
 更新你 Laravel 应用中的代码，调用 `Illuminate\Foundation\Application` 对象的 `usePublicPath` 方法。这应该取代将其 `public path` 绑定到容器中的 `path.public` 的做法：
 
 ```php
-app()->usePublicPath(__DIR__.’/public’);
+app()->usePublicPath(__DIR__ . '/public');
 ```
 
-## Redis 缓存标签
+### Redis 缓存标签
 
 Redis 缓存标签在 Laravel 版本更新中已重写，以获得更好的性能和高效的存储能力。Laravel 有了一个新的 `cache:prune-stale-tags` Artisan 命令，它需要在应用程序的 `App\Console\Kernel` 类中调度：
 
 ```php
-$schedule->command(‘cache:prune-stale-tags’)->hourly();
+$schedule->command('cache:prune-stale-tags')->hourly();
 ```
 
-`添加上述调度任务将配合最新的更新。`
+添加上述调度任务将配合最新的更新。
 
-## 数据库表达式
+### 数据库表达式
 
 数据库表达式在 Laravel 10 中已重写，以便将来能够添加功能。
 
 以下方法和手动转换需要由 `getValue` 方法替换：
 
-*   使用 `(string)` 的手动转换
-*   `__toString` 方法
+- 使用 `(string)` 的手动转换
+- `__toString` 方法
 
 此版本不再支持使用 `(string)` 的转换表达式。
 
-## Eloquent
+### Eloquent
 
 Eloquent 模型中的 `$dates` 属性已废弃。应用程序应使用 `$casts` 属性更新实例。
 
 例如：
 
+
+
+
 ```php
 protected $casts = [
-    ‘deployed_at’ => ‘datetime’,
+    'deployed_at' => 'datetime',
 ];
 ```
 
@@ -398,10 +377,6 @@ php artisan lang:publish
 
 在本节中，我们将根据机器的操作系统查看 Laravel 开发环境的设置。对于三种常用的操作系统 – Windows、Mac 和 Linux，要求如下。
 
-
-
-
-
 ```bash
 brew install composer
 ```
@@ -420,31 +395,40 @@ brew install composer@<versionNumber>
 
 按照以下步骤通过安装程序在 Mac 上安装 Composer：
 
-1. **下载安装程序。** 
+1. **下载安装程序。**
+
    在终端中运行以下命令下载 Mac 最新版本的 Composer：
+
    ```bash
-   sudo php -r “copy(‘https://getcomposer.org/installer’,’composer-setup.php’);”
+   sudo php -r "copy('https://getcomposer.org/installer','composer-setup.php');"
    ```
 
 2. **通过 Hash 验证安装程序**
+
    运行以下命令验证安装程序的真实性：
+
    ```bash
-   php -r «if (hash_file(‘sha384’, ‘composersetup.php’) === ‘756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3){echo ‘Installer verified’;}else{echo ‘Installer corrupt’;unlink(‘composer-setup.php’);)}” 
+   php -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3'){echo 'Installer verified';}else{echo 'Installer corrupt';unlink('composer-setup.php');})"
    ```
 
 3. **运行安装。**
+
    在终端通过以下命令运行 Composer 安装文件：
+
    ```bash
    php composer-setup.php
    ```
 
 4. **将 Phar 文件移动到 `/usr/bin/composer`：**
+
    ```bash
    sudo mv composer.phar /usr/local/bin/composer
    ```
 
 5. **运行 Composer。**
+
    在终端中输入以下内容运行 Composer：
+
    ```bash
    composer
    ```
@@ -479,6 +463,7 @@ composer
 若要使用安装程序安装 Laravel，我们利用 Composer。
 
 在终端中运行以下命令下载 Laravel 安装器：
+
 ```bash
 composer global require laravel/installer
 ```
@@ -498,14 +483,19 @@ composer global about
 通常，基于不同操作系统的常见位置如下：
 
 **Mac**
+
 `$HOME/.composer/vendor/bin`
 
 **Windows**
+
 `%USERPROFILE%\AppData\Roaming\Composer\vendor\bin`
 
 **Linux**
+
 `$HOME/.config/composer/vendor/bin`
+
 或
+
 `$HOME/.composer/vendor/bin`
 
 ### 通过 Composer Create-Project
@@ -513,8 +503,9 @@ composer global about
 也可以通过 Composer 的 `create-project` 命令完成 Laravel 安装。
 
 在你的终端中运行以下命令：
+
 ```bash
-composer create-project --prefer-dist laravel/laravel:¹⁰.0 blog
+composer create-project --prefer-dist laravel/laravel:^10.0 blog
 ```
 
 ### 通过 PHP serve
@@ -522,6 +513,7 @@ composer create-project --prefer-dist laravel/laravel:¹⁰.0 blog
 Laravel 也可以通过 PHP 内置的开发服务器运行。`serve Artisan` 命令用于此操作。
 
 在你的终端中运行以下命令：
+
 ```bash
 php artisan serve
 ```
@@ -531,6 +523,7 @@ php artisan serve
 Laravel 也可以通过 PHP 内置的开发服务器运行。`serve Artisan` 命令用于此操作。
 
 在你的终端中运行以下命令：
+
 ```bash
 php artisan serve
 ```
@@ -544,39 +537,48 @@ php artisan serve
 若要每五分钟或每十分分钟调度一次任务，调度任务代码如下：
 
 **每五分钟执行一次的任务：**
-`$schedule->command('test’)->everyFiveMinutes();`
+
+`$schedule->command('test')->everyFiveMinutes();`
 
 **每十分钟执行一次的任务：**
-`$schedule->command('test’)->everyTenMinutes();`
+
+`$schedule->command('test')->everyTenMinutes();`
 
 **每日重复任务：**
-`$schedule->command('test’)->daily();`
+
+`$schedule->command('test')->daily();`
 
 **每日特定时间执行：**
-`$schedule->command('test’)->dailyAt(‘10:00’);`
+
+`$schedule->command('test')->dailyAt('10:00');`
 
 ### 特定日期任务
 
 以下方法允许在特定日期进行调度：
+
 `mondays()`
+
 `tuesdays()`
+
 `wednesdays()`
+
 `thursdays()`
+
 `fridays()`
+
 `saturdays()`
+
 `sundays()`
 
 根据特定周几调度任务的频率要求，可以使用相应的方法来调度任务。
 
 ### 每周重复的任务
 
-`$schedule->command('test’)->weekly();`
+`$schedule->command('test')->weekly();`
 
 **每周特定时间执行：**
-`$schedule->command('test’)->weeklyOn(1,‘10:00’);`
 
-
-
+`$schedule->command('test')->weeklyOn(1,'10:00');`
 
 第一个参数接受 0-6 范围内的参数，其中每个数字代表星期的一某天。第二个参数是当天的时间。
 
@@ -585,7 +587,7 @@ php artisan serve
 为了让任务调度具有更高的自定义程度和频率，Laravel 允许使用手动的 CRON 表达式来实现相同功能：
 
 ```php
-$schedule->command(‘test’)->cron(‘* * * * *’);
+$schedule->command('test')->cron('* * * * *');
 ```
 
 ### 避免任务重叠
@@ -593,7 +595,7 @@ $schedule->command(‘test’)->cron(‘* * * * *’);
 在调度多个任务时，确保上一个任务在相同任务被重新触发之前完成至关重要。为了处理这些任务的重叠，Laravel 提供了一个可以在调度中使用的方法：
 
 ```php
-$schedule->command(‘test’)->withoutOverlapping();
+$schedule->command('test')->withoutOverlapping();
 ```
 
 `withoutOverlapping()` 方法确保了 `test` 命令在当前没有运行时将每分钟运行一次。这确保了运行任务之间不会发生重叠。
@@ -633,7 +635,7 @@ class SendNotifications extends Command implements Isolatable
 }
 ```
 
-由于命令被标记为 `Isolatable`，Laravel 会自动为命令添加 `–-isolate` 选项，减少了程序员添加选项的负担。
+由于命令被标记为 `Isolatable`，Laravel 会自动为命令添加 `--isolate` 选项，减少了程序员添加选项的负担。
 
 这确保了命令在带有该选项调用时只有一个实例。
 
@@ -654,7 +656,6 @@ Laravel 能够实现命令的可隔离功能并确保命令只有一个实例（
 该架构允许以下操作：
 
 *   应用程序的架构，即：
-*   应用程序的架构，即：
 
 ```php
 use DateTimeInterface;
@@ -666,9 +667,6 @@ public function isolationLocksAt(): DateTimeInterface
     return now()->add(new DateInterval('PT1M'));
 }
 ```
-
-
-
 
 在 MVC 模式采用的早期，它主要被用于桌面应用程序。到 20 世纪 90 年后期，它在 Web 应用程序中流行，并成为开发 Web 应用的行业主流。互联网的繁荣和业务数字化推动了 MVC 架构模式在应用程序中的广泛应用。
 
@@ -741,9 +739,6 @@ Laravel 中的 MVC 架构设计对开发者、架构师以及应用程序用户�
 *   可维护性与扩展性
 *   同步开发
 
-
-
-
 应用中操作的逻辑分离使得独立开发组件成为可能。这意味着应用组件可以被拆分为逻辑上独立的组件，并进行并行开发，从而缩短应用程序的开发周期。
 
 并行开发还允许我们快速、独立地构建功能，然后使用 MVC 原则将它们结合起来。这确保了软件的快速交付，并使得引入新功能和改进现有功能变得更加容易。
@@ -764,6 +759,8 @@ Model 组件与控制器层交互，并告知 Model 组件应用中的数据流�
 
 ## Laravel 中的 Views
 
+
+
 Laravel 中的 Views（视图）组件包含了应用程序中对终端用户可见的所有组件。终端用户通过用户界面（UI）与应用程序交互，而输入框和按钮等 UI 组件都包含在 MVC 架构模式的 View 组件之中。
 
 ![](img/Figure-2.4.jpg)
@@ -774,7 +771,7 @@ Laravel 中的 Views（视图）组件包含了应用程序中对终端用户可
 
 ## Laravel 中的 Controllers
 
-Laravel MVC 架构中的 Controller（控制器）组件是应用程序的`大脑`。Controller 负责管理应用数据如何被控制，并与 `Model` 和 `View` 组件交互，以决定数据在应用中的显示方式。Controller 组件还负责执行用户通过应用程序界面的操作。这可以是任何 `CRUD`（创建、读取、更新、删除）操作或应用中编写的任何功能。这些都是 Controller 组件的职责。
+Laravel MVC 架构中的 Controller（控制器）组件是应用程序的`大脑`。Controller 负责管理应用数据如何被控制，并与`Model`和`View`组件交互，以决定数据在应用中的显示方式。Controller 组件还负责执行用户通过应用程序界面的操作。这可以是任何`CRUD`（创建、读取、更新、删除）操作或应用中编写的任何功能。这些都是 Controller 组件的职责。
 
 ### 结论
 
@@ -792,42 +789,42 @@ MVC 架构模式就像 Laravel 的骨干，本章提供了所有信息，重点�
 
 # 第 3 章：Laravel 中的路由与视图
 
-### 引言
+## 引言
 
 本章涵盖 Laravel 中的路由（Routers）和视图（Views），它们是 Web 开发的重要部分。本章将从基础开始，引向与路由和视图复杂的主题。本章还将讨论 Laravel 中不同路由和视图以及如何创建这些组件。
 
-### 结构
+## 结构
 
 在本章中，重点将放在以下主题：
 
-*   Laravel 中的路由 (Routers)
-    *   路由简介
-    *   路由目录 (Routes directory)
-    *   路由方法
-    *   路由类型
-    *   可选参数
-    *   正则表达式约束
-    *   路由组 (Route groups)
-    *   跨域资源共享
-    *   缓存
-*   Laravel 中的视图 (Views)
-    *   创建视图
-    *   视图与扩展 (Extensions)
-    *   数据与视图
-    *   视图合成器与创建器 (View composers and creators)
-    *   视图优化
+- Laravel 中的路由（Routers）
+  - 路由简介
+  - 路由目录（Routes directory）
+  - 路由方法
+  - 路由类型
+  - 可选参数
+  - 正则表达式约束
+  - 路由组（Route groups）
+  - 跨域资源共享
+  - 缓存
+- Laravel 中的视图（Views）
+  - 创建视图
+  - 视图与扩展（Extensions）
+  - 数据与视图
+  - 视图合成器与创建器（View composers and creators）
+  - 视图优化
 
-### Laravel 中的路由
+## Laravel 中的路由
 
 在开发 Laravel Web 应用程序时，拥有一种编程方式路由或提供访问应用能力的方法是非常重要的。这就是我们在应用中需要路由的地方。
 
-#### 路由简介
+### 路由简介
 
 路由是用户用于与 Web 应用程序不同功能交互的 URL。它是用户访问以便在 Web 应用程序中获取和传输数据的终端。
 
 理解路由的基础语法如下：
 
-```
+```php
 use Illuminate\Support\Facades\Route;
 
 Route::get('/welcome', function () {
@@ -841,19 +838,17 @@ Route::get('/welcome', function () {
 
 **图 3.1:** 路由示例
 
-#### 路由目录
+### 路由目录
 
-路由文件位于 `routes` 目录，包含了所有 Laravel 路由的定义。
+路由文件位于`routes`目录，包含了所有 Laravel 路由的定义。
 
-应用程序中的 `AppProvidersRouteServiceProvider` 会自动加载这些文件。Web 路由定义在 `routes/web.php` 文件中。这些路由属于 web 中间件组的范围，该组提供了 CSRF 保护和会话状态等功能。`api` 中间件组应用于 `routes/api.php` 中的无状态路由。
+应用程序中的`AppProvidersRouteServiceProvider`会自动加载这些文件。Web 路由定义在`routes/web.php`文件中。这些路由属于 web 中间件组的范围，该组提供了 CSRF 保护和会话状态等功能。`api`中间件组应用于`routes/api.php`中的无状态路由。
 
-对于大多数应用程序，你必须在 `routes/web.php` 文件中定义路由。通过在浏览器中输入定义的 URL，你可以访问 `routes/web.php` 中定义的路由。
+对于大多数应用程序，你必须在`routes/web.php`文件中定义路由。通过在浏览器中输入定义的 URL，你可以访问`routes/web.php`中定义的路由。
 
+让我们来看一个例子。要访问以下路由，你可以在浏览器中导航到[`example.com/ep1`](http://example.com/ep1)。
 
-
-让我们来看一个例子。要访问以下路由，你可以在浏览器中导航到 `[`example.com/ep1`](http://example.com/ep1)`。
-
-```
+```php
 use App\Http\Controllers\UserController;
 ```
 
@@ -869,16 +864,16 @@ Route::get(‘/ep1, [UserController::class, ‘index’]);
 
 **图 3.2:** 路由器方法
 
-在构建多个共享相同 URI 的路由时，`get`、`post`、`put`、`patch`、`delete` 和 `options` 方法应该定义在 `any`、`match` 和 `redirect` 方法之前。这意味着适当路由将匹配到传入的请求。
+在构建多个共享相同 URI 的路由时，`get`、`post`、`put`、`patch`、`delete`和`options`方法应该定义在`any`、`match`和`redirect`方法之前。这意味着适当路由将匹配到传入的请求。
 
 ## 路由器类型
 
 Laravel 中广泛使用了四种主要类型的路由器：
 
-*   重定向路由
-*   视图路由
-*   路由列表
-*   回退路由
+- 重定向路由
+- 视图路由
+- 路由列表
+- 回退路由
 
 ![](img/Figure-3.3.jpg)
 
@@ -886,7 +881,7 @@ Laravel 中广泛使用了四种主要类型的路由器：
 
 ## 重定向路由
 
-`Route::redirect` 方法可用于定义重定向到另一个 URI 的路由。通过这种方法，你可以快速执行简单的重定向，而无需构建整个路由或控制器：
+`Route::redirect`方法可用于定义重定向到另一个 URI 的路由。通过这种方法，你可以快速执行简单的重定向，而无需构建整个路由或控制器：
 
 ```php
 Route::redirect(‘/ep1’, ‘/ep2’);
@@ -898,7 +893,7 @@ Route::redirect(‘/ep1’, ‘/ep2’);
 Route::redirect(‘/ep1’, ‘/ep2’, 301);
 ```
 
-或者，可以使用 `Route::permanentRedirect` 方法来获取 301 状态码：
+或者，可以使用`Route::permanentRedirect`方法来获取 301 状态码：
 
 ```php
 Route::permanentRedirect(‘/ep1’, ‘/ep2’);
@@ -906,12 +901,12 @@ Route::permanentRedirect(‘/ep1’, ‘/ep2’);
 
 ## 视图路由
 
-如果你的路由只需要返回一个 `view`（视图），请使用 `Route::view` 方法。这种技术提供了一种快捷方式，使你不需要定义整个路由或控制器，类似于重定向方法。
+如果你的路由只需要返回一个`view`（视图），请使用`Route::view`方法。这种技术提供了一种快捷方式，使你不需要定义整个路由或控制器，类似于重定向方法。
 
 该视图方法接受两个参数：
 
-1.  第一个是 URI
-2.  第二个是视图名称。
+1. 第一个是 URI。
+2. 第二个是视图名称。
 
 作为可选的第三个参数，你还可以向视图提供一个数据数组：
 
@@ -924,19 +919,19 @@ Route::view(‘/about’, ‘about’, [‘state’ => ‘Reader’]);
 
 `route:list` artisan 命令可以快速为你提供应用程序创建的所有路由的摘要。
 
-你可以通过向命令添加 `-v` 选项来告诉 Laravel 显示路由中间件：默认情况下，分配给每个路由的路由中间件不会显示在 `route:list` 的输出中。
+你可以通过向命令添加`-v`选项来告诉 Laravel 显示路由中间件：默认情况下，分配给每个路由的路由中间件不会显示在`route:list`的输出中。
 
 ```bash
 php artisan route:list -v
 ```
 
-在运行 `route:list` 时添加 `--except-vendor` 选项，你还可以指示 Laravel 隐藏任何路由。
+在运行`route:list`时添加`--except-vendor`选项，你还可以指示 Laravel 隐藏任何路由。
 
 ```bash
 php artisan route:list --except-vendor
 ```
 
-同样，在执行路由时指定 `--only-vendor` 选项，你可以告诉 Laravel 只显示由第三方包创建的路由。
+同样，在执行路由时指定`--only-vendor`选项，你可以告诉 Laravel 只显示由第三方包创建的路由。
 
 ```bash
 php artisan route:list --only-vendor
@@ -944,7 +939,7 @@ php artisan route:list --only-vendor
 
 ## 回退路由
 
-你可以使用 `Route::fallback` 函数提供一个在没有其他路由匹配传入请求时将会被遵循的路由。未处理的请求通常会导致你的应用程序的异常处理器渲染一个“404”页面。然而，`web` 中间件组中的所有中间件都将应用到该路由，因为 `fallback` 路由通常定义在你的 `routes/web.php` 文件中。你可以根据需要用其他中间件来补充此路由：
+你可以使用`Route::fallback`函数提供一个在没有其他路由匹配传入请求时将会被遵循的路由。未处理的请求通常会导致你的应用程序的异常处理器渲染一个“404”页面。然而，`web`中间件组中的所有中间件都将应用到该路由，因为`fallback`路由通常定义在你的`routes/web.php`文件中。你可以根据需要用其他中间件来补充此路由：
 
 ```php
 Route::fallback(function () {
@@ -970,7 +965,7 @@ Route::get(‘/user/{num}’, function (Request $request, string $num) {
 
 ## 可选参数
 
-当没有其他路由匹配传入请求时，可以使用 `Route::fallback` 函数提供一个回退路由。通过在参数名后添加问号 `?`，你可以定义可选参数：
+当没有其他路由匹配传入请求时，可以使用`Route::fallback`函数提供一个回退路由。通过在参数名后添加问号`?`，你可以定义可选参数：
 
 ```php
 Route::get(‘user/{name}’, function (string $name = 'Guest') {
@@ -984,7 +979,7 @@ Route::get(‘/user/{name}’, function (string $name) {
 
 ## 正则表达式
 
-通过 `where` 方法，你可以对路由进行限制：
+通过`where`方法，你可以对路由进行限制：
 
 ```php
 Route::get(‘user/{id}’, function (string $id) {
@@ -992,10 +987,7 @@ Route::get(‘user/{id}’, function (string $id) {
 })->where('id', '[0-9]+');
 ```
 
-
-
-
-## 4. 后缀会被追加。
+## 4. 后缀会被追加
 
 按照要求，命名空间分隔符和斜杠会自动插入到 URI 前缀中。
 
@@ -1005,9 +997,9 @@ Route::get(‘user/{id}’, function (string $id) {
 
 ## 中间件
 
-你可以在声明组之前使用 `middleware` 方法为组内的每个路由分配中间件。中间件将按照数组中的顺序顺序执行：
+你可以在声明组之前使用`middleware`方法为组内的每个路由分配中间件。中间件将按照数组中的顺序顺序执行：
 
-```
+```php
 Route::middleware([‘m1’, ‘m2’])->group(function () {
     Route::get(‘/’, function () {
         // 使用 m1 & m2 中间件
@@ -1026,10 +1018,11 @@ Route::middleware([‘m1’, ‘m2’])->group(function () {
 
 ## 控制器
 
-如果一组路由都使用同一个控制器，可以使用 `controller` 方法为组路由定义共享控制器。因此，在定义路由时可以提供它们所调用的控制器：
+如果一组路由都使用同一个控制器，可以使用`controller`方法为组路由定义共享控制器。因此，在定义路由时可以提供它们所调用的控制器：
 
-```
+```php
 use App\Http\Controllers\CityController;
+
 Route::controller(CityController::class)->group(function () {
     Route::get(‘/city/{id}’, ‘show’);
     Route::post(‘/city’, ‘location’);
@@ -1040,21 +1033,21 @@ Route::controller(CityController::class)->group(function () {
 
 在控制器只有一个单个可调用方法（invokable method）的情况下，请使用以下方法：
 
-```
+```php
 Route::post(‘/file’, FileHandler::class)
 ```
 
 此外，资源控制器可以指向为：
 
-```
+```php
 Route::resource(‘users’, UserController::class)
 ```
 
 ## 子域名路由
 
-当你需要捕获子域名的一部分并在路由或控制器中使用时，Laravel 的子域名路由功能非常有用。子域名路由可以通过“路由组”进行管理。子域名路由可以使用与路由参数相同的参数，并允许使用该功能通过子域名路由实现结果。在定义组之前，可以调用 `domain` 方法来指定子域名：
+当你需要捕获子域名的一部分并在路由或控制器中使用时，Laravel 的子域名路由功能非常有用。子域名路由可以通过“路由组”进行管理。子域名路由可以使用与路由参数相同的参数，并允许使用该功能通过子域名路由实现结果。在定义组之前，可以调用`domain`方法来指定子域名：
 
-```
+```php
 Route::domain(‘{city}.example.com’)->group(function () {
     Route::get(‘city/{id}’, function (string $name, string $id) {
         // Code Logic
@@ -1064,9 +1057,9 @@ Route::domain(‘{city}.example.com’)->group(function () {
 
 ## 路由前缀
 
-组中的每个路由都可以使用 `prefix` 方法带有特定的 URI 前缀。例如，你可能希望在组中每个路由 URI 的开头添加 `admin:`。
+组中的每个路由都可以使用`prefix`方法带有特定的 URI 前缀。例如，你可能希望在组中每个路由 URI 的开头添加`admin:`。
 
-```
+```php
 Route::prefix(‘hr’)->group(function () {
     Route::get(‘/employees’, function () {
         // 匹配 “/hr/employees” URL
@@ -1074,11 +1067,11 @@ Route::prefix(‘hr’)->group(function () {
 });
 ```
 
-为了给组中的每个具有有效 URL 的路由添加前缀，可以使用 Laravel 的内置方法。`prefix` 方法有助于实现此功能。一种良好的实践是使用 `admin` 并为组添加相同的的前缀。
+为了给组中的每个具有有效 URL 的路由添加前缀，可以使用 Laravel 的内置方法。`prefix`方法有助于实现此功能。一种良好的实践是使用`admin`并为组添加相同的前缀。
 
 我们将确保包含尾部字符，因为给定的字符串将完全按照其指定的方式追加到路由名称上。前缀的一个元素：
 
-```
+```php
 Route::name(‘admin.’)->group(function () {
     Route::get(‘/city’, function () {
         // 路由被分配名称 “admin.city”
@@ -1086,19 +1079,15 @@ Route::name(‘admin.’)->group(function () {
 });
 ```
 
-## 跨域资源共享 (CORS)
+## 跨域资源共享（CORS）
 
-根据你指定的值，Laravel 可能会自动响应 CORS `OPTIONS` HTTP 请求。你可以在应用程序的 `config/cors.php` 文件中配置每个 CORS 设置。
+根据你指定的值，Laravel 可能会自动响应 CORS `OPTIONS` HTTP 请求。你可以在应用程序的`config/cors.php`文件中配置每个 CORS 设置。
 
-预装在你的全局中间件栈中的 `HandleCors` 中间件会自动处理 `OPTIONS` 请求。你应用程序的 HTTP 内核 (`App\Http\Kernel`) 包含了整个全局中间件栈。
+预装在你的全局中间件栈中的`HandleCors`中间件会自动处理`OPTIONS`请求。你应用程序的 HTTP 内核（`App\Http\Kernel`）包含了整个全局中间件栈。
 
 ## 缓存
 
 在将应用程序发布到生产环境时，请使用 Laravel 的路由缓存。如果你使用路由缓存，注册应用程序所有路由所需的时间将少得多。
-
-
-
-
 
 `->with('name', 'ABC')`
 
@@ -1106,12 +1095,13 @@ Route::name(‘admin.’)->group(function () {
 
 # 共享数据
 
-在少数情况下，你可能需要与应用程序渲染的每一个视图共享数据。可以使用 `View`  Fac 类的 `share` 方法来实现这一点。`share` 方法通常会在服务提供者（service provider）的 `boot` 方法中调用。你可以构建不同的服务提供者来存放这些逻辑，或者将它们添加到 `App\Providers\AppServiceProvider` 类中。并且必须在 `config/app.php` 中注册它才能生效。
+在少数情况下，你可能需要与应用程序渲染的每一个视图共享数据。可以使用`View` Fac 类的`share`方法来实现这一点。`share`方法通常会在服务提供者（service provider）的`boot`方法中调用。你可以构建不同的服务提供者来存放这些逻辑，或者将它们添加到`App\Providers\AppServiceProvider`类中。并且必须在`config/app.php`中注册它才能生效。
 
 ```php
 <?php
 
 namespace App\Providers;
+
 use Illuminate\Support\Facades\View;
 
 class AppServiceProvider extends ServiceProvider
@@ -1123,6 +1113,7 @@ class AppServiceProvider extends ServiceProvider
     {
         // Code Logic
     }
+
     /**
      * 引导任何应用服务。
      */
@@ -1133,7 +1124,7 @@ class AppServiceProvider extends ServiceProvider
 }
 ```
 
-# 视图组合器与创建器 (View Composers and Creators)
+# 视图组合器与创建器（View Composers and Creators）
 
 视图组合器和创建器在增强代码健壮性方面有着本质的区别。
 
@@ -1145,16 +1136,19 @@ class AppServiceProvider extends ServiceProvider
 
 当视图被渲染时，调用视图组合器的回调函数或类方法就会被触发。如果你有数据需要在每次渲染视图时绑定到该视图，视图组合器可以帮助你集中管理逻辑。如果应用程序中的许多路由或控制器都返回同一个视图，并且需要相同的数据集，那么视图组合器可能变得特别有用。
 
-视图组合器通常会注册在应用程序的某个服务提供者中。在这个示例中，我们假设已经构建了一个新的 `App\Providers\ViewServiceProvider` 来包含此功能。
+视图组合器通常会注册在应用程序的某个服务提供者中。在这个示例中，我们假设已经构建了一个新的`App\Providers\ViewServiceProvider`来包含此功能。
 
-要注册视图组合器，我们将使用 `View` Fac 类的的 `composer` 方法。你可以根据需要自由安排基于类的视图组合器，因为 Laravel 并没有为它们提供默认目录。
+要注册视图组合器，我们将使用`View` Fac 类的`composer`方法。你可以根据需要自由安排基于类的视图组合器，因为 Laravel 并没有为它们提供默认目录。
 
-例如，为了存储应用程序中所有的视图组合器，你可以创建一个 `app/View/Composers` 目录：
+例如，为了存储应用程序中所有的视图组合器，你可以创建一个`app/View/Composers`目录：
+
+
 
 ```php
 <?php
 
 namespace App\Providers;
+
 use App\View\Composers\ProfileComposer;
 use Illuminate\Support\Facades;
 use Illuminate\Support\ServiceProvider;
@@ -1169,6 +1163,7 @@ class ViewServiceProvider extends ServiceProvider
     {
         // Code Logic
     }
+
     /**
      * 引导任何应用服务。
      */
@@ -1193,6 +1188,7 @@ class ViewServiceProvider extends ServiceProvider
 <?php
 
 namespace App\View\Composers;
+
 use App\Repositories\UserRepository;
 use Illuminate\View\View;
 
@@ -1204,6 +1200,7 @@ class ProfileComposer
     public function __construct(
         protected CityRepository $city,
     ) {}
+
     /**
      * 将数据绑定到视图。
      */
@@ -1214,7 +1211,7 @@ class ProfileComposer
 }
 ```
 
-你可以看到，*服务容器 (service container)* 会解析所有的视图组合器，允许你在组合器的构造函数中类型提示所需的任何依赖项。
+你可以看到，服务容器（service container）会解析所有的视图组合器，允许你在组合器的构造函数中类型提示所需的任何依赖项。
 
 ## 使用组合器处理多个视图
 
@@ -1223,6 +1220,7 @@ class ProfileComposer
 ```php
 use App\Views\Composers\MultiComposer;
 use Illuminate\Support\Facades\View;
+
 View::composer(
     ['welcome', 'dashboard'],
     MultiComposer::class
@@ -1234,18 +1232,20 @@ View::composer(
 ```php
 use Illuminate\Support\Facades;
 use Illuminate\View\View;
+
 Facades\View::composer('*', function (View $view) {
     // Code Logic
 });
 ```
 
-## 视图创建器 (View Creators)
+## 视图创建器（View Creators）
 
 与视图组合器类似，视图创建器在视图实例化后就会立即执行，而不是等到视图准备渲染时。使用 `creator` 方法注册视图创建器：
 
 ```php
 use App\View\Creators\ProfileCreator;
 use Illuminate\Support\Facades\View;
+
 View::creator('profile', ProfileCreator::class);
 ```
 
@@ -1253,13 +1253,17 @@ View::creator('profile', ProfileCreator::class);
 
 Blade 模板视图默认按需进行编译。如果视图存在，Laravel 将确定该文件是否发生了更改。由于在请求期间编译视图可能会对性能产生影响，Laravel 提供了 `view:cache` 任务。你可能想在部署时执行此命令以提高性能：
 
-`php artisan view:cache`
+```bash
+php artisan view:cache
+```
 
 清除视图：
 
-`php artisan view:clear`
+```bash
+php artisan view:clear
+```
 
-![](img/Figure-3.7.jpg)
+![图 3.7：视图优化](img/Figure-3.7.jpg)
 
 **图 3.7：** 视图优化
 
@@ -1273,20 +1277,19 @@ Blade 模板视图默认按需进行编译。如果视图存在，Laravel 将确
 
 # 重点
 
-- 章节探讨了定义 Laravel 所有路由的路由文件，它们位于 routes 目录。描述了 `RouteServiceProvider` 的功能以及路由文件是如何加载的。强调了界面路由（具有 CSRF 保护和会话状态）创建在 `routes/web.php` 中并属于 web 中间件组。`routes/api.php` 文件定义了 API 无状态路由，它是 api 中间件组的一部分。
+- 章节探讨了定义 Laravel 所有路由的路由文件，它们位于 `routes` 目录。描述了 `RouteServiceProvider` 的功能以及路由文件是如何加载的。强调了界面路由（具有 CSRF 保护和会话状态）创建在 `routes/web.php` 中并属于 `web` 中间件组。`routes/api.php` 文件定义了 API 无状态路由，它是 `api` 中间件组的一部分。
+
 - 随后，章节探讨了路由器方法，允许程序员注册响应不同 HTTP 动词路由。在创建相同 URI 的多个路由时，列出了许多常用的路由器方法，并强调了它们的声明顺序。
+
 - 视图部分从介绍 Laravel 视图开始，讨论了它们如何帮助渲染网页的 HTML 表示。强调了视图如何允许将显示逻辑与应用程序的业务逻辑分离，从而使代码更简单易读。
-- 这部分讨论的首要主题是创建视图。Laravel 视图默认位于 resources/views 目录下。涵盖了如何在路由和控制器中引用视图，并介绍了生成视图文件的过程。
 
+- 这部分讨论的首要主题是创建视图。Laravel 视图默认位于 `resources/views` 目录下。涵盖了如何在路由和控制器中引用视图，并介绍了生成视图文件的过程。
 
+- 本章节将检查 Laravel 提供的各种视图类型。文中讨论了 Laravel 的默认模板引擎 `Blade Views`。它提供了条件语句和循环等功能，并包含了可重用的代码段。
 
+- 对于偏好使用原生 PHP 代码编写的开发者，本章节还强调了原生 PHP 视图的可用性。“数据与视图”部分将涵盖如何从控制器向视图传递数据。该部分将解释如何使用该方法和 `compact` 函数向视图提供数据，使用户能够根据提供的数据显示动态内容。
 
-
-*   本章节将检查 Laravel 提供的各种视图类型。文中讨论了 Laravel 的默认模板引擎 `Blade Views`。它提供了条件语句和循环等功能，并包含了可重用的代码段。
-
-*   对于偏好使用原生 PHP 代码编写的开发者，本章节还强调了原生 PHP 视图的可用性。“数据与视图”部分将涵盖如何从控制器向视图传递数据。该部分将解释如何使用该方法和 `compact` 函数向视图提供数据，使用户能够根据提供的数据显示动态内容。
-
-*   随后，作为一种在不同视图之间传输数据或对视图执行操作的手段，文中提供了视图组合器（view composers）和视图创建器（view creators）。视图组合器是在特定视图生成时执行的回调函数，允许与视图共享数据。另一方面，视图创建器允许编程人员在视图生成之前采取操作。
+- 随后，作为一种在不同视图之间传输数据或对视图执行操作的手段，文中提供了视图组合器（view composers）和视图创建器（view creators）。视图组合器是在特定视图生成时执行的回调函数，允许与视图共享数据。另一方面，视图创建器允许编程人员在视图生成之前采取操作。
 
 # 第 4 章
 
@@ -1300,30 +1303,30 @@ Blade 模板视图默认按需进行编译。如果视图存在，Laravel 将确
 
 在本章中，我们将讨论以下主题：
 
-*   Laravel 中的控制器与视图
-    *   控制器
-    *   资源控制器
-    *   构造函数注入
-    *   方法注入
-*   Laravel 中的重定向
-    *   重定向辅助函数
-    *   重定向到具名路由
-    *   重定向到控制器动作
-*   Laravel 中的指令
-    *   条件指令
-    *   Switch 指令
-    *   Auth 指令
-    *   循环
-    *   Once 指令
-*   Laravel 作为模板引擎的 Blade
-    *   Blade 中的数据
-    *   HTML 实体编码
-    *   组件
-        *   渲染组件
-        *   传递数据
-    *   布局
-    *   渲染 Blade 模板
-    *   渲染 Blade 片段
+- Laravel 中的控制器与视图
+  - 控制器
+  - 资源控制器
+  - 构造函数注入
+  - 方法注入
+- Laravel 中的重定向
+  - 重定向辅助函数
+  - 重定向到具名路由
+  - 重定向到控制器动作
+- Laravel 中的指令
+  - 条件指令
+  - Switch 指令
+  - Auth 指令
+  - 循环
+  - Once 指令
+- Laravel 作为模板引擎的 Blade
+  - Blade 中的数据
+  - HTML 实体编码
+  - 组件
+    - 渲染组件
+    - 传递数据
+  - 布局
+  - 渲染 Blade 模板
+  - 渲染 Blade 片段
 
 ### Laravel 中的控制器与视图
 
@@ -1519,9 +1522,6 @@ class UserController extends Controller
 
 ## Laravel 中的重定向
 
-
-
-
 重定向响应派自 `Illuminate\Http\RedirectResponse` 类，并包含了将用户发送到不同 URL 的适当头部。
 
 ### 重定向辅助函数
@@ -1534,7 +1534,7 @@ Route::get(/aboutMe, function () {
 });
 ```
 
-某些情况下，例如提交了错误或不完整的信息，你可能希望让用户返回上一个网页。使用全局 `back` 辅助函数来实现。请确保使用 `back` 函数的路由使用了 web 中间件组，或者应用了所有的 session 中间件，因为此功能使用了 session：
+某些情况下，例如提交了错误或不完整的信息，你可能希望让用户返回上一个网页。使用全局 `back` 辅助函数来实现。请确保使用 `back` 函数的路由使用了 `web` 中间件组，或者应用了所有的 `session` 中间件，因为此功能使用了 `session`：
 
 ```php
 Route::post(/user/aboutMe, function () {
@@ -1553,14 +1553,17 @@ return redirect()->route(register);
 
 要添加参数将其作为 `route` 方法的第二个参数传递：
 
+
+
+对于 URI 为 `dashboard/{id}` 的路由：
+
 ```php
-// 对于 URI 为 dashboard/{id} 的路由
 return redirect()->route(dashboard, ['id' => 1]);
 ```
 
 Laravel 还提供了一个全局函数 `to_route`，可用于重定向和路由。
 
-### 重定向到控制器操作
+## 重定向到控制器操作
 
 在 Laravel 中，重定向到控制器的操作也是可能的。要实现这一点，请为 `action` 方法提供控制器和操作名称：
 
@@ -1577,7 +1580,7 @@ return redirect()->action(
 );
 ```
 
-## 重定向 - 闪存会数据（Flashed Session Data）
+## 重定向 - 闪存数据（Flashed Session Data）
 
 通常将数据闪存到 session 并重定向到新 URL 是同时发生的。通常在成功完成一项活动后，我们会向 session 闪存一条成功消息。在单一、流式的方法链中，你可以构建一个 `RedirectResponse` 对象并将数据闪存到 session 中以便方便：
 
@@ -1759,10 +1762,7 @@ Laravel 应用中的身份验证依赖于指令的使用。它鼓励最佳实践
 @endforeach
 ```
 
-
-
-
-# Once 指令 (#toc.xhtml#s112a)
+## Once 指令
 
 你可以使用 `@once` 指令提供一段在每个渲染周期中仅评估一次的模板部分。这可能有助于利用栈（stacks）将特定的 JavaScript 代码推送到页面的头部（header）。
 
@@ -1793,7 +1793,7 @@ Laravel 应用中的身份验证依赖于指令的使用。它鼓励最佳实践
 @endPushOnce
 ```
 
-# Blade 作为 Laravel 的模板引擎 (#toc.xhtml#s113a)
+## Blade 作为 Laravel 的模板引擎
 
 Laravel 自带了一个简单且高效的模板引擎称为 Blade。与几种 PHP 模板引擎不同，Blade 不会阻止你在模板中使用原始 PHP 代码。实际上，Blade 几乎没有为你的应用增加成本，因为所有模板都会被转换为普通的 PHP 代码并缓存，直到它们更新。Blade 模板文件通常位于 `resources/views` 目录，并具有 `.blade.php` 文件扩展名。
 
@@ -1805,7 +1805,7 @@ Route::get(‘/’, function () {
 });
 ```
 
-# Blade 中的数据 (#toc.xhtml#s114a)
+## Blade 中的数据
 
 通过将变量放在大括号中，可以显示提供给 Blade 视图的数据。例如，考虑以下路由：
 
@@ -1823,7 +1823,7 @@ Route::get(‘/’, function () {
 Welcome, {{name}}
 ```
 
-# HTML 实体编码 (#toc.xhtml#s115a)
+## HTML 实体编码
 
 Blade 和 Laravel 辅助函数默认会对 HTML 实体进行双重编码。从 `AppServiceProvider` 的 `boot` 方法中调用 `Blade::withoutDoubleEncoding` 函数来停止双重编码：
 
@@ -1847,7 +1847,7 @@ class AppServiceProvider extends ServiceProvider
 }
 ```
 
-# 组件 (#toc.xhtml#s116a)
+## 组件
 
 区块、布局和包含都具有类似的优势；尽管如此，有些人可能觉得认为组件和插槽（slots）的模型更容易理解。基于类的组件和匿名组件是编写组件的两种方法。
 
@@ -1873,7 +1873,7 @@ php artisan make:component forms.input --view
 
 该命令将在 `resources/views/components/forms` 目录下创建一个 `input.blade.php` 文件，该文件可以通过 `<x-forms.input />` 作为组件渲染。
 
-# 渲染组件 (#toc.xhtml#s117a)
+## 渲染组件
 
 你可以在一个 Blade 模板内部使用 Blade 组件标签来显示组件。Blade 组件标签以字母 `x-` 和组件类的短横线命名法（kebab case）名称开头：
 
@@ -1904,7 +1904,7 @@ public function shouldRender(): bool
 }
 ```
 
-# 传递数据 (#toc.xhtml#s18a)
+## 传递数据
 
 通过 HTML 属性，你可以向组件提供数据。简单的 HTML 字符串可以用于组件：
 
@@ -1948,7 +1948,7 @@ class Alert extends Component
 </div>
 ```
 
-# 布局 (#toc.xhtml#s19a)
+## 布局
 
 大多数 Web 应用具有相同的整体布局。如果在创建每个视图时复制完整的布局 HTML，将非常耗时且难以维护程序。我们可以将此布局指定为单个 Blade 组件并在应用程序的其他部分使用：
 
@@ -1979,15 +1979,13 @@ class Alert extends Component
 </x-layout>
 ```
 
-# 模板继承 (#toc.xhtml#s120a)
+## 模板继承
 
 此外，**模板继承**也可用于布局。在组件出现之前，这是应用开发的主要方法。
 
+让我们先从一个简单的例子开始。我们将先查看页面布局。将此样式指定为单个 Blade 视图是非常简单的，因为大多数 Web 应用在许多页面中保持相同的整体布局。
 
 
-
-
-让我们先从一个简单的例子开始。我们将先查看页面布局。将此样式指定为单个 Blade 视图是非常简单的，因为大多数 Web 应用在许多页面中保持相同的整体布局：
 
 ```html
 <!-- resources/views/layouts/app.blade.php -->
@@ -2006,7 +2004,7 @@ class Alert extends Component
 </html>
 ```
 
-正如你所所的，该文件包含普通的 HTML 标记。但是，请注意 `@section` 和 `@yield` 指令。`@yield` 指令用于显示特定区域的内容，而 `@section` 指令如其名所示，定义了一个内容区域。
+正如你所看到的，该文件包含普通的 HTML 标记。但是，请注意 `@section` 和 `@yield` 指令。`@yield` 指令用于显示特定区域的内容，而 `@section` 指令如其名所示，定义了一个内容区域。
 
 ## 渲染 Blade 模板
 
@@ -2014,10 +2012,11 @@ class Alert extends Component
 
 ```php
 use Illuminate\Support\Facades\Blade;
+
 return Blade::render('Welcome, {{ $name }}', ['name' => 'ABC']);
 ```
 
-通过将内联 Blade 模板写入到 `storage/framework/views` 目录，Laravel 会渲染它们。如果你想让 Laravel 在渲染 Blade 模板后删除这些临时文件，可以为函数提供 `deleteCachedView` 参数：
+通过将内联 Blade 模板写入 `storage/framework/views` 目录，Laravel 会渲染它们。如果你想让 Laravel 在渲染 Blade 模板后删除这些临时文件，可以为函数提供 `deleteCachedView` 参数：
 
 ```php
 return Blade::render(
@@ -2029,7 +2028,7 @@ return Blade::render(
 
 ## 渲染 Blade 片段
 
-在利用 Turbo 和 htmx 等前端框架时，有时可能只需要在 HTTP 响应中仅返回 Blade 模板的一部分。你可以通过使用 Blade 片段（fragments）来实现。。将你的 Blade 模板的一个部分放在 `@fragment` 和 `@endfragment` 指令中即可开始：
+在利用 Turbo 和 htmx 等前端框架时，有时可能只需要在 HTTP 响应中返回 Blade 模板的一部分。你可以通过使用 Blade 片段（fragments）来实现。将你的 Blade 模板的一部分放在 `@fragment` 和 `@endfragment` 指令中即可开始：
 
 ```html
 @fragment('employee-list')
@@ -2047,14 +2046,14 @@ return Blade::render(
 return view('homepage', ['employee' => $employees])->fragment('employee-list');
 ```
 
-通过使用 `fragmentIf` 方法，你可以根据指定条件条件返回视图片段。在这种情况下，将返回整个视图：
+通过使用 `fragmentIf` 方法，你可以根据指定条件返回视图片段。在这种情况下，将返回整个视图：
 
 ```php
 return view('homepage', ['employees' => $employees])
     ->fragmentIf($request->hasHeader('HX-Request'), 'employee-list');
 ```
 
-这两个方法——`fragments` 和 `fragmentIf` 允许在响应中返回多个视图片段。例如：
+这两个方法——`fragments` 和 `fragmentIf`——允许在响应中返回多个视图片段。例如：
 
 ```php
 view('homepage', ['employees' => $employee])
@@ -2085,32 +2084,32 @@ view('homepage', ['employees' => $employees])
 
 # 第 5 章：使用 Eloquent ORM 和查询构造器
 
-### 引言
+## 引言
 
-本章涵盖了用于数据库操作 Laravel Eloquent 和查询构造器。它解释了 Eloquent 和查询构造器在构建健壮高效应用程序中的重要性。
+本章涵盖了用于数据库操作的 Laravel Eloquent 和查询构造器。它解释了 Eloquent 和查询构造器在构建健壮高效应用程序中的重要性。
 
-### 结构
+## 结构
 
 在本章将涵盖以下主题：
 
 - Laravel 中的 Eloquent
-    - 约定
-    - Eloquent 事件
+  - 约定
+  - Eloquent 事件
 - Laravel 中的查询构造器
-    - 查询 (Selects)
-    - 遍历 (Joins)
-    - 高级 Where 查询
-    - 聚合函数 (Aggregates)
-    - 原始表达式 (Raw Expressions)
-    - 悲观锁 (Pessimistic Locking)
-    - 缓存查询 (Caching Queries)
+  - 查询（Selects）
+  - 遍历（Joins）
+  - 高级 Where 查询
+  - 聚合函数（Aggregates）
+  - 原始表达式（Raw Expressions）
+  - 悲观锁（Pessimistic Locking）
+  - 缓存查询（Caching Queries）
 - Eloquent 操作
-    - 模型类
-    - 模型约定
-    - 获取模型
-    - 模型的 CRUD 操作
+  - 模型类
+  - 模型约定
+  - 获取模型
+  - 模型的 CRUD 操作
 
-### Laravel 中的 Eloquent
+## Laravel 中的 Eloquent
 
 Eloquent 是一种对象关系映射（ORM），它使与应用程序数据库的交互变得简单易用，它是 Laravel 的一个组件。Eloquent 中的每个数据库表都有对应的模型，用于与表通信。Eloquent 模型除了获取记录外，具有插入、编辑和删除数据库表记录的操作。
 
@@ -2122,73 +2121,64 @@ php artisan make:model Car
 
 在创建模型并需要生成数据库迁移时，使用 `--migration` 或 `-m` 选项。
 
-创建模型时，你还可以创建不同的类，如工厂（factory）、填充器（seed）、策略（policy）、控制器和表单请求（form requests）。此外，通过组合这些选项可以一次创建多个类：
+创建模型时，你还可以创建不同的类，如工厂（factory）、填充器（seed）、策略（policy）、控制器和表单请求（form requests）。此外，通过组合这些选项可以一次创建多个类。
 
-#### 生成模型和 CarFactory 类
+### 生成模型和 `CarFactory` 类
 
 ```bash
 php artisan make:model Car --factory
 php artisan make:model Car -f
 ```
-*工厂是定义用于测试和数据库填充的数据结构和属性的一种方法。
 
-#### 生成模型和 CarSeeder 类
+工厂是定义用于测试和数据库填充的数据结构和属性的一种方法。
+
+### 生成模型和 `CarSeeder` 类
 
 ```bash
 php artisan make:model Car --seed
 php artisan make:model Car -s
 ```
 
-#### 生成模型和 CarController 类
+### 生成模型和 `CarController` 类
 
 ```bash
 php artisan make:model Car --controller
 php artisan make:model Car -c
 ```
 
-
-
-
-
-# 生成模型、CarController 资源类和表单请求类
+### 生成模型、`CarController` 资源类和表单请求类
 
 ```bash
 php artisan make:model Car --controller --resource --requests
-```
-
-```bash
 php artisan make:model Car -crR
 ```
 
-# 生成模型和 CarPolicy 类
+### 生成模型和 `CarPolicy` 类
 
 ```bash
 php artisan make:model Car --policy
 ```
 
-## 生成模型、迁移文件、工厂、种子数据和控制器
+### 生成模型、迁移文件、工厂、种子数据和控制器
 
 ```bash
 php artisan make:model Car -mfsc
 ```
 
-## 生成模型、迁移文件、工厂、种子数据、策略、控制器和表单请求的快捷方式
+### 生成模型、迁移文件、工厂、种子数据、策略、控制器和表单请求的快捷方式
 
 ```bash
 php artisan make:model Car --all
 ```
 
-## 生成中间表模型（Pivot Model）
+### 生成中间表模型（Pivot Model）
 
 ```bash
 php artisan make:model Member --pivot
-```
-
-```bash
 php artisan make:model Member -p
 ```
 
-# 数据库迁移 (Database Migrations)
+## 数据库迁移（Database Migrations）
 
 数据库迁移在管理数据库的版本控制方面起着至关重要的作用，允许团队制定并分发应用程序数据库的架构定义。如果你遇到过这样的挑战：从源码控制拉取更改后，指示团队成员手动向他们的本地数据库架构中集成新列，那么你很可能已经在与数据库迁移旨在解决的问题作斗争了。
 
@@ -2204,7 +2194,7 @@ Laravel 尝试通过分析迁移名称来预测表名并确定迁移是否会生
 
 在使用 `make:migration` 命令时，你可以灵活地使用 `--path` 选项为生成的迁移文件指定特定路径。指定的路径应相对于应用程序的基础路径。
 
-## 主键 (Primary Key)
+### 主键（Primary Key）
 
 Eloquent 额外假定每个模型的关联数据库表包含一个 `id` 主键字段。如果需要，你可以通过在模型中创建一个受保护的 `$primaryKey` 属性将不同的列指定为模型的主键：
 
@@ -2212,7 +2202,9 @@ Eloquent 额外假定每个模型的关联数据库表包含一个 `id` 主键�
 <?php
 
 namespace App\Models;
+
 use Illuminate\Database\Eloquent\Model;
+
 class Car extends Model
 {
     /*
@@ -2226,7 +2218,7 @@ class Car extends Model
 
 根据 Eloquent 的规定，每个模型至少有一个可以作为其主键的 ID。Eloquent 模型不允许复合主键。然而，除了唯一标识表的主键外，你还允许在数据库表中添加其他多列唯一索引。
 
-## 时间戳 (Timestamps)
+### 时间戳（Timestamps）
 
 默认情况下，Eloquent 预期你模型的关联数据库表具有 `created_at` 和 `updated_at` 字段。当模型被创建或更改时，Eloquent 会自动为这些列设置值。如果你不想让 Eloquent 自动管理这些列，你应该将模型上的 `$timestamps` 属性设为 `false`：
 
@@ -2234,7 +2226,9 @@ class Car extends Model
 <?php
 
 namespace App\Models;
+
 use Illuminate\Database\Eloquent\Model;
+
 class Car extends Model
 {
     /*
@@ -2248,15 +2242,15 @@ class Car extends Model
 
 如果你在处理模型时不想让模型的 `updated_at` 时间戳发生变化，可以在 `withoutTimestamps` 函数提供的闭包内处理模型。
 
-## Eloquent 事件 (Eloquent Events)
+### Eloquent 事件（Eloquent Events）
 
-Eloquent 生命周期周期中的不同事件可以按任何逻辑顺序使用，如下所示：
+Eloquent 生命周期中的不同事件可以按任何逻辑顺序使用，如下所示：
 
 ![](img/Figure-5.1.jpg)
 
-**图 5.1:** Eloquent 事件
+**图 5.1：** Eloquent 事件
 
-当从数据库获取当前模型时，将发送被检索到的事件。当首次存储新模型时，将触发 `creating` 和 `created` 事件。当现有模型发生更改并调用 `save` 方法时，将触发 `updating/updated` 事件。当模型被创建或修改时，即使其特征没有变化，也会触发 `saving/saved` 事件。
+当从数据库获取当前模型时，将发送被检索到的事件。当首次存储新模型时，将触发 `creating` 和 `created` 事件。当现有模型发生更改并调用 `save` 方法时，将触发 `updating` 和 `updated` 事件。当模型被创建或修改时，即使其特征没有变化，也会触发 `saving` 和 `saved` 事件。
 
 以 `-ing` 结尾的事件名称在任何模型更改保存之前发送，而以 `-ed` 结尾的事件名称在模型更改保存后发送。
 
@@ -2266,13 +2260,16 @@ Eloquent 生命周期周期中的不同事件可以按任何逻辑顺序使用�
 <?php
 
 namespace App\Models;
+
 use Illuminate\Events\UserDeleted;
 use Illuminate\Events\UserSaved;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+
 class User extends Authenticatable
 {
     use Notifiable;
+
     /*
      * 模型的事件映射。
      *
@@ -2285,160 +2282,175 @@ class User extends Authenticatable
 }
 ```
 
-**来源**: Laravel.com/docs
+**来源：** Laravel.com/docs
 
-# Laravel 查询构建器 (Query Builder)
+## Laravel 查询构建器（Query Builder）
 
 查询构建器是 Laravel 最关键的功能之一。Laravel 提供的查询构建器为开发查询提供了简单直观的界面。大多数数据库活动都使用此方法。为了保护应用程序不受注入，它使用了 PDO 绑定。
 
-## 查询 (Selects)
+### 查询（Selects）
 
 查询用于在 Laravel 中检索数据。为了理解查询构建器，我们将查看员工场景。
 
-获取所有行：
+#### 获取所有行
 
 ```php
 $employees = DB::table('employees')->get();
-foreach ($employees as $employee)
-{
+
+foreach ($employees as $employee) {
     var_dump($employee->name);
 }
 ```
 
-获取单行：
+#### 获取单行
 
 ```php
-$employee = DB::table('employees')->where('name', 'ABC')->first();
+$employee = DB::table('employees')
+    ->where('name', 'ABC')
+    ->first();
+
 var_dump($employee->name);
 ```
 
-获取单列：
+#### 获取单列
 
 ```php
-$employee = DB::table('employees')->where('name', 'ABC')->pluck('name');
+$employee = DB::table('employees')
+    ->where('name', 'ABC')
+    ->pluck('name');
 ```
 
-选择语句 (Select Clause)：
-
-```php
-$employees = DB::table('employees')->select('name', 'email')->get();
-$employees = DB::table('employees')->distinct()->get();
-$employees = DB::table('employees')->select('name as employeeName')->get();
-```
-
-OR 语句：
+#### 选择语句（Select Clause）
 
 ```php
 $employees = DB::table('employees')
-->where('employedDays', '>', 180)
-->orWhere('name', 'ABC')
-->get();
+    ->select('name', 'email')
+    ->get();
+
+$employees = DB::table('employees')
+    ->distinct()
+    ->get();
+
+$employees = DB::table('employees')
+    ->select('name as employeeName')
+    ->get();
 ```
 
-OrderBy, GroupBy 和 having：
+#### OR 语句
 
 ```php
 $employees = DB::table('employees')
-->orderBy('name', 'desc')
-->groupBy('count')
-->having('count', '>', 180)
-->get();
+    ->where('employedDays', '>', 180)
+    ->orWhere('name', 'ABC')
+    ->get();
 ```
 
+#### `orderBy`、`groupBy` 和 `having`
 
 
 
+```php
+$employees = DB::table('employees')
+    ->orderBy('name', 'desc')
+    ->groupBy('count')
+    ->having('count', '>', 180)
+    ->get();
+```
 
 `->leftJoin('posts', 'employees.id', '=', 'posts. employee _id')`
 
 `->get();`
 
-### 高级连接 (Advanced Joins)
+### 高级连接（Advanced Joins）
 
-如果你想在连接中使用 `where` 类型的子句，可以在连接可以使用 `where` 和 `orWhere` 方法。这些技术用于列与值的比较，而不是两个列之间的比较：
+如果你想在连接中使用 `where` 类型的子句，可以在连接中使用 `where` 和 `orWhere` 方法。这些技术用于列与值的比较，而不是两个列之间的比较：
 
 ```php
 DB::table('employees')
-->join('contacts', function($join)
-{
-    $join->on('employees.id', '=', 'contacts.employee_id')
-    ->where('contacts.employee_id', '>', 10);
-})
-->get();
+    ->join('contacts', function ($join) {
+        $join->on('employees.id', '=', 'contacts.employee_id')
+            ->where('contacts.employee_id', '>', 10);
+    })
+    ->get();
 ```
 
-### 高级查询 (Advanced Where)
+### 高级查询（Advanced Where）
 
 偶尔可能需要更复杂的 `where` 子句，例如 `where exists` 或嵌套参数分组。这些也可以由 Laravel 查询构造器处理：
 
 ```php
 DB::table('employees')
-->where('name', '=', 'ABC')
-->orWhere(function($query)
-{
-    $query->where('votes', '>', 100)
-    ->where('title', '<>', 'Admin');
-})
-->get();
+    ->where('name', '=', 'ABC')
+    ->orWhere(function ($query) {
+        $query->where('votes', '>', 100)
+            ->where('title', '<>', 'Admin');
+    })
+    ->get();
 ```
 
 上述查询将返回以下 SQL：
 
 `select * from employees where name = ‘ABC’ or (votes > 100 and title <> ‘Admin’)`
 
-### 聚合函数 (Aggregates)
+### 聚合函数（Aggregates）
 
 查询构造器现在支持广泛的聚合技术，包括 `count`、`max`、`min`、`average` 和 `total`。
 
-计数 (Count):
+**计数（Count）：**
 
 `$employees = DB::table('employees')->count();`
 
-最大值 (Max):
+**最大值（Max）：**
 
 `$cost = DB::table('orders')->max('cost');`
 
-最小值 (Min):
+**最小值（Min）：**
 
 `$cost = DB::table('orders')->min('cost');`
 
-平均值 (Average):
+**平均值（Average）：**
 
 `$cost = DB::table('orders')->avg('cost');`
 
-求和 (Sum):
+**求和（Sum）：**
 
 `$total = DB::table('employees')->sum('votes');`
 
-### 原始表达式 (Raw Expressions)
+### 原始表达式（Raw Expressions）
 
 查询偶尔可能需要使用原始表达式。请务必不要构造任何 SQL 注入点，因为这些表达式将作为字符串注入查询中！你可以使用 `DB::raw` 命令来生成原始表达式：
 
 ```php
 $employees = DB::table('employees')
-->select(DB::raw('count(*) as employee_count, status'))
-->where('status', '<>', 1)
-->groupBy('status')
-->get();
+    ->select(DB::raw('count(*) as employee_count, status'))
+    ->where('status', '<>', 1)
+    ->groupBy('status')
+    ->get();
 ```
 
-### 悲观锁 (Pessimistic Locking)
+### 悲观锁（Pessimistic Locking）
 
 查询构造器中有几个函数可以帮助你对 `SELECT` 语句实现`悲观锁`。
 
-在查询上使用 `sharedLock` 方法可以执行带有`共享锁`shared lock）的 `SELECT` 语句：
+在查询上使用 `sharedLock` 方法可以执行带有`共享锁`（shared lock）的 `SELECT` 语句：
 
 ```php
-DB::table('employees')->where('votes', '>', 140)->sharedLock()->get();
+DB::table('employees')
+    ->where('votes', '>', 140)
+    ->sharedLock()
+    ->get();
 ```
 
-你可以在查询上使用 `lockForUpdate` 方法对 `SELECT` 语句进行`更新锁`(lock for update)：
+你可以在查询上使用 `lockForUpdate` 方法对 `SELECT` 语句进行`更新锁`（lock for update）：
 
 ```php
-DB::table('employees')->where('votes', '>', 140)->lockForUpdate()->get();
+DB::table('employees')
+    ->where('votes', '>', 140)
+    ->lockForUpdate()
+    ->get();
 ```
 
-### 查询缓存 (Caching Queries)
+### 查询缓存（Caching Queries）
 
 使用 `remember` 或 `rememberForever` 技术，你可以方便地缓存查询结果：
 
@@ -2450,11 +2462,11 @@ $value = Cache::rememberForever('employees', function () {
 
 这将从缓存中检索结果，如果缓存不存在则将其永久存储。
 
-# Eloquent 操作 (Eloquent Operations)
+# Eloquent 操作（Eloquent Operations）
 
 Eloquent 是一个对象关系映射（ORM），它让与数据库交互变得简单，它是 Laravel 的一个组件。Eloquent 中的每个数据库表都有一个对应的 `Model`（模型），用于与表通信。Eloquent 模型允许你从数据库中插入、编辑和删除记录。
 
-## 模型类 (Model Classes)
+## 模型类（Model Classes）
 
 让我们从构建一个 Eloquent 模型开始。`Illuminate\Database\Eloquent\Model` 类通常会被模型扩展，这些模型通常位于 `app\Models` 目录下。你可以使用模型命令 `make:model` 来创建一个新模型：
 
@@ -2471,64 +2483,60 @@ php artisan make:model Office -m
 在创建模型时，你还可以同时创建不同的类，例如工厂（factories）、填充器（seeders）、控制器（controllers）和表单请求（form requests）。此外，通过组合这些选项，可以一次创建多个类：
 
 - 生成模型和 `OfficeFactory` 类：
-```bash
-php artisan make:model Office --factory -f
-```
+
+  ```bash
+  php artisan make:model Office --factory -f
+  ```
+
 - 生成模型和 `OfficeSeeder` 类：
-```bash
-php artisan make:model Office --seed -s
-```
+
+  ```bash
+  php artisan make:model Office --seed -s
+  ```
 
 - 生成模型和 `OfficeController` 类：
-```bash
-php artisan make:model Office --controller -c
-```
+
+  ```bash
+  php artisan make:model Office --controller -c
+  ```
 
 - 生成模型、`OfficeController` 资源类和表单请求类：
-```bash
-php artisan make:model Office --controller --resource -r
-```
+
+  ```bash
+  php artisan make:model Office --controller --resource -r
+  ```
 
 - 生成模型和 `OfficePolicy` 类：
-```bash
-php artisan make:model Office --policy
-```
+
+  ```bash
+  php artisan make:model Office --policy
+  ```
 
 - 生成模型、迁移、工厂、填充器和控制器：
-```bash
-php artisan make:model Office -mfsc
-```
+
+  ```bash
+  php artisan make:model Office -mfsc
+  ```
 
 - 一键生成模型、迁移、工厂、填充器、策略、控制器和表单请求的快捷方式：
-```bash
-php artisan make:model Office --all
-```
+
+  ```bash
+  php artisan make:model Office --all
+  ```
 
 - 生成中间模型（pivot model）：
-```bash
-php artisan make:model Member --pivot -p
-```
 
-## 模型约定 (Model Conventions)
+  ```bash
+  php artisan make:model Member --pivot -p
+  ```
+
+## 模型约定（Model Conventions）
 
 `app/Models` 目录存放由 `make:model` 命令创建的所有模型。让我们来看基础模型并讨论 Eloquent 的一些基础约定：
 
 ```php
 <?php
-namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
-class Office extends Model
-{
-```
-
-## 模型约定 (Model Conventions)
-
-`app/Models` 目录将存放由 `make:model` 命令创建的任何模型。让我们来看基础模型并讨论 Eloquent 的一些基础约定：
-
-```php
-<?php
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
@@ -2539,7 +2547,7 @@ class Office extends Model
 }
 ```
 
-## 表名 (Table Name)
+## 表名（Table Name）
 
 你可能从前面的示例中注意到，我们没有指定模型所对应的表名。按照约定，除非专门指定，否则 Eloquent 会假定表名是类名的复数形式并采用 `snake_case` 命名。
 
@@ -2547,6 +2555,7 @@ class Office extends Model
 
 ```php
 <?php
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
@@ -2557,13 +2566,12 @@ class Office extends Model
      * 与模型关联的表。
      *
      * @var string
-     *
      */
     protected $table = 'my_offices';
 }
 ```
 
-## 主键 (Primary Key)
+## 主键（Primary Key）
 
 Eloquent 额外假定每个模型的数据库表包含一个 `id` 主键列。
 
@@ -2571,12 +2579,13 @@ Eloquent 额外假定每个模型的数据库表包含一个 `id` 主键列。
 
 图 5.3 主键类型
 
-**同质主键 (Homogeneous Primary Key)**
+### 同质主键（Homogeneous Primary Key）
 
-Eloquent 额外假定每个模型的数据库表包含一个 `id` 主键列 - `$primaryKey`：
+Eloquent 额外假定每个模型的数据库表包含一个 `id` 主键列，即 `$primaryKey`：
 
 ```php
 <?php
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
@@ -2587,7 +2596,6 @@ class Office extends Model
      * 与表关联的主键。
      *
      * @var string
-     *
      */
     protected $primaryKey = 'office_id';
 }
@@ -2602,7 +2610,6 @@ class Office extends Model
      * 模型的 ID 是否是自增的。
      *
      * @var bool
-     *
      */
     public $incrementing = false;
 }
@@ -2617,49 +2624,47 @@ class Office extends Model
      * 自增 ID 的类型。
      *
      * @var string
-     *
      */
     protected $keyType = 'string';
 }
 ```
 
-**复合主键 (Composite Primary Key)**
+### 复合主键（Composite Primary Key）
 
-根据 Eloquent，每个模型必须至少有一个可以作为主键的 **ID**。Eloquent 模型不支持**复合**主键。
+根据 Eloquent，每个模型必须至少有一个可以作为主键的 `ID`。Eloquent 模型不支持**复合**主键。
 
 然而，除了唯一标识表的主键外，你允许在数据库表中添加其他多列唯一索引。
 
 # UUID 和 ULID 键
 
-
-
-
-
 你可能决定使用 UUID 作为 Eloquent 模型的主键，而不是自增整数。UUID 是长度为 36 字符的全局唯一的字母数字标识符。
 
-如果你希望模型使用 UUID 键而不是自增整数键，请在模型上使用 `Illuminate\Database\Eloquent\Concerns\HasUuids` 特性。当然，你需要确保模型拥有一个与 UUID 效效的主键列：
+如果你希望模型使用 UUID 键而不是自增整数键，请在模型上使用 `Illuminate\Database\Eloquent\Concerns\HasUuids` 特性。当然，你需要确保模型拥有一个与 UUID 等效的主键列：
 
 ```php
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Model;
+
 class Chapter extends Model
 {
     use HasUuids;
+
     // Code logic
 }
 ```
 
 ```php
-$chapter = Chapter::create([‘title’ => ‘Chapter 1’]);
+$chapter = Chapter::create(['title' => 'Chapter 1']);
 $chapter->id;
 ```
 
-`HasUuids` 特性默认为你的模型创建 `ordered`（有序）UUID。这些 UUID 可以按字典顺序排序，使得它们在数据库索引存储中更加高效：
+`HasUuids` 特性默认为你的模型创建 `ordered`（有序）UUID。这些 UUID 可以按字典顺序排序，使得它们在数据库索引存储中更加高效。
 
 通过在模型中添加 `newUniqueId` 函数，你可以修改该特定模型生成 UUID 的方式。此外，你可以在模型上定义 `uniqueIds` 函数来指示哪些列应该获得 UUID：
 
 ```php
 use Ramsey\Uuid\Uuid;
+
 /**
  * 为模型生成一个新的 UUID。
  */
@@ -2672,11 +2677,10 @@ public function newUniqueId(): string
  * 获取应该接收唯一标识符的列。
  *
  * @return array<int, string>
- *
  */
 public function uniqueIds(): array
 {
-    return [‘id’, ‘offer_code’];
+    return ['id', 'offer_code'];
 }
 ```
 
@@ -2690,8 +2694,11 @@ public function uniqueIds(): array
 
 ```php
 <?php
+
 namespace App\Models;
+
 use Illuminate\Database\Eloquent\Model;
+
 class Office extends Model
 {
     /**
@@ -2701,7 +2708,7 @@ class Office extends Model
      *
      * Code Logic
      */
-    protected $connection = ‘sqlite’;
+    protected $connection = 'sqlite';
 }
 ```
 
@@ -2711,6 +2718,7 @@ class Office extends Model
 
 ```php
 use App\Models\Office;
+
 foreach (Office::all() as $office) {
     echo $office->name;
 }
@@ -2718,14 +2726,15 @@ foreach (Office::all() as $office) {
 
 ![](img/Figure-5.4.jpg)
 
-**图 5.4:** 获取模型
+**图 5.4：** 获取模型
 
-## 集合 (Collections)
+## 集合（Collections）
 
- Laravel 的基础 `Illuminate\Support\Collection` 类提供了许多与数据集合交互的有用方法，它被 `Eloquent` 集合类进行了扩展。例如，根据调用的闭包的结果，可以使用 `reject` 方法从集合中删除模型：
+Laravel 的基础 `Illuminate\Support\Collection` 类提供了许多与数据集合交互的有用方法，它被 `Eloquent` 集合类进行了扩展。例如，根据调用的闭包的结果，可以使用 `reject` 方法从集合中删除模型：
 
 ```php
-$offices = Office::where(‘location’, ‘NYC’)->get();
+$offices = Office::where('location', 'NYC')->get();
+
 $offices = $offices->reject(function (Office $office) {
     return $office->cancelled;
 });
@@ -2733,33 +2742,36 @@ $offices = $offices->reject(function (Office $office) {
 
 Eloquent 集合类除了 Laravel 标准集合类提供的方法外，还有几个专门为处理 Eloquent 模型集合设计的方法。
 
-你可以像遍历数组一样遍历集合，因为 Laravel 的： 
+你可以像遍历数组一样遍历集合，因为 Laravel 的：
 
-# 结果分片 (Chunking Results)
+# 结果分片（Chunking Results）
 
 如果你尝试使用 `all` 或 `get` 方法处理数千条 Eloquent 记录，你的应用程序可能会耗尽内存。这是因为 PHP 的 PDO 驱动会将所有原始查询结果存储在它的内部缓冲区中。在迭代数千个 Eloquent 模型时，`chunk` 方法可以大幅减少你应用程序的内存消耗，类似于 `lazy` 方法。`chunk` 方法分批处理记录：
 
 ```php
-Office::where(‘closed’, true)->chunk(100, function (Collection $offices) {
+Office::where('closed', true)->chunk(100, function (Collection $offices) {
     foreach ($offices as $office) {
         // Code Logic
     }
 });
 ```
 
-# 使用懒加载集合 (Lazy Collections)
+# 使用懒加载集合（Lazy Collections）
 
 `lazy` 方法的功能与 `chunk` 方法相似，但它返回的是一个 `LazyCollection` 实例。这允许你利用标准 Laravel 集合提供的许多集合方法。例如：
 
 ```php
 use App\Models\Office;
 use Illuminate\Database\Eloquent\Collection;
-Office::where(‘closed’, true)->chunk(100, function (Collection $offices) {
+
+Office::where('closed', true)->chunk(100, function (Collection $offices) {
     foreach ($offices as $office) {
         // Code Logic
     }
 });
 ```
+
+
 
 `lazyById` 方法允许你根据 `id` 列过滤结果。`lazyByIdDesc` 方法按 `id` 降序顺序执行此操作：
 
@@ -2781,9 +2793,6 @@ foreach (Office::where(‘location, ‘NYC’)->cursor() as $office) {
     // Code Logic
 }
 ```
-
-
-
 
 我们可以利用查询构造器 `select` 和 `addSelect` 方法提供的子查询功能，通过单次查询选择所有的 `locations` 以及每个位置的办公室名称：
 
@@ -2848,21 +2857,21 @@ $office->delete();
 
 Eloquent 模型会发出各种事件，允许你钩入以下生命周期事件：
 
-1. retrieved
-2. creating
-3. created
-4. updating
-5. updated
-6. saving
-7. saved
-8. deleting
-9. deleted
-10. trashed
-11. forceDeleting
-12. forceDeleted
-13. restoring
-14. restored
-15. replicating
+1. `retrieved`
+2. `creating`
+3. `created`
+4. `updating`
+5. `updated`
+6. `saving`
+7. `saved`
+8. `deleting`
+9. `deleted`
+10. `trashed`
+11. `forceDeleting`
+12. `forceDeleted`
+13. `restoring`
+14. `restored`
+15. `replicating`
 
 如果你在某个模型上监听许多事件，请使用观察者（Observers）将所有的监听器分类到同一个类中。你想要监听的 Eloquent 事件反映在观察者类的方法名中。受影响的模型是这些方法的唯一参数。构建新观察者类最简单的方法是使用 `make:observer` 命令：
 
@@ -2922,8 +2931,6 @@ class EmployeeObserver
 ## 总结
 
 在本章——*使用 Eloquent ORM 和查询构造器* 中，重点是在流行的 PHP Web 开发框架 Laravel 的背景下探索 Eloquent ORM 和查询构造器的基本概念。本章开始介绍了 Eloquent ORM 和查询构造器在 Laravel 中的重要性。本章的目标是让读者彻底理解 Eloquent ORM 和查询构造器，并强调它们在数据库操作中的意义。在下一章中，我们将查看 Laravel 的安全性方面，包括身份验证和授权。
-
-
 
 * 中间件排序
 * 中间件参数
@@ -2994,7 +3001,7 @@ class AuthServiceProvider extends ServiceProvider
 }
 ```
 
-在使用 provider 方法注册提供者后，你可以更改 `auth.php` 配置以使用新的用户提供者。首先，识别一个使用你新驱动程序的提供者：
+在使用 `provider` 方法注册提供者后，你可以更改 `auth.php` 配置以使用新的用户提供者。首先，识别一个使用你新驱动程序的提供者：
 
 ```php
 'providers' => [
@@ -3053,9 +3060,6 @@ Route::get('/api/user', function () {
 })->middleware(AuthenticateBasic::class);
 ```
 
-
-
-
 `Illuminate\Contracts\Auth\UserProvider` 的实现负责从持久化存储系统（如 MySQL、MongoDB 等）中检索 `Illuminate\Contracts\Auth\Authenticatable` 的实现类。这两个接口使得 Laravel 的身份验证程序能够不受独立于用户数据的存储方式或用于表示授权用户的类类型而独立运行：
 
 让我们检查一下 `Illuminate\Contracts\Auth\UserProvider` 契约：
@@ -3082,22 +3086,25 @@ interface UserProvider
 
 在尝试对应用程序进行验证时，`retrieveByCredentials` 函数接受传递给 `Auth::attempt` 方法的凭据数组。随后程序应该“查询”底层持久化存储，寻找与提供的凭据匹配的用户。此函数通常会执行一个带有“where”条件的查询，寻找“username”与 `$credentials['username']` 值匹配的用户记录。该方法应返回一个 `Authenticatable` 实现类。此方法不应尝试验证或身份验证密码。
 
-为了验证用户，`validateCredentials` 函数应该将提供的 `$user` 与 `$credentials` 进行匹配。例如，为了比较 `$user->getAuthPassword()` 的值与 `$credentials['password']` 的值，此函数通常会利用 `Hash::check` 方法。该方法根据是否有效返回 `true` 或 `false`。
+
+
+为了验证用户，`validateCredentials`函数应该将提供的`$user`与`$credentials`进行匹配。例如，为了比较`$user->getAuthPassword()`的值与`$credentials['password']`的值，此函数通常会利用`Hash::check`方法。该方法根据是否有效返回`true`或`false`。
 
 ## Authenticatable 契约
 
-现在我们已经检查了 `UserProvider` 上的每个函数，让我们来看 `Authenticatable` 契约。
+现在我们已经检查了`UserProvider`上的每个函数，让我们来看`Authenticatable`契约。
 
 ![](img/Figure-6.2.jpg)
 
-**图 6.2:** Authenticatable 契约返回值
+**图 6.2：** Authenticatable 契约返回值
 
-记住，用户提供程序应该从 `retrieveById`、`retrieveByToken` 和 `retrieveByCredentials` 方法返回这些接口实现。
+记住，用户提供程序应该从`retrieveById`、`retrieveByToken`和`retrieveByCredentials`方法返回这些接口实现。
 
 ```php
 <?php
 
 namespace Illuminate\Contracts\Auth;
+
 interface Authenticatable
 {
     public function getAuthIdentifierName();
@@ -3109,17 +3116,17 @@ interface Authenticatable
 }
 ```
 
-此接口非常直观。`getAuthIdentifierName` 函数应该返回用户的`primary key`字段的名称，`getAuthIdentifier` 方法应该返回用户的`primary key`。在使用 MySQL 后端时，这很可能是用户记录的自增主键。`getAuthPassword` 函数应该返回用户的哈希密码。
+此接口非常直观。`getAuthIdentifierName`函数应该返回用户的`primary key`字段的名称，`getAuthIdentifier`方法应该返回用户的`primary key`。在使用 MySQL 后端时，这很可能是用户记录的自增主键。`getAuthPassword`函数应该返回用户的哈希密码。
 
-此接口使身份验证系统能够与任何用户类交互，而不受所使用的 ORM 或存储抽象层的影响。Laravel 默认在 `app/Models` 目录下提供了一个 `App\Models\User` 类，它实现了此接口。
+此接口使身份验证系统能够与任何用户类交互，而不受所使用的 ORM 或存储抽象层的影响。Laravel 默认在`app/Models`目录下提供了一个`App\Models\User`类，它实现了此接口。
 
 # 实现授权策略与门（Gates）
 
 在结合身份验证和授权引入安全性时，一个关键方面是跟踪当前允许进入系统的用户。经过身份验证和授权的用户也应该被跟踪。
 
-在对应用程序进行身份验证时，你可能需要跟踪已登录用户的会话。你可以使用 `Auth` 门面的 `logout` 函数来手动注销用户。
+在对应用程序进行身份验证时，你可能需要跟踪已登录用户的会话。你可以使用`Auth`门面的`logout`函数来手动注销用户。
 
-建议在调用 `logout` 函数的同时，让会话失效并刷新会话令牌。
+建议在调用`logout`函数的同时，让会话失效并刷新会话令牌。
 
 ```php
 use Illuminate\Http\Request;
@@ -3135,9 +3142,7 @@ public function logout(Request $request): RedirectResponse
     $request->session()->invalidate();
     return redirect('/home');
 }
-
-
-
+```
 
 接下来，我们将构建一个路由来处理来自“确认密码”页面的表单请求。该路由将负责验证用户的密码并将他们重定向到想要的目标地：
 
@@ -3146,26 +3151,30 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 
-Route::post(‘confirmPassword’, function (Request $request) {
+Route::post('confirmPassword', function (Request $request) {
     if (! Hash::check($request->password, $request->user()->password)) {
         return back()->withErrors([
-            ‘password’ => [‘Incorrect Password’]
+            'password' => ['Incorrect Password']
         ]);
     }
+
     $request->session()->passwordConfirmed();
+
     return redirect()->intended();
-})->middleware([‘auth’, ‘throttle:6,1’]);
+})->middleware(['auth', 'throttle:6,1']);
 ```
 
-在继续之前，让我们仔细查看一下这个路径。首先，系统会检查请求中的 `password` 字段，判断其是否与授权用户的密码匹配。如果密码正确，我们必须通知 Laravel 的会话用户已验证其密码。`passwordConfirmed` 方法会向用户的会话添加一个时间戳，Laravel 可能会使用它来检测用户上一次验证密码的时间。最后，我们可以引导用户到达他们想要的位置。
+在继续之前，让我们仔细查看一下这个路径。首先，系统会检查请求中的`password`字段，判断其是否与授权用户的密码匹配。如果密码正确，我们必须通知 Laravel 的会话用户已验证其密码。`passwordConfirmed`方法会向用户的会话添加一个时间戳，Laravel 可能会使用它来检测用户上一次验证密码的时间。最后，我们可以引导用户到达他们想要的位置。
 
 ## 自定义认证守卫
 
-使用 `Auth` 门面上的 `extend` 方法，你可以创建自己的认证守卫。你应该调用服务提供者的 `extend` 方法。由于 Laravel 已经有一个 `AuthServiceProvider`，我们可以将以下代码粘贴到其中：
+使用`Auth`门面上的`extend`方法，你可以创建自己的认证守卫。你应该调用服务提供者的`extend`方法。由于 Laravel 已经有一个`AuthServiceProvider`，我们可以将以下代码粘贴到其中：
 
 ```php
 <?php
+
 namespace App\Providers;
+
 use App\Services\Auth\JwtGuard;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -3178,30 +3187,30 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Auth::extend(‘jwt’, function (Application $app, string $name, array $config) {
+        Auth::extend('jwt', function (Application $app, string $name, array $config) {
             // 返回 Illuminate\Contracts\Auth\Guard 的实例
-            return new JwtGuard(Auth::createUserProvider($config[‘provider’]));
+            return new JwtGuard(Auth::createUserProvider($config['provider']));
         });
     }
 }
 ```
 
-如前面的示例所示，提供给 `extend` 方法的回调应该返回 `Illuminate\Contracts\Auth\Guard` 的实现。该接口提供了几个必须实现的方法来定义自定义守卫。一旦你定义了自己的守卫，就可以在 `auth.php` 配置文件的 `guards` 配置中运行它：
+如前面的示例所示，提供给`extend`方法的回调应该返回`Illuminate\Contracts\Auth\Guard`的实现。该接口提供了几个必须实现的方法来定义自定义守卫。一旦你定义了自己的守卫，就可以在`auth.php`配置文件的`guards`配置中运行它：
 
 ```php
-‘guards’ => [
-    ‘api’ => [
-        ‘driver’ => ‘jwt’,
-        ‘provider’ => ‘users’,
+'guards' => [
+    'api' => [
+        'driver' => 'jwt',
+        'provider' => 'users',
     ],
 ],
 ```
 
 ## 闭包请求守卫
 
-使用 `Auth::viaRequest` 函数是构建自定义基于 HTTP 请求的认证系统最简单的方法。通过单个闭包，你可以轻松地创建你的认证程序。
+使用`Auth::viaRequest`函数是构建自定义基于 HTTP 请求的认证系统最简单的方法。通过单个闭包，你可以轻松地创建你的认证程序。
 
-开始之前，从 `AuthServiceProvider` 的启动方法中调用 `Auth::viaRequest` 函数。`viaRequest` 方法的第一个参数是认证驱动程序的名称。任何描述你自定义守卫的字符串都可以作为此名称。该方法的第二个参数应该是一个闭包，它接收传入的 HTTP 请求并返回用户实例，或者在认证失败时返回 `null`：
+开始之前，从`AuthServiceProvider`的启动方法中调用`Auth::viaRequest`函数。`viaRequest`方法的第一个参数是认证驱动程序的名称。任何描述你自定义守卫的字符串都可以作为此名称。该方法的第二个参数应该是一个闭包，它接收传入的 HTTP 请求并返回用户实例，或者在认证失败时返回`null`：
 
 ```php
 use App\Models\User;
@@ -3213,31 +3222,27 @@ use Illuminate\Support\Facades\Auth;
  */
 public function boot(): void
 {
-    Auth::viaRequest(‘customToken’, function (Request $request) {
-        return Employee::where(‘token’, (string) $request->token)->first();
+    Auth::viaRequest('customToken', function (Request $request) {
+        return Employee::where('token', (string) $request->token)->first();
     });
 }
 ```
 
-一旦开发了自定义认证驱动程序，你可以将其作为驱动程序添加到 `auth.php` 配置文件的 `guards` 配置中：
+一旦开发了自定义认证驱动程序，你可以将其作为驱动程序添加到`auth.php`配置文件的`guards`配置中：
 
 ```php
-‘guards’ => [
-    ‘api’ => [
-        ‘driver’ => ‘jwt’,
+'guards' => [
+    'api' => [
+        'driver' => 'jwt',
     ],
 ],
 ```
 
-
-
-
-
-```
+```php
 Auth::loginUsingId(5);
 ```
 
-作为 `loginUsingId` 函数的第二个参数，你可以发送一个布尔值。该值决定了是否需要授权会话的“记住我”功能。请记住，会话将持续验证身份，直到用户手动退出应用程序：
+作为`loginUsingId`函数的第二个参数，你可以发送一个布尔值。该值决定了是否需要授权会话的“记住我”功能。请记住，会话将持续验证身份，直到用户手动退出应用程序：
 
 ```php
 Auth::loginUsingId(5, $remember = true);
@@ -3245,7 +3250,7 @@ Auth::loginUsingId(5, $remember = true);
 
 # 次性验证用户
 
-若要对单次请求对用户进行身份验证，请使用 `once` 方法。调用此方法时，不会使用任何会话或 Cookie：
+若要对单次请求对用户进行身份验证，请使用`once`方法。调用此方法时，不会使用任何会话或 Cookie：
 
 ```php
 if (Auth::once($credentials)) {
@@ -3257,7 +3262,7 @@ if (Auth::once($credentials)) {
 
 虽然检查函数可能用于确定用户是否已通过验证，但你通常会使用中间件在授予访问特定路由或控制器之前确认用户已获得授权。
 
-可以通过使用路由中间件将特定路由的访问限制为已授权的用户。Laravel 自带的认证中间件使用了 `Illuminate\Auth\Middleware\Authenticate` 类。你只需要将中间件附加到路由定义中，因为它已经在你应用程序的 HTTP 内核中注册了：
+可以通过使用路由中间件将特定路由的访问限制为已授权的用户。Laravel 自带的认证中间件使用了`Illuminate\Auth\Middleware\Authenticate`类。你只需要将中间件附加到路由定义中，因为它已经在你应用程序的 HTTP 内核中注册了：
 
 ```php
 Route::get('/offices', function () {
@@ -3269,15 +3274,15 @@ Route::get('/offices', function () {
 
 中间件提供了一种简单的方法来分析和过滤进入应用程序的 HTTP 请求。例如，Laravel 自带了用于确认应用程序用户已通过验证的中间件。如果用户未获得授权，中间件会将用户引导至应用程序的登录界面。然而，如果用户已获得授权，中间件将允许请求在应用程序内部继续进行。
 
-除了认证之外，还可以创建其他中间件来执行一系列活动。例如，日志中间件可以记录通过你应用程序的每个请求。Laravel 框架自带多种中间件，例如用于 CSRF 保护和认证的中间件。`app/Http/Middleware` 目录包含了所有这些中间件。
+除了认证之外，还可以创建其他中间件来执行一系列活动。例如，日志中间件可以记录通过你应用程序的每个请求。Laravel 框架自带多种中间件，例如用于 CSRF 保护和认证的中间件。`app/Http/Middleware`目录包含了所有这些中间件。
 
-使用 `make:middleware` 命令创建新的中间件。执行命令如下：
+使用`make:middleware`命令创建新的中间件。执行命令如下：
 
 ```bash
 php artisan make:middleware EnsureTokenIsValid
 ```
 
-此操作将在 `app/Http/Middleware` 目录中创建一个 `EnsureTokenIsValid` 类的新实例。在此中间件中，只有当提供的 `token` 输入满足预定义值时，我们才允许访问该路由。否则，我们将用户重定向回 `home` URL。
+此操作将在`app/Http/Middleware`目录中创建一个`EnsureTokenIsValid`类的新实例。在此中间件中，只有当提供的`token`输入满足预定义值时，我们才允许访问该路由。否则，我们将用户重定向回`home` URL。
 
 ```php
 <?php
@@ -3300,12 +3305,13 @@ class EnsureTokenIsValid
         if ($request->input('token') !== 'secret-token') {
             return redirect('home');
         }
+
         return $next($request);
     }
 }
 ```
 
-如你所示，如果提供的 token 与我们的密钥 `token` 不匹配，中间件将向客户端发送 HTTP 重定向；否则，请求将发送到应用程序。带有 `$request` 的 `$next` 回调会将请求进一步传递到应用程序，让中间件“通过”。
+如你所示，如果提供的 token 与我们的密钥`token`不匹配，中间件将向客户端发送 HTTP 重定向；否则，请求将发送到应用程序。带有`$request`的`$next`回调会将请求进一步传递到应用程序，让中间件“通过”。
 
 理解中间件简单的方法是将其视为 HTTP 请求在访问你的应用程序之前必须经过的一系列层。每一层都有检查请求甚至完全拒绝请求的选择。
 
@@ -3346,16 +3352,18 @@ class AfterMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         $response = $next($request);
+
         // 执行任务
         return $response;
     }
 }
 ```
-*来源：laravel.com/docs/ [`laravel.com/docs/`](https://laravel.com/docs/)*
+
+*来源：*`laravel.com/docs/` [`laravel.com/docs/`](https://laravel.com/docs/)
 
 # 为路由分配中间件
 
-如果你想对特定路由应用中间件，可以使用 `middleware` 方法：
+如果你想对特定路由应用中间件，可以使用`middleware`方法：
 
 ```php
 use App\Http\Middleware\Authenticate;
@@ -3365,7 +3373,7 @@ Route::get('/EmployeeProfile', function () {
 })->middleware(Authenticate::class);
 ```
 
-通过向 `middleware` 方法传递中间件数组，你可以为路由添加多个中间件：
+通过向`middleware`方法传递中间件数组，你可以为路由添加多个中间件：
 
 ```php
 Route::get('/', function () {
@@ -3373,10 +3381,11 @@ Route::get('/', function () {
 })->middleware([First::class, Second::class]);
 ```
 
-你可以在应用程序的 `Kernel` 中提供中间件别名。Laravel 自带的中间件默认列在 `$middlewareAliases` 字段中。你可以自由添加自己的中间件到该列表中：
+你可以在应用程序的`Kernel`中提供中间件别名。Laravel 自带的中间件默认列在`$middlewareAliases`字段中。你可以自由添加自己的中间件到该列表中：
 
 ```php
 // 在 App\Http\Kernel 类中
+
 protected $middlewareAliases = [
     'auth' => \App\Http\Middleware\Authenticate::class,
     'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasic::class,
@@ -3398,11 +3407,13 @@ Route::get('/EmployeeProfile', function () {
 })->middleware('auth');
 ```
 
+
+
 # 中间件组
 
-为了方便向路由附加中间件，你可能希望将多个中间件聚合到一个键下。可以使用 HTTP 内核的 `$middlewareGroups` 属性来实现。
+为了方便向路由附加中间件，你可能希望将多个中间件聚合到一个键下。可以使用 HTTP 内核的`$middlewareGroups`属性来实现。
 
-Laravel 预定义的 web 和 API 中间件包含了你可能希望在 `web` 和 `API` 路由使用的常用中间件。请记住，以下中间件组由应用程序的 `App\Providers\RouteServiceProvider` 服务程序自动应用到相关的 `web` 和 `api` 路由文件中：
+Laravel 预定义的`web`和`api`中间件包含了你可能希望在`web`和`api`路由使用的常用中间件。请记住，以下中间件组由应用程序的`App\Providers\RouteServiceProvider`服务程序自动应用到相关的`web`和`api`路由文件中：
 
 ```php
 /**
@@ -3426,10 +3437,6 @@ protected $middlewareGroups = [
 ];
 ```
 
-
-
-
-
 为了分配中间件组，其语法与将中间件链接到路由和控制器的方法相似。这有助于在 Laravel 应用程序代码中启用逻辑，并将中间件附加到路由上。
 
 ```php
@@ -3442,11 +3449,11 @@ Route::middleware(['web'])->group(function () {
 });
 ```
 
-`App\Providers\RouteServiceProvider` 会开箱自动将 `web` 和 `api` 中间件组应用到应用程序中相应的 `routes/web.php` 和 `routes/api.php` 文件。
+`App\Providers\RouteServiceProvider`会开箱自动将`web`和`api`中间件组应用到应用程序中相应的`routes/web.php`和`routes/api.php`文件。
 
 # 中间件排序
 
-极情况下，你可能要求中间件按照精确的顺序运行，但你无法控制它们在分配到路由时的出现顺序。在这种情况下，可以使用 `app/Http/Kernel.php` 文件中的 `$middlewarePriority` 属性来指定中间件的优先级。
+极情况下，你可能要求中间件按照精确的顺序运行，但你无法控制它们在分配到路由时的出现顺序。在这种情况下，可以使用`app/Http/Kernel.php`文件中的`$middlewarePriority`属性来指定中间件的优先级。
 
 你的 HTTP 内核默认可能没有此属性。如果它不存在，你可以复制它的默认定义：
 
@@ -3476,9 +3483,9 @@ protected $middlewarePriority = [
 
 # 中间件参数
 
-此外，中间件可以接收更多的参数。例如，如果你的应用程序在执行特定操作之前需要确认已身份的用户具有特定的“角色”，你可以设计一个 `EnsureUserHasRole` 中间件，并将角色名称作为第二个参数接受。
+此外，中间件可以接收更多的参数。例如，如果你的应用程序在执行特定操作之前需要确认已身份的用户具有特定的“角色”，你可以设计一个`EnsureUserHasRole`中间件，并将角色名称作为第二个参数接受。
 
-在 `$next` 参数之后，中间件将接收额外的参数：
+在`$next`参数之后，中间件将接收额外的参数：
 
 ```php
 <?php
@@ -3501,12 +3508,13 @@ class EnsureEmployeeHasRole
         if (! $request->employee()->hasRole($role)) {
             // Redirect Logic
         }
+
         return $next($request);
     }
 }
 ```
 
-在指定路由时，可以通过使用 `:` 分隔中间件名称和参数来提供中间件参数。应该使用逗号分隔的参数列表：
+在指定路由时，可以通过使用`:`分隔中间件名称和参数来提供中间件参数。应该使用逗号分隔的参数列表：
 
 ```php
 Route::put('/post/{emp_id}', function (string $emp_id) {
@@ -3516,7 +3524,7 @@ Route::put('/post/{emp_id}', function (string $emp_id) {
 
 # 可终止中间件
 
-在 HTTP 响应发送到浏览器之后，中间件偶尔需要执行某些任务。如果你的中间件包含 `terminate` 方法并且你的 Web 服务器使用了 FastCGI，则在响应传输到浏览器之后，`terminate` 方法将被自动调用：
+在 HTTP 响应发送到浏览器之后，中间件偶尔需要执行某些任务。如果你的中间件包含`terminate`方法并且你的 Web 服务器使用了 FastCGI，则在响应传输到浏览器之后，`terminate`方法将被自动调用：
 
 ```php
 <?php
@@ -3549,9 +3557,9 @@ class TerminatingMiddleware
 }
 ```
 
-请求和响应都应该被发送到 `terminate` 方法。一旦定义了可终止中间件，就应该将其添加到 `app/Http/Kernel.php` 文件的路由列表或全局中间件列表中。
+请求和响应都应该被发送到`terminate`方法。一旦定义了可终止中间件，就应该将其添加到`app/Http/Kernel.php`文件的路由列表或全局中间件列表中。
 
-当你使用中间件的 `terminate` 函数时，Laravel 会从服务容器解析出该中间件的新实例。如果你希望在调用 `handle` 和 `terminate` 方法时使用相同的中间件实例，请使用容器的单例方法注册该中间件。通常，这应该在 `AppServiceProvider` 的 `register` 方法中执行：
+当你使用中间件的`terminate`函数时，Laravel 会从服务容器解析出该中间件的新实例。如果你希望在调用`handle`和`terminate`方法时使用相同的中间件实例，请使用容器的单例方法注册该中间件。通常，这应该在`AppServiceProvider`的`register`方法中执行：
 
 ```php
 use App\Http\Middleware\TerminatingMiddleware;
@@ -3579,10 +3587,163 @@ public function register(): void
 - 守护指定了每个请求的认证机制，而提供者从持久化存储中检索用户。Laravel 拥有会话守护（session guards），它们使用 cookie 和会话数据来验证用户。
 - 本章涵盖了 Laravel API 认证服务的概念，包含了如 Passport 和 Sanctum 等用于处理 API 令牌和认证请求的包。强调了这些包如何与内置的基于 cookie 的认证方案协同工作。
 - 展示了认证和注册逻辑的自定义，突出了 HTTP 身份验证作为一种不需要单独登录页面即可快速验证用户的方法。通过无状态 HTTP 身份验证说明了 API 令牌认证。
-- 本章还讨论了针对非标准关系型数据库的自定义用户提供者，引导读者完成创建和部署这些提供者的过程。Laravel 的合约（如 `UserProvider` 和 `Authenticatable`）定义良好。
+- 本章还讨论了针对非标准关系型数据库的自定义用户提供者，引导读者完成创建和部署这些提供者的过程。Laravel 的合约（如`UserProvider`和`Authenticatable`）定义良好。
 - 此外，本章演示了如何失效不同设备上的会话以确保用户安全。
 
+本章将介绍如何使用 Laravel 进行 API 开发。它将引导用户从 REST API 的介绍开始，一直到 API 的高级话题。本章还将重点介绍 Laravel Passport API 及其功能以及更多内容。
 
+### 结构
+
+在本章中，我们将涵盖以下主题：
+
+*   理解 API、REST
+*   资源 (Resources)、集合 (Collections) 和嵌套关系
+    *   编写资源
+        *   关系 (Relationships)
+        *   数据包装 (Data Wrapping)
+        *   分页 (Pagination)
+        *   条件关系
+    *   资源响应 (Resource Response)
+*   Laravel Passport
+    *   安装与设置
+    *   配置
+    *   访问令牌 (Access Tokens)
+    *   保护路由
+    *   令牌范围 (Token Scopes)
+
+# 理解 API、REST
+
+API 代表应用程序接口（Application Programming Interface）。API 可以比作不同软件程序之间的一组协议，用于相互通信，即共享数据和/或功能。
+
+有两种广泛使用的 API 类型：
+
+![](img/Figure-7.1.jpg)
+
+**图 7.1：** API 类型
+
+# REST
+
+REST API 代表表述状态转移（Representational State Transfer）。
+
+它是 API 层中针对多个操作的单一资源，并使用 CRUD（创建、读取、更新、删除）操作来处理和转换数据。
+
+# SOAP
+
+SOAP API 代表简单对象访问协议（Simple Object Access Protocol）。
+
+它可以是有状态的也可以是无状态的。它使用 POST 进行调用，并暴露了用于通信和数据包传输而执行的方法调用。
+
+# 资源、集合和嵌套关系
+
+在路由或控制器中建立资源实例时，如果你交付的是分页响应或资源集合，应该使用由资源类提供的`collection`方法：
+
+```php
+use App\Http\Resources\UserResource;
+use App\Models\User;
+
+Route::get('/users', function () {
+    return UserResource::collection(User::all());
+});
+```
+
+请注意，不允许添加自定义元数据，且元数据必须随集合一起返回。如果你想更改资源集合响应，可以创建一个特定的资源来表示该集合：
+
+```bash
+php artisan make:resource UserCollection
+```
+
+在生成资源集合类后，可以轻松定义必须包含在响应中的任何元数据：
+
+```php
+<?php
+
+namespace App\Http\Resources;
+
+use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\ResourceCollection;
+
+class UserCollection extends ResourceCollection
+{
+    /**
+     * 将资源集合转换为数组。
+     *
+     * @return array<int|string, mixed>
+     */
+    public function toArray(Request $request): array
+    {
+        return [
+            'data' => $this->collection,
+            'links' => [
+                'self' => 'link-value',
+            ],
+        ];
+    }
+}
+```
+
+*来源：www.laravel.com*
+
+一旦你定义了资源集合，就可以由路由或控制器返回它：
+
+```php
+use App\Http\Resources\UserCollection;
+use App\Models\User;
+
+Route::get('/users', function () {
+    return new UserCollection(User::all());
+});
+```
+
+Laravel 在从路由返回资源集合时，会将它的键（keys）恢复为数值顺序。尽管如此，你可以在资源类中提供`preserveKeys`属性，以指示是否需要保留集合的原始键：
+
+```php
+<?php
+
+namespace App\Http\Resources;
+
+use Illuminate\Http\Resources\Json\JsonResource;
+
+class UserResource extends JsonResource
+{
+    /**
+     * 指示资源的键是否应该被保留。
+     *
+     * @var bool
+     */
+    public $preserveKeys = true;
+}
+```
+
+如果`preserveKeys`属性被设置为`true`，则当集合从路由或控制器返回时，集合的键将被保留：
+
+```php
+use App\Http\Resources\UserResource;
+use App\Models\User;
+
+Route::get('/users', function () {
+    return UserResource::collection(User::all());
+});
+```
+
+当`preserveKeys`属性设置为`true`时，当集合从路由或控制器返回时，集合的键将被保留。一旦你定义了资源集合，就可以由路由或控制器返回它。尽管如此，你可以在资源类中提供`preserveKeys`属性，以指示是否需要保留集合的原始键：
+
+```php
+<?php
+
+namespace App\Http\Resources;
+
+use Illuminate\Http\Resources\Json\JsonResource;
+
+class UserResource extends JsonResource
+{
+    /**
+     * 指示资源的键是否应该被保留。
+     *
+     * @var bool
+     */
+    public $preserveKeys = true;
+}
+```
 
 
 
@@ -3636,6 +3797,7 @@ SOAP API 代表简单对象访问协议（Simple Object Access Protocol）。
 ```php
 use App\Http\Resources\UserResource;
 use App\Models\User;
+
 Route::get('/users', function () {
     return UserResource::collection(User::all());
 });
@@ -3651,7 +3813,9 @@ php artisan make:resource UserCollection
 
 ```php
 <?php
+
 namespace App\Http\Resources;
+
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
@@ -3680,6 +3844,7 @@ class UserCollection extends ResourceCollection
 ```php
 use App\Http\Resources\UserCollection;
 use App\Models\User;
+
 Route::get('/users', function () {
     return new UserCollection(User::all());
 });
@@ -3689,7 +3854,9 @@ Laravel 在从路由返回资源集合时，会将它的键（keys）恢复为�
 
 ```php
 <?php
+
 namespace App\Http\Resources;
+
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class UserResource extends JsonResource
@@ -3708,240 +3875,7 @@ class UserResource extends JsonResource
 ```php
 use App\Http\Resources\UserResource;
 use App\Models\User;
-Route::get('/users', function () {
-    return UserResource::collection(User::all());
-});
-```
 
-当 `preserveKeys` 属性设置为 `true` 时，当集合从路由或控制器返回时，集合的键将被保留。一旦你定义了资源集合，就可以由路由或控制器返回它。尽管如此，你可以在资源类中提供 `preserveKeys` 属性，以指示是否需要保留集合的原始键：
-
-```php
-<?php
-namespace App\Http\Resources;
-use Illuminate\Http\Resources\Json\JsonResource;
-
-class UserResource extends JsonResource
-{
-    /**
-     * 指示资源的键是否应该被保留。
-     *
-     * @var bool
-     */
-    public $preserveKeys = true;
-}
-```
-
-如果 `preserveKeys` 属性被设置为 `true`，则当集合从路由或控制器返回时，集合的键将被保留：
-
-```php
-use App\Http\Resources\UserResource;
-use App\Models\User;
-Route::get('/users', function () {
-    return UserResource::collection(User::all());
-});
-```
-
-一旦你定义了资源集合，就可以由路由或控制器返回它。尽管如此，你可以在资源类中提供 `preserveKeys` 属性，以指示是否需要保留集合的原始键：
-
-```php
-<?php
-namespace App\Http\Resources;
-use Illuminate\Http\Resources\Json\JsonResource;
-
-class UserResource extends JsonResource
-{
-    /**
-     * 指示资源的键是否应该被保留。
-     *
-     * @var bool
-     */
-    public $preserveKeys = true;
-}
-```
-
-如果 `preserveKeys` 属性被设置为 `true`，则当集合从路由或控制器返回时，集合的键将被保留：
-
-```php
-use App\Http\Resources\UserResource;
-use App\Models\User;
-Route::get('/users', function () {
-    return UserResource::collection(User::all());
-});
-```
-
-一旦你定义了资源集合，就可以由路由或控制器返回它。尽管如此，你可以在资源类中提供 `preserveKeys` 属性，以指示是否需要保留集合的原始键：
-
-```php
-<?php
-namespace App\Http\Resources;
-use Illuminate\Http\Resources\Json\JsonResource;
-
-class UserResource extends JsonResource
-{
-    /**
-     * 指示资源的键是否应该被保留。
-     *
-     * @var bool
-     */
-    public $preserveKeys = true;
-}
-```
-
-如果 `preserveKeys` 属性被设置为 `true`，则当集合从路由或控制器返回时，集合的键将被保留：
-
-```php
-use App\Http\Resources\UserResource;
-use App\Models\User;
-Route::get('/users', function () {
-    return UserResource::collection(User::all());
-});
-```
-
-一旦你定义了资源集合，就可以由路由或控制器返回它。尽管如此，你可以在资源类中提供 `preserveKeys` 属性，以指示是否需要保留集合的原始键：
-
-```php
-<?php
-namespace App\Http\Resources;
-use Illuminate\Http\Resources\Json\JsonResource;
-
-class UserResource extends JsonResource
-{
-    /**
-     * 指示资源的键是否应该被保留。
-     *
-     * @var bool
-     */
-    public $preserveKeys = true;
-}
-```
-
-（注：由于原文中存在大量重复段落，以上翻译已根据逻辑进行了精简和整合，确保不重复且符合文档工程师规范）
-
-**纠正说明：** 提供的原文文本中存在严重的内容重复（粘贴。以下是基于原文逻辑、去重后的完整翻译版本：
-
-[content]
-本章将介绍如何使用 Laravel 进行 API 开发。它将引导用户从 REST API 的介绍开始，一直到 API 的高级话题。本章还将重点介绍 Laravel Passport API 及其功能以及更多内容。
-
-### 结构
-
-在本章中，我们将涵盖以下主题：
-
-*   理解 API、REST
-*   资源 (Resources)、集合 (Collections) 和嵌套关系
-    *   编写资源
-        *   关系 (Relationships)
-        *   数据包装 (Data Wrapping)
-        *   分页 (Pagination)
-        *   条件关系
-    *   资源响应 (Resource Response)
-*   Laravel Passport
-    *   安装与设置
-    *   配置
-    *   访问令牌 (Access Tokens)
-    *   保护路由
-    *   令牌范围 (Token Scopes)
-
-# 理解 API、REST
-
-API 代表应用程序接口（Application Programming Interface）。API 可以比作不同软件程序之间的一组协议，用于相互通信，即共享数据和/或功能。
-
-有两种广泛使用的 API 类型：
-
-![](img/Figure-7.1.jpg)
-
-**图 7.1：** API 类型
-
-# REST
-
-REST API 代表表述状态转移（Representational State Transfer）。
-
-它是 API 层中针对多个操作的单一资源，并使用 CRUD（创建、读取、更新、删除）操作来处理和转换数据。
-
-# SOAP
-
-SOAP API 代表简单对象访问协议（Simple Object Access Protocol）。
-
-它可以是有状态的也可以是无状态的。它使用 POST 进行调用，并暴露了用于通信和数据包传输而执行的方法调用。
-
-# 资源、集合和嵌套关系
-
-在路由或控制器中建立资源实例时，如果你交付的是分页响应或资源集合，应该使用由资源类提供的 `collection` 方法：
-
-```php
-use App\Http\Resources\UserResource;
-use App\Models\User;
-Route::get('/users', function () {
-    return UserResource::collection(User::all());
-});
-```
-
-请注意，不允许添加自定义元数据，且元数据必须随集合一起返回。如果你想更改资源集合响应，可以创建一个特定的资源来表示该集合：
-
-```bash
-php artisan make:resource UserCollection
-```
-
-在生成资源集合类后，可以轻松定义必须包含在响应中的任何元数据：
-
-```php
-<?php
-namespace App\Http\Resources;
-use Illuminate\Http\Request;
-use Illuminate\Http\Resources\Json\ResourceCollection;
-
-class UserCollection extends ResourceCollection
-{
-    /**
-     * 将资源集合转换为数组。
-     *
-     * @return array<int|string, mixed>
-     */
-    public function toArray(Request $request): array
-    {
-        return [
-            'data' => $this->collection,
-            'links' => [
-                'self' => 'link-value',
-            ],
-        ];
-    }
-}
-```
-*来源：www.laravel.com*
-
-一旦你定义了资源集合，就可以由路由或控制器返回它：
-
-```php
-use App\Http\Resources\UserCollection;
-use App\Models\User;
-Route::get('/users', function () {
-    return new UserCollection(User::all());
-});
-```
-
-Laravel 在从路由返回资源集合时，会将它的键（keys）恢复为数值顺序。尽管如此，你可以在资源类中提供 `preserveKeys` 属性，以指示是否需要保留集合的原始键：
-
-```php
-<?php
-namespace App\Http\Resources;
-use Illuminate\Http\Resources\Json\JsonResource;
-
-class UserResource extends JsonResource
-{
-    /**
-     * 指示资源的键是否应该被保留。
-     *
-     * @var bool
-     */
-    public $preserveKeys = true;
-}
-```
-
-如果 `preserveKeys` 属性被设置为 `true`，则当集合从路由或控制器返回时，集合的键将被保留：
-
-```php
-use App\Http\Resources\UserResource;
-use App\Models\User;
 Route::get('/users', function () {
     return UserResource::collection(User::all());
 });
@@ -3970,13 +3904,8 @@ Route::get('/users', function () {
 
 一个 Laravel 分页对象可以发送到自定义资源集合或资源集合的集合函数。
 
-
-
-
-
 ```php
 use App\Http\Resources\UserCollection;
-
 use App\Models\User;
 
 Route::get('/users', function () {
@@ -4050,7 +3979,7 @@ public function toArray(Request $request): array
 }
 ```
 
-在这种情况下，如果关系没有加载，在 posts 键被删除之前，资源响应将不会交付客户端。
+在这种情况下，如果关系没有加载，在 `posts` 键被删除之前，资源响应将不会交付客户端。
 
 除了条件地包含关系外，你还可以根据关系的计数是否已加载到模型中，在资源回答中条件地包含关系计数：
 
@@ -4080,7 +4009,6 @@ public function toArray(Request $request): array
 
 ```php
 use App\Http\Resources\UserResource;
-
 use App\Models\User;
 
 Route::get('/user/{id}', function (string $id) {
@@ -4092,7 +4020,6 @@ Route::get('/user/{id}', function (string $id) {
 
 ```php
 use App\Http\Resources\UserResource;
-
 use App\Models\User;
 
 Route::get('/user', function () {
@@ -4131,11 +4058,13 @@ class UserResource extends JsonResource
 }
 ```
 
+
+
 ## Laravel Passport
 
 Laravel Passport 为你的 Laravel 应用提供了完整的 OAuth 服务器实现。它开箱提供了实现 OAuth2 认证所需的功能。
 
-# 安装与设置
+## 安装与设置
 
 使用 Composer 包管理器安装 Passport：
 
@@ -4166,7 +4095,7 @@ class User extends Authenticatable
 }
 ```
 
-# 配置
+## 配置
 
 Passport 会自动发放有效期为一年的令牌。使用 `tokensExpireIn`、`refreshTokensExpireIn` 和 `personalAccessTokensExpireIn` 方法可以设置更长或更短的令牌寿命。
 
@@ -4190,9 +4119,6 @@ Passport::hashClientSecrets();
 ```
 
 所有的客户端密钥仅在创建后（启用后）对用户可见。如果丢失了明文客户端密钥，将无法恢复，因为它们不会存储在数据库中。
-
-
-
 
 通过创建你自己的模型并扩展匹配的 Passport 模型，你可以扩展 Passport 使用的内部模型：
 
@@ -4224,7 +4150,7 @@ public function boot(): void
 }
 ```
 
-# 覆盖路由
+## 覆盖路由
 
 在某些情况下，你可能想要更改 Passport 定义的路由。为了实现这一点，你必须先在应用程序的 `AppServiceProvider` 的 `register` 函数中添加 `Passport::ignoreRoutes`，以忽略 Passport 注册的路由：
 
@@ -4241,23 +4167,23 @@ public function register(): void
 
 ```php
 Route::group([
-    ‘as’ => ‘passport.',
-    ‘prefix’ => config(‘passport.path’, ‘oauth’),
-    ‘namespace’ => ‘\Laravel\Passport\Http\Controllers’,
+    'as' => 'passport.',
+    'prefix' => config('passport.path', 'oauth'),
+    'namespace' => '\Laravel\Passport\Http\Controllers',
 ], function () {
     // Route Logic
 });
 ```
 
-### 访问令牌 (Access Tokens)
+### 访问令牌（Access Tokens）
 
 开发者通常通过其权限码（permission codes）的使用来了解 OAuth2。当客户端应用程序使用授权码时，它会将用户重定向到你的服务器，用户可以在那里接受或拒绝向客户端提供访问令牌请求。
 
-# 客户端 (Client)
+## 客户端（Client）
 
-为了与你的 Laravel 应用程序建立通信，需要创建一个能够能够通过应用程序 API 与你的 Laravel 应用程序进行通信和交互的客户端。在创建客户端时，需要应用程序的名称和应用程序的 URL。该 URL 是经过验证的用户将被重定向指向的应用程序 URL。
+为了与你的 Laravel 应用程序建立通信，需要创建一个能够通过应用程序 API 与你的 Laravel 应用程序进行通信和交互的客户端。在创建客户端时，需要应用程序的名称和应用程序的 URL。该 URL 是经过验证的用户将被重定向指向的应用程序 URL。
 
-### Passport::client 命令
+### `Passport::client` 命令
 
 使用 `passport:client` Artisan 命令是创建客户端最直接的方法。你可以使用此命令创建你自己的客户端，以便测试 OAuth2 的功能。当你执行 `client` 命令时，Passport 会向你询问有关客户端的更多详细信息，并为你提供客户端 ID 和密钥（secret）：
 
@@ -4267,7 +4193,7 @@ php artisan passport:client
 
 当 `passport:client` 命令询问 URL 时，你可以通过提供逗号分隔的列表，为你的客户端输入任意数量的重定向 URL。每个包含逗号的 URL 都必须进行 URL 编码：
 
-```
+```text
 http://example1.com/callback
 http://example2.com/callback
 ```
@@ -4276,7 +4202,7 @@ http://example2.com/callback
 
 Passport 拥有一个 JSON API，你可以用它创建客户端，因为你的应用程序用户将无法使用 `client` 命令。通过这种方式，你可以避免手动编写用于客户端创建、更新和删除控制器的麻烦。
 
-为了给你的用户提供一个管理客户的仪表板，你必须将 Passport 的 JSON API 与你自己的前端集成。我们将在下面介绍客户端管理的每个 API 端点。为了方便使用，我们将展示如何如何使用 Axios 对端点进行 HTTP 查询。
+为了给你的用户提供一个管理客户的仪表板，你必须将 Passport 的 JSON API 与你自己的前端集成。我们将在下面介绍客户端管理的每个 API 端点。为了方便使用，我们将展示如何使用 Axios 对端点进行 HTTP 查询。
 
 `web` 和 `auth` 中间件保护着 JSON API，因此你只能在自己的应用程序内部调用它。它不能被外部源调用。
 
@@ -4303,19 +4229,20 @@ axios.get('/oauth/clients')
 
 ```javascript
 const data = {
-    name: ‘ABC’,
-    redirect: ‘http://example1.com/callback’
+    name: 'ABC',
+    redirect: 'http://example1.com/callback'
 };
-axios.post('/oauth/clients’, data)
+
+axios.post('/oauth/clients', data)
   .then(response => {
     console.log(response.data);
   })
-  .catch (response => {
+  .catch(response => {
     // Error Handling Logic
   });
 ```
 
-# PUT
+## PUT
 
 `PUT /oauth/clients`
 
@@ -4323,14 +4250,15 @@ axios.post('/oauth/clients’, data)
 
 ```javascript
 const data = {
-    name: ‘ABC’,
-    redirect: ‘http://example1.com/callback’
+    name: 'ABC',
+    redirect: 'http://example1.com/callback'
 };
+
 axios.put('/oauth/clients', data)
   .then(response => {
     console.log(response.data);
   })
-  .catch (response => {
+  .catch(response => {
     // Error Handling Logic
   });
 ```
@@ -4339,7 +4267,7 @@ axios.put('/oauth/clients', data)
 
 `DELETE /oauth/clients`
 
-为了删除客户端。
+为了删除客户端：
 
 ```javascript
 axios.delete('/oauth/clients' + clientId)
@@ -4348,11 +4276,11 @@ axios.delete('/oauth/clients' + clientId)
   });
 ```
 
-### 保护路由
+## 保护路由
 
 保护路由有几种处理方式。我们将深入介绍每一种。
 
-## 中间件
+### 中间件
 
 包含 Passport 的身份 guard 将验证传入请求的访问令牌。你只需要在设置了 `api` guard 的所有路由上包含 `auth:api` 中间件：
 
@@ -4368,6 +4296,7 @@ axios.delete('/oauth/clients' + clientId)
     'driver' => 'passport',
     'provider' => 'users',
 ],
+
 'api-customers' => [
     'driver' => 'passport',
     'provider' => 'customers',
@@ -4382,7 +4311,7 @@ Route::get('/customer', function () {
 })->middleware('auth:api-customers');
 ```
 
-# 访问令牌 (Access Token)
+## 访问令牌（Access Token）
 
 在访问受 Passport 保护的路由时，你的应用程序 API 用户应该在请求的 `Authorization` Header 中将他们的访问令牌作为 `Bearer` 令牌。例如，使用 Guzzle HTTP 库：
 
@@ -4397,28 +4326,25 @@ $response = Http::withHeaders([
 return $response->json();
 ```
 
-# 令牌范围 (Token Scopes)
+## 令牌范围（Token Scopes）
 
 通过范围，你的 API 客户在访问账户时可能会请求一组特定的权限。例如，如果你正在开发电子商务服务，并不是每个 API 客户都希望具有下单的能力。或者，你也可以通过只请求授权来允许客户查看订单状态。换句话说，范围允许用户限制第三方程序代表他们所做的操作。
 
+## 定义范围（#toc.xhtml#s222a）
 
-
-
-# 定义范围 (#toc.xhtml#s222a)
-
-在应用程序的 `App\Providers\AuthServiceProvider` 类的 `boot` 方法中使用 `Passport::tokensCan` 函数，你可以指定 API 的范围（scopes）。`tokensCan` 方法可以使用一个包含范围名称和范围描述的数组。用户将在权限审批屏幕上看到范围的描述，你可以编写任何你喜欢的的内容：
+在应用程序的 `App\Providers\AuthServiceProvider` 类的 `boot` 方法中使用 `Passport::tokensCan` 函数，你可以指定 API 的范围（scopes）。`tokensCan` 方法可以使用一个包含范围名称和范围描述的数组。用户将在权限审批屏幕上看到范围的描述，你可以编写任何你喜欢的内容：
 
 ```php
 public function boot(): void
 {
     Passport::tokensCan([
-        ‘place-alarm’ => ‘Place alarm’,
-        ‘check-weather’ => ‘Check weather’,
+        'place-alarm' => 'Place alarm',
+        'check-weather' => 'Check weather',
     ]);
 }
 ```
 
-# 默认范围 (#toc.xhtml#s223a)
+## 默认范围（#toc.xhtml#s223a）
 
 你可以使用 `setDefaultScope` 函数来配置你的 Passport 服务器，以便在客户端未请求特定范围的情况下，为令牌附加默认范围。通常情况下，你应该在应用程序中 `App\Providers\AuthServiceProvider` 类的 `boot` 方法中调用此函数：
 
@@ -4426,13 +4352,13 @@ public function boot(): void
 use Laravel\Passport\Passport;
 
 Passport::tokensCan([
-    ‘place-alarm’ => ‘Place alarm’,
-    ‘check-weather’ => ‘Check weather’,
+    'place-alarm' => 'Place alarm',
+    'check-weather' => 'Check weather',
 ]);
 
 Passport::setDefaultScope([
-    ‘check-weather’,
-    ‘place-alarm’,
+    'check-weather',
+    'place-alarm',
 ]);
 ```
 
@@ -4441,61 +4367,65 @@ Passport::setDefaultScope([
 客户应该使用 `scope` 查询字符串选项来指示它们在通过授权码模式寻求访问令牌时想要使用的范围。由空格分隔的范围列表应作为 `scope` 参数：
 
 ```php
-Route::get(‘/redirect’, function () {
+Route::get('/redirect', function () {
     $query = http_build_query([
-        ‘client_id’ => ‘client-id’,
-        ‘redirect_uri’ => ‘http://example1.com/callback’,
-        ‘response_type’ => ‘code’,
-        ‘scope’ => ‘place-alarm check-weather’,
+        'client_id' => 'client-id',
+        'redirect_uri' => 'http://example1.com/callback',
+        'response_type' => 'code',
+        'scope' => 'place-alarm check-weather',
     ]);
-    return redirect(‘http://passport-app.test/oauth/authorize?’.$query);
+
+    return redirect('http://passport-app.test/oauth/authorize?'.$query);
 });
 ```
 
 在提供个人访问令牌时，所需的范围数组可以被作为 `App\Models\User` 模型的 `createToken` 函数的第二个参数：
 
 ```php
-$token = $user->createToken(‘My Token’, [‘place-alarm’])->accessToken;
+$token = $user->createToken('My Token', ['place-alarm'])->accessToken;
 ```
 
-# 检查范围 (#toc.xhtml#s224a)
+## 检查范围（#toc.xhtml#s224a）
 
-为了确认传入的请求是使用已授予特定范围的令牌进行身份验证的，Passport 提供了两个中间件组件。首先将以下中间件添加到你的 `app/Http/Kernel.php` 文件的 `$middlewareAliases` 中。
+为了确认传入的请求是使用已授予特定范围的令牌进行身份验证的，Passport 提供了两个中间件组件。首先将以下中间件添加到你的 `app/Http/Kernel.php` 文件的 `$middlewareAliases` 中：
 
 ```php
-‘scopes’ => \Laravel\Passport\Http\Middleware\CheckScopes::class,
-‘scope’ => \Laravel\Passport\Http\Middleware\CheckForAnyScope::class,
+'scopes' => \Laravel\Passport\Http\Middleware\CheckScopes::class,
+'scope' => \Laravel\Passport\Http\Middleware\CheckForAnyScope::class,
 ```
 
 为了确保传入请求的访问令牌具有每一个指定的范围，可以将 `scopes` 中间件附加到路由上：
 
 ```php
-Route::get(‘/weather’, function () {
+Route::get('/weather', function () {
     //Code Logic
-})->middleware([‘auth:api’, ‘scopes:check-weather,place-alarm’]);
+})->middleware(['auth:api', 'scopes:check-weather,place-alarm']);
 ```
 
 为了确认传入请求的访问令牌至少包含指定范围中的一个，可以将 `scope` 中间件附加到路由上：
 
 ```php
-Route::get(‘/orders’, function () {
+Route::get('/orders', function () {
     //Code Logic
-})->middleware([‘auth:api’, ‘scope:check-weather,place-alarm’]);
+})->middleware(['auth:api', 'scope:check-weather,place-alarm']);
 ```
 
 在访问令牌认证的请求到达你的应用程序后，你仍然可以在已认证的 `App\Models\User` 实例上使用 `tokenCan` 方法来查看令牌是否具有指定的范围：
 
+
+
+
 ```php
 use Illuminate\Http\Request;
 
-Route::get(‘/alarms’, function (Request $request) {
-    if ($request->user()->tokenCan(‘place-alarm’)) {
+Route::get('/alarms', function (Request $request) {
+    if ($request->user()->tokenCan('place-alarm')) {
         // Code Logic
     }
 });
 ```
 
-# 结论 (#toc.xhtml#s225a)
+# 结论
 
 章节开头对 REST 和 API 的介绍强调了它们在构建现代应用程序中的重要性。随后是对资源、集合和嵌套连接的解释，以及如何使用 Laravel 将其付诸的示例。本章还强调了编写资源以及在资源响应中维护关系。
 
@@ -4503,20 +4433,16 @@ Route::get(‘/alarms’, function (Request $request) {
 
 在下一章节中，我们将探讨 Laravel 应用程序的测试与调试。
 
-# 重点回顾 (#toc.xhtml#s226a)
+# 重点回顾
 
-*   识别 REST API 的基础及其在构建现代应用程序中的重要性。使用 Laravel 的层级关系、集合和资源来有效地处理数据。
-*   使用 Laravel 资源将模型数据转换为与 API 响应一致的数组。
-*   可以在资源响应中高效地维护资源之间的关系，使得在 API 结果中包含相关资源成为可能。在 Laravel 中，资源响应会自动封装在 ‘data’ 键中，但资源类的 `$wrap` 参数允许你提供自定义键。
-*   为了获得安全且有效的 OAuth2 服务器解决方案，请使用 Laravel Passport。对于 Laravel 应用程序，Laravel Passport 提供了一个可靠的 OAuth2 服务器解决方案，保证了对 API 的安全访问。
-*   令牌范围对于为 API 用户提供独特的权限至关重要。
-*   通过使用 Laravel Passport，客户端和服务器可以无缝通信。
-*   通过使用 Axios，客户端和服务器可以无缝通信。
-*   为了提高安全性和访问控制，请设置访问令牌和令牌生存期。
-
-
-
-
+- 识别 REST API 的基础及其在构建现代应用程序中的重要性。使用 Laravel 的层级关系、集合和资源来有效地处理数据。
+- 使用 Laravel 资源将模型数据转换为与 API 响应一致的数组。
+- 可以在资源响应中高效地维护资源之间的关系，使得在 API 结果中包含相关资源成为可能。在 Laravel 中，资源响应会自动封装在 `data` 键中，但资源类的 `$wrap` 参数允许你提供自定义键。
+- 为了获得安全且有效的 OAuth2 服务器解决方案，请使用 Laravel Passport。对于 Laravel 应用程序，Laravel Passport 提供了一个可靠的 OAuth2 服务器解决方案，保证了对 API 的安全访问。
+- 令牌范围对于为 API 用户提供独特的权限至关重要。
+- 通过使用 Laravel Passport，客户端和服务器可以无缝通信。
+- 通过使用 Axios，客户端和服务器可以无缝通信。
+- 为了提高安全性和访问控制，请设置访问令牌和令牌生存期。
 
 当执行测试时，Laravel 会根据 `phpunit.xml` 文件中指定的环境参数自动将配置环境切换到 `testing`。此外，在测试阶段，Laravel 默认会将话（session）和缓存（cache）配置为 `array` 驱动，确保会话或缓存数据不会持久化。
 
@@ -4538,7 +4464,7 @@ Route::get(‘/alarms’, function (Request $request) {
 
 **图 8.1:** Laravel 应用程序测试生命周期
 
-### 创建测试
+## 创建测试
 
 使用 `make:test` Artisan 命令生成新的测试用例。测试默认存储在 `tests/Feature` 目录：
 
@@ -4573,12 +4499,13 @@ class Sampletest extends TestCase
     public function test_basic_test(): void
     {
         $this->assertTrue(true);
+
         //测试用例逻辑
     }
 }
 ```
 
-### 运行测试
+## 运行测试
 
 要运行测试，请使用 `phpunit` 命令：
 
@@ -4623,7 +4550,7 @@ php artisan test --parallel --recreate-databases
 
 在某些情况下，有必要为应用程序的测试配置特定资源，以确保多个测试进程能够顺利访问。
 
-使用 `ParallelTesting`  Facade，你可以定义在进程或测试用例的 `setUp` 和 `tearDown` 期间执行的代码。指定的闭包接收 `$token` 和 `$testCase` 变量，分别持有进程令牌和活跃的测试用例。
+使用 `ParallelTesting` Facade，你可以定义在进程或测试用例的 `setUp` 和 `tearDown` 期间执行的代码。指定的闭包接收 `$token` 和 `$testCase` 变量，分别持有进程令牌和活跃的测试用例。
 
 ```php
 <?php
@@ -4649,6 +4576,7 @@ class AppServiceProvider extends ServiceProvider
 
         ParallelTesting::setUpDatabase(function (string $database, int $token) {
             Artisan::call('db:seed');
+
             // 逻辑
         });
 
@@ -4669,7 +4597,7 @@ class AppServiceProvider extends ServiceProvider
 $token = ParallelTesting::token();
 ```
 
-### 报告
+## 报告
 
 当你运行应用程序测试时，可能希望检查测试使用了多少应用程序代码，以及测试用例是否真实覆盖了代码。你可以结合 `test` 命令使用 `--coverage` 选项来实现：
 
@@ -4683,7 +4611,7 @@ php artisan test --coverage
 php artisan test --coverage --min=80.3
 ```
 
-**分析**
+### 分析
 
 Artisan 测试运行器的一个方便功能是可以获取应用程序中运行时间最长的测试列表。运行 `--profile` 选项来获取最慢的测试列表。这可以帮助你快速确定需要修改哪些测试以加快测试套件：
 
@@ -4707,14 +4635,11 @@ class ExampleTest extends TestCase
     public function test_the_application_returns_a_successful_response(): void
     {
         $response = $this->get('/');
+
         $response->assertStatus(200);
     }
 }
 ```
-
-
-
-
 
 虽然 `assertStatus` 函数声明返回的响应应该具有指定的 HTTP 状态码，但 `get` 方法会向应用程序发送 `GET` 请求。除了这个简单的断言外，Laravel 还有许多断言用于检查响应头、内容、JSON 格式和其他元素。
 
@@ -4736,6 +4661,7 @@ class ExampleTest extends TestCase
     public function basicRequest(): void
     {
         $response = $this->get('/');
+
         $response->assertStatus(200);
     }
 }
@@ -4761,6 +4687,7 @@ class ExampleTest extends TestCase
         $response = $this->withHeaders([
             'X-Header' => 'Value',
         ])->post('/user', ['name' => 'ABC']);
+
         $response->assertStatus(201);
     }
 }
@@ -4782,6 +4709,7 @@ class ExampleTest extends TestCase
     public function exampleFunctionCookies(): void
     {
         $response = $this->withCookie('color', 'red')->get('/');
+
         $response = $this->withCookies([
             'color' => 'red',
             'name' => 'ABC',
@@ -4825,12 +4753,15 @@ class ExampleTest extends TestCase
     public function exampleAuth(): void
     {
         $user = User::factory()->create();
+
         $response = $this->actingAs($user)
             ->withSession(['banned' => false])
             ->get('/');
     }
 }
 ```
+
+
 
 你可以通过将 guard 名称作为 `actingAs` 函数的第二个参数来指定用户身份验证所需的 guard（守卫）。在整个测试过程中，分配给 `actingAs` 方法的 guard 也将作为默认 guard 使用。
 
@@ -4890,10 +4821,12 @@ class ExampleTest extends TestCase
 
 有时，可能需要确认应用程序内部是否抛出了异常。要断言闭包内的代码是否抛出了指定类型的异常，请使用 `assertThrows` 方法：
 
-`$this->assertThrows(`
+```php
+$this->assertThrows(
     fn () => (new Order)->execute(),
     OrderInvalid::class
-`);`
+);
+```
 
 禁用弃用处理将导致弃用警告变为异常，从而导致你的测试失败。
 
@@ -4901,7 +4834,7 @@ class ExampleTest extends TestCase
 
 ### 文件上传测试
 
-为了测试目的，你可以使用来自 `UploadedFile` 类的 `fake` 函数来生成模拟文件。这简化了文件上传的测试，特别是当与 `Storage`  facade 的 `fake` 方法配合使用时。例如，你可以通过结合这两者来快速测试头像上传表单：
+为了测试目的，你可以使用来自 `UploadedFile` 类的 `fake` 函数来生成模拟文件。这简化了文件上传的测试，特别是当与 `Storage` facade 的 `fake` 方法配合使用时。例如，你可以通过结合这两者来快速测试头像上传表单：
 
 ```php
 <?php
@@ -4928,9 +4861,11 @@ class ExampleTest extends TestCase
 
 你可以使用 `Storage` facade 提供的 `assertMissing` 函数来断言某个文件不存在：
 
-`Storage::fake('cats');`
-`// Application Logic`
-`Storage::disk('cats')->assertMissing('missing.jpg');`
+```php
+Storage::fake('cats');
+// Application Logic
+Storage::disk('cats')->assertMissing('missing.jpg');
+```
 
 为了正确测试应用程序的验证需求，在通过 `UploadedFile` 类提供的 `fake` 方法生成文件时，你可以提供图片的宽度、高度和大小（单位为千字节）：
 
@@ -4948,28 +4883,19 @@ class ExampleTest extends TestCase
 
 Homestead 支持使用 Xdebug 进行单步调试。例如，当你在浏览器中打开页面时，PHP 会与你的 IDE 建立，让你能够查看并编辑正在运行的代码。
 
-
-
-
 Xdebug 默认启动并准备好接收连接。如果你需要在 CLI 中激活 Xdebug，请在你的 Homestead 虚拟机中使用 `sudo phpenmod xdebug` 命令。现在，请按照 IDE 中的说明启用调试功能。最后，设置你的浏览器以便通过书签脚本（bookmarklet）或扩展程序启动 Xdebug。
 
 自动启动向 Web 服务器发送查询的功能测试，比修改测试以通过传递特殊标头或 cookie 来触发调试要简单得多。在你的 Homestead 虚拟机中，编辑 `/etc/php/7.x/fpm/conf.d/20-xdebug.ini` 文件并添加以下设置以使 Xdebug 自动启动：
 
-```
+```ini
 xdebug.client_host = 192.168.10.1
-```
-
-```
 xdebug.mode = debug
-```
-
-```
 xdebug.start_with_request = yes
 ```
 
 在你的 Homestead 虚拟机上使用 `xphp` shell 别名来调试 PHP CLI 应用：
 
-```
+```bash
 xphp /path/to/script
 ```
 
@@ -5003,18 +4929,18 @@ xphp /path/to/script
 
 - 生成通知
 - 发送通知
-    - 传递通道
-    - 队列通知
-    - 延迟通知
-    - 自定义通知队列
-    - 自定义通知通道队列
-    - 随需通知
+  - 传递通道
+  - 队列通知
+  - 延迟通知
+  - 自定义通知队列
+  - 自定义通知通道队列
+  - 随需通知
 - 邮件通知
-    - 自定义邮件组件
-    - 自定义模板
-    - 处理原始数据
-    - 标签和元数据
-    - 自定义 Symfony 消息
+  - 自定义邮件组件
+  - 自定义模板
+  - 处理原始数据
+  - 标签和元数据
+  - 自定义 Symfony 消息
 - 广播通知
 - 通知事件
 
@@ -5022,7 +4948,7 @@ xphp /path/to/script
 
 每个类（通常保存在 `app/Notifications` 目录中）代表 Laravel 中的每个通知。当你在程序中使用 `make:notification` 命令时，该目录将在应用中生成：
 
-```
+```bash
 php artisan make:notification orderRecieved
 ```
 
@@ -5036,6 +4962,7 @@ php artisan make:notification orderRecieved
 <?php
 
 namespace App\Models;
+
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -5049,13 +4976,15 @@ class User extends Authenticatable
 
 ```php
 use App\Notifications\orderRecieved;
+
 $user->notify(new orderRecieved($order));
 ```
 
-向向多个可通知实体分发通知的有效方法是利用 `Notification` Facade。通过调用 `send` 函数并提供通知对象以及相关的可通知实体，你可以方便地向一组用户或接收者交付通知。
+向多个可通知实体分发通知的有效方法是利用 `Notification` Facade。通过调用 `send` 函数并提供通知对象以及相关的可通知实体，你可以方便地向一组用户或接收者交付通知。
 
 ```php
 use Illuminate\Support\Facades\Notification;
+
 Notification::send($users, new orderRecieved($order));
 ```
 
@@ -5080,14 +5009,13 @@ public function via(object $notifiable): array
 
 ## 队列通知
 
-
-
-
 通知传递可能会很慢，特别是当通道需要使用外部 API 来提供消息时。通过在类中包含 `ShouldQueue` 接口和 `Queueable` 特性，允许你的通知进入队列，以提高应用程序的响应速度。你可以立即向通知类中添加该接口和特性，因为对于使用 `make:notification` 命令创建的所有通知，它们已经默认导入：
 
 ```php
 <?php
+
 namespace App\Notifications;
+
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
@@ -5095,6 +5023,7 @@ use Illuminate\Notifications\Notification;
 class orderRecieved extends Notification implements ShouldQueue
 {
     use Queueable;
+
     // Logic
 }
 ```
@@ -5113,6 +5042,7 @@ $user->notify(new orderRecieved($invoice));
 
 ```php
 $delay = now()->addMinutes(10);
+
 $user->notify((new orderRecieved($invoice))->delay($delay));
 ```
 
@@ -5143,7 +5073,9 @@ public function withDelay(object $notifiable): array
 
 ```php
 <?php
+
 namespace App\Notifications;
+
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
@@ -5151,6 +5083,7 @@ use Illuminate\Notifications\Notification;
 class orderRecieved extends Notification implements ShouldQueue
 {
     use Queueable;
+
     public function __construct()
     {
         $this->onConnection('redis');
@@ -5178,60 +5111,81 @@ public function viaConnections(): array
 public function viaQueues(): array
 {
     return [
-        'mail' => 'mail-queue',
-        'slack' => 'slack-queue',
-    ];
-}
 ```
+
+
+
+`'mail' => 'mail-queue'`,
+
+`'slack' => 'slack-queue'`,
+
+];
 
 当队列告警在数据库事务中发送时，队列可能会在数据库事务提交之前处理它们。如果发生这种情况，你在数据库事务期间对模型或数据库记录所做的任何调整可能尚未反映在数据库中。此外，在事务期间产生的任何模型或数据库条目可能不再存在于数据库中。如果你的通知是基于这些模型的，那么在处理发送队列通知的任务期间可能会出现意料之外的问题。
 
-如果你的队列连接的 `after_commit` 配置选项设置为 `false`，你仍然可以在传递通知时通过使用 `afterCommit` 方法，指定特定的队列通知在所有打开的数据库事务提交后分发：
+如果你的队列连接的`after_commit`配置选项设置为`false`，你仍然可以在传递通知时通过使用`afterCommit`方法，指定特定的队列通知在所有打开的数据库事务提交后分发：
 
 ```php
 use App\Notifications\orderRecieved;
+
 $user->notify((new orderRecieved($order))->afterCommit());
 ```
 
-或者从通知的构造函数中调用 `afterCommit` 方法。
+或者从通知的构造函数中调用`afterCommit`方法。
 
 ```php
 <?php
+
 namespace App\Notifications;
+
 use Illuminate\Bus\Queueable;
+
 use Illuminate\Contracts\Queue\ShouldQueue;
+
 use Illuminate\Notifications\Notification;
 
 class orderRecieved extends Notification implements ShouldQueue
+
 {
+
     use Queueable;
+
     public function __construct()
+
     {
+
         $this->afterCommit();
+
     }
+
 }
 ```
 
 队列通知在分发进行后台处理后，通常会由队列工作进程接收并传递给其指定的接收者。
 
-如果你想在队列通知被队列工作进程处理后对是否发送该通知做出最终决定，你可以在通知类上指定一个 `shouldSend` 方法。如果此方法返回 `false`，则通知将不会传递：
+如果你想在队列通知被队列工作进程处理后对是否发送该通知做出最终决定，你可以在通知类上指定一个`shouldSend`方法。如果此方法返回`false`，则通知将不会传递：
 
 ```php
 public function shouldSend(object $notifiable, string $channel): bool
+
 {
+
     return true; // example logic
+
 }
 ```
 
 ## 按需发送通知
 
-你可能需要向一个没有注册为用户的人发送通知。在传递消息之前，你可以使用 Facade 的 `route` 方法提供即时路由信息：
+你可能需要向一个没有注册为用户的人发送通知。在传递消息之前，你可以使用`Facade`的`route`方法提供即时路由信息：
 
 ```php
 use Illuminate\Broadcasting\Channel;
+
 use Illuminate\Support\Facades\Notification;
 
 Notification::route('mail', 'abc@example.com')
+
     ->notify(new OrderShipped($order));
 ```
 
@@ -5239,241 +5193,301 @@ Notification::route('mail', 'abc@example.com')
 
 ```php
 Notification::route('mail', [
+
     'qwerty@example.com' => 'Sample Name',
+
 ])->notify(new OrderShipped($order));
 ```
 
 ## 邮件通知
 
-如果通知作为电子邮件发送，通知类应该包含一个 `toMail` 函数。该函数在接收 `$notifiable` 实体后应返回一个 `MailMessage` 实例。
+如果通知作为电子邮件发送，通知类应该包含一个`toMail`函数。该函数在接收`$notifiable`实体后应返回一个`MailMessage`实例。
 
-`MailMessage` 类有一些简单的方法用于创建事务性电子邮件。文本行和操作可以包含在电子邮件通信中。让我们看看 `toMail` 方法的示例：
+`MailMessage`类有一些简单的方法用于创建事务性电子邮件。文本行和操作可以包含在电子邮件通信中。让我们看看`toMail`方法的示例：
 
 ```php
 public function toMail(object $notifiable): MailMessage
+
 {
+
     $url = url('/order/'.$this->invoice->id);
+
     return (new MailMessage)
+
         ->greeting('Hello!')
+
         ->line('We have received your order')
+
         ->lineIf($this->amount > 0, "Amount paid: {$this->amount}")
+
         ->action('查看账单', $url)
+
         ->line('感谢使用我们的应用程序!');
+
 }
 ```
 
-在这个示例中，我们有一个欢迎语、几行文本、一个操作和另一行文本。`MailMessage` 对象的方法使得准备小型事务性电子邮件变得简单快速。消息组件随后会被邮件通道翻译成具有纯文本等效的响应式 HTML 电子邮件设计。
+在这个示例中，我们有一个欢迎语、几行文本、一个操作和另一行文本。`MailMessage`对象的方法使得准备小型事务性电子邮件变得简单快速。消息组件随后会被邮件通道翻译成具有纯文本等效的响应式 HTML 电子邮件设计。
 
-与其在通知类中设置文本行，还如使用 `view` 函数为渲染通知电子邮件定义自定义模板：
+与其在通知类中设置文本行，还如使用`view`函数为渲染通知电子邮件定义自定义模板：
 
 ```php
 public function toMail(object $notifiable): MailMessage
+
 {
+
     return (new MailMessage)->view(
+
         'emails.name', ['order' => $this->order]
+
     );
+
 }
 ```
 
-你可以通过将视图名称作为第二个成员传递给 `view` 方法为邮件消息定义一个纯文本视图：
+你可以通过将视图名称作为第二个成员传递给`view`方法为邮件消息定义一个纯文本视图：
 
 ```php
 public function toMail(object $notifiable): MailMessage
+
 {
+
     return (new MailMessage)->view(
+
         'emails.name', ['order' => $this->order], 'text'
+
     );
+
 }
 ```
 
-
-
-
-
 ```php
-[`‘emails.name.html’, ‘emails.name.plain’],`
-[`‘order’ => $this->order]`
-`);
-}
+[`'emails.name.html', 'emails.name.plain'],
+
+[`'order' => $this->order]
+
+);
 ```
 
 # 自定义邮件组件
 
-邮件的发件人 `from` 地址默认在 `config/mail.php` 配置文件中设置。不过，你可以使用 `from` 方法为单个通知提供发件人地址：
+邮件的发件人`from`地址默认在`config/mail.php`配置文件中设置。不过，你可以使用`from`方法为单个通知提供发件人地址：
 
 ```php
 public function toMail(object $notifiable): MailMessage
+
 {
+
     return (new MailMessage)
-        ->from(‘abc@example.com’, ‘Sample Name’)
-        ->line(‘…’);
+
+        ->from('abc@example.com', 'Sample Name')
+
+        ->line('…');
+
 }
 ```
 
-当系统通过 `mail` 通道发送警报时，会自动检查你的 notifiable 对象上是否存在 `email` 属性。通过在 notifiable 实体上建立 `routeNotificationForMail` 方法，你可以指定用于投送通知的电子邮件地址：
+当系统通过`mail`通道发送警报时，会自动检查你的 notifiable 对象上是否存在`email`属性。通过在 notifiable 实体上建立`routeNotificationForMail`方法，你可以指定用于投送通知的电子邮件地址：
 
 ```php
 <?php
 
 namespace App\Models;
+
 use Illuminate\Foundation\Auth\User as Authenticatable;
+
 use Illuminate\Notifications\Notifiable;
+
 use Illuminate\Notifications\Notification;
 
 class User extends Authenticatable
+
 {
+
     use Notifiable;
 
     public function routeNotificationForMail(Notification $notification): array|string
+
     {
+
         // 返回邮件地址
+
         return $this->email_address;
+
         // 返回邮件地址和名称
+
         return [$this->email_address => $this->name];
+
     }
+
 }
 ```
 
-邮件的主题默认是格式化为 `Title Case`（标题大小写）的通知类名。因此，如果你的通知类名为 `orderComplete`，邮件的主题将是 `orderComplete`。如果你想为消息指定不同的 `subject`，请在创建消息时使用 `subject` 方法：
+邮件的主题默认是格式化为`Title Case`（标题大小写）的通知类名。因此，如果你的通知类名为`orderComplete`，邮件的主题将是`orderComplete`。如果你想为消息指定不同的`subject`，请在创建消息时使用`subject`方法：
 
 ```php
 public function toMail(object $notifiable): MailMessage
+
 {
+
     return (new MailMessage)
-        ->subject(‘Notification Subject’)
-        ->line(‘…’);
+
+        ->subject('Notification Subject')
+
+        ->line('…');
+
 }
 ```
 
-邮件通知默认使用 `config/mail.php` 配置文件中设置的默认邮件发送器进行递。不过，你可以在创建消息时通过调用 `mailer` 函数在运行时更改邮件发送器：
+邮件通知默认使用`config/mail.php`配置文件中设置的默认邮件发送器进行递。不过，你可以在创建消息时通过调用`mailer`函数在运行时更改邮件发送器：
 
 ```php
 public function toMail(object $notifiable): MailMessage
+
 {
+
     return (new MailMessage)
-        ->mailer(‘postmark’)
-        ->line(‘…’);
+
+        ->mailer('postmark')
+
+        ->line('…');
+
 }
 ```
 
 ## 自定义模板
 
-通过发布通知包的资源，你可以编辑邮件通知所使用的 HTML 和纯文本模板。一旦执行了此命令，邮件通知模板将位于 `resources/views/vendor/notifications` 目录：
+通过发布通知包的资源，你可以编辑邮件通知所使用的 HTML 和纯文本模板。一旦执行了此命令，邮件通知模板将位于`resources/views/vendor/notifications`目录：
 
 ```bash
 php artisan vendor:publish --tag=laravel-notifications
 ```
 
-在创建邮件通知时，利用 `attach` 方法可以包含附件。`attach` 方法的第一个参数接受文件的绝对路径：
+在创建邮件通知时，利用`attach`方法可以包含附件。`attach`方法的第一个参数接受文件的绝对路径：
 
 ```php
 public function toMail(object $notifiable): MailMessage
+
 {
+
     return (new MailMessage)
+
         ->greeting(Welcome!)
-        ->attach(‘/path/to/file’);
+
+        ->attach('/path/to/file');
+
 }
 ```
 
-在向消息中添加文件时，可以通过向 `attach` 方法的第二个参数传递一个 `array` 来定义显示名称和/或 MIME 类型：
+在向消息中添加文件时，可以通过向`attach`方法的第二个参数传递一个`array`来定义显示名称和/或 MIME 类型：
 
 ```php
 public function toMail(object $notifiable): MailMessage
+
 {
+
     return (new MailMessage)
-        ->greeting(‘Welcome!’)
-        ->attach(‘/path/to/file’, [
-            ‘as’ => ‘name.pdf’,
-            ‘mime’ => ‘application/pdf’,
+
+        ->greeting('Welcome!')
+
+        ->attach('/path/to/file', [
+
+            'as' => 'name.pdf',
+
+            'mime' => 'application/pdf',
+
         ]);
+
 }
 ```
 
-与在 mailable 对象中附加文件不同，`attachFromStorage` 不允许你直接从存储驱动器 `attach` 文件。请改用带有存储驱动器上文件绝对路径的 `attach` 方法。或者，你也可以使用 `toMail` 函数返回一个 mailable：
+与在 mailable 对象中附加文件不同，`attachFromStorage`不允许你直接从存储驱动器`attach`文件。请改用带有存储驱动器上文件绝对路径的`attach`方法。或者，你也可以使用`toMail`函数返回一个 mailable：
 
 ```php
 use App\Mail\InvoicePaid as OrderRecievedMailable;
 
 public function toMail(object $notifiable): Mailable
+
 {
+
     return (new OrderRecievedMailable($this->order))
+
         ->to($notifiable->email)
-        ->attachFromStorage(‘/path/to/file’);
+
+        ->attachFromStorage('/path/to/file');
+
 }
 ```
 
-多个文件可以通过 `toMail` 函数返回一个 mailable 来处理：
 
 
+多个文件可以通过`toMail`函数返回一个 mailable 来处理：
 
+# 第 10 章 将你的 Laravel 应用部署到云端
 
+## 引言
 
-# 第 10 章
+在本章中，我们将学习如何使用云平台将 Laravel 部署到云端。我们将涵盖在云基础设施上部署应用所需的步骤和配置，包括云服务器设置、环境变量配置、文件上传以及创建数据库。本章将深入介绍 Laravel Vapor，并参考了`docs.vapor.build.`中的文档内容。
 
-# 将你的 Laravel 应用部署到云端
+## 结构
 
-### 引言
-在本章中，我们将学习如何使用云平台将 Laravel 部署到云端。我们将涵盖在云基础设施上部署应用所需的步骤和配置，包括云服务器设置、环境变量配置、文件上传以及创建数据库。本章将深入介绍 Laravel Vapor，并参考了 `docs.vapor.build.` 中的文档内容。
-
-### 结构
 在本章中，我们将涵盖以下主题：
 
-*   云部署基础
-*   云服务商概述
-    *   Heroku
-    *   AWS
-    *   Google Cloud
-*   使用 Vapor 部署 Laravel 应用
-    *   安装
-    *   环境
-    *   部署
-
-
-
+- 云部署基础
+- 云服务商概述
+  - Heroku
+  - AWS
+  - Google Cloud
+- 使用 Vapor 部署 Laravel 应用
+  - 安装
+  - 环境
+  - 部署
 
 ## 开发
+
 ## 领域
+
 ## 故障排除
 
 # 云端部署基础
 
 云服务对于 Laravel 应用程序高效且可扩展的运行至关重要。使用云基础设施具有多种优势，包括更高的性能、增强安全性以及更容易的管理。理解云端部署的基础知识对于开发者和公司确保部署过程成功至关重要。
 
-在将 Laravel 应用迁移到云端时，考虑的最重要因素之一是选择正确的云服务提供商。主要的云计算公司，如 `Amazon Web Services (AWS)`、`Microsoft Azure` 和 `Google Cloud Platform (GCP)`，提供了适用于特定应用程序需求的各种化服务。定价、可扩展性、安全特性和地理覆盖范围均可用于特定的 Laravel 应用选择最佳的云提供商。
+在将 Laravel 应用迁移到云端时，考虑的最重要因素之一是选择正确的云服务提供商。主要的云计算公司，如`Amazon Web Services (AWS)`、`Microsoft Azure`和`Google Cloud Platform (GCP)`，提供了适用于特定应用程序需求的各种化服务。定价、可扩展性、安全特性和地理覆盖范围均可用于特定的 Laravel 应用选择最佳的云提供商。
 
-为应用程序搭建基础设施是云端部署的一个关键阶段。配置虚拟机、存储资源、网络组件和安全标准都是其中的一部分。根据应用程序的范围和需求，部署 Laravel 应用通常涉及创建虚拟服务器或使用无服务器（serverless）计算替代方案。使用 `AWS Elastic Beanstalk`、`Azure App Service` 或 `Google App Engine` 等解决方案可以加速部署过程，让开发者专注于应用程序开发而非基础设施维护。
+为应用程序搭建基础设施是云端部署的一个关键阶段。配置虚拟机、存储资源、网络组件和安全标准都是其中的一部分。根据应用程序的范围和需求，部署 Laravel 应用通常涉及创建虚拟服务器或使用无服务器（serverless）计算替代方案。使用`AWS Elastic Beanstalk`、`Azure App Service`或`Google App Engine`等解决方案可以加速部署过程，让开发者专注于应用程序开发而非基础设施维护。
 
-容器化已成为在云端部署 Laravel 应用的流行方法。`Docker` 和 `Kubernetes` 等技术有助于将应用程序及其依赖项封装到可迁移容器中，实现跨云环境的无缝部署。像 `Kubernetes` 这样的容器编排工具有助于管理容器化应用程序的部署、扩展和监控，确保高可用性和可靠性。
+容器化已成为在云端部署 Laravel 应用的流行方法。`Docker`和`Kubernetes`等技术有助于将应用程序及其依赖项封装到可迁移容器中，实现跨云环境的无缝部署。像`Kubernetes`这样的容器编排工具有助于管理容器化应用程序的部署、扩展和监控，确保高可用性和可靠性。
 
-在将 Laravel 应用交付到云端时，包含强大的安全措施至关重要。这包括保护传输中和存储的敏感数据、执行访问控制规定以及使用加密机制。使用如 `AWS Identity and Access Management (IAM)` 或 `Azure Active Directory` 等云原生安全服务有助于通过更好的用户管理和身份验证来提高应用程序的整体安全态势。
+在将 Laravel 应用交付到云端时，包含强大的安全措施至关重要。这包括保护传输中和存储的敏感数据、执行访问控制规定以及使用加密机制。使用如`AWS Identity and Access Management (IAM)`或`Azure Active Directory`等云原生安全服务有助于通过更好的用户管理和身份验证来提高应用程序的整体安全态势。
 
-持续集成和持续部署（CI/CD）流水线可以加速开发工作流，并确保 Laravel 应用快速、无误地部署。开发者可以使用 `Jenkins`、`GitLab CI/CD` 和 `GitHub Actions` 等集成技术来自动化测试、构建过程和部署操作，从而带来更敏捷、高效的开发周期。通过将 CI/CD 流水线纳入自动化测试和质量保证方法，开发者可以在开发周期的早期检测并修复问题，从而使 Laravel 应用的云端部署更加稳定可靠。
+持续集成和持续部署（CI/CD）流水线可以加速开发工作流，并确保 Laravel 应用快速、无误地部署。开发者可以使用`Jenkins`、`GitLab CI/CD`和`GitHub Actions`等集成技术来自动化测试、构建过程和部署操作，从而带来更敏捷、高效的开发周期。通过将 CI/CD 流水线纳入自动化测试和质量保证方法，开发者可以在开发周期的早期检测并修复问题，从而使 Laravel 应用的云端部署更加稳定可靠。
 
-监控和管理云端 Laravel 应用的性能对于确保最佳功能和用户体验至关重要。实施 `AWS CloudWatch`、`Azure Monitor` 或 `Google Cloud Monitoring` 等监控工具可以实时跟踪应用程序指标、资源利用率和系统健康状况。主动监控有助于检测和解决性能问题、瓶颈和潜在故障，确保 Laravel 应用在云环境中的无缝运行。
+监控和管理云端 Laravel 应用的性能对于确保最佳功能和用户体验至关重要。实施`AWS CloudWatch`、`Azure Monitor`或`Google Cloud Monitoring`等监控工具可以实时跟踪应用程序指标、资源利用率和系统健康状况。主动监控有助于检测和解决性能问题、瓶颈和潜在故障，确保 Laravel 应用在云环境中的无缝运行。
 
-### 云提供商概述
+## 云提供商概述
 
-在考虑 Laravel 应用的云端部署时，了解各种云提供商的基础知识至关重要。在这里，我们将提供三个热门云提供商——`Heroku`、`Amazon Web Services (AWS)` 和 `Google Cloud` 的概述，以突出它们的独特功能和优势。
+在考虑 Laravel 应用的云端部署时，了解各种云提供商的基础知识至关重要。在这里，我们将提供三个热门云提供商——`Heroku`、`Amazon Web Services (AWS)`和`Google Cloud`的概述，以突出它们的独特功能和优势。
 
 ### Amazon Web Services
 
-Amazon Web Services (AWS) 是云计算领域的主要参与者，提供针对开发者和组织不同需求的完整服务组合。通过如用于虚拟服务器部署的 `Amazon Elastic Compute Cloud (EC2)` 和用于托管数据库服务的 `Amazon RDS` 等服务，`AWS` 为托管 Laravel 应用提供了一个可扩展且安全的平台。
+Amazon Web Services (AWS) 是云计算领域的主要参与者，提供针对开发者和组织不同需求的完整服务组合。通过如用于虚拟服务器部署的`Amazon Elastic Compute Cloud (EC2)`和用于托管数据库服务的`Amazon RDS`等服务，`AWS`为托管 Laravel 应用提供了一个可扩展且安全的平台。
 
-`AWS` 还提供了大量用于应用程序监控、安全和可扩展性的工具和服务，让开发者能够创建强大且高用的 Laravel 应用程序。
+`AWS`还提供了大量用于应用程序监控、安全和可扩展性的工具和服务，让开发者能够创建强大且高用的 Laravel 应用程序。
 
-虽然 `AWS` 海量的服务可能会让初学者感到畏惧，但它为复杂的应用程序安装提供了无与伦比的灵活性和扩展性。
+虽然`AWS`海量的服务可能会让初学者感到畏惧，但它为复杂的应用程序安装提供了无与伦比的灵活性和扩展性。
 
 ### Heroku
 
-Heroku 以其易用性和友好的界面而闻名，对于寻求快速部署且不想处理复杂设置烦恼的开发者来说是一个极佳的选择。`Heroku` 通过与 `Git` 集成简化了部署过程，让开发者专注于应用程序开发。
+Heroku 以其易用性和友好的界面而闻名，对于寻求快速部署且不想处理复杂设置烦恼的开发者来说是一个极佳的选择。`Heroku`通过与`Git`集成简化了部署过程，让开发者专注于应用程序开发。
 
-它支持多种编程语言，包括 `PHP`，是交付 Laravel 应用的理想选择。然而，与其他云提供商相比，`Heroku` 的灵活性可能受限。
+它支持多种编程语言，包括`PHP`，是交付 Laravel 应用的理想选择。然而，与其他云提供商相比，`Heroku`的灵活性可能受限。
 
 ### Google Cloud
 
 Google Cloud 是另一个以性能、可靠性和可扩展性闻名的云平台。凭借其全球数据中心网络和强大的网络能力，在速度和可访问性方面具有竞争优势，特别是对于全球用户群的应用。
 
-Google Cloud 包括用于虚拟机部署的 `Google Compute Engine` 和用于托管服务的 `Google Cloud SQL`，为开发者提供了一个安全且可扩展的环境。
+Google Cloud 包括用于虚拟机部署的`Google Compute Engine`和用于托管服务的`Google Cloud SQL`，为开发者提供了一个安全且可扩展的环境。
 
 对数据分析和机器学习能力的强调增加了其对希望集成现代技术的开发者的吸引力。
 
@@ -5481,24 +5495,21 @@ Google Cloud 包括用于虚拟机部署的 `Google Compute Engine` 和用于托
 
 考虑易用性、可扩展性、性和成本等变量有助于开发者和公司为其部署需求选择最佳云提供商。
 
-通过使用 `Heroku`、`AWS` 或 `Google Cloud` 的功能，开发者可以确保 Laravel 应用的轻松部署和高效运行，提供理想的用户体验并推动业务成功。
+通过使用`Heroku`、`AWS`或`Google Cloud`的功能，开发者可以确保 Laravel 应用的轻松部署和高效运行，提供理想的用户体验并推动业务成功。
 
 ## 使用 Vapor 部署 Laravel
 
-Laravel Vapor 是一个由 `AWS Lambda` 驱动的自动扩展无服务器 Laravel 部署工具。使用 `Vapor` 管理您的 Laravel 基础设施，享受扩展性和简单性。
+Laravel Vapor 是一个由`AWS Lambda`驱动的自动扩展无服务器 Laravel 部署工具。使用`Vapor`管理您的 Laravel 基础设施，享受扩展性和简单性。
 
-`Vapor` 封装了在 AWS Lambda 上运行 Laravel 应用的复杂性，以及与 `SQS` 队列、数据库、`Redis` 集群、网络、`CloudFront CDN` 以及其他服务的交互。
+`Vapor`封装了在 AWS Lambda 上运行 Laravel 应用的复杂性，以及与`SQS`队列、数据库、`Redis`集群、网络、`CloudFront CDN`以及其他服务的交互。
 
-```
-![](img/Figure-10.1.jpg)
-```
-**图 10.1:** Vapor 特性
+![图 10.1: Vapor 特性](img/Figure-10.1.jpg)
 
-Vapor 的前提条件 – `PHP 7.3+` 和 `Laravel 6.0+`
+Vapor 的前提条件 – `PHP 7.3+`和`Laravel 6.0+`
 
-# 安装
+## 安装
 
-通过 Laravel Vapor 进行部署需要使用 `Vapor CLI`。运行以下命令进行全局安装或项目级安装：
+通过 Laravel Vapor 进行部署需要使用`Vapor CLI`。运行以下命令进行全局安装或项目级安装：
 
 全局：
 
@@ -5512,17 +5523,13 @@ composer global require laravel/vapor-cli --update-with-dependencies
 composer require laravel/vapor-cli --update-with-dependencies
 ```
 
-
-
-
-
-当按项目安装 CLI 时，你很可能需要从项目的 `vendor/bin` 目录运行它，该目录是 `Composer` 安装可执行文件的地方。例如，要查看所有可用的 Vapor CLI 命令，可以使用 `list` 命令：
+当按项目安装 CLI 时，你很可能需要从项目的`vendor/bin`目录运行它，该目录是`Composer`安装可执行文件的地方。例如，要查看所有可用的 Vapor CLI 命令，可以使用`list`命令：
 
 ```bash
 php vendor/bin/vapor list
 ```
 
-使用 `help` 命令以及你想要研究的命令名称：
+使用`help`命令以及你想要研究的命令名称：
 
 ```bash
 php vendor/bin/vapor help deploy
@@ -5530,7 +5537,7 @@ php vendor/bin/vapor help deploy
 
 ### 安装 Vapor 核心 (The Core)
 
-每个使用 Vapor 的 Laravel 应用程序都必须加载 `laravel/vapor-core` 包作为依赖。该包包含了几个 Vapor 运行时文件，以及一个允许你的应用程序在 Vapor 上运行的服务提供者（service provider）。可以使用 `Composer` 将 Vapor 核心集成到你的项目中：
+每个使用 Vapor 的 Laravel 应用程序都必须加载`laravel/vapor-core`包作为依赖。该包包含了几个 Vapor 运行时文件，以及一个允许你的应用程序在 Vapor 上运行的服务提供者（service provider）。可以使用`Composer`将 Vapor 核心集成到你的项目中：
 
 ```bash
 composer require laravel/vapor-core --update-with-dependencies
@@ -5538,30 +5545,30 @@ composer require laravel/vapor-core --update-with-dependencies
 
 ### 安装 Vapor 仪表板 (The Dashboard)
 
-你可能也希望安装 `laravel/vapor-ui` 包。该包为你的应用程序添加了一个漂亮的仪表板，允许你监控日志和失败的队列进程。在将应用部署到 Vapor 后，可以通过 `/vapor-ui` URI 访问仪表板。可以使用 `Composer` 在项目中安装 Vapor UI 仪表板包：
+你可能也希望安装`laravel/vapor-ui`包。该包为你的应用程序添加了一个漂亮的仪表板，允许你监控日志和失败的队列进程。在将应用部署到 Vapor 后，可以通过`/vapor-ui` URI 访问仪表板。可以使用`Composer`在项目中安装 Vapor UI 仪表板包：
 
 ```bash
 composer require laravel/vapor-ui
 ```
 
-你可以使用 `vapor-ui:install` Artisan 命令来发布它的资源：
+你可以使用`vapor-ui:install` Artisan 命令来发布它的资源：
 
 ```bash
 php artisan vapor-ui:install
 ```
 
-可以通过 `/vapor-ui` URI 访问仪表板。
+可以通过`/vapor-ui` URI 访问仪表板。
 
 ### 仪表板授权 (Dashboard Authorization)
 
-在 `/vapor-ui` URI 处，Vapor UI 提供了一个仪表板。你的 `app/Providers/VaporUiServiceProvider.php` 文件中有一个 `gate` 函数，用于限制对 Vapor UI 仪表板的访问。默认情况下限制所有访问者。要授予对 Vapor UI 仪表板的访问权限，你需要根据需要修改此 `gate`：
+在`/vapor-ui` URI 处，Vapor UI 提供了一个仪表板。你的`app/Providers/VaporUiServiceProvider.php`文件中有一个`gate`函数，用于限制对 Vapor UI 仪表板的访问。默认情况下限制所有访问者。要授予对 Vapor UI 仪表板的访问权限，你需要根据需要修改此`gate`：
 
 ```php
 protected function gate()
 {
-    Gate::define(‘viewVaporUI’, function ($user = null) {
+    Gate::define('viewVaporUI', function ($user = null) {
         return in_array(optional($user)->email, [
-            ‘abc@example.com’,
+            'abc@example.com',
         ]);
     });
 }
@@ -5571,15 +5578,15 @@ protected function gate()
 
 你所有的部署和命令执行都保存在环境中。每个项目可以拥有任意的环境。
 
-通常，你会有一个 `production`（生产环境）和一个用于测试应用程序的 `staging`（暂存环境）。然而，不要害怕设置其他环境来测试新功能，而不会干扰到你的主暂存环境。
+通常，你会有一个`production`（生产环境）和一个用于测试应用程序的`staging`（暂存环境）。然而，不要害怕设置其他环境来测试新功能，而不会干扰到你的主暂存环境。
 
-可以使用 `env` Vapor CLI 工具来构建环境：
+可以使用`env` Vapor CLI 工具来构建环境：
 
 ```bash
 vapor env my-environment
 ```
 
-此命令将向你的项目 `vapor.yml` 文件添加一个新的环境条目，准备好部署：
+此命令将向你的项目`vapor.yml`文件添加一个新的环境条目，准备好部署：
 
 ```yaml
 id: 3
@@ -5587,32 +5594,32 @@ name: vapor-laravel-app
 environments:
   production:
     build:
-      - ‘composer install --no-dev’
+      - 'composer install --no-dev'
   my-environment:
     build:
-      - ‘composer install --no-dev’
+      - 'composer install --no-dev'
 ```
 
-Vapor 除了原生运行时外还允许 Docker 镜像部署。在构建环境时，使用 `--docker` 选项指定其利用 Docker 镜像运行时而不是默认的 Vapor 运行时。
+Vapor 除了原生运行时外还允许 Docker 镜像部署。在构建环境时，使用`--docker`选项指定其利用 Docker 镜像运行时而不是默认的 Vapor 运行时。
 
 ```bash
 vapor env my-environment --docker
 ```
 
-此命令将在应用程序的根目录下创建一个名为 `my-environment.Dockerfile` 的新环境。Vapor CLI 中的 `open` 命令可在默认浏览器中打开环境：
+此命令将在应用程序的根目录下创建一个名为`my-environment.Dockerfile`的新环境。Vapor CLI 中的`open`命令可在默认浏览器中打开环境：
 
 ```bash
 vapor open my-environment
 ```
 
-Vapor CLI 在执行命令时默认使用 `staging` 环境：
+Vapor CLI 在执行命令时默认使用`staging`环境：
 
 ```bash
 vapor open // 在默认浏览器中打开 `staging` 环境
 vapor production // 在默认浏览器中打开 `production` 环境
 ```
 
-但是，你可以通过在应用程序的 `vapor.yml` 文件中定义 `default-environment` 选项更改项目的默认环境：
+但是，你可以通过在应用程序的`vapor.yml`文件中定义`default-environment`选项更改项目的默认环境：
 
 ```yaml
 id: 3
@@ -5623,26 +5630,23 @@ environments:
     build:
 ```
 
-
-
-
 OpenSSL 是一种被广泛使用的开源软件库，提供了一系列加密函数和协议。在 Laravel 应用程序或任何基于 Web 的应用程序中，OpenSSL 在保障数据传输和存储的安全方面发挥着至关重要的作用。
 
 以下是 OpenSSL 在 Laravel 应用程序环境下的一些基本方面：
 
-*   **加密与解密**：OpenSSL 赋予数据加密和解密的能力，这对于保护敏感信息（如用户凭据、个人数据和财务交易）至关重要。在 Laravel 框架中，OpenSSL 用于通过 `HTTPS`（安全 HTTP）建立安全通信，并在传输过程中对数据加密。
-*   **SSL/TLS 协议**：OpenSSL 支持多种 `SSL`（安全套接层）和 `TLS`（传输层安全）协议，这对于保障 Web 服务器与客户端（如网页浏览器）之间的通信至关重要。这些协议确保客户端与服务器之间交换的数据保持加密状态，免受未经授权的访问。
-*   **数字签名**：OpenSSL 提供创建和验证数字签名的功能，在确保数据完整性和真实性方面起着关键作用。在 Laravel 中，可以使用数字签名来验证来自客户端或其他服务器接收的数据。
-*   **证书处理**：`SSL/TLS` 证书是安全 Web 通信的关键组件。OpenSSL 简化了 `SSL/TLS` 证书的生成、管理和验证。Laravel 应用程序经常利用 OpenSSL 管理 SSL 证书以建立安全连接。
-*   **哈希与消息摘要**：OpenSSL 包含了加密哈希函数，Laravel 可以利用这些函数执行密码哈希或生成消息摘要等任务。哈希对于安全存储密码和确保数据完整性非常重要。
+- **加密与解密**：OpenSSL 赋予数据加密和解密的能力，这对于保护敏感信息（如用户凭据、个人数据和财务交易）至关重要。在 Laravel 框架中，OpenSSL 用于通过`HTTPS`（安全 HTTP）建立安全通信，并在传输过程中对数据加密。
+- **SSL/TLS 协议**：OpenSSL 支持多种`SSL`（安全套接层）和`TLS`（传输层安全）协议，这对于保障 Web 服务器与客户端（如网页浏览器）之间的通信至关重要。这些协议确保客户端与服务器之间交换的数据保持加密状态，免受未经授权的访问。
+- **数字签名**：OpenSSL 提供创建和验证数字签名的功能，在确保数据完整性和真实性方面起着关键作用。在 Laravel 中，可以使用数字签名来验证来自客户端或其他服务器接收的数据。
+- **证书处理**：`SSL/TLS`证书是安全 Web 通信的关键组件。OpenSSL 简化了`SSL/TLS`证书的生成、管理和验证。Laravel 应用程序经常利用 OpenSSL 管理 SSL 证书以建立安全连接。
+- **哈希与消息摘要**：OpenSSL 包含了加密哈希函数，Laravel 可以利用这些函数执行密码哈希或生成消息摘要等任务。哈希对于安全存储密码和确保数据完整性非常重要。
 
 OpenSSL 为开发者提供了加密、解密、数字签名和证书管理的不可或工具，增强了应用程序及其与用户和其他服务交互的整体安全性。
 
-要使用 `openssl_pkey_new` 等 OpenSSL 函数，你必须首先构建一个 `openssl.cnf` 配置文件，并通过环境变量 `OPENSSL_CONF` 通知 Vapor 加载它。例如，该环境变量指示 Vapor 从你的项目根目录导入 `openssl.cnf` 文件：
+要使用`openssl_pkey_new`等 OpenSSL 函数，你必须首先构建一个`openssl.cnf`配置文件，并通过环境变量`OPENSSL_CONF`通知 Vapor 加载它。例如，该环境变量指示 Vapor 从你的项目根目录导入`openssl.cnf`文件：
 
 `OPENSSL_CONF="/var/task/openssl.cnf"`
 
-让我们来看示例 `openssl.cnf` 文件：
+让我们来看示例`openssl.cnf`文件：
 
 ```
 dir = certificates
@@ -5678,11 +5682,7 @@ default_keyfile = priv.pem
 default_md = sha256
 ```
 
-
-
-
-
-一旦您的域名拥有了有效的 SSL 证书，您就可以在应用程序的 `vapor.yml` 文件中使用 `domain` 配置选项将其连接到您的环境环境中。在将域名链接到环境时，您不需要添加 `www` 子域名：
+一旦您的域名拥有了有效的 SSL 证书，您就可以在应用程序的`vapor.yml`文件中使用`domain`配置选项将其连接到您的环境环境中。在将域名链接到环境时，您不需要添加`www`子域名：
 
 ```yaml
 id: 3
@@ -5696,7 +5696,7 @@ environments:
 
 Vapor 会在部署时自动设置环境以处理来自该域名的请求。然而，由于 AWS CloudFront 的特性，自定义域名有时需要 30-45 分钟才能完全激活。因此，如果您的自定义域名在部署后没有立即可用，请不要担心。
 
-Vapor 允许您将多个域名关联到单个项目。在继续之前，请确保您为每个域名都拥有有效的证书。然后，修改应用程序中的 `vapor.yml` 文件以添加每个域名：
+Vapor 允许您将多个域名关联到单个项目。在继续之前，请确保您为每个域名都拥有有效的证书。然后，修改应用程序中的`vapor.yml`文件以添加每个域名：
 
 ```yaml
 id: 3
@@ -5710,17 +5710,25 @@ environments:
       - 'composer install --no-dev'
 ```
 
-只要您拥有父域名的有效证书，就可以指定某个域名启用通配符子域名。要将通配符域名关联到环境，请使用 `*` 作为子域名：
+只要您拥有父域名的有效证书，就可以指定某个域名启用通配符子域名。要将通配符域名关联到环境，请使用`*`作为子域名：
 
 ```yaml
 id: 3
-name: vapor-laravel-app
-environments:
-  production:
-    domain: '*.example.com'
-    build:
-      - 'composer install --no-dev'
 ```
+
+
+
+`name: vapor-laravel-app`
+
+`environments:`
+
+  `production:`
+
+    `domain: '*.example.com'`
+
+    `build:`
+
+      - `'composer install --no-dev'`
 
 ## 多级子域名
 
@@ -5732,7 +5740,7 @@ Vapor 支持多级子域名，例如 `v1.api.example.com`。要使用此功能�
 vapor cert v1.api.example.com
 ```
 
-也可以通过 Vapor 域名仪表板获取多级子域名证书，在请求证书时，将多级子域名指定为`Domain Name`(域名名称）或`Advanced Settings`(高级设置）中的任何`Alternative Names`(备用名称）。
+也可以通过 Vapor 域名仪表板获取多级子域名证书，在请求证书时，将多级子域名指定为 `Domain Name`（域名名称）或 `Advanced Settings`（高级设置）中的任何 `Alternative Names`（备用名称）。
 
 证书授予后，您可以通过将多级子域名添加到 `vapor.yml` 配置文件的 `domain` 部分，并通过 Vapor CLI 完成完整部署，从而从您的多级子域名访问应用程序：
 
@@ -5746,39 +5754,34 @@ environments:
       - 'composer install --no-dev'
 ```
 
+
+
 ## 故障排除
 
 虽然利用 Vapor 驱动 Laravel 应用程序可以显著提高加载速度，但解决由于基础设施配置不当引起的潜在性能问题至关重要。
 
 本节深入探讨优化 Vapor 基础设施的关键技术，旨在提高您的 Laravel 应用程序的速度。在深入这些技术之前，务必考虑以下几点：
 
-*   **优先考虑应用程序优化：** 提高应用程序的速度可能会消除对基础设施进行修改的需求。通过实施缓存、队列或优化数据库查询等基础策略，识别并解决应用程序内部的性能瓶颈。
+- **优先考虑应用程序优化：** 提高应用程序的速度可能会消除对基础设施进行修改的需求。通过实施缓存、队列或优化数据库查询等基础策略，识别并解决应用程序内部的性能瓶颈。
 
 注意对 AWS 费用的潜在影响：
 
-*   **多级子域名：** Vapor 支持多级子域名，例如 `v1.api.example.com`。要使用此功能，必须获取一个专门覆盖整个多级子域名的证书。
-*   **多级子域名：** Vapor 支持多级子域名，例如 `v1.api.example.com`。要使用此功能，必须获取一个专门覆盖整个多级子域名的证书。
-*   **多级子域名：** Vapor 支持多级子域名，例如 `v1.api.example.com`。要使用此功能，必须获取一个专门覆盖整个多级子域名的证书。
-*   **多级子域名：** Vapor 支持多级子域名，例如 `v1.api.example.com`。要使用此功能，必须获取一个专门覆盖整个多级子域名的证书。
-*   **多级子域名：** Vapor 支持多级子域名，例如 `v1.api.example.com`。要使用此功能，必须获取一个专门覆盖整个多级子域名的证书。
-
-
-
-
-
-*   探索域名管理，包括为开发目的设置自定义域名、配置 DNS 记录、处理 SSL 证书以及将多个域名关联到单个项目。确保域名配置正确，以便无缝访问和使用 Laravel 应用程序。
-
-*   留心 Vapor 基础设施的常见性能问题和优化技术。优先考虑应用程序优化，考虑对 AWS 支出的影响，并实施固定容量数据库和 `API Gateway v2` 等策略以提高性能并降低延迟。
-
-*   强调持续监控和安全措施的重要性，以确保云环境下的最佳功能和数据保护。实施保护敏感数据的最佳实践，执行访问控制规定，并利用云原生安全服务来增强应用程序的安全性。
-
-*   理解实现 CI/CD 流水线对于自动化测试、构建过程和部署操作意义。确保在开发周期内尽早发现并解决问题，从而实现 Laravel 应用更稳定、可靠的云部署。
+- **多级子域名：** Vapor 支持多级子域名，例如 `v1.api.example.com`。要使用此功能，必须获取一个专门覆盖整个多级子域名的证书。
+- **多级子域名：** Vapor 支持多级子域名，例如 `v1.api.example.com`。要使用此功能，必须获取一个专门覆盖整个多级子域名的证书。
+- **多级子域名：** Vapor 支持多级子域名，例如 `v1.api.example.com`。要使用此功能，必须获取一个专门覆盖整个多级子域名的证书。
+- **多级子域名：** Vapor 支持多级子域名，例如 `v1.api.example.com`。要使用此功能，必须获取一个专门覆盖整个多级子域名的证书。
+- **多级子域名：** Vapor 支持多级子域名，例如 `v1.api.example.com`。要使用此功能，必须获取一个专门覆盖整个多级子域名的证书。
+- 探索域名管理，包括为开发目的设置自定义域名、配置 DNS 记录、处理 SSL 证书以及将多个域名关联到单个项目。确保域名配置正确，以便无缝访问和使用 Laravel 应用程序。
+- 留心 Vapor 基础设施的常见性能问题和优化技术。优先考虑应用程序优化，考虑对 AWS 支出的影响，并实施固定容量数据库和 `API Gateway v2` 等策略以提高性能并降低延迟。
+- 强调持续监控和安全措施的重要性，以确保云环境下的最佳功能和数据保护。实施保护敏感数据的最佳实践，执行访问控制规定，并利用云原生安全服务来增强应用程序的安全性。
+- 理解实现 CI/CD 流水线对于自动化测试、构建过程和部署操作意义。确保在开发周期内尽早发现并解决问题，从而实现 Laravel 应用更稳定、可靠的云部署。
 
 # 索引
 
-### A
+## A
 
-### 访问令牌 (access tokens) 
+### 访问令牌 (access tokens)
+
 - 关于 175
 - 客户端 175, 176
 - JSON API 176
@@ -5786,6 +5789,7 @@ environments:
 - 范围 180
 
 ### 操作 (actions)
+
 - 使用中间件进行保护 143
 - 高级连接 100
 - 高级子查询 115, 116
@@ -5793,15 +5797,18 @@ environments:
 - 聚合 101
 
 ### 亚马逊云服务 (AWS) 231
+
 - API 身份验证服务 124
 - 应用程序接口 (API) 157
 
 ### Artisan
+
 - 关于 18
 - 命令 18
 - 历史 18
 
 ### Artisan 命令
+
 - 自定义调度任务 22
 - 频繁重复的任务 20
 - 帮助命令 19
@@ -5815,31 +5822,37 @@ environments:
 - 每周重复任务 21
 
 ### auth 指令 (auth directive)
+
 - 指令 74, 75
 
 ### 身份验证守卫 (authentication guards)
+
 - 关于 136, 137
 - 闭包请求守卫 137, 138
 
 ### 身份验证方法 (authentication method)
+
 - 关于 140
 - 用户 ID 验证 142
 - 用户实例身份验证 141
 - 用户一次身份验证 142
 
 ### 授权策略与门 (authorization policies and gates)
+
 - 守卫 136, 137
 
 ### 身份验证方法 (authentication method)
+
 - 实现 132
 - 密码管理 134
 - 用户会话验证 139
 - 用户会话知识 140
 - 用户会话验证 133, 134
 
-### B
+## B
 
 ### Blade
+
 - 关于 79
 - 组件 81
 - 数据 79, 80
@@ -5849,20 +5862,24 @@ environments:
 - 渲染 Blade 模板 86
 
 ### 广播通知 (broadcast notification)
+
 - 关于 221-223](#c09.xhtml#page223)
 - 事件 224, 225
 
-### C
+## C
 
 ### 缓存 (caching) 51
+
 - 类依赖 3
 - 客户端 175
 - 闭包请求守卫 137, 138
 
 ### 云部署基础 (cloud deployment)
+
 - 部署 230, 231
 
 ### 云服务商 (cloud providers)
+
 - 亚马逊云服务 (AWS) 231
 - Google Cloud 232
 - Heroku 232
@@ -5870,17 +5887,20 @@ environments:
 - 集合 111, 112
 
 ### 组件 (components)
+
 - 关于 81
 - 数据传递 83, 84
 - 渲染组件 82
 
 ### Composer
+
 - 安装 14
 - 在 Mac 上安装 14
 - 在 Windows 上安装 16
-- 复合主键 108
+- 复合主键 108, 109
 
 ### 条件指令 (conditional directives)
+
 - 关于 72, 73
 - if 语句 73
 - 条件关系 167, 168
@@ -5888,43 +5908,53 @@ environments:
 - 控制器操作 70
 
 ### 控制器 (controllers)
+
 - 关于 48, 49, 64, 65
 - 构造函数注入 67
 - 方法注入 68
 - 资源控制器 65, 66
 
 ### 跨源资源共享 (CORS) 50
+
 - CRUD 操作 116, 117
 - 游标 114, 115
 
 ### 自定义身份验证 (custom authentication)
+
 - 方法 132
 - 密码管理 134
 - 用户会话验证 139
 - 用户会话知识 140
 - 用户会话验证 133, 134
--125](#c06.xhtml#page125)
+- 125](#c06.xhtml#page125)
 
 ### 自定义注册 (custom registration)
+
 - 记录 245
 
 ### 自定义消息 (custom message)
+
 - 模板 221-223](#c09.xhtml#page223)
 
 ### 原始数据 (raw data)
+
 - 视图 54
 
 ### 数据库视图 (database view)
+
 - 连接 110
 
 ### 数据库迁移 (database migration)
+
 - 关于 92, 93
 - 键 94, 95
 
 ### 数据包装 (data wrapping)
+
 - 传递 83, 84
 
 ### 设计原则 (design principles)
+
 - 解耦 3
 - 组件 30
 - 耦合 30
@@ -5932,6 +5962,7 @@ environments:
 - 可复用性 29
 
 ### 指令 (directives)
+
 - 关于 71, 72
 - 身份验证 74, 75
 - 条件 72, 73
@@ -5940,213 +5971,376 @@ environments:
 - 切换 73, 74
 
 ### 域名 (domains)
+
 - 关于 244
 - 多级域名 248
 
 ### DNS 记录 (DNS records)
+
 - 245
 
+## 调度 4
 
+## URL 路由配置 4
 
+## 邮件组件
 
+### 自定义 215\-217
 
-# 调度 4
-# URL 路由配置 4
-# 邮件组件
-## 自定义 215\-217
-## 自定义模板 217\-219
-## 环境变量 237\-239
+### 自定义模板 217\-219
 
-# F
-## 回退路由 41
-## 特性，MVC 架构设计模式
-### 可扩展性 32
-### 可维护性 32
-### 搜索引擎优化 (SEO) 31
-### 同时开发 32
-### 测试驱动开发 (TDD) 32
-### 文件上传测试 200\-202
-## 视图 53, 54
-## Flashed 会话数据 70, 71
+### 环境变量 237\-239
 
-# G
-## 生成通知 206
-## Google Cloud 232
+## F
 
-# H
-## Heroku 232
-## Homebrew
-### 使用，用于安装 Mac 14, 15
-## 质主键 106, 107
-## 钩子 (hooks) 239\-241
-## HTML 实体编码 80
-## HTTP 认证 125, 126
-## HTTP 测试
-### 关于 193
-### 请求头，自定义 194
-### 请求，发送请求 193, 194
+### 回退路由 41
 
-# I
-## if 语句 73
-## 安装程序 (Installer)
-### 使用，用于安装 Laravel 17
-### 使用，用于安装 Mac 15, 16
+### 特性，MVC 架构设计模式
 
-# J
-## 连接 (joins) 99
-### 高级连接 100
-### 左连接 99
-## JSON API
-### 关于 176
-### DELETE 178
-### GET 176
-### POST 177
-### PUT 177, 178
+#### 可扩展性 32
 
-# L
-## lang 目录 11
-## Laravel
-### 关于 2
-### 核心概念 24, 25
-### 安装 17
-### 安装，在 Linux 上 17
-### 安装，在 Mac 上 15, 16
-### 安装，在 Windows 上 17
-### 通过 Composer-Project 安装 18
-### 通过 Installer 安装 17
-### 通过 PHP serve 安装 18
-### 偏好 2
-## Laravel 10
-### 关于 8
-### 升级 8
-## Laravel 10 版本
-### 关于 8, 9
-### 数据库表达式 10
-### Eloquent 模型 10
-### 最小稳定性 9
-### 公共路径 9
-### redis 缓存 10
-### 测试 11
-## Laravel 应用
-### 部署，使用 Vapor 233
-### 环境，设置 186, 187
-### 生命周期测试 187
-### 测试技术 186
-## Vapor 核心，安装 234
-## Vapor，安装 233, 234
-## Laravel 应用生命周期测试
-### 并行测试 189, 192
-### 创建测试 187, 188
-### 报告测试 192
-### 运行测试 189
-## Laravel 内置认证系统
-### 关于 123
-### API 认证服务 124
-### 124, 125
-### Sanctum 125
-## Laravel 社区 3
-## Laravel 开发
-### Composer，安装 14
-### 安装 11
-### Laravel，安装 17
-### PHP，安装 11
-### 设置 11
-## Laravel 特性
-### 关于 5
-### 数据库种子数据 5
-### 本地化 6
-## Laravel Passport
-### 关于 170
-### composer 包管理器，安装 171
-### 配置 172
-### 驱动选项，设置 172
-## Laravel Passport 配置
-### 默认模型覆盖 173, 174
-### 路由覆盖 174, 175
-### 令牌有效期 172
+#### 可维护性 32
+
+#### 搜索引擎优化 (SEO) 31
+
+#### 同时开发 32
+
+#### 测试驱动开发 (TDD) 32
+
+#### 文件上传测试 200\-202
+
+### 视图 53, 54
+
+### Flashed 会话数据 70, 71
+
+## G
+
+### 生成通知 206
+
+### Google Cloud 232
+
+## H
+
+### Heroku 232
+
+### Homebrew
+
+#### 使用，用于安装 Mac 14, 15
+
+### 质主键 106, 107
+
+### 钩子 (hooks) 239\-241
+
+### HTML 实体编码 80
+
+### HTTP 认证 125, 126
+
+### HTTP 测试
+
+#### 关于 193
+
+#### 请求头，自定义 194
+
+#### 请求，发送请求 193, 194
+
+## I
+
+### if 语句 73
+
+### 安装程序 (Installer)
+
+#### 使用，用于安装 Laravel 17
+
+#### 使用，用于安装 Mac 15, 16
+
+## J
+
+### 连接 (joins) 99
+
+#### 高级连接 100
+
+#### 左连接 99
+
+### JSON API
+
+#### 关于 176
+
+#### DELETE 178
+
+#### GET 176
+
+#### POST 177
+
+#### PUT 177, 178
+
+## L
+
+### lang 目录 11
+
+### Laravel
+
+#### 关于 2
+
+#### 核心概念 24, 25
+
+#### 安装 17
+
+#### 安装，在 Linux 上 17
+
+#### 安装，在 Mac 上 15, 16
+
+#### 安装，在 Windows 上 17
+
+#### 通过 Composer-Project 安装 18
+
+#### 通过 Installer 安装 17
+
+#### 通过 PHP serve 安装 18
+
+#### 偏好 2
+
+### Laravel 10
+
+#### 关于 8
+
+#### 升级 8
+
+### Laravel 10 版本
+
+#### 关于 8, 9
+
+#### 数据库表达式 10
+
+#### Eloquent 模型 10
+
+#### 最小稳定性 9
+
+#### 公共路径 9
+
+#### redis 缓存 10
+
+#### 测试 11
+
+### Laravel 应用
+
+#### 部署，使用 Vapor 233
+
+#### 环境，设置 186, 187
+
+#### 生命周期测试 187
+
+#### 测试技术 186
+
+### Vapor 核心，安装 234
+
+### Vapor，安装 233, 234
+
+### Laravel 应用生命周期测试
+
+#### 并行测试 189, 192
+
+#### 创建测试 187, 188
+
+#### 报告测试 192
+
+#### 运行测试 189
+
+### Laravel 内置认证系统
+
+#### 关于 123
+
+#### API 认证服务 124
+
+#### 124, 125
+
+#### Sanctum 125
+
+### Laravel 社区 3
+
+### Laravel 开发
+
+#### Composer，安装 14
+
+#### 安装 11
+
+#### Laravel，安装 17
+
+#### PHP，安装 11
+
+#### 设置 11
+
+### Laravel 特性
+
+#### 关于 5
+
+#### 数据库种子数据 5
+
+#### 本地化 6
+
+### Laravel Passport
+
+#### 关于 170
+
+#### composer 包管理器，安装 171
+
+#### 配置 172
+
+#### 驱动选项，设置 172
+
+### Laravel Passport 配置
+
+#### 默认模型覆盖 173, 174
+
+#### 路由覆盖 174, 175
+
+#### 令牌有效期 172
+
 ### 布局
-### 关于 84, 85
-### 模板继承 85, 86
-### 左连接 99
-## Linux
-### 使用，用于安装 Laravel 17
-### 本地化 6
-### 循环 76, 77
 
-# M
-## Mac
-### 安装，通过 Homebrew 14, 15
-### 安装，通过 Installer 15, 16
-### 使用，用于安装 Composer 14
-### 使用，用于安装 Laravel 17
-### 使用，用于安装 PHP 11, 12
-## 邮件通知
-### 关于 214, 215
-### 自定义 symfony message 221
-### 邮件组件，自定义 215\-217
-### 标签和元数据 220, 221
-## 注入 68
-## 中间件
-### 关于 47, 143
-### 分配路由 142, 145
-### 发送请求 143, 148
-### 分组 149, 151
-### 排序 150
-## 可终止中间件 152, 154
-## 模型类 103
-## 约定 104
-## 数据库连接 110
-## 主键 105
-## 表名 105
-## UUID 键 108, 109
-## MVC 架构
-### 关于 2
-### 组件 27
-### 历史 27
-### 概述 26
-## MVC 架构设计
-### 关于 30
-### 控制器 34
-### 特性 31
-### 模型 33
-### 视图 33
-## MVC 架构模式
-### 关于 28, 29
-### 设计原则 29
+#### 关于 84, 85
 
-# N
-## 命名路由 69, 70
-## 嵌套视图目录 53
+#### 模板继承 85, 86
 
-# O
-## once 指令 78, 79
-## OpenSSL
-### 配置 242
-### 基础方面 241
-## 可选参数 42
+#### 左连接 99
 
-# P
-## passport 124, 125
-## 密码管理
-### 关于 134
-### 配置 134
-### 路由 134, 135
-## 悲观锁 102
-## PHP
-### 安装 11
-### 安装，在 Mac 上 11, 12
-### 安装，在 Windows 上 12\-14
-## 主键
-### 关于 93, 94, 105
-## 复合主键 108
+### Linux
 
-# Q
+#### 使用，用于安装 Laravel 17
 
+#### 本地化 6
 
+#### 循环 76, 77
 
+## M
 
+### Mac
 
-# 查询构造器 (Query Builder)
+#### 安装，通过 Homebrew 14, 15
+
+#### 安装，通过 Installer 15, 16
+
+#### 使用，用于安装 Composer 14
+
+#### 使用，用于安装 Laravel 17
+
+#### 使用，用于安装 PHP 11, 12
+
+### 邮件通知
+
+#### 关于 214, 215
+
+#### 自定义 symfony message 221
+
+#### 邮件组件，自定义 215\-217
+
+#### 标签和元数据 220, 221
+
+### 注入 68
+
+### 中间件
+
+#### 关于 47, 143
+
+#### 分配路由 142, 145
+
+#### 发送请求 143, 148
+
+#### 分组 149, 151
+
+#### 排序 150
+
+### 可终止中间件 152, 154
+
+### 模型类 103
+
+### 约定 104
+
+### 数据库连接 110
+
+### 主键 105
+
+### 表名 105
+
+### UUID 键 108, 109
+
+### MVC 架构
+
+#### 关于 2
+
+#### 组件 27
+
+#### 历史 27
+
+#### 概述 26
+
+### MVC 架构设计
+
+#### 关于 30
+
+#### 控制器 34
+
+#### 特性 31
+
+#### 模型 33
+
+#### 视图 33
+
+### MVC 架构模式
+
+#### 关于 28, 29
+
+#### 设计原则 29
+
+## N
+
+### 命名路由 69, 70
+
+### 嵌套视图目录 53
+
+## O
+
+### once 指令 78, 79
+
+### OpenSSL
+
+#### 配置 242
+
+#### 基础方面 241
+
+### 可选参数 42
+
+## P
+
+### passport 124, 125
+
+### 密码管理
+
+#### 关于 134
+
+#### 配置 134
+
+#### 路由 134, 135
+
+### 悲观锁 102
+
+### PHP
+
+#### 安装 11
+
+#### 安装，在 Mac 上 11, 12
+
+#### 安装，在 Windows 上 12\-14
+
+### 主键
+
+#### 关于 93, 94, 105
+
+### 复合主键 108
+
+## Q
+
+### 查询构造器 (Query Builder)
+
 - 关于 97
 - 高级 where 100
 - 聚合 101
@@ -6157,16 +6351,20 @@ environments:
 - 选择 selects 97, 98
 - 查询缓存 102
 
-# 队列连接 (Queue connection)
+### 队列连接 (Queue connection)
+
 - 关于 210, 211
 - 通道 channel 211\-213
 - 按需通知 213
 
-# R
-- 有理表达式 43
-- 原始表达式 101
+## R
 
-# 重定向 (Redirect)
+### 有理表达式 43
+
+### 原始表达式 101
+
+### 重定向 (Redirect)
+
 - 关于 69
 - 控制器动作 70
 - 闪存会话数据 70, 71
@@ -6182,7 +6380,8 @@ environments:
 - 渲染组件 82
 - 表述层状态转移 (REST) 157
 
-# 请求头 (Request headers)
+### 请求头 (Request headers)
+
 - 认证 196, 197
 - Cookies 195
 - 自定义 194
@@ -6191,11 +6390,13 @@ environments:
 - 资源控制器 65, 66
 - 资源响应 169
 
-# 资源 (Resources)
+### 资源 (Resources)
+
 - 关于 157\-161
 - 写入 161, 162
 
-# 模型检索 (Retrieval model)
+### 模型检索 (Retrieval model)
+
 - 关于 110
 - 高级子查询 115, 116
 - 块 chunk 112, 113
@@ -6208,7 +6409,8 @@ environments:
 - 路由前缀 49, 50
 - 路由器方法 39
 
-# 路由器 (Routers)
+### 路由器 (Routers)
+
 - 关于 37
 - 缓存 51
 - 控制器 48, 49
@@ -6224,14 +6426,16 @@ environments:
 - 路由目录 38
 - 子域名路由 49
 
-# 路由器类型 (Routers types)
+### 路由器类型 (Routers types)
+
 - 关于 39
 - 备用路由 41
 - 重定向路由 40
 - 路由列表 40, 41
 - 视图路由 40
 
-# 路由 (Routes)
+### 路由 (Routes)
+
 - 访问令牌 180
 - 中间件 179
 - 中间件，分配 146\-148
@@ -6239,21 +6443,25 @@ environments:
 - 使用中间件保护 143
 - 路由目录 38
 
-# S
-- Sanctum 125
+## S
 
-# 作用域 (Scope)
+### Sanctum 125
+
+### 作用域 (Scope)
+
 - 检查 182, 183
 - 默认函数 181
 - 定义 180, 182
 
-# 搜索引擎优化 (SEO)
+### 搜索引擎优化 (SEO)
+
 - 关于 31
 - 必要性 31
 - 原则 31, 32
 - 选择 97, 98
 
-# 发送通知 (Send notification)
+### 发送通知 (Send notification)
+
 - 关于 206, 207
 - 延迟 209
 - 递送 207
@@ -6266,26 +6474,34 @@ environments:
 - 子域名路由 49
 - 切换指令 73, 74
 
-# T
-- 表名 105
-- 模板继承 85, 86
-- 测试驱动开发 (TDD) 32
-- 时间戳 94, 95
+## T
 
-# 翻译字符串 (Translation strings)
+### 表名 105
+
+### 模板继承 85, 86
+
+### 测试驱动开发 (TDD) 32
+
+### 时间戳 94, 95
+
+### 翻译字符串 (Translation strings)
+
 - JSON 文件 6\-8
 - 语言目录 6
 
-# 故障排除 (Troubleshooting)
+### 故障排除 (Troubleshooting)
+
 - 关于 249
 - API 网关 v2 249
 - 应用优化 249
 - 固定容量数据库 249
 
-# U
-- ULID 密钥 108, 109
+## U
 
-# 用户提供者 (User provider)
+### ULID 密钥 108, 109
+
+### 用户提供者 (User provider)
+
 - 关于 127\-129
 - 可认证契约 131, 132
 - 合约 129, 130
@@ -6293,11 +6509,14 @@ environments:
 - 用户会话知识 140
 - UUID 密钥 108, 109
 
-# V
-- Vapor 关于 233
-- 用于部署 Laravel 应用 233
+## V
 
-# Vapor 核心 (Vapor core)
+### Vapor 关于 233
+
+### 用于部署 Laravel 应用 233
+
+### Vapor 核心 (Vapor core)
+
 - 自定义记录 245
 - 仪表板授权 235
 - 仪表板安装 234
@@ -6312,14 +6531,16 @@ environments:
 - OpenSSL，配置 241\-244
 - SSL 证书 246
 
-# 视图合成器 (View composers)
+### 视图合成器 (View composers)
+
 - 关于 56\-59
 - 多视图视图 59, 60
 - 视图创建者 56, 60
 - 视图优化 60, 61
 - 视图路由 40
 
-# 视图 (Views)
+### 视图 (Views)
+
 - 关于 51
 - 创建 52, 53
 - 数据与视图 54
@@ -6329,9 +6550,10 @@ environments:
 - 嵌套视图目录 53
 - 视图优化 60, 61
 
-# W
-- Windows
+## W
+
+### Windows
+
 - 用于安装 Composer 16
 - 用于安装 Laravel 17
 - 用于安装 PHP 12
-

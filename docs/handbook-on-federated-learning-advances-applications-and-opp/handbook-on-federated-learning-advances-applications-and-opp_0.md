@@ -1,32 +1,13 @@
-## 联邦学习手册：进展、应用与机遇
 
-
+# 联邦学习手册：进展、应用与机遇
 
 ![](img/coverpage.jpg)
 
 ![Cover: Handbook on FEDERATED LEARNING Advances, Applications and Opportunities, edited by Saravanan Krishnan, A. Jose Anand, R. Srinivasan, R. Kavitha, S. Suresh, published by CRC Press](img/coverpage.jpg)
 
+# 前言
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 前言
-
-联邦学习（FL）是一种分布式机器学习模型，目前已应用于许多领域。它由 Google Inc 和 Apple Inc 等公司首创，作为一种在不牺牲隐私的前提下，利用分布式数据集创建性能更优机器学习模型的技术。目前，Apple Inc 利用联邦学习提升 Face ID 和 Siri 的准确性，Google 则利用它为 Gboard 的键盘预测提供支持。其解决传统 ML 模型引发的隐私问题的能力，使其极具吸引力。因此，联邦学习目前是 AI 领域最引人入胜、最具前景的研究方向之一。它近期改变了我们收集、分析和使用数据的方式。联邦学习在工业 4.0、医疗保健和机器人技术等领域有着广泛的应用。本书从各个方面为联邦学习提供了全面的方法论。
+联邦学习（FL）是一种分布式机器学习模型，目前已应用于许多领域。它由 `Google Inc` 和 `Apple Inc` 等公司首创，作为一种在不牺牲隐私的前提下，利用分布式数据集创建性能更优机器学习模型的技术。目前，`Apple Inc` 利用联邦学习提升 `Face ID` 和 `Siri` 的准确性，`Google` 则利用它为 `Gboard` 的键盘预测提供支持。其解决传统 ML 模型引发的隐私问题的能力，使其极具吸引力。因此，联邦学习目前是 AI 领域最引人入胜、最具前景的研究方向之一。它近期改变了我们收集、分析和使用数据的方式。联邦学习在工业 4.0、医疗保健和机器人技术等领域有着广泛的应用。本书从各个方面为联邦学习提供了全面的方法论。
 
 本书包含四个部分，分别为：概念与类型、学习过程与优化、工具与技术、应用与用例。本书的目的是结合实时用例，详细阐述各种应用中的概念、工具和技术。
 
@@ -36,46 +17,47 @@
 
 第 4 部分讨论了一种学习范式，旨在通过协作训练算法而不交换数据本身，来解决数据治理和隐私问题。它近期因在医疗保健领域的应用而受到关注，相关章节对此进行了讨论。FL 使协作获取洞察成为可能（例如以共识模型的形式），而无需将患者数据移出其所在机构的防火墙之外。本书从各个方面为联邦学习提供了全面的方法论。
 
-## 第 1 章 联邦学习方法与分类简介
+# 第 1 章 联邦学习方法与分类简介
 
 *Shashikiran Venkatesha*^(¹)
 
-Email: lramanathan@vit.ac.in
+Email: `lramanathan@vit.ac.in`
 
-### 1. 动机与简介
+## 1. 动机与简介
 
-正如近期所观察到的，推荐系统、自然语言处理、计算机视觉和自动语音识别等不同领域的应用与工具的进步，是机器学习（ML）算法快速发展的结果 [[1]](#ch1.xhtml#ref1_1)、[[2]](#ch1.xhtml#ref1_2) 和 [[3]](#ch1.xhtml#ref1_3)。由深度学习（DL）调优的 ML 平台所取得的强大且有利的成果，得益于从数据存储库（也称为“数据仓库”或“数据中心”）获取的海量合法数据或“大数据” [[2]](#ch1.xhtml#ref1_2)、[[3]](#ch1.xhtml#ref1_3) 和 [[4]](#ch1.xhtml#ref1_4)。DL 平台执行的各项任务的终极性能有时可与人类认知卓越性相媲美。例如，利用数十亿张图像训练的、经 DL 调优的人脸识别系统，能够产生有效且可商业化的成果。例如，从 Instagram 获取的 35 亿张图像 [[5]](#ch1.xhtml#ref1_5) 被用于名为 Detectron 的目标检测系统训练，这是一个可扩展分布式系统框架的经典示例，也是 Facebook 不可或缺的一部分。软件架构师、ML 研究人员和开发人员面临许多挑战，例如创建、开发、运营和维护分布式计算框架。这些挑战枚举如下。
+正如近期所观察到的，推荐系统、自然语言处理、计算机视觉和自动语音识别等不同领域的应用与工具的进步，是机器学习（ML）算法快速发展的结果 [[1]](#ch1.xhtml#ref1_1)、[[2]](#ch1.xhtml#ref1_2) 和 [[3]](#ch1.xhtml#ref1_3)。由深度学习（DL）调优的 ML 平台所取得的强大且有利的成果，得益于从数据存储库（也称为“数据仓库”或“数据中心”）获取的海量合法数据或“大数据” [[2]](#ch1.xhtml#ref1_2)、[[3]](#ch1.xhtml#ref1_3) 和 [[4]](#ch1.xhtml#ref1_4)。DL 平台执行的各项任务的终极性能有时可与人类认知卓越性相媲美。例如，利用数十亿张图像训练的、经 DL 调优的人脸识别系统，能够产生有效且可商业化的成果。例如，从 `Instagram` 获取的 35 亿张图像 [[5]](#ch1.xhtml#ref1_5) 被用于名为 `Detectron` 的目标检测系统训练，这是一个可扩展分布式系统框架的经典示例，也是 `Facebook` 不可或缺的一部分。软件架构师、ML 研究人员和开发人员面临许多挑战，例如创建、开发、运营和维护分布式计算框架。这些挑战枚举如下。
 
 *   **数据所有权**：在 21 世纪，人们在涉及其数据及其在构建 ML 平台中的使用时，已意识到自己的所有权。在推荐服务等现代 ML 驱动产品中，对于消费者购买模式和汇款方式的所有权主张存在模糊地带；这与产品数据和供应商交易不同，后者的所有权由服务提供商主张。
 
 *   **遵守数据保护法案**：2018 年，欧盟通过了名为“通用数据保护条例”（GDPR）的法案，这是数据保护法律与合规的一个著名范例 [[6]](#ch1.xhtml#ref1_6)。2020 年，美国加利福尼亚州颁布的《加利福尼亚消费者隐私法案》（CCPA）为数据保护和使用提供了法律框架 [[7]](#ch1.xhtml#ref1_7)。GDPR 为数据保护采用的基本准则，在发生私人数据泄露时提供法律救济。
 
+## 分布式系统中的数据隐私与保密性挑战
 
+### 数据隐私与保密性
 
-
-# 分布式系统中的数据隐私与保密性挑战
-
-## 数据隐私与保密性
 在分布式系统中，消费者隐私和数据保密性已成为设计 ML 应用的首要问题。薄弱的政府和商业机构为达到其目的而操纵或使用私人数据。基于互联网的跨国公司未能保护用户的私人数据，并因“罚款”形式受到高等司法机构的惩处。基于互联网的公司因以下原因在法庭上受到惩处：
+
 - 发送未经请求的信息
 - 网络钓鱼
 - 不道德的数据交换
 
-## 独立数据仓库中的数据
+### 独立数据仓库中的数据
+
 文档（财务和医疗部门的记录）中可能影响政府机构和商业机构决策的敏感或易感信息，迫使数据保持隔离状态，或作为由数据中心所有者管理的独立数据孤岛 [[8]](#ch1.xhtml#ref1_8)。
 
-## 缺乏对协作模型收益的理解
+### 缺乏对协作模型收益的理解
+
 ML 组织遭受数据分散之苦的另一个相关原因，是缺乏对协作模型收益进行量化的理解。例如，两个组织尝试通过使用医学图像进行训练来构建协作 ML 模型。在遗留系统中，数据从一个组织传输到另一个组织，数据所有者在数据离开组织的影响范围时，就会失去对传输数据的控制权。缺乏一种有形的衡量标准，来分配为构建更好的联合 ML 模型做出贡献的参与者的收益，这是 ML 研究人员面临的一个主要挑战。
 
 然而，在最近一段时间里，物联网设备的计算能力和存储容量已随时间增长。软件开发人员和架构师利用数百万设备的计算能力来构建协作模型，从而缓解了上述挑战。
 
-# 1.1 联邦学习是答案
+## 1.1 联邦学习是答案
 
 考虑到上述必要性，（a）利用设备增强的计算能力，（b）连接执行本地训练模型的设备，以及（c）连接设备协作以构建共识全局学习模型的分布式学习平台，构成了**联邦学习（FL）**。
 
 2016 年，McMahan 等人在边缘-服务器架构中提倡联邦学习，用于聚合部署在手机上的语言模型 [[9]](#ch1.xhtml#ref1_9)、[[10]](#ch1.xhtml#ref1_10)、[[11]](#ch1.xhtml#ref1_11)、[[12]](#ch1.xhtml#ref1_12)。
 
-许多物联网设备或边缘计算设备维护着所有者的私人数据。Google 的键盘系统即 **Gboard** 系统，使用一种名为 **联邦平均算法** 的联邦学习算法。
+许多物联网设备或边缘计算设备维护着所有者的私人数据。`Google` 的键盘系统即 **Gboard** 系统，使用一种名为 **联邦平均算法** 的联邦学习算法。
 
 **Gboard** 执行程序化单词补全，这是一种使用 **FedAvg** 从各种手机聚合模型参数并将用户的单词选择和挑选告知单词预测模型的应用。无数据从手机移动到任何中央服务器，这构成了联邦学习的基础。模型参数或模型本身在任何设备上加密并传输到云端。参与的边缘设备将无法识别其他参与边缘设备的数据，因为模型参数（或模型本身）在服务器端加密并发送到云端。所有加密模型在云端巩固以构建全局模型，网络中的服务器将无法识别边缘计算设备 [[9]](#ch1.xhtml#ref1_9)、[[10]](#ch1.xhtml#ref1_10)、[[11]](#ch1.xhtml#ref1_11)、[[12]](#ch1.xhtml#ref1_12)、[[13]](#ch1.xhtml#ref1_13)、[[14]](#ch1.xhtml#ref1_14)。加密下的全局模型被更新并下发到云系统边缘的所有参与设备 [[12]](#ch1.xhtml#ref1_12)、[[13]](#ch1.xhtml#ref1_13)、[[15]](#ch1.xhtml#ref1_15)、[[16]](#ch1.xhtml#ref1_16)。边缘设备中客户的数据不会向其他设备或参与整个通信过程的网络服务器披露。
 
@@ -98,17 +80,15 @@ FL 算法在与科学和工程不同领域相关的各种应用中得到使用�
 | **FL OOV** | [[31]](#ch1.xhtml#ref1_31) | 自然语言处理 | |
 | **Fedrec** | [[32]](#ch1.xhtml#ref1_32) | 强化学习 | |
 
-### 2. 联邦学习基础
+## 2. 联邦学习基础
 
-#### 2.1 机器学习
+### 2.1 机器学习
 
-
-
-# 机器学习阶段
+#### 机器学习阶段
 
 机器学习（ML）可分两个阶段完成：(a) 训练阶段，和 (b) 预测阶段，如图 1 所示。
 
-## 训练阶段
+##### 训练阶段
 
 在训练阶段，输入数据向量被送入 ML 模型，模型通过逐步更新将输入向量映射到输出类标签的函数来进行学习。ML 模型中的学习可分为四类：
 
@@ -117,7 +97,7 @@ FL 算法在与科学和工程不同领域相关的各种应用中得到使用�
 3.  **半监督学习**：数据集中大多数输入数据向量未标记，仅少数具有类标签。利用聚类算法推断出大多数数据的类标签。
 4.  **强化学习**：动作的选择以及一段时间内为达成目标或实现目的而返回的奖励，构成了奖励（或映射）函数制定的基础。
 
-## 预测阶段
+##### 预测阶段
 
 在预测阶段，训练阶段的输出——称为训练好的模型——被投入使用。训练好的模型接收类标签尚未确定的输入数据向量，并产生称为预测（或类标签）的输出。预测的准确性决定了机器学习算法的效率。
 
@@ -125,7 +105,7 @@ FL 算法在与科学和工程不同领域相关的各种应用中得到使用�
 
 图 1. 机器学习的训练和预测阶段。
 
-## 2.1.1 机器学习的形式化定义
+#### 2.1.1 机器学习的形式化定义
 
 具有输入 `X(x[1], x[2]…, x[n])`、输出 `Y(y[1], y[2], …, y[n])` 且 `w[L]` 为学习参数的函数映射 `F`，在公式 (1) 中表达了预测值与期望值之间的差距。
 
@@ -137,29 +117,29 @@ FL 算法在与科学和工程不同领域相关的各种应用中得到使用�
 
 其中 `Loss` 是在点 `X` 和 `Y` 处的损失函数。目标是使预测值与期望值之间的损失最小化；这构成了所有机器学习算法的基础。
 
-## 2.1.2 机器学习算法的类别
+#### 2.1.2 机器学习算法的类别
 
 机器学习大体可分为五大类：
 
-### 矩阵分解算法
+##### 矩阵分解算法
 
 以矩阵形式呈现的数据元素可能包含隐藏因子或缺失元素，可通过分解来识别。应用包括：利用“用户-项目评分矩阵”[[33]](#ch1.xhtml#ref1_33)和“药物-靶标蛋白矩阵”[[34]](#ch1.xhtml#ref1_34)通过项目评分确定用户偏好的推荐系统，以及创新药物发现。
 
-### 主题模型或统计模型
+##### 主题模型或统计模型
 
 *   **潜在狄利克雷分布（LDA）**：一种统计方法，生成非结构化文本文档与带有概率值的主题集合之间的映射 [[35]](#ch1.xhtml#ref1_35)。
 *   **朴素贝叶斯分类器**：一种使用监督学习进行训练的概率方法，但与复杂方法相比准确率较低。
 *   **潜在语义分析/索引（LSA/LSI）**：构建主题与文本文档之间基于矩阵的映射以对文档进行分类，假设输入服从高斯分布。
 *   **概率潜在语义分析/索引（PLSA/PLSI）**：针对主题和文本文档等输入采用泊松分布 [[36]](#ch1.xhtml#ref1_36)。
 
-### 基于规则的机器学习（RBML）算法
+##### 基于规则的机器学习（RBML）算法
 
 `RBML` 算法为给定的输入数据集构建 `If <condition> Then` 规则，每条规则分配问题的一部分 [[37]](#ch1.xhtml#ref1_37)。与神经网络模型相比，规则简单且易于解释。典型示例包括**决策树**和**关联规则学习**。
 
 *   **关联规则学习**：通过识别项目或变量之间的关联来构建规则。
 *   **决策树**：遵循规则的层次化表示，分支引导至表示决策或类标签的叶节点。
 
-### 基于随机梯度下降（SGD）的算法
+##### 基于随机梯度下降（SGD）的算法
 
 损失函数是一个最小化多变量目标函数，在负梯度（损失函数的一阶偏导数）的引导下向最优点移动。负梯度沿其方向调整模型参数。向最优点移动由学习率控制。由于梯度是在随机选取的输入数据向量上计算的，因此称为随机梯度。这种迭代方法用于寻找损失函数的极小值点。
 
@@ -169,21 +149,17 @@ FL 算法在与科学和工程不同领域相关的各种应用中得到使用�
 *   **感知机**：执行二分类。输入被加权；权重-输入乘积之和与阈值比较以确定类标签。
 *   **ANN**：多层神经元形成网络，相互连接以识别大数据中的复杂特征。层通过加权边连接，激活函数引入非线性。示例包括**生成对抗网络（GAN）**、**卷积神经网络（CNN）**、**深度神经网络（DNN）**和**循环神经网络（RNN）**。
 
-### 进化算法
+##### 进化算法
 
 **遗传算法**基于人类进化设计 [[39]](#ch1.xhtml#ref1_39)。它将决策变量表示为基因型（由 0 和 1 组成的字符串）。每个基因型通过适应度函数进行评估；满足条件的基因型经历交叉和变异以产生新的基因型。新基因型通过适应度函数进行质量测试。仅保留更优的基因型用于繁殖。该过程是迭代的，收敛速度较慢。
 
-#### 2.2 分布式机器学习
+### 2.2 分布式机器学习
 
 在单机上对更大数据集进行训练会增加 ML 算法的运行时间。TB 级的复杂应用可能需要分布式系统中更高程度的并行性和更大的 I/O 带宽 [[40]](#ch1.xhtml#ref1_40)。并行性可在数据层面（创建不相交的数据片段）或模型层面（相同数据集副本由不同模型部分训练）构想。计算节点拓扑在实现数据并行和模型并行时很重要。并行执行和计算节点间通信必须协同工作，以通过更快的更新实现更快的模型收敛。
 
-##### 2.2.1 数据并行与模型并行
+#### 2.2.1 数据并行与模型并行
 
-
-
-
-
-## 数据并行与模型并行方法
+##### 数据并行与模型并行方法
 
 在**数据并行**方法中，数据集被划分为不相交的子集，其数量等于系统中计算（或工作）节点的数量。相同的机器学习算法用于训练与不同计算节点关联的数据集不相交子集。假设数据在数据集的不相交子集上独立同分布，所有计算节点在不同数据上执行相同的指令。该模型仅产生一个可理解的输出。
 
@@ -193,7 +169,13 @@ FL 算法在与科学和工程不同领域相关的各种应用中得到使用�
 
 图 2. 数据并行与模型并行.
 
-### 2.2.2 分布式机器学习的拓扑结构
+#### 2.2.2 分布式机器学习的拓扑结构
+
+
+
+# 全分布式系统与联邦学习综述
+
+## 1. 分布式系统拓扑与通信模型
 
 **全分布式系统**是自主计算节点的网络，它们将最终解决方案汇总在一起。计算节点在决定结果方面不扮演任何特定角色。在**中心化系统**中，中央服务器遵循系统化方法进行结果聚合。结果聚合按层级执行。**树形结构**用于**去中心化系统**，允许跨多个**参数服务器**分片的复制模型或分区模型进行中间结果聚合（如图 3 和图 4 所示）。**树拓扑**在分布式机器学习框架中很流行，用于**ALLReduce** [[42]](#ch1.xhtml#ref1_42)在子节点中计算局部梯度并将值传递给其父节点。**环拓扑**在需要最小通信延迟或广播支持较差的系统中很流行。**参数服务器**拥有一组具有共享内存的中心化主计算节点和一组去中心化的工作计算节点。每个参数服务器上的分片存储模型参数。所有客户端采用**键值存储**方法进行读写。参数服务器可能成为单点故障，因为它处理所有通信。
 
@@ -205,34 +187,33 @@ FL 算法在与科学和工程不同领域相关的各种应用中得到使用�
 
 图 4. (接图 3) 分布式机器学习的拓扑结构.
 
-### 2.2.3 分布式机器学习的通信模型
+### 1.1 分布式机器学习的通信模型
 
 计算（或工作节点）的通信阶段与计算阶段之间的同步意味着更新的准确性、通信延迟和计算时间。由于上述必要性，确定了不同的通信模型。更快速度的准确模型收敛和更快速度的更新可以置于通信模型光谱的两个极端点。**批量同步并行 (BSP)** [[43]](#ch1.xhtml#ref1_43)、**陈旧同步并行 (SSP)**、**近似同步并行 (ASP)** [[44]](#ch1.xhtml#ref1_44) 和**无障碍异步并行** [[45]](#ch1.xhtml#ref1_45)/**全异步并行** [[44]](#ch1.xhtml#ref1_44) 是分布式机器学习生态系统中采用的四种通信模型。**百度 AllReduce** [[46]](#ch1.xhtml#ref1_46)、**Horovod** [[47]](#ch1.xhtml#ref1_47)、**Caffe2** [[48]](#ch1.xhtml#ref1_48) 和 **CNTK** 或 **Microsoft 认知工具包** [[49]](#ch1.xhtml#ref1_49) 是基于并行同步模型的分布式 ML 系统的示例。**DistBelief** [[50]](#ch1.xhtml#ref1_50)、**DIANNE** [[51]](#ch1.xhtml#ref1_51)、**TensorFlow** [[52]](#ch1.xhtml#ref1_52)、**MXNet** [[53]](#ch1.xhtml#ref1_53)、**Petuum** [[54]](#ch1.xhtml#ref1_54) 和 **MXNet-MPI** [[55]](#ch1.xhtml#ref1_55) 分别是并行异步和并行异步/同步分布式 ML 系统的示例。
 
-### 2.2.4 挑战述评
+### 1.2 挑战述评
 
-**隐私**、**性能**、**容错**和**可移植性**是在可扩展计算架构上部署 ML 算法的瓶颏。像参数服务器这样的通信模型无法确保分布式系统中的隐私。分布式系统不具备任何形式的数据保护法律合规性，且正在各国合法化。
+**隐私**、**性能**、**容错**和**可移植性**是在可扩展计算架构上部署 ML 算法的瓶颈。像参数服务器这样的通信模型无法确保分布式系统中的隐私。分布式系统不具备任何形式的数据保护法律合规性，且正在各国合法化。
 
-#### 2.3 联邦学习
+## 2. 联邦学习
 
 **联邦学习**是一种协作式 ML 模型，在放置于多个位置的大型数据集上进行训练和构建。它有两个阶段，分别是 (a) **模型训练阶段**，和 (b) **模型推理阶段**。在模型训练阶段，一个或多个参与者通过为模型训练做出贡献来协作构建 ML 模型，且无需共享数据。在此阶段，参与者间的数据传输不会暴露位置处数据的私密部分。训练模型的实例可通过加密从一个参与者发送给其他参与者，从而保持数据隐私。由多个参与者构建的最终模型性能应可与在单一位置或由位于某站点的单一参与者构建的模型相媲美。在模型推理阶段，训练好的模型接收新数据输入并推导出相应结果。可持续的联邦模型确保为对联合 ML 模型构建做出贡献的参与者合理分配收益。本节介绍联邦学习的形式化定义、客户端-服务器架构以及联邦学习的点对点架构。
 
-##### 2.3.1 联邦学习的形式化定义
+### 2.1 联邦学习的形式化定义
 
 可分离的线性目标函数表示联邦学习中 *P* 个参与者累积损失的代数求和，如公式 2 所示。
 
 (2)
 
 $$
+
 \arg\frac{\min}{w_{L}}Loss(X,Y,w_{L}) = \text{Σ}_{1}^{p}U_{p}Loss_{p}(X,Y,w_{p})
+
 $$
 
 在公式 (2) 中，*U*[*p*] 表示联邦学习中第 *P* 个参与者的权重；*w*[*p*] 表示参与者的学习率；目标函数中 *Lp* 损失函数的求和使其成为可分离目标函数。
 
-##### 2.3.2 联邦学习架构
-
-
-
+### 2.2 联邦学习架构
 
 使用 FL 系统构建的应用程序可能包含也可能不包含单点协调计算节点。FL 生态系统中的单点协调计算节点如图 5 所示。协调计算节点被指定为参数服务器。参数服务器将模型的主要未训练实例发送给所有本地参与者。本地参与者使用其本地数据集训练模型，并将模型权重发布到参数服务器。参数服务器执行来自所有参与者的聚合并更新模型。在满足收敛标准之前，FL 系统会迭代地重复本地训练和全局模型更新。位于本地参与者站点的原始数据绝不会离开该站点。为避免模型更新泄露，参数服务器与本地参与者之间的数据交换使用同态加密进行加密[[8]](#ch1.xhtml#ref1_8)。如图 6 所示，点对点方法也是 FL 系统可行的设计架构。由于缺少参数服务器，计算量增加，这是该方法的缺点。在没有第三方干预的情况下，该方法为参与者之间的点对点通信提供了增强的安全级别。
 
@@ -244,7 +225,7 @@ $$
 
 图 6. 联邦学习的点对点模型。
 
-##### 2.3.3 联邦学习中的开源项目：简述
+### 2.3 联邦学习中的开源项目：简述
 
 许多开源项目正在联邦学习领域以更快的速度开发。表 2 列出了近期发布到公共领域的选定开源框架简述。
 
@@ -258,11 +239,11 @@ $$
 | OpenMined 和 PySyft [[61]](#ch1.xhtml#ref1_61), [[62]](#ch1.xhtml#ref1_62), [[63]](#ch1.xhtml#ref1_63) 和 [[64]](#ch1.xhtml#ref1_64) | PySyft 库 | 适用于多方计算和同态加密 |
 | LEAF 基准 [[65]](#ch1.xhtml#ref1_65), [[66]](#ch1.xhtml#ref1_66) | – | 适用于 FL 领域高端研究人员和产品开发者的框架 |
 
-### 3. 基于数据样本的联邦学习分类
+## 3. 基于数据样本的联邦学习分类
 
 让我们考虑以矩阵`M[i]`形式表示的第`i`个数据所有者的数据集或样本集。数据集的列代表特征，行代表实际数据或样本集。类标签被分配给某些样本。样本空间由`sample ID`标识。`A`和`B`用于表示样本集的特征和标签。用于训练的样本集表示为`(A, B, sample ID)`。联邦学习可分为三类，分别为：(a) 纵向联邦学习，(b) 横向联邦学习，和(c) 联邦迁移学习。分类的基础是针对特征空间和样本空间的数据样本划分所采用的不同方法。
 
-#### 3.1 纵向联邦学习 (VFL)
+### 3.1 纵向联邦学习 (VFL)
 
 它是数据集中样本的基于特征的划分。两组数据可能具有共同的`sample ID`但关联不同的特征，如图 7 所示。考虑国有银行和电子商务公司等商业企业。两个实体可能拥有共同的客户作为其业务客户，但属性不同。银行的业务客户具有信用评级、资本和收支支出等特征，而同一客户在与电子商务企业关联时具有购买行为等不同特征。VFL 通过计算损失和梯度并最终聚合，在具有不同特征和类标签空间的样本上训练模型。正式 VFL 表述如公式(3)所示。
 
@@ -274,7 +255,7 @@ $$
 
 `A[i] ≠ A[j], B[i] ≠ B[j], SampleID[i] = SampleID[j], ∀ M[i]M[j], i ≠ j`
 
-#### 3.2 横向联邦学习 (HFL)
+### 3.2 横向联邦学习 (HFL)
 
 它是具有重叠属性或特征的基于样本的划分，如图 8 所示。让我们考虑两组具有共同特征空间但不同样本的数据。考虑两家国有银行，它们可能拥有不同的客户或样本空间。但这两家银行的业务行为有许多共同特征，如表现资产、负债、债券利润和不良资产等。HFL 在具有重叠特征的异构样本上构建模型。正式 HFL 表述如公式(4)所示。
 
@@ -286,7 +267,7 @@ $$
 
 `A[i] = A[j], B[i] = B[j], SampleID[i] ≠ SampleID[j], ∀ M[i]M[j], i ≠ j`
 
-#### 3.3 联邦迁移学习 (FTL)
+### 3.3 联邦迁移学习 (FTL)
 
 它是具有高度异构样本空间且特征不同的数据集（见图 9）。考虑来自两个独立机构的两个数据集，如印度储备银行和美国联邦银行。两家中央银行可能只有极少数共同特征，但植根于各自国家的金融治理目标和模型不同。FTL 算法应用于两个实体的两个特征空间的小样本空间，并学习共享格式。正式 FTL 表述如公式(5)所示。
 
@@ -298,18 +279,15 @@ $$
 
 `A[i] = A[j], B[i] = B[j], SampleID[i] ≠ SampleID[j], ∀ M[i]M[j], i ≠ j`
 
-### 4. 联邦学习中的机器学习算法：分类
+## 4. 联邦学习中的机器学习算法：分类
 
 联邦学习平均算法(FedAvg)[[9]](#ch1.xhtml#ref1_9)是由 McMahan 等人于 2017 年提出的最流行和经典的算法。FedAvg 已在 MNIST[[67]](#ch1.xhtml#ref1_67)和 CIFAR-10[[68]](#ch1.xhtml#ref1_68)等图像分类基准上进行测试。测试结果(FedAvg)在性能和分类准确性方面达到了预期结果。此外，联邦学习算法可分为：(1) FL 中的监督学习，(2) FL 中的无监督学习，和(3) FL 中的半监督学习。下面简要介绍每一类。
 
-#### 4.1 FL 中的监督学习
+### 4.1 FL 中的监督学习
 
-##### 4.1.1 联邦学习中的决策树算法
+#### 4.1.1 联邦学习中的决策树算法
 
-
-
-
-# Yang Liu 等人于 2022 年提出了一种联邦决策树 (FDT) [[69]](#ch1.xhtml#ref1_69)
+Yang Liu 等人于 2022 年提出了一种联邦决策树 (FDT) [[69]](#ch1.xhtml#ref1_69)。
 
 它在 VFL 框架中采用随机森林方法。主节点向客户端通信少量选定的特征和样本 ID。客户端将不知晓所有现有的特征和样本 ID。分裂准则由客户端在本地估算以构建树。客户端使用加密将分裂准则私密地共享给主节点。主节点解密分裂准则并计算全局最优分裂条件，然后通知客户端。掌握最优分裂的客户端将使用样本构建左右子树。上述步骤递归重复。最后，主节点收集来自所有客户端的局部最优分裂特征，从而为计算全局最优分裂特征铺平道路。
 
@@ -323,7 +301,7 @@ $$
 
 在公式 (6) 中，类别标签用 `B` 表示；`B̂ (SampleID[i])` 表示使用 K 棵回归树进行类别标签预测的输出；迭代用 `t` 表示；损失函数的一阶和二阶导数用 `G(SampleID[i])` 表示。
 
-##### 4.1.2 联邦学习中的支持向量机
+#### 4.1.2 联邦学习中的支持向量机
 
 Hartmann 等人于 2019 年主张在联邦学习中使用线性支持向量机。本地客户端以块为单位进行更新。在中央服务器与客户端交换模型参数的过程中，私有特征（如用户标签）不会泄露给服务器。因此，秘密向量机 (SecVM) [[71]](#ch1.xhtml#ref1_71) 执行本地梯度分割、哈希处理以隐藏用户标签，并遵循通信协议将更新传输给服务器。对于二分类器，线性目标函数如公式 (7) 所示。
 
@@ -351,7 +329,7 @@ z_{j} = z_{j} - \eta = \left( {\frac{1}{T}\Sigma_{i = 1}^{T}\frac{\partial{Loss}
 
 在线性 SVM 模型中，服务器将当前模型发送给所有客户端。每个客户端计算本地梯度 `∇wLoss(z; a[i], b[i])` 并发送给服务器。服务器计算全局梯度并将其与正则函数 `regular(z)` 求和。公式 (8) 中的步长 `η = 1/θt`，其中 `t` 表示迭代次数，是使用 Pegasos 算法 [[72]](#ch1.xhtml#ref1_72) 估算的。该方法的局限性在于：(a) 哈希函数失效（极其罕见），以及 (b) 当来自所有客户端的梯度之一为零时，SVM 可能无法产生结果。由于哈希隐藏了客户端标签，FL 模型将无法从其他客户端重建梯度为零的那个客户端的特征。
 
-##### 4.1.3 联邦线性算法
+#### 4.1.3 联邦线性算法
 
 逻辑回归方法被集成到中心化 VFL 模型中，用于在无线网络场景下选择最多工作者（或设备）数量 [[73]](#ch1.xhtml#ref1_73)。该方法由 Yang 等人于 2020 年提出。该 VFL 模型的目标函数是一个以最小化为目标的线性可分函数，如公式 (10) 所示。
 
@@ -363,7 +341,7 @@ z_{j} = z_{j} - \eta = \left( {\frac{1}{T}\Sigma_{i = 1}^{T}\frac{\partial{Loss}
 
 在公式 (10) 中，模型的向量化参数用 `z` 表示；数据点数量用 `T` 表示；每个被选设备的损失函数用 `g[j] = loss(z; x[j], y[j])` 表示；`z ∈ R^d, d` 为优化维度；本地数据集用 `D[i] ∈ D` 表示。该模型具有更高的收敛速度和全局聚合中的最小误差，且观测到更高的预测准确率。中央服务器与数据所有者之间的信息交换隐私通过同态加密技术得到保障。
 
-#### 4.2 联邦学习中的半监督学习
+### 4.2 联邦学习中的半监督学习
 
 客户端数据样本中分散的类别标注产生巨大成本，可通过联邦学习中的半监督学习来降低。另一方面，当联邦学习用于解决问题时，必须保证可用于训练的数据量。Jeong 等人提出的联邦匹配 (FedMatch) [[74]](#ch1.xhtml#ref1_74) 引入了一种称为跨客户端一致性损失 (ICCL) 的新概念，其正式定义见下文公式 (11)。
 
@@ -372,6 +350,8 @@ z_{j} = z_{j} - \eta = \left( {\frac{1}{T}\Sigma_{i = 1}^{T}\frac{\partial{Loss}
 ```
 ICCL = \frac{1}{H}\Sigma_{j = 1}^{H}K{Loss}\left( {\left. p_{\theta^{\*j}}^{\*}(Y \mid UI) \right\| p_{\theta^{j}}^{\*}(Y \mid UI)} \right)
 ```
+
+
 
 在公式 (11) 中，辅助代理用 `H` 表示；服务器端选定的与客户端相当的模型用 `p[θ]^(*) hj` 表示，这些模型不在客户端进行训练；客户端数量用 `K` 表示。ICCL 对预测数据标签执行不相交学习，这些标签可能位于客户端或服务器。为了提高半监督模型的效率，近期提出了变分自编码 [[75]](#ch1.xhtml#ref1_75) 和生成模型 [[76]](#ch1.xhtml#ref1_76) 等复杂模型。半监督学习进一步分为两类：(a) 横向联邦半监督学习，和 (b) 纵向联邦半监督学习。
 
@@ -383,10 +363,7 @@ Yang 等人为去中心化 VFL 提出了一种逻辑回归模型，其中拥有�
 
 #### 4.3 联邦学习中的无监督学习
 
-
-
-
-# 联邦学习中的无监督算法
+### 联邦学习中的无监督算法
 
 机器学习中的无监督算法用于在没有类别标签的数据集中寻找结构或模式。在此框架中，参与的客户端以统一、跨客户端依赖的方式拥有数据构成。此联邦学习框架中存在跨域的数据迁移。在没有第三方干预的情况下，来自不同领域的数据和知识从去中心化的联邦学习框架传输到新设备。Peng 等人[78] 提倡了一种用于联邦学习框架的无监督联邦域自适应模型。在此框架中，从不同计算节点学习到的演示模型与目标计算节点的数据分布保持一致。普通计算节点与目标计算节点之间的数据迁移不同于普通计算节点之间发生的常规迁移，在前一种情况下，计算节点可能倾向于产生不利贡献。
 
@@ -422,12 +399,9 @@ Anwar 等人提出了用于构建模型投毒攻击者模型的强化学习，�
 
 #### 5.6 联邦学习中的元学习
 
+### 联邦学习中的元学习
 
-
-
-# 联邦学习中的元学习
-
-在元学习中，每个智能体或设备协同训练元学习器。尽管每个设备上独立进行元学习，但设备的参数会在服务器上进行聚合。全局训练模型在所有设备上是相同的。Chen 等人提出了联邦元学习 **FedMeta** [[85]](#ch1.xhtml#ref1_85)，这是一种将模型无关元学习 **MAML** 算法和 **MetaSGD** 集成到框架中的方法。在 FedMeta 中，参数在客户端和服务器之间交换，这与 MT-FedRL 不同。MAML 算法在较新的数据集上表现出快速收敛。研究发现，MAML 和 Meta-SGD 结合可以降低通信成本并提高训练模型的准确性。与 FedAvg 相比，FedMeta 的通信成本降低了 2.82–4.33 倍，收敛速度加快了 3% 到 14%。
+在元学习中，每个智能体或设备协同训练元学习器。尽管每个设备上独立进行元学习，但设备的参数会在服务器上进行聚合。全局训练模型在所有设备上是相同的。Chen 等人提出了联邦元学习 `FedMeta` [[85]](#ch1.xhtml#ref1_85)，这是一种将模型无关元学习 `MAML` 算法和 `MetaSGD` 集成到框架中的方法。在 FedMeta 中，参数在客户端和服务器之间交换，这与 MT-FedRL 不同。MAML 算法在较新的数据集上表现出快速收敛。研究发现，MAML 和 Meta-SGD 结合可以降低通信成本并提高训练模型的准确性。与 FedAvg 相比，FedMeta 的通信成本降低了 2.82–4.33 倍，收敛速度加快了 3% 到 14%。
 
 图 11 展示了 FL 框架中的元学习。
 
@@ -437,7 +411,7 @@ Anwar 等人提出了用于构建模型投毒攻击者模型的强化学习，�
 
 #### 5.7 联邦学习中的残差网络
 
-Huang 等人提倡在 FL 框架中使用 **残差池化网络 (RPN)** [[86]](#ch1.xhtml#ref1_86)，以减少上传和下载到服务器的数据传输量。RPN 中的任务按顺序调度，在保持相同性能水平的前提下减少数据传输。首先，在 RPN 中，不允许所有客户端向服务器传输参数。系统会进行客户端选择，仅选中的客户端执行模型更新。第二步，每个选中的客户端使用全局更新进行初始化。第三步，使用本地数据集构建并训练本地模型。第四步，通过确定模型更新前后的差异来计算残差网络，从而捕获参数的变化。第五步，如 图 12 所示，执行空间均值池化以压缩模型参数。第六步，将客户端的 RPN 发送到服务器进行聚合。最后，将 RPN 发送给选中的客户端，流程重复进行。RPN 可应用于所有基于 CNN 的训练模型，以减少数据通信开销，并可轻松部署在实际应用中。
+Huang 等人提倡在 FL 框架中使用 `残差池化网络 (RPN)` [[86]](#ch1.xhtml#ref1_86)，以减少上传和下载到服务器的数据传输量。RPN 中的任务按顺序调度，在保持相同性能水平的前提下减少数据传输。首先，在 RPN 中，不允许所有客户端向服务器传输参数。系统会进行客户端选择，仅选中的客户端执行模型更新。第二步，每个选中的客户端使用全局更新进行初始化。第三步，使用本地数据集构建并训练本地模型。第四步，通过确定模型更新前后的差异来计算残差网络，从而捕获参数的变化。第五步，如 图 12 所示，执行空间均值池化以压缩模型参数。第六步，将客户端的 RPN 发送到服务器进行聚合。最后，将 RPN 发送给选中的客户端，流程重复进行。RPN 可应用于所有基于 CNN 的训练模型，以减少数据通信开销，并可轻松部署在实际应用中。
 
 ![图 12. 通过计算均值进行空间池化。](img/fig1_12_B.jpg)
 
@@ -469,15 +443,11 @@ Huang 等人提倡在 FL 框架中使用 **残差池化网络 (RPN)** [[86]](#ch
 
 4.  **计算成本**：在 FL 框架中，多个本地模型在具有不同计算能力的设备上同时训练，并与中央服务器通信更新。参与的本地模型增加也会加剧通信问题和计算考验。现有的联邦学习模型未考虑本地设备极高的计算成本。联邦学习中的非对称计算是一个亟待解决的开放问题。
 
-
-
-
-
-## 5. 可靠的服务器
+5.  **可靠的服务器**
 
 FL 框架中的中央服务器管理本地训练，并接纳客户端发布的梯度更新。可能无法获得可靠且受信任的服务器。即使是中心化形式的差分隐私也能增强数据保护。客户端预期信任中央服务器，如果参与实体之间不存在信任，则可能发生数据泄露。
 
-## 6. 新的 FL 计算框架
+6.  **新的 FL 计算框架**
 
 由冗余服务器、硬件加速器和去中心化训练模型组成的新 FL 计算框架需要进行严谨的研究。
 
@@ -507,51 +477,49 @@ FL 框架中的中央服务器管理本地训练，并接纳客户端发布的�
 
 10.  McMahan, H.B., Moore, E., Ramage, D. and y Arcas, B.A. 2016. Federated learning of deep networks using model averaging. arXiv preprint arXiv:1602.05629, 2.
 
-11.  Konečný, J., McMahan, H.B., Yu, F.X., Richtárik, P., Suresh, A.T. and Bacon, D. 2016. Federated learning: Strategies for improving communication efficiency. arXiv preprint arXiv:1610.05492.
-
-12.  Konečný, J., McMahan, H.B., Ramage, D. and Richtárik, P. 2016. Federated optimization: Distributed machine learning for on-device intelligence. arXiv preprint arXiv:1610.02527.
-
-13.  Hartmann, F. 2018 年 8 月. Federated Learning. [`florian.github.io/federatedlearning`](https://florian.github.io).
-
-14.  Liu, Y., Yang, Q. and Chen, T. 2019. Federated learning and transfer learning for privacy, security, and confidentiality. AAAI. [`aisp-1251170195.file.myqcloud.com/fedweb/1552916850679.pdf`](https://aisp-1251170195.file.myqcloud.com).
-
-15.  Yang, T., Andrew, G., Eichner, H., Sun, H., Li, W., Kong, N., Ramage, D. and Beaufays, F. 2018. Applied federated learning: Improving google keyboard query suggestions. arXiv preprint arXiv:1812.02903.
-
-16.  Hard, A., Rao, K., Mathews, R., Ramaswamy, S., Beaufays, F., Augenstein, S., Eichner, H., Kiddon, C. and Ramage, D. 2018. Federated learning for mobile keyboard prediction. arXiv preprint arXiv:1811.03604.
-
-17.  WeBank. 2020. Utilization of FATE in Anti Money Laundering Through Multiple Banks. [`www.fedai.org/cases/utilization-of-fate-in-anti-money-launderingthrough-multiple-banks/`](https://www.fedai.org).
-
-18.  Intel and Consilient. 2020. Intel and Consilient Join Forces to Fight Financial Fraud with AI. [`newsroom.intel.com/news/intel-consilient-join-forces-fightfinancial-fraud-ai/`](https://www.newsroom.intel.com).
-
-19.  MELLODDY. 2020. MELLODDY Project Meets its Year One Objective: Deployment of The World’s First Secure Platform For Multi-Task Federated Learning In Drug Discovery Among 10 Pharmaceutical Companies. [`www.melloddy.eu/y1announcement`](https://www.melloddy.eu).
-
-20.  NVIDIA. 2020. Triaging COVID-19 Patients: 20 Hospitals in 20 Days Build AI Model that Predicts Oxygen Needs. [`blogs.nvidia.com/blog/2020/10/05/federatedlearning-covid-oxygen-needs/`](https://www.blogs.nvidia.com).
-
-21.  Yang, T., Andrew, G., Eichner, H., Sun, H., Li, W., Kong, N., Ramage, D. and Beaufays, F. 2018. Applied federated learning: Improving google keyboard query suggestions. arXiv preprint arXiv:1812.02903.
-
-22.  Hartmann, F., Suh, S., Komarzewski, A., Smith, T.D. and Segall, I. 2019. Federated learning for ranking browser history suggestions. arXiv preprint arXiv:1911.11807.
-
-23.  Ge, S., Wu, F., Wu, C., Qi, T., Huang, Y. and Xie, X. 2020. Fedner: Privacy-preserving medical named entity recognition with federated learning. arXiv preprint arXiv:2003.09288.
-
-24.  Chai, D., Wang, L., Chen, K. and Yang, Q. 2020. Secure federated matrix factorization. IEEE Intelligent Systems, 36(5): 11-20.
-
-25.  Liu, B., Wang, L. and Liu, M. 2019. Lifelong federated reinforcement learning: A learning architecture for navigation in cloud robotic systems. IEEE Robotics and Automation Letters, 4(4): 4555-4562.
-
-26.  Ammad-Ud-Din, M., Ivannikova, E., Khan, S.A., Oyomno, W., Fu, Q., Tan, K.E. and Flanagan, A. 2019. Federated collaborative filtering for privacy-preserving personalized recommendation system. arXiv preprint arXiv:1901.09888.
-
-27.  Yu, P. and Liu, Y. 2019. August. Federated object detection: Optimizing object detection model with federated learning. In Proceedings of the 3rd International Conference on Vision, Image and Signal Processing (pp. 1-6).
-
-28.  Ramaswamy, S., Mathews, R., Rao, K. and Beaufays, F. 2019. Federated learning for emoji prediction in a mobile keyboard. arXiv preprint arXiv:1906.04329.
-
-29.  Hard, A., Rao, K., Mathews, R., Ramaswamy, S., Beaufays, F., Augenstein, S., Eichner, H., Kiddon, C. and Ramage, D. 2018. Federated learning for mobile keyboard prediction. arXiv preprint arXiv:1811.03604.
-
-30.  Liu, Y., Nie, J., Li, X., Ahmed, S.H., Lim, W.Y.B. and Miao, C. 2020. Federated learning in the sky: Aerial-ground air quality sensing framework with UAV swarms. IEEE Internet of Things Journal, 8(12): 9827-9837.
-
-
-
 
 
 ### 参考文献
+
+11. Konečný, J., McMahan, H.B., Yu, F.X., Richtárik, P., Suresh, A.T. and Bacon, D. 2016. Federated learning: Strategies for improving communication efficiency. arXiv preprint arXiv:1610.05492.
+
+12. Konečný, J., McMahan, H.B., Ramage, D. and Richtárik, P. 2016. Federated optimization: Distributed machine learning for on-device intelligence. arXiv preprint arXiv:1610.02527.
+
+13. Hartmann, F. 2018 年 8 月. Federated Learning. [`florian.github.io/federatedlearning`](https://florian.github.io).
+
+14. Liu, Y., Yang, Q. and Chen, T. 2019. Federated learning and transfer learning for privacy, security, and confidentiality. AAAI. [`aisp-1251170195.file.myqcloud.com/fedweb/1552916850679.pdf`](https://aisp-1251170195.file.myqcloud.com).
+
+15. Yang, T., Andrew, G., Eichner, H., Sun, H., Li, W., Kong, N., Ramage, D. and Beaufays, F. 2018. Applied federated learning: Improving google keyboard query suggestions. arXiv preprint arXiv:1812.02903.
+
+16. Hard, A., Rao, K., Mathews, R., Ramaswamy, S., Beaufays, F., Augenstein, S., Eichner, H., Kiddon, C. and Ramage, D. 2018. Federated learning for mobile keyboard prediction. arXiv preprint arXiv:1811.03604.
+
+17. WeBank. 2020. Utilization of FATE in Anti Money Laundering Through Multiple Banks. [`www.fedai.org/cases/utilization-of-fate-in-anti-money-launderingthrough-multiple-banks/`](https://www.fedai.org).
+
+18. Intel and Consilient. 2020. Intel and Consilient Join Forces to Fight Financial Fraud with AI. [`newsroom.intel.com/news/intel-consilient-join-forces-fightfinancial-fraud-ai/`](https://www.newsroom.intel.com).
+
+19. MELLODDY. 2020. MELLODDY Project Meets its Year One Objective: Deployment of The World’s First Secure Platform For Multi-Task Federated Learning In Drug Discovery Among 10 Pharmaceutical Companies. [`www.melloddy.eu/y1announcement`](https://www.melloddy.eu).
+
+20. NVIDIA. 2020. Triaging COVID-19 Patients: 20 Hospitals in 20 Days Build AI Model that Predicts Oxygen Needs. [`blogs.nvidia.com/blog/2020/10/05/federatedlearning-covid-oxygen-needs/`](https://www.blogs.nvidia.com).
+
+21. Yang, T., Andrew, G., Eichner, H., Sun, H., Li, W., Kong, N., Ramage, D. and Beaufays, F. 2018. Applied federated learning: Improving google keyboard query suggestions. arXiv preprint arXiv:1812.02903.
+
+22. Hartmann, F., Suh, S., Komarzewski, A., Smith, T.D. and Segall, I. 2019. Federated learning for ranking browser history suggestions. arXiv preprint arXiv:1911.11807.
+
+23. Ge, S., Wu, F., Wu, C., Qi, T., Huang, Y. and Xie, X. 2020. Fedner: Privacy-preserving medical named entity recognition with federated learning. arXiv preprint arXiv:2003.09288.
+
+24. Chai, D., Wang, L., Chen, K. and Yang, Q. 2020. Secure federated matrix factorization. IEEE Intelligent Systems, 36(5): 11-20.
+
+25. Liu, B., Wang, L. and Liu, M. 2019. Lifelong federated reinforcement learning: A learning architecture for navigation in cloud robotic systems. IEEE Robotics and Automation Letters, 4(4): 4555-4562.
+
+26. Ammad-Ud-Din, M., Ivannikova, E., Khan, S.A., Oyomno, W., Fu, Q., Tan, K.E. and Flanagan, A. 2019. Federated collaborative filtering for privacy-preserving personalized recommendation system. arXiv preprint arXiv:1901.09888.
+
+27. Yu, P. and Liu, Y. 2019. August. Federated object detection: Optimizing object detection model with federated learning. In Proceedings of the 3rd International Conference on Vision, Image and Signal Processing (pp. 1-6).
+
+28. Ramaswamy, S., Mathews, R., Rao, K. and Beaufays, F. 2019. Federated learning for emoji prediction in a mobile keyboard. arXiv preprint arXiv:1906.04329.
+
+29. Hard, A., Rao, K., Mathews, R., Ramaswamy, S., Beaufays, F., Augenstein, S., Eichner, H., Kiddon, C. and Ramage, D. 2018. Federated learning for mobile keyboard prediction. arXiv preprint arXiv:1811.03604.
+
+30. Liu, Y., Nie, J., Li, X., Ahmed, S.H., Lim, W.Y.B. and Miao, C. 2020. Federated learning in the sky: Aerial-ground air quality sensing framework with UAV swarms. IEEE Internet of Things Journal, 8(12): 9827-9837.
 
 31. Chen, M., Mathews, R., Ouyang, T. and Beaufays, F. 2019. Federated learning of out-of-vocabulary words. arXiv preprint arXiv:1903.10635.
 
@@ -595,13 +563,17 @@ FL 框架中的中央服务器管理本地训练，并接纳客户端发布的�
 
 51. De Coninck, E., Bohez, S., Leroux, S., Verbelen, T., Vankeirsbilck, B., Simoens, P. and Dhoedt, B. 2018. DIANNE: A modular framework for designing, training and deploying deep neural networks on heterogeneous distributed infrastructure. Journal of Systems and Software, 141: 52-65.
 
-52. Abadi, M., Barham, P., Chen, J., Chen, Z., Davis, A., Dean, J., Devin, M., Ghemawat, S., Irving, G., Isard, M. and Kudlur, M. 2016. TensorFlow: A system for large-scale machine learning. In 12th USENIX Symposium on Operating Systems Design and Implementation (OSDI 16) (pp. 265-283).
 
-53. Chen, T., Li, M., Li, Y., Lin, M., Wang, N., Wang, M., Xiao, T., Xu, B., Zhang, C. and Zhang, Z. 2015. Mxnet: A flexible and efficient machine learning library for heterogeneous distributed systems. arXiv preprint arXiv:1512.01274.
 
-54. Xing, E.P., Ho, Q., Dai, W., Kim, J.K., Wei, J., Lee, S., Zheng, X., Xie, P., Kumar, A. and Yu, Y. 2015, August. Petuum: A new platform for distributed machine learning on big data. In Proceedings of the 21th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (pp. 1335-1344).
+## 参考文献
 
-55. Mamidala, A.R., Kollias, G., Ward, C. and Artico, F. 2018. Mxnet-mpi: Embedding mpi parallelism in parameter server task model for scaling deep learning. arXiv preprint arXiv:1801.03855.
+52. Abadi, M., Barham, P., Chen, J., Chen, Z., Davis, A., Dean, J., Devin, M., Ghemawat, S., Irving, G., Isard, M. and Kudlur, M. 2016. TensorFlow: A system for large-scale machine learning. In *12th USENIX Symposium on Operating Systems Design and Implementation (OSDI 16)* (pp. 265-283).
+
+53. Chen, T., Li, M., Li, Y., Lin, M., Wang, N., Wang, M., Xiao, T., Xu, B., Zhang, C. and Zhang, Z. 2015. Mxnet: A flexible and efficient machine learning library for heterogeneous distributed systems. *arXiv preprint arXiv:1512.01274*.
+
+54. Xing, E.P., Ho, Q., Dai, W., Kim, J.K., Wei, J., Lee, S., Zheng, X., Xie, P., Kumar, A. and Yu, Y. 2015, August. Petuum: A new platform for distributed machine learning on big data. In *Proceedings of the 21th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining* (pp. 1335-1344).
+
+55. Mamidala, A.R., Kollias, G., Ward, C. and Artico, F. 2018. Mxnet-mpi: Embedding mpi parallelism in parameter server task model for scaling deep learning. *arXiv preprint arXiv:1801.03855*.
 
 56. coMind.org. Machine learning network for deep learning, <https://comind.org/>.
 
@@ -621,19 +593,15 @@ FL 框架中的中央服务器管理本地训练，并接纳客户端发布的�
 
 64. Han, B. March 2019. An overview of federated learning. Available: <https://medium.com/datadriveninvestor/an-overview-of-federated-learning-8a1a62b0600d>.
 
-65. Caldas, S., Duddu, S.M.K., Wu, P., Li, T., Konečný, J., McMahan, H.B., Smith, V. and Talwalkar, A. 2018. Leaf: A benchmark for federated settings. arXiv preprint arXiv:1812.01097.
+65. Caldas, S., Duddu, S.M.K., Wu, P., Li, T., Konečný, J., McMahan, H.B., Smith, V. and Talwalkar, A. 2018. Leaf: A benchmark for federated settings. *arXiv preprint arXiv:1812.01097*.
 
 66. LEAF: A benchmark for federated settings. July 2019. Available: <https://leaf.cmu.edu/>.
 
-67. Baruch, G., Baruch, M. and Goldberg, Y. 2019. A little is enough: Circumventing defences for distributed learning. Advances in Neural Information Processing Systems, 32.
+67. Baruch, G., Baruch, M. and Goldberg, Y. 2019. A little is enough: Circumventing defences for distributed learning. *Advances in Neural Information Processing Systems*, 32.
 
-68. Bhagoji, A.N., Chakraborty, S., Mittal, P. and Calo, S. 2019, May. Analysing federated learning through an adversarial lens. In International Conference on Machine Learning (pp. 634-643). PMLR.
+68. Bhagoji, A.N., Chakraborty, S., Mittal, P. and Calo, S. 2019, May. Analysing federated learning through an adversarial lens. In *International Conference on Machine Learning* (pp. 634-643). PMLR.
 
-69. Liu, Y., Liu, Y., Liu, Z., Liang, Y., Meng, C., Zhang, J. and Zheng, Y. 2020. Federated forest. IEEE Transactions on Big Data.
-
-
-
-
+69. Liu, Y., Liu, Y., Liu, Z., Liang, Y., Meng, C., Zhang, J. and Zheng, Y. 2020. Federated forest. *IEEE Transactions on Big Data*.
 
 ### 参考文献
 
@@ -689,12 +657,6 @@ FL 框架中的中央服务器管理本地训练，并接纳客户端发布的�
 
 ### 2. 引言
 
-
-
-
-
-# 制造业正面临严峻的两难困境
-
 制造业正面临严峻的两难困境；拥有各种应用的行业知道，在数据和人工智能方面的协作是唯一的出路。围绕竞争顾虑、知识产权、数据主权及其他监管要求存在挑战，这些因素将数据（并最终将创新）孤立在孤岛中 [[2]](#ch2.xhtml#ref2_2)。通用孤岛是最大的挑战和瓶颈，造成了一个个小的信息孤岛，也无法为更宏大图景的整体共享知识做出贡献。应用中的整体数据感知创造了竞争优势。从计算机科学的角度来看，我们通常谈论上下文，这同时适用于数据语义和数据处理，即带宽、速度、内存和含义。上下文需要扩展机会，我们已有 ISO 标准 [[3]](#ch2.xhtml#ref2_3) 和其他数据标准，以便构建更宏大的整体。
 
 “人工智能”（AI）一词最早由约翰·麦卡锡于 1955 年提出 [[4]](#ch2.xhtml#ref2_4)，他基本上将 AI 定义为“制造智能机器的科学与工程，尤其是计算机程序” [[5]](#ch2.xhtml#ref2_5)。AI 是指计算机程序和机器人模仿人类及其他动物自然智能的能力，主要是认知功能，如规划一系列行动和泛化的能力 [[6]](#ch2.xhtml#ref2_6)。
@@ -703,9 +665,11 @@ FL 框架中的中央服务器管理本地训练，并接纳客户端发布的�
 
 行业从孤岛式方法转型时，集成平台即服务（iPaaS）[[10]](#ch2.xhtml#ref2_10) 可以是打破现有孤岛的第一步。根据复杂性和所解决的问题，FL 的通用数据模型可以在分布式系统中结合，运行并使用多个微服务，这些微服务通过多个 API 进行组合和集成。
 
+
+
 本章将从 FL 的概念及其与 AI 的联系开始。随后，我们在工业 4.0 的背景下设定场景。为了进一步理解 FL 及其相互依赖关系和问题，我们增加了机器/计算机方面的内容，包括边缘设备和机器人技术的视角。为了协调 AI 的 ML 侧与认知，作者增加了一个简短的小节，简要涉及人类和动物的认知。为了进一步将主数据模型置于视角中并聚焦，作者继续讨论数据互操作性和数据模式识别，最后总结本章。
 
-### 3. 论联邦学习
+## 3. 论联邦学习
 
 联邦学习作为一个概念最早由 Google 提出 [[11]](#ch2.xhtml#ref2_11)，以回应这样一个问题：模型能否在无需移动和集中存储训练数据的情况下进行训练 [[12]](#ch2.xhtml#ref2_12)。这种方法在以下情况下尤为关键：分布式系统包含存在于孤立孤岛中的大量数据 [[13]](#ch2.xhtml#ref2_13)，或具有敏感数据的本地节点。正如 [[14]](#ch2.xhtml#ref2_14) 所指出的，许多现实场景涉及数据分布在大量设备上。应用可能要求数据保持本地化，受法律原因限制，也受网络容量或计算能力限制。在这里，FL 回应了上述问题所指出的需求。
 
@@ -713,13 +677,9 @@ FL 框架中的中央服务器管理本地训练，并接纳客户端发布的�
 
 此外，如果我们需要上下文映射（例如 3D 映射），同时交叉关联不仅是一维数据、二维数据、三维数据和四维数据，并理解数据中的相似性和差异性，那么如何训练来自不同语境的数据就成了一个问题。通过 FL 的协作方法，利用不同源数据及其优势和劣势，而不陷入 API 湖，我们正在迎来数据和分析需求与要求的新时代。
 
-#### 3.1 论联邦学习技术
+### 3.1 论联邦学习技术
 
 联邦学习的一个关键组件是机器学习（ML），ML 通常基于人工神经网络（ANN）。发明 ANNs 旨在模仿生物神经网络（BNN）的结构和功能，如人脑。简而言之，BNN（和 ANN）的结构由若干层连接和通信的神经元组成，这些结构有助于解决非线性问题。在 ML 背景下，`训练`基本上是指构建能在复杂语境中高效映射输入到输出的 ANNs，这些问题难以用传统编程方法解决（例子可能包括图像处理，这类问题通常被视为人类等生物的 BNN 很容易解决）。ML 和 ANNs 是相当知名的技术，有多个来源可供进一步了解（请参阅如 [[17]](#ch2.xhtml#ref2_17) 了解 BNNs 作为 ANNs 灵感来源的更多信息，以及 ML 和 ANNs 的相当全面的介绍）。训练 ANN 通常通过数据与训练模型（ANN）之间的一对一关系在一个特定的本地设备上执行。因此，联邦学习可被视为一个由一个中心节点协调的用于设备端智能的分布式 ML 平台。
-
-
-
-
 
 针对前文概述的“在无需将数据集中放置的情况下训练模型的机会”这一问题，已提出多种技术来支持联邦学习。在此背景下，协调分布式训练和中心化聚合发挥着重要作用。根据[18]，协调与分发可通过以下步骤进行总结，这些步骤基于图 1 中概述的结构。此处，一个中心节点（图 1 中的中央服务器）聚合客户端节点（图 1 中的节点 1、2 和 3）执行本地训练的行动结果。以下步骤代表一轮分布式训练，并通过迭代执行以达到合理的准确度：
 
@@ -728,18 +688,14 @@ FL 框架中的中央服务器管理本地训练，并接纳客户端发布的�
 图 1. 基础联邦学习方案示例 [22]。
 
 1.  **初始化**：节点被激活并等待中央服务器下发计算任务。
-
 2.  **客户端选择**：选择本地节点以开始在本地数据上进行训练。
-
 3.  **配置**：中央服务器指令选定节点以预先指定的方式在其本地数据上对模型进行训练。
-
 4.  **上报**：每个选定节点将其本地模型发送至服务器进行聚合。中央服务器聚合接收到的模型，并将模型更新发送回节点。
-
 5.  **终止**：一旦满足预定义的终止标准（例如，达到最大迭代次数，或模型准确度超过阈值），中央服务器聚合更新并最终确定全局模型。
 
 本节不再详述联邦学习实现细节的进一步讨论。有关联邦学习背后原则的实现细节的更多信息，请参阅[19]。对于当今的联邦学习系统开发者，存在预先开发好的平台，开发者无需关心底层机制，即可进行创造性的定制化开发。例如，[20]提供了基于 Python 编程的 TensorFlow Federated (TFF) 平台的信息，并附带多个示例，说明如何设置 TFF 环境，以及如何开始使用它来加速构建过程。此外，Oracle 提供了类似的支持，但以 Java 作为开发编程语言（[21]）。
 
-#### 3.2 联邦学习与人工智能的观点
+### 3.2 联邦学习与人工智能的观点
 
 基于物联网的系统通常在数字工厂的语境下被提及（详见后续章节），根据[23]，作为一种概念，这有助于使工业变得更加智能。文中指出，AI 将影响物联网设备上的 ML 训练，并以 FL 作为分布式 ML 的平台。也就是说，AI 被视为一个包含不仅 ML 而且 FL 在内的更高层级概念。FL 的 AI 视角在[13]中也有论述，该文献特别将数据孤岛、数据隐私和安全描述为两大 AI 挑战。
 
@@ -751,7 +707,7 @@ FL 框架中的中央服务器管理本地训练，并接纳客户端发布的�
 
 图 2. 联邦学习、AI、ML 与认知的示意图，a) 常规视角，b) 扩展视角。
 
-### 4. 工业 4.0
+## 4. 工业 4.0
 
 第四次工业革命或 4IR，也称为工业 4.0 和“互联时代”，起源于 1900 世纪，从手工生产方法发展到机器生产。随后发生了一场技术革命，铁路和电报网络大规模建设，意味着人员和思想的传递更加快捷。第三次工业革命（也称为数字革命）在两次世界大战后迅速发展，完全重塑了工业化的新格局，并为 4IR 奠定了基础。
 
@@ -759,15 +715,11 @@ FL 框架中的中央服务器管理本地训练，并接纳客户端发布的�
 
 第四次工业革命和“始终互联”意味着我们在私人和制造过程中都呈现大规模自动化和数据交换的趋势，联邦学习在此发挥着主要作用。通过 4G/5G/6G[27]、蓝牙[28] 和 WiFi[29] 进行电信通信，为我们的联邦学习高速公路创建了具有通信标准的基线。联邦学习利用该网络，可通过运营语境下的高效分析实时满足需求并支持决策。工业 4.0 对应数字工厂的概念，即工业的数字化，工业机器人的语境越来越多地依赖 CPS 和数字孪生等技术。其他用语包括*智能工厂*和*黑灯工厂*，分别对应工业机器人在个体基础上以及整体层面的自主性。整体层面是指机器人之间为完成装配任务而进行的交互。
 
-#### 4.1 自动化
+### 4.1 自动化
 
 根据定义，自动化是指“在制造或其他过程或设施中使用或引入自动设备”[30]。软件开发中的自动化是指“……可将对人工输入的需求降至最低，并可用于几乎任何行业的各种方式的应用。在最基本的层面上，自动化软件旨在将可重复的例行任务转化为自动化操作”[31]。这意味着在将任务和程序转译并数字化映射以表示其预期操作（即任务和感知）时，需要正确地理解和表达它们。
 
-
-
-
-
-# 自动化的 5 个层级
+#### 自动化的 5 个层级
 
 在工业界，我们可以将自动化划分为“自动化的 5 个层级”，这些层级通常列举如下：
 
@@ -779,11 +731,11 @@ FL 框架中的中央服务器管理本地训练，并接纳客户端发布的�
 
 在运营中，第 0–3 级最有可能成为核心关注点。话虽如此，整个数据价值链必须能够互联互通，以便一端的变化能在另一端被捕捉到，从而如果我们寻求的是整体方法，即希望打破孤岛，波动和变化就能得到调整。
 
-## 4.1.1 联邦自动化
+#### 4.1.1 联邦自动化
 
 自动化联邦数据模型是一种“从不同来源收集数据并将其转换为通用模型的软件过程。它允许多个数据库作为一个整体运行，并为前端应用程序提供单一数据源。简单来说，数据联邦允许用户从一个地方访问数据” [33, 34]。这意味着我们拥有自动化层级，并且根据我们所处的数据层级以及在数据价值链中的位置，我们可能只拥有完整整体视图的部分。在工业界，这有时被提及为“黑箱”方法而引起关注 [35]。与此相反，则是构建一个透明视图，其中的内部运作被称为“白箱”。为了配合联邦学习，`Split Learning (SL)` 是一种同样遵循模型到数据场景的方法，客户端在不共享原始数据的情况下训练和测试机器学习模型。SL 的较慢性能已通过 [36] 提出的一种新方法得到改进，该方法名为分联学习（SFL）计算资源调度。下面的本地和全局方法旨在从实际意义上阐释这一方法的含义。
 
-### 4.1.1.1 本地
+##### 4.1.1.1 本地
 
 从传统意义上的本地视角来看，自动化意味着我们使用算法来帮助执行冗余的重复性任务。联邦学习中的中央数据模型可以放置在本地服务器上，即本地部署 [37]。例如，在采矿行业，仅一个轮胎就可以拥 400 个传感器（图 3）来测量压力和“磨损”以进行维护（图 4），这 400 个传感器都是单独的本地传感器，并被放置在一个中央数据模型中用于单个轮胎，一个“主”数据模型协调 4 个轮胎，总共包含 1600 个传感器数据。这个例子意味着轮胎的数据模型默认不包括卡车司机，在这种情况下，车辆和驾驶它的人位于两个独立的数据模型中。这是一个数据软件孤岛的例子。
 
@@ -795,36 +747,35 @@ FL 框架中的中央服务器管理本地训练，并接纳客户端发布的�
 
 图 4. 单个轮胎巨大尺寸的示例。由 Sennersten 绘制.
 
-### 4.1.1.2 全局
+##### 4.1.1.2 全局
 
 延续之前的轮胎示例，如果我们现在拥有 30 辆卡车的车队，我们很可能有一个中央数据模型用于所有这些卡车，每辆卡车都拥有该数据模型的副本，可以在本地处理所有内容，并仅上传错误、异常统计数据、行驶时间、燃油消耗、地形条件导致的磨损等。中央“主”数据模型汇总发送给它的所有客户端数据，这发生在中央服务器上，即云服务。发送的数据仍然可能是孤岛化的，只是在更新一个孤岛化的数据模型。一个数据模型可能与其他数百个子数据模型共存，而这些子数据模型又依次聚合到更高层级的数据模型中。为了让所有这些数据模型链接并相互通信，我们希望实现一个可互操作的环境，在数据价值链跨运营中实现 `interoperability`（互操作性），并能够交叉关联数据并从中受益。互操作性是指“计算机系统或软件交换并利用信息的能力” [38]。
 
-### 5. 机器视角
+## 5. 机器视角
 
 机器，或者更确切地说是计算机，通常需要输入才能产生输出。在输入和输出之间，数据模型/算法需要基于数学公式、规则和/或逻辑执行计算，因此它确实代表了对环境上下文和领域知识的感知。这些模型因上下文和环境而异，这意味着算法或模型可以应用于任何数据，但如果未包含在通用模型中，可能会遗漏具体细节。我们可以说所有环境和情况都有共性，但也因上下文而异。IBM 将联邦学习定义为：“联邦学习是一种在任何人都看不到或接触不到你的数据的情况下训练 AI 模型的方法，提供了一种释放信息以供新 AI 应用程序使用的方式” [8]。这意味着我们将人类移出了循环，如果需要且可行，必须模仿人类能力。人类的思维和专业知识必须被严格理解和映射，这不仅仅是简单的是/否映射。
 
-#### 5.1 边缘设备
+### 5.1 边缘设备
 
 边缘设备根据目的不同可以扮演各种角色，但它们本质上充当网络的入口——或出口——点。这些设备可以在网络之间传输、路由、处理、监控、过滤、翻译和存储数据。就数据而言，参考 IBM 的定义，理解到一个位于不同位置、具有特定上下文细节、不同时区、捕获和发送数据的传感器网络、计算网络资源，我们拥有一个具有实时软件执行需求的数据和运营需求网络。通常，这个设备网络被称为物联网（IoT）的一部分，这些设备不仅捕获和发送数据，还处理数据，从而为网络贡献和提供计算资源。ML 可以对已知的重复信息（即数据）进行分类，并以此高效运行。
 
-##### 5.1.1 设备的联邦能力
+#### 5.1.1 设备的联邦能力
 
 使用特定数据模型在设备上执行的分析面临着取决于其目的和上下文的挑战。如果将数据视为一维的，我们对问题有一个相当统一的理解，并且很容易理解和分析这类数据集。在联邦学习方面，将中央数据模型复制到本地设备上，如果中央数据模型不仅限于冗余重复性任务，它就需要理解本地特性。如果我们扩展数据模型的复杂性，它也应该能够理解其环境上下文。这可以包含 360 度全方位的地形（包含垂直维度），增加 2 个维度、3 维方面以及时间到数据模型中。突然之间，在知道我们在哪里、什么东西在什么时间位于何处方面，我们面临着相当多的数据挑战。
 
-###### 5.1.1.1 全局视角
+##### 5.1.1.1 全局视角
 
 在数字孪生工业 4.0 环境中，伴随着各种类型的传感器，挑战在于如何构建一个全面的自上而下/自下而上的数据模型，它不仅代表孤立的数据本身，还代表一个无需人类在场的人工智能，意味着我们通过视觉、听觉能力（触觉、味觉和嗅觉）延伸了人类。讨论是在数字孪生环境下进行的，我们在该环境下将物理世界映射为一个具有传感器输入的三维映射现实。
 
-###### 5.1.1.2 本地视角
-
-
-
+##### 5.1.1.2 本地视角
 
 IoT devices have GPS coordinates. Localization via GPS points tells us nothing about the orientation of an object in 360-degree space, the rotation of where the object/device sits in context, how it behaves in this digital twin-mapped world beyond basic actions (such as moving from point A to point B), and the orientation of sensors, i.e., the direction they point in space relative to their position.
 
-#### 5.2 Robot Perspective
+### 5.2 Robot Perspective
 
 A robot is "a machine that resembles a living creature in being capable of moving independently (as by walking or rolling on wheels) and performing complex actions (such as grasping and moving objects)" [[39]](#ch2.xhtml#ref2_39). To achieve autonomy, a robot needs an internal "mental model" of itself and the environment in which it operates to accomplish its primary task. Here, the robot's CPS may carry not only a digital model of the robot's primary task corresponding to the environment but also a model of its robotic counterpart. Figure 5 illustrates this perspective with an example of two robots operating in an industrial park, where one robot internally simulates the actions of the other to avoid collisions [[40]](#ch2.xhtml#ref2_40). It must be noted that the example is simulation-based only, used as a proof of concept, where the internal digital twin is used to predict future actions.
+
+
 
 ![Figure 5. Robot R2 plans its actions by internally simulating R1 and itself [40].](images/fig2_5_B.jpg)
 
@@ -836,17 +787,17 @@ From an "understanding" perspective, the five main areas of robotics are: operat
 
 The Robot Operating System (`ROS`) has evolved into an open-source library framework developed and advanced by its users, i.e., industry and academia [[43]](#ch2.xhtml#ref2_43). `ROS` is a set of libraries and tools that help you build robot applications [[44]](#ch2.xhtml#ref2_44). A large amount of development is shared, but some is kept private due to intellectual property (`IP`), patents, and commercialization reasons.
 
-##### 5.2.1 Federated Capabilities for Navigation and Beyond
+## 5.2.1 Federated Capabilities for Navigation and Beyond
 
 As mentioned earlier, a robot with an internal "mental model" contains redundant navigation tasks such as moving forward, turning left, turning right, and reversing using onboard instruments to achieve locomotion. In this case, the robot/edge device is a vehicle that starts at a geolocation origin and moves along a path, i.e., the space from A to B. The vehicle is equipped with a navigation system that navigates with the aid of the Global Positioning System (`GPS`), Inertial Navigation System (`INS`) [[45]](#ch2.xhtml#ref2_45)/Inertial Measurement Unit (`IMU`)[[46]](#ch2.xhtml#ref2_46), Visual Odometry (`VO`) [[47]](#ch2.xhtml#ref2_47), [[48]](#ch2.xhtml#ref2_48) (for GPS-denied and GPS-available environments), and Simultaneous Localization and Mapping (`SLAM`, simultaneously building a map—i.e., the mental model—and localizing the vehicle/robot within this map). `SLAM` algorithms allow the vehicle to map an unknown environment [[49]](#ch2.xhtml#ref2_49). Underground and indoor environments do not always have `GPS` coverage. Before deploying a robot or vehicle into a real environment, simulation can be performed to mimic conditions as close to reality as possible. Federated learning here is the orchestration of multiple processes to guide the robot along a safe route. Battery or energy management is also part of this, as the robot needs enough energy to return to its starting point.
 
-###### 5.2.1.1 Global
+### 5.2.1.1 Global
 
-Robots and autonomous vehicles (such as self-driving cars) are aided by cartography [[50]](#ch2.xhtml#ref2_50), Geographic Information Systems (`GIS`) [[51]](#ch2.xhtml#ref2_51), [[52]](#ch2.xhtml#ref2_52), and `ArcGIS` [[53]](#ch2.xhtml#ref2_53). For field robots, topographic maps with terrain elevation [[54]](#ch2.xhtml#ref2_54) need to be incorporated into navigation to understand the vertical dimension, because the world is not flat. Robot fleets may not all have the same purpose; they may require stepwise or synchronized coordination. There have been several attempts and papers published testing various `FL` architectures and focuses. Reference [[55]](#ch2.xhtml#ref2_55) proposes a novel Federated Learning (`FL`)-based Deep Reinforcement Learning (`DRL`) training strategy (`FLDDPG`) for swarm robotics applications in limited communication bandwidth scenarios. In remote areas and extreme environments, baseline strategies often face low bandwidth issues.
+Robots and autonomous vehicles (such as self-driving cars) are aided by cartography [[50]](#ch2.xhtml#ref2_50), Geographic Information Systems(`GIS`) [[51]](#ch2.xhtml#ref2_51), [[52]](#ch2.xhtml#ref2_52), and `ArcGIS` [[53]](#ch2.xhtml#ref2_53). For field robots, topographic maps with terrain elevation [[54]](#ch2.xhtml#ref2_54) need to be incorporated into navigation to understand the vertical dimension, because the world is not flat. Robot fleets may not all have the same purpose; they may require stepwise or synchronized coordination. There have been several attempts and papers published testing various `FL` architectures and focuses. Reference [[55]](#ch2.xhtml#ref2_55) proposes a novel Federated Learning(`FL`)-based Deep Reinforcement Learning(`DRL`) training strategy(`FLDDPG`) for swarm robotics applications in limited communication bandwidth scenarios. In remote areas and extreme environments, baseline strategies often face low bandwidth issues.
 
 To prevent robots from colliding with each other or with obstacles, they need to be equipped with collision avoidance capabilities [[56]](#ch2.xhtml#ref2_56), [[57]](#ch2.xhtml#ref2_57) to navigate in these environments. In these contexts, sensors and aggregated data have various data models, the semantics of which may be siloed due to the many software and systems running in parallel, but federated learning has benefits here too, enabling us to truly design for intelligence in the system. Faced with all this diverse data, geospatial volumetric indexing becomes crucial for both compute resources and semantics when creating data models for data fusion.
 
-###### 5.2.1.2 Local
+### 5.2.1.2 Local
 
 In the data domain, following the data layout above, federated learning helps us avoid "a powerful elephant threading a needle" (literal metaphor). We must understand how to quantify and discretize data from both a computational perspective and semantic meaning.
 
@@ -854,9 +805,7 @@ Robots and vehicles in navigation mode carry a multitude of sensors that should 
 
 On one side is Federated Learning with `ML`, on the other is the handling and cloning of data models; the data community is still exploring how to map informal human and animal knowledge into complete data models containing human reasoning for algorithmic understanding. The next subsection continues the theme of federated learning, discussing how to handle human and animal cognition towards agents and soft robotics.
 
-### 6. Data Interoperability
-
-
+## 6. Data Interoperability
 
 # 互操作性
 
@@ -880,7 +829,7 @@ On one side is Federated Learning with `ML`, on the other is the handling and cl
 
 #### 6.1.2.2 联邦融合
 
-我们可以问为什么联邦融合有趣，这是有原因的。集中训练学习模型需要一个拥有极其强大计算能力和存储容量的中央云。标准机器学习模型不易直接应用于大规模物联网网络，也无法利用分布式计算的可用性。这呼唤一种新的学习模型，将训练数据分布在各个物联网设备上，而不是集中化。谷歌发明了联邦学习（FL）的概念，用于设备端学习和数据隐私保护；采用 FL 方法，每个物联网设备都可以基于本地收集的数据训练其模型 [75]。
+我们可以问为什么联邦融合有趣，这是有原因的。集中训练学习模型需要一个拥有极其强大计算能力和存储容量的中央云。标准机器学习模型不易直接应用于大规模物联网网络，也无法利用分布式计算的可用性。这呼唤一种新的学习模型，将训练数据分布在各个物联网设备上，而不是集中化。谷歌发明了联邦学习（`FL`）的概念，用于设备端学习和数据隐私保护；采用 `FL` 方法，每个物联网设备都可以基于本地收集的数据训练其模型 [75]。
 
 #### 6.1.2.3 数据索引
 
@@ -890,7 +839,9 @@ On one side is Federated Learning with `ML`, on the other is the handling and cl
 
 通过单次查询同时进行查询并访问多个数据源，是我们的目标。联邦器从一个或多个搜索引擎收集结果，然后在单一用户界面中呈现所有结果 [77]。
 
-### 7. 数据模式识别
+## 7. 数据模式识别
+
+
 
 掌握并分析所有数据后，目的是发现数据中的模式和趋势，以便我们理解超出肉眼所见的内容。模式识别是利用计算机算法识别数据规律和模式的过程。这种识别可在各种输入类型上进行，如生物识别、颜色识别、图像识别和人脸识别。它已应用于图像分析、计算机视觉、医疗保健和地震分析等多个领域 [78]。
 
@@ -908,8 +859,6 @@ On one side is Federated Learning with `ML`, on the other is the handling and cl
 
 ##### 7.2.1 算法执行
 
-
-
 # 算法交易
 
 算法交易是一种利用自动化和预编程的交易指令来执行订单的过程，旨在考量价格、时机和交易量等变量。算法是一组用于解决问题的指令。计算机算法会将完整订单分成小部分，在一段时间内发送至市场 [82]。
@@ -918,14 +867,11 @@ On one side is Federated Learning with `ML`, on the other is the handling and cl
 
 #### 8.1 人类认知
 
-鉴于联邦学习及用于机器学习的数据模型，我们将在此介绍 图 2 中 AI 模型的认知层面。认知功能指代多种心智能力，包括学习、对不可控局势、问题或其他事务的感受 [101]。在机器人学中，我们更多地谈论响应行为而非反应，特别是在刺激-响应的框架下 [102]。此处的重点在于意识到：联邦学习结合机器学习及其数据模型，可能会排除反思能力；而我们可以使用 **ACT-R**、**BDI** 等认知软件模型来涵盖这些行为。**自适应控制思维-理性 (ACT-R)** 是一种认知架构：一种用于模拟和理解人类认知的理论 [103, 104]。**信念-欲望-意图软件模型 (BDI)** 是一种为编程智能智能体而开发的软件模型 [105]。
+鉴于联邦学习及用于机器学习的数据模型，我们将在此介绍图 2 中 AI 模型的认知层面。认知功能指代多种心智能力，包括学习、对不可控局势、问题或其他事务的感受 [101]。在机器人学中，我们更多地谈论响应行为而非反应，特别是在刺激-响应的框架下 [102]。此处的重点在于意识到：联邦学习结合机器学习及其数据模型，可能会排除反思能力；而我们可以使用 `ACT-R`、`BDI` 等认知软件模型来涵盖这些行为。`自适应控制思维-理性 (ACT-R)` 是一种认知架构：一种用于模拟和理解人类认知的理论 [103, 104]。`信念-欲望-意图软件模型 (BDI)` 是一种为编程智能智能体而开发的软件模型 [105]。
 
 #### 8.2.1.1 基于符号主义与连接主义视角的测试用例
 
-作为测试用例，并为了考察一种组合场景，作者采用了应用于鸟类收集数据的 **人工神经网络 (ANN)**。鸟类的个体软件表征应携带独立训练的 **ANN** 作为模拟运动的基础，以代表其个体生物神经网络。一个清晰可见的问题是，**飞行** 的数据点远少于 **游泳** 的数据点，这意味着 **ANN** 失衡，无法表征飞行行为（例如湖泊间的迁徙）。数据集中的不平衡是一个问题，表明需要谨慎使用 **ANN** [106, 107]。因此，解决该问题的方案考虑让个体软件表征不仅包含用于通用 *反应性行为* 的 **ANN** 部分，还包含一个关于状态推理的部分（例如，**作为对邻鸟选择飞行做出反应而起飞的时机**），这被视为 *反思性行为*。虽然反应性行为源自机器学习，但为了弥补 **ANN** 信息的缺失而逼近反思性行为，则受认知科学启发。图 6 展示了一个包含反应性与反思性部分的 **多智能体系统**。在此，两个智能智能体（由绿色框表示）处于一个环境中，系统状态通过持续的相互通信进行更新。
-
-
-
+作为测试用例，并为了考察一种组合场景，作者采用了应用于鸟类收集数据的 `人工神经网络 (ANN)`。鸟类的个体软件表征应携带独立训练的 `ANN` 作为模拟运动的基础，以代表其个体生物神经网络。一个清晰可见的问题是，`飞行` 的数据点远少于 `游泳` 的数据点，这意味着 `ANN` 失衡，无法表征飞行行为（例如湖泊间的迁徙）。数据集中的不平衡是一个问题，表明需要谨慎使用 `ANN` [106, 107]。因此，解决该问题的方案考虑让个体软件表征不仅包含用于通用 `反应性行为` 的 `ANN` 部分，还包含一个关于状态推理的部分（例如，`作为对邻鸟选择飞行做出反应而起飞的时机`），这被视为 `反思性行为`。虽然反应性行为源自机器学习，但为了弥补 `ANN` 信息的缺失而逼近反思性行为，则受认知科学启发。图 6 展示了一个包含反应性与反思性部分的 `多智能体系统`。在此，两个智能智能体（由绿色框表示）处于一个环境中，系统状态通过持续的相互通信进行更新。
 
 ![图 6. 一个通信多智能体系统，展示了反应性和反思性行为。](img/fig2_6_B.jpg)
 
@@ -933,7 +879,7 @@ On one side is Federated Learning with `ML`, on the other is the handling and cl
 
 智能体的表示包含一个 `ANN`（左上部分），它提供可能的下一步移动信息（反应性行为）。此外，右上角的符号代表反思性行为的逻辑，即对替代移动进行推理。包含的圆圈代表智能体的生命代码，在该代码下观察当前内部状态，并产生下一个内部状态。
 
-表示反思性行为的方法主要受 `ACT-R` 启发。`ACT-R` 是一种用于认知研究的概念架构，特别是针对人类行为的研究（[108, 109, 110 和 111])，但在此被泛化用于鸟类研究，甚至更广泛地用于智能体概念的研究。
+表示反思性行为的方法主要受 `ACT-R` 启发。`ACT-R` 是一种用于认知研究的概念架构，特别是针对人类行为的研究（[108, 109, 110 和 111]），但在此被泛化用于鸟类研究，甚至更广泛地用于智能体概念的研究。
 
 ### 8.2.1.2 局部
 
@@ -983,10 +929,6 @@ On one side is Federated Learning with `ML`, on the other is the handling and cl
 
 16.  世界上有多少智能手机？ (来源：[`www.bankmycell.com/blog/how-many-phones-are-in-the-world)`](https://www.bankmycell.com)。
 
-
-
-
-
 ### 参考文献
 
 17. Géron, A. 2019. *Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow— Concepts, Tools. And Techniques to build Intelligent Systems*, O’Reilly, ISBN 978-1492-03264-9.
@@ -1007,7 +949,11 @@ On one side is Federated Learning with `ML`, on the other is the handling and cl
 
 25. Kenett, R.S. and Bortman, J. 2021. The Digital Twin in Industry 4.0: A Wide-angle Perspective. *Wiley Online Library*. DOI: [`doi.org/10.1002/qre.2948`](https://doi.org/10.1002/qre.2948)。
 
-26. Pires, F., Cachada, A., Barbosa, J., Moreira, A.P. and Leitão, P. 2019. Digital Twin in Industry 4.0: Technologies, applications and challenges. 发表于： *2019 IEEE 17th International Conference on Industrial Informatics (INDIN)*，DOI: [10.1109/INDIN41052.2019.8972134](https://doi.org/10.1109/INDIN41052.2019.8972134)。
+
+
+### 参考文献
+
+26. Pires, F., Cachada, A., Barbosa, J., Moreira, A.P. and Leitão, P. 2019. Digital Twin in Industry 4.0: Technologies, applications and challenges. 发表于：*2019 IEEE 17th International Conference on Industrial Informatics (INDIN)*，DOI: [10.1109/INDIN41052.2019.8972134](https://doi.org/10.1109/INDIN41052.2019.8972134)。
 
 27. [What is 5G? How will it transform our world? -Ericsson [Online]](#ch2.xhtml#R_ref2_27) [引用于 2022 年 11 月 23 日]. [`www.ericsson.com/en/5g/what-is-5g`](https://www.ericsson.com/en/5g/what-is-5g)。
 
@@ -1051,12 +997,6 @@ On one side is Federated Learning with `ML`, on the other is the handling and cl
 
 47. Aqel, M.O.A., Marhaban, M.H., Saripan, M.I. and Ismail, N.B. 2016. Review of visual odometry: Types, approaches, challenges, and applications. *SpringerPlus* volume 5, Article number: 1897, [`doi.org/10.1186/s40064-016-3573-7`](https://doi.org/10.1186/s40064-016-3573-7)。
 
-
-
-
-
-### 参考文献
-
 48. Zuo, Y., Yang, J., Chen, J., Wang, X., Wang, Y. and Kneip, L. 2022. DEVO: DepthEvent Camera Visual Odometry in Challenging Conditions. *2022 International Conference on Robotics and Automation (ICRA)*, pp. 2179-2185, doi: [10.1109/ICRA46639.2022.9811805](http://dx.doi.org/10.1109/ICRA46639.2022.9811805).
 
 49. 什么是 SLAM (Simultaneous Localization and Mapping) -MATLAB & Simulink -MATLAB & Simulink (mathworks.com) [Online] [cited 2022 November 23] [`se.mathworks.com/discovery/slam.html`](https://se.mathworks.com).
@@ -1084,6 +1024,10 @@ On one side is Federated Learning with `ML`, on the other is the handling and cl
 60. [Saab Archives -International Mining (im-mining.com) [Online]](#ch2.xhtml#R_ref2_60) [cited 2022 November 23]. [`im-mining.com/tag/saab/`](https://im-mining.com).
 
 61. [ABB i Gruvor [Online] [cited 2022 November 23]](#ch2.xhtml#R_ref2_61). [`new.abb.com/mining/sv`](https://new.abb.com).
+
+
+
+### 参考文献
 
 62. [Atlas Copco: Home of industrial ideas -Atlas Copco Sweden [Online] [cited 2022 November 23]](#ch2.xhtml#R_ref2_62). [`www.atlascopco.com/sv-se`](https://www.atlascopco.com).
 
@@ -1124,12 +1068,6 @@ On one side is Federated Learning with `ML`, on the other is the handling and cl
 80. [什么是算法 | Introduction to Algorithms -GeeksforGeeks [Online] [cited 2022 November 23]](#ch2.xhtml#R_ref2_80). [`www.geeksforgeeks.org/introduction-to-algorithms/`](https://www.geeksforgeeks.org).
 
 81. [4.2 Create Steering Data (opendtect.org) [Online] [cited 2022 November 23]](#ch2.xhtml#R_ref2_81). [`doc.opendtect.org/6.6.0/doc/dgb\_userdoc/Default.htm#dip-steering/create\_steering\_data.htm`](https://doc.opendtect.org).
-
-
-
-
-
-### 参考文献
 
 82. Denisov, M., Anikin, A., Sychev, O. and Katyshev, A. 2021. 基于本体技术的算法语言学习程序执行理解建模。载：Yang, X.S., Sherratt, S., Dey, N. and Joshi, A. (eds.). 第五届信息与通信技术国际大会论文集。智能系统与计算进展，第 1184 卷。Springer, Singapore. [`doi.org/10.1007/978-981-15-5859-7_25`](http://dx.doi.org/10.1007/978-981-15-5859-7_25).
 
@@ -1175,6 +1113,10 @@ On one side is Federated Learning with `ML`, on the other is the handling and cl
 
 103. [ACT-R (John Anderson) [在线] [引用日期：2022 年 6 月 23 日]](#ch2.xhtml#R_ref2_103). [`www.instructionaldesign.org/theories/act/.`](https://www.instructionaldesign.org).
 
+
+
+# 参考文献
+
 104. [ACT-R [在线] [引用日期：2022 年 11 月 23 日]](#ch2.xhtml#R_ref2_104). [`act-r.psy.cmu.edu/.`](http://act-r.psy.cmu.edu).
 
 105. [信念-欲望-意图软件模型 [在线] [引用日期：2022 年 11 月 23 日]](#ch2.xhtml#R_ref2_105). [`en.wikipedia.org/wiki/Belief%E2%80%93desire%E2%80%93intention_software_model.`](https://en.wikipedia.org).
@@ -1191,27 +1133,23 @@ On one side is Federated Learning with `ML`, on the other is the handling and cl
 
 111. Pentecost, D., Sennersten, C., Ollington, R., Lindley, C.A. and Kang, B. 2016. 在 ACT-R 中使用物理引擎辅助决策——利用物理引擎和仿真在认知架构中进行物理预测。智能系统进展国际期刊，Academy, Research and Industry Association (IARIA)。2016 年 12 月（获“最佳论文奖”后邀请发表的期刊论文）。
 
-## 第 3 章 联邦学习架构、机遇与应用
+# 第 3 章 联邦学习架构、机遇与应用
 
 *Pradipta kumar Mishra*，^(³)
 
-### 1. 简介
+## 1. 简介
 
 为了提高隐私和安全性，联邦机器学习作为机器学习领域的一个新兴方向，允许多方在不泄露各自数据的情况下共同训练一个机器学习模型。关于联邦机器学习的文献大致可分为三类：应用、系统和算法。
 
-
-
-
-
-# 算法
+### 算法
 
 大量研究致力于开发联邦机器学习算法。这些算法解决了诸多数据异构性、隐私与安全、通信效率和收敛性等问题。联邦机器学习中最常用的算法包括联邦平均、联邦迁移学习、联邦优化和联邦深度学习。
 
-# 系统
+### 系统
 
-除了算法，研究人员还专注于开发联邦机器学习系统。这些解决方案旨在为分布式机器学习提供强大且可扩展的框架。最知名的联邦机器学习系统包括 `Tensor Flow Federated`、`PySyft` 和 `OpenMined`。这些系统为开发和使用联邦机器学习模型提供了众多框架和工具。
+除了算法，研究人员还专注于开发联邦机器学习系统。这些解决方案旨在为分布式机器学习提供强大且可扩展的框架。最知名的联邦机器学习系统包括 `TensorFlow Federated`、`PySyft` 和 `OpenMined`。这些系统为开发和使用联邦机器学习模型提供了众多框架和工具。
 
-# 应用
+### 应用
 
 学者们利用联邦机器学习探索的众多领域中，仅举几例便包括物联网、银行业和医疗保健。医疗专业人员利用联邦机器学习来发现新药、预测疾病和评估患者风险。在金融行业，用于客户细分、欺诈检测和信用评分。在物联网领域，已应用于能耗预测、智能家居监控和交通预测。
 
@@ -1223,35 +1161,31 @@ On one side is Federated Learning with `ML`, on the other is the handling and cl
 
 一项应用是在医疗保健领域，因为数据极其敏感。联邦通过去中心化数据提供了一种保护用户隐私的方式，将 AI 的优势带入具有敏感数据和异构性的领域。机器学习是一种在医学影像中发现模式的技术。在医疗保健领域，机器学习的重大进展使获取医疗数据成为可能。通过联邦学习，一个由来自不同医院的所有异构数据组成的训练神经网络已形成，整个训练过程由中心化服务器控制。机构在更新模型并与服务器通信时告知网络其原始数据情况。计算机汇总所有修改后的模型后，将更新的全局模型发回医院。这确保了模型将包含来自多个客户端的数据，而无需更改初始数据 [[6]](#ch3.xhtml#ref3_6)。在不断演进的技术帮助下，创建了全面的医学影像。联邦学习实现的训练模型将使这种医学影像能够提供更好的医疗保健。深度学习算法通过改善 MRI 或 CT 扫描的图像，显著辅助了疾病的早期检测。这帮助了众多医疗机构 [[7]](#ch3.xhtml#ref3_7)。随着互联网技术的进步，移动设备进入了新的智能时代。由于快速发展，设备现在更容易遭受数据黑客攻击。联邦学习有助于数据安全 [[3]](#ch3.xhtml#ref3_3)–[[4]](#ch3.xhtml#ref3_4)。
 
-### 2. 联邦学习的类型
+## 2. 联邦学习的类型
 
 联邦学习是一种分布式机器学习方法，允许多方在不共享数据的情况下联合训练机器学习模型。协作学习有多种类型，例如
 
-## 2.1. 横向联邦学习
+### 2.1 横向联邦学习
 
 在该类联邦学习中，模型在具有相似数据分布的各种客户端或平台上进行训练。旨在通过结合来自不同来源的数据来提高模型的准确性。
 
-## 2.2. 纵向联邦学习
+### 2.2 纵向联邦学习
 
 在该形式的联邦学习中，模型使用具有不同数据分布但相同通用特征集的各种客户端或设备进行训练。旨在通过结合来自不同来源的数据来提高模型的准确性。
 
-
-
-
-
-#### 2.3 联邦迁移学习
+### 2.3 联邦迁移学习
 
 在这种联邦学习中，一个已经训练好的模型被迁移到一个新环境中，数据分散在众多设备之间。该模型将针对新任务和新环境进行调整。
 
-#### 2.4 联邦多任务学习
+### 2.4 联邦多任务学习
 
 在这种联邦学习中，一个模型使用各种客户端或设备在各种任务上进行训练。通过结合来自不同任务的数据，旨在提高模型的性能。
 
-#### 2.5 联邦元学习
+### 2.5 联邦元学习
 
 在这种联邦学习中，模型被训练以学习如何学习各种活动和环境。目标是增强模型未来适应新任务和新环境的能力。
 
-### 3. 文献综述
+## 3. 文献综述
 
 联邦机器学习（FML）是机器学习（ML）的一个子集，其中多个参与者——通常是客户端或节点——可以协同构建单个 ML 模型，而无需共享任何私密或敏感信息。FML 旨在实现去中心化、保护隐私且可扩展的 ML，以用于医疗保健、金融和物联网等多个行业。在保护各个参与者数据的安全性和隐私的同时，保持全局模型的准确性是 FML 的主要挑战之一。文献中提出了许多技术来实现这一目标，包括联邦平均、联邦迁移学习和联邦深度学习。McMahan 等人发表的论文“Communication-Efficient Learning of Deep Networks from Decentralized Data”首次引入了联邦平均算法，也称为 `FedAvg`，这是 FML 中广泛使用的一种算法。在这种方法中，中央服务器计算本地训练模型的平均值后，将更新传输给每个参与者。然后参与者使用更新后的模型来优化其本地模型。
 
@@ -1267,59 +1201,65 @@ Google 的联邦学习群组（`FLoC`）技术允许在各种设备的数据上�
 
 联邦学习保护隐私，特别强调确保训练过程保护训练过程中所用数据的隐私。安全多方机器学习的目标是解决在多方拥有数据并希望协同训练机器学习模型、同时保持数据隐私的情况下训练模型的挑战。联邦迁移学习关注于将知识从中心化机器学习模型迁移到数据分散在各种平台的去中心化环境中。这些只是与 FML 密切相关的众多作品中的几个例子。该领域取得了重大进展，行业仍在不断发展和扩大。
 
-
-
-
-
-# 联邦机器学习综述
+## 联邦机器学习综述
 
 联邦机器学习领域已发表大量综述和研究，旨在全面总结该领域现状，并重点介绍最重要的进展与困难。《联邦机器学习：概念与应用》是该领域最著名的研究之一。该研究提供了该概念及其潜在用途的详尽概述，是联邦机器学习领域最早的综述之一。它讨论了联邦学习的技术难题，以及隐私和安全问题。在《移动与物联网联邦学习综述》中，重点关注移动设备和物联网背景下联邦学习的困难与应用。它对当前领域状态进行了详尽分析，并涵盖了联邦学习中使用的各种算法和技术。在边缘计算背景下，该研究关注联邦学习带来的独特机遇与挑战，提供了该领域未来发展路径的见解，并涵盖了各种联邦学习算法、系统和应用。一项关于联邦学习分类的研究对联邦学习主题进行了详尽分析，涵盖其各种问题、解决方案和未来前景。此外，它还详细解释了与联邦学习相关的隐私和安全问题，并强调了该技术在各行业的潜在用途。上述仅为联邦机器学习领域众多已发表研究的几个例子。它们为该领域的现状、困难与机遇、以及这一迷人研究领域的未来方向提供了宝贵见解。
 
 在机器学习社区，联邦机器学习是一个新兴领域，旨在对去中心化且保存在各种设备或网络节点上的数据训练机器学习模型。以下是联邦机器学习相关工作的综述。
 
-## 联邦学习核心方法
+### 联邦学习核心方法
 
-### 联邦平均
+#### 联邦平均
+
 最古老且最知名的联邦学习方法之一。根据该方法，每个网络组件在发送平均值到中央服务器前，先对其本地计算的梯度进行平均，中央服务器据此更新全局模型。
 
-### 安全聚合
+#### 安全聚合
+
 安全聚合是分布式平均的扩展，考虑了隐私问题。在安全聚合中，每个节点在将本地计算的梯度传输到中央服务器前对其进行加密。服务器通过聚合加密梯度来更新全局模型。
 
-### 联邦迁移学习
+#### 联邦迁移学习
+
 针对联邦环境下非独立同分布数据的问题。该方法利用迁移学习，通过使用本地数据微调预训练模型来提高效率。
 
-### 联邦蒸馏
+#### 联邦蒸馏
+
 该策略利用知识蒸馏将信息从全局模型传输到本地模型。本地模型利用可访问的数据进行预测，预测结果随后在中央服务器聚合。
 
-### 联邦随机梯度下降
+#### 联邦随机梯度下降
+
 一种联邦平均方法，使用随机梯度下降更新全局模型。该方法从每个节点数据中采样的小批量样本计算梯度，并发送到中央计算机。
 
-### 非独立同分布数据下的联邦学习
+#### 非独立同分布数据下的联邦学习
+
 一个相对较新的研究领域，旨在解决非独立同分布数据下联邦学习的问题。该方法在训练前对数据进行重采样、重加权或修改，使其跨节点更具可比性。
 
-### 隐私保护联邦学习
+#### 隐私保护联邦学习
+
 一个活跃的研究领域，专注于创建在执行联邦学习时保持隐私的算法。该方法使用差分隐私或安全多方计算等隐私保护技术来保护敏感数据。
 
-## 联邦机器学习概述
+### 联邦机器学习概述
 
 联邦机器学习是机器学习的一个新领域，旨在对非集中式数据源训练模型，这些数据源存储并在单个设备上本地处理。近年来，由于隐私担忧加剧和边缘设备产生的数据量激增，其相关性显著增加。
 
 联邦机器学习的相关工作可分为三大类：**联邦优化**、**联邦迁移学习** 和 **联邦学习系统**。
 
-### 联邦优化
+#### 联邦优化
+
 联邦优化是优化的一个子类别，专注于开发可在分布式数据源上改进机器学习模型的算法。该类别的主要挑战是设计能成功处理非独立同分布数据的算法，这是联邦环境中的常见问题。该领域流行技术包括 `FedProx`、`FedAvg` 和 `Federated Averaging`。
 
-### 联邦迁移学习
+#### 联邦迁移学习
+
 联邦迁移学习专注于将从一个数据源获得的知识迁移到另一个数据源，通常是从集中式数据源迁移到联邦环境。主要挑战是设计能在保护隐私的同时高效迁移信息的技术。该组包括 `federated transfer learning` 和 `federated fine-tuning` 等流行技术。
 
-### 联邦学习系统
+#### 联邦学习系统
+
 联邦学习系统关注联邦机器学习系统的开发和部署。主要挑战是设计能在联邦环境中有效处理通信开销和隐私问题的系统。该领域流行程序包括 `OpenMined`、`PySyft` 和 `TensorFlow Federated`。
 
-## 现状与挑战
+### 现状与挑战
 
 联邦机器学习是一个快速扩展的领域，拥有广泛的机遇和挑战。相关工作涵盖系统实现、迁移学习和优化等广泛主题。这些是共享机器学习的几项主要贡献。新策略和方法正在被创建，以应对联邦学习的困难，包括可扩展性、通信有效性、隐私和鲁棒性。
 
-## 定义与比较研究
+### 定义与比较研究
 
 联邦机器学习是机器学习的一个子集，允许多方在不直接交换数据的情况下联合训练模型。相反，各方在其数据上构建本地模型，更新它，并将其传输到中央服务器，中央服务器聚合更新并返回全局模型。这种策略可在支持数据隐私保护的同时实现协作模型训练。
 
@@ -1327,15 +1267,13 @@ Google 的联邦学习群组（`FLoC`）技术允许在各种设备的数据上�
 
 1.  研究人员在 2021 年发表于《Journal of Machine Learning Research》的论文中，比较了联邦学习方法与集中式学习方法在图像分类任务上训练卷积神经网络（CNN）的有效性。他们发现，联邦学习方法能以更少的通信轮次和更低的通信成本，达到与集中式方法相当的性能。
 
-
-
-
-
-## 2. 用于推荐模型的联邦学习
+2.  用于推荐模型的联邦学习
 
 一项发表于 2020 年 *IEEE Transactions on Services Computing*（IEEE 服务计算汇刊）上的研究，针对在大规模数据集上训练推荐模型，对比了联邦学习方法与传统机器学习方法的功效。研究人员发现，在保持用户数据隐私的同时，联邦学习方法能够达到与集中式方法相当甚至更优的性能水平。
 
-## 3. 用于 NLP 模型的联邦学习
+3.  用于 NLP 模型的联邦学习
+
+
 
 另一项发表于 2021 年 *IEEE Proceedings*（IEEE 会议录）上的研究，针对在文本分类任务上训练自然语言处理（NLP）模型，对比了联邦学习方法与传统机器学习方法的有效性。研究人员发现，特别是在处理高度不平衡数据集时，联邦学习方法能够取得与集中式方法相当甚至更好的性能。
 
@@ -1359,7 +1297,7 @@ Google 的联邦学习群组（`FLoC`）技术允许在各种设备的数据上�
 
 总体而言，该案例研究展示了联邦学习在保护敏感数据的同时，实现协作并改进机器学习模型的潜力。
 
-### 4. 联邦机器学习架构
+### 联邦机器学习架构
 
 联邦机器学习（FML）是一种分布式机器学习范式，它允许多方协作训练机器学习模型，同时保持对其数据的本地控制权。FML 架构通常由以下要素组成：
 
@@ -1369,7 +1307,7 @@ Google 的联邦学习群组（`FLoC`）技术允许在各种设备的数据上�
 *   **模型**：模型是正在训练的联邦机器学习模型。模型在服务端初始化，随后利用客户端更新数据的聚合进行训练。最终训练好的模型用于进行预测或其他操作。
 *   **隐私保护技术**：由于部分客户端可能不愿与他人共享原始数据，隐私是 FML 中的核心问题。为应对这一挑战，FML 通常采用多种隐私保护方法，包括差分隐私、同态加密、安全多方计算等，以确保数据在整个训练过程中保持私密和安全。
 
-#### 4.1 水平联邦学习
+#### 水平联邦学习
 
 “水平联邦学习”是指一种联邦学习形式，其中用于模型训练的数据样本分散在多个具有可比特征的设备上，例如同类设备或相似的使用模式。在水平联邦学习中，各设备的更新被聚合以创建全局模型，各设备的数据样本以去中心化方式用于训练模型。此方法在保护单个数据样本隐私的同时，支持在无法存储于单一设备上的大规模数据集上训练模型。图 1 和图 2 展示了联邦学习设计。
 
@@ -1387,7 +1325,7 @@ Google 的联邦学习群组（`FLoC`）技术允许在各种设备的数据上�
 
 该算法联合训练具有相同特征的样本数据集的数据。它主要利用统一数据。
 
-#### 4.2 垂直联邦学习
+#### 垂直联邦学习
 
 多个组织协作在其各自的本地数据上训练一个共同的机器学习模型，这些数据按特定特征垂直划分，这一过程称为垂直联邦学习。在此设置中，每个组织拥有包含特定特征子集详细信息的数据，且这些特征在组织间各不相同。目标是在遵守各组织数据主权和隐私标准的前提下，训练一个能高效利用所有参与组织数据的模型。
 
@@ -1395,162 +1333,132 @@ Google 的联邦学习群组（`FLoC`）技术允许在各种设备的数据上�
 
 垂直联邦学习的主要挑战在于验证模型能否在遵守隐私要求的前提下，利用来自不同组织的垂直划分数据。为此，必须使用同态加密、安全多方计算或差分隐私等先进的隐私保护方法。
 
-
-
-
 将这些不同特征组合、计算训练损失并保持所有内容私密以创建中心化模型的过程被称为垂直联邦学习 [10]–[18]。
 
-### 5. 联邦学习的挑战
+### 联邦学习的挑战
 
 在联邦学习中，中心服务器协调众多边缘设备（如智能手机或物联网设备），共同构建机器学习模型，而无需交换原始数据。虽然联邦学习具有多项优势，包括边缘设备间的相互学习能力和用户匿名性的保护，但也存在若干缺点：
 
 1.  **设备异构性**：由于网络状况、程序版本和硬件配置的差异，很难保证联邦学习中所有边缘设备的模型更新保持一致。
-
 2.  **数据质量和分布**：边缘设备上数据的质量、规模和分布可能不同，这可能导致模型性能出现偏差和公平性问题。
-
 3.  **安全性和隐私**：联邦学习依赖于设备与中心服务器之间共享聚合数据和模型更新，这在安全性和隐私方面可能存在风险。
-
 4.  **通信和延迟**：低带宽网络或高延迟连接可能导致边缘设备与中心服务器难以频繁通信，从而产生通信开销和模型更新延迟。
-
 5.  **模型复杂性和可扩展性**：为处理模型复杂性、将模型分发到边缘设备，并保证可扩展性以支持众多设备，联邦学习需要强大的基础设施。
 
-### 6. 基于不同标准的联邦机器学习现状
+### 基于不同标准的联邦机器学习现状
 
 请记住，这只是一个高层对比，不同的联邦机器学习算法变体可能具有不同的优缺点。此外，最佳联邦学习算法取决于特定的用例和系统需求。
 
-### 7. 联邦学习在边缘计算中的应用
+### 联邦学习在边缘计算中的应用
 
 联邦学习是一种机器学习策略，允许在分散数据上进行协作学习，同时保护用户隐私 [10]。它可用于多种场景，例如：
 
 1.  **医疗保健**：联邦学习可利用分散的医疗数据训练机器学习模型，同时保护患者匿名性。例如，医疗机构可以合作构建机器学习模型以识别疾病、预测患者预后或定制护理方案。
-
 2.  **金融服务**：联邦学习可利用分散的金融数据训练机器学习模型，同时保护个人隐私。例如，银行可以合作识别欺诈交易、预测信用风险或提供个性化理财建议。
-
 3.  **智慧城市**：在保护用户隐私的前提下，联邦学习可利用来自传感器、摄像头和其他物联网设备的分布式数据构建机器学习模型。该方法可改善公共安全、交通管控、城市规划和环境监测。
-
 4.  **自然语言处理的联邦学习**：联邦学习可利用来自不同语言和方言的分布式输入训练自然语言处理模型。该方法可提高情感分析、机器翻译和其他语言相关任务的精度和效率。
-
 5.  **图像识别的联邦学习**：联邦学习可利用分布式图像数据（如照片或视频）训练机器学习模型，同时保护个人匿名性。该方法可提高目标检测、图像识别等视觉任务的精度。
-
 6.  **推荐系统的联邦学习**：在保护用户隐私的前提下，联邦学习可利用分布式用户行为数据开发机器学习模型。该方法可增强电子商务、社交媒体及其他领域推荐系统的精度和个性化程度。
 
 表 1. 边缘计算中的联邦学习。
 
-| 标准 | | 联邦平均 | 联邦随机梯度下降 | 联邦蒸馏 |
-| --- | --- | --- | --- | --- |
-| 数据隐私 [19] | | 通过在本地训练模型并仅向中心服务器传输模型更新，保护用户匿名性。 | 通过在本地训练模型并向主服务器发送梯度变化，保护用户隐私。 | 使用小型压缩模型从在中心化数据上训练的大型模型中提取信息，保护用户隐私。 |
-| 通信开销 [20, 21] | | 因频繁向主服务器发送模型变更而导致高通信成本。 | 因向主服务器发送梯度变化而导致较低的通信成本。 | 因使用紧凑的小型模型进行蒸馏而降低传输成本。 |
-| 收敛速度 [7, 16] | | 因本地模型变更在中心服务器聚合而收敛更快。 | 因中心服务器的中心设备连接延迟而导致收敛速度较慢。 | 因从更大、更中心化的模型中提取知识而加快收敛步伐。 |
-| 可扩展性 [14] | | 能扩展至大规模数据集和大量边缘设备。 | 足以应对合理数量的边缘设备。 | 足以应对合理数量的边缘设备。 |
-| 鲁棒性 [6] | | 因使用加权平均，该方法对非 IID 数据和异常值具有鲁棒性。 | 对非 IID 数据更具鲁棒性，但对滞后者的抵抗力较弱。 | 对异常值和非 IID 数据的抵抗力较弱。 |
-| 算法复杂性 [17, 14] | | 算法结构简单且低复杂度。 | 复杂度适中，算法框架更复杂。 | 算法框架更复杂，复杂度从中等到高。 |
+| 标准 | 联邦平均 | 联邦随机梯度下降 | 联邦蒸馏 |
+| --- | --- | --- | --- |
+| 数据隐私 [19] | 通过在本地训练模型并仅向中心服务器传输模型更新，保护用户匿名性。 | 通过在本地训练模型并向主服务器发送梯度变化，保护用户隐私。 | 使用小型压缩模型从在中心化数据上训练的大型模型中提取信息，保护用户隐私。 |
+| 通信开销 [20, 21] | 因频繁向主服务器发送模型变更而导致高通信成本。 | 因向主服务器发送梯度变化而导致较低的通信成本。 | 因使用紧凑的小型模型进行蒸馏而降低传输成本。 |
+| 收敛速度 [7, 16] | 因本地模型变更在中心服务器聚合而收敛更快。 | 因中心服务器的中心设备连接延迟而导致收敛速度较慢。 | 因从更大、更中心化的模型中提取知识而加快收敛步伐。 |
+| 可扩展性 [14] | 能扩展至大规模数据集和大量边缘设备。 | 足以应对合理数量的边缘设备。 | 足以应对合理数量的边缘设备。 |
+| 鲁棒性 [6] | 因使用加权平均，该方法对非 IID 数据和异常值具有鲁棒性。 | 对非 IID 数据更具鲁棒性，但对滞后者的抵抗力较弱。 | 对异常值和非 IID 数据的抵抗力较弱。 |
+| 算法复杂性 [17, 14] | 算法结构简单且低复杂度。 | 复杂度适中，算法框架更复杂。 | 算法框架更复杂，复杂度从中等到高。 |
 
 这些只是联邦学习众多潜在用途中的一小部分。随着这项技术的发展，我们可以预期在各个行业和领域会出现更多创新用例。
 
-### 8. 联邦学习中的安全性
+### 联邦学习中的安全性
 
 得益于称为边缘联邦学习的分布式机器学习方法，智能手机、传感器和物联网设备等边缘设备可以在不共享原始数据的情况下协同训练机器学习模型。边缘联邦学习的优势在于保护用户匿名性、降低通信成本并允许边缘设备相互学习 [10]，但也带来了必须解决的若干安全问题，例如：
 
 1.  **恶意攻击**：边缘设备可能成为数据投毒、模型投毒和拜占庭攻击等恶意攻击的目标。这些攻击可能危及模型和数据的完整性、可用性和机密性。
-
 2.  **数据隐私**：边缘设备可能存储健康记录、位置数据和个人信息等私密信息。联邦学习要求设备间共享聚合数据和模型更新，若未妥善保护，可能危及用户隐私。
-
 3.  **模型隐私**：在边缘设备与中心计算机之间传输的模型参数和更新中，可能包含商业机密、知识产权和专有算法等敏感信息。为防止盗窃、篡改或未经授权的访问，必须对其进行保护。
 
-
-
-
-## 4. 认证与访问控制
+#### 认证与访问控制
 
 为防止未经授权访问边缘设备、主服务器和模型，联邦学习需要强有力的认证和访问控制机制。
 
-## 5. 通信安全
+#### 通信安全
 
 为防止数据窃听、数据拦截和数据篡改，联邦学习需要边缘设备与中央服务器之间建立安全通信通道。
 
 正在开发多种方法论和框架，例如安全多方计算、同态加密、差分隐私和基于区块链的解决方案，以解决这些安全问题。这些方法和工具旨在提供安全、私密的边缘联邦学习，同时保持分布式数据协作学习的优势。
 
-### 9. 联邦机器学习的未来方向
+### 联邦机器学习的未来方向
 
 联邦学习是一种在不牺牲用户隐私的前提下，实现分布式数据协作机器学习的潜在方法。联邦学习的未来发展方向可能包括以下几个方面：
 
-### 1. 隐私增强技术
+#### 隐私增强技术
 
 为提升联邦学习的安全性和隐私性，相关研究正致力于开发隐私增强工具。例如，利用安全多方计算和同态加密等技术，可在保护隐私的前提下实现对敏感数据的联邦学习。
 
-### 2. 面向边缘计算的联邦学习
+#### 面向边缘计算的联邦学习
 
 联邦学习可扩展至边缘计算，以实现边缘设备上的协作机器学习。该策略可提升联邦学习的可扩展性、降低延迟并提高效率。
 
-### 3. 面向物联网 (IoT) 的联邦学习
+#### 面向物联网 (IoT) 的联邦学习
 
 物联网设备可通过联邦学习相互协作学习，而无需将原始数据发送到云端。该策略可降低网络带宽占用、减少通信开销并增强匿名性。
 
-### 4. 面向个性化机器学习的联邦学习
+#### 面向个性化机器学习的联邦学习
 
 通过允许边缘设备从自身数据中学习，同时利用网络中其他设备的知识，联邦学习可促进个性化机器学习。该策略可提高针对特定用户的机器学习模型在隐私保护前提下的准确性。
 
-### 5. 面向自主系统的联邦学习
+#### 面向自主系统的联邦学习
 
 联邦学习可用于自主系统（如自动驾驶汽车、无人机和机器人）的分布式数据协作机器学习。该策略可增强自主系统的可靠性、效率和安全性。
 
 ### 参考文献
 
 1.  Zhang, C., Xie, Y., Bai, H., Yu, B., Li, W. and Gao, Y. 2021. A survey on federated learning. Knowledge-Based Systems, 216: 106775.
-
 2.  Li, T., Sahu, A.K., Talwalkar, A. and Smith, V. 2020. Federated learning: Challenges, methods, and future directions. IEEE Signal Processing Magazine, 37(3): 50–60.
-
 3.  Li, L., Fan, Y., Tse, M. and Lin, K.Y. 2020. A review of applications in federated learning. Computers & Industrial Engineering, 149: 106854.
-
 4.  Yang, Q., Liu, Y., Chen, T. and Tong, Y. 2019. Federated machine learning: Concept and applications. ACM Transactions on Intelligent Systems and Technology (TIST), 10(2): 1–19.
-
 5.  Yang, Q., Liu, Y., Cheng, Y., Kang, Y., Chen, T. and Yu, H. 2019. Federated learning. Synthesis Lectures on Artificial Intelligence and Machine Learning, 13(3): 1–207.
-
 6.  Sánchez, P.M.S., Celdrán, A.H., Beltrán, E.T.M., Demeter, D., Bovet, G., Pérez, G.M. and Stiller, B. 2022. Analyzing the robustness of decentralized horizontal and vertical federated learning architectures in a non-IID scenario. arXiv preprint arXiv:2210.11061.
-
 7.  Hegedűs, I., Danner, G. and Jelasity, M. 2021. Decentralized learning works: An empirical comparison of gossip learning and federated learning. Journal of Parallel and Distributed Computing, 148: 109–124. 20.
-
 8.  Ye, Y., Li, S., Liu, F., Tang, Y. and Hu, W. 2020. EdgeFed: Optimized federated learning based on edge computing. IEEE Access, 8: 209191–209198.
-
 9.  Xia, Q., Ye, W., Tao, Z., Wu, J. and Li, Q. 2021. A survey of federated learning for edge computing: Research problems and solutions. High-Confidence Computing, 1(1): 100008.
-
 10.  Yang, J., Zheng, J., Zhang, Z., Chen, Q.I., Wong, D.S. and Li, Y. 2022. Security of federated learning for cloud-edge intelligence collaborative computing. International Journal of Intelligent Systems, 37(11): 9290–9308.
-
 11.  Abreha, H.G., Hayajneh, M. and Serhani, M.A. 2022. Federated learning in edge computing: A systematic survey. Sensors, 22(2): 450.
-
 12.  Zeng, R., Zeng, C., Wang, X., Li, B. and Chu, X. 2021. A comprehensive survey of an incentive mechanism for federated learning. arXiv preprint arXiv:2106.15406.
-
 13.  Liu, J., Huang, J., Zhou, Y., Li, X., Ji, S., Xiong, H. and Dou, D. 2022. From distributed machine learning to federated learning: A survey. Knowledge and Information Systems, 64(4): 885–917.
-
 14.  Bonawitz, K., Eichner, H., Grieskamp, W., Huba, D., Ingerman, A., Ivanov, V., Kiddon, C., Konený, J., Mazzocchi, S., McMahan, B., Van Overveldt, T. and Roselander, J. 2019. Towards federated learning at scale: System design. Proceedings of Machine Learning and Systems, 1: 374–388.
 
-15.  Zhang, C., Xie, Y., Bai, H., Yu, B., Li, W. and Gao, Y. 2021. A survey on federated learning. Knowledge-Based Systems, 216: 106775.
 
-16.  Niknam, S., Dhillon, H.S. and Reed, J.H. 2020. Federated learning for wireless communications: Motivation, opportunities, and challenges. IEEE Communications Magazine, 58(6): 46–51.
 
-17.  Połap, D. and Woźniak, M. 2021. Meta-heuristic as manager in federated learning approaches for image processing purposes. Applied Soft Computing, 113: 107872.
+# 第 4 章 基于加密参数聚合的安全隐私联邦学习
 
-18.  Aledhari, M., Razzak, R., Parizi, R.M. and Saeed, F. 2020. Federated learning: A survey on enabling technologies, protocols, and applications. IEEE Access, 8: 140699–140725.
-
-19.  Alazab, M., Swarna Priya, R.M., Parimala, M., Maddikunta, P.K.R., Gadekallu, T.R. and Pham, Q.V. 2021. Federated learning for cybersecurity: Concepts, challenges, and future directions. IEEE Transactions on Industrial Informatics, 18(5): 3501–3509.
-
-20.  Zhang, T. and Mao, S. 2022. An introduction to the federated learning standard. GetMobile: Mobile Computing and Communications, 25(3): 18–22.
-
-21.  Posner, J., Tseng, L., Aloqaily, M. and Jararweh, Y. 2021. Federated learning in vehicular networks: Opportunities and solutions. IEEE Network, 35(2): 152–159.
-
-## 第 4 章 基于加密参数聚合的安全隐私联邦学习
-
-*K Vijayalakshmi*,^(⁴)
+*K Vijayalakshmi*^(⁴)
 
 电子邮箱：sitharselvam@gmail.com; thamarai.panimalar@gmail.com; ashok.j@christuniversity.in; gsathishit@smec.ac.in; kannanarchieves@gmail.com
 
-### 1. 介绍
+## 参考文献
 
+15. Zhang, C., Xie, Y., Bai, H., Yu, B., Li, W. and Gao, Y. 2021. A survey on federated learning. Knowledge-Based Systems, 216: 106775.
 
+16. Niknam, S., Dhillon, H.S. and Reed, J.H. 2020. Federated learning for wireless communications: Motivation, opportunities, and challenges. IEEE Communications Magazine, 58(6): 46–51.
 
+17. Połap, D. and Woźniak, M. 2021. Meta-heuristic as manager in federated learning approaches for image processing purposes. Applied Soft Computing, 113: 107872.
 
+18. Aledhari, M., Razzak, R., Parizi, R.M. and Saeed, F. 2020. Federated learning: A survey on enabling technologies, protocols, and applications. IEEE Access, 8: 140699–140725.
 
-# 集中式与联邦式环境中的 ML/DL
+19. Alazab, M., Swarna Priya, R.M., Parimala, M., Maddikunta, P.K.R., Gadekallu, T.R. and Pham, Q.V. 2021. Federated learning for cybersecurity: Concepts, challenges, and future directions. IEEE Transactions on Industrial Informatics, 18(5): 3501–3509.
+
+20. Zhang, T. and Mao, S. 2022. An introduction to the federated learning standard. GetMobile: Mobile Computing and Communications, 25(3): 18–22.
+
+21. Posner, J., Tseng, L., Aloqaily, M. and Jararweh, Y. 2021. Federated learning in vehicular networks: Opportunities and solutions. IEEE Network, 35(2): 152–159.
+
+## 1. 介绍
+
+### 集中式与联邦式环境中的 ML/DL
 
 ML/DL 在各种应用领域均展现出良好的效果，尤其是当海量数据汇聚在一个位置时，例如数据中心或云服务 [1]。但如果数据由（第三方）云服务集中收集和存储，一旦发生数据泄露，公司（云服务客户）可能面临巨大的法律责任 [2, 3]。在处理人们的健康信息、对话、私人住宅录像、资金转账及其他此类事务时，这一点尤为重要 [4]。数据上传后，“失控”是集中式数据收集的常见问题。云服务是否按宣传方式使用数据？这是一个常见问题，却令人沮丧。文件真的会在声称删除时被擦除吗？由于政府法规，即使未被隐私泄露和失控风险说服的企业，也限制了与外部提供商共享的数据量（如 HIPAA 和 GDPR）。
 
@@ -1558,7 +1466,7 @@ FL 的目标是在最小化 ML/DL 模型缺点的同时提升其质量。FL 任�
 
 最初人们认为，随着 FL 交互的进行，仅有极少量关于原始训练数据的信息会延续至后续的模型更新中 [10]。基于此，认为模型更新的传播具有“隐私保护”性。无论如何，模型更新中仍残留着训练数据的痕迹，即便这并不显而易见。近期研究表明，利用模型变化即可推断私有特征并重构大量训练数据，这让 FL 的隐私保证受到质疑。即使面对诚实但好奇的聚合服务器，此情况依然成立。
 
-### 2. 假设与关注点
+## 2. 假设与关注点
 
 常见的联邦学习部署有两种：跨设备和跨孤岛 [11]。在跨设备场景中，参与者众多（超过一千），但每个参与者仅拥有少量数据点、有限的算力和有限的可用能量（如智能手机和物联网设备） [12, 13]。它们极不可预测，总是游离群体之外又重新加入。例如，大型公司可受益于员工个人设备上存储的知识，设备制造商可利用其数百万自有设备上私密保存的数据训练模型 [14]。跨设备训练时，拥有一个收集数据并监管后勤的中央联系点会很有帮助 [15]。相比之下，跨孤岛场景参与者虽少，但均拥有海量数据和强大的计算资源（如持续供电或硬件 ML 加速器） [16, 17]。每个参与者在 FL 训练全程均在线且活跃，但敏感信息更易遭泄露 [18]。应用示例包括多家医院利用 X 光片训练肿瘤检测模型、不同银行训练信用卡欺诈检测模型等。跨孤岛场景中不存在显而易见的首选可靠来源 [19]。训练者与受训者之间无层级之分。由一方提供公共云托管或基础设施供给是此类部署的常见组成部分。本章专注于跨孤岛私有参数聚合 [20]。
 
@@ -1566,16 +1474,13 @@ FL 的目标是在最小化 ML/DL 模型缺点的同时提升其质量。FL 任�
 
 换言之，全球最大金融机构 BankA 在全球设有多个分支机构（BankA 印度、BankA 美国、BankA 英国等），却无法利用任何子公司的数据训练欺诈检测模型 [24, 25 and 26]。该信任范式的常见应用之一是职场联邦学习。区域数据中心服务于各子公司，全球数据中心可能部署协调者。医院间互不信任，不愿向中心化服务提供数据，却仍想合作训练肿瘤检测模型 [27]。也可能多家（竞争关系的）云托管 ML 服务（如 Azure ML）企业客户互不信任，但信任云服务具备安全开展 FL 的能力。
 
-### 3. 私有联邦学习
+## 3. 私有联邦学习
 
 差分隐私框架关注在共享数据集上计算或查询的结果时，限制私有信息的泄露 [28, 29 and 30]。若一项计算能确保外部观察者仅通过查看其在数据集上产生的结果，无法判断使用了哪个个体的数据，则称其为差分隐私 [31]。差分隐私通常被理解为因披露任意数据集衍生物而导致的隐私损失的数学刻画。
 
-
-
-
 最近，许多研究人员开始在联邦学习环境训练模型时采用差分隐私 [32, 33, 34 和 35]。在联邦学习环境中，常规做法是在公开每个模型/数据导数之前添加噪声。参与者对匿名性的需求将决定应包含多少随机噪声。引入这种噪声会损害训练模型的准确性。研究表明，添加少量噪声并仔细选择训练超参数对准确性的影响可以忽略不计，但尚未有系统性研究探讨噪声水平究竟如何影响模型收敛 [36]。在不牺牲太多精度的情况下确定可行的隐私水平，可能需要漫长的实证方法。在本小节中，作者将对此问题提供更深入的描述和支持数据 [37]。
 
-#### 3.1 差分隐私（DP）背景
+### 3.1 差分隐私（DP）背景
 
 最近，计算机科学领域对差分隐私文献给予了大量关注。由于篇幅限制，作者将在本章中仅简要讨论差分隐私（DP）结构。DP 在 [38, 39 和 40] 中有更深入的描述。根据差分隐私文献，当函数 `f(·)` 应用于仅相差一条记录的一对数据 `X` 和 `X'` 时，当且仅当它对所有 `t` 返回相同值，该函数才是 `ɛ` DP。
 
@@ -1613,7 +1518,7 @@ P(f(X) = t) \leq e^{(\epsilon)}P(f(f(X^{\prime}) = t) + \delta
 
 无需如此天真地一次性花光所有隐私预算。多位作者探讨了多种花费隐私预算的方式以取得各类进展。利用差分隐私的一种推广，文献 [43] 实现了对每次查询隐私损失的更严格限制，同时减少了查询次数，从而降低了总体隐私损失。
 
-#### 3.2 差分隐私与随机梯度下降的结合
+### 3.2 差分隐私与随机梯度下降的结合
 
 为了训练机器学习算法，特别是深度学习模型，`SGD` 是一种常见的优化方法。为了使分布式 `SGD` 工作，小批量数据必须被分成更小的片段并分发给每个参与者，参与者的任务是计算模型的梯度。然后将组合梯度发送到中心化的参数服务器。一旦参数服务器找到学习者梯度的全局平均值，参数模型就会被调整。
 
@@ -1653,16 +1558,13 @@ P(f(X) = t) \leq e^{(\epsilon)}P(f(f(X^{\prime}) = t) + \delta
 >
 > **end for**
 
-#### 3.3 讨论
+### 3.3 讨论
 
 让我们通过讨论几个相关实验，深入探讨在联邦学习中实施 `DP` 的困难。`CIFAR-10` 数据集可用于训练 `Resnet-18` 模型，而 `SVHN` 数据集可用于构建 `Resnet-50` 模型。所有模型均使用原始 `SGD` 和 `DP` 变体训练 200 次迭代。计划前 80 个周期以 0.1 的学习率训练，接下来 40 个周期以 0.01 的学习率训练，最后 80 个周期以 0.001 的学习率训练。
 
-##### 3.3.1 准确率与 ϵ
+#### 3.3.1 准确率与 ϵ
 
-
-
-
-## 3.3.1 收敛性分析
+#### 3.3.1 收敛性分析
 
 不同批次大小和 `ɛ` 值下的收敛图表分别显示在图 4.1 和图 4.2 中。首先需要注意的是，当作者降低 `ɛ` 的值时，模型收敛到的精度会降低。产生噪声较少的训练方法更接近非私有训练的准确率，如图 1 所示，以特定批次大小（例如 1024）为例。随着引入更多噪声，`ɛ = 0.01` 及以下（等同于 `ɛ` 为 0.05）时准确率迅速下降。正如图 4.1 和图 4.2 所示，这种模式在每个给定批次大小下的所有模型中均成立。
 
@@ -1680,38 +1582,37 @@ P(f(X) = t) \leq e^{(\epsilon)}P(f(f(X^{\prime}) = t) + \delta
 
 当批次大小从 1024 增加到 8192 时，对于对应 `ɛ = 0.01` 和 `0.005` 的更私有设置，CIFAR10+ResNet18 的最终准确率分别提高了约 37% 和 78.5%。图 2 显示了类似的趋势。尽管差分隐私前景广阔，但它似乎需要非常精确的超参数优化以确保最佳性能。为此，可能需要启动大量 FL 任务，每个任务都有自己的超参数集。
 
-### 4. 加法同态加密
+## 4. 加法同态加密
 
 研究人员要么（1）采用密码学的新颖应用（带有同态加密的安全多方计算），要么（2）通过引入统计噪声来改变模型参数或梯度。某些程序中两者可以结合使用。
-
-同态加密允许在密文上进行计算，解密后的加密输出与明文的值相匹配。全同态加密虽然有效，但由于密文长度的原因，耗时且资源密集。另一方面，在联邦梯度下降中，平均梯度向量就像汇总其分量一样简单（在加密聚合方法之前或之后，可能会减去参与者的总数。）。联邦训练梯度可以用加法同态加密（如 Paillier 密码系统）进行加密。在公钥密码学方面，Paillier 密码系统提供了一种额外的非对称选择。通过结合 `m[1]` 和 `m[2]` 的加密版本以及公钥，作者可以得到求和结果的加密版本。同态加密的定义生动地说明了将其用于私有梯度聚合的难度。所有参与者必须使用相同的公钥来加密他们的梯度和参数。需要可靠的密钥来源及其分发机制。然而，如果所有参与者都与这个密钥生成器/分发器通信并将其 Paillier 加密的梯度发送给它，则有可能解密数据。因此，聚合应尽可能独立于密钥生成器/分发器进行。此外，密钥生成器/分发器必须被隐性信任，不向任何第三方泄露私钥。有各种设计可以在这些参数范围内工作。最后，将我们的方法与其他差分隐私和安全多方计算（SMC）方法进行评估。
-
-值得注意的是，Mystiko 并非唯一使用 Paillier 密码学保护收集数据的系统。协作方使用 Paillier 密钥对加密梯度向量，并将其发送给一个他们不信任的协调者，直到需要合并权重时为止。然后参与者可以分析收集到的梯度向量。为了共同生成 Paillier 密钥，参与者需要对自己和不受信任的协调者都有高度的信任，以便他们可以独立解码各自的梯度向量。单个不可靠行为者泄露 Paillier 密钥就可能危及整个系统并损害用户隐私。
-
-被称为安全多方计算（SMC）的密码学领域的目标是寻找多方安全且独立地在其各自输入上计算同一函数的方法。在此范式中，密码学用于保护参与者彼此的隐私，这与传统密码学职业不同，后者用于保护通信和存储的安全性与完整性，且对手位于参与者系统之外（发送方和接收方的窃听者）。传统的 SMC 方法可以通过 SPDZ 及其衍生协议得到改进。此类协议的有前景的特性包括：免疫少量串通对等体的攻击、能扩展到大量对等体、以及对训练模型最终正确性的变化不敏感。一个潜在问题是 SMC 方法计算成本高昂。
-
-#### 4.1 学习者与管理域、参与者
-
-一个自然的起点是从管理域的角度定义 FL 算法。一组计算机可以被视为一个管理域（服务器、虚拟机、计算机、笔记本电脑等）。在一个管理域内，所有参与方可以相互信任，不存在恶意意图，且没有法律或监管障碍阻碍数据及源自数据的信息自由流动。重要的是要记住，公司或非营利组织不一定是一个管理域。它可能是处理敏感信息的内部公司项目，也可能是关联到公共云账户的外部托管服务。单个组织内部可能存在多个控制域。联邦学习算法中的每个节点代表一个独立的监管域。在训练神经网络的过程中，计算学习过程本身（通常运行在 GPU 上）被称为学习者。参与者进程中的每个学习者处理（数据的一个子集）数据以计算梯度向量。
-
-#### 4.2 架构
-
 
 
 
 # 联邦学习系统中的隐私保护与 MYSTIKO 算法
 
-在一个以参与者隐私为优先的联邦学习系统中，模型参数或梯度的聚合取决于参与者采用的加密技术以及参与者到达系统协调器所采用的通信通道。使用共享的 Paillier 公钥，所有 MYSTIKO 用户在结合其加密梯度向量以生成单个加密结果之前对其数据进行加密。因此，保密性得以维持，因为只有参与者才能访问其信息。当前的问题是：(1) 在共享 Paillier 公钥的同时如何保证每个人私钥的安全；(2) 如何防范特定权重被解密。以下将对这两个问题进行解释。
+同态加密允许在密文上进行计算，解密后的加密输出与明文的值相匹配。全同态加密虽然有效，但由于密文长度的原因，耗时且资源密集。另一方面，在联邦梯度下降中，平均梯度向量就像汇总其分量一样简单（在加密聚合方法之前或之后，可能会减去参与者的总数。）。联邦训练梯度可以用加法同态加密（如 `Paillier` 密码系统）进行加密。在公钥密码学方面，`Paillier` 密码系统提供了一种额外的非对称选择。通过结合 `m[1]` 和 `m[2]` 的加密版本以及公钥，作者可以得到求和结果的加密版本。同态加密的定义生动地说明了将其用于私有梯度聚合的难度。所有参与者必须使用相同的公钥来加密他们的梯度和参数。需要可靠的密钥来源及其分发机制。然而，如果所有参与者都与这个密钥生成器/分发器通信并将其 `Paillier` 加密的梯度发送给它，则有可能解密数据。因此，聚合应尽可能独立于密钥生成器/分发器进行。此外，密钥生成器/分发器必须被隐性信任，不向任何第三方泄露私钥。有各种设计可以在这些参数范围内工作。最后，将我们的方法与其他差分隐私和安全多方计算（`SMC`）方法进行评估。
 
-为简洁起见，假设每个参与者是一名学生。通常，MYSTIKO 作为一种云服务，充当多方之间的中介。为此，作者需要 `Job Manager`（作业管理器）、`Membership Manager`（成员管理器）、`Key Generator`（密钥生成器）和 `Decryptor`（解密器）。此外，`Membership Manager` 还负责记录参与每项 FL 活动的用户，以便为 MYSTIKO 注册用户。FL 作业的 `Job Manager` 负责修复漏洞、更新成员、查找缺失人员以及确定作业超参数的最优值。本章重点关注联邦内部的数据隐私攻击，但标准通信安全对于抵御来自联邦外部的攻击也是必要的。为此，MYSTIKO 和学生（参与者）将共享一个 PKI。保护 MYSTIKO 组件与学生之间发送数据的隐私，是 PKI 帮助 Paillier 基础设施建立起来的众多方式之一。为了在学生和 MYSTIKO 之间建立信任链，PKI 提供了 CA、中间 CA 和根 CA。利用公钥基础设施（PKI），MYSTIKO 建立加密的 TLS 通道用于发送和接收控制数据。构建 TLS 通道采用了标准但强大的（非同态）加密方法（例如使用 RSA 进行密钥协商/交换/认证）、使用 AES 保证消息机密性、使用 SHA 进行消息认证。在学习者注册、排名、分发 Paillier 公钥，以及在 MYSTIKO 拓扑形成期间通信解密后的聚合梯度向量等所有操作，均通过 TLS 通道进行。
+值得注意的是，`Mystiko` 并非唯一使用 `Paillier` 密码学保护收集数据的系统。协作方使用 `Paillier` 密钥对加密梯度向量，并将其发送给一个他们不信任的协调者，直到需要合并权重时为止。然后参与者可以分析收集到的梯度向量。为了共同生成 `Paillier` 密钥，参与者需要对自己和不受信任的协调者都有高度的信任，以便他们可以独立解码各自的梯度向量。单个不可靠行为者泄露 `Paillier` 密钥就可能危及整个系统并损害用户隐私。
 
-#### 4.3 MYSTIKO 算法
+被称为安全多方计算（`SMC`）的密码学领域的目标是寻找多方安全且独立地在其各自输入上计算同一函数的方法。在此范式中，密码学用于保护参与者彼此的隐私，这与传统密码学职业不同，后者用于保护通信和存储的安全性与完整性，且对手位于参与者系统之外（发送方和接收方的窃听者）。传统的 `SMC` 方法可以通过 `SPDZ` 及其衍生协议得到改进。此类协议的有前景的特性包括：免疫少量串通对等体的攻击、能扩展到大量对等体、以及对训练模型最终正确性的变化不敏感。一个潜在问题是 `SMC` 方法计算成本高昂。
 
-作者从最简单的基于环的方法入手，逐步介绍到目前最复杂的算法，包括结合了并行性和广播韧性的 MYSTIKO 算法族。
+## 4.1 学习者与管理域、参与者
 
-##### 4.3.1 基于环的算法
+一个自然的起点是从管理域的角度定义 `FL` 算法。一组计算机可以被视为一个管理域（服务器、虚拟机、计算机、笔记本电脑等）。在一个管理域内，所有参与方可以相互信任，不存在恶意意图，且没有法律或监管障碍阻碍数据及源自数据的信息自由流动。重要的是要记住，公司或非营利组织不一定是一个管理域。它可能是处理敏感信息的内部公司项目，也可能是关联到公共云账户的外部托管服务。单个组织内部可能存在多个控制域。联邦学习算法中的每个节点代表一个独立的监管域。在训练神经网络的过程中，计算学习过程本身（通常运行在 `GPU` 上）被称为学习者。参与者进程中的每个学习者处理（数据的一个子集）数据以计算梯度向量。
 
-图 4.3 和 图 4.4 描绘了基于环的基本聚合方法示例。该算法涉及的 P 个参与者均为拥有其管理域（L）的学习者。流程开始时，每个参与者必须注册 MYSTIKO 账户。MYSTIKO 协调一切事务。由于 MYSTIKO 生成安全的加密密钥对、保护私钥并遵循协议，因此学生可以信任它。
+## 4.2 架构
+
+在一个以参与者隐私为优先的联邦学习系统中，模型参数或梯度的聚合取决于参与者采用的加密技术以及参与者到达系统协调器所采用的通信通道。使用共享的 `Paillier` 公钥，所有 `MYSTIKO` 用户在结合其加密梯度向量以生成单个加密结果之前对其数据进行加密。因此，保密性得以维持，因为只有参与者才能访问其信息。当前的问题是：(1) 在共享 `Paillier` 公钥的同时如何保证每个人私钥的安全；(2) 如何防范特定权重被解密。以下将对这两个问题进行解释。
+
+为简洁起见，假设每个参与者是一名学生。通常，`MYSTIKO` 作为一种云服务，充当多方之间的中介。为此，作者需要 `Job Manager`（作业管理器）、`Membership Manager`（成员管理器）、`Key Generator`（密钥生成器）和 `Decryptor`（解密器）。此外，`Membership Manager` 还负责记录参与每项 `FL` 活动的用户，以便为 `MYSTIKO` 注册用户。`FL` 作业的 `Job Manager` 负责修复漏洞、更新成员、查找缺失人员以及确定作业超参数的最优值。本章重点关注联邦内部的数据隐私攻击，但标准通信安全对于抵御来自联邦外部的攻击也是必要的。为此，`MYSTIKO` 和学生（参与者）将共享一个 `PKI`。保护 `MYSTIKO` 组件与学生之间发送数据的隐私，是 `PKI` 帮助 `Paillier` 基础设施建立起来的众多方式之一。为了在学生和 `MYSTIKO` 之间建立信任链，`PKI` 提供了 `CA`、中间 `CA` 和根 `CA`。利用公钥基础设施（`PKI`），`MYSTIKO` 建立加密的 `TLS` 通道用于发送和接收控制数据。构建 `TLS` 通道采用了标准但强大的（非同态）加密方法（例如使用 `RSA` 进行密钥协商/交换/认证）、使用 `AES` 保证消息机密性、使用 `SHA` 进行消息认证。在学习者注册、排名、分发 `Paillier` 公钥，以及在 `MYSTIKO` 拓扑形成期间通信解密后的聚合梯度向量等所有操作，均通过 `TLS` 通道进行。
+
+## 4.3 MYSTIKO 算法
+
+作者从最简单的基于环的方法入手，逐步介绍到目前最复杂的算法，包括结合了并行性和广播韧性的 `MYSTIKO` 算法族。
+
+### 4.3.1 基于环的算法
+
+图 4.3 和 图 4.4 描绘了基于环的基本聚合方法示例。该算法涉及的 `P` 个参与者均为拥有其管理域（`L`）的学习者。流程开始时，每个参与者必须注册 `MYSTIKO` 账户。`MYSTIKO` 协调一切事务。由于 `MYSTIKO` 生成安全的加密密钥对、保护私钥并遵循协议，因此学生可以信任它。
 
 ![图 3. 建立拓扑与密钥分发](img/fig4_3_B.jpg)
 
@@ -1721,180 +1622,170 @@ P(f(X) = t) \leq e^{(\epsilon)}P(f(f(X^{\prime}) = t) + \delta
 
 图 4. 使用环形网络拓扑的标准聚合方法
 
-一旦所有预期学生加入 MYSTIKO，`Membership Manager` 将启动 FL 流程。从环拓扑开始，作者组织班级（图 3）。有几种简单的方法：（1）按位置，以最小化参与者间的实际物理距离；（2）采用基于名称的层级（升序或降序）；（3）一致性哈希 [24] 参与者的名称和身份。随后根据学生在分配环中的位置对其进行排名（1–P）。
+一旦所有预期学生加入 `MYSTIKO`，`Membership Manager` 将启动 `FL` 流程。从环拓扑开始，作者组织班级（图 3）。有几种简单的方法：（1）按位置，以最小化参与者间的实际物理距离；（2）采用基于名称的层级（升序或降序）；（3）一致性哈希 [24] 参与者的名称和身份。随后根据学生在分配环中的位置对其进行排名（1–P）。
 
-MYSTIKO 中每个 FL 任务都有其专属的 Paillier `Key Generator` 私钥和公钥。Paillier 密钥对对于每个 FL 任务唯一，并通过 TLS 安全分发给所有参与者。若操作预计长时间运行，可按固定间隔（如每 h 分钟或每个 epoch，可配置）生成新密钥对。`MYSTIKO` 的 `Decryptor` 接收 Paillier 加密的聚合梯度向量，解密后发送给学习者。环中的每个学习者节点利用 Paillier 公钥解码共享梯度向量，加密自身梯度向量，并将两个加密向量结合。最后一名环学习者接收聚合后的 Paillier 加密梯度向量。随后，该学习者将聚合加密梯度向量发送给 MYSTIKO。`MYSTIKO Decryptor` 在通过 TLS 向学生传输信息前，对结合向量进行加密。
+`MYSTIKO` 中每个 `FL` 任务都有其专属的 `Paillier` `Key Generator` 私钥和公钥。`Paillier` 密钥对对于每个 `FL` 任务唯一，并通过 `TLS` 安全分发给所有参与者。若操作预计长时间运行，可按固定间隔（如每 `h` 分钟或每个 `epoch`，可配置）生成新密钥对。`MYSTIKO` 的 `Decryptor` 接收 `Paillier` 加密的聚合梯度向量，解密后发送给学习者。环中的每个学习者节点利用 `Paillier` 公钥解码共享梯度向量，加密自身梯度向量，并将两个加密向量结合。最后一名环学习者接收聚合后的 `Paillier` 加密梯度向量。随后，该学习者将聚合加密梯度向量发送给 `MYSTIKO`。`MYSTIKO Decryptor` 在通过 `TLS` 向学生传输信息前，对结合向量进行加密。
 
 #### 安全性分析
 
-学生及其所属教育机构的信息绝不泄露给外部方。只要每个管理域内的服务器部署了强大的防入侵机制，即可确保数据隐私。在该系统中，梯度向量永远不会以未加密形式离开学习者。仅当 P 小于 1 时，学习者才会释放聚合的 Paillier 加密梯度向量。解密需要 MYSTIKO 的私钥。通过 Paillier 加密传输，第二个环学习者从第一个环学习者接收未聚合的梯度向量，而第一个环学习者无法解密该向量。聚合完成后，完整梯度向量对外不可见。为确保聚合梯度安全到达所有参与者，发送前会通过 TLS 进行加密。当从大型数据集平均多个梯度向量时，极难实现反向工程攻击目标（如判断特定参与者是否拥有特定数据记录，或识别导致梯度向量特定变化的数据项）。为保护平均前梯度的机密性，先进行加密。因此，MYSTIKO 只能看到总体结果，无法获取个别学生的数据或梯度。
+学生及其所属教育机构的信息绝不泄露给外部方。只要每个管理域内的服务器部署了强大的防入侵机制，即可确保数据隐私。在该系统中，梯度向量永远不会以未加密形式离开学习者。仅当 `P` 小于 1 时，学习者才会释放聚合的 `Paillier` 加密梯度向量。解密需要 `MYSTIKO` 的私钥。通过 `Paillier` 加密传输，第二个环学习者从第一个环学习者接收未聚合的梯度向量，而第一个环学习者无法解密该向量。聚合完成后，完整梯度向量对外不可见。为确保聚合梯度安全到达所有参与者，发送前会通过 `TLS` 进行加密。当从大型数据集平均多个梯度向量时，极难实现反向工程攻击目标（如判断特定参与者是否拥有特定数据记录，或识别导致梯度向量特定变化的数据项）。为保护平均前梯度的机密性，先进行加密。因此，`MYSTIKO` 只能看到总体结果，无法获取个别学生的数据或梯度。
 
 #### 串通参与者
 
-基础环算法无法被超过 P–2 个参与者攻破。即若 MYSTIKO 诚实且未被破坏运行，仅当 P–1 名学生串通时才可能被破解。学习者 L1, L2..., Li–1, Li+1..., LP 必须串通，通过传递从前一学习者接收的加密梯度向量（不附加自身梯度）来解码学习者 Li 的梯度。
+基础环算法无法被超过 `P–2` 个参与者攻破。即若 `MYSTIKO` 诚实且未被破坏运行，仅当 `P–1` 名学生串通时才可能被破解。学习者 `L1, L2..., Li–1, Li+1..., LP` 必须串通，通过传递从前一学习者接收的加密梯度向量（不附加自身梯度）来解码学习者 `Li` 的梯度。
 
 #### 容错性
 
-基于环的聚合方法潜在缺陷是环可能断裂；为实现最优性能，必须维护每个学习者与 MYSTIKO 间的稳健连接。可采用成熟的故障检测方法，如监控心跳异常或计算平均往返时间。分布式同步梯度下降的每次迭代均对上一次迭代的梯度求平均。若发现学习者故障，`MYSTIKO` 的 `Membership Manager` 将把该学习者从环中移除，或等待其重新连接后继续梯度向量平均。当 MYSTIKO 连接短暂中断时，可暂停梯度平均过程。
+基于环的聚合方法潜在缺陷是环可能断裂；为实现最优性能，必须维护每个学习者与 `MYSTIKO` 间的稳健连接。可采用成熟的故障检测方法，如监控心跳异常或计算平均往返时间。分布式同步梯度下降的每次迭代均对上一次迭代的梯度求平均。若发现学习者故障，`MYSTIKO` 的 `Membership Manager` 将把该学习者从环中移除，或等待其重新连接后继续梯度向量平均。当 `MYSTIKO` 连接短暂中断时，可暂停梯度平均过程。
 
-##### 4.3.2 广播算法
+### 4.3.2 广播算法
 
+建立和维护环形拓扑的难度是基于环形方法的主要缺点。使用组成员资格和广播是解决这一问题的一种方案。除了拓扑现已建立这一事实外，情况没有任何其他变化。`MYSTIKO 成员管理器`是学生注册、就共享 `PKI` 达成一致，并获知将使用该系统的所有其他人员姓名和编号的地方。与 `MYSTIKO` 中联邦任务相关联的每个 `Paillier` 公私钥对的公钥都会安全地传达给所有参与学生。
 
+`Paillier` 学习算法在将每个学习者的梯度向量发送给其他学习者之前对其进行加密。为了解密由其他 `P–1` 个学习者发送给他们的加密向量，一个学习者将 `Paillier` 加密求和提交给 `MYSTIKO`。合并后的梯度向量解密副本通过 `TLS` 以安全可靠的方式发送给每个学生。由于每个学生都计算求和，广播方法效率低下且没有必要。不过，有了冗余，作者们可以在不得不重新开始之前容忍更多挫折。与广播不同——如果单个节点故障，所有聚合梯度仍将可用——环形在节点故障时会遭受部分损失。
 
-建立和维护环形拓扑的难度是基于环形方法的主要缺点。使用组成员资格和广播是解决这一问题的一种方案。除了拓扑现已建立这一事实外，情况没有任何其他变化。`MYSTIKO 成员管理器`是学生注册、就共享 PKI 达成一致，并获知将使用该系统的所有其他人员姓名和编号的地方。与 `MYSTIKO` 中联邦任务相关联的每个 Paillier 公私钥对的公钥都会安全地传达给所有参与学生。
+#### 串通参与者
 
-Paillier 学习算法在将每个学习者的梯度向量发送给其他学习者之前对其进行加密。为了解密由其他 `P–1` 个学习者发送给他们的加密向量，一个学习者将 Paillier 加密求和提交给 `MYSTIKO`。合并后的梯度向量解密副本通过 `TLS` 以安全可靠的方式发送给每个学生。由于每个学生都计算求和，广播方法效率低下且没有必要。不过，有了冗余，作者们可以在不得不重新开始之前容忍更多挫折。与广播不同——如果单个节点故障，所有聚合梯度仍将可用——环形在节点故障时会遭受部分损失。
+给定 `LA` 的明文梯度向量代表了算法预期的弱点。需要 `P–1` 个参与者合作才能破解该算法，这使其具有极强的抗串通性。如果 `P–1` 个学生秘密地用 `Paillier` 加密 `0` 向量来代替他们真实的梯度向量，广播的 `Paillier` 密文中的相似性将表明存在合作。事实上，即使只有两个学习者产生相同的 `Paillier` 加密梯度向量也是可疑的，因为他们的数据很可能不同。
 
-### 串通参与者
-
-给定 `LA` 的明文梯度向量代表了算法预期的弱点。需要 `P–1` 个参与者合作才能破解该算法，这使其具有极强的抗串通性。如果 `P–1` 个学生秘密地用 Paillier 加密 `0` 向量来代替他们真实的梯度向量，广播的 Paillier 密文中的相似性将表明存在合作。事实上，即使只有两个学习者产生相同的 Paillier 加密梯度向量也是可疑的，因为他们的数据很可能不同。
-
-基于环的聚合方法与基于环的 All-Reduce 并行描述和实现。其图示表示如 图 5 所示。作者引入了环协议，但它有一个主要缺陷：每个学生必须等待前一个学生完成循环后才能继续。All-Reduce 通过将梯度向量切片为 `P` 个片段（其中 `P` 是主体总数）来规避此问题。然后将 Paillier 加密的片段分发给学生，由他们独立重新组装。例如在 图 5 中，有三个学习者，因此每个梯度向量由三个子分量组成。`Learner-2` 无需等待 `Learner-1` 完成提供其向量即可继续进行。相反，`Learner-1` 将第一个分块发送给 `Learner-3`，同时将其第二个分块发送给 `Learner-3`。完成步骤 1 后，
+基于环的聚合方法与基于环的 `All-Reduce` 并行描述和实现。其图示表示如 图 5 所示。作者引入了环协议，但它有一个主要缺陷：每个学生必须等待前一个学生完成循环后才能继续。`All-Reduce` 通过将梯度向量切片为 `P` 个片段（其中 `P` 是主体总数）来规避此问题。然后将 `Paillier` 加密的片段分发给学生，由他们独立重新组装。例如在 图 5 中，有三个学习者，因此每个梯度向量由三个子分量组成。`Learner-2` 无需等待 `Learner-1` 完成提供其向量即可继续进行。相反，`Learner-1` 将第一个分块发送给 `Learner-3`，同时将其第二个分块发送给 `Learner-3`。完成步骤 1 后，
 
 ![图 5. 使用基于 Paillier 的 All-Reduce 的加密 MYSTIKO 环。](img/fig4_5_C.jpg)
 
 图 5. 使用基于 Paillier 的 All-Reduce 的加密 MYSTIKO 环。
 
-`Learner-2` 将第一个部分聚合的分块传输给 `Learner-3`，后者再将其传输给 `Learner-1`。当步骤 2 完成时，每个学生都将拥有要发送给 `MYSTIKO` 解密器的 Paillier 加密聚合分块，在那里它们将被拼接并解码。
+`Learner-2` 将第一个部分聚合的分块传输给 `Learner-3`，后者再将其传输给 `Learner-1`。当步骤 2 完成时，每个学生都将拥有要发送给 `MYSTIKO` 解密器的 `Paillier` 加密聚合分块，在那里它们将被拼接并解码。
 
-### 安全性分析
+#### 安全性分析
 
-重要的是要强调，All-Reduce 是最快的 `MYSTIKO` 过程。给定 `P` 个学习者，All-Reduce 可被视为 `P1` 个环的并行实现。图 5 中的第一个环从 `Learner-1` 的第一个片段开始，第二个环从 `Learner-2` 的第二个分块开始，第三个环从 `Learner-3` 的第三个分块开始。这意味着 All-Reduce 提供了与最简单环协议相同的安全保证。
+重要的是要强调，`All-Reduce` 是最快的 `MYSTIKO` 过程。给定 `P` 个学习者，`All-Reduce` 可被视为 `P1` 个环的并行实现。图 5 中的第一个环从 `Learner-1` 的第一个片段开始，第二个环从 `Learner-2` 的第二个分块开始，第三个环从 `Learner-3` 的第三个分块开始。这意味着 `All-Reduce` 提供了与最简单环协议相同的安全保证。
 
-#### 4.4 每个管理域多个学习者
+## 4.4 每个管理域多个学习者
 
-为便于分析，研究人员假设每个个体都是一个独特的学习进程。在同一管理域中运行的梯度向量聚合器的帮助下，多个服务器和训练进程（学习者）可以共享同一数据集。这是由于多种考虑因素所必需的，包括数据集的规模、计算机资源分析成本的相对简单性，以及对缩短训练时间的重视。为 `MYSTIKO` 开发的协议可以轻松适应这一场景，唯一的变化是通信发生在本地聚合器（`LA`）之间，而不是学生之间。本地聚合并不安全，因为管理域内的可信计算资源甚至可以传输原始数据，但远程聚合是 Paillier 加密的，因此是私密的。然而，`MYSTIKO` 协议用于 `LA` 之间的数据聚合。图 6 直观地描绘了这一概念。
+为便于分析，研究人员假设每个个体都是一个独特的学习进程。在同一管理域中运行的梯度向量聚合器的帮助下，多个服务器和训练进程（学习者）可以共享同一数据集。这是由于多种考虑因素所必需的，包括数据集的规模、计算机资源分析成本的相对简单性，以及对缩短训练时间的重视。为 `MYSTIKO` 开发的协议可以轻松适应这一场景，唯一的变化是通信发生在本地聚合器（`LA`）之间，而不是学生之间。本地聚合并不安全，因为管理域内的可信计算资源甚至可以传输原始数据，但远程聚合是 `Paillier` 加密的，因此是私密的。然而，`MYSTIKO` 协议用于 `LA` 之间的数据聚合。图 6 直观地描绘了这一概念。
 
 ![图 6. 联邦梯度下降。](img/fig4_6_B.jpg)
 
 图 6. 联邦梯度下降。
 
-### 5. 可信执行环境
+# 5. 可信执行环境
 
-主处理器的安全空间称为可信执行环境（`TEE`）。隔离执行、应用完整性和数据资产机密性只是 `TEE`（可信执行环境）提供的众多安全特性中的一部分。通过创建一个单独的执行环境，`TEE` 保护关键代码和数据免受本地操作系统上特权软件攻击。常见的本地操作系统示例包括 `Linux` 和 `Microsoft Windows`。使用 `TEE` 的系统集成了硬件和软件保障来保护机密信息，示例包括 `IBM Hyper Protect`、`ARM TrustZone` 和 `Intel SGX`。在 `TEE` 中，服务器的 CPU、I/O 和 RAM 均保留给在加载前已验证为安全的程序。`TEE` 的硬件隔离将其内容与在宿主操作系统上运行的其他程序（如病毒和恶意软件）构成的威胁隔离开来。当 `TEE` 内运行众多程序时，它们通常通过软件和加密隔离相互屏蔽。
+主处理器的安全空间称为可信执行环境（`TEE`）。隔离执行、应用完整性和数据资产机密性只是 `TEE`（可信执行环境）提供的众多安全特性中的一部分。通过创建一个单独的执行环境，`TEE` 保护关键代码和数据免受本地操作系统上特权软件攻击。常见的本地操作系统示例包括 `Linux` 和 `Microsoft Windows`。使用 `TEE` 的系统集成了硬件和软件保障来保护机密信息，示例包括 `IBM Hyper Protect`、`ARM TrustZone` 和 `Intel SGX`。在 `TEE` 中，服务器的 `CPU`、`I/O` 和 `RAM` 均保留给在加载前已验证为安全的程序。`TEE` 的硬件隔离将其内容与在宿主操作系统上运行的其他程序（如病毒和恶意软件）构成的威胁隔离开来。当 `TEE` 内运行众多程序时，它们通常通过软件和加密隔离相互屏蔽。
 
-`TEE` 使用所谓的“硬件信任根”来防止被恶意或流氓服务器端软件模拟。可信执行环境可以在制造过程中使用可编程内存写入一套一次性使用的私钥。即使在重启或完全恢复出厂设置后，作者也无法修改这些设置。为了让固件和加密/访问控制电路由受信任方签名，制造商存储了受信任方的公钥等价物和非秘密哈希值（通常是芯片供应商）。只有使用受信任方密钥进行数字签名的程序才能访问 `TEE` 硬件及其特殊功能。芯片中已包含供应商的公钥，该公钥经过哈希处理并在运行时进行比对。使用该公钥，受信任的供应商控制固件（如 Android 设备的引导加载程序链或 `SGX` 的“架构飞地”）可进行数字验证。随后使用受信任固件实现远程认证。
+`TEE` 使用所谓的“硬件信任根”来防止被恶意或流氓服务器端软件模拟。可信执行环境可以在制造过程中使用可编程内存写入一套一次性使用的私钥。即使在重启或完全恢复出厂设置后，作者也无法修改这些设置。为了让固件和加密/访问控制电路由受信任方签名，制造商存储了受信任方的公钥等价物和非秘密哈希值（通常是芯片供应商）。只有使用受信任方密钥进行数字签名的程序才能访问 `TEE` 硬件及其特殊功能。芯片中已包含供应商的公钥，该公钥经过哈希处理并在运行时进行比对。使用该公钥，受信任的供应商控制固件（如 `Android` 设备的引导加载程序链或 `SGX` 的“架构飞地”）可进行数字验证。随后使用受信任固件实现远程认证。
 
 作者利用可信执行环境（`TEE`）解释了一个系统 `TRUDA` 如何为模型融合提供安全性。还有其他带有多种优化的示例。在此，作者仅以 `TRUDA` 为例，重点关注 `TEE` 聚合的基础知识。`TRUDA` 采用 `AMD` 的安全加密虚拟化（`SEV`）将每个聚合器作为加密虚拟机（`EVM`）运行。在模型聚合期间，所有驻留在内存中的数据在运行时保持加密状态。通过一个两步流程和一套用于联邦学习中秘密计算的组合与系统化工具，加快了各方与聚合器之间建立信任的过程。任何 `FL` 训练参与者都可以随时检查聚合器的可信度。认证后，各方和 `EVM` 通过端到端安全通道连接，对它们之间的所有数据（包括模型的任何修订）进行加密。
 
-#### 5.1 可信聚合
-
-
+## 5.1 可信聚合
 
 # TRUDA 中的 FL 聚合与认证
 
-针对 FL 聚合，TRUDA 强制要求通过 SEV 实现加密隔离。聚合器运行在 EVM 上。每个 EVM 的内存都使用唯一的临时 VM 加密密钥（`VEK`）进行加密。这样，TRUDA 可以防止服务器管理员和特权应用等窥探者窃取模型聚合的秘密。可以利用 AMD 提供的认证原语来确认 SEV 硬件和固件的有效性。为了在去中心化 FL 环境中快速建立各方与聚合器之间的信任，TRUDA 采用了一种基于这些原语构建的新型认证协议。该 FL 认证过程分为两个阶段：
+针对 `FL` 聚合，`TRUDA` 强制要求通过 `SEV` 实现加密隔离。聚合器运行在 `EVM` 上。每个 `EVM` 的内存都使用唯一的临时 `VM` 加密密钥（`VEK`）进行加密。这样，`TRUDA` 可以防止服务器管理员和特权应用等窥探者窃取模型聚合的秘密。可以利用 `AMD` 提供的认证原语来确认 `SEV` 硬件和固件的有效性。为了在去中心化 `FL` 环境中快速建立各方与聚合器之间的信任，`TRUDA` 采用了一种基于这些原语构建的新型认证协议。该 `FL` 认证过程分为两个阶段：
 
 ## 阶段 1：启动可信聚合器
 
-安全启动与聚合器关联的 SEV EVM 是迈向 TRUDA 的初始阶段。为确保 EVM 的安全，必须：
+安全启动与聚合器关联的 `SEV EVM` 是迈向 `TRUDA` 的初始阶段。为确保 `EVM` 的安全，必须：
 
-1.  验证硬件平台是真正的支持 AMD SEV 且具备所需安全特性的硬件。
-2.  验证用于启动 EVM 的开放虚拟机固件（`OVMF`）镜像是真实的。
+1.  验证硬件平台是真正的支持 `AMD SEV` 且具备所需安全特性的硬件。
+2.  验证用于启动 `EVM` 的开放虚拟机固件（`OVMF`）镜像是真实的。
 
-远程认证完成后，TRUDA 将连同 EVM 一起发送聚合器的密钥。在阶段 2 的聚合器认证完成之前，该密钥始终隐藏在 EVM 加密的物理内存中。可使用有效的 AMD 根证书来验证整个证书链的真实性。认证报告除包含完整的证书链外，还包含原始`OVMF`镜像的摘要。
+远程认证完成后，`TRUDA` 将连同 `EVM` 一起发送聚合器的密钥。在阶段 2 的聚合器认证完成之前，该密钥始终隐藏在 `EVM` 加密的物理内存中。可使用有效的 `AMD` 根证书来验证整个证书链的真实性。认证报告除包含完整的证书链外，还包含原始 `OVMF` 镜像的摘要。
 
-报告经过认证后，将被传输至已配置必要 AMD 根证书的认证服务器。通过验证证书链，认证服务器可判断`OVMF`固件是否被篡改，以及特定硬件平台是否真实。认证服务器生成启动二进制大对象和客户所有者 Diffie-Hellman 公钥（`GODH`）认证，以验证宿主机器的身份。聚合器的机器向 SP 提交 DHKE 请求以获取传输加密密钥（`TEK`）和传输完整性密钥（`TIK`）后不久，EVM 便开始处理数据。
+报告经过认证后，将被传输至已配置必要 `AMD` 根证书的认证服务器。通过验证证书链，认证服务器可判断 `OVMF` 固件是否被篡改，以及特定硬件平台是否真实。认证服务器生成启动二进制大对象和客户所有者 `Diffie-Hellman` 公钥（`GODH`）认证，以验证宿主机器的身份。聚合器的机器向 `SP` 提交 `DHKE` 请求以获取传输加密密钥（`TEK`）和传输完整性密钥（`TIK`）后不久，`EVM` 便开始处理数据。
 
-TRUDA 可在启动时暂停 EVM，从 SP 获取`OVMF`运行时度量值。为进行验证，该度量值连同 SEV API 版本和 EVM 部署方法一起传输给宿主系统。作为打包密钥的一部分，认证服务器生成一个 ECDSA `prime251v1`密钥，以确保度量值的准确性。为了揭示可信聚合器的身份，必须启动 EVM，此时管理程序必须将密钥注入 EVM 的物理内存区域。
+`TRUDA` 可在启动时暂停 `EVM`，从 `SP` 获取 `OVMF` 运行时度量值。为进行验证，该度量值连同 `SEV API` 版本和 `EVM` 部署方法一起传输给宿主系统。作为打包密钥的一部分，认证服务器生成一个 `ECDSA prime251v1` 密钥，以确保度量值的准确性。为了揭示可信聚合器的身份，必须启动 `EVM`，此时管理程序必须将密钥注入 `EVM` 的物理内存区域。
 
 ## 阶段 2：聚合器认证
 
-FL 参与方必须仅与使用安全运行时内存加密的已识别聚合器协作，这至关重要。在 EVM 部署的第一阶段，认证服务器秘密地向聚合器提供一个 ECDSA 密钥，以便其进行认证。该密钥对质询请求的签名验证了请求源自可信聚合器。参与方在参与 FL 前，需要进行质询-响应协议聚合器认证。通信发送方有时会在消息中附加一个随机生成的 nonce。聚合器使用自己的 ECDSA 密钥对该 nonce 进行签名，并将其发送回请求方。为确保 nonce 是用正确的 ECDSA 密钥签名的，请求方验证其签名。验证通过后，加入 FL 的下一步是向聚合器注册。每个聚合器轮流完成此过程。
+`FL` 参与方必须仅与使用安全运行时内存加密的已识别聚合器协作，这至关重要。在 `EVM` 部署的第一阶段，认证服务器秘密地向聚合器提供一个 `ECDSA` 密钥，以便其进行认证。该密钥对质询请求的签名验证了请求源自可信聚合器。参与方在参与 `FL` 前，需要进行质询-响应协议聚合器认证。通信发送方有时会在消息中附加一个随机生成的 `nonce`。聚合器使用自己的 `ECDSA` 密钥对该 `nonce` 进行签名，并将其发送回请求方。为确保 `nonce` 是用正确的 `ECDSA` 密钥签名的，请求方验证其签名。验证通过后，加入 `FL` 的下一步是向聚合器注册。每个聚合器轮流完成此过程。
 
-注册后，聚合器与参与模型更新交换的各方可通过端到端加密信道进行通信。TRUDA 使 TLS 能够与需要双向认证的聚合器配合工作。因此，所有模型变更在 EVM 内部和传输过程中均处于安全状态。
+注册后，聚合器与参与模型更新交换的各方可通过端到端加密信道进行通信。`TRUDA` 使 `TLS` 能够与需要双向认证的聚合器配合工作。因此，所有模型变更在 `EVM` 内部和传输过程中均处于安全状态。
 
 # 实验评估
 
-在本章中，作者将三种 Mystiko 算法与 SPDZ（一种领先的可靠多方计算协议）以及通过引入统计噪声实现差分隐私（DP）的策略进行了比较。研究人员使用多种不同规模的神经网络模型和数据集进行图像处理：作者从一个在 MNIST 数据集上训练的 1MB 5 层 CNN 开始。以下是所用的四个模型：
 
-1.  Resnet-18（中型，50MB），在 SVHN 数据集（60 万张街景数字图像）上训练。
-2.  Resnet-50（中型，110MB），基于 CIFAR-100 数据集（6 万张彩色图像，100 个类别）。
-3.  VGG16（大型，600MB），在 Imagenet-1K 数据集上训练。
-4.  AlexNet（小型，10MB），在 MNIST 数据集（1420 万张图像，1000 个类别）上训练。
 
-作者利用一个包含 40 台计算机的集群，以 2 到 40 人的分组进行实验，以测试和比较所有算法。每台计算机上从未安排超过一个工作节点运行，每台计算机配备 8 个 Intel Xeon E5–4110（2.10 GHz）处理器核心、64 GB 内存、单个 NVIDIA V100 图形处理单元和 10 千兆以太网连接。所有机器分布在四个不同的数据中心，且在每次测试中，参与者均匀分布在所有四个数据中心中。在每个实验中，数据集在参与者之间均匀随机分布。一个数据中心提供单台机器用于执行 Mystiko。接下来，作者将对 10 次独立试验的结果取平均，以得出每个新数据点。
+在本章中，作者将三种 `Mystiko` 算法与 `SPDZ`（一种领先的可靠多方计算协议）以及通过引入统计噪声实现差分隐私（`DP`）的策略进行了比较。研究人员使用多种不同规模的神经网络模型和数据集进行图像处理：作者从一个在 `MNIST` 数据集上训练的 1MB 5 层 `CNN` 开始。以下是所用的四个模型：
+
+1.  `Resnet-18`（中型，50MB），在 `SVHN` 数据集（60 万张街景数字图像）上训练。
+2.  `Resnet-50`（中型，110MB），基于 `CIFAR-100` 数据集（6 万张彩色图像，100 个类别）。
+3.  `VGG16`（大型，600MB），在 `Imagenet-1K` 数据集上训练。
+4.  `AlexNet`（小型，10MB），在 `MNIST` 数据集（1420 万张图像，1000 个类别）上训练。
+
+作者利用一个包含 40 台计算机的集群，以 2 到 40 人的分组进行实验，以测试和比较所有算法。每台计算机上从未安排超过一个工作节点运行，每台计算机配备 8 个 `Intel Xeon E5–4110`（2.10 GHz）处理器核心、64 GB 内存、单个 `NVIDIA V100` 图形处理单元和 10 千兆以太网连接。所有机器分布在四个不同的数据中心，且在每次测试中，参与者均匀分布在所有四个数据中心中。在每个实验中，数据集在参与者之间均匀随机分布。一个数据中心提供单台机器用于执行 `Mystiko`。接下来，作者将对 10 次独立试验的结果取平均，以得出每个新数据点。
 
 ## MYSTIKO 与 SPDZ 的比较
 
-在联邦学习中，每个学习者（或本地聚合器）在共享训练数据并协同更新模型之前，都会进行固定次数的迭代单独训练。MYSTIKO 和 SPDZ 等系统在梯度聚合阶段以威胁隐私的方式介入。为此，作者将利用以下两个标准来评估 MYSTIKO 和 SPDZ：
+在联邦学习中，每个学习者（或本地聚合器）在共享训练数据并协同更新模型之前，都会进行固定次数的迭代单独训练。`MYSTIKO` 和 `SPDZ` 等系统在梯度聚合阶段以威胁隐私的方式介入。为此，作者将利用以下两个标准来评估 `MYSTIKO` 和 `SPDZ`：
 
 时间同步有两种类型：均可用秒和毫秒来衡量两个设备同步得有多好。同步过程的两个部分构成了总时间：
 
-1.  对梯度进行机密调整所需的时间（MYSTIKO 的 Paillier 加密、SPDZ 的份额生成等）。
+1.  对梯度进行机密调整所需的时间（`MYSTIKO` 的 `Paillier` 加密、`SPDZ` 的份额生成等）。
 2.  将更新后的梯度广播给联邦成员所需的时间。
 
-在图 7 中，作者使用所有模型/数据集组合的散点图，比较了联邦范围内的总同步和通信时间与联邦成员总数的关系。正如图 7 所示，All-Reduce 是随着用户数量增长最具扩展性的选项。得益于协议固有的并行性，每个学习者/LA 只需持续广播梯度数组的一个子集，从而大幅减少了传输的总数据量。由于其顺序性质，基本环形协议是扩展性最差的网络拓扑。
+在图 7 中，作者使用所有模型/数据集组合的散点图，比较了联邦范围内的总同步和通信时间与联邦成员总数的关系。正如图 7 所示，`All-Reduce` 是随着用户数量增长最具扩展性的选项。得益于协议固有的并行性，每个学习者/LA 只需持续广播梯度数组的一个子集，从而大幅减少了传输的总数据量。由于其顺序性质，基本环形协议是扩展性最差的网络拓扑。
 
 ![图 7. MYSTIKO：总同步时间（秒）与参与方数量的关系（顶部图表）及总通信时间（秒）与参与方数量的关系（底部图表） 通信耗时和梯度转换耗时均是总同步时间的组成部分。](img/fig4_7_C.jpg)
 
 图 7. MYSTIKO：总同步时间（秒）与参与方数量的关系（顶部图表）及总通信时间（秒）与参与方数量的关系（底部图表） 通信耗时和梯度转换耗时均是总同步时间的组成部分。
 
+## 广播 vs. SPDZ vs. MYSTIKO
 
+广播的性能和可扩展性远超标准环形协议，因为每个节点独立于其他节点进行传输。由于 `SPDZ` 要求在将每个参与者的梯度向量广播给其他参与者之前，先将其划分为秘密份额，因此 `SPDZ` 的效率和可扩展性不如广播。对于 `MYSTIKO`，双重广播是不必要的，因为数据使用 `Paillier` 理论进行加密，然后使用聚合梯度集中解密。切换到替代协议对两种不同性能类型的影响如表 1 所示。
 
+### 表 1. MYSTIKO：广播、环形和 SPDZ 相比于全归约的性能下降
 
-
-# 广播 vs. SPDZ vs. MYSTIKO
-
-广播的性能和可扩展性远超标准环形协议，因为每个节点独立于其他节点进行传输。由于 SPDZ 要求在将每个参与者的梯度向量广播给其他参与者之前，先将其划分为秘密份额，因此 SPDZ 的效率和可扩展性不如广播。对于 MYSTIKO，双重广播是不必要的，因为数据使用 Paillier 理论进行加密，然后使用聚合梯度集中解密。切换到替代协议对两种不同性能类型的影响如表 1 所示。
-
-####### 表 1. MYSTIKO：广播、环形和 SPDZ 相比于全归约的性能下降
-
-### 通信时间
+#### 通信时间
 
 | # 参与方 | 全归约 | 广播 | 环形 | SPDZ |
 | :--- | :--- | :--- | :--- | :--- |
 | 20 | 1 | 64–7.2× | 382–39.9× | 131–14.2× |
 | 40 | 1 | 79–8.6× | 705–80.8× | 138–14.7× |
 
-### 总同步时间
+#### 总同步时间
 
 | # 参与方 | 全归约 | 广播 | 环形 | SPDZ |
 | :--- | :--- | :--- | :--- | :--- |
 | 20 | 1 | 12–51% | 27–100% | 22–6.1× |
 | 40 | 1 | 6–25% | 15–59% | 13–2.6× |
 
-虽然全归约承诺“巨大”的加速，但当计入整个同步时间时，这些加速便消失了。这四种可扩展性协议的总体趋势没有变化；总同步时间的减少仍然相当可观（表 4.1 中展示了两个例子）。然而，与增强通信所带来的收益相比，这些改进相当微不足道。这说明，与 MYSTIKO 和 SPDZ 中的非私有梯度下降相比，在共享梯度之前修改梯度所花费的时间是私有梯度下降的主要成本。图 7 和表 1 说明了通信时间对于不太复杂的模型（5 层 CNN 和 ResNet-18）变得越来越关键。然而，大型模型从梯度修改中获益更多（如 ResNet-50 和 VGG-16）。
+虽然全归约承诺“巨大”的加速，但当计入整个同步时间时，这些加速便消失了。这四种可扩展性协议的总体趋势没有变化；总同步时间的减少仍然相当可观（表 4.1 中展示了两个例子）。然而，与增强通信所带来的收益相比，这些改进相当微不足道。这说明，与 `MYSTIKO` 和 `SPDZ` 中的非私有梯度下降相比，在共享梯度之前修改梯度所花费的时间是私有梯度下降的主要成本。图 7 和表 1 说明了通信时间对于不太复杂的模型（5 层 `CNN` 和 `ResNet-18`）变得越来越关键。然而，大型模型从梯度修改中获益更多（如 `ResNet-50` 和 `VGG-16`）。
 
-在比较私有和非私有梯度下降时，作者发现当使用轮次时间作为训练时间的代理时，前者的同步时间明显更长。原因之一是梯度修改在 CPU 上执行，而训练在 V100 GPU（拥有数百个核心）上完成。尽管全同态加密确实存在（但在 CPU 上性能不如 Paillier），研究人员目前尚不知晓 Paillier 技术的 GPU 加速版本。
+在比较私有和非私有梯度下降时，作者发现当使用轮次时间作为训练时间的代理时，前者的同步时间明显更长。原因之一是梯度修改在 `CPU` 上执行，而训练在 `V100 GPU`（拥有数百个核心）上完成。尽管全同态加密确实存在（但在 `CPU` 上性能不如 `Paillier`），研究人员目前尚不知晓 `Paillier` 技术的 `GPU` 加速版本。
 
-#### 5.2 可信执行环境：AMD SEV
+## 5.2 可信执行环境：AMD SEV
 
-与 MYSTIKO 和 SPDZ 相比，最小开销是主要优势。使用 TEE 会导致更多工作，因为 EVM 必须执行聚合。每个联邦同步轮次产生了 2% 到 4% 的额外端到端延迟。收敛率和准确率均保持一致。
+与 `MYSTIKO` 和 `SPDZ` 相比，最小开销是主要优势。使用 `TEE` 会导致更多工作，因为 `EVM` 必须执行聚合。每个联邦同步轮次产生了 2% 到 4% 的额外端到端延迟。收敛率和准确率均保持一致。
 
-### 6. 结论
+## 6. 结论
 
-本章探讨了联邦学习中私有参数聚合的选项。显然，每种方法都有其优缺点，寻找最优解仍是一个持续的研究领域。尽管差分隐私在防止数据泄露方面显示出前景，但这是以牺牲模型准确性为代价的，并且需要非平凡的超参数调整（学习率调度、批量大小）以获得最佳结果（甚至是接近最佳的结果）。鉴于超参数调整依赖于所有参与者在较长时期内的可用性，且进行多次试验会增加总延迟，这在联邦场景中可能不切实际。使用同态加密或安全多方计算方案时，既不需要调整准确率，也不需要调整收敛率。然而，它们在运行时方面有显著开销；正如 MYSTIKO 所示，如果聚合协议设计良好，加法同态加密可以大幅降低这一开销。最后，如果有人愿意投资一些专用硬件，TEE 可以将聚合开销降低到几乎为零，且对准确率或收敛率没有负面影响。
+本章探讨了联邦学习中私有参数聚合的选项。显然，每种方法都有其优缺点，寻找最优解仍是一个持续的研究领域。尽管差分隐私在防止数据泄露方面显示出前景，但这是以牺牲模型准确性为代价的，并且需要非平凡的超参数调整（学习率调度、批量大小）以获得最佳结果（甚至是接近最佳的结果）。鉴于超参数调整依赖于所有参与者在较长时期内的可用性，且进行多次试验会增加总延迟，这在联邦场景中可能不切实际。使用同态加密或安全多方计算方案时，既不需要调整准确率，也不需要调整收敛率。然而，它们在运行时方面有显著开销；正如 `MYSTIKO` 所示，如果聚合协议设计良好，加法同态加密可以大幅降低这一开销。最后，如果有人愿意投资一些专用硬件，`TEE` 可以将聚合开销降低到几乎为零，且对准确率或收敛率没有负面影响。
 
 ### 参考文献
 
-1.  Abdel-Basset, M., Hawash, H. and Moustafa, N. 2022. Toward privacy preserving Federated Learning in internet of vehicular things: Challenges and future directions. IEEE Consum. Electron. Mag., 11(6): 56–66. doi: [10.1109/MCE.2021.3117232.](http://dx.doi.org/10.1109/MCE.2021.3117232)
+1.  Abdel-Basset, M., Hawash, H. and Moustafa, N. 2022. Toward privacy preserving Federated Learning in internet of vehicular things: Challenges and future directions. *IEEE Consum. Electron. Mag.*, 11(6): 56–66. doi: [10.1109/MCE.2021.3117232](http://dx.doi.org/10.1109/MCE.2021.3117232).
 
-2.  Ibitoye, O., Shafiq, M.O. and Matrawy, A. 2022. Differentially private self-normalizing neural networks for adversarial robustness in Federated Learning. Comput. Secur., 116. doi: [10.1016/j.cose.2022.102631.](http://dx.doi.org/10.1016/j.cose.2022.102631)
+2.  Ibitoye, O., Shafiq, M.O. and Matrawy, A. 2022. Differentially private self-normalizing neural networks for adversarial robustness in Federated Learning. *Comput. Secur.*, 116. doi: [10.1016/j.cose.2022.102631](http://dx.doi.org/10.1016/j.cose.2022.102631).
 
-3.  Moudoud, H. and Cherkaoui, S. 2022. Toward Secure and private Federated Learning for IoT using blockchain. In 2022 IEEE Global Communications Conference, GLOBECOM 2022—Proceedings, pp. 4316–4321. doi: [10.1109/GLOBECOM48099.2022.10000623.](http://dx.doi.org/10.1109/GLOBECOM48099.2022.10000623)
+3.  Moudoud, H. and Cherkaoui, S. 2022. Toward Secure and private Federated Learning for IoT using blockchain. In *2022 IEEE Global Communications Conference, GLOBECOM 2022—Proceedings*, pp. 4316–4321. doi: [10.1109/GLOBECOM48099.2022.10000623](http://dx.doi.org/10.1109/GLOBECOM48099.2022.10000623).
 
-4.  Guo, K., Chen, Z., Yang, H.H. and Quek, T.Q.S. 2022. Dynamic scheduling for heterogeneous Federated Learning in private 5G edge networks. IEEE J. Sel. Top. Signal Process, 16(1): 26–40. doi: [10.1109/JSTSP.2021.3126174.](http://dx.doi.org/10.1109/JSTSP.2021.3126174)
+4.  Guo, K., Chen, Z., Yang, H.H. and Quek, T.Q.S. 2022. Dynamic scheduling for heterogeneous Federated Learning in private 5G edge networks. *IEEE J. Sel. Top. Signal Process*, 16(1): 26–40. doi: [10.1109/JSTSP.2021.3126174](http://dx.doi.org/10.1109/JSTSP.2021.3126174).
 
-5.  Cholakoska, A., Pfitzner, B., Gjoreski, H., Rakovic, V., Arnrich, B. and Kalendar, M. 2021. Differentially private federated learningfor anomaly detection in eHealth networks. In UbiComp/ISWC 2021 - Adjunct Proceedings of the 2021 ACM International Joint Conference on Pervasive and Ubiquitous Computing and Proceedings of the 2021 ACM International Symposium on Wearable Computers, pp. 514–518. doi: [10.1145/3460418.3479365.](http://dx.doi.org/10.1145/3460418.3479365)
+5.  Cholakoska, A., Pfitzner, B., Gjoreski, H., Rakovic, V., Arnrich, B. and Kalendar, M. 2021. Differentially private federated learningfor anomaly detection in eHealth networks. In *UbiComp/ISWC 2021 - Adjunct Proceedings of the 2021 ACM International Joint Conference on Pervasive and Ubiquitous Computing and Proceedings of the 2021 ACM International Symposium on Wearable Computers*, pp. 514–518. doi: [10.1145/3460418.3479365](http://dx.doi.org/10.1145/3460418.3479365).
 
-6.  Ziller, A. et al. 2021. PySyft: A library for easy Federated Learning. Studies in Computational Intelligence, 965: 111–139. doi: [10.1007/978-3-030-70604-3_5.](http://dx.doi.org/10.1007/978-3-030-70604-3_5)
+6.  Ziller, A. et al. 2021. PySyft: A library for easy Federated Learning. *Studies in Computational Intelligence*, 965: 111–139. doi: [10.1007/978-3-030-70604-3_5](http://dx.doi.org/10.1007/978-3-030-70604-3_5).
 
-7.  Augustine, C., Anand, J., Kaleeswaran, D., Muneeswari, G. and Santhoshkumar, S.P. 2022. 6G-based mobile IPTV using adaptive hybrid transmission. In Handbook of Research on Design, Deployment, Automation, and Testing Strategies for 6G Mobile Core Network, IGI Global, pp. 72–91.
+7.  Augustine, C., Anand, J., Kaleeswaran, D., Muneeswari, G. and Santhoshkumar, S.P. 2022. 6G-based mobile IPTV using adaptive hybrid transmission. In *Handbook of Research on Design, Deployment, Automation, and Testing Strategies for 6G Mobile Core Network*, IGI Global, pp. 72–91.
 
-8.  Liang, Y., Guo, Y., Gong, Y., Luo, C., Zhan, J. and Huang, Y. 2021. FLBench: A benchmark suite for Federated Learning. Communications in Computer and Information Science, 1385 CCIS. pp. 166–176. doi: [10.1007/978-981-16-1160-5_14.](http://dx.doi.org/10.1007/978-981-16-1160-5_14)
+8.  Liang, Y., Guo, Y., Gong, Y., Luo, C., Zhan, J. and Huang, Y. 2021. FLBench: A benchmark suite for Federated Learning. *Communications in Computer and Information Science*, 1385 CCIS. pp. 166–176. doi: [10.1007/978-981-16-1160-5_14](http://dx.doi.org/10.1007/978-981-16-1160-5_14).
 
-9.  Kong, L., Tao, H., Wang, J., Huang, Z. and Xiao, J. 2020. Network coding for Federated Learning Systems. Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics), 12533 LNCS. pp. 546–557. doi: [10.1007/978-3-030-63833-7_46.](http://dx.doi.org/10.1007/978-3-030-63833-7_46)
+9.  Kong, L., Tao, H., Wang, J., Huang, Z. and Xiao, J. 2020. Network coding for Federated Learning Systems. *Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)*, 12533 LNCS. pp. 546–557. doi: [10.1007/978-3-030-63833-7_46](http://dx.doi.org/10.1007/978-3-030-63833-7_46).
 
-10.  Dhanalakshmi, R., Anand, J., Sivaraman, A.K. and Rani, S. 2022. IoT-based water quality monitoring system using cloud for agriculture use. In Cloud and Fog Computing Platforms for Internet of Things, Chapman and Hall/CRC, pp. 183–196.
+10.  Dhanalakshmi, R., Anand, J., Sivaraman, A.K. and Rani, S. 2022. IoT-based water quality monitoring system using cloud for agriculture use. In *Cloud and Fog Computing Platforms for Internet of Things*, Chapman and Hall/CRC, pp. 183–196.
 
-11.  Wang, H., Li, A., Shen, B., Sun, Y. and Wang, H. 2020. Federated multi-view spectral clustering. IEEE Access, 8: 202249–202259. doi: [10.1109/ACCESS.2020.3036747.](http://dx.doi.org/10.1109/ACCESS.2020.3036747)
+11.  Wang, H., Li, A., Shen, B., Sun, Y. and Wang, H. 2020. Federated multi-view spectral clustering. *IEEE Access*, 8: 202249–202259. doi: [10.1109/ACCESS.2020.3036747](http://dx.doi.org/10.1109/ACCESS.2020.3036747).
 
-12.  Yang, Z., Zhou, M., Yu, H., Sinnott, R.O. and Liu, H. 2023. Efficient and secure Federated Learning with verifiable weighted average aggregation. IEEE Trans. Netw. Sci. Eng., 10(1): 205–222. doi: [10.1109/TNSE.2022.3206243.](http://dx.doi.org/10.1109/TNSE.2022.3206243)
-
-
-
-
+12.  Yang, Z., Zhou, M., Yu, H., Sinnott, R.O. and Liu, H. 2023. Efficient and secure Federated Learning with verifiable weighted average aggregation. *IEEE Trans. Netw. Sci. Eng.*, 10(1): 205–222. doi: [10.1109/TNSE.2022.3206243](http://dx.doi.org/10.1109/TNSE.2022.3206243).
 
 ### 参考文献
 
@@ -1911,6 +1802,10 @@ FL 参与方必须仅与使用安全运行时内存加密的已识别聚合器�
 18. Jiang, Z.L., Guo, H., Pan, Y., Liu, Y., Wang, X. and Zhang, J. 2021. 多密钥下模型聚合的联邦学习安全神经网络。载于*Proceedings—2021 8th IEEE International Conference on Cyber Security and Cloud Computing and 2021 7th IEEE International Conference on Edge Computing and Scalable Cloud, CSCloud-EdgeCom*，第 47–52 页。doi：[10.1109/CSCloudEdgeCom52276.2021.00019](http://dx.doi.org/10.1109/CSCloudEdgeCom52276.2021.00019)。
 
 19. Kalapaaking, A.P., Stephanie, V., Khalil, I., Atiquzzaman, M., Yi, X. and Almashor, M. 2022. 面向 6G 赋能医疗物联网的基于 SMPC 的联邦学习。*IEEE Netw.*，36(4)：182–189。doi：[10.1109/MNET.007.2100717](http://dx.doi.org/10.1109/MNET.007.2100717)。
+
+
+
+## 参考文献
 
 20. Zhu, S., Li, R., Cai, Z., Kim, D., Seo, D. and Li, W. 2002. 基于区块链的联邦平均算法的安全可验证聚合。*High-Confidence Comput.*，2(1)。doi：[10.1016/j.hcc.2021.100046](http://dx.doi.org/10.1016/j.hcc.2021.100046)。
 
@@ -1948,10 +1843,6 @@ FL 参与方必须仅与使用安全运行时内存加密的已识别聚合器�
 
 37. Zhou, D., Chen, Z., Wu, D., Yu, Y., Gan, Q. and Xu, B. 2022. HEND-FL：利用同态加密和新型分布式协议的精准联邦学习。doi：[10.1109/DASC/PiCom/CBDCom/Cy55231.2022.9928012](http://dx.doi.org/10.1109/DASC/PiCom/CBDCom/Cy55231.2022.9928012)。
 
-
-
-
-
 ### 参考文献
 
 38. Jebreel, N.M., Domingo-Ferrer, J., Blanco-Justicia, A. and Sanchez, D. 2022. 通过碎片化联邦学习增强安全性和隐私。*IEEE Trans. Neural Networks Learn Syst.*, pp. 1–15. doi: [10.1109/TNNLS.2022.3212627](http://dx.doi.org/10.1109/TNNLS.2022.3212627)。
@@ -1966,13 +1857,13 @@ FL 参与方必须仅与使用安全运行时内存加密的已识别聚合器�
 
 43. Zhou, X., Liang, W., Ma, J., Yan, Z. and Wang, K.I.K. 2022. 面向网络-物理-社会系统中个性化人类活动识别的二维联邦学习。*IEEE Trans. Netw. Sci. Eng.*, 9(6): 3934–3944. doi: [10.1109/TNSE.2022.3144699](http://dx.doi.org/10.1109/TNSE.2022.3144699)。
 
-## 第 5 章 导航联邦学习中的隐私顾虑：基于 GDPR 的分析
+# 第 5 章 导航联邦学习中的隐私顾虑：基于 GDPR 的分析
 
 *G Anitha*^(⁵)
 
 电子邮件：jegatheesanphdcse@gmail.com
 
-### 1. 引言
+## 1. 引言
 
 当今绝大多数软件和服务，尤其是医疗、交通和货币领域使用的软件和服务，都依赖于由人工智能（AI）驱动的复杂机器学习（ML）算法收集的数据 [[1]](#ch5.xhtml#ref5_1)。人工智能在生活的各个领域都取得了进展，预计其对全球的影响将超过人类历史上任何其他事件。不仅仅是电网 [[2]](#ch5.xhtml#ref5_2)，[[3]](#ch5.xhtml#ref5_3)。AI 的全部潜力尚未实现，基于 AI/ML 的应用开发仍面临重大障碍。集中式存储和处理是这些问题的主要因素 [[4]](#ch5.xhtml#ref5_4)。在现实世界中，数据，尤其是个人数据，通常产生并存储在孤立的位置，例如个人用户的设备或中央数据中心。对于大多数传统 ML 算法，训练数据通常集中在数据服务器中 [[5]](#ch5.xhtml#ref5_5)。简言之，从许多来源收集、整合和融合分散的数据并非易事，更不用说管理和安全分析由此产生的海量信息了 [[6]](#ch5.xhtml#ref5_6)。在不增加 GDPR 等数据保护规则和限制复杂性的情况下，以高速跨组织传输具有可变准确度的海量数据已经很有挑战性了 [[7]](#ch5.xhtml#ref5_7)。在单个高性能云服务器上使用传统 ML 算法处理海量数据时，既可能发生安全漏洞，也可能出现单点故障 [[8]](#ch5.xhtml#ref5_8)。
 
@@ -1980,21 +1871,21 @@ FL 参与方必须仅与使用安全运行时内存加密的已识别聚合器�
 
 借助 FL，服务提供商可以在其应用程序和服务中实现某些类型的机器学习算法，而无需从客户那里收集任何个人身份信息，这可能使他们更容易满足 GDPR 等数据保护法规（DPR） [[13]](#ch5.xhtml#ref5_13)，[[14]](#ch5.xhtml#ref5_14)。尽管 FL 采用了保护隐私的分布式协作学习方法，但私人数据仍可能从本地训练中被秘密检索 [[15]](#ch5.xhtml#ref5_15)。因此，在处理印度公民数据时，佛罗里达州的服务提供商有义务采取符合 GDPR 的预防措施 [[16]](#ch5.xhtml#ref5_16)。在本文中，作者从 GDPR 合规的角度回顾了以往的 FL 研究，重点关注隐私保护方法 [[17]](#ch5.xhtml#ref5_17)。首先，我们将 FL 作为一种可行的方式，来克服传统集中式 ML 系统中数据隐私保护的困难 [[18]](#ch5.xhtml#ref5_18)，[[19]](#ch5.xhtml#ref5_19)。其次，概述了集中式 FL 的前沿隐私保障措施，并探讨了这些方法如何从数据安全和隐私角度减少漏洞。第三，我们提供了深入的讨论，并提出了关于如何设计 FL 系统以满足 GDPR 要求的可能解决方案。我们还提出了未来研究的潜在方向，并强调了阻碍联邦学习系统满足 GDPR 必要条件的剩余挑战。
 
-### 2. 基于 ML 的 GDPR 合规与隐私保护系统
+## 2. 基于 ML 的 GDPR 合规与隐私保护系统
 
-#### 2.1 语境属性
+### 2.1 语境属性
 
 创新的机器学习（ML）领域使机器能够在未被显式编程的情况下执行任务，让它们通过经验学习和改进。为此，机器学习系统利用数据集（训练数据）构建数学模型，旨在随时间微调模型参数 [[20]](#ch5.xhtml#ref5_20)，[[21]](#ch5.xhtml#ref5_21)。这使得算法在面对新数据时能做出更准确的预测或判断。寻找目标函数的最大值通常是数学优化问题的最终目的，可用于描述 ML 工作。因此，任何基于 ML 的系统都必须具备优化技术。
 
-##### 2.1.1 梯度下降算法
+#### 2.1.1 梯度下降算法
 
 梯度下降是 ML 和 FL 的基础，使其成为 ML 中流行的优化方法 [[22]](#ch5.xhtml#ref5_22)。它是一种用于寻找带有用户指定参数的目标函数 `f(θ)` 极小值的一阶迭代优化算法。`D = (x[1], y[1]), (x[2], y[2]), ..., (x[m], y[m])`，以及目标函数 `f(θ)`；模型中的每个参数都使用梯度下降方法沿目标函数 `f(θ)` 梯度的相反方向进行更新，如以下公式所示。
 
 (1)
 
-$$
+```
 w_j \leftarrow w_j - \eta \nabla \frac{1}{m} \sum_{i=1}^{m} L(f(x_i) - y_i)
-$$
+```
 
 其中
 
@@ -2004,17 +1895,15 @@ $$
 
 MSE 和交叉熵损失是可用字母 `L` 表示的损失函数示例。参数使用公式 1 反复更新，直到达到局部极小值，或阶段间损失的变化足够小以至于可以忽略。
 
-##### 2.1.2 梯度下降变体
+#### 2.1.2 梯度下降变体
 
-
-
-
-
-# 梯度下降算法与分布式学习
+### 梯度下降算法与分布式学习
 
 根据计算目标函数 `f(θ)` 所需的数据量，梯度下降算法通常分为三类。
 
 **批量梯度下降** 是第一类，它仅通过一次更新，在整个训练数据集 `D` 上计算梯度。与批量梯度下降不同，**随机梯度下降 (SGD)** 依据从 `D` 中随机选取的一个数据子集的梯度来更新参数 [[23]](#ch5.xhtml#ref5_23)。第三类，**小批量梯度下降**，涉及在处理完每 `n` 批训练样本后重新计算参数。
+
+
 
 梯度下降的每次迭代都需要在计算精度与参数更新精度之间做出权衡。小批量梯度下降修正了 SGD 可能出现的梯度震荡以及批量梯度下降的低效问题 [[24]](#ch5.xhtml#ref5_24)，[[25]](#ch5.xhtml#ref5_25)。然而，该方法引入的额外超参数 `batchsize n` 有时需要专业知识、大量实验，甚至人工调整。
 
@@ -2030,20 +1919,20 @@ MSE 和交叉熵损失是可用字母 `L` 表示的损失函数示例。参数�
 
 **混合并行** 融合了这两种并行方法，以最大化各自优势并最小化劣势，从而构建一个效率与可扩展性更高的系统。
 
-#### 2.2 机器学习的安全措施
+### 2.2 机器学习的安全措施
 
 在分布式学习系统中，隐私保护技术主要服务于两大目的：
 
 1.  确保只有合法用户能够访问训练数据集，以及
 2.  防止未授权用户访问作为优化算法一部分在节点间通信的本地模型参数。
 
-##### 2.2.1 数据去标识化
+#### 2.2.1 数据去标识化
 
 **去标识化数据（匿名化）** 是一种通过模糊或移除数据集中个人可识别信息 (PII) 及其他敏感数据的方法。由于隐藏或省略信息可能降低数据集的效用，数据匿名化必须在隐私保障与效用之间取得良好平衡 [[28]](#ch5.xhtml#ref5_28)。
 
 当数据主体与其他匿名数据集的补充信息相关联时，可发起一种称为 **关联攻击** 的隐私攻击。已提出多种方法以阻止关联攻击，它们分别是 **k-匿名性**、**l-多样性** 和 **t-接近性**。然而，若攻击者已知部分私有数据，此类隐私防护仍易受关联攻击。基于 k-匿名性方法的这一缺陷，使得开发提供强隐私保证的替代方法（如 **差分隐私**）成为必要。
 
-##### 2.2.2 同态加密
+#### 2.2.2 同态加密
 
 在中心化系统（如云端）使用收集的数据训练模型时，利用 **同态加密** 技术保护该数据的机密性至关重要 [[29]](#ch5.xhtml#ref5_29)。得益于同态加密，无需密钥即可对加密数据进行计算。仅计算请求者能够解密加密结果。
 
@@ -2053,11 +1942,11 @@ MSE 和交叉熵损失是可用字母 `L` 表示的损失函数示例。参数�
 
 尽管同态加密从未泄露原始明文数据，但巨大的处理开销阻碍了在密文上执行任何有意义的计算。因此，在大规模数据训练任务中使用同态加密目前仍不可行。
 
-#### 2.3 GDPR
+### 2.3 GDPR
 
 GDPR 于 2018 年 5 月 25 日取代了自 1995 年起生效的《数据保护指令》。GDPR 的核心原则是“个人数据只能在严格限制下、为合法目的、合法地获取”（更广泛的范围见“Which?”——图 1）。在其 99 条款中，法律详细规定了组织必须遵守的价值观，以及为处理个人数据必须满足的技术与管理标准 [[31]](#ch5.xhtml#ref5_31)。
 
-如 图 1 所示，《通用数据保护条例》（“全球”）将对全球处理居民个人信息的企业和政府机构产生深远影响。依据数据保护立法，GDPR 明确区分了 **数据主体**、**数据控制者** 和 **数据处理者** 的角色。
+如图 1 所示，《通用数据保护条例》（“全球”）将对全球处理居民个人信息的企业和政府机构产生深远影响。依据数据保护立法，GDPR 明确区分了 **数据主体**、**数据控制者** 和 **数据处理者** 的角色。
 
 GDPR 是一项欧盟法规，其既定目标是“保护自然人在个人数据处理方面的权利和自由，特别是隐私权”。为此，GDPR 对同意的法律依据确立了严格要求，强制要求 **数据控制者** 在处理任何个人数据前获得 **数据主体** 的同意。在授权条件下 [[32]](#ch5.xhtml#ref5_32)，**数据控制者** 对处理个人数据的原因和方式拥有完全控制权。
 
@@ -2065,12 +1954,9 @@ GDPR 是一项欧盟法规，其既定目标是“保护自然人在个人数据
 
 图 1. GDPR 法规。
 
-#### 2.4 满足 GDPR 要求的困难
+### 2.4 满足 GDPR 要求的困难
 
 标准的基于 ML 的应用和服务必须采用适当方式，依据《通用数据保护条例》(GDPR) 规定的六大数据保护原则，妥善保护和管理个人数据。尽管基于 ML 的系统受益于多种隐私保护防护措施，但在中心化的基于 ML 系统中应用这些责任可能极具挑战性，甚至不可能 [[33]](#ch5.xhtml#ref5_33)。
-
-
-
 
 此类基于机器学习的系统在单台服务器上收集、聚合并分析海量数据，使其容易遭受由单点故障引发的灾难性数据泄露。由于机器学习算法执行和决策的“黑箱”特性，要对其提供有意义的分析极具挑战性 [34]。因此，大多数基于机器学习的系统难以满足 GDPR 关于透明度、公正性和自动化决策的标准。
 
@@ -2078,13 +1964,13 @@ GDPR 是一项欧盟法规，其既定目标是“保护自然人在个人数据
 
 最后，机器学习算法主要是为最大化效率而设计的，而隐私保护方法仍局限于基本的警示条款。为了满足 GDPR 的严格要求，机器学习算法将需要在算法层面进行根本性重新设计。实现这种彻底的变革将需要巨大的、甚至可能无法实现的技术精度和资金支持。看来许多服务提供商正在权衡将效率置于隐私保障之上的成本与收益，并意识到这样做可能会导致他们无法继续提供当前的服务。
 
-### 3. 联邦学习：一种分布式协作学习方法
+## 3. 联邦学习：一种分布式协作学习方法
 
 由于难以在大规模收集和处理个人数据时遵守严格的数据保护要求，传统的以云为中心的机器学习技术在许多场景下已不再适用。终端用户设备（如智能手机、平板电脑和可穿戴设备）拥有不断增长的算力和互联网接入，并产生了绝大多数个人数据 [36]。为应对此类个人设备的激增及随之而来的隐私问题加剧，去中心化 AI 应运而生，它利用移动边缘计算和人工智能/机器学习方法，将智能从云端迁移至边缘。
 
 由于联邦学习允许用户在协作训练机器学习模型的整个过程中，将其原始个人数据保留在本地设备上，因此它可能有助于缓解与基于云的机器学习相关的一些风险。它是一种利用去中心化数据训练中心化机器学习模型的跨学科方法，应用于机器学习、分布式计算、数据隐私和安全领域。在组合和更新模型时，仅交换训练参数。在训练数据方面，传统分布式学习假设每个计算节点的本地训练数据集是独立同分布（IID）且规模大致相同的。联邦学习并非如此。由于联邦学习能够适应非 IID 数据集，且其规模可能相差数个数量级，因此它是分布式学习的一项进步。这些不相关的数据集分散在各种移动设备上，设备的网络可用性和数据传输速率各不相同。
 
-#### 3.1 联邦学习中的模型训练
+### 3.1 联邦学习中的模型训练
 
 通过将模型构建为在训练数据集上最小化特定目标函数，联邦学习主要适用于机器学习模型中的参数估计。此类最小化目的的一种表述为：
 
@@ -2098,9 +1984,9 @@ GDPR 是一项欧盟法规，其既定目标是“保护自然人在个人数据
 
 正如传统机器学习方法所做的那样，此类过程在已均匀分区的海量数据集上执行大量快速迭代。此类算法需要通往训练数据的极快、低延迟链路。由于联邦学习环境不满足这些条件，解决此优化问题的传统机器学习方法不再适用。与传统方法使用的平衡且 IID 的数据不同，联邦学习的训练数据分散在数百万台独立的移动设备上，由延迟显著更高、吞吐量更低的网络连接。作为一个额外的限制条件，单个设备的数据和计算资源仅在训练过程中按需提供。在联邦学习付诸实践之前，优化算法需要成功适应并实施于联邦环境中。
 
-#### 3.2 联邦优化
+### 3.2 联邦优化
 
-在训练数据大量且不均匀地分散在本地节点的联邦环境中表现良好的优化算法，是联邦学习的基石。以下公式描述了联邦优化的分布式参数。设 `K` 表示集群中节点的总数，`P[k]` 表示节点 `k` ∈ {1, 2*, .*, K} 持有的数据点集合，`n[k]` = |`P[k]`| 表示节点 `k` 持有的数据点总数。鉴于每个本地节点存储其自己独特的个人信息集合，我们可以推断出，ℙ[`k`] ∩ ℙ[`l`] = ⌀ if `k` ≠ `l` 和 *Σ*[`k` = 1]^(`K`)`n`[`k`] = `n`。对于最小化问题，以下定义了分布式问题公式化：
+在训练数据大量且不均匀地分散在本地节点的联邦环境中表现良好的优化算法，是联邦学习的基石。以下公式描述了联邦优化的分布式参数。设 `K` 表示集群中节点的总数，`P[k]` 表示节点 `k` ∈ {1, 2*, .*, K} 持有的数据点集合，`n[k]` = |`P[k]`| 表示节点 `k` 持有的数据点总数。鉴于每个本地节点存储其自己独特的个人信息集合，我们可以推断出，ℙ[`k`] ∩ ℙ[`l`] = ⌀ if `k` ≠ `l` 和 *Σ*[`k` = 1]^(`K`)`n`[`k`] = `n`。对于最小化问题，以下定义了分布式问题公式化：
 
 (3)
 
@@ -2114,24 +2000,19 @@ GDPR 是一项欧盟法规，其既定目标是“保护自然人在个人数据
 F_{k}(w) = \frac{1}{n_{k}}\text{Σ}_{i \in {\mathbb{P}}_{k}}f_{i}(w)
 ```
 
-鉴于该联邦系统中本地节点的通信能力有限，减少优化技术使用的迭代次数至关重要。作者 [25] 结合了用于分布式优化的 SVRG 和 DAN 算法，创建了一种独特的分布式梯度下降（联邦 SVRG）。FSVRG 在每个周期后通过计算每个本地节点 `k` 上 `P k` 数据的梯度，然后跨所有 `k` 个本地节点对这些加权值求平均，来更新每个节点的参数。下一步是利用约 10,000 个个体作为本地节点的样本，评估系统预测 Google+ 公开帖子是否会获得评论的能力。FSVRG 比原始梯度下降方法少 30 次迭代即可达到最优解。
+鉴于该联邦系统中本地节点的通信能力有限，减少优化技术使用的迭代次数至关重要。作者 [25] 结合了用于分布式优化的 SVRG 和 DAN 算法，创建了一种独特的分布式梯度下降（联邦 SVRG）。`FSVRG` 在每个周期后通过计算每个本地节点 `k` 上 `P k` 数据的梯度，然后跨所有 `k` 个本地节点对这些加权值求平均，来更新每个节点的参数。下一步是利用约 10,000 个个体作为本地节点的样本，评估系统预测 Google+ 公开帖子是否会获得评论的能力。`FSVRG` 比原始梯度下降方法少 30 次迭代即可达到最优解。
 
-
-
-然而，在联邦语境下，个人移动设备间的数据样本量和数据供给差异巨大，标准分布式机器学习算法主要在 IID 数据上训练的假设不再成立。这表明，在联邦系统中，非 IID 数据训练导致的准确率远低于 IID 数据训练，且收敛速度更慢。减少发送到编排服务器的参数更新数据量的方法，可提升此类环境下 `FSVRG` 算法的表现。通过使用结构化更新或草图更新，可更快、用更少变量更新机器学习模型。将许多机器学习模型中的本地节点作为单一学习目标中的任务分别训练，是一种雄心勃勃的联邦优化策略。本地节点生成不同分布的数据是常态，因此为每个节点使用不同的学习模型很自然。然而，由于这些模型在结构上相似，可使用多任务学习（`MTL``）框架对其建模，从而对它们之间的相似性进行建模。该方法在处理非 IID 数据时，能保证学习收敛并提升性能。联邦 SGD 和联邦平均法是在早期联邦优化研究基础上发展而来的，它们允许用比朴素 `FSVRG` 少一百倍的通信量来训练深度网络。
+然而，在联邦语境下，个人移动设备间的数据样本量和数据供给差异巨大，标准分布式机器学习算法主要在 IID 数据上训练的假设不再成立。这表明，在联邦系统中，非 IID 数据训练导致的准确率远低于 IID 数据训练，且收敛速度更慢。减少发送到编排服务器的参数更新数据量的方法，可提升此类环境下 `FSVRG` 算法的表现。通过使用结构化更新或草图更新，可更快、用更少变量更新机器学习模型。将许多机器学习模型中的本地节点作为单一学习目标中的任务分别训练，是一种雄心勃勃的联邦优化策略。本地节点生成不同分布的数据是常态，因此为每个节点使用不同的学习模型很自然。然而，由于这些模型在结构上相似，可使用多任务学习（`MTL`）框架对其建模，从而对它们之间的相似性进行建模。该方法在处理非 IID 数据时，能保证学习收敛并提升性能。联邦 SGD 和联邦平均法是在早期联邦优化研究基础上发展而来的，它们允许用比朴素 `FSVRG` 少一百倍的通信量来训练深度网络。
 
 这些算法的动机在于：需要利用当今个人移动设备中强大的处理器，做的不仅仅是计算梯度步骤。在这种情况下，梯度由每个客户端计算，本地模型也在本地计算多次；协调服务器仅聚合结果。这在训练期间仍能提供良好的全局模型，同时减少了所需的通信次数。这些建议算法在严苛约束下（如低带宽、过大抖动和通信延迟）表现良好。在这些情况下，朴素 `FSVRG` 算法效果不佳。G-board（安卓手机上的谷歌键盘）利用这些算法预测用户输入。在此设置中，智能手机运行联邦 SGD，使用本地信息执行梯度下降计算。云服务器接收信息并进行处理。为在新训练周期开始时改进全局模型，服务器采用联邦平均法，随机选取一部分移动设备并平均它们提供的梯度。本地节点接收更新后的全局模型后，会对其模型应用必要的更改。
 
-#### 3.3 联邦学习过程的周期
+### 3.3 联邦学习过程的周期
 
 网络节点各自使用自己的数据训练模型，并定期向中心化服务器报告。中心化 FL 架构中的工作流周期包含以下四个步骤：
 
 1.  **参与者选择与全局模型分发：** 服务器选取一部分符合训练资格的用户。随后，它更新全局机器学习模型，并通知受训者即将开始的训练会话。
-
 2.  **本地计算：** 参与者下载服务端机器学习模型后，刷新其设备上的 ML 模型，并使用设备上的数据集对其进行重新训练。客户端设备需要 FL 客户端软件，以便在本地节点上执行联邦 SGD 和联邦平均法等训练算法、获取全局模型更新，以及与服务器收发本地机器学习模型参数。
-
 3.  **本地模型聚合：** 为刷新全球机器学习模型（即下一步），服务器聚合贡献者提供的足够多的本地训练模型。为防止服务器访问敏感的机器学习模型因子，必须在聚合过程中融入隐私保护措施。这些策略包括安全聚合、差分隐私和前沿加密协议。
-
 4.  **修订后的全局模型：** 服务器随后使用步骤 3 中的组合模型因子更新当前的全局机器学习模型。后续训练轮次的参与者将获得此修订后的全局模型。
 
 ```
@@ -2142,23 +2023,23 @@ F_{k}(w) = \frac{1}{n_{k}}\text{Σ}_{i \in {\mathbb{P}}_{k}}f_{i}(w)
 
 需要多次迭代这一 4 阶段过程才能产出可靠的全局模型。注意，并非每次训练都需要周期的四个步骤。可利用异步 SGD 策略，基于训练结果快速更新本地模型，而无需等待其他参与者的更新。这种优化更新速率的异步方法，常用于大数据集上深度学习模型的分布式训练。借助聚合压缩、基于 SMC 的安全聚合和差分隐私等前沿工具，同步方法在 FL 语境下相较于异步方法具有显著优势，特别是在通信效率和安全性方面。这种协调需要使用中心服务器。
 
-### 4. 用于隐私保护的中心化 FL 框架
+## 4. 用于隐私保护的中心化 FL 框架
 
 传统机器学习方法要求在设备间共享训练数据和计算，而 FL 允许在不损害隐私的前提下协同训练机器学习模型。即使私密信息未直接传输给协调服务器，本地机器学习模型仍在其参数中保留了训练数据样本的某些方面。例如，文献 [[32]](#ch5.xhtml#ref5_32) 的作者表明，利用训练数据暴露的隐藏相关性，可从训练模型中提取敏感信息。正如文献 [[19]](#ch5.xhtml#ref5_19) 作者指出的，现代深度学习模型隐藏了许多方面的内部表征，其中一些与当前任务无关。这些偶然特征可推断出关于训练集的数据。由于依赖推理，FL 系统易受成员推理攻击和重构攻击等推理攻击。协调服务器向本地节点提供全局训练模型的中间阶段访问权限。在采用中心化 FL 框架前，应研究安全模型并仔细考虑隐私保障，因为这为恶意行为者通过提供任意更新污染全局模型从而影响训练过程敞开了大门。联邦学习系统内需要额外的保密和隐私措施，以确保敏感数据安全并符合《通用数据保护条例》等严格的数据保护标准。我们将梳理针对中心化 FL 的各类攻击及其采用的各种隐私保护技术。
 
-#### 4.1 隐私保护方案中的协调服务器
+### 4.1 隐私保护方案中的协调服务器
 
 大多数现代隐私保护 FL 系统解决方案建立在最先进的加密协议（如 SMC 和差分隐私）基础之上。
 
-
-
-# 为防止 (i) 服务器内部人员发起推理攻击以及 (ii) 拜占庭参与者进行模型投毒，服务器上实施了多种技术。针对推理攻击的安全性，版本 4.3.1。
+为防止 (i) 服务器内部人员发起推理攻击以及 (ii) 拜占庭参与者进行模型投毒，服务器上实施了多种技术。针对推理攻击的安全性，版本 4.3.1。
 
 在全局模型训练期间，开发了许多服务器端策略来应对推理攻击，并防止协调服务器检查单个用户提供的因子。特别是，客户端发送的参数可以使用 `Secure Aggregate` 协议进行加密，该协议构建在 `SMC` 之上。`SMC` 是协议的第一步，因为它加密模型参数，以便用户在不泄露各自贡献的情况下对其进行平均。参与者和协调服务器进行四轮交互：第一轮涉及公钥分发，第二轮涉及客户端侧掩码输入的计算，第三轮涉及确保至少有 `t` 个参与者正在训练同一模型，第四轮涉及去掩码（第 4 轮）。
 
-仅当服务器是恶意时，协议的第三轮才是必要的；如果服务器只是好奇（honest-but-curious），则可以跳过。由于使用此协议，客户端和中央协调服务器必须处理更多的通信开销和更高的计算复杂度。值得一提的是，Google 的 `Tensor Flow Federated` 框架提供了 `Secure Aggregation` 的实现，可用于联邦学习的研究和实际实验。为了使 `SGD` 运行并提供全局模型更新，只需按照 `Secure Aggregation` 过程对一部分参与者的本地模型权重进行平均即可。因此，协调服务器不必收集特定于参与者的本地更新。结果，服务器将无法基于用户数据发起推理攻击。`Secure Aggregation` 协议结合 `Federated Averaging`，允许在信任受限的服务器上安全执行 `SGD`，具有更强的容错能力和更低的通信成本。不过，这种方法仅适用于参与者可信的环境。在处理拜占庭参与者时（例如他们与流氓服务器串通以泄露客户端输入），无法保证协议的可用性或准确性。
+仅当服务器是恶意时，协议的第三轮才是必要的；如果服务器只是好奇（honest-but-curious），则可以跳过。由于使用此协议，客户端和中央协调服务器必须处理更多的通信开销和更高的计算复杂度。值得一提的是，Google 的 `TensorFlow Federated` 框架提供了 `Secure Aggregation` 的实现，可用于联邦学习的研究和实际实验。为了使 `SGD` 运行并提供全局模型更新，只需按照 `Secure Aggregation` 过程对一部分参与者的本地模型权重进行平均即可。因此，协调服务器不必收集特定于参与者的本地更新。结果，服务器将无法基于用户数据发起推理攻击。`Secure Aggregation` 协议结合 `Federated Averaging`，允许在信任受限的服务器上安全执行 `SGD`，具有更强的容错能力和更低的通信成本。不过，这种方法仅适用于参与者可信的环境。在处理拜占庭参与者时（例如他们与流氓服务器串通以泄露客户端输入），无法保证协议的可用性或准确性。
 
-#### 4.2 本地节点隐私保护解决方案
+### 4.2 本地节点隐私保护解决方案
+
+
 
 为防止协调服务器上的内部攻击者执行推理攻击导致隐私泄露，必须在本地节点和服务器上均启用 `Secure Aggregation`。我们基于 `SMC` 的联邦学习多方深度学习聚合方法，通过对所有参与者本地模型参数进行同态加密而成为可能。当收集到足够的本地模型后，加密的全局模型被传输给协调服务器。这保证了所有全局模型贡献者的机密性得以维持。本地节点可使用扰动策略保持最新模型参数和原始训练数据集的机密性，该策略旨在挫败协调服务器和其他攻击者的泄露企图。在与其他节点共享模型之前，可在每个节点本地使用扰动技术来隐藏模型的某些部分。即使掌握了这些模型参数，攻击者仍无法成功重建原始训练数据或获取任何有用信息。
 
@@ -2170,26 +2051,22 @@ F_{k}(w) = \frac{1}{n_{k}}\text{Σ}_{i \in {\mathbb{P}}_{k}}f_{i}(w)
 
 #### 5.1 角色与义务
 
-`通用数据保护条例` (GDPR) 在数据保护立法框架内确立了“数据主体”、“数据控制者”和“数据处理者”的含义。在 `数据控制者` 披露符合 GDPR 的处理目的和方式之前，`数据处理者` 不得开始处理个人数据。此外，`数据控制者` 必须采取适当措施，告知 `数据主体` 其个人数据将如何被安全且私密地传输和处理。`通用数据保护条例` 保障个人享有“知情权”、“访问权”和“被遗忘权”。正如 表 1 所示，联邦学习语境下的数据点不被视为离散样本，而是区域模型中的变量。
+`通用数据保护条例` (GDPR) 在数据保护立法框架内确立了“数据主体”、“数据控制者”和“数据处理者”的含义。在 `数据控制者` 披露符合 GDPR 的处理目的和方式之前，`数据处理者` 不得开始处理个人数据。此外，`数据控制者` 必须采取适当措施，告知 `数据主体` 其个人数据将如何被安全且私密地传输和处理。`通用数据保护条例` 保障个人享有“知情权”、“访问权”和“被遗忘权”。正如表 1 所示，联邦学习语境下的数据点不被视为离散样本，而是区域模型中的变量。
 
 表 1. GDPR 在各类服务中的角色。
 
-| GDPR 角色 | | 集中式联邦学习 | | 传统机器学习 |
-| --- | --- | --- | --- | --- |
-| 数据处理者 | | 服务受益方 | | 服务受益方、第三方 |
-| --- | --- | --- | --- | --- |
-| 数据控制者 | | 服务受益方 | | 服务受益方 |
-| 数据主体 | | 最终用户 | | 最终用户 |
-| 个人数据 | | 本地模型因子 | | 原始训练数据 |
+| GDPR 角色 | 集中式联邦学习 | 传统机器学习 |
+| --- | --- | --- |
+| 数据处理者 | 服务受益方 | 服务受益方、第三方 |
+| 数据控制者 | 服务受益方 | 服务受益方 |
+| 数据主体 | 最终用户 | 最终用户 |
+| 个人数据 | 本地模型因子 | 原始训练数据 |
 
 例如，在步骤 1 中，服务提供者指示用户在其本地训练数据上训练机器学习模型并共享该本地训练模型；在步骤 (ii) 中，服务提供者处理从用户发送来的本地模型参数；在步骤 (iii) 中，服务提供者向所有用户分发全局模型并请求他们更新本地模型。在集中式联邦学习环境中，服务提供者可能只能访问一个全局的、匿名的、因此非协作的机器学习模型。因此，数据处理者是唯一的服务提供者，也是此类情况下唯一能够提供联邦学习的实体。由于联邦学习专注于累积本地机器学习模型并更新全局机器学习模型，其处理方法实现起来要容易得多。
 
 #### 5.2 GDPR 原则
 
-
-
-
-# GDPR 原则与联邦学习系统
+### GDPR 原则与联邦学习系统
 
 图 3 描绘了《通用数据保护条例》（GDPR）确立的六项原则，作为服务提供商管理个人数据的合理指引。要求数据控制者承担遵守这些原则的责任，并建立适当机制以保证合规的注意义务，这与 1998 年《数据保护法》的规定惊人地相似。
 
@@ -2197,7 +2074,7 @@ F_{k}(w) = \frac{1}{n_{k}}\text{Σ}_{i \in {\mathbb{P}}_{k}}f_{i}(w)
 
 图 3. GDPR 基本原则。
 
-## 5.2.1 合法性、公平性与透明性
+#### 5.2.1 合法性、公平性与透明性
 
 作为首条规则，联邦学习应用的服务提供商（作为数据控制者）必须解释其终端用户为何必须接受联邦学习训练。《通用数据保护条例》（GDPR）规定了处理个人数据的六种法律依据：同意、履行合同、法定义务、 vital interests（重大利益）、公共利益/公职权力行使以及合法权益。某些类型的特殊类别数据，例如与个人健康、基因构成或种族/民族相关的数据，可能要求在满足该法律依据之外，还需满足额外要求，方能合法处理。在开始任何个人数据处理之前，应考虑处理的具体目的和情境，选择并记录最合适的一种。
 
@@ -2205,11 +2082,11 @@ F_{k}(w) = \frac{1}{n_{k}}\text{Σ}_{i \in {\mathbb{P}}_{k}}f_{i}(w)
 
 如果机器学习系统（包括联邦学习）输入了有偏见的训练数据，系统极有可能返回有偏见的结果。当训练好的模型用于全自动决策系统时，可能会产生不公平且有偏见的结果。联邦学习系统的一个问题在于安全聚合，它阻止服务提供商访问原始训练数据集，也阻止用户验证其本地训练的机器学习模型。因此，联邦学习系统难以公开地执行训练活动，并保证系统做出的任何自动判断的正确性。结果，所有联邦学习解决方案都变得不可行，且无法满足 GDPR 强制要求的公平性和公开性。这些悬而未决的问题要求对 AI/ML 算法的可解释性、偏见和公开性进行更多研究，从而呼吁放宽 GDPR 监管机构对 AI/ML（包括联邦学习）的规定。满足这一 GDPR 要求的一种可能途径，是开发天然可解释、能促进负责任的机器学习治理的机器学习模型和算法。
 
-## 5.2.2 目的限制
+#### 5.2.2 目的限制
 
 为遵守目的限制原则，联邦学习服务提供商必须向客户明确清楚地说明为何以及如何将其个人数据和算力发送至服务提供商的服务器，以训练全局机器学习模型。根据这一概念，服务提供商可将信息用于任何合理目的。为使联邦学习系统完全符合这些原则，它们必须能够直接纳入可接受的隐私保护技术，如安全聚合和差分隐私。这是因为协调服务器无法提取和使用客户端本地训练的机器学习模型，除非用于全局模型更新。恶意服务提供商或拜占庭节点植入的隐藏后门模型，可导致未经授权的训练。由于中心化联邦学习使用安全聚合，不存在服务端模型异常检测解决方案来防御此类攻击；因此，任何联邦学习系统要实现完全符合 GDPR 仍然存在问题。
 
-## 5.2.3 数据最小化
+#### 5.2.3 数据最小化
 
 GDPR 要求“数据控制者”（包括服务提供商）仅收集和处理针对特定、明确和合法目的所必需的充分个人数据。数据最小化对传统中心化机器学习算法构成挑战，因为很难预先知道成功训练特定机器学习模型需要什么数据以及需要多少数据。与需要用户持续收集和分析新训练数据的传统机器学习系统不同，联邦学习仅要求服务提供商从参与者处获取本地机器学习模型。当联邦学习系统采用隐私保护方法时，协调服务器可能仅收集参与者本地模型参数的平均值，用于全局模型改进。聚合方法进一步保证全局模型不包含任何敌人可用于非法目的的个人身份信息。旨在引入未经授权目的的后门攻击，之所以成为可能，是因为目的限制原则。结果，为实现预期目标，从参与者处收集的本地机器学习模型的最小参数集，现在对于预期目标而言过大，而对于未经授权的副任务而言又过小。这种植入的副任务是联邦学习系统未解的难题，因为它可能被用来泄露参与者的私人信息。
 
@@ -2231,10 +2108,6 @@ GDPR 要求数据控制者在可能的情况下，向数据主体提供以下权
 要求数据控制者简单明了地披露联邦学习训练的性质和目标、所用的本地机器学习模型以及流程的预期结果，这使得满足数据主体的这项权利变得具有挑战性。联邦学习是一个黑箱模型，这使得像许多其他复杂的机器学习过程一样，无法理解其工作原理，也无法以任何确定程度预测其输出。由于联邦学习系统的条款和条件可以说明为何使用客户端的本地机器学习模型（即构建全局机器学习模型）、何时不使用该数据（即每个训练周期结束后）以及谁有权访问它，因此它满足了知情权（仅协调服务器）。
 
 ##### 5.3.2 自动化决策与画像
-
-
-
-
 
 ## 通用数据保护条例保障个人享有“不受仅基于自动化处理（包括画像）的决定约束的权利”
 
@@ -2259,20 +2132,14 @@ GDPR 要求数据控制者在可能的情况下，向数据主体提供以下权
 为了建立并展示 GDPR 合规性，基于 AI/ML 的服务提供商应从项目一开始就进行 DPIA 和 PIA，并妥善记录程序。数据安全和隐私风险评估对于证明合规性、有效管理风险以及确定已采取何种行动来减轻此类风险至关重要。然而，并非每项数据处理活动都需要进行 DPIA 或 PIA。如果该操作“可能导致自然人的权利和自由面临高风险”，（NS/ > (1)），则需要获得受影响者的同意。DPA 必须遵循 DPA 法案第 (3)、35(4) 条所述标准进行 DPIA 和 PIA。所有联邦学习服务提供商应执行以下 DPIA/PIA 程序，以实现 GDPR 合规并按 DPA 要求证明合规性：
 
 1.  处理数据所涉及的步骤、其相关目标，以及对这些步骤的解释和理由。例如，记录机器学习模型参数如何传输到协调服务器，以及如何请求数据主体允许本地机器学习训练，这很重要。
-
 2.  结合其目标，分析每个程序的相关性和适当性。例如，虽然差分隐私技术并非绝对必要，但实施安全聚合机制是必要的。
-
 3.  必须评估每项操作对数据安全和隐私的潜在影响，以及用于解决此类问题的任何技术步骤。例如，在联邦学习系统中，将参数从本地机器学习模型发送到组织服务器以增强通用机器学习模型时，推理攻击可能会导致隐私问题。白皮书中描述的方法利用了安全聚合和同态加密。即使采取了这些额外的用户隐私预防措施，联邦学习系统仍存在漏洞，可能因隐藏子任务导致模型破坏等恶意原因而受到攻击。防止此类攻击以避免潜在违反《通用数据保护条例》至关重要。
 
 由于联邦学习建立在不透明的机器学习模型之上，与其他基于 AI/ML 的系统类似，服务提供商和 DPA 都难以理解和审计联邦学习。因此，对联邦学习系统进行 DPIA/PIA 似乎流于表面，需要付出巨大努力来识别违反要求的行为，从而实现更安全的操作和更严格的隐私保护。
 
 ### 6. 结论
 
-
-
-
-
-# 联邦学习中的隐私保护与 GDPR 合规性分析
+## 联邦学习中的隐私保护与 GDPR 合规性分析
 
 AI 和基于 ML 的应用程序及服务的创建是许多行业的主要关注点。然而，随着个人数据的不受控制地扩散，对数据隐私的担忧日益加剧。在 Facebook 的剑桥分析公司丑闻和 SARS-CoV-2 疫情等高调数据泄露事件之后，算法偏见、伦理、政治后果和法律问责等问题引起了广泛关注。对于“数据饥渴”的人工智能/机器学习系统而言，联邦学习（FL）为高效的隐私保护方法提供了一个可行的解决方案。通过将最终用户设备上的数据存储和处理与服务器端的数据聚合解耦，FL 使消费者能够重新获得对其数据的完全所有权，并使其比集中式系统更不易受到大规模数据泄露的影响。尽管 FL 仍处于起步阶段，但如 FL 系统中那样采用去中心化数据存储的协作计算带来了巨大的优势，使各种基于 AI/ML 的应用程序能够在无需直接访问最终用户数据的情况下得以实现。FL 系统必须遵守《通用数据保护条例》（GDPR）和其他严格的隐私规则。
 
@@ -2292,85 +2159,81 @@ AI 和基于 ML 的应用程序及服务的创建是许多行业的主要关注�
 
 4.  Sousa, S. and Kern, R. 2023. How to keep text private? A systematic review of deep learning methods for privacy-preserving natural language processing. Artificial Intelligence Review, 56(2): 1427–1492.
 
-5.  Tewari, A. 2023. mHealth systems need a privacy-by-design approach: Commentary on federated machine learning, privacy-enhancing technologies, and data protection laws in medical research: Scoping review. Journal of Medical Internet Research, 25.
-
-6.  Brauneck, A., Schmalhorst, L., Kazemi Majdabadi, M.M., Bakhtiari, M., Völker, U., Baumbach, J. and Buchholtz, G. 2023. Federated machine learning, privacy-enhancing technologies, and data protection laws in medical research: Scoping review. Journal of Medical Internet Research, 25.
-
-7.  Tacconelli, E. et al. 2022. Challenges of data sharing in European Covid-19 projects: A learning opportunity for advancing pandemic preparedness and response. The Lancet Regional Health - Europe, 21.
-
-8.  Liu, Y. et al. 2022. Federated forest. IEEE Transactions on Big Data, 8(3): 843–854.
-
-9.  Paragliola, G. and Coronato, A. 2022. Definition of a novel Federated Learning approach to reduce communication costs. Expert Systems with Applications, 189.
-
-10.  Zuziak, M. and Rinzivillo, S. 2022. Federated Learning as an Analytical Framework for Personal Data Management—A Proposition Paper, 3221.
-
-11.  Eliot, D. and Wood, D.M. 2022. Culling the FLoC: Market forces, regulatory regimes and Google’s (mis)steps on the path away from targeted advertising. Information Polity, 27(2): 259–274.
-
-12.  Xu, M. and Li, X. 2022. Federated Learning-based IDS against poisoning attacks. LNICST, 423: 331–345.
-
-13.  Liu, S., Wang, J. and Zhang, W. 2022. Federated personalized random forest for human activity recognition. Mathematical Biosciences and Engineering, 19(1): 953–971.
-
-14.  Truong, N., Sun, K., Wang, S., Guitton, F. and Guo, Y. 2021. Privacy preservation in federated learning: An insightful survey from the GDPR perspective. Computers and Security, 110.
-
-15.  Li, S.C., Chen, Y.W. and Huang, Y. 2021. Examining compliance with personal data protection regulations in interorganizational data analysis. Sustainability (Switzerland), 13(20).
-
-16.  Raja, V.V., Hemamalini, R.R. and Anand, A.J. 2011. Implementation of RETSINAbased congestion control technique in realistic WSN scenarios. Int. J. Comput. Sci. Eng. Technol., 1(10).
-
-17.  Kalloori, S. and Klingler, S. 2021. Horizontal cross-silo federated recommender systems, pp. 680–684.
-
-18.  Lin, Z., Pan, W. and Ming, Z. 2021. FR-FMSS: Federated recommendation via fake marks and secret sharing, pp. 668–673.
-
-19.  Huang, A., Liu, Y., Chen, T., Zhou, Y., Sun, Q., Chai, H. and Yang, Q. 2021. StarFL: Hybrid Federated Learning architecture for smart Urban computing. ACM Transactions on Intelligent Systems and Technology, 12(4).
 
 
+## 参考文献
 
+5. Tewari, A. 2023. mHealth systems need a privacy-by-design approach: Commentary on federated machine learning, privacy-enhancing technologies, and data protection laws in medical research: Scoping review. *Journal of Medical Internet Research*, 25.
 
+6. Brauneck, A., Schmalhorst, L., Kazemi Majdabadi, M.M., Bakhtiari, M., Völker, U., Baumbach, J. and Buchholtz, G. 2023. Federated machine learning, privacy-enhancing technologies, and data protection laws in medical research: Scoping review. *Journal of Medical Internet Research*, 25.
+
+7. Tacconelli, E. et al. 2022. Challenges of data sharing in European Covid-19 projects: A learning opportunity for advancing pandemic preparedness and response. *The Lancet Regional Health - Europe*, 21.
+
+8. Liu, Y. et al. 2022. Federated forest. *IEEE Transactions on Big Data*, 8(3): 843–854.
+
+9. Paragliola, G. and Coronato, A. 2022. Definition of a novel Federated Learning approach to reduce communication costs. *Expert Systems with Applications*, 189.
+
+10. Zuziak, M. and Rinzivillo, S. 2022. Federated Learning as an Analytical Framework for Personal Data Management—A Proposition Paper, 3221.
+
+11. Eliot, D. and Wood, D.M. 2022. Culling the FLoC: Market forces, regulatory regimes and Google’s (mis)steps on the path away from targeted advertising. *Information Polity*, 27(2): 259–274.
+
+12. Xu, M. and Li, X. 2022. Federated Learning-based IDS against poisoning attacks. *LNICST*, 423: 331–345.
+
+13. Liu, S., Wang, J. and Zhang, W. 2022. Federated personalized random forest for human activity recognition. *Mathematical Biosciences and Engineering*, 19(1): 953–971.
+
+14. Truong, N., Sun, K., Wang, S., Guitton, F. and Guo, Y. 2021. Privacy preservation in federated learning: An insightful survey from the GDPR perspective. *Computers and Security*, 110.
+
+15. Li, S.C., Chen, Y.W. and Huang, Y. 2021. Examining compliance with personal data protection regulations in interorganizational data analysis. *Sustainability (Switzerland)*, 13(20).
+
+16. Raja, V.V., Hemamalini, R.R. and Anand, A.J. 2011. Implementation of RETSINA-based congestion control technique in realistic WSN scenarios. *Int. J. Comput. Sci. Eng. Technol.*, 1(10).
+
+17. Kalloori, S. and Klingler, S. 2021. Horizontal cross-silo federated recommender systems, pp. 680–684.
+
+18. Lin, Z., Pan, W. and Ming, Z. 2021. FR-FMSS: Federated recommendation via fake marks and secret sharing, pp. 668–673.
+
+19. Huang, A., Liu, Y., Chen, T., Zhou, Y., Sun, Q., Chai, H. and Yang, Q. 2021. StarFL: Hybrid Federated Learning architecture for smart Urban computing. *ACM Transactions on Intelligent Systems and Technology*, 12(4).
 
 ## 第 6 章 面向资源受限物联网安全监测的联邦学习方法
 
-*P Sakthibalan*,^(⁶)
+**P Sakthibalan**^(⁶)
 
-电子邮件：balan1109@gmail.com; amuthakkannan@nu.edu.om; ansal.v@gmail.com; vijayalakshmi@nu.edu.om; sarav20021989@gmail.com
+电子邮件：`balan1109@gmail.com`; `amuthakkannan@nu.edu.om`; `ansal.v@gmail.com`; `vijayalakshmi@nu.edu.om`; `sarav20021989@gmail.com`
 
 ### 1. 引言
 
-“物联网” (IoT) 指的是一个网络，其中日常物体在数字和物理上相互连接，并与外部世界相连 [[1]](#ch6.xhtml#ref6_1)。Markit 预测到 2030 年，全球将有 1250 亿台物联网设备投入使用。智能家居、智能自动化、智慧城市和网络物理系统只是物联网设备众多应用中的几个例子。这些小工具利用包括传感器、处理器和通信硬件在内的多种嵌入式技术来收集和分发信息。这些小工具收集的信息会在边缘网络上与其他同类设备共享。通过汇集资源，我们可以增强数据管理和监测，以及机器与人之间的通信和基于 AI 的分析。尽管如此，这些小工具正日益被用作网络犯罪分子和其他形式网络恐怖主义的入口点。例如，由 Mirai 感染驱动的大规模分布式拒绝服务 (DDoS) 攻击针对脆弱的物联网 (IoT) 设备，导致了灾难性的中断 [[2]](#ch6.xhtml#ref6_2)。然而，这些物联网小工具的处理能力、内存和处理器相当有限。因此，针对台式机和服务器优化的人工智能 (AI) 方法因硬件和软件资源有限而不适用于物联网小工具。因此，在联邦学习 (FL) 环境下解决这些困难的过程（在该环境下困难被加剧）必须在资源和结果方面既高效又有效。
+“物联网” (`IoT`) 指的是一个网络，其中日常物体在数字和物理上相互连接，并与外部世界相连 [[1]](#ch6.xhtml#ref6_1)。Markit 预测到 2030 年，全球将有 1250 亿台物联网设备投入使用。智能家居、智能自动化、智慧城市和网络物理系统只是物联网设备众多应用中的几个例子。这些小工具利用包括传感器、处理器和通信硬件在内的多种嵌入式技术来收集和分发信息。这些小工具收集的信息会在边缘网络上与其他同类设备共享。通过汇集资源，我们可以增强数据管理和监测，以及机器与人之间的通信和基于 AI 的分析。尽管如此，这些小工具正日益被用作网络犯罪分子和其他形式网络恐怖主义的入口点。例如，由 Mirai 感染驱动的大规模分布式拒绝服务 (`DDoS`) 攻击针对脆弱的物联网 (`IoT`) 设备，导致了灾难性的中断 [[2]](#ch6.xhtml#ref6_2)。然而，这些物联网小工具的处理能力、内存和处理器相当有限。因此，针对台式机和服务器优化的人工智能 (`AI`) 方法因硬件和软件资源有限而不适用于物联网小工具。因此，在联邦学习 (`FL`) 环境下解决这些困难的过程（在该环境下困难被加剧）必须在资源和结果方面既高效又有效。
 
-近年来的研究表明，机器学习 (ML) 方法，特别是深度神经网络 (DNN)，在网络安全监测中具有有趣的应用 [[3]](#ch6.xhtml#ref6_3)，[[4]](#ch6.xhtml#ref6_4) 和 [[5]](#ch6.xhtml#ref6_5)。相比之下，基于 DNN 的网络安全方案因物联网设备的分散性和受限性，不适合应用于安全监测场景。企业在使用集中式方法训练基于 AI 的策略（如数据中心）时，担心数据安全。尽管 FL 方法潜力巨大，但由于本地存储、网络吞吐量、处理能力和内存的限制，可能无法被各种物联网和网络物理设备广泛使用。庞大的模型参数列表使得在低功耗物联网设备上训练联邦 DNN 模型变得具有挑战性（某些情况下达数百万参数）。为提供一个可行的基于联邦 DNN 的解决方案，将调查以下研究问题 (RQ)。
+近年来的研究表明，机器学习 (`ML`) 方法，特别是深度神经网络 (`DNN`)，在网络安全监测中具有有趣的应用 [[3]](#ch6.xhtml#ref6_3)，[[4]](#ch6.xhtml#ref6_4) 和 [[5]](#ch6.xhtml#ref6_5)。相比之下，基于 `DNN` 的网络安全方案因物联网设备的分散性和受限性，不适合应用于安全监测场景。企业在使用集中式方法训练基于 `AI` 的策略（如数据中心）时，担心数据安全。尽管 `FL` 方法潜力巨大，但由于本地存储、网络吞吐量、处理能力和内存的限制，可能无法被各种物联网和网络物理设备广泛使用。庞大的模型参数列表使得在低功耗物联网设备上训练联邦 `DNN` 模型变得具有挑战性（某些情况下达数百万参数）。为提供一个可行的基于联邦 `DNN` 的解决方案，将调查以下研究问题 (`RQ`)。
 
-RQ1：最先进的 DNN 能否在 FL 条件下进行训练，从而在资源稀缺时产生一个适合万物网络安全监测的模型？澄清请见 第 3.2 节。
+**RQ1**：最先进的 `DNN` 能否在 `FL` 条件下进行训练，从而在资源稀缺时产生一个适合万物网络安全监测的模型？澄清请见 **第 3.2 节**。
 
-RQ2：生成的 REFDL 能否可靠地检测针对物联网网络的攻击？见第 5 小节。
+**RQ2**：生成的 `REFDL` 能否可靠地检测针对物联网网络的攻击？见 **第 5 节**。
 
-我们使用联邦平均 (FedAvg) DNN 和八个物联网 (IoT) 基准数据集，为实验构建了一个 REFDL 模型。最终的资源高效联邦深度学习在合成和真实测试平台联邦环境中均提升了分类性能，且降低了内存消耗。模型的联邦集成有助于在物联网设备上本地训练模型时保护私密信息。
+我们使用联邦平均 (`FedAvg`) `DNN` 和八个物联网 (`IoT`) 基准数据集，为实验构建了一个 `REFDL` 模型。最终的资源高效联邦深度学习在合成和真实测试平台联邦环境中均提升了分类性能，且降低了内存消耗。模型的联邦集成有助于在物联网设备上本地训练模型时保护私密信息。
 
-本章结构安排如下。第 2 节 详细回顾了相关研究。第 3 节 描述了拟议方法和采用的 FL 技术，第 4 节 概述了评估程序。调查结果和讨论请参阅 第 5 节。随后，报告在 第 6 节 中以未来研究建议作为总结。
+本章结构安排如下。**第 2 节** 详细回顾了相关研究。**第 3 节** 描述了拟议方法和采用的 `FL` 技术，**第 4 节** 概述了评估程序。调查结果和讨论请参阅 **第 5 节**。随后，报告在 **第 6 节** 中以未来研究建议作为总结。
 
 ### 2. 相关工作
 
-在此，我们提供了一些关于利用深度学习监控物联网安全的相关研究，并对联邦学习 (FL) 及其在物联网环境中的应用做了同样的梳理。
+在此，我们提供了一些关于利用深度学习监控物联网安全的相关研究，并对联邦学习 (`FL`) 及其在物联网环境中的应用做了同样的梳理。
 
+#### 物联网中的深度神经网络
 
+学术界已就利用 `AI` 监控物联网安全进行了大量讨论。这些方法通常采用深度神经网络 [[6]](#ch6.xhtml#ref6_6)。为对网络流量进行分类，作者使用 `DNN` 分析来自物联网的信息 [[7]](#ch6.xhtml#ref6_7)。作者利用由物联网赋能的智慧城市数据进行了相同的分析 [[8]](#ch6.xhtml#ref6_8)。作者引入了结构紧凑的卷积神经网络 (`CNN`)，用于资源受限的物联网环境 [[9]](#ch6.xhtml#ref6_9)。通过在 `CIFAR-10` 和 `ImageNet` 等广泛使用的测试平台上证明其价值，我们可以看到它是一个强有力的工具。该方法成功的主要障碍包括缺乏物联网基准数据集的验证，以及未将内存利用率纳入考量。文献 [[10]](#ch6.xhtml#ref6_10) 使用量化卷积神经网络 (`CNN`) 从雷达传感器数据中提取信息。为在连接到物联网的极低功耗设备上完成分类任务，作者使用 `DNN`，更具体地说是全连接神经网络 (`FCNN`) [[11]](#ch6.xhtml#ref6_11)。为实现这一目标，我们不会为了模型的简单性而牺牲准确性。选择 `FCNN` 设计时可能未考虑模型复杂度，这可能会限制该方法的适用性。文中描述的大多数优化方法也考虑了权重和偏置因子的量化。作者 [[12]](#ch6.xhtml#ref6_12) 开发了用于集中式物联网安全监控的有效且可信的 `DNN` 技术。然而，本文提出的方法可在分布式环境中运行，占用更少内存并加速任务完成。该方法通过模拟微批次、剪枝和变量正则化，降低了内存需求并提高了精度。这对于分散式学习任务可用资源有限的情况很有帮助。
 
+#### 物联网环境中的联邦学习
 
-
-# 物联网中的深度神经网络
-
-学术界已就利用 AI 监控物联网安全进行了大量讨论。这些方法通常采用深度神经网络 [6]。为对网络流量进行分类，作者使用 DNN 分析来自物联网的信息 [7]。作者利用由物联网赋能的智慧城市数据进行了相同的分析 [8]。作者引入了结构紧凑的卷积神经网络，用于资源受限的物联网环境 (CNN) [9]。通过在 CIFAR-10 和 ImageNet 等广泛使用的测试平台上证明其价值，我们可以看到它是一个强有力的工具。该方法成功的主要障碍包括缺乏物联网基准数据集的验证，以及未将内存利用率纳入考量。文献 [10] 使用量化卷积神经网络 (CNN) 从雷达传感器数据中提取信息。为在连接到物联网的极低功耗设备上完成分类任务，作者使用 DNN，更具体地说是全连接神经网络 (FCNN) [11]。为实现这一目标，我们不会为了模型的简单性而牺牲准确性。选择 FCNN 设计时可能未考虑模型复杂度，这可能会限制该方法的适用性。文中描述的大多数优化方法也考虑了权重和偏置因子的量化。作者 [12] 开发了用于集中式物联网安全监控的有效且可信的 DNN 技术。然而，本文提出的方法可在分布式环境中运行，占用更少内存并加速任务完成。该方法通过模拟微批次、剪枝和变量正则化，降低了内存需求并提高了精度。这对于分散式学习任务可用资源有限的情况很有帮助。
-
-# 物联网环境中的联邦学习
-
-作者提出的原始 FedAvg FL 策略，提供了在多个客户端上训练单个本地模型的方法，且无需客户端与服务器交换本地数据 [13]。得益于此方法，利用非去中心化且非独立同分布的多样化客户端数据实现模型收敛显得前景广阔。因此，来自许多不同领域的学者采用了许多不同的方法来研究 FL 技术。FL 在物联网安全监控领域得到广泛应用。作者描述了利用 FL 识别物联网网络入侵的方法 [14]。文献 [15] 讨论了如何绕过 FL 软件在物联网设备上的限制。作者 [16] 详细描述了 FL 对工业物联网设备的攻击检测能力。加入原始传感器读数数据后，文献 [17] 的研究得以大幅改进。在边缘设备上进行联邦学习训练，可借助模型剪枝提高效率 [18]。作者 [19] 创建了一种可轻松转换至移动设备的联邦学习架构，以降低整体通信成本。FL 被用于发现物联网网络中的零日漏洞 [20]。这些实现利用了 FL 的数据隐私特性，且不受底层硬件或软件施加的任何限制。作为增强 FL 和减轻物联网网络内存资源负载的一种手段，作者 [21、22 和 23] 实现了模型参数缩减和数据并行性（微批次）。然而，这些方法均未考虑优化 FL 以减少多种 DNN 变体的时间和内存成本的可能性。我们利用来自各种物联网设备的原始网络流量数据微调联邦训练过程，以解决这一问题。我们的低开销 REFDL 方法在各种条件下，通过模拟和真实嵌入式设备进行了严格测试，确保其在需要最少内存和处理时间的同时，保持最先进的准确性。
+作者提出的原始 `FedAvg` `FL` 策略，提供了在多个客户端上训练单个本地模型的方法，且无需客户端与服务器交换本地数据 [[13]](#ch6.xhtml#ref6_13)。得益于此方法，利用非去中心化且非独立同分布的多样化客户端数据实现模型收敛显得前景广阔。因此，来自许多不同领域的学者采用了许多不同的方法来研究 `FL` 技术。`FL` 在物联网安全监控领域得到广泛应用。作者描述了利用 `FL` 识别物联网网络入侵的方法 [[14]](#ch6.xhtml#ref6_14)。文献 [[15]](#ch6.xhtml#ref6_15) 讨论了如何绕过 `FL` 软件在物联网设备上的限制。作者 [[16]](#ch6.xhtml#ref6_16) 详细描述了 `FL` 对工业物联网设备的攻击检测能力。加入原始传感器读数数据后，文献 [[17]](#ch6.xhtml#ref6_17) 的研究得以大幅改进。在边缘设备上进行联邦学习训练，可借助模型剪枝提高效率 [[18]](#ch6.xhtml#ref6_18)。作者 [[19]](#ch6.xhtml#ref6_19) 创建了一种可轻松转换至移动设备的联邦学习架构，以降低整体通信成本。`FL` 被用于发现物联网网络中的零日漏洞 [[20]](#ch6.xhtml#ref6_20)。这些实现利用了 `FL` 的数据隐私特性，且不受底层硬件或软件施加的任何限制。作为增强 `FL` 和减轻物联网网络内存资源负载的一种手段，作者 [[21]](#ch6.xhtml#ref6_21)、[[22]](#ch6.xhtml#ref6_22) 和 [[23]](#ch6.xhtml#ref6_23) 实现了模型参数缩减和数据并行性（微批次）。然而，这些方法均未考虑优化 `FL` 以减少多种 `DNN` 变体的时间和内存成本的可能性。我们利用来自各种物联网设备的原始网络流量数据微调联邦训练过程，以解决这一问题。我们的低开销 `REFDL` 方法在各种条件下，通过模拟和真实嵌入式设备进行了严格测试，确保其在需要最少内存和处理时间的同时，保持最先进的准确性。
 
 ### 3. 方法论
 
-这将通过在少量真实世界和物联网基准数据集样本上优化 BFDL 来确定 REFDL 来演示。
+这将通过在少量真实世界和物联网基准数据集样本上优化 `BFDL` 来确定 `REFDL` 来演示。
 
-我们展示了 REFDL 可以使用经过精心优化的 BFDL 算法版本生成。当应用于非物联网数据集时，高效的 REFDL 可以检测物联网攻击行为并提供准确分类。
+我们展示了 `REFDL` 可以使用经过精心优化的 `BFDL` 算法版本生成。当应用于非物联网数据集时，高效的 `REFDL` 可以检测物联网攻击行为并提供准确分类。
 
 #### 3.1 基线联邦深度学习
 
-基线联邦深度学习将传统 DNN (FCNN/CNN) 模型与 FedAvg 算法相结合。集成的 DNN 是一个拥有多层神经元的人工神经网络，能准确表示输入数据。这些神经元代表计算单元，可传达其激活函数和输入上执行操作的结果。在 FCNN 中，神经元按顺序连接到其权重和偏置。从这个意义上说，权重和偏置类似于计算机内存。在算法 1 中，我们找到了网络架构、激活函数、权重和偏置值，以及 BFDL (`Mn`) 基线模型。可调整权重和偏置等参数，以微调训练数据 `Dtr` 上产生的误差函数 `Mn`。遵循这些准则将产生一个包含所有客户端模型信息的“主” FedAvg 模型。算法 1 描述了如何使用反向传播和随机梯度下降 (SGD) 算法训练 `Mn` 大小（或更大）的网络。使用算法 1 的设备更新功能，服务器可在每轮通信后更新主模型并重新分发给客户端。在第三个算法中，客户端迭代地使用其数据更新提交给服务器的梯度下降权重。这旨在通过最小化方程 1 和 2 中的代价函数来开发一个通用参考模型。随后使用算法 1 的第 11 行和第 12 行对算法的执行时间和内存需求做出合理推测。本地权重更新后，这些数据代表设备级训练资源日志。在第三种方法中，模型权重被传输到协调服务器。集成全局模型时，服务器通常使用返回权重中点。通过向全局模型添加 `Dtr` 学习函数，可准确映射先前未见的数据。为分类目的，基线联邦深度学习技术采用监督式 DNN (FCNN 和卷积神经网络)，`Mn` 接收数据流 (`Dtr`) 并输出概率类向量 (`Ŷ`)。如方程 3 所示，使用阈值 `t` 将结果四舍五入到最近的整数。输出展示了针对物联网数据样本或图像数据集的安全 (1) 或危险 (0) 流量示例。
+基线联邦深度学习将传统 `DNN` (`FCNN`/`CNN`) 模型与 `FedAvg` 算法相结合。集成的 `DNN` 是一个拥有多层神经元的人工神经网络，能准确表示输入数据。这些神经元代表计算单元，可传达其激活函数和输入上执行操作的结果。在 `FCNN` 中，神经元按顺序连接到其权重和偏置。从这个意义上说，权重和偏置类似于计算机内存。在 **算法 1** 中，我们找到了网络架构、激活函数、权重和偏置值，以及 `BFDL` (`Mn`) 基线模型。可调整权重和偏置等参数，以微调训练数据 `Dtr` 上产生的误差函数 `Mn`。遵循这些准则将产生一个包含所有客户端模型信息的“主” `FedAvg` 模型。**算法 1** 描述了如何使用反向传播和随机梯度下降 (`SGD`) 算法训练 `Mn` 大小（或更大）的网络。使用 **算法 1** 的设备更新功能，服务器可在每轮通信后更新主模型并重新分发给客户端。在 **算法 3** 中，客户端迭代地使用其数据更新提交给服务器的梯度下降权重。这旨在通过最小化 **方程 1** 和 **方程 2** 中的代价函数来开发一个通用参考模型。随后使用 **算法 1** 的第 11 行和第 12 行对算法的执行时间和内存需求做出合理推测。本地权重更新后，这些数据代表设备级训练资源日志。在第三种方法中，模型权重被传输到协调服务器。集成全局模型时，服务器通常使用返回权重中点。通过向全局模型添加 `Dtr` 学习函数，可准确映射先前未见的数据。为分类目的，基线联邦深度学习技术采用监督式 `DNN` (`FCNN` 和卷积神经网络)，`Mn` 接收数据流 (`Dtr`) 并输出概率类向量 (`Ŷ`)。如 **方程 3** 所示，使用阈值 `t` 将结果四舍五入到最近的整数。输出展示了针对物联网数据样本或图像数据集的安全 (1) 或危险 (0) 流量示例。
 
 ##### 算法 1. 基线 BFDL 训练
 
@@ -2391,13 +2254,9 @@ function Device Update(d) Run on device d
     for batch b ∈ Bs do
 ```
 
-
-
-
-
 #### 3.2 资源高效联邦深度学习 (REFDL)
 
-正如上文所述，训练一个用于联邦学习 (FL) 且资源消耗较少的 DNN 模型可能很困难，这对于物联网安全监控尤其如此 [24, 25]。为了设计和实现最优架构，我们需要同时考虑 FL 通信的频率和 DNN 本身的具体细节。随着数据集维度的增加，该方法的难度也随之增加。
+正如上文所述，训练一个用于联邦学习 (`FL`) 且资源消耗较少的 `DNN` 模型可能很困难，这对于物联网安全监控尤其如此 [[24]](#ch6.xhtml#ref6_24), [[25]](#ch6.xhtml#ref6_25)。为了设计和实现最优架构，我们需要同时考虑 `FL` 通信的频率和 `DNN` 本身的具体细节。随着数据集维度的增加，该方法的难度也随之增加。
 
 **算法 2.** 获取资源高效联邦深度学习的建议策略
 
@@ -2416,6 +2275,7 @@ function Device Update(d) Run on device d
 > `ε[t] — L` **L = 初始化损失**
 >
 > **内存和时间可基于 `εt` 初始化，因此可估算 `mt` 和 `tt`。**
+>
 > $$\varepsilon_{j} \leftarrow \varepsilon_{t} + \lambda \sum_{j = 1}^{W} \frac{(w_{j}^{2}/w_{0}^{2})}{(1 + w_{i}^{2}/w_{0}^{2})}$$
 >
 > `Bp(M)` **M = 反向传播**
@@ -2453,7 +2313,9 @@ function Device Update(d) Run on device d
 > **end function**
 >
 > **end for**
->
+
+
+
 > **return** `w` **到算法 3 中的服务器 调用算法 3 中的协调服务器进行权重平均**
 >
 > **return** `(Me, Ej, m[tr], t[tr])`
@@ -2502,22 +2364,19 @@ $$J(W,b) = \frac{1}{m}\sum\limits_{i = 1}^{m}L\left( {{\hat{Y}}^{i},Y^{i}} \righ
 
 $$\text{Output} = \left\{ \begin{matrix} {0 \text{ if } \hat{Y} \leq t} \\ {1 \text{ if } \hat{Y} > t} \\ \end{matrix} \right.$$
 
-### 4. 评估
+## 4. 评估
 
 以下概述了用于评判 BFDL 和 REFDL 方法的标准。此外，它还提供了用于测试该方法的数据集的访问权限。
 
-#### 4.1 使用的数据集
+### 4.1 使用的数据集
 
 物联网数据集是来自九种商用物联网设备的多个代表性样本数据的集合，包含大量僵尸网络和良性网络流量流。BASHLITE 和 Mirai 两种菌株都相当普遍，因此每个设备都感染了其中一种。更准确地说，我们随机选择了对物联网需求最大的八类设备。举几个例子如下：该套件包含以下产品：Ecoobee 恒温器、Danmini 门铃、Ennio 门铃、Provision PT-838、Provision PT-737E、SimpleHome XCS-1002WHT、三星 SNH-1011-N 和 SimpleHome XCS-1003WHT。每个设备可跟踪 115 个属性向量，足以用数学方式表示网络流。这包括多种攻击类型，如 syn、ack、scan、trash、UDP、TCP、udpplain、combo 和 regular。因此，我们提出 N-BaIoT 数据集作为以设备为中心的物联网安全监控技术的基础。我们的 BFDL 和 REFDL 模型使用关联到 N-BaIoT 的商用设备的联邦数据进行训练和评估。
 
 WUSTL 数据集 [27, 28 and 29] 包含来自模拟 SCADA 系统的多个流量流。该数据集可能适用于研究 AI 算法在监控中的实用性。共有 7,037,983 个原始数据样本可供查看。为评估我们方法的有效性，我们考虑了 471,545 次攻击和 6,566,438 个控制实例的出现频率。
 
-#### 4.2 虚拟员工队伍的实验性建立
+### 4.2 虚拟员工队伍的实验性建立
 
-
-
-
-所有程序均在 `Python 3.7` 中实现，并在一台配备四个 `2.10 GHz Intel Xeon E5–2695` 处理器和 `16 GB` 内存的个人电脑上进行测试。为估算内存消耗，我们创建了一个集成内存使用情况的配置文件 [30]。对于模拟的设备端训练，我们采用了 `PyTorch 1.4.0` [28] 和 `PySyft 0.2.9` 框架 [31]。使用 `Pysyft` 框架创建虚拟工作节点轻而易举。对于 `BFDL` 和 `REFDL`，我们利用这些数字员工模拟了联邦学习（FL）设置。这些工作节点是真实虚拟机的仿真，能够在同一 `Python` 应用程序中与其数据一起独立运行 [32, 33]。每个客户端的虚拟工作节点模型在计算上更新后发送给协调服务器工作节点，后者是我们联邦训练计划的一部分。联邦客户端模型包含五个独特层：一个输入层、一个中间层、一个输出层以及两个额外层。为每个数据集选择拓扑结构，以优化性能指标并减少所需的进程数量 [34]。参数调整方法的结果表明，所检查的实验条件适合二分类。在比较 `BFDL` 与建议的 `REFDL` 方法的性能时，保持底层架构设置不变。每种 FL 方法的部署模型架构见 表 1，以便于比较。`Wustl` 数据集的首选拓扑结构是基于调优方法报告的。
+所有程序均在 `Python 3.7` 中实现，并在一台配备四个 `2.10 GHz Intel Xeon E5–2695` 处理器和 `16 GB` 内存的个人电脑上进行测试。为估算内存消耗，我们创建了一个集成内存使用情况的配置文件 [30]。对于模拟的设备端训练，我们采用了 `PyTorch 1.4.0` [28] 和 `PySyft 0.2.9` 框架 [31]。使用 `Pysyft` 框架创建虚拟工作节点轻而易举。对于 `BFDL` 和 `REFDL`，我们利用这些数字员工模拟了联邦学习（FL）设置。这些工作节点是真实虚拟机的仿真，能够在同一 `Python` 应用程序中与其数据一起独立运行 [32, 33]。每个客户端的虚拟工作节点模型在计算上更新后发送给协调服务器工作节点，后者是我们联邦训练计划的一部分。联邦客户端模型包含五个独特层：一个输入层、一个中间层、一个输出层以及两个额外层。为每个数据集选择拓扑结构，以优化性能指标并减少所需的进程数量 [34]。参数调整方法的结果表明，所检查的实验条件适合二分类。在比较 `BFDL` 与建议的 `REFDL` 方法的性能时，保持底层架构设置不变。每种 FL 方法的部署模型架构见表 1，以便于比较。`Wustl` 数据集的首选拓扑结构是基于调优方法报告的。
 
 **表 1. 各设备的正常与攻击分布及架构数据。**
 
@@ -2535,34 +2394,31 @@ WUSTL 数据集 [27, 28 and 29] 包含来自模拟 SCADA 系统的多个流量�
 
 `lr = 0.001` 同时用于主要和次要模型训练过程。为构建 `REFDL` 方法模型，我们在 `4` 个微批次中对 `λ`、`Δλ` 和阈值 `w0` 使用了 `0.01` 的值。`Relu` 激活函数可用于全连接层，而 `sigmoid` 可用于最后一层。对于 `FedAvg` 训练，`BFDL` 和资源高效联邦深度学习均采用 `SGD` 优化器。通过在 `4` 个周期和 `30` 轮工作节点间通信中总共训练 `128` 个批次，实现了每个联邦模型的最优收敛。客户端模型训练完成后，协调工作节点获知典型权重。该工作节点必须汇编全局模型所需的权重。该答案的底层代码可在 `GitHub` 上找到 [35, 36]。
 
-#### 4.3 建立实验测试平台并进行测试
+### 4.3 建立实验测试平台并进行测试
 
 利用 `PySyft` Python 框架版本 `0.2.9`（包含由 `WebSocket (WS)` 耦合的客户端和服务器类）来考察 `REFDL` 和 `BFDL` 环境中联邦通信的可行性。我们的分布式 FL 训练环境非常适合低功耗设备，我们利用了 `PyTorch` 可作为 `PySyft` 库这一事实。这些配置旨在以去中心化方式运行，类似于它们所模拟的客户端-服务器通信场景。在这种情况下，它有助于构建虚拟和现实的测试平台环境。我们考虑在网络现实测试平台环境中使用一台笔记本电脑和 `4 Gigabyte Brix (GB-BXBT-2807)`。为了模拟无线网络中的低频通信，单独的笔记本电脑充当协调服务器的角色。模型权重在服务器上聚合并分发给用户。在算法 1 和算法 2 中，客户端设备使用服务器模型权重在客户端数据集上训练本地模型，然后将这些权重发回服务器。因此，包含边缘设备的客户端一侧承担了比服务器计算机更大的通信负担。`Ubuntu 20.04.4 LTS` 是预装在 `GB-BXBT-2807` 客户端上的 Ubuntu 版本。`PySyft` 框架及所有必要依赖项均预装在每个客户端上。实现联邦网络测试平台的源代码已公开。
 
-这是通过对比 `BFDL` 和 `REFDL` 的模拟运行时间与其真实执行时间来完成的，使用了四个工作节点（`Alice`、`Bob`、`Charlie` 和 `Jane`）及其分布式训练数据（如 图 1 所示）。增强调优方法产生 `64-mini-batch` 大小，用于具有两个周期迭代的 `50-round` 联邦通信轮次。为实现高效的 `FedAvg SGD` 训练，测试批次采用 `1000` 的样本量，学习率 (`lr`) 为 `0.01`。算法 1 和算法 2 均使用实时模型，由一个输入层、四个隐藏层 (`128–128–128–128`) 和一个输出层组成。借助所选架构，模型收敛可高效且有效地实现。
+这是通过对比 `BFDL` 和 `REFDL` 的模拟运行时间与其真实执行时间来完成的，使用了四个工作节点（`Alice`、`Bob`、`Charlie` 和 `Jane`）及其分布式训练数据（如图 1 所示）。增强调优方法产生 `64-mini-batch` 大小，用于具有两个周期迭代的 `50-round` 联邦通信轮次。为实现高效的 `FedAvg SGD` 训练，测试批次采用 `1000` 的样本量，学习率 (`lr`) 为 `0.01`。算法 1 和算法 2 均使用实时模型，由一个输入层、四个隐藏层 (`128–128–128–128`) 和一个输出层组成。借助所选架构，模型收敛可高效且有效地实现。
 
 ![图 1. 使用千兆级设备的 BFDL 和 REFDL 模型训练测试平台。](img/fig6_1_B.jpg)
 
 **图 1. 使用千兆级设备的 BFDL 和 REFDL 模型训练测试平台。**
 
-通过在真实场景中研究客户端使用 `MNIST` 图片数据集时的 `CNN DNN` 变体，我们评估了 `REFDL` 的有效性和泛化能力。`CNN` 设计包含两个卷积层 (`Conv-2`)。第一个 `2D` 卷积层使用 `5` 方形核，接收单一输入并生成 `20` 个卷积特征 (`1, 20, 5, 1`)。第二个 `2D` 卷积层使用 `3` 方形核，可从其 `20` 个输入层产生 `50` 个卷积特征 (`20, 50, 5, 1`)。实时架构有两层，第一层由 (`800`) (`4450`) (`128`) 表示，第二层由 (`128, 10`) 表示。将 `Max-2d Pool` 算法应用于输入图像时未出现任何问题。将卷积全连接隐藏层与 表 1 版本进行比较可得出相似结果。
+通过在真实场景中研究客户端使用 `MNIST` 图片数据集时的 `CNN DNN` 变体，我们评估了 `REFDL` 的有效性和泛化能力。`CNN` 设计包含两个卷积层 (`Conv-2`)。第一个 `2D` 卷积层使用 `5` 方形核，接收单一输入并生成 `20` 个卷积特征 (`1, 20, 5, 1`)。第二个 `2D` 卷积层使用 `3` 方形核，可从其 `20` 个输入层产生 `50` 个卷积特征 (`20, 50, 5, 1`)。实时架构有两层，第一层由 (`800`) (`4450`) (`128`) 表示，第二层由 (`128, 10`) 表示。将 `Max-2d Pool` 算法应用于输入图像时未出现任何问题。将卷积全连接隐藏层与表 1 版本进行比较可得出相似结果。
 
-### 5. 结果与讨论
+## 5. 结果与讨论
 
 本文反思实验结果。描述了对比增强型 `REFDL` 和原始 `BFDL` `FedAvg` 模型的测试平台和仿真分析。
 
-#### 5.1 虚拟工作节点仿真结果
+### 5.1 虚拟工作节点仿真结果
 
-科学家们评估了在九个广泛使用的 `IoT` 数据集上利用远程客户端 PC 训练 `BFDL` 和资源高效联邦深度学习联邦算法所需的工作量和时间。下表 表 2 列出了每个数据收集所需的存储空间和处理速度。通过 `REFDL` 训练，您可以减少系统内存使用并提高性能。然而，`REFDL` 和 `BFDL` 在所有测试数据集上保持了相同的准确度水平。这可能是因为所有模型使用非常相似的网络架构，且测试数据集高度倾向于测试记录。有关具有少量测试记录的平衡数据集的对比，请参见表 6.4 和 图 10。
+科学家们评估了在九个广泛使用的 `IoT` 数据集上利用远程客户端 PC 训练 `BFDL` 和资源高效联邦深度学习联邦算法所需的工作量和时间。下表表 2 列出了每个数据收集所需的存储空间和处理速度。通过 `REFDL` 训练，您可以减少系统内存使用并提高性能。然而，`REFDL` 和 `BFDL` 在所有测试数据集上保持了相同的准确度水平。这可能是因为所有模型使用非常相似的网络架构，且测试数据集高度倾向于测试记录。有关具有少量测试记录的平衡数据集的对比，请参见表 6.4 和图 10。
 
 **表 2. 与 REFDL 相比，BFDL 的联邦模型训练需要更多内存。**
 
 | 数据集 | 模型 | 内存 (MB) | 时间 (分钟) | 测试 (准确率 %) |
 
-
-
-
-#### 5.2 网络工作节点测试平台结果
+### 5.2 网络工作节点测试平台结果
 
 | 设备/型号 | 方法 | 时间 (分钟) | 内存 (MB) | 测试 (准确率 %) |
 | --- | --- | --- | --- | --- |
@@ -2589,7 +2445,7 @@ WUSTL 数据集 [27, 28 and 29] 包含来自模拟 SCADA 系统的多个流量�
 
 图 10. REFDL 和 BFDL 在不同轮次下联邦模型在 mnist 数据集上的有效性对比。
 
-表 2 中所示，使用 `Resource Efficient Federated Deep Learning` 节省的内存和时间百分比分别显示在 图 6.2 和 图 6.3 中。结果表明，在所有数据集中均节省了大量内存。就客户端处理时间而言，`REFDL` 更为有效。它优于 `BFDL`，因为它需要的输入更少，具有更高的快速学习潜力，并能产生更丰硕的性能成果。由于它使用的资源更少，因此是监控物联网安全的更好选择。特别是对于分布式网络中资源受限的边缘设备，设备端学习至关重要。
+表 2 中所示，使用 `Resource Efficient Federated Deep Learning` 节省的内存和时间百分比分别显示在图 6.2 和图 6.3 中。结果表明，在所有数据集中均节省了大量内存。就客户端处理时间而言，`REFDL` 更为有效。它优于 `BFDL`，因为它需要的输入更少，具有更高的快速学习潜力，并能产生更丰硕的性能成果。由于它使用的资源更少，因此是监控物联网安全的更好选择。特别是对于分布式网络中资源受限的边缘设备，设备端学习至关重要。
 
 ![图 2. REFDL 联邦格式中训练模型的内存资源，按数据集索引。](img/fig6_2_B.jpg)
 
@@ -2601,7 +2457,7 @@ WUSTL 数据集 [27, 28 and 29] 包含来自模拟 SCADA 系统的多个流量�
 
 表 3 显示了已部署的 `BFDL` 方法及其优化版本 `REFDL` 与训练方法的对比结果。分析了采用隐藏层 (`L`) 和虚拟工作节点 (`VW`) 的多次模型迭代对训练时间、内存需求和准确率的影响。正如 `XCS-1003` 数据集所演示的，`REFDL` 比其前身使用更少的时间和内存。拥有四个隐藏层时，`BFDL` 和 `REFDL` 等联邦模型能达到略高的准确率 (`4L`)。因此，分布式环境中高效联邦学习受隐藏层数量影响。然而，算力更强的客户端比资源较少的客户端对全局模型有大得多的影响。更复杂的是，客户端偏斜的收入和教育水平分布可能会影响全局模型的精度。在后续研究中，探究这些限制将非常有意义。
 
-表 3. Simple Home XCS-1003 数据集上的性能评估与 FL 训练过程对比。
+**表 3. Simple Home XCS-1003 数据集上的性能评估与 FL 训练过程对比。**
 
 | 过程 | 模型 | 时间 (分钟) | 内存 (MB) | 测试 (准确率 %) |
 | --- | --- | --- | --- | --- |
@@ -2614,9 +2470,11 @@ WUSTL 数据集 [27, 28 and 29] 包含来自模拟 SCADA 系统的多个流量�
 | 4VW-4L | BFDL | 0.085 | 3.914 | 97.73 |
 | | 资源高效联邦深度学习 | 0.071 | 0.801 | 97.73 |
 
-关于 表 3，`REFDL` 节省的内存和处理时间分别显示在 图 4 和 图 5 中。结果表明，与每种训练方法相比，`REFDL` 在最大限度地减少资源（内存和时间）方面表现更好。结果显示，使用 `PySyft` 虚拟工作节点构造（模拟真实虚拟机并在同一 Python 脚本中独立运行）可提升 `REFDL` 的性能。具体而言，它展示了 `REFDL` 模型采用 4 个隐藏层 (`4L`) 和 2 个虚拟工作节点 (`2VW`) 可能呈现出较低内存消耗的潜在模型。它还表明，采用三隐藏层网络架构增加虚拟员工数量可实现内存节省。
 
-我们在 `FL` 场景下使用 `FCNN` 和 `CNN` 集成，在 MNIST 图像数据集上评估了 `REFDL`，以证明其在网络安全领域之外的泛化能力和有效性（见 表 4）。通过评估其在与物联网无关的数据集上的性能，我们可以了解该方法是否可作为设备端学习的通用选择。特别是为了获得 `CNN` 在图像分类上超越人类专家的优势及其高效资源管理能力的收益。通过此分析，我们使用 `PySyft WS`（网络）模拟工作节点，比较了 `BFDL` 和 `REFDL` 在所有联邦训练场景下的功效。与作为同一 Python 程序内构造运行的 `PySyft` 虚拟工作节点不同，该方法通过模拟客户端和服务器驻留在同一机器上的网络来评估 `REFDL` 的性能。在所有 `DNN`（`CNN` 和 `FCNN`）变体中，`REFDL` 的准确率均优于 `BFDL`。由于 MNIST 数据集对训练和测试样本都具有相对平衡的分布，这可能是其取得卓越性能的原因。且完成一个训练会话所需的时间显著缩短。结果证明了正则化在处理 `DNN` 波动时保护准确率的重要性。这激励在实际场景中开展进一步研究。
+
+关于表 3，`REFDL` 节省的内存和处理时间分别显示在图 4 和图 5 中。结果表明，与每种训练方法相比，`REFDL` 在最大限度地减少资源（内存和时间）方面表现更好。结果显示，使用 `PySyft` 虚拟工作节点构造（模拟真实虚拟机并在同一 Python 脚本中独立运行）可提升 `REFDL` 的性能。具体而言，它展示了 `REFDL` 模型采用 4 个隐藏层 (`4L`) 和 2 个虚拟工作节点 (`2VW`) 可能呈现出较低内存消耗的潜在模型。它还表明，采用三隐藏层网络架构增加虚拟员工数量可实现内存节省。
+
+我们在 `FL` 场景下使用 `FCNN` 和 `CNN` 集成，在 MNIST 图像数据集上评估了 `REFDL`，以证明其在网络安全领域之外的泛化能力和有效性（见表 4）。通过评估其在与物联网无关的数据集上的性能，我们可以了解该方法是否可作为设备端学习的通用选择。特别是为了获得 `CNN` 在图像分类上超越人类专家的优势及其高效资源管理能力的收益。通过此分析，我们使用 `PySyft WS`（网络）模拟工作节点，比较了 `BFDL` 和 `REFDL` 在所有联邦训练场景下的功效。与作为同一 Python 程序内构造运行的 `PySyft` 虚拟工作节点不同，该方法通过模拟客户端和服务器驻留在同一机器上的网络来评估 `REFDL` 的性能。在所有 `DNN`（`CNN` 和 `FCNN`）变体中，`REFDL` 的准确率均优于 `BFDL`。由于 MNIST 数据集对训练和测试样本都具有相对平衡的分布，这可能是其取得卓越性能的原因。且完成一个训练会话所需的时间显著缩短。结果证明了正则化在处理 `DNN` 波动时保护准确率的重要性。这激励在实际场景中开展进一步研究。
 
 表 4. 使用 BFDL 和 REFDL 在 MNIST 数据集上模拟联邦训练有效性的对比研究。
 
@@ -2635,15 +2493,11 @@ WUSTL 数据集 [27, 28 and 29] 包含来自模拟 SCADA 系统的多个流量�
 
 图 5. 使用 XCS-1003 数据集训练减少了资源高效联邦深度学习模型的时间和资源。
 
-
-
-
-
 ## 实验结果分析
 
-利用移动网络模拟器计算了在四台 GB-BXBT-2807 边缘设备上，使用 Ennio Doorbell 和 Samsung SNH 物联网数据集训练资源高效联邦深度学习（REFDL）和基线联邦深度学习（BFDL）所需的空间。表 5 中的内存规格数据是所有四台设备的平均值。研究结果表明，REFDL 更适合实时物联网攻击检测，且内存需求比 BFDL 更少。联邦客户端的数量和特征分布选择决定了精确的内存和 CPU（运行时）减少量。处理复杂数据的广泛客户群可能会带来更大的成本节约。
+利用移动网络模拟器计算了在四台 GB-BXBT-2807 边缘设备上，使用 Ennio Doorbell 和 Samsung SNH 物联网数据集训练资源高效联邦深度学习（`REFDL`）和基线联邦深度学习（`BFDL`）所需的空间。表 5 中的内存规格数据是所有四台设备的平均值。研究结果表明，`REFDL` 更适合实时物联网攻击检测，且内存需求比 `BFDL` 更少。联邦客户端的数量和特征分布选择决定了精确的内存和 CPU（运行时）减少量。处理复杂数据的广泛客户群可能会带来更大的成本节约。
 
-###### 表 5. 使用资源高效联邦深度学习和基线联邦深度学习的联邦模型训练内存利用率
+### 表 5. 使用资源高效联邦深度学习和基线联邦深度学习的联邦模型训练内存利用率
 
 | Dataset | Model | Memory (MB) | Test (accuracy %) | Memory (Saving %) |
 | --- | --- | --- | --- | --- |
@@ -2652,7 +2506,7 @@ WUSTL 数据集 [27, 28 and 29] 包含来自模拟 SCADA 系统的多个流量�
 | Samsung SNH | BFDL | 32.519 | 86.10 | Not Applicable |
 | Samsung SNH | Resource Efficient Federated Deep Learning | 30.550 | 86.10 | 6.05 |
 
-如图 6 所示，Ennio Doorbell 和 Samsung SNH 物联网数据集的数据被用于训练 BFDL 和 REFDL。还提供了平均预测收敛的实时描绘。在发现物联网攻击方面，REFDL 所需的实时时间不如 BFDL 多。研究结果验证了 REFDL 在受限环境中降低计算需求的用途。图 7 显示更多的分布式边缘设备可以提高效率。
+如图 6 所示，Ennio Doorbell 和 Samsung SNH 物联网数据集的数据被用于训练 `BFDL` 和 `REFDL`。还提供了平均预测收敛的实时描绘。在发现物联网攻击方面，`REFDL` 所需的实时时间不如 `BFDL` 多。研究结果验证了 `REFDL` 在受限环境中降低计算需求的用途。图 7 显示更多的分布式边缘设备可以提高效率。
 
 ![图 6. 使用联邦模型在不同数据集上 REFDL 和 BFDL 训练执行时间的比较](img/fig6_6_B.jpg)
 
@@ -2662,25 +2516,25 @@ WUSTL 数据集 [27, 28 and 29] 包含来自模拟 SCADA 系统的多个流量�
 
 图 7. 在合成和真实网络环境下，考察 REFDL 和 BFDL 在 Ennio 数据集上的性能
 
-结果证明，在实际网络中使用 REFDL 比虚拟 WS 连接节省更多资金。这证明了 REFDL 在有限资源跨多个客户端设备共享的环境中降低能耗的潜力。
+结果证明，在实际网络中使用 `REFDL` 比虚拟 `WS` 连接节省更多资金。这证明了 `REFDL` 在有限资源跨多个客户端设备共享的环境中降低能耗的潜力。
 
-我们使用 MNIST 数据集比较了 REFDL 与 BFDL 在节省时间方面的表现。根据图 8，REFDL 在训练的所有阶段都比 BFDL 更有效。与 MNISTFCNN 相比，MNIST 联邦 CNN 的训练过程更繁琐，需要更多的数据存储空间。如果最小化开发成本是首要目标，FCNN DNN 变体的资源高效联邦深度学习是直接在设备上学习的一种可能解决方案。REFDL 是在物联网资源环境中实施的首选方法。
+我们使用 MNIST 数据集比较了 `REFDL` 与 `BFDL` 在节省时间方面的表现。根据图 8，`REFDL` 在训练的所有阶段都比 `BFDL` 更有效。与 MNISTFCNN 相比，MNIST 联邦 CNN 的训练过程更繁琐，需要更多的数据存储空间。如果最小化开发成本是首要目标，FCNN DNN 变体的资源高效联邦深度学习是直接在设备上学习的一种可能解决方案。`REFDL` 是在物联网资源环境中实施的首选方法。
 
 ![图 8. 使用 REFDL 和 BFDL 在 MNIST 数据集上联邦模型的训练时间](img/fig6_8_B.jpg)
 
 图 8. 使用 REFDL 和 BFDL 在 MNIST 数据集上联邦模型的训练时间
 
-图 9 展示了 REFDL 和 BFDL 在 MNIST 数据集上的收敛精度与其他 DNN 版本的比较。因此，可以假设 REFDL 将始终优于 BFDL。通过结合 CNN 和 FCNN (DNN) 模型的多种变体，它可以正确分类图像样本。这一发现指明了优化过程在开发全局深度联邦模型中的价值。它进一步突显了在 FL 技术中有效使用 CNN 以提高准确性的成效。这很有帮助，因为它利用了各种 DNN 模型在设备上学习效率的差异。
+图 9 展示了 `REFDL` 和 `BFDL` 在 MNIST 数据集上的收敛精度与其他 DNN 版本的比较。因此，可以假设 `REFDL` 将始终优于 `BFDL`。通过结合 CNN 和 FCNN (DNN) 模型的多种变体，它可以正确分类图像样本。这一发现指明了优化过程在开发全局深度联邦模型中的价值。它进一步突显了在 FL 技术中有效使用 CNN 以提高准确性的成效。这很有帮助，因为它利用了各种 DNN 模型在设备上学习效率的差异。
 
 ![图 9. 利用 MNIST 数据集估算 REFDL 和 BFDL 的联邦模型准确率](img/fig6_9_B.jpg)
 
 图 9. 利用 MNIST 数据集估算 REFDL 和 BFDL 的联邦模型准确率
 
-为了评估 REFDL 在联邦环境中的效率和学习速度，我们在 GB-BXBT-2807 测试平台上使用不同数量的 epoch 迭代运行了 FCNN-MNIST 流程。我们可以在那里快速评估多种联邦方法的相对优劣。图 10 显示，REFDL 仅需一个本地 epoch 和 50 个通信周期即可达到更高的精度水平。所有后续的 epoch 迭代都保持了这种精度不断提高的模式。特别是，集成的 FCNN 模型加速了边缘设备上的学习，证明了 REFDL 的适用性。REFDL 至少需要一个 epoch 的限制是一个优势，特别是在物联网等内存限制已存在的环境中。
+为了评估 `REFDL` 在联邦环境中的效率和学习速度，我们在 GB-BXBT-2807 测试平台上使用不同数量的 epoch 迭代运行了 FCNN-MNIST 流程。我们可以在那里快速评估多种联邦方法的相对优劣。图 10 显示，`REFDL` 仅需一个本地 epoch 和 50 个通信周期即可达到更高的精度水平。所有后续的 epoch 迭代都保持了这种精度不断提高的模式。特别是，集成的 FCNN 模型加速了边缘设备上的学习，证明了 `REFDL` 的适用性。`REFDL` 至少需要一个 epoch 的限制是一个优势，特别是在物联网等内存限制已存在的环境中。
 
 ### 6. 结论
 
-在本文中，我们探讨了在物联网等低资源环境中训练联邦学习的可行性，其分布式机器学习模型可以同时保护大量客户数据的隐私，并促进网络边缘节点上的设备端学习。为了提供针对物联网的有效且实用的防护。在本研究中，我们将 BFDL 算法 FedAvg 与几个精心挑选的模型优化策略相结合，创建了一个功能强大且数据利用经济的联邦 REFDL 模型。八个物联网数据集和一个图像数据集被用于在模拟和真实的 GB-BXBT-2807 测试平台上评估 REFDL 的功效、简洁性和效率。它在利用极少资源识别物联网攻击方面优于其他方法。在联邦训练环境中，它使用相同数据对图像数据的分类准确度高于全连接网络或卷积网络。此外，REFDL 生成更准确的 FL 模型所需时间比竞争对手更少。受这些令人鼓舞的发现启发，我们希望对部署过程中计算网络中更多节点/客户端设备的使用进行进一步研究，重点关注有线和无线环境。具体来说，在一个比本研究探索的连接边缘设备范围更广的真实网络场景中，我们旨在研究 REFDL 的鲁棒能力，以增强其对抗对抗攻击的安全弹性。通过这种方式，我们可以在广泛的地理分散边缘设备上考察我们提出的方法对资源使用和安全监控的影响。
+在本文中，我们探讨了在物联网等低资源环境中训练联邦学习的可行性，其分布式机器学习模型可以同时保护大量客户数据的隐私，并促进网络边缘节点上的设备端学习。为了提供针对物联网的有效且实用的防护。在本研究中，我们将 `BFDL` 算法 FedAvg 与几个精心挑选的模型优化策略相结合，创建了一个功能强大且数据利用经济的联邦 `REFDL` 模型。八个物联网数据集和一个图像数据集被用于在模拟和真实的 GB-BXBT-2807 测试平台上评估 `REFDL` 的功效、简洁性和效率。它在利用极少资源识别物联网攻击方面优于其他方法。在联邦训练环境中，它使用相同数据对图像数据的分类准确度高于全连接网络或卷积网络。此外，`REFDL` 生成更准确的 FL 模型所需时间比竞争对手更少。受这些令人鼓舞的发现启发，我们希望对部署过程中计算网络中更多节点/客户端设备的使用进行进一步研究，重点关注有线和无线环境。具体来说，在一个比本研究探索的连接边缘设备范围更广的真实网络场景中，我们旨在研究 `REFDL` 的鲁棒能力，以增强其对抗对抗攻击的安全弹性。通过这种方式，我们可以在广泛的地理分散边缘设备上考察我们提出的方法对资源使用和安全监控的影响。
 
 ### 参考文献
 
@@ -2690,31 +2544,29 @@ WUSTL 数据集 [27, 28 and 29] 包含来自模拟 SCADA 系统的多个流量�
 
 3.  Zhang, C., Zhu, Y., Markos, C. Yu and Yu, J.J.Q. 2022. Toward crowdsourced transportation mode identification: A semisupervised Federated Learning approach. IEEE Internet Things J., 9(14): 11868-11882. doi: [10.1109/JIOT.2021.3132056](https://doi.org/10.1109/JIOT.2021.3132056).
 
+4.  Marulli, F., Balzanella, A., Campanile, L., Iacono, M. and Mastroianni, M. 2021. Exploring a Federated Learning approach to enhance authorship attribution of misleading information from heterogeneous sources. In *Proceedings of the International Joint Conference on Neural Networks*, vol. 2021-July. doi: [10.1109/IJCNN52387.2021.9534377](https://doi.org/10.1109/IJCNN52387.2021.9534377).
+
+5.  Mei, G., Guo, Z., Liu, S. and Pan, L. 2019. SGNN: A graph neural network based federated learning approach by hiding structure. In *Proceedings—2019 IEEE International Conference on Big Data, Big Data 2019*, pp. 2560-2568. doi: [10.1109/BigData47090.2019.9005983](https://doi.org/10.1109/BigData47090.2019.9005983).
+
+6.  Zhang, Liu X., Xie, X., Zhang, J., Niu, B. and Li, K. 2022. A cross-domain federated learning framework for wireless human sensing. *IEEE Netw.*, 36(5): 122-128. doi: [10.1109/MNET.001.2200231](https://doi.org/10.1109/MNET.001.2200231).
+
+7.  Abdelbasset, M., Hawash, H., Sallam, K.M., Elgendi, I., Munasinghe, K. and Jamalipour, A. 2022. Efficient and lightweight convolutional networks for IoT Malware detection: A Federated Learning approach. *IEEE Internet Things J.*, pp. 1. doi: [10.1109/JIOT.2022.3229005](https://doi.org/10.1109/JIOT.2022.3229005).
+
+8.  Gogineni, V.C., Werner, S., Huang, Y. and Kuh, A. 2022. Communication-efficient online federated learning strategies for kernel regression. *IEEE Internet Things J.*, pp. 1. doi: [10.1109/JIOT.2022.3218484](https://doi.org/10.1109/JIOT.2022.3218484).
+
+9.  Wang, S., Hosseinalipour, S., Gorlatova, M., Brinton, C.G. and Chiang, M. 2022. UAV-assisted online machine learning over multi-tiered networks: A hierarchical nested personalized Federated Learning approach. *IEEE Trans. Netw. Serv. Manag.*, pp. 1. doi: [10.1109/TNSM.2022.3216326](https://doi.org/10.1109/TNSM.2022.3216326).
+
+10.  Imani, H., Anderson, J. and El-Ghazawi, T. 2022. I Sample: Intelligent client sampling in Federated Learning. In *Proceedings—6th IEEE International Conference on Fog and Edge Computing, ICFEC 2022*, pp. 58-65. doi: [10.1109/ICFEC54809.2022.00015](https://doi.org/10.1109/ICFEC54809.2022.00015).
+
+11.  Zhang, D.Y., Kou, Z. and Wang, D. 2021. FedSens: A Federated Learning approach for smart health sensing with class imbalance in resource constrained edge computing. In *Proceedings—IEEE INFOCOM*, vol. 2021-May. doi: [10.1109/INFOCOM42981.2021.9488776](https://doi.org/10.1109/INFOCOM42981.2021.9488776).
+
+12.  Akubathini, P., Chouksey, S. and Satheesh, H.S. 2021. Evaluation of machine learning approaches for resource constrained IIoT devices. In *2021 13th International Conference on Information Technology and Electrical Engineering, ICITEE 2021*, pp. 74-79. doi: [10.1109/ICITEE53064.2021.9611880](https://doi.org/10.1109/ICITEE53064.2021.9611880).
+
+13.  Alghamdi, R. and Bellaiche, M. 2023. A cascaded federated deep learning based framework for detecting wormhole attacks in IoT networks. *Comput. Secur.*, 125. doi: [10.1016/j.cose.2022.103014](https://doi.org/10.1016/j.cose.2022.103014).
 
 
 
-
-### 参考文献
-
-4. Marulli, F., Balzanella, A., Campanile, L., Iacono, M. and Mastroianni, M. 2021. Exploring a Federated Learning approach to enhance authorship attribution of misleading information from heterogeneous sources. In *Proceedings of the International Joint Conference on Neural Networks*, vol. 2021-July. doi: [10.1109/IJCNN52387.2021.9534377](https://doi.org/10.1109/IJCNN52387.2021.9534377).
-
-5. Mei, G., Guo, Z., Liu, S. and Pan, L. 2019. SGNN: A graph neural network based federated learning approach by hiding structure. In *Proceedings—2019 IEEE International Conference on Big Data, Big Data 2019*, pp. 2560-2568. doi: [10.1109/BigData47090.2019.9005983](https://doi.org/10.1109/BigData47090.2019.9005983).
-
-6. Zhang, Liu X., Xie, X., Zhang, J., Niu, B. and Li, K. 2022. A cross-domain federated learning framework for wireless human sensing. *IEEE Netw.*, 36(5): 122-128. doi: [10.1109/MNET.001.2200231](https://doi.org/10.1109/MNET.001.2200231).
-
-7. Abdelbasset, M., Hawash, H., Sallam, K.M., Elgendi, I., Munasinghe, K. and Jamalipour, A. 2022. Efficient and lightweight convolutional networks for IoT Malware detection: A Federated Learning approach. *IEEE Internet Things J.*, pp. 1. doi: [10.1109/JIOT.2022.3229005](https://doi.org/10.1109/JIOT.2022.3229005).
-
-8. Gogineni, V.C., Werner, S., Huang, Y. and Kuh, A. 2022. Communication-efficient online federated learning strategies for kernel regression. *IEEE Internet Things J.*, pp. 1. doi: [10.1109/JIOT.2022.3218484](https://doi.org/10.1109/JIOT.2022.3218484).
-
-9. Wang, S., Hosseinalipour, S., Gorlatova, M., Brinton, C.G. and Chiang, M. 2022. UAV-assisted online machine learning over multi-tiered networks: A hierarchical nested personalized Federated Learning approach. *IEEE Trans. Netw. Serv. Manag.*, pp. 1. doi: [10.1109/TNSM.2022.3216326](https://doi.org/10.1109/TNSM.2022.3216326).
-
-10. Imani, H., Anderson, J. and El-Ghazawi, T. 2022. I Sample: Intelligent client sampling in Federated Learning. In *Proceedings—6th IEEE International Conference on Fog and Edge Computing, ICFEC 2022*, pp. 58-65. doi: [10.1109/ICFEC54809.2022.00015](https://doi.org/10.1109/ICFEC54809.2022.00015).
-
-11. Zhang, D.Y., Kou, Z. and Wang, D. 2021. FedSens: A Federated Learning approach for smart health sensing with class imbalance in resource constrained edge computing. In *Proceedings—IEEE INFOCOM*, vol. 2021-May. doi: [10.1109/INFOCOM42981.2021.9488776](https://doi.org/10.1109/INFOCOM42981.2021.9488776).
-
-12. Akubathini, P., Chouksey, S. and Satheesh, H.S. 2021. Evaluation of machine learning approaches for resource constrained IIoT devices. In *2021 13th International Conference on Information Technology and Electrical Engineering, ICITEE 2021*, pp. 74-79. doi: [10.1109/ICITEE53064.2021.9611880](https://doi.org/10.1109/ICITEE53064.2021.9611880).
-
-13. Alghamdi, R. and Bellaiche, M. 2023. A cascaded federated deep learning based framework for detecting wormhole attacks in IoT networks. *Comput. Secur.*, 125. doi: [10.1016/j.cose.2022.103014](https://doi.org/10.1016/j.cose.2022.103014).
+# 参考文献
 
 14. Huang, C., Xu, G., Chen, S., Zhou, W., Ng, E.Y.K. and Albuquerque, V.H.C.D. 2022. An improved Federated Learning approach enhanced internet of health things framework for private decentralized distributed data. *Inf. Sci. (Ny).*, 614: 138-152. doi: [10.1016/j.ins.2022.10.011](https://doi.org/10.1016/j.ins.2022.10.011).
 
@@ -2746,15 +2598,11 @@ WUSTL 数据集 [27, 28 and 29] 包含来自模拟 SCADA 系统的多个流量�
 
 28. Fadlullah, Z.M. and Kato, N. 2021. On smart IoT remote sensing over integrated terrestrial-aerial-space networks: An asynchronous Federated Learning approach. *IEEE Netw.*, 35(5): 129-135. doi: [10.1109/MNET.101.2100125](https://doi.org/10.1109/MNET.101.2100125).
 
-
-
-
-
-## 第 7 章 云环境中用于数据丢失防护的高效联邦学习技术
+# 第 7 章 云环境中用于数据丢失防护的高效联邦学习技术
 
 *A Peter Soosai Anandaraj*，^(⁷)
 
-### 1. 简介
+## 1. 简介
 
 在大数据时代，数据安全已成为主要的保护类型，因为实际上所有信息都通过网络传输。尽管网络信息安全保护机制取得了重大进展，但隐私问题和敏感信息泄露依然存在 [1]。机器学习是大数据时代最流行的数据分析和处理方法，因计算机计算能力的进步而被广泛应用于各个行业。然而，机器学习发展面临两大问题。一方面，维护数据安全颇具挑战，且对隐私保护的担忧日益加剧。另一方面，随着大数据成为新趋势，企业收紧数据保护措施以防止数据泄露，导致数据共享减少。机器学习在为训练传输数据时遇到的困难，正是导致数据孤岛的原因。利用一种名为联邦学习的前沿机器学习架构，相互戒备的客户端仍可从协作训练模型中获益，而无需在公开场合披露其机密信息集 [3]。联邦学习也被称为去中心化 ML 框架。由于网络带宽受限，云服务器与客户端之间巨大的通信开销已成为主要问题。此外，还可利用相同的模型参数发起模型反演攻击。
 
@@ -2766,16 +2614,13 @@ WUSTL 数据集 [27, 28 and 29] 包含来自模拟 SCADA 系统的多个流量�
 
 随后，这些信息被用于开发有洞察力的推断模型或提供洞见。这些因素使得该策略不再可行。首先，数据所有者对隐私的关注日益增加。为解决大数据时代消费者的隐私担忧，已颁布多项数据隐私法规，包括美国的消费者隐私权利 [11] 和欧洲的 GDPR [10]。
 
+## 联邦学习概述
 
-
-
-# 联邦学习概述
-
-在终端设备上，DNN 模型通过联邦学习（FL）联合训练。FL 训练操作通常由两个过程组成：最终设备上的区域模拟以及 FL 服务器上变更属性的全球收集。为了推广 FL 的本地模型训练，我们在本节中首先概述 DNN 原型实验。尽管 FL 可用于一般性地训练 ML 模型，但我们在本部分重点讨论 DNN 模型的训练，因为我们在下一节讨论的大多数文章都关注 DNN 模型的联邦训练。DNN 模型易于聚合且在许多情况下优于传统 ML 技术这一事实 [16]，因此随着分布式终端设备获得的深度学习（DL）不断扩展、处理能力增强以及数据量增长，FL 在移动边缘网络中的有机采用理应得到促进。
+在终端设备上，`DNN` 模型通过联邦学习（FL）联合训练。FL 训练操作通常由两个过程组成：最终设备上的区域模拟以及 FL 服务器上变更属性的全球收集。为了推广 FL 的本地模型训练，我们在本节中首先概述 `DNN` 原型实验。尽管 FL 可用于一般性地训练 ML 模型，但我们在本部分重点讨论 `DNN` 模型的训练，因为我们在下一节讨论的大多数文章都关注 `DNN` 模型的联邦训练。`DNN` 模型易于聚合且在许多情况下优于传统 ML 技术这一事实 [16]，因此随着分布式终端设备获得的深度学习（DL）不断扩展、处理能力增强以及数据量增长，FL 在移动边缘网络中的有机采用理应得到促进。
 
 FL 的开发是为了回应数据所有者的隐私担忧 [21]。FL 通过允许用户联合训练同一框架并将数据保留在其设备上，消除了客户的隐私顾虑。因此，FL 可能是一种使移动边缘网络能够训练 ML 模型的解决方案。有关各种 FL 可能性的摘要，包括并行 FL 和直立 FL（直译：straight up FL）。
 
-### 2. 相关工作
+## 2. 相关工作
 
 联邦学习（FL）作为一项开创性技术，通过安全机制解决了保护个人信息的问题，它允许用户在保持对数据的本地控制的同时共同开发全局模型。平台聚合模型直到收敛，而客户端训练其本地模型。在此过程中，服务器采用奖励结构以鼓励用户提供大量高质量数据。
 
@@ -2787,14 +2632,13 @@ FL 的开发是为了回应数据所有者的隐私担忧 [21]。FL 通过允许
 
 在联邦学习基础设施中，应优先考虑同步还是异步训练方法，这是一个关键的设计选择。异步训练已被许多成功的深度学习研究采用，例如 Dean 等人 (2012) 的研究，但最近，同步大批量训练逐渐增加，甚至在数据中心中也是如此（Goyal 等人，2017；Smith 等人，2018）[14]。McMahan 等人 (2017) 的联邦平均算法采用了类似的方法。此外，一些改进 FL 隐私保证的方法，如差分隐私（McMahan 等人，2018）和安全聚合（Bonawitz 等人，2017），本质上要求在一组固定设备上进行某种形式的同步，以确保学习算法的服务端组件只需使用来自多个用户的更新的简单聚合 [15]。
 
-
-
-
 # 大规模基于云的系统与联邦学习综述
 
 ## 1. 背景与动机
 
 大规模基于云的系统已被广泛描述并投入实践应用，分布式机器学习领域也取得了显著进展。许多系统（如 Dean et al., 2012; Low et al., 2012 所述）支持多种分发策略，例如模型并行和数据并行。由于虚拟化技术使得节点拥有比移动设备显著更高的带宽和可靠性，我们的解决方案采用了一种更有组织的方法，以适应移动设备领域。我们选择同步联邦学习（FL）协议，而非专注于临时的分布式计算架构。
+
+
 
 根据 Brisimi TS et al. (2018) 的研究，本研究旨在提供一种分布式（联邦）方法，基于电子健康记录（EHR）中记录的病史，预测心脏病患者一年内的住院情况。每位患者的记录可能保存在其他机构的 EHR 系统中或其智能手机上。为了创建全局住院预测模型，多方利益相关者（代理）必须在所有情况下进行协作。
 
@@ -2803,6 +2647,7 @@ FL 的开发是为了回应数据所有者的隐私担忧 [21]。FL 通过允许
 参数向量、参数服务器（被 Li et al., 2014; Dean et al., 2012; Abadi et al., 2016 使用）是在数据中心中一种特别流行的方法，因为它允许多名员工协作共同构建一个全局模型。该领域的研究重点在于开发能够成功管理维度从 `10⁹` 到 `10¹²` 的向量的服务器架构。工作节点通过参数服务器异步访问和修改全局状态。由于我们需要设备组与 FL 服务器之间精确的会合（rendezvous），以使用安全聚合执行同步更新，因此我们的方法本质上无法与这种全局状态协同工作。
 
 目前，研究者特别关注解决与医疗数据相关的问题：
+
 1. 数据分散在不同位置（如医院、医生办公室、家用设备、患者智能手机）；
 2. 数据可用性不断增长，使得可扩展结构变得至关重要；
 3. 由于规模和/或数据隐私问题，将数据收集到单一存储库中既不切实际也不合乎需求。
@@ -2824,9 +2669,6 @@ FL 的开发是为了回应数据所有者的隐私担忧 [21]。FL 通过允许
 这种分散式训练方法存在三个不同版本。在水平联邦学习中，主要模型在可比数据集上训练 [[17]](#ch7.xhtml#ref7_17)。水平分区联邦学习（HFL）使用分散在孤岛中的数据，这些数据共享相同的特征空间但包含不同样本。在垂直联邦学习中，数据是互补的；例如，整合电影和书籍评价以预测一个人的音乐品味。最后，联邦迁移学习涉及在一个已预训练完成特定任务（如检测汽车）的基础模型上，使用不同数据集进行训练以完成另一任务（如识别猫）。Baracaldo 及其同事正在将基础模型纳入联邦学习。从分散在孤岛中、涉及多种特征空间和样本的数据中学习的技术被称为联邦迁移学习（FTL）。
 
 传统上，数据从多个来源收集后再整合用于机器学习模型。数据湖、数据仓库或两者的湖仓混合体可作为这一中心点。你选择一种算法（如决策树）或一组算法（如上述神经网络），在收集的数据上进行训练。创建的模型随后可在主服务器上执行，或分发到各设备上。
-
-
-
 
 # 联邦学习系统设计与效率优化
 
@@ -2885,15 +2727,10 @@ Figure 2. Federated Learning architecture in a clinic.
 ### 联邦学习分类
 
 1.  **中心化联邦学习**：中心化联邦学习运行需要一个重要的服务器。它规划初始客户端设备选择并在训练期间收集模型更新。仅特定边缘设备与中央服务器交换数据。
-
 2.  **去中心化联邦学习**：去中心化联邦学习可在没有中央服务器的情况下协调。相反，仅将更新后的模型提供给连接的边缘设备。最终模型通过在边缘设备上合并所有链接边缘过程的本地学习来构建。
-
 3.  **异构联邦学习**：异构联邦学习需要使用混合客户端，包括手机、笔记本电脑或物联网设备。这些设备可能具有不同的硬件、软件、处理能力和数据类型。
 
 ### 联邦学习算法
-
-
-
 
 # 联邦学习算法
 
@@ -2963,32 +2800,31 @@ Figure 2. Federated Learning architecture in a clinic.
 
 #### 激励机制
 
-
-
-
 在可行的联邦学习中，利用本地客户端记录进行处理器建模可能会产生极其准确的内容，这具有经济优势。然而，鉴于学习过程包含了他们的个人信息，而人们对此愈发重视，因此很难设计激励系统来说服用户参与联邦学习。目前，联邦学习激励结构的设计采用了博弈论和经济学理论的技术，但由于主观性主导现实世界，它们的有效性仅在模拟测试中得到保证。
 
-### vi 迁移
+#### 迁移
 
 由于在使用移动边缘计算时难以确定边缘设备的确切位置，它经常连接到附近的边缘服务器，从而引发问题。当新的边缘服务器连接到边缘设备时，训练会中断，网络性能显著下降。这是由于新边缘服务器缺乏之前训练的副本。教育的持续性是一个关键的研究课题。已经有许多研究针对边缘计算中的服务迁移进行了探讨。然而，在边缘联邦学习中，模型体量巨大。在边缘服务器之间传输模型副本的显著延迟会对联邦学习的性能产生不利影响，这使得在云边协作环境中进行有效的服务迁移成为必要。
 
-### vii 异步性
+#### 异步性
 
 大多数当前研究采用联邦学习的同步聚合选项。在真实的网络环境中，用户的电量储备和网络质量会发生变化。由于资源限制，边缘节点难以继续训练，尤其是采用传统的同步方法时。为了克服这一问题，已经投入了大量工作来开发高效的异步联邦学习算法。
 
-### viii 隐私问题
+#### 隐私问题
 
 然而，由于资源限制，联邦学习系统的隐私保护功能可能不适用于所有设备。因此，需要创造新的方法，在提供强有力的隐私保证的同时，兼顾通信高效、计算具成本效益，并能应对参与者减少的情况。许多研究聚焦于处理能力不足的外围设备所面临的问题。由于可能影响这些设备的计算能力，在此环境下利用高级加密和通信安全是不可行的。
 
-### ix 可扩展性
+#### 可扩展性
 
 联邦学习方法必须具有高度可扩展性。在物联网生态系统中，许多客户可能参与原型训练。在联邦学习过程中，确保系统具有可扩展性也很重要。由于不同因素，如信号微弱、电池寿命短或质量差（如手持设备），当有许多其他客户端时，某些客户端可能会失去与服务器的连接。确保系统能够处理此类情况至关重要。联邦学习可保护数据隐私，可用于利用网络边缘设备庞大且多样的数据集以及不断扩展的处理能力来训练机器学习模型。隐私至关重要，因为金融和医疗应用程序本质上高度敏感，共享此类数据通常不可行 [19]。尽管已有少数联邦学习在商业环境中成功运行的实例，但在这些设计广泛应用于日常应用之前，仍需进行大量研究。由于对私人信息安全的担忧，以及手机、可穿戴设备和自动驾驶汽车等设备计算能力的增强，联邦学习已成为一个前沿框架。专家们因对本地信息存储需求的增加以及将机器学习计算迁移到终端设备同时减少数据传输开销的趋势，已多次尝试构建联邦学习系统。
 
 ### 5. 结论
 
+
+
 尽管联邦学习仍处于起步阶段，但它无疑将在保护数据隐私方面使许多行业受益。连接性是联邦学习网络中的一个重大障碍，因为每个设备上收集的信息都保持私有。开发通信高效的策略以减少通信轮数总数至关重要。联邦学习解决方案还必须考虑到最低用户参与度，因为在任何给定时间仅有一部分设备在运行。联邦学习应用和混合架构常被设想为未来网络基础设施的关键组成。尽管影子边缘协作和联邦学习目前都是著名的学术课题，但关于如何将它们集成到影子边缘协作设计中的研究却不多。通过仔细分析在影子边缘联合设计中实施联邦学习的关键技能、经验和用例，本研究旨在缩小知识差距。它还为进一步研究提供了建议。联邦学习比直接的中心化机器学习更无害，且能处理数据孤岛，但并非总是成功。系统异质性、模型异质性和数据异质性是联邦学习面临的最大问题。当易于获取的本地数据不能准确反映全局分布时，就会出现统计差异。联邦学习参与者经常面临不同的网络、能源、处理和存储容量条件。这就是所谓的系统多样性。由于大多数联邦学习设置是同步的，收敛可能会延迟，且某些设备可能没有资源快速恢复本地更新。模型异质性常发生于联邦学习中的 B2B 关系，因为不同客户可能基于不同假设提出不同的模型需求。此外，许多早期的联邦学习算法给其客户的真诚性带来了安全威胁。
 
-鉴于上述问题，一些客户可能会觉得联邦学习训练的模型不如他们的本地模型，从而阻碍他们参与训练。综上所述，联邦学习的创建对于高度依赖处理统计异质性、系统异质性、模型异质性和安全管理等问题的物联网 (IoT) 应用至关重要，因为在这些应用中统计变异更为常见。然而，这些联邦学习技术在防止云环境中的数据丢失方面，对研究社区极具价值。
+鉴于上述问题，一些客户可能会觉得联邦学习训练的模型不如他们的本地模型，从而阻碍他们参与训练。综上所述，联邦学习的创建对于高度依赖处理统计异质性、系统异质性、模型异质性和安全管理等问题的物联网 (`IoT`) 应用至关重要，因为在这些应用中统计变异更为常见。然而，这些联邦学习技术在防止云环境中的数据丢失方面，对研究社区极具价值。
 
 ### 参考文献
 
@@ -3002,8 +2838,6 @@ Figure 2. Federated Learning architecture in a clinic.
 
 5. Alqudah, N. and Yaseen, Q. 2020. Machine learning for traffic analysis: A review. Procedia Comput. Sci., 170: 911-916. [`doi.org/10.1016/j.procs.2020.03.111`](https://doi.org/10.1016/j.procs.2020.03.111).
 
-
-
 ## 第 8 章 利用联邦多智能体深度强化学习最大化雾计算效率
 
 *G Anitha*^(⁸)
@@ -3012,7 +2846,7 @@ Figure 2. Federated Learning architecture in a clinic.
 
 ### 参考文献
 
-6. de Magalhães, S.T. 2020. 欧盟通用数据保护条例(GDPR)。世界科学出版社。 [`doi.org/10.1142/9789811204463_0015`](https://doi.org/10.1142/9789811204463_0015)。
+6. de Magalhães, S.T. 2020. 欧盟通用数据保护条例(`GDPR`)。世界科学出版社。 [`doi.org/10.1142/9789811204463_0015`](https://doi.org/10.1142/9789811204463_0015)。
 
 7. Deng, S., Zhao, H., Fang, W., Yin, J., Dustdar, S. and Zomaya, A.Y. 2020. 边缘智能：边缘计算与人工智能的融合。IEEE 物联网期刊，7(8)：7457-7469。 [`doi.org/10.1109/jiot.2020.2984887`](https://doi.org/10.1109/jiot.2020.2984887)。
 
@@ -3020,7 +2854,7 @@ Figure 2. Federated Learning architecture in a clinic.
 
 9. Lim, W.Y.B., Luong, N.C., Hoang, D.T., Jiao, Y., Liang, Y.C., Yang, Q., Niyato, D. and Miao, C. 2020. 移动边缘网络中的联邦学习：综合综述。IEEE 通信调查与教程，22(3)：2031-2063。 [`doi.org/10.1109/comst.2020.2986024`](https://doi.org/10.1109/comst.2020.2986024)。
 
-10. Yao, H., Gao, P., Zhang, P., Wang, J., Jiang, C. and Lu, L. 2019. 基于机器学习辅助检测的边�基 IIoT 混合入侵检测系统。IEEE 网络，33(5)：75-81。 [`doi.org/10.1109/MNET.001.1800479`](https://doi.org/10.1109/MNET.001.1800479)。
+10. Yao, H., Gao, P., Zhang, P., Wang, J., Jiang, C. and Lu, L. 2019. 基于机器学习辅助检测的边缘基 `IIoT` 混合入侵检测系统。IEEE 网络，33(5)：75-81。 [`doi.org/10.1109/MNET.001.1800479`](https://doi.org/10.1109/MNET.001.1800479)。
 
 11. Legacy, C., Ashmore, D., Scheurer, J., Stone, J. and Curtis, C. 2019. 规划无人驾驶城市。运输评论，39(1)：84-102。 [`doi.org/10.1080/01441647.2018.1466835`](https://doi.org/10.1080/01441647.2018.1466835)。
 
@@ -3046,26 +2880,25 @@ Figure 2. Federated Learning architecture in a clinic.
 
 ### 1. 引言
 
-物联网的发展促使 V2X 连接的采用率上升，从而实现了更有效的通信和处理。车辆中的智能体可以与其他连接设备协调，并汇聚其闲置处理能力，以造福时间关键型程序 [1]。由于资源共享环境不断变化，导致车辆网络表现出高度动态和非线性行为，因此汽车系统中的决策以极其困难著称 [2]。车辆应用具有时间敏感性、移动性，且队列状态变化迅速，所有这些因素都使任务卸载变得困难。基于机器学习的解决方案有潜力缓解上述问题 [3]。一种常见的方法基于博弈论和强化学习，通过持续收集周围世界的数据来优化决策 [4]。换句话说，它们无法涵盖对应于每个节点众多可能队列状态的庞大状态空间。深度强化学习被用于更复杂的决策优化解决方案中，尽管其计算成本高昂且收敛速度缓慢 [5]。
+物联网的发展促使 `V2X` 连接的采用率上升，从而实现了更有效的通信和处理。车辆中的智能体可以与其他连接设备协调，并汇聚其闲置处理能力，以造福时间关键型程序 [1]。由于资源共享环境不断变化，导致车辆网络表现出高度动态和非线性行为，因此汽车系统中的决策以极其困难著称 [2]。车辆应用具有时间敏感性、移动性，且队列状态变化迅速，所有这些因素都使任务卸载变得困难。基于机器学习的解决方案有潜力缓解上述问题 [3]。一种常见的方法基于博弈论和强化学习，通过持续收集周围世界的数据来优化决策 [4]。换句话说，它们无法涵盖对应于每个节点众多可能队列状态的庞大状态空间。深度强化学习被用于更复杂的决策优化解决方案中，尽管其计算成本高昂且收敛速度缓慢 [5]。
 
 为解决由环境不可预测性、有限信息共享和中心化设计导致的收敛延迟问题，基于策略优化的方法旨在在广阔的状态空间中给出任务卸载策略的近似解 [6]。此处讨论的解决方案本质上是中心化的，因为它们从中心化雾服务器获取信息，且车辆智能体间的知识迁移有限 [7]。联邦学习是一种革命性的分布式学习范式，有潜力改进决策并加速收敛 [8]。
 
-通过允许每个设备进行本地学习，联邦学习不仅实现了快速收敛，还在共享资源生态系统中实现了通信开销的降低 [9]。当在本地训练合理时，一种称为联邦学习 (FL) 的分布式学习方法非常有用 [10]。这种学习方法利用了当今智能汽车日益增长的计算和存储能力。由于存储和处理限制，在中心化数据服务器上训练具有大量输入参数的模型是不切实际的 [11]。使用这种中心化方法通过网络传输原始输入数据会导致通信成本高得令人望而却步。特别是，由于隐私顾虑无法通过网络传输的数据必须保留在本地 [12]。
-
-
-
+通过允许每个设备进行本地学习，联邦学习不仅实现了快速收敛，还在共享资源生态系统中实现了通信开销的降低 [9]。当在本地训练合理时，一种称为联邦学习 (`FL`) 的分布式学习方法非常有用 [10]。这种学习方法利用了当今智能汽车日益增长的计算和存储能力。由于存储和处理限制，在中心化数据服务器上训练具有大量输入参数的模型是不切实际的 [11]。使用这种中心化方法通过网络传输原始输入数据会导致通信成本高得令人望而却步。特别是，由于隐私顾虑无法通过网络传输的数据必须保留在本地 [12]。
 
 # 联邦学习与深度强化学习用于车辆任务卸载
 
 在联邦学习中，训练好的模型及其参数存储在不同位置，但各方协同工作以构建单一通用预测模型 [13]。车辆频繁收集数据，并利用这些数据在数据并行联邦学习技术的学习过程中开发自主的本地模型 [14]。下一步是使用全局模型重新训练本地模型，该全局模型由先前训练的所有本地模型的参数组合构建而成。学习算法的重复过程确保最终收敛 [15]。联邦学习依赖中心化聚合器这一事实使其分布式程度不如预期；然而，完全去中心化会降低学习模型的效率 [16]。
 
-恶意车辆篡改本地训练数据或自私车辆不提供其本地模型也可能导致策略失败 [17]。然而，在自动驾驶车辆的背景下，该方法切实可行，并可投入使用以提供更安全、更快捷的车辆服务。利用来自环境的持续反馈，强化学习（RL）是一种智能学习最佳策略以最大化奖励的 AI 技术 [18]。这类似于个体通过经验而非直接观察来了解周围环境的方式 [19]。传统 RL 虽然可行，但在收敛到理想策略之前，完全探索复杂环境将花费过长时间。在通常拥有巨大且连续状态-动作空间的此类系统中扩展 RL 是一个重大挑战。据建议，深度强化学习（DRL）可以增强泛化能力和对新情况的适应性，使其非常适合此类广阔环境 [20, 21]。强化学习智能体与复杂环境及深度网络进行交互，以近似学习用于未来动作的价值函数或策略 [22]。DRL 在控制、资源管理、游戏、机器人技术和自动驾驶等不同领域的应用已得到验证 [4]。
+恶意车辆篡改本地训练数据或自私车辆不提供其本地模型也可能导致策略失败 [17]。然而，在自动驾驶车辆的背景下，该方法切实可行，并可投入使用以提供更安全、更快捷的车辆服务。利用来自环境的持续反馈，强化学习（`RL`）是一种智能学习最佳策略以最大化奖励的 AI 技术 [18]。这类似于个体通过经验而非直接观察来了解周围环境的方式 [19]。传统 `RL` 虽然可行，但在收敛到理想策略之前，完全探索复杂环境将花费过长时间。在通常拥有巨大且连续状态-动作空间的此类系统中扩展 `RL` 是一个重大挑战。据建议，深度强化学习（`DRL`）可以增强泛化能力和对新情况的适应性，使其非常适合此类广阔环境 [20, 21]。强化学习智能体与复杂环境及深度网络进行交互，以近似学习用于未来动作的价值函数或策略 [22]。`DRL` 在控制、资源管理、游戏、机器人技术和自动驾驶等不同领域的应用已得到验证 [4]。
 
-具体而言，强化学习擅长在模糊环境下进行序列决策。这是因为与具有显式规则的传统优化问题不同，在高度动态的移动场景中，卸载约束往往更加隐式和多样化 [23]。例如，车联网（V2X）支持多种服务，每种服务都有其自身的需求和挑战 [24]。另一个促成基于 RL 的卸载决策模型日益流行的因素是汽车技术创新的快速扩展应用。为达成目标，这些模型通常利用强化学习获取更优方法 [25]。有趣的是，该训练可通过分布式算法完成；因此，该方法可通过分布式协作开发，利用本地知识提升系统级性能 [26]。为实现高效的任务卸载决策，我们提出了一种基于 DRL 的联邦卸载架构，该架构利用多层集体学习来卸载作业 [27]。通过允许汽车和雾服务器共享信息，该框架增强了它们的学习能力。本研究最重要的成果如下：
+具体而言，强化学习擅长在模糊环境下进行序列决策。这是因为与具有显式规则的传统优化问题不同，在高度动态的移动场景中，卸载约束往往更加隐式和多样化 [23]。例如，车联网（`V2X`）支持多种服务，每种服务都有其自身的需求和挑战 [24]。另一个促成基于 `RL` 的卸载决策模型日益流行的因素是汽车技术创新的快速扩展应用。为达成目标，这些模型通常利用强化学习获取更优方法 [25]。有趣的是，该训练可通过分布式算法完成；因此，该方法可通过分布式协作开发，利用本地知识提升系统级性能 [26]。为实现高效的任务卸载决策，我们提出了一种基于 `DRL` 的联邦卸载架构，该架构利用多层集体学习来卸载作业 [27]。通过允许汽车和雾服务器共享信息，该框架增强了它们的学习能力。本研究最重要的成果如下：
 
-*   为做出更明智的工作卸载决策，重要的是研究多智能体 V2X 场景，其中智能体相互通信并与周围车辆环境交互。
+*   为做出更明智的工作卸载决策，重要的是研究多智能体 `V2X` 场景，其中智能体相互通信并与周围车辆环境交互。
+
 *   利用多个分布式学习环境创建多层联邦卸载系统，可在边缘学习卸载决策。由于层级间共享的数据减少，这提高了通信通道的隐私性和效率。
-*   利用一种称为异步优势行动者-评论家（A3C）的混合强化学习范式，研究人员可构建两层卸载系统。车辆智能体用于学习本地模型，而雾服务器用于训练全局模型。通过同时运行多个独立的学习环境，A3C 可捕获更大比例的状态空间。这种状态空间探索和多层学习策略带来了更快的收敛和更优的卸载决策知识。
+
+*   利用一种称为异步优势行动者-评论家（`A3C`）的混合强化学习范式，研究人员可构建两层卸载系统。车辆智能体用于学习本地模型，而雾服务器用于训练全局模型。通过同时运行多个独立的学习环境，`A3C` 可捕获更大比例的状态空间。这种状态空间探索和多层学习策略带来了更快的收敛和更优的卸载决策知识。
 
 ##### 表 1：符号与含义
 
@@ -3105,20 +2938,21 @@ Figure 2. Federated Learning architecture in a clinic.
 
 
 
+# 卸载作业的选择依据
 
-卸载作业的选择依据是车辆的速度及其行驶方向。换句话说，朝同一方向行驶的车辆可以竞争卸载作业。例如，独立和协作的雾服务器均提供了移动性感知和基于位置的工作卸载技术[28]。通过高效利用可用的计算和通信资源，实现了任务的及时完成。该方法在选择资源时优先考虑设备移动性，而非队列状态。为了最大化 V2V 资源共享网络中的资源利用率，基于车辆的方向、位置、速度和队列状况，提出了上下文感知的机会主义卸载。作者[29]基于多臂老虎机理论和雾节点的卸载延迟，提供了一种自适应卸载方法。为了减轻边缘雾服务器的压力，解释了如何在 FiWi 使能的雾计算网络中利用博弈论方法实现负载均衡。集中式网络管理作为 SDN 的主要原则，是该补救措施的关键[30]。一种工作卸载方法以信息缺失博弈的形式提供，其中现有资源被汇集并共享。它使用贪婪剪枝算法进行资源选择，兼顾高效与环保[31]。进化方法也被用于优化资源池分配。值得注意的是，这些元启发式方法依赖于集中式网络管理，在分配资源时更强调设备特定因素。随着请求总数和排队请求数的增加，这些技术表现不佳。此外，基于 AI 的作业卸载可以分析大规模状态空间，并适应车辆周围的动态条件。例如，[29]中使用预测模型减少了程序执行的等待时间。通过采用集成学习，一组无人机可以高效计算高需求的计算作业。它们使用基于拍卖的机制将雾服务器分配给移动节点的查询[32]。该方法使用 DNN 模型来减少移动节点消耗的时间和功耗。另一篇类似的论文使用 DNN 来调度任务并将计算卸载到边缘[33]。综述表明，时间和能量得到了更好的分配。值得注意的是，在使用基于 DNN 方法的车辆环境中，有限的信息交换和巨大的状态空间对其决策能力产生了负面影响。
+卸载作业的选择依据是车辆的速度及其行驶方向。换句话说，朝同一方向行驶的车辆可以竞争卸载作业。例如，独立和协作的雾服务器均提供了移动性感知和基于位置的工作卸载技术[28]。通过高效利用可用的计算和通信资源，实现了任务的及时完成。该方法在选择资源时优先考虑设备移动性，而非队列状态。为了最大化 V2V 资源共享网络中的资源利用率，基于车辆的方向、位置、速度和队列状况，提出了上下文感知的机会主义卸载。作者[29]基于多臂老虎机理论和雾节点的卸载延迟，提供了一种自适应卸载方法。为了减轻边缘雾服务器的压力，解释了如何在 FiWi 使能的雾计算网络中利用博弈论方法实现负载均衡。集中式网络管理作为 SDN 的主要原则，是该补救措施的关键[30]。一种工作卸载方法以信息缺失博弈的形式提供，其中现有资源被汇集并共享。它使用贪婪剪枝算法进行资源选择，兼顾高效与环保[31]。进化方法也被用于优化资源池分配。值得注意的是，这些元启发式方法依赖于集中式网络管理，在分配资源时更强调设备特定因素。随着请求总数和排队请求数的增加，这些技术表现不佳。此外，基于 AI 的作业卸载可以分析大规模状态空间，并适应车辆周围的动态条件。例如，[29]中使用预测模型减少了程序执行的等待时间。通过采用集成学习，一组无人机可以高效计算高需求的计算作业。它们使用基于拍卖的机制将雾服务器分配给移动节点的查询[32]。该方法使用 `DNN` 模型来减少移动节点消耗的时间和功耗。另一篇类似的论文使用 `DNN` 来调度任务并将计算卸载到边缘[33]。综述表明，时间和能量得到了更好的分配。值得注意的是，在使用基于 `DNN` 方法的车辆环境中，有限的信息交换和巨大的状态空间对其决策能力产生了负面影响。
 
 ## 2.2 基于强化学习的卸载
 
-近期工作提出了一种基于深度 Q 学习的智能作业卸载技术，对信息和网络数据吞吐量实行集中式控制。同样，一种基于深度 Q 网络的计算资源分配方法使 Q 学习摆脱了以往的局限[34]。通过考虑相关车辆的速度和计算能力，计算出一个高效的卸载决策模型。对于因大量策略探索和相关计算而导致状态空间庞大且收敛速度缓慢的情况，Q 学习变得低效。得益于[35]中描述的服务卸载架构执行的在线学习，雾设备学习到了最优卸载策略。在“何时何地调度”范式的背景下，DRL 被用于构建随机资源优化问题[36]。该模型接收代表任务队列状态的特征集，并使用 DNN 估算分配策略。类似研究的作者[37]提出了一种优先级感知的 DRL 方法，鼓励车辆汇聚其闲置处理能力。该方案指定了一种动态定价方法，由任务的相对重要性、节点移动性和资源可访问性决定。同样优化了一种基于 DRL 的卸载技术[38]，其中任务队列状态、移动性和任务依赖性都是联合目标函数的一部分。该方法通过在卸载任务时减少功耗和延迟来提高性能。深度强化学习专家研究了任务卸载范式[39]。在该研究中，作者使用基于 SAC（软演员-评论家）的、无模型的深度强化学习版本，以最大化熵和期望效用。然而，由于任务分配决策学习的集中化，给定的工作高度集中。我们建议的方法涉及在车辆和基站分别学习两个不同的模型，这与先前工作仅专注于在基站学习这些任务卸载决策形成对比。由于环境的动态性和通信的缺乏，DRL 方法通常无法在连续状态空间背景下提供令人满意的结果。这项工作非常适合分布式和联邦 DRL，后者确保了丰富多样的训练环境，并加快了达到全局最优的过程。
+近期工作提出了一种基于深度 `Q` 学习的智能作业卸载技术，对信息和网络数据吞吐量实行集中式控制。同样，一种基于深度 `Q` 网络的计算资源分配方法使 `Q` 学习摆脱了以往的局限[34]。通过考虑相关车辆的速度和计算能力，计算出一个高效的卸载决策模型。对于因大量策略探索和相关计算而导致状态空间庞大且收敛速度缓慢的情况，`Q` 学习变得低效。得益于[35]中描述的服务卸载架构执行的在线学习，雾设备学习到了最优卸载策略。在“何时何地调度”范式的背景下，`DRL` 被用于构建随机资源优化问题[36]。该模型接收代表任务队列状态的特征集，并使用 `DNN` 估算分配策略。类似研究的作者[37]提出了一种优先级感知的 `DRL` 方法，鼓励车辆汇聚其闲置处理能力。该方案指定了一种动态定价方法，由任务的相对重要性、节点移动性和资源可访问性决定。同样优化了一种基于 `DRL` 的卸载技术[38]，其中任务队列状态、移动性和任务依赖性都是联合目标函数的一部分。该方法通过在卸载任务时减少功耗和延迟来提高性能。深度强化学习专家研究了任务卸载范式[39]。在该研究中，作者使用基于 `SAC`（软演员-评论家）的、无模型的深度强化学习版本，以最大化熵和期望效用。然而，由于任务分配决策学习的集中化，给定的工作高度集中。我们建议的方法涉及在车辆和基站分别学习两个不同的模型，这与先前工作仅专注于在基站学习这些任务卸载决策形成对比。由于环境的动态性和通信的缺乏，`DRL` 方法通常无法在连续状态空间背景下提供令人满意的结果。这项工作非常适合分布式和联邦 `DRL`，后者确保了丰富多样的训练环境，并加快了达到全局最优的过程。
 
-## 3. 系统模型
+# 3. 系统模型
 
-利用一个车辆网络，其中一些在移动（用`V`表示），一些停放（用`P`表示），一些在雾中（用`F`表示），我们考察一个资源共享车辆环境（用`F`表示）。具有波动计算需求的作业的唯一来源是移动汽车本身；这些作业可以在本地处理或卸载到其他节点。
+利用一个车辆网络，其中一些在移动（用 `V` 表示），一些停放（用 `P` 表示），一些在雾中（用 `F` 表示），我们考察一个资源共享车辆环境（用 `F` 表示）。具有波动计算需求的作业的唯一来源是移动汽车本身；这些作业可以在本地处理或卸载到其他节点。
 
-### 3.1 传输模型
+## 3.1 传输模型
 
-无线信道的路径损耗`l`定义为：其中`d`是发射和接收设备之间的距离。
+无线信道的路径损耗 `l` 定义为：其中 `d` 是发射和接收设备之间的距离。
 
 (1)
 
@@ -3126,7 +2960,7 @@ Figure 2. Federated Learning architecture in a clinic.
 l = a + βlog10 + b
 ```
 
-其中`β`是路径衰减指数，`a`代表初始偏移量，`b`代表阴影衰落效应。因此，通信路径上的上界可以表示为
+其中 `β` 是路径衰减指数，`a` 代表初始偏移量，`b` 代表阴影衰落效应。因此，通信路径上的上界可以表示为
 
 (2)
 
@@ -3134,15 +2968,15 @@ l = a + βlog10 + b
 C = B log_2(1 + (P_t * l) / N_0)
 ```
 
-其中`C`是可以在具有带宽的无线电信道上传输的最大数据率。`N[0]`是信道噪声，`Pt`是车辆节点的发射功率。重要的是要注意，我们假设无线信道是准静态且时不变的。这表明所有节点经历的信道状态是一致的，具有相等的发射功率和干扰。请记住，传输延迟是我们旨在最小化的总延迟的关键组成部分，它考虑了信道容量。我们的模型考虑距离、路径损耗，并适应传输延迟的新值，以自行学习哪些作业最适合卸载。
+其中 `C` 是可以在具有带宽的无线电信道上传输的最大数据率。`N[0]` 是信道噪声，`Pt` 是车辆节点的发射功率。重要的是要注意，我们假设无线信道是准静态且时不变的。这表明所有节点经历的信道状态是一致的，具有相等的发射功率和干扰。请记住，传输延迟是我们旨在最小化的总延迟的关键组成部分，它考虑了信道容量。我们的模型考虑距离、路径损耗，并适应传输延迟的新值，以自行学习哪些作业最适合卸载。
 
-### 3.2 任务模型
+## 3.2 任务模型
 
-各种车辆应用生成的任务具有相同的优先级，且彼此完全独立。每个传入作业`j ∈ j`有两个元组，其中`sj`代表任务大小（单位：MB），`cj`代表计算需求（单位：Mbits）。
+各种车辆应用生成的任务具有相同的优先级，且彼此完全独立。每个传入作业 `j ∈ j` 有两个元组，其中 `sj` 代表任务大小（单位：MB），`cj` 代表计算需求（单位：Mbits）。
 
-### 3.3 排队模型
+## 3.3 排队模型
 
-研究人员使用泊松过程来描述系统工作负载，到达率为`λ`，研究一个具有无限总体的多服务器先进先出排队模型。整个系统容量由公式`∀(V,F) = Σ_{i=0}^{T} K * (c * s_i)`表示，其中`K`是整个调用集群的大小，`c`是并行计算节点的数量，`si`是输入的数据量。对于给定的代理`i`，其驻留时间`Z[i]`可写为
+研究人员使用泊松过程来描述系统工作负载，到达率为 `λ`，研究一个具有无限总体的多服务器先进先出排队模型。整个系统容量由公式 `∀(V,F) = Σ_{i=0}^{T} K * (c * s_i)` 表示，其中 `K` 是整个调用集群的大小，`c` 是并行计算节点的数量，`si` 是输入的数据量。对于给定的代理 `i`，其驻留时间 `Z[i]` 可写为
 
 (3)
 
@@ -3150,11 +2984,9 @@ C = B log_2(1 + (P_t * l) / N_0)
 Z_i = Σ_{x ∈ Q} (c_x / f_i)
 ```
 
-其中，`fi`是时钟频率，`Σ[x ∈ Q]c[x]`是队列`Q`的队列长度。
+其中，`fi` 是时钟频率，`Σ[x ∈ Q]c[x]` 是队列 `Q` 的队列长度。
 
-### 3.4 任务执行模型
-
-
+## 3.4 任务执行模型
 
 发送节点在卸载任务时会消耗一定的带宽。车辆 $i \in V$ 的所有传输延迟之和 $D[i]¹$ 的公式如下：
 
@@ -3182,7 +3014,7 @@ D_{i}^{3} = (\psi_{2}f_{i}) \cdot \sum\limits_{j = 1}^{J}Z_{j}
 
 $D[i] = D[i]¹ + D[i]² + D[i]³$
 
-### 3.5 卸载模型
+## 3.5 卸载模型
 
 如前所述，车辆产生的任务可以在本地执行，也可以分布在资源共享车辆网络中。主要考虑因素有两个：任务所需的计算能力，以及雾服务器和停放车辆等周边资源的邻近程度。如公式 (8) 所示，对于给定任务 $j$，源车辆 $i$ 采用复杂的决策模型来评估是否将负载分配给附近的节点。
 
@@ -3192,24 +3024,24 @@ $\delta[i] = \{(0,1):\delta = f(x[1],x[2],x[3],\cdots,x[n])\}, \forall j \in J$
 
 其中特征集合 $(x[1], x[2], x[3],...,x[n])$ 代表当前车辆状况。任务卸载算法学习一个函数 $f(\cdot)$，将智能体状态 $\delta[i]$ 映射到卸载策略。
 
-## 4. 问题建模
+# 4. 问题建模
 
 为了做出更好的卸载决策，车辆与其他车辆及周围环境进行通信。考虑智能体 $I$，给定其当前状态 $s_i$，决定采取一个动作 $a[i]$ 以换取奖励 $r_i$ 从而转移到状态 $s[i]'$。智能体与其周围环境的交互可用以下形式描述：
 
-### 4.1 状态空间
+## 4.1 状态空间
 
 当前车辆状态是可用处理能力的隐喻。由于汽车系统中计算需求的动态性质，车辆必须能够根据计算需求和计算资源的可用性来满足计算要求，而这些因素可能会有很大差异。我们的方法考虑了可能影响作业和车辆的多种变量。在规划系统当前状态时，我们考虑了每个任务的计算需求和每个节点可用的资源。我们还考虑了控制工作负载分配的传输延迟和车辆数据速率。车辆的状态空间是车辆与关键参数集合之间的映射，这些参数能适当刻画车辆运行环境的动态特性。对于执行任务 $j$ 的智能体 $i$，构建相应的状态概况 $S_i$ 为 $S[i] = \{z[i], \Delta[i], V[i], W[i], f[i], (s[j], c[j])\}$。
 
 *   **Z[i]**：包含本地、雾服务器、移动和静止车辆及其各自的驻留时间。
 *   **Δ[i]**：是执行任务的车辆到任何可用资源（如雾服务器或其他车辆）的距离。
-*   **V\*i\*\***：包含移动和静止车辆以及雾服务器，作为彼此相对速度的集合。
-*   **W\*i\*\***：由多种资源卸载方式组成，如本地服务器、雾服务器、移动设备和静止车辆。
+*   **V[i]**：包含移动和静止车辆以及雾服务器，作为彼此相对速度的集合。
+*   **W[i]**：由多种资源卸载方式组成，如本地服务器、雾服务器、移动设备和静止车辆。
 *   **f[i]**：等于生成任务的智能体的处理能力。
 *   **(s[j], c[j])**：表示任务特征，如输入数据量和所需周期率。
 
 重要的是，性能指标应实时测量，以便考虑环境变化。由于网络拓扑快速变化且可能状态种类繁多，捕捉这些网络的完整动态特性很困难。为了确定最适合当前情况的卸载动作，我们使用状态构建模块实时生成环境状态。
 
-### 4.2 动作空间
+## 4.2 动作空间
 
 基于车辆的资源共享网络中可能的动作集合由卸载动作空间定义。该空间代表本地、雾服务器和移动/静止车辆计算资源。执行任务 $j$ 的车辆智能体 $i$ 的动作空间 $\mathcal{A}_i$ 表示如下：
 
@@ -3219,7 +3051,7 @@ $\mathcal{A}[i] = \{a[1],a[2],a[3],a[4]\}$
 
 其中 (a-1) 任务排队在本地执行，(a-2) 卸载给相邻的移动汽车，(a-3) 卸载给相邻的雾服务器，(a-4) 卸载给附近停放的车辆。
 
-### 4.3 奖励函数
+## 4.3 奖励函数
 
 激励函数可以提高学习算法的效率。这里我们指的是驻留时间优化的一个子集，它通过从给定动作空间中选择最佳动作，在多次重复中最大化奖励。假设车辆智能体 $I$ 在目标节点 $k\in\{i \times, [i] \}$ 执行动作 $a_i$ 获得奖励 $r_i$，其中 $r_{i} = - (\frac{1}{\lambda})Z_{k'}$，$\lambda$ 为任务到达率，$Z_k$ 为 $k$ 在最终目的地所需停留的时间。
 
@@ -3235,21 +3067,19 @@ R_{i} = \text{Σ}_{t = 0}^{T}\frac{r_{i}(t) - R_{i}}{M_{i}}
 
 总之，智能体的学习过程始于状态向量的输入。由于共享局部和全局模型，智能体对环境状况的理解能力增强，从而做出更好的决策。起初，智能体随机做决策，然后根据因采取特定动作而获得的奖励学习做出更好的决策。因为奖励与在节点处花费的时间成正比，选择驻留时间较短的节点会获得更大的回报。因此，考虑到邻域内车辆的可达性，车辆智能体将选择奖励最高的动作，即使这意味着在那里花费的时间更少。
 
-### 4.4 多智能体异步优势演员-评论家 (A3C) 算法
+## 4.4 多智能体异步优势演员-评论家 (A3C) 算法
 
+`Actor-Critic` 网络是策略梯度实现的一个示例，该方法通过随时间逐步优化参数来优化策略。经典 `Q-learning` 和深度 `Q` 网络（`DQN`）都根据当前状态选择最优的下一步，但它们的实现方式截然不同。最优策略，即从状态到动作的映射，可以通过策略梯度直接学习。`Actor` 是真正对策略采取行动的一方，而 `Critic` 提供反馈以帮助 `Actor` 做出更好的选择。当累积回报 `R-t` 从基线函数中移除时，方差或优势减小为 `R[t]` – `bt`。典型的基准是学习价值估计（`Vπ(st)`）。
 
+在多智能体深度强化学习场景中，`N` 个智能体在车辆生态系统中协作。这创建了一个简单的马尔可夫决策过程（`MDP`），其中 `s,a,r.s′` 等元组代表智能体。变量 `s` 表示智能体的当前状态，变量 `a` 表示智能体选择的动作，变量 `r` 表示动作的奖励，变量 `s` 表示智能体的预期状态。假设在时间 `t`，`N` 个智能体从环境中获取线索并自主行动，以转移概率 `p` 获得奖励并转移到新状态。智能体的目标是发现一个从状态到动作的映射 `π(s) → a`，以最大化预期折扣未来奖励 `V^π(s[t]) = E(R[t]|(s[t], a[i]))`。其中，`Rt` 是折扣累积未来回报，计算公式为 $R\_{t} = \sum\limits\_{k = 0}^{\infty}\gamma^{k}r\_{t + 1}$，折扣因子 `γ` ∈ (0, 1)。
 
-Actor-Critic 网络是策略梯度实现的一个示例，该方法通过随时间逐步优化参数来优化策略。经典 Q-learning 和深度 Q 网络（DQN）都根据当前状态选择最优的下一步，但它们的实现方式截然不同。最优策略，即从状态到动作的映射，可以通过策略梯度直接学习。Actor 是真正对策略采取行动的一方，而 Critic 提供反馈以帮助 Actor 做出更好的选择。当累积回报 `R-t` 从基线函数中移除时，方差或优势减小为 `R[t]` – `bt`。典型的基准是学习价值估计（`Vπ(st)`）。
-
-在多智能体深度强化学习场景中，`N` 个智能体在车辆生态系统中协作。这创建了一个简单的马尔可夫决策过程（MDP），其中 `s,a,r.s′` 等元组代表智能体。变量 `s` 表示智能体的当前状态，变量 `a` 表示智能体选择的动作，变量 `r` 表示动作的奖励，变量 `s` 表示智能体的预期状态。假设在时间 `t`，`N` 个智能体从环境中获取线索并自主行动，以转移概率 `p` 获得奖励并转移到新状态。智能体的目标是发现一个从状态到动作的映射 `π(s) → a`，以最大化预期折扣未来奖励 `V^π(s[t]) = E(R[t]|(s[t], a[i]))`。其中，`Rt` 是折扣累积未来回报，计算公式为 $R\_{t} = \sum\limits\_{k = 0}^{\infty}\gamma^{k}r\_{t + 1}$，折扣因子 `γ` ∈ (0, 1)。
-
-在模型训练期间，A3C 方法利用众多并发线程，每个线程都受益于独特且改进的学习体验。在此，许多智能体正在并行探索移动车辆状态空间的不同区域。来自许多异步交互的无关更新允许对状态空间进行更快、更彻底的探测。通过从估计价值函数 `Vπ (s[t])` 中减去成功的奖励函数，该方法在时间瞬间 `t` 得到一个优势函数，其中 `s` 是时间瞬间。
+在模型训练期间，`A3C` 方法利用众多并发线程，每个线程都受益于独特且改进的学习体验。在此，许多智能体正在并行探索移动车辆状态空间的不同区域。来自许多异步交互的无关更新允许对状态空间进行更快、更彻底的探测。通过从估计价值函数 `Vπ (s[t])` 中减去成功的奖励函数，该方法在时间瞬间 `t` 得到一个优势函数，其中 `s` 是时间瞬间。
 
 (11)
 
 `A(s[t], a[i]; θ, w) = r[t] + γ*V(s[t + 1]; w) − V(s[t]; w)`
 
-优势函数表示一个动作相对于其他可能动作的盈利能力。使用该公式，Actor 网络进行自我更新，
+优势函数表示一个动作相对于其他可能动作的盈利能力。使用该公式，`Actor` 网络进行自我更新，
 
 (12)
 
@@ -3258,7 +3088,7 @@ dθ← dθ + ∇_{θ'}logπ_{θ'}(a_{i} | s_{t};θ')A(s_{t},a_{i};θ',w')
 + β∇_{θ'}H(π(s_{t};θ'))
 ```
 
-其中，策略选项不确定性的度量是熵参数。熵的增加表明智能体的行为变得更加混乱和不可预测。如果没有熵项，智能体将收敛于次优行为，更多地权衡导致最高奖励的动作。而正则化项通过调整熵强度来平衡利用与探索，后者由开发参数 `β` 控制。该方程也用于更新 Critic 模型。
+其中，策略选项不确定性的度量是熵参数。熵的增加表明智能体的行为变得更加混乱和不可预测。如果没有熵项，智能体将收敛于次优行为，更多地权衡导致最高奖励的动作。而正则化项通过调整熵强度来平衡利用与探索，后者由开发参数 `β` 控制。该方程也用于更新 `Critic` 模型。
 
 (13)
 
@@ -3267,9 +3097,9 @@ dw← dw + 2A(s_{t},a_{k};w,w_{c})∇_{w}A(s_{t},a_{k};θ',w_{c})
 dw← dw + \frac{\partial A{(s_{t},a_{k};θ',w')}^{2}}{\partial w'}
 ```
 
-此处，Critic 更新会监控优势函数，以确保预期奖励与期望奖励之间的差异保持在最小。
+此处，`Critic` 更新会监控优势函数，以确保预期奖励与期望奖励之间的差异保持在最小。
 
-### 4.5 系统消耗问题
+## 4.5 系统消耗问题
 
 当智能体产生工作时，可能将其放入本地队列或发送给邻居节点。选择卸载还是本地入队的函数很复杂。优化决策可以更好地利用可用计算资源，减少在建筑物中花费的总时间。多智能体系统旨在深度强化学习的目标之一是以这样一种方式减少未来的价值，使得
 
@@ -3286,18 +3116,17 @@ badhbox Σw_{j} ≤ W,j ∈ E
 
 如前所述，从状态 `s-t` 开始遵循策略的预期回报由公式(14)给出。它与忠实描述排队任务经过时间的估计值一致。通过减小该价值估计，我们可以减少任务在队列中花费的时间，这是最终目标。包含本地和卸载动作的决策元组 `C1` 用符号 `a-i.=0,1` 表示。为了减少驻留时间，智能体倾向于有助于目标函数的卸载操作。由于缺乏上下文，智能体最初更倾向于探索并表现得反复无常。随着智能体获得经验并接近目标，其动作变得越来越预定。工作负载 `w` 必须小于或等于 `C2`，其中 `C2` 是总容量 `W`。累积奖励和近似价值函数之间只有很小的差距，这由 `C3` 优势函数所示。为了实现这一目标，智能体应用学习到的权重 `θ` 和 `w` 来寻找最优策略 `π*`，从而得出最优动作 `a*`。
 
-由于车辆中交换信息的机会较少，为活动选择最佳卸载策略可能很困难，导致等待时间变长和收敛变慢。然而，正如[[39]](#ch8.xhtml#ref8_39)所述，通过在多层学习架构的上下层之间简单地交换梯度，联邦学习使这成为可能。系统现在可以更快、更可靠地扩展。我们对 A3C 算法做了同样的事情，它使用并行仿真来提高性能。可以在更短的时间内探索更多的状态空间，从而做出更好的决策。
+由于车辆中交换信息的机会较少，为活动选择最佳卸载策略可能很困难，导致等待时间变长和收敛变慢。然而，正如[[39]](#ch8.xhtml#ref8_39)所述，通过在多层学习架构的上下层之间简单地交换梯度，联邦学习使这成为可能。系统现在可以更快、更可靠地扩展。我们对 `A3C` 算法做了同样的事情，它使用并行仿真来提高性能。可以在更短的时间内探索更多的状态空间，从而做出更好的决策。
 
-## 5. 面向计算卸载的联邦学习架构
+# 5. 面向计算卸载的联邦学习架构
 
-本研究提出了一种基于多智能体 DRL 的联邦任务卸载框架。该方法建立了一个多层框架，其中区域模型和全局模型通信协作，以确定何时何地委派工作。如前所述，每个车辆智能体通过与环境交互来学习局部模型，从而捕捉车辆环境的潜在动态。此外，得益于存储在边缘设备上的中心化全局模型发送的数据，智能体的局部模型定期更新。如前所述，车辆节点负责学习和存储模型。联邦学习通过允许车辆在单个节点上本地训练来减少网络延迟。训练在车辆节点上进行，仅在资源共享环境中传输最必要的数据，这两者都提高了隐私性。由于网络之间仅通信梯度，车辆隐私得到保护，且训练好的模型对数据变化更具鲁棒性。由于共享的信息更少，训练好的模型更稳定，数据被篡改的可能性也更小。
-
-
-
+本研究提出了一种基于多智能体 `DRL` 的联邦任务卸载框架。该方法建立了一个多层框架，其中区域模型和全局模型通信协作，以确定何时何地委派工作。如前所述，每个车辆智能体通过与环境交互来学习局部模型，从而捕捉车辆环境的潜在动态。此外，得益于存储在边缘设备上的中心化全局模型发送的数据，智能体的局部模型定期更新。如前所述，车辆节点负责学习和存储模型。联邦学习通过允许车辆在单个节点上本地训练来减少网络延迟。训练在车辆节点上进行，仅在资源共享环境中传输最必要的数据，这两者都提高了隐私性。由于网络之间仅通信梯度，车辆隐私得到保护，且训练好的模型对数据变化更具鲁棒性。由于共享的信息更少，训练好的模型更稳定，数据被篡改的可能性也更小。
 
 ## 图 1：联邦学习的多级基础设施
 
-在图 1 中，展示了两层联邦架构工作流的实际运行情况。架构分为上下两层：下层托管车辆节点，上层由雾服务器联邦支撑。随着下层车辆的 Actor 和 Critic 网络学习策略和价值，它们接管控制权。上层雾服务器收集范围内车辆的数据，并聚合 Actor 和 Critic 的更新。卸载决策模型受益于两层间交换的最新信息。
+在图 1 中，展示了两层联邦架构工作流的实际运行情况。架构分为上下两层：下层托管车辆节点，上层由雾服务器联邦支撑。随着下层车辆的 `Actor` 和 `Critic` 网络学习策略和价值，它们接管控制权。上层雾服务器收集范围内车辆的数据，并聚合 `Actor` 和 `Critic` 的更新。卸载决策模型受益于两层间交换的最新信息。
+
+
 
 ![Figure 1. A multi-level infrastructure for federated learning. There is two-way communication between the lower-tier cars and the associated fog node below.](img/fig8_1_B.jpg)
 
@@ -3357,9 +3186,6 @@ Figure 1. A multi-level infrastructure for federated learning. There is two-way 
 30:  end procedure
 ```
 
-
-
-
 使用多智能体时，所提多层架构有许多优势。首先，该架构利用各种本地分散环境中的智能体交互，实现多样化的学习体验。其次，异步学习使智能体能以更快的收敛速度学习，同时也增加了它们对底层资源共享环境的接触。第三，雾联邦用于完成高层学习，通过融合来自多个来源的信息，能构建更全面的环境图景。与高层相反，低层较难观察，因为它们仅与直接位于其下方的事物交互。协作学习使用全局策略而非仅靠局部知识，通过交互式学习更快收敛到全局极小值。由于受限的连接性和感知范围，车辆网络必然存在某些限制。因此，决策仅在尽可能低的层级做出，这可能因受限的信息流和扭曲的路况视图而导致次优结果。高层雾服务器可整合从车辆和低层雾服务器获取的信息，以更好地指导卸载决策。当汽车既能相互教学又能相互学习时，可高效映射庞大的车辆状态空间。第四，模型在本地训练，减少了传输到顶层全局网络的数据量，最大化利用可用通信信道。最后，该方法通过个体努力和受限协作在共享基础设施间共享信息，高效利用通信资源。这种共享学习方法改进了决策，进而减少了车辆共享资源网络中每项活动的耗时。在基础层（汽车学习分布式工作卸载模型的地方），求解优化问题。由于使用分布式 `A3C` 技术，我们同时执行多个仿真场景。操作车辆的智能体也在其虚拟世界中交互。每辆车实时从环境中学习，做出最适合其独特情况的卸载决策。因此，我们的方法受益于这两个过程的综合效果。为改进监督并允许在并行运行多个仿真环境的特定实例中更全面地探索状态空间，第一个过程在高层收集并重新共享变化。
 
 ## 6. 性能评估
@@ -3393,16 +3219,13 @@ Figure 1. A multi-level infrastructure for federated learning. There is two-way 
 
 **随机选择算法 (SA)** —— 从其数据传输范围内的计算节点池中随机选择目标节点。资源池中雾服务器、静止车辆和移动车辆均等比例。
 
-
-
-
 **贪婪算法 (GA)** —— 在其数据传输区域内，从可用的处理能力中急切地选择一个附近的目标节点。
 
 ## 7. 结果与讨论
 
 ### 7.1 驻留时间
 
-它包括等待工作开始所花费的时间和收集必要材料所花费的时间。当做出更好的决策时，服刑期限（驻留时间）总是会缩短。在 图 2 中，我们将提出的方法与其他两种更传统的方法进行比较，以分析不同到达率下的驻留时长模式。当到达率较低时，所有方法表现出几乎相同的行为。然而，随着到达率 >=140，该模式变得更加明显。在 =200 时，我们的方法似乎有 58% 的改进。较小的队列和更少的总延迟时间是建议方法更审慎决策的结果。
+它包括等待工作开始所花费的时间和收集必要材料所花费的时间。当做出更好的决策时，服刑期限（驻留时间）总是会缩短。在图 2 中，我们将提出的方法与其他两种更传统的方法进行比较，以分析不同到达率下的驻留时长模式。当到达率较低时，所有方法表现出几乎相同的行为。然而，随着到达率 >=140，该模式变得更加明显。在 =200 时，我们的方法似乎有 58% 的改进。较小的队列和更少的总延迟时间是建议方法更审慎决策的结果。
 
 ![图 2. 各种任务到达率下的平均驻留时间。](img/fig8_2_C.jpg)
 
@@ -3410,11 +3233,11 @@ Figure 1. A multi-level infrastructure for federated learning. There is two-way 
 
 ### 7.2 端到端时延
 
-确定网络因任务传输、排队等待和在最终节点处理等活动而损失的总时间。提出的方法预测在 *λ* = 200 时下降 57.11%。共享资源环境中总端到端延迟的减少表明决策最优，而延迟和队列长度的增加则揭示了最差的决策。
+确定网络因任务传输、排队等待和在最终节点处理等活动而损失的总时间。提出的方法预测在 `λ` = 200 时下降 57.11%。共享资源环境中总端到端延迟的减少表明决策最优，而延迟和队列长度的增加则揭示了最差的决策。
 
 ### 7.3 传输时延
 
-是由无线连接的有限数据率引起的滞后吗？请记住，此变量会影响您的总停留时间。与 GA 和软演员-评论家方法相比，DRL 技术的总传输时延如 图 3 所示。虽然 GA 卸载到附近的邻居意味着它拥有最短的传输延迟，但它也导致了最长的驻留时间。将提出的方案与 GA 和 SA 进行比较时，我们分别看到减少了 8.5% 和增加了 105.6%。通过仔细考虑每个节点的卸载偏好，DRL 方法有效地利用了邻近节点的空闲资源。
+是由无线连接的有限数据率引起的滞后吗？请记住，此变量会影响您的总停留时间。与 GA 和软演员-评论家方法相比，DRL 技术的总传输时延如图 3 所示。虽然 GA 卸载到附近的邻居意味着它拥有最短的传输延迟，但它也导致了最长的驻留时间。将提出的方案与 GA 和 SA 进行比较时，我们分别看到减少了 8.5% 和增加了 105.6%。通过仔细考虑每个节点的卸载偏好，DRL 方法有效地利用了邻近节点的空闲资源。
 
 ![图 3. 总传输时延。](img/fig8_3_C.jpg)
 
@@ -3422,17 +3245,17 @@ Figure 1. A multi-level infrastructure for federated learning. There is two-way 
 
 ### 7.4 系统成本
 
-是卸载执行和本地执行的总和。包括提出的方法在内的若干卸载选项及其平均系统成本。显然，在感知决策模型中，GA 和软演员-评论家都必须承担的工作量是最大的成本。具体而言，当 *λ* = 200 时，SA 的成本上升 16%，GA 的成本上升 56%。正如所解释的那样，提出的方法通过减少驻留时间，增加了资源共享设置的总系统成本。这种改进归因于 λ = 200 时驻留时间减少了 58%。
+是卸载执行和本地执行的总和。包括提出的方法在内的若干卸载选项及其平均系统成本。显然，在感知决策模型中，GA 和软演员-评论家都必须承担的工作量是最大的成本。具体而言，当 `λ` = 200 时，SA 的成本上升 16%，GA 的成本上升 56%。正如所解释的那样，提出的方法通过减少驻留时间，增加了资源共享设置的总系统成本。这种改进归因于 `λ` = 200 时驻留时间减少了 58%。
 
 ### 7.5 交付率
 
-是指被卸载、计算并返回给原始节点的原始工作的比例。图 4 显示，GA 和 SA 方案的交付量均显著下降。在 λ = 200 时，GA 下降 45.9%，SA 下降 20.4%。这种交付量的显著下降可能归因于工作负载的不均匀分布，导致队列变长和故障增多。随着更多工作转移到周围节点，GA 因队列增长而经历更高的故障率。
+是指被卸载、计算并返回给原始节点的原始工作的比例。图 4 显示，GA 和 SA 方案的交付量均显著下降。在 `λ` = 200 时，GA 下降 45.9%，SA 下降 20.4%。这种交付量的显著下降可能归因于工作负载的不均匀分布，导致队列变长和故障增多。随着更多工作转移到周围节点，GA 因队列增长而经历更高的故障率。
 
 ![图 4. 可变到达率与结果交付比。](img/fig8_4_C.jpg)
 
 图 4. 可变到达率与结果交付比。
 
-在任务到达率 λ =200 时，如 图 5 所示，显示了给定的任务总数。与 GA 和 SA 分别完成约 17000 和 14000 个任务相比，提出的系统完成约 15000 个任务。提出的方法在总共 15000 个交付任务中，还拥有 9000 次单跳交付率。请记住，交付是单跳和双跳之和。与 SA 和 GA 都使用 8000 进行首跳交付相比，BP 更好地利用了本地节点的资源。提出的方法比 GA 和 SA 少得多的故障（分别减少 69% 和 53%）。因此，随着到达数量的增加，SA 和 GA 方法减少交付次数并增加成功尝试次数。
+在任务到达率 `λ` =200 时，如图 5 所示，显示了给定的任务总数。与 GA 和 SA 分别完成约 17000 和 14000 个任务相比，提出的系统完成约 15000 个任务。提出的方法在总共 15000 个交付任务中，还拥有 9000 次单跳交付率。请记住，交付是单跳和双跳之和。与 SA 和 GA 都使用 8000 进行首跳交付相比，BP 更好地利用了本地节点的资源。提出的方法比 GA 和 SA 少得多的故障（分别减少 69% 和 53%）。因此，随着到达数量的增加，SA 和 GA 方法减少交付次数并增加成功尝试次数。
 
 ![图 5. 任务到达率统计，值为 200。](img/fig8_5_C.jpg)
 
@@ -3440,7 +3263,7 @@ Figure 1. A multi-level infrastructure for federated learning. There is two-way 
 
 ### 7.6 工作负载分布
 
-图 6 显示了系统的任务分配和完成率。θλ = 200 时的数据表明，卸载系统以最高效的方式分配任务。与 GA 相比，提出的方法将本地执行作业的比例提高了 30%，与 SA 相比提高了 4.1%。提出的方法通过向每个目标分配 15000 个任务，最优地利用了附近的资源分配。建议的结果表明，在资源共享框架中，延迟和结果交付均有所减少，且 GA 技术对邻近移动节点的利用增加了 65%。然而，根据以最低交付成本衡量的结果，效率有所下降。
+图 6 显示了系统的任务分配和完成率。`θλ` = 200 时的数据表明，卸载系统以最高效的方式分配任务。与 GA 相比，提出的方法将本地执行作业的比例提高了 30%，与 SA 相比提高了 4.1%。提出的方法通过向每个目标分配 15000 个任务，最优地利用了附近的资源分配。建议的结果表明，在资源共享框架中，延迟和结果交付均有所减少，且 GA 技术对邻近移动节点的利用增加了 65%。然而，根据以最低交付成本衡量的结果，效率有所下降。
 
 ![图 6. 到达率 λ = 200 时的任务统计。](img/fig8_6_C.jpg)
 
@@ -3454,95 +3277,62 @@ Figure 1. A multi-level infrastructure for federated learning. There is two-way 
 
 图 7. 任务到达率 σ = 200(task/s) 利用率。
 
-请记住，这些是系统处于满负荷时的数字。演员网络和评论家网络的损失分别显示在 图 8 的上部和中部图表中。最初，演员网络通过任意行动并记录结果奖励来探测环境。演员根据总奖励修改其卸载策略，然后选择能带来更多未来奖励且驻留时间更短的动作。正如底部奖励图所观察到的，目标奖励与价值函数之间差距的缩小改善了价值估计，并隐含地改善了评论家网络损失。这可以作为演员网络在重新考虑其方法时的向导和批评。
+请记住，这些是系统处于满负荷时的数字。演员网络和评论家网络的损失分别显示在图 8 的上部和中部图表中。最初，演员网络通过任意行动并记录结果奖励来探测环境。演员根据总奖励修改其卸载策略，然后选择能带来更多未来奖励且驻留时间更短的动作。正如底部奖励图所观察到的，目标奖励与价值函数之间差距的缩小改善了价值估计，并隐含地改善了评论家网络损失。这可以作为演员网络在重新考虑其方法时的向导和批评。
 
 ![图 8. 提出的深度强化学习任务卸载结构的预期收敛率，任务到达率 λ = 200。顶部显示演员网络的累积损失，中部显示评论家网络的累积损失，底部显示累积奖励。](img/fig8_8_B.jpg)
 
 图 8. 提出的深度强化学习任务卸载结构的预期收敛率，任务到达率 λ = 200。顶部显示演员网络的累积损失，中部显示评论家网络的累积损失，底部显示累积奖励。
 
-### 8. 结论
-
-
-
-
+## 8. 结论
 
 # 利用深度强化学习实现联邦多智能体资源分配
 
+
+
+# 利用深度强化学习进行联邦多智能体驱动资源分配
+
 利用深度强化学习，本研究提出了一个用于联邦多智能体驱动资源分配的框架。所提模型通过同时在多个层级学习决策模型，实现了面向延迟敏感型资源共享的快速收敛。我们的实验结果表明，我们的多智能体 DRL 框架可通过提高解决方案交付速度、降低端到端延迟，并最高效地利用可用资源，从而在高风险环境中提升性能。得益于对建议工作的这些改进，V2P 场景下的利用率提高了 5.35 个百分点，V2V 场景下提高了 8.5%，且现在可在单跳内提供 9000 个任务。此外，与 GA 相比，本地执行速度提高了 30%。未来，我们希望通过对比更先进的 DRL 方法来拓展这项工作。该框架将托管在公共 GitHub 代码库中，以便所有人轻松访问。此外，还可实施进一步的方法来增强协作系统在采样效率、传输延迟和其他指标方面的性能。在资源共享车辆的背景下，通信的大量梯度更新可能会给共享网络带来负担。通过本地训练，层间传输的数据保持私密，但梯度更新会暴露于梯度欺骗攻击之下。
 
-### 参考文献
+## 参考文献
 
-1.  Ponmalar, A., Uma, M., Jyothi, B.R., Aishwariya, K. and Dharshini, S. 2021. Transparent solar panel using cloud. In 2021 6th International Conference on Communication and Electronics Systems (ICCES), pp. 870–874.
+1. Ponmalar, A., Uma, M., Jyothi, B.R., Aishwariya, K. and Dharshini, S. 2021. Transparent solar panel using cloud. In 2021 6th International Conference on Communication and Electronics Systems (ICCES), pp. 870–874.
+2. Anand, J. and Perinbam, J.R.P. 2014. A Survey on energy efficient biomedical wireless sensor networks. Am. Int. J. Res. Sci. Technol. Eng. Math., 3(7): 212–216.
+3. Anand, J., Yaseen, M.M. and Radha, K. 2014. Multi-session packet scheduling approaches over multi-hop wireless networks. Int. J. Adv. Res. Comput. Commun. Eng., 3(7): 1–7.
+4. Shabir, B., Rahman, A.U., Malik, A.W., Buyya, R. and Khan, M.A. 2023. A federated multi-agent deep reinforcement learning for vehicular fog computing. Journal of Supercomputing, 79(6): 6141–6167.
+5. Jamil, B., Ijaz, H., Shojafar, M. and Munir, K. 2023. IRATS: A DRL-based intelligent priority and deadline-aware online resource allocation and task scheduling algorithm in a vehicular fog network. Ad Hoc Networks, 141.
+6. Wei, Z., Li, B., Zhang, R., Cheng, X. and Yang, L. 2023. Many-to-Many task offloading in vehicular fog computing: A multi-agent deep reinforcement learning approach. IEEE Transactions on Mobile Computing, pp. 1–16.
+7. Du, J. and Jiang, C. 2023. Priority-aware computational resource allocation. Wireless Networks (United Kingdom), pp. 271–305.
+8. Chen, N., Zhang, P., Kumar, N., Hsu, C.H., Abualigah, L. and Zhu, H. 2022. Spectral graph theory-based virtual network embedding for vehicular fog computing: A deep reinforcement learning architecture. Knowledge-Based Systems, 257.
+9. Hazarika, B., Singh, K., Biswas, S. and Li, C.P. 2022. DRL-Based resource allocation for computation offloading in IoV networks. IEEE Transactions on Industrial Informatics, 18(11): 8027–8038.
+10. Wei, Z., Li, B., Zhang, R., Cheng, X. and Yang, L. 2022. Dynamic Many-to-Many task offloading in vehicular fog computing: A multi-agent DRL approach, pp. 6301–6306.
+11. Sarkar, I. and Kumar, S. Delay-aware intelligent task offloading strategy in vehicular fog computing.
+12. Shi, J., Du, J., Wang, J. and Yuan, J. 2022. Federated deep reinforcement learningbased task allocation in vehicular fog computing, vol. 2022-June.
+13. Hazarika, B., Singh, K., Biswas, S., Mumtaz, S. and Li, C.P. 2022. SAC-based resource allocation for computation offloading in IoV networks, pp. 314–319.
+14. Son, D.B., An, V.T., Hai, T.T., Nguyen, B.M., Le, N.P. and Binh, H.T.T. 2021. Fuzzy deep Q-learning task offloading in delay constrained vehicular fog computing, vol. 2021-July.
+15. Fu, F., Kang, Y., Zhang, Z., Yu, F.R. and Wu, T. 2021. Soft actor-critic DRL for live transcoding and streaming in vehicular fog-computing-enabled IoV. IEEE Internet of Things Journal, 8(3): 1308–1321.
+16. Shi, J., Du, J., Wang, J. and Yuan, J. 2021. Deep reinforcement learning-based V2V partial computation offloading in vehicular fog computing, vol. 2021-March.
+17. Lan, D., Taherkordi, A., Eliassen, F. and Liu, L. 2020. Deep reinforcement learning for computation offloading and caching in fog-based vehicular networks, pp. 622–630.
+18. Shi, J., Du, J., Wang, J., Wang, J. and Yuan, 2020. Priority-aware task offloading in vehicular fog computing based on deep reinforcement learning. IEEE Transactions on Vehicular Technology, 69(12): 16067–16081.
+19. Fu, F., Kang, Y., Zhang, Z. and Yu, F.R. 2020. Transcoding for live streaming-based on vehicular fog computing: An actor-critic DRL approach, pp. 1015–1020.
+20. Zhao, J., Kong, M., Li, Q. and Sun, X. 2020. Contract-based computing resource management via deep reinforcement learning in vehicular fog computing. IEEE Access, 8: 3319–3329.
+21. Chen, X., Leng, S., Zhang, K. and Xiong, K. 2019. A machine-learning based time constrained resource allocation scheme for vehicular fog computing. China Communications, 16(11): 29–41.
+22. Lee, S.S. and Lee, S. 2019. Poster abstract: Deep reinforcement learning-based resource allocation in vehicular fog computing, pp. 1029–1030.
+23. Liu, Y., Jiang, L., Qi, Q. and Xie, S. 2023. Energy-efficient space-air-ground integrated edge computing for internet of remote things: A Federated DRL approach. IEEE Internet of Things Journal, 10(6): 4845–4856.
+24. Jo, S., Kim, U., Kim, J., Jong, C. and Pak, C. 2023. Deep reinforcement learning-based joint optimization of computation offloading and resource allocation in F-RAN. IET Communications, 17(5): 549–564.
+25. Tian, A., Feng, B., Zhou, H., Huang, Y., Sood, K., Yu, S. and Zhang, H. 2023. Efficient federated DRL-based cooperative caching for mobile edge networks. IEEE Transactions on Network and Service Management, 20(1): 246–260.
+26. Liu, S., Yang, S., Zhang, H. and Wu, W. 2023. A Federated Learning and deep reinforcement learning-based method with two types of agents for computation offload. Sensors, 23(4).
+27. Xu, Y., Bhuiyan, M.Z.A., Wang, T., Zhou, X. and Singh, A.K. 2023. C-FDRL: Contextaware privacy-preserving offloading through federated deep reinforcement learning in cloud-enabled IoT. IEEE Transactions on Industrial Informatics, 19(2): 1155–1164.
+28. Nguyen, L.N., Sigg, S., Lietzen, J., Findling, R.D. and Ruttik, K. 2023. Camouflage learning: Feature value obscuring ambient intelligence for constrained devices. IEEE Transactions on Mobile Computing, 22(2): 781–796.
+29. Huang, Y., Li, M., Yu, F.R., Si, P. and Zhang, Y. 2023. Performance optimization for energy-efficient industrial internet of things based on ambient backscatter communication: An A3C-FL Approach. IEEE Transactions on Green Communications and Networking, 1.
+30. Song, X., Xu, B., Zhang, X., Wang, S., Song, T., Xing, G. and Fang, L. 2023. Everyonecentric heterogeneous multi-server computation offloading in ITS with pervasive AI. IEEE Network, pp. 1–7.
 
-2.  Anand, J. and Perinbam, J.R.P. 2014. A Survey on energy efficient biomedical wireless sensor networks. Am. Int. J. Res. Sci. Technol. Eng. Math., 3(7): 212–216.
+# 第 9 章 采用数据驱动联邦学习方法的医学研究未来
 
-3.  Anand, J., Yaseen, M.M. and Radha, K. 2014. Multi-session packet scheduling approaches over multi-hop wireless networks. Int. J. Adv. Res. Comput. Commun. Eng., 3(7): 1–7.
+**G Arun Sampaul Thomas**^(⁹)
 
-4.  Shabir, B., Rahman, A.U., Malik, A.W., Buyya, R. and Khan, M.A. 2023. A federated multi-agent deep reinforcement learning for vehicular fog computing. Journal of Supercomputing, 79(6): 6141–6167.
+邮箱：`mksamy14@yahoo.com`; `mailsathishcse@gmail.com`; `Saravanan.krishnann@gmail.com`
 
-5.  Jamil, B., Ijaz, H., Shojafar, M. and Munir, K. 2023. IRATS: A DRL-based intelligent priority and deadline-aware online resource allocation and task scheduling algorithm in a vehicular fog network. Ad Hoc Networks, 141.
-
-6.  Wei, Z., Li, B., Zhang, R., Cheng, X. and Yang, L. 2023. Many-to-Many task offloading in vehicular fog computing: A multi-agent deep reinforcement learning approach. IEEE Transactions on Mobile Computing, pp. 1–16.
-
-7.  Du, J. and Jiang, C. 2023. Priority-aware computational resource allocation. Wireless Networks (United Kingdom), pp. 271–305.
-
-8.  Chen, N., Zhang, P., Kumar, N., Hsu, C.H., Abualigah, L. and Zhu, H. 2022. Spectral graph theory-based virtual network embedding for vehicular fog computing: A deep reinforcement learning architecture. Knowledge-Based Systems, 257.
-
-9.  Hazarika, B., Singh, K., Biswas, S. and Li, C.P. 2022. DRL-Based resource allocation for computation offloading in IoV networks. IEEE Transactions on Industrial Informatics, 18(11): 8027–8038.
-
-10.  Wei, Z., Li, B., Zhang, R., Cheng, X. and Yang, L. 2022. Dynamic Many-to-Many task offloading in vehicular fog computing: A multi-agent DRL approach, pp. 6301–6306.
-
-11.  Sarkar, I. and Kumar, S. Delay-aware intelligent task offloading strategy in vehicular fog computing.
-
-12.  Shi, J., Du, J., Wang, J. and Yuan, J. 2022. Federated deep reinforcement learningbased task allocation in vehicular fog computing, vol. 2022-June.
-
-13.  Hazarika, B., Singh, K., Biswas, S., Mumtaz, S. and Li, C.P. 2022. SAC-based resource allocation for computation offloading in IoV networks, pp. 314–319.
-
-14.  Son, D.B., An, V.T., Hai, T.T., Nguyen, B.M., Le, N.P. and Binh, H.T.T. 2021. Fuzzy deep Q-learning task offloading in delay constrained vehicular fog computing, vol. 2021-July.
-
-15.  Fu, F., Kang, Y., Zhang, Z., Yu, F.R. and Wu, T. 2021. Soft actor-critic DRL for live transcoding and streaming in vehicular fog-computing-enabled IoV. IEEE Internet of Things Journal, 8(3): 1308–1321.
-
-16.  Shi, J., Du, J., Wang, J. and Yuan, J. 2021. Deep reinforcement learning-based V2V partial computation offloading in vehicular fog computing, vol. 2021-March.
-
-17.  Lan, D., Taherkordi, A., Eliassen, F. and Liu, L. 2020. Deep reinforcement learning for computation offloading and caching in fog-based vehicular networks, pp. 622–630.
-
-18.  Shi, J., Du, J., Wang, J., Wang, J. and Yuan, 2020. Priority-aware task offloading in vehicular fog computing based on deep reinforcement learning. IEEE Transactions on Vehicular Technology, 69(12): 16067–16081.
-
-19.  Fu, F., Kang, Y., Zhang, Z. and Yu, F.R. 2020. Transcoding for live streaming-based on vehicular fog computing: An actor-critic DRL approach, pp. 1015–1020.
-
-20.  Zhao, J., Kong, M., Li, Q. and Sun, X. 2020. Contract-based computing resource management via deep reinforcement learning in vehicular fog computing. IEEE Access, 8: 3319–3329.
-
-21.  Chen, X., Leng, S., Zhang, K. and Xiong, K. 2019. A machine-learning based time constrained resource allocation scheme for vehicular fog computing. China Communications, 16(11): 29–41.
-
-22.  Lee, S.S. and Lee, S. 2019. Poster abstract: Deep reinforcement learning-based resource allocation in vehicular fog computing, pp. 1029–1030.
-
-23.  Liu, Y., Jiang, L., Qi, Q. and Xie, S. 2023. Energy-efficient space-air-ground integrated edge computing for internet of remote things: A Federated DRL approach. IEEE Internet of Things Journal, 10(6): 4845–4856.
-
-24.  Jo, S., Kim, U., Kim, J., Jong, C. and Pak, C. 2023. Deep reinforcement learning-based joint optimization of computation offloading and resource allocation in F-RAN. IET Communications, 17(5): 549–564.
-
-25.  Tian, A., Feng, B., Zhou, H., Huang, Y., Sood, K., Yu, S. and Zhang, H. 2023. Efficient federated DRL-based cooperative caching for mobile edge networks. IEEE Transactions on Network and Service Management, 20(1): 246–260.
-
-26.  Liu, S., Yang, S., Zhang, H. and Wu, W. 2023. A Federated Learning and deep reinforcement learning-based method with two types of agents for computation offload. Sensors, 23(4).
-
-27.  Xu, Y., Bhuiyan, M.Z.A., Wang, T., Zhou, X. and Singh, A.K. 2023. C-FDRL: Contextaware privacy-preserving offloading through federated deep reinforcement learning in cloud-enabled IoT. IEEE Transactions on Industrial Informatics, 19(2): 1155–1164.
-
-28.  Nguyen, L.N., Sigg, S., Lietzen, J., Findling, R.D. and Ruttik, K. 2023. Camouflage learning: Feature value obscuring ambient intelligence for constrained devices. IEEE Transactions on Mobile Computing, 22(2): 781–796.
-
-29.  Huang, Y., Li, M., Yu, F.R., Si, P. and Zhang, Y. 2023. Performance optimization for energy-efficient industrial internet of things based on ambient backscatter communication: An A3C-FL Approach. IEEE Transactions on Green Communications and Networking, 1.
-
-30.  Song, X., Xu, B., Zhang, X., Wang, S., Song, T., Xing, G. and Fang, L. 2023. Everyonecentric heterogeneous multi-server computation offloading in ITS with pervasive AI. IEEE Network, pp. 1–7.
-
-
-
-
-
-## 第 9 章 采用数据驱动联邦学习方法的医学研究未来
-
-*G Arun Sampaul Thomas*,^(⁹)
-
-邮箱：mksamy14@yahoo.com; mailsathishcse@gmail.com; Saravanan.krishnann@gmail.com
-
-### 1. 简介
+## 1. 简介
 
 尽管技术不断进步，但研制新药的过程依然耗时且昂贵（被称为“Eroom 定律”）。制药行业如今已意识到，与竞争对手企业和医疗机构建立合作伙伴关系，可能掌握扭转这一趋势的关键，从生成新先导化合物到优化临床试验，再到追踪长期后遗症。这既是受当前局限性驱动，也是其他同步进步推动下，在日常活动中持续应用机器学习的合乎逻辑的演进 [1, 6, 14]。
 
@@ -3550,7 +3340,7 @@ Figure 1. A multi-level infrastructure for federated learning. There is two-way 
 
 借助联邦学习，用户可以在不泄露私人信息的前提下，享受个性化机器学习模型的优势。本文重点关注联邦学习及其各种应用，并着重阐述其如何造福医疗保健行业 [7]。
 
-#### 1.1 AI 与医疗保健
+### 1.1 AI 与医疗保健
 
 联邦学习有潜力更快地将突破性的 AI 驱动创新推向市场和患者。此外，医疗保健行业因此可能迎来重大进展和发现。FL 已展现出其改变游戏规则的能力，这源于 AI 在医疗保健领域的普遍应用。协作学习阐述了保护隐私的 FL 方法如何助力开发稳健的 AI 原型，使其在各行业中表现优异，即便在数据获取受限或涉及机密知识的行业亦是如此 [8, 9, 14, 16]。
 
@@ -3558,21 +3348,22 @@ Figure 1. A multi-level infrastructure for federated learning. There is two-way 
 
 因此，联邦学习有潜力更快地将突破性的 AI 驱动技术推向市场和患者。它还可能给医疗保健部门带来巨大的改进和发现 [9]。虽然它源于医疗保健领域 AI 的广泛部署，但 FL 已证明其改变游戏规则的能力。现在是时候：
 
-*   政府应通过重大的预算、监管和公私部门合作措施，支持并加速医疗保健的数字化转型。
-*   医疗保健机构应投资数据和 IT 基础设施，与学术界保持紧密联盟，并与初创公司的 AI 研究人员合作。
-*   投入投资资产以倡导并利用公私合作伙伴关系（PPP），推动医疗保健的数字化转型。
-*   协作学习展示了保护隐私的联邦学习方法如何使构建强大的 AI 模型成为可能，这些模型能在各个业务领域有效运行，即使是在数据获取受限或涉及机密信息的行业 [16]。
+* 政府应通过重大的预算、监管和公私部门合作措施，支持并加速医疗保健的数字化转型。
+* 医疗保健机构应投资数据和 IT 基础设施，与学术界保持紧密联盟，并与初创公司的 AI 研究人员合作。
+* 投入投资资产以倡导并利用公私合作伙伴关系（PPP），推动医疗保健的数字化转型。
+* 协作学习展示了保护隐私的联邦学习方法如何使构建强大的 AI 模型成为可能，这些模型能在各个业务领域有效运行，即使是在数据获取受限或涉及机密信息的行业 [16]。
 
 该研究的主要作者、监督 AI 扩展并创办医疗初创公司 Rhino Health 的 Ittai Dayan 博士表示：“在 AI 研究中，当你基于一家医院的数据设计算法时，它通常在任何其他医院都表现不佳。”“但我们利用联邦学习和来自多个大洲的客观、多模态数据，成功设计出了一个可泛化的模型，能够在全球范围内支持一线临床医生，”他补充道。广泛的 FL 计划目前正在医疗保健业务中持续进行，包括一个用于评估的团队研究项目、乳腺 X 线摄影项目，以及制药公司拜耳为锐敏解剖训练 AI 模型的演练。除医疗保健外，FL 还可助力能源公司分析地震和井眼数据、金融机构改进欺诈检测模型，以及从事自动驾驶汽车研究的研究人员开发能泛化至各国驾驶习惯的 AI。
 
-#### 1.2 制药行业中的 AI
+### 1.2 制药行业中的 AI
 
 然而，知识产权保护和隐私问题是该行业的重大障碍。鉴于这些临床数据集的敏感性和重要性，制药企业资助的临床试验产生的数据——约占所有研究的三分之二（3）——通常在实验结束前，仅对赞助方开放，不对任何其他人公开。
 
-
-
-
 # 联邦学习及其技术相关重要性
+
+
+
+# 联邦学习：流程、优势与应用
 
 同样，制药行业控制的“化学库”——用于内部药物开发的无价化合物集合——并非为共享而设计。此外，由于建立内部专业知识需要时间，许多制药公司尚未大规模实施机器学习技术。相反，它们依赖与科技公司的独家协议来保护其创意 [2, 3]。尽管对 AI 的兴趣日益浓厚，但制药企业间数据和洞察交换的承诺仍未兑现。
 
@@ -3594,12 +3385,7 @@ MELLODDY 是一个由 Owkin 牵头、涉及欧洲 10 家制药公司的公私合
 
 在一系列数据隐私危机（包括 Facebook 的剑桥分析公司丑闻和 Google+ 的大规模信息泄露）之后，公司开始关注此事。它们似乎在寻找方法，在不激怒用户或立法者的情况下继续实现目标，因为它们不想被取代。马克·扎克伯格在今年 F8 大会上发表的“未来是私密的”声明可能是转折点。尽管最好谨慎对待这一趋势，但联邦学习是用户隐私方面更令人鼓舞的进展之一。
 
-### 3. 联邦学习训练过程
-
-
-
-
-# 联邦学习：流程、优势与应用
+## 3. 联邦学习训练过程
 
 通过让合格设备访问算法的最新版本，联邦学习助力算法发展。该算法的模型随后从部分用户手机的私有数据中收集信息。新数据经过处理后，会被简要传回公司的计算机系统，真实数据绝不离开手机。出于安全考虑，这些数据在传回服务器的途中通常会被加密。谷歌创建了 `Secure Aggregation Protocol`（安全聚合协议），如图 1 所示，旨在防止服务器从接收到的摘要中推断出具体数据。
 
@@ -3657,10 +3443,7 @@ MELLODDY 是一个由 Owkin 牵头、涉及欧洲 10 家制药公司的公私合
 
 联邦学习在医疗健康、数字健康追踪、便携式应用和医疗健康等多个领域具有巨大潜力。它已在 COVID-19 检测、医学影像、远程健康监测和健康数据管理等医疗应用中得到有效实施 [[3]](#ch9.xhtml#ref9_3)。
 
-
-
-
-# Google 利用此方法增强 Android 手机的智能文本选择，以此作为其如何用于移动应用程序的例证
+### Google 利用此方法增强 Android 手机的智能文本选择，以此作为其如何用于移动应用程序的例证
 
 此用例涉及根据用户输入预测所需的短语或词串，允许用户快速选择、复制和使用内容。每当用户点击选择文本并覆盖模型的推荐时，全局模型都会接收确切的输入，随后被用于改进模型。
 
@@ -3702,10 +3485,7 @@ AI 系统经常使用能够描绘现实世界中问题或人群主要数据分�
 
 ### 5.3 机器学习与联邦学习
 
-FL（联邦学习）是一种机器学习方法，它比另一种方式更合理地生成原型数据。联邦学习不是显式地请求数据样本，而是跨越大量分布式边缘设备或服务器训练模型，分配本地数据模型。为了基于便携设备的客户端交互正确训练模型并丰富 Android 移动用户的消费者熟练度，Google 于 2017 年首次发布了 FL。正如 图 2 所示，Google 称赞 FL 具有生成更聪明原型、降低延迟、减少电量使用和保护隐私的能力。
-
-
-
+FL（联邦学习）是一种机器学习方法，它比另一种方式更合理地生成原型数据。联邦学习不是显式地请求数据样本，而是跨越大量分布式边缘设备或服务器训练模型，分配本地数据模型。为了基于便携设备的客户端交互正确训练模型并丰富 Android 移动用户的消费者熟练度，Google 于 2017 年首次发布了 FL。正如图 2 所示，Google 称赞 FL 具有生成更聪明原型、降低延迟、减少电量使用和保护隐私的能力。
 
 ## 5.4 诊断
 
@@ -3719,11 +3499,7 @@ FL（联邦学习）是一种机器学习方法，它比另一种方式更合理
 
 在药物开发的早期阶段，理解物质的多个方面至关重要，如其亲和力、分布、吸收和排泄。制药公司使用一种称为 QSAR（定量构效关系）的分析方法，该方法构建预测模型，利用假设分子描述符等输入来预测化合物的属性，因为通过化学或生物实验获取这些信息既昂贵又低效。
 
-
-
-
-
-# 复合复杂性与 QSAR 模型中的联邦学习
+### 复合复杂性与 QSAR 模型中的联邦学习
 
 化合物的复杂性使得 QSAR 模型变得复杂且高维，因此需要大量的训练数据。然而，收集训练数据需要耗费大量的时间和金钱。由于担心共享化合物知识产权（如专有结构）以及其他信任问题，任何跨机构合作都受到了限制。Chen 等人于 2020 年探讨了将联邦学习作为使组织间能够建立联盟以协作创建 QSAR 原型的关键手段。实验结果（见下文图 4）表明，在预测性能方面，联邦模型优于任何单一客户端利用私有数据训练的模型。联邦学习使研究人员能够在制药领域更有效地协作并发现新型药物 [22]。
 
@@ -3739,9 +3515,11 @@ Vaid 等人（2020）利用电子健康记录（EHR）数据构建了联邦学�
 
 联邦学习让医疗专业人员能更深入地了解影响治疗决策的风险变量，从而提供更安全、更高效、更个性化的护理。
 
-# 6. 联邦学习的挑战
+## 6. 联邦学习的挑战
 
 除了潜在的安全顾虑外，联邦学习还有若干限制，使其无法成为解决我们所有数据隐私问题的灵丹妙药。值得注意的是，联邦学习训练模型所需的本地设备算力和内存比传统机器学习技术多得多 [11, 12, 15]。
+
+
 
 除了潜在的安全顾虑外，联邦学习还有若干约束，使其无法成为解决我们所有数据隐私问题的灵丹妙荐。值得注意的是，联邦学习训练模型所需的本地设备算力和内存比传统机器学习技术多得多。然而，许多现代设备性能足以胜任这些任务，且该策略还能大幅减少传输到中心服务器的数据量，从而降低数据使用量。如果设备电量充足，这种权衡对许多用户而言可能是有利的 [11]。
 
@@ -3775,17 +3553,16 @@ Vaid 等人（2020）利用电子健康记录（EHR）数据构建了联邦学�
 
 *   **数据多样性** — 医疗数据本质上复杂且多样。既有结构化形式，也有非结构化形式。数据采集差异、医疗设备品牌和地区人口统计特征等因素也会影响数据的多样性。整合来自多个来源的数据和信息可能颇具挑战。数据在合作高校之间可能分布不均。
 
-
-
-
-
 ### 保密性与安全性
+
 即使联邦学习提供的隐私保护远强于传统机器学习模型，它仍然存在一些隐私和安全风险。信息泄露给竞争方是一种可能性。在使用联邦学习时，可能需要进行权衡，因为在某些情况下，其性能可能比使用常规机器学习模型时略差。研究人员正在研究差分隐私，以给联邦学习提供额外一层隐私保护。
 
 ### 可追溯性与责任归属
+
 医疗 AI 解决方案必须具备可复现性和可解释性。然而，在联邦学习中，我们面对的是在网络、硬件和软件差异巨大的环境下进行的多方计算。因此，研究人员难以检查实际数据，以解释任何异常或意外的结果，或通过预测原型来揭示原因。
 
 ### 流程设计
+
 支持访问各机构所存数据和控制权的联邦学习架构，需要考虑数据真实性、编码格式以及各异的计算能力要求。
 
 ## 联邦学习在医疗健康领域的未来
@@ -3813,10 +3590,6 @@ FL 可协助开发用于 X 光、超声、计算机断层扫描、磁共振成�
 正如机器学习展望声明所述，联邦学习具有变革性能力，可将 AI 现代化引入医疗路线图。修订地区隐私法、建立充分的标准化代码共享程序和 IT 基础设施，或为合作伙伴制定公平的薪酬计划，这些仅是联邦学习中仅能通过协作解决的部分跨学科难题。联邦学习合作必须持续进化，才能在未来复杂的医疗环境中取得成功。借助此方法，信息共享取得了重大进展，医院在机器学习方面的协作变得更加高效。通过利用前沿机器学习和深度学习技术，它规避并克服了处理高度敏感医疗数据的挑战。
 
 ### 参考文献
-
-
-
-
 
 ## 第 10 章 医疗系统中的协作联邦学习
 
@@ -3874,19 +3647,15 @@ FL 可协助开发用于 X 光、超声、计算机断层扫描、磁共振成�
 
 过去几年里，机器学习算法一直被用于执行疾病预测或检测等复杂任务。然而，机器学习算法的准确性取决于用于创建模型的数据。此外，使用这些算法时数据隐私是一个关注点，因为如果存储这些数据的服务器遭到攻击，数据可能会泄露。在标准的机器学习场景中，客户端将其数据发送到中央服务器，服务器将来自不同客户端的数据合并并用于训练模型。但这带来了严重的安全风险，特别是在医疗领域，因为数据在客户端和服务器之间传输时可能会泄露。医疗领域的研究涉及大量健康信息的收集、存储和传输，如果安全性受到威胁，这些健康信息可能会被不当访问。如果患者的错误信息泄露，可能会给患者带来诸多问题，如社会或心理问题、失业、失去医疗保险等。
 
-Google 于 2016 年引入联邦学习（FL）作为一种前沿的机器学习（ML）策略 [1]，旨在解决当数据分布在众多客户端时训练集中式机器学习模型的问题。这种暴力策略将解决客户端向 Google 发送大量数据的问题。提出的解决方案是向每个设备发送一个本地模型，为该客户端计算最优参数，并将计算出的权重发送回服务器。中央节点将聚合所有参数，对其求平均，并创建一个全局模型。在客户端之间分发一个小型模型，为海量数据传输场景下生成最优模型铺平了道路。联邦学习是一种 ML 方法，其中机器学习模型由位于不同站点的不同数据集创建，而无需共享训练数据。因此，个人数据将保留在客户端（医院、影像中心等）手中，降低了个人数据泄露的可能性。当生成的数据过大，无法集中传输和处理时，这种方法非常有用。由于在联邦学习中，医院和其他医疗组织等多方参与者在不共享数据的情况下训练模型，这在数据隐私是主要关注点且组织可能不愿共享敏感信息的医疗行业中非常有用。
-
-
-
 
 
 # 联邦学习分类与协作式联邦学习在医疗领域的应用
 
-联邦学习可分为三类：水平联邦学习、垂直联邦学习和联邦迁移学习 [[2]](#ch10.xhtml#ref10_2)。
+Google 于 2016 年引入联邦学习（FL）作为一种前沿的机器学习（ML）策略 [1]，旨在解决当数据分布在众多客户端时训练集中式机器学习模型的问题。这种策略将解决客户端向 Google 发送大量数据的问题。提出的解决方案是向每个设备发送一个本地模型，为该客户端计算最优参数，并将计算出的权重发送回服务器。中央节点将聚合所有参数，对其求平均，并创建一个全局模型。在客户端之间分发一个小型模型，为海量数据传输场景下生成最优模型铺平了道路。联邦学习是一种 ML 方法，其中机器学习模型由位于不同站点的不同数据集创建，而无需共享训练数据。因此，个人数据将保留在客户端（医院、影像中心等）手中，降低了个人数据泄露的可能性。当生成的数据过大，无法集中传输和处理时，这种方法非常有用。由于在联邦学习中，医院和其他医疗组织等多方参与者在不共享数据的情况下训练模型，这在数据隐私是主要关注点且组织可能不愿共享敏感信息的医疗行业中非常有用。
 
 ## 水平联邦学习
 
-水平联邦学习（基于样本的联邦学习）适用于数据集共享相同特征空间但样本空间不同的场景。这也称为同质联邦学习。在医疗领域，各医院的数据在样本上有所不同（数据来自不同患者），但特征相同，即患者信息 [[3]](#ch10.xhtml#ref10_3)。因此，这对应于水平联邦学习。
+水平联邦学习（基于样本的联邦学习）适用于数据集共享相同特征空间但样本空间不同的场景。这也称为同质联邦学习。在医疗领域，各医院的数据在样本上有所不同（数据来自不同患者），但特征相同，即患者信息 [3]。因此，这对应于水平联邦学习。
 
 ## 垂直联邦学习
 
@@ -3894,15 +3663,15 @@ Google 于 2016 年引入联邦学习（FL）作为一种前沿的机器学习�
 
 ## 联邦迁移学习
 
-在联邦迁移学习 [[4]](#ch10.xhtml#ref10_4) 中，特征空间之间没有相似性，而是任务相关，它基于其他领域的知识为某一领域构建模型。图 1 展示了不同类型的联邦学习方法。
+在联邦迁移学习 [4] 中，特征空间之间没有相似性，而是任务相关，它基于其他领域的知识为某一领域构建模型。图 1 展示了不同类型的联邦学习方法。
 
 ![图 1. 联邦学习方法的类型。](img/fig10_1_B.jpg)
 
 图 1. 联邦学习方法的类型。
 
-联邦学习的数据来自多家医院/影像中心，数据种类繁多——不同医院的患者性别比例、年龄分布和种族各不相同 [[5]](#ch10.xhtml#ref10_5)。因此，从多源数据生成的模型比单一医院数据生成的模型更可靠。这是联邦学习的一大优势。另一个优势是，我们知道 AI 模型部署需要定期更新模型。因此，放射科医生定期标注数据以重新训练模型是必要的。然而，有了联邦学习，即使一些放射科医生忙于患者病例，也可以利用从其他医院接收的数据构建模型；这减轻了使用单个站点数据训练的负担。此外，随着新医院的加入协作，模型会自动扩展，这是一个额外优势，因为无需手动扩展系统。
+联邦学习的数据来自多家医院/影像中心，数据种类繁多——不同医院的患者性别比例、年龄分布和种族各不相同 [5]。因此，从多源数据生成的模型比单一医院数据生成的模型更可靠。这是联邦学习的一大优势。另一个优势是，我们知道 AI 模型部署需要定期更新模型。因此，放射科医生定期标注数据以重新训练模型是必要的。然而，有了联邦学习，即使一些放射科医生忙于患者病例，也可以利用从其他医院接收的数据构建模型；这减轻了使用单个站点数据训练的负担。此外，随着新医院的加入协作，模型会自动扩展，这是一个额外优势，因为无需手动扩展系统。
 
-医疗领域的协作式联邦学习可视为一种分布式隐私感知模型，其中数据不集中化，它使 N 个客户端（在本例中为医院/影像中心）能够使用去中心化数据构建深度学习（`DL`）模型或机器学习（`ML`）模型。敏感医疗数据驻留在客户端本身。从数学上建模，联邦学习可表示为：
+医疗领域的协作式联邦学习可视为一种分布式隐私感知模型，其中数据不集中化，它使 `N` 个客户端（在本例中为医院/影像中心）能够使用去中心化数据构建深度学习（`DL`）模型或机器学习（`ML`）模型。敏感医疗数据驻留在客户端本身。从数学上建模，联邦学习可表示为：
 
 $$
 \min_{\mathbf{x}} F(\mathbf{x}), \text{ where } F(\mathbf{x}) := \sum_{k=1}^{n} p_k F_k(x)
@@ -3910,7 +3679,7 @@ $$
 
 其中 `n` 为参与的客户端总数，`F[k]` 为第 `k` 个客户端的目标函数，`p[k]` 为每个客户端的影响权重，满足 `p[k] >= 0` 且 $\sum_{k=1}^{n} p_k = 1$。
 
-在协作式联邦学习中，每个参与者自行训练模型，然后将训练好的模型发送至服务器。服务器将更新后的模型发送给所有参与者，参与者随后可使用共享模型训练全局模型并用于预测。这在识别医疗数据模式时特别有用。协作式联邦学习的一大优势是允许组织在比单独训练大得多的数据集上训练模型。这提高了模型准确性，并将带来更好的结果。此外，数据不在参与者间直接共享，因此敏感信息不被暴露。通过协作式联邦学习改善患者护理和结果，可更好地推动机器学习在医疗行业的应用。现在让我们看看联邦学习对不同利益相关者的益处。临床医生将从联邦学习方法中获益最大，因为异质数据用于训练，模型偏差会更小。对于居住在偏远地区的患者，全局训练模型将为获得更好的治疗提供途径 [[6]](#ch10.xhtml#ref10_6)。对于医院而言，即使是小型医院也有机会参与模型创建，并将获得更新后的模型。
+在协作式联邦学习中，每个参与者自行训练模型，然后将训练好的模型发送至服务器。服务器将更新后的模型发送给所有参与者，参与者随后可使用共享模型训练全局模型并用于预测。这在识别医疗数据模式时特别有用。协作式联邦学习的一大优势是允许组织在比单独训练大得多的数据集上训练模型。这提高了模型准确性，并将带来更好的结果。此外，数据不在参与者间直接共享，因此敏感信息不被暴露。通过协作式联邦学习改善患者护理和结果，可更好地推动机器学习在医疗行业的应用。现在让我们看看联邦学习对不同利益相关者的益处。临床医生将从联邦学习方法中获益最大，因为异质数据用于训练，模型偏差会更小。对于居住在偏远地区的患者，全局训练模型将为获得更好的治疗提供途径 [6]。对于医院而言，即使是小型医院也有机会参与模型创建，并将获得更新后的模型。
 
 图 2 展示了协作式联邦医疗系统的架构。此处有四家医院参与学习过程。它们使用 `ML`/`DL` 算法训练本地模型，并与中心联邦服务器共享模型。服务器聚合模型并将更新后的模型发回医院，医院再次用于本地训练，此过程持续直到创建出准确模型供医院使用。
 
@@ -3920,85 +3689,73 @@ $$
 
 本章组织结构如下：第 1 节介绍联邦学习及其特点；第 2 节描述联邦学习在癌症诊断中的作用；第 3 节论述其在 COVID-19 诊断中的作用；第 4 节阐述其在医疗隐写应用中的意义；第 5 节重点介绍其在智能医疗中的其他应用。第 6 节呈现联邦学习的各种挑战及未来应用。最后，第 7 节总结全文。
 
-### 2. 联邦学习在癌症诊断中的作用
+## 2. 联邦学习在癌症诊断中的作用
 
 癌症是全球主要死亡原因之一，受影响部位包括乳腺、肺、结肠和直肠、前列腺、皮肤等。当正常细胞转化为肿瘤细胞时，癌症便会发生，且通常分阶段发展，即从癌前病变到恶性肿瘤。若能早期发现，该疾病可有效治疗和治愈。X 光、CT 扫描、MRI 扫描和超声是一些用于诊断肿瘤的影像检查。已提出许多 `ML` 和 `DL` 技术用于肿瘤检测，分割技术用于从 MRI 图像中分割肿瘤。但为此目的训练 `ML`/`DL` 模型需要涵盖各种解剖结构、病理报告和输入数据的广泛数据库。
 
+一些研究人员已将联邦学习应用于脑肿瘤相关研究。在文献 [7] 中，作者针对脑肿瘤分割提出了一种名为 `SU-Net` 的联邦学习架构，并使用来自 Kaggle 的“脑部 MRI 分割”数据集进行研究。他们在非联邦场景和由五个客户端组成的联邦场景中均实现了该网络，并将该架构与其他几种深度学习架构进行了比较。结果显示，在联邦场景下，`AUC`（曲线下面积）和 `DSC`（Dice 相似性系数）分别为 99.8% 和 78.7%，均高于非联邦场景。在文献 [8] 中，联邦学习使用包含经诊断为胶质瘤患者的 MRI 脑部扫描图像的 BraTS 数据集实现。胶质瘤是一种影响大脑和脊髓的肿瘤。他们的仿真结果显示，即使在数据集不平衡的情况下，联邦环境中也能达到 99% 的模型准确率。在文献 [9] 中，提出了一种深度学习框架 `3D-Unet` 模型，并通过从 10 家不同机构收集数据，在两种场景下评估了性能；研究人员发现，通过在不同机构间共享数据，模型达到了 99% 的准确率。
 
+乳腺癌是影响女性的主要癌症类型之一。但如果能早期发现，则可降低死亡率。医生建议进行 X 射线乳腺钼靶检查以用于检测和随访。通过使用联邦学习，增加了数据集规模，并利用来自多个机构的异构图像进行研究。联邦学习被用于利用乳腺钼靶数据进行乳腺密度分类。他们使用 Cohen 线性加权 Kappa 系数在本地和联邦学习环境下评估性能，联邦学习模型取得了更好的性能 [10]。文献 [11] 提出了一种称为记忆感知课程联邦学习的 FL 变体，用于乳腺癌分类，该方法通过使用数据调度器惩罚错误预测，可极大地影响局部模型的一致性。在该方法中，他们结合了无监督域适应以应对域偏移。研究使用了来自不同客户端的三个数据集。
 
+前列腺癌是影响男性的主要癌症类型之一。当某些腺体快速生长并从前列腺扩散到身体其他部位时，就会发生前列腺癌，且基于早期症状检测该癌症较为困难。为了在早期阶段进行检测，我们可以使用联邦学习。在文献 [45] 中，Yan 等人使用 `cycleGAN` 网络进行模型创建，利用来自八家不同机构的医学图像进行研究，在前列腺癌分类中实现了 98% 的准确率和 99% 的 `AUC`。研究人员研究了自适应联邦学习在皮肤肿瘤检测场景中的效果 [12]，并使用 `ISIC 2019` 数据集验证模型准确率。在此，作者使用各种边缘设备（如皮肤镜、激光显微镜和皮肤检查仪）收集的数据，这些数据被上传至云端进行训练和分类。在文献 [13] 中，提出通过从五家不同机构收集图像，利用联邦学习进行甲状腺结节肿瘤检测。实现了五种不同的深度学习架构，并在使用联邦学习前后进行了比较。他们展示了尽管存在数据异质性，联邦学习在保护数据隐私的前提下表现更好。在文献 [14] 中，提出了一种用于喉癌患者的 `Cox` 模型，并使用来自三个不同国家患者的数据作为输入。
 
+文献 [15] 提出了一种用于癌症图像分析的加密联邦学习方法，采用同态加密。在此，权重在发送到服务器前会被加密。服务器将在这些加密值上执行模型创建，并将更新后的模型参数发送给客户端进行解密。只有相应的客户端知道解密密钥，因此服务器无法从客户端推断任何数据。因此，为敏感患者信息增加了一层安全保障。由于一切都在加密环境中进行，处理个人数据信息时，同态加密是最佳选择。为确保用于肿瘤检测的 FL 系统的问责制和公平性，可利用区块链技术。医学图像分割是癌症诊断中的重要功能。它是从医学图像中识别感兴趣区域（`ROI`）的过程。医学图像形式多样，部分文献专注于分割任务。对于脑肿瘤分割，文献 [16] 在 MRI 图像中实现了 `U-Net` 架构，并采用基于卷积神经网络的架构完成此任务。他们报告的 Dice 得分为 85%，并发现随着协作增加，得分显著提高。对于前列腺癌检测，文献 [17] 使用联邦学习采用 `3D 各向异性混合网络` 对 MRI 图像进行分割。当采用来自三家机构的数据进行研究时，他们获得了 88.9% 的 Dice 得分。
 
-一些研究人员已将联邦学习应用于脑肿瘤相关研究。在文献[[7]](#ch10.xhtml#ref10_7)中，作者针对脑肿瘤分割提出了一种名为 `SU-Net` 的联邦学习架构，并使用来自 Kaggle 的“脑部 MRI 分割”数据集进行研究。他们在非联邦场景和由五个客户端组成的联邦场景中均实现了该网络，并将该架构与其他几种深度学习架构进行了比较。结果显示，在联邦场景下，`AUC`（曲线下面积）和 `DSC`（Dice 相似性系数）分别为 99.8% 和 78.7%，均高于非联邦场景。在文献[[8]](#ch10.xhtml#ref10_8)中，联邦学习使用包含经诊断为胶质瘤患者的 MRI 脑部扫描图像的 BraTS 数据集实现。胶质瘤是一种影响大脑和脊髓的肿瘤。他们的仿真结果显示，即使在数据集不平衡的情况下，联邦环境中也能达到 99% 的模型准确率。在文献[[9]](#ch10.xhtml#ref10_9)中，提出了一种深度学习框架 `3D-Unet` 模型，并通过从 10 家不同机构收集数据，在两种场景下评估了性能；研究人员发现，通过在不同机构间共享数据，模型达到了 99% 的准确率。
+## 3. 联邦学习在 COVID-19 诊断中的作用
 
-乳腺癌是影响女性的主要癌症类型之一。但如果能早期发现，则可降低死亡率。医生建议进行 X 射线乳腺钼靶检查以用于检测和随访。通过使用联邦学习，增加了数据集规模，并利用来自多个机构的异构图像进行研究。联邦学习被用于利用乳腺钼靶数据进行乳腺密度分类。他们使用 Cohen 线性加权 Kappa 系数在本地和联邦学习环境下评估性能，联邦学习模型取得了更好的性能[[10]](#ch10.xhtml#ref10_10)。文献[[11]](#ch10.xhtml#ref10_11)提出了一种称为记忆感知课程联邦学习的 FL 变体，用于乳腺癌分类，该方法通过使用数据调度器惩罚错误预测，可极大地影响局部模型的一致性。在该方法中，他们结合了无监督域适应以应对域偏移。研究使用了来自不同客户端的三个数据集。
-
-前列腺癌是影响男性的主要癌症类型之一。当某些腺体快速生长并从前列腺扩散到身体其他部位时，就会发生前列腺癌，且基于早期症状检测该癌症较为困难。为了在早期阶段进行检测，我们可以使用联邦学习。在文献[[45]](#ch10.xhtml#ref10_45)中，Yan 等人使用 `cycleGAN` 网络进行模型创建，利用来自八家不同机构的医学图像进行研究，在前列腺癌分类中实现了 98% 的准确率和 99% 的 `AUC`。研究人员研究了自适应联邦学习在皮肤肿瘤检测场景中的效果[[12]](#ch10.xhtml#ref10_12)，并使用 `ISIC 2019` 数据集验证模型准确率。在此，作者使用各种边缘设备（如皮肤镜、激光显微镜和皮肤检查仪）收集的数据，这些数据被上传至云端进行训练和分类。在文献[[13]](#ch10.xhtml#ref10_13)中，提出通过从五家不同机构收集图像，利用联邦学习进行甲状腺结节肿瘤检测。实现了五种不同的深度学习架构，并在使用联邦学习前后进行了比较。他们展示了尽管存在数据异质性，联邦学习在保护数据隐私的前提下表现更好。在文献[[14]](#ch10.xhtml#ref10_14)中，提出了一种用于喉癌患者的 `Cox` 模型，并使用来自三个不同国家患者的数据作为输入。
-
-文献[[15]](#ch10.xhtml#ref10_15)提出了一种用于癌症图像分析的加密联邦学习方法，采用同态加密。在此，权重在发送到服务器前会被加密。服务器将在这些加密值上执行模型创建，并将更新后的模型参数发送给客户端进行解密。只有相应的客户端知道解密密钥，因此服务器无法从客户端推断任何数据。因此，为敏感患者信息增加了一层安全保障。由于一切都在加密环境中进行，处理个人数据信息时，同态加密是最佳选择。为确保用于肿瘤检测的 FL 系统的问责制和公平性，可利用区块链技术。医学图像分割是癌症诊断中的重要功能。它是从医学图像中识别感兴趣区域（`ROI`）的过程。医学图像形式多样，部分文献专注于分割任务。对于脑肿瘤分割，文献[[16]](#ch10.xhtml#ref10_16)在 MRI 图像中实现了 `U-Net` 架构，并采用基于卷积神经网络的架构完成此任务。他们报告的 Dice 得分为 85%，并发现随着协作增加，得分显著提高。对于前列腺癌检测，文献[[17]](#ch10.xhtml#ref10_17)使用联邦学习采用 `3D 各向异性混合网络` 对 MRI 图像进行分割。当采用来自三家机构的数据进行研究时，他们获得了 88.9% 的 Dice 得分。
-
-### 3. 联邦学习在 COVID-19 诊断中的作用
-
-过去几年，COVID-19 大流行影响了世界各地人们的健康和机能。该疾病症状多种多样，从发烧或寒战、咳嗽、头痛、咽喉痛、味觉或嗅觉丧失、流鼻涕到呼吸短促或呼吸困难。但感染 COVID-19 肺炎的患者会发展为急性呼吸窘迫综合征（`ARDS`），即肺泡充满液体导致呼吸衰竭的状态，此类患者需要呼吸机辅助呼吸。主要筛查诊断方法是使用胸部 X 射线，机器学习和深度学习方法、计算机视觉在医疗领域的胸部 X 射线分类中做出了重大贡献[[18]](#ch10.xhtml#ref10_18)。但我们知道，在机器学习或深度学习中，训练数据的收集、确保数据的隐私和安全是一大挑战。在此背景下，我们可以使用联邦学习来确保包括医学图像在内的医疗数据的隐私和安全。联邦学习被应用于与 COVID-19 相关的多种用例，如基于 CT 图像的 COVID 检测、死亡率预测、临床结局预测、基于 X 射线的 COVID 检测以及密集人群中的口罩检测[[3]](#ch10.xhtml#ref10_3)。图 3 展示了利用来自不同医院和放射科中心的 X 射线，在 COVID-19 诊断中应用 FL 的具体场景。
+过去几年，COVID-19 大流行影响了世界各地人们的健康和机能。该疾病症状多种多样，从发烧或寒战、咳嗽、头痛、咽喉痛、味觉或嗅觉丧失、流鼻涕到呼吸短促或呼吸困难。但感染 COVID-19 肺炎的患者会发展为急性呼吸窘迫综合征（`ARDS`），即肺泡充满液体导致呼吸衰竭的状态，此类患者需要呼吸机辅助呼吸。主要筛查诊断方法是使用胸部 X 射线，机器学习和深度学习方法、计算机视觉在医疗领域的胸部 X 射线分类中做出了重大贡献 [18]。但我们知道，在机器学习或深度学习中，训练数据的收集、确保数据的隐私和安全是一大挑战。在此背景下，我们可以使用联邦学习来确保包括医学图像在内的医疗数据的隐私和安全。联邦学习被应用于与 COVID-19 相关的多种用例，如基于 CT 图像的 COVID 检测、死亡率预测、临床结局预测、基于 X 射线的 COVID 检测以及密集人群中的口罩检测 [3]。图 3 展示了利用来自不同医院和放射科中心的 X 射线，在 COVID-19 诊断中应用 FL 的具体场景。
 
 ![图 3. 联邦学习在 COVID-19 诊断中的应用。](img/fig10_3_B.jpg)
 
 图 3. 联邦学习在 COVID-19 诊断中的应用。
 
+### Yan et al. 的基于联邦学习的方法
 
-
-
-
-## Yan et al. 的基于联邦学习的方法
-
-Yan 等人提出了一种基于联邦学习的方法 [[18]](#ch10.xhtml#ref10_18)，使用了四种不同的网络 [[19]](#ch10.xhtml#ref10_19)、[[20]](#ch10.xhtml#ref10_20)、[[21]](#ch10.xhtml#ref10_21) 和 [[22]](#ch10.xhtml#ref10_22)，这些网络在 图 4 中进行了总结。
+Yan 等人提出了一种基于联邦学习的方法 [18]，使用了四种不同的网络 [19]、[20]、[21] 和 [22]，这些网络在图 4 中进行了总结。
 
 ![图 4. 用于 Covid-19 诊断的联邦学习中实现的不同架构。](img/fig10_4_B.jpg)
 
 图 4. 用于 Covid-19 诊断的联邦学习中实现的不同架构。
 
-他们使用的数据集是公开在 Kaggle 上的 COVIDx 数据集，其中 13,703 张图像用于训练模型，1,579 张图像用于测试模型。数据集中有三个标签：normal（正常）、covid pneumonia（新冠肺炎）和 non-covid pneumonia（非新冠肺炎）。实验分别在使用联邦学习和不使用联邦学习的情况下进行，观察到 `ResNet18` 架构在两种情况下均表现出最佳性能。观察到 `ResNeXt` 表现良好，而 `MobileNet_v2` 拥有较少的参数量。研究结论认为，文献 [[20]](#ch10.xhtml#ref10_20) 和 [[22]](#ch10.xhtml#ref10_22) 中讨论的模型最适合用于 Covid-19 诊断。
+他们使用的数据集是公开在 Kaggle 上的 COVIDx 数据集，其中 13,703 张图像用于训练模型，1,579 张图像用于测试模型。数据集中有三个标签：normal（正常）、covid pneumonia（新冠肺炎）和 non-covid pneumonia（非新冠肺炎）。实验分别在使用联邦学习和不使用联邦学习的情况下进行，观察到 `ResNet18` 架构在两种情况下均表现出最佳性能。观察到 `ResNeXt` 表现良好，而 `MobileNet_v2` 拥有较少的参数量。研究结论认为，文献 [20] 和 [22] 中讨论的模型最适合用于 Covid-19 诊断。
 
-## 基于融合的联邦学习方法
+### 基于融合的联邦学习方法
 
-文献 [[4]](#ch10.xhtml#ref10_4) 提出了一种基于融合的联邦学习方法，该方法通过根据客户端的训练时间选择性地挑选参与客户端，提高了服务器创建的全局模型的效率和性能。他们使用了从收集的数据集中获取的 3326 张图像，并将其划分为 2800 张用于训练，526 张用于测试。实验设置使用了三个客户端和一个服务器，客户端使用 `GhostNet`、`ResNet50` 和 `ResNet101` 三种模型进行本地训练，且模型使用六个不同的数据集进行训练。他们还为每个客户端使用了不同规模的数据集，分别为 600 张、900 张和 1300 张图像。对这些模型的准确率、训练时间和通信效率进行了分析，并应用了动态融合以通过减少模型上传次数来降低通信开销。为每个客户端分配特定的训练和模型创建时间；如果参与的客户端未在规定时间内完成，则服务器将在没有该客户端输入的情况下继续进行模型更新。此外，如果某客户端的性能比其上一轮次更差，则该客户端会请求服务器跳过该轮次的聚合。
+文献 [4] 提出了一种基于融合的联邦学习方法，该方法通过根据客户端的训练时间选择性地挑选参与客户端，提高了服务器创建的全局模型的效率和性能。他们使用了从收集的数据集中获取的 3326 张图像，并将其划分为 2800 张用于训练，526 张用于测试。实验设置使用了三个客户端和一个服务器，客户端使用 `GhostNet`、`ResNet50` 和 `ResNet101` 三种模型进行本地训练，且模型使用六个不同的数据集进行训练。他们还为每个客户端使用了不同规模的数据集，分别为 600 张、900 张和 1300 张图像。对这些模型的准确率、训练时间和通信效率进行了分析，并应用了动态融合以通过减少模型上传次数来降低通信开销。为每个客户端分配特定的训练和模型创建时间；如果参与的客户端未在规定时间内完成，则服务器将在没有该客户端输入的情况下继续进行模型更新。此外，如果某客户端的性能比其上一轮次更差，则该客户端会请求服务器跳过该轮次的聚合。
 
-## EXAM 联邦学习方法
+### EXAM 联邦学习方法
 
-文献 [[2]](#ch10.xhtml#ref10_2) 提出了一种名为 EXAM（Electronic Medical Record (EMR) chest X-ray AI Model）的联邦学习方法，用于预测 Covid-19 患者的临床结果。他们从全球 20 家机构收集数据，训练一个模型，利用实验室参数、生命体征和胸部 X 光片等各种参数，预测有症状的 Covid-19 患者未来的氧气需求。
+文献 [2] 提出了一种名为 EXAM（Electronic Medical Record (EMR) chest X-ray AI Model）的联邦学习方法，用于预测 Covid-19 患者的临床结果。他们从全球 20 家机构收集数据，训练一个模型，利用实验室参数、生命体征和胸部 X 光片等各种参数，预测有症状的 Covid-19 患者未来的氧气需求。
 
-## 区块链技术与联邦学习的结合
+### 区块链技术与联邦学习的结合
 
-区块链技术与联邦学习相结合，开发了一种用于检测 Covid-19 的模型 [[23]](#ch10.xhtml#ref10_23)。该框架使用数据归一化技术对从各医院收集的数据值进行归一化，并采用基于胶囊网络的分割和分类来检测受 Covid-19 影响的患者。对于数据归一化，执行了空间归一化和信号归一化。空间归一化涉及 CT 扫描的大小和分辨率。CT 扫描仪的信号归一化过程处理每个体素的强度，这基于肺窗。研究使用了包含 34,006 个 CT 扫描切片（图像）的数据集，这些切片属于 89 例 Covid-19 感染患者。这种基于区块链的联邦学习网络从各种放射科中心和拥有不同类型 CT 扫描仪的多家医院协同学习。他们使用 `SegCaps` 算法 [[44]](#ch10.xhtml#ref10_44) 进行图像分割，并使用胶囊网络进行泛化。为确保隐私，医院仅与区块链网络共享梯度，区块链网络聚合梯度，服务器生成全局模型后，将更新后的模型分发给参与机构。实质上，在联邦环境中，在保持数据隐私的前提下，发生了来自各个本地模型的权重聚合。
+区块链技术与联邦学习相结合，开发了一种用于检测 Covid-19 的模型 [23]。该框架使用数据归一化技术对从各医院收集的数据值进行归一化，并采用基于胶囊网络的分割和分类来检测受 Covid-19 影响的患者。对于数据归一化，执行了空间归一化和信号归一化。空间归一化涉及 CT 扫描的大小和分辨率。CT 扫描仪的信号归一化过程处理每个体素的强度，这基于肺窗。研究使用了包含 34,006 个 CT 扫描切片（图像）的数据集，这些切片属于 89 例 Covid-19 感染患者。这种基于区块链的联邦学习网络从各种放射科中心和拥有不同类型 CT 扫描仪的多家医院协同学习。他们使用 `SegCaps` 算法 [44] 进行图像分割，并使用胶囊网络进行泛化。为确保隐私，医院仅与区块链网络共享梯度，区块链网络聚合梯度，服务器生成全局模型后，将更新后的模型分发给参与机构。实质上，在联邦环境中，在保持数据隐私的前提下，发生了来自各个本地模型的权重聚合。
 
-## 利用区块链确保问责制与公平性
+### 利用区块链确保问责制与公平性
 
-为确保问责制和公平性，引入了区块链技术 [[24]](#ch10.xhtml#ref10_24)。在 Covid-19 检测场景中，医院提供的 X 光图像细节不会被披露。因此，模型无法检查谁提供了可信数据，也无法确定哪些客户端正在投毒全局模型。通过将区块链技术与联邦学习相结合，使模型在上述场景中具备了问责制。如果训练数据或训练方法存在偏差，则会出现公平性问题。如果用于各种疾病模型创建的图像数量不同，则存在偏倚的可能性。在 Covid-19 情况下，正常 X 光图像的数量将多于阳性病例的 X 光图像。因此，存在可能导致模型不公平的偏倚风险。在这种情况下，区块链技术将提供更好的解决方案。文献 [[25]](#ch10.xhtml#ref10_25) 在联邦学习方法中利用深度强化学习，考察用于 Covid-19 研究的物联网设备的资源可用性和信任评分，以用于客户端选择。
+为确保问责制和公平性，引入了区块链技术 [24]。在 Covid-19 检测场景中，医院提供的 X 光图像细节不会被披露。因此，模型无法检查谁提供了可信数据，也无法确定哪些客户端正在投毒全局模型。通过将区块链技术与联邦学习相结合，使模型在上述场景中具备了问责制。如果训练数据或训练方法存在偏差，则会出现公平性问题。如果用于各种疾病模型创建的图像数量不同，则存在偏倚的可能性。在 Covid-19 情况下，正常 X 光图像的数量将多于阳性病例的 X 光图像。因此，存在可能导致模型不公平的偏倚风险。在这种情况下，区块链技术将提供更好的解决方案。文献 [25] 在联邦学习方法中利用深度强化学习，考察用于 Covid-19 研究的物联网设备的资源可用性和信任评分，以用于客户端选择。
 
-## 聚类联邦学习在自动 Covid-19 诊断中的作用
+### 聚类联邦学习在自动 Covid-19 诊断中的作用
 
-在聚类联邦学习中，设备被组织成簇。每个簇基于其数据训练一个本地模型，服务器聚合它们以获得全局模型。然后将全局模型广播回每个簇中的设备，用于更新其本地模型。此过程重复进行，通过允许客户端获得更专业化的模型，可以达到大于或等于传统联邦学习的性能。Junaid 等人 [[26]](#ch10.xhtml#ref10_26) 在边缘计算网络中评估了聚类联邦学习在自动 Covid-19 诊断中的作用。边缘计算有助于在数据生成位置附近（如患者处的移动设备或医院的本地服务器）处理、分析和存储数据。将聚类联邦学习与边缘计算相结合的关键动机是从多模态数据中学习单一模型，例如，两种模态可能是 CT 图像和超声图像。研究使用了包含 X 光和超声图像的 2109 张图像，其中 80% 的数据用于训练，20% 用于测试，并采用了修改后的 `VGG-16` 架构。
+在聚类联邦学习中，设备被组织成簇。每个簇基于其数据训练一个本地模型，服务器聚合它们以获得全局模型。然后将全局模型广播回每个簇中的设备，用于更新其本地模型。此过程重复进行，通过允许客户端获得更专业化的模型，可以达到大于或等于传统联邦学习的性能。Junaid 等人 [26] 在边缘计算网络中评估了聚类联邦学习在自动 Covid-19 诊断中的作用。边缘计算有助于在数据生成位置附近（如患者处的移动设备或医院的本地服务器）处理、分析和存储数据。将聚类联邦学习与边缘计算相结合的关键动机是从多模态数据中学习单一模型，例如，两种模态可能是 CT 图像和超声图像。研究使用了包含 X 光和超声图像的 2109 张图像，其中 80% 的数据用于训练，20% 用于测试，并采用了修改后的 `VGG-16` 架构。
 
-## 基于遗传算法的聚类联邦学习
+### 基于遗传算法的聚类联邦学习
+
+
 
 Kandati 等人 [[27]](#ch10.xhtml#ref10_27) 建议采用一种基于遗传算法的聚类联邦学习方法，根据超调参数对边缘设备进行分组，并按簇对参数进行遗传修改。遗传算法是一种优化算法，可用于提高聚类联邦学习中模型的性能和效率。该研究考察了该算法在各种超参数下的差异行为，包括客户端比例、迭代次数 (`n`)、批次大小、最小样本数和学习率 (`η`)。超参数是那些不直接从模型中学习但可以控制学习过程的参数。他们没有使用图像数据，而是使用了代表疾病症状的十个属性，最后一个属性存储该人是否患有 Covid-19 的结果。评估了传统联邦学习和基于遗传算法的聚类联邦学习在不同客户端数量下的各种参数，如准确率、精确率、召回率和 F1-score。结果发现，所有轮次仅需一个 epoch 即可减少资源消耗和训练时间。
-
-
-
 
 # 一种利用生成对抗网络（GAN）和边缘计算的联邦学习方法检测 Covid-19 的新途径
 
 [[28]](#ch10.xhtml#ref10_28) 中提出了一种利用生成对抗网络（GAN）和边缘计算的联邦学习方法来检测 Covid-19 的新途径。GAN 被用于生成 Covid-19 数据库的合成图像，因为现有的医学图像不足以训练机器学习模型。在 GAN 中，有两个神经网络——一个生成器和一个判别器。生成器生成合成图像，而判别器区分真实图像和合成图像。随后生成器会被更新，这一过程将持续进行，直到生成无法区分的图像。通过这种方式，每个边缘设备训练其模型并将训练好的模型更新至云服务器，而无需透露实际参数。因此，本地 GAN 与中央云服务器协作，以改进全局 GAN 模型来生成逼真的 Covid-19 图像。同时也提出了一个基于区块链的框架，用于去中心化的 Covid 分析。为了评估性能，他们使用了包含 620 张 X 光图像的 DarkCOVID 数据集和包含 950 张 X 光图像的胸部 COVID 数据集。80% 的数据用于训练，20% 用于测试。
 
-### 4. 面向医疗应用的联邦学习与隐写术相结合
+## 面向医疗应用的联邦学习与隐写术相结合
 
 联邦学习是一种分布式机器学习技术，它允许多方在不直接共享数据的情况下协作构建模型。在医疗领域，由于患者数据的隐私顾虑，这种方法尤为重要。联邦学习不是共享数据，而是涉及在各组织的数据上训练本地模型，然后将这些模型组合起来创建一个全局模型。在医疗保健领域，联邦学习可用于构建患者预后预测模型或提高诊断准确性。它允许组织在不共享敏感患者数据的情况下，协作构建更准确、泛化能力更强的模型。它还为小型组织提供了一种途径，使其无需共享数据即可从大型组织获得的洞察中受益。例如，一个医院系统可以利用来自多家医院的患者数据训练模型，而无需共享数据。相反，每家医院都在其自己的数据上训练模型，然后将更新后的模型参数发送到中央服务器。中央服务器随后聚合更新后的参数，并用它们更新全局模型，然后将全局模型发回每家医院进行进一步训练。医疗领域联邦学习的优势之一是，它通过利用来自多个来源的数据，允许创建更稳健、更准确的模型。它还为患者数据提供了更多的隐私和安全保障，因为数据永远不会离开本地医院或组织。联邦学习过程始于每个组织在其数据上训练一个本地模型。然后将本地模型发送到中央服务器，中央服务器将本地模型组合以创建全局模型。中央服务器随后将更新后的全局模型发回给每个组织，各组织用它来进一步训练其本地模型。此过程在多次迭代中重复，直到全局模型达到所需的准确度水平。
 
 然而，医疗领域的联邦学习也面临挑战。主要挑战之一是确保在整个过程中保持患者数据隐私。这需要仔细考虑数据如何被收集、存储和处理，以及实施适当的安全措施。另一个挑战是确保本地模型得到有效训练，并且全局模型更新频率足够高，以反映各组织数据的最新洞察。这需要参与联邦学习过程的组织之间进行协调，并对训练过程进行仔细监控。总体而言，联邦学习有潜力通过在不损害患者数据隐私的前提下实现协作和知识共享，从而改善医疗成果。然而，它需要谨慎的实施和监控，以确保其有效且负责任地进行。
 
-图像隐写术是将一张称为秘密图像的图像隐藏在载体图像内部的过程。医学图像隐写术涉及将秘密医学图像隐藏在公共或私有载体图像中，这在医疗领域具有重要意义，因为在新冠疫情期间，每个人都依赖远程放射学应用。为了提供双重安全保障，可以将加密技术与隐写术相结合。图像隐写分析是利用隐写算法嵌入的隐藏秘密图像的反向检索过程。利用联邦学习创建个性化隐写分析方法的工作非常少。该领域迄今为止的工作总结如下。文献 [[27]](#ch10.xhtml#ref10_27) 探讨了在训练图像隐写分析算法中使用联邦学习的可能性。他们开发了一个名为 Fedsteg 的个性化分布式模型，利用联邦迁移学习进行安全的图像隐写分析，并使用著名的最先进隐写方法（如 WOW、S-UNIWARD 和 HILL）对模型进行了评估。Fedsteg 可以在不损害隐私和安全的前提下从孤立机构收集数据，并利用迁移学习创建个性化模型。我们知道迁移学习利用在一项任务中创建模型的知识应用到另一个应用领域。他们使用 TLU-CNN 训练用户和云模型，并使用同态加密提供额外安全。利用包含 10,000 张灰度图像的 BOSS base1.01 训练模型。结果表明，结合同态加密的 Fedsteg 取得了更好的结果。
-
-
-
+图像隐写术是将一张称为秘密图像的图像隐藏在载体图像内部的过程。医学图像隐写术涉及将秘密医学图像隐藏在公共或私有载体图像中，这在医疗领域具有重要意义，因为在新冠疫情期间，每个人都依赖远程放射学应用。为了提供双重安全保障，可以将加密技术与隐写术相结合。图像隐写分析是利用隐写算法嵌入的隐藏秘密图像的反向检索过程。利用联邦学习创建个性化隐写分析方法的工作非常少。该领域迄今为止的工作总结如下。文献 [[27]](#ch10.xhtml#ref10_27) 探讨了在训练图像隐写分析算法中使用联邦学习的可能性。他们开发了一个名为 `Fedsteg` 的个性化分布式模型，利用联邦迁移学习进行安全的图像隐写分析，并使用著名的最先进隐写方法（如 WOW、S-UNIWARD 和 HILL）对模型进行了评估。`Fedsteg` 可以在不损害隐私和安全的前提下从孤立机构收集数据，并利用迁移学习创建个性化模型。我们知道迁移学习利用在一项任务中创建模型的知识应用到另一个应用领域。他们使用 `TLU-CNN` 训练用户和云模型，并使用同态加密提供额外安全。利用包含 10,000 张灰度图像的 BOSS base1.01 训练模型。结果表明，结合同态加密的 `Fedsteg` 取得了更好的结果。
 
 ## 联邦学习在医疗保健领域的其他应用场景
 
@@ -4006,14 +3763,11 @@ Kandati 等人 [[27]](#ch10.xhtml#ref10_27) 建议采用一种基于遗传算法
 
 例如，大型数据集的缺乏阻碍了脑机接口（BCI）中脑电（EEG）信号的分类。文献[33]提出了一种利用联邦迁移学习的方法用于此目的，其准确率高于其他深度学习方法。文献[34]提出了一种基于 CNN 的自编码器系统，并应用联邦迁移学习以确保心电图（ECG）信号分类的数据可用性和隐私性。文献[35]评估了联邦学习在语音情感识别中的应用，并使用 CNN 结合 LSTM 进行分类。抑郁症是一种影响个体的精神疾病，由于症状因人而异且取决于多种因素，因此在临床上很难确诊该疾病。文献[36]提出利用移动医疗数据进行人员情绪检测，因为该信息可用于检测个体的抑郁症。联邦学习还可用于自闭症障碍分类、脓毒症研究以及许多其他需要进一步研究的疾病诊断和分类[37]。
 
-关于患者死亡率预测，一些研究人员已开展了一些研究[38，39 和 40]。他们将患者的非独立同分布数据（Non-IID 数据）分成不同的社区，为每个社区训练模型，该算法获得了 69.13%的 AUC 分值。文献[39]中，Brisimi 等人在联邦环境中实现了支持向量机（SVM）分类器，以研究患有心脏病的患者的未来住院预测。文献[40]使用了基于多层感知机的架构来研究入住重症监护室（ICU）的患者。他们报告的 AUC 为 97.76%。在人类活动与情感识别方面，已有一些研究在联邦学习环境下开展。文献[41]提出了一种模型，利用联邦迁移学习和基于 CNN 的架构研究站立、坐着、行走等各种活动，在人类活动分类上获得了 99.4%的准确率。针对居家监测应用[42]，提出了一种边云联邦架构，并使用自编码器进行模型创建。而在语音信号和情感识别活动的研究[43]中，利用患者的心理健康数据创建了一个情感指数，其 AUC 达到了 88%。
+关于患者死亡率预测，一些研究人员已开展了一些研究[38，39 和 40]。他们将患者的非独立同分布数据（Non-IID 数据）分成不同的社区，为每个社区训练模型，该算法获得了 69.13% 的 AUC 分值。文献[39]中，Brisimi 等人在联邦环境中实现了支持向量机（SVM）分类器，以研究患有心脏病的患者的未来住院预测。文献[40]使用了基于多层感知机的架构来研究入住重症监护室（ICU）的患者。他们报告的 AUC 为 97.76%。在人类活动与情感识别方面，已有一些研究在联邦学习环境下开展。文献[41]提出了一种模型，利用联邦迁移学习和基于 CNN 的架构研究站立、坐着、行走等各种活动，在人类活动分类上获得了 99.4% 的准确率。针对居家监测应用[42]，提出了一种边云联邦架构，并使用自编码器进行模型创建。而在语音信号和情感识别活动的研究[43]中，利用患者的心理健康数据创建了一个情感指数，其 AUC 达到了 88%。
 
 ## 联邦学习的未来方向与挑战
 
 用于 COVID-19 诊断或癌症诊断的深度学习解决方案依赖于大量数据进行训练，如果用于训练的医学图像包含未标注数据，则需要放射科医生手动标注以获得精准模型。但在联邦学习的情况下，数据来自多个机构，且数据隐私得以保留，因为医院或影像中心不共享实际数据，而是将本地模型共享给全局服务器，由其聚合所有参与站点的数据。联邦学习在隐写分析领域的应用潜力仍未被充分挖掘。为了实现各站点间的安全参数共享，可以使用安全多方计算、混淆电路协议等各种加密算法来替代同态加密[27]。
-
-
-
 
 涉及多机构协作的联邦学习的应用必将对精准医疗产生积极影响，精准医疗是一个新兴的研究领域。精准医疗是一种利用关于个人基因或蛋白质及其生活方式的知识来预防、诊断或治疗疾病的医疗形式。它将帮助医生利用个人的遗传信息提供个性化护理。联邦学习在精准医疗中的影响尚待探索。目前也有大量研究正在进行，涉及通信速度、模型收敛时间、处理非独立同分布（non-IID）数据 [3]、数据和模型的不同投毒攻击、安全聚合、数据安全共享、参与客户端的选择、数据的安全性和隐私等。此处讨论了实施联邦学习方法时可能面临的一些挑战。主要挑战是权重的更新。当多家医院协作时，中央云服务器负责权重的更新，每家医院应获得的权重不应相同，因为某些医院将优于其他医院 [5]。一些研究人员提出了联邦平均算法，但这并不是一个好的解决方案。另一个挑战是，在用于训练和实施联邦模型的研究资金方面，不同医院的贡献将有所不同，因为有些医院可能标注并上传大量数据集，但图像的多样性较低。因此，如何计算每家医院的份额仍然是一个挑战。此外，如果参与站点运行在不同的硬件和软件上，优化和调试过程将变得困难。第四个挑战在于各参与医院使用的图像采集和标注工具的协议差异。
 
@@ -4029,7 +3783,7 @@ Kandati 等人 [[27]](#ch10.xhtml#ref10_27) 建议采用一种基于遗传算法
 
 联邦学习的一个关键优势是其提高数据隐私的能力，因为数据保留在生成它的设备或服务器上，而不是被发送到中心位置。联邦学习还通过允许在训练过程中使用更广泛的数据源，有潜力提高模型准确性，并且可以扩展以适应许多设备或服务器。未来，我们可以预期联邦学习将在医疗、金融和物联网（IoT）等行业变得越来越重要，该领域持续的研究和开发可能会产出这项技术的新颖创新应用。
 
-### 7. 结论
+### 结论
 
 我们已经看到，对于疾病诊断或肿瘤检测，利用单家医院产生的数据创建的模型将不可靠。但通过使用联邦学习，这一问题得以解决，因为可以利用各协作医院或影像中心的数据来生成模型。此外，也避免了数据泄露的担忧，因为数据不直接共享，而是创建一个本地模型，并将该模型与全局服务器共享，全局服务器再根据接收到的本地模型创建全局模型。这样，数据隐私也得到了保障。本章讨论了联邦学习的概念、优势、类型及其在医疗领域的各种应用，如 COVID-19 诊断、肿瘤检测和隐写分析。未来，在更多领域，联邦学习可用于生成准确模型，同时确保数据隐私和安全。
 
@@ -4053,16 +3807,15 @@ Kandati 等人 [[27]](#ch10.xhtml#ref10_27) 建议采用一种基于遗传算法
 
 9.  Sheller, M., Edwards, B., Reina, G.A., Martin, J. and Bakas, S. 2019. NIMG-68. Federated Learning in neuro-oncology for multi-institutional collaborations without sharing patient data. Neuro. Oncol., 21(Suppl 6): vi176–7. doi: [10.1093/neuonc/noz175.737](http://dx.doi.org/10.1093/neuonc/noz175.737). Epub 2019 Nov 11. PMCID: PMC6847543.
 
-10.  Roth, H.R. et al. 2020. Federated Learning for breast density classification: A realworld implementation. In: et al. Domain Adaptation and Representation Transfer, and Distributed and Collaborative Learning. DART DCL 2020 2020. Lecture Notes in Computer Science, vol 12444. Springer, Cham. [`doi.org/10.1007/978-3-03060548-3\_18`](https://doi.org/10.1007/978-3-03060548-3_18).
+10.  Roth, H.R. et al. 2020. Federated Learning for breast density classification: A realworld implementation. In: et al. Domain Adaptation and Representation Transfer, and Distributed and Collaborative Learning. DART DCL 2020 2020. Lecture Notes in Computer Science, vol 12444. Springer, Cham. [`doi.org/10.1007/978-3-03060548-3_18`](https://doi.org/10.1007/978-3-03060548-3_18).
 
+11.  Jiménez-Sánchez, A., Tardy, M., Ballester, M.A.G., Mateus, D. and Piella, G. 2022. Memory-aware curriculum federated learning for breast cancer classification. *Computer Methods and Programs in Biomedicine*, 107318.
+
+12.  Hashmani, M.A., Jameel, S.M., Rizvi, S.S.H. and Shukla, S. 2021. An adaptive federated machine learning-based intelligent system for skin disease detection: A step toward an intelligent dermoscopy device. *Appl. Sci.*, 11: 2145. <https://doi.org/10.3390/app11052145>。
 
 
 
 ### 参考文献
-
-11. Jiménez-Sánchez, A., Tardy, M., Ballester, M.A.G., Mateus, D. and Piella, G. 2022. Memory-aware curriculum federated learning for breast cancer classification. *Computer Methods and Programs in Biomedicine*, 107318.
-
-12. Hashmani, M.A., Jameel, S.M., Rizvi, S.S.H. and Shukla, S. 2021. An adaptive federated machine learning-based intelligent system for skin disease detection: A step toward an intelligent dermoscopy device. *Appl. Sci.*, 11: 2145. <https://doi.org/10.3390/app11052145>。
 
 13. Lee, H., Chai, Y.J., Joo, H., Lee, K., Hwang, J.Y., Kim, S.M., Kim, K., Nam, I.C., Choi, J.Y., Yu, H.W., Lee, M.C., Masuoka, H., Miyauchi, A., Lee, K.E., Kim, S. and Kong, H.J. 2021. Federated Learning for thyroid ultrasound image analysis to protect personal information: Validation study in a real health care environment. *JMIR Med. Inform.*, 9(5): e25869. doi [10.2196/25869](https://doi.org/10.2196/25869). PMID: 33858817; PMCID: PMC8170555。
 
@@ -4118,12 +3871,6 @@ Kandati 等人 [[27]](#ch10.xhtml#ref10_27) 建议采用一种基于遗传算法
 
 39. Brisimi, T.S., Chen, R., Mela, T., Olshevsky, A., Paschalidis, I.C. and Shi, W. 2018. Federated Learning of predictive models from federated electronic health records. *Int. J. Med. Inform.*, 112: 59–67。
 
-
-
-
-
-### 参考文献
-
 40. Shao, R., He, H., Chen, Z., Liu, H. and Liu, D. 2020. 基于神经网络剪枝的随机信道联邦学习用于医疗数据隐私保护：模型开发与实验验证。*JMIR Form. Res.*, 4: e17265。
 
 41. Chen, Y., Qin, X., Wang, J., Yu, C. and Gao, W. 2020. Fed Health：一种用于可穿戴医疗保健的联邦迁移学习框架。*IEEE Intell. Syst.*, 35: 83–93。
@@ -4150,9 +3897,13 @@ Kandati 等人 [[27]](#ch10.xhtml#ref10_27) 建议采用一种基于遗传算法
 
 总体而言，约 60% 的应用采用机器学习程序和支持向量机，30% 采用深度学习方法。大多数数据用于临床数据集。本研究为选择合适的技术和途径以提高心脏病预测精度提供了经验。本研究选取的文章提供了有价值的信息提取、对心血管疾病更深入的理解以及为进一步研究提出的新假设。
 
+
+
+# 特征选择与心血管疾病诊断
+
 特征从 `PHR cardiac dataset` 收集，以筛选被视为基本属性的边缘构造值的重要性。特征选择对于心脏数据集的降维非常重要。分类器 `LSTM-Convolutional Neural Network (LSTMCNN)` 基于大规模预测创建激活函数逻辑预测，以根据类别参考对疾病等级进行分类。
 
-### 2. 相关工作
+## 2. 相关工作
 
 本综述探讨了各位作者提出的差异化技术和实现，并讨论了它们的局限性。
 
@@ -4162,21 +3913,15 @@ Kandati 等人 [[27]](#ch10.xhtml#ref10_27) 建议采用一种基于遗传算法
 
 当使用不可逆电穿孔 (`IRE`) 时，短电脉冲被施加到生长组织上。有效治疗依赖于所有组织直接暴露于致死电场；然而，由于这种暴露难以提前预测，因此依赖临床医生决定所需的理想治疗参数。临床医生依赖脉冲如何停止以及电穿孔期间组织内细胞如何变化来监测组织阻抗 [5]。使用 `POMDP` 模型的心血管疾病预测算法。患者将通过雾计算向医生发送警报以应对紧急情况。救护车是紧急情况下转运患者的工具。医生通过 `fog computing` 逻辑接收数据，这是一个在研究界日益受到关注的医学计算新领域 [6]。主要问题是由心脏病引起的，因为它被用于识别疾病；这将需要大量经验，知识也非常困难。视情况而定，死亡将是全球主要死因。此外，医生判断和了解患者需要很长时间，因为他们必须观察患者的健康和饮食。这是一个非常漫长的过程，需要进行检测和寻求医疗救助，因为过程太长 [7]。
 
+心血管疾病是全球主要的死亡原因，因此心脏疾病的早期发现和常规监测可以降低死亡率。健康、各种系统的涌现、来自不同来源的数据的指数级增长，以及通过互联网传输的可穿戴传感器设备，产生了大量的连续数据。大规模数据分析和机器学习，特别是流式早期确认以及创新技术，可以识别创新在冠心病临床领域的巨大影响。这将更加令人印象深刻且合理 [8]。心脏病是现代世界关注的焦点，生命短暂。大量人群依赖医疗系统快速提供准确的结果。每天，医疗机构都会生成和获取大量数据。为了获得有趣的发现，数据创新可以通过喷雾过程提取数据。即使使用挖掘技术消除了数据类型直接从电子记录中移除的手工数据，加权关联规则仍然适用 [9]。
 
+缺氧是由于失衡和该区域细胞特定部分的死亡导致血流丧失引起的，表现为心脏本身的缺血性卒中。这些数量代表了梗死体积的定义，一些神经外科医生对其治疗极为敏感 [10]。在大多数心脏病死亡病例中，医生的诊断过程繁琐，且在大多数领域由专业人员执行。心脏病风险可以使用模糊专家系统来识别。分析患者心脏病存在一些因素，处理医生的工作需要努力。然而，专家们希望有一个准确的工具，根据提供的参考信息确定风险因素 [11]。数据挖掘技术硬盘的含义，不仅包括简要的综合文献综述，还包括分类。科学文献回顾表明，已有多种数据挖掘方法被用于硬盘驱动器（HDD）。通过挖掘创新，它提供了关于建议分类的深刻数据集的关键文献 [12]。集成方法基于用于诊断心脏病的 KNN 距离方法并显示结果。集成已按以下两种配置实现：一种使用了三种距离中的五种，另一种在使用 KNN 方法时增加了其参考的平均准确度，给定每种距离的加权格式 [13]。
 
+随着青少年心脏病发作率的上升，组织不得不开发系统，基于早期预警信号检测和预防心脏病发作。在许多情况下，普通人要接受昂贵的检查，如心电图。因为这不现实，所以需要一个可靠且便捷的系统来预测心脏病的概率 [14]。心脏病是一种严重的慢性疾病，常导致死亡。医疗数据显示，这种疾病很快将消灭比富人和穷人拥有更多知识的人口。因此，基于医疗保险功能的紧迫性，对患者时间的准确诊断至关重要。一家阴暗的医院会导致无效的诊断 [15]。描述了利用大数据进行实时机器学习心脏病检测。近年来，心脏病已成为全球最常见的死亡原因。利用物联网和可穿戴传感器等多源信息进行心脏病的早期检测和持续监测，旨在通过指数级增长减少死亡率数据 [16]。描述了基于高维数据处理背景下特征守恒的计算预测模型（CPM）。使用质谱数据，高维特征是降低分类准确性的非相关特征 [17]。描述了机器学习在预测解释中的医疗建议，可以推断心血管事件患者早期心脏病（HD）和胸痛的威胁，提供充分的医疗保健对于其阳性诊断至关重要。它提取了简单决策理论模型预测的控制功能，以及样本与有效质量早期检测之间的疾病分类 [18]。在诊断心血管疾病和创建精确预测模型中，传感器和远程传感器组织、人工智能（AI）应用以及 LSBD 被描述为关键要素 [19]。
 
-心血管疾病是全球主要的死亡原因，因此心脏疾病的早期发现和常规监测可以降低死亡率。健康、各种系统的涌现、来自不同来源的数据的指数级增长，以及通过互联网传输的可穿戴传感器设备，产生了大量的连续数据。大规模数据分析和机器学习，特别是流式早期确认以及创新技术，可以识别创新在冠心病临床领域的巨大影响。这将更加令人印象深刻且合理[8]。心脏病是现代世界关注的焦点，生命短暂。大量人群依赖医疗系统快速提供准确的结果。每天，医疗机构都会生成和获取大量数据。为了获得有趣的发现，数据创新可以通过喷雾过程提取数据。即使使用挖掘技术消除了数据类型直接从电子记录中移除的手工数据，加权关联规则仍然适用[9]。
+描述了基于患者生命体征实时监测及其医生报告的可穿戴传感器监测系统，以改善医疗保健和心脏病发现的质量 [20]。讨论了物联网模式与智能医疗系统，其可成为远程健康监测的优势 [21]。`Contiki-NG` 和 `Open WSN`，来自最先进的开放传感器条件尘埃、尘埃测试这两种最广泛使用的可用手段，`Caozuoxitong` 检测心脏病 [22]，描述了可穿戴传感器设备如何引领智能医疗系统，由于人口老龄化，在过去几十年里特别关注家庭护理和电子健康的变革。其目标是让他们留在家庭环境和医院中，而不是在患者家中提供医疗服务，以提高患者的生活质量。
 
-缺氧是由于失衡和该区域细胞特定部分的死亡导致血流丧失引起的，表现为心脏本身的缺血性卒中。这些数量代表了梗死体积的定义，一些神经外科医生对其治疗极为敏感[10]。在大多数心脏病死亡病例中，医生的诊断过程繁琐，且在大多数领域由专业人员执行。心脏病风险可以使用模糊专家系统来识别。分析患者心脏病存在一些因素，处理医生的工作需要努力。然而，专家们希望有一个准确的工具，根据提供的参考信息确定风险因素[11]。数据挖掘技术硬盘的含义，不仅包括简要的综合文献综述，还包括分类。科学文献回顾表明，已有多种数据挖掘方法被用于硬盘驱动器（HDD）。通过挖掘创新，它提供了关于建议分类的深刻数据集的关键文献[12]。集成方法基于用于诊断心脏病的 KNN 距离方法并显示结果。集成已按以下两种配置实现：一种使用了三种距离中的五种，另一种在使用 KNN 方法时增加了其参考的平均准确度，给定每种距离的加权格式[13]。
-
-随着青少年心脏病发作率的上升，组织不得不开发系统，基于早期预警信号检测和预防心脏病发作。在许多情况下，普通人要接受昂贵的检查，如心电图。因为这不现实，所以需要一个可靠且便捷的系统来预测心脏病的概率[14]。心脏病是一种严重的慢性疾病，常导致死亡。医疗数据显示，这种疾病很快将消灭比富人和穷人拥有更多知识的人口。因此，基于医疗保险功能的紧迫性，对患者时间的准确诊断至关重要。一家阴暗的医院会导致无效的诊断[15]。描述了利用大数据进行实时机器学习心脏病检测。近年来，心脏病已成为全球最常见的死亡原因。利用物联网和可穿戴传感器等多源信息进行心脏病的早期检测和持续监测，旨在通过指数级增长减少死亡率数据[16]。描述了基于高维数据处理背景下特征守恒的计算预测模型（CPM）。使用质谱数据，高维特征是降低分类准确性的非相关特征[17]。描述了机器学习在预测解释中的医疗建议，可以推断心血管事件患者早期心脏病（HD）和胸痛的威胁，提供充分的医疗保健对于其阳性诊断至关重要。它提取了简单决策理论模型预测的控制功能，以及样本与有效质量早期检测之间的疾病分类[18]。在诊断心血管疾病和创建精确预测模型中，传感器和远程传感器组织、人工智能（AI）应用以及 LSBD 被描述为关键要素[19]。
-
-描述了基于患者生命体征实时监测及其医生报告的可穿戴传感器监测系统，以改善医疗保健和心脏病发现的质量[20]。讨论了物联网模式与智能医疗系统，其可成为远程健康监测的优势[21]。Contiki-NG 和 Open WSN，来自最先进的开放传感器条件尘埃、尘埃测试这两种最广泛使用的可用手段，Caozuoxitong 检测心脏病[22]，描述了可穿戴传感器设备如何引领智能医疗系统，由于人口老龄化，在过去几十年里特别关注家庭护理和电子健康的变革。其目标是让他们留在家庭环境和医院中，而不是在患者家中提供医疗服务，以提高患者的生活质量。
-
-
-
-
-# 建议方法
+## 3. 建议方法
 
 一种基于深度学习的心血管诊断检测（CADD）用于疾病概率预测，提出了一种精确的 AI 模型，能够依据患者的临床参数可靠地区分心血管感染。建议的方法基于以下步骤：
 
@@ -4190,7 +3935,7 @@ Kandati 等人 [[27]](#ch10.xhtml#ref10_27) 建议采用一种基于遗传算法
 
 图 1. LSTM-卷积神经网络 (CNN) 的建议架构。
 
-#### 3.1 心脏数据预处理
+### 3.1 心脏数据预处理
 
 收集各种记录，并对心脏数据进行预处理。该数据集包含 303 份患者记录，其中有 6 个缺失值。在从数据集中移除这六条记录后，对剩余的 297 份患者记录进行了预处理。特定数据集属性可使用多类变量和二分类进行分类。心脏病可使用多类变量进行评估。已确定心肌梗死患者的数值。
 
@@ -4218,27 +3963,23 @@ Reduce the missing data
 
 上述计算描述了一个通过筛选值来减少属性维度的预处理阶段。每条记录包含多个代表患者信息的属性。
 
-#### 3.2 基因模式社会蜘蛛缓解优化 (GPS²oR)
-
-
-
+### 3.2 基因模式社会蜘蛛缓解优化 (GPS²oR)
 
 GPS²oR 解决的工程问题基于鲨鱼利用敏锐的嗅觉进行捕猎的能力。因此，它取决于累积速度和聚集率。有人提议使用 GPS²oR 来克服这一问题。总体而言，现有的优化模型中展示了自我优化能力。GPS²oR 由四个阶段组成：初始化、前进、圆周运动和位置更新。
 
-**初始化**：对于 GPS²oR 建模，初始解的种群在搜索空间中任意生成。每个解蜘蛛在搜索过程开始时针对可能的加权水平进行优化。
+#### 3.2.1 初始化
 
-##### 3.2.1 质心与适应度评估
+对于 GPS²oR 建模，初始解的种群在搜索空间中任意生成。每个解蜘蛛在搜索过程开始时针对可能的加权水平进行优化。
+
+#### 3.2.2 质心与适应度评估
 
 在群居蜘蛛中，雌性种群占优势。雌性数量 `Mf` 的计算如下所示，且算法从零初始化的权重向量 `W` 开始。在每次迭代中，算法获取属于随机实例的特征向量以及最接近每个类别的模型特征向量。最直接且同质的示例是立即命中，且不同 `km` 的大多数情况在近距离下具有可比性。
 
-(1)
-
-`Mf = level[(0.9 - rand × (0.25)) × P]`
+(1) `Mf = level[(0.9 - rand × (0.25)) × P]`
 
 其中 `P` = 总种群数，`rand` = `[0, 1]` 范围内的随机值
 
 (2)
-
 ```
 低风险质心(C), C_Hd = (∑_n⁰ C_hd) / N = C_Hd2 = (∑_n⁰ C_hd²) / N
 ```
@@ -4248,21 +3989,17 @@ GPS²oR 解决的工程问题基于鲨鱼利用敏锐的嗅觉进行捕猎的能
 雄性种群 `Mm` 的计算作为适应度给出
 
 (3)
-
 ```
 fitness(f) = f_h = Σ√((C_hd1 - C_hd1)²) + √((C_hd2 - C_hd2)²)
 ```
 
-(4)
+(4) `Mm = P - Mf`
 
-`Mm = P - Mf`
-
-##### 3.2.2 适应度
+#### 3.2.3 适应度
 
 总种群 `PP` 中每个个体的适应度通过接收权重周来计算。在高风险情况下，显示每只蜘蛛 “n” 的结果值，不受性别分析影响。
 
 (5)
-
 ```
 高风险质心(C), x_HA = (∑_n⁰ x_hd) / N = x_Ha2 = (∑_n⁰ x_hl²) / N
 ```
@@ -4270,7 +4007,6 @@ fitness(f) = f_h = Σ√((C_hd1 - C_hd1)²) + √((C_hd2 - C_hd2)²)
 因此，每个个体的权重由其高适应度风险决定。
 
 (6)
-
 ```
 fitness(f) = f_k = Σ√((x_hd1 - x_hd1)²) + √((x_hd2 - x_hd2)²)
 ```
@@ -4280,13 +4016,9 @@ Mm = P - Mf
 wn = (JPPn - worstPP) / (bestPP - worstPP)
 ```
 
-其中 `worst PP` = 最差个体
+其中 `worst PP` = 最差个体，`best PP` = 最优个体，`J PPn` = 适应度值，由目标函数对蜘蛛位置 `PPn` 的评估给出。
 
-`best PP` = 最优个体
-
-`J PPn` = 适应度值，由目标函数对蜘蛛位置 `PPn` 的评估给出。
-
-##### 3.2.3 网中的振动
+#### 3.2.4 网中的振动
 
 在优化过程中，通常蜘蛛通过其网中丝线的振动进行交互。蜘蛛感知到的振动取决于它们之间的距离以及发送振动的蜘蛛的大小。
 
@@ -4294,28 +4026,22 @@ wn = (JPPn - worstPP) / (bestPP - worstPP)
 
 在该方法中，蜘蛛仅能感知来自其他蜘蛛的三种振动：(i) 适应度较高的附近蜘蛛 (`Vn an, c`)，(ii) 群体中表现最好的蜘蛛 (`Vn an, best`)，以及 (iii) 附近且仅雄性蜘蛛可接触的雌性蜘蛛 (`Vn an, f`)。
 
-### 3.4 基于权重的贝叶斯相关特征选择 (BBCFS)
+### 3.3 基于权重的贝叶斯相关特征选择 (BBCFS)
 
 选择合适、可靠且准确的特征对于提高算法性能至关重要。特征选择挑选出构建模型最有用的特征子集（属性、预测变量）。
 
-(7)
+(7) `Σ[n]⁰ f(n) = e + u[1]v[1] + u[2]v[2] + ⋯ + u[n]v[n]`
 
-`Σ[n]⁰ f(n) = e + u[1]v[1] + u[2]v[2] + ⋯ + u[n]v[n]`
-
-(8)
-
-`Σ[0]^(n) f(0) = Weights + Σ[0]^(n) w[x]x[y]`
+(8) `Σ[0]^(n) f(0) = Weights + Σ[0]^(n) w[x]x[y]`
 
 属性得分根据其与预测参数的相关性计算。特征得分用于确定选择。属性与其他细节之间的关系显示了属性之间如何相关。当目标属性值增加时，存在两类相关性：(1) 正相关和 (2) 负相关。
 
 (9)
-
 ```
 C(x_f1, x_f2, … x_fu | a) = ∏_x=1^n C(x_f1 | a)
 ```
 
 (10)
-
 ```
 C(x_f1 | a) = (C(x_f1 | a) * f) / c(x_n), a ∈ {values, attributes}
 ```
@@ -4323,21 +4049,19 @@ C(x_f1 | a) = (C(x_f1 | a) * f) / c(x_n), a ∈ {values, attributes}
 最后，根据测试数据的相关概率对其进行分类。
 
 (11)
-
 ```
 C_xy = argmax c(C(x_f1) ∏_x=1^n C(x_f1 | a))
 ```
 
 独立特征表征贝叶斯规则。每个数据实例根据其概率进行分类并相应加权。
 
-#### 3.4 Soft-Max 激活 (SMA)
+### 3.4 Soft-Max 激活 (SMA)
 
 在此阶段，分类器根据患者的风险和该分类器的 S 型激活能力确定其临床建议。由 Softmax 激活函数在隐藏层中确定的所有元素均由偏置权重控制初始化。激活函数指导神经元将后续组转换为正常深度值，从而产生神经元的逻辑规则。
 
 前馈网络已升级以支持连续脑组织。在此组织中，确定了自适应觅食计算规则，用于做出调整神经元以适应最近权重预测的训练决策。目前，大脑组织可以改变关联权重以匹配实际结果。
 
 (12)
-
 ```
 激活函数训练保持 f(x) = { y = 1 if Σ_i=1^n w_i x_i ≥ b; y = 0 otherwise }
 ```
@@ -4346,14 +4070,9 @@ Infraclass 的逻辑变换用于从使用它训练的神经元的逻辑激活中
 
 这基于训练进神经元的元素权重给出了一个连贯的描述。位于 ‘I’ 和 ‘j’ 处的权重 ‘w’ 保持在元素权重的最大极限以预测类别，但能力 ‘y’ 保持在来自 ‘x’ 元素的训练水平。神经元的完全连接前馈在组织的发展中被描绘出来。
 
-(13)
-
-`net[i(t)] = Σ[j=1]^(j) w[ij] y[j(t)] + x[i(t)], i = 1…j`
-
-和
+(13) `net[i(t)] = Σ[j=1]^(j) w[ij] y[j(t)] + x[i(t)], i = 1…j`
 
 (14)
-
 ```
 Ti dy(t)/dt = - yi(t) + φ(net_i) + x_i(t), i = 1…j
 ```
@@ -4372,11 +4091,7 @@ Ti dy(t)/dt = - yi(t) + φ(net_i) + x_i(t), i = 1…j
 | 疾病熟练特征选择 `DPfs = (∫_i=1^size(p) Σ P(i) == Scs(i)) / size(p)` |
 | 结束 |
 
-
-
-
-
-# 第 5 阶段：登记心血管影响率的组合节奏
+### 3.5 登记心血管影响率的组合节奏
 
 > 计算累积速率 $\text{DPFS} = \frac{\sum_{i = 1}^{size(PPS)}Pfs}{size\left( PPS \right)}$
 >
@@ -4392,21 +4107,27 @@ Ti dy(t)/dt = - yi(t) + φ(net_i) + x_i(t), i = 1…j
 
 上述计算对冠心病类别进行排序，该类别使用一组已准备好的数据进行训练，其中连贯特征已被评估。大脑分类器通过代表疾病流行率的类别，考虑预处理建议来预测疾病流行情况。
 
-## 3.5 LSTM 优化卷积神经网络 (LSTM-CNN)
+## 3.6 LSTM 优化卷积神经网络 (LSTM-CNN)
 
 为了解决二分类问题，LSTM-CNN 神经网络算法包含一个隐藏层，该层是人工神经元激活的函数。感知机为每个神经元使用激活函数。因此，迭代神经元将权重传递到接近聚类群属性的位置，以根据神经网络架构找到最优类别。在激活函数中，确定每个神经元加权输入的感知机权重会发生变化。这减少了两层的层数。认知类别是用于根据特征子量表的权重对心脏病类别进行分类的偏置权重。
 
-### 3.5.1 LSTM 层的评估
+### 3.6.1 LSTM 层的评估
+
+
 
 除了细胞状态外，LSTM 单元还包含输入门、输出门和遗忘门，用于短期和长期记忆。除了控制信息流和存储任意时长的值外，三个门还控制信息如何进入和离开细胞。
 
 (15)
 
-`F[1] = σ(w[f]|a[f − 1],x[d]|+y[f])`
+```
+F[1] = σ(w[f]|a[f − 1],x[d]|+y[f])
+```
 
 (16)
 
-`X[1] = σ(w[f]|a[f − 1],x[d]|+y[f])`
+```
+X[1] = σ(w[f]|a[f − 1],x[d]|+y[f])
+```
 
 具有门控机制的 LSTM 单元如图 2 所示。每个 LSTM 门都有一个 Sigmoid 激活函数和一个逐点乘法运算，并包含三个门（输入门、遗忘门和输出门）。
 
@@ -4471,17 +4192,13 @@ $$Recall = \frac{TP}{TP + FP} \times 100$$
 
 ### 参考文献
 
-1. Arpaia, P., Cicatiello, M., Benedetto, E.D., Anna Dodaro, C., Duraccio, L., Servillo, G. and Vargas, M. 2020. A health 4.0 Integrated system for monitoring and predicting patient’s health during surgical procedures. 2020 IEEE International Instrumentation and Measurement Technology Conference.
+1. Arpaia, P., Cicatiello, M., Benedetto, E.D., Anna Dodaro, C., Duraccio, L., Servillo, G. and Vargas, M. 2020. A health 4.0 Integrated system for monitoring and predicting patient's health during surgical procedures. 2020 IEEE International Instrumentation and Measurement Technology Conference.
 
 2. Mei, X. 2017. Predicting five-year overall survival in patients with non-small cell lung cancer by relief algorithm and random forests. 2017 IEEE 2nd Advanced Information Technology, Electronic and Automation Control Conference.
 
 3. Castaldo, R., Melillo, P., Izzo, R., De Luca, N. and Pecchia, L. 2017. Fall prediction in hypertensive patients via short-term HRV analysis. IEEE Journal of Biomedical and Health Informatics, 21(2): 399–406.
 
-4. Kumar, A. and Anjomshoa, H. 2018. A two-stage model to predict surgical patients’ lengths of stay from an electronic patient database. IEEE Journal of Biomedical and Health Informatics, 1–1.
-
-
-
-
+4. Kumar, A. and Anjomshoa, H. 2018. A two-stage model to predict surgical patients' lengths of stay from an electronic patient database. IEEE Journal of Biomedical and Health Informatics, 1–1.
 
 ### 参考文献
 
@@ -4549,9 +4266,6 @@ $$Recall = \frac{TP}{TP + FP} \times 100$$
 
 # 第 12 章：基于联邦学习的阿尔茨海默病预测
 
-
-
-
 *S Suchitra*^(¹²)
 
 电子邮件：senthamn@srmist.edu.in; jeyaselm@srmist.edu.in; poovaraghan1976@gmail.com
@@ -4568,53 +4282,51 @@ $$Recall = \frac{TP}{TP + FP} \times 100$$
 
 本文提出的方法建议使用深度学习技术开发一种 CNN 架构模型，利用图像分类算法在发病早期阶段检测阿尔茨海默病，这可以通过 CNN 提供的特征提取以及以 MRI 形式输入的神经影像技术，借助联邦学习高效完成；它支持在不泄露用户私密数据的情况下进行预测，并使多个用户能够开发分布式、可信且准确的机器学习模型。模型中使用的数据集源自阿尔茨海默病数据集，包含 6400 张 MRI 图像，分为四个不同类别。这些类别代表阿尔茨海默病的四个进展阶段。数据集中的图像来自 45 至 85 岁的人群。数据集经过多渠道彻底检查，检查后发现不包含任何患者的重复 MRI 图像，也不包含来自同一患者的多张图像。建议的技术在阿尔茨海默病数据集（包含 6400 张 MRI 图片）上通过精确率、召回率和准确率等指标进行了彻底检验。与现有方法相比，提出的方法显示出更高的精确度。我们提出的深度学习模型的贡献如下：(1) 提供一个更可靠、更准确的阿尔茨海默病检测系统。(2) 提高所有先前提出模型的准确性。(3) 通过联邦学习利用不同神经层提出一种高效强大的 CNN 架构。
 
+
+
 以下是本章其余部分：第二节展示的文献研究，提供了几项已使用当前模型针对该主题进行的研究的快速总结。它建立了对各位前人研究者所用策略的详细理解。它还阐释了建议的模型如何为阿尔茨海默病诊断难题提供更好的解决方案。第三节重点介绍了模型训练过程中遇到的困难，以及用于解决阿尔茨海默病检测系统问题的建议方法。第四节总结了阿尔茨海默病检测系统，并规划了改进方向。
 
-### 2. 相关工作
+## 2. 相关工作
 
 患者阿尔茨海默病的早期阶段已被广泛研究和考察。但现有设计存在某些缺陷。其中许多创建并使用的算法在早期疾病检测方面成功率极低。一些方法采用了流域算法和图像梯度等图像处理方法，这些方法只能解释大脑在检测时尚未受损的情况。其他研究人员在 MRI 图像数据集上采用 SVM、回归和朴素贝叶斯等机器学习技术，达到了约 90% 的准确率。一些人采用迁移学习技术获得了高准确度，但完全脑损伤的患者却遇到了困难。利用 CNN 架构是另一种提供良好准确性的策略，但其缺点是算法复杂。
 
-#### 2.1 生物标志物与神经影像
-
-
+### 2.1 生物标志物与神经影像
 
 Suhad 等人 [1] 建议主要集中在两个要素上，具体为神经影像学和生物标志物。图像分析是其主要研究领域。该工作未描述阿尔茨海默病（AD）最初是如何被发现的，因为选定用于调查的大多数受试者已知患有 AD。在此过程中，回顾了重要的 AD 数据集，以及诊断方法和检测策略。尽管该方法可用于早期神经影像学研究，但结果并不充分。CFS 在阿尔茨海默病识别中的重要性也得到了证明 [12]。可用于诊断阿尔茨海默病的几个标志物包括 MSE、CDR 和 NWB 体积。该过程的 DT 算法产生的结果准确率很差，低于 80%，而 XG Boost 算法只能达到略高的 80% 准确率。SVM 或 RF 分类器均未达到超过 81% 所需的准确率。已对诊断进展为阿尔茨海默病的痴呆的方法进行了考察 [5]。在利用机器学习、物联网、人工智能等各种方法学进行 AD 早期诊断的近期工作中，也考察了各种分析和评估策略。
 
 一种利用模型依赖先验知识进行优化的深度学习方法也被提出 [9]。它同时进行了 DR 和 DF。此外，它展示了当应用于小样本量患者病历时，如何利用多层学习模型和超参数提取更多 CSF。另一种与无监督 ML 相关的技术被提出 [14]。他利用结构化 MRI 图像数据预测阿尔茨海默病的进展，并表明其结果与有监督 ML 技术不相上下。
 
-#### 2.2 图像分割
+### 2.2 图像分割
 
 Shrikant 等人 [2] 的实现中使用了图像分割。其中的放大程度有助于将个体归入该模型定义的四个类别之一：MD、MOD、VMD 和 ND。本质上，他们将患者分为这四组。采用分水岭算法根据图像梯度识别脑萎缩，以确定脑萎缩中是否存在空腔。该过程方法简单，完成所需时间极少。该方法的优势在于，它在解决先前检测问题的同时避免了脑损伤。JRip、朴素贝叶斯方法和 RF 被用于 [13] 对数据的各种输入图像进行分类。使用 Weka 软件应用程序分析数据。然后，使用浏览器、知识流和 API 对图像数据进行分类。比较结果后确定，JRip 和 RF 算法优于朴素贝叶斯算法。
 
-#### 2.3 特征提取
+### 2.3 特征提取
 
 在来自 OASIS 的 MRI 图像数据中，[3] 采用了灰质和白质切片的三个不同视角。每个切片都包含提取的一阶特征。然后，使用检索到的特征生成相关性热图。随后，使用主成分分析方法降低维度。然后，使用包括回归（逻辑）、SVM、AdaBoost 和朴素贝叶斯在内的各种机器学习算法，检查了其建议技术的性能和准确性。测试结果显示最高准确率为 90.9%，优于之前 ML 算法的发现。从脑电图信号中检索的数学统计以多种方式和各种特征被使用 [6]，包括均值、中位数、众数、极差、标准差等。测量揭示了多种异常。利用适当的特征提取工具，提取了各种特征。
 
-#### 2.4 迁移学习方法
+### 2.4 迁移学习方法
 
-所采用的预训练 VGG16 模型 [4] 是 TensorFlow 和 Keras 迁移学习网络的组成部分。它被用作从中提取特征的工具。使用性能指标，他们确定了模型的准确性。将数据分为 20% 测试数据和 80% 训练数据的算法具有最高准确率，测试准确率为 95.31%，训练准确率为 97.49%。
+所采用的预训练 `VGG16` 模型 [4] 是 `TensorFlow` 和 `Keras` 迁移学习网络的组成部分。它被用作从中提取特征的工具。使用性能指标，他们确定了模型的准确性。将数据分为 20% 测试数据和 80% 训练数据的算法具有最高准确率，测试准确率为 95.31%，训练准确率为 97.49%。
 
-#### 2.5 神经网络和深度学习技术
+### 2.5 神经网络和深度学习技术
 
 通过利用具有 DL 架构的卷积神经网络，[7] 能够以 96.86% 的准确率识别阿尔茨海默病（LeNet）。同时，使用大量照片进行数据测试和训练。他们所达到的准确程度非常高，结论是：为检测阿尔茨海默病而选择的网络设计是合适的。
 
 一种基于神经影像学利用 DL 技术进行 AD 识别的方法被提出 [8]。在 CNN 之后，他采用了 RNN。因此，他能够更好地理解每个类别视觉序列之间的联系。然后，基于所有输入图像做出最终决定。他缺乏足够的数据来训练 NN。Chenhui 等人 [10] 表明，DL 对理解 MRI 图像数据与生理意义之间的联系持有多种看法。脑区相关性输入为 DL 技术自编码器提供了更高程度的表示。并以显著更好的预测准确率实现了这一点。MRI 图像中诊断检测的重要性得到了证明 [11]。尽管如此，精度仍不足够。不同的脑部扫描神经图像需要统计学上全面的数据集作为输入 [15]，展示了深度学习（DL）建模技术的增长。正电子发射断层扫描（PET）和磁共振成像（MRI）均为有效的视觉模态，可显示阿尔茨海默病（AD）进展过程中发生的大脑变化。利用结构 MRI 创建 3D 深度卷积神经网络 [16]，成功区分了轻度阿尔茨海默病痴呆、轻度认知障碍和认知正常人群。深度学习模型能够以 85.12% 的曲线下面积（AUC）区分 MCI 或轻度阿尔茨海默病受试者与认知正常受试者。
 
-#### 2.6 联邦学习
+### 2.6 联邦学习
 
 创建学习信息和资源存储库联邦是随后多项计划的重点 [24、25 和 26]。Rehak 等人 [26] 2005 年的参考模型描述了如何将存储库联邦化以构建可互操作的存储库基础设施。在此架构下，贡献存储库的元数据被收集到中央注册表中，提供单一访问和发现点。在基于提供者的软件（如利用数字患者病历开发估算医院再入院风险的模型 [27]）和基于患者（消费者）的软件（如利用智能手表收集的心电图检测心房颤动的存在 [28]）的联邦学习过程中，敏感临床数据可保留在本地组织或特定消费者处，而不离开它们。通过这种策略，患者隐私得到良好保护。
 
-
-
 迄今为止提到的所有研究均采用了传统机器学习技术，其中数据存储和模型训练由单台计算机或服务器管理。因此，在训练之前，所有数据必须汇集到一个位置。传统机器学习算法[[17]](#ch12.xhtml#ref12_17)要求模型从大量样本中进行训练，但由于隐私顾虑，获取这些样本可能颇具挑战。在联邦学习（FL）环境中，在将获得的权重发送至主服务器进行聚合之前，每个模型都在本地硬件上独立训练。因此，仅将模型属性（如权重、梯度、参数等）传输至中央服务器。文献[[21]](#ch12.xhtml#ref12_21)重点强调了必须解决的障碍，并展示了联邦学习如何解决医学数据集收集的问题。因此，模型根据训练数据所用的总时间进行聚合，给定的策略是根据性能选择表现最好的模型。在他们的研究中，他们使用了一个略经改进的联邦学习模型，从医学影像数据中更准确地识别 COVID-19。
 
-### 3. 建议方法
+## 3. 建议方法
 
 该模型通过联邦学习利用深度学习方法来分析和预测结果。该模型采用随机森林（RF）和 K 近邻（KNN）等机器学习方法，以及卷积神经网络（CNN）架构等深度学习算法，并将我们建议的模型与当前的模型和分类器进行比较。模型首先将使用两组图像作为输入：训练数据集和测试/验证数据集，经过各种处理流程后，将其分为两组。完成此过程后，我们将定义我们自己的纯 CNN 架构，其中将包含各种层类型，包括二维卷积层、Dropout 层、激活层、展平层、线性整流单元层和 Softmax 层。
 
 在该建议方法中，应用联邦学习方法在保护数据隐私的同时识别阿尔茨海默病。首先，利用 CNN 架构和迁移学习构建了一个能够精确识别阿尔茨海默病的深度学习模型。随后，使用 CNN 模型生成了一个用于阿尔茨海默病检测和分类的联邦学习框架。建议模型的贡献在于表明，在联邦框架中应用复杂算法不会显著恶化结果。因此，利用联邦学习技术，即使存在数据采集隐私顾虑，我们也能在治疗领域轻松创建可靠的分类器。
 
-#### 3.1 概览
+### 3.1 概览
 
 图 1 展示了建议模型的总体布局。该框架由若干单个模块组成，这些模块以串行和并行方式连接；部分模块仅有一个单向前向箭头，而另一些则同时具有前向和后向箭头。MRI 图像首先被输入，经过多个滤波器处理后，准备由模型进行处理。图像数据现已按 80:20 的比例分为两个新数据集：训练集和验证/测试集。新构建的神经网络（包含各种功能和滤波器的神经层）现用于处理数据。数据训练完成后，便是评估模型的时候，可通过获取准确率和损失函数来实现。最后，有必要可视化数据，并将其与以往提出的其他模型及现有的机器学习技术进行对比。
 
@@ -4622,7 +4334,7 @@ Shrikant 等人 [2] 的实现中使用了图像分割。其中的放大程度有
 
 图 1. 建议模型概览——基于深度学习技术的阿尔茨海默病预测。
 
-#### 3.2 数据集
+### 3.2 数据集
 
 阿尔茨海默病数据集包含 6,400 张 MRI 图像，分为四组，对应患者所患的四种阿尔茨海默病类型。MRI 图像中的个体年龄范围为 45 至 85 岁。各类别图像如下：
 
@@ -4637,17 +4349,17 @@ Shrikant 等人 [2] 的实现中使用了图像分割。其中的放大程度有
 
 图 2. 阿尔茨海默病数据集 MRI 图像的不同变体。
 
-#### 3.3 预处理
+### 3.3 预处理
 
 几何变换技术是一种用于图像预处理的算法。使用此方法，对输入图像进行缩放和调整大小以满足规格要求。图像分辨率为 176×208 像素。模型要求尺寸为 32×32。因此，所有输入图像均需经过此降维函数处理。
 
-#### 3.4 构建卷积神经网络
+### 3.4 构建卷积神经网络
 
 卷积神经网络属于人工神经网络中深度学习的一个子集。它由多个神经层组成，包括卷积层、池化层、Dropout 层、全连接层、激活层、展平层、Softmax 层、线性整流单元层等。它是最常用于图像分类和识别问题的网络。平移不变性、空间不变性人工神经网络（SI-ANN）或 ConvNet 是它的其他名称。多层感知机（MPL）是一种全连接网络，其中前一层的每个神经元都与后一层的每个神经元相连，它是多层感知机（CNN）架构的旧版本。这种全连接层使数据更容易过拟合。为了避免过拟合，作为神经网络更新版本的 CNN 融合了多种正则化方法。
 
-该模型由多层神经网络组成，均适配于序贯模型中。序贯模型不允许多个输入和输出，这意味着模型的每一层在同一时间仅具有一个输出和一个输入。CNN 架构的层包含多个超参数，有必要了解这些滤波器背后的含义。大小为`FxF`的滤波器应用于输入图像中存在的`C`个通道，因此`FxFxC`是将对输入尺寸`IxIxC`执行卷积并产生输出特征图`OxOxK`的体积。此处，`K`为滤波器的大小。
+该模型由多层神经网络组成，均适配于序贯模型中。序贯模型不允许多个输入和输出，这意味着模型的每一层在同一时间仅具有一个输出和一个输入。CNN 架构的层包含多个超参数，有必要了解这些滤波器背后的含义。大小为 `FxF` 的滤波器应用于输入图像中存在的 `C` 个通道，因此 `FxFxC` 是将对输入尺寸 `IxIxC` 执行卷积并产生输出特征图 `OxOxK` 的体积。此处，`K` 为滤波器的大小。
 
-核卷积是一种技 ique，其中包含数字的 3×3 小矩阵通过输入图像，并根据该小矩阵（也称为滤波器和核）对其进行变换。现在按顺序计算所有特征图的值。用`f`表示输入图像，用`h`表示核，结果矩阵的行和列索引分别标记为'm'和'n'。输出特征图将表示为`G[m, n]`，其中`G[m, n]`可表示如下。
+核卷积是一种技术，其中包含数字的 3×3 小矩阵通过输入图像，并根据该小矩阵（也称为滤波器和核）对其进行变换。现在按顺序计算所有特征图的值。用 `f` 表示输入图像，用 `h` 表示核，结果矩阵的行和列索引分别标记为 'm' 和 'n'。输出特征图将表示为 `G[m, n]`，其中 `G[m, n]` 可表示如下。
 
 (1)
 
@@ -4655,13 +4367,11 @@ Shrikant 等人 [2] 的实现中使用了图像分割。其中的放大程度有
 G[m,n] = (f*h)[m,n] = ∑[j]∑[k]h[j,k]f[m−j,n−k]
 ```
 
-
-
 该过程类似于矩阵乘法，其中来自小矩阵 `kernel` 的每个值在被放置在图像像素上后，与输入图像的后续值成对相乘。所有结果相加后，现在保存在可访问的内存位置中，输出以特征图的形式呈现。最大池化是一种技术，它以矩阵的形式从每个划分的多个区域中选择最大整数值，并将其发送到下一层进行进一步处理。
 
 该模型使用了 `Adam` 优化器。该优化基于一阶和二阶矩的自适应估计，称为随机梯度下降法。它接受的第二个参数是损失函数，设置为 `categorical_crossentropy`，这是一种用于具有多类分类的图像分类模型的损失函数。它接受的最后一个参数是指标，设置为 `accuracy`。模型接受多个参数，例如 `train_x`，即经过预处理的输入数据；下一个参数是 `train_y`，即输出数据，格式与输入数据相同；批次大小设置为 32；epoch（迭代次数）设置为 350；verbose 设置为 1 以显示每次迭代的日志。
 
-#### 3.5 联邦学习
+### 3.5 联邦学习
 
 一种称为联邦学习（FL）的新近开发的机器学习技术旨在解决严格的数据隐私法律问题以及现成数据集获取受限的问题 [18, 19 和 20]。联邦学习有两端：全局服务器或中央服务器，以及本地服务器或客户端。与存放全局模型的中央服务器不同，客户端服务器托管本地数据。得益于 FL 无需传输信息即可训练模型的能力，模型在一系列去中心化的终端设备上进行训练，数据保留在本地服务器上。修订后的权重由在客户端数据集上训练的邻域模型设定。因此，它保持了匿名性，这对于临床信息的精准诊断至关重要 [21, 22 和 23]。由于 FL 旨在防止全局模型与任何训练数据耦合，因此此场景中未使用预先训练的 CNN 模型。该场景涉及共享系统设置，并使用本地数据训练去中心化的客户端或节点。使用服务器，通过聚合系统或模型参数来创建全局模型。使用 FL 不需要用户共享任何机密信息。相反，用户在本地访问网络，并与称为服务器的中心化实体共享模型。然而，在 FL 中，每个用户都必须能够通过服务器实际且有效地发送其获得的模型。服务器在 FL 中使用迭代技术将本地数据聚合为全局网络。图 3 显示了建议的联邦学习模型架构。
 
@@ -4669,9 +4379,9 @@ G[m,n] = (f*h)[m,n] = ∑[j]∑[k]h[j,k]f[m−j,n−k]
 
 图 3. 联邦学习模型（建议方法）。
 
-#### 3.6 性能评估
+### 3.6 性能评估
 
-建议方法获得了非常好的结果，准确率达到 98.98%。建议方法的混淆矩阵如 图 4 所示。绘制了测试数据和验证数据之间准确率和损失函数对比的图表。模型准确率和模型损失的绘图分别见 图 5 和 图 6。
+建议方法获得了非常好的结果，准确率达到 98.98%。建议方法的混淆矩阵如图 4 所示。绘制了测试数据和验证数据之间准确率和损失函数对比的图表。模型准确率和模型损失的绘图分别见图 5 和图 6。
 
 ![图 4. CNN 模型的混淆矩阵（建议方法）。](img/fig12_4_B.jpg)
 
@@ -4685,32 +4395,27 @@ G[m,n] = (f*h)[m,n] = ∑[j]∑[k]h[j,k]f[m−j,n−k]
 
 图 6. 模型损失（建议方法）。
 
-#### 3.7 模型训练过程中面临的挑战
+### 3.7 模型训练过程中面临的挑战
 
-##### 3.7.1 过拟合
+#### 3.7.1 过拟合
 
-模型中的图像数据分为两组：一组是训练数据，另一组是验证和测试数据。CNN 模型中数据的过拟合意味着数据训练过度地试图使数据拟合得过好。这将导致训练数据集的准确率非常好且很高，而测试和验证数据集的准确率则会非常差且很低。简而言之，过拟合意味着高方差和低偏差。可以通过增加数据集中的数据点数量以及降低模型复杂度，或者在神经网络中使用 dropout 层来消除它。如 图 5 所示，y 轴表示模型的准确率，x 轴表示训练模型所用的 epoch 数，'x' 代表训练数据，而 'o' 代表测试/验证数据。结果表明，模型正在过拟合数据。通过添加 dropout 层和增加数据点数量来克服此问题。
+模型中的图像数据分为两组：一组是训练数据，另一组是验证和测试数据。CNN 模型中数据的过拟合意味着数据训练过度地试图使数据拟合得过好。这将导致训练数据集的准确率非常好且很高，而测试和验证数据集的准确率则会非常差且很低。简而言之，过拟合意味着高方差和低偏差。可以通过增加数据集中的数据点数量以及降低模型复杂度，或者在神经网络中使用 dropout 层来消除它。如图 5 所示，y 轴表示模型的准确率，x 轴表示训练模型所用的 epoch 数，'x' 代表训练数据，而 'o' 代表测试/验证数据。结果表明，模型正在过拟合数据。通过添加 dropout 层和增加数据点数量来克服此问题。
 
-##### 3.7.2 欠拟合
+#### 3.7.2 欠拟合
 
-模型中的数据分为两组：训练数据和验证及测试数据。CNN 模型中数据的欠拟合意味着模型无法非常高效地拟合数据。这将导致训练数据集和测试及验证数据集的准确率都非常低。这可能是由于数据集中的数据点数量较少，或者数据集规模太小而无法训练模型。简而言之，欠拟合意味着低方差和高偏差。可以通过增加模型复杂度以及去除数据集中的噪声，或者增加训练模型所用的时间以及增加 epoch 数来消除它。如 图 5 所示，y 轴表示模型的准确率，x 轴表示训练模型所用的 epoch 数，'x' 代表训练数据，而 'o' 代表测试和验证数据。结果可以看出模型正在欠拟合数据。通过去除数据中的噪声和增加 epoch 数来克服此问题。
+模型中的数据分为两组：训练数据和验证及测试数据。CNN 模型中数据的欠拟合意味着模型无法非常高效地拟合数据。这将导致训练数据集和测试及验证数据集的准确率都非常低。这可能是由于数据集中的数据点数量较少，或者数据集规模太小而无法训练模型。简而言之，欠拟合意味着低方差和高偏差。可以通过增加模型复杂度以及去除数据集中的噪声，或者增加训练模型所用的时间以及增加 epoch 数来消除它。如图 5 所示，y 轴表示模型的准确率，x 轴表示训练模型所用的 epoch 数，'x' 代表训练数据，而 'o' 代表测试和验证数据。结果可以看出模型正在欠拟合数据。通过去除数据中的噪声和增加 epoch 数来克服此问题。
 
-#### 3.8 与现有模型的比较
+### 3.8 与现有模型的比较
 
-##### 3.8.1 K 近邻分类器
+#### 3.8.1 K 近邻分类器
 
-KNN 分类器属于机器学习，归类为监督机器学习。KNN 分类器根据新输入图像与特定类别或组中最近邻数据点的相似性对其进行分类。由于其复杂度低，该算法被广泛使用。它是用于图像分类的机器学习中最简单的算法之一。KNN 分类器的准确率为 95.31%，低于建议的 CNN 分类器的准确率。KNN 分类器的准确率如下所示 图 7。
+KNN 分类器属于机器学习，归类为监督机器学习。KNN 分类器根据新输入图像与特定类别或组中最近邻数据点的相似性对其进行分类。由于其复杂度低，该算法被广泛使用。它是用于图像分类的机器学习中最简单的算法之一。KNN 分类器的准确率为 95.31%，低于建议的 CNN 分类器的准确率。KNN 分类器的准确率如下所示图 7。
 
 ![图 7. KNN 分类器的混淆矩阵（现有方法）。](img/fig12_7_B.jpg)
 
 图 7. KNN 分类器的混淆矩阵（现有方法）。
 
-##### 3.8.2 随机森林分类器
-
-
-
-
-# 随机森林分类器
+#### 3.8.2 随机森林分类器
 
 随机森林是另一种机器学习算法；它也属于监督式机器学习范畴。该算法主要用于分类和回归问题。在这种情况下，算法从不同的输入参数集开发多棵决策树，并采用大多数决策树结果的投票来对数据进行分类。与其他算法相比，该算法运行时间更短。它是用于图像分类的机器学习中最快的算法之一。尽管与其他两种算法（即提出的 CNN 分类器方法和 KNN 分类器）相比，随机森林分类器在该阿尔茨海默病检测问题的图像分类中准确率被发现非常低，但随机森林分类器的分类报告和混淆矩阵如图 8 所示。随机森林分类器的准确率仅为 75.28%，明显低于 CNN 分类器推荐方法的准确率。
 
@@ -4718,7 +4423,7 @@ KNN 分类器属于机器学习，归类为监督机器学习。KNN 分类器根
 
 图 8. 随机森林分类器的混淆矩阵（现有方法）。
 
-###### 表 1：提出方法的平均性能指标对比
+##### 表 1：提出方法的平均性能指标对比
 
 | 序号 | 方法名称 | 准确率 (%) |
 | --- | --- | --- |
@@ -4730,9 +4435,11 @@ KNN 分类器属于机器学习，归类为监督机器学习。KNN 分类器根
 
 图 9. 提出方法的平均性能指标对比。
 
-### 4. 结论
+## 4. 结论
 
-建议方法的主要目标是开发一种采用深度学习技术的 CNN 架构，利用基于 MRI 的神经影像学输入，在早期阶段识别阿尔茨海默病。基于 CNN 架构的提出模型，将 CNN 的性能与其他机器学习算法（包括随机森林和 KNN 分类器）进行了比较。由阿尔茨海默病数据集创建的模型使用了包含 6400 张 MRI 图像的数据集。利用阿尔茨海默病数据集，通过精确率、召回率和准确率指标对建议技术进行了彻底检验。结果发现，与当代方法相比，建议方法实现了更高的精确度。经过多次编译后，模型的最佳准确率为 98.98%，高于 KNN 和随机森林等所有先前的分类器。当将提出的方法（CNN 模型）与 KNN 和随机森林方法进行比较时，平均准确率分别为 98.98%、75.28% 和 98.98%。未来的工作可扩展至移动技术的发展，这趋向于商业化和节省时间，重点关注医疗界，后者将极大地受益于快速识别、疾病进展比例的区分以及多类别分类。
+
+
+建议方法的主要目标是开发一种采用深度学习技术的 `CNN` 架构，利用基于 `MRI` 的神经影像学输入，在早期阶段识别阿尔茨海默病。基于 `CNN` 架构的提出模型，将 `CNN` 的性能与其他机器学习算法（包括随机森林和 `KNN` 分类器）进行了比较。由阿尔茨海默病数据集创建的模型使用了包含 6400 张 `MRI` 图像的数据集。利用阿尔茨海默病数据集，通过精确率、召回率和准确率指标对建议技术进行了彻底检验。结果发现，与当代方法相比，建议方法实现了更高的精确度。经过多次编译后，模型的最佳准确率为 98.98%，高于 `KNN` 和随机森林等所有先前的分类器。当将提出的方法（`CNN` 模型）与 `KNN` 和随机森林方法进行比较时，平均准确率分别为 98.98%、75.28% 和 98.98%。未来的工作可扩展至移动技术的发展，这趋向于商业化和节省时间，重点关注医疗界，后者将极大地受益于快速识别、疾病进展比例的区分以及多类别分类。
 
 ### 参考文献
 
@@ -4772,51 +4479,45 @@ KNN 分类器属于机器学习，归类为监督机器学习。KNN 分类器根
 
 18.  Aledhari, M., Razzak, R., Parizi, R.M. and Saeed, F. 2020. Federated Learning: A survey on enabling technologies, protocols, and applications. IEEE Access, 8: 140699–140725.
 
-
-
-
-
 ## 第 13 章 利用基于区块链的联邦学习检测豪华酒店的设备传感器以提高客户满意度
 
 *H.M. Moyeenudin*,^(¹³)
 
 ### 1. 简介
 
-一种称为联邦学习（FL）的人工智能分支能够训练多个模型（客户端），并将其学习成果结合起来创建单一的最终模型（服务器）。在下一轮开始之前，每个客户端模型都会使用上一轮的服务器模型进行更新 [1]。划分数据段、构建机器学习模型、利用区块链实现安全和隐私方法、构建数据通信架构以及联邦规模是 FL 数据划分的五大类别 [2]。其中，带有联邦评估模型的区块链聚合节点（AN）与传感器节点（SN）ID 相连接，经过认证并存储在区块链中 [3]。因此，这些 AN 和 SN 分别已在私有链和公有链上完成认证。然而，当有人使用网络资源时，不受信任的节点会实施恶意行为。SN 也容易受到恶意节点的攻击，且能量低、传输范围小、计算能力弱。恶意节点随后传播不准确的路由信息并增加重传次数，导致 SN 的能量迅速耗尽。SN 能量的快速耗散缩短了无线传感器网络的寿命。此外，当网络中存在恶意节点时，吞吐量和丢包率均会上升。系统会计算 SN 的信任值以消除网络中的有害节点。为实现安全路由，网络会综合考虑 SN 的信任值和剩余能量。此外，还采用非对称密钥密码系统来保障数据传输安全。仿真结果表明，该建议模型在高包投递率方面行之有效。聚合通常使用 FL。一个容易理解的例子是：某个数据集仅包含特定医院的乳腺癌患者数据。当客户端面临不同的特征空间但相同或可比的样本空间时，垂直数据划分便应运而生 [4]。利用实体对齐方法在客户端数据中发现重叠样本，并将这些重叠数据用于训练。来自多个国家机构的学生 GPA 数据集可能是一个合适的例子。评分标准和评估指标是特征空间的不同方面。水平和垂直数据划分用于创建混合数据划分。一个容易理解的例子是：一组大学希望构建一个 FL 系统并评估所有分校的学生表现。
+一种称为联邦学习（`FL`）的人工智能分支能够训练多个模型（客户端），并将其学习成果结合起来创建单一的最终模型（服务器）。在下一轮开始之前，每个客户端模型都会使用上一轮的服务器模型进行更新 [1]。划分数据段、构建机器学习模型、利用区块链实现安全和隐私方法、构建数据通信架构以及联邦规模是 `FL` 数据划分的五大类别 [2]。其中，带有联邦评估模型的区块链聚合节点（`AN`）与传感器节点（`SN`）ID 相连接，经过认证并存储在区块链中 [3]。因此，这些 `AN` 和 `SN` 分别已在私有链和公有链上完成认证。然而，当有人使用网络资源时，不受信任的节点会实施恶意行为。`SN` 也容易受到恶意节点的攻击，且能量低、传输范围小、计算能力弱。恶意节点随后传播不准确的路由信息并增加重传次数，导致 `SN` 的能量迅速耗尽。`SN` 能量的快速耗散缩短了无线传感器网络的寿命。此外，当网络中存在恶意节点时，吞吐量和丢包率均会上升。系统会计算 `SN` 的信任值以消除网络中的有害节点。为实现安全路由，网络会综合考虑 `SN` 的信任值和剩余能量。此外，还采用非对称密钥密码系统来保障数据传输安全。仿真结果表明，该建议模型在高包投递率方面行之有效。聚合通常使用 `FL`。一个容易理解的例子是：某个数据集仅包含特定医院的乳腺癌患者数据。当客户端面临不同的特征空间但相同或可比的样本空间时，垂直数据划分便应运而生 [4]。利用实体对齐方法在客户端数据中发现重叠样本，并将这些重叠数据用于训练。来自多个国家机构的学生 `GPA` 数据集可能是一个合适的例子。评分标准和评估指标是特征空间的不同方面。水平和垂直数据划分用于创建混合数据划分。一个容易理解的例子是：一组大学希望构建一个 `FL` 系统并评估所有分校的学生表现。
 
-在选择 ML 模型时，通常会考虑来自数据集和问题陈述的 AI 模型。神经网络（NN）是最常用的模型之一。除了 NN，决策树也被采用，因为它们高效且易于理解。FL 系统可能由同构或异构模型组成。在前一种情况下，所有客户端使用相同的模型，服务器使用梯度聚合。然而，在后一种情况下，由于每个客户端都有独特的模型，因此无需担心聚合问题。在异构模型的情况下，服务器端采用最大投票等集成方法来替代聚合技术。水平数据划分中多个客户端的数据集共享相同的属性，但样本空间交集有限。FL 的隐私保护方法是备受关注的部分。主要目标是防止客户端信息泄露 [5]。
+在选择 `ML` 模型时，通常会考虑来自数据集和问题陈述的 `AI` 模型。神经网络（`NN`）是最常用的模型之一。除了 `NN`，决策树也被采用，因为它们高效且易于理解。`FL` 系统可能由同构或异构模型组成。在前一种情况下，所有客户端使用相同的模型，服务器使用梯度聚合。然而，在后一种情况下，由于每个客户端都有独特的模型，因此无需担心聚合问题。在异构模型的情况下，服务器端采用最大投票等集成方法来替代聚合技术。水平数据划分中多个客户端的数据集共享相同的属性，但样本空间交集有限。`FL` 的隐私保护方法是备受关注的部分。主要目标是防止客户端信息泄露 [5]。
 
-
-
-
-在没有加密的情况下，服务器可以利用学习梯度解密客户端数据。因此，隐藏梯度至关重要。在联邦学习（FL）系统中，通常使用密码学技术来解决隐私问题和差分隐私。为了伪装数据或模型参数的梯度，差分隐私方法被用作一种技术，并引入随机噪声。由于噪声增加是一个巨大的劣势，该方法会显著降低模型准确性。FL 系统中常用的隐私技术包括使用同态加密将一个数据集转换为另一个数据集，这种方法通过安全多方计算协助进行计算。该过程应用于拥有加密数据的真实客户端向服务器发送数据，服务器获得结果，最后对加密的输入和输出进行解密。尽管这些技术能防范各种威胁，但它们计算开销大。FL 系统分为中心化和去中心化两种类型。这两种架构的工作方式相似；区别在于客户端-服务器通信 [6]。如果架构是中心化的，我们会有一个充当服务器的不同模型，所有参数修改都在该全局模型中进行。在中心化 FL 系统中，学习可以是同步的，也可以是异步的，我们将在下文中探讨。去中心化设计与客户端轮流充当服务器的设计有所不同。每个周期，会随机选择一个客户端来更新全局模型，并将全局模型传达给其他客户端。去中心化 FL 系统开发难度大，通常分为三类：P2P、图或区块链。本章不涉及这些主题；将在后续章节中介绍。联邦规模 跨孤岛和跨设备联邦规模是两种主要类型。将跨孤岛类比为企业、跨设备类比为移动设备，最容易理解这些区别。跨孤岛通常客户端数量少但计算能力强。跨设备的客户端数量巨大，但计算能力较弱。我们可以依赖组织（跨孤岛）始终可用于训练，但这并不等同于可靠性。至于移动电话（跨设备）。糟糕的网络可能会使设备难以访问 [7]。
+在没有加密的情况下，服务器可以利用学习梯度解密客户端数据。因此，隐藏梯度至关重要。在联邦学习（`FL`）系统中，通常使用密码学技术来解决隐私问题和差分隐私。为了伪装数据或模型参数的梯度，差分隐私方法被用作一种技术，并引入随机噪声。由于噪声增加是一个巨大的劣势，该方法会显著降低模型准确性。`FL` 系统中常用的隐私技术包括使用同态加密将一个数据集转换为另一个数据集，这种方法通过安全多方计算协助进行计算。该过程应用于拥有加密数据的真实客户端向服务器发送数据，服务器获得结果，最后对加密的输入和输出进行解密。尽管这些技术能防范各种威胁，但它们计算开销大。`FL` 系统分为中心化和去中心化两种类型。这两种架构的工作方式相似；区别在于客户端-服务器通信 [6]。如果架构是中心化的，我们会有一个充当服务器的不同模型，所有参数修改都在该全局模型中进行。在中心化 `FL` 系统中，学习可以是同步的，也可以是异步的，我们将在下文中探讨。去中心化设计与客户端轮流充当服务器的设计有所不同。每个周期，会随机选择一个客户端来更新全局模型，并将全局模型传达给其他客户端。去中心化 `FL` 系统开发难度大，通常分为三类：`P2P`、图或区块链。本章不涉及这些主题；将在后续章节中介绍。联邦规模 跨孤岛和跨设备联邦规模是两种主要类型。将跨孤岛类比为企业、跨设备类比为移动设备，最容易理解这些区别。跨孤岛通常客户端数量少但计算能力强。跨设备的客户端数量巨大，但计算能力较弱。我们可以依赖组织（跨孤岛）始终可用于训练，但这并不等同于可靠性。至于移动电话（跨设备）。糟糕的网络可能会使设备难以访问 [7]。
 
 ### 2. 文献综述
 
 #### 2.1 面向物联网的联邦学习
 
-联邦学习是人工智能的一个新分支，属于机器学习范式，能最大限度地减少模型训练中的偏差并保护隐私。在每一轮联邦学习中，会选择多个客户端（如企业、数据中心、物联网设备或移动设备）在内部训练数据以生成全局模型，因为原始数据存储在客户端的数据库中，不进行交易或传输 [8]。最近，物联网联邦学习利用区块链确保数据真实性，以吸引足够的客户端数据和计算资源进行训练。然而，缺乏系统且全面的架构设计，使得难以实现系统化开发和有效应对 HIoT 设备故障检测中数据异质性的挑战。在所提系统中，原始数据在本地存储。因此，中央服务器与客户端服务器通信以处理全局模型，从而了解酒店中的故障设备。设计中使用区块链技术，为客人数据提供可证明的真实性，并为客人完成调查的贡献提供经济激励。以减轻数据相似性和客人单调回答的影响。虽然本章对托管以协调客户端服务器的联邦学习模块有主要贡献，但为了通过未来开发修改设计，将模块从客人服务器转移到计算和存储能力更强的客人设备上。此外，我们打算更详细地研究如何使客户端设备在聚合过程中更加可靠 [9]。
+联邦学习是人工智能的一个新分支，属于机器学习范式，能最大限度地减少模型训练中的偏差并保护隐私。在每一轮联邦学习中，会选择多个客户端（如企业、数据中心、物联网设备或移动设备）在内部训练数据以生成全局模型，因为原始数据存储在客户端的数据库中，不进行交易或传输 [8]。最近，物联网联邦学习利用区块链确保数据真实性，以吸引足够的客户端数据和计算资源进行训练。然而，缺乏系统且全面的架构设计，使得难以实现系统化开发和有效应对 `HIoT` 设备故障检测中数据异质性的挑战。在所提系统中，原始数据在本地存储。因此，中央服务器与客户端服务器通信以处理全局模型，从而了解酒店中的故障设备。设计中使用区块链技术，为客人数据提供可证明的真实性，并为客人完成调查的贡献提供经济激励。以减轻数据相似性和客人单调回答的影响。虽然本章对托管以协调客户端服务器的联邦学习模块有主要贡献，但为了通过未来开发修改设计，将模块从客人服务器转移到计算和存储能力更强的客人设备上。此外，我们打算更详细地研究如何使客户端设备在聚合过程中更加可靠 [9]。
 
 #### 2.2 在线旅行社（OTA）的酒店客房预订
 
-如果某条道路交通拥堵，应用程序可能会建议一条不同的路线到达目的地。同样，当我们寻找酒店预订即将到来的家庭度假时，经常会阅读大量客户评价。TripAdvisor 或 Booking.com 等网站几乎提供所有信息，包括场所的清洁度、员工的客户服务技能等。酒店拥有已入住客人和即将入住客人的各类数据，在不将机密用户数据发送到服务器的情况下，联邦学习是一种机器学习框架，使研究人员能够利用用户数据训练统计模型。它是一种分布式训练技术，训练和测试在边缘本地进行，仅将元数据传输到中心服务器，该服务器将众多模型更新（来自不同客户端）整合为一个新模型，以解决诸如车祸、交通拥堵、警察测速陷阱、路边停车等问题。结果，其他用户可以从这种协作中受益，做出更明智的驾驶选择。作为一个简单的例子 [10]。
+如果某条道路交通拥堵，应用程序可能会建议一条不同的路线到达目的地。同样，当我们寻找酒店预订即将到来的家庭度假时，经常会阅读大量客户评价。`TripAdvisor` 或 `Booking.com` 等网站几乎提供所有信息，包括场所的清洁度、员工的客户服务技能等。酒店拥有已入住客人和即将入住客人的各类数据，在不将机密用户数据发送到服务器的情况下，联邦学习是一种机器学习框架，使研究人员能够利用用户数据训练统计模型。它是一种分布式训练技术，训练和测试在边缘本地进行，仅将元数据传输到中心服务器，该服务器将众多模型更新（来自不同客户端）整合为一个新模型，以解决诸如车祸、交通拥堵、警察测速陷阱、路边停车等问题。结果，其他用户可以从这种协作中受益，做出更明智的驾驶选择。作为一个简单的例子 [10]。
 
 #### 2.3 水平数据分区
 
-大多数 FL 架构使用水平分区。由于能够为所有客户端使用相似的模型，服务器端的聚合变得更简单。其概念是利用高度分散的平台外包特定流程。这种方法被分解为离散的、简单的任务，新手可在短时间内完成。这些任务可能包括。越来越多的应用领域使用种类繁多的客户端，包括手机和物联网设备。大多数现有的联邦学习算法假设本地模型与全局模型共享通用架构。最近创建了一个新的联邦学习框架，以满足具有各种计算和通信能力的异构客户端的需求。在仍提供单一精确全局推理模型的同时，HeteroFL 方法能够实现具有动态可变计算和同分布数据复杂度的异构本地模型的训练。最后，利用 Amazon Mechanical Turk 等众包平台加速机器学习开发相当普遍 [11]。
+大多数 `FL` 架构使用水平分区。由于能够为所有客户端使用相似的模型，服务器端的聚合变得更简单。其概念是利用高度分散的平台外包特定流程。这种方法被分解为离散的、简单的任务，新手可在短时间内完成。这些任务可能包括。越来越多的应用领域使用种类繁多的客户端，包括手机和物联网设备。大多数现有的联邦学习算法假设本地模型与全局模型共享通用架构。最近创建了一个新的联邦学习框架，以满足具有各种计算和通信能力的异构客户端的需求。在仍提供单一精确全局推理模型的同时，`HeteroFL` 方法能够实现具有动态可变计算和同分布数据复杂度的异构本地模型的训练。最后，利用 `Amazon Mechanical Turk` 等众包平台加速机器学习开发相当普遍 [11]。
 
-酒店的物联网设备在保持客人满意度方面发挥着关键作用，它们还与酒店的各种应用程序协调，进而通过数字设备的反馈和在线旅行社（OTA）提高入住率。这些是在线网站，作为酒店入住率的来源，客户可以在上面留下入住反馈，这有助于根据需求选择酒店；酒店存在故障机制可能会降低入住率 [12]。
+酒店的物联网设备在保持客人满意度方面发挥着关键作用，它们还与酒店的各种应用程序协调，进而通过数字设备的反馈和在线旅行社（`OTA`）提高入住率。这些是在线网站，作为酒店入住率的来源，客户可以在上面留下入住反馈，这有助于根据需求选择酒店；酒店存在故障机制可能会降低入住率 [12]。
 
 #### 2.4 分布式系统
 
-
-
-
 # Pattern Analysis in Distributed Systems
 
-In distributed systems, pattern analysis techniques usually have a wider range of applications. The main goal of pattern analysis is to find structurally similar patterns in databases. Retail enterprises utilize consumer purchasing patterns to update inventory levels as a carefully designed key decision-making mechanism to gain an advantage over competitors. Enterprises adopt modeling techniques to understand customer behavior. For example, customer purchasing trends for specific services or goods, price and timing preferences, and the effectiveness of post-analysis decisions. This analysis helps retail enterprises provide better customer service, thereby increasing revenue. Retail organizations and enterprises need cutting-edge technology and need to continuously search for data to maintain market dynamics. This raises the question: Can data be transferred within the enterprise using multiple databases and combined in a common location? Maintaining databases for the number of points of sale is extremely difficult, if not impossible. Mobile wireless point-of-sale (POS) devices are also commonly used in stores that utilize real-time data to complete sales transactions. The exchange of data sources is often hindered by obstacles. Pattern analysis techniques require multiple types of data. For example, in product recommendation systems, the enterprise or owner has records (product information and user purchase data) but lacks information specifying payment habits and purchasing power. Existing databases exist in the form of small silos in most industries. This is the result of fierce market competition, customer privacy concerns, challenging administrative processes, and even resistance to data integration within departments. Therefore, combining different data from various institutions and agencies across the country is economically impractical, if not impossible [13].
 
-#### 2.5 Blockchain Data Security
+
+# In distributed systems, pattern analysis techniques usually have a wider range of applications
+
+The main goal of pattern analysis is to find structurally similar patterns in databases. Retail enterprises utilize consumer purchasing patterns to update inventory levels as a carefully designed key decision-making mechanism to gain an advantage over competitors. Enterprises adopt modeling techniques to understand customer behavior. For example, customer purchasing trends for specific services or goods, price and timing preferences, and the effectiveness of post-analysis decisions. This analysis helps retail enterprises provide better customer service, thereby increasing revenue. Retail organizations and enterprises need cutting-edge technology and need to continuously search for data to maintain market dynamics. This raises the question: Can data be transferred within the enterprise using multiple databases and combined in a common location? Maintaining databases for the number of points of sale is extremely difficult, if not impossible. Mobile wireless point-of-sale (`POS`) devices are also commonly used in stores that utilize real-time data to complete sales transactions. The exchange of data sources is often hindered by obstacles. Pattern analysis techniques require multiple types of data. For example, in product recommendation systems, the enterprise or owner has records (product information and user purchase data) but lacks information specifying payment habits and purchasing power. Existing databases exist in the form of small silos in most industries. This is the result of fierce market competition, customer privacy concerns, challenging administrative processes, and even resistance to data integration within departments. Therefore, combining different data from various institutions and agencies across the country is economically impractical, if not impossible [13].
+
+## 2.5 Blockchain Data Security
 
 Due to the increase in incidents involving data and user privacy, companies attach great importance to data security issues. Data breaches not only damage corporate reputation but also attract public and government attention. For example, the recent Facebook data hacking incident triggered various complaints. Therefore, some US states have re-examined their data protection legislation. The development and use of `GDPR` is the best example of data enforcement. The law grants users the legal guarantee to request erasure or withdrawal of their data. Companies found violating the law will face severe fines. Both China and the US have taken similar measures. The `Cybersecurity Law` and `General Principles of Civil Law` mandate data security. To prevent data breach issues when conducting data transactions with other parties, the law also enforces contracts (legally binding and protective). They ensure contracts comply with legal data protection requirements. These legal obligations and the adoption of new legislation create a secure data society. However, applying popular pattern analysis techniques to data without disclosing it raises a new problem [14].
 
@@ -4824,22 +4525,21 @@ The transaction models used in pattern analysis models usually contain stages su
 
 To create a smart home system, appliance manufacturers are committed to obtaining consumer feedback to improve their products and services. We created a Federated Learning (`FL`) system using a reputation mechanism to help appliance manufacturers train machine learning models based on consumer data, assisting manufacturers in developing smart home systems. Manufacturers can then predict future consumer demands and consumption patterns. System operation is divided into two parts. First, users use mobile devices and Mobile Edge Computing (`MEC`) servers to train the manufacturer's initial model. Customers use smartphones to collect data from various home appliances, subsequently downloading and training the base model using local data. After obtaining the signed models from regional customers, they transmit them to the blockchain. If the user or manufacturer behaves maliciously, we use the blockchain to replace the centralized aggregator of the standard `FL` system. The immutability of blockchain records makes it possible to track the behavior of dishonest buyers or producers. In the second phase, the manufacturer selects specific individuals or groups as miners, who will use the models received from customers to compute the average model. At the end of the crowdsourcing work, one of the miners elected as the temporary leader uploads the model to the blockchain. We impose Differential Privacy (`DP`) on the retrieved features and provide a novel normalization method to protect customer privacy while enhancing test accuracy. We demonstrate through experiments that when `DP` protection is applied to features, our normalization method outperforms Batch Normalization. In addition, we created an incentive system to reward participants to encourage more users to participate in crowdsourcing `FL` work [16].
 
-### 3. Federated Learning
+## 3. Federated Learning
 
 Federated Learning is very similar to distributed learning, and the two are closely related. Traditional distributed systems consist of distributed computing and distributed storage. In some respects, distributed computing is similar to the first model update `FL` proposed for Android clients. Although `FL` strongly emphasizes privacy protection, the latest research in distributed machine learning also pays great attention to privacy-preserving distributed systems. Using communication networks, multiple computers at different locations can be connected and managed by a central server to perform distributed processing, where each computer completes various components of a single task. Therefore, `FL` focuses on developing collaborative models without leaking privacy, while distributed processing mainly focuses on accelerating processing steps. To more specifically clarify the differences between distributed learning and the following `FL` characteristics: Universality in multi-organizational scenarios. `FL` proposed by Google is essentially an encrypted distributed machine learning technology that enables users to jointly create training models while keeping the underlying data localized.
 
-
-
-
-联邦学习（FL）的基本概念已扩展，涵盖了任何保护隐私的去中心化协作机器学习方法。因此，FL 可以在协作学习环境中处理按特征垂直划分的数据和按样本水平划分的数据。通过扩展 FL，跨组织企业可被整合进联邦框架。例如，拥有客户购买力信息的银行可与掌握产品特征信息的在线市场合作，推荐购买。因此，为众多实体智能地创建联合模型 [17]。不同的特征维度和多样的数据源使得每个人都能在坚持数据隐私设备数量的前提下，收获跨平台与本地协同创造的价值。显然，FL 更适合这种情况下的模型改进。由于设备资源的多样性，FL 关注的是非平衡和非独立同分布（non-IID）数据，这与主要关注平衡和独立同分布（IID）数据分布的分布式系统形成对比。这项技术是去中心化的。从技术上讲，去中心化并不意味着完全去中心化，但也不意味着存在一个固定的中心 [18]。
+联邦学习（`FL`）的基本概念已扩展，涵盖了任何保护隐私的去中心化协作机器学习方法。因此，`FL` 可以在协作学习环境中处理按特征垂直划分的数据和按样本水平划分的数据。通过扩展 `FL`，跨组织企业可被整合进联邦框架。例如，拥有客户购买力信息的银行可与掌握产品特征信息的在线市场合作，推荐购买。因此，为众多实体智能地创建联合模型 [17]。不同的特征维度和多样的数据源使得每个人都能在坚持数据隐私设备数量的前提下，收获跨平台与本地协同创造的价值。显然，`FL` 更适合这种情况下的模型改进。由于设备资源的多样性，`FL` 关注的是非平衡和非独立同分布（non-IID）数据，这与主要关注平衡和独立同分布（IID）数据分布的分布式系统形成对比。这项技术是去中心化的。从技术上讲，去中心化并不意味着完全去中心化，但也不意味着存在一个固定的中心 [18]。
 
 去中心化仅用于分散中心节点的知识。每个客户端都会影响中心模型；不存在对它们进行分类的中心。客户端创建的网络将因节点间的影响而提供非线性关系。
 
-主要由参数服务器使用的中心服务器主导数据分布，利用典型的分布式集中式技术和算力创建高效的协作范式。这种集中式数据处理技术存在双重通信开销。因为如果收集分散在各个数据库中的数据集进行训练，这些数据首先需要被复制，然后发送到中心服务器。接着，中心服务器将数据分发给每个分布式客户端进行分布式计算。这加剧了系统对算力、存储和带宽的严格要求。在 FL 场景中，每个客户端是独立的，数据不由中心分发，训练不由服务器控制。FL 是一个通过去中心化协作整合数据融合和机器学习模型的系统 [19]。
+主要由参数服务器使用的中心服务器主导数据分布，利用典型的分布式集中式技术和算力创建高效的协作范式。这种集中式数据处理技术存在双重通信开销。因为如果收集分散在各个数据库中的数据集进行训练，这些数据首先需要被复制，然后发送到中心服务器。接着，中心服务器将数据分发给每个分布式客户端进行分布式计算。这加剧了系统对算力、存储和带宽的严格要求。在 `FL` 场景中，每个客户端是独立的，数据不由中心分发，训练不由服务器控制。`FL` 是一个通过去中心化协作整合数据融合和机器学习模型的系统 [19]。
+
+
 
 在 FL 中，海量非独立同分布数据存在于数万个边缘节点和移动设备中。每个节点的数据容量仅限于节点总数。而在分布式系统中，根本目标是提高并行度，以减轻中央服务器的计算或存储工作负载。分布式系统中的节点数量不可能像 FL 那样多。世界现已进入可穿戴技术广泛用于健康监测的时代。每个设备仅产生少量数据，使其无法与总量相提并论。随着存储和处理能力的增强，数据科学在工业工程中的价值变得越来越清晰。近年来，工业工程见证了人工智能、机器学习、智能制造和深度学习的快速发展。然而，该领域数据科学的发展面临两大障碍。首要因素是数据治理。部分信息因法律原因被私有化。得益于《通用数据保护条例》（GDPR），用户现拥有对其数据的完全所有权。未经事先同意，任何机构或组织均不得使用用户数据。其次，数据孤岛是另一个阻碍现代工业增长的棘手问题，因为它们需要额外的训练。数据将提升训练效果 [20]。例如，由人类和机器产生的国际象棋数据，与最早的模型相比，Alpha Zero 能够击败专家。此外，医疗等某些行业的数据标注依赖专业人士，这可能增加正确数据的稀缺性。缺乏标签数据也阻碍了行业发展。为应对行业中的这些困难，FL 应运而生。FL 是一种新兴的机器学习策略，旨在在保护数据隐私的同时解决数据孤岛问题。对于去中心化机器学习设置，它指多个客户端与一个或多个中心服务器协调。Google 于 2016 年首次提出，旨在在数万台 Android 设备上预测用户的文本输入 [21]。
 
-#### 3.1 基于区块链的联邦学习
+### 3.1 基于区块链的联邦学习
 
 近年来，支持 HIoT（酒店物联网）的智能酒店系统备受青睐，因为它们旨在提升生活质量。根据统计分析，到 2022 年全球将有许多智能酒店。智能手机、现代无线通信、云与边缘计算、大数据分析和人工智能（AI）等物联网设备，主要使这一智能酒店概念成为可能。这些尖端技术使制造商能保持其智能酒店设备间的顺畅连接。随着智能酒店技术的普及，产生了海量数据。联邦学习（FL）使分析师无需将数据上传至中心化服务器，即可在去中心化方式下研究和利用本地生成的数据。区块链即使数据在本地保存，也能良好维护其功能。我们开发了一种基于 FL 的系统，利用消费者设备生成的数据，高效便捷地协助酒店设施。手机用于定期收集家用电器数据并训练系统，该系统将家庭中同品牌的酒店设施视为一个单元。由于移动设备算力受限和电池寿命有限，创建了本地机器学习模型；将部分训练任务卸载到边缘计算服务器 [22]。然后，通过区块链智能合约对用户提供的本地训练模型总和求平均，创建全局模型。源数据旨在以这种联邦方式确保安全和隐私。然而，研究表明梯度更新可能泄露大量关于客户端训练记录的信息。攻击者可从客户端上传的梯度中恢复数据。此外，联邦模型训练方法易受模型投毒攻击。此外，第三方拥有的移动边缘计算（MEC）服务器存在信息泄露风险。我们利用区块链技术和差分隐私克服上述安全和隐私挑战。值得注意的是，Apple 正在 FL 中有效实施 DP，以增强其知名语音助手服务的隐私。制造商专门上传带有初始化参数的早期模型。客户可从区块链获取模型，并用本地数据进行训练 [23]。
 
@@ -4855,11 +4555,9 @@ Figure 2. Federated Learning decentralized model.
 
 Figure 3. A blockchain-based Federated Learning model for fault detection in IoT.
 
-
-
 区块链有助于众包请求者验证是否存在任何欺诈性的客户更新。虽然我们的系统使用区块链来追踪众包活动，但旧系统由第三方维护，他们向客户收取高昂的服务费用。因此，客户和请求者可以在保持众包方法有效性的同时，避免支付昂贵的服务费用。考虑到模型规模巨大时的区块大小限制，我们建议使用星际文件系统（`IPFS`）作为分布式存储解决方案。更具体地说，在第一阶段，客户使用部署的特征提取器在移动端提取其数据的特征，并通过添加具有正式隐私保证的噪声来扰动恢复的特征。在第二阶段，客户在 `MEC` 服务器上使用扰动后的特征训练全连接模型层。此外，我们通过移除均值和方差要求并施加一个界限（其中 `N` 指定批量大小）来增强传统的批量归一化。训练完成后，客户使用其私钥对加密模型的哈希进行签名，将本地训练的模型传输到区块链。为了获得全局模型，选定的矿工下载模型，检查发送者身份，然后对所有模型参数进行平均 [[24]](#ch13.xhtml#ref13_24)。
 
-#### 3.2 基于 IoT 的酒店设备传感器
+### 3.2 基于 IoT 的酒店设备传感器
 
 无线传感器和执行器的部署使得基于 `IoT` 的自动化成为可能，它使各种物理设备能够进行数字化交互，让基础设施管理员能够轻松地从全球任何地方监控和监督大规模基础设施的运营。通过一个中心化的云平台，它能够根据所需视角利用 `AI/ML` 算法进行数据收集和分析 [[25]](#ch13.xhtml#ref13_25)。为了在这种快节奏的环境中蓬勃发展并占据榜首位置，酒店业迫切需要基于 `IoT` 的自动化。在全面监控的帮助下，酒店将能够提供高质量服务、优化住客舒适度并降低这一宝贵业务中的成本。
 
@@ -4885,8 +4583,6 @@ Figure 3. A blockchain-based Federated Learning model for fault detection in IoT
 
 ### 4. 酒店中使用的传感器和探测器类型
 
-
-
 酒店行业因其业务性质极其特殊，需要各种传感器和探测器以实现可靠、高效和安全的运营。以下列出其中一些：
 
 **烟雾探测器**是探测烟雾的装置，通常作为即将发生火灾的征兆。作为火灾报警系统的一个组成部分，商用安防设备向火灾报警控制面板提供信号。
@@ -4907,7 +4603,7 @@ Figure 3. A blockchain-based Federated Learning model for fault detection in IoT
 
 该拟议系统使用低成本的 **Wi-Fi 模块**、**气体探测传感器**、**火焰探测传感器**、**蜂鸣器**用于报警以及**温度传感器**来创建。利用传感器收集的信息，传感器识别局部紧急情况并通知系统，同时通过一个与所有机构紧密连接的模块，将精确位置传递给用户和操作员，从而向消防部门、警察局和医院等酒店相关机构发出警报。**物联网**被用于创建一个集成智能系统，以管理对无辜生命和财产的此类风险。这是最常用的监控设备类型 31 。**火焰传感器**按电路图所示连接到 **Arduino Nano** 的 **数字输入引脚**。如果您仍感兴趣，可以查看我们过去开发的一些其他简单火灾报警电路。由于 **SIM800L** 在 3.3V 逻辑电平下工作，因此通过电平转换电阻将其连接到 **Arduino Nano**。考虑到 **SIM800L** 模块的 3.4–4.2V DC 工作范围和 **Arduino Nano** 的 5V DC 外部供电，需为其单独供电。在这种情况下，可以使用 3.7–5V **升压转换器** 代替两个电源。
 
-本项目提出的基于**物联网**的火灾报警和监控系统最适合商业和住宅应用。导致珍贵生命和昂贵财产损失的意外死亡的主要因素是火灾。火灾的主要特征是其指数级增长，蔓延迅速并吞噬接触到的一切。因此，早期火灾探测对于挽救生命和保护财产至关重要。它可以探测烟雾、温度升高、火势蔓延等，并通过 **GSM** 将该信息传递给远程控制单元，以采取必要措施并通知最近的救援机构。拟议系统可探测火灾、多种气体和烟雾 32。该供应隐患系统映射到当地应急服务，如消防部门、警察和医院。这种基于 **物联网框架** 的火灾和气体传感系统专注于公共安全和民生服务领域。图 8 显示了使用标准化 **物联网** 设计技术的火灾探测系统。易燃气体传感器 **MQ-6** 用于探测 **LPG/LNG** 等气体，火花探测传感器 **PT333B** 用于探测火花，**GPS 模块**用于确定设备位置。这些传感器通过互联网连接到 **Wi-Fi 微控制器**，使其能够将任何隐患的状态传输到最近的服务中心以寻求任何类型的援助。将互联网接入延伸至工具、小工具和日常物品被称为 **物联网**，它配备了各种设备（例如传感器），这些工具通过远程系统共享信息，并可被细致监控，且可利用它们定期进行修改。由于各种进步，包括运行时分析、框架学习（**机器学习**）、传感器、传统嵌入式板级系统、无线传感器系统、控制系统、包括酒店和楼宇自动化在内的自动化等， **物联网** 的定义已发生改变 33。
+本项目提出的基于**物联网**的火灾报警和监控系统最适合商业和住宅应用。导致珍贵生命和昂贵财产损失的意外死亡的主要因素是火灾。火灾的主要特征是其指数级增长，蔓延迅速并吞噬接触到的一切。因此，早期火灾探测对于挽救生命和保护财产至关重要。它可以探测烟雾、温度升高、火势蔓延等，并通过 **GSM** 将该信息传递给远程控制单元，以采取必要措施并通知最近的救援机构。拟议系统可探测火灾、多种气体和烟雾 32。该供应隐患系统映射到当地应急服务，如消防部门、警察和医院。这种基于 **物联网框架** 的火灾和气体传感系统专注于公共安全和民生服务领域。图 8 显示了使用标准化 **物联网** 设计技术的火灾探测系统。易燃气体传感器 **MQ-6** 用于探测 **LPG/LNG** 等气体，火花探测传感器 **PT333B** 用于探测火花，**GPS 模块**用于确定设备位置。这些传感器通过互联网连接到 **Wi-Fi 微控制器**，使其能够将任何隐患的状态传输到最近的服务中心以寻求任何类型的援助。将互联网接入延伸至工具、小工具和日常物品被称为 **物联网**，它配备了各种设备（例如传感器），这些工具通过远程系统共享信息，并可被细致监控，且可利用它们定期进行修改。由于各种进步，包括运行时分析、框架学习（**机器学习**）、传感器、传统嵌入式板级系统、无线传感器系统、控制系统、包括酒店和楼宇自动化在内的自动化等，**物联网** 的定义已发生改变 33。
 
 ![Figure 8. Diagram for Arduino IoT fire detection.](img/fig13_8_B.jpg)
 
@@ -4915,17 +4611,15 @@ Figure 3. A blockchain-based Federated Learning model for fault detection in IoT
 
 #### 4.2 物联网的革命
 
+### 物联网创新与联邦学习集成
 
-
-# 物联网创新与联邦学习集成
-
-## 概述
+#### 概述
 
 物联网创新在消费市场中最为人所知的是与“智能家居”概念相关的产品，包括支持至少一种典型生活方式并可通过电话及其他连接到该框架作为遥控器的设备（如音箱和手机）进行控制的家用电器和小工具。我们在该项目中使用物联网，以快速评估可能出现的风险，并使其保持在安全距离之外。物联网有助于为客户简化一些事务。有了这个选项，它为我们提供了在必要时扩展系统的能力，使其更加可靠和高效。
 
 火灾是一种威胁生命和财产的可怕场景，且蔓延迅速。每年，火灾伤亡导致数千个家庭和生命的损失。通过预防火灾发生并提前采取必要的防护措施，可以节省大量资金。在发达国家，家庭配备了安全设施。然而，在发展中或欠发达地区，模型规模巨大，需要一种解决方案。
 
-## 隐私保护联邦学习框架
+#### 隐私保护联邦学习框架
 
 更具体地说，客户端使用部署的特征提取器在移动端提取其数据的特征，并在第一阶段通过添加具有形式化隐私保证的噪声来扰动恢复的特征。客户在 `MEC` 服务器上使用扰动后的特征训练全连接模型层，作为第二阶段。此外，我们通过移除均值和方差要求并施加一个界限（其中 `N` 指定批次大小）来增强传统的批量归一化。客户在训练后通过使用其私钥对加密模型的哈希值进行签名，将本地训练的模型传输到区块链。为了获得全局模型，选定的矿工下载模型，验证发送者身份，然后对所有模型参数进行平均 [34]。全局模型由一名被选为临时领导者的矿工加密并上传到区块链。此外，我们采用基于声誉的众包激励机制，奖励可信客户并惩罚不诚实客户，以鼓励更多用户参与众包工作，防止有害和恶意更新。
 
@@ -4937,27 +4631,21 @@ Figure 3. A blockchain-based Federated Learning model for fault detection in IoT
 
 ##### 4.3 面向物联网的多层区块链系统
 
-
-
-
-
 ## 结论
 
-本章为理解酒店行业的物联网设备故障检测提供了一种联邦学习策略，旨在提供一个拥有无瑕疵设备传感器的精准服务系统。在所提议的系统中，原始数据在本地存储，中央服务器协调客户端服务器以训练用于检测的共享全局模型。设计中采用了区块链技术，以提供客户端数据的可验证完整性以及对客户端贡献的经济激励。建议采用一种联邦学习算法，基于各客户端数据集正类与负类的分离，以减轻数据异质性的影响。利用一个真实世界的用例，基于建议的架构开发了一个概念验证原型。采用联邦学习算法来评估该策略的可行性、检测精度和性能。评估结果表明，所提策略成功实现了所有目标。尽管大多数联邦学习模块被提议通过将本章使用的客户端服务器上的所有模块迁移至具备更强计算和存储能力的客户端设备来改变这一概念。为使物联网设备制造商更好地了解其客户，本研究提出了一种基于区块链的联邦学习系统设计。该系统采用多种前沿技术构建，包括区块链、分布式存储和联邦学习。此外，该系统强制实施差分隐私（DP）以保护客户数据隐私。开发了一种新颖的归一化方法，当特征隐私受 DP 保护时，其性能优于批量归一化，能够提高联邦学习模型的准确性。如果提供适当的激励系统，客户更有可能参与酒店任务。物联网设备的优势在于为酒店客户提供即时信息。作为联邦训练的一部分，区块链将审核所有消费者更新，以便系统对模型升级负责，并阻止不诚实的用户或制造商。我们计划在未来运行进一步测试，并利用实际家用电器型号的数据集评估我们的系统。
-
-### 参考文献
-
-1. Qiang Yang, Yang Liu, Yong Cheng, Yan Kang, Tianjian Chen and Han Yu. 2019. Federated Learning. Synthesis Lectures on Artificial Intelligence and Machine Learning, 13.3: 1–207.
-
-2. Li, L., Fan, Y., Tse, M. and Lin, K.Y. 2020. A review of applications in Federated Learning. Computers & Industrial Engineering, 149: 106854.
-
-3. Nguyen, D.C., Ding, M., Pham, Q.V., Pathirana, P.N., Le, L.B., Seneviratne, A., Li, J., Niyato, D. and Poor, H.V. 2021. Federated Learning meets blockchain in edge computing: Opportunities and challenges. IEEE Internet of Things Journal, 8.16: 12806–12825.
 
 
+# 本章为理解酒店行业的物联网设备故障检测提供了一种联邦学习策略
 
+本章为理解酒店行业的物联网设备故障检测提供了一种联邦学习策略，旨在提供一个拥有无瑕疵设备传感器的精准服务系统。在所提议的系统中，原始数据在本地存储，中央服务器协调客户端服务器以训练用于检测的共享全局模型。设计中采用了区块链技术，以提供客户端数据的可验证完整性以及对客户端贡献的经济激励。建议采用一种联邦学习算法，基于各客户端数据集正类与负类的分离，以减轻数据异质性的影响。利用一个真实世界的用例，基于建议的架构开发了一个概念验证原型。采用联邦学习算法来评估该策略的可行性、检测精度和性能。评估结果表明，所提策略成功实现了所有目标。尽管大多数联邦学习模块被提议通过将本章使用的客户端服务器上的所有模块迁移至具备更强计算和存储能力的客户端设备来改变这一概念。为使物联网设备制造商更好地了解其客户，本研究提出了一种基于区块链的联邦学习系统设计。该系统采用多种前沿技术构建，包括区块链、分布式存储和联邦学习。此外，该系统强制实施差分隐私（`DP`）以保护客户数据隐私。开发了一种新颖的归一化方法，当特征隐私受 `DP` 保护时，其性能优于批量归一化，能够提高联邦学习模型的准确性。如果提供适当的激励系统，客户更有可能参与酒店任务。物联网设备的优势在于为酒店客户提供即时信息。作为联邦训练的一部分，区块链将审核所有消费者更新，以便系统对模型升级负责，并阻止不诚实的用户或制造商。我们计划在未来运行进一步测试，并利用实际家用电器型号的数据集评估我们的系统。
 
+## 参考文献
 
-### 参考文献
+1. Qiang Yang, Yang Liu, Yong Cheng, Yan Kang, Tianjian Chen and Han Yu. 2019. Federated Learning. *Synthesis Lectures on Artificial Intelligence and Machine Learning*, 13.3: 1–207.
+
+2. Li, L., Fan, Y., Tse, M. and Lin, K.Y. 2020. A review of applications in Federated Learning. *Computers & Industrial Engineering*, 149: 106854.
+
+3. Nguyen, D.C., Ding, M., Pham, Q.V., Pathirana, P.N., Le, L.B., Seneviratne, A., Li, J., Niyato, D. and Poor, H.V. 2021. Federated Learning meets blockchain in edge computing: Opportunities and challenges. *IEEE Internet of Things Journal*, 8.16: 12806–12825.
 
 4. Pokhrel, S.R. and Choi, J. 2020. Federated Learning with blockchain for autonomous vehicles: Analysis and design challenges. *IEEE Transactions on Communications*, 68.8: 4734–4746.
 
@@ -5021,15 +4709,13 @@ Figure 3. A blockchain-based Federated Learning model for fault detection in IoT
 
 34. Campos, E.M., Saura, P.F., González-Vidal, A., Hernández-Ramos, J.L., Bernabé, J.B., Baldini, G. and Skarmeta, A. 2021. Evaluating Federated Learning for intrusion detection in Internet of Things: Review and challenges. *Computer Networks*, 108661.
 
+
+
 35. Giménez, N.L., Grau, M.M., Centelles, R.P. and Freitag, F. 2022. On-device training of machine learning models on microcontrollers with Federated Learning. *Electronics*, 11.4: 573.
 
 36. Kim, H., Park, J., Bennis, M. and Kim, S.L. 2019. Blockchained on-device federated learning. *IEEE Communications Letters*, 24.6: 1279–1283.
 
-
-
-
-
-## 第 14 章 导航宏观任务的复杂性：联邦学习作为高效人群协调的催化剂
+# 第 14 章 导航宏观任务的复杂性：联邦学习作为高效人群协调的催化剂
 
 *S. Mayakannan*, *N. Krishnamurthy*, *K. Vimala Devi*^(¹⁴)
 
@@ -5047,7 +4733,7 @@ Figure 3. A blockchain-based Federated Learning model for fault detection in IoT
 
 电子邮件：kannanarchieves@gmail.com krishnamurthy@veltechmultitech.org; profdeepalakshmi@gmail.com; sandhya.marri@gmail.com; joseanandme@yahoo.co.in
 
-### 1. 简介
+## 1. 简介
 
 众包，即通过征求、审查和实施用户建议来完成项目的过程，近年来变得越来越流行 [[1]](#ch14.xhtml#ref14_1)。关于“众包”存在许多定义，但最常见的核心在于将任务“外包”给在线社区 [[2]](#ch14.xhtml#ref14_2)。如今，“众包”一词通常被定义为大量从事某种在线活动的人们的协作努力。CrowdFlower 和 Mechanical Turk 是两个流行的众包平台，吸引了大量愿意完成在线任务的人员 [[3]](#ch14.xhtml#ref14_3)。组成这些在线群体的“众包工作者”是丰富的信息和经验来源，可用于解决棘手问题 [[4]](#ch14.xhtml#ref14_4)。
 
@@ -5069,10 +4755,6 @@ Figure 3. A blockchain-based Federated Learning model for fault detection in IoT
 
 本章的重点是理解众包中的宏观任务，其对协调挑战的关注旨在促进我们对该主题的认识。我们希望达到三个目的。首先，我们回顾组织学和计算机科学领域中一些较知名且前沿的协调理念。本文介绍并讨论了交互记忆系统（TMS）、耻辱协调、协调理论、关系协调、基于角色的协调以及协调的整合模型等概念。在回顾了 HCI 和 CSCW 中关于宏观任务协调的研究后，将众多方法归类到公认的协调理论之一中。关于众包协调的 HCI/CSCW 文献虽有限但增长迅速，显示出研究重心从微任务向宏观任务转移的趋势。我们基于研究结果，评估了协调概念的最新进展以及 HCI 和 CSCW 在宏观任务协调方面的现有工作，并提出了进一步探索的研究议程。
 
-
-
-
-
 # 联邦学习：原理、技术与应用
 
 联邦学习为数据分布在众多设备（如智能手机或物联网设备）上的场景提供了一个极具前景的解决方案，在这些场景中，由于隐私、安全或带宽限制，将数据传输到中心位置要么不切实际，要么不可取。通过使参与者能够在不暴露其数据的情况下为通用模型做出贡献，联邦学习提供了一个机会，利用多样化且广泛的用户群体的集体知识，同时保持数据隐私和所有权。
@@ -5083,19 +4765,19 @@ Figure 3. A blockchain-based Federated Learning model for fault detection in IoT
 
 最后，我们将确定联邦学习领域未来研究和发展的方向，强调需要持续的探索与合作，以充分发挥这种去中心化机器学习方法的潜力。
 
-### 2. 相关工作
+## 2. 相关工作
 
-#### 2.1 微任务与宏任务的组织
+### 2.1 微任务与宏任务的组织
 
 人们很自然地会想知道宏任务协调与微任务协调有何区别。由于多种原因，宏任务比其较小的对应物需要员工之间进行更多的协作。许多项目被分解为更小、更易管理的块，称为“微任务”，然后分配给特定的人完成。相反，人群中的个人不一定需要相互沟通即可完成离散的、自包含的任务。然而，许多大规模项目无法委托给单个工作者，而是需要集体努力。宏任务的相互关联性质使得众包工人之间的协调变得重要。目标受众比请求者更有可能将宏任务分解为更小的任务。众包成员之间的协调对于宏任务的分解和后续微任务的组合都是必要的。
 
-#### 2.2 协调理论
+### 2.2 协调理论
 
-##### 2.2.1 跨性记忆系统
+#### 2.2.1 跨性记忆系统
 
-跨性记忆系统（TMS）中的任务协调基于系统内的个体相互了解并共享信息。共享或分担脑力劳动有助于完成工作 [14, 15 和 16]。信息系统、组织行为学、心理学和传播学只是许多研究领域中的几个，这些领域的研究表明 TMS 能改善协调，进而提升绩效 [17, 18]。特别是，TMS 在团队协调方面的优势导致了涌现性和适应性的行为模式，这反过来又促进了高效且不显眼的形式 [19]。TMS 是协调多个团队工作的成熟方法。
+跨性记忆系统（TMS）中的任务协调基于系统内的个体相互了解并共享信息。共享或分担脑力劳动有助于完成工作 [[14]](#ch14.xhtml#ref14_14)[[15]](#ch14.xhtml#ref14_15)[[16]](#ch14.xhtml#ref14_16)。信息系统、组织行为学、心理学和传播学只是许多研究领域中的几个，这些领域的研究表明 TMS 能改善协调，进而提升绩效 [[17]](#ch14.xhtml#ref14_17)[[18]](#ch14.xhtml#ref14_18)。特别是，TMS 在团队协调方面的优势导致了涌现性和适应性的行为模式，这反过来又促进了高效且不显眼的形式 [[19]](#ch14.xhtml#ref14_19)。TMS 是协调多个团队工作的成熟方法。
 
-五个基本要素使 TMS 得以运作。首先，小组中的每个人都需要在自己的领域内是专家。其次，小组需要建立一个心理图表，说明在专业领域方面，团队中的每个人如何为整体做出贡献。第三，每个小组成员应根据其专业领域负责特定的一组任务 [20, 21 和 22]。小组中的每个人都需要彼此信任，并相信其他人在各自的角色中称职 [23, 24]。第五，需要持续的双向沟通，以便小组中的每个人都能从其他人的经验和见解中受益 [25]。对话使共享专业信息变得更容易，这对于利用群体知识至关重要。
+五个基本要素使 TMS 得以运作。首先，小组中的每个人都需要在自己的领域内是专家。其次，小组需要建立一个心理图表，说明在专业领域方面，团队中的每个人如何为整体做出贡献。第三，每个小组成员应根据其专业领域负责特定的一组任务 [[20]](#ch14.xhtml#ref14_20)[[21]](#ch14.xhtml#ref14_21)[[22]](#ch14.xhtml#ref14_22)。小组中的每个人都需要彼此信任，并相信其他人在各自的角色中称职 [[23]](#ch14.xhtml#ref14_23)[[24]](#ch14.xhtml#ref14_24)。第五，需要持续的双向沟通，以便小组中的每个人都能从其他人的经验和见解中受益 [[25]](#ch14.xhtml#ref14_25)。对话使共享专业信息变得更容易，这对于利用群体知识至关重要。
 
 ##### 跨性记忆系统的基本要素
 
@@ -5109,21 +4791,17 @@ Figure 3. A blockchain-based Federated Learning model for fault detection in IoT
 
 **对宏任务的潜在缺点**：要么众包群体需要在项目开发方面拥有共同背景才能创建 TMS，要么必须有某种方式让众包成员相互传达各自的专业领域。众包员工可能没有足够的时间来建立 TMS。可以构建平台来揭示群体中的专家。然而，当人们加入和离开群体时，对于已经在工作的人来说，要跟踪谁知道什么可能具有挑战性。
 
-##### 2.2.2 协调理论
+#### 2.2.2 协调理论
 
-**它是什么？**：关于协调主题最著名的思想流派之一被称为“协调理论” [26]。根据该理论，协调需要控制所谓的“活动间的依赖关系” [27]。协调理论在创建协作系统背景下的创新用法是，基于任务间联系的性质使用协调机制 [28]。Malone 和 Crowston 在他们的协调分析中，建立了一个基于“行动者”、“相互依赖的任务”和“资源”三个轴的框架（1994）。在进行此分析后，可以采取适当的协调机制，以解决因任务、行动者和资源之间的相互依赖而产生的协调问题。
+**它是什么？**：关于协调主题最著名的思想流派之一被称为“协调理论” [[26]](#ch14.xhtml#ref14_26)。根据该理论，协调需要控制所谓的“活动间的依赖关系” [[27]](#ch14.xhtml#ref14_27)。协调理论在创建协作系统背景下的创新用法是，基于任务间联系的性质使用协调机制 [[28]](#ch14.xhtml#ref14_28)。Malone 和 Crowston 在他们的协调分析中，建立了一个基于“行动者”、“相互依赖的任务”和“资源”三个轴的框架（1994）。在进行此分析后，可以采取适当的协调机制，以解决因任务、行动者和资源之间的相互依赖而产生的协调问题。
 
-**它是如何工作的？**：协调理论在某些关键方面不同于其他协调理论。它强调任务之间的相互依赖，而不是人或部门之间的相互依赖 [29]。这一协调概念强调的是活动之间的关系，而非工人之间的关系。其次，它对任务间不同类型的相互依赖进行分类。这使得更容易理解特定依赖关系的潜在结果。该理论的另一个好处是它可以用来描述协调，这提高了我们查看不同工作分配和重新分配如何影响整体生产力的能力。这增强了对个体差异对团队凝聚力影响的认识。然而，最近的研究表明，协调理论在协调集体行动方面存在局限性 [30, 31]。
+**它是如何工作的？**：协调理论在某些关键方面不同于其他协调理论。它强调任务之间的相互依赖，而不是人或部门之间的相互依赖 [[29]](#ch14.xhtml#ref14_29)。这一协调概念强调的是活动之间的关系，而非工人之间的关系。其次，它对任务间不同类型的相互依赖进行分类。这使得更容易理解特定依赖关系的潜在结果。该理论的另一个好处是它可以用来描述协调，这提高了我们查看不同工作分配和重新分配如何影响整体生产力的能力。这增强了对个体差异对团队凝聚力影响的认识。然而，最近的研究表明，协调理论在协调集体行动方面存在局限性 [[30]](#ch14.xhtml#ref14_30)[[31]](#ch14.xhtml#ref14_31)。
 
 ##### 协调理论的基本要素
 
 *   识别任务
 *   识别并分类活动间的相互依赖关系
 *   利用最适合每种依赖类型的方法
-
-
-
-
 
 ## 宏观任务的潜在收益
 
@@ -5133,21 +4811,21 @@ Figure 3. A blockchain-based Federated Learning model for fault detection in IoT
 
 当工作需求不明确，或任务需求具有涌现性且随时间变化时，协调理论的帮助较小，因为它要求个人或群体预先规划行动。当众包复杂自适应任务时，这一局限性尤为明显，至少有一项研究证明了这一点 [[32]](#ch14.xhtml#ref14_32)。
 
-### 2.2.3 基于角色的协调理论
+#### 2.2.3 基于角色的协调理论
 
-在基于角色的结构中，与特定职位相关的职责和义务被清晰定义并始终如一地履行。与个人角色相关的职责和义务是其定义中不可或缺的一部分。长期以来，角色一直被视为组织协调的基本构建模块 [[33]](#ch14.xhtml#ref14_33)，[[34]](#ch14.xhtml#ref14_34)。
+在基于角色的结构中，与特定职位相关的职责和义务被清晰定义并始终如一地履行。与个人角色相关的职责和义务是其定义中不可或缺的一部分。长期以来，角色一直被视为组织协调的基本构建模块 [[33]](#ch14.xhtml#ref14_33)[[34]](#ch14.xhtml#ref14_34)。
 
-一些研究表明，基于角色的协调有助于涉及多名参与者的复杂且相互依赖的群体行动，而无需任何单个人承担执行基本职责的义务 [[35]](#ch14.xhtml#ref14_35)，[[36]](#ch14.xhtml#ref14_36)。
+一些研究表明，基于角色的协调有助于涉及多名参与者的复杂且相互依赖的群体行动，而无需任何单个人承担执行基本职责的义务 [[35]](#ch14.xhtml#ref14_35)[[36]](#ch14.xhtml#ref14_36)。
 
 诸如基于角色的概念等协调理论强调向团队成员分配明确的职责，并让他们对履行这些职责负责。理解结构的一种方式是将其视为层级系统，另一种方式是将其视为扁平的去中心化网络。基于角色的协调概念通过确定谁需要做什么、将任务分配给他们，并确保其角色设置以最佳方式促进必须完成的工作，从而推动事情完成。
 
-### 2.2.4 交互式协调理论
+#### 2.2.4 交互式协调理论
 
-根据关系协调假设，当工人之间拥有积极的关系时，生产力会大幅提升 [[37]](#ch14.xhtml#ref14_37)。信任和开放对话是个人和谐关系的基石。合理推断，协调不仅需要任务之间的相互依赖，还需要执行这些任务的人员之间的互动。因此，执行这些工作的人员之间如果互动质量更高，很可能会带来更好的协调和绩效 [[38]](#ch14.xhtml#ref14_38)，[[39]](#ch14.xhtml#ref14_39)。关系协调理论家声称，当劳动复杂、相互依赖且受时间限制时，高质量的连接对于实现绩效提升尤为关键 [[40]](#ch14.xhtml#ref14_40)。研究和常识都表明，公司的成功与其人员有效协作的程度息息相关 [[41]](#ch14.xhtml#ref14_41)。
+根据关系协调假设，当工人之间拥有积极的关系时，生产力会大幅提升 [[37]](#ch14.xhtml#ref14_37)。信任和开放对话是个人和谐关系的基石。合理推断，协调不仅需要任务之间的相互依赖，还需要执行这些任务的人员之间的互动。因此，执行这些工作的人员之间如果互动质量更高，很可能会带来更好的协调和绩效 [[38]](#ch14.xhtml#ref14_38)[[39]](#ch14.xhtml#ref14_39)。关系协调理论家声称，当劳动复杂、相互依赖且受时间限制时，高质量的连接对于实现绩效提升尤为关键 [[40]](#ch14.xhtml#ref14_40)。研究和常识都表明，公司的成功与其人员有效协作的程度息息相关 [[41]](#ch14.xhtml#ref14_41)。
 
 根据关系协调理论，协调是“一个沟通和连接构建的过程，旨在整合先前独立的职责”。根据关系协调概念，成功合作伙伴关系的关键要素是共享价值观、相互尊重和共同努力。该框架下理论化了沟通的四个维度 [[42]](#ch14.xhtml#ref14_42)。当人们“通过高质量的沟通协作，并以共享目标、共享知识和相互尊重的关系为基础”时，这被称为关系协调 [[43]](#ch14.xhtml#ref14_43)。这意味着，如果组织之间能在一致、准确、及时且以解决问题为导向的基础上进行沟通，它们将更容易协调活动并实现目标。
 
-#### 协调关系理论的基本要素
+##### 协调关系理论的基本要素
 
 *   共享目标
 *   关系
@@ -5159,47 +4837,45 @@ Figure 3. A blockchain-based Federated Learning model for fault detection in IoT
 *   解决问题导向
 *   频繁性
 
-### 2.2.5 环境刺激协调理论
+#### 2.2.5 环境刺激协调理论
 
 群体中每个成员致力于改进最终产品的合作被称为“环境刺激协调”（stigmergic coordination）。“环境刺激”（stigmergy）一词是昆虫学家在研究社会性昆虫后提出的。蚂蚁和白蚁等昆虫留下的痕迹（如信息素）会鼓励其他昆虫效仿。无刺蚁利用环境刺激协调寻找通往食物的最短路径，白蚁也利用它来建造和维护新热带蚁丘。环境刺激的概念影响了许多其他类型协作活动的发展，包括多智能体系统、自由开源软件创建和集体机器人技术。环境刺激协调方法的开发旨在应对这种流动且涌现的环境中的协调挑战，在这些环境中，工人和智能体并不保持持续沟通。
 
 特定集体的成员除了执行任务外，还会留下这些努力的证据。这要求让这些痕迹对其他参与者显而易见。他们结合自己的预见性利用这些信息，确定接下来必须完成的任务。最后，在执行任务的过程中，他们为群体其他成员留下后续跟进的证据。当众多任务由众多人执行时，协调以环境刺激的方式发生。这一发现表明，环境刺激协调可以在群体成员之间没有显性沟通的情况下涌现，而情境行动为“环境刺激协调”概念提供了灵感，该概念似乎通过建立跨特定领域专业人士共享的工作规范和实践来发挥作用。
 
-### 2.2.6 协调框架
+#### 2.2.6 协调框架
 
 Okhuysen 和 Bechky（2009）的整合框架的目标之一是加快协调机制识别的速度。在回顾协调文献（可预测性、问责制和共同理解）后，他们确定了三个基本需求和五种截然不同的协调机制（包括但不限于常规、角色、对象、表征、计划与规则以及邻近性）。在他们的综合方法中，Okhuysen 和 Bechky（2009）确定了五类协调机制，每一种都通过强化三个需求中的一个来促进协调。换句话说，他们的框架可以识别鼓励各种协调形式的条件。
 
-#### 它是如何运作的？
+##### 它是如何运作的？
 
 整合框架能够精准锁定能够奏效的确切机制，从而促进协调。假设透明度、可预测性和一致性很重要，可以选择有助于满足这三者的机制。同样，如果协调仍是个问题，也可以使用其他流程来强化特定条件。例如，当群体难以自我问责时，可以使用整合框架来寻找增强问责制的机制。
 
-#### 协调机制
+##### 协调机制
 
 **计划与规则**：一套用于组织任务、群体和部门的指南通常被称为“计划与规则”。计划与指南通过明确谁负责什么来提供帮助。有了遵循的计划和指南，就能就应做什么（进一步）活动以及在选项中做出哪些选择以完成任务做出协调决策。
 
-
-
-
-
-# 对象与表征
+**对象与表征**
 
 当被妥善使用时，对象、表征和技术能提供有助于任务协调并带来更高效结果的信息（直接信息共享）。为了让团队能有效地沟通问题、想法和行动，必须使用边界对象（如数据电子表格）。脚手架，即角色和职责的图形化表征，提供了一个框架，让所有人对必须完成什么、谁负责什么、拼图的各个部分如何契合以及实际进展到何种程度保持在同一页面上（认可并对齐工作）。
 
-# 角色
+**角色**
 
 角色可作为一种协调手段，主要有两种方式。角色在代表演员在特定位置上执行的一组职责和活动的同时，也使得职责能够根据工作场所的变化而重塑（监控与更新）。通过建立清晰的分工，可以形成共同的观点。如果大家都在同一页面上，角色切换就很简单。
 
-# 常规
+**常规**
 
 传统组织环境将常规定义为“受规则和规范管辖的行为常规模式”。但在学术文献中，已逐渐形成共识：“常规”内嵌着“社会相关性和社会互动……”。
 
-# 邻近性
+**邻近性**
 
 “邻近性”一词用于描述一种不一定与实际物理邻近性挂钩的合作方式。暴露程度和熟悉度便是此类特征。“可见性”一词意指观察他人行动的能力，常与共处一地联合使用，但并非其存在的必要条件。通过“熟悉感”，即依赖过往与他人的关系，可协助行动的协调。但同样，熟悉感并不总是共处一地的先决条件。
 
 ## 条件
 
 ### 问责制
+
+
 
 “问责制”描述了大型工作中特定部分由谁负责。人们期望，通过明确并显性化谁负责什么任务，从而产生团队中的协调行动。在整合框架中，问责制延伸至通过非计划和即兴交流（如团队成员间的对话）开发出的手段。这种脚手架可以采取计划、规则或实物对象的形式，并能将任务与负责人联系起来。除了促进持续的监控、更新和工人间的交接外，角色、常规和透明度都有助于这些过程。
 
@@ -5245,15 +4921,11 @@ Okhuysen 和 Bechky（2009）的整合框架的目标之一是加快协调机制
 
 通过应对模型和数据异质性、可扩展性及效率等挑战，联邦学习可显著改进众包协调策略。将联邦学习整合到现有的众包协调方法论中，能够在尊重隐私和数据所有权的前提下，利用大量人群的多样化才能和知识。这反过来又能通过大量人群的集体努力，为应对极具挑战性的宏观任务带来更有效、更高效的解决方案。
 
-
-
-
-
 ### 3. 关于协同宏任务众包的最新研究
 
 #### 3.1 搜索方法
 
-我们首先在 Google Scholar 中搜索“微任务”、“协同”和“众包”，以评估宏任务协同领域的最新研究。2018 年 8 月，我们进行了检索，共返回 60 条结果。在阅读摘要后，我们根据以下标准决定纳入哪些文章：(1) 涉及宏任务的协同问题，或 (2) 为众包宏任务提出并实证检验了想法或设计。研究人员排除了非英语出版的作品、专利申请、专利综述论文、综述文章，以及非原本用英语撰写的作品。初步检索结果显示，有 8 项研究完全符合标准。我们回溯到最初，追踪搜索中的原始线索。这是因为我们发现某些研究虽然对宏任务协同领域很重要，但关键词搜索却遗漏了它们。尽管它们在探讨宏任务协同问题的研究讨论中被频繁提及。最终选定 10 篇出版物纳入文献评价，因为它们符合所有标准。
+我们首先在 `Google Scholar` 中搜索“微任务”、“协同”和“众包”，以评估宏任务协同领域的最新研究。`2018 年 8 月`，我们进行了检索，共返回 `60` 条结果。在阅读摘要后，我们根据以下标准决定纳入哪些文章：(1) 涉及宏任务的协同问题，或 (2) 为众包宏任务提出并实证检验了想法或设计。研究人员排除了非英语出版的作品、专利申请、专利综述论文、综述文章，以及非原本用英语撰写的作品。初步检索结果显示，有 `8` 项研究完全符合标准。我们回溯到最初，追踪搜索中的原始线索。这是因为我们发现某些研究虽然对宏任务协同领域很重要，但关键词搜索却遗漏了它们。尽管它们在探讨宏任务协同问题的研究讨论中被频繁提及。最终选定 `10` 篇出版物纳入文献评价，因为它们符合所有标准。
 
 #### 3.2 宏任务的协同众包方法
 
@@ -5263,13 +4935,13 @@ Okhuysen 和 Bechky（2009）的整合框架的目标之一是加快协调机制
 
 作者认为，工人之间的熟悉度是分散人群执行工作的必要要素。在组建团队时，他们不仅考虑了可用性，还考虑了参与者之前的合作经验。他们还提供了即时通讯手段和协同创作平台。研究人员发现，与熟人一起工作的员工表现更好，因为他们能够发挥各成员的特长，并更容易理解团队的工作流程。这项研究并未发生在以往关系协同研究所关注的面对面组织互动环境中。然而，该研究成功地评估了关系沟通的价值，方法是将相互认识的人聚集在一起，并利用适当的通讯技术充分发挥他们的共享知识。
 
-总之，学者们似乎严重依赖协同理论来研究众包中的宏任务管理。基于角色的协同理论和关系协同理论紧随其后。所有纳入的研究中均未使用 TMS（跨主体记忆系统）或拟社会性方法。不过，该文献基础仍相当年轻，2015 年前仅发表两项研究，而超过一半发表于 2017 年或 2018 年。
+总之，学者们似乎严重依赖协同理论来研究众包中的宏任务管理。基于角色的协同理论和关系协同理论紧随其后。所有纳入的研究中均未使用 `TMS`（跨主体记忆系统）或拟社会性方法。不过，该文献基础仍相当年轻，`2015 年`前仅发表两项研究，而超过一半发表于 `2017 年`或 `2018 年`。
 
 #### 3.3 宏任务众包的协同机制
 
 ##### 3.3.1 规则与计划
 
-借助计划和规则，确定了需要完成的任务和负责执行的人员。特别是在宏任务背景下，面向众包工人的计划和规则应随工作进展而修改和调整。Turkomatic 是一个依赖众包进行实时工作流编辑的平台。Turkomatic 的灵感源于希望为工人提供一种资源，使他们更容易应对复杂任务。为了帮助大群人完成讲故事等困难任务，采用了一种反思和修订策略。他们基于自上而下的目标成功完成叙事写作任务，这体现了此类目标对于复杂且不确定工作的价值。虽然目标实现了容纳众多众包工人输出的功能，但该方法的一个独特之处在于：目标并非硬编码在写作系统中，而是从已完成阶段的工人中选出的。这样，通过循环经历内省和目标设定阶段，工人能够为问题提供更好的解决方案。
+借助计划和规则，确定了需要完成的任务和负责执行的人员。特别是在宏任务背景下，面向众包工人的计划和规则应随工作进展而修改和调整。`Turkomatic` 是一个依赖众包进行实时工作流编辑的平台。`Turkomatic` 的灵感源于希望为工人提供一种资源，使他们更容易应对复杂任务。为了帮助大群人完成讲故事等困难任务，采用了一种反思和修订策略。他们基于自上而下的目标成功完成叙事写作任务，这体现了此类目标对于复杂且不确定工作的价值。虽然目标实现了容纳众多众包工人输出的功能，但该方法的一个独特之处在于：目标并非硬编码在写作系统中，而是从已完成阶段的工人中选出的。这样，通过循环经历内省和目标设定阶段，工人能够为问题提供更好的解决方案。
 
 ##### 3.3.2 常规
 
@@ -5281,15 +4953,11 @@ Okhuysen 和 Bechky（2009）的整合框架的目标之一是加快协调机制
 
 #### 3.4 总结
 
-重要的是，我们的研究团队发现，在宏任务众包背景下，很少有协同选项得到研究。具体而言，作者发现大多数宏观层面任务协同研究集中在规划和制定指南（80%），这些规划和指南定义了总体目标和一组子目标。接下来是构建对象和表征的研究（50%）。多位研究者还采用基于角色的方法来协调大型项目（40%）。有一项分析聚焦于常规与邻近性的关系。
+重要的是，我们的研究团队发现，在宏任务众包背景下，很少有协同选项得到研究。具体而言，作者发现大多数宏观层面任务协同研究集中在规划和制定指南（`80%`），这些规划和指南定义了总体目标和一组子目标。接下来是构建对象和表征的研究（`50%`）。多位研究者还采用基于角色的方法来协调大型项目（`40%`）。有一项分析聚焦于常规与邻近性的关系。
 
 ### 4. 结果与讨论
 
-作者对宏任务中使用的多种协同理论进行了快速文献综述，发现虽然邻近性（可见性和熟悉度）和常规的概念已被广泛研究，但拟社会性协同和关系协同概念受到的关注较少。这些理念和方法似乎最有望用于大型项目的众包。首先，这些框架依赖于互动的社会过程和对涌现条件的适应。它们不太重视识别任务相互依赖性，也不太重视预先为众包成员分配角色。初始工作定义方法几乎肯定将始终严重依赖请求者。然而，邻近性（可见性和熟悉度）、常规和拟社会性协同建立了非正式协同，允许更自发的任务协调。随着众包演变为更专注于大规模项目而非小型项目，作者预计这些非正式协同方法将证明是最高效的。关系协同中的“共享知识”概念也包含了许多 TMS 理念。
-
-
-
-
+作者对宏任务中使用的多种协同理论进行了快速文献综述，发现虽然邻近性（可见性和熟悉度）和常规的概念已被广泛研究，但拟社会性协同和关系协同概念受到的关注较少。这些理念和方法似乎最有望用于大型项目的众包。首先，这些框架依赖于互动的社会过程和对涌现条件的适应。它们不太重视识别任务相互依赖性，也不太重视预先为众包成员分配角色。初始工作定义方法几乎肯定将始终严重依赖请求者。然而，邻近性（可见性和熟悉度）、常规和拟社会性协同建立了非正式协同，允许更自发的任务协调。随着众包演变为更专注于大规模项目而非小型项目，作者预计这些非正式协同方法将证明是最高效的。关系协调中的“共享知识”概念也包含了许多 `TMS` 理念。
 
 #### 4.1 拟刺激协调
 
@@ -5305,9 +4973,9 @@ Okhuysen 和 Bechky（2009）的整合框架的目标之一是加快协调机制
 
 从事拟刺激协调的员工利用这些痕迹推断已完成的工作以及接下来应做的工作。因为他们属于一个拥有共同历史和经验的凝聚力群体，工人无需刻意尝试即可进行协调。通过接触相似的环境，社区成员更有可能形成完成任务的共享实践和习惯。这使得员工能够利用痕迹作为进行隐性协作的手段。接下来，作者阐述了三种将拟刺激协调用于大规模任务众包的策略。
 
-一种策略是雇佣已经共享文化、价值观和工作习惯的群体成员。给予足够的时间，群体工人将发展出类似于成熟在线社区成员所用的拟刺激协作策略。例如，可以聘请一群 GitHub 用户来完成一个大型项目。这支队伍已经共享共同的历史、文化和实践。如果众包平台的组织方式类似于流行的代码仓库 GitHub，用户将获益最大。GitHub 上的新众包平台应当支持群体工人之间的拟刺激协作以完成宏任务，因为它营造了一个公共工作空间，员工可在其中建立和维护共同的实践与惯例。
+一种策略是雇佣已经共享文化、价值观和工作习惯的群体成员。给予足够的时间，群体工人将发展出类似于成熟在线社区成员所用的拟刺激协作策略。例如，可以聘请一群 `GitHub` 用户来完成一个大型项目。这支队伍已经共享共同的历史、文化和实践。如果众包平台的组织方式类似于流行的代码仓库 `GitHub`，用户将获益最大。`GitHub` 上的新众包平台应当支持群体工人之间的拟刺激协作以完成宏任务，因为它营造了一个公共工作空间，员工可在其中建立和维护共同的实践与惯例。
 
-另一种选择是在虚拟空间中组织一群人，以寻找群体工作者。采用此策略可获得两大益处。第一个益处是，它将使群体工人更容易建立共同基础并形成惯例。给予足够的时间，群体工人将发展出类似于成熟在线社区成员所用的拟刺激协作策略。其次，这种方法将使为尚无在线家园的主题或兴趣创建新在线社区成为可能。设想这样一种场景：执行宏任务的工人需要特定编程语言（如通用商业导向语言 COBOL）的专业知识。这种语言不常被教授，但许多运行旧应用程序的大型机仍在使用它。建立 COBOL 程序员在线社区将有利于招募需要 COBOL 技能的宏任务。
+另一种选择是在虚拟空间中组织一群人，以寻找群体工作者。采用此策略可获得两大益处。第一个益处是，它将使群体工人更容易建立共同基础并形成惯例。给予足够的时间，群体工人将发展出类似于成熟在线社区成员所用的拟刺激协作策略。其次，这种方法将使为尚无在线家园的主题或兴趣创建新在线社区成为可能。设想这样一种场景：执行宏任务的工人需要特定编程语言（如通用商业导向语言 `COBOL`）的专业知识。这种语言不常被教授，但许多运行旧应用程序的大型机仍在使用它。建立 `COBOL` 程序员在线社区将有利于招募需要 `COBOL` 技能的宏任务。
 
 第三种策略是通过考察潜在宏任务群体员工在特定在线社区中的过往记录来对其进行审核。有意向的工人将被鼓励加入指定的在线社区，以便被考虑选拔为宏任务工作者。这将使群体工人能够接触到预先存在的在线社区，以学习基本规则并获取基础专业知识。随着时间的推移，团队将变得更加紧密，建立起惯例和习惯，从而能够承担更大规模的项目并共同取得更多成果。
 
@@ -5329,9 +4997,6 @@ Okhuysen 和 Bechky（2009）的整合框架的目标之一是加快协调机制
 随后，作者提出了研究问题，若得到解答，将加深我们对众包在协调大规模项目方面潜力的认识。
 
 **RQ 3a**：*如何在宏任务众包中促进共享知识？*
-
-
-
 
 根据关系协调概念，当团队成员对其具体职责有牢固掌握时，他们更有可能相处融洽并重视彼此。此类知识有助于清晰准确表达的发展。在众包达到足够高程度的共享知识之前，有两大障碍需要克服。第一，众包通常涉及非长期工作者，且他们彼此间缺乏合作实践。这意味着他们最初对彼此知之甚少。第二，取决于完成活动所需的时间长短，众包工作者可能没有足够时间获取可提高生产力和效率的共同知识。这两个问题严重削弱了众包工作者依赖先前获取信息的协调机制。
 
@@ -5355,122 +5020,123 @@ Okhuysen 和 Bechky（2009）的整合框架的目标之一是加快协调机制
 
 | 关系协调设计命题 |
 | --- |
-| 设计命题 2 |  | 面向关系协调的众包技术将帮助众包工作者高效完成宏任务。 |
-| 设计命题 2a |  | 众包系统应通过简化共享专业知识的生产和传播来鼓励关系协调。 |
-| 设计命题 2b |  | 旨在改善关系协调的众包解决方案应使人们能轻松设定和讨论共享目标。 |
-| 设计命题 2c |  | 旨在改善关系协调的众包平台应鼓励相互尊重的成熟。 |
-| 设计命题 2d |  | 旨在改善关系协调的众包系统因此应优先考虑清晰开放的沟通渠道。 |
+| 设计命题 2 | 面向关系协调的众包技术将帮助众包工作者高效完成宏任务。 |
+| 设计命题 2a | 众包系统应通过简化共享专业知识的生产和传播来鼓励关系协调。 |
+| 设计命题 2b | 旨在改善关系协调的众包解决方案应使人们能轻松设定和讨论共享目标。 |
+| 设计命题 2c | 旨在改善关系协调的众包平台应鼓励相互尊重的成熟。 |
+| 设计命题 2d | 旨在改善关系协调的众包系统因此应优先考虑清晰开放的沟通渠道。 |
 
 #### 4.3 局限性
-
-
 
 本章讨论的协调理论在某些关键概念领域被证明是共享或重叠的。然而，在辩论其优缺点时，作者们通常将它们视为独立的实体。作者们在划分各种协调理论时可能过于仓促或过于僵化。研究众包协调问题的学者应考虑采用一种混合策略，结合各理论的不同部分。将基于角色的协调添加到现有的环境刺激协调中只是一个例子。为实现这一点，可能有必要引入不熟悉既定程序和政策的新人进入工作场所。通过明确划分他们的职责，可以将他们因不熟悉痕迹而造成的工作场所干扰降至最低。作者们也认识到，每种理论的文献浩如烟海、博大精深，远超出本章的范围。本章对每种理论进行了简要描述。往往很难判断清晰与完整在哪里开始，简略与混淆在哪里开始。因此，本章的目标是突出与众包环境中宏观任务协调相关的问题。我们的建议应被视为建议，并鼓励读者自行研究相关主题。作者们最后推荐了一些设计概念，以弥合理论与实践考量之间的鸿沟。我们所有的假设都是概括性的，就像所有假设一样。设计假设应源自设计命题，并经由实证检验。我们期待未来有越来越多的学者接受这一挑战。
 
 ### 5. 结论
 
+
+
+## 未来研究方向
+
 将联邦学习融入群体协调工作中，对于提高大量人群协作解决复杂宏观任务的有效性具有重大潜力。然而，为了充分发挥这一方法的潜力，仍有若干研究领域需要进一步探索。在本节中，我们将讨论两个关键的未来研究方向：激励用户参与的激励机制，以及支持大规模群体协调的安全、高效通信协议的开发。
+
+### 激励机制
 
 基于联邦学习的群体协调面临的挑战之一是激励用户参与该过程。有效的激励机制对于确保用户愿意为群体的集体利益分享其资源、时间和专业知识至关重要。未来的研究应探索各种激励机制，包括金钱奖励、社会认可和游戏化，以鼓励用户参与基于联邦学习的群体协调工作。此外，开发公平透明的奖励体系，考虑到用户贡献程度的差异、其数据质量以及所提供的计算资源，对于促进持续的参与和协作至关重要。
 
+### 安全高效的通信协议
+
 联邦学习高度依赖参与设备与中央服务器之间的通信以进行模型聚合。随着群体协调工作规模扩大以容纳更大的参与者群体和更复杂的任务，对安全高效通信协议的需求变得日益重要。未来的研究应专注于开发确保数据隐私、维护模型更新完整性并最大限度减少对抗性攻击可能性的通信协议。这包括探索安全多方计算、同态加密和差分隐私等技术。此外，通过模型压缩、稀疏化和量化等技术优化通信效率，有助于减少与数据传输相关的开销，并提高基于联邦学习的群体协调工作的整体性能。
+
+### 总结
 
 通过解决这些未来研究方向，我们可以继续深化对如何将联邦学习有效融入群体协调方法论的理解，并提升此类工作的成功率。探索创新的激励机制和开发安全、高效的通信协议，对于释放基于联邦学习的群体协调的全部潜力至关重要，这将使大量人群能够在保持隐私和数据所有权的前提下应对复杂的宏观任务。
 
-### 参考文献
+## 参考文献
 
-1.  Thomas, N., Balagopal, A. and Varghese, S.M. 2019. Green route: An ecofriendly route suggestion and description based on congestion and air quality. Int. J. Innov. Technol. Explor. Eng., 8(5): 414–419.
+1.  Thomas, N., Balagopal, A. and Varghese, S.M. 2019. Green route: An ecofriendly route suggestion and description based on congestion and air quality. *Int. J. Innov. Technol. Explor. Eng.*, 8(5): 414–419.
 
-2.  Musil, J., Musil, A. and Biffl, S. 2013. Elements of software ecosystem early-stage design for collective intelligence systems. In 2013 1st International Workshop on Software Ecosystem Architectures, WEA 2013 - Proceedings, pp. 21–25. doi: [10.1145/2501585.2501590](http://dx.doi.org/10.1145/2501585.2501590).
+2.  Musil, J., Musil, A. and Biffl, S. 2013. Elements of software ecosystem early-stage design for collective intelligence systems. In *2013 1st International Workshop on Software Ecosystem Architectures, WEA 2013 - Proceedings*, pp. 21–25. doi: [10.1145/2501585.2501590](http://dx.doi.org/10.1145/2501585.2501590).
 
-3.  Wang, L., Yang, Y. and Wang, Y. 2019. Do higher incentives lead to better performance?—An exploratory study on software crowdsourcing. In International Symposium on Empirical Software Engineering and Measurement, vol. 2019-Septe. doi: [10.1109/ESEM.2019.8870175](http://dx.doi.org/10.1109/ESEM.2019.8870175).
+3.  Wang, L., Yang, Y. and Wang, Y. 2019. Do higher incentives lead to better performance?—An exploratory study on software crowdsourcing. In *International Symposium on Empirical Software Engineering and Measurement*, vol. 2019-Septe. doi: [10.1109/ESEM.2019.8870175](http://dx.doi.org/10.1109/ESEM.2019.8870175).
 
-4.  Maheswari, R., Vignesh, S., Kumar, R., Venkatesh, T.M. and Sundar, R. 2022. Voice control and eyeball movement operated wheelchair. In 2022 International Conference on Edge Computing and Applications (ICECAA), pp. 805–809.
+4.  Maheswari, R., Vignesh, S., Kumar, R., Venkatesh, T.M. and Sundar, R. 2022. Voice control and eyeball movement operated wheelchair. In *2022 International Conference on Edge Computing and Applications (ICECAA)*, pp. 805–809.
 
-5.  Yang, Y. and Saremi, R. 2015. Award vs. worker behaviors in competitive crowdsourcing tasks. In International Symposium on Empirical Software Engineering and Measurement, pp. 68–77. doi: [10.1109/ESEM.2015.7321192](http://dx.doi.org/10.1109/ESEM.2015.7321192).
+5.  Yang, Y. and Saremi, R. 2015. Award vs. worker behaviors in competitive crowdsourcing tasks. In *International Symposium on Empirical Software Engineering and Measurement*, pp. 68–77. doi: [10.1109/ESEM.2015.7321192](http://dx.doi.org/10.1109/ESEM.2015.7321192).
 
-6.  Ponmalar, A., Renukadevi, B., Anand, J., Kamalisri, G., Dharshini, N. and Sobana, N. 2022. Automatic forensic analysis of criminal navigation system using machine learning. In 2022 1st International Conference on Computational Science and Technology (ICCST), pp. 1–5.
+6.  Ponmalar, A., Renukadevi, B., Anand, J., Kamalisri, G., Dharshini, N. and Sobana, N. 2022. Automatic forensic analysis of criminal navigation system using machine learning. In *2022 1st International Conference on Computational Science and Technology (ICCST)*, pp. 1–5.
 
-7.  Lykourentzou, I., Vergados, D.J., Papadaki, K. and Naudet, Y. 2013. Guided crowdsourcing for collective work coordination in corporate environments. Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics), vol. 8083 LNAI, pp. 90–99. doi: [10.1007/978-3-642-40495-5\_10](http://dx.doi.org/10.1007/978-3-642-40495-5_10).
+7.  Lykourentzou, I., Vergados, D.J., Papadaki, K. and Naudet, Y. 2013. Guided crowdsourcing for collective work coordination in corporate environments. *Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)*, vol. 8083 LNAI, pp. 90–99. doi: [10.1007/978-3-642-40495-5_10](http://dx.doi.org/10.1007/978-3-642-40495-5_10).
 
-8.  Sundaram, S.G., Ponmalar, A., Deeba, S., Aarthi, S., Shwetha, S. and Anand, J. 2022. Plane detection and product trail using augmented reality. In 2022 1st International Conference on Computational Science and Technology (ICCST), pp. 887–892.
+8.  Sundaram, S.G., Ponmalar, A., Deeba, S., Aarthi, S., Shwetha, S. and Anand, J. 2022. Plane detection and product trail using augmented reality. In *2022 1st International Conference on Computational Science and Technology (ICCST)*, pp. 887–892.
 
-9.  Sims, R. 2023. Minimal cognition and stigmergic coordination: An everyday tale of building and bacteria. Cogn. Syst. Res., 79: 156–164. doi: [10.1016/j.cogsys.2023.01.008](http://dx.doi.org/10.1016/j.cogsys.2023.01.008).
+9.  Sims, R. 2023. Minimal cognition and stigmergic coordination: An everyday tale of building and bacteria. *Cogn. Syst. Res.*, 79: 156–164. doi: [10.1016/j.cogsys.2023.01.008](http://dx.doi.org/10.1016/j.cogsys.2023.01.008).
 
-10.  Xu, Z., Wang, G. and Guo, X. 2023. Event-driven daily activity recognition with enhanced emergent modeling. Pattern Recognit., 135. doi: [10.1016/j.patcog.2022.109149](http://dx.doi.org/10.1016/j.patcog.2022.109149).
+10.  Xu, Z., Wang, G. and Guo, X. 2023. Event-driven daily activity recognition with enhanced emergent modeling. *Pattern Recognit.*, 135. doi: [10.1016/j.patcog.2022.109149](http://dx.doi.org/10.1016/j.patcog.2022.109149).
 
-11.  Sims, R. and Yilmaz, Ö. 2023. Stigmergic coordination and minimal cognition in plants. Adapt. Behav. doi: [10.1177/10597123221150817](http://dx.doi.org/10.1177/10597123221150817).
+11.  Sims, R. and Yilmaz, Ö. 2023. Stigmergic coordination and minimal cognition in plants. *Adapt. Behav.* doi: [10.1177/10597123221150817](http://dx.doi.org/10.1177/10597123221150817).
 
+12.  Ribino, P., Islam, S., Ciampi, M. and Papastergiou, S. 2023. 基于群体智能的多智能体通信模型，用于保障医疗生态系统安全。*Lecture Notes in Networks and Systems*, vol. 594 LNNS, pp. 50–61. doi: [10.1007/978-3-031-213335_5](http://dx.doi.org/10.1007/978-3-031-213335_5)。
 
+13.  Xu, X., Li, R., Zhao, Z. and Zhang, H. 2022. 用于多智能体协作的拟刺激独立强化学习。*IEEE Trans. Neural Networks Learn Syst.*, 33(9): 4285–4299. doi: [10.1109/TNNLS.2021.3056418](http://dx.doi.org/10.1109/TNNLS.2021.3056418)。
 
+14.  Alajami, A.A., Moreno, G. and Pous, R. 2022. 面向无地图室内环境的基于拟刺激机制的自主 RFID 动态盘点无人机设计。*Drones*, 6(8). doi: [10.3390/drones6080208](http://dx.doi.org/10.3390/drones6080208)。
 
-### 参考文献
+15.  Tamari, R., Friedman, D., Fischer, W., Hebert, L. and Shahaf, D. 2022. 从用户到（意义）创造者：关于拟刺激社会标注在集体意义建构探索中的关键作用。载于 *HT 2022: 33rd ACM Conference on Hypertext and Social Media - Co-located with ACM WebSci 2022 and ACM UMAP 2022*, pp. 236–239. doi: [10.1145/3511095.3536361](http://dx.doi.org/10.1145/3511095.3536361)。
 
-12. Ribino, P., Islam, S., Ciampi, M. and Papastergiou, S. 2023. 基于群体智能的多智能体通信模型，用于保障医疗生态系统安全。*Lecture Notes in Networks and Systems*, vol. 594 LNNS, pp. 50–61. doi: [10.1007/978-3-031-213335_5](http://dx.doi.org/10.1007/978-3-031-213335_5)。
+16.  Gurcan, O. 2022. 工作量证明是一种拟刺激共识算法：释放其潜力。*IEEE Robot. Autom. Mag.*, 29(2): 21–32. doi: [10.1109/MRA.2022.3165745](http://dx.doi.org/10.1109/MRA.2022.3165745)。
 
-13. Xu, X., Li, R., Zhao, Z. and Zhang, H. 2022. 用于多智能体协作的拟刺激独立强化学习。*IEEE Trans. Neural Networks Learn Syst.*, 33(9): 4285–4299. doi: [10.1109/TNNLS.2021.3056418](http://dx.doi.org/10.1109/TNNLS.2021.3056418)。
+17.  Schubotz, R., Spieldenner, T. and Chelli, M. 2022. stigLD：链接系统中的拟刺激协调。*Mathematics*, 10(7). doi: [10.3390/math10071041](http://dx.doi.org/10.3390/math10071041)。
 
-14. Alajami, A.A., Moreno, G. and Pous, R. 2022. 面向无地图室内环境的基于拟刺激机制的自主 RFID 动态盘点无人机设计。*Drones*, 6(8). doi: [10.3390/drones6080208](http://dx.doi.org/10.3390/drones6080208)。
+18.  Shaw, S., Wenzel, E., Walker, A. and Sartoretti, G. 2022. ForMIC：基于隐式通信的多智能体强化学习觅食。*IEEE Robot. Autom. Lett.*, 7(2): 4877–4884. doi: [10.1109/LRA.2022.3152688](http://dx.doi.org/10.1109/LRA.2022.3152688)。
 
-15. Tamari, R., Friedman, D., Fischer, W., Hebert, L. and Shahaf, D. 2022. 从用户到（意义）创造者：关于拟刺激社会标注在集体意义建构探索中的关键作用。载于 *HT 2022: 33rd ACM Conference on Hypertext and Social Media - Co-located with ACM WebSci 2022 and ACM UMAP 2022*, pp. 236–239. doi: [10.1145/3511095.3536361](http://dx.doi.org/10.1145/3511095.3536361)。
+19.  Xu, X., Li, R., Zhao, Z. and Zhang, H. 2022. 面向多智能体拟刺激强化学习的可信策略协作方案。*IEEE Commun. Lett.*, 26(4): 823–827. doi: [10.1109/LCOMM.2022.3144451](http://dx.doi.org/10.1109/LCOMM.2022.3144451)。
 
-16. Gurcan, O. 2022. 工作量证明是一种拟刺激共识算法：释放其潜力。*IEEE Robot. Autom. Mag.*, 29(2): 21–32. doi: [10.1109/MRA.2022.3165745](http://dx.doi.org/10.1109/MRA.2022.3165745)。
+20.  Tran, J., Fule, P. and Szabo, C. 2022. 信息共享对动态环境中基于群体通信的影响。载于 *Proceedings - Winter Simulation Conference*, vol. 2022-Decem, pp. 461–472. doi: [10.1109/WSC57314.2022.10015493](http://dx.doi.org/10.1109/WSC57314.2022.10015493)。
 
-17. Schubotz, R., Spieldenner, T. and Chelli, M. 2022. stigLD：链接系统中的拟刺激协调。*Mathematics*, 10(7). doi: [10.3390/math10071041](http://dx.doi.org/10.3390/math10071041)。
+21.  Dounas, T., Voeller, E., Prokop, S. and Vele, J. 2022. 去中心化自治组织架构——建筑协作中的拟刺激探索。载于 *Proceedings of the International Conference on Education and Research in Computer Aided Architectural Design in Europe*, 1: 567–576。
 
-18. Shaw, S., Wenzel, E., Walker, A. and Sartoretti, G. 2022. ForMIC：基于隐式通信的多智能体强化学习觅食。*IEEE Robot. Autom. Lett.*, 7(2): 4877–4884. doi: [10.1109/LRA.2022.3152688](http://dx.doi.org/10.1109/LRA.2022.3152688)。
+22.  Casalnuovo, G. and Erioli, A. 2022. 深度轨迹：结构优化与自组织过程的耦合，用于复合表面构造的计算设计。载于 *Proceedings of the International Conference on Education and Research in Computer Aided Architectural Design in Europe*, 2: 85–94。
 
-19. Xu, X., Li, R., Zhao, Z. and Zhang, H. 2022. 面向多智能体拟刺激强化学习的可信策略协作方案。*IEEE Commun. Lett.*, 26(4): 823–827. doi: [10.1109/LCOMM.2022.3144451](http://dx.doi.org/10.1109/LCOMM.2022.3144451)。
+23.  Alajami, A.A., Moreno, G. and Pous, R. 2022. 用于模拟 RFID 系统的 ROS Gazebo 插件设计。*IEEE Access*, 10: 93921–93932. doi: [10.1109/ACCESS.2022.3204122](http://dx.doi.org/10.1109/ACCESS.2022.3204122)。
 
-20. Tran, J., Fule, P. and Szabo, C. 2022. 信息共享对动态环境中基于群体通信的影响。载于 *Proceedings - Winter Simulation Conference*, vol. 2022-Decem, pp. 461–472. doi: [10.1109/WSC57314.2022.10015493](http://dx.doi.org/10.1109/WSC57314.2022.10015493)。
+24.  Spieldenner, T. and Chelli, M. 2022. 链接数据作为基于拟刺激的优化与协调媒介。*Communications in Computer and Information Science*, vol. 1622 CCIS, pp. 1–23. doi: [10.1007/978-3-031-11513-4_1](http://dx.doi.org/10.1007/978-3-031-11513-4_1)。
 
-21. Dounas, T., Voeller, E., Prokop, S. and Vele, J. 2022. 去中心化自治组织架构——建筑协作中的拟刺激探索。载于 *Proceedings of the International Conference on Education and Research in Computer Aided Architectural Design in Europe*, 1: 567–576。
+25.  Gürcan, Ö. 2022. 作为拟刺激共识算法的工作量证明。载于 *Proceedings of the International Joint Conference on Autonomous Agents and Multiagent Systems, AAMAS*, 3: 1613–1615。
 
-22. Casalnuovo, G. and Erioli, A. 2022. 深度轨迹：结构优化与自组织过程的耦合，用于复合表面构造的计算设计。载于 *Proceedings of the International Conference on Education and Research in Computer Aided Architectural Design in Europe*, 2: 85–94。
+26.  Schubotz, R., Spieldenner, T. and Chelli, M. 2022. stigLD：链接数据智能体的拟刺激协调。*Communications in Computer and Information Science*, vol. 1566 CCIS, pp. 174–190. doi: [10.1007/978-981-19-1253-5_13](http://dx.doi.org/10.1007/978-981-19-1253-5_13)。
 
-23. Alajami, A.A., Moreno, G. and Pous, R. 2022. 用于模拟 RFID 系统的 ROS Gazebo 插件设计。*IEEE Access*, 10: 93921–93932. doi: [10.1109/ACCESS.2022.3204122](http://dx.doi.org/10.1109/ACCESS.2022.3204122)。
+27.  Kopetz, H. 2022. 通信中的数据。*Springer Briefs in Computer Science*, pp. 27–34. doi: [10.1007/978-3-030-96329-3_6](http://dx.doi.org/10.1007/978-3-030-96329-3_6)。
 
-24. Spieldenner, T. and Chelli, M. 2022. 链接数据作为基于拟刺激的优化与协调媒介。*Communications in Computer and Information Science*, vol. 1622 CCIS, pp. 1–23. doi: [10.1007/978-3-031-11513-4_1](http://dx.doi.org/10.1007/978-3-031-11513-4_1)。
+28.  Faulk, D.K., Frey, T.L. and Holkem, L. 2022. 临时拟刺激负载整形。doi: [10.2514/6.2022-1761](http://dx.doi.org/10.2514/6.2022-1761)。
 
-25. Gürcan, Ö. 2022. 作为拟刺激共识算法的工作量证明。载于 *Proceedings of the International Joint Conference on Autonomous Agents and Multiagent Systems, AAMAS*, 3: 1613–1615。
+29.  Chen, J., Liu, Y., Pacheck, A., Kress-Gazit, H., Napp, N. and Petersen, K. 2022. 集体机器人建造中的误差。载于 *Springer Proceedings in Advanced Robotics*, vol. 22 SPAR, pp. 269–281. doi: [10.1007/978-3-030-92790-5_21](http://dx.doi.org/10.1007/978-3-030-92790-5_21)。
 
-26. Schubotz, R., Spieldenner, T. and Chelli, M. 2022. stigLD：链接数据智能体的拟刺激协调。*Communications in Computer and Information Science*, vol. 1566 CCIS, pp. 174–190. doi: [10.1007/978-981-19-1253-5_13](http://dx.doi.org/10.1007/978-981-19-1253-5_13)。
+30.  Bolshakov, V., Alfimtsev, A., Sakulin, S. and Bykov, N. 2022. 用于群体学习的深度强化蚁群优化。*Studies in Computational Intelligence*, vol. 1008 SCI, pp. 9–15. doi: [10.1007/978-3-030-91581-0_2](http://dx.doi.org/10.1007/978-3-030-91581-0_2)。
 
-27. Kopetz, H. 2022. 通信中的数据。*Springer Briefs in Computer Science*, pp. 27–34. doi: [10.1007/978-3-030-96329-3_6](http://dx.doi.org/10.1007/978-3-030-96329-3_6)。
+31.  Palade, A. and Clarke, S. 2022. 面向移动环境中弹性服务组合的协作智能体社区。*IEEE Trans. Serv. Comput.*, 15(2): 876–890. doi: [10.1109/TSC.2020.2964753](http://dx.doi.org/10.1109/TSC.2020.2964753)。
 
-28. Faulk, D.K., Frey, T.L. and Holkem, L. 2022. 临时拟刺激负载整形。doi: [10.2514/6.2022-1761](http://dx.doi.org/10.2514/6.2022-1761)。
-
-29. Chen, J., Liu, Y., Pacheck, A., Kress-Gazit, H., Napp, N. and Petersen, K. 2022. 集体机器人建造中的误差。载于 *Springer Proceedings in Advanced Robotics*, vol. 22 SPAR, pp. 269–281. doi: [10.1007/978-3-030-92790-5_21](http://dx.doi.org/10.1007/978-3-030-92790-5_21)。
-
-30. Bolshakov, V., Alfimtsev, A., Sakulin, S. and Bykov, N. 2022. 用于群体学习的深度强化蚁群优化。*Studies in Computational Intelligence*, vol. 1008 SCI, pp. 9–15. doi: [10.1007/978-3-030-91581-0_2](http://dx.doi.org/10.1007/978-3-030-91581-0_2)。
-
-31. Palade, A. and Clarke, S. 2022. 面向移动环境中弹性服务组合的协作智能体社区。*IEEE Trans. Serv. Comput.*, 15(2): 876–890. doi: [10.1109/TSC.2020.2964753](http://dx.doi.org/10.1109/TSC.2020.2964753)。
-
-32. Batra, S., Dey, A.K., Singh, R. and Chaudhuri, M. 2023. 跨互记忆系统与战略导向对酒店企业绩效的影响。*J. Hosp. Tour. Insights*, 6(1): 131–150. doi: [10.1108/JHTI-03-2021-0071](http://dx.doi.org/10.1108/JHTI-03-2021-0071)。
-
-33. Zhang, X., Zhou, X., Wang, Q., Wu, Z. and Sui, Y. 2023. 政治技能很重要：学术企业家在团队创新中的作用。*Eur. J. Innov. Manag.* doi: [10.1108/EJIM-08-2022-0456](http://dx.doi.org/10.1108/EJIM-08-2022-0456)。
-
-34. Yan, Y., Xin, S. and Zha, X. 2023. 理解社交媒体移动 App 情境下的 TMS 与知识转移。*Aslib. J. Inf. Manag.* doi: [10.1108/AJIM-08-20220366](http://dx.doi.org/10.1108/AJIM-08-20220366)。
-
-35. Chen, Y. and Yi, Y. 2023. TMT 跨互记忆系统与商业模式设计：战略导向的调节效应。*J. Knowl. Manag.* doi: [10.1108/JKM-07-2022-0546](http://dx.doi.org/10.1108/JKM-07-2022-0546)。
-
-36. Huan Zhang, Yibei Liu, Xin Wang, Ziqian Cui, Haiman Wan, Xiping Liu, Ullrich Wagner and Gerald Echterhoff. 2023. 年长与年轻夫妻协作回忆的益处：对话动态与性别的作用。*Memory*. doi: [10.1080/09658211.2023.2166963](http://dx.doi.org/10.1080/09658211.2023.2166963)。
-
-37. Tuan, L.T. 2023. 通过绿色创业导向促进绿色产品创新：员工绿色创造力、绿色角色认同与组织跨互记忆系统的作用。*Bus Strateg. Environ.*, 32(1): 639–653. doi: [10.1002/bse.3165](http://dx.doi.org/10.1002/bse.3165)。
-
-38. Scheibe, K.P., Mukandwal, P.S. and Grawe, S.J. 2022. 跨互记忆系统对供应链网络协作的影响。*Int. J. Phys. Distrib. Logist. Manag.*, 52(9–10): 791–812. doi: [10.1108/IJPDLM-07-2021-0288](http://dx.doi.org/10.1108/IJPDLM-07-2021-0288)。
+32.  Batra, S., Dey, A.K., Singh, R. and Chaudhuri, M. 2023. 跨互记忆系统与战略导向对酒店企业绩效的影响。*J. Hosp. Tour. Insights*, 6(1): 131–150. doi: [10.1108/JHTI-03-2021-0071](http://dx.doi.org/10.1108/JHTI-03-2021-0071)。
 
 
 
+# 33. Zhang, X., Zhou, X., Wang, Q., Wu, Z. and Sui, Y. 2023. 政治技能很重要：学术企业家在团队创新中的作用。*Eur. J. Innov. Manag.* doi: [10.1108/EJIM-08-2022-0456](http://dx.doi.org/10.1108/EJIM-08-2022-0456)。
 
+# 34. Yan, Y., Xin, S. and Zha, X. 2023. 理解社交媒体移动 App 情境下的 TMS 与知识转移。*Aslib. J. Inf. Manag.* doi: [10.1108/AJIM-08-20220366](http://dx.doi.org/10.1108/AJIM-08-20220366)。
 
-## 第 15 章 基于联邦学习的 BERT Twitter 情感分析股市预测
+# 35. Chen, Y. and Yi, Y. 2023. TMT 跨互记忆系统与商业模式设计：战略导向的调节效应。*J. Knowl. Manag.* doi: [10.1108/JKM-07-2022-0546](http://dx.doi.org/10.1108/JKM-07-2022-0546)。
+
+# 36. Huan Zhang, Yibei Liu, Xin Wang, Ziqian Cui, Haiman Wan, Xiping Liu, Ullrich Wagner and Gerald Echterhoff. 2023. 年长与年轻夫妻协作回忆的益处：对话动态与性别的作用。*Memory*. doi: [10.1080/09658211.2023.2166963](http://dx.doi.org/10.1080/09658211.2023.2166963)。
+
+# 37. Tuan, L.T. 2023. 通过绿色创业导向促进绿色产品创新：员工绿色创造力、绿色角色认同与组织跨互记忆系统的作用。*Bus Strateg. Environ.*, 32(1): 639–653. doi: [10.1002/bse.3165](http://dx.doi.org/10.1002/bse.3165)。
+
+# 38. Scheibe, K.P., Mukandwal, P.S. and Grawe, S.J. 2022. 跨互记忆系统对供应链网络协作的影响。*Int. J. Phys. Distrib. Logist. Manag.*, 52(9–10): 791–812. doi: [10.1108/IJPDLM-07-2021-0288](http://dx.doi.org/10.1108/IJPDLM-07-2021-0288)。
+
+# 第 15 章 基于联邦学习的 BERT Twitter 情感分析股市预测
 
 *M. Rajeev Kumar* ^(¹⁵)
 
 电子邮件：sram0829@gmail.com; ssaravananme@gmail.com; balakrishnan007r@gmail.com; swathimanjunath.56@gmail.com
 
-### 1. 简介
+## 1. 简介
 
 **联邦学习（FL）** 在过去十年中因在协作建模且无需泄露敏感数据方面的优势而备受关注。自诞生以来，文献中最流行的方法是**中心化联邦学习（CFL）**，即由单一组织构建全局模型。另一方面，中心化系统存在服务器节点瓶颈、单点故障和信任要求等缺点。为克服这些问题，诞生了**去中心化联邦学习（DFL）**，它摒弃了中心化基础设施的使用，拥抱数据共享最小化和去中心化模型聚合的理念。尽管 DFL 领域已有大量研究，但文献尚未（i）探讨将 DFL 与 CFL 区分开来的基本原则；（ii）回顾使用 DFL 的应用场景和解决方案；以及（iii）分析 DFL 框架以构建和评估新解决方案。
 
@@ -5478,7 +5144,7 @@ Okhuysen 和 Bechky（2009）的整合框架的目标之一是加快协调机制
 
 联邦学习是一种机器学习策略，众多客户端在中央服务器的协调下协作训练模型，同时将数据保留在客户端本地。它在保护数据隐私的同时，也增强了学习的泛化能力。此外，联邦学习的全局模型必须适应客户端数据的独特特性。我们提出微调作为一种定制策略，用于将全局联邦学习模型适配至新的客户端输入。
 
-数据科学家可利用**FL**机器学习框架，使用用户数据训练统计模型。这是一种分散式训练方法，测试和训练均在边缘端进行。元数据被传输至中心化服务器，该服务器将来自不同客户端的众多模型更新整合为一个新模型（图 1）。
+数据科学家可利用`FL`机器学习框架，使用用户数据训练统计模型。这是一种分散式训练方法，测试和训练均在边缘端进行。元数据被传输至中心化服务器，该服务器将来自不同客户端的众多模型更新整合为一个新模型（图 1）。
 
 ![图 1. 无需将机密用户数据发送至服务器。](img/fig15_1_B.jpg)
 
@@ -5486,20 +5152,17 @@ Okhuysen 和 Bechky（2009）的整合框架的目标之一是加快协调机制
 
 由于股价预测可带来可观收益，多年来一直是热门话题。因股票时间序列表现出的行为近似于随机游走，股市难以预测，预测颇具挑战性 [5, 7]。突发新闻出现时，股票报价可在几秒内剧烈变动。股价波动可由多种因素引起。主要基于供需关系：当大量人想买入而非卖出某股票，即需求超过供给时，股价上涨；当供给超过需求时，股价下跌。公司业绩 [2] 影响其股价。除虚假新闻外，恐惧贪婪等人类情绪、财务结果，以及国家政治局势、经济状况等其他社会经济因素均影响股市 [34]。人类分析突发新闻可能耗时数分钟，而金融市场投资者必须快速决策。过往投资者会前往证券交易所 [12]（如 BSE 或 NSE）。在线交易简化了流程，致使大量投资者进入资本市场。COVID-19 大流行期间，股市新投资者数量显著增加。得益于在线交易和数字化，股市在疫情期间似乎吸引了新投资者。
 
-如前所述，人类情绪和情感等心理因素对股市产生了影响 [1, 3, 14]。Twitter 是追踪股市新闻的热门论坛。本文利用**BERT**和 Transformer 模型进行情感分析。使用经过修改的**BERT**基于推文训练模型以进行情感预测 [6, 27]。**BERT**分类器用于作出看涨和看跌预测。随后利用分类结果对推文进行预处理 [8, 13, 29]，进而可用于预测推文中的实时情感。
+如前所述，人类情绪和情感等心理因素对股市产生了影响 [1, 3, 14]。Twitter 是追踪股市新闻的热门论坛。本文利用`BERT`和 Transformer 模型进行情感分析。使用经过修改的`BERT`基于推文训练模型以进行情感预测 [6, 27]。`BERT`分类器用于作出看涨和看跌预测。随后利用分类结果对推文进行预处理 [8, 13, 29]，进而可用于预测推文中的实时情感。
 
-#### 1.1 目的与范围
+### 1.1 目的与范围
 
-训练机器学习模型以查找股票相关推文，并通过评估推文和预测情感，构建基于 Twitter 的股市预测系统。将 Twitter 作为股市信息来源，如**移动平均线收敛发散指标（MACD）**、**移动平均线**及其他股票指标。本研究范围旨在利用 Twitter 情感分析降低股市投资风险，助力股东做出能获得良好回报的审慎投资 [25]。
+训练机器学习模型以查找股票相关推文，并通过评估推文和预测情感，构建基于 Twitter 的股市预测系统。将 Twitter 作为股市信息来源，如`移动平均线收敛发散指标（MACD）`、`移动平均线`及其他股票指标。本研究范围旨在利用 Twitter 情感分析降低股市投资风险，助力股东做出能获得良好回报的审慎投资 [25]。
 
-### 2. 文献综述
+## 2. 文献综述
 
+### 众包与联邦学习在数据驱动应用中的应用
 
-
-
-# 众包与联邦学习在数据驱动应用中的应用
-
-## 简介
+#### 简介
 
 我们都见识过众包的实用性。客户可以在 `Waze` 等移动应用上报告各种驾驶路况，包括路边停车、交通拥堵、车祸、警察测速陷阱等等。因此，其他用户能从这种协作中受益，做出更明智的驾驶决策。举个简单的例子，如果某条路线发生严重拥堵，`Waze` 能够规划一些替代路线以到达目的地。
 
@@ -5507,7 +5170,7 @@ Okhuysen 和 Bechky（2009）的整合框架的目标之一是加快协调机制
 
 最后，利用 `Amazon Mechanical Turk` 等众包平台来加速机器学习开发相当普遍。其理念是利用高度分散的平台将特定流程外包。这种方法将工作分解为离散的、简单的任务，新手可在短时间内完成。这些任务可能涉及数据标注、验证，或简单的数据清洗技术，如去重。
 
-## 联邦学习的底层概念
+#### 联邦学习的底层概念
 
 大型企业和医院正在寻求如何利用海量敏感数据来改进其服务。试想一下，如果我们能利用全球医院现有的所有数据来训练机器学习系统。这种协作必将造福黑色素瘤和乳腺癌诊断等应用。同样的逻辑也适用于保险和银行公司，它们可能利用私密信息构建更精准的预测模型。
 
@@ -5515,7 +5178,7 @@ Okhuysen 和 Bechky（2009）的整合框架的目标之一是加快协调机制
 
 联邦学习旨在利用众多参与者，每个参与者可分别为更大的任务做出贡献。参与者可以包括各种设备，如智能手机、平板电脑、医院存储的医疗信息、自动驾驶汽车，以及任何具备足够算力和用户交互数据的联网计算设备。
 
-## 客户端设备上的数据特征
+#### 客户端设备上的数据特征
 
 每个客户端设备上的数据都有其独特特征。首先，它是**个人**的。以虚拟键盘智能手机应用为例。用户每天都通过移动键盘与同事联系、填写表格、与朋友交流。在此过程中，用户创建密码、发送语音消息、透露关于自己或雇主的个人信息、咨询医生等。
 
@@ -5523,7 +5186,7 @@ Okhuysen 和 Bechky（2009）的整合框架的目标之一是加快协调机制
 
 考虑一下在手机上使用导航应用，如 `Waze` 或 `Google Maps`。同样，此类应用产生的数据性质极其敏感。它可用于查明某人去过哪里，以及他们是骑自行车、开车、坐飞机，还是在公园散步。统计模型可利用这些数据学习任何人的移动模式。这些模型可用于预测他或她明天或下周末的行程地点。这构成了严重的隐私侵犯。
 
-## 相关工作：股票预测模型
+#### 相关工作：股票预测模型
 
 基于 `混合预测算法` (`HPA`) 的 `生成对抗网络` (`GAN`) 已被提出 [[23]](#ch15.xhtml#ref15_23)，通过结合两个不同系统信息的描述性方法来实现 `Stock GAN` 结构。第一个系统是来自 `Yahoo Finance API` 的历史数据，第二个是来自 `Kaggle` 网站的 `Twitter` 数据。然后，在对推文数据进行预处理后，训练了 `BERT` 和 `Word2Vec` 模型以获得预期结果。因为 `BERT` 在推文情感分类方面更强，且能达到更低的 `均方误差` (`MSE`)，所以它在预测股价方面优于 `Word2Vec` (`MSE`)。
 
@@ -5537,30 +5200,31 @@ Okhuysen 和 Bechky（2009）的整合框架的目标之一是加快协调机制
 
 为计算情感得分 [[16]](#ch15.xhtml#ref15_16)，建议使用 `SVM` 结合 `哈佛 IV-4 情感词典` (`HVD`) 和 `Loughran McDonald 金融情感词典` (`LMD`)，二者的准确值分别为 `LMD` = 0.5527 和 `HVD` = 0.5460。`Hegazy et al.` 设计了一种机器学习模型 [[9]](#ch15.xhtml#ref15_9)，结合 `粒子群优化` (`PSO`) 方法和 `最小二乘支持向量机` (`LS-SVM`) 利用金融技术指标预测股价。最有效的算法是 `LS-SVM-PSO` [[4]](#ch15.xhtml#ref15_4)。
 
-### 3. 材料与方法
+## 3. 材料与方法
 
-#### 3.1 现有系统
+### 3.1 现有系统
 
-
-
-
-# 现有预测系统
+#### 现有预测系统
 
 现有预测系统采用长短期记忆（LSTM）算法。LSTM 提出的被称为记忆单元的处理设备取代了传统的人工神经元。由于网络能高效地在时间上链接记忆和远程输入，因此它们是随时间动态记录具有高预测限度的数据结构的最佳选择。人工神经网络（ANN）和遗传算法（GA）是其他预测方法；然而，它们未考虑股票价格之间的长期时间相关性。基本面分析考虑股票的过往表现和公司的整体信誉，统计分析仅专注于数字运算和识别股价变动模式，二者是股票市场分析和股价预测的传统方法。
 
 移动平均线、MACD、相对强弱指标（RSI）和商品通道指数（CCI）是一些用于预测股市的技术指标。移动平均线和 MACD 是基于价格高于或低于移动平均线来识别股票趋势的技术指标。利用 MACD 买入或卖出信号，投资者可以做出明智的股市投资。RSI 和 CCI 等指标通过将当前价格与过去数值比较，提示超买和超卖状况。技术指标判断股价是看跌还是看涨。基于形态的信号是最终结果。
 
-## 3.1.1 现有系统的局限性
+#### 3.1.1 现有系统的局限性
 
 经分析，现有系统存在以下缺陷：
 
 - 技术指标采用传统方法做投资决策。股票可能长期处于超卖或超买状态。
+
 - 技术分析工具使用短周期预测价格。因此会出现不准确的股价指标，可能导致灾难性后果。使用 MACD 时发现，该技术指标在横盘震荡的波动市场中表现不佳。
+
 - RSI 在价格图表震荡指标中比较多头和空头价格动量并显示结果。其信号与其他技术指标一样，仅当与长期趋势一致时最可信。
+
 - LSTM 仅利用非常接近前一日收盘价的值来预测次日价值，这可能无法提供准确的预测结果。
+
 - 当大型网络的权重变得过大或过小时，会导致梯度爆炸/消失问题，显著降低对最优值的收敛性。
 
-#### 3.2 建议系统
+### 3.2 建议系统
 
 联邦学习是在训练大型机器学习模型时隐蔽保护设备端数据的策略。Google 研究人员在 2015 年论文“Communication-Efficient Learning of Deep Networks from Decentralised Data”中描述的联邦学习，是一种在去中心化数据上训练中心化服务器的分布式方法。联邦学习最重要的优势之一是它使机器学习训练摆脱了在中央服务器保留数据集的需求。在联邦学习中，用户设备永不失去对数据的访问。利用设备的本地算力和数据训练机器学习模型。本地训练模型的训练元信息（权重和偏置）被发送到中央服务器。我们必须首先研究联邦学习与传统机器学习开发的差异，才能完全理解它。确实，实现联邦学习需要思维转变。开发机器学习模型时，通常的标准是在中心化位置（如服务器）混合训练和验证数据。将所有数据集中在一处，可快速可靠地执行数据探索、可视化、验证和批量训练程序（深度神经网络所需）。
 
@@ -5568,7 +5232,7 @@ Okhuysen 和 Bechky（2009）的整合框架的目标之一是加快协调机制
 
 以移动设备（如智能手机和平板电脑）为例，电量充满、具有特定硬件配置、连接可靠免费 WiFi 且未被使用的设备符合资格。并非所有设备都加入联邦是联邦学习架构的关键要素。仅向合格设备提供训练模型。目的是减轻本地训练可能对用户体验造成的负面影响。即使认为本地模型训练仅需几分钟，当用户使用设备通话或获取重要信息时，也没人愿意忍受由本地模型训练引起的设备卡顿。随后，每个设备利用本地数据开始训练模型的本地微调阶段。训练完成后，各本地模型的更新参数被发送到中央服务器进行全局更新。
 
-本文旨在创建一种股票预测方法，帮助股市投资者并激励新入行者。通过文献调研和研究论文发现，LSTM 和 GAN-HPA 等预测算法被用于基于雅虎财经数据或其他数据集的股价预测。因此，我们的主要目标是基于股票相关推文的情感分析创建预测系统。他们提出了一种利用 BERT 算法和带有股市内容的推文情感分析来预测股价的方法。由于本文目前专注于从 Twitter 数据预测股价，推文和必要数据集通过 Twitter API 和其他来源获取。BERT 是一种半监督机器学习算法，用于从 Twitter 数据预测股价。
+本文旨在创建一种股票预测方法，帮助股市投资者并激励新入行者。通过文献调研和研究论文发现，LSTM 和 GAN-HPA 等预测算法被用于基于雅虎财经数据或其他数据集的股价预测。因此，我们的主要目标是基于股票相关推文的情感分析创建预测系统。他们提出了一种利用 `BERT` 算法和带有股市内容的推文情感分析来预测股价的方法。由于本文目前专注于从 Twitter 数据预测股价，推文和必要数据集通过 Twitter API 和其他来源获取。`BERT` 是一种半监督机器学习算法，用于从 Twitter 数据预测股价。
 
 该算法试图通过将推文分为积极和消极两类来改进推文分类，利用称为词嵌入的特征确定和提取方法减少分类难度，其中含义相似的词具有可比较的表示。此方法如图 2 所示。
 
@@ -5576,24 +5240,23 @@ Okhuysen 和 Bechky（2009）的整合框架的目标之一是加快协调机制
 
 Figure 2. Enlarged block architecture.
 
-
-
-
 推特情感分析的详细架构操作如图 2 所示。推文是经过进一步处理的原始数据。该设计包含一种机制，通过规范化文本并识别推文的积极/消极二元性，在推特平台上对情感进行分类。完成的数据集随后被发送用于训练和测试。对于股票预测，训练数据集被传输到预训练的 `BERT` 模型。使用测试过的数据集对模型进行测试。本质上，`BERT` 是 Transformer 的双向编码器表示。它是一种半监督的机器学习模型（\[13, 14\]）。双向编码器是一种自然语言处理（`NLP`）工具。推文被检索并转换为 0 和 1 的向量格式，其中 1 表示“积极”，0 表示“消极”。在推文中，人类情绪使用特定语言表达，随后被系统地转化为数学形式。最后，我们可以结合使用 `BERT` 和 `NLP` 来预测某只特定股票未来是否会表现良好。
+
+
 
 情感分析是一种机器学习活动，我们试图弄清人们对一段文本的感受。我们将采用机器学习和自然语言处理技术，从提供的文本中提取特定元素并将其归类为积极或消极。这很有益，因为我们可以大致了解是应该买入还是卖出股票。在本研究中，我们尝试将来自 Twitter 的推文归类为利好或利空。Twitter 是一个社交网络平台，允许用户在 140 字符的限制下快速、自发地表达自我。由于其广泛使用，Twitter 是了解任何事物当前总体印象的绝佳来源。建议的系统主要包含三个关键步骤：数据获取、数据预处理和数据分类。
 
-***服务器执行：***
+### 服务器执行
 
-> *初始化 `ω`[0]*
+> **初始化** `ω[0]`
 >
-> ***for** 每轮 `t` = 1,2,…***do***
+> **for** 每轮 `t` = 1,2,… **do**
 >
 > `m` ← `max`(`C`.`K`,1)
 >
-> `S[t]` ← (*随机选取 m 个客户端的集合*)
+> `S[t]` ← (随机选取 `m` 个客户端的集合)
 >
-> ***for** 每个客户端 `k` ϵ `S[t]` **并行执行 do***
+> **for** 每个客户端 `k` ϵ `S[t]` **并行执行 do**
 >
 > $$
 > \begin{array}{l}
@@ -5602,17 +5265,17 @@ Figure 2. Enlarged block architecture.
 > \end{array}
 > $$
 >
-> ***ClientUpdate**(k, ω): //在客户端 k 上运行*
+> **ClientUpdate**(`k`, `ω`): //在客户端 `k` 上运行
 >
-> `B` *←* (*将* `℘`[`k`] *分割为大小为 B 的批次*)
+> `B` ← (将 `℘[k]` 分割为大小为 `B` 的批次)
 >
-> ***for** 每个 localepochi 从 1 到 E **do***
+> **for** 每个 `localepoch i` 从 1 到 `E` **do**
 >
-> ***for** 批次 `b` ϵ* `B` ***do***
+> **for** 批次 `b` ϵ `B` **do**
 >
 > `ω` ← `ω` – `η`∇`l`(`ω; b`)
 >
-> *将 `ω` 返回给服务器*
+> 将 `ω` 返回给服务器
 
 联邦平均算法在上述伪算法中描绘。它分为两部分，第一部分由服务器执行，第二部分由客户端执行。服务器最初初始化模型参数——通常使用随机值。服务器协调多个执行轮次。服务器为每一轮随机选择一部分客户端（合格设备）并并行提供训练模型的副本。每个客户端利用其数据执行一系列梯度下降步骤，以微调训练模型的副本。训练完成后，每个客户端将本地模型的权重和偏差发送给服务器。服务器收集所有客户端的更新并发起新的周期。
 
@@ -5620,26 +5283,26 @@ Figure 2. Enlarged block architecture.
 
 因此，服务器永远不会看到来自特定设备的训练结果。为增加安全性，我们可以将联邦学习与差分隐私相结合。测试是联邦学习与传统机器学习的另一个关键区别。验证机器学习模型时，我们应使用尽可能接近实际生产数据的数据。由于服务器缺乏访问训练数据的权限，因此无法在聚合模型通过客户端贡献更新后对其进行评估。因此，测试和训练均在消费者设备上进行。必须强调的是，分布式测试恢复了在面向用户的设备上测试新模型的优势，这正是最重要的地方。
 
-总之，联邦学习这一新颖方法极具前景。它是一种去中心化、协作式的方法，使研究人员能够在坚持隐私标准的前提下，利用敏感数据训练机器学习模型。得益于 5G 技术的当前改进，联邦训练可应用于更多应用，这将需要我们依赖更强、更快的互联网连接。尽管联邦学习仍处于起步阶段，但它已在多个应用中取得成功，包括 Apple Siri 和 Google 虚拟键盘（GBoard）。
+总之，联邦学习这一新颖方法极具前景。它是一种去中心化、协作式的方法，使研究人员能够在坚持隐私标准的前提下，利用敏感数据训练机器学习模型。得益于 `5G` 技术的当前改进，联邦训练可应用于更多应用，这将需要我们依赖更强、更快的互联网连接。尽管联邦学习仍处于起步阶段，但它已在多个应用中取得成功，包括 `Apple Siri` 和 `Google` 虚拟键盘（`GBoard`）。
 
-##### 3.2.1 数据获取
+### 3.2.1 数据获取
 
-**Twitter API：** 收集数据有多种选择。建议使用 Twitter API v2 版本来收集推文。可以使用以下步骤通过 Twitter API 收集推文：
+**Twitter API：** 收集数据有多种选择。建议使用 `Twitter API v2` 版本来收集推文。可以使用以下步骤通过 `Twitter API` 收集推文：
 
-1.  需要一个具有访问级别控制的开发者账户，才能通过 Twitter API 发送请求。
+1.  需要一个具有访问级别控制的开发者账户，才能通过 `Twitter API` 发送请求。
 2.  创建账户后登录。创建一个新项目并为其命名。
 3.  一切就绪后，您将获得一组四个密钥，用于访问 Twitter 数据库。
 
-**收集：** 此处将使用 Python 中可用的 `Tweepy` 库，通过 Twitter API 收集推文。
+**收集：** 此处将使用 Python 中可用的 `Tweepy` 库，通过 `Twitter API` 收集推文。
 
-*   使用 `pip installs Tweepy` 命令安装 Tweepy。
+*   使用 `pip install Tweepy` 命令安装 `Tweepy`。
 *   使用您的密钥和令牌验证身份。
-*   创建搜索查询——搜索查询是一个字符串，告诉 Twitter API 您在寻找什么样的推文。例如，如果您想查找关于特斯拉的推文，只需在 Twitter 上搜索 Tesla 或 `@Tesla`。
-*   我们将使用 `Tweepy` 游标通过 Twitter API 获取推文。响应随后记录在一个列表中，可通过迭代获取所需信息。
+*   创建搜索查询——搜索查询是一个字符串，告诉 `Twitter API` 您在寻找什么样的推文。例如，如果您想查找关于特斯拉的推文，只需在 Twitter 上搜索 `Tesla` 或 `@Tesla`。
+*   我们将使用 `Tweepy` 游标通过 `Twitter API` 获取推文。响应随后记录在一个列表中，可通过迭代获取所需信息。
 
-**数据集：** 建议为此目的使用 Python 的 `Panda` 库。可以从响应的所需属性创建数据框。
+**数据集：** 建议为此目的使用 Python 的 `Pandas` 库。可以从响应的所需属性创建数据框。
 
-##### 3.2.2 预处理
+### 3.2.2 预处理
 
 预处理推文至关重要，因为这直接影响分类器的性能。将使用 `Regex` 库对推文进行预处理。为此将执行以下程序：
 
@@ -5648,12 +5311,9 @@ Figure 2. Enlarged block architecture.
 *   **表情符号移除：** 我们也将移除推文中的所有表情符号，因为我们只对文本感兴趣。
 *   **话题标签和 URL 移除：** 推文可能包含多个话题标签和 URL。因为这些对情感分析无用，所以必须消除。
 
-##### 3.2.3 分类
+### 3.2.3 分类
 
-
-
-
-##### 3.2.4 建议系统的优势
+### 3.2.4 建议系统的优势
 
 建议系统的优势如下：
 
@@ -5663,9 +5323,9 @@ Figure 2. Enlarged block architecture.
 
 据说这种范式是双向的。与有向模型相反，`BERT` 可以随时以任何方向阅读文本。由于其双向性，该模型可以根据单词左侧和右侧的上下文理解每个单词的含义；这代表了语境学习领域的重大进步。`Masked Level Modelling (MLM)` 和 `Next Sentence Prediction (NSP)` 在 `BERT` 中相结合。它目前是理解大量语境文本的最佳 `NLP` 策略。与其他算法不同，`BERT` 专注于单个单词而非整个文本。`BERT` 还能识别每个单词并预测该单词的左侧和右侧对应词。
 
-#### 3.3 Transformers
+### 3.3 Transformers
 
-因为 `BERT` 基于 `Transformers` 架构，所以理解 `Transformers` 模型至关重要。`Transformers` 模型通常具有如 图 3 所示的双层处理流程。
+因为 `BERT` 基于 `Transformers` 架构，所以理解 `Transformers` 模型至关重要。`Transformers` 模型通常具有如图 3 所示的双层处理流程。
 
 ![Figure 3. Transformers architecture.](img/fig15_3_B.jpg)
 
@@ -5675,23 +5335,22 @@ Figure 2. Enlarged block architecture.
 
 **解码器**：解码器将编码器基于嵌入的输出转换为文本输出，即输入文本的翻译形式。
 
-研究中最重要的部分是用于构建编码器和解码器的层，如 图 3 所示。与传统 `RNNs` 相反，编码器和解码器均未采用循环或迭代。相反，它们利用了“注意力”层，从而实现信息的直线流动。`Transformer` 将输入跨多个注意力层传递，而不是多次循环它。
+研究中最重要的部分是用于构建编码器和解码器的层，如图 3 所示。与传统 `RNNs` 相反，编码器和解码器均未采用循环或迭代。相反，它们利用了“注意力”层，从而实现信息的直线流动。`Transformer` 将输入跨多个注意力层传递，而不是多次循环它。
 
-##### 3.3.1 BERT
+#### 3.3.1 BERT
 
 `BERT` 是一种基于 `Transformers` 的机器学习模型。以前，文本输入只能从右向左或从左向右读取，不能同时进行。`BERT` 的双向能力使其能够同时完成这两项任务。
 
-##### 3.3.2 BERT 如何工作？
+#### 3.3.2 BERT 如何工作？
 
 `NLP` 的主要目标是理解人类语言。模型通过使用大量资源进行训练来实现这一目标。训练 `BERT` 仅使用了未标注的纯文本语料库。来自未标注文本的无监督学习可以帮助其改进。预训练 `BERT` 可以作为构建“知识”基础的地基。它可以根据开发者的需求进一步训练。`BERT` 是第一个完全依赖自注意力机制的 `NLP` 系统。由于其双向性，这成为可能。`BERT` 可以专注于每个单词，而不是整个语句。句子或短语中的单词越多，焦点单词变得越不清晰。
 
-##### 3.3.3 训练 BERT
+#### 3.3.3 训练 BERT
 
 `BERT` 使用两种不同的方法进行训练：
 
 *   **掩码语言建模** 用于在将序列输入 `BERT` 之前随机替换序列中 15% 的单词。然后模型利用序列中未被掩码的单词，尝试预测被掩码单词的原始值。`BERT` 的损失函数不考虑未被掩码的单词；仅考虑被掩码单词的预测。因此，该模型比有向模型收敛得更晚。
-
-*   **预测下一句**：模型在句子对上进行训练，并被要求预测源文本中的第二个句子是否为下一句。用于训练的输入句子对中，50% 的情况下第二个句子来自原文，50% 的情况下为随机句子。为了在训练期间区分两个句子，输入按 图 4 所示进行处理：
+*   **预测下一句**：模型在句子对上进行训练，并被要求预测源文本中的第二个句子是否为下一句。用于训练的输入句子对中，50% 的情况下第二个句子来自原文，50% 的情况下为随机句子。为了在训练期间区分两个句子，输入按图 4 所示进行处理：
 
     ![Figure 4. Token embeddings.](img/fig15_4_B.jpg)
 
@@ -5699,30 +5358,29 @@ Figure 2. Enlarged block architecture.
 
 *   一个 `[CLS]` 标记被添加到第一个句子的开头，一个 `[SEP]` 标记被添加到每个句子的末尾。每个标记都有一个嵌入句子，表示句子 A 和句子 B。每个标记被赋予一个位置嵌入以标识其在序列中的位置。
 
-为了最小化两种策略的联合损失函数，在训练 `BERT` 模型时，`Masked LM` 和 `Next Sentence Prediction` 被合并。最后，如 图 3 所示，模型可根据用户需求进行调整。
+为了最小化两种策略的联合损失函数，在训练 `BERT` 模型时，`Masked LM` 和 `Next Sentence Prediction` 被合并。最后，如图 3 所示，模型可根据用户需求进行调整。
 
-#### 3.4 测试与验证
+### 3.4 测试与验证
 
 本节讨论的测试方法对股票预测的输入和输出设计进行了彻底分析和测试。
 
-##### 3.4.1 输入设计
+#### 3.4.1 输入设计
 
 这通常涉及开发一组有效和无效输入，以检查原型是否能准确检测无效条件并抛出异常或错误。目前有大量股票可用。选取特定股票（如 `Tesla`）作为有效输入。然后我们将获取该股票的所有推文。情感分析使用这些推文作为输入。因为使用了 `BERT` 技术，推文将被转换为数学形式，即向量，随后用作情感分析的输入。
 
-##### 3.4.2 输出设计
+#### 3.4.2 输出设计
 
 当我们的算法处理原始推文时，它会查找停用词、表情符号和链接等。我们需要过滤推文以使模型高效运行。使用正则表达式清洗和过滤后的推文是结果之一 (`regex`)。然后将这些清洗后推文的情绪分为两类：正面和负面。
 
 我们在清洗后的推文上进行情感分析后得到平均正面推文，并可推断平均正面推文以产生期望输出：`BETTER NOT TO BUY`（最好别买）、`NO HEAVY PROFITS`（无巨额利润）和 `CAN BE BOUGHT`（可买入）。
 
-##### 3.4.3 测试
+#### 3.4.3 测试
 
 模块通过单元测试针对综合设计进行测试。该过程的输入通常是编码过程中编译的模块。在单元测试过程中，所有模块通常被汇集并组合成一个更大的单元。
 
 在实施过程中，以下流程给我们带来了障碍：
 
 *   **无关推文的移除**：在通过 `Twitter API` 获取推文时，捕获了多条无关推文、停用词、表情符号和链接。为解决此问题，我们必须在模型中使用特定术语和正则表达式过滤推文。
-
 *   **推文更新**：由于每秒产生的关于股市的热门推文量巨大，我们在检索近期股票相关推文时遇到一些困难。因此，为获取所需数据量，我们尝试多次使用 `Twitter API` 生成推文。我们也尝试扩展系统。我们试验了增加数据框的大小。在我们的模型中，转发推文无关紧要。移除转发推文后，数据量显著减少。
 
 ### 4. 结果与讨论
@@ -5736,9 +5394,6 @@ Figure 2. Enlarged block architecture.
 ```
 Prediction = \frac{No.of\ Positive}{No.of\ Negative}
 ```
-
-
-
 
 如果预测值大于 1，股票将上涨；如果小于 1，股票将下跌。在将模型预测值与观测值进行比较时，通常会计算均方根偏差，也称为均方根误差（公式 2）。
 
@@ -5758,7 +5413,7 @@ RMSE = \sqrt{\sum\limits_{i = 1}^{N}\frac{{(predicted_{i} - actual_{i})}^{2}}{N}
 
 图 5. RMSE 的样本实现结果。
 
-基于 `RMSE` 的拟议方法准确性与其他方法的对比见 表 1。
+基于 `RMSE` 的拟议方法准确性与其他方法的对比见表 1。
 
 表 1. 性能对比。
 
@@ -5777,54 +5432,47 @@ RMSE = \sqrt{\sum\limits_{i = 1}^{N}\frac{{(predicted_{i} - actual_{i})}^{2}}{N}
 
 ### 5. 结论
 
-目标是将拟议技术用于造福股市投资者。该技术专注于利用推文的情感分析来预测股价。该模型使用 `NLP` 流水线，结合联邦学习方法和 Twitter 推文，训练一个更新后的 `BERT` 模型，以预测其看涨和看跌的股票情绪。`BERT` 是一种前沿的 `NLP` 模型，已在多个领域显示出成效。`BERT` 能够提高多项自然语言处理和语言建模任务的准确率（或 F1 值）。
+目标是将拟议技术用于造福股市投资者。该技术专注于利用推文的情感分析来预测股价。该模型使用 `NLP` 流水线，结合联邦学习方法和 Twitter 推文，训练一个更新后的 `BERT` 模型，以预测其看涨和看跌的股票情绪。`BERT` 是一种前沿的 `NLP` 模型，已在多个领域显示出成效。`BERT` 能够提高多项自然语言处理和语言建模任务的准确率（或 `F1` 值）。
 
 本研究的主要贡献在于，它使得将半监督学习应用于各种 `NLP` 任务成为可能，从而促进了 `NLP` 领域的迁移学习。这些特性促使我们使用 `BERT` 来提高当前模型的准确性。我们的模型相当清晰，并利用了简单的 Twitter 和机器学习接口。因此，可以得出结论：在财务理解方面，该模型更接近人类推理。通过引入不同的 Python 和机器学习库，它也简化了流程。该模型可以直接建议每位投资者是否投资，这是大多数现有模型所缺乏的。未来将会有更多开源文章出现。科技巨头将会被吸引过来。随着更多资金投入其中，能够准确预测股价的系统将会出现。在未来的工作中，将构建一种股票分类和预测算法，以解决现有系统的不足并创建一个新的、稳健的股票预测系统。通过将热门因子数据与在线来源股票数据相结合，也可以提高股市预测的准确性。
 
 ### 参考文献
 
 1.  Anjaria, M. and Guddeti, R.M.R. 2014. Influence factor-based opinion mining of Twitter data using supervised learning. In 2014 Sixth International Conference on Communication Systems and Networks (COMSNETS), pp. 1–8.
-
 2.  Barbosa, L. and Feng, J. 2010. Robust sentiment detection on twitter from biased and noisy data. In COLING '10: Proceedings of the 23rd International Conference on Computational Linguistics: Posters, pp. 36–44.
-
 3.  Barhan, A. and Shakhomirov, A. 2012. Methods for sentiment analysis of twitter messages. In Proceedings of the XXth Conference of Open Innovations Association FRUCT., 325(12): 215–222.
-
 4.  Boiy, E. and Moens, M.F. 2009. A machine learning approach to sentiment analysis in multilingual Web texts. Information Retrieval, 12(5): 526–558.
-
 5.  Cai, R., Qin, B., Chen, Y., Zhang, L., Yang, R., Chen, S. and Wang, W. 2020. Sentiment analysis about investors and consumers in energy market based on BERT-BiLSTM. IEEE Access, 8: 171408–171415.
-
 6.  Chen, L.S., Liu, C.H. and Chiu, H.J. 2011. A neural network-based approach for sentiment classification in the blogosphere. Journal of Informetrics, 5(2): 313–322.
-
 7.  Giachanou, A. and Crestani, F. 2016. Like it or not: A survey of twitter sentiment analysis methods. ACM Computing Surveys (CSUR), 49(2): 1–41.
 
-8.  Go, A., Bhayani, R. and Huang, L. 2009. Twitter sentiment classification using distant supervision. CS224N Article Report, Stanford, 1(12): 2009–2018.
-
-9.  Hegazy, O., Soliman, O.S. and Salam, M.A. 2014. A machine learning model for stock market prediction. International Journal of Computer Science and Telecommunications, 4(12): 17–23.
-
-10.  Jiang, L., Yu, M., Zhou, M., Liu, X. and Zhao, T. 2011. Target-dependent twitter sentiment classification. In Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies, 1: 151–160.
-
-11.  Jin, Z., Yang, Y. and Liu, Y. 2020. Stock closing price prediction based on sentiment analysis and LSTM. Neural Computing and Applications, 32(13): 9713–9729.
-
-12.  Kharde, V. and Sonawane, P. 2016. Sentiment analysis of twitter data: A survey of techniques. International Journal of Computer Applications, 139(11): 5–15.
-
-13.  Koppel, M. and Schler, J. 2006. The importance of neutral examples for learning sentiment. Computational Intelligence, 22(2): 100–109.
-
-14.  Kumar, H.P., Prashanth, K.B., Nirmala, T.V. and Patil, S.B. 2012. Neuro fuzzy based techniques for predicting stock trends. International Journal of Computer Science Issues (IJCSI), 9(4): 385–394.
-
-15.  Li, M., Chen, L., Zhao, J. and Li, Q. 2021. Sentiment analysis of Chinese stock reviews based on BERT model. Applied Intelligence, 51(7): 5016–5024.
-
-16.  Li, X., Xie, H., Chen, L., Wang, J. and Deng, X. 2014. News impact on stock price return via sentiment analysis. Knowledge-Based Systems, 69(14–23).
-
-17.  Long, W., Song, L. and Tian, Y. 2019. A new graphic kernel method of stock price trend prediction based on financial news semantic and structural similarity. Expert Systems with Applications, 118: 411–424.
-
-18.  Mittal, A. and Goel, A. 2012. Stock prediction using twitter sentiment analysis. Stanford University, CS229, pp. 1–5.
-
-19.  Mullen, T. and Collier, N. 2004. Sentiment analysis using support vector machines with diverse information sources. In Proceedings of the 2004 Conference on Empirical Methods in Natural Language Processing, pp. 412–418.
 
 
+## 参考文献
 
+8. Go, A., Bhayani, R. and Huang, L. 2009. Twitter sentiment classification using distant supervision. *CS224N Article Report*, Stanford, 1(12): 2009–2018.
 
-### 参考文献
+9. Hegazy, O., Soliman, O.S. and Salam, M.A. 2014. A machine learning model for stock market prediction. *International Journal of Computer Science and Telecommunications*, 4(12): 17–23.
+
+10. Jiang, L., Yu, M., Zhou, M., Liu, X. and Zhao, T. 2011. Target-dependent twitter sentiment classification. In *Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies*, 1: 151–160.
+
+11. Jin, Z., Yang, Y. and Liu, Y. 2020. Stock closing price prediction based on sentiment analysis and LSTM. *Neural Computing and Applications*, 32(13): 9713–9729.
+
+12. Kharde, V. and Sonawane, P. 2016. Sentiment analysis of twitter data: A survey of techniques. *International Journal of Computer Applications*, 139(11): 5–15.
+
+13. Koppel, M. and Schler, J. 2006. The importance of neutral examples for learning sentiment. *Computational Intelligence*, 22(2): 100–109.
+
+14. Kumar, H.P., Prashanth, K.B., Nirmala, T.V. and Patil, S.B. 2012. Neuro fuzzy based techniques for predicting stock trends. *International Journal of Computer Science Issues (IJCSI)*, 9(4): 385–394.
+
+15. Li, M., Chen, L., Zhao, J. and Li, Q. 2021. Sentiment analysis of Chinese stock reviews based on BERT model. *Applied Intelligence*, 51(7): 5016–5024.
+
+16. Li, X., Xie, H., Chen, L., Wang, J. and Deng, X. 2014. News impact on stock price return via sentiment analysis. *Knowledge-Based Systems*, 69(14–23).
+
+17. Long, W., Song, L. and Tian, Y. 2019. A new graphic kernel method of stock price trend prediction based on financial news semantic and structural similarity. *Expert Systems with Applications*, 118: 411–424.
+
+18. Mittal, A. and Goel, A. 2012. Stock prediction using twitter sentiment analysis. *Stanford University*, CS229, pp. 1–5.
+
+19. Mullen, T. and Collier, N. 2004. Sentiment analysis using support vector machines with diverse information sources. In *Proceedings of the 2004 Conference on Empirical Methods in Natural Language Processing*, pp. 412–418.
 
 20. Pang, B. and Lee, L. 2004. A sentimental education: Sentiment analysis using subjectivity summarization based on minimum cuts. In *Proceedings of the 42nd ACL*, pp. 271–278.
 
@@ -5884,7 +5532,6 @@ RMSE = \sqrt{\sum\limits_{i = 1}^{N}\frac{{(predicted_{i} - actual_{i})}^{2}}{N}
 *   **卷积神经网络** 245, 251, 256
 *   **群体协调** 308, 309, 318, 319, 329, 330
 *   **众包** 308–310, 314, 319–329
-
 *   **客户满意度** 283
 
 ### D
@@ -5906,16 +5553,7 @@ RMSE = \sqrt{\sum\limits_{i = 1}^{N}\frac{{(predicted_{i} - actual_{i})}^{2}}{N}
 
 ### F
 
-
-
-
-
-## 索引
-
-### F
-
 *   **联邦学习** 1, 3, 4, 11–17, 20–24, 26, 27, 80–83, 85, 88, 90, 91, 97–99, 102, 155–159, 161–171, 175, 186, 188, 191, 202–211, 213–217, 219–224, 245, 261, 264–266, 269, 270, 274, 275, 283, 286, 287, 289, 291–293, 296, 297, 301, 304, 305, 333, 334, 336, 337, 339, 340, 342, 343, 350
-
 *   **联邦学习** 107, 132–134, 136, 139, 140, 145, 150, 151
 
 ### G
@@ -5937,9 +5575,7 @@ RMSE = \sqrt{\sum\limits_{i = 1}^{N}\frac{{(predicted_{i} - actual_{i})}^{2}}{N}
 ### M
 
 *   **机器学习** 1, 4, 5–10, 16, 24, 26, 27, 33, 34, 36, 40, 52, 54, 84, 106–110, 112, 113, 115, 116, 120, 122, 123, 126, 127, 202–207, 209–211, 213–216, 219, 222–224, 226–228, 232, 235, 236, 238, 240, 247, 249, 250, 267, 268, 270, 271, 274, 277–279
-
 *   **宏任务** 308, 310, 311, 318–330
-
 *   **MRI 图像** 265–269, 271, 272, 280
 
 ### N
@@ -5949,66 +5585,48 @@ RMSE = \sqrt{\sum\limits_{i = 1}^{N}\frac{{(predicted_{i} - actual_{i})}^{2}}{N}
 ### P
 
 *   **保护** 108, 110, 117, 118
-
 *   **隐私** 61, 63–77, 106–108, 110–113, 116–119, 121–128, 155–162, 164, 167, 168, 170, 171
 
 ### R
 
 *   **停留时间** 177, 181, 186, 189, 193–195
-
 *   **资源分配** 157
 
 ### S
 
 *   **安全** 61, 63–67, 70, 74, 76, 77
-
 *   **安全监控** 131–133, 136, 139, 152
-
 *   **传感器设备** 298
-
 *   **情感分析** 333, 336, 340, 341, 344, 347, 348
-
 *   **随机梯度下降 (SGD)** 84–86
 
 ### T
 
 *   **交互记忆系统 (TMS)** 310–312, 321, 323
-
 *   **Transformer** 335, 341, 345, 346
-
 *   **Twitter API** 341, 343, 344, 348
 
 ---
 
 ## 作者信息
 
-1.  ¹助理教授高级一级, SITE, 维洛尔理工学院, 维洛尔, 印度.↩
+1. ¹助理教授高级一级, SITE, 维洛尔理工学院, 维洛尔, 印度.↩
+2. \*通讯作者: daniel.einarson@hkr.se↩
+3. ¹ 新兴技术学院, 斯里·斯里大学, 卡塔克, 奥里萨邦, 印度.↩
+4. ¹ 助理教授, 电气与通信工程系, 工程学院, 国家科学技术大学, 阿曼苏丹国, 马斯喀特.↩
+5. ¹ 研究学者, 计算机科学与工程学院, Saveetha 工程学院, Saveetha 医学与技术科学学院, 金奈, 印度.↩
+6. ¹ 助理教授, 电子与通信工程系, 安纳马莱大学, 安纳马莱纳加尔, 钦奈, 泰米尔纳德邦, 印度 - 608002.↩
 
-2.  \*通讯作者: daniel.einarson@hkr.se↩
 
-3.  ¹ 新兴技术学院, 斯里·斯里大学, 卡塔克, 奥里萨邦, 印度.↩
 
-4.  ¹ 助理教授, 电气与通信工程系, 工程学院, 国家科学技术大学, 阿曼苏丹国, 马斯喀特.↩
+### 作者单位
 
-5.  ¹ 研究学者, 计算机科学与工程学院, Saveetha 工程学院, Saveetha 医学与技术科学学院, 金奈, 印度.↩
-
-6.  ¹ 助理教授, 电子与通信工程系, 安纳马莱大学, 安纳马莱纳加尔, 钦奈, 泰米尔纳德邦, 印度 - 608002.↩
-
-7.  ¹ 计算机科学与工程系, Veltech Rangarajan Dr. Sagunthala 研发科学技术学院, 金奈, 600062, 印度↩
-
-8.  ¹ 研究学者, 计算机科学与工程学院, Saveetha 工程学院, Saveetha 医学与技术科学学院, 金奈, 印度↩
-
-9.  ¹ AI&ML 系, J.B. 工程技术学院, 海得拉巴, 特伦甘纳邦, 印度↩
-
-10.  ¹ CSE 系, Amal Jyothi 工程学院, APJ Abdul Kalam 科技大学, 喀拉拉邦.↩
-
-11.  ¹ 副教授/CSE, Dr. N.G.P. 理工学院, 科英布托尔.↩
-
-12.  ¹ 数据科学与商业系统, SRM 科学技术学院, Kattankulathur, 金奈, 泰米尔纳德邦, 印度.↩
-
-13.  ¹ 酒店与餐饮管理学院, 酒店与餐饮管理系, Vels 科学技术高等研究学院, (VISTAS) 视为大学, Pallavaram, 金奈, 印度.↩
-
-14.  \* 通讯作者: vimaladevi.k@vit.ac.in↩
-
-15.  ¹ 教授, 计算机科学与工程系, Vel Tech Rangarajan Dr. Sagunthala 研发科学技术学院, Avadi, 金奈 – 600 062.↩
-
+1. 计算机科学与工程系, Veltech Rangarajan Dr. Sagunthala 研发科学技术学院, 金奈, 600062, 印度
+2. 研究学者, 计算机科学与工程学院, Saveetha 工程学院, Saveetha 医学与技术科学学院, 金奈, 印度
+3. AI&ML 系, J.B. 工程技术学院, 海得拉巴, 特伦甘纳邦, 印度
+4. CSE 系, Amal Jyothi 工程学院, APJ Abdul Kalam 科技大学, 喀拉拉邦
+5. 副教授/CSE, Dr. N.G.P. 理工学院, 科英布托尔
+6. 数据科学与商业系统, SRM 科学技术学院, Kattankulathur, 金奈, 泰米尔纳德邦, 印度
+7. 酒店与餐饮管理学院, 酒店与餐饮管理系, Vels 科学技术高等研究学院, (VISTAS) 视为大学, Pallavaram, 金奈, 印度
+8. **通讯作者**: `vimaladevi.k@vit.ac.in`
+9. 教授, 计算机科学与工程系, Vel Tech Rangarajan Dr. Sagunthala 研发科学技术学院, Avadi, 金奈 – 600 062

@@ -1,9 +1,7 @@
-# 
-网络安全政治：社会技术转型与政治碎片化
 
+# 网络安全政治：社会技术转型与政治碎片化
 
 ![Image 1](img/index-1_1.jpg)
-
 
 本书探讨了网络安全的新兴及具有挑战性的政治层面，并将其作为由社会技术不确定性和政治碎片化所定义的议题呈现。
 
@@ -15,143 +13,82 @@
 
 `Andreas Wenger` 是位于瑞士苏黎世 ETH 苏黎世的国际与瑞士安全政策教授，同时也是中心安全研究所（CSS）的主任。
 
-
-
-
 中心安全研究所（CSS），瑞士联邦理工学院（ETH）苏黎世
 
 系列包括：
-
-
 
 ![Image 3](img/index-4_2.png)
 
 排版采用 Times New Roman 字体
 
 由印度 Chennai 的 Deanta Global Publishing Services 公司排版
-**1 介绍：在社会技术不确定性与政治碎片化之间的网络安全**
+
+## 1 介绍：在社会技术不确定性与政治碎片化之间的网络安全
 
 1
 
 `MYRIAM DUNN CAVELTY` AND `ANDREAS WENGER`
 
-
--   [30 *Marie Baezner and Sean Cordey*]
-
--   [Kapusta, P. (2015). *The Gray Zone \[White Paper\]*. MacDill Air Force Base: U.S. Special Operations Command.]
-
--   [Kim, S. (2018, February 7). Inside North Korea’s Hacker Army. Bloomberg. Retrieved from: [`www.bloomberg.com`](https://www.bloomberg.com)]
-
+- [30 *Marie Baezner and Sean Cordey*]
+- [Kapusta, P. (2015). *The Gray Zone [White Paper]*. MacDill Air Force Base: U.S. Special Operations Command.]
+- [Kim, S. (2018, February 7). Inside North Korea’s Hacker Army. Bloomberg. Retrieved from: [`www.bloomberg.com`](https://www.bloomberg.com)]
 [army.](https://www.bloomberg.com)
-
--   [Kozy, A. (2015, June 1). Rhetoric Foreshadows Cyber Activity in the South China Sea. *CrowdStrike Blog*. Retrieved from: [`www.crowdstrike.com`](https://www.crowdstrike.com)]
-
+- [Kozy, A. (2015, June 1). Rhetoric Foreshadows Cyber Activity in the South China Sea. *CrowdStrike Blog*. Retrieved from: [`www.crowdstrike.com`](https://www.crowdstrike.com)]
 [foreshadows -cyber -activity -in -the -south -china -sea/](https://www.crowdstrike.com)
-
--   [Leed, M. (2015). Square Pegs, Round Holes, and Gray Zone Conflicts: Time to Step Back.
-
-*Georgetown Journal of International Affairs*, 6(2): 133–143.]
-
--   [Mazarr, M. (2015a). *Mastering the Gray Zone: Understanding a Changing Era of Conflict*.
-
-Studies Institute and U.S. Army War College Press.]
-
--   [Mazarr, M. (2015b). Struggle in the Gray Zone and World Order. *War on the Rocks*. Retrieved from: [`warontherocks.com`](https://warontherocks.com)]
-
+- [Leed, M. (2015). Square Pegs, Round Holes, and Gray Zone Conflicts: Time to Step Back. *Georgetown Journal of International Affairs*, 6(2): 133–143.]
+- [Mazarr, M. (2015a). *Mastering the Gray Zone: Understanding a Changing Era of Conflict*. Studies Institute and U.S. Army War College Press.]
+- [Mazarr, M. (2015b). Struggle in the Gray Zone and World Order. *War on the Rocks*. Retrieved from: [`warontherocks.com`](https://warontherocks.com)]
 [world -order/.](https://warontherocks.com)
-
--   [Mogato, M. (2017, August 15). Philippines Says China Agrees on no New Expansion in South China Sea. Reuters. Retrieved from: [`www.reuters.com`](https://www.reuters.com)]
-
+- [Mogato, M. (2017, August 15). Philippines Says China Agrees on no New Expansion in South China Sea. Reuters. Retrieved from: [`www.reuters.com`](https://www.reuters.com)]
 [southchinasea -philippines -china /philippines -says -china -agrees -on -no -new -expansion]
-
 [in -south -china -sea -idUSKCN1AV0VJ.](https://www.reuters.com)
-
--   [Nakashima, E. and Sonne, P. (2018, June 8). China Hacked a Navy Contractor and Secured a Trove of Highly Sensitive Data on Submarine Warfare. *The Washington Post*. Retrieved from: [`www.washingtonpost.com`](https://www.washingtonpost.com)]
-
+- [Nakashima, E. and Sonne, P. (2018, June 8). China Hacked a Navy Contractor and Secured a Trove of Highly Sensitive Data on Submarine Warfare. *The Washington Post*. Retrieved from: [`www.washingtonpost.com`](https://www.washingtonpost.com)]
 [hacked -a -navy -contractor -and -secured -a -trove -of -highly -sensitive -data -on -submarine]
-
 [warfare /2018 /06 /08 /6cc396fa -68e6 -11e8 -bea7 -c8eb28bc52b1 _story .html.](https://www.washingtonpost.com)
-
--   [Nichols, M. (2019, August 5). North Korea Took $2 Billion in Cyberattacks to Fund Weapons Program: U.N. Report. Reuters. Retrieved from: [`www.reuters.com`](https://www.reuters.com)]
-
+- [Nichols, M. (2019, August 5). North Korea Took $2 Billion in Cyberattacks to Fund Weapons Program: U.N. Report. Reuters. Retrieved from: [`www.reuters.com`](https://www.reuters.com)]
 [article /us -northkorea -cyber -un /north -korea -took -2 -billion -in -cyberattacks -to -fund]
-
 [weapons -program -u -n -report -idUSKCN1UV1ZX.](https://www.reuters.com)
-
--   [Nocetti, J. (2015). Guerre de l’information: Le web russe dans le conflit en Ukraine. *Focus* *Stratégique*, 62: 1–47.]
-
--   [NSFocus Inc. (2016). *Distributed Denial-of-Service (DDoS) Attacks: An Economic Perspective*. Retrieved from: [`nsfocusglobal.com`](https://nsfocusglobal.com)]
-
+- [Nocetti, J. (2015). Guerre de l’information: Le web russe dans le conflit en Ukraine. *Focus* *Stratégique*, 62: 1–47.]
+- [NSFocus Inc. (2016). *Distributed Denial-of-Service (DDoS) Attacks: An Economic Perspective*. Retrieved from: [`nsfocusglobal.com`](https://nsfocusglobal.com)]
 [ddos -economic -perspective -wp/](https://nsfocusglobal.com)
-
--   [Nye, J. S. (2017). Deterrence and Dissuasion in Cyberspace. *International Security*, 41(3): 44–71. [`doi.org/10.1162/ISEC_a_00266.`](https://doi.org/10.1162/ISEC_a_00266)]
-
--   [Ornos, E., Remnick, D. and Yaffa, J. (2017, March 6). Trump, Putin, and the New Cold War. *The New Yorker*. Retrieved from: [`www.newyorker.com`](http://www.newyorker.com)]
-
+- [Nye, J. S. (2017). Deterrence and Dissuasion in Cyberspace. *International Security*, 41(3): 44–71. [`doi.org/10.1162/ISEC_a_00266.`](https://doi.org/10.1162/ISEC_a_00266)]
+- [Ornos, E., Remnick, D. and Yaffa, J. (2017, March 6). Trump, Putin, and the New Cold War. *The New Yorker*. Retrieved from: [`www.newyorker.com`](http://www.newyorker.com)]
 [/06 /trump -putin -and -the -new -cold -war.](http://www.newyorker.com)
-
--   [Pettyjohn, S. and Wasser, B. (2019). Competing in the Gray Zone—Russian Tactics and Western Responses. RAND Corporation. Retrieved from: [`www.rand.org`](https://www.rand.org)]
-
+- [Pettyjohn, S. and Wasser, B. (2019). Competing in the Gray Zone—Russian Tactics and Western Responses. RAND Corporation. Retrieved from: [`www.rand.org`](https://www.rand.org)]
 [research _reports /RR2791 .html](https://www.rand.org)
-
--   [Rid, T. (2013). *Cyber War Will not Take Place*. Oxford: Oxford University Press.]
-
--   [Rid, T. and B. Buchanan (2015). Attributing Cyber Attacks. *Journal of Strategic Studies*, 38(12): 4–37.]
-
--   [Rovner, J. (2019, July 16). Cyber War as an Intelligence Contest. *War on the Rocks*. Retrieved from: [`warontherocks.com`](https://warontherocks.com)]
-
+- [Rid, T. (2013). *Cyber War Will not Take Place*. Oxford: Oxford University Press.]
+- [Rid, T. and B. Buchanan (2015). Attributing Cyber Attacks. *Journal of Strategic Studies*, 38(12): 4–37.]
+- [Rovner, J. (2019, July 16). Cyber War as an Intelligence Contest. *War on the Rocks*. Retrieved from: [`warontherocks.com`](https://warontherocks.com)]
 [2019 /09 /cyber -war -as -an -intelligence -contest/.](https://warontherocks.com)
-
--   [Sanger, D. (2018). *The Perfect Weapon: War, Sabotage, and Fear in the Cyber Age*. New York: Crown.]
-
+- [Sanger, D. (2018). *The Perfect Weapon: War, Sabotage, and Fear in the Cyber Age*. New York: Crown.]
 *Cyber operations in the gray zone* 31
-
--   [Scott-Railton, J., Hulcoop, A., Razzak, B. A., Marczak, B., Anstis, S. and Deibert, R. (2020, June 9). Dark Basin: Uncovering a Massive Hack-For-Hire Operation. *CitizenLab*. Retrieved from: [`citizenlab.ca`](https://citizenlab.ca)]
-
+- [Scott-Railton, J., Hulcoop, A., Razzak, B. A., Marczak, B., Anstis, S. and Deibert, R. (2020, June 9). Dark Basin: Uncovering a Massive Hack-For-Hire Operation. *CitizenLab*. Retrieved from: [`citizenlab.ca`](https://citizenlab.ca)]
 [for -hire -operation/.](https://citizenlab.ca)
-
--   [Shanker, T. and Bumiller, E. (2012, October 11). Panetta Warns of Dire Threat of Cyberattack on U.S. *The New York Times*. Retrieved from: [`www.nytimes.com`](https://www.nytimes.com)]
-
+- [Shanker, T. and Bumiller, E. (2012, October 11). Panetta Warns of Dire Threat of Cyberattack on U.S. *The New York Times*. Retrieved from: [`www.nytimes.com`](https://www.nytimes.com)]
 [2012 /10 /12 /world /panetta -warns -of -dire -threat -of -cyberattack .html.](https://www.nytimes.com)
-
--   [Smeets, M. (2018). The Strategic Promise of Offensive Cyber Operations. *Strategic Studies Quarterly*, 12(3): 90–113.]
-
--   [Solon, O. (2017, May 15). WannaCry Ransomware Has Links to North Korea, Cybersecurity Experts Say. *The Guardian*. Retrieved from: [`www.theguardian.com`](https://www.theguardian.com)]
-
+- [Smeets, M. (2018). The Strategic Promise of Offensive Cyber Operations. *Strategic Studies Quarterly*, 12(3): 90–113.]
+- [Solon, O. (2017, May 15). WannaCry Ransomware Has Links to North Korea, Cybersecurity Experts Say. *The Guardian*. Retrieved from: [`www.theguardian.com`](https://www.theguardian.com)]
 [2017 /may /15 /wannacry -ransomware -north -korea -lazarus -group.](https://www.theguardian.com)
-
--   [The Economist. (2013, November 2). Rules for spies. *The Economist*. Retrieved from: [`www.economist.com`](https://www.economist.com)]
-
--   [Timberg, C. and Romm, T. (2019, July 25). It’s not Just the Russians Anymore as Iranians and Others Turn Up Disinformation Efforts Ahead of 2020 Vote. *The Washington Post*. Retrieved from: [`www.washingtonpost.com`](https://www.washingtonpost.com)]
-
+- [The Economist. (2013, November 2). Rules for spies. *The Economist*. Retrieved from: [`www.economist.com`](https://www.economist.com)]
+- [Timberg, C. and Romm, T. (2019, July 25). It’s not Just the Russians Anymore as Iranians and Others Turn Up Disinformation Efforts Ahead of 2020 Vote. *The Washington Post*. Retrieved from: [`www.washingtonpost.com`](https://www.washingtonpost.com)]
 [its -not -just -russians -anymore -iranians -others -turn -up -disinformation -efforts -ahead]
-
 [vote/ ?noredirect](https://www.washingtonpost.com)
-
--   [Valeriano, B., and Jensen, B. (2019). *The Myth of the Cyber Offense: The Case for Restraint*. Washington: Cato Institute. Retrieved from: [`www.cato.org`](https://www.cato.org)]
-
+- [Valeriano, B., and Jensen, B. (2019). *The Myth of the Cyber Offense: The Case for Restraint*. Washington: Cato Institute. Retrieved from: [`www.cato.org`](https://www.cato.org)]
 [analysis /myth -cyber -offense -case -restraint.](https://www.cato.org)
-
--   [Votel, J. L., Cleveland, C. T., Connett, C. T. and Irwin, W. (2016). Unconventional Warfare in the Gray Zone. *Joint Force Quarterly*, 80(1): 101–109.]
-
--   [Warner, M. (2019). A Matter of Trust: Covert Action Reconsidered. *Studies in Intelligence*, 63(4): 33–41.]
-
--   [Wirtz, J. J. (2017). Life in the “Gray Zone”: Observations for Contemporary Strategists.
-
-*Defense and Security Analysis*, 33(2): 106–114.]
+- [Votel, J. L., Cleveland, C. T., Connett, C. T. and Irwin, W. (2016). Unconventional Warfare in the Gray Zone. *Joint Force Quarterly*, 80(1): 101–109.]
+- [Warner, M. (2019). A Matter of Trust: Covert Action Reconsidered. *Studies in Intelligence*, 63(4): 33–41.]
+- [Wirtz, J. J. (2017). Life in the “Gray Zone”: Observations for Contemporary Strategists. *Defense and Security Analysis*, 33(2): 106–114.]
 
 10.4324/9781003110224-4
 
-**3**
+## 3 A threat to democracies?
 
-3 A threat to democracies?
-
-An overview of theoretical approaches and
-
-
+### An overview of theoretical approaches and
 
 # 实证测量用于研究
+
 ## 误导信息的影响
+
 ### *Wolf J. Schünemann*
 
 误导信息无处不在。这一简短且简单的洞察不仅是对（政治）信息提供在数字化转型公共领域中普遍存在的根本问题的精炼总结，也并非对那些有时带有警报性的警告所引发的决定论反应。误导信息被理解为故意传播的虚假信息和谣言，已成为现代高度互联社会中的主要关注点。这一现象非常显著，可以在全球范围内进行显微镜式研究，特别是在当前所谓的“信息流行病”（即关于 COVID-19、其起源、传播及影响以及相关治疗措施的误导信息）背景下（参考 Ball and Maxmen 2020）。
@@ -162,11 +99,13 @@ An overview of theoretical approaches and
 
 因此，整个问题必须从国内和国际冲突的角度来审视，并已成为网络安全话语和战略中的核心威胁。当前关于 COVID-19“信息流行病”（Strick et al. 2020）的辩论，显示出（误）信息行动似乎构成大国之间竞争的偏好模式，这很可能进一步印证了这些趋势。
 
-虽然近期国际政治事件提高了信息行动作为混合战争组成部分的认识，并在安全与国防部门的行动者中引发了焦虑（Lanoszka 2019: 228），DOI: [10.4324/9781003110224-4](https://doi.org/10.4324/9781003110224-4)
+虽然近期国际政治事件提高了信息行动作为混合战争组成部分的认识，并在安全与国防部门的行动者中引发了焦虑（Lanoszka 2019: 228），DOI: [`10.4324/9781003110224-4`](https://doi.org/10.4324/9781003110224-4)
 
 `*A threat to democracies?*`
 
 `*A threat to democracies?* 33`
+
+
 
 人们对民主政府如何适当应对日益增长的不确定性，尤其是在国际冲突情境中，尤其是它们对`media`的“控制偏见”（McQuail 2008: 234）在互联网上的应用，可能对民主制度相较于专制国家更不利——后者通过限制互联网自由来保护所谓的信息主权（Jamieson 2018: 11; Lanoszka 2019: 228; Omand 2018: 12; Pope 2018: 36），同时在国内和国际层面投入大量努力进行信息行动（King et al. 2017）。国际安全研究的真实叙述已经明确指出了自由民主制度的这种不对称脆弱性，但并未为反制措施或有效威慑提出决定性策略（Goldsmith and Russel 2018）或有效威慑（Goldsmith 2016; Shackelford et al. 2016: 666）。在媒体治理方面，即使在民主国家也已观察到更严格的在线控制措施的趋势（Freedom House 2018）。
 
@@ -174,24 +113,17 @@ An overview of theoretical approaches and
 
 本章余下部分的结构如下：在下一节中给出误导信息的基本定义，随后呈现一种基于知识的（误）信息行动概念，接着是对主要民主国家和国际组织发布的核心政策文件中表达的 threat perceptions 的批判性审查。随后，我将 threat perceptions 与实证研究提供的证据进行对比。在本节中，我区分了三个分析层面，在其中可以评估效果：微观、中观和宏观层面。鉴于对所谓误导信息的实际影响缺乏知识，以及其解释和归因的显著模糊性，我以呼吁审慎为结。数字化通信中的不确定性增加不应导致我们陷入国际威胁政治的新阶段，并使 cyberspace 的安全化进程可能对自由民主价值观和国际和平产生不利影响。
 
-**Disinformation as a concept and as a new**
-
-**element of international threat politics**
+# Disinformation as a concept and as a new element of international threat politics
 
 Disinformation 是一个复杂的术语。毕竟，在政治传播中，几乎任何有策略动机的行为者所作的陈述，其对手都可能将其称为 disinformation，仅为让步于对对方可信度的质疑。术语“fake news”的动荡职业生涯，常与 disinformation 同义使用（Allcott and Gentzkow 2017），正是这一情况的典型例证。该词汇在 2016 年主要政治事件（如英国脱欧公投、美国大选）后的公共话语中广泛使用，并作为描述所谓“后真相”时代的主要术语（Harsin 2015），但其在政治冲突中的普遍使用导致其作为武器被广泛采用。如今，它在学术讨论中几乎被排除使用（Vosoughi et al. 2018: 1146；但在 Lazer et al. 2018 中仍被使用）。
 
 相反，学术界更倾向于使用 disinformation 这一术语，其指代的是故意误导性的信息（European Commission 2018a: 11）。误导信息的分类依据其功能而定，即需要有一个行为体有意生产并传播不真实或错误的信息。因此，它可以与所有 unintentionally（ unintentionally）误导性的信息——即 misinformation——以及其他不旨在误导但旨在产生娱乐或更深层次洞察（如笑话或讽刺）的扭曲事实区分开来（Allcott and Gentzkow 2017）。误导信息还可与战略研究中更常见的信息行动术语相关联，如宣传或公共外交。
-
-
-
 
 **虚假信息**与宣传有重叠，但并不相同。两者的共同点在于有意的欺骗，以误导性或极度单方面的信息形式出现。然而，两者的区别在于宣传除了欺骗性信息外，还包括其他战略沟通手段，这些手段并不涉及虚假。传统上，宣传主要与总统主义或极权主义国家的政府行为体相关，并主要面向国内人口。另一方面，更传统、更现实的公共外交概念也关注国家主导的信息活动，面向外国公众。随着新兴的公共外交概念（如“公共外交 2.0”，Tago 2018: 457），范围扩大到更多行为体和数字网络的使用，但传播虚假信息并不在其定义范围内，因为这与民主国家所追求的所谓软实力目标相冲突。然而，在当前高涨的地缘政治紧张局势下，公共外交可能被视为国际虚假信息运动的委婉说法，类似于它被视为宣传的“*出产*”（Tago 2018）。
 
 在冷战时期（Tago 2018），公共外交也被视为宣传的*出产*。
 
 鉴于抽象概念中的类别划分在现实情境中应用时的困难，信息操作模糊化并不令人惊讶。除了客观真假的问题（Vosoughi et al. 2018）之外，要归因于信息操作并找到误导意图的证据仍然很困难。虽然不确定性始终是国际关系的构成性元素，但随着国家边界的渗透性——尤其是在信息流在网络空间中以及所谓的“混合战争”的数字化手段——模糊性显得尤为明显，甚至是恒常存在的一个特征。
-
-*对民主的威胁？* 35
 
 在关于虚假信息的讨论中，模糊性作为一个持续的特征尤为突出。正如整体网络安全领域一样，模糊性不仅关乎攻击者及其意图，也关乎攻击的实际质量和效果，以及对此的适当反应。
 
@@ -201,7 +133,7 @@ Disinformation 是一个复杂的术语。毕竟，在政治传播中，几乎�
 
 虽然这些大多“仅仅是情境”（Dunn Cavelty 2008: 3），但关于虚假信息的新网络灾难情境目前正在发生，或已经成为现实，例如在唐纳德·特朗普任职期间，以及英国脱欧后。
 
-**虚假信息与知识问题**
+# 虚假信息与知识问题
 
 正如网络安全领域普遍如此，以及当前关于虚假信息及其对民主的所谓威胁的辩论中，行为体倾向于在不确定性的空白处填入已有的知识元素，以构建一致的叙事，即使缺乏实际的经验证据。知识是理解威胁感知及对所谓攻击者及其动机的政治应对的重要因素。此外，知识本身也可能成为虚假信息的攻击对象（Farrell and Schneier 2018）。从以知识为导向的视角来看，避免文献中常见的两个缺陷尤为重要：一是归因问题，二是对（相关）知识本身的概念化。
 
@@ -213,18 +145,13 @@ Disinformation 是一个复杂的术语。毕竟，在政治传播中，几乎�
 
 从宏观知识导向的视角来看，假设信息流仅仅被“放入”一种相对无助的话语中似乎不合适。与网络攻击类似，更合理的预期是成功的虚假信息运动会利用目标系统（这里是话语）中已有的脆弱性，尤其是当行动者受外国势力引导时。
 
-Farrell and Schneier (2018) 提出了一种从比较视角评估政治系统对信息操作脆弱性的理论框架。在众多理论探讨中，他们的框架最接近知识导向的宏观视角，因为它基于“知识秩序”的概念，即区分特定政权的共同与争议性知识库，将虚假信息运动视为对知识的攻击。尽管作者提出了重要的重新定位，但其知识类型的二元对立仍显得过于粗糙 —  — “公共政治知识”几乎与信任机构或根据功能主义理论对政治体系基本支持的要求等非常一般的类别难以区分，而“争议政治知识”则
+Farrell and Schneier (2018) 提出了一种从比较视角评估政治系统对信息操作脆弱性的理论框架。在众多理论探讨中，他们的框架最接近知识导向的宏观视角，因为它基于“知识秩序”的概念，即区分特定政权的共同与争议性知识库，将虚假信息运动视为对知识的攻击。尽管作者提出了重要的重新定位，但其知识类型的二元对立仍显得过于粗糙 —  — “公共政治知识”几乎与信任机构或根据功能主义理论对政治体系基本支持的要求等非常一般的类别难以区分，而“争议政治知识”则包含了公共话语中漂浮和被处理的广泛知识要素。因此，这种区分似乎并未真正开放于更复杂的社会建构主义概念和社会知识秩序研究。此外，作者并未提供任何关于如何研究虚假信息作为知识攻击的指导。
 
+# Disinformation is all around – the threat perception
 
+在讨论虚假信息的影响之前，本节阐明了该问题如何影响关键行为体在国际舞台上的外交与安全政策。现代社会对虚假信息的主要关注可以通过检视最近由国家政府及国际组织发布的相关政策文件来轻易说明。因此，首先我对核心文件进行批判性审视。我选取了美国、英国、德国以及欧盟层面政府或专门委员会发布的安全策略与报告。基于我对威胁政治的兴趣，我以 Dunn Cavelty (2008: 30) 发展的社会建构主义元理论及其本体论为基础，该理论将威胁框架视为识别最常见解释方案或框架的核心分析概念，这些框架涵盖问题定义（“诊断框架”）与问题解决（“预测框架”）。这使得我们能够初步绘制对比图，随后再与政治传播研究提供的经验“证据”进行核对。
 
-
-包含了公共话语中漂浮和被处理的广泛知识要素。因此，这种区分似乎并未真正开放于更复杂的社会建构主义概念和社会知识秩序研究。此外，作者并未提供任何关于如何研究虚假信息作为知识攻击的指导。
-
-`Disinformation is all around – the threat perception`
-
-在讨论虚假信息的影响之前，本节阐明了该问题如何影响关键行为体在国际舞台上的外交与安全政策。现代社会对虚假信息的主要关注可以通过检视最近由国家政府及国际 *A threat to democracies?* 37 组织发布的相关政策文件来轻易说明。因此，首先我对核心文件进行批判性审视。我选取了美国、英国、德国以及欧盟层面政府或专门委员会发布的安全策略与报告。基于我对威胁政治的兴趣，我以 Dunn Cavelty (2008: 30) 发展的社会建构主义元理论及其本体论为基础，该理论将威胁框架视为识别最常见解释方案或框架的核心分析概念，这些框架涵盖问题定义（“诊断框架”）与问题解决（“预测框架”）。这使得我们能够初步绘制对比图，随后再与政治传播研究提供的经验“证据”进行核对。
-
-***Examples from core policy documents***
+## Examples from core policy documents
 
 `Disinformation has made it into the security strategies of major democracies` (Omand 2018: 8)。2017 年的“美国国家安全战略”将虚假信息列为 cyberspace 的主要威胁之一，称“[恶意国家和非国家行为体利用网络攻击进行勒索、信息战、虚假信息等]”。这些攻击被认为能够“动摇民主机构的信任与信心”（White House 2017: 31）。德国的网络安全战略也在威胁分析中列入虚假信息，并明确指出其对 liberal societies（自由社会）和民主秩序的潜在危害。
 
@@ -232,19 +159,15 @@ Farrell and Schneier (2018) 提出了一种从比较视角评估政治系统对�
 
 在国际组织层面，NATO 与欧盟为应对俄罗斯虚假信息而设立的战略传播部门可视为典型案例，它们的成立初衷正是为了遏制俄罗斯虚假信息，而波罗的海国家及东欧社会普遍被认为对该类信息特别脆弱。欧盟方面，2018 年欧盟委员会与欧洲外交与安全政策局（EEAS）发布《反虚假信息行动计划》（European Commission 2018b），呼吁加强遏制东欧地区俄罗斯宣传的活动。
 
-***Some reflections on recurrent frames***
+## Some reflections on recurrent frames
 
 诊断框架是理解威胁政治的关键，因为它表明虚假信息是否被视为政治威胁感知与脆弱性评估的一部分。下面我简要反思本文所检视的政策文件中最常出现的诊断框架。首先，值得注意的是，虚假信息通常不被视为孤立的活动或事件，而是被视为更或少协调的行动 kampaign 的一部分。导致最强烈焦虑的虚假信息行动，被认为是由某种战略性行为体——如 populist movement 或 party（ populist 运动或政党）或外国国家——主导。当前的欧洲与美国威胁感知主要指向俄罗斯。
 
 诊断框架的另一重要元素是，国家选举被虚假信息运动针对并可能被扭曲的叙事。该叙事强化了目标国家社会与政体的脆弱感，并帮助理解敌对信息操作的意图。换言之，正是这种叙事构成了将虚假信息解释为国家安全威胁的基础。此外，该叙事还将虚假信息的威胁范围延伸至其他所谓的外国干预形式，如外国宣传活动、有悖泄漏等，即便这些行为未必包含错误信息（Jamieson 2018: 144）。最后，关于国家选举受威胁的叙事，还明显依赖于所谓的行为体与归因（agency and attribution），这在前文理论部分已有强调。
 
-**The impact question – the supposed effects of disinformation**
+# The impact question – the supposed effects of disinformation
 
 准确评估当前的威胁感知，需要查看迄今学术研究所提供的经验证据。针对虚假信息兴趣的激增，不同研究路线作出了回应。媒介化环境中的政治传播是社会科学研究的 particularly complex subject。在选举等强烈政治交流的情境下，辨认并测量任何特定信息的效应都极为困难，因为每一点（ dis)information 都被抛入公共话语的动荡海洋中。尽管如此，已有的尝试可大致且表面地归纳为三大类别，且分布极不平衡。第一类是研究信息（dis）接触及其受众效应。第二类则通过考察信息对大众媒体传播的影响来评估其影响。第三类——公共话语维度——常被忽视或仅被偶然提及：它关注公共讨论本身。这三类研究层面分别对应通讯活动的微观、中观与宏观层面。与此同时，关于虚假信息及其效应的研究与争论，必须考虑数字化信息市场与公共领域的动态演变，这些演变跨越上述各层面。常被讨论的新现象，如 echo chambers（回声室）或政治竞选自动化，被认为会诱发结构性变化，从而促进虚假信息的整体传播（Vosoughi et al. 2018）。
-
- *A threat to democracies?* 39
-
-
 
 大多数关于（不）信息影响的研究都聚焦于个体对信息的接触层面。学术研究主要依赖调查数据、网络追踪、其他数字痕迹数据，或——虽然较少见——实验设计，以研究用户如何接触到虚假信息以及这可能如何影响其态度和行为（Allcott and Gentzkow 2017; Grinberg et al. 2019; Guess et al. 2018; Keersmaecker and Roets 2017; Pennycook et al. 2018）。一项关于美国总统大选 2016 年的有影响力研究（Allcott and Gentzkow 2017）显示，假新闻——通过事实核查网站数据加以分类——在选举竞争中发挥了相当大的作用，因为假新闻能够吸引数百万的浏览和点击。此外，研究中检测到的大多数假新闻都倾向于支持唐纳德·特朗普。
 
@@ -254,37 +177,33 @@ Vosoughi 等人（2018）同样依赖独立事实核查网站的评估，将新�
 
 Guess 等人（2018）将在线公众舆论调查与网络流量数据相结合。通过衡量选择性接触与虚假信息之间的关系，他们揭示了仅测量接触本身的局限性——接触不一定等同于影响，至少在改变实际政治态度或行为意义上并非如此。相反，作者发现，尽管选举前约有四分之一的美国人访问所谓的假新闻网站，但大部分测量到的接触是“态度一致的”，这表明选择性接触会削弱虚假信息的潜在影响。选择性接触提醒我们，若要获得更全面的图景，需要考虑更广泛的媒体逻辑和话语倾向。
 
-***The meso level – the effects of disinformation on mass media***
+## The meso level – the effects of disinformation on mass media
 
-数字媒体与传统媒体之间存在“复杂的关系”（Tucker et al. 2018: 4）。一方面，它们倾向于削弱传统大众媒体的基本结构（Shirky 2008）；另一方面，它们“明确成为传统媒体报道的工具”（Tucker et al. 2018）。因此，
-
-`40 *Wolf J. Schünemann*`
-
-有必要理解所谓新媒体与传统媒体之间的互动（Marwick and Lewis 2017）。在最近出版的作品中，Hall Jamieson 提供了最为全面的阐述，说明一场据称由俄罗斯政府策划的虚假信息运动如何决定性地影响了美国总统大选，并通过影响大 ic mass media 发挥关键作用。书名《Cyberwar: How Russian Hackers and Trolls Helped Elect a President》有力地表明，外国行为体在竞选的关键阶段成功影响了大众媒体及其最重要的政治传播机制——议程设置、框架设定和 priming，从而可能最终扭转关键战场州的公众投票。
+数字媒体与传统媒体之间存在“复杂的关系”（Tucker et al. 2018: 4）。一方面，它们倾向于削弱传统大众媒体的基本结构（Shirky 2008）；另一方面，它们“明确成为传统媒体报道的工具”（Tucker et al. 2018）。因此，有必要理解所谓新媒体与传统媒体之间的互动（Marwick and Lewis 2017）。在最近出版的作品中，Hall Jamieson 提供了最为全面的阐述，说明一场据称由俄罗斯政府策划的虚假信息运动如何决定性地影响了美国总统大选，并通过影响大 ic mass media 发挥关键作用。书名《Cyberwar: How Russian Hackers and Trolls Helped Elect a President》有力地表明，外国行为体在竞选的关键阶段成功影响了大众媒体及其最重要的政治传播机制——议程设置、框架设定和 priming，从而可能最终扭转关键战场州的公众投票。
 
 因此，她的目标是表明“`[t]he legacy media were complicit in this effort`”（Jamieson 2018: 38）。她的书中实证章节提供了对竞选材料的质性分析、对面向微观层面但聚焦媒体效应的全国电话调查，以及关于所谓俄罗斯信息操作在总统竞选期间的大量轶事证据。总体而言，Jamieson 结论认为“俄罗斯被黑客入侵的内容和虚假信息不仅污染了新闻议程，还在关键战场州将辩论平衡倾向于民主党候选人”（Jamieson 2018: 7）。
 
+
+
 然而，Jamieson 在书的结尾承认，她的反思和报告的发现只能提供合理性，而非基于证据的确定性。区分欺骗性信息操作与选举竞争中其他战略性沟通实例的效果——这些实例同样旨在实现有利候选人的胜利——仍是一个未解之谜（Jamieson 2018: 208）。
 
-***The macro level – the effects of disinformation on political discourse and knowledge***
+## The macro level – the effects of disinformation on political discourse and knowledge
 
-总体而言，虚假信息运动以及特别是外国干预选举的行为，预计会针对公共话语。它们是试图“以特定方式推动话语”的尝试（Morgan 2018: 41）。正是这些宏观层面的 presumed effects 尤其强化了将虚假信息视为威胁国家安全的感知，例如可以置于“更广泛的俄罗斯行动，旨在扰乱并激化西方政治话语”的背景下（UK Parliament 2017: 52）。话语是一个含义多样的概念，但话语理论倾向于共同假设通过象征性通信进行集体知识的生产与处理。遗憾的是，也不意外，关于虚假信息运动可能对公共话语和知识产生更重大影响的实证研究却相对匮乏（Farrell and Scheier 2018）。如上所述，这种话语常被认为受到新兴的*counter cultural narratives*（由俄罗斯信息运动或国内新兴激进右翼运动传播）的威胁（Bennett and Livingston 2018: 128）。作为话语结构的核心概念，叙事预计会被外部有意插入或批判性操控（Omand 2018: 5–6）。然而，这些假设大多缺乏对实际效果和成功的经验证据（唯一的例外是数据科学领域的 Bessi et al. 2015）。
+总体而言，虚假信息运动以及特别是外国干预选举的行为，预计会针对公共话语。它们是试图“以特定方式推动话语”的尝试（Morgan 2018: 41）。正是这些宏观层面的 presumed effects 尤其强化了将虚假信息视为威胁国家安全的感知，例如可以置于“更广泛的俄罗斯行动，旨在扰乱并激化西方政治话语”的背景下（UK Parliament 2017: 52）。话语是一个含义多样的概念，但话语理论倾向于共同假设通过象征性通信进行集体知识的生产与处理。遗憾的是，也不意外，关于虚假信息运动可能对公共话语和知识产生更重大影响的实证研究却相对匮乏（Farrell and Scheier 2018）。如上所述，这种话语常被认为受到新兴的`counter cultural narratives`（由俄罗斯信息运动或国内新兴激进右翼运动传播）的威胁（Bennett and Livingston 2018: 128）。作为话语结构的核心概念，叙事预计会被外部有意插入或批判性操控（Omand 2018: 5–6）。然而，这些假设大多缺乏对实际效果和成功的经验证据（唯一的例外是数据科学领域的 Bessi et al. 2015）。
 
-相反，Alexander Lanoszka 的著作（《2019》）“国际政治中的虚假信息”侧重于战略层面，认为所谓的虚假信息运动不太可能对政策产生实质性影响，因为公共话语和公众舆论构成了虚假信息必须跨越的“第二道障碍”。其核心论点是，目标受众对虚假信息的接受程度取决于他所称的“先前的意识形态承诺和心态”——这些因素使得人们不太可能因新出现的信息而相信并改变观点：“`[s]haping the information that they receive are ideological commitments and partisan identities in addition to their own experiences, rules of thumb, and the pieces of conventional wisdom that they have acquired over their lifetimes`”（Lanoszka 2019: 236）。Lanoszka 将其概念与 2014–2017 年期间的俄罗斯信息操作相结合，并通过实证测试其假设。总体而言，他发现自己的假设和论点得到确认。
+相反，Alexander Lanoszka 的著作（《2019》）“国际政治中的虚假信息”侧重于战略层面，认为所谓的虚假信息运动不太可能对政策产生实质性影响，因为公共话语和公众舆论构成了虚假信息必须跨越的“第二道障碍”。其核心论点是，目标受众对虚假信息的接受程度取决于他所称的“先前的意识形态承诺和心态”——这些因素使得人们不太可能因新出现的信息而相信并改变观点：`[s]haping the information that they receive are ideological commitments and partisan identities in addition to their own experiences, rules of thumb, and the pieces of conventional wisdom that they have acquired over their lifetimes`（Lanoszka 2019: 236）。Lanoszka 将其概念与 2014–2017 年期间的俄罗斯信息操作相结合，并通过实证测试其假设。总体而言，他发现自己的假设和论点得到确认。
 
-
-
--   [兰诺斯卡的发现与辩证论的信息操作理论相一致，因为信息操作，无论多么高级和协调，似乎很难或根本不可能如预期般扰乱或扭转公共话语。因此，将“通过信息操作给历史一个推动”视为可行的说法在话语层面必须受到高度质疑。然而，衡量信息操作的宏观层面影响显然极为困难，因为这需要全局视角、可能更长的历史视距以及对目标社会的社会文化和政治结构的深入了解（兰诺斯卡 2019：233）。
+- [兰诺斯卡的发现与辩证论的信息操作理论相一致，因为信息操作，无论多么高级和协调，似乎很难或根本不可能如预期般扰乱或扭转公共话语。因此，将“通过信息操作给历史一个推动”视为可行的说法在话语层面必须受到高度质疑。然而，衡量信息操作的宏观层面影响显然极为困难，因为这需要全局视角、可能更长的历史视距以及对目标社会的社会文化和政治结构的深入了解（兰诺斯卡 2019：233）。
 
 ## 促成数字公共领域中信息操作的因素
 
-信息操作并非新现象，它贯穿政治史各个时代。正如曼德（2018：7）所言，“期待对既定国家权威的颠覆性威胁并不新鲜”（参见摩根 2018：41）。如上文所示，威胁感知近年来因数字公共领域的结构性变化而发生转变。事实上，随着传统门卫机构的衰弱，任何人都可以发布内容并可能在大规模传播信息（Allcott and Gentzkow 2017; Keersmaecker and Roets 2017），但并无保证其内容会被关注（Hindman 2009; Stier et al. 2018）。在此背景下，社交媒体（如 Facebook）被指责充当“通往假新闻网站的门户”（Guess, et al. 2018）。在此情境下，诸如回声室（echo chambers）以及通过社交机器人实现的高度自动化等更广泛的在线交流现象被认为会加剧政治极化（Sunstein 2017）并引发妄想（Farrell and Schneier 2018：2）。这些潜在的促成因素同样需要与实证研究的证据相对照。这对信息操作的影响意味着什么？
+信息操作并非新现象，它贯穿政治史各个时代。正如曼德（2018：7）所言，“期待对既定国家权威的颠覆性威胁并不新鲜”（参见摩根 2018：41）。如上文所示，威胁感知近年来因数字公共领域的结构性变化而发生转变。事实上，随着传统门卫机构的衰弱，任何人都可以发布内容并可能在大规模传播信息（Allcott and Gentzkow 2017; Keersmaecker and Roets 2017），但并无保证其内容会被关注（Hindman 2009; Stier et al. 2018）。在此背景下，社交媒体（如 Facebook）被指责充当“通往假新闻网站的门户”（Guess, et al. 2018）。在此情境下，诸如回声室（`echo chambers`）以及通过社交机器人实现的高度自动化等更广泛的在线交流现象被认为会加剧政治极化（Sunstein 2017）并引发妄想（Farrell and Schneier 2018：2）。这些潜在的促成因素同样需要与实证研究的证据相对照。这对信息操作的影响意味着什么？
 
 虽然极化的政治体制和公众可能更易受到假新闻传播的影响（Zettl 2019），但将极化归因于数字化的碎片化（回声室）仍然极具争议。
 
-关于*回声室*，日益加剧的政治极化普遍被视为信息操作传播的肥沃土壤（Jamieson 2018; Lanoszka 2019：229）。实证研究主要针对美国，也涉及其他多个民主国家（Bakshy et al. 2015; Jacobson et al. 2016）。结果各不相同，但近期研究大多对回声室假说提出质疑（Dubois and Blank 2018; Fletcher and Nielsen 2017; Gentzkow and Shapiro 2011; Guess et al. 2018）。
+关于`回声室`，日益加剧的政治极化普遍被视为信息操作传播的肥沃土壤（Jamieson 2018; Lanoszka 2019：229）。实证研究主要针对美国，也涉及其他多个民主国家（Bakshy et al. 2015; Jacobson et al. 2016）。结果各不相同，但近期研究大多对回声室假说提出质疑（Dubois and Blank 2018; Fletcher and Nielsen 2017; Gentzkow and Shapiro 2011; Guess et al. 2018）。
 
-*自动化*的影响同样模糊，它常以所谓的社交机器人——能够自动生成内容或活动的软件工具——的形式出现。虽然大量实证研究指出社交机器人在政治过程中的潜在或实际作用，包括在信息操作中传播（或辨认）信息（Ferrara 2017; Hegelich and Janetzko 2016; Howard and Kollanyi 2016; Keller and Klinger 2019），但其方法论和结果受到机器人检测的缺陷（Gallwitz and Kreil 2019）或实际使用自动化工具的混合用途（Grimme et al. 2017）而受到质疑。
+`自动化`的影响同样模糊，它常以所谓的社交机器人——能够自动生成内容或活动的软件工具——的形式出现。虽然大量实证研究指出社交机器人在政治过程中的潜在或实际作用，包括在信息操作中传播（或辨认）信息（Ferrara 2017; Hegelich and Janetzko 2016; Howard and Kollanyi 2016; Keller and Klinger 2019），但其方法论和结果受到机器人检测的缺陷（Gallwitz and Kreil 2019）或实际使用自动化工具的混合用途（Grimme et al. 2017）而受到质疑。
 
 即便承认社交机器人在微博客平台（如 Twitter）上活跃程度很大，这并不意味着自动化决定了线上操纵的本质。相反，社交机器人更可能影响在线注意力经济的指标——通过关注、链接和分享推动热点话题，而操纵性内容主要由真实用户生成。此外，Vosoughi 等人（2018：1150）指出，并非机器人，而是人类用户使“虚假新闻传播得更远、更快、更深、更广阔”。这一发现进一步支持我们将关注点从所谓的攻击者及其可用的攻击工具转向目标社会及其对信息操作的脆弱性。
 
@@ -301,9 +220,6 @@ Guess 等人（2018）将在线公众舆论调查与网络流量数据相结合�
 因此，实证研究必须得到加强和改进，以积累更多关于实际挑战及适当解决方案的知识。在回应警报声音之前，我们应当特别研究所谓运动在公共话语宏观层面的长期效应。上文已将信息操作的传播与某些话语脆弱性的利用进行了比较。
 
 此比较表明，这些脆弱性——至少不能仅靠传统的监管或安全措施——不能充分通过常规监管或安全手段来消除，而必须通过政治或新闻手段来解决（曼德 2018：20）。脆弱性必须从内部加以削弱。例如，如果社交媒体充当信息操作传播的催化剂，则其以营利为导向的注意力经济需要通过监管（Bakir and McStay 2018）加以约束，但不能限制信息自由。如果以事实核查为代表的民间社会参与在实际操作中设计得当且相关参与者受到问责，也可以成为更为恰当的解决方案之一。
-
-
-
 
 All in all, a reflective and critical approach to the study of disinformation seems appropriate. For if the most likely and only achievable goal of malevolent actors on the international scene is correctly understood as the generation of paranoia and chaos among democratic publics and the sowing of distrust in democratic institutions (Chen 2016; Farrel and Schneier 2018), alarmist discourses and governmental overreactions might directly lead us into this trap.
 
@@ -329,9 +245,9 @@ Bessi, A., Zollo, F., Del Vicario, M., Scala, A., Caldarelli, G. and Quattrocioc
 
 (2015). Trend of Narratives in the Age of Misinformation. *PloS One*, 10(8): e0134641.
 
-Chen, A. (2016, 27 July). The Real Paranoia-Inducing Purpose of Russian Hacks. *The* *New Yorker*. Retrieved from: [`https://www.newyorker.com/news/news-desk/the-real`](https://www.newyorker.com)
+Chen, A. (2016, 27 July). The Real Paranoia-Inducing Purpose of Russian Hacks. *The* *New Yorker*. Retrieved from: `https://www.newyorker.com/news/news-desk/the-real`
 
-[\-paranoia-inducing-purposes-of-russian-hacks.](https://www.newyorker.com)
+`-paranoia-inducing-purposes-of-russian-hacks.`
 
 Dubois, E. and Blank, G. (2018). The Echo Chamber is Overstated: The Moderating Effect of Political Interest and Diverse Media. *Information, Communication and Society*, 21(5): 729–745.
 
@@ -343,13 +259,13 @@ European Commission. (2018a). *A Multi-Dimensional Approach to Disinformation:* 
 
 *Communications Networks, Content and Technology*. Luxembourg: Publications Office of the European Union.
 
-European Commission (2018b, December 5). *Action Plan against Disinformation:* *European Commission Contribution to the European Council (No. JOIN(2018)* *36 Final)*. Brussels. Retrieved from: [`https://ec.europa.eu/info/sites/default/files/eu`](https://ec.europa.eu)
+European Commission (2018b, December 5). *Action Plan against Disinformation:* *European Commission Contribution to the European Council (No. JOIN(2018)* *36 Final)*. Brussels. Retrieved from: `https://ec.europa.eu/info/sites/default/files/eu`
 
-[\-communication-disinformation-euco-05122018_en.pdf.](https://ec.europa.eu)
+`-communication-disinformation-euco-05122018_en.pdf.`
 
 Farrell, H. J. and Schneier, B. (2018). Common-Knowledge Attacks on Democracy. *SSRN*
 
-*Electronic Journal*[. Advance online publication. [`https://doi.org/10.2139/ssrn.3273111`](https://doi.org/10.2139/ssrn.3273111)].
+*Electronic Journal*[. Advance online publication. `https://doi.org/10.2139/ssrn.3273111`].
 
 Ferrara, E. (2017). Disinformation and Social Bot Operations in the Run Up to the 2017 French Presidential Election. *SSRN Electronic Journal*. Advance online publication.
 
@@ -357,23 +273,25 @@ Fletcher, R. and Nielsen, R. K. (2017). Are News Audiences Increasingly Fragment
 
 Freedom House (2018). *Freedom on the Net 2018: The Rise of Digital Authoritarianism*.
 
-New York/Washington. Retrieved from: [`https://freedomhouse.org/sites/default/files/`](https://freedomhouse.org)
+New York/Washington. Retrieved from: `https://freedomhouse.org/sites/default/files/`
 
-[`FOTN_2018_Final.pdf.`](https://freedomhouse.org)
+`FOTN_2018_Final.pdf.`
 
 Gallwitz, F. and Kreil, M. (2019). Die Mär von “Social Bots”. *Tagesspiegel*. Retrieved
 
-[from: [`https://background.tagesspiegel.de/digitalisierung/die-maer-von-social-bots`](https://background.tagesspiegel.de).
+[from: `https://background.tagesspiegel.de/digitalisierung/die-maer-von-social-bots`].
 
 Gentzkow, M. and Shapiro, J. M. (2011). Ideological Segregation Online and Offline. *The* *Quarterly Journal of Economics*, 126(4): 1799–1839.
 
-Goldsmith, J. (2016, 9 October). The DNC Hack and (the Lack of) Deterrence. *Lawfare* *Blog*[. Retrieved from: [`https://www.lawfareblog.com/dnc-hack-and-lack-deterrence.`](https://www.lawfareblog.com)
+Goldsmith, J. (2016, 9 October). The DNC Hack and (the Lack of) Deterrence. *Lawfare* *Blog*[. Retrieved from: `https://www.lawfareblog.com/dnc-hack-and-lack-deterrence.`]
+
+
 
 Goldsmith, J. and Russell, S. (2018). Strengths Become Vulnerabilities: How a Digital World Disadvantages the United States in Its International Relations. *Aegis Series* (1806): 1–22. Retrieved from: [`https://www.hoover.org/sites/default/files/research/docs`](https://www.hoover.org)
 
 [`/381100534-strengths-become-vulnerabilities.pdf`](https://www.hoover.org).
 
-* A threat to democracies?* 45
+*A threat to democracies?* 45
 
 Grimme, C., Preuss, M., Adam, L. and Trautmann, H. (2017). Social Bots: Human-Like by Means of Human Control? *Big Data*, 5(4): 279–293.
 
@@ -415,123 +333,88 @@ Keersmaecker, J. de and Roets, A. (2017). ‘Fake News’: Incorrect, but Hard t
 
 Keller, T. R. and Klinger, U. (2019). Social Bots in Election Campaigns: Theoretical, Empirical, and Methodological Implications. *Political Communication*, 36(1): 171–189.
 
+- [金，潘，罗伯茨（2017）。中国政府在社交媒体上制造社交媒体帖子以进行战略分心，而非参与论证。*美国政治科学评论*，111（3）：484–501。]
+- [拉诺斯卡（2019）。国际政治中的虚假信息。*欧洲国际安全期刊*，4（2）：227–248。]
+- [拉泽，D. M. J.，鲍姆，M. A.，本克勒，Y.，伯恩斯基，A. J.，格林希尔，K. M.，门策尔，F.，梅策尔，M.，潘尼科克，G.，罗森塔尔，D.，舒德松，M.，索尔曼，S.，斯塔恩，S.，塞恩，E.，瓦茨，D. 和齐特林，J. L.（2018）。*假新闻的科学*。*科学*，359（6380）：1094–1096。]
+- [卢皮，A. 和麦卡布宾斯，M. D.（1998）。*民主困境。公民能学到他们需要知道什么？* 剑桥：剑桥大学出版社。]
+- [46 *Wolf J. Schünemann*]
+- [马歇尔，N.（2017）。网络威权主义与信息地缘政治：理解俄罗斯互联网政策。*媒体与传播*，5（1）：29–41。]
+- [马里克，A. 和刘易斯，R.（2017）。网络上的媒体操纵与虚假信息。*数据与社会*。获取于：[`datasociety.net/pubs/oh/DataAndSociety_Med.pdf`](https://datasociety.net/pubs/oh/DataAndSociety_Med.pdf)]
+- [麦克奎尔，D.（2008）。*麦克奎尔的大众传播理论*（第 5 版，重印版）。伦敦：SAGE 出版社。]
+- [摩根，S.（2018）。*假新闻、虚假信息、操纵和在线策略以削弱民主*。*网络政策期刊*，3（1）：39–43。]
+- [奥曼，D.（2018）。*现代数字颠覆与煽动的威胁*。*网络政策期刊*，3（1）：5–23。]
+- [潘尼科克，G.，卡农，T. D. 和兰，D. G.（2018）。*先前接触增加假新闻的感知准确性*。*实验心理学杂志. 一般*，147（12）：1865–1880。]
+- [波默兰塞夫，P.（2014，5 月）。*普京如何重塑战争*。*外交政策*。获取于：[`foreignpolicy.com/2014/05/05/how-putin-is-reinventing-warfare/`](https://foreignpolicy.com/2014/05/05/how-putin-is-reinventing-warfare/)]
+- [教皇，A. E.（2018）。*网络化选举的保护*。*网络政策期刊*，3（1）：24–38。]
+- [舒恩曼，W. J.（2014）。*颠覆性主权：欧洲宪法进程中失败的公投的比较性话语分析。理论与实践中的话语研究*。维滕斯：斯普林格·VS。]
+- [舒恩曼，W. J.（2018）。*欧洲多层次政治辩论的* **scad** *分析*。]
+- [在 R. Keller, A.-K. Hornidge, and W. J. Schünemann（编）的* Routledge 社会学进展*一书中，*社会知识方法论：调查知识和意义构建* 一书中，页 91–111。]
+- [Shackelford, S., Schneier, B., Sulmeyer, M., Boustead, A., Buchanan, B., Craig, A., Deckard, T. H. and Malekos Smith, J.（2016）。*让民主更难以被黑客攻击：选举应被归类为“关键基础设施”吗？* *密歇根法学改革期刊*，50（3）：629–668。获取于：[`papers.ssrn.com/sol3/`](https://papers.ssrn.com/sol3/)]
+- [papers.cfm?abstract_id=2852461.](https://papers.ssrn.com)
+- [Shirky, C.（2008）。*这里来了：无组织的组织力量*。纽约：企鹅书籍。]
+- [Stier, S., Schünemann, W. J. and Steiger, S.（2018）。*活动人士与门卫：Twitter 上政策网络的时间和结构属性*。*新媒体与社会*，20（5）：1910–1930。]
+- [Strick, B., Robinson, O. and Sardarizadeh, S.（2020，5 月 28）。*内幕：针对美国的亲中国网络*。BBC。获取于：[`www.bbc.com/news/blogs`](https://www.bbc.com/news/blogs)]
+- [-trending -52657434.](https://www.bbc.com)
+- [Sunstein, C. R.（2017）。*#Republic: 社交媒体时代的分裂民主*。新泽西州普林斯顿：普林斯顿大学出版社。*]
+- [Tago, A.（2018）。*公共外交与外交政策*。在 C. G. Thies（编）。*牛津外交政策分析百科全书*。纽约：牛津大学出版社，页 453–464。*]
+- [Thornton, R. and Miron, M.（2019）。*遏制俄罗斯网络战：英国面临的实际、法律和伦理约束*。*网络政策期刊*，4（2）：257–274。*]
+- [Tucker, J., Guess, A., Barbera, P., Vaccari, C., Siegel, A., Sanovich, S., Stukal, D. and Nyhan, B.（2018）。*社交媒体、政治极化和政治虚假信息：一个* **威胁到民主**？* 47 回顾科学文献。*SSRN 电子期刊*。获取于：[`doi.org/10.2139/ssrn.3144139`](https://doi.org/10.2139/ssrn.3144139)]
+- [doi.org/10.2139/ssrn.3144139](https://doi.org/10.2139/ssrn.3144139).
+- [英国议会（2017，12 月 20）。*情报与安全委员会年度报告 2016–17（第 HC 655 号）*。伦敦。获取于：[`assets.publishing.service.gov.uk/727949/ISC-Annual-Report-2016-17.pdf`](https://assets.publishing.service.gov.uk/727949/ISC-Annual-Report-2016-17.pdf)]
+- [US 白宫（2017，12 月）。*美国国家安全战略*。华盛顿特区。获取于：[`trumpwhitehouse.archives.gov/wp-content/uploads/2017/12/NSS-Final-12-18-2017-0905.pdf`](https://trumpwhitehouse.archives.gov/wp-content/uploads/2017/12/NSS-Final-12-18-2017-0905.pdf)]
+- [Vosoughi, S., Roy, D. and Aral, S.（2018）。*真假新闻在线传播*。*科学*，359（6380）：1146–1151。*]
+- [Zettl, K.（2019）。*学到什么？美国和德国面对数字选举影响的民主韧性*。*外交与安全政策期刊*，12（4）：429–451。*]
+- [10.4324/9781003110224-5]
 
+## 4
 
--   [金，潘，罗伯茨（2017）。中国政府在社交媒体上制造社交媒体帖子以进行战略分心，而非参与论证。*美国政治科学评论*，111（3）：484–501。]
+### 4 文化暴力与
 
--   [拉诺斯卡（2019）。国际政治中的虚假信息。*欧洲国际安全期刊*，4（2）：227–248。]
+### 社交媒体上的碎片化
 
--   [拉泽，D. M. J.，鲍姆，M. A.，本克勒，Y.，伯恩斯基，A. J.，格林希尔，K. M.，门策尔，F.，梅策尔，M.，潘尼科克，G.，罗森塔尔，D.，舒德松，M.，索尔曼，S.，斯塔恩，S.，塞恩，E.，瓦茨，D. 和齐特林，J. L.（2018）。*假新闻的科学*。*科学*，359（6380）：1094–1096。]
+人类和社交机器人的干预与反制措施
 
--   [卢皮，A. 和麦卡布宾斯，M. D.（1998）。*民主困境。公民能学到他们需要知道什么？* 剑桥：剑桥大学出版社。]
+*Jasmin Haunschild, Marc-André Kaufhold, and*
 
--   [46 *Wolf J. Schünemann*]
+*Christian Reuter*
 
--   [马歇尔，N.（2017）。网络威权主义与信息地缘政治：理解俄罗斯互联网政策。*媒体与传播*，5（1）：29–41。]
+移动技术和社交媒体服务是社会技术创新，对现代文化和政治进程产生巨大影响。社交媒体通常被定义为“一个基于互联网的应用程序组，允许用户创建和交换用户生成内容” (Kaplan and Haenlein 2010)。它们塑造了舆论、政治、参与和抗议 (Wulf et al. 2013)，公民用于新闻消费和社交交流 (Robinson et al. 2017)；记者用于报道、分析和收集信息 (Stieglitz et al. 2018a)；组织用于监测危机、紧急情况、客户反馈和情感等 (Haunschild et al. 2020)。大型国际事件，如 2010 年的阿拉伯之春，展示了社会技术转型的潜力：公民不是被动受害者，而是积极且自主的参与者，利用社交媒体协调抗议和危机响应 (Reuter and Kaufhold 2018)。然而，在其他情况下，通过社交媒体协调的公民活动也增加了任务的复杂性和对正式当局的压力，因为缺乏国家控制并非只有激励性或无害的效果。相反，在社交媒体上，假新闻传播迅速，且群体容易在上面找到受众，无论是为了增加利润还是为了向易受影响的群体传播危险意识形态。
 
--   [马里克，A. 和刘易斯，R.（2017）。网络上的媒体操纵与虚假信息。*数据与社会*。获取于：[`datasociety.net/pubs/oh/DataAndSociety_Med.pdf`](https://datasociety.net/pubs/oh/DataAndSociety_Med.pdf)]
-
--   [麦克奎尔，D.（2008）。*麦克奎尔的大众传播理论*（第 5 版，重印版）。伦敦：SAGE 出版社。]
-
--   [摩根，S.（2018）。*假新闻、虚假信息、操纵和在线策略以削弱民主*。*网络政策期刊*，3（1）：39–43。]
-
--   [奥曼，D.（2018）。*现代数字颠覆与煽动的威胁*。*网络政策期刊*，3（1）：5–23。]
-
--   [潘尼科克，G.，卡农，T. D. 和兰，D. G.（2018）。*先前接触增加假新闻的感知准确性*。*实验心理学杂志. 一般*，147（12）：1865–1880。]
-
--   [波默兰塞夫，P.（2014，5 月）。*普京如何重塑战争*。*外交政策*。获取于：[`foreignpolicy.com/2014/05/05/how-putin-is-reinventing-warfare/`](https://foreignpolicy.com/2014/05/05/how-putin-is-reinventing-warfare/)]
-
--   [教皇，A. E.（2018）。*网络化选举的保护*。*网络政策期刊*，3（1）：24–38。]
-
--   [舒恩曼，W. J.（2014）。*颠覆性主权：欧洲宪法进程中失败的公投的比较性话语分析。理论与实践中的话语研究*。维滕斯：斯普林格·VS。]
-
--   [舒恩曼，W. J.（2018）。*欧洲多层次政治辩论的* **scad** *分析*。]
-
--   [在 R. Keller, A.-K. Hornidge, and W. J. Schünemann（编）的* Routledge 社会学进展*一书中，*社会知识方法论：调查知识和意义构建* 一书中，页 91–111。]
-
--   [Shackelford, S., Schneier, B., Sulmeyer, M., Boustead, A., Buchanan, B., Craig, A., Deckard, T. H. and Malekos Smith, J.（2016）。*让民主更难以被黑客攻击：选举应被归类为“关键基础设施”吗？* *密歇根法学改革期刊*，50（3）：629–668。获取于：[`papers.ssrn.com/sol3/`](https://papers.ssrn.com/sol3/)]
-
--   [papers.cfm?abstract_id=2852461.](https://papers.ssrn.com)
-
--   [Shirky, C.（2008）。*这里来了：无组织的组织力量*。纽约：企鹅书籍。]
-
--   [Stier, S., Schünemann, W. J. and Steiger, S.（2018）。*活动人士与门卫：Twitter 上政策网络的时间和结构属性*。*新媒体与社会*，20（5）：1910–1930。]
-
--   [Strick, B., Robinson, O. and Sardarizadeh, S.（2020，5 月 28）。*内幕：针对美国的亲中国网络*。BBC。获取于：[`www.bbc.com/news/blogs`](https://www.bbc.com/news/blogs)]
-
--   [-trending -52657434.](https://www.bbc.com)
-
--   [Sunstein, C. R.（2017）。*#Republic: 社交媒体时代的分裂民主*。新泽西州普林斯顿：普林斯顿大学出版社。*
-
--   [Tago, A.（2018）。*公共外交与外交政策*。在 C. G. Thies（编）。*牛津外交政策分析百科全书*。纽约：牛津大学出版社，页 453–464。*
-
--   [Thornton, R. and Miron, M.（2019）。*遏制俄罗斯网络战：英国面临的实际、法律和伦理约束*。*网络政策期刊*，4（2）：257–274。*
-
--   [Tucker, J., Guess, A., Barbera, P., Vaccari, C., Siegel, A., Sanovich, S., Stukal, D. and Nyhan, B.（2018）。*社交媒体、政治极化和政治虚假信息：一个* **威胁到民主**？* 47 回顾科学文献。*SSRN 电子期刊*。获取于：[`doi.org/10.2139/ssrn.3144139`](https://doi.org/10.2139/ssrn.3144139)]
-
--   [doi.org/10.2139/ssrn.3144139](https://doi.org/10.2139/ssrn.3144139).
-
--   [英国议会（2017，12 月 20）。*情报与安全委员会年度报告 2016–17（第 HC 655 号）*。伦敦。获取于：[`assets.publishing.service.gov.uk/727949/ISC-Annual-Report-2016-17.pdf`](https://assets.publishing.service.gov.uk/727949/ISC-Annual-Report-2016-17.pdf)]
-
--   [US 白宫（2017，12 月）。*美国国家安全战略*。华盛顿特区。获取于：[`trumpwhitehouse.archives.gov/wp-content/uploads/2017/12/NSS-Final-12-18-2017-0905.pdf`](https://trumpwhitehouse.archives.gov/wp-content/uploads/2017/12/NSS-Final-12-18-2017-0905.pdf)]
-
--   [Vosoughi, S., Roy, D. and Aral, S.（2018）。*真假新闻在线传播*。*科学*，359（6380）：1146–1151。*
-
--   [Zettl, K.（2019）。*学到什么？美国和德国面对数字选举影响的民主韧性*。*外交与安全政策期刊*，12（4）：429–451。*
-
--   [10.4324/9781003110224-5]
-
--   **4**
-
--   **4 文化暴力与**
-
--   **社交媒体上的碎片化**
-
--   人类和社交机器人的干预与反制措施
-
--   *Jasmin Haunschild, Marc-André Kaufhold, and*
-
--   *Christian Reuter*
-
--   [移动技术和社交媒体服务是社会技术创新，对现代文化和政治进程产生巨大影响。社交媒体通常被定义为“一个基于互联网的应用程序组，允许用户创建和交换用户生成内容” (Kaplan and Haenlein 2010)。它们塑造了舆论、政治、参与和抗议 (Wulf et al. 2013)，公民用于新闻消费和社交交流 (Robinson et al. 2017)；记者用于报道、分析和收集信息 (Stieglitz et al. 2018a)；组织用于监测危机、紧急情况、客户反馈和情感等 (Haunschild et al. 2020)。大型国际事件，如 2010 年的阿拉伯之春，展示了社会技术转型的潜力：公民不是被动受害者，而是积极且自主的参与者，利用社交媒体协调抗议和危机响应 (Reuter and Kaufhold 2018)。然而，在其他情况下，通过社交媒体协调的公民活动也增加了任务的复杂性和对正式当局的压力，因为缺乏国家控制并非只有激励性或无害的效果。相反，在社交媒体上，假新闻传播迅速，且群体容易在上面找到受众，无论是为了增加利润还是为了向易受影响的群体传播危险意识形态。]
-
-
-
-为理解社交媒体在促成和平与冲突中的作用，和平与冲突研究及安全研究领域对战争、和平与安全的概念是有帮助的。它们指出，需要深化和扩大对相关行为体、指涉对象以及威胁的理解（Booth 2007）。传统上，国家是唯一的行为体和受威胁对象，前南斯拉夫冲突表明社会群体也可能受到本国国家及该国内部其他群体的威胁（Waever 1993）。在网络空间，情况更为复杂，“行为体是出于军事战略目的还是商业目的，是否没有政治但可能代表私营部门、国家或具有政治意图的群体，这往往不明确”（Reuter 2020: 13）。同样，人类安全概念凸显了对个人的潜在威胁，这些威胁不仅关乎安全 DOI: [10.4324/9781003110224-5](https://doi.org/10.4324/9781003110224-5)
+为理解社交媒体在促成和平与冲突中的作用，和平与冲突研究及安全研究领域对战争、和平与安全的概念是有帮助的。它们指出，需要深化和扩大对相关行为体、指涉对象以及威胁的理解（Booth 2007）。传统上，国家是唯一的行为体和受威胁对象，前南斯拉夫冲突表明社会群体也可能受到本国国家及该国内部其他群体的威胁（Waever 1993）。在网络空间，情况更为复杂，“行为体是出于军事战略目的还是商业目的，是否没有政治但可能代表私营部门、国家或具有政治意图的群体，这往往不明确”（Reuter 2020: 13）。同样，人类安全概念凸显了对个人的潜在威胁，这些威胁不仅关乎安全 DOI: [`10.4324/9781003110224-5`](https://doi.org/10.4324/9781003110224-5)
 
 `Cultural violence and fragmentation`
 
 `Cultural violence and fragmentation` 49
 
+
+
 诸如直接袭击等，以及健康、发展和环境等安全问题（Booth 2007）。这种潜在伤害和不安全的概念有助于理解社交媒体作为社会技术创新的作用，它在释放力量的同时，也放大了现有的威胁。因此，社交媒体不仅能促成直接的物理暴力，例如通过促进恐怖分子招募（Weimann 2016），还能通过制造、强化和扩大不满情绪和政治碎片化，如通过传播假新闻和极端主义意识形态（Reuter et al. 2017），部分借助社交机器人（Stieglitz et al. 2017）来实现。文化暴力被理解为“所有被用来正当化直接或结构性暴力的文化方面”（Galtung 2007: 341），而结构性暴力描述为“因阻碍人们满足基本需求而造成的不公正的经济、社会和政治条件及制度”（Campbell et al. 2010: 390）。相应地，具有结构性暴力潜力的社会技术转型可以在（a）利用和滥用社交媒体平台以促进文化理解但也传播有害内容，以及（b）利用社交机器人制造假支持并放大有害内容的传播中观察到。另一方面，创新与监管也在发展，以在维护社交媒体正面潜力的同时，减轻社会技术不确定性并遏制滥用。
 
 在此背景下，社交媒体作为塑造文化的重要平台，既能促进文化和平，也能被用于结构性和文化暴力的滥用。网络和平概念已认识到其结构性维度，当网络和平被描述为“将 cyberspace 以人类和环境的利益为目的的和平应用（包括）放弃所有网络战争活动，以及利用整个通信基础设施促进国际理解”（FifF o.D.）。研究网络和平应当结合和平与冲突研究对其他社会领域中促成和平与冲突的条件的见解，以及人机交互和 IT 安全领域的贡献，以设计和交互技术的模式，从而促进和平（Reuter 2019）。
 
-在社会技术环境中，当文化暴力通过具体 *content* 显现时，它也由 *actors* 的动机驱动，并由 *technology* 的能力所传递。为应对这三种视角及 cyberspace 中的涌现现象，后续章节将探讨（1）*fake news* 及其利用现有不满与不信任；（2）*cyber terrorism* 及其如何利用弱势群体并进一步孤立他们；以及（3）社交机器人的技术，这些机器人网络可被行为体购买，以通过操纵和假新闻推进政治或经济议程。通过进行叙事性文献综述，本章识别挑战并探讨社交媒体上文化暴力的社会技术对策，揭示技术所利用的社会不满。因此，技术干预与社会干预都能带来成效。但也表明，如何区分合法诉求与政治反对的组织与恶意的政治与经济动机碎片化仍然悬而未决，无法仅凭当前主导社交媒体规则制定的技术或社交媒体公司来解决（DeNardis and Hackl 2015）。
+在社会技术环境中，当文化暴力通过具体 `content` 显现时，它也由 `actors` 的动机驱动，并由 `technology` 的能力所传递。为应对这三种视角及 cyberspace 中的涌现现象，后续章节将探讨（1）`fake news` 及其利用现有不满与不信任；（2）`cyber terrorism` 及其如何利用弱势群体并进一步孤立他们；以及（3）社交机器人的技术，这些机器人网络可被行为体购买，以通过操纵和假新闻推进政治或经济议程。通过进行叙事性文献综述，本章识别挑战并探讨社交媒体上文化暴力的社会技术对策，揭示技术所利用的社会不满。因此，技术干预与社会干预都能带来成效。但也表明，如何区分合法诉求与政治反对的组织与恶意的政治与经济动机碎片化仍然悬而未决，无法仅凭当前主导社交媒体规则制定的技术或社交媒体公司来解决（DeNardis and Hackl 2015）。
 
 本章展示了导致社会碎片化并侵蚀社区与政治机构信任的不同现象。首先，假新闻表明现有不满情绪可以被假新闻滋养。
 
 其次，社交媒体上的针对性宣传利用现有不满情绪，将个体转向其他社会，从而在恐怖主义招募过程中发挥作用。虽然社交媒体主要扩大现有声音的传播范围，第三种情况——社交机器人——则展示了人为放大特定声音、扭曲辩论以符合购买服务的财政和政治议程的潜力。每个案例都以展示社交技术对策收尾。本章通过讨论社交媒体带来的社会技术转型对合法性与监管权威的影响来结束。
 
-**Fabricated, manipulated, and misinterpreted**
+## Fabricated, manipulated, and misinterpreted
 
-**content: The issue of fake news in social media**
+### content: The issue of fake news in social media
 
 By increasing communication among online users, social media can contribute to cultural violence, for instance, by emphasizing religious, ideological, and language divides, including by spreading misinformation and disinformation, commonly known as “fake news”. While the term was originally used to mostly refer to comedy news shows, in 2016 the perception changed when many fake stories went viral and started to affect political parties globally and impacted opinions on a larger scale than before (Becker 2016). Although “fake news” is a popular and frequent term, it is often mingled with other phenomena, facilitating misuse of the term to discredit undesired news (Cooke 2017), political opponents, and conspiracy theories.
 
-***Dissemination of fake news in social media***
+#### Dissemination of fake news in social media
 
 Fake news are news articles that are “intentionally and verifiably false and could mislead readers” (Allcott and Gentzkow 2017: 213). The topics of fake news often lead to high emotions and are associated with controversial discussions like migration, child abuse, or war (Ziegele et al. 2014), but prevalent types of fake news differ across states and cultures (Humprecht 2019). Fake news can have serious consequences, e.g. influencing elections, stock markets, or leading to direct violence (Kaufhold and Reuter 2019). In an illustrative case in South Africa, foreign shops were attacked, leading to the deaths of 12 people, mostly nationals, while tensions between South Africans and Nigerians increased with footage on social media from different times and places claiming to portray attacks against
 
- `Cultural violence and fragmentation` 51
-
-
+`Cultural violence and fragmentation` 51
 
 Nigerians (News Afrika 2016). 这起案例显示，已有的排外情绪因社交媒体而被放大，导致对并未真实发生的暴力行为进行报复。
 
 经常，政治和金融动机存在于制造假新闻的行为中。社交媒体帖子的链接如果成功发布并被分享，就能带来巨大的广告收入，假新闻也被用来操纵公众舆论和辩论。著名的例子包括最近的美国总统选举（McCarthy 2017）以及英国“脱欧”公投，在这些事件中，虚假信息常常与社交机器人（Mostrous et al. 2017）一起被使用。
 
-***针对假新闻的对策***
+#### 针对假新闻的对策
 
 针对假新闻的三个促成因素及其对应的应对措施已被识别：为了应对“主机”（新闻读者和社交媒体用户）的易感性，教育与澄清是最有前景的方向。
 
@@ -579,20 +462,17 @@ Table 4.1).
 
 *文化暴力与碎片化* 53
 
-**恐怖主义行为者：社交媒体上的宣传与招募**
+## 恐怖主义行为者：社交媒体上的宣传与招募
 
 如所述，信息误导的传播强烈受不同行为者的动机驱动。近期欧洲出现了多起恐怖袭击，如 2015 年 11 月的巴黎袭击、2016 年的布鲁塞尔爆炸或 2017 年的伦敦桥梁袭击（Stieglitz et al. 2018b）。除了直接暴力和广泛的媒体报道外，互联网尤其是社交媒体也被用来传播文化暴力，例如传播恐怖主义意识形态并招募新成员。再次，只有在恐怖宣传与经历或感知的不公正和不满相结合时，极端化和招募进入恐怖及极端组织才得以实现（Al-Saggaf 2016）。
 
-***恐怖宣传与招募在社交媒体中的表现***
+### 恐怖宣传与招募在社交媒体中的表现
 
+- [关于恐怖组织和社交媒体的研究](https://example.org)主要关注所谓的伊斯兰国（IS，又称 ISIS、ISIL、DEASH）。Neer 和 O’Toole（2014）强调，特别是 Twitter 被 IS 作为战略工具用于获得年轻激进分子、巴阿特官员和女性的支持。Klausen 等人（2012）指出，英国恐怖组织 al-Muhajiroun 利用其国际 YouTube 频道网络进行宣传和暴力内容的展示。社交媒体用于激发幻想并通过创造同类人群的回声室来正常化极端观点（Awan 2017; Torok 2015）。这导致 IS 发展并传播“其核心叙事，常常通过重新框架熟悉的概念，如圣战和殉道”（Torok 2015）。除了针对脆弱和同类人群的宣传外，恐怖分子还使用 Kik 或 Skype 等工具进行“招募者与受众之间的直接、实时沟通”（Weimann 2016: 82）。
 
+- IS 的宣传不仅有助于招募潜在新战士，还包括“技术熟练且有才华的社交媒体用户，以维持招募机制”（Gates and Podder 2015: 109）。自 2014 年 5 月起，IS 视频或其他媒体由专门负责西方招募的 al-Hayat Media Center 生产。其材料存在多种语言，并通过社交媒体传播。例如，“IS 发布了一段呼吁穆斯林参与圣战的视频，其中包含一段德语演唱并配有英文翻译”（Weimann 2016: 80）。
 
-
--   [关于恐怖组织和社交媒体的研究](https://example.org)主要关注所谓的伊斯兰国（IS，又称 ISIS、ISIL、DEASH）。Neer 和 O’Toole（2014）强调，特别是 Twitter 被 IS 作为战略工具用于获得年轻激进分子、巴阿特官员和女性的支持。Klausen 等人（2012）指出，英国恐怖组织 al-Muhajiroun 利用其国际 YouTube 频道网络进行宣传和暴力内容的展示。社交媒体用于激发幻想并通过创造同类人群的回声室来正常化极端观点（Awan 2017; Torok 2015）。这导致 IS 发展并传播“其核心叙事，常常通过重新框架熟悉的概念，如圣战和殉道”（Torok 2015）。除了针对脆弱和同类人群的宣传外，恐怖分子还使用 Kik 或 Skype 等工具进行“招募者与受众之间的直接、实时沟通”（Weimann 2016: 82）。
-
--   IS 的宣传不仅有助于招募潜在新战士，还包括“技术熟练且有才华的社交媒体用户，以维持招募机制”（Gates and Podder 2015: 109）。自 2014 年 5 月起，IS 视频或其他媒体由专门负责西方招募的 al-Hayat Media Center 生产。其材料存在多种语言，并通过社交媒体传播。例如，“IS 发布了一段呼吁穆斯林参与圣战的视频，其中包含一段德语演唱并配有英文翻译”（Weimann 2016: 80）。
-
-***反恐网络在社交媒体上的行动***
+### 反恐网络在社交媒体上的行动
 
 研究识别出多种反恐措施（参见 Table 4.2，链接 https://example.org/index_split_000.html#p69）。Reuter 等人（2017）将反测措施分为三类：澄清、讽刺/讽刺、以及黑客攻击。他们发现，私人用户比旨在澄清的机构账户更擅长触达更广泛的受众。讽刺内容获得的关注最多，而黑客攻击的成功率被认为有限，因为账户可以轻松重新打开，内容可迁移到其他平台。
 
@@ -624,13 +504,15 @@ Hussain 和 Saltman（2014）强调，类似于假新闻的一般审查可能适
 
 *文化暴力与碎片化* 55
 
-**自动化技术驱动的操纵：**
+## 自动化技术驱动的操纵：
 
-**社交机器人的影响**
+## 社交机器人的影响
 
 当假新闻和恐怖宣传导致文化暴力在社交媒体上传播时，社交机器人和大规模机器人网络可能被滥用为文化暴力的放大器。“社交机器人是自动产生内容并与人类在社交媒体上互动的计算机算法，试图模仿甚至改变人类的行为”（Ferrara et al. 2016: 96）。机器人的行为可以建立真实的社交网络，并产生具有类似人类模式的可信内容。它们可以根据其意图和模仿人类行为的能力进行分类（Stieglitz et al. 2017）。机器人的使用有助于有针对性地传播特定意识形态内容和观点，伪装为自然、有机的支持，从而形成新的社会技术现象。
 
-***账号劫持和社交机器人的虚假动员***
+### 账号劫持和社交机器人的虚假动员
+
+
 
 除了人类黑客，机器人还可以通过账号劫持（暂时或完全）来干扰账号。登录凭证通过网络钓鱼、恶意软件或跨站脚本（XSS）获取。攻击者常利用被劫持的账号进行进一步的网络钓鱼活动，以获取更多账号的访问权限，利用熟人之间的信任（Stein et al. 2011）。被劫持的账号用于传播带有恶意软件或网络钓鱼链接的网站，目标是身份窃取（Almaatouq et al. 2016）。账号劫持可用于政治目的，被劫持的账号利用网络内的合法用户信任，使其更易相信误导信息和宣传（Trang et al. 2015）。
 
@@ -638,42 +520,22 @@ Hussain 和 Saltman（2014）强调，类似于假新闻的一般审查可能适
 
 作为另一种现象，虚假动员（astroturfing）描述了模仿草根运动的行为，旨在假装当地的社会倡议或组织，以影响经济或政治条件（Cho et al. 2011）。利用机器人制造广泛支持的假象，虚假动员通常由政治或经济集团进行。类似于游说，它旨在通过强化自身观点并贬低反对意见来操纵公众舆论和政治决策。
 
+然而，这种类型的游说本质上极度缺乏透明度，并涉及向个人支付费用以搭建结构和宣传，这些宣传表面上看似来自草根组织。在此背景下，机器人可以是一种成本效益的方式，用于模拟广泛的支持。此外，非法或灰色地带内容经常被传播，例如广告欺诈、可疑的政治言论或诋毁性谣言（Wang et al. 2012）。与其针对特定政策的结果，俄罗斯机构“Internet Research Agency”（IRA）则被用于操纵 2016 年美国总统选举的选民（Diresta et al. 2019）。它建立了账户，遍布所有主要社交媒体平台，并利用草图（astroturfing）等手段，鼓励或劝阻特定的选民群体。研究表明，该机构利用当前的争论（如#BlackLivesMatter 运动），在右翼和左翼的极端立场之间传播帖子，并利用现有的不满和不信任来加剧碎片化、社会不安全感以及对民主机构的不信任（Stewart et al. 2018）。
 
-
-
-然而，这种类型的游说本质上极度缺乏透明度，并涉及向个人支付费用以搭建结构和宣传，这些宣传表面上看似来自草根组织。在此背景下，机器人可以是一种成本效益的方式，用于模拟广泛的支持。此外，非法或灰色地带内容经常被传播，例如广告欺诈、可疑的政治言论或诋毁性谣言（Wang et al. 2012）。与其针对特定政策的结果，俄罗斯机构“Internet Research Agency”（IRA）则被用于操纵 2016 年美国总统选举的选民（Diresta et al. 2019）。它建立了
-
-56 `J. Haunschild, M.-A. Kaufhold, and C. Reuter`
-
-账户，遍布所有主要社交媒体平台，并利用草图（astroturfing）等手段，鼓励或劝阻特定的选民群体。研究表明，该机构利用当前的争论（如#BlackLivesMatter 运动），在右翼和左翼的极端立场之间传播帖子，并利用现有的不满和不信任来加剧碎片化、社会不安全感以及对民主机构的不信任（Stewart et al. 2018）。
-
-***算法和群体社交机器人检测***
+## 算法和群体社交机器人检测
 
 为了对抗社交机器人，首先必须识别相应的机器人账户。为此，社交机器人检测领域已经发展出多种方法（Ferrara et al. 2016）。社交机器人可以通过人类互动或通过对特征和社交网络的算法分析来识别，两者都通过混合方法相互补充（见 Table 4.3）。
 
 首先，众包方法假设人类因其人类认知能力，能够识别讽刺、幽默或承诺等人类语言细微之处，这些是机器人难以模仿或自动检测机制难以识别的。因此，开发了基于众包的在线平台（Wang et al. 2012），数千人协助在 Facebook 和 Renren（中国流行的社交网络）上识别机器人账户。Appling 和 Briscoe（2017）考察了人类识别社交机器人的有效性，并将其与自动化机器人判定进行比较。算法检测系统的一个类别包括基于图的方法，它们将相应的社交网络建模为有限图，参与者构成顶点，边表示它们之间的关系（Yan 2013）。这些方法通过分析社交图的拓扑结构来识别社交机器人。社交机器人依赖于与其他账户的社交连接，以呈现可信的形象。
 
-人们假设，机器人只能与合法用户建立相对较少的社交链接，因此更倾向于与其他机器人建立联系。
+人们假设，机器人只能与合法用户建立相对较少的社交链接，因此更倾向于与其他机器人建立联系账户。这种紧密相连的机器人群体特征被用于通过社区检测算法进行识别。
 
-*Table 4.3* 社交机器人检测方法
+**Table 4.3** 社交机器人检测方法
 
-**众包**
-
-依赖于人类识别社交机器人，假设人类是最能够识别讽刺、幽默或承诺等语言细微之处的群体（Wang et al.2012）。
-
-**社交图分析** 将社交网络可视化为有限图。节点代表网络参与者；边代表关系（Yan 2013）。
-
-**特征分析**
-
-通过确定机器人账户的独特特征和行为，使用机器学习或熵方法来识别社交机器人（Ramalingam and Chinnaiah 2018）。
-
-**混合方法**
-
-结合不同方法，例如在图基础方法上加入特征，以提高社交机器人检测的准确性（Gao et al. 2015）。
-
-*文化暴力与碎片化* 57
-
-账户。这种紧密相连的机器人群体特征被用于通过社区检测算法进行识别。
+- 众包：依赖于人类识别社交机器人，假设人类是最能够识别讽刺、幽默或承诺等语言细微之处的群体（Wang et al. 2012）。
+- 社交图分析：将社交网络可视化为有限图。节点代表网络参与者；边代表关系（Yan 2013）。
+- 特征分析：通过确定机器人账户的独特特征和行为，使用机器学习或熵方法来识别社交机器人（Ramalingam and Chinnaiah 2018）。
+- 混合方法：结合不同方法，例如在图基础方法上加入特征，以提高社交机器人检测的准确性（Gao et al. 2015）。
 
 此外，基于特征的方法通过识别机器人账户的定义特征和行为，将其与人类用户区分开来（Ramalingam and Chinnaiah 2018）。被检查的特征多样，包括关注者数量或推文数量、用户的时间活动、帖子内容、头像、账户名称以及好友列表。这一检测系统类别可以细分为机器学习系统和熵基检测系统。
 
@@ -683,72 +545,49 @@ Hussain 和 Saltman（2014）强调，类似于假新闻的一般审查可能适
 
 与垃圾邮件的经验表明，技术干预可以强大，但必须配合社会层面的因素，如对滥用机制的了解，以在技术方案失效时赋能用户自我保护。
 
-**结论**
+## 结论
 
 本章我们考察了三种在社交媒体中可能导致文化暴力并引发跨社会冲突的现象，其中人工或半自动干预可能造成文化暴力并激化跨社会冲突。为了防止这些现象的负面影响，已应用了多种不同的应对措施，这些措施可能提升社交媒体的文化和平（见 Table 4.4）。
 
 在（手动）人工干预方面，我们看到伪造、误读和操纵内容，以及宣传和恐怖主义招募等。
 
-*Table 4.4* 文化暴力与和平的行为者与意图
+**Table 4.4** 文化暴力与和平的行为者与意图
 
-*行为者*
+- 行为者：人类、机器
+- 意图恶意：伪造、误读、帐户劫持、误导内容、草图、假宣传、招募、假账户、假帖子、垃圾邮件
+- 应对措施：门禁、媒体素养、众包平台、法律、澄清、检测算法、讽刺/讽刺、劫持、用户帮助工具、反叙事
 
-*人类*
-
-*机器*
-
-**意图恶意**
-
-伪造、误读、帐户劫持、误导内容、草图、假宣传、招募、假账户、假帖子、垃圾邮件
-
-**应对措施** 门禁、媒体素养、众包平台、法律、澄清、检测算法、讽刺/讽刺、劫持、用户帮助工具、反叙事
-
-58 `J. Haunschild, M.-A. Kaufhold, and C. Reuter`
-
-
-
-
-may inflict structural or direct violence. Here, countermeasures are similar and include gatekeeping, media literacy and laws, as well as clarification, parody/satire, and hacking. Further research could examine how so far largely neglected actors, such as the crowd and IT-related civil society groups, can contribute to solutions, bringing together IT knowledge and society-level interventions. These can be inspired by established peace interventions from other domains, such as reconcili-ation. Considering (semi-)automatic machine interventions, we identified account hijacking, astroturfing, fake accounts, fake posts, and spam as potentials for cultural violence exacerbating existing divides and eroding trust in legitimate protest and institutions. Respective countermeasures contain detection algorithms and crowdsourcing for malicious content. Experiences in countering spam show the power of technical arms races, but also spammers’ adaptability in using sophisticated social engineering to deceive detection mechanisms and humans by exploiting trust detection mechanisms. Similarly, the Russion bot firm IRA has adapted its strategy to feigning affiliation with established, trusted institutions (Wired 2020). Technical arms races can thus be powerful, but never all-encompassing, leaving the necessity for social interventions. Hybrid forms of intervention include solutions that, without outright censoring posts, limit the visibility or spreading speed of harmful content, or provide technical assistance for users to better judge the truthworthiness of online information, or can identify social media users at risk of radicalization. However, as long as legitimate grievances exist, actors such as terrorists will be able to co-opt these grievances and resistance. Therefore, organizations such as ICT4Peace use communication technology to address community grievances at the root level, helping overcome fragmentation and societal insecurity.
+may inflict structural or direct violence. Here, countermeasures are similar and include gatekeeping, media literacy and laws, as well as clarification, parody/satire, and hacking. Further research could examine how so far largely neglected actors, such as the crowd and IT-related civil society groups, can contribute to solutions, bringing together IT knowledge and society-level interventions. These can be inspired by established peace interventions from other domains, such as reconciliation. Considering (semi-)automatic machine interventions, we identified account hijacking, astroturfing, fake accounts, fake posts, and spam as potentials for cultural violence exacerbating existing divides and eroding trust in legitimate protest and institutions. Respective countermeasures contain detection algorithms and crowdsourcing for malicious content. Experiences in countering spam show the power of technical arms races, but also spammers’ adaptability in using sophisticated social engineering to deceive detection mechanisms and humans by exploiting trust detection mechanisms. Similarly, the Russion bot firm IRA has adapted its strategy to feigning affiliation with established, trusted institutions (Wired 2020). Technical arms races can thus be powerful, but never all-encompassing, leaving the necessity for social interventions. Hybrid forms of intervention include solutions that, without outright censoring posts, limit the visibility or spreading speed of harmful content, or provide technical assistance for users to better judge the truthworthiness of online information, or can identify social media users at risk of radicalization. However, as long as legitimate grievances exist, actors such as terrorists will be able to co-opt these grievances and resistance. Therefore, organizations such as ICT4Peace use communication technology to address community grievances at the root level, helping overcome fragmentation and societal insecurity.
 
 This limit of technical interventions also applies to disinformation and terrorist propaganda: While deletion and flagging of false content are possible, this raises questions about the authority over defining the truth and dangers of censorship.
 
 The dominant technical interventions are not addressing the root causes that make people gullible to disinformation and even lead them to potentially sign away their future to join extremist groups. This also raises new questions about the definition of victims and perpetrators of online structural violence: Are people who spread misinformation and propaganda perpetrators of societal fragmentation and structural violence, or victims of a society that has left them with low media literacy and the feeling of being alienated by the society they live in? Similar to fake news, it is difficult to differentiate legitimate protest movements from those instigated by politically and economically motivated bot firms that specialize in feigning public support for radical or partisan opinions. As is in many countries required to start a new political party, for sensitive topics with the potential to fragment society, new organizations could be required to proof their legitimacy through referral by an organization that is trusted by that community. Though a difficult task, such measures may be necessary to save the legitimacy of grassroot protest in the long run. The frame of structural and cultural violence can help to identify issues and populations that are particularly vulnerable to social media incitement of resentment, or topics and corporations that may profitably use disinformation and social bots, suggesting a need for societal interventions.
 
-*Cultural violence and fragmentation* 59
-
-A promising first step is the social media analytics, which can be used to better understand the social side of social media abuse, e.g. by making situational assessments of specific discourses and events (Kaufhold et al. 2020a), including the identification of fake news or hate speech as potential instances of cultural violence using (supervised) machine learning approaches (Kaufhold et al. 2020b).
-
-As an intermediary, technical tools can be developed to flag false content and provide transparency over actors and organizations that fuel the extremes and follow partisan interests. This will require identifying the actors and incentive structures that motivate disinformation and the buying of social bot systems as well as addressing the societal structures, mainly mistrust and grievances, which allow malicious interventions to take devastating effects.
+A promising first step is the social media analytics, which can be used to better understand the social side of social media abuse, e.g. by making situational assessments of specific discourses and events (Kaufhold et al. 2020a), including the identification of fake news or hate speech as potential instances of cultural violence using (supervised) machine learning approaches (Kaufhold et al. 2020b). As an intermediary, technical tools can be developed to flag false content and provide transparency over actors and organizations that fuel the extremes and follow partisan interests. This will require identifying the actors and incentive structures that motivate disinformation and the buying of social bot systems as well as addressing the societal structures, mainly mistrust and grievances, which allow malicious interventions to take devastating effects.
 
 Further research should overcome the limitation of this explorative contribution by first including more socio-technological technological transformations seen in social media that can contribute to structural violence. As this chapter focused on the cultural areas of ideology, a more comprehensive examination should further address issues such as cultural diversity, religion, and economy as factors for cultural violence in social media, e.g. through an apposite mapping to Galtung’s (2007) cultural areas of religion, ideology, language, art, and empirical and formal science.
 
-**Acknowledgments**
+## Acknowledgments
 
 Parts of this chapter are based on our previous work (Kaufhold and Reuter 2019).
 
+
+
 This work has been co-funded by the German Federal Ministry of Education and Research (BMBF) and the Hessen State Ministry for Higher Education, Research and Arts (HMKW) within the SecUrban mission of the National Research Center for Applied Cybersecurity ATHENE and by the LOEWE initiative (Hesse, Germany) within the emergenCITY center.
 
-**References**
+## References
 
 All links checked on August 20, 2021.
 
 Al-Rawi, A. (2016). Anti-ISIS Humor: Cultural Resistance of Radical Ideology. *Politics, Religion and Ideology*, 7689(May): 1–17.
 
-Al-Saggaf, Y. (2016). Understanding Online Radicalisation Using Data Science.
-
-*International Journal of Cyber Warfare and Terrorism (IJCWT)*, 6(4): 13–27.
+Al-Saggaf, Y. (2016). Understanding Online Radicalisation Using Data Science. *International Journal of Cyber Warfare and Terrorism (IJCWT)*, 6(4): 13–27.
 
 Al-Saggaf, Y. and Davies, A. (2019). Understanding the Expression of Grievances in the Arabic Twitter-Sphere Using Machine Learning. *Journal of Criminological Research, Policy and Practice*, 5(2): 108–119.
 
-Allcott, H. and Gentzkow, M. (2017). Social Media and Fake News in the 2016 Election.
+Allcott, H. and Gentzkow, M. (2017). Social Media and Fake News in the 2016 Election. *Journal of Economic Perspective*, 31(2): 211–236.
 
-*Journal of Economic Perspective*, 31(2): 211–236.
-
-Almaatouq, A., Shmueli, E., Nouh, M., Alabdulkareem, A., Singh, V. K., Alsaleh, M.,
-
-… Pentland, A. (2016). If it Looks Like a Spammer and Behaves Like a Spammer, it Must Be a Spammer: Analysis and Detection of Microblogging Spam Accounts.
-
-*International Journal of Information Security*, 15(5): 475–491.
+Almaatouq, A., Shmueli, E., Nouh, M., Alabdulkareem, A., Singh, V. K., Alsaleh, M., … Pentland, A. (2016). If it Looks Like a Spammer and Behaves Like a Spammer, it Must Be a Spammer: Analysis and Detection of Microblogging Spam Accounts. *International Journal of Information Security*, 15(5): 475–491.
 
 60 *J. Haunschild, M.-A. Kaufhold, and C. Reuter*
 
@@ -768,19 +607,13 @@ Cho, C. H., Martens, M. L., Kim, H. and Rodrigue, M. (2011). Astroturfing Global
 
 Cooke, N. A. (2017). Posttruth, Truthiness, and Alternative Facts: Information Behavior and Critical Information Consumption for a New Age. *Library Querterly: Information, Community, Policy*, 87(3): 211–221.
 
-
-
-DeNardis, L. and Hackl, A. M. (2015). Internet Governance by Social Media Platforms.
-
-`Telecommunications Policy`, 39(9): 761–770.
+DeNardis, L. and Hackl, A. M. (2015). Internet Governance by Social Media Platforms. `Telecommunications Policy`, 39(9): 761–770.
 
 Diresta, R., Shaffer, K., Ruppel, B., Matney, R., Fox, R., Albright, J. and Johnson, B. (2019). `The Tactics and Tropes of the Internet Research Agency`. Report for the United States Senate Select Committee on Intelligence. Retrieved from: [`digitalcommons.unl.edu/senatedocs/2/`](http://dx.doi.org/digitalcommons.unl.edu/senatedocs/2/).
 
 [.unl .edu /senatedocs /2/.](http://dx.doi.org/digitalcommons.unl.edu/senatedocs/2/.)
 
-Ferrara, E., Varol, O., Davis, C., Menczer, F. and Flammini, A. (2016). The Rise of Social Bots. `Communications of the ACM`, 59(7): 96–104. Retrieved February 25 2021, from:
-
-[`dl.acm.org/citation.cfm?id=2818717`](http://dl.acm.org)
+Ferrara, E., Varol, O., Davis, C., Menczer, F. and Flammini, A. (2016). The Rise of Social Bots. `Communications of the ACM`, 59(7): 96–104. Retrieved February 25 2021, from: [`dl.acm.org/citation.cfm?id=2818717`](http://dl.acm.org)
 
 Freedman, L. (2006). `The Transformation of Strategic Affairs`. Abingdon: Routledge.
 
@@ -788,24 +621,19 @@ Galtung, J. (2007). `Frieden mit friedlichen Mitteln. Friede und Konflikt, Entwi
 
 Gao, P., Gong, N. Z., Kulkarni, S., Thomas, K. and Mittal, P. (2018). SybilFrame: A Defense-in-Depth Framework for Structure-Based Sybil Detection. In: `Computing Research Repository`. Retrieved February 25 2021, from: [`arxiv.org/abs/1503.02985`](http://arxiv.org)
 
-Gartenstein-Ross, D. (2015). Social Media in the Next Evolution of Terrorist Recruitment.
-
-`Hearing before the Senate Committee on Homeland Security and Governmental Affairs`, Foundation for Defense of Democracies, 1–11.
+Gartenstein-Ross, D. (2015). Social Media in the Next Evolution of Terrorist Recruitment. `Hearing before the Senate Committee on Homeland Security and Governmental Affairs`, Foundation for Defense of Democracies, 1–11.
 
 Gates, S. and Podder, S. (2015). Social Media, Recruitment, Allegiance and the Islamic State. `Perspectives on Terrorism`, 9(4): 107–116.
 
 Graves, L. (2018). Boundaries Not Drawn: Mapping the Institutional Roots of the Global Fact-Checking Movement. `Journalism Studies`, 19(5): 613–631.
 
-Hancock, J. T., Curry, L. E., Goorha, S. and Woodworth, M. (2008). On Lying and Being Lied To: A Linguistic Analysis of Deception in Computer-Mediated Communication.
-
-`Discourse Processes`, 45(1): 1–23.
+Hancock, J. T., Curry, L. E., Goorha, S. and Woodworth, M. (2008). On Lying and Being Lied To: A Linguistic Analysis of Deception in Computer-Mediated Communication. `Discourse Processes`, 45(1): 1–23.
 
 Hartwig, K. and Reuter, C. (2019). TrustyTweet: An Indicator-Based Browser-Plugin to Assist Users in Dealing with Fake News on Twitter. In: `Proceedings of the International Conference on Wirtschaftsinformatik (WI)`. Siegen.
 
 `Cultural violence and fragmentation` 61
 
-Haunschild, J., Kaufhold, M.-A. and Reuter, C. (2020). Sticking with Landlines? Citizens'
-and Police Social Media Use and Expectation during Emergencies. In: `Proceedings of the International Conference on Wirtschaftsinformatik (WI)`. Potsdam, Germany: AIS Electronic Library (AISel).
+Haunschild, J., Kaufhold, M.-A. and Reuter, C. (2020). Sticking with Landlines? Citizens' and Police Social Media Use and Expectation during Emergencies. In: `Proceedings of the International Conference on Wirtschaftsinformatik (WI)`. Potsdam, Germany: AIS Electronic Library (AISel).
 
 Hartwig, K. and Reuter, C. (2019). TrustyTweet: An Indicator-Based Browser-Plugin to Assist Users in Dealing with Fake News on Twitter. In: `Proceedings of the International Conference on Wirtschaftsinformatik (WI)`. Siegen.
 
@@ -815,9 +643,7 @@ Hern, A. (2020, April 7). WhatsApp to Impose New Limit on Forwarding to Fight Fa
 
 Humprecht, E. (2019). Where ‘Fake News’ Flourishes: A Comparison across Four Western Democracies. `Information, Communication and Society`, 22(13): 1973–1988.
 
-Hussain, G. and Saltman, E. M. (2014). Jihad Trending: A Comprehensive Analysis of Online Extremism and How to Counter It. Report from the Quilliam Foundation.
-
-Retrieved from: [`preventviolentextremism.info/jihad-trending-comprehensive`](https://preventviolentextremism.info).
+Hussain, G. and Saltman, E. M. (2014). Jihad Trending: A Comprehensive Analysis of Online Extremism and How to Counter It. Report from the Quilliam Foundation. Retrieved from: [`preventviolentextremism.info/jihad-trending-comprehensive`](https://preventviolentextremism.info).
 
 [-analysis-online-extremism-and-how-counter-it](https://preventviolentextremism.info).
 
@@ -831,15 +657,13 @@ Kaufhold, M.-A. and Reuter, C. (2019). Cultural Violence and Peace in Social Med
 
 Kaufhold, M.-A., Rupp, N., Reuter, C. and Habdank, M. (2020a). Mitigating Information Overload in Social Media during Conflicts and Crises: Design and Evaluation of a Cross-Platform Alerting System. `Behaviour and Information Technology (BIT)`, 39(3): 319–342.
 
-Klausen, J., Barbieri, E. T., Reichlin-Melnick, A. and Zelin, A. Y. (2012). The YouTube Jihadists: A Social Network Analysis of Al-Muhajiroun’s Propaganda Campaign.
+Klausen, J., Barbieri, E. T., Reichlin-Melnick, A. and Zelin, A. Y. (2012). The YouTube Jihadists: A Social Network Analysis of Al-Muhajiroun’s Propaganda Campaign. `Perspectives on Terrorism`, 6(1): 36–53.
 
-`Perspectives on Terrorism`, 6(1): 36–53.
-
-McCarthy, T. (2017, October 14). How Russia Used Social Media to Divide Americans.
-
-`The Guardian`. Retrieved from: [`www.theguardian.com/us-news/2017/oct/14/`](https://www.theguardian.com).
+McCarthy, T. (2017, October 14). How Russia Used Social Media to Divide Americans. `The Guardian`. Retrieved from: [`www.theguardian.com/us-news/2017/oct/14/`](https://www.theguardian.com).
 
 [russia-us-politics-social-media-facebook](https://www.theguardian.com).
+
+
 
 Mihailidis, P. and Viotty, S. (2017). Spreadable Spectacle in Digital Culture: Civic Expression, Fake News, and the Role of Media Literacies in “Post-Fact” Society.
 
@@ -869,25 +693,23 @@ Reuter, C. and Kaufhold, M.-A. (2018). Fifteen Years of Social Media in Emergenc
 
 Reuter, C., Pätsch, K. and Runft, E. (2017). IT for Peace? Fighting against Terrorism in Social Media – An Explorative Twitter Study. `I-Com: Journal of Interactive Media`, 16(2): 181–193.
 
+Robinson, T., Callahan, C., Boyle, K., Rivera, E. and Cho, J. K. (2017). I ♥ FB: A Q-Methodology Analysis of Why People ‘Like’’ Facebook.’ `International Journal of Virtual Communities and Social Networking (IJVCSN)`, 9(2): 46–61.
 
+Rubin, V. L. (2019). Disinformation and Misinformation Triangle: A Conceptual Model for “Fake News” Epidemic, Causal Factors and Interventions. `Journal of Documentation`, 75(5): 1013–1034.
 
-Robinson, T., Callahan, C., Boyle, K., Rivera, E. and Cho, J. K. (2017). I ♥ FB: A Q-Methodology Analysis of Why People ‘Like’’ Facebook.’ *International Journal of* *Virtual Communities and Social Networking (IJVCSN)*, 9(2): 46–61.
+Saltman, E. M. and Russell, J. (2014). `White Paper – The Role of Prevent in Countering Online Extremism`. London: Quilliam Foundation.
 
-Rubin, V. L. (2019). Disinformation and Misinformation Triangle: A Conceptual Model for “Fake News” Epidemic, Causal Factors and Interventions. *Journal of Documentation*, 75(5): 1013–1034.
+Stein, T., Chen, E. and Mangla, K. (2011). Facebook Immune System. `Proceedings of the 4th Workshop on Social Network Systems`, 5: 1–8.
 
-Saltman, E. M. and Russell, J. (2014). *White Paper – The Role of Prevent in Countering* *Online Extremism*. London: Quilliam Foundation.
+Stewart, L. G., Arif, A. and Starbird, K. (2018). Examining Trolls and Polarization with a Retweet Network. `Proceedings of WSDM Workshop on Misinformation and Misbehavior Mining on the Web (MIS2)`, 6.
 
-Stein, T., Chen, E. and Mangla, K. (2011). Facebook Immune System. *Proceedings of the* *4th Workshop on Social Network Systems*, 5: 1–8.
+Stieglitz, S., Brachten, F., Ross, B. and Jung, A.-K. (2017). Do Social Bots Dream of Electric Sheep? A Categorisation of Social Media Bot Accounts. `Proceedings of the Australasian Conference on Information Systems`, 1–11.
 
-Stewart, L. G., Arif, A. and Starbird, K. (2018). Examining Trolls and Polarization with a Retweet Network. *Proceedings of WSDM Workshop on Misinformation and* *Misbehavior Mining on the Web (MIS2)*, 6.
+Stieglitz, S., Mirbabaie, M., Ross, B. and Neuberger, C. (2018a). Social Media Analytics – Challenges in Topic Discovery, Data Collection, and Data Preparation. `International Journal of Information Management`, 39: 156–168.
 
-Stieglitz, S., Brachten, F., Ross, B. and Jung, A.-K. (2017). Do Social Bots Dream of Electric Sheep? A Categorisation of Social Media Bot Accounts. *Proceedings of the* *Australasian Conference on Information Systems*, 1–11.
+Stieglitz, S., Mirbabaie, M. and Milde, M. (2018b). Social Positions and Collective Sense-Making in Crisis Communication. `International Journal of Human-Computer Interaction`, 34(4): 328–355.
 
-Stieglitz, S., Mirbabaie, M., Ross, B. and Neuberger, C. (2018a). Social Media Analytics – Challenges in Topic Discovery, Data Collection, and Data Preparation. *International* *Journal of Information Management*, 39: 156–168.
-
-Stieglitz, S., Mirbabaie, M. and Milde, M. (2018b). Social Positions and Collective Sense-Making in Crisis Communication. *International Journal of Human-Computer* *Interaction*, 34(4): 328–355.
-
-Sutton, J., Palen, L. and Shklovski, I. (2008). Backchannels on the Front Lines: Emergent Uses of Social Media in the 2007 Southern California Wildfires. In: F. Friedrich and B. Van de Walle (eds). *Proceedings of the Information Systems for Crisis Response and* *Management (ISCRAM)*. Washington, DC, pp. 624–632.
+Sutton, J., Palen, L. and Shklovski, I. (2008). Backchannels on the Front Lines: Emergent Uses of Social Media in the 2007 Southern California Wildfires. In: F. Friedrich and B. Van de Walle (eds). `Proceedings of the Information Systems for Crisis Response and Management (ISCRAM)`. Washington, DC, pp. 624–632.
 
 Torok, R. (2015). ISIS and the Institution of Online Terrorist Recruitment. Retrieved February 25 2021, from: [`www .mei .edu /publications /isis -and -institution -online`](https://www.mei.edu)
 
@@ -895,57 +717,53 @@ Torok, R. (2015). ISIS and the Institution of Online Terrorist Recruitment. Retr
 
 *Cultural violence and fragmentation* 63
 
-Trang, D., Johansson, F. and Rosell, M. (2015). Evaluating Algorithms for Detection of Compromised Social Media User Accounts. *Proceedings - 2nd European Network* *Intelligence Conference, ENIC 2015*, 75–82.
+Trang, D., Johansson, F. and Rosell, M. (2015). Evaluating Algorithms for Detection of Compromised Social Media User Accounts. `Proceedings - 2nd European Network Intelligence Conference, ENIC 2015`, 75–82.
 
-Viviani, M. and Pasi, G. (2017). Credibility in Social Media: Opinions, News, and Health Information—A Survey. *Wiley Interdisciplinary Reviews: Data Mining and Knowledge* *Discovery*, 7(5): e1209.
+Viviani, M. and Pasi, G. (2017). Credibility in Social Media: Opinions, News, and Health Information—A Survey. `Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery`, 7(5): e1209.
 
-Waever, O. (1993). Societal Security: The Concept. In: O. Waever, et al. (eds). *Identity,* *Migration and the New Security Agenda in Europe*. London: Pinter, pp. 17–40.
+Waever, O. (1993). Societal Security: The Concept. In: O. Waever, et al. (eds). `Identity, Migration and the New Security Agenda in Europe`. London: Pinter, pp. 17–40.
 
 Wang, G., Wilson, C., Zhao, X., Zhu, Y., Mohanlal, M., Zheng, H. and Zhao, B. Y. (2012).
 
-Serf and Turf: Crowdturfing for Fun and Profit. *Arxiv Preprint ArXiv:1111.5654*, 10.
+Serf and Turf: Crowdturfing for Fun and Profit. `Arxiv Preprint ArXiv:1111.5654`, 10.
 
-Weimann, G. (2016). The Emerging Role of Social Media in the Recruitment of Foreign Fighters. In: A. de Guttry, F. Capone, and C. Paulussen (eds). *Foreign Fighters under* *International Law and Beyond*. The Hague: T.M.C. Asser Press, pp. 77–95.
+Weimann, G. (2016). The Emerging Role of Social Media in the Recruitment of Foreign Fighters. In: A. de Guttry, F. Capone, and C. Paulussen (eds). `Foreign Fighters under International Law and Beyond`. The Hague: T.M.C. Asser Press, pp. 77–95.
 
-Weimann, G. and Jost, J. (2015). Neuer Terrorismus und Neue Medien. *Zeitschrift Für* *Außen- Und Sicherheitspolitik*, 8(3): 369–388.
+Weimann, G. and Jost, J. (2015). Neuer Terrorismus und Neue Medien. `Zeitschrift Für Außen- Und Sicherheitspolitik`, 8(3): 369–388.
 
 Wired (2020, March 5). Russia Is Learning How to Bypass Facebook’s Disinfo Defenses.
 
-*Wired*. Retrieved from: [`www .wired .com /story /russia -ira -bypass -facebook`](https://www.wired.com)
+`Wired`. Retrieved from: [`www .wired .com /story /russia -ira -bypass -facebook`](https://www.wired.com)
 
 [\-disinfo -defenses/.](https://www.wired.com)
 
 Wohn, D. Y., Fiesler, C., Hemphill, L., De Choudhury, M. and Matias, J. N. (2017). How to Handle Online Risks? Discussing Content Curation and Moderation in Social Media.
 
-In: *CHI 2017 Extended Abstracts*, pp. 1271–1276.
+In: `CHI 2017 Extended Abstracts`, pp. 1271–1276.
 
 Wulf, V., Aal, K., Ktesh, I. A., Atam, M., Schubert, K., Yerousis, G. P., … Bank, W. (2013).
 
-Fighting against the Wall: Social Media Use by Political Activists in a Palestinian Village. In: *Proceedings of the Conference on Human Factors in Computing Systems* ( *CHI*). Paris: ACM, pp. 1979–1988.
+Fighting against the Wall: Social Media Use by Political Activists in a Palestinian Village. In: `Proceedings of the Conference on Human Factors in Computing Systems` (`CHI`). Paris: ACM, pp. 1979–1988.
 
-Yan, G. (2013). Peri-Watchdog: Hunting for Hidden Botnets in the Periphery of Online Social Networks. *Computer Networks*, 57(2): 540–555. [`doi .org /10 .1016 /j`](https://doi.org/10.1016/j.comnet.2012.07.016)
+Yan, G. (2013). Peri-Watchdog: Hunting for Hidden Botnets in the Periphery of Online Social Networks. `Computer Networks`, 57(2): 540–555. [`doi .org /10 .1016 /j`](https://doi.org/10.1016/j.comnet.2012.07.016)
 
 [.comnet .2012 .07 .016.](https://doi.org/10.1016/j.comnet.2012.07.016)
 
-Ziegele, M., Breiner, T. and Quiring, O. (2014). What Creates Interactivity in Online News Discussions? An Exploratory Analysis of Discussion Factors in User Comments on News Items. *Journal of Communication*, 64(6): 1111–1138.
+Ziegele, M., Breiner, T. and Quiring, O. (2014). What Creates Interactivity in Online News Discussions? An Exploratory Analysis of Discussion Factors in User Comments on News Items. `Journal of Communication`, 64(6): 1111–1138.
 
 10.4324/9781003110224-6
 
-**5**
-
-**5 Artificial intelligence and**
-
-**the offense–defense balance**
-
-**in cyber security**
+# 5 Artificial intelligence and the offense–defense balance in cyber security
 
 *Matteo E. Bonfanti*
 
-Cyber security is a quickly evolving domain which is constantly shaped by technological, policy, regulatory, economic, and social developments. Homomorphic encryption, quantum computing, and block chain represent some of the latest innovative approaches and applications, which promise to change the practice of cyber security. Nowadays, topping the list is “artificial intelligence” (AI), a variegated suite of concepts, methods, and tools whose transformative capacity is widely celebrated but has yet to be fully seen and understood.
+Cyber security is a quickly evolving domain which is constantly shaped by technological, policy, regulatory, economic, and social developments. Homomorphic encryption, quantum computing, and block chain represent some of the latest innovative approaches and applications, which promise to change the practice of cyber security. Nowadays, topping the list is “artificial intelligence” (`AI`), a variegated suite of concepts, methods, and tools whose transformative capacity is widely celebrated but has yet to be fully seen and understood.
+
+
 
 Although researched and developed for some decades, AI has become significantly attractive for cyber security stakeholders only in recent times, when latest advancements in this technological field have shown the potential to impact on cyber security (Cussins Newman 2019: 14 ff.). Such growing attention on AI and its intersections with the security of cyberspace is reflected by the increasing number of dedicated initiatives both governmental and private organizations have promoted over the last few years.
 
-However, the time needed for the outcomes of the AI-induced transformation on cyber security to become more tangible and widespread (the “when” question) is contested. While some are prudent about claiming revolutionary change, others are very enthusiastic. Consider, for example, the statement made by the (former) Commander of US Cyber Command and Director of the National Security Agency, Admiral Michael Rogers, a few years ago: “Artificial Intelligence and machine learning — I would argue — is foundational to the future of cyber security \[…\] It is not the if, it’s only the when to me” (Allen and Chan 2017: 18).
+However, the time needed for the outcomes of the AI-induced transformation on cyber security to become more tangible and widespread (the “when” question) is contested. While some are prudent about claiming revolutionary change, others are very enthusiastic. Consider, for example, the statement made by the (former) Commander of US Cyber Command and Director of the National Security Agency, Admiral Michael Rogers, a few years ago: “Artificial Intelligence and machine learning — I would argue — is foundational to the future of cyber security […] It is not the if, it’s only the when to me” (Allen and Chan 2017: 18).
 
 Admiral Rogers’s thoughts have been seconded by many representatives of the cyber security community across the world (Osterman Research 2018).
 
@@ -959,10 +777,10 @@ How and to what extent will it impact on cyber offense and defense? How and to w
 
 valid in the mid-/long term, but at the same time, it will take stock of the contemporary knowledge about when, how, and to what extent AI and cyber security are converging.
 
-
-
 ## 第一个子章节定义人工智能
+
 ## 然后，本章介绍了私营领域和国家层面最近的人工智能倡议
+
 ### 第三个子章节进一步阐述了创新过程的不确定性，以及预测人工智能在网络安全领域未来的难度
 
 然而，关于人工智能和网络安全未来的某些陈述是可能的。在本章随后的部分中，通过研究选定的科学和技术文献，这些文献讨论了当前（无论是初创还是更成熟）的人工智能解决方案应用，从技术角度而言，这些应用有望在未来几年影响网络安全。本章承认，人工智能创新的治理，总体而言以及特别是在网络安全方面，仍处于初级阶段且呈碎片化状态。迄今出现的治理模式将在前述参与者展示的力量以及相互权力关系的压力下继续发展，并进一步演变。因此，预计将有更多倡议出现；其影响需要进行评估。目前看来，人工智能创新对网络安全的影响仍主要由已实现以及尚未实现但可能实现的技术进步驱动，而非新兴的标准或法规。
@@ -980,13 +798,14 @@ valid in the mid-/long term, but at the same time, it will take stock of the con
 很难确定哪种应用（防御或进攻）将从人工智能能力的整合中受益更大。这取决于单个网络安全利益相关者（政府或企业）在掌握人工智能并将其用于其预定目的方面的能力。同时，也取决于他们识别、理解并应对将这些技术整合到网络防御或进攻系统中的风险、威胁和机遇的整体能力。
 
 ## 寻找（可操作）人工智能的定义
+
 目前，关于人工智能的确切定义尚无共识，且定义往往伴随争议。可以认为，不需要任何明确、全面且固定的定义，因为人工智能可以被视为几种技术概念和方法的动态集合。此外，该领域的进步会使任何定义迅速过时。而且，关注概念和定义可能不如阐述人工智能的实际应用重要，无论该应用具体是什么，也无论是否存在关于其核心概念的共识。
 
 然而，具备至少基本且共享的“人工智能”理解似乎很重要，因为它能帮助相关利益相关者在促进程序、倡议或针对人工智能的行动（在政策、法律、运营及其他层面）时保持一致、透明且更高效。为了本章的目的，这种理解对于分析人工智能研究与应用对网络安全（以及反之）的影响尤为有用。
 
 人工智能可以粗略地定义为某些人工/合成系统或“代理”所展现的、能够执行需要自然（人类）智能（Coombs 2018；UNIDIR 2018；Russell and Norvig 2016）的任务，或更具体地说，能够展现理性的能力（AI HLEG [2019].1）。广义上，它是一门研究如何使人工系统/代理能够完成通常被认为需要一定程度理解和推理的任务的学科（Russell and Norvig 2016）。2
 
-提供这些代理以智能或使其理性的方法多种多样，其中之一是机器学习（ML）。该方法既被视为人工智能的一个子领域，也被视为独立领域，指的是系统通过经验和学习在给定任务上随时间提升其性能。[3] 机器学习解决方案的核心组件包括学习算法、数据以及用于训练算法的强大计算能力。[4] 机器学习的高级方法采用深度神经网络，即由大量算法（模型）层组成 —  — 每一层对输入数据提供不同的解释 —  — 这种方法通常被称为“深度学习”。[5]（The MITRE Corporation 2017）
+提供这些代理以智能或使其理性的方法多种多样，其中之一是机器学习（ML）。该方法既被视为人工智能的一个子领域，也被视为独立领域，指的是系统通过经验和学习在给定任务上随时间提升其性能。[3] 机器学习解决方案的核心组件包括学习算法、数据以及用于训练算法的强大计算能力。[4] 机器学习的高级方法采用深度神经网络，即由大量算法（模型）层组成 — — 每一层对输入数据提供不同的解释 — — 这种方法通常被称为“深度学习”。[5]（The MITRE Corporation 2017）
 
 值得注意的是，只要人工系统或代理能够在不受设计者持续输入的情况下，自行学习如何弥补部分或先前错误的知识，它就是自主的。作为智能/理性的属性，自主性指的是代理自行决定并实施一条旨在实现特定目标的行动路径，而无需或仅需有限的外部指导和监督（Russell and Norvig 2010: 39）。无论采用何种方式使代理变得智能/理性且自主，当前已有的以及近期将出现的所有 AI 都属于广义的 `Narrow Artificial Intelligence`（UNIDR 2018）。“Narrow”指的是它们的智能/理性仅限于单一任务或知识领域，其自主性也受限，人类控制仍然占主导。与当今可用的有限人工智能不同，未来的代理通常被标记为 `Artificial General Intelligence (AGI)`（或“第三波人工智能”“变革性人工智能”“真实人工智能”）。“General”指的是能够自主完成多项任务，并运用与人类相当甚至更高水平的智能/理性。
 
@@ -994,10 +813,7 @@ valid in the mid-/long term, but at the same time, it will take stock of the con
 
 处理（ *比人类更快更高效，且人工监督有限* ）大规模、持续的信息流，并从中获得洞察（ *对人类而言往往隐藏* ），这些洞察可指导与网络安全相关的行动（ *保护或威胁硬件、软件、数据或用户* ）。
 
-
-
-
--   [提供的定义是有缺陷的；它没有比服务本章讨论的更大抱负。然而，它整合了当前相关文献已识别的 AI 的基本属性。]
+- [提供的定义是有缺陷的；它没有比服务本章讨论的更大抱负。然而，它整合了当前相关文献已识别的 AI 的基本属性。]
 
 ## 最近的人工智能倡议
 
@@ -1029,8 +845,6 @@ AI 还可以提升民用安全机构应对公共安全与秩序威胁的工具�
 
 *AI and the offense–defense balance* 69
 
-
-
 另一个从安全角度使人认为 AI 相关的因素是，该领域的研究与发展能够快速扩散。算法、数据集、处理能力——即 AI 的基本组成部分——以及更广泛的相关科学成果，对全球众多研究社区均可获取。这些社区在知识转移或能力共享方面相当开放。开放与可得性支持所谓的“民主化”或“人类化”（commoditization）的人工智能过程。这意味着有许多地理分布广泛的利益相关者可以从 AI 进步中受益。其中一些人可能会
 
 `70 Matte E. Bonfanti`
@@ -1057,13 +871,15 @@ AI 还可以提升民用安全机构应对公共安全与秩序威胁的工具�
 
 *AI 与攻防平衡* `71`
 
+
+
 最终，人工智能可能催生新的恶意活动和攻击形式，这些形式利用了这些技术所引入的漏洞。
 
 换言之，AI 组件在各类网络相关系统中的扩散与集成，将在虚拟与物理世界中引入更多可被攻击的对象。就此，值得作出一个重要观察。
 
 公众对人工智能与网络安全的讨论主要集中在 AI 研究与应用如何影响网络安全、如何改变威胁格局以及为网络利益相关者带来风险与机遇（Loaiza 等，2019）。这只是更广泛且复杂的相互作用之一（IEEE 与 Syntegrity，2017）。
 
-相对较少讨论——除专家论坛外——是网络安全本身如何与 AI 研究与应用相关，以及其在其中所持的利益（IEEE 与 Syntegrity，2017）。事实上，尽可能地，AI 组件应具备对网络威胁的免疫力。为保持其正常工作、可靠性和完整性，并避免有害影响，AI 工具必须免受网络事件或攻击的侵扰。这意味着在 AI 解决方案的开发与实现过程中，网络安全是首要且持续的关注点（Spring 等，2019：11）。也就是说，在适当时，应当运用相应的网络安全实践。这里指的是一系列旨在在 AI 或其他漏洞被利用进行攻击或事件时促进安全（理想情况下“设计即安全”）的行动与程序（Brundage 等，2018）。例如，在 AI 解决方案处于研究、开发阶段或试点阶段时，应开展“红队演练”和“压力测试”。
+相对较少讨论——除专家论坛外——是网络安全本身如何与 AI 研究及应用相关，以及其在其中所持的利益（IEEE 与 Syntegrity，2017）。事实上，尽可能地，AI 组件应具备对网络威胁的免疫力。为保持其正常工作、可靠性和完整性，并避免有害影响，AI 工具必须免受网络事件或攻击的侵扰。这意味着在 AI 解决方案的开发与实现过程中，网络安全是首要且持续的关注点（Spring 等，2019：11）。也就是说，在适当时，应当运用相应的网络安全实践。这里指的是一系列旨在在 AI 或其他漏洞被利用进行攻击或事件时促进安全（理想情况下“设计即安全”）的行动与程序（Brundage 等，2018）。例如，在 AI 解决方案处于研究、开发阶段或试点阶段时，应开展“红队演练”和“压力测试”。
 
 此类测试旨在探索实际网络攻击或诱发事件可能呈现的样子，帮助发现并修复潜在漏洞。
 
@@ -1073,14 +889,9 @@ AI 还可以提升民用安全机构应对公共安全与秩序威胁的工具�
 
 总之，AI 与网络安全相互关联。视角不同，它可能带来额外的风险与威胁，也可能提供进一步的机遇。要更好地理解这些风险、威胁与机遇的来源，需要从更实际的角度审视 AI 在网络安全中的潜在应用。这要求我们对 AI 的概念进行审视，并将其置于网络安全语境中。
 
-`72 Matte E. Bonfanti`
-
-
-
-
 ## 人工智能与网络安全：防御/攻击应用概览
 
-网络安全是一个欢迎由政府机构、私营组织以及其他非国家行为体（犯罪组织、黑客、政治动机或其他群体）部署基于人工智能解决方案的领域，无论是用于攻击还是防御 目的。13 如前所述，使人工智能适用于网络防御的大多数特性和功能同样也使其适用于网络攻击（美国国家科学委员会 2020）。在近期内，可以预期组织将采用并实施基于人工智能的网络防御能力，以保护其资产（网络、信息、人员）免受可能利用人工智能及非人工智能工具进行攻击的对手侵害。同样，也会有利用人工智能驱动的网络攻击能力的行为体，用于 compromise 目标，这些目标可能参与人工智能或非人工智能相结合的网络防御。
+网络安全是一个欢迎由政府机构、私营组织以及其他非国家行为体（犯罪组织、黑客、政治动机或其他群体）部署基于人工智能解决方案的领域，无论是用于攻击还是防御目的。13 如前所述，使人工智能适用于网络防御的大多数特性和功能同样也使其适用于网络攻击（美国国家科学委员会 2020）。在近期内，可以预期组织将采用并实施基于人工智能的网络防御能力，以保护其资产（网络、信息、人员）免受可能利用人工智能及非人工智能工具进行攻击的对手侵害。同样，也会有利用人工智能驱动的网络攻击能力的行为体，用于 compromise 目标，这些目标可能参与人工智能或非人工智能相结合的网络防御。
 
 从防御和攻击两方面来看，基于人工智能的网络能力可能支持涉及网络空间（软件）逻辑维度和/或其语义维度（在其中处理的信息和数据）的活动。就前者而言，人工智能组件预计将被用于保护或执行计算机网络操作（CNA、CNE）。就后者而言，人工智能很可能支持防御或执行所谓的网络信息与影响操作（Cordey 2019）。
 
@@ -1090,7 +901,7 @@ AI 还可以提升民用安全机构应对公共安全与秩序威胁的工具�
 
 通过将人工智能能力集成到上述功能中，网络情报过程可能在自动化和速度方面得到提升。为避免误解，自动化并不涵盖基于生成的（完成的）网络情报所执行的全部行动。截至目前以及未来几年，似乎没有任何人工智能解决方案足够高效可靠，能够在“完全”自动（完全无监督）的后续活动中进行（Ridley 2018; Wirkuttis and Klein 2017）。从防御角度来看，人工智能是否能够支持完全无监督的技术响应或 remediation（如自动补丁）尚属疑问。更有可能的是，它很难负责更高级且结构化的无监督响应，如主动防御、反击或其他形式的自动报复。此类响应不仅在技术上低效（由于归因问题），而且由于其可能产生的政治、法律、战术/操作或其他后果而不受欢迎。这些后果需要由人类决策者仔细评估（IEEE 和 Syntegrity 2017）。
 
-人工智能组件用于产生网络情报的适用性将转化为具体的战术/技术层面以及（相对较少）作战层面的网络安全应用。就作战层面而言，人工智能很可能主要用于防御目的，以检索并处理来自网络安全分析程序的数据，并将其与所有已知的结构化和非结构化信息（如文章、威胁情报、书籍、博客文章和其他提供网络情报的来源）进行关联（Coombs 2018: 35 ff.）。在战术/技术防御方面，人工智能将 increasingly 支持网络威胁的检测、分析以及，在有限程度上，预防（Wirkuttis and Klein 2017; Apruzzese et al. 2018）。14 它将整合并增强针对网络基于攻击、网络钓鱼和垃圾邮件（电子邮件）检测、恶意代码威胁特征化以及用户行为建模的工具。另一个新兴且有前景的战术防御应用目标是自动化漏洞测试（Loaiza et al. 2019）。
+人工智能组件用于产生网络情报的适用性将转化为具体的战术/技术层面以及（相对较少）作战层面的网络安全应用。就作战层面而言，人工智能很可能主要用于防御目的，以检索并处理来自网络安全分析程序的数据，并将其与所有已知的结构化和非结构化信息（如文章、威胁情报、书籍、博客文章和其他提供网络情报的来源）进行关联（Coombs 2018: 35 ff.）。在战术/技术防御方面，人工智能将 increasingly 支持网络威胁的检测、分析以及，在有限程度上，预防（Wirkuttis 和 Klein 2017; Apruzzese et al. 2018）。14 它将整合并增强针对网络基于攻击、网络钓鱼和垃圾邮件（电子邮件）检测、恶意代码威胁特征化以及用户行为建模的工具。另一个新兴且有前景的战术防御应用目标是自动化漏洞测试（Loaiza et al. 2019）。
 
 特别是，遵循已开始的趋势，人工智能组件将升级旨在发现计算机或网络内部非法活动的入侵检测系统（IDS）（Buczak and Guven 2016; Apruzzese et al. 2018）；针对减少不必要邮件带来的时间浪费和潜在危害的垃圾邮件和网络钓鱼检测系统；以及最终的恶意软件检测与分析工具。就后者而言，人工智能将可能提升对现代和新兴恶意软件的发现能力，这些恶意软件可以自动生成新的变体以逃避传统基于规则的识别方法。它还将借助其识别传统或人工分析中不可见的隐藏模式的能力，将这些变体归类到正确的恶意软件家族。人工智能组件还将集成多因素认证或验证系统，特别是用于检测特定用户行为模式的变化，从而识别异常。
 
@@ -1098,29 +909,25 @@ AI 还可以提升民用安全机构应对公共安全与秩序威胁的工具�
 
 人工智能应用还将用于网络攻击，即 compromising 目标组织/用户、其网络以及其中处理的数据。
 
-它们将使网络攻击更加多样且更为复杂（Brundage et al. 2018）。正如防御的情况一样，人工智能方法/组件可以生成网络情报以准备和实施攻击。它们可以改进针对涉及社会工程的网络攻击目标的选择和优先级。 
-
-74 *Matteo E. Bonfanti*
+它们将使网络攻击更加多样且更为复杂（Brundage et al. 2018）。正如防御的情况一样，人工智能方法/组件可以生成网络情报以准备和实施攻击。它们可以改进针对涉及社会工程的网络攻击目标的选择和优先级。
 
 对人工智能，潜在受害者的在线信息可以被采集并处理，以自动生成定制的恶意网站/邮件/链接（基于画像）（Brundage et al. 2018）。随着人工智能的进一步发展，令人信服的聊天机器人可能通过与人们进行更长时间的对话来获得信任，甚至可能在视频/音频通话中伪装成另一个人（见下文）。
 
+AI 组件还将增强恶意软件的发现和利用能力。它们将在恶意软件设计和运行中提升其复杂性，并支持其混淆。AI 驱动的恶意软件能够规避检测，并创造性地应对目标行为的变化。它们将作为一个自主且自适应的嵌入体——能够从其运行的宿主中学习，以保持不被发现，搜索并分类有趣的内容以进行数据外泄，搜索并感染新的目标，并发现新的横向移动路径或方法。早在 2018 年，IBM 研究人员就开发了一种此类恶意软件，命名为“DeepLocker”（Stoecklin 2018）¹⁶。此外，AI 还将被用于欺骗身份验证或认证系统（例如集成生物特征识别的系统）（Patel 等人 2019）。
 
-
-AI 组件还将增强恶意软件的发现和利用能力。它们将在恶意软件设计和运行中提升其复杂性，并支持其混淆。AI 驱动的恶意软件能够规避检测，并创造性地应对目标行为的变化。它们将作为一个自主且自适应的嵌入体——能够从其运行的宿主中学习，以保持不被发现，搜索并分类有趣的内容以进行数据外泄，搜索并感染新的目标，并发现新的横向移动路径或方法。早在 2018 年，IBM 研究人员就开发了一种此类恶意软件，命名为“DeepLocker”（Stoecklin 2018)。16）¹⁶（<a href="#index_split_001.html#p92">#index_split_001.html#p92）。此外，AI 还将被用于欺骗身份验证或认证系统（例如集成生物特征识别的系统）（Patel 等人 2019）。
-
-`AI 驱动的防御/攻击在网络空间的语义层`
+## AI 驱动的防御/攻击在网络空间的语义层
 
 从进攻角度来看，人工智能很可能增强网络信息和影响行动的规划与执行，这些行动旨在实现犯罪或其他非法目的。通过支持自动化，AI 将提升数字信息/情报收集以及对目标/受害者在线行为的监控（Bonfanti 2019）。它将在网络空间中向对手提供和内部提供信息和影响的工具集，特别是利用社交媒体平台（Patel 等人 2019：22 及以下）。在社交媒体平台方面，AI 可以改进机器人及社交机器人的管理，并允许生成针对最易受影响群体的消息（类似于行为广告）（Brundage 等人 2018）。
 
-随着这一趋势的持续，AI 解决方案——尤其是集成深度学习方法的——将被用于创建并传播在线或其他媒体中的操控数字内容。此类内容被称为“合成媒体”或“深度伪造”，包括高度逼真、视频、音频、图像或文本，这些内容很难通过人工或其他传统取证技术轻易揭露为假（Collins [2019)。17）¹⁷（<a href="#index_split_001.html#p92">#index_split_001.html#p92）。生成后，合成媒体可能被滥用，即用于对个人、组织和更广泛的民间社会造成伤害。此类有害使用已十分丰富且被媒体广泛记录，主要体现在利用 AI 修饰的视频（通常为色情性质）进行针对性网络欺凌、跟踪和诽谤的传播（Chesney 和 Citron 2018）。较少见但可能在近期内出现的是利用合成媒体进行网络勒索、诈骗、企业破坏（通过市场或其他类型的操纵行为）、政治宣传以及战争（Ajder 等人 2019）。¹⁸
+随着这一趋势的持续，AI 解决方案——尤其是集成深度学习方法的——将被用于创建并传播在线或其他媒体中的操控数字内容。此类内容被称为“合成媒体”或“深度伪造”，包括高度逼真、视频、音频、图像或文本，这些内容很难通过人工或其他传统取证技术轻易揭露为假（Collins 2019）¹⁷。生成后，合成媒体可能被滥用，即用于对个人、组织和更广泛的民间社会造成伤害。此类有害使用已十分丰富且被媒体广泛记录，主要体现在利用 AI 修饰的视频（通常为色情性质）进行针对性网络欺凌、跟踪和诽谤的传播（Chesney 和 Citron 2018）。较少见但可能在近期内出现的是利用合成媒体进行网络勒索、诈骗、企业破坏（通过市场或其他类型的操纵行为）、政治宣传以及战争（Ajder 等人 2019）¹⁸。
 
-在这些情况下，合成媒体将作为“个人/组织-面向”或“社区-面向”信息行动的附加组成部分（Bonfanti 2020）。¹⁹
+在这些情况下，合成媒体将作为“个人/组织-面向”或“社区-面向”信息行动的附加组成部分（Bonfanti 2020）¹⁹。
 
-`AI 与进攻-防御平衡` 75
+## AI 与进攻-防御平衡
 
 一方面，AI 将整合并实现上述活动；另一方面，它也将有助于对抗这些活动。事实上，从防御角度看，AI 可以支持检测和应对网络影响与信息行动。它可以部署在监控在线环境（如社交媒体平台），识别恶意行动的早期迹象（如机器人或社交机器人活动增加），以及发现被篡改的数字内容（如合成媒体）（Knight 2019；Collins 2019）。
 
-**结论**
+## 结论
 
 基于此前的阐述，人工智能将在未来几年影响网络安全。短期内，它将主要遵循上述路径。它将同时支持网络防御和进攻。很难确定哪类应用受益更大——这将很大程度上取决于网络安全利益相关者（政府或私营）能否持续、掌握并推进人工智能研究、开发和应用，并利用 AI 实现特定目标。从更广阔的视角来看，这也取决于他们识别、理解并应对这些技术在网络防御或进攻中所带来的风险、威胁与机遇的能力。
 
@@ -1132,17 +939,13 @@ AI 组件还将增强恶意软件的发现和利用能力。它们将在恶意�
 
 目前出现的治理框架在促进者/贡献者的意图下，似乎既是多维度的又是包容性的。尚需看到它们是否足够、有效且一致，以应对 AI 在网络安全领域所带来的风险、威胁与机遇。然而，目前缺乏足够证据来评估这一点。正如已指出的，AI 与网络安全治理仍处于起步阶段。预计将有更多行动；其结果仍然不确定。
 
-76 *Matteo E. Bonfanti*
-
-**注释**
+## 注释
 
 [1 “Agent”一词在 AI 及相关领域中被用于多种语境（Davis 1999）。根据 Russell 和 Norvig（2010：34 及以下），“Agent 是任何可以通过传感器感知其环境，并通过执行器对该环境进行作用的实体”。这里的“人工”用于区分“人类”代理人。
 
 2 作为一门研究领域，AI 可追溯至 1950 年代，当时研究人员开始创建能够自主完成简单甚至越来越复杂任务的机器，即需要较少或无需人工监督和控制。自 1950 年代以来，AI 研究不断进步并发现了不同领域的应用。如今，AI 是广泛使用设备的关键组成部分，如语音识别、机器翻译、垃圾邮件过滤和搜索引擎。还有前景可观的应用包括自动驾驶车辆、用于医学诊断和治疗的数字助理，以及机器人技术。这一持续进步的一个效应是，只有最前沿的机器才被标记为“智能”。换言之，被视为“智能”的机器标准不断演变。
 
 3 并非所有 AI 系统都使用机器学习。然而，对于许多应用而言，机器学习可以是实现智能行为的强大方法。
-
-
 
 1. 机器学习的主要方法
 
@@ -1166,8 +969,6 @@ AI 组件还将增强恶意软件的发现和利用能力。它们将在恶意�
 
 正如 Allen 和 Chan（2017: 20）所论述的：“没有明显、稳定的国家对非国家势力或进攻对防御的优势结果。这取决于所有参与者的研发投资平衡、技术进步的速度以及经济和技术的根本限制”。
 
-`AI and the offense–defense balance` 77
-
 在战术/技术层面，网络情报提升了阻断技术的效果，帮助基础设施团队优先补丁活动，并让安全运营中心（SOC）分析师能够迅速准确地判断哪些警报需要处理。运营网络情报可以通过提供丰富的上下文（如攻击者的作战模式、战术、技术、程序、能力）来加速事件响应，以响应最初的指标。
 
 这些系统传统上基于已知攻击的模式，但现代部署则包括基于机器学习的异常和威胁检测方法。这些方法可用于检测 `botnets` 和 `Domain Generation Algorithms`（DGA）。后者是自动生成域名的算法，通常由受感染的机器定期生成新的主机名以与外部服务器通信。它们代表了组织的真实威胁，因为它们可以规避基于静态黑名单的防御。
@@ -1186,8 +987,9 @@ AI 模型被训练在普通情况下表现正常，除非收到特定输入—�
 
 这两类操作相互交织，可能组合执行，也可能重叠。前者针对特定组织的机构或正式决策过程，通过欺骗、敲诈或胁迫影响；后者则针对整个社会或特定社会群体，旨在影响其思想、观点、动机和信念，并动员它们。
 
-```
-References
+
+
+# References
 
 All links checked on August 20, 2021.
 
@@ -1201,7 +1003,7 @@ Ajder, H., Cavalli, F., Patrini, G. and Cullen, L. (2019). The State of Deepfake
 
 Allen, G. and Chan, T. (2017). *Artificial Intelligence and National Security*. Cambridge, MA: Belfer Center for Science and International Affairs. Retrieved from: [`www`](https://www.belfercenter.org)
 
-[.belfercenter .org /sites /default /files /files /publication /AI %20NatSec %20- %20final .pdf.](https://www.belfercenter.org)
+[.belfercenter .org /sites /default /files /publication /AI %20NatSec %20- %20final .pdf.](https://www.belfercenter.org)
 
 Apruzzese, G., Ferretti, L., Marchetti, M., Colajanni, M. and Guido, A. (2018). On the Effectiveness of Machine and Deep Learning for Cyber Security. In: T. Minárik, R.
 
@@ -1222,9 +1024,6 @@ Milano: Franco Angeli.
 Brundage, M., Avin, S. and Clark, J. (2018). The Malicious Use of Artificial Intelligence: Forecasting, Prevention, and Mitigation. Retrieved from: [`maliciousaireport`](https://maliciousaireport.com)
 
 [.com/.](https://maliciousaireport.com)
-
-
-
 
 Buczak, A. L. and Guven, E. (2016). A Survey of Data Mining and Machine Learning Methods for Cyber Security Intrusion Detection. `IEEE Communications Surveys` `Tutorials`, 18 (2): 1153–76.
 
@@ -1338,45 +1137,41 @@ Zetter, K. (2019). Researchers Easily Trick Cylance’s AI-Based Antivirus into 
 
 The discovery of quantum mechanics in the early 20th century transformed our understanding of subatomic reality. A “second quantum revolution” (Dowling and Milburn 2003) in the 21st century is poised to transform our ability to manipulate subatomic reality to process information. It is possible to perform calculations with quantum bits (qubits) that are practically infeasible with classical (digital) bits. Potential applications of quantum computing may improve remote sensing, data processing, and secure networking, all of which might affect global security (Biercuk and Fontaine 2017; National Academies of Sciences, Engineering, and Medicine 2019). These give rise to excited claims about how the “impact of quantum on our national defense will be tremendous” (Hurd 2017) or that “who-ever gets this technology first will also be able to cripple traditional defenses and power grids and manipulate the global economy” (Nikias 2018). China’s early progress in quantum communication technology has further energized the global race to gain a quantum advantage (Owen and Gorwa 2016; Kania 2018).
 
+- [第二次量子革命将如何影响全球网络安全？](https://doi.org/10.4324/9781003110224-7) 在国际关系（IR）领域，关于信息与通信技术（ICT）与冲突动态关系的激烈辩论已经在展开。一方认为，网络空间的本质具有战略不稳定性，因为它赋予攻击者优势、削弱防御能力或削弱威慑（Rattray 2001; Lynn III 2010; Kello 2013; Deibert 2013; Buchanan 2017; Schneider 2019）。另一方则认为，网络安全的社会政治背景能够缓解攻击性网络行动的潜力，并强化既定的权力关系（Libicki 2007; Rid 2012; Liff 2012; Gartzke 2013; Lindsay 2014; Valeriano and Maness 2015; Slayton 2017; Kreps and Schneider 2019）。在这两种极端之间，学者们强调各种变量会影响归因的难度、攻击优势或战略稳定性（Rid and Buchanan 2015; Lindsay 2015; Brantly 2016; Smeets 2017; Borghard and Lonergan 2017）。此外，还有学者指出威胁夸大和动机偏见扭曲了网络战争的修辞（Dunn Cavelty 2008; Lawson 2013）。
 
+- 由于 ICT 对现代世界的一切至关重要，因此可以预期下一代 ICT——从比特到量子比特——将具有特别深远的影响。如果我们相信技术决定政治，那么我们可能会期待量子信息革命带来深远的后果。然而，如果我们认为政治倾向于决定技术，那么量子信息革命的后果可能并不那么深刻。此外，两者之间更具 reciprocity（相互性）或内生性（endogenous）的互动可能会产生更为模糊的影响。
 
+- 本章将量子信息技术置于政治语境中。
 
--   [第二次量子革命将如何影响全球网络安全？](https://doi.org/10.4324/9781003110224-7) 在国际关系（IR）领域，关于信息与通信技术（ICT）与冲突动态关系的激烈辩论已经在展开。一方认为，网络空间的本质具有战略不稳定性，因为它赋予攻击者优势、削弱防御能力或削弱威慑（Rattray 2001; Lynn III 2010; Kello 2013; Deibert 2013; Buchanan 2017; Schneider 2019）。另一方则认为，网络安全的社会政治背景能够缓解攻击性网络行动的潜力，并强化既定的权力关系（Libicki 2007; Rid 2012; Liff 2012; Gartzke 2013; Lindsay 2014; Valeriano and Maness 2015; Slayton 2017; Kreps and Schneider 2019）。在这两种极端之间，学者们强调各种变量会影响归因的难度、攻击优势或战略稳定性（Rid and Buchanan 2015; Lindsay 2015; Brantly 2016; Smeets 2017; Borghard and Lonergan 2017）。此外，还有学者指出威胁夸大和动机偏见扭曲了网络战争的修辞（Dunn Cavelty 2008; Lawson 2013）。
+- 我关注的是密码学（code making）和密码分析（code breaking）的应用，因为它们的影响尤为剧烈。我先简要总结量子威胁叙事。随后解释所有密码学现象本质上都是政治性的，无论其所依赖的技术年代如何。秘密通信必然依赖于寻求排除另一群竞争者的沟通者之间的合作。而秘密窃听也依赖于合作，因为拦截者必须采用相同的通信协议才能获得并维持隐蔽的访问。在任何实际情境中，密码学争夺战的双方都必须面对组织和战略挑战，这些挑战可能增强或削弱技术密码系统的安全性。量子技术的科学创新并不会改变这种社会互动，反而往往会加剧密码学作为复杂且模糊实践的特性。我将以几句简短的结论结束，说明社会科学家如何从技术学家手中回收量子技术。
 
--   由于 ICT 对现代世界的一切至关重要，因此可以预期下一代 ICT——从比特到量子比特——将具有特别深远的影响。如果我们相信技术决定政治，那么我们可能会期待量子信息革命带来深远的后果。然而，如果我们认为政治倾向于决定技术，那么量子信息革命的后果可能并不那么深刻。此外，两者之间更具 reciprocity（相互性）或内生性（endogenous）的互动可能会产生更为模糊的影响。
+## Quantum threat narratives
 
--   本章将量子信息技术置于政治语境中。
+- 量子计算利用“诡异”的量子现象，如叠加（qubit 可同时处于两种状态），纠缠（多个 qubit 可相互影响），以及不确定性（测量会影响现实的状态）。理查德·费曼几十年前就提出了这一设想，认为它是建模物理化学的有前途的方法（Feynman 1982）。实验进展曾缓慢，但近期正在迅速改变。2019 年 9 月，由谷歌设计的工作量子计算机——Sycamore——实现了重要里程碑，即“量子霸权”。Sycamore 纠缠了 53 个 qubit，并运行了一个量子算法，仅用几分钟，而全球最快的超级计算机则需要
 
--   我关注的是密码学（code making）和密码分析（code breaking）的应用，因为它们的影响尤为剧烈。我先简要总结量子威胁叙事。随后解释所有密码学现象本质上都是政治性的，无论其所依赖的技术年代如何。秘密通信必然依赖于寻求排除另一群竞争者的沟通者之间的合作。而秘密窃听也依赖于合作，因为拦截者必须采用相同的通信协议才能获得并维持隐蔽的访问。在任何实际情境中，密码学争夺战的双方都必须面对组织和战略挑战，这些挑战可能增强或削弱技术密码系统的安全性。量子技术的科学创新并不会改变这种社会互动，反而往往会加剧密码学作为复杂且模糊实践的特性。我将以几句简短的结论结束，说明社会科学家如何从技术学家手中回收量子技术。
+```
+thousands of years to complete (Arute et al. 2019)
+```
 
-**Quantum threat narratives**
+- 量子计算对密码学具有重要意义，而密码学是网络安全的基石，这也使得各国政府、商业机构和民间社会日益关注此问题。当今，几乎所有安全的数字通信都依赖于少数几种密码协议，如 RSA（Rivest–Shamir–Adleman）。RSA 是公钥基础设施（PKI）的标准，用于将真实人物和组织与其用于安全通信和数字签名的密码密钥相联系。如果 PKI 被彻底破坏，将使黑客能够破解加密、窃取数据、伪造签名并安装任意代码，这将对全球贸易、国家安全和民间社会造成灾难性后果（Jon R. Lindsay）。
 
--   量子计算利用“诡异”的量子现象，如叠加（qubit 可同时处于两种状态），纠缠（多个 qubit 可相互影响），以及不确定性（测量会影响现实的状态）。理查德·费曼几十年前就提出了这一设想，认为它是建模物理化学的有前途的方法（Feynman 1982）。实验进展曾缓慢，但近期正在迅速改变。2019 年 9 月，由谷歌设计的工作量子计算机——Sycamore——实现了重要里程碑，即“量子霸权”。Sycamore 纠缠了 53 个 qubit，并运行了一个量子算法，仅用几分钟，而全球最快的超级计算机则需要
+- 当前 PKI 的安全性依赖于解决（但易于验证）某些数学问题的计算难度，例如分解大质数。普通数字计算机破解 2048 位 RSA 需要六千万年，而一台拥有 2000 万个 qubit 的工作量子计算机可能在八小时内完成同样的任务（Gidney and Ekera 2019）。
 
-`thousands of years to complete (Arute et al. 2019)`
+- 在能够构建如此规模的量子计算机之前，仍需克服巨大的工程挑战，尤其是量子误差校正。因此，大规模通用量子计算机可能仍需数十年才能实现。
 
--   量子计算对密码学具有重要意义，而密码学是网络安全的基石，这也使得各国政府、商业机构和民间社会日益关注此问题。当今，几乎所有安全的数字通信都依赖于少数几种密码协议，如 RSA（Rivest–Shamir–Adleman）。RSA 是公钥基础设施（PKI）的标准，用于将真实人物和组织与其用于安全通信和数字签名的密码密钥相联系。如果 PKI 被彻底破坏，将使黑客能够破解加密、窃取数据、伪造签名并安装任意代码，这将对全球贸易、国家安全和民间社会造成灾难性后果（Jon R. Lindsay）。
+- 尽管如此，量子计算带来的密码分析威胁已被视为可信，因此密码学界已开始研发“量子安全”、“量子抗性”或“后量子”协议（Lindsay 2020b）。
 
--   当前 PKI 的安全性依赖于解决（但易于验证）某些数学问题的计算难度，例如分解大质数。普通数字计算机破解 2048 位 RSA 需要六千万年，而一台拥有 2000 万个 qubit 的工作量子计算机可能在八小时内完成同样的任务（Gidney and Ekera 2019）。
+- 这些是数学函数，对经典计算机和量子计算机都难以破解，只有在发现合适的量子算法时才能获得性能优势。已有若干有前景的经典协议正在被美国国家标准技术研究院（NIST）等标准制定机构审查（Chen et al. 2016; Bernstein et al. 2017）。这些协议几乎肯定会在量子计算机足以破解 RSA 的机器投入使用之前就已面世，但向新协议的实际过渡对行业和政府而言将是一段漫长且曲折的旅程（Buchmann, Lauter, and Mosca 2017）。
 
--   在能够构建如此规模的量子计算机之前，仍需克服巨大的工程挑战，尤其是量子误差校正。因此，大规模通用量子计算机可能仍需数十年才能实现。
+- 虽然量子计算对非对称加密构成攻击性（密码分析）威胁，但量子力学也可以用于增强防御性（密码学）。量子加密协议的安全性由物理定律保证，而非依赖特定数学问题的计算难度（Lo and Lütkenhaus 2007; Brassard 2016）。量子通信还有许多其他潜在应用，包括彻底不同的存储设备和互联网架构（Simon 2017; Wehner, Elkouss, and Hanson 2018）。然而，在这一领域也已出现令人鼓舞的进展。中国已建成北京至上海的原型量子通信网络，并通过卫星链路进行量子纠缠实验（Kania and Costello 2018）。
 
--   尽管如此，量子计算带来的密码分析威胁已被视为可信，因此密码学界已开始研发“量子安全”、“量子抗性”或“后量子”协议（Lindsay 2020b）。
-
--   这些是数学函数，对经典计算机和量子计算机都难以破解，只有在发现合适的量子算法时才能获得性能优势。已有若干有前景的经典协议正在被美国国家标准技术研究院（NIST）等标准制定机构审查（Chen et al. 2016; Bernstein et al. 2017）。这些协议几乎肯定会在量子计算机足以破解 RSA 的机器投入使用之前就已面世，但向新协议的实际过渡对行业和政府而言将是一段漫长且曲折的旅程（Buchmann, Lauter, and Mosca 2017）。
-
--   虽然量子计算对非对称加密构成攻击性（密码分析）威胁，但量子力学也可以用于增强防御性（密码学）。量子加密协议的安全性由物理定律保证，而非依赖特定数学问题的计算难度（Lo and Lütkenhaus 2007; Brassard 2016）。量子通信还有许多其他潜在应用，包括彻底不同的存储设备和互联网架构（Simon 2017; Wehner, Elkouss, and Hanson 2018）。然而，在这一领域也已出现令人鼓舞的进展。中国已建成北京至上海的原型量子通信网络，并通过卫星链路进行量子纠缠实验（Kania and Costello 2018）。
-
--   通信安全的进步似乎是个好消息，总体而言也是如此。但如果量子密码分析预示着保密性的终结，或更激动人心地讲，“密码末日”（cryptocalypse），那么量子密码学则引发了一种相反的恐惧：情报机构可能被“关闭”或“失明”。
-
-
-
+- 通信安全的进步似乎是个好消息，总体而言也是如此。但如果量子密码分析预示着保密性的终结，或更激动人心地讲，“密码末日”（cryptocalypse），那么量子密码学则引发了一种相反的恐惧：情报机构可能被“关闭”或“失明”。
 
 西方政府若无法窃听恐怖分子或国家对手的通信，可能会错失对突袭的预警。同样，警方在刑事调查中也可能失去取得取证数据的机会。上述担忧共同点在于，中国作为量子技术的新兴领袖，可能率先获得对美国及其他国家造成 destabilizing（不稳定的）密码学优势（Owen and Gorwa 2016; Kenny 2017; Kania and Costello 2018）。
 
 需要认识到，量子通信与量子计算是两类不同的技术。中国在*Quantum computing and classical politics*（量子计算与古典政治）方面取得了令人瞩目的 83 进展，但在*classical politics*（古典政治）方面则未取得进展，这与北美和欧洲保持强劲优势形成对比。为了本章的目的，这两类技术分别对应密码学与密码分析之间的对立端。我将暂时搁置量子计算的技术奥秘，转而探讨任何量子技术应用的政治背景。
 
-**密码学的政治本质**
+## 密码学的政治本质
 
 量子力学描述微观层面的现实，而使用量子计算机的人则生活在宏观层面。事实上，政治背景对信息技术的重要性如此之大，以至于它几乎不再是“背景”，而是构成了所有技术应用的核心。尤其是在所有密码学——无论是量子还是经典——的核心深处，潜伏着政治问题。
 
@@ -1395,8 +1190,6 @@ The discovery of quantum mechanics in the early 20th century transformed our und
 如果伊娃窃取或发现了爱丽丝与鲍勃的密钥，她便可加入他们的共享通信制度，但必须暗中进行。如果伪随机噪声是密码学家的朋友，那么非随机性或冗余性则是密码分析者的朋友。事实上，冗余是任何通信者的朋友，因为冗余能够实现错误校正（Shannon 1951），无论错误是技术噪声还是密码掩盖的结果。为了从爱丽丝与鲍勃创造的噪声中恢复信号，伊娃可以研究其加密通信的流量模式，以了解目标组织的某些信息（Thirsk 2001）。她可以进行暴力攻击，尝试所有可能的密钥组合；可以对大量截获的密文进行频率分析，寻找能够缩小密钥搜索范围的模式；可以寻找冗余的敌方通信或 cribs（已知或推测的明文片段）来关联加密信息与已知内容（例如早晨天气广播、沉船的 distress 信号，或操作员重复使用旧密钥的情况）。她还可以监测密码系统技术 *Quantum computing and classical politics* 85 设施的侧信道。例如，伪随机数生成算法在计算硬件上可能产生可检测的信号。其共同点是：在噪声的伪装下发现细微的信号。
 
 若使用长度等于消息的完全随机密钥且仅用于单次使用，则可实现“完美 secrecy”（完美保密）（Shannon 1945）。遗憾的是，生成和分发所谓的一次性口令（one-time pad）在实际操作中面临诸多困难，正如苏联 KGB 等人所付出的惨痛教训所示（Warner and Benson 1997）。
-
-
 
 量子密钥分发，令人惊讶的是，使得一次性密码在实际中变得可行。
 
@@ -1438,8 +1231,6 @@ The discovery of quantum mechanics in the early 20th century transformed our und
 
 首先，密码学使政治团体能够在掩饰或夸大优势与劣势的同时，协调谈判策略。政治行动者具有战略动机去误导其权力，以获得谈判优势（Fearon 1995；Slantchev 2010），而密码学正是实现这一点的手段。谈判小组通常希望排练 presentation，隐藏其潜在让步和保留价格，以争取最佳交易。
 
-
-
 例如，在 1921 年华盛顿海军裁军会议上，日本公开要求与美、英保持十比七的比例。日本外务省向其谈判代表发送电报称，它愿意接受十比六的比例，但应尽可能避免达成。不幸的是，日本方面并未料到美国国务院“黑室”（Black Chamber）已经拦截并破译了这条电报，这使得美国国务卿查尔斯·休斯（Charles Hughes）能够顽固而成功地要求十比六的比例（Yardley 1931）。
 
 其次，秘密的行动协调会潜在地转移成本和收益。无论是犯罪阴谋、间谍网络还是联合作战军事单位，它们在物质能力上各有差异，但在此方面遵循相似的政治逻辑。这些组织依赖机动和隐蔽来规避敌方防御，在关键点集中以实现战术惊喜或窃取资源。通过渗透和机动获得的局部优势是短暂的。组织成员必须在对方能够加强或反击那些机动行动暴露的脆弱区域之前，协调好自己的行动。物质上较弱的组织更难以加固其脆弱点，因而更依赖诡计（Kahn 2001）。
@@ -1456,12 +1247,9 @@ The discovery of quantum mechanics in the early 20th century transformed our und
 
 密码学的成功可以剥夺这两种优势，从而使稳定的谈判更或少可能。此外，虽然密码学的进攻与防守功能在技术上是分离的（即破译代码与加密代码的制作），但它们必然与政治‑军事进攻或防守相联系。防卫动机的行为体可以利用破译技术入侵攻击者的网络，以判断在哪些位置加强防护，以抵御即将到来的攻击。攻击者则可以使用加密技术保护其军事通信，保持惊喜，从而压倒防守方。密码学的成功可以掩盖破译，而破译的成功则可能激发新的加密创新。这些动态本质上是政治性的，因而不太可能因量子技术而根本改变。相反，量子技术会被纳入密码学争夺的服务之中。
 
-**量子可能与社会现实**
+## 量子可能与社会现实
 
 情报的进攻与防守平衡历来更依赖制度因素和战略情境，而非技术架构本身。
-
-
-
 
 因此，在量子信息革命之后，仍然可以收集和保护秘密。在本简要回顾的密码学政治动态中，我们遇到了广泛多样的参与者和应用。密码技术与政治优势之间的激烈关系可能会变得更加复杂，在社会和技术层面上。量子信息技术对战略稳定的整体影响深感模糊，但这更多与信息政治的博弈，而非量子计算技术本身。
 
@@ -1489,7 +1277,7 @@ The discovery of quantum mechanics in the early 20th century transformed our und
 
 1 IBM 科学家认为奥克里奇峰会（Oak Ridge Summit）可以在三天内完成同一任务，而非 10,000 年，但这并不否定基本成就；未来使用超过 Sycamore 53 量子比特的量子计算机将能够以巨大差距超越峰会或其他任何系统（Aaronson 2019）。
 
-**References**
+## References
 
 所有链接已于 2021 年 8 月 20 日检查。
 
@@ -1542,8 +1330,6 @@ Carson, A. (2018). *Secret Wars: Covert Conflict in International Politics*. Pri
 92 `Jon R. Lindsay`
 
 Chen, L., Jordan, S., Liu, Y.-K., Moody, D., Peralta, R., Perlner, R., and Smith-Tone, D. (2016). *Report on Post-Quantum Cryptography*. NISTIR 8105. Gaithersburg, MD: National Institute of Standards and Technology.
-
-
 
 Copeland, B. J. (ed.). (2010). *Colossus: The Secrets of Bletchley Park’s Code-Breaking* *Computers*. New York: Oxford University Press.
 
@@ -1645,8 +1431,6 @@ Rid, T. and Buchanan, B. (2015). Attributing Cyber Attacks. *Journal of Strategi
 
 Rovner, J. (2011). *Fixing the Facts: National Security and the Politics of Intelligence*. Ithaca, NY: Cornell University Press.
 
-
-
 Schneider, J. (2019). The Capability/Vulnerability Paradox and Military Revolutions: Implications for Computing, Cyber, and the Onset of War. *Journal of Strategic Studies*, 42(6): 841–63. [`doi.org/10.1080/01402390.2019.1627209`](https://doi.org/10.1080/01402390.2019.1627209).
 
 Shannon, C. E. (1945). *A Mathematical Theory of Cryptography. Technical Report MM*
@@ -1709,7 +1493,7 @@ This chapter suggests that consequences of space-based cyberspace can be analyze
 
 As will be discussed below, the development of satellite-based internet services is spearheaded by private actors, mirroring a general fragmentation and diversification of actors in both cyberspace and space. Moreover, satellite-based cyberspace implies a whole array of new vulnerabilities, as satellites can be targeted by anti-satellite missiles, and that they are vulnerable to new forms of hacking, as well as to space debris, and solar storms. More generally, these new developments are plagued with a great deal of uncertainty, in terms of how governance will be organized, what rules will apply, and whether militarization or peaceful collaboration will prevail. Uncertainty is particularly great regarding the potential development of interplanetary cyberspace, which however should not prevent discussion of what technical experts are claiming.
 
-**Cyberspace infrastructure: From Earth to space?**
+## Cyberspace infrastructure: From Earth to space?
 
 Cyberspace is indeed a virtual space – making real-time communication possible with little or no regard to physical distance. Simultaneously, however, cyberspace has always depended on physical infrastructure in the form of cables, routers, and servers. Moreover, it has long been known that space is a rather vulnerable environment as “\[it\] poses a number of challenges in providing reliable, end-to-end data communication with a tolerable level of service” (Durst et al. 1997: 389).
 
@@ -1717,47 +1501,44 @@ Undersea cables have been the arteries of the internet, particularly for making 
 
 While satellite-based communication is certainly not new, it was for a long time expensive and unavailable to ordinary people, used mainly by the military, government, maritime traffic, and researchers. With the development of wireless mobile telecommunications (from the 1G to the emerging 5G and eventually 6G networks), cyberspace communication became increasingly integrated with space technology, i.e. satellites. Yet, wireless mobile telecommunications are still dependent on a grid of land-based transmission towers, which explains the prevailing dark patches of an otherwise internet-covered Earth. A complete integration of space and cyberspace has not yet taken place, but efforts are made to make cyberspace available in every part of the world.
 
+- [利益]是“Starlink”项目——由多年积累的亿万富翁埃隆·马斯克及其火箭公司 SpaceX 发起。Starlink 被宣传为一个为全球提供互联网接入的项目。2018 年 3 月 29 日，美国联邦通信委员会（FCC）向 SpaceX 颁发了设立全球宽带互联网服务卫星网络的许可证（Amos 2019; Gross 2018; Choudhury 2019）。在许可证获批之前，两颗卫星已被发射；随后在`Cyberspace in space` 97 2019 年 5 月，又发射了 60 颗卫星。进入 2020 年代后期，Starlink 系统预计将由最多 12,000 颗低轨卫星组成，更多卫星将陆续加入。
+
+- 这一举措使 SpaceX 成为与英国 OneWeb（前身为`Worldvu`）竞争的对手，OneWeb 也是一个提供全球互联网服务的类似项目。
+
+- 其他竞争者包括美国 Amazon 的“Project Kuiper”、Google 的“Project Loon”、Samsung、ViaSat、Sierra Nevada Corporation、英国 Surrey Satellite Technology Ltd.以及澳大利亚 Gilmore Space Technologies。还有若干其他类似项目，既有公共性也有私营性。欧盟运营的伽利略卫星系统值得注意——它的设计目标是提供类似美国全球定位系统（GPS）的服务。一些现有的或有志于成为“太空强国”的国家，如俄罗斯、中国、日本、印度、巴西和阿联酋，已设立或即将设立基于卫星的互联网服务。因此，对基于卫星的互联网竞争迅速增长的一个主要观察是，参与主体的多元化正在加剧。遍布全球的多位企业家的广泛参与暗示，这一领域将以碎片化而非霸权为特征。
+
+- 随着空间互联网通信的发射，环绕地球的卫星数量将从当今的约 2,000 颗活跃卫星增至至少 20,000 颗。人们担忧这将显著提高碰撞风险，导致大量“空间碎片”（失效卫星、坠毁残骸、太空行走遗失设备等），并干扰信号、模糊空间望远镜的视野，对空间发射构成危险（Liou and Portman 2007）。毫无疑问，这一发展为空间公司及其客户（包括国家和公民）以及整个空间环境本身带来了新的脆弱性和不确定性，也对碰撞和干扰的发生方式、时间及具体后果产生了不确定性。脆弱性和不确定性进一步被以下两方面加剧：一方面，空间企业家数量和多样性的增加；另一方面，缺乏针对这一`new space race`的国家和国际规范与规则。技术发展往往快于政治进程。
+
+- 此外，基于卫星的网络空间可能使绕过各国政府的审查和访问控制变得更加容易。虽然此前有人指出信息时代会削弱主权，但这一观察必须在国家政府在许可和关闭互联网服务提供商、控制实体基础设施方面的法律和物理能力之间取得平衡。然而，随着从地球向太空转移的网络基础设施，仍然需要地面的控制中心和天线，但这些设施可以分布在全球，更容易规避国家政府的控制。特别是在由多国公司提供的互联网卫星时，这些公司能够在多个国家同时运营，且比任何有线连接更具流动性。
+
+- 事实上，推动基于卫星的网络空间发展的关键动力之一是多个国家已对法律进行修改，以允许私营太空项目。
+
+- 根据 1968 年《外层空间条约》，各国对其领土和管辖范围内发出的所有空间`98 *Johan Eriksson and Giampiero Giacomello*`活动负有责任（Martinez 1998）。在太空时代早期，这问题不大，因为当时太空仅由美国和前苏联的政府通过 NASA 及其苏联对应机构进行探索。随着 NASA 预算削减以及 Space Shuttle 计划被取消，美国的太空获取逐步 liberal 化，乔治·W·布什 Jr. 及后来的奥巴马政府主张私营太空产业在太空探索（包括载人航天）中应发挥更大作用。
+
+- 美国在推动这一发展方面发挥了引领作用，使 SpaceX、Orbital、Boeing、Lockheed Martin 等公司得以成长。
+
+- 然而，其他传统上未与太空项目关联的国家也已修改法律，开放其管辖区域以允许私营太空倡议及公私合作伙伴关系。值得注意的例子是卢森堡——一个面积小的欧洲国家，过去 10 至 15 年将公私太空计划作为国家战略核心，特别是针对卫星。
+
+- 与美国、俄罗斯、中国、印度和日本等主要太空强国不同，卢森堡不通过拥有自有发射能力的国家太空机构运作，而是向多国太空企业家开放管辖空间（并提供低税收），得到卢森堡政府、Planetary Resource 中心以及卢森堡大学的支持（Araxia Abrahamian 2017）。
+
+- 此外，太空网络空间的发展也引发了治理问题。目前缺乏针对基于卫星的网络空间的统一框架或“制度”。相反，两个领域之间存在显著的治理差距。这并不奇怪，因为 cyberspace 和空间被视为独立的、分散的治理结构。对两个领域而言，国家层面的监管和治理占主导，因为两者的基础设施差异巨大。在全球治理层面，以美国为基础的多边组织 ICANN 在网络空间治理中扮演关键角色，拥有关于互联网基本技术协议以及互联网域名系统的专属权威。ICANN 与非政府组织及各国政府一起，在推动关于网络空间应基于何种规范和原则的全球辩论中发挥重要作用——这场辩论可简化为“网络自由”与“网络主权”（Mueller 2017）的立场。
+
+- 同样，太空的全球治理范围有限，缺乏统一的“制度”或协调组织（Jakhu and Pelton 2017）。但最为根本的是 1967 年的《外层空间条约》，该条约规定太空属于全人类，任何国家或私营实体均不能声称对太空任何部分（如小行星或火星领土）拥有所有权，并且禁止在外层空间使用大规模杀伤性武器。还有其他几项全球太空条约，分别涉及月球、太空碎片责任、外层空间危害共享、太空技术使用以及宇航员救援等。这些条约由联合国外层空间事务厅（UNOOSA）及其相关和平利用外层空间委员会进行管理。因此，虽然存在一个全球性的太空`*Cyberspace in space*` 99 讨论与治理平台，但权力仍主要掌握在各国政府手中。
+
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
+
+1. 运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+
+```
 
 
--   [利益]是“Starlink”项目——由多年积累的亿万富翁埃隆·马斯克及其火箭公司 SpaceX 发起。Starlink 被宣传为一个为全球提供互联网接入的项目。2018 年 3 月 29 日，美国联邦通信委员会（FCC）向 SpaceX 颁发了设立全球宽带互联网服务卫星网络的许可证（Amos 2019; Gross 2018; Choudhury 2019）。在许可证获批之前，两颗卫星已被发射；随后在`Cyberspace in space` 97 2019 年 5 月，又发射了 60 颗卫星。进入 2020 年代后期，Starlink 系统预计将由最多 12,000 颗低轨卫星组成，更多卫星将陆续加入。
-
--   这一举措使 SpaceX 成为与英国 OneWeb（前身为`Worldvu`）竞争的对手，OneWeb 也是一个提供全球互联网服务的类似项目。
-
--   其他竞争者包括美国 Amazon 的“Project Kuiper”、Google 的“Project Loon”、Samsung、ViaSat、Sierra Nevada Corporation、英国 Surrey Satellite Technology Ltd.以及澳大利亚 Gilmore Space Technologies。还有若干其他类似项目，既有公共性也有私营性。欧盟运营的伽利略卫星系统值得注意——它的设计目标是提供类似美国全球定位系统（GPS）的服务。一些现有的或有志于成为“太空强国”的国家，如俄罗斯、中国、日本、印度、巴西和阿联酋，已设立或即将设立基于卫星的互联网服务。因此，对基于卫星的互联网竞争迅速增长的一个主要观察是，参与主体的多元化正在加剧。遍布全球的多位企业家的广泛参与暗示，这一领域将以碎片化而非霸权为特征。
-
--   随着空间互联网通信的发射，环绕地球的卫星数量将从当今的约 2,000 颗活跃卫星增至至少 20,000 颗。人们担忧这将显著提高碰撞风险，导致大量“空间碎片”（失效卫星、坠毁残骸、太空行走遗失设备等），并干扰信号、模糊空间望远镜的视野，对空间发射构成危险（Liou and Portman 2007）。毫无疑问，这一发展为空间公司及其客户（包括国家和公民）以及整个空间环境本身带来了新的脆弱性和不确定性，也对碰撞和干扰的发生方式、时间及具体后果产生了不确定性。脆弱性和不确定性进一步被以下两方面加剧：一方面，空间企业家数量和多样性的增加；另一方面，缺乏针对这一`new space race`的国家和国际规范与规则。技术发展往往快于政治进程。
-
--   此外，基于卫星的网络空间可能使绕过各国政府的审查和访问控制变得更加容易。虽然此前有人指出信息时代会削弱主权，但这一观察必须在国家政府在许可和关闭互联网服务提供商、控制实体基础设施方面的法律和物理能力之间取得平衡。然而，随着从地球向太空转移的网络基础设施，仍然需要地面的控制中心和天线，但这些设施可以分布在全球，更容易规避国家政府的控制。特别是在由多国公司提供的互联网卫星时，这些公司能够在多个国家同时运营，且比任何有线连接更具流动性。
-
--   事实上，推动基于卫星的网络空间发展的关键动力之一是多个国家已对法律进行修改，以允许私营太空项目。
-
--   根据 1968 年《外层空间条约》，各国对其领土和管辖范围内发出的所有空间`98 *Johan Eriksson and Giampiero Giacomello*`活动负有责任（Martinez 1998）。在太空时代早期，这问题不大，因为当时太空仅由美国和前苏联的政府通过 NASA 及其苏联对应机构进行探索。随着 NASA 预算削减以及 Space Shuttle 计划被取消，美国的太空获取逐步 liberal 化，乔治·W·布什 Jr. 及后来的奥巴马政府主张私营太空产业在太空探索（包括载人航天）中应发挥更大作用。
-
--   美国在推动这一发展方面发挥了引领作用，使 SpaceX、Orbital、Boeing、Lockheed Martin 等公司得以成长。
-
--   然而，其他传统上未与太空项目关联的国家也已修改法律，开放其管辖区域以允许私营太空倡议及公私合作伙伴关系。值得注意的例子是卢森堡——一个面积小的欧洲国家，过去 10 至 15 年将公私太空计划作为国家战略核心，特别是针对卫星。
-
--   与美国、俄罗斯、中国、印度和日本等主要太空强国不同，卢森堡不通过拥有自有发射能力的国家太空机构运作，而是向多国太空企业家开放管辖空间（并提供低税收），得到卢森堡政府、Planetary Resource 中心以及卢森堡大学的支持（Araxia Abrahamian 2017）。
-
--   此外，太空网络空间的发展也引发了治理问题。目前缺乏针对基于卫星的网络空间的统一框架或“制度”。相反，两个领域之间存在显著的治理差距。这并不奇怪，因为 cyberspace 和空间被视为独立的、分散的治理结构。对两个领域而言，国家层面的监管和治理占主导，因为两者的基础设施差异巨大。在全球治理层面，以美国为基础的多边组织 ICANN 在网络空间治理中扮演关键角色，拥有关于互联网基本技术协议以及互联网域名系统的专属权威。ICANN 与非政府组织及各国政府一起，在推动关于网络空间应基于何种规范和原则的全球辩论中发挥重要作用——这场辩论可简化为“网络自由”与“网络主权”（Mueller 2017）的立场。
-
--   同样，太空的全球治理范围有限，缺乏统一的“制度”或协调组织（Jakhu and Pelton 2017）。但最为根本的是 1967 年的《外层空间条约》，该条约规定太空属于全人类，任何国家或私营实体均不能声称对太空任何部分（如小行星或火星领土）拥有所有权，并且禁止在外层空间使用大规模杀伤性武器。还有其他几项全球太空条约，分别涉及月球、太空碎片责任、外层空间危害共享、太空技术使用以及宇航员救援等。这些条约由联合国外层空间事务厅（UNOOSA）及其相关和平利用外层空间委员会进行管理。因此，虽然存在一个全球性的太空`*Cyberspace in space*` 99 讨论与治理平台，但权力仍主要掌握在各国政府手中。
-
-
-
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
 
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
 
-
-
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者Richard Feynman。
+1. 运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，难以遗忘。
 
 ```
 if (condVar > someVal) {console.log("xxx")}
@@ -1773,7 +1554,7 @@ To be sure, the making of cyberspace in space requires connectivity also between
 
 That might, or even should, be changing.
 
-**Conclusion: Fragmentation, vulnerability, and uncertainty**
+## Conclusion: Fragmentation, vulnerability, and uncertainty
 
 The development of cyberspace in space has two main drivers. The first is obviously the technological advances, which – similar to the development of
 
@@ -1801,7 +1582,7 @@ type of future dominate – whether dark or bright? Looking beyond the horizon c
 
 Finally, in order for social scientists to be able to track the development of cyberspace in space and analyze consequences for politics and security, familiarization with technical development and expertise is essential. Reading of expert articles on satellites and other infrastructures is of importance, as are efforts to bridge the gap between technical and social science expertise, which certainly has its challenges given differences in incentives and epistemic cultures. The latter is a prevailing challenge, which students of STS (Science and Technology Studies) have known for decades. Moreover, case studies and comparative analyses of internet satellite programs are of importance for gaining knowledge about the patterns of change and continuity in this field. In addition, analyses of the linkages and gaps between space governance and internet governance are particularly warranted.
 
-**References**
+## References
 
 All links checked on August 20, 2021.
 
@@ -1824,8 +1605,6 @@ Bucur, D., and Iacca, G. (2017). Improved Search Methods for Assessing Delay-Tol
 Choudhury, S. R. (2019, July 22). Super-Fast Internet from Satellites is the Next Big Thing in the Space Race. *CNBC*. Retrieved September 26, 2019, [from: https://www.cnbc.com](https://www.cnbc.com)
 
 [/2019/07/22/fast-internet-via-satellites-is-the-next-big-thing-in-the-space-race.html.](https://www.cnbc.com)
-
-
 
 Dunn, M. (2006). 理解关键信息基础设施：一个难以捉摸的追求。在 M. Dunn 和 V. Mauer（编），《国际 CIIP 手册 2006，第二卷：分析问题、挑战与前景》中，Zürich：苏黎世联邦理工学院出版社，第 27–53 页。
 
@@ -1929,9 +1708,6 @@ Observations from cross-national war games
 
 一些研究通过观察数据探讨互联网空间中国家间互动的机制，例如 Jensen、Valeriano 和 Maness（2018）利用观察数据分析线上国家互动的逻辑。这些努力有助于我们理解此类互动的实用性。然而，导致网络行动使用的决策过程仍相对隐蔽。虽然将此视为观察研究的预期局限——尤其是在以隐蔽行动和归因困难为特征的领域——是合理的，但如果学者希望产生更具政策参考价值的知识，更好地把握驱动该领域决策逻辑是至关重要的，以便更好地理解国家如何利用网络力量。
 
-
-
-
 尽管过去十年来网络行动和参与它们的国家行为数量激增，但在该领域内的行动所带来的效用仍然至少部分不清楚。学者们，特别是在发生重大事件后，如 2007 年爱沙尼亚的数字封锁和 Stuxnet，质疑了国家在网络空间中进行操作的优势，并越来越注意到网络工具使用的非战争性质。1 例如，一项研究最近指出，少于 5.2%的公开披露的网络行动导致了其预期目标（Valeriano et al. 2018: 23）的让步。基于此，尚不清楚为何各国仍大量投入技术、财务和组织资源，以在该领域中发起攻击，尤其是在存在其他有前景的国家权力要素的情况下。
 
 DOI: [10.4324/9781003110224-10](https://doi.org/10.4324/9781003110224-10)
@@ -1956,10 +1732,7 @@ DOI: [10.4324/9781003110224-10](https://doi.org/10.4324/9781003110224-10)
 
 考虑到网络安全作为研究领域的新兴性质，本节为读者提供了该领域的演变概述。从讨论该领域固有的脆弱性开始，随后转向文献中占主导地位的系统层面的网络空间决策分析。通过这种方式，它指出了该方法的局限性，例如过度强调网络能力发展而忽视可显现的战略效用，以及对争端各方误解的有限关注。因此，讨论自然地过渡到网络安全文献中日益增长的行为“转向”，以弥补这些理解缺口。此外，它强调了微观层面因素的重要性，作为理解系统层面动态的重要基石。
 
-
 文<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>
-
-
 
 -   [与网络空间的赋能方面相对的，是高度复杂和互连系统所预期的脆弱性。正如已故 Charles Perrow（2014）所指出的，随着系统的复杂化，修正单个故障变得愈发困难。此外，预测单个组件故障对整个系统的下游影响也变得困难。在网络空间中，其组件的特性使其能够持续扩张，同时也促成了这些普遍的脆弱性。专家估计，软件通常每 1,000 行代码中包含 15 到 50 个错误。为了更好地理解这一点，空客 A380 的系统约有 1.2 亿行代码（Charette 2009），这意味着至少存在约 180 万个错误。虽然并非所有故障都会导致灾难性失败，但系统之间的相互依赖性以及它们在现代社会中的核心地位，使得利用单点故障进行攻击的潜在后果变得显而易见。
 
@@ -1997,9 +1770,6 @@ DOI: [10.4324/9781003110224-10](https://doi.org/10.4324/9781003110224-10)
 
 ***The behavioral turn in cyber conflict***
 
-
-
-
 -   [关于以网络安全微观基础为研究对象的学术研究正在兴起。](https://wiki.example.org/feynmans_learning_method) Dean 和 McDermott（2017）支持这一观点，即对个体（及组织）层面的网络安全分析增长有助于我们更好地理解网络空间中的决策与国家行为。尽管这些研究不如已建立的结构性行为解释一致，但它们仍然补充了已有的框架（如前文小节中提到的那些）。具体而言，当前研究重点关注不确定性对判断的影响。
 
 为了本章之目的，我们将不确定性视为一种模糊性函数。
@@ -2024,9 +1794,6 @@ Kreps 和 Schneider（2019）发现，参与一系列战争游戏的精英们通
 
 类比的有效使用取决于相似性的程度。也就是说，将完全无关的问题套用类比可能导致完全不恰当的结果（Khong 1992; Bar-Joseph and Kruglanski 2003）。例如，将网络行动与 9/11 攻击进行类比，二者没有多少共同点。虽然美国因基础设施状况而面临网络空间的脆弱性，但没有证据表明恐怖分子有能力发动类似攻击。此外，也没有证据表明网络行动会导致作为一级效果的生命损失。
 
-
-
-
 -   [类比也可能激发刻板印象，进一步加剧局势。基于上述示例，提及 9/11 可能引发愤怒，进而抑制进一步的信息搜寻，导致冲动且草率的决策 (`Carver and Harmon-Jones 2009`;`Weeks 2015`)。  
 1. 在施内德尔所进行的军事演习中，参与者要么拒绝参与，要么在领域内的操作能力被严重削弱。  
 这似乎与此前提到的国家网络行动的一个关键方面相矛盾：即这些行动是基于现有的物质能力实现的。演习的结果似乎削弱了这一主张。由于参与者相信网络行动具有类似于核武器的破坏潜力（通过类比得出），他们犹豫在情势中使用自己的能力以有利于自身。此外，施内德尔怀疑，是“忧虑”而非“恐惧”调节了网络力量的使用 (`2019`)。  
@@ -2046,8 +1813,6 @@ Kreps 和 Schneider（2019）发现，参与一系列战争游戏的精英们通
 ***Cyber Rubicon wargame***  
 基于网络安全研究的行为转向，2019 年 1 月至 8 月期间，涉及台湾、菲律宾和美 `国` 的一系列网络安全军事演习相继开展。演习的目标是探讨先前信念与类比推理是如何被用来辨识意图与后果的。读者应注意到，这些演习属于一个更大的研究项目，该项目包含跨国问卷实验，本章未作讨论。  
 军事演习的情境涉及虚构国家 Idemore 与 Vadare（参见 Figure 8.1 `#index_split_002.html#p136`）。两国被描绘为拥有相当的军事与经济能力，并且共享边界。演习开始时，围绕自然资源的争端逐渐显现。此前的争端被破坏性的网络行动所掩盖，这些行动似乎来源于 Vadare。随着演习推进，Vadare 表现出在外交与军事手段上支持自身利益的姿态，同时网络行动持续影响 Idemore。  
-
-
 
 -   作为三人团队的参与者，扮演 Idemorean 政策精英，负责应对日益严峻的危机。每位参与者分别扮演外交部长、国防部长或信息技术与安全部长。将参与者划分为这些角色的决定具有双重目的。首先，这些角色代表最有可能卷入国际网络安全事件的国家机构。其次，通过分配不同组织的领导角色，模拟能够
 
@@ -2093,10 +1858,7 @@ Kreps 和 Schneider（2019）发现，参与一系列战争游戏的精英们通
 
 这与在研究的其他国家群体（如台湾和菲律宾）中观察到的情况不同：该群体中的团队认为技术属性必须驱动计算，而地理描述仅次之。正如一位军官所说，
 
-
-
-
-the fact that there was no traffic, you know, there was no botnet traffic indicating that this was actually fired or, you know, triggered from within the enemy state \[…\] that’s probably the key piece of information that attributes the uncertainty into the equation.
+the fact that there was no traffic, you know, there was no botnet traffic indicating that this was actually fired or, you know, triggered from within the enemy state [...] that’s probably the key piece of information that attributes the uncertainty into the equation.
 
 Perhaps unsurprisingly, this particular result fits with a broader observation made in post-war game analysis of results and of debriefing materials, that certain specific national narratives dominated the reach for parallels to inform decision-making processes. With respondents in both Philippines and Taiwan, clear reference was made by participants to the overarching threat of Chinese military
 
@@ -2161,8 +1923,6 @@ Retrieved from: [`www.csa.gov.sg/news/publications/singapore-cybersecurity`](htt
 [-strategy](https://www.csa.gov.sg)
 
 Dean, B., and McDermott, R. (2017). A Research Agenda to Improve Decision Making in Cyber Security Policy. *Penn State Journal of Law & International Affairs*, 5(1): 29–71.
-
-
 
 Enli, G. (2017). Twitter as Arena for the Authentic Outsider: Exploring the Social Media Campaigns of Trump and Clinton in the 2016 US Presidential Election. *European* *Journal of Communication*, 32(1): 50–61.
 
@@ -2318,303 +2078,7 @@ Netanyahu repeated this analogy several times, including mentioning Iran and its
 
 “iron dome” (e.g., Prime Minster Office 2012; see also in Keinon 2013). 12
 
-While these claims echo the previous assertion that defense was a key aspect in the formation of Israel’s cyber security thinking (and strategy), they also provide a clear analogy of the traditional security aspects (Haber and Zarsky 2017: 153–4).
-
-As emphasized by Eviatar Matania, who then served as the director general of Israel’s National Cyber Directorate, Israel needs to develop a “digital equivalent of the Iron Dome” (Solomon 2017). This analogy reflects both the kind of threat
-
-*The study of cyber deterrence* 133
-
-(cyber threat is the same as the “traditional” rocket threat) and how the threat should be dealt with (by the government).
-
-**Israel’s limited reliance on cyber deterrence**
-
-I argue that the limited adoption of cyber deterrence in Israel during the early 2010s reflects and is part of the limited strategization of cyber security in Israel.
-
-While there seems to have been increasing acknowledgment of the need for cyber deterrence, it was adopted only to a limited extent. Both the adoption of the strategy and the limited nature of its adoption are evident in two main manifestations of this strategy.
-
-
-
-第一段可以从以色列对伊朗和叙利亚核计划进行的网络行动中推断出来。在这些案例中，虽然使用了不同方式的网络手段，但专家们将这些事件视为以色列试图通过实际使用武力建立基于网络的累积威慑的尝试。例如，Tor（2017: 6）指出，尽管 Stuxnet 对伊朗核计划造成的实际损害尚不完全明确，“Stuxnet 仍可能通过展示能力和意图产生影响”，因此可以在威慑的语境下加以审视。同样，Tabensky 和 Ben Israel（2015: 68）引用这两起事件——Stuxnet 以及对叙利亚反应堆的攻击——指出，如果以色列在这些行动中依赖网络攻击，“这表明以色列国防军（IDF）的技术、战术和组织已达到高度成熟”，从而产生了威慑效果。
-
-以色列在其他领域实践的累积威慑战略中，使用网络能力来争取未来的威慑，这与以色列通过实际使用武力来创造威慑的依赖相一致（Bar-Joseph 1998: 156–7；Almog 2004–5）。然而，这种类型的威慑的有效性受到质疑，13 更重要的是，以色列如果使用了它——或者根本没有使用——的方式，也显示出它在采用和调整这一战略到网络空间方面的有限性，因为威慑威胁仅以间接且隐含的方式存在。
-
-第二种表现形式是越来越多的以色列决策者，包括关键人物如总理内塔尼亚胡，主张以色列应采用网络威慑战略。内塔尼亚胡指出，网络战争充满不确定性和未知性。在网络领域取得平衡要困难得多，并且是`依赖防御与威慑的结合`。
-
-攻击来源通常匿名，这对建立威慑平衡构成挑战，我们应当关注这一点。
-
-（qtd. in Ben-Yosef 2011，my emphasis and my translation）
-
-这一表述清楚地表明以色列采用网络威慑战略的局限性。虽然他承认需要建立这种战略，内塔尼亚胡的表述强调了建立它的战略挑战以及需要将其与另一种战略（防御）相结合。尽管如此，他仍然突出了发展网络威慑战略的必要性，这一点在以往的表述中是缺失的。
-
-获得网络威慑战略的需求在其他关键实践者的表述中同样明显，例如，当时担任以色列国防军情报局局长的耶德林少将（Major-General Amos Yadlin）认为，网络安全提出了重要问题，应当公开讨论。这些问题涉及“在网络空间防止战争的威慑本质”（Yadlin 2009，my translation）。
-
-有人甚至更明确地指出，他们如何看待网络安全与网络威慑之间的关系。例如，2012 年他发表讲话时，国防部长艾胡德·巴拉克（Ehud Barak）建议将网络视为另一领域的战争。在他看来，“在安全方程式中，除了陆地、海洋、空中和太空，我们还需要将网络作为新的维度加入”。他随后表示，在网络能力带来的模糊性中，“领导力需要展示如何为以色列做正确的事，并`建立威慑平衡`，在新世界中有效行动”（Barak 2012，my emphasis and translation）。因此，巴拉克将网络视为传统安全领域，并将其与采用网络威慑战略联系起来。
-
-同样，2012 年 1 月，副外交部长丹尼·阿亚伦（Danny Ayalon）呼吁采用明确的网络威慑战略，并以美国的网络威慑战略为依据，该战略基于对网络空间攻击的明确报复威胁（如上文所述）。他认为，“[T]he US has announced that any attack on its cybernetic space would be considered a declaration of war and that it would go as far as firing missiles to respond to such an attack. This is a good criterion for us all”。此外，从这段引用可以看出，阿亚伦将网络攻击视为更传统的暴力行为——即战争行为（Curiel 2012）。
-
-综上所述，这些讨论表明以色列在采用网络威慑战略方面的程度相对有限。虽然它在过去几年的沉默中出现了转变，但这些表现形式的采用显示出该战略的相对局限性。第一种表现强调通过实际使用网络攻击来进行威慑，但仅涉及隐含的网络威慑战略。第二种表现——承认需要发展网络威慑战略——同样体现了局限性，主要关注的是调整以色列的能力和战术以便能够发出网络威慑威胁；它并不涉及承认该战略的存在或实际发出威慑威胁。
-
-**Conclusion**
-
-本章旨在展示在面对围绕网络（安全）的不确定性时，研究网络（安全）的方法论挑战的可行性。一个方向是专注于`The study of cyber deterrence` 战略的采用与运用——而不仅仅是其效果，因为大多数学者只关注后者。我通过研究以色列有限且渐进的网络威慑战略采用情况以及其如何契合以色列传统的安全实践，简要阐述了这些设想。
-
-本章所使用的建议方法说明，虽然不确定性、快速变化以及权力分散可能限制研究，但它们也为发展、思考和适应各种研究方法及替代研究焦点提供了机会。采用解释性方法是另一个可发展的方向，用于探讨网络安全受这些挑战影响的其他方面。
-
-此外，建构主义研究也极具前景，特别是在研究不确定性和快速技术变革（Rathbun 2007: 549–52）时。
-
-学者们不仅可以检验采用的战略是否符合国家的身份和叙事，还可以探讨围绕这些战略的话语：例如，这些战略如何被呈现、向公众传播以及如何被正当化。
-
-这些方向为学者们提供了众多机会，因为可以比较和对照相关数据和信息，并且我们可以在公共领域中追踪到这些变化，尽管存在保密等挑战。
-
-传统方法和方向也可以用于应对这些挑 enges 在研究网络安全时。例如，快速的技术变革意味着旧技术很快会过时。从方法论的角度看，这意味着过去技术的信息将比以往更快获得。结果是，学者们在分析最先进的技术时受到限制，但可以满足于对“较旧技术”的经验性关注——鉴于快速变化，这些“较旧技术”可能仅是过去五年内的先进技术。
-
-
-
-
-同样，权威的碎片化虽然在研究网络安全的不同方面时增强了不确定性，但也提供了机会。学者们可以将非国家行为体不仅视为国家行为体策略的目标，也视为战略制定者本身。例如，除了研究国家如何试图威慑非国家行为体外，学者们还可以探讨非国家行为体如何向不同类型行为体发出威慑威胁（Wilner 2020: 29; Lupovici 2019）。
-
-关于以色列案例的讨论也蕴含重要的启示。
-
-一个关键问题是，对网络领域（及其社会建构）的理解如何影响决策者制定策略以及如何将传统策略（如威慑）适应这一领域。在解释这种行为时，学者们可以将这种政策与那些采用更明确网络威慑战略的其他国家的策略进行对比，例如美国（见 Wilner 2020）。
-
-另一个有前景的方向是追踪网络威慑采用情况的变化。关键的时间节点是 2020 年 5 月。据国际媒体报道，以色列在伊朗对以色列水基础设施进行网络攻击后，报复了伊朗的目标（如 Warrick and Nakashima 2020）。此案例具有多方面的重要性。首先，以色列官方正式承认了伊朗的攻击。其次，也是更为重要的，以色列的报复及其它以色列官员的声明（如国防部长拿夫塔利·本内特）被解读为以色列倾向于……14 如果这种解释正确，这标志着以色列对威慑的政策转变，即通过实际使用武力来发出威慑信号，这恰当地符合以色列一般讨论的传统威慑实践。确实，以色列政策仍存在一定的模糊性。不过，这一案例可能成为以色列网络威慑变得更加明确的重要转折点。
-
-这些变化也体现了所提议的方法论解决方案的生产力。以色列行为的似乎变化引发了各种问题。例如，我们可以询问是否因为战略激励促使以色列转变其政策，或者是特定决策者（如即将离职的本内特，随着新政府成立）的感知导致的变化。或者，这些转变可以通过追踪对网络领域的理解或建构的变化来解释。尤其是当我们承认，信息不仅传递给国际受众（如伊朗人），也传递给国内受众（如以色列公众）。针对国内受众的宣传在寻求网络安全的合法性以及应对该领域行动者所面临的挑战时可能变得尤为重要。
-
-**Acknowledgments**
-
-作者感谢特拉维夫大学跨学科网络研究中心对本研究的支持。
-
-**Notes**
-
-1 例如，在研究传统冲突和袭击时，这不是一个大问题。虽然学者们可能就细节争论不休，但获取这些事件的信息要比研究网络事件要容易得多。
-
-2 例如，关于量子计算机如何挑战国际安全的争论（如 Lindsay 2020; 2022）。
-
-3 尽管关于“网络威慑”的定义存在争议（见 Lupovici 2016a），但本项目采用的观点（被众多学者认可）是：网络威慑（通过惩罚）是一种旨在使潜在挑战者不敢攻击国家的网络基础设施或以网络手段攻击国家，并在其发生时威胁报复的战略（Stevens 2012: 149–52；见也 Lupovici 2016a: 324–6）。
-
-4 传统观点认为，威慑成功难以追踪，因为学者无法直接观察到它——与可观察的威慑失败不同。因此，挑战在于学术研究偏向于研究威慑失败的情形，因为在此类情形下学者更容易建立因果论据（Achen and Snidal 1989: 161; Lebow and Stein 1990: 336, 347; Sauer 2016: 49）。
-
-5 学者们指出，由于潜在挑战者知道捍卫者在识别攻击来源方面存在困难，挑战者会估计报复难以实施。
-
-6 学者们就该挑战的局限性提出了三个主要观点。第一，挑战者的身份可以从情境中推断——例如在两个行为体之间的冲突期间发生的网络攻击，或通过传统情报手段（Kugler 2009: 310, 317–8; Kello 2013: 17–8）。第二，随着技术进步，行为体获得更好工具以识别攻击来源，包括更精确的取证手段以归因网络攻击（Rid and Buchanan 2015）。第三，除了技术本身之外，国际规范也在限制报复时，当行为体无法完全识别攻击来源时。然而，国际规范可能随时间变化（Lupovici 2016a: 330–1）。
-
-7 然而，应注意到，学者们在于是社会决定技术发展及其使用（“社会建构论”）还是技术决定行为者行为（“技术决定论”）上存在争论（如 Fritsch 2011; Manjikian 2018）。
-
-8 关于美国网络威慑战略的极佳综述，请参见 Wilner (2019)。据我所知，以色列从未像美国那样发出直接威胁：任何针对以色列的网络攻击都将导致以色列动用所有可用手段——包括网络手段和传统（动能）手段（如 Department of Defense Cyber Policy Report 2011: 2）。
-
-9 以色列采用并依赖此战略，也可以由某些以色列-犹太叙事和身份所解释，包括以色列-犹太受害者身份。这一叙事提供了以色列解释和放大威胁的框架，从而促使其动用武力并采取主动措施，以防止另一次大屠杀（Waxman 2006: 49; Bar-Tal 2001: 612–5; Barnett 2013: 37–47; 参见 Sucharov 2005: 31）。
-
-10 这并不意味着以色列缺乏网络安全的战略思考。在尝试形成战略的过程中，一些问题受到高度关注，例如网络安全的法律层面以及以色列试图塑造新的全球网络安全规范。然而，这些在更“传统”的安全方面——即战略形成以及相关职能的运作——上表现得不那么明显。
-
-11 铁穹铁穹（Iron Dome）是以色列开发的导弹防御系统，用于拦截火箭。
-
-12 有趣的是，前国防部长艾哈德·巴拉克也暗示了网络威胁与火箭威胁之间的关联（参见 Cohen and Yaron 2012）。
-
-
-
-13`#index_split_002.html#p148` 对于通过实际使用武力创造威慑效果的有效性进行的重要讨论，请参见 Mercer 1996；Press 2005: 22–4, 147–8, 147–8；Tang 2005；以及 Lupovici 2016b，同时也请参见 Rid 2012。此外，在网络领域这种情况更为复杂，因为披露能力可能使潜在挑战者获得抑制防御方能力的手段（参见 Libicki 2007: 271–2）。
-14`#index_split_002.html#p151` 正如 Siman-Tov 和 Evan 强调的，Bennett 于 2020 年 5 月 18 日表示：“我们必须增加政治、经济、军事和技术压力，并在其他维度进行行动。这可以做到”（Bennett，见 Siman-Tov 和 Evan 2020）。
-
-**参考文献**
-
-所有链接已于 2021 年 8 月 23 日检查。
-
-Achen, H. C., and Snidal, D. (1989). Rational Deterrence Theory and Comparative Case Studies. *World Politics*, 42(2): 144–169.
-
-Adamsky, D. (2017). The Israeli Odyssey toward Its National Cyber Security Strategy. *The* *Washington Quarterly*, 40(2): 113–127.
-
-Almog, D. (2004–5). Cumulative Deterrence and the War on Terrorism. *Parameters*, 25(4): 4–19.
-
-Bar, M. (1990). *Red Lines in Israel’s Deterrence Strategy*. Tel Aviv: Ma’arachot (in Hebrew).
-
-Barak, E. (2012, June 6). A Keynote Address by Minister of Defense Yuval Na’man.
-
-Workshop for Science, Technology and Security. \[Video\]. YouTube. Retrieved from:
-
-[`www.youtube.com/watch?v=doGiu556ZWQ`](https://www.youtube.com) \[in Hebrew\].
-
-138 *Amir Lupovici*
-
-Baram, G. (2013). The Effect of Cyberwar Technologies on Force Buildup: The Israeli Case. *Military and Strategic Affairs*, 5(1): 23–43.
-
-Bar-Joseph, U. (1998). Variations on a Theme: The Conceptualization of Deterrence in Israeli Strategic Thinking. *Security Studies*, 7(3): 145–181.
-
-Barnett, M. (2013). Cosmopolitanism: Good for Israel? Or Bad for Israel? In E. Adler (ed.), *Israel in the World: Legitimacy and Exceptionalism*. London: Routledge, pp. 32–50.
-
-Bar-Tal, D. (2001). Why Does Fear Override Hope in Societies Engulfed by Intractable Conflict, as It Does in the Israeli Society? *Political Psychology*, 22(3): 601–627.
-
-Cohen, A. (2010). *The Worst-Kept Secret*. New York: Columbia University Press.
-
-Cohen, G. (2015, June 16). Israeli Army Plans to Create Separate Cybercorps, Similar to Air Force or Navy. *Haaretz*. Retrieved from: [`www.haaretz.com/israel-news/`](http://www.haaretz.com).
-
-[.premium -1 .661398](http://www.haaretz.com).
-
-Cohen, G. (2017, January 3). Israeli Military Reorganizing Its Cybersecurity Operations.
-
-*Haaretz*[. Retrieved from: http://www.haaretz.com/israel-news/.premium -1 .762438](http://www.haaretz.com).
-
-Cohen, G., and Oded, Y. (2012, June 6). Barak Acknowledges Israel’s Cyber Offensive for First Time. *Haaretz*. Retrieved from: [`www.haaretz.com/israel-news/barak`](http://www.haaretz.com).
-
-[\-acknowledges -israel -s -cyber -offensive -for -first -time -1 .434767](http://www.haaretz.com).
-
-Curiel, I. (2012). Deputy FM Threatens ‘Forceful Response’ to Cyber Attacks. *Ynetnews*.
-
-Retrieved from: [`www.ynetnews.com/articles/0`](http://www.ynetnews.com) ,7340 ,L -4172329 ,00 .html \[in Hebrew\].
-
-Department of Defense Cyberspace Policy Report. (2011, November). A Report to Congress Pursuant to the National Defense Authorization Act for Fiscal Year 2011, Section 934.
-
-Retrieved from: [`oai.dtic.mil/oai?verb=getRecord&metadataPrefix=html`](http://oai.dtic.mil)
-
-[&identifier =ADA552759.](http://oai.dtic.mil)
-
-Dunn Cavelty, M., and Wenger, A. (2020). Cyber Security Meets Security Politics: Complex Technology, Fragmented Politics, and Networked Science. *Contemporary* *Security Policy*, 41(1): 5–32.
-
-Egloff, J. F. (2020). Contested Public Attributions of Cyber Incidents and the Role of Academia. *Contemporary Security Policy*, 41(1): 55–81.
-
-Even, S., and David, S.-T. (2012). Cyber Warfare: Concepts, Trends and Implications for Israel. INSS Memorandum No. 117, May 2012. Tel Aviv: The Institute for National Security Studies. Retrieved from: [`www.files.ethz.ch/isn/152953/inss%20memo`](https://www.files.ethz.ch)
-
-[randum_may2012_nr117.pdf](https://www.files.ethz.ch)
-
-Even, S., David, S.-T., and Gabi, S. (2016). Structring Israel’s Cyber Defense. *INSS*
-
-*Insight*, 856. Tel Aviv: The Institute for National Security Studies. Retrieved from:
-
-[`www.inss.org.il/publication/structuring-israels-cyber-defense/`](https://www.inss.org.il)
-
-Evron, Y. (1994). *Israel’s Nuclear Dilemma*. New York: Routledge.
-
-Fritsch, S. (2011). Technology and Global Affairs. *International Studies Perspectives*, 12(1): 27–45.
-
-Haber, E., and Zarsky, T. (2017). Protecting Critical Infrastructure from Cyberattacks.
-
-*Mishpat UMimshal*, 18(1): 99–155 \[in Hebrew\].
-
-Hirsch, Y., and Gattegno, I. (2012, October 14). Netanyahu Announces ‘Digital Iron Dome’ to Battle Cyberattacks. Israel Hayom. Retrieved [from: http://www.israelhayom.com/site/newsletter_article.php?id=6070.](http://www.israelhayom.com)
-
-[.com /site /newsletter \_article .php ?id =6070.](http://www.israelhayom.com)
-
-Katz, Y. (2012, June 3). IDF Admits to Using Cyber Space to Attack Enemies. *The* *Jerusalem Post*. Retrieved from: [`www.jpost.com/Defense/IDF-admits-to-using`](http://www.jpost.com)
-
-[\-cyber -space -to -attack -enemies](http://www.jpost.com).
-
-Keinon, H. (2013, September 6). PM: Israel Needs ‘Digital Iron Dome’ to Stop Cyber Attacks. *The Jerusalem Post*. Retrieved from: [`www.jpost.com/Defense/PM`](http://www.jpost.com)
-
-[\-Israel -needs -digital -iron -dome -to -stop -cyber -attacks -315934.](http://www.jpost.com)
-
-*The study of cyber deterrence* 139
-
-Kello, L. (2013). The Meaning of the Cyber Revolution: Perils to Theory and Statecraft.
-
-*International Security*, 38(2): 7–40.
-
-Kugler, L. R. (2009). Deterrence of Cyber Attacks. In F. D. Kramer, S. H. Starr, and L. K.
-
-Wentz (eds), *Cyberpower and National Security*. Washington, DC: National Defense University Press, pp. 309–339.
-
-Lebow, N. R., and Stein, J. G. (1990). The Elusive Variable. *World Politics*, 42(3): 336–369.
-
-Levite, A. (1989). *Offense and Defense in Israeli Military Doctrine*. Tel Aviv: Jaffee Center for Strategic Studies.
-
-Libicki, C. M. (2007). *Conquest in Cyberspace*. Cambridge: Cambridge University Press.
-
-Lindsay, J. R. (2020). Demystifying the Quantum Threat: Infrastructure, Institutions, and Intelligence Advantage. *Security Studies*, 29(2): 335–361.
-
-Lindsay, R. J. (2022). Quantum Computer and Classical Politics: The Ambiguity of Cryptologic Advantage. In M. Dunn Cavelty and A. Wenger (eds), *Cyber Security:* *Socio-Technological Uncertainty and Political Fragmentation*. London: Routledge, pp. 80–94.
-
-Lupovici, A. (2011). Cyber Warfare and Deterrence: Trends and Challenges. *Military and* *Strategic Affairs*, 3(3): 41–52.
-
-Lupovici, A. (2016a). The ‘Attribution Problem’ and the Social Construction of ‘Violence’: Taking Cyber Deterrence Literature a Step Forward. *International Studies Perspectives*, 17(3): 322–342.
-
-Lupovici, A. (2016b). *The Power of Deterrence. Emotions, Identity and American and* *Israeli Wars of Resolve*. Cambridge: Cambridge University Press.
-
-Lupovici, A. (2019). The Deterrence Strategies of Non-States Cyber Actors. Unpublished manuscript.
-
-Lupovici, A. (2020). Methodology of Cyber Deterrence. Paper accepted for presentation at the Annual Conference of the International Studies Association, March 2020, Honolulu, HI.
-
-Manjikian, M. (2018). Social Construction of Technology: How Objects Acquire Meaning in Society. In D. R. McCarthy (ed.), *Technology and World Politics*. London: Routledge, pp. 25–41.
-
-Mercer, J. (1996). *Reputation and International Politics*. Ithaca: Cornell University Press.
-
-
-
-Morgan, M. P. (2010). Applicability of Traditional Deterrence Concepts and Theory to the Cyber Realm. In: National Research Council, J. D. Steinbruner, et al. (eds), *Proceedings* *of a Workshop on Deterring Cyberattacks*. Washington, DC: The National Academies, pp. 55–76.
-
-Nye, J. S. Jr. (2017). Deterrence and Dissuasion in Cyberspace. *International Security*, 41(3): 44–71.
-
-Orbach, M. (2015, February 15). Government Approved the Establishment of a National Cyber Bureau. Retrieved from: [`www.calcalist.co.il/articles/0,7340,L-3652448,00.html`](http://www.calcalist.co.il/articles/0,7340,L-3652448,00.html) [in Hebrew].
-
-Press, G. D. (2005). *Calculating Credibility: How Leaders Assess Military Threats*. Ithaca: Cornell University Press.
-
-Prime Minister Office. (2012, November 11). At the Weekly Cabinet Meeting. Government of Israel. Retrieved from: [`www.gov.il/en/departments/publications/reports/`](https://www.gov.il/en/departments/publications/reports/).
-
-[govmes111112](https://www.gov.il).
-
-Rathbun, C. B. (2007). Uncertain about Uncertainty: Understanding the Multiple Meanings of a Crucial Concept in International Relations Theory. *International Studies Quarterly*, 51(3): 533–557.
-
-140 *Amir Lupovici*
-
-Rid, T. (2012). Deterrence Beyond the State: The Israeli Experience. *Contemporary* *Security Policy*, 33(1): 124–147.
-
-Rid, T., and Buchanan, B. (2015). Attributing Cyber Attacks. *Journal of Strategic Studies*, 38(1–2): 4–37.
-
-Roe, P. (2004). *Ethnic Violence and the Societal Security Dilemma*. London: Routledge.
-
-Sauer, F. (2016). *Atomic Anxieties: Deterrence, Taboo and the Non-Use of U.S. Nuclear* *Weapons*. New York: Palgrave Macmillan.
-
-Solomon, S. (2017, February 1). Israel Works on ‘Digital Iron Dome’ for Cyberdefense.
-
-*The Times of Israel*. Retrieved from: [`www.timesofisrael.com/israel-works-on-digital-iron-dome-for-cyberdefense/`](http://www.timesofisrael.com/israel-works-on-digital-iron-dome-for-cyberdefense/).
-
-[-digital-iron-dome-for-cyberdefense/](http://www.timesofisrael.com).
-
-Stevens, T. (2012). A Cyberwar of Ideas? Deterrence and Norms in Cyberspace.
-
-*Contemporary Security Policy*, 33(1): 148–170.
-
-Sucharov, M. M. (2005). *The International Self. Psychoanalysis and the Search for Israeli-Palestinian Peace*. New York and Albany: State University of New York Press.
-
-Tabensky, L., and Ben Israel, I. (2015). *Cybersecurity in Israel*. Cham: Springer.
-
-Tal, I. (2000). *National Security. The Israel Experience*. London: Prager.
-
-Tang, S. (2005). Reputation, Cult of Reputation, and International Conflict. *Security* *Studies*, 14(1): 34–61.
-
-Tor, U. (2017). Cumulative Deterrence’ as a New Paradigm for Cyber Deterrence. *Journal* *of Strategic Studies*, 40(1–2): 92–117.
-
-Valeriano, B., and Maness, C. R. (2014). The Dynamics of Cyber Conflict between Rival Antagonists, 2001–11. *Journal of Peace Research*, 51(3): 347–360.
-
-Warrick, J., and Nakashima, E. (2020, May 19). Officials: Israel Linked to a Disruptive Cyberattack on Iranian Port Facility. *Washington Post*. Retrieved from: [`www.washingtonpost.com`](https://www.washingtonpost.com).
-
-[washingtonpost.com/national-security/officials-israel-linked-to-a-disruptive-cyber](https://www.washingtonpost.com).
-
-[attack-on-iranian-port-facility/2020/05/18/9d1da866-9942-11ea-89fd-28fb313d1886_story.html](https://www.washingtonpost.com/attack-on-iranian-port-facility/2020/05/18/9d1da866-9942-11ea-89fd-28fb313d1886_story.html).
-
-Waxman, D. (2006). *The Pursuit of Peace and the Crisis of Israeli Identity. Defining/Defending the Nation*. New York: Palgrave.
-
-Wilner, A. (2020). US Cyber Deterrence: Practice Guiding Theory. *Journal of Strategic* *Studies*, 36(4): 309–318.
-
-Yaniv, A. (1987). *Deterrence without the Bomb: The Politics of Israeli Strategy*. New York: Lexington Books.
-
-10.4324/9781003110224-12
-
-**10**
-
-**10 Cyber securities and cyber**
-
-**security politics**
-
-Understanding different logics of German
-
-cyber security policies
-
-*Stefan Steiger*
-
-The internet has rapidly become an integral part of everyday life in modern societies. While it has helped to facilitate economic growth and cultural exchange, it has also become a new domain for conflict. The increasing sophistication of cyberattacks is politically challenging, as the internet has become the meta-infrastructure of modern societies – a “backbone of backbones” (Choucri and Clark 2012: 151). Today, information technology (IT) influences almost every aspect of social life. Though many states have established cyber security1 policies, emphasizing their claim to protect the nation and the citizens not only offline but also in cyberspace, the regulation of cyber security is especially complex because of the different actors involved (including both state and non-state) and the international reach of the internet that makes unilateral regulation difficult. Moreover, national decisions regarding cyber security (e.g. the stockpiling of vulnerabilities) can affect actors around the world.
-
-States have dealt differently with these new opportunities and challenges.
-
-While some have actively employed offensive cyber capabilities as a substitute for conventional intervention, others have used cyber capacities in complement with more traditional responses to threats. Yet, cyber security policy is not just a military issue that relates to interstate conflict dynamics; it also has the potential to have a lasting impact on the relationship between state authorities and citizens, as well as between states and companies. Therefore, the expansion of state competences in cyberspace has not remained unchallenged. Interventions into the private lives of citizens or entrepreneurial freedom have sparked substantial domestic opposition. Internationally, practices of mass surveillance conducted by intelligence agencies have received considerable criticism. However, it has remained largely unclear which factors, both domestic and foreign, influence different cyber security policies. Since most IR theories tend to focus on either international (i.e. realism) or domestic (i.e. liberalism) dynamics, significant aspects of policies that hinge on the interplay of those two spheres are not accounted for.
+While these claims echo the previous assertion that defense was a key aspect in the formation of Israel’s cyber securitys to threats. Yet, cyber security policy is not just a military issue that relates to interstate conflict dynamics; it also has the potential to have a lasting impact on the relationship between state authorities and citizens, as well as between states and companies. Therefore, the expansion of state competences in cyberspace has not remained unchallenged. Interventions into the private lives of citizens or entrepreneurial freedom have sparked substantial domestic opposition. Internationally, practices of mass surveillance conducted by intelligence agencies have received considerable criticism. However, it has remained largely unclear which factors, both domestic and foreign, influence different cyber security policies. Since most IR theories tend to focus on either international (i.e. realism) or domestic (i.e. liberalism) dynamics, significant aspects of policies that hinge on the interplay of those two spheres are not accounted for.
 
 Thus, scholars have called for approaches that consider both domestic and international influences on cyber security policy, as well as how they interact (Whyte 2018: 12). This chapter employs a role theoretical, two-level game to analyze the DOI: [10.4324/9781003110224-12](https://doi.org/10.4324/9781003110224-12)
 
@@ -2627,8 +2091,6 @@ This chapter therefore addresses the following question: How did German cyber se
 especially in the case of critical infrastructure protection – non-state actors.
 
 This results in varying policy responses and dynamics between different actors in each field. Furthermore, an examination of German cyber security policies is especially interesting, as a gap exists within the literature concerning the cyber security strategies of states with a cautious foreign policy approach. Most theory-driven studies have focused on developments in the United States and sometimes China or Russia (Dunn Cavelty 2008; Fritz 2017; Maréchal 2017; McCarthy 2018).
-
-
 
 为了回答研究问题，本章借鉴了外交政策分析（FPA）中理论在角色理论中的象征互动主义作用，并基于来自行政部门及其他国家机构以及非国家行为体的政策文件语料库，追溯政策发展。本章的结构如下：首先，阐述角色理论的基本前提，并概述两级角色扮演的概念；随后，分析四个活动领域中的关键互动；最后，一段简短的结论总结研究发现。
 
@@ -2660,9 +2122,6 @@ This results in varying policy responses and dynamics between different actors i
 
 即“目标应在运营商的私营目标与社区（福利）整体利益之间达成共识”（Bundesministerium des Innern 2007: 5）。因此，在德国基础设施保护的第一阶段，保护者角色被委派给关键基础设施运营商。
 
-
-
-
 然而，国家与私营部门的合作未达政府的预期。从行政部门的角度来看，企业未履行提供信息的义务，也忽视了制定适当标准的职责。此外，Stuxnet 明确表明，针对工业目标的攻击已不再是假设性的情景（Bundesministerium des Innern 2011: 3）。因此，政府开始商议引入具有约束力的法规，以更好地保护关键基础设施。联邦内政部长弗里德里希表示：
 
 “我知道，经济界中有声音希望以自愿合作的方式进行。然而，经验表明，仅凭自愿措施我们在过去一直未能达到目标。我们需要一个法律框架，以促进更紧密的合作并确保遵守 IT 安全标准。”
@@ -2687,9 +2146,6 @@ This results in varying policy responses and dynamics between different actors i
 
 在两级网络犯罪应对——国际层面和国内层面——之间进行平衡的复杂性，在更详细审视德国案例时得以很好地说明。两个因素起到了重要作用：首先，国内关于谁最终负责确保对网络犯罪的充分保护、谁应承担保护者角色的持续争论，使得进一步的国际合作变得困难。其次，政府对分担或委派保护者职责的不愿，阻碍了对这些争议的解决。
 
-
-
-
 -   [建立明确界限、明确理解的保护角色的努力在马德里（2004）和伦敦（2005）恐怖袭击后加剧，为跟上技术发展，政府向执法机构提供了两种工具以实现合法拦截：来源通信监控（Quellen-TKÜ）和在线搜索（Online-Durchsuchung）（Deutscher Bundestag 2006）。这些措施的使用在德国社会引发了重大抵制，因为许多批评者认为 IT 设备位于私人生活的核心，因此隐蔽调查构成了对隐私的不成比例的侵犯。2007 年 7 月，民间社会和左翼党的代表向宪法法院提交了针对在线搜索的宪法投诉。2008 年 2 月，联邦宪法法院裁定该措施仅在“存在针对具有法律保护利益的特定危险的实际线索”时才可接受，并进一步界定了“确保信息技术系统保密性和完整性的基本权利”。此外，法院要求在线搜索必须经司法令状授权，以此限制其作为网络犯罪预防工具的使用（Bundesverfassungsgericht 2008）。2008 年，黑客电脑俱乐部（Chaos Computer Club）揭露用于合法拦截的软件功能远强于预期，不仅限于在加密前拦截通信，还能对受感染设备进行完全监控（CCC 2011）。尽管国内关于国家机构适当权力的争论激烈，德国政府仍多次强调新调查工具对于处理严重犯罪和恐怖主义的重要性（Deutscher Bundestag 2017: 24586）。
 
 基于上述挑战，2017 年政府降低了使用 Quellen-TKÜ 和在线搜索的门槛。此举引发了持续且重大的批评（heise .de 2017）。显然，在德国社会中，自称为保护者的政府的范围和权力仍然是激烈争论的焦点。只要国内缺乏稳定的角色关系，就很难就此类问题在国际层面达成协议。此外，保护者角色被视为国家功能的核心，因此对如何将职责委派给其他主体设有明确限制。因此，与保护关键基础设施不同，国内稳定的角色关系可能并不导致实质性的国际合作。
@@ -2712,12 +2168,13 @@ This results in varying policy responses and dynamics between different actors i
 
 尽管如此，BND 法案于 2016 年 10 月在 Bundestag 通过。政府在日益敌对的环境中成功扩大了其保护角色。此外，与国际合作伙伴的严肃互动经验也在辩论中得到体现（Deutscher Bundestag 2016b: 19625）。
 
-
-
-
 -   [费恩曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
 
 1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+
+```
+
+
 
 ```
 if (condVar > someVal) {console.log("xxx")}
@@ -2725,9 +2182,9 @@ if (condVar > someVal) {console.log("xxx")}
 
 
 
--   [德国网络安全政策](https://wiki.example.org/feynmans_learning_method)是一个多层面的现象，在研究的四个方面表现出不同的互动模式。
+德国网络安全政策是一个多层面的现象，在研究的四个方面表现出不同的互动模式。
 
-1.  分析表明，研究领域的不同“角色组合”（significant others）受到国内外因素的影响，两层角色扮演的方法考虑了这一点。国际与国内互动模式构成了政府可能尝试履行的多种“保护角色”，各个领域的影响力程度各不相同。整体来看，德国政府成功且显著地扩大了其保护角色的范围，通过扩大不同安全机构的职权并集中关键基础设施等资产的控制来实现。
+1. 分析表明，研究领域的不同“角色组合”（significant others）受到国内外因素的影响，两层角色扮演的方法考虑了这一点。国际与国内互动模式构成了政府可能尝试履行的多种“保护角色”，各个领域的影响力程度各不相同。整体来看，德国政府成功且显著地扩大了其保护角色的范围，通过扩大不同安全机构的职权并集中关键基础设施等资产的控制来实现。
 
 但更深入的观察显示出更为碎片化和细致的图景。
 
@@ -2739,263 +2196,194 @@ if (condVar > someVal) {console.log("xxx")}
 
 在更广阔的国际网络安全背景下，即使是对外交政策保持谨慎的国家也会加剧跨国网络安全挑战。德国的外交情报机构能力极强，常常分析经过德国互联网交换点的网络流量。政府还会囤积漏洞，并在必要时在 cyberspace 中暗中行动。虽然尚未决定如何负责任地披露漏洞，但从政府角度看，某些漏洞对于有效履行保护角色是必不可少的。包括故意使归因更加困难在内的隐蔽行动，直接破坏了明确声明的“可验证的约束文化”目标，因为即使是更为谨慎的国家也会在暗中发动攻击。
 
-**Notes**
+## Notes
 
-1 The term “cybersecurity policy” refers to political practices aimed at ensuring the confidentiality, integrity, and availability (CIA-triad) of data and data processing systems and to those policies undermining these goals of IT security.
-
-2 For an overview of foreign policy role theory, see Harnisch (2018); Breuning (2017).
+1. The term “cybersecurity policy” refers to political practices aimed at ensuring the confidentiality, integrity, and availability (CIA-triad) of data and data processing systems and to those policies undermining these goals of IT security.
+2. For an overview of foreign policy role theory, see Harnisch (2018); Breuning (2017).
 
 *Cyber securities and cyber security politics* 153
 
-**References**
+## References
 
 All links checked on August 23, 2021.
 
-Breuning, M. (2017). Role Theory in Foreign Policy. In *Oxford Research Encyclopedia of* *Politics*. [`doi .org /10 .1093 /acrefore /9780190228637 .013 .334`](https://doi.org/10.1093/acrefore/9780190228637.013.334).
+Breuning, M. (2017). Role Theory in Foreign Policy. In *Oxford Research Encyclopedia of Politics*. [doi.org/10.1093/acrefore/9780190228637.013.334](https://doi.org/10.1093/acrefore/9780190228637.013.334).
 
-Brodowski, D. (2015). Cybersicherheit durch Cyber-Strafrecht? Über die strafrechtliche Regulierung des Internets. In H.-J. Lange and A. Bötticher (eds), *Studien zur Inneren* *Sicherheit: Band 18. Cyber-Sicherheit*. Wiesbaden \[Germany\]: Springer VS, pp. 249–276.
+Brodowski, D. (2015). Cybersicherheit durch Cyber-Strafrecht? Über die strafrechtliche Regulierung des Internets. In H.-J. Lange and A. Bötticher (eds), *Studien zur Inneren Sicherheit: Band 18. Cyber-Sicherheit*. Wiesbaden [Germany]: Springer VS, pp. 249–276.
 
-Bundesamt für Sicherheit in der Informationstechnik. (2016). Das IT-Sicherheitsgesetz: Kritische Infrastrukturen schützen. Retrieved from: [`www .bsi .bund .de /`](https://www.bsi.bund.de)
+Bundesamt für Sicherheit in der Informationstechnik. (2016). Das IT-Sicherheitsgesetz: Kritische Infrastrukturen schützen. Retrieved from: [www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Publikationen/Broschueren/IT-Sicherheitsgesetz.pdf?__blob=publicationFileandv=7](https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Publikationen/Broschueren/IT-Sicherheitsgesetz.pdf?__blob=publicationFileandv=7).
 
-[SharedDocs /Downloads /DE /BSI /Publikationen /Broschueren /IT -Sicherheitsgesetz](https://www.bsi.bund.de)
+Bundesministerium der Verteidigung. (2015). Keynote der Verteidigungsministerin auf dem Kolloquium des Cyber-Workshop. Retrieved from: [www.bmvg.de/de/themen/dossiers/weissbuch/perspektiven/keynote-von-ministerin-von-der-leyen-beim-cyber-workshop-11028](https://www.bmvg.de/de/themen/dossiers/weissbuch/perspektiven/keynote-von-ministerin-von-der-leyen-beim-cyber-workshop-11028).
 
-[.pdf?\_ \_blob =publicationFileandv =7.](https://www.bsi.bund.de)
+Bundesministerium der Verteidigung. (2016). Abschlussbericht Aufbaustab Cyber-und Informationsraum. Retrieved from: [docs.dpaq.de/11361-abschlussbericht_aufbaustab_cir.pdf](http://docs.dpaq.de/11361-abschlussbericht_aufbaustab_cir.pdf).
 
-Bundesministerium der Verteidigung. (2015). Keynote der Verteidigungsministerin auf dem Kolloquium des Cyber-Workshop. Retrieved from: [`www .bmvg .de /de /`](https://www.bmvg.de)
+Bundesministerium des Innern. (2005). Nationaler Plan zum Schutz der Informationsinfrastrukturen. Retrieved from: [www.innenministerkonferenz.de/IMK/DE/termine/to-beschluesse/05-12-09/05-12-09-anlage-nr-16.pdf?__blob=publicationFileandv=2](https://www.innenministerkonferenz.de/IMK/DE/termine/to-beschluesse/05-12-09/05-12-09-anlage-nr-16.pdf?__blob=publicationFileandv=2).
 
-[themen /dossiers /weissbuch /perspektiven /keynote -von -ministerin -von -der -leyen -beim](https://www.bmvg.de)
+Bundesministerium des Innern. (2007). Umsetzungsplan KRITIS: des nationalen Plans zum Schutz kritischer Infrastrukturen. Retrieved from: [www.bmi.bund.de/SharedDocs/downloads/DE/publikationen/themen/it-digitalpolitik/umsetzungsplan-kritis.pdf?__blob=publicationFile&v=4](https://www.bmi.bund.de/SharedDocs/downloads/DE/publikationen/themen/it-digitalpolitik/umsetzungsplan-kritis.pdf?__blob=publicationFile&v=4).
 
-[\-cyber -workshop -11028](https://www.bmvg.de).
+Bundesministerium des Innern. (2011). Cyber-Sicherheitsstrategie für Deutschland. Retrieved from: [www.cio.bund.de/SharedDocs/Publikationen/DE/Strategische-Themen/css_download.pdf?__blob=publicationFile](https://www.cio.bund.de/SharedDocs/Publikationen/DE/Strategische-Themen/css_download.pdf?__blob=publicationFile).
 
-Bundesministerium der Verteidigung. (2016). Abschlussbericht Aufbaustab Cyber-und Informationsraum. Retrieved from: [`docs .dpaq .de /11361 -abschlussbericht`](http://docs.dpaq.de)
+Bundesministerium des Innern. (2013). Friedrich stellt Wirtschaft IT-Sicherheitsgesetz vor. Retrieved from: [www.bmi.bund.de/SharedDocs/kurzmeldungen/DE/2013/03/eco_mmr_itsicherheitsgesetz.html](https://www.bmi.bund.de/SharedDocs/kurzmeldungen/DE/2013/03/eco_mmr_itsicherheitsgesetz.html).
 
-[\_aufbaustab \_cir .pdf](http://docs.dpaq.de).
+Bundesministerium des Innern. (2014). Rede von Bundesinnenminister de Maizière anlässlich des 11. Symposiums des Bundesamtes für Verfassungsschutz am 8. Mai 2014 in Berlin. Retrieved from: [https://www.bmi.bund.de](https://www.bmi.bund.de)
 
-Bundesministerium des Innern. (2005). Nationaler Plan zum Schutz der Informationsinfrastrukturen. Retrieved from: [`www .innenmi nist erko nferenz`](https://www.innenministerkonferenz.de)
+Bundesregierung. (1999). Rede des Bundesministers des Innern, Otto Schily, bei der Konferenz der Bertelsmann-Stiftung “International Internet Content Summit 1999”: Weltweite Kommunikation - eine neue Kultur gemeinsamer Verantwortung. Retrieved from: [www.bundesregierung.de](https://www.bundesregierung.de)
 
-[.de /IMK /DE /termine /to -beschluesse /05 -12 -09 /05 -12 -09 -anlage -nr -16 .pdf?\_ \_blob](https://www.innenministerkonferenz.de)
+Bundesregierung. (2015). Sommerpressekonferenz von Bundeskanzlerin Merkel. Retrieved from: [www.bundesregierung.de](https://www.bundesregierung.de)
 
-[\=publicationFileandv =2.](https://www.innenministerkonferenz.de)
-
-Bundesministerium des Innern. (2007). Umsetzungsplan KRITIS: des nationalen Plans zum Schutz kritischer Infrastrukturen. Retrieved from: [`www .bmi .bund .de /`](https://www.bmi.bund.de)
-
-[SharedDocs /downloads /DE /publikationen /themen /it -digitalpolitik /umsetzungsplan](https://www.bmi.bund.de)
-
-[\-kritis .pdf?\_ \_blob =publicationFile &v =4](https://www.bmi.bund.de).
-
-Bundesministerium des Innern. (2011). Cyber-Sicherheitsstrategie für Deutschland.
-
-Retrieved from: [`www .cio .bund .de /SharedDocs /Publikationen /DE /Strategische`](https://www.cio.bund.de)
-
-[\-Themen /css \_download .pdf?\_ \_blob =publicationFile](https://www.cio.bund.de).
-
-Bundesministerium des Innern. (2013). Friedrich stellt Wirtschaft IT-Sicherheitsgesetz vor. Retrieved from: [`www .bmi .bund .de /SharedDocs /kurzmeldungen /DE /2013`](https://www.bmi.bund.de)
-
-[/03 /eco \_mmr \_itsicherheitsgesetz .html.](https://www.bmi.bund.de)
-
-
-
-
-Bundesministerium des Innern. (2014). Rede von Bundesinnenminister de Maizière anlässlich des 11. Symposiums des Bundesamtes für Verfassungsschutz am 8. Mai 2014 in Berlin. Retrieved [from: https://www.bmi.bund.de](https://www.bmi.bund.de)
-
-Bundesregierung. (1999). Rede des Bundesministers des Innern, Otto Schily, bei der Konferenz der Bertelsmann-Stiftung “International Internet Content Summit 1999”: Weltweite Kommunikation - eine neue Kultur gemeinsamer Verantwortung. Retrieved from: [`www.bundesregierung.de`](https://www.bundesregierung.de)
-
-Bundesregierung. (2015). Sommerpressekonferenz von Bundeskanzlerin Merkel. Retrieved from: [`www.bundesregierung.de`](https://www.bundesregierung.de)
-
-Bundesverfassungsgericht. (2008). Urteil vom 27. Februar 2008 –1 BvR 370/07. Retrieved from: [`www.bundesverfassungsgericht.de`](https://www.bundesverfassungsgericht.de)
+Bundesverfassungsgericht. (2008). Urteil vom 27. Februar 2008 –1 BvR 370/07. Retrieved from: [www.bundesverfassungsgericht.de](https://www.bundesverfassungsgericht.de)
 
 154 `Stefan Steiger`
 
-Cantir, C., and Kaarbo, J. (2012). Contested Roles and Domestic Politics: Reflections on Role Theory in Foreign Policy Analysis and IR Theory. *Foreign Policy Analysis*, 8(1): 5–24. [`doi.org/10.1111/j.1743-8594.2011.00156.x`](https://doi.org/10.1111/j.1743-8594.2011.00156.x)
+Cantir, C., and Kaarbo, J. (2012). Contested Roles and Domestic Politics: Reflections on Role Theory in Foreign Policy Analysis and IR Theory. *Foreign Policy Analysis*, 8(1): 5–24. [doi.org/10.1111/j.1743-8594.2011.00156.x](https://doi.org/10.1111/j.1743-8594.2011.00156.x)
 
 Cantir, C., and Kaarbo, J. (eds). (2016). *Domestic Role Contestation, Foreign Policy, and International Relations*. *Role Theory and International Relations: Vol. 6*. New York: Routledge, Taylor and Francis Group.
 
-CCC. (2011). Analyse einer Regierungs-Malware. Retrieved from: [`www.ccc.de`](https://www.ccc.de)
+CCC. (2011). Analyse einer Regierungs-Malware. Retrieved from: [www.ccc.de/system/uploads/76/original/staatstrojaner-report23.pdf](https://www.ccc.de/system/uploads/76/original/staatstrojaner-report23.pdf)
 
-[system/uploads/76/original/staatstrojaner-report23.pdf](https://www.ccc.de)
+Choucri, N., and Clark, D. D. (2012). Integrating Cyberspace and International Relations: The Co-Evolution Dilemma. *SSRN Electronic Journal*. Advance online publication. [doi.org/10.2139/ssrn.2178586](https://doi.org/10.2139/ssrn.2178586)
 
-Choucri, N., and Clark, D. D. (2012). Integrating Cyberspace and International Relations: The Co-Evolution Dilemma. *SSRN Electronic Journal*. Advance online publication. [`doi.org/10.2139/ssrn.2178586`](https://doi.org/10.2139/ssrn.2178586)
+Council of Europe. (2001). Convention on Cybercrime. Retrieved from: [www.europarl.europa.eu/_conv_budapest_en.pdf](https://www.europarl.europa.eu/_conv_budapest_en.pdf)
 
-Council of Europe. (2001). Convention on Cybercrime. Retrieved from: [`www.europarl.europa.eu`](https://www.europarl.europa.eu)
+Deutscher Bundestag. (1998). Vierter Zwischenbericht der Enquete-Kommission Zukunft der Medien in Wirtschaft und Gesellschaft — Deutschlands Weg in die Informationsgesellschaft): Sicherheit und Schutz im Netz. Retrieved from: [http://dip21.bundestag.de/dip21/btd/13/110/1311002.pdf](http://dip21.bundestag.de/dip21/btd/13/110/1311002.pdf)
 
-[\_conv\_budapest\_en.pdf](https://www.europarl.europa.eu)
+Deutscher Bundestag. (2006). Drucksache 16/3973. Retrieved from: [http://dipbt.bundestag.de/dip21/btd/16/039/1603973.pdf](http://dipbt.bundestag.de/dip21/btd/16/039/1603973.pdf)
 
-Deutscher Bundestag. (1998). Vierter Zwischenbericht der Enquete-Kommission Zukunft der Medien in Wirtschaft und Gesellschaft — Deutschlands Weg in die Informationsgesellschaft): Sicherheit und Schutz im Netz. Retrieved [from: http://dip21.bundestag.de](http://dip21.bundestag.de)
+Deutscher Bundestag. (2010). Drucksache 17/3388. Retrieved from: [http://dipbt.bundestag.de/dip21/btd/17/033/1703388.pdf](http://dipbt.bundestag.de/dip21/btd/17/033/1703388.pdf)
 
-[.bundestag.de/dip21/btd/13/110/1311002.pdf](http://dip21.bundestag.de)
+Deutscher Bundestag. (2013a). Plenarprotokoll 17/249. Retrieved from: [dip21.bundestag.de/dip21/btp/17/17249.pdf](http://dip21.bundestag.de/dip21/btp/17/17249.pdf)
 
-Deutscher Bundestag. (2006). Drucksache 16/3973. Retrieved [from: http://dipbt.bundestag.de](http://dipbt.bundestag.de)
+Deutscher Bundestag. (2013b). Plenarprotokoll 18/2. Retrieved from: [dip21.bundestag.de/dip21/btp/18/18002.pdf](http://dip21.bundestag.de/dip21/btp/18/18002.pdf)
 
-[.de/dip21/btd/16/039/1603973.pdf](http://dipbt.bundestag.de)
+Deutscher Bundestag. (2014). Plenarprotokoll 18/16. Retrieved from: [dipbt.bundestag.de/doc/btp/18/18016.pdf](https://dipbt.bundestag.de/doc/btp/18/18016.pdf)
 
-Deutscher Bundestag. (2010). Drucksache 17/3388. Retrieved [from: http://dipbt.bundestag.de](http://dipbt.bundestag.de)
+Deutscher Bundestag. (2015a). Drucksache 18/4286. Retrieved from: [dip21.bundestag.de/dip21/btd/18/042/1804286.pdf](https://dip21.bundestag.de/dip21/btd/18/042/1804286.pdf)
 
-[.de/dip21/btd/17/033/1703388.pdf](http://dipbt.bundestag.de)
+Deutscher Bundestag. (2015b). Drucksache 18/6989. Retrieved from: [dipbt.bundestag.de/doc/btd/18/069/1806989.pdf](https://dipbt.bundestag.de/doc/btd/18/069/1806989.pdf)
 
-Deutscher Bundestag. (2013a). Plenarprotokoll 17/249. Retrieved from: [`dip21.bundestag.de`](http://dip21.bundestag.de)
+Deutscher Bundestag. (2016a). Plenarprotokoll 18/184. Retrieved from: [dipbt.bundestag.de/dip21/btp/18/18184.pdf](http://dipbt.bundestag.de/dip21/btp/18/18184.pdf)
 
-[.bundestag.de/dip21/btp/17/17249.pdf](http://dip21.bundestag.de)
+Deutscher Bundestag. (2016b). Plenarprotokoll 18/197. Retrieved from: [dipbt.bundestag.de/dip21/btp/18/18197.pdf](http://dipbt.bundestag.de/dip21/btp/18/18197.pdf)
 
-Deutscher Bundestag. (2013b). Plenarprotokoll 18/2. Retrieved from: [`dip21.bundestag.de`](http://dip21.bundestag.de)
+Deutscher Bundestag. (2017). Plenarprotokoll 18/240. Retrieved from: [dipbt.bundestag.de/dip21/btp/18/18240.pdf](http://dipbt.bundestag.de/dip21/btp/18/18240.pdf)
 
-[.bundestag.de/dip21/btp/18/18002.pdf](http://dip21.bundestag.de)
-
-Deutscher Bundestag. (2014). Plenarprotokoll 18/16. Retrieved from: [`dipbt.bundestag.de`](https://dipbt.bundestag.de)
-
-[.bundestag.de/doc/btp/18/18016.pdf](https://dipbt.bundestag.de)
-
-Deutscher Bundestag. (2015a). Drucksache 18/4286. Retrieved from: [`dip21.bundestag.de`](https://dip21.bundestag.de)
-
-[.bundestag.de/dip21/btd/18/042/1804286.pdf](https://dip21.bundestag.de)
-
-Deutscher Bundestag. (2015b). Drucksache 18/6989. Retrieved from: [`dipbt.bundestag.de`](https://dipbt.bundestag.de)
-
-[.bundestag.de/doc/btd/18/069/1806989.pdf](https://dipbt.bundestag.de)
-
-Deutscher Bundestag. (2016a). Plenarprotokoll 18/184. Retrieved from: [`dipbt.bundestag.de`](http://dipbt.bundestag.de)
-
-[.bundestag.de/dip21/btp/18/18184.pdf](http://dipbt.bundestag.de)
-
-Deutscher Bundestag. (2016b). Plenarprotokoll 18/197. Retrieved from: [`dipbt.bundestag.de`](http://dipbt.bundestag.de)
-
-[.bundestag.de/dip21/btp/18/18197.pdf](http://dipbt.bundestag.de)
-
-Deutscher Bundestag. (2017). Plenarprotokoll 18/240. Retrieved from: [`dipbt.bundestag.de`](http://dipbt.bundestag.de)
-
-[.bundestag.de/dip21/btp/18/18240.pdf](http://dipbt.bundestag.de)
-
-Deutscher Bundestag. (2018). Drucksache 19/3420. Retrieved [from: http://dip21.bundestag.de](http://dip21.bundestag.de)
-
-[.de/dip21/btd/19/034/1903420.pdf](http://dip21.bundestag.de)
+Deutscher Bundestag. (2018). Drucksache 19/3420. Retrieved from: [http://dip21.bundestag.de/dip21/btd/19/034/1903420.pdf](http://dip21.bundestag.de/dip21/btd/19/034/1903420.pdf)
 
 Dunn Cavelty, M. (2008). *Cyber-Security and Threat Politics: US Efforts to Secure the Information Age*. *CSS Studies in Security and International Relations*. London: Routledge.
 
-Eco. (2015). Positionspapier: Zum Kabinettsentwurf für ein Gesetz zur Erhöhung der Sicherheit informationstechnischer Systeme (IT-Sicherheitsgesetz). Retrieved 31 August 2021, from: [`silo.tips/download/positionspapier-zum-kabinettsentwurf-fr`](https://silo.tips)
+Eco. (2015). Positionspapier: Zum Kabinettsentwurf für ein Gesetz zur Erhöhung der Sicherheit informationstechnischer Systeme (IT-Sicherheitsgesetz). Retrieved 31 August 2021, from: [silo.tips/download/positionspapier-zum-kabinettsentwurf-fr-ein-gesetz-zur-erhung-der-sicherheit-in](https://silo.tips/download/positionspapier-zum-kabinettsentwurf-fr-ein-gesetz-zur-erhung-der-sicherheit-in)
 
-[\-ein-gesetz-zur-erhung-der-sicherheit-in](https://silo.tips)
-
-European Commission. (2009). Protecting Europe from Large Scale Cyber-Attacks and Disruptions: Enhancing Preparedness, Security and Resilience. Retrieved [from: https://eur-lex.europa.eu](https://eur-lex.europa.eu)
-
-[eur-lex.europa.eu/legal-content/GA/TXT/?uri=CELEX:52009DC0149](https://eur-lex.europa.eu)
+European Commission. (2009). Protecting Europe from Large Scale Cyber-Attacks and Disruptions: Enhancing Preparedness, Security and Resilience. Retrieved from: [https://eur-lex.europa.eu/legal-content/GA/TXT/?uri=CELEX:52009DC0149](https://eur-lex.europa.eu/legal-content/GA/TXT/?uri=CELEX:52009DC0149)
 
 *Cyber securities and cyber security politics* 155
 
-European Union. (2016). Directive 2016/1148. Retrieved from: [`eur-lex.europa.eu`](https://eur-lex.europa.eu)
+European Union. (2016). Directive 2016/1148. Retrieved from: [eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32016L1148](https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32016L1148)
 
-[legal-content/EN/ALL/?uri=CELEX:32016L1148](https://eur-lex.europa.eu)
-
-FIfF. (2015). Frau von der Leyen, verzichten Sie auf Cyberwaffen für die Bundeswehr!. Retrieved from: [`www.fiff.de`](https://www.fiff.de)
-
-[\_Appell\_Cyberpeace.pdf](https://www.fiff.de)
+FIfF. (2015). Frau von der Leyen, verzichten Sie auf Cyberwaffen für die Bundeswehr!. Retrieved from: [www.fiff.de/_Appell_Cyberpeace.pdf](https://www.fiff.de/_Appell_Cyberpeace.pdf)
 
 Fritz, J. R. (2017). *China’s Cyber Warfare: The Evolution of Strategic Doctrine*. Lanham, MD: Lexington Books.
 
-G8. (2003). G8 Principles for Protecting Critical Information Infrastructures. Retrieved [from: http://www.cybersecuritycooperation.org/](http://www.cybersecuritycooperation.org/)
+G8. (2003). G8 Principles for Protecting Critical Information Infrastructures. Retrieved from: [http://www.cybersecuritycooperation.org/](http://www.cybersecuritycooperation.org/)
 
-Gesellschaft für Informatik. (2015). Verteidigungsanstrengungen der Bundesregierung gegen Cyberangriffe aus dem Internet unzureichend - Wirkungsvolle Maßnahmen gegen Angriffe und Angriffskriege im Internet gefordert. Retrieved from: [`gi.de`](https://gi.de)
-
-[.de/meldung/verteidigung-ans stregungen-der-bundesregierung-gegen-cyberangriffe](https://gi.de)
-
-[\-aus-dem-internet-unzureichend-wirkungsvolle-massnahmen-gegen-angriffe-und](https://gi.de)
-
-[\-angriffskriege-im-internet-gefordert](https://gi.de)
+Gesellschaft für Informatik. (2015). Verteidigungsanstrengungen der Bundesregierung gegen Cyberangriffe aus dem Internet unzureichend - Wirkungsvolle Maßnahmen gegen Angriffe und Angriffskriege im Internet gefordert. Retrieved from: [gi.de/meldung/verteidigung-ansstregungen-der-bundesregierung-gegen-cyberangriffe-aus-dem-internet-unzureichend-wirkungsvolle-massnahmen-gegen-angriffe-und-angriffskriege-im-internet-gefordert](https://gi.de/meldung/verteidigung-ansstregungen-der-bundesregierung-gegen-cyberangriffe-aus-dem-internet-unzureichend-wirkungsvolle-massnahmen-gegen-angriffe-und-angriffskriege-im-internet-gefordert)
 
 Harnisch, S. (2012). Role Theory: Operationalization of Key Concepts. In S. Harnisch, C. Frank, and H. Maull (eds), *Routledge Advances in International Relations and Global Politics: Vol. 90. Role Theory in International Relations: Approaches and Analyses*. London: Routledge, Taylor and Francis Group, pp. 7–15.
 
-Harnisch, S. (2014). Full-Spectrum Role-Taking: A Two-Level Role Theoretical Model. Retrieved from: [`www.uni-heidelberg.de`](http://www.uni-heidelberg.de)
+Harnisch, S. (2014). Full-Spectrum Role-Taking: A Two-Level Role Theoretical Model. Retrieved from: [www.uni-heidelberg.de/harnisch_2014_-_isa_conference_paper_full_spectrum_role_taking_draft_24_03.pdf](http://www.uni-heidelberg.de/harnisch_2014_-_isa_conference_paper_full_spectrum_role_taking_draft_24_03.pdf)
 
-[harnisch_2014_-_isa_conference_paper_full_spectrum_role_taking_draft_24_03.pdf](http://www.uni-heidelberg.de)
+Harnisch, S. (2018). 国际关系中的角色理论. 来源: [http://www.oxfordbibliographies.com/view/document/obo-9780199743292/obo-9780199743292-0226.xml?rskey](http://www.oxfordbibliographies.com/view/document/obo-9780199743292/obo-9780199743292-0226.xml?rskey).
 
+Heise.de. (2013). 经济界反对拟议的 IT 安全法案. 来源: [https://www.heise.de/newsticker/meldung/Wirtschaft-wettert-gegen-geplantes-IT-Sicherheitsgesetz-1833835.html](https://www.heise.de/newsticker/meldung/Wirtschaft-wettert-gegen-geplantes-IT-Sicherheitsgesetz-1833835.html).
 
+Heise.de. (2017). 联邦宪法法院：Digitalcourage 起诉国家特洛伊人. Retrieved from: [https://www.heise.de/newsticker/meldung/Bundesverfassungsgericht-Digitalcourage-klagt-gegen-Staatstrojaner-3785288.html](https://www.heise.de/newsticker/meldung/Bundesverfassungsgericht-Digitalcourage-klagt-gegen-Staatstrojaner-3785288.html).
 
--   [Harnisch, S. (2018). 国际关系中的角色理论. 来源: [`http://www`](http://www.oxfordbibliographies.com)]
--   [.oxf ordb ibli ographies .com /view /document /obo -9780199743292 /obo -9780199743292](http://www.oxfordbibliographies.com).
--   [\-0226 .xml ?rskey](http://www.oxfordbibliographies.com).
--   Heise .de . (2013). 经济界反对拟议的 IT 安全法案. 来源: [`https://www .heise .de /newsticker /meldung /Wirtschaft -wettert -gegen -geplantes`](https://www.heise.de)
--   [\-IT -Sicherheitsgesetz -1833835 .html](https://www.heise.de).
--   Heise .de . (2017). 联邦宪法法院：Digitalcourage 起诉国家特洛伊人.
--   Retrieved from: [`https://www .heise .de /newsticker /meldung /Bun desv erfa ssun gsgericht`](https://www.heise.de)
--   [\-Digitalcourage -klagt -gegen -Staatstrojaner -3785288 .html.](https://www.heise.de)
--   Hilgendorf, E., and Valerius, B. (2012). `Computer- und Internetstrafrecht`. 柏林, 海德堡: Springer Berlin Heidelberg.
--   Maréchal, N. (2017). 网络威权主义与信息地缘政治：理解俄罗斯互联网政策. `Media and Communication`, 5(1): 29–41.
--   [`https://doi .org /10 .17645 /mac .v5i1 .808`](https://doi.org/10.17645/mac.v5i1.808)
--   Mascolo, G. (2014, 10 月 4 日). 代号 Eikonal - 联邦政府的噩梦. 来源: [`https://www .sueddeutsche .de /politik /geheimdienste -codewort -eikonal`](https://www.sueddeutsche.de)
--   [\-der -albtraum -der -bundesregierung -1 .2157432](https://www.sueddeutsche.de).
--   McCarthy, D. R. (2018). 私有化政治权威：网络安全、公私合营与自由主义政治秩序的再生产. `Politics and Governance`,
--   [6(2): 5–12. `https://doi .org /10 .17645 /pag .v6i2 .1335`](https://doi.org/10.17645/pag.v6i2.1335)
--   NATO. (2016). 华沙峰会宣言. 来源: [`https://www .nato .int /cps /`](https://www.nato.int)
--   [ic /natohq /official \_texts \_133169 .htm.](https://www.nato.int)
--   OSCE. (2016a). 决议第 1202 号：OSCE 置信建设措施以降低信息通信技术使用带来的冲突风险. 来源: [`https://www .osce .org /pc /227281 ?download =true`](https://www.osce.org)
--   OSCE. (2016b). 新德国法律中的监控修正案构成对媒体自由的威胁，OSCE 代表呼吁 Bundestag 重新考虑法案.
--   [Retrieved from: `https://www .osce .org /fom /252076`](https://www.osce.org).
--   156 `Stefan Steiger`
--   Putnam, R. D. (1988). 外交与国内政治：两级游戏的逻辑. `International Organization`, 42(3): 427–460.
--   Reporter ohne Grenzen. (2018). 向联邦德国提交宪法诉讼，针对 BND 法案. 来源: [`https://www .reporter -ohne -grenzen .de /pressemitteilungen /meldung /ver fass ungs`](https://www.reporter-ohne-grenzen.de)
--   [besc hwerde -gegen -das -bnd -gesetz/.](https://www.reporter-ohne-grenzen.de)
--   Ressortarbeitsgruppe KRITIS. (1999). 德国关键基础设施的信息技术威胁. 来源: [`http://userpage .fu -berlin .de/ ~bendrath`](http://userpage.fu-berlin.de)
--   [/Kritis -12 -1999 .html](http://userpage.fu-berlin.de).
--   Reuters. (2013). 联合国反间谍决议在争取美、英支持中被削弱. 来源: [`https://www .reuters .com /article /us -usa -surveillance -un -idU`](https://www.reuters.com)
--   [SBRE 9AK1 4220 131121](https://www.reuters.com).
--   Reuters. (2014). 巴西、欧洲计划铺设海底光缆以规避美国间谍. 来源:
--   [`https://www .reuters .com /article /us -eu -brazil -idU SBRE A1N0 PL20 140224`](https://www.reuters.com).
--   Schulze, T. (2006). `Bedingt abwehrbereit: 保护德国和美国关键信息基础设施` (1. Aufl.). 维滕: VS Verlag für Sozialwissenschafts/
--   GWV Fachverlage, Wiesbaden.
--   Spillius, A. (2013, 10 月 24 日). 安格拉·默克尔：朋友间的间谍 unacceptable. `The Telegraph`. 来源: [`https://www .telegraph .co .uk /news /worldnews /europe /`](https://www.telegraph.co.uk)
--   [germany /10402570 /Angela -Merkel -spying -between -friends -is -unacceptable .html.](https://www.telegraph.co.uk).
--   United Nations. (2011). 信息通信技术领域的发展：联合国秘书长报告. 来源
--   [from: `http://undocs .org /A /66 /152`](http://undocs.org)
--   United Nations. (2013). A/RES/68/167. 来源 [from: `https://undocs .org /A /RES /68 /167`](https://undocs.org)
--   Whyte, C. (2018). 撕裂数字世界：对网络冲突研究构建与定义的回顾. `International Studies Review`, 80(3).
--   [`https://doi .org /10 .1093 /isr /viw013`](https://doi.org/10.1093/isr/viw013)
--   [doi .org /10 .1093 /isr /viw013.](https://doi.org/10.1093/isr/viw013)
--   10.4324/9781003110224-13
--   **11**
--   **11 Battling the bear**
--   Ukraine’s approach to national cyber and
--   information security
--   *Aaron Brantly*
--   Ukraine (Україна, Ukrainian Pronunciation: ukra-jina), derived from its etymol-ogy, describes the borderlands between the Kyivan Rus’ and Poland. This historical name dating back to the 12th century aptly describes in the modern context a nation that stands as the border between the Russian Federation and the West.
--   The victim of a sustained grey zone conflict since 2014, Ukraine is a case study of both hybrid conflict and the evolution of national informational and cyber conflict between a regional power and a medium-sized weak state. Ukraine’s experiences highlight the challenges associated with what is best referred to as a cybered conflict fostered by a new era of socio-technical uncertainty and insecurity. This chapter examines the reality of cybered conflict generated by socio-technical uncertainty originating out of information warfare and cyberattacks between two nations and serves as a testing bed of multiple theories and concepts on deterrence, norms, and security developed over the last 30 years.
--   Ukraine has been under sustained assault in and through cyberspace both prior to and following the collapse of the Yanukovych regime on February 22, 2014. How Ukraine has addressed the assault on its sovereignty in cyberspace and beyond has been the subject of multiple works on hybrid warfare. Yet few of these works have examined how Ukraine specifically addressed its challenges.
--   Ukraine’s approach to cyber and information warfare following the Revolution of Dignity (Euromaidan) serves as a robust case in how to confront a larger aggressive adversary in cyberspace. Ukraine’s approach to national cyber security and information security is a work in progress highlighting the challenges of developing organizational structures within contentious political and social environments.
--   Information warfare and cyberattacks against Ukraine constituting socio-technical assaults occurred in tandem with political fragmentation and reorganization in the face of adversarial activities. Russian news organizations and social media such as Odnaklassniki and Vkontakte rapidly disseminated a narrative of events counter to the perceived realities taking place during Ukraine’s Revolution of Dignity (Frum 2014). Beyond sustained information operations, protesters were also subject to a variety of cyberattacks including `DDoS1` and `SS72` attacks.
--   Attacks on mobile infrastructures targeted the protesters with SMS messages omi-nously warning “Dear subscriber, you are registered as a participant in a mass disturbance” (Hooton 2014). This form of attack would become prevalent in the DOI: [`10.4324/9781003110224-13`](https://doi.org/10.4324/9781003110224-13)
--   158 `Aaron Brantly`
+Hilgendorf, E., and Valerius, B. (2012). `Computer- und Internetstrafrecht`. 柏林, 海德堡: Springer Berlin Heidelberg.
 
+Maréchal, N. (2017). 网络威权主义与信息地缘政治：理解俄罗斯互联网政策. `Media and Communication`, 5(1): 29–41. [https://doi.org/10.17645/mac.v5i1.808](https://doi.org/10.17645/mac.v5i1.808)
 
+Mascolo, G. (2014, 10 月 4 日). 代号 Eikonal - 联邦政府的噩梦. 来源: [https://www.sueddeutsche.de/politik/geheimdienste-codewort-eikonal-der-albtraum-der-bundesregierung-1.2157432](https://www.sueddeutsche.de/politik/geheimdienste-codewort-eikonal-der-albtraum-der-bundesregierung-1.2157432).
 
--   [Euromaidan 之后的月份以及乌克兰士兵及其家属会面临更多类似的袭击 (`Brantly`, `Cal`, and `Winkelstein` 2017a)。](https://wiki.example.org/euromaidan)
+McCarthy, D. R. (2018). 私有化政治权威：网络安全、公私合营与自由主义政治秩序的再生产. `Politics and Governance`, 6(2): 5–12. [https://doi.org/10.17645/pag.v6i2.1335](https://doi.org/10.17645/pag.v6i2.1335)
 
--   其他网络攻击，主要是针对反对派网站和抗议基础设施的 DDoS 攻击也很常见 (`Pakharenko` 2015)。
+NATO. (2016). 华沙峰会宣言. 来源: [https://www.nato.int/cps/ic/natohq/official_texts_133169.htm](https://www.nato.int/cps/ic/natohq/official_texts_133169.htm).
 
--   这些最初的信息和网络行动将在 Euromaidan 之后的几个月和几年里成为更大且可能更为复杂的信息和网络安全环境的一部分。这种环境不仅限于乌克兰东部与俄罗斯士兵及其代理人有直接接触的乌克兰人，整个乌克兰全国的公民都感受到了持续的信息和网络行动的影响。这些持续的行动形成了持久的“围困心态” (`Brantly` et al. 2017b)。
+OSCE. (2016a). 决议第 1202 号：OSCE 置信建设措施以降低信息通信技术使用带来的冲突风险. 来源: [https://www.osce.org/pc/227281?download=true](https://www.osce.org/pc/227281?download=true)
 
--   本章节解构了国家的官僚政治，并考察了乌克兰为应对俄罗斯的信息行动和网络战争所采取的行动。合起来，这些构成了乌克兰人如何应对和理解信息行动和网络安全的方式发生了变化。本章节分为四个部分。第一部分回顾了 Yanukovych 政府垮台时，乌克兰在信息行动和网络安全方面的官僚状况。第二部分探讨乌克兰及其公民应对信息和网络安全挑战的努力。
+OSCE. (2016b). 新德国法律中的监控修正案构成对媒体自由的威胁，OSCE 代表呼吁 Bundestag 重新考虑法案. Retrieved from: [https://www.osce.org/fom/252076](https://www.osce.org/fom/252076).
 
--   第三部分讨论了乌克兰在国家网络和信息安全方面根本性做法转变的过程。最后，本章节以讨论乌克兰未来在国家信息和网络安全方面的做法作结。
+156 `Stefan Steiger`
 
-**官僚碎片与字节**
+Putnam, R. D. (1988). 外交与国内政治：两级游戏的逻辑. `International Organization`, 42(3): 427–460.
 
--   乌克兰在网络空间和信息战争中的困难并非仅仅由外部因素导致。乌克兰国内的政治结构、统一政府、僵硬且往往无效的官僚体系，以及 Paul D’Anieri（2006）所称的“以法律统治而非法治”的状态，加剧了外部干预，并阻碍了高效响应和建设能够保护乌克兰的有效机构。根本上，乌克兰面临的是官僚体系内部权力集中的挑战。这种集中使乌克兰回归到高度集中的官僚体系，传统上嵌入了犯罪-政治利益，并且腐败水平极高。这导致法律被起草、通过、机构被创建并配备人员，但法律的执行却因犯罪或腐败利益而不一致，机构无法在缺乏高度集中控制的情况下有效运作。
+Reporter ohne Grenzen. (2018). 向联邦德国提交宪法诉讼，针对 BND 法案. 来源: [https://www.reporter-ohne-grenzen.de/pressemitteilungen/meldung/verfassungsbeschwerde-gegen-das-bnd-gesetz/](https://www.reporter-ohne-grenzen.de/pressemitteilungen/meldung/verfassungsbeschwerde-gegen-das-bnd-gesetz/).
 
--   在 2014 年 Euromaidan 之前，乌克兰已有 22 多部关于信息和网络安全的法律。2014 年之前乌克兰在网络安全和信息安全立法方面的数量和范围，可能让外界误以为乌克兰拥有先进的信息安全体系。在此之前，乌克兰政府早在 1991 年就建立了乌克兰国家特种通信服务（Державна служба спеціального зв’язку та захисту інформації України），并在 2007 年成立了计算机应急响应团队（CERT-UA）（“CERT-UA: 紧急网络救援 – PC Week/UE” 2014）。尽管有上述法律，乌克兰在 Euromaidan 当时的网络和信息安全状况仍然薄弱。这些法律整体上处理了信息和网络安全的许多传统挑战。
+Ressortarbeitsgruppe KRITIS. (1999). 德国关键基础设施的信息技术威胁. 来源: [http://userpage.fu-berlin.de/~bendrath/Kritis-12-1999.html](http://userpage.fu-berlin.de/~bendrath/Kritis-12-1999.html).
 
--   虽然法律条文内容健全且严谨，但实际执行往往是主观的（D’Anieri 2006）。法律的选择性执行与高度集中的权力结构相一致。D’Anieri（2006）指出，权力的集中并不使法律失效，而是使得法律的适用权归于政治权力者，而非基于稳健司法实践的分散管理。塔拉斯·库齐奥（Taras Kuzio, 2015）指出，权力的集中导致政党内部及政党之间的系统性腐败，这种腐败偏向寡头阶层的利益。乌克兰的腐败形成了一个强大的犯罪-政治联盟，涉及敛财、赎金支付和大规模的庇护网络（Kudelia and Kuzio 2015）。这种联盟抑制了政党内部的不一致性，并促使党领袖所制定的框架内采取集中化的做法。
+Reuters. (2013). 联合国反间谍决议在争取美、英支持中被削弱. 来源: [https://www.reuters.com/article/us-usa-surveillance-un-idUSBRE9AK1 4220 131121](https://www.reuters.com/article/us-usa-surveillance-un-idUSBRE9AK14220131121).
 
--   集中化的行政管理限制了各国家机构的自主性。
+Reuters. (2014). 巴西、欧洲计划铺设海底光缆以规避美国间谍. 来源: [https://www.reuters.com/article/us-eu-brazil-idUSBREA1N0PL 20140224](https://www.reuters.com/article/us-eu-brazil-idUSBREA1N0PL20140224).
 
--   与此同时，为维持权力集中带来的赎金分配以及构建庇护网络，需要构建庞大的官僚机构。在 尤щен科（Yuschenko）时期，议会无法形成联盟或稳定的执政派别，导致法律和法规虽在册，但缺乏集中权威，影响其效果。2010 年选举后，维克托·亚努科维奇（Viktor Yanukovych）回到权力，之前在尤щен科时期被迫将总统权力下放给议会和总理的结构被逆转（Sedelius and Berglund 2016）。然而，由于需要维持庇护和赎金，缺乏普遍适用法律标准的动力，导致现有法律结构的使用不平衡且薄弱。
+Schulze, T. (2006). `Bedingt abwehrbereit: 保护德国和美国关键信息基础设施` (1. Aufl.). 维滕: VS Verlag für Sozialwissenschafts/GWV Fachverlage, Wiesbaden.
 
--   尽管有法律，但实际执行似乎有限或呈选择性。此外，诉诸诉讼的行为也可能因俄罗斯“合作伙伴”的大量渗透以及国内执法机构缺乏能力和意愿来执行已批准法律而受到削弱。
+Spillius, A. (2013, 10 月 24 日). 安格拉·默克尔：朋友间的间谍 unacceptable. `The Telegraph`. 来源: [https://www.telegraph.co.uk/news/worldnews/europe/germany/10402570/Angela-Merkel-spying-between-friends-is-unacceptable.html](https://www.telegraph.co.uk/news/worldnews/europe/germany/10402570/Angela-Merkel-spying-between-friends-is-unacceptable.html).
 
--   部分报告显示，在亚努科维奇政府时期，乌克兰安全部门遭受了大幅渗透，最高达 30% 的 SBU（安全局）警官来自俄罗斯联邦安全局（FSB）（Galeotti 2014）。这些国内情报和安全机构中的俄罗斯人并非仅因俄罗斯 FSB 官员的良好案件而被派遣，而是通过 2010 年的“合作协议”被安置，该协议明确允许俄罗斯特工在乌克兰安全部门任职（Galeotti 2014）。
+United Nations. (2011). 信息通信技术领域的发展：联合国秘书长报告. 来源 from: [http://undocs.org/A/66/152](http://undocs.org/A/66/152)
 
--   Aaron Brantly
+United Nations. (2013). A/RES/68/167. 来源 from: [https://undocs.org/A/RES/68/167](https://undocs.org/A/RES/68/167)
 
--   在 Euromaidan 之前，乌克兰的媒体环境发生了转变，准确、平衡的信息变得稀缺。正如 Sergii Leschenko（2014）所指出的，尽管通过了信息获取立法，但该法案内容不完整、实施不彻底且常以缺陷为借口被规避。这在大多数公民主要通过电视（90%）获取新闻的国家尤为突出，印刷媒体发展不足，主要媒体由现有政治权力人物（包括总统）控制。除了国内媒体受限和缺乏提供公众信息的法律标准外，据国际民主研究所（International Republican Institute）调查，约三分之一（30%）的乌克兰人获取新闻来源于俄罗斯媒体（IRI *Public Opinion Survey Residents of* *Ukraine* 2014）。
+Whyte, C. (2018). 撕裂数字世界：对网络冲突研究构建与定义的回顾. `International Studies Review`, 80(3). [https://doi.org/10.1093/isr/viw013](https://doi.org/10.1093/isr/viw013)
 
+10.4324/9781003110224-13
 
+# 11 Battling the bear
 
+## Ukraine’s approach to national cyber and information security
+
+*Aaron Brantly*
+
+Ukraine (Україна, Ukrainian Pronunciation: ukra-jina), derived from its etymology, describes the borderlands between the Kyivan Rus’ and Poland. This historical name dating back to the 12th century aptly describes in the modern context a nation that stands as the border between the Russian Federation and the West.
+
+The victim of a sustained grey zone conflict since 2014, Ukraine is a case study of both hybrid conflict and the evolution of national informational and cyber conflict between a regional power and a medium-sized weak state. Ukraine’s experiences highlight the challenges associated with what is best referred to as a cybered conflict fostered by a new era of socio-technical uncertainty and insecurity. This chapter examines the reality of cybered conflict generated by socio-technical uncertainty originating out of information warfare and cyberattacks between two nations and serves as a testing bed of multiple theories and concepts on deterrence, norms, and security developed over the last 30 years.
+
+Ukraine has been under sustained assault in and through cyberspace both prior to and following the collapse of the Yanukovych regime on February 22, 2014. How Ukraine has addressed the assault on its sovereignty in cyberspace and beyond has been the subject of multiple works on hybrid warfare. Yet few of these works have examined how Ukraine specifically addressed its challenges.
+
+Ukraine’s approach to cyber and information warfare following the Revolution of Dignity (Euromaidan) serves as a robust case in how to confront a larger aggressive adversary in cyberspace. Ukraine’s approach to national cyber security and information security is a work in progress highlighting the challenges of developing organizational structures within contentious political and social environments.
+
+Information warfare and cyberattacks against Ukraine constituting socio-technical assaults occurred in tandem with political fragmentation and reorganization in the face of adversarial activities. Russian news organizations and social media such as Odnaklassniki and Vkontakte rapidly disseminated a narrative of events counter to the perceived realities taking place during Ukraine’s Revolution of Dignity (Frum 2014). Beyond sustained information operations, protesters were also subject to a variety of cyberattacks including `DDoS1` and `SS72` attacks.
+
+Attacks on mobile infrastructures targeted the protesters with SMS messages ominously warning “Dear subscriber, you are registered as a participant in a mass disturbance” (Hooton 2014). This form of attack would become prevalent in the DOI: [10.4324/9781003110224-13](https://doi.org/10.4324/9781003110224-13)
+
+158 `Aaron Brantly`
+
+Euromaidan 之后的月份以及乌克兰士兵及其家属会面临更多类似的袭击 (`Brantly`, `Cal`, and `Winkelstein` 2017a)。
+
+其他网络攻击，主要是针对反对派网站和抗议基础设施的 DDoS 攻击也很常见 (`Pakharenko` 2015)。
+
+这些最初的信息和网络行动将在 Euromaidan 之后的几个月和几年里成为更大且可能更为复杂的信息和网络安全环境的一部分。这种环境不仅限于乌克兰东部与俄罗斯士兵及其代理人有直接接触的乌克兰人，整个乌克兰全国的公民都感受到了持续的信息和网络行动的影响。这些持续的行动形成了持久的“围困心态” (`Brantly` et al. 2017b)。
+
+本章节解构了国家的官僚政治，并考察了乌克兰为应对俄罗斯的信息行动和网络战争所采取的行动。合起来，这些构成了乌克兰人如何应对和理解信息行动和网络安全的方式发生了变化。本章节分为四个部分。第一部分回顾了 Yanukovych 政府垮台时，乌克兰在信息行动和网络安全方面的官僚状况。第二部分探讨乌克兰及其公民应对信息和网络安全挑战的努力。
+
+第三部分讨论了乌克兰在国家网络和信息安全方面根本性做法转变的过程。最后，本章节以讨论乌克兰未来在国家信息和网络安全方面的做法作结。
+
+## 官僚碎片与字节
+
+乌克兰在网络空间和信息战争中的困难并非仅仅由外部因素导致。乌克兰国内的政治结构、统一政府、僵硬且往往无效的官僚体系，以及 Paul D’Anieri（2006）所称的“以法律统治而非法治”的状态，加剧了外部干预，并阻碍了高效响应和建设能够保护乌克兰的有效机构。根本上，乌克兰面临的是官僚体系内部权力集中的挑战。这种集中使乌克兰回归到高度集中的官僚体系，传统上嵌入了犯罪-政治利益，并且腐败水平极高。这导致法律被起草、通过、机构被创建并配备人员，但法律的执行却因犯罪或腐败利益而不一致，机构无法在缺乏高度集中控制的情况下有效运作。
+
+在 2014 年 Euromaidan 之前，乌克兰已有 22 多部关于信息和网络安全的法律。2014 年之前乌克兰在网络安全和信息安全立法方面的数量和范围，可能让外界误以为乌克兰拥有先进的信息安全体系。在此之前，乌克兰政府早在 1991 年就建立了乌克兰国家特种通信服务（Державна служба спеціального зв’язку та захисту інформації України），并在 2007 年成立了计算机应急响应团队（CERT-UA）（“CERT-UA: 紧急网络救援 – PC Week/UE” 2014）。尽管有上述法律，乌克兰在 Euromaidan 当时的网络和信息安全状况仍然薄弱。这些法律整体上处理了信息和网络安全的许多传统挑战。
+
+虽然法律条文内容健全且严谨，但实际执行往往是主观的（D’Anieri 2006）。法律的选择性执行与高度集中的权力结构相一致。D’Anieri（2006）指出，权力的集中并不使法律失效，而是使得法律的适用权归于政治权力者，而非基于稳健司法实践的分散管理。塔拉斯·库齐奥（Taras Kuzio, 2015）指出，权力的集中导致政党内部及政党之间的系统性腐败，这种腐败偏向寡头阶层的利益。乌克兰的腐败形成了一个强大的犯罪-政治联盟，涉及敛财、赎金支付和大规模的庇护网络（Kudelia and Kuzio 2015）。这种联盟抑制了政党内部的不一致性，并促使党领袖所制定的框架内采取集中化的做法。
+
+集中化的行政管理限制了各国家机构的自主性。
+
+与此同时，为维持权力集中带来的赎金分配以及构建庇护网络，需要构建庞大的官僚机构。在尤щенко（Yuschenko）时期，议会无法形成联盟或稳定的执政派别，导致法律和法规虽在册，但缺乏集中权威，影响其效果。2010 年选举后，维克托·亚努科维奇（Viktor Yanukovych）回到权力，之前在尤щенко时期被迫将总统权力下放给议会和总理的结构被逆转（Sedelius and Berglund 2016）。然而，由于需要维持庇护和赎金，缺乏普遍适用法律标准的动力，导致现有法律结构的使用不平衡且薄弱。
+
+尽管有法律，但实际执行似乎有限或呈选择性。此外，诉诸诉讼的行为也可能因俄罗斯“合作伙伴”的大量渗透以及国内执法机构缺乏能力和意愿来执行已批准法律而受到削弱。
+
+部分报告显示，在亚努科维奇政府时期，乌克兰安全部门遭受了大幅渗透，最高达 30% 的 SBU（安全局）警官来自俄罗斯联邦安全局（FSB）（Galeotti 2014）。这些国内情报和安全机构中的俄罗斯人并非仅因俄罗斯 FSB 官员的良好案件而被派遣，而是通过 2010 年的“合作协议”被安置，该协议明确允许俄罗斯特工在乌克兰安全部门任职（Galeotti 2014）。
+
+Aaron Brantly
+
+在 Euromaidan 之前，乌克兰的媒体环境发生了转变，准确、平衡的信息变得稀缺。正如 Sergii Leschenko（2014）所指出的，尽管通过了信息获取立法，但该法案内容不完整、实施不彻底且常以缺陷为借口被规避。这在大多数公民主要通过电视（90%）获取新闻的国家尤为突出，印刷媒体发展不足，主要媒体由现有政治权力人物（包括总统）控制。除了国内媒体受限和缺乏提供公众信息的法律标准外，据国际民主研究所（International Republican Institute）调查，约三分之一（30%）的乌克兰人获取新闻来源于俄罗斯媒体（IRI *Public Opinion Survey Residents of Ukraine* 2014）。
 
 为规避受控媒体环境，网络新闻变得愈发流行。然而，随着受控媒体来源的转移，针对新闻网站的 DDoS 攻击和伪造域名攻击有所增加（Leshchenko 2014）。在分析革命早期期间网络攻击激增时，Glib Pakharenko（2015）指出，存在明显的网络犯罪关联，并多种针对从社交媒体账户、网站到手机和金融活动的恶意软件类型。Pakharenko（2015）还评论称，在乌克兰 Euromaidan 期间，针对乌克兰人的 IP 地址使用呈多样化趋势。
 
@@ -3003,7 +2391,7 @@ Harnisch, S. (2014). Full-Spectrum Role-Taking: A Two-Level Role Theoretical Mod
 
 当 Euromaidan 开始时，Facebook 和 Twitter 并非最受欢迎的社交网络平台，取而代之的是俄罗斯所有的 Vkontakte 和 Odnokassniki。在技术层面，乌克兰高度依赖俄罗斯的网络与信息拦截能力（SORM3），以及移动、陆地和轨道通信企业部分或全部由俄罗斯联邦境内或跨国有组织犯罪集团所有（Soldatov and Borogan 2015）。
 
-**反制宣传与虚假信息 —  — 混合策略**
+## 反制宣传与虚假信息 — 混合策略
 
 乌克兰在革命后陷入政治与官僚混乱。SBU（国家安全局）经历了重大人员变动，其前局长受到引渡请求（Interfax 2015），且有大量俄罗斯情报机构渗透的报告充斥（Miller 2014b）。Euromaidan 后，超过 325 名 SBU 人员被撤职，161 人“与熊搏斗”，25 人被以叛国罪指控，所有地区主任均被更换（Miller 2014b）。
 
@@ -3015,7 +2403,7 @@ Harnisch, S. (2014). Full-Spectrum Role-Taking: A Two-Level Role Theoretical Mod
 
 尽管乌克兰新领导层上台，针对网络安全与信息安全的改革仍缓慢推进，且被传统的部际官僚关系所困，这些关系极度相似于政治或官僚碎片化。政府职能层面的现状依然存在。由于克里米亚与东部乌克兰持续危机，信息战与网络战活动的开展被大幅搁置。
 
-此外，新政府 —  — 特别是民族主义议员在最高拉达（Verkovna Rada） —  — 未能充分认识到俄罗斯信息干预的范围，也未意识到其革命后的行动可能对持续的乌克兰危机产生的影响，当他们提议取消俄语的特殊地位时（Kudriavtseva 2016）。尽管该法案未通过总统批准，但以单一语言乌克兰语为由进行的“国家认同整合与安全”进程，为俄罗斯宣传与信息战提供了大量素材。
+此外，新政府 — 特别是民族主义议员在最高拉达（Verkovna Rada）— 未能充分认识到俄罗斯信息干预的范围，也未意识到其革命后的行动可能对持续的乌克兰危机产生的影响，当他们提议取消俄语的特殊地位时（Kudriavtseva 2016）。尽管该法案未通过总统批准，但以单一语言乌克兰语为由进行的“国家认同整合与安全”进程，为俄罗斯宣传与信息战提供了大量素材。
 
 乌克兰革命后持续遭受信息操作，但网络作战相对有限。俄罗斯宣传的恶劣性质显示出强烈影响，超过 80% 的顿巴斯地区人口相信 Euromaidan 是由乌克兰民族主义者组织、并得到美国大力支持的叙事（Kudriavtseva 2016）。针对东部地区的宣传对东部地区的影响是针对西部地区的四倍（Kudriavtseva 2016）。这些信息活动系统性地破坏乌克兰国家的社会政治结构。这些信息操作
 
@@ -3031,9 +2419,7 @@ Harnisch, S. (2014). Full-Spectrum Role-Taking: A Two-Level Role Theoretical Mod
 
 尽管缺乏正式的立法或法令，乌克兰政府并未保持被动。全国范围内实施并使用了数百个标语、电视节目、广播节目及其他流行的宣传平台。许多在地铁站及全国各地的标语鼓励人们使用乌克兰语、为乌克兰人感到自豪。与此同时，通过 Facebook 群组、公民社会组织以及新成立的众多非政府组织，提供了总体积极的支持，旨在促进民族身份与认同。这些努力在东部冲突初期尤为关键，因为乌克兰军人和志愿部队在补给有限、几乎无医疗援助的情况下，持续参与战斗行动（Marten and Oliker 2017）。
 
-
-
--   信息作战并非仅限于广泛的社会层面攻击；其中最激进的攻击旨在削弱在乌克兰日益参与的常规和志愿部队中的士兵及其家庭的心理能力。前线的信息作战包括 SS7 攻击、使用 Android 劫持软件、渗透无线和有线信息基础设施以及其他针对性信息攻击 (`Brantly et al. 2017a`)。冲突初期，俄罗斯的信号情报设备就已部署在乌克兰与分离主义势力接触线之间。信息保障总局的成员以及志愿和常规乌克兰军队在接触线上的士兵提供了针对性信息作战的证据。
+信息作战并非仅限于广泛的社会层面攻击；其中最激进的攻击旨在削弱在乌克兰日益参与的常规和志愿部队中的士兵及其家庭的心理能力。前线的信息作战包括 SS7 攻击、使用 Android 劫持软件、渗透无线和有线信息基础设施以及其他针对性信息攻击 (`Brantly et al. 2017a`)。冲突初期，俄罗斯的信号情报设备就已部署在乌克兰与分离主义势力接触线之间。信息保障总局的成员以及志愿和常规乌克兰军队在接触线上的士兵提供了针对性信息作战的证据。
 
 到目前为止，乌克兰对信息战的整体回应主要集中在三个不同的类别和方式上。第一，几家组织通过 `StopFake.org`、`InformNapalm.org` 等机构参与信息作战的识别和纠正过程。乌克兰及外国记者指出，这些平台提供了以事实和逻辑进行的有知识的信息作战反制手段。
 
@@ -3051,9 +2437,7 @@ MIP 设计用于与记者合作，提升全国媒体素养，强调在反恐作�
 
 乌克兰的信息作战方式多元，既有自下而上也有自上而下的发展。许多乌克兰反信息作战最成功的元素是有机的，源自民间社会或学术界。乌克兰应对网络行动的故事走了一条不同的轨迹。
 
-**应对乌克兰网络安全挑战 –**
-
-**集中化方法**
+## 应对乌克兰网络安全挑战 – 集中化方法
 
 与信息作战由分散的非政府组织和集中的政府方法并行应对，乌克兰的网络冲突主要局限于国家官僚体系。
 
@@ -3061,33 +2445,29 @@ MIP 设计用于与记者合作，提升全国媒体素养，强调在反恐作�
 
 *与熊搏斗* 165
 
+乌克兰知识产权（IPR）失败可能看起来是个奇怪的起点，但截至 2000 年代末，在乌克兰设备上使用最普遍的操作系统和软件形式来自基辅著名的 Petrivka 市场等走私市场。
 
+老化的苏联基础设施、渗透的情报机构、部分由俄罗斯利益所有的企业以及各种其他市场和犯罪因素，使乌克兰面临潜在的网络攻击风险。网络攻击源源不断，并持续了五年（Baezner and Robin 2017）。2014 年 3 月至 2018 年 6 月期间，乌克兰经历了有史以来一些最重大的网络攻击。正如 Wired 记者安迪·格林伯格（2017）所指出的，乌克兰成为俄罗斯网络能力的试验场。这些攻击的影响在金钱、声誉以及针对乌克兰士兵的潜在生命方面都十分重大。这些攻击影响了系统的访问、减慢了运输，并削弱或中断了服务。攻击持续进行，且在范围和严重性上不断升级。参与对乌克兰发动攻击的行为体，通过技术和非技术分析，与 FSB、GRU、非国家组织和犯罪团体等多个方面相联系（ICS-Cert 2016; Zetter 2016; Greenberg 2018）。
 
--   乌克兰知识产权（IPR）失败可能看起来是个奇怪的起点，但截至 2000 年代末，在乌克兰设备上使用最普遍的操作系统和软件形式来自基辅著名的 Petrivka 市场等走私市场。
+乌克兰的网络防御职责位于国家安全与国防委员会（NSDC），涵盖国防部（MoD）、乌克兰安全服务局（SBU）、内政部（MIA）、乌克兰情报界（UIC）以及乌克兰特殊通信与信息保护服务（SSSCIP）（Kostyuk 2015）。2017 年，NSDC 相关协调实体由一名直接向 NSDC 主席汇报的个人负责管理。2017 年，NSDC 的网络组成部分人员严重不足，存在人员流动，或根本缺乏足够资金来履行其既定任务。
 
--   老化的苏联基础设施、渗透的情报机构、部分由俄罗斯利益所有的企业以及各种其他市场和犯罪因素，使乌克兰面临潜在的网络攻击风险。网络攻击源源不断，并持续了五年（Baezner and Robin 2017）。2014 年 3 月至 2018 年 6 月期间，乌克兰经历了有史以来一些最重大的网络攻击。正如 Wired 记者安迪·格林伯格（2017）所指出的，乌克兰成为俄罗斯网络能力的试验场。这些攻击的影响在金钱、声誉以及针对乌克兰士兵的潜在生命方面都十分重大。这些攻击影响了系统的访问、减慢了运输，并削弱或中断了服务。攻击持续进行，且在范围和严重性上不断升级。参与对乌克兰发动攻击的行为体，通过技术和非技术分析，与 FSB、GRU、非国家组织和犯罪团体等多个方面相联系（ICS-Cert 2016; Zetter 2016; Greenberg 2018）。
+乌克兰 2016 年通过总统令批准的首部网络安全战略承认了乌克兰的网络基础设施已遭受攻击，并指出建立强调反恐网络、保护关键基础设施（包括军事、能源、交通和银行领域）的正式网络安全体系是必要的（Office of the President of Ukraine 2016）。该文件提出国家应与北约和欧盟成员合作，在约两年半后——在雅努科维奇政府被推翻以及超过 50 起严重网络攻击（包括针对乌克兰电力设施的攻击）之后——建立“最佳实践”。行政与职能层面的两年延迟标志着乌克兰国家网络安全在官僚和功能层面的重大转变。总统令重新组织了 NSDC 下网络防御的组织结构。
 
--   乌克兰的网络防御职责位于国家安全与国防委员会（NSDC），涵盖国防部（MoD）、乌克兰安全服务局（SBU）、内政部（MIA）、乌克兰情报界（UIC）以及乌克兰特殊通信与信息保护服务（SSSCIP）（Kostyuk 2015）。2017 年，NSDC 相关协调实体由一名直接向 NSDC 主席汇报的个人负责管理。2017 年，NSDC 的网络组成部分人员严重不足，存在人员流动，或根本缺乏足够资金来履行其既定任务。
+截至 2017 年，NSDC 网络安全协调中心遵循源自乌克兰宪法的法律路径，进一步通过《乌克兰国家安全法》（2003 年，2018 年 6 月 21 日修订），《乌克兰网络安全战略》（2015 年，《乌克兰网络安全战略》2016 年）以及后续年度网络安全战略实施计划。乌克兰的网络安全进一步在 2017 年 10 月的《国家网络安全法》中得到法律化。法律上和战略上（基于战略文件），乌克兰进步很快。但尽管在纸面上取得了诸多改进，2014 年的官僚体系在组织和功能上仍未能应对所面临的挑战。
 
--   乌克兰 2016 年通过总统令批准的首部网络安全战略承认了乌克兰的网络基础设施已遭受攻击，并指出建立强调反恐网络、保护关键基础设施（包括军事、能源、交通和银行领域）的正式网络安全体系是必要的（Office of the President of Ukraine 2016）。该文件提出国家应与北约和欧盟成员合作，在约两年半后——在雅努科维奇政府被推翻以及超过 50 起严重网络攻击（包括针对乌克兰电力设施的攻击）之后——建立“最佳实践”。行政与职能层面的两年延迟标志着乌克兰国家网络安全在官僚和功能层面的重大转变。总统令重新组织了 NSDC 下网络防御的组织结构。
+乌克兰面临重大挑战：第一，财务挑战仍是阻碍军队、SSSCIP CERT-UA、警察以及大多数政府职位保留人员的持久且不可逾越的障碍。前线士兵和所有列出机构人员的薪酬在全国及全球市场中并不具竞争力。虽然这一问题并非乌克兰独有（Wenger et al. 2017），但与相关人员的交谈显示公共部门与私营部门之间存在极端的薪酬差距。总体而言，政府服务薪酬是乌克兰安全领域改革的重要关注点（Oliker et al. 2016）。
 
--   截至 2017 年，NSDC 网络安全协调中心遵循源自乌克兰宪法的法律路径，进一步通过《乌克兰国家安全法》（2003 年，2018 年 6 月 21 日修订），《乌克兰网络安全战略》（2015 年，《乌克兰网络安全战略》2016 年）以及后续年度网络安全战略实施计划。乌克兰的网络安全进一步在 2017 年 10 月的《国家网络安全法》中得到法律化。法律上和战略上（基于战略文件），乌克兰进步很快。但尽管在纸面上取得了诸多改进，2014 年的官僚体系在组织和功能上仍未能应对所面临的挑战。
+乌克兰持续获得国际支持，用于多种培训项目。美国、北约、欧盟各国、OSCE 及其他组织提供了材料资源、培训中心建设、网络防御设备、警察及 CERT 培训以及相关项目的资金（Seals 2017）。北约国家已向乌克兰提供超过 170 万美元的网络防御资金（NATO 2016）。美国派遣国民警卫队部队前往乌克兰开展网络安全培训任务。尽管对乌克兰军警人员进行了反复培训，但留在政府服务的基础设施仍然缺乏。内部文件和与乌克兰参谋部的交谈显示，军队服务面临最严重的留任问题。
 
--   乌克兰面临重大挑战：第一，财务挑战仍是阻碍军队、SSSCIP CERT-UA、警察以及大多数政府职位保留人员的持久且不可逾越的障碍。前线士兵和所有列出机构人员的薪酬在全国及全球市场中并不具竞争力。虽然这一问题并非乌克兰独有（Wenger et al. 2017），但与相关人员的交谈显示公共部门与私营部门之间存在极端的薪酬差距。总体而言，政府服务薪酬是乌克兰安全领域改革的重要关注点（Oliker et al. 2016）。
+第二，尽管乌克兰缺乏开发和维护网络防御所需的财务资源，更严重的挑战是官僚文化削弱了系统性建立平衡网络防御的能力。公共和私人对话均指出，网络防御的控制权过度集中在 SBU 手中。
 
--   乌克兰持续获得国际支持，用于多种培训项目。美国、北约、欧盟各国、OSCE 及其他组织提供了材料资源、培训中心建设、网络防御设备、警察及 CERT 培训以及相关项目的资金（Seals 2017）。北约国家已向乌克兰提供超过 170 万美元的网络防御资金（NATO 2016）。美国派遣国民警卫队部队前往乌克兰开展网络安全培训任务。尽管对乌克兰军警人员进行了反复培训，但留在政府服务的基础设施仍然缺乏。内部文件和与乌克兰参谋部的交谈显示，军队服务面临最严重的留任问题。
+尽管面临官僚挑战，乌克兰在财政和官僚层面仍有积极变化。乌克兰目前参与国际培训活动，如北约“Locked Shields”演习，并赢得了 2017 年竞赛（Zilberman and Logan 2018）。每次新攻击后，欧洲、美国和北约盟友通常会提供更多财政和技术支持（Paganini 2017）。然而，尽管外部支持在增加，乌克兰的网络安全现状仍然不足（Williams 2017）。资源合理分配的努力似乎在关键基础设施领域取得了一定成功（Reuters 2018）。
 
--   第二，尽管乌克兰缺乏开发和维护网络防御所需的财务资源，更严重的挑战是官僚文化削弱了系统性建立平衡网络防御的能力。公共和私人对话均指出，网络防御的控制权过度集中在 SBU 手中。
+`Battling the bear` 167
 
--   尽管面临官僚挑战，乌克兰在财政和官僚层面仍有积极变化。乌克兰目前参与国际培训活动，如北约“Locked Shields”演习，并赢得了 2017 年竞赛（Zilberman and Logan 2018）。每次新攻击后，欧洲、美国和北约盟友通常会提供更多财政和技术支持（Paganini 2017）。然而，尽管外部支持在增加，乌克兰的网络安全现状仍然不足（Williams 2017）。资源合理分配的努力似乎在关键基础设施领域取得了一定成功（Reuters 2018）。
+从 2014 年初到 2018 年秋季，乌克兰经历了巨大的法律和组织变革。它在国家安全战略中纳入了网络安全，将网络重新确立为 NSDC 的核心组成部分，编写并批准了国家网络安全战略，并通过了国家网络安全立法。乌克兰在四年内完成了所有这些变革。组织上它建立了成功的框架，但该框架仍受现有官僚文化和经济挑战的冲击。
 
--   **`Battling the bear` 167**
-
--   从 2014 年初到 2018 年秋季，乌克兰经历了巨大的法律和组织变革。它在国家安全战略中纳入了网络安全，将网络重新确立为 NSDC 的核心组成部分，编写并批准了国家网络安全战略，并通过了国家网络安全立法。乌克兰在四年内完成了所有这些变革。组织上它建立了成功的框架，但该框架仍受现有官僚文化和经济挑战的冲击。
-
--   **Conclusion: Ukrainian cyber and information security in the present and future**
-
-
+## Conclusion: Ukrainian cyber and information security in the present and future
 
 乌克兰的官僚文化正在演变，但某些组织和某些政治人物内部存在重大障碍。然而，乌克兰在过去四年内，借助外国政府、国际组织和非营利组织的援助，取得了相当可观的成就。可以说，2014 年乌克兰所面临的挑战之艰巨，以及它所取得的进步之巨大，难以用言语形容。其在国家信息安全和国家网络安全方面的做法走上了截然不同的道路，并取得了根本不同的结果。乌克兰仍持续遭受信息战的侵扰，并受到网络攻击的威胁。它在信息战方面日益增强韧性，但这些改进并未转移到网络攻击的防范上。
 
@@ -3099,110 +2479,60 @@ MIP 设计用于与记者合作，提升全国媒体素养，强调在反恐作�
 
 乌克兰的案例堪称为“煤矿中的可以”。信息行动和网络行动在冲突中变得普遍的可能性几乎是确定的。当处于最脆弱状态时，各国应对挑战的方式能够为未来面对类似困境的国家提供有价值的洞见。乌克兰在信息空间和 cyberspace 中受到的考验堪称严苛，而极少有国家能像乌克兰那样迅速重组并制定法律与战略。它在外部援助的帮助下，同时展现出跨部门协调与合作的新能力。然而， patronage（裙带关系）与贪污现象仍然高企，往往遏制中层官员的创新与抱负。政治与官僚的碎片化，加之俄罗斯联邦对国家施加的外部挑战，仍是实施持续且有意义改革的显著障碍。若乌克兰希望在 cyberspace 中实现与其在信息战韧性方面取得的进步相匹配的提升，则必须解决 NSDC 内部的资金分配问题，并整合若干部委的权力与职能。若缺乏对前线网络防御的持续资金支持，仅有策略、法律和组织架构的建设是不足以维持维持国家网络安全所需的人力资本的。最终，若乌克兰未能在 NSDC 各相关实体之间实现协调与合作，重复劳动、部门之间的敌对情绪以及不佳的网络安全结果将难以避免。
 
-**Notes**
+## Notes
 
-1 Distributed Denial of Service.
+1. Distributed Denial of Service.
+2. An SS7 attack is an exploit that takes advantage of a weakness in the design of SS7 (Signaling System 7) to enable data theft, eavesdropping, text interception, and location tracking.
+3. SORM – System for Operative Investigative Activities (Система оперативно-разыскных мероприятий,).
+4. https://mip.gov.ua/files/documents/Concept.docx
+5. http://ukraineworld.org/infowars/
+6. These factors were also identified repeatedly in discussions at Kyiv Polytechnic National University and with members of the defense industrial base.
 
-2 An SS7 attack is an exploit that takes advantage of a weakness in the design of SS7 (Signaling System 7) to enable data theft, eavesdropping, text interception, and location tracking.
-
-[3 SORM – System for Operative Investigative Activities (Система оперативно-разыскных мероприятий,).
-
-[4 https://mip.gov.ua /files /documents /Concept .docx](https://mip.gov.ua)
-
-[5 http://ukraineworld.org /infowars/](http://ukraineworld.org)
-
-[6 These factors were also identified repeatedly in discussions at Kyiv Polytechnic National University and with members of the defense industrial base.
-
-**References**
+## References
 
 All links checked on August 23, 2021.
 
-Ash, T., Gunn, J., Lough, J., Lutsevych, O., Nixey, J., Sherr, J., and Wolczuk, K. (2017).
+Ash, T., Gunn, J., Lough, J., Lutsevych, O., Nixey, J., Sherr, J., and Wolczuk, K. (2017). *The Struggle for Ukraine*. London: The Royal Institute of International Affairs.
 
-*The Struggle for Ukraine*. London: The Royal Institute of International Affairs.
-
-Baezner, M., and Robin, P. (2017). *CSS CYBER DEFENSE PROJECT Hotspot Analysis:* *Cyber and Information Warfare in the Ukrainian Conflict*. Zurich: Center for Security Studies (CSS). Retrieved from: [`www.css.ethz.ch/content/dam/ethz/special`](http://www.css.ethz.ch)
-
-[-interest /gess /cis /center -for -securities -studies /pdfs /Cyber -Reports -2017 -01 .pdf.](http://www.css.ethz.ch)
+Baezner, M., and Robin, P. (2017). *CSS CYBER DEFENSE PROJECT Hotspot Analysis: Cyber and Information Warfare in the Ukrainian Conflict*. Zurich: Center for Security Studies (CSS). Retrieved from: [www.css.ethz.ch/content/dam/ethz/special-interest/gess/cis/center-for-securities-studies/pdfs/Cyber-Reports-2017-01.pdf](http://www.css.ethz.ch/content/dam/ethz/special-interest/gess/cis/center-for-securities-studies/pdfs/Cyber-Reports-2017-01.pdf).
 
 *Battling the bear* 169
 
-BellingCat. (2017). MH17 - The Open Source Investigation Three Years Later. Retrieved from: [`www.bellingcat.com/wp-content/uploads/2017/07/mh17-3rd-anniversary`](https://www.bellingcat.com)
+BellingCat. (2017). MH17 - The Open Source Investigation Three Years Later. Retrieved from: [www.bellingcat.com/wp-content/uploads/2017/07/mh17-3rd-anniversary-report.pdf](https://www.bellingcat.com/wp-content/uploads/2017/07/mh17-3rd-anniversary-report.pdf).
 
-[-report .pdf](https://www.bellingcat.com).
+Brantly, A. F., Cal, N. M., and Winkelstein, D. P. (2017a). *Defending the Borderland: Ukrainian Military Experiences with IO, Cyber, and EW*. West Point, NY: U.S. Army Cyber Institute. Retrieved from: [apps.dtic.mil/sti/pdfs/AD1046052.pdf](https://apps.dtic.mil/sti/pdfs/AD1046052.pdf)
 
-Brantly, A. F., Cal, N. M., and Winkelstein, D. P. (2017a). *Defending the Borderland:* *Ukrainian Military Experiences with IO, Cyber, and EW*. West Point, NY: U.S. Army Cyber Institute. Retrieved from: [`apps.dtic.mil/sti/pdfs/AD1046052.pdf`](https://apps.dtic.mil)
+Brantly, A. F., Cal, N. M., and Winkelstein, D. P. (2017b). Don’t Ignore Ukraine: Lessons from the Borderland of the Internet. Retrieved from: [www.lawfareblog.com/dont-ignore-ukraine-lessons-borderland-internet](https://www.lawfareblog.com/dont-ignore-ukraine-lessons-borderland-internet).
 
-Brantly, A. F., Cal, N. M., and Winkelstein, D. P. (2017b). Don’t Ignore Ukraine: Lessons from the Borderland of the Internet. Retrieved from: [`www.lawfareblog.com/`](https://www.lawfareblog.com)
+CERT-UA. (2014, October 16). скорая киберпомощь. PC Week/UE. Retrieved from: [www.pcweek.ua/themes/detail.php?ID=147850](http://www.pcweek.ua/themes/detail.php?ID=147850).
 
-[dont -ignore -ukraine -lessons -borderland -internet](https://www.lawfareblog.com).
-
-CERT-UA. (2014, October 16). скорая киберпомощь. PC Week/UE. Retrieved from:
-
-[`www.pcweek.ua/themes/detail.php?ID=147850.`](http://www.pcweek.ua)
-
-Office of the President of Ukraine (2016) Cybersecurity Strategy of Ukraine. Retrieved
-
-[from: https://ccdcoe.org/uploads/2018/10/NationalCyb erSe curitySt rategy_Ukraine.pdf](https://ccdcoe.org)
+Office of the President of Ukraine (2016) Cybersecurity Strategy of Ukraine. Retrieved from: [https://ccdcoe.org/uploads/2018/10/NationalCybersecurityStrategy_Ukraine.pdf](https://ccdcoe.org/uploads/2018/10/NationalCybersecurityStrategy_Ukraine.pdf)
 
 D’Anieri, P. (2006). *Understanding Ukrainian Politics*. London: M.E. Sharpe.
 
-Fitzgerald, C. W., and Brantly, A. F. (2017). Subverting Reality: The Role of Propaganda in 21st Century Intelligence. *International Journal of Intelligence and CounterIntelligence*, 30(2): 215–240. [`doi.org/10.1080/08850607.2017.1263528`](https://doi.org/10.1080/08850607.2017.1263528).
+Fitzgerald, C. W., and Brantly, A. F. (2017). Subverting Reality: The Role of Propaganda in 21st Century Intelligence. *International Journal of Intelligence and CounterIntelligence*, 30(2): 215–240. [doi.org/10.1080/08850607.2017.1263528](https://doi.org/10.1080/08850607.2017.1263528).
 
-Freedom House. (2017). *Ukraine Country Report | Freedom on the Net 2017*. Washington, DC: Freedom House. Retrieved from: [`freedomhouse.org/report/freedom-net`](https://freedomhouse.org)
+Freedom House. (2017). *Ukraine Country Report | Freedom on the Net 2017*. Washington, DC: Freedom House. Retrieved from: [freedomhouse.org/report/freedom-net/2017/ukraine](https://freedomhouse.org/report/freedom-net/2017/ukraine).
 
-[/2017 /ukraine.](https://freedomhouse.org)
+Frum, D. (2014, March 26). Ukraine’s Phantom Neo-Nazi Menace. *The Atlantic*. Retrieved from: [www.theatlantic.com/international/archive/2014/03/ukraines-phantom-neo-nazi-menace/359650/](https://www.theatlantic.com/international/archive/2014/03/ukraines-phantom-neo-nazi-menace/359650/).
 
-Frum, D. (2014, March 26). Ukraine’s Phantom Neo-Nazi Menace. *The Atlantic*. Retrieved from: [`www.theatlantic.com/international/archive/2014/03/ukraines-phantom`](https://www.theatlantic.com)
+Galeotti, M. (2014, 10 月 30 日). 莫斯科的间谍游戏。 *外交事务*。 来源于： [https://www.foreignaffairs.com](https://www.foreignaffairs.com).
 
-[-neo -nazi -menace /359650/.](https://www.theatlantic.com)
+Grassley, C. (2005, 11 月 18 日). 费恩曼称参议院通过乌克兰《Jackson‑Vanik Repeal》是正确的。美国参议院财政委员会。 来源于： [https://www.finance.senate.gov/-jackson-vanik-repeal-for-ukraine](https://www.finance.senate.gov/-jackson-vanik-repeal-for-ukraine).
 
+Greenberg, A. (2017, 6 月 20 日). 整个国家成为俄罗斯网络战争的试验场。 *Wired*。 来源于：[https://www.wired.com/story/russian-hackers-attack-ukraine/](https://www.wired.com/story/russian-hackers-attack-ukraine/).
 
+Greenberg, A. (2018, 8 月 22 日). NotPetya 的未被讲述的故事：历史上最毁灭性的网络攻击之一。 *Wired*。 来源于：[https://www.wired.com/story/notpetya-cyberattack-ukraine-russia-code-crashed-the-world/](https://www.wired.com/story/notpetya-cyberattack-ukraine-russia-code-crashed-the-world/).
 
+Hooton, C. (2014, 1 月 22 日). 基辅的示威者 [示威者]收到令人不安的大规模短信。 *独立报*。 来源于： [https://www.independent.co.uk/-jackson-vanik-repeal-for-ukraine-protests-demonstrators-in-kiev-receive-disturbing-mass-text-9077327.html](https://www.independent.co.uk/-jackson-vanik-repeal-for-ukraine-protests-demonstrators-in-kiev-receive-disturbing-mass-text-9077327.html).
 
-Galeotti, M. (2014, 10 月 30 日). 莫斯科的间谍游戏。 *外交事务*。 来源于：
+ICS‑Cert, NCCIC. (2016, 3 月 7 日). IR‑ALERT‑H‑16‑043‑01BP：针对乌克兰关键基础设施的网络攻击。 1–17。 来源于： [https://www.eenews.net/assets/2016/07/19/document_ew_02.pdf](https://www.eenews.net/assets/2016/07/19/document_ew_02.pdf).
 
-`https://www.foreignaffairs.com`.
+Interfax. (2015, 1 月 12 日). 乌克兰指控俄罗斯在 Yanukovych 遣返问题上违背 CIS 协议。 来源于： [https://en.interfax.com.ua/news/general/243934.html](https://en.interfax.com.ua/news/general/243934.html).
 
-Grassley, C. (2005, 11 月 18 日). 费恩曼称参议院通过乌克兰《Jackson‑Vanik Repeal》是正确的。美国参议院财政委员会。 来源于：
+International Republican Institute. (2014, 4 月 4 日) *Public Opinion Survey Residents of Ukraine*. 华盛顿特区：International Republican Institute。
 
-`https://www.finance.senate.gov`.
-
-[-jackson -vanik -repeal -for -ukraine.](https://www.finance.senate.gov).
-
-Greenberg, A. (2017, 6 月 20 日). 整个国家成为俄罗斯网络战争的试验场。 *Wired*。 来源于：`https://www.wired.com/story/russian-hackers`.
-
-[-attack -ukraine/](https://www.wired.com).
-
-Greenberg, A. (2018, 8 月 22 日). NotPetya 的未被讲述故事：历史上最毁灭性的网络攻击之一。 *Wired*。 来源于：`https://www.wired.com/story/notpetya`.
-
-[-cyberattack -ukraine -russia -code -crashed -the -world/](https://www.wired.com).
-
-Hooton, C. (2014, 1 月 22 日). 基辅的示威者 [示威者]收到令人不安的大规模短信。 *独立报*。 来源于：
-
-`https://www.independent.co.uk`.
-
-[-jackson -vanik -repeal -for -ukraine -protests -demonstrators -in -kiev -receive -disturbing -mass](https://www.independent.co.uk).
-
-[-text -9077327 .html.](https://www.independent.co.uk).
-
-ICS‑Cert, NCCIC. (2016, 3 月 7 日). IR‑ALERT‑H‑16‑043‑01BP：针对乌克兰关键基础设施的网络攻击。 1–17。 来源于：
-
-`https://www.eenews.net/assets`
-
-[/2016 /07 /19 /document \_ew \_02 .pdf](https://www.eenews.net).
-
-Interfax. (2015, 1 月 12 日). 乌克兰指控俄罗斯在 Yanukovych 遣返问题上违背 CIS 协议。 来源于：
-
-`https://en.interfax.com.ua/news/general`.
-
-[/243934 .html](https://en.interfax.com.ua).
-
-International Republican Institute. (2014, 4 月 4 日) *Public Opinion Survey Residents of Ukraine*。华盛顿特区：International Republican Institute。
-
-Karatnycky, A. (2018, 2 月 12 日). 米克 heil Saakashvili 的崛起与衰落。 *Politico*。 来源于：
-
-`https://www.politico.eu/article/the-rise-and-fall-of-mikheil-saakashvili/.`
+Karatnycky, A. (2018, 2 月 12 日). 米克 heil Saakashvili 的崛起与衰落。 *Politico*. 来源于： [https://www.politico.eu/article/the-rise-and-fall-of-mikheil-saakashvili/](https://www.politico.eu/article/the-rise-and-fall-of-mikheil-saakashvili/).
 
 170 *Aaron Brantly*
 
@@ -3216,152 +2546,73 @@ Kuzio, T. (2015). *Ukraine, Democratization, Corruption and the New Russian Impe
 
 Leshchenko, S. (2014). The Media’s Role. *Journal of Democracy*, 25(3): 52–57.
 
-Marten, K., and Oliker, O. (2017, 9 月 14 日). 乌克兰志愿民兵可能挽救了国家，但现在它们又威胁它。 *War on the Rocks*。 来源于：
-
-`https://warontherocks.com`.
-
-[-country -but -now -they -threaten -it/.](https://warontherocks.com).
+Marten, K., and Oliker, O. (2017, 9 月 14 日). 乌克兰志愿民兵可能挽救了国家，但现在它们又威胁它。 *War on the Rocks*. 来源于： [https://warontherocks.com/-country-but-now-they-threaten-it/](https://warontherocks.com/-country-but-now-they-threaten-it/).
 
 Matychak, T. (2017). David against Goliath: 乌克兰如何抵抗克里姆林宫的信息攻击。在 A. Kulakov（编），《言语与战争：乌克兰面对克里姆林宫宣传》中，第 1–? 页。基辅：Internews‑Ukraine。
 
-Miller, C. (2014a, 12 月 2 日). 乌克兰创建了自己的奥威尔“真理部”。 *Mashable*。 来源于：
+Miller, C. (2014a, 12 月 2 日). 乌克兰创建了自己的奥威尔“真理部”。 *Mashable*. 来源于： [https://mashable.com/2014/12/02/ukraine-ministry-of-truth/#AKpasiKpEOq9](https://mashable.com/2014/12/02/ukraine-ministry-of-truth/#AKpasiKpEOq9)
 
-`https://mashable.com/2014/12/02/`.
+Miller, C. (2014b, 12 月 30 日). 乌克兰最高情报机构深陷俄罗斯间谍。 *Mashable*. 来源于： [https://mashable.com/2014/12/30/russian-vs-ukrainian-spies/#y6rqmk6rUOq3](https://mashable.com/2014/12/30/russian-vs-ukrainian-spies/#y6rqmk6rUOq3).
 
-[ukraine -ministry -of -truth/ #AKpasiKpEOq9](https://mashable.com).
+NATO. (2016, 6 月). *Ukraine Cyber Defence*. 布鲁塞尔：NATO。
 
-Miller, C. (2014b, 12 月 30 日). 乌克兰最高情报机构深陷俄罗斯间谍。 *Mashable*。 来源于：
+Oliker, O., Davis, L. E., Crane, K., Radin, A., Gventer, C. W., Sondergaard, S., Quinlivan, J. T., Seabrook, S. B., Bellasio, J., Frederick, B., Bega, A., and Hlavka, J. (2016). Security Sector Reform in Ukraine. RAND Corporation. 来源于： [https://www.rand.org/content/dam/rand/pubs/research_reports/RR1400/RR1475-1/RAND_RR1475-1.pdf](https://www.rand.org/content/dam/rand/pubs/research_reports/RR1400/RR1475-1/RAND_RR1475-1.pdf).
 
-`https://mashable.com/2014/12/30/russian-vs`.
-
-[-ukrainian -spies/ #y6rqmk6rUOq3.](https://mashable.com).
-
-NATO. (2016, 6 月). *Ukraine Cyber Defence*。布鲁塞尔：NATO。
-
-Oliker, O., Davis, L. E., Crane, K., Radin, A., Gventer, C. W., Sondergaard, S., Quinlivan, J. T., Seabrook, S. B., Bellasio, J., Frederick, B., Bega, A., and Hlavka, J. (2016). Security Sector Reform in Ukraine. RAND Corporation. 来源于：
-
-`https://www.rand.org`.
-
-[/content /dam /rand /pubs /research \_reports /RR1400 /RR1475 -1 /RAND \_RR1475 -1 .pdf.](https://www.rand.org).
-
-Paganini, P. (2017, 7 月 12 日). 随着 NotPetya，NATO 增加对乌克兰网络防御的支持。 *Security Affairs*。 来源于：
-
-`https://securityaffairs.co/wordpress`.
-
-[/60941 /cyber -warfare -2 /nato -support -ukraine -cyber](https://securityaffairs.co) [security .htm l.](http://dx.doi.org/security.html.)
+Paganini, P. (2017, 7 月 12 日). 随着 NotPetya，NATO 增加对乌克兰网络防御的支持。 *Security Affairs*. 来源于： [https://securityaffairs.co/wordpress/60941/cyber-warfare-2/nato-support-ukraine-cyber-security.html](https://securityaffairs.co/wordpress/60941/cyber-warfare-2/nato-support-ukraine-cyber-security.html).
 
 Pakharenko, G. (2015). Cyber Operations at Maidan: A First‑Hand Account. In K. Geers（编），《网络战争视角：俄罗斯对乌克兰的侵略》。塔林：NATO 合作网络防御卓越中心。
 
-Reuters. (2018, 2 月 6 日). 乌克兰电力分销商计划花费 2000 万美元建设网络防御系统。 *Reuters*。 来源于：
+Reuters. (2018, 2 月 6 日). 乌克兰电力分销商计划花费 2000 万美元建设网络防御系统。 *Reuters*. 来源于： [https://www.reuters.com/-cyber-ukrenergo/ukraine-power-distributor-plans-cyber-defense-system-for-20-million-idUSKBN1FQ1TD](https://www.reuters.com/-cyber-ukrenergo/ukraine-power-distributor-plans-cyber-defense-system-for-20-million-idUSKBN1FQ1TD).
 
-`https://www.reuters.com`.
-
-[-cyber -ukrenergo /ukraine -power -distributor -plans -cyber -defense -system -for -20](https://www.reuters.com).
-
-[-million -idUSKBN1FQ1TD](https://www.reuters.com).
-
-Seals, T. (2017, 2 月 2 日). 美军为乌克兰军队资助网络中心。 *Infosecurity Magazine*。 来源于：
-
-`https://www.infosecurity-magazine.com/news`.
-
-[/us -army -funds -cybercenter -for/.](https://www.infosecurity-magazine.com).
+Seals, T. (2017, 2 月 2 日). 美军为乌克兰军队资助网络中心。 *Infosecurity Magazine*. 来源于： [https://www.infosecurity-magazine.com/news/us-army-funds-cybercenter-for/](https://www.infosecurity-magazine.com/news/us-army-funds-cybercenter-for/).
 
 Sedelius, T., and Berglund, S. (2016). 向总统统治迈进：半总统制下的混合政权动态。 *Baltic Journal of Law & Politics*, 5(1): 219–27.
 
 Soldatov, A., and Borogan, I. (2015). *The Red Web: The Struggle between Russia’s Digital Dictators and the New Online Revolutionaries*. New York: Public Affairs.
 
-Toler, A. (2014, 11 月 15 日). 克里姆林宫精通宣传，却不精通 Photoshop：MH17 照片造假在 RuNet 引发热议。 *Global Voices Online*。 来源于：
+Toler, A. (2014, 11 月 15 日). 克里姆林宫精通宣传，却不精通 Photoshop：MH17 照片造假在 RuNet 引发热议。 *Global Voices Online*. 来源于： [https://globalvoices.org/globalvoices.org/2014/11/15/russia-photoshop-kremlin-mh17-ukraine-crash/](https://globalvoices.org/globalvoices.org/2014/11/15/russia-photoshop-kremlin-mh17-ukraine-crash/).
 
-`https://globalvoices.org`.
+*Battling the bear* 171
 
-[globalvoices .org /2014 /11 /15 /russia -photoshop -kremlin -mh17 -ukraine -crash/](https://globalvoices.org).
+United States Trade Representative. (2001, 3 月 13 日). USTR 将乌克兰列为特别 301 条款下的优先外国。 来源于： [https://ustr.gov/archive/Document_Library/Press_Releases/2001/March/Ukraine_Designated_as_Priority_Foreign_Country_Under_Special_301.html](https://ustr.gov/archive/Document_Library/Press_Releases/2001/March/Ukraine_Designated_as_Priority_Foreign_Country_Under_Special_301.html).
 
- *Battling the bear* 171
+Wenger, J. W., Oconnell, C., and Lytell, M. C. (2017). Retaining the Army’s Cyber Expertise. RAND Corporation. 来源于： [https://www.rand.org/content/dam/rand/pubs/research_reports/RR1900/RR1978/RAND_RR1978.pdf](https://www.rand.org/content/dam/rand/pubs/research_reports/RR1900/RR1978/RAND_RR1978.pdf).
 
-United States Trade Representative. (2001, 3 月 13 日). USTR 将乌克兰列为特别 301 条款下的优先外国。 来源于：
-
-`https://ustr.gov/archive`.
-
-[/Document \_Library /Press \_Releases /2001 /March /Ukraine \_Designated \_as \_Priority](https://ustr.gov).
-
-[\_Foreign \_Country \_Under \_Special \_301 .html.](https://ustr.gov).
-
-Wenger, J. W., Oconnell, C., and Lytell, M. C. (2017). Retaining the Army’s Cyber Expertise. RAND Corporation. 来源于：
-
-`https://www.rand.org/content/dam/`.
-
-[rand /pubs /research \_reports /RR1900 /RR1978 /RAND \_RR1978 .pdf.](https://www.rand.org).
-
-Williams, M. (2017, 8 月 1 日). 乌克兰终于加固了漏洞百出的网络防护。 *Reuters*。 来源于：
-
-`https://www.reuters.com/id/us-cyber-attack`.
-
-[-ukraine -idUSKBN1AH35A](https://www.reuters.com).
+Williams, M. (2017, 8 月 1 日). 乌克兰终于加固了漏洞百出的网络防护。 *Reuters*. 来源于： [https://www.reuters.com/id-us-cyber-attack-ukraine-idUSKBN1AH35A](https://www.reuters.com/id-us-cyber-attack-ukraine-idUSKBN1AH35A).
 
 Wilson, J. Q. (1989). *Bureaucracy: What Government Agencies Do and Why They Do It*. New York: Basic Books.
 
-Zetter, K. (2016, 3 月 3 日). 乌克兰电网的奇异且前所未有的黑客攻击。 *Wired*。 来源于：
+Zetter, K. (2016, 3 月 3 日). 乌克兰电网的奇异且前所未有的黑客攻击。 *Wired*. 来源于： [https://www.wired.com/2016/03/inside-cunning-unprecedented-hack-ukraines-power-grid/](https://www.wired.com/2016/03/inside-cunning-unprecedented-hack-ukraines-power-grid/).
 
-`https://www.wired.com/2016/03/inside-cunning`.
-
-[-unprecedented -hack -ukraines -power -grid/.](https://www.wired.com).
-
-[/content]
-
-
-
-
-Zilberman, B., and Logan, T. (2018). Increasing U.S.-Ukraine Cyber Cooperation is a Step in the Right Direction. Foundation for the Defense of Democracies (blog). Retrieved from:
-
-[`http://www.defenddemocracy.org/media-hit/boris-zilberman-increasing-us-ukraine`](http://www.defenddemocracy.org)
-
-[\-cyber-cooperation-is-a-step-in-the-right-direction/](http://www.defenddemocracy.org).
+Zilberman, B., and Logan, T. (2018). Increasing U.S.-Ukraine Cyber Cooperation is a Step in the Right Direction. Foundation for the Defense of Democracies (blog). Retrieved from: [http://www.defenddemocracy.org/media-hit/boris-zilberman-increasing-us-ukraine-cyber-cooperation-is-a-step-in-the-right-direction/](http://www.defenddemocracy.org/media-hit/boris-zilberman-increasing-us-ukraine-cyber-cooperation-is-a-step-in-the-right-direction/).
 
 10.4324/9781003110224-14
 
-`12`
+# 12 Uncertainty, fragmentation, and international obligations as shaping influences
 
-**12 Uncertainty, fragmentation,**
+## Cyber security policy development in Albania
 
-**and international obligations**
+*Islam Jusufi*
 
-**as shaping influences**
-
-`Cyber security policy development`
-
-`in Albania`
-
-*`Islam Jusufi`*
-
-The debate around cyber security has become an area where national authorities seek to (re-)claim parts of their sovereignty in the name of national security.
-
-Therefore, cyber security has entered official state planning and policy processes, and departments are being established within national governance structures to deal with cyber security issues more authoritatively. Against this background, it is important to consider how states struggle to adapt to the challenges arising from cyberspace and which factors are particularly influential in shaping their policies.
+The debate around cyber security has become an area where national authorities seek to (re-)claim parts of their sovereignty in the name of national security. Therefore, cyber security has entered official state planning and policy processes, and departments are being established within national governance structures to deal with cyber security issues more authoritatively. Against this background, it is important to consider how states struggle to adapt to the challenges arising from cyberspace and which factors are particularly influential in shaping their policies.
 
 So far, little scholarly attention has been paid to small and medium-sized states that are transitioning toward becoming liberal democracies. This chapter attempts to fill part of this gap.
 
-This chapter analyzes how uncertainties surrounding cyber security and international obligations are shaping cyber security policies in developing parts of the world, more specifically in Albania. On a general level, it shows that a governance regime in response to cyber security threats leads to a fragmentation of authority and a changed conception of how far state sovereignty can extend in cyberspace.
-
-Inversely, fragmented authority and accountability establish an open space for multi-actor approaches, leading to a pluralism of relevant actors. The state, this chapter shows, is nudged into sharing responsibilities with other actors, including the private sector, civil society, and individuals.
+This chapter analyzes how uncertainties surrounding cyber security and international obligations are shaping cyber security policies in developing parts of the world, more specifically in Albania. On a general level, it shows that a governance regime in response to cyber security threats leads to a fragmentation of authority and a changed conception of how far state sovereignty can extend in cyberspace. Inversely, fragmented authority and accountability establish an open space for multi-actor approaches, leading to a pluralism of relevant actors. The state, this chapter shows, is nudged into sharing responsibilities with other actors, including the private sector, civil society, and individuals.
 
 To make its point, this chapter assembles Albanian public discourses on technological uncertainties and multi-actorness. This is done by analyzing both important public Albanian documents for cyber security discussions and the more general Albanian discourse around cyber security. It will be shown that, with regard to cyber security, the national authorities of Albania have sought to protect different targets, including the state, the private sector, and civil society, which have not been historically or consistently central to the Albanian conception of sovereignty. The main influence, it seems, is international collaborations with NATO and the EU, in which cyber security matters are embedded.
 
-The chapter is organized in three sections. In the first, the chapter reviews literature about how states face cyberspace in general. Section two sets out the cyber DOI: [`10.4324/9781003110224-14`](https://doi.org/10.4324/9781003110224-14)
-
-*Uncertainty and other shaping influ-*
-
-*ences*
+The chapter is organized in three sections. In the first, the chapter reviews literature about how states face cyberspace in general. Section two sets out the cyber DOI: [10.4324/9781003110224-14](https://doi.org/10.4324/9781003110224-14)
 
 *Uncertainty and other shaping influences* 173
 
 security policies designed and implemented in Albania, particularly as regards the three important aspects of uncertainty, fragmentation of authority, and international obligations. The third section draws conclusions.
 
-**States struggle with sovereignty rights in cyberspace:**
-
-**A general view**
+## States struggle with sovereignty rights in cyberspace: A general view
 
 When it dawned on states that cyberspace was becoming an important aspect of international politics, they initially attempted to assert their sovereignty, traditionally understood as a right exclusive to states and particularly important in the face of national security matters. However, three aspects of cyberspace constrained state actors’ coercive behavior in this regard: Uncertainty posed by technology, the presence of many non-state actors staking out their own claims, and, most importantly, international obligations.
 
-***Uncertainties arising from cyber technologies***
+### Uncertainties arising from cyber technologies
 
 Cyberspace, unlike the air, the space, or the sea, is an entirely man-made realm (Deibert et al. 2008) and as such subject to extensive uncertainties and unpredictability. Thus, a central and longstanding problematic in the practice of cyber security has become the inability to foresee, identify, and act upon threats in time (Dunn Cavelty 2019). The issue of uncertainty is thus an intrinsic part of cyber security, since uncertain threats need to be considered, prepared for, and dealt with continuously by someone who has the capacity to do so.
 
@@ -3369,15 +2620,13 @@ In addition, societies around the world are growing increasingly dependent on cr
 
 A prime issue for law enforcement against cyber threats in this uncertain environment is the “attribution problem”, which refers to the difficulty of clearly identifying those responsible for a cyberattack (Dunn Cavelty 2008; Egloff 2019; Dunn Cavelty and Wenger 2020). Also, public attribution of cyber incidents takes place in a heavily contested information environment where multiple truths continue to coexist (Egloff 2019). Despite the expectation that attributional uncertainty may lead to the blame being placed on old enemies more often than not (Schulzke 2018), different actors in this contested environment gain authority to frame the aggressor behind cyber incidents, leading to a fragmentation of authority when it comes to attribution and other important aspects of cyber security.
 
-174 *`Islam Jusufi`*
+174 *Islam Jusufi*
 
-***Fragmentation of authority***
+### Fragmentation of authority
 
 The functioning of the Internet is heavily reliant on governance arrangements comprising both state and non-state actors. Many studies have established that the state is just one important player among others, which leads to the inability of states or transnational security organizations to enforce preferred cyber outcomes unilaterally. De facto control over the internet’s technical components and the data flowing through them is exercised by private actors. States are adapting to this networked and fragmented governance more or less enthusiastically by attempting to shape standards and practices in a multi-stakeholder environment (Mueller et al. 2013). The use of alternative means to regulate cyberspace has allowed the interference of non-state actors at the expense of state institutions, and this undermines the power of the state in cyberspace (Adams and Albakajai 2016; Gendron 2013), which manifests in most states’ inability to control flows of information, capital, and services across cyberspace.
 
 In their efforts to regulate the use of cyberspace within their own borders, states have enacted multiple legislations and instituted new structures and actors (Betz and Stevens 2011). Fundamentally, it has become apparent that states cannot assure the security of information systems alone; instead, responsibility for information security needs to be dispersed across all stakeholders, because the majority of cyberspace is owned and operated by private companies (Bronk 2008). Thus, states will often need to request that private actors operating in their territories take the necessary actions to prevent or terminate detrimental international cyber conduct.
-
-
 
 然而，国家在应对网络安全威胁所发挥的核心作用既具有象征意义，也具有实际意义：国家在应对实际的网络威胁时发挥的作用是缓解不安全感的关键。当这些威胁出现并被限制在单一领土的管辖范围内时，国家则行使其传统的保障公民福祉的角色（Thomas 2009）。
 
@@ -3387,11 +2636,11 @@ In their efforts to regulate the use of cyberspace within their own borders, sta
 
 *不确定性和其他塑造影响* 175
 
-***国际义务***
+### 国际义务
 
 当代关于“主权”的理解发生了变化。国家可以签署公约，在共同利益的名义下让出一定的主权。欧洲委员会 2001 年《网络犯罪公约》（也称《布达佩斯公约》）是一个典型例子，说明各国在应对跨国问题的同时，自愿调整国内法律框架并增加跨境调查行动（Betz and Stevens 2011; Council of Europe 2001）。欧盟和北约的网络安全法规对现有和潜在成员国均产生义务，普遍被视为各国应对网络犯罪的基准立法框架。因此，国际义务加速了接受“多主体主权”概念的进程。下一节将展示这在阿尔巴尼亚的案例中如何体现。
 
-**阿尔巴尼亚发展网络安全政策**
+## 阿尔巴尼亚发展网络安全政策
 
 阿尔巴尼亚网络安全政策的制定非常近期。然而，阿尔巴尼亚正逐步成为技术服务经济，因此对其信息基础设施的依赖日益加深，以支撑日常业务运行。这种对信息基础设施的高度依赖导致了对脆弱性的感知（Brechbühl et al. 2010），尤其是随着网络和信息安全事件的快速增加，凸显了采取行动的必要性（McAfee 2012）。
 
@@ -3403,7 +2652,7 @@ In their efforts to regulate the use of cyberspace within their own borders, sta
 
 176 *Islam Jusufi*
 
-***技术不确定性及非国家行为体在阿尔巴尼亚公共话语中的角色***
+### 技术不确定性及非国家行为体在阿尔巴尼亚公共话语中的角色
 
 阿尔巴尼亚的网络安全战略框架包括一系列文件，如《网络安全法》、跨部门战略“数字阿尔巴尼亚 2015–2020”、跨部门信息社会战略 2008–2013、网络安全政策纲要 2015–2017、国家安全战略 2014–2020、网络防御战略 2018–2020、网络防御战略 2014–2017（Republic of Albania 2014a, 2014b, 2015a, 2015b, 2017, 2018a, 2018b）。
 
@@ -3413,11 +2662,7 @@ In their efforts to regulate the use of cyberspace within their own borders, sta
 
 该战略体现了网络安全利益相关者在其各自职责范围内采取措施、与其他利益相关者合作并交换必要信息的决心（Galinec et al. 2017）。针对该战略，互联网被描述为“整合……公共行政与私营部门服务”的载体（第 9 页）。该战略本身承诺政府“与阿尔巴尼亚的企业、大学、非营利组织和非政府组织合作，高效发展该国的信息社会”（第 9 页）。
 
-
-
-25). 对于`Strategy`，阿尔巴尼亚建设网络社会的发展是所有行为体（如公共部门、学术界、非政府组织、民间社会和私营组织）的共同目标。实现该目标的成功取决于所有部门和行为体之间的正确协调与统一。
-
-(p. 25)
+对于`Strategy`，阿尔巴尼亚建设网络社会的发展是所有行为体（如公共部门、学术界、非政府组织、民间社会和私营组织）的共同目标。实现该目标的成功取决于所有部门和行为体之间的正确协调与统一。(p. 25)
 
 *不确定性及其他塑造因素* 177
 
@@ -3431,17 +2676,13 @@ In their efforts to regulate the use of cyberspace within their own borders, sta
 
 178 *Islam Jusufi*
 
-阿尔巴尼亚将网络空间视为对国家主权的威胁。因此，将网络空间提升至国家安全层面是由于网络攻击带来的风险增加：虽然更广泛的通信是国家经济和社会发展的附加价值，但同时也使国家面临国家行为和非国家行为体带来的网络风险。网络攻击有潜力严重破坏公共机构、电信以及金融银行系统的信息交换，导致关键服务中断。
-
-(p. 23)
+阿尔巴尼亚将网络空间视为对国家主权的威胁。因此，将网络空间提升至国家安全层面是由于网络攻击带来的风险增加：虽然更广泛的通信是国家经济和社会发展的附加价值，但同时也使国家面临国家行为和非国家行为体带来的网络风险。网络攻击有潜力严重破坏公共机构、电信以及金融银行系统的信息交换，导致关键服务中断。(p. 23)
 
 随后发布的网络安全文件和战略在将网络威胁纳入国家安全战略方面保持一致。公众普遍支持并认同将网络威胁提升至国家威胁层级的决定，因为其对该威胁的感知与之相符。鉴于该国尚未发生针对关键信息基础设施的大规模事件，阿尔巴尼亚将网络威胁纳入国家安全战略遵循了预防性逻辑，即担忧可能对关键基础设施造成破坏性网络攻击的风险。因此，升级至国家威胁层级并非源自国内或国家先前的任何威胁事件。阿尔巴尼亚的应对措施受到其他国家（如爱沙尼亚、格鲁吉亚、英国和美国）的事件影响（Guitton 2013）。阿尔巴尼亚正经历日益紧密相连的安全环境，安全威胁不再像过去那样遥远，这体现在其对网络安全的表述中。
 
 另一个重要的国家网络安全战略是`Cyber Defense Strategy` 2014-2017。不确定性再次是该战略的基本假设。该战略指出：“网络罪犯可以利用计算机技术获取个人数据，或利用互联网进行剥削或恶意目的”（第 5 页）。它还指出，网络空间是“任何人都可以在无时间和空间限制的使用环境中，非对称地为恶意攻击者提供优势”（第 9 页）。
 
-`Cyber Defense Strategy` 也为除国家以外的其他行为体参与保护网络空间提供了空间，指出减少网络安全威胁和脆弱性的努力将包括负责的结构（如国防部/武装部队）与其他政府及私营部门的协同努力，通过协作活动识别并修复严重的网络漏洞和 breaches。
-
-(p. 13)
+`Cyber Defense Strategy` 也为除国家以外的其他行为体参与保护网络空间提供了空间，指出减少网络安全威胁和脆弱性的努力将包括负责的结构（如国防部/武装部队）及其他政府与私营部门的协同努力，通过协作活动识别并修复严重的网络漏洞和 breaches。(p. 13)
 
 先前版本的`Cyber Defense Strategy`（2018-2020）认为不确定性贯穿整个网络空间：“攻击者使用的技术在很大程度上
 
@@ -3449,13 +2690,9 @@ In their efforts to regulate the use of cyberspace within their own borders, sta
 
 类似且设计用于利用网络和系统整体的脆弱性”（第 11 页）。`Cyber Defense Strategy` 将私营部门视为阿尔巴尼亚网络安全环境中的参考对象：
 
-无论在系统和网络保护领域取得了什么成就，我们必须专注于整体管理通信和信息基础设施，关注网络之间的互连、未经授权访问的控制，以及国防部/武装部队的传输容量的持续监控，这些均由公共和私营电信公司提供。
-
-(p. 7)
+无论在系统和网络保护领域取得了什么成就，我们必须专注于整体管理通信和信息基础设施，关注网络之间的互连、未经授权访问的控制，以及国防部/武装部队的传输容量的持续监控，这些均由公共和私营电信公司提供。(p. 7)
 
 因此，它强调“网络空间是私营和公营行为体、民事与军事、国家与国际行为体必须同时行动并相互依赖的领域”（第 11 页）。
-
-
 
 ## 国际义务的驱动作用
 
@@ -3481,16 +2718,13 @@ AKCESK 负责监督《网络安全法》及相关执行立法的执行情况。�
 
 在另一项发展中，政府与私营部门及捐赠机构于 2012 年共同成立了 Protik 创新中心，这是一个独立的非营利信息通信技术中心，其主要目标包括促进私营部门、教育机构与政府之间的更紧密合作。该中心由阿尔巴尼亚美国发展基金会（AADF）、阿尔巴尼亚政府、USAID、微软、Albtelecom 和 CISCO 共同努力建立。
 
-
-
-
 警察当局负责在网络空间执行法律，监管国家警察、检察机关、情报机构以及武装部队等各类部门的网络活动，这些活动涉及各种形式的`cybercrime.1 Specialist`单位。2014 年，总检察官办公室通过在八个区检察院设立的网络犯罪调查单位，对网络犯罪进行刑事起诉。国家情报局（SIS/SHISH）通过其网络犯罪专案组负责调查、发现和分析威胁国家安全的网络犯罪（Jica 2013）。
 
 阿尔巴尼亚国防部设有跨机构海上作战中心，职责包括民事紧急事件、空域管制以及发展网络防御能力（CSIS 2011）。
 
 这些公共和私营机构共同促进了阿尔巴尼亚网络空间的情报感知，为预防和应对行动奠定基础。私营行业参与者在提升网络犯罪意识方面发挥了关键作用，民间社会代表也参与了法律、政策文件和战略的起草。总体来看，证据表明私营和民间社会参与者在塑造阿尔巴尼亚对网络空间的认识方面发挥了重要作用。如此，主权已与其他参与者共享，国家成为国内利益的汇聚者（Guarda 2015）。相关政策促成了对主权概念的更流动性理解，即非国家行为体、社会群体、甚至个人以及国家行为体均能够实质性地影响系统的稳定性并分享主权。
 
-**Conclusion**
+## Conclusion
 
 正如阿尔巴尼亚的案例所示，国家仍是网络安全的核心支柱。政府主要决定某一议题是否构成威胁。然而，其他参与者正在获得更广泛的自我评估网络及其他威胁的空间。技术相对落后的国家如阿尔巴尼亚在防止或终止有害的网络行为方面能力有限，因而对其领土网络基础设施的控制较弱。
 
@@ -3514,19 +2748,17 @@ AKCESK 负责监督《网络安全法》及相关执行立法的执行情况。�
 
 比较研究可以解释多利益相关方方法如何帮助治理新兴技术的不确定空间。
 
-**Note**
+## Note
 
-1 The 国家警察总局刑事犯罪处于 2009 年作为国家警察的一部分成立，是阿尔巴尼亚打击网络犯罪的主要机构。国家警察为防止和打击网络犯罪，提供了一个在线举报网络犯罪的软件应用，该应用位于国家警察官方网站（Dushi and Bërdufi 2017; ICLG 2018）。2009 年，为国家警察制作了一本网络犯罪调查与证据收集手册。该手册详细描述了各种计算机证据类型及处理步骤，包括现场首次行动、证据识别与记录、收集、包装、运输和存储（Dushi and Bërdufi 2017）。遵循布达佩斯公约第 35 条，国家警察网络犯罪处设立了 24/7 联络点。
+1. 国家警察总局刑事犯罪处于 2009 年作为国家警察的一部分成立，是阿尔巴尼亚打击网络犯罪的主要机构。国家警察为防止和打击网络犯罪，提供了一个在线举报网络犯罪的软件应用，该应用位于国家警察官方网站（Dushi and Bërdufi 2017; ICLG 2018）。2009 年，为国家警察制作了一本网络犯罪调查与证据收集手册。该手册详细描述了各种计算机证据类型及处理步骤，包括现场首次行动、证据识别与记录、收集、包装、运输和存储（Dushi and Bërdufi 2017）。遵循布达佩斯公约第 35 条，国家警察网络犯罪处设立了 24/7 联络点。
 
-**References**
+## References
 
 所有链接已于 2021 年 8 月 23 日检查。
 
 Adams, J., and Albakajai, M. (2016). Cyberspace: A New Threat to the Sovereignty of the State. *Management Studies*, 4(6): 256–265.
 
-Arka Telecom (2018). Armenia is Fourth in the World for Frequency of Harmful Software Attacks. Retrieved September 13, 2018, [from: `http://telecom.arka.am/en/news/internet/`](http://telecom.arka.am/en/news/internet/)
-
-[`armenia_is_fourth_in_the_world_for_frequency_of_harmful_software_attacks_/`](http://telecom.arka.am)
+Arka Telecom (2018). Armenia is Fourth in the World for Frequency of Harmful Software Attacks. Retrieved September 13, 2018, from: [http://telecom.arka.am/en/news/internet/armenia_is_fourth_in_the_world_for_frequency_of_harmful_software_attacks_/](http://telecom.arka.am/en/news/internet/armenia_is_fourth_in_the_world_for_frequency_of_harmful_software_attacks_/)
 
 Bahiti, R., and Josifi, J. (2015). Towards a More Resilient Cyberspace: The Case of Albania. *Information and Security*, 32(2): 120–130.
 
@@ -3540,9 +2772,7 @@ Brechbühl, H., Bruce, R., Dynes, S., and Johnson, M. E. (2010). Protecting Crit
 
 Bronk, C. (2008). Hacking the Nation-State: Security, Information Technology and Policies of Assurance. *Information Security Journal: A Global Perspective*, 17(3): 132–142.
 
-
-
-Burton, J. (2013). Small States and Cyber Security: The Case of New Zealand. *Political* *Science* 65(2): 216–238.
+Burton, J. (2013). Small States and Cyber Security: The Case of New Zealand. *Political Science* 65(2): 216–238.
 
 Collins, R. (2008). Hierarchy to Homeostasis? Hierarchy, Markets and Networks in UK Media and Communications Governance. *Media Culture and Society* 30(3): 295–317.
 
@@ -3550,11 +2780,11 @@ Cornish, P. (2015). Governing Cyberspace through Constructive Ambiguity. *Surviv
 
 Council of Europe. (2001). *Convention on Cybercrime*. Strasbourg: Council of Europe.
 
-Deibert, J., Palfrey, J., Rohozinski, R., and Zittrain, J. (2008). *Access Denied: The Practice* *and Policy of Global Internet Filtering*. Cambridge, MA: The MIT Press.
+Deibert, J., Palfrey, J., Rohozinski, R., and Zittrain, J. (2008). *Access Denied: The Practice and Policy of Global Internet Filtering*. Cambridge, MA: The MIT Press.
 
-DiploFoundation. (2016). *Cybersecurity in the Western Balkans: Policy Gaps and* *Cooperation Opportunities*. Geneva: DCAF.
+DiploFoundation. (2016). *Cybersecurity in the Western Balkans: Policy Gaps and Cooperation Opportunities*. Geneva: DCAF.
 
-Dunn Cavelty, M. (2008). *Cyber-Security and Threat Politics: US Efforts to Secure the* *Information Age*. London: Routledge.
+Dunn Cavelty, M. (2008). *Cyber-Security and Threat Politics: US Efforts to Secure the Information Age*. London: Routledge.
 
 Dunn Cavelty, M. (2013). From Cyber-Bombs to Political Fallout: Threat Representations with an Impact in the Cyber-Security Discourse. *International Studies Review*, 15(1): 105–122.
 
@@ -3562,45 +2792,37 @@ Dunn Cavelty, M. (2014). Breaking the Cyber-Security Dilemma: Aligning Security 
 
 Dunn Cavelty, M., and Egloff, F. J. (2019). The Politics of Cybersecurity: Balancing Different Roles of the State. *St Antony’s International Review*, 15(1): 37–57.
 
-Dunn Cavelty, M., and Jaeger, M. D. (2015). (In)visible Ghosts in the Machine and the Powers that Bind: The Relational Securitization of Anonymous. *International Political* *Sociology*, 9(2): 176–194.
+Dunn Cavelty, M., and Jaeger, M. D. (2015). (In)visible Ghosts in the Machine and the Powers that Bind: The Relational Securitization of Anonymous. *International Political Sociology*, 9(2): 176–194.
 
-Dunn Cavelty, M., and Wenger, A. (2020). Cyber Security Meets Security Politics: Complex Technology, Fragmented Politics, and Networked Science. *Contemporary* *Security Policy*, 41(1): 5–32.
+Dunn Cavelty, M., and Wenger, A. (2020). Cyber Security Meets Security Politics: Complex Technology, Fragmented Politics, and Networked Science. *Contemporary Security Policy*, 41(1): 5–32.
 
-Dushi, D. (2016). *Cybersecurity in Albania: A Multistakeholder Approach*. Paper from* *DCAF Young Faces 2016 – Strategic Cybersecurity Policy Development in Southeast* *Europe*. Geneva: DCAF.
+Dushi, D. (2016). *Cybersecurity in Albania: A Multistakeholder Approach*. Paper from DCAF Young Faces 2016 – Strategic Cybersecurity Policy Development in Southeast Europe. Geneva: DCAF.
 
-Dushi, D., and Bërdufi, N. (2017). Law Enforcement and Investigation of Cybercrime in Albania. *European Scientific Journal*, 13(12). Retrieved from: [`eujournal .org /`](https://eujournal.org)
-
-[index .php /esj /article /view /9228 /8769](https://eujournal.org).
+Dushi, D., and Bërdufi, N. (2017). Law Enforcement and Investigation of Cybercrime in Albania. *European Scientific Journal*, 13(12). Retrieved from: [eujournal.org/index.php/esj/article/view/9228/8769](https://eujournal.org/index.php/esj/article/view/9228/8769).
 
 Egloff, F. J. (2019). Contested Public Attributions of Cyber Incidents and the Role of Academia. *Contemporary Security Policy*, 41(1): 55–81.
 
-European Union External Action Service. (2013). EU Cyber Security Plan to Protect Open Internet and Online Freedom and Opportunity. Retrieved August 10, 2018, [from: http://](http://europa.eu)
+European Union External Action Service. (2013). EU Cyber Security Plan to Protect Open Internet and Online Freedom and Opportunity. Retrieved August 10, 2018, from: [http://europa.eu/rapid/press-release_IP-13-94_en.htm](http://europa.eu/rapid/press-release_IP-13-94_en.htm).
 
-[europa .eu /rapid /press -release \_IP -13 -94 \_en .htm](http://europa.eu).
+Galinec, D., Možnik, D., and Guberina, B. (2017). Cybersecurity and Cyber Defence: National Level Strategic Approach. *Automatika: časopis za automatiku, mjerenje, elektroniku, računarstvo i komunikacije*, 58(3): 273–286.
 
-Galinec, D., Možnik, D., and Guberina, B. (2017). Cybersecurity and Cyber Defence: National Level Strategic Approach. *Automatika: časopis za automatiku, mjerenje,* *elektroniku, računarstvo i komunikacije*, 58(3): 273–286.
+Gendron, A. (2013). Cyber Threats and Multiplier Effects: Canada at Risk. *Canadian Foreign Policy Journal*, 19(2): 178–198.
 
-Gendron, A. (2013). Cyber Threats and Multiplier Effects: Canada at Risk. *Canadian* *Foreign Policy Journal*, 19(2): 178–198.
-
-Guarda, N. (2015). Governing the Ungovernable: International Relations, Transnational Cybercrime Law, and the Post-Westphalian Regulatory State. *Transnational Legal* *Theory* 6(1): 211–249.
+Guarda, N. (2015). Governing the Ungovernable: International Relations, Transnational Cybercrime Law, and the Post-Westphalian Regulatory State. *Transnational Legal Theory* 6(1): 211–249.
 
 Guitton, C. (2013). Cyber Insecurity as a National Threat: Overreaction from Germany, France and the UK? *European Security*, 22(1): 21–35.
 
 *Uncertainty and other shaping influences* 185
 
-ICLG, The International Comparative Legal Guide. (2018). *Cybersecurity: A Practical* *Cross-Border Insight into Cybersecurity Work*. London: Global Legal Group Ltd.
+ICLG, The International Comparative Legal Guide. (2018). *Cybersecurity: A Practical Cross-Border Insight into Cybersecurity Work*. London: Global Legal Group Ltd.
 
-ITU, International Telecommunication Union. (2014). *Cyberwellness Profile Albania*.
+ITU, International Telecommunication Union. (2014). *Cyberwellness Profile Albania*. Geneva: ITU.
 
-Geneva: ITU.
+Jica, H. (2013). Cyber Security and National Security Awareness Initiatives in Albania: A Synergy Approach. *Mediterranean Journal of Social Sciences*, 4(10). Retrieved from: [www.mcser.org/journal/index.php/mjss/article/view/1236/1265](https://www.mcser.org/journal/index.php/mjss/article/view/1236/1265).
 
-Jica, H. (2013). Cyber Security and National Security Awareness Initiatives in Albania: A Synergy Approach. *Mediterranean Journal of Social Sciences*, 4(10). Retrieved from:
+Jusufi, I. (2018). Clientelism and Informality in Albania. *Eastern Journal of European Studies*, 9(1): 133–150.
 
-[`www .mcser .org /journal /index .php /mjss /article /view /1236 /1265.`](https://www.mcser.org)
-
-Jusufi, I. (2018). Clientelism and Informality in Albania. *Eastern Journal of European* *Studies*, 9(1): 133–150.
-
-McAfee. (2012). Cyber-Security: The Vexed Question of Global Rules. Retrieved August [10, 2018, from: http://www .mcafee .com /us /resources /reports /rp -sda -cyber -security .pdf.](http://www.mcafee.com)
+McAfee. (2012). Cyber-Security: The Vexed Question of Global Rules. Retrieved August 10, 2018, from: [http://www.mcafee.com/us/resources/reports/rp-sda-cyber-security.pdf](http://www.mcafee.com/us/resources/reports/rp-sda-cyber-security.pdf).
 
 Mueller, M., Schmidt, A., and Kuerbis, B. (2013). Internet Security and Networked Governance in International Relations. *International Studies Review*, 15(1): 86–104.
 
@@ -3610,13 +2832,11 @@ Republic of Albania. (2014b). *Cyber Defence Strategy 2014–2017*. Tirana.
 
 Republic of Albania. (2015a). *Policy Paper on Cyber Security 2015–2017*. Tirana.
 
-Republic of Albania. (2015b). *Cross-Cutting Strategy ‘Digital Agenda of Albania 2015–*
-
-*2020’*. Tirana.
+Republic of Albania. (2015b). *Cross-Cutting Strategy ‘Digital Agenda of Albania 2015–2020’*. Tirana.
 
 Republic of Albania. (2017). *Law on Cyber Security*. Tirana.
 
-Republic of Albania. (2018a). *Decision on “Approval of the List of Critical Information* *Infrastructures and List of Important Information Infrastructures”* . No. 222, 26.04.2018.
+Republic of Albania. (2018a). *Decision on “Approval of the List of Critical Information Infrastructures and List of Important Information Infrastructures”*. No. 222, 26.04.2018.
 
 Republic of Albania. (2018b). *Cyber Defence Strategy 2018–2020*. Tirana.
 
@@ -3628,43 +2848,25 @@ Wagner, B. (2014). The Politics of Internet Filtering: The United Kingdom and Ge
 
 10.4324/9781003110224-15
 
-**13**
-
-**13 Big tech’s push for norms to**
-
-**tackle uncertainty in cyberspace**
+# 13 Big tech’s push for norms to tackle uncertainty in cyberspace
 
 *Jacqueline Eggenschwiler*
 
-Reports about large-scale data breaches, critical infrastructure hacks, and malware strikes targeting public and private systems and network infrastructures have become ubiquitous. Given the political and economic ramifications of these malicious activities conducted by both state and non-state actors – global security and prosperity are highly dependent on secure and stable ICTs and networks – governments have sought to stipulate behavior-guiding rules of the road for cyberspace by means of international conferences and expert processes. Progress and agreement on norms of responsible behavior for cyberspace, however, have been slow and unwieldy (Hampson et al. 2017). Disputes among government entities about how and if existing international rules apply to cyberspace have provided flourishing breeding beds for private norm ventures (Väljataga 2017; Henriksen 2019; Korzak 2017). Since the non-consensus outcome of the United Nations Group of Governmental Experts on Developments in the Field of Information and Telecommunications in the Context of International Security (UN GGE) in 2017, corporate as well as other non-state entities have started to more actively insert their voices in debates about rules of the road for the digital domain (Sukumar
-
-2017; Henriksen 2019).1
+Reports about large-scale data breaches, critical infrastructure hacks, and malware strikes targeting public and private systems and network infrastructures have become ubiquitous. Given the political and economic ramifications of these malicious activities conducted by both state and non-state actors – global security and prosperity are highly dependent on secure and stable ICTs and networks – governments have sought to stipulate behavior-guiding rules of the road for cyberspace by means of international conferences and expert processes. Progress and agreement on norms of responsible behavior for cyberspace, however, have been slow and unwieldy (Hampson et al. 2017). Disputes among government entities about how and if existing international rules apply to cyberspace have provided flourishing breeding beds for private norm ventures (Väljataga 2017; Henriksen 2019; Korzak 2017). Since the non-consensus outcome of the United Nations Group of Governmental Experts on Developments in the Field of Information and Telecommunications in the Context of International Security (UN GGE) in 2017, corporate as well as other non-state entities have started to more actively insert their voices in debates about rules of the road for the digital domain (Sukumar 2017; Henriksen 2019).1
 
 This chapter examines the norms-based cyber insecurity reduction measures initiated by corporate actors. In particular, it summarizes and comments on the effectiveness of the normative strategies pursued by technology companies, including Kaspersky Lab, Siemens, Telefónica, and Microsoft. For the purposes of this chapter, technology companies are understood to denote enterprises engaging in and deriving sizeable percentages of their revenues from the development, manufacturing, and maintenance of technology products and services, including, for instance, hard- and software components and platform services. The selection of the four case studies was informed by geographical (companies displaying different national origins: Russia, Europe, the United States) as well as substantive considerations (companies having made active reference to, proposed, or joined norms-based policy instruments).
 
-
-
--   [国际关系和国际法领域的学术文献]自 20 世纪早期以来，就已关注私营实体在不同政策领域所发挥的行为塑造力量（Ruggie 2004; Nye and Donahue 2000; Finnemore and Sikkink 1998）。在网络安全的语境下，DOI: [10.4324/9781003110224-15](https://doi.org/10.4324/9781003110224-15)
+国际关系和国际法领域的学术文献自 20 世纪早期以来，就已关注私营实体在不同政策领域所发挥的行为塑造力量（Ruggie 2004; Nye and Donahue 2000; Finnemore and Sikkink 1998）。在网络安全的语境下，DOI: [10.4324/9781003110224-15](https://doi.org/10.4324/9781003110224-15)
 
 `Big tech’s push for norms` 187
 
 however, performance-oriented assessments of the norms-based activities proposed by non-state actors and their implications for global governance processes have remained sparse. Seeking to address this void, this chapter argues that while the norms-based activities carried out by technology companies have been effective at opening up debates and influencing political processes, their efforts have borne less fruit apropos decreasing systemic levels of cyber insecurity. As long as governments lack the political will to truly follow through on their commitments to make cyberspace more stable and secure, and engage in concerted efforts with private agents, the fact that corporate activities have not managed to reduce systemic levels of cyber insecurity should not come as a surprise.
 
-The lack of systemic change should be even less astonishing if it is accepted that norms constitute what Cristina Bicchieri termed as conditional rules such that individuals prefer to conform when they expect a sufficiently large proportion of the population to conform (coordination or “empirical expectation”), and they believe that a sufficiently large proportion of the population might sanction them if they \[do not\] (fear of sanction or “normative expectation”).
+The lack of systemic change should be even less astonishing if it is accepted that norms constitute what Cristina Bicchieri termed as conditional rules such that individuals prefer to conform when they expect a sufficiently large proportion of the population to conform (coordination or “empirical expectation”), and they believe that a sufficiently large proportion of the population might sanction them if they \[do not\] (fear of sanction or “normative expectation”). (Carbonara 2017: 468)
 
-(Carbonara 2017: 468)
+Arguably, the proportion of conforming agents in cyberspace is not yet sufficiently large enough to invoke shared normative expectations at systemic levels. Cyber operations have provided useful tools for governments and proxy actors “to achieve strategic objectives both covertly and overtly”, and have offered much room for maneuver, which they are (now) hesitant to give up (Leuprecht et al. 2019: 402).
 
-Arguably, the proportion of conforming agents in cyberspace is not yet sufficiently large enough to invoke shared normative expectations at systemic levels.
-
-Cyber operations have provided useful tools for governments and proxy actors
-
-“to achieve strategic objectives both covertly and overtly”, and have offered much room for maneuver, which they are (now) hesitant to give up (Leuprecht et al.
-
-2019: 402).
-
-Even so, it is critical to appreciate and better understand the normative strategies pursued by non-state actors and resulting consequences. As per Hegemann and others, “\[m\]any of the core issues and problems of international politics require answers to questions of whether, how, and when certain actors, tools, or policies cause or at least affect specific results” (Hegemann et al. 2012: 15).
-
-With a view to supporting critical analyses of the activities undertaken by relevant actors and devising potential alternatives, it is vital to study the consequences of said activities, and the extent to which they have accomplished specified goals (Hegemann et al. 2012: 15). Given the market power of the technology companies flagged above, as well as their economic and political credence, and vocal participation in cyber security norm formation processes, examinations pertaining to the effectiveness of their efforts appear to be particularly pressing.
+Even so, it is critical to appreciate and better understand the normative strategies pursued by non-state actors and resulting consequences. As per Hegemann and others, “\[m\]any of the core issues and problems of international politics require answers to questions of whether, how, and when certain actors, tools, or policies cause or at least affect specific results” (Hegemann et al. 2012: 15). With a view to supporting critical analyses of the activities undertaken by relevant actors and devising potential alternatives, it is vital to study the consequences of said activities, and the extent to which they have accomplished specified goals (Hegemann et al. 2012: 15). Given the market power of the technology companies flagged above, as well as their economic and political credence, and vocal participation in cyber security norm formation processes, examinations pertaining to the effectiveness of their efforts appear to be particularly pressing.
 
 Methodologically, this contribution relies on secondary sources in the fields of international relations and international law, with a focus on governance-relevant texts, as well as primary sources, including press releases, reports, and audio-visual materials, issued by industry protagonists concerned with promoting norms of responsible behavior in cyberspace.
 
@@ -3674,17 +2876,11 @@ The remainder of this chapter is organized along three sections. The first secti
 
 recaps important developments, and specifies central concepts. The second section examines and appraises the contributions of technology companies to global cyber security norm development processes. Finally, the third section sums up the findings and highlights avenues for further progress.
 
-**Cyber security and norms**
+## Cyber security and norms
 
-Early internet pioneers, including John Perry Barlow, regarded cyberspace as a virtual environment not requiring formal rules or external controls (Barlow 1996).
+Early internet pioneers, including John Perry Barlow, regarded cyberspace as a virtual environment not requiring formal rules or external controls (Barlow 1996). However, growing numbers of cyber security events affecting private as well as public information and communication technologies (ICTs) have undermined these non-interventionist positions. Over the course of the past two decades, voluntary norms of responsible behavior “have emerged along with confidence- and capacity-building measures as the principal policy tools of choice to meet the \[…\] vision of an open, secure, accessible, and peaceful ICT environment” (Kavanagh 2017: 10).
 
-However, growing numbers of cyber security events affecting private as well as public information and communication technologies (ICTs) have undermined these non-interventionist positions. Over the course of the past two decades, voluntary norms of responsible behavior “have emerged along with confidence- and capacity-building measures as the principal policy tools of choice to meet the \[…\]
-
-vision of an open, secure, accessible, and peaceful ICT environment” (Kavanagh 2017: 10).
-
-Defined as shared expectations of appropriate behavior, norms can be of regulative (i.e. describing obligations, prohibitions and permissions) or constitutive (i.e. creating categories of actors and actions) nature (Finnemore and Sikkink 1998; Wiener 2017; Björkdahl 2002). “By shaping agents’ understandings of their social environments, associated interactions, and possible outcomes”, they foster coordination and predictability, and in turn reduce contextual ambiguities to man-ageable levels (Ferguson 2019: 1). In contrast to formal legal provisions, norms
-
-rely on softer means of enforcement and implementation.2 (`#index_split_004.html#p215`)
+Defined as shared expectations of appropriate behavior, norms can be of regulative (i.e. describing obligations, prohibitions and permissions) or constitutive (i.e. creating categories of actors and actions) nature (Finnemore and Sikkink 1998; Wiener 2017; Björkdahl 2002). “By shaping agents’ understandings of their social environments, associated interactions, and possible outcomes”, they foster coordination and predictability, and in turn reduce contextual ambiguities to manageable levels (Ferguson 2019: 1). In contrast to formal legal provisions, norms rely on softer means of enforcement and implementation.2
 
 According to Finnemore, the move to voluntary cyber security norms can partly be attributed to concerns about the suitability and effectiveness of binding treaties in fast-moving environments, as well as to fears of legal lock-in among leading cyber powers (Finnemore 2017: 3). Abbot and Snidal have argued that when circumstances are fundamentally uncertain, that is, when even the range and/or distribution of possible outcomes is unknown, \[formal legal agreements\] may not be desirable. In particular, if actors are ambiguity-averse, they will prefer to leave agreements imprecise rather than face the possibility of being caught in unfavorable commitments. (Abbott and Snidal 2000: 442) Despite perceived needs to reduce threats and corresponding levels of uncertainty, and more than two decades of concerted diplomatic efforts relating to the formulation of norms of responsible behavior for the digital domain, advancement has been slow and political compromise short-lived. In the wake of political contentions among governments surrounding debates about existing and emerging perils emanating from the digital realm and possible normative measures to address them, a number of non-state actors have stepped up and started to more actively make their voices heard (Grigsby 2017; Mačák 2017; Väljataga 2017).
 
@@ -3692,17 +2888,11 @@ According to Finnemore, the move to voluntary cyber security norms can partly be
 
 International relations and international law literatures have taken note of the rise of private actors involved in global steering and rule-making processes, and have systematized and subsumed ideational efforts conducted by non-state actors under the umbrella of `norm-entrepreneurship` or `soft-law`, respectively (Finnemore and Sikkink 1998; Risse-Kappen, Ropp, and Sikkink 1999; Abbott and Snidal 2000). Norm entrepreneurs (or protagonists of soft-law instruments) challenge prevailing patterns of behavior, by suggesting normative ideas and mobilizing like-minded stakeholders or networks within and across states to endorse them (Sandholtz 2017: 2). “These alliances \[then\] bring pressure to bear from above (transnationally) and below (domestically)”, and help the standards proposed get more widely accepted (Sandholtz 2017: 2).
 
-Following the non-consensus outcome of the 2017 UN GGE and an accumula-
-
-tion of cyber security incidents of transnational magnitude, including WannaCry and Petya/NotPetya, entrepreneurial activities undertaken by non-state actors in the context of fostering responsible behavior in cyberspace have grown considerably (Hinck 2018; Mačák 2017). The period between February 2017 and November 2018 saw the launch of at least nine different initiatives/proposals.3
-
-
+Following the non-consensus outcome of the 2017 UN GGE and an accumulation of cyber security incidents of transnational magnitude, including WannaCry and Petya/NotPetya, entrepreneurial activities undertaken by non-state actors in the context of fostering responsible behavior in cyberspace have grown considerably (Hinck 2018; Mačák 2017). The period between February 2017 and November 2018 saw the launch of at least nine different initiatives/proposals.3
 
 虽然值得注意，但在一致性、问责制和权威性方面，这些提案导致了碎片化程度的提高（Dunn Cavelty 和 Wenger 2020）。不仅非国家行为体创造了额外的甚至具有竞争性的规范形成过程，而且他们也涉足传统上由国家主导的领域。然而，鉴于政府在有意义执行现有网络安全规范方面仍存犹豫，碎片化的趋势可能有助于提高公众对网络安全规范的认识，并扩大不同领域的利益相关者参与度。正如 Ruhl 等人所指出的，
 
-\[d\]ifferent processes may be optimised for different kinds of outcomes – in terms of the actors and activities. Norms may be more realistic in some areas than in others, such as peacetime use of cyber capabilities compared with military cyber operations. Having multiple processes can prevent a roadblock in one area from impeding all progress *.*
-
-(Ruhl et al. 2020: 13)
+\[d\]ifferent processes may be optimised for different kinds of outcomes – in terms of the actors and activities. Norms may be more realistic in some areas than in others, such as peacetime use of cyber capabilities compared with military cyber operations. Having multiple processes can prevent a roadblock in one area from impeding all progress. (Ruhl et al. 2020: 13)
 
 然而，要实现这些碎片化进程的好处，发起者需要有意识地规划“互补性”和“交叉渗透”。
 
@@ -3712,51 +2902,25 @@ tion of cyber security incidents of transnational magnitude, including WannaCry 
 
 190 *Jacqueline Eggenschwiler*
 
-**私营网络安全规范发展努力**
+## 私营网络安全规范发展努力
 
 非国家行为体，尤其是技术公司，在网络空间的发展和扩张中发挥了关键作用。4 作为网络基础设施的运营商、产品设计者和服务提供商，他们为“国际……网络治理架构”（Radu 2014: 4）作出了重要贡献。除了生产硬件和软件，他们还开始推动全球网络安全规范和标准的倡导。迄今为止，这些规范性贡献的学术关注甚少。本章旨在更深入地理解技术公司在规范性方面的作用，并通过评估其在输出、结果和影响三个维度上的表现，揭示其活动的治理特质。5
 
 作为信息通信技术（ICT）的主要提供者，技术公司有强烈动力通过规范性策略来维持其商业模式。从技术公司的视角来看，规范是应对情境模糊性、避免对法律框架或政府主导市场干预进行昂贵修改的有用工具。虽然企业推动规范的主要动机往往是商业考量——降低成本和风险、保障运营、进入新市场或维护现有客户群体、提升公司声誉和合法性——但不应忽视那些非功利性的动机，即恪守忠实承诺和价值观，如用户隐私（Gorwa and Peez 2018）。并非所有技术公司在网络空间负责行为规范方面的活动都能用理性主义论证来解释。
 
-***Microsoft***
+### Microsoft
 
-最早在网络空间负责行为讨论中参与的企业之一是微软（Microsoft Security Response Center 2010）。
-
-公司估值超过 1 万亿美元（2019 年），位列全球四大科技巨头之列，另外三家分别是 Apple、Alphabet 和 Amazon。
+最早在网络空间负责行为讨论中参与的企业之一是微软（Microsoft Security Response Center 2010）。公司估值超过 1 万亿美元（2019 年），位列全球四大科技巨头之列，另外三家分别是 Apple、Alphabet 和 Amazon。
 
 在 2013 至 2016 年期间的若干规范导向项目之后，2017 年 2 月，微软总裁兼首席法律顾问 Brad Smith 提出了 *Digital Geneva Convention to Protect Cyberspace* 的构想（Microsoft 2013; McKay et al. 2014; Charney et al. 2016; Smith 2017）。该公约基于这样一种信念：在数字领域遏制恶劣行为，需要各国政府、私营部门和民间社会之间的深度协作。公约要求政府，包括：
 
-·
+- Refrain from attacking critical infrastructures (including civil and financial systems)
+- Abstain from engaging in espionage
+- Engage in vulnerabilities disclosure processes
+- Exercise restraint in developing cyber weapons and engaging in offensive activities, and
+- Assist private sector entities in securing cyberspace. (Microsoft 2017)
 
-·
-
-Refrain from attacking critical infrastructures (including civil and financial systems)
-
-·
-
-·
-
-Abstain from engaging in espionage
-
-·
-
-·
-
-Engage in vulnerabilities disclosure processes
-
- *Big tech’s push for norms* 191
-
-·
-
-·
-
-Exercise restraint in developing cyber weapons and engaging in offensive activities, and
-
-·
-
-·
-
-Assist private sector entities in securing cyberspace. (Microsoft 2017) 此外，公约还呼吁技术公司作为中立行为体行事，并建议设立一个独立的非政府组织，负责调查并公开归因（国家行为体）的网络攻击（Smith 2017; Maurer and Taylor 2018）。由于政府兴趣不大，微软的数字《日内瓦公约》随后被一项 *Cybersecurity Tech Accord* 所取代，该协议汇集了“全球科技公司，致力于保护其客户和用户”，于 14 个月后正式亮相。6
+此外，公约还呼吁技术公司作为中立行为体行事，并建议设立一个独立的非政府组织，负责调查并公开归因（国家行为体）的网络攻击（Smith 2017; Maurer and Taylor 2018）。由于政府兴趣不大，微软的数字《日内瓦公约》随后被一项 *Cybersecurity Tech Accord* 所取代，该协议汇集了“全球科技公司，致力于保护其客户和用户”，于 14 个月后正式亮相。6
 
 2018 年 9 月，微软推出了 *Digital Peace Now* 运动，呼吁公民通过网络卫生等措施保护数字空间，并敦促政府避免危及全球数字环境（Microsoft 2018）。仅两个月后，微软共同赞助了 *Paris Call for Trust and Security in Cyberspace*，该倡议于在第 12 届互联网治理论坛（IGF）在巴黎举办时正式提出，是当今最受广泛支持的多利益相关方和平安全虚拟领域工具之一（Ministère de l’Europe et des Affaires Étrangères 2018）。
 
@@ -3764,63 +2928,21 @@ Assist private sector entities in securing cyberspace. (Microsoft 2017) 此外�
 
 虽然乍一看这似乎是法国的倡议，但它在起源和内容上极大程度上受微软影响。据 Le Monde 和 WIRED 报道，正是微软的政治游说促成了 *Paris Call* 的发起（Matsakis 2018a; Untersinger 2018）。*Paris Call* 列出了九项旨在同州和非州实体产生共鸣的原则，具体包括：
 
-·
-
-•
-
-Prevent and recover from malicious cyber activities that threaten or cause significant, indiscriminate or systemic harm to individuals and critical infrastructure;
-
-·
-
-•
-
-Prevent activity that intentionally and substantially damages the general availability or integrity of the public core of the Internet;
-
-·
-
-•
-
-Strengthen our capacity to prevent malign interference by foreign actors aimed at undermining electoral processes through malicious cyber activities;
-
-·
-
-•
-
-Prevent ICT-enabled theft of intellectual property, including trade secrets or other confidential business information, with the intent of providing competitive advantages to companies or commercial sector;
-
-·
-
-•
-
-Develop ways to prevent the proliferation of malicious ICT tools and practices intended to cause harm;
-
-·
-
-•
-
-Strengthen the security of digital processes, products and services, throughout their lifecycle and supply chain;
-
-
-
-支持努力强化所有参与者的高级网络卫生；
-
-·
-
-•
-
-采取措施防止非国家行为体（包括私营部门）进行“反击”攻击，出于自身目的或其他非国家行为体的目的；
-
-·
-
-•
-
-推广国际负责任行为准则的广泛接受与实施，以及网络空间的信任建设措施。（外交与欧洲事务部 2018）
+- Prevent and recover from malicious cyber activities that threaten or cause significant, indiscriminate or systemic harm to individuals and critical infrastructure;
+- Prevent activity that intentionally and substantially damages the general availability or integrity of the public core of the Internet;
+- Strengthen our capacity to prevent malign interference by foreign actors aimed at undermining electoral processes through malicious cyber activities;
+- Prevent ICT-enabled theft of intellectual property, including trade secrets or other confidential business information, with the intent of providing competitive advantages to companies or commercial sector;
+- Develop ways to prevent the proliferation of malicious ICT tools and practices intended to cause harm;
+- Strengthen the security of digital processes, products and services, throughout their lifecycle and supply chain;
+- 支持努力强化所有参与者的高级网络卫生；
+- 采取措施防止非国家行为体（包括私营部门）进行“反击”攻击，出于自身目的或其他非国家行为体的目的；
+- 推广国际负责任行为准则的广泛接受与实施，以及网络空间的信任建设措施。（外交与欧洲事务部 2018）
 
 与其在规范性规定方面重新发明轮子，巴黎呼吁倡议试图重新对齐零散的讨论，提升网络安全规范形成过程的互补性。
 
 虽然巴黎呼吁在政府、私营行业、技术界、研究界、非政府组织和民间社会方面获得了相当广泛的支持，但也有若干著名公开回避的国家，包括美国、俄罗斯、中国、伊朗和以色列（Matsakis 2018b）。
 
-***Siemens***
+### Siemens
 
 在经历了包括 WannaCry 和 Petya/NotPetya 在内的多起大规模网络安全事件后，Siemens 与八家合作伙伴公司在 2018 慕尼黑安全会议期间发布了《数字领域信任宪章》（Charter of Trust）。鉴于网络安全是进一步经济增长和转型的关键支撑，宪章签署方承诺（重新）建立对数字技术和服务的信任。
 
@@ -3834,82 +2956,34 @@ Strengthen the security of digital processes, products and services, throughout 
 
 根据 2019 年 2 月 Siemens 发布的新闻稿，承包商承诺制定供应链第三方风险的基准要求，并承诺实施包括：
 
-·
-
-·
-
-在数据全生命周期内防止未经授权的访问
-
-·
-
-·
-
-在供应链中实施并执行身份访问控制及监控措施
-
-·
-
-·
-
-建立确保产品与服务真实性与可识别性的流程
-
-·
-
-·
-
-部署定期员工安全培训
+- 在数据全生命周期内防止未经授权的访问
+- 在供应链中实施并执行身份访问控制及监控措施
+- 建立确保产品与服务真实性与可识别性的流程
+- 部署定期员工安全培训
 
 为了传播其努力，宪章成员参与了多次圆桌活动，并支持包括《网络空间信任与安全呼吁》（Paris Call for Trust and Security in Cyberspace）在内的相关倡议。
 
-***Telefónica***
+### Telefónica
 
 2018 年 6 月 25 日，全球电信提供商 Telefónica 发布了其数字宪章的第二版。[8]（见下文链接）基于社会契约的理念，该宪章认为要继续享受数字技术的好处，必须现代化政策与规范，以确保公平竞争和创新。为此，Telefónica 主张需要一份《数字宪法》和一份《数字权利法案》，后者用于保护关键人类价值与基本权利。该契约应尽可能以人为本，并广泛得到利益相关方的参与与支持（Haas 2018）。
 
 围绕五项核心原则，Telefónica 的《新数字协议》主张：
 
-·
-
-·
-
-数字化应是包容性的过程，让人人都能参与
-
-·
-
-·
-
-社会与财政政策需根据当前市场与数字企业的现实进行调整
-
-·
-
-·
-
-用户应拥有对其数据及其用途的透明认知与控制权
-
-·
-
-·
-
-全球数字服务提供商应负责任并致力于社会发展
-
-·
-
-·
-
-社会政策与公民权利必须现代化。（Telefónica 2018）
+- 数字化应是包容性的过程，让人人都能参与
+- 社会与财政政策需根据当前市场与数字企业的现实进行调整
+- 用户应拥有对其数据及其用途的透明认知与控制权
+- 全球数字服务提供商应负责任并致力于社会发展
+- 社会政策与公民权利必须现代化。（Telefónica 2018）
 
 194 *Jacqueline Eggenschwiler*
 
 与微软和 Siemens 等公司推出的规范性工具不同，Telefónica 的《新数字协议》不对其他签署方开放加入。尽管如此，Telefónica 仍支持诸如《网络空间信任与安全呼吁》或《网络安全技术协议》（Cybersecurity Tech Accord）等倡议。
 
-***Kaspersky Lab***
+### Kaspersky Lab
 
 凭借超过 4 亿美元的用户基数、30 多家子公司以及超过 7.26 亿美元的营收，Kaspersky Lab 是全球最大的私营网络安全公司之一（Kaspersky Lab 2019a）。近年来，公司因 alleged 与俄罗斯政府的合作而受到审查。针对 collusion（勾结）指控、信任度下降以及运营禁令，Kaspersky Lab 于 2018 年底启动了全球透明计划（Global Transparency Initiative）。
 
-据 Kaspersky Lab 自行声明，全球透明计划（GTI）体现了公司致力于赢得并保持其最重要利益相关者——即客户——的信任。计划包括一系列可操作、具体的措施，邀请外部独立网络安全专家等参与验证公司产品、内部流程及业务运营的可靠性，并引入额外的问责机制，以进一步证明公司能够及时、彻底地应对安全问题。
-
-（Kaspersky Lab 2019b）
-
-
-
+据 Kaspersky Lab 自行声明，全球透明计划（GTI）体现了公司致力于赢得并保持其最重要利益相关者——即客户——的信任。计划包括一系列可操作、具体的措施，邀请外部独立网络安全专家等参与验证公司产品、内部流程及业务运营的可靠性，并引入额外的问责机制，以进一步证明公司能够及时、彻底地应对安全问题。（Kaspersky Lab 2019b）
 
 在范围和深度方面，卡斯佩斯基实验室的 GTI 似乎脱颖而出，与可比的基准有所不同。竞争对手麦肯菲（McAfee）例如，因担心外国干预和漏洞识别/滥用，于 2017 年决定关闭其源代码审查程序。9 在 GTI 的授权范围内，卡斯佩斯基实验室最近将其数据处理和存储单元从俄罗斯迁移到瑞士，并设立了四个透明中心，分别位于瑞士的苏黎世（Zurich）、西班牙的马德里（Madrid）、马来西亚的赛博亚（Cyberjaya）以及巴西的圣保罗（São Paulo）。后者作为独立审查源代码、软件更新、威胁检测规则以及其他技术和业务流程的专门场所，供外部各方（包括监管机构、负责网络安全的政府部门以及卡斯佩斯基实验室的企业合作伙伴）进行审查（Kaspersky Lab 2020）。
 
@@ -3917,13 +2991,11 @@ Strengthen the security of digital processes, products and services, throughout 
 
 trajectories.10 世界经济论坛网络安全中心治理与政策负责人丹尼尔·多布里戈夫斯基（Daniel Dobrygowski）曾指出，
 
-过去几年，以技术为导向的公司开始相互结成网络安全联盟和协议。这些联盟是政策制定者与其所针对的对象之间信任破裂的症状。数百家公司——其中包括空客（Airbus）、思科（Cisco）、惠普（HP）、微软（Microsoft）、西门子（Siemens）和电信公司（Telefónica）等全球最大企业——试图通过成立围绕未来互联网和数字网络目标的团体来填补这一信任空白。部分这些团体（…运营联盟）主要是实用性的，共享情报或技术数据；其他（…规范联盟）则明确旨在改变公司对网络安全漏洞的处理方式，并重新协商国家与公民之间的社会契约 *。
-
-（Dobrygowski 2019: 2）
+过去几年，以技术为导向的公司开始相互结成网络安全联盟和协议。这些联盟是政策制定者与其所针对的对象之间信任破裂的症状。数百家公司——其中包括空客（Airbus）、思科（Cisco）、惠普（HP）、微软（Microsoft）、西门子（Siemens）和电信公司（Telefónica）等全球最大企业——试图通过成立围绕未来互联网和数字网络目标的团体来填补这一信任空白。部分这些团体（…运营联盟）主要是实用性的，共享情报或技术数据；其他（…规范联盟）则明确旨在改变公司对网络安全漏洞的处理方式，并重新协商国家与公民之间的社会契约。（Dobrygowski 2019: 2）
 
 与运营联盟不同，规范联盟追求更广阔的政治目标，试图“维护网络安全中的信任与问责制，并推动和平与非侵略的集体行动——正如国家之间的协议那样”（Dobrygowski 2019: 2）。虽然规范联盟及技术公司整体推动规范的努力是重要的动员元素，但它们也引发了重要的问责与合法性问题：企业规范领导者如何对其提案及实施负责，技术公司从何获得规范权威？与正式的民主合法性不同，企业主体似乎依赖功能性（所执行的功能）、认识性（所传递的知识）和绩效性（可用的规模与能力）合法性的组合来为其规范活动辩护（Peters et al. 2009; Black 2017）。
 
-**Effectiveness review**
+## Effectiveness review
 
 关于企业行为者提出的关于 cyberspace 的观念性提案的有效性评估仍然寥寥无几且难以开展。
 
@@ -3933,63 +3005,33 @@ trajectories.10 世界经济论坛网络安全中心治理与政策负责人丹�
 
 *Table 13.1* Operationalization of the three effectiveness dimensions
 
-*Operationalization*
-
-**Output**
-
-Adoption of commitments and
-
-Accession to collective initiatives
-
-policies on cyber security-related
-
-issues
-
-**Outcome**
-
-Initiation of proactive measures to
-
-Change in company-self and the
-
-positively influence the level of
-
-behavior of third parties and
-
-cyber security
-
-implementation of initiatives
-
-**Impact**
-
-Reduction of global cyber insecurity Far-reaching systemic changes
-
-levels
+| Dimension | Operationalization |
+|-----------|-------------------|
+| **Output** | Adoption of commitments and policies on cyber security-related issues; Accession to collective initiatives |
+| **Outcome** | Initiation of proactive measures to positively influence the level of cyber security; Change in company-self and the behavior of third parties and implementation of initiatives |
+| **Impact** | Reduction of global cyber insecurity levels; Far-reaching systemic changes |
 
 problem solving or goal attainment resulting from the behavioral alterations of the stakeholders involved.
 
 虽然第一类（产出）和第二类（结果）便于分析非国家行为体的功能，第三类（影响）则有助于区分承诺与行动本身以及其更大的效应（Wolf 2010）。尽管在概念上是分开的，这三类“可以被视为因果链条的相互关联的部分”（Wolf 2010, 4）。
 
-这三个维度的运用方式如下：[](#index_split_004.html#p211)
+这三个维度的运用方式如下：
 
 在分析复杂度方面，评估产出相对简单，而评估结果和影响则更具挑战性。尤其是在影响方面，由于多因素影响、基准的转移以及反事实推理的困难，有效性评估变得复杂（Wolf 2010）。本章所呈现的结果需在上述局限性的背景下理解。
 
-***Output***
+### Output
 
 就产出而言，技术公司所开展的以规范为导向的网络安全减缓措施相对成功。自 2017 年联合国政府专家组（UN GGE）未达成共识的结果之后，技术公司发布了可观的候选规范数量及相应的倡导措施。无论是实质性条款还是制度承诺，包括微软（Microsoft）、西门子（Siemens）、电信公司（Telefónica）以及卡斯佩斯基实验室（Kaspersky Lab）在内的企业都为促进虚拟领域的全球和平与安全作出了重要贡献。
 
 这些企业与行业同行、非政府利益相关者以及政府的互动，使它们能够提出广受支持且具战略意义的规范性理念，例如呼吁更大程度的供应链和产品透明度，或对关键基础设施和个人进行广泛防护。
 
- *Big tech’s push for norms* 197
+*Big tech’s push for norms* 197
 
 技术公司所采取的措施也为凸显非国家行为体的观念性提案提供了重要跳板，并打开了传统辩论结构。例如，联合国裁军研究所（UNIDIR）主任雷纳塔·多安（Renata Dwan）曾准确指出，
 
-自二十多年来该议题一直在联合国议程上，我们现在正看到关于网络稳定性的含义及其服务对象的讨论扩大。最初聚焦于国家行为的辩论，如今正演变为关于私营部门、地区以及个人角色的更广泛讨论——以及如何构建增强发展权利、公平与获取空间的途径。
+自二十多年来该议题一直在联合国议程上，我们现在正看到关于网络稳定性的含义及其服务对象的讨论扩大。最初聚焦于国家行为的辩论，如今正演变为关于私营部门、地区以及个人角色的更广泛讨论——以及如何构建增强发展权利、公平与获取空间的途径。(EastWest Institute 2019)
 
-(EastWest Institute 2019)
-
-***Outcome***
-
-
+### Outcome
 
 进入`/path.to/xxx`目录，找到`xxx.json`。
 
@@ -4000,32 +3042,36 @@ problem solving or goal attainment resulting from the behavioral alterations of 
 之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
 
 ```
+
+
+
+```
 if (condVar > someVal) {console.log("xxx")}
 ```
+
+
 
 Vis‑à‑vis outcome, the technology companies analyzed as part of this chapter, have managed to secure seats at political tables, shape policy agendas, and affect ego and alter behavior. They have committed financial and human resources to their norms‑based strategies, and have put in place new organizational setups, including brick and mortar structures to substantiate and implement their norms‑based pledges. While Kaspersky Lab, for instance, has invested in the building of transparency centers (brick and mortar structures), Microsoft has bolstered its Digital Diplomacy unit (human resources). With a view to implementing its commitments stipulated as part of the Charter of Trust, Siemens has introduced a binding clause in its new contracts, which requests suppliers to comply with minimum binding cyber security requirements. “These requirements will apply primarily to suppliers of security‑critical components such as software, processors and electronic components for certain types of control units. \[…\] The goal is to better protect the digital supply chain against hacker attacks” (Siemens 2019c).
 
 Furthermore, Siemens and Microsoft have managed to inject their candidate norms into regional and international policy‑making processes. 11 In April 2019, for instance, the Council of the European Union issued a declaration maintaining that
 
-[t]he European Union and its Member States are strongly committed to the existing consensus [around the norms, rules and principles of responsible state behavior as articulated in the cumulative reports of the UN GGE], and to the further discussions in the United Nations, as well as to the commitments made with regard to the protection of intellectual property against cyber‑enabled theft in multilateral fora such as G20, or through the Paris Call for Trust and Security in Cyberspace.
+> [t]he European Union and its Member States are strongly committed to the existing consensus [around the norms, rules and principles of responsible state behavior as articulated in the cumulative reports of the UN GGE], and to the further discussions in the United Nations, as well as to the commitments made with regard to the protection of intellectual property against cyber‑enabled theft in multilateral fora such as G20, or through the Paris Call for Trust and Security in Cyberspace.
 
 (Council of the European Union 2019)
 
 198 *Jacqueline Eggenschwiler*
 
-Through cross‑signing initiatives, attending and conducting meetings at the sidelines of major political gatherings, including G7 and G20 meetings, UN‑led conventions or major security conferences, technology firms of the likes mentioned above have gained foothold in political arenas and have come to establish themselves as (quasi‑)diplomatic actors (Hurel and Lobato 2018b; Gorwa and
-
-Peez 2018).12
+Through cross‑signing initiatives, attending and conducting meetings at the sidelines of major political gatherings, including G7 and G20 meetings, UN‑led conventions or major security conferences, technology firms of the likes mentioned above have gained foothold in political arenas and have come to establish themselves as (quasi‑)diplomatic actors (Hurel and Lobato 2018b; Gorwa and Peez 2018).12
 
 The resonance and uptake of private normative efforts across fora such as the European Union are evidence of their successfully executed roles as norm leaders and also speak to their capacity to promote diplomatic and political changes.
 
-***Impact***
+## Impact
 
 Despite advocated broader intentions to increase the stability of the digital realm, the efforts conducted by Siemens, Kaspersky Lab, Telefónica, and Microsoft have not (yet) led to substantial changes apropos minimizing levels of cyber insecurity. Over the course of the past years, cyberattacks have risen continuously.
 
-The degrees of damage to the global economy as well as the costs for remediation have accelerated from a projected USD 500 billion, or about 0.7 % of global income, in 2014, to an estimated USD 600 billion, or 0.8 % of global GDP, in 2018. Among others, researchers have quoted the following reasons for the rise in costs:
+The degrees of damage to the global economy as well as the costs for remediation have accelerated from a projected USD 500 billion, or about 0.7 % of global income, in 2014, to an estimated USD 600 billion, or 0.8 % of global GDP, in 2018. Among others, researchers have quoted the following reasons for the rise in costs:
 
-quick adoption of new technologies by cybercriminals, \[a budding\] number of new users online (these tend to be from low‑income countries with weak cyber security), … the increased ease of committing cybercrime, with the growth of Cybercrime‑as‑a‑Service, an expanding number of cybercrime centers that now include Brazil, India, North Korea, and Vietnam, \[and\] a growing financial sophistication among top‑tier cybercriminals *.*
+> quick adoption of new technologies by cybercriminals, \[a budding\] number of new users online (these tend to be from low‑income countries with weak cyber security), … the increased ease of committing cybercrime, with the growth of Cybercrime‑as‑a‑Service, an expanding number of cybercrime centers that now include Brazil, India, North Korea, and Vietnam, \[and\] a growing financial sophistication among top‑tier cybercriminals *.*
 
 (Lewis 2018: 4)
 
@@ -4033,13 +3079,9 @@ While the global state of cyber security may have seen little improvement as a c
 
 Their commitment to stipulating responsible behavior in the digital environment has led to greater inclusion of civil society organizations and other private stakeholder in global cyber security problem‑solving efforts (Flohr et al. 2010).
 
-**Conclusion**
+## Conclusion
 
-As is evident from the remarks above, technology companies have come to execute different roles in global cyber security norm formation processes. Apart from having acted as brokers of technical knowhow and expertise (knowledge brokers), they have stimulated cooperation among like‑minded stakeholders (cooperation incubators), championed norms (norm leaders), and filled procedural as well as content‑related gaps (gap fillers). In the face of waning levels of trust in digital
-
-*Big tech’s push for norms* 199
-
-infrastructures and technologies, it is critical for industry actors to execute their different roles and develop and promote best practices and norms‑based interactions in an effort to (re)build confidence and create heightened degrees of predictability in cyberspace.
+As is evident from the remarks above, technology companies have come to execute different roles in global cyber security norm formation processes. Apart from having acted as brokers of technical knowhow and expertise (knowledge brokers), they have stimulated cooperation among like‑minded stakeholders (cooperation incubators), championed norms (norm leaders), and filled procedural as well as content‑related gaps (gap fillers). In the face of waning levels of trust in digital infrastructures and technologies, it is critical for industry actors to execute their different roles and develop and promote best practices and norms‑based interactions in an effort to (re)build confidence and create heightened degrees of predictability in cyberspace.
 
 Against the background of progress‑inhibiting discord among governments concerning the enactment of red lines in cyberspace, this chapter has analyzed and appraised the effectiveness of the normative contributions made by technology companies. Exploring the cases of Siemens, Kaspersky Lab, Telefónica, and Microsoft, it has argued that technology companies have come to exert considerable discursive and political power over discussions about responsible behavior in cyberspace. They have generated impressive numbers of candidate norms for increasing the stability and security of the digital realm. Furthermore, they have been successful at signaling their political intentions and promoting/injecting their normative proposals across high‑ranking diplomatic venues. While having been fairly effective across the dimensions of output and outcome, technology companies have struggled to effectuate far‑reaching systemic changes (impact).
 
@@ -4049,104 +3091,71 @@ As non‑state actors continue to be concerned about immediate and future threat
 
 In view of the fact that from a formal legal perspective, states are the ultimate enforcers of cyber security norms, it is vital for non‑state actors and state actors to work closer together, aid one another in their behavior‑shaping efforts, and engage in true cooperation. “[B]roader sets of allies working together to build trust and share responsibility” are more likely to achieve results with systemic effects (Dobrygowski 2019). What appears to be certain at this point is “that the development of cyber security norms \[is going to\] be a long process”, and that persistent engagement on the parts of governments and non‑state actors, as well as effective scaling are going to be key factors for success (Nye 2018).
 
-**Notes**
+## Notes
 
-1 In the remit of the United Nations, discussions about rules of the road to curb malicious behavior in cyberspace began to surface in the late 1990s. In 2003, in reaction to UN
+1. In the remit of the United Nations, discussions about rules of the road to curb malicious behavior in cyberspace began to surface in the late 1990s. In 2003, in reaction to UN
 
-
-
--   [第 58/32 号决议](https://wiki.example.org/58_32) 要求成立一个由政府专家组成的小组，研究数字领域的现有和新兴威胁，以及可能的规范措施来应对它们。第一个由总共六个小组中的一个于 2004 年召开。虽然 2009 至 2015 年期间的三次联合国 GGE 会议能够发布非约束性的共识报告，但 2004–2005 年和 2016–2017 年期间召开的两个小组并未产生相应的文件（Väljataga 2017）。在撰写时（2019 年 11 月），尚不清楚最新一次的联合国 GGE 是否能够达成共识文件。
+- [第 58/32 号决议](https://wiki.example.org/58_32) 要求成立一个由政府专家组成的小组，研究数字领域的现有和新兴威胁，以及可能的规范措施来应对它们。第一个由总共六个小组中的一个于 2004 年召开。虽然 2009 至 2015 年期间的三次联合国 GGE 会议能够发布非约束性的共识报告，但 2004–2005 年和 2016–2017 年期间召开的两个小组并未产生相应的文件（Väljataga 2017）。在撰写时（2019 年 11 月），尚不清楚最新一次的联合国 GGE 是否能够达成共识文件。
 
 200 `Jacqueline Eggenschwiler`
 
-2 例如，Finnemore 指出：“`[a]ctors who may feel nervous about being bound by formal laws may be willing to engage with groups governed by norms. Over time, these initially reluctant states, firms and individuals may become socialized into deeper acceptance of the norms`” (`Finnemore 2011`: 90)。
+2. 例如，Finnemore 指出：“`[a]ctors who may feel nervous about being bound by formal laws may be willing to engage with groups governed by norms. Over time, these initially reluctant states, firms and individuals may become socialized into deeper acceptance of the norms`” (`Finnemore 2011`: 90)。
 
-3 提到的倡议包括 `Tallinn Manual 2.0` (`NATO Cooperative Cyber Defence Centre of Excellence`)，`Digital Geneva Convention` (`Microsoft`)，`Global Commission on the Stability of Cyberspace` (`EastWest Institute & the Hague Centre for Strategic Studies`)，`Charter of Trust` (`Siemens`)，`Carnegie Endowment for International Peace`的 `Call for a Global Norm Against Manipulating the Integrity of Financial Data`，`Cybersecurity Tech Accord` (`Microsoft`)，`Digital Peace Now Campaign` (`Microsoft`)，`Paris Call` (`Microsoft`)，以及 `Kaspersky Lab`的 `Transparency Initiative`。
+3. 提到的倡议包括 `Tallinn Manual 2.0` (`NATO Cooperative Cyber Defence Centre of Excellence`)，`Digital Geneva Convention` (`Microsoft`)，`Global Commission on the Stability of Cyberspace` (`EastWest Institute & the Hague Centre for Strategic Studies`)，`Charter of Trust` (`Siemens`)，`Carnegie Endowment for International Peace`的 `Call for a Global Norm Against Manipulating the Integrity of Financial Data`，`Cybersecurity Tech Accord` (`Microsoft`)，`Digital Peace Now Campaign` (`Microsoft`)，`Paris Call` (`Microsoft`)，以及 `Kaspersky Lab`的 `Transparency Initiative`。
 
-4 与早期的通信技术相比，尽管其出现的背景带有政治色彩，主权行为体最初对在 cyberspace 中实施控制措施的意愿很低。基础设施的运营和管理大体上由为其开发做出贡献的专家负责，其中包括 `Barry M. Leiner`、`Vinton G. Cerf`、`David D. Clark`、`Robert E. Kahn`、`Leonard Kleinrock`、`Daniel C. Lynch`、`Jon Postel`、`Larry G. Roberts` 和 `Stephen Wolff`。监督是非正式的，反映了数字领域出现的学术背景。
+4. 与早期的通信技术相比，尽管其出现的背景带有政治色彩，主权行为体最初对在 cyberspace 中实施控制措施的意愿很低。基础设施的运营和管理大体上由为其开发做出贡献的专家负责，其中包括 `Barry M. Leiner`、`Vinton G. Cerf`、`David D. Clark`、`Robert E. Kahn`、`Leonard Kleinrock`、`Daniel C. Lynch`、`Jon Postel`、`Larry G. Roberts` 和 `Stephen Wolff`。监督是非正式的，反映了数字领域出现的学术背景。
 
-5 例外情况包括 `Hurel and Lobato (2018a)` 和 `Gorwa and Peez (2018)`。
+5. 例外情况包括 `Hurel and Lobato (2018a)` 和 `Gorwa and Peez (2018)`。
 
-6 为了捍卫和推进网络技术对社会的益处，`Cybersecurity Tech Accord` 呼吁私营实体遵守四项具体原则和行为，即：保护所有用户和客户免受恶意网络活动侵害，不论地理位置如何；反对针对平民和企业基础设施的网络攻击；赋能和支持用户、客户和开发者以加强网络安全；与各类志同道合的组织、民间社会和安全研究人员合作，跨越专有和开源技术，以增强网络安全。
+6. 为了捍卫和推进网络技术对社会的益处，`Cybersecurity Tech Accord` 呼吁私营实体遵守四项具体原则和行为，即：保护所有用户和客户免受恶意网络活动侵害，不论地理位置如何；反对针对平民和企业基础设施的网络攻击；赋能和支持用户、客户和开发者以加强网络安全；与各类志同道合的组织、民间社会和安全研究人员合作，跨越专有和开源技术，以增强网络安全。
 
-7 `Charter of Trust` 的第二项原则如下：“`Companies – and if necessary – governments must establish risk-based rules that ensure adequate protection across all IoT layers with clearly defined and mandatory requirements. Ensure confidentiality, authenticity, integrity and availability by setting baseline standards, such as:` `Identity and access management:` `Connected devices must have secure identities and safeguarding measures that only allow authorized users and devices to use them. Encryption:` `Connected devices must ensure confidentiality for data storage and transmission purposes wherever appropriate. Continuous protection:` `Companies must offer updates, upgrades and patches throughout a reasonable lifecycle for their products, systems and services via a secure update mechanism`”。
+7. `Charter of Trust` 的第二项原则如下：“`Companies – and if necessary – governments must establish risk-based rules that ensure adequate protection across all IoT layers with clearly defined and mandatory requirements. Ensure confidentiality, authenticity, integrity and availability by setting baseline standards, such as:` `Identity and access management:` `Connected devices must have secure identities and safeguarding measures that only allow authorized users and devices to use them. Encryption:` `Connected devices must ensure confidentiality for data storage and transmission purposes wherever appropriate. Continuous protection:` `Companies must offer updates, upgrades and patches throughout a reasonable lifecycle for their products, systems and services via a secure update mechanism`”。
 
-8 `Manifesto` 的第一版于 2014 年推出（`Telefónica 2014`）。
+8. `Manifesto` 的第一版于 2014 年推出（`Telefónica 2014`）。
 
-9 相比之下，`Kaspersky Lab`的 `Transparency Centres` 欢迎“`State agencies and regulators responsible for national cyber security and the protection of information systems (decreed as such by the respective local legislation);` `Prospective and existing enterprise partners and customers of Kaspersky anywhere in the world. Academia, media and information security community experts are being considered as potential invitees to the Transparency Centre in the future. Under no circumstances whatsoever will Kaspersky provide intelligence or law enforcement agencies that have a mandate and/` `or capability for cyber-offensive operations with access to the Transparency Centre.` The security information and infrastructure in the Transparency Centre are provided by `Kaspersky` strictly for consultation purposes only. Any actions to modify the company’s source code, software updates, or threat detection rules are forbidden and will be prevented by the `TC Steering team`; any abuse will be reported to the local law enforcement agency” (`Kaspersky Lab 2019b`) `*`。
+9. 相比之下，`Kaspersky Lab`的 `Transparency Centres` 欢迎“`State agencies and regulators responsible for national cyber security and the protection of information systems (decreed as such by the respective local legislation);` `Prospective and existing enterprise partners and customers of Kaspersky anywhere in the world. Academia, media and information security community experts are being considered as potential invitees to the Transparency Centre in the future. Under no circumstances whatsoever will Kaspersky provide intelligence or law enforcement agencies that have a mandate and/` `or capability for cyber-offensive operations with access to the Transparency Centre.` The security information and infrastructure in the Transparency Centre are provided by `Kaspersky` strictly for consultation purposes only. Any actions to modify the company’s source code, software updates, or threat detection rules are forbidden and will be prevented by the `TC Steering team`; any abuse will be reported to the local law enforcement agency” (`Kaspersky Lab 2019b`) `*`。
 
 `Big tech’s push for norms` 201
 
-10 根据 `Eugene Kaspersky` 的说法，“`[t]ransparency is becoming the new normal for the IT industry – and for the cyber security industry in particular`” (`Business Wire 2018`)。
+10. 根据 `Eugene Kaspersky` 的说法，“`[t]ransparency is becoming the new normal for the IT industry – and for the cyber security industry in particular`” (`Business Wire 2018`)。
 
-11 例如，2019 年 4 月，`Charter of Trust` 的合作伙伴举行会议，讨论了 `EU Cybersecurity Act` 的最新发展情况，并与欧洲委员会负责人 `Despina Spanou` 一起提出了下一步行动的建议（参见 `Siemens 2019b`）。
+11. 例如，2019 年 4 月，`Charter of Trust` 的合作伙伴举行会议，讨论了 `EU Cybersecurity Act` 的最新发展情况，并与欧洲委员会负责人 `Despina Spanou` 一起提出了下一步行动的建议（参见 `Siemens 2019b`）。
 
-12 将他们的行动称为 `Charter`、`Accord`、`Manifesto` 或 `Convention`，凸显了这些行为体的政治野心。
+12. 将他们的行动称为 `Charter`、`Accord`、`Manifesto` 或 `Convention`，凸显了这些行为体的政治野心。
 
-**References**
+## References
 
 所有链接在 2021 年 8 月 23 日检查。
 
-`Abbott, K. W., and Snidal, D.` (`2000`). `Hard and Soft Law in International Governance`.
+`Abbott, K. W., and Snidal, D.` (`2000`). `Hard and Soft Law in International Governance`. `International Organization`, 54(`3`): 421–456.
 
-`International Organization`, 54(`3`): 421–456.
-
-`Barlow, J. P.` (`1996`). `A Declaration of the Independence of Cyberspace`. Retrieved from:
-
-`https://perma .cc /DRJ9 -WEGT.`
+`Barlow, J. P.` (`1996`). `A Declaration of the Independence of Cyberspace`. Retrieved from: `https://perma.cc/DRJ9-WEGT.`
 
 `Björkdahl, A` (`2002`). `Norms in International Relations: Some Conceptual and Methodological Reflections`. `Cambridge Review of International Affairs`, 15(`1`): 9–23.
 
 `Black, J.` (`2017`). “`Says Who?`” `Liquid Authority and Interpretive Control in Transnational Regulatory Regimes`. `International Theory`, 9(`2`): 286–310.
 
-`Business Wire.` (`2018, November 13`). `Kaspersky Lab Starts Data Processing for European Users in Zurich and Opens Its First Transparency Center`. Retrieved from: `https://`
+`Business Wire.` (`2018, November 13`). `Kaspersky Lab Starts Data Processing for European Users in Zurich and Opens Its First Transparency Center`. Retrieved from: `https://www.businesswire.com/news/home/2018113005169/en/Kaspersky-Lab-Starts-Data-Processing-European-Users.`
 
-`www .businesswire .com /news /home /2018113005169 /en /Kaspersky -Lab -Starts -Data`
+`Carbonara, E.` (`2017`). `Law and Social Norms`. In `F. Parisi` (ed.), `Columbia Law Review.` `Vol. 1`. `Oxford`: `Oxford University Press`.
 
-\-Processing -European -Users.
+`Charney, S., English, E., Kleiner, A., Malisevic, N., McKay, A., Neutze, J., and Nicholas, P.` (`2016`). `From Articulation to Implementation: Enabling Progress on Cyber Security Norms`. `Microsoft`. Retrieved from: `https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/REVmc8.`
 
-`Carbonara, E.` (`2017`). `Law and Social Norms`. In `F. Parisi` (ed.), `Columbia Law Review.`
+`Council of the European Union.` (`2019, April 12`). `Declaration by the High Representative on Behalf of the EU on Respect for the Rules-Based Order in Cyberspace`. `Press Releases`. Retrieved from: `https://www.consilium.europa.eu/en/press/press-releases/2019/04/12/declaration-by-the-high-representative-on-behalf-of-the-eu-on-respect-for-the-rules-based-order-in-cyberspace/.`
 
-`Vol. 1`. `Oxford`: `Oxford University Press`.
-
-`Charney, S., English, E., Kleiner, A., Malisevic, N., McKay, A., Neutze, J., and Nicholas, P.` (`2016`). `From Articulation to Implementation: Enabling Progress on Cyber Security Norms`. `Microsoft`. Retrieved from: `https://query .prod .cms .rt .microsoft .com /cms /api /`
-
-`am /binary /REVmc8.`
-
-`Council of the European Union.` (`2019, April 12`). `Declaration by the High Representative on Behalf of the EU on Respect for the Rules-Based Order in Cyberspace`. `Press Releases`. Retrieved from: `https://www .consilium .europa .eu /en /press /press -releases`
-
-`/2019 /04 /12 /declaration -by -the -high -representative -on -behalf -of -the -eu -on -respect -for`
-
-\-the -rules -based -order -in -cyberspace/.
-
-
-
-
-Dobrygowski, D. (2019, 9 月 11 日). 为何企业正在组建网络安全联盟。 *Harvard Business Review*。 取自: [`hbr.org/2019/09/why`](https://hbr.org)
-
-[-companies -are -forming -cybersecurity -alliances](https://hbr.org)。
+Dobrygowski, D. (2019, 9 月 11 日). 为何企业正在组建网络安全联盟。 *Harvard Business Review*。 取自: [`hbr.org/2019/09/why-companies-are-forming-cybersecurity-alliances`](https://hbr.org)。
 
 Dunn Cavelty, M., 和 Wenger, A. (2020). 网络安全与安全政治相遇：复杂技术、碎片化政治与网络科学。 *Contemporary Security Policy*，41(1)：5–32。
 
-EastWest Institute. (2019, 2 月 7 日). 全球安全委员会的网络稳定听证会在联合国举行。 *News*。 取自: [`www.eastwest.ngo/idea/global-commissions`](https://www.eastwest.ngo)
+EastWest Institute. (2019, 2 月 7 日). 全球安全委员会的网络稳定听证会在联合国举行。 *News*。 取自: [`www.eastwest.ngo/idea/global-commissions-cyber-stability-hearings-un.`](https://www.eastwest.ngo)
 
-[-cyber -stability -hearings -un.](https://www.eastwest.ngo)
-
-European Commission. (2018). 《安全数字世界的信任宪章》。公告。
-
-取自 [`ec.europa.eu/commission/commissioners/2014-2019/bienkowska`](https://ec.europa.eu)
-
-[/announcements /charter -trust -secure -digital -world \_en.](https://ec.europa.eu)
+European Commission. (2018). 《安全数字世界的信任宪章》。公告。取自 [`ec.europa.eu/commission/commissioners/2014-2019/bienkowska/announcements/charter-trust-secure-digital-world_en.`](https://ec.europa.eu)
 
 202 *Jacqueline Eggenschwiler*
 
 Ferguson, W. D. (2019). 面对不确定性：规范与正式机构作为共享心智模型的作用。SASE 小型会议——不确定的未来——经济决策。London。 取自: [`perma.cc/YFD2-39G3.`](https://perma.cc)
 
-Finnemore, M. (2011). 培养国际网络安全规范。 在 K. M. Lord 和 T. Sharp（编）中，*美国的网络未来：信息时代的安全与繁荣*。
-
-Washington, DC：新美国安全中心，第 87–102 页。 取自:
-
-[`perma.cc/CBZ2-PHT4`](https://perma.cc)。
+Finnemore, M. (2011). 培养国际网络安全规范。 在 K. M. Lord 和 T. Sharp（编）中，*美国的网络未来：信息时代的安全与繁荣*。Washington, DC：新美国安全中心，第 87–102 页。 取自: [`perma.cc/CBZ2-PHT4`](https://perma.cc)。
 
 Finnemore, M. (2017). 网络安全与规范概念。卡内基国际和平基金会。 取自: [`perma.cc/K7QA-UL6G`](https://perma.cc)。
 
@@ -4154,17 +3163,11 @@ Finnemore, M., 和 Sikkink, K. (1998). 国际规范动态与政治变革。 *Int
 
 Flohr, A., Rieth, L., Schwindenhammer, S., 和 Wolf, K. D. (2010). *企业在全球治理中的作用*。 London：Palgrave Macmillan UK。
 
-Gorwa, R., 和 Peez, A. (2018). 科技公司作为网络安全规范企业家：对微软《网络安全科技协议》的批判性分析。 *SocArXiv Papers*。
-
-[取自: https://osf.io/preprints/socarxiv/g56c9/.](https://osf.io)
+Gorwa, R., 和 Peez, A. (2018). 科技公司作为网络安全规范企业家：对微软《网络安全科技协议》的批判性分析。 *SocArXiv Papers*。 取自: https://osf.io/preprints/socarxiv/g56c9/.
 
 Grigsby, A. (2017). 网络规范的终结。 *Survival*，59(6)：109–122。
 
-Haas, M. (2018). 我们需要一个新的数字协议，让每个人都能从数字化中受益。Telefónica。 取自: [`www.telefonica.de/fixed/news/6135`](https://www.telefonica.de)
-
-[/article -by -ceo -markus -haas -we -need -a -new -digital -deal -so -that -everyone -benefits](https://www.telefonica.de)
-
-[-from -digitalisation .html.](https://www.telefonica.de)
+Haas, M. (2018). 我们需要一个新的数字协议，让每个人都能从数字化中受益。Telefónica。 取自: [`www.telefonica.de/fixed/news/6135/article-by-ceo-markus-haas-we-need-a-new-digital-deal-so-that-everyone-benefits-from-digitalisation.html.`](https://www.telefonica.de)
 
 Hampson, F. O., Sulmeyer, M., Hathaway, M., Lewis, J. A., Nye, J. S., Tikk, E., Twomey, P., 和 Donahoe, E. (2017). 超越规范：应对国际网络安全挑战的新方法。特别报告。Waterloo, ON。 [`perma.cc/U8YX-ABDW.`](https://perma.cc)
 
@@ -4174,47 +3177,27 @@ Henriksen, A. (2019). 联合国 GGE 网络治理进程的终点：网络空间�
 
 Hern, A. (2017, 12 月 30 日). WannaCry、Petya、NotPetya：2017 年勒索软件如何袭击大型企业。 *The Guardian*。 取自: [`perma.cc/CNC7-ZSCR.`](https://perma.cc)
 
-Hinck, G. (2018, 6 月 25 日). 私营部门在网络规范中的倡议：摘要。
+Hinck, G. (2018, 6 月 25 日). 私营部门在网络规范中的倡议：摘要。Lawfare。 取自: [`perma.cc/MR4K-VR4K.`](https://perma.cc)
 
-Lawfare。 取自: [`perma.cc/MR4K-VR4K.`](https://perma.cc)
+Horenbeeck, M. Van, Kumar, S., Van Aardt, F., Mohr, S., Birarda, C., Hurel, L. M., Hering, J., Hollis, D., 和 Kulesza, J. (2019). 网络安全协议。Internet Governance Forum 背景论文。 取自: [`www.intgovforum.org/multilingual/filedepot_download/4904/1658.`](http://www.intgovforum.org)
 
-Horenbeeck, M. Van, Kumar, S., Van Aardt, F., Mohr, S., Birarda, C., Hurel, L. M., Hering, J., Hollis, D., 和 Kulesza, J. (2019). 网络安全协议。Internet Governance Forum 背景论文。 取自: [`www.intgovforum.org/multilingual/`](http://www.intgovforum.org)
-
-[filedepot \_download /4904 /1658.](http://www.intgovforum.org)
-
-Hurel, L. M., 和 Lobato, L. (2018a). 拆解网络规范：私营公司作为规范企业家。 *SSRN Electronic Journal*。 取自: [`doi.org/10.2139/ssrn.3107237`](https://doi.org/10.2139/ssrn.3107237)
-
-[.2139 /ssrn .3107237.](https://doi.org/10.2139/ssrn.3107237)
+Hurel, L. M., 和 Lobato, L. (2018a). 拆解网络规范：私营公司作为规范企业家。 *SSRN Electronic Journal*。 取自: [`doi.org/10.2139/ssrn.3107237`](https://doi.org/10.2139/ssrn.3107237)。
 
 Hurel, L. M., 和 Lobato, L. (2018b). 拆解网络规范：私营公司作为规范企业家。 *Journal of Cyber Policy*，3(1)：61–76。
 
-Kaeser, J. (2018, 5 月 22 日). 共同提升数字世界的安全。
-
-*LinkedIn Pulse*。 取自: [`www.linkedin.com/pulse/working-together`](https://www.linkedin.com)
-
-[-more -security -digital -world -joe -kaeser](https://www.linkedin.com)。
+Kaeser, J. (2018, 5 月 22 日). 共同提升数字世界的安全。*LinkedIn Pulse*。 取自: [`www.linkedin.com/pulse/working-together-more-security-digital-world-joe-kaeser`](https://www.linkedin.com)。
 
 Kaspersky Lab. (2019a). 关于我们。 取自: [`www.kaspersky.com/about`](https://www.kaspersky.com/about)
 
-Kaspersky Lab. (2019b). 透明度中心。 取自: [`perma.cc/F826`](https://perma.cc)
+Kaspersky Lab. (2019b). 透明度中心。 取自: [`perma.cc/F826-R4TY`](https://perma.cc)。
 
-[-R4TY](https://perma.cc)。
-
-Kaspersky Lab. (2020). Kaspersky 的全球透明度倡议状态更新。博客。
-
-[取自: https://perma.cc/Q47K-HMUS](https://perma.cc)。
+Kaspersky Lab. (2020). Kaspersky 的全球透明度倡议状态更新。博客。取自: https://perma.cc/Q47K-HMUS
 
 *Big tech’s push for norms* 203
 
-Kavanagh, C. (2017). 联合国、网络空间与 21 世纪的国际和平与安全：应对复杂性。 *UNIDIR Resources*。Geneva。
+Kavanagh, C. (2017). 联合国、网络空间与 21 世纪的国际和平与安全：应对复杂性。 *UNIDIR Resources*。Geneva。取自: https://perma.cc/ZT92-6GEA.
 
-[取自: https://perma.cc/ZT92-6GEA.](https://perma.cc)
-
-Korzak, E. (2017, 7 月 31 日). 联合国网络安全小组会议：一个时代的终结？ *The Diplomat*。
-
-取自: [`thediplomat.com/2017/07/un-gge-on-cybersecurity-have-china`](https://thediplomat.com)
-
-[-and -russia -just -made -cyberspace -less -safe/.](https://thediplomat.com)
+Korzak, E. (2017, 7 月 31 日). 联合国网络安全小组会议：一个时代的终结？ *The Diplomat*。取自: [`thediplomat.com/2017/07/un-gge-on-cybersecurity-have-china-and-russia-just-made-cyberspace-less-safe/.`](https://thediplomat.com)
 
 Leuprecht, C., Szeman, J., 和 Skillicorn, D. B. (2019). 网络攻击的达摩克利斯之剑：政策不确定性与集体不安全感。 *Contemporary Security Policy*，40(3)：382–407。
 
@@ -4222,32 +3205,23 @@ Lewis, J. (2018). 网络犯罪的经济影响——没有放缓迹象。CSIS/McA
 
 Mačák, K. (2017). 从网络规范到网络规则：重新调动国家作为立法者。 *Leiden Journal of International Law*，30(4)：877–899。
 
-Matsakis, L. (2018a, 11 月 12 日). 美国未签署《网络信任与安全呼吁》。 *Wired*。 取自: [`www.wired.com/story/paris`](https://www.wired.com)
-
-[-call -cybersecurity -united -states -microsoft/.](https://www.wired.com)
+Matsakis, L. (2018a, 11 月 12 日). 美国未签署《网络信任与安全呼吁》。 *Wired*。 取自: [`www.wired.com/story/paris-call-cybersecurity-united-states-microsoft/.`](https://www.wired.com)
 
 Matsakis, L. (2018b, 11 月 12 日). 美国缺席国际网络安全协议。 *Wired*。 取自: [`perma.cc/6F5B-V24W.`](https://perma.cc)
 
-Maurer, T. and Taylor, K. (2018, 3 月 2 日). 国际网络规范的展望：未来进步的三条道路。 *Just Security*。 取自: [`perma.cc/XY32`](https://perma.cc)
-
-[-6PEX.](https://perma.cc)
+Maurer, T. and Taylor, K. (2018, 3 月 2 日). 国际网络规范的展望：未来进步的三条道路。 *Just Security*。 取自: [`perma.cc/XY32-6PEX.`](https://perma.cc)
 
 McKay, A., Neutze, J., Nicholas, P., 和 Sullivan, K. (2014, 12 月 3 日). 国际网络安全规范。微软博客。 取自: [`blogs.microsoft.com/cybertrust/2014/12/03/proposed-cybersecurity-norms/.`](https://blogs.microsoft.com)
 
+- [法国外交与欧洲事务部。 (2018)。网络安全：巴黎呼吁 2018 年 11 月 12 日关于信任与网络空间中的安全。 *法国外交政策*。](https://perma.cc/8P82-X5JU)
 
-
-
--   [法国外交与欧洲事务部。 (2018)。网络安全：巴黎呼吁 2018 年 11 月 12 日关于信任与网络空间中的安全。 *法国外交政策*。](https://perma.cc/8P82-X5JU)
-
-[Retrieved from: https://perma.cc/8P82-X5JU](https://perma.cc/8P82-X5JU)
+Retrieved from: https://perma.cc/8P82-X5JU
 
 Nye, J. S. Jr. (2018, March 12). 如何发展新的网络安全规范？贝尔弗中心 for Science and International Affairs。 *分析与评论*。 Retrieved from: https://perma.cc/9NLG-HZJC。
 
 Nye, J. S. Jr., and Donahue, J. D. (2000). *全球化世界中的治理*。华盛顿特区：布鲁金斯学会出版社。
 
-Peters, A., Förster, T., and Koechlin, L. (2009)。走向非国家行为体作为有效、合法且负责任的标准制定者。非国家行为体作为标准制定者。
-
-In A. Peters, L. Koechlin, T. Förster, and G. Fenner Zinkernagel (eds), *非国家行为体作为标准制定者*。剑桥：剑桥大学出版社，第 492–562 页。
+Peters, A., Förster, T., and Koechlin, L. (2009)。走向非国家行为体作为有效、合法且负责任的标准制定者。非国家行为体作为标准制定者。In A. Peters, L. Koechlin, T. Förster, and G. Fenner Zinkernagel (eds), *非国家行为体作为标准制定者*。剑桥：剑桥大学出版社，第 492–562 页。
 
 Radu, R. (2014)。权力技术与强大技术：全球治理与网络空间中的安全。在 J.-F. Kremer 和 B. Müller (eds), *网络空间与国际关系*。柏林、海德堡：斯普林格，第 3–20 页。
 
@@ -4289,11 +3263,9 @@ Wolf, K. D. (2010, July)。产出、成果、影响：聚焦分析企业在和�
 
 10.4324/9781003110224-16
 
-14 Disrupting the second
+# 14 Disrupting the second oldest profession
 
-oldest profession
-
-The impact of cyber on intelligence
+## The impact of cyber on intelligence
 
 Danny Steed
 
@@ -4303,14 +3275,11 @@ Danny Steed
 
 本章的动机正是这一问题：情报界如何适应数字时代带来的挑战。在此过程中，将揭示那些为保持安全追求相关性所采取的行动，不仅开创了（Buchanan 2020: 329）数字时代情报的方法，而且对网络空间产生了不成比例的冲击。这种情报带来的冲击在推动网络安全政治转型方面发挥了主导作用，其实践推动了社会技术不确定性，甚至可能加剧地缘政治利益的碎片化，正如本文作者所论证的那样。
 
-
-
-
 本章首先将详细阐述在冷战结束后向情报界提出的数字挑战的本质，随后详细说明美国和英国情报机构为“掌握互联网”所采取的具体行动。本章的主要焦点随后转向情报行动对自身网络安全政治的后果。通过审视三个核心的社会技术不确定性领域——保密性的演变、情报作为扩散的代理人、以及情报作为 DOI: [10.4324/9781003110224-16](https://doi.org/10.4324/9781003110224-16) 的推动者——我们将展示第二古老的职业实际上在网络安全政治的碎片化方面比互联网的出现对情报职业的影响更为显著。
 
 情报界曾是构成国际体系中“缺失维度”（Andrew and Dilkes 1985）的隐形行为体，通过利用破坏性的网络工具并在数字时代适应社会技术转型，情报机构已成为国际体系的核心，甚至是主导性的行为体，推动着网络安全政治的碎片化。不论好坏，间谍已从阴影中走出，融入了全球每个人所使用的代码和光纤之中。
 
-**转型：挑战、恐惧与机遇**
+## 转型：挑战、恐惧与机遇
 
 Whyte 和 Mazanec 正确地宣称，计算机与间谍之间存在“不可破除的婚姻”（Whyte and Mazanec 2019: 61），技术的发展与间谍实践高度同步。计算机本身的起源正是二战期间同盟国在破解纳粹密码中的关键（Whyte and Mazanec 2019; Andrew 2018），其中最著名的是恩尼格玛（Enigma）。间谍所“紧密相连”的技术所带来的最严峻挑战，则在冷战后才真正显现——这些技术挑战了情报数十年建立的整套基础设施，即从模拟向数字世界的转变。
 
@@ -4336,14 +3305,11 @@ Whyte 和 Mazanec 正确地宣称，计算机与间谍之间存在“不可破�
 
 PRISM 则与众多大型技术公司合作，以便实现访问和共享。在泄露中，斯诺登（Snowden）明确列出了 Microsoft、Yahoo!、Google、Facebook、Paltalk、YouTube、Skype 和 Apple 等公司，这些公司愿意为 NSA 提供浏览数据，实现“上游收集”（upstream collection）（Snowden 2019: 347）。斯诺登还详细描述了两种战术工具——TURMOIL 和 TURBINE。TURMOIL 是一种被动工具，用于过滤所有流量。“当你看到请求时，它会检查元数据中的选择器……标记为值得更深入审查的内容；如果被标记，该数据会被转交给 TURBINE，设计用于主动介入用户，确定并发送适用的软件漏洞进行部署，以实现对该用户的监控”（Snowden 2019: 348）。
 
+在协同作用下，NSA 和 GCHQ 提供了在数字时代竞争所需的前提条件，即“首先拥有信息”。掌握互联网的首要任务是收集整个“干草堆”。或者说，正如另一句现在广为人知的短语所描述的动态：“从互联网获取信息就像从消防栓（hydrant）喝水”。¹ 美国和英国情报机构已经解决了如何充分吸收这些信息、将其交给自动化分析、并优先处理结果以便进一步行动的问题。
 
+## 情报行动的后果
 
-
-**在协同作用下，NSA 和 GCHQ 提供了在数字时代竞争所需的前提条件，即“首先拥有信息”。** 掌握互联网的首要任务是收集整个“干草堆”。或者说，正如另一句现在广为人知的短语所描述的动态：“从互联网获取信息就像从消防栓（hydrant）喝水”。¹ 美国和英国情报机构已经解决了如何充分吸收这些信息、将其交给自动化分析、并优先处理结果以便进一步行动的问题。
-
-**情报行动的后果**
-
-**对网络安全政治的影响**
+### 对网络安全政治的影响
 
 尽管情报界可能已经掌握了互联网，并制定了保持有效性的策略，但他们的行动带来了更广泛的后果，必须予以考虑。情报界行动所凸显的三个因社会技术不确定性导致的政治碎片化的后果是：保密性、扩散性和规范性。
 
@@ -4367,9 +3333,6 @@ Lustgarten 的结论仍然十分有效，即“英国法律的简短反映了它
 
 在提供具体例子之前，有必要简要讨论代码是否被视为 cyber “武器”。¹
 
-
-
-
 类比代码与武器在阐释扩散相关功能时尤其有用，但应注意 Thomas Rid 对此类分类的抵制。Rid 认为计算机代码不具备传统武器的强制力（即杀人能力），因此将其视为武器可能是一种类别错误（Rid and McBurney 2012）。缺乏强制能力的证明是 Valeriano、Jensen 和 Maness 所持并发展的观点，他们仍对网络行动在实现超出有限政治目标的效果方面的经验评分持怀疑态度（Valeriano 等 2018）。相反，Lucas Kello 认为“缺乏死亡和大多数直接效果的具体性并不具备说服力”，并在其论点中核心使用“虚拟武器”一词（Kello 2017: 61）。
 
 在这两种立场之间正在形成妥协立场。Lin 和 Zegart 提出若干独特特征，以便在战略语境中思考：获取情报的工具与造成伤害的工具难以区分；网络攻击针对的是无形目标；目标的特性极大影响攻击效果；对目标的事前互动通常是实际网络攻击的前提；而 cyberspace 的目标往往是短暂的，易于像物理目标一样消失（Lin and Zegart 2018: 607）。Van Puyvelde 和 Brantly 则采取了上述两派之间的妥协立场，将网络“能力”统称为一般分类，指出随着能力的扩展和发展，相关争论也将随之发展（Van Puyvelde and Brantly 2019: 74）。
@@ -4382,13 +3345,20 @@ Lustgarten 的结论仍然十分有效，即“英国法律的简短反映了它
 
 这种法律模糊性，加上信息时代那些以信息本身为职业的人应当是主要行动者的现实，共同促成了一种安全动态。该动态是：情报拥有合法的安全目的，以实现其目标；但其数字上的“不和平”（Kello 2017: 249）的行为却加剧了这种不安全感，并通过树立规范先例，鼓励——甚至通过无意的扩散——教育和武装众多其他行为体，无论是国家性还是非国家性的形态。判断这种规范设定行为是否正确或需要纠正已超出本章范围。
 
-**Cyber disrupting intelligence, or intelligence disrupting cyber?**  
+## Cyber disrupting intelligence, or intelligence disrupting cyber?
+
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
+
+1. 运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
 
 
 
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
+```
+if (condVar > someVal) {console.log("xxx")}
+```
 
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者理查德·费曼。
+1. 运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，难以遗忘。
 
 ```
 if (condVar > someVal) {console.log("xxx")}
@@ -4396,23 +3366,13 @@ if (condVar > someVal) {console.log("xxx")}
 
 
 
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
+## Disrupting the second oldest profession
 
 The resulting socio-technological uncertainty that is faced is simple, which geopolitical vision wins this battle for the soul of the internet?
 
-For authoritarian nations, cyberspace and the internet have always been viewed as threats to their national security, for the liberal West, they were seen as tools of liberation for the individual and a mechanism for prosperity to the market-driven state. These perspectives are reflections of respective strategic cultures adapting to the presence of cyberspace, cultures which are “deeply rooted in history, economics, and strategic challenges” (Segal 2016: 361) that extend far beyond the experience of only the internet. Hughes Wilson rightly, although incompletely, identifies the key issues facing these core protagonists in the future of cyber security politics. “For China and other autocratic governments, the priority is to control citizens” access to information; whereas for the more liberal West, the key
+For authoritarian nations, cyberspace and the internet have always been viewed as threats to their national security, for the liberal West, they were seen as tools of liberation for the individual and a mechanism for prosperity to the market-driven state. These perspectives are reflections of respective strategic cultures adapting to the presence of cyberspace, cultures which are “deeply rooted in history, economics, and strategic challenges” (Segal 2016: 361) that extend far beyond the experience of only the internet. Hughes Wilson rightly, although incompletely, identifies the key issues facing these core protagonists in the future of cyber security politics. “For China and other autocratic governments, the priority is to control citizens’ access to information; whereas for the more liberal West, the key concern is the struggle to protect intellectual property rights and technological supremacy” (Hughes Wilson 2017: 635). Hughes Wilson’s view is incomplete in failing to identify the West’s battle to protect the balance between security and liberty as an additional key domestic concern. It should be clear, however, that the trajectory of cyber security politics has extended far beyond the original concerns of intelligence actors, who sought simply to adapt to the digital age and ensure continued access to information. Their actions have arguably contributed to creating one of the biggest geopolitical battlegrounds of the 21st century.
 
-*Disrupting the second oldest profession* 215
-
-concern is the struggle to protect intellectual property rights and technological supremacy” (Hughes Wilson 2017: 635). Hughes Wilson’s view is incomplete in failing to identify the West’s battle to protect the balance between security and liberty as an additional key domestic concern. It should be clear, however, that the trajectory of cyber security politics has extended far beyond the original concerns of intelligence actors, who sought simply to adapt to the digital age and ensure continued access to information. Their actions have arguably contributed to creating one of the biggest geopolitical battlegrounds of the 21st century.
-
-**Conclusion**
+### Conclusion
 
 This chapter began with the intent of mapping some of the impacts and changes that cyberspace and cyber security brought to the business of intelligence actors.
 
@@ -4422,41 +3382,27 @@ There are three broad conclusions to offer underneath this overarching position.
 
 Broeders is right to note that, unlike in the past, the collection of information itself is “less the issue than keeping secret the fact you are collecting it” (Broeders 2016: 302), which has also been made increasingly difficult by the exposure of intelligence methods and tools. Combined with the rise of the post-trust world, where accepted realities are subject to distortion and challenge, and “virality can overwhelm truth” (Singer and Brooking 2019: 46), increased pressure is placed on an old challenge. This is whether it is the duty of intelligence to *remove* or *assess* uncertainty itself. Intelligence Studies may need to revise its traditional view that the latter is to be sought (Friedman and Zeckhauser 2012: 845) in light of continued concerns around election interference and the resurgence of disinformation campaigns.
 
-Second, that intelligence has become a dominant source of proliferation, enabling the multitudes of diverse actors that also share and use cyberspace. A form of “collateral damage” now accompanies intelligence work that must sift through the stacks of data gathered from the civilian population at large. If the
-
-“whole haystack” must be collected, then it becomes surely inevitable that some kind of impact will be felt among those within the haystack. Additionally, and
-
-216 *Danny Steed*
-
-closely linked to the declining half-life of secrecy, is the exposure of intelligence sources and methods more routinely. By moving from passive to ever more proactive gatherers of information, intelligence services pioneer methods in intrusion, exploitation, and analysis that proliferate.
+Second, that intelligence has become a dominant source of proliferation, enabling the multitudes of diverse actors that also share and use cyberspace. A form of “collateral damage” now accompanies intelligence work that must sift through the stacks of data gathered from the civilian population at large. If the “whole haystack” must be collected, then it becomes surely inevitable that some kind of impact will be felt among those within the haystack. Additionally, and closely linked to the declining half-life of secrecy, is the exposure of intelligence sources and methods more routinely. By moving from passive to ever more proactive gatherers of information, intelligence services pioneer methods in intrusion, exploitation, and analysis that proliferate.
 
 This proliferation, which has ranged from code exploits such as EternalBlue, through to understanding of OSINT methodology and big data analytics, has been adopted and reverse engineered elsewhere. This includes innovations by adversary nations also pursuing their geopolitical ambitions, but also to large corporates, hacktivist groups, organized crime, journalistic bodies, and even technically capable individuals. The linkages behind the intelligence agency that (allegedly) developed Stuxnet attack to the recycled variant of the Flame virus unleashed widely, and the EternalBlue exploit compromise being used in both the WannaCry and NotPetya attacks, should not be underestimated.
 
-With intelligence agency sources, methods, and tools now subjected to greater exposure than ever before, the final conclusion should not be surprising.
+With intelligence agency sources, methods, and tools now subjected to greater exposure than ever before, the final conclusion should not be surprising. That conclusion is that intelligence agency behavior is incentivized by traditional security perspectives, but that very pursuit is also strongly contributing to ever increased cyber insecurity, creating a new manifestation of the security dilemma in the 21st century. Kello’s view that every advancement “invites its dangers” (Kello 2017: 256) and contributes to a dynamic of deceasing security accompanies not only advances in technology, but so too in the path of intelligence community behavior. Dunn Cavelty’s observation that information operations blur not only the boundaries between civilian and military objectives, but those between war and peace itself (Dunn Cavelty 2008: 142), serve to illustrate the uncertainty and accompanying insecurity such activities bring.
 
-That conclusion is that intelligence agency behavior is incentivized by traditional security perspectives, but that very pursuit is also strongly contributing to ever increased cyber insecurity, creating a new manifestation of the security dilemma in the 21st century. Kello’s view that every advancement “invites its dangers” (Kello 2017: 256) and contributes to a dynamic of deceasing security accompanies not only advances in technology, but so too in the path of intelligence community behavior. Dunn Cavelty’s observation that information operations blur not only the boundaries between civilian and military objectives, but those between war and peace itself (Dunn Cavelty 2008: 142), serve to illustrate the uncertainty and accompanying insecurity such activities bring.
+This is a point that Singer and Brooking also insist upon in stating that “*war and politics have never been so intertwined*” in an environment where all are participants, making us “*all part of the battle*” (Singer and Brooking 2019: 493–494, italics original).
 
-This is a point that Singer and Brooking also insist upon in stating that “*war and* *politics have never been so intertwined*” in an environment where all are participants, making us “*all part of the battle*” (Singer and Brooking 2019: 493–494, italics original).
+The intelligence community, in their search for answers to the questions of how to remain relevant, operate within, and exploit cyberspace in pursuit of national security objectives, have become disproportionate influencers of norms in the international system. Georgiva is entirely correct in arguing that the intelligence community in their deployment of disruptive cyber tools have become “unexpected norm-setters” (Georgiva 2020), yet it must be realized that their behavior carries more significant consequences related to political fragmentation. These are all dynamics worthy of further scholarly attention, both from Intelligence Studies to better consider the impact of cyber security upon both the practice and study of intelligence, but also from international relations scholars too. For if a key geopolitical battleground of the 21st century is the fragmentation of cyber security politics, then the impact of intelligence actor behavior has already proven to be a dominant consideration for researchers. Through its actions to adapt to the digital age, the second oldest profession has disrupted the politics of cyber security in ways that carry great consequences to the geopolitics of the 21st century.
 
-The intelligence community, in their search for answers to the questions of how to remain relevant, operate within, and exploit cyberspace in pursuit of national security objectives, have become disproportionate influencers of norms in the international system. Georgiva is entirely correct in arguing that the intelligence community in their deployment of disruptive cyber tools have become
-
-“unexpected norm-setters” (Georgiva 2020), yet it must be realized that their behavior carries more significant consequences related to political fragmentation. These are all dynamics worthy of further scholarly attention, both from Intelligence Studies to better consider the impact of cyber security upon both the practice and study of intelligence, but also from international relations scholars too. For if a key geopolitical battleground of the 21st century is the fragmentation of cyber security politics, then the impact of intelligence actor behavior has already proven to be a dominant consideration for researchers. Through its actions to adapt to the digital age, the second oldest profession has disrupted the politics of cyber security in ways that carry great consequences to the geopolitics of the 21st century.
-
-*Disrupting the second oldest profession* 217
-
-**Acknowledgment**
+### Acknowledgment
 
 The author wishes to thank Dennis Broeders and the Cyber Norms Program at the University of Leiden. Their Visiting Fellowship Program I was fortunate enough to be part of was invaluable in the development of this chapter.
 
-
-
-## Note
+### Note
 
 1 Typically credited to Mitchell Kapor, but acknowledged as being without definitive source and a variation on a similar phrase from generations past. [`cyber .harvard`](https://cyber.harvard.edu)
 
 [.edu /archived \_content /people /reagle /inet -quotations -19990709 .html](https://cyber.harvard.edu)
 
-## References
+### References
 
 All links checked on August 23, 2021.
 
@@ -4466,9 +3412,7 @@ Andrew, C. (2018). `The Secret World: A History of Intelligence`. New Haven, CT:
 
 Andrew, C., and Dilkes, D. (eds). (1985). `The Missing Dimension: Governments and Intelligence Communities in the Twentieth Century`. Basingstoke: Macmillan.
 
-Berners-Lee, T. (1991, August 6). Tim Posting to the Newsgroup alt.hypertext. Retrieved
-
-[from: https://www .w3 .org /People /Berners -Lee /1991 /08 /art -6484 .txt](https://www.w3.org).
+Berners-Lee, T. (1991, August 6). Tim Posting to the Newsgroup alt.hypertext. Retrieved [from: https://www .w3 .org /People /Berners -Lee /1991 /08 /art -6484 .txt](https://www.w3.org).
 
 Brantly, A. F. (2014). `The Cyber Losers`. `Democracy and Security`, 10(2): 132–155.
 
@@ -4491,8 +3435,6 @@ Dunn Cavelty, M. (2018a). `Aligning Security Needs for Order in Cyberspace`. In 
 Dunn Cavelty, M. (2018b). `Cybersecurity Research Meets Science and Technology Studies`. `Politics and Governance`, 6(2): 22–30.
 
 Farrell, H., and Newman, A. L. (2019). `Of Privacy and Power: The Transatlantic Struggle over Freedom and Security`. Princeton, NJ: Princeton University Press.
-
-218 `Danny Steed`
 
 Friedman, J. A., and Zeckhauser, R. (2012). `Assessing Uncertainty in Intelligence`. `Intelligence and National Security`, 27(6): 824–847.
 
@@ -4528,29 +3470,13 @@ Lowenthal, M. M. (2018). `The Future of Intelligence`. Cambridge: Polity, Apple 
 
 Lustgarten, L., and Leigh, I. (1994). `In from the Cold: National Security and Parliamentary Democracy`. Oxford: Clarendon Press.
 
-MacAskill, E., Borger, J., Hopkins, N., Davies, N., and Ball, J. (2013, June 21). `Mastering the Internet: How GCHQ Set Out to Spy on the World Wide Web`. `The Guardian`. Retrieved
+MacAskill, E., Borger, J., Hopkins, N., Davies, N., and Ball, J. (2013, June 21). `Mastering the Internet: How GCHQ Set Out to Spy on the World Wide Web`. `The Guardian`. Retrieved [from: https://www .theguardian .com /uk /2013 /jun /21 /gchq -mastering -the -internet](https://www.theguardian.com).
 
-[from: https://www .theguardian .com /uk /2013 /jun /21 /gchq -mastering -the -internet](https://www.theguardian.com).
+Nakashima, E., and Warrick, J. (2013, July 14). `For NSA Chief, Terrorist Threat Drives Passion to ‘Collect it All’`. `The Washington Post`. Retrieved September 16, 2018, from: [`www .washingtonpost .com /world /national -security /for -nsa -chief -terrorist -threat`](https://www.washingtonpost.com) [\-drives -passion -to -collect -it -all /2013 /07 /14 /3d26ef80 -ea49 -11e2 -a301 -ea5a8116d211](https://www.washingtonpost.com) [\_story .html ?noredirect =onandutm \_term= .3846af9dab73.](https://www.washingtonpost.com)
 
-Nakashima, E., and Warrick, J. (2013, July 14). `For NSA Chief, Terrorist Threat Drives Passion to ‘Collect it All’`. `The Washington Post`. Retrieved September 16, 2018, from:
+National Audit Office. (2018, April 25). `Investigation: WannaCry Cyber Attack and the NHS, HC 414`. Retrieved from: [`www .nao .org .uk /report /investigation -wannacry`](https://www.nao.org.uk) [\-cyber -attack -and -the -nhs/](https://www.nao.org.uk).
 
-[`www .washingtonpost .com /world /national -security /for -nsa -chief -terrorist -threat`](https://www.washingtonpost.com)
-
-[\-drives -passion -to -collect -it -all /2013 /07 /14 /3d26ef80 -ea49 -11e2 -a301 -ea5a8116d211](https://www.washingtonpost.com)
-
-[\_story .html ?noredirect =onandutm \_term= .3846af9dab73.](https://www.washingtonpost.com)
-
-National Audit Office. (2018, April 25). `Investigation: WannaCry Cyber Attack and the NHS, HC 414`. Retrieved from: [`www .nao .org .uk /report /investigation -wannacry`](https://www.nao.org.uk)
-
-[\-cyber -attack -and -the -nhs/](https://www.nao.org.uk).
-
- *Disrupting the second oldest profession* 219
-
-Obama, B. (2015, February 13). `Remarks by the President at the Cybersecurity and Consumer Protection Summit`. Retrieved from: [`obamawhitehouse .archives .gov /`](https://obamawhitehouse.archives.gov)
-
-[the -press -office /2015 /02 /13 /remarks -president -cybersecurity -and -consumer -protection](https://obamawhitehouse.archives.gov)
-
-[\-summit](https://obamawhitehouse.archives.gov).
+Obama, B. (2015, February 13). `Remarks by the President at the Cybersecurity and Consumer Protection Summit`. Retrieved from: [`obamawhitehouse .archives .gov /`](https://obamawhitehouse.archives.gov) [the -press -office /2015 /02 /13 /remarks -president -cybersecurity -and -consumer -protection](https://obamawhitehouse.archives.gov) [\-summit](https://obamawhitehouse.archives.gov).
 
 Rid, T., and McBurney, P. (2012). `Cyber-Weapons`. `RUSI Journal`, 157(1): 6–13.
 
@@ -4568,53 +3494,29 @@ Snowden, E. (2019). `Permanent Record`. New York: Macmillan, Apple iBooks editio
 
 Steed, D. (2019). `The Politics and Technology of Cyberspace`. Abingdon: Routledge.
 
-Swire, P. (2015). `The Declining Half-Life of Secrets and the Future of Signals Intelligence`. `New America Cybersecurity Fellows Paper - Number 1`, July. Retrieved from: [https://](https://www.newamerica.org)
-
-[www .newamerica .org /cybersecurity -initiative /policy -papers /the -declining -half -life -of](https://www.newamerica.org)
-
-[\-secrets/.](https://www.newamerica.org)
+Swire, P. (2015). `The Declining Half-Life of Secrets and the Future of Signals Intelligence`. `New America Cybersecurity Fellows Paper - Number 1`, July. Retrieved from: [https://](https://www.newamerica.org) [www .newamerica .org /cybersecurity -initiative /policy -papers /the -declining -half -life -of](https://www.newamerica.org) [\-secrets/.](https://www.newamerica.org)
 
 Tucker, D. (2014). `The End of Intelligence: Espionage and State Power in the Information Age`. Stanford, CA: Stanford University Press.
 
+Valeriano, B., Jensen, B., and Maness, R. C. (2018). *Cyber Strategy: The Evolving Character of Power and Coercion*. Oxford: Oxford University Press.
 
+Van Puyvelde, D., and Brantly, A. F. (2019). *Cybersecurity: Politics, Governance and Conflict in Cyberspace*. Cambridge: Polity.
 
-Valeriano, B., Jensen, B., and Maness, R. C. (2018). *Cyber Strategy: The Evolving* *Character of Power and Coercion*. Oxford: Oxford University Press.
-
-Van Puyvelde, D., and Brantly, A. F. (2019). *Cybersecurity: Politics, Governance and* *Conflict in Cyberspace*. Cambridge: Polity.
-
-Whyte, C., and Mazanec, B. (2019). *Understanding Cyber Warfare: Politics, Policy, and* *Strategy*. Abingdon: Routledge.
+Whyte, C., and Mazanec, B. (2019). *Understanding Cyber Warfare: Politics, Policy, and Strategy*. Abingdon: Routledge.
 
 10.4324/9781003110224-17
 
-`**15**`
+## 15 Understanding transnational cyber attribution: Moving from “whodunit” to who did it
 
-`**15 Understanding transnational**`
+*Brenden Kuerbis, Farzaneh Badiei, Karl Grindal, and Milton Mueller*
 
-`**cyber attribution**`
-
-`Moving from “whodunit” to who did it`
-
-*Brenden Kuerbis, Farzaneh Badiei, Karl Grindal,*
-
-*and Milton Mueller*
-
-Like the broader field of cyber security, cyber attribution is a socio-technical endeavor. Accordingly, we can expect that any transformation of cyber attribution will “be co-constituted by technological possibilities, political choices, and scientific practices” (Dunn Cavelty and Wenger 2020). This chapter examines some of the current practices of attribution, scientific developments in the field,
-
-and possibilities for its transnational institutionalization.1
+Like the broader field of cyber security, cyber attribution is a socio-technical endeavor. Accordingly, we can expect that any transformation of cyber attribution will “be co-constituted by technological possibilities, political choices, and scientific practices” (Dunn Cavelty and Wenger 2020). This chapter examines some of the current practices of attribution, scientific developments in the field, and possibilities for its transnational institutionalization.¹
 
 First, we provide some background on the role of attribution in deterrence and accountability, and the challenges of attributing, particularly to nation-state actors. We then analyze attributions made from 2016 to 2018. We characterize the actors involved and types of attributions, finding a shift toward private actor attributions and mix of approaches by states. Next, we explore some technical advances in attribution. Better algorithmic-driven attribution, seemingly possible by the collection and analysis of numerous artifacts left on networks by threat actors, could certainly help push attribution forward although it raises issues of how state and non-state actors cooperate. We also look at attempts to understand behavioral aspects of attribution, exploring one game-theoretic attempt to model when states will or will not attribute an attack to another state, and use our dataset to explore certain predictions of the model. This exercise allows us to understand more clearly which state and non-state actors make or avoid making attributions, and the institutional conditions under which their agreement on attribution might occur.
 
-In light of the above analysis, it is unlikely that attribution made by a nation-state (or even allied states) will be accepted as neutral and authoritative by another state, especially if those states are rivals or hostile. Given political fragmentation and socio-technical uncertainty around the current practice of attribution, we review proposed models for institutionalizing transnational attribution. The initial models offered have dramatically different structures and actor participation. Recognizing the shortcomings in them and the strategic use of attribution by states, a group of university-based and independent researchers are seeking to build independent, transnational attribution capabilities grounded in scientific method. Such a collective approach, if recognized, could address credibility DOI: [10.4324/9781003110224-17](https://doi.org/10.4324/9781003110224-17)
+In light of the above analysis, it is unlikely that attribution made by a nation-state (or even allied states) will be accepted as neutral and authoritative by another state, especially if those states are rivals or hostile. Given political fragmentation and socio-technical uncertainty around the current practice of attribution, we review proposed models for institutionalizing transnational attribution. The initial models offered have dramatically different structures and actor participation. Recognizing the shortcomings in them and the strategic use of attribution by states, a group of university-based and independent researchers are seeking to build independent, transnational attribution capabilities grounded in scientific method. Such a collective approach, if recognized, could address credibility issues and result in more stable outcomes and ultimately help with accountability. We conclude with a brief agenda for future research.
 
-`*Transnational cyber attribution*`
-
-`*Transnational cyber attribution*` 221
-
-issues and result in more stable outcomes and ultimately help with accountability.
-
-We conclude with a brief agenda for future research.
-
-**The role of cyber attribution in deterrence and accountability**
+### The role of cyber attribution in deterrence and accountability
 
 One can defend against a cyberattack, but without attribution, attackers lack a deterrent. At best, secure systems increase the time needed to find a vulnerability to a point beyond that which the attacker is willing to spend. Without proper incentives to restrain malicious attacker behavior, be they state or non-state, it’s unreasonable to expect the present situation to change. As a deterrent, attribution has several advantages over other responses: Unlike strategies such as hack backs, it might not result in the militarization of the internet and it might even prevent it (Dunn Cavelty 2012).
 
@@ -4622,197 +3524,76 @@ Accurate attribution requires experienced threat intelligence and digital forens
 
 There is an important distinction between identifying intrusion sets and assigning them to an adversary or “threat group” on the one hand and linking this adversary with a known state or non-state actor on the other. Robert Lee refers to the latter as “true attribution” (Lee 2016). This two-part distinction can be compared to Herb Lin’s model, developed in the article “Attribution of Malicious Cyber Incidents”, which uses three levels of attribution: Machines, human operators, and the ultimate party responsible (Lin 2016). In Mandiant’s 2013 attribution of an Advanced Persistent Threat (i.e., “APT-1”) to the China PLA Unit 612398 all three levels of Lin’s model are described (Wittes 2013). At the lowest level would be IP addresses associated with command and control (C&C) servers. Next, is attribution to a human operator; the Mandiant report identifies a persona who went by the alias “ugly gorilla”, but associated this with the real person, Wang Dong. Ultimately though, the report is attributing APT-1 to China’s People’s Liberation Army and hence the Chinese state.
 
-Defining an ultimate responsible party can be particularly challenging when it comes to state involvement. Even when a person is clearly identified as being in the attributed country, it is not necessarily clear from the forensics whether that person was a contractor or an employee, or whether they were operating under express instructions or on their own. Jason Healey’s Spectrum of State Responsibility acknowledges that states employ hackers, contract out hacking,
+Defining an ultimate responsible party can be particularly challenging when it comes to state involvement. Even when a person is clearly identified as being in the attributed country, it is not necessarily clear from the forensics whether that person was a contractor or an employee, or whether they were operating under express instructions or on their own. Jason Healey’s Spectrum of State Responsibility acknowledges that states employ hackers, contract out hacking, encourage hacking, or permit its use within their jurisdiction, each level representing a different degree of state responsibility (Healy 2013).
 
-`222 *B. Kuerbis, F. Badiei, K. Grindal, and M. Mueller*` encourage hacking, or permit its use within their jurisdiction, each level representing a different degree of state responsibility (Healy 2013).
+### The challenge of attribution to nation-state actors
 
-**The challenge of attribution to nation-state actors**
-
-The practice of attribution can be cumulative, grouping information from incidents to create intrusion sets. Intrusion sets are adversarial behaviors, what is sometimes abbreviated as “tactics, techniques, and procedures (TTPs)”, and technical resources with common properties from previous attacks that are grouped together (e.g., a “campaign”) and associated with a common actor (e.g., a “threat group”). This process has some general standardization by convention and predictive success, but there is no one correct method. Accordingly, SANS in 2010
-
-noted:
+The practice of attribution can be cumulative, grouping information from incidents to create intrusion sets. Intrusion sets are adversarial behaviors, what is sometimes abbreviated as “tactics, techniques, and procedures (TTPs)”, and technical resources with common properties from previous attacks that are grouped together (e.g., a “campaign”) and associated with a common actor (e.g., a “threat group”). This process has some general standardization by convention and predictive success, but there is no one correct method. Accordingly, SANS in 2010 noted:
 
 There is no rule of thumb or objective threshold to inform when linked intrusions should become a campaign. The best measure is results: if a set of indicators effectively predict similar intrusions when observed in the future, then they have probably been selected properly.
 
 (Cloppert 2010)
 
+- 预测性建模产生了关于置信度程度以及威胁情报实践如何应对新颖性的重要问题。假设事件已正确与入侵集关联，该入侵集如何与特定行为者关联？诸如共同语言、特定小时的活动、目标选择以及复杂程度等信息通常用于将事件组与特定威胁行为者关联。但这种归因超出了纯技术关联的范畴。某些 TTP 的重用会使归因复杂化。例如，漏洞 EternalBlue 据称由 NSA 开发，但后来被俄罗斯、朝鲜和伊朗（Segal 2018）利用。
 
+- 归因概念框架帮助数字取证结构化收集的信息并与已知入侵集进行比较。例如，Caltagirone 和 Pendergast（2013）开发的入侵分析金字塔模型，以及 Rid 和 Buchanan（2015）开发的“Q 模型”。
 
+- 金字塔模型和 Q 模型都承认归因需要非技术维度。在金字塔模型中，非技术维度描述为受害者与对手之间的关系。Q 模型的战略维度描述为“取决于政治利益所涉及的内容”（Rid 和 Buchanan 2015）。
 
--   [预测性建模](https://example.org)产生了关于置信度程度以及威胁情报实践如何应对新颖性的重要问题。假设事件已正确与入侵集关联，该入侵集如何与特定行为者关联？诸如共同语言、特定小时的活动、目标选择以及复杂程度等信息通常用于将事件组与特定威胁行为者关联。但这种归因超出了纯技术关联的范畴。某些 TTP 的重用会使归因复杂化。例如，漏洞 EternalBlue 据称由 NSA 开发，但后来被俄罗斯、朝鲜和伊朗（Segal 2018）利用。
+- 归因的政治维度可能被量化，但本质上是关系性的，更多源自政治学或情报研究，而非计算机科学。随着制裁或其他威慑手段用于惩罚攻击性网络行动，我们可能会预期网络行动会通过掩饰身份来调整。例如，泄露的 CIA“马布尔框架”（Marble Framework）被描述为能够将源代码语言从英语改为俄语或法语等其他语言（Burgess 2017）。
 
--   归因概念框架帮助数字取证结构化收集的信息并与已知入侵集进行比较。例如，Caltagirone 和 Pendergast（2013）开发的入侵分析金字塔模型，以及 Rid 和 Buchanan（2015）开发的“Q 模型”。
+- 一个国家开发的网络工具正被另一个国家重用，这表明取证专家与反取证掩饰之间存在技术竞赛。虽然掩饰在短期内可能对强国有利，但长期来看并不能减轻攻击性网络攻击的持久损害。此外，国家归因能力的不平等也存在。这被认为在联合国关于信息和通信技术在国际安全背景下的政府专家小组（UN GGE）的解体中发挥了作用（Schmitt 和 Vihul 2017）。
 
--   金字塔模型和 Q 模型都承认归因需要非技术维度。在金字塔模型中，非技术维度描述为受害者与对手之间的关系。Q 模型的战略维度描述为“取决于政治利益所涉及的内容”（Rid 和 Buchanan 2015）。
+### 归因流程今日
 
--   归因的政治维度可能被量化，但本质上是关系性的，更多源自政治学或情报研究，而非计算机科学。随着制裁或其他威慑手段用于惩罚攻击性网络行动，我们可能会预期网络行动会通过掩饰身份来调整。例如，泄露的 CIA“马布尔框架”（Marble Framework）被描述为能够将源代码语言从英语改为俄语或法语等其他语言（Burgess 2017）。
+- 我们的初步研究开始对公开归因的事件来源和特征进行分类。该工作基于美国国务院关系委员会（CFR）的国家支持网络事件数据集（Segal 和 Grigsby 2018）。我们回顾了 CFR 在 2016 年至 2018 年第一季度之间识别的 82 起事件（Table 15.1），并为每个案例编码，识别出是否由国家和/或私人实体进行公开归因，以及与归因相关的时间和结果。
 
--   一个国家开发的网络工具正被另一个国家重用，这表明取证专家与反取证掩饰之间存在技术竞赛。虽然掩饰在短期内可能对强国有利，但长期来看并不能减轻攻击性网络攻击的持久损害。此外，国家归因能力的不平等也存在。这被认为在联合国关于信息和通信技术在国际安全背景下的政府专家小组（UN GGE）的解体中发挥了作用（Schmitt 和 Vihul 2017）。
+- 我们认识到，公开披露的事件数据库可能被视为冰山一角，且基于单一数据集的两年数据不足以得出结论。然而，该数据集经过我们自身观察的补充，是目前最完整的数据来源之一，优于通常对归因的轶事处理。可以作出几个有趣的初步观察。首先，70%（85%）的事件以某种形式进行了公开归因，仅有 12 起（15%）未被归因于任何 perpetrator。7%（9%）的事件包含了政府与私人实体共同的归因。这些公开归因可能涉及国家间的协调行动（如 NotPetya），或国家与非国家行为体的合作（如 WannaCry），亦或是非国家实体引用匿名政府来源的归因，或是私人实体与国家独立进行的归因（如 Democratic National Committee 黑客事件）。
 
-**归因流程今日**
+**Table 15.1 事件归因类型**
 
--   我们的初步研究开始对公开归因的事件来源和特征进行分类。该工作基于美国国务院关系委员会（CFR）的国家支持网络事件数据集（Segal 和 Grigsby 2018）。我们回顾了 CFR 在 2016 年至 2018 年第一季度之间识别的 82 起事件（[Table 15.1]），并为每个案例编码，识别出是否由国家和/或私人实体进行公开归因，以及与归因相关的时间和结果。
+| 事件归因类型 | 2016 | 2017 | 2018 1Q | 总计 |
+|---|---|---|---|---|
+| 无归因 | 6 | 5 | 1 | 12 |
+| 政府与私人共同 | 4 | 3 | 0 | 7 |
+| 政府 | 7 | 7 | 1 | 15 |
+| 私人实体 | 12 | 26 | 10 | 48 |
+| **总计** | **29** | **41** | **12** | **82** |
 
--   我们认识到，公开披露的事件数据库可能被视为冰山一角，且基于单一数据集的两年数据不足以得出结论。然而，该数据集经过我们自身观察的补充，是目前最完整的数据来源之一，优于通常对归因的轶事处理。可以作出几个有趣的初步观察。首先，70%（85%）的事件以某种形式进行了公开归因，仅有 12 起（15%）未被归因于任何 perpetrator。7%（9%）的事件包含了政府与私人实体共同的归因。这些公开归因可能涉及国家间的协调行动（如 NotPetya），或国家与非国家行为体的合作（如 WannaCry），亦或是非国家实体引用匿名政府来源的归因，或是私人实体与国家独立进行的归因（如 Democratic National Committee 黑客事件）。
+15 起（18%）的归因是由政府作出的，包括国家官员非正式“点名道姓”指控嫌疑人，或在官方声明、报告、制裁或起诉中正式指控他们。私人实体的归因数量最多，该类别包括威胁情报组织、网络安全公司和新闻媒体组织。私人实体在归因中的重要性体现在其归因数量几乎在过去三年内翻倍，这也凸显了制定标准化归因流程的必要性。
 
-[*Table 15.1* 事件归因类型]  
-*年份*  
-*行为者类型*  
-*2016*  
-*2017*  
-*2018 1Q*  
-*总计*  
-无归因  
-6  
-5  
-1  
-12  
-政府与私人共同  
-4  
-3  
-7  
-政府  
-7  
-7  
-1  
-15  
-私人实体  
-12  
-26  
-10  
-48  
-**总计**  
-**29**  
-**41**  
-**12**  
-**82**
+- 事件数据还能够作出重要区分。Table 15.2（Table 15.2）显示，不同行为者类型对威胁组或国家赞助方的归因。归因总数与事件数（Table 15.1）不同，因为同一事件可能由一个或多个行为类型的实体涉及。与上述观察一致，私人实体对威胁组（31 vs 5）和国家赞助方（38 vs 13）的归因数量远高于政府。政府的归因主要针对国家赞助方，包括美国及其盟友指控伊朗、俄罗斯和朝鲜，以及美国指责自身。如前所述，在Table 15.1中，政府在 15 起事件中作出了归因。Table 15.2 显示，政府在这些事件中 13 次将归因指向国家赞助方。政府（在此例中为美国）将攻击归因于威胁组五次；三次同时指向威胁组（APT28、APT 29、Lazarus）以及 alleged state sponsor（俄罗斯、朝鲜）。仅两次，政府（在此例中为瑞士）未指向国家赞助方，而仅将指控限于威胁组（Turla），尽管当时怀疑有国家赞助方参与。然而，尽管表面上看，卡方检验得出结论：行为类型（即政府或私人实体）之间在归因对象（威胁组或国家赞助方）上没有显著差异。 neither 行为类型更可能，或或许更适合，对威胁组或国家赞助方进行归因。
 
-224 *B. Kuerbis, F. Badiei, K. Grindal, and M. Mueller* 15 起（18%）的归因是由政府作出的，包括国家官员非正式“点名道姓”指控嫌疑人，或在官方声明、报告、制裁或起诉中正式指控他们。私人实体的归因数量最多，该类别包括威胁情报组织、网络安全公司和新闻媒体组织。私人实体在归因中的重要性体现在其归因数量几乎在过去三年内翻倍，这也凸显了制定标准化归因流程的必要性。
+- 对收集的归因文件（即美国行政令、刑事投诉、起诉书、制裁和政府声明）的评估表明，美国目前的归因实践可能是最为复杂的，相较于其他国家，它采用了多种归因方法以及司法程序。Table 15.3（Table 15.3）显示，各国利用司法系统和取证技术。
 
--   事件数据还能够作出重要区分。Table 15.2（[Table 15.2]）显示，不同行为者类型对威胁组或国家赞助方的归因。归因总数与事件数（[Table 15.1]）不同，因为同一事件可能由一个或多个行为类型的实体涉及。与上述观察一致，私人实体对威胁组（31 vs 5）和国家赞助方（38 vs 13）的归因数量远高于政府。政府的归因主要针对国家赞助方，包括美国及其盟友指控伊朗、俄罗斯和朝鲜，以及美国指责自身。如前所述，在[Table 15.1]中，政府在 15 起事件中作出了归因。Table 15.2 显示，政府在这些事件中 13 次将归因指向国家赞助方。政府（在此例中为美国）将攻击归因于威胁组五次；三次同时指向威胁组（APT28、APT 29、Lazarus）以及 alleged state sponsor（俄罗斯、朝鲜）。仅两次，政府（在此例中为瑞士）未指向国家赞助方，而仅将指控限于威胁组（Turla），尽管当时怀疑有国家赞助方参与。然而，尽管表面上看，卡方检验得出结论：行为类型（即政府或私人实体）之间在归因对象（威胁组或国家赞助方）上没有显著差异。 neither 行为类型更可能，或或许更适合，对威胁组或国家赞助方进行归因。
+**Table 15.2 行为者类型对行为类型的归因**
 
--   对收集的归因文件（即美国行政令、刑事投诉、起诉书、制裁和政府声明）的评估表明，美国目前的归因实践可能是最为复杂的，相较于其他国家，它采用了多种归因方法以及司法程序。Table 15.3（[Table 15.3]）显示，各国利用司法系统和取证技术。
+| 归因由（行为类型） | 事件归因于威胁组 | 国家赞助方 |
+|---|---|---|
+| 政府与私人 | 4 | 7 |
+| 政府 | 5 | 13 |
+| 私人实体 | 31 | 38 |
+| **总计** | **40** | **58** |
 
-[*Table 15.2* 行为者类型对行为类型的归因]  
-*归因由 (行为类型) 事件归因于* *威胁组*  
-*国家赞助方*  
-*政府与私人*  
-4  
-7  
-*政府*  
-5  
-13  
-*私人实体*  
-31  
-38  
+**Table 15.3 归因文件**
 
-
-
-## 总计
-
-40
-
-58
-
-*跨国网络归因* 225
-
-*表 15.3* 归因文件
-
-*年份*
-
-*文档类型*
-
-*2016*
-
-*2017*
-
-*2018 1Q*
-
-*总计*
-
-刑事投诉
-
-1
-
-1
-
-行政命令
-
-1
-
-1
-
-起诉书
-
-1
-
-2
-
-2
-
-5
-
-制裁
-
-1
-
-2
-
-3
-
-声明
-
-3
-
-7
-
-10
-
-媒体报道
-
-5
-
-6
-
-6
-
-17
-
-新闻稿
-
-1
-
-1
-
-2
-
-技术报告
-
-14
-
-30
-
-11
-
-55
-
-**总计**
-
-**23**
-
-**42**
-
-**29**
-
-**94**
+| 文档类型 | 2016 | 2017 | 2018 1Q | 总计 |
+|---|---|---|---|---|
+| 刑事投诉 | 1 | 0 | 0 | 1 |
+| 行政命令 | 0 | 1 | 0 | 1 |
+| 起诉书 | 1 | 2 | 2 | 5 |
+| 制裁 | 0 | 1 | 2 | 3 |
+| 声明 | 3 | 7 | 0 | 10 |
+| 媒体报道 | 5 | 6 | 6 | 17 |
+| 新闻稿 | 0 | 1 | 1 | 2 |
+| 技术报告 | 14 | 30 | 11 | 55 |
+| **总计** | **23** | **42** | **29** | **94** |
 
 `technical evidence` 用于开展归因。所有收集的起诉书（`5`）均由美国发出。美国政府的做法与其他国家在发布官方声明（如白宫新闻发言人声明）时不同。它通常与司法部（`DoJ`）合作；在司法部收到起诉书后，财政部的资产控制办公室（`OFAC`）会对被起诉的个人实施制裁（美国财政部 2018）。其他国家如新西兰、澳大利亚、英国和加拿大等也有专门机构可能参与归因，但归因结果通常由政府机构和部门宣布，国家法院通常不参与对攻击者的起诉。
 
-is involved in charging the attackers.4
-
 各种行为体，包括私营部门和政府机构，发布包含威胁指标或情报的技术报告，用于归因网络攻击。这些报告比其他形式的归因文件更为常见。这可能是因为发布技术报告比经历复杂漫长的司法程序更容易，而政府机构基于技术报告发布警报可能防止进一步损害，阻止网络攻击扩散。
 
-***美国归因方式的演变***
+### 美国归因方式的演变
 
 直到最近，美国的归因方式如下：检察官收集关于攻击者身份的技术和间接证据，以及其与负责国的直接或间接联系。随后，检察官会在联邦法院对 alleged 攻击者提起起诉书，起诉书通过大陪审团获得批准。这一过程耗时较长，文件在起诉书提交后数月才会解封。大陪审团随后发出起诉书，司法部随后发布声明，并通过 OFAC 对 alleged 攻击者实施制裁。
 
@@ -4824,7 +3605,7 @@ is involved in charging the attackers.4
 
 尽管起诉书相对于投诉的程序缺陷，它更强有力，可能在程序上更为公正。美国财政部对针对 WannaCry 实施者及北韩的投诉迅速作出反应，并基于该投诉而非起诉书立即实施制裁，这进一步降低了归因的程序标准。
 
-***其他国家的归因方式***
+### 其他国家的归因方式
 
 除美国外，其他国家也会将网络攻击归因于国家行为体，无论是支持另一国家的声明或行动，还是通过其国家网络安全机构自行进行归因。新西兰的国家网络安全中心（National Cyber Security Center）是政府中心，参与归因，其最常见的归因对象是国家。NCSC 最常见的归因形式是：当检测或发现包含与国家赞助行为者先前关联的指标或技术特征的事件时。
 
@@ -4832,24 +3613,17 @@ is involved in charging the attackers.4
 
 （新西兰国家网络安全中心 2016）
 
-英国的国家网络安全中心（NCSC）同样参与将网络攻击归因于国家行为体。它会与其他国家的政府机构合作发布技术警报，例如在 NotPetya 案件中与美国国土安全部（DHS）和 FBI 合作（英国国家网络安全中心 2018），以及对
+英国的国家网络安全中心（NCSC）同样参与将网络攻击归因于国家行为体。它会与其他国家的政府机构合作发布技术警报，例如在 NotPetya 案件中与美国国土安全部（DHS）和 FBI 合作（英国国家网络安全中心 2018），以及对评估国家行为体是否参与网络攻击的可能性。英国外交部大臣依赖这些评估来发布谴责此类网络攻击的声明（英国外交部 2018）。
 
-*Transnational cyber attribution* 227
-
-评估国家行为体是否参与网络攻击的可能性。英国外交部大臣依赖这些评估来发布谴责此类网络攻击的声明（英国外交部 2018）。
-
-***推进归因的新发展***
+### 推进归因的新发展
 
 在私营部门和学术界，归因研究在技术和行为层面均取得进展。新兴的有前途的技术显著提升归因的取证信心。研究热点包括对基础设施的更好监控，以及应用机器学习识别异常网络流量，可能表明 adversaries（对手）的行为（如 Radford 等 2018）。位于佐治亚理工学院的互联网安全与隐私研究所也在 Rhamnousia 项目（Toon 2016）中研究归因。该项目由美国国防先进研究计划局（DARPA）的增强归因计划资助，旨在“开发技术，将网络对手的恶意行为与个别网络操作者关联，并使政府能够在不损害来源和方法的前提下，公开揭示个别网络操作者的恶意行为”（DARPA 2018）。从高层面看，Rhamnousia 项目旨在将大量分散的数据碎片连接起来，以推动新的算法归因方法，从而加速归因过程。因此，进行网络攻击会在对手控制的网络、受害者网络以及中间网络中留下大量可观测的数据碎片。
 
 数据包括，但不限于，用户设备的行为生物特征、网络流量、入侵检测日志，以及域名系统（`DNS`）的使用和注册（Keromytis 2016）。
 
-
-
 在某些情况下，这些数据可以用于帮助识别据信为国家行为的对手。例如，苏黎世联邦理工学院的研究人员通过分析网络查询数据（Lamprakis et al. 2017），能够可靠地确定 APT 行动中使用的 C&C 基础设施。将机器学习技术应用于跨多个网络观测到的数据进行检测和聚类，并将其与 APT 威胁行为体关联，这一工作持续推进（Ghafir et al. 2018; Rubio et al. 2020）。正如前文所述，在 APT-1 案例中，这些技术数据与开源情报等其他数据合并后，可关联到对手画像、真实身份，甚至在部分情况下可指向负责的国家实体。上述研究体现了稳步进步，将持续演变以应对不断变化的对手战术，并可能提升归因的速度、置信度和广度。但这些努力也引发了数据收集与私人实体或政府间的共享、方法透明度、分析可重复性、对公众沟通效果以及与法律政治归因流程交互等问题。
 
-行为体在公开归因国家网络攻击时机和方式的理解也在不断提升。Edwards 等人（2017）研究了网络冲突中归因与责难的战略层面，并基于贝叶斯博弈论模型提出：  
-228 `B. Kuerbis, F. Badiei, K. Grindal, and M. Mueller` 归咎攻击者的决定“取决于攻击者的脆弱性、受害者的知识水平、不同结果的收益以及双方对对手的信念”。这里的脆弱性指攻击者在技术上易受反击（如 cyber 能力弱的国家或攻击面宽大的国家），或因高调攻击曝光而面临政治风险（如拥有进攻能力的国家）。知识渊博的受害者能区分攻击者类型（脆弱或非脆弱），具备技术能力和对攻击性质及地缘政治背景的理解，从而判断归咎是否会对攻击者造成伤害。而知识匮乏的受害者则无法确定对手类型或可靠地归因。
+行为体在公开归因国家网络攻击时机和方式的理解也在不断提升。Edwards 等人（2017）研究了网络冲突中归因与责难的战略层面，并基于贝叶斯博弈论模型提出：归咎攻击者的决定“取决于攻击者的脆弱性、受害者的知识水平、不同结果的收益以及双方对对手的信念”。这里的脆弱性指攻击者在技术上易受反击（如 cyber 能力弱的国家或攻击面宽大的国家），或因高调攻击曝光而面临政治风险（如拥有进攻能力的国家）。知识渊博的受害者能区分攻击者类型（脆弱或非脆弱），具备技术能力和对攻击性质及地缘政治背景的理解，从而判断归咎是否会对攻击者造成伤害。而知识匮乏的受害者则无法确定对手类型或可靠地归因。
 
 尽管分析聚焦于国家行为体，但其结论对我们的数据集具有重要参考意义。首先，Edwards 等人指出，当攻击较温和且缺乏合适应对措施时，受害国可能理性地选择容忍而非进行归因（即责难），以避免升级风险。他们以中方对美方工业界的经济间谍活动为例，指出美国政府因两国关系重要，无法以对等方式反制，也未公开指责中方，转而通过外交达成 2015 年美中网络协议（US White House 2015）。尽管该策略初期似乎奏效，但后续分析表明双边政府间谈判未能遏制受 PLA 支持的间谍活动（Segal et al. 2018）。
 
@@ -4859,29 +3633,15 @@ is involved in charging the attackers.4
 
 第二，Edwards 等人“令人惊讶地”得出结论：很少有益于受害方提升自身归因能力。原因在于，非脆弱国家无论受害方是否具备归因能力，都会发动攻击；而若攻击方存在脆弱性，受害方在具备准确归因能力的情况下，其信心提升将激发反击动机。在此情境下，均衡结果不稳定（即攻击但不归咎）。相反，他们认为当攻击方和受害方均通过提升对称技术归因能力而获得知识时，稳定均衡（即无攻击；攻击且归咎）的可能性会显著增加。正如下文所述，数据表明单个归因能力的实用价值有限，而集体确定的归因方法与结果虽已演变，却仍存在概念上的不足。
 
-*Transnational cyber attribution* 229
-
 乌克兰的公开归因是前述情况的典型例证。乌克兰官员称其国家是“俄罗斯的网络攻击试验场”，因俄罗斯 allegedly 发起的众多攻击。政府“直接将俄罗斯与大多数网络攻击关联，指出攻击特征及时机；许多攻击发生在乌克兰历史性日期，或节假日前后，以最大化影响”（Miller 2018）。但即便如此，尽管乌克兰公开谴责俄罗斯并获得美国和北约的大量财政及技术支持以加强网络安全，攻击仍在持续。
 
 另一个典型案例是 2016 年 12 月的民主国家委员会（DNC）事件。白宫与财政部分别对五家俄罗斯实体（包括两家俄罗斯情报组织）及六名俄罗斯个人实施制裁，以回应对 DNC 的攻击（Federal Register 2017）。这些制裁部分基于国土安全部和联邦调查局（DHS/FBI）出具的技术报告，该报告列出了大量已公开的指标（如 IP 地址、域名），以及机密情报信息（US Department of Homeland Security 2016; Office Director of National Intelligence 2017）。白宫声明未提供归因细节，而 DHS/FBI 报告也因缺乏归因证据而受到前 NSA 安全专家的批评（Lee 2016）。简言之，由于缺乏公开可得的证据（或仅引用已由威胁情报公司发布的已有证据的明确链接），归因的真实性受到质疑。
 
 此外，制裁与起诉流程虽明确指向个人和组织，但其可执行性及作为威慑手段的效果仍存疑。
 
-相较之下，WannaCry 和 NotPetya 事件引发了多个盟友国家之间的协调归因努力，私人实体参与程度似乎较低。各国通过多种渠道进行公开归因协调。支持他国归因结果的国家，主要是受同一网络攻击或为被攻击国盟友的国家。6 部分支持美国归因声明的国家表明，它们已进行独立调查。
+相较之下，WannaCry 和 NotPetya 事件引发了多个盟友国家之间的协调归因努力，私人实体参与程度似乎较低。各国通过多种渠道进行公开归因协调。支持他国归因结果的国家，主要是受同一网络攻击或为被攻击国盟友的国家。⁶ 部分支持美国归因声明的国家表明，它们已进行独立调查。
 
-
-
-For example, in the case of WannaCry, New Zealand endorsed the US claims of attribution to the North Korean government, while relying on its own evidence.
-
-The United Kingdom also assessed that WannaCry was carried out by North Korea, not directly mentioning the assessment of the United States but saying:
-
-“we are committed to strengthening coordinated international efforts to uphold a free, open, peaceful and secure cyberspace” (UK Foreign Office 2017). Multiple states also supported attribution of NotPetya to Russia, including Australia, Estonia, Ukraine, the United Kingdom, Denmark, Lithuania, Japan, and Canada.
-
-Again, the United Kingdom carried out its own investigations and condemned the attack (UK Foreign Office 2018). Canada was not attacked by NotPetya, but condemned the attack to show its support for other allies. Australia declared that
-
-230 `B. Kuerbis, F. Badiei, K. Grindal, and M. Mueller` Russia was behind NotPetya, based on advice from its own intelligence agencies
-
-and consultations with the United States and the United Kingdom.7
+For example, in the case of WannaCry, New Zealand endorsed the US claims of attribution to the North Korean government, while relying on its own evidence. The United Kingdom also assessed that WannaCry was carried out by North Korea, not directly mentioning the assessment of the United States but saying: “we are committed to strengthening coordinated international efforts to uphold a free, open, peaceful and secure cyberspace” (UK Foreign Office 2017). Multiple states also supported attribution of NotPetya to Russia, including Australia, Estonia, Ukraine, the United Kingdom, Denmark, Lithuania, Japan, and Canada. Again, the United Kingdom carried out its own investigations and condemned the attack (UK Foreign Office 2018). Canada was not attacked by NotPetya, but condemned the attack to show its support for other allies. Australia declared that Russia was behind NotPetya, based on advice from its own intelligence agencies and consultations with the United States and the United Kingdom.⁷
 
 The apparent success of these efforts was institutionalized, with a ministerial and communique expressing that the states “would coordinate on appropriate responses and attribution” (Department of Homeland Affairs Australian Government 2018). However, this agreement was only among the Five Eyes, which raises the question whether or not collective attributions made by those states will be accepted more broadly. Moreover, this initiative focuses on “coordinating technical attribution and operational response policies to mitigate significant cyber incidents” and does not discuss the attribution process.
 
@@ -4893,149 +3653,81 @@ In its conclusions on malicious cyber activities of 16 April 2018, the Council e
 
 The European Union also in the conclusions on malicious cyber activities emphasized the importance of cyber norms.
 
-**Institutionalizing transnational attribution**
+### Institutionalizing transnational attribution
 
-Both technological developments and better understanding of how states act strategically highlight the need for institutionalizing neutral, transnational attribution.
+Both technological developments and better understanding of how states act strategically highlight the need for institutionalizing neutral, transnational attribution. At some point, the evidence has to be assessed and independently reviewed, and that cannot be carried out through technological means alone. A decision to blame a responsible party has to take place through a recognized collective attribution process. Such a process has not been implemented, nor have current processes been studied in detail.
 
-At some point, the evidence has to be assessed and independently reviewed, and that cannot be carried out through technological means alone. A decision to blame a responsible party has to take place through a recognized collective attribution process. Such a process has not been implemented, nor have current processes been studied in detail.
+#### Proposals for institutionalizing transnational attribution
 
-***Proposals for institutionalizing transnational attribution***
+A transnational attribution institution could serve as a neutral global platform to evaluate and perform authoritative public attributions. It would be an independent entity or set of processes whose attribution decisions would aspire to be widely perceived as *unbiased*, *legitimate*, and *valid*, even among parties who might be antagonistic (such as rival nation-states). Various proposals have been put forward with different scopes of activity, organizational structures, levels of stakeholder involvement, and evidentiary standards to potentially achieve such a process.
 
-A transnational attribution institution could serve as a neutral global platform to evaluate and perform authoritative public attributions. It would be an independent
-
- *Transnational cyber attribution* 231
-
-entity or set of processes whose attribution decisions would aspire to be widely perceived as *unbiased*, *legitimate*, and *valid*, even among parties who might be antagonistic (such as rival nation-states). Various proposals have been put forward with different scopes of activity, organizational structures, levels of stakeholder involvement, and evidentiary standards to potentially achieve such a process.
-
-Four of the leading attribution proposals have markedly different descriptions.
-
-Microsoft describes their proposal as “a public-private forum to address attribution” (Charney 2016); the Atlantic Council called for a multilateral “attribution and adjudication council for cyber-attacks rising to the \[legal\] level of ‘armed conflict’” (Healy et al. 2014); a RAND study called for a “Global Cyber Attribution Consortium” of non-state actors (Davies et al. 2017); a Russian think tank called for an “independent, international cyber court or arbitrage method that deals only with government-level cyber conflicts” (Chernenko et al. 2018). A more recent initiative builds on two of these proposals.
+Four of the leading attribution proposals have markedly different descriptions. Microsoft describes their proposal as “a public-private forum to address attribution” (Charney 2016); the Atlantic Council called for a multilateral “attribution and adjudication council for cyber-attacks rising to the \[legal\] level of ‘armed conflict’” (Healy et al. 2014); a RAND study called for a “Global Cyber Attribution Consortium” of non-state actors (Davies et al. 2017); a Russian think tank called for an “independent, international cyber court or arbitrage method that deals only with government-level cyber conflicts” (Chernenko et al. 2018). A more recent initiative builds on two of these proposals.
 
 The International Attribution Organization proposed is one such proposal that has been widely touted in the Microsoft Digital Geneva Convention, and in its subsequent articulation (see Charney 2016, also Charney et al. 2016), This proposal included language that suggested that an independent attribution organization should (1) span the public and private sectors while including civil society and academia, (2) both investigate and serve an information sharing role, and (3) resemble the International Atomic Energy Agency (IAEA). The initial proposal contained significant ambiguity as to whether or not this is describing a multistakeholder or multilateral model.
 
 The Atlantic Council’s 2014 *Confidence Building Measures in Cyberspace* report proposes a multilateral “attribution and adjudication council for cyberattacks rising to the \[legal\] level of ‘armed conflict’” (Healy et al. 2014). While the scope is only limited to incidents that rise above an international legal threshold, Healey et al. suggest that these assessments should result in the application of an enforcement mechanism. The organization, like the Digital Geneva Convention draws on the IAEA for inspiration, but also the Biological Weapons Convention and Nuclear Nonproliferation Treaty.
 
-RAND’s Stateless Attribution Report draws on both the Atlantic Council’s and Microsoft’s work, but suggests that “an attribution organization should be managed and operated independently from states”. Their report also differs from the Atlantic Council report in suggesting that an enforcement role is not needed.
+RAND’s Stateless Attribution Report draws on both the Atlantic Council’s and Microsoft’s work, but suggests that “an attribution organization should be managed and operated independently from states”. Their report also differs from the Atlantic Council report in suggesting that an enforcement role is not needed. While the RAND Report classifies the Atlantic Council proposal as including non-state actors in collaborative investigations, this seems to confuse organizational management and support. As the Atlantic Council’s proposal makes use of private sector data and expertise as a multilateral entity, the RAND proposal does not explain how non-state actors would assist targeted states without their involvement.
 
-While the RAND Report classifies the Atlantic Council proposal as including non-state actors in collaborative investigations, this seems to confuse organizational management and support. As the Atlantic Council’s proposal makes use of private sector data and expertise as a multilateral entity, the RAND proposal does not explain how non-state actors would assist targeted states without their involvement.
+The work by Chernenko et al. paper presents an interesting contrast to the IAEA model for attribution. While not denying the significance of private sector actors, the Chernenko et al. proposal is explicitly state based, recommending an “independent, international cyber court … that deals only with government-level cyber conflicts” (Chernenko et al. 2018). This scoping is less expansive than the Microsoft proposal, but more inclusive than the Atlantic Council’s, covering government-level cyber conflict which would include those below the threshold of armed conflict.
 
-The work by Chernenko et al. paper presents an interesting contrast to the IAEA model for attribution. While not denying the significance of private sector actors, the Chernenko et al. proposal is explicitly state based, recommending an
+Each proposal offers different scopes of activity for a cyber attribution organization and pushes for dramatically different structures (e.g., multilateral vs. nongovernmental, or hierarchical vs. networked). And while the RAND Report makes powerful arguments as to why states have conflicting incentives to participate in an attribution organization and cautions against their membership in any Consortium, none of the above proposals explicitly consider the incentives for private actors to participate in the forensic process. The authors are tracking the aforementioned proposals and critiquing their viability, but believe more research is needed before a consensus can form.
 
-“independent, international cyber court … that deals only with government-level
+Over the past two years, a handful of organizations, including the Internet Governance Project (with which the authors are affiliated) and Swiss-based ICT4Peace, have built upon the ideas presented in both Microsoft and RAND proposals. After socializing the idea of transnational, independent cyber attribution in fora like RightsCon, the UN Internet Governance Forum and the North American Network Operators Group, an initial workshop bringing together university-based and independent researchers took place in May 2020 (Internet Governance Project 2018). Together the workshop participants continue to develop a global network of researchers based in academia, civil society, and business who want to cooperate to develop attribution capabilities that are considered scientific and credible by the broader community. If successful, this could effectively counter state-sponsored or state-affiliated cyberattacks and the strategic use of attribution, and complement other efforts like the CyberPeace Institute ([`cyberpeaceinstitute.org`](https://cyberpeaceinstitute.org)).
 
-232 `B. Kuerbis, F. Badiei, K. Grindal, and M. Mueller` cyber conflicts” (Chernenko et al. 2018). This scoping is less expansive than the Microsoft proposal, but more inclusive than the Atlantic Council’s, covering government-level cyber conflict which would include those below the threshold of armed conflict.
-
-Each proposal offers different scopes of activity for a cyber attribution organization and pushes for dramatically different structures (e.g., multilateral vs.
-
-
-
-nongovernmental, or hierarchical vs. networked). And while the RAND Report makes powerful arguments as to why states have conflicting incentives to participate in an attribution organization and cautions against their membership in any Consortium, none of the above proposals explicitly consider the incentives for private actors to participate in the forensic process. The authors are tracking the aforementioned proposals and critiquing their viability, but believe more research is needed before a consensus can form.
-
-Over the past two years, a handful of organizations, including the Internet Governance Project (with which the authors are affiliated) and Swiss-based ICT4Peace, have built upon the ideas presented in both Microsoft and RAND proposals. After socializing the idea of transnational, independent cyber attribution in fora like RightsCon, the UN Internet Governance Forum and the North American Network Operators Group, an initial workshop bringing together university-based and independent researchers took place in May 2020 (Internet Governance Project 2018). Together the workshop participants continue to develop a global network of researchers based in academia, civil society, and business who want to cooperate to develop attribution capabilities that are considered scientific and credible by the broader community. If successful, this could effectively counter state-sponsored or state-affiliated cyberattacks and the strategic use of attribution, and complement other efforts like the CyberPeace Institute ([`cyberpeaceinstitute.org`](https://cyberpeaceinstitute.org))
-
-[`cyberpeaceinstitute.org`](https://cyberpeaceinstitute.org)
-
-***Challenges of collective action in attribution***
+#### Challenges of collective action in attribution
 
 Three major challenges are likely to present themselves in institutionalizing transnational attribution; these include geopolitical conflict, building independent capability, and private sector participation. These challenges overlap with, but are more institutional than, the challenges identified by the RAND study: Effective attribution and persuasive communication. Efficacy and communication will be contingent on the breadth of participation of public and private entities and their willingness to be transparent with the evidence. As with any political challenge, getting collective action from actors with competing interests presents a challenge.
 
-Adversarial geopolitical relationships are likely to extend to any attribution organization. The advantage of such an organization is that by joining it participants agree to adhere to the constitutive as well as procedural rules, even when they disagree over the particulars. Neutrality of international bodies is often established through the professionalism of participants: Either a technical independence as described in the RAND study or a judicial independence might claim to
+Adversarial geopolitical relationships are likely to extend to any attribution organization. The advantage of such an organization is that by joining it participants agree to adhere to the constitutive as well as procedural rules, even when they disagree over the particulars. Neutrality of international bodies is often established through the professionalism of participants: Either a technical independence as described in the RAND study or a judicial independence might claim to embody this ethos. Should states as political actors be involved, as described by the Atlantic Council proposal, a majoritarian ethos might be needed to result in collective action. A consensus-based solution proposed in the Microsoft Digital Geneva Convention research could certainly face challenges acquiring unanimity.
 
-*Transnational cyber attribution* 233
+In addition to the geopolitical challenges of managing an organization are those of creating trustworthy assessments. The Organization for the Prohibition of Chemical Weapons (OPCW) manages to maintain global trust in its forensics with an independent laboratory, whose work it supplements with a network of over 20 certified laboratories distributed across numerous national jurisdictions. While the same strategy might help to supplement the capability of an attribution-based organization, building this capability will require financial resources. Finding dedicated financial resources for transnational attribution might create its own challenges. Would a government finance an organization tasked with rooting out its espionage operations, what incentives are there for the private sector, particularly those who sell services to multiple governments?
 
-embody this ethos. Should states as political actors be involved, as described by the Atlantic Council proposal, a majoritarian ethos might be needed to result in collective action. A consensus-based solution proposed in the Microsoft Digital Geneva Convention research could certainly face challenges acquiring unanimity.
+The cyberspace domain is uniquely defined by private sector participation and ownership of the core infrastructure. In this respect, Microsoft’s Digital Geneva Convention is served well by including the private sector but creates a potential contradiction by drawing on the example of the International Atomic Energy Agency. It is possible to imagine an independent, member state-funded international organization, like that of the IAEA. Or by empowering the private sector, academia, and civil society is Microsoft suggesting a multistakeholder model? At face value, it appears that governments will set the rules, while private actors will lend their services and data, but nothing is stated about how these interests might be aligned. If a subset of private sector cyber security firms has advanced forensic capability equaling or exceeding that of most states, why would they participate in a monopsony attribution organization? Presumably, benefits to them would need to outweigh costs. Alternatively, if access to the internet’s infrastructure allows an investigation to backtrack the origins of an attacker, what process should enable the acquisition of relevant evidence? Should this layer of attribution include partnerships with national law enforcement or permit international inspections? Either way, this potentially burdens the private sector and has implications for global privacy.
 
-In addition to the geopolitical challenges of managing an organization are those of creating trustworthy assessments. The Organization for the Prohibition of Chemical Weapons (OPCW) manages to maintain global trust in its forensics with an independent laboratory, whose work it supplements with a network of over 20 certified laboratories distributed across numerous national jurisdictions.
+### Conclusion
 
-While the same strategy might help to supplement the capability of an attribution-based organization, building this capability will require financial resources.
+This chapter has briefly described the state of play in cyber attribution and number of competing visions for its future. At present, threat intelligence firms and national security agencies are the primary producers of forensic data and attributions. While reliance on algorithms to cluster observed data and identify infrastructure and adversaries is advancing this introduces socio-technical uncertainties around how data is collected, shared, and analyzed. Coupled with political fragmentation and strategic behavior by states there is need to focus on the institutionalization of credible, independent attribution. While ideal models for making attribution were described, too little is known about the current state of affairs.
 
-Finding dedicated financial resources for transnational attribution might create its own challenges. Would a government finance an organization tasked with root-ing out its espionage operations, what incentives are there for the private sector, particularly those who sell services to multiple governments?
+As Edwards et al. (2017) suggest, understanding behavior in attribution clearly needs to incorporate the role and incentives of private actors. A research agenda going forward should attempt to better understand the practice of attribution and provide novel institutional designs and processes grounded in scientific method that go beyond merely replicating international organization approaches in other fields. To achieve this further exploration is needed around research questions like:
 
-The cyberspace domain is uniquely defined by private sector participation and ownership of the core infrastructure. In this respect, Microsoft’s Digital Geneva Convention is served well by including the private sector but creates a potential contradiction by drawing on the example of the International Atomic Energy Agency. It is possible to imagine an independent, member state-funded international organization, like that of the IAEA. Or by empowering the private sector, academia, and civil society is Microsoft suggesting a multistakeholder model? At face value, it appears that governments will set the rules, while private actors will lend their services and data, but nothing is stated about how these interests might be aligned. If a subset of private sector cyber security firms has advanced forensic capability equaling or exceeding that of most states, why would they participate in a monopsony attribution organization? Presumably, benefits to them would need to outweigh costs. Alternatively, if access to the internet’s infrastructure allows an investigation to backtrack the origins of an attacker, what process should enable the acquisition of relevant evidence? Should this layer of attribution include partnerships with national law enforcement or permit international inspections?
+- How does the public and state response to attribution differ based on whether the forensic assessment comes from the private sector, state intelligence, law enforcement, or secondhand media reporting?
 
-Either way, this potentially burdens the private sector and has implications for global privacy.
+- How can scientific concepts and practices of empirical data and methodological transparency, reproducibility, and falsifiability be incorporated into and improve the practice of attribution?
 
-**Conclusion**
+- What data and methods are used in attribution to threat actors and ultimately to responsible parties?
 
-This chapter has briefly described the state of play in cyber attribution and number of competing visions for its future. At present, threat intelligence firms and national security agencies are the primary producers of forensic data and attributions.
+- When it comes to findings, are there different accepted levels of confidence?
 
-While reliance on algorithms to cluster observed data and identify infrastructure and adversaries is advancing this introduces socio-technical uncertainties around how data is collected, shared, and analyzed. Coupled with political fragmentation and strategic behavior by states there is need to focus on the institutionalization of credible, independent attribution. While ideal models for making attribution were described, too little is known about the current state of affairs.
+- How do geopolitical rivalries undermine the confidence placed in attribution?
 
-234 *B. Kuerbis, F. Badiei, K. Grindal, and M. Mueller* As Edwards et al. (2017) suggest, understanding behavior in attribution clearly needs to incorporate the role and incentives of private actors. A research agenda going forward should attempt to better understand the practice of attribution and provide novel institutional designs and processes grounded in scientific method that go beyond merely replicating international organization approaches in other fields. To achieve this further exploration is needed around research questions like:
+- Is a hierarchically organized institution really needed to align participant incentives, or can a more loosely organized form of networked governance suffice?
 
-·
-
-·
-
-How does the public and state response to attribution differ based on whether the forensic assessment comes from the private sector, state intelligence, law enforcement, or secondhand media reporting?
-
-·
-
-·
-
-How can scientific concepts and practices of empirical data and methodological transparency, reproducibility, and falsifiability be incorporated into and improve the practice of attribution?
-
-·
-
-·
-
-What data and methods are used in attribution to threat actors and ultimately to responsible parties?
-
-·
-
-·
-
-When it comes to findings, are there different accepted levels of confidence?
-
-·
-
-·
-
-How do geopolitical rivalries undermine the confidence placed in attribution?
-
-·
-
-·
-
-Is a hierarchically organized institution really needed to align participant incentives, or can a more loosely organized form of networked governance suffice?
-
-·
-
-·
-
-How would different visions for attribution address the concerns and incentives of stakeholders, distribute costs, and get off the ground?
-
-
+- How would different visions for attribution address the concerns and incentives of stakeholders, distribute costs, and get off the ground?
 
 未来工作应继续致力于更好地理解如何通过包括基于学术界、民间社会和商业的独立研究者网络在内的治理模式，以解决上述问题，从而使责任方承担责任。尽管高级和持续的威胁行为体具有能力，但保护情报来源和方法的需求，以及国家主义性取向的冲突，我们认为向跨国、独立、可信的“谁做的”归因进行转变是可能的。
 
-## Notes
+### Notes
 
 1 This 章节部分基于作者早期的工作，即“网络归因：新机构能否实现跨国可信度？” *网络防御评论*，4(1)，2019 年。
 
 2 The 外交事务委员会并非唯一收集和发布网络事件数据的机构。另一个例子是瓦莱里亚诺和曼斯（2015 年）提出的双向网络事件与争议数据集，以及新美国基金会收集的事件数据。当这些数据集之间存在差异时，可以提出方法论问题，例如在什么情况下被视为国家赞助的“事件”，或对特定施害者的归因。
 
-3 For 例如，我们已链接了为每个事件发布的技术报告，这些报告可在 APT Notes 仓库 [`github.com/aptnotes/data/blob/master/`](https://github.com/aptnotes/data/blob/master/) 中找到。
-
-[APTnotes.csv](https://github.com)
-
-*跨国网络归因* 235
+3 For 例如，我们已链接了为每个事件发布的技术报告，这些报告可在 APT Notes 仓库 [`github.com/aptnotes/data/blob/master/`](https://github.com/aptnotes/data/blob/master/) 中找到。 [APTnotes.csv](https://github.com)
 
 4 其他国家通过其网络安全中心或外交部发表声明和公告。例如，加拿大谴责 NotPetya（通信安全局 2018），英国外交部发表针对 WannaCry 的声明（英国外交部 2017）。解释美国与其他国家在应对方式上的差异一个因素可能是，美国主要是攻击的主要目标，而其他国家可能间接受影响。
 
-[5 A 游戏中，参与者对其他参与者的可用策略或收益具有不完全信息，但对概率分布有明确认知。
+5 A 游戏中，参与者对其他参与者的可用策略或收益具有不完全信息，但对概率分布有明确认知。
 
 6 For 例如，爱沙尼亚和加拿大谴责未对其国家造成损害的网络攻击；参见爱沙尼亚外交部（2018）。
 
 7 “Based 根据澳大利亚情报机构的建议，并经与美国和英国磋商，澳大利亚政府认定俄罗斯国家赞助行为体对该事件负责”。（原声明已不再可在线查阅）。
 
-## References
+### References
 
 所有链接已于 2021 年 8 月 23 日检查。
 
-Burgess, M. (2017, May 7). WikiLeaks Drops ‘Grasshopper’ Documents, Part Four of Its CIA Vault 7 Files. *Wired*. Retrieved [from: https://www.wired.co.uk/article/cia-files](https://www.wired.co.uk)
-
-[-wikileaks-vault-7.](https://www.wired.co.uk)
+Burgess, M. (2017, May 7). WikiLeaks Drops ‘Grasshopper’ Documents, Part Four of Its CIA Vault 7 Files. *Wired*. Retrieved [from: https://www.wired.co.uk/article/cia-files](https://www.wired.co.uk) [-wikileaks-vault-7.](https://www.wired.co.uk)
 
 Caltagirone, S., Pendergast, A., and Betz, C. (2013). The Diamond Model of Intrusion Analysis. Working Paper. Retrieved from: [`www.activeresponse.org/uploads/2013/07/diamond.pdf`](https://www.activeresponse.org)
 
@@ -5051,15 +3743,11 @@ Communications Security Establishment [CSE]. (2018, February 15). CSE Statement 
 
 Council of European Union. (2018, April 16). Council Conclusions on Malicious Cyber Activities – Approval. Retrieved from: [`data.consilium.europa.eu/doc/document`](https://data.consilium.europa.eu)
 
-236 *B. Kuerbis, F. Badiei, K. Grindal, and M. Mueller* Department of Homeland Affairs Australian Government. (2018). Five Country Ministerial 2018 Official Communiqué. Retrieved from: [`www.homeaffairs.gov.au/about-us/our-portfolios/national-security/security-coordination/five-country`](https://www.homeaffairs.gov.au)
-
-[-ministerial-2018.](https://www.homeaffairs.gov.au)
+Department of Homeland Affairs Australian Government. (2018). Five Country Ministerial 2018 Official Communiqué. Retrieved from: [`www.homeaffairs.gov.au/about-us/our-portfolios/national-security/security-coordination/five-country`](https://www.homeaffairs.gov.au) [-ministerial-2018.](https://www.homeaffairs.gov.au)
 
 Davis II, J. S., Boudreaux, B., Welburn, J. W., Aguirre, J., Ogletree, C., McGovern, G., and Chase, M. S. (2017). *Stateless Attribution*. Santa Monica: RAND Corporation.
 
-Defense Advanced Research Project Agency [DARPA]. (2018). Department of Defense Fiscal Year (FY) 2018 Budget Estimates. Retrieved from: [`www.darpa.mil/`](https://www.darpa.mil)
-
-[attachments/DARPA_FY18_Presidents_Budget_Request.pdf](https://www.darpa.mil)
+Defense Advanced Research Project Agency [DARPA]. (2018). Department of Defense Fiscal Year (FY) 2018 Budget Estimates. Retrieved from: [`www.darpa.mil/`](https://www.darpa.mil) [attachments/DARPA_FY18_Presidents_Budget_Request.pdf](https://www.darpa.mil)
 
 Dunn Cavelty, M. (2012). Militarizing Cyberspace: Why Less may Be Better. In C. Czosseck, R. Ottis, and K. Ziolkowski (eds), *Proceedings of the 4th International Conference on Cyber Conflict*. Tallinn: NATO CCD COE Publications, pp. 141–153.
 
@@ -5075,546 +3763,271 @@ Ghafir, I., Hammoudeh, M., Prenosil, V., Han, L., Hegarty, R., Rabie, K., & Apar
 
 Healey, J. (ed.). (2013). *A Fierce Domain: Conflict in Cyberspace, 1986 to 2012*. Vienna, VA: Cyber Conflict Studies Association.
 
-Healey, J., Mallery, J. C., Jordan, K. T., and Youd, N. V. (2014). *Confidence-Building Measures in Cyberspace: A Multistakeholder Approach for Stability and Security*.
+Healey, J., Mallery, J. C., Jordan, K. T., and Youd, N. V. (2014). *Confidence-Building Measures in Cyberspace: A Multistakeholder Approach for Stability and Security*. Report. Washington, DC: Atlantic Council. Retrieved [from: https://www.atlanticcouncil.org](https://www.atlanticcouncil.org) [.org /in -depth -research -reports /report /confidence -building -measures -in -cyberspace -a](https://www.atlanticcouncil.org) [\-multistakeholder -approach -for -stability -and -security/](https://www.atlanticcouncil.org).
 
+Internet Governance Project. (2018, April 13). Defusing the Cyber Security Dilemma Game through Attribution and Network Monitoring. Retrieved from: [`www.internetgovernance.org`](https://www.internetgovernance.org) [.internetgovernance .org /2018 /04 /13 /defusing -cybersecurity -dilemma -game -attribution](https://www.internetgovernance.org) [\-network -monitoring//.](https://www.internetgovernance.org)
 
+Internet Governance Project. (2020, June 15). Workshop Synopsis: Building Transnational Attribution (Day 1). Retrieved from: [`www.internetgovernance.org`](https://www.internetgovernance.org) [workshop -synopsis -building -transnational -attribution -day -1/.](https://www.internetgovernance.org)
 
+Keromytis, A. (2016, April 25). Enhanced Attribution, Proposers Day Briefing. DARPA. Retrieved from: [`www.enisa.europa.eu`](https://www.enisa.europa.eu) [\-event -presentations /enhanced -attribution/](https://www.enisa.europa.eu).
 
-Report. `Washington, DC`: `Atlantic Council`. Retrieved [from: `https://www.atlanticcouncil.org`](https://www.atlanticcouncil.org)
+Koch, M. (2018, February 22). Germany is Just Fine with the NotPetya Cyberattack but Its Allies Aren’t. *Handelsblatt*. Retrieved from: [`www.handelsblatt.com`](https://www.handelsblatt.com) [/politics /state -secrets -germany -is -just -fine -with -the -notpetya -cyberattack -but -its -allies](https://www.handelsblatt.com) [\-arent /23581222 .html](https://www.handelsblatt.com).
 
-[.org /in -depth -research -reports /report /confidence -building -measures -in -cyberspace -a](https://www.atlanticcouncil.org)
+Lamprakis, P., Dargenio, R., Gugelmann, D., Lenders, V., Happe, M., and Vanbever, L. (2017). Unsupervised Detection of APT C&C Channels Using Web Request Graphs. In M. Polychronakis and M. Meier (eds), *Detection of Intrusions and Malware, and Vulnerability Assessment. DIMVA 2017. Lecture Notes in Computer Science, vol 1032*. Cham: Springer, pp. 366–387.
 
-[\-multistakeholder -approach -for -stability -and -security/](https://www.atlanticcouncil.org).
+Lee, R. (2016, March 4). The Problems with Seeking and Avoiding True Attribution to Cyber Attacks. *SANS DFIR* (Blog). Retrieved from: [`www.sans.org`](https://www.sans.org) [\-problems -with -seeking -and -avoiding -true -attribution -to -cyber -attacks/](https://www.sans.org).
 
-Internet Governance Project. (2018, April 13). Defusing the Cyber Security Dilemma Game through Attribution and Network Monitoring. Retrieved from: [`www.internetgovernance.org`](https://www.internetgovernance.org)
+Lin, H. (2016, September 2). Attribution of Malicious Cyber Incidents: From Soup to Nuts. *SSRN Scholarly Paper*. Retrieved from: [`papers.ssrn.com`](https://papers.ssrn.com) [\=2835719.](https://papers.ssrn.com)
 
-[.internetgovernance .org /2018 /04 /13 /defusing -cybersecurity -dilemma -game -attribution](https://www.internetgovernance.org)
+Miller, C. (2018). What’s Ukraine Doing to Combat Russian Cyberwarfare? “Not Enough.” Radio Free Europe/Radio Liberty. Retrieved August 21 2020, from [`www.rferl.org`](https://www.rferl.org) [.org /a /ukraine -struggles -cyberdefense -russia -expands -testing -ground /29085277 .html](https://www.rferl.org).
 
-[\-network -monitoring//.](https://www.internetgovernance.org)
+National Cybersecurity Center of New Zealand. (2016). *Unclassified Cyber Threat Report*. Retrieved from: [`www.ncsc.govt.nz`](https://www.ncsc.govt.nz) [\-Unclassified -Cyber -Threat -Report .pdf](https://www.ncsc.govt.nz)
 
-Internet Governance Project. (2020, June 15). Workshop Synopsis: Building Transnational Attribution (Day 1). Retrieved from: [`www.internetgovernance.org`](https://www.internetgovernance.org)
-
-[workshop -synopsis -building -transnational -attribution -day -1/.](https://www.internetgovernance.org)
-
-Keromytis, A. (2016, April 25). Enhanced Attribution, Proposers Day Briefing.
-
-DARPA. Retrieved from: [`www.enisa.europa.eu`](https://www.enisa.europa.eu)
-
-[\-event -presentations /enhanced -attribution/](https://www.enisa.europa.eu).
-
-Koch, M. (2018, February 22). Germany is Just Fine with the NotPetya Cyberattack but Its Allies Aren’t. *Handelsblatt*. Retrieved from: [`www.handelsblatt.com`](https://www.handelsblatt.com)
-
-[/politics /state -secrets -germany -is -just -fine -with -the -notpetya -cyberattack -but -its -allies](https://www.handelsblatt.com)
-
-[\-arent /23581222 .html](https://www.handelsblatt.com).
-
-Lamprakis, P., Dargenio, R., Gugelmann, D., Lenders, V., Happe, M., and Vanbever, L.
-
-(2017). Unsupervised Detection of APT C&C Channels Using Web Request Graphs.
-
-In M. Polychronakis and M. Meier (eds), *Detection of Intrusions and Malware, and* *Vulnerability Assessment. DIMVA 2017. Lecture Notes in Computer Science, vol 1032*.
-
-Cham: Springer, pp. 366–387.
-
- *Transnational cyber attribution* 237
-
-Lee, R. (2016, March 4). The Problems with Seeking and Avoiding True Attribution to Cyber Attacks. *SANS DFIR* (Blog). Retrieved from: [`www.sans.org`](https://www.sans.org)
-
-[\-problems -with -seeking -and -avoiding -true -attribution -to -cyber -attacks/](https://www.sans.org).
-
-Lin, H. (2016, September 2). Attribution of Malicious Cyber Incidents: From Soup to Nuts. *SSRN Scholarly Paper*. Retrieved from: [`papers.ssrn.com`](https://papers.ssrn.com)
-
-[\=2835719.](https://papers.ssrn.com)
-
-Miller, C. (2018). What’s Ukraine Doing to Combat Russian Cyberwarfare? “Not Enough.”
-
-Radio Free Europe/Radio Liberty. Retrieved August 21 2020, from [`www.rferl.org`](https://www.rferl.org)
-
-[.org /a /ukraine -struggles -cyberdefense -russia -expands -testing -ground /29085277 .html](https://www.rferl.org).
-
-National Cybersecurity Center of New Zealand. (2016). *Unclassified Cyber Threat Report*.
-
-Retrieved from: [`www.ncsc.govt.nz`](https://www.ncsc.govt.nz)
-
-[\-Unclassified -Cyber -Threat -Report .pdf](https://www.ncsc.govt.nz)
-
-Office of the Director of National Intelligence, United States Government. (2017).
-
-Background to “Assessing Russian Activities and Intentions in Recent US Elections”: The Analytic Process and Cyber Incident Attribution. Retrieved [from: https://www.dni.gov](https://www.dni.gov)
-
-[.gov /files /documents /ICA \_2017 \_01 .pdf](https://www.dni.gov).
+Office of the Director of National Intelligence, United States Government. (2017). Background to “Assessing Russian Activities and Intentions in Recent US Elections”: The Analytic Process and Cyber Incident Attribution. Retrieved [from: https://www.dni.gov](https://www.dni.gov) [.gov /files /documents /ICA \_2017 \_01 .pdf](https://www.dni.gov).
 
 Radford, B. J., Apolonio, L. M., Trias, A. J., and Simpson, J. A. (2018). Network Traffic Anomaly Detection Using Recurrent Neural Networks. Prepared for the 2017 National Symposium on Sensor and Data Fusion. Retrieved [from: http://arxiv .org /abs /1803 .10769.](http://arxiv.org)
 
 Rid, T., and Buchanan, B. (2015). Attributing Cyber Attacks. *Journal of Strategic Studies*, 38(1–2): 4–37.
 
-Rubio, J. E., Alcaraz, C., Rios, R., Roman, R., and Lopez, J. (2020). Distributed Detection of APTs: Consensus vs. Clustering. In *European Symposium on Research in Computer* *Security*. Cham: Springer, pp. 174–192.
+Rubio, J. E., Alcaraz, C., Rios, R., Roman, R., and Lopez, J. (2020). Distributed Detection of APTs: Consensus vs. Clustering. In *European Symposium on Research in Computer Security*. Cham: Springer, pp. 174–192.
 
-Schmitt, M., and Vihul, L. (2017, June 30). International Cyber Law Politicized: The UN
+Schmitt, M., and Vihul, L. (2017, June 30). International Cyber Law Politicized: The UN GGE’s Failure to Advance Cyber Norms. *Just Security*. Retrieved from: [`www.justsecurity.org`](https://www.justsecurity.org) [.justsecurity .org /42768 /international -cyber](https://www.justsecurity.org) law-p oliti cized -gges -fail ure-a dvanc e-cyb er norms/.
 
-GGE’s Failure to Advance Cyber Norms. *Just Security*. Retrieved from: [`www.justsecurity.org`](https://www.justsecurity.org)
+Segal, A. (2018, June 19). The Theft and Reuse of Advanced Offensive Cyber Weapons Pose a Growing Threat. Council on Foreign Relations (Blog). Retrieved from: [`www.cfr.org`](https://www.cfr.org) [.cfr .org /blog /theft -and -reuse -advanced -offensive -cyber weapons-pose-growing-threat.](https://www.cfr.org)
 
-[.justsecurity .org /42768 /international -cyber](https://www.justsecurity.org) law-p oliti cized -gges -fail ure-a dvanc e-cyb er norms/.
+Segal, A., and Grigsby, A. (2018, April 23). New Entries in the CFR Cyber Operations Tracker: Q1 2018. Council on Foreign Relations (Blog). Retrieved from: [`www.cfr.org`](https://www.cfr.org) [.cfr .org /blog /new -entries -cfr -cyber](https://www.cfr.org) operations-tracker-q1-2018.
 
-Segal, A. (2018, June 19). The Theft and Reuse of Advanced Offensive Cyber Weapons Pose a Growing Threat. Council on Foreign Relations (Blog). Retrieved from: [`www.cfr.org`](https://www.cfr.org)
+Segal, A., Hoffman, S., Hanson, F., and Uren, T. (2018, September 25). Hacking for ca$h: Is China Still Stealing Western IP? Australian Strategic Policy Institute. Retrieved from: [`s3-ap-southeast-2.amazonaws.com`](https://s3-ap-southeast-2.amazonaws.com) [.pdf ?FHT EXSi f5qZ DfwP oxnA AhTl iEw45dMR1](https://s3-ap-southeast-2.amazonaws.com).
 
-[.cfr .org /blog /theft -and -reuse -advanced -offensive -cyber weapons-pose-growing-threat.](https://www.cfr.org)
+Toon, J. (2016, November 29). $17 Million Contract Will Help Establish Science of Cyber Attribution. Georgia Tech Research, *Horizons* (Blog). Retrieved from: [`www.rh.gatech.edu`](http://www.rh.gatech.edu) [.rh .gatech .edu /news /584327 /17 -million -contract -will -help -establish -science -cyber](http://www.rh.gatech.edu) attribution.
 
-Segal, A., and Grigsby, A. (2018, April 23). New Entries in the CFR Cyber Operations Tracker: Q1 2018. Council on Foreign Relations (Blog). Retrieved from: [`www.cfr.org`](https://www.cfr.org)
+UK Foreign Office. (2017, December 19). Foreign Office Minister Condemns North Korean Actor for WannaCry Attacks. Retrieved [from: https://www.gov.uk](https://www.gov.uk) [/news /foreign -office -minister -condemns -north -korean -actor -for -wannacry -attacks.](https://www.gov.uk)
 
-[.cfr .org /blog /new -entries -cfr -cyber](https://www.cfr.org) operations-tracker-q1-2018.
+UK Foreign Office. (2018, February 15). Foreign Office Minister Condemns Russia for NotPetya Attacks. Retrieved from: [`www.gov.uk`](https://www.gov.uk) [\-office -minister -condemns -russia -for -notpetya -attacks.](https://www.gov.uk)
 
-Segal, A., Hoffman, S., Hanson, F., and Uren, T. (2018, September 25). Hacking for ca$h: Is China Still Stealing Western IP? Australian Strategic Policy Institute. Retrieved from:
+UK National Cyber Security Center. (2018, April 16). Russian Sponsored Cyber Actors Targeting Network Infrastructure Devices. Retrieved from: [`www.ncsc.gov.uk`](https://www.ncsc.gov.uk) [/news /russian -state -sponsored -cyber](https://www.ncsc.gov.uk) actor s-tar getin g-net work- infra struc ture- devic es.
 
-[`s3-ap-southeast-2.amazonaws.com`](https://s3-ap-southeast-2.amazonaws.com).
+US Department of Homeland Security. (2016, December 29). GRIZZLY STEPPE – Russian Malicious Cyber Activity (JAR-16-20296A). Retrieved from: [`us-cert.cisa.gov`](https://us-cert.cisa.gov) [.cisa .gov /sites /default /files /publications /JAR \_16 -20296A \_GRIZZLY %20STEPPE](https://us-cert.cisa.gov) [\-2016 -1229 .pdf](https://us-cert.cisa.gov).
 
-[.pdf ?FHT EXSi f5qZ DfwP oxnA AhTl iEw45dMR1](https://s3-ap-southeast-2.amazonaws.com).
+US Department of Justice. (2014, May 19). U.S. Charges Five Chinese Military Hackers for Cyber Espionage against U.S. Corporations and a Labor Organization for Commercial Advantage. Retrieved from: [`www.justice.gov`](https://www.justice.gov) [\-military -hackers -cyber -espionage -against -us -corporations -and -labor](https://www.justice.gov).
 
-Toon, J. (2016, November 29). $17 Million Contract Will Help Establish Science of Cyber Attribution. Georgia Tech Research, *Horizons* (Blog). Retrieved from: [`www.rh.gatech.edu`](http://www.rh.gatech.edu)
+US Department of Justice. (2018). Criminal Procedures. Retrieved August 1, 2018, from: [`www.justice.gov`](https://www.justice.gov)
 
-[.rh .gatech .edu /news /584327 /17 -million -contract -will -help -establish -science -cyber](http://www.rh.gatech.edu)
+US Department of Treasury. (2018, September 6). Treasury Targets North Korea for Multiple Cyber Attacks. Retrieved [from: https://home.treasury.gov](https://home.treasury.gov) [home.treasury.gov](https://home.treasury.gov)
 
-attribution.
+US 白宫。 (2015, 9 月 25 日)。FACT SHEET: President Xi Jinping’s State Visit to the United States。 来源: [`obamawhitehouse.archives.gov/the-press`](https://obamawhitehouse.archives.gov) [\-office /2015 /09 /25 /fact -sheet -president -xi -jinpings -state -visit -united -states.](https://obamawhitehouse.archives.gov)
 
-UK Foreign Office. (2017, December 19). Foreign Office Minister Condemns North Korean Actor for WannaCry Attacks. Retrieved [from: https://www.gov.uk](https://www.gov.uk)
-
-[/news /foreign -office -minister -condemns -north -korean -actor -for -wannacry -attacks.](https://www.gov.uk)
-
-UK Foreign Office. (2018, February 15). Foreign Office Minister Condemns Russia for NotPetya Attacks. Retrieved from: [`www.gov.uk`](https://www.gov.uk)
-
-[\-office -minister -condemns -russia -for -notpetya -attacks.](https://www.gov.uk)
-
-238 *B. Kuerbis, F. Badiei, K. Grindal, and M. Mueller* UK National Cyber Security Center. (2018, April 16). Russian Sponsored Cyber Actors Targeting Network Infrastructure Devices. Retrieved from: [`www.ncsc.gov.uk`](https://www.ncsc.gov.uk)
-
-[/news /russian -state -sponsored -cyber](https://www.ncsc.gov.uk) actor s-tar getin g-net work- infra struc ture- devic es.
-
-US Department of Homeland Security. (2016, December 29). GRIZZLY STEPPE –
-
-Russian Malicious Cyber Activity (JAR-16-20296A). Retrieved from: [`us-cert.cisa.gov`](https://us-cert.cisa.gov)
-
-[.cisa .gov /sites /default /files /publications /JAR \_16 -20296A \_GRIZZLY %20STEPPE](https://us-cert.cisa.gov)
-
-[\-2016 -1229 .pdf](https://us-cert.cisa.gov).
-
-US Department of Justice. (2014, May 19). U.S. Charges Five Chinese Military Hackers for Cyber Espionage against U.S. Corporations and a Labor Organization for Commercial Advantage. Retrieved from: [`www.justice.gov`](https://www.justice.gov)
-
-[\-military -hackers -cyber -espionage -against -us -corporations -and -labor](https://www.justice.gov).
-
-US Department of Justice. (2018). Criminal Procedures. Retrieved August 1, 2018, from:
-
-[`www.justice.gov`](https://www.justice.gov)
-
-US Department of Treasury. (2018, September 6). Treasury Targets North Korea for Multiple Cyber Attacks. Retrieved [from: https://home.treasury.gov](https://home.treasury.gov)
-
-
-
-
--   [`home.treasury.gov`](https://home.treasury.gov)
-
-US 白宫。 (2015, 9 月 25 日)。FACT SHEET: President Xi Jinping’s State Visit to the United States。 来源: [`obamawhitehouse.archives.gov/the-press`](https://obamawhitehouse.archives.gov)
-
-[\-office /2015 /09 /25 /fact -sheet -president -xi -jinpings -state -visit -united -states.](https://obamawhitehouse.archives.gov)
-
-Valeriano, B., and Maness, R. C. (2015)。*Cyber War versus Cyber Realities: Cyber Conflict* *in the International System*。Oxford: Oxford University Press。
+Valeriano, B., and Maness, R. C. (2015)。*Cyber War versus Cyber Realities: Cyber Conflict in the International System*。Oxford: Oxford University Press。
 
 Wittes, B. (2013, 2 月 20 日)。Mandiant Report on ‘APT1’。Lawfare (Blog)。 来源: [`www.lawfareblog.com/mandiant-report-apt1`](https://www.lawfareblog.com)。
 
 10.4324/9781003110224-18
 
-**16**
-
-**16 Conclusion**
-
-The ambiguity of cyber security politics in
-
-the context of multidimensional uncertainty
+## 16 Conclusion: The ambiguity of cyber security politics in the context of multidimensional uncertainty
 
 *Andreas Wenger and Myriam Dunn Cavelty*
 
 在快速的社会-技术转型和政治权力与权威碎片化的世界里，网络安全已牢固确立为 21 世纪顶级国家安全议题。管理网络不安全将在未来十年进一步增加复杂性和政治意义，这既由持续的社会-技术转型加速推动，也由相关政治应对的动态变化所驱动。书的第一部分记录了 cyberspace 向外层空间的持续地理扩张，预测了新兴技术将提升基础设施和服务的互联性，并指出在日益紧密耦合和整合的社会-技术系统背景下，网络威胁叙事将不可避免地扩展到国家和国际层面的更多政策领域。书的第二部分讨论了在 cyberspace 中，国家行为体需要在克制与利用之间取得正确平衡，为何必须努力控制升级风险，以及为何政府在越来越多地与经济和社会行为体共享网络安全责任。
 
-当前的网络安全政治状态极大程度上反映了大国竞争的底层力量与社会-技术与社会经济全球化过程动态之间的相互作用。这两股力量的交织产生了两个关键因素——多维不确定性和社会政治模糊性——描述了当前网络安全政治在国家和国际层面的背景，正如
-
-highlighted in Figure 16.1. 多维不确定性在网络安全作为复杂问题的出现中发挥关键作用，并塑造——也被塑造于——网络安全政治的模糊性。
+当前的网络安全政治状态极大程度上反映了大国竞争的底层力量与社会-技术与社会经济全球化过程动态之间的相互作用。这两股力量的交织产生了两个关键因素——多维不确定性和社会政治模糊性——描述了当前网络安全政治在国家和国际层面的背景，正如 highlighted in Figure 16.1. 多维不确定性在网络安全作为复杂问题的出现中发挥关键作用，并塑造——也被塑造于——网络安全政治的模糊性。
 
 网络安全政治的模糊性涵盖了介绍章节（Dunn Cavelty and Wenger 2022）中概述的两个网络安全维度：第一，国际维度的网络安全*政治*关注国家行为体如何依据其战略目标塑造并利用 cyberspace，同时努力维持其战略关系的稳定。在 Figure 16.1, 中，交互式寻找可接受的平衡（DOI: [10.4324/9781003110224-18](https://doi.org/10.4324/9781003110224-18)）的过程体现在图中。
 
 ![Image 11](img/index-255_1.png)
 
-240 *Andreas Wenger and Myriam Dunn Cavelty*
-
 *Figure 16.1* 网络安全的维度。
 
 上左（地缘政治（误）用的可能性）和下右（冲突性/合作性政府应对）角落代表了网络空间的战略效用与战略稳定。
 
-第二，更广泛的网络安全*政治*维度关注国家、产业和社会如何协商各自在治理 cyberspace 中的角色，同时在影响 cyberspace 持续转型的技术创新过程中相互竞争。
-
-在 Figure 16.1, 中，交互式寻找在不确定且模糊的社会-技术和社会政治背景下的负责任行为准则的规范，体现在左下（碎片化的跨部门/跨国治理响应）和右上（新兴数字技术）角落。
+第二，更广泛的网络安全*政治*维度关注国家、产业和社会如何协商各自在治理 cyberspace 中的角色，同时在影响 cyberspace 持续转型的技术创新过程中相互竞争。在 Figure 16.1, 中，交互式寻找在不确定且模糊的社会-技术和社会政治背景下的负责任行为准则的规范，体现在左下（碎片化的跨部门/跨国治理响应）和右上（新兴数字技术）角落。
 
 这章结论，基于本书各个章节的个别贡献，突出了四项共同的关键争论，这些争论共同概括了从西方视角看当前关于网络安全政治未来的复杂性和悖论。第一部分探讨国家通过网络行动能获得多大的政治影响力，以及哪些情境因素限制了这种行动的战略效用。第二部分讨论新兴数字技术在网络安全政治中的作用，指出技术创新过程的动态强化了治理空间的碎片化。第三部分询问国家如何维护网络空间的稳定以及更广泛的战略关系，强调了三个相互关联的挑战——升级、威慑和情报——在这个互动进程中的作用。第四部分关注国家、经济和社会在网络安全中的共同责任，并关注在日益跨部门和跨国治理空间中不断 renegotiation 其各自角色的过程。
 
- *Conclusion* 241
-
-**The strategic utility of cyber operations**
+### The strategic utility of cyber operations
 
 关于网络行动的战略效用争论发生在新兴数字技术快速出现与其使用与滥用政治交织的背景下。随时间推移，争论发生了显著变化，因为网络安全问题从少数专家讨论的技术风险管理问题转变为最高政府层面讨论的国家安全关键挑战（Dunn Cavelty 2008; Dewar 2018）。早期的争论聚焦于“末日”网络攻击情景，这些情景集中于对日益互联且脆弱的基础设施的战略性利用（Clarke and Knake 2010）。随着突发的网络战争未如预期般出现，专家们开始转向低强度网络冲突的政治与战略意义（Baezner 2018；见也 Rid 2012; Lindsay 2014/15），同时关注与隐蔽国家参与相关的计算机网络攻击行动的增加（Dunn Cavelty 2015）。
 
-
-
-
 在网络安全政治史的当前阶段，经验图景表现为“高端冲突的‘狗不 bark’”，以及低端冲突中的持续网络行动和不稳定（Schulze 2020；Harknett 和 Smeets 2020；Lupovici 2021）。在此背景下，本卷的章节指出了关于网络作战的战略效用的持久争论的三个相互关联的方面：第一小节集中于在多维不确定性下实现受控战略效果的困难。这里的重点是解释为何迄今为止的大多数网络作战似乎并不具有升级性，且不太可能导致现有大国之间权力平衡的显著变化。第二小节聚焦于网络作战作为一种用于颠覆和轻度破坏的工具的效用。这里的重点是理解参与方的模糊性以及网络作战的不透明性如何在特定的战略情境中被某些势力操纵，以实现非对称影响。第三小节涉及西方（安全）政治中关于民主国家对信息操作的脆弱性这一最新网络威胁焦点的假设性脆弱性。这里的辩论集中在网络影响行动是否能够通过旨在削弱社会凝聚力和民主政治机构信任的网络行动来实现战略效果的问题上。
 
-## The difficulty of achieving a controlled strategic effect under multidimensional uncertainty
+#### The difficulty of achieving a controlled strategic effect under multidimensional uncertainty
 
-本卷中的若干章节涉及这样一个概念：网络作战在转变国家间经济与军事力量平衡或更具体地说，在对手改变其竞争对手的政治目标方面的战略效用受到限制（Gomez 和 Whyte 2022；Baezner 和 Cordey 2022）。作者并未明确否定战略研究文献的结论，即网络作战的战略影响可能难以捉摸（Smeets 2018；Borghard 和 Lonergan 2017：477；Kostyuk 和 Zhukov 2017；242 *Andreas Wenger 和 Myriam Dunn Cavelty* Valeriano 和 Maness 2015：183；Gartzke 2013）。然而，他们出于不同的原因，担心这些文献的见解可能导致政策低估持续参与的升级风险，并低估前置防御（参见 Devanny 2021；Healey 和 Jervis 2020；Healey 2019；Cavaiola 等 2015）。我们将在下文回到在多维不确定性下维护战略稳定性的问题上。
+本卷中的若干章节涉及这样一个概念：网络作战在转变国家间经济与军事力量平衡或更具体地说，在对手改变其竞争对手的政治目标方面的战略效用受到限制（Gomez 和 Whyte 2022；Baezner 和 Cordey 2022）。作者并未明确否定战略研究文献的结论，即网络作战的战略影响可能难以捉摸（Smeets 2018；Borghard 和 Lonergan 2017：477；Kostyuk 和 Zhukov 2017；Valeriano 和 Maness 2015：183；Gartzke 2013）。然而，他们出于不同的原因，担心这些文献的见解可能导致政策低估持续参与的升级风险，并低估前置防御（参见 Devanny 2021；Healey 和 Jervis 2020；Healey 2019；Cavaiola 等 2015）。我们将在下文回到在多维不确定性下维护战略稳定性的问题上。
 
 在网络空间进行战略操作，诸多情况表明，这要比“便宜且容易”的隐喻要更具技术和作业难度（Lindsay 2013；Slayton 2017；Lewis 2018）。Max Smeets 在即将出版的书中指出：“在指定时间点造成特定的、有针对性的网络效果，以实现战略目的，并且超过负面后果的影响，是困难的”（Smeets 即将出版）。资源限制了网络作战的整体预期效用。这一点被 Jon R. Lindsay 所强调的网络影响的经济逻辑所加强（Lindsay 2017）。他指出，设置网络利用工具通常比应对它们更昂贵，这增加了保持目标在更长时间内面临风险的动机，使网络冲突主要成为情报游戏（参见 Chesney 和 Smeets 即将出版；Chesney 和 Smeets 2020；Rovner 2019）。这些技术、组织和经济挑战都反映了网络空间的结构性特征。
 
-通过网络作战实现受控的战略影响之所以困难，是因为网络空间作为作战环境具有多维不确定性和社会政治模糊性。一方面，网络空间表现出高度的互连性。这一特征使得完全控制网络作战的战略效果变得非常困难，因为一些超出预期目标的意外副作用（即超出目标的附带损害）几乎是不可避免的（Smeets 2018）。另一方面，网络空间充满政治争议。这使得在一个政治上稳定的结果中实现对手改变其政治目标的目标变得极为困难。
-
-按照同样的逻辑，将网络作战归因于特定政治行为者仍然耗时且往往结论不清（Rid 和 Buchanan 2015）。
-
-无论是国家还是网络情报公司都没有充分的动力充分共享支撑其归因主张的数据、方法和工具（Egloff 2020a，Egloff 和 Wenger 2019）。结果是，许多归因过程缺乏透明度和可信度，这使得基于本质上有争议的归因主张来构建广泛且稳定的政治支持的应对策略变得困难（Egloff 和 Dunn Cavelty 2021）。
+通过网络作战实现受控的战略影响之所以困难，是因为网络空间作为作战环境具有多维不确定性和社会政治模糊性。一方面，网络空间表现出高度的互连性。这一特征使得完全控制网络作战的战略效果变得非常困难，因为一些超出预期目标的意外副作用（即超出目标的附带损害）几乎是不可避免的（Smeets 2018）。另一方面，网络空间充满政治争议。这使得在一个政治上稳定的结果中实现对手改变其政治目标的目标变得极为困难。按照同样的逻辑，将网络作战归因于特定政治行为者仍然耗时且往往结论不清（Rid 和 Buchanan 2015）。无论是国家还是网络情报公司都没有充分的动力充分共享支撑其归因主张的数据、方法和工具（Egloff 2020a，Egloff 和 Wenger 2019）。结果是，许多归因过程缺乏透明度和可信度，这使得基于本质上有争议的归因主张来构建广泛且稳定的政治支持的应对策略变得困难（Egloff 和 Dunn Cavelty 2021）。
 
 在政治竞争的语境中，网络作战作为单一工具缺乏获得持久政治或军事优势的战略效用。但在实际操作中，它们与广泛的其他外交和安全政策工具相联系并相互集成。网络作战的隐蔽性意味着精英们将它们用作信号决心的工具，同时最小化升级风险（Poznansky 和 Perkoski 2018）。第二小节转向了在特定战略情境中，某些行为体如何尝试操纵网络作战以实现有限的非对称影响。
 
-## Conclusion
-
-## The power to subvert: manipulating “gray zones” while minimizing the risk of escalation
+### The power to subvert: manipulating “gray zones” while minimizing the risk of escalation
 
 正如 Marie Baezner 和 Sean Cordey（2022）在其章节中所指出的，大多数网络作战发生在战争阈值以下。他们通过一系列网络冲突案例研究，确认影响行动主要落入超越传统外交、却未达到传统战争的区域，Lucas Kello 将其描述为“非和平”（Kello 2017）。以此经验谜题为出发点，本章探讨为何某些行为体视此类作战为有吸引力且高效的权力投射和影响工具。本文得出结论，网络（影响）作战的（有限）战略效用取决于其部署的战略情境和作战环境的特征，以及实施该作战的战略主体的性质。
 
 在战略层面上，网络（影响）作战在国际事务中的日益普遍使用反映了当前大国竞争的动态。随着传统战争的成本上升以及经济相互依存的现实，特别是大国在网络作战中获得非对称影响的激励，尤其在其感兴趣的领域中实现，而不至于过度削弱大国关系的战略稳定性。在作战层面上，网络影响作战的使用反映了作战环境的特征：法律模糊、政治争议频繁、参与方的不透明性以及私人与公共领域边界的模糊。引用“灰色地带”概念及相关文献，Baezner 和 Cordey 认为，修正主义者利用网络作战作为工具，在武装冲突阈值以下进行操作，以在与其他政治行为体的关系中，尤其是在面对美国的全球（军事）主导地位时，获得非对称优势。
 
-
 Based on a series of case studies, Baezner and Cordey note that the following operational assumptions about cyber (influence) operations seem to make them attractive tools for many to intervene in gray zone conflicts. First, the majority of the cyber technologies used in such contexts are widely available at relatively low cost. Patriotic hackers or opaque criminal groups with ties to domestic or foreign elites use them opportunistically for disruption and mild sabotage rather than for destruction. Second, cyber espionage and influence operations are increasingly used to influence the information environment of a conflict and gain an asymmetric advantage. They work in tandem with a wider set of economic, political, and military coercive tools. Third, the legal uncertainty surrounding intelligence operations allows state actors to avoid formal condemnation and uphold a posture of plausible deniability. The opaqueness of actors and operations makes it unlikely that a verdict of attribution would be as transparent and credible as to justify a military response.
 
-The importance of the strategic context and the nature of the strategic actor employing cyber (influence) operations are confirmed by Aaron Brantly (2022) in his chapter on Ukraine. He analyzes Ukraine as a case of how to confront a larger
-
-`244` *Andreas Wenger and Myriam Dunn Cavelty*
-
-aggressive adversary employing cyber and information warfare in its considered sphere of influence at a time of extreme domestic vulnerability amid violent regime change. Before the 2014 Euromaidan revolution, widespread rent-seeking behavior of criminal–political patronage networks and extensive penetration of Ukraine’s state structures by Russia’s intelligence service made Ukraine vulnerable to foreign cyber and influence operations. The revolution reversed Ukraine’s foreign policy alignment from Russia to the West and began a slow process of domestic legal, organizational, and policy transformation that however remains contested by entrenched elites. Both the relative success of Russia’s cyber and information warfare as well as the relative success of Ukraine’s response to Russian cyberattacks and disinformation campaigns, Brantly notes, must be assessed in the context of broader patterns of domestic political contestation, on the one hand, and the countries’ international orientation and dependence, on the other.
+The importance of the strategic context and the nature of the strategic actor employing cyber (influence) operations are confirmed by Aaron Brantly (2022) in his chapter on Ukraine. He analyzes Ukraine as a case of how to confront a larger aggressive adversary employing cyber and information warfare in its considered sphere of influence at a time of extreme domestic vulnerability amid violent regime change. Before the 2014 Euromaidan revolution, widespread rent-seeking behavior of criminal–political patronage networks and extensive penetration of Ukraine’s state structures by Russia’s intelligence service made Ukraine vulnerable to foreign cyber and influence operations. The revolution reversed Ukraine’s foreign policy alignment from Russia to the West and began a slow process of domestic legal, organizational, and policy transformation that however remains contested by entrenched elites. Both the relative success of Russia’s cyber and information warfare as well as the relative success of Ukraine’s response to Russian cyberattacks and disinformation campaigns, Brantly notes, must be assessed in the context of broader patterns of domestic political contestation, on the one hand, and the countries’ international orientation and dependence, on the other.
 
 Cyber operations in “gray zone” strategic contexts should be conceptualized less as a means of warfare and more appropriately as a tool of political power projection, Marie Baezner and Sean Cordey conclude. The two authors see such operations as both a novel, efficient and effective tool for disruption (and, to a lesser extent, sabotage) and an “enhancer and transformer” of traditional espionage and covert intelligence operations (Baezner and Cordey 2022: 25). Although their strategic utility will remain elusive, they argue, actors operating in the “gray zones” of modern conflict will likely continue to invest into cyber operations and use them in order to gain an asymmetric advantage. Yet the widely shared assumption that cyber (influence) operations carry a limited risk of escalation might be misplaced and should be reconsidered, the two authors argue. As long as there is a lack of consensus among great powers about norms of acceptable espionage and as long as their definitions of cyber security diverge, the risks of unintentional escalation remain worrisome.
 
-***Disinformation as a new threat focus: Asymmetrical***
+### Disinformation as a new threat focus: Asymmetrical vulnerability of democracies?
 
-***vulnerability of democracies?***
+In cyberspace “the power to subvert seems to trump both the power to coerce and the power to attract” (Dunn Cavelty and Wenger 2019: 15). Subversive power is especially relevant in strategic contexts in which the perceived spheres of interest by rising powers overlap with the geopolitical interests of ruling powers that uphold the status quo (Maschmeyer 2021). But to what degree can revisionist powers use cyber influence operations also as effective tools to undermine the social cohesion and the political stability of democracies? This concern has turned into one of the most relevant cyber threat narratives in Western policy circles, ever since US authorities have attributed the cyber campaigns targeting the US election in 2016 to Russia (Egloff 2020b).
 
-In cyberspace “the power to subvert seems to trump both the power to coerce and the power to attract” (Dunn Cavelty and Wenger 2019: 15). Subversive power is especially relevant in strategic contexts in which the perceived spheres of interest by rising powers overlap with the geopolitical interests of ruling powers that uphold the status quo (Maschmeyer 2021). But to what degree can revisionist powers use cyber influence operations also as effective tools to undermine the social cohesion and the political stability of democracies? This concern has turned into one of the most relevant cyber threat narratives in Western policy circles, ever since US authorities have attributed the cyber campaigns targeting the US
+Western policymakers increasingly perceive disinformation and cyber influence campaigns by Russia and China as a major threat to liberal democracies, Wolf J. Schünemann (2022) notes in his chapter. Analyzing the threat frames used in Western policy documents, he shows that Western policymakers conceptualize disinformation campaigns that target democratic elections as strategic tools used by Russia and China in the context of great power competition. According to the threat narrative that emerges from these policy documents, foreign actors are actively exploiting the bias of liberal democracies against media control. They actively manipulate the ambiguities between public diplomacy and coordinated disinformation campaigns to target and potentially distort national elections. Such a threat narrative is often connected to a policy response that aims at strengthening the state’s strategic communication capacities. This, however, Schünemann cautions, might have unintended side-effects. Expanding the control of the state over the information sphere might weaken a democracy’s best barriers against disinformation: public discourse and public opinion.
 
-election in 2016 to Russia (Egloff 2020b).
+The political context of the alleged asymmetrical vulnerability of democracies is characterized by uncertainty and a lack of knowledge about the actual impact of disinformation. There is very little robust empirical evidence, Schünemann notes, that foreign disinformation campaigns have a substantial long-term effect on public discourse and public policy. The potential macro effects on political discourses are very difficult to understand and to prove, not least because the digital public sphere and the mass media system are themselves in the middle of a structural transformation. Several phenomena associated with this transformation – for example, echo chambers and automated social bots – are seen as facilitating factors for the spread of disinformation. Yet there is little robust evidence about how they influence the processes of political opinion formation at the macro level (also see Maschmeyer et al. forthcoming). Understanding how the attack surface – the public sphere and public discourse – is changing in the context of digitalization is a precursor for the study of the impact that disinformation might have on political discourse and electoral processes at the national level.
 
-Western policymakers increasingly perceive disinformation and cyber influence campaigns by Russia and China as a major threat to liberal democracies, Wolf J. Schünemann (2022) notes in his chapter. Analyzing the threat frames used
+New digital tools such as social media have a potential – with or without outside interference – to erode social trust and increase political fragmentation in (democratic) societies. The use of new socio-technical tools, however, is not predetermined, as Jasmin Haunschild, Marc-André Kaufhold, and Christian Reuter demonstrate in their chapter (Haunschild et al. 2022). This means, they argue, that new socio-technical countermeasures can be designed and developed that ameliorate the potentially negative effects of social and political bots. New technologies can be used to increase social cohesion or to exploit existing grievances. And while tech race dynamics can be strong – for example, between automated bot configuration and automated bot detection – social intervention will remain decisive. Their chapter highlights that the micro-politics of business and civilian actors designing the right social-technical tools might be as important for the resilience of democratic societies against disinformation campaign as the macro-political responses of state (security) organizations.
 
-`Conclusion` 245
+效果与外国虚假信息和宣传的关联在于利用既有的社会不信任和政治怨恨。关于此，第 3 章的作者和第 4 章的作者同意。成功的虚假信息运动利用公共话语的现有脆弱性，因此必须在此之内，Schünemann 指出。关于外国虚假信息的潜在负面影响的不确定性，他得出结论，“必须让我们不陷入网络空间的新阶段以及对自由民主价值和国际和平可能产生不利影响的网络化安全化阶段”（Schünemann 2022: 33）。降低民主社会对外国虚假信息运动的脆弱性仍是民间社会、私营和公共部门的共同责任。
 
-in Western policy documents, he shows that Western policymakers conceptualize disinformation campaigns that target democratic elections as strategic tools used by Russia and China in the context of great power competition. According to the threat narrative that emerges from these policy documents, foreign actors are actively exploiting the bias of liberal democracies against media control. They actively manipulate the ambiguities between public diplomacy and coordinated disinformation campaigns to target and potentially distort national elections. Such a threat narrative is often connected to a policy response that aims at strengthening the state’s strategic communication capacities. This, however, Schünemann cautions, might have unintended side-effects. Expanding the control of the state over the information sphere might weaken a democracy’s best barriers against disinformation: public discourse and public opinion.
-
-The political context of the alleged asymmetrical vulnerability of democracies is characterized by uncertainty and a lack of knowledge about the actual impact of disinformation. There is very little robust empirical evidence, Schünemann notes, that foreign disinformation campaigns have a substantial long-term effect on public discourse and public policy. The potential macro effects on political discourses are very difficult to understand and to prove, not least because the digital public sphere and the mass media system are themselves in the middle of a structural transformation. Several phenomena associated with this transformation
-
-– for example, echo chambers and automated social bots – are seen as facilitating factors for the spread of disinformation. Yet there is little robust evidence about how they influence the processes of political opinion formation at the macro level (also see Maschmeyer et al. forthcoming). Understanding how the attack surface
-
-– the public sphere and public discourse – is changing in the context of digitalization is a precursor for the study of the impact that disinformation might have on political discourse and electoral processes at the national level.
-
-New digital tools such as social media have a potential – with or without outside interference – to erode social trust and increase political fragmentation in (democratic) societies. The use of new socio-technical tools, however, is not predetermined, as Jasmin Haunschild, Marc-André Kaufhold, and Christian Reuter demonstrate in their chapter (Haunschild et al. 2022). This means, they argue, that new socio-technical countermeasures can be designed and developed that ameliorate the potentially negative effects of social and political bots. New technologies can be used to increase social cohesion or to exploit existing grievances.
-
-And while tech race dynamics can be strong – for example, between automated bot configuration and automated bot detection – social intervention will remain decisive. Their chapter highlights that the micro-politics of business and civilian actors designing the right social-technical tools might be as important for the resilience of democratic societies against disinformation campaign as the macro-political responses of state (security) organizations.
-
-
-
-效果与外国虚假信息和宣传的关联在于利用既有的社会不信任和政治怨恨。关于此，第 3 章的作者和第 4 章的作者同意。成功的虚假信息运动利用公共话语的现有脆弱性，因此必须在 246 *Andreas Wenger and Myriam Dunn Cavelty* 之内，Schünemann 指出。关于外国虚假信息的潜在负面影响的不确定性，他得出结论，“必须让我们不陷入网络空间的新阶段以及对自由民主价值和国际和平可能产生不利影响的网络化安全化阶段”（Schünemann 2022: 33）。降低民主社会对外国虚假信息运动的脆弱性仍是民间社会、私营和公共部门的共同责任。
-
-**新兴技术与网络安全政治的未来**
+### 新兴技术与网络安全政治的未来
 
 自网络安全问题进入国家和国际政治议程以来，Jon R. Lindsay（2022）在其关于密码学优势模糊性的章节中指出，两种在分析上不同的视角已影响了网络安全政治的辩论。第一种视角基于技术决定政治的前提。预测新兴技术的变革潜力，这种观点倾向于推导对安全政治的戏剧性后果。我们已经回顾了早期专家的假设，认为 cyberspace 的本质是不稳定的，有利于进攻。第二种视角则从相反方向出发，假设政治决定技术。这种分析视角意味着社会政治环境会削弱所谓的网络攻击优势，并强化既定的权力关系（参见 Dunn Cavelty 和 Wenger 2019）。
 
 我们在整个卷中主张，结合两种视角、解构技术与政治的共生与依赖关系的视角，为研究快速技术变革对网络安全政治及其反过来的模糊影响提供了更具建设性的分析视角。在此背景下，本卷的章节讨论了三个关于新兴技术与网络安全政治未来相互关系的关键洞见。第一个子节聚焦于技术竞争动态作为网络威胁感知的驱动力。重点在于全球市场与地缘政治动态在多维不确定性下的相互作用，以及这些动态如何推动威胁叙事。第二个子节指出，社会政治环境决定了新兴技术的战略效用。这里的重点是社会和制度因素如何塑造新兴技术对进攻与防御平衡的影响。第三个子节涉及私人行为者在数字创新中的日益增长作用，尤其是在保护 cyberspace 方面。重点在于行为者数量的增加导致了社会技术不确定性的上升以及围绕新兴技术治理空间的社会政治模糊性。
 
-***技术竞争动态作为网络威胁感知的驱动力***
+#### 技术竞争动态作为网络威胁感知的驱动力
 
 技术发展的动态和新兴轨迹是塑造技术与政治相互作用的关键因素。多维不确定性——关于技术发展的范围和节奏、市场动态以及社会接受度——是创新过程的关键驱动力（参见图 16.1）。技术公司受市场压力影响，受利润驱动。它们在潜在的先发优势和巨大经济规模的承诺影子下，做出设计和开发决策，包括产品和服务的性能与安全性、透明度之间的复杂权衡。相反，政府通过制定和实施技术策略影响创新过程，这些策略规定了国家在技术采用上的雄心水平，并创建符合其社会制度和规范背景的监管环境，以在新兴全球创新空间中为本国争取最佳位置（Bonfanti 2022）。
 
 随着人工智能、量子计算或太空技术等新技术可能性的出现，政府和企业都关注其潜在的变革能力，并具体预测这些技术在塑造网络安全方面的作用。本卷章节讨论的大多数技术都是双重用途技术，因而可能影响全球经济与军事平衡。因此，大国倾向于将此类技术视为潜在的战略资源。在技术、经济和（地缘）政治动态的交织下，形成一种符合安全困境逻辑（Jervis 1978）的模糊政治互动：国家试图通过在关键技术上获得或维持优势的手段来最大化自身利益和安全，而这又威胁到其他国家的利益和相对安全。
 
-从政治角度来看，如果技术发展过程仅由少数主导性的经济（全球科技公司）和政治行为体（大国）主导，则存在问题。技术资源的集中于少数主体可能会影响全球经济与军事权力的分布，并创造或加深不对称的经济与政治依赖。
+从政治角度来看，如果技术发展过程仅由少数主导性的经济（全球科技公司）和政治行为体（大国）主导，则存在问题。技术资源的集中于少数主体可能会影响全球经济与军事权力的分布，并创造或加深不对称的经济与政治依赖。日益激烈的技术竞争为国家提供了影响创新过程和新技术扩散的动机，以服务其狭隘的国家利益（Fischer and Wenger 2019）。相反，技术竞争动态作为国家威胁感知的驱动力，倾向于激发灾难情景。国家行为体日益感到自己陷入 AI 或量子霸权的全球竞赛（Lindsay 2022；Bonfanti 2022）。从科学与技术研究的视角来看，这种威胁叙事是由竞争性全球市场中的设计决策微观政治与大国在竞争性国际体系中的宏观政治策略共同构成的（Fischer and Wenger 2021）。
 
-日益激烈的技术竞争为国家提供了影响创新过程和新技术扩散的动机，以服务其狭隘的国家利益（Fischer and Wenger 2019）。相反，技术竞争动态作为国家威胁感知的驱动力，倾向于激发灾难情景。国家行为体日益感到自己陷入 AI 或量子霸权的全球竞赛（Lindsay 2022；Bonfanti 2022）。从科学与技术研究的视角来看，这种威胁叙事是由竞争性全球市场中的设计决策微观政治与大国在竞争性国际体系中的宏观政治策略共同构成的（Fischer and Wenger 2021）。
+#### 新兴技术的战略效用取决于社会政治环境
 
-***新兴技术的战略效用取决于社会政治环境***
+新兴技术在情报界进攻与防御平衡的关键在于机构因素和战略背景，而非技术架构本身（这也是第 6 章[^1]的核心信息）。分析密码技术与政治优势的激烈关系时，Jon R. Lindsay（2022）指出密码学（密码生成）与密码分析（密码破解）之间存在根本性的政治悖论：它们必须合作以竞争，并尊重合作生成的密码系统的约束。因此，密码学演变为组织性争议，极度依赖社会因素。基于此背景，密码学历史的一个核心洞见是“愚钝的人是古典密码学的阿喀琉斯之踵”（Lindsay 2022: 89）。Lindsay 进一步认为，这也合理地表明“人类将也是量子密码学的 undoing”（Lindsay 2022: 89）。
 
-新兴技术在情报界进攻与防御平衡的关键在于机构因素和战略背景，而非技术架构本身（这也是第 6 章[¹]的核心信息）。分析密码技术与政治优势的激烈关系时，Jon R. Lindsay（2022）指出密码学（密码生成）与密码分析（密码破解）之间存在根本性的政治悖论：它们必须合作以竞争，并尊重合作生成的密码系统的约束。因此，密码学演变为组织性争议，极度依赖社会因素。基于此背景，密码学历史的一个核心洞见是“愚钝的人是古典密码学的阿喀琉斯之踵”（Lindsay 2022: 89）。Lindsay 进一步认为，这也合理地表明“人类将也是量子密码学的 undoing”（Lindsay 2022: 89）。
-
-[¹]: https://example.org/chapter6
-
-
+[^1]: https://example.org/chapter6
 
 一个运行良好的量子计算机应能够破解当前对网络安全至关重要的密码协议。预见到单方面的技术突破很容易转化为担忧，即量子计算的突破可能会威胁现有的公钥基础设施。随着中国大力投入量子技术，西方国家形成了一个叙事，认为两大强国在争夺量子优势的全球竞赛中被锁定在一起。量子突破将对安全和国防产生重大影响，因此有人认为，若出现这种情况，公共机构的情报将被锁定，而首批采用者的通信将变得难以破解。若此情况确实发生，决策者和战略家担忧全球稳定将面临风险。
 
 然而，利益相关者 Lindsay 指出，技术与政治相互作用的影响可能更加模糊。首先，这种观点忽视了寻找量子安全协议的进程与能够破解当前密码协议的量子计算机同步发展。其次，量子计算不会改变密码学对社会因素的依赖。情报始终是人类组织之间的竞争。当前的网络间谍黄金时代并非由数学和技术上薄弱的公钥基础设施所推动，而是由基础设施组织结构过于复杂以及用户网络安全意识不足所导致。第三，即便在一个地缘政治竞争中某一方在密码学上取得优势，这种优势如何转化为政治结果并非由技术决定，而是取决于整体战略环境和机构决策的具体情况。Lindsay 表示，一次成功的破解可以使谈判更有可能，或使惊击更具吸引力，甚至可能给人一种安全感的虚假印象。
 
-在其章节中，Matteo E. Bonfanti（2022）同样指出，新兴的人工智能技术对网络安全的攻防平衡产生的影响难以预测，因为情境充满不确定性和模糊性。大多数人工智能工具既可用于支持网络防御，也可用于网络攻击。人工智能驱动的网络能力将影响 cyberspace 的逻辑（软件）维度和语义（内容）维度。人工智能必将对网络安全产生重大影响。
+在其章节中，Matteo E. Bonfanti（2022）同样指出，新兴的人工智能技术对网络安全的攻防平衡产生的影响难以预测，因为情境充满不确定性和模糊性。大多数人工智能工具既可用于支持网络防御，也可用于网络攻击。人工智能驱动的网络能力将影响 cyberspace 的逻辑（软件）维度和语义（内容）维度。人工智能必将对网络安全产生重大影响。网络安全在专家中毫无疑问是毫无疑问的。但谁将是胜出者——攻击方还是防御方，国家安全机构还是私人威胁情报机构，民主国家还是专制国家——仍然未明。人工智能技术融入网络安全的最终结果取决于战略和社会政治背景以及众多公共和私人网络安全利益相关者的风险收益计算。
 
-*Conclusion* 249
-
-网络安全在专家中毫无疑问是毫无疑问的。但谁将是胜出者——攻击方还是防御方，国家安全机构还是私人威胁情报机构，民主国家还是专制国家——仍然未明。
-
-人工智能技术融入网络安全的最终结果取决于战略和社会政治背景以及众多公共和私人网络安全利益相关者的风险收益计算。
-
-***Private actor innovation increases socio-technical***
-
-***uncertainty and sociopolitical ambiguity***
+#### Private actor innovation increases socio-technical uncertainty and sociopolitical ambiguity
 
 随着私人参与网络安全和数字创新进程的角色日益增大，这一点在本书的大多数章节中均有提及。大型科技公司对 cyberspace 的发展与运营作出关键贡献。私人公司既是网络运营商，也是产品设计者和服务提供商（Eggenschwiler 2022）。中小型技术公司推动人工智能创新进程（Bonfanti 2022）。私人参与者研发出更小更高效的卫星，并成为 cyberspace 与外层空间整合的关键参与者。私人参与者在外层空间的角色扩大得益于美国及其他国家的法律变革，在新自由主义的国家-企业关系愿景下，这些法律变革将双重用途的空间项目向私人投资和研发开放（Erikkson and Giacomello 2022）。
 
-过去 30 年来，全球技术创新体系日益受到全球化与商业化双重力量的塑造。
-
-在冷战时期，核、化学和生物双用途技术的研发主要由国家投资和国家安全考量主导；但自 1990 年代数字技术兴起，伴随第一代移动电话和互联网向公众开放，局面开始转向私营领域主导。数字技术的普及使创新主体数量激增，这一趋势对社会技术不确定性产生了模糊的影响。私人技术公司主要以盈利和规模经济为驱动。虽然其整体商业成功依赖于公众对数字技术和基础设施的高度信任，但个别公司在结构上动机是保护其商业机密，不愿完全公开所有数据和算法。
+过去 30 年来，全球技术创新体系日益受到全球化与商业化双重力量的塑造。在冷战时期，核、化学和生物双用途技术的研发主要由国家投资和国家安全考量主导；但自 1990 年代数字技术兴起，伴随第一代移动电话和互联网向公众开放，局面开始转向私营领域主导。数字技术的普及使创新主体数量激增，这一趋势对社会技术不确定性产生了模糊的影响。私人技术公司主要以盈利和规模经济为驱动。虽然其整体商业成功依赖于公众对数字技术和基础设施的高度信任，但个别公司在结构上动机是保护其商业机密，不愿完全公开所有数据和算法。
 
 私人参与者不仅是数字技术的重要创新者，同时也极大扩大了在保障 cyberspace 中的角色。Brenden Kuerbis、Farzaneh Badiei、Karl Grindal 和 Mitlon Mueller（2022）在其章节中表明，私人威胁情报机构已成为关键的归因行为体。部分大型跨国公司的取证能力已超过许多国家的能力。然而，他们的归因主张缺乏透明度和公众合法性（Egloff and Wenger 2019）。此外，他们为何要为跨国归因权威作出贡献，Kuerbis 等人（2022）对此表示疑问。相反，关键公共安全服务对私人技术公司的依赖程度日益增加。
 
-250 *Andreas Wenger and Myriam Dunn Cavelty*
-
 提供大数据分析和基于人工智能的自动化评估与评价的专业服务在未来将显著增长。目前，技术咨询公司已经为国家情报机构、军事（网络）司令部以及国家警察提供关键服务。这些系统需要持续维护和进一步发展。因此，专门的私人公司将被卷入国家安全服务的操作工作，进一步加剧社会政治的模糊性。
 
-在全球化的黄金年代，自由主义者希望全球技术规范和监管标准能够日益趋同。但随着技术创新空间在全球范围内不断扩大，21 世纪出现了基于不同国家-企业关系愿景的替代技术规范和监管标准。中国大力投资所谓的“国家技术冠军”，建立了“民军融合”机制（Bitzinger 2021），并积极影响国际技术标准的发展（US-China Business Council 2020；Li and Chen 2021）。
+在全球化的黄金年代，自由主义者希望全球技术规范和监管标准能够日益趋同。但随着技术创新空间在全球范围内不断扩大，21 世纪出现了基于不同国家-企业关系愿景的替代技术规范和监管标准。中国大力投资所谓的“国家技术冠军”，建立了“民军融合”机制（Bitzinger 2021），并积极影响国际技术标准的发展（US-China Business Council 2020；Li and Chen 2021）。随着西方国家日益将中国视为地缘政治竞争对手，他们开始设立对外直接投资审查机制，并扩大双用途出口管制体系，以限制中国获取西方技术创新空间。与此同时，他们也在寻找新的方式，以确保国家——尤其是安全机构——对本国技术基础的获取。Danny Steed（2022）在其章节中指出，斯诺登事件证实了西方科技公司在国家和国际安全名义下，大量共享数据给美国政府的情形。
 
-随着西方国家日益将中国视为地缘政治竞争对手，他们开始设立对外直接投资审查机制，并扩大双用途出口管制体系，以限制中国获取西方技术创新空间。与此同时，他们也在寻找新的方式，以确保国家——尤其是安全机构——对本国技术基础的获取。Danny Steed（2022）在其章节中指出，斯诺登事件证实了西方科技公司在国家和国际安全名义下，大量共享数据给美国政府的情形。
+The upshot of these developments is that the governance space around emerging technologies has become increasingly fragmented and plagued by socio-technical and sociopolitical ambiguity. Cyberspace was originally created as a politically open space with governance structures limited to its technical architecture. As Steed notes in his chapter, the existing sovereignty gap in cyberspace “is not the source of fragmentation, it is the growing \[geopolitical\] competition to fill the gap that is”. The same applies to the growing interconnectedness between cyberspace and outer space, as Johan Eriksson and Giampiero Giacomello (2022) show in their chapter. Private actors increasingly drive the space technology innovation process, as an increasing number of (cyber) infrastructures depends on space-based satellite services. Yet at the same time, state militarization and politicization of outer space accelerates, as an ever-growing number of states use satellite technologies to modernize their security services. The coming together of these two trends creates new vulnerabilities and new types of treats (e.g. anti-satellite weapons, space debris). At the same time, it increases political fragmentation. The diversification of private and state actors raises the old question with new urgency if and how public-private partnerships can secure technological reliability and long-term investment.
 
+### Strategic stability under multidimensional uncertainty
 
+The assumed revolutionary potential of cyberspace, Miguel A. Gomez and Christopher Whyte (2022) note in their chapter, was the product of the twin uncertainties about the scope and tempo of the technical innovation and the related social and political responses. As new technological possibilities emerged, politics began to catch up in a process of sociopolitical normalization. As a consequence, state behavior evolved over time. In the absence of a demonstrable strategic utility of cyber operations and a strategic context characterized by a puzzling co-existence of restraint at the high end of conflict and persistent low-level cyber conflict, key states started to increasingly move away from deterrence to cyber conflict management. In 2018, the United States issued a new cyber strategy signaling a shift to persistent engagement and defend forward. The logic of the new approach emphasized that the characteristics of the operational environment in cyberspace – a space of constant contact – demand a continuing engagement and degradation of adversarial cyber capabilities and operations wherever they were found (US Cyber Command 2018; US Department of Defense 2019).
 
+This shift away from deterrence might be premature and underestimate the potential of (unintended) escalation, Gomez and Whyte argue. Moreover, it is still unclear why states invest substantial technical, financial, and organizational resources in using the domain offensively if cyber operations are indeed of limited strategic utility only. Within this context, the chapters in this volume focus on three interconnected aspects of upholding strategic stability under multidimensional uncertainty. A first subsection concentrates on the micro-dynamics of decision-making that might drive escalation under uncertainty and ambiguity. The focus here is on how prior beliefs and cognitive biases might influence the response decisions of elite stakeholders in varying national strategic cultures. A second subsection deals with the ambiguities of attribution as a precondition for a credible deterrence threat. The focus here is on how policymakers perceive cyberspace as a completely human-built domain and how this translates into political apprehension about the applicability of deterrence in cyberspace. A third subsection analyzes the growing role of intelligence in cyberspace. The focus here is on how the digitalization of intelligence changed its strategic and operational role and what (un)intentional consequences this had for cyber insecurity, on the one hand, and for great powers’ views on (un)acceptable behavior of intelligence services in cyberspace, on the other.
 
-The upshot of these developments is that the governance space around emerging technologies has become increasingly fragmented and plagued by socio-technical and sociopolitical ambiguity. Cyberspace was originally created as a politically open space with governance structures limited to its technical architecture. As Steed notes in his chapter, the existing sovereignty gap in cyberspace “is not the source of fragmentation, it is the growing \[geopolitical\] competition to fill the gap that is”. The same applies to the growing interconnectedness between cyberspace and outer space, as Johan Eriksson and Giampiero Giacomello (2022) show in their chapter. Private actors increasingly drive the space technology innovation process, as an increasing number of (cyber) infrastructures depends on space-based satellite services. Yet at the same time, state militarization and politicization of outer space accelerates, as an ever-growing number of states use satellite technologies to modernize their security services. The coming together of these two trends creates new vulnerabilities and new types of treats (e.g. anti-satellite weapons, space debris).
+#### Escalation: The micro-dynamics of decision-making in varying sociopolitical contexts
 
-At the same time, it increases political fragmentation. The diversification of private and state actors raises the old question with new urgency if and how public-private partnerships can secure technological reliability and long-term investment.
+Precisely because it is difficult to control the strategic effects of cyber (influence) operations, more research is needed on the micro-dynamics of decision-making that may drive unintended escalation. Contributing to the behavioral turn in cyber security research, Miguel A. Gomez and Christopher Whyte (2022) investigate the effects of uncertainty on judgment in the context of (crisis) decision-making under cyberattack. In such situations, the ambiguity of diffuse actors and malicious actions increases the uncertainty of decision-makers about both the intent behind and the consequences of cyber (influence) operations. The authors use war gaming as a pseudo-experimental method to determine if and how decision-makers use well-known heuristic mechanisms such as prior beliefs and analogical reasoning to discern intent and consequences behind cyber operations. The authors find distinct evidence in support of the notion that decision-makers, when faced with digital insecurity and the use of adversarial cyber operations, fall back on non-cyber situations to make their task simpler.
 
-**Strategic stability under multidimensional uncertainty**
+The degree to which heuristic shortcuts interfere with objectivity and results in more or less severe responses depends on distinct national (strategic) cultures. Gomez and Whyte discuss evidence of cross-national cultural variations influencing the response decision among elite stakeholders. The socio-institutional correlates of civil–military relations in a given democracy stand out to have a unique impact on decision-making processes. Based on their observations from cross-national war games, they conclude that the interaction between the micro-foundations of decision-making in a given cultural and institutional setting “might ultimately have some effect on the strategic calculations states make around signaling and adversary behavior” (Gomez and Whyte 2022: 125). The fact that unintended escalation due to prior beliefs, cognitive biases of decision-makers, and/or bureaucratic politics cannot be excluded in strategic context characterized by uncertainty and ambiguity highlights the advantage of deterrence as a conflict management tool: As a theory of interdependent decision-making, it might prevent militarization and escalation (Schelling 1966).
 
-The assumed revolutionary potential of cyberspace, Miguel A. Gomez and Christopher Whyte (2022) note in their chapter, was the product of the twin
-
-*Conclusion* 251
-
-uncertainties about the scope and tempo of the technical innovation and the related social and political responses. As new technological possibilities emerged, politics began to catch up in a process of sociopolitical normalization. As a consequence, state behavior evolved over time. In the absence of a demonstrable strategic utility of cyber operations and a strategic context characterized by a puzzling co-existence of restraint at the high end of conflict and persistent low-level cyber conflict, key states started to increasingly move away from deterrence to cyber conflict management. In 2018, the United States issued a new cyber strategy signaling a shift to persistent engagement and defend forward. The logic of the new approach emphasized that the characteristics of the operational environment in cyberspace – a space of constant contact – demand a continuing engagement and degradation of adversarial cyber capabilities and operations wherever they were found (US Cyber Command 2018; US Department of Defense 2019).
-
-This shift away from deterrence might be premature and underestimate the potential of (unintended) escalation, Gomez and Whyte argue. Moreover, it is still unclear why states invest substantial technical, financial, and organizational resources in using the domain offensively if cyber operations are indeed of limited strategic utility only. Within this context, the chapters in this volume focus on three interconnected aspects of upholding strategic stability under multidimensional uncertainty. A first subsection concentrates on the micro-dynamics of decision-making that might drive escalation under uncertainty and ambiguity.
-
-The focus here is on how prior beliefs and cognitive biases might influence the response decisions of elite stakeholders in varying national strategic cultures. A second subsection deals with the ambiguities of attribution as a precondition for a credible deterrence threat. The focus here is on how policymakers perceive cyberspace as a completely human-built domain and how this translates into political apprehension about the applicability of deterrence in cyberspace. A third subsection analyzes the growing role of intelligence in cyberspace. The focus here is on how the digitalization of intelligence changed its strategic and operational role and what (un)intentional consequences this had for cyber insecurity, on the one hand, and for great powers’ views on (un)acceptable behavior of intelligence services in cyberspace, on the other.
-
-***Escalation: The micro-dynamics of decision-***
-
-***making in varying sociopolitical contexts***
-
-Precisely because it is difficult to control the strategic effects of cyber (influence) operations, more research is needed on the micro-dynamics of decision-making that may drive unintended escalation. Contributing to the behavioral turn in cyber security research, Miguel A. Gomez and Christopher Whyte (2022) investigate the effects of uncertainty on judgment in the context of (crisis) decision-making under cyberattack. In such situations, the ambiguity of diffuse actors and malicious actions increases the uncertainty of decision-makers about both the intent behind and the consequences of cyber (influence) operations. The authors use war gaming as a pseudo-experimental method to determine if and how decision-makers
-
-252 *Andreas Wenger and Myriam Dunn Cavelty*
-
-use well-known heuristic mechanisms such as prior beliefs and analogical reasoning to discern intent and consequences behind cyber operations. The authors find distinct evidence in support of the notion that decision-makers, when faced with digital insecurity and the use of adversarial cyber operations, fall back on non-cyber situations to make their task simpler.
-
-The degree to which heuristic shortcuts interfere with objectivity and results in more or less severe responses depends on distinct national (strategic) cultures.
-
-Gomez and Whyte discuss evidence of cross-national cultural variations influencing the response decision among elite stakeholders. The socio-institutional correlates of civil–military relations in a given democracy stand out to have a unique impact on decision-making processes. Based on their observations from cross-national war games, they conclude that the interaction between the micro-foundations of decision-making in a given cultural and institutional setting “might ultimately have some effect on the strategic calculations states make around signaling and adversary behavior” (Gomez and Whyte 2022: 125). The fact that unintended escalation due to prior beliefs, cognitive biases of decision-makers, and/
-
-or bureaucratic politics cannot be excluded in strategic context characterized by uncertainty and ambiguity highlights the advantage of deterrence as a conflict management tool: As a theory of interdependent decision-making, it might prevent militarization and escalation (Schelling 1966).
-
-***Deterrence: The ambiguity of attribution in the***
-
-***context of cyber conflict management***
+#### Deterrence: The ambiguity of attribution in the context of cyber conflict management
 
 Over the years there has been considerable work invested at the science-policy interface in adapting deterrence to the ambiguous context of cyberspace. The scope of the practical applicability of the tenets of deterrence to cyberspace is considerably more limited than in more traditional conventional and nuclear deterrence settings (Soesanto and Smeets 2020). At the same time, deterrence attempts in cybersecurity and cyber defense span a wide spectrum of threats, including cybercrime, cyber espionage, and operational cyberattack.
 
-From a conceptual point of view, the attention at the lower end of conflict shifted to criminological conceptions of deterrence and from punishment to denial mechanisms converging on target hardening through cyber resilience (Wenger and Wilner 2021). In such settings, though, deterrence approaches are typically integrated with other coercive and non-coercive tools into a broader conflict management strategy. Conversely, at the higher end of conflict the attention of strategists has shifted to the concept of cross domain deterrence (Lindsay and Gartzke 2019).
+From a conceptual point of view, the attention at the lower end of conflict shifted to criminological conceptions of deterrence and from punishment to denial mechanisms converging on target hardening through cyber resilience (Wenger and Wilner 2021). In such settings, though, deterrence approaches are typically integrated with other coercive and non-coercive tools into a broader conflict management strategy. Conversely, at the higher end of conflict the attention of strategists has shifted to the concept of cross domain deterrence (Lindsay and Gartzke 2019). The focus here is on adversaries that apply ambiguous “gray zone” strategies that integrate military and non-military coercive instruments while evading attribution. Cross domain deterrence tends to include both positive inducements and negative threats and brings the concept of deterrence “back to the broader coercive diplomacy literature from which it originally emerged” (Sweijs and Zilinick 2021: 152).
 
-The focus here is on adversaries that apply ambiguous “gray zone” strategies that integrate military and non-military coercive instruments while evading attribution.
-
-
-
-Cross domain deterrence tends to include both positive inducements and negative threats and brings the concept of deterrence “back to the broader coercive diplomacy literature from which it originally emerged” (Sweijs and Zilinick 2021: 152).
-
-In his chapter on the limited reliance of Israel on cyber deterrence, Amir Lupovici (2022) explores how new digital technologies enter into doctrine and
-
-*Conclusion* 253
-
-strategy. Acknowledging the methodological difficulties of studying cyber deterrence, he deliberately shifts the focus from studying what makes deterrence effective in a given strategic context to analyzing how the cyber domain is embedded in Israel’s strategic culture and identity. From such a viewpoint, Lupovici argues, it is puzzling that Israel has so far not developed a clear cyber deterrence strategy, given the prominent role deterrence has played in Israel’s strategy and the country’s “deterrer identity” (Lupovici 2016). Israeli policymakers, he concludes, seem to recognize the uncertainty and ambiguity involved in establishing a deterrence balance in cyberspace and consequently shy away from formulating a declaratory cyber deterrence strategy.
+In his chapter on the limited reliance of Israel on cyber deterrence, Amir Lupovici (2022) explores how new digital technologies enter into doctrine and strategy. Acknowledging the methodological difficulties of studying cyber deterrence, he deliberately shifts the focus from studying what makes deterrence effective in a given strategic context to analyzing how the cyber domain is embedded in Israel’s strategic culture and identity. From such a viewpoint, Lupovici argues, it is puzzling that Israel has so far not developed a clear cyber deterrence strategy, given the prominent role deterrence has played in Israel’s strategy and the country’s “deterrer identity” (Lupovici 2016). Israeli policymakers, he concludes, seem to recognize the uncertainty and ambiguity involved in establishing a deterrence balance in cyberspace and consequently shy away from formulating a declaratory cyber deterrence strategy.
 
 From an operational point of view, Lupovici (2022) argues, Israel’s repeated use of offensive cyber operations against the Iranian and Syrian nuclear programs have been interpreted by some experts as attempts to establish cumulative deterrence through the actual use of force, a concept which is deeply ingrained in Israeli strategic culture (Adamski 2021). Yet the effectiveness of such a strategy remains in dispute, Lupovici insists, and whatever deterrent threat might get through to the adversary is communicated in an indirect and implicit way only. From a conceptual perspective, the US strategy of persistent engagement and defend forward seems to share some of the tenets of the Israeli concept of cumulative deterrence (Tor 2015; Kello 2017). Yet the concept of cumulative deterrence was customarily rejected by most US strategists and policymakers, since in the context of nuclear deterrence the use of force was seen as a symptom of deterrence failure, signalizing a shift from a policy of influence to a policy of control (Adamsky 2021).
 
-It is quite telling that two of the leaders in thinking about and in practicing deterrence in their different strategic contexts have come to accept the limits of deterrence in cyberspace. The way US and Israeli policymakers and strategist conceptualize the cyber domain – as an operating environment with a high degree of technical interconnectedness (increasing uncertainty) and constant political contestation (increasing ambiguity) – seems to be part of the explanation why they, respectively, moved away from cyber deterrence (United States) and never declared a clear deterrence strategy (Israel). Although cyberspace is conceptualized as the fifth domain of warfare, its structural characteristics differ from the other four domains. Cyberspace is completely human-built, shaped by technology companies, and operating in it will always be hard and only partially under control of any one actor (Seebeck 2019). Precisely because cyberspace is completely designed by humans, states can shape it according to their interest. Yet as in cryptology they must cooperate to compete and accept the constraint of a cooperatively produced network of networks.
-
-The economic and political logic of cyberspace as something completely
-
-designed by humans might explain why states seem to perceive cyberspace as a domain of intelligence rather than warfare. As discussed above, the fact that setting up cyber exploitation is more expensive than countering released exploitation translates into an incentive to keep the target at risk. From a political point of view, transparent attribution as a precondition of a credible deterrence threat is
-
-254 *Andreas Wenger and Myriam Dunn Cavelty*
-
-difficult. Relating an intrusion set to a politically responsible party, Kuerbis et al.
-
-(2022) argue, remains challenging because it includes a judgment about the relation between victim and adversary. As such, it should be interpreted as “a product more of political science or intelligence studies than computer science” (Kuerbis et al. 2022: 222).
-
-***Intelligence: The growing operational role of***
-
-***intelligence as a source of cyber insecurity***
-
-In the context of the multidimensional uncertainty prevailing in cyberspace, intelligence agencies have turned into one of the most dominant actors in this human-built domain (Buchanan 2020; Egloff 2022). Their role in cyber conflict is a paradox and highly ambiguous one: They represent both the biggest threat and the most capable provider of security and safety. Such an outcome is not without irony, because the technical transformation from an analog to a digital world exposed them to a mortal threat: going dark. In his chapter on the consequences of the digital disruption of the second oldest profession, Danny Steed (2022) discusses how US and British intelligence “mastered the internet”. In the process, he concludes, they not only transformed their role in security and defense, but unintentionally exacerbated cyber insecurity.
-
-As global information flows began moving into fiber optics, US and British intelligence adapted their skillset to one that could penetrate digital codes and infrastructure (Buchanan 2020). Exploiting the sovereign geographic access to the submarine cables through which the bulk of the internet traffic traversed, was a key factor for success, as was a close partnership with numerous technology companies that facilitated access and sharing of meta-data. The solution to the old intelligence adage – to find the needle in the haystack – was found in technical innovation, as Steed explains: The two intelligence services temporarily collected the whole haystack in a buffer system, which allowed them to sort out relevant information and meta-data via automated analysis. This unique access to large volumes of internet traffic created intelligence dependencies even among close allies, as Stefan Steiger (2022) shows in his chapter on Germany’s cyber security politics. Once the Snowden leaks highlighted that foreign intelligence was an accepted state practice even among allies, the German government in a partnership with Brazil invested into a new submarine cable across the Atlantic.
-
-Intelligence services are the most purposefully ambiguous tools of statecraft.
-
-The legal ambiguity of intelligence in domestic and international law was for a long time based on the reciprocal assumption of great powers that intelligence services would help decision-makers guard against a military fait accompli and uphold strategic stability. The purpose of the limited intrusion into the sovereign affairs of another state was to provide enough transparency to avoid rapid escalation. In the context of their digital transformation, Danny Steed (2022) contends, their strategic relevance increased considerably. At the same time, their operational focus increasingly shifted from assessing uncertainty to eliminating uncertainty. The shift to a more operational role needs to be seen in the context of
-
-*Conclusion* 255
-
-a unipolar world, in which the management of transnationally networked threats
-
-– terrorism, extremism, organized crime, cyberattacks, WMD proliferation –
-
-dominated Western policy and strategy. In the post-9/11 context, operational intelligence and close (bilateral) cooperation among asymmetrically dependent intelligence services played a preeminent role in the global management of the then dominant security challenges.
-
-
-
-With the return of geopolitical rivalry between great powers and in the context of the proactive use of intelligence and cyber (influence) operations by rising powers, international disagreement about what should be considered acceptable use of espionage began to multiply, as noted above in section one. From the perspective of great power politics, it seems essential that states sort out the difference between mutually acceptable espionage in support of strategic stability and unacceptable meddling in the internal political and economic affairs of another state. The 2015 mutual agreement between China and the United States, in which both states committed to not conducting or supporting economic cyber espionage (Baezner and Robin 2017), and the recent agreement between Biden and Putin to conduct “experts‑level talks” on red lines for cyberattacks on “critical” sectors (Hirsh 2021), might be read as early beginnings of a long haul toward a tacit understanding of acceptable behavior of intelligence services in cyberspace.
-
-It seems highly unlikely, however, that talks at the diplomatic level will result in a breakthrough any time soon. For this to happen, the differences of acceptable surveillance at the domestic level are simply too big. Societies need to know how their intelligence services work in cyberspace, because their tools and practices set practical norms with far‑reaching effects on state, society and economy (Georgieva 2020). For authoritarian states, the priority is to control citizens’ access to information, while for democracies the priority is to protect individual privacy and intellectual property rights. Questions about privacy, security, information are at the heart of the political struggle about cyber security and this makes the quest for global norms of responsible behavior in cyberspace a slow and difficult one.
-
-The manner in which intelligence services mastered the internet, Danny Steed (2022) convincingly argues, created additional socio‑technical uncertainty and exacerbated the cyber security challenge. Digitalization made intelligence more visible, because unlike in an analog world spies now worked within the same digital infrastructure as all other social, economic, and political actors. As a consequence, intelligence intrusion could be exposed much faster than before, which made intelligence far more visible. When whistle‑blowers brought their activities into the spotlight, domestic and international political contestation about their role multiplied. As a corollary of the exposure of intelligence methods, intelligence services turned into inadvertent proliferators of malicious code and zero‑day exploits. As a consequence, more people were enabled to use intelligence tools for malicious purposes – compared to intelligence services, with no oversight whatsoever. Some of these tools were later deployed in two global malware attacks – WannaCry and NotPetya – further increasing the ambiguity of action in cyberspace and the uncertainties of attribution.
-
-256 `Andreas Wenger` and `Myriam Dunn Cavelty`
-
-**Emerging governance responses: Policy**
-
-**coordination and norms formation**
+It is quite telling that two of the leaders ins: Policy coordination and norms formation
 
 The socio‑technical expansion of cyberspace is led by private technology firms, yet state actors shape the tighter coupling of technical systems with sociopolitical institutions. This in turn means that governments share the responsibility to secure cyberspace with actors from the economy and society. In the process of these socio‑technical and sociopolitical transformations, emerging cyber governance responses unfold in an increasingly transnational and trans‑sectoral policy space. The vision of a wireless, satellite‑based internet accessible to everyone propagated by private business actors and the parallel reality of state actors that are increasingly politicizing and militarizing outer space is set to further expand cyberspace as a transnational policy space. As a network of interdependent information technology infrastructures, cyberspace is connected across state borders and through global satellite‑based communications services. At the same time, cyberspace as a trans‑sectoral policy space also expands rapidly. The tighter coupling of ever more socio‑technical systems increases the interconnectedness of cyberspace. As a consequence, cyber security affects a rapidly growing number of different policy fields.
 
-The key governance challenge in cyberspace is how to overcome fragmentation of authority and accountability. Within the context of a trans‑sectoral and transnational policy space, the chapters in this volume highlight three aspects of the ongoing re‑negotiation processes among state, society, and economy about their roles and responsibilities in cyberspace. A first subsection deals with the significant expansion of state responsibilities in cyberspace over the past decades.
+The key governance challenge in cyberspace is how to overcome fragmentation of authority and accountability. Within the context of a trans‑sectoral and transnational policy space, the chapters in this volume highlight three aspects of the ongoing re‑negotiation processes among state, society, and economy about their roles and responsibilities in cyberspace. A first subsection deals with the significant expansion of state responsibilities in cyberspace over the past decades. The focus is on how state actors fine‑tuned their multidimensional role across different policy fields in a process that was influenced by distinct patterns of interaction between domestic contestation and international orientation and dependence. A second subsection concentrates on the increasingly prominent role of private and civil society actors in the search for new forms of transnational governance in cyberspace. The focus here is on the norm‑based activities of big tech companies, on the one hand, and a series of proposals for a global platform for transnational attribution, on the other. A third subsection brings the attention back to state actors, shedding light on the critical role of intelligence services in (in)securing cyberspace. As long as great powers disagree about what constitutes acceptable behavior of intelligence services in cyberspace, the systemic levels of insecurity in cyberspace will likely not materially decrease.
 
-The focus is on how state actors fine‑tuned their multidimensional role across different policy fields in a process that was influenced by distinct patterns of interaction between domestic contestation and international orientation and dependence.
+#### Growing role of governments: Shifting patterns of domestic and international governance
 
-A second subsection concentrates on the increasingly prominent role of private and civil society actors in the search for new forms of transnational governance in cyberspace. The focus here is on the norm‑based activities of big tech companies, on the one hand, and a series of proposals for a global platform for transnational attribution, on the other. A third subsection brings the attention back to state actors, shedding light on the critical role of intelligence services in (in)securing cyberspace. As long as great powers disagree about what constitutes acceptable behavior of intelligence services in cyberspace, the systemic levels of insecurity in cyberspace will likely not materially decrease.
+The tech pioneers had built the internet based on the vision of an open technical governance infrastructure with minimal involvement of government. Yet as cyberattacks were becoming more persistent, more targeted, more expensive, and more disruptive, governments began to significantly expand their roles and responsibilities in cyberspace. Ever since states find themselves in the midst of two interlinked re‑negotiation processes of their roles and responsibilities in (securing) cyberspace. While at the level of domestic politics they renegotiate their role in securing cyberspace as a shared responsibility with society and industry, at the level of international politics they renegotiate the patterns of international governance with states, private and civil actors.
 
-***Growing role of governments: Shifting patterns of***
+In his chapter, Stefan Steiger (2022) analyzes how Germany’s cyber security policies evolved over time, shaped by the complex interactions between domestic and international negotiation processes. He employs a role theoretical two‑level game to analyze how domestic and international factors influenced the development of German cyber security policy. Isolating four interconnected policy domains – critical infrastructure protection (CIP); law enforcement; intelligence services; military – he discusses how various fragmented state and international actors reached four distinct but still interconnected policy outcomes. Steiger notes that the CIP and law enforcement fields of German cyber security policies constitute the most distinct patterns of international and regional cooperation. In the CIP field, domestic CIP policy emerged first, based on a public-private partnership model that delegated primary responsibility for cyber security to the private sector. Subsequently, the federal government significantly strengthened its supervisory role. The German government also promoted critical infrastructure protection at the EU and OSCE levels, reflecting the transnational physical interconnectedness of critical infrastructures. In the law enforcement field, EU member states successfully harmonized criminal law, but without weakening the central authority and sovereignty of the (German) state.
 
-***domestic and international governance***
+The intelligence and military fields of German cyber security policy remain intergovernmental policy domains in which the German government has not accepted any self-limiting rules. The intelligence field shows the most paradoxical pattern of interaction between domestic and international renegotiation processes. On the one hand, Germany’s early calls for international restraint in cyberspace benefited from its intelligence dependence on the United States. Once the Snowden leaks showed that digital surveillance was an accepted practice also among allies, domestic contestation about the role of intelligence multiplied. As a result, Germany expanded the legal basis for external surveillance, began stockpiling zero-day exploits, and expanded access to transatlantic internet traffic. At the same time, the expanded external mandate of German intelligence was balanced by strengthening domestic control mechanisms and special protection rights for German and EU citizens. In the military field, Germany also moved away from international restraint as a result of its NATO commitments, establishing a cyber command and preparing for the use of offensive cyber capabilities.
 
-The tech pioneers had built the internet based on the vision of an open technical governance infrastructure with minimal involvement of government. Yet as cyberattacks were becoming more persistent, more targeted, more expensive, and more disruptive, governments began to significantly expand their roles and
+Chapters 11 and 12 in this volume provide two additional case studies of countries on the edge of Europe that seek closer alignment with Western institutions. Their policy evolution is similarly characterized by distinct patterns of interaction between domestic institutional transformation and international orientation and dependence. We have already discussed the case of Ukraine. Ukraine is a small state with relatively weak cyber capabilities, situated on the geopolitical fault line between Russia and the West. It has long been subject to sustained Russian cyberattacks and large-scale information operations, and recently experienced a domestic revolution associated with an abrupt reorientation of foreign policy from Russia to Europe and the West.
 
-*Conclusion* 257
+In his chapter, Aaron Brantly (2022) shows that the pattern of domestic contestation and international reorientation resulted in a fairly successful response to Russia’s information warfare aimed at undermining Ukraine’s social and political structures. He explains this as resulting from top-down government initiatives (including restrictive measures against Russian-controlled online platforms and broadcast channels and the creation of an information policy ministry) and bottom-up initiatives by journalists and externally funded NGOs (focusing on fact-checking, exposing foreign propaganda, and training journalists and civil society). However, the country’s efforts to increase its resilience to cyberattacks have been less successful. Although the country matched the legal and organizational foundations of its cyber security policy with EU and NATO standards, new cyber security institutions have not yet become operational independently, Brantly concludes. He points to the dominance of old bureaucratic cultures, especially in the security sector, and dependence on foreign assistance and funding as two major reasons for weak policy implementation.
 
-responsibilities in cyberspace. Ever since states find themselves in the midst of two interlinked re‑negotiation processes of their roles and responsibilities in (securing) cyberspace. While at the level of domestic politics they renegotiate their role in securing cyberspace as a shared responsibility with society and industry, at the level of international politics they renegotiate the patterns of international governance with states, private and civil actors.
+Albania is another interesting case of a small state with relatively weak cyber capabilities, in democratic transition and seeking closer alignment with Western institutions. Islam Jusufi (2022) in his chapter discusses the cyber threat frames and policy responses appearing in Albanian policy documents, which were largely diffused from the international level (especially the US, UK, EU, and NATO). This diffusion process produced two notable consequences: first, cyber security was elevated to a national-level threat earlier than might otherwise have occurred due to domestic incidents; second, the new policies introduced a multi-stakeholder governance concept, marking a departure from Albania’s traditional state-centric governance model. The combination of these two factors led to a somewhat paradoxical outcome: while the technologically weak state’s dependence on external actors increased, new international policy concepts exacerbated the fragmentation of domestic cyber security authority. Moreover, this highlights the problem of temporal inconsistency in international policy coordination. Ironically, as the German case shows, Western states during the same period were also reclaiming authority and sovereignty in certain policy areas and expanding the protective role of government in cyberspace.
 
-In his chapter, Stefan Steiger (2022) analyzes how Germany’s cyber security policies evolved over time, shaped by the complex interactions between domestic and international negotiation processes. He employs a role theoretical two‑level game to analyze how domestic and international factors influenced the development of German cyber security policy. Isolating four interconnected policy domains – critical infrastructure protection (CIP); law enforcement; intelligence services; military
+#### Toward new forms of transnational governance: Norms and institutions
 
+The search for new forms of transnational governance reflects a recognition that digital technologies and the services they enable increasingly cross national borders and extend into outer space. Why are private and civil society actors playing an increasingly prominent role in developing norms and institutions aimed at regulating human behavior in cyberspace? First, cyber norms and institutions remain contested at the international political level. States find it difficult to reach consensus in venues such as the United Nations, which provides a context for non-state actor participation. Second, large-scale data breaches and malware attacks have undermined social trust – a key success factor for the business models of transnational technology companies and an important element of the socio-technical systems that constitute cyberspace. Third, the primary creators of cyberspace are largely private entities, who possess the key engineering expertise needed to ensure that new governance measures are rooted in R&D and broader business practices. Civil society, in turn, has the potential to provide greater transparency, privacy, and fairness.
 
+In her chapter, Jacqueline Eggenschwiler (2022) assesses the norm-based activities of big tech companies including `Kaspersky Lab`, `Siemens`, `Telefónica` and `Microsoft`. She presents the norms approach as an appropriate regulatory instrument to deal with situational ambiguity in a rapidly changing environment, which can avoid costly – from the companies’ perspective unwanted – modifications to legal frameworks. Through voluntary participation in the development of cyber security norms for responsible behavior, tech companies aim to define responsible product development and engineering practices, and to build trust in social interactions enabled by digital technologies. The norm-based activities of big tech companies have been partially successful, as they have achieved a degree of convergence, forming broadly shared normative ideas and design principles, and injecting these ideas and principles into a range of regional and international political processes. Greater involvement of private and civil society actors in norm development processes may have lasting effects, Jacqueline Eggenschwiler concludes. However, big tech companies’ push for cyber security norms has not resulted in a substantive decrease in levels of cyber insecurity.
 
-– 他讨论了各种碎片化的国家和国际行为体如何达成四个不同但仍然相互关联的政策结果。斯蒂格尔指出，德国网络安全政策的 CIP 和执法领域构成了最具区别的国际和区域合作模式。在 CIP 领域，国内 CIP 政策首先出现，基于一种将网络安全主要责任委托给私营部门的公私合作伙伴关系模式。随后，联邦政府在监督角色方面显著加强。德国政府在欧盟和 OSCE 层面也促进了对关键基础设施的保护，反映出关键基础设施在跨境的物理互连性。在执法领域，欧盟成员成功调和了刑法，但并未削弱（德国）国家的中央权威和主权。
+Not only the development of cyber security norms will be a long process, Brenden Kuerbis, Farzaneh Badiei, Karl Grindal, and Milton Mueller (2022) note in their chapter, the institutionalization of recognized transnational attribution processes will also be a long process. Cyber attribution, as a socio-technical and highly interdisciplinary endeavor, is a precondition for deterring cyberattacks and a precursor to stable social relations in cyberspace. Current attribution claims by intelligence companies and national security agencies are often based on limited evidence and the reputation of the attributing entity, thus lacking transparency and credibility. However, Kuerbis et al. point out that new attribution methods – combining better algorithm-based technical attribution with a better understanding of the institutional conditions under which attribution can occur – may in the future raise the baseline for institutionalizing transnational attribution.
 
-德国网络安全政策的情报和军事领域仍然是政府间政策领域，德国政府未接受任何自我约束的规定。情报领域显示出国家与国际重新谈判过程之间最悖论的互动模式。一方面，德国早期呼吁网络空间的国际克制得益于对美国的情报依赖。一旦斯诺登泄露显示数字监控是盟友之间也接受的常规做法，国内对情报角色的争论便愈演愈烈。结果，德国扩大了对外监视的法律基础，开始囤积零日漏洞，并扩大了对跨大西洋互联网流量的访问。与此同时，德国情报的扩大外部授权通过加强国内控制机制以及为德国和欧盟公民提供特殊保护权来进行平衡。在军事领域，德国因对北约的承诺，也开始摆脱国际克制，建立了网络司令部，并为使用进攻性网络能力做准备。
+The chapter discusses several proposals by private entities and academic institutions on how to establish a global transnational attribution platform and what its scope of activities should be. Among these proposals, the two most prominent implementation challenges are: the first key question is how to ensure the platform’s technical independence and the professionalism of its participants. There is still a great deal of research needed to define the scientific and methodological standards of attribution practice, including transparency, reproducibility, and falsifiability. In addition, it remains unclear why private technology companies with advanced forensic capabilities would participate in such a platform. The second key question is how to guarantee the judicial independence of the platform, and which governance form can effectively align participants’ incentives. The conceivable solutions range from hierarchical institutions to loosely organized forms of networked governance. Ultimately, the success of private and civil society-driven cyber security norm processes and the institutionalization of transnational attribution critically depends on the willingness of state actors – especially the great powers – to agree on norms of responsible behavior as ultimate enforcers.
 
-Chapters 11 和 12 在本卷中提供了两个额外的案例研究，分别讨论了两个位于欧洲边缘且希望更靠近西方机构的国家的网络安全政策。它们的政策演变同样以国内制度转型与国际取向之间的独特互动模式为特征。
-
-258 `Andreas Wenger` 和 `Myriam Dunn Cavelty`
-
-依赖。我们已经讨论了乌克兰的案例。乌克兰是一个网络能力较弱的小国，地处俄罗斯与西方之间的地缘政治断层线上。它长期受到俄罗斯的持续网络攻击和大规模信息操作的影响，最近经历了一场与外交政策从俄罗斯转向欧洲和西方的 abrupt（突变）重新定位相关的国内革命。
-
-在他的章节中，`Aaron Brantly`（2022）表明，国内争议与国际重新定位的模式导致该国在应对俄罗斯的信息战——旨在削弱乌克兰的社会和政治结构——方面取得了相当成功的响应。他解释称，这源于自上而下的政府举措（包括对俄罗斯主导的网络平台和广播频道采取限制性措施以及设立信息政策部）以及由记者和外部资助的非政府组织开展的自下而上举措（聚焦于事实核查、揭露外国宣传以及培训记者和公民社会）。然而，该国提升自身对网络攻击的韧性的努力并不成功。尽管该国将其网络安全政策的法律和组织基础与欧盟和北约标准相匹配，但新的网络安全机构尚未独立运作，`Brantly` 结论指出。他指出，旧有的官僚文化——尤其是在安全部门——的主导以及对外部援助和资金的依赖是导致政策实施薄弱的两大主要原因。
-
-阿尔巴尼亚是另一个网络能力较弱的小国，正在向民主转型并希望更靠近西方机构的有趣案例。`Islam Jusufi`（2022）在其章节中讨论了阿尔巴尼亚政策文件中出现的网络威胁框架和政策响应，这些框架和响应主要从国际层面（尤其是美国、英国、欧盟和北约）扩散而来。该扩散过程产生了两个显著后果：第一，网络安全被提前升至国家级别的威胁等级，而非因国内事件而产生；第二，新政策引入了多利益相关方治理的概念，标志着阿尔巴尼亚传统的以国家为中心的治理模式转变。这两者结合导致了一种略显矛盾的结果：虽然技术弱国对外部行为体的依赖增加，但新的国际政策概念却加剧了国内网络安全权力的碎片化。此外，这凸显了国际政策协调中的时间不一致性问题。讽刺的是，正如德国案例所示，西方国家在同一时期也在某些政策领域重新夺回权威和主权，并扩大了在 cyberspace 中政府的保护角色。
-
-***Toward new forms of transnational governance: Norms and institutions***
-
-寻求新形式的跨国治理反映了这样一种认识：数字技术及其提供的服务日益跨越国家边界并延伸至外层空间。为什么私人和民间社会行为体在制定旨在规范 cyberspace 中人类行为的规范和制度方面的作用日益突出？第一，网络规范和制度在国际政治层面仍然受到争议。各国在联合国等场合难以达成共识，这为非国家行为体的参与提供了背景。第二，大规模数据泄露和恶意软件袭击削弱了社会信任——这是跨国运营的科技公司商业模式的关键成功因素，也是构成 cyberspace 的技术社会系统的重要要素。第三，cyberspace 的主要创建者大多为私人实体，他们拥有确保新治理措施根植于研发和更广泛商业实践的关键工程专业知识。反过来，民间社会有潜力提供更大的透明度、隐私和公平性。
-
-[Conclusion] 259
-
-
-
-在她的章节中，Jacqueline Eggenschwiler（2022）评估了大型科技公司的基于规范的活动，包括 `Kaspersky Lab`、`Siemens`、`Telefónica` 和 `Microsoft`。她将规范方法作为应对快速变动环境中的情境模糊性的适当监管手段提出，这种做法可以避免给科技公司带来高昂成本——从科技公司的角度来看是不想要的——对法律框架的修改。凭借自愿参与支持负责任行为的网络安全规范的发展，科技公司旨在定义负责任的产品开发和工程实践，并建立数字技术所促成的社会互动中的信任。大型科技公司的基于规范的活动在一定程度上取得了成功，因为它们在一定程度上达成了一致，形成了广泛共享的规范性思想和设计原则，并将这些思想和原则注入了一系列地区和国际政治进程。私营和民间社会参与者在规范发展过程中的更大程度的参与可能产生持久的影响，Jacqueline Eggenschwiler 总结道。然而，大型科技公司推动网络安全规范并未导致网络不安全程度的实质性下降。
-
-不仅网络安全规范的发展将是一项漫长的过程，布伦登·库尔比斯（Brenden Kuerbis）、法尔扎内·巴迪伊（Farzaneh Badiei）、卡尔·格里德尔（Karl Grindal）和米尔顿·穆勒（Milton Mueller）（2022）在其章节中也指出，机构化公认的跨国归因过程的制度化同样也是一项漫长的过程。网络归因作为一种社会技术和高度跨学科的努力，是威慑网络攻击的前提，也是 cyberspace 中稳定社会关系的前兆。当前情报公司和国家安全机构的归因主张往往基于有限的证据和归因主体的声誉，因此缺乏透明度和可信度。然而，库尔比斯等人指出，新的归因方法——将更好的基于算法的技术归因与更好地理解归因可能发生的制度条件相结合——未来可能提升跨国归因制度化的基线。
-
-本章讨论了私营实体和学术机构提出的多项关于如何建立全球跨国归因平台的提案，以及其活动范围应涵盖什么内容。在这些提案中，最突出的两个主要实施挑战是：第一个关键问题是如何确保该平台的技术独立性以及参与者的专业水平。目前仍有大量研究需要定义归因实践的科学和方法学标准，包括透明度、可再现性和可证伪性。此外，仍不清楚为何拥有先进取证能力的私营科技公司会参与此类平台。第二个关键问题是如何保证该平台的司法独立性，以及哪种治理形式能够有效地协调参与者的激励。可想象的解决方案范围从层级化的机构到松散的网络治理形式不等。最终，私营和民间社会驱动的网络安全规范进程以及跨国归因制度化的成功，关键取决于国家行为体——尤其是大国——愿意达成负责任行为的规范，作为最终执行者。
-
-***大国作为终极执行者：重新谈判，***  
-***间谍行为的模糊规范***  
+#### 大国作为终极执行者：重新谈判间谍行为的模糊规范
 
 国家无法单独治理 cyberspace，它们需要将经济和社会参与者整合进更广泛的网络安全治理框架。然而，若没有大国在最终执行者角色上达成更大程度的共识，稳定的网络安全治理框架不会形成。因此，非国家和国家行为体必须更紧密合作，相互协助，以塑造行为，从而降低 cyberspace 中系统性的不安全水平，Jacqueline Eggenschwiler（2022）在其章节中论及。只要新兴（信息）技术被视为地缘政治战场，进展将受到限制。国家需要就以下达成一种默契：何为相互可接受的在 cyberspace 中的克制与利用之间的平衡。正如上文所述，这种理解的关键组成部分与国家情报机构在数字领域的行为密切相关。大国对通过 cyberspace 进行间谍和干预其他社会的政治进程及经济活动的形式的容忍程度，必须在系统性的 cyberspace 不安全水平实质性下降之前趋于一致。
 
-**结论**
+### 结论
 
 本书所讨论的章节阐明了当前网络安全政治的模糊性，这种模糊性发生在快速的社会技术转型和政治权威碎片化的不确定背景下。在本结论章节中，我们突出了四项关键辩论，这些辩论是由国家与非国家行为体在快速变化的跨部门和跨国政策空间中共同生产的。新兴的网络威胁是由技术设计决策的微观政治、技术规范选择的中观政治以及大国在竞争性国际体系中战略性行为的宏观政治共同构成的。在此更广阔的背景下，本书的章节突出了技术与政治之间的多种互动机制，这些机制在不同战略情境下影响网络威胁政治：关于新兴双用途技术的技术竞争明显在大国的国家威胁政治中留下了痕迹。在“灰色地带”冲突中，行为体试图操纵网络（影响）行动的模糊性。而在民主国家，政策制定者日益关注外国信息操作和网络影响行动对其社会技术公共领域的不对称脆弱性。
 
 网络威胁的感知也是技术与政治共同构成的，这意味着其实现并非注定。国家和非国家行为体都可以为降低 cyberspace 中的不安全水平做出贡献。国家需要设立红线，维护战略稳定，并制定网络空间负责任行为的规范。社会与经济领域的行为体则需要制定关于新兴技术创作者和用户的负责任行为规范，这是社会对社会技术系统信任的基石。然而，它们各自应对网络威胁的效果取决于它们之间的相互作用。
 
+- 国家和社会行动者需要协商如何在网络空间行使公共权威。只有当大国在国家间的网络行动负责任使用上形成默契理解，并且社会行动者成功在技术、信息、隐私和安全的规范空间中导航时，才能形成稳定的网络安全治理框架。
 
+研究人员可以为寻找功能性的治理框架作出贡献：他们可以突出网络空间中不太显眼的行为体，设计并评估新的社会技术机构以保障网络空间或监测、分析公开可得的网络行动数据。网络安全研究的一个关键概念挑战是将不同学科的理论知识整合，以分析网络安全政治的国际维度与网络安全政治的更广泛维度之间的众多交互作用（Dunn Cavelty and Wenger 2019）。研究网络安全的学者通常基于国际关系、安全研究和情报研究的方法，但越来越认识到来自批判性安全研究的更广泛贡献。实践理论。研究网络安全的学者利用更广泛的理论视角，包括来自政治经济学、治理研究和国际关系规范文献的方法。
 
+一个实际挑战是如何克服西方视角在政治和学术领域的主导地位。我们往往只看到网络空间中恶意活动的冰山尖端，而该冰山尖端与西方国家及情报公司的政治和经济利益相关联。本书大多数章节的经验焦点都受到西方民主国家与俄罗斯和中国的地缘政治竞争的影响，后者是其主要的威权主义对手。本卷的分析大部分受到大国的战略背景以及这些大国的国内制度安排的影响。然而，个别章节也指出了传统的（美国、以色列）和新兴的（阿尔巴尼亚、乌克兰）民主国家在网络安全政策方面的有趣差异，以及跨国文化差异在网络决策中的重要作用。网络安全日益在全球层面进行协商，因此我们需要更好地理解不同地区和文化如何看待技术与政治在网络空间中的相互作用。
 
--   国家和社会行动者需要协商如何在网络空间行使公共权威。只有当大国在国家间的网络行动负责任使用上形成默契理解，并且社会行动者成功在技术、信息、隐私和安全的规范空间中导航时，才能形成稳定的网络安全治理框架。
-
-研究人员可以为寻找功能性的治理框架作出贡献：他们可以突出网络空间中不太显眼的行为体，设计并评估新的社会技术机构以保障网络空间或监测、分析公开可得的网络行动数据。网络安全研究的一个关键概念挑战是将不同学科的理论知识整合，以分析网络安全政治的国际维度与网络安全政治的更广泛维度之间的众多交互作用（Dunn Cavelty and Wenger 2019）。研究网络安全的学者通常基于国际关系、安全研究和情报研究的方法，但越来越认识到来自批判性安全研究的更广泛贡献。
-
-262 `Andreas Wenger` 和 `Myriam Dunn Cavelty`
-
-实践理论。研究网络安全的学者利用更广泛的理论视角，包括来自政治经济学、治理研究和国际关系规范文献的方法。
-
-一个实际挑战是如何克服西方视角在政治和学术领域的主导地位。我们往往只看到网络空间中恶意活动的冰山尖端，而该冰山尖端与西方国家及情报公司的政治和经济利益相关联。本书大多数章节的经验焦点都受到西方民主国家与俄罗斯和中国的地缘政治竞争的影响，后者是其主要的威权主义对手。
-
-本卷的分析大部分受到大国的战略背景以及这些大国的国内制度安排的影响。然而，个别章节也指出了传统的（美国、以色列）和新兴的（阿尔巴尼亚、乌克兰）民主国家在网络安全政策方面的有趣差异，以及跨国文化差异在网络决策中的重要作用。
-
-网络安全日益在全球层面进行协商，因此我们需要更好地理解不同地区和文化如何看待技术与政治在网络空间中的相互作用。
-
-**Bibliography**
+### Bibliography
 
 所有链接已于 2021 年 9 月 3 日检查。
 
 Adamsky, D. D. (2021). Deterrence by Denial in Israeli Strategic Thinking. In A. Wenger and A. Wilner (eds), `Deterrence by Denial: Theory and Practice`. Amherst, NY: Cambria Press, 163–190.
 
-Baezner, M. (2018). `Hotspot Analysis: Synthesis 2017: Cyber-Conflicts in Perspective`.
-
-Zurich: Center for Security Studies (CSS).
+Baezner, M. (2018). `Hotspot Analysis: Synthesis 2017: Cyber-Conflicts in Perspective`. Zurich: Center for Security Studies (CSS).
 
 Baezner, M., and Cordey, S. (2022). Cyber in the Grey Zone: Influence Operations and other Conflict Trends. In M. Dunn Cavelty and A. Wenger (eds), `Cyber Security: Socio-Technological Uncertainty and Political Fragmentation`. London: Routledge, pp. 17–31.
 
 Baezner, M., and Robin, P. (2017). `Hotspot Analysis: Strategic stability between Great Powers: the Sino-American Cyber Agreement`. Zurich: Center for Security Studies (CSS).
 
-Bitzinger, R. A. (2021). China’s Shift from Civil-Military Integration to Military-Civil Fusion. `Asia Policy`[, 28(1): 5–24. https://doi .org / 10 .1353 /asp .2021 .0001](http://dx.doi.org/10.1353/asp.2021.0001).
+Bitzinger, R. A. (2021). China’s Shift from Civil-Military Integration to Military-Civil Fusion. `Asia Policy`, 28(1): 5–24. https://doi.org/10.1353/asp.2021.0001.
 
 Bonfanti, M. E. (2022). Artificial Intelligence and the Offence-Defence Balance in Cyber Security. In M. Dunn Cavelty and A. Wenger (eds), `Cyber Security: Socio-Technological Uncertainty and Political Fragmentation`. London: Routledge, pp. 64–79.
 
-Borghard, E. D., and Lonergan, S. W. (2017). The Logic of Coercion in Cyberspace.
+Borghard, E. D., and Lonergan, S. W. (2017). The Logic of Coercion in Cyberspace. `Security Studies`, 26(13): 452–458.
 
-`Security Studies`, 26(13): 452–458.
-
-Brantly, A. (2022). Battling the Bear: Ukraine’s Approach to National Cyber and Information Security. In M. Dunn Cavelty and A. Wenger (eds), `Cyber Security: Socio-Technological Uncertainty and Political Fragmentation`. London: Routledge, pp.
-
-157–171.
+Brantly, A. (2022). Battling the Bear: Ukraine’s Approach to National Cyber and Information Security. In M. Dunn Cavelty and A. Wenger (eds), `Cyber Security: Socio-Technological Uncertainty and Political Fragmentation`. London: Routledge, pp. 157–171.
 
 Buchanan, B. (2020). `The Hacker and the State: Cyber Attacks and the New Normal of Geopolitics`. Harvard: Harvard University Press.
 
-*Conclusion* 263
-
 Cavaiola, L. J., Gompert, D. C., and Libicki, M. (2015). Cyber House Rules: On War, Retaliation and Escalation. `Survival`, 57(1): 81–104.
 
-Chesney, R., and Smeets, M. (2020). Roundtable: The Dynamics of Cyber Conflict and Competition. `Texas National Security Review`, 3(4): 4–7. [`doi .org /10 .26153 /tsw`](https://doi.org/10.26153/tsw/10964)
-
-[/10964.](https://doi.org/10.26153/tsw/10964)
+Chesney, R., and Smeets, M. (2020). Roundtable: The Dynamics of Cyber Conflict and Competition. `Texas National Security Review`, 3(4): 4–7. doi.org/10.26153/tsw/10964.
 
 Chesney, R., and Smeets, M. (forthcoming). `Deter, Disrupt or Deceive: Assessing Cyber Conflict as an Intelligence Contest`. Washington: Georgetown University Press.
 
 Clarke, R. A., and Knake, R. K. (2010). `Cyber War`. New York: Ecco.
 
-Devanny, J. (2021). ‘Madman Theory’ or ‘Persistent Engagement’? The Coherence of US Cyber Strategy under Trump. `Journal of Applied Security Research`. Retrieved August 19, 2021, from: [`www .tandfonline .com /doi /abs /10 .1080 /19361610 .2021`](https://www.tandfonline.com)
+Devanny, J. (2021). ‘Madman Theory’ or ‘Persistent Engagement’? The Coherence of US Cyber Strategy under Trump. `Journal of Applied Security Research`. Retrieved August 19, 2021, from: www.tandfonline.com/doi/abs/10.1080/19361610.2021.1872359.
 
-[.1872359.](https://www.tandfonline.com)
-
-Dewar, R. S. (ed.). (2018). `National Cybersecurity and Cyberdefense Policy Snapshots`.
-
-Zurich: Center for Security Studies (CSS).
+Dewar, R. S. (ed.). (2018). `National Cybersecurity and Cyberdefense Policy Snapshots`. Zurich: Center for Security Studies (CSS).
 
 Dunn Cavelty, M. (2008). `Cyber Security and Threat Politics: US Efforts to Secure the Information Age`. London: Routledge.
 
-Dunn Cavelty, M. (2015). The Normalization of Cyber-International Relations. In O.
-
-Thränert and M. Zapfe (eds), `Strategic Trends 2015: Key Developments in Global Affairs`. Zurich: Center for Security Studies (CSS), pp. 81–98.
+Dunn Cavelty, M. (2015). The Normalization of Cyber-International Relations. In O. Thränert and M. Zapfe (eds), `Strategic Trends 2015: Key Developments in Global Affairs`. Zurich: Center for Security Studies (CSS), pp. 81–98.
 
 Dunn Cavelty, M., and Egloff, F. J. (2019). The Politics of Cybersecurity: Balancing Different Roles of the State. `St Antony’s International Review`, 15(1): 37–57.
 
@@ -5622,1311 +4035,154 @@ Dunn Cavelty, M., and Wenger, A. (2019). Cybersecurity Meets Security Politics: 
 
 Dunn Cavelty, M., and Wenger, A. (2022). Introduction: Cyber Security between Socio-Technological Uncertainty and Political Fragmentation. In M. Dunn Cavelty and A. Wenger (eds), `Cyber Security: Socio-Technological Uncertainty and Political Fragmentation`. London: Routledge, pp. 1–13.
 
-Eggenschwiler, J. (2022). Big Tech’s Push for Norms to Tackle Uncertainty in Cyberspace.
+Eggenschwiler, J. (2022). Big Tech’s Push for Norms to Tackle Uncertainty in Cyberspace. In M. Dunn Cavelty and A. Wenger (eds), `Cyber Security: Socio-Technological Uncertainty and Political Fragmentation`. London: Routledge, pp. 186–204.
 
-In M. Dunn Cavelty and A. Wenger (eds), `Cyber Security: Socio-Technological Uncertainty and Political Fragmentation`. London: Routledge, pp. 186–204.
+Egloff, F. J. (2020a). Contested Public Attributions of Cyber Incidents and the Role of Academia. `Contemporary Security Policy`, 41(1): 55–81. doi.org/10.1080/13523260.2019.1677324.
 
-Egloff, F. J. (2020a). Contested Public Attributions of Cyber Incidents and the Role of Academia. `Contemporary Security Policy`, 41(1): 55–81. [`doi .org /10 .1080`](https://doi.org/10.1080/13523260.2019.1677324)
-
-[/13523260 .2019 .1677324.](https://doi.org/10.1080/13523260.2019.1677324)
-
-Egloff, F. J. (2020b). Public Attribution of Cyber Intrusions. `Journal of Cybersecurity`,
-
-[6(1): 1–12. https://doi .org /10 .1093 /cybsec /tyaa012](https://doi.org/10.1093/cybsec/tyaa012).
+Egloff, F. J. (2020b). Public Attribution of Cyber Intrusions. `Journal of Cybersecurity`, 6(1): 1–12. https://doi.org/10.1093/cybsec/tyaa012.
 
 Egloff, F. J. (2022). `Semi-State Actors in Cybersecurity`. Oxford: Oxford University Press.
 
-Egloff, F. J., and Dunn Cavelty, M. (2021). Attribution and Knowledge Creation Assemblages in Cybersecurity Politics. `Journal of Cybersecurity`, 7(1): [tyab002. https://](https://doi.org/10.1093/cybsec/tyab002)
-
-[doi .org /10 .1093 /cybsec /tyab002.](https://doi.org/10.1093/cybsec/tyab002)
+Egloff, F. J., and Dunn Cavelty, M. (2021). Attribution and Knowledge Creation Assemblages in Cybersecurity Politics. `Journal of Cybersecurity`, 7(1): tyab002. https://doi.org/10.1093/cybsec/tyab002.
 
 Egloff, F. J., and Wenger, A. (2019). Public Attribution of Cyber Incidents. In F. Merz (ed.). `CSS Analyses in Security Policy, 244`. Zurich: Center for Security Studies (CSS), pp. 1–4.
 
+Eriksson, J., and Giacomello, G. (2022). Cyberspace in Space: Fragmentation, Vulnerability, and Uncertainty. In M. Dunn Cavelty and A. Wenger (eds), *Cyber Security: Socio-Technological Uncertainty and Political Fragmentation*. London: Routledge, pp. 95–107.
 
+Fischer, S.-C. (2021). *The Mobilization of Commercial Technology Companies: Explaining the Pursuit of U.S. Technological Superiority vis-à-vis China in a Private Sector-Driven and Globalized Innovation System*. Unpublished PhD Manuscript. Zurich: Center for Security Studies (CSS).
 
+Fischer, S.-C., and Wenger, A. (2019). A Politically Neutral Hub for Basic AI Research. *CSS Policy Perspectives*, 7(2). Zurich: Center for Security Studies (CSS).
 
-Eriksson, J., and Giacomello, G. (2022). Cyberspace in Space: Fragmentation, Vulnerability, and Uncertainty. In M. Dunn Cavelty and A. Wenger (eds), *Cyber Security: Socio-Technological Uncertainty and Political Fragmentation*. London: Routledge, pp.
+Fischer, S.-C., and Wenger, A. (2021). Artificial Intelligence, Forward-Looking Governance and the Future of Security. *Swiss Political Science Review*, 27(1): 170–179. doi.org/10.1111/spsr.12439.
 
-95–107.
+Gartzke, E. (2013). The Myth of Cyberwar. Bringing War in Cyberspace Back Down to Earth. *International Security*, 38: 41–73. doi.org/10.1162/ISEC_a_00136.
 
-264 *Andreas Wenger and Myriam Dunn Cavelty*
+Georgieva, I. (2020). The Unexpected Norm-Setters: Intelligence Agencies in Cyberspace. *Contemporary Security Policy*, 41: 33–54. doi.org/10.1080/13523260.2019.1677389.
 
-Fischer, S.-C. (2021). *The Mobilization of Commercial Technology Companies: Explaining* *the Pursuit of U.S. Technological Superiority vis-à-vis China in a Private Sector-Driven* *and Globalized Innovation System*. Unpublished PhD Manuscript. Zurich: Center for Security Studies (CSS).
+Gomez, M. A., and Whyte, C. (2022). Cyber Uncertainties: Observations from Cross-National Wargames. In M. Dunn Cavelty and A. Wenger (eds), *Cyber Security: Socio-Technological Uncertainty and Political Fragmentation*. London: Routledge, pp. 111–127.
 
-Fischer, S.-C., and Wenger, A. (2019). A Politically Neutral Hub for Basic AI Research.
+Harknett, R. J., and Smeets, M. (2020). Cyber Campaigns and Strategic Outcomes. *Journal of Strategic Studies*, Ahead of Print: 1–34. doi.org/10.1080/01402390.2020.1732354.
 
-*CSS Policy Perspectives*, 7(2). Zurich: Center for Security Studies (CSS).
+Haunschild, J., Kaufhold, M.-A., and Reuter, C. (2022). Cultural Violence and Peace in Social Media: Technical and Social Interventions. In M. Dunn Cavelty and A. Wenger (eds), *Cyber Security: Socio-Technological Uncertainty and Political Fragmentation*. London: Routledge, pp. 48–63.
 
-Fischer, S.-C., and Wenger, A. (2021). Artificial Intelligence, Forward-Looking Governance and the Future of Security. *Swiss Political Science Review*, 27(1): 170–179. [`doi`](https://doi.org/10.1111/spsr.12439)
+Healey, J. (2019). The Implications of Persistent (and Permanent) Engagement in Cyberspace. *Journal of Cybersecurity*, 5(1): tyz008. doi.org/10.1093/cybsec/tyz008.
 
-[.org /10 .1111 /spsr .12439.](https://doi.org/10.1111/spsr.12439)
+Healey, J., and Jervis, R. (2020). The Escalation Inversion and Other Oddities of Situational Cyber Stability. *Texas National Security Review*, 3(4): 30–53. doi.org/10.26153/tsw/10962.
 
-Gartzke, E. (2013). The Myth of Cyberwar. Bringing War in Cyberspace Back Down to Earth. *International Security*, 38: 41–73. [`doi .org /10 .1162 /ISEC \_a \_00136.`](https://doi.org/10.1162/ISEC_a_00136)
-
-Georgieva, I. (2020). The Unexpected Norm-Setters: Intelligence Agencies in Cyberspace.
-
-*Contemporary Security Policy*, 41: 33–54. [`doi .org /10 .1080 /13523260 .2019`](https://doi.org/10.1080/13523260.2019.1677389)
-
-[.1677389.](https://doi.org/10.1080/13523260.2019.1677389)
-
-Gomez, M. A., and Whyte, C. (2022). Cyber Uncertainties: Observations from Cross-National Wargames. In M. Dunn Cavelty and A. Wenger (eds), *Cyber Security:* *Socio-Technological Uncertainty and Political Fragmentation*. London: Routledge, pp. 111–127.
-
-Harknett, R. J., and Smeets, M. (2020). Cyber Campaigns and Strategic Outcomes. *Journal* *of Strategic Studies*, Ahead of Print: 1–34. [`doi .org /10 .1080 /01402390 .2020`](https://doi.org/10.1080/01402390.2020.1732354)
-
-[.1732354.](https://doi.org/10.1080/01402390.2020.1732354)
-
-Haunschild, J., Kaufhold, M.-A., and Reuter, C. (2022). Cultural Violence and Peace in Social Media: Technical and Social Interventions. In M. Dunn Cavelty and A. Wenger (eds), *Cyber Security: Socio-Technological Uncertainty and Political Fragmentation*.
-
-London: Routledge, pp. 48–63.
-
-Healey, J. (2019). The Implications of Persistent (and Permanent) Engagement in Cyberspace. *Journal of Cybersecurity*, 5(1): tyz008. [`doi .org /10 .1093 /cybsec /`](https://doi.org/10.1093/cybsec/tyz008)
-
-[tyz008.](https://doi.org/10.1093/cybsec/tyz008)
-
-Healey, J., and Jervis, R. (2020). The Escalation Inversion and Other Oddities of Situational Cyber Stability. *Texas National Security Review*, 3(4): 30–53. [`doi .org /10 .26153`](https://doi.org/10.26153/tsw/10962)
-
-[/tsw /10962](https://doi.org/10.26153/tsw/10962).
-
-Hirsh, M. (2021, July 8). Putin Is Testing Biden’s Cyber Resolve. *Foreign Policy*.
-
-Retrieved August 19, 2021, from: [`foreignpolicy .com /2021 /07 /08 /putin -biden`](https://foreignpolicy.com)
-
-[\-cyber -security -attacks -ransomeware/.](https://foreignpolicy.com)
+Hirsh, M. (2021, July 8). Putin Is Testing Biden’s Cyber Resolve. *Foreign Policy*. Retrieved August 19, 2021, from: foreignpolicy.com/2021/07/08/putin-biden-cyber-security-attacks-ransomeware/.
 
 Jervis, R. (1978). Cooperation under the Security Dilemma. *World Politics*, 30(2): 167–214.
 
-Jusufi, I. (2022). Uncertainty, International Obligations, Fragmentation and Sovereignty: Cyber Security in Albania. In M. Dunn Cavelty and A. Wenger (eds), *Cyber Security:* *Socio-Technological Uncertainty and Political Fragmentation*. London: Routledge, pp. 172–185.
+Jusufi, I. (2022). Uncertainty, International Obligations, Fragmentation and Sovereignty: Cyber Security in Albania. In M. Dunn Cavelty and A. Wenger (eds), *Cyber Security: Socio-Technological Uncertainty and Political Fragmentation*. London: Routledge, pp. 172–185.
 
 Kello, L. (2017). *The Virtual Weapon and International Order*. New Haven: Yale University Press.
 
 Kostyuk, N., and Zhukov, Y. M. (2017). Invisible Digital Front: Can Cyber Attacks Shape Battlefield Events? *Journal of Conflict Resolution*, 63(2): 317–47.
 
-Kuerbis, B., Badiei, F., Grindal, K., and Mueller, M. (2022). Understanding Transnational Cyber Attribution: Moving from ‘Whodunit’ to Who Did it. In M. Dunn Cavelty and A. Wenger (eds), *Cyber Security: Socio-Technological Uncertainty and Political* *Fragmentation*. London: Routledge, pp. 220–238.
+Kuerbis, B., Badiei, F., Grindal, K., and Mueller, M. (2022). Understanding Transnational Cyber Attribution: Moving from ‘Whodunit’ to Who Did it. In M. Dunn Cavelty and A. Wenger (eds), *Cyber Security: Socio-Technological Uncertainty and Political Fragmentation*. London: Routledge, pp. 220–238.
 
-Lewis, J. A. (2018). *Rethinking Cyber Security: Strategy, Mass Effects, and States*.
+Lewis, J. A. (2018). *Rethinking Cyber Security: Strategy, Mass Effects, and States*. Washington, DC: Center for Strategic and International Studies.
 
-Washington, DC: Center for Strategic and International Studies.
-
- *Conclusion* 265
-
-Li, X., and Chen, D. (2021, April 15). Should the West Fear China’s Increasing Role in Technical Standard Setting? *The Diplomat*. Retrieved from: [`thediplomat .com`](https://thediplomat.com)
-
-[/2021 /04 /should -the -west -fear -chinas -increasing -role -in -technical -standard -setting/.](https://thediplomat.com)
+Li, X., and Chen, D. (2021, April 15). Should the West Fear China’s Increasing Role in Technical Standard Setting? *The Diplomat*. Retrieved from: thediplomat.com/2021/04/should-the-west-fear-chinas-increasing-role-in-technical-standard-setting/.
 
 Lindsay, J. R. (2013). Stuxnet and the Limits of Cyber Warfare. *Security Studies*, 22(3): 365–404.
 
-Lindsay, J. R. (2014/2015). The Impact of China on Cybersecurity: Fiction and Friction.
+Lindsay, J. R. (2014/2015). The Impact of China on Cybersecurity: Fiction and Friction. *International Security*, 39(3): 7–47.
 
-*International Security*, 39(3): 7–47.
+Lindsay, J. R. (2017). Restrained by Design: The Political Economy of Cybersecurity. *Digital Policy, Regulation and Governance*, 19: 493–514. doi.org/10.1108/DPRG-05-2017-0023.
 
-Lindsay, J. R. (2017). Restrained by Design: The Political Economy of Cybersecurity.
+Lindsay, J. R. (2020). Cyber Conflict vs. Cyber Command: Hidden Dangers in the American Military Solution to a Large-Scale Intelligence Problem. *Intelligent and National Security*, 36(2): 260–278. doi.org/10.1080/02684527.2020.1840746.
 
-*Digital Policy, Regulation and Governance*, 19: 493–514. [`doi .org /10 .1108 /`](https://doi.org/10.1108/DPRG-05-2017-0023)
+Lindsay, J. R. (2022). Quantum Computer and Classical Politics: The Ambiguity of Cryptologic Advantage. In M. Dunn Cavelty and A. Wenger (eds), *Cyber Security: Socio-Technological Uncertainty and Political Fragmentation*. London: Routledge, pp. 80–94.
 
-[DPRG -05 -2017 -0023.](https://doi.org/10.1108/DPRG-05-2017-0023)
+Lindsay, J. R., and Gartzke, E. (2019). *Cross-Domain Deterrence: Strategy in an Era of Complexity*. Oxford: Oxford University Press.
 
-Lindsay, J. R. (2020). Cyber Conflict vs. Cyber Command: Hidden Dangers in the American Military Solution to a Large-Scale Intelligence Problem. *Intelligent and* *National Security*, 36(2): 260–278. [`doi .org /10 .1080 /02684527 .2020 .1840746`](https://doi.org/10.1080/02684527.2020.1840746).
+Lupovici, A. (2016). *The Power of Deterrence. Emotions, Identity, and American and Israeli Wars of Resolve*. Cambridge: Cambridge University Press.
 
-Lindsay, J. R. (2022). Quantum Computer and Classical Politics: The Ambiguity of Cryptologic Advantage. In M. Dunn Cavelty and A. Wenger (eds), *Cyber Security:* *Socio-Technological Uncertainty and Political Fragmentation*. London: Routledge, pp. 80–94.
+Lupovici, A. (2021). The Dog that Did not Bark, the Dog that Did Bark, and the Dog that Should Have Barked: A Methodology for Cyber Deterrence Research. *International Studies Review*, viab032. https://doi.org/10.1093/isr/viab032.
 
-Lindsay, J. R., and Gartzke, E. (2019). *Cross-Domain Deterrence: Strategy in an Era of* *Complexity*. Oxford: Oxford University Press.
-
-Lupovici, A. (2016). *The Power of Deterrence. Emotions, Identity, and American and* *Israeli Wars of Resolve*. Cambridge: Cambridge University Press.
-
-Lupovici, A. (2021). The Dog that Did not Bark, the Dog that Did Bark, and the Dog that Should Have Barked: A Methodology for Cyber Deterrence Research. *International* *Studies Review*[, viab032. https://doi .org /10 .1093 /isr /viab032.](https://doi.org/10.1093/isr/viab032)
-
-Lupovici, A. (2022). Uncertainty and the Study of Cyber Deterrence: The Case of Israel’s Limited Reliance on Cyber Deterrence. In M. Dunn Cavelty and A. Wenger (eds), *Cyber Security: Socio-Technological Uncertainty and Political Fragmentation*.
-
-London: Routledge, pp. 128–140.
+Lupovici, A. (2022). Uncertainty and the Study of Cyber Deterrence: The Case of Israel’s Limited Reliance on Cyber Deterrence. In M. Dunn Cavelty and A. Wenger (eds), *Cyber Security: Socio-Technological Uncertainty and Political Fragmentation*. London: Routledge, pp. 128–140.
 
 Maschmeyer, L. (2021). The Subversive Trilemma: Why Cyber Operations Fall Short of Expectations. *International Security*, 46(2): 51–90.
 
-Maschmeyer, L., Abrahams, A., Pomerantsev, P., and Yermolenko, V. (forthcoming).
+Maschmeyer, L., Abrahams, A., Pomerantsev, P., and Yermolenko, V. (forthcoming). Donetsk Don’t Tell. Hybrid War in Ukraine and the Limits of Digital Influence Operations.
 
-Donetsk Don’t Tell. Hybrid War in Ukraine and the Limits of Digital Influence Operations.
-
-Poznansky, M., and Perkoski, E. (2018). Rethinking Secrecy in Cyberspace: The Politics of Voluntary Attribution. *Journal of Global Security Studies*, 3(4): 402–416. [`doi`](https://doi.org/10.1093/jogss/ogy022)
-
-[.org /10 .1093 /jogss /ogy022.](https://doi.org/10.1093/jogss/ogy022)
+Poznansky, M., and Perkoski, E. (2018). Rethinking Secrecy in Cyberspace: The Politics of Voluntary Attribution. *Journal of Global Security Studies*, 3(4): 402–416. doi.org/10.1093/jogss/ogy022.
 
 Rid, T. (2012). Cyber War Will Not Take Place. *Journal of Strategic Studies*, 35(1): 5–32.
 
-Rid, T., and Buchanan, B. (2015). Attributing Cyber Attacks. *The Journal of Strategic* *Studies*, 38(1–2): 4–37.
+Rid, T., and Buchanan, B. (2015). Attributing Cyber Attacks. *The Journal of Strategic Studies*, 38(1–2): 4–37.
 
-Rovner, J. (2019, September 16). Cyber War an Intelligence Contest. *War on the Rocks*.
-
-Retrieved August 19, 2021, [from: https://warontherocks .com /2019 /09 /cyber -war -as -an](https://warontherocks.com)
-
-[\-intelligence -contest/.](https://warontherocks.com)
+Rovner, J. (2019, September 16). Cyber War an Intelligence Contest. *War on the Rocks*. Retrieved August 19, 2021, from: https://warontherocks.com/2019/09/cyber-war-as-an-intelligence-contest/.
 
 Schelling, T. C. (1966). *Arms and Influence*. New Haven: Yale University Press.
 
-Schulze, M. (2020). Cyber in War: Assessing the Strategic, Tactical, and Operational Utility of Military Cyber Operations. In *2020 12th International Conference on Cyber* *Conflict*. Retrieved August 19, 2021, from: [`www .ccdcoe .org /uploads /2020 /05 /`](https://www.ccdcoe.org)
+Schulze, M. (2020). Cyber in War: Assessing the Strategic, Tactical, and Operational Utility of Military Cyber Operations. In *2020 12th International Conference on Cyber Conflict*. Retrieved August 19, 2021, from: www.ccdcoe.org/uploads/2020/05/CyCon_2020_10_Schulze.pdf.
 
+Schünemann, W. (2022). A Threat to Democracies? An Overview of Approaches to Measuring the Effects of Disinformation. In M. Dunn Cavelty and A. Wenger (eds), *Cyber Security: Socio-Technological Uncertainty and Political Fragmentation*. London: Routledge, pp. 32–47.
 
+Seebeck, L. (2019, September 5). Why the Fifth Domain is Different. *The Strategist*, ASPI (Australian Stratic Policy Institute). Retrieved from: https://www.aspistrategist.org.au/why-the-fifth-domain-is-different/.
 
-
--   [CyCon\_2020\_10\_Schulze.pdf](https://www.ccdcoe.org).
-
-Schünemann, W. (2022). A Threat to Democracies? An Overview of Approaches to Measuring the Effects of Disinformation. In M. Dunn Cavelty and A. Wenger (eds),
-
-266 *Andreas Wenger and Myriam Dunn Cavelty*
-
-*Cyber Security: Socio-Technological Uncertainty and Political Fragmentation*.
-
-London: Routledge, pp. 32–47.
-
-Seebeck, L. (2019, September 5). Why the Fifth Domain is Different. *The Strategist*, ASPI (Australian Stratic Policy Institute). Retrieved [from: https://www.aspistrategist.org.au/](https://www.aspistrategist.org.au)
-
-[why-the-fifth-domain-is-different/](https://www.aspistrategist.org.au)
-
-Slayton, R. (2017). What is the Cyber Offense-Defense Balance? Conceptions, Causes, and Assessment. *International Security*, 41: 72–109. [`doi.org/10.1162/ISEC_a_00267`](https://doi.org/10.1162/ISEC_a_00267)
-
-[\_00267.](https://doi.org/10.1162/ISEC_a_00267)
+Slayton, R. (2017). What is the Cyber Offense-Defense Balance? Conceptions, Causes, and Assessment. *International Security*, 41: 72–109. doi.org/10.1162/ISEC_a_00267.
 
 Smeets, M. (2018). The Strategic Promise of Offensive Cyber Operations. *Strategic Studies Quarterly*, 12(3): 90–113.
 
-Smeets, M. (2022). *No Shortcuts: Why States Struggle to Develop a Military Cyber-Force*.
+Smeets, M. (2022). *No Shortcuts: Why States Struggle to Develop a Military Cyber-Force*. London: Hurst Publishers.
 
-London: Hurst Publishers.
-
-Soesanto, S., and Smeets, M. (2020). Cyber Deterrence: The Past, Present, and Future. In F. Osinga and T. Sweijs (eds), *NL ARMS Netherlands Annual Review of Military Studies 2020*. The Hague: T.M.C. Asser [`doi.org/10.1007/978-94-6265-419-8_20`](https://doi.org/10.1007/978-94-6265-419-8_20)
+Soesanto, S., and Smeets, M. (2020). Cyber Deterrence: The Past, Present, and Future. In F. Osinga and T. Sweijs (eds), *NL ARMS Netherlands Annual Review of Military Studies 2020*. The Hague: T.M.C. Asser doi.org/10.1007/978-94-6265-419-8_20.
 
 Steed, D. (2022). Disrupting the Second Oldest Profession: The Impact of Cyber on Intelligence. In M. Dunn Cavelty and A. Wenger (eds), *Cyber Security: Socio-Technological Uncertainty and Political Fragmentation*. London: Routledge, pp. 205–219.
 
 Steiger, S. (2022). Cyber Securities and Cyber Security Politics: Understanding Different Logics of German Cyber Security Policies. In M. Dunn Cavelty and A. Wenger (eds), *Cyber Security: Socio-Technological Uncertainty and Political Fragmentation*. London: Routledge, pp. 141–156.
 
-Sweijs, T., and Zilincik, S. (2021). The Essence of Cross-Domain Deterrence. In F. Osinga and T. Sweijs (eds), *NL ARMS Netherlands Annual Review of Military Studies 2020*. The Hague: T.M.C. Asser Press. [`doi.org/10.1007/978-94-6265-419-8_8`](https://doi.org/10.1007/978-94-6265-419-8_8)
+Sweijs, T., and Zilincik, S. (2021). The Essence of Cross-Domain Deterrence. In F. Osinga and T. Sweijs (eds), *NL ARMS Netherlands Annual Review of Military Studies 2020*. The Hague: T.M.C. Asser Press. doi.org/10.1007/978-94-6265-419-8_8.
 
 Tor, U. (2015). ‘Cumulative Deterrence’ as a New Paradigm for Cyber Deterrence. *Journal of Strategic Studies*, 40(1–2): 92–117.
 
-US-China Business Council (USCBC). (2020). China in International Standards Setting. Retrieved from: [`www.uschina.org`](https://www.uschina.org)
+US-China Business Council (USCBC). (2020). China in International Standards Setting. Retrieved from: www.uschina.org/sites/default/files/china_in_international_standards_setting.pdf.
 
-[www.uschina.org/sites/default/files/china_in_international_standards_setting.pdf](https://www.uschina.org)
+US Cyber Command. (2018). Achieve and Maintain Cyberspace Superiority: Command Vision for US Cyber Command. Retrieved from: www.cybercom.mil/Portals/... (URL incomplete in original).
 
-US Cyber Command. (2018). Achieve and Maintain Cyberspace Superiority: Command Vision for US Cyber Command. Retrieved from: [`www.cybercom.mil/Portals`](https://www.cybercom.mil)
-
-[\-152556-010.](https://www.cybercom.mil)
-
-US Department of Defense. (2019). Cyber Strategy 2019: Summary. Retrieved from:
-
-[`media.defense.gov/2018/Sep/18/2002041658/1/1/1/CYBER_STRATEGY\_SUMMARY\_FINAL.PDF`](https://media.defense.gov)
+US Department of Defense. (2019). Cyber Strategy 2019: Summary. Retrieved from: media.defense.gov/2018/Sep/18/2002041658/1/1/1/CYBER_STRATEGY_SUMMARY_FINAL.PDF.
 
 Valeriano, B., and Maness, R. C. (2015). *Cyber War versus Cyber Realities: Cyber Conflict in the International System*. Oxford: Oxford University Press.
 
 Wenger, A., and Wilner, A. (eds). (2021). *Deterrence by Denial: Theory and Practice*. Amherst, NY: Cambria Press.
 
-**Index**
+### Index
 
 *Note*: Page numbers in *italics* indicate figures, **bold** indicate tables in the text, and references following “n” refer endnotes.
 
-0 days 71, 76n12
-
-Anti-Terrorist Operation Zone (ATO) 163
-
-Appling, D. S. 56
-
-Abbott, K. W. 188
-
-Arquilla, J. 113
-
-account hijacking by social bots 55–56
-
-Artificial General Intelligence (AGI) 67
-
-Albania, cyber security policy
-
-artificial intelligence (AI) in cyber
-
-development in 172–183; AADF
-
-security 6, 64–75, 247; innovation and (Albanian American Development
-
-uncertainty 68–69; offense–defense
-
-Foundation) 181; AKCESK (National
-
-balance 64–75; recent initiatives 67–68;
-
-Authority on Electronic Certification
-
-security and cyber security relevance
-
-and Cyber Security) 181; AKEP
-
-69–71; targeted cyber intelligence 65;
-
-(Electronic and Postal Communications
-
-(working) definition of AI 66–67
-
-Authority) 181; Cross-Cutting Strategy
-
-Ashkenazi, G. 132
-
-on the Information Society 2008–2013
-
-astroturfing by social bots 55–56
-
-177; Cyber Defense Strategy 178;
-
-audience effects of disinformation 39
-
-fragmentation of authority 174;
-
-automated technology-driven manipulation
-
-international obligations 175, 179–180;
-
-55–57
-
-Law on Cyber Security 176, 181;
-
-Ayalon, D. 134
-
-multi-actor sovereignty 174; National
-
-Security Strategy 2014–2020 177;
-
-Badiei, F. 10, 249, 259
-
-networked governance 180–182; non-
-
-Baezner, M. 5, 243–244
-
-state actors role in public discourse
-
-Barak, E. 134
-
-176–179; OSHEE (electricity
-
-Baram, G. 132
-
-distribution operator) 181; Policy Paper
-
-Bayesian game-theoretic model 227–228
-
-on Cyber Security (2015–2017) 177;
-
-Bennett, N. 135
-
-public-private collaboration 176; State
-
-Bicchieri, C. 187
-
-Intelligence Service (SIS/SHISH) 181;
-
-Bombes 86
-
-technological uncertainty 176–179;
-
-Bonfanti, M. E. 6–7, 248
-
-uncertainties surrounding 173
-
-botnets 77n15
-
-*Alethiometer* 52
-
-bots *see* social bots
-
-Alexander, K. 207
-
-
-
-algorithmic based social bot detection
-
-Brantly, A. F. 8, 210, 243, 258
-
-Briscoe, E. J. 56
-
-56–57
-
-Brooking, E. T. 216
-
-Allen, G. 76n13
-
-Brundage, M. 76n10
-
-ambiguity of cyber security politics
-
-Buchanan, B. 116
-
-239–262; micro-dynamics of decision-
-
-making in 251–252; strategic utility of
-
-Caltagirone, S. 222
-
-cyber operations 241–246
-
-Canetti, D. 117
-
-268 *Index*
-
-Chan, T. 76n13
-
-Cybersecurity Coordination Center
-
-Cheong, M. 54
-
-Ukraine 165
-
-Chernenko, E. 231
-
-cyber security politics 141–152, 246–250;
-
-cipher key(s) 84
-
-emerging technologies 246–250; future
-
-Colossus 86
-
-of 246–250; sociopolitical context
-
-computer network operations (CNO) 149
-
-247–249; *see also* ambiguity of cyber
-
-Cordey, S. 5, 243–244
-
-security politics; multidimensional
-
-counter-terrorism in social media 53–54
-
-uncertainty, in cyber security
-
-critical infrastructure protection (CIP) 257
-
-Cybersecurity Strategy of Ukraine 166
-
-cross-national war games, observations
-
-Cybersecurity Tech Accord 191, 200n6
-
-from 111–125
-
-cyberspace 23; ambiguous context of 252;
-
-crowd-based social bot detection 56–57, **56**
-
-characteristics of 213; human behavior
-
-cryptanalysis (code-breaking) 83, 85, 248
-
-regulation in 259; infrastructure 96–99
-
-cryptography (code-making) 82, 83,
-
-cyberspace in space 95–105; fragmentation
-
-87, 248; cryptography (PKI) 88; as
-
-103–105; interplanetary cyberspace
-
-an organizational contest 85–86;
-
-102–103; uncertainty 103–105;
-
-political essence of 83–85; second-
-
-vulnerability 103–105; *see also* space/
-
-order conspiracy 86; secrecy and 87;
-
-cyberspace
-
-strategic utility of 86–89; third-order
-
-cyberspace uncertainties 111–125, conspiracy 86
-
-186–199; effectiveness review 195–198;
-
-cryptosystem 83–84
-
-evolution of field 113–119; outcome
-
-cultural violence, social media and 48–59
-
-197–198; output 196–197; vulnerable
-
-cumulative deterrence concept 253
-
-environment 113–114
-
-cyber conflict 114–116; behavioral turn cyber threat perceptions, tech race
-
-in 116–119; management, attribution
-
-dynamics in 246–247
-
-ambiguity in context of 252–254; state-Cyberwar: How Russian Hackers and
-
-centric view 114–116
-
-*Trolls Helped Elect a President* 40
-
-cyber deterrence 128–136, 253; Israel’s *Cyber War Will Not Take Place* 17
-
-limited reliance on 133–134; uncertainty
-
-and the study of 128–136
-
-D’Anieri, P. 158–159
-
-cyber domain 253
-
-data poisoning attacks 70
-
-cyber hygiene 86
-
-deepfakes 74, 77n17
-
-cyber impact on intelligence 205–216;
-
-deep learning 66
-
-consequences of intelligence
-
-deep space communications system 103
-
-actions 208–212; PRISM
-
-Deep Space Network (DSN) 103
-
-programs 207; security dilemma
-
-defense/offense: defensive/offensive
-
-213; TEMPORA program 207;
-
-applications 72–75; within logical layer
-
-transformation 206–208; TURBINE
-
-of cyberspace 72–74; within semantic
-
-208; TURMOIL 208
-
-layer of cyberspace 74–75; *see also*
-
-cyber influence operations (CIO) 19
-
-artificial intelligence (AI) in cyber
-
-cyber insecurity, intelligence as source of
-
-security
-
-254–255
-
-Degaut, M. 207
-
-cyber intelligence 77n14
-
-Delay-Tolerant Networks (DTN) 103
-
-cyber operations (CO) 17–26; *see also* Democratic People’s Republic of North
-
-
-
-gray zones conflict
-
-朝鲜 (朝鲜半岛) 22
-
-灰色区域的网络行动 20–25;
-
-威慑 128–136, 253; *参见* 网络
-
-可获取和可用 20–22; 受限
-
-威慑
-
-升级风险 24–25; 操作上
-
-Diamond 模型分析入侵 222
-
-具有吸引力和有效性 23–24; 战略性数字日内瓦公约保护
-
-优势 23; *参见* 灰色区域
-
-Cyberspace 190
-
-冲突
-
-数字和平运动 191
-
-网络韧性 252
-
-数字公共领域，信息操控在
-
-网络灰色区域作战 120–122
-
-41–42
-
-*索引* 269
-
-信息操控 32–43; 作为概念 33–35;
-
-144–151; 不同逻辑的 151–152;
-
-核心政策文件 37; 反对
-
-调查和国内争议
-
-文化叙事 40; 在数字公共
-
-146–147; 军事网络安全 149–
-
-领域，促成因素 41–42;
-
-151; 角色理论 142–143; 两级角色
-
-对大众媒体的影响 39–40; 实证
-
-游戏 *143*
-
-测量 32–43; 立即
-
-德国情报机构 148–149
-
-受众影响 39; 个人暴露 Giacomello, G. 7, 250
-
-到 39; 作为国际威胁政治
-
-全球定位系统 (GPS) 97
-
-33–35; 面向知识的视角
-
-全球透明倡议 (GTI) 194
-
-在 35–36; 宏观层面 40–41; 中层
-
-Gomez, M. A. 7, 117, 250–252
-
-层 39–40; 微观层面 39; 问题
-
-灰色区 17
-
-定义 (诊断框架) 37–38;
-
-灰色区域冲突 17–20, 26n2;
-
-问题解决 (预测框架)
-
-特征 18; 兴起于 19; 理论
-
-37; 反复框架 37–38; 假设
-
-框架 17–20; *参见* 网络
-
-影响 38–42; 理论方法
-
-灰色区域的操作
-
-32–43; 威胁感知 36–38
-
-Greenberg, A. 165, 211
-
-分布式拒绝服务 (DDoS) 21(#index_split_000.html#p36)
-
-Grindal, K. 10, 249, 259
-
-Dobrygowski, D. 195
-
-Gross, M. L. 117
-
-域生成算法
-
-Guess, A. 39
-
-(DGA) 77n15
-
-双重用途通信卫星 100
-
-Hancock, J. T. 52
-
-Dunn Cavelty, M. 10, 128, 212, 216
-
-Haunschild, J. 5, 245
-
-Dwan, R. 197
-
-Healey, J. 221
-
-Hegemann, H. 187
-
-回声室 42
-
-Hicks, K. H. 18
-
-Edwards, B. 227–228, 234
-
-劫持 55–56
-
-Eggenschwiler, J. 9, 259–260
-
-Hussain, G. 54
-
-Eriksson, J. 7, 250
-
-混合方法 **56**, 57, 160–164
-
-混合/非线性/模糊
-
-社交媒体上的假新闻 49–52;
-
-战争 26n2
-
-算法/工具 **51**; 反制措施
-
-对 51–52; 检测 52;
-
-ICT4Peace 58
-
-传播 50–51; 假新闻
-
-个人接触到虚假信息 39
-
-检查应用 52; 门禁 **51**; 媒体
-
-信息与通信
-
-素养 **51**; 法规/法律 **51**
-
-技术 (ICTs) 188
-
-*Fake Tweet Buster* 工具 52
-
-[InformNapalm .o rg](http://dx.doi.org/InformNapalm.org) 163
-
-Farrell, H. J. 36, 213
-
-机构化跨国
-
-特征分析 **56**, 57
-
-归因 230–233; 集体行动
-
-Feynman, R. 81
-
-在, 挑战 232–233; 提案 Finnemore, M. 188, 200n2
-
-为 230–232; RAND 研究 231;
-
-欺诈者 52
-
-RightsCon 232
-
-信息公开法 208
-
-知识产权权利 (IPR) 164
-
-Friedrich, F. 145
-
-国际威胁政治，虚假信息
-
-在 33–35
-
-Gartenstein-Ross, D. 54
-
-Internet Governance Forum (IGF) 在
-
-
-
-
-## 115–117
-Paris 191
-
-## gatekeeping `51` 66
-
-## Internet Research Agency (IRA) `55` 70
-
-## Generative Adversarial Network
-
-## InterPlaNetary (IPN) `95` 110
-
-## (GAN) `77n17` 92
-
-interplanetary cyberspace `102` 117–`103` 118
-
-## Georgiva, I. `212` 227
-
-## Intrusion Detection Systems (IDS) `73` 88
-
-## German cyber security policies
-
-## Investigatory Powers Act, 2016 `214` 229
-
-`141–` 156`152,` 167` 257; critical infrastructures
-
-`Iron Dome` `132,` 147`137n11` 152
-
-protection `144–` 159`146; development of`
-
-Israel, B. `131,` 146`133` 148
-
-`270 Index`
-
-Israel, cyber security in `131` 146`–`133` 148; Israel misinterpreted content `50` 65`–`52` 67
-
-`(cyber) deterrence 130–` 145`131; Israeli`
-
-## Mueller, M. `10,` 249,`259` 274
-
-## National Cyber Bureau (INCB) `131;`
-
-multi-actor sovereignty `174` 189`–`175` 190
-
-Israeli National Cyber Directorate
-
-multidimensional uncertainty, in cyber
-
-`(INCD) 132` 147; limited reliance on cyber
-
-security `239` 254`–`262` 277; controlled strategic
-
-`deterrence 133` 148`–`134` 149; strategization of
-
-`effect, difficulty of achieving 241` 256`–`242` 257;
-
-`131–` 146`133` 148
-
-`deterrence 252` 267`–`254` 269; disinformation as a new threat focus `244–` 259`246; domestic`
-
-Jamieson, K. H. `40` 55
-
-and international governance, shifting
-
-## Jeberson, W. `54` 69
-
-patterns `256` 271`–`258` 273; emerging governance
-
-## Jensen, B. M. `111,` 126`210` 225
-
-responses `256–` 271`260; escalation` 275`251` 266`–`252`–`252](#index_split_005.html#p267); Jervis, R. 213
-
-“gray zones” manipulation `243–` 258`244;`
-
-Jusufi, I. `9` [24]258
-
-intelligence `254` 255`–`255` 270; intelligence as source of, growing operational role
-
-## Kahn, D. `83,` 98`86` 101
-
-of `254–` 255`255; international dimension`
-
-## Kaspersky Lab `194` 209
-
-`239–` 254`240; post-9/11 context of` 255`; 255` 270;
-
-## Kaufmann, M.-A. `5,` 20`245` 260
-
-private actor innovation increasing
-
-## Kello, L. `210,` 225`214,` 229`243` 258
-
-`249–` 264`250; sociopolitical ambiguity`
-
-## Klausen, J. `53` 68
-
-`249–` 264`250; socio-technical uncertainty`
-
-knowledge-oriented perspective on
-
-`249–` 264`250; state, industry, and societies`
-
-disinformation `35–` 50`36` 51`
-
-`240; strategic stability under` 255`250` 255;
-
-## Kreps, S. `118` 133
-
-transnational governance, new forms
-
-KRITIS implementation plan `144` 159
-
-of `258–` 273`260; ultimate enforcers, great`
-
-## Kuehl, D. T. `113` 128
-
-powers as `260; see also` ambiguity of
-
-## Kuerbis, B. `10,` 25`249,` 264`254,` 259
-
-cyber security politics 282
-
-## Kuzio, T. `159` 174
-
-nano-satellites `104` 119
-
-## Lanoszka, A. `41` 56
-
-Narrow Artificial Intelligence `66` 81
-
-law enforcement in German cyber security
-
-national approaches to cyber attribution
-
-`146–` 161`147` 162`
-
-`226–` 241`227` 242`
-
-## Lee, R. `221` 236
-
-National Cyber Security Centre
-
-## Lee, T. B. `207` 222
-
-(NCSC) `226` 241
-
-## Lee, V. C. S. `54` 69
-
-National Information Infrastructure
-
-## Leed, M. `19` 34
-
-Protection Plan `144` 159
-
-## Leschenko, S. `160` 175
-
-National Security Agency (NSA) `206` 221
-
-## Liff, A. P. `114` 129
-
-## Neer, T. `53` 68
-
-## Lin, H. `210` 225`236` 221
-
-networked governance `180` 195`–`182` 197
-
-## Lindsay, J. R. `6–` 21`7` 115`–`117` 132`246` 248`248` 263
-
-neural networks `76n5` 91
-
-## Lupovici, A. `7–` 22`8` 130`252` 253`–`253` 268`
-
-## Newman, A. L. `213` 228
-
-## Lustgarten, L. `209` 224
-
-## Newman, M. `86` 101
-
-NotPetya `211` 226`229` 244`–`230` [245`255` 270
-
-machine learning (ML) `66,` 76n4`76n4` 91
-
-## Maezawa, Y. `102` 117
-
-## Odnaklassniki `157` 172`160` 175
-
-## Malicious code `116` 131
-
-offense–defense balance in cyber security
-
-## Maness, R. C. `111,` 126`115,` 117,`210` 64`–`75` 87–`75; logical layer`
-
-manipulated content `50–` 65`52` 67`
-
-of cyberspace `72` 87`–`74` 89; semantic layer
-
-## Manning, C. `209` 224
-
-of cyberspace `74` 89`–`75` 90; *see also* artificial
-
-mass media, disinformation effect on
-
-intelligence (AI) in cyber security 282
-
-39 54`–`40 55
-
-
-
-offensive (`cryptanalytic`) threat 82
-
-Matania, E. 131–132
-
-Omand, D. 41
-
-Mazanec, B. 206, 209
-
-one-time pad 85
-
-media literacy 51
-
-Open Source Intelligence (OSINT)
-
-Microsoft 190–192
-
-academy 163
-
-military cyber security 149–151
-
-operations security (OPSEC) practices 86
-
-*Index* 271
-
-Organization for the Prohibition of
-
-satellite-based cyberspace 99
-
-Chemical Weapons (OPCW) 233
-
-satellite-based internet services 96
-
-Orion capsule 102
-
-Schneider, J. 118
-
-O’Toole, M. E. 53
-
-Schneier, B. 36
-
-Outer Space Treaty (1968) 97–98
-
-Schünemann, W. J. 5, 244–246
-
-Server Message Block (SMB) function 211
-
-Paris Call for Trust and Security in
-
-Shadow Brokers 210–211
-
-Cyberspace 191
-
-Sharma, L. 54
-
-Park, B. 86
-
-Siemens 192–193
-
-Pendergast, A. 222
-
-signals intelligence (SIGINT) 80–91
-
-Perrow, C. 114
-
-Singer, P. W. 216
-
-Petya/NotPetya 189, 192
-
-Slayton, R. 115
-
-political discourse, disinformation effects
-
-Smeets, M. 20, 242
-
-on 40–41
-
-Smith, B. 190
-
-political fragmentation and cyber security
-
-Snidal, D. 188
-
-1–11; national and international
-
-Snowden, E. 148, 209, 211
-
-negotiation processes 3; political
-
-social bots: account hijacking 55–56; responses and emergent governance
-
-astroturfing 55–56; detection,
-
-arrangements 3–4, 7–10
-
-algorithmic and crowd-based 56–57; Poroshenko, P. 161
-
-impact 49, 55–57
-
-PRISM programs 207
-
-social graph analysis **56**, 57
-
-private actor innovation increasing cyber
-
-social media 48–59; account hijacking
-
-insecurity 249–250
-
-55–[56;] *Alethiometer* 52; astroturfing private cyber security norm development
-
-55–[56; automated technology-driven]
-
-efforts 190–195; Kaspersky Lab 194;
-
-manipulation 55–57; counter-terrorism
-
-Microsoft 190–192; Siemens 192–193;
-
-in social media 53–54; cultural
-
-Telefónica 193–194
-
-violence and 48–59; fabricated content
-
-public key infrastructure (PKI) 81
-
-50–52; Fake News Check app 52;
-
-public-private partnership (PPP)
-
-fake news issue in 50–52; *Fake Tweet* doctrine 101
-
-*Buster* tool 52; manipulated content
-
-Public Records Act 208
-
-50–52; misinterpreted content 50–52; Putnam, R. 143
-
-propaganda and recruitment in 53–54;
-
-Puyvelde, V. 210
-
-social bot detection, algorithmic and
-
-crowd-based 56–57; *Trusty Tweet* tool 52
-
-Q-model 222
-
-socio-technological uncertainties 1–11;
-
-quantum computing 81, 86; classical co-dependencies 2; in complex systems
-
-politics and 80–91; cryptology, political
-
-2–3; cyber security and 1–11; human essence of 83–85; social reality and made technologies 2; human users and
-
-89–91
-
-operators 2
-
-quantum supremacy 81
-
-sovereignty rights in cyberspace 173–175
-
-quantum threat narratives 81–83
-
-space/cyberspace: militarization of
-
-Quellen-TKÜ 147
-
-99–100; privatization of 100–102
-
-Space Launch System (SLS) 102
-
-Reuter, C. 5, 53, 245
-
-SpaceX 96–97, 101, 102
-
-Revolution of Dignity, Ukraine 158
-
-spear-phishing 76n11
-
-Rid, T. 17, 210
-
-Starlink project 96
-
-Rivest–Shamir–Adleman (RSA) 81
-
-Starship 102
-
-robust PKI 88
-
-Steed, D. 9, 250, 254–255
-
-role theory 142–143, *143*
-
-steganography 84
-
-Ronfeldt, D. 113
-
-Steiger, S. 8, 254, 257
-
-
-
-Ruhl, C. 189
-
-StopFake org 163
-
-Studeman, W. 206
-
-Saltman, E. M. 54
-
-Stuxnet 21–22
-
-Sanger, D. E. 21, 211
-
-Sutton, J. 54
-
-272 *Index*
-
-Sycamore 81
-
-challenges in 166; countering
-
-synthetic media 74
-
-propaganda and disinformation
-
-160–164; information operations
-
-Tabensky, L. 131, 133
-
-162; inter-ministry bureaucratic
-
-tactics, techniques, and procedures
-
-relations 161
-
-(TTPs) 222
-
-US approach to cyber attribution 225–226
-
-Tailored Access Operations unit 210
-
-Telefónica 193–194
-
-Vadare 120–121
-
-TEMPORA programs 207
-
-Valeriano, B. 111, 115, 117, 210
-
-terrorist actors in social media 53–54;
-
-Vashdi, D. R. 117
-
-measures against **54**; terrorist
-
-Verkovna Rada 159
-
-propaganda and recruitment 53
-
-Vkontakte 157, 160
-
-transnational cyber attribution 220–234; Vosoughi, S. 39, 42
-
-advancing, new developments in
-
-227–230; attribution processes today
-
-WannaCry 189, 192, 211, 229, 255
-
-223–227; Bayesian game-theoretic
-
-war gaming and cross-national
-
-model 227–228; in deterrence and
-
-comparisons 119–124; cross-
-
-accountability 221–222; documents
-
-national perspectives, role 122–124;
-
-224–225; made by actor type to actor
-
-Cyber Rubicon wargame 120–122;
-
-type 224; national approaches to
-
-methodological shift 119–120
-
-226–227; to nation-state actors
-
-Weimann, G. 54
-
-challenge 222–223; US approach to
-
-Wenger, A. 10, 128
-
-225–226; *see also* institutionalizing Whyte, C. 7, 206, 209, 250–252
-
-transnational attribution
-
-WikiLeaks 209
-
-transnational governance 258–260
-
-Wilson, H. 214–215
-
-*Trusty Tweet* tool 52
-
-Wilson, W. 87
-
-Turing, A. 86
-
-Yadlin, A. 134
-
-Ukraine’s approach to cyber and
-
-Yamamoto, I. 88
-
-information security 157–168;
-
-Yuschenko era 159
-
-bureaucratic bits and bytes 158–160; centralized approach 164–167;
-
-Zegart, A. 210
-
-## Document Outline
-
-*   Cover
-
-*   Half Title
-
-*   Series Page
-
-*   Title Page
-
-*   Copyright Page
-
-*   Table of Contents
-
-*   List of illustrations
-
-*   Note on Contributors
-
-*   Acknowledgments
-
-*   Chapter 1 Introduction: Cyber security between socio-technological uncertainty and political fragmentation
-
-*   Part I Socio-technical transformations and cyber conflict trends 
-
-    *   Chapter 2 Influence operations and other conflict trends
-
-    *   Chapter 3 A threat to democracies?: An overview of theoretical approaches and empirical measurements for studying the effects of disinformation
-
-    *   Chapter 4 Cultural violence and fragmentation on social media: Interventions and countermeasures by humans and social bots
-
-    *   Chapter 5 Artificial intelligence and the offense–defense balance in cyber security
-
-    *   Chapter 6 Quantum computing and classical politics: The ambiguity of advantage in signals intelligence
-
-    *   Chapter 7 Cyberspace in space: Fragmentation, vulnerability, and uncertainty
-
-*   Part II Political responses in a complex environment 
-
-    *   Chapter 8 Cyber uncertainties: Observations from cross-national war games
-
-    *   Chapter 9 Uncertainty and the study of cyber deterrence: The case of Israel’s limited reliance on cyber deterrence
-
-    *   Chapter 10 Cyber securities and cyber security politics: Understanding different logics of German cyber security policies
-
-    *   Chapter 11 Battling the bear: Ukraine’s approach to national cyber and information security
-
-    *   Chapter 12 Uncertainty, fragmentation, and international obligations as shaping influences: Cyber security policy development in Albania
-
-    *   Chapter 13 Big tech’s push for norms to tackle uncertainty in cyberspace
-
-    *   Chapter 14 Disrupting the second oldest profession: The impact of cyber on intelligence
-
-    *   Chapter 15 Understanding transnational cyber attribution: Moving from “whodunit” to who did it
-
-    *   Chapter 16 Conclusion: The ambiguity of cyber security politics in the context of multidimensional uncertainty
-
-*   Index
+0 days 71, 76n12; Anti-Terrorist Operation Zone (ATO) 163; Appling, D. S. 56; Abbott, K. W. 188; Arquilla, J. 113; account hijacking by social bots 55–56; Artificial General Intelligence (AGI) 67; Albania, cyber security policy development in 172–183; AADF (Albanian American Development Foundation) 181; AKCESK (National Authority on Electronic Certification and Cyber Security) 181; AKEP (Electronic and Postal Communications Authority) 181; Cross-Cutting Strategy on the Information Society 2008–2013 177; Cyber Defense Strategy 178; fragmentation of authority 174; international obligations 175, 179–180; Law on Cyber Security 176, 181; multi-actor sovereignty 174; National Security Strategy 2014–2020 177; networked governance 180–182; non-state actors role in public discourse 176–179; OSHEE (electricity distribution operator) 181; Policy Paper on Cyber Security (2015–2017) 177; public-private collaboration 176; State Intelligence Service (SIS/SHISH) 181; technological uncertainty 176–179; uncertainties surrounding 173; *Alethiometer* 52; Alexander, K. 207; algorithmic based social bot detection 56–57; Allen, G. 76n13; ambiguity of cyber security politics 239–262; micro-dynamics of decision-making in 251–252; strategic utility of cyber operations 241–246; Ashkenazi, G. 132; astroturfing by social bots 55–56; audience effects of disinformation 39; automated technology-driven manipulation 55–57; Ayalon, D. 134; Badiei, F. 10, 249, 259; Baezner, M. 5, 243–244; Barak, E. 134; Baram, G. 132; Bayesian game-theoretic model 227–228; Bennett, N. 135; Bicchieri, C. 187; Bombes 86; Bonfanti, M. E. 6–7, 248; botnets 77n15; bots *see* social bots; Brantly, A. F. 8, 210, 243, 258; Briscoe, E. J. 56; Brooking, E. T. 216; Brundage, M. 76n10; Buchanan, B. 116; Caltagirone, S. 222; Canetti, D. 117; Chan, T. 76n13; Cheong, M. 54; Chernenko, E. 231; cipher key(s) 84; Colossus 86; computer network operations (CNO) 149; Cordey, S. 5, 243–244; counter-terrorism in social media 53–54; critical infrastructure protection (CIP) 257; cross-national war games, observations from 111–125; crowd-based social bot detection 56–57, **56**; cryptanalysis (code-breaking) 83, 85, 248; cryptography (code-making) 82, 83, 87, 248; cryptography (PKI) 88; as an organizational contest 85–86; political essence of 83–85; second-order conspiracy 86; secrecy and 87; strategic utility of 86–89; third-order conspiracy 86; cryptosystem 83–84; cultural violence, social media and 48–59; cumulative deterrence concept 253; cyber conflict 114–116; behavioral turn in 116–119; management, attribution ambiguity in context of 252–254; state-centric view 114–116; cyber deterrence 128–136, 253; Israel’s limited reliance on 133–134; uncertainty and the study of 128–136; cyber domain 253; cyber hygiene 86; cyber impact on intelligence 205–216; consequences of intelligence actions 208–212; PRISM programs 207; security dilemma 213; TEMPORA program 207; transformation 206–208; TURBINE 208; TURMOIL 208; cyber influence operations (CIO) 19; cyber insecurity, intelligence as source of 254–255; cyber intelligence 77n14; cyber operations (CO) 17–26; *see also* gray zones conflict; cyber operations in gray zone 20–25; availability and usability 20–22; limited escalation risk 24–25; operationally attractive and effective 23–24; strategic advantage 23; *see also* gray zone conflict; cyber resilience 252; cyberspace 23; ambiguous context of 252; characteristics of 213; human behavior regulation in 259; infrastructure 96–99; cyberspace in space 95–105; fragmentation 103–105; interplanetary cyberspace 102–103; uncertainty 103–105; vulnerability 103–105; *see also* space/cyberspace; cyberspace uncertainties 111–125, 186–199; effectiveness review 195–198; evolution of field 113–119; outcome 197–198; output 196–197; vulnerable environment 113–114; cyber threat perceptions, tech race dynamics in 246–247; *Cyberwar: How Russian Hackers and Trolls Helped Elect a President* 40; *Cyber War Will Not Take Place* 17; D’Anieri, P. 158–159; data poisoning attacks 70; deepfakes 74, 77n17; deep learning 66; deep space communications system 103; Deep Space Network (DSN) 103; defense/offense: defensive/offensive applications 72–75; within logical layer of cyberspace 72–74; within semantic layer of cyberspace 74–75; *see also* artificial intelligence (AI) in cyber security; Degaut, M. 207; Delay-Tolerant Networks (DTN) 103; Democratic People’s Republic of North Korea 22; Diamond model of intrusion analysis 222; Digital Geneva Convention protecting Cyberspace 190; Digital Peace Movement 191; digital public sphere, information manipulation in 41–42; disinformation 32–43; as concept 33–35; core policy documents 37; framing against cultural narratives 40; in digital public sphere, enabling factors 41–42; effect on mass media 39–40; empirical measurement 32–43; immediate audience effects 39; individual exposure to 39; as international threat politics 33–35; knowledge-oriented perspective on 35–36; macro level 40–41; meso level 39–40; micro level 39; problem definition (diagnostic framing) 37–38; problem solving (prognostic framing) 37; recurrent framing 37–38; assumed effects 38–42; theoretical approaches 32–43; threat perception 36–38; distributed denial of service (DDoS) 21; Dobrygowski, D. 195; domain generation algorithm (DGA) 77n15; dual-use communication satellites 100; Dunn Cavelty, M. 10, 128, 212, 216; Dwan, R. 197; echo chambers 42; Edwards, B. 227–228, 234; Eggenschwiler, J. 9, 259–260; Egloff, F. J. 10, 128; Eriksson, J. 7, 250; fake news in social media 49–52; algorithms/tools **51**; countermeasures against 51–52; detection 52; propagation 50–51; fake news check apps 52; gatekeeping **51**; media literacy **51**; regulation/law **51**; *Fake Tweet Buster* tool 52; Farrell, H. J. 36, 213; feature analysis **56**, 57; Feynman, R. 81; Finnemore, M. 188, 200n2; fraudsters 52; Friedrich, F. 145; freedom of information law 208; Gartenstein-Ross, D. 54; gatekeeping **51**; Georgiva, I. 212; German cyber security policies 141–152, 257; critical infrastructures protection 144–146; development of 144–151; different logics of 151–152; investigation and domestic contestation 146–147; military cyber security 149–151; role theory 142–143; two-level role game *143*; German intelligence agencies 148–149; Giacomello, G. 7, 250; Global Positioning System (GPS) 97; Global Transparency Initiative (GTI) 194; Gomez, M. A. 7, 117, 250–252; gray zone 17; gray zone conflicts 17–20, 26n2; characteristics 18; emergence from political friction 19; theoretical framework 17–20; *see also* cyber operations in gray zone; Greenberg, A. 165, 211; Grindal, K. 10, 249, 259; Gross, M. L. 117; Guess, A. 39; Hancock, J. T. 52; Haunschild, J. 5, 245; Healey, J. 221; Hegemann, H. 187; Hicks, K. H. 18; hijacking 55–56; Hussain, G. 54; hybrid approaches **56**, 57; hybrid/non-linear/ambiguous warfare 26n2; ICT4Peace 58; individual exposure to disinformation 39; information and communication technologies (ICTs) 188; InformNapalm.org 163; institutionalizing transnational attribution 230–233; collective action in, challenges 232–233; proposals for 230–232; RAND study 231; RightsCon 232; Internet Governance Forum (IGF) 191; Internet Research Agency (IRA) 55; InterPlaNetary (IPN) 95, 102; interplanetary cyberspace 102–103; Intrusion Detection Systems (IDS) 73; Investigatory Powers Act, 2016 214; Iron Dome 132, 137n11; Israel, B. 131, 133; Israel, cyber security in 131–133; (cyber) deterrence 130–131; Israeli National Cyber Bureau (INCB) 131; Israeli National Cyber Directorate (INCD) 132; limited reliance on cyber deterrence 133–134; strategization of 131–133; Jamieson, K. H. 40; Jeberson, W. 54; Jensen, B. M. 111, 210; Jervis, R. 213; Jusufi, I. 9, 258; Kahn, D. 83, 86; Kaspersky Lab 194; Kaufmann, M.-A. 5, 245; Kello, L. 210, 214, 243; Klausen, J. 53; Kreps, S. 118; KRITIS implementation plan 144; Kuehl, D. T. 113; Kuerbis, B. 10, 25, 249, 254, 259; Kuzio, T. 159; Lanoszka, A. 41; law enforcement in German cyber security 146–147; Lee, R. 221; Lee, T. B. 207; Lee, V. C. S. 54; Leschenko, S. 160; Liff, A. P. 114; Lin, H. 210, 236; Lindsay, J. R. 6–7, 115–117, 246, 248; Lupovici, A. 7–8, 130, 252–253; Lustgarten, L. 209; machine learning (ML) 66, 76n4; Maezawa, Y. 102; malicious code 116; Maness, R. C. 111, 115, 117, 210; manipulated content 50–52; Manning, C. 209; mass media, disinformation effect on 39–40; Matania, E. 131–132; Mazanec, B. 206, 209; media literacy 51; Microsoft 190–192; military cyber security 149–151; Mueller, M. 10, 249, 259; multi-actor sovereignty 174, 189–190; multidimensional uncertainty, in cyber security 239–262; controlled strategic effect, difficulty of achieving 241–242; deterrence 252–254; disinformation as a new threat focus 244–246; domestic and international governance, shifting patterns 256–258; emerging governance responses 256–260; escalation 251–252; “gray zones” manipulation 243–244; intelligence 254–255; intelligence as source of, growing operational role of 254–255; international dimension 239–240; post-9/11 context of 255; private actor innovation increasing 249–250; sociopolitical ambiguity 249–250; socio-technical uncertainty 249–250; state, industry, and societies 240; strategic stability under 250–255; transnational governance, new forms of 258–260; ultimate enforcers, great powers as 260; *see also* ambiguity of cyber security politics; nano-satellites 104; Narrow Artificial Intelligence 66; national approaches to cyber attribution 226–227; National Cyber Security Centre (NCSC) 226; National Information Infrastructure Protection Plan 144; National Security Agency (NSA) 206; Neer, T. 53; networked governance 180–182; neural networks 76n5; Newman, A. L. 213; Newman, M. 86; NotPetya 211, 229–230; Odnaklassniki 157, 160; offense–defense balance in cyber security 64–75; logical layer of cyberspace 72–74; semantic layer of cyberspace 74–75; *see also* artificial intelligence (AI) in cyber security; offensive (cryptanalytic) threat 82; Omand, D. 41; one-time pad 85; Open Source Intelligence (OSINT) academy 163; operations security (OPSEC) practices 86; Organization for the Prohibition of Chemical Weapons (OPCW) 233; Orion capsule 102; O’Toole, M. E. 53; Outer Space Treaty (1968) 97–98; Paris Call for Trust and Security in Cyberspace 191; Park, B. 86; Pendergast, A. 222; Perrow, C. 114; Petya/NotPetya 189, 192; political discourse, disinformation effects on 40–41; political fragmentation and cyber security 1–11; national and international negotiation processes 3; political responses and emergent governance arrangements 3–4, 7–10; Poroshenko, P. 161; PRISM programs 207; private actor innovation increasing cyber insecurity 249–250; private cyber security norm development efforts 190–195; Kaspersky Lab 194; Microsoft 190–192; Siemens 192–193; Telefónica 193–194; public key infrastructure (PKI) 81; public-private partnership (PPP) doctrine 101; Public Records Act 208; Putnam, R. 143; Puyvelde, V. 210; Q-model 222; quantum computing 81, 86; classical politics and 80–91; cryptology, political essence of 83–85; social reality and 89–91; quantum supremacy 81; quantum threat narratives 81–83; Quellen-TKÜ 147; Reuter, C. 5, 53, 245; Revolution of Dignity, Ukraine 158; Rid, T. 17, 210; Rivest–Shamir–Adleman (RSA) 81; robust PKI 88; role theory 142–143, *143*; Ronfeldt, D. 113; Ruhl, C. 189; Saltman, E. M. 54; Sanger, D. E. 21, 211; satellite-based cyberspace 99; satellite-based internet services 96; Schneider, J. 118; Schneier, B. 36; Schünemann, W. J. 5, 244–246; Server Message Block (SMB) function 211; Shadow Brokers 210–211; Sharma, L. 54; Siemens 192–193; signals intelligence (SIGINT) 80–91; Singer, P. W. 216; Slayton, R. 115; Smeets, M. 20, 242; Smith, B. 190; Snidal, D. 188; Snowden, E. 148, 209, 211; social bots: account hijacking 55–56; astroturfing 55–56; detection, algorithmic and crowd-based 56–57; impact 49, 55–57; social graph analysis **56**, 57; social media 48–59; account hijacking 55–56; *Alethiometer* 52; astroturfing 55–56; automated technology-driven manipulation 55–57; counter-terrorism in social media 53–54; cultural violence and 48–59; fabricated content 50–52; Fake News Check app 52; fake news issue in 50–52; *Fake Tweet Buster* tool 52; manipulated content 50–52; misinterpreted content 50–52; propaganda and recruitment in 53–54; social bot detection, algorithmic and crowd-based 56–57; *Trusty Tweet* tool 52; socio-technological uncertainties 1–11; co-dependencies 2; in complex systems 2–3; cyber security and 1–11; human made technologies 2; human users and operators 2; sovereignty rights in cyberspace 173–175; space/cyberspace: militarization of 99–100; privatization of 100–102; Space Launch System (SLS) 102; SpaceX 96–97, 101, 102; spear-phishing 76n11; Starlink project 96; Starship 102; Steed, D. 9, 250, 254–255; steganography 84; Steiger, S. 8, 254, 257; StopFake org 163; Studeman, W. 206; Stuxnet 21–22; Sutton, J. 54; Sycamore 81; synthetic media 74; Tabensky, L. 131, 133; tactics, techniques, and procedures (TTPs) 222; Tailored Access Operations unit 210; Telefónica 193–194; TEMPORA programs 207; terrorist actors in social media 53–54; measures against **54**; terrorist propaganda and recruitment 53; transnational cyber attribution 220–234; advancing, new developments in 227–230; attribution processes today 223–227; Bayesian game-theoretic model 227–228; in deterrence and accountability 221–222; documents 224–225; made by actor type to actor type 224; national approaches to 226–227; to nation-state actors challenge 222–223; US approach to 225–226; *see also* institutionalizing transnational attribution; transnational governance 258–260; *Trusty Tweet* tool 52; Turing, A. 86; Ukraine’s approach to cyber and information security 157–168; bureaucratic bits and bytes 158–160; centralized approach 164–167; challenges in 166; countering propaganda and disinformation 160–164; information operations 162; inter-ministry bureaucratic relations 161; US approach to cyber attribution 225–226; Vadare 120–121; Valeriano, B. 111, 115, 117, 210; Vashdi, D. R. 117; Verkovna Rada 159; Vkontakte 157, 160; Vosoughi, S. 39, 42; WannaCry 189, 192, 211, 229, 255; war gaming and cross-national comparisons 119–124; cross-national perspectives, role 122–124; Cyber Rubicon wargame 120–122; methodological shift 119–120; Weimann, G. 54; Wenger, A. 10, 128; Whyte, C. 7, 206, 209, 250–252; WikiLeaks 209; Wilson, H. 214–215; Wilson, W. 87; Yadlin, A. 134; Yamamoto, I. 88; Yuschenko era 159; Zegart, A. 210.
+
+### Document Outline
+
+* Cover
+* Half Title
+* Series Page
+* Title Page
+* Copyright Page
+* Table of Contents
+* List of illustrations
+* Note on Contributors
+* Acknowledgments
+* Chapter 1 Introduction: Cyber security between socio-technological uncertainty and political fragmentation
+* Part I Socio-technical transformations and cyber conflict trends
+  * Chapter 2 Influence operations and other conflict trends
+  * Chapter 3 A threat to democracies?: An overview of theoretical approaches and empirical measurements for studying the effects of disinformation
+  * Chapter 4 Cultural violence and fragmentation on social media: Interventions and countermeasures by humans and social bots
+  * Chapter 5 Artificial intelligence and the offense–defense balance in cyber security
+  * Chapter 6 Quantum computing and classical politics: The ambiguity of advantage in signals intelligence
+  * Chapter 7 Cyberspace in space: Fragmentation, vulnerability, and uncertainty
+* Part II Political responses in a complex environment
+  * Chapter 8 Cyber uncertainties: Observations from cross-national war games
+  * Chapter 9 Uncertainty and the study of cyber deterrence: The case of Israel’s limited reliance on cyber deterrence
+  * Chapter 10 Cyber securities and cyber security politics: Understanding different logics of German cyber security policies
+  * Chapter 11 Battling the bear: Ukraine’s approach to national cyber and information security
+  * Chapter 12 Uncertainty, fragmentation, and international obligations as shaping influences: Cyber security policy development in Albania
+  * Chapter 13 Big tech’s push for norms to tackle uncertainty in cyberspace
+  * Chapter 14 Disrupting the second oldest profession: The impact of cyber on intelligence
+  * Chapter 15 Understanding transnational cyber attribution: Moving from “whodunit” to who did it
+  * Chapter 16 Conclusion: The ambiguity of cyber security politics in the context of multidimensional uncertainty
+* Index
 

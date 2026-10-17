@@ -1,18 +1,7 @@
+
 # 基于 LLM 的 NLP 深度学习：构建、微调与部署 AI 驱动的 Transformer
 
-
-
 ![](img/image_rsrc7KP.jpg)
-
-
-
-
-
-
-
-
-
-
 
 # 第一部分：NLP 基础
 
@@ -28,7 +17,7 @@
 
 早期 `NLP` 方法依赖于基于规则的系统，语言专家手动定义模式、语法规则和转换规则。这些系统是确定性的，意味着它们遵循预定义的规则来分析或生成文本，导致在超出明确编程范围时缺乏泛化能力。
 
-关键技术
+**关键技术**
 
 1. 有限状态机 (`FSA`) —— 用于建模语法规则。
 2. 正则表达式 (`Regex`) —— 定义模式匹配技术。
@@ -65,16 +54,11 @@ print(rule_based_sentiment_analysis(text))
 
 - 泛化能力差：无法处理同义词或变化的句子结构。
 - 维护成本高：必须为新词汇或模式手动更新规则。
-
-
-
-
-
 - 上下文限制：无法理解讽刺、双重否定或隐含含义。
 
 #### 1.1.2 统计型自然语言处理（1990s–2010s）
 
-随着机器学习和统计方法的兴起，自然语言处理（NLP）从手工编写规则转向了从数据中学习的概率模型。这些方法提高了可扩展性和适应性。
+随着机器学习和统计方法的兴起，自然语言处理（`NLP`）从手工编写规则转向了从数据中学习的概率模型。这些方法提高了可扩展性和适应性。
 
 ##### 关键技术
 
@@ -131,7 +115,7 @@ print(generate_text(("the", "cat"), num_words=5))
 
 #### 1.1.3 用于自然语言处理的深度学习（2013–至今）
 
-深度学习通过允许模型学习文本的层级表示，彻底改变了 NLP。这些模型通过捕捉更丰富的上下文和语义含义，超越了统计方法。
+深度学习通过允许模型学习文本的层级表示，彻底改变了 `NLP`。这些模型通过捕捉更丰富的上下文和语义含义，超越了统计方法。
 
 ##### 关键技术
 
@@ -165,18 +149,13 @@ print(model.wv.most_similar("nlp"))
 - **上下文感知表示**（词嵌入捕捉了含义）。
 - **自学习能力**：能够从数据中自动提取特征，无需人工干预。
 - **强大的语义建模**：能够理解复杂的语言结构。
-
-
-
-
-
--   使用自注意力机制并行处理整个序列，显著提升了可扩展性和性能。
+- 使用自注意力机制并行处理整个序列，显著提升了可扩展性和性能。
 
 ***
 
 ### 示例：使用 Transformers 进行命名实体识别 (NER)
 
-现代 NLP 模型使用预训练的 Transformers 来自动提取上下文相关的词表示，从而构建出高精率的 NER 系统。
+现代 `NLP` 模型使用预训练的 Transformers 来自动提取上下文相关的词表示，从而构建出高精率的 NER 系统。
 
 （语言：Python，使用 Hugging Face Transformers）
 
@@ -220,17 +199,17 @@ for entity in entities:
 
 ### 1.2.4 性能考量与权衡
 
-虽然现代 NLP 的性能显著优于经典方法，但也面临着以下挑战：
+虽然现代 `NLP` 的性能显著优于经典方法，但也面临着以下挑战：
 
 1. **计算与数据需求**
-   - LLM 需要昂贵的 GPU 和海量数据集。
-   - 经典 NLP 可以在低资源设备上运行。
+   - `LLM` 需要昂贵的 GPU 和海量数据集。
+   - 经典 `NLP` 可以在低资源设备上运行。
 2. **可解释性**
    - 经典方法提供透明的决策过程。
    - 深度学习模型是不透明的且难以调试。
 3. **偏见与伦理关注**
-   - 经典 NLP 具有显式的基于规则的偏差。
-   - 现代 LLM 从训练数据中继承偏差，需要仔细的缓解。
+   - 经典 `NLP` 具有显式的基于规则的偏差。
+   - 现代 `LLM` 从训练数据中继承偏差，需要仔细的缓解。
 
 ***
 
@@ -240,7 +219,7 @@ for entity in entities:
 | --- | :--- | :--- |
 | 拼写检查 | 基于规则的字典查找 | 基于 Transformer 的 BERT 纠错 |
 | 机器翻译 | 基于短语的统计模型 | 基于 Transformer 的神经机器翻译 (NMT) |
-| 文本分类 | 朴素贝、SVM | 微调 BERT 或 GPT 模型 |
+| 文本分类 | 朴素贝叶斯、SVM | 微调 BERT 或 GPT 模型 |
 | 聊天机器人 | 基于规则的模式匹配 | 基于 GPT 的对话 AI |
 | 命名实体识别 (NER) | Regex、HMM、CRF | 预训练 Transformer 模型 |
 
@@ -248,41 +227,51 @@ for entity in entities:
 
 ### 1.3 LLM 在 NLP 中的角色
 
-大语言模型 (LLMs) 通过超越传统的统计和基于规则的方法，从根本上改变了自然语言处理 (NLP)。通过利用深度学习、自监督学习和迁移学习，LLM 在文本生成、理解和推理方面提供了最先进的性能。
+大语言模型 (`LLMs`) 通过超越传统的统计和基于规则的方法，从根本上改变了自然语言处理 (`NLP`)。通过利用深度学习、自监督学习和迁移学习，`LLM` 在文本生成、理解和推理方面提供了最先进的性能。
 
-本章探讨了 LLM 在现代 NLP 中的演变、能力和角色，涵盖了架构基础、实际实现以及针对现实世界应用的优化策略。
+本章探讨了 `LLM` 在现代 `NLP` 中的演变、能力和角色，涵盖了架构基础、实际实现以及针对现实世界应用的优化策略。
 
 ***
 
 ### 1.3.1 什么是大语言模型 (LLMs)？
 
 ##### 定义与核心特征
-LLM 是在大型文本语料上通过自监督学习训练的深度学习模型。它们可以执行：
+
+`LLM` 是在大型文本语料上通过自监督学习训练的深度学习模型。它们可以执行：
+
 - **文本生成** – 生成类人类的回答。
 - **文本理解** – 提取含义、回答问题、总结摘要。
 - **推理与规划** – 解决逻辑类任务，生成结构化计划。
 
 ##### LLM 的演进
-LLM 的发展经历了三个关键阶段：
-1. **统计 NLP (2010 年以前)**：马尔可夫模型、TF-IDF 和词向量嵌入。
-2. **深度学习 (2015-2018)**：RNN、LSTM 和注意力机制。
-3. **Transformer 时代 (2018 至今)**：BERT、GPT、PaLM。
+
+`LLM` 的发展经历了三个关键阶段：
+
+1. **统计 NLP (2010 年以前)**：马尔可夫模型、`TF-IDF` 和词向量嵌入。
+2. **深度学习 (2015-2018)**：`RNN`、`LSTM` 和注意力机制。
+3. **Transformer 时代 (2018 至今)**：`BERT`、`GPT`、`PaLM`。
 
 ***
 
 ### 1.3.2 LLM 如何工作：核心组件
 
 1. Transformer 架构
-LLM 构建在 `transformer` 架构之上，与顺序的 `RNNs` 不同，它可以并行处理整个序列。
-核心组件：
-- **自注意力 (Self-Attention)**：计算词之间的依赖关系。
-- **位置编码 (Positional Encoding)**：注入顺序信息。
-- **前馈网络 (Feedforward Networks)**：处理表示。
-- **层归一化与残差连接 (Layer Normalization & Residual Connections)**：稳定训练。
 
-2. 分词 (Tokenization)：将文本转换为模型可读格式
-在 LLM 处理文本之前，必须将其将其分词为 ID。
+`LLM` 构建在 `transformer` 架构之上，与顺序的 `RNNs` 不同，它可以并行处理整个序列。
+
+核心组件：
+
+- **自注意力 (`Self-Attention`)**：计算词之间的依赖关系。
+- **位置编码 (`Positional Encoding`)**：注入顺序信息。
+- **前馈网络 (`Feedforward Networks`)**：处理表示。
+- **层归一化与残差连接 (`Layer Normalization & Residual Connections`)**：稳定训练。
+
+2. 分词 (`Tokenization`)：将文本转换为模型可读格式
+
+在 `LLM` 处理文本之前，必须将其分词为 ID。
+
 示例：使用 Hugging Face 分词文本
+
 ```python
 from transformers import AutoTokenizer
 
@@ -297,10 +286,14 @@ tokens = tokenizer.tokenize(text)
 token_ids = tokenizer.encode(text)
 ```
 
-3. 嵌入 (Embeddings)：将标记转换为向量
+3. 嵌入 (`Embeddings`)：将标记转换为向量
+
 每个标记被映射到编码了语义关系的高维向量中。
+
 示例：生成词嵌入
+
 （语言：Python，使用 Gensim）
+
 ```python
 from gensim.models import Word2Vec
 
@@ -313,21 +306,26 @@ model = Word2Vec(sentences, vector_size=100, window=5, min_count=1, workers=4)
 ##### 获取词的嵌入
 print("Embedding for 'LLMs':", model.wv["LLMs"])
 ```
-核心概念：相似的词在向量空间中的嵌入更接近。LLM 在大规模数据集上预训练嵌入以获得更好的泛化能力。
+
+核心概念：相似的词在向量空间中的嵌入更接近。`LLM` 在大规模数据集上预训练嵌入以获得更好的泛化能力。
 
 ***
 
 ### 1.3.3 预训练与微调：针对 NLP 任务优化 LLM
 
-LLM 经历两个阶段：
-1. **预训练 (Pretraining)**：在大型语料（如书籍、网页文本）上进行自监督学习。
-2. **微调 (Fine-Tuning)**：使用标注数据适配特定任务。
+`LLM` 经历两个阶段：
+
+1. **预训练 (`Pretraining`)**：在大型语料（如书籍、网页文本）上进行自监督学习。
+2. **微调 (`Fine-Tuning`)**：使用标注数据适配特定任务。
 
 ##### 预训练 LLM 微调用于情感分析
-微调允许 LLM 专门化特定领域的任务。以下是微调 BERT 进行情感分类的示例。
+
+微调允许 `LLM` 专门化特定领域的任务。以下是微调 `BERT` 进行情感分类的示例。
 
 示例：微调 BERT 用于情感分析
+
 （语言：Python，使用 Hugging Face Transformers）
+
 ```python
 from transformers import BertForSequenceClassification, Trainer, TrainingArguments
 from datasets import load_dataset
@@ -359,16 +357,16 @@ trainer = Trainer(
 trainer.train()
 ```
 
-
-
-
 ### 1.3.4 大语言模型在 NLP 中的实际应用
 
-大语言模型（LLMs）被应用于各种现实场景中，每种应用都受益于其深层的上下文理解能力。
+大语言模型（`LLMs`）被应用于各种现实场景中，每种应用都受益于其深层的上下文理解能力。
 
 | 应用 | LLM 用途 |
-| --- | --- |
+
+
+
 | 聊天机器人与对话式 AI | LLMs 生成类人类的对话（例如 `ChatGPT`）。 |
+| --- | --- |
 | 代码生成与辅助 | `Codex` 等 AI 模型驱动了 `GitHub Copilot` 等工具。 |
 | 搜索与信息检索 | LLMs 改进了查询理解和排序（例如 `Google Search`）。 |
 | 机器翻译 | `Transformers` 实现了实时翻译（例如 `DeepL`, `Google Translate`）。 |
@@ -406,7 +404,7 @@ model.to("cuda")
 
 ### 2.1 分词、词干提取与还原
 
-文本预处理是自然语言处理（NLP）中的关键步骤，它通过消除不一致性、降低复杂性和标准化结构，为原始文本数据的进一步分析做准备。。文本预处理中的三个基本技术是分词（tokenization）、词干提取（stemming）和还原（lemmatization）。这些技术有助于将原始文本转换为结构化格式，从而在 NLP 任务（如机器学习模型、搜索引擎和大语言模型 LLMs）中实现更有效的下游处理。
+文本预处理是自然语言处理（NLP）中的关键步骤，它通过消除不一致性、降低复杂性和标准化结构，为原始文本数据的进一步分析做准备。文本预处理中的三个基本技术是分词（`Tokenization`）、词干提取（`Stemming`）和还原（`Lemmatization`）。这些技术有助于将原始文本转换为结构化格式，从而在 NLP 任务（如机器学习模型、搜索引擎和大语言模型 LLMs）中实现更有效的下游处理。
 
 本节涵盖内容：
 
@@ -548,19 +546,6 @@ for word in words:
     print(lemmatizer.lemmatize(word, get_wordnet_pos(word)))
 ```
 
-[/### 2.2 停用词移除与归一化
-
-文本预处理是任何自然语言处理（NLP）流水线中的基础步骤。它确保文本数据经过清洗、结构化，并为文本分类、情感分析和语言模型等下游任务进行了优化。文本预处理中的一个至关重要的方面是停用词移除和归一化，这有助于减少噪声并提高计算效率。
-
-本节将涵盖：
-
-*   停用词移除的重要性
-
-[/content] (注：由于用户提供的文本在 2.2 处中断，翻译截止于原文提供的最后部分) 
-
-抱歉，我注意到您提供的原始文本在 2.2 标题处结束了。以下是基于您提供内容的完整翻译：
-
-[content]
 ### 2.2 停用词移除与归一化
 
 文本预处理是任何自然语言处理（NLP）流水线中的基础步骤。它确保文本数据经过清洗、结构化，并为文本分类、情感分析和语言模型等下游任务进行了优化。文本预处理中的一个至关重要的方面是停用词移除和归一化，这有助于减少噪声并提高计算效率。
@@ -568,17 +553,13 @@ for word in words:
 本节将涵盖：
 
 *   停用词移除的重要性
+*   移除停用词的各种方法
+*   归一化技术，包括大小写转换、去除重音和 Unicode 标准化
+*   实际应用与优化
 
+在本节结束时，你将能够在 Python 中实现稳健的停用词移除和归一化技术，并将它们集成到 NLP 工作流中。
 
-
-
-- 移除停用词的各种方法
-- 规范技术，包括大小写转换、去除重音和 Unicode 标准化
-- 实际应用与优化
-
-在本节结束时，你将能够在 Python 中实现稳健的停用词移除和规范技术，并将它们集成到 NLP 工作流中。
-
-### 2.2.1 停用词
+#### 2.2.1 停用词
 
 ##### 什么是停用词？
 
@@ -598,7 +579,7 @@ for word in words:
 
 存在多种移除停用词的方法：
 
-##### 1. 使用预定义的停用词列表
+###### 1. 使用预定义的停用词列表
 
 `NLTK` 和 `spaCy` 等流行的 NLP 库提供了内置的停用词列表，可用于过滤常见词汇。
 
@@ -624,11 +605,11 @@ print(filtered_text)  # Output: ['quick', 'brown', 'fox', 'jumps', 'lazy', 'dog'
 
 解释：
 
-- `word_tokenize(text)`：将文本拆分成单个单词。
-- `stopwords.words('english')`：加载默认的英语停用词列表。
-- 列表推导式过滤掉存在于停用词列表中的词。
+*   `word_tokenize(text)`：将文本拆分成单个单词。
+*   `stopwords.words('english')`：加载默认的英语停用词列表。
+*   列表推导式过滤掉存在于停用词列表中的词。
 
-##### 2. 自定义停用词列表
+###### 2. 自定义停用词列表
 
 对于特定领域的 NLP 任务，默认停用词列表可能不够。可以创建适用于特定应用的自定义停用词列表。
 
@@ -642,7 +623,7 @@ filtered_text = [word for word in tokens if word.lower() not in custom_stopwords
 print(filtered_text)  # Output: ['quick', 'brown', 'fox', 'jumps', 'lazy', 'dog']
 ```
 
-##### 3. 使用 spaCy 移除停用词
+###### 3. 使用 spaCy 移除停用词
 
 `spaCy` 提供了具有额外功能的优化停用词列表。
 
@@ -657,16 +638,16 @@ filtered_text = [token.text for token in doc if not token.is_stop]
 print(filtered_text)  # Output: ['quick', 'brown', 'fox', 'jumps', 'lazy', 'dog']
 ```
 
-### 2.2.2 文本规范
+#### 2.2.2 文本归一化
 
-##### 什么是文本规范？
+##### 什么是文本归一化？
 
-文本规范将单词转换为一致格式以减少冗余并提高处理效率。这包括：
+文本归一化将单词转换为一致格式以减少冗余并提高处理效率。这包括：
 
-- 小写化：将所有文本转换为小写。
-- 移除标点符号和特殊字符：消除非字母符号。
-- Unicode 标准化：跨不同编码对文本标准化。
-- 去除重音：去除变音符号以保持一致性。
+*   小写化：将所有文本转换为小写。
+*   移除标点符号和特殊字符：消除非字母符号。
+*   Unicode 标准化：跨不同编码对文本标准化。
+*   去除重音：去除变音符号以保持一致性。
 
 ##### 1. 小写化
 
@@ -717,6 +698,7 @@ normalized_text = unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').
 
 print(normalized_text)  # Output: "cafe"
 ```
+
 这在保留单词结构的同时移除了重音字符。
 
 ##### 4. 移除多余空格
@@ -732,11 +714,13 @@ normalized_text = " ".join(text.split())
 print(normalized_text)  # Output: "NLP is powerful!"
 ```
 
-### 2.2.3 结合停用词移除与规范
+#### 2.2.3 结合停用词移除与归一化
 
 结合这些技术可以确保文本数据针对 NLP 任务进行了优化。
 
 Python 示例：完整预处理流水线
+
+
 
 ```python
 import nltk
@@ -771,20 +755,20 @@ cleaned_text = preprocess_text(text)
 print(cleaned_text)  # Output: "cafe open nlp amazing"
 ```
 
-### 2.2.4 停用词移除与规范的应用
+## 2.2.4 停用词移除与规范的应用
 
 1. 文本分类：通过移除噪声改进了特征提取。
 2. 情感分析：通过关注关键词获得更准确的情感。
 3. 搜索引擎：优化了关键词匹配和索引。
 4. 聊天机器人：提供更好的 NLP 响应。
 
-### 2.3 命名实体识别 (NER)
+## 2.3 命名实体识别 (NER)
 
 命名实体识别 (NER) 是自然语言处理 (NLP) 中的一项基础技术，涉及识别文本中的实体并将其归类为定义的类别，如人物、组织、地点、日期、数值等。NER 在各种 AI 驱动的应用中至关重要，包括聊天机器人、搜索引擎、金融分析和医学信息。
 
 ### 2.3.1 命名实体识别的基础
 
-##### 什么是命名实体识别？
+#### 什么是命名实体识别？
 
 NER 是非结构化文本中提取命名实体并将其分类的过程。考虑句子：“Apple Inc. was founded by Steve Jobs, Steve Wozniak, and Ronald Wayne in Cupertino, California, in 1976.”
 
@@ -802,7 +786,7 @@ NER 是非结构化文本中提取命名实体并将其分类的过程。考虑�
 
 NER 是信息提取的关键，能够从原始文本中进行结构化数据分析。
 
-##### NER 如何工作？
+#### NER 如何工作？
 
 NER 涉及三个主要步骤：
 
@@ -814,36 +798,30 @@ NER 涉及三个主要步骤：
 
 NER 可以通过规则方法或机器学习模型来实现。
 
-##### 基于规则的 NER
+#### 基于规则的 NER
 
-基于规则的方法于预定义的字典、正则表达式和模式匹配。
+基于规则的方法依赖于预定义的字典、正则表达式和模式匹配。
 
-Python 示例：使用正则表达式的规则 NER
+**Python 示例：使用正则表达式的规则 NER**
 
 ```python
 import re
 text = "Elon Musk founded SpaceX in 2002 and Tesla in 2003."
 
-##### 定义实体模式
-```
-
-
-
-
-
-```python
+# 定义实体模式
 pattern = r"(Elon Musk|SpaceX|Tesla)"
 
 matches = re.findall(pattern, text)
 
-print(matches)  # 输出: \['Elon Musk', 'SpaceX', 'Tesla'\]
+print(matches)  # 输出: ['Elon Musk', 'SpaceX', 'Tesla']
 ```
 
 ##### 局限性
+
 - 难以处理变体（例如，"Space Exploration Technologies" 与 "SpaceX"）。
 - 需要针对新实体进行频繁更新。
 
-##### 基于机器学习的命名实体识别 (NER)
+#### 基于机器学习的命名实体识别 (NER)
 
 基于机器学习的 NER 模型在大型数据集上训练，并在未见的文本上具有良好的泛化能力。
 
@@ -851,33 +829,34 @@ print(matches)  # 输出: \['Elon Musk', 'SpaceX', 'Tesla'\]
 
 1. 条件随机场 (CRFs) – 用于 NER 的传统统计模型。
 2. 神经网络 (LSTMs, Transformers) – 基于深度学习的 NER 模型。
-3. 预训练大语言模型 (BERT, GPT) – 进的上下文化 NER。
+3. 预训练大语言模型 (BERT, GPT) – 先进的上下文化 NER。
 
 ### 2.3.3 使用 spaCy 实现 NER
 
 spaCy 提供了一个带有预训练模型的高度优化 NER 流水线。
 
-##### Python 示例：使用 spaCy 进行命名实体识别
+#### Python 示例：使用 spaCy 进行命名实体识别
 
 ```python
 import spacy
 
-##### 加载预训练的 NER 模型
+# 加载预训练的 NER 模型
 nlp = spacy.load("en_core_web_sm")
 
-##### 示例文本
+# 示例文本
 text = "Amazon was founded by Jeff Bezos in Seattle in 1994."
 
-##### 处理文本
+# 处理文本
 doc = nlp(text)
 
-##### 提取命名实体
+# 提取命名实体
 for ent in doc.ents:
     print(f"{ent.text} -> {ent.label_}")
 ```
 
 ##### 预期输出
-```rust
+
+```text
 Amazon -> ORG
 Jeff Bezos -> PERSON
 Seattle -> GPE
@@ -885,44 +864,48 @@ Seattle -> GPE
 ```
 
 ##### 理解 spaCy 的实体标签
+
 spaCy 分配的实体标签，例如：
 
-- PERSON – 人物（例如，“Elon Musk"）。
-- ORG – 组织（例如，“Tesla"）。
-- GPE – 地缘政治实体（例如，“United States"）。
-- DATE – 日期（例如，“2023"）。
+- `PERSON` – 人物（例如，“Elon Musk"）。
+- `ORG` – 组织（例如，“Tesla"）。
+- `GPE` – 地缘政治实体（例如，“United States"）。
+- `DATE` – 日期（例如，“2023"）。
 
 ##### 自定义 spaCy 的 NER 模型
+
 为了添加新实体（例如，特定领域的术语），spaCy 允许对模型进行重训练。
 
 ### 2.3.4 使用 Transformers (BERT) 实现 NER
 
 虽然 spaCy 适用于通用 NER 任务，但 transformers（如 BERT）可以获得更高的准确率。
 
-##### Python 示例：使用 Transformers 进行命名实体识别
+#### Python 示例：使用 Transformers 进行命名实体识别
 
 ```python
 from transformers import pipeline
 
-##### 加载 NER 流水线
+# 加载 NER 流水线
 ner_pipeline = pipeline("ner", model="dbmdz/bert-large-cased-finetuned-conll03-english")
 
 text = "Sundar Pichai is the CEO of Google, headquartered in Mountain View."
 
-##### 运行 NER
+# 运行 NER
 entities = ner_pipeline(text)
 for entity in entities:
     print(f"{entity['word']} -> {entity['entity']}")
 ```
 
 ##### 预期输出
-```css
+
+```text
 Sundar Pichai -> B-PER
 Google -> B-ORG
 Mountain View -> B-LOC
 ```
 
 ##### 为什么使用 Transformers 进行 NER？
+
 - 上下文感知实体识别（例如，区分公司“Apple”与水果“苹果”）。
 - 比基于规则的系统更好地处理未见的实体。
 - 支持在自定义数据集上进行微调。
@@ -931,23 +914,25 @@ Mountain View -> B-LOC
 
 微调 transformer 模型可以实现特定领域的 NER（例如，医疗、法律或金融）。
 
-##### 微调 NER 的步骤
+#### 微调 NER 的步骤
+
 1. 以 CoNLL 格式准备标注的训练数据。
 2. 使用 Hugging Face 的 `Trainer` API 进行模型训练。
 3. 在测试数据上评估微调后的模型。
 
-##### 示例：使用 transformers 微调
+#### 示例：使用 transformers 微调
+
 ```python
 from transformers import AutoModelForTokenClassification, TrainingArguments, Trainer
 from datasets import load_dataset
 
-##### 加载数据集
+# 加载数据集
 dataset = load_dataset("conll2003")
 
-##### 加载预训练模型
+# 加载预训练模型
 model = AutoModelForTokenClassification.from_pretrained("bert-base-cased", num_labels=9)
 
-##### 定义训练参数
+# 定义训练参数
 training_args = TrainingArguments(
     output_dir="./ner_model",
     per_device_train_batch_size=16,
@@ -956,7 +941,7 @@ training_args = TrainingArguments(
     evaluation_strategy="epoch",
 )
 
-##### 训练模型
+# 训练模型
 trainer = Trainer(
     model=model,
     args=training_args,
@@ -967,26 +952,26 @@ trainer.train()
 ```
 
 ##### 微调的主要优势
+
 - 在特定领域文本上具有更高的准确率。
 - 提高对新实体类型的实体识别。
 
 ### 2.3.6 优化 NER
 
-### 常见陷阱与修复
+#### 常见陷阱与修复
+
 | 问题 | 解决方案 |
 | --- | --- |
 | 模型误分类实体 | 使用更多训练数据进行微调 |
 | 召回率低（漏掉实体） | 调整置信度阈值 |
 
-
-
-
-2. `.fit_transform()` 对文本进行分词并构建词频矩阵。
+2. `fit_transform()` 对文本进行分词并构建词频矩阵。
 3. `get_feature_names_out()` 获取词表。
 4. `X.toarray()` 将稀疏表示转换为稠密矩阵。
 
 输出：
-```lua
+
+```text
 Vocabulary: ['deep' 'great' 'is' 'learning' 'machine' 'powerful']
 BoW Representation:
 [[0 1 1 1 1 0]
@@ -1006,22 +991,31 @@ BoW Representation:
 ### 3.1.4 TF-IDF：增强 BoW
 
 #### TF-IDF 的动机
-BoW 模型等等对待所有词，但并非所有词对意义的贡献都是相同的。常用词（例如，“is”，“the”）出现频率很高，但提供的区分能力很小。稀有但重要的词应该被强调。
 
-词频-逆文档频率（TF-IDF）通过通过给信息量丰富的词分配更高的权重，并减少频繁但不重要的词的影响，改进了 BoW。
+BoW 模型等同对待所有词，但并非所有词对意义的贡献都是相同的。常用词（例如，“is”，“the”）出现频率很高，但提供的区分能力很小。稀有但重要的词应该被强调。
+
+词频-逆文档频率（TF-IDF）通过给信息量丰富的词分配更高的权重，并减少频繁但不重要的词的影响，改进了 BoW。
 
 ##### 数学基础
+
 TF-IDF 计算公式为：
-`TF-IDF=TF×IDF`
+
+`TF-IDF = TF × IDF`
 
 其中：
+
 1. 词频 (TF):
-`TF(t,d)= ![](img/image_rsrc7KR.jpg)`
+
+`TF(t,d) = ...` (原文公式为图片，此处保留占位符)
+
 2. 逆文档频率 (IDF):
-`IDF(t)= log ![](img/image_rsrc7KS.jpg))`
+
+`IDF(t) = log ...` (原文公式为图片，此处保留占位符)
 
 ##### 计算示例
+
 对于语料库：
+
 文档 1：“Machine learning is great”
 文档 2：“Deep learning is powerful”
 
@@ -1029,15 +1023,16 @@ TF-IDF 计算公式为：
 - `IDF("learning")`（因为出现在两个文档中） = `log(2/2)=0`
 - `TF-IDF("learning")` = `0.25×0=0`
 
- TF-IDF 降低了出现在大多数文档中的词的权重，突出了独特的术语。
+TF-IDF 降低了出现在大多数文档中的词的权重，突出了独特的术语。
 
 ### 3.1.5 在 Python 中实现 TF-IDF
 
-示例：使用 Scikit-Learn 实现 TF-IDF
+#### 示例：使用 Scikit-Learn 实现 TF-IDF
+
 ```python
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-##### 初始化 TF-IDF 向量器
+# 初始化 TF-IDF 向量器
 tfidf_vectorizer = TfidfVectorizer()
 X_tfidf = tfidf_vectorizer.fit_transform(documents)
 
@@ -1047,13 +1042,15 @@ print("TF-IDF Representation:", X_tfidf.toarray())
 ```
 
 #### 与 BoW 的主要区别
+
 - 根据重要性而非原始频率对词进行加权。
 - 通过为常用词分配较低权重来减少其影响。
 - 当作为 ML 模型的输入时，可以提高文本分类性能。
 
 ### 3.1.6 优化与考虑
 
-##### 何时使用 BoW 还是 TF-IDF
+#### 何时使用 BoW 还是 TF-IDF
+
 | 特性 | BoW | TF-IDF |
 | :--- | :--- | :--- |
 | 计算成本 | 较低 | 较高（由于对数缩放） |
@@ -1061,33 +1058,39 @@ print("TF-IDF Representation:", X_tfidf.toarray())
 | 使用场景 | 基础 NLP 任务 | 文本分类、搜索引擎 |
 
 #### 针对大型数据集扩展
+
 - 使用 n-grams 保留部分上下文。
 - 应用降维（例如，`PCA`, `LSA`）以提高效率。
 - 使用稀疏矩阵优化内存。
 
-### 3.2 词嵌入：Word2Vec, GloVe, FastText
+## 3.2 词嵌入：Word2Vec, GloVe, FastText
 
-传统的文本表示方法如词袋模型（`BoW`）和词频-逆文档频率（`TF-IDF`）将词视为独立的实体，忽略了它们的意义和关系。这些局限性使得难以捕捉自然语言中的语义相似性和语义
+传统的文本表示方法如词袋模型（`BoW`）和词频-逆文档频率（`TF-IDF`）将词视为独立的实体，忽略了它们的意义和关系。这些局限性使得难以捕捉自然语言中的语义相似性和语义。
 
 词嵌入通过将词表示为高维空间中的稠密连续值向量解决了这些缺点，其中相似的词具有相似的表示。这使得 NLP 模型能够更好地泛化，从而改进文本分类、情感分析和机器翻译等任务。
 
 ### 3.2.1 理解词嵌入
 
 #### 嵌入的动机
+
 `BoW` 和 `TF-IDF` 将词表示为稀疏向量，每个词都是独立的。然而，它们无法捕捉词的相似性和语义关系。例如，在传统的 `BoW` 模型中，`king` 和 `queen` 的区别与 `king` 和 `apple` 一样，尽管 `king` 和 `queen` 共享强烈的语义关系。词嵌入通过学习向量表示克服了这一点，使得相似的词在高维空间中靠得更近。
 
 ##### 词嵌入的属性
+
 - 语义相似性：意义相似的词（例如，`cat`, `kitten`）具有更接近的向量表示。
 - 词类比：对词向量进行数学操作可以揭示语言关系，例如 `king−man+woman≈queen`。
 - 降维：词嵌入不使用稀疏的高维向量，而是使用稠密的低维向量（例如 100 到 300 维）。
 - 上下文感知：根据词在大型文本语料库中与其他词的共现情况进行嵌入。
 
-### 3.2.2 Word2Vec：从上下学习嵌入
+### 3.2.2 Word2Vec：从上下文学习嵌入
+
 `Word2Vec` 是一种由 Google 开发的基于神经网络的词嵌入学习方法。它有两种变体：
+
 1. 连续词袋模型（`CBOW`）：给定其上下文词预测目标词。
 2. `Skip-gram`：给定目标词预测周围的上下文词。
 
-##### CBOW vs. Skip-gram
+#### CBOW vs. Skip-gram
+
 | 特性 | CBOW | Skip-gram |
 | :--- | :--- | :--- |
 | 训练速度 | 更快 | 较慢 |
@@ -1095,13 +1098,18 @@ print("TF-IDF Representation:", X_tfidf.toarray())
 | 任务 | 从上下文预测目标词 | 从目标词预测上下文 |
 
 #### 训练过程
+
 1. 准备文本语料库：对数据进行分词和预处理。
 2. 定义滑动窗口：确定上下文窗口的大小（例如，目标词前后 2 个词）。
 3. 训练神经网络：使用随机梯度下降调整权重。
 4. 提取向量：训练完成后，每个词都被映射到固定大小的向量。
 
 #### 使用 Gensim 实现 Word2Vec
+
 Python 的 `gensim` 库提供了高效的 `Word2Vec` 实现。
+
+
+
 ```python
 from gensim.models import Word2Vec
 from nltk.tokenize import word_tokenize
@@ -1127,6 +1135,7 @@ print("Words similar to 'learning':", model.wv.most_similar('learning'))
 ```
 
 #### 关键参数
+
 - `vector_size=100`：嵌入维度。
 - `window=5`：上下文窗口。
 - `min_count=1`：忽略出现少于一次的词。
@@ -1135,27 +1144,29 @@ print("Words similar to 'learning':", model.wv.most_similar('learning'))
 ### 3.2.3 GloVe：全局词表示
 
 #### GloVe 工作原理
+
 与基于局部词共现学习嵌入的 `Word2Vec` 不同，`GloVe` 使用全局共现统计构建词向量。
+
 1. 构建词共现矩阵：统计词在大型语料库中共同出现的次数。
 2. 矩阵分解：使用矩阵分解技术生成稠密词嵌入。
 3. 优化嵌入：应用加权最小二乘目标函数来减少误差。
 
 ##### 数学模型
+
 `GloVe` 优化以下函数：
+
 `J=![](img/image_rsrc7KT.jpg)f(Xij) (wiTWj + bi+bj−logXij)2`
+
 其中：
+
 - `Xij` 是词 `i` 和 `j` 的共现计数。
 - `wiTWj` 是词向量。
 - `bi` 和 `bj` 是偏置项。
 - `f(Xij)` 是权重函数。
 
-使用预训练嵌入实现 GloVe
+#### 使用预训练嵌入实现 GloVe
 
-
-
-
-
-GloVe 嵌入通常在 `Common Crawl` 或 `Wikipedia` 等大型数据集上进行预训练，并可以直接加载。
+`GloVe` 嵌入通常在 `Common Crawl` 或 `Wikipedia` 等大型数据集上进行预训练，并可以直接加载。
 
 ```python
 import gensim.downloader as api
@@ -1173,6 +1184,7 @@ print("Words similar to 'learning':", glove_model.most_similar('learning'))
 ### 3.2.4 FastText：子词感知嵌入
 
 ##### 为什么选择 FastText？
+
 `Word2Vec` 和 `GloVe` 将单词视为原子单元，无法处理词表外（OOV）单词。由 Facebook 开发的 FastText 通过将单词表示为子词 n-gram 的组合来改进了这一点。
 
 例如，`language` 一词可能被分解为：
@@ -1183,7 +1195,7 @@ print("Words similar to 'learning':", glove_model.most_similar('learning'))
 
 这使得能够处理稀有词，并对形态变化有更好的表示。
 
-### 训练 FastText 模型
+#### 训练 FastText 模型
 
 ```python
 from gensim.models import FastText
@@ -1216,6 +1228,7 @@ FastText 通过组合子词，比 `Word2Vec` 或 `GloVe` 更好地处理新的�
 ### 3.3.1 用于 NLP 的传统机器学习
 
 #### 为什么在 NLP 中使用传统机器学习？
+
 `BERT` 和 `GPT` 等深度学习模型非常强大，但它们需要大量的数据、大量的计算资源和复杂的微调。传统机器学习模型在以下场景仍然适用：
 
 - **低资源场景**：当标注数据有限时。
@@ -1224,6 +1237,7 @@ FastText 通过组合子词，比 `Word2Vec` 或 `GloVe` 更好地处理新的�
 - **基准模型**：在使用深度学习之前进行快速原型。
 
 #### 传统机器学习的 NLP 流水线
+
 传统机器学习模型无法直接处理原始文本；它们需要结构化的数值表示。标准流水线包括：
 
 1. **文本预处理**：分词（`Tokenization`）、去除停用词、词干提取和词形还原。
@@ -1234,11 +1248,12 @@ FastText 通过组合子词，比 `Word2Vec` 或 `GloVe` 更好地处理新的�
 ### 3.3.2 NLP 中的朴素贝叶斯
 
 #### 朴素贝叶斯的工作原理
+
 朴素贝叶斯是基于贝叶斯定理的概率分类器：
 
 `P(A|B)=P(B/A)P(A)/P(B)`
 
-在 NLP 中，`Naïve Bayes` 根据单词出现在文档中的概率，对对文档属于某一类别（例如垃圾邮件或非垃圾邮件）的概率。
+在 NLP 中，`Naïve Bayes` 根据单词出现在文档中的概率，对文档属于某一类别（例如垃圾邮件或非垃圾邮件）的概率。
 
 由于它假设特征相互独立，因此被称为“朴素”（naïve）。尽管有此假设，它在文本分类任务中表现良好。
 
@@ -1291,14 +1306,17 @@ y_pred = nb_model.predict(X_test)
 # 评估
 print(accuracy_score(y_test, y_pred))
 print(classification_report(y_test, y_pred))
+```
 
 ### 3.3.3 NLP 中的支持向量机 (SVM)
 
 #### SVM 的工作原理
+
 SVM 是一种监督学习算法，在高维空间中寻找最优超平面来分离类别。它对于稀疏数据特别有效。
 
 ##### 核技巧
-SVM 使用核函数将非线性可的数据转换到高维空间，在该空间可以找到线性分类器。
+
+SVM 使用核函数将非线性可分的数据转换到高维空间，在该空间可以找到线性分类器。
 
 - **线性核**：最适用于文本数据。
 - **多项核**：捕捉非线性关系。
@@ -1319,10 +1337,12 @@ y_pred_svm = svm_model.predict(X_test)
 # 评估
 print(accuracy_score(y_test, y_pred_svm))
 print(classification_report(y_test, y_pred_svm))
+```
 
 ### 3.3.4 NLP 中的决策树
 
 ##### 决策树的工作原理
+
 决策树根据特征条件划分数据，形成树状结构。它遵循：
 
 1. **特征选择**：使用 Gini 纯度或熵等指标确定最佳划分特征。
@@ -1346,20 +1366,17 @@ print(accuracy_score(y_test, y_pred_dt))
 print(classification_report(y_test, y_pred_dt))
 ```
 
-
-
-
-
 - 同时处理数值型和分类数据。
 - 不需要进行特征缩放。
 
 缺点：
+
 - 容易过拟合（可以通过剪枝来缓解）。
 - 不适用于高维稀疏数据。
 
 ***
 
-3.3.5 NLP 传统机器学习模型对比
+### 3.3.5 NLP 传统机器学习模型对比
 
 | 模型 | 优势 | 缺点 | 适用场景 |
 | --- | --- | --- | --- |
@@ -1374,7 +1391,8 @@ print(classification_report(y_test, y_pred_dt))
 深度学习彻底改变了自然语言处理（NLP），使模型能够学习文本中复杂的模式、生成类人类响应并处理海量的非结构化数据。与传统的机器学习技术不同，基于深度学习的 NLP 模型能够捕捉上下文关系、长程依赖和复杂的语言结构。
 
 本章将探索：
-- 用于处理序列数据的循环神经网络（RNN）、长短期记忆网络（LSTM)和门控循环单元（GRUs）。
+
+- 用于处理序列数据的循环神经网络（RNN）、长短期记忆网络（LSTM）和门控循环单元（GRUs）。
 - 注意力机制及其在现代 NLP 模型中的作用。
 - 序列到序列（Seq2Seq）模型，这是机器翻译、聊天机器人和文本生成的基础。
 
@@ -1396,11 +1414,12 @@ print(classification_report(y_test, y_pred_dt))
 
 输入："The weather is…"（天气是……）
 
-预期输出："sunny”（晴）
+预期输出："sunny"（晴）
 
 前馈网络将每个单词视为一个独立的单元，忽略了序列的结构。然而，语言本质上是序列性的，这意味着下一个单词的预测依赖于之前的单词。
 
 ##### 主要挑战
+
 1. 缺乏记忆：前馈网络不保留过去的信息。
 2. 固定输入大小：它们需要固定长度的输入，对于变长序列缺乏灵活性。
 3. 上下文丢失：它们无法跨单词或时间步捕捉依赖关系。
@@ -1414,35 +1433,44 @@ print(classification_report(y_test, y_pred_dt))
 `RNNs` 引入了循环连接，允许它们跨序列维持记忆。`RNN` 不再独立地处理输入，而是维护一个带有来自之前时间步信息的隐藏状态。
 
 ##### 架构
+
 给定输入序列 `X = (x₁, x₂, ..., xₙ)`，`RNN` 更新其隐藏状态：
+
 `ht = f(Wh₋ + Wxt + b)`
+
 其中：
+
 - `ht` 是时间 `t` 时的隐藏状态。
 - `xt` 是时间 `t` 的输入。
 - `Wh`, `Wx` 是权重矩阵，`b` 是偏置。
 - `f` 是激活函数，通常为 `tanh` 或 `ReLU`。
 
 最终输出 `yt` 计算公式为：
+
 `yt = Wy + by`
 
 ##### Python 中的 RNN 实现
+
 ```python
 import torch
 import torch.nn as nn
+
 class SimpleRNN(nn.Module):
     def __init__(self, input_size, hidden_size, output_size):
         super(SimpleRNN, self).__init__()
         self.rnn = nn.RNN(input_size, hidden_size, batch_first=True)
         self.fc = nn.Linear(hidden_size, output_size)
+
     def forward(self, x):
         output, hidden = self.rnn(x)  # RNN output and hidden state
         return self.fc(hidden.squeeze(0))  # Fully connected layer for output
 
-##### 使用示例
+# 使用示例
 model = SimpleRNN(input_size=10, hidden_size=20, output_size=1)
 ```
 
 #### RNN 的局限性
+
 - 梯度消失问题：随着序列变长，梯度会减小，导致网络无法学习长期依赖。
 - 难以处理长程依赖：`RNNs` 很难记住遥远时间步的信息。
 - 并行化效率低：由于 `RNNs` 是按顺序处理数据的，训练速度变得很慢。
@@ -1456,24 +1484,33 @@ model = SimpleRNN(input_size=10, hidden_size=20, output_size=1)
 `LSTMs` 通过引入控制记忆保留和更新的门，扩展了 `RNNs`，允许网络记住长程依赖。
 
 #### LSTM 架构
+
 每个 `LSTM` 单元包含：
+
 - 遗忘门（Forget Gate）：决定丢弃哪些信息。
 - 输入门（Input Gate）：决定存储哪些新信息。
 - 单元状态（Cell State）：维持长期记忆。
 - 输出门（Output Gate）：调节记忆对输出的贡献。
 
 给定输入 `xt`、上一个隐藏状态 `ht₋` 和上一个单元状态 `CT₋`，`LSTM` 更新如下：
+
 `ft = σ(Wf ⋅ [ht₋, xt] + bt)`
+
 `it = σ(Wi ⋅ [ht₋, xt] + bi)`
+
 `Ct = ft ⊙ CT₋ + it ⊙ tanh(Wc ⋅ [ht₋, xt])`
 
+
+
 ##### LSTM 实现
+
 ```python
 class SimpleLSTM(nn.Module):
     def __init__(self, input_size, hidden_size, output_size):
         super(SimpleLSTM, self).__init__()
         self.lstm = nn.LSTM(input_size, hidden_size, batch_first=True)
         self.fc = nn.Linear(hidden_size, output_size)
+
     def forward(self, x):
         output, (hidden, cell) = self.lstm(x)  # LSTM output, hidden state, and cell state
         return self.fc(hidden.squeeze(0))
@@ -1482,6 +1519,7 @@ model = SimpleLSTM(input_size=10, hidden_size=20, output_size=1)
 ```
 
 #### LSTM 的优势
+
 - 有效处理长程依赖。
 - 通过门控机制缓解了梯度消失问题。
 
@@ -1494,31 +1532,33 @@ model = SimpleLSTM(input_size=10, hidden_size=20, output_size=1)
 `GRUs` 通过将遗忘门和输入门合并为单一更新门来简化 `LSTMs`，在保持性能的同时减少了计算成本。
 
 #### GRU 架构
+
 每个 `GRU` 单元包含：
+
 - 更新门（Update Gate）：控制保留多少信息。
 - 重置门（Reset Gate）：决定之前的状态对当前状态的贡献多少。
 
 `ut = σ(Wu ⋅ [ht₋, xt] + bu)`
+
 `rt = σ(Wr ⋅ [ht₋, xt] + br)`
+
 `ht = (1 - ut) ⊙ ht₋ + ut ⊙ tanh(Wn ⋅ [rt ⊙ ht₋, xt] + bc)`
 
 ##### GRU 实现
+
 ```python
 class SimpleGRU(nn.Module):
     def __init__(self, input_size, hidden_size, output_size):
         super(SimpleGRU, self).__init__()
         self.gru = nn.GRU(input_size, hidden_size, batch_first=True)
         self.fc = nn.Linear(hidden_size, output_size)
+
     def forward(self, x):
         output, hidden = self.gru(x)
         return self.fc(hidden.squeeze(0))
 
 model = SimpleGRU(input_size=10, hidden_size=20, output_size=1)
 ```
-
-
-
-
 
 # 4.2 注意力机制及其对自然语言处理的影响
 
@@ -1543,8 +1583,9 @@ model = SimpleGRU(input_size=10, hidden_size=20, output_size=1)
 ##### 注意力的数学公式
 
 给定：
-* 输入序列 `X = (x₁, x₂, ..., xₙ)`
-* 代表当前解码步骤的查询向量 `q`
+
+- 输入序列 `X = (x₁, x₂, ..., xₙ)`
+- 代表当前解码步骤的查询向量 `q`
 
 每个输入 token `xₜ` 的注意力评分计算方式如下：
 
@@ -1553,15 +1594,20 @@ model = SimpleGRU(input_size=10, hidden_size=20, output_size=1)
 其中 `f` 是一个评分函数，根据 `q` 确定 `xₜ` 的相关性。最常见的评分函数包括：
 
 1. 点积注意力（Dot-product attention）：
+
 ![](img/image_rsrc7KZ.jpg)
+
 2. 加性注意力（Bahdanau Attention）：
+
 ![](img/image_rsrc7M0.jpg)
+
 3. 缩放点积注意力（Scaled dot-product attention，用于 Transformers）：
+
 ![](img/image_rsrc7M1.jpg)
 
 然后使用 `softmax` 函数对评分进行归一化以获得注意力权重：
 
-`αt= exp(score(xt​,q)) / ∑j=1n​exp(score(xj​,q))`
+`αt = exp(score(xt, q)) / ∑j=1n exp(score(xj, q))`
 
 最终上下文向量计算为输入 token 的加权和：
 
@@ -1573,7 +1619,7 @@ model = SimpleGRU(input_size=10, hidden_size=20, output_size=1)
 
 1. **Bahdanau 注意力（加性注意力）**：在论文《Neural Machine Translation by Jointly Learning to Align and Translate》（Bahdanau et al., 2014）中引入，加性注意力使用前馈神经网络计算评分。
 2. **Luong 注意力（乘性注意力）**：由 Luong 等人（2015）引入，乘性注意力使用查询向量和输入向量之间的点积计算评分。在计算上比加性注意力更高效。
-3. **自注意力（用于 Transformers）**：与在编码器-解码器架构中运行的 `Bahdanau` 和 `Luong` 注意不同，自注意力允许序列中的每个 token 注意其他其他 token。这是现代 Transformer 模型的基础。
+3. **自注意力（用于 Transformers）**：与在编码器-解码器架构中运行的 `Bahdanau` 和 `Luong` 注意不同，自注意力允许序列中的每个 token 注意其他 token。这是现代 Transformer 模型的基础。
 
 #### 4.2.4 在 PyTorch 中实现注意力机制
 
@@ -1582,6 +1628,7 @@ model = SimpleGRU(input_size=10, hidden_size=20, output_size=1)
 ```python
 import torch
 import torch.nn as nn
+
 class BahdanauAttention(nn.Module):
     def __init__(self, hidden_size):
         super(BahdanauAttention, self).__init__()
@@ -1599,7 +1646,7 @@ class BahdanauAttention(nn.Module):
         context = torch.sum(attention_weights * values, dim=1)
         return context, attention_weights
 
-##### 使用示例
+# 使用示例
 hidden_size = 128
 attention = BahdanauAttention(hidden_size)
 query = torch.randn(1, 1, hidden_size)
@@ -1630,7 +1677,7 @@ class ScaledDotProductAttention(nn.Module):
         output = torch.matmul(attention_weights, v)
         return output, attention_weights
 
-##### 使用示例
+# 使用示例
 d_model = 64
 attention = ScaledDotProductAttention(d_model)
 q = torch.randn(1, 8, d_model)
@@ -1642,13 +1689,10 @@ output, weights = attention(q, k, v)
 #### 4.2.5 注意力机制对现代 NLP 的影响
 
 注意力机制的出现改变了 NLP：
-* **机器翻译**：基于注意力的模型优于传统的 `Seq2Seq` 方法。
-* **文本摘要**：注意力允许模型关注文档中最重要的部分。
-* **问答系统**：自注意力提取相关上下文，驱动了如 `BERT` 和 `GPT` 等模型。
 
-
-
-
+- **机器翻译**：基于注意力的模型优于传统的 `Seq2Seq` 方法。
+- **文本摘要**：注意力允许模型关注文档中最重要的部分。
+- **问答系统**：自注意力提取相关上下文，驱动了如 `BERT` 和 `GPT` 等模型。
 
 - `st` 是解码器的隐藏状态。
 - `ccc` 是来自编码器的上下文向量（context vector）。
@@ -1673,7 +1717,7 @@ import torch.nn as nn
 
 class EncoderLSTM(nn.Module):
     def __init__(self, input_dim, emb_dim, hidden_dim, num_layers):
-        super(EncoderLSTM, self).init__()
+        super(EncoderLSTM, self).__init__()
         self.embedding = nn.Embedding(input_dim, emb_dim)
         self.lstm = nn.LSTM(emb_dim, hidden_dim, num_layers, batch_first=True)
 
@@ -1693,7 +1737,7 @@ encoder_outputs, hidden, cell = encoder(sample_input)
 ```python
 class Attention(nn.Module):
     def __init__(self, hidden_dim):
-        super(Attention, self).init__()
+        super(Attention, self).__init__()
         self.attn = nn.Linear(hidden_dim * 2, hidden_dim)
         self.v = nn.Linear(hidden_dim, 1, bias=False)
 
@@ -1714,7 +1758,7 @@ context, attn_weights = attention(hidden, encoder_outputs)
 ```python
 class DecoderLSTM(nn.Module):
     def __init__(self, output_dim, emb_dim, hidden_dim, num_layers):
-        super(DecoderLSTM, self).init__()
+        super(DecoderLSTM, self).__init__()
         self.embedding = nn.Embedding(output_dim, emb_dim)
         self.lstm = nn.LSTM(emb_dim + hidden_dim, hidden_dim, num_layers, batch_first=True)
         self.fc_out = nn.Linear(hidden_dim, output_dim)
@@ -1736,10 +1780,12 @@ predictions, hidden, cell = decoder(sample_output, hidden, cell, encoder_outputs
 
 ##### 步骤 4：将编码器和解码器结合为 Seq2Seq 模型
 
+
+
 ```python
 class Seq2Seq(nn.Module):
     def __init__(self, encoder, decoder):
-        super(Seq2Seq, self).init__()
+        super(Seq2Seq, self).__init__()
         self.encoder = encoder
         self.decoder = decoder
 
@@ -1764,18 +1810,19 @@ trg_sample = torch.randint(0, 5000, (32, 10))
 
 ### 4.3.4 优化与最佳实践
 
-- 使用预训练的词嵌入（如 `GloVe`、`FastText`）来泛化能力。
-- 调整隐藏层大小和 dropout 以防止过拟合。
-- 使用调度采样来减少对教师强制（teacher forcing）的依赖。
+- 使用预训练的词嵌入（如 `GloVe`、`FastText`）来提升泛化能力。
+- 调整隐藏层大小和 `dropout` 以防止过拟合。
+- 使用调度采样来减少对教师强制的依赖。
 - 利用 `transformers` 提升应用性能。
 
 # 第二部分：大语言模型 (LLMs)
 
 ## 第 5 章：Transformer 简介
 
-`Transformers` 彻底改变了自然语言处理（NLP），取代了传统的循环架构。它们自《Attention Is All Need》一文提出以来，被广泛应用于翻译、摘要和问答等任务。
+`Transformers` 彻底改变了自然语言处理（NLP），取代了传统的循环架构。它们自《Attention Is All You Need》一文提出以来，被广泛应用于翻译、摘要和问答等任务。
 
 本章将深入探讨：
+
 - `Transformers` 的架构及其工作原理。
 - 模型现状，包括 `GPT`、`BERT` 和 `T5`。
 - 使用 `PyTorch` 从零实现 `Transformer`。
@@ -1785,9 +1832,10 @@ trg_sample = torch.randint(0, 5000, (32, 10))
 
 ### 5.1 Transformer 模型概览
 
-为什么引入 Transformer？
+#### 为什么引入 Transformer？
 
 在 `Transformer` 出现之前，NLP 模型严重依赖 `RNNs`，它们是按顺序处理文本的。这种方法存在以下局限性：
+
 - 由于顺序依赖，训练和推理速度缓慢。
 - 在捕捉长距离依赖方面存在困难。
 - 无法并行化，导致在大规模数据集上的训练效率低下。
@@ -1799,17 +1847,20 @@ trg_sample = torch.randint(0, 5000, (32, 10))
 ### 5.2 Transformer 架构
 
 `Transformer` 由两个主要部分组成：
-1. **编码器（Encoder）**：处理输入文本并生成上下文。
-2. **解码器（Decoder）**：利用编码器的输出生成输出文本。
+
+1. **编码器**：处理输入文本并生成上下文。
+2. **解码器**：利用编码器的输出生成输出文本。
 
 编码器和解码器由多个相同的层组成，每层包含：
+
 - **多头自注意力机制**：允许每个标记关注序列的不同部分。
 - **前馈网络 (FFN)**：对表示进行变换。
 - **层归一化和残差连接**：确保训练稳定并防止梯度消失。
 
 模型按以下方式处理序列：
-1. **标记嵌入（Token Embeddings）**：将单词转换为密集向量。
-2. **位置编码（Positional Encoding）**：由于 `Transformers` 并行处理标记，因此需要显式添加位置信息。
+
+1. **标记嵌入**：将单词转换为密集向量。
+2. **位置编码**：由于 `Transformers` 并行处理标记，因此需要显式添加位置信息。
 3. **自注意力机制**：计算词之间的上下文关系。
 4. **前馈层**：进一步精炼表示。
 5. **解码器对编码器的注意力**：确保生成的输出与输入上下文对齐。
@@ -1817,23 +1868,18 @@ trg_sample = torch.randint(0, 5000, (32, 10))
 | 组件 | 功能 |
 | --- | --- |
 | 输入嵌入 | 将标记转换为稠密向量。 |
-
-
-
-
-
 | 位置编码 | 在嵌入中添加位置信息。 |
 | 多头自注意力 | 捕捉词之间的关系。 |
 | 前馈网络 (FFN) | 对词表示应用变换。 |
-| 层层归一化 | 稳定训练过程。 |
-| 差差连接 | 防止梯度消失。 |
+| 层归一化 | 稳定训练过程。 |
+| 残差连接 | 防止梯度消失。 |
 | 解码器交叉注意力 | 确保生成的文本在上下文上保持相关。 |
 
-### 5.1.3 理解自注意力
+### 5.3 理解自注意力
 
-自注意力机制是 Transformer 模型的核心。它允许序列中的每个标记（token）关注序列中的所有其他标记，从而动态地学习上下文依赖关系。
+自注意力机制是 Transformer 模型的核心。它允许序列中的每个标记关注序列中的所有其他标记，从而动态地学习上下文依赖关系。
 
-##### 数学公式
+#### 数学公式
 
 自注意力机制通过三个矩阵进行计算：
 
@@ -1843,40 +1889,40 @@ trg_sample = torch.randint(0, 5000, (32, 10))
 
 注意力得分的计算公式为：
 
-`Attention(Q,K,V)=![](img/image_rsrc7M4.jpg)`
+`Attention(Q, K, V) = softmax(Q * K^T / sqrt(d_k)) * V`
 
-其中 `dk` 是键向量的维度。
+其中 `d_k` 是键向量的维度。
 
-##### 逐步计算
+#### 逐步计算
 
 1. 使用学习到的权重矩阵计算 `Q`、`K` 和 `V` 矩阵。
 2. 通过 `Q` 和 `K` 的点积计算注意力得分。
 3. 应用 `softmax` 对得分进行归一化，确保它们的和为 1。
 4. 对 `V` 计算加权和，以生成注意力加权表示。
 
-##### 多头自注意力
+#### 多头自注意力
 
 多头注意力并不是使用单一的自注意力机制，而是将输入分成多个头，每个头学习不同的关系。然后将输出进行拼接并投影到最终的表示中。
 
 从数学上讲，输出的计算方式为：
 
-`MultiHead(Q,K,V)= Concat(head1​,...,headh​)WO`
+`MultiHead(Q, K, V) = Concat(head_1, ..., head_h) * W^O`
 
 其中每个头都是独立计算的。
 
-### 5.1.4 位置编码：维持词序
+### 5.4 位置编码：维持词序
 
-由于自注意力本身不理解理解词的顺序，Transformer 使用位置编码来注入顺序信息。
+由于自注意力本身不理解词的顺序，Transformer 使用位置编码来注入顺序信息。
 
 位置编码使用正弦和余弦函数进行计算：
 
-`PE(pos,2i)​=sin(pos /100002i/dmodel​ ​)`
+`PE(pos, 2i) = sin(pos / 10000^(2i / d_model))`
 
-`PE(pos,2i+1)​=cos( pos /100002i/dmodel ​)`
+`PE(pos, 2i+1) = cos(pos / 10000^(2i / d_model))`
 
 这些编码在传递到 Transformer 模型之前会被添加到标记嵌入中。
 
-### 5.1.5 在 PyTorch 中实现 Transformer 编码器
+### 5.5 在 PyTorch 中实现 Transformer 编码器
 
 下面是 Transformer 编码器模块的 PyTorch 实现：
 
@@ -1886,7 +1932,7 @@ import torch.nn as nn
 
 class MultiHeadSelfAttention(nn.Module):
     def __init__(self, embed_dim, num_heads):
-        super().__init__()()
+        super().__init__()
         self.attention = nn.MultiheadAttention(embed_dim, num_heads)
 
     def forward(self, x):
@@ -1895,7 +1941,7 @@ class MultiHeadSelfAttention(nn.Module):
 
 class TransformerEncoderBlock(nn.Module):
     def __init__(self, embed_dim, num_heads, hidden_dim):
-        super().__init__()()
+        super().__init__()
         self.attention = MultiHeadSelfAttention(embed_dim, num_heads)
         self.norm1 = nn.LayerNorm(embed_dim)
         self.ffn = nn.Sequential(
@@ -1923,24 +1969,25 @@ output = transformer_block(sample_input)
 print(output.shape)  # Expected: (10, 32, 512)
 ```
 
-该实现捕捉了 Transformer 编码器模块的核心原理，展示了自注意力层在前馈层在架构内部是如何相互作用的。
+该实现捕捉了 Transformer 编码器模块的核心原理，展示了自注意力层和前馈层在架构内部是如何相互作用的。
 
-### 5.2 自注意力与位置编码
+### 5.6 自注意力与位置编码
 
-自注意力是 Transformer 架构背的核心机制，使模型能够捕捉整个序列中的远距离依赖、上下文关系和语义含义。与循环架构不同，自注意力允许对输入序列进行并行处理，使其对于大规模 NLP 任务非常高效。然而，由于 Transformer 本身不按顺序处理输入，引入了位置编码来提供有关词序的信息。
+自注意力是 Transformer 架构背后的核心机制，使模型能够捕捉整个序列中的远距离依赖、上下文关系和语义含义。与循环架构不同，自注意力允许对输入序列进行并行处理，使其对于大规模 NLP 任务非常高效。然而，由于 Transformer 本身不按顺序处理输入，引入了位置编码来提供有关词序的信息。
 
-### 5.2.1 理解自注意力
+### 5.7 理解自注意力
 
-##### 什么是自注意力？
+#### 什么是自注意力？
 
 自注意力允许序列中的每个标记动态地关注其他标记，学习与距离无关的上下文关系。与一次处理一步文本的传统序列模型不同，自注意力同时计算所有标记之间的注意力得分。
 
 例如，在句子中：
+
 "The cat sat on the mat."
 
 "cat" 这个词相比 "on" 与 "sat" 更相关，自注意力使模型能够捕捉这些依赖关系。
 
-##### 数学公式
+#### 数学公式
 
 自注意力使用三个矩阵进行操作：
 
@@ -1950,27 +1997,27 @@ print(output.shape)  # Expected: (10, 32, 512)
 
 注意力得分的计算公式为：
 
-`Attention(Q,K,V)=![](img/image_rsrc7M4.jpg)`
+`Attention(Q, K, V) = softmax(Q * K^T / sqrt(d_k)) * V`
 
-其中 `dk` 是键向量的维度。
+其中 `d_k` 是键向量的维度。
 
-##### 逐步计算
+#### 逐步计算
 
 1. 通过 `Q` 和 `K` 的点积计算注意力得分。
 2. 应用 `softmax` 对得分进行归一化，确保它们的和为 1。
 3. 对 `V` 计算加权和，以生成注意力加权表示。
 
-##### 多头自注意力
+#### 多头自注意力
 
 多头注意力并不是使用单一的自注意力机制，而是将输入分成多个头，每个头学习不同的关系。然后将输出进行拼接并投影到最终的表示中。
 
 从数学上讲，输出的计算方式为：
 
-`MultiHead(Q,K,V)= Concat(head1​,...,headh​)WO`
+`MultiHead(Q, K, V) = Concat(head_1, ..., head_h) * W^O`
 
 其中每个头都是独立计算的。
 
-### 5.2.2 在 PyTorch 中实现自注意力
+### 5.8 在 PyTorch 中实现自注意力
 
 以下实现展示了一个多头注意力层。
 
@@ -2010,38 +2057,35 @@ output = attention_layer(sample_input)
 print(output.shape)  # Expected: (32, 10, 512)
 ```
 
+- 多头重塑：将输入切分为多个“头”。
+- 缩放点积注意力：计算注意力分数，并对其进行缩放和归一化。
+- 最终投影：将所有头的输出拼接在一起，并进行线性变换。
 
+### 5.9 位置编码：保留词序
 
+#### 为什么需要位置编码？
 
+与按顺序处理单词的 RNN 不同，Transformer 并行分析整个序列。这意味着它们缺乏与生俱来的词序感知能力，因此需要一种显式机制来注入位置信息。
 
--   多头重塑：将输入切分为多个“头”。
--   缩放点积注意力：计算注意力分数，并对其进行缩放和归一化。
--   最终投影：将所有头的输出拼接在一起，并进行线性变换。
-
-### 5.2.3 位置编码：保留词序
-
-##### 为什么需要位置编码？
-
-与按顺序处理单词的 RNN 不同，Transformer 并行分析整个序列。这意味着它们缺乏与生俱的词序感知能力，因此需要一种显式机制来注入位置信息。
-
-##### 数学定义
+#### 数学定义
 
 位置编码使用正弦和余弦函数计算：
 
-`PE(pos,2i)=sin(pos /10000^(2i/dmodel_))`
-`PE(pos,2i+1)=cos( pos /10000^(2i/dmodel_ )`
+`PE(pos, 2i) = sin(pos / 10000^(2i / d_model))`
+
+`PE(pos, 2i+1) = cos(pos / 10000^(2i / d_model))`
 
 其中：
 
--   `pos` 是序列中 token 的位置。
--   `d_model` 是嵌入维度。
+- `pos` 是序列中 token 的位置。
+- `d_model` 是嵌入维度。
 
-##### 为什么选择正弦函数？
+#### 为什么选择正弦函数？
 
--   在不同序列之间是固定的（不是可学习的参数）。
--   编码相对位置，允许模型泛化到不同的序列长度。
+- 在不同序列之间是固定的（不是可学习的参数）。
+- 编码相对位置，允许模型泛化到不同的序列长度。
 
-### 5.2.4 在 PyTorch 中实现位置编码
+### 5.10 在 PyTorch 中实现位置编码
 
 ```python
 import torch
@@ -2050,7 +2094,7 @@ import math
 
 class PositionalEncoding(nn.Module):
     def __init__(self, embed_dim, max_length=5000):
-        super().__init__()()
+        super().__init__()
         position = torch.arange(max_length).unsqueeze(1)
         div_term = torch.exp(torch.arange(0, embed_dim, 2) * (-math.log(10000.0) / embed_dim))
         pe = torch.zeros(max_length, embed_dim)
@@ -2069,46 +2113,60 @@ output = pos_encoding(sample_input)
 print(output.shape)  # Expected: (32, 10, 512)
 ```
 
-### 5.3 为什么 Transformer 优于 RNN 和 CNN
+### 5.11 为什么 Transformer 优于 RNN 和 CNN
+
+
+
+# Transformer 架构彻底改变了自然语言处理 (NLP)
 
 Transformer 架构彻底改变了自然语言处理 (NLP)，在效率和性能上超越了传统的循环神经网络 (RNN) 和卷积神经网络 (CNN)。与逐步处理序列的 RNN 不同，Transformer 利用自注意力机制并行处理整个序列。与依赖固定大小内核提取特征的 CNN 不同，Transformer 动态地捕捉长程依赖。
 
-#### 5.3.1 RNN 在 NLP 中的局限性
+## 5.3.1 RNN 在 NLP 中的局限性
 
-##### 顺序化处理与梯度消失
+### 顺序化处理与梯度消失
 
 循环神经网络 (RNN) 一步处理序列，维护存储过去信息的隐藏状态。虽然对短序列有效，但 RNN 在以下方面表现不佳：
 
-1.  顺序化瓶颈：逐个处理 token 防止了并行化，导致训练速度缓慢。
-2.  梯度消失：在反向传播过程中，梯度呈指数级衰减，限制了长期记忆。
-3.  梯度爆炸：在深层 RNN 中，巨大的梯度会导致更新不稳定，需要梯度裁剪。
-4.  短期记忆：RNN 偏向最近的 token 而非远处的 token，丢失了长程依赖。
+1.  **顺序化瓶颈**：逐个处理 token 防止了并行化，导致训练速度缓慢。
+2.  **梯度消失**：在反向传播过程中，梯度呈指数级衰减，限制了长期记忆。
+3.  **梯度爆炸**：在深层 RNN 中，巨大的梯度会导致更新不稳定，需要梯度裁剪。
+4.  **短期记忆**：RNN 偏向最近的 token 而非远处的 token，丢失了长程依赖。
 
 从数学上看，梯度消失问题源于雅可比矩阵的重复相乘：
-`∂W/∂L=∏t=1ᵀ ∂ht/∂ht-1`
+
+```
+∂W/∂L=∏t=1ᵀ ∂ht/∂ht-1
+```
+
 其中 `h_t` 是隐藏状态。如果梯度持续小于 1，它就会呈指数级收缩。
 
-##### LSTM 和 GRU：部分解决方案
+### LSTM 和 GRU：部分解决方案
 
 长短期记忆 (LSTM) 网络和门控循环单元 (GRU) 通过引入门机制缓解了梯度消失问题：
 
--   遗忘门：控制保留/丢弃哪些信息。
--   输入门：调节内存单元的更新。
--   输出门：控制内存单元有多少部分贡献于输出。虽然 LSTM 改进了 RNN，但它们仍然是顺序化的，限制了在大规模数据集上的可扩展性。
+-   **遗忘门**：控制保留/丢弃哪些信息。
+-   **输入门**：调节内存单元的更新。
+-   **输出门**：控制内存单元有多少部分贡献于输出。
 
-#### 5.3.2 为什么 CNN 在 NLP 中表现不佳
+虽然 LSTM 改进了 RNN，但它们仍然是顺序化的，限制了在大规模数据集上的可扩展性。
 
-##### 固定感受野
+## 5.3.2 为什么 CNN 在 NLP 中表现不佳
+
+### 固定感受野
 
 CNN 应用卷积过滤器从输入序列中提取特征。虽然 CNN 在图像识别方面表现出色，但在 NLP 中有其主要局限性：
 
-1.  固定感受野：内核捕捉局部模式，但难以处理长程依赖。
-2.  深度增加复杂度：堆叠卷积层有助于扩展上下文，但会增加计算量。
+1.  **固定感受野**：内核捕捉局部模式，但难以处理长程依赖。
+2.  **深度增加复杂度**：堆叠卷积层有助于扩展上下文，但会增加计算量。
 
-##### NLP 中卷积的数学公式
+### NLP 中卷积的数学公式
 
 文本的 1D 卷积操作可以定义为：
-`yi=∑j=0k wj⋅xi+j`
+
+```
+yi=∑j=0k wj⋅xi+j
+```
+
 其中：
 
 -   `x` 是输入序列。
@@ -2117,9 +2175,9 @@ CNN 应用卷积过滤器从输入序列中提取特征。虽然 CNN 在图像�
 
 尽管 CNN 能捕捉局部的 n-gram 模式，但除非使用深层，否则它们难以处理远距离关系，这会增加计算量。
 
-#### 5.3.3 为什么 Transformer 优于 RNN 和 CNN
+## 5.3.3 为什么 Transformer 优于 RNN 和 CNN
 
-1.  并行化 vs 顺序处理
+1.  **并行化 vs 顺序处理**
 
 与逐个 token 处理文本的 RNN 不同，Transformer 使用自注意力同时分析整个序列。这允许大规模的并行化，缩短了训练时间。
 
@@ -2130,30 +2188,34 @@ CNN 应用卷积过滤器从输入序列中提取特征。虽然 CNN 在图像�
 | CNN | 是 | 是 | 一般 |
 | Transformer | 是 | 是 | 优秀 |
 
-2.  用于长程依赖的自注意力
+2.  **用于长程依赖的自注意力**
 
 自注意力允许每个 token 关注所有其他 token，解决了长距离问题。
-`Attention(Q,K,V)`
+
+```
+Attention(Q,K,V)
+```
+
 消除了 RNN 中的遗忘问题。
 
-3.  内存效率与训练稳定性
+3.  **内存效率与训练稳定性**
 
--   无循环连接：不像 RNN，Transformer 不传播隐藏状态。
--   较低的内存占用：CNN 需要更多的层来增加上下文，而 Transformer 在较少层中即可。
+-   **无循环连接**：不像 RNN，Transformer 不传播隐藏状态。
+-   **较低的内存占用**：CNN 需要更多的层来增加上下文，而 Transformer 在较少层中即可。
 
-4.  大规模数据集的可扩展性
+4.  **大规模数据集的可扩展性**
 
 在海量语料（如 `BERT`、`GPT`）上进行预训练之所以可行，是因为 Transformer 是并行的。
 
+---
 
-
-
+# 大语言模型（LLMs）深度探索
 
 大语言模型（LLMs）重新定义了自然语言处理（NLP），使得在文本理解、生成、翻译和推理方面的高级应用成为可能。本章将对最具影响力的 LLM 架构进行深入的技术探索：
 
-- BERT（基于 Transformer 的双向编码器表示）：一种为上下文嵌入和深层双向语言理解而设计的模型。
-- `GPT` 系列（生成式预训练 Transformer）：一种 NLP 的生成式方法，推动了在文本生成和自回归建模中达到顶尖的性能。
-- `T5`、`LLaMA` 以及其他尖端模型：探索各种架构，扩展了 LLM 在多任务学习、效率和部署方面的能力。
+-   **BERT**（基于 Transformer 的双向编码器表示）：一种为上下文嵌入和深层双向语言理解而设计的模型。
+-   `GPT` 系列（生成式预训练 Transformer）：一种 NLP 的生成式方法，推动了在文本生成和自回归建模中达到顶尖的性能。
+-   `T5`、`LLaMA` 以及其他尖端模型：探索各种架构，扩展了 LLM 在多任务学习、效率和部署方面的能力。
 
 每个章节都涵盖了架构原理、关键创新点、性能权衡以及现实世界的应用，并附带了使用 `PyTorch` 和 Hugging Face 的 `Transformers` 库的实际实现。
 
@@ -2161,13 +2223,13 @@ CNN 应用卷积过滤器从输入序列中提取特征。虽然 CNN 在图像�
 
 ### 6.1.1 引言：从静态词表示到上下文词表示的转变
 
-在引入基于 Transformer 的双向编码器表示 (`BERT`）之前，NLP 模型主要依赖于静态词嵌入，如 `Word2Vec`、`GloVe` 和 `FastText`。这些嵌入将词表示为固定向量，这意味着词的表示无论上下文如何保持不变。
+在引入基于 Transformer 的双向编码器表示 (`BERT`) 之前，NLP 模型主要依赖于静态词嵌入，如 `Word2Vec`、`GloVe` 和 `FastText`。这些嵌入将词表示为固定向量，这意味着词的表示无论上下文如何保持不变。
 
 **静态词嵌入的局限性：**
 
-- 缺乏上下文感知：同一个词在不同的句子中的表示完全相同。
-- 多义性问题：具有多个含义的词（例如，“bank” 在“河岸”与“银行”之间）被视为相同。
-- 无双向上下文：传统模型按左到右或从右到左的方式处理文本，但不会同时在两个方向上进行。
+-   **缺乏上下文感知**：同一个词在不同的句子中的表示完全相同。
+-   **多义性问题**：具有多个含义的词（例如，“bank” 在“河岸”与“银行”之间）被视为相同。
+-   **无双向上下文**：传统模型按左到右或从右到左的方式处理文本，但不会同时在两个方向上进行。
 
 **BERT 如何克服这些挑战**
 
@@ -2197,15 +2259,15 @@ print(tokens)  # 输出: ['un', '##believably', 'powerful', 'nlp', 'model']
 
 解释：
 
-- `##believably` 标记表示它是 "un" 的延续（子词编码）。
-- 这有助于 `BERT` 通过将未登录词拆分为已知的子词来处理词汇外词。
+-   `##believably` 标记表示它是 "un" 的延续（子词编码）。
+-   这有助于 `BERT` 通过将未登录词拆分为已知的子词来处理词汇外词。
 
 **2. 输入表示：标记、段和位置嵌入**
 
 `BERT` 的输入由三种嵌入组成：
 
 | 嵌入类型 | 用途 |
-| --- | --- |
+| :--- | :--- |
 | 标记嵌入 (Token Embeddings) | 将每个词/子词表示为稠密向量 |
 | 段嵌入 (Segment Embeddings) | 在句子对任务中区分不同的句子 |
 | 位置嵌入 (Position Embeddings) | 保留词序信息 |
@@ -2217,14 +2279,14 @@ tokens = tokenizer("BERT is amazing.", "It improves NLP tasks!", return_tensors=
 print(tokens)
 ```
 
-- 第一句：使用段嵌入 `0`
-- 第二句：使用段嵌入 `1`
+-   第一句：使用段嵌入 `0`
+-   第二句：使用段嵌入 `1`
 
 **3. BERT 中的自注意力机制**
 
 自注意力机制允许 `BERT` 根据句子中词的相关性，为这些词分配不同的注意力权重。
 
-#### 6.1.3 BERT 预训练：MLM 和 NSP 目标
+### 6.1.3 BERT 预训练：MLM 和 NSP 目标
 
 `BERT` 在两个任务上进行了预训练：
 
@@ -2235,6 +2297,7 @@ print(tokens)
 示例：
 
 输入：“BERT is an [MASK] model.”
+
 预测：“BERT is an NLP model.”
 
 ```python
@@ -2246,14 +2309,14 @@ tokens = tokenizer("BERT is an [MASK] model.", return_tensors="pt")
 output = model(**tokens)
 ```
 
-- `MLM` 允许双向学习，与传统的从左到右模型不同。
+-   `MLM` 允许双向学习，与传统的从左到右模型不同。
 
 **2. 下一句预测 (NSP)**
 
 `BERT` 训练用于预测句子 B 是否在句子 A 之后。
 
 | 句子 A | 句子 B | NSP 标签 |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | "The cat sat on the mat." | "It was a sunny day." | 0 (否) |
 | "The cat sat on the mat." | "It started purring." | 1 (是) |
 
@@ -2268,23 +2331,23 @@ output = model(**tokens)
 
 **为什么 NSP 重要？**
 
-- 帮助 `BERT` 理解句子之间的关系，不同于传统的左到右模型（注：原文此处逻辑略有重复，已根据语境翻译）。
+-   帮助 `BERT` 理解句子之间的关系，不同于传统的左到右模型。
 
-### 6.1.4 针对 NLP 任务微调 BERT（注：此处原文文本结构出现部分重复或错乱，翻译时已调整以保持逻辑连贯性）
+### 6.1.4 针对 NLP 任务微调 BERT
 
 **针对情感分析微调 BERT**
 
 `BERT` 的预训练模型可以针对特定的 NLP 任务进行微调。
 
-步骤 1：加载预训练 BERT 模型
+**步骤 1：加载预训练 BERT 模型**
 
 ```python
-from transformers import BertSequenceClassification
+from transformers import BertForSequenceClassification
 
-model = BertSequenceClassification.from_pretrained("bert-base-uncased", num_labels=2) # 二 二分类
+model = BertForSequenceClassification.from_pretrained("bert-base-uncased", num_labels=2) # 二分类
 ```
 
-步骤 2：标记化输入数据
+**步骤 2：标记化输入数据**
 
 ```python
 text = ["BERT is a fantastic model"]
@@ -2292,7 +2355,7 @@ text = ["BERT is a fantastic model"]
 tokens = tokenizer(text, return_tensors="pt", padding=True, truncation=True)
 ```
 
-步骤 3：前向传播获取预测
+**步骤 3：前向传播获取预测**
 
 ```python
 output = model(**tokens)
@@ -2303,24 +2366,24 @@ print(probs)
 
 解释：
 
-- `logits`：来自 `BERT` 的原始得分。
-- `softmax(logits, dim=-1)` 将其转换为概率。
+-   `logits`：来自 `BERT` 的原始得分。
+-   `softmax(logits, dim=-1)` 将其转换为概率。
 
 ### 6.1.5 优化 BERT
 
 **1. 模型大小**
 
-- `DistilBERT`：BERT 的更小更快版本，参数减少了 40%。
-- `ALBERT`：通过参数共享优化模型大小。
+-   `DistilBERT`：BERT 的更小更快版本，参数减少了 40%。
+-   `ALBERT`：通过参数共享优化模型大小。
 
 **2. 避免灾难性遗忘**
 
-- 微调时使用低学习率（例如 `2e-5` 到 `5e-5`）。
-- 最初冻结底层以保留通用语言知识。
+-   微调时使用低学习率（例如 `2e-5` 到 `5e-5`）。
+-   最初冻结底层以保留通用语言知识。
 
 ```python
 for param in model.bert.parameters():
-    param.requires_grad = False # 冻结 层
+    param.requires_grad = False # 冻结层
 ```
 
 **3. 混合精度训练的批量优化**
@@ -2341,42 +2404,38 @@ scaler.step(optimizer)
 scaler.update()
 ```
 
-#### 6.1.6 BERT 的现实应用
+### 6.1.6 BERT 的现实应用
 
-| 应用 |  |
-| --- | --- |
+| 应用 | 说明 |
+| :--- | :--- |
 | 搜索引擎 | 通过理解用户意图提升 Google 的搜索排名。 |
 | 机器人 | 通过感知上下文增强对话 AI。 |
 | 摘要 | 从长文档中提取关键点。 |
 | 法律与医疗 NLP | 用于分析合同、医疗记录和法律文件。 |
-
-
-
-
 
 | 预训练目标 | 掩码语言模型 (MLM) | 因果语言模型 (CLM) |
 | :--- | :--- | :--- |
 | 方向性 | 双向处理文本 | 从左到右处理文本 |
 | 主要用例 | 语言理解（例如：分类、问答） | 文本生成（例如：聊天机器人、摘要） |
 
+---
+
+## 6.2 GPT：生成式预训练 Transformer
+
 本章探讨了 GPT 如何从初始版本演变为如今的生成式 AI 模型，涵盖了其架构、训练策略、微调方法以及现实世界的应用。
 
-***
+### 6.2.2 理解 GPT 基于 Transformer 的架构
 
-## 6.2.2 理解 GPT 基于 Transformer 的架构
+GPT 完全构建在 Transformer 解码器层之上，与使用 Transformer 编码器的 BERT 不同。每个 GPT 模型包含：
 
-GPT 完全构建在 Transformer 解码器（decoder）层之上，与使用 Transformer 编码器（encoder）的 BERT 不同。每个 GPT 模型包含：
+1.  `Token Embeddings`（嵌入）：将单词转换为稠密向量。
+2.  `Positional Embeddings`（位置嵌入）：由于 Transformer 缺乏固有的顺序感知，GPT 添加了位置编码来跟踪标记的顺序。
+3.  `Stacked Transformer Decoder Layers`（堆叠 Transformer 解码器层）：每层包含：
+    -   `Masked Self-Attention`（掩码自注意力）：防止前瞻性，确保自回归生成。
+    -   `Feedforward Networks`（前馈网络）：处理转换后的表示。
+    -   `Layer Normalization & Residual Connections`（层归一化与残差连接）：提高训练稳定性。
 
-1. `Token Embeddings`（嵌入）：将单词转换为稠密向量。
-2. `Positional Embeddings`（位置嵌入）：由于 Transformer 缺乏固有的顺序感知，GPT 添加了位置编码来跟踪标记的顺序。
-3. `Stacked Transformer Decoder Layers`（堆叠 Transformer 解码器层）：每层包含：
-   - `Masked Self-Attention`（掩码自注意力）：防止前瞻性，确保自回归生成。
-   - `Feedforward Networks`（前馈网络）：处理转换后的表示。
-   - `Layer Normalization & Residual Connections`（层归一化与残差连接）：提高训练稳定性。
-
-***
-
-### 1. 使用字节对编码 (BPE) 进行分词
+#### 1. 使用字节对编码 (BPE) 进行分词
 
 GPT 使用字节对编码 (`BPE`)，通过将单词拆分为子词来高效地处理表外词（OOV）。
 
@@ -2392,73 +2451,82 @@ tokens = tokenizer.tokenize("Autoregressive transformers generate text.")
 print(tokens)  # Output: ['Auto', 'regressive', 'transform', 'ers', 'generate', 'text', '.']
 ```
 
-- 将单词拆分为有意义的单元可以防止 OOV 错误同时保留语义。
+-   将单词拆分为有意义的单元可以防止 OOV 错误同时保留语义。
 
-***
+#### 2. 带有因果掩码的自注意力
 
-### 2. 带有因果掩码的自注意力
+GPT 采用掩码自注意力，确保每个标记只关注之前的标记。
 
-GPT 采用掩码自注意力，确保每个标记只关注之前的标记。![](img/image_rsrc7M5.jpg)
+```
+Attention(Q, K, V) = softmax((QK^T + M) / √d_k) V
+```
 
 其中：
-- `Q`, `K`, `V` 是查询、键和值矩阵。
-- `M` 是掩码矩阵，确保在训练期间未来的标记保持不可见。
 
-***
+-   `Q`, `K`, `V` 是查询、键和值矩阵。
+-   `M` 是掩码矩阵，确保在训练期间未来的标记保持不可见。
 
-## 6.2.3 GPT 模型的演变
+### 6.2.3 GPT 模型的演变
 
-### 1. GPT-1：概念验证 (2018)
-- 架构：12 层，1.1 亿参数。
-- 训练数据：`BookCorpus` 数据集（约 7,000 本书）。
-- 局限性：数据集较小，处理长文本连贯性表现困难。
+#### 1. GPT-1：概念验证 (2018)
 
-### 2. GPT-2：规模扩展 (2019)
-- 关键改进：
-  - 15 亿参数（当时规模最大）。
-  - 在 `WebText` 上训练，这是一个包含多样化互联网文本的数据集。
-  - 展示了强大的零样本学习能力（无需微调即可完成任务）。
-- 担忧：最初由于生成虚假内容的滥用风险而未发布。
+-   **架构**：12 层，1.1 亿参数。
+-   **训练数据**：`BookCorpus` 数据集（约 7,000 本书）。
+-   **局限性**：数据集较小，处理长文本连贯性表现困难。
 
-### 3. GPT-3：十亿级语言模型 (2020)
-- 1750 亿参数，在海量数据集上训练。
-- 具备少样本、单样本和零样本学习能力。
-- 挑战：计算成本高，偶尔会出现事实性不准确的情况。
+#### 2. GPT-2：规模扩展 (2019)
 
-### 4. GPT-4：增强的推理和多模态能力 (2023 至今)
-- 更强的推理能力、多模态能力。
+-   **关键改进**：
+    -   15 亿参数（当时规模最大）。
+    -   在 `WebText` 上训练，这是一个包含多样化互联网文本的数据集。
+    -   展示了强大的零样本学习能力（无需微调即可完成任务）。
+-   **担忧**：最初由于生成虚假内容的滥用风险而未发布。
 
-***
+#### 3. GPT-3：十亿级语言模型 (2020)
+
+-   1750 亿参数，在海量数据集上训练。
+-   具备少样本、单样本和零样本学习能力。
+-   **挑战**：计算成本高，偶尔会出现事实性不准确的情况。
+
+#### 4. GPT-4：增强的推理和多模态能力 (2023 至今)
+
+-   更强的推理能力、多模态能力。
 
 ### 6.2.4 针对任务对 GPT 进行微调
 
 GPT 模型可以针对特定任务如生成、摘要和代码补全进行微调。
 
-第 1 步：加载预训练 GPT-2
+**第 1 步：加载预训练 GPT-2**
+
 ```python
-from transformers import GPT2Tokenizer
+from transformers import GPT2LMHeadModel, GPT2Tokenizer
 
 tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
+model = GPT2LMHeadModel.from_pretrained("gpt2")
 ```
 
-第 2 步：输入分词
+**第 2 步：输入分词**
+
 ```python
 text = "Artificial Intelligence is transforming."
 tokens = tokenizer(text, return_tensors="pt")
 ```
 
-第 3 步：生成文本
+**第 3 步：生成文本**
+
 ```python
 output = model.generate(tokens, max_length=50, temperature=0.7, top_k=50)
 print(tokenizer.decode(output, skip_special_tokens=True))
 ```
 
-***
+### 6.2.5 模型优化与部署
 
-#### 6.2.5 模型优化与部署
+#### 1. 量化
 
-### 1. 量化
 通过量化实现高效推理。
+
+
+
 ```python
 from transformers import GPT2LMModel
 
@@ -2468,7 +2536,9 @@ model.to("cuda")
 ```
 
 ### 2. 流式传输与实时
+
 用于实时应用的流式响应。
+
 ```python
 for token in model.generate(tokens, max_length=50, do_sample=True):
     print(tokenizer.decode(token, skip_special_tokens=True), end="")
@@ -2489,9 +2559,9 @@ for token in model.generate(tokens, max_length=50, do_sample=True):
 
 ## 6.2.7 挑战与伦理考量
 
-1. 语言模型中的偏差：大型数据集通常包含偏差，GPT 可能会放大这些偏差。
-2. 高计算成本：训练 GPT-3 需要数千个 GPU，限制了可访问性。
-3. 幻觉与虚假信息：GPT 可以生成看似合理但错误的信息。
+1. 语言模型中的偏差：大型数据集通常包含偏差，`GPT` 可能会放大这些偏差。
+2. 高计算成本：训练 `GPT-3` 需要数千个 GPU，限制了可访问性。
+3. 幻觉与虚假信息：`GPT` 可以生成看似合理但错误的信息。
 
 ***
 
@@ -2499,13 +2569,14 @@ for token in model.generate(tokens, max_length=50, do_sample=True):
 
 ### 6.3.1 引言：超越 GPT —— 探索现代架构
 
-虽然 GPT 系列主导了生成式 AI 的讨论，但其他强大的语言模型（LLMs）如 `T5`（文本到文本 Transformer）和 `LLaMA`（Meta 开发的大型语言模型）提供了独特的架构和能力。这些模型扩展了文本生成、摘要和翻译的边界，在效率和特定领域应用上优于 GPT 模型。
+虽然 `GPT` 系列主导了生成式 AI 的讨论，但其他强大的语言模型（`LLMs`）如 `T5`（文本到文本 Transformer）和 `LLaMA`（Meta 开发的大型语言模型）提供了独特的架构和能力。这些模型扩展了文本生成、摘要和翻译的边界，在效率和特定领域应用上优于 `GPT` 模型。
 
 本章将深入探讨 `T5`、`LLaMA` 以及其他前沿 Transformer 模型，涵盖它们的架构、微调策略、现实世界应用和部署。
 
 #### 6.3.2 T5：NLP 的统一方法
 
 由 Google 的文本到文本 Transformer (`T5`) 将所有 NLP 任务视为文本到文本问题，包括：
+
 - 文本分类：“Classify: This movie is great → Positive”
 - 摘要：“Summarize: The paper discusses Transformer models...”
 - 翻译：“Translate English to French: Hello → Bonjour”
@@ -2513,7 +2584,8 @@ for token in model.generate(tokens, max_length=50, do_sample=True):
 
 #### 1. T5 架构概述
 
-`T5` 遵循 Transformer 编码器-解码器结构，与 GPT 的仅解码器方法不同。
+`T5` 遵循 Transformer 编码器-解码器结构，与 `GPT` 的仅解码器方法不同。
+
 - 编码器使用自注意力处理输入文本。
 - 解码器自回归地生成输出标记。
 
@@ -2523,13 +2595,8 @@ T5 与 GPT 的主要区别：
 | :--- | :--- | :--- |
 | 模型类型 | 编码器-解码器 | 仅解码器 |
 | 训练目标 | Span 破坏（替换标记） | 因果语言模型 |
-
-
-
-
-
-| 任务格式 || 一切都转换为文本到文本 | 顺序预测下一个标记 | |
-| 效率 || 规模更小，针对特定 NLP 任务进行了优化 | 需要大规模训练 |
+| 任务格式 | 一切都转换为文本到文本 | 顺序预测下一个标记 |
+| 效率 | 规模更小，针对特定 NLP 任务进行了优化 | 需要大规模训练 |
 
 ***
 
@@ -2587,7 +2654,7 @@ model = get_peft_model(model, config)
 
 Meta 的 `LLaMA` (Large Language Model Meta AI) 提供了性能强大且规模更小的模型。与 `GPT-3` 不同，`LLaMA` 模型在训练和推理时所需的计算资源更少。
 
-| 模型 || 参数 | 关键特性 |
+| 模型 | 参数 | 关键特性 |
 | --- | --- | --- |
 | LLaMA-7B | 7B | 针对低资源训练进行了优化 |
 | LLaMA-13B | 13B | 与 `GPT-3` (175B) 竞争 |
@@ -2635,12 +2702,12 @@ print(tokenizer.decode(output[0], skip_special_tokens=True))
 
 #### 6.3.4 T5、LLaMA 和 GPT 的比较
 
-| 特性 || T5 | LLaMA | GPT |
-| --- | --- | --- |
-| 模型类型 || 编码器-解码器 | 仅解码器 | 仅解码器 |
-| 最佳用途 || 摘要、翻译 | 通用 AI | |
-| 训练目标 || 跨段损坏 | 因果语言模型 | 因果语言模型 |
-| 参数效率 || 优化 | 较小 | 大 |
+| 特性 | T5 | LLaMA | GPT |
+| --- | --- | --- | --- |
+| 模型类型 | 编码器-解码器 | 仅解码器 | 仅解码器 |
+| 最佳用途 | 摘要、翻译 | 通用 AI |  |
+| 训练目标 | 跨段损坏 | 因果语言模型 | 因果语言模型 |
+| 参数效率 | 优化 | 较小 | 大 |
 
 ***
 
@@ -2705,7 +2772,7 @@ rag_pipeline = Pipeline().add_node(query="What is the capital of France?
 
 不同的语言模型在预训练期间使用不同的目标。
 
-| 预训练目标 || 说明 | 模型 |
+| 预训练目标 | 说明 | 模型 |
 | --- | --- | --- |
 | 掩码语言模型 (MLM) | 预测句子中随机掩码的标记。 | BERT, RoBERTa |
 | 因果语言模型 (CLM) | 根据之前的标记预测下一个标记（从左到右预测）。 | GPT, GPT-2, GPT-3 |
@@ -2738,15 +2805,10 @@ with torch.no_grad():
 # 获取掩码最可能的标记 ID
 masked_index = torch.where(inputs.input_ids == tokenizer.mask_token_id)[1]
 predicted_token_id = predictions[0, masked_index].argmax(dim=-1)
+
+predicted_word = tokenizer.decode(predicted_token_id)
+print(f"Predicted word: {predicted_word}")
 ```
-
-
-
-
-
-`predicted_word = tokenizer.decode(predicted_token_id)`
-
-`print(f"Predicted word: {predicted_word}")`
 
 解释：
 
@@ -2756,7 +2818,7 @@ predicted_token_id = predictions[0, masked_index].argmax(dim=-1)
 
 这种技术使得 `BERT` 能够学习双向上下文，使其在下游任务中非常高效。
 
-* * *
+***
 
 #### 7.1.2 理解微调 (Fine-Tuning)
 
@@ -2812,7 +2874,7 @@ trainer.train()
 - 对数据集进行分词处理，以兼容 `BERT` 的输入格式。
 - 使用 `Trainer` API 高效地微调模型。
 
-* * *
+***
 
 #### 7.1.3 高级微调技术
 
@@ -2834,13 +2896,15 @@ config = LoraConfig(r=8, alpha=32, dropout=0.1, task_type="CAUSAL_LM")
 model = get_peft_model(model, config)
 ```
 
-* * *
+***
 
 ##### 2. 使用数据增强进行微调
 
 数据匮乏会限制微调的效果。数据增强技术（如反向翻译）可以增强模型的鲁棒性。
 
 使用反向翻译的示例：
+
+
 
 ```python
 from transformers import MarianMT
@@ -2854,15 +2918,11 @@ def back_translate(text):
     pass
 ```
 
-
-
-
-
 ### 7.2.3 零样本/少样本学习的提示工程
 
-提示工程涉及设计结构化的输入提示（prompt），在不修改权重的情况下引导模型响应。这种方法对于标注数据稀缺的零样本（zero-shot）和少样本（few-shot）学习特别有用。
+提示工程涉及设计结构化的输入提示（`prompt`），在不修改权重的情况下引导模型响应。这种方法对于标注数据稀缺的零样本（`zero-shot`）和少样本（`few-shot`）学习特别有用。
 
-##### 示例：针对 GPT 的情感分析优化提示
+#### 示例：针对 GPT 的情感分析优化提示
 
 ```python
 from openai import OpenAI
@@ -2885,9 +2945,10 @@ print(response.choices[0].text.strip())
 ```
 
 #### 优化策略：
+
 - 显式指令可以提高响应的准确性。
 - 少样本学习在提示中包含多个标注示例。
-- 思维链提示（Chain-of-thought prompting）引导复杂的推理任务。
+- 思维链提示（`Chain-of-thought prompting`）引导复杂的推理任务。
 
 虽然提示工程在计算上是高效的，但与微调相比，它缺乏深层的任务适应性。
 
@@ -2895,13 +2956,13 @@ print(response.choices[0].text.strip())
 
 ### 7.2.4 参数高效微调 (PEFT)
 
-微调所有模型参数的成本很高。PEFT 技术仅修改一小部分参数，从而显著减少训练训练时间和内存占用。
+微调所有模型参数的成本很高。`PEFT` 技术仅修改一小部分参数，从而显著减少训练时间和内存占用。
 
-##### LoRA (低秩自适应)
+#### LoRA (低秩自适应)
 
-LoRA 在 Transformer 层中注入可训练的低秩矩阵，仅更新一部分参数。
+`LoRA` 在 `Transformer` 层中注入可训练的低秩矩阵，仅更新一部分参数。
 
-##### Python：对 LLaMA 模型应用 LoRA
+#### Python：对 LLaMA 模型应用 LoRA
 
 ```python
 from peft import get_peft_model, LoraConfig
@@ -2917,19 +2978,20 @@ model = get_peft_model(model, config)
 ```
 
 #### 优势：
+
 - 在保持性能的同时大幅减少内存占用。
 - 通过最小化过拟合，在低数据量环境下表现良好。
-- 使用不同的 LoRA 适配器可以在任务之间轻松切换。
+- 使用不同的 `LoRA` 适配器可以在任务之间轻松切换。
 
-其他 PEFT 技术包括前缀微调（Prefix Tuning）和适配层（Adapter Layers），它们进一步优化了微调效率。
+其他 `PEFT` 技术包括前缀微调（`Prefix Tuning`）和适配层（`Adapter Layers`），它们进一步优化了微调效率。
 
 ***
 
 ### 7.2.5 检索增强生成 (RAG)
 
-大语言模型（LLMs）往往会生成过时或幻觉的响应。RAG 集成了外部知识检索以增强事实准确性。
+大语言模型（`LLMs`）往往会生成过时或幻觉的响应。`RAG` 集成了外部知识检索以增强事实准确性。
 
-##### 示例：使用 FAISS 和 LLaMA 实现 RAG
+#### 示例：使用 FAISS 和 LLaMA 实现 RAG
 
 ```python
 from sentence_transformers import SentenceTransformer
@@ -2941,7 +3003,7 @@ embedder = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
 
 # 示例文档
 documents = [
-    "法国的首首是巴黎。",
+    "法国的首都是巴黎。",
     "阿尔伯特·爱因斯坦提出了相对论。",
     "线粒体是细胞的能量工厂。"
 ]
@@ -2952,7 +3014,7 @@ index = faiss.IndexFlatL2(doc_embeddings.shape[1])
 index.add(np.array(doc_embeddings))
 
 # 查询嵌入
-query = "谁发现了相对论？”
+query = "谁发现了相对论？"
 query_embedding = embedder.encode([query])
 
 # 检索最相似的文档
@@ -2961,23 +3023,25 @@ print(f"检索到的文档: {documents[retrieved_doc_id[0]]}")
 ```
 
 #### 主要优势：
+
 - 通过将响应基于外部知识来提高事实准确性。
-- 减少 LLM 中常见的幻觉问题。
+- 减少 `LLM` 中常见的幻觉问题。
 - 增强问答等知识密集型任务的性能。
 
-将 RAG 与微调后的 LLM 结合，可以创建能够检索并生成相关知识的强大助手。
+将 `RAG` 与微调后的 `LLM` 结合，可以创建能够检索并生成相关知识的强大助手。
 
 ***
 
 ### 7.3 实战：微调 Transformer 模型
 
-微调预训练的 `Transformer` 模型是将其适配到特定 NLP 任务的最有效方法之一。本章提供了一个用于文本分类的 `Transformer` 模型的全面实操指南。涵盖了数据预处理、训练、优化技术和部署考虑。
+微调预训练的 `Transformer` 模型是将其适配到特定 `NLP` 任务的最有效方法之一。本章提供了一个用于文本分类的 `Transformer` 模型的全面实操指南。涵盖了数据预处理、训练、优化技术和部署考虑。
 
-### 7.3.1 理解微调
+#### 7.3.1 理解微调
 
 微调涉及通过在领域特定数据上进行训练，将预训练的 `Transformer` 模型适配到特定任务。这允许模型在保留通用语言知识的同时，学习任务特定的模式。
 
 ##### 预训练模型 vs. 微调模型
+
 - **预训练模型**：在大规模数据集（如 `BERT`、`T5`、`GPT`）上进行训练，以学习通用的语言模式。
 - **微调模型**：在特定任务数据（如情感分类、命名实体识别）上进行进一步训练。
 
@@ -2986,27 +3050,32 @@ print(f"检索到的文档: {documents[retrieved_doc_id[0]]}")
 | 方法 | 说明 | 优点 | 缺点 |
 | :--- | :--- | :--- | :--- |
 | 全量微调 | 在特定任务数据集上更新所有模型权重。 | 性能最好 | 需要大型数据集和高计算 |
-| LoRA (低秩自适应) | 在冻结大部分权重的同时添加可训练的低秩矩阵。 | 减少内存占用 | 性能轻有损失 |
+| LoRA (低秩自适应) | 在冻结大部分权重的同时添加可训练的低秩矩阵。 | 减少内存占用 | 性能略有损失 |
 | 适配器 (Adapters) | 在层之间插入的小型可训练层。 | 模块化、高效 | 可能不如全量微调 |
 | 前缀微调 (Prefix Tuning) | 在输入嵌入前添加可训练的向量。 | 轻量适配 | 泛化可能不佳 |
 
-本章将首先演示微调，然后是基于 LoRA 的微调以提高效率。
+本章将首先演示微调，然后是基于 `LoRA` 的微调以提高效率。
 
-### 7.3.2 设置环境
+#### 7.3.2 设置环境
 
 ##### 安装依赖
+
 确保已安装 `transformers`、`datasets` 和 `torch`：
+
 ```bash
 pip install transformers datasets torch
 ```
 
 ##### 选择模型
+
 对于文本分类，我们使用 `BERT`。
 
-### 7.3.3 加载并预处理数据
+#### 7.3.3 加载并预处理数据
 
 ##### 加载数据集
+
 使用 `imdb` 数据集。
+
 ```python
 from datasets import load_dataset
 
@@ -3018,8 +3087,10 @@ train_data = dataset["train"]
 valid_data = dataset["test"]
 ```
 
-#### 文本标记
+##### 文本标记
+
 `Transformer` 模型需要分词。
+
 ```python
 from transformers import AutoTokenizer
 
@@ -3034,8 +3105,10 @@ train_data = train_data.map(tokenize_batch, batched=True)
 valid_data = valid_data.map(tokenize_batch, batched=True)
 ```
 
-#### 转换标签
+##### 转换标签
+
 我们将标签转换为 `0`=负面，`1`=正面。
+
 ```python
 train_data = train_data.rename_column("label", "labels")
 valid_data = valid_data.rename_column("label", "labels")
@@ -3045,9 +3118,10 @@ train_data = train_data.remove_columns(["text"])
 valid_data = valid_data.remove_columns(["text"])
 ```
 
-### 7.3.4 微调 BERT
+#### 7.3.4 微调 BERT
 
-#### 定义模型
+##### 定义模型
+
 ```python
 from transformers import AutoModelForSequenceClassification
 
@@ -3055,7 +3129,8 @@ from transformers import AutoModelForSequenceClassification
 model = AutoModelForSequenceClassification.from_pretrained("bert-base-uncased", num_labels=2)
 ```
 
-#### 配置训练参数
+##### 配置训练参数
+
 ```python
 from transformers import TrainingArguments
 training_args = TrainingArguments(
@@ -3073,6 +3148,7 @@ training_args = TrainingArguments(
 ```
 
 ##### 训练模型
+
 ```python
 from transformers import Trainer
 trainer = Trainer(
@@ -3085,15 +3161,11 @@ trainer = Trainer(
 trainer.train()
 ```
 
-### 7.3.5 评估模型性能
-
-
-
-
+#### 7.3.5 评估模型性能
 
 微调后，我们在验证集上对模型进行评估。
 
-#### 计算准确率
+##### 计算准确率
 
 ```python
 import numpy as np
@@ -3115,11 +3187,11 @@ results = trainer.evaluate()
 print(results)
 ```
 
-### 7.3.6 使用 LoRA 进行高效微调
+#### 7.3.6 使用 LoRA 进行高效微调
 
-微调整个 `Transformer` 模型是非常昂的。`LoRA`（低秩自适应）只训练少小的额外权重矩阵，从而大幅减少了计算和内存需求。
+微调整个 `Transformer` 模型是非常昂贵的。`LoRA`（低秩自适应）只训练少量的额外权重矩阵，从而大幅减少了计算和内存需求。
 
-#### 将 LoRA 应用于 BERT
+##### 将 LoRA 应用于 BERT
 
 ```python
 from peft import get_peft_model, LoraConfig
@@ -3136,13 +3208,14 @@ lora_config = LoraConfig(
 model = get_peft_model(model, lora_config)
 ```
 
-#### LoRA 的优势：
-- 减少 GPU 内存占用（在较小的硬件上微调大模型）。
+##### LoRA 的优势：
+
+- 减少 `GPU` 内存占用（在较小的硬件上微调大模型）。
 - 实现任务模块化（轻松在微调后的适配器之间切换）。
 
-#### 训练 LoRA 模型
+##### 训练 LoRA 模型
 
-基于 LoRA 的模型可以使用相同的 `Trainer` API 进行训练，但资源消耗显著降低。
+基于 `LoRA` 的模型可以使用相同的 `Trainer` API 进行训练，但资源消耗显著降低。
 
 ```python
 trainer = Trainer(
@@ -3154,9 +3227,9 @@ trainer = Trainer(
 trainer.train()
 ```
 
-### 7.3.7 部署微调后的模型
+#### 7.3.7 部署微调后的模型
 
-#### 保存与加载模型
+##### 保存与加载模型
 
 ```python
 # 保存微调后的模型
@@ -3172,9 +3245,9 @@ result = classifier("This movie was fantastic!")
 print(result)
 ```
 
-### 7.3.8 核心要点与后续步骤
+#### 7.3.8 核心要点与后续步骤
 
-- 微调 `Transformer` 模型允许领域特定的自适应，以提高 NLP 性能。
+- 微调 `Transformer` 模型允许领域特定的自适应，以提高 `NLP` 性能。
 - 全量微调可以提供高准确率，但需要大量的计算资源。
 - 基于 `LoRA` 的调优提供了一种轻量级的替代方案，资源需求极低。
 - 评估和部署确保微调后的模型可以集成到生产环境中。
@@ -3187,9 +3260,10 @@ print(result)
 
 ## 第 8 章：用于文本分类和情感分析的 LLM
 
-大语言模型（`LLMs`）通过实现零样本（zero-shot）、少样本（few-shot）和微调（fine-tuned）学习，彻底改变了文本分类和情感分析的格局。本章将深入探讨这些技术，并提供一个使用 `LLMs` 构建真实世界情感分析工具的实操指南。
+大语言模型（`LLMs`）通过实现零样本（`zero-shot`）、少样本（`few-shot`）和微调（`fine-tuned`）学习，彻底改变了文本分类和情感分析的格局。本章将深入探讨这些技术，并提供一个使用 `LLMs` 构建真实世界情感分析工具的实操指南。
 
 在本章结束时，读者将能够：
+
 - 区分零样本、少样本和微调分类。
 - 高效地使用 `LLMs` 实现情感分析。
 - 针对真实应用优化分类性能。
@@ -3200,6 +3274,7 @@ print(result)
 大语言模型（`LLMs`）通过实现零样本、少样本和微调方法彻底改变了文本分类。与需要大量数据集的传统机器学习不同，`LLMs` 可以在不对特定任务进行预先训练或没有标记数据的情况下对文本进行分类。
 
 本节探索三种技术：
+
 - `零样本分类 (Zero-shot classification)`：在没有任何标记示例的情况下对文本进行分类。
 - `少样本分类 (Few-shot classification)`：使用少量标记示例进行上下文学习。
 - `微调分类 (Fine-tuned classification)`：在标记的数据集上训练 `LLM` 以获得高准确率。
@@ -3207,12 +3282,15 @@ print(result)
 #### 8.1.1 基于 LLM 的文本分类基础
 
 ##### 文本分类
+
 文本分类是将文本归类为预定义标签的过程。常见任务包括：
+
 - 情感分析（例如：正面、负面、中性）。
 - 主题分类（例如：体育、技术）。
 - 垃圾邮件检测（垃圾邮件 vs 非垃圾邮件）。
 
 传统方法需要：
+
 1. 特征工程：提取如 `TF-IDF` 或词嵌入之类的文本特征。
 2. 监督训练：在标记的数据集上训练模型（例如 `SVM`、`随机森林`、`RNNs`）。
 
@@ -3223,11 +3301,14 @@ print(result)
 零样本分类允许 `LLMs` 仅通过预训练知识泛化到未见的任务。在特定的任务中，零样本分类允许 `LLMs` 仅使用预训练知识泛化到未见任务。
 
 ##### 零样本学习的工作原理
+
 - 模型不需要标记的示例。
 - 它依赖于预训练语料库的上下文嵌入。
 - 在不对特定类别进行训练的情况下，`LLMs` 通过自然语言提示来推断正确标签。
 
 ##### 使用 GPT-4 进行零样本分类
+
+
 
 ```python
 import openai
@@ -3258,11 +3339,14 @@ print(zero_shot_classification(text, labels))
 ```
 
 ##### 分析与考虑因素
+
 优点：
+
 - 不需要标记训练数据。
 - 可以在不重新训练的情况下分类任何领域。
 
 缺点：
+
 - 性能取决于提示词的质量。
 - 对于特定领域任务，准确率低于微调模型。
 - 使用基于 API 模型时推理成本较高。
@@ -3272,6 +3356,7 @@ print(zero_shot_classification(text, labels))
 少样本分类通过在提示中提供标记示例来提高准确率。模型不再完全依赖预训练知识，而是从几个上下文示例中学习。
 
 ##### 少样本学习的工作原理
+
 - 模型在目标文本之前被给了几个标记示例。
 - 这减少了歧义，允许模型更好地进行泛化。
 - 适用于情感分析、主题分类和意图检测。
@@ -3314,18 +3399,16 @@ print(few_shot_classification("The movie was breathtaking with a fantastic story
 ```
 
 ##### 权衡与考虑因素
+
 优点：
+
 - 对于特定领域的分类比零样本更可靠。
-
-
-
-
-
 - 无需重新训练模型。
 
 缺点：
+
 - 在复杂的分类任务中仍容易出错。
-- 提示词（Prompt）设计对性能至关重要。
+- 提示词设计对性能至关重要。
 
 ## 8.1.4 用于高精度分类的 LLM 微调
 
@@ -3385,26 +3468,29 @@ trainer.train()
 ### 优化与部署考虑量
 
 优点：
+
 - 分类任务具有最高的准确率。
 - 可针对特定领域的应用进行完全定制。
 
 缺点：
+
 - 需要训练数据和计算资源。
 - 与零/少样本学习相比，微调非常耗时。
 
-* * *
+---
 
 ## 8.2 现实应用：构建情感分析工具
 
 情感分析是一项关键的自然语言处理（NLP）任务，广泛应用于社交媒体监控、客户反馈分析和金融市场预测等领域。现代大语言模型（LLMs）为情感分类提供了强大的技术，涵盖从零样本、少样本学习到微调自定义模型的方法。
 
-* * *
+---
 
-#### 8.2.1 理解情感分析
+### 8.2.1 理解情感分析
 
 #### 定义与用例
 
 情感分析确定给定文本的情感基调，通常将其分类为积极、消极或中性。一些应用场景包括：
+
 - 客户反馈分析：理解对产品和服务的意见。
 - 品牌监控：跟踪社交媒体上的情感趋势。
 - 金融分析：根据情感预测市场波动。
@@ -3417,7 +3503,7 @@ trainer.train()
 
 通过利用 LLM，我们可以构建能够克服这些挑战的强大情感分析管道。
 
-* * *
+---
 
 ### 8.2.2 方法 1：使用 LLM 进行零样本情感分析
 
@@ -3454,14 +3540,16 @@ print(zero_shot_sentiment_analysis(text))
 #### 性能考虑
 
 优点：
+
 - 无需标注数据。
 - 无需重新训练即可适用于多个领域。
 
 局限性：
+
 - 提示词敏感性：提示词的措辞会影响准确性。
 - 推理成本：运行如 `GPT-4` 等大模型可能很高。
 
-* * *
+---
 
 ### 8.2.3 方法 2：带有上下文示例的少样本情感分析
 
@@ -3501,16 +3589,14 @@ print(few_shot_sentiment_analysis("这个软件更新太棒了！"))
 #### 性能权衡
 
 优点：
+
 - 比零样本准确率更高。
 - 无需重新训练模型。
 
 缺点：
+
 - 需要精心设计的示例以获得最佳结果。
 - 长的提示词会增加推理成本。
-
-
-
-
 
 ## 8.2.5 将情感分析工具作为 API 部署
 
@@ -3543,7 +3629,7 @@ def analyze_sentiment(text: str):
 - 使用 `GPU` 推理进行高吞吐量分类。
 - 通过云服务（`AWS Lambda`, `GCP`, `Azure`）部署。
 
-***
+---
 
 ## 8.2.6 为你的用例选择合适的方法
 
@@ -3553,11 +3639,11 @@ def analyze_sentiment(text: str):
 | 少样本 (Few-Shot) | 少量示例 | 较高 | 中 | 提高泛化能力 |
 | 微调 (Fine-Tuning) | 标记数据 | 最高 | 低（训练后） | 生产系统 |
 
-***
+---
 
-## 第 9 章：用于机器人和对话 AI 的 LLM
+# 第 9 章：用于机器人和对话 AI 的 LLM
 
-***
+---
 
 ### 9.1 提示工程与微调策略
 
@@ -3567,7 +3653,7 @@ def analyze_sentiment(text: str):
 
 本章将深入探讨这些策略，涵盖核心概念、最佳实践、高级技术和实操实现。
 
-***
+---
 
 ### 1. 理解提示工程
 
@@ -3583,7 +3669,7 @@ def analyze_sentiment(text: str):
 
 在处理如 `OpenAI’s` GPT 模型等闭源 API 时，提示工程特别有用，因为此时微调可能不是一个选项。
 
-#### 1.2 设计良好的的提示词的组件
+#### 1.2 设计良好的提示词的组件
 
 一个好的提示词由几个关键元素组成：
 
@@ -3592,7 +3678,7 @@ def analyze_sentiment(text: str):
 3. 示例与约束：包含示例输出或格式要求。
 4. 输出规范：定义长度、语气或风格限制。
 
-##### 示例 1：糟糕 vs. 设计良好的的提示词
+##### 示例 1：糟糕 vs. 设计良好的提示词
 
 ```python
 # 糟糕的提示词
@@ -3611,7 +3697,7 @@ prompt = """
 - 指定了格式（项目符号）。
 - 限制了响应长度。
 
-***
+---
 
 ### 2. 高级提示工程技术
 
@@ -3650,6 +3736,8 @@ prompt = """
 
 LLM 将通过结构化的拆解而非直接给出数字来响应。
 
+---
+
 ### 3. LLM 的微调策略
 
 ##### 3.1 什么是微调？
@@ -3669,7 +3757,7 @@ LLM 将通过结构化的拆解而非直接给出数字来响应。
 3. **在预训练模型上训练**：通过仅更新相关层使用迁移学习。
 4. **评估与部署**：针对基准性能对微调模型进行测试。
 
-***
+---
 
 ### 4. 实操：使用 OpenAI API 微调 GPT 模型
 
@@ -3695,6 +3783,8 @@ LLM 将通过结构化的拆解而非直接给出数字来响应。
 
 使用 OpenAI
 
+
+
 ```python
 import openai
 
@@ -3711,19 +3801,19 @@ fine_tune_response = openai.FineTune.create(
 )
 ```
 
-##### 4.3 测试微调后的模型
+### 4.3 测试微调后的模型
 
 ```python
 response = openai.Completion.create(
   model="davinci:ft-yourmodelid",
-  prompt="客户：我如何更新我的账单信息？
+  prompt="客户：我如何更新我的账单信息？",
   max_tokens=50
 )
 
 print(response.choices[0].text.strip())
 ```
 
-微调模型生成的客户支持响应比基础 GPT 模型更准确。
+微调模型生成的客户支持响应比基础 `GPT` 模型更准确。
 
 ***
 
@@ -3740,37 +3830,33 @@ print(response.choices[0].text.strip())
 
 ***
 
-
-
-
-
-本章将介绍如何使用 OpenAI API 构建真实世界的聊天机器人的结构化方法。我们将从机器人架构的基础开始，然后进入逐步实现阶段，涵盖提示词工程（Prompt Engineering）、API 集成、上下文管理和性能优化。在本章结束时，你将拥有一个功能完整的机器人，并对如何针对不同应用对其进行微调有深入的理解。
+本章将介绍如何使用 OpenAI API 构建真实世界的聊天机器人的结构化方法。我们将从机器人架构的基础开始，然后进入逐步实现阶段，涵盖提示词工程、API 集成、上下文管理和性能优化。在本章结束时，你将拥有一个功能完整的机器人，并对如何针对不同应用对其进行微调有深入的理解。
 
 ### 1. 机器人开发基础
 
-##### 1.1 LLM 驱动的机器人是如何工作的
+#### 1.1 LLM 驱动的机器人是如何工作的
 
-基于大语言模型（LLM）的机器人通过根据输入提示词预测最可能的词序列来生成响应。与传统的基于规则的机器人不同，LLM 驱动的机器人：
+基于大语言模型（`LLM`）的机器人通过根据输入提示词预测最可能的词序列来生成响应。与传统的基于规则的机器人不同，`LLM` 驱动的机器人：
 
 - 理解自然语言，而不是依赖关键词匹配。
 - 在多次交互中保持上下文。
 - 生成动态的类人响应，而不是预定义的答案。
 
-OpenAI API 提供了一个用于与 `GPT-4` 等 LLM 交互的强大接口，允许开发者构建高能力的对话代理。
+OpenAI API 提供了一个用于与 `GPT-4` 等 `LLM` 交互的强大接口，允许开发者构建高能力的对话代理。
 
-##### 1.2 机器人架构概述
+#### 1.2 机器人架构概述
 
 一个健壮的机器人实现由几个关键组件组成：
 
 1. 用户输入处理 – 捕获用户的文本输入。
 2. 上下文管理 – 保留对话历史以确保响应连贯。
-3. LLM API 集成 – 发送请求并处理响应。
+3. `LLM API` 集成 – 发送请求并处理响应。
 4. 响应生成 – 格式化回复以增强可读性。
 5. 记忆与个性化 – 存储用户特定数据以提供定制化体验。
 
 ### 2. 设置 OpenAI API
 
-##### 2.1 安装依赖项
+#### 2.1 安装依赖项
 
 在实现机器人之前，安装必要的 Python 包：
 
@@ -3778,10 +3864,10 @@ OpenAI API 提供了一个用于与 `GPT-4` 等 LLM 交互的强大接口，允�
 pip install openai python-dotenv
 ```
 
-- `openai`: 提供对 OpenAI LLM 模型的 API 访问。
+- `openai`: 提供对 OpenAI `LLM` 模型的 API 访问。
 - `python-dotenv`: 安全地管理 API 密钥。
 
-##### 2.2 配置 API 访问
+#### 2.2 配置 API 访问
 
 将你的 OpenAI API 密钥存储在 `.env` 文件中保持安全：
 
@@ -3803,9 +3889,9 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 
 这确保了 API 密钥不会硬编码在脚本中，从而提高了安全性。
 
-##### 3. 实现基础机器人
+### 3. 实现基础机器人
 
-使用 OpenAI API 实现一个最小的 LLM 驱动机器人：
+使用 OpenAI API 实现一个最小的 `LLM` 驱动机器人：
 
 ```python
 def chat_with_gpt(user_input):
@@ -3831,13 +3917,14 @@ while True:
 - 对话是无状态的——每个输入都是独立处理的。
 
 **局限性：**
+
 由于此机器人不跟踪历史，它无法在消息之间维持上下文。下一节将引入上下文管理来解决这一问题。
 
-##### 4. 实现上下文管理
+### 4. 实现上下文管理
 
 上下文对于机器人记住之前的消息并做出连贯的响应至关重要。
 
-##### 4.1 维护对话历史
+#### 4.1 维护对话历史
 
 修改机器人以存储之前的交互：
 
@@ -3875,9 +3962,9 @@ while True:
 - OpenAI API 有 token 限制，因此管理对话长度至关重要。
 - 如果历史记录过长，请截断旧消息。
 
-##### 5. 优化响应质量
+### 5. 优化响应质量
 
-##### 5.1 增强提示词工程
+#### 5.1 增强提示词工程
 
 结构化的提示词可以显著提高机器人的性能。不要仅仅依赖用户输入，要包含清晰的指令：
 
@@ -3902,16 +3989,16 @@ def chat_with_gpt(user_input):
 - 提高响应的一致性。
 - 帮助定制机器人的语气和风格。
 
-##### 5.2 减少幻觉
+#### 5.2 减少幻觉
 
-LLM 有时会生成自信但错误的响应。为了缓解这一点：
+`LLM` 有时会生成自信但错误的响应。为了缓解这一点：
 
 - 添加约束：“如果你不确定，请回答‘我不知道’。”
-- 使用检索增强生成（RAG）从外部源获取事实性数据。
+- 使用检索增强生成（`RAG`）从外部源获取事实性数据。
 
-##### 6. 部署 Web 机器人
+### 6. 部署 Web 机器人
 
-##### 6.1 Flask 集成
+#### 6.1 Flask 集成
 
 将机器人部署为 Web 服务：
 
@@ -3933,7 +4020,7 @@ if __name__ == "__main__":
     app.run(debug=True)
 ```
 
-##### 6.2 前端集成
+#### 6.2 前端集成
 
 使用 JavaScript 向 Flask 后端发送请求：
 
@@ -3950,33 +4037,29 @@ async function sendMessage() {
 }
 ```
 
-##### 7. 高级优化
+### 7. 高级优化
 
 1. 使用自定义数据微调 – 在领域数据集上训练 `GPT` 以提高准确性。
-2. 混合 RAG 方案 – 使用向量数据库 `FAISS` 检索知识以获得准确答案。
+2. 混合 `RAG` 方案 – 使用向量数据库 `FAISS` 检索知识以获得准确答案。
 3. 记忆持久化 – 将会话数据存储在数据库（如 `PostgreSQL`、`Redis`）中实现长期记忆。
 
 ### 9.3 实战：部署对话 AI 系统
 
 部署对话 AI 系统不仅仅是构建机器人——它涉及设计可扩展的架构、优化延迟、确保高可用性以及与外部服务集成以用于实际应用。在本章中，我们将涵盖使用 OpenAI API、`Flask` 后端处理以及云端部署策略对生产级对话 AI 系统进行端到端部署。
 
-
-
-
-
 - 使用如缓存频繁响应和使用更小、优化的模型进行快速回复等策略可以降低延迟。
 
-##### 1.2 内存与上下文管理
+#### 1.2 内存与上下文管理
 
 - 基础聊天机器人会在交互之间丢失上下文。
 - 需要有效管理对话历史，以在不超出 token 限制的情况下提供逻辑连贯的回复。
 
-##### 1.3 可扩展性
+#### 1.3 可扩展性
 
 - 处理数千个用户的聊天机器人必须能够高效扩展。
 - 解决方案包括负载均衡、水平扩展以及使用云端 AI 推理端点。
 
-##### 1.4 安全与数据隐私
+#### 1.4 安全与数据隐私
 
 - 应安全地管理 API 密钥。
 - 需要对输入进行清理以防止提示词注入攻击。
@@ -3987,9 +4070,9 @@ async function sendMessage() {
 
 ### 2. 使用 Flask 构建后端
 
-Flask 提供了一个轻量级的框架框架用于暴露聊天机器人 API。
+`Flask` 提供了一个轻量级的框架用于暴露聊天机器人 API。
 
-##### 2.1 安装依赖项
+#### 2.1 安装依赖项
 
 确保已安装所需的库：
 
@@ -3997,7 +4080,7 @@ Flask 提供了一个轻量级的框架框架用于暴露聊天机器人 API。
 pip install flask openai python-dotenv gunicorn
 ```
 
-##### 2.2 安全设置 API 密钥
+#### 2.2 安全设置 API 密钥
 
 将 API 密钥存储在 `.env` 文件中：
 
@@ -4022,7 +4105,7 @@ app = Flask(__name__)
 
 ***
 
-### 2.3 实现感知感知对话
+#### 2.3 实现感知感知对话
 
 无状态聊天机器人不会保留之前的消息，因此我们实现了上下文管理：
 
@@ -4051,7 +4134,7 @@ def generate_response(session_id, user_input):
 
 ***
 
-##### 2.4 创建 API 端点
+#### 2.4 创建 API 端点
 
 将聊天机器人暴露为 REST API：
 
@@ -4074,19 +4157,21 @@ if __name__ == "__main__":
 
 ### 3. 使用 RAG（检索增强生成）增强聊天机器人
 
-##### 3.1 为什么使用 RAG？
+#### 3.1 为什么使用 RAG？
 
-GPT 模型仅依赖于预训练知识。RAG 通过从外部源检索最新信息来提高事实准确性。
+`GPT` 模型仅依赖于预训练知识。`RAG` 通过从外部源检索最新信息来提高事实准确性。
 
-##### 3.2 实现简单的 RAG 流水线
+#### 3.2 实现简单的 RAG 流水线
 
-我们集成了 FAISS（一个快速向量搜索库）来存储和检索文档。
+我们集成了 `FAISS`（一个快速向量搜索库）来存储和检索文档。
 
 ```bash
 pip install faiss-cpu
 ```
 
-#### 3.2.1 将知识作为 Embedding 存储
+##### 3.2.1 将知识作为 Embedding 存储
+
+
 
 ```python
 import faiss
@@ -4104,7 +4189,7 @@ index = faiss.IndexFlatL2(dimension)
 index.add(np.array(document_vectors))
 ```
 
-#### 3.2.2 检索相关上下文
+### 3.2.2 检索相关上下文
 
 ```python
 def retrieve_relevant_info(query):
@@ -4120,11 +4205,11 @@ def generate_response_with_rag(session_id, user_input):
 
 ***
 
-### 4. 生产部署
+## 4. 生产部署
 
-##### 4.1 使用 Docker 容器化
+### 4.1 使用 Docker 容器化
 
-创建一个 Dockerfile：
+创建一个 `Dockerfile`：
 
 ```dockerfile
 FROM python:3.9
@@ -4143,20 +4228,20 @@ docker run -p 5000:5000 chatbot
 
 ***
 
-##### 4.2 部署到云平台
+### 4.2 部署到云平台
 
-##### 4.2.1 AWS EC2 部署
+#### 4.2.1 AWS EC2 部署
 
 1. 启动带有 Ubuntu 的 EC2 实例。
 2. 安装 Docker 并拉取容器。
 3. 暴露端口 5000 用于 API 访问。
-4. 使用反向代理（Nginx）提供服务。
+4. 使用反向代理（`Nginx`）提供服务。
 
 ***
 
-### 5. 性能与安全优化
+## 5. 性能与安全优化
 
-##### 5.1 使用 Redis 缓存
+### 5.1 使用 Redis 缓存
 
 为了提高响应速度，在 Redis 中存储近期回复。
 
@@ -4181,16 +4266,10 @@ def cached_response(session_id, user_input):
 
 ***
 
-##### 5.2 API 安全最佳实践
+### 5.2 API 安全最佳实践
 
 - 使用 API 频率限制以防止滥用。
 - 使用 API 密钥或令牌启用身份验证。
-
-
-
-
-
-安装依赖：
 
 ```bash
 pip install transformers torch
@@ -4200,13 +4279,11 @@ pip install transformers torch
 from transformers import pipeline
 
 # 加载一个基于 BERT 的抽取式摘要模型
-
 summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
 
 text = """大语言模型通过实现上下文文本生成和理解，改变了 NLP。这些模型利用自注意力机制来捕捉文本序列中复杂的依赖关系，使其在各种任务中都非常有效。然而，它们在训练和推理需要大量的计算资源，导致了对模型优化的持续研究"""
 
 summary = summarizer(text, max_length=50, min_length=20, do_sample=False)
-
 print(summary[0]['summary_text'])
 ```
 
@@ -4245,7 +4322,6 @@ print(summary[0]['summary_text'])
 from transformers import T5Tokenizer, T5ForConditionalGeneration
 
 # 加载模型和分词器
-
 model = T5ForConditionalGeneration.from_pretrained("t5-small")
 tokenizer = T5Tokenizer.from_pretrained("t5-small")
 
@@ -4297,7 +4373,7 @@ print(generate_summary(text))
 
 ### 用于摘要的 Transformer 模型微调
 
- ** **数据集**：使用 `CNN/DailyMail`、`XSum` 或 `Reddit` 微调摘要模型。
+- **数据集**：使用 `CNN/DailyMail`、`XSum` 或 `Reddit` 微调摘要模型。
 - **超参数**：调整 `learning_rate`、`batch_size` 和 `max_length` 以获得更好的摘要。
 - **评估指标**：`ROUGE`（面向召回的摘要评估研究）是摘要质量的标准指标。
 
@@ -4343,30 +4419,26 @@ trainer.train()
 ## 机器翻译的演变
 
 1. **规则机器翻译 (RBMT)**
-- 使用手工编写的语言规则和词典。
-- 需要大量的语言知识，难以扩展。
-- 生成的翻译生硬，在处理复杂句子结构时表现困难。
+   - 使用手工编写的语言规则和词典。
+   - 需要大量的语言知识，难以扩展。
+   - 生成的翻译生硬，在处理复杂句子结构时表现困难。
 
 2. **统计机器翻译 (SMT)**
-- 从大规模双语语料库中学习翻译模式。
-- 使用概率模型，如 $n$-gram 和短语翻译。
-- 受限于上下文理解和词对齐问题。
+   - 从大规模双语语料库中学习翻译模式。
+   - 使用概率模型，如 $n$-gram 和短语翻译。
+   - 受限于上下文理解和词对齐问题。
 
 3. **神经机器翻译 (NMT)**
-- 使用深度学习模型学习感知翻译。
-- 结合注意力机制的序列到序列（Seq2Seq）架构。
-- 需要大量的训练数据，但具有更高的流畅度和准确性。
+   - 使用深度学习模型学习感知翻译。
+   - 结合注意力机制的序列到序列（`Seq2Seq`）架构。
+   - 需要大量的训练数据，但具有更高的流畅度和准确性。
 
 4. **基于 Transformer 的翻译 (现代 NMT)**
-- 通过自注意力机制消除了递归。
-- 并行处理整个序列，提高了效率。
-- 驱动了如 `T5`、`BART` 和 `mBART` 等最先进模型。
+   - 通过自注意力机制消除了递归。
+   - 并行处理整个序列，提高了效率。
+   - 驱动了如 `T5`、`BART` 和 `mBART` 等最先进模型。
 
 ***
-
-
-
-
 
 为了构建机器翻译系统，我们将使用 Hugging Face 的 `transformers` 库和预训练的 `mBART`（多语言 BART）模型，该模型支持多种语言对。
 
@@ -4382,7 +4454,6 @@ pip install transformers torch sentencepiece
 from transformers import MBartForConditionalGeneration, MBart50TokenizerFast
 
 # 加载模型和分词器
-
 model_name = "facebook/mbart-large-50-many-to-many-mmt"
 tokenizer = MBart50TokenizerFast.from_pretrained(model_name)
 model = MBartForConditionalGeneration.from_pretrained(model_name)
@@ -4415,12 +4486,12 @@ print(translated_text)
 
 ## 为自定义翻译微调 Transformer 模型
 
-针对特定领域的翻译（例如**医学或法律文本**），通过对预训练模型进行微调可以提高准确性。
+针对特定领域的翻译（例如医学或法律文本），通过对预训练模型进行微调可以提高准确性。
 
 ### 数据集选择
 
 - `Common Crawl` 和 `OPUS` 提供了多语言平行语料库。
-- 可以使用来自特定特定的 `bitext` 数据创建自定义数据集。
+- 可以使用来自特定领域的 `bitext` 数据创建自定义数据集。
 
 ### 使用 Hugging Face 的 Trainer API 进行微调
 
@@ -4428,7 +4499,7 @@ print(translated_text)
 from transformers import Seq2SeqTrainer, Seq2SeqTrainingArguments, DataCollatorForSeq2Seq
 from datasets import load_dataset
 
-##### 加载数据集
+# 加载数据集
 dataset = load_dataset("wmt16", "de-en")
 
 # 训练参数
@@ -4463,44 +4534,42 @@ trainer.train()
 ## 基于 Transformer 的翻译面临的挑战
 
 1. **低资源语言的数据稀缺**
-- 从高资源语言进行迁移学习可以帮助提高性能。
-- 反向翻译（将目标语言翻译回源语言以生成合成数据）可以增强训练效果。
+   - 从高资源语言进行迁移学习可以帮助提高性能。
+   - 反向翻译（将目标语言翻译回源语言以生成合成数据）可以增强训练效果。
 
 2. **翻译中的幻觉问题**
-- Transformer 有时会生成错误但流畅的文本。
-- 基于规则的验证等后处理方法可以提高可靠性。
+   - Transformer 有时会生成错误但流畅的文本。
+   - 基于规则的验证等后处理方法可以提高可靠性。
 
 3. **计算成本**
-- 大模型需要大量的内存和 GPU 算力。
-- `量化`和`蒸馏`可以在保持准确性的同时缩小模型大小。
+   - 大模型需要大量的内存和 GPU 算力。
+   - `量化`和`蒸馏`可以在保持准确性的同时缩小模型大小。
 
 ***
 
 ## 评估翻译质量
 
 1. **BLEU（双语句子评估辅助）**
-- 将生成的文本与参考翻译进行比较。
-- 衡量 n-gram 重叠度，但未考虑语义。
+   - 将生成的文本与参考翻译进行比较。
+   - 衡量 n-gram 重叠度，但未考虑语义。
 
 2. **METEOR（基于显式排序的翻译指标）**
-- 考虑同义词和词干，使其比 `BLEU` 更可靠。
+   - 考虑同义词和词干，使其比 `BLEU` 更可靠。
 
 3. **COMET（跨语言翻译评估优化指标）**
-- 使用基于深度学习的嵌入进行更具上下文的评估。
+   - 使用基于深度学习的嵌入进行更具上下文的评估。
 
 使用 `BLEU` 进行评估示例：
+
+
 
 ```python
 from datasets import load_metric
 bleu = load_metric("bleu")
 predictions = ["Transformers have revolutionized NLP by introducing self-attention mechanisms."]
-references = ["Les transformers ont révolutionné le NLP en introduisant des mécanismes d'attention de-attention.]]
+references = ["Les transformers ont révolutionné le NLP en introduisant des mécanismes d'attention de-attention."]
 print(bleu.compute(predictions=predictions, references=references))
 ```
-
-
-
-
 
 `context = "BERT is a transformer model developed by Google for NLP tasks."`
 
@@ -4512,12 +4581,13 @@ print(bleu.compute(predictions=predictions, references=references))
 
 `print(answer)`
 
-##### 工作原理
+## 工作原理
 
 - `pipeline("question-answering")` 初始化了一个基于 BERT 的问答模型。
+
 - 模型会预测答案在给定段落中的起始索引和结束索引。
 
-# 输出示例
+## 输出示例
 
 ```json
 {'score': 0.98, 'start': 40, 'end': 46, 'answer': 'Google'}
@@ -4532,6 +4602,7 @@ print(bleu.compute(predictions=predictions, references=references))
 ## 数据集选择
 
 - SQuAD (斯坦福问答数据集)：标准的基准数据集。
+
 - 自定义领域特定数据集：使用与 SQuAD 相似的 JSON 格式创建。
 
 ## 微调过程
@@ -4540,7 +4611,7 @@ print(bleu.compute(predictions=predictions, references=references))
 from transformers import AutoModelForQuestionAnswering, AutoTokenizer, Trainer, TrainingArguments
 from datasets import load_dataset
 
-##### 加载数据集
+### 加载数据集
 dataset = load_dataset("squad")
 
 # 加载模型和分词器
@@ -4554,7 +4625,7 @@ def preprocess(examples):
 
 tokenized_datasets = dataset.map(preprocess, batched=True)
 
-##### 定义训练参数
+### 定义训练参数
 training_args = TrainingArguments(
     output_dir="./qa_model",
     evaluation_strategy="epoch",
@@ -4573,21 +4644,23 @@ trainer = Trainer(
     eval_dataset=tokenized_datasets["validation"],
 )
 
-##### 训练模型
+### 训练模型
 trainer.train()
 ```
 
-##### 优化技术
+### 优化技术
 
 - 学习率调度：在训练过程中逐渐降低学习率。
+
 - 数据增强：通过改写问题来增加数据集的多样性。
-- 混合精度训练 (fp16)：减少内存占用并加快训练速度。
+
+- 混合精度训练 (`fp16`)：减少内存占用并加快训练速度。
 
 ***
 
 # 高级 QA 技术
 
-### 1. 使用 RAG 的开放域问答
+## 1. 使用 RAG 的开放域问答
 
 RAG 模型在生成答案之前会检索相关文档。
 
@@ -4609,23 +4682,23 @@ generated = model.generate(**inputs)
 print(tokenizer.decode(generated[0], skip_special_tokens=True))
 ```
 
-### 2. 多跳问答
+## 2. 多跳问答
 
-对于需要多个推理步骤的复杂问题，图神经网络 (GNNs) 或基于检索的 transformer 模型可以增强推理能力。
+对于需要多个推理步骤的复杂问题，图神经网络 (`GNNs`) 或基于检索的 transformer 模型可以增强推理能力。
 
 ***
 
 # 评估 QA 模型
 
-### 1. 精确匹配 (EM)
+## 1. 精确匹配 (EM)
 
 - 衡量模型答案与真实标准完全匹配的频率。
 
-### 2. F1 分数
+## 2. F1 分数
 
 - 考虑部分匹配，平衡精确率和召回率。
 
-## 使用 SQuAD 指标的评估示例
+### 使用 SQuAD 指标的评估示例
 
 ```python
 from datasets import load_metric
@@ -4641,91 +4714,94 @@ print(metric.compute(predictions=predictions, references=references))
 
 # 第 11 章：检索增强生成 (RAG)
 
-##### 引言
+### 引言
 
-大语言模型 (LLMs) 在自然语言处理 (NLP) 方面展现了卓越的能力，但它们面临一些关键的局限性，包括知识截止、幻觉以及无法访问实时或领域特定信息。检索增强生成 (RAG) 通过将基于检索的方法与生成模型相结合，解决了这些挑战，从而提供了更准确、更感知上下文的响应。
+大语言模型 (`LLMs`) 在自然语言处理 (`NLP`) 方面展现了卓越的能力，但它们面临一些关键的局限性，包括知识截止、幻觉以及无法访问实时或领域特定信息。检索增强生成 (`RAG`) 通过将基于检索的方法与生成模型相结合，解决了这些挑战，从而提供了更准确、更感知上下文的响应。
 
 本章涵盖：
 
-- RAG 如何通过结合检索和生成利用外部知识增强 LLMs。
+- RAG 如何通过结合检索和生成利用外部知识增强 `LLMs`。
+
 - 构建一个可以动态获取和利用外部知识源的混合检索聊天机器人。
+
 - 为了准确性和效率对 RAG 模型进行优化。
 
 ***
 
 ## 11.1 使用外部知识增强 LLMs
 
-大语言模型 (LLMs) 在自然语言处理 (NLP) 方面展现了卓越的能力，但它们面临一些关键的局限性，包括知识截止、幻觉以及无法访问实时或领域特定信息。检索增强生成 (RAG) 通过将基于检索的方法与生成模型相结合，解决了这些挑战，从而提供了更准确、更感知上下文的响应。
+大语言模型 (`LLMs`) 在自然语言处理 (`NLP`) 方面展现了卓越的能力，但它们面临一些关键的局限性，包括知识截止、幻觉以及无法访问实时或领域特定信息。检索增强生成 (`RAG`) 通过将基于检索的方法与生成模型相结合，解决了这些挑战，从而提供了更准确、更感知上下文的响应。
 
 在本章中，我们将探索：
 
-- RAG 如何通过结合检索和生成利用外部知识增强 LLMs。
+- RAG 如何通过结合检索和生成利用外部知识增强 `LLMs`。
+
 - 构建一个可以动态获取和利用外部知识源的混合检索聊天机器人。
+
 - 为了准确性和效率对 RAG 模型进行优化。
 
 在本章结束时，你将深入理解 RAG 及其实现方法以及如何集成它。
 
 ***
 
-##### 11.2 理解 LLMs 的局限性
+### 11.2 理解 LLMs 的局限性
 
-虽然大语言模型 (LLMs) 展示了惊人的能力，但它们的运行受到内在限制：
+虽然大语言模型 (`LLMs`) 展示了惊人的能力，但它们的运行受到内在限制：
 
-### 1. 知识截止
+#### 1. 知识截止
 
-- LLMs 在海量静态数据集上进行训练，并不会更新知识。
+- `LLMs` 在海量静态数据集上进行训练，并不会更新知识。
+
 - 除非进行手动微调，否则训练后获得的任何知识都是不可用的。
 
-### 2. 幻觉
+#### 2. 幻觉
 
-- LLMs 可能会生成很有道理但错误的信息。
+- `LLMs` 可能会生成很有道理但错误的信息。
+
 - 在缺乏外部验证的情况下，它们经常产生误导性响应。
 
-### 3. 缺乏实时感知
+#### 3. 缺乏实时感知
 
-- LLMs 无法获取实时数据，使其不适用于金融市场、时事或法律法规等动态领域。
+- `LLMs` 无法获取实时数据，使其不适用于金融市场、时事或法律法规等动态领域。
 
-### 4. 领域特定适应性有限
+#### 4. 领域特定适应性有限
 
 - 通用训练数据可能未涵盖专业领域（医学、法律、科学）。
+
 - 针对领域数据进行微调成本高且需要持续更新。
 
-为了应对这些挑战，检索增强使 LLMs 能够动态地访问并将外部知识整合到其响应中。
+为了应对这些挑战，检索增强使 `LLMs` 能够动态地访问并将外部知识整合到其响应中。
 
 ***
 
 ## 11.3 检索增强生成 (RAG) 的作用
 
-##### 什么是检索增强生成？
+### 什么是检索增强生成？
 
-检索增强生成 (RAG) 是一种将文档检索与文本生成相结合以增强 LLM 响应的 AI 框架。它不再仅仅依赖参数记忆（编码在模型权重中的知识），而是通过动态检索文档并增强模型输入来整合非参数记忆。
+检索增强生成 (`RAG`) 是一种将文档检索与文本生成相结合以增强 `LLM` 响应的 AI 框架。它不再仅仅依赖参数记忆（编码在模型权重中的知识），而是通过动态检索文档并增强模型输入来整合非参数记忆。
 
-##### RAG 如何工作：步骤
+### RAG 如何工作：步骤
 
 1. 用户查询处理 -> 接收输入查询。
+
 2. 检索步骤 -> 系统从知识库、向量存储或 Web API 获取相关文档。
+
 3. 上下文增强 -> 将检索到的信息作为额外的上下文附加查询。
-4. 响应生成 -> LLM 基于增强后的上下文生成知情的响应。
+
+4. 响应生成 -> `LLM` 基于增强后的上下文生成知情的响应。
 
 这种混合方法显著提高了事实准确性，减少了幻觉，并赋予了实时适应能力。
 
 ### RAG 的外部知识源类型
 
 | 知识源 | 说明 | 示例用例 |
-| --- | --- | --- |
-
-
-
-
-
-| 类型 | 描述 | 用场景 |
 | :--- | :--- | :--- |
 | 向量数据库 | 存储嵌入以进行快速基于相似度的检索 | 聊天机器人、搜索引擎 |
 | 关系型数据库 | 结构化表格数据 | 客户支持、金融 |
 | APIs | 获取实时信息 | 天气、股票价格 |
 | 企业知识库 | 公司内部数据 | 法律、人力资源、研究工具 |
 
-现在，让我们使用 `FAISS` 和 `Hugging Face Transformers` 通过向量搜索来构建一个基于检索的 LLM 系统。
+现在，让我们使用 `FAISS` 和 `Hugging Face Transformers` 通过向量搜索来构建一个基于检索的 `LLM` 系统。
 
 ***
 
@@ -4735,7 +4811,7 @@ print(metric.compute(predictions=predictions, references=references))
 
 向量数据库通过存储和查询文档嵌入来实现语义搜索。我们将使用 `FAISS`（Facebook AI 相似性搜索）来实现一个检索系统。
 
-##### 安装依赖
+### 安装依赖
 
 ```bash
 pip install faiss-cpu sentence-transformers transformers torch
@@ -4767,7 +4843,9 @@ index.add(doc_embeddings)
 ```
 
 以下是这段代码执行的操作：
+
 1. 我们使用预训练的 `SentenceTransformer` 模型将文本转换为嵌入。
+
 2. 我们将这些嵌入存储在 `FAISS` 索引中以便进行高效检索。
 
 ***
@@ -4789,14 +4867,16 @@ print("Retrieved Documents:", retrieved_docs)
 ```
 
 - 使用相同的模型对查询进行嵌入。
+
 - `FAISS` 使用最近邻搜索找到语义最相似的文档。
+
 - 返回 `top-k` 个相关的文档。
 
 ***
 
 ## 第 3 步：使用检索到的知识增强 LLM 输入
 
-接下来，我们将检索到的文档集成到由 LLM 驱动的响应生成器。
+接下来，我们将检索到的文档集成到由 `LLM` 驱动的响应生成器。
 
 ```python
 from transformers import pipeline
@@ -4817,9 +4897,12 @@ print(response)
 ```
 
 此函数：
+
 1. 从 `FAISS` 中检索知识。
-2. 使用检索到的文档增强提示词（prompt）。
-3. 使用 LLM 生成响应。
+
+2. 使用检索到的文档增强提示词（`prompt`）。
+
+3. 使用 `LLM` 生成响应。
 
 ***
 
@@ -4828,15 +4911,11 @@ print(response)
 | 策略 | 描述 |
 | :--- | :--- |
 | 微调 | 在特定领域的数据上训练模型。 |
-| 混合搜索 (BM25 + 向量) | 结合基于关键词和基于向量的检索。 |
+| 混合搜索 (`BM25` + 向量) | 结合基于关键词和基于向量的检索。 |
 | 高效缓存 | 缓存频繁访问的查询。 |
 
-
-
-
-
 ```python
-prompt = f"Context: {retrieved\_context}\nQuestion: {query}\nAnswer:"
+prompt = f"Context: {retrieved_context}\nQuestion: {query}\nAnswer:"
 
 response = generator(prompt, max_length=100, do_sample=True)[0]["generated_text"]
 
@@ -4856,7 +4935,9 @@ print(response)
 解释：
 
 1. 从 `FAISS` 中检索相关的上下文。
+
 2. 在发送给 `LLM` 之前将其附加到 `prompt` 中。
+
 3. 模型生成一个知识增强的答复。
 
 # 使用高级技术增强混合聊天机器人
@@ -4866,6 +4947,7 @@ print(response)
 虽然向量嵌入非常有效，但基于关键词的搜索可以对其进行补充。混合方法结合了：
 
 - `BM25`（词法搜索）→ 根据词汇重叠查找相关文档。
+
 - `Vector Search`（语义搜索）→ 查找概念上相似的文档。
 
 我们可以使用 `Whoosh` 集成 `BM25` 检索：
@@ -4873,6 +4955,8 @@ print(response)
 ```bash
 pip install whoosh
 ```
+
+
 
 ```python
 from whoosh.index import create_in
@@ -4949,7 +5033,7 @@ http://localhost:8000/chat?query=What+is+a+hybrid+chatbot
 
 ## 第 12 章：为了性能和效率优化 LLM
 
-大语言模型 (`LLMs`）在各种 NLP 任务中已实现顶尖性能。然而，它们的规模和计算需求构成了巨大挑战，特别是在低资源环境、边缘设备和生产系统中的真实世界部署中。
+大语言模型 (`LLMs`) 在各种 NLP 任务中已实现顶尖性能。然而，它们的规模和计算需求构成了巨大挑战，特别是在低资源环境、边缘设备和生产系统中的真实世界部署中。
 
 在本章中，我们将探索在不牺牲性能的情况下减少计算和内存成本的模型优化技术。具体而言，我们将涵盖：
 
@@ -4964,9 +5048,9 @@ http://localhost:8000/chat?query=What+is+a+hybrid+chatbot
 
 大语言模型 (`LLMs`) 彻底改变了 NLP，但它们的规模、内存占用和计算需求构成了巨大挑战，特别是在实际应用中。高效地部署这些模型需要平衡性能、准确性和效率的优化技术。
 
-##### 1. 模型量化
+#### 1. 模型量化
 
-### 1.1 什么是模型量化？
+##### 1.1 什么是模型量化？
 
 量化降低了神经网络中数值的精度，将高精度浮点 (`FP32`) 数转换为低位宽表示（例如 `INT8`、`FP16` 或 `BF16`）。这种技术提供了：
 
@@ -4974,7 +5058,7 @@ http://localhost:8000/chat?query=What+is+a+hybrid+chatbot
 - 更快的推理 – 每次操作的计算量更少。
 - 更低的功耗 – 特别对边缘设备和移动部署有益。
 
-### 1.2 量化类型
+##### 1.2 量化类型
 
 | 量化类型 | 描述 | 用场景 |
 | --- | --- | --- |
@@ -4983,15 +5067,15 @@ http://localhost:8000/chat?query=What+is+a+hybrid+chatbot
 | 动态量化 | 仅将权重转换为较低精度，激活值保持全精度。 | 适用于基于 Transformer 模型。 |
 | 静态量化 | 在推理前对权重和激活进行量化。 | 最适合资源受限的环境。 |
 
-### 1.3 使用 PyTorch 实现量化
+##### 1.3 使用 PyTorch 实现量化
 
-训练后量化 (PTQ)
+**训练后量化 (PTQ)**
 
 ```python
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-##### 加载预训练模型
+# 加载预训练模型
 model_name = "facebook/opt-1.3b"
 model = AutoModelForCausalLM.from_pretrained(model_name)
 tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -5007,13 +5091,13 @@ quantized_model = torch.quantization.quantize_dynamic(
 quantized_model.save_pretrained("quantized_opt_1.3b")
 ```
 
-解释
+**解释**
 
 - 动态量化应用于线性层（Transformer 模型中常见）。
 - 模型被转换为 `INT8`，减少了内存占用并提高了推理速度。
 - 模型与 `GPT`、`LLaMA` 和 `OPT` 等基于 Transformer 的架构配合良好。
 
-### 1.4 量化的权衡
+##### 1.4 量化的权衡
 
 | 优点 | 缺点 |
 | --- | --- |
@@ -5021,28 +5105,28 @@ quantized_model.save_pretrained("quantized_opt_1.3b")
 | 提高推理速度（2-4 倍）。 | 并非所有层都能从量化中受益。 |
 | 适用于 CPU 和低功耗设备。 | 需要硬件支持以获得最佳。 |
 
-##### 2. 模型蒸馏
+#### 2. 模型蒸馏
 
-### 2.1 什么是模型蒸馏？
+##### 2.1 什么是模型蒸馏？
 
 蒸馏是一种知识迁移技术，通过大模型训练小模型来近似其预测。学生模型从教师模型的软概率而非硬标签学习。
 
-### 2.2 为什么要使用蒸馏？
+##### 2.2 为什么要使用蒸馏？
 
 - 在保持性能的同时减小模型尺寸。
 - 通过用紧凑方案替代大模型加速推理。
 - 通过学习教师模型的细微决策边界增强泛化能力。
 
-### 2.3 蒸馏流程
+##### 2.3 蒸馏流程
 
 1. 在数据集上训练大型教师模型。
 2. 提取其软预测（概率分布）。
 3. 训练较小的学生模型以匹配这些预测。
 4. 使用标准监督学习微调学生模型。
 
-### 2.4 使用 Hugging Face 实现模型蒸馏
+##### 2.4 使用 Hugging Face 实现模型蒸馏
 
-将 BERT 蒸馏到 DistilBERT
+**将 BERT 蒸馏到 DistilBERT**
 
 ```python
 from transformers import DistilBertForSequenceClassification, Trainer, TrainingArguments
@@ -5050,20 +5134,13 @@ from transformers import DistilBertForSequenceClassification, Trainer, TrainingA
 # 加载预训练的 DistilBERT 模型
 student_model = DistilBertForSequenceClassification.from_pretrained("distilbert-base-uncased")
 
-##### 定义训练参数
+# 定义训练参数
 training_args = TrainingArguments(
     output_dir="./distilled_model",
     per_device_train_batch_size=16,
-    evaluation_strategy="epoch"
+    evaluation_strategy="epoch",
+    num_train_epochs=3
 )
-```
-
-
-
-
-
-```python
-num_train_epochs=3
 
 trainer = Trainer(
     model=student_model,
@@ -5075,12 +5152,13 @@ trainer = Trainer(
 trainer.train()
 ```
 
-### 解析
+**解析**
+
 - 使用 `DistilBERT`，这是一个从 `BERT-base` (12 层) 蒸馏出的 6 层模型。
 - 在保留 97% 准确率的同时，模型尺寸减小了 40%。
 - 使用来自教师模型的软目标（soft targets）进行训练。
 
-## 2.5 蒸馏的权衡
+##### 2.5 蒸馏的权衡
 
 | 优点 | 缺点 |
 | --- | --- |
@@ -5088,14 +5166,13 @@ trainer.train()
 | 保持高准确率（与教师模型相比在 2-3%以内）。 | 有效调优可能非常耗时。 |
 | 将推理速度提高 2-3 倍。 | 学生模型仍需微调。 |
 
-***
+#### 3. 模型剪枝
 
-##### 3. 模型剪枝
+##### 3.1 什么是剪枝？
 
-### 3.1 什么是剪枝？
 剪枝通过移除冗余或低重要性的权重来降低计算成本和模型复杂度。
 
-### 3.2 剪枝类型
+##### 3.2 剪枝类型
 
 | 剪枝类型 | 描述 |
 | --- | --- |
@@ -5103,7 +5180,7 @@ trainer.train()
 | `Structured Pruning`（结构剪枝） | 消除整个神经元、过滤器或层。 |
 | `Unstructured Pruning`（非结构剪枝） | 移除单个参数，生成稀疏矩阵。 |
 
-### 3.3 实现基于幅度的剪枝
+##### 3.3 实现基于幅度的剪枝
 
 ```python
 import torch.nn.utils.prune as prune
@@ -5119,7 +5196,7 @@ for name, module in model.named_modules():
         prune.remove(module, 'weight')
 ```
 
-### 3.4 剪枝的权衡
+##### 3.4 剪枝的权衡
 
 | 优点 | 缺点 |
 | --- | --- |
@@ -5127,25 +5204,22 @@ for name, module in model.named_modules():
 | 加快稀疏模型的推理速度。 | 剪枝后可能需要重新训练。 |
 | 与量化结合良好。 | 某些硬件缺乏对稀疏性的优化支持。 |
 
-***
-
 ### 12.2 在边缘设备和低资源环境中运行 LLM
-大语言模型 (LLMs) 驱动了许多现代 AI 应用，但其高计算需求使得在边缘设备和低资源环境上的部署变得具有挑战性。在此类环境中高效运行 LLM 需要结合模型压缩、优化推理技术和硬件感知的优化方案。
 
-***
+大语言模型 (`LLMs`) 驱动了许多现代 AI 应用，但其高计算需求使得在边缘设备和低资源环境上的部署变得具有挑战性。在此类环境中高效运行 `LLM` 需要结合模型压缩、优化推理技术和硬件感知的优化方案。
 
-##### 1. 在边缘设备上运行 LLM 的挑战
-边缘设备包括智能手机、树莓派、NVIDIA Jetson、TPU 和嵌入式系统，它们具有局限的：
+#### 1. 在边缘设备上运行 LLM 的挑战
+
+边缘设备包括智能手机、树莓派、`NVIDIA Jetson`、TPU 和嵌入式系统，它们具有局限的：
+
 - 内存（RAM 限制，通常 <8GB）。
 - 计算能力（低端 CPU、有限的 GPU 核心）。
 - 存储（用于大模型的磁盘空间有限）。
 - 功耗效率（电池供电设备需要高效率的 AI 执行）。
 
-考虑到这些限制，LLM 需要优化技术来在保持准确性和推理速度的同时减少计算开销。
+考虑到这些限制，`LLM` 需要优化技术来在保持准确性和推理速度的同时减少计算开销。
 
-***
-
-## 2. 针对边缘和低资源环境优化 LLM
+#### 2. 针对边缘和低资源环境优化 LLM
 
 ##### 2.1 模型压缩技术
 
@@ -5154,20 +5228,19 @@ for name, module in model.named_modules():
 | `Quantization`（量化） | 降低精度（例如 FP32 → INT8），提高速度并降低内存占用。 |
 | `Pruning`（剪枝） | 移除冗余参数，减少计算。 |
 | `Distillation`（蒸馏） | 使用来自大模型的知识训练较小的模型。 |
-| `Efficient Architectures`（高效架构） | 使用较小的模型如 `MobileBERT`, `DistilBERT`, `TinyLLaMA` 代替标准模型。 |
+| `Efficient Architectures`（高效架构） | 使用较小的模型如 `MobileBERT`、`DistilBERT`、`TinyLLaMA` 代替标准模型。 |
 
-***
-
-##### 3. 用于边缘设备的轻量级 LLM 架构
+#### 3. 用于边缘设备的轻量级 LLM 架构
 
 ##### 3.1 DistilBERT：轻量级 BERT 替代方案
-DistilBERT 是一个从 `BERT-base` (12 层) 蒸馏出的 6 层 Transformer 模型，实现了：
+
+`DistilBERT` 是一个从 `BERT-base` (12 层) 蒸馏出的 6 层 Transformer 模型，实现了：
+
 - 模型尺寸缩小 40%。
 - 推理速度提升 60%。
 - 保留 BERT 约 97% 的准确率。
 
-#### 在边缘设备上使用 DistilBERT 进行文本分类
-Python (Hugging Face Transformers)
+**在边缘设备上使用 DistilBERT 进行文本分类**
 
 ```python
 from transformers import DistilBertTokenizer, DistilBertForSequenceClassification
@@ -5189,22 +5262,21 @@ with torch.no_grad():
 print(f"Predicted Class: {prediction.item()}")
 ```
 
-***
+##### 3.2 TinyLLaMA：紧凑 Llama 变体
 
-##### 3.2 TinyLLMA：紧凑 Llama 变体
-TinyLLMA 是 LLaMA 的量化变体，针对低功耗设备进行了优化。
+`TinyLLaMA` 是 LLaMA 的量化变体，针对低功耗设备进行了优化。
 
-| TinyLLMA 变体 | 尺寸 | 用途 |
+| TinyLLaMA 变体 | 尺寸 | 用途 |
 | --- | --- | --- |
-| `TinyLLMA-1.1B` | 1.1B 参数 | 智能手机、树莓派 |
-| `TinyLLMA-560M` | 560M 参数 | Jetson、嵌入式系统 |
+| `TinyLLaMA-1.1B` | 1.1B 参数 | 智能手机、树莓派 |
+| `TinyLLaMA-560M` | 560M 参数 | Jetson、嵌入式系统 |
 
-在边缘设备上部署 TinyLLMA
+**在边缘设备上部署 TinyLLaMA**
 
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-# 加载 TinyLLMA
+# 加载 TinyLLaMA
 model_name = "tinylama/1.1b"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name)
@@ -5221,18 +5293,21 @@ with torch.no_grad():
 print(tokenizer.decode(output[0], skip_special_tokens=True))
 ```
 
-***
+#### 4. 硬件加速的 LLM 推理
 
-##### 4. 硬件加速的 LLM 推理
-在边缘设备上高效运行 LLM 通常需要使用以下硬件加速技术：
-- TensorRT (用于 GPU)
-- ONNX Runtime (用于 CPU 和专用加速器)
-- TF-Lite (用于移动端的 TensorFlow 模型)
+在边缘设备上高效运行 `LLM` 通常需要使用以下硬件加速技术：
 
-### 4.1 使用 ONNX 优化 LLM 推理
-ONNX（开放神经网络交换）允许在硬件上运行优化后的模型。
+- `TensorRT` (用于 GPU)
+- `ONNX Runtime` (用于 CPU 和专用加速器)
+- `TF-Lite` (用于移动端的 TensorFlow 模型)
 
-使用 ONNX 转换并运行 LLM
+##### 4.1 使用 ONNX 优化 LLM 推理
+
+`ONNX`（开放神经网络交换）允许在硬件上运行优化后的模型。
+
+**使用 ONNX 转换并运行 LLM**
+
+
 
 ```python
 import torch
@@ -5256,19 +5331,20 @@ outputs = session.run(None, {"input_ids": tokens["input_ids"]})
 print(outputs)
 ```
 
-ONNX Runtime 的优点
+## ONNX Runtime 的优点
+
 - 在 CPU 上比 PyTorch/TensorFlow 快 5-10 倍。
 - 支持移动、边缘和加速器。
 - 支持自定义量化以进一步优化。
 
-***
+## 5. 在移动设备上部署 LLM
 
-##### 5. 在移动设备上部署 LLM
+### 5.1 使用 TensorFlow Lite 进行移动端部署
 
-##### 5.1 使用 TensorFlow Lite 进行移动端部署
 TF-Lite 是一个为移动和嵌入式设备设计的轻量级机器学习运行时。
 
-在 Android/iOS 上部署量化步骤
+#### 在 Android/iOS 上部署量化步骤
+
 1. 训练或微调模型（例如 DistilBERT）。
 2. 使用 TensorFlow 转换为 TF-Lite 格式。
 3. 使用 TF-Lite 解释器运行推理。
@@ -5286,7 +5362,7 @@ with open("distilbert.tflite", "wb") as f:
     f.write(tflite_model)
 ```
 
-##### 5.2 在 Android 上使用 TF-Lite 运行 LLM
+### 5.2 在 Android 上使用 TF-Lite 运行 LLM
 
 ```java
 Interpreter tflite = new Interpreter(loadModelFile("distilbert.tflite"));
@@ -5294,16 +5370,14 @@ float[][] output = new float[1][numClasses];
 tflite.run(inputTensor, output);
 ```
 
-***
+---
 
-## 第 13 章：部署 NLP 应用
-
-
-
+# 第 13 章：部署 NLP 应用
 
 部署 NLP 应用是将 AI 驱动的语言模型引入真实用户的关键步骤。无论是在云平台上托管模型，还是在设备上部署，每种方法在可扩展性、延迟和成本方面都有独特的权衡。
 
 本章涵盖：
+
 1. 基于云的部署（`AWS`、`GCP`、`Hugging Face Spaces`）。
 2. 基于 API 与设备端部署对比。
 3. 构建高效推理的生产级流水线。
@@ -5312,15 +5386,16 @@ tflite.run(inputTensor, output);
 
 完成本章后，你将具备部署 NLP 应用的能力，无论是在高性能云基础设施上还是在资源受限的边缘设备上。
 
-### 13.1 在云平台上托管模型 (AWS, GCP, Hugging Face)
+## 13.1 在云平台上托管模型 (AWS, GCP, Hugging Face)
 
 在应用程序中部署 NLP 模型需要一种稳健且可扩展的策略。云平台提供了必要的基础设施和工具，可以在规模化提供大语言模型（`LLMs`）的同时优化成本和性能。本章将探索如何在 `AWS`、`GCP` 和 `Hugging Face Spaces` 上部署 NLP 模型，涵盖最佳实践和权衡。
 
 在深入具体的实现之前，我们将首先理解在云平台上部署模型的核心原理。
 
-##### 云端模型托管的基础
+### 云端模型托管的基础
 
 部署 NLP 模型涉及：
+
 1. **模型打包**：将训练好的模型转换为可部署格式（`ONNX`、`TorchScript`、`SavedModel`）。
 2. **基础设施选择**：选择合适的资源（`CPU`、`GPU`、`TPU`）。
 3. **推理优化**：使用量化、蒸馏或剪枝来降低延迟。
@@ -5329,19 +5404,21 @@ tflite.run(inputTensor, output);
 
 云平台的选择取决于成本、易用性和集成能力。
 
-##### AWS
+### AWS
 
 Amazon Web Services (`AWS`) 提供了多种用于托管模型的服务，包括：
-* `SageMaker`：全托管 ML 平台。
-* `Lambda`：用于轻级模型的无服务器推理。
-* `EC2`：基于 GPU 加速的自定义虚拟机托管。
-* `Bedrock`：专为基础模型设计。
 
-使用 Amazon SageMaker 托管 NLP 模型
+- `SageMaker`：全托管 ML 平台。
+- `Lambda`：用于轻级模型的无服务器推理。
+- `EC2`：基于 GPU 加速的自定义虚拟机托管。
+- `Bedrock`：专为基础模型设计。
+
+#### 使用 Amazon SageMaker 托管 NLP 模型
 
 `SageMaker` 提供了一种可扩展且具有成本效益的部署 `LLMs` 的方法。它支持 `TensorFlow`、`PyTorch` 和 `Hugging Face` 模型。
 
-**步骤 1：准备模型**
+##### 步骤 1：准备模型
+
 将 `Hugging Face` 模型转换为 `TorchScript`：
 
 ```python
@@ -5358,13 +5435,16 @@ traced_model = torch.jit.trace(model, dummy_input)
 traced_model.save("model.pt")
 ```
 
-**步骤 2：将模型上传到 S3**
+##### 步骤 2：将模型上传到 S3
+
 SageMaker 从 `S3` 加载模型。
+
 ```bash
 aws s3 cp model.pt s3://your-bucket-name/
 ```
 
-**步骤 3：使用 SageMaker 部署**
+##### 步骤 3：使用 SageMaker 部署
+
 使用 `SageMaker` 端点部署模型。
 
 ```python
@@ -5383,21 +5463,24 @@ sagemaker.create_endpoint(
     EndpointConfigName="DistilBERTModel"
 )
 ```
+
 SageMaker 将启动一个端点，你可以通过 API 请求查询模型。
 
-##### GCP
+### GCP
 
 Google Cloud Platform (`GCP`) 提供了如下服务：
-* `Vertex AI`：全托管 AI 服务。
-* `Cloud Run`：无服务器模型托管。
-* `AI Platform Prediction`：可扩展的 ML 模型服务。
-* `TPU-optimized inference`：使用 `TPUs` 加速部署。
 
-使用 Vertex AI 托管 NLP 模型
+- `Vertex AI`：全托管 AI 服务。
+- `Cloud Run`：无服务器模型托管。
+- `AI Platform Prediction`：可扩展的 ML 模型服务。
+- `TPU-optimized inference`：使用 `TPUs` 加速部署。
+
+#### 使用 Vertex AI 托管 NLP 模型
 
 `Vertex AI` 简化了部署流程并与 `TensorFlow`、`PyTorch` 和 `ONNX` 良好集成。
 
-**步骤 1：转换并保存模型**
+##### 步骤 1：转换并保存模型
+
 将 `Hugging Face` 模型转换为 `SavedModel` 格式。
 
 ```python
@@ -5408,13 +5491,16 @@ tokenizer = AutoTokenizer.from_pretrained(model_name)
 model.save_pretrained("saved_model/")
 ```
 
-**步骤 2：上传到 Google Cloud Storage**
+##### 步骤 2：上传到 Google Cloud Storage
+
 使用 `gsutil` 上传模型。
+
 ```bash
 gsutil cp -r saved_model/ gs://your-bucket-name/
 ```
 
-**步骤 3：在 Vertex AI 上部署**
+##### 步骤 3：在 Vertex AI 上部署
+
 使用 `Vertex AI` 部署模型。
 
 ```bash
@@ -5427,30 +5513,35 @@ gcloud ai models upload \
 ```
 
 现在，创建一个端点：
+
 ```bash
 gcloud ai endpoints create --region=us-central1 --display-name=distilbert-endpoint
 ```
 
 最后，部署模型：
+
 ```bash
 gcloud ai endpoints deploy-model distilbert-endpoint \
   --model=distilbert \
   --machine-type=n1-standard-4
 ```
 
-##### Hugging Face Spaces
+### Hugging Face Spaces
 
-Hugging Face Spaces 提供了一种简单的方法，只需极少的基础即可即可模型。它支持：
-* `Gradio` 用于交互式 UI。
-* `FastAPI` 用于基于 API 的推理。
-* `Docker` 用于自定义环境。
+Hugging Face Spaces 提供了一种简单的方法，只需极少的基础即可托管模型。它支持：
 
-使用 Gradio 在 Hugging Face Spaces 上托管 NLP 模型
+- `Gradio` 用于交互式 UI。
+- `FastAPI` 用于基于 API 的推理。
+- `Docker` 用于自定义环境。
 
-**步骤 1：创建 Space**
+#### 使用 Gradio 在 Hugging Face Spaces 上托管 NLP 模型
+
+##### 步骤 1：创建 Space
+
 前往 Hugging Face Spaces 并创建一个新仓库。
 
-**步骤 2：实现模型**
+##### 步骤 2：实现模型
+
 创建一个 `app.py` 文件：
 
 ```python
@@ -5466,7 +5557,8 @@ iface = gr.Interface(fn=classify_text, inputs="text", outputs="label")
 iface.launch()
 ```
 
-**步骤 3：定义依赖**
+##### 步骤 3：定义依赖
+
 创建一个 `requirements.txt` 文件：
 
 ```text
@@ -5475,7 +5567,8 @@ gradio
 torch
 ```
 
-**步骤 4：提交并推送**
+##### 步骤 4：提交并推送
+
 使用 `Git` 上传文件。
 
 ```bash
@@ -5483,38 +5576,37 @@ git add app.py requirements.txt
 git commit -m "Initial commit"
 git push
 ```
+
 你的模型将在 Hugging Face Spaces 上上线。
 
-
-
-
+## 基于 API 的部署
 
 基于 API 的部署涉及将 NLP 模型托管在中心化服务器（云端或本地）上，并通过 RESTful 或 gRPC API 提供访问。这种方法广泛适用于需要可扩展性和持续更新的生产环境应用。
 
-##### 基于 API 部署的优势
+### 基于 API 部署的优势
 
 1. `扩展性` – 轻松处理来自不同客户端的多个请求。
 2. `模型版本控制与更新` – 集中式控制以进行持续改进。
 3. `资源效率` – 将计算密集型任务卸载到强大的云服务器。
 4. `安全性与访问控制` – API 身份验证确保访问受控。
 
-##### 基于 API 部署面临的挑战
+### 基于 API 部署面临的挑战
 
 1. `延迟` – 网络通信会增加延迟。
 2. `可用性依赖` – 需要活跃的互联网连接。
 3. `运营成本` – 云托管和计算资源会产生经常性费用。
 
-##### 使用 FastAPI 将 NLP 模型部署为 REST API
+### 使用 FastAPI 将 NLP 模型部署为 REST API
 
 FastAPI 是一个用于提供机器学习服务的轻量级、高性能框架。
 
-##### 第 1 步：安装依赖
+#### 第 1 步：安装依赖
 
 ```bash
 pip install fastapi uvicorn transformers torch
 ```
 
-##### 第 2 步：加载模型
+#### 第 2 步：加载模型
 
 ```python
 from fastapi import FastAPI
@@ -5529,7 +5621,7 @@ def predict(text: str):
     return {"label": result[0]["label"], "score": result[0]["score"]}
 ```
 
-##### 第 3 步：运行 API 服务器
+#### 第 3 步：运行 API 服务器
 
 ```bash
 uvicorn app:app --host 0.0.0.0 --port 8000
@@ -5537,7 +5629,7 @@ uvicorn app:app --host 0.0.0.0 --port 8000
 
 现在 API 已经可以通过 `http://localhost:8000/predict/` 访问。
 
-##### 第 4 步：测试 API
+#### 第 4 步：测试 API
 
 使用 `curl` 或 Python：
 
@@ -5551,40 +5643,42 @@ response = requests.post("http://localhost:8000/predict/", json={"text": "This i
 print(response.json())
 ```
 
-***
+---
 
-##### 设备端部署
+## 设备端部署
 
 设备端部署涉及直接在边缘设备（如手机、嵌入式系统或 IoT 硬件）上运行 NLP 模型。
 
-##### 设备端部署的优势
+### 设备端部署的优势
 
 1. `低延迟` – 无网络通信开销。
 2. `离线可用` – 无需互联网连接即可工作。
 3. `隐私与安全` – 将用户数据保留在本地。
 
-##### 设备端部署面临的挑战
+### 设备端部署面临的挑战
 
 1. `计算资源限制` – 受设备 CPU/GPU 性能限制。
 2. `模型大小限制` – 大型 LLM 难以放入内存。
 3. `功耗` – 运行推理会消耗电池寿命。
 
-##### 针对设备端使用优化 NLP 模型
+### 针对设备端使用优化 NLP 模型
 
 为了在移动或边缘设备上部署模型，优化技术包括：
 
-* `量化` – 使用较低精度减小模型大小（例如使用 `int8` 代替 `float32`）。
-* `剪枝` – 移除必要的权重以缩小模型。
-* `知识蒸馏` – 训练一个较小的“学生”模型来模仿较大的模型。
-* `ONNX/TensorFlow Lite ` – 将模型转换为轻量级格式。
+- `量化` – 使用较低精度减小模型大小（例如使用 `int8` 代替 `float32`）。
+- `剪枝` – 移除冗余的权重以缩小模型。
+- `知识蒸馏` – 训练一个较小的“学生”模型来模仿较大的模型。
+- `ONNX/TensorFlow Lite` – 将模型转换为轻量级格式。
 
-***
+---
 
 # 使用 ONNX Runtime 在移动端部署 DistilBERT 模型
 
 ONNX（开放神经网络交换）实现了具有优化执行的跨平台推理。
 
-#### 第 1 步：将模型转换为 ONNX 格式
+## 第 1 步：将模型转换为 ONNX 格式
+
+
 
 ```python
 import torch
@@ -5641,6 +5735,7 @@ print(outputs)
 ### 混合方法
 
 某些应用受益于混合策略：
+
 * 在设备端执行轻量级任务以提高响应。
 * 将复杂任务卸载到 API 以提高准确性。
 
@@ -5648,11 +5743,11 @@ print(outputs)
 
 ## 第 14 章：伦理、偏差与负责任 AI
 
-随着大语言模型（LLM）成为应用的核心，伦理、偏差和负责任 AI 的问题日益受到关注。虽然 LLM 提供了强大的功能，但也引入了偏差并需要治理。
+随着大语言模型（`LLM`）成为应用的核心，伦理、偏差和负责任 AI 的问题日益受到关注。虽然 `LLM` 提供了强大的功能，但也引入了偏差并需要治理。
 
 本章探讨了负责任 AI 的关键方面，包括：
 
-1. LLM 中的偏差
+1. `LLM` 中的偏差
 2. AI 公平、透明度
 3. 负责任 AI 的未来
 
@@ -5662,43 +5757,35 @@ print(outputs)
 
 ### 14.1 LLM 中的偏差及其缓解方法
 
-大语言模型（LLM）基于海量数据集，并在自然语言处理（NLP）方面展现了卓越的能力。然而，这些模型也可能表现出偏差——导致不公正的系统性错误。LLM 的偏差源于训练数据、处理信息的算法，甚至是微调的方式。
+大语言模型（`LLM`）基于海量数据集，并在自然语言处理（`NLP`）方面展现了卓越的能力。然而，这些模型也可能表现出偏差——导致不公正的系统性错误。`LLM` 的偏差源于训练数据、处理信息的算法，甚至是微调的方式。
 
 解决偏差对于构建公平、减少伤害并确保可信的 AI 至关重要。本章将深入探讨：
 
-1. LLM 偏差的来源和类型
+1. `LLM` 偏差的来源和类型
 2. 检测和评估偏差的技术
 3. 在 AI 流不同阶段缓解偏差的方法
 
 ***
 
-### 理解 LLM 中的偏差
+#### 理解 LLM 中的偏差
 
 ##### 偏差的来源
 
-LLM 中的偏差并非单一因素造成，而是源于多个来源：
+`LLM` 中的偏差并非单一因素造成，而是源于多个来源：
 
 1. `训练数据偏差`
-* LLM 从书籍、新闻文章、社交媒体和其他来源收集的大量数据中学习。这些数据集反映了现实世界的不平等、刻板印象和文化偏差。
-* 示例：数据中男性 CEO 多于女性，会导致模型将领导力与男性联系。
-
+   * `LLM` 从书籍、新闻文章、社交媒体和其他来源收集的大量数据中学习。这些数据集反映了现实世界的不平等、刻板印象和文化偏差。
+   * 示例：数据中男性 CEO 多于女性，会导致模型将领导力与男性联系。
 2. `算法偏差`
-* 模型处理和生成文本的方式可能会放大偏差。例如，神经网络可能会根据数据的统计相关性强化某些词之间的关联。
-
+   * 模型处理和生成文本的方式可能会放大偏差。例如，神经网络可能会根据数据的统计相关性强化某些词之间的关联。
 3. `用户反馈与强化学习偏差`
-* 当使用人类反馈的强化学习（RLHF）对模型进行微调时，它们会继承标注者主观判断中的偏差。
-
+   * 当使用人类反馈的强化学习（`RLHF`）对模型进行微调时，它们会继承标注者主观判断中的偏差。
 4. `模型部署中的偏差`
+   * 模型集成到应用程序中的可能会引入偏见，例如内容过滤不成比例地影响特定群体。
 
+##### 偏见的类型
 
-
-
-
-模型集成到应用程序中的可能会引入偏见，例如内容过滤不成比例地影响特定群体。
-
-# 偏见的类型
-
-大语言模型（LLMs）中的偏见以多种方式体现：
+大语言模型（`LLMs`）中的偏见以多种方式体现：
 
 | 偏见类型 | 描述 | 示例 |
 | :--- | :--- | :--- |
@@ -5707,13 +5794,13 @@ LLM 中的偏差并非单一因素造成，而是源于多个来源：
 | 确认偏见 | 回复倾向于主流观点而非平衡的视角。 | AI 模型支持普遍的信念，而不是提供中立的论点。 |
 | 政治偏见 | 基于训练数据中意识形态趋势的倾斜的观点。 | AI 响应倾向于某一种政治立场而非另一种。 |
 
-# 如何检测 LLM 中的偏见
+##### 如何检测 LLM 中的偏见
 
 偏见检测涉及定性分析（人工复核）和定量分析（统计学方法）。
 
-## 定性偏见测试
+###### 定性偏见测试
 
-检查偏见的一种简单方法是测试 LLM 对不同人口统计学输入的响应。
+检查偏见的一种简单方法是测试 `LLM` 对不同人口统计学输入的响应。
 
 示例：
 
@@ -5734,11 +5821,11 @@ for s, r in zip(sentences, results):
 
 这种方法有助于识别某些职业是否被不公平地关联到特定的人口统计群体。
 
-## 定量偏见指标
+###### 定量偏见指标
 
-### 1. 词嵌入关联测试 (WEAT)
+**1. 词嵌入关联测试 (`WEAT`)**
 
-- 衡量单词与不同属性之间的关联程度（例如，男性与女性名称与职业相关词的关联）。
+* 衡量单词与不同属性之间的关联程度（例如，男性与女性名称与职业相关词的关联）。
 
 ```python
 from weat import WEAT
@@ -5754,24 +5841,23 @@ bias_score = WEAT.compute_bias(word_vectors, male_terms, female_terms)
 print(f"Bias Score: {bias_score}")
 ```
 
-- 高偏见分数表示嵌入中存在更强的性别关联性。
+* 高偏见分数表示嵌入中存在更强的性别关联性。
 
-### 2. 反事实测试
+**2. 反事实测试**
 
-- 使用不同的名称、性别或种族属性运行相同的提示词，以检查响应是否存在差异。
+* 使用不同的名称、性别或种族属性运行相同的提示词，以检查响应是否存在差异。
 
-# 缓解 LLM 中的偏见
+##### 缓解 LLM 中的偏见
 
 偏见缓解可以在 AI 流水线的不同阶段进行处理：
 
-## 1. 数据策划与预处理
+**1. 数据策划与预处理**
 
-### 多样化训练数据
-- 确保性别、种族和观点的平衡代表。
-- 使用数据增强技术创建更多样化的样本。
-
-### 词嵌入去偏化
-- 调整词向量以减少性别或种族偏见。
+* **多样化训练数据**
+  * 确保性别、种族和观点的平衡代表。
+  * 使用数据增强技术创建更多样化的样本。
+* **词嵌入去偏化**
+  * 调整词向量以减少性别或种族偏见。
 
 ```python
 from gensim.models import KeyedVectors
@@ -5786,79 +5872,88 @@ for word in ["doctor", "nurse", "engineer"]:
     word_vectors[word] -= np.dot(word_vectors[word], bias_axis) * bias_axis
 ```
 
-- 这种技术减少了偏偏词关联的直接影响。
+* 这种技术减少了偏偏词关联的直接影响。
 
-## 2. 模型微调与对抗性去偏
+**2. 模型微调与对抗性去偏**
 
-### 使用平衡数据集微调模型
-- 使用经过策划的、最小化偏见的数据集重新训练模型。
+* **使用平衡数据集微调模型**
+  * 使用经过策划的、最小化偏见的数据集重新训练模型。
+* **对抗性去偏**
+  * 训练对抗神经网络以消除 `LLM` 中的偏见。
 
-### 对抗性去偏
-- 训练对抗神经网络以消除 LLM 中的偏见。
+**3. 后处理与输出过滤**
 
-## 3. 后处理与输出过滤
+* **偏见感知的响应过滤**
+  * 使用自定义过滤器检测并纠正偏见响应。
+* **人机审计**
+  * 让多样化的人类标注员复核 AI 输出，以捕捉无意的偏见。
 
-### 偏见感知的响应过滤
-- 使用自定义过滤器检测并纠正偏见响应。
-
-### 人机审计
-- 让多样化的人类标注员复核 AI 输出，以捕捉无意的偏见。
-
-# 案例研究：减少 GPT 中的偏见
+##### 案例研究：减少 GPT 中的偏见
 
 **方法：**
-- GPT 模型使用人类反馈强化学习 (`RLHF`) 来进行对齐。
+
+* GPT 模型使用人类反馈强化学习 (`RLHF`) 来进行对齐。
 
 **影响：**
-- 减少了有害语言。
-- 提升了公平性。
 
-# 偏见管理的未来方向
+* 减少了有害语言。
+* 提升了公平性。
 
-### 1. 用于偏见的因果推理
-- 使用因果图确定是否存在偏见。
+##### 偏见管理的未来方向
 
-### 2. 自监督公平性
-- 开发训练方法。
+**1. 用于偏见的因果推理**
 
-### 3. 立法与 AI 治理
-- 采用全球框架进行强制。
+* 使用因果图确定是否存在偏见。
 
-# 14.2 AI 公平性、透明度和可解释性
+**2. 自监督公平性**
+
+* 开发训练方法。
+
+**3. 立法与 AI 治理**
+
+* 采用全球框架进行强制。
+
+***
+
+### 14.2 AI 公平性、透明度和可解释性
 
 随着大语言模型 (`LLMs`) 越来越融入社会，公平性、透明度和可解释性至关重要。本章探讨了：
 
 1. AI 公平性 – 确保 AI 系统不会产生不利影响。
 2. AI 透明度 – 使 AI 过程可见。
-3. AI 可解释性 – 提供关于……的洞察。
+3. AI 可解释性 – 提供关于模型决策的洞察。
 
 在本章结束时，读者将能够：
-- 理解公平性指标和技术。
-- 将透明性原则应用于 AI 开发。
-- 使用可解释性工具解释 LLM 的决策。
 
-# 理解 AI 公平性
+* 理解公平性指标和技术。
+* 将透明性原则应用于 AI 开发。
+* 使用可解释性工具解释 `LLM` 的决策。
+
+#### 理解 AI 公平性
 
 AI 中的公平性意味着模型公平地对待人口统计群体。不公平的 AI 系统可能会强化歧视，导致有偏见的招聘流程、不公平的贷款审批以及扭曲的医学诊断。
 
-## AI 公平性的关键维度
+##### AI 公平性的关键维度
 
-##### 1. 人口统计学差异 (Demographic Parity)
-- 不同人口统计群体之间的正预测概率应该是相同的。
-- 示例：贷款审批率在种族或性别群体之间不应有差异。
+**1. 人口统计学差异 (`Demographic Parity`)**
 
-##### 2. 机会均 (Equal Opportunity)
-- 各组真阳性率应相等。
-- 示例：如果两个候选人的资质相同，模型不应偏袒一方。
+* 不同人口统计群体之间的正预测概率应该是相同的。
+* 示例：贷款审批率在种族或性别群体之间不应有差异。
 
-##### 3. 反事实公平性 (Counterfactual Fairness)
-- 在保持其他特征不变的情况下，模型的输出不应发生变化。
+**2. 机会均等 (`Equal Opportunity`)**
 
-# 检测 AI 系统中的偏见
+* 各组真阳性率应相等。
+* 示例：如果两个候选人的资质相同，模型不应偏袒一方。
+
+**3. 反事实公平性 (`Counterfactual Fairness`)**
+
+* 在保持其他特征不变的情况下，模型的输出不应发生变化。
+
+##### 检测 AI 系统中的偏见
 
 偏见检测涉及使用公平性指标并在多样化数据集上审计 AI 模型。
 
-##### 衡量公平性
+###### 衡量公平性
 
 一种常用方法是比较不同群体之间的统计指标。
 
@@ -5885,28 +5980,22 @@ print(f"Group B 的准确率: {accuracy_b}")
 
 准确率的显著差异可能意味着公平性问题。
 
-# 偏见缓解技术
+##### 偏见缓解技术
 
 偏见可以在 AI 模型开发的不同阶段进行缓解。
 
-##### 1. 预处理：数据平衡
+**1. 预处理：数据平衡**
 
+* 调整数据集以确保不同组的对等表示。
+* 使用过采样或欠采样技术。
 
+**2. 中间处理：公平性约束训练**
 
+* 使用公平性约束训练模型，以最大限度地减少差异影响。
 
+**3. 后处理：算法调整**
 
-- 调整数据集以确保不同组的对等表示。
-- 使用过采样或欠采样技术。
-
-## 2. 中间处理：公平性约束训练
-
-- 使用公平性约束训练模型，以最大限度地减少差异影响。
-
-########## 3. 后处理：算法调整
-
-- 在模型训练后调整预测，以平衡不同组之间的结果。
-
-### Python
+* 在模型训练后调整预测，以平衡不同组之间的结果。
 
 ```python
 from aif360.algorithms.postprocessing import RejectOptionClassification
@@ -5924,22 +6013,24 @@ corrected_dataset = roc.fit_transform(dataset)
 
 ***
 
-# AI 透明度
+#### AI 透明度
 
 ##### 为什么透明度很重要
+
 AI 透明度确保了模型行为能够被开发者、用户和监管人员理解。缺乏透明度会导致不信任，并阻碍 AI 在关键应用中的采用。
 
-### 透明度的各个维度：
+###### 透明度的各个维度：
+
 1. **数据透明度** – 对用于训练的数据集进行清晰记录。
 2. **算法透明度** – 公开描述 AI 模型的工作原理。
 3. **决策透明度** – 提供单个 AI 预测的可视性。
 
-### 构建透明的 AI 模型
-开发者可以通过以下方式提高透明度：
-- **使用开源模型** – `OpenAI`、`Meta` 和 `Hugging Face` 提供了记录训练过程的公共模型。
-- **记录模型行为** – 记录预测和解释，以备审计。
+###### 构建透明的 AI 模型
 
-### Python
+开发者可以通过以下方式提高透明度：
+
+* **使用开源模型** – `OpenAI`、`Meta` 和 `Hugging Face` 提供了记录训练过程的公共模型。
+* **记录模型行为** – 记录预测和解释，以备审计。
 
 ```python
 import json
@@ -5960,20 +6051,21 @@ log_prediction("Translate 'Hola' to English", "Hello")
 
 ***
 
-# AI 可解释性
+#### AI 可解释性
 
-### 理解可解释性
+##### 理解可解释性
+
 可解释性是指使 AI 模型的预测对人类可解释的。黑箱 AI 系统（如深度神经网络）难以理解，因此需要相关技术来解释其输出。
 
-### 可解释性的类型：
+###### 可解释性的类型：
+
 1. **特征重要性** – 识别哪些输入特征影响决策。
 2. **基于案例的解释** – 寻找类似的过去案例来证明结果合理。
-3. **注意力机制** – 可视化输入中的哪些部分影响了 LLM 的响应。
+3. **注意力机制** – 可视化输入中的哪些部分影响了 `LLM` 的响应。
 
-### 使用 SHAP 解释 LLM 决策
+###### 使用 SHAP 解释 LLM 决策
+
 SHAP (`Shapley Additive exPlanations`) 是理解 AI 模型输出的强大工具。
-
-### Python
 
 ```python
 import shap
@@ -5996,28 +6088,29 @@ shap_values = explainer([input_text])
 
 ***
 
-# 案例研究：招聘中的可解释性
+##### 案例研究：招聘中的可解释性
 
-### 场景
+**场景**
+
 某公司使用 AI 筛选简历。
 
-### 方法
+**方法**
+
 1. **公平性** – 审计差异。
 2. **透明度** – 记录标准。
 3. **可解释性** – 识别候选人被拒绝的原因。
 
-### 结果
+**结果**
+
 通过分析决策，该公司减少了偏见并确保了公平招聘。
-
-
-
-
 
 ```python
 model = AutoModelForSequenceClassification.from_pretrained("bert-base-uncased")
 ```
 
 # 联邦训练逻辑（简化版）
+
+
 
 ```python
 def federated_training(local_datasets):
@@ -6046,8 +6139,6 @@ federated_training([dataset1, dataset2])
 
 差分隐私（DP）确保个别数据点无法从 AI 模型中反向工程。
 
-Python
-
 ```python
 from tensorflow_privacy.privacy.optimizers.dp_optimizer import DPAdamGaussianOptimizer
 
@@ -6072,18 +6163,18 @@ dp_optimizer = DPAdamGaussianOptimizer(
 
 * `欧盟 AI 法` – 第一个全面的 AI 监管框架，提出了透明度和公平性要求。
 * `美国 AI 权利法案` – 概述了防止歧视的 AI 伦理原则。
-* `中国 AI 治理指南` – 侧于 AI 伦理和风险管理。
+* `中国 AI 治理指南` – 侧重于 AI 伦理和风险管理。
 
-##### 4.2 伦理 AI 开发框架
+### 4.2 伦理 AI 开发框架
 
 * `IEEE 伦理对齐设计` – 为负责任的 AI 建立了指南。
-* `蒙特利尔 AI 伦理宣言` – 侧于包容性和公平的 AI 系统。
+* `蒙特利尔 AI 伦理宣言` – 侧重于包容性和公平的 AI 系统。
 
 未来的 NLP 应用在维护伦理 AI 标准的同时，必须遵守这些不断发展的法规。
 
 ***
 
-##### 5. 前行之路
+## 5. 前行之路
 
 ### 5.1 未来研究领域
 
@@ -6091,7 +6182,7 @@ dp_optimizer = DPAdamGaussianOptimizer(
 * `AI 审计框架` – 用于验证 AI 公平性和透明度的自动化工具。
 * `高能效 AI` – 减少 AI 训练的碳足迹。
 
-##### 5.2 开发者如何贡献
+### 5.2 开发者如何贡献
 
 * `为开源公平性工具贡献代码` – 如 `AIF360` 和 `SHAP` 等库有助于让 AI 更透明。
 * `提倡伦理 AI 政策` – 参与 AI 治理讨论。
@@ -6125,12 +6216,12 @@ AI 驱动的聊天机器人已经改变了客户服务、虚拟助手和业务�
 
 `GPT-4` 是一个在多样化互联网文本上训练的大型 Transformer 模型。它的能力包括：
 
-* `上下文理解` – 处理复杂的的多轮对话。
+* `上下文理解` – 处理复杂的多轮对话。
 * `动态响应生成` – 生成类人类、连贯的响应。
 * `代码与数学推理` – 增强聊天机器人在编码和计算能力。
 * `多模态支持` – 接受文本并在某些情况下接受图像输入。
 
-##### 1.1 聊天机器人如何利用 GPT-4
+#### 1.1 聊天机器人如何利用 GPT-4
 
 使用 `GPT-4` 构建的聊天机器人通常遵循以下步骤：
 
@@ -6150,7 +6241,7 @@ AI 驱动的聊天机器人已经改变了客户服务、虚拟助手和业务�
 2. 一个 OpenAI API 密钥。
 3. `openai` 包。
 
-##### 2.1 安装依赖项
+#### 2.1 安装依赖项
 
 ```bash
 pip install openai python-dotenv
@@ -6185,23 +6276,24 @@ def chat_with_gpt(prompt, model="gpt-4"):
     )
     return response.choices[0].message.content
 
-##### 示例
+# 示例
 user_input = "什么是 AI?"
 response = chat_with_gpt(user_input)
 print(response)
 ```
 
 解释：
+
 * 函数调用 OpenAI API，发送提示并接收响应。
 * 使用 `gpt-4` 模型用于推理和流畅度。
 
 ***
 
-##### 3. 为聊天机器人增强记忆
+### 3. 为聊天机器人增强记忆
 
 默认情况下，`GPT-4` 不记得过去的交互。为了创建对话体验，我们维护聊天历史。
 
-##### 3.1 实现感知上下文的对话
+#### 3.1 实现感知上下文的对话
 
 ```python
 def chat_with_memory(messages, model="gpt-4"):
@@ -6227,16 +6319,17 @@ print(response)
 ```
 
 关键特性：
+
 * 聊天历史被维护并在每次新请求发送到 `GPT-4`。
 * 模型记得之前的消息以生成感知上下文的响应。
 
 ***
 
-##### 4. 为特定领域机器人微调 GPT-4
+### 4. 为特定领域机器人微调 GPT-4
 
 微调允许我们在专用数据集上训练 `GPT-4`，以提高在医疗、金融或客户支持等特定领域的准确性。
 
-##### 4.1 准备数据集
+#### 4.1 准备数据集
 
 `GPT-4` 微调需要 `JSONL` 格式：
 
@@ -6252,19 +6345,11 @@ print(response)
 3. 训练模型。
 4. 部署微调后的模型。
 
-
-
-
-
-# 4.2  GPT-4
-
-### 上传数据：
+#### 4.2 上传数据与训练模型
 
 ```sh
 openai tools fine_tunes.prepare_data -f dataset.jsonl
 ```
-
-### 训练模型：
 
 ```sh
 openai api fine_tunes.create -t "dataset_prepared.jsonl" -m gpt-4
@@ -6272,9 +6357,9 @@ openai api fine_tunes.create -t "dataset_prepared.jsonl" -m gpt-4
 
 ***
 
-##### 5. 部署与优化机器人
+### 5. 部署与优化机器人
 
-##### 5.1 部署到 Web 应用
+#### 5.1 部署到 Web 应用
 
 可以使用 `FastAPI` 部署机器人来实现交互。
 
@@ -6293,10 +6378,12 @@ async def chat(prompt: str):
     return {"response": response["choices"][0]["message"]["content"]}
 ```
 
+```bash
 # 运行服务器
-# `uvicorn filename:app --reload`
+uvicorn filename:app --reload
+```
 
-##### 5.2 优化机器人性能
+#### 5.2 优化机器人性能
 
 使用 token 限制控制响应长度：
 
@@ -6311,7 +6398,7 @@ max_tokens=100  # 限制响应长度
 
 ## 第 16 章：新闻摘要应用
 
-## 16.1 开发一个 AI 驱动的新闻文章摘要器
+### 16.1 开发一个 AI 驱动的新闻文章摘要器
 
 新闻文章包含价值信息，但每日出版物的庞大数量让人难以跟上。AI 驱动的新闻摘要提供了一种高效提取关键见解的方法，在节省时间的同时保留核心细节。
 
@@ -6325,16 +6412,16 @@ max_tokens=100  # 限制响应长度
 
 ***
 
-##### 1. 理解 AI 驱动的新闻摘要
+### 1. 理解 AI 驱动的新闻摘要
 
 文本摘要主要分为两类：
 
-- **抽取式摘要 (Extractive Summarization)**：从原文中选择关键句子。
-- **生成式摘要 (Abstractive Summarization)**：用新的词汇生成简洁的摘要，同时保持核心含义。
+* **抽取式摘要** – 从原文中选择关键句子。
+* **生成式摘要** – 用新的词汇生成简洁的摘要，同时保持核心含义。
 
 `GPT-4` 非常适合生成式摘要，它通过理解上下文而非仅仅提取关键句子，来生成类人类的、连贯的摘要。
 
-##### 1.1 AI 摘要如何工作原理
+#### 1.1 AI 摘要如何工作原理
 
 1. **文本预处理** – 清理原始新闻文章（移除 HTML、特殊字符）。
 2. **句子分词** – 将文本拆分成句子或段落。
@@ -6343,21 +6430,21 @@ max_tokens=100  # 限制响应长度
 
 ***
 
-##### 2. 使用 GPT-4 构建基础新闻摘要器
+### 2. 使用 GPT-4 构建基础新闻摘要器
 
-##### 2.1 前提条件
+#### 2.1 前提条件
 
 安装所需的 Python 库：
 
-```python
+```bash
 pip install openai newspaper3k python-dotenv
 ```
 
-- `openai` – 用于与 `GPT-4` API 交互。
-- `newspaper3k` – 从 URL 提取新闻文章。
-- `python-dotenv` – 安全加载 API 密钥。
+* `openai` – 用于与 `GPT-4` API 交互。
+* `newspaper3k` – 从 URL 提取新闻文章。
+* `python-dotenv` – 安全加载 API 密钥。
 
-##### 2.2 设置 API Keys
+#### 2.2 设置 API Keys
 
 创建一个 `.env` 文件并存储 `OpenAI` API 密钥：
 
@@ -6376,7 +6463,7 @@ load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 ```
 
-##### 2.3 获取并清洗新闻文章
+#### 2.3 获取并清洗新闻文章
 
 我们使用 `newspaper3k` 来爬取和预处理新闻文章。
 
@@ -6389,7 +6476,7 @@ def fetch_news(url):
     article.parse()
     return article.title, article.text
 
-##### 使用示例
+# 使用示例
 news_url = "https://example.com/news-article"
 title, content = fetch_news(news_url)
 print("Title:", title)
@@ -6397,14 +6484,15 @@ print("Content:", content[:500]) # 显示前 500 个字符
 ```
 
 解释：
-- `fetch_news()` 函数从指定的 URL 提取标题和文本。
-- 下载、解析并清洗文章。
+
+* `fetch_news()` 函数从指定的 URL 提取标题和文本。
+* 下载、解析并清洗文章。
 
 ***
 
-##### 3. 实现 GPT-4 摘要
+### 3. 实现 GPT-4 摘要
 
-##### 3.1 基础摘要函数
+#### 3.1 基础摘要函数
 
 ```python
 def summarize_text(text, model="gpt-4"):
@@ -6418,47 +6506,56 @@ def summarize_text(text, model="gpt-4"):
     )
     return response["choices"][0]["message"]["content"]
 
-##### 使用示例
+# 使用示例
 summary = summarize_text(content)
 print("Summary:", summary)
 ```
 
 关键特性：
-- 系统提示（system prompt）指示 `GPT-4` 对新闻文章进行摘要。
-- 用户输入提供文章全文。
-- `max_tokens=200` 确保摘要简洁。
+
+* 系统提示（system prompt）指示 `GPT-4` 对新闻文章进行摘要。
+* 用户输入提供文章全文。
+* `max_tokens=200` 确保摘要简洁。
 
 ***
 
-##### 4. 通过微调后的 GPT-4 增强摘要
+### 4. 通过微调后的 GPT-4 增强摘要
 
-##### 4.1 为什么要微调？
+#### 4.1 为什么要微调？
 
 微调允许模型：
-- 生成针对特定行业（金融、政治、体育）定制的摘要。
-- 减少幻觉并提高事实准确性。
-- 适应偏好的摘要风格（简洁 vs. 详细）。
 
-##### 4.2 准备摘要数据集
+* 生成针对特定行业（金融、政治、体育）定制的摘要。
+* 减少幻觉并提高事实准确性。
+* 适应偏好的摘要风格（简洁 vs. 详细）。
+
+#### 4.2 准备摘要数据集
 
 `GPT-4` 微调需要 `JSONL` 格式：
+
+
 
 ```json
 {"messages": [{"role": "system", "content": "You summarize financial news."}, {"role": "user", "content": "Summarize: Tesla stock rises 10% due to earnings."}, {"role": "assistant", "content": "Tesla stock rose 10% following strong earnings."}]}
 {"messages": [{"role": "system", "content": "You summarize tech news."}, {"role": "user", "content": "Summarize: Apple releases a new iPhone model."}, {"role": "assistant", "content": "Apple launched a new iPhone with upgraded features."}]}
 ```
 
-##### 4.3 为摘要微调 GPT-4
+#### 4.3 为摘要微调 GPT-4
 
 1. 将数据格式化为 `dataset.jsonl`。上传数据集：
+
 ```sh
 openai tools fine_tunes.prepare_data -f dataset.jsonl
 ```
+
 2. 训练微调模型：
+
 ```sh
 openai api fine_tunes.create -t "dataset_prepared.jsonl" -m gpt-4
 ```
+
 3. 使用微调后的模型：
+
 ```python
 model = "your_fine_tuned_model_id"
 summary = summarize_text(content, model)
@@ -6467,7 +6564,7 @@ print(summary)
 
 ***
 
-##### 5. 部署摘要 API
+#### 5. 部署摘要 API
 
 ##### 5.1 使用 FastAPI 创建 REST API
 
@@ -6486,7 +6583,7 @@ async def summarize_article(url: str):
     return {"title": title, "summary": summary}
 ```
 
-# 运行 API：`uvicorn filename:app --reload`
+运行 API：`uvicorn filename:app --reload`
 
 ##### 5.2 优化性能
 
@@ -6496,7 +6593,7 @@ async def summarize_article(url: str):
 
 ***
 
-##### 6. 实现高级摘要技术
+#### 6. 实现高级摘要技术
 
 ##### 6.1 使用检索增强生成 (RAG)
 
@@ -6515,20 +6612,20 @@ def summarize_with_rag(text, extra_context):
 ```
 
 优势：
+
 - 引入经证的来源以提高事实准确性。
 - 减少摘要过程中的幻觉。
 
+***
 
-
-
-
-# 5. 部署用于扩展的真实世界应用的情感分析 API。
+# 部署用于扩展的真实世界应用的情感分析 API
 
 在本章结束时，读者将拥有一个功能齐全的情感分析流水线，能够实时分析社交媒体数据。
 
 ## 1. 情感分析基础
 
 ### 1.1 什么是情感分析？
+
 情感分析（或观点挖掘）是一项 NLP 技术，用于确定文本的情感基调。它通常被用于将文本分类为：
 
 - 积极（Positive）
@@ -6536,6 +6633,7 @@ def summarize_with_rag(text, extra_context):
 - 中性（Neutral）
 
 ### 1.2 情感分析的应用
+
 1. 品牌监控 – 跟踪用户对品牌的看法。
 2. 政治分析 – 分析公众对政策的意见。
 3. 股票市场预测 – 利用情感进行财务预测。
@@ -6544,7 +6642,8 @@ def summarize_with_rag(text, extra_context):
 ## 2. 理解用于情感分析的 Transformers
 
 ### 2.1 为什么使用 Transformers？
-传统的 NLP 模型依赖于词袋（BoW）或 TF-IDF，这些模型缺乏上下文理解能力。由自注意力机制（self-attention）驱动的 Transformer 通过捕捉词与词之间的上下文关系优于以往的方法。
+
+传统的 NLP 模型依赖于词袋（`BoW`）或 `TF-IDF`，这些模型缺乏上下文理解能力。由自注意力机制（`self-attention`）驱动的 Transformer 通过捕捉词与词之间的上下文关系优于以往的方法。
 
 主要优势：
 
@@ -6554,7 +6653,7 @@ def summarize_with_rag(text, extra_context):
 
 ### 2.2 预训练 Transformer 模型概述
 
-| 模型 |  |
+| 模型 | 说明 |
 | --- | --- |
 | BERT (来自 Transformer 的双向编码表示) | 在双向文本上训练的上下文感知模型。 |
 | RoBERTa (鲁棒优化的 BERT) | 使用更多训练数据优化的 BERT。 |
@@ -6566,11 +6665,13 @@ def summarize_with_rag(text, extra_context):
 ## 3. 实现 Twitter 情感分析
 
 ### 3.1 安装依赖项
+
 ```bash
 pip install transformers torch datasets tweepy fastapi uvicorn python-dotenv
 ```
 
 ### 3.2 设置 Twitter API 访问
+
 创建一个 `.env` 文件来存储凭据：
 
 ```ini
@@ -6590,13 +6691,14 @@ client = tweepy.Client(bearer_token=BEARER_TOKEN)
 ```
 
 ### 3.3 实时获取推文
+
 ```python
 def fetch_tweets(keyword, count=10):
-    """获取包含指定关键词的最新推文。”
+    """获取包含指定关键词的最新推文。"""
     response = client.search_recent_tweets(query=keyword, max_results=count, tweet_fields=["text"])
     return [tweet.text for tweet in response.data]
 
-##### 使用示例
+# 使用示例
 tweets = fetch_tweets("AI", count=5)
 print(tweets)
 ```
@@ -6609,6 +6711,7 @@ print(tweets)
 ## 4. 使用预训练的 Transformers 进行情感分类
 
 ### 4.1 使用 Twitter-RoBERTa 进行情感分析
+
 我们使用 Hugging Face 的 `transformers` 库加载 `cardnlp/twitter-roberta-base-sentiment` 模型。
 
 ```python
@@ -6624,14 +6727,14 @@ model = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME)
 LABELS = ["Negative", "Neutral", "Positive"]
 
 def analyze_sentiment(text):
-    """使用 Twitter-RoBERTa 执行情感分类。”
+    """使用 Twitter-RoBERTa 执行情感分类。"""
     inputs = tokenizer(text, return_tensors="pt", truncation=True, padding=True)
     outputs = model(**inputs)
     scores = torch.nn.functional.softmax(outputs.logits, dim=-1)
     prediction = torch.argmax(scores, dim=-1).item()
     return LABELS[prediction]
 
-##### 使用示例
+# 使用示例
 text = "I love new technology!"
 sentiment = analyze_sentiment(text)
 print(f"Sentiment: {sentiment}")
@@ -6640,6 +6743,7 @@ print(f"Sentiment: {sentiment}")
 ## 5. 部署用于扩展的真实世界应用的情感分析 API
 
 ### 5.1 使用 FastAPI 构建 API
+
 ```python
 from fastapi import FastAPI
 
@@ -6654,23 +6758,29 @@ async def analyze_tweet(tweet: str):
 运行 API：`uvicorn filename:app --reload`
 
 ### 5.2 优化
+
 - 批量处理 – 一次分析多条推文。
 - 使用 `Redis` 缓存 – 存储频繁查询。
 - 速率限制 – 防止滥用。
 
-## 7. 高级技术：情感趋势与多标签分类
+## 6. 高级技术：情感趋势与多标签分类
 
-### 7.1 随情感趋势
+### 6.1 跟踪情感趋势
+
 - 聚合情感得分以跟踪趋势。
 - 使用 `Matplotlib` 或 `Dash` 可视化趋势。
 
-### 7.2 多标签情感分析
+### 6.2 多标签情感分析
+
 不仅是积极/中性/负面，通过对多标签数据集进行微调预测愤怒、快乐、悲伤等。
 
-## 第 18 章：基于 RAG 的文档搜索
+***
 
-### 18.1 使用 LLM 实现文档检索系统
-数字内容的爆炸式增长使得高效的文档检索成为必要。传统的搜索引擎依赖关键词方法，往往无法捕捉查询背后的真实意图。检索增强生成（RAG）利用大语言模型（LLMs）和向量搜索，在生成响应之前检索相关上下文来增强文档搜索。
+# 第 18 章：基于 RAG 的文档搜索
+
+## 18.1 使用 LLM 实现文档检索系统
+
+数字内容的爆炸式增长使得高效的文档检索成为必要。传统的搜索引擎依赖关键词方法，往往无法捕捉查询背后的真实意图。检索增强生成（`RAG`）利用大语言模型（`LLMs`）和向量搜索，在生成响应之前检索相关上下文来增强文档搜索。
 
 在本章中，我们将：
 
@@ -6685,7 +6795,8 @@ async def analyze_tweet(tweet: str):
 ## 1. 检索增强生成 (RAG) 的基础
 
 ### 1.1 什么是 RAG？
-检索增强生成 (`RAG`）是一种混合 NLP 技术，通过将检索到的相关文档纳入生成过程来改进 `LLM` 的响应。
+
+检索增强生成 (`RAG`) 是一种混合 NLP 技术，通过将检索到的相关文档纳入生成过程来改进 `LLM` 的响应。
 
 `RAG` 的关键组件：
 
@@ -6695,20 +6806,16 @@ async def analyze_tweet(tweet: str):
 
 ### 1.2 为什么使用 RAG 进行文档搜索？
 
-
-
-
-
 传统的搜索方法如 `TF-IDF` 和 `BM25` 依赖于词法匹配，往往会忽略语义含义。`RAG` 通过以下方式优于这些方法：
 
 - 理解上下文：使用 `embeddings` 进行语义检索。
 - 减少幻觉：`LLMs` 依赖于真实世界的信息而非生成猜测。
 - 提高准确性：提供更相关性且有事实依据的答案。
 
-## 1.3 RAG 是如何工作的？
+### 1.3 RAG 是如何工作的？
 
-1. 使用预训练模型（例如 `BERT`、`OpenAI` 的 `text-embedding-ada-002`）将文档转换为`vector embeddings`（向量嵌入）。
-2. 将 `embeddings` 存储在`vector database`中（例如 `FAISS`、`Pinecone`、`Chroma`）。
+1. 使用预训练模型（例如 `BERT`、`OpenAI` 的 `text-embedding-ada-002`）将文档转换为 `vector embeddings`（向量嵌入）。
+2. 将 `embeddings` 存储在 `vector database` 中（例如 `FAISS`、`Pinecone`、`Chroma`）。
 3. 根据用户查询检索最相关的文档。
 4. 将检索到的文档输入 `LLM` 生成响应。
 
@@ -6771,7 +6878,7 @@ class DocumentStore:
         distances, indices = self.index.search(query_embedding, top_k)
         return [self.documents[idx] for idx in indices[0]]
 
-##### 使用示例
+# 使用示例
 docs = ["AI is transforming industries.", "Climate change is a global challenge.", "Python is a popular programming language."]
 doc_store = DocumentStore()
 doc_store.add_documents(docs)
@@ -6790,40 +6897,7 @@ print("Retrieved Documents:", results)
 
 ### 4.1 使用 OpenAI 的 GPT-4 进行响应增强
 
-```python
-import openai
-openai.api_key = "your_openai_api_key"
 
-def generate_response(query):
-    """使用 LLM 检索相关文档并生成响应"""
-    retrieved_docs = doc_store.search(query)
-    context = " ".join(retrieved_docs)
-    prompt = f"Context: {context}\n\nQuestion: {query}\n\nAnswer:"
-    response = openai.ChatCompletion.create(
-        model="gpt-4",
-        messages=[{"role": "system", "content": "You are an AI assistant."},
-                  {"role": "user", "content": prompt}]
-    )
-    return response["choices"][0]["message"]["content"]
-
-##### 使用示例
-query = "How is AI impacting industries?"
-print("Response:", generate_response(query))
-```
-
-## 5. 优化 RAG 的可扩展性和性能
-
-### 5.1 混合检索（稠密 + 稀疏搜索）
-
-- 稠密检索 (`embeddings`）捕捉语义含义。
-- 稀疏检索 (`BM25`）改进关键词密集型查询。
-- 混合模型结合两者以获得更高的准确性。
-
-## 6. 集成 LLM 用于响应生成
-
- (等待，检查文本流...)
-
-### 4.1 使用 OpenAI 的 GPT-4 进行响应增强
 
 ```python
 import openai
@@ -6850,13 +6924,13 @@ print("Response:", generate_response(query))
 
 ### 5.1 混合检索（稠密 + 稀疏搜索）
 
-- 稠密检索 (`embeddings`）捕捉语义含义。
-- 稀疏检索 (`BM25`）改进关键词密集型查询。
+- 稠密检索（`embeddings`）捕捉语义含义。
+- 稀疏检索（`BM25`）改进关键词密集型查询。
 - 混合模型结合两者以获得更高的准确性。
 
 ## 6. 集成 LLM 用于响应生成
 
- (等待，检查文本流...)
+(等待，检查文本流...)
 
 ### 4.1 使用 OpenAI 的 GPT-4 进行响应增强
 
@@ -6880,9 +6954,8 @@ def generate_response(query):
 query = "How is AI impacting industries?"
 print("Response:", generate_response(query))
 ```
-*(注：由于提供的原文中存在大量重复内容，此处已根据要求进行去重并翻译。)*
 
-[content]
+---
 
 传统的搜索方法如 `TF-IDF` 和 `BM25` 依赖于词法匹配，往往会忽略语义含义。`RAG` 通过以下方式优于这些方法：
 
@@ -6892,8 +6965,8 @@ print("Response:", generate_response(query))
 
 ## 1.3 RAG 是如何工作的？
 
-1. 使用预训练模型（例如 `BERT`、`OpenAI` 的 `text-embedding-ada-002`）将文档转换为`vector embeddings`。
-2. 将 `embeddings` 存储在`vector database` 中（例如 `FAISS`、`Pinecone`、`Chroma`）。
+1. 使用预训练模型（例如 `BERT`、`OpenAI` 的 `text-embedding-ada-002`）将文档转换为 `vector embeddings`。
+2. 将 `embeddings` 存储在 `vector database` 中（例如 `FAISS`、`Pinecone`、`Chroma`）。
 3. 根据用户查询检索最相关的文档。
 4. 将检索到的文档输入 `LLM` 生成响应。
 
@@ -7000,16 +7073,15 @@ print("Response:", generate_response(query))
 
 ### 5.1 混合检索（稠密 + 稀疏搜索）
 
-- 稠密检索 (`embeddings`）捕捉语义含义。
-- 稀疏检索 (`BM25`）改进关键词密集型查询。
+- 稠密检索（`embeddings`）捕捉语义含义。
+- 稀疏检索（`BM25`）改进关键词密集型查询。
 - 混合模型结合两者以获得更高的准确性。
 
-
-
+---
 
 # 量化感知训练 (QAT)：在训练过程中优化模型以防止精度损失。
 
-示例：使用 bitsandbytes 量化大语言模型 (LLM)
+示例：使用 `bitsandbytes` 量化大语言模型 (LLM)
 
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -7026,6 +7098,7 @@ print(model.hf_device_map)
 ```
 
 影响：
+
 - 减少 3-4 倍内存占用。
 - 使 LLM 能够在消费级 GPU 上运行。
 
@@ -7033,7 +7106,7 @@ print(model.hf_device_map)
 
 LoRA 并不是微调所有模型参数，而是修改权重的一个小子集，显著降低了计算成本。
 
-示例：使用 peft 微调 LoRA 模型
+示例：使用 `peft` 微调 LoRA 模型
 
 ```python
 from peft import LoraConfig, get_peft_model
@@ -7052,6 +7125,7 @@ print("LoRA fine-tuned model loaded.")
 ```
 
 核心优势：
+
 - 降低高达 90% 的微调成本。
 - 使 LLM 能够在个人 GPU 上进行微调。
 
@@ -7088,18 +7162,19 @@ print("Generated Caption:", processor.decode(caption[0], skip_special_tokens=Tru
 ```
 
 未来应用：
+
 - 能够“看到”图像并理解上下文的 AI 助手。
 - 基于视频的 AI 摘要模型。
 - 能够进行现实交互的多模态聊天机器人。
 
-## 3 检索增强生成 (RAG) 的进展
+## 3. 检索增强生成 (RAG) 的进展
 
 LLM 在生成响应时会产生幻觉，导致错误信息的产生。RAG 通过从外部知识库检索事实来缓解这一问题。
 
 ### 3.1 RAG 的未来增强
 
 1. 分层检索：通过分层结构化数据来提高准确性。
-2. 混合搜索 (`BM25` + `Embeddings`)：结合了传统检索和深度学习检索。
+2. 混合搜索（`BM25` + `Embeddings`）：结合了传统检索和深度学习检索。
 3. 内存增强 LLM：模型能够持久地保留知识。
 
 示例：使用 `FAISS` 进行混合搜索
@@ -7121,24 +7196,24 @@ print("Retrieved Documents:", [doc.page_content for doc in retrieved_docs])
 ```
 
 影响：
+
 - 减少模型幻觉。
+
+
+
 - 提高回答的真实性和准确性。
 
+## FastAI 和 EleutherAI – 推动开源 AI 研究边界的社区
 
+最佳实践：贡献代码库、实验模型并审查拉取请求（`pull requests`），以理解最先进的方法。
 
-
-
-## FastAI 和 EleutherAI – 推动开源 AI 研究边界的社区。
-
-最佳实践：贡献代码库、实验模型并审查拉取请求（pull requests），以理解最先进的方法。
-
-## 3.  AI 会议和研讨会
+## 3. AI 会议和研讨会
 
 主要的 AI 会议是创新的中心，涵盖了突破性的研究、研讨会和行业应用：
 
 - `NeurIPS`（神经信息处理系统）—— 涵盖深度学习、生成式模型和理论 AI 研究。
 - `ICLR`（学习表示国际会议）—— 关注深度学习方法，包括自监督学习。
-- `ACL`（计算语言协会）—— 关于 transformer 架构、微调方法和检索增强生成 (`RAG`) 的领先 NLP 会议。
+- `ACL`（计算语言协会）—— 关于 `transformer` 架构、微调方法和检索增强生成（`RAG`）的领先 NLP 会议。
 - `CVPR`（计算机视觉与模式识别）—— 包含对多模态 AI 和视觉语言模型的讨论。
 
 最佳实践：参加会议研讨会和教程，这些活动提供了前沿技术的实操经验。
@@ -7148,7 +7223,7 @@ print("Retrieved Documents:", [doc.page_content for doc in retrieved_docs])
 许多 AI 专家定期分享见解、研究解读和行业趋势。推荐的来源包括：
 
 - `Andrej Karpathy`（特斯拉前 AI 总监，OpenAI 研究员）—— 发布关于神经网络和 `LLMs` 的文章。
-- `Chris Olah`（OpenAI, Anthropic）—— 编写关于可解释性和 transformer 模型的深度技术博客。
+- `Chris Olah`（OpenAI, Anthropic）—— 编写关于可解释性和 `transformer` 模型的深度技术博客。
 - `Sebastian Ruder`（DeepMind，NLP 研究员）—— 提供研究总结和行业趋势。
 - `Distill.pub` —— 一本交互式 AI 杂志，以视觉化解释深度学习概念。
 
@@ -7160,7 +7235,7 @@ print("Retrieved Documents:", [doc.page_content for doc in retrieved_docs])
 
 - `The Batch`（由 `DeepLearning.AI` 提供）—— 每周 AI 新和研究见解。
 - `Import AI`（由 `Jack Clark` 提供）—— 涵盖 AI 治理、研究趋势和伦理考虑。
-- `Hugging Face Newsletter` —— transformer 模型、新发布和开源项目的更新。
+- `Hugging Face Newsletter` —— `transformer` 模型、新发布和开源项目的更新。
 - `LLM Papers Newsletter` —— 总结大语言模型的最新进展。
 
 最佳实践：每周花时间查看通讯摘要并提取关键要点。
@@ -7180,8 +7255,8 @@ print("Retrieved Documents:", [doc.page_content for doc in retrieved_docs])
 
 动手实验是保持与更新的最佳方式之一。尝试：
 
-- `Hugging Face Spaces` —— 一个探索和部署 transformer 模型的平台。
-- `OpenAI API` & `LangChain` —— 实验检索增强生成 (`RAG`) 流水。
+- `Hugging Face Spaces` —— 一个探索和部署 `transformer` 模型的平台。
+- `OpenAI API` & `LangChain` —— 实验检索增强生成（`RAG`）流水。
 - `LlamaIndex` & `FAISS` —— 使用向量数据库测试可扩展的文档检索。
 - `Fine-Tuning Open-Source LLMs` —— 使用 `LoRA` 和 `QLoRA` 训练领域特定模型。
 
@@ -7206,4 +7281,3 @@ print("Retrieved Documents:", [doc.page_content for doc in retrieved_docs])
 - `追逐热点忽视基础` —— 稳固掌握深度学习基础仍然至关重要。
 - `跳过动手实践` —— 仅有理论知识是不够的；现实世界的实验是关键。
 - `忽略伦理考虑` —— AI 对齐、公平性和偏见缓解应始终考虑在内。
-

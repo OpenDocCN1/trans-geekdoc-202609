@@ -1,9 +1,5 @@
+
 # 机器学习精要：R 实用指南
-
-
-
-
-
 
 ## Preface
 
@@ -139,15 +135,11 @@ R 包是一组扩展基础 R 功能的功能集合。为了使用本书提供的
 
 你的数据应为矩形格式，其中列为变量，行为观察值（个体或样本）。
 
+* 列名应与 R 的命名规范兼容。避免列名中包含空白字符和特殊字符。好的列名：`long_jump` 或 `long.jump`。不好的列名：`long jump`。
 
+* 避免以数字开头列名。请改用字母。好的列名：`sport_100m` 或 `x100m`。不好的列名：`100m`。
 
-
-
-*   列名应与 R 的命名规范兼容。避免列名中包含空白字符和特殊字符。好的列名：`long_jump` 或 `long.jump`。不好的列名：`long jump`。
-
-*   避免以数字开头列名。请改用字母。好的列名：`sport_100m` 或 `x100m`。不好的列名：`100m`。
-
-*   用 `NA` 替换缺失值（表示 not available）
+* 用 `NA` 替换缺失值（表示 not available）
 
 例如，你的数据应如下所示：
 
@@ -200,14 +192,21 @@ R 附带了多个用于练习 R 函数的示例数据集。最常用的 R 示例
 
 加载 tidyverse 后，你可以使用以下 R 函数：
 
-*   `filter()` : 根据其值挑选行（观测值/样本）。
-*   `distinct()` : 删除重复行。
-*   `arrange()` : 重新排序行。
-*   `select()` : 按名称选择列（变量）。
-*   `rename()` : 重命名列。
-*   `mutate()` : 添加/创建新变量。
-*   `summarise()` : 计算统计摘要（例如计算均值或总和）
-*   `group_by()` : 对数据集的子集进行操作。
+* `filter()` : 根据其值挑选行（观测值/样本）。
+
+* `distinct()` : 删除重复行。
+
+* `arrange()` : 重新排序行。
+
+* `select()` : 按名称选择列（变量）。
+
+* `rename()` : 重命名列。
+
+* `mutate()` : 添加/创建新变量。
+
+* `summarise()` : 计算统计摘要（例如计算均值或总和）
+
+* `group_by()` : 对数据集的子集进行操作。
 
 请注意，tidyverse 包允许使用前向管道链式操作符（`%>%`）来组合多个操作。例如，`x %>% f` 等价于 `f(x)`。使用管道（`%>%`），每个操作的输出会传递给下一个操作。这使得 R 编程变得简单。
 
@@ -233,8 +232,9 @@ R 中有不同的图形包可用于可视化你的数据。在本书中，我们
 
 线性回归方程可以写成 `y = b0 + b*x`，其中：
 
-*   `b0` 是截距，
-*   `b` 是与预测变量 `x` 相关的回归权重或系数。
+* `b0` 是截距，
+
+* `b` 是与预测变量 `x` 相关的回归权重或系数。
 
 从技术上讲，线性回归系数是这样确定的，使得预测结果值的误差最小化。这种计算 beta 系数的方法称为 `Ordinary Least Squares` 方法。
 
@@ -256,10 +256,6 @@ R 中有不同的图形包可用于可视化你的数据。在本书中，我们
 
 最佳模型被定义为预测误差最低的模型。比较回归模型最流行的指标包括：
 
-
-
-
-
 **均方根误差**，用于衡量模型预测误差。它对应于结果的观测已知值与模型预测值之间的平均差异。`RMSE` 计算为 `RMSE = mean((observeds - predicteds)²) %>% sqrt()`。`RMSE` 越低，模型越好。
 
 **调整后 R 平方**，表示数据中变异（即信息）的比例由模型解释。这对应于模型的整体质量。调整后 `R2` 越高，模型越好
@@ -269,9 +265,13 @@ R 中有不同的图形包可用于可视化你的数据。在本书中，我们
 估计模型性能最稳健且最流行的方法之一是 **k 折交叉验证**。即使在小数据集上也可以应用。k 折交叉验证的工作方式如下：
 
 1. 随机将数据集拆分为 k 个子集（或 k 折）（例如 5 个子集）
+
 2. 保留一个子集并在所有其他子集上训练模型
+
 3. 在保留的子集上测试模型并记录预测误差
+
 4. 重复此过程，直到 k 个子集中的每一个都作为测试集使用。
+
 5. 计算记录的 k 个误差的平均值。这称为交叉验证误差，作为模型的性能指标。
 
 综合起来，最佳模型是交叉验证误差最低、`RMSE` 最低的模型。
@@ -279,16 +279,29 @@ R 中有不同的图形包可用于可视化你的数据。在本书中，我们
 在本部分中，您将学习回归分析的不同方法，我们将在 **R** 中提供实际示例。以下技术进行了描述：
 
 * 普通最小二乘
+
     * 简单线性回归
+
     * 多元线性回归
+
 * 模型选择方法：
+
     * 最佳子集回归（Chapter 17）
+
     * 逐步回归（Chapter 18）
+
+
+
 * 基于主成分的方法（Chapter 20）：
+
     * 主成分回归（`PCR`）
+
     * 偏最小二乘回归（`PLS`）
+
 * 罚分回归（Chapter 19）：
+
     * 岭回归
+
     * Lasso 回归
 
 ## 3.1 数据集示例
@@ -341,10 +354,15 @@ R 中有不同的图形包可用于可视化你的数据。在本书中，我们
 数据包含以下变量：
 
 * Fertility Ig: 常见的标准化生育率衡量指标
+
 * Agriculture: 从事农业职业的男性比例
+
 * Examination: 在军队考试中获得最高分数的应征者比例
+
 * Education: 应征者接受小学以外教育的人口比例。
+
 * Catholic: ‘天主教’（与‘新教’相对）的比例。
+
 * Infant.Mortality: 活产婴儿中存活不足 1 年的人数。
 
 ### 3.1.3 Boston 数据
@@ -352,18 +370,31 @@ R 中有不同的图形包可用于可视化你的数据。在本书中，我们
 `Boston` [in `MASS` package] 将用于预测波士顿郊区的房屋中位价值（`mdev`），使用不同的预测变量：
 
 * `crim`, 城镇人均犯罪率
+
 * `zn`, 住宅用地中规划为 25,000 平方英尺以上地块的比例
+
 * `indus`, 城镇非零售商业用地比例
+
 * `chas`, 查尔斯河虚拟变量（= 1 如果地块临河；0 否则）
+
 * `nox`, 氮氧化物浓度（每 1000 万份）
+
 * `rm`, 每栋住宅的平均房间数
+
 * `age`, 1940 年前建造的自住单位比例
+
 * `dis`, 到波士顿五个就业中心的加权距离
+
 * `rad`, 径向高速公路可达性指数
+
 * `tax`, 每 10,000 美元的全值财产税率
+
 * `ptratio`, 城镇师生比例
+
 * `black`, 1000(B - 0.63)² 其中 B 是城镇黑人比例
+
 * `lstat`, 人口中低收入阶层百分比
+
 * `medv`, 自住房屋中位价值，单位为 1000 美元
 
 加载并检查数据：
@@ -395,19 +426,25 @@ R 中有不同的图形包可用于可视化你的数据。在本书中，我们
 两个常用的指标用于评估预测回归模型的性能：
 
 * **均方根误差**，用于衡量模型预测误差。它对应于结果的观测已知值与模型预测值之间的平均差异。`RMSE` 计算为 `RMSE = mean((observeds - predicteds)²) %>% sqrt()`。`RMSE` 越低，模型越好。
+
 * **R 平方**，表示观测已知结果值与模型预测值之间的平方相关性。`R2` 越高，模型越好。
 
 构建预测回归模型的一个简单工作流程如下：
 
 1. 随机将您的数据拆分为训练集（80%）和测试集（20%）
+
 2. 使用训练集构建回归模型
+
 3. 使用测试集进行预测并计算模型准确性指标
 
 在本章中，您将学习：
 
 * 线性回归的基础和公式，
+
 * 如何在 `R` 中计算简单和多元回归模型，
+
 * 如何预测新数据的结果，
+
 * 如何评估模型的性能
 
 ## 4.2 公式
@@ -416,16 +453,14 @@ R 中有不同的图形包可用于可视化你的数据。在本书中，我们
 
 `y = b0 + b1*x + e`
 
-
-
-
-
 We read this as "y is modeled as beta1 (`b1`) times `x`, plus a constant beta0 (`b0`), plus an error term `e`."
 
 When you have multiple predictor variables, the equation can be written as `y = b0 + b1*x1 + b2*x2 + ... + bn*xn`, where:
 
 * `b0` is the intercept,
+
 * `b1`, `b2`, ..., `bn` are the regression weights or coefficients associated with the predictors `x1`, `x2`, ..., `xn`.
+
 * `e` is the *error term* (also known as the *residual errors*), the part of `y` that can be explained by the regression model
 
 Note that, `b0`, `b1`, `b2`, ... and `bn` are known as the regression beta coefficients or parameters.
@@ -433,7 +468,9 @@ Note that, `b0`, `b1`, `b2`, ... and `bn` are known as the regression beta coeff
 The figure below illustrates a simple linear regression model, where:
 
 * the best-fit regression line is in blue
+
 * the intercept (`b0`) and the slope (`b1`) are shown in green
+
 * the error terms (`e`) are represented by vertical red lines
 
 ![Linear regression](img/Image00000.jpg)
@@ -457,6 +494,7 @@ Once, the beta coefficients are calculated, a t-test is performed to check wheth
 ## 4.3 Loading Required R packages
 
 * `tidyverse` for easy data manipulation and visualization
+
 * `caret` for easy machine learning workflow
 
 ```
@@ -514,6 +552,7 @@ The estimated regression equation can be written as follow: `sales = 8.38 + 0.04
 For example:
 
 * For a `youtube` advertising budget equal zero, we can expect a sale of 8.38 units.
+
 * For a `youtube` advertising budget equal 1000, we can expect a sale of 8.38 + 0.046*1000 = 55 units.
 
 Predictions can be easily made using the R function `predict()`. In the following example, we predict sales units for two `youtube` advertising budget: 0 and 1000.
@@ -531,6 +570,8 @@ Predictions can be easily made using the R function `predict()`. In the followin
 **Multiple linear regression** is an extension of simple linear regression for predicting an outcome variable (`y`) on the basis of multiple distinct predictor variables (`x`).
 
 For example, with three predictor variables (`x`), the prediction of `y` is expressed by the following equation: `y = b0 + b1*x1 + b2*x2 + b3*x3`
+
+
 
 The regression beta coefficients measure the association between each predictor variable and the outcome. "`b_j`" can be interpreted as the average effect on `y` of a one unit increase in "`x_j`", holding all other predictors fixed.
 
@@ -557,8 +598,11 @@ Note that, if you have many predictor variables in your data, you can simply inc
 From the output above, the coefficients table shows the beta coefficient estimates and their significance levels. Columns are:
 
 * `Estimate`: the intercept (`b0`) and the beta coefficient estimates associated to each predictor variable
+
 * `Std.Error`: the standard error of the coefficient estimates. This represents the accuracy of the coefficients. The larger the standard error, the less confident we are about the estimate.
+
 * `t value`: the t-statistic, which is the coefficient estimate (column 2) divided by the standard error of the estimate (column 3)
+
 * `Pr(>|t|)`: The p-value corresponding to the t-statistic. The smaller the p-value, the more significant the estimate is.
 
 As previously described, you can easily make predictions using the R function `predict()`:
@@ -609,17 +653,16 @@ The summary outputs shows 6 components, including:
 
 * **Call**. Shows the function call used to compute the regression model.
 
-
-
-
-
 ### Residuals
+
 提供残差分布的快速概览，残差按定义均值为零。因此，中位数不应远离零，且最小值和最大值在绝对值上应大致相等。
 
 ### Coefficients
+
 显示回归贝塔系数及其统计显著性。与结果变量显著相关的预测变量用星号标记。
 
 ### Residual standard error
+
 `RSE`、`R-squared` `R2` 和 `F-statistic` 是用于检查模型对数据拟合程度的指标。
 
 解释多元回归分析的第一步是检查模型摘要底部的 `F-statistic` 及其相关 p 值。
@@ -683,7 +726,9 @@ The summary outputs shows 6 components, including:
 线性回归拟合的整体质量可通过模型摘要中显示的以下三个量来评估：
 
 1. 残差标准误 `RSE`，
+
 2. R-squared `R2` 和调整后 `R2`，
+
 3. `F-statistic`，已在上一节中描述
 
 ```
@@ -714,6 +759,7 @@ R-squared `R2` 范围从 0 到 1，表示模型预测变量可以解释的结果
 因此，你应主要考虑调整后 R 平方，它是对预测变量数量较多的惩罚性 `R2`。
 
 * 调整后 `R2` 接近 1 表明回归模型解释了结果变异的大部分比例。
+
 * 接近 0 的数值表明回归模型没有解释结果变异的多少。
 
 在我们的示例中，调整后 `R2` 为 0.88，效果良好。
@@ -735,8 +781,11 @@ R-squared `R2` 范围从 0 到 1，表示模型预测变量可以解释的结果
 步骤如下：
 
 1. 基于测试数据中的新广告预算预测 `sales` 值
+
 2. 通过计算评估模型性能：
+
    * 预测误差 `RMSE` 均方根误差，表示测试数据中观测到的已知结果值与模型预测结果值之间的平均差异。`RMSE` 越低，模型越好。
+
    * R-square `R2`，表示观测结果值与预测结果值之间的相关性。`R2` 越高，模型越好。
 
 ```
@@ -746,10 +795,6 @@ R-squared `R2` 范围从 0 到 1，表示模型预测变量可以解释的结果
 ```
 ## [1] 0.938
 ```
-
-
-
-
 
 从上面的输出可知，`R2` 为 0.93，意味着观测值与预测结果值高度相关，这非常好。
 
@@ -793,7 +838,9 @@ R-squared `R2` 范围从 0 到 1，表示模型预测变量可以解释的结果
 在本章中，您将学习：
 
 * 具有交互效应的多元线性回归方程
+
 * 计算与主效应和交互效应相关的回归系数的 R 代码
+
 * 如何解释交互效应
 
 ## 5.2 方程
@@ -814,6 +861,8 @@ R-squared `R2` 范围从 0 到 1，表示模型预测变量可以解释的结果
 
 `sales = b0 + b1*youtube + (b2 +b3*youtube)*facebook`
 
+
+
 `b3` 可解释为 Facebook 广告每增加一个单位时 YouTube 广告有效性的增加量（或反之）。
 
 在接下来的章节中，您将学习如何在 R 中计算回归系数。
@@ -823,17 +872,11 @@ R-squared `R2` 范围从 0 到 1，表示模型预测变量可以解释的结果
 * `tidyverse` 用于轻松的数据操作和可视化
 * `caret` 用于轻松的机器学习工作流
 
-```
-```
-
 ## 5.4 准备数据
 
 我们将使用第 3 章中介绍的 `marketing` 数据集，根据在三种广告媒体 (`youtube`、`facebook` 和 `newspaper`) 上花费的金额预测销售单位
 
 我们将随机将数据拆分为训练集（80% 用于构建预测模型）和测试集（20% 用于评估模型）。
-
-```
-```
 
 ```
 ##     youtube facebook newspaper sales
@@ -842,17 +885,11 @@ R-squared `R2` 范围从 0 到 1，表示模型预测变量可以解释的结果
 ## 175     267     4.08      15.7  13.8
 ```
 
-```
-```
-
 ## 5.5 计算
 
 ### 5.5.1 加性模型
 
 标准线性回归模型可按如下方式计算：
-
-```
-```
 
 ```
 ## 
@@ -877,13 +914,7 @@ R-squared `R2` 范围从 0 到 1，表示模型预测变量可以解释的结果
 ```
 
 ```
-```
-
-```
 ## [1] 1.58
-```
-
-```
 ```
 
 ```
@@ -893,9 +924,6 @@ R-squared `R2` 范围从 0 到 1，表示模型预测变量可以解释的结果
 ### 5.5.2 交互效应
 
 在 R 中，您使用 `*` 运算符在变量之间包含交互作用：
-
-```
-```
 
 ```
 ## 
@@ -921,13 +949,7 @@ R-squared `R2` 范围从 0 到 1，表示模型预测变量可以解释的结果
 ```
 
 ```
-```
-
-```
 ## [1] 0.963
-```
-
-```
 ```
 
 ```
@@ -949,10 +971,6 @@ R-squared `R2` 范围从 0 到 1，表示模型预测变量可以解释的结果
 ## 5.7 比较加性模型和交互模型
 
 交互模型的预测误差 `RMSE` 为 0.963，低于加性模型的预测误差（1.58）。
-
-
-
-
 
 此外，交互模型的 R 平方（`R2`）值为 98%，而加性模型仅为 93%。
 
@@ -980,17 +998,11 @@ R-squared `R2` 范围从 0 到 1，表示模型预测变量可以解释的结果
 
 * `tidyverse` 用于轻松的数据操作和可视化
 
-```
-```
-
 ## 6.3 数据集示例
 
 我们将使用 `Salaries` 数据集 [`car` package]，其中包含美国某学院 2008-09 学年九个月的助理教授、副教授和教授的学术薪资。
 
 数据是在学院管理层持续努力监测男女教职员工薪资差异的活动中收集的。
-
-```
-```
 
 ```
 ##         rank discipline yrs.since.phd yrs.service  sex salary
@@ -1024,9 +1036,6 @@ R-squared `R2` 范围从 0 到 1，表示模型预测变量可以解释的结果
 为简单演示目的，以下示例通过在 `Salaries` 数据集 [`car` package] 上计算简单线性回归模型来模拟男女之间的薪资差异。R 会自动创建哑变量：
 
 ```
-```
-
-```
 ##             Estimate Std. Error t value Pr(>|t|)
 ## (Intercept)   101002       4809   21.00 2.68e-66
 ## sexMale        14088       5065    2.78 5.67e-03
@@ -1035,9 +1044,6 @@ R-squared `R2` 范围从 0 到 1，表示模型预测变量可以解释的结果
 从上面的输出中，女性的平均薪资估计为 101002，而男性估计为 101002 + 14088 = 115090。哑变量 `sexMale` 的 p 值非常显著，表明男女平均薪资存在差异的统计证据。
 
 `contrasts()` 函数返回 R 用于创建哑变量的编码：
-
-```
-```
 
 ```
 ##        Male
@@ -1049,13 +1055,7 @@ R 创建了一个 `sexMale` 哑变量，如果性别为男性则取值为 1，�
 
 您可以使用 `relevel()` 函数将基线类别设置为男性，如下所示：
 
-```
-```
-
 回归拟合的输出变为：
-
-```
-```
 
 ```
 ##             Estimate Std. Error t value  Pr(>|t|)
@@ -1087,9 +1087,6 @@ R 创建了一个 `sexMale` 哑变量，如果性别为男性则取值为 1，�
 这种哑编码由 R 自动执行。为演示目的，您可以使用 `model.matrix()` 函数为因子变量创建对比矩阵：
 
 ```
-```
-
-```
 ##   rankAssocProf rankProf
 ## 1             0        1
 ## 2             0        1
@@ -1104,13 +1101,6 @@ R 创建了一个 `sexMale` 哑变量，如果性别为男性则取值为 1，�
 请注意，ANOVA（方差分析）只是线性模型的一个特例，其中预测变量是分类变量。而且，由于 R 理解 ANOVA 和回归都是线性模型的例子，它允许您使用 R 基础 `anova()` 函数或 [`car` package] 中的 `Anova()` 函数从回归模型中提取经典的 ANOVA 表。我们通常推荐 `Anova()` 函数，因为它会自动处理不平衡设计。
 
 下面给出了使用多元回归程序预测薪资的结果。
-
-```
-```
-
-
-
-
 
 ## Anova 表（Type II 检验）
 
@@ -1130,10 +1120,6 @@ R 创建了一个 `sexMale` 哑变量，如果性别为男性则取值为 1，�
 在考虑了其他变量（`yrs.service`、`rank` 和 `discipline`）之后，可以看出分类变量 `sex` 已不再显著地与个体间 `salary` 的变化相关。显著的变量是 `rank` 和 `discipline`。
 
 如果想解释分类变量的对比，输入以下内容：
-
-```
-
-```
 
 ```
 ## 
@@ -1181,9 +1167,12 @@ R 创建了一个 `sexMale` 哑变量，如果性别为男性则取值为 1，�
 
 有不同的解决方案扩展线性回归模型（第 `4` 章）以捕捉这些非线性效应，包括：
 
-*   **多项式回归**。这是对非线性关系建模的简单方法。它向回归中添加多项式项或二次项（平方、立方等）。
-*   **样条回归**。用一系列多项式段拟合一条平滑曲线。分隔样条段的值称为 **Knots**。
-*   **广义可加模型**（GAM）。使用自动选择结点的样条模型。
+* **多项式回归**。这是对非线性关系建模的简单方法。它向回归中添加多项式项或二次项（平方、立方等）。
+* **样条回归**。用一系列多项式段拟合一条平滑曲线。分隔样条段的值称为 **Knots**。
+
+
+
+*广义可加模型*（GAM）。使用自动选择结点的样条模型。
 
 在本章中，您将学习如何计算非线性回归模型以及如何比较不同的模型以选择最适合您数据的模型。
 
@@ -1193,12 +1182,8 @@ R 创建了一个 `sexMale` 哑变量，如果性别为男性则取值为 1，�
 
 ## 7.2 加载所需的 R 包
 
-*   `tidyverse` 用于轻松的数据操作和可视化
-*   `caret` 用于轻松的机器学习工作流
-
-```
-
-```
+* `tidyverse` 用于轻松的数据操作和可视化
+* `caret` 用于轻松的机器学习工作流
 
 ## 7.3 准备数据
 
@@ -1206,15 +1191,7 @@ R 创建了一个 `sexMale` 哑变量，如果性别为男性则取值为 1，�
 
 我们将随机将数据拆分为训练集（80% 用于构建预测模型）和测试集（20% 用于评估模型）。请确保设置种子以保证可重复性。
 
-```
-
-```
-
 首先，按如下方式可视化 `medv` 与 `lstat` 变量的散点图：
-
-```
-
-```
 
 ![](img/Image00002.jpg)
 
@@ -1229,19 +1206,11 @@ R 创建了一个 `sexMale` 哑变量，如果性别为男性则取值为 1，�
 计算线性回归模型：
 
 ```
-
-```
-
-```
 ##   RMSE    R2
 ## 1 6.07 0.535
 ```
 
 可视化数据：
-
-```
-
-```
 
 ![](img/Image00003.jpg)
 
@@ -1255,15 +1224,7 @@ R 创建了一个 `sexMale` 哑变量，如果性别为男性则取值为 1，�
 
 多项式回归可以在 R 中按如下方式计算：
 
-```
-
-```
-
 另一种简单的解决方案是使用以下方法：
-
-```
-
-```
 
 ```
 ## 
@@ -1278,10 +1239,6 @@ R 创建了一个 `sexMale` 哑变量，如果性别为男性则取值为 1，�
 输出包含与 `lstat` 相关的两个系数：一个用于线性项（`lstat¹`），一个用于二次项（`lstat²`）。
 
 以下示例计算六阶多项式拟合：
-
-```
-
-```
 
 ```
 ## 
@@ -1312,19 +1269,11 @@ R 创建了一个 `sexMale` 哑变量，如果性别为男性则取值为 1，�
 从上面的输出可以看出，超过五阶的多项式项不显著。因此，只需按如下方式创建五阶多项式回归模型：
 
 ```
-
-```
-
-```
 ##   RMSE    R2
 ## 1 4.96 0.689
 ```
 
 按如下方式可视化五阶多项式回归线：
-
-```
-
-```
 
 ![](img/Image00004.jpg)
 
@@ -1333,19 +1282,11 @@ R 创建了一个 `sexMale` 哑变量，如果性别为男性则取值为 1，�
 当您具有非线性关系时，也可以尝试对预测变量进行对数变换：
 
 ```
-
-```
-
-```
 ##   RMSE    R2
 ## 1 5.24 0.657
 ```
 
 可视化数据：
-
-```
-
-```
 
 ![](img/Image00005.jpg)
 
@@ -1353,23 +1294,13 @@ R 创建了一个 `sexMale` 哑变量，如果性别为男性则取值为 1，�
 
 多项式回归只能捕捉非线性关系中的一定程度的曲率。一种替代且通常更优的方法来建模非线性关系是使用样条（P. Bruce and Bruce 2017）。
 
-
-
-
-
 样条提供了一种在称为结点的固定点之间平滑插值的方法。结点之间计算多项式回归。换句话说，样条是串联在一起的多项式段，在结点处连接（P. Bruce 和 Bruce 2017）。
 
 R 包 `splines` 包含函数 `bs` 用于在回归模型中创建 B 样条项。
 
 你需要指定两个参数：多项式的次数和结点的位置。在我们的示例中，我们将结点放置在下四分位数、中位数四分位数和上四分位数：
 
-```
-```
-
 我们将使用三次样条（degree = 3）创建一个模型：
-
-```
-```
 
 ```
 ##   RMSE    R2
@@ -1380,9 +1311,6 @@ R 包 `splines` 包含函数 `bs` 用于在回归模型中创建 B 样条项。
 
 按如下方式可视化三次样条：
 
-```
-```
-
 ![](img/Image00006.jpg)
 
 ## 7.8 广义可加模型
@@ -1392,9 +1320,6 @@ R 包 `splines` 包含函数 `bs` 用于在回归模型中创建 B 样条项。
 广义可加模型，或 GAM，是一种自动拟合样条回归的技术。这可以使用 `mgcv` R 包完成：
 
 ```
-```
-
-```
 ##   RMSE    R2
 ## 1 5.02 0.684
 ```
@@ -1402,9 +1327,6 @@ R 包 `splines` 包含函数 `bs` 用于在回归模型中创建 B 样条项。
 项 `s(lstat)` 告诉 `gam()` 函数为样条项找到“最佳”结点。
 
 可视化数据：
-
-```
-```
 
 ![](img/Image00007.jpg)
 
@@ -1449,7 +1371,6 @@ R 包 `splines` 包含函数 `bs` 用于在回归模型中创建 B 样条项。
 为此，我们通常检查 **残差误差** 的分布，这可以告诉你有关数据的更多信息。
 
 在本章中，
-
 * 我们首先解释 **残差误差** 和 **拟合值**。
 * 接下来，我们介绍线性 **回归假设**，以及在执行回归分析时可能遇到的潜在问题。
 * 最后，我们描述 R 中用于检验线性回归模型潜在假设的一些内置 **诊断图**。
@@ -1459,15 +1380,9 @@ R 包 `splines` 包含函数 `bs` 用于在回归模型中创建 B 样条项。
 * `tidyverse` 用于轻松的数据操作和可视化
 * `broom`：从统计检验结果创建整洁的数据框
 
-```
-```
-
 ## 9.3 示例数据
 
 我们将使用数据集合 `marketing` [datarium 包]，该集合在第 3 章中介绍。
-
-```
-```
 
 ```
 ##     youtube facebook newspaper sales
@@ -1479,9 +1394,6 @@ R 包 `splines` 包含函数 `bs` 用于在回归模型中创建 B 样条项。
 ## 9.4 构建回归模型
 
 我们构建一个模型以根据 youtube 媒体支出的广告预算预测销售额。
-
-```
-```
 
 ```
 ## 
@@ -1512,9 +1424,6 @@ R 包 `splines` 包含函数 `bs` 用于在回归模型中创建 B 样条项。
 在 R 中，你可以使用函数 `augment()` [broom 包] 轻松地增强数据以添加拟合值和残差。让我们将输出称为 `model.diag.metrics`，因为它包含对回归诊断有用的多个指标。我们稍后会描述它们。
 
 ```
-```
-
-```
 ##   sales youtube .fitted .se.fit .resid    .hat .sigma  .cooksd .std.resid
 ## 1 26.52   276.1   21.56   0.385  4.955 0.00970   3.90 7.94e-03     1.2733
 ## 2 12.48    53.4   10.98   0.431  1.502 0.01217   3.92 9.20e-04     0.3866
@@ -1525,7 +1434,6 @@ R 包 `splines` 包含函数 `bs` 用于在回归模型中创建 B 样条项。
 ```
 
 在表列中，有：
-
 * `youtube`：投入的 youtube 广告预算
 * `sales`：观察到的销售额
 * `.fitted`：拟合销售额
@@ -1533,9 +1441,6 @@ R 包 `splines` 包含函数 `bs` 用于在回归模型中创建 B 样条项。
 * ...
 
 以下 R 代码绘制残差误差（红色）与观察值和拟合回归线之间的差异。每个垂直红色线段代表一个观察销售额与相应预测（即拟合）值之间的残差误差。
-
-```
-```
 
 ![](img/Image00008.jpg)
 
@@ -1547,14 +1452,12 @@ R 包 `splines` 包含函数 `bs` 用于在回归模型中创建 B 样条项。
 
 1. **数据的线性**。预测变量（x）与结果（y）之间的关系被假设为线性。
 
-
-
-
-
 ## 残差的正态性
+
 残差误差假定为正态分布。
 
 ## 残差方差的同质性
+
 残差假定具有恒定方差（`homoscedasticity`）
 
 ## 残差误差项的独立性
@@ -1562,11 +1465,8 @@ R 包 `splines` 包含函数 `bs` 用于在回归模型中创建 B 样条项。
 你应该检查这些假设是否成立。潜在问题包括：
 
 1. **非线性**的因变量 - 预测变量关系
-
 2. **异方差性**：误差项方差非恒定。
-
 3. 数据中存在**有影响的值**，可能为：
-
 * 异常值：因变量（`y`）中的极值
 * 高杠杆点：预测变量（`x`）中的极值
 
@@ -1580,29 +1480,20 @@ R 包 `splines` 包含函数 `bs` 用于在回归模型中创建 B 样条项。
 
 * 使用 R 基础函数创建诊断图：
 
-
-
 ![](img/Image00009.jpg)
 
 * 使用 ggfortify 创建诊断图：
 
-
-
 诊断图以四种不同的方式显示残差：
 
 1. **残差 vs 拟合值**。用于检查线性关系假设。水平线且无明显模式表明存在线性关系，这是好的。
-
 2. **Normal Q-Q**。用于检查残差是否呈正态分布。如果残差点遵循直线虚线，则为好。
-
 3. **Scale-Location**（或 Spread-Location）。用于检查残差方差的同质性（`homoscedasticity`）。水平线且点分布均匀是同方差性的良好迹象。在我们的示例中并非如此，我们存在异方差性问题。
-
 4. **残差 vs 杠杆值**。用于识别有影响的案例，即可能在纳入或排除分析时影响回归结果的极值。该图将在下一节中进一步描述。
 
 四幅图显示了标记有数据集中数据行号的 3 个最极端数据点。它们可能存在潜在问题。你可能需要单独仔细查看它们，以检查受试者是否有特殊之处或是否只是简单的数据录入错误。我们将在以下章节中讨论这个问题。
 
 用于创建上述图的指标可在 `model.diag.metrics` 数据中获得，见上一节描述。
-
-
 
 ```
 ##   index sales youtube .fitted .resid    .hat .cooksd .std.resid
@@ -1613,7 +1504,6 @@ R 包 `splines` 包含函数 `bs` 用于在回归模型中创建 B 样条项。
 ```
 
 我们主要使用以下列：
-
 * `.fitted`：拟合值
 * `.resid`：残差误差
 * `.hat`：帽值，用于检测高杠杆点（或预测变量 `x` 中的极值）
@@ -1625,8 +1515,6 @@ R 包 `splines` 包含函数 `bs` 用于在回归模型中创建 B 样条项。
 ## 9.8 数据的线性
 
 线性假设可以通过检查 **残差 vs 拟合值** 图（第 1 个图）来检查：
-
-
 
 ![](img/Image00010.jpg)
 
@@ -1640,17 +1528,15 @@ R 包 `splines` 包含函数 `bs` 用于在回归模型中创建 B 样条项。
 
 该假设可以通过检查 *scale-location plot*，也称为 *spread-location plot* 来检查。
 
-
-
 ![](img/Image00011.jpg)
 
 该图显示残差是否在预测变量范围内均匀分布。如果看到水平线且点分布均匀则为好。在我们的示例中并非如此。
 
 可以看出，残差点的变异性（方差）随着拟合结果变量值的增加而增加，表明残差误差中存在非恒定方差（或 *异方差性*）。
 
+
+
 减少异方差性问题的一种可能解决方案是对因变量（`y`）使用对数或平方根变换。
-
-
 
 ![](img/Image00012.jpg)
 
@@ -1660,15 +1546,13 @@ R 包 `splines` 包含函数 `bs` 用于在回归模型中创建 B 样条项。
 
 在我们的示例中，所有点大致沿此参考线分布，因此我们可以假设正态性。
 
-
-
 ![](img/Image00013.jpg)
 
 ## 9.11 异常值和高杠杆点
 
 **异常值**：
 
-异常值是指具有极端因变量值的点。异常值的存在可能会影响模型的解释，因为它会增加 RSE。
+异常值是指具有极端因变量值的点。异常值的存在可能会影响模型的解释，因为它会增加 `RSE`。
 
 异常值可以通过检查 *标准化残差*（或 *学生化残差*）来识别，它是残差除以其估计标准误差。标准化残差可以解释为距离回归线的标准误差数。
 
@@ -1679,8 +1563,6 @@ R 包 `splines` 包含函数 `bs` 用于在回归模型中创建 B 样条项。
 如果数据点具有极端的预测变量 `x` 值，则具有高杠杆性。这可以通过检查杠杆统计量或 *帽值* 来检测。该统计量的值高于 `2(p + 1)/n` 表示具有高杠杆性的观测（P. Bruce and Bruce 2017）；其中，`p` 为预测变量数，`n` 为观测数。
 
 异常值和高杠杆点可以通过检查 *残差 vs 杠杆值* 图来识别：
-
-
 
 ![](img/Image00014.jpg)
 
@@ -1698,11 +1580,7 @@ R 包 `splines` 包含函数 `bs` 用于在回归模型中创建 B 样条项。
 
 经验法则是，如果 Cook 距离超过 `4/(n - p - 1)`（P. Bruce and Bruce 2017），则观测具有高影响，其中 `n` 为观测数，`p` 为预测变量数。
 
-
-
-
-
-*残差与杠杆*  plot 可以帮助我们找到是否存在有影响力的观测值。在此图中，异常值通常位于右上角或右下角。这些位置是数据点可能对回归线产生影响的地方。
+*残差与杠杆* plot 可以帮助我们找到是否存在有影响力的观测值。在此图中，异常值通常位于右上角或右下角。这些位置是数据点可能对回归线产生影响的地方。
 
 以下图表说明了我们模型的 Cook 距离和杠杆值：
 
@@ -1746,7 +1624,7 @@ R 包 `splines` 包含函数 `bs` 用于在回归模型中创建 B 样条项。
 
 在残差与杠杆图中，寻找位于虚线 Cook 距离之外的点。当点位于 Cook 距离之外时，这意味着它们具有较高的 Cook 距离得分。在这种情况下，这些值对回归结果有影响。如果我们排除这些案例，回归结果将会改变。
 
-在上述示例 2 中，两个数据点远超 Cook 距离线。其他残差似乎聚集在左侧。该图将有影响力的观测值识别为 #201 和 #202。如果你将这些点从分析中排除，斜率系数将从 0.06 变化到 0.04，R2 从 0.5 变化到 0.6。影响相当大！
+在上述示例 2 中，两个数据点远超 Cook 距离线。其他残差似乎聚集在左侧。该图将有影响力的观测值识别为 #201 和 #202。如果你将这些点从分析中排除，斜率系数将从 0.06 变化到 0.04，`R2` 从 0.5 变化到 0.6。影响相当大！
 
 ### 9.13 讨论
 
@@ -1757,7 +1635,9 @@ R 包 `splines` 包含函数 `bs` 用于在回归模型中创建 B 样条项。
 潜在问题可能是：
 
 *   结果与预测变量之间存在非线性关系。面对这个问题时，一个解决方案是加入二次项，例如多项式项或对数变换。参见第 7 章。
+
 *   存在你从模型中遗漏的重要变量。你未包含的其他变量（例如，年龄或性别）可能在你的模型和数据中发挥重要作用。参见第 11 章。
+
 *   存在异常值。如果你认为异常值是由于数据收集和录入错误而发生的，那么一个解决方案就是简单地删除相关观测值。
 
 ## 10 多重共线性
@@ -1772,7 +1652,7 @@ R 包 `splines` 包含函数 `bs` 用于在回归模型中创建 B 样条项。
 
 对于给定的预测变量（p），多重共线性可以通过计算一个称为 **方差膨胀因子**（或 **VIF**）的分数来评估，该分数衡量由于模型中的多重共线性导致回归系数方差膨胀的程度。
 
-VIF 的最小可能值为一（无多重共线性）。作为经验法则，VIF 值超过 5 或 10 表示共线性程度有问题（James et al. 2014）。
+`VIF` 的最小可能值为一（无多重共线性）。作为经验法则，`VIF` 值超过 5 或 10 表示共线性程度有问题（James et al. 2014）。
 
 当面临多重共线性时，应删除相关变量，因为多重共线性的存在意味着该变量关于响应的信息在其他变量存在的情况下是冗余的（James et al. 2014 ,P. Bruce and Bruce (2017 )）。
 
@@ -1781,6 +1661,7 @@ VIF 的最小可能值为一（无多重共线性）。作为经验法则，VIF 
 ## 10.2 加载所需的 R 包
 
 *   `tidyverse` 用于轻松的数据操作和可视化
+
 *   `caret` 用于轻松的机器学习工作流
 
 ```
@@ -1821,11 +1702,11 @@ R 函数 `vif()` [car 包] 可用于检测回归模型中的多重共线性：
 ##    9.16    1.91    1.31    2.97
 ```
 
-在我们的示例中，预测变量 `tax` 的 VIF 得分非常高（VIF = 9.16）。这可能存在问题。
+在我们的示例中，预测变量 `tax` 的 `VIF` 得分非常高（`VIF = 9.16`）。这可能存在问题。
 
 ## 10.6 处理多重共线性
 
-在本节中，我们将通过删除 VIF 值较高的预测变量来更新我们的模型：
+在本节中，我们将通过删除 `VIF` 值较高的预测变量来更新我们的模型：
 
 ```
 ```
@@ -1839,9 +1720,9 @@ R 函数 `vif()` [car 包] 可用于检测回归模型中的多重共线性：
 
 ## 10.7 讨论
 
-本章描述了如何在回归模型中检测和处理多重共线性。多重共线性问题包括在模型中包含具有与结果相似预测关系的不同的变量。这可以通过为每个预测变量计算 VIF 值来评估。
+本章描述了如何在回归模型中检测和处理多重共线性。多重共线性问题包括在模型中包含具有与结果相似预测关系的不同的变量。这可以通过为每个预测变量计算 `VIF` 值来评估。
 
-任何具有高 VIF 值（高于 5 或 10）的变量都应从模型中删除。这会导致一个更简单的模型，而不会损害模型准确性，这是有益的。
+任何具有高 `VIF` 值（高于 5 或 10）的变量都应从模型中删除。这会导致一个更简单的模型，而不会损害模型准确性，这是有益的。
 
 请注意，在存在多个相关预测变量的大型数据集中，你可以执行主成分回归和偏最小二乘回归策略。参见第 20 章。
 
@@ -1861,10 +1742,6 @@ R 函数 `vif()` [car 包] 可用于检测回归模型中的多重共线性：
 
 ## 12 引言
 
-
-
-
-
 构建回归模型（第 4 章）时，你需要评估模型的优劣，即模型对用于构建模型的训练数据的拟合程度如何，以及模型对新的未见测试观测结果的预测准确性如何。
 
 在本部分，你将学习评估回归模型准确性以及验证模型性能的技术。我们还将提供 R 中的实用示例。
@@ -1872,6 +1749,7 @@ R 函数 `vif()` [car 包] 可用于检测回归模型中的多重共线性：
 以下章节涵盖：
 
 *   回归模型准确性指标（第 13 章）用于衡量回归模型的性能。
+
 *   交叉验证（第 14 章）和自助重采样（第 15 章）用于在测试数据上验证模型。
 
 ## 13 回归模型准确性指标
@@ -1915,7 +1793,9 @@ R 函数 `vif()` [car 包] 可用于检测回归模型中的多重共线性：
 ## 13.3 加载所需的 R 包
 
 *   `tidyverse` 用于数据操作和可视化
+
 *   `modelr` 提供计算回归模型性能指标的辅助函数
+
 *   `broom` 轻松创建包含模型统计指标的整洁数据框
 
 ```
@@ -1933,6 +1813,7 @@ R 函数 `vif()` [car 包] 可用于检测回归模型中的多重共线性：
 我们首先创建两个模型：
 
 1.  模型 1，包含所有预测变量
+
 2.  模型 2，包含除变量 Examination 外的所有预测变量
 
 ```
@@ -1943,6 +1824,7 @@ R 函数 `vif()` [car 包] 可用于检测回归模型中的多重共线性：
 有许多 R 函数和包可用于评估模型质量，包括：
 
 *   `summary()` [stats package]，返回 `R-squared`、调整后 `R-squared` 和 `RSE`
+
 *   `AIC()` 和 `BIC()` [stats package]，分别计算 `AIC` 和 `BIC`
 
 ```
@@ -2017,10 +1899,6 @@ R 函数 `vif()` [car 包] 可用于检测回归模型中的多重共线性：
 
 通常，我们并不真正关心该方法在训练数据上的表现如何。相反，我们感兴趣的是当我们将方法应用于之前未见的测试数据时所获得预测的准确性。
 
-
-
-
-
 然而，测试数据并不总是可用，这使得测试误差非常难以估计。在这种情况下，`cross-validation`（第 14 章）和 `bootstrap`（第 15 章）等方法被应用于使用训练数据来估计测试误差（或预测误差率）。
 
 ## 14 Cross-validation
@@ -2030,36 +1908,42 @@ R 函数 `vif()` [car 包] 可用于检测回归模型中的多重共线性：
 `cross-validation` 指的是一组用于衡量给定预测模型在新的测试数据集上的性能的方法。
 
 交叉验证技术背后的基本思想是将数据分为两组：
+
 1. 训练集，用于训练（即构建）模型；
+
 2. 测试集（或验证集），用于通过估计预测误差来测试（即验证）模型。
 
 交叉验证也被称为 *重采样方法*，因为它涉及使用数据的不同子集多次拟合相同的统计方法。
 
 在本章中，你将学习：
+
 1. 用于衡量回归模型预测新测试数据结果的性能的最常用的统计指标（第 13 章）。
+
 2. 用于评估模型性能的不同交叉验证方法。我们涵盖以下方法：
+
     * 验证集方法（或数据分割）
+
     * 留一法交叉验证
+
     * k 折交叉验证
+
     * 重复 k 折交叉验证
 
 每种方法都有其优点和缺点。使用最适合你问题的那一种。一般来说，推荐使用（重复）k 折交叉验证。
+
 3. 计算交叉验证方法的 R 代码的实用示例。
 
 ## 14.2 Loading required R packages
 
 * `tidyverse` 用于轻松的数据操作和可视化
+
 * `caret` 用于轻松计算交叉验证方法
 
-```
-```
+
 
 ## 14.3 Example of data
 
 我们将使用内置的 R `swiss` 数据，该数据在第 3 章中介绍，用于基于社会经济指标预测生育率分数。
-
-```
-```
 
 ## 14.4 Model performance metrics
 
@@ -2071,7 +1955,7 @@ R 函数 `vif()` [car 包] 可用于检测回归模型中的多重共线性：
 3. 计算预测误差
 
 在第 13 章中，我们描述了用于量化回归模型整体质量的几种统计指标。这些包括：
-* `R-squared`（`R2`），表示观测结果值与模型预测值之间的平方相关性。调整后的 R2 越高，模型越好。
+* `R-squared`（`R2`），表示观测结果值与模型预测值之间的平方相关性。调整后的 `R2` 越高，模型越好。
 * `Root Mean Squared Error`（`RMSE`），它衡量模型在预测观测结果时产生的平均预测误差。也就是说，观测已知结果值与模型预测值之间的平均差异。`RMSE` 越低，模型越好。
 * `Mean Absolute Error`（`MAE`），是 `RMSE` 的一种替代方案，对异常值不那么敏感。它对应于观测值与预测结果之间的平均绝对差异。`MAE` 越低，模型越好
 
@@ -2102,9 +1986,6 @@ R 函数 `vif()` [car 包] 可用于检测回归模型中的多重共线性：
 下面的示例将 `swiss` 数据集分割，使得 80% 用于训练线性回归模型，20% 用于评估模型性能。
 
 ```
-```
-
-```
 ##      R2 RMSE  MAE
 ## 1 0.503 7.79 6.35
 ```
@@ -2112,9 +1993,6 @@ R 函数 `vif()` [car 包] 可用于检测回归模型中的多重共线性：
 在比较两个模型时，产生最低测试样本 `RMSE` 的模型是首选模型。
 
 `RMSE` 和 `MAE` 以与结果变量相同的尺度衡量。将 `RMSE` 除以结果变量的平均值将得到预测误差率，应尽可能小：
-
-```
-```
 
 ```
 ## [1] 0.109
@@ -2133,9 +2011,6 @@ R 函数 `vif()` [car 包] 可用于检测回归模型中的多重共线性：
 使用 `caret` 包在 R 中的实用示例：
 
 ```
-```
-
-```
 ## Linear Regression 
 ## 
 ## 47 samples
@@ -2152,26 +2027,22 @@ R 函数 `vif()` [car 包] 可用于检测回归模型中的多重共线性：
 ## Tuning parameter 'intercept' was held constant at a value of TRUE
 ```
 
-LOOCV 方法的优点是我们利用了所有数据点，减少了潜在偏差。
+`LOOCV` 方法的优点是我们利用了所有数据点，减少了潜在偏差。
 
-然而，该过程重复的次数与数据点的数量一样多，当 n 极大时会导致执行时间更高。
+然而，该过程重复的次数与数据点的数量一样多，当 `n` 极大时会导致执行时间更高。
 
 此外，我们在每次迭代中针对一个数据点测试模型性能。如果某些数据点是异常值，这可能会导致预测误差的变异性更高。因此，我们需要一个良好的测试数据点比例，这正是 `k-fold cross-validation method` 提供的解决方案。
 
 ### 14.5.3 K-fold cross-validation
 
-k 折交叉验证方法在训练数据的不同子集上评估模型性能，然后计算平均预测误差率。算法如下：
-1. 随机将数据集分为 k 个子集（或 k 折）（例如 5 个子集）
+`k` 折交叉验证方法在训练数据的不同子集上评估模型性能，然后计算平均预测误差率。算法如下：
+1. 随机将数据集分为 `k` 个子集（或 `k` 折）（例如 5 个子集）
 2. 保留一个子集并在所有其他子集上训练模型
 3. 在保留的子集上测试模型并记录预测误差
-4. 重复此过程，直到 k 个子集中的每一个都作为测试集使用。
-5. 计算记录的 k 个误差的平均值。这称为交叉验证误差，作为模型的性能指标。
+4. 重复此过程，直到 `k` 个子集中的每一个都作为测试集使用。
+5. 计算记录的 `k` 个误差的平均值。这称为交叉验证误差，作为模型的性能指标。
 
-K 折交叉验证（CV）是估计模型准确性的稳健方法。
-
-
-
-
+`K` 折交叉验证（`CV`）是估计模型准确性的稳健方法。
 
 The most obvious advantage of `k`-fold CV compared to LOOCV is computational. A less obvious but potentially more important advantage of `k`-fold CV is that it often gives more accurate estimates of the test error rate than does LOOCV (`James et al. 2014`).
 
@@ -2182,9 +2053,6 @@ Lower value of `K` is more biased and hence undesirable. On the other hand, high
 In practice, one typically performs `k`-fold cross-validation using `k = 5` or `k = 10`, as these values have been shown empirically to yield test error rate estimates that suffer neither from excessively high bias nor from very high variance.
 
 The following example uses 10-fold cross validation to estimate the prediction error. Make sure to set seed for reproducibility.
-
-```
-```
 
 ```
 ## Linear Regression 
@@ -2211,9 +2079,6 @@ The final model error is taken as the mean error from the number of repeats.
 
 The following example uses 10-fold cross validation with 3 repeats:
 
-```
-```
-
 ## 14.6 Discussion
 
 In this chapter, we described 4 different methods for assessing the performance of a model on unseen test data.
@@ -2239,15 +2104,9 @@ This chapter describes the basics of bootstrapping and provides practical exampl
 * `tidyverse` for easy data manipulation and visualization
 * `caret` for easily computing cross-validation methods
 
-```
-```
-
 ## 15.3 Example of data
 
 We'll use the built-in R `swiss` data, introduced in the Chapter 3, for predicting fertility score on the basis of socio-economic indicators.
-
-```
-```
 
 ## 15.4 Bootstrap procedure
 
@@ -2262,9 +2121,6 @@ Note that, the sampling is performed with replacement, which means that the same
 ## 15.5 Evaluating a predictive model performance
 
 The following example uses a bootstrap with 100 resamples to test a linear regression model:
-
-```
-```
 
 ```
 ## Linear Regression 
@@ -2295,10 +2151,13 @@ For example, you might want to estimate the accuracy of the linear regression be
 
 The different steps are as follow:
 
-1. Create a simple function, `model_coef()`, that takes the `swiss` data set as well as the indices for the observations, and returns the regression coefficients.
-2. Apply the function `boot_fun()` to the full data set of 47 observations in order to compute the coefficients
 
-We start by creating a function that returns the regression model coefficients:
+
+1. 创建一个简单的函数，`model_coef()`，该函数接受 `swiss` 数据集以及观测值的索引，并返回回归系数。
+
+2. 将函数 `boot_fun()` 应用于全部 47 个观测值的完整数据集中，以计算系数
+
+我们首先创建一个返回回归模型系数的函数：
 
 ```
 ```
@@ -2310,7 +2169,7 @@ We start by creating a function that returns the regression model coefficients:
 ##            0.104            1.077
 ```
 
-Next, we use the `boot()` function [boot package] to compute the standard errors of 500 bootstrap estimates for the coefficients:
+接下来，我们使用 `boot()` 函数 [`boot` package] 计算 500 次自助估计系数的标准误差：
 
 ```
 ```
@@ -2334,30 +2193,29 @@ Next, we use the `boot()` function [boot package] to compute the standard errors
 ## t6*    1.077 -0.028493      0.4560
 ```
 
-In the output above,
+在上面的输出中，
 
-* `original` column corresponds to the regression coefficients. The associated standard errors are given in the column `std.error`.
-* `t1` corresponds to the intercept, `t2` corresponds to `Agriculture` and so on...
+* `original` 列对应于回归系数。相关标准误差在 `std.error` 列中给出。
 
-For example, it can be seen that, the standard error (SE) of the regression coefficient associated with `Agriculture` is 0.06.
+* `t1` 对应于截距，`t2` 对应于 `Agriculture`，依此类推...
 
-Note that, the standard errors measure the variability/accuracy of the beta coefficients. It can be used to compute the confidence intervals of the coefficients.
+例如，可以看出，与 `Agriculture` 相关的回归系数的标准误差 `SE` 为 0.06。
 
-For example, the 95% confidence interval for a given coefficient `b` is defined as `b +/- 2*SE(b)`, where:
+请注意，标准误差衡量 beta 系数的变异性/准确性。它可用于计算系数的置信区间。
 
-* the lower limits of `b` = `b - 2*SE(b) = -0.172 - (2*0.0680) = -0.308` (for Agriculture variable)
-* the upper limits of `b` = `b + 2*SE(b) = -0.172 + (2*0.0680) = -0.036` (for Agriculture variable)
+例如，给定系数 `b` 的 95% 置信区间定义为 `b +/- 2*SE(b)`，其中：
 
-That is, there is approximately a 95% chance that the interval `[-0.308, -0.036]` will contain the true value of the coefficient.
+* `b` 的下限 = `b - 2*SE(b) = -0.172 - (2*0.0680) = -0.308`（针对 `Agriculture` 变量）
 
+* `b` 的上限 = `b + 2*SE(b) = -0.172 + (2*0.0680) = -0.036`（针对 `Agriculture` 变量）
 
-
-
+也就是说，大约有 95% 的概率区间 `[-0.308, -0.036]` 将包含系数的真实值。
 
 使用标准的 `lm()` 函数会给出略有不同的标准误差，因为线性模型对数据做了一些假设：
 
 ```
 ```
+
 ```
 ##                  Estimate Std. Error t value Pr(>|t|)
 ## (Intercept)        66.915    10.7060    6.25 1.91e-07
@@ -2376,15 +2234,15 @@ That is, there is approximately a 95% chance that the interval `[-0.308, -0.036]
 
 用于评估预测模型性能的自助法的替代方法是交叉验证技术（第 14 章）。
 
-## 16 引言
+# 16 引言
 
 当预测模型中存在许多预测变量时，`model selection` 方法允许自动选择构建最优预测模型的预测变量的最佳组合。
 
 去除不相关的变量会使模型更易解释且更简单。在性能相同的情况下，应始终优先使用更简单的模型而不是更复杂的模型。
 
-此外，在某些情况下，使用模型选择方法至关重要，此时你拥有包含许多预测变量的大型多变量数据集。这在基因组学领域经常出现，其中一个重大挑战在于基因组变量的数量（`p`）通常远大于个体数量（`n`）（即 `p >> n`）（Bovelstad et al. 2007 ）。
+此外，在某些情况下，使用模型选择方法至关重要，此时你拥有包含许多预测变量的大型多变量数据集。这在基因组学领域经常出现，其中一个重大挑战在于基因组变量的数量 `p` 通常远大于个体数量 `n`（即 `p >> n`）【Bovelstad et al. 2007】。
 
-众所周知，当 `p >> n` 时，很容易找到在拟合数据上表现优异但在外部验证中失败的预测因子，从而导致预测规则不佳。此外，最小二乘拟合中可能存在大量变异，导致过拟合，从而对未用于模型训练的未来观测产生较差的预测（James et al. 2014 ）。
+众所周知，当 `p >> n` 时，很容易找到在拟合数据上表现优异但在外部验证中失败的预测因子，从而导致预测规则不佳。此外，最小二乘拟合中可能存在大量变异，导致过拟合，从而对未用于模型训练的未来观测产生较差的预测【James et al. 2014】。
 
 一种可能的策略是对预测因子的所有可能组合进行测试，然后选择最佳模型。该方法称为 `best subsets regression`（第 17 章），计算成本高昂，对于具有大量变量的大型数据集变得不可行。
 
@@ -2394,12 +2252,12 @@ That is, there is approximately a 95% chance that the interval `[-0.308, -0.036]
 
 在本部分，我们将介绍三种不同类别的方法，用于为大型多变量数据选择最优线性模型。这些包括：
 
-* Best subsets selection (Chapter 17 )
-* Stepwise selection (Chapter 18 )
-* Penalized regression (or shrinkage methods) (Chapter 19 )
-* Dimension reduction methods (Chapter 20 )
+* Best subsets selection (Chapter 17)
+* Stepwise selection (Chapter 18)
+* Penalized regression (or shrinkage methods) (Chapter 19)
+* Dimension reduction methods (Chapter 20)
 
-## 17 Best Subsets Regression
+# 17 Best Subsets Regression
 
 ## 17.1 引言
 
@@ -2411,7 +2269,7 @@ That is, there is approximately a 95% chance that the interval `[-0.308, -0.036]
 
 * `tidyverse` 用于轻松的数据操作和可视化
 * `caret` 用于轻松的机器学习工作流
-* `leaps` ，用于计算最佳子集回归
+* `leaps`，用于计算最佳子集回归
 
 ```
 ```
@@ -2427,12 +2285,13 @@ That is, there is approximately a 95% chance that the interval `[-0.308, -0.036]
 
 R 函数 `regsubsets()` [`leaps` package] 可用于识别不同大小的不同最佳模型。
 
-你需要指定选项 `nvmax` ，它表示要纳入模型的最大预测变量数。例如，如果 `nvmax = 5` ，函数将返回最多 5 个变量的最佳模型，即返回最佳 1 变量模型、最佳 2 变量模型、...、最佳 5 变量模型。
+你需要指定选项 `nvmax`，它表示要纳入模型的最大预测变量数。例如，如果 `nvmax = 5`，函数将返回最多 5 个变量的最佳模型，即返回最佳 1 变量模型、最佳 2 变量模型、...、最佳 5 变量模型。
 
-在我们的示例中，数据中只有 5 个预测变量。因此，我们将使用 `nvmax = 5` 。
+在我们的示例中，数据中只有 5 个预测变量。因此，我们将使用 `nvmax = 5`。
 
 ```
 ```
+
 ```
 ## Subset selection object
 ## Call: regsubsets.formula(Fertility ~ ., data = swiss, nvmax = 5)
@@ -2455,7 +2314,7 @@ R 函数 `regsubsets()` [`leaps` package] 可用于识别不同大小的不同�
 
 函数 `summary()` 报告每个模型大小的最佳变量集。从上面的输出中，星号指定给定变量是否包含在相应模型中。
 
-例如，可以看出最佳 2 变量模型仅包含 Education 和 Catholic 变量（`Fertility ~ Education + Catholic` ）。最佳三变量模型为（`Fertility ~ Education + Catholic + Infant.mortality` ），依此类推。
+例如，可以看出最佳 2 变量模型仅包含 `Education` 和 `Catholic` 变量（`Fertility ~ Education + Catholic`）。最佳三变量模型为（`Fertility ~ Education + Catholic + Infant.mortality`），依此类推。
 
 一个自然的问题是：我们最终应该为预测分析选择这些最佳模型中的哪一个？
 
@@ -2473,18 +2332,15 @@ R 函数 `regsubsets()` [`leaps` package] 可用于识别不同大小的不同�
 
 ```
 ```
+
 ```
 ##   Adj.R2 CP BIC
 ## 1      5  4   4
 ```
 
-模型选择没有单一的正确解决方案，每个标准都会导致略有不同的模型。记住，["All models are wrong, some models are useful"](https://en.wikipedia.org/wiki/All_models_are_wrong) 。
+模型选择没有单一的正确解决方案，每个标准都会导致略有不同的模型。记住，["All models are wrong, some models are useful"](https://en.wikipedia.org/wiki/All_models_are_wrong)。
 
 这里，调整后 R2 告诉我们最佳模型是包含全部 5 个预测变量的模型。然而，使用 BIC 和 Cp 标准，我们应该选择具有 4 个变量的模型。
-
-
-
-
 
 因此，我们会根据考虑的指标不同而得到不同的“最佳”模型。我们需要额外的策略。
 
@@ -2560,13 +2416,13 @@ k 折交叉验证可使用 `train()` [`caret` 包] 函数轻松计算（第 14 �
 
 请注意，该方法计算成本高，对于具有大量变量的大型数据集变得不可行。更好的替代方案是**逐步回归**方法。参见第 18 章。
 
-## 18 逐步回归
+# 18 逐步回归
 
 ## 18.1 引言
 
 **逐步回归**（或逐步选择）是指在预测模型中迭代地添加和移除预测变量，以找到数据集中导致模型性能最佳的变量子集，即降低预测误差的模型。
 
-逐步回归有三种策略（James 等 2014 ，P. Bruce 和 Bruce (2017 )）：
+逐步回归有三种策略（James 等 2014，P. Bruce 和 Bruce (2017)）：
 
 1. **向前选择**，从模型中没有预测变量开始，迭代地添加最具贡献的预测变量，并在改进不再具有统计显著性时停止。
 2. **向后选择**（或**向后消除**），从模型中包含所有预测变量（全模型）开始，迭代地移除贡献最小的预测变量，并在所有预测变量都具有统计显著性的模型处停止。
@@ -2597,10 +2453,9 @@ k 折交叉验证可使用 `train()` [`caret` 包] 函数轻松计算（第 14 �
 ```
 ```
 
-* `regsubsets()` [leaps 包]，具有调参参数 `nvmax` 指定可纳入模型的最大预测变量数（参见第 17 章）。它返回多个不同大小的模型，大小上限为 nvmax。你需要比较不同模型的性能以选择最佳模型。`regsubsets()` 有选项 `method`，可取 "backward"、"forward" 和 "seqrep"（seqrep = 顺序替换，向前和向后选择的结合）。
 
-```
-```
+
+`regsubsets()` [leaps 包]，具有调参参数 `nvmax` 指定可纳入模型的最大预测变量数（参见第 17 章）。它返回多个不同大小的模型，大小上限为 `nvmax`。你需要比较不同模型的性能以选择最佳模型。`regsubsets()` 有选项 `method`，可取 `"backward"`、`"forward"` 和 `"seqrep"`（seqrep = 顺序替换，向前和向后选择的结合）。
 
 请注意，`train()` 函数 [caret 包] 提供了使用 `leaps` 和 MASS 包执行逐步选择的便捷工作流。它有一个名为 `method` 的选项，可取以下值：
 
@@ -2619,9 +2474,6 @@ k 折交叉验证可使用 `train()` [`caret` 包] 函数轻松计算（第 14 �
 我们将使用 10 折交叉验证来估计每个 5 个模型的平均预测误差（RMSE）（参见第 14 章）。RMSE 统计指标用于比较 5 个模型并自动选择最佳模型，其中最佳定义为使 RMSE 最小的模型。
 
 ```
-```
-
-```
 ##   nvmax RMSE Rsquared  MAE RMSESD RsquaredSD MAESD
 ## 1     1 9.30    0.408 7.91   1.53      0.390  1.65
 ## 2     2 9.08    0.515 7.75   1.66      0.247  1.40
@@ -2632,19 +2484,11 @@ k 折交叉验证可使用 `train()` [`caret` 包] 函数轻松计算（第 14 �
 
 上面的输出显示了用于比较 5 个最佳模型精度的不同指标及其标准差。列为：
 
-
-
-
 * `nvmax` : 模型中的变量数量。例如 `nvmax = 2`，指定最佳的 2 变量模型
-
 * `RMSE` 和 `MAE` 是衡量每个模型预测误差的两种不同指标。`RMSE` 和 `MAE` 越低，模型越好。
-
 * `Rsquared` 表示观测结果值与模型预测值之间的相关性。R 平方越高，模型越好。
 
 在我们的示例中，可以看出变量数为 4 的模型（`nvmax = 4`）具有最低的 `RMSE`。你可以按如下方式显示由 `train()` 函数自动选择的最佳调优值（`nvmax`）：
-
-```
-```
 
 ```
 ##   nvmax
@@ -2652,9 +2496,6 @@ k 折交叉验证可使用 `train()` [`caret` 包] 函数轻松计算（第 14 �
 ```
 
 这表明最佳模型是具有 `nvmax = 4` 个变量的模型。函数 `summary()` 会报告每个模型规模的最佳变量集合，直到最佳的 4 变量模型。
-
-```
-```
 
 ```
 ## Subset selection object
@@ -2678,13 +2519,7 @@ k 折交叉验证可使用 `train()` [`caret` 包] 函数轻松计算（第 14 �
 
 最终模型（`id = 4`）的回归系数可以按如下方式访问：
 
-```
-```
-
 或者，通过仅使用所选预测变量计算线性模型：
-
-```
-```
 
 ```
 ## 
@@ -2705,19 +2540,13 @@ k 折交叉验证可使用 `train()` [`caret` 包] 函数轻松计算（第 14 �
 
 我们演示了如何使用 `leaps` R 包计算逐步回归。另一个替代方案是 MASS 包中提供的函数 `stepAIC()`。它有一个名为 `direction` 的选项，可以具有以下值："both"、"forward"、"backward"。
 
-```
-```
-
 此外，caret 包有使用 MASS 包计算逐步回归的方法（`method = "lmStepAIC"`）：
-
-```
-```
 
 逐步回归对于包含多个预测变量的高维数据非常有用。其他替代方案是惩罚回归（岭回归和套索回归）（第 19 章）和基于主成分的回归方法（PCR 和 PLS）（第 20 章）。
 
 ## 19 惩罚回归：岭回归、套索回归和弹性网络
 
-## 19.1 引言
+### 19.1 引言
 
 标准线性模型（或普通最小二乘法）在你拥有一个包含变量数多于样本数的大型多变量数据集的情况下表现不佳。
 
@@ -2729,9 +2558,9 @@ k 折交叉验证可使用 `train()` [`caret` 包] 函数轻松计算（第 14 �
 
 在本章中，我们将描述最常用的惩罚回归方法，包括岭回归、套索回归和弹性网络回归。我们还将提供 R 中的实际示例。
 
-## 19.2 收缩方法
+### 19.2 收缩方法
 
-### 19.2.1 岭回归
+#### 19.2.1 岭回归
 
 岭回归收缩回归系数，使得对结果贡献较小的变量的系数接近于零。
 
@@ -2751,7 +2580,7 @@ k 折交叉验证可使用 `train()` [`caret` 包] 函数轻松计算（第 14 �
 
 岭回归将系数收缩向零，但不会将任何系数精确地设为零。套索回归是克服这一缺点的替代方法。
 
-### 19.2.2 套索回归
+#### 19.2.2 套索回归
 
 Lasso 代表 Least Absolute Shrinkage and Selection Operator。它通过对回归模型施加一个称为 L1 范数的惩罚项来收缩回归系数向零，该惩罚项是系数的绝对值之和。
 
@@ -2763,56 +2592,40 @@ Lasso 代表 Least Absolute Shrinkage and Selection Operator。它通过对回�
 
 一般来说，套索可能在某些预测变量具有大系数，而剩余预测变量具有非常小系数的情况下表现更好。
 
-
-
-
-
 Ridge regression will perform better when the outcome is a function of many predictors, all with coefficients of roughly equal size (James et al. 2014).
 
 Cross-validation methods can be used for identifying which of these two techniques is better on a particular data set.
 
-### 19.2.3 Elastic Net
+#### 19.2.3 Elastic Net
 
 Elastic Net produces a regression model that is penalized with both the `L1-norm` and `L2-norm`. The consequence of this is to effectively shrink coefficients (like in ridge regression) and to set some coefficients to zero (as in LASSO).
 
-## 19.3 Loading required R packages
+### 19.3 Loading required R packages
 
 * `tidyverse` for easy data manipulation and visualization
 * `caret` for easy machine learning workflow
 * `glmnet`, for computing penalized regression
 
-```
-```
-
-## 19.4 Preparing the data
+### 19.4 Preparing the data
 
 We'll use the `Boston` data set [in `MASS` package], introduced in Chapter 3, for predicting the median house value (`mdev`), in Boston Suburbs, based on multiple predictor variables.
 
 We’ll randomly split the data into training set (80% for building a predictive model) and test set (20% for evaluating the model). Make sure to set seed for reproducibility.
 
-```
-```
+### 19.5 Computing penalized linear regression
 
-## 19.5 Computing penalized linear regression
-
-### 19.5.1 Additional data preparation
+#### 19.5.1 Additional data preparation
 
 You need to create two objects:
 
 * `y` for storing the outcome variable
 * `x` for holding the predictor variables. This should be created using the function `model.matrix()` allowing to automatically transform any qualitative variables (if any) into dummy variables (Chapter 6), which is important because `glmnet()` can only take numerical, quantitative inputs. After creating the model matrix, we remove the intercept component at index = 1.
 
-```
-```
-
-### 19.5.2 R functions
+#### 19.5.2 R functions
 
 We'll use the R function `glmnet()` [glmnet package] for computing penalized linear regression models.
 
 The simplified format is as follow:
-
-```
-```
 
 * `x`: matrix of predictor variables
 * `y`: the response or outcome variable, which is a binary variable.
@@ -2828,16 +2641,10 @@ In the following sections, we start by computing ridge, lasso and elastic net re
 
 The best model is defined as the model that has the lowest prediction error, `RMSE` (Chapter 13).
 
-### 19.5.3 Computing ridge regression
-
-```
-```
+#### 19.5.3 Computing ridge regression
 
 ```
 ## [1] 0.758
-```
-
-```
 ```
 
 ```
@@ -2860,12 +2667,11 @@ The best model is defined as the model that has the lowest prediction error, `RM
 ```
 
 ```
-```
-
-```
 ##   RMSE Rsquare
 ## 1 4.98   0.671
 ```
+
+
 
 Note that by default, the function `glmnet()` standardizes variables so that their scales are comparable. However, the coefficients are always returned on the original scale.
 
@@ -2874,13 +2680,7 @@ Note that by default, the function `glmnet()` standardizes variables so that the
 The only difference between the R code used for ridge regression is that, for lasso regression you need to specify the argument `alpha = 1` instead of `alpha = 0` (for ridge regression).
 
 ```
-```
-
-```
 ## [1] 0.00852
-```
-
-```
 ```
 
 ```
@@ -2903,9 +2703,6 @@ The only difference between the R code used for ridge regression is that, for la
 ```
 
 ```
-```
-
-```
 ##   RMSE Rsquare
 ## 1 4.99   0.671
 ```
@@ -2921,14 +2718,8 @@ Here, we'll test the combination of 10 different values for `alpha` and `lambda`
 The best `alpha` and `lambda` values are those values that minimize the cross-validation error (Chapter 14).
 
 ```
-```
-
-```
 ##   alpha lambda
 ## 6   0.1   0.21
-```
-
-```
 ```
 
 ```
@@ -2951,9 +2742,6 @@ The best `alpha` and `lambda` values are those values that minimize the cross-va
 ```
 
 ```
-```
-
-```
 ##   RMSE Rsquare
 ## 1 4.98   0.672
 ```
@@ -2972,30 +2760,15 @@ Note that, we can easily compute and compare ridge, lasso and elastic net regres
 
 0. **Setup a grid range of lambda values**:
 
-```
-```
-
 1. **Compute ridge regression**:
-
-```
-```
 
 2. **Compute lasso regression**:
 
-```
-```
-
 3. **Elastic net regression**:
-
-```
-```
 
 4. **Comparing models performance**:
 
 The performance of the different models - ridge, lasso and elastic net - can be easily compared using `caret`. The best model is defined as the one that minimizes the prediction error.
-
-```
-```
 
 ```
 ## 
@@ -3024,10 +2797,6 @@ In this chapter we described the most commonly used penalized regression methods
 
 This chapter presents regression methods based on dimension reduction techniques, which can be very useful when you have a large data set with multiple correlated predictor variables.
 
-
-
-
-
 一般来说，所有降维方法都首先将原始预测变量汇总为少数几个新变量，称为主成分（`PCs`），然后将这些主成分用作预测变量来拟合线性回归模型。这些方法避免了预测变量之间的多重共线性，这在回归设定中是一个大问题（参见第 10 章）。
 
 在使用降维方法时，通常建议对每个预测变量进行标准化以使其可比较。标准化包括将预测变量除以其标准差。
@@ -3051,20 +2820,16 @@ This chapter presents regression methods based on dimension reduction techniques
 ## 20.4 加载所需的 R 包
 
 * `tidyverse` 用于轻松的数据操作和可视化
-* `caret` 用于轻松的机器学习工作流
-* `pls`，用于计算 `PCR` 和 `PLS`
 
-```
-```
+* `caret` 用于轻松的机器学习工作流
+
+* `pls`，用于计算 `PCR` 和 `PLS`
 
 ## 20.5 准备数据
 
 我们将使用 `Boston` 数据集 [在 `MASS` 包中]，该数据集在第 3 章中介绍，用于基于多个预测变量预测波士顿郊区的房屋中位数价值（`medv`）。
 
 我们将随机将数据拆分为训练集（80% 用于构建预测模型）和测试集（20% 用于评估模型）。请确保设置种子以确保可重复性。
-
-```
-```
 
 ## 20.6 计算
 
@@ -3079,14 +2844,8 @@ R 函数 `train()` [`caret` 包] 提供了通过调用 `pls` 包来计算 `PCR` 
 ### 20.6.1 计算主成分回归
 
 ```
-```
-
-```
 ##   ncomp
 ## 5     5
-```
-
-```
 ```
 
 ```
@@ -3098,9 +2857,6 @@ R 函数 `train()` [`caret` 包] 提供了通过调用 `pls` 包来计算 `PCR` 
 ##           1 comps  2 comps  3 comps  4 comps  5 comps
 ## X           47.48    58.40    68.00    74.75    80.94
 ## .outcome    38.10    51.02    64.43    65.24    71.17
-```
-
-```
 ```
 
 ```
@@ -3125,14 +2881,8 @@ R 函数 `train()` [`caret` 包] 提供了通过调用 `pls` 包来计算 `PCR` 
 R 代码与 `PCR` 方法完全相同。
 
 ```
-```
-
-```
 ##   ncomp
 ## 9     9
-```
-
-```
 ```
 
 ```
@@ -3147,9 +2897,6 @@ R 代码与 `PCR` 方法完全相同。
 ##           8 comps  9 comps
 ## X           85.92    90.36
 ## .outcome    75.48    75.49
-```
-
-```
 ```
 
 ```
@@ -3180,18 +2927,22 @@ R 代码与 `PCR` 方法完全相同。
 在本部分中，我们将涵盖以下主题：
 
 * Logistic 回归，用于二元分类任务（第 22 章）
+
 * 用于变量选择的逐步和惩罚 logistic 回归（第 23 和 24 章）
+
 * Logistic 回归假设和诊断（第 25 章）
 
-
-
-
-
 *   多项逻辑回归，逻辑回归在多分类任务中的扩展（第 26 章）。
+
 *   判别分析，用于二分类和多分类问题（第 27 章）
+
 *   朴素贝叶斯分类器（第 28 章）
+
 *   支持向量机（第 29 章）
+
 *   分类模型评估（第 30 章）
+
+
 
 大多数分类算法计算属于给定类别的概率。然后将观测值分配给概率得分最高的类别。
 
@@ -3213,15 +2964,15 @@ Pima 印第安人糖尿病数据集可在 `mlbench` 包中使用。它将用于�
 
 数据包含 768 名个体（女性）和 9 个临床变量，用于预测个体患糖尿病阳性或阴性的概率：
 
-*   `pregnant`: 怀孕次数
-*   `glucose`: 血浆葡萄糖浓度
-*   `pressure`: 舒张压（mm Hg）
-*   `triceps`: 三头肌皮褶厚度（mm）
-*   `insulin`: 2 小时血清胰岛素（mu U/ml）
-*   `mass`: 体质指数（体重 kg/(身高 m)²）
-*   `pedigree`: 糖尿病谱系功能
-*   `age`: 年龄（岁）
-*   `diabetes`: 类别变量
+* `pregnant`: 怀孕次数
+* `glucose`: 血浆葡萄糖浓度
+* `pressure`: 舒张压（mm Hg）
+* `triceps`: 三头肌皮褶厚度（mm）
+* `insulin`: 2 小时血清胰岛素（mu U/ml）
+* `mass`: 体质指数（体重 kg/(身高 m)²）
+* `pedigree`: 糖尿病谱系功能
+* `age`: 年龄（岁）
+* `diabetes`: 类别变量
 
 ### 21.1.2 Iris 数据集
 
@@ -3241,23 +2992,23 @@ Pima 印第安人糖尿病数据集可在 `mlbench` 包中使用。它将用于�
 
 `Logistic regression` 用于基于一个或多个预测变量 (`x`) 预测个体的类别（或分类）。它用于建模二元结果，即只能有两个可能值的变量：0 或 1，是或否，患病或未患病。
 
-逻辑回归属于一个名为 *Generalized Linear Model* (`GLM`) 的家族，该家族用于将线性回归模型（第 4 章）扩展到其他情况。其他同义词是 *binary logistic regression*、*binomial logistic regression* 和 *logit model*。
+逻辑回归属于一个名为 `Generalized Linear Model` (`GLM`) 的家族，该家族用于将线性回归模型（第 4 章）扩展到其他情况。其他同义词是 `binary logistic regression`、`binomial logistic regression` 和 `logit model`。
 
 逻辑回归不会直接返回观测值的类别。它允许我们估计类别成员的概率 (`p`)。概率范围在 0 到 1 之间。你需要决定类别从一个翻转为另一个的阈值概率。默认情况下，该值设为 `p = 0.5`，但实际上应根据分析目的确定。
 
 在本章中你将学习如何：
 
-*   定义逻辑回归方程以及对数几率和 logit 等关键术语
-*   在 `R` 中执行逻辑回归并解释结果
-*   对新的测试数据进行预测并评估模型准确性
+* 定义逻辑回归方程以及对数几率和 logit 等关键术语
+* 在 `R` 中执行逻辑回归并解释结果
+* 对新的测试数据进行预测并评估模型准确性
 
 ## 22.2 Logistic function
 
 标准逻辑回归函数，用于根据预测变量 (`x`) 预测观测结果，是一种 S 形曲线，定义为 `p = exp(y) / [1 + exp(y)]`（James et al. 2014）。这也可以简单写成 `p = 1/[1 + exp(-y)]`，其中：
 
-*   `y = b0 + b1*x`，
-*   `exp()` 是指数函数，
-*   `p` 是在给定 `x` 的情况下事件发生的概率（1）。数学上写为 `p(event=1|x) and abbreviated as` `p(x)`，因此 `px = 1/[1 + exp(-(b0 + b1*x))]`。
+* `y = b0 + b1*x`
+* `exp()` 是指数函数
+* `p` 是在给定 `x` 的情况下事件发生的概率（1）。数学上写为 `p(event=1|x) and abbreviated as` `p(x)`，因此 `px = 1/[1 + exp(-(b0 + b1*x))]`。
 
 经过一些推导，可以证明 `p/(1-p) = exp(b0 + b1*x)`。对两边取对数，公式变为预测变量的线性组合：`log[p/(1-p)] = b0 + b1*x`。
 
@@ -3273,8 +3024,8 @@ Pima 印第安人糖尿病数据集可在 `mlbench` 包中使用。它将用于�
 
 ## 22.3 Loading required R packages
 
-*   `tidyverse` 用于简便的数据操作和可视化
-*   `caret` 用于简便的机器学习工作流
+* `tidyverse` 用于简便的数据操作和可视化
+* `caret` 用于简便的机器学习工作流
 
 ## 22.4 Preparing the data
 
@@ -3282,9 +3033,9 @@ Pima 印第安人糖尿病数据集可在 `mlbench` 包中使用。它将用于�
 
 执行以下步骤可能会提高模型的准确性
 
-*   删除潜在的异常值
-*   确保预测变量呈正态分布。如果不是，可以使用对数、根、Box-Cox 转换。
-*   删除高度相关的预测变量以最小化过拟合。高度相关预测变量的存在可能导致模型解不稳定。
+* 删除潜在的异常值
+* 确保预测变量呈正态分布。如果不是，可以使用对数、根、Box-Cox 转换。
+* 删除高度相关的预测变量以最小化过拟合。高度相关预测变量的存在可能导致模型解不稳定。
 
 在此，我们将使用 `PimaIndiansDiabetes2` [来自 `mlbench` 包]，在第 21 章中介绍，用于基于多个临床变量预测患糖尿病阳性的概率。
 
@@ -3311,10 +3062,6 @@ R 函数 `glm()`，用于广义线性模型，可用于计算逻辑回归。你�
 上面的输出显示了回归贝塔系数的估计值及其显著性水平。截距 (`b0`) 为 -6.32，葡萄糖变量的系数为 0.043。
 
 逻辑方程可以写为 `p = exp(-6.32 + 0.043*glucose)/ [1 + exp(-6.32 + 0.043*glucose)]`。使用此公式，对于每个新的葡萄糖血浆浓度值，你可以预测个体患糖尿病阳性的概率。
-
-
-
-
 
 Predictions can be easily made using the function `predict()`. Use the option `type = "response"` to directly obtain the probabilities
 
@@ -3377,6 +3124,8 @@ The procedure is as follow:
 1. Predict the class membership probabilities of observations based on predictor variables
 2. Assign the observations to the class with highest probability score `i.e above 0.5`
 
+
+
 The R function `predict()` can be used to predict the probability of being diabetes-positive, given the predictor values.
 
 **Predict the probabilities** of being diabetes-positive:
@@ -3433,10 +3182,6 @@ Additionally, you can add interaction terms in the model, or include spline term
 
 The same problems concerning confounding and correlated variables apply to logistic regression `see Chapter 11` and `Chapter 10`.
 
-
-
-
-
 你也可以拟合 *广义加性模型*（第 7 章），当预测变量的线性关系无法假设时。这可以使用 `mgcv` 包完成：
 
 ```
@@ -3481,10 +3226,15 @@ Logistic 回归仅限于两类分类问题。有一个扩展，称为 *多项 lo
 ```
 
 ```
+
 ## (Intercept)    pregnant     glucose    pressure     triceps     insulin 
+
 ##    -9.50372     0.04571     0.04230    -0.00700     0.01858    -0.00159 
+
 ##        mass    pedigree         age 
+
 ##     0.04502     0.96845     0.04256
+
 ```
 
 ### 23.3.3 执行逐步变量选择
@@ -3509,7 +3259,9 @@ Logistic 回归仅限于两类分类问题。有一个扩展，称为 *多项 lo
 ```
 
 ```
+
 ## [1] 0.808
+
 ```
 
 逐步 logistic 回归模型的预测准确率：
@@ -3539,7 +3291,9 @@ Logistic 回归仅限于两类分类问题。有一个扩展，称为 *多项 lo
 最常用的惩罚回归包括：
 
 * **岭回归**：贡献较小的变量其系数接近于零。然而，所有变量都被纳入模型。这在根据领域知识需要将所有变量纳入模型时很有用。
+
 * **lasso 回归**：一些贡献较小的变量的系数被强制为恰好为零。仅最显著的变量保留在最终模型中。
+
 * **弹性网络回归**：岭回归和 lasso 回归的组合。它将一些系数收缩至零（像岭回归）并将一些系数设为恰好为零（像 lasso 回归）
 
 本章描述如何计算惩罚 logistic 回归，例如 lasso 回归，以自动选择包含最具贡献预测变量的最优模型。
@@ -3547,7 +3301,9 @@ Logistic 回归仅限于两类分类问题。有一个扩展，称为 *多项 lo
 ## 24.2 加载所需的 R 包
 
 * `tidyverse` 用于便捷的数据操作和可视化
+
 * `caret` 用于便捷的机器学习工作流
+
 * `glmnet`，用于计算惩罚回归
 
 ```
@@ -3577,12 +3333,19 @@ R 函数 `model.matrix()` 有助于创建预测变量矩阵，并自动将分类
 ```
 
 * `x`：预测变量矩阵
+
 * `y`：响应或结果变量，是一个二元变量。
+
 * `family`：响应类型。对于二元结果变量使用 "binomial"
+
 * `alpha`：弹性网络混合参数。允许的值包括：
+
   * "1"：用于 lasso 回归
+
   * "0"：用于岭回归
+
   * 0 到 1 之间的值（例如 0.3）用于弹性网络回归。
+
 * `lamba`：定义收缩量的数值。应由分析师指定。
 
 在惩罚回归中，你需要指定一个常数 `lambda` 来调整系数收缩的量。数据的最佳 `lambda` 可以定义为使交叉验证预测错误率最小化的 `lambda`。这可以使用函数 `cv.glmnet()` 自动确定。
@@ -3608,33 +3371,45 @@ R 函数 `model.matrix()` 有助于创建预测变量矩阵，并自动将分类
 ```
 
 ```
+
 ## [1] 0.00871
+
 ```
-
-
-
-
 
 一般来说，正则化的目的是平衡准确性和简洁性。这意味着，选择预测变量数量最少，同时也能获得良好准确性的模型。为此，函数 `cv.glmnet()` 还会找到使模型最简单但同时仍在最优 `lambda` 值一个标准误差范围内的 `lambda` 值。该值称为 `lambda.1se`。
 
 ```
+
 ## [1] 0.0674
+
 ```
 
 使用 `lambda.min` 作为最佳 lambda，得到以下回归系数：
 
 ```
+
 ## 9 x 1 sparse Matrix of class "dgCMatrix"
+
 ##                     1
+
 ## (Intercept) -8.615615
+
 ## pregnant     0.035076
+
 ## glucose      0.036916
+
 ## pressure     .       
+
 ## triceps      0.016484
+
 ## insulin     -0.000392
+
 ## mass         0.030485
+
 ## pedigree     0.785506
+
 ## age          0.036265
+
 ```
 
 从上面的输出中，只有可行的 `triceps` 的系数恰好等于零。
@@ -3642,17 +3417,29 @@ R 函数 `model.matrix()` 有助于创建预测变量矩阵，并自动将分类
 使用 `lambda.1se` 作为最佳 lambda，得到以下回归系数：
 
 ```
+
 ## 9 x 1 sparse Matrix of class "dgCMatrix"
+
 ##                    1
+
 ## (Intercept) -4.65750
+
 ## pregnant     .      
+
 ## glucose      0.02628
+
 ## pressure     .      
+
 ## triceps      0.00191
+
 ## insulin      .      
+
 ## mass         .      
+
 ## pedigree     .      
+
 ## age          0.01734
+
 ```
 
 使用 `lambda.1se`，只有 5 个变量具有非零系数。lasso 算法将所有其他变量的系数设为零，从而降低了模型的复杂度。
@@ -3666,13 +3453,17 @@ R 函数 `model.matrix()` 有助于创建预测变量矩阵，并自动将分类
 * 使用 `lambda.min` 计算最终模型：
 
 ```
+
 ## [1] 0.769
+
 ```
 
 * 使用 `lambda.1se` 计算最终模型：
 
 ```
+
 ## [1] 0.705
+
 ```
 
 在下一节中，我们将比较 lasso 回归获得的准确性与使用完整逻辑回归模型（包含所有预测变量）获得的准确性。
@@ -3680,24 +3471,26 @@ R 函数 `model.matrix()` 有助于创建预测变量矩阵，并自动将分类
 #### 24.4.5 计算完整的逻辑模型
 
 ```
+
 ## [1] 0.808
-```
+
+
 
 ## 24.5 讨论
 
-本章介绍了如何在 R 中计算惩罚逻辑回归模型。在这里，我们专注于 lasso 模型，但你也可以通过在 `glmnet()` 函数中使用 `alpha = 0` 来拟合岭回归。对于弹性网络回归，你需要在 0 和 1 之间选择一个 alpha 值。这可以使用 `caret` 包自动完成。参见第 19 章。
+本章介绍了如何在 R 中计算惩罚逻辑回归模型。在这里，我们专注于 `lasso` 模型，但你也可以通过在 `glmnet()` 函数中使用 `alpha = 0` 来拟合岭回归。对于弹性网络回归，你需要在 0 和 1 之间选择一个 `alpha` 值。这可以使用 `caret` 包自动完成。参见第 19 章。
 
-我们的分析表明，使用 `lambda.min` 作为最佳 lambda 的 lasso 回归，与完整的逻辑模型相比，在测试数据上的模型性能没有受到太大影响的情况下，得到了更简单的模型。
+我们的分析表明，使用 `lambda.min` 作为最佳 `lambda` 的 `lasso` 回归，与完整的逻辑模型相比，在测试数据上的模型性能没有受到太大影响的情况下，得到了更简单的模型。
 
-我们使用 `lambda.1se` 获得的模型准确性略低于使用所有预测变量（n = 8）的更复杂模型或使用 lasso 回归中的 `lambda.min` 所获得的准确性。即使使用 `lambda.1se`，获得的准确性仍然足够好，同时模型也更简单。
+我们使用 `lambda.1se` 获得的模型准确性略低于使用所有预测变量（n = 8）的更复杂模型或使用 `lasso` 回归中的 `lambda.min` 所获得的准确性。即使使用 `lambda.1se`，获得的准确性仍然足够好，同时模型也更简单。
 
-这意味着，使用 lasso 回归获得的更简单模型在拟合数据信息方面至少与更复杂的模型一样好。根据偏差-方差权衡，在其他条件相同的情况下，更简单的模型应始终优先考虑，因为它不太可能过度拟合训练数据。
+这意味着，使用 `lasso` 回归获得的更简单模型在拟合数据信息方面至少与更复杂的模型一样好。根据偏差-方差权衡，在其他条件相同的情况下，更简单的模型应始终优先考虑，因为它不太可能过度拟合训练数据。
 
 对于变量选择，惩罚逻辑回归技术的替代方案是第 23 章中描述的逐步逻辑回归。
 
 ## 25 Logistic Regression Assumptions and Diagnostics
 
-## 25.1 引言
+### 25.1 引言
 
 `logistic regression` 模型对数据做出若干 `assumptions`。
 
@@ -3705,23 +3498,23 @@ R 函数 `model.matrix()` 有助于创建预测变量矩阵，并自动将分类
 
 请确保你已阅读第 22 章中的逻辑回归基础知识。
 
-## 25.2 逻辑回归假设
+### 25.2 逻辑回归假设
 
 逻辑回归方法假设：
 
 * 结果是一个二元或二分变量，如是 vs 否，阳性 vs 阴性，1 vs 0。
-* 结果的对数几率与每个预测变量之间存在线性关系。请记住，对数几率函数为 `logit(p) = log(p/(1-p))`，其中 p 是结果的概率（参见第 22 章）。
+* 结果的对数几率与每个预测变量之间存在线性关系。请记住，对数几率函数为 `logit(p) = log(p/(1-p))`，其中 `p` 是结果的概率（参见第 22 章）。
 * 连续预测变量中没有有影响的值（极值或异常值）
 * 预测变量之间不存在高度相关性（即多重共线性）。
 
 为了提高模型的准确性，你应确保这些假设对你的数据成立。在以下各节中，我们将描述如何诊断数据中的潜在问题。
 
-## 25.3 加载所需的 R 包
+### 25.3 加载所需的 R 包
 
 * `tidyverse` 用于轻松的数据操作和可视化
 * `broom`：从统计检验结果创建整洁的数据框
 
-## 25.4 建立逻辑回归模型
+### 25.4 建立逻辑回归模型
 
 我们首先使用 `PimaIndiansDiabetes2` `mlbench` 包计算一个逻辑回归模型的示例，该包在第 21 章中介绍，用于基于临床变量预测糖尿病检测阳性的概率。
 
@@ -3730,9 +3523,9 @@ R 函数 `model.matrix()` 有助于创建预测变量矩阵，并自动将分类
 ## "neg" "pos" "neg" "pos" "pos" "pos"
 ```
 
-## 25.5 逻辑回归诊断
+### 25.5 逻辑回归诊断
 
-### 25.5.1 线性假设
+#### 25.5.1 线性假设
 
 在这里，我们将检查连续预测变量与结果对数几率之间的线性关系。这可以通过目视检查每个预测变量与对数几率值之间的散点图来完成。
 
@@ -3746,7 +3539,7 @@ R 函数 `model.matrix()` 有助于创建预测变量矩阵，并自动将分类
 
 变量 `age` 和 `pedigree` 不是线性的，可能需要一些转换。如果散点图显示非线性，你需要其他方法来建立模型，例如包含 2 或 3 次幂项、分段多项式和样条函数（第 7 章）。
 
-### 25.5.2 有影响的值
+#### 25.5.2 有影响的值
 
 有影响的值是可能改变逻辑回归模型质量的极端个体数据点。
 
@@ -3774,17 +3567,14 @@ R 函数 `model.matrix()` 有助于创建预测变量矩阵，并自动将分类
 * 将数据转换为对数尺度
 * 使用非参数方法
 
-### 25.5.3 多重共线性
-
-
-
-
+#### 25.5.3 多重共线性
 
 多重共线性对应于数据中包含高度相关的预测变量的情况。更多内容请阅读第 10 章。
 
 多重共线性是回归分析中的一个重要问题，应通过剔除相关变量来解决。它可以使用 R 函数 `vif()` [`car` package] 来评估，该函数计算方差膨胀因子：
 
 ```
+
 ```
 
 ```
@@ -3794,7 +3584,7 @@ R 函数 `model.matrix()` 有助于创建预测变量矩阵，并自动将分类
 
 作为经验法则，VIF 值超过 5 或 10 表示存在问题性的共线性。在我们的示例中，没有共线性：所有变量的 VIF 值都远低于 5。
 
-## 25.6 讨论
+### 25.6 讨论
 
 本章描述了逻辑回归模型的主要假设，并提供了 R 代码示例来诊断数据中的潜在问题，包括预测变量与结果的对数几率之间的非线性、数据中存在有影响的观测值以及预测变量之间的多重共线性。
 
@@ -3802,38 +3592,42 @@ R 函数 `model.matrix()` 有助于创建预测变量矩阵，并自动将分类
 
 ## 26 多项逻辑回归
 
-## 26.1 引言
+### 26.1 引言
 
 `multinomial logistic regression` 是逻辑回归（第 22 章）的扩展，用于多类分类任务。当结果涉及两个以上类别时使用。
 
 在本章中，我们将向您展示如何在 R 中计算多项逻辑回归。
 
-## 26.2 加载所需的 R 包
+### 26.2 加载所需的 R 包
 
 * `tidyverse` 用于轻松的数据操作
 * `caret` 用于轻松的预测建模
 * `nnet` 用于计算多项逻辑回归
 
 ```
+
 ```
 
-## 26.3 准备数据
+### 26.3 准备数据
 
 我们将使用 `iris` 数据集，该数据集在第 21 章中介绍，用于基于预测变量 `Sepal.Length`、`Sepal.Width`、`Petal.Length`、`Petal.Width` 预测鸢尾花物种。
 
 我们首先将数据随机拆分为训练集（用于构建预测模型的 80%）和测试集（用于评估模型的 20%）。请确保设置种子以保证可重复性。
 
 ```
-```
-
-## 26.4 计算多项逻辑回归
 
 ```
+
+### 26.4 计算多项逻辑回归
+
+```
+
 ```
 
 模型准确率：
 
 ```
+
 ```
 
 ```
@@ -3842,13 +3636,13 @@ R 函数 `model.matrix()` 有助于创建预测变量矩阵，并自动将分类
 
 我们的模型在预测不同类别方面非常出色，准确率为 97%。
 
-## 26.5 讨论
+### 26.5 讨论
 
 本章描述了如何在 R 中计算多项逻辑回归。该方法用于多类问题。实际上，它并不常用。判别分析（第 27 章）对于多类分类更为流行。
 
 ## 27 判别分析
 
-## 27.1 引言
+### 27.1 引言
 
 `Discriminant analysis` 用于基于一个或多个预测变量预测属于给定类别（或分类）的概率。它适用于连续和/或分类预测变量。
 
@@ -3868,15 +3662,16 @@ R 函数 `model.matrix()` 有助于创建预测变量矩阵，并自动将分类
 * `Flexible Discriminant Analysis` (`FDA`)：使用预测变量的非线性组合，如样条。
 * `Regularized discriminant anlysis` (`RDA`)：正则化（或收缩）改善了协方差矩阵的估计，在预测变量数量大于训练数据样本数量的情况下。这导致判别分析的改进。
 
-## 27.2 加载所需的 R 包
+### 27.2 加载所需的 R 包
 
 * `tidyverse` 用于轻松的数据操作和可视化
 * `caret` 用于轻松的机器学习工作流
 
 ```
+
 ```
 
-## 27.3 准备数据
+### 27.3 准备数据
 
 我们将使用 `iris` 数据集，该数据集在第 21 章中介绍，用于基于预测变量 `Sepal.Length`、`Sepal.Width`、`Petal.Length`、`Petal.Width` 预测鸢尾花物种。
 
@@ -3885,14 +3680,16 @@ R 函数 `model.matrix()` 有助于创建预测变量矩阵，并自动将分类
 1. 将数据拆分为训练集和测试集：
 
 ```
+
 ```
 
 2. 归一化数据。分类变量会被自动忽略。
 
 ```
+
 ```
 
-## 27.4 线性判别分析 - LDA
+### 27.4 线性判别分析 - LDA
 
 LDA 算法首先找到使类别间分离最大化的方向，然后使用这些方向来预测个体的类别。这些方向称为线性判别式，是预测变量的线性组合。
 
@@ -3908,11 +3705,13 @@ LDA 假设预测变量呈正态分布（高斯分布），并且不同类别具�
 **快速入门 R 代码**：
 
 ```
+
 ```
 
 **计算 LDA**：
 
 ```
+
 ```
 
 ```
@@ -3947,10 +3746,6 @@ LDA 确定组均值并为每个个体计算属于不同组的概率。然后个�
 
 * *Prior probabilities of groups*：每个组中训练观测值的比例。例如，训练观测值中有 31% 属于 setosa 组
 * *Group means*：组重心。显示每个组中每个变量的均值。
-
-
-
-
 
 *线性判别式的系数*：显示用于形成 LDA 决策规则的预测变量的线性组合。例如，`LD1 = 0.91*Sepal.Length + 0.64*Sepal.Width - 4.08*Petal.Length - 2.3*Petal.Width`。同理，`LD2 = 0.03*Sepal.Length + 0.89*Sepal.Width - 2.2*Petal.Length - 2.6*Petal.Width`。
 
@@ -3990,29 +3785,31 @@ LDA 确定组均值并为每个个体计算属于不同组的概率。然后个�
 ## [1] 10
 ```
 
+
+
 在某些情况下，你可能希望提高模型的精确度。在这种情况下，你可以通过调整后验概率截止值来微调模型。例如，你可以提高或降低截止值。
 
 **变量选择**：
 
-注意，如果在计算 LDA 之前对预测变量进行标准化，则判别权重可作为特征选择中变量重要性的度量。
+注意，如果在计算 `LDA` 之前对预测变量进行标准化，则判别权重可作为特征选择中变量重要性的度量。
 
 ## 27.5 二次判别分析 - QDA
 
-QDA 比 LDA 更灵活一些，因为它不假设方差/协方差相等。换句话说，对于 QDA，协方差矩阵可以对每个类别不同。
+`QDA` 比 `LDA` 更灵活一些，因为它不假设方差/协方差相等。换句话说，对于 `QDA`，协方差矩阵可以对每个类别不同。
 
-当训练集很小时，LDA 往往比 QDA 更好。
+当训练集很小时，`LDA` 往往比 `QDA` 更好。
 
-相比之下，如果训练集非常大，使得分类器的方差不是主要问题，或者 K 个类别具有共同协方差矩阵的假设明显不可行时，则推荐使用 QDA（James et al. 2014）。
+相比之下，如果训练集非常大，使得分类器的方差不是主要问题，或者 `K` 个类别具有共同协方差矩阵的假设明显不可行时，则推荐使用 `QDA`（James et al. 2014）。
 
-QDA 可以使用 R 函数 `qda()` 计算 [MASS 包]
+`QDA` 可以使用 R 函数 `qda()` 计算 [`MASS` 包]
 
 ## 27.6 混合判别分析 - MDA
 
-LDA 分类器假设每个类别来自单一的正态（或高斯）分布。这过于严格。
+`LDA` 分类器假设每个类别来自单一的正态（或高斯）分布。这过于严格。
 
-对于 MDA，存在类别，每个类别被假设为子类的高斯混合，其中每个数据点都有属于每个类别的概率。类别间的协方差矩阵相等性仍然假设成立。
+对于 `MDA`，存在类别，每个类别被假设为子类的高斯混合，其中每个数据点都有属于每个类别的概率。类别间的协方差矩阵相等性仍然假设成立。
 
-在某些情况下，MDA 可能优于 LDA 和 QDA，如下所示。在此示例数据中，我们有 3 个主要个体组，每个组有 3 个不相邻的子组。图上的实黑线代表 LDA、QDA 和 MDA 的决策边界。可以看出，MDA 分类器正确识别了子类，而 LDA 和 QDA 在建模此数据时完全不佳。
+在某些情况下，`MDA` 可能优于 `LDA` 和 `QDA`，如下所示。在此示例数据中，我们有 3 个主要个体组，每个组有 3 个不相邻的子组。图上的实黑线代表 `LDA`、`QDA` 和 `MDA` 的决策边界。可以看出，`MDA` 分类器正确识别了子类，而 `LDA` 和 `QDA` 在建模此数据时完全不佳。
 
 ![](img/Image00025.jpg)
 
@@ -4020,23 +3817,23 @@ LDA 分类器假设每个类别来自单一的正态（或高斯）分布。这�
 
 ## 27.7 柔性判别分析 - FDA
 
-FDA 是 LDA 的灵活扩展，使用预测变量的非线性组合，如样条。FDA 可用于建模多元非正态性或各组内变量之间的非线性关系，从而实现更准确的分类。
+`FDA` 是 `LDA` 的灵活扩展，使用预测变量的非线性组合，如样条。`FDA` 可用于建模多元非正态性或各组内变量之间的非线性关系，从而实现更准确的分类。
 
 ## 27.8 正则化判别分析
 
-RDA 通过正则化组协方差矩阵构建分类规则（Friedman 1989），从而对数据中的多重共线性更稳健。这对于包含高度相关预测变量的大型多元数据集可能非常有用。
+`RDA` 通过正则化组协方差矩阵构建分类规则（Friedman 1989），从而对数据中的多重共线性更稳健。这对于包含高度相关预测变量的大型多元数据集可能非常有用。
 
-正则化判别分析是 LDA 和 QDA 之间的一种折中。回想一下，在 LDA 中我们假设所有类别的协方差矩阵相等。QDA 假设所有类别的协方差矩阵不同。正则化判别分析是 LDA 和 QDA 之间的中间方法。
+正则化判别分析是 `LDA` 和 `QDA` 之间的一种折中。回想一下，在 `LDA` 中我们假设所有类别的协方差矩阵相等。`QDA` 假设所有类别的协方差矩阵不同。正则化判别分析是 `LDA` 和 `QDA` 之间的中间方法。
 
-RDA 将 QDA 的单独协方差收缩到 LDA 中的共同协方差。这在预测变量数量大于训练数据中样本数量的情况下改善了协方差矩阵的估计，可能导致模型准确性的提高。
+`RDA` 将 `QDA` 的单独协方差收缩到 `LDA` 中的共同协方差。这在预测变量数量大于训练数据中样本数量的情况下改善了协方差矩阵的估计，可能导致模型准确性的提高。
 
 ## 27.9 讨论
 
-我们描述了线性判别分析（LDA）及其扩展，用于基于多个预测变量预测观测值的类别。与逻辑回归（第 22 章）相比，判别分析更适合多类分类问题。
+我们描述了线性判别分析（`LDA`）及其扩展，用于基于多个预测变量预测观测值的类别。与逻辑回归（第 22 章）相比，判别分析更适合多类分类问题。
 
-LDA 假设不同类别具有相同的方差或协方差矩阵。我们在本章中描述了 LDA 的许多扩展。LDA 最流行的扩展是二次判别分析（QDA），它比 LDA 更灵活，因为它不假设组协方差矩阵相等。
+`LDA` 假设不同类别具有相同的方差或协方差矩阵。我们在本章中描述了 `LDA` 的许多扩展。`LDA` 最流行的扩展是二次判别分析（`QDA`），它比 `LDA` 更灵活，因为它不假设组协方差矩阵相等。
 
-对于小数据集，LDA 往往优于 QDA。QDA 推荐用于大型训练数据集。
+对于小数据集，`LDA` 往往优于 `QDA`。`QDA` 推荐用于大型训练数据集。
 
 ## 28 Naive Bayes 分类器
 
@@ -4044,7 +3841,7 @@ LDA 假设不同类别具有相同的方差或协方差矩阵。我们在本章�
 
 **Naive Bayes 分类器**是一种简单而强大的方法，可用于二元和多类分类问题。
 
-Naive Bayes 分类器使用贝叶斯定理预测观测值的类别成员概率，该定理基于条件概率，即在已知某事已经发生的情况下某事发生的概率。
+`Naive Bayes` 分类器使用贝叶斯定理预测观测值的类别成员概率，该定理基于条件概率，即在已知某事已经发生的情况下某事发生的概率。
 
 观测值被分配给概率得分最大的类别。
 
@@ -4059,7 +3856,7 @@ Naive Bayes 分类器使用贝叶斯定理预测观测值的类别成员概率�
 
 输入预测变量可以是分类和/或数值变量。
 
-这里，我们将使用 `PimaIndiansDiabetes2` [在 `mlbench` 包中]，在第 21 章中介绍，用于基于多个临床变量预测患糖尿病的概率。
+这里，我们将使用 `PimaIndiansDiabetes2` [`mlbench` 包中]，在第 21 章中介绍，用于基于多个临床变量预测患糖尿病的概率。
 
 我们将随机将数据分为训练集（80% 用于构建预测模型）和测试集（20% 用于评估模型）。确保设置种子以保证可重复性。
 
@@ -4087,10 +3884,6 @@ Naive Bayes 分类器使用贝叶斯定理预测观测值的类别成员概率�
 
 支持向量机方法可以处理线性和非线性类边界。它可用于二类和多类分类问题。
 
-
-
-
-
 在现实生活数据中，分离边界通常是非线性的。技术上，SVM 算法使用所谓的 [核技巧](https://en.wikipedia.org/wiki/Support_vector_machine) 进行非线性分类。最常用的核变换是 *多项式核* 和 *径向核*。
 
 注意，SVM 还有一个用于回归的扩展，称为支持向量回归。
@@ -4103,15 +3896,17 @@ Naive Bayes 分类器使用贝叶斯定理预测观测值的类别成员概率�
 * `caret` 用于便捷的机器学习工作流
 
 ```
+
 ```
 
 ## 29.3 数据集示例
 
-数据集：`PimaIndiansDiabetes2` [在 `mlbench` 包中]，在第 21 章中介绍过，用于基于多个临床变量预测患糖尿病的概率。
+数据集：`PimaIndiansDiabetes2` [`mlbench` 包中]，在第 21 章中介绍过，用于基于多个临床变量预测患糖尿病的概率。
 
 我们将随机将数据拆分为训练集（80% 用于构建预测模型）和测试集（20% 用于评估模型）。请确保设置种子以保证可重复性。
 
 ```
+
 ```
 
 ## 29.4 SVM 线性分类器
@@ -4119,6 +3914,7 @@ Naive Bayes 分类器使用贝叶斯定理预测观测值的类别成员概率�
 在以下示例中，变量已归一化以使其尺度可比较。在构建 SVM 分类器时通过设置选项 `preProcess = c("center","scale")` 会自动完成此操作。
 
 ```
+
 ```
 
 ```
@@ -4127,9 +3923,11 @@ Naive Bayes 分类器使用贝叶斯定理预测观测值的类别成员概率�
 ```
 
 ```
+
 ```
 
 ```
+
 ## [1] 0.782
 ```
 
@@ -4142,11 +3940,13 @@ Naive Bayes 分类器使用贝叶斯定理预测观测值的类别成员概率�
 以下 R 代码为 `C` 的网格值计算 SVM 并自动选择用于预测的最终模型：
 
 ```
+
 ```
 
 ![](img/Image00026.jpg)
 
 ```
+
 ```
 
 ```
@@ -4155,6 +3955,7 @@ Naive Bayes 分类器使用贝叶斯定理预测观测值的类别成员概率�
 ```
 
 ```
+
 ```
 
 ```
@@ -4170,6 +3971,7 @@ Naive Bayes 分类器使用贝叶斯定理预测观测值的类别成员概率�
 * **使用径向基核计算 SVM**：
 
 ```
+
 ```
 
 ```
@@ -4178,6 +3980,7 @@ Naive Bayes 分类器使用贝叶斯定理预测观测值的类别成员概率�
 ```
 
 ```
+
 ```
 
 ```
@@ -4187,6 +3990,7 @@ Naive Bayes 分类器使用贝叶斯定理预测观测值的类别成员概率�
 * **使用多项式基核计算 SVM**：
 
 ```
+
 ```
 
 ```
@@ -4195,6 +3999,7 @@ Naive Bayes 分类器使用贝叶斯定理预测观测值的类别成员概率�
 ```
 
 ```
+
 ```
 
 ```
@@ -4232,6 +4037,7 @@ Naive Bayes 分类器使用贝叶斯定理预测观测值的类别成员概率�
 * `caret` 用于便捷的机器学习工作流
 
 ```
+
 ```
 
 ## 30.3 构建分类模型
@@ -4243,11 +4049,13 @@ Naive Bayes 分类器使用贝叶斯定理预测观测值的类别成员概率�
 1. 将数据拆分为训练集（80%，用于构建模型）和测试集（20%，用于评估模型性能）：
 
 ```
+
 ```
 
 2. 在训练集上拟合 LDA 模型并在测试数据上进行预测：
 
 ```
+
 ```
 
 ## 30.4 整体分类准确率
@@ -4259,6 +4067,7 @@ Naive Bayes 分类器使用贝叶斯定理预测观测值的类别成员概率�
 原始分类准确率和错误率可以通过将测试数据中的观测类别与模型预测的类别进行比较来轻松计算：
 
 ```
+
 ```
 
 ```
@@ -4266,6 +4075,7 @@ Naive Bayes 分类器使用贝叶斯定理预测观测值的类别成员概率�
 ```
 
 ```
+
 ```
 
 ```
@@ -4286,6 +4096,7 @@ Naive Bayes 分类器使用贝叶斯定理预测观测值的类别成员概率�
 R 函数 `table()` 可用于生成 **混淆矩阵** 以确定有多少观测被正确或错误分类。它比较观测值和预测的结果值，并显示按结果类型分类的正确和错误预测数量。
 
 ```
+
 ```
 
 ```
@@ -4296,6 +4107,7 @@ R 函数 `table()` 可用于生成 **混淆矩阵** 以确定有多少观测被�
 ```
 
 ```
+
 ```
 
 ```
@@ -4304,10 +4116,6 @@ R 函数 `table()` 可用于生成 **混淆矩阵** 以确定有多少观测被�
 ##              neg 0.615 0.051
 ##              pos 0.141 0.192
 ```
-
-
-
-
 
 混淆矩阵的对角线元素表示预测正确，而非对角线表示预测错误。因此，正确分类率是对角线上的数值之和除以测试数据中的样本量。在我们的例子中，即为 `(48 + 15)/78 = 81%`。
 
@@ -4371,6 +4179,8 @@ confusion matrix
 ## 
 ```
 
+
+
 上述结果显示了不同的统计指标，其中最重要的是：
 
 *   预测与参考已知结果之间的交叉表
@@ -4410,10 +4220,6 @@ confusion matrix
 
 对于一个好的模型，ROC 曲线应陡峭上升，表明随着概率阈值降低，真阳性率（y 轴）比假阳性率（x 轴）增加得更快。
 
-
-
-
-
 因此，“理想点”是图的左上角，即假阳性率为零，真阳性率为一。这并不现实，但它确实意味着 AUC 越大，分类器越好。
 
 AUC 指标在 0.50（随机分类器）到 1.00 之间变化。大于 0.80 的值表明这是一个良好的分类器。
@@ -4425,7 +4231,6 @@ AUC 指标在 0.50（随机分类器）到 1.00 之间变化。大于 0.80 的�
 ROC 分析可使用 R 包 `pROC` 轻松执行。
 
 ```
-
 ```
 
 ![](img/Image00028.jpg)
@@ -4439,26 +4244,33 @@ ROC 分析可使用 R 包 `pROC` 轻松执行。
 如果我们想要特异性至少为 60% 的分类器模型，则灵敏度约为 0.88%。相应的概率阈值可按如下方式提取：
 
 ```
-
 ```
 
 ```
 ## # A tibble: 44 x 3
+
 ##   thresholds sensitivity specificity
+
 ##        <dbl>       <dbl>       <dbl>
+
 ## 1      0.111       0.885       0.615
+
 ## 2      0.114       0.885       0.635
+
 ## 3      0.114       0.885       0.654
+
 ## 4      0.115       0.885       0.673
+
 ## 5      0.119       0.885       0.692
+
 ## 6      0.131       0.885       0.712
+
 ## # ... with 38 more rows
 ```
 
 具有最高灵敏度 + 特异性之和的最佳阈值可按如下方式打印。可能存在多个阈值。
 
 ```
-
 ```
 
 ![](img/Image00029.jpg)
@@ -4468,7 +4280,6 @@ ROC 分析可使用 R 包 `pROC` 轻松执行。
 请注意，`print.thres` 也可以是一个包含要显示的阈值直接定义的数值向量：
 
 ```
-
 ```
 
 ### 30.7.3 多个 ROC 曲线
@@ -4476,7 +4287,6 @@ ROC 分析可使用 R 包 `pROC` 轻松执行。
 如果你的数据中有分组变量，你可能希望在同一张图上创建多个 ROC 曲线。这可以使用 `ggplot2` 完成。
 
 ```
-
 ```
 
 ![](img/Image00030.jpg)
@@ -4486,44 +4296,70 @@ ROC 分析可使用 R 包 `pROC` 轻松执行。
 我们首先使用 `iris` 数据集构建一个线性判别模型，该数据集包含三种鸢尾花物种的花萼和花瓣的长度和宽度。我们希望使用 LDA 根据花萼和花瓣参数预测物种。
 
 ```
-
 ```
 
 预测模型的性能指标（灵敏度、特异性，...）可以分别针对每个类别计算，将每个因子水平与剩余水平进行比较（即“一对所有”方法）。
 
 ```
-
 ```
 
 ```
 ## Confusion Matrix and Statistics
+
 ## 
+
 ##             Reference
+
 ## Prediction   setosa versicolor virginica
+
 ##   setosa         10          0         0
+
 ##   versicolor      0         10         0
+
 ##   virginica       0          0        10
+
 ## 
+
 ## Overall Statistics
+
 ##                                     
+
 ##                Accuracy : 1         
+
 ##                  95% CI : (0.884, 1)
+
 ##     No Information Rate : 0.333     
+
 ##     P-Value [Acc > NIR] : 4.86e-15  
+
 ##                                     
+
 ##                   Kappa : 1         
+
 ##  Mcnemar's Test P-Value : NA        
+
 ## 
+
 ## Statistics by Class:
+
 ## 
+
 ##                      Class: setosa Class: versicolor Class: virginica
+
 ## Sensitivity                  1.000             1.000            1.000
+
 ## Specificity                  1.000             1.000            1.000
+
 ## Pos Pred Value               1.000             1.000            1.000
+
 ## Neg Pred Value               1.000             1.000            1.000
+
 ## Prevalence                   0.333             0.333            0.333
+
 ## Detection Rate               0.333             0.333            0.333
+
 ## Detection Prevalence         0.333             0.333            0.333
+
 ## Balanced Accuracy            1.000             1.000            1.000
 ```
 
@@ -4577,10 +4413,6 @@ ROC 分析可使用 R 包 `pROC` 轻松执行。
 
 *   **相似性度量**：
 
-
-
-
-
 请注意，观测值之间的（不）相似性通常使用 [欧几里得距离度量](http://www.sthda.com/english/articles/26-clustering-basics/86-clustering-distance-measures-essentials/) 来确定，该度量对预测变量测量所采用的尺度非常敏感。因此，通常建议对预测变量进行标准化（即归一化），以使其尺度具有可比性。
 
 以下各节介绍如何为分类和回归设置构建 k-近邻预测模型。
@@ -4626,6 +4458,7 @@ ROC 分析可使用 R 包 `pROC` 轻松执行。
 
 ```
 ##    k
+
 ## 5 13
 ```
 
@@ -4634,6 +4467,7 @@ ROC 分析可使用 R 包 `pROC` 轻松执行。
 
 ```
 ## [1] neg pos neg pos pos neg
+
 ## Levels: neg pos
 ```
 
@@ -4724,20 +4558,31 @@ CART 预测模型生成的决策规则通常以二叉树的形式可视化。
 
 ```
 ## n= 150 
+
 ## 
+
 ## node), split, n, loss, yval, (yprob)
+
 ##       * denotes terminal node
+
 ## 
+
 ## 1) root 150 100 setosa (0.333 0.333 0.333)  
+
 ##   2) Petal.Length< 2.5 50   0 setosa (1.000 0.000 0.000) *
+
 ##   3) Petal.Length>=2.5 100  50 versicolor (0.000 0.500 0.500)  
+
 ##     6) Petal.Width< 1.8 54   5 versicolor (0.000 0.907 0.093) *
+
 ##     7) Petal.Width>=1.8 46   1 virginica (0.000 0.022 0.978) *
 ```
 
+
+
 这些规则是通过反复分割预测变量产生的，从与响应变量关联度最高的变量开始。该过程一直持续到满足某些预定的停止标准。
 
-生成的树由 *决策节点* 、 *分支* 和 *叶节点* 组成。树从上到下放置，因此 *根* 在顶部，表示结果的叶节点放在底部。
+生成的树由 *决策节点*、*分支* 和 *叶节点* 组成。树从上到下放置，因此 *根* 在顶部，表示结果的叶节点放在底部。
 
 每个决策节点对应于单个输入预测变量和该变量上的分割阈值。树的叶节点是用于进行预测的结果变量。
 
@@ -4745,19 +4590,15 @@ CART 预测模型生成的决策规则通常以二叉树的形式可视化。
 
 树将根据以下三个标准停止生长（Zhang 2016）：
 
-1.  所有叶节点都是纯的，具有单一类别；
-2.  预先指定的最小训练观测数无法通过任何分割方法分配给每个叶节点；
-3.  叶节点中的观测数达到预先指定的最小值。
+1. 所有叶节点都是纯的，具有单一类别；
+2. 预先指定的最小训练观测数无法通过任何分割方法分配给每个叶节点；
+3. 叶节点中的观测数达到预先指定的最小值。
 
 完全生长的树会过拟合训练数据，所产生的模型可能无法很好地预测新测试数据的结果。诸如 **剪枝** 之类的技术用于控制此问题。
 
 ### 33.3.2 选择树的分割点
 
-从技术上讲，**对于回归建模** ，分割阈值是这样定义的，使得落在子分区内的训练样本的残差平方和误差（RSS）最小化。
-
-
-
-
+从技术上讲，**对于回归建模**，分割阈值是这样定义的，使得落在子分区内的训练样本的残差平方和误差（RSS）最小化。
 
 Recall that, the RSS is the sum of the squared difference between the observed outcome values and the predicted ones, `RSS = sum((Observeds - Predicteds)²)`. See Chapter 4
 
@@ -4965,10 +4806,6 @@ R 代码与我们在前几节中看到的相同。这里也应应用修剪以限
 ## [1] 0.744
 ```
 
-
-
-
-
 p 值表示给定预测变量与结果变量之间的关联。例如，顶部的第一个决策节点显示 `glucose` 是与 `diabetes` 关联最强的变量，p 值 < 0.001，因此被选为第一个节点。
 
 ## 33.7 讨论
@@ -5106,15 +4943,9 @@ p 值表示给定预测变量与结果变量之间的关联。例如，顶部的
 * `MeanDecreaseAccuracy`，即在排除特定变量的情况下，预测袋外样本结果的模型准确度的平均下降幅度。
 * `MeanDecreaseGini`，即通过该变量进行分割所导致的节点不纯度平均下降幅度。Gini 不纯度指数仅用于分类问题。在回归中，节点不纯度通过训练集 RSS 衡量。这些度量使用训练集计算得出，其可靠性不如使用袋外数据计算的度量。请参阅第 `33` 章了解节点不纯度度量（Gini 指数和 RSS）。
 
-
-
-
-
 注意，默认情况下（`argument importance = FALSE`），`randomForest` 仅计算基尼不纯度指数。然而，通过变量计算模型准确度（`argument importance = TRUE`）需要额外的计算，在拟合数千个模型（树）的情况下，这可能会非常耗时。
 
 变量重要性度量可以使用函数 `varImpPlot()` [`randomForest` 包] 绘制：
-
-
 
 ![](img/Image00039.jpg)![](img/Image00040.jpg)
 
@@ -5122,21 +4953,27 @@ p 值表示给定预测变量与结果变量之间的关联。例如，顶部的
 
 函数 `varImp()` [`in caret`] 以百分比显示变量的重要性：
 
-
-
 ```
 ## rf variable importance
 ## 
 ##          Importance
 ## glucose       100.0
 ## age            33.5
-## pregnant       19.0
-## mass           16.2
-## triceps        15.4
-## pedigree       12.8
-## insulin        11.2
-## pressure        0.0
 ```
+
+
+
+## pregnant       19.0
+
+## mass           16.2
+
+## triceps        15.4
+
+## pedigree       12.8
+
+## insulin        11.2
+
+## pressure        0.0
 
 ## 34.4 回归
 
@@ -5148,13 +4985,9 @@ p 值表示给定预测变量与结果变量之间的关联。例如，顶部的
 
 随机将数据拆分为训练集（用于构建预测模型的 80%）和测试集（用于评估模型的 20%）。
 
-
-
 ### 34.4.2 计算随机森林回归树
 
 这里预测误差通过 RMSE 衡量，对应于结果的已知观测值与模型预测值之间的平均差异。RMSE 计算为 `RMSE = mean((observeds - predicteds)²) %>% sqrt()`。RMSE 越低，模型越好。
-
-
 
 ## 34.5 超参数
 
@@ -5173,21 +5006,31 @@ p 值表示给定预测变量与结果变量之间的关联。例如，顶部的
 
 （这将花费 1-2 分钟执行时间）
 
-
-
 ```
 ## 
+
 ## Call:
+
 ## summary.resamples(object = ., metric = "Accuracy")
+
 ## 
+
 ## Models: 1, 2, 4, 8 
+
 ## Number of resamples: 10 
+
 ## 
+
 ## Accuracy 
+
 ##    Min. 1st Qu. Median  Mean 3rd Qu.  Max. NA's
+
 ## 1 0.692   0.750  0.785 0.793   0.840 0.897    0
+
 ## 2 0.692   0.744  0.808 0.788   0.841 0.850    0
+
 ## 4 0.692   0.744  0.795 0.786   0.825 0.846    0
+
 ## 8 0.692   0.750  0.808 0.796   0.841 0.897    0
 ```
 
@@ -5232,8 +5075,6 @@ Boosting 可用于分类和回归问题。
 *   `caret` 用于轻松的机器学习工作流
 *   `xgboost` 用于计算 boosting 算法
 
-
-
 ## 35.2 分类
 
 ### 35.2.1 数据集示例
@@ -5241,8 +5082,6 @@ Boosting 可用于分类和回归问题。
 数据集：`PimaIndiansDiabetes2` [`in` `mlbench` package]，在第 21 章中介绍，用于基于多个临床变量预测患糖尿病的概率。
 
 随机将数据拆分为训练集（用于构建预测模型的 80%）和测试集（用于评估模型的 20%）。确保设置种子以确保可重复性。
-
-
 
 ### 35.2.2 提升分类树
 
@@ -5252,29 +5091,16 @@ Boosting 可用于分类和回归问题。
 
 *   `trControl`，用于设置 10 折交叉验证
 
-
-
 ```
 ##    nrounds max_depth eta gamma colsample_bytree min_child_weight subsample
+
 ## 18     150         1 0.3     0              0.8                1         1
 ```
-
-
-
-```
-
-
 
 ```
 ## [1] neg pos neg neg pos neg
 ## Levels: neg pos
 ```
-
-
-
-```
-
-
 
 ```
 ## [1] 0.744
@@ -5288,19 +5114,27 @@ Boosting 可用于分类和回归问题。
 
 函数 `varImp()` [`in caret`] 以百分比显示变量的重要性：
 
-
-
 ```
 ## xgbTree variable importance
+
 ## 
+
 ##          Overall
+
 ## glucose   100.00
+
 ## mass       20.23
+
 ## pregnant   15.83
+
 ## insulin    13.15
+
 ## pressure    9.51
+
 ## triceps     8.18
+
 ## pedigree    0.00
+
 ## age         0.00
 ```
 
@@ -5309,10 +5143,6 @@ Boosting 可用于分类和回归问题。
 同样，你可以构建随机森林模型来执行回归，即预测连续变量。
 
 ### 35.3.1 数据集示例
-
-
-
-
 
 我们将使用 `Boston` 数据集 [in `MASS` package]，该数据集在第 3 章中介绍，用于预测波士顿郊区的中位房价 (`mdev`)，使用不同的预测变量。
 
@@ -5406,9 +5236,13 @@ PCA 将数据减少为少数新的维度（或轴），它们是原始变量的�
 
 ```
 ##            Wife Alternating Husband Jointly
+
 ## Laundry     156          14       2       4
+
 ## Main_meal   124          20       5       4
+
 ## Dinner       77          11       7      13
+
 ## Breakfeast   82          36      15       7
 ```
 
@@ -5436,17 +5270,22 @@ PCA 将数据减少为少数新的维度（或轴），它们是原始变量的�
 
 ```
 ##   Age Time   Sick Sex   Nausea Vomiting Abdominals   Fever
+
 ## 1   9   22 Sick_y   F Nausea_y  Vomit_n     Abdo_y Fever_y
+
 ## 2   5    0 Sick_n   F Nausea_n  Vomit_n     Abdo_n Fever_n
+
 ## 3   6   16 Sick_y   F Nausea_n  Vomit_y     Abdo_y Fever_y
+
 ## 4   9    0 Sick_n   F Nausea_n  Vomit_n     Abdo_n Fever_n
 ```
 
+
+
 数据包含一些补充变量。它们不参与 MCA。这些变量的坐标将被预测。
 
-*   *补充定量变量*（quanti.sup）：第 1 列和第 2 列分别对应列 *age* 和 *time*。
-
-*   *补充定性变量*（quali.sup：列 3 和列 4 分别对应列 *Sick* 和 *Sex*。这些因子变量将用于按组为个体着色。
+*   *补充定量变量*（`quanti.sup`）：第 1 列和第 2 列分别对应列 `age` 和 `time`。
+*   *补充定性变量*（`quali.sup`：列 3 和列 4 分别对应列 `Sick` 和 `Sex`。这些因子变量将用于按组为个体着色。
 
 计算并可视化 MCA：
 
@@ -5457,11 +5296,6 @@ PCA 将数据减少为少数新的维度（或轴），它们是原始变量的�
 解释：
 
 *   个体图：具有相似特征的个体被分组在一起。
-
-
-
-
-
 *   变量类别图：上图显示了变量类别之间的关系。可以解释如下：
     *   具有相似特征的变量类别被归为一组。
     *   负相关变量类别位于图原点的相对两侧（相反象限）。
@@ -5475,7 +5309,7 @@ PCA 将数据减少为少数新的维度（或轴），它们是原始变量的�
 
 ### 36.4.1 基础
 
-聚类分析用于识别来自营销、生物医学和地理空间等领域的多元数据集中的相似对象组。阅读更多：[`www.sthda.com/english/articles/25-cluster-analysis-in-r-practical-guide/`](http://www.sthda.com/english/articles/25-cluster-analysis-in-r-practical-guide/) 。
+聚类分析用于识别来自营销、生物医学和地理空间等领域的多元数据集中的相似对象组。阅读更多：[`www.sthda.com/english/articles/25-cluster-analysis-in-r-practical-guide/`](http://www.sthda.com/english/articles/25-cluster-analysis-in-r-practical-guide/)。
 
 **聚类类型**。有不同类型的聚类方法，包括：
 *   分区聚类：将数据细分为 k 个组。
@@ -5512,7 +5346,7 @@ PCA 将数据减少为少数新的维度（或轴），它们是原始变量的�
 
 K-means 聚类的替代方法是 **K-medoids 聚类**或 PAM（围绕中心点分区），与 K-means 相比，对异常值不那么敏感。
 
-阅读更多：[分区聚类方法](http://www.sthda.com/english/articles/27-partitioning-clustering-essentials/) 。
+阅读更多：[分区聚类方法](http://www.sthda.com/english/articles/27-partitioning-clustering-essentials/)。
 
 以下 R 代码显示了如何在 R 中确定最佳聚类数以及如何计算 K-means 和 PAM 聚类。
 
@@ -5531,7 +5365,7 @@ K-means 聚类的替代方法是 **K-medoids 聚类**或 PAM（围绕中心点�
 层次聚类的结果是对象的树状表示，也称为树状图。可以通过在期望的相似性水平处剪切树状图来将观测值细分为组。
 
 *   计算：R 函数：`hclust()`。它以不相似性矩阵作为输入，该矩阵使用函数 `dist()` 计算。
-*   可视化：`fviz_dend()` [在 factoextra 中]
+*   可视化：`fviz_dend()` [在 `factoextra` 中]
 
 计算和可视化层次聚类的 R 代码：
 
@@ -5560,4 +5394,3 @@ Friedman, Jerome H. 1989. “Regularized Discriminant Analysis.” *Journal of t
 James, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. 2014. *An Introduction to Statistical Learning: With Applications in R*. Springer Publishing Company, Incorporated.
 
 Zhang, Zhongheng. 2016. “Decision Tree Modeling Using R.” *Annals of Translational Medicine* 4 (15)。
-

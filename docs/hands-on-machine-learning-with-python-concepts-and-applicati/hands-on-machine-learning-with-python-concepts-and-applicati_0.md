@@ -1,41 +1,11 @@
+
 # Python 机器学习实用指南：面向初学者的概念与应用
-
-
-
-
-
 
 ![C:\\Users\\CHADAD\\Downloads\\intelligent.png](img/00001.jpeg)
 
-
-
-
-
-
 ![C:\\Users\\CHADAD\\Downloads\\intelligent.png](img/00002.jpeg)
 
-
-
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## 献词
 
@@ -48,7 +18,9 @@ John Anderson 是一位数据科学研究员和机器学习专家。他在 2007 
 ## 来自 AI Sciences 出版社
 
 | ![C:\\Users\\CHADAD\\Dropbox\\Electro_books\\Covers\\dlf-as-CP-100-front.jpg](https://www.amazon.com/Deep-Learning-Python-Guide-Pytorch-ebook/dp/B07DRGJNW7/ref=pd_sbs_351_2?_encoding=UTF8&pd_rd_i=B07DRGJNW7&pd_rd_r=22374875-7fd5-11e8-9d30-79f90a35b456&pd_rd_w=HTcS1&pd_rd_wg=buQSL&pf_rd_i=desktop-dp-sims&pf_rd_m=ATVPDKIKX0DER&pf_rd_p=5825442648805390339&pf_rd_r=YSH10PQYV367HCX3EZ0V&pf_rd_s=desktop-dp-sims&pf_rd_t=40701&psc=1&refRID=YSH10PQYV367HCX3EZ0V) | | ![C:\\Users\\CHADAD\\Dropbox\\Electro_books\\Covers\\dlwp-as-CP-130-front.jpg](https://www.amazon.com/dp/B07DRGJNW7) |
+
 | --- | --- | --- |
+
 | ![C:\\Users\\gchadad\\Downloads\\Covers\\dsfswp-ai-PM-115-front.jpg](https://www.amazon.com/dp/B07F7QC635/ref=sspa_dk_detail_5?psc=1) | | ![C:\\Users\\gchadad\\Dropbox\\Electro_books\\Covers\\dafswp-ai-PM-115-front.jpg](https://www.amazon.com/Data-Analysis-Scratch-Python-Guide-ebook/dp/B07F193447/ref=pd_rhf_dp_p_img_2?_encoding=UTF8&psc=1&refRID=JA8R5MVZ8GY1B12GB1DC) |
 
 [WWW.AISCIENCES.NET](http://WWW.aisciences.net)
@@ -77,7 +49,7 @@ John Anderson 是一位数据科学研究员和机器学习专家。他在 2007 
 
 ## 这本书适合谁
 
-首先，您现在应该至少熟悉编程和 Python。我们将在此提供一个速成课程，并讨论关于 Python 和编程最重要的内容。每当您卡住或遇到不熟悉的内容时，随时可以进行 Google 搜索（Stack Overflow 和 Stack Exchange 是非常好的资源和社区）。
+首先，您现在应该至少熟悉编程和 Python。我们将在此提供一个速成课程，并讨论关于 Python 和编程最重要的内容。每当您卡住或遇到不熟悉的内容时，随时可以进行 Google 搜索（`Stack Overflow` 和 `Stack Exchange` 是非常好的资源和社区）。
 
 许多其他读者拿起这本书是因为他们想转行（数据科学家和机器学习工程师目前是最热门的工作，薪资简直令人难以置信）。除了令人惊叹的经济激励（包括非常酷的技术办公室），机器学习工程师还有机会与来自不同领域的最聪明的大脑一起工作。事实上，一些拥有物理学和统计学博士学位的人将他们的专业知识应用于解决机器学习挑战。
 
@@ -87,7 +59,7 @@ John Anderson 是一位数据科学研究员和机器学习专家。他在 2007 
 
 我们的目标是向您展示如何进行机器学习的示例和见解（正如承诺的那样，循序渐进），以便您在不久的将来能够自主发起和处理项目。更重要的是，我们将专注于如何正确思考机器学习（获得理解）。工具和技术会来来去去，但如果您有坚实的基础，您将始终处于利用这项仍在发展的技术的有利位置。
 
-首先，我们将下载并安装必要的工具以让您入门。这里我们将主要使用 Python、Anaconda、Jupyter Notebook 和 TensorFlow。接下来您将获得一个 Python 速成课程，以便您快速回顾最重要的概念并直接深入机器学习。
+首先，我们将下载并安装必要的工具以让您入门。这里我们将主要使用 Python、Anaconda、`Jupyter Notebook` 和 TensorFlow。接下来您将获得一个 Python 速成课程，以便您快速回顾最重要的概念并直接深入机器学习。
 
 为了激励您，我们将快速探索一个简单（且流行）的机器学习用例（泰坦尼克号生存预测）。这是一个具有广泛应用和意义的通用示例。一旦您理解了如何预测生存率，您就已经为应对许多机器学习项目做好了半准备。
 
@@ -100,10 +72,6 @@ John Anderson 是一位数据科学研究员和机器学习专家。他在 2007 
 ## 为什么选择这本书？
 
 本书旨在帮助您使用 Python 编程学习机器学习。如果您是该领域的绝对初学者，您会发现本书以易于理解的方式解释复杂概念，无需数学或复杂的理论要素。如果您是经验丰富的数据科学家，本书将为您探索机器学习应用提供一个良好的基础。
-
-
-
-
 
 ## 主题概览
 
@@ -289,10 +257,6 @@ if_even(25)  # 这将返回 "It's odd."
 
 ## Jupyter Notebook
 
-
-
-
-
 ## 使用 Jupyter Notebook 和 Python 库进行数据科学
 
 数据科学是一项实验性工作，因为需要测试假设以查看数据是否支持它们。**Jupyter Notebook** 是一个交互式 Web 应用程序，它捆绑了一个 **IPython shell**，这是一个用于 Python 计算的增强型 shell。代码、文本和可视化内容可以并排编写，并存储在一种特殊的笔记本格式中。这意味着项目可以轻松地在团队间共享，并且代码可以轻松复现，因为执行项目所需的每项功能都捆绑在笔记本中。Jupyter Notebook 支持多种编程语言，如 R、Julia、Python 等。Python 中的 Jupyter 由 `IPython` shell 提供支持，它提供了标准 Python 中没有但通常对交互式计算很有用的额外“魔法”函数。
@@ -308,6 +272,8 @@ $ jupyter notebook  # 启动 jupyter notebook web 界面的命令
 上述命令会在浏览器会话中打开一个包含 Jupyter Notebook Web 界面的窗口。Jupyter Notebook 会话在运行命令的同一目录中打开。
 
 ![Jupyter Notebook 界面](img/00009.jpeg)
+
+
 
 您可以导航到笔记本文件并单击它以运行，或从界面创建新笔记本。
 
@@ -340,13 +306,13 @@ from sklearn import datasets, svm, metrics
 
 **NumPy** 是用于 Python 科学计算的基础包。此外，与传统的列表相比，使用 `numpy` 可以更快地访问项目。
 
-## Pandas
+#### Pandas
 
 那 `pandas` 呢？在本书中，`pandas` 将用于导入和读取数据。根据其网站 ([`pandas.pydata.org/`](https://pandas.pydata.org/))：
 
 > “pandas 是一个开源的、BSD 许可的库，为 Python 编程语言提供高性能、易于使用的数据结构和数据分析工具。”
 
-## Matplotlib
+#### Matplotlib
 
 除了访问数据，我们通常还必须对其进行可视化。这就是 `matplotlib` 的用武之地 ([`matplotlib.org/`](https://matplotlib.org/))：
 
@@ -376,7 +342,7 @@ from sklearn import datasets, svm, metrics
 
 简而言之，`scikit-learn` 是在 Python 中进行机器学习的便捷且强大的工具。它可能不是最好或最高效的，但对于大多数用途（尤其是学习机器学习）来说已经足够好了。
 
-## Numerical Python (NumPy)
+### Numerical Python (NumPy)
 
 **NumPy** 是 Python 中主要的数值计算库。它提供对多维数组对象的访问，并通过若干方法暴露了可对这些数组执行的操作。它支持线性代数运算，如矩阵乘法、内积、单位运算等。`NumPy` 与用 C 和 Fortran 编写的底层库进行交互，并将实际计算传递给这些更快、更高效的库。因此，在执行数值计算时，绝不使用原生 Python 控制结构（如循环），因为它们要慢得多。`NumPy` 可以被视为提供了一组 Python API，从而实现高效的科学计算。
 
@@ -418,7 +384,7 @@ print(np.dot(x, y))
 
 上述示例几乎是瞬间计算完成的，展示了 `NumPy` 的强大功能。
 
-## Pandas
+### Pandas
 
 **Pandas** 是一个用 Python 编写的数据操作库，具有用于表格和时间序列数据的高性能数据结构。`Pandas` 广泛用于数据分析，大多数数据加载、清洗和转换任务都在 `Pandas` 中执行。`Pandas` 是 Python 数据科学生态系统不可或缺的一部分，因为数据很少以可以直接输入机器学习模型的形式存在。现实世界的数据通常很混乱，包含缺失值，并且需要转换。`Pandas` 支持许多文件类型，如 CSV、Excel 电子表格、Python pickle 格式、JSON、SQL 等。
 
@@ -443,13 +409,9 @@ print(df)
 
 `Pandas` 将其支持的文件格式加载到 `DataFrame` 中，然后可以使用 `Pandas` 方法对 `DataFrame` 进行操作。
 
-## Scientific Python (SciPy)
+### Scientific Python (SciPy)
 
-
-
-
-
-### Scipy
+#### Scipy
 
 Scipy 是一个面向数学、科学和工程领域的科学计算库。它构建在 Numpy 之上，并通过提供优化、技术计算、统计、信号处理等额外模块对其进行了扩展。Scipy 主要与生态系统中的其他工具（如 Pandas 和 matplotlib）配合使用。
 
@@ -465,7 +427,7 @@ print(linalg.inv(z))
 
 ![](img/00015.gif)
 
-## Matplotlib
+### Matplotlib
 
 Matplotlib 是一个绘图库，能与 Numpy 及 Python 中的其他数值计算库良好集成。它能够生成高质量的图表，并广泛用于数据探索，因为在该领域可视化技术非常重要。Matplotlib 暴露了面向对象的 API，使得在 Python 中创建强大的可视化变得容易。请注意，要在 Jupyter notebook 中查看图表，必须使用 `matplotlib inline` 魔法命令。
 
@@ -488,7 +450,7 @@ plt.show()  # 通过调用 plt.show() 显示图表
 
 ![](img/00016.jpeg)
 
-## Scikit-Learn
+### Scikit-Learn
 
 Scikit-Learn 是 Python 生态系统中最流行的机器学习库。它是一个非常成熟的库，包含用于分类、回归和聚类的多种算法。Scikit-Learn 中提供了许多常用算法，并暴露了统一的接口来访问它们，因此学会在 Scikit-Learn 中使用一种分类器，就意味着你能使用其他的分类器，因为训练分类器所调用的方法名称是相同的，无论底层实现如何。
 
@@ -521,7 +483,7 @@ print(metrics.confusion_matrix(expected, predicted))
 
 ![](img/00017.jpeg)
 
-### 关于 Google TensorFlow
+#### 关于 Google TensorFlow
 
 TensorFlow 是“面向所有人的开源机器学习框架”。此外，
 
@@ -620,13 +582,11 @@ Pclass         418 non-null int64
 Name           418 non-null object
 ```
 
-
-
-
-
 ## 数据探索与特征工程
 
 ### 数据概览
+
+
 
 ```text
 Sex              418 non-null object
@@ -814,9 +774,6 @@ train_df[['Title', 'Survived']].groupby(['Title'], as_index=False).mean()
 
 ![](img/00030.jpeg)
 
-
-
-
 注意到 Miss 和 Mrs 的存活率最高（甚至远高于 Rare 头衔的总和）。换句话说，Name 中的 Title（而非名字本身）与存活率相关。
 
 同样，为方便起见，让我们将这些 Title（分类特征）转换为有序特征（就像 Pclass 一样）。
@@ -944,6 +901,8 @@ train_df.head()
 
 回到 Parch（父母子女数）和 SibSp（兄弟姐妹配偶数）。其实可将二者合并为一个特征（为方便），命名为“FamilySize”（并与 Survived 并列以获取洞察）：
 
+
+
 ```python
 for dataset in combine:
     dataset['FamilySize'] = dataset['SibSp'] + dataset['Parch'] + 1
@@ -957,7 +916,7 @@ train_df[['FamilySize', 'Survived']].groupby(['FamilySize'], as_index=False).mea
 
 ![](img/00041.jpeg)
 
-这表明有同伴的乘客存活几率更大。因此直接丢弃 Parch、SibSp 和 FamilySize，专注于 isAlone：
+这表明有同伴的乘客存活几率更大。因此直接丢弃 `Parch`、`SibSp` 和 `FamilySize`，专注于 `isAlone`：
 
 ```python
 train_df = train_df.drop(['Parch', 'SibSp', 'FamilySize'], axis=1)
@@ -972,7 +931,7 @@ train_df.head()
 
 还记得我们做了假设。好在能早期测试其有效性。
 
-继续前进。数据转换和操作还没结束（我知道你急于投入机器学习）。我们可以创建一个结合 Pclass 和 Age 的人工特征（进一步简化并减少特征数量）：
+继续前进。数据转换和操作还没结束（我知道你急于投入机器学习）。我们可以创建一个结合 `Pclass` 和 `Age` 的人工特征（进一步简化并减少特征数量）：
 
 ```python
 for dataset in combine:
@@ -983,7 +942,7 @@ train_df.loc[:, ['Age*Class', 'Age', 'Pclass']].head(10)
 
 ![](img/00043.jpeg)
 
-此外注意到分类特征 Embarked 在数据集中有两个缺失值。为求快捷，可用最高频值（即众数）填补：
+此外注意到分类特征 `Embarked` 在数据集中有两个缺失值。为求快捷，可用最高频值（即众数）填补：
 
 ```python
 freq_port = train_df.Embarked.dropna().mode()[0]
@@ -1001,7 +960,7 @@ train_df[['Embarked', 'Survived']].groupby(['Embarked'], as_index=False).mean().
 
 ![](img/00044.jpeg)
 
-你可能已意识到，需将分类特征 Embarked 的值转为数值。映射方法如下（类似 Gender 处理）：
+你可能已意识到，需将分类特征 `Embarked` 的值转为数值。映射方法如下（类似 `Gender` 处理）：
 
 ```python
 for dataset in combine:
@@ -1012,7 +971,7 @@ train_df.head()
 
 ![](img/00045.jpeg)
 
-我们也可以像处理 Embarked 那样补全 Fare 特征的缺失值。这通常是模型或算法良好运行的必要条件：
+我们也可以像处理 `Embarked` 那样补全 `Fare` 特征的缺失值。这通常是模型或算法良好运行的必要条件：
 
 ```python
 test_df['Fare'].fillna(test_df['Fare'].dropna().median(), inplace=True)
@@ -1021,10 +980,7 @@ test_df.head()
 
 ![](img/00046.jpeg)
 
-然后创建 FareBand 以简化：
-
-
-
+然后创建 `FareBand` 以简化：
 
 ## 数据预处理与模型训练
 
@@ -1040,7 +996,7 @@ train_df[['FareBand', 'Survived']].groupby(['FareBand'], as_index=False).mean().
 
 ![](img/00047.jpeg)
 
-然后我们将其转换为序数值（类似于我们在 AgeBand 中所做的操作）。
+然后我们将其转换为序数值（类似于我们在 `AgeBand` 中所做的操作）。
 
 ```python
 for dataset in combine:
@@ -1176,10 +1132,6 @@ acc_random_forest
 
 ### 什么是机器学习
 
-
-
-
-
 ## 机器学习概述
 
 机器学习最近因多种原因在媒体上备受关注，主要是因为它在各种认知任务中取得了令人印象深刻的成果，例如图像分类、自然语言理解、客户流失预测等。然而，它被视为一种能够预测未来的“魔法公式”，但机器学习到底是什么？
@@ -1226,10 +1178,6 @@ acc_random_forest
 
 实际上，**深度学习**可以涵盖监督学习和无监督学习。这是因为通过深度学习，你可以进行回归、分类和聚类。
 
-
-
-
-
 ## 那么有什么区别呢？
 
 如果你正在分析海量数据集，尤其是那些包含文本、图像、音频甚至视频数据的数据集，深度学习真正大放异彩。请记住，在泰坦尼克号生存预测中，我们主要处理的是数值。但当我们要处理的数据由文本组成时，我们将采取不同的方法。
@@ -1240,11 +1188,13 @@ acc_random_forest
 
 无论如何，无论你选择哪种方法（传统机器学习还是深度学习），你仍然必须经历泰坦尼克号生存预测中讨论的大多数过程。你的大部分时间实际上可能花在数据操作和转换上，而不是实际令人兴奋的机器学习方面。你经常可能需要检查特征（丢弃或创建新特征）并查看数据。你也经常需要可视化数据点，以便快速获得洞察并检测异常值。
 
+
+
 换句话说，机器学习（无论你选择什么模型或方法）可能更多地关乎其外部的过程（数据可视化、操作、转换、领域知识）。这就是为什么专注于基础知识总是好的。很快，新工具将会涌现，使机器学习变得快速直观（例如拖放或仅给出语音命令）。但大部分艰苦的工作仍将是准备数据和获取所需的领域知识，以便我们能有效地利用机器学习的力量。
 
 在后续章节中，让我们探索更多那些必不可少的基础知识。我们还将探讨更多机器学习应用于不同项目和领域的示例。
 
-### 过拟合与欠拟合
+## 过拟合与欠拟合
 
 过拟合和欠拟合共同构成了机器学习的核心问题。在训练模型时，我们希望通过在训练集上获得更好的性能来改进其优化。然而，一旦模型训练完成，我们关心的是泛化能力。简而言之，泛化能力处理的是训练好的机器学习模型在未见过的新数据上表现如何，即它未曾训练过的数据。换句话说，模型将在训练集上学到的模式泛化到现实世界示例的能力如何，以便它能达到相似或更好的性能。这是学习的核心。模型应该能够从数据中真正学习到能提升测试时性能的有用表示，而不仅仅是记忆特征，因为记忆不是学习。
 
@@ -1256,7 +1206,7 @@ acc_random_forest
 
 第二张图展示了一个最优情况，其中优化目标已由泛化标准平衡。尽管模型在训练集上错误分类了一些点，但它仍然能够捕捉到两个类别之间有效的决策边界。这样的分类器很可能能很好地泛化到未训练过的示例，因为它学习了驱动预测的判别特征。最后一张图说明了**过拟合**的情况。决策边界变得曲折复杂，因为分类器通过试图正确分类训练集中的每一个数据点来响应噪声。该分类器在训练集上的准确率将是完美的，但在新示例上表现将极其糟糕，因为它仅针对训练集优化了性能。诀窍是始终选择实现最大性能的最简单模型。
 
-### 正确性
+## 正确性
 
 为了评估机器学习算法，我们总是指定预测性能的具体度量。这些指标使我们能够以无偏的方式判断模型的性能。应当注意，所选的评估指标取决于学习问题的类型。准确率是一个流行的评估指标，但它并不适用于所有学习问题。其他评估度量包括召回率、精确率、灵敏度、特异度、真阳性率、假阳性率等。所使用的评估应与建模问题的目标保持一致。
 
@@ -1268,10 +1218,7 @@ acc_random_forest
 
 模型正确分类的示例位于从左上角到右下角的对角线上。假阴性是分类器错误预测为阴性的阳性类别，而假阳性是分类器错误地认为是阳性的阴性实例。真阳性率、假阳性率、精确率等多个指标均源自混淆矩阵中的项目。
 
-### 偏差-方差权衡
-
-
-
+## 偏差-方差权衡
 
 模型的偏差被定义为模型为简化学习任务而做出的假设。高偏差模型做出的假设与数据不相关。这会导致错误，因为预测值通常与实际值有偏差。另一方面，方差是指模型对训练数据中噪声的敏感程度。模型的性能会因其评估所用的数据而有多大差异。一个好的机器学习算法应致力于实现低偏差和低方差。偏差和方差与前面遇到的过拟合和欠拟合有关。高偏差模型欠拟合训练数据，因为它做了过于简化的假设，而不是从可用信息中学习。同样，高方差模型过拟合，因为它对噪声建模，导致其性能在训练集、验证集和测试集上差异很大。
 
@@ -1281,13 +1228,13 @@ acc_random_forest
 
 左上图代表一个低偏差、低方差的模型。这是理想模型，因为它学会了击中靶心（产生正确分类），且大多数时候都能击中靶心（不随每次投掷而变化）。右上图显示了一个高方差、低偏差的模型。即使它不做太多假设，其预测也分布在整个靶面上，意味着其性能变化很大（高方差）。左下图描绘了一个高偏差、低方差的模型。投掷点不分布在整个靶面上，而是在特定位置。然而，该位置远离靶心，意味着模型因过于简化的假设而存在偏差。最后，右下图显示了一个高偏差、高方差的模型。靶面上的投掷点分布广泛且远离靶心。这是最差的模型类型，因为它未学到任何有用的表示。
 
-### 特征提取与选择
+## 特征提取与选择
 
 特征提取涉及对输入特征执行转换，以生成更易分析和更有信息量的其他特征。特征提取可通过组合原始特征来创建更适合建模问题的新特征。这类似于特征工程，即我们创建新特征输入模型。特征提取的一个例子是主成分分析（`PCA`）。
 
 特征选择是从原始输入特征中选择一个特征子集。选定的特征是那些与目标变量相关性最高的特征，即驱动模型预测能力的特征。特征提取和特征选择都会导致降维。它们的主要区别在于：特征提取是创建新特征的转换，而特征选择仅选择可用特征的一个子集。由于特征选择会移除某些特征，因此总是建议先对数据集进行特征提取，然后通过特征选择挑选最重要的预测因子。
 
-### 机器学习为何流行
+## 机器学习为何流行
 
 机器学习在人工智能界和社会大众中广受欢迎，主要因为机器学习技术已被证明在各个细分领域非常成功，为从欺诈检测到语音识别再到推荐系统等大量运营提供了商业价值。它嵌入在我们每天使用的产品中。当你在亚马逊购买商品并获得一系列搭配商品推荐时，这就是机器学习在起作用。当你打开邮箱，邮件根据相似性自动分类到文件夹时，那是机器学习模型在后台工作。甚至当你在线使用信用卡且交易成功时，是机器学习模型批准了你的交易，判定其正常而非欺诈。
 
@@ -1299,7 +1246,7 @@ acc_random_forest
 - 随着图形处理单元（`GPU`）的出现，计算资源变得更快、更便宜。`GPU`最初由游戏行业开发用于渲染图形，但非常适合并行计算。
 - 开发出了更好的算法，从而提高了模型的准确性。
 
-## 回归
+# 回归
 
 是时候复习一下你的高中代数了。因为事实是，监督学习的这个子类别看起来根本不像机器学习。
 
@@ -1309,7 +1256,7 @@ acc_random_forest
 
 机器学习语境下的回归与此类似。例如，我们可能根据给定的房间数量或房屋面积（多少平方米）来预测房价。这是一种监督学习形式，因为我们首先拥有房间数量或平方米数（自变量）以及对应的房价（目标值）。
 
-### 简单线性回归与多元线性回归
+## 简单线性回归与多元线性回归
 
 回归可以有多种形式。在上面的例子中，只有两组定量值。第一是房间数量或平方米数。第二（即目标）是对应的房价。我们可以绘制这些数据点，并拟合一条最能近似两者关系的直线。
 
@@ -1327,7 +1274,7 @@ acc_random_forest
 
 首先导入相关库并使用 `Pandas` 加载数据集。
 
-```
+```python
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -1342,8 +1289,6 @@ dataset.head()
 该数据集有 13 个预测因子，如房间数量、房龄、城镇师生比等。
 
 让我们绘制其中一个预测因子与房价的关系，看看能否从可视化中获得解释。我们将使用的预测因子是城镇人均犯罪率，它反映了社区的犯罪率。
-
-
 
 ## 线性回归示例
 
@@ -1480,7 +1425,7 @@ plt.ylabel("Predicted prices: $\hat{Y}_i$")
 plt.title("Prices vs Predicted prices: $Y_i$ vs $\hat{Y}_i$")
 ```
 
-## 逻辑回归
+# 逻辑回归
 
 **逻辑回归** 尽管名字中带有“回归”，但它是一种分类算法。当因变量本质上是二元时，即只能取两个值（类别）之一（例如真或假）时，使用逻辑回归。它是加权输入特征的线性组合应用于 Sigmoid 函数。Logit 或 Sigmoid 函数是逻辑回归的核心，并在 0 到 1 的范围内对数据建模。
 
@@ -1494,9 +1439,11 @@ plt.title("Prices vs Predicted prices: $Y_i$ vs $\hat{Y}_i$")
 
 逻辑回归与简单回归的主要区别在于：逻辑回归用于分类，此时只有两个类别（负类或正类）；而简单回归用于预测实际值，如连续数值，而不是类别或类。
 
-### Pima 印第安人糖尿病分类
+## Pima 印第安人糖尿病分类
 
 我们现在将逻辑回归应用于一个二元分类问题。我们将利用的数据集是 Pima 印第安人糖尿病数据库，该数据集来自国家糖尿病、消化和肾脏疾病研究所。数据集包含一个目标变量，用于指示患者是否患上糖尿病。因此，我们的任务是使用诊断测量值作为预测变量来确定患者的糖尿病状况。
+
+
 
 该数据集可在以下网址下载：[`www.kaggle.com/uciml/pima-indians-diabetes-database/data`](https://www.kaggle.com/uciml/pima-indians-diabetes-database/data)
 
@@ -1515,7 +1462,7 @@ dataset.head(5)
 
 该数据集有 8 个预测变量，如患者的葡萄糖水平、年龄、皮肤厚度、身体质量指数、胰岛素水平、年龄等。这些构成了我们模型的特征，用回归术语来说，即自变量。
 
-接下来我们将数据集中的列分为特征和标签。标签或类别由 "Outcome" 列表示。
+接下来我们将数据集中的列分为特征和标签。标签或类别由 `Outcome` 列表示。
 
 ```python
 features = dataset.drop(['Outcome'], axis=1)
@@ -1547,8 +1494,6 @@ print('Accuracy: {:.2f}'.format(accuracy))
 
 ![](img/00064.jpeg)
 
-
-
 训练好的逻辑回归模型在测试集上达到了 72% 的准确率。
 
 ### 广义线性模型
@@ -1557,35 +1502,29 @@ print('Accuracy: {:.2f}'.format(accuracy))
 
 泊松回归是一种广义线性模型，用于建模计数数据。计数数据是只能为正的整数值。泊松回归假设因变量 `y` 服从泊松分布，这是一种指数概率分布。泊松回归与线性回归的主要区别在于：线性回归假设输出来自正态分布，而泊松回归假设 `y` 来自泊松分布。泊松回归中的输出建模如下所示。
 
-```
 ![](img/00065.gif)
-```
 
 广义线性模型由三个部分组成：随机成分（即输出的概率分布）、系统成分（描述解释变量 `X` 或预测变量）以及连接函数（指定解释变量与随机成分之间的关系）。
 
 由于泊松回归的超参数（权重）不能取负值，因此它们通过自然对数进行变换以确保始终为正。泊松分布的均值在数学上表述为：
 
-```
 ![](img/00066.gif)
-```
 
 用于训练模型以发现可学习参数的目标函数或损失函数如下所示：
 
-```
 ![](img/00067.gif)
-```
 
 在我们的实操示例中，我们将使用 `statsmodels` 包，它提供了各种用于统计建模、统计数据探索等的函数和类。我们将使用 `statsmodels` 自带的数据集——苏格兰投票数据集，该数据集包含 1997 年关于授予苏格兰议会征税权的投票记录。该数据集包含 8 个解释变量（预测变量）和 32 个观测值，每个地区一个。
 
 首先我们按如下方式导入 `Statsmodels` 包。
 
-```
+```python
 import statsmodels.api as sm
 ```
 
 接下来我们加载数据集并提取解释变量 (`X`)。
 
-```
+```python
 data = sm.datasets.scotland.load()
 
 ### data.exog 是自变量 X
@@ -1594,26 +1533,24 @@ data.exog = sm.add_constant(data.exog)
 
 类似于 Scikit-Learn，我们导入合适的模型并实例化一个对象。在这种情况下，我们指定一个广义线性模型并将分布族设置为泊松分布。
 
-```
+```python
 ### 使用默认连接函数实例化一个泊松族模型。
 poisson_model = sm.GLM(data.endog, data.exog, family=sm.families.Poisson())
 ```
 
 然后我们在数据上拟合模型。
 
-```
+```python
 poisson_results = poisson_model.fit()
 ```
 
 我们现在可以打印结果摘要，以更好地了解训练好的模型。
 
-```
+```python
 print(poisson_results.summary())
 ```
 
-```
 ![](img/00068.jpeg)
-```
 
 摘要包含自变量的系数或权重、标准误和 z 分数等值。
 
@@ -1629,11 +1566,9 @@ print(poisson_results.summary())
 
 ##### 导入库：
 
-```
+```python
 import numpy as np
-
 import pandas as pd
-
 import matplotlib.pyplot as plt
 ```
 
@@ -1641,41 +1576,37 @@ Numpy 是一个流行的 Python 数值计算库，支持计算的向量化实现
 
 让我们使用 Pandas 库的 `read_csv` 方法并传入数据位置来加载数据。
 
-```
+```python
 dataset = pd.read_csv('Boston.csv')
 ```
 
 下一步是查看数据包含的内容
 
-```
+```python
 dataset.head(5)
 ```
 
-```
 ![](img/00069.jpeg)
-```
 
 这将显示单个观测值作为行。一行代表一个数据点，而列代表特征。共有 13 个特征，因为最后一列 `medv` 是我们要预测的回归值（自住房中位数价格，单位：千美元），`Unnamed:0` 列是一种标识符，无信息量。每个特征代表一部分信息，例如 `crim` 表示城镇人均犯罪率，`rm` 表示每户平均房间数。
 
 接下来我们运行
 
-```
+```python
 dataset.shape
 ```
 
 这给出了数据集的形状，包含 506 个观测值。我们首先需要将列分离为自变量和因变量
 
-```
+```python
 X = dataset.drop(['Unnamed: 0', 'medv'], axis=1)
-
 y = dataset['medv']
 ```
 
 我们需要将数据集拆分为训练集和测试集，因为我们想在训练集上训练模型，然后在测试集上评估其性能。
 
-```
+```python
 from sklearn.model_selection import train_test_split
-
 x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
 ```
 
@@ -1685,17 +1616,16 @@ x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
 
 线性回归使用直线方程来拟合参数。
 
-```
+```python
 ### 导入模型
 from sklearn.linear_model import LinearRegression
-
 regressor = LinearRegression()
 ```
 
 上述代码导入线性回归模型并实例化一个对象。
 
-```
-regressor.fit(x_train,y_train)
+```python
+regressor.fit(x_train, y_train)
 ```
 
 这行代码使用 `fit` 方法拟合数据。这意味着它找到解释数据的自变量的适当值。
@@ -1704,11 +1634,10 @@ regressor.fit(x_train,y_train)
 
 为了评估我们的模型，我们使用测试集来了解模型是否能很好地泛化到未训练过的数据。
 
-```
-y_pred = regressor.predict(x_test,y_test)
+```python
+y_pred = regressor.predict(x_test)
 
 from sklearn.metrics import mean_squared_error
-
 mse = mean_squared_error(y_test, y_pred)
 ```
 
@@ -1716,24 +1645,16 @@ mse = mean_squared_error(y_test, y_pred)
 
 最后，我们绘制输出图以了解分布情况。
 
-```
+```python
 plt.scatter(y_test, y_pred)
-
 plt.xlabel("Prices: $Y_i$")
-
 plt.ylabel("Predicted prices: $\hat{Y}_i$")
-
 plt.title("Prices vs Predicted prices: $Y_i$ vs $\hat{Y}_i$")
 ```
 
-```
 ![](img/00070.jpeg)
-```
 
 从上述散点图可以看出，我们模型的预测值接近实际房价，因此点集中分布。
-
-
-
 
 ## K 近邻算法
 
@@ -1755,13 +1676,13 @@ K 近邻算法是最近邻算法的一种修改，其中输入的类别标签由
 
 用于衡量示例邻近性的距离度量可以是 L1 或 L2 距离。L1 距离是两点之间差值绝对值的和，公式如下：
 
-![<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>d</mi><mn>1</mn></msub><mfenced><mrow><mi>P</mi><mo>,</mo><mi>q</mi></mrow></mfenced><mo>=</mo><munderover><mo>&#x2211;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mn>1</mn><msub><mi>P</mi><mi>i</mi></msub><mo>-</mo><msub><mi>q</mi><mi>i</mi></msub><mn>1</mn></math>](img/00072.jpeg)
+![](img/00072.jpeg)
 
 L1 距离有时被称为曼哈顿距离。
 
 L2 是另一种可使用的距离度量。它是两点之间使用直线的欧几里得距离。公式如下：
 
-![<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>d</mi><mn>2</mn></msub><mfenced><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow></mfenced><mo>=</mo><msqrt><munderover><mo>&#x2211;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msup><mfenced><mrow><msub><mi>q</mi><mi>i</mi></msub><mo>-</mo><msub><mi>P</mi><mi>i</mi></sub></mrow></mfenced><mn>2</mn></msup></msqrt></math>](img/00073.jpeg)
+![](img/00073.jpeg)
 
 k 值为 1 会正确分类所有训练示例，因为与某点最相似的示例将是它自己。这将是一种次优方法，因为分类器将无法学到任何东西，也就没有能力泛化到未训练过的数据。更好的解决方案是以一种在验证集上表现良好的方式选择 k 值。验证集通常用于调整超参数 k。较高的 k 值对决策边界有平滑作用，因为异常类别被多数投票模式“吞没”。增加 k 值通常最初会带来更高的准确率，但在变得过大之前，我们会达到边际效益递减的点，此时准确率下降，验证误差开始上升。
 
@@ -1781,7 +1702,7 @@ k 的最优值是验证误差最低的点。
 
 第一步是导入我们将使用的库。
 
-```
+```python
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -1789,23 +1710,23 @@ import matplotlib.pyplot as plt
 
 接下来我们使用 Pandas 加载数据。
 
-```
+```python
 dataset = pd.read_csv('diabetes.csv')
 ```
 
 一如既往，我们应该做的是了解我们的数据集和可用的特征。
 
-```
+```python
 dataset.head(5)
 ```
 
 ![](img/00075.jpeg)
 
-我们看到有 8 个特征和 9 列，其中`Outcome`是我们要预测的二元标签。
+我们看到有 8 个特征和 9 列，其中 `Outcome` 是我们要预测的二元标签。
 
 要了解数据集中的观测值数量，我们运行
 
-```
+```python
 dataset.shape
 ```
 
@@ -1813,7 +1734,7 @@ dataset.shape
 
 现在让我们获取数据的摘要，以便了解属性的分布情况。
 
-```
+```python
 dataset.describe()
 ```
 
@@ -1823,7 +1744,7 @@ count 行显示所有特征的值恒为 768.0，应该记得这与我们数据�
 
 在进行分类之前，我们检查特征间的相关性，以免存在冗余特征。
 
-```
+```python
 corr = dataset.corr()   # 数据框相关性函数
 fig, ax = plt.subplots(figsize=(13, 13))
 ax.matshow(corr)   # 按相关性值对矩形进行颜色编码
@@ -1837,14 +1758,16 @@ plt.yticks(range(len(corr.columns)), corr.columns)  # 绘制 y 轴刻度标记
 
 我们需要将列分为特征和标签。
 
-```
+```python
 features = dataset.drop(['Outcome'], axis=1)
 labels = dataset['Outcome']
 ```
 
 我们将再次将数据集分为训练集和测试集，因为我们想在训练集上训练模型，然后在测试集上评估其性能。
 
-```
+
+
+```python
 from sklearn.model_selection import train_test_split
 features_train, features_test, labels_train, labels_test = train_test_split(features, labels, test_size=0.25)
 ```
@@ -1853,14 +1776,11 @@ features_train, features_test, labels_train, labels_test = train_test_split(feat
 
 下一步是使用 Scikit-Learn 机器学习库中的 K 近邻分类器。
 
-```
 ### 导入模型
+
+```python
 from sklearn.neighbors import KNeighborsClassifier
 ```
-
-
-
-
 
 ### K 近邻分类器实现
 
@@ -2059,10 +1979,6 @@ class MyKNeighborsClassifier():
         predictions = np.empty(n_predictions, dtype=int)
 ```
 
-
-
-
-
 ### K 近邻算法实现
 
 ```python
@@ -2125,9 +2041,11 @@ print('Accuracy: ' + str(round(accuracy, 2)) + ' %.')
 
 朴素贝叶斯通常用于需要实时预测的应用场景，例如信用卡交易的欺诈检测。在这些应用中，需要一个能够近乎瞬间完成分类的分类器。朴素贝叶斯还广泛用于文本分类、垃圾邮件过滤和情感分析。在垃圾邮件过滤中，邮件或短信的单词作为模型的输入特征，并假设每个单词与其他单词相互独立。当这种独立性假设成立时，朴素贝叶斯通常能产生良好的结果，加上其推理时间短，有时比更复杂的分类器更受青睐。
 
+
+
 朴素贝叶斯算法广泛应用的另一个领域是**多类分类**。在该领域，给定输入特征可以预测多个类别或类别，并为预测类别分配概率。
 
-### 如何在 Python 中使用朴素贝叶斯构建基础模型
+## 如何在 Python 中使用朴素贝叶斯构建基础模型
 
 在我们的实战示例中，我们将使用 Python 构建一个朴素贝叶斯模型来解决垃圾短信分类问题。我们将使用 SMS 垃圾邮件收集数据集，这是一个包含 5,574 条英语短信的集合，并已标注类别。共有两个类别——ham（正常短信）和 spam（垃圾短信）。该数据集可从以下 URL 下载（`https://www.kaggle.com/uciml/sms-spam-collection-dataset/downloads/spam.csv/1`）。
 
@@ -2216,10 +2134,6 @@ print('Accuracy: {}'.format(score))
 熵可以用数学公式表示为：
 
 ![](img/00085.jpeg)
-
-
-
-
 
 ### 熵与决策树
 
@@ -2314,9 +2228,6 @@ print('Accuracy: {:.2f}'.format(accuracy))
 
 上图展示了随机森林的图示表示。它由多棵在不同数据集实例上训练的树组成。每个决策节点的属性也是随机的。最终，输出预测是每棵决策树分类的集成。
 
-
-
-
 我们现在将在葡萄酒数据集上尝试随机森林分类器，并将其在测试集上的表现与上一节中的决策树模型进行比较。使用 Scikit-Learn 中的机器学习模型的美妙之处在于，无论使用何种算法，训练和测试模型的 API 都是相同的。因此你会注意到，我们只需要导入正确的分类器并将其初始化，所有其他代码部分将保持不变。我们已经熟悉代码各部分的工作原理，因此这里是随机森林的完整代码。
 
 ```python
@@ -2396,16 +2307,15 @@ print('Accuracy: {:.2f}'.format(accuracy))
 
 ![](img/00099.jpeg)
 
+
+
 在上图节点中，`x` 和 `y` 是输入特征，而 `f` 是非线性激活函数。在训练期间，计算从输入开始，跨过隐藏层，一直到输出，以正向方式进行。这被称为正向传播，在图中用绿色箭头表示。然后将模型的预测与真实值进行比较，并将误差反向传播。这被称为反向传播，通过反向传播算法分配每个节点对计算出的误差所承担的责任量。在上图中用红色箭头表示。此过程持续进行，直到模型找到一组能捕捉底层数据表示并正确预测大多数样本的权重。
 
-### 如何使用 TensorFlow 运行神经网络
+## 如何使用 TensorFlow 运行神经网络
 
 对于我们的实战示例，我们将使用 MNIST 手写数字数据库进行图像分类，该数据库包含 0 到 9 的黑白手写数字图片。任务是训练一个神经网络，给定一个输入数字图像，它能预测其中包含的数字类别。
 
-### 如何获取数据
-
-
-
+## 如何获取数据
 
 ### TensorFlow MNIST 教程
 
@@ -2635,28 +2545,11 @@ with tf.Session() as sess:
                                         Y: mnist.test.labels}))
 ```
 
-
-
-
-
-```python
-Y: batch_y})
-
-print("Step " + str(step) + ", Minibatch Loss= " + \
-      "{:.4f}".format(loss) + ", Training Accuracy= " + \
-      "{:.3f}".format(acc))
-
-print("Optimization Finished!")
-
-##### Calculate accuracy for MNIST test images
-print("Testing Accuracy:", \
-      sess.run(accuracy, feed_dict={X: mnist.test.images,
-                                    Y: mnist.test.labels}))
-```
-
 ## 聚类
 
 聚类是无监督学习最常见的形式。聚类涉及根据相似度度量将对象或实体分组到簇（组）中。聚类算法旨在使一个组的所有成员尽可能相似，但使该簇与其他簇不相似。乍一看，聚类很像分类，因为我们都在将数据点放入类别中，虽然情况可能如此，但主要区别在于在聚类中，我们在没有人类教师帮助的情况下创建类别。而在分类中，对象是根据人类专家的领域知识被分配到类别中的。也就是说，在分类中，我们拥有人类标注的样本，这意味着标签充当了监督者，教会算法如何识别各种类别。
+
+
 
 在聚类中，发现的簇或组纯粹取决于数据本身。数据分布驱动算法发现的簇的类型。没有标签，因此聚类算法被迫在没有直接人工干预的情况下，以无监督的方式学习表征。
 
@@ -2736,10 +2629,6 @@ plt.plot(range(1, 11), wcss)
 plt.title('The elbow method')
 plt.xlabel('Number of clusters')
 ```
-
-
-
-
 
 ### K-means 聚类与层次聚类
 
@@ -2828,9 +2717,6 @@ K-means 是一种划分聚类算法，它将数据点分配到预定数量的聚
 
 ![](img/00109.gif)
 
-
-
-
 上图展示了一个收敛数据集的示例。共有两个簇，数据点归属于距离其最近的簇。每个簇的中心由其质心表示。K-means 算法对簇的数量和质心的初始化很敏感。根据质心的初始化方式不同，我们最终会得到不同簇中的数据点。由于 K-means 要求将簇的数量作为一个指标传入，因此了解数据集的最佳簇数量是很有必要的。这可以通过肘部法则来完成。一般来说，随着簇数量的增加，错误率会迅速下降，直到在某个点达到饱和，此时增加簇的大小不再带来成比例的错误率降低。肘部法则告诉我们，应选择错误率尚未趋于平稳时对应的簇数量作为最佳簇数量。
 
 ## 网络分析
@@ -2861,7 +2747,7 @@ Google 核心使用的 PageRank 算法是特征向量中心性的一种变体，
 
 ## 推荐系统
 
-互联网导致的信息过载使用户面对海量选择而陷入某种瘫痪。推荐系统是一种过滤信息的方式，以便向用户展示最相关的内容。推荐系力求根据用户在平台上的过往交互或行为，预测用户对某个项目或产品的偏好。这是机器学习最具商业价值的应用场景之一，从亚马逊到奈飞等公司，其商业模式都极大地受益于向用户展示相关内容，以增加销售或平台互动。
+互联网导致的信息过载使用户面对海量选择而陷入某种瘫痪。推荐系统是一种过滤信息的方式，以便向用户展示最相关的内容。推荐系统力求根据用户在平台上的过往交互或行为，预测用户对某个项目或产品的偏好。这是机器学习最具商业价值的应用场景之一，从亚马逊到奈飞等公司，其商业模式都极大地受益于向用户展示相关内容，以增加销售或平台互动。
 
 根据所采用的技术，推荐系统分为三大类：基于内容的过滤、协同过滤和混合推荐系统。基于内容的过滤依赖于项目的特征和用户的画像。推荐项目是基于它们与用户口味的相似程度。例如，一部电影可能具有演员、类型、导演等特征。具有特定偏好的用户会收到特征与其信息匹配的电影推荐。
 
@@ -2873,12 +2759,15 @@ Google 核心使用的 PageRank 算法是特征向量中心性的一种变体，
 
 在机器学习中，大多数学习问题都可以建模为分类问题。分类问题的核心目标是从一组输入中学习一个映射函数，映射到一个或多个离散类别。离散类别有时被称为标签，这两个术语经常互换使用。
 
-
-
-
 ## Overview of Classification Algorithms
 
-A class or label can be understood as representing a specific number of categories; therefore, the role of a classification algorithm is to identify the category to which a sample belongs. If the classification problem setup contains two distinct classes, it is a binary classification problem. When the number of classes (labels) exceeds two, the learning problem is called multi-class classification, indicating that an observation may fall into one of $n$ possible categories. The last type of classification is when a sample can belong to multiple classes (i.e., have multiple labels), in which case we are dealing with a multi-label classification task.
+
+
+# Classification and Deep Learning Overview
+
+## Classification Fundamentals
+
+A class or label can be understood as representing a specific number of categories; therefore, the role of a classification algorithm is to identify the category to which a sample belongs. If the classification problem setup contains two distinct classes, it is a **binary classification** problem. When the number of classes (labels) exceeds two, the learning problem is called **multi-class classification**, indicating that an observation may fall into one of $n$ possible categories. The last type of classification is when a sample can belong to multiple classes (i.e., have multiple labels), in which case we are dealing with a **multi-label classification** task.
 
 To understand classification more intuitively, please refer to the figure below:
 
@@ -2886,9 +2775,9 @@ To understand classification more intuitively, please refer to the figure below:
 
 As can be seen from the figure above, there are two features describing the data: `X1` and `X2`. The classification task aims to divide the data into different categories such that there exists a decision boundary that best separates the classes. In this example, there are two classes—bankrupt companies and surviving companies—and the data points representing companies can only belong to one of these two categories. This is clearly a binary classification example because there are only two classes.
 
-Another point worth noting in the figure is that the classes are linearly separable, meaning they can be separated by a straight line. In other problems, this may not be achievable, but there are more robust machine learning algorithms that can handle such situations.
+Another point worth noting in the figure is that the classes are **linearly separable**, meaning they can be separated by a straight line. In other problems, this may not be achievable, but there are more robust machine learning algorithms that can handle such situations.
 
-### Multi-class Classification
+## Multi-class Classification
 
 We must understand classification deeply based on the number of predicted classes because classification has many real-world applications. To further deepen intuition, please analyze the figure below:
 
@@ -2896,19 +2785,19 @@ We must understand classification deeply based on the number of predicted classe
 
 The data is projected onto a 2D plane for visualization. There are three classes, represented by red squares, blue triangles, and green circles, respectively. There are also three decision boundaries dividing the data points into three regions, with the class colors projected onto the background. This is a classic three-class (0, 1, 2) multi-class classification example; although there are some misclassified points, they are few in number and mostly appear near the decision boundaries.
 
-When evaluating this model, we will use accuracy as the evaluation metric. Model accuracy is determined by the ratio of samples correctly predicted by the classifier to misclassified samples. Accuracy is usually a good metric for classification tasks, but remember there are other metrics such as precision and recall that can be explored depending on the modeling intent.
+When evaluating this model, we will use **accuracy** as the evaluation metric. Model accuracy is determined by the ratio of samples correctly predicted by the classifier to misclassified samples. Accuracy is usually a good metric for classification tasks, but remember there are other metrics such as **precision** and **recall** that can be explored depending on the modeling intent.
 
-### Common Classification Algorithms
+## Common Classification Algorithms
 
 Some machine learning models perform exceptionally well on classification tasks, and a few of them will be analyzed in depth in the following sections. The workflow for running a classification task is fairly standard across models.
 
-First, we need a dataset containing a set of inputs and a corresponding set of labels. This is important because classification is a supervised learning task; we need to obtain the true classes (ground truth) of observations to minimize the model's misclassification error. Therefore, to get a good model, we train the classifier on samples and provide the true values via a feedback mechanism, forcing the classifier to learn and reduce the error rate with each iteration or pass through the training set (epoch).
+First, we need a dataset containing a set of inputs and a corresponding set of labels. This is important because classification is a **supervised learning** task; we need to obtain the true classes (ground truth) of observations to minimize the model's misclassification error. Therefore, to get a good model, we train the classifier on samples and provide the true values via a feedback mechanism, forcing the classifier to learn and reduce the error rate with each iteration or pass through the training set (epoch).
 
-Examples of models used for classification include Logistic Regression, Decision Trees, Random Forest, K-Nearest Neighbors, Support Vector Machines, etc. We will practice classification using the last two models as case studies.
+Examples of models used for classification include `Logistic Regression`, `Decision Trees`, `Random Forest`, `K-Nearest Neighbors`, `Support Vector Machines`, etc. We will practice classification using the last two models as case studies.
 
-### Support Vector Machines
+## Support Vector Machines
 
-Support Vector Machines (SVM), also known as Support Vector Networks, are a popular machine learning algorithm for classification. The core intuition of SVM is to find an optimal hyperplane that separates the data into the correct classes using only the data points close to the hyperplane. The data points closest to the hyperplane are called support vectors.
+**Support Vector Machines (SVM)**, also known as Support Vector Networks, are a popular machine learning algorithm for classification. The core intuition of SVM is to find an optimal hyperplane that separates the data into the correct classes using only the data points close to the hyperplane. The data points closest to the hyperplane are called **support vectors**.
 
 There may be multiple hyperplanes that can correctly separate the classes, but the SVM algorithm selects the hyperplane with the maximum distance (margin) to the support vectors. The benefit of choosing the hyperplane with the widest margin is that it reduces the probability of misclassifying data points during testing.
 
@@ -2916,11 +2805,11 @@ There may be multiple hyperplanes that can correctly separate the classes, but t
 
 The SVM algorithm is robust to outliers in the class distribution; it works by ignoring outliers when searching for the best hyperplane with a good margin width.
 
-However, data distributions are not always linearly separable. SVMs transform the features representing the data from a low-dimensional space to a high-dimensional space by introducing new features based on the original features. This process is performed automatically via kernel functions. Examples of kernel functions in SVM include Linear, Polynomial, Radial Basis Function (RBF), and others.
+However, data distributions are not always linearly separable. SVMs transform the features representing the data from a low-dimensional space to a high-dimensional space by introducing new features based on the original features. This process is performed automatically via **kernel functions**. Examples of kernel functions in SVM include `Linear`, `Polynomial`, `Radial Basis Function (RBF)`, and others.
 
 Compared to other machine learning models, SVMs have several advantages. They perform particularly well in high-dimensional spaces and are memory-efficient and computationally efficient because they rely only on a subset of data points (support vectors) for classification. They are also versatile because we can choose different kernel functions depending on the data representation at hand.
 
-### How to Create and Test a Support Vector Machine Classifier
+## How to Create and Test a Support Vector Machine Classifier
 
 In this section, we will use an SVM classifier on the Pima Indians Diabetes dataset and compare its results with a K-Nearest Neighbors classifier.
 
@@ -2968,11 +2857,7 @@ classifier = SVC(kernel='linear')
 
 When we use a linear kernel, the accuracy jumps to 0.76. This is an important lesson in machine learning: we often cannot know in advance what the best hyperparameters are. Therefore, we need to try multiple values to determine the best-performing hyperparameters.
 
-## Deep Learning with TensorFlow
-
-
-
-
+# Deep Learning with TensorFlow
 
 ## 深度学习概述
 
@@ -2984,15 +2869,17 @@ When we use a linear kernel, the accuracy jumps to 0.76. This is an important le
 
 ![](img/00115.jpeg)
 
-首先，让我们对生物神经元建立简单的直觉。上图展示了一个由不同部分组成的单个生物神经元。大脑由数十亿个类似的神经元连接在一起形成网络。树突是将网络中前面神经元的信息信号传递到特定神经元的组件。在机器学习的背景下，将其视为其他神经元迄今为止关于我们数据所学到的特征是有帮助的。包含细胞核的细胞体是进行计算的地方，这些计算将决定我们是否识别出了我们感兴趣检测的特征的存在。通常，如果神经元因流入的信息导致其化学成分而被激发，它可以决定以电信号的形式向连接的神经元发送通知。该电信号通过轴突发送。对于我们的人工用例，我们可以认为人工神经元仅在其内部计算满足某些条件时才会发射信号。最后，这种神经元网络以这样的方式学习表示：它们之间的连接根据当前的任务要么被加强，要么被削弱。生物神经元之间的连接称为突触，我们将在人工神经网络中看到突触的类比，称为权重，这些是我们要训练以承担学习问题的参数。
+首先，让我们对生物神经元建立简单的直觉。上图展示了一个由不同部分组成的单个生物神经元。大脑由数十亿个类似的神经元连接在一起形成网络。树突是将网络中前面神经元的信息信号传递到特定神经元的组件。在机器学习的背景下，将其视为其他神经元迄今为止关于我们数据所学到的特征是有帮助的。包含细胞核的细胞体是进行计算的地方，这些计算将决定我们是否识别出了我们感兴趣检测的特征的存在。通常，如果神经元因流入的信息导致其化学成分而被激发，它可以决定以电信号的形式向连接的神经元发送通知。该电信号通过轴突发送。对于我们的人工用例，我们可以认为人工神经元仅在其内部计算满足某些条件时才会发射信号。最后，这种神经元网络以这样的方式学习表示：它们之间的连接根据当前的任务要么被加强，要么被削弱。生物神经元之间的连接称为突触，我们将在人工神经网络中看到突触的类比，称为**权重**，这些是我们要训练以承担学习问题的参数。
 
 ![](img/00116.jpeg)
+
+
 
 现在让我们将目前所知转化为作为计算单元实现的人工神经元。从图中，我们可以设想 `X1`、`X2` 到 `Xn` 作为传入神经元的特征。特征代表数据点的一个数据维度。特征的组合完全描述了数据所捕获的该数据点。`W1` 到 `Wn` 是权重，它们的作用是告诉我们应该给特征多高的排名。即权重的较低值意味着连接的特征不那么重要，较高值意味着更大的重要性。然后，所有人工神经网络的输入都被线性求和（并排相加）。此时，我们使用作为阈值的条件来决定是否向下一个神经元发送信号。如果线性计算的结果大于或等于阈值，我们发送信号，否则不发送。
 
 从解释中，现在很清楚地看到为什么这些技术大致基于生物神经元的操作。然而，必须注意的是，深度学习超越这一点后并不依赖神经科学，因为大脑功能的完整运作方式尚不清楚。
 
-在深度神经网络中，激活标准（我们决定是否发射信号）通常被非线性激活函数所取代，例如 `sigmoid`、`tanh` 或**修正线性单元（ReLU）**。使用非线性激活函数的原因是为了让人工神经网络打破线性，从而使其能够学习更复杂的表示。如果没有非线性激活函数，无论网络的深度（层数）如何，它学到的仍然是一个线性函数，这严重限制了其能力。
+在深度神经网络中，激活标准（我们决定是否发射信号）通常被非线性激活函数所取代，例如 `sigmoid`、`tanh` 或 `ReLU`。使用非线性激活函数的原因是为了让人工神经网络打破线性，从而使其能够学习更复杂的表示。如果没有非线性激活函数，无论网络的深度（层数）如何，它学到的仍然是一个线性函数，这严重限制了其能力。
 
 现在让我们看看如何使用下图将这些神经元排列成人工神经网络来解释概念。
 
@@ -3002,17 +2889,13 @@ When we use a linear kernel, the accuracy jumps to 0.76. This is an important le
 
 可以观察到，一层中的神经元连接到下一层中的所有神经元，由于这种配置，我们称之为全连接层。神经元之间连接的强度由权重控制。最后，上述网络被称为 2 层神经网络，因为在描述网络包含的层数时不计算输入层。
 
-深度神经网络有各种架构，一些架构对模型预期处理的数据类型做出假设。这些假设通常能提高此类模型在其设计任务上的性能。**卷积神经网络（CNN）** 的设计假设它们将处理二维数据，如图像，是计算机视觉任务（如图像检测、图像分类、图像分割、目标识别等）的事实标准。另一方面，**循环神经网络（RNN）** 特别适合处理序列和时间数据，如文本和时间序列。这些架构中的每一个都有进一步的变体，这些变体是为了适应特定的学习问题而进行的修改。
+深度神经网络有各种架构，一些架构对模型预期处理的数据类型做出假设。这些假设通常能提高此类模型在其设计任务上的性能。`CNN` 的设计假设它们将处理二维数据，如图像，是计算机视觉任务（如图像检测、图像分类、图像分割、目标识别等）的事实标准。另一方面，`RNN` 特别适合处理序列和时间数据，如文本和时间序列。这些架构中的每一个都有进一步的变体，这些变体是为了适应特定的学习问题而进行的修改。
 
 ### 深度学习与其他机器学习方法的比较
 
 深度学习的流行主要基于这样一个事实：它在不同领域取得了令人印象深刻的结果，并开始在某些任务（如目标识别）上超越人类。与其他机器学习技术相比，它能够在许多基准测试中达到最先进的结果，并且只需稍作修改即可应用于广泛的学习问题。原因不仅在于人工神经网络已被证明能够学习任何函数（如通用近似定理所示），深度神经网络似乎还能随着数据的增加而提高性能。它们摆脱了传统机器学习算法遭受的平台效应，即在某个时刻，算法的性能不再随着额外数据的可用性而提高。
 
 ![](img/00118.jpeg)
-
-
-
-
 
 ## 深度学习概述
 
@@ -3030,7 +2913,7 @@ When we use a linear kernel, the accuracy jumps to 0.76. This is an important le
 
 ### Python 深度学习框架
 
-Python 拥有成熟的生态系统，包含多个可用于生产环境的深度学习框架。其中包括 `Pytorch`、`Chainer`、`MXNet Keras`、`TensorFlow` 等。本书将重点使用 `TensorFlow`，因为它是一个极其流行且受支持的深度学习框架，由 Google 于 2015 年开源。
+Python 拥有成熟的生态系统，包含多个可用于生产环境的深度学习框架。其中包括 `PyTorch`、`Chainer`、`MXNet`、`Keras`、`TensorFlow` 等。本书将重点使用 `TensorFlow`，因为它是一个极其流行且受支持的深度学习框架，由 Google 于 2015 年开源。
 
 `TensorFlow` 使用计算图的概念来构建模型。节点和操作预先在图上声明，然后在训练时编译模型。在下一节中，我们将了解如何安装 `TensorFlow` 并通过一个实际例子使用它来执行深度学习任务。
 
@@ -3113,9 +2996,13 @@ $ pip3 install tensorflow   # Python 3.x
 要在 `TensorFlow` 中创建神经网络，理解 `TensorFlow` 的工作原理至关重要。以下步骤将帮助我们了解需要做什么：
 
 1.  **构建计算图**：首先，我们需要定义将在张量上执行的数学运算。我们可以将张量视为高阶矩阵。矩阵是按行和列排列数字的数组。图像等数据结构可以表示为矩阵，由于深度学习使用几何变换，任何模型的输入都必须是数值型的。
+
 2.  **变量初始化**：在训练模型之前，所有先前声明的变量都必须初始化。在 `TensorFlow` 中，变量通常使用占位符声明，它们在计算图上注册，但实际值稍后才提供。
+
 3.  **创建会话**：在描述完计算图并初始化变量后，下一步是创建一个会话，在其中执行计算图。
+
 4.  **在会话中运行图**：将完整的图连同占位符的值一起传递给会话执行。这是图中定义的数学运算发生的时候。
+
 5.  **关闭会话**：当图及相关计算执行完毕后，我们需要关闭或结束会话。
 
 ![](img/00119.jpeg)
@@ -3128,7 +3015,7 @@ $ pip3 install tensorflow   # Python 3.x
 
 为了让我们能快速开发模型并测试假设，使用 `TensorFlow` 的高级 API 是合理的，这些 API 通过 `TFLearn` 暴露。`TFLearn` 捆绑了类似于 `Scikit-Learn` 的组件，但用于构建深度神经网络。`TFLearn` 只是 `TensorFlow` 底层计算图组件的一个便捷封装。因此 `TensorFlow` 是 `TFLearn` 的依赖项，也就是说，要使用或安装 `TFLearn`，首先需要安装 `TensorFlow`。
 
-既然我们已在上一章安装了 `Tensorflow`，现在可以继续安装 `TFLearn`。`TFLearn` 可通过 Python 原生包管理器 `pip` 在上一章涵盖的三大主流操作系统上安装。要安装 `TFLearn`，请在终端运行以下命令：
+既然我们已在上一章安装了 `TensorFlow`，现在可以继续安装 `TFLearn`。`TFLearn` 可通过 Python 原生包管理器 `pip` 在上一章涵盖的三大主流操作系统上安装。要安装 `TFLearn`，请在终端运行以下命令：
 
 ```
 $ pip install tflearn
@@ -3137,10 +3024,6 @@ $ pip install tflearn
 ### 银行客户流失建模
 
 这里呈现这样一个案例：一家银行希望利用多年收集的客户数据，预测哪些客户可能会停止使用该银行服务并转投竞争对手。此类分析对银行的回报极为丰厚，因为它可以针对不满意的客户提供激励措施，从而降低流失率，帮助银行扩大客户群并巩固地位。
-
-
-
-
 
 ## 使用深度学习进行客户流失建模
 
@@ -3254,6 +3137,8 @@ model.fit(X_train, y_train, n_epoch=10, batch_size=16, validation_set=(X_test, y
 
 首先，我们导入 IMDB 情感数据集模块以及来自 TFLearn 的其他相关组件，如卷积层、全连接层、数据工具等。
 
+
+
 ```python
 import tensorflow as tf
 import tflearn
@@ -3307,9 +3192,6 @@ network = dropout(network, 0.5)
 network = fully_connected(network, 2, activation='softmax')
 network = regression(network, optimizer='adam', learning_rate=0.001)
 ```
-
-
-
 
 该网络包含 3 个一维卷积层、一个用于降低卷积维度的全局最大池化层、一个用于正则化的 Dropout 层以及一个全连接层。最后，我们声明模型并调用其 `fit()` 方法开始训练。
 
@@ -3423,11 +3305,11 @@ model.fit(trainX, trainY, n_epoch=5, shuffle=True, validation_set=(testX, testY)
 
 感谢您购买本书！本书旨在帮助您理解如何使用 Python 进行机器学习。如果您喜欢这本书，并觉得它为您的生活增添了价值，我们恳请您抽出时间为其撰写评论。
 
-[您的诚实反馈将不胜感激。这确实能产生巨大影响。](https://www.amazon.com/dp/B07FTPKJMM)
+您的诚实反馈将不胜感激。这确实能产生巨大影响。
 
 ![C:\Users\CHADAD\Downloads\intelligent.png](img/00123.jpeg)
 
-[我们是一家非常小的出版公司，我们的生存依赖于您的评论。请花一分钟时间为我们写下您的评价。](https://www.amazon.com/dp/B07F193447)
+我们是一家非常小的出版公司，我们的生存依赖于您的评论。请花一分钟时间为我们写下您的评价。
 
 [`www.amazon.com/dp/B07FTPKJMM`](https://www.amazon.com/dp/B07FTPKJMM)
 

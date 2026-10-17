@@ -1,26 +1,15 @@
-# 
-PHP 扩展指南
 
-
+# PHP 扩展指南
 
 ## Scaling PHP
 
 这本书在 `http://leanpub.com/scalingphp` 售卖。
 
-
-
-\*   \*   \*   \*   \*
+*   *   *   *   *
 
 这是一本 `Leanpub` 的书籍。Leanpub 赋能作者和出版商使用 Lean Publishing 流程。`Lean Publishing` 是使用轻量工具和多次迭代在进度中发布电子书，收集读者反馈，迭代直到获得正确的书籍，并在达到目标后建立影响力。
 
-\*   \*   \*   \*   \*
-
-
-
-
-
-
-
+*   *   *   *   *
 
 ### 前言
 
@@ -61,9 +50,6 @@ Twitpic 就像一个妒忌的女朋友，随时准备在你毫无防备时毁掉
 我的读者是聪明、 intelligent（聪明）的人，他们不需要手把手的指导。我会解释复杂的主题并提供详尽的示例，但这 **不是** 简单地重复文档。我尽可能包含了大量的实用知识和案例研究，但讨论的主题并不全面。如果你想要文档，直接去 Google 搜索即可，因为我最讨厌的就是买一本里面充满 150 页垃圾内容的书。
 
 ### 你需要为这本书准备什么
-
-
-
 
 在最低限度，你需要一个 `PHP` 应用，你想学习如何对其进行扩展。而且，如果你有一个可以用于测试的 `Linux` 服务器，你将会受益最大。没有服务器吗？我非常喜欢 [Rackspace Cloud](http://www.rackspace.com/cloud/public/servers/) 或 [Amazon EC2](http://aws.amazon.com/ec2/) 进行测试，因为你可以快速设置和拆除服务器，并且可以廉价地启动多服务器测试环境。
 
@@ -139,9 +125,6 @@ An example of a server with over 6000 active connections
 
 我曾经认为全天候在 `EC2` 上运行是个坏主意——就像用你昂贵的 `iPhone` 敲钉子，虽然能完成任务，但代价远高于使用锤子。
 
-
-
-
 -   [我并不认为这已是现状。使用 AWS 确实有溢价，但它比以前便宜得多，服务也更完善（`200GB+` 内存、SSD、预留 IOPS）。如果我要创办一家新公司，我会毫不犹豫地选择 AWS。
 
 1.  使用保留实例，你的月度成本可降至类似于独立服务器托管（尽管仍贵 10-20%），但能在几分钟内瞬时启动大规模服务器集群，或在加州在 5 分钟内快速启动测试集群，这非常强大。
@@ -202,6 +185,8 @@ Anycast 是一种网络技术，允许多台路由器广告相同的 IP 前缀�
 
 传统的 DNS 负载均衡方式是为单个主机创建多条 A 记录，让 DNS 返回所有 IP，由客户端自行选择使用哪个地址。示例如下：
 
+
+
 ```
  1 > dig A example.com       
  2 ; <<>> DiG 9.7.3-P3 <<>> A example.com
@@ -217,15 +202,15 @@ Anycast 是一种网络技术，允许多台路由器广告相同的 IP 前缀�
 12 example.com.		287	IN	A	208.0.113.35
 ```
 
-然而，这一方法存在几个缺点。首先，不够智能的 DNS 客户端会始终使用第一个返回的 IP，不管实际情况如何。部分 DNS 提供商（如 Dynect 和 Route53）通过轮询（round‑robin）策略改变返回 IP 的顺序，从而在一定程度上实现更均匀的负载分布。
+然而，这一方法存在几个缺点。首先，不够智能的 DNS 客户端会始终使用第一个返回的 IP，不管实际情况如何。部分 DNS 提供商（如 `Dynect` 和 `Route53`）通过轮询（`round-robin`）策略改变返回 IP 的顺序，从而在一定程度上实现更均匀的负载分布。
 
 另一个缺点是，轮询无法防止服务器故障，它仅能缓解故障影响。若一台服务器宕机，其 IP 仍会出现在 DNS 响应中，导致使用该 IP 的用户仍会遇到不可达。解决此问题的两个配套方案：
 
-1.  使用能够进行健康检查的智能 DNS 提供商。Dynect 支持此功能，Route53 也可以通过其 API 实现自定义健康检查；当负载均衡器不响应或状态不健康时，会从 IP 池中移除，并在恢复后重新加入。
+1. 使用能够进行健康检查的智能 DNS 提供商。`Dynect` 支持此功能，`Route53` 也可以通过其 API 实现自定义健康检查；当负载均衡器不响应或状态不健康时，会从 IP 池中移除，并在恢复后重新加入。
 
-2.  即使将服务器 IP 从 DNS 池中移除，已缓存该 IP 的用户仍会在 TTL 过期前继续受影响。推荐的 TTL 为 60-300 秒，虽可接受但远非理想。我们将在第 4 章讨论如何通过 `keepalived` 让服务器“窃取”其他节点的 IP，从而降低此类问题的发生。
+2. 即使将服务器 IP 从 DNS 池中移除，已缓存该 IP 的用户仍会在 `TTL` 过期前继续受影响。推荐的 `TTL` 为 `60-300` 秒，虽可接受但远非理想。我们将在第 4 章讨论如何通过 `keepalived` 让服务器“窃取”其他节点的 IP，从而降低此类问题的发生。
 
-Dynect 提供直观的负载均衡与健康检查界面：
+`Dynect` 提供直观的负载均衡与健康检查界面：
 
 ![](img/dynect.png)
 
@@ -237,18 +222,15 @@ PHP 通过系统调用 `gethostbyname()` 实现域名解析，该函数使用 `/
 
 那么，这种设置有什么问题？
 
-1.  它依赖于你不受控制的服务器。若该服务器宕机、变慢或被阻止，会导致解析延迟。`/etc/resolv.conf` 中最小超时时间为 1 秒（默认甚至为 5 秒），对于高流量网站而言过于缓慢，可能引发连锁故障。
+1. 它依赖于你不受控制的服务器。若该服务器宕机、变慢或被阻止，会导致解析延迟。`/etc/resolv.conf` 中最小超时时间为 1 秒（默认甚至为 5 秒），对于高流量网站而言过于缓慢，可能引发连锁故障。
 
-2.  大多数 Linux 发行版默认不提供 DNS 缓存，导致每一次应用程序的 DNS 查询都需要额外的网络往返，增加了整体延迟。
+2. 大多数 Linux 发行版默认不提供 DNS 缓存，导致每一次应用程序的 DNS 查询都需要额外的网络往返，增加了整体延迟。
 
-
-
-
-解决方案是运行一个 DNS 缓存守阅像 `nscd`、`dnsmasq` 或 `bind`。我不会讨论 BIND，因为单纯作为缓存运行它是过度设计，但我会讲解 `nscd` 和 `dnsmasq`，它们的工作方式略有不同。
+解决方案是运行一个 DNS 缓存守阅像 `nscd`、`dnsmasq` 或 `bind`。我不会讨论 `BIND`，因为单纯作为缓存运行它是过度设计，但我会讲解 `nscd` 和 `dnsmasq`，它们的工作方式略有不同。
 
 #### nscd
 
-`nscd` (nameserver cache daemon) 是在内部设置自己的 DNS 缓存的最简单解决方案。它是否默认安装取决于你的 Linux 发行版（在 Ubuntu 或 Debian 中默认不安装）。它易于安装且无需配置。`nscd` 与 `dnsmasq` 的主要区别在于 `nscd` 在每个系统上本地运行，而 `dnsmasq` 以网络服务形式提供，可为多台服务器提供共享的 DNS 缓存。
+`nscd` (`nameserver cache daemon`) 是在内部设置自己的 DNS 缓存的最简单解决方案。它是否默认安装取决于你的 Linux 发行版（在 Ubuntu 或 Debian 中默认不安装）。它易于安装且无需配置。`nscd` 与 `dnsmasq` 的主要区别在于 `nscd` 在每个系统上本地运行，而 `dnsmasq` 以网络服务形式提供，可为多台服务器提供共享的 DNS 缓存。
 
 ```
 1 > apt-get install nscd
@@ -257,13 +239,12 @@ PHP 通过系统调用 `gethostbyname()` 实现域名解析，该函数使用 `/
 
 ##### Pros
 
-*   极其易于设置
-
-*   无需配置
+* 极其易于设置
+* 无需配置
 
 ##### Cons
 
-*   仅在本地运行，每个服务器都需要自行安装
+* 仅在本地运行，每个服务器都需要自行安装
 
 #### dnsmasq
 
@@ -276,10 +257,15 @@ PHP 通过系统调用 `gethostbyname()` 实现域名解析，该函数使用 `/
 假设如下表格所示的网络配置，这里是如何在 `dnsmasq` 服务器上设置并指向它的服务器：
 
 | Hosts || IP |
+
 | --- | --- |
+
 | dnsmasq server || 192.51.100.10 |
+
 | --- | --- |
+
 | server01.example || 192.51.100.16 |
+
 | server02.example || 192.51.100.17 |
 
 在你的 `dnsmasq` 服务器上：
@@ -364,24 +350,21 @@ PHP 通过系统调用 `gethostbyname()` 实现域名解析，该函数使用 `/
 
 ### HAProxy
 
-[HAProxy](http://haproxy.1wt.eu/) 是一个优秀的软件负载均衡解决方案。它使用 C 编写，基于事件，专为作为反向代理而设计，因此极快且轻量。HAProxy 的内存和 CPU 占用很小，能够在低功耗硬件上处理大量流量。HAProxy 官网展示的 2009 年基准测试显示，他们能够每秒处理 108,000 个 HTTP 请求并完全饱和 10GbE 网络，这非常惊人。
+[`HAProxy`](http://haproxy.1wt.eu/) 是一个优秀的软件负载均衡解决方案。它使用 C 编写，基于事件，专为作为反向代理而设计，因此极快且轻量。`HAProxy` 的内存和 CPU 占用很小，能够在低功耗硬件上处理大量流量。`HAProxy` 官网展示的 2009 年基准测试显示，他们能够每秒处理 108,000 个 HTTP 请求并完全饱和 10GbE 网络，这非常惊人。
 
-此外，HAProxy 自 2002 年以来一直保持“无显著错误”的记录。下面的引用来自其官网：
+此外，`HAProxy` 自 2002 年以来一直保持“无显著错误”的记录。下面的引用来自其官网：
 
 > 在单进程程序中，你没有权利失败：最小的错误会导致程序崩溃、疯狂运行或冻结。过去 10 年中，在代码和生产环境中都没有发现任何此类错误。
 
 #### 相对于 Nginx 的优势
 
-[Nginx](http://nginx.org/) 毫无疑问是一个了不起的软件，甚至包括自己的反向代理模块，使其能够作为负载均衡器工作。尽管 Nginx 作为负载均衡器已经相当不错，但 HAProxy 仍是更佳选择，原因如下。
+[`Nginx`](http://nginx.org/) 毫无疑问是一个了不起的软件，甚至包括自己的反向代理模块，使其能够作为负载均衡器工作。尽管 `Nginx` 作为负载均衡器已经相当不错，但 `HAProxy` 仍是更佳选择，原因如下。
 
-
-
-
-HAProxy 是一个非常裸机的软件。它只做一件事，并且做得极其出色，这在负载均衡需求时既是显著的优势，也可能是巨大的短板。对于大多数栈来说，HAProxy 会是一个非常合适的选择，但如果你需要更灵活，就不应该犹豫使用 nginx。虽然它作为负载均衡器的表现不如 HAProxy，但可以在牺牲略高的 CPU 和内存占用的代价下接近其性能。
+`HAProxy` 是一个非常裸机的软件。它只做一件事，并且做得极其出色，这在负载均衡需求时既是显著的优势，也可能是巨大的短板。对于大多数栈来说，`HAProxy` 会是一个非常合适的选择，但如果你需要更灵活，就不应该犹豫使用 nginx。虽然它作为负载均衡器的表现不如 `HAProxy`，但可以在牺牲略高的 CPU 和内存占用的代价下接近其性能。
 
 ### Layer 4 vs Layer 7
 
-HAProxy 可以在两种模式下运行：TCP（Layer 4）和 HTTP（Layer 7）。在 TCP 模式下，HAProxy 仅将客户端的原始 TCP 包转发到应用服务器。这种方式的 CPU 使用量比 HTTP（Layer 7）模式低约 50%，因为 HTTP（Layer 7）模式在转发前需要解析 HTTP 头部。由于 nginx 主要是一个 Web 服务器，它只支持 HTTP（Layer 7）负载均衡。
+`HAProxy` 可以在两种模式下运行：TCP（Layer 4）和 HTTP（Layer 7）。在 TCP 模式下，`HAProxy` 仅将客户端的原始 TCP 包转发到应用服务器。这种方式的 CPU 使用量比 HTTP（Layer 7）模式低约 50%，因为 HTTP（Layer 7）模式在转发前需要解析 HTTP 头部。由于 nginx 主要是一个 Web 服务器，它只支持 HTTP（Layer 7）负载均衡。
 
 你肯定会看到很多观点说“它不重要”——Layer 7、双重 HTTP 解析是一个微小的开销，除非你是巨型流量，否则可以接受。这说得有点道理，但正如我之前说的，让我们保持简单。
 
@@ -389,9 +372,9 @@ TCP 负载均衡的一个缺点是可能丢失客户端的 IP 地址。考虑以
 
 没问题，你会想，大多数负载均衡器会把客户端的“真实 IP”放入其他头部，比如 `$_SERVER['X-Forwarded-For']`，所以你会去检查它。但结果是“什么都没有”。怎么回事？因为 TCP 包从负载均衡器重新发送时，显然会采用负载均衡器的 IP 地址。由于我们在讨论 Layer 4 负载均衡，它永远不会解析和重构 HTTP 头部，这意味着它永远无法在 HTTP 请求中注入诸如 `X-Forwarded-For` 这样的头部。
 
-糟糕！我们没选项了吗？不！幸运的是，HAProxy 的开发者们创造了一个非常优雅的解决方案——他们开发了自己的 \[PROXY Protocol\]，可以在 TCP 层附加一些代理信息（如 `REMOTE_ADDR`）。
+糟糕！我们没选项了吗？不！幸运的是，`HAProxy` 的开发者们创造了一个非常优雅的解决方案——他们开发了自己的 `[PROXY Protocol]`，可以在 TCP 层附加一些代理信息（如 `REMOTE_ADDR`）。
 
-PROXY Protocol 仅与明确包含对其支持的软件配合使用。幸运的是，nginx 正好支持它。事实上，它非常简单——只需在 nginx 配置中添加 `real_ip_header proxy_protocol`（将在下一章讨论），你就搞定了。搞定。
+`PROXY Protocol` 仅与明确包含对其支持的软件配合使用。幸运的是，nginx 正好支持它。事实上，它非常简单——只需在 nginx 配置中添加 `real_ip_header proxy_protocol`（将在下一章讨论），你就搞定了。搞定。
 
 ### SSL 终止
 
@@ -401,13 +384,13 @@ TCP（Layer 4）负载均衡的另一个好处是将 SSL 终止委托给应用�
 
 ### 更好的健康检查和分发算法
 
-当 nginx 被配置为负载均衡器时，对后端服务器进行健康检查的唯一方法是使用超时。如果应用服务器超时，它会从池中移除；否则，即使它输出的是乱码、PHP 代码或 500 错误，也会被认为是健康的。HAProxy 提供了多种更好的健康检查方法，我们将在下文中讨论。
+当 nginx 被配置为负载均衡器时，对后端服务器进行健康检查的唯一方法是使用超时。如果应用服务器超时，它会从池中移除；否则，即使它输出的是乱码、PHP 代码或 500 错误，也会被认为是健康的。`HAProxy` 提供了多种更好的健康检查方法，我们将在下文中讨论。
 
-此外，nginx 仅支持一种简单的轮询算法（round-robin）来选择后端服务器。HAProxy 支持多种均衡算法，包括一种能将新连接分配给现有连接数最少的服务器的算法。我们将在下文中讨论可用的不同算法。
+此外，nginx 仅支持一种简单的轮询算法（`round-robin`）来选择后端服务器。`HAProxy` 支持多种均衡算法，包括一种能将新连接分配给现有连接数最少的服务器的算法。我们将在下文中讨论可用的不同算法。
 
 #### 安装
 
-``` 
+```
  1 > apt-get install haproxy
  2 > vi /etc/haproxy/haproxy.cfg
  3 
@@ -452,9 +435,9 @@ TCP（Layer 4）负载均衡的另一个好处是将 SSL 终止委托给应用�
 42     stats auth Username:Password
 ```
 
-HAProxy 会在你启用 init.d 脚本后才运行，我们现在就来做这件事。
+`HAProxy` 会在你启用 init.d 脚本后才运行，我们现在就来做这件事。
 
-``` 
+```
 1 > vi /etc/default/haproxy
 2     # 如果你想让 init 脚本启动 haproxy，请将 ENABLED 设置为 1。
 3     ENABLED=1
@@ -465,6 +448,8 @@ HAProxy 会在你启用 init.d 脚本后才运行，我们现在就来做这件�
 #### 配置选项
 
 `haproxy.cfg` 中的大部分配置选项都很直观，但让我们重点介绍几个最重要的。
+
+
 
 `maxconn` - HAProxy 在给定时间内能接受的最大连接数。在大多数情况下，这个值应该尽可能高。每个 HAProxy 保持的连接大约使用 33KB 的内存，因此确保你有足够的内存来支持所使用的值很重要（例如，在 4GB 系统上，大约可以支持 127,000 个连接）。
 
@@ -486,9 +471,7 @@ HAProxy 提供多种均衡算法供选择，这些算法决定了如何从后端
 
 `source` - 也称为 **粘性会话**。通过客户端 IP 地址的哈希值决定后端服务器。例如，来自 `203.0.113.100` 的请求总是路由到 `appserver01`，而来自 `203.0.113.200` 的请求则始终去 `appserver02`。这对于 A/B 测试（在每个 appserver 上运行不同版本的应用）或用户分片非常有用；然而，`source` 算法通常是长期策略的糟糕选择，往往暗示了 scaling 策略有问题。
 
-
-
--   `uri` - 与 `source` 算法类似，但不基于客户端的 IP 地址进行哈希，而是基于请求的 URL。这对于运行 HTTP 代理非常有用，因为 `example.com/picture01.jpg` 总是会路由到 `backend01`，而 `example.com/picture02.jpg` 总是会路由到 `backend02`，从而最大化每个后端服务器的文件系统和内存缓存。通常应用于提供静态资源（图片、CSS、JS）。
+- `uri` - 与 `source` 算法类似，但不基于客户端的 IP 地址进行哈希，而是基于请求的 URL。这对于运行 HTTP 代理非常有用，因为 `example.com/picture01.jpg` 总是会路由到 `backend01`，而 `example.com/picture02.jpg` 总是会路由到 `backend02`，从而最大化每个后端服务器的文件系统和内存缓存。通常应用于提供静态资源（图片、CSS、JS）。
 
 | ![information](img/leanpub_information.png) || **粘性会话**（通过 `source` 算法）乍一看似乎是个好主意，但长期来看几乎总是个糟糕的选择。将用户始终路由到相同的应用服务器会导致活跃用户的热点和冷点，具体取决于当前活跃的用户。在我的经验中，粘性会话是因为另一个未扩展的领域——例如，会话存储在文件系统上，将每个用户绑定到特定的应用服务器。换句话说，它能工作但很粗糙！请避免这种诱惑，正确扩展，长期来看会有回报。 |
 
@@ -498,7 +481,7 @@ HAProxy 提供多种均衡算法供选择，这些算法决定了如何从后端
 
 HAProxy 附带一个有用的 Web-UI，能够提供对负载均衡器的洞察，并使一般统计信息可用。它是快速查看关键信息（如连接数、哪些应用服务器处于上线或离线状态、错误数等）的快捷方式。
 
-使用上面提供的 `haproxy.cfg` 配置，Web-UI 监听端口 `1936`，并通过用户名 “`Username`” 和密码 “`Password`” 进行密码保护。毫无疑问，你很可能会想要修改它（由以下行定义：`stats auth Username:Password`）。
+使用上面提供的 `haproxy.cfg` 配置，Web-UI 监听端口 `1936`，并通过用户名 "`Username`" 和密码 "`Password`" 进行密码保护。毫无疑问，你很可能会想要修改它（由以下行定义：`stats auth Username:Password`）。
 
 访问 `your-load-balancer.com:1936`，你将看到类似下图的 Web-UI。值得注意的是，如果在 URL 末尾追加 `;csv`，数据将以逗号分隔格式返回，便于将数据程序化地集成到监控系统中。
 
@@ -538,10 +521,15 @@ Intel Xeon 1270（SandyBridge）3.4GHz，四核 8GB ECC DDR3 内存 500GB 硬盘
 我们使用 `keepalived` 为负载均衡器提供容错能力，并通过保留热备服务器来防止单点故障，当需要时，热备服务器可以接管。
 
 | Hosts || IP |
+
 | --- | --- |
+
 | virtual ip || 192.51.100.40 |
+
 | --- | --- |
+
 | lb.example || 192.51.100.20 |
+
 | lbspare.example || 192.51.100.30 |
 
 在此配置中，我们有两台负载均衡器，各自拥有独立的 IP 地址，以及一个虚拟 IP（vip）在 `lb.example` 和 `lbspare.example` 之间浮动。两台负载均衡器都应已配置好 HAProxy。
@@ -616,9 +604,6 @@ Intel Xeon 1270（SandyBridge）3.4GHz，四核 8GB ECC DDR3 内存 500GB 硬盘
 
 #### `net.ipv4.ip_local_port_range`
 
-
-
-
 `ip_local_port_range` 定义系统上可用端口的范围。在我的 Ubuntu 标准安装中，它的值设置为 `32768-61000`。增大范围以允许更多连接。可用端口的数量限制了同时打开的连接数。记住，即使连接已关闭，它仍然会在 `TIME_WAIT` 状态中占用端口（不过我们可以通过下面的设置来缓解）。
 
 ```
@@ -658,7 +643,7 @@ TCP 协议的一部分是 `TIME_WAIT` 状态，它会在连接关闭后保持 so
 
 #### 饱和网络
 
-这似乎不言自明，但我曾为此困扰过。记得曾花费超过一小时才弄清为什么我们的 Twitpic 负载均衡器运行像蜗牛一样且持续丢失连接。原因是网卡被配置为 100 Mbps，而我们试图通过它推送 150 Mbps。使用 `vnstat` 可以查看网卡当前的带宽使用情况。请务必检查**公网**和**私网**两个网络，因为负载均衡器通常会同时使用这两者。
+这似乎不言自明，但我曾为此困扰过。记得曾花费超过一小时才弄清为什么我们的 Twitpic 负载均衡器运行像蜗牛一样且持续丢失连接。原因是网卡被配置为 100 Mbps，而我们试图通过它推送 150 Mbps。使用 `vnstat` 可以查看网卡当前的带宽使用情况。请务必检查**公网**和**私网**两个网络，因为负载均衡器通常会同时使用这两者。
 
 ```
 1 > vnstat -i eth1 -l
@@ -680,15 +665,15 @@ TCP 协议的一部分是 `TIME_WAIT` 状态，它会在连接关闭后保持 so
 
 ### 选择正确的 PHP 版本
 
-PHP 社区在更新方面表现得非常保守，甚至可以说是“年岁如旧”。因此，务必确保运行的是最新的 PHP 版本，即 **PHP 5.4.4**（截至撰写时）。
+PHP 社区在更新方面表现得非常保守，甚至可以说是“年岁如旧”。因此，务必确保运行的是最新的 PHP 版本，即 **PHP 5.4.4**（截至撰写时）。
 
-> 2014 年更新——使用 PHP 5.5！这里的所有描述依然适用，只是 Dotdeb 仓库的路径改为 `deb http://packages.dotdeb.org wheezy-php55 all` 和 `deb-src http://packages.dotdeb.org wheezy-php55 all`。
+> 2014 年更新——使用 PHP 5.5！这里的所有描述依然适用，只是 Dotdeb 仓库的路径改为 `deb http://packages.dotdeb.org wheezy-php55 all` 和 `deb-src http://packages.dotdeb.org wheezy-php55 all`。
 
 PHP 的主版本每次迭代都在速度和内存使用上得到提升，因此运行最新版本可以最大化硬件性能。5.4 相比 5.3 在功能和速度上显著更好，同样 5.3 也优于 5.2。
 
 在 Debian 或 Ubuntu 系统上，可以使用 **Dotdeb** 仓库来获取几乎即时、无痛的 PHP 更新，同时也能获得 Ubuntu 官方仓库中滞后的软件（如 Redis 与 Nginx）。这省去了等待发行版维护者更新的时间，往往需要数周甚至更久。
 
-如果你使用的是 Ubuntu Quantal（12.10），PHP 5.4 已经在 apt 仓库中，无需额外添加 Dotdeb 的 php54 行。
+如果你使用的是 Ubuntu Quantal（12.10），PHP 5.4 已经在 apt 仓库中，无需额外添加 Dotdeb 的 php54 行。
 
 设置 Dotdeb 与添加另一个 apt 源同等简单：
 
@@ -707,105 +692,179 @@ PHP 的主版本每次迭代都在速度和内存使用上得到提升，因此�
 12 > apt-get update
 ```
 
-#### 基准测试：PHP 5.3 与 PHP 5.4
+#### 基准测试：PHP 5.3 与 PHP 5.4
 
-在所有可测试的场景中，PHP 5.4 在每秒请求数（RPS）和内存占用方面均优于 PHP 5.3。下面的图表展示了我的测试结果，供您参考：
+在所有可测试的场景中，PHP 5.4 在每秒请求数（RPS）和内存占用方面均优于 PHP 5.3。下面的图表展示了我的测试结果，供您参考：
+
+
 
 ![](img/05----chart_1.png)![](img/05----chart_2.png)![](img/05----chart_3.png)
 
 ### Nginx 与 PHP-FPM
 
-正如第 2 章所讨论，我们将用 **nginx + PHP-FPM** 替代传统的 Apache + mod_php 组合。虽然可以保留 Apache 并通过 HAProxy 水平扩展，但 nginx + PHP-FPM 的组合更为优雅。Trust me，摒弃 Apache，改用 nginx。
+正如第 2 章所讨论，我们将用 `nginx + PHP-FPM` 替代传统的 `Apache + mod_php` 组合。虽然可以保留 Apache 并通过 HAProxy 水平扩展，但 `nginx + PHP-FPM` 的组合更为优雅。Trust me，摒弃 Apache，改用 nginx。
 
 我们在 2010 年将 Twitpic 迁移到此架构，当时我对 nginx 并不熟悉，担心配置会很复杂。结果发现，nginx 的配置文件简洁易读，管理起来比 Apache 更轻松。而且 nginx 官方 Wiki（[`wiki.nginx.org/Main`](http://wiki.nginx.org/Main)）提供了完整的每项配置选项文档。
 
-同样，PHP-FPM 也是可靠的软件，和使用 mod_php 一样可靠。PHP 5.3 之前它是以补丁形式开发，由与 nginx 同一团队维护，而自 PHP 5.3 起已被整合进 PHP 官方发行版，得到整个 PHP 社区的全力支持，经过充分测试，完全可靠。
+同样，`PHP-FPM` 也是可靠的软件，和使用 `mod_php` 一样可靠。PHP 5.3 之前它是以补丁形式开发，由与 nginx 同一团队维护，而自 PHP 5.3 起已被整合进 PHP 官方发行版，得到整个 PHP 社区的全力支持，经过充分测试，完全可靠。
 
 假设您的 PHP 应用位于 `/u/apps/my_app`，入口脚本为 `/u/apps/my_app/www/index.php`。大多数框架（如 Zend、Kohana、Cake）都兼容此配置。
 
 下面是我们的部署步骤：
 
-
-
-
+```
 1 > apt-get install nginx
+
 2 > vi /etc/nginx/nginx.conf
-3 
+
+3
+
 4 user www-data;
+
 5 worker_processes 4;
+
 6 pid /var/run/nginx.pid;
-7 
+
+7
+
 8 events {
+
 9   worker_connections 768;
+
 10   multi_accept on;
+
 11 }
-12 
+
+12
+
 13 http {
-14 
+
+14
+
 15   sendfile on;
+
 16   tcp_nopush on;
+
 17   keepalive_timeout 65;
+
 18   server_tokens off;
-19 
+
+19
+
 20   include /etc/nginx/mime.types;
+
 21   default_type application/octet-stream;
-22 
+
+22
+
 23   access_log /var/log/nginx/access.log;
+
 24   error_log /var/log/nginx/error.log;
-25 
+
+25
+
 26   gzip on;
+
 27   gzip_disable "MSIE [1-6]\\.";
-28 
+
+28
+
 29   include /etc/nginx/conf.d/*.conf;
+
 30   include /etc/nginx/sites-enabled/*;
+
 31 }
-32 
-33 
-34 > vi /etc/nginx/sites-available/my_app.conf
-35 upstream backend {
-36   server unix:/u/apps/my_app/tmp/php.sock;
-37 }
-38 
-39 server {
-40 
-41   listen 80 default;
-42   root /u/apps/my_app/www;
-43   index index.php;
-44 
-45   access_log /u/apps/my_app/logs/access.log;
-46   error_log /u/apps/my_app/logs/error.log;
-47 
-48   location / {
-49     try_files $uri $uri/ /index.php;
-50   }
-51 
-52   # This location block matches anything ending in .php and sends it to
-53   # our PHP-FPM socket, defined in the upstream block above.
-54   location ~ \\.php$ {
-55     try_files $uri =404;
-56     fastcgi_pass backend;
-57     fastcgi_index index.php;
-58     fastcgi_param SCRIPT_FILENAME /u/apps/my_app/www$fastcgi_script_name;
-59     include fastcgi_params;
-60   }
-61 
-62   # This location block is used to view PHP-FPM stats
-63   location ~ ^/(php_status|php_ping)$ {
-64     fastcgi_pass backend;
-65     fastcgi_param SCRIPT_FILENAME $fastcgi_script_name;
-66     include fastcgi_params;
-67     allow 127.0.0.1;
-68     deny all;
-69   }
-70 
-71   # This location block is used to view nginx stats
-72   location /nginx_status {
-73     stub_status on;
-74     access_log off;
-75     allow 127.0.0.1;
-76     deny all;
-77   }
-78 }
+
+32
+33 > vi /etc/nginx/sites-available/my_app.conf
+
+34 upstream backend {
+
+35   server unix:/u/apps/my_app/tmp/php.sock;
+
+36 }
+
+37
+
+38 server {
+
+39
+
+40   listen 80 default;
+
+41   root /u/apps/my_app/www;
+
+42   index index.php;
+
+43
+
+44   access_log /u/apps/my_app/logs/access.log;
+
+45   error_log /u/apps/my_app/logs/error.log;
+
+46
+
+47   location / {
+
+48     try_files $uri $uri/ /index.php;
+
+49   }
+
+50
+
+51   # This location block matches anything ending in .php and sends it to
+
+52   # our PHP-FPM socket, defined in the upstream block above.
+
+53   location ~ \\.php$ {
+
+54     try_files $uri =404;
+
+55     fastcgi_pass backend;
+
+56     fastcgi_index index.php;
+
+57     fastcgi_param SCRIPT_FILENAME /u/apps/my_app/www$fastcgi_script_name;
+
+58     include fastcgi_params;
+
+59   }
+
+60
+
+61   # This location block is used to view PHP-FPM stats
+
+62   location ~ ^/(php_status|php_ping)$ {
+
+63     fastcgi_pass backend;
+
+64     fastcgi_param SCRIPT_FILENAME $fastcgi_script_name;
+
+65     include fastcgi_params;
+
+66     allow 127.0.0.1;
+
+67     deny all;
+
+68   }
+
+69
+
+70   # This location block is used to view nginx stats
+
+71   location /nginx_status {
+
+72     stub_status on;
+
+73     access_log off;
+
+74     allow 127.0.0.1;
+
+75     deny all;
+
+76   }
+
+77 }
 ```
 
 ```
@@ -819,59 +878,75 @@ Alright. Nginx is up and running now, but nginx doesn’t know how to run PHP. U
 
 ```
  1 > apt-get install php5-fpm
- 2 
- 3 > vi /etc/php5/fpm/pool.d/my_app.conf
- 4 
 
-5 [my_app]
-6 listen = /u/apps/my_app/tmp/php.sock
-7 user = www-data
-8 group = www-data
-9 pm = dynamic
+ 2
+
+ 3 > vi /etc/php5/fpm/pool.d/my_app.conf
+
+ 4
+
+ 5 [my_app]
+
+ 6 listen = /u/apps/my_app/tmp/php.sock
+
+ 7 user = www-data
+
+ 8 group = www-data
+
+ 9 pm = dynamic
+
 10 pm.max_children = 100
+
 11 pm.start_servers = 10
+
 12 pm.min_spare_servers = 5
+
 13 pm.max_spare_servers = 15
+
 14 pm.max_requests = 1000
+
 15 pm.status_path = /php_status
-16 
+
+16
 
 17 request_terminate_timeout = 0
-18 request_slowlog_timeout = 0<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk> %HAM users -capego to be [ the.
-[
 
+18 request_slowlog_timeout = 0
+```
 
-`pm.max_requests` 是单个子进程在被杀死并重新生成之前可以服务的请求数量。它用于防止内存泄漏，因为 PHP 的垃圾回收器并不设计用于长时间运行。PHP 5.3 为内存管理带来了一些改进，因此可以将其设置得相当高。我建议将其至少设为 1000，具体取决于你的代码以及是否使用 PHP 扩展，因为不同扩展的泄漏情况各不相同。
+`pm.max_requests` 是单个子进程在被杀死并重新生成之前可以服务的请求数量。它用于防止内存泄漏，因为 PHP 的垃圾回收器并不设计用于长时间运行。PHP 5.3 为内存管理带来了一些改进，因此可以将其设置得相当高。我建议将其至少设为 1000，具体取决于你的代码以及是否使用 PHP 扩展，因为不同扩展的泄漏情况各不相同。
 
 ### 选择适合你应用服务器的硬件
 
 **快速 CPU，大量内存**
 
-预计每个 PHP‑FPM 进程会使用多达 20 MB 的内存，假设 `pm.maxchildren` 设为 100，你至少需要 2 GB 的内存来支撑服务器。
+预计每个 PHP-FPM 进程会使用多达 20 MB 的内存，假设 `pm.max_children` 设为 100，你至少需要 2 GB 的内存来支撑服务器。
 
-相反，Nginx 记忆消耗极低——即使是负载重的应用服务器，Nginx 的总内存占用也仅 60‑80 MB。
+相反，Nginx 记忆消耗极低——即使是负载重的应用服务器，Nginx 的总内存占用也仅 60-80 MB。
 
-你需要最快的 CPU 以及尽可能多的核心。虽然 PHP 是单线程的，只要 PHP‑FPM 进程的数量多于 CPU 核心数，就能充分利用每个核心。
+你需要最快的 CPU 以及尽可能多的核心。虽然 PHP 是单线程的，只要 PHP-FPM 进程的数量多于 CPU 核心数，就能充分利用每个核心。
 
-截至撰写时，Intel Xeon SandyBridge 26xx 系列是性价比最高的选择。它们支持双 CPU 配置，每个 CPU 最多 8 核，启用 Hyper‑Threading 后可提供 32 个可用核心供应用服务器使用。
+截至撰写时，Intel Xeon SandyBridge 26xx 系列是性价比最高的选择。它们支持双 CPU 配置，每个 CPU 最多 8 核，启用 Hyper-Threading 后可提供 32 个可用核心供应用服务器使用。
 
 ### 使用 PHP 字节码缓存
 
 PHP 是解释型语言。每次运行 PHP 应用时，解释器需要读取源码、将其转换为内部字节码程序，然后执行这些字节码。可以把字节码程序看作解释器能更好理解的中间语言——实际上是一个虚拟机。
 
-将 PHP 源码翻译成字节码需要非平凡的开销，通过缓存这种 PHP → 字节码的转换结果并重复使用，可以大幅节省开销。那么我们该如何实现呢？使用字节码缓存扩展。如果你目前还没有使用，只需安装一个即可实现 200‑300 % 的 CPU 使用率下降。这真是易如反掌！
+将 PHP 源码翻译成字节码需要非平凡的开销，通过缓存这种 PHP → 字节码的转换结果并重复使用，可以大幅节省开销。那么我们该如何实现呢？使用字节码缓存扩展。如果你目前还没有使用，只需安装一个即可实现 200-300 % 的 CPU 使用率下降。这真是易如反掌！
 
-自 PHP 5.5 起，Zend OpCache 已随 PHP  bundled。要启用它，只需在 `php.ini` 中加入 `opcache.enable=1`。超级简单。唯一的缺点是，APC 的用户空间 memcache 组件不再包含在 Zend OpCache 中。如果你依赖这个共享缓存，可以安装类似 [APCu](http://pecl.php.net/package/APCu) 的扩展，它在 PHP 5.5 中恢复了 APC 的用户空间缓存功能。我在《CakePHP 缓存文件案例研究》中详细描述了从 APC 迁移到 Zend OpCache 所遇到的心酸史。
+自 PHP 5.5 起，Zend OpCache 已随 PHP 捆绑。要启用它，只需在 `php.ini` 中加入 `opcache.enable=1`。超级简单。唯一的缺点是，APC 的用户空间 memcache 组件不再包含在 Zend OpCache 中。如果你依赖这个共享缓存，可以安装类似 [APCu](http://pecl.php.net/package/APCu) 的扩展，它在 PHP 5.5 中恢复了 APC 的用户空间缓存功能。我在《CakePHP 缓存文件案例研究》中详细描述了从 APC 迁移到 Zend OpCache 所遇到的心酸史。
 
-如果你使用的是 PHP 5.4 或更低版本，还有其他字节码缓存方案可供选择，下面会逐一说明。
+如果你使用的是 PHP 5.4 或更低版本，还有其他字节码缓存方案可供选择，下面会逐一说明。
 
-有没有使用字节码缓存的缺点？在大多数配置中，答案是 **没有**。唯一的 *注意点* 是：如果你使用了 PHP 编码/混淆器（如 [ionCube](http://www.ioncube.com/) 或 [Zend Guard](http://www.zend.com/en/products/guard/）），则无法使用字节码缓存。这只会影响少数运行闭源、授权 PHP 代码的用户。
+有没有使用字节码缓存的缺点？在大多数配置中，答案是**没有**。唯一的*注意点*是：如果你使用了 PHP 编码/混淆器（如 [ionCube](http://www.ioncube.com/) 或 [Zend Guard](http://www.zend.com/en/products/guard/）），则无法使用字节码缓存。这只会影响少数运行闭源、授权 PHP 代码的用户。
 
-#### 调优 Zend OpCache（仅 PHP 5.5）
+#### 调优 Zend OpCache（仅 PHP 5.5）
 
 常见痛点：“我想使用 Zend Optimizer，但完全不知道怎么设置。”
 
 你有没有发现，花几小时阅读文档却仍然对设置一无所知？
+
+
 
 你懂 `opcache.memory_consumption` 的含义，但到底该设多少？32 够不够？太少又如何？Google 搜不到答案，只能凭感觉。
 
@@ -883,25 +958,33 @@ PHP 是解释型语言。每次运行 PHP 应用时，解释器需要读取源�
 
 与其让这些知识白白浪费，我决定与你共享。我从一款每日处理 117 百万 HTTP 请求的应用的 `php.ini` 中提取出最佳 **实战** 设置，并解释每个参数的作用和重要性，帮助你为自己的环境进行调优。
 
-**opcache.revalidate_freq** – 控制字节码缓存多久失效一次（以秒为单位）。0 表示每个请求都检查代码是否改动，这会产生大量的 `stat` 系统调用。在开发环境建议设为 0。生产环境可不必太在意，因为下一设置会起作用。
+### OpCache 推荐设置
 
-**opcache.validate_timestamps** – 开启后，PHP 会在每次 `opcache.revalidate_freq` 间隔内检查文件的时间戳。
+#### `opcache.revalidate_freq`
+控制字节码缓存多久失效一次（以秒为单位）。0 表示每个请求都检查代码是否改动，这会产生大量的 `stat` 系统调用。在开发环境建议设为 0。生产环境可不必太在意，因为下一设置会起作用。
+
+#### `opcache.validate_timestamps`
+开启后，PHP 会在每次 `opcache.revalidate_freq` 间隔内检查文件的时间戳。
 
 关闭后，`opcache.validate_timestamps` 被忽略，PHP 永远不会检查代码更新。如果你修改代码，改动直到重启或发送 `SIGUSR2` 信号让 PHP 重新加载才会生效。虽然这很烦人，但强烈建议使用它。因为在更新或部署代码时，新文件可能与旧文件混在一起，导致不可预测的结果，风险极高。
 
-**opcache.max_accelerated_files** – 限制一次性可以驻留在内存中的 PHP 文件最大数量。确保你的项目文件数量小于该值。我的代码库有 6000 个文件，我使用质数 7963 作为 `max_accelerated_files`。
+#### `opcache.max_accelerated_files`
+限制一次性可以驻留在内存中的 PHP 文件最大数量。确保你的项目文件数量小于该值。我的代码库有 6000 个文件，我使用质数 7963 作为 `max_accelerated_files`。
 
 你可以运行 `find . -type f -print | grep php | wc -l` 快速统计代码库中 PHP 文件的数量。
 
-**opcache.memory_consumption** – 默认 64 MB，我将其设为 192 MB，因为代码量很大。可以使用 `opcache_get_status()` 查看 OpCache 当前占用的内存，并在需要时调增（下周再详细说明）。
+#### `opcache.memory_consumption`
+默认 64 MB，我将其设为 192 MB，因为代码量很大。可以使用 `opcache_get_status()` 查看 OpCache 当前占用的内存，并在需要时调增（下周再详细说明）。
 
-**opcache.interned_strings_buffer** – 一个文档较少的好设置。PHP 采用字符串内部化技术：如有 1000 个 “foobar” 字符串，内部会创建一个不可变变量并为其余 999 次使用提供指针。这个设置把内部字符串池从每个 php‑fpm 进程独立提升为所有进程共享，从而节省内存并提升大型应用的性能。
+#### `opcache.interned_strings_buffer`
+一个文档较少的好设置。PHP 采用字符串内部化技术：如有 1000 个 “foobar” 字符串，内部会创建一个不可变变量并为其余 999 次使用提供指针。这个设置把内部字符串池从每个 php‑fpm 进程独立提升为所有进程共享，从而节省内存并提升大型应用的性能。
 
 取值单位是 MB，建议设为 “16” 表示 16 MB。默认仅 4 MB。
 
-**opcache.fast_shutdown** – 另一个文档不明的设置。“允许更快的关闭”。听起来不太有用。实际上，它提供了更快的调用代码在请求结束时的析构函数的机制，加速响应并让 PHP 工作进程更快就绪，以便处理下一个请求。将其设为 1 并开启。
+#### `opcache.fast_shutdown`
+另一个文档不明的设置。“允许更快的关闭”。听起来不太有用。实际上，它提供了更快的调用代码在请求结束时的析构函数的机制，加速响应并让 PHP 工作进程更快就绪，以便处理下一个请求。将其设为 1 并开启。
 
-**TL;DR‑在 `php.ini` 中的推荐配置**
+### TL;DR‑在 `php.ini` 中的推荐配置
 
 ```
 1 opcache.revalidate_freq=0
@@ -912,7 +995,7 @@ PHP 是解释型语言。每次运行 PHP 应用时，解释器需要读取源�
 6 opcache.fast_shutdown=1
 ```
 
-#### APC（仅 PHP 5.4 及以下版本）
+### APC（仅 PHP 5.4 及以下版本）
 
 APC 是成熟的字节码缓存，未来可能会被整合进 PHP。它通常是首选。APC 以 PHP 扩展形式发布，使用 PECL 安装非常简便：
 
@@ -923,14 +1006,9 @@ APC 是成熟的字节码缓存，未来可能会被整合进 PHP。它通常是
 
 真的很简单。在繁忙服务器上，你会立即看到 CPU 使用率急剧下降，甚至直线式掉下来。
 
+有一个需要注意的地方（gotcha）关于 APC。如果你使用 git、svn、capistrano 或 rsync 部署代码，请确保在 `php.ini` 中设置配置值 `apc.stat_ctime=1`。否则，每次向应用服务器推送新代码时可能会出现错误或旧代码。 **为什么？** 因为在大多数部署设置中——尤其是使用 capistrano 时，当新代码部署时，只有文件元数据被更新。这导致只有 `ctime` 被更新，而 `mtime` 没有被更新。默认情况下，APC 只通过比较 `mtime` 来检测代码变化，因此即使你部署了新代码，APC 仍会查看 `mtime` 并认为它与缓存中的相同。通过使用 `apc.stat_ctime`，告诉 APC 也检查 `ctime`，从而完全解决这个问题。
 
-
-
-| ![information](img/leanpub_information.png) || 有一个需要注意的地方（gotcha）关于 APC。如果你使用 git、svn、capistrano 或 rsync 部署代码，请确保在 `php.ini` 中设置配置值 `apc.stat_ctime=1`。否则，每次向应用服务器推送新代码时可能会出现错误或旧代码。 **为什么？** 因为在大多数部署设置中——尤其是使用 capistrano 时，当新代码部署时，只有文件元数据被更新。这导致只有 `ctime` 被更新，而 `mtime` 没有被更新。默认情况下，APC 只通过比较 `mtime` 来检测代码变化，因此即使你部署了新代码，APC 仍会查看 `mtime` 并认为它与缓存中的相同。通过使用 `apc.stat_ctime`，告诉 APC 也检查 `ctime`，从而完全解决这个问题。 |
-
-| --- | --- |
-
-#### XCache
+### XCache
 
 APC 的替代方案是 XCache，它在功能上基本上提供相同的功能，尽管它是由独立开发者编写的，并不随 PHP 一起捆绑。不过，它会频繁发布新版本——例如，在 APC 稳定版仍未支持 PHP 5.4 时，就已经发布了兼容 PHP 5.4 的稳定版。
 
@@ -941,7 +1019,7 @@ APC 的替代方案是 XCache，它在功能上基本上提供相同的功能，
 2 > service php5-fpm restart
 ```
 
-#### 替代方案
+### 替代方案
 
 未来可能会看到更多使用长期运行的 PHP 应用服务器的趋势，即 PHP 应用只启动一次并进入循环等待新的 HTTP 请求（这类似于 Ruby 的 `unicorn` 或 Python 的 `gunicorn`）。这种方式不需要 opcode 缓存，因为 PHP 进程不会为每个请求重启，所以代码只需解释一次。
 
@@ -1046,13 +1124,8 @@ nginx 的访问日志和错误日志非常有价值。它们不仅有助于调�
 尽管如此，在繁忙服务器上，禁用这些日志以“提升性能”是很诱人的。写入磁盘每个请求似乎不合理，对吧？错！实时日志的好处远大于可能节省的微小性能收益。
 
 1.  即使是旋转非 SSD 的硬盘，也能很好地处理顺序写入，速度可达 100MB/s 以上。
-
 2.  在最繁忙的服务器（每秒 20,000+ 连接）上，nginx 仅产生 1-2MB 的日志数据/秒，这占 I/O 利用率的不到 1%。
-
 3.  Nginx 是事件驱动的，因此不会因为写日志而阻塞。此外，nginx 会缓冲日志写入以提高效率。
-
-
-
 
 -   [在负载均衡章节中，我们完全禁用了日志文件，因为信号噪声比远远过高。但，在应用服务器上，每个服务器只处理一部分流量，日志在实时中变得更加有价值和有用。]
 
@@ -1121,20 +1194,19 @@ nginx 的访问日志和错误日志非常有价值。它们不仅有助于调�
 
 #### Cookies
 
+
+
 另一种存储会话数据的方法是使用自定义会话处理器，将所有会话数据存储在用户浏览器的 Cookie 中。只要会话数据量不大，这种方式是可扩展的——因为 Cookie 在每次 HTTP 请求中都会被发送回服务器，因此最好只用于存储少于 1KB 的会话数据。此外，大多数浏览器对单个 Cookie 的大小限制约为 4KB，这限制了会话数据的存储量。
 
 关于 Cookie 的一个担忧是私密性——会话数据（而不仅仅是令牌）会存储在用户的浏览器中，可通过像 [Firebug](http://getfirebug.com/) 这样的工具查看，因此不建议存储不想让用户看到的敏感信息。除非使用 SSL，否则 Cookie 数据在传输过程中也会被明文暴露。
 
 但如果用户修改 Cookie 数据呢？如果操作正确，则不能。我们使用一种称为 HMAC（基于哈希的消息验证码）的技术对 Cookie 数据进行签名，这样在从用户处接收会话数据时，我们可以 100% 确定其未被篡改。
 
-基于 Cookie 的会话处理不是 PHP 内置功能，但使用 PHP 5.4 的 [SessionHandlerInterface](http://www.php.net/manual/en/class.sessionhandlerinterface.php) 可以轻松集成。SessionHandlerInterface 的行为可以通过 `session_set_save_handler()` 向后兼容到较旧的 PHP 版本，但这对读者是一个练习。
+基于 Cookie 的会话处理不是 PHP 内置功能，但使用 PHP 5.4 的 [SessionHandlerInterface](http://www.php.net/manual/en/class.sessionhandlerinterface.php) 可以轻松集成。`SessionHandlerInterface` 的行为可以通过 `session_set_save_handler()` 向后兼容到较旧的 PHP 版本，但这对读者是一个练习。
 
 下面我提供了一个工作示例类，演示如何实现我们自己的 `SessionHandlerInterface`。此外，我已将这段代码开源并在 [GitHub](https://github.com/stevecorona/SessionHandlerCookie)（因为我热爱分享和回馈），并在 [Packagist](http://packagist.org/packages/session-handler-cookie/session-handler-cookie) 上发布，以便轻松安装。
 
-
-
-
--   [确保此技术安全的关键在于在部署代码之前，你必须将 `HASH_SECRET` 更改为一个 128 个字符以上的随机字符串]
+- [确保此技术安全的关键在于在部署代码之前，你必须将 `HASH_SECRET` 更改为一个 128 个字符以上的随机字符串]
 
 ```
  1 <?php
@@ -1207,7 +1279,7 @@ nginx 的访问日志和错误日志非常有价值。它们不仅有助于调�
 69 session_start();
 ```
 
-## Database Server: Ultimate MySQL Tuning Guide
+# Database Server: Ultimate MySQL Tuning Guide
 
 数据库是应用的核心和灵魂。它安全存储你的数据，并将数据传输到所有的应用服务器。在与和采访了数百位读者后，大多数人都告诉我，他们的数据库是堆栈中最难扩展的部分。
 
@@ -1217,7 +1289,7 @@ nginx 的访问日志和错误日志非常有价值。它们不仅有助于调�
 
 本章我们将专注于 MySQL，因为大多数人已经使用它，而且切换到其他数据库并不容易。不过，大多数数据库（包括 NoSQL 数据库）都遵循相同的扩展原则。虽然设置名称可能不同，但本章的内容对其他数据库同样适用。
 
-### 从 NoSQL 获得 MySQL 的性能提升
+## 从 NoSQL 获得 MySQL 的性能提升
 
 MySQL 经常受到批评，说它不是最快的。但这里有个秘密：通过正确的调优，MySQL 完全可以与 NoSQL 媲美。NoSQL 在水平扩展和集群管理方面表现出色，例如 Cassandra 可以自动启动数百个新节点并自动加载数据，无需任何手动配置。相比之下，为 MySQL 添加新的从库或分片需要手动配置并迁移数据，可能需要数小时。
 
@@ -1231,7 +1303,7 @@ MySQL 经常受到批评，说它不是最快的。但这里有个秘密：通�
 
 | --- | --- |
 
-#### 选择正确的 MySQL 版本
+### 选择正确的 MySQL 版本
 
 你应该始终使用当前可用的最新主要版本的 MySQL。Oracle 每隔几个月就会发布新版本，保持更新至关重要，因为每个版本通常包含显著的性能提升。当时出版时，5.5 是最新的主要版本，但 5.6 即将发布。相同查询在 5.1 和 5.5 上的运行速度差异可能惊人，因此升级到最新版本始终是明智之举。
 
@@ -1239,28 +1311,22 @@ MySQL 经常受到批评，说它不是最快的。但这里有个秘密：通�
 
 好了，选择最新版本 MySQL 很简单。但等等，还有另一个值得探索的选项——[Percona 的 MySQL 分支](http://www.percona.com/)。
 
-##### 为什么使用 Percona 的 MySQL 分支？
+#### 为什么使用 Percona 的 MySQL 分支？
 
 Percona 是一家著名的 MySQL 咨询公司，其 [MySQL Performance Blog](http://www.mysqlperformanceblog.com) 以专业著称。他们还撰写了《High Performance MySQL: Optimization, Backups, Replication, and More》这本书（前文已提及）。因此，当我说他们在 MySQL 领域是专家时，我是真心实意的。
-
-
-
 
 Anyways，“Percona Server”是 MySQL 服务器的 100%免费的即插即用替代品，并且不断基于最新的 MySQL 代码进行基线更新，因此始终与最新的 MySQL 发行版保持同步。你的现有代码和数据库无需任何修改即可在 Percona Server 上运行，并且使用更少的资源、更快。
 
 * 它的运行速度比标准 MySQL 服务器快 40%。
-
 * 提供比 MySQL 服务器更一致的性能。
-
 * 包含 XtraDB（InnoDB 的分支），提供更好的可调度性和更高效的内存使用。
-
 * 更多的调优选项，赋予你更大的控制权和更多功能。你可以 [查看功能对比这里](http://www.percona.com/doc/percona-server/5.5/feature_comparison.html)。
 
 ![](img/06----perconavsmysql.png)
 
 此外，还需提及的是，Percona Server 非常稳健。我们在 Twitpic 的生产环境中已使用超过一年，未出现任何崩溃、数据丢失或问题。而且，其他大型平台如 Flickr、Tumblr、Etsy、Engineyard 和 37Signals 也在生产环境中使用 Percona Server。
 
-###### 安装 Percona Server
+##### 安装 Percona Server
 
 ```
 1 > gpg --keyserver  hkp://keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A
@@ -1282,7 +1348,7 @@ Anyways，“Percona Server”是 MySQL 服务器的 100%免费的即插即用�
 
 ### 处理 libmysql 无法设置超时的问题
 
-让我们稍微聊一下 PHP 如何与 MySQL 通信。无论你使用`mysql`、`mysqli`还是`PDO`，内部 PHP 都是通过 `libmysql` 或 `mysqlnd` 与 MySQL 服务器建立连接并进行通信。
+让我们稍微聊一下 PHP 如何与 MySQL 通信。无论你使用 `mysql`、`mysqli` 还是 `PDO`，内部 PHP 都是通过 `libmysql` 或 `mysqlnd` 与 MySQL 服务器建立连接并进行通信。
 
 当 PHP 5.3 发布时，新增了 `mysqlnd`（MySQL Native Driver）这一功能。`mysqlnd` 是 PHP 团队自行编写的定制 C 语言库，专门用于处理 MySQL 连接。在此之前，PHP 使用 `libmysql`，这是 MySQL 自带的标准 C 库。
 
@@ -1290,7 +1356,7 @@ Anyways，“Percona Server”是 MySQL 服务器的 100%免费的即插即用�
 
 但 `libmysql` 与 `mysqlnd` 都有一个主要缺陷：它们都不能以小于 1 秒的精度设置连接超时，也都不支持设置查询超时。这意味着，如果 MySQL 服务器不可达，你能做的最短等待时间就是 1 秒——在高负载环境中显然远远不够。
 
-##### 使用 PDO 设置连接超时
+#### 使用 PDO 设置连接超时
 
 ```
 1 <?php
@@ -1298,17 +1364,19 @@ Anyways，“Percona Server”是 MySQL 服务器的 100%免费的即插即用�
 3 $pdo->setAttribute(PDO::ATTR_TIMEOUT, 1);
 ```
 
-##### 使用 mysqli 设置连接超时
+#### 使用 mysqli 设置连接超时
 
 与 `mysqli` 的做法类似，但要注意代码中的注释。不能像往常一样使用构造函数（`$mysqli = new mysqli('localhost')`）来创建对象，必须先使用 `mysqli_init()` 创建对象。
 
+
+
 ```
-1 <?php
-2 // 注意：在使用 mysqli 设置连接超时时，
-3 // 必须使用 mysql_init()（返回 mysqli 对象）来创建对象，不能直接使用构造函数。
-4 $mysqli = mysqli_init();
-5 $mysqli->options(MYSQLI_OPT_CONNECT_TIMEOUT, 1);
-6 $mysqli->real_connect("localhost", "username", "password", "test");
+<?php
+// 注意：在使用 mysqli 设置连接超时时，
+// 必须使用 mysql_init()（返回 mysqli 对象）来创建对象，不能直接使用构造函数。
+$mysqli = mysqli_init();
+$mysqli->options(MYSQLI_OPT_CONNECT_TIMEOUT, 1);
+$mysqli->real_connect("localhost", "username", "password", "test");
 ```
 
 #### 查询超时
@@ -1330,9 +1398,9 @@ Anyways，“Percona Server”是 MySQL 服务器的 100%免费的即插即用�
 在后文“使用 HAProxy 为 MySQL 进行负载均衡”章节中，我介绍了如何使用 HAProxy 为 MySQL 从库提供负载均衡。HAProxy 还支持 TCP 超时设置，这实际上可以将 MySQL 的连接超时和查询超时精确到毫秒级。相关配置位于 `/etc/haproxy/haproxy.cfg`：
 
 ```
-1 timeout connect 500ms
-2 timeout client  1000ms
-3 timeout server  1000ms
+timeout connect 500ms
+timeout client  1000ms
+timeout server  1000ms
 ```
 
 ##### 使用 Percona Toolkit 的 `pt-kill`
@@ -1340,15 +1408,14 @@ Anyways，“Percona Server”是 MySQL 服务器的 100%免费的即插即用�
 Percona Toolkit 包含一个名为 `pt-kill` 的工具，能够监控 MySQL 并杀死运行时间过长的查询。当然，有些长时间运行的查询是合法的（如后台任务或 OLAP 系统），因此我通常会为应用创建专用的 MySQL 用户，并使用 `--match-user` 选项仅针对该用户的长时间查询进行杀戮，从而避免影响其他合法查询。
 
 ```
-1 > pt-kill --daemonize --kill --busy-time 60s --match-user webuser
+> pt-kill --daemonize --kill --busy-time 60s --match-user webuser
 ```
 
 在使用 `pt-kill` 前，需要先安装 `percona-toolkit` 包。如果你遵循上面“安装 Percona Server”部分的步骤，只需执行以下命令即可安装：
 
 ```
-1 > apt-get install percona-toolkit
-
-
+> apt-get install percona-toolkit
+```
 
 The [full documentation for `pt-kill` is available here](http://www.percona.com/doc/percona-toolkit/2.1/pt-kill.html).
 
@@ -1381,64 +1448,64 @@ The [full documentation for `pt-kill` is available here](http://www.percona.com/
 MySQL 通过 `my.cnf` 文件提供大量的调优选项，在 Ubuntu 系统中该文件位于 `/etc/mysql/my.cnf`。下面列出了最重要的设置，并附有“无废话”的注释，说明它们的工作方式及对系统的影响。我没有涵盖任何 `MyISAM` 设置，因为它很糟糕，几乎不应该在高流量环境中使用。
 
 ```
- 1 [mysqld]
- 2 
- 3 # 在不考虑 MyISAM 缓冲区的前提下，每个连接大约使用 192KB 的内存。你需要确保-
- 4 # (max_connections * 192KB) + innodb_buffer_pool_size 小于系统的总内存，否则 MySQL 可能会开始交换。默认值是 100 连接。
- 5 # 2000 连接将使用约 400MB 的内存。
- 6 max_connections=2000
-7 
-8 # 这应该设置为平均连接数 * 你最常访问的表数量。例如，如果平均有 50 个连接且有 5 个常用表，
-9 # 则将其设置为 250。默认值较低（64）
-10 table_cache=250
-11 
-12 # 禁用查询缓存。这两个参数必须设为 0，因为 MySQL 存在一个 bug。查询缓存会产生全局锁并
-13 # 在写入负载不 trivial 时表现不佳。
-14 query_cache_size=0
-15 query_cache_type=0
-16 
-17 # 与单个大的 InnoDB 文件不同，按表分割文件。
-18 # 这对性能没有直接影响，提供了对单个表更好的管理功能，并能更好地洞察系统。它只影响新表，
-19 # 不会影响老的“单一文件” style InnoDB 表。
-20 innodb_file_per_table
-21 
-22 # InnoDB 有两个版本：Antelope（较旧）和 Barracuda（最新）。告诉 InnoDB 我们总希望使用 Barracuda。
-23 innodb_file_format=barracuda
-24 
-25 # 告诉操作系统 MySQL 会自行缓存，skip 文件系统缓存。
-26 # 防止数据被双重缓存（一次在 MySQL 内部，一次在操作系统层面）。
-27 innodb_flush_method=O_DIRECT
-28 
-29 # 将此设为 1 在主服务器上，以确保最安全、ACID 兼容的操作（每次事务提交后 sync）。
-30 
-31 # 将此设为 2 在从属服务器上，可能在操作系统崩溃后导致最多 1 秒的数据丢失，但可以减少 I/O，因为它只在每秒一次
-47 # 将此设为 1 在主服务器上
-48 sync_binlog=1
-49 
-50 # 更大的日志文件大小 = 更少的磁盘写入 I/O，故障恢复时的时间更长
-51 innodb_log_file_size=128M
-52 
-53 # 将此设为 ~90% 的内存。这可能是你需要调整的最重要的 MySQL 值。
-54 # 64GB -> 57GB
-55 # 32GB -> 28GB
-56 # 16GB -> 14GB
-57 # 8GB  -> 7GB
-58 innodb_buffer_pool_size=57000M
-59 
-60 # InnoDB 使用后台线程预取并缓存数据。默认是 4 个线程，但
-61 # 应该是 4 * CPU 核心数
-62 innodb_read_io_threads=32
-63 innodb_write_io_threads=32
-64 
-65 # 这应该设置为系统的最大 IOPS。它会限制 InnoDB 可使用的 I/O 上限。
-66 innodb_io_capacity = 5000
-67 
-68 # 这限制了 InnoDB 在同一时间可以执行的线程数量。设为 0 表示无限，是 Percona 5.5 的好值。
-69 # 非 Percona 环境应将其设为 CPU 核心数的 1 倍。
-70 innodb_thread_concurrency=0
+[mysqld]
+
+# 在不考虑 MyISAM 缓冲区的前提下，每个连接大约使用 192KB 的内存。你需要确保-
+# (max_connections * 192KB) + innodb_buffer_pool_size 小于系统的总内存，否则 MySQL 可能会开始交换。默认值是 100 连接。
+# 2000 连接将使用约 400MB 的内存。
+max_connections=2000
+
+# 这应该设置为平均连接数 * 你最常访问的表数量。例如，如果平均有 50 个连接且有 5 个常用表，
+# 则将其设置为 250。默认值较低（64）
+table_cache=250
+
+# 禁用查询缓存。这两个参数必须设为 0，因为 MySQL 存在一个 bug。查询缓存会产生全局锁并
+# 在写入负载不 trivial 时表现不佳。
+query_cache_size=0
+query_cache_type=0
+
+# 与单个大的 InnoDB 文件不同，按表分割文件。
+# 这对性能没有直接影响，提供了对单个表更好的管理功能，并能更好地洞察系统。它只影响新表，
+# 不会影响老的“单一文件” style InnoDB 表。
+innodb_file_per_table
+
+# InnoDB 有两个版本：Antelope（较旧）和 Barracuda（最新）。告诉 InnoDB 我们总希望使用 Barracuda。
+innodb_file_format=barracuda
+
+# 告诉操作系统 MySQL 会自行缓存，skip 文件系统缓存。
+# 防止数据被双重缓存（一次在 MySQL 内部，一次在操作系统层面）
+innodb_flush_method=O_DIRECT
+
+# 将此设为 1 在主服务器上，以确保最安全、ACID 兼容的操作（每次事务提交后 sync）。
+
+# 将此设为 2 在从属服务器上，可能在操作系统崩溃后导致最多 1 秒的数据丢失，但可以减少 I/O，因为它只在每秒一次
+# 将此设为 1 在主服务器上
+sync_binlog=1
+
+# 更大的日志文件大小 = 更少的磁盘写入 I/O，故障恢复时的时间更长
+innodb_log_file_size=128M
+
+# 将此设为 ~90% 的内存。这可能是你需要调整的最重要的 MySQL 值。
+# 64GB -> 57GB
+# 32GB -> 28GB
+# 16GB -> 14GB
+# 8GB  -> 7GB
+innodb_buffer_pool_size=57000M
+
+# InnoDB 使用后台线程预取并缓存数据。默认是 4 个线程，但
+# 应该是 4 * CPU 核心数
+innodb_read_io_threads=32
+innodb_write_io_threads=32
+
+# 这应该设置为系统的最大 IOPS。它会限制 InnoDB 可使用的 I/O 上限。
+innodb_io_capacity = 5000
+
+# 这限制了 InnoDB 在同一时间可以执行的线程数量。设为 0 表示无限，是 Percona 5.5 的好值。
+# 非 Percona 环境应将其设为 CPU 核心数的 1 倍。
+innodb_thread_concurrency=0
 ```
 
-##### innodb\_buffer\_pool\_size
+##### `innodb_buffer_pool_size`
 
 这可能是调优 MySQL/InnoDB 时最重要的配置项。MySQL 会将磁盘上的表数据缓存到内存中以加快访问速度，`innodb_buffer_pool_size` 决定了它应该使用多少内存。在读取密集的工作负载（即 MySQL 从属服务器）上，你希望尽可能大地设置此值，同时避免交换。
 
@@ -1454,16 +1521,13 @@ MySQL 通过 `my.cnf` 文件提供大量的调优选项，在 Ubuntu 系统中�
 
 在写入密集的工作负载（即 MySQL 主服务器）上，此设置的重要性较低。我曾经拥有 128MB 缓冲池的主库，复制到拥有 64GB 缓冲池的从属服务器。此外，如果你为备份目的设置一个 MySQL 从属服务器，可以将此值调低，以节省内存。
 
-##### innodb\_flush\_log\_at\_trx\_commit
+##### `innodb_flush_log_at_trx_commit`
 
 该设置可以在稍牺牲数据持久性的前提下提升性能。我在 **仅限从属服务器** 上使用它，因为在主库上设置为 0 可能导致崩溃或 ungraceful shutdown（例如拔掉电源）时出现最多 1 秒的数据丢失。
 
 **在主数据库上，你始终应该将 `innodb_flush_log_at_trx_commit=1`。** 否则是不负责任的，可能导致数据丢失。
 
 我喜欢在从属数据库上“活在边缘”。它们可以修复，所以我把它们视为一次性的，愿意为了性能提升在数据持久性上稍作冒险。
-
-
-
 
 -   [当 `innodb_flush_log_at_trx_commit` 设置为 `1` 时，MySQL 会将数据库变更写入 InnoDB 日志文件，并立即通过 `fsync` 将其写入磁盘。`fsync` 系统调用指示 Linux 立即将数据写入磁盘，而非缓存并稍后写入。这保证了数据在 `fsync` 调用返回后安全存储在硬盘上，即使拔掉电源也能确保数据安全。但这种持久性会牺牲速度，因为每个事务都需要写入磁盘，消耗宝贵的 IOPS，在主服务器上是必要的。]
 
@@ -1475,17 +1539,17 @@ MySQL 通过 `my.cnf` 文件提供大量的调优选项，在 Ubuntu 系统中�
 
 `innodb_flush_log_at_trx_commit` 解决的问题是 `fsync` 调用在性能上通常非常昂贵。但若使用带电池备份的 RAID 控制器，其缓存可显著提升 `fsync` 速度，甚至使该设置变得不必要。
 
-##### innodb_flush_method
+##### `innodb_flush_method`
 
 InnoDB 的刷新方法支持多种值，但唯一重要的仅是 `O_DIRECT`。将该值设为 `O_DIRECT` 可指示操作系统不对数据库数据使用文件系统缓冲，因为 MySQL 会自行使用 `innodb_buffer_pool_size` 管理缓存。若未设置为 `O_DIRECT`，则会出现双缓存现象——MySQL 与 Linux 同时缓存相同数据，导致内存浪费。
 
-##### sync_binlog
+##### `sync_binlog`
 
 二进制日志用于记录所有非 SELECT SQL 语句，是 MySQL Replication 的关键组件。与 `innodb_flush_log_at_trx_commit` 类似，主服务器的 `sync_binlog` 值应设为 `1`，这会让 MySQL 实时 `fsync` 二进制日志中的 SQL 语句，确保崩溃时数据不丢失，复制链路不中断。
 
 从属服务器除非通过 `log_slave_updates` 开启二进制日志，否则不保留二进制日志，因此可以在从属服务器上移除 `sync_binlog` 或将其设为 `0`。
 
-##### innodb_log_file_size
+##### `innodb_log_file_size`
 
 关于 `innodb_log_file_size` 变量，建议通过计算而非盲目设置数值。其工作原理如下：
 
@@ -1499,33 +1563,35 @@ InnoDB 日志文件有两个，且大小固定。需足够大以容纳写入量�
 应计算每分钟写入日志的 MB 数，并设置为可容纳一小时写入量的大小，且需在峰值期执行此计算。
 
 ```
- 1 > show global status where variable_name like "%Innodb_os_log_written%";
- 2   select sleep(60); 
- 3   show global status where variable_name like "%Innodb_os_log_written%";
- 4        
- 5 *************************** 1. row ***************************
- 6 Variable_name: Innodb_os_log_written
- 7         Value: 234825649664
- 8 1 row in set (0.01 sec)
- 9 
-10 +-----------+
-11 | sleep(60) |
-12 +-----------+
-13 |         0 |
-14 +-----------+
-15 1 row in set (1 min 0.00 sec)
-16 
-17 *************************** 1. row ***************************
-18 Variable_name: Innodb_os_log_written
-19         Value: 234828058624
-20 1 row in set (0.00 sec)
+> show global status where variable_name like "%Innodb_os_log_written%";
+  select sleep(60); 
+  show global status where variable_name like "%Innodb_os_log_written%";
+        
+*************************** 1. row ***************************
+Variable_name: Innodb_os_log_written
+        Value: 234825649664
+1 row in set (0.01 sec)
+
++-----------+
+| sleep(60) |
++-----------+
+|         0 |
++-----------+
+1 row in set (1 min 0.00 sec)
+
+*************************** 1. row ***************************
+Variable_name: Innodb_os_log_written
+        Value: 234828058624
+1 row in set (0.00 sec)
 ```
 
 ```
-1 234828058624-234825649664 = 2408960 bytes
+234828058624-234825649664 = 2408960 bytes
 ```
 
-`2408960` 字节为每分钟写入日志的字节数。[Google 2408960 bytes to megabytes](https://www.google.com/?q=2408960+bytes+to+megabytes#hl=en&safe=off&output=search&sclient=psy-ab&q=2408960+bytes+to+megabytes&gs_l=hp.12...0.0.0.1163.0.0.0.0.0.0.0.0..0.0.0.0.0.0.0.0.0.0.0.0.0.0.0..0.0.0..0.0.0...0.0.les%3B..0.0.0.1c.ONtw7scylt0&pbx=1&bav=on.2,or.r_gc.r_pw.r_cp.r_qf.&fp=19fc9cab2f77850f&bpcl=35440803&biw=1129&bih=999)，显示 MySQL 每分钟向日志写入 2.29MB 数据。
+
+
+`2408960` 字节为每分钟写入日志的字节数。[Google 2408960 bytes to megabytes](https://www.google.com/?q=2408960+bytes+to+megabytes#hl=en&safe=off&output=search&sclient=psy-ab&q=2408960+bytes+to+megabytes&gs_l=hp.12...0.0.0.1163.0.0.0.0.0.0.0.0.0..0.0.0.0.0.0.0.0.0.0.0.0.0.0.0..0.0.0..0.0.0...0.0.0..0.0.les%3B..0.0.0.1c.ONtw7scylt0&pbx=1&bav=on.2,or.r_gc.r_pw.r_cp.r_qf.&fp=19fc9cab2f77850f&bpcl=35440803&biw=1129&bih=999)，显示 MySQL 每分钟向日志写入 2.29MB 数据。
 
 Multiply the megabytes per minute times 60 minutes to determine how much data would be written out in one hour.
 
@@ -1536,8 +1602,6 @@ Multiply the megabytes per minute times 60 minutes to determine how much data wo
 Since InnoDB keeps two individual log files, divide 137.4MB by 2 and we get about 69MB, so `innodb_log_file_size` should be around 70MB in this scenario. We can go higher, even up to 100MB or 200MB, but as you can see, for most cases, setting it very high is unnecessary.
 
 (*Calculation method adopted from the [MySQL Performance Blog](http://www.mysqlperformanceblog.com/2008/11/21/how-to-calculate-a-good-innodb-log-file-size)*)
-
-
 
 在现有 MySQL 数据库上生效的改动，需要干净地关闭 MySQL，删除 InnoDB 日志文件，然后重新启动 MySQL。如果不这样做，MySQL 会报错说现有的日志文件大小与 `innodb_log_file_size` 的值不匹配。
 
@@ -1641,12 +1705,9 @@ MySQL 查询缓存乍看之下似乎是个好主意。它会将每条查询的�
 
 16MB 是查询缓存的良好起点。请记住，缓存需要在每次写入时被清除，因此应保持尽可能小。它只存储查询语句和结果，通常每条只有几 KB。
 
+- 默认情况下，查询会跳过查询缓存。如果你想让特定查询使用缓存，需要将 `SELECT` 改为 `SELECT SQL_CACHE`。例如-
 
-
-
--   默认情况下，查询会跳过查询缓存。如果你想让特定查询使用缓存，需要将 `SELECT` 改为 `SELECT SQL_CACHE`。例如-
-
-``` 
+```
 1 mysql> SELECT SQL_CACHE FROM foobar WHERE id = 123456
 ```
 
@@ -1685,11 +1746,9 @@ MySQL 查询缓存乍看之下似乎是个好主意。它会将每条查询的�
 
 确实，InnoDB 不支持像 MyISAM 那样的全文搜索。事实上，搜索方面有更好的替代方案。请查看：
 
-*   [ElasticSearch](http://www.elasticsearch.org/)
-
-*   [Sphinx](http://sphinxsearch.com/)
-
-*   [Solr](http://lucene.apache.org/solr/)
+* [ElasticSearch](http://www.elasticsearch.org/)
+* [Sphinx](http://sphinxsearch.com/)
+* [Solr](http://lucene.apache.org/solr/)
 
 据说 MySQL 5.6 将为 InnoDB 添加全文搜索功能。我尚未测试，无法评估性能，但它可能会取代或至少大幅减少对独立搜索服务的需求。
 
@@ -1749,292 +1808,172 @@ Linux 内核默认包含三种 I/O 调度器：`cfq`、`deadline` 和 `noop`。�
 1 > vi /etc/security/limits.conf
 2     * soft  nofile  999999
 3     * hard  nofile  999999
-4 > ulimit -<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>
-
-
-
-啊…数据库文件系统之争。互联网上有大量选项和千奇百怪的看法。让我们谈谈硬性数据——我已经比较并基准测试了两种最推荐的 MySQL 文件系统，`ext4` 和 `XFS`。我们在 Twitpic 上使用 ext4，根据我做的研究，我本以为它的性能和 XFS 一样好——更不用说，如今大多数 Linux 发行版的默认文件系统都是 ext4。
-
-不过，我使用 `sysbench`（本章末尾会介绍）在 XFS 和 ext4 之间进行了读写 MySQL 基准测试，结果让我惊讶。我在一台 16 核机器上运行了测试，以确保基准测试不会因 CPU 成为瓶颈而扭曲结果。它创建了一个表，大小略大于 `innodb_buffer_pool_size`，因此并非所有数据都能装入内存，导致某些读取必须访问磁盘。
-
-对比 ext4 和 XFS，发现 XFS 在 100,000 个读 **和** 写查询的基准测试中表现极其出色。
-
-| XFS || ext4 |
-| --- | --- |
-| 21,755 qps || 16,560 qps |
-
-顺便说一下，在 Ubuntu 上安装 XFS 只需安装 `xfsprogs` 并对想格式化的设备运行 `mkfs.xfs`。
-
-```
-1 > apt-get install xfsprogs
-2 > mkfs.xfs /dev/sdf1
 ```
 
-*测试是在专用磁盘上进行的，用于存放 MySQL 数据文件，因此没有其他系统进程的 I/O 竞争。*
 
-##### Raw Device Mode（原始设备模式）
 
-你甚至可以让 InnoDB 使用所谓的 **Raw Device Mode**，它直接将数据写入未格式化的磁盘或分区，而不通过任何文件系统。虽然它略快，但我强烈建议不要使用它，因为它会让数据管理变成一场噩梦。你将失去在使用普通文件系统时对数据库文件的全部可视性。此外，基准测试显示 `ext4` 和 `XFS` 仅比使用原始设备慢极其微乎其微。
+进入`/path/to/xxx`目录，找到`xxx.json`。
 
-好奇心的你可以通过修改 `innodb_data_file_path` 设置来启用原始设备模式：
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
 
-```
-1 innodb_data_home_dir=
-2 innodb_data_file_path=/dev/sda1:500Gnewraw
-```
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
 
-重启 MySQL，它会创建数据文件，然后再次修改 `innodb_data_file_path`：
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
 
 ```
-1 innodb_data_file_path=/dev/sda1:500Graw
+if (condVar > someVal) {console.log("xxx")}
 ```
 
-##### 文件系统的未来
 
-简要提及 [`ZFS`](http://en.wikipedia.org/wiki/ZFS) 和 [`btrfs`](http://en.wikipedia.org/wiki/Btrfs)。它们都很酷，很可能是文件系统的未来，因为它们支持现代功能，如 copy‑on‑write、SSD 缓存和去重，但 `ZFS` 在 Linux 上的支持尚不理想，而 `Btrfs` 仍过于实验，不适合生产环境。
-
-### MySQL 从属实例的负载均衡
-
-拥有多个只读的 MySQL 从属实例很棒，但你需要在代码中负载均衡它们。默认情况下，PHP 完全不负责此类负载均衡，你需要自行编码实现。下面我将展示几种做法。
-
-#### 数据库类
-
-最简便的方式是在代码中直接实现：随机选择一个从属实例并返回对应的数据库连接。
 
 ```
- 1 <?php
- 2 class Database {
- 3   static function connect() {
- 4   	// 假设从属主机来自配置文件，但为简化，这里直接定义它们。
- 5     $slaves = array('192.51.100.1', '192.51.100.2', '192.51.100.3');
- 6     $slave  = $slaves[array_rand($slaves)];
- 7     
- 8     return new mysqli($slave, 'user', 'password');
-10   }
-11 }
-12 
-13 $slave = Database::connect();
+5 maxconn 50000
+6 user haproxy
+7 group haproxy
+8 stats socket /tmp/haproxy
+9 node lb1
+10 nbproc 1
+11 daemon
+
+13 defaults
+14 log     global
+15 retries 3
+16 option  dontlog-normal
+17 option  splice-auto
+18 timeout connect 200ms
+19 timeout client  2s
+20 timeout server  2s
+21 maxconn 50000
+
+24 listen mysql 192.51.100.100:3306
+25 mode tcp
+26 balance leastconn
+
+28 server slave01 192.51.100.1:3306 check
+29 server slave02 192.51.100.2:3306 check
+30 server slave03 192.51.100.3:3306 check
+
+32 listen stats *:1936
+33 mode http
+34 stats enable
+35 stats uri /
+36 stats hide-version
+37 stats auth Username:Password
 ```
 
-这种方式的缺点是，如果从属实例崩溃，代码在等待连接超时时不会优雅处理。当然，你可以手动从配置文件中删除该从属实例，但这需要人工操作，而且我不喜欢在半夜被叫醒去手动编辑配置文件。
-
-#### 扩展 PDO
-
-与上面的 Database 类似，如果你使用 PDO，也可以更优雅地实现负载均衡，但同样存在上述缺点（对 downed 从属实例的处理不佳）。
+HAProxy won’t run until you enable the `init.d` script, so let’s do that now.
 
 ```
- 1 <?php
- 2 class SlavePDO extends PDO {
- 3 
- 4   public function __construct($dsn, $user=null, $pw=null, $options) {
- 5   	// 假设从属主机来自配置文件，但为简化，这里直接定义它们。
- 6     $slaves = array('192.51.100.1', '192.51.100.2', '192.51.100.3');
- 7     $slave = $slaves[array_rand($slaves)];
- 8     
-10     $dsn .= ";host={$slave}";
-11     parent::__construct($dsn, $user, $pw);
-12 }
-13 }
-14 
-15 $slave = new SlavePDO('mysql:dbname=test', 'user', 'password');
+1 > vi /etc/default/haproxy
+
+2     # Set ENABLED to 1 if you want the init script to start haproxy.
+
+3     ENABLED=1
+
+5 > service haproxy start
 ```
 
-#### 使用 mysqlnd_ms 插件
-
-*MySQL Native Driver* 是 PHP 团队编写的替代 MySQL 驱动，最早在 PHP 5.3 中加入，目的是消除对 `libmysql` 的依赖并更深度地将 MySQL 集成到 PHP 核心。MySQLND 还支持开发 PHP 与 C 插件以扩展其功能。由于 MySQLND 在内部被 PDO、MySQLi 以及已被弃用的旧 MySQL 扩展所调用，MySQLND 插件可以与任何 MySQL 交互界面配合使用。
-
-首先，你需要安装 `mysqlnd_ms` PECL 插件。
-
-```
-1 > pecl install mysqlnd_ms
-```
-
-随后，在应用中添加一个配置文件，例如 `./config/db.conf`：
-
-```
- 1 > vi ./config/db.conf
- 2   { "app" : {
- 3     "master": [ { "host": "192.51.100.10" } ],
- 4     "slave": [
- 5       { "host": "192.51.100.1" },
- 6       { "host": "192.51.100.2" },
- 7       { "host": "192.51.100.3" }]
- 8     },
- 9     "failover": { "strategy": "loop_before_master" }
-10   }
-```
-
-然后在应用中启用 `mysqlnd_ms`：
+With this configuration, we set up three database slaves, each defined with a `server` line. Now, all we have to do is modify our code to connect to HAProxy’s IP Address instead of the slave IP Address. (The HAProxy IP is defined in the configuration file in the `listen` setting. In this example, it’s `192.51.100.100`.)
 
 ```
 1 <?php
-2 ini_set("mysqlnd_ms.enable", 1);
-3 int_set("mysqlnd_ms.config_file", "./config/db.conf");
+2 $mysqli = new mysqli("192.51.100.100", "username", "password");
 ```
 
-现在，只要在创建 MySQL 连接时传入 `app` 作为主机，插件就会自动在从属实例之间轮询，并在需要时将写入请求发送到主库。其容错机制尚可，但仍不如理想：它在每次请求时都会等待从属实例超时，不过比直接失败要好。
+Now, every time you make a MySQL connection, you will connect to HAProxy instead of directly to the MySQL slave. HAProxy will choose the slave with the least amount of connections and connect you to that slave. You can also use `balance roundrobin` as your balancing strategy if you want HAProxy to use less intelligence when picking slaves.
 
-插件允许在配置中设置容错策略。示例中使用了 `loop_before_master`，这意味着在从属实例失败后，它会先尝试其他从属，最后再尝试主库。虽然它不会记住失败的从属，导致每次请求都要等待超时，但相比于直接失败，这已经是一种改进。
+Since we set `timeout connect` as `200ms`, if a connection to a slave fails to happen in in less than 200 milliseconds, HAProxy will try another slave instead. Failed or overloaded MySQL slaves are now a non-issue.
 
-#### 使用 HAProxy
+With `timeout client` and `timeout server` both set at `2s`, it means that a long-running client or hung query will get disconnected after 2 seconds. Having a very low query timeout threshold makes sense for a web application, but obviously not for any kind of analytics or background processes, so you’ll want to connect directly to the slaves or set up a secondary HAProxy `listen` block with different timeouts for those scenarios.
 
-处理从属实例负载均衡的最佳方式是使用像 HAProxy 这样的软件负载均衡器。正如第 4 章所讨论的，HAProxy 可以在第 4 层（原始 TCP）进行负载均衡，虽然大多数人用它来均衡 HTTP，但它同样可以用于内部 MySQL 连接的负载均衡。
+The best feature, in my opinion, is that failed slaves are automatically removed from the pool and re-added once they come back up. Until we ran this setup in production on Twitpic, I’d have to wake up in the middle of the night to manually remove broken slaves from our configuration files. It was a real pain-point for us as we grew to more and more slaves.
 
-为什么 HAProxy 是最佳解决方案？有两个原因：
+You also get a really nice web interface for viewing the status of your MySQL slaves.
 
-1. 当 HAProxy 检测到数据库从属实例不可响应（崩溃、下线等）时，它会立即从负载均衡池中移除该实例，停止使用它。检测速度快，完全透明，无需改动配置、无需停机、无需等待连接超时，并且**最关键的是，不必半夜醒来处理配置文件**。
+![](img/06----haproxy.png)
 
-2. HAProxy 让你可以设置极其细粒度的超时时间，甚至到毫秒级。这可以绕过 PHP 弱劣的 MySQL 超时管理（PHP 的超时默认最小为 1 秒），让你设置更合理的超时值。
+### Accepting the Master as a SPOF
 
-安装和配置过程与我们设置 HTTP 负载均衡的方式类似。
+When you choose to use MySQL, you need to learn to accept and understand that your master server is always going to be a single point of failure. Of course, there are solutions and workarounds like [DRBd](http://dev.mysql.com/doc/refman/5.0/en/ha-drbd.html), [Percona XtraDB Cluster](http://www.percona.com/software/percona-xtradb-cluster), and MySQL Master-Master Replication. The downside, though, is that they are often slow and extremely complex.
+
+The alternative is to accept and deal with the fact that your master database server is going to be a single point of failure. You can work around the problem by scripting the failover process and dealing with the situation with as little downtime as possible. Check out [JetPants](http://tumblr.com) by Tumblr as a starting point for a MySQL master failover/slave promotion toolkit.
+
+#### What really happens when your master fails?
+
+I used to be worried that if our master database crashed, we would lose data and be faced with an enormous amount of downtime. When I thought about it, though I realized a few things-
+
+**The site won’t go down**
+
+Since we only write data to the master, and never read from it, it’s really just a glorified coordinator of data. If it crashes, our site just goes into a read-only state, but it’s still up and functioning.
+
+**We won’t lose data**
+
+Because we make daily, off-site backups, even in the event of a catastrophic failure, losing just the master is even less of a big deal because data is replicated and stored safely on all of the slaves.
+
+Using [semi-synchronous replication](http://dev.mysql.com/doc/refman/5.5/en/replication-semisync-installation.html) in MySQL 5.5 is needed to guarantee that we don’t lose *anything* in the event of a master crash. With the default asynchronous replication, it’s possible to lose data that has been written to the master but not yet replicated to the slaves during a crash. Semi-synchronous replication, instead, guarantees that new data is replicated to at least one slave.
+
+#### Promoting a slave as the master
+
+Okay, so your master database has failed. What is next? Well, we need to promote a slave to be the new master to get it up and running as quickly as possible.
+
+Let’s quickly go through a high level overview of the slave to master promotion process.
+
+**Assumptions**
+
+*   Your master server is named `master01`, and you have five slaves, `slave01-05`.
+
+*   You want to promote `slave01` to be the new master.
+
+*   `master01` is still up-and-running.
+
+*   Your code writes to the MySQL using the database user `app_user`.
+
+If `master01` is still up-and-running, it’s important to disable writes to it before failing over to the new master so your data doesn’t get out of sync. On `master01`, first delete the user that your application uses (`app_user`), so it won’t be able to establish any new connections. Next, put the database in read-only mode:
+
+```
+1 > DROP USER `app_user`
+2 > SET GLOBAL read_only=1;
+3 > FLUSH TABLES WITH READ LOCK;
+```
+
+At this point, your database cluster is in a total read-only mode. If `master01` has crashed or become unavailable, this step is unnecessary because your cluster is already effectively in a read-only state.
+
+Next, we need to pick a slave to be the new master. In this scenario, we’ve decided to promote `slave01`. On `slave01`, you’ll want to copy over your `my.cnf` from `master01`, particularly the `log-bin` setting, and restart MySQL. It’s helpful to have a backup master server already configured for this purpose.
+
+On `slave01`, you’ll want to run `SHOW MASTER STATUS` to determine the binlog position.
+
+```
+1 mysql> show master status \G
+2 *************************** 1. row ***************************
+3 File: master-bin.000001
+4 Position: 98
+```
+
+Now that you know the position of the binlog, you can connect to the rest of your slaves and reconfigure them to use `slave01` as the new master server with the `CHANGE MASTER TO` command.
+
+```
+1 mysql@slave02> STOP SLAVE;
+2 mysql@slave02> CHANGE MASTER TO	MASTER_HOST="slave01",
+3 MASTER_LOG_FILE="master-bin.000001", MASTER_LOG_POS=98;
+4 mysql@slave02> START SLAVE;
+```
+
+Lastly, update your application configuration to write to `slave01` instead of `master01`.
+
+Doing it manually isn’t the best scenario, and a good portion of this can be scripted. Instead of scripting it yourself, though, it’s worth checking out [mysql-master-ha](http://code.google.com/p/mysql-master-ha/) which can handle automatic master failover by scripting the solution described above.
+
+#### Further research and reading
+
+The topic of MySQL Master Failover is huge and could easily take up its own book, so it’s impossible for me to cover all of the possible solutions here. For most people, taking it into a read-only state and manually promoting a new master is the simplest and best approach. Unfortunately, it’s not a solution that works for everyone, so here are some further places to look for more information on some more robust (and more complex) solutions for handling master failure.
 
 
-
-
-1 > apt-get install haproxy  
-2 > vi /etc/haproxy/haproxy.cfg  
-
-4 global  
-5 maxconn 50000  
-6 user haproxy  
-7 group haproxy  
-8 stats socket /tmp/haproxy  
-9 node lb1  
-10 nbproc 1  
-11 daemon  
-
-13 defaults  
-14 log     global  
-15 retries 3  
-16 option  dontlog-normal  
-17 option  splice-auto  
-18 timeout connect 200ms  
-19 timeout client  2s  
-20 timeout server  2s  
-21 maxconn 50000  
-
-24 listen mysql 192.51.100.100:3306  
-25 mode tcp  
-26 balance leastconn  
-
-28 server slave01 192.51.100.1:3306 check  
-29 server slave02 192.51.100.2:3306 check  
-30 server slave03 192.51.100.3:3306 check  
-
-32 listen stats *:1936  
-33 mode http  
-34 stats enable  
-35 stats uri /  
-36 stats hide-version  
-37 stats auth Username:Password  
-
-HAProxy won’t run until you enable the init.d script, so let’s do that now.  
-
-1 > vi /etc/default/haproxy  
-2     # Set ENABLED to 1 if you want the init script to start haproxy.  
-3     ENABLED=1  
-
-5 > service haproxy start  
-
-With this configuration, we set up three database slaves, each defined with a `server` line. Now, all we have to do is modify our code to connect to HAProxy’s IP Address instead of the slave IP Address. (The HAProxy IP is defined in the configuration file in the `listen` setting. In this example, it’s `192.51.100.100`.)  
-
-1 <?php  
-2 $mysqli = new mysqli("192.51.100.100", "username", "password");  
-
-Now, every time you make a MySQL connection, you will connect to HAProxy instead of directly to the MySQL slave. HAProxy will choose the slave with the least amount of connections and connect you to that slave. You can also use `balance roundrobin` as your balancing strategy if you want HAProxy to use less intelligence when picking slaves.  
-
-Since we set `timeout connect` as `200ms`, if a connection to a slave fails to happen in in less than 200 milliseconds, HAProxy will try another slave instead. Failed or overloaded MySQL slaves are now a non-issue.  
-
-With `timeout client` and `timeout server` both set at `2s`, it means that a long-running client or hung query will get disconnected after 2 seconds. Having a very low query timeout threshold makes sense for a web application, but obviously not for any kind of analytics or background processes, so you’ll want to connect directly to the slaves or set up a secondary HAProxy `listen` block with different timeouts for those scenarios.  
-
-The best feature, in my opinion, is that failed slaves are automatically removed from the pool and re-added once they come back up. Until we ran this setup in production on Twitpic, I’d have to wake up in the middle of the night to manually remove broken slaves from our configuration files. It was a real pain-point for us as we grew to more and more slaves.  
-
-You also get a really nice web interface for viewing the status of your MySQL slaves.  
-
-![](img/06----haproxy.png)  
-
-### Accepting the Master as a SPOF  
-
-When you choose to use MySQL, you need to learn to accept and understand that your master server is always going to be a single point of failure. Of course, there are solutions and workarounds like [DRBd](http://dev.mysql.com/doc/refman/5.0/en/ha-drbd.html), [Percona XtraDB Cluster](http://www.percona.com/software/percona-xtradb-cluster), and MySQL Master-Master Replication. The downside, though, is that they are often slow and extremely complex.  
-
-The alternative is to accept and deal with the fact that your master database server is going to be a single point of failure. You can work around the problem by scripting the failover process and dealing with the situation with as little downtime as possible. Check out [JetPants](http://tumblr.com) by Tumblr as a starting point for a MySQL master failover/slave promotion toolkit.  
-
-#### What really happens when your master fails?  
-
-I used to be worried that if our master database crashed, we would lose data and be faced with an enormous amount of downtime. When I thought about it, though I realized a few things-  
-
-**The site won’t go down**  
-
-Since we only write data to the master, and never read from it, it’s really just a glorified coordinator of data. If it crashes, our site just goes into a read-only state, but it’s still up and functioning.  
-
-**We won’t lose data**  
-
-Because we make daily, off-site backups, even in the event of a catastrophic failure, losing just the master is even less of a big deal because data is replicated and stored safely on all of the slaves.  
-
-Using [semi-synchronous replication](http://dev.mysql.com/doc/refman/5.5/en/replication-semisync-installation.html) in MySQL 5.5 is needed to guarantee that we don’t lose *anything* in the event of a master crash. With the default asynchronous replication, it’s possible to lose data that has been written to the master but not yet replicated to the slaves during a crash. Semi-synchronous replication, instead, guarantees that new data is replicated to at least one slave.  
-
-#### Promoting a slave as the master  
-
-Okay, so your master database has failed. What is next? Well, we need to promote a slave to be the new master to get it up and running as quickly as possible.  
-
-Let’s quickly go through a high level overview of the slave to master promotion process.  
-
-**Assumptions**  
-
-*   Your master server is named `master01`, and you have five slaves, `slave01-05`.  
-
-*   You want to promote `slave01` to be the new master.  
-
-*   `master01` is still up-and-running.  
-
-*   Your code writes to the MySQL using the database user `app_user`.  
-
-If `master01` is still up-and-running, it’s important to disable writes to it before failing over to the new master so your data doesn’t get out of sync. On `master01`, first delete the user that your application uses (`app_user`), so it won’t be able to establish any new connections. Next, put the database in read-only mode:  
-
-1 > DROP USER `app_user`  
-2 > SET GLOBAL read_only=1;  
-3 > FLUSH TABLES WITH READ LOCK;  
-
-At this point, your database cluster is in a total read-only mode. If `master01` has crashed or become unavailable, this step is unnecessary because your cluster is already effectively in a read-only state.  
-
-Next, we need to pick a slave to be the new master. In this scenario, we’ve decided to promote `slave01`. On `slave01`, you’ll want to copy over your `my.cnf` from `master01`, particularly the `log-bin` setting, and restart MySQL. It’s helpful to have a backup master server already configured for this purpose.  
-
-On `slave01`, you’ll want to run `SHOW MASTER STATUS` to determine the binlog position.  
-
-1 mysql> show master status \G  
-2 *************************** 1. row ***************************  
-3 File: master-bin.000001  
-4 Position: 98  
-
-Now that you know the position of the binlog, you can connect to the rest of your slaves and reconfigure them to use `slave01` as the new master server with the `CHANGE MASTER TO` command.  
-
-1 mysql@slave02> STOP SLAVE;  
-2 mysql@slave02> CHANGE MASTER TO	MASTER_HOST="slave01",  
-3 MASTER_LOG_FILE="master-bin.000001", MASTER_LOG_POS=98;  
-4 mysql@slave02> START SLAVE;  
-
-Lastly, update your application configuration to write to `slave01` instead of `master01`.  
-
-Doing it manually isn’t the best scenario, and a good portion of this can be scripted. Instead of scripting it yourself, though, it’s worth checking out [mysql-master-ha](http://code.google.com/p/mysql-master-ha/) which can handle automatic master failover by scripting the solution described above.  
-
-#### Further research and reading  
-
-The topic of MySQL Master Failover is huge and could easily take up its own book, so it’s impossible for me to cover all of the possible solutions here. For most people, taking it into a read-only state and manually promoting a new master is the simplest and best approach. Unfortunately, it’s not a solution that works for everyone, so here are some further places to look for more information on some more robust (and more complex) solutions for handling master failure.  
 
 *   [Automated Master Failover (Slides)](http://www.slideshare.net/matsunobu/automated-master-failover)  
-
-
-
 -   [如何评估哪种 MySQL 高可用性方案最适合您](http://www.percona.com/live/mysql-conference-2012/sessions/how-evaluate-which-mysql-high-availability-solution-best-suits-you)
-
 -   [MySQL ZFS Replication](http://dev.mysql.com/doc/refman/5.0/en/ha-zfs-replication.html)
-
 -   [MySQL DRBd Replication](http://dev.mysql.com/doc/refman/5.0/en/ha-drbd.html)
-
 -   [Percona XtraDB Cluster](http://www.percona.com/software/percona-xtradb-cluster)
-
 -   [Percona Replication Manager](https://github.com/jayjanssen/Percona-Pacemaker-Resource-Agents/blob/master/doc/PRM-setup-guide.rst)
-
 -   [Tungsten Replicator](http://code.google.com/p/tungsten-replicator/)
 
 ### 理解 NUMA 相关问题
@@ -2074,13 +2013,11 @@ What happens when a CPU needs to address more than 32GB
 有几种方法可以克服这一限制：
 
 1. 将 `innodb_buffer_pool_size` 设置为 32GB。
-
 2. 仅使用单个物理 CPU 的 MySQL 服务器。
 
 这两种方案都不理想。更好的办法是：
 
 - 使用 **Percona Server 5.5** 替代 Oracle 官方 MySQL Server。Percona 版本包含大量增强和补丁，使 MySQL 在 NUMA 系统上更为稳健。
-
 - 调整 Linux 以开启 CPU 跨核内存交互（memory interleaving），消除每个 CPU 32GB 的限制，让它们共同使用全部 64GB 内存。
 
 为此，需要安装 `numactl`：
@@ -2153,9 +2090,6 @@ RAID-5 的性价比看似有利，但其写入性能在高流量数据库服务�
 
 ###### 使用 RAID-10
 
-
-
-
 RAID-10 是 RAID-1 和 RAID-0 的组合。RAID-0 本身性能最佳，但有风险：丢失单个磁盘会导致停机。在 RAID-10 中，两个 RAID-0 被镜像化为 RAID-1。丢失磁盘不会导致任何停机。
 
 RAID-10 的缺点是成本/GB 比例差。例如，四个 600GB 驱动器在 RAID-10（原始空间 2.4TB）中只能形成 1.2TB 的 RAID 阵列。
@@ -2165,7 +2099,6 @@ RAID-10 的缺点是成本/GB 比例差。例如，四个 600GB 驱动器在 RAI
 不要使用软件 RAID。这不值得。为主服务器投资硬件 RAID 是正确的选择，从速度和耐用性两方面来看。为什么要使用硬件 RAID？
 
 *   硬件 RAID 卡具有内部内存（通常约 512MB），用于在写入磁盘前缓存数据。这使得 `fsync`（随后的磁盘写入）变得非常快。
-
 *   优质 RAID 卡提供电池或电容备份，确保在断电后内部内存中的数据会写入磁盘。
 
 我真的很喜欢 [Adaptec 5405Z RAID 卡](http://www.amazon.com/dp/B002DYAUTC?tag=stevecorona-20)。它是 PCI-Express 的，拥有 512MB 写缓存 + 4GB 闪存缓存，可以连接最多 256 个驱动器，并且与 Linux 兼容性很好。
@@ -2243,10 +2176,6 @@ MySQL 的一个主要弱点是，当表非常大时，修改架构（添加/删�
 | id || key || value |
 | --- | --- | --- |
 | 1 || username || steve |
-
-
-
-
 | --- | --- | --- |
 | 1 || name || Steve Corona |
 | 1 || location || Charleston, SC |
@@ -2258,9 +2187,11 @@ The advantage is simple: You can create a new column by simply using it. You don
 
 There are a bunch of things *wrong* with this design- The data is denormalized, so it’s going to use way more disk space because you have to store the key text for every “row”, and you can’t enforce database constraints like foreign keys, default values, or types. I’m sure if you spent more time thinking about it you could probably find 10 other reasons why this is *wrong*.
 
-**But none of that matters**. The real reason why storing your data this way is a bad design is because you’re **using the wrong tool for the job**. If you want to use a key-value store or a schema-less database, *USE A KEY-VALUE STORE OR SCHEMA-LESS DATABASE*. We don’t use hammers to put screws into the wall, and likewise, we shouldn’t use MySQL for something it’s not designed to be. Use the right tool.
 
-#### The least frustrating way to make schema changes
+
+But none of that matters. The real reason why storing your data this way is a bad design is because you’re using the wrong tool for the job. If you want to use a key-value store or a schema-less database, USE A KEY-VALUE STORE OR SCHEMA-LESS DATABASE. We don’t use hammers to put screws into the wall, and likewise, we shouldn’t use MySQL for something it’s not designed to be. Use the right tool.
+
+### The least frustrating way to make schema changes
 
 If you’re stuck with MySQL, what’s the easiest way to make schema changes without locking up your entire database cluster and subsequently taking down your entire website? I’m going to outline the best approach below.
 
@@ -2284,21 +2215,21 @@ Writing this chapter was like going down a rabbit hole. As I was writing and res
 
 Here’s a list of the other topics that I wanted to cover. I might add a section for some in future edits or revisions of the book, so if you’re particularly interested in one, send me an email to cast your vote.
 
-**mysqlproxy**
+`mysqlproxy`
 
 Proxy server for MySQL that lets you write scripts in Lua to inject behavior. It can be used for MySQL R/W splitting, slave load balancing, etc. [More information here](http://dev.mysql.com/doc/refman/5.1/en/mysql-proxy.html).
 
-**Optimizing Queries with `explain`**
+Optimizing Queries with `explain`
 
-**MySQL Connection Pooling w/ `mysqlnd_mux`**
+MySQL Connection Pooling w/ `mysqlnd_mux`
 
-**Asynchronous MySQL Queries**
+Asynchronous MySQL Queries
 
-**How to quickly bootstrap a MySQL Slave**
+How to quickly bootstrap a MySQL Slave
 
-**Tumblr JetPants**
+Tumblr JetPants
 
-**Benchmarking MySQL with sysbench**
+Benchmarking MySQL with sysbench
 
 ## Cache Server: Using Redis
 
@@ -2339,12 +2270,11 @@ APC offers atomic counters and expiration times, too, which gives it a similar f
 
 The biggest pro of using APC is that it’s extremely fast. In fact, it’s faster (at a micro level) than Redis or Memcached. Why? It uses shared memory within the PHP process, so it doesn’t need to go out on the network or communicate with a separate server. It’s biggest asset, however, is also it’s biggest weakness. Because the shared memory is tied to a parent PHP-FPM process, each server has to maintain it’s own separate cache data, effectively making it non-distributed since all cache data needs to be re-calculated and re-stored for each server.
 
-
-
-
 Furthermore, because APC relies on shared memory, it only works with `PHP-FPM` or `mod_php`. A PHP script running on the command line or in a cronjob won’t be able to see the shared memory because it doesn’t share the same parent process as your `PHP-FPM` workers.
 
 Does this make APC useless? Not at all. It’s highly useful for caching small pieces of data that don’t take too long to compute. For example, I’ve used it with some success for caching configuration files. Without APC, the configuration files (stored in [YAML format](http://www.yaml.org/)) would have to be re-read and parsed on every request. Instead, since the files don’t change that often, I was able to parse the YAML files once and store the result in APC. The code looked something like this:
+
+
 
 ```
  1 <?php
@@ -2362,9 +2292,9 @@ Does this make APC useless? Not at all. It’s highly useful for caching small p
 13 }
 ```
 
-It’s worth noting that the APC cache is *never persisted to disk*. That means if `PHP-FPM` crashes or gets restarted, the cache will be wiped clean.
+It's worth noting that the APC cache is *never persisted to disk*. That means if `PHP-FPM` crashes or gets restarted, the cache will be wiped clean.
 
-#### Memcached
+### Memcached
 
 Memcached is the ol’reliable object cache software. It seems like all of the big guys use it- Twitter, Facebook, and 37Signals to just name a few. Memcached really pioneered the idea of a separate, distributed cache layer for your application and was really the only option a few years ago.
 
@@ -2374,23 +2304,21 @@ Memcached provides all of the same features as APC, including CAS (check-and-set
 
 That being said, I’m not going to cover Memcached in this chapter because Redis, which was released a couple of years ago, has far outpaced Memcached in terms of features and reliability while offering similar performance (aka, damn fast).
 
-##### Stuck on Memcached?
+#### Stuck on Memcached?
 
 If you like Memcached, or you’re already using it and stuck with it, I’ve included a short bonus chapter on Memcached. But you should seriously consider switching to Redis. It’s a drop in replacement.
 
-#### Redis
+### Redis
 
 Redis is where it’s at. If you’ve never used it before, you’re in for a treat- it’s got enough coolness to make your inner geek excited. Just like Memcached and APC, it can do key/value caching with `GET` and `SET` primitives, but it also adds other data types like lists, hashes, and sorted sets. There are literally hundreds of commands, and I won’t be able to cover them all here, so [check out the Redis documentation](http://redis.io/commands) to play with the commands. There’s even an in-line console that let’s you play with each command right on the website.
 
 **Remember, the entire dataset stored in Redis MUST fit into memory. While Redis does persist your data to disk, it only reads from disk during startup so you must always have more memory than data.**
 
-#### Why is Redis better?
+### Why is Redis better?
 
-*   Memcached/APC data is never saved to disk, meaning that if a server crashes or gets restarted, you start with a blank slate. Redis, on the other hand, can be configured to sync to disk, allowing you to always have a warm cache on-hand. When you’re site becomes **dependent** on having a fast cache, there are serious performance implications to blowing away your entire cache because of a restart. (While you can configure Redis to sync after *every* write, when you’re using it as a cache it’s better to allow for some data-loss in order to keep it fast.)
-
-*   Memcached/APC only offer key/value primitives, `GET` and `SET`, and atomic counters. While you can hack extra data types, they are often unsafe and full of race conditions. Redis, on the other hand, includes lists, sets, sorted sets, hashes, master/slave replication, transactions, and even lua scripting. Since I won’t go over every single Redis command, you can check out the [full documentation here.](http://redis.io/commands)
-
-*   Lastly, Depending on which version of `libmemcached` you’re using (mainly older versions that were bundled with Ubuntu 10.04), there are some serious bugs with the way that timeouts are handled. As in, they are completely broken. This bit us *hard*, a single instance of Memcached going down would block all of our PHP-FPM processes and take down the site. The C [hiredis](http://github.com/redis/hiredis) library that most Redis client use, on the other hand, has been reliability solid because it’s written by [antirez](http://twitter.com/antirez), the creator of Redis.
+* Memcached/APC data is never saved to disk, meaning that if a server crashes or gets restarted, you start with a blank slate. Redis, on the other hand, can be configured to sync to disk, allowing you to always have a warm cache on-hand. When you’re site becomes **dependent** on having a fast cache, there are serious performance implications to blowing away your entire cache because of a restart. (While you can configure Redis to sync after *every* write, when you’re using it as a cache it’s better to allow for some data-loss in order to keep it fast.)
+* Memcached/APC only offer key/value primitives, `GET` and `SET`, and atomic counters. While you can hack extra data types, they are often unsafe and full of race conditions. Redis, on the other hand, includes lists, sets, sorted sets, hashes, master/slave replication, transactions, and even lua scripting. Since I won’t go over every single Redis command, you can check out the [full documentation here.](http://redis.io/commands)
+* Lastly, Depending on which version of `libmemcached` you’re using (mainly older versions that were bundled with Ubuntu 10.04), there are some serious bugs with the way that timeouts are handled. As in, they are completely broken. This bit us *hard*, a single instance of Memcached going down would block all of our PHP-FPM processes and take down the site. The C [`hiredis`](http://github.com/redis/hiredis) library that most Redis client use, on the other hand, has been reliability solid because it’s written by [`antirez`](http://twitter.com/antirez), the creator of Redis.
 
 ### Redis Commands
 
@@ -2427,7 +2355,7 @@ We have atomic counters, too!
 
 Other single key commands worth exploring- `ttl`, `expire`, `exists`, `expireat`, `rename`, `type`, and `persist`.
 
-GET and SET commands are great for storing singular data. The increment and decrement commands are atomic (meaning, you don’t have to worry about race conditions.)
+`GET` and `SET` commands are great for storing singular data. The increment and decrement commands are atomic (meaning, you don’t have to worry about race conditions.)
 
 #### Hashes
 
@@ -2448,7 +2376,7 @@ Redis can store hashes, which are pretty much like a PHP associative array, and 
 
 Other hash commands worth exploring- `hgetall`, `hexists`, `hvals`, `hkeys`, `hincrby`, `hmset`, `hmget`, `hdel`, and `hsetnx`.
 
-Hashes can be used just like SET and GET, but are great (and more efficient+convenient) for storing data that can be grouped together by a common key. For example, if we were storing user data in Redis, it makes sense to use a hash because the data can be grouped together by the user id.
+Hashes can be used just like `SET` and `GET`, but are great (and more efficient+convenient) for storing data that can be grouped together by a common key. For example, if we were storing user data in Redis, it makes sense to use a hash because the data can be grouped together by the user id.
 
 #### Lists
 
@@ -2467,17 +2395,13 @@ A Redis List is like a numerically indexed array in PHP.
 
 Other list commands- `lpushx`, `lpop`, `lsize`, `ltrim`, `lrange`, `lrem`, and more.
 
-
-
--   列表非常适合存储、添加、删除、推入和弹出数据项，可以原子化地对列表进行操作。我喜欢使用列表来存储按时间顺序的数据，因为使用 `lpush` 时，列表会自然按插入时间排序。
-
--   一个很好的使用场景是通知推送，每个用户有一个列表，新通知会推送到列表的头部。
-
--   列表也是我们的排队系统 Resque 所使用的基础数据结构。
+- 列表非常适合存储、添加、删除、推入和弹出数据项，可以原子化地对列表进行操作。我喜欢使用列表来存储按时间顺序的数据，因为使用 `lpush` 时，列表会自然按插入时间排序。
+- 一个很好的使用场景是通知推送，每个用户有一个列表，新通知会推送到列表的头部。
+- 列表也是我们的排队系统 Resque 所使用的基础数据结构。
 
 #### 集合和有序集合
 
--   集合与列表相似，你可以在一个键中存储大量数据。主要区别在于集合完全无序且不允许出现重复数据。与列表相比，集合提供了更强大的功能，例如检查值是否在集合中、集合的并集、交集、差集等操作，这里蕴含了大量的能力。
+- 集合与列表相似，你可以在一个键中存储大量数据。主要区别在于集合完全无序且不允许出现重复数据。与列表相比，集合提供了更强大的功能，例如检查值是否在集合中、集合的并集、交集、差集等操作，这里蕴含了大量的能力。
 
 ```
 1 <?php
@@ -2487,13 +2411,12 @@ Other list commands- `lpushx`, `lpop`, `lsize`, `ltrim`, `lrange`, `lrem`, and m
 5 $r->sismember("names", "steve"); // 返回 true
 ```
 
--   在集合之上，我们还有**有序集合**，它们虽然较慢，但可以对集合进行排序，而普通集合本身是完全无序的。
-
--   集合的一个用例是存储需要保证唯一的数据列表，例如用户名、分类名称或标题。你可以使用 `sismember` 快速判断一个值是否属于该集合。
+- 在集合之上，我们还有**有序集合**，它们虽然较慢，但可以对集合进行排序，而普通集合本身是完全无序的。
+- 集合的一个用例是存储需要保证唯一的数据列表，例如用户名、分类名称或标题。你可以使用 `sismember` 快速判断一个值是否属于该集合。
 
 #### 事务
 
--   你可以将多条命令组合成事务。事务可以通过一次网络往返完成多条命令，效率更高。
+- 你可以将多条命令组合成事务。事务可以通过一次网络往返完成多条命令，效率更高。
 
 ```
 1 <?php
@@ -2505,13 +2428,14 @@ Other list commands- `lpushx`, `lpop`, `lsize`, `ltrim`, `lrange`, `lrem`, and m
 7   ->exec();
 ```
 
--   事务会作为原子单元执行，但可以通过传入 `Redis::PIPELINE` 来禁用原子性，这样命令会以块的形式发送到服务器，但不保证执行时原子。
+- 事务会作为原子单元执行，但可以通过传入 `Redis::PIPELINE` 来禁用原子性，这样命令会以块的形式发送到服务器，但不保证执行时原子。
 
 #### 发布/订阅
 
--   Redis 提供了一个非常酷的发布/订阅功能，适合用于跨进程的异步通信。
+- Redis 提供了一个非常酷的发布/订阅功能，适合用于跨进程的异步通信。
+- 假设我们有两个脚本，一个是订阅者：
 
--   假设我们有两个脚本，一个是订阅者：
+
 
 ```
 1 <?php
@@ -2629,10 +2553,7 @@ Other list commands- `lpushx`, `lpop`, `lsize`, `ltrim`, `lrange`, `lrem`, and m
 
 -   安装完成后，需要重启 PHP-FPM。
 
-| ![information](img/leanpub_information.png) || **What’s igbinary?**Igbinary 是用于替代 PHP 默认的序列化扩展。默认的 PHP 序列化是基于字符串的 ASCII 格式，既慢又占用较大空间，尤其是在存储 PHP 对象（如数组、数据库结果、模型）时影响显著。Igbinary 用二进制格式替代，提高效率和空间使用率。 |
-
-
-
+| ![information](img/leanpub_information.png) | **What’s igbinary?** Igbinary 是用于替代 PHP 默认的序列化扩展。默认的 PHP 序列化是基于字符串的 ASCII 格式，既慢又占用较大空间，尤其是在存储 PHP 对象（如数组、数据库结果、模型）时影响显著。Igbinary 用二进制格式替代，提高效率和空间使用率。 |
 
 Redis 的配置文件位于 `/etc/redis.conf`，文档非常完善，因此这里无需逐一说明每个选项。您只需阅读该配置文件（完整版本可在 [此处](https://raw.github.com/antirez/redis/2.6/redis.conf) 查看）。我将重点介绍最重要的设置，但幸好选项并不多。
 
@@ -2653,8 +2574,11 @@ Redis 可通过 `save` 或 `bgsave` 命令手动创建 RDB 快照，也会在安
 ```
 
 `save` 设置包含两个参数：秒数和变更次数。根据上述设置，Redis 会在以下情况创建快照：
+
 - 900 秒内至少有 1 个键变更；
+
 - 300 秒内至少有 10 个键变更；
+
 - 60 秒内至少有 10,000 个键变更。
 
 RDB 的优点是速度快、空间高效，适合备份用途。备份只需复制 `dump.rdb` 文件即可。其缺点是可能丢失数据——最多 15 分钟（取决于默认设置）。
@@ -2670,9 +2594,13 @@ AOF（Append-Only File）持久化类似于 MySQL 的 InnoDB 日志文件。所�
 我们可以像调整 MySQL 一样调整 Linux 以优化 Redis，但这里不重复，因为配置完全相同。
 
 1. 关闭文件访问时间戳（Filesystem Access Times）
+
 2. 使用 XFS 文件系统
+
 3. 增加打开文件数（Open Files）
+
 4. 调整 `vm.swappiness`
+
 5. 将 I/O 调度器改为除 CFQ 之外的其他值
 
 ### 重要的 redis.conf 设置
@@ -2691,12 +2619,12 @@ AOF（Append-Only File）持久化类似于 MySQL 的 InnoDB 日志文件。所�
 
 | `maxmemory-policy` | 行为 |
 | --- | --- |
-| volatile-lru | 仅删除带有过期时间的、最不常用的键 |
-| allkeys-lru | 删除所有键，按使用频率从高到低 |
-| volatile-random | 仅删除带有过期时间的、随机选取的键 |
-| allkeys-random | 删除所有键，随机选取 |
-| volatile-ttl | 仅删除带有过期时间的、即将过期的键 |
-| noeviction | 不删除任何数据，写入操作会返回错误 |
+| `volatile-lru` | 仅删除带有过期时间的、最不常用的键 |
+| `allkeys-lru` | 删除所有键，按使用频率从高到低 |
+| `volatile-random` | 仅删除带有过期时间的、随机选取的键 |
+| `allkeys-random` | 删除所有键，随机选取 |
+| `volatile-ttl` | 仅删除带有过期时间的、即将过期的键 |
+| `noeviction` | 不删除任何数据，写入操作会返回错误 |
 
 #### `appendonly`
 
@@ -2707,11 +2635,10 @@ AOF（Append-Only File）持久化类似于 MySQL 的 InnoDB 日志文件。所�
 Redis 的性能很大程度上取决于以下硬件选择：
 
 - **内存**：这是最关键的因素，因为所有数据必须能够完全装入内存中。
+
 - **CPU**：建议选择现代、高频的 CPU。由于 Redis 是单进程应用，核心数对性能影响不大，因此更倾向于选择更高的主频而非更多的核心。
+
 - **持久化**：如果启用了持久化功能（建议开启），则需要考虑磁盘性能。SSD 通常优于 HDD，尤其是在进行大量写入操作时。
-
-
-
 
 在你的从属节点上，确保 `slave-read-only` 设置为 `yes`，以避免意外向从属节点直接写入数据。
 
@@ -2796,37 +2723,33 @@ Creative Commons Image, from http://www.flickr.com/photos/85622685@N08/793451988
 
 如果只有单个人访问站点时，这个方案效果很好。第一次请求后，热门照片会被缓存 10 分钟。过期后，`if` 语句会重新生成数据。但查询耗时 10 秒，在 `expensive_database_call()` 运行期间，每个进入站点的请求都会触发该函数，导致“狗堆”现象。
 
-最简单的解决办法是直接删除 `if` 语句，并通过 cron 定时任务定期刷新数据，从而彻底消除狗堆问题。
+最简单的解决办法是直接删除 `if` 语句，并通过 `cron` 定时任务定期刷新数据，从而彻底消除狗堆问题。
+
+
 
 但有时无法使用 cron 任务，此时可以使用 Redis 锁（`setnx`）来确保只有一个客户端执行 `expensive_database_call()`。
 
-```
+```php
  1 <?php
- 2 
  3 $r = new Redis;
  4 $r->connect("127.0.0.1");
- 5 
  6 $expiration        = 600;
  7 $recalculate_at    = 100;
  8 $lock_length       = 20;
- 9 
 10 $value = $r->get("popular_photos");
 11 $ttl   = $r->ttl("popular_photos");
-12 
 13 if ($recalculate_at >= $ttl && $r->setnx("lock:popular_photos", true)) {
 14   $r->expire("lock:key", $lock_length);
-15 	
 16   $value = expensive_database_call();
-17 	
 18   $r->setex("popular_photos", $expiration, $value);
-19 }
+}
 ```
 
 工作原理如下：
 
 1. 我们正常读取 `popular_photos`，同时获取其 TTL，即 key 还剩多少秒才过期。
 
-2. `popular_photos` 的过期时间设为 600 秒，但当 key 年仅剩 100 秒时（即 $recalculate_at >= $ttl），我们触发数据刷新。
+2. `popular_photos` 的过期时间设为 600 秒，但当 key 年仅剩 100 秒时（即 `$recalculate_at >= $ttl`），我们触发数据刷新。
 
 3. `$r->setnx("lock:popular_photos", true)` 尝试创建锁，只有第一个获取到 `true` 的客户端会进入 `if` 语句。
 
@@ -2842,94 +2765,79 @@ Creative Commons Image, from http://www.flickr.com/photos/85622685@N08/793451988
 
 Creative Commons Image: http://www.flickr.com/photos/7604548@N07/2577737283/
 
+- [使用缓存的初始阶段，Memcached 仍然很新，是我所能使用的唯一选项。当时 Redis 还不存在，所以我没有使用它的特权。我的解决方案是尽可能缓存数据库查询，从而让 MySQL 专注于更复杂的查询。]
 
+- [我以一种天真的方式处理这个问题——假设我在 ORM 中有一个 `User` 模型。ORM 负责所有查询并返回一个漂亮的对象。代码大致如下：]
 
--   [使用缓存的初始阶段，Memcached 仍然很新，是我所能使用的唯一选项。当时 Redis 还不存在，所以我没有使用它的特权。我的解决方案是尽可能缓存数据库查询，从而让 MySQL 专注于更复杂的查询。]
-
--   [我以一种天真的方式处理这个问题——假设我在 ORM 中有一个 `User` 模型。ORM 负责所有查询并返回一个漂亮的对象。代码大致如下：]
-
-``` 
+```
 1 <?php
-2 
 3 $id   = $_GET['id'];
 4 $user = $r->get("user:{$id}");
-5 
 6 if ($user === false) {
 7   $user = User::find($id); // 这条语句会发出 SQL
 8   $r->setex("user:{$user->id}", 86400, $user);
-9 }
+}
 ```
 
--   [这种缓存方式称为“读取时缓存”。它依赖于过期机制来清除过期数据，直接向数据库写入会导致缓存中出现过时（甚至无效）的数据。]
+- [这种缓存方式称为“读取时缓存”。它依赖于过期机制来清除过期数据，直接向数据库写入会导致缓存中出现过时（甚至无效）的数据。]
 
--   [我们可以通过在更新记录时删除 `user:{$user->id}` 关键字，或直接对其进行更新来解决过期数据的问题。]
+- [我们可以通过在更新记录时删除 `user:{$user->id}` 关键字，或直接对其进行更新来解决过期数据的问题。]
 
 **删除记录**
 
-``` 
+```
 1 <?php
-2 
 3 $username = $_GET['username'];
 4 $user     = User::find_by_username($username);
-5 
 6 $user->city = "New York";
 7 $user->save();
-8 
 9 $r->delete("user:{$user->id}");
 ```
 
 **更新记录**
 
-``` 
+```
 1 <?php
-2 
 3 $username = $_GET['username'];
 4 $user     = User::find_by_username($username);
-5 
 6 $user->city = "New York";
 7 $user->save();
-8 
 9 $r->setex("user:{$user->id}", 86400, $user);
 ```
 
--   [这种做法只适用于最简单的情况，因为其他缓存的查询仍然可能包含过时的 `User` 数据。例如，如果有一个显示所有用户的页面，使用 `SELECT * FROM users` 的查询并缓存了结果，修改单个用户后，缓存仍会返回旧数据。]
+- [这种做法只适用于最简单的情况，因为其他缓存的查询仍然可能包含过时的 `User` 数据。例如，如果有一个显示所有用户的页面，使用 `SELECT * FROM users` 的查询并缓存了结果，修改单个用户后，缓存仍会返回旧数据。]
 
--   [可以通过在保存 `User` 模型时手动清除所有相关缓存键来规避此问题，但这非常繁琐，需要记录并跟踪 `User` 模型可能被缓存的所有位置。]
+- [可以通过在保存 `User` 模型时手动清除所有相关缓存键来规避此问题，但这非常繁琐，需要记录并跟踪 `User` 模型可能被缓存的所有位置。]
 
 **关键时间戳失效**
 
 [Russian Doll Caching（37signals 在博客中称为“键时间戳失效”）是一种通过在数据变动时更新关键的时间戳来失效一组相关缓存键的技术。我们在键名中嵌入时间戳，这样每次相关数据变动时，键名会变化，从而强制重新获取数据，避免使用陈旧数据。]
 
-``` 
+```
 1 <?php
-2 
 3 $id   = $_GET['id'];
 4 $slug = $r->get("slug:user:{$id};
 5 $user = $r->get("{$slug}:user:{$id}");
-6 
 7 if ($user === false) {
 8   $user = User::find($id); // 这条语句会发出 SQL
 9   $r->setex("{$slug}:user:{$id}", 86400, $user);
-10 }
+}
 ```
 
--   [上例中我们额外查询 `slug:user:{$id}` 以获取记录最后修改的时间戳，并将其作为主键 `{$slug}:user:{$id}` 的一部分。每次记录更新时，键名变化，从而避免使用陈旧数据并触发重新从数据库读取。]
+- [上例中我们额外查询 `slug:user:{$id}` 以获取记录最后修改的时间戳，并将其作为主键 `{$slug}:user:{$id}` 的一部分。每次记录更新时，键名变化，从而避免使用陈旧数据并触发重新从数据库读取。]
 
--   [更新数据库时，只需更新 `slug:user:{$user->id}` 的时间戳，而无需手动删除缓存中的任何数据。]
+- [更新数据库时，只需更新 `slug:user:{$user->id}` 的时间戳，而无需手动删除缓存中的任何数据。]
 
-``` 
+```
 1 <?php
-2 
 3 $username = $_GET['username'];
 4 $user = User::find_by_username($username);
-5 
 6 $user->city = "New York";
 7 $user->save();
-8 
 9 $r->set("slug:user:{$user->id}", time());
 ```
 
--   [键时间戳失效的优势在于无需手动管理键，只要在数据变动时更新相应的键名，系统就会自动失效并重新加载数据。该技术同样适用于 Memcached 和 Redis。]
+- [键时间戳失效的优势在于无需手动管理键，只要在数据变动时更新相应的键名，系统就会自动失效并重新加载数据。该技术同样适用于 Memcached 和 Redis。]
 
 **利用 Redis 进一步提升**
 
@@ -2938,41 +2846,37 @@ Creative Commons Image: http://www.flickr.com/photos/7604548@N07/2577737283/
 [示例中有三条与 `$user_id` 相关的查询：]
 
 1. `SELECT * FROM images WHERE id = {$image_id} AND user_id = {$user_id}`
+
 2. `SELECT * FROM images WHERE location_id = {$location_id} AND user_id = {$user_id}`
+
 3. `SELECT * FROM images WHERE user_id = {$user_id}`
 
 [使用散 _hash 缓存的示例：]
 
-``` 
+```
 1 <?php
-2 
 3 // 位于某位置的图片
-4 
 5 $loc_id   = $_GET['location_id'];
 6 $user_id  = $_GET['user_id']
-7 
 8 $image = $r->hget("user:{$user_id}", "location_id:{$location_id}");
 9 $query = "SELECT * FROM images WHERE location_id = {$loc_id} AND user_id = {$user_id}";
-10 
 11 if ($image === false) {
 12   $image = Image::where($query);
 13   $r->hset("user:{$user_id}", "location_id:{$location_id}");
 14   $r->expire("user:{$user_id}", 86400);
-15 }
+}
 ```
 
--   [注意：使用 `hset` 时需要手动调用 `expire`，因为该命令不支持在同一步骤中设置过期时间。]
+- [注意：使用 `hset` 时需要手动调用 `expire`，因为该命令不支持在同一步骤中设置过期时间。]
 
--   [在更新 `Image` 模型时，只需删除 `user:{$image->user_id}` 的散 _hash，即可清除该用户相关的所有缓存，从而避免使用单独的键管理。]
+- [在更新 `Image` 模型时，只需删除 `user:{$image->user_id}` 的散 _hash，即可清除该用户相关的所有缓存，从而避免使用单独的键管理。]
 
-``` 
+```
 1 <?php
 2 $id    = $_GET['id'];
 3 $image = Image::find($id);
-4 
 5 $image->title = $_GET['title'];
 6 $image->save();
-7 
 8 $r->del("user:{$image->user_id}");
 ```
 
@@ -2982,26 +2886,19 @@ Creative Commons Image: http://www.flickr.com/photos/7604548@N07/2577737283/
 
 [典型应用是使用比特数组记录每日用户登录情况，例如键 `logins:2012-Nov-04` 用于追踪当天的登录次数。]
 
-``` 
+```
 1 <?php
-2 
 3 function login() {
 4   // 完成用户认证
 5   $user = User::authenticate($_POST['username'], $_POST['password']);
-6   
 7   if ($user->invalid()) {
 8     return false;
 9   }
-10   
 11   $key = "logins:" . date("Y-M-d", strtotime("today"));
-12   
 13   $r = new Redis;
 14   $r->setbit($key, $user->id, 1);
-15 }
+}
 ```
-
-
-
 
 # 这段代码的作用是将用户登录时 offset `$user->id` 位改为 1（默认是 0），这成为一种非常高效的存储 true/false 值的方式，即使有数百万用户，`logins:2012-Nov-04` 的大小也小于 1MB。
 
@@ -3017,7 +2914,6 @@ Creative Commons Image: http://www.flickr.com/photos/7604548@N07/2577737283/
 
 ```
 1 <?php
-2 
 3 $r->bitcount("logins:2012-Nov-04"); // 返回 5
 ```
 
@@ -3036,11 +2932,9 @@ Creative Commons Image: http://www.flickr.com/photos/7604548@N07/2577737283/
 
 ```
 1 <?php
-2 
 3 $r->bitop("and", "both:logins:2012-Nov-04",
 4                  "web:logins:2012-Nov-04",
 5                  "mobile:logins:2012-Nov-04");
-6                  
 7 $r->bitcount("both:logins:2012-Nov-04"); // 返回 2
 ```
 
@@ -3054,12 +2948,11 @@ Redis 另一个流行的用途是创建通知队列。与数据库相比，Redis
 
 ```
 1 <?php
-2 
 3 function notify_of_like($comment, $current_user) {
 4   $r = new Redis;
 5   $r->lpush("notifications:{$comment->user->id}", "{$current_user->username} l\
 6 ikes your comment.");
-7 }
+}
 ```
 
 ![](img/07----notifications.png)
@@ -3082,8 +2975,6 @@ Amazon 曾提到，速度每提升 100ms，收入可增长 1% [5]。2011 年，A
 
 存在很多不佳的方式来推送工作，但这里不再赘述。
 
-
-
 最棒的是？由于 Resque 仅仅是一个库，我们无需再设置另一个软件服务。它直接基于我们的 Redis 安装，无需安装其他软件！Woo-hoo。
 
 当然，Resque 还提供了一个漂亮的 Web UI，能让你轻松查看系统状态、监控失败并手动重试失败的任务。我建议使用该 UI，但不是强制要求。
@@ -3094,7 +2985,6 @@ Amazon 曾提到，速度每提升 100ms，收入可增长 1% [5]。2011 年，A
 
 **在 `composer.json` 文件中添加 php-resque**
 
-```
 ```php
 1 {
 2   "require": {
@@ -3105,7 +2995,6 @@ Amazon 曾提到，速度每提升 100ms，收入可增长 1% [5]。2011 年，A
 
 然后安装该包：
 
-```
 ```bash
 1 > php composer.phar install
 ```
@@ -3116,7 +3005,6 @@ Amazon 曾提到，速度每提升 100ms，收入可增长 1% [5]。2011 年，A
 
 Process `9597` is processing the `twitter_replies` queue
 
-```
 ```bash
 1 > pecl install -f proctitle
 2 > vi /etc/php5/conf.d/proctitle.ini
@@ -3125,7 +3013,6 @@ Process `9597` is processing the `twitter_replies` queue
 
 如果需要 Web UI，则需安装 Resque RubyGem：
 
-```
 ```bash
 1 > apt-get install rubygems
 2 > gem install resque
@@ -3135,28 +3022,29 @@ Process `9597` is processing the `twitter_replies` queue
 
 目前为止，你可以将后台任务加入队列，但没有进程来执行它们。后面章节会详细说明如何创建新任务，但仍需要一个后台进程来处理任务。长期来看，我推荐使用 `god` 或 `monit` 来监控后台任务，但可以从命令行手动启动进程。（事实上，`php-resque` 项目自带基础的 monit 配置文件供你参考）。
 
-```
 ```bash
 1 > VERBOSE QUEUE=* COUNT=2 APP_INCLUDE="../index.php" php resque.php
 ```
 
+
+
 此命令会启动最多 2 个工作进程，检查所有队列，并加载 `../index.php` 中的应用初始化/自动加载代码。下面解释各个参数的含义。
 
-###### `COUNT`
+### `COUNT`
 
 `COUNT` 用于设定并发工作进程的最大数量。根据任务性质（CPU 密集型还是 I/O 密集型），应至少设置为机器 CPU 核心数。如果任务是数据库或 I/O 密集型，可以将其设得更高。
 
-###### `QUEUES`
+### `QUEUES`
 
 通过 `QUEUES` 变量，可以指定 Worker 需要处理的队列。这样可以更精准地控制资源分配和优先级。每个队列按字母顺序被检查，因此名字以 `a` 开头的队列会在名字以 `z` 开头的队列之前被处理。通过手动指定队列名称，可以控制处理顺序。若设为 `*`，则处理所有队列。
 
 **示例值**：`QUEUES=high,medium,low,post:facebook`
 
-###### `APP_INCLUDE`
+### `APP_INCLUDE`
 
 最后（且最重要）的是，需要告诉 `php-resque` 如何加载你的代码。默认情况下它不知道要运行的代码位置，因此必须指向一个负责自动加载和初始化的文件。大多数框架中，这通常是 `index.php` 文件。
 
-#### Resque Web-UI
+## Resque Web-UI
 
 Resque 自带一个轻量级的 Web UI，基于 Sinatra 服务器实现。启动方式很简单，只需运行 `resque-web`，它会在后台以 5678 端口运行。`resque-web` 默认连接本地 Redis（6379 端口），如需指向其他 Redis 服务器，可通过 CLI 参数指定，例如：`resque-web -r 192.150.0.10:6379`。
 
@@ -3170,17 +3058,17 @@ Resque 在处理失败方面表现出色。它设计时就考虑了任务失败�
 
 An example failed Resque Job
 
-#### Resque 进程模型
+## Resque 进程模型
 
 Resque 采用有趣的进程模型来处理内存泄漏和失败，确保长时间运行时的可靠性。启动 Resque 时，会创建一个父进程（主进程）。主进程轮询 Redis，获取新加入队列的任务。当检测到新任务时，主进程会 fork 出子进程，子进程执行任务代码。任务完成后，子进程退出。
 
-##### 为什么这样设计？
+### 为什么这样设计？
 
 在 PHP 中没有线程，通过 fork 出子进程是处理并发任务的最佳方式。此外，该模型还能很好地处理失败：每个任务运行在独立子进程中，若子进程崩溃、抛异常或泄漏内存，不会影响其他任务或主进程。鉴于 PHP 不适合长时间运行的进程，这种隔离机制能有效防止内存泄漏累积。
 
 该模型的缺点是每个新任务都需要 fork 出子进程，存在固定开销。fork 操作是昂贵的系统调用，会限制每秒能并发启动的任务数量，对大量短命任务时尤为严重。Ruby 界通过 [Sidekiq](https://github.com/mperham/sidekiq)（基于线程的 Resque 衍生版）解决了此问题。遗憾的是 PHP 不支持线程，但未来可能出现混合模式：使用子进程处理多个任务并在一段时间后回收，从而兼顾两者优势。
 
-#### 我的补丁
+## 我的补丁
 
 最初，`php-resque` 推出时我使用了自家分支在生产环境中。该库的一个设计决策是自带 Redis 库。遗憾的是，它使用的 `Redisent` 库未使用命名空间，也未考虑其他 Redis 库（如 `phpredis`）的命名规范。导致 `RedisException` 类冲突，两个库都试图定义同名类，导致 PHP 报错。
 
@@ -3188,32 +3076,33 @@ Resque 采用有趣的进程模型来处理内存泄漏和失败，确保长时�
 
 他们合并的新代码如下，简直解决了太多麻烦：
 
-```
 ```php
-1 <?php
-2 
-3 if (! class_exists("Redis")) {
-4   class RedisException extends Exception { }
-5 }
+<?php
+
+if (! class_exists("Redis")) {
+  class RedisException extends Exception { }
+}
 ```
 
 我最初修改的 `php-resque` 代码托管于 [GitHub](https://github.com/stevecorona/php-resque)。除非你真的需要 C Redis 扩展的性能优势，否则我不建议使用它。
 
-
-
 让我们逐步了解如何编写一个 Resque 作业。假设我们有一个应用，它会在 Twitter 上发布状态。传统的、非 Resque 的写法可能像下面这样：
 
-```
 ```php
 class Comments_Controller extends Controller {
+
   public function create() {
+
     $user = $this->session->user;
-    
+
     $twitter = new Services_Twitter($user->username, $user->password);
+
     $twitter->statuses->update($_GET['comment']);
-    
+
     return new View("Your comment has been posted to Twitter");
+
   }
+
 }
 ```
 
@@ -3221,12 +3110,11 @@ class Comments_Controller extends Controller {
 
 下面我们来对它进行 refactor，转为 Resque 作业，并解决这些问题。
 
-#### 入队操作
+## 入队操作
 
 首先，我们需要修改 `create` 方法内部的前端代码。我们不再在 Web 请求中直接向 Twitter 发送请求，而是创建一个作业，稍后再执行。
 
-```
-```
+```php
 class Comments_Controller extends Controller {
   public function create() {
     
@@ -3243,47 +3131,51 @@ class Comments_Controller extends Controller {
 
 切换到这段代码后，立即获得的好处是它运行得更快。将数据入队到 Redis/Resque 的时间是发起 API 调用所需时间的几个数量级。
 
-| ![information](img/leanpub_information.png) || **A note about `$args`**Keep in mind that anything inside of `$args` will be serialized inside of Redis when you create the job. It’s much better to pass in simple values here instead of full-blown objects. Notice how we pass in `$this->session->user->id` instead of the entire `user` object. Using the `id`, we can rebuild the `user` object from the database inside of `PostTwitter`. |
+![information](img/leanpub_information.png)
 
-| --- | --- |
+> **A note about `$args`**
+>
+> Keep in mind that anything inside of `$args` will be serialized inside of Redis when you create the job. It’s much better to pass in simple values here instead of full-blown objects. Notice how we pass in `$this->session->user->id` instead of the entire `user` object. Using the `id`, we can rebuild the `user` object from the database inside of `PostTwitter`.
 
-#### 运行作业
+## 运行作业
 
 现在我们已经完成了前端代码的 refactor，接下来需要编写一个名为 `PostTwitter` 的新类，`php-resque` 会在作业被处理时实例化该类。`php-resque` 要求作业类实现 `perform()` 方法，这里面放置发布到 Twitter 的代码。
 
 **注意：从前端传入的 `$args` 数组会在 `PostTwitter` 类中作为 `$this->args` 可用。**
 
-```
-```
+```php
 class PostTwitter {
+
   public function perform() {
-    
+
     $user    = User::find($this->args['user']);
+
     $comment = $this->args['comment'];
-     	
+
     $twitter = new Services_Twitter($user->username, $user->password);
+
     $twitter->statuses->update($comment);
-     	    
+
   }
+
 }
 ```
 
 下面我们来谈谈优势。
 
-1.  应用始终提供持续、快速的性能，因为它永远不会等待第三方服务。
+1. 应用始终提供持续、快速的性能，因为它永远不会等待第三方服务。
 
-2.  消除了易受 DoS 攻击的端点。
+2. 消除了易受 DoS 攻击的端点。
 
-3.  如果 Twitter 未响应或超时，`Services_Twitter` 会抛出 `Services_Twitter_Exception`，作业会优雅失败（之后可以重试）。
+3. 如果 Twitter 未响应或超时，`Services_Twitter` 会抛出 `Services_Twitter_Exception`，作业会优雅失败（之后可以重试）。
 
-##### 处理失败
+### 处理失败
 
 在 Resque 中妥善处理失败至关重要。如果作业中抛出未捕获的异常，`php-resque` 会认为作业失败并从队列中移除。正如上文所述，使用 Resque Web UI 可以清楚地看到失败的作业，并提供诊断和重试所需的信息，这对于偶尔且仅在出现错误或边缘情况时失败的作业非常有帮助。
 
 然而，有时我们希望作业能预测性地失败并自动重试。例如，`PostTwitter` 类中，如果 Twitter 超时或暂时不可用，我们不想立即将作业标记为失败。可以通过添加一些额外的代码来实现自动重试。
 
-```
-```
+```php
 class PostTwitter {
   const MAX_ATTEMPTS = 5;
   
@@ -3318,21 +3210,17 @@ class PostTwitter {
 }
 ```
 
-如上所示，我们并未修改 `perform` 方法，而是添加<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>
 
 
+如上所示，我们并未修改 `perform` 方法，而是添加：
 
-2. 使用 Redis RDB 和 AOF，队列持久化到磁盘-崩溃时不会丢失任何数据。
+1. 使用 Redis RDB 和 AOF，队列持久化到磁盘-崩溃时不会丢失任何数据。
+2. 该库经过充分测试且使用广泛，因此无需担心错误。
+3. 系统具有高度可视性。
+4. 你几乎不需要扩展 Redis 服务器，但如果必须扩展，可以利用常规的扩展方法-分片和主从复制。
+5. 总体而言，它是简单的。整个系统的复杂度很低。
 
-3. 该库经过充分测试且使用广泛，因此无需担心错误。
-
-4. 系统具有高度可视性。
-
-5. 你几乎不需要扩展 Redis 服务器，但如果必须扩展，可以利用常规的扩展方法-分片和主从复制。
-
-6. 总体而言，它是`简单`的。整个系统的复杂度很低。
-
-#### Kestrel
+### Kestrel
 
 [Kestrel](https://github.com/robey/kestrel) 是由 Twitter 用 Scala 编写的排队系统。由于使用 Scala，它运行在 JVM 上且性能相当出色。事实上，在 Resque 尚未出现时，它是 Twitpic 的首选，因为它最早出现。
 
@@ -3352,19 +3240,19 @@ class PostTwitter {
 
 * Twitter 团队更新不频繁。
 
-#### Gearman
+### Gearman
 
 [Gearman](http://www.gearman.org) 是 PHP 扩展和守护进程，用于排队，因此与 PHP 有紧密集成。它被 Flickr 和 Digg 使用。
 
 使用 Gearman 并没有任何优势优于 Resque。它使用自有的服务器，所以我要问-在你很可能已经在使用 Redis 进行缓存或会话的情况下，为什么还要增加更多层？
 
-#### Beanstalkd
+### Beanstalkd
 
 [Beanstalkd](http://kr.github.com/beanstalkd/)，是用 C 编写的另一个排队服务器。它拥有少量 PHP 客户端。与 Resque 类似，但其 API 更为复杂，包括更好的优先级控制、暂停作业和作业调度。
 
 如果你*需要*这些功能，值得考虑，但文档比 Resque 少。
 
-#### RabbitMQ
+### RabbitMQ
 
 RabbitMQ 是最快（甚至是最快）的消息队列之一。它使用 Erlang 编写，甚至有人曾用它传输视频流。它每 CPU 核心每秒可推送 10 万条消息。
 
@@ -3389,8 +3277,6 @@ RabbitMQ 是最快（甚至是最快）的消息队列之一。它使用 Erlang 
 * 发送邮件- SMTP 服务器可能超时。
 
 * 重型数据库插入（类 Twitter 的社交网络会预计算时间线。例如，如果你有 500 个追随者，发布新微博时 Twitter 会执行 500 次数据库插入。）
-
-
 
 # 使用框架还是不使用框架？
 
@@ -3529,18 +3415,13 @@ namespace :deploy do
 
 
 
-
-如果你对 Capistrano 为你的开发流程带来的易用性还不满意，考虑以下内容。
-
-Capistrano 部署是原子化的。这意味着在部署代码的同时，它不会影响任何正在运行的代码。
-
 想一想：如果你手动部署网站，通过 FTP 上传文件或手动运行 `git pull` 时，在将新代码传输到远程服务器的过程中，旧文件和新文件会混在一起。比如，你同时修改了 `foo.php` 和 `bar.php`，由于文件是依次传输的，在一段时间内，旧的 `foo.php` 和新的 `bar.php` 会同时在服务器上运行。
 
 这会导致各种糟糕的情况——崩溃、异常和数据丢失，因为你同时运行的是旧代码和新代码的混合体，结果会如何无法预知。文件越多，情况越糟糕。
 
 Capistrano 的工作方式不同。
 
-1. PHP-FPM 被配置从一个符号链接（例如 `/u/apps/my_app/current`）读取代码。
+1. `PHP-FPM` 被配置从一个符号链接（例如 `/u/apps/my_app/current`）读取代码。
 
 2. 使用 Capistrano 部署新代码时，它会在 `/u/apps/my_app/releases`（即 `/u/apps/my_appl/releases/749847589`）创建一个新目录并下载你的代码。
 
@@ -3610,11 +3491,11 @@ Capistrano 的工作方式不同。
 
 短信？这么晚？不可能是好事。
 
- reluctantly，我暂停 NetFlix 几秒钟（“How it’s made” 太上瘾了）去查看信息……
+reluctantly，我暂停 NetFlix 几秒钟（“How it’s made” 太上瘾了）去查看信息……
 
 “PagerDuty：你的 API 宕机！”
 
- fuck！这条消息让我一惊。我正试图学怎么做剪指甲，该死。赶紧回到电脑。
+fuck！这条消息让我一惊。我正试图学怎么做剪指甲，该死。赶紧回到电脑。
 
 我坐下，尝试打开 api.myjob.com，什么都没响应，Chrome 只显示那个循环的小蓝色圆圈，永远转不完。
 
@@ -3659,9 +3540,6 @@ Capistrano 的工作方式不同。
 **一位好朋友是规模化专家……**
 
 他是那种既能写代码，又能长时间讨论深度 Linux 内部机制的人。我问他— *“如果你只能教大家其中一件关于扩展的事，你会教什么？”* 
-
-
-
 
 他的回应？`strace`。`1000`次`strace`。没有其他命令能在单个命令中提供这么多关于堆栈的洞察和信息。你可以拥有世界上所有的监控，而`strace`依然会为你的应用程序提供新的洞察。
 
@@ -3764,9 +3642,6 @@ Steve Corona 是 Twitpic 的 CTO，Twitpic 是互联网上最大的网站之一�
 
 #### 正确处理用户上传的方法
 
-
-
-
 -   [处理用户上传是 Twitpic 核心业务的一部分，我长时间思考如何最佳地解决这个问题。我们的方案能够水平扩展，足够强大以处理失败，同时避免任何单点故障，并能够处理重试。以下是实现方式：]
 
 # 1\. 用户上传文件并立即保存到磁盘
@@ -3782,6 +3657,8 @@ Steve Corona 是 Twitpic 的 CTO，Twitpic 是互联网上最大的网站之一�
 这种方法使我们能够立即显示文件，而无需等待它上传到 Amazon S3，因为可以直接链接到处理上传的应用服务器。需要注意的是，在此之前需要通过数据库查找文件位置，然后才能生成链接。例如，运行在 `app04` 的 PHP 代码若要显示图片 `123456`，需要在数据库中查找 `123456`，检查文件的 `location`，然后使用该 `location` 生成链接 `http://app01/data/123456`。
 
 在下面的示例中，我们假设处理的是图片上传，并为图片模型添加一个 `url()` 方法来处理 URL 逻辑。
+
+
 
 ```
  1 <?php
@@ -3811,7 +3688,7 @@ Steve Corona 是 Twitpic 的 CTO，Twitpic 是互联网上最大的网站之一�
 10 }
 ```
 
-# 2\. 将文件推送到长期存储
+# 2. 将文件推送到长期存储
 
 在第一步中，我们处理了用户的上传，将其暂时保存在单个应用服务器上，并使其立即可在 Web 上访问。这很好，但我们也需要尽快将其推送到长期存储，因为如果 `app01` 崩溃或不可用，我们将失去对该用户内容的访问。不可接受！
 
@@ -3845,7 +3722,7 @@ Steve Corona 是 Twitpic 的 CTO，Twitpic 是互联网上最大的网站之一�
 
 在我们实际使用这个设置时，Resque 任务运行非常快——几乎即时，因此图片在上传后约 1 秒内即被移动到长期存储。这意味着，如果应用服务器崩溃，我们最多会丢失约 1 秒钟的用户上传内容。并不算差。
 
-# 3\. 清理
+# 3. 清理
 
 最后需要考虑的是清理——在文件已成功推送到长期存储后，从应用服务器中删除已上传的数据。否则，这些旧数据会无限增长，最终填满应用服务器的磁盘。
 
@@ -3876,9 +3753,6 @@ Steve Corona 是 Twitpic 的 CTO，Twitpic 是互联网上最大的网站之一�
 ```
 1 $SESSION_SAVE_PATH="192.0.2.5:11211,192.0.2.6:11211,\n\r192.0.2.7:11211";
 ```
-
-
-
 
 注意在第二个主机后有一个换行符。在我的文本编辑器中，它只是换行了，所以我在部署前没注意到。
 
@@ -3960,8 +3834,6 @@ Steve Corona 是 Twitpic 的 CTO，Twitpic 是互联网上最大的网站之一�
 
 ##### mysqldump
 
-
-
 `mysqldump` 是一种随 MySQL 一起提供的工具，用于备份数据库。运行 `mysqldump` 会生成一个文本文件形式的数据库备份，内容为 `CREATE TABLE` 和 `INSERT` 语句。它是最基础的备份方式，适合数据量较少的用户。
 
 **缺点：** 它运行速度极慢，备份文件体积远大于实际数据，且恢复时也极其缓慢，因为所有的 SQL 语句都需要解析以重建底层数据文件。`mysqldump` 还需要加写锁才能确保备份一致性。一个 100GB 的备份可能需要数小时甚至数天。
@@ -4015,6 +3887,8 @@ Oracle 提供的 InnoDB 备份方案与 `mysqlhotcopy` 功能相似，但每台�
 
 在发现 Percona 及其强大的 XtraBackup 之前，我们使用 `mysqldump` 进行备份。那时的慢速让人难以接受——为数 terabytes 的 MySQL 数据使用 `mysqldump` 备份，简直是煎熬。
 
+
+
 在拥有专用从属服务器进行备份之前，我们会在生产从属服务器上执行备份，导致备份过程长达 24 小时以上，严重影响从属服务器的性能。此外，`mysqldump` 需要加写锁，这在生产环境中不可接受，导致备份不一致且无法实现真正的“点‑时间”恢复，整体情况堪忧。
 
 备份耗时超过 24 小时已是不可接受的局面，因此我决定采用更 robust 的方案。
@@ -4026,11 +3900,11 @@ Oracle 提供的 InnoDB 备份方案与 `mysqlhotcopy` 功能相似，但每台�
 3. 本地保留最近的备份，所有备份需同步至远程存储。  
 4. 系统需简洁易用，复杂度越低越易验证备份流程是否正常。
 
-#### 专用备份服务器
+### 专用备份服务器
 
 第一步是部署专用备份服务器。硬件无需特别高端：大容量 RAID‑1 用于存储本地备份，快速磁盘用于运行 MySQL 实例。内存需求也不高，因为只读服务器不需要大的 InnoDB 缓冲池。
 
-#### Percona XtraBackup
+### Percona XtraBackup
 
 我使用改装自 Owen Carter 脚本（[原始脚本链接](https://gist.github.com/931358)）并通过 Cron 定时执行，以实现数据库备份。该脚本能确保备份一致、支持点‑时间恢复，且不会阻塞或减慢复制进程。多个备份甚至可以同时进行。
 
@@ -4038,18 +3912,15 @@ Oracle 提供的 InnoDB 备份方案与 `mysqlhotcopy` 功能相似，但每台�
 
 [更多 XtraBackup 配置选项请参考](http://www.percona.com/doc/percona-xtrabackup/innobackupex/innobackupex_option_reference.html)
 
-#### 数据保留与长期存储
+### 数据保留与长期存储
 
 我决定保留 7 天的本地备份，而将长期归档放在 Amazon S3 上，期限无限。7 天的本地备份足以用于快速搭建新从属服务器。
 
 由于不想在本地存储数 terabytes 的 MySQL 备份，我们使用 Amazon S3 保留一部分数据库备份。借助 [boto](https://github.com/chapmanb/cloudbiolinux/blob/master/utils/s3_multipart_upload.py) 脚本，脚本内的备份 cron 可轻松实现多段上传。注意：当文件超过 5GB 时必须使用多段上传 API。
 
+- 我们以压缩形式存储数据，在压缩 MySQL 备份时实现了超过 100% 的存储空间节省。你可以使用 `gzip` 获得最大的存储空间节省，但它非常慢。相反，对于大型备份，我建议使用 `lzop`（http://www.lzop.org/）。`lzop` 是一个文件压缩工具，运行速度显著更快，但压缩效率稍低。此外，`lzop` 支持并行压缩，从而进一步提升速度。
 
-
-
--   我们以压缩形式存储数据，在压缩 MySQL 备份时实现了超过 100% 的存储空间节省。你可以使用 `gzip` 获得最大的存储空间节省，但它非常慢。相反，对于大型备份，我建议使用 `lzop`（http://www.lzop.org/）。`lzop` 是一个文件压缩工具，运行速度显著更快，但压缩效率稍低。此外，`lzop` 支持并行压缩，从而进一步提升速度。
-
-#### 通知
+### 通知
 
 最后，我想让备份系统非常显眼。由于我们使用 [Campfire](http://campfirenow.com/) 进行团队沟通，我能够通过 API 在备份脚本运行时每次都在 Campfire 中发送消息。每天早上醒来，看到“MySQL Backup Finished”在 Campfire 中发布，真是令人安心。
 
@@ -4061,7 +3932,7 @@ Oracle 提供的 InnoDB 备份方案与 `mysqlhotcopy` 功能相似，但每台�
 3 :\"MySQL Backup Finished (size: $SIZE)\"}}" $CAMPFIRE_URL
 ```
 
-## 案例研究：Async APIs w/ Kestrel 救了我的命
+# 案例研究：Async APIs w/ Kestrel 救了我的命
 
 对于网站的扩展来说，后台任务是一个相当新的技术。3 到 4 年前，社交 API 并不常见，将网页请求的部分在后台执行几乎是未闻名的，只有最大的网站才涉及。
 
@@ -4097,7 +3968,7 @@ Twitpic 依赖 Twitter API 实现许多站点功能。当你上传新图片时�
 
 而且，这并非针对 Twitter。**所有** HTTP API 都慢。当你通过网络跨国访问 API 时，这本就是常态，会产生延迟。
 
-#### 最坏的情况
+### 最坏的情况
 
 别提用户体验了，这种做法还会带来严重问题。你的网站会**依赖**于其他服务。记得 Twitter 曾经每周都会崩溃吗？如果你像我们一样使用 Twitter API，Twitter 的宕机就会直接导致你的网站崩溃！.fail whale 无处不在。
 
@@ -4109,9 +3980,9 @@ Twitpic 依赖 Twitter API 实现许多站点功能。当你上传新图片时�
 
 当 Twitter 严重宕机时，我们也彻底倒霉。情况很糟糕。
 
-#### 转向 Kestrel 的道路
+### 转向 Kestrel 的道路
 
- fed up with 将我们的可用性依赖于其他公司的可用性，我决定绳之以系，开始研究解决方案。
+fed up with 将我们的可用性依赖于其他公司的可用性，我决定绳之以系，开始研究解决方案。
 
 我的第一个念头是使用数据库（*不要这样做*）。我建了一个表，将推文写入，并启动一个后台进程来发送它们。正如第 8 章讨论的，如果有多个后台工人，除非使用 MySQL 锁定，否则会出现竞争条件。MySQL 锁定虽可行，但它会在队列上产生全局锁，是一个不适合并行和并发的方案。**数据库不是队列**。
 
@@ -4123,32 +3994,28 @@ Kestrel 用 Scala 编写，运行在 JVM 上，并使用 memcached 协议，因�
 
 于是，我设置了 Kestrel，并将 Twitter API 调用推入队列。不再在 web 请求期间执行这些调用，而是将它们移到后台“ eventualy” 处理。
 
-#### 赢
+### 赢
 
 使用 Kestrel 是巨大的胜利，解决了早期的宕机问题。与其在 Twitter 宕机时直接崩溃，我们的网站现在运行 **快速**——我们只会看到 Kestrel 队列中积压大量任务。一旦 Twitter 恢复，所有任务都会被处理！不再有宕机，不再有数据丢失。
 
 这已经是巨大的收获。但也提升了用户体验。记得我之前说，最佳情况下向 Twitter 发送推文需要 1 到 2 秒？这意味着发布新图片或评论需要额外 1-2 秒。有了后台工作者后，新评论**立即**通过，图片上传速度提升了 25%。
 
-## 案例研究：Memcached 的缺失指南
+# 案例研究：Memcached 的缺失指南
 
 Memcached 很酷。它是早期扩展领域的“坏男孩”之一，也是许多最大网站的核心基础。为什么？它简单、快速且便捷。Memcached 可以轻松安装在几乎所有平台，配置也很简单。
 
- tempting 考虑市面上各种 Memcached 替代品。我看到一些“现代版本”使用相同协议但实现于 Golang 或 Scala。我建议避免在严肃环境中使用用垃圾回收语言实现的 Memcached 服务器——你不希望你的站点瓶颈因 Memcached 服务器的 **stop-the-world** 垃圾回收而出现。
+tempting 考虑市面上各种 Memcached 替代品。我看到一些“现代版本”使用相同协议但实现于 Golang 或 Scala。我建议避免在严肃环境中使用用垃圾回收语言实现的 Memcached 服务器——你不希望你的站点瓶颈因 Memcached 服务器的 **stop-the-world** 垃圾回收而出现。
 
 原生的 C 语言 memcached 仍是绝佳选择——它简单、稳定且可靠。
 
 ### 为何选择 Memcached 而非 Redis？
 
-
-
-
--   [什么时候应该使用 Memcached 而不是 Redis？](https://wiki.example.org/memcached_vs_redis) 对于 `MOST` 的目的，我更倾向于使用 Redis。Redis 非常快速，拥有 Memcached 所没有的多种便捷数据类型（如 Sets 和 Lists），并且会将数据存储到磁盘。Redis 非常适合在重启后保持缓存数据持久化。例如，重启 Memcached 后，缓存为空（cache 是 cold）会导致站点变慢，MySQL 因缺乏缓存而受到大量压力。使用 Redis 可以完全避免这个问题，因为缓存会立即变热（尽管在重启后，Redis 可能需要 60 秒或更长时间将数据读取到内存中）。
+- [什么时候应该使用 Memcached 而不是 Redis？](https://wiki.example.org/memcached_vs_redis) 对于 `MOST` 的目的，我更倾向于使用 Redis。Redis 非常快速，拥有 Memcached 所没有的多种便捷数据类型（如 Sets 和 Lists），并且会将数据存储到磁盘。Redis 非常适合在重启后保持缓存数据持久化。例如，重启 Memcached 后，缓存为空（cache 是 cold）会导致站点变慢，MySQL 因缺乏缓存而受到大量压力。使用 Redis 可以完全避免这个问题，因为缓存会立即变热（尽管在重启后，Redis 可能需要 60 秒或更长时间将数据读取到内存中）。
 
 对于大多数部署，我建议只使用 Redis。在基础设施中添加一个新的组件并不值得，因为 Redis 可以完成 Memcached 的所有功能（甚至更多）。然而，Memcached 具有以下两个关键优势：
 
-1.  它是多线程的。Redis 是事件驱动的，在同一时刻只能处理一个连接。即使没有线程，Redis 也极其快速，但多线程的 Memcached 可以接受并处理更多连接，并充分利用所有可用的 CPU 核心（Redis 只能使用一个核心）。
-
-2.  它使用更少的内存。Redis 为每个存储的项保存多个指针。Memcached 通过 slab 分配内存，完全避免 `malloc`，并能降低管理开销。虽然可以通过在 Redis 中使用 Hashes 来缓解此问题（提示：这很丑陋），但从项到项来看，Memcached 使用的内存更少。在小规模数据量下差异不明显，但在数百万甚至数亿个键的规模下，这可能会节省大量昂贵的内存。
+1. 它是多线程的。Redis 是事件驱动的，在同一时刻只能处理一个连接。即使没有线程，Redis 也极其快速，但多线程的 Memcached 可以接受并处理更多连接，并充分利用所有可用的 CPU 核心（Redis 只能使用一个核心）。
+2. 它使用更少的内存。Redis 为每个存储的项保存多个指针。Memcached 通过 slab 分配内存，完全避免 `malloc`，并能降低管理开销。虽然可以通过在 Redis 中使用 Hashes 来缓解此问题（提示：这很丑陋），但从项到项来看，Memcached 使用的内存更少。在小规模数据量下差异不明显，但在数百万甚至数亿个键的规模下，这可能会节省大量昂贵的内存。
 
 ### 安装 Memcached
 
@@ -4201,7 +4068,7 @@ Memcached 很酷。它是早期扩展领域的“坏男孩”之一，也是许�
 47 	# -r
 ```
 
-| ![question](img/leanpub_question.png) || **当 Memcached 运行出错时会发生什么？** Memcached 使用 LRU（最近最少使用）算法跟踪键的请求次数。当 Memcached 耗尽空间且没有过期键可删除时，它会开始驱逐使用次数最少的键。你可以在 stats 中查看 `evictions` 关键字来监控 churn 率。通常，高 eviction 数量表明需要更多缓存空间。
+| ![question](img/leanpub_question.png) || **当 Memcached 运行出错时会发生什么？** Memcached 使用 LRU（最近最少使用）算法跟踪键的请求次数。当 Memcached 耗尽空间且没有过期键可删除时，它会开始驱逐使用次数最少的键。你可以在 stats 中查看 `evictions` 关键字来监控 churn 率。通常，高 eviction 数量表明需要更多缓存空间。 |
 
 | --- | --- |
 
@@ -4246,8 +4113,9 @@ Memcached 很酷。它是早期扩展领域的“坏男孩”之一，也是许�
 
 多年前，我遇到一位同事坚持通过 `explode` 将数组用逗号分隔后存储在 Memcached 中，并在获取时通过 `implode` 重新组合。不要做这种事。PHP 已经为你处理了序列化。如果你经常需要更高级的数据类型，那你需要 Redis。
 
-
 PHP 内置的序列化可能相当沉重。由于它是基于 ASCII 的序列化，因此占用的字节数并不理想。有一个名为 `igbinary` 的可选扩展可以让你使用一种更复杂但占用空间更小的二进制序列化方式。安装该模块后，它可以“无缝”地工作。如果你打算在 Memcached 中存储大量序列化数据，`igbinary` 是必备的。
+
+
 
 ``` 
 1 $ pecl install igbinary 
@@ -4359,9 +4227,6 @@ Memcached 客户端在添加服务器时提供了指定 **权重** 的选项。�
 与其在每个 PHP 请求中新建 Memcached 连接，我们可以使用持久连接并重复使用同一个连接来处理多个请求。每个 PHP-FPM 工作进程拥有自己持久连接，因此如果有 50 个工作进程，就会有 50 个与 Memcached 的静态连接。
 
 持久连接通常更受青睐，因为它们略快，可减少每请求的连接/断开开销，并且保持与 Memcached 的连接数固定。当你有多个 Memcached 服务器在池中时，持久连接尤其有帮助。
-
-
-
 
 持久连接的定义方式在 memcached 扩展中略显混乱，让我来解释它的工作原理。
 
@@ -4534,9 +4399,6 @@ CAS 令牌（Check-And-Set Token），也称为检查并设置令牌，允许你
 
 ### 使用 Memcached 进行会话管理
 
-
-
-
 -   [Memcached 扩展有一个会话处理器，它允许你使用 PHP 内置的会话处理功能，只是会话存储在 Memcached 中而不是文件系统上。这对于水平扩展你的应用服务器是必要的。网上一些糟糕的指南会建议你使用 NFS 或 MySQL，别这么做。使用 Memcached 管理会话非常简单，只需添加一些 php.ini 值。]
 
 ``` 
@@ -4552,23 +4414,20 @@ CAS 令牌（Check-And-Set Token），也称为检查并设置令牌，允许你
 10 ini_set('memcached.sess_connect_timeout', 50);
 ```
 
+
+
 我喜欢使用 `ini_set` 来设置这类 per-app 的值，而不是在 `php.ini` 中定义，但如果你想，也可以把它们放在 `php.ini` 中。
 
 注意 `session.save_path` 可以包含多个服务器、端口号和权重。这使你能够在多个服务器之间分布会话存储，以实现故障转移和扩展。
 
 其余的值都很直观，我快速说明一下。
 
-*   `memcached.sess_consistent_hash`: 开启使用 libketama 的 consistent hashing。在有多个 memcache 服务器时是必须的。
-
-*   `memcached.sess_binary`: 使用二进制协议来建立会话连接。
-
-*   `memcached.sess_prefix`: 为这些会话键设置一个唯一的前缀。如果多个 PHP 应用共享同一个 Memcached 池，这是必要的，否则会出现会话冲突。
-
-*   `memcached.sess_remove_failed`: 当 Memcached 服务器变得不可用时，自动将其从池中移除。
-
-*   `memcached.sess_number_of_replicas`: PECL Memcached 扩展的一个酷功能是可以将会话数据复制到多个 memcached 服务器，这样即使一个服务器死亡，数据也不会丢失。设置为你想要的复制品数量。
-
-*   `memcached.sess_connect_timeout`: 在服务器标记为不可用并跳过之前的连接超时时间。默认是 1000（1 秒），这太高了。在本地以太网上，连接时间应该不超过几毫秒。将其设置为 50ms，给自己留足活力，同时不会因为服务器宕机而拖慢你的应用。
+* `memcached.sess_consistent_hash`: 开启使用 libketama 的 consistent hashing。在有多个 memcache 服务器时是必须的。
+* `memcached.sess_binary`: 使用二进制协议来建立会话连接。
+* `memcached.sess_prefix`: 为这些会话键设置一个唯一的前缀。如果多个 PHP 应用共享同一个 Memcached 池，这是必要的，否则会出现会话冲突。
+* `memcached.sess_remove_failed`: 当 Memcached 服务器变得不可用时，自动将其从池中移除。
+* `memcached.sess_number_of_replicas`: PECL Memcached 扩展的一个酷功能是可以将会话数据复制到多个 memcached 服务器，这样即使一个服务器死亡，数据也不会丢失。设置为你想要的复制品数量。
+* `memcached.sess_connect_timeout`: 在服务器标记为不可用并跳过之前的连接超时时间。默认是 1000（1 秒），这太高了。在本地以太网上，连接时间应该不超过几毫秒。将其设置为 50ms，给自己留足活力，同时不会因为服务器宕机而拖慢你的应用。
 
 总之，设置会话处理器为 `memcached` 后，你可以像往常一样使用 PHP 会话。
 
@@ -4652,11 +4511,9 @@ CAS 令牌（Check-And-Set Token），也称为检查并设置令牌，允许你
 
 #### 硬件
 
-*   双 Xeon 2620（12 个 2.0GHz 核心）
-
-*   128GB 内存
-
-*   1Gbps 以太网
+* 双 Xeon 2620（12 个 2.0GHz 核心）
+* 128GB 内存
+* 1Gbps 以太网
 
 我们有若干这些服务器—— 因为 Memcached 是多线程的，而且我们需要大量的内存来缓存大量数据。
 
@@ -4687,14 +4544,13 @@ CAS 令牌（Check-And-Set Token），也称为检查并设置令牌，允许你
 14 );
 ```
 
-一切都很好，超时设置正确，分片运行顺利 
+一切都很好，超时设置正确，分片运行顺利
 
-
-# 推荐选项
+## 推荐选项
 
 以下是我推荐用于最佳性能和未来扩展选项（例如添加和移除服务器）的所有 PHP Memcached 客户端选项。
 
-``` 
+```
  1 <?php
  2 // 使用持久连接
  3 $m = new Memcached("pool");
@@ -4707,44 +4563,44 @@ CAS 令牌（Check-And-Set Token），也称为检查并设置令牌，允许你
 10   $m->setOption(Memcached::OPT_RECV_TIMEOUT,    50);
 11   $m->setOption(Memcached::OPT_POLL_TIMEOUT,    50);
  12 
- 13   // 开启一致哈希
- 14   $m->setOption(Memcached::OPT_LIBKETAMA_COMPATIBLE, true);
- 15 
- 16   // 开启压缩
- 17   $m->setOption(Memcached::OPT_COMPRESSION, true);
- 18 
- 19   // 开启二进制协议和 igbinary 序列化
- 20   $m->setOption(Memcached::OPT_BINARY_PROTOCOL, true);
- 21   $m->setOption(Memcached::OPT_SERIALIZER, Memcached::SERIALIZER_IGBINARY);
- 22   
- 23   $m->addServers(array(
- 24     array("192.168.0.1"),
- 25     array("192.168.0.2")
- 26   ));
- 27 }
+13   // 开启一致哈希
+14   $m->setOption(Memcached::OPT_LIBKETAMA_COMPATIBLE, true);
+15 
+16   // 开启压缩
+17   $m->setOption(Memcached::OPT_COMPRESSION, true);
+18 
+19   // 开启二进制协议和 igbinary 序列化
+20   $m->setOption(Memcached::OPT_BINARY_PROTOCOL, true);
+21   $m->setOption(Memcached::OPT_SERIALIZER, Memcached::SERIALIZER_IGBINARY);
+22   
+23   $m->addServers(array(
+24     array("192.168.0.1"),
+25     array("192.168.0.2")
+26   ));
+27 }
 ```
 
 ### 进一步阅读和工具
 
-##### twmemproxy
+#### twmemproxy
 
 Twitter 开源工具 `twmemproxy` 作为 memcached 的代理服务器。它可以自动分片数据、管理持久连接、提供统计信息，并在你有大量 web 工作进程时降低后端 memcached 守护进程的连接数。
 
 [Link to GitHub](https://github.com/twitter/twemproxy)
 
-##### peep
+#### peep
 
 `peep` 是一个工具，用于将 live memcached 服务器的内存内容导出以查看它正在存储的值。如果你想确切了解 memcached 的使用情况，这将很有用。
 
 [Link to GitHub](https://github.com/evan/peep)
 
-##### PHP igbinary / compression / memcached benchmarks
+#### PHP igbinary / compression / memcached benchmarks
 
 基准测试展示了不同组合的序列化、压缩和 memcached 扩展的效果（提示：igbinary + 二进制协议 + 压缩 + memcached 扩展胜出）。
 
 [Link to GitHub](https://github.com/carlosbuenosvinos/memcache-memcached-benchmarks)
 
-##### twemperf
+#### twemperf
 
 Twitter 开源工具 `twemperf` 用于基准测试 memcached 服务器性能。
 
@@ -4778,8 +4634,7 @@ HTTP 缓存提供了定义未来何时让客户端检查新版本的机制。
 
 为了实现更复杂的缓存，我们使用 `ETag` 头：
 
-1.  在第一次 `GET` 请求时，服务器为 `ETag` 生成一个唯一字符串。在新闻首页示例中，可以是 `md5($latest_article->created_at)` 之类的简单值。
-
+1. 在第一次 `GET` 请求时，服务器为 `ETag` 生成一个唯一字符串。在新闻首页示例中，可以是 `md5($latest_article->created_at)` 之类的简单值。
 2. 在后续请求时，浏览器会先发送 `HEAD` 请求，并在 HTTP 头中加入 `If-None-Match: {$ETag}`。服务器取出该值，与 `md5($latest_article->created_at)` 比较，若相同则返回 HTTP 状态 `304 Not Modified`，不返回任何体。这指示浏览器使用已缓存的页面，从而 **跳过完整页面生成**（返回空体的 `200 OK` 会让浏览器重新下载）。
 
 示例如下：
@@ -4819,29 +4674,48 @@ HTTP 缓存提供了定义未来何时让客户端检查新版本的机制。
 
 好了，我们已经掌握了静态资源缓存，接下来该如何在 PHP 控制器中处理缓存呢？下面是一个 HTTP 缓存的伪代码示例。
 
-
-
-
+```
 <?php
+
 class UsersController {
+
     public function show($id) {
+
         $user = $memcache->get("user:{$id}");
+
         $type = $_SERVER["HTTP_METHOD"];
+
         if ($type == "HEAD") {
+
             $theirs = trim($_SERVER["HTTP_IF_NONE_MATCH"], '"');
+
             $mine = md5($user["updated_at"]);
+
             if ($theirs == $mine) {
+
                 return header("Status: 304 Not Modified");
+
             } else {
+
                 return header("Status: 200 Ok");
+
             }
+
         }
+
         // ... Do normal action stuff
+
         $user->expensiveDatabaseCall();
+
         $view->render("users/show");
+
     }
+
 }
 ```
+
+
+
 Notice how we are able to quickly compare the Etag with some data from memcached and potentially skip our expensive database calls? Also worth pointing out that you should wrap `$_SERVER['HTTP_IF_NONE_MATCH']` in a call to `trim()` to remove double quotes from the ETag value— some browsers send them, some do not.
 
 We can also set the expires header here, just as easily, with `header("Expires: $timestamp")` if you know that the action will not expire for a long time (maybe a contact page or terms of service).
@@ -4930,21 +4804,20 @@ Remember, though— nginx will respect and obey your `Expires` and `Cache-Contro
 
 ##### PHP-FPM with and without a proxy cache
 
-
-
-
--   我快速在一个 i2.8xlarge EC2 服务器上进行了基准测试，过程非常简单——我创建了一个空的 Laravel 应用（没有数据库），其中一页（/public）始终返回 `Cache-Control: public`，另一页（/private）则始终返回 `Cache-Control: private`。我运行了 `ab`（Apache Benchmark）并进行了 100,000 个请求的基准测试——以下是每秒请求数：
+- 我快速在一个 i2.8xlarge EC2 服务器上进行了基准测试，过程非常简单——我创建了一个空的 Laravel 应用（没有数据库），其中一页（`/public`）始终返回 `Cache-Control: public`，另一页（`/private`）则始终返回 `Cache-Control: private`。我运行了 `ab`（Apache Benchmark）并进行了 100,000 个请求的基准测试——以下是每秒请求数：
 
 ```
 1 /public  - 24690 requests per second, 4ms per request
 2 /private - 3253  requests per second, 30ms per request
 ```
 
+
+
 这里的关键是——如果可能的话，跳过 PHP 并直接从 HTTP 缓存中提供文件要快得多。即使是最基础的 PHP 脚本，结果也已经非常明显，如果 PHP 代码执行更复杂的操作（比如多次访问数据库），差距会更大。不过，有时候如果数据太动态，根本无法实现。但对于那些适合这样做的页面——这可是巨大的收益。
 
-| ![question || \*\*How is the fastcgi cache stored on disk?The cached responses that the nginx fastcgi cache saves are stored on disk and can be easily manipulated. The output of the response from PHP-FPM is captured and stored in `fastcgi_cache_path` (`/tmp/cache` in our example). The filename is predictable and derived from the derived cache key of the request. For instance, for a `GET` request to `https://domain.com/index.html`, the derived cache key is `httpsGETdomain.com/index.html`. The response body will be stored in a file that is named `md5(httpsGETdomain.com/index.html)`, or `d5c94ba8b944742f64c115fa8c8e65ea`.The cache files aren’t just stored at the base of `/tmp/cache`, though. Nginx uses a two level folder structure to avoid having millions of files in a single directory which is bad for performance. The last three characters of the filename are used to build the folder structure, so for the example request above, the response body will be stored in `/tmp/cache/a/5e/d5c94ba8b944742f64c115fa8c8e65ea`. Why is this useful? If you delete this file, it will remove it from the fastcgi cache and force nginx to re-pull the page next time it’s requested. |
+**How is the fastcgi cache stored on disk?**
 
-| --- | --- |
+The cached responses that the nginx fastcgi cache saves are stored on disk and can be easily manipulated. The output of the response from PHP-FPM is captured and stored in `fastcgi_cache_path` (`/tmp/cache` in our example). The filename is predictable and derived from the derived cache key of the request. For instance, for a `GET` request to `https://domain.com/index.html`, the derived cache key is `httpsGETdomain.com/index.html`. The response body will be stored in a file that is named `md5(httpsGETdomain.com/index.html)`, or `d5c94ba8b944742f64c115fa8c8e65ea`. The cache files aren’t just stored at the base of `/tmp/cache`, though. Nginx uses a two level folder structure to avoid having millions of files in a single directory which is bad for performance. The last three characters of the filename are used to build the folder structure, so for the example request above, the response body will be stored in `/tmp/cache/a/5e/d5c94ba8b944742f64c115fa8c8e65ea`. Why is this useful? If you delete this file, it will remove it from the fastcgi cache and force nginx to re-pull the page next time it’s requested.
 
 ## Case Study: CakePHP Framework Caching
 
@@ -4978,15 +4851,11 @@ This worked seemingly well. No problems, it worked well at scale (400 million re
 
 Let’s briefly run through how a PHP request is dispatched in CakePHP (or really, any MVC framework), and where the framework caching happens.
 
-1.  Web request is sent from the browser to Nginx, Nginx sends the request to PHP-FPM
-
-2.  PHP-FPM loads the bootstrap file of the framework, `index.php`
-
-3.  Bootstrap file loads framework configuration, **reads the framework cache data from the filesystem (if it doesn’t exist, it has to regenerate it)**, and eventually invokes your controller.
-
-4.  Your controller code runs and generates a response for the client.
-
-5.  The framework **saves the newest system cache data to the filesystem** and sends your response upstream to nginx and eventually the browser.
+1. Web request is sent from the browser to Nginx, Nginx sends the request to PHP-FPM
+2. PHP-FPM loads the bootstrap file of the framework, `index.php`
+3. Bootstrap file loads framework configuration, **reads the framework cache data from the filesystem (if it doesn’t exist, it has to regenerate it)**, and eventually invokes your controller.
+4. Your controller code runs and generates a response for the client.
+5. The framework **saves the newest system cache data to the filesystem** and sends your response upstream to nginx and eventually the browser.
 
 There are two points at which the framework needs the cache data— at the beginning and end of the request. If the data doesn’t exist, it has to regenerate it (figure out which classes map to which files, figure out which columns are in which tables, etc). Simple enough.
 
@@ -5000,111 +4869,122 @@ But here’s the weird part— when new code is deployed, we start seeing PHP-FP
 
 It sort of became a ritual. Deploy new code, see a jump in errors, watch it mysteriously go away. It plagued me for months— no one wanted to deploy code, worried about causing brief downtime. We had a list of assumptions why this was happening (none of them were true), and it didn’t go away until I sat down for 4 days straight and tested each one.
 
+Still with me? Great. 我想要向你详细说明这个问题，就像我们在一起合作完成项目一样。我认为 **process** 才是关键所在——答案本身并不那么重要，所以我选择从头到尾一步步带你完成整个问题的解决过程，而不是直接给出答案。
 
+我的初始假设是 `502 Bad Gateway` 错误的增加是由以下原因之一导致的。
 
--   [Still with me? Great. 我想要向你详细说明这个问题，就像我们在一起合作完成项目一样。我认为**process** 才是关键所在——答案本身并不那么重要，所以我选择从头到尾一步步带你完成整个问题的解决过程，而不是直接给出答案。]
+1. 由于重新加载 PHP，Memcached 的连接数过多
+2. 重新加载 PHP-FPM（`kill -USR2`）没有按预期工作
+3. Zend OpCache 需要时间进行预热，导致大量 PHP 请求在未编译字节码的情况下运行，进而引起 CPU 使用率飙升
 
--   [我的初始假设是 `502 Bad Gateway` 错误的增加是由以下原因之一导致的。]
+### Busting the assumptions
 
--   [1. 由于重新加载 PHP，Memcached 的连接数过多]
+第一步是能够测试这三个假设，需要能够复制问题。不幸的是，在没有大量真实流量的开发服务器上几乎无法复制此问题，因为没有流量，代码会直接部署成功。于是我隔离了一个正在提供流量的生产服务器，并反复强制将其部署到该服务器上。Bingo— CPU 飙升，502 错误，一切如预期。
 
--   [2. 重新加载 PHP-FPM（`kill -USR2`）没有按预期工作]
+我可以一遍又一遍复制此问题。现在我已准备好逐个测试我的假设。
 
--   [3. Zend OpCache 需要时间进行预热，导致大量 PHP 请求在未编译字节码的情况下运行，进而引起 CPU 使用率飙升]
+#### 过多的 Memcached 连接来自 PHP 重新加载
 
--   [### Busting the assumptions]
+我的第一个假设是：在 PHP 的优雅重载过程中，旧工作进程可能仍然保留着对 Memcached 的旧连接，而新工作进程正在启动。Memcached 有连接上限，如果超过该上限，memcached 客户端会开始抛出异常，这些异常可能正是我们所遇到的问题的根源。
 
--   [第一步是能够测试这三个假设，需要能够复制问题。不幸的是，在没有大量真实流量的开发服务器上几乎无法复制此问题，因为没有流量，代码会直接部署成功。于是我隔离了一个正在提供流量的生产服务器，并反复强制将其部署到该服务器上。Bingo— CPU 飙升，502 错误，一切如预期。]
+Easy to test— 如果我们在测试机上强制部署 256 个 PHP-FPM 工作进程，Memcached 服务器上的连接数应该正好增加 256。我们可以使用 `telnet` 来监控此情况：
 
--   [我可以一遍又一遍复制此问题。现在我已准备好逐个测试我的假设。]
-
--   [#### 过多的 Memcached 连接来自 PHP 重新加载]
-
--   [我的第一个假设是：在 PHP 的优雅重载过程中，旧工作进程可能仍然保留着对 Memcached 的旧连接，而新工作进程正在启动。Memcached 有连接上限，如果超过该上限，memcached 客户端会开始抛出异常，这些异常可能正是我们所遇到的问题的根源。]
-
--   [Easy to test— 如果我们在测试机上强制部署 256 个 PHP-FPM 工作进程，Memcached 服务器上的连接数应该正好增加 256。我们可以使用 `telnet` 来监控此情况：]
-
--   ```
-- 1 telnet memcache_server.ip 11211
-- 2 > STATS
-- 3 < STAT curr_connections 3840
-- 4 ...
-- ```
-
-- [OK, 我们的 memcache 服务器上有 3840 个连接，如果在测试机上强制部署，我们应该看到连接数瞬间上升到 4096。]
-
-- [Deploy.. wait… and.. Nope. 部署后连接数保持在 3840 不变。假设被推翻。]
-
--   [#### 重新加载 PHP-FPM（`kill -USR2`）效果不如预期]
-
--   [在部署代码时，我们会优雅重载 PHP-FPM。为什么要优雅重载 PHP-FPM？我们在 `php.ini` 中将 `opcache.validate_timestamps=0` 与 `opcache.revalidate_freq=0` 设置在一起。这些设置的作用是：一旦 Zend OpCache 为某个 PHP 文件编译完成字节码，就永远不会再检查该文件是否有更新。也就是说，如果文件被手动修改或通过部署更新，PHP 将不会读取最新内容，直到 PHP-FPM 被重启或重载。]
-
-- | ![question || What does graceful reloading do? When you send the PHP-FPM master process the `USR2` signal, it waits for each child process to finish the current request and then replaces the old process with a new one. This allows PHP to gracefully restart without dropping any requests. |]
-
-- [| --- | --- |]
-
-- [这一步很容易测试。与其强制部署 PHP，我只需在测试机上手动执行 `kill -USR2` 并检查错误是否有轻微上升。于是我运行：]
-
-- ```
-- 1 $ kill -USR2 `cat /var/run/php-fpm5.pid`
-- ```
-
-- [And what do I see! A small jump in `502 Bad Request` errors. Is this it? Did we figure out our culprit? No, but it led me to discovering a small contributer. After reading the PHP-FPM source, I discovered that I needed to set `process_control_timeout` in my `fpm.conf` file, otherwise PHP-FPM will stall and wait forever for all of the children to finish their request. Setting `process_control_timeout=10s` made gracefully reloading PHP much smoother. But the main issue still persisted— a deploy, even with this change, still causes high CPU and 502 errors. Onwards.]
-
--   [#### Zend OpCache 正在花费大量时间预热]
-
--   [假设是 Zend OpCache 需要一段时间预热，而没有编译的字节码会导致 PHP 代码运行变慢，从而消耗大量 CPU。]
-
-- [I was writing a bunch of logic in Chef to pre-warm the cache before deploying, I decided I should spend a few minutes testing this assumption before investing a ton of time trying to fix it.]
-
-- [I proved this assumption wrong in two ways:]
-
-- [The first (and easiest) way— I disabled Zend OpCache completely with `opcache.enable=0` in `php.ini` and reloaded PHP. While I saw that load was certainly higher, the server was not throwing `502 Bad Gateway` errors nor was the CPU at 100%. Busted.]
-
-- [The other way I tested was restarting PHP and after the first request printing the contents of `opcache_get_status()`. This function shows all of the files currently cached by Zend OpCache. It turns out that even with a very heavy framework like CakePHP, almost 75% of the code was compiled to bytecode after the first request.]
-
-- [Bummer! 我们已经没有任何假设可以测试了，回到原点。]
-
--   [### Now what? I’m out of ideas]
-
--   [All of the assumptions that I had went down the tube as I systematically debunked each one. I was SURE that I knew what the problem was, but as it turns out, I was completely wrong. I’m out of ideas and what do I besides give up and pull out my hair?]
-
--   [`strace` to the rescue!]
-
--   [When you need a partner to help you debug, `strace` has got your back. It’s one of my favorite tools on Linux and while you can spend an entire semester learning about all of the features it has, the simplest use-case can often be all that you need.]
-
--   [`strace` gives you the ability to attach to a running, live process (while marginally impacting performance— okay for our use, but don’t `strace` a production MySQL server, for instance) and view what system calls it is making. Sure, you can’t see the exact code that’s executing, but you can see external network requests, filesystem calls, and other low-level stuff.]
-
--   [So, I deploy once again, and find myself a PHP-FPM worker to attach to:]
-
--   ```
-- 1 $ ps aux | grep php-fpm
-- 2 
-- 3 myapp 128131  2.9  0.0 324132 57396 ?        R    10:54  11:50 php-fpm: pool w\
-- 4 ww
-- 5 ...
-- ```
-
-- [Perfect, quickly I attach to this process `128131` and start `strace`‘ing it, to see what it’s up to. Lo and behold, I see something interesting right away. The output flies by at mach-1, but sure enough it keeps pausing for several seconds after this block of system calls… it’s stalling here!]
-
--   ```
-- 1 open("/tmp/cake_core_file_map", O_RDWR|O_CREAT, 0666) = 10
-- 2 fstat(10, {st_mode=S_IFREG|0666, st_size=29199, ...}) = 0
-- 3 lseek(10, 0, SEEK_CUR)                  = 0
-- 4 close(15)                               = 0
-- 5 flock(10, LOCK_EX)                      = 0
-- ```
-
-- [So what the hell is this? Well, PHP is stalling at the last call to `flock`. What’s `flock`? It’s a system call to obtain a lock on the file, so no other programs can write to it. Why, it’s waiting to get an exclusive file lock and blocking until it can get one. What file is it trying to obtain an exclusive lock on? OUR CAKEPHP SYSTEM CACHE FILES! Somewhere in the internal CakePHP code, it’s locking the files before writing to them!]
-
-- [And that’s the core problem. We found it. When we deploy a new code release, we’re wiping out our `/tmp` directory— we WANT the CakePHP cache files to be refreshed after a deploy because a database table or model may change. But what’s happening is that a stampede of 256 PHP-FPM workers are trying to update the cache simultaneously, each requesting an exclusive file lock to do so. And that’s where it’s blocking— because of the competition over obtaining a file lock. The blocking causes requests to pile up, which causes our socket backlog to fill up, and forces Nginx to start throwing 502 Bad Gateway errors. That’s it!]
-
--   [### The solution(s)]
+```
+telnet memcache_server.ip 11211
+> STATS
+< STAT curr_connections 3840
+...
+```
 
 
 
+进入`/path/to/xxx`目录，找到`xxx.json`。
 
--   [既然我们已经知道这个问题，解决起来就简单多了。我们需要加快 `flock`（或者完全避免它），这样在部署时，就不会出现 256 个 PHP-FPM 工作进程同时竞争更新同一组文件。解决这个问题有几种不同的方法，我会简要说明我使用了哪种方法以及哪些方法失败了。]
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
+[/content]
+
+Wait that's example. Need actual processing.
+
+Let's redo properly.
+
+[content]
+[OK, 我们的 memcache 服务器上有 3840 个连接，如果在测试机上强制部署，我们应该看到连接数瞬间上升到 4096。]
+
+[Deploy.. wait… and.. Nope. 部署后连接数保持在 3840 不变。假设被推翻。]
+
+### 重新加载 PHP-FPM（`kill -USR2`）效果不如预期
+
+在部署代码时，我们会优雅重载 PHP-FPM。为什么要优雅重载 PHP-FPM？我们在 `php.ini` 中将 `opcache.validate_timestamps=0` 与 `opcache.revalidate_freq=0` 设置在一起。这些设置的作用是：一旦 Zend OpCache 为某个 PHP 文件编译完成字节码，就永远不会再检查该文件是否有更新。也就是说，如果文件被手动修改或通过部署更新，PHP 将不会读取最新内容，直到 PHP-FPM 被重启或重载。
+
+![question || What does graceful reloading do? When you send the PHP-FPM master process the `USR2` signal, it waits for each child process to finish the current request and then replaces the old process with a new one. This allows PHP to gracefully restart without dropping any requests. |]
+
+这一步很容易测试。与其强制部署 PHP，我只需在测试机上手动执行 `kill -USR2` 并检查错误是否有轻微上升。于是我运行：
+
+```
+$ kill -USR2 `cat /var/run/php-fpm5.pid`
+```
+
+And what do I see! A small jump in `502 Bad Request` errors. Is this it? Did we figure out our culprit? No, but it led me to discovering a small contributer. After reading the PHP-FPM source, I discovered that I needed to set `process_control_timeout` in my `fpm.conf` file, otherwise PHP-FPM will stall and wait forever for all of the children to finish their request. Setting `process_control_timeout=10s` made gracefully reloading PHP much smoother. But the main issue still persisted— a deploy, even with this change, still causes high CPU and 502 errors. Onwards.
+
+### Zend OpCache 正在花费大量时间预热
+
+假设是 Zend OpCache 需要一段时间预热，而没有编译的字节码会导致 PHP 代码运行变慢，从而消耗大量 CPU。
+
+I was writing a bunch of logic in Chef to pre-warm the cache before deploying, I decided I should spend a few minutes testing this assumption before investing a ton of time trying to fix it.
+
+I proved this assumption wrong in two ways:
+
+The first (and easiest) way— I disabled Zend OpCache completely with `opcache.enable=0` in `php.ini` and reloaded PHP. While I saw that load was certainly higher, the server was not throwing `502 Bad Gateway` errors nor was the CPU at 100%. Busted.
+
+The other way I tested was restarting PHP and after the first request printing the contents of `opcache_get_status()`. This function shows all of the files currently cached by Zend OpCache. It turns out that even with a very heavy framework like CakePHP, almost 75% of the code was compiled to bytecode after the first request.
+
+Bummer! 我们已经没有任何假设可以测试了，回到原点。
+
+### Now what? I’m out of ideas
+
+All of the assumptions that I had went down the tube as I systematically debunked each one. I was SURE that I knew what the problem was, but as it turns out, I was completely wrong. I’m out of ideas and what do I besides give up and pull out my hair?
+
+`strace` to the rescue!
+
+When you need a partner to help you debug, `strace` has got your back. It’s one of my favorite tools on Linux and while you can spend an entire semester learning about all of the features it has, the simplest use-case can often be all that you need.
+
+`strace` gives you the ability to attach to a running, live process (while marginally impacting performance— okay for our use, but don’t `strace` a production MySQL server, for instance) and view what system calls it is making. Sure, you can’t see the exact code that’s executing, but you can see external network requests, filesystem calls, and other low-level stuff.
+
+So, I deploy once again, and find myself a PHP-FPM worker to attach to:
+
+```
+$ ps aux | grep php-fpm
+
+myapp 128131  2.9  0.0 324132 57396 ?        R    10:54  11:50 php-fpm: pool w\
+ww
+...
+```
+
+Perfect, quickly I attach to this process `128131` and start `strace`‘ing it, to see what it’s up to. Lo and behold, I see something interesting right away. The output flies by at mach-1, but sure enough it keeps pausing for several seconds after this block of system calls… it’s stalling here!
+
+```
+open("/tmp/cake_core_file_map", O_RDWR|O_CREAT, 0666) = 10
+fstat(10, {st_mode=S_IFREG|0666, st_size=29199, ...}) = 0
+lseek(10, 0, SEEK_CUR)                  = 0
+close(15)                               = 0
+flock(10, LOCK_EX)                      = 0
+```
+
+So what the hell is this? Well, PHP is stalling at the last call to `flock`. What’s `flock`? It’s a system call to obtain a lock on the file, so no other programs can write to it. Why, it’s waiting to get an exclusive file lock and blocking until it can get one. What file is it trying to obtain an exclusive lock on? OUR CAKEPHP SYSTEM CACHE FILES! Somewhere in the internal CakePHP code, it’s locking the files before writing to them!
+
+And that’s the core problem. We found it. When we deploy a new code release, we’re wiping out our `/tmp` directory— we WANT the CakePHP cache files to be refreshed after a deploy because a database table or model may change. But what’s happening is that a stampede of 256 PHP-FPM workers are trying to update the cache simultaneously, each requesting an exclusive file lock to do so. And that’s where it’s blocking— because of the competition over obtaining a file lock. The blocking causes requests to pile up, which causes our socket backlog to fill up, and forces Nginx to start throwing 502 Bad Gateway errors. That’s it!
+
+### The solution(s)
+
+既然我们已经知道这个问题，解决起来就简单多了。我们需要加快 `flock`（或者完全避免它），这样在部署时，就不会出现 256 个 PHP-FPM 工作进程同时竞争更新同一组文件。解决这个问题有几种不同的方法，我会简要说明我使用了哪种方法以及哪些方法失败了。
 
 #### 抛开文件，使用 Memcache！
 
@@ -5113,158 +4993,151 @@ It sort of became a ritual. Deploy new code, see a jump in errors, watch it myst
 于是我撤销了改动，使用 `ifstat` 获取本应用服务器的网络流量基线……
 
 ```
-1 $ ifstat -i eth0
-2 KB/s in  KB/s out
-3 3154.15  2660.01
-4 3003.02  2561.97
+$ ifstat -i eth0
+KB/s in  KB/s out
+3154.15  2660.01
+3003.02  2561.97
 ```
 
-大约 3 MB/s 的上下行流量。随后，我重新启用了 CakePHP 的 memcached 后端并再次检查：
+大约 3 MB/s 的上下行流量。随后，我重新启用了 CakePHP 的 memcached 后端并再次检查：
 
 ```
-1 $ ifstat -i eth0
-2 KB/s in  KB/s out
-3 41931.34 33154.11
-4 39129.12 31929.23
+$ ifstat -i eth0
+KB/s in  KB/s out
+41931.34 33154.11
+39129.12 31929.23
 ```
 
-哇，仅仅启用 memcached 缓存后，流量就增加了约 40 MB/s！这对单台服务器来说已经非常不稳定。即使是只有几千字节的缓存数据，也需要在每次请求时完整读取并写回完整内容。这很麻烦，memcached 显然不适合此用途。
+哇，仅仅启用 memcached 缓存后，流量就增加了约 40 MB/s！这对单台服务器来说已经非常不稳定。即使是只有几千字节的缓存数据，也需要在每次请求时完整读取并写回完整内容。这很麻烦，memcached 显然不适合此用途。
 
-#### APCu，PHP 5.5 的用户空间缓存
+#### APCu，PHP 5.5 的用户空间缓存
 
-接下来我找到了 [APCu](http://pecl.php.net/package/APCu)，它是 APC 的用户空间实现，专为 PHP 5.5 设计。我进行了测试，它确实能工作，但对我来说它显得很“脏”。这是一个处于 beta 阶段的扩展，历史和测试较少，且不确定它是否会持续得到更新以支持 PHP 5.6、5.7 等后续版本。与其在老旧模块上 hack 功能，不如直接切换到更干净的方案。话说回来，在所有可选方案中，APCu 可能是最简洁、最直接的选择。它在 PHP 5.3 与 5.4 上表现很好。
+接下来我找到了 [APCu](http://pecl.php.net/package/APCu)，它是 APC 的用户空间实现，专为 PHP 5.5 设计。我进行了测试，它确实能工作，但对我来说它显得很“脏”。这是一个处于 beta 阶段的扩展，历史和测试较少，且不确定它是否会持续得到更新以支持 PHP 5.6、5.7 等后续版本。与其在老旧模块上 hack 功能，不如直接切换到更干净的方案。话说回来，在所有可选方案中，APCu 可能是最简洁、最直接的选择。它在 PHP 5.3 与 5.4 上表现很好。
 
-#### 为每个 PHP‑FPM 工作进程提供独立缓存
+#### 为每个 PHP-FPM 工作进程提供独立缓存
 
-我凌晨 4:45 起床、刷牙的同时，忽然有个念头：与其让所有 256 个 PHP‑FPM 工作进程共享全局的 CakePHP 系统缓存，不如为每个进程提供独立的文件缓存。这样就能消除文件锁竞争，因为每个工作进程是单线程的，一次只能处理一个请求。
+我凌晨 4:45 起床、刷牙的同时，忽然有个念头：与其让所有 256 个 PHP-FPM 工作进程共享全局的 CakePHP 系统缓存，不如为每个进程提供独立的文件缓存。这样就能消除文件锁竞争，因为每个工作进程是单线程的，一次只能处理一个请求。
 
 这方案还很简单——只需要一次修改：
 
 ```
-1 <?php
-2 // 旧配置
-3 Cache::config('_cake_core_', array('prefix' => 'cake_core'));
-4 
-5 // 新配置
-6 Cache::config('_cake_core_', array('prefix' => getmypid() . 'cake_core'));
+<?php
+// 旧配置
+Cache::config('_cake_core_', array('prefix' => 'cake_core'));
+
+// 新配置
+Cache::config('_cake_core_', array('prefix' => getmypid() . 'cake_core'));
 ```
 
-我们只需在 CakePHP 框架缓存的文件名前加入 `getmypid()`，因为每个 PHP‑FPM 工作进程拥有自己独立的进程 ID，这样每个进程都会拥有唯一的缓存文件。
+我们只需在 CakePHP 框架缓存的文件名前加入 `getmypid()`，因为每个 PHP-FPM 工作进程拥有自己独立的进程 ID，这样每个进程都会拥有唯一的缓存文件。
 
 最好的创意往往出现在刷牙时。
 
-我兴奋地登陆西海岸，验证了我的假设。登陆后几分钟内就测试成功，理论上可行。但检查文件系统使用情况时发现一个小问题：`iostat` 显示磁盘已经被完全饱和！256 个独立的 PHP‑FPM 缓存产生了过大的磁盘负载。
+我兴奋地登陆西海岸，验证了我的假设。登陆后几分钟内就测试成功，理论上可行。但检查文件系统使用情况时发现一个小问题：`iostat` 显示磁盘已经被完全饱和！256 个独立的 PHP-FPM 缓存产生了过大的磁盘负载。
 
 ```
-1 $ iostat /dev/xvdb -x 1
-2 Device:         rrqm/s   wrqm/s     r/s     w/s      svctm  %util
-3 xvdb          1273.00  893.00    1263.00 893.00    1.21  100.00
+$ iostat /dev/xvdb -x 1
+Device:         rrqm/s   wrqm/s     r/s     w/s      svctm  %util
+xvdb          1273.00  893.00    1263.00 893.00    1.21  100.00
 ```
 
-磁盘 I/O 已经达到 100% 利用率，显然单靠 256 个独立缓存已经不堪重负。缓存文件本身很小（不到 50 KB），即使有 256 个独立缓存，总大小也仅约 15 MB，但每秒被读取和写入数千次，磁盘压力随之增大。
+磁盘 I/O 已经达到 100% 利用率，显然单靠 256 个独立缓存已经不堪重负。缓存文件本身很小（不到 50 KB），即使有 256 个独立缓存，总大小也仅约 15 MB，但每秒被读取和写入数千次，磁盘压力随之增大。
 
 为了解决这个问题，我创建了一个基于内存的文件系统 `tmpfs` 并将其挂载到缓存目录所在的路径，让 CakePHP 误以为在使用文件系统，实际上缓存实际存储在内存中。这样所有问题都迎刃而解，最终成为我的实际解决方案。
 
 ```
-1 $ mount -t tmpfs -o size=1000M,mode=0755 tmpfs /tmp/cache
+$ mount -t tmpfs -o size=1000M,mode=0755 tmpfs /tmp/cache
 ```
+
+
 
 这段经历让我深刻体会到实战调试的艰辛、刷牙时思考的奇妙，以及在大规模环境下，即使看似显而易见的解决方案也可能出现意外情况。
 
-### 案例研究：PHP 中优化图像处理
+# 案例研究：PHP 中优化图像处理
 
-正如你所想象的，图像缩放是我们系统在 Twitpic 业务中花费大量时间的主要工作。iPhone 5（8 MP）甚至部分新款 Android 手机（13 MP）都能拍摄并上传超过 10 MB 的图片，移动用户同样能上传大容量图片。
+正如你所想象的，图像缩放是我们系统在 Twitpic 业务中花费大量时间的主要工作。iPhone 5（8 MP）甚至部分新款 Android 手机（13 MP）都能拍摄并上传超过 10 MB 的图片，移动用户同样能上传大容量图片。
 
 几乎每当用户在 Web 应用中上传图片时，都需要进行缩放和后处理，原因包括：
 
-1. 降低文件体积，直接传输 10 MB 的图片到浏览器并非最佳实践。  
-2. 统一尺寸尺寸。对 Twitpic 而言，宽度 600 px 是标准。  
-3. 统一图像格式（通常为 JPEG）。  
-4. 生成多种图片版本（多个缩略图、Retina 版）。  
-5. 根据拍摄时的方向旋转图片，使其与相机取景方向对齐。  
+1. 降低文件体积，直接传输 10 MB 的图片到浏览器并非最佳实践。
+2. 统一尺寸尺寸。对 Twitpic 而言，宽度 600 px 是标准。
+3. 统一图像格式（通常为 JPEG）。
+4. 生成多种图片版本（多个缩略图、Retina 版）。
+5. 根据拍摄时的方向旋转图片，使其与相机取景方向对齐。
 6. 移除 EXIF、相机型号、GPS 坐标等敏感信息。
 
 处理图像的过程往往 CPU 密集且伴随大量磁盘 I/O 与网络带宽消耗。
 
-#### naïve “PHP Tutorial” 方式
+## naïve “PHP Tutorial” 方式
 
 如果你在搜索基本的 PHP 图像处理方法，几乎总会看到推荐使用 [ImageMagick](http://www.imagemagick.org/script/index.php)——这很合理！ImageMagick 是功能强大、支持度高的命令行库，能够转换、缩放、修改几乎所有图片格式，堪比命令行版的 Adobe Photoshop™。
 
-下面的代码展示了“笨拙、未优化”的图像上传与缩放实现：先把上传的文件暂存到 `$tmp`，使用 ImageMagick 将其缩放为 600 px 的 JPEG，再生成 150 × 150 的缩略图。
+下面的代码展示了“笨拙、未优化”的图像上传与缩放实现：先把上传的文件暂存到 `$tmp`，使用 ImageMagick 将其缩放为 600 px 的 JPEG，再生成 150 × 150 的缩略图。
 
 ```
- 1 <?php
- 2 
- 3 class Image_Controller extends Controller {
- 4 
- 5   // 图像上传到此方法
- 6   public function create() {
- 7   
- 8     if (isset($_FILES["upload"])) {
- 9     
-10     	$tmp = $_FILES["upload"]["tmp_file"];
-11     
-12         // 创建 600x400 大小的缩放图
-13         exec("convert -resize 600x400 {$tmp} /u/scaled.jpg");
-14         
-15         // 创建 150x150 缩略图
-16         exec("convert -thumbnail x300 -resize 150x< -resize 50% 
-17                       -gravity center -crop 150x150+0+0 +repage
-18                       {$tmp} /u/thumbnail.jpg");
-19                       
-20         // 删除临时文件  
-21         @unlink($tmp);
-22     }
-23   }
-24 }
+<?php
+
+class Image_Controller extends Controller {
+
+  // 图像上传到此方法
+  public function create() {
+
+    if (isset($_FILES["upload"])) {
+
+    	$tmp = $_FILES["upload"]["tmp_file"];
+
+        // 创建 600x400 大小的缩放图
+        exec("convert -resize 600x400 {$tmp} /u/scaled.jpg");
+        
+        // 创建 150x150 缩略图
+        exec("convert -thumbnail x300 -resize 150x< -resize 50% 
+                      -gravity center -crop 150x150+0+0 +repage
+                      {$tmp} /u/thumbnail.jpg");
+                       
+        // 删除临时文件  
+        @unlink($tmp);
+    }
+  }
+}
 ```
 
 这段代码的问题主要有以下几点（不论是否能猜到）：
 
-1. 图像缩放是 CPU 密集且耗时的操作，尤其在大图上更为显著。理想情况下应将缩放和后处理交给 Resque（背景工作）来异步执行。但在本例中，用户期望即时看到处理后的图片，因而不使用背景 worker。  
-
-
-
-
+1. 图像缩放是 CPU 密集且耗时的操作，尤其在大图上更为显著。理想情况下应将缩放和后处理交给 Resque（背景工作）来异步执行。但在本例中，用户期望即时看到处理后的图片，因而不使用背景 worker。
 2. ImageMagick 没有一个非常活跃更新的 PECL 扩展，因此使用 C 语言库不可行——我们必须使用 `exec()` 来 fork 一个新进程并在命令行中执行它。调用 `exec()` 是一个非常缓慢的操作，在 EC2（或任何基于 Xen 的虚拟化环境）上，仅 `fork()` 这一步就可能需要 1 到 2 秒！不仅它很慢，还可能成为 DOS 攻击你服务器的向量。
+3. 在制作多个图片版本时，最好使用已有的最小尺寸图片，而不是多次对原始图片进行缩放。与其每次都处理 10 MB、4096×2048 像素的原始图片来生成 150×150 的缩略图，不如先生成 600×400 的中间图片，再从中创建 150×150 的缩略图，这样要快得多。
 
-3. 在制作多个图片版本时，最好使用已有的最小尺寸图片，而不是多次对原始图片进行缩放。与其每次都处理 10 MB、4096×2048 像素的原始图片来生成 150×150 的缩略图，不如先生成 600×400 的中间图片，再从中创建 150×150 的缩略图，这样要快得多。
-
-#### 这不全是代码——通过栈追踪文件上传
+## 这不全是代码——通过栈追踪文件上传
 
 修复前面提到的三个问题肯定会提升图片处理性能，但 LHNMPRR 栈中还存在一个不太明显的问题。
 
-假设用户上传了一个 10 MB 的图片，如果按照本书描述的设计方式，它在栈中流转的过程如下：
+假设用户上传了一个 10 MB 的图片，如果按照本书描述的设计方式，它在栈中流转的过程如下：
 
-##### 拆解文件上传
+### 拆解文件上传
 
 ![Moving a 10MB image through the LNHMPRR stack](img/diag.png)
 
-在 LNHMPRR 栈中移动 10 MB 图片的过程
+在 LNHMPRR 栈中移动 10 MB 图片的过程
 
-1. 用户通过浏览器或移动端发送 HTTP POST，上传文件（**+10 MB 网络带宽**）。HAProxy 负载均衡器立即接收该文件并将其流式传输到一台 nginx 应用服务器（**+10 MB 网络带宽**）。HAProxy 不会在内存或磁盘中缓冲任何数据，而是直接通过。
+1. 用户通过浏览器或移动端发送 HTTP POST，上传文件（**+10 MB 网络带宽**）。HAProxy 负载均衡器立即接收该文件并将其流式传输到一台 nginx 应用服务器（**+10 MB 网络带宽**）。HAProxy 不会在内存或磁盘中缓冲任何数据，而是直接通过。
+2. Nginx 开始从 HAProxy 接收文件并将其缓冲到内存中。取决于 `client_body_buffer_size` 的大小（默认 8 KB），Nginx 会在数据量超过该阈值时转写到磁盘，停止在内存中缓冲，直到整个文件传输完毕。（**+10 MB 磁盘写入 I/O**）
+3. 文件上传完全从 HAProxy 传输到 Nginx 后，Nginx 开始读取文件（**+10 MB 磁盘读取 I/O**），并通过 FastCGI 将其传递给 PHP-FPM（**+10 MB 本地网络带宽**）。由于 PHP-FPM 本地运行且（希望）使用 Unix Socket，这一步很快完成。
+4. PHP-FPM 发现文件上传后，会把它再次写入磁盘（**+10 MB 磁盘写入 I/O**）。该 PHP-FPM 工作进程会一直处于“忙碌”状态，PHP 代码在整个文件接收完毕之前不会开始执行。
+5. 文件最终进入 PHP，代码开始运行，ImageMagick 进行缩放，读取文件进入内存两次进行处理。（**+20 MB 磁盘读取 I/O，+20 MB 内存**）。
 
-2. Nginx 开始从 HAProxy 接收文件并将其缓冲到内存中。取决于 `client_body_buffer_size` 的大小（默认 8 KB），Nginx 会在数据量超过该阈值时转写到磁盘，停止在内存中缓冲，直到整个文件传输完毕。（**+10 MB 磁盘写入 I/O**）
-
-3. 文件上传完全从 HAProxy 传输到 Nginx 后，Nginx 开始读取文件（**+10 MB 磁盘读取 I/O**），并通过 FastCGI 将其传递给 PHP‑FPM（**+10 MB 本地网络带宽**）。由于 PHP‑FPM 本地运行且（希望）使用 Unix Socket，这一步很快完成。
-
-4. PHP‑FPM 发现文件上传后，会把它再次写入磁盘（**+10 MB 磁盘写入 I/O**）。该 PHP‑FPM 工作进程会一直处于“忙碌”状态，PHP 代码在整个文件接收完毕之前不会开始执行。
-
-5. 文件最终进入 PHP，代码开始运行，ImageMagick 进行缩放，读取文件进入内存两次进行处理。（**+20 MB 磁盘读取 I/O，+20 MB 内存**）。
-
-结果是，虽然原始文件只有 10 MB，实际消耗的资源高达 50 MB 磁盘 I/O、30 MB 网络带宽和 20 MB 内存——这太浪费了！如果是视频文件，情况会更糟。
+结果是，虽然原始文件只有 10 MB，实际消耗的资源高达 50 MB 磁盘 I/O、30 MB 网络带宽和 20 MB 内存——这太浪费了！如果是视频文件，情况会更糟。
 
 | 资源 | 数量 |
 | --- | --- |
-| 网络带宽 | 30 MB |
-| 磁盘 I/O | 50 MB |
-| 内存 | 20 MB |
+| 网络带宽 | 30 MB |
+| 磁盘 I/O | 50 MB |
+| 内存 | 20 MB |
 
 这套低效流程只是在不同系统之间不断搬运相同的数据。我们可以通过避免磁盘 I/O、尽可能保持数据在内存中来进行优化。
 
 文件在内存之间传递的两个关键点是：一是 Nginx 的缓冲过程，二是 PHP 接收文件时的读取。我们分别对这两点进行优化。
 
-**在 Nginx 侧**，我们可以将 `client_body_buffer_size` 调整为比默认的 8 KB 大得多的值，这样更多的数据会保持在内存中，减少写入磁盘的次数。
+**在 Nginx 侧**，我们可以将 `client_body_buffer_size` 调整为比默认的 8 KB 大得多的值，这样更多的数据会保持在内存中，减少写入磁盘的次数。
 
 另一种做法是保持 `client_body_buffer_size` 不变，并在系统中配置 `tmpfs`（见第 5 章）。配置 `tmpfs` 后，可将 `client_body_temp_path` 改为 `/tmp` 目录，这样在保持 Nginx 内存占用低的同时，可省去磁盘 I/O 开销。
 
@@ -5280,32 +5153,30 @@ It sort of became a ritual. Deploy new code, see a jump in errors, watch it myst
 在此之前，请确保该模块已配置为拦截文件上传。打开 `my_app.conf`（第 5 章），在其中添加如下 `location` 块：
 
 ```
- 1 > vi /etc/nginx/sites-available/my_app.conf
- 2 
- 3 location /upload {
- 4 	upload_pass /index.php;
- 5 	upload_store /tmp/nginx/upload 1;
- 6 	upload_set_form_field $upload_field_name.name "$upload_file_name";
- 7 	upload_set_form_field $upload_field_name.content_type "$upload_content_type";
- 8 	upload_set_form_field $upload_field_name.path "$upload_tmp_path";
- 9 	
-10 	# 如果 PHP 返回以下任意错误，删除文件
-11 	upload_cleanup 400 404 499 500-505;
-12 }
+> vi /etc/nginx/sites-available/my_app.conf
+
+location /upload {
+	upload_pass /index.php;
+	upload_store /tmp/nginx/upload 1;
+	upload_set_form_field $upload_field_name.name "$upload_file_name";
+	upload_set_form_field $upload_field_name.content_type "$upload_content_type";
+	upload_set_form_field $upload_field_name.path "$upload_tmp_path";
+	
+	# 如果 PHP 返回以下任意错误，删除文件
+	upload_cleanup 400 404 499 500-505;
+}
 ```
 
 配置完成后，重新加载 Nginx 并创建所需的临时目录：
 
 ```
-1 > service nginx reload
-2 > mkdir -p /tmp/nginx/upload/{1,2,3,4,5,6,7,8,9,0}
+> service nginx reload
+> mkdir -p /tmp/nginx/upload/{1,2,3,4,5,6,7,8,9,0}
 ```
 
-最后，代码只需将 `$_FILES["upload"]["tmp_file"]` 替换为 `$_POST["file_path"]` 即可。 
+最后，代码只需将 `$_FILES["upload"]["tmp_file"]` 替换为 `$_POST["file_path"]` 即可。
 
-
-
-
+```
 class Image_Controller extends Controller {
     // Image upload is posted to this method
     public function create() {
@@ -5331,14 +5202,13 @@ class Image_Controller extends Controller {
 
 We also need to change our form to POST the file to `/upload` instead of the normal `index.php` endpoint (specified by the `location` block that we added to `my_app.conf`).
 
-#### Benchmarking the file upload process
+## Benchmarking the file upload process
 
 I have something embarrassing to admit. I wrote this entire chapter based on theory alone. I’ve implemented all of these techniques at Twitpic, because on paper— IN THEORY, it makes complete sense. These changes will cut our the cruft, reduce useless data shuffling, and optimize the whole process. Right? Right!?
 
 Well, when I went to benchmark each individual change, it turns out… not so much. In fact, each optimization described (`tmpfs`, `client_body_buffer_size`, and `HTTP Upload Module`) only added, at best, a 5% performance improvement over the “default” setup. Oops. And Ouch. It’s a lesson in premature optimization, for sure, and why you should benchmark everything! Regardless, I’ve kept this case study for two reasons:
 
 1. It’s really important to understand *EXACTLY* how data finds its way to your PHP code. Following the code path is a journey that everyone should make. This knowledge will help you debug in the future.
-
 2. To drive home the whole premature optimization thing and that even if an optimization looks correct on paper, it might not actually pan out in the real world.
 
 The only thing that seemed to make a large, measurable impact was the difference between ImageMagick and GraphicsMagick, which I talk about in the next section.
@@ -5347,21 +5217,22 @@ I benchmarked the different settings, one by one, using `ab` (Apache Benchmark),
 
 These are the different tests, explained one-by-one.
 
-##### tmpfs
+### tmpfs
 
 I enabled `tmpfs` and changed `client_body_temp_path` in nginx and `upload_tmp_dir` in php to use it. Little to no difference between the stock setup. Same number of requests/second, same time per request.
 
 Here’s why:
 
-1.  Nginx doesn’t `fsync` the temporary data to disk, and the writes are mostly are mostly sequential, so writing the upload data to disk doesn’t have a huge impact on IO usage.
+1. Nginx doesn’t `fsync` the temporary data to disk, and the writes are mostly are mostly sequential, so writing the upload data to disk doesn’t have a huge impact on IO usage.
+2. When PHP reads the data back from disk, it’s reading the entire file sequentially, most of which is already in-memory via the operating system’s disk buffer.
 
-2.  When PHP reads the data back from disk, it’s reading the entire file sequentially, most of which is already in-memory via the operating system’s disk buffer.
+### Increasing `client_body_buffer_size`
 
-##### Increasing `client_body_buffer_size`
+
 
 I increased the `client_body_buffer_size` variable in nginx to 20MB, so nginx would be able to buffer the entire 10MB file upload in memory and never have to hit disk. Again, no performance improvement (due to the reasons above), except it increased the memory usage of my nginx worker processes to 200-300MB each, instead of the typical 25MB. Fail! There seems to be almost no reason to increase `client_body_buffer_size` from the default `8KB`.
 
-##### HTTP Upload Module
+### HTTP Upload Module
 
 My last hope— I knew this *had* to improve performance. Not only does it save the file from being copied, but it saves PHP from having to parse the 10MB of POST data. I saw a small 5% improvement in performance here, mostly in reduction of CPU usage by PHP, as it’s less data PHP needs to chug through before it can run your code. Not worth it.
 
@@ -5369,7 +5240,7 @@ My last hope— I knew this *had* to improve performance. Not only does it save 
 
 Benchmarks of various changes
 
-##### Benchmarking file uploads with `ab` (Apache Benchmark)
+### Benchmarking file uploads with `ab` (Apache Benchmark)
 
 I figured I would make a quick note about how you can test this yourself— it took me a long time to figure out a way to easily benchmark/test file uploads from the command line. There are plenty of tutorials on `ab`, but none really mention how to use it to upload files.
 
@@ -5451,8 +5322,6 @@ You can grab the docs for [PECL GMagick](http://pecl.php.net/package/gmagick) he
 
 Hooray! No more nasty `exec()` calls, and since we can share the GMagick object for multiple resizes, we only have to read the raw image data into memory once opposed to twice with ImageMagick. *This will only work if you’re downsizing every step.*
 
-
-
 | ![warning](img/leanpub_warning.png) || Newer versions of GraphicsMagick and ImageMagick are built with OpenMP, a framework for parallelizing image processing across multiple cores. In theory, sounds great— but I ran into a number of issues with random seg faults and crashes. I prefer to either recompile `libgraphicsmagick` with `--disable-openmp` or set `putenv(MAGICK_THREAD_LIMIT=1);` in PHP to disable OpenMP. |
 
 | --- | --- |
@@ -5471,25 +5340,25 @@ Setting up your stack to handle large file uploads can feel like a pain because 
 
 #### nginx.conf
 
-**client_max_body_size**
+`client_max_body_size`
 
 Set this to the same as `upload_max_filesize` in `php.ini`. `128M` is a good starting point.
 
 #### php.ini
 
-**upload_max_filesize**
+`upload_max_filesize`
 
 The maximum size of the actual file upload itself. Should be set the same as `client_max_body_size` in `nginx.conf`
 
-**post_max_size**
+`post_max_size`
 
 The maximum size of the entire HTTP POST body, including the multipart file upload. Should be set slightly higher than `upload_max_filesize` to take into account any extra POST parameters and metadata. I usually set it as 1MB more than `upload_max_filesize`.
 
-**memory_limit**
+`memory_limit`
 
 PHP says that it needs enough memory to read the entire file into memory. I typically just disable `memory_limit`, but if you’re not doing that, than you need to set it atleast the size of `post_max_size`, preferable a little higher.
 
-**max_file_uploads**
+`max_file_uploads`
 
 The maximum number of files that can be in a single POST body, used to provide a sane limit and prevent circumventing `upload_max_filesize` with lots of small files. Worth pointing out— PHP does count empty file upload fields in a form against this limit.
 
@@ -5518,6 +5387,8 @@ When a user uploads a JPG, they are not only sending a picture, but also a wealt
 ```
 
 But there’s also a scary amount of private data that gets tagged inside of the image metadata too, including GPS data. On a picture taken with my iPhone 4S, the Lat/Long EXIF data is accurate within 5 feet of my apartment.
+
+
 
 ![Some information contained in the EXIF metadata](img/exif.png)
 
@@ -5607,9 +5478,6 @@ Instead, we can adjust the orientation with nothing besides GraphicsMagick.
 Benchmarking and load-testing is ultimitely one of the most important parts of Scaling. Why? It’s where the rubber meets the road. Where you can see how the changes you make in your architecture or code improve your overall performance. A way to figure out where the weak parts of your application are, and what’s likely to crumble first under heavy load.
 
 | ![information](img/leanpub_information.png) || If you don’t want to mess around with setting up a benchmarking environment, you can get started really quickly with a service like [Blitz](http://blitz.io) or [LoadImpact](http://loadimpact.com). These services allow you to send anywhere from 100 - 1,000,000 computer-generated visitors to your site to browse around and generate load. |
-
-
-
 
 ### 设置测试环境
 
@@ -5701,6 +5569,8 @@ Benchmarking and load-testing is ultimitely one of the most important parts of S
 
 我觉得 Apache Benchmark 有点局限且过时。一个更现代、更强大的替代工具是 `siege`。你可以在 Ubuntu 上通过 `apt-get install siege` 安装它。其命令行参数与 `ab` 类似，`-c` 设置并发用户数，`-t` 设置测试运行的秒数。
 
+
+
 ```
  1 siege -c50 -t10s http://127.0.0.1
  2 ** SIEGE 3.0.1
@@ -5767,10 +5637,7 @@ Benchmarking and load-testing is ultimitely one of the most important parts of S
 10   The swarm has assembled 4 bees.
 ```
 
-
-
-
--   [我们准备好进攻了！我们将以 250 个并发客户端发送 100,000 个 HTTP 请求。](https://example.org)
+- [我们准备好进攻了！我们将以 250 个并发客户端发送 100,000 个 HTTP 请求。](https://example.org)
 
 ```
  1 $ bees attack -n 100000 -c 250 -u http://ec2-54-204-61-43.compute-1.amazonaws.\
@@ -5876,7 +5743,6 @@ Benchmarking and load-testing is ultimitely one of the most important parts of S
 ### 赞助商
 
 我于 2012 年启动了《Scaling PHP Applications》作为实验，人们可以在书完成前预<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>
-
 
 | `Darius Aliabadi` || `Jake Fournier` || `Ronald Male` |
 

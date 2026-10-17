@@ -1,10 +1,5 @@
+
 # 2020 IEEE 第八届国际通信与网络会议 (ComNet)（突尼斯哈马梅特 2020.10.27-2020.10.30）
-
-
-
-
-
-
 
 **摘要**—安全仍然是通信网络面临的主要挑战。网络技术的最新进展，特别是软件定义网络（SDN）的出现，为提供高安全性的通信网络带来了巨大潜力。SDN 将数据面和控制面解耦，维持了整个网络的集中和全局视图。这使得主动、健壮和安全的网络成为可能。特别是将 SDN 能力映射到深度学习方法，近期引起了广泛的研究兴趣。大多数工作仅仅是在纯原生的 SDN 环境中，将早期的解决方案简单映射到基于深度学习的 SDN 安全，其中为 SDN 定身定制了开销最小的深度学习入侵检测模块。我们提出了一种新型基于深度学习的 SDN 入侵检测方法。实验结果表明，所提模型在特征选择最少的情况下实现了高准确率、低延迟以及对 SDN 控制器性能的影响最小，同时产生了满意的检测效果。
 
@@ -37,7 +32,6 @@
 专注于通过机器学习的益处来增强攻击。主要组件的功能展示如下：
 
 - a) 组装模块：收集 SDN 网络的流量信息。数据将被组装为控制器的输入，以执行包操作。利用 Openflow 协议定期向所有连接的 Open 交换机发送 Openflow 请求消息。管理交换机将返回包含流量统计的消息。
-
 - b) 自适应模块：部署使用 AEF 的入侵检测，控制器将利用 SDN 环境中的学习来检测攻击流量。所提解决方案将
 
 类似深度学习方法的检测准确率取得了良好的成就，但仍有改进空间。高拥塞时间、多层复杂处理、性能不一致是可以改进的缺陷示例。通过与训练过程、损失控制和函数激活控制相关的模型优化仍然需要且可以改进，特别是在入侵检测机制中。本文提出的工作重点在于进一步分析优化过程，这可以对入侵检测现有知识做出贡献。
@@ -50,11 +44,7 @@
 
 所提架构如图1 所示。两个主要功能是用于统计的组装模块和自适应 ML 模块，后者将采用深度学习对接收到的流量进行入侵检测并执行策略能力。
 
-
-
-
-
-## B. 数据集
+### B. 数据集
 
 机器学习中的大多数方法在测试之前都需要一个训练数据集对算法进行分类，分类攻击的数据集已在 [5] 中有所报道，报告的研究中共有 63% 使用 KDD 数据集进行训练和测试。在这项工作中，使用了一个新版本的 KDD+ 即 NS-KDD 数据集。该数据集已经针对导致评估偏置的重复数据和事实进行了修正。NS-KDD 数据集具有 41 个特征，其中两个特征是对称的，而其他不是。我们的模型使用 KDD+ 数据集进行训练，并使用 KDDTest 数据集进行测试。此外，KDDTest 包含了 17 种攻击，最多对应 KDD 中的 22 种。因此，KDDTest 是模型在零日攻击和所有类型攻击性能的可靠指标。两个数据集根据流量类型的分布所示表 1。
 
@@ -65,10 +55,9 @@ KDDtrain 包含 125,973 条记录，KDDTest 数据集包含 23,554 条记录。�
 | 训练 | 67,343 | 45,927 | 11,656 | 995 | 21 | 125,973 |
 | 测试 | 9,711 | 7,558 | 2,457 | 22 | 5 | 23,554 |
 
-表 1
-KDDTRAIN 和 KDDTEST 流量类型的攻击分布
+表 1. KDDTRAIN 和 KDDTEST 流量类型的攻击分布
 
-## C. AERF 模型
+### C. AERF 模型
 
 深度学习方法具有实现有效表示以改进解决方案的潜力。为了使该方法能够在环境中环境中，它必须结合快速、简单的方法以保证性能。因此，在提议中，使用通过微调特征的自动编码器来避免过拟合，但引入了问题。一种使用随机森林的混合组合用于从初步自动编码器计算过程中进行进一步分类。使用 NS-KDD 数据集进行初步测试，以目标检测准确率但最小处理时间对该方法进行排序。
 
@@ -76,7 +65,7 @@ AE（自动编码器）有两个阶段：编码和解码。在编码过程中，
 
 ```
 $h = f(Wx + b)$
-ny = f(W'h + b')$
+$y = f(W'h + b')$
 ```
 
 其中 $f$ 是非线性激活函数，$W$ 和 $W'$ 是权重矩阵，$b$ 是偏置，$y$ 是输出。训练过程中，最小化输入与输出 $y$ 之间的差异是主要目标。使用如下方式计算值之间的平均平方差：
@@ -127,8 +116,7 @@ $A(x) = max(0, x)$
 
 模型使用 Adam 优化器以 100 的批处理大小训练 10 个轮次（epochs），如图 5 所示。共 60,608 个样本用于训练，10% 的正常流量 6735 个样本用于验证。使用 Tensorflow 运行并实现所提模型。![](img/623a4dd23f7cdf616faab1933bf4d3_3_2.png)
 
-## 表 II
-AERF 架构
+## 表 II. AERF 架构
 
 | 输入层 | 丢弃 | 隐藏层 | 输出层 | 激活函数 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -136,8 +124,7 @@ AERF 架构
 
 模型的隐藏层用于第二层分类算法。随机森林在数据集的不同子样本上遵循集成方法，并使用平均值提高预测准确率并控制过拟合。使用 RF 进行入侵检测的研究结果见 [8] 和 [9]。关于 RF 作为最佳选择之一的研究由 [10] 和 [11] 得出。训练和测试的重复具有稳定的结果。从测试中收集的结果平均准确率为 90.19%；如表 III 所示通过自动编码过程获得。
 
-## 表 III
-自动编码器在测试集上的性能
+## 表 III. 自动编码器在测试集上的性能
 
 | 方法 | 准确率 | 精确率 | 召回率 | F1 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -145,8 +132,7 @@ AERF 架构
 
 RF 分类器的输入通过了 98.4% 的准确率，之前使用相同 NS-KDD 数据集进行入侵检测的工作见表 IV。所提模型实现了准确率的提升，并允许进一步改进。
 
-## 表 IV
-使用 KDT+KDD+ 数据集进行二分类的性能对比
+## 表 IV. 使用 KDT+KDD+ 数据集进行二分类的性能对比
 
 ![](img/623a4dd23f7cdf616faab1933bf4d3_4_0.png)
 
@@ -182,10 +168,6 @@ AERF 是作为 Python 语言的 Ryu 控制器应用程序实现的。Bbench 是�
 
 关于 Ryu 控制器的有趣观察是，它对延迟性能的影响微乎其微，如图 9 所示。当我们增加连接的开关数量时，所达延迟在 3 到 4 毫秒之间，并没有太大变化。
 
-
-
-
-
 ## VI. 结论与未来工作
 
 极短的处理时间是该方法在真实 SDN 环境中适用性的良好迹象。
@@ -202,8 +184,7 @@ AERF 是作为 Python 语言的 Ryu 控制器应用程序实现的。Bbench 是�
 
 图 9. SDN 环境延迟评估
 
-## TABLE V
-使用 KDTRAIN 和测试集进行二分类的性能对比
+## 表 V. 使用 KDTRAIN 和测试集进行二分类的性能对比
 
 | 方法 | 训练时间 | 测试时间 |
 |---|---|---|
@@ -218,16 +199,29 @@ AERF 是作为 Python 语言的 Ryu 控制器应用程序实现的。Bbench 是�
 - [1] N. Z. Bousary, A. Jahanvi, and K. Shahab, "DDoS Attack Detection and Management Using SDN Methods, Techniques, and Solutions," Journal of Computer Science and Engineering, vol. 7, pp. 425–441, 2017.
 - [2] S. Das, Y. Liu, and M. Chambandar, "Machine learning based online attack detection: Towards real-time protection against malware," IEEE International Conference on Information Security and Privacy, vol. 11, no. 2, pp. 289–302, 2016.
 - [3] L. Barki, A. Shibli, N. Meti, D. G. Naryan and F. M. Milla, "Detection of distributed denial of service attack networks," 2016 IEEE International Conference on Advances in Communications and Informatics, ICCAU 2016, pp. 2576–2581, 2016.
-- [4] T. A. Tran, R. Khosravi, M. Lee, "Deep Recurrent Neural Network for Intrusion Detection in SDN-based Networks," 2018 IEEE International Conference on Network Science and Security, pp. 143–148, 2018.
-- [5] S. Tone, T. N Ng, V. D. Choi, and Y. Shah, "Deep Learning Approach to Network Intrusion Detection," IEEE Transactions on Emerging Technologies in Artificial Intelligence, 2019.
-- [6] Q. Nizam, S. W. Y. A. Javad, and M. Alam, "A deep learning approach for network intrusion detection in International Conference on Computer Science and Security, 2018.
-- [7] C. Graciano, A. Adel, M. Mohamed, K. Eshtab, F. C. Martorato, H. Larjati, A. Rasha, and A. Sun, "Statistical Analysis of Optimized Deep Learning System for Intrusion Detection,"ing Notes in Computer Science including security and applications in biometrics, vol. 10891, pp. 759–768, 2020.
-- [8] Y. Wang, Y. Ge, and Y. Zhang, "Network intrusion detection based on random forest and support vector machine," Proceedings - 2017 IEEE International Conference on Computer Science and Engineering (ICSE) and 2017 IEEE International Conference on Big Data, vol. 1, pp. 635–638, 2017.
-- [9] Y. Y. Y. and M. M. Ali, "An analysis of random forest algorithm for intrusion detection in SDN," 2013 IEEE/IACS International Conference on Information Security, Privacy/Distributed Computing, pp. 127–132, 2013.
-- [10] M. Ansar, R. Abdullah, H. Hussain, Y. Chow, and O. E. El-Qader, "Deep Learning Based Approach with SVM for Intrusion Detection," 2016 14th International Conference on Computer Security and Trust, FIST, pp. 282–288, 2016.
-- [12] M. Al-Qaf, Y. Lasher, M. Al-Habbi, and K. Al-Subahi, "Deep Learning Using Approach with SVM for Intrusion Detection," IEEE Access, vol. 6, pp. 52245–52258, 2018.
-- [13] C. Yin, Y. Zhou, J. J. Fei, and X. He, "A Deep Learning Approach for Intrusion Detection Using Recurrent Neural Networks," IEEE Access, vol. 5, pp. 25204–25219, 2017.
-- [14] R. Li, S. Amini, X. Wang, J. Z. Huang, H. Abbas, and Y. L. He, "Fuzziness based semi-supervised learning approach for intrusion detection systems," Information Sciences, vol. 57, pp. 486–497, 2017.
-- [15] M. Yousef-Azar, V. Varadarajan, L. Hamey, and U. Tupakala, "Autoencoder-based feature learning for cyber security applications," Proceedings of the International Joint Conference on Neural Networks, vol. 2017-May, pp. 3854–3861, 2017.
-- [16] L. Zhu, M. M. Karim, K. Sharif, F. Li, X. Du, and M. Guizani, "SDN Controllers: Benchmarking & Performance Evaluation," pp. 1–14, 2019.
 
+
+
+- [4] T. A. Tran, R. Khosravi, M. Lee, "Deep Recurrent Neural Network for Intrusion Detection in SDN-based Networks," 2018 IEEE International Conference on Network Science and Security, pp. 143–148, 2018.
+
+- [5] S. Tone, T. N Ng, V. D. Choi, and Y. Shah, "Deep Learning Approach to Network Intrusion Detection," IEEE Transactions on Emerging Technologies in Artificial Intelligence, 2019.
+
+- [6] Q. Nizam, S. W. Y. A. Javad, and M. Alam, "A deep learning approach for network intrusion detection in International Conference on Computer Science and Security, 2018.
+
+- [7] C. Graciano, A. Adel, M. Mohamed, K. Eshtab, F. C. Martorato, H. Larjati, A. Rasha, and A. Sun, "Statistical Analysis of Optimized Deep Learning System for Intrusion Detection,"ing Notes in Computer Science including security and applications in biometrics, vol. 10891, pp. 759–768, 2020.
+
+- [8] Y. Wang, Y. Ge, and Y. Zhang, "Network intrusion detection based on random forest and support vector machine," Proceedings - 2017 IEEE International Conference on Computer Science and Engineering (ICSE) and 2017 IEEE International Conference on Big Data, vol. 1, pp. 635–638, 2017.
+
+- [9] Y. Y. Y. and M. M. Ali, "An analysis of random forest algorithm for intrusion detection in SDN," 2013 IEEE/IACS International Conference on Information Security, Privacy/Distributed Computing, pp. 127–132, 2013.
+
+- [10] M. Ansar, R. Abdullah, H. Hussain, Y. Chow, and O. E. El-Qader, "Deep Learning Based Approach with SVM for Intrusion Detection," 2016 14th International Conference on Computer Security and Trust, FIST, pp. 282–288, 2016.
+
+- [12] M. Al-Qaf, Y. Lasher, M. Al-Habbi, and K. Al-Subahi, "Deep Learning Using Approach with SVM for Intrusion Detection," IEEE Access, vol. 6, pp. 52245–52258, 2018.
+
+- [13] C. Yin, Y. Zhou, J. J. Fei, and X. He, "A Deep Learning Approach for Intrusion Detection Using Recurrent Neural Networks," IEEE Access, vol. 5, pp. 25204–25219, 2017.
+
+- [14] R. Li, S. Amini, X. Wang, J. Z. Huang, H. Abbas, and Y. L. He, "Fuzziness based semi-supervised learning approach for intrusion detection systems," Information Sciences, vol. 57, pp. 486–497, 2017.
+
+- [15] M. Yousef-Azar, V. Varadarajan, L. Hamey, and U. Tupakala, "Autoencoder-based feature learning for cyber security applications," Proceedings of the International Joint Conference on Neural Networks, vol. 2017-May, pp. 3854–3861, 2017.
+
+- [16] L. Zhu, M. M. Karim, K. Sharif, F. Li, X. Du, and M. Guizani, "SDN Controllers: Benchmarking & Performance Evaluation," pp. 1–14, 2019.

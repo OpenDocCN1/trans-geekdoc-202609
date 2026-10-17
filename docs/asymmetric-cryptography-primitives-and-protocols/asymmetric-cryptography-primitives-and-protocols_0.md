@@ -1,13 +1,7 @@
-## 非对称密码学：原语与协议
 
+# 非对称密码学：原语与协议
 
-
-
-
-
-
-
-# 前言
+## 前言
 
 **David POINTCHEVAL**
 
@@ -29,9 +23,7 @@
 
 各章节概述了公钥密码学领域的一些最新进展。这绝不是详尽无遗的，每个演示都是作者对该领域的观点。有一些通用描述，有时则是更聚焦的例子来说明目的。它们适合广大受众发现或深入了解公钥密码学。
 
-# 1
-
-公钥加密与安全概念
+## 1 公钥加密与安全概念
 
 **Nuttapong ATTRAPADUNG 和 Takahiro MATSUDA**
 
@@ -41,17 +33,17 @@
 
 我们首先围绕称为“抗选择密文攻击下的不可区分性”（IND-CCA）的安全概念展开，这被广泛接受为 PKE 的事实标准概念。在第一部分中，我们详细研究了 Cramer-Shoup（CS）PKE（Cramer 和 Shoup，1998），这是在合理假设下第一个实用的 IND-CCA 安全 PKE。这一部分也可作为一种流行的安全证明方法——基于游戏的方法——的入门材料。在第二部分中，我们综述了 IND-CCA 安全 PKE 的具体构造和通用构造。在最后一部分中，我们简要介绍了 PKE 的一些先进近期研究主题，如紧致安全性、密钥相关消息（KDM）安全性等。
 
-## 1.1. PKE 的基本定义
+### 1.1 PKE 的基本定义
 
-### 1.1.1. 基本符号
+#### 1.1.1 基本符号
 
 对于 *n* ∈ ![image](img/n1.jpg)，我们定义 \[*n*\] := {1*,..., n*}。对于离散有限集 *S*，|*S*| 表示其大小，*x* ←[R] *S* 表示从 *S* 中均匀随机选择元素 *x*。对于字符串 *x* 和 *y*，|*x*| 表示 *x* 的比特长度，*x*ǁ*y* 表示它们的拼接。
 
 对于（概率）算法或函数 `A`，*y* ←[R] `A`(*x*) 表示将 `A` 在输入 *x* 上的输出赋值给 *y*，如果需要指定 `A` 中使用的随机数 *r*，我们记作 *y* ← `A`(*x*; *r*)（此时 `A` 的计算被理解为在输入 *x* 和 *r* 上是确定性的）。如果 ![image](img/o.jpg)(·) 表示一个函数或算法，则 ![image](img/i1.jpg) 意味着 `A` 拥有对 ![image](img/o.jpg)(·) 的预言机访问权，即给定输入 *x* 时返回 ![image](img/o.jpg)(*x*) 给 `A`（但 `A` 无法看到 ![image](img/o.jpg) 的内部描述/计算）。*λ* 始终表示安全参数。PPT 代表*概率多项式时间*。如果函数 *f*(*λ*) 趋向于 0 的速度快于 *λ*^(−*c*)（对于任意常数 *c* > 0），则称该函数为*可忽略函数*。
 
-### 1.1.2. 公钥加密
+#### 1.1.2 公钥加密
 
-一个 PKE 方案由三个 PPT 算法 (`KG, Enc, Dec`) 组成，语法如下：
+一个 PKE 方案由三个 PPT 算法 (`KG`, `Enc`, `Dec`) 组成，语法如下：
 
 ![image](img/p2-1.jpg)
 
@@ -59,9 +51,9 @@
 
 如果对于所有 *λ* ∈ ![image](img/n1.jpg)，`KG`(1^(*λ*)) 输出的 (*pk, sk*) 和任意 *m*，都有 `Dec`(*sk,* `Enc`(*pk, m*)) = *m*，则称该 PKE 方案是*正确的*。
 
-历史上，PKE 的概念最早由 Diffie 和 Hellman（1976）的开创性工作提出，第一个可行的构造由 Rivest 等人（1978）提出，称为 RSA 加密方案。早期提出的 PKE 系统（如 RSA）考虑的是具有确定性加密算法的方案（即确定性 PKE，又称陷门函数 \[TDF\]）。Goldwasser 和 Micali（1982）首次处理了具有概率加密算法的 PKE。
+历史上，PKE 的概念最早由 Diffie 和 Hellman（1976）的开创性工作提出，第一个可行的构造由 Rivest 等人（1978）提出，称为 RSA 加密方案。早期提出的 PKE 系统（如 RSA）考虑的是具有确定性加密算法的方案（即确定性 PKE，又称陷门函数 `TDF`）。Goldwasser 和 Micali（1982）首次处理了具有概率加密算法的 PKE。
 
-### 1.1.3. IND-CPA 与 IND-CCA 安全性
+#### 1.1.3 IND-CPA 与 IND-CCA 安全性
 
 这里，我们回顾 PKE 的两个核心基本安全概念：抗选择明文攻击下的不可区分性（*IND-CPA 安全性*）和 *IND-CCA 安全性*。
 
@@ -73,45 +65,39 @@
 
 **图 1.1.** *PKE 的 IND-CPA 实验（左）和 IND-CCA 实验（右）。*^((†)) *要求* |*m*[0]| = |*m*[1]|.^((‡)) ![image](img/a.jpg)[2] *不允许向* `Dec`(*sk,* ·) *提交* *c*^∗
 
-
-
-
 名称 `IND-CPA` 和 `IND-CCA`，以及更普遍地将安全目标（`IND`）与攻击模型（`CPA`/`CCA`）相结合的符号，是由 Bellare 等人（1998）引入的，该符号已被频繁采用于其他类型的安全概念中。`IND-CPA` 安全性是由 Goldwasser 和 Micali（1982）引入的针对 PKE 的最早的形式化定义。他们还利用模拟器的概念，给出了另一种称为*语义安全*的 PKE 形式化安全定义。（使用模拟器定义的安全概念通常称为基于模拟的安全定义。）粗略地说，语义安全捕捉了这样的直觉：密文除了泄露其长度外，不会泄露加密明文的任何部分信息（针对被动观察密文的对手）。这一概念旨在将 Shannon（1949）所考虑的加密方案安全概念*完全保密*的计算变体形式化。Goldwasser 和 Micali（1982）证明了 `IND-CPA` 安全性与语义安全性是等价的。很容易看出，`IND-CPA` 安全性无法由加密算法为确定性的 PKE 方案实现。
 
 抗选密文攻击的安全概念最早由 Naor 和 Yung（1990）形式化，其定义捕捉了所谓的*IND-CCA1 安全性*，即不允许对手在接收到挑战密文后进行解密查询。（这种攻击类型也称为*非自适应*选密文攻击。）考虑对手在接收到挑战密文*后*进行解密查询的选密文攻击，最早由 Rackoff 和 Simon（1992）提出。（这种攻击类型称为*自适应*选密文攻击。）我们上面回顾的 `IND-CCA` 安全性的形式化定义是当今最广泛使用的定义。`IND-CCA` 安全性有时被称为 `IND-CCA2` 安全性，以明确表明它考虑了自适应选密文攻击。
 
 与 `IND-CPA` 安全性不同，`IND-CCA` 安全性捕捉了拥有解密预言机访问权限的“主动”对手的安全性。然而，从其定义中可能不明显我们为何应关注这一安全概念。`IND-CCA` 安全性的实际重要性首次因 Bleichenbacher（1998）对 PKE 方案 `PKCS#1v1.5` 的著名攻击而被广泛认知。他的攻击通过访问一个预言机（输入密文，返回该密文是否根据解密算法处于有效形式）从密文中恢复明文。如果 PKE 方案具有 `IND-CCA` 安全性，则此攻击无效。为了应对 Bleichenbacher 的攻击，`PKCS#1` 进行了更新并采用了 `RSA-OAEP` 方案（Bellare 和 Rogaway 1995），该方案被证明具有 `IND-CCA` 安全性（在随机预言机模型中）。此外，`IND-CCA` 安全性已被证明蕴含 PKE 的许多有用且重要的安全概念（从实践和理论两个角度），例如下一节所述的不可延展性（Dolev 等人 1991）。因此，`IND-CCA` 安全性如今被认为是 PKE 应达到的黄金标准安全概念之一。
 
-### 1.1.4. 其他基本安全概念及关系
+#### 1.1.4 其他基本安全概念及关系
 
 在此，我们回顾 PKE 的其他两个基本安全概念，它们与 `IND-CPA` 和 `IND-CCA` 安全性一样基础。（我们不给出形式化定义，因此有兴趣的读者请参考原始或相关论文。）我们还将在第 1.4 节中描述更多安全概念。
 
-#### 1.1.4.1. 单向性
+##### 1.1.4.1 单向性
 
 *单向性*是一种安全概念，捕捉了这样的直觉：给定一个加密随机选择明文 `m` 的密文 `c`，无法完全恢复 `m`。作为 PKE 的安全概念，这听起来可能足够强。然而，一旦形式化，它并不保证 `c` 不会泄露关于 `m` 的任何部分信息。此外，该安全概念不适用于加密熵不大的消息（例如单个比特）的 PKE 方案。与不可区分性安全概念类似，我们可以在 CPA 和 CCA 设置下考虑这一概念。对于 PKE 方案（具有足够大的明文空间），`IND-CPA`（分别 `IND-CCA`）安全性蕴含 CPA（分别 CCA）下的单向性。
 
-#### 1.1.4.2. 不可延展性
+##### 1.1.4.2 不可延展性
 
 *不可延展性*是一种安全概念，捕捉了这样的直觉：给定一个加密某明文 `m` 的密文 `c`，无法构造出一个密文 `c'`，使其解密得到的明文 `m'` 与 `m` “有意义地相关”（例如 `m' = m + 1`）。例如，这种安全性对于用于密封拍卖的 PKE 是必要的。不可延展性最早由 Dolev 等人（1991）引入，他们给出了基于模拟的形式化。随后，又提出了几种其他形式的不可延展性形式化（Bellare 等人 1998；Bellare 和 Sahai 1999, 2006；Pass 等人 2007）。不可延展性听起来更像是完整性而非保密性的安全概念。然而，在上述任何形式化中，CPA 下的不可延展性都蕴含 `IND-CPA` 安全性。
 
 Bellare 等人（1998）和 Dolev 等人（2000）（Dolev 等人 1991 的期刊版）证明了 `IND-CCA` 安全性与选密文攻击下的一种不可延展性形式是等价的，这支持了 `IND-CCA` 安全性的重要性。Bellare 和 Sahai（1999）证明了几种不可延展性形式的等价性，即：捕捉 Dolev 等人（1991）精神的基于模拟的形式、Bellare 等人（1998）引入的基于比较的形式、以及使用“并行解密查询”概念（也在 Bellare 和 Sahai 1999 中引入）的基于不可区分性的形式。Bellare 和 Sahai（2006）（Bellare 和 Sahai 1999 的更新完整版）和 Pass 等人（2007）阐明了 PKE 不可延展性形式化中对无效密文（解密为无效符号）处理的一些微妙之处。特别是后一项工作表明，对于解密算法可能返回无效符号的 PKE 方案，基于模拟的不可延展性严格强于基于不可区分性的不可延展性。
 
-## 1.2. 基本 PKE 方案
+### 1.2 基本 PKE 方案
 
 我们描述一些基本 PKE 方案并证明其安全性。我们将重点关注基于与离散对数相关问题的 PKE 方案，即 ElGamal PKE 和 CS PKE，它们的 `IND-CPA` 和 `IND-CCA` 安全性分别依赖于判断性 Diffie-Hellman (DDH) 问题的困难性。为了理解其设计原理（特别是 Cramer-Shoup PKE），我们遵循 Katz（2004）的方法，通过一个中间方案逐步修改 ElGamal PKE，最终得到 CS PKE。我们将通过简要综述其他家族的具体 PKE 方案来结束本节。
 
-### 1.2.1. 基于游戏的证明
+#### 1.2.1 基于游戏的证明
 
 以下各节的另一个目的是演示如何使用*基于游戏的*方法（例如 Shoup 2004；Bellare 和 Rogaway 2006），也称为*混合论证*，来证明复杂方案的安全性。在这种方法中，我们通常定义一系列游戏，其中第一个是我们想要证明的安全概念（例如 `IND-CCA` 游戏）所定义的真实攻击游戏，最后一个是显而易见安全的攻击游戏（对手的优势为零）。然后我们证明相邻游戏之间对手优势的差异可以忽略不计。将它们全部结合起来，我们就可以得出原始游戏中的优势接近于可忽略不计。这样做的一个主要好处是，我们可以*一次*专注于方案所依赖的一个假设（注意复杂方案通常依赖许多假设或要素），而基于单一假设/要素分析这种变化应该是简单的。作为预备知识，我们陈述一个有用的引理：
 
-
-
-
-# 引理 1.1（差分引理 (Shoup 2004)）
+**引理 1.1（差分引理 (Shoup 2004)）**
 
 设 `A`、`B`、`F` 为某概率空间中定义的事件，且满足 `A ∧ ¬F = B ∧ ¬F`。则有 `|Pr[A] − Pr[B]| ≤ Pr[F]`。
 
-### 1.2.2. ElGamal 加密
+#### 1.2.2 ElGamal 加密
 
 ElGamal 方案（ElGamal 1984）是最著名的公钥加密（PKE）方案之一。其 IND-CPA 安全性依赖于 DDH 问题的困难性。
 
@@ -134,6 +120,8 @@ Adv_DDH^GGen(D) = |Pr[D(G, q, g, g^α, g^β, g^(αβ)) = 1] − Pr[D(G, q, g, g^
 ![Figure 1.2. The ElGamal encryption](img/fig1-2.jpg)
 
 **图 1.2. ElGamal 加密**
+
+
 
 **游戏 0.** 此游戏即为由 ElGamal 方案与对手 `A` 实例化的 IND-CPA 游戏。由定义，`Pr[S[0]] = Adv_IND-CPA^ElGamal(A)`。
 
@@ -209,24 +197,21 @@ Adv_DDH^GGen(D) = |Pr[D(G, q, g, g^α, g^β, g^(αβ)) = 1] − Pr[D(G, q, g, g^
 >
 > `b' ←[R] A_2(g^β, g^γ, w, e, st)`。若 `b = b'` 则输出 1，否则输出 0。
 
+现在我们可以看到，`D` 在 `g[1] = g`、`g[2] = g^α`、`u = g^β`、`υ = g^γ` 的情况下，在游戏 0 和游戏 1 之间进行插值。如果 `γ = αβ`，则 `D` 模拟游戏 0。如果 `γ` 是随机的，则 `D` 模拟游戏 1。因此，其优势正好是 `Pr[S[0]] – Pr[S[1]]`，从而得证。
 
+**声明 1.4.** `| Pr[S[1]] − Pr[S[2]] |` 可忽略不计。
 
+根据差异引理，我们有 `| Pr[S[1]] − Pr[S[2]] | ≤ Pr[E]`，其中 `E` 是事件 `ℓ = 0` 或 `r = r′`，这里 `l, r′ ←[R] Z_q`，观察到 `E` 发生的概率可忽略不计，因为 `q` 是指数级的。
 
-现在我们可以看到，![image](img/d.jpg) 在 `g[1] = g`、`g[2] = g^α`、`u = g^β`、`υ = g^γ` 的情况下，在游戏 0 和游戏 1 之间进行插值。如果 `γ = αβ`，则 ![image](img/d.jpg) 模拟游戏 0。如果 `γ` 是随机的，则 ![image](img/d.jpg) 模拟游戏 1。因此，其优势正好是 `Pr[S[0]] – Pr[S[1]]`，从而得证。
+**声明 1.5.** `| Pr[S[2]] − Pr[S[3]] |` 可忽略不计。
 
-**声明 1.4.** – `| Pr[S[1]] − Pr[S[2]] | 可忽略不计。`
+由于该声明是信息论层面的，我们将证明即使 `A` 是一个全能对手（例如可能能够计算离散对数），该陈述依然成立。为证明该声明，令 `F` 为对手 `A` 查询至少一个通过有效性检查的非法密文的事件。根据 `F` 的定义，我们有 `S[2] ∧ ¬F = S[3] ∧ ¬F`。因此，由差异引理可得 `| Pr[S[2]] − Pr[S[3]] | ≤ Pr[F]`。现在我们推导 `Pr[F]` 的最大界。回顾 `ℓ = log_g1 g_2`。对于每个查询 `C[i] = (u[i], v[i], w[i], e[i])`，我们记 `r[i] = log_g1 u[i]`，`r'[i] = log_g2 v[i]` 和 `z[i] = log_g1 e[i]`。Dec 中的有效性检查等式，即 `u[i]^a v[i]^b = e[i]`，等价于 `r[i]a + r'[i]ℓb = z[i]`。因此，`A` 可以使其第一个查询为非法，同时通过猜测 `z[1]` 且满足 `r[1] ≠ r'[1]` 使得 `r[1]a + r'[1]ℓb = z[1]` 来通过有效性检查。现在我们观察到，`A` 关于 `a, b` 的信息仅来自公钥，即 `c = g^(a+ℓb)`，因此对于全能对手，它可能知道 `log_g1 c = a + ℓb`。但由于 `r[1] ≠ r'[1]`，我们有 `r[1]a + r'[1]ℓb` 与 `a + ℓb` 线性无关，因此它只能以 `1/q` 的概率正确猜测 `z[1]`。
 
-根据差异引理，我们有 `| Pr[S[1]] − Pr[S[2]] | ≤ Pr[E]`，其中 `E` 是事件 `ℓ = 0` 或 `r = r′`，这里 `l, r′ ←[R] ![image](img/z1.jpg)[q]`，观察到 `E` 发生的概率可忽略不计，因为 `q` 是指数级的。
+对于第 `i` 个查询，`A` 可以通过类似的猜测使其非法，但现在它从之前未通过检查的非法查询中获得了关于 `a, b` 的更多信息。更精确地说，对于一个被拒绝的非法查询 `C[j] = (u[j], v[j], w[j], e[j])`，其中 `j < i`，`A` 了解到 `r[j]a + r'[j]ℓb = z[j]`。这从受限于其对 `a+ℓb` 的认知的 `q` 个可能的 `(a, b)` 对中排除了一个可能性。在第 `i` 个查询之前，最多有 `i − 1` 个这样的查询。因此，`A` 正确猜测 `z[i]` 的概率至多为 `1/(q - i + 1)`。令 `k` 为查询总数。由并集界可知，`Pr[F]` 至多为 `k/(q − k + 1)`。由于 `k` 是 `λ` 的多项式而 `q` 是指数级的，该量可忽略不计。
 
-**声明 1.5.** – `| Pr[S[2]] − Pr[S[3]] | 可忽略不计。`
+**声明 1.6.** `Pr[S[3]] = 1/2.`
 
-由于该声明是信息论层面的，我们将证明即使 ![image](img/a.jpg) 是一个全能对手（例如可能能够计算离散对数），该陈述依然成立。为证明该声明，令 `F` 为对手 ![image](img/a.jpg) 查询至少一个通过有效性检查的非法密文的事件。根据 `F` 的定义，我们有 `S[2] ∧ ¬F = S[3] ∧ ¬F`。因此，由差异引理可得 `| Pr[S[2]] − Pr[S[3]] | ≤ Pr[F]`。现在我们推导 `Pr[F]` 的最大界。回顾 `ℓ = log[g1] g[2]`。对于每个查询 `C[i] = (u[i], v[i], w[i], e[i])`，我们记 `r[i] = log[g1] u[i]`，![image](img/i22.jpg) 和 `z[i] = log^(g1) e[i]`。Dec 中的有效性检查等式，即 ![image](img/i23.jpg) `e[i]`，等价于 ![image](img/i24.jpg) 因此，![image](img/a.jpg) 可以使其第一个查询为非法，同时通过猜测 ![image](img/i25.jpg) 且满足 `r[1] ≠ ![image](img/rp1.jpg)` 使得 `r[1]a + ![image](img/rp1.jpg)ℓb = z[1]` 来通过有效性检查。现在我们观察到，![image](img/a.jpg) 关于 `a, b` 的信息仅来自公钥，即 ![image](img/i26.jpg)，因此对于全能对手，它可能知道 `log[g1] c = a + ℓb`。但由于 `r[1] ≠ ![image](img/rp1.jpg)`，我们有 `r[1]a + ![image](img/rp1.jpg)ℓb` 与 `a + ℓb` 线性无关，因此它只能以 `1/q` 的概率正确猜测 `z[1]`。
-
-对于第 `i` 个查询，![image](img/a.jpg) 可以通过类似的猜测使其非法，但现在它从之前未通过检查的非法查询中获得了关于 `a, b` 的更多信息。更精确地说，对于一个被拒绝的非法查询 `C[j] = (u[j], v[j], w[j], e[j])`，其中 `j < i`，![image](img/a.jpg) 了解到 ![image](img/i27.jpg) 这从受限于其对 `a+ℓb` 的认知的 `q` 个可能的 `(a, b)` 对中排除了一个可能性。在第 `i` 个查询之前，最多有 `i − 1` 个这样的查询。因此，![image](img/a.jpg) 正确猜测 `z[i]` 的概率至多为 `1/(q (i 1))`。令 `k` 为查询总数。由并集界可知，`Pr[F]` 至多为 `k/(q − k + 1)`。由于 `k` 是 `λ` 的多项式而 `q` 是指数级的，该量可忽略不计。
-
-**声明 1.6.** – `Pr[S[3]] = 1/2.`
-
-为证明该声明，只需证明在游戏 3 中，给定视图中所有已知指数的情况下，消息掩码项的指数是均匀随机的。这等价于证明给定 `ℓ, x + ℓy`（来自 `pk`）、`r, r′`（来自挑战密文）及其解密查询答案中的一些信息的情况下，`xr + ℓyr′` 是均匀随机的。忽略后者，这成立是因为 `xr+ℓyr′` 与 `x + ℓy` 线性无关，因为 `r ≠ r′` 且 `ℓ = 0`。我们进一步论证，即使给定其解密查询的答案，也不会获得关于 `x, y` 的额外信息。现在，由于在游戏 3 中，我们拒绝所有通过有效性检查的非法查询，剩余的查询要么不通过检查，要么不是非法查询。在第一种情况下，检查不涉及 `x, y`（因此无关于它们的信息）。在后一种情况下，我们有 ![image](img/i28.jpg) 且 ![image](img/a.jpg) 了解 `log[g1] m[i] = z[i] r[i]x ℓr[i]y`。但这与 `x + ℓy` 线性相关。因此，没有关于 `x, y` 的额外信息。
+为证明该声明，只需证明在游戏 3 中，给定视图中所有已知指数的情况下，消息掩码项的指数是均匀随机的。这等价于证明给定 `ℓ, x + ℓy`（来自 `pk`）、`r, r′`（来自挑战密文）及其解密查询答案中的一些信息的情况下，`xr + ℓyr′` 是均匀随机的。忽略后者，这成立是因为 `xr+ℓyr′` 与 `x + ℓy` 线性无关，因为 `r ≠ r′` 且 `ℓ ≠ 0`。我们进一步论证，即使给定其解密查询的答案，也不会获得关于 `x, y` 的额外信息。现在，由于在游戏 3 中，我们拒绝所有通过有效性检查的非法查询，剩余的查询要么不通过检查，要么不是非法查询。在第一种情况下，检查不涉及 `x, y`（因此无关于它们的信息）。在后一种情况下，我们有 `r[i] = r'[i]` 且 `A` 了解 `log_g1 m[i] = z[i] - r[i]x - ℓr[i]y`。但这与 `x + ℓy` 线性相关。因此，没有关于 `x, y` 的额外信息。
 
 结合所有差异，我们有
 
@@ -242,50 +227,49 @@ Adv_DDH^GGen(D) = |Pr[D(G, q, g, g^α, g^β, g^(αβ)) = 1] − Pr[D(G, q, g, g^
 
 我们现在描述下图中的完整 CS 加密方案（(Cramer and Shoup 1998), (Cramer and Shoup 2003)）。该方案很重要，因为它是在标准模型下（不依赖随机预言机等理想化结构）的第一个高效 IND-CCA 安全方案。
 
-CS 方案将使用另一个要素：抗碰撞哈希函数族。^()
+CS 方案将使用另一个要素：抗碰撞哈希函数族。
 
-其正确性类似于简化方案。特别地，对于按照 Enc 诚实构造的密文 `C := (u, v, w, e)`，我们可以看到它通过检查，因为 ![image](img/i29.jpg)
+其正确性类似于简化方案。特别地，对于按照 Enc 诚实构造的密文 `C := (u, v, w, e)`，我们可以看到它通过检查，因为 `e = u^(a + αb) v^(c + αd)`。
 
-**定理 1.3.** – *假设 DDH 假设对* ![image](img/g.jpg) *成立。则* ![image](img/g.jpg) *上的 CS 方案是 IND-CCA 安全的。*
+**定理 1.3.** 假设 DDH 假设对 `GGen` 成立。则 `GGen` 上的 CS 方案是 IND-CCA 安全的。
 
-**证明.** – 设 ![image](img/a.jpg) 为攻击 CS 方案 IND-CCA 安全性的任意 PPT 对手。我们使用以下游戏。令 `S[i]` 为游戏 `i` 中 ![image](img/b.jpg) = ![image](img/b.jpg)′ 的事件。记挑战密文为 `C* = (u*, v*, w*, e*)`，第 `i` 个密文查询为 `C[i] = (u[i], v[i], w[i], e[i])`。
+**证明.** 设 `A` 为攻击 CS 方案 IND-CCA 安全性的任意 PPT 对手。我们使用以下游戏。令 `S[i]` 为游戏 `i` 中 `b = b'` 的事件。记挑战密文为 `C* = (u*, v*, w*, e*)`，第 `i` 个密文查询为 `C[i] = (u[i], v[i], w[i], e[i])`。
 
 ![图 1.6. Cramer-Shoup 加密](img/fig1-6.jpg)
 
-**图 1.6.** *Cramer-Shoup 加密*
+**图 1.6.** Cramer-Shoup 加密
 
-**游戏 0.** 令该游戏完全是由 CS 方案与对手 ![image](img/a.jpg) 实例化的 IND-CCA 游戏。根据定义，我们有 ![image](img/i30.jpg)
+**游戏 0.** 令该游戏完全是由 CS 方案与对手 `A` 实例化的 IND-CCA 游戏。根据定义，我们有 `Pr[S[0]] = Adv_IND-CCA^CS(A)`。
 
 **游戏 1.** 这完全是游戏 0，例外是解密预言机现在还拒绝任何满足 `(u[i], v[i], w[i]) = (u*, v*, w*)` 但 `e[i] ≠ e*` 的挑战后解密查询 `C[i] = (u[i], v[i], w[i], e[i])`。
 
-**游戏 2.** 我们现在通过用随机 ![image](img/i32.jpg) 计算 ![image](img/i31.jpg) 来代替游戏 1 计算挑战密文，从而对游戏 1 进行更改。
+**游戏 2.** 我们现在通过用随机 `r, r' ←[R] Z_q` 计算 `u = g_1^r, v = g_2^r'` 来代替游戏 1 计算挑战密文，从而对游戏 1 进行更改。
 
-**游戏 3.** 这完全是游戏 2，例外是 `ℓ ≠ 0` 且 `r ≠ r′`。
+**游戏 3.** 这完全是游戏 2，例外是 `ℓ ≠ 0` 且 `r ≠ r'`。
 
-**游戏 4.** 这完全是游戏 3，例外是解密预言机现在还拒绝满足以下条件的任何查询 `C[i] = (u[i], υ[i], w[i], e[i])`：
+**游戏 4.** 这完全是游戏 3，例外是解密预言机现在还拒绝满足以下条件的任何查询 `C[i] = (u[i], v[i], w[i], e[i])`：
 
-1.1 ![equation](img/eq1-1.jpg)
+1.1 `H(u[i], v[i], w[i]) = H(u*, v*, w*)` 且 `(u[i], v[i], w[i]) ≠ (u*, v*, w*)`。
 
-**游戏 5.** 这完全是游戏 4，例外是解密预言机现在还拒绝满足 `log[g1] u[i] ≠ log[g2] υ[i]`（即 `C[i]` 是非法密文）且在游戏 3 中未被拒绝的查询 `C[i] = (u[i], υ[i], w[i], e[i])`。
+**游戏 5.** 这完全是游戏 4，例外是解密预言机现在还拒绝满足 `log_g1 u[i] ≠ log_g2 v[i]`（即 `C[i]` 是非法密文）且在游戏 3 中未被拒绝的查询 `C[i] = (u[i], v[i], w[i], e[i])`。
 
-**声明 1.7.** – `Pr[S[0]] = Pr[S[1]]`。
+**声明 1.7.** `Pr[S[0]] = Pr[S[1]]`。
 
-从游戏 0 到游戏 1 的变化仅是概念上的（无实际变化）。确实，很容易看出满足 `(u[i], υ[i], w[i]) = (u*, υ*, w*)` 但 `e[i] ≠ e*` 的查询总是被拒绝的。
+从游戏 0 到游戏 1 的变化仅是概念上的（无实际变化）。确实，很容易看出满足 `(u[i], v[i], w[i]) = (u*, v*, w*)` 但 `e[i] ≠ e*` 的查询总是被拒绝的。
 
-**声明 1.8.** – ![image](img/i33.jpg) *对某个 PPT 算法* ![image](img/d.jpg) *成立。*
+**声明 1.8.** `|Pr[S[1]] − Pr[S[2]]| = Adv_DDH^GGen(D)` 对某个 PPT 算法 `D` 成立。
 
 上述声明的证明方式与声明 1.3 几乎相同，此处省略。
 
-**声明 1.9.** – `| Pr[S[2]] − Pr[S[3]] | 可忽略不计。`
+**声明 1.9.** `| Pr[S[2]] − Pr[S[3]] |` 可忽略不计。
 
 上述内容与声明 1.4 完全相同。
 
-**声明 1.10.** – `Pr[S[3]] − Pr[S[4]] 可忽略不计，假设 ![image](img/h.jpg) 是抗碰撞哈希族。`
+**声明 1.10.** `Pr[S[3]] − Pr[S[4]]` 可忽略不计，假设 `H` 是抗碰撞哈希族。
 
-假设游戏 4 中的例外事件发生。那么，这意味着我们如关系 1.1 所述精确地找到了 `H` 的碰撞。由于 ![image](img/h.jpg) 的安全性，这发生的概率可忽略不计。使用差异引理，我们可以得出该声明。
+假设游戏 4 中的例外事件发生。那么，这意味着我们如关系 1.1 所述精确地找到了 `H` 的碰撞。由于 `H` 的安全性，这发生的概率可忽略不计。使用差异引理，我们可以得出该声明。
 
-**声明 1.11.** – `| Pr[S[4]] − Pr[S[5]] | 可忽略不计。`
-
+**声明 1.11.** `| Pr[S[4]] − Pr[S[5]] |` 可忽略不计。
 
 
 
@@ -357,10 +341,6 @@ CS 方案将使用另一个要素：抗碰撞哈希函数族。^()
 
 #### 1.2.5.4. 随机预言模型中的 PKE
 
-
-
-
-
 # IND-CCA 安全 PKE 的通用构造
 
 迄今为止，我们描述和列举的仅是*标准模型*中的 PKE 方案。另一种通常能产生非常高效的 IND-CCA 安全 PKE 的流行方法，是在*随机预言机模型*（RO）（Bellare 和 Rogaway 1993）中构造方案。随机预言机是以预言机形式提供的均匀随机函数。在 RO 模型中，方案中使用的哈希函数在安全性证明中被随机预言机替代。缺点是，随机预言机模型方法仅具有启发式性质，且通常不合理（例如（Canetti 等人 1998））。RO 模型中 PKE 的一个例子是 RSA-OAEP 方案（Bellare 和 Rogaway 1995），该方案在 RO 模型下基于 RSA 假设被证明是 IND-CCA 安全的（Fujisaki 等人 2001）。另一个例子是所谓的 DHIES 方案（Abdalla 等人 2001），其在 RO 模型下的 IND-CCA 安全性可归约到所谓的 gap-DH 假设（Okamoto 和 Pointcheval 2001a），即即使对手拥有解决 DDH 问题的预言机，CDH 假设依然成立。还有一个值得一提的方案是 ElGamal 的一个变体，称为 Twin ElGamal（Cash 等人 2008），它在 RO 模型下基于 CDH 假设是 IND-CCA 安全的，并且像原始 ElGamal PKE 一样拥有非常紧凑的密文。事实上，DHIES 和 Twin ElGamal 都具有混合加密的结构（参见第 1.3.1 节）。
@@ -401,9 +381,6 @@ SKE 方案（在混合加密语境下也称为 DEM）由两个 PPT 算法（`E`�
 
 **图 1.7.** *混合加密：从 KEM 和 SKE 构造 PKE*
 
-
-
-
 Cramer 和 Shoup（2003）证明了如果底层 KEM 是 IND-CCA 安全的，且底层 SKE 方案是 IND-OT-CCA 安全的，那么混合加密构造就是一个 IND-CCA 安全的 PKE 方案。此外，Herranz 等人（2010）研究了混合加密构造所达到的安全概念与底层 KEM/SKE 方案的安全概念之间的关系。特别地，他们证明了如果底层 KEM 是 IND-CCA1 安全的（分别为 IND-CPA），且底层 SKE 方案是 IND-OT 安全的，那么混合加密构造就是 IND-CCA1（分别为 IND-CPA）安全的。Hofheinz 和 Kiltz（2007）给出了混合加密的另一个结果：如果底层 KEM 在*受限 CCA 安全*意义上是安全的（这是一种严格弱于 IND-CCA 安全的安全概念），且底层 SKE 方案在（一次性）认证加密（Bellare 和 Namprempre 2000）意义上是安全的（同时考虑 IND-OT 安全性和一次性真实性），那么混合加密构造仍然能达到 IND-CCA 安全。我们注意到，同时达到 IND-OT 安全性和一次性真实性的 SKE 方案自动达到 IND-OT-CCA 安全性；因此，在一次性认证加密意义上安全的要求强于 IND-OT-CCA 安全性。
 
 Abe 等人（2005）展示了另一种不同于上述的混合加密范式，称为 Tag-KEM/DEM 框架。该框架定义了一种称为 tag-KEM 的新原语。其语法与上述普通 KEM 的区别在于，生成 KEM 密文时允许来自 SKE/DEM 部分的反馈输入。该框架的优点之一是底层 SKE 方案只需是 IND-OT 安全的，而构造 tag-KEM 通常比构造普通 KEM 更困难。
@@ -424,7 +401,9 @@ Abe 等人（2005）展示了另一种不同于上述的混合加密范式，称
 
 ![image](img/p20-1.jpg)
 
-其中`V`是确定性算法，*r*表示 CRS，*x*和*w*分别表示语言*L*中的陈述及其对应的见证，*b* ∈ {0, 1}表示`V`接受（ *b* = 1）还是拒绝（ *b* = 0）。NIZK 应满足*完备性*（即如果*x ∈ L*，则在上述过程中，验证者`V`将总是接受）、*可靠性*（即如果*x ∉ L*，则即使全能的证明者`P`′也无法输出一个使`V`接受的证明*π*′）和*零知识*（直观上意味着`V`不应“学习”到除*b*之外的任何信息）。可以从因子分解困难性（Feige 等人 1990, 1999）、双线性配对（Groth 等人 2006b, 2012）和格（Peikert 和 Shiehian 2019）等假设出发，为任意 NP 语言构造 NIZK。（截至撰写时，NIZK 理论仍在快速发展中。感兴趣的读者可参考近期论文（Canetti 等人 2019; Couteau 等人 2020; Kitagawa 等人 2020）。
+
+
+其中`V`是确定性算法，`r`表示 CRS，`x`和`w`分别表示语言`L`中的陈述及其对应的见证，`b` ∈ {0, 1}表示`V`接受（`b` = 1）还是拒绝（`b` = 0）。NIZK 应满足*完备性*（即如果`x ∈ L`，则在上述过程中，验证者`V`将总是接受）、*可靠性*（即如果`x ∉ L`，则即使全能的证明者`P`′也无法输出一个使`V`接受的证明`π`′）和*零知识*（直观上意味着`V`不应“学习”到除`b`之外的任何信息）。可以从因子分解困难性（Feige 等人 1990, 1999）、双线性配对（Groth 等人 2006b, 2012）和格（Peikert 和 Shiehian 2019）等假设出发，为任意 NP 语言构造 NIZK。（截至撰写时，NIZK 理论仍在快速发展中。感兴趣的读者可参考近期论文（Canetti 等人 2019; Couteau 等人 2020; Kitagawa 等人 2020）。
 
 Naor-Yung PKE 构造如图 1.8 所示，我们基于一个 PKE 方案（`KG`、`Enc`、`Dec`）构造一个新的 PKE 方案（`KG`′、`Enc`′、`Dec`′），其中`Enc`的随机数空间为{0, 1}^(*ℓ*)，其中*ℓ* = *ℓ*(*λ*)为某个多项式，以及 CRS 模型下的 NIZK 系统（`CRSGen`、`P`、`V`），用于由以下定义的 NP 语言*L*：
 
@@ -447,8 +426,6 @@ Fujisaki 和 Okamoto（2013）证明了如果底层 PKE 方案满足 CPA 下的�
 ![Figure 1.9. The Fujisaki-Okamoto transform](img/fig1-9.jpg)
 
 **图 1.9.** *Fujisaki-Okamoto 变换*
-
-
 
 我们注意到，本节所示的 FO 变换源自 Fujisaki 和 Okamoto (2013)，该版本修复了会议版本 (Fujisaki and Okamoto 1999b) 中的一个小错误。我们还注意到，Fujisaki 和 Okamoto 提出了另一种变换 (Fujisaki and Okamoto 1999)，它能在 RO 模型下将任意 IND-CPA 安全的 PKE 方案（对 `Enc` 有相同的最小熵要求）转换为 IND-CCA 安全的 PKE 方案。Okamoto 和 Pointcheval (2001b) 以及 Coron 等人 (2002a) 分别提出了 FO 变换的变体，称为 REACT 和 GEM，它们比 FO 变换更简单，但要求底层 PKE 方案满足一种称为明文检查攻击下的单向性 (PCA) 的非标准安全概念（即对手可以访问一个预言机，输入密文 `c` 和明文 `m` 时，该预言机会告诉对手 `c` 是否解密为 `m`）。Dent (2003) 提出了 FO 变换的 KEM 变体。Hofheinz 等人 (2017) 对 FO 变换给出了模块化的安全性分析。
 
@@ -492,8 +469,6 @@ Matsuda 和 Hanaoka (2014b) 给出了另一种构造，它来自 IND-CPA 安全�
 
 #### 1.4.1.1. 可重放 CCA 安全性
 
-
-
 在某些情况下，IND-CCA 安全性所实现的安全属性可能过于强或过于严格。例如，没有任何允许密文重随机化或同态属性的加密方案能够达到 IND-CCA 安全性。*可重放 CCA 安全性*（Replayable CCA security）由 Canetti 等人（2003）提出，是一种试图放宽 IND-CCA 安全性严格性，同时仍能捕获实际应用中所需的足够强安全性的安全概念。它通过使用类似 IND-CCA 的安全实验来定义：在对手获得挑战密文后进行解密查询 `c` 时；如果 `c` 解密为挑战明文 `m[0]` 或 `m[1]` 之一（由对手在挑战阶段选择），则仅告知对手这一事实，而不给出实际的解密结果。出于类似的动机，还引入了具有非常相似风味的安全概念：良性可延展性（Shoup 2001b）和广义 CCA 安全性（An 等人 2002）。
 
 可重放 CCA 安全性的定义听起来可能有些人为。然而，事实证明，在将公钥加密方案视为建立/构建保密信道的工具（或资源）的背景下，可重放 CCA 安全性是正确的安全概念，因为满足这一安全概念的 PKE 方案足以实现该目的。有关详细信息以及关于该安全概念的变体和细微之处的讨论，请参阅 Canetti 等人（2003）；Coretti 等人（2013）；Badertscher 等人（2021）。还值得一提的是，与 IND-CCA 安全性不同，可重放 CCA 安全性可以由支持重随机化和/或同态属性的 PKE 方案实现（Prabhakaran 和 Rosulek 2007, 2008）。
@@ -512,31 +487,35 @@ Hohenberger 等人（2012）引入了一个与 RCCA 安全性相似的安全概�
 
 Bellare 等人（2000）为 PKE 形式化了一个存在多个用户和多个挑战密文的 IND-CCA 安全性版本。这里我们称之为*多用户/多挑战 IND-CCA 安全性*，并简要回顾其定义。对于 PKE 方案 Π = (`KG`, `Enc`, `Dec`)，`n` ∈ ![image](img/n1.jpg)，和对手 ![image](img/a.jpg)，`n`-用户/多挑战 IND-CCA 实验定义如图 1.10 所示。如果对于任意 PPT 对手 ![image](img/a.jpg) 和任意多项式 `n` = `n`(`λ`)，优势函数 ![image](img/i37.jpg) ![image](img/i38.jpg) 可以忽略不计，则称 Π 是多用户/多挑战 IND-CCA 安全的。
 
-Bellare 等人（2000）表明，如果一个 PKE 方案是 IND-CCA 安全的，那么它自动也是多用户/多挑战 IND-CCA 安全的。更具体地说，他们证明了对于任意 PKE 方案 Π，如果存在一个在 `n`-用户/多挑战 IND-CCA 实验中向 ![image](img/o.jpg) `enc` 发起 `q` 次加密查询的对手 ![image](img/a.jpg)，则存在另一个对手 ![image](img/b.jpg)（其运行时间与 ![image](img/a.jpg) 相似）攻击（单用户/单挑战）IND-CCA 实验，使得我们有
 
-![image](img/p27-1.jpg)
+
+Bellare 等人（2000）表明，如果一个 PKE 方案是 IND-CCA 安全的，那么它自动也是多用户/多挑战 IND-CCA 安全的。更具体地说，他们证明了对于任意 PKE 方案 Π，如果存在一个在 `n`-用户/多挑战 IND-CCA 实验中向 `enc` 发起 `q` 次加密查询的对手 `A`，则存在另一个对手 `B`（其运行时间与 `A` 相似）攻击（单用户/单挑战）IND-CCA 实验，使得我们有
+
+```
+Adv_{Π, A}^{mu-mc-cca}(λ) ≤ n · q · Adv_{Π, B}^{cca}(λ)
+```
+
 图 1.10. PKE 的多用户/多挑战 IND-CCA 实验
 
-**图 1.10.** *PKE 的多用户/多挑战 IND-CCA 实验*
+**图 1.10.** PKE 的多用户/多挑战 IND-CCA 实验
 
-虽然这一结果给了我们一个*渐近*保证（攻击多用户/多挑战 IND-CCA 安全性的任意 PPT 对手优势均可忽略不计），但如果我们考虑更*具体*的安全保证，其保证则不尽如人意：即使 ![image](img/i39.jpg) 足够小（例如 2^(−128)），取决于 `n` 和 `q` 的值，![image](img/i40.jpg) 可能无法被一个足够小的值所限制。让我们通过简单的例子来看看这一点。假设 `n` = 2³² 且 `q` = 2⁴⁰（假设世界上一半人口每天发送一条加密消息，持续 1 年），并且假设我们有一个“安全”的 PKE 方案 Π，可以假设其对运行时间远大于 `n` · `q` 的任意对手 ![image](img/b.jpg) 达到 ![image](img/i41.jpg)。那么，Bellare 等人（2000）的结果仅保证对于运行时间与 ![image](img/b.jpg) 相似的对手 ![image](img/a.jpg)，有 ![image](img/i42.jpg)。或者，如果我们希望获得 ![image](img/i43.jpg) 的保证，则 PKE 方案 Π 需要满足 ![image](img/i44.jpg)。
+虽然这一结果给了我们一个*渐近*保证（攻击多用户/多挑战 IND-CCA 安全性的任意 PPT 对手优势均可忽略不计），但如果我们考虑更*具体*的安全保证，其保证则不尽如人意：即使 `Adv_{Π, B}^{cca}(λ)` 足够小（例如 2^(−128)），取决于 `n` 和 `q` 的值，`Adv_{Π, A}^{mu-mc-cca}(λ)` 可能无法被一个足够小的值所限制。让我们通过简单的例子来看看这一点。假设 `n` = 2³² 且 `q` = 2⁴⁰（假设世界上一半人口每天发送一条加密消息，持续 1 年），并且假设我们有一个“安全”的 PKE 方案 Π，可以假设其对运行时间远大于 `n` · `q` 的任意对手 `B` 达到 `Adv_{Π, B}^{cca}(λ) = 2^(−128)`。那么，Bellare 等人（2000）的结果仅保证对于运行时间与 `B` 相似的对手 `A`，有 `Adv_{Π, A}^{mu-mc-cca}(λ) ≤ 2^(−128) · 2³² · 2⁴⁰ = 2^(−56)`。或者，如果我们希望获得 `Adv_{Π, A}^{mu-mc-cca}(λ) ≤ 2^(−128)` 的保证，则 PKE 方案 Π 需要满足 `Adv_{Π, B}^{cca}(λ) ≤ 2^(−200)`。
 
-一般来说，为了基于某个问题 `P` 的困难性，证明 PKE 方案 Π 在 `n`-用户设置下对发起 `q[enc]` 次加密查询和 `q[dec]` 次解密查询的对手 ![image](img/a.jpg) 具有 IND-CCA 安全性，我们需要构造另一个对手（归约算法）![image](img/b.jpg)，其运行时间与 ![image](img/a.jpg) 相似，并满足
+一般来说，为了基于某个问题 `P` 的困难性，证明 PKE 方案 Π 在 `n`-用户设置下对发起 `q_enc` 次加密查询和 `q_dec` 次解密查询的对手 `A` 具有 IND-CCA 安全性，我们需要构造另一个对手（归约算法）`B`，其运行时间与 `A` 相似，并满足
 
-![image](img/p27-2.jpg)
+```
+Adv_{Π, A}^{mu-cca}(λ) ≤ F_loss(n, q_enc, q_dec) · Adv_{B}^{P}(λ) + ϵ(λ)
+```
 
-
-
-
-其中 `F[loss]` 和 `F'` 是多项式，![image](img/i45.jpg) 表示 ![image](img/b.jpg) 在解决问题 `P` 时的优势，而 `ϵ(λ)` 是关于 `λ` 的可忽略函数，独立于 `n`、`q[enc]`、`q[dec]`、`![image](img/a.jpg)` 和 `![image](img/b.jpg)`。
+其中 `F_loss` 和 `F'` 是多项式，`Adv_{B}^{P}(λ)` 表示 `B` 在解决问题 `P` 时的优势，而 `ϵ(λ)` 是关于 `λ` 的可忽略函数，独立于 `n`、`q_enc`、`q_dec`、`A` 和 `B`。
 
 Bellare 等人 (2000) 基于 DDH 假设证明了 Cramer-Shoup 方案 (Cramer 和 Shoup 1998) 的多用户/挑战 IND-CCA 安全性，其安全性损失仅取决于加密查询的数量（且独立于用户数量和解密查询数量）。十多年后，Hofheinz 和 Jager (2012) 首次展示了基于著名且被充分研究的假设的紧致安全 PKE 方案。他们的方案基于 Naor-Yung 范式，其安全性基于双线性群中的 DLin 假设。然而，该方案效率低下，因为公钥和密文由数百个群元素组成。自 Hofheinz 和 Jager (2012) 的工作以来，已有许多工作基于该假设构建紧致安全的 PKE 方案：Abe 等人 (2013)；Hofheinz 等人 (2015)；Libert 等人 (2015)；Attrapadung 等人 (2015)；Gong 等人 (2016)；Hofheinz (2016)；Gay 等人 (2016)；Hofheinz (2017)；Gay 等人 (2017)；Han 等人 (2019)（其中除第一个外，其余均仅具有近似紧致归约）。值得注意的是，Gay 等人 (2017) 基于 DDH 的（近似）紧致安全方案具有与 Cramer 和 Shoup (1998) 以及 Kurosawa 和 Desmedt (2004) 的实用（非紧致）基于 DDH 方案相似的效率。
 
 ### 1.4.3. 密钥相关消息安全
 
-在 PKE 的标准安全概念中，隐含假设待加密的消息不依赖于密钥（除非它们可以依赖于相应的公钥）。然而，在某些应用中，我们希望（或不得不）加密依赖于密钥的消息，例如硬盘加密 (Boneh 等人 2008)、匿名凭证 (Camenisch 和 Lysyanskaya 2002) 和全同态加密 (![image](img/g1.jpg) 条目 2009)。
+在 PKE 的标准安全概念中，隐含假设待加密的消息不依赖于密钥（除非它们可以依赖于相应的公钥）。然而，在某些应用中，我们希望（或不得不）加密依赖于密钥的消息，例如硬盘加密 (Boneh 等人 2008)、匿名凭证 (Camenisch 和 Lysyanskaya 2002) 和全同态加密 (Gentry 2009)。
 
-密钥相关消息 (KDM) 安全性是一种安全概念，即使加密消息依赖于密钥，也能保证机密性。KDM 安全性最初由 Black 等人 (2003) 针对 SKE 引入并形式化。一种有限形式的 KDM 安全性（称为循环安全）由 Camenisch 和 Lysyanskaya (2002) 独立引入并研究。PKE 的 KDM 安全性标准形式化由 Boneh 等人 (2008) 给出。KDM 安全性由函数类 ![image](img/f.jpg) 参数化，该函数类表示消息对密钥的依赖关系，![image](img/f.jpg) 越具表达力，KDM 安全性就越强。非正式地说，关于 ![image](img/f.jpg) 的 KDM 安全性（我们称之为 ![image](img/f.jpg)-KDM 安全性）保证了对于任意 `f` 属于 ![image](img/f.jpg)，加密 `f(sk)` 的密文与加密某个长度为 `|f(sk)|` 的固定消息的密文是不可区分的。与标准的不可区分性安全概念类似，KDM 安全性也可以在 CPA 和 CCA 设置下考虑，分别称为 KDM-CPA 和 KDM-CCA。人们可能会想知道标准的不可区分性安全概念是否蕴含 KDM 安全性。不幸的是，一系列工作 (Acar 等人 2010；Cash 等人 2012；Rothblum 2013；Marcedone 和 Orlandi 2014；Koppula 等人 2015；Bishop 等人 2015；Goyal 等人 2017c,b,a) 表明，在标准密码学假设下（例如 LWE 假设），存在一种 PKE 方案是 IND-CPA 安全的，但不是循环安全的。此外，Hajiabadi 和 Kapron (2017) 表明，在“黑盒”构造 (Reingold 等人 2004；Baecher 等人 2013) 的意义上，仅基于 IND-CPA 安全的 PKE 方案无法构造循环安全的比特加密方案。
+密钥相关消息 (KDM) 安全性是一种安全概念，即使加密消息依赖于密钥，也能保证机密性。KDM 安全性最初由 Black 等人 (2003) 针对 SKE 引入并形式化。一种有限形式的 KDM 安全性（称为循环安全）由 Camenisch 和 Lysyanskaya (2002) 独立引入并研究。PKE 的 KDM 安全性标准形式化由 Boneh 等人 (2008) 给出。KDM 安全性由函数类 `F` 参数化，该函数类表示消息对密钥的依赖关系，`F` 越具表达力，KDM 安全性就越强。非正式地说，关于 `F` 的 KDM 安全性（我们称之为 `F`-KDM 安全性）保证了对于任意 `f` 属于 `F`，加密 `f(sk)` 的密文与加密某个长度为 `|f(sk)|` 的固定消息的密文是不可区分的。与标准的不可区分性安全概念类似，KDM 安全性也可以在 CPA 和 CCA 设置下考虑，分别称为 KDM-CPA 和 KDM-CCA。人们可能会想知道标准的不可区分性安全概念是否蕴含 KDM 安全性。不幸的是，一系列工作 (Acar 等人 2010；Cash 等人 2012；Rothblum 2013；Marcedone 和 Orlandi 2014；Koppula 等人 2015；Bishop 等人 2015；Goyal 等人 2017c,b,a) 表明，在标准密码学假设下（例如 LWE 假设），存在一种 PKE 方案是 IND-CPA 安全的，但不是循环安全的。此外，Hajiabadi 和 Kapron (2017) 表明，在“黑盒”构造 (Reingold 等人 2004；Baecher 等人 2013) 的意义上，仅基于 IND-CPA 安全的 PKE 方案无法构造循环安全的比特加密方案。
 
 在 RO 模型中，KDM-CPA/CCA 安全的 PKE 方案相对容易实现。特别是，Backes 等人 (2008)、Davies 和 Stam (2014) 以及 Kitagawa 等人 (2016) 分别证明了 RSA-OAEP 方案 (Bellare 和 Rogaway 1995)、（混合加密构造的一个轻微变体）和 FO 变换的 PKE 方案 (Fujisaki 和 Okamoto 2013) 在 RO 模型中关于所有可高效计算的函数是 KDM-CCA 安全的。在标准模型中，关于特定（简单）函数类的 KDM-CPA 安全 PKE 方案构建于例如 Boneh 等人 (2008)；Applebaum 等人 (2009)；Brakerski 和 Goldwasser (2010)；Brakerski 等人 (2011)；Malkin 等人 (2011)；Döttling (2015)；Hajiabadi 等人 (2016)；Wee (2016)；Brakerski 等人 (2018)；Lai 等人 (2021)，而关于任意函数（可由多项式大小电路计算）的 KDM-CPA 安全 PKE 方案构建于例如 Barak 等人 (2010)；Applebaum (2011)；Bellare 等人 (2012b)；Marcedone 等人 (2016)。关于特定函数类的 KDM-CCA 安全 PKE 方案构建于例如 Galindo 等人 (2012)；Hofheinz (2013)；Han 等人 (2016)；Kitagawa 和 Tanaka (2018)；Libert 和 Qian (2019)；Kitagawa 等人 (2019b)。关于任意函数（可由多项式大小电路计算）的 KDM-CCA 安全 PKE 方案可以通过“增强”KDM 安全性的方法实现：从关于简单函数的 KDM 安全性增强到关于更宽泛/更复杂函数的 KDM 安全性 (Applebaum 2011；Kitagawa 和 Matsuda 2019, 2020)，以及从 KDM-CPA 增强到 KDM-CCA（例如 Camenisch 等人 2009；Kitagawa 和 Matsuda 2019, 2020）。
 
@@ -544,7 +523,7 @@ Bellare 等人 (2000) 基于 DDH 假设证明了 Cramer-Shoup 方案 (Cramer 和
 
 #### 1.4.4.1. 全同态加密
 
-同态加密允许在密文上进行计算，同时保持方案的安全性。例如，在加法同态 PKE 中，可以从 `Enc(pk, m[1])` 和 `Enc(pk, m[2])` 获得 `Enc(pk, m[1] + m[2])`。加法同态 PKE 的例子包括 Goldwasser 和 Micali (1982) 以及 Paillier (1999)，而乘法同态 PKE 的例子包括 RSA 和 ElGamal PKE。这些早期工作要么只允许一种类型的操作，要么允许有限次数的操作（例如 Boneh 等人 2005），要么局限于一组特定操作（例如 Sander 等人 1999；Ishai 和 Paskin 2007）。Gentry (2009) 提出了第一个全同态 PKE，它允许无限次的模加法和乘法，从而实现任意算术电路计算。关于该主题的综述，请参阅 Acar 等人 (2019)。
+同态加密允许在密文上进行计算，同时保持方案的安全性。例如，在加法同态 PKE 中，可以从 `Enc(pk, m_1)` 和 `Enc(pk, m_2)` 获得 `Enc(pk, m_1 + m_2)`。加法同态 PKE 的例子包括 Goldwasser 和 Micali (1982) 以及 Paillier (1999)，而乘法同态 PKE 的例子包括 RSA 和 ElGamal PKE。这些早期工作要么只允许一种类型的操作，要么允许有限次数的操作（例如 Boneh 等人 2005），要么局限于一组特定操作（例如 Sander 等人 1999；Ishai 和 Paskin 2007）。Gentry (2009) 提出了第一个全同态 PKE，它允许无限次的模加法和乘法，从而实现任意算术电路计算。关于该主题的综述，请参阅 Acar 等人 (2019)。
 
 #### 1.4.4.2. 抗泄露安全性
 
@@ -552,11 +531,7 @@ Bellare 等人 (2000) 基于 DDH 假设证明了 Cramer-Shoup 方案 (Cramer 和
 
 #### 1.4.4.3. 自适应安全性和抗选择性打开攻击安全性
 
-
-
-
-
-# 选择性打开（SO）安全性
+### 选择性打开（SO）安全性
 
 选择性打开（SO）安全性考虑的是多用户设置下的攻击场景，其中对手可以自适应地破坏某些用户，并了解（即“打开”）被破坏用户的所有信息（包括随机性），而安全性关注的是由未被破坏用户创建或发送给未被破坏用户的那些密文（取决于 SO 安全性的类型，即发送者安全性和接收者安全性）。这种攻击场景最早出现在自适应安全多方计算的背景下（Canetti 等人，1996），其中对手可以破坏某些加密信道。SO 安全性既可以考虑发送者被破坏的情况，也可以考虑接收者被破坏的情况。
 
@@ -574,7 +549,7 @@ Abe, M., David, B., Kohlweiss, M., Nishimaki, R., Ohkubo, M. (2013). Tagged one-
 
 Acar, T., Belenkiy, M., Bellare, M., Cash, D. (2010). Cryptographic agility and its relation to circular encryption. In *EUROCRYPT 2010*, vol. 6110 of *LNCS*, Gilbert, H. (ed.). Springer, Heidelberg.
 
-Acar, A., Aksu, H., Uluagac, A.S., Conti, M. (2019). A survey on homomorphic encryption schemes: Theory and implementation. *ACM Computing Surveys*, 51(4), 79, 1–35 \[Online\]. Available at: [`doi.org/10.1145/3214303`](https://doi.org/10.1145/3214303).
+Acar, A., Aksu, H., Uluagac, A.S., Conti, M. (2019). A survey on homomorphic encryption schemes: Theory and implementation. *ACM Computing Surveys*, 51(4), 79, 1–35 [Online]. Available at: [`doi.org/10.1145/3214303`](https://doi.org/10.1145/3214303).
 
 Akavia, A., Goldwasser, S., Vaikuntanathan, V. (2009), Simultaneous hardcore bits and cryptography against memory attacks. In *TCC 2009*, vol. 5444 of *LNCS*, Reingold, O. (ed.). Springer, Heidelberg.
 
@@ -585,6 +560,10 @@ Ambainis, A., Hamburg, M., Unruh, D. (2019). Quantum security proofs using semi-
 An, J.H., Dodis, Y., Rabin, T. (2002). On the security of joint signature and encryption. In *EUROCRYPT 2002*, vol. 2332 of *LNCS*, Knudsen, L.R. (ed.). Springer, Heidelberg.
 
 Applebaum, B. (2011). Key-dependent message security: Generic amplification and completeness. In *EUROCRYPT 2011*, vol. 6632 of *LNCS*, Paterson, K.G. (ed.). Springer, Heidelberg.
+
+
+
+# 参考文献
 
 Applebaum, B., Cash, D., Peikert, C., Sahai, A. (2009). Fast cryptographic primitives and circular-secure encryption based on hard learning problems. In *CRYPTO 2009*, vol. 5677 of *LNCS*, Halevi, S. (ed.). Springer, Heidelberg.
 
@@ -612,19 +591,13 @@ Bellare, M. and Rogaway, P. (2006). The security of triple encryption and a fram
 
 Bellare, M. and Sahai, A. (1999). Non-malleable encryption: Equivalence between two notions, and an indistinguishability-based characterization. In *CRYPTO’99*, vol. 1666 of *LNCS*, Wiener, M.J. (ed.). Springer, Heidelberg.
 
-Bellare, M. and Sahai, A. (2006). Non-malleable encryption: Equivalence between two notions, and an indistinguishability-based characterization. Cryptology ePrint Archive, Report 2006/228 \[Online\]. Available at: [`eprint.iacr.org/2006/228`](https://eprint.iacr.org/2006/228).
+Bellare, M. and Sahai, A. (2006). Non-malleable encryption: Equivalence between two notions, and an indistinguishability-based characterization. Cryptology ePrint Archive, Report 2006/228 [Online]. Available at: [`eprint.iacr.org/2006/228`](https://eprint.iacr.org/2006/228).
 
 Bellare, M., Desai, A., Pointcheval, D., Rogaway, P. (1998). Relations among notions of security for public-key encryption schemes. In *CRYPTO’98*, vol. 1462 of *LNCS*, Krawczyk, H. (ed.). Springer, Heidelberg.
 
 Bellare, M., Boldyreva, A., Micali, S. (2000). Public-key encryption in a multi-user setting: Security proofs and improvements. In *EUROCRYPT 2000*, vol. 1807 of *LNCS*, Preneel, B. (ed.). Springer, Heidelberg.
 
 Bellare, M., Hofheinz, D., Yilek, S. (2009). Possibility and impossibility results for encryption and commitment secure under selective opening. In *EUROCRYPT 2009*, vol. 5479 of *LNCS*, Joux, A. (ed.). Springer, Heidelberg.
-
-
-
-
-
-# 参考文献
 
 Bellare, M., Dowsley, R., Waters, B., Yilek, S. (2012a). 标准安全性不意味着抗选择性打开安全性。载 *EUROCRYPT 2012*, *LNCS* 第 7237 卷, Pointcheval, D., Johansson, T. (编). Springer, Heidelberg.
 
@@ -686,6 +659,10 @@ Cash, D., Kiltz, E., Shoup, V. (2008). 双 Diffie–Hellman 问题及其应用�
 
 Cash, D., Green, M., Hohenberger, S. (2012). 循环安全性的新定义与分离。载 *PKC 2012*, *LNCS* 第 7293 卷, Fischlin, M., Buchmann, J., Manulis, M. (编). Springer, Heidelberg.
 
+
+
+# 参考文献
+
 Coretti, S., Maurer, U., Tackmann, B. (2013). 从认证信道构建保密信道——公钥加密重访。载 *ASIACRYPT 2013, 第一部分*, *LNCS* 第 8269 卷, Sako, K., Sarkar, P. (编). Springer, Heidelberg.
 
 Coretti, S., Maurer, U., Tackmann, B., Venturi, D. (2015). 通过非延展码从单比特到多比特公钥加密。载 *TCC 2015, 第一部分*, *LNCS* 第 9014 卷, Dodis, Y., Nielsen, J.B. (编). Springer, Heidelberg.
@@ -703,12 +680,6 @@ Cramer, R. and Shoup, V. (1998). 一种在自适应选择密文攻击下可证�
 Cramer, R. and Shoup, V. (2002). 通用哈希证明与自适应选择密文安全公钥加密的范式。载 *EUROCRYPT 2002*, *LNCS* 第 2332 卷, Knudsen, L.R. (编). Springer, Heidelberg.
 
 Cramer, R. and Shoup, V. (2003). 实用抗自适应选择密文攻击公钥加密方案的设计与分析。载 *SIAM Journal on Computing*, 33(1), 167–226.
-
-
-
-
-
-# 参考文献
 
 Cramer, R., Hanaoka, G., Hofheinz, D., Imai, H., Kiltz, E., Pass, R., Shelat, A., Vaikuntanathan, V. (2007). 有界 CCA2 安全加密。载 *ASIACRYPT 2007*，*LNCS* 4833 卷，Kurosawa, K. (编)。Springer, Heidelberg。
 
@@ -792,12 +763,6 @@ Han, S., Liu, S., Lyu, L., Gu, D. (2019). 基于准自适应哈希证明系统�
 
 Hanaoka, G. 和 Kurosawa, K. (2008). 计算 Diffie-Hellman 假设下的高效抗选择密文攻击公钥加密。载 *ASIACRYPT 2008*，*LNCS* 5350 卷，Pieprzyk, J. (编)。Springer, Heidelberg。
 
-
-
-
-
-# 参考文献
-
 Hara, K., Kitagawa, F., Matsuda, T., Hanaoka, G., Tanaka, K. (2018). 来自标准计算假设的基于模拟的接收者选择性打开 CCA 安全 PKE。载于 *SCN 18*，*LNCS* 第 11035 卷，Catalano, D., De Prisco, R. (编)。Springer, Heidelberg。
 
 Haralambiev, K., Jager, T., Kiltz, E., Shoup, V. (2010). 标准模型中来自计算 Diffie-Hellman 的简单高效公钥加密。载于 *PKC 2010*，*LNCS* 第 6056 卷，Nguyen, P.Q., Pointcheval, D. (编)。Springer, Heidelberg。
@@ -811,6 +776,10 @@ Hemenway, B. and Ostrovsky, R. (2012). 关于同态加密与选择密文安全�
 Hemenway, B. and Ostrovsky, R. (2013). 从损失性加密构建损失性陷门函数。载于 *ASIACRYPT 2013, Part II*，*LNCS* 第 8270 卷，Sako, K., Sarkar, P. (编)。Springer, Heidelberg。
 
 Hemenway, B., Libert, B., Ostrovsky, R., Vergnaud, D. (2011). 损失性加密：来自通用假设的构造与高效的选择性打开选择密文安全性。载于 *ASIACRYPT 2011*，*LNCS* 第 7073 卷，Lee, D.H., Wang, X. (编)。Springer, Heidelberg。
+
+
+
+# 参考文献
 
 Herranz, J., Hofheinz, D., Kiltz, E. (2010). 安全混合加密的一些（不）充分条件。*Information and Computation*，208(11)，1243–1257。
 
@@ -876,12 +845,6 @@ Kitagawa, F. and Matsuda, T. (2019). KDM 安全性的 CPA 到 CCA 转换。载�
 
 Kitagawa, F. and Matsuda, T. (2020). 循环安全性对于 KDM 安全性是完备的。载于 *ASIACRYPT 2020, Part I*，*LNCS* 第 12491 卷，Moriai, S., Wang, H. (编)。Springer, Heidelberg。
 
-
-
-
-
-# 参考文献
-
 Kitagawa, F. and Tanaka, K. (2018). A framework for achieving KDM-CCA secure public-key encryption. In *ASIACRYPT 2018, Part II*, vol. 11273 of *LNCS*, Peyrin, T., Galbraith, S. (eds). Springer, Heidelberg.
 
 Kitagawa, F., Matsuda, T., Hanaoka, G., Tanaka, K. (2016). On the key dependent message security of the Fujisaki-Okamoto constructions. In *PKC 2016, Part I*, vol. 9614 of *LNCS*, Cheng, C.-M., Chung, K.-M., Persiano, G., Yang, B.-Y. (eds). Springer, Heidelberg.
@@ -914,9 +877,13 @@ Libert, B., Sakzad, A., Stehlé, D., Steinfeld, R. (2017). All-but-many lossy tr
 
 Lindell, Y. (2003). A simpler construction of cca2-secure public-key encryption under general assumptions. In *EUROCRYPT 2003*, vol. 2656 of *LNCS*, Biham, E. (ed.). Springer, Heidelberg.
 
+
+
+# 参考文献
+
 Liu, S. and Paterson, K.G. (2015). Simulation-based selective opening CCA security for PKE from key encapsulation mechanisms. In *PKC 2015*, vol. 9020 of *LNCS*, Katz, J. (ed.). Springer, Heidelberg.
 
-Luby, M. and Rackoff, C. (1988). How to construct pseudorandom permutations from pseudorandom functions. *SIAM Journal on Computing*, 17(2), 373–386 \[Online\]. Available at: doi:10.1137/0217022.
+Luby, M. and Rackoff, C. (1988). How to construct pseudorandom permutations from pseudorandom functions. *SIAM Journal on Computing*, 17(2), 373–386 [Online]. Available at: doi:10.1137/0217022.
 
 Lyu, L., Liu, S., Han, S., Gu, D. (2018). Tightly SIM-SO-CCA secure public key encryption from standard assumptions. In *PKC 2018, Part I*, vol. 10769 of *LNCS*, Abdalla, M., Dahab, R. (eds). Springer, Heidelberg.
 
@@ -960,12 +927,6 @@ Okamoto, T. and Uchiyama, S. (1998). A new public-key cryptosystem as secure as 
 
 Paillier, P. (1999). Public-key cryptosystems based on composite degree residuosity classes. In *EUROCRYPT’99*, vol. 1592 of *LNCS*, Stern, J. (ed.). Springer, Heidelberg.
 
-
-
-
-
-# 参考文献
-
 Pass, R., Shelat, A., Vaikuntanathan, V. (2007). Relations among notions of non-malleability for encryption. In *ASIACRYPT 2007*, vol. 4833 of *LNCS*, Kurosawa, K. (ed.). Springer, Heidelberg.
 
 Peikert, C. and Shiehian, S. (2019). Noninteractive zero knowledge for NP from (plain) learning with errors. In *CRYPTO 2019, Part I*, vol. 11692 of *LNCS*, Boldyreva, A., Micciancio, D. (eds). Springer, Heidelberg.
@@ -1002,9 +963,13 @@ Saito, T., Xagawa, K., Yamakawa, T. (2018). Tightly-secure key-encapsulation mec
 
 Sander, T., Young, A., Yung, M. (1999). Non-interactive cryptocomputing for NC1. In *40th FOCS*. IEEE Computer Society Press.
 
-Shacham, H. (2007). A cramer-shoup encryption scheme from the linear assumption and from progressively weaker linear variants. Cryptology ePrint Archive, Report 2007/074 \[Online\]. Available at: [`eprint.iacr.org/2007/074`](https://eprint.iacr.org/2007/074).
+Shacham, H. (2007). A cramer-shoup encryption scheme from the linear assumption and from progressively weaker linear variants. Cryptology ePrint Archive, Report 2007/074 [Online]. Available at: [`eprint.iacr.org/2007/074`](https://eprint.iacr.org/2007/074).
 
 Shamir, A. (1984). Identity-based cryptosystems and signature schemes. In *CRYPTO’84*, vol. 196 of *LNCS*, Blakley, G.R., Chaum, D. (eds). Springer, Heidelberg.
+
+
+
+# 参考文献
 
 Shannon, C.E. (1949). Communication theory of secrecy systems. *Bell Systems Technical Journal*, 28(4), 656–715.
 
@@ -1026,15 +991,15 @@ Yang, R., Lai, J., Huang, Z., Au, M.H., Xu, Q., Susilo, W. (2020). Possibility a
 
 # 注释
 
-1.  1 一种称为通用单向哈希函数族的较弱原语 (Naor and Yung 1989) (也可称为目标抗碰撞哈希) 也可被使用。然而，为简单起见，我们此处选择使用抗碰撞哈希函数。
+1. 一种称为通用单向哈希函数族的较弱原语 (Naor and Yung 1989) (也可称为目标抗碰撞哈希) 也可被使用。然而，为简单起见，我们此处选择使用抗碰撞哈希函数。
 
-2.  2 相应地，加密实际消息的过程称为*数据封装机制 (DEM)*，但由于其功能等同于 SKE，我们将主要使用 SKE。
+2. 相应地，加密实际消息的过程称为*数据封装机制 (DEM)*，但由于其功能等同于 SKE，我们将主要使用 SKE。
 
-3.  3 可访问：[`csrc.nist.gov/projects/post-quantum-cryptography`](https://csrc.nist.gov/projects/post-quantum-cryptography)。
+3. 可访问：[`csrc.nist.gov/projects/post-quantum-cryptography`](https://csrc.nist.gov/projects/post-quantum-cryptography)。
 
-4.  4 严格来说，如果我们仅关心渐近安全性保证，则右侧的 ![image](img/i46.jpg) 替换为某个正常数 *c* ≤ 1 的 ![image](img/i47.jpg) 即已足够，且 ![image](img/b.jpg) 的运行时间可以是 ![image](img/a.jpg) 运行时间的多项式。这种更一般的情况与归约的紧致性背道而驰。
+4. 严格来说，如果我们仅关心渐近安全性保证，则右侧的 `![image](img/i46.jpg)` 替换为某个正常数 `c` ≤ 1 的 `![image](img/i47.jpg)` 即已足够，且 `![image](img/b.jpg)` 的运行时间可以是 `![image](img/a.jpg)` 运行时间的多项式。这种更一般的情况与归约的紧致性背道而驰。
 
-5.  5 注意，基于“该方案是多用户/多挑战 IND-CCA 安全的”这一假设，PKE 方案总是紧致安全的。因此，只有当底层假设（问题）*P* 是文献中经过充分研究的（如 DDH）时，紧致安全性才有意义。
+5. 注意，基于“该方案是多用户/多挑战 IND-CCA 安全的”这一假设，PKE 方案总是紧致安全的。因此，只有当底层假设（问题）*P* 是文献中经过充分研究的（如 DDH）时，紧致安全性才有意义。
 
 # 2 签名与安全概念
 
@@ -1050,27 +1015,23 @@ Yang, R., Lai, J., Huang, Z., Au, M.H., Xu, Q., Susilo, W. (2020). Possibility a
 
 ### 2.1.1 定义
 
+#### 数字签名方案
 
-
-
-
-## 数字签名方案
-
-与手写签名类似，我们期望数字签名 `σ` 将来自某个可接受消息空间 ![image](img/m.jpg) 的消息 `m` 的内容与签名者绑定。签名者由公钥 `pk` 标识，该公钥可能经过认证，从而与身份关联。由于我们期望只有签名者能够创建此类签名，因此签名者持有与 `pk` 匹配的密钥 `sk`，二者通过某个 `KGen` 算法共同生成。使用密钥 `sk` 进行签名由方案的 `Sig` 算法执行，而在公钥 `pk` 下的验证则通过 `Vf` 算法完成。
+与手写签名类似，我们期望数字签名 `σ` 将来自某个可接受消息空间 `![image](img/m.jpg)` 的消息 `m` 的内容与签名者绑定。签名者由公钥 `pk` 标识，该公钥可能经过认证，从而与身份关联。由于我们期望只有签名者能够创建此类签名，因此签名者持有与 `pk` 匹配的密钥 `sk`，二者通过某个 `KGen` 算法共同生成。使用密钥 `sk` 进行签名由方案的 `Sig` 算法执行，而在公钥 `pk` 下的验证则通过 `Vf` 算法完成。
 
 有了上述接口，三个算法 `KGen`、`Sig` 和 `Vf` 尚未“关联”。这是通过正确性属性来实现的：该属性指出，由 `KGen` 生成的密钥下，通过算法 `Sig` 生成的签名会被验证算法 `Vf` 识别为正确。注意，原则上让 `Vf` 接受任何签名即可轻松实现这一点。但我们稍后将要求：在不知道密钥的情况下，很难找到这种有效签名，即这种不可伪造性概念与正确性要求在这方面可以视为对立面。
 
 **定义 2.1（签名方案）。** *数字签名方案* `S` = (`S`.`KGen`, `S`.`Sig`, `S`.`Vf`) *由三个概率多项式时间算法组成，满足：*
 
-*– **密钥生成**：密钥生成算法以单元编码的安全参数 `1^λ` 为输入，输出一对密钥和公钥，`(sk, pk)` ←[$] `S`.`KGen`(`1^λ`)。我们假设每个密钥都能高效恢复 `1^λ`，且安全参数决定了一个消息空间 ![image](img/m.jpg)[λ] ⊆ {0, 1}^∗。*
+*– **密钥生成**：密钥生成算法以单元编码的安全参数 `1^λ` 为输入，输出一对密钥和公钥，`(sk, pk)` ←[$] `S`.`KGen`(`1^λ`)。我们假设每个密钥都能高效恢复 `1^λ`，且安全参数决定了一个消息空间 `![image](img/m.jpg)`[λ] ⊆ {0, 1}^∗。*
 
-*– **签名**：签名算法接收密钥 `sk` 和消息 `m` ∈ ![image](img/m.jpg)[λ] 作为输入，输出一个签名，`σ` ←[$] `S`.`Sig`(`sk, m`)。*
+*– **签名**：签名算法接收密钥 `sk` 和消息 `m` ∈ `![image](img/m.jpg)`[λ] 作为输入，输出一个签名，`σ` ←[$] `S`.`Sig`(`sk, m`)。*
 
-*– **验证**：验证算法接收公钥 `pk`、消息 `m` ∈ ![image](img/m.jpg)[λ] 和潜在签名 `σ` 作为输入，输出一个决策比特，`d` ←[$] `S`.`Vf`(`pk, m, σ`)。*
+*– **验证**：验证算法接收公钥 `pk`、消息 `m` ∈ `![image](img/m.jpg)`[λ] 和潜在签名 `σ` 作为输入，输出一个决策比特，`d` ←[$] `S`.`Vf`(`pk, m, σ`)。*
 
-*正确性表明，以压倒性概率（作为 `λ` 的函数），对于任意消息 `m` ∈ ![image](img/m.jpg)[λ]，当 `(sk, pk)` ←[$] `S`.`KGen`(`1^λ`)、`σ` ←[$] `S`.`Sig`(`sk, m`) 且 `d` ←[$] `S`.`Vf`(`pk, m, σ`) 时，有 `d` = 1。如果正确性以概率 1 成立，则称该方案为**完全正确**。*
+*正确性表明，以压倒性概率（作为 `λ` 的函数），对于任意消息 `m` ∈ `![image](img/m.jpg)`[λ]，当 `(sk, pk)` ←[$] `S`.`KGen`(`1^λ`)、`σ` ←[$] `S`.`Sig`(`sk, m`) 且 `d` ←[$] `S`.`Vf`(`pk, m, σ`) 时，有 `d` = 1。如果正确性以概率 1 成立，则称该方案为**完全正确**。*
 
-我们针对概率验证算法定义了签名方案。在所有已知方案中，验证都是确定性的，如果签名算法输出一个签名，则（确定性）验证者也会接受该签名。尽管如此，当今一些实用的签名方案，特别是基于格的方案如 Dilithium (Bai et al. 2020)，可能在单次执行中无法创建有效签名，因此需要在此情况下迭代。此时，该算法理论上可能永远运行，或者需要在一定迭代次数后中止，导致签名生成过程中通常出现可忽略的错误。对于实际用途，该概率无关紧要。
+我们针对概率验证算法定义了签名方案。在所有已知方案中，验证都是确定性的，如果签名算法输出一个签名，则（确定性）验证者也会接受该签名。尽管如此，当今一些实用的签名方案，特别是基于格的方案如 `Dilithium` (Bai et al. 2020)，可能在单次执行中无法创建有效签名，因此需要在此情况下迭代。此时，该算法理论上可能永远运行，或者需要在一定迭代次数后中止，导致签名生成过程中通常出现可忽略的错误。对于实际用途，该概率无关紧要。
 
 我们注意到，理论上，对于确定性验证者，很容易修复可忽略的正确性错误，且不违背不可伪造性。为此，签名者在输出签名 `σ` 前先对其进行验证，若验证失败则改为输出签名密钥 `sk`。验证算法随后也接受密钥作为任意消息 `m` 的签名，从而修复签名过程中的任何错误。此处假设可以检查 `sk` 是否为 `pk` 的有效签名密钥。如果 `sk` 包含执行 `KGen` 生成密钥对所用的随机性，则后者易于实现。但请再次强调，该解决方案仅具有理论意义。
 
@@ -1080,24 +1041,24 @@ Yang, R., Lai, J., Huang, Z., Au, M.H., Xu, Q., Susilo, W. (2020). Possibility a
 
 #### 2.1.2.1 数字签名算法
 
-数字签名算法 (DSA) 由美国国家标准与技术研究院 (NIST) 提出，最早于 1994 年作为数字签名标准 (National Institute of Standards and Technology 1994) 中唯一的签名算法。该算法使用一个群 `G`，并在 `G` 的一个由元素 `g` ∈ `G` 生成的素数阶 `q` 的子群中工作。我们用 ⟨`g`⟩ 表示这个由 `g` 生成的循环群。最初，NIST 仅建议使用群 `G` = ![image](img/zsp.jpg)，其中素数 `p` 在 512 位到 1024 位之间，`q` 的阶为 2¹⁶⁰。最新版 DSS 标准 (National Institute of Standards and Technology 2013) 允许 `(p, q)` 采用 (1024, 160)、(2048, 224)、(2048, 256) 或 (3072, 256) 位的其他选择，并包含一个称为 ECDSA 的椭圆曲线版本。我们首先采用模 `p` 乘法群 ![image](img/zsp.jpg) 形式来描述算法，随后讨论 ECDSA 的变化。
+数字签名算法 (DSA) 由美国国家标准与技术研究院 (NIST) 提出，最早于 1994 年作为数字签名标准 (National Institute of Standards and Technology 1994) 中唯一的签名算法。该算法使用一个群 `G`，并在 `G` 的一个由元素 `g` ∈ `G` 生成的素数阶 `q` 的子群中工作。我们用 ⟨`g`⟩ 表示这个由 `g` 生成的循环群。最初，NIST 仅建议使用群 `G` = `![image](img/zsp.jpg)`，其中素数 `p` 在 512 位到 1024 位之间，`q` 的阶为 2¹⁶⁰。最新版 DSS 标准 (National Institute of Standards and Technology 2013) 允许 `(p, q)` 采用 (1024, 160)、(2048, 224)、(2048, 256) 或 (3072, 256) 位的其他选择，并包含一个称为 ECDSA 的椭圆曲线版本。我们首先采用模 `p` 乘法群 `![image](img/zsp.jpg)` 形式来描述算法，随后讨论 ECDSA 的变化。
 
-对于签名消息 `m`，DSA 部署一个函数 `H` 将消息哈希为短字符串。随后通过标准的字符串到整数转换将该字符串嵌入 ![image](img/z1.jpg)[q]，这要求哈希算法的输出足够短。我们在此简单假设 `H`(`m`) 是来自 ![image](img/z1.jpg)[q] 的值。NIST 建议使用 National Institute of Standards and Technology (2015) 中指定的任何安全哈希算法。由于最新版哈希标准提出了输出长度各异的不同算法，较大的哈希输出可能需要截断。
+对于签名消息 `m`，DSA 部署一个函数 `H` 将消息哈希为短字符串。随后通过标准的字符串到整数转换将该字符串嵌入 `![image](img/z1.jpg)`[q]，这要求哈希算法的输出足够短。我们在此简单假设 `H`(`m`) 是来自 `![image](img/z1.jpg)`[q] 的值。NIST 建议使用 National Institute of Standards and Technology (2015) 中指定的任何安全哈希算法。由于最新版哈希标准提出了输出长度各异的不同算法，较大的哈希输出可能需要截断。
 
-**构造 2.2（数字签名算法）。** *群 ⟨`g`⟩* ⊆ ![image](img/zsp.jpg) *上素数阶为 `q`、带哈希函数* `H` *的* `DSA` *包含以下算法：*
+**构造 2.2（数字签名算法）。** *群 ⟨`g`⟩* ⊆ `![image](img/zsp.jpg)` *上素数阶为 `q`、带哈希函数* `H` *的* `DSA` *包含以下算法：*
 
-*– **密钥生成**：对于给定群，密钥生成算法随机选取 `sk` ←[$] ![image](img/z1.jpg)[q]，设定 `pk` ← `g^sk` mod `p`，并输出 `(sk, pk)` 作为密钥对。*
+*– **密钥生成**：对于给定群，密钥生成算法随机选取 `sk` ←[$] `![image](img/z1.jpg)`[q]，设定 `pk` ← `g^sk` mod `p`，并输出 `(sk, pk)` 作为密钥对。*
 
-*– **签名**：为签名消息 `m` ∈ {0, 1}^∗，签名者随机选取 `k` ←[$] ![image](img/zsp.jpg) 并计算*
+*– **签名**：为签名消息 `m` ∈ {0, 1}^∗，签名者随机选取 `k` ←[$] `![image](img/zsp.jpg)` 并计算*
 
 ```
 r = (g^k mod p) mod q
 s = k^(−1) (H(m) + sk · r) mod q
 ```
 
-*其中 `k^(−1)` 是 `k` 在 ![image](img/z1.jpg)[q] 上的逆元。它输出 `σ` = (`r, s`) 作为 `m` 的签名。若 `r` = 0 或 `s` = 0，则签名者须重启签名过程。*
+*其中 `k^(−1)` 是 `k` 在 `![image](img/z1.jpg)`[q] 上的逆元。它输出 `σ` = (`r, s`) 作为 `m` 的签名。若 `r` = 0 或 `s` = 0，则签名者须重启签名过程。*
 
-*– **验证**：输入 `pk`、`m` 和 `σ` = (`r, s`)，验证者检查 `r` 和 `s` 是否在 ![image](img/zsq.jpg) 中，即 `0 < r, s < q`，然后计算*
+*– **验证**：输入 `pk`、`m` 和 `σ` = (`r, s`)，验证者检查 `r` 和 `s` 是否在 `![image](img/zsq.jpg)` 中，即 `0 < r, s < q`，然后计算*
 
 ```
 u1 = H(m) · s^(−1) mod q
@@ -1119,20 +1080,17 @@ g^u1 · pk^u2 = g^(H(m)·s^(−1)) · g^(sk·r·s^(−1))
 
 椭圆曲线版本称为 ECDSA，运行在特殊群上（同样为素数阶 `q`），群元素由 `x` 坐标和 `y` 坐标组成。椭圆曲线也提供群运算，通常称为加法而非乘法。因此，生成元由一对 `g` = (`g[x]`, `g[y]`) 组成，我们可以将步骤 `g^k` 解释为在曲线上对 (`g[x]`, `g[y]`) 进行 `k` 次加法。
 
+请注意，我们可以保留原始 DSA 中 `![image](img/z1.jpg)`[`q`] 中的标量运算不变，但只需要调整模 `p` 的运算，具体来说是在签名步骤中计算 `r` ← (`g^k` mod `p`) mod `q`，以及在验证签名时验证 `r` = (`g`^(`u`[1]) `pk`^(`u`[2]) mod `p`) mod `q`。在椭圆曲线情况下，我们不能简单地计算 `g^k` 然后将其模约到 `q`，因为群元素由坐标对组成。ECDSA 标准则让 `r` 成为 `g^k` 的 `x` 坐标，验证者检查计算出的群元素的 `x` 坐标是否与给定的 `r` 匹配。
 
+#### 2.1.2.2 施诺尔签名方案
 
+施诺尔签名方案（Schnorr 1990, 1991）是菲亚特-沙米尔范式（Fiat and Shamir 1987）的一个基于离散对数的变体，用于将识别方案转化为签名方案。因此，它遵循承诺-质询-响应范式，其中非交互式签名方案中的质询是通过将哈希函数 `H` 应用于初始承诺和消息来计算的。与 DSA 情况类似，哈希函数的范围再次可以嵌入到 `![image](img/z1.jpg)`[`q`] 中，其中 `q` 为素数，表示生成元 `g` 的群 〈`g`〉 的阶。事实上，施诺尔的安全性证明促使了素数阶 `q` 的使用。为了演示，我们再次假设由 `g` 生成的群位于 `![image](img/zsp.jpg)` 中。也存在椭圆曲线变体，它是对椭圆曲线上运算的直接改编。
 
-请注意，我们可以保留原始 DSA 中 ![image](img/z1.jpg)[`q`] 中的标量运算不变，但只需要调整模 `p` 的运算，具体来说是在签名步骤中计算 `r` ← (`g^k` mod `p`) mod `q`，以及在验证签名时验证 `r` = (`g`^(`u`[1]) `pk`^(`u`[2]) mod `p`) mod `q`。在椭圆曲线情况下，我们不能简单地计算 `g^k` 然后将其模约到 `q`，因为群元素由坐标对组成。ECDSA 标准则让 `r` 成为 `g^k` 的 `x` 坐标，验证者检查计算出的群元素的 `x` 坐标是否与给定的 `r` 匹配。
+**构造 2.3（施诺尔签名方案）。** – *在素数阶 q 的群 〈g〉* ⊆ `![image](img/zsp.jpg)` *上，带有哈希函数* `H` *的施诺尔签名方案* `Schnorr` *包含以下算法：*
 
-### 2.1.2.2. 施诺尔签名方案
+**密钥生成：** 对于给定的群，密钥生成算法随机选取 `sk` ←[$] `![image](img/z1.jpg)`[`q`]，设置 `pk` ← `g^(sk)` mod `p`，并输出 (`sk`, `pk`) 作为密钥对。
 
-施诺尔签名方案（Schnorr 1990, 1991）是菲亚特-沙米尔范式（Fiat and Shamir 1987）的一个基于离散对数的变体，用于将识别方案转化为签名方案。因此，它遵循承诺-质询-响应范式，其中非交互式签名方案中的质询是通过将哈希函数 `H` 应用于初始承诺和消息来计算的。与 DSA 情况类似，哈希函数的范围再次可以嵌入到 ![image](img/z1.jpg)[`q`] 中，其中 `q` 为素数，表示生成元 `g` 的群 〈`g`〉 的阶。事实上，施诺尔的安全性证明促使了素数阶 `q` 的使用。为了演示，我们再次假设由 `g` 生成的群位于 ![image](img/zsp.jpg) 中。也存在椭圆曲线变体，它是对椭圆曲线上运算的直接改编。
-
-**构造 2.3（施诺尔签名方案）。** – *在素数阶 q 的群 〈g〉* ⊆ ![image](img/zsp.jpg) *上，带有哈希函数* `H` *的施诺尔签名方案* `Schnorr` *包含以下算法：*
-
-**密钥生成：** 对于给定的群，密钥生成算法随机选取 `sk` ←[$] ![image](img/z1.jpg)[`q`]，设置 `pk` ← `g^(sk)` mod `p`，并输出 (`sk`, `pk`) 作为密钥对。
-
-**签名：** 要对消息 `m` ∈ {0, 1}^∗ 进行签名，签名者选取随机 `r` ←[$] ![image](img/z1.jpg)[`q`] 并计算
+**签名：** 要对消息 `m` ∈ {0, 1}^∗ 进行签名，签名者选取随机 `r` ←[$] `![image](img/z1.jpg)`[`q`] 并计算
 
 ```
 c = H(g^r mod p, m)
@@ -1141,15 +1099,15 @@ y = r + c · sk mod q
 
 输出 `σ` ← (`c`, `y`) 作为 `m` 的签名。
 
-**验证：** 输入 `pk`、`m` 和 `σ` = (`c`, `y`)，验证者检查 `c` 和 `y` 是否在范围 ![image](img/z1.jpg)[`q`] 内，如果是，则验证 `H`(`g^y pk`^(−`c`), `m`) = `c`。当且仅当所有测试都通过时，验证者输出 1，否则输出 0。
+**验证：** 输入 `pk`、`m` 和 `σ` = (`c`, `y`)，验证者检查 `c` 和 `y` 是否在范围 `![image](img/z1.jpg)`[`q`] 内，如果是，则验证 `H`(`g^y pk`^(−`c`), `m`) = `c`。当且仅当所有测试都通过时，验证者输出 1，否则输出 0。
 
 对于正确性，我们观察到对于由 `Schnorr`.`Sig` 在密钥 `sk` 下生成的签名 `σ` = (`c`, `y`)，有 `y` = `r` + `c` · `sk` mod `q`，其中 `r` 是签名步骤中使用的随机数。但随后 `g^y · pk`^(−`c`) = `g`^(`r`+`c`·`sk`) · `g`^(−`c`·`sk`) = `g^r` mod `p`，验证中推导出的值与签名者计算的值 `R` = `g^r` mod `p` 匹配。因此，验证中的哈希函数求值也将 `H`(`g^y · pk`^(−`c`), `m`) 映射到 `c`，验证成功。
 
-## 2.2. 不可伪造性
+## 2.2 不可伪造性
 
 在本节中，我们讨论不可伪造性的基本概念。我们还结合所达到的安全保证，重新审视前面的方案。
 
-### 2.2.1. 讨论
+### 2.2.1 讨论
 
 直观地说，我们对安全签名方案的期望很容易阐述，即没有人能够伪造签名。为了形式化这一点，我们必须考虑对手在攻击中能做什么，以及何时对手获胜。我们从后者开始，遵循 Goldwasser 等人（1988）的工作：
 
@@ -1161,29 +1119,26 @@ y = r + c · sk mod q
 
 – **存在性伪造：** 对手能够为一个任意的、可能毫无意义的消息伪造签名。
 
+
+
 请注意，从签名者的角度来看，前两项，完全攻破和普遍伪造，通常具有同等的危害性。有人也可能争辩“存在性伪造”这个名称是否恰当，因为这不仅要求这样的消息*存在*，还要求对手能够精确指出该消息。
 
 如前所述，定义不可伪造性的另一个维度是指对手的攻击能力。Goldwasser 等人（1988）的工作瞬间考虑了最强形式的攻击，称为**自适应选择消息攻击**，在这种攻击中，对手可以首先看到所选消息的签名，其中每个消息都是在得知前几个消息的签名后自适应地选择的。然而，有时考虑较弱的攻击形式也是合理的：
 
-– **仅密钥攻击：** 在仅密钥攻击中，对手仅接收验证密钥，并被要求输出一个伪造签名。
-
-– **非自适应选择消息攻击：** 在非自适应选择消息攻击中，对手在尝试产生伪造之前可以看到所选消息的签名，但消息是在开始时确定的。在这里，我们可以进一步区分对手是在接收验证密钥之前还是之后选择消息的情况。
-
-– **一次性攻击：** 在一次性攻击中，对手发起选择消息攻击，但在尝试产生伪造之前，只能看到一个所选消息的签名。所选消息可能依赖公钥，也可能不依赖。能抵御此类攻击的方案也称为一次性签名方案。
-
-– **自适应选择消息攻击：** 如前所述，在这样的攻击中，对手可以请求任意数量消息的签名，其中下一个消息是在得知前几个签名后确定的。
+- **仅密钥攻击：** 在仅密钥攻击中，对手仅接收验证密钥，并被要求输出一个伪造签名。
+- **非自适应选择消息攻击：** 在非自适应选择消息攻击中，对手在尝试产生伪造之前可以看到所选消息的签名，但消息是在开始时确定的。在这里，我们可以进一步区分对手是在接收验证密钥之前还是之后选择消息的情况。
+- **一次性攻击：** 在一次性攻击中，对手发起选择消息攻击，但在尝试产生伪造之前，只能看到一个所选消息的签名。所选消息可能依赖公钥，也可能不依赖。能抵御此类攻击的方案也称为一次性签名方案。
+- **自适应选择消息攻击：** 如前所述，在这样的攻击中，对手可以请求任意数量消息的签名，其中下一个消息是在得知前几个签名后确定的。
 
 宽松的安全概念很有用，因为存在实现更强变体的转换方法。首先注意，一次性签名方案相对容易构造。Lamport（1979）展示了一个基于任意单向函数的简单构造，尽管该解决方案在签名长度方面代价相当高。如果有一个一次性签名方案，那么使用 Merkle 树（Merkle 1988），可以得到一个允许签名无限数量消息的签名方案（Merkle 1990）。这一构造思想此后已演变为实用的基于哈希的签名方案，如 SPHINCS^+（Aumasson 等人 2020）。
 
 对于从非自适应到自适应的转换，有两条路径。一种是使用 Even-Goldreich-Micali 构造（Even 等人 1996）。它从一个在随机（因此是非自适应选择）消息下存在性不可伪造的方案开始，并将其与一个一次性签名方案相结合。密钥对 (`sk`[rnd], `pk`^(rnd)) 由随机消息方案的一对密钥组成。要签名消息 `m`，先生成一次性方案的一个新密钥对 (`sk`[ot], `pk`[ot])，在 `sk`[ot] 下签名消息 `m`，最后用 `sk`[rnd] 签名 `pk`[ot] 来认证它。组合方案的签名由 `m` 的两个签名（在 `sk`[ot] 下）和 `pk`[ot] 的签名（在 `sk`[rnd] 下）以及 `pk`[ot] 组成。请注意，我们仅在密钥 `pk`[rnd] 下签名随机“消息”`pk`[ot]，因此针对此类攻击的安全性即足够。
 
-
-
 另一种可能性是使用变色龙哈希（Krawczyk 和 Rabin 2000）。这些是概率哈希函数 `H(pk_ch, m, r)`，它们拥有一个公钥 `pk_ch`，并将带有随机性 `r` 的输入消息 `m` 映射到某个哈希值 `h`。同时也存在一个私钥 `sk_ch`，它允许稍后为给定消息 `m'` 找到合适的随机性 `r'`，使得 `H(pk_ch, m', r') = h` 再次映射到相同的哈希值。例如，可以在离散对数假设下构建此类变色龙哈希，令其为 `g^r * pk_ch^m mod p`。已知私钥 `sk_ch ∈ Z_q` 且 `pk_ch = g^(sk_ch) mod p`，即可为给定的 `m', m, r` 找到 `r'`，使得哈希值重合：`r' = r + sk_ch * (m - m') mod q`。相反，在仅给定公钥 `pk_ch` 的情况下，根据离散对数假设，找到此类碰撞 `(m, r) ≠ (m', r')` 是不可行的。
 
 使用变色龙哈希的签名转换首先使用此类变色龙哈希函数对每个待签名消息进行哈希，使得安全性本质上遵循哈希后签名原则。变色龙哈希函数的公钥成为验证密钥的一部分。签名者不需要了解变色龙函数的私钥；只有安全性归约才利用它。它允许归约首先非自适应地生成随机消息的哈希值，一旦对手自适应地选择每条消息，就借助 `sk_ch` 将哈希值“弯曲”到先前选定的那个值。
 
-### 2.2.2. 选择消息攻击下的存在性不可伪造性
+## 2.2.2. 选择消息攻击下的存在性不可伪造性
 
 从现在开始，我们将关注最强类型的攻击，即选择消息攻击下的存在性不可伪造性。这一概念引出了一个看似悖论的情况，由 Goldwasser 等人（1988）指出，特别是因为他们讨论了基于因式分解的签名：我们必须能够为对手签署任意消息，这表明我们必须知道因式分解才能做到这一点。但对于安全性归约，我们同时也必须能够利用对手的伪造策略来推导出一个因式分解算法。确实，上述论文的第一个版本标题为“签名问题的‘悖论’解决方案”（Goldwasser 等人，1984），也解释了原则上可以克服这一困境。论点大致是：归约可以在一个具有略微不同的公钥或私钥的、不可区分的环境中模拟对手的视图，支持签名生成，但仍然使我们能够为对手针对新消息的伪造推导出期望的矛盾。
 
@@ -1212,11 +1167,11 @@ O(sk, m):
 
 请注意，我们选择了一种渐近概念来限制安全签名方案中 PPT 对手 `A` 的成功概率 `ε`。或者，我们也可以使用具体安全界，如果对于资源至多为 `t` 且最多进行 `q` 次签名查询的任何对手，都有 `ε' ≤ ε`，则称签名方案为 `(t, q, ε)`-EUF-CMA。这里，对手的资源通常按运行时间（在某些机器模型中）衡量，因此用字符 `t` 表示。但我们也可以使用其他度量，如空间需求。
 
-### 2.2.3. 实用方案的不可伪造性
+## 2.2.3. 实用方案的不可伪造性
 
 我们在此简要讨论 2.1.2 节 中介绍的两个实用签名方案（即 DSA 和 Schnorr 方案）的安全性已知情况。
 
-#### 2.2.3.1. 数字签名算法
+### 2.2.3.1. 数字签名算法
 
 DSA 方案由 NIST 提出，但未附带安全性证明。显然，它依赖于计算离散对数的困难性——否则对手可以从公钥推导出私钥——并且创建不同消息的签名时不得重复使用相同的随机性。更多要求请参见 Vaudenay (2003) 等。虽然这些是必要条件，但截至今天，我们仍没有令人信服的 EUF-CMA 安全性证明。
 
@@ -1224,12 +1179,9 @@ DSA 方案由 NIST 提出，但未附带安全性证明。显然，它依赖于�
 
 Brown (2005) 表明，在通用群模型中，如果对哈希函数和转换函数做出额外假设，可以证明 DSA 和 ECDSA 是 EUF-CMA 安全的。然而，正如 Stern 等人 (2002) 指出的那样，该证明也将表明 ECDSA 方案是强不可伪造的（见下文定义）——而它很可能不是（见 2.3.3 节）。Fersch 等人 (2016) 在离散对数假设下给出了 DSA 和 ECDSA 的证明，通过分解转换函数并理想化该分解的一个部分。这一结果对 DSA 和 ECDSA 中真正的转换函数意味着什么尚不清楚。
 
-#### 2.2.3.2. Schnorr 签名
+### 2.2.3.2. Schnorr 签名
 
 对于 Schnorr 签名方案，我们在随机预言机模型下有一个安全性证明，假设计算离散对数的困难性。在随机预言机模型中，将部署的哈希函数 `H` 建模为随机函数。该证明见于 Pointcheval 和 Stern (1996, 2000)。它使用了所谓的分叉策略，导致安全性界限相当松散。我们在此陈述 Bellare 和 Neven (2006) 版本中的界限：如果一个对手在针对 Schnorr 方案的 EUF-CMA 实验中以概率 `ε` 获胜，且最多进行 `q_H` 次随机预言机查询，则可得到一个针对离散对数问题的算法，其运行时间大致相同，成功概率约为 `ε² / q_H`。换句话说，当为群中的离散对数问题确定可接受的安全级别时，必须考虑到针对签名方案伪造者的上界变为二次方，从而显著变大。
-
-
-
 
 从针对 Schnorr 签名方案的伪造攻击归约到离散对数问题的过程中，损失似乎是不可避免的。Seurin (2012) 提供了有力证据，表明安全界限中的线性损失 `qH` 是固有的。他的结果排除了具有更紧凑界限的代数归约，假设是 one-more 离散对数问题。通用归约的非紧致性后来由 Fleischhacker 等人 (2019) 证实。
 
@@ -1285,12 +1237,9 @@ Brown (2005) 表明，在通用群模型中，如果对哈希函数和转换函�
 
 已知对于曲线上的任意点 `S` = (`S[x], S[y]`)，其（加法）逆点 `−S` 也在曲线上。事实上，`−S` = (`S[x],` `−S[y]`)，使得点 `S` 和 `−S` 在 `x` 坐标上重合。这允许对手将给定签名 `(r, s)` 修改为同一消息的另一个有效签名 `(r,` `−s mod q)`：
 
-![image](images/p58-4.jpg]
+![image](images/p58-4.jpg)
 
 因此，用于验证 `s mod q` 的群元素的 `x` 坐标映射到与 `s` 相同的值。
-
-
-
 
 请注意，比特币在软分叉 `SegWit` 将签名移出交易哈希之上，还强制规定有效签名中只能出现 `s, −s mod q` 中较小的（编码后的）值。这防止了上述攻击，但并不能证明经过此修改的 ECDSA 具有强不可伪造性。ECDSA 可能仍存在其他可延展性攻击，尽管目前尚未发现。
 
@@ -1306,17 +1255,19 @@ Steinfeld 等人（2007）提出了一种更高效的转换。它依赖于变色
 [Diagram: Key Generation and Signing Process for Transformed Scheme]
 ```
 
+
+
 形式上，转换后方案的密钥生成算法因此为底层方案生成签名密钥对 `(sk, pk)`，为变色龙哈希函数生成两个独立的密钥对 `(sk_ch, pk_ch)` 和 `(sk'_ch, pk'_ch)`，丢弃秘钥 `sk'_ch`，并输出密钥对 `sk_strong = (sk, sk_ch, pk_ch, pk'_ch)` 和 `pk^strong = (pk, pk^ch, pk'_ch)`。验证过程包含重新计算哈希值，并验证第二个哈希值的最终签名。
 
 直观上，转换后的签名方案之所以具有强不可伪造性，是因为最终签名 `σ_strong` 中对 `σ`、`r` 或 `r'` 的任何修改，都要求在变色龙哈希函数中找到碰撞，或者在底层签名方案下为新的哈希值伪造签名。我们注意到，证明中需要两个嵌套的变色龙哈希，以便在不同的变色龙陷门之间切换。原则上，它们可以合并为一个支持多个秘钥的单一变色龙哈希。
 
-## 2.4. 总结
+## 2.4 总结
 
 我们定义了签名方案的常见安全概念 EUF-CMA 和 SEUF-CMA。前者保证对手无法为先前未签名的消息生成有效伪造。后者确保也无法为已签名消息找到新的签名。随后我们描述了如何通过变色龙哈希将 EUF-CMA 安全方案转化为强安全方案。该转换相当高效，尽管增加了一些开销。
 
 我们还讨论了两个实用签名方案（EC）DSA 和 Schnorr 的安全性。尽管 Schnorr 方案在随机预言机模型下，基于离散对数假设提供 SEUF-CMA 安全性——但安全界限较松——（EC）DSA 的安全性目前仍是开放问题。唯一有保证的事实是 ECDSA 不具备强不可伪造性。
 
-## 2.5. 参考文献
+## 2.5 参考文献
 
 Aumasson, J.-P., Bernstein, D.J., Beullens, W., Dobraunig, C., Eichlseder, M., Fluhrer, S., Gazdag, S.-L., Hülsing, A., Kampanakis, P., Kölbl, S., et al. (2020). Shincs^+: Algorithm specifications and supporting documentation [Online]. Available at: [`sphincs.org/data/sphincs+-round3-specification.pdf`](https://sphincs.org/data/sphincs+-round3-specification.pdf)
 
@@ -1355,11 +1306,6 @@ Goldwasser, S., Micali, S., Rivest, R.L. (1988). A digital signature scheme secu
 Krawczyk, H. and Rabin, T. (2000). Chameleon signatures. In *NDSS 2000*. The Internet Society, Reston, VA.
 
 Lamport, L. (1979). Constructing digital signatures from a one-way function. Technical Report SRI-CSL-98, SRI International Computer Science Laboratory.
-
-
-
-
-# 参考文献
 
 Merkle, R.C. (1988). A digital signature based on a conventional encryption function. In *CRYPTO’87*, vol. 293 of *LNCS*, Pomerance, C. (ed.). Springer, Heidelberg.
 
@@ -1405,7 +1351,11 @@ Vaudenay, S. (2003). The security of DSA and ECDSA. In *PKC 2003*, vol. 2567 of 
 
 1985 年，Goldwasser 等人将上述双方博弈形式化，引入了“交互式零知识证明系统”的概念。在上述场景中，Peggy 扮演证明者 `P` 的角色，而 Victor 扮演验证者 `V` 的角色。该声称被形式化为一个实例 `x`，声称其属于语言 `L`。`P` 和 `V` 都知道 `x` 和 `L` 的描述，并进行某种定义明确的消息交换，以便最终 `P` 能说服 `V` 相信 `x ∈ L`。这是一个基本的正确性属性，称为“完备性”，对应于当 Peggy 的声称为真时，她能够说服 Victor。如果 Peggy 恶意地试图证明一个虚假的声称，对 Victor 的保护称为“可靠性”，要求 `V` 在交互结束时被说服相信一个虚假声称的真实性（即 `x ∉ L` 但 `V` 被说服 `x ∈ L`）的概率很低，即使与对手 `P^⋆` 交互也是如此。如果对手 Victor 对获取某些机密信息感兴趣，对 Peggy 的保护称为“零知识”（ZK）。为了恰当地定义机密信息不泄露，Goldwasser 等人引入了模拟范式：对手 `V^⋆` 在与 `P` 交换消息期间学到的信息，本质上是 `V^⋆` 已经知道的信息，意思是 `V^⋆` 无需与 `P` 交互，仅运行一个称为模拟器的特殊高效算法就能生成相同的信息。
 
-模拟范式彻底改变了系统安全性评估的方式，成为形式化机密数据保护的事实黄金标准。关于零知识证明系统的研究已异常活跃多年，使我们能够了解在许多自然场景下什么可以、什么不可以在零知识下被证明。
+
+
+# 模拟范式彻底改变了系统安全性评估的方式，成为形式化机密数据保护的事实黄金标准
+
+关于零知识证明系统的研究已异常活跃多年，使我们能够了解在许多自然场景下什么可以、什么不可以在零知识下被证明。
 
 本章将介绍关于零知识证明的一些最具影响力的概念和结果，讨论理论和实践方面的成就。
 
@@ -1427,10 +1377,6 @@ Vaudenay, S. (2003). The security of DSA and ECDSA. In *PKC 2003*, vol. 2567 of 
 
 *关于可靠性的备注*：上述可靠性要求保护诚实验证者免受无界恶意证明者的攻击。一种放宽但仍极其有用的可靠性要求则关注 `P^⋆` 在多项式时间内运行的实验。这种“计算可靠”的证明系统称为论证系统。本章中泛指证明系统的大部分内容也适用于论证系统。显然，证明系统的正面结果对论证系统也成立。相反，证明系统的负面结果可能不适用于论证系统，因为后者要求较低。
 
-
-
-
-
 ### 关于 PPT P 和 V 的备注
 
 一些研究方向探讨了这样一种情况：完整性考虑的是一个计算能力无界的诚实证明者，它确实需要一个见证；和/或一个计算能力无界的诚实验证者。为求简洁具体，我们将始终假设 `P` 和 `V` 是高效的。
@@ -1439,7 +1385,7 @@ Vaudenay, S. (2003). The security of DSA and ECDSA. In *PKC 2003*, vol. 2567 of 
 
 可靠性要求仅考虑 `x ∉ L` 的情况。存在一些情况，其中声明不可能为假，因此可靠性毫无用处。也存在一些情况，不仅要求 `P` 说服 `V`，而且要求任何成功说服 `V` 某个 `x ∈ L` 的 `P^⋆` 必须知道一个见证 `w`，使得 `(x, w) ∈ R[L]`。Bellare 和 Goldreich (1993) 定义了一个知识提取属性，要求存在一个算法（即提取器），能够为实例 `x` 计算出一个见证 `w`，其付出的工作量取决于 `P^⋆` 在证明 `x ∈ L` 时的成功概率。非常粗略地说，如果 `P^⋆` 能以非微不足道的概率证明 `x ∈ L`，那么提取器就能在多项式时间内计算出一个有效的见证。同时具备完整性和上述特殊知识属性的双方协议被称为知识证明。
 
-### 3.3.1. 零知识
+### 3.3.1 零知识
 
 按上述定义的证明系统很容易构造：`P` 可以直接将 `w` 发送给 `V`，后者检查 `(x, w) ∈ R[L]`，根据检查结果输出 1 或 0。
 
@@ -1475,11 +1421,7 @@ Goldwasser 等人的定义要求存在一个高效算法 `S`，称为*模拟器*
 
 `V^⋆` 的输入除了实例 `x` 外，还包括辅助信息 `z`，例如之前收集的数据，`V^⋆` 可能在此基础上计算其与 `P` 交互时的消息。由于 `S` 接收与 `V^⋆` 相同的输入，`S` 也将接收 `z` 作为输入。Goldreich 和 Oren (1994) 表明，给 `V^⋆` 增加辅助输入对于确保零知识在顺序组合下得以保持至关重要（即可以一个接一个地以零知识方式证明多个声明，且见证的机密性仍无风险），或确保其作为子协议被正确使用。
 
-
-
-
-
-# 定义 3.2. – *证明系统* `Π = (P, V)` *针对* `NP` *语言 L 是黑盒计算（分别为统计、完美）零知识，如果存在一个期望 PPT 算法 S，使得对于任意 PPT 算法* `V^⋆` *任意* `(x, w) ∈ R[L]` *和任意* `z ∈ {0, 1}^(*)`，*以下两个分布在计算上（分别为统计上、完美上）不可区分：*
+**定义 3.2。** *证明系统* `Π = (P, V)` *针对* `NP` *语言 L 是黑盒计算（分别为统计、完美）零知识，如果存在一个期望 PPT 算法 S，使得对于任意 PPT 算法* `V^⋆` *任意* `(x, w) ∈ R[L]` *和任意* `z ∈ {0, 1}^(*)`，*以下两个分布在计算上（分别为统计上、完美上）不可区分：*
 
 ```
 ![image](img/p67-1.jpg)
@@ -1487,49 +1429,45 @@ Goldwasser 等人的定义要求存在一个高效算法 `S`，称为*模拟器*
 
 *ZK 证明的可否认性*：`V^⋆` 可以运行模拟器，从而能够自我生成与证明者对话中无法区分的记录，这一事实使得 ZK 证明具有可否认性（即 ZK 证明不会留下任何已给出证明的证据）。反过来，这保证了 ZK 证明是不可转移的，意思是 `V^⋆` 无法获得说服其他验证者的能力。
 
-## 3.4. 如何构建零知识证明系统
+## 3.4 如何构建零知识证明系统
 
 一旦我们有了可靠的定义，下一步就是设计提供此类强大安全性的系统。有许多技术和方法可用于设计^()
 
 *`V` 心中有数，而 `P` 利用见证可以获知它*：由于 `V^⋆` 从与 `P` 的交互中不得获知关于 `w` 的任何额外信息，设计 ZK 证明系统的一种自然策略是允许 `P` 利用对 `w` 的了解，来理解并使用 `V`（因此也是 `V^⋆`）私下知道的某些东西，而当声明为假时，这些东西对于 `P^⋆` 来说基本上是不可能猜到的。这种方法可以让 `P` 说服 `V`，同时保护 `w`，因为 `V^⋆` 接收到的信息是可以从 `V^⋆` 已知内容生成的。我们究竟如何实现这样一个高层想法？
 
-### *X 射线眼镜的迷思*
+### X 射线眼镜的迷思
 
 在 20 世纪 70 年代，曾出售一种眼镜，承诺具有 X 射线功能，因此能看到人眼能力之外的事物。例如，这些眼镜的销售商声称它们可用于透视衣物。在此，我们假设一位销售商声称其眼镜能识别毛衣正下方衬衫的颜色。为了理解如何实现上述设计 ZK 证明系统的方法，我们将给出一个玩具示例，其中销售商试图向潜在买家证明这些眼镜看似神奇的功能。这个玩具示例的目标是给出一种直觉，说明完备性、可靠性和 ZK 等属性如何能在一个协议中共存。
 
-### *在保护隐私的前提下证明 X 射线眼镜的有效性*
+### 在保护隐私的前提下证明 X 射线眼镜的有效性
 
 显然，销售商扮演 `P` 的角色，买家扮演 `V` 的角色。`P` 和 `V` 在一个只有桌子的房间里会面，`P` 给 `V` 两件衬衫，一件是红色的，另一件是粉色的。`V` 给 `P` 一叠 `k` 个（例如 `k = 100`）信封，第 `i` 个信封上写着数字 `i`。`P` 表明这 `k` 个信封是她仅有的信封。`P` 转向一个角落，`V` 站在房间的对角，私下抛一枚硬币。如果结果是正面，则 `V` 先穿粉色衬衫，再穿红色衬衫，最后穿毛衣；如果结果是反面，则 `V` 先穿红色衬衫，再穿粉色衬衫，最后穿毛衣。`V` 准备好后，`P` 可以转向 `V`，利用魔法眼镜识别出紧贴毛衣的那件衬衫的颜色。`P` 然后在一张纸上写下红色或粉色，将其放入第一个信封。`P` 随后封好信封并将其放在桌上。然后 `V` 脱下毛衣，以便 `P` 能看到外层衬衫的颜色。他们重复上述游戏，在第 `i` 次迭代中使用第 `i` 个信封。最后，经过 `k` 次迭代后，`P` 打开所有信封，从而揭示所有颜色，`V` 检查它们在所有迭代中是否都与所选衬衫的颜色相符。如果是这种情况，则 `V` 确信眼镜具有该功能。
 
-### *非正式分析*
+### 非正式分析
 
 如果声明为真且双方玩家都诚实，眼镜总能识别出正确的颜色，因此 `P` 将以概率 1 在所有 `k` 次测试中高效地成功，满足完备性要求。如果声明为假^()
 
 使用时间机器仅仅是作弊吗？虽然我们在现实世界中目前没有时间机器，但在考虑算法时，它们实际上是微不足道的。在算法运行一次后，可以用相同的初始输入再次运行它，直到到达某个给定点，然后改变下一个输入。这种时间机器的用法称为*倒带*，直到 Barak 展示了如何利用非黑盒定义之前，它至关重要地促成了零知识证明的设计。请注意，`V^⋆` 并不被强制遵循诚实行为。事实上，他可以自适应地决定衬衫的顺序，而不是抛硬币。这解释了为什么模拟器不能简单地自行抛硬币，而需要激活 `V^⋆`。
 
-### *更简单方法的风险*
+### 更简单方法的风险
 
 人们当然很自然地会想，销售商可以直接把眼镜给买家，让买家自行进行广泛测试。这样，买家就可以自行检查眼镜的有效性。不幸的是，把眼镜给买家可能意味着机密信息的泄露。例如，买家可以利用眼镜（如观察买家自己）为自己谋利，而不仅仅是为了获得一个证明它们正常工作的令人信服的证据。另一种有风险的方法是销售商向买家透露制造眼镜的设计。显然，这种第二种方法会给买家太多信息，买家随后可以决定自行生产此类眼镜。协议中需要信封这一点更为微妙：它确保 `V^⋆` 只有在明确知道外层衬衫颜色*之后*才被告知 `P` 的猜测。事实上，毛衣是在打开信封*之前*脱下的。因此，如果没有信封，`P` 直接宣布颜色，`V^⋆` 可能有更多机会从证明中学到一些东西（例如，`V^⋆` 可以在从未脱下毛衣的情况下，得知进屋前盲目选择并穿上的那件底层衬衫的颜色）。
 
-### 3.4.1. *针对所有* `NP` *语言的 ZK 证明*
+### 3.4.1 针对所有 `NP` 语言的 ZK 证明
 
 假设存在任意单向函数，则所有 `NP` 语言都存在 ZK 证明^()
 
 *以零知识方式证明一个图是哈密顿图*：`P` 和 `V` 的工作与上述关于 X 射线眼镜的说明非常相似。`P` 持有一个循环 `C` 作为见证，证明 `V` 也知道的图 `G` 是哈密顿图。在 `V` 未观察 `P` 的情况下，`P` 计算 `G` 节点的一个随机排列，得到图 `G'`，将 `G'` 邻接矩阵的每一位放入不同的信封中，并在 `V` 在场的情况下将信封放在桌上。`V` 然后抛一枚硬币，如果输出是正面，则 `P` 打开信封并将排列给 `V`，`V` 检查信封内容和排列是否与原始图 `G` 匹配。如果输出是反面，则 `P` 仅打开那些在 `G'` 的邻接矩阵中显示循环的信封。上述过程重复 `x` 次，每次都从一个新的排列开始，因此使用新的信封。信封用于冻结其中存储的值，同时在打开阶段之前保持隐藏。在密码学中，承诺方案实现了数字信封，并且可以使用任意单向函数构造（Naor 1991），保证编码在信封中的值具有无条件的不可变性。上述协议是公开币的，意思是 `V` 的消息独立于 `P` 的消息，纯粹由发送随机比特组成。
 
-
-
-
-
-### 3.4.1. 非正式分析
+#### 非正式分析
 
 完备性成立，因为 `P` 同时知道 `C` 和选定的排列，因此无论正面还是反面都能正确完成任务。可靠性成立，因为当 `G` 无环时，信封放在桌上后，正面和反面中至少有一个值会击败 `P^⋆`。因此，在 `x` 次执行中 `P^⋆` 成功的概率可以忽略不计。零知识性成立，因为存在一个模拟器可以尝试猜测下一次抛硬币的输出。
 
-### 3.4.2. 自适应 `V^⋆`
+### 3.4.2 自适应 `V^⋆`
 
 上述未指定的重复次数暗示了运行在*期望*多项式时间内的模拟器在运行时间上的灵活性。当 `V^⋆` 以依赖于其当前视图（包括信封）的方式抛硬币，且每次回溯都可能改变时，可能会发生（不太可能的）无界重复次数。`V^⋆` 甚至可以决定中止（例如不玩到结束）协议的执行。
 
-### 3.4.3. 轮复杂度
+### 3.4.3 轮复杂度
 
 ZK 证明系统的轮复杂度已被研究人员深入研究。上述针对哈密顿图的协议所需的通信轮数取决于公共输入的大小。
 
@@ -1539,26 +1477,31 @@ Blum 协议的一个简单修改是并行运行 `log |x|` 次测试。这将在�
 
 统计零知识论证系统由 Brassard 等人 (1990) 提出，基于 CRHFs 的 4 轮构造由 Bellare 等人 (1997) 给出，其假设随后在 Bitansky 和 Paneth (2019) 中被放宽。基于无爪排列的 4 轮完美 ZK 论证系统由 Hazay 和 Venkitasubramaniam (2018) 给出。
 
-## 3.5. 证明系统中的宽松安全性
+## 3.5 证明系统中的宽松安全性
 
 证明系统中输入机密性的保护可以用其他几种方式定义。本节将概述一些比 ZK 更容易实现的概念。
 
-### 3.5.1. 诚实验证者 ZK
+### 3.5.1 诚实验证者 ZK
 
 在经典 ZK 证明系统中，`V^⋆` 可以任意偏离规定协议，这使模拟器的设计复杂化。一个更友好的设置是：验证者在计算其消息时是诚实的，但仍有兴趣结合对话记录、其辅助输入和其随机性来获取比单纯陈述真实性更多的信息。这一概念特别建模了执行后腐败的情况，即验证者在执行期间是诚实的，但后来被腐败，对手获得了先前执行协议的存储信息。这一概念称为诚实验证者 ZK (HVZK)，且更容易实现。确实，像 Blum 针对哈密顿图的公币证明系统，当验证者诚实时，允许模拟器以概率 1 预测挑战。这是由于模拟器知道 `V^⋆` 接收到的随机输入。反过来，模拟是直线的（即不需要回溯），没有中止，因此 `S` 在严格多项式时间内运行。
 
-### 3.5.2. 见证隐藏/不可区分性
+### 3.5.2 见证隐藏/不可区分性
 
 Feige 和 Shamir (1990a) 为证明系统提出了两个宽松的安全概念，它们不依赖模拟范式，而是关注关于见证保密性的较弱保证。
 
-**见证不可区分性**：当存在多个见证证明 `x ∈ L` 时，第一个安全概念才有意义。Fiat 和 Shamir 定义见证不可区分性 (WI) 为对 `P` 使用的见证（在所有可能使用的见证中）的保护。WI 要求对于任何一对可能的见证，`V^⋆` 在区分 `P` 使用的那个时没有显著优势。类似于 ZK，WI 可以考虑完美、统计和计算不可区分性来定义。WI 比 ZK 是更弱的安全保证，因为它可能允许 `V^⋆` 在证明过程中获得一些有用信息。确实，WI 显然不满足可否认性，因为存在针对所有 `NP` 语言的单轮 WI（即非交互式 WI (NIWI)）证明系统 (Groth et al. 2006a)，而 NIWI 证明显然是可转移的。
-
-**见证隐藏**：第二个概念考虑任何拥有困难实例生成器的 `NP` 语言（即给定参数 `k`，生成长度为 `k` 的实例，且没有 PPT 对手能以非忽略概率找到对应的见证）。Fiat 和 Shamir 定义证明系统的见证隐藏 (WH)，强制要求没有 PPT `V^⋆` 在接收由 `P` 为随机生成的困难实例计算的证明后，能以非忽略概率计算出对应的见证。注意在上述定义中 `V^⋆` 可能能够计算见证的一部分或其函数，而在 ZK 中这通常是不可行的。另一方面，WH 是一个非平凡的概念（例如 `P` 直接将 `w` 发送给 `V` 的平凡证明系统显然不是 WH）。
-
-**超越 ZK 极限的 WH/WI**：已知当单个实例存在多个见证时，WI 蕴含 WH，即任何 WI 证明系统也是 WH。WI 是一个在并行和并发组合下封闭的概念。这意味着任何 WI 证明系统在对手可以并行运行协议的多个实例，甚至在完全控制消息调度的情况下并发运行时，仍保持其安全性。正如我们稍后将讨论的，这种形式的组合在 ZK 证明系统中则要成问题得多。
 
 
+## 见证不可区分性
 
+当存在多个见证证明 `x ∈ L` 时，第一个安全概念才有意义。Fiat 和 Shamir 定义见证不可区分性 (WI) 为对 `P` 使用的见证（在所有可能使用的见证中）的保护。WI 要求对于任何一对可能的见证，`V^⋆` 在区分 `P` 使用的那个时没有显著优势。类似于 ZK，WI 可以考虑完美、统计和计算不可区分性来定义。WI 比 ZK 是更弱的安全保证，因为它可能允许 `V^⋆` 在证明过程中获得一些有用信息。确实，WI 显然不满足可否认性，因为存在针对所有 `NP` 语言的单轮 WI（即非交互式 WI (NIWI)）证明系统 (Groth et al. 2006a)，而 NIWI 证明显然是可转移的。
+
+## 见证隐藏
+
+第二个概念考虑任何拥有困难实例生成器的 `NP` 语言（即给定参数 `k`，生成长度为 `k` 的实例，且没有 PPT 对手能以非忽略概率找到对应的见证）。Fiat 和 Shamir 定义证明系统的见证隐藏 (WH)，强制要求没有 PPT `V^⋆` 在接收由 `P` 为随机生成的困难实例计算的证明后，能以非忽略概率计算出对应的见证。注意在上述定义中 `V^⋆` 可能能够计算见证的一部分或其函数，而在 ZK 中这通常是不可行的。另一方面，WH 是一个非平凡的概念（例如 `P` 直接将 `w` 发送给 `V` 的平凡证明系统显然不是 WH）。
+
+## 超越 ZK 极限的 WH/WI
+
+已知当单个实例存在多个见证时，WI 蕴含 WH，即任何 WI 证明系统也是 WH。WI 是一个在并行和并发组合下封闭的概念。这意味着任何 WI 证明系统在对手可以并行运行协议的多个实例，甚至在完全控制消息调度的情况下并发运行时，仍保持其安全性。正如我们稍后将讨论的，这种形式的组合在 ZK 证明系统中则要成问题得多。
 
 # WH/WI 证明系统
 
@@ -1572,13 +1515,13 @@ Feige 等人 (1990) 提出了一种构建 ZK 证明系统的新技术。他们�
 
 实现生成 `T` 的前导协议的一种典型方式（Feige 和 Shamir 1990b）是要求 `V` 给出（因此扮演证明者角色）一个关于验证者在协议开始时生成的困难实例的见证者的 WH 知识证明。显然，多项式时间的 `P*` 将无法获得 `w[T]` 并在 WI 证明中失败。模拟器则可以运行与知识证明相关的提取器来获得 `w[T]`，随后在 WI 证明中使用它。因此，最终协议是一个 ZK 论证系统。
 
-### 3.5.3. Σ-协议
+### Σ-协议
 
 最流行的隐私保护证明系统之一被称为 Σ-协议。它由三条消息组成，是公币的，并保证特殊的可靠性和特殊的 HVZK 属性。特殊可靠性要求：给定两个具有相同第一条消息但不同第二条消息的接受转录（例如 `(a, c, z)` 和 `(a, c', z')` 且 `c ≠ c'`），针对陈述 `x ∈ L`，可以高效地计算出一个见证者 `w` 使得 `(x, w) ∈ R[L]`。特殊 HVZK 要求：对于任意 `x ∈ L` 和任意 `c`，特殊模拟器在输入 `(x, c)` 时输出的分布由若干对 `(a, z)` 组成，使得 `(x, a, c, z)` 与诚实证明者在证明 `x ∈ L` 并接收到挑战 `c` 时产生的转录分布不可区分。针对几种有用的语言，存在非常实用的 Σ-协议。最流行的是 Schnorr (1991) 提出的用于证明离散对数知识的 Σ-协议。
 
 Σ-协议具有吸引人的特性。Cramer 等人 (1994) 展示了如何高效地组合 Σ-协议，以证明 `n` 个实例中至少有 `k` 个为真，而不泄露具体是哪一个为真（即部分知识证明）。也存在一种简单的方法来执行 AND 组合，因此 Σ-协议可用于（机密地）展示满足访问控制策略的凭据持有情况。
 
-## 3.6. 非黑盒零知识
+## 非黑盒零知识
 
 FLS 范式对于打破黑盒模拟障碍至关重要。Barak (2001) 首次成功找到了一种方法，在模拟过程中利用 `V*` 的代码知识，旨在创建一个模拟器可利用的陷门陈述以完成证明。
 
@@ -1586,11 +1529,11 @@ FLS 范式对于打破黑盒模拟障碍至关重要。Barak (2001) 首次成功
 
 Barak 的结果展示了如何获得针对 `NP` 的常数轮公币零知识。如果仅坚持黑盒模拟，这对于非平凡语言是不可能实现的。Goyal 等人 (2014) 表明，上述结果可以通过仅黑盒使用 CRHF 来获得。
 
-## 3.7. 进阶概念
+## 进阶概念
 
 在本节中，我们将讨论提供额外功能/安全性的更苛刻的 ZK 证明系统概念。
 
-### 3.7.1. 公开可验证零知识
+### 公开可验证零知识
 
 运行 ZK 证明系统时，证明者只能说服一个验证者。虽然这看似是一种限制，但它提供了使证明不可转移的良好特性。确实，如果恶意 `V*` 试图将转录转发给其他方，该转录本身将毫无意义，因为 `V*` 本可以自行运行模拟器生成该转录。然而，存在一些情况要求证明者计算一个既是 ZK 又可被任意验证者验证的证明。在公开可验证 ZK 证明系统中，上述可转移性问题实际上是一个优点，因为转发证明的 `V*` 实际上是在帮助实现让尽可能多的验证者最终验证陈述真实性的目标。
 
@@ -1602,14 +1545,11 @@ Blum 等人 (1988) 研究了获取公开可验证证明的问题，他们考虑�
 
 使用 Fiat-Shamir 变换 (Fiat 和 Shamir 1987)，当 `V` 的消息足够大时，Σ-协议可以在可编程随机预言机模型中转换为 NIZK 论证系统。这意味着每当需要 NIZK 且随机预言机启发式是可接受时，只需专注于设计比常规 ZK 证明系统更容易的 Σ-协议即可。此外，Lindell (2015) 和 Ciampi 等人 (2016c) 展示了如何同时使用公共参考串和非可编程随机预言机，从 Σ-协议获得 NIZK。
 
-
-
-
-### 3.7.1. 其他模型
+### 其他模型
 
 公开可验证的 ZK 已在其他几种模型中实现（即在不同的设置假设下）。此处我们提及其中两种。NIZK 已在多字符串模型中实现，该模型放宽了公共参考字符串模型。公开可验证零知识已在区块链的特定假设下实现，该假设容忍在证明给出后区块链可被完全攻破。
 
-### 3.7.2. 并发 ZK 及其他
+### 并发 ZK 及其他
 
 ZK 证明系统的经典定义仅考虑隔离运行协议、在协议结束前不知晓周围发生任何事情的对手。这显然并不总是现实的，因此人们考虑了 ZK 证明执行的各种形式的组合。虽然顺序组合基本上是免费的，但考虑其他形式的组合时情况要复杂得多。
 
@@ -1627,7 +1567,7 @@ ZK 证明可否认且不泄露关于见证者的信息这一事实，并不限�
 
 当 ZK 证明系统与其他协议并发执行时，由于技术原因模拟器无法倒带且没有对手的代码，可能会出现额外问题。这些限制由 Canetti (2001) 的框架强制执行，该框架提出了通用可组合性 (UC) 的概念。鉴于这些限制，如果没有某种特殊的“帮助”来允许黑盒直线模拟，UC ZK 显然是不可能的。人们提出了各种技巧使其成为可能。此处我们回顾，使用公共参考字符串就是其中一种可能的技巧。确实，它允许直线黑盒模拟，并可用于获得非可延展 NIZK 和 UC NIZK (De Santis 等人, 2001)。
 
-### 3.7.3. 无状态玩家的 ZK
+### 无状态玩家的 ZK
 
 ZK 证明系统的经典定义假设诚实玩家是有状态的，且在发送下一条消息时确切知道对话历史。
 
@@ -1643,20 +1583,17 @@ Canetti 等人 (2000) 提出了经典概念的一种自然强化，提出了一�
 
 Barak 等人 (2001) 还考虑了 `P` 和 `V` 均无状态的设置，称为同时可复位零知识。他们仅猜测了这一极强安全概念的可行性。Deng 等人 (2009) 给出了肯定回答，正式确认该猜想为真，展示了一个假设一对一单向函数、CRHF 和 ZAP 的可复位可靠 rZK 论证系统。与 ZK 论证在计算假设方面的差距在 Chung 等人 (2013a) 中得到填补，Chung 等人展示了一个仅假设单向函数的可复位可靠 rZK 论证系统。
 
-### 3.7.4. 延迟输入证明系统
+### 延迟输入证明系统
 
-
-
-
-即使我们迄今为止假设 *P* 在计算第一条消息时已经同时接收实例和见证作为输入，但也存在可以推迟输入知识的情况。Lapidot 和 Shamir (1991) 展示了一种针对哈密顿图（因此适用于所有 ![image](img/np.jpg)）的三轮 WI 证明系统，该系统仅在进行最后一轮时才需要实例和见证。观察更实用的协议，许多 Σ 协议（例如 Schnorr 的协议）具有这一被称为“delayed input”（延迟输入）的特殊特性。这意味着前两条消息可以被预处理，从而获得更好的效率，尤其是当 delayed-input 证明系统被用在更大的协议内部时。显然，当交互式证明在随机预言机模型中变为非交互式时，这一特性并不太相关。然而，存在一些场景，对可否认性或无条件可靠性的需求可能实际上建议坚持使用交互式证明。请注意，虽然将输入的选择推迟到最后一轮增加了灵活性，但也引入了潜在问题，因为 *P^⋆* 和 *V^⋆* 都可能在自适应决定输入以成功发起攻击方面发挥作用。
+即使我们迄今为止假设 *P* 在计算第一条消息时已经同时接收实例和见证作为输入，但也存在可以推迟输入知识的情况。Lapidot 和 Shamir (1991) 展示了一种针对哈密顿图（因此适用于所有 `NP`）的三轮 WI 证明系统，该系统仅在进行最后一轮时才需要实例和见证。观察更实用的协议，许多 Σ 协议（例如 Schnorr 的协议）具有这一被称为“delayed input”（延迟输入）的特殊特性。这意味着前两条消息可以被预处理，从而获得更好的效率，尤其是当 delayed-input 证明系统被用在更大的协议内部时。显然，当交互式证明在随机预言机模型中变为非交互式时，这一特性并不太相关。然而，存在一些场景，对可否认性或无条件可靠性的需求可能实际上建议坚持使用交互式证明。请注意，虽然将输入的选择推迟到最后一轮增加了灵活性，但也引入了潜在问题，因为 *P^⋆* 和 *V^⋆* 都可能在自适应决定输入以成功发起攻击方面发挥作用。
 
 Cramer 等人 (1994) 的 OR 组合不幸的是不保留底层 Σ 协议的 delayed-input 属性。确实，即使从两个满足 delayed-input 属性的 Σ 协议开始，通过 (Cramer 等人 1994) 获得的复合 Σ 协议也强制 *P* 在计算第一条消息时就已知实例。Ciampi 等人 (2016a) 和 Ciampi 等人 (2016b) 提出了替代的 OR 组合，从实用的 delayed-input Σ 协议获得实用的 delayed-input WI 部分知识证明。
 
-## 3.8. 结论
+## 结论
 
 ZK 证明极其强大。它们可用于强制诚实计算，因此简化了设计加密协议的任务。虽然长期以来 ZK 证明的关注点主要与理论兴趣的开放问题相关，但如今主要致力于获得实用的构造并将其用于部署的应用中（例如保护隐私的加密货币）。在非凡的过去之后，ZK 证明的研究仍在蓬勃发展。
 
-## 3.9. 参考文献
+## 参考文献
 
 Aiello, W. 和 Håstad, J. (1987). Perfect zero-knowledge languages can be recognized in two rounds. 在 *28th FOCS.* IEEE Computer Society Press.
 
@@ -1671,6 +1608,10 @@ Barak, B., Prabhakaran, M., Sahai, A. (2006). Concurrent non-malleable zero know
 Bellare, M. 和 Goldreich, O. (1993). On defining proofs of knowledge. 在 *CRYPTO’92*, vol. 740 of *LNCS*, Brickell, E.F. (ed.). Springer, Heidelberg.
 
 Bellare, M. 和 Palacio, A. (2004). The knowledge-of-exponent assumptions and 3-round zero-knowledge protocols. 在 *CRYPTO 2004*, vol. 3152 of *LNCS*, Franklin, M. (ed.). Springer, Heidelberg.
+
+
+
+# 参考文献
 
 Bellare, M., Micali, S., Ostrovsky, R. (1990). Perfect zero-knowledge in constant rounds. 在 *22nd ACM STOC.* ACM Press.
 
@@ -1719,9 +1660,6 @@ Deng, Y., Goyal, V., Sahai, A. (2009). Resolving the simultaneous resettability 
 Dolev, D., Dwork, C., Naor, M. (1991). Non-malleable cryptography (extended abstract). 在 *23rd ACM STOC.* ACM Press.
 
 Dwork, C. 和 Naor, M. (2000). Zaps and their applications. 在 *41st FOCS.* IEEE Computer Society Press.
-
-
-
 
 Feige, U., Lapidot, D., Shamir, A. (1990). 基于单一随机字符串的多重非交互式零知识证明（扩展摘要）。载 *31 届 FOCS。* IEEE Computer Society Press.
 
@@ -1779,29 +1717,9 @@ Peikert, C. and Shiehian, S. (2019). 基于（标准）学习误差的 NP 问题
 
 Prabhakaran, M., Rosen, A., Sahai, A. (2002). 具有对数轮复杂度的并发零知识。载 *43 届 FOCS。* IEEE Computer Society Press.
 
-Scafuro, A., Siniscalchi, L., Visconti, I. (2021). 基于（塌陷）区块链的公开可验证零知识。载 *PKC 2021, Part II*，*LNCS* 12711 卷，Garay, J. (编)。Springer, Heidelberg.
 
-Schnorr, C.-P. (1991). 智能卡的高效签名生成。*Journal of Cryptology*，4(3)，161–174.
 
-## 注释
-
-1.  1 虽然在本章中我们将考虑针对 `NP` 完全问题的 ZK 证明，但像图同构这样的语言已被广泛研究，并且它们即使在常数轮中也允许完美 ZK 证明（`Goldreich et al. 1986`）（Bellare et al. 1990）。
-
-2.  2 为简单起见，我们仅考虑两种情况：要么眼镜总是有效，要么它们完全无用。
-
-3.  3 单向函数本质上是 ZK 证明系统所必需的（`Ostrovsky and Wigderson 1993`）。
-
-4.  4 注意，通过预先知道下一次掷硬币的输出，可以准备信封，使得测试即使在不知道 `G` 中的环的情况下也能成功通过。
-
-5.  5 我们不考虑基于不可证伪假设的构造，如指数知识假设（Bellare and Palacio 2004）。
-
-6.  6 当目标是获得论证系统时这可能成立，但在这种情况下 `P^s` 计算 `w[T]` 应该是困难的。
-
-7.  7 仅用一条消息，计算任意陈述的接受证明的模拟器可被 `P^s` 用来破坏可靠性。相反，仅计算真实陈述的接受证明的模拟器清楚地表明该语言在 BPP 中（即人们可以自行高效检查一个实例是否在该语言中，因此不需要接收证明）。
-
-# 4
-
-安全多方计算
+# 安全多方计算
 
 **Yehuda LINDELL**
 
@@ -1813,10 +1731,7 @@ Schnorr, C.-P. (1991). 智能卡的高效签名生成。*Journal of Cryptology*�
 
 ## 4.1. 介绍
 
-
-
-
-# 分布式计算与安全多方计算
+### 分布式计算与安全多方计算
 
 *分布式计算*考虑的是这样一种场景：若干个不同但相互连接的计算设备（或参与方）希望共同计算某个函数。例如，这些设备可能是持有分布式数据库系统的服务器，而要计算的函数可能是某种数据库更新。*安全*多方计算的目标是使参与方能够以安全的方式执行此类分布式计算任务。虽然分布式计算通常处理机器崩溃和其他非预期故障威胁下的计算问题，但安全多方计算关注的是某些对抗实体可能故意实施的恶意行为（这些在分布式计算文献中也有考虑，被称为拜占庭故障）。也就是说，假设协议执行可能会遭受外部实体的“攻击”，甚至可能来自参与方子集的攻击。此类攻击的目的可能是窃取私有信息，或导致计算结果不正确。因此，任何安全计算协议的两个重要要求是*隐私性*和*正确性*。隐私性要求规定，除了绝对必要的内容外，不应学到任何其他信息；更确切地说，参与方只能获得其输出，别无其他。正确性要求规定，每个参与方都应收到其正确的输出。因此，对手不得能够使计算结果偏离参与方原本打算计算的函数。
 
@@ -1846,9 +1761,7 @@ Schnorr, C.-P. (1991). 智能卡的高效签名生成。*Journal of Cryptology*�
 
 我们强调，上述列表*不*构成安全的定义，而只是任何安全协议都应满足的一组要求。确实，定义安全的一种可能方法是仅生成一个单独的要求列表（如上），然后声称如果满足所有这些要求，协议就是安全的。然而，这种方法由于以下原因并不令人满意。首先，可能遗漏了重要要求。这在不同应用有不同要求的情况下尤为明显，我们希望定义足够通用以涵盖所有应用。其次，定义应足够简单，以便显而易见地看出所提出的定义能防止*所有*可能的对抗攻击。
 
-
-
-# 当前的标准定义（Canetti 2000）遵循先前的研究（Goldreich 等人 1987；Goldwasser 和 Levin 1991；Beaver 1992；Micali 和 Rogaway 1992），因此以以下一般方式形式化安全性。
+当前的标准定义（Canetti 2000）遵循先前的研究（Goldreich 等人 1987；Goldwasser 和 Levin 1991；Beaver 1992；Micali 和 Rogaway 1992），因此以以下一般方式形式化安全性。
 
 作为一个思想实验，考虑一个“理想世界”，其中有一个外部受信任（且不可腐化）的参与方愿意帮助各方执行其计算。在这样的世界中，各方只需将其输入发送给受信任方，后者计算所需函数并将各方规定的输出传递给它们。由于各方执行的唯一操作是将其输入发送给受信任方，因此赋予对手的唯一自由是选择被腐化方的输入。请注意，上述所有描述的安全属性（及更多）均在此理想计算中成立。例如，隐私性成立是因为各方接收到的唯一消息是其输出（因此它无法了解比这更多的信息）。同样，正确性成立是因为受信任方无法被腐化，因此将始终正确计算函数。
 
@@ -1864,39 +1777,35 @@ Schnorr, C.-P. (1991). 智能卡的高效签名生成。*Journal of Cryptology*�
 
 上述安全性的非正式定义遗漏了一个非常重要的问题：攻击协议执行的对手的能力。正如我们所提到的，对手控制协议中参与方的一个子集。然而，我们尚未定义此类对手拥有何种能力。我们描述定义对手的两个主要参数：其允许的对抗行为（即对手是仅被动收集信息，还是可以指示被腐化方恶意行事）及其腐化策略（即参与方何时或如何落入对手的“控制”之下）：
 
-### 1) 允许的对抗行为
+#### 1) 允许的对抗行为
 
 必须定义的最重要参数涉及被腐化方被允许采取的行动。主要有三类对手：
 
-#### a) 半诚实对手
+##### a) 半诚实对手
 
 在半诚实对抗模型中，即使被腐化方也会正确遵循协议规范。然而，对手会获取所有被腐化方的内部状态（包括接收到的所有消息的记录），并试图利用这些信息了解本应保持私密的信息。这是一个相对较弱的对抗模型，但具有此安全级别的协议确实保证了不存在无意的数据泄露。在某些情况下，这已足够，尽管在当今的对抗环境中，这通常是不够的。半诚实对手也称为“诚实但好奇”和“被动”对手。（有时也会考虑故障停止对手；这些本质上是可能提前终止协议执行的半诚实对手。）
 
-#### b) 恶意对手
+##### b) 恶意对手
 
 在该对抗模型中，被腐化方可根据对手的指示，*任意*偏离协议规范。通常，在恶意对手存在的情况下提供安全性是首选，因为它确保没有任何对抗性攻击能够成功。恶意对手也称为“主动”对手。
 
-#### c) 隐蔽对手（Aumann 和 Lindell 2010）
+##### c) 隐蔽对手（Aumann 和 Lindell 2010）
 
 此类对手可能会恶意行事以试图破坏协议。然而，提供的安全保证是：如果它确实尝试此类攻击，则将以某个可针对应用调整的指定概率被检测到。我们强调，与恶意模型不同，如果对手未被检测到，则它可能成功作弊（例如获取诚实方的输入）。该模型适用于对手被检测到可关联某些现实世界惩罚的场景，且对手的预期是如果尝试攻击总体上会得不偿失。
 
-### 2) 腐化策略
+#### 2) 腐化策略
 
 腐化策略处理参与方何时以及如何被腐化的问题。主要有三种模型：
 
-#### a) 静态腐化模型
+##### a) 静态腐化模型
 
 在该模型中，受对手控制的参与方集合在协议开始前即已固定。诚实方始终保持诚实，被腐化方始终保持被腐化状态。
 
-
-
-
-
-## 2. b) 自适应损坏模型
+##### b) 自适应损坏模型
 
 与拥有一组固定的损坏方不同，自适应对手被赋予了在计算过程中损坏方的能力。损坏谁以及何时损坏，可以由对手任意决定，并可能取决于其对执行过程的观察（因此称为自适应）。该策略模拟了外部“黑客”在执行期间入侵机器的威胁，或者一个最初诚实但后来改变行为的参与方。我们注意到，在该模型中，一旦某方被损坏，从那时起它将保持损坏状态。
 
-## 3. c) 主动安全模型 (Ostrovsky and Yung 1991; Canetti and Herzberg 1994)
+##### c) 主动安全模型 (Ostrovsky and Yung 1991; Canetti and Herzberg 1994)
 
 该模型考虑了参与方仅在一定时间段内被损坏的可能性。因此，诚实方可能在整个计算过程中变为损坏方（类似于自适应对手模型），但损坏方也可能变回诚实方。当威胁是可能入侵网络并攻破服务和设备的外部对手，且安全计算正在持续进行时，主动模型是合理的。当入侵被发现时，系统会被清理，对手失去对部分机器的控制，使参与方再次变为诚实。安全保证在于：对手只能从其损坏机器的局部状态中（在损坏期间）获知所能推导出的信息。这种对手有时被称为移动对手。
 
@@ -1926,11 +1835,9 @@ Schnorr, C.-P. (1991). 智能卡的高效签名生成。*Journal of Cryptology*�
 
 ## 4.3. MPC 的可行性
 
-上述安全定义似乎非常严格，因为它不容忍任何对手的成功，且要求协议表现得就像由可信第三方执行计算一样。因此，人们可能会怀疑在该定义下是否可能获得安全协议，以及针对哪些分布式计算任务。也许令人惊讶的是，已经建立了强有力的可行性结果，证明实际上，*任何*分布式计算任务（函数）都可以在恶意对手存在的情况下被安全计算。我们现在简述其中最核心的结果。设 *n* 表示参与方的数量，设 *t* 表示可能被损坏的参与方数量的上界（其中损坏方的身份未知）：
 
 
-
-
+上述安全定义似乎非常严格，因为它不容忍任何对手的成功，且要求协议表现得就像由可信第三方执行计算一样。因此，人们可能会怀疑在该定义下是否可能获得安全协议，以及针对哪些分布式计算任务。也许令人惊讶的是，已经建立了强有力的可行性结果，证明实际上，*任何*分布式计算任务（函数）都可以在恶意对手存在的情况下被安全计算。我们现在简述其中最核心的结果。设 `n` 表示参与方的数量，设 `t` 表示可能被损坏的参与方数量的上界（其中损坏方的身份未知）：
 
 ## 1) 对于 `t < n/3`
 
@@ -1974,10 +1881,6 @@ Shamir 的秘密分享方案利用了这样一个事实：对于二维平面上�
 
     a) **计算加法门**：根据不变量，每个参与方持有该门输入线上值的秘密分享；我们用多项式 `a`(`x`) 和 `b`(`x`) 表示它们，这意味着第 `i` 个参与方持有值 `a`(`i`) 和 `b`(`i`)。该门的输出线应该是值 `a`(0) + `b`(0) 的 (`t`+1)-out-of-`n` 秘密分享。第 `i` 个参与方在本地将其输出线上的份额设为 `a`(`i`)+`b`(`i`) 即可轻松计算出此值。观察到通过定义多项式 `c`(`x`) = `a`(`x`)+`b`(`x`)，这意味着第 `i` 个参与方持有 `c`(`i`)。此外，`c`(`x`) 是一个度为 `t` 的多项式，满足 `c`(0) = `a`(0) + `b`(0)。因此，参与方持有值 `a`(0) + `b`(0) 的有效 (`t`+1)-out-of-`n` 秘密分享，符合要求。观察到计算加法门**不需要通信**。
 
-
-
-
-
 ## 2. b) 计算乘法门
 
 我们再次将门的输入线上的多项式表示为 `a(x)` 和 `b(x)`。与加法门类似，第 `i` 个参与方可以在本地相乘其份额来定义 `c(i) = a(i) * b(i)`。根据多项式乘法的性质，这定义了一个多项式 `c(x)`，使得 `c(0) = a(0) * b(0)`。因此，`c(x)` 是正确值（即输入线上值的乘积）的一个共享。然而，`c(x)` 是 2`t` 次的，因此这是一个 (2`t`+1)-out-of-`n` 秘密共享，而不是 (`t`+1)-out-of-`n` 秘密共享。因此，为了完成乘法门的计算，参与方有必要执行一个*降度*步骤，在不改变其在 0 处的值的情况下，安全地将参与方间共享的多项式的次数从 2`t` 降低到 `t`。在继续描述此步骤之前，请注意，由于 `t < n/2`，`n` 个参与方持有的份额完全决定了 2`t` + 1 次的多项式 `c(x)`。
@@ -2005,12 +1908,12 @@ Shamir 的秘密分享方案利用了这样一个事实：对于二维平面上�
 现在，考虑两个拥有各自私有元素集合的参与方；分别将它们表示为 `x[1],..., x[n]` 和 `y[1],..., y[n]`（为简单起见，我们假设它们的列表大小相同，尽管这不是必需的）。然后，协议按如下方式进行：
 
 1.  第一个参与方为伪随机函数选择一个密钥 `k`。
+
 2.  两个参与方运行 `n` 次遗忘伪随机函数求值：在第 `i` 次执行中，第一个参与方输入 `k`，第二个参与方输入 `y[i]`。结果，第二个参与方学习 `Fk,..., Fk`，而第一个参与方不获得关于 `y[1],..., y[n]` 的任何信息。
+
 3.  第一个参与方在本地计算 `Fk,..., Fk` 并将列表发送给第二个参与方。它可以计算这个，因为它知道 `k`。
+
 4.  第二个参与方计算列表 `Fk,..., Fk` 和 `Fk,..., Fk` 之间的交集，并输出所有使得 `Fk` 在交集中的值 `y[j]`。（该参与方知道这些值，因为它知道 `y[j]` 和 `Fk` 之间的关联。）
-
-
-
 
 上述协议仅揭示交集，因为第一参与方从无感知伪随机函数评估中无法得知 `y[1],..., y[n]` 的任何信息，而第二参与方也无法得知不在交集中的 `x[j]` 值，因为伪随机函数隐藏了原像值。因此，这在半诚实模型下是安全的。在恶意模型下实现安全性更具挑战性。例如，恶意对手可能对第一个元素和后续元素使用不同的密钥，导致结果是：当且仅当 `y[1]` 是第二参与方列表中的第一个元素时，该值才会出现在输出中。
 
@@ -2032,6 +1935,8 @@ x[1] · x[2] = y^(d[1]) · y^(d[2]) = y^(d[1]+d[2]) = y^d mod N
 
 ### 4.4.5. 不诚实多数 MPC
 
+
+
 在第 4.4.2 节中，我们描述了一种通用的 MPC 协议，只要对手无法破坏超过少数派的参与方，该协议就是安全的。在不诚实多数的情况下，包括两方（其中一方被破坏）这一重要特殊情况，需要完全不同的方法。这方面已经有大量工作，从 Yao (1986)；Goldreich 等人 (1987)；Beaver 等人 (1990) 关注可行性的初始协议，到大量关注实现具体效率的最新工作。这方面的工作太多了，任何试图在此描述的尝试都将是极大的不公。因此，我们建议读者参考 Evans 等人 (2018) 了解主要方法的描述，包括 GMW 无感知传输方法 (Goldreich 等人 1987；Ishai 等人 2003)、混淆电路 (Yao 1986；Beaver 等人 1990)、剪枝选择 (Lindell 和 Pinkas 2007)、SPDZ (Damgård 等人 2012)、TinyOT (Nielsen 等人 2012)、MPC-in-the-head (Ishai 等人 2008) 等。（我们强调，对于这些方法中的每一种，都有许多后续工作，实现了越来越高的效率。）
 
 ### 4.4.6. 高效且实用的 MPC
@@ -2045,9 +1950,6 @@ MPC 研究的前 20 年主要关注可行性：如何为多种对手和网络模
 我们将通过一些实际部署的 MPC 应用示例来结束本综述章节。
 
 ### 4.5.1. 波士顿性别薪酬差距 (Lapets 等人 2018)
-
-
-
 
 波士顿女性劳动力委员会于 2017 年使用 MPC 来计算大波士顿地区 114 家公司约 166,705 名员工（约占劳动力的 16%）的薪酬统计数据。MPC 的使用至关重要，因为出于隐私顾虑，公司不会提供其原始数据。结果显示，波士顿地区的性别差距甚至比美国劳工统计局此前估计的还要大。这是一个有力的例证，表明 MPC 可用于造福社会。
 
@@ -2109,10 +2011,6 @@ Doerner, J., Kondi, Y., Lee, E., Shelat, A. (2019). Threshold ECDSA from ECDSA a
 
 Duality (n.d.). Available at: duality.cloud.
 
-
-
-
-
 # 参考文献
 
 Dwork, C. (2008). Differential privacy: A survey of results. In *Theory and Applications of Models of Computation, 5th International Conference, TAMC 2008*, vol. 4978 of *LNCS*, Agrawal, M., Du, D., Duan, Z., Li, A. (eds). Springer, Heidelberg.
@@ -2134,6 +2032,10 @@ Goldwasser, S. and Levin, L.A. (1991). Fair computation of general functions in 
 Hastings, M., Hemenway, B., Noble, D., Zdancewic, S. (2019). SoK: General purpose compilers for secure multi-party computation. In *2019 IEEE Symposium on Security and Privacy*. IEEE Computer Society Press.
 
 Ion, M., Kreuter, B., Nergiz, E., Patel, S., Saxena, S., Seth, K., Shanahan, D., Yung, M. (2017). Private intersection-sum protocol with applications to attributing aggregate ad conversions. Cryptology ePrint Archive, Report 2017/738 [Online]. Available at: [`eprint.iacr.org/2017/738`](https://eprint.iacr.org/2017/738).
+
+
+
+# 参考文献
 
 Ishai, Y., Kilian, J., Nissim, K., Petrank, E. (2003). Extending oblivious transfers efficiently. In *CRYPTO 2003*, vol. 2729 of *LNCS*, Boneh, D. (ed.). Springer, Heidelberg.
 
@@ -2183,9 +2085,9 @@ Yao, A.C.-C. (1986). How to generate and exchange secrets (extended abstract). I
 
 *Ecole Polytechnique, Palaiseau, France*
 
-随着 Diffie 和 Hellman（1976）开创性论文中公钥密码学的出现，人们开始重点研究离散对数问题。假设一个阶为 *p* 的循环群 (G, ·)，该问题在于：给定群中的元素 *g, h*，寻找 Z_p 中的一个标量 *s*，使得 *h* = *g^s*。在精心选择的群中，该问题被假定为困难的。1985 年，Koblitz（1987）和 Miller（1986）分别提出使用椭圆曲线来实例化此类群。
+随着 Diffie 和 Hellman（1976）开创性论文中公钥密码学的出现，人们开始重点研究离散对数问题。假设一个阶为 `p` 的循环群 `(G, ·)`，该问题在于：给定群中的元素 `g, h`，寻找 `Z_p` 中的一个标量 `s`，使得 `h = g^s`。在精心选择的群中，该问题被假定为困难的。1985 年，Koblitz（1987）和 Miller（1986）分别提出使用椭圆曲线来实例化此类群。
 
-在他们的论文中，Diffie 和 Hellman 通过密钥交换展示了一种应用（参见第 9 章）。在该协议中，两个通常称为 Alice 和 Bob 的用户希望通过在公共信道上交换信息来获得共享密钥。为此，他们各自选择一个随机标量 *a*（分别为 *b*），然后发送 *g^a*（分别为 *g^b*），并通过计算从对方接收到的元素得出共享密钥 *K* = (*g^b*)^(*a*)（分别为 (*g^a*)^(*b*)）。这引出了判定 Diffie-Hellman 问题，即给定 *g, g^a, g^b, g^c*，判断 *c* 是否等于 *ab*。很容易看出，如果该问题困难，则离散对数问题也困难。
+在他们的论文中，Diffie 和 Hellman 通过密钥交换展示了一种应用（参见第 9 章）。在该协议中，两个通常称为 Alice 和 Bob 的用户希望通过在公共信道上交换信息来获得共享密钥。为此，他们各自选择一个随机标量 `a`（分别为 `b`），然后发送 `g^a`（分别为 `g^b`），并通过计算从对方接收到的元素得出共享密钥 `K = (g^b)^(a)`（分别为 `(g^a)^(b)`）。这引出了判定 Diffie-Hellman 问题，即给定 `g, g^a, g^b, g^c`，判断 `c` 是否等于 `ab`。很容易看出，如果该问题困难，则离散对数问题也困难。
 
 审视他们的协议时，一个自然的问题随之产生：能否将其扩展到三个参与者，同时保持单轮且抗窃听？
 
@@ -2197,9 +2099,6 @@ Yao, A.C.-C. (1986). How to generate and exchange secrets (extended abstract). I
 
 全章将遵循以下约定。
 
-
-
-
 – 根据标准约定，群将用粗体字母表示。当我们不考虑任何配对，或者处于对称情况时，将使用群 `G1`；在不对称配对的情况下，群将为 `G1`[1] 和 `G1`[2]。目标群将始终是 `G1`[*T*]。
 
 – 群生成元将用小写字母表示（`g` ∈ `G1`），可能带有表示群的索引（`g`[1] ∈ `G1`[1]）。
@@ -2207,24 +2106,24 @@ Yao, A.C.-C. (1986). How to generate and exchange secrets (extended abstract). I
 – 此外：
 
 *   `e` 将表示配对的非退化双线性形式（见下文）。
-*   `λ` 将为安全参数，且 1^(`λ`) 将为由 `λ` 个连接的 1 组成的字符串。
+*   `λ` 将为安全参数，且 `1^(λ)` 将为由 `λ` 个连接的 1 组成的字符串。
 *   `p` 将为素数，通常为群的阶。（在这种情况下，`p` 通常具有 `λ` 比特。）
 
 – 如有需要，群律将标记为“•”，但也可能省略。
 
-### 5.1.2. 概述
+### 5.1.2 概述
 
-**定义 5.1.**– **困难问题：** 若函数 `f` : `N` → `R` 满足：∀`c` ∈ `N`，∃`k`[0] ∈ `N`，使得 ∀`k ≥ k`[0]：|`f`(`k`)| < `k`^(−`c`)，则称该函数为可忽略函数。若不存在概率多项式时间算法能以非可忽略概率解决某问题，则称该问题为困难问题。
+**定义 5.1** – **困难问题：** 若函数 `f` : `N` → `R` 满足：∀`c` ∈ `N`，∃`k`[0] ∈ `N`，使得 ∀`k ≥ k`[0]：|`f`(`k`)| < `k`^(−`c`)，则称该函数为可忽略函数。若不存在概率多项式时间算法能以非可忽略概率解决某问题，则称该问题为困难问题。
 
-**定义 5.2.**– **循环群：** 循环群是一个元组 (`p`, `G1`, `g`)，其中 `G1` 是一个完全由 `g` 生成的群，`1_G1` 为 `G1` 的单位元。
+**定义 5.2** – **循环群：** 循环群是一个元组 (`p`, `G1`, `g`)，其中 `G1` 是一个完全由 `g` 生成的群，`1_G1` 为 `G1` 的单位元。
 
-**定义 5.3.**– **双线性群：** 双线性群是一个元组 (`p`, `G1`[1], `G1`[2], `G1`[*T*], `e`, `g`[1], `g`[2])，其中 `G1`[1]、 `G1`[2] 和 `G1`[*T*] 是素数阶 `p` 的循环群，分别由 `g`[1]、 `g`[2] 和 `e`(`g`[1], `g`[2]) 生成；`e` : `G1`[1] × `G1`[2] → `G1`[*T*] 为非退化双线性形式，即：
+**定义 5.3** – **双线性群：** 双线性群是一个元组 (`p`, `G1`[1], `G1`[2], `G1`[*T*], `e`, `g`[1], `g`[2])，其中 `G1`[1]、 `G1`[2] 和 `G1`[*T*] 是素数阶 `p` 的循环群，分别由 `g`[1]、 `g`[2] 和 `e`(`g`[1], `g`[2]) 生成；`e` : `G1`[1] × `G1`[2] → `G1`[*T*] 为非退化双线性形式，即：
 
 ```
 e(g1, g2) = e(g1, g2)
 ```
 
-且 `e`(`g`[1], `g`[2]) 确实生成素数阶群 `G1`[*T*]。在下文中，我们假设存在一个多项式时间算法，以 1^(`λ`) 为输入，并输出此类双线性群。
+且 `e`(`g`[1], `g`[2]) 确实生成素数阶群 `G1`[*T*]。在下文中，我们假设存在一个多项式时间算法，以 `1^(λ)` 为输入，并输出此类双线性群。
 
 此类群通常在椭圆曲线上实例化，在这些曲线上可将配对定义为双线性形式。Galbraith 等人（2006）将此类实例化分为三大主要类型，相关的计算假设将在后文详述：
 
@@ -2234,9 +2133,9 @@ e(g1, g2) = e(g1, g2)
 
 – III 型，若在任一方向上均不存在此类高效同态。这种情况常导致基于对称外部 Diffie–Hellman（SXDH）假设的问题。
 
-**注。**– 正如原文所指出，同阶循环群之间总存在同态；然而，在 II 型和 III 型中，假设计算该同态与计算离散对数一样困难，因此强调了*高效*一词。
+**注** – 正如原文所指出，同阶循环群之间总存在同态；然而，在 II 型和 III 型中，假设计算该同态与计算离散对数一样困难，因此强调了*高效*一词。
 
-## 5.2. 密码学的一小步，人类的一大步
+## 5.2 密码学的一小步，人类的一大步
 
 配对最初受两个原因驱动。一方面，能够计算 `e`(`g`, `g^a`) 允许将椭圆曲线上的离散对数问题（在 `g`、 `g^a` 之间）转移到有限域上的离散对数问题（在 `e`(`g`, `g`)、 `e`(`g`, `g`)^(`a`) 之间），从而可以应用亚指数算法。这是 Menezes 等人（1993）提出的 MOV 攻击的核心。然而，在这些情况下，配对的存在被视为坏事（从安全角度来看），因为它们使得构建安全的基于离散对数的协议变得更加困难。
 
@@ -2250,7 +2149,7 @@ e(g1, g2) = e(g1, g2)
 
 **图 5.1.** Joux 三方 Diffie–Hellman 交换示意图
 
-### 5.2.1. 打开潘多拉魔盒，揭开魔法的神秘面纱
+### 5.2.1 打开潘多拉魔盒，揭开魔法的神秘面纱
 
 大多数配对计算的核心在于 Miller 算法。我们在图 5.2 中展示了倍加版本，该版本比原始版本更高效，同时描述依然紧凑。
 
@@ -2262,7 +2161,7 @@ e(g1, g2) = e(g1, g2)
 – 目标群是 `F`[*q*^*k*] 中 `r` 次单位根的子群，或者从高层来看，可以视为群 `F`[*q*^*k*]^*，其群律为 `F`[*q*^*k*] 上的域乘法；
 – 使用 Miller 算法（见图 5.2），可以计算配对 `e`。
 
-#### 5.2.1.1. Weil 配对
+#### 5.2.1.1 Weil 配对
 
 历史上，椭圆曲线上首次使用的配对是由 Weil 定义的。如今不太常用；然而，它仍然是引入 Tate 配对的良好垫脚石。
 
@@ -2270,7 +2169,7 @@ e(g1, g2) = e(g1, g2)
 
 **图 5.2.** Weierstrass 坐标下的 Miller 算法
 
-**定理。**– 给定定义在有限域 `K` 上的椭圆曲线 `E`，以及 `R` ≤ 2 为与 `K` 的特征互素的整数，`P`、`Q` 为 `E` 上的 `r` 阶扭点，则值：
+**定理** – 给定定义在有限域 `K` 上的椭圆曲线 `E`，以及 `R` ≤ 2 为与 `K` 的特征互素的整数，`P`、`Q` 为 `E` 上的 `r` 阶扭点，则值：
 
 ```
 eW,r = f_P(Q) / f_Q(P)
@@ -2278,14 +2177,13 @@ eW,r = f_P(Q) / f_Q(P)
 
 当 `P` ≠ `Q` 且 `P`、`Q` 均不等于 0[`E`] 时定义良好。为将定义扩展到整个定义域，可设 `e[W,r]`(0[`E`], `P`) = `e[W,r]`(`P`, 0[`E`]) = `e[W,r]`(`P`, `P`) = 1。此时，所得运算为一种配对，称为 Weil 配对。需注意：此配对为交替配对，即 `e[W,r]`(`P`, `Q`) = `e[W,r]`(`Q`, `P`)^(−1)。
 
-**注。**– 在密码学应用中，我们取 `K` = `F`[*q*]，其中 `q` 为素数。我们称嵌入度 `k` 为满足 `r | q^k` − 1 的最小 `k`。这导致 `F`[*q*^*k*] = `F`*q*).
+**注** – 在密码学应用中，我们取 `K` = `F`[*q*]，其中 `q` 为素数。我们称嵌入度 `k` 为满足 `r | q^k` − 1 的最小 `k`。这导致 `F`[*q*^*k*] = `F`*q*。
 
-#### 5.2.1.2. Tate 配对
-
-
-
+#### 5.2.1.2 Tate 配对
 
 这种配对最初由 Tate 为数域描述（Tate 1958），随后由 Frey 和 Rück（1994）针对有限域进行了更新。为了使我们的表述适合密码学用途，我们将讨论范围限定在 `$\mathbb{F}_q$` 和对应于 `r` 的嵌入度 `k` 上。
+
+
 
 **定理。** 设 `E` 为一条椭圆曲线，`r` 为整除 `E($\mathbb{F}_q$)` 基数的素数，`P` 为定义在 `$\mathbb{F}_{q^k}$` 上的 `r`-挠点，`Q` 为定义在 `$\mathbb{F}_{q^k}$` 上的曲线上的点。设 `R` 为曲线上的任意一点，使得 `R` 和 `Q + R` 均不同于 `P` 和 `0[E]`。则可以定义（独立于 `R`）：
 
@@ -2377,10 +2275,6 @@ Adv_{$\mathcal{D}_k$, s}^{mddh}($\mathcal{A}$) = |Pr[$\mathcal{A}$(g_s, [M]_s, [
 
 **图 5.4.** *k* = 2 *时假设的紧凑版本*
 
-
-
-
-
 # 矩阵假设的层级结构
 
 图 5.5 展示了各种假设之间的层级关系。对于给定的 *k*，对称级联假设和增量线性假设是等价的。它们都比级联假设和线性假设更强（更容易被攻破）。而这两者又比通用矩阵假设更强。但应当注意，级联假设和线性假设之间不存在已知的关系。
@@ -2393,41 +2287,47 @@ Adv_{$\mathcal{D}_k$, s}^{mddh}($\mathcal{A}$) = |Pr[$\mathcal{A}$(g_s, [M]_s, [
 
 ## 定义 5.10
 
-*对于所有对手* ![image](img/a.jpg)*，优势函数* ![image](img/i74.jpg)*定义为*
+*对于所有对手* `$\mathcal{A}$`*，优势函数* `Adv_{$\mathcal{D}_k$}^{bmddh}($\mathcal{A}$)` *定义为*
 
-![image](img/p115-1.jpg)
+```
+Pr[$\mathcal{A}$([V]_1, [V]_2, [Vw]_1, [Vw]_2) = 1] - Pr[$\mathcal{A}$([V]_1, [V]_2, [u]_1, [u]_2) = 1]
+```
 
-*其中* V ← ![image](img/d.jpg)[*k*]，![image](img/i75.jpg)*和* ![image](img/i76.jpg)*。`bmddh` 假设断言对于所有* `ppt` *对手* ![image](img/a.jpg)*，* ![image](img/i77.jpg)*在 λ 中可忽略不计。*
+*其中* `V ← $\mathcal{D}_k$`\[*k*\]，`w ← ℤ_p^k` *和* `u ← ℤ_p^{k+1}` *。`bmddh` 假设断言对于所有* `ppt` *对手* `$\mathcal{A}$` *，* `Adv_{$\mathcal{D}_k$}^{bmddh}($\mathcal{A}$)` *在 λ 中可忽略不计。*
 
 **注意。** 双边变体（`bmddh`）在对称双线性群中可证明不弱于（在通用群模型中）单边变体。非对称配对中的 DLIN 假设的双边变体已在先前的工作中被使用（Libert 等人，2015；Agrawal 和 Chase，2017），并已在 Fuchsbauer 和 Gay（2018）中以基于矩阵的广义形式被使用。我们进一步注意到 `bmddh`[1] 是不安全的，只能对 *k* ≥ 2 使用 `bmddh`[*k*]。
 
 ## 定义 5.11
 
-*对于所有对手* ![image](img/a.jpg)*，对于 s* ∈ {1, 2}*，优势函数定义如下：*
+*对于所有对手* `$\mathcal{A}$`*，对于 s* ∈ {1, 2}*，优势函数定义如下：*
 
-![image](img/p116-1.jpg)
+```
+Adv_{$\mathcal{D}_k$, s}^{ker-dh}($\mathcal{A}$) = Pr[$\mathcal{A}$([U]_s) = z ∧ z ≠ 0 ∧ z^⊤ U = 0]
+```
 
-*其中* U ← ![image](img/d.jpg)[*k*]。*`ker` − `dh` 假设断言对于所有* `ppt` *对手* ![image](img/a.jpg)*，* ![image](img/i78.jpg)*在 λ 中可忽略不计。*
+*其中* `U ← $\mathcal{D}_k$` *。* `ker` − `dh` *假设断言对于所有* `ppt` *对手* `$\mathcal{A}$` *，* `Adv_{$\mathcal{D}_k$, s}^{ker-dh}($\mathcal{A}$)` *在 λ 中可忽略不计。*
 
-**注意。** 利用配对函数，获胜条件可被高效检查：z ∈ orth(U) ![image](img/arr.jpg)*e*(z^⊤[1], U[2]) = 1[*T*] ![image](img/arr.jpg)*e*(U^⊤[1], z[2]) = 1[*T*]。Morillo 等人（2016）证明了 `mddh` ⇒ `ker` − `dh`，即对于任意 `ppt` 对手 ![image](img/a.jpg)，存在 `ppt` 对手 ![image](img/b.jpg) 使得 ![image](img/i79.jpg)
+**注意。** 利用配对函数，获胜条件可被高效检查：z ∈ orth(U) `⇔` `e`(z^⊤[1], U[2]) = 1[`T`] `⇔` `e`(U^⊤[1], z[2]) = 1[`T`]。Morillo 等人（2016）证明了 `mddh` ⇒ `ker` − `dh`，即对于任意 `ppt` 对手 `$\mathcal{A}$`，存在 `ppt` 对手 `$\mathcal{B}$` 使得 `Adv_{$\mathcal{D}_k$, s}^{ker-dh}($\mathcal{B}$) ≤ Adv_{$\mathcal{D}_k$, s}^{mddh}($\mathcal{A}$)`。
 
 ## 定义 5.12
 
-*对于所有对手* ![image](img/a.jpg)*，优势函数* ![image](img/i80.jpg)*定义为*
+*对于所有对手* `$\mathcal{A}$`*，优势函数* `Adv_{$\mathcal{D}_k$}^{bker-dh}($\mathcal{A}$)` *定义为*
 
-![image](img/p116-2.jpg)
+```
+Pr[$\mathcal{A}$([U]_1, [U]_2) = (z_1, z_2) ∧ (z_1, z_2) ≠ (0, 0) ∧ z_1^⊤ U = 0 ∧ z_2^⊤ U = 0]
+```
 
-*其中* V ← ![image](img/d.jpg)[*k*]。*`bker` − `dh` 假设断言对于所有* `ppt` *对手* ![image](img/a.jpg)*，* ![image](img/i81.jpg)*在 λ 中可忽略不计。*
+*其中* `V ← $\mathcal{D}_k$`\[*k*\] *。* `bker` − `dh` *假设断言对于所有* `ppt` *对手* `$\mathcal{A}$` *，* `Adv_{$\mathcal{D}_k$}^{bker-dh}($\mathcal{A}$)` *在 λ 中可忽略不计。*
 
 **注意。** 再次强调，`bker` − `dh`[1] 是不安全的，只能对 *k* ≥ 2 使用 `bker` − `dh`[*k*]。
 
-根据（Morillo 等人，2016），很容易证明 `bmddh` ⇒ `bker` − `dh`，即对于任意 `ppt` 对手 ![image](img/a.jpg)，存在 `ppt` 对手 ![image](img/b.jpg) 使得 ![image](img/i82.jpg)![image](img/i83.jpg)
+根据（Morillo 等人，2016），很容易证明 `bmddh` ⇒ `bker` − `dh`，即对于任意 `ppt` 对手 `$\mathcal{A}$`，存在 `ppt` 对手 `$\mathcal{B}$` 使得 `Adv_{$\mathcal{D}_k$}^{bker-dh}($\mathcal{B}$) ≤ Adv_{$\mathcal{D}_k$}^{bmddh}($\mathcal{A}$)`。
 
 ## 5.3. 指尖上的密码学协议新世界
 
-离散对数问题引入了线性单向函数 ![image](img/f.jpg)[*a*] : *g* ![image](img/g.jpg)→ *g^a*；然而，在不明确给出秘密陷门 *a* 的情况下，无法检查两对输入和输出是否由同一函数生成。
+离散对数问题引入了线性单向函数 `f[a]` : `g` → `g^a`；然而，在不明确给出秘密陷门 `a` 的情况下，无法检查两对输入和输出是否由同一函数生成。
 
-得益于配对，给定两对输入和输出，现在可以在不泄露陷门的情况下检查它们是否由同一函数生成。给定 (*x*[1], *y*[1])，(*x*[2], *y*[2])，只需比较 *e*(*x*[1], *y*[2]) 和 *e*(*x*[2], *y*[1])，而无需显式知道离散对数。
+得益于配对，给定两对输入和输出，现在可以在不泄露陷门的情况下检查它们是否由同一函数生成。给定 (`x`[1], `y`[1])，(`x`[2], `y`[2])，只需比较 `e`(`x`[1], `y`[2]) 和 `e`(`x`[2], `y`[1])，而无需显式知道离散对数。
 
 这种额外的验证能力克服了*纯*基于离散对数构造的局限性，在后者中，在不知道秘密的情况下无法组合元素。
 
@@ -2449,7 +2349,7 @@ Adv_{$\mathcal{D}_k$, s}^{mddh}($\mathcal{A}$) = |Pr[$\mathcal{A}$(g_s, [M]_s, [
 
 **图 5.6.** *Boneh–Franklin 基于身份的密钥封装机制作为三方 Diffie–Hellman 交换的表示*
 
-当然，这样一个协议缺少一个关键参与者——用户。在这种情况下，他/她将从机构接收一个将其身份的哈希评估与秘密密钥混合的中间值：`usk[id]` = ![image](img/h.jpg)(`id`)^(*x*)。有趣的是，他可以通过检查以下等式来验证机构发送的值是否正确：*e*(`usk`[`id`], *g*) = *e*(![image](img/h.jpg)(`id`), `pk`)。
+当然，这样一个协议缺少一个关键参与者——用户。在这种情况下，他/她将从机构接收一个将其身份的哈希评估与秘密密钥混合的中间值：`usk[id]` = `H`(`id`)^(`x`)。有趣的是，他可以通过检查以下等式来验证机构发送的值是否正确：`e`(`usk`[`id`], `g`) = `e`(`H`(`id`), `pk`)。
 
 我们可以看到，任何外部人只能看到三个群元素，而不知道任何一个离散对数。这正是最初引入的三方 Diffie–Hellman 的设定，事后看来，由此得到后者进而导致此类基于身份方案的高效（且安全）构造，并不令人惊讶。
 
@@ -2459,27 +2359,27 @@ Adv_{$\mathcal{D}_k$, s}^{mddh}($\mathcal{A}$) = |Pr[$\mathcal{A}$(g_s, [M]_s, [
 
 然而，2001 年，Boneh 等人（2001）引入了一种额外紧凑的确定性签名，可在随机预言机模型下基于计算 Diffie–Hellman 假设被证明是安全的。
 
-图 5.7 回顾了 BLS 签名方案的构造。它非常接近 Boneh–Franklin IBKEM，其中用户的私钥现在是签名 *σ*，而验证包含在发送者侧对随机数 *r* = 1 进行正确的封装/解封装检查。由于从 IBE 到签名的 Naor 变换，这并不令人惊讶。
+图 5.7 回顾了 BLS 签名方案的构造。它非常接近 Boneh–Franklin IBKEM，其中用户的私钥现在是签名 `σ`，而验证包含在发送者侧对随机数 `r` = 1 进行正确的封装/解封装检查。由于从 IBE 到签名的 Naor 变换，这并不令人惊讶。
 
 ![图 5.7. Boneh–Lynn–Shacham 签名方案](img/fig5-7.jpg)
 
 **图 5.7.** *Boneh–Lynn–Shacham 签名方案*
 
-可以看出，签名的所有难点在于能否从 *g, g^x,* ![image](img/h.jpg)(*M*) 计算出 *σ*，换句话说，就是解决这个计算 Diffie–Hellman 问题的实例。
+可以看出，签名的所有难点在于能否从 `g, g^x,` `H`(`M`) 计算出 `σ`，换句话说，就是解决这个计算 Diffie–Hellman 问题的实例。
 
-配对在此至关重要；一方面，它们允许在没有任何陷门的情况下公开验证签名；另一方面，因为它们是非退化的，它们确保如果等式成立，则提供的 *σ* 就是计算 Diffie–Hellman 挑战的解。
+配对在此至关重要；一方面，它们允许在没有任何陷门的情况下公开验证签名；另一方面，因为它们是非退化的，它们确保如果等式成立，则提供的 `σ` 就是计算 Diffie–Hellman 挑战的解。
 
 ## 5.4. 参考文献
-
-
-
-
 
 # 参考文献
 
 Agrawal, S. and Chase, M. (2017). FAME: Fast attribute-based message encryption. In *ACM CCS 2017*, Thuraisingham, B.M., Evans, D., Malkin, T., Xu, D. (eds). ACM Press.
 
 Ateniese, G., Camenisch, J., Hohenberger, S., de Medeiros, B. (2005). Practical group signatures without random oracles. Cryptology ePrint Archive, Report 2005/385 [Online]. Available at: [`eprint.iacr.org/2005/385`](https://eprint.iacr.org/2005/385).
+
+
+
+# 参考文献
 
 Boneh, D. and Franklin, M.K. (2001). Identity-based encryption from the Weil pairing. In *CRYPTO 2001*, vol. 2139 of *LNCS*, Kilian, J. (ed.). Springer, Heidelberg.
 
@@ -2523,35 +2423,31 @@ Tate, J. (1958). *wc*-groups over *p*-adic fields. *Séminaire Bourbaki : année
 
 密码学最古老的目标是允许各方在可能处于对手控制下的不安全信道上安全通信。如今，保密性仍然是主要目标之一，此外还有认证和完整性。
 
-用于保密性的经典标准协议称为*加密*，实现于“点对点”通信框架中：发送者加密消息并将密文发送给拥有密钥可解密密文的接收者。从安全角度来看，目标是防止外部攻击者（观察并可能与系统交互）破坏保密性，即恢复出关于原始消息的某些信息。当将“点对点”推广到“一点对多点”通信（即多接收者加密）时，情况将不完全相同，在这种场景下发送者需要向多个接收者发送秘密消息。乍一看，人们可能会认为在所有合法接收者之间共享一个公共密钥的简单解决方案就足够了。然而，事实并非如此，主要是因为“一点对多点”通信中的安全概念需要扩展以满足实际需求。俗话说：秘密一旦被不止一个人知道，就不再是秘密。因此，如果在所有接收者之间共享一个公共密钥，那么其中任何一个接收者都可以将其交给对手。结果一方面是整个系统的保密性完全被破坏，另一方面我们无法知道秘密泄露的来源，也无法检测并排除这个不诚实的用户（通常称为叛徒），因为所有接收者拥有相同的密钥。
+用于保密性的经典标准协议称为`加密`，实现于“点对点”通信框架中：发送者加密消息并将密文发送给拥有密钥可解密密文的接收者。从安全角度来看，目标是防止外部攻击者（观察并可能与系统交互）破坏保密性，即恢复出关于原始消息的某些信息。当将“点对点”推广到“一点对多点”通信（即多接收者加密）时，情况将不完全相同，在这种场景下发送者需要向多个接收者发送秘密消息。乍一看，人们可能会认为在所有合法接收者之间共享一个公共密钥的简单解决方案就足够了。然而，事实并非如此，主要是因为“一点对多点”通信中的安全概念需要扩展以满足实际需求。俗话说：秘密一旦被不止一个人知道，就不再是秘密。因此，如果在所有接收者之间共享一个公共密钥，那么其中任何一个接收者都可以将其交给对手。结果一方面是整个系统的保密性完全被破坏，另一方面我们无法知道秘密泄露的来源，也无法检测并排除这个不诚实的用户（通常称为叛徒），因为所有接收者拥有相同的密钥。
 
 在“一点对多点”通信中，针对访问控制和可追踪性有新的基本安全要求。
 
-- 访问控制保证只有合法或目标用户有权解密消息。由此产生的方案通常称为*广播加密*（简称 BE）。在实际应用中，如付费电视，目标集通常非常大，包含除未付费用户（应从系统中撤销）之外的几乎所有用户，目标集通过撤销集隐式确定，相应的系统通常称为*撤销方案*。广播加密和撤销方案可由更通用的原语（如基于属性的加密）涵盖，后者在第 7 章中介绍。然而，将通用框架应用于具体原语时，往往会导致方案不切实际。我们将在本章末尾讨论该方法的最新进展。
+- 访问控制保证只有合法或目标用户有权解密消息。由此产生的方案通常称为`广播加密`（简称 `BE`）。在实际应用中，如付费电视，目标集通常非常大，包含除未付费用户（应从系统中撤销）之外的几乎所有用户，目标集通过撤销集隐式确定，相应的系统通常称为`撤销方案`。广播加密和撤销方案可由更通用的原语（如基于属性的加密）涵盖，后者在第 7 章中介绍。然而，将通用框架应用于具体原语时，往往会导致方案不切实际。我们将在本章末尾讨论该方法的最新进展。
 
-- 虽然访问控制在“一点对多点”通信中是很自然的考虑因素，但可追踪性是一个新属性，它与经典密码系统的主要目标是“正交”的。既然无法完全阻止接收者在“一点对多点”通信中泄露其密钥，我们就应该阻止他们这样做。事实上，当用户加入系统并承诺遵守不泄露任何秘密信息的安全要求时，如果用户知道任何秘密信息泄露的来源都会被检测到，那么不诚实的用户就会被威慑，不敢泄露其密钥。具有追踪叛徒能力的多接收者加密方案称为*叛徒追踪*（TT）。
+- 虽然访问控制在“一点对多点”通信中是很自然的考虑因素，但可追踪性是一个新属性，它与经典密码系统的主要目标是“正交”的。既然无法完全阻止接收者在“一点对多点”通信中泄露其密钥，我们就应该阻止他们这样做。事实上，当用户加入系统并承诺遵守不泄露任何秘密信息的安全要求时，如果用户知道任何秘密信息泄露的来源都会被检测到，那么不诚实的用户就会被威慑，不敢泄露其密钥。具有追踪叛徒能力的多接收者加密方案称为`叛徒追踪`（`TT`）。
 
-在给出广播加密和 TT 的技术概述之前，让我们讨论一下这些原语在实践中的一些影响。
+在给出广播加密和 `TT` 的技术概述之前，让我们讨论一下这些原语在实践中的一些影响。
 
+## 实际影响
 
+由于实际影响，广播加密和追踪者追踪（`TT`）受到了相当多的关注，特别是在付费电视和定位系统中。在付费电视领域，盗版对广播商的收入产生了日益令人担忧的直接影响。根据 Loebbecke 和 Fischer (2005) 的记载，“欧洲加密作品与服务保护协会（AEPOC）估计，欧盟内盗版卡和被篡改的机顶盒的年收入至少达 10 亿欧元”（AEPOC, 2003）。Datamonitor 的另一份报告估计，在 2004 年至 2010 年间，广播运营商的损失约为 6.81 亿欧元，而同期收益为 32 亿欧元。近年来，基于盗版的全球黑色经济呈现出增长态势。在定位系统领域，我们可以看看伽利略欧洲项目，该项目旨在建立一个全球导航卫星系统（预计成本为 34 亿欧元）；广播方法是伽利略运行组管理的核心，即允许或拒绝访问其某些服务。
 
+由于存在大量潜在的多接收者场景，单一解决方案极不可能适用于所有场景。这促使了在效率参数和安全级别之间进行权衡。目标是构建足够灵活的方案，以最优（或接近最优）的方式适应各种场景，并对其安全级别进行严格的研究。因此，本章旨在概述设计广播加密和 `TT` 的不同技术。
 
+## 6.2 广播加密和 TT 的安全概念
 
-# 实际影响
-
-由于实际影响，广播加密和追踪者追踪（TT）受到了相当多的关注，特别是在付费电视和定位系统中。在付费电视领域，盗版对广播商的收入产生了日益令人担忧的直接影响。根据 Loebbecke 和 Fischer (2005) 的记载，“欧洲加密作品与服务保护协会（AEPOC）估计，欧盟内盗版卡和被篡改的机顶盒的年收入至少达 10 亿欧元”（AEPOC, 2003）。Datamonitor 的另一份报告估计，在 2004 年至 2010 年间，广播运营商的损失约为 6.81 亿欧元，而同期收益为 32 亿欧元。近年来，基于盗版的全球黑色经济呈现出增长态势。在定位系统领域，我们可以看看伽利略欧洲项目，该项目旨在建立一个全球导航卫星系统（预计成本为 34 亿欧元）；广播方法是伽利略运行组管理的核心，即允许或拒绝访问其某些服务。
-
-由于存在大量潜在的多接收者场景，单一解决方案极不可能适用于所有场景。这促使了在效率参数和安全级别之间进行权衡。目标是构建足够灵活的方案，以最优（或接近最优）的方式适应各种场景，并对其安全级别进行严格的研究。因此，本章旨在概述设计广播加密和 TT 的不同技术。
-
-## 6.2. 广播加密和 TT 的安全概念
-
-广播加密（BE）方案的主要目标是使消息发送者能够选择任意用户子集（称为 `目标集` 或 `特权集`），并将消息加密发送给该子集。目标集可以由发送者直接确定，也可以通过其补集（`撤销集`）隐式确定。在后一种情况下，该方案称为 `撤销方案`。
+广播加密（`BE`）方案的主要目标是使消息发送者能够选择任意用户子集（称为 `目标集` 或 `特权集`），并将消息加密发送给该子集。目标集可以由发送者直接确定，也可以通过其补集（`撤销集`）隐式确定。在后一种情况下，该方案称为 `撤销方案`。
 
 理论上，唯一标识大小为 `N` 的集合的一个子集需要 `N` 位。然而，如果撤销集的大小 `r` 很小，则只需标识被撤销的用户即可，这可以使用 `r log N` 位来完成。如果目标集很小，也适用相同的技术。在实践中，我们应该注意到目标集相当稳定（例如在付费电视中，目标集在整个月份几乎保持稳定），我们只需传达两个周期之间的修改。通常只需考虑组密钥分发，即向目标组添加或移除一个用户：这对应于向目标集添加或移除一个用户的广播加密。一般来说，人们广泛接受——本章也遵循这一惯例——在比较广播加密方案时，不考虑目标集描述的大小。
 
 ### 定义
 
-广播加密通常形式化为 `广播封装`，其中生成一个会话密钥，并且要求该会话密钥在对手视角下与随机值不可区分。此类方案可结合对称加密，通过混合加密（即 KEM-DEM）范式（Cramer 和 Shoup，2003）提供公钥加密功能。形式上，一个（公钥）`动态`广播封装方案是一个由四个算法组成的元组 `BE` = (`Setup`, `Join`, `Encaps`, `Decaps`)，其中：
+广播加密通常形式化为 `广播封装`，其中生成一个会话密钥，并且要求该会话密钥在对手视角下与随机值不可区分。此类方案可结合对称加密，通过混合加密（即 `KEM-DEM`）范式（Cramer 和 Shoup，2003）提供公钥加密功能。形式上，一个（公钥）`动态`广播封装方案是一个由四个算法组成的元组 `BE` = (`Setup`, `Join`, `Encaps`, `Decaps`)，其中：
 
 *   `Setup`(1^(`k`)) 输出 (`msk`, `ek`)，包含主密钥和（初始）加密密钥；
 *   `Join`(`msk`, `i`) 为用户 `i` 输出密钥对 (`sk[i]`, `pk[i]`)，并更新系统参数以包含用户 `i` 的信息（通过将 `pk[i]` 追加到 `ek`，将 `sk[i]` 追加到 `msk`）；
@@ -2564,51 +2460,73 @@ Tate, J. (1958). *wc*-groups over *p*-adic fields. *Séminaire Bourbaki : année
 
 ### 可追踪性
 
-我们可以在广播加密中添加可追踪性，以获得 `追踪与撤销` 方案。形式上，追踪与撤销封装方案是一个广播封装方案，并带有一个额外的追踪算法 `Trace`。TT 算法以黑盒方式与由某个叛徒集合 `T` 构建的盗版解码器 `D` 进行交互。该算法以子集 `R` ⊂ [`N`] 为输入（假设在追踪时系统中有 `N` 个用户，且 `R` 可由对手选择）、公钥 `pk`、主密钥 `msk`，并输出一个集合 `T` ⊆ [`N`]。在目标集 `S` = ([`N`] − `R`) 至少包含一个叛徒，且盗版解码器 `D` 能“高效”解密密文（即以非微乎其微的概率解密）的条件下，追踪算法在 `S` 中输出至少一个叛徒，即 ∅ ≠ `T` ⊆ `T` ∩ `S`。
+我们可以在广播加密中添加可追踪性，以获得 `追踪与撤销` 方案。形式上，追踪与撤销封装方案是一个广播封装方案，并带有一个额外的追踪算法 `Trace`。`TT` 算法以黑盒方式与由某个叛徒集合 `T` 构建的盗版解码器 `D` 进行交互。该算法以子集 `R` ⊂ [`N`] 为输入（假设在追踪时系统中有 `N` 个用户，且 `R` 可由对手选择）、公钥 `pk`、主密钥 `msk`，并输出一个集合 `T` ⊆ [`N`]。在目标集 `S` = ([`N`] − `R`) 至少包含一个叛徒，且盗版解码器 `D` 能“高效”解密密文（即以非微乎其微的概率解密）的条件下，追踪算法在 `S` 中输出至少一个叛徒，即 ∅ ≠ `T` ⊆ `T` ∩ `S`。
 
 上述定义在通用黑盒模型中同时捕捉了撤销用户和追踪叛徒的功能。然而，还有许多其他追踪模型，例如 `非黑盒追踪`、`单密钥黑盒追踪` 和 `黑盒确认` 模型（Boneh 和 Franklin，1999）以及针对 `有状态盗版者` 的追踪（Kiayias 和 Yung，2002b）。在某些情况下，追踪过程的目标也可以放宽，即仅需让管理机构禁用盗版解码器即可。在 `有界模型` 中，假设叛徒的最大数量受某个参数 `t` 限制。
 
-TT 方案实际上是一个没有撤销用户可能性的追踪与撤销方案，即目标集始终设为全体用户集合。可追踪性与撤销的结合具有挑战性，它们通常被独立研究。
+`TT` 方案实际上是一个没有撤销用户可能性的追踪与撤销方案，即目标集始终设为全体用户集合。可追踪性与撤销的结合具有挑战性，它们通常被独立研究。
 
 ### 安全概念
 
 最强的安全模型，即动态广播加密的自适应 CCA 安全游戏，可以建模为挑战者和对手之间的经典 CCA 游戏：挑战者运行 `Setup`(1^(`k`)) 初始化系统，并给对手加密密钥；对手自适应地访问预言机以解密选定的密文、将新用户加入系统以及破坏某些用户以获取其所有密钥；对手最终输出一个它想要攻击的接收者集合 `S`，该集合不得包含任何被破坏的用户；挑战者随后计算 (`H`, `K`) ← `Encaps`(`ek`, `S`)，然后抛硬币 `b` ← {0, 1} 并设置 `K_b`，返回 (`S`, `H`, `K_0`, `K_1`) 给对手；对手随后继续自适应地访问预言机，但不能破坏 `S` 中的用户，并输出其猜测比特 `b'`。当且仅当 `Adv` 非微乎其微时，对手赢得游戏。
 
+## 6.3 广播加密与追踪者追踪概述
 
-
-
-
-## 6.3. 广播加密与追踪者追踪概述
-
-广播加密最早由 Fiat 和 Naor (1994) 描述。直到 2000 年代初，Naor 等人 (2001) 提出了他们的（对称密钥）子集覆盖框架，并给出了安全模型和安全分析，BE 才开始受到广泛关注。从那时起，许多 BE 方案被提出，子集覆盖框架已成为许多后续提案的基础，包括 Dodis 和 Fazio (2003)，他们提出了第一个公钥广播加密方案。
+广播加密最早由 Fiat 和 Naor (1994) 描述。直到 2000 年代初，Naor 等人 (2001) 提出了他们的（对称密钥）子集覆盖框架，并给出了安全模型和安全分析，`BE` 才开始受到广泛关注。从那时起，许多 `BE` 方案被提出，子集覆盖框架已成为许多后续提案的基础，包括 Dodis 和 Fazio (2003)，他们提出了第一个公钥广播加密方案。
 
 Boneh 等人 (2005) 首先提出了一种完全抗共谋的公钥广播加密，其中密文大小为常数。他们提出了两个方案，分别在选择安全模型下实现 CPA 和 CCA 安全，在该模型中，对手需要在系统初始化前选择被攻破的用户。
 
-自适应安全由 Gentry 和 Waters (2009) 提出，作者给出了几个实现自适应 CPA 安全的方案，包括两个广播加密方案和两个基于身份的广播加密 (IBBE) 方案，其中一个在随机预言机模型下实现了常数大小的密文。Waters (2009) 和 Lewko 等人 (2010) 分别提出的一个广播加密方案和一个撤销方案，是仅在静态假设下（相对于所谓的 `q` 型假设）被证明安全的方案。Lewko 等人 (2010) 还提出了一个基于身份的撤销方案，被证明在选择模型下实现 CPA 安全。
+自适应安全由 Gentry 和 Waters (2009) 提出，作者给出了几个实现自适应 CPA 安全的方案，包括两个广播加密方案和两个基于身份的广播加密 (`IBBE`) 方案，其中一个在随机预言机模型下实现了常数大小的密文。Waters (2009) 和 Lewko 等人 (2010) 分别提出的一个广播加密方案和一个撤销方案，是仅在静态假设下（相对于所谓的 `q` 型假设）被证明安全的方案。Lewko 等人 (2010) 还提出了一个基于身份的撤销方案，被证明在选择模型下实现 CPA 安全。
 
-动态广播加密由 Delerablée 等人 (2007) 提出，他们设计了仅具有部分自适应安全性的 CPA 安全方案。严格来说，他们的方案是一种*撤销*方案，其中被撤销用户的集合在加密时选定，进而，撤销集合之外的任何用户都能解密。Delerablée (2007) 提出了基于身份的广播加密，并给出了一个选择 CPA 安全的方案。基于 BGW 方案，Phan 等人 (2013) 提出了一个常数大小的自适应 CCA 安全*包含-排除*广播加密方案，其中可以同时作为广播加密和撤销方案使用。该方案的具体评估见 Dubois 等人 (2013)。
+动态广播加密由 Delerablée 等人 (2007) 提出，他们设计了仅具有部分自适应安全性的 CPA 安全方案。严格来说，他们的方案是一种`撤销`方案，其中被撤销用户的集合在加密时选定，进而，撤销集合之外的任何用户都能解密。Delerablée (2007) 提出了基于身份的广播加密，并给出了一个选择 CPA 安全的方案。基于 BGW 方案，Phan 等人 (2013) 提出了一个常数大小的自适应 CCA 安全`包含-排除`广播加密方案，其中可以同时作为广播加密和撤销方案使用。该方案的具体评估见 Dubois 等人 (2013)。
 
-最近，Agrawal 和 Yamada (2020b) 从属性基加密实现了最优广播加密。由于广播功能可以表示为宽度线性大小的策略电路（通过简单检查用户是否在目标集合中），他们的主要思想是提出一个大小与宽度无关的 ABE 方案。他们还基于学习误差假设 (LWE) 以及双线性映射假设给出了实例化。然而，该构造只能在通用双线性群中被证明安全。他们改进的工作 (Agrawal and Yamada 2020a) 依赖于双线性群上的正交性知识假设 (KOALA) (Beullens and Wee 2019)，从标准假设构造最优广播加密仍是一个开放问题。
+最近，Agrawal 和 Yamada (2020b) 从属性基加密实现了最优广播加密。由于广播功能可以表示为宽度线性大小的策略电路（通过简单检查用户是否在目标集合中），他们的主要思想是提出一个大小与宽度无关的 `ABE` 方案。他们还基于学习误差假设 (`LWE`) 以及双线性映射假设给出了实例化。然而，该构造只能在通用双线性群中被证明安全。他们改进的工作 (Agrawal and Yamada 2020a) 依赖于双线性群上的正交性知识假设 (`KOALA`) (Beullens and Wee 2019)，从标准假设构造最优广播加密仍是一个开放问题。
 
-TT 方案的第一个形式化定义出现在 (Chor et al. 1994, 2000) 中，其构造要求存储、解密时间复杂度为 `O(t² log² t log(N/t))`，通信复杂度为 `O(t³ log⁴ t log(N/t))`，其中 `N` 是用户规模，`t` 是叛徒数量的上界。Stinson 和 Wei (1998) 后来提出了显式的组合构造，对于较小的 `t` 和 `N` 值实现了更好的效率。
+`TT` 方案的第一个形式化定义出现在 (Chor et al. 1994, 2000) 中，其构造要求存储、解密时间复杂度为 `O(t² log² t log(N/t))`，通信复杂度为 `O(t³ log⁴ t log(N/t))`，其中 `N` 是用户规模，`t` 是叛徒数量的上界。Stinson 和 Wei (1998) 后来提出了显式的组合构造，对于较小的 `t` 和 `N` 值实现了更好的效率。
 
-Boneh 和 Franklin (1999) 基于代数方法提出了一种高效的公钥 TT 方案，具有确定性追踪，最多可追踪 `t` 个叛徒。其通信、存储和解密复杂度均为 `O(t)`。作者还引入了*非黑盒可追踪性*的概念：给定从盗版设备（使用至多 `t` 个用户的密钥构建）中提取的“有效”密钥，可以恢复至少一个叛徒的身份。这与*黑盒追踪*形成对比，后者只能通过观察盗版解码器对“精心设计”密文的回复来发现叛徒身份。不幸的是，Kiayias 和 Yung (2001) 表明，每当叛徒数量为超对数级时，这种类型的方案中黑盒追踪不可能是高效的（例如多项式时间）。然而，Boneh-Franklin 方案可以实现*黑盒确认*：给定一个包含叛徒的超集，它保证能找到至少一个叛徒，且不会牵连无辜嫌疑人。Boneh 等人 (2006) 和 Boneh 和 Waters (2006) 提出的 TT 方案能抵御任意数量的叛徒（*完全可追踪性*），同时仅需亚线性密文长度 `O(√N)`。Zhandry (2020) 进一步将该结果改进至 `O(N^(1/3))`。最近，Boneh 和 Zhandry (2014) 提出了一个完全抗共谋的方案，参数大小为多项式对数级。它依赖于不可区分性混淆 (Garg et al. 2013)，其安全基础仍有待研究，实用性仍有待验证。
 
-Pfitzmann (1996) 引入了*非对称* TT 的概念。在该模型中，追踪者发现叛徒的一些秘密信息，这些信息系统管理者事先并不知晓。因此，追踪算法的结果提供了恶意行为的证据。该方向的进一步成果见 Kurosawa 和 Desmedt (1998)；Kurosawa 和 Yoshida (2002)；Kiayias 和 Yung (2002a)。*公开可追踪性*的概念，即在公开信息上运行追踪过程的可能性，由 Chabanne 等人 (2005) 提出。一些方案 (Chabanne et al. 2005; Phan et al. 2006; Boneh and Waters 2006; Boneh and Zhandry 2014; Ling et al. 2014) 实现了公开可追踪性，还有一些方案实现了比公开可追踪性更强的概念，即不可否认性，但这些方案的初始化需要管理者与每个用户之间进行某种交互协议，例如 Pfitzmann (1996) 中的安全双方计算协议，Pfitzmann 和 Waidner (1997) 中的承诺协议，或 Watanabe 等人 (2001)；Komaki 等人 (2001)；Kiayias 和 Yung (2002a) 中的不经意多项式求值。
+
+# 追踪者追踪与广播加密综述
+
+## 追踪者追踪方案的发展
+
+Boneh 和 Franklin (1999) 基于代数方法提出了一种高效的公钥 TT 方案，具有确定性追踪，最多可追踪 `t` 个叛徒。其通信、存储和解密复杂度均为 `O(t)`。作者还引入了**非黑盒可追踪性**的概念：给定从盗版设备（使用至多 `t` 个用户的密钥构建）中提取的“有效”密钥，可以恢复至少一个叛徒的身份。这与**黑盒追踪**形成对比，后者只能通过观察盗版解码器对“精心设计”密文的回复来发现叛徒身份。不幸的是，Kiayias 和 Yung (2001) 表明，每当叛徒数量为超对数级时，这种类型的方案中黑盒追踪不可能是高效的（例如多项式时间）。然而，Boneh-Franklin 方案可以实现**黑盒确认**：给定一个包含叛徒的超集，它保证能找到至少一个叛徒，且不会牵连无辜嫌疑人。
+
+Boneh 等人 (2006) 和 Boneh 和 Waters (2006) 提出的 TT 方案能抵御任意数量的叛徒（**完全可追踪性**），同时仅需亚线性密文长度 `O(√N)`。Zhandry (2020) 进一步将该结果改进至 `O(N^(1/3))`。最近，Boneh 和 Zhandry (2014) 提出了一个完全抗共谋的方案，参数大小为多项式对数级。它依赖于不可区分性混淆 (Garg et al. 2013)，其安全基础仍有待研究，实用性仍有待验证。
+
+## 非对称与公开可追踪 TT
+
+Pfitzmann (1996) 引入了**非对称** TT 的概念。在该模型中，追踪者发现叛徒的一些秘密信息，这些信息系统管理者事先并不知晓。因此，追踪算法的结果提供了恶意行为的证据。该方向的进一步成果见 Kurosawa 和 Desmedt (1998)；Kurosawa 和 Yoshida (2002)；Kiayias 和 Yung (2002a)。
+
+**公开可追踪性**的概念，即在公开信息上运行追踪过程的可能性，由 Chabanne 等人 (2005) 提出。一些方案 (Chabanne et al. 2005; Phan et al. 2006; Boneh and Waters 2006; Boneh and Zhandry 2014; Ling et al. 2014) 实现了公开可追踪性，还有一些方案实现了比公开可追踪性更强的概念，即不可否认性，但这些方案的初始化需要管理者与每个用户之间进行某种交互协议，例如 Pfitzmann (1996) 中的安全双方计算协议，Pfitzmann 和 Waidner (1997) 中的承诺协议，或 Watanabe 等人 (2001)；Komaki 等人 (2001)；Kiayias 和 Yung (2002a) 中的不经意多项式求值。
+
+## 替代 TT 解决方案与基于编码的方案
 
 替代 TT 解决方案 (Fiat and Tassa 2001; Berkman et al. 2000; Safavi-Naini and Wang 2003a) 也被提出，旨在对抗解密内容的泄露，而非解密材料的泄露。
 
-一类依赖抗共谋码的方案 (Boneh and Shaw 1995, 1998; Tardos 2003) 由 Kiayias 和 Yung (2002c) 引入。这些基于编码的方案享有许多良好且理想的特性：它们支持黑盒追踪，且密文与明文的比率为常数。然而，由于这些方案在密文和解码器使用的密钥中均使用抗共谋码，密文和密钥的尺寸相当大。Kiayias 和 Yung (2002c)；Chabanne 等人 (2005) 的另一个缺点源于使用全有或全无变换 (AONT; Rivest 1997) 来防止从盗版解码器中删除密钥，以逃避基于底层抗共谋码的追踪过程。Billet 和 Phan (2008) 以及 Boneh 和 Naor (2008) 独立提出了依赖鲁棒抗共谋码 (Safavi-Naini and Wang 2003b; Sirvent 2007) 的常数大小密文方案。随后，Nuida (2010) 和 Boneh 等人 (2010) 提出了高效的鲁棒码。这些方案变得相当有竞争力，但其缺点仍然是私钥尺寸较大。
+一类依赖抗共谋码的方案 (Boneh and Shaw 1995, 1998; Tardos 2003) 由 Kiayias 和 Yung (2002c) 引入。这些基于编码的方案享有许多良好且理想的特性：它们支持黑盒追踪，且密文与明文的比率为常数。然而，由于这些方案在密文和解码器使用的密钥中均使用抗共谋码，密文和密钥的尺寸相当大。Kiayias 和 Yung (2002c)；Chabanne 等人 (2005) 的另一个缺点源于使用全有或全无变换 (AONT; Rivest 1997) 来防止从盗版解码器中删除密钥，以逃避基于底层抗共谋码的追踪过程。
 
+Billet 和 Phan (2008) 以及 Boneh 和 Naor (2008) 独立提出了依赖鲁棒抗共谋码 (Safavi-Naini and Wang 2003b; Sirvent 2007) 的常数大小密文方案。随后，Nuida (2010) 和 Boneh 等人 (2010) 提出了高效的鲁棒码。这些方案变得相当有竞争力，但其缺点仍然是私钥尺寸较大。
 
-
-
+## 基于格的 TT 与追踪撤销结合
 
 首个基于格的追踪者追踪方案由 Ling 等人 (2014) 提出。该方案处于有界模型中，其安全性依赖于 LWE 问题的一个新变体的困难性，称为 `k`-LWE。这是 Boneh 和 Freeman (2011) 引入的 `k`-SIS 问题的一个类比。Boneh-Freeman 从 SIS 到 `k`-SIS 的归约在 `k` 上遭受指数级损失，而 Ling 等人 (2014) 的作者们对其进行了改进和扩展，将其变为从 LWE 到 `k`-LWE 的归约，在 `k` 上仅有多项式损失。因此，由此产生的 TT 方案与底层的 LWE 加密一样有效。
 
 正如 Gafni 等人 (1999) 最初观察到的，当 TT 方案与撤销方案结合时最为有用；这种追踪与撤销方法包含首先发现被泄露的解密密钥，然后撤销其解密能力，从而使盗版解码器失效。我们可以列举该类别中的一些方案 (Naor 和 Pinkas 2001; Tzeng 和 Tzeng 2001; Naor 等人 2001; Dodis 和 Fazio 2002, 2003; Kim 等人 2003; Dodis 等人 2005; Boneh 和 Waters 2006; Ngo 等人 2013)。
 
-最近，构建追踪与撤销方案的新研究路线已经出现 (Nishimaki 等人 2016; Kowalczyk 等人 2016; Agrawal 和 Rosen 2017; Agrawal 等人 2017; Goyal 等人 2018a, 2019a, 2019b)。Nishimaki 等人 (2016) 从函数加密方案给出了追踪与撤销的通用构造。函数加密 (Sahai 和 Waters 2005; Boneh 等人 2011) 是公钥加密的一种推广，允许对加密数据进行细粒度访问。我们注意到，Nishimaki 等人 (2016) 中最强的构造基于不可区分混淆 (Barak 等人 2001) 的存在，目前我们还没有基于成熟困难性假设的候选构造。人们也可以用有界共谋函数加密方案来实例化 NWZ 编译器，该方案可以基于标准假设，如公钥加密的存在 (![image](img/g1.jpg)orbunov 等人 2012) 或带误差学习 (LWE) 的亚指数时间困难性 (![image](img/g1.jpg)oldwasser 等人 2013; Agrawal 和 Rosen 2017)。对于追踪与撤销，这产生了一种支持公开黑盒可追踪性和自适应安全性的构造，此外还支持诚实用户的匿名性和指数级大小的身份空间。然而，其构造的通用性导致了具体效率的损失。例如，当基于 Gorbunov 等人 (2012) 的有界共谋 FE 时，所得方案的密文大小至少增长为 `O((r + t)⁵ poly(λ))`，其中 `r` 是撤销用户列表的最大规模，`t` 是最大联盟规模。通过依赖带误差学习，这种膨胀可以改进为 `O((r + t)⁴ poly(λ))`，但代价是依赖繁重的机制，如属性基加密 (Gorbunov 等人 2013) 和全同态加密 (Goldwasser 等人 2013)。此外，该构造还必须依赖复杂度杠杆来实现自适应安全性，以及具有亚指数错误率的带误差学习。Agrawal 和 Rosen (2017) 的有界共谋 FE 导致了更好的渐近界 `O((r + t)³ poly(λ))`，但遭受巨大的多项式因子损害，影响了具体效率。Agrawal 等人 (2017) 的论文重新审视了函数加密与追踪与撤销系统之间的联系，并观察到有界共谋追踪与撤销方案所需的 FE 概念比 Nishimaki 等人 (2016) 考虑的要弱得多：与其说是针对多项式大小电路的 FE，不如说弱变体的 `内积` 函数加密 (IPFE) (Abdalla 等人 2015; Agrawal 等人 2016) 就足够了。因此，Agrawal 等人 (2017) 在标准假设下，即 DCR、LWE 和 DDH 假设下，提出了具有黑盒确认功能的高效追踪与撤销方案，其密文和密钥大小在撤销列表大小 `r` 和最大联盟大小 `t` 之和上是 `线性` 的。在全共谋模型下构建实用的追踪与撤销方案仍然是一个挑战。
+## 基于函数加密的追踪与撤销新进展
+
+最近，构建追踪与撤销方案的新研究路线已经出现 (Nishimaki 等人 2016; Kowalczyk 等人 2016; Agrawal 和 Rosen 2017; Agrawal 等人 2017; Goyal 等人 2018a, 2019a, 2019b)。
+
+Nishimaki 等人 (2016) 从函数加密方案给出了追踪与撤销的通用构造。函数加密 (Sahai 和 Waters 2005; Boneh 等人 2011) 是公钥加密的一种推广，允许对加密数据进行细粒度访问。我们注意到，Nishimaki 等人 (2016) 中最强的构造基于不可区分混淆 (Barak 等人 2001) 的存在，目前我们还没有基于成熟困难性假设的候选构造。
+
+人们也可以用有界共谋函数加密方案来实例化 NWZ 编译器，该方案可以基于标准假设，如公钥加密的存在 (Gorbunov 等人 2012) 或带误差学习 (LWE) 的亚指数时间困难性 (Goldwasser 等人 2013; Agrawal 和 Rosen 2017)。对于追踪与撤销，这产生了一种支持公开黑盒可追踪性和自适应安全性的构造，此外还支持诚实用户的匿名性和指数级大小的身份空间。然而，其构造的通用性导致了具体效率的损失。
+
+例如，当基于 Gorbunov 等人 (2012) 的有界共谋 FE 时，所得方案的密文大小至少增长为 `O((r + t)⁵ poly(λ))`，其中 `r` 是撤销用户列表的最大规模，`t` 是最大联盟规模。通过依赖带误差学习，这种膨胀可以改进为 `O((r + t)⁴ poly(λ))`，但代价是依赖繁重的机制，如属性基加密 (Gorbunov 等人 2013) 和全同态加密 (Goldwasser 等人 2013)。此外，该构造还必须依赖复杂度杠杆来实现自适应安全性，以及具有亚指数错误率的带误差学习。
+
+Agrawal 和 Rosen (2017) 的有界共谋 FE 导致了更好的渐近界 `O((r + t)³ poly(λ))`，但遭受巨大的多项式因子损害，影响了具体效率。
+
+Agrawal 等人 (2017) 的论文重新审视了函数加密与追踪与撤销系统之间的联系，并观察到有界共谋追踪与撤销方案所需的 FE 概念比 Nishimaki 等人 (2016) 考虑的要弱得多：与其说是针对多项式大小电路的 FE，不如说弱变体的**内积**函数加密 (IPFE) (Abdalla 等人 2015; Agrawal 等人 2016) 就足够了。因此，Agrawal 等人 (2017) 在标准假设下，即 DCR、LWE 和 DDH 假设下，提出了具有黑盒确认功能的高效追踪与撤销方案，其密文和密钥大小在撤销列表大小 `r` 和最大联盟大小 `t` 之和上是**线性**的。在全共谋模型下构建实用的追踪与撤销方案仍然是一个挑战。
 
 在接下来的章节中，我们将讨论设计 BE 和 TT 方案中最相关的技术。
 
@@ -2634,11 +2552,7 @@ Pfitzmann (1996) 引入了*非对称* TT 的概念。在该模型中，追踪者
 
 在此框架下，最高效的两个追踪与撤销方案是完全子树方案和子集差分方案。
 
-
-
-
-
-# 完整子树方案
+### 完整子树方案
 
 在该方案中，用户对应于一棵完全二叉树的叶子节点，而子集集合 `S[i]` 确切地对应该完全树中所有可能的子树。当 `|N| = 2^n` 时，完全二叉树的深度为 `n`，且恰好有 `n` 个子树包含给定的叶子节点。图 6.1 展示了一个使用十二个用户的六个子集的覆盖，该覆盖排除了四个被撤销的用户（以黑色显示）。该子集方案符合分叉属性，因为任何子集（或等价地，完全二叉树的任何子树）都可以分裂成两个大小相等的子集（即原子树根节点的两个后代节点为根的两棵子树）。关于密钥分配，完全二叉树中由叶子节点 `u` 表示的每个用户，都会获得与从叶子节点 `u` 到根节点路径上的节点 `i` 相关联的密钥 `L[i]`。
 
@@ -2648,13 +2562,15 @@ Pfitzmann (1996) 引入了*非对称* TT 的概念。在该模型中，追踪者
 
 **覆盖算法**：在完整子树方案中，用于从 `N` 中排除 `r = |R|` 个被撤销用户的覆盖，是挂在被撤销叶子节点的 Steiner 树上的子集集合。（被撤销叶子节点的 Steiner 树是指连接所有被撤销叶子节点到根节点的完全二叉树的最小子树，且它是唯一的。）由于任何用户仅知道从其叶子节点到根节点的路径上的密钥，而该路径包含在被撤销用户的 Steiner 树中，因此这些用户无法再进行解密。该算法生成的覆盖大小为 `O(r log(N/r))`。
 
-# 子集差分方案
+### 子集差分方案
 
 引入子集差分方案是为了降低对合法用户集合 `N \ R` 进行划分所需的子集数量。在带宽使用方面（针对头部），它通过 `log(N/r)` 的因子改进了上述完整子树方案（因此与用户总数 `N` 无关）。
 
 回顾一下，`S[i]` 表示以节点 `i` 为根的完全二叉子树。现在，对于 `S[i]` 中不同于 `i` 的每个节点 `j`，我们用 `S[i,j]` 表示以节点 `i` 为根、但移除了以节点 `j` 为根的完整二叉子树后的二叉子树。根据此定义，用于排除 `r = |R|` 个被撤销用户的覆盖算法，仅需 `O(r)` 个子集。图 6.4 展示了该过程的一个输出示例。
 
-为达到这一性能水平，可能的子集数量大幅增加。用户需要知道所有密钥 `L[i,j]`，使得该用户属于以 `i` 为根的子树，但不属于以 `j` 为根的子树。然而，让每个设备存储如此大量的长期密钥是不可能的。因此设计了一种密钥派生过程，允许派生大多数 `O(N)` 个长期密钥：用户仅需存储 `O(log²(N))` 个密钥。完全二叉树中的每个节点 `i` 首先被分配一个随机标签 `LABEL[i]`，然后标签 `LABEL[i,j]` 及其对应的长期密钥 `L[i,j]` 从标签 `LABEL[i]`（以伪随机方式）推导得出。密钥派生过程如下：从每个 `LABEL[i]`，使用 Goldreich 等人（1984）提出的基于树的构造，为每个子节点 `j` 获得一个伪随机值 `LABEL[i,j]`；从该值 `LABEL[i,j]`，最终（以伪随机方式）推导出长期密钥 `L[i,j]`。然后向每个用户提供标签 `LABEL[i,j]`，其中节点 `i` 位于代表该用户的叶子节点到根节点的路径上，节点 `j` 挂在这条路径上。
+为达到这一性能水平，可能的子集数量大幅增加。用户需要知道所有密钥 `L[i,j]`，使得该用户属于以 `i` 为根的子树，但不属于以 `j` 为根的子树。然而，让每个设备存储如此大量的长期密钥是不可能的。因此设计了一种密钥派生过程，允许派生大多数 `O(N)` 个长期密钥：用户仅需存储 `O(log²(N))` 个密钥。
+
+完全二叉树中的每个节点 `i` 首先被分配一个随机标签 `LABEL[i]`，然后标签 `LABEL[i,j]` 及其对应的长期密钥 `L[i,j]` 从标签 `LABEL[i]`（以伪随机方式）推导得出。密钥派生过程如下：从每个 `LABEL[i]`，使用 Goldreich 等人（1984）提出的基于树的构造，为每个子节点 `j` 获得一个伪随机值 `LABEL[i,j]`；从该值 `LABEL[i,j]`，最终（以伪随机方式）推导出长期密钥 `L[i,j]`。然后向每个用户提供标签 `LABEL[i,j]`，其中节点 `i` 位于代表该用户的叶子节点到根节点的路径上，节点 `j` 挂在这条路径上。
 
 这种密钥分配确保了：位于以节点 `i` 为根的子树中但不在以节点 `j` 为根的子树中的每个用户，都能派生出 `L[i,j]`；而位于以节点 `j` 为根的子树中的每个用户，则无法派生出 `L[i,j]`。
 
@@ -2668,33 +2584,31 @@ Pfitzmann (1996) 引入了*非对称* TT 的概念。在该模型中，追踪者
 C_j = (Header_j, Epk(M))
 ```
 
-其中 `R` 是某个独立于 `K` 的随机选择元素。如果用 `p[j]` 表示盗版盒正确解密专门制作的类型 `j` 密文的概率，则必存在一个索引 `t` 使得 `p[t] - p[t+1] > 1/l`，因此某个叛徒属于 `S[i[t]]`。追踪者随后迭代这一基本过程，将其应用于 `S[i^(t)]` 的任意覆盖，直到 `S[i[t]]` 仅包含单个元素（从而匹配到一个叛徒），或者盗版盒无法在阈值以上解密（此时无人被指认为叛徒，但新的划分使盗版盒失效）。证明表明，只要撤销方案满足所谓的“分叉属性”：每个子集可以分裂成两个大小大致相同的子集，该追踪过程就是正确的。这对 *完整子树* 和 *子集差分* 两种方案均成立。
+其中 `R` 是某个独立于 `K` 的随机选择元素。如果用 `p[j]` 表示盗版盒正确解密专门制作的类型 `j` 密文的概率，则必存在一个索引 `t` 使得 `p[t] - p[t+1] > 1/l`，因此某个叛徒属于 `S[i[t]]`。追踪者随后迭代这一基本过程，将其应用于 `S[i^(t)]` 的任意覆盖，直到 `S[i[t]]` 仅包含单个元素（从而匹配到一个叛徒），或者盗版盒无法在阈值以上解密（此时无人被指认为叛徒，但新的划分使盗版盒失效）。证明表明，只要撤销方案满足所谓的“分叉属性”：每个子集可以分裂成两个大小大致相同的子集，该追踪过程就是正确的。这对 **完整子树** 和 **子集差分** 两种方案均成立。
 
 **可追踪性的局限**：由于追踪过程中的密文必须包含树的较低层级的节点，盗版者可以通过使用高层级节点来调整策略以击败追踪者，导致密文变得越来越大；这就是 Kiayias 和 Pehlivanoglu（2007）中盗版者演化攻击的思路。这些基于树的方案（以及许多其他组合方案）的另一个缺点是，不同用户的子密钥可以组合构建盗版解码器；因此，叛徒可以发布某些子密钥同时保持匿名，盗版解码器可以从公共协作数据库构建，如 Billet 和 Phan（2009）所示。注意，Kiayias 和 Pehlivanoglu（2007）以及 Billet 和 Phan（2009）中的这些盗版解码器是不完美的（它们只能解密大小低于特定界限的密文，例如 1 GB），但仍然非常实用。
 
 ## 6.5. 基于编码的 TT
 
+### 基于抗共谋码的指纹技术
 
-
-
-
-## 基于抗共谋码的指纹技术
-
-基于抗共谋码的指纹技术允许通过嵌入指纹（码字）来识别数字文档的多个副本中的某一个。这种识别方案必须能够抵御试图移除其指纹以逃避识别的叛徒共谋。因此，抗共谋码与追踪者追踪（TT）共享一些属性。然而，这里的主要假设称为*标记假设*，即来自共谋的叛徒只能识别出他们各自码字中数字不同的位置；这些位置称为*可检测位置*。这一假设在指纹数据中尤为合理：除了码字外，文档是完全相同的，并且很容易发现文档两个副本不同的地方。
+基于抗共谋码的指纹技术允许通过嵌入指纹（码字）来识别数字文档的多个副本中的某一个。这种识别方案必须能够抵御试图移除其指纹以逃避识别的叛徒共谋。因此，抗共谋码与追踪者追踪（TT）共享一些属性。然而，这里的主要假设称为**标记假设**，即来自共谋的叛徒只能识别出他们各自码字中数字不同的位置；这些位置称为**可检测位置**。这一假设在指纹数据中尤为合理：除了码字外，文档是完全相同的，并且很容易发现文档两个副本不同的地方。
 
 最早的构造之一是 Chor 等人（1994）提出的可识别父代属性（IPP）码。这些码定义在大字母表上，可以从线性码或组合构造中获得。如果放宽 IPP 中必须始终正确识别出叛徒的条件，即允许追踪算法以某些可忽略的概率失败，则可以实现更高效的构造。随机抗共谋码可被视为“放宽后”的二进制 IPP 码，最早由 Boneh 和 Shaw（1995）提出。这些码比基于线性码的 IPP 码更高效。在 Boneh-Shaw 码中，完全抗共谋码的码字长度为 `O(N³ log(N/ϵ))`，而抗最多 `c` 个叛徒共谋的码的长度为 `O(c⁴ log(N/ϵ))`。Tardos 后来在 Tardos (2003) 中提出了一种新构造，并证明其码字大小是最优的：长度为 `O(c² log(N/ϵ))` 的码足以抵抗最多 `c` 个叛徒的共谋。
 
 我们将首先给出 IPP 码的定义，然后解释构建 TT 方案的通用框架，该框架依赖于任意 IPP 码，包括最重要的抗共谋码情况。
 
-## IPP 码
+### IPP 码
+
+
 
 设 `Q` 为包含 `q` 个符号的字母表集合。如果 `C = {w[1], w[2], ..., w[N]} ⊂ Q^(ℓ)`，则称 `C` 为大小为 `N`、长度为 `ℓ` 的 `q` 元码。每个 `w[i] ∈ C` 称为一个码字，记为 `w[i] = (w[i,1], w[i,2], ..., w[i,ℓ])`，其中 `w[i,j] ∈ Q` 称为码字 `w[i]` 的第 `j` 个分量。
 
-我们按如下方式定义码字子集的*后代*。设 `X ⊂ C` 且 `u = (u[1], ..., u[ℓ]) ∈ Q^(ℓ)`。如果对于任意 `1 ≤ j ≤ ℓ`，`u` 的第 `j` 个分量 `u[j]` 等于 `X` 中某个码字的第 `j` 个分量，则称字 `u` 为 `X` 的后代。在这种情况下，`X` 中的码字称为 `u` 的*父代码字*。例如，`(3, 2, 1, 3)` 是三个码字 `(3, 1, 1, 2)`、`(1, 2, 1, 3)` 和 `(2, 2, 2, 2)` 的后代。我们用 `Desc(X)` 表示 `X` 的所有后代的集合。对于正整数 `c`，用 `Descc` 表示最多 `c` 个码字的子集的所有后代的集合。具有 IPP 属性的码（IPP 码）定义如下。
+我们按如下方式定义码字子集的*后代*。设 `X ⊂ C` 且 `u = (u[1], ..., u[ℓ]) ∈ Q^(ℓ)`。如果对于任意 `1 ≤ j ≤ ℓ`，`u` 的第 `j` 个分量 `u[j]` 等于 `X` 中某个码字的第 `j` 个分量，则称字 `u` 为 `X` 的后代。在这种情况下，`X` 中的码字称为 `u` 的*父代码字*。例如，`(3, 2, 1, 3)` 是三个码字 `(3, 1, 1, 2)`、`(1, 2, 1, 3)` 和 `(2, 2, 2, 2)` 的后代。我们用 `Desc(X)` 表示 `X` 的所有后代的集合。对于正整数 `c`，用 `Desc_c` 表示最多 `c` 个码字的子集的所有后代的集合。具有 IPP 属性的码（IPP 码）定义如下。
 
-**定义 6.1.** 如果对于任意 `u ∈ Descc`，都存在 `w ∈ C` 使得对于任意 `X ⊂ C`，若 `|X| ≤ c` 且 `u ∈ Desc(X)`，则 `w ∈ X`，则称码 `C` 为 `c`-IPP 码。
+**定义 6.1.** 如果对于任意 `u ∈ Desc_c`，都存在 `w ∈ C` 使得对于任意 `X ⊂ C`，若 `|X| ≤ c` 且 `u ∈ Desc(X)`，则 `w ∈ X`，则称码 `C` 为 `c`-IPP 码。
 
-在 `c`-IPP 码中，给定后代 `u ∈ Descc`，我们总能识别出其至少一个父代码字。同时要求追踪是*无错误的*，且叛徒总能被正确识别。存在许多 `c`-IPP 码的构造（Stinson 和 Wei 1999；Silverberg 等人 2001；Trung 和 Martirosyan 2005）。
+在 `c`-IPP 码中，给定后代 `u ∈ Desc_c`，我们总能识别出其至少一个父代码字。同时要求追踪是*无错误的*，且叛徒总能被正确识别。存在许多 `c`-IPP 码的构造（Stinson 和 Wei 1999；Silverberg 等人 2001；Trung 和 Martirosyan 2005）。
 
 二进制 `c`-IPP 码（包含两个以上码字）不存在，因此在任何 `c`-IPP 码中，字母表大小 `q ≥ 3`。然而，如果放宽无错误追踪的条件，则可以实现二进制码，称为*抗共谋码*（Boneh 和 Shaw 1995）。因此，在抗共谋码中，存在一个误差参数，指定追踪算法未能输出正确父代码字的概率。如前所述，最高效的码是 Tardos 的抗共谋码。
 
@@ -2720,10 +2634,7 @@ C_j = (Header_j, Epk(M))
 
 ## 6.6. 代数方案
 
-
-
-
-# 从表示问题进行叛徒追踪
+### 从表示问题进行叛徒追踪
 
 这由 Boneh 和 Franklin (1999) 引入。
 
@@ -2737,27 +2648,23 @@ Boneh 和 Franklin 是首批利用表示问题追踪叛徒的人，将 ElGamal �
 
 实际上，Boneh 和 Franklin 对 `A` 使用对应于范德蒙德矩阵的 Reed-Solomon 码，白盒追踪遵循上述直觉。一个更具挑战性的点是黑盒追踪，此时不知道任何盗版密钥 `d`。黑盒追踪实际上相当昂贵，依赖于黑盒确认：给定一个包含叛徒的超集，它保证能找到至少一个叛徒，且无辜的嫌疑人不会被牵连。
 
-# 从冗余进行撤销
+### 从冗余进行撤销
 
 许多撤销系统的主要思想是：被撤销的用户从密文中获得冗余信息，因此比合法用户拥有更少的信息。这种差异阻止了被撤销的用户（即使他们全部串通）解密密文，同时允许合法用户成功解密密文。
 
-## 指数中的多项式插值
+#### 指数中的多项式插值
 
 (Naor 和 Pinkas 2001)：在高层，主要思想是使用 `t-out-of-N` 秘密分享，该方案最多可撤销 `t` − 1 个用户。为简单起见，我们可以假设被撤销用户的数量 `r` 等于 `t` − 1（如果实际被撤销用户数量少于 `t` − 1，则可以向撤销列表添加“虚拟”用户）。系统工作如下：一个秘密被分成 `N` 个份额，加入系统的每个用户获得一个份额；密文包含覆盖所有被撤销用户的 `t` − 1 个份额；每个非撤销用户添加其份额以获得 `t` 个份额从而解密密文，而被撤销用户总共只获得 `t` − 1 个份额，即使全部串通也无法解密。为了实现这一想法，Naor 和 Pinkas 使用指数中的秘密分享并随机化密文。
 
 更正式地说，授权中心在初始化时选择一个次数为 `t` − 1 的全局多项式 `P`，然后为每个用户 `i` 选择并发布一个随机元素 `x[i]`。用户 `i` 的私钥是 `P` (`x[i]`)，所有值 `g`^(`P`(`x`[`i`])) 和 `g`^(`P`(0)) 都被发布。要撤销一组用户 (1, 2, *..., t* − 1)，广播者选择一个随机元素 `r`，然后设置会话密钥 `K` = `g`^(`rP`(0))。密文由 `t` − 1 个元素 `g`^(`rP`(`x`[`j`]))*`j` ∈ 1*,...,t* − 1 组成。每个非撤销用户拥有 `t` 个份额，可以在指数中执行多项式插值来恢复会话密钥，而被撤销的用户最多只有 `t` − 1 个份额，从密文中得不到任何信息。值得注意的是，Naor-Pinkas 方法可以与 Boneh-Franklin 方法结合，以实现追踪与撤销方案。
 
-## 两个方程技术
+#### 两个方程技术
 
 在 Naor-Pinkas 方案中，通过在整个系统中定义一个全局多项式，可撤销用户数量的上限在初始化时固定（低于多项式的次数），如果串通规模超出此界限，方案将完全被破解。在 Lewko et al. (2010) 中，为了避免这一限制，仍然基于通过冗余方程进行撤销，引入了一种新的*两个方程*解密方法。密文将被加密，使得某个集合 `S` = {`ID`[1], *..., ID[r]*} 将被撤销解密权限。密文由 `O`(`r`) 个群元素组成，其中包含每个 `ID[i]` 的密文分量。解密时，用户 `ID` 将其私钥应用于每个分量。如果 `ID ≠ IDi`，用户将获得两个独立方程并能够提取第 `i` 个解密份额。然而，如果用户被撤销且 `ID` = `ID[i]` 对于某个 `i`，则用户将仅获得一个二元公式的两个相关方程，从而无法提取解密份额。为了防止串通，密钥份额被随机化分配给每个用户，以防止解密份额的组合。作者随后基于配对提出了一种抵消技术。
 
+### 基于配对的构造
 
-
-
-
-# 基于配对的构造
-
-## 多项式承诺
+#### 多项式承诺
 
 多项式承诺的使用最早由 Feldman 于 1988 年提出，用于可验证秘密分享。其思路是承诺多项式 `f(x)` 的所有系数 `a[i]`。因此，任何人都可以为任意 `u` 计算 `g^(f(u))`。因此，任何用户都可以验证其份额 `(u, f(u))` 是否正确。随后，Kurosawa 和 Desmedt 利用这一特性用于追踪者追踪（TT）。在他们的方案中，每个用户 `u` 拥有密钥 `(u, f(u))`。其思路是，为了加密会话密钥 `s`，密文给出 `g^(rf(x))` 和 `g^r`。因此，每个用户都可以从 `g^(rf(x))` 计算 `s g^(rf(u))`，然后计算 `g^(rf(u)) = (g^r)^(f(u))` 来恢复 `s`。
 
@@ -2777,7 +2684,7 @@ e(g, g)^r = e(g^(rf(u)), g^(1/f(u)))
 
 Chabanne 等人 (2005) 的作者随后提出了第一个基于配对的双用户方案（这是 Boneh-Franklin 方案的一个变体），并利用双线性群的特性实现了非常优雅的公开追踪性。然而，配对的用处在于实现完全抗共谋性 (Boneh 等人 2005)。
 
-## BGW 常量大小密文：密文聚合
+#### BGW 常量大小密文：密文聚合
 
 配对的一个非常有趣的用途是聚合数据。最著名的例子无疑是 BLS 签名的聚合 (Boneh 等人 2003)，该技术现已广泛应用于区块链。随后，Boneh 等人 (2005) 引入了一种构造具有常量大小密文的完全抗共谋广播方案的方法。这可以看作是一种将许多单独的密文聚合为一个密文的技术。BGW 方案的高层直观描述如下。
 
@@ -2789,6 +2696,8 @@ e(g^r, h^α) * e((h g^α)^r, g^(-1)) = e(g, h)^(αr) * e(h, g)^(-r) * e(g^α, g)
 
 在不泄露指数 `α` 的情况下，上述加密可以扩展到多用户。对于每个 `i ∈ [n]`，记 `g[i] = g^(α^i)` 和 `h[i] = h^(α^i)`。为每个用户关联一个公钥 `g[i]` 和一个密钥 `h[i]`，其中 `i = 1,..., n`。然后会话密钥设为 `e(g, g)^(α^(n+1)r)`，它可以从 `g[1], g[n]` 计算得出，其中 `r ∈ Z_p` 为随机值。如上所述，为了让用户 `i` 获得此会话密钥，密文包含 `g^r` 和 `(h g^(α^(n+1-i)))^r`。此时，会话密钥对所有用户都是通用的。然而，为了使集合 `S` 中的任意用户 `i` 能够解密，我们必须将元素 `(h g^(α^(n+1-i)))^r` 添加到密文中，因此密文大小与目标集合 `S` 的大小成线性关系。有趣的技巧是将所有这些密文聚合为单个元素 `∏_{i∈S} (h g^(α^(n+1-i)))^r`。然后每个用户 `i ∈ S` 可以将此元素分解为 `(h g^(α^(n+1-i)))^r * ∏_{j∈S, j≠i} (h g^(α^(n+1-j)))^r`。后面的冗余项可以在新增公共元素 `g[n+2],..., g[2n]` 的帮助下抵消：
 
+
+
 ```
 e(g^r, h[i]) * e(∏_{j∈S} (h g^(α^(n+1-j)))^r, g[2n+1-i]) / e(g[n+1], h)^r = e(g, g)^(α^(n+1)r)
 ```
@@ -2798,10 +2707,6 @@ e(g^r, h[i]) * e(∏_{j∈S} (h g^(α^(n+1-j)))^r, g[2n+1-i]) / e(g[n+1], h)^r =
 ## 逆元技术：DPP 方案 (Delerablée 等人 2007)
 
 Delerablée 等人引入了逆元技术，有助于构造第一个动态撤销方案。主要思想是为每个用户 `u` 生成一个值 `x[u]`，然后在解密阶段，强制用户将一个群元素乘以 `1/(x[u] - x[r])`，针对每个被撤销的用户 `r`。这意味着每个被撤销的用户在解密过程中必须除以 0，从而导致过程失败。该构造需要素数阶群中的配对，但配对是否为对称并不重要。安全保证实际上强于静态安全级别：允许对手在用户加入前立即腐蚀他们。主密钥和用户密钥由一个标量值和来自群 `G_1`、`G_2` 中各一个群元素组成；加密密钥由来自群 `G_1`、`G_2` 中各一个群元素和来自目标群 `G_T` 的一个元素组成。对于每个用户，一个标量、一个来自群 `G_2` 的元素和一个来自目标群的元素被添加到加密密钥中。密文由来自群 `G_1`、`G_2` 中各一个元素加上一个标量和每个被撤销用户对应的一个来自 `G_2` 的元素组成。
-
-
-
-
 
 ## 另一种公钥方案修改使其成为非动态的，但以线性大小的解密密钥为代价实现了常数大小的密文。
 
@@ -2854,10 +2759,6 @@ Boneh 和 Waters（2006）通过提供广播功能进一步改进了 BSW 方案�
 
 关于`k`-SIS 和`k`-LWE 问题的难度，Boneh-Freeman 归约（Boneh 和 Freeman 2011）从 SIS 到`k`-SIS 在`k`上遭受指数级损失，而 Ling 等人（2014）提出了一个在`k`上具有多项式损失的归约，从而表明他们提出的基于 LWE 的 TT 方案几乎与 LWE 加密一样高效。
 
-
-
-
-
 # 从高级原语构建
 
 广播加密和追踪者追踪通常被认为是最简单的高级原语之一。有趣的是，在过去几年里，一个非常活跃的研究方向专注于从更通用或更强大的高级原语构建广播加密、追踪者追踪以及追踪与吊销系统，特别是基于属性的加密、函数加密、多重线性映射和不可区分混淆（Boneh and Zhandry 2014; Nishimaki et al. 2016; Kowalczyk et al. 2016; Agrawal et al. 2017; Goyal et al. 2018a, 2018b, 2019a, 2019b; Kowalczyk et al. 2018; Chen et al. 2018; Agrawal and Yamada 2020b,a; Zhandry 2020）。我们可以将广播加密视为一种特殊类型的基于属性的加密，而追踪性通常是在匿名性的基础上实现的（这允许实现线性追踪技术）。因此，通过弱化对高级原语所需概念的要求，并利用为高级原语开发的现代技术，许多工作成功地在越来越标准的假设下证明了安全性。它们为寻找具有最强安全概念的最优方案推进了进程。尽管如此，在完全串谋模型下构建最优或实用的追踪与吊销方案这一终极目标仍然是一个开放问题。
@@ -2904,6 +2805,10 @@ Boneh, D. and Naor, M. (2008). Traitor tracing with constant size ciphertext. In
 
 Boneh, D. and Shaw, J. (1995). Collusion-secure fingerprinting for digital data (extended abstract). In *CRYPTO’95*, vol. 963 of *LNCS*, Coppersmith, D. (ed.). Springer, Heidelberg。
 
+
+
+# 参考文献
+
 Boneh, D. and Shaw, J. (1998). Collusion-secure fingerprinting for digital data. *IEEE Transactions on Information Theory*, 44(5), 1897–1905。
 
 Boneh, D. and Waters, B. (2006). A fully collusion resistant broadcast, trace, and revoke system. In *ACM CCS 2006*, Juels, A., Wright, R.N., De Capitani di Vimercati, S. (eds). ACM Press。
@@ -2933,12 +2838,6 @@ Cramer, R. and Shoup, V. (2003). Design and analysis of practical public-key enc
 Delerablée, C. (2007). Identity-based broadcast encryption with constant size ciphertexts and private keys. In *ASIACRYPT 2007*, vol. 4833 of *LNCS*, Kurosawa, K. (ed.). Springer, Heidelberg。
 
 Delerablée, C., Paillier, P., Pointcheval, D. (2007). Fully collusion secure dynamic broadcast encryption with constant-size ciphertexts or decryption keys. In *PAIRING 2007*, vol. 4575 of *LNCS*, Takagi, T., Okamoto, T., Okamoto, E., Okamoto, T. (eds). Springer, Heidelberg。
-
-
-
-
-
-# 参考文献
 
 Dodis, Y. and Fazio, N. (2002). 面向无状态接收者的公钥广播加密。载于 *ACM 数字版权管理 – DRM ‘02*，*LNCS* 卷 2696。Springer, Heidelberg。
 
@@ -3020,55 +2919,55 @@ Ngo, H.Q., Phan, D.H., Pointcheval, D. (2013)。黑盒追踪与吊销码。*Algo
 
 Nishimaki, R., Wichs, D., Zhandry, M. (2016)。匿名叛徒追踪：如何在密钥中嵌入任意信息。载于 *EUROCRYPT 2016, Part II*，*LNCS* 卷 9666，Fischlin, M., Coron, J.-S. (编)。Springer, Heidelberg。
 
-Nuida, K. (2010)。指纹码转换为（更）抗位擦除的鲁棒指纹码的通用方法。载于 *ICITS 09*，*LNCS* 卷 5973，Kurosawa, K. (编)。Springer, Heidelberg。
-
-Pfitzmann, B. (1996)。追踪叛徒的尝试。载于 *信息隐藏*，*LNCS* 卷 1174，Anderson, R. (编)。Springer, Heidelberg。
-
-Pfitzmann, B. and Waidner, M. (1997)。面向更大共谋规模的非对称指纹技术。载于 *ACM CCS 97*，Graveman, R., Janson, P.A., Neuman, C., Gong, L. (编)。ACM Press。
 
 
+# 参考文献
 
+Nuida, K. (2010). 指纹码转换为（更）抗位擦除的鲁棒指纹码的通用方法。载于 *ICITS 09*, *LNCS* 卷 5973, Kurosawa, K. (编). Springer, Heidelberg.
 
+Pfitzmann, B. (1996). 追踪叛徒的尝试。载于 *信息隐藏*, *LNCS* 卷 1174, Anderson, R. (编). Springer, Heidelberg.
 
-# Phan, D., Safavi-Naini, R., Tonien, D. (2006). Generic construction of hybrid public key traitor tracing with full-public-traceability. In *ICALP 2006, Part II*, vol. 4052 of *LNCS*, Bugliesi, M., Preneel, B., Sassone, V., Wegener, I. (eds). Springer, Heidelberg.
+Pfitzmann, B. and Waidner, M. (1997). 面向更大共谋规模的非对称指纹技术。载于 *ACM CCS 97*, Graveman, R., Janson, P.A., Neuman, C., Gong, L. (编). ACM Press.
 
-# Phan, D.H., Pointcheval, D., Shahandashti, S.F., Strefler, M. (2013). Adaptive CCA broadcast encryption with constant-size secret keys and ciphertexts. *International Journal of Information Security*, 12(4), 251–265.
+Phan, D., Safavi-Naini, R., Tonien, D. (2006). Generic construction of hybrid public key traitor tracing with full-public-traceability. In *ICALP 2006, Part II*, vol. 4052 of *LNCS*, Bugliesi, M., Preneel, B., Sassone, V., Wegener, I. (eds). Springer, Heidelberg.
 
-# Regev, O. (2005). On lattices, learning with errors, random linear codes, and cryptography. In *37th ACM STOC*, Gabow, H.N., Fagin, R. (eds). ACM Press.
+Phan, D.H., Pointcheval, D., Shahandashti, S.F., Strefler, M. (2013). Adaptive CCA broadcast encryption with constant-size secret keys and ciphertexts. *International Journal of Information Security*, 12(4), 251–265.
 
-# Regev, O. (2010). On the complexity of lattice problems with polynomial approximation factors. In *The LLL Algorithm – Survey and Applications*, Nguyen, P.Q., Vallée, B. (eds). Information Security and Cryptography, Springer, Heidelberg.
+Regev, O. (2005). On lattices, learning with errors, random linear codes, and cryptography. In *37th ACM STOC*, Gabow, H.N., Fagin, R. (eds). ACM Press.
 
-# Rivest, R.L. (1997). All-or-nothing encryption and the package transform. In *FSE’97*, vol. 1267 of *LNCS*, Biham, E. (ed.). Springer, Heidelberg.
+Regev, O. (2010). On the complexity of lattice problems with polynomial approximation factors. In *The LLL Algorithm – Survey and Applications*, Nguyen, P.Q., Vallée, B. (eds). Information Security and Cryptography, Springer, Heidelberg.
 
-# Safavi-Naini, R. and Wang, Y. (2003a). Sequential traitor tracing. *IEEE Transactions on Information Theory*, 49(5), 1319–1326.
+Rivest, R.L. (1997). All-or-nothing encryption and the package transform. In *FSE’97*, vol. 1267 of *LNCS*, Biham, E. (ed.). Springer, Heidelberg.
 
-# Safavi-Naini, R. and Wang, Y. (2003b). Traitor tracing for shortened and corrupted fingerprints. In *DRM 2003*, vol. 2696 of *LNCS*, Feigenbaum, J. (ed.). Springer, Heidelberg.
+Safavi-Naini, R. and Wang, Y. (2003a). Sequential traitor tracing. *IEEE Transactions on Information Theory*, 49(5), 1319–1326.
 
-# Sahai, A. and Waters, B.R. (2005). Fuzzy identity-based encryption. In *EUROCRYPT 2005*, vol. 3494 of *LNCS*, Cramer, R. (ed.). Springer, Heidelberg.
+Safavi-Naini, R. and Wang, Y. (2003b). Traitor tracing for shortened and corrupted fingerprints. In *DRM 2003*, vol. 2696 of *LNCS*, Feigenbaum, J. (ed.). Springer, Heidelberg.
 
-# Sakai, R., Ohgishi, K., Kasahara, M. (2000). Cryptosystems based on pairing. In *SCIS 2000*, Okinawa, Japan.
+Sahai, A. and Waters, B.R. (2005). Fuzzy identity-based encryption. In *EUROCRYPT 2005*, vol. 3494 of *LNCS*, Cramer, R. (ed.). Springer, Heidelberg.
 
-# Silverberg, A., Staddon, J., Walker, J.L. (2001). Efficient traitor tracing algorithms using list decoding. In *ASIACRYPT 2001*, vol. 2248 of *LNCS*, Boyd, C. (ed.). Springer, Heidelberg.
+Sakai, R., Ohgishi, K., Kasahara, M. (2000). Cryptosystems based on pairing. In *SCIS 2000*, Okinawa, Japan.
 
-# Sirvent, T. (2007). Traitor tracing scheme with constant ciphertext rate against powerful pirates. In *Proceedings of the Workshop on Coding and Cryptography (WCC’07)*, Versailles, France.
+Silverberg, A., Staddon, J., Walker, J.L. (2001). Efficient traitor tracing algorithms using list decoding. In *ASIACRYPT 2001*, vol. 2248 of *LNCS*, Boyd, C. (ed.). Springer, Heidelberg.
 
-# Stinson, D.R. and Wei, R. (1998). Combinatorial properties and constructions of traceability schemes and frameproof codes. *SIAM Journal on Discrete Mathematics*, 11(1), 41–53.
+Sirvent, T. (2007). Traitor tracing scheme with constant ciphertext rate against powerful pirates. In *Proceedings of the Workshop on Coding and Cryptography (WCC’07)*, Versailles, France.
 
-# Stinson, D.R. and Wei, R. (1999). Key preassigned traceability schemes for broadcast encryption. In *SAC 1998*, vol. 1556 of *LNCS*, Tavares, S.E., Meijer, H. (eds). Springer, Heidelberg.
+Stinson, D.R. and Wei, R. (1998). Combinatorial properties and constructions of traceability schemes and frameproof codes. *SIAM Journal on Discrete Mathematics*, 11(1), 41–53.
 
-# Tardos, G. (2003). Optimal probabilistic fingerprint codes. In *35th ACM STOC*. ACM Press.
+Stinson, D.R. and Wei, R. (1999). Key preassigned traceability schemes for broadcast encryption. In *SAC 1998*, vol. 1556 of *LNCS*, Tavares, S.E., Meijer, H. (eds). Springer, Heidelberg.
 
-# Tô, V.D., Safavi-Naini, R., Zhang, F. (2003). New traitor tracing schemes using bilinear map. In *Digital Rights Management – DRM ‘03*, Feigenbaum, J., Sander, T., Yung, M. (eds). ACM Press.
+Tardos, G. (2003). Optimal probabilistic fingerprint codes. In *35th ACM STOC*. ACM Press.
 
-# Trung, T.V. and Martirosyan, S. (2005). New constructions for IPP codes. *Designs, Codes and Cryptography*, 35(2), 227–239.
+Tô, V.D., Safavi-Naini, R., Zhang, F. (2003). New traitor tracing schemes using bilinear map. In *Digital Rights Management – DRM ‘03*, Feigenbaum, J., Sander, T., Yung, M. (eds). ACM Press.
 
-# Tzeng, W.-G. and Tzeng, Z.-J. (2001). A public-key traitor tracing scheme with revocation using dynamic shares. In *PKC 2001*, vol. 1992 of *LNCS*, Kim, K. (ed.). Springer, Heidelberg.
+Trung, T.V. and Martirosyan, S. (2005). New constructions for IPP codes. *Designs, Codes and Cryptography*, 35(2), 227–239.
 
-# Watanabe, Y., Hanaoka, G., Imai, H. (2001). Efficient asymmetric public-key traitor tracing without trusted agents. In *CT-RSA 2001*, vol. 2020 of *LNCS*, Naccache, D. (ed.). Springer, Heidelberg.
+Tzeng, W.-G. and Tzeng, Z.-J. (2001). A public-key traitor tracing scheme with revocation using dynamic shares. In *PKC 2001*, vol. 1992 of *LNCS*, Kim, K. (ed.). Springer, Heidelberg.
 
-# Waters, B. (2009). Dual system encryption: Realizing fully secure IBE and HIBE under simple assumptions. In *CRYPTO 2009*, vol. 5677 of *LNCS*, Halevi, S. (ed.). Springer, Heidelberg.
+Watanabe, Y., Hanaoka, G., Imai, H. (2001). Efficient asymmetric public-key traitor tracing without trusted agents. In *CT-RSA 2001*, vol. 2020 of *LNCS*, Naccache, D. (ed.). Springer, Heidelberg.
 
-# Zhandry, M. (2020). New techniques for traitor tracing: Size *N*^(1*/*3) and more from pairings. In *CRYPTO 2020, Part I*, vol. 12170 of *LNCS*, Micciancio, D., Ristenpart, T. (eds). Springer, Heidelberg.
+Waters, B. (2009). Dual system encryption: Realizing fully secure IBE and HIBE under simple assumptions. In *CRYPTO 2009*, vol. 5677 of *LNCS*, Halevi, S. (ed.). Springer, Heidelberg.
+
+Zhandry, M. (2020). New techniques for traitor tracing: Size *N*^(1/3) and more from pairings. In *CRYPTO 2020, Part I*, vol. 12170 of *LNCS*, Micciancio, D., Ristenpart, T. (eds). Springer, Heidelberg.
 
 # 7 基于属性的加密
 
@@ -3078,67 +2977,68 @@ Pfitzmann, B. and Waidner, M. (1997)。面向更大共谋规模的非对称指�
 
 ## 7.1 简介
 
-在本章中，我们介绍具有对加密明文进行细粒度访问控制的加密方案，这与传统公钥加密方案实现的全有或全无访问形成对比。这些方案被称为基于属性的加密方案（ABE）。具体而言，在 ABE 方案中，初始化算法生成一个公钥和一个所谓的主密钥。任何人都可以使用公钥加密与访问策略相关联的明文，该策略可以表示为布尔公式等形式。还有一个额外的算法，输入主密钥和一个属性，生成用户私钥（针对该特定属性）。解密算法接收密文和用户私钥，当且仅当用户私钥的属性满足密文中嵌入的公式时，才能成功恢复明文。如果对手获取了一些本不应能解密的用户私钥，加密明文的机密性仍然得到保障。
+在本章中，我们介绍具有对加密明文进行细粒度访问控制的加密方案，这与传统公钥加密方案实现的全有或全无访问形成对比。这些方案被称为基于属性的加密方案（`ABE`）。具体而言，在 `ABE` 方案中，初始化算法生成一个公钥和一个所谓的主密钥。任何人都可以使用公钥加密与访问策略相关联的明文，该策略可以表示为布尔公式等形式。还有一个额外的算法，输入主密钥和一个属性，生成用户私钥（针对该特定属性）。解密算法接收密文和用户私钥，当且仅当用户私钥的属性满足密文中嵌入的公式时，才能成功恢复明文。如果对手获取了一些本不应能解密的用户私钥，加密明文的机密性仍然得到保障。
 
-我们在此介绍基于配对群（详见第 5 章）的 ABE 方案。我们采用模块化方法，从一个称为谓词编码的简单统计学原语开始构建 ABE，该原语仅满足弱安全性概念（仅在一个用户私钥被攻破时安全），然后将其通用地转换为密钥 ABE，即加密算法需要主密钥（而非仅需公钥）的 ABE。最后，将这种密钥 ABE 再转换为公钥加密的 ABE。图 7.1 描述了这种两步法。结合现有的谓词编码实例化时，这种通用构造可产生适用于不同访问策略类别的 ABE，例如布尔公式或基于身份的加密（IBE）。为完整性起见并展示模块化方法的通用性，我们也提供了此类谓词编码。
+我们在此介绍基于配对群（详见第 5 章）的 `ABE` 方案。我们采用模块化方法，从一个称为谓词编码的简单统计学原语开始构建 `ABE`，该原语仅满足弱安全性概念（仅在一个用户私钥被攻破时安全），然后将其通用地转换为密钥 `ABE`，即加密算法需要主密钥（而非仅需公钥）的 `ABE`。最后，将这种密钥 `ABE` 再转换为公钥加密的 `ABE`。图 7.1 描述了这种两步法。结合现有的谓词编码实例化时，这种通用构造可产生适用于不同访问策略类别的 `ABE`，例如布尔公式或基于身份的加密（`IBE`）。为完整性起见并展示模块化方法的通用性，我们也提供了此类谓词编码。
 
-*本章结构*：第一节回顾配对群基础及所用计算假设（更多细节见第 5 章）。第二节给出谓词编码的定义，并给出 IBE 和布尔公式的具体构造。第三节展示如何将谓词编码通用地转换为密钥 ABE，再转换为 ABE（即加密算法为公钥的）。最后简要回顾 ABE 的历史。
+*本章结构*：第一节回顾配对群基础及所用计算假设（更多细节见第 5 章）。第二节给出谓词编码的定义，并给出 `IBE` 和布尔公式的具体构造。第三节展示如何将谓词编码通用地转换为密钥 `ABE`，再转换为 `ABE`（即加密算法为公钥的）。最后简要回顾 `ABE` 的历史。
 
 ## 7.2 配对群
 
-此处回顾第 5 章中的一些定义，但采用本章的符号。全文中，列向量记为 (*x*[1]*,..., x[n]*) ∈ ![image](img/z1.jpg)^(*n*)，行向量记为 (*u*[1]|··· |*u[n]*) ∈ ![image](img/z1.jpg)^(1×*n*)。
+此处回顾第 5 章中的一些定义，但采用本章的符号。全文中，列向量记为 `(*x*[1]*,..., x[n]*) ∈ ![image](img/z1.jpg)^(*n*)`，行向量记为 `(*u*[1]|··· |*u[n]*) ∈ ![image](img/z1.jpg)^(1×*n*)`。
 
 ### 7.2.1 循环群
 
-我们使用 PPT 算法 `GGen`(1^(*λ*))，输入安全参数（一元表示）*λ* ∈ ![image](img/n1.jpg)，生成一个阶为 *p* 的循环群 ![image](img/g1.jpg)，其中 *p* 是一个 2*λ* 位素数。我们使用加法括号表示法，其中 *P* 是 ![image](img/g1.jpg) 的生成元，对所有 *a* ∈ ![image](img/z1.jpg)[*p*]，记 \[*a*\] = *aP* ∈ ![image](img/g1.jpg)。类似地，对任意矩阵 ![image](img/i123.jpg)，记 \[**A**\] = **A***P* ∈ ![image](img/g1.jpg)^(*m*×*n*)，乘法按分量进行。这种符号选择意味着对所有矩阵 ![image](img/i124.jpg)
+我们使用 `PPT` 算法 `GGen(1^λ)`，输入安全参数（一元表示）`λ ∈ ℕ`，生成一个阶为 `p` 的循环群 `G`，其中 `p` 是一个 `2λ` 位素数。我们使用加法括号表示法，其中 `P` 是 `G` 的生成元，对所有 `a ∈ Z[p]`，记 `[a] = aP ∈ G`。类似地，对任意矩阵 `A`，记 `[A] = A·P ∈ G^(m×n)`，乘法按分量进行。这种符号选择意味着对所有矩阵 `A, B`。
 
-我们称 DDH 假设在 `GGen` 下成立，如果对所有 PPT 对手 ![image](img/a.jpg)，存在可忽略函数 *ν*，使得对所有 ![image](img/i125.jpg)，优势 ![image](img/i126.jpg) 定义如下：
+我们称 `DDH` 假设在 `GGen` 下成立，如果对所有 `PPT` 对手 `A`，存在可忽略函数 `ν`，使得对所有 `λ ∈ ℕ`，优势 `Adv` 定义如下：
 
 ![image](img/p152-1.jpg)
 
 ### 7.2.2 配对群
 
+我们使用一个 `PPT` 算法 `PGGen(1^λ)`，该算法以安全参数（以一进制表示）`λ ∈ ℕ` 为输入，生成阶为 `p` 的群 `G[1]`、`G[2]`、`G[T]`，其中 `p` 是一个 `2λ` 比特的素数，分别由 `P[1]`、`P[2]`、`P[T]` 生成。对于所有 `s ∈ {1, 2, T}` 和 `g ∈ G[s]`，我们记作 `[A][s] = g^A`。这些群配备了一个非退化双线性映射 `e : G[1] × G[2] → G[T]`，使得对于所有 `a, b ∈ Z[p]`，有 `e([a][1], [b][2]) = [ab][T]`。对于维度匹配的矩阵 `A` 和 `B`，我们有 `e([A][1], [B][2]) = [AB][T]`。对于任意 `s ∈ {1, 2, T}`，我们称相对于 `PGGen` 在 `G[s]` 中成立 `DDH` 假设，如果对于所有 `PPT` 对手 `A`，存在一个可忽略函数 `ν`，使得对于所有 `λ ∈ ℕ`，优势 `Adv` 定义为 `Pr[...]`，但使用 `G[s]` 代替 `G`。
 
+## 7.3 谓词编码
 
-
-我们使用一个 PPT 算法 `PGGen(1^λ)`，该算法以安全参数（以一进制表示）`λ ∈ ℕ` 为输入，生成阶为 `p` 的群 `G[1]`、`G[2]`、`G[T]`，其中 `p` 是一个 `2λ` 比特的素数，分别由 `P[1]`、`P[2]`、`P[T]` 生成。对于所有 `s ∈ {1, 2, T}` 和 `g ∈ G[s]`，我们记作 `[A][s] = g^A`。这些群配备了一个非退化双线性映射 `e : G[1] × G[2] → G[T]`，使得对于所有 `a, b ∈ Z[p]`，有 `e([a][1], [b][2]) = [ab][T]`。对于维度匹配的矩阵 `A` 和 `B`，我们有 `e([A][1], [B][2]) = [AB][T]`。对于任意 `s ∈ {1, 2, T}`，我们称相对于 `PGGen` 在 `G[s]` 中成立 DDH 假设，如果对于所有 PPT 对手 `A`，存在一个可忽略函数 `ν`，使得对于所有 `λ ∈ ℕ`，优势 `Adv` 定义为 `Pr[...]`，但使用 `G[s]` 代替 `G`。
-
-## 7.3. 谓词编码
-
-### 7.3.1. 定义
+### 7.3.1 定义
 
 **定义 7.1（谓词编码）。** 设 `p` 为素数，`|ct|`、`|usk|`、`n, s ∈ ℕ` 且 `P ⊆ {P : {0, 1}^s → {0, 1}}`。相对于 `(p, |ct|, |usk|, n, P)` 的谓词编码是一个确定性多项式时间算法元组 `(EncCt, EncKey, Decode)`，满足下述语法、正确性和安全性属性。
 
-#### 7.3.1.1. 语法
+#### 7.3.1.1 语法
 
 - `EncCt(P) → C`。输入谓词 `P ∈ P`，输出矩阵 `C ∈ Z[p]^{n × |ct|}`。
+
 - `EncKey(att) → K`。输入属性 `att ∈ {0, 1}^s`，输出矩阵 `K ∈ Z[p]^{n × |usk|}`。
+
 - `Decode(P, att) → d`。输入谓词 `P ∈ P` 和属性 `att ∈ {0, 1}^s`，输出向量 `d ∈ Z[p]^{|ct|}`。
 
-#### 7.3.1.2. 正确性
+#### 7.3.1.2 正确性
 
 对于所有 `P ∈ P` 和 `att ∈ {0, 1}^s` 使得 `P(att) = 1`，记 `C = EncCt(P) ∈ Z[p]^{n × |ct|}` 和 `K = EncKey(att) ∈ Z[p]^{n × |usk|}`，我们有：`d^T C^T K = (1, 0, ..., 0)`。
 
-#### 7.3.1.3. 安全性
+#### 7.3.1.3 安全性
 
 对于所有 `P ∈ P` 和 `att ∈ {0, 1}^s` 使得 `P(att) = 0`，向量 `(1, 0, ..., 0) ∈ Z[p]^{|ct|}` 不在 `C^T K` 的列张成中。
 
-#### 7.3.1.4. 安全性的等价定义
+#### 7.3.1.4 安全性的等价定义
 
 对于所有 `P ∈ P` 和 `att ∈ {0, 1}^s` 使得 `P(att) = 0`，以下分布相等：
 
 ![image](img/p154-1.jpg)
 
-### 7.3.2. 构造
+### 7.3.2 构造
 
-我们展示两种谓词编码构造。第一种对应 IBE，其中谓词仅仅是属于大空间的两个身份之间的相等性。第二种是针对由一次读取单调跨度程序表示的谓词的谓词编码（我们回顾后者的定义），它捕获了布尔一次读取公式。
+我们展示两种谓词编码构造。第一种对应 `IBE`，其中谓词仅仅是属于大空间的两个身份之间的相等性。第二种是针对由一次读取单调跨度程序表示的谓词的谓词编码（我们回顾后者的定义），它捕获了布尔一次读取公式。
 
-#### 7.3.2.1. 基于身份的加密
+#### 7.3.2.1 基于身份的加密
 
 设 `p` 为素数，`|ct| = 1`，`|usk| = 1`，`n = 2`，`s = ⌊log(p)⌋` 且 `P = {P_id : {0, 1}^s → {0, 1}}` 为谓词 `P_id` 的集合，对于所有 `id ∈ {0, 1}^s` 定义为：`P_id(id') = 1` 若 `id = id'`，否则 `P_id(id') = 0`。我们展示一个相对于 `(p, |ct|, |usk|, n, P)` 的谓词编码，其中我们以直接的方式将任何位串 `id ∈ {0, 1}^s` 解释为 `Z[p]` 中的整数。
 
 - `EncCt(id)`：给定 `id ∈ Z[p]`，输出矩阵 `[[1], [id]]`，使得对于所有 `α, υ[1], υ[2] ∈ Z[p]`。
+
 - `EncKey(id)`：给定 `id ∈ Z[p]`，输出矩阵 `[[υ[1] + id·υ[2]], [υ[2]]]`，使得对于所有 `α, υ[1], υ[2] ∈ Z[p]`。
+
 - `Decode(id, id')`：若 `id = id'`，输出向量 `[1]`。
 
 **正确性**：设 `id ∈ Z[p]`，`C = EncCt(id)`，`K = EncKey(id)` 且 `d = Decode(id, id')`。对于所有 `α, υ[1], υ[2] ∈ Z[p]`，我们有 `d^T C^T K = 1`。
@@ -3151,7 +3051,9 @@ Pfitzmann, B. and Waidner, M. (1997)。面向更大共谋规模的非对称指�
 
 **引理 7.1（成对独立性）。** 对于所有 `id, id' ∈ Z[p]`，`id ≠ id'`，分布 `{υ[1], υ[2] ←[R] Z[p] : (H[υ[1],υ[2]](id), H[υ[1],υ[2]](id'))}` 在 `Z[p]²` 上是均匀的，其中 `H[υ[1],υ[2]]` 定义如上。
 
-*证明。* 矩阵 `[[1, id], [1, id']]` 对于 `id ≠ id'` 可逆，因为 `det = id' - id ≠ 0`。因此，分布 `(υ[1] + id·υ[2], υ[1] + id'·υ[2])` 在 `Z[p]²` 上是均匀的。
+
+
+*证明。* 矩阵`[[1, id], [1, id']]`对于`id ≠ id'`可逆，因为`det = id' - id ≠ 0`。因此，分布`(υ[1] + id·υ[2], υ[1] + id'·υ[2])`在`Z[p]²`上是均匀的。
 
 ![image](img/squ.jpg)
 
@@ -3159,54 +3061,53 @@ Pfitzmann, B. and Waidner, M. (1997)。面向更大共谋规模的非对称指�
 
 我们首先回顾一次读取单调跨度程序的定义。
 
-**定义 7.2（一次读取 MSP）。** 设 `p` 为素数，`ℓ, s ∈ ℕ` 且 `M ∈ Z[p]^{ℓ × s}`。我们称 `x ∈ {0, 1}^s` 满足 `M`，如果向量 `(1, 0, ..., 0) ∈ Z[p]^ℓ` 在 `M[x]` 的列张成中，`M[x]` 表示向量集合 `(M[i])_{i∈[s], x[i]=1}`，其中 `M[i]` 表示 `M` 的第 `i` 列。即，`x` 满足 `M` 当且仅当存在常数 `{ω[i]}_{i∈[s]}` 使得 `Σ_{i: x[i]=1} ω[i] M[i] = (1, 0, ..., 0)^T`。观察到常数 `{ω[i]}_{i∈[s]}` 可以通过高斯消元法在矩阵 `M` 大小的多项式时间内计算得出。
+**定义 7.2（一次读取 MSP）。** 设`p`为素数，`ℓ, s ∈ ℕ`且`M ∈ Z[p]^{ℓ × s}`。我们称`x ∈ {0, 1}^s`满足`M`，如果向量`(1, 0, ..., 0) ∈ Z[p]^ℓ`在`M[x]`的列张成中，`M[x]`表示向量集合`(M[i])_{i∈[s], x[i]=1}`，其中`M[i]`表示`M`的第`i`列。即，`x`满足`M`当且仅当存在常数`{ω[i]}_{i∈[s]}`使得`Σ_{i: x[i]=1} ω[i] M[i] = (1, 0, ..., 0)^T`。观察到常数`{ω[i]}_{i∈[s]}`可以通过高斯消元法在矩阵`M`大小的多项式时间内计算得出。
 
-正如我们稍后将看到的，MSP 在 ABE 背景下使用方便，并且它们捕获了可表示为布尔公式的谓词。即，每个单调（仅使用正文字）且一次读取（每个变量作为文字最多使用一次）的布尔公式 `ϕ` 都可以高效地转换为矩阵 `M[Q]`（其大小随 `φ` 的大小增长），使得对于所有 `x ∈ {0, 1}^s`，当且仅当 `x` 满足 `M` 时（根据定义 7.2），有 `ϕ(x) = 1`。
+正如我们稍后将看到的，MSP在ABE背景下使用方便，并且它们捕获了可表示为布尔公式的谓词。即，每个单调（仅使用正文字）且一次读取（每个变量作为文字最多使用一次）的布尔公式`ϕ`都可以高效地转换为矩阵`M[Q]`（其大小随`φ`的大小增长），使得对于所有`x ∈ {0, 1}^s`，当且仅当`x`满足`M`时（根据定义 7.2），有`ϕ(x) = 1`。
 
-我们回顾一个关于 MSP 统计安全性的有用引理，其证明见 Karchmer 和 Wigderson (1993)。
+我们回顾一个关于MSP统计安全性的有用引理，其证明见Karchmer和Wigderson (1993)。
 
-**引理 7.2（MSP 的安全性）。** 设 `M ∈ Z[p]^{ℓ × s}` 且 `x ∈ {0, 1}^s` 不满足 `M`（根据定义 7.2）。以下分布相同：`{ω ← Z[p]^ℓ : ω^T M[x]}` 和 `{ω ← Z[p]^ℓ : ω^T M[x] + (1, 0, ..., 0)}`。
+**引理 7.2（MSP 的安全性）。** 设`M ∈ Z[p]^{ℓ × s}`且`x ∈ {0, 1}^s`不满足`M`（根据定义 7.2）。以下分布相同：`{ω ← Z[p]^ℓ : ω^T M[x]}`和`{ω ← Z[p]^ℓ : ω^T M[x] + (1, 0, ..., 0)}`。
 
-我们现在展示一个针对一次读取 MSP 的谓词编码，即相对于 `(p, |ct|, |usk|, n, P)`，其中 `p` 为素数，`ℓ, s ∈ ℕ`，`n = ℓ+s`，`|ct| = s`，`|usk| = s+1` 且 `P = {P_M : {0, 1}^s → {0, 1}}` 为谓词 `P_M` 的集合，对于所有 `M ∈ Z[p]^{ℓ × s}` 定义如下。`P_M` 接受属性 `x = (x[1], ..., x[s]) ∈ {0, 1}^s` 作为输入，若 `x` 满足 `M`（根据定义 7.2）则输出 1。
+我们现在展示一个针对一次读取MSP的谓词编码，即相对于`(p, |ct|, |usk|, n, P)`，其中`p`为素数，`ℓ, s ∈ ℕ`，`n = ℓ+s`，`|ct| = s`，`|usk| = s+1`且`P = {P_M : {0, 1}^s → {0, 1}}`为谓词`P_M`的集合，对于所有`M ∈ Z[p]^{ℓ × s}`定义如下。`P_M`接受属性`x = (x[1], ..., x[s]) ∈ {0, 1}^s`作为输入，若`x`满足`M`（根据定义 7.2）则输出 1。
 
-- `EncCt(M)`：给定 `M ∈ Z[p]^{ℓ × s}`，输出矩阵 `[[I_s], [M]]`，使得对于所有 `i ∈ [s]`，`C[i] = e_i` 且 `C[ℓ+i] = M[i]`，其中 `M[i]` 表示 `M` 的第 `i` 列。
-
-
-
-
+- `EncCt(M)`：给定`M ∈ Z[p]^{ℓ × s}`，输出矩阵`[[I_s], [M]]`，使得对于所有`i ∈ [s]`，`C[i] = e_i`且`C[ℓ+i] = M[i]`，其中`M[i]`表示`M`的第`i`列。
 
 ## 7.4. 基于属性的加密
 
 ### 7.4.1. 定义
 
-**定义 7.3 (ABE)。** 设 *s* 为一个多项式，![image](img/i177.jpg) 为一个族，使得对于所有 *λ* ∈ ![image](img/n1.jpg)，![image](img/p.jpg)[*λ*] 是 *s*(*λ*)-比特输入上的谓词集合，即 ![image](img/p.jpg)[*λ*] ⊆ *P* : {0, 1}^(*s*(*λ*)) → {0, 1}。针对 ![image](img/i178.jpg) 的 ABE 是一个 PPT 算法元组 (`Setup`, `Enc`, `KeyGen`, `Dec`)，满足下文所述的语法、正确性和安全性属性。
+**定义 7.3 (ABE)。** 设*s*为一个多项式，`P[λ]`为一个族，使得对于所有*λ* ∈ `N`，`P[λ]`是*s*(*λ*)-比特输入上的谓词集合，即`P[λ] ⊆ P : {0, 1}^{(s(λ))} → {0, 1}`。针对`P`的ABE是一个PPT算法元组(`Setup`, `Enc`, `KeyGen`, `Dec`)，满足下文所述的语法、正确性和安全性属性。
 
 #### 7.4.1.1. 语法
 
-- `Setup`(1^(*λ*)) → (`mpk`, `msk`)。输入安全参数 *λ* ∈ ![image](img/n1.jpg)（单一形式），输出主公钥 `mpk` 和主私钥 `msk`。
-- `Enc`(`mpk`, *P*) → (`ct`, `kem`)。输入主公钥 `mpk` 和谓词 *P* ∈ ![image](img/p.jpg)[*λ*]，输出密文 `ct` 和密钥空间 ![image](img/k1.jpg)[*λ*] 中的对称密钥 `kem`。
-- `KeyGen`(`msk`, `att`) → `usk`。输入主私钥 `msk` 和属性 `att` ∈ {0, 1}^(*s*(*λ*))，输出用户私钥 `usk`。
-- `Dec`(`mpk`, `ct`, `usk`) → `kem`。输入主公钥 `mpk`、密文 `ct` 和用户私钥 `usk`，输出对称密钥 `kem`。
+- `Setup(1^(λ))` → (`mpk`, `msk`)。输入安全参数*λ* ∈ `N`（单一形式），输出主公钥`mpk`和主私钥`msk`。
+
+- `Enc(mpk, P)` → (`ct`, `kem`)。输入主公钥`mpk`和谓词`P` ∈ `P[λ]`，输出密文`ct`和密钥空间`K[λ]`中的对称密钥`kem`。
+
+- `KeyGen(msk, att)` → `usk`。输入主私钥`msk`和属性`att` ∈ `{0, 1}^{(s(λ))}`，输出用户私钥`usk`。
+
+- `Dec(mpk, ct, usk)` → `kem`。输入主公钥`mpk`、密文`ct`和用户私钥`usk`，输出对称密钥`kem`。
 
 #### 7.4.1.2. 正确性
 
-对于所有 *λ* ∈ ![image](img/n1.jpg)，所有 `Setup`(1^(*λ*)) 支持集中的 (`mpk`, `msk`)，所有 *P* ∈ ![image](img/p.jpg)[*λ*]，所有 `Enc`(`mpk`, *P*) 支持集中的 (`ct`, `kem`)，所有满足 *P*(`att`) = 1 的属性 `att` ∈ {0, 1}^(*s*(*λ*))，以及所有 `KeyGen`(`msk`, `att`) 支持集中的 `usk`，我们有：`Dec`(`mpk`, `ct`, `usk`) = `kem`。
+对于所有*λ* ∈ `N`，所有`Setup(1^(λ))`支持集中的(`mpk`, `msk`)，所有`P` ∈ `P[λ]`，所有`Enc(mpk, P)`支持集中的(`ct`, `kem`)，所有满足`P(att) = 1`的属性`att` ∈ `{0, 1}^{(s(λ))}`，以及所有`KeyGen(msk, att)`支持集中的`usk`，我们有：`Dec(mpk, ct, usk)` = `kem`。
 
 #### 7.4.1.3. 安全性
 
-对于所有 PPT 有状态对手 ![image](img/a.jpg) 和所有 ![image](img/abe.jpg) = (`Setup`, `Enc`, `KeyGen`, `Dec`)，我们定义以下优势函数：
+对于所有PPT有状态对手`A`和所有`ABE = (Setup, Enc, KeyGen, Dec)`，我们定义以下优势函数：
 
 ![image](img/p157-1.jpg)
 
-其中预言机 ![image](img/o.jpg)`KeyGen` 在输入属性 `att` ∈ {0, 1}^(*s*(*λ*)) 时，输出 `KeyGen`(`msk`, `att`)。如果 ![image](img/a.jpg) 选择谓词 *P* 并查询其预言机 ![image](img/o.jpg)`KeyGen`，输入为 `att`[1], ..., `att`[*q*]，使得对于所有 *i* = 1, ..., *q* 都有 *P*(`att`[*i*]) = 0，则称 ![image](img/a.jpg) 为*可接受的*对手。即，查询的用户私钥均无法解密挑战密文。如果对于所有 PPT 可接受对手 ![image](img/a.jpg)，都存在可忽略函数 *ν*，使得对于所有 ![image](img/i179.jpg) 成立，则称 ![image](img/abe.jpg) 是安全的。
+其中预言机`O_KeyGen`在输入属性`att` ∈ `{0, 1}^{(s(λ))}`时，输出`KeyGen(msk, att)`。如果`A`选择谓词`P`并查询其预言机`O_KeyGen`，输入为`att[1]`, ..., `att[q]`，使得对于所有*i* = 1, ..., *q*都有`P(att[i]) = 0`，则称`A`为*可接受的*对手。即，查询的用户私钥均无法解密挑战密文。如果对于所有PPT可接受对手`A`，都存在可忽略函数*ν*，使得对于所有*λ* ∈ `N`成立，则称`ABE`是安全的。
 
 #### 7.4.1.4. 密钥 ABE
 
-如果加密算法额外以主私钥作为输入，则称该 ABE 为密钥 ABE。请注意，上述安全性是针对接收单个 ct-kem 对的对手定义的，而现实世界的攻击涉及许多此类对。对于（公钥）ABE，多个 ct-kem 对的安全性由单个 ct-kem 对的安全性直接推导得出。然而，这一推导不适用于密钥 ABE。换句话说，上述安全性定义对于密钥 ABE 而言是较弱的。这不是问题，因为密钥 ABE 仅作为构建公钥 ABE 的构建块使用。
+如果加密算法额外以主私钥作为输入，则称该ABE为密钥ABE。请注意，上述安全性是针对接收单个ct-kem对的对手定义的，而现实世界的攻击涉及许多此类对。对于（公钥）ABE，多个ct-kem对的安全性由单个ct-kem对的安全性直接推导得出。然而，这一推导不适用于密钥ABE。换句话说，上述安全性定义对于密钥ABE而言是较弱的。这不是问题，因为密钥ABE仅作为构建公钥ABE的构建块使用。
 
 ### 7.4.2. 模块化构造
 
-在本节中，我们展示如何将谓词编码通用地转换为密钥 ABE，进而转换为 ABE（参见图 7.1）。
+在本节中，我们展示如何将谓词编码通用地转换为密钥ABE，进而转换为ABE（参见图 7.1）。
 
 ![图 7.1. 谓词编码、密钥 ABE 和 ABE 的安全特性](img/fig7-1.jpg)
 
@@ -3214,42 +3115,45 @@ Pfitzmann, B. and Waidner, M. (1997)。面向更大共谋规模的非对称指�
 
 #### 7.4.2.1. 从谓词编码到密钥 ABE
 
-设 *s* 为一个多项式，![image](img/i180.jpg) 为谓词族。假设存在一个 PPT 算法 `GGen`，使得对于所有 *λ* ∈ ![image](img/n1.jpg)，`GGen`(1^(*λ*)) 输出一个阶为 *p*[*λ*] 的素数阶群 ![image](img/g1.jpg)[*λ*]，且相对于 `GGen`，DDH 假设成立。假设存在多项式 |`ct`|, |`usk`|, *n*，使得对于所有 *λ* ∈ ![image](img/n1.jpg)，存在关于 (*p*[*λ*], |`ct`|(*λ*), |`usk`|(*λ*), *n*(*λ*), *P*[*λ*]) 的谓词编码 (`EncCt`[*λ*], `EncKey`^(*λ*), `Decode`[*λ*])。那么，下文给出的构造是一个密钥 ABE。注意为了保持符号简洁，我们从这里开始不再显式写出对 *λ* 的依赖。我们在图 7.2 中非正式地描述了从谓词编码到密钥 ABE 的转换。
+设*s*为一个多项式，`P`为谓词族。假设存在一个PPT算法`GGen`，使得对于所有*λ* ∈ `N`，`GGen(1^(λ))`输出一个阶为`p[λ]`的素数阶群`G_1[λ]`，且相对于`GGen`，DDH假设成立。假设存在多项式`|ct|`, `|usk|`, *n*，使得对于所有*λ* ∈ `N`，存在关于(`p[λ]`, `|ct|(λ)`, `|usk|(λ)`, `n(λ)`, `P[λ]`)的谓词编码(`EncCt[λ]`, `EncKey[λ]`, `Decode[λ]`)。那么，下文给出的构造是一个密钥ABE。注意为了保持符号简洁，我们从这里开始不再显式写出对*λ*的依赖。我们在图 7.2 中非正式地描述了从谓词编码到密钥ABE的转换。
 
-![图 7.2. 从谓词编码到密钥 ABE 的转换。此处，C = EncCt(P) 为谓词 P 的编码，K = EncKey(att) 为属性 att ∈ {0, 1}s 的编码](img/fig7-2.jpg)
+![图 7.2. 从谓词编码到密钥 ABE 的转换。此处，C = EncCt(P) 为谓词 P 的编码，K = EncKey(att) 为属性 att ∈ {0, 1}^s 的编码](img/fig7-2.jpg)
 
-**图 7.2.** *从谓词编码到密钥 ABE 的转换。此处，* C = `EncCt`(*P*) *为谓词 P 的编码，且* K = `EncKey`(`att`) *为属性* `att` ∈ {0, 1}[*s*] *的编码*
+**图 7.2.** *从谓词编码到密钥 ABE 的转换。此处，* C = `EncCt(P)` *为谓词 P 的编码，且* K = `EncKey(att)` *为属性* `att` ∈ {0, 1}^s *的编码*
 
-- `Setup`(1^(*λ*))：`GGen`(1^(*λ*)) → ![image](img/g1.jpg) 阶为 ![image](img/i181.jpg) `msk` = (**U**, *α*, [**a**], [**Ua**])，`mpk` = ![image](img/g1.jpg)。输出 (`mpk`, `msk`)。
-- `Enc`(`msk`, `mpk`, *P*)：`EncCt`(*P*) → ![image](img/i182.jpg) `ct` = **U**^⊤**C**, *P*，`kem` = [*α*] ∈ ![image](img/g1.jpg)。输出 (`ct`, `kem`)。
-- `KeyGen`(`msk`, `att`)：`EncKey`(`att`) → ![image](img/i183.jpg) *r* ← ![image](img/z1.jpg)[*p*]，`usk` = ![image](img/i184.jpg) 输出 `usk`。
-- `Dec`(`mpk`, `ct`, `usk`)：解析 `ct` = (**V**, *P*) 其中 ![image](img/i185.jpg) ([**w**^⊤], [**z**], `att`) 其中 [**w**^⊤] ∈ ![image](img/g1.jpg)^(1×|`usk`|)，[**z**] ∈ ![image](img/g1.jpg)²。`Decode`(*P*, `att`) → ![image](img/i186.jpg) 输出 [**z**]^⊤**V** | [**w**^⊤] **d** ∈ ![image](img/g1.jpg)。
+- `Setup(1^(λ))`：`GGen(1^(λ))` → `G_1`阶为`p` `msk` = (`U`, `α`, `[a]`, `[Ua]`)，`mpk` = `G_1`。输出(`mpk`, `msk`)。
 
-**正确性**：设 *P* 和 `att` 满足 *P*(`att`) = 1。加密 `Enc`(`msk`, `mpk`, *P*) 输出 `ct` = (**U**^⊤**C**, *P*)，其中 **C** = `EncCt`(*P*)。用户私钥生成 `KeyGen`(`msk`, `att`) 输出 `usk` = ([*α*, **Ua** *r*]^⊤**K**, [**a** *r*], `att`)，其中 **K** = `EncKey`(`att`)。解密计算 ![image](img/i187.jpg) ![image](img/i188.jpg) 其中最后一个等式由谓词编码的正确性得出。
+- `Enc(msk, mpk, P)`：`EncCt(P)` → `C` `ct` = `U^⊤C`, `P`，`kem` = `[α]` ∈ `G_1`。输出(`ct`, `kem`)。
 
+- `KeyGen(msk, att)`：`EncKey(att)` → `K` `r` ← `Z_p`，`usk` = `[α, Ua r]^⊤K, [a r], att`。输出`usk`。
 
+- `Dec(mpk, ct, usk)`：解析`ct` = (`V`, `P`)其中`V` ∈ `G_1^{|ct|}`，解析`usk` = (`[w^⊤]`, `[z]`, `att`)其中`[w^⊤]` ∈ `G_1^{1×|usk|}`，`[z]` ∈ `G_1²`。`Decode(P, att)` → `d`。输出`[z]^⊤V` | `[w^⊤] d` ∈ `G_1`。
 
-
+**正确性**：设`P`和`att`满足`P(att) = 1`。加密`Enc(msk, mpk, P)`输出`ct` = (`U^⊤C`, `P`)，其中`C` = `EncCt(P)`。用户私钥生成`KeyGen(msk, att)`输出`usk` = (`[α, Ua r]^⊤K`, `[a r]`, `att`)，其中`K` = `EncKey(att)`。解密计算`[z]^⊤V + [w^⊤]d = [α]`，其中最后一个等式由谓词编码的正确性得出。
 
 ### 安全性
 
-我们证明，如果 DDH 假设在 `GGen` 下成立且谓词编码是安全的，则该密钥策略 ABE 是安全的。具体而言，我们证明对于所有进行 $q$ 次用户密钥查询的可接受 PPT 对手 $\mathcal{A}$，存在一个 PPT 算法 $\mathcal{B}$ 和一个可忽略函数 $\nu(\lambda)$，使得对于所有 $\lambda \in \mathbb{N}$，其中 $\Pi = (\text{Setup}, \text{Enc}, \text{KeyGen}, \text{Dec})$ 表示上述 ABE 方案。
+我们证明，如果DDH假设在`GGen`下成立且谓词编码是安全的，则该密钥策略ABE是安全的。具体而言，我们证明对于所有进行$q$次用户密钥查询的可接受PPT对手`A`，存在一个PPT算法`B`和一个可忽略函数`ν(λ)`，使得对于所有`λ ∈ N`，其中`Π = (Setup, Enc, KeyGen, Dec)`表示上述ABE方案。
 
-我们通过一系列混合游戏来进行证明，如下所述。对于任意 $i \in [n]$，我们用 $\text{Adv}[i]$ 表示 $\text{Game}[i]$ 在与对手 $\mathcal{A}$ 交互时输出 1 的概率（该概率取自对手 $\mathcal{A}$ 和 $\text{Game}[i]$ 的随机币）。
+我们通过一系列混合游戏来进行证明，如下所述。对于任意$i \in [n]$，我们用`Adv[i]`表示`Game[i]`在与对手`A`交互时输出 1 的概率（该概率取自对手`A`和`Game[i]`的随机币）。
 
-*   **`Game0`**：此游戏对应安全性定义（见定义 7.3）；因此，我们有 $\text{Adv}[0] = \text{Adv}_{\Pi,\mathcal{A}}^{\text{ABE}}(\lambda)$。为求完备，我们在此描述该游戏。它运行 $\text{Setup}(1^\lambda) \to (\text{mpk}, \text{msk})$，其中 $\text{msk} = (\mathbf{U}, \alpha, [\mathbf{a}], [\mathbf{Ua}])$ 且 $\text{mpk} = [\mathbf{G}_1]$。它将 $\text{mpk}$ 发送给对手 $\mathcal{A}$。当 $\mathcal{A}$ 向其预言机 $\mathcal{O}_{\text{KeyGen}}$ 发送查询 $\text{att}$ 时，游戏计算 $\text{KeyGen}(\text{msk}, \text{att}) \to \text{usk}$ 并将 $\text{usk}$ 返回给 $\mathcal{A}$。在某一时刻，$\mathcal{A}$ 发送一个谓词 $P$，此时游戏采样 $b \xleftarrow{R} \{0, 1\}$。它计算 $\text{Enc}(\text{msk}, \text{mpk}, P) \to (\text{ct}, \text{kemb})$。它设置 $\text{kemb}[0] = [\alpha]$ 和 $\text{kemb}[1] \xleftarrow{R} [\mathbf{G}_1]$。它将 $(\text{ct}, \text{kemb}[b])$ 返回给 $\mathcal{A}$。在某一时刻，$\mathcal{A}$ 发送猜测 $b'$，此时游戏结束，若 $b' = b$ 则输出 1，否则输出 0。
+*   **`Game0`**：此游戏对应安全性定义（见定义 7.3）；因此，我们有`Adv[0] = Adv_{Π,A}^{ABE}(λ)`。为求完备，我们在此描述该游戏。它运行`Setup(1^λ)` → (`mpk`, `msk`)，其中`msk` = (`U`, `α`, `[a]`, `[Ua]`)且`mpk` = `G_1`。它将`mpk`发送给对手`A`。当`A`向其预言机`O_KeyGen`发送查询`att`时，游戏计算`KeyGen(msk, att)` → `usk`并将`usk`返回给`A`。在某一时刻，`A`发送一个谓词`P`，此时游戏采样`b ← {0, 1}`。它计算`Enc(msk, mpk, P)` → (`ct`, `kemb`)。它设置`kemb[0] = [α]`和`kemb[1] ← G_1`。它将(`ct`, `kemb[b]`)返回给`A`。在某一时刻，`A`发送猜测`b'`，此时游戏结束，若`b' = b`则输出 1，否则输出 0。
 
-*   **`Gamei`**：此游戏针对所有 $i \in \{0, \dots, q\}$ 定义，其中 $q$ 表示 $\mathcal{A}$ 向其预言机 $\mathcal{O}_{\text{KeyGen}}$ 发起的查询次数。对于最后 $q - i$ 次对 $\mathcal{O}_{\text{KeyGen}}$ 的查询，`Game[i]` 按与 `Game[0]` 完全相同的方式计算 $\text{usk}$。然而，它按如下方式回答前 $i$ 次查询（与 `Game[0]` 的差异已高亮显示）。给定 $\text{att} \in \{0, 1\}^s$，它计算 $[\mathbf{U} \mathbf{r}]$。
+*   **`Gamei`**：此游戏针对所有$i \in \{0, \dots, q\}$定义，其中$q$表示`A`向其预言机`O_KeyGen`发起的查询次数。对于最后$q - i$次对`O_KeyGen`的查询，`Game[i]`按与`Game[0]`完全相同的方式计算`usk`。然而，它按如下方式回答前$i$次查询（与`Game[0]`的差异已高亮显示）。给定`att` ∈ `{0, 1}^s`，它计算`[U r]`。
 
-注意 $\text{Adv}[q] = 0$，因为在 `Game[q]` 中，给予 $\mathcal{A}$ 的所有用户密钥均不依赖于秘密值 $\alpha \in \mathbb{Z}_p$。因此，在最后这个游戏中，$\text{kemb}[0]$ 和 $\text{kemb}[1]$ 服从相同分布，即均匀随机分布（独立于其他一切）。因此，为完成安全性证明，我们证明对于所有 $i \in [q]$，存在 PPT 算法 $\mathcal{B}[i]$ 和可忽略函数 $\nu[i]$，使得 $|\text{Adv}[i-1] - \text{Adv}[i]| \le \nui$。
+注意`Adv[q] = 0`，因为在`Game[q]`中，给予`A`的所有用户密钥均不依赖于秘密值`α ∈ Z_p`。因此，在最后这个游戏中，`kemb[0]`和`kemb[1]`服从相同分布，即均匀随机分布（独立于其他一切）。因此，为完成安全性证明，我们证明对于所有$i \in [q]$，存在PPT算法`B[i]`和可忽略函数`ν[i]`，使得`|Adv[i-1] - Adv[i]| ≤ ν[i]`。
 
-为此，我们针对所有 $i \in [q]$ 引入如下定义的中间游戏。
+为此，我们针对所有$i \in [q]$引入如下定义的中间游戏。
 
-*   **`Gamei-1.1`**：此游戏与 `Game[i-1]` 相同，区别仅在于对 $\mathcal{O}_{\text{KeyGen}}$ 的第 $i$ 次查询。该查询按如下方式回答（与 `Game[i-1]` 的差异已高亮显示）。给定 $\text{att} \in \{0, 1\}^s$，它计算 $[\mathbf{z}] \xleftarrow{R} [\mathbb{G}_1]²$。
-    此转换由 DDH 假设证明，该假设陈述以下两者在计算上不可区分：$([\mathbf{a}], [\mathbf{a}r]) \approx_c ([\mathbf{a}], [\mathbf{z}])$，其中 $\mathbf{a} \xleftarrow{R} \mathbb{Z}_p²$ 且 $r \xleftarrow{R} \mathbb{Z}_p$。即，存在 PPT 算法 $\mathcal{B}[i.1]$ 使得 $|\text{Adv}[i-1] - \text{Adv}[i-1.1]| \le \text{Adv}_{\mathcal{B}[i.1]}^{\text{DDH}}(\lambda)$。
+*   **`Gamei-1.1`**：此游戏与`Game[i-1]`相同，区别仅在于对`O_KeyGen`的第$i$次查询。该查询按如下方式回答（与`Game[i-1]`的差异已高亮显示）。给定`att` ∈ `{0, 1}^s`，它计算`[z] ← G_1²`。
 
-*   **`Gamei-1.2`**：此游戏与 `Game[i-1.1]` 相同，区别仅在于对 $\mathcal{O}_{\text{KeyGen}}$ 的第 $i$ 次查询。该查询按如下方式回答（与 `Game[i-1.1]` 的差异已高亮显示）。给定 $\text{att} \in \{0, 1\}^s$，它计算 $\text{EncKey}(\text{att}) \to \mathbf{K}$，$\mathbf{z} \xleftarrow{R} \text{Span}(\mathbf{K})^\perp$。
-    我们证明以下两者在统计上接近：$\text{Adv}[i-1.1] \approx_s \text{Adv}[i-1.2]$，统计距离为 $1/p$，这利用了谓词编码的安全性。
+    此转换由DDH假设证明，该假设陈述以下两者在计算上不可区分：`([a], [a r]) ≈_c ([a], [z])`，其中`a ← Z_p²`且`r ← Z_p`。即，存在PPT算法`B[i.1]`使得`|Adv[i-1] - Adv[i-1.1]| ≤ Adv_{B[i.1]}^{DDH}(λ)`。
+
+*   **`Gamei-1.2`**：此游戏与`Game[i-1.1]`相同，区别仅在于对`O_KeyGen`的第$i$次查询。该查询按如下方式回答（与`Game[i-1.1]`的差异已高亮显示）。给定`att` ∈ `{0, 1}^s`，它计算`EncKey(att)` → `K`，`z ← Span(K)^⊥`。
+
+    我们证明以下两者在统计上接近：`Adv[i-1.1] ≈_s Adv[i-1.2]`，统计距离为`1/p`，这利用了谓词编码的安全性。
+
+
 
 令 $\mathbf{C} = \text{EncCt}(P)$ 且 $\mathbf{K} = \text{EncKey}(\text{att})$，其中 $\text{att}$ 是对 $\mathcal{O}_{\text{KeyGen}}$ 的第 $i$ 次查询。我们有（从一种分布到下一种分布的差异已高亮显示）：
 
@@ -3261,13 +3165,13 @@ Pfitzmann, B. and Waidner, M. (1997)。面向更大共谋规模的非对称指�
 
 最后一个等式源于谓词编码的安全性。
 
-然后，注意 `Game[i-1.2]` 与 `Game[i]` 相同，区别仅在于对 $\mathcal{O}_{\text{KeyGen}}$ 的第 $i$ 次查询使用向量 $[\mathbf{z}] \xleftarrow{R} [\mathbb{G}_1]²$ 回答，而 `Game[i]` 中使用的是 $[\mathbf{a}r]$（其中 $r \xleftarrow{R} \mathbb{Z}_p$）。根据 DDH 假设，这些游戏在计算上不可区分，该假设陈述 $([\mathbf{a}], [\mathbf{z}]) \approx_c ([\mathbf{a}], [\mathbf{a}r])$，其中 $\mathbf{a} \xleftarrow{R} \mathbb{Z}_p²$。即，存在 PPT 算法 $\mathcal{B}[i.2]$ 使得 $|\text{Adv}[i-1.2] - \text{Adv}[i]| \le \text{Adv}_{\mathcal{B}[i.2]}^{\text{DDH}}(\lambda)$。
+然后，注意 `Game[i-1.2]` 与 `Game[i]` 相同，区别仅在于对 $\mathcal{O}_{\text{KeyGen}}$ 的第 $i$ 次查询使用向量 $[\mathbf{z}] \xleftarrow{R} [\mathbb{G}_1]^2$ 回答，而 `Game[i]` 中使用的是 $[\mathbf{a}r]$（其中 $r \xleftarrow{R} \mathbb{Z}_p$）。根据 DDH 假设，这些游戏在计算上不可区分，该假设陈述 $([\mathbf{a}], [\mathbf{z}]) \approx_c ([\mathbf{a}], [\mathbf{a}r])$，其中 $\mathbf{a} \xleftarrow{R} \mathbb{Z}_p^2$。即，存在 PPT 算法 $\mathcal{B}[i.2]$ 使得 $|\text{Adv}[i-1.2] - \text{Adv}[i]| \le \text{Adv}_{\mathcal{B}[i.2]}^{\text{DDH}}(\lambda)$。
 
 这完成了 `Game[i-1]` 与 `Game[i]` 计算不可区分的证明。安全性界限通过对所有 $i \in [q]$ 求和差值 $\text{Adv}[i-1] - \text{Adv}[i]$ 获得。
 
 ![证明结束](img/squ.jpg)
 
-#### 7.4.2.2. 从密钥策略 ABE 到 ABE
+### 7.4.2.2. 从密钥策略 ABE 到 ABE
 
 此处，我们展示如何将密钥策略 ABE 编译为 ABE。底层的密钥策略 ABE 仅体现在安全性证明中。即，ABE 的安全性将归结为密文空间上的一个计算假设，以及密钥策略 ABE 变体的安全性。构造本身仅依赖于谓词编码。
 
@@ -3277,19 +3181,15 @@ Pfitzmann, B. and Waidner, M. (1997)。面向更大共谋规模的非对称指�
 
 **图 7.3.** 从密钥策略 ABE 到 ABE 的转换。此处，$\mathbf{C} = \text{EncCt}(P)$ 为谓词 $P$ 的编码，$\mathbf{K} = \text{EncKey}(\text{att})$ 为属性 $\text{att} \in \{0, 1\}^s$ 的编码。
 
-*   **`Setup(1^λ)`**：采样阶为 $p$ 的 $\mathbf{b}_1 \xleftarrow{R} \mathbb{G}_1²$，对于所有 $i \in [n]$，采样 $\mathbf{U}_i \xleftarrow{R} \mathbb{Z}_p^{2 \times 2}$、$([\mathbf{U}_i \mathbf{b}_1])_{i \in [n]}$、$[\mathbf{k}^\top \mathbf{b}_1]_T$。输出 $(\text{mpk}, \text{msk})$。
+*   **`Setup(1^λ)`**：采样阶为 $p$ 的 $\mathbf{b}_1 \xleftarrow{R} \mathbb{G}_1^2$，对于所有 $i \in [n]$，采样 $\mathbf{U}_i \xleftarrow{R} \mathbb{Z}_p^{2 \times 2}$、$([\mathbf{U}_i \mathbf{b}_1])_{i \in [n]}$、$[\mathbf{k}^\top \mathbf{b}_1]_T$。输出 $(\text{mpk}, \text{msk})$。
 
 *   **`Enc(mpk, P)`**：$\text{EncCt}(P) \to \mathbf{C} \in \mathbb{Z}_p^{n \times 2}$。计算 $([\mathbf{U}_1 \mathbf{b}_1 s | \dots | \mathbf{U}_n \mathbf{b}_1 s]^\top \mathbf{C}, [\mathbf{b}_1 s]_1, P)$，$\text{kemb} = [\mathbf{k}^\top \mathbf{b}_1 s]_T \in \mathbb{G}_T$。输出 $(\text{ct}, \text{kemb})$。
-
-
-
-
 
 #### 7.4.2.3. 章节注释与历史
 
 – `KeyGen`(`msk`, `att`)：`EncKey`(`att`) → `r` ← `Z_p`, `usk` = `g_2^r`。它输出 `usk`。
 
-– `Dec`(`mpk`, `ct`, `usk`)：解析 `ct` = (`[V]_1`, `[w]_1`, `P`) 其中 `[w]_1 ∈ G_1`。`Decode`(`P`, `att`) → `d ∈ Z_p²`，我们将其写为 `d = (d_ct, d_usk)` 其中 `d_ct, d_usk ∈ Z_p`。它输出 `e([V]_1, d_ct) / e([w]_1, d_usk)`。
+– `Dec`(`mpk`, `ct`, `usk`)：解析 `ct` = (`[V]_1`, `[w]_1`, `P`) 其中 `[w]_1 ∈ G_1`。`Decode`(`P`, `att`) → `d ∈ Z_p^2`，我们将其写为 `d = (d_ct, d_usk)` 其中 `d_ct, d_usk ∈ Z_p`。它输出 `e([V]_1, d_ct) / e([w]_1, d_usk)`。
 
 **正确性**：令 `P` 和 `att` 使得 `P`(`att`) = 1。加密 `Enc`(`mpk`, `P`) 输出 `ct` = (`[U_1 b s | ··· | U_n b s]_1`, `C`, `[b s]_1`, `P`) 其中 `C = EncCt`(`P`)。用户密钥生成 `KeyGen`(`msk`, `att`) 输出 `[a r]_2 [K]_2` 其中 `K = EncKey`(`att`)。解密计算 `e([U_i b s]_1, [a r]_2) / e([b s]_1, [K]_2) = e([a]_1, [b s]_2)^r / e([b]_1, [s]_2)^r` 其中 `α = k^⊤ b s`, `u[i] = (a r)^⊤ U[i] b s` 且最后的等式由谓词编码的正确性得出。
 
@@ -3301,16 +3201,13 @@ Pfitzmann, B. and Waidner, M. (1997)。面向更大共谋规模的非对称指�
 
 – `Game[1]`(`1^λ`)：此游戏同 `Game[0]`，不同之处在于挑战密文按如下方式计算（与 `Game[0]` 的差异已高亮显示）。给定 `P`，它计算 `[z]_1 ←_R G_1`。根据 `G_1` 中的 DDH 假设，这些游戏在计算上不可区分，该假设表明 (`[b]_1`, `[b s]_1`) ≈_c (`[b]_1`, `[z]_1`) 其中 `s ←_R Z_p`。即，存在 PPT 算法 `B_1` 使得 `|Adv[1] - Adv[0]| ≤ Adv_B1^DDH(λ)`。
 
-– `Game[2]`(`1^λ`)：此游戏同 `Game[1]`，不同之处在于 `mpk` 和挑战密文按如下方式计算（与 `Game[1]` 的差异已高亮显示）：`mpk` = (`[b]_1`, (`[U_i b]_1`)[i∈[n]], `[k^⊤ b]_T`)，`ct` = (`[U_1 z | ··· | U_n z]_1`, `C`, `[z]_1`, `P`)，`kem` = `[k^⊤ z]_T` 其中 `(b | z) ←_R GL_2`，而 `Game[1]` 中为 `b ←_R Z_p², z ←_R Z_p²`。回顾 `GL_2` 表示 2 次一般线性群，即 `Z_p` 上 2×2 非奇异矩阵的群。由于随机选择 `(b | z)` 导致 `(b z)` 奇异的概率小于 `2/p`，这两个游戏的统计距离小于 `2/p`。
+– `Game[2]`(`1^λ`)：此游戏同 `Game[1]`，不同之处在于 `mpk` 和挑战密文按如下方式计算（与 `Game[1]` 的差异已高亮显示）：`mpk` = (`[b]_1`, (`[U_i b]_1`)[i∈[n]], `[k^⊤ b]_T`)，`ct` = (`[U_1 z | ··· | U_n z]_1`, `C`, `[z]_1`, `P`)，`kem` = `[k^⊤ z]_T` 其中 `(b | z) ←_R GL_2`，而 `Game[1]` 中为 `b ←_R Z_p^2, z ←_R Z_p^2`。回顾 `GL_2` 表示 2 次一般线性群，即 `Z_p` 上 2×2 非奇异矩阵的群。由于随机选择 `(b | z)` 导致 `(b z)` 奇异的概率小于 `2/p`，这两个游戏的统计距离小于 `2/p`。
 
-– `Game[3]`(`1^λ`)：此游戏同 `Game[2]`，不同之处在于挑战密文和用户密钥按如下方式计算（与 `Game[2]` 的差异已高亮显示）：`[a]_2 ←_R G_2²` 且 `a = a_∥ + α b^⊥`。`[a r]_2 [K]_2` 其中 `b^⊥` 为满足 `b^⊤ b^⊥ = 0` 且 `z^⊤ b^⊥ = 1` 的向量。`Game[3]` 和 `Game[2]` 具有相同的分布，这源于以下两个分布相等：`([a]_2, [a r]_2)` 和 `([a_∥ + α b^⊥]_2, [a_∥ r + α r b^⊥]_2)` 其中 `b^⊥` 为满足 `b^⊤ b^⊥ = 0` 且 `z^⊤ b^⊥ = 1` 的向量。存在一个后处理算法，给定按第一个分布分布的输入，产生按 `Game[2]` 指定分布的输出；而给定按第二个分布分布的输入，同一后处理算法产生按 `Game[3]` 指定分布的输出。即，后处理算法在接收输入后，采样 `r ←_R Z_p` 并直接生成 `A` 的视图。
+– `Game[3]`(`1^λ`)：此游戏同 `Game[2]`，不同之处在于挑战密文和用户密钥按如下方式计算（与 `Game[2]` 的差异已高亮显示）：`[a]_2 ←_R G_2^2` 且 `a = a_∥ + α b^⊥`。`[a r]_2 [K]_2` 其中 `b^⊥` 为满足 `b^⊤ b^⊥ = 0` 且 `z^⊤ b^⊥ = 1` 的向量。`Game[3]` 和 `Game[2]` 具有相同的分布，这源于以下两个分布相等：`([a]_2, [a r]_2)` 和 `([a_∥ + α b^⊥]_2, [a_∥ r + α r b^⊥]_2)` 其中 `b^⊥` 为满足 `b^⊤ b^⊥ = 0` 且 `z^⊤ b^⊥ = 1` 的向量。存在一个后处理算法，给定按第一个分布分布的输入，产生按 `Game[2]` 指定分布的输出；而给定按第二个分布分布的输入，同一后处理算法产生按 `Game[3]` 指定分布的输出。即，后处理算法在接收输入后，采样 `r ←_R Z_p` 并直接生成 `A` 的视图。
 
-最后，我们证明 `Game[3]` 中的安全性可归约为上述 ABE 的*密钥*变体的安全性。即，我们构建一个归约 `B_3` 使得 `Adv[3] ≤ Adv_A^sk-ABE(λ)`，其中 `sk-ABE` 是通过转换谓词编码 (`EncCt`, `EncKey`, `Decode`) 获得的密钥 ABE（使用循环群 `G_2`；见图 7.2）。事实上，`Game[3]` 中引入的向量 `U_i` 和标量 `α ∈ Z_p`（上文高亮部分）充当 `sk-ABE` 方案的密钥。我们现在描述 `B_3`。它从其安全游戏接收公钥 `mpk` = `G_1`。它采样 `(b | z) ←_R GL_2`, `k ←_R Z_p²` 并发送 `mpk` = (`[b]_1`, (`[U_i b]_1`)[i∈[n]], `[k^⊤ b]_T`) 给 `A`。它计算 `b^⊥` 为满足 `b^⊤ b^⊥ = 0` 且 `z^⊤ b^⊥ = 1` 的向量。每当 `A` 就 `att` 查询其预言机 `O_KeyGen` 时，`B_3` 查询其自身预言机以获取 `[K]_2`，其中 `K = EncKey`(`att`) 是 `sk-ABE` 的全局参数，而 `r ←_R Z_p` 为每次 `usk` 生成新采样，且 `K = EncKey`(`att`)。归约 `B_3` 将 `[a_∥ r + α r b^⊥]_2 [K]_2` 发送给 `A`，它可以计算该值因为它知道值 (`U_i`)[i∈[n]] 和 `a_∥`。当 `A` 发送挑战 `P` 时，`B_3` 将其转发给其自身安全游戏以接收 `ct` = (`u[1] | ··· | u[n]`) `C` 其中 `C = EncCt`(`P`) 且 `kem` = `[γ]_2`，其中 `γ = α` 或 `γ ←_R Z_p`，取决于 `sk-ABE` 安全游戏选取的随机比特。然后，`B_3` 发送 `[U_i z]_1` 和 `kem` = `[k^⊤ z + γ]_T`，它可以计算这些值因为它知道 `k`, `b`, `z` 和 (`U_i`)[i∈[n]]。显然，`B_3` 生成的输出对应于 `A` 在 `Game[3]` 中的视图，且其输入按 `sk-ABE` 的安全游戏分布。因此，我们有 `Adv[3] ≤ Adv_A^sk-ABE(λ)`。最后，根据几页前证明的 `sk-ABE` 的安全性，我们知道存在 PPT 对手 `B_2` 和可忽略函数 `ν` 使得 `Adv_A^sk-ABE(λ) ≤ Adv_B2^DDH(λ) + ν(λ)`。总体而言，我们得到 `Adv_A^ABE(λ) ≤ Adv_B1^DDH(λ) + Adv_B2^DDH(λ) + ν(λ) + 2/p`。
+最后，我们证明 `Game[3]` 中的安全性可归约为上述 ABE 的*密钥*变体的安全性。即，我们构建一个归约 `B_3` 使得 `Adv[3] ≤ Adv_A^sk-ABE(λ)`，其中 `sk-ABE` 是通过转换谓词编码 (`EncCt`, `EncKey`, `Decode`) 获得的密钥 ABE（使用循环群 `G_2`；见图 7.2）。事实上，`Game[3]` 中引入的向量 `U_i` 和标量 `α ∈ Z_p`（上文高亮部分）充当 `sk-ABE` 方案的密钥。我们现在描述 `B_3`。它从其安全游戏接收公钥 `mpk` = `G_1`。它采样 `(b | z) ←_R GL_2`, `k ←_R Z_p^2` 并发送 `mpk` = (`[b]_1`, (`[U_i b]_1`)[i∈[n]], `[k^⊤ b]_T`) 给 `A`。它计算 `b^⊥` 为满足 `b^⊤ b^⊥ = 0` 且 `z^⊤ b^⊥ = 1` 的向量。每当 `A` 就 `att` 查询其预言机 `O_KeyGen` 时，`B_3` 查询其自身预言机以获取 `[K]_2`，其中 `K = EncKey`(`att`) 是 `sk-ABE` 的全局参数，而 `r ←_R Z_p` 为每次 `usk` 生成新采样，且 `K = EncKey`(`att`)。归约 `B_3` 将 `[a_∥ r + α r b^⊥]_2 [K]_2` 发送给 `A`，它可以计算该值因为它知道值 (`U_i`)[i∈[n]] 和 `a_∥`。当 `A` 发送挑战 `P` 时，`B_3` 将其转发给其自身安全游戏以接收 `ct` = (`u[1] | ··· | u[n]`) `C` 其中 `C = EncCt`(`P`) 且 `kem` = `[γ]_2`，其中 `γ = α` 或 `γ ←_R Z_p`，取决于 `sk-ABE` 安全游戏选取的随机比特。然后，`B_3` 发送 `[U_i z]_1` 和 `kem` = `[k^⊤ z + γ]_T`，它可以计算这些值因为它知道 `k`, `b`, `z` 和 (`U_i`)[i∈[n]]。显然，`B_3` 生成的输出对应于 `A` 在 `Game[3]` 中的视图，且其输入按 `sk-ABE` 的安全游戏分布。因此，我们有 `Adv[3] ≤ Adv_A^sk-ABE(λ)`。最后，根据几页前证明的 `sk-ABE` 的安全性，我们知道存在 PPT 对手 `B_2` 和可忽略函数 `ν` 使得 `Adv_A^sk-ABE(λ) ≤ Adv_B2^DDH(λ) + ν(λ)`。总体而言，我们得到 `Adv_A^ABE(λ) ≤ Adv_B1^DDH(λ) + Adv_B2^DDH(λ) + ν(λ) + 2/p`。
 
 ■
-
-
-
 
 首先，IBE（基于身份的加密）的概念由 Shamir（1984）提出，作为传统公钥基础设施的替代方案：在 IBE 中，任何标识接收者的比特串（如电子邮件地址或社会安全号码）均可充当公钥。首个构造由 Boneh 和 Franklin（2001）基于双线性对给出。在此过程中，他们引入了双线性对在密码学中的建设性用途。
 
@@ -3320,33 +3217,9 @@ Pfitzmann, B. and Waidner, M. (1997)。面向更大共谋规模的非对称指�
 
 ## 7.5. 参考文献
 
-Attrapadung, N. (2014). Dual system encryption via doubly selective security: Framework, fully secure functional encryption for regular languages, and more. In *EUROCRYPT 2014*, vol. 8441 of *LNCS*, Nguyen, P.Q., Oswald, E. (eds). Springer, Heidelberg.
 
-Bethencourt, J., Sahai, A., Waters, B. (2007). Ciphertext-policy attribute-based encryption. In *2007 IEEE Symposium on Security and Privacy.* IEEE Computer Society Press.
 
-Boneh, D. and Franklin, M.K. (2001). Identity-based encryption from the Weil pairing. In *CRYPTO 2001*, vol. 2139 of *LNCS*, Kilian, J. (ed.). Springer, Heidelberg.
-
-Goyal, V., Pandey, O., Sahai, A., Waters, B. (2006). Attribute-based encryption for fine-grained access control of encrypted data. In *ACM CCS 2006*, Juels, A., Wright, R.N., De Capitani di Vimercati, S. (eds). ACM Press. Cryptology ePrint Archive Report 2006/309.
-
-Guillevic, A. (2013). Comparing the pairing efficiency over composite-order and prime-order elliptic curves. In *ACNS 13*, vol. 7954 of *LNCS*, Jacobson, M., Locasto, M., Mohassel, P., Safavi-Naini, R. (eds). Springer, Heidelberg.
-
-Karchmer, M. and Wigderson, A. (1993). On span programs. In *Proceedings of the Eigth Annual Structure in Complexity Theory Conference 1993.* IEEE Computer Society.
-
-Lewko, A.B. (2012). Tools for simulating features of composite order bilinear groups in the prime order setting. In *EUROCRYPT 2012*, vol. 7237 of *LNCS*, Pointcheval, D., Johansson, T. (eds). Springer, Heidelberg.
-
-Okamoto, T. and Takashima, K. (2009). Hierarchical predicate encryption for inner-products. In *ASIACRYPT 2009*, vol. 5912 of *LNCS*, Matsui, M. (ed.). Springer, Heidelberg.
-
-Sahai, A. and Waters, B.R. (2005). Fuzzy identity-based encryption. In *EUROCRYPT 2005*, vol. 3494 of *LNCS*, Cramer, R. (ed.). Springer, Heidelberg.
-
-Shamir, A. (1984). Identity-based cryptosystems and signature schemes. In *CRYPTO’84*, vol. 196 of *LNCS*, Blakley, G.R., Chaum, D. (eds). Springer, Heidelberg.
-
-Waters, B. (2009). Dual system encryption: Realizing fully secure IBE and HIBE under simple assumptions. In *CRYPTO 2009*, vol. 5677 of *LNCS*, Halevi, S. (ed.). Springer, Heidelberg.
-
-Wee, H. (2014). Dual system encryption via predicate encodings. In *TCC 2014*, vol. 8349 of *LNCS*, Lindell, Y. (ed.). Springer, Heidelberg.
-
-# 8
-
-高级签名
+# 高级签名
 
 **Olivier SANDERS**
 
@@ -3360,11 +3233,9 @@ Wee, H. (2014). Dual system encryption via predicate encodings. In *TCC 2014*, v
 
 这个例子展示了在许多需要认证的使用场景中遇到的两个基本需求。首先是将泄露的信息限制在严格必要的范围内。当一个人必须证明自己是成年人时，常规做法不应是为了达到此目的，还必须发送身份证中包含的一系列信息（姓名、出生日期、地址等）。验证只应揭示此人是否为成年人。第二个需求是限制在用户出示身份后对其进行追踪的能力。如果此人必须两次证明自己是成年人，则不应能够关联这两份“证明”。否则，这种可追踪性在大多数情况下都会导致对该人的精确识别。
 
-
-
 这两种需求似乎最初与数字签名认证的原则不兼容。首先，签名 `σ` 的创建正是为了保证一段数据 `m` 未被篡改或截断。根据定义，`σ` 只能在完全知晓 `m` 的情况下进行验证，这似乎与我们的第一个需求相冲突。然后，用于认证的接收签名是其持有者所有认证共有的元素，本身也是一个可用于追踪的元素。当然，可以定期发送新签名来缓解这一问题，正如当前针对联网车辆所规定的那样，但这种方法给公钥基础设施（PKI）带来了沉重负担，因为 PKI 随后被请求的频率高得多，而且最重要的是，无法防范涉及这些基础设施本身的可追踪性，因为它们有能力将所有签名关联到单一身份。
 
-这种在仍要证明某些属性（在此例中，检查签名是否有效）的同时隐藏某些元素（签名、消息的全部或部分）的需求，显然需要用到 第 3 章 中介绍的*零知识*证明机制。理论上，这些机制完全能够处理这类待证明的关系。但在实践中，要获得有效的解决方案，情况会更加复杂，特别是需要一个合适的组合（签名方案 `S`、*零知识*证明协议 `Π`），即能够利用 `Π` 有效地证明：在消息 `m` 上使用 `S` 生成的 `σ` 签名是有效的，且不泄露 `m` 或 `σ`。通常，这些主要是适配现有*零知识*证明的签名方案，正如我们下面将看到的。在本章剩余部分中，此类方案将被称为*高级*签名方案。
+这种在仍要证明某些属性（在此例中，检查签名是否有效）的同时隐藏某些元素（签名、消息的全部或部分）的需求，显然需要用到第 3 章中介绍的*零知识*证明机制。理论上，这些机制完全能够处理这类待证明的关系。但在实践中，要获得有效的解决方案，情况会更加复杂，特别是需要一个合适的组合（签名方案 `S`、*零知识*证明协议 `Π`），即能够利用 `Π` 有效地证明：在消息 `m` 上使用 `S` 生成的 `σ` 签名是有效的，且不泄露 `m` 或 `σ`。通常，这些主要是适配现有*零知识*证明的签名方案，正如我们下面将看到的。在本章剩余部分中，此类方案将被称为*高级*签名方案。
 
 在所有情况下，这种需要适当地与*零知识*证明交互的需求都有一个根本后果：它排除了所有将待签名消息通过密码学哈希函数进行哈希处理的方案，因此特别排除了所有哈希再签名方法或依赖 Fiat-Shamir 启发式算法（Fiat 和 Shamir 1987）的方法，后者构成了绝大多数实际使用的签名方案的基础（参见 Pointcheval 和 Stern (2000) 及其参考文献）。高级签名中对哈希函数的近乎禁用，很大程度上解释了它们与传统签名方案的差异。特别是，这使得长消息问题重新浮现，因为长消息不再能简单地通过哈希处理变成方便的大小。
 
@@ -3374,7 +3245,7 @@ Wee, H. (2014). Dual system encryption via predicate encodings. In *TCC 2014*, v
 
 ### 8.2.1. 标量消息的情况
 
-如上所述，高级签名方案最常是在考虑特定的*零知识*证明协议的前提下构建的。自 1976 年 Diffie 和 Hellman (1976) 的开创性文章发表以来，公钥加密主要依赖于素数阶 `p` 的群 `G`。正如 第 5 章 所述，考虑配备配对 `e` 的双线性群 (`G₁`, `G₂`, `G_T`) 的特殊情况通常很有用。
+如上所述，高级签名方案最常是在考虑特定的*零知识*证明协议的前提下构建的。自 1976 年 Diffie 和 Hellman (1976) 的开创性文章发表以来，公钥加密主要依赖于素数阶 `p` 的群 `G`。正如第 5 章所述，考虑配备配对 `e` 的双线性群 (`G₁`, `G₂`, `G_T`) 的特殊情况通常很有用。
 
 在它们的众多优势中，素数阶群与 Schnorr (1990) 提出的离散对数知识*零知识*证明兼容。具体来说，可以非常高效地证明对满足一个或多个关系 `R` 的标量 `x₁`, `x₂`, ..., `xₙ` ∈ `Z_p` 的知识。
 
@@ -3382,13 +3253,10 @@ Wee, H. (2014). Dual system encryption via predicate encodings. In *TCC 2014*, v
 
 #### 8.2.1.1. Boneh-Boyen 签名
 
-– `Setup(1^k)`：给定 `k` 为系统的安全参数，该算法返回双线性群的描述 `pp` ← (`p`, `G₁`, `G₂`, `G_T`, `e`)。
-
-– `Keygen(pp)`：该算法选择两个生成元 `g` ∈ `G₁` 和 `h` ∈ `G₂`，以及一个随机标量 `x` ← `Z_p`，并计算 `y = g^x`。私钥 `sk` 为 `x`，公钥 `pk` 为 `y`。
-
-– `Sign(sk, m)`：给定 `m` ∈ `Z_p` 为待签名消息，该算法返回签名 `σ = g^(1/(x+m))`。
-
-– `Verify(m, σ, pk)`：要检查消息 `m` 上签名 `σ` 的有效性，该算法测试 `e(σ, y · g^m) = e(g, h)` 是否成立，若成立则返回 1，否则返回 0。
+- **`Setup(1^k)`**：给定 `k` 为系统的安全参数，该算法返回双线性群的描述 `pp` ← (`p`, `G₁`, `G₂`, `G_T`, `e`)。
+- **`Keygen(pp)`**：该算法选择两个生成元 `g` ∈ `G₁` 和 `h` ∈ `G₂`，以及一个随机标量 `x` ← `Z_p`，并计算 `y = g^x`。私钥 `sk` 为 `x`，公钥 `pk` 为 `y`。
+- **`Sign(sk, m)`**：给定 `m` ∈ `Z_p` 为待签名消息，该算法返回签名 `σ = g^(1/(x+m))`。
+- **`Verify(m, σ, pk)`**：要检查消息 `m` 上签名 `σ` 的有效性，该算法测试 `e(σ, y · g^m) = e(g, h)` 是否成立，若成立则返回 1，否则返回 0。
 
 上述方案仅满足 EUF-CMA 安全性的一个弱版本，但在实践中，对于我们将在本章末尾看到的许多应用已足够。Boneh 和 Boyen (2008) 的研究尽管如此也解释了如何以适度增加复杂度为代价达到完全的 EUF-CMA 安全性。此外，Camenisch 和 Lysyanskaya (2004); Au 等人 (2006) 描述了一个能同时签名多条消息的版本，但本章不需要用到。在我们的例子中，利用配对的双线性，验证方程可以简单地重写为
 
@@ -3402,28 +3270,22 @@ e(σ, y · g^m) = e(g, h)
 
 然而，Camenisch 和 Lysyanskaya 的原始方案在要签名的消息数量上存在线性复杂度。特别是，签名的大小随要签名的消息数量增加而增加，这在身份数据等情况下会带来问题，因为必须验证多个元素（姓、名、出生日期等）。为了解决这个问题，Pointcheval 和 Sanders (2016) 提出了一个新方案，具有与 Camenisch 和 Lysyanskaya (2004) 相同的特性，但签名大小为常数。从概念上讲，这两种构造实际上非常相似，因此本章将只介绍最新的一个（Pointcheval 和 Sanders 2016）。
 
-
-
-
 #### 8.2.1.2. Pointcheval–Sanders 签名
 
-- **`Setup`(1^k)**：无论安全设置 *k* 为何值，该算法均输出类型 III 双线性群的描述 `pp` ← (*p*, *G*[1], *G*[2], *G*[*T*], *e*)。
+- **`Setup(1^k)`**：无论安全设置 `k` 为何值，该算法均输出类型 III 双线性群的描述 `pp` ← (`p`, `G₁`, `G₂`, `G_T`, `e`)。
+- **`Keygen(pp, n)`**：该算法生成 `x` ← `Z_p` 和 `y₁`,..., `yₙ` ← `Z_p`，然后计算 `Y₁` ← `g₁^y₁`,..., `Yₙ` ← `g₁^yₙ`。私钥 `sk` 定义为 (`x, y₁`,..., `yₙ`)，公钥 `pk` 定义为 (`g₁^x`, `Y₁`,..., `Yₙ`)。
+- **`Sign(sk, m₁,..., mₙ)`**：为对消息 `m₁`,..., `mₙ` 签名，该算法选择一个随机生成元 `h` ← `G₁` 并返回 `σ₁` ← `h`, `σ₂` ← `h^(x + Σ yᵢ mᵢ)`。
+- **`Verify(pk, (m₁,..., mₙ), σ)`**：给定签名 `σ` = (`σ₁`, `σ₂`)，该算法检查条件 `e(σ₁, g₁^x · Π Yᵢ^mᵢ) = e(σ₂, g₁)` 是否成立。若成立则返回 1，否则返回 0。
 
-- **`Keygen`(`pp`, *n*)**：该算法生成 *x* ← *Z*[*p*] 和 *y*[1]*,..., y*[*n*] ← *Z*[*p*]，然后计算 *Y*[1] ← *g*[1]^*y*[1]*,..., Y*[*n*] ← *g*[1]^*y*[*n*]。私钥 `sk` 定义为 (*x, y*[1]*,..., y*[*n*])，公钥 `pk` 定义为 (*g*[1]^*x*, *Y*[1]*,..., Y*[*n*])。
-
-- **`Sign`(`sk`, *m*[1]*,..., m*[*n*])**：为对消息 *m*[1]*,..., m*[*n*] 签名，该算法选择一个随机生成元 *h* ← *G*[1] 并返回 *σ*[1] ← *h*, *σ*[2] ← *h*^(*x* + Σ*y*[*i*]*m*[*i*])。
-
-- **`Verify`(`pk`, (*m*[1]*,..., m*[*n*]), *σ*)**：给定签名 *σ* = (*σ*[1], *σ*[2])，该算法检查条件 *e*(*σ*[1], *g*[1]^*x* · Π*Y*[*i*]^*m*[*i*]) = *e*(*σ*[2], *g*[1]) 是否成立。若成立则返回 1，否则返回 0。
-
-正如我们在本章引言中所解释的，存在多条消息的情况不能简单地借助哈希函数来处理。在该方案中，消息 *m*[*i*] 使用秘密系数 (*y*[*i*]) 进行“混合”，从而避免了补偿现象。直观上讲，事实上，这考虑到了这样一种情况：若对手在不知道 *y*[1]*t* 值的情况下，将 *m*[1] 替换为 *m*[1] + *t*（其中 *t* ∈ *Z*[*p*]），则无法调整其他 *m*[*i*] 以获得有效签名来进行补偿。在此，我们也可以将验证方程重写为以下形式
+正如我们在本章引言中所解释的，存在多条消息的情况不能简单地借助哈希函数来处理。在该方案中，消息 `mᵢ` 使用秘密系数 (`yᵢ`) 进行“混合”，从而避免了补偿现象。直观上讲，事实上，这考虑到了这样一种情况：若对手在不知道 `y₁ t` 值的情况下，将 `m₁` 替换为 `m₁ + t`（其中 `t` ∈ `Z_p`），则无法调整其他 `mᵢ` 以获得有效签名来进行补偿。在此，我们也可以将验证方程重写为以下形式
 
 ```
-e(σ[1], g[1]^x · Π Y[i]^m[i]) = e(σ[2], g[1])
+e(σ₁, g₁^x · Π Yᵢ^mᵢ) = e(σ₂, g₁)
 ```
 
-以突出其与 Schnorr 协议的联系。实际上，每条消息都作为指数出现，这使得可以通过证明（Schnorr 1990）来证明知识。与 Boneh–Boyen 签名的主要区别在于，*σ* 这一次可以根据需要随机化任意次数。确实，对于任意标量 *r* ∈ *Z*[*p*]，签名 *σ*′ = (*σ*[1]^*r*, *σ*[2]^*r*) 满足与之前相同的关系。此外，只要消息 *m*[*i*] 中有一个是秘密的，在 *G*[1] 中的 `DDH` 假设下，就无法关联 *σ* 和 *σ*′。即使所有元素 *g*^*m*[*i*] 都是公开的，该性质依然成立，这在某些用例中将对我们有用。
+以突出其与 Schnorr 协议的联系。实际上，每条消息都作为指数出现，这使得可以通过证明（Schnorr 1990）来证明知识。与 Boneh–Boyen 签名的主要区别在于，`σ` 这一次可以根据需要随机化任意次数。确实，对于任意标量 `r` ∈ `Z_p`，签名 `σ'` = (`σ₁^r`, `σ₂^r`) 满足与之前相同的关系。此外，只要消息 `mᵢ` 中有一个是秘密的，在 `G₁` 中的 `DDH` 假设下，就无法关联 `σ` 和 `σ'`。即使所有元素 `g^mᵢ` 都是公开的，该性质依然成立，这在某些用例中将对我们有用。
 
-在所有情况下，这意味着可以传输 *σ*′ 以进行认证，并借助 Schnorr 协议证明对消息 *m*[*i*] 的知晓。由此产生的协议随后实现了我们期望从现代认证系统中获得的不可追踪性和所揭露数据最小化属性。这种看似相当基础的构造，实际上将构成本章末尾大量书面协议的基础。
+在所有情况下，这意味着可以传输 `σ'` 以进行认证，并借助 Schnorr 协议证明对消息 `mᵢ` 的知晓。由此产生的协议随后实现了我们期望从现代认证系统中获得的不可追踪性和所揭露数据最小化属性。这种看似相当基础的构造，实际上将构成本章末尾大量书面协议的基础。
 
 ### 8.2.2. 非标量消息的情况
 
@@ -3431,34 +3293,33 @@ e(σ[1], g[1]^x · Π Y[i]^m[i]) = e(σ[2], g[1])
 
 2008 年，Groth 和 Sahai（2008）在*零知识*证明方面取得了一项重大进展，他们提出了一种在标准模型下（即无随机预言机）被证明安全的新型非交互式证明系统。其系统的优势在于涵盖了涉及双线性群元素的非常广泛的关系，这使它们占据了不可计数的密码学协议中的一席之地。当然，其效率不如 Schnorr + Fiat–Shamir 的组合，但对许多人而言，就在标准模型下证明安全性的能力而言，额外的开销是可以接受的。
 
-不幸的是，这些被称为 Groth-Sahai 的证明存在一个局限，使它们几乎与上述签名方案不兼容。事实上，无法用它们来证明对标量 *m* ∈ *Z*[*p*] 的知晓，而这些标量正是这些方案的消息。然而，Groth 和 Sahai 提出的系统却可以证明对群 *G*[1] 和 *G*[2] 元素的知晓，这将创建另一分支高级签名，即保持结构的签名，也就是结构保持签名（Abe et al. 2010）。
+不幸的是，这些被称为 Groth-Sahai 的证明存在一个局限，使它们几乎与上述签名方案不兼容。事实上，无法用它们来证明对标量 `m` ∈ `Z_p` 的知晓，而这些标量正是这些方案的消息。然而，Groth 和 Sahai 提出的系统却可以证明对群 `G₁` 和 `G₂` 元素的知晓，这将创建另一分支高级签名，即保持结构的签名，也就是结构保持签名（Abe et al. 2010）。
 
-这一名称源于这样的事实：这些签名机制以 *G*[1] 和 *G*[2] 的元素作为输入，并生成由这些相同群中取得的元素组成的签名，可借助配对乘积进行验证。这一规范实际上是 Groth-Sahai 证明能力的直接转置，这些机制正是专门为这些能力而设计的。
+这一名称源于这样的事实：这些签名机制以 `G₁` 和 `G₂` 的元素作为输入，并生成由这些相同群中取得的元素组成的签名，可借助配对乘积进行验证。这一规范实际上是 Groth-Sahai 证明能力的直接转置，这些机制正是专门为这些能力而设计的。
+
+
 
 虽然提出了大量构造和变体，但我们将仅描述 Abe 等人（2011）提出的那个，因为它目前对于类型 III 非对称双线性群而言是最高效的。
 
-#### 8.2.2.1. AFGHO 签名
+### 8.2.2.1. AFGHO 签名
 
-- **`Setup`(1^k)**：给定安全参数 *k*，该算法返回类型 III 双线性群的描述 `pp` ← (*p*, *G*[1], *G*[2], *G*[*T*], *e*)。
+- **`Setup(1^k)`**：给定安全参数 *k*，该算法返回类型 III 双线性群的描述 `pp` ← (*p*, *G*[1], *G*[2], *G*[*T*], *e*)。
 
-- **`Keygen`(`pp`, *n*)**：该算法生成 *υ* ← *Z*[*p*], *u*[1]*,..., u*[*n*] ← *Z*[*p*]，然后计算 (*U*[1]*,..., U*[*n*]) ← (*g*[1]^*u*[1]*,..., g*[1]^*u*[*n*]) 和 *V* ← *g*[2]^*υ*。私钥 `sk` 定义为 (*υ, u*[1]*,..., u*[*n*])，公钥 `pk` 定义为 (*V, U*[1]*,..., U*[*n*])。
+- **`Keygen(pp, n)`**：该算法生成 *υ* ← *Z*[*p*], *u*[1]*,..., u*[*n*] ← *Z*[*p*]，然后计算 (*U*[1]*,..., U*[*n*]) ← (*g*[1]^*u*[1]*,..., g*[1]^*u*[*n*]) 和 *V* ← *g*[2]^*υ*。私钥 `sk` 定义为 (*υ, u*[1]*,..., u*[*n*])，公钥 `pk` 定义为 (*V, U*[1]*,..., U*[*n*])。
 
-- **`Sign`(`sk`, *M*[1]*,..., M*[*n*])**：为对消息 *M*[1]*,..., M*[*n*] ∈ *G*[1] 签名，该算法选择一个随机标量 *r* ← *Z*[*p*] 并返回 *R* ← *g*[1]^*r*, *S* = *R*^*υ* 和 *T*[1] ← *M*[1]^*r*, ..., *T*[*n*] ← *M*[*n*]^*r*。
+- **`Sign(sk, M*[1]*,..., M*[*n*])**：为对消息 *M*[1]*,..., M*[*n*] ∈ *G*[1] 签名，该算法选择一个随机标量 *r* ← *Z*[*p*] 并返回 *R* ← *g*[1]^*r*, *S* = *R*^*υ* 和 *T*[1] ← *M*[1]^*r*, ..., *T*[*n*] ← *M*[*n*]^*r*。
 
-- **`Verify`(`pk`, *M*[1]*,..., M*[*n*], *σ*)**：给定签名 *σ* = (*R, S, T*[1]*,..., T*[*n*])，该算法检查条件 *e*(*S, g*[2]) = *e*(*R, V*) 和 *e*(*R, T*[*i*]) · *e*(*M*[*i*], *U*[*i*]) = 1 是否成立。若成立则返回 1，否则返回 0。
+- **`Verify(pk, M*[1]*,..., M*[*n*], σ)**：给定签名 *σ* = (*R, S, T*[1]*,..., T*[*n*])，该算法检查条件 *e*(*S, g*[2]) = *e*(*R, V*) 和 *e*(*R, T*[*i*]) · *e*(*M*[*i*], *U*[*i*]) = 1 是否成立。若成立则返回 1，否则返回 0。
 
 因此获得的签名可以通过选择标量 *r*′ ← *Z*[*p*] 并计算 *R*′ ← *R*^*r*′, *S*′ ← *S*^*r*′, *T*′[*i*] ← *T*[*i*]^*r*′ 来随机化。不幸的是，*R*′ 可以被关联，因为 *R*′ = *g*[1]^*rr*′，因此随机化后至少有必要隐藏 *T*′。
 
-在所有情况下，我们注意到该方案满足所有 Groth-Sahai 证明标准：可以证明对已签名消息的知晓，且后者由 *T*[*i*] 妥善认证。因此，它可以像 第 8.2.1 节 中的方案一样在实践中使用，从而在标准模型下实现安全性。
+在所有情况下，我们注意到该方案满足所有 Groth-Sahai 证明标准：可以证明对已签名消息的知晓，且后者由 *T*[*i*] 妥善认证。因此，它可以像第 8.2.1 节中的方案一样在实践中使用，从而在标准模型下实现安全性。
 
 ## 8.3. 应用
 
 本章引言中给出的示例本质上凸显了对不可追踪性的需求，更广泛地说，是对每次认证中所揭露信息最小化的需求。然而，根据使用实例的不同，这一需求应与其他必要条件相协调，这导致密码学界提出了各种各样的原语，我们将其统称为匿名认证机制。在本节中，我们将给出其中一些示例，选择它们是因为它们在该领域具有代表性或取得了工业上的成功。本节旨在凸显上述高级签名在此类机制构建中绝对核心的作用。
 
 ### 8.3.1. 匿名凭证
-
-
-
 
 匿名凭证的概念相当宽泛，因为在密码学中，它涵盖了所有用户 ![image](img/u.jpg) 从实体 ![image](img/i.jpg) 获取其“属性”证书的解决方案，以便随后能够匿名地向任何验证者 ![image](img/v.jpg) 证明其属性满足某些条件。一个典型的例子是简介中概述的身份证。在这里，![image](img/u.jpg) 将是一位公民，首次从行政部门（此处扮演 ![image](img/i.jpg) 的角色）获取数字身份证，该证书认证其属性，即姓、名、地址、出生日期等。随后，该卡可向卖家（扮演 ![image](img/v.jpg) 的角色）出示，以保证 ![image](img/u.jpg) 符合购买所需的条件。
 
@@ -3467,12 +3328,15 @@ e(σ[1], g[1]^x · Π Y[i]^m[i]) = e(σ[2], g[1])
 Fuchsbauer 等人 (2019) 最近提出的模型允许多次认证，并将安全性归约为以下两个概念：
 
 *   **不可伪造性**：用户无法说服诚实的验证者，其拥有未曾获得过证书的一组属性 ![image](img/a1.jpg) = {*a*[1]*,..., a[m]*}。即使该用户拥有每个都关联 ![image](img/a1.jpg) 真子集的证书（抗共谋性），且观察过另一位拥有所有这些属性的用户的认证过程，此性质依然成立。
+
 *   **匿名性**：认证过程中，除用户主动揭示的属性外，不泄露任何关于用户的信息。特别是，无法判断两次反映相同属性 A 的认证，是否涉及同一用户，还是两个均获得了反映（特别是）![image](img/a1.jpg) 证书的不同用户。
 
 为了阐释该模型产生的微妙之处，从上述高级签名之一（例如 Pointcheval and Sanders (2016) 的签名）入手是很有启发性的，我们将在下文用 Σ 表示该签名以避免混淆。乍一看，匿名凭证的构造似乎可以归纳如下：
 
 *   `IssuerKeygen`：该算法通过执行 `Σ.Keygen` 生成一对密钥 (`sk`, `pk`)。
-*   (`Obtain, Issue`)：为获取属性 (*a*[1]*,..., a[n]*) 的证书，用户与 ![image](img/i.jpg) 交互，后者返回由执行 `Sign`(`sk`, *a*[1]*,..., a[n]*) 生成的签名 *σ*。
+
+*   (`Obtain, Issue`)：为获取属性 (*a*[1]*,..., a[n]*) 的证书，用户与 ![image](img/i.jpg) 交互，后者返回由执行 `Sign(sk, a*[1]*,..., a[n]*)` 生成的签名 *σ*。
+
 *   (`Show, Verify`)：为证明其持有特定属性集 (*a*[*i*[1]] *,..., *a*[*i*[m]]*) 的证书，用户在发送前对 *σ* 进行随机化。从而证明随机化后的签名 *σ*′ 在 (*a*[*i*[1]] *,..., *a*[*i*[m]]*) 上的有效性，与其在其余属性（用户证明知晓这些属性）上的有效性一致。更具体地说，若 ![image](img/i290.jpg) 且 ![image](img/i291.jpg) = {*i*[1]*,..., i[m]*}，则 ![image](img/u.jpg) 利用上述 Schnorr 协议，证明知晓 ![image](img/i292.jpg) 个元素，例如：
 
 ![image](img/p174-1.jpg)
@@ -3490,8 +3354,6 @@ Fuchsbauer 等人 (2019) 最近提出的模型允许多次认证，并将安全�
 ![image](img/p176-1.jpg)
 
 甚至 ![image](img/i297.jpg) 但无法更进一步，因为 `DDH` 假设向我们保证，即使知晓 *σ*[1] 和 ![image](img/i299.jpg)，![image](img/i298.jpg) 对于 ![image](img/a.jpg) 而言，也与 ![image](img/g1.jpg)[1] 的元素不可区分。换句话说，*σ*[2] 被一个伪随机的 ![image](img/i300.jpg) 值掩盖，阻止了 ![image](img/a.jpg) 获取关于该元素的任何信息。因此，匿名性直接依赖于 `DDH` 假设，这在密码学中被认为是非常合理的。
-
-
 
 最后，我们可以指出，上述协议并未完全解决引言中描述的问题。实际上，该协议在目前的形式下，仅能实现揭示某些属性。在用户必须证明其年满 18 岁的情况下，这意味着他们必须发送“年龄”属性，从而泄露了超出必要范围的信息。幸运的是，通过将匿名凭证协议与针对特定用例需求调整的 `zero-knowledge`（零知识）证明相结合，可以非常简单地解决这一问题。在我们的例子中，要在不透露年龄的情况下证明用户年满 18 岁，只需将年龄视为隐藏属性，并使用 `zero-knowledge` 证明来证明其属于某个区间（此时将为相关区间 *a* 证明“年龄 [18, *a*]”），例如 Canard 等人 (2013) 中描述的那些。只要存在合适的 `zero-knowledge` 协议，且秘密作为指数干预验证方程，就可以用类似的方式证明属性上的任何其他属性。
 
@@ -3521,14 +3383,13 @@ Chaum 和 van Heyst 的原始论文通过企业网络上的打印机用例，论
 
 – `Join`：该协议由新成员发起，本质上向群管理员发送 *h^b*，其中 *b* 是 ![image](img/z1.jpg)[*p*] 中的随机元素，而 *h* ∈ ![image](img/g1.jpg)[1] 是群公钥中提供的一个元素。随后，群管理员生成另一个随机标量 *a* ∈ ![image](img/z1.jpg)[*p*]，并计算一个 *A* ∈ ![image](img/g1.jpg)[1] 元素，使得 *A*^(*x*+*a*) = *g · h^b*。三元组 (*A, a, b*) 因此构成了新成员的签名密钥。
 
-
-
-
 ### 8.3.3. 直接匿名认证
 
 前文提到的群签名的优势在于，这种能力能够通过解除匿名的程序来制衡强匿名性（即使在用户密钥泄露的情况下也能得到保证），该程序会威胁要识别出任何滥用者的身份。然而，这假设至少存在一个愿意接受这一监管角色并赢得群组所有成员信任的开启授权机构。
 
 在实践中，这一假设并不总是成立，因此有必要思考一些更加去中心化的替代追踪机制。目前最流行的例子可能是直接匿名认证（Brickell 等人，2004），我们将其表示为 `DAA`，以及被称为 `EPID`（增强隐私 ID）的变体（Brickell 和 Li，2007）。如今，这两种机制已部署在数十亿个芯片中（TCG 2015；Intel 2017），主要用于允许安全飞地进行匿名认证。
+
+
 
 直观上讲，`DAA` 本质上是一种群签名，因为它允许实体在群管理员注册后，作为特定群组成员进行匿名认证。其创新之处在于不再有开启过程，而仅有一个受控的追踪机制，其运作方式如下。在认证过程中，签名者能够基于验证者选定的字符串 `bsn`（基础名称）确定性地生成一个标签 `T`。如果签名者对两次不同的认证使用相同的 `bsn`，则生成的标签将相同，从而允许验证者关联这两次认证。如果签名者使用两个不同的 `bsn` 值，则标签将不可关联。因此，验证者通过选择 `bsn` 来控制可追踪性的粒度。
 
@@ -3536,44 +3397,45 @@ Chaum 和 van Heyst 的原始论文通过企业网络上的打印机用例，论
 
 从具体角度来看，`DAA` 的选择有两个后果。一方面，不再需要加密身份数据并将其包含在 `DAA` 中，因为不再有开启过程。这使得 `DAA` 的复杂度比群签名显著降低，尤其是在高级签名可以被随机化时，这一点我们将在下文看到。另一方面，有必要构建一个追踪标签，以保证上述特性，即单个成员的签名可以被关联，但仅当它们关联到同一个字符串 `bsn` 时才可关联。
 
-#### 8.3.3.1. 生成标签
+### 8.3.3.1. 生成标签
 
 大多数经典 `DAA` 系统（即非后量子系统）以几乎相同的方式生成标签。签名者首先使用适配于该群的哈希函数 `H` 对字符串 `bsn` 进行哈希，以获得群元素 `H(bsn)`。然后，他/她使用包含在密钥中的元素 `s` 来生成标签 `T = H(bsn)^s`。
 
+除了简单性之外，此标签还具有多项优势。首先，它是确定性的，因为使用单个字符串 `bsn` 和单个密钥必然会生成相同的标签。其次，它保证了使用两个不同字符串 `bsn` 和 `bsn'` 生成的标签的不可链接性。事实上，在随机预言机模型中，链接 `H(bsn)^s` 和 `H(bsn')^s` 等同于在 `G1` 中解决 `DDH` 问题。第三，它将密钥 `s` 作为指数，这使得证明对其的知情成为可能。事实上，验证签名者是否真正使用了正确的密钥值 `s` 至关重要，这导致了 `zero-knowledge` 证明的使用。换句话说，签名者可以在每次认证时使用不同的 `s` 值以逃避追踪机制。
 
+将此标签系统与前几节原语的思想相结合以构建 `DAA` 系统是相当容易的。要证明组成员身份，实际上只需证明对由 `I` 颁发的密钥 `s` 的证书的知情，这可以通过我们在本章第一节中看到的高级签名非常简单地完成。使用我们将称为 Σ 的 Pointcheval-Sanders 签名方案，这导致了以下协议，这是 Barki 等人（2017）提出的 `DAA` 方案的简化版本。
 
+### 8.3.3.2. Barki 等人（2017）的 DAA
 
-除了简单性之外，此标签还具有多项优势。首先，它是确定性的，因为使用单个字符串`bsn`和单个密钥必然会生成相同的标签。其次，它保证了使用两个不同字符串`bsn`和`bsn'`生成的标签的不可链接性。事实上，在随机预言机模型中，链接`H(bsn)^s`和`H(bsn')^s`等同于在![image](img/g1.jpg)中解决`DDH`问题。第三，它将密钥`s`作为指数，这使得证明对其的知情成为可能。事实上，验证签名者是否真正使用了正确的密钥值`s`至关重要，这导致了`zero-knowledge`证明的使用。换句话说，签名者可以在每次认证时使用不同的`s`值以逃避追踪机制。
+- `IssuerKeygen`：此算法为 `I` 生成一对密钥 (`isk`, `ipk`) = `(sk, pk)` ← Σ.`Keygen`，并定义一个哈希函数 `H` : {0, 1}* → `G1`。
 
-将此标签系统与前几节原语的思想相结合以构建 DAA 系统是相当容易的。要证明组成员身份，实际上只需证明对由![image](img/i.jpg)颁发的密钥`s`的证书的知情，这可以通过我们在本章第一节中看到的高级签名非常简单地完成。使用我们将称为Σ的 Pointcheval-Sanders 签名方案，这导致了以下协议，这是 Barki 等人（2017）提出的 DAA 方案的简化版本。
+- `Join`：此协议由新成员发起，该成员将 `g^s` 和 `s` 的知情证明发送给 `I`。然后，他/她使用第 8.3.1 节中描述的针对承诺消息的协议，接收由 `isk` 生成的 Pointcheval-Sanders `σ` 签名。
 
-#### 8.3.3.2. Barki 等人（2017）的 DAA
-
-- `IssuerKeygen`：此算法为![image](img/i.jpg)生成一对密钥(`isk`, `ipk`) = ![image](img/i303.jpg)← Σ.`Keygen`，并定义一个哈希函数`H` : {0, 1}→ ![image](img/g1.jpg)[1]。
-- `Join`：此协议由新成员发起，该成员将`g^s`和`s`的知情证明发送给![image](img/i.jpg)。然后，他/她使用第 8.3.1 节中描述的针对承诺消息的协议，接收由`isk`生成的 Pointcheval-Sanders `σ`签名。
-- `Sign`：要使用字符串`bsn`对消息`m`进行签名，组成员生成签名`σ`的随机化版本`σ'`以及标签`T` = `H(bsn)^s`。然后他/她生成`s`的知情证明，使得![image](img/i304.jpg)（分别为`T`）是有效的证书（分别为标签），以便：
+- `Sign`：要使用字符串 `bsn` 对消息 `m` 进行签名，组成员生成签名 `σ` 的随机化版本 `σ'` 以及标签 `T` = `H(bsn)^s`。然后他/她生成 `s` 的知情证明，使得 `Verify(ipk, σ', m) = 1`（分别为 `T`）是有效的证书（分别为标签），以便：
 
 ```
 ![image](img/p182-1.jpg)
 ```
 
-然后，在 Fiat-Shamir 技术的帮助下，此证明被转换为`m`上的知情签名`π`。`π`、`σ'`和`T`的连接构成了字符串`bsn`上消息`m`的 DAA。
-- `Verify`：验证(`m`, `bsn`)上的 DAA(`π, σ, T`)仅仅是验证`π`的有效性。
-- `Link`：要测试链接到相同字符串`bsn`的两个 DAA(`π`[1], `σ`[1], `T`[1])和(`π`[2], `σ`[2], `T`[2])是否由同一成员生成，只需测试`T`[1] = `T`[2]是否成立。
+然后，在 Fiat-Shamir 技术的帮助下，此证明被转换为 `m` 上的知情签名 `π`。`π`、`σ'` 和 `T` 的连接构成了字符串 `bsn` 上消息 `m` 的 `DAA`。
 
-所获得的协议非常高效，因为 DAA 仅包含群![image](img/g1.jpg)[1]的三个元素和两个标量（用于知情签名）。这主要归因于 DAA 中包含的证明通过标签的构造与 Schnorr 证明完美兼容，但最重要的是通过使用专为此目的设计的高级签名。Barki 等人的文章描述了几项改进，可降低签名者的计算复杂度，并依赖较弱的计算假设，但生成的构造仍基于上述版本的相同思想。此外，正如 Chen 的 DAA（Chen 2009，基于 Boneh-Boyen 签名）以及 Chen 等人的 DAA（2010，基于 Camenisch-Lysyanskaya 签名）所示，将此构造转换为其他高级签名也非常容易。
+- `Verify`：验证 (`m`, `bsn`) 上的 `DAA` (`π, σ, T`) 仅仅是验证 `π` 的有效性。
+
+- `Link`：要测试链接到相同字符串 `bsn` 的两个 `DAA` (`π`[1], `σ`[1], `T`[1]) 和 (`π`[2], `σ`[2], `T`[2]) 是否由同一成员生成，只需测试 `T`[1] = `T`[2] 是否成立。
+
+所获得的协议非常高效，因为 `DAA` 仅包含群 `G1` 的三个元素和两个标量（用于知情签名）。这主要归因于 `DAA` 中包含的证明通过标签的构造与 Schnorr 证明完美兼容，但最重要的是通过使用专为此目的设计的高级签名。Barki 等人的文章描述了几项改进，可降低签名者的计算复杂度，并依赖较弱的计算假设，但生成的构造仍基于上述版本的相同思想。此外，正如 Chen 的 `DAA`（Chen 2009，基于 Boneh-Boyen 签名）以及 Chen 等人的 `DAA`（2010，基于 Camenisch-Lysyanskaya 签名）所示，将此构造转换为其他高级签名也非常容易。
 
 无论哪种情况，此构造的安全性都非常简单地源于之前的安全分析和追踪标签的属性。
 
-#### 8.3.3.3. EPID
+### 8.3.3.3. EPID
 
-DAA 在匿名凭证的不可撤销匿名性和群签名的完全可撤销匿名性之间提供了一个有趣的折衷方案。然而，它并不适用于所有情况，特别是那些需要撤销某些用户权限的情况。例如，考虑服务提供商观察到用户滥用行为，因此希望禁止该用户访问服务的情况。由于缺少开启过程，提供商无法识别该用户。提供商已知的唯一要素是该不诚实用户为访问服务并实施滥用而生成的 DAA。在这些条件下，如何保证该用户将来无法再访问服务？
+`DAA` 在匿名凭证的不可撤销匿名性和群签名的完全可撤销匿名性之间提供了一个有趣的折衷方案。然而，它并不适用于所有情况，特别是那些需要撤销某些用户权限的情况。例如，考虑服务提供商观察到用户滥用行为，因此希望禁止该用户访问服务的情况。由于缺少开启过程，提供商无法识别该用户。提供商已知的唯一要素是该不诚实用户为访问服务并实施滥用而生成的 `DAA`。在这些条件下，如何保证该用户将来无法再访问服务？
 
-使用经典 DAA，唯一的解决方案是转移追踪机制。如果用户生成的 DAA 链接到字符串`bsn`（因此包含特定标签`T`），服务提供商可以要求任何未来的认证（无论成员是谁）都使用此字符串。因此，他/她可以识别不诚实用户，其所有 DAA 都将包含`T`。不幸的是，此解决方案会对服务的其他用户产生后果，他们都可能被追踪。更一般地说，正如我们之前提到的，使用常量字符串`bsn`意味着 DAA 失去所有优势。
+使用经典 `DAA`，唯一的解决方案是转移追踪机制。如果用户生成的 `DAA` 链接到字符串 `bsn`（因此包含特定标签 `T`），服务提供商可以要求任何未来的认证（无论成员是谁）都使用此字符串。因此，他/她可以识别不诚实用户，其所有 `DAA` 都将包含 `T`。不幸的是，此解决方案会对服务的其他用户产生后果，他们都可能被追踪。更一般地说，正如我们之前提到的，使用常量字符串 `bsn` 意味着 `DAA` 失去所有优势。
 
-这一问题促使 Brickell 和 Li（2007）提出了一种 DAA 变体，称为 EPID，它用基于签名的撤销系统取代了基于字符串`bsn`的追踪系统。具体而言，签名过程输入的是已撤销签名列表，而非字符串`bsn`。签名者不仅要像以前一样证明他们真的是群成员，还要证明他们不对已撤销的签名负责。扮演签名检查者角色的服务提供商因此可以保证被认证的成员不是他们想要排除的成员，而不会危及系统中诚实用户的匿名性。
+这一问题促使 Brickell 和 Li（2007）提出了一种 `DAA` 变体，称为 `EPID`，它用基于签名的撤销系统取代了基于字符串 `bsn` 的追踪系统。具体而言，签名过程输入的是已撤销签名列表，而非字符串 `bsn`。签名者不仅要像以前一样证明他们真的是群成员，还要证明他们不对已撤销的签名负责。扮演签名检查者角色的服务提供商因此可以保证被认证的成员不是他们想要排除的成员，而不会危及系统中诚实用户的匿名性。
 
-Brickell 和 Li 的思想被后续构造所采用，其核心是回收 DAA 中的标签，但这次以`T` = `H(rnd)^s`的形式为特定随机字符串`rnd`生成。然后，签名者可以依赖已撤销签名的`T[i]` = `H(rnd[i])^s[i]`标签，证明他们自己的签名是通过不同于`s[i]`的`s`密钥生成的。这可以使用 Camenisch 和 Shoup（2003）提出的离散对数不等式的`zero-knowledge`证明协议，以模块化（且非常高效）的方式完成。具体而言，签名者使用此协议证明对于所有标签`T[i]`，`log_H(rnd)(T)` ≠ `log_H(rnd)(T[i])`。Camenisch 和 Shoup 协议在我们这种情况下的优势在于，它将要证明的不等式关系转换为单个证明中的离散对数知情证明，该证明可借助 Schnorr 协议实现，因此与签名的其他元素非常匹配。此外，这些元素本质上是对`s`的证书的知情证明，因此与前一种构造相同。
+Brickell 和 Li 的思想被后续构造所采用，其核心是回收 `DAA` 中的标签，但这次以 `T` = `H(rnd)^s` 的形式为特定随机字符串 `rnd` 生成。然后，签名者可以依赖已撤销签名的 `T[i]` = `H(rnd[i])^s[i]` 标签，证明他们自己的签名是通过不同于 `s[i]` 的 `s` 密钥生成的。这可以使用 Camenisch 和 Shoup（2003）提出的离散对数不等式的 `zero-knowledge` 证明协议，以模块化（且非常高效）的方式完成。具体而言，签名者使用此协议证明对于所有标签 `T[i]`，`log_H(rnd)(T)` ≠ `log_H(rnd)(T[i])`。Camenisch 和 Shoup 协议在我们这种情况下的优势在于，它将要证明的不等式关系转换为单个证明中的离散对数知情证明，该证明可借助 Schnorr 协议实现，因此与签名的其他元素非常匹配。此外，这些元素本质上是对 `s` 的证书的知情证明，因此与前一种构造相同。
 
 ## 8.4. 参考文献
 
@@ -3582,11 +3444,6 @@ Abe, M., Fuchsbauer, G., Groth, J., Haralambiev, K., Ohkubo, M. (2010). Structur
 Abe, M., Groth, J., Haralambiev, K., Ohkubo, M. (2011). Optimal structure-preserving signatures in asymmetric bilinear groups. In *CRYPTO 2011*, vol. 6841 of *LNCS*, Rogaway, P. (ed.). Springer, Heidelberg.
 
 Au, M.H., Susilo, W., Mu, Y. (2006). Constant-size dynamic k-TAA. In *SCN 06*, vol. 4116 of *LNCS*, Prisco, R.D., Yung, M. (eds). Springer, Heidelberg.
-
-
-
-
-# 参考文献
 
 Barki, A., Desmoulins, N., Gharout, S., Traoré, J. (2017). Anonymous attestations made practical. In *Proceedings of the 10th ACM Conference on Security and Privacy in Wireless and Mobile Networks, WiSec 2017*, Noubir, G., Conti, M., Kasera, S.K. (eds). ACM Press.
 
@@ -3626,6 +3483,10 @@ Chen, L. (2009). A DAA scheme requiring less TPM resources. In *Information Secu
 
 Chen, L., Page, D., Smart, N.P. (2010). On the design and implementation of an efficient DAA scheme. In *Smart Card Research and Advanced Application, 9th IFIP WG 8.8/11.2 International Conference, CARDIS 2010*, vol. 6035 of *LNCS*, Gollmann, D., Lanet, J., Iguchi-Cartigny, J. (eds). Springer, Heidelberg.
 
+
+
+# 参考文献
+
 Delerablée, C. and Pointcheval, D. (2006). Dynamic fully anonymous short group signatures. In *Progress in Cryptology – VIETCRYPT 06*, vol. 4341 of *LNCS*, Nguyen, P.Q. (ed.). Springer, Heidelberg.
 
 Diffie, W. and Hellman, M.E. (1976). New directions in cryptography. *IEEE Transactions on Information Theory*, 22(6), 644–654.
@@ -3658,9 +3519,9 @@ Trusted Computing Group (2015). Trusted Platform Module (TPM): Built-in Authenti
 
 ## 注释
 
-1. 1 出于安全原因，`a`[0] 也应证明对 `a`[0] 的知晓，但由于 `Schnorr` 协议，这可以非常有效地完成。
+1. 出于安全原因，`a[0]` 也应证明对 `a[0]` 的知晓，但由于 `Schnorr` 协议，这可以非常有效地完成。
 
-2. 2 实际上，此标签不必是确定性的，但这会大大简化追踪过程。
+2. 实际上，此标签不必是确定性的，但这会大大简化追踪过程。
 
 # 9 密钥交换
 
@@ -3672,46 +3533,45 @@ Trusted Computing Group (2015). Trusted Platform Module (TPM): Built-in Authenti
 
 在本章中，我们将首先考虑密钥交换的要素，具体包括密钥交换协议中的步骤、涉及的参与方以及可能发送的消息。之后，我们将更详细地研究密钥交换安全模型和协议，先考虑未认证密钥交换这一较简单的情况，然后再转向认证协议。
 
-
-
-
-
-## 9.1. 密钥交换基础
+## 9.1 密钥交换基础
 
 什么是密钥交换协议？从高层来看，我们可以识别出大多数协议中使用的四个阶段，尽管我们将看到一些例外情况，它们并不包含所有阶段。
 
 - **建立**：此阶段定义协议参与者在协议生命周期内使用的系统参数。这些通常包括合适的群和生成元的定义，以及共享算法，如哈希函数、加密和签名方案。
-- **密钥生成**：此阶段定义协议参与者使用的初始密钥的建立。这些通常是长期公私钥对，但稍后将讨论其他可能性。
-- **消息交换**：协议参与者之间传递的消息在此阶段定义。这通常被视为协议的核心。
-- **密钥派生**：前一阶段（消息交换）的结果是协议参与者已知的某个共享密钥。密钥派生阶段应用密钥派生函数（KDF）来计算合适的会话密钥。
 
-### 9.1.1. 密钥交换参与方
+- **密钥生成**：此阶段定义协议参与者使用的初始密钥的建立。这些通常是长期公私钥对，但稍后将讨论其他可能性。
+
+- **消息交换**：协议参与者之间传递的消息在此阶段定义。这通常被视为协议的核心。
+
+- **密钥派生**：前一阶段（消息交换）的结果是协议参与者已知的某个共享密钥。密钥派生阶段应用密钥派生函数（`KDF`）来计算合适的会话密钥。
+
+### 9.1.1 密钥交换参与方
 
 密钥交换协议涉及两个或多个希望合作建立新会话密钥的参与方。最简单的双方情况在许多场景中都很常见，例如客户端与服务器之间的会话，或两个希望共享信息的实体之间的会话。多方密钥交换，通常称为**群密钥交换**，涉及任意数量的参与方，可应用于群消息传递和会议通信。
 
 在某些协议中，新会话密钥（或其派生的共享密钥）由一方生成，并机密地（例如加密后）传达给协议的另一方或多方。在这种情况下，协议的模式称为**密钥传输**。在其他情况下，新会话密钥是多方输入（通常是所有参与方，或在双方协议中是双方）的函数，协议的模式称为**密钥协商**。
 
-经过认证的密钥交换协议必须允许参与方使用现有密钥来认证对等方。这些密钥通常称为**长期**密钥，可以是共享对称密钥或公钥。长期对称密钥通常称为**预共享密钥**（PSK），其中包括共享密码的情况（详见第 10 章）。我们通常假设长期密钥在系统生命周期内是静态的，但密钥也可能演进。在分析密钥交换协议时，我们通常忽略长期密钥建立的问题。在单个协议实例中生成并使用的密钥通常称为**临时密钥**。
+经过认证的密钥交换协议必须允许参与方使用现有密钥来认证对等方。这些密钥通常称为**长期**密钥，可以是共享对称密钥或公钥。长期对称密钥通常称为**预共享密钥**（`PSK`），其中包括共享密码的情况（详见第 10 章）。我们通常假设长期密钥在系统生命周期内是静态的，但密钥也可能演进。在分析密钥交换协议时，我们通常忽略长期密钥建立的问题。在单个协议实例中生成并使用的密钥通常称为**临时密钥**。
 
-除了旨在获取新会话密钥的参与者外，某些协议依赖其他参与方，通常称为**可信第三方**（TTP），他们可能被信任执行其功能。这些功能可以包括会话密钥或共享密钥的生成与分发，以及公钥的认证。在某些情况下，TTP 可能与协议参与者共享长期对称密钥，例如在 Kerberos 协议中（Needham 和 Schroeder 1978；Neuman 和 Ts’o 1994）。在本章中，我们专注于使用非对称密码学的密钥交换。
+除了旨在获取新会话密钥的参与者外，某些协议依赖其他参与方，通常称为**可信第三方**（`TTP`），他们可能被信任执行其功能。这些功能可以包括会话密钥或共享密钥的生成与分发，以及公钥的认证。在某些情况下，`TTP` 可能与协议参与者共享长期对称密钥，例如在 Kerberos 协议中（Needham 和 Schroeder 1978；Neuman 和 Ts’o 1994）。在本章中，我们专注于使用非对称密码学的密钥交换。
 
-### 9.1.2. 密钥交换消息
+### 9.1.2 密钥交换消息
 
 协议由参与方之间传递的消息组成。除了加密组件外，协议消息通常包括固定字符串，如参与方标识符或协议结构，以及随机值，有时称为**一次性数**。消息也可能由加密算法（如加密或签名）处理。
 
 从实际角度来看，消息的数量和长度是一个重要因素。一方发送的消息可能依赖于先前从另一方接收到的消息，因此这两条消息必须按顺序发送，而不是并行发送。我们称一组可以同时发送的消息构成一个协议**轮次**。在某些应用中，减少轮次数量可能很重要。群密钥交换协议可能有许多消息但轮次很少。请注意，协议中的轮次和消息数量不一定是固定的；例如，将一个具有三条消息和三个轮次的协议转换为具有四条消息和两个轮次的协议是常见的（Long 1995）。
 
-由于长期密钥通常假设可通过协议本身之外的信道为参与方所用，因此有可能存在零消息和零轮次的有意义协议。此类协议被称为提供**非交互式密钥交换**（NIKE，见第 9.3.1 节）。尽管 NIKE 已被用作其他协议的构建模块，但它只能提供静态密钥；我们通常希望密钥交换协议建立一个新的或**新鲜的**会话密钥。因此，至少需要一条消息。假设密钥交换后跟随由会话密钥保护的通信会话，通过减少**往返**通信可以最小化通信延迟。往返是指两个协议参与方之间的来回通信。如果会话密钥可以在无需等待对等方任何响应的情况下使用，则称该密钥交换协议为零往返，记为**0-RTT**。
+由于长期密钥通常假设可通过协议本身之外的信道为参与方所用，因此有可能存在零消息和零轮次的有意义协议。此类协议被称为提供**非交互式密钥交换**（`NIKE`，见第 9.3.1 节）。尽管 `NIKE` 已被用作其他协议的构建模块，但它只能提供静态密钥；我们通常希望密钥交换协议建立一个新的或**新鲜的**会话密钥。因此，至少需要一条消息。假设密钥交换后跟随由会话密钥保护的通信会话，通过减少**往返**通信可以最小化通信延迟。往返是指两个协议参与方之间的来回通信。如果会话密钥可以在无需等待对等方任何响应的情况下使用，则称该密钥交换协议为零往返，记为**0-RTT**。
 
-### 9.1.3. 密钥派生函数
+### 9.1.3 密钥派生函数
 
-在对协议消息进行初始处理后，协议参与方将计算一个共享密钥值 `Z`。在许多协议中，值 `Z` 将具有高熵，但不会是均匀随机的，也不会具有直接用于对称密钥算法的正确长度。例如，`Z` 可能是一个群元素。KDF 的目的是将 `Z` 转换为适当大小的伪随机比特串。遵循惯用术语，我们称 KDF 的输出为**会话密钥**，记为 `K`。这一术语反映了密钥交换作为保护通信会话的协议的传统用法。KDF 的输入包括共享密钥 `Z` 和其他公共值，如下所示。
+在对协议消息进行初始处理后，协议参与方将计算一个共享密钥值 `Z`。在许多协议中，值 `Z` 将具有高熵，但不会是均匀随机的，也不会具有直接用于对称密钥算法的正确长度。例如，`Z` 可能是一个群元素。`KDF` 的目的是将 `Z` 转换为适当大小的伪随机比特串。遵循惯用术语，我们称 `KDF` 的输出为**会话密钥**，记为 `K`。这一术语反映了密钥交换作为保护通信会话的协议的传统用法。`KDF` 的输入包括共享密钥 `Z` 和其他公共值，如下所示。
 
-除了确保会话密钥是伪随机的之外，KDF 的另一个目的是将特定的协议组件绑定到会话密钥。因此，KDF 的输入可能包括一个**上下文字符串** `c`，其组件包括协议和版本标识符；参与协议的参与方身份以及协议消息本身。此类输入可以确保避免某些类型的攻击，即攻击者试图欺骗参与方关于正确的协议细节。
+除了确保会话密钥是伪随机的之外，`KDF` 的另一个目的是将特定的协议组件绑定到会话密钥。因此，`KDF` 的输入可能包括一个**上下文字符串** `c`，其组件包括协议和版本标识符；参与协议的参与方身份以及协议消息本身。此类输入可以确保避免某些类型的攻击，即攻击者试图欺骗参与方关于正确的协议细节。
 
-Krawczyk (2010) 首次给出了 KDF 的形式化定义。除了元素 `Z` 和 `c` 之外，Krawczyk 的定义还包括一个可选的**盐**输入 `s`，来自某个集合 `S`，其目的是增加公共随机性。此元素在密钥交换中常被省略，但在其他场景中可能很有用。
+Krawczyk (2010) 首次给出了 `KDF` 的形式化定义。除了元素 `Z` 和 `c` 之外，Krawczyk 的定义还包括一个可选的**盐**输入 `s`，来自某个集合 `S`，其目的是增加公共随机性。此元素在密钥交换中常被省略，但在其他场景中可能很有用。
 
-**定义 9.1** (Krawczyk (2010))。输出长度为 `l` 的 KDF 是一个函数：
+**定义 9.1** (Krawczyk (2010))。输出长度为 `l` 的 `KDF` 是一个函数：
 
 ```
 KDF: Z × S × C → {0, 1}^l
@@ -3719,80 +3579,80 @@ KDF: Z × S × C → {0, 1}^l
 
 其中 `Z` 是输入密钥值的源，`S` 是盐值的集合，`C` 是上下文字符串的集合。
 
-为了定义 KDF 的安全性，Krawczyk 定义了一个安全游戏，概述见图 9.1。攻击者 Adv 可以自适应地查询 `KDF` 最多 `q` 次，并必须区分在选定上下文值上的输出是随机的还是真实的 KDF 输出。
+为了定义 `KDF` 的安全性，Krawczyk 定义了一个安全游戏，概述见图 9.1。攻击者 `Adv` 可以自适应地查询 `KDF` 最多 `q` 次，并必须区分在选定上下文值上的输出是随机的还是真实的 `KDF` 输出。
 
 ![图 9.1. KDF 安全性的安全游戏](img/fig9-1.jpg)
 
 **图 9.1.** KDF 安全性的安全游戏
 
+在实践中，`KDF` 主要有两种选择，这两种都被美国 NIST 推荐（Barker 等人，2020）。第一种是*单步*过程，将 `Z` 和其他参数直接输入哈希函数或 `MAC`。第二种是*双步*过程，第一步是从 `Z` 中*提取*熵，第二步是将熵*扩展*为一个或多个密钥。双步过程的一个著名例子是 `HKDF`，由 Krawczyk（2010）定义，基于 `HMAC`（Bellare 等人，1996）。给定密钥材料 `Z`、一个常量（可能为空）盐字符串 `s` 以及可选的上下文信息 `c`，该函数按如下方式计算一个或多个密钥 `K[i]`：
 
+```
+PRK = HMAC(s, Z)
+K[1] = HMAC(PRK, c || 0x01)
+K[i+1] = HMAC(PRK, K[i] || c || i)
+```
 
+其中 `K[i+1] = HMAC(PRK, K[i] || c || i)`，`K[1] = HMAC(PRK, c || 0x01)` 且 `PRK = HMAC(s, Z)`。如果 `s` 为空，则将其解释为长度等于 `HMAC` 密钥的零比特字符串。
 
-在实践中，KDF 主要有两种选择，这两种都被美国 NIST 推荐（Barker 等人，2020）。第一种是*单步*过程，将 `Z` 和其他参数直接输入哈希函数或 MAC。第二种是*双步*过程，第一步是从 `Z` 中*提取*熵，第二步是将熵*扩展*为一个或多个密钥。双步过程的一个著名例子是 HKDF，由 Krawczyk（2010）定义，基于 HMAC（Bellare 等人，1996）。给定密钥材料 Z、一个常量（可能为空）盐字符串 *s* 以及可选的上下文信息 *c*，该函数按如下方式计算一个或多个密钥 K[*i*]：
+`HKDF` 随后已被标准化（Krawczyk 和 Eronen，2010；ISO，2016；Barker 等人，2020），并在 TLS 1.3 等著名密钥交换协议中成为必需组件。Krawczyk（2010）给出了 `HKDF` 的安全性证明（参见图 9.1 中的安全游戏）。该证明假设 `HMAC` 中使用的底层迭代哈希函数的压缩函数 `h` 是一个随机预言机。Krawczyk 指出，只要 `h` 与随机源 `Z` 足够独立，这一假设就是合理的。
 
-![image](img/p191-1.jpg)
-
-其中 `K`[*i*+1] = `HMAC`(`PRK`, `K`[*i*] || *c* || *i*)，`K`[1] = `HMAC`(`PRK`*,c* 0) 且 `PRK` = `HMAC`(*s,* `Z`)。如果 *s* 为空，则将其解释为长度等于 HMAC 密钥的零比特字符串。
-
-HKDF 随后已被标准化（Krawczyk 和 Eronen，2010；ISO，2016；Barker 等人，2020），并在 TLS 1.3 等著名密钥交换协议中成为必需组件。Krawczyk（2010）给出了 HKDF 的安全性证明（参见图 9.1 中的安全游戏）。该证明假设 HMAC 中使用的底层迭代哈希函数的压缩函数 *h* 是一个随机预言机。Krawczyk 指出，只要 *h* 与随机源 Z 足够独立，这一假设就是合理的。
-
-## 9.2. 未认证密钥交换
+## 9.2 未认证密钥交换
 
 本节关注针对被动对手安全的密钥交换协议。此类对手会观察协议参与方之间传递的消息，但不会篡改或伪造新消息。未认证协议可用作认证密钥交换协议的构建模块，我们将在第 9.3 节中探讨后者。
 
-### 9.2.1. 形式化定义与安全模型
+### 9.2.1 形式化定义与安全模型
 
-我们可以将密钥交换协议视为消息驱动协议（Canetti 和 Krawczyk，2001）。一个 *n* 方密钥交换协议由一个 `Setup()` 算法组成，该算法生成协议的共享参数，以及针对 *n* 个参与方 *U*[1], *U*[2]*,..., U[n]* 的规范。参与方接受消息（或带有空消息的初始调用）作为输入，并输出响应消息（或返回带有空消息的最终接受输出）。稍后我们将看到，对于认证密钥交换，我们通过长期密钥材料定义参与方，因此每个此类参与方可能存在多个协议实例。然而，由于我们目前考虑的是没有长期密钥材料的参与方，因此可以将每个参与方实例视为不同的实体。
+我们可以将密钥交换协议视为消息驱动协议（Canetti 和 Krawczyk，2001）。一个 `n` 方密钥交换协议由一个 `Setup()` 算法组成，该算法生成协议的共享参数，以及针对 `n` 个参与方 `U[1], U[2], ..., U[n]` 的规范。参与方接受消息（或带有空消息的初始调用）作为输入，并输出响应消息（或返回带有空消息的最终接受输出）。稍后我们将看到，对于认证密钥交换，我们通过长期密钥材料定义参与方，因此每个此类参与方可能存在多个协议实例。然而，由于我们目前考虑的是没有长期密钥材料的参与方，因此可以将每个参与方实例视为不同的实体。
 
 任何有用的协议都有一个明确定义的参与方激活序列，以便当每个参与方输出一条消息时，它可以作为一个或多个其他参与方的输入。每个参与方最终都会从密钥空间 **K** 中接受相同的会话密钥 `K`。协议执行就是这样一个参与方的激活过程，参与方之间发送的消息序列称为*会话记录*。
 
-定义 9.2.– *针对（未认证）密钥交换协议的对手* **Adv** *具有优势 ϵ，如果* **Adv** *能够以概率* (1/2 + ϵ) *将协议执行的输出与从* **K** *中均匀随机选择的密钥区分开来。更准确地说，给* **Adv** *提供协议参数和一次成功执行的会话记录。然后随机选择一位 b，如果 b* = 0*，则给* **Adv** *提供商定的会话密钥；如果 b* = 1*，则给* **Adv** *提供从* **K** *中随机选取的值。* **Adv** *若成功计算出 b 则获胜。*
+**定义 9.2** – *针对（未认证）密钥交换协议的对手* `Adv` *具有优势 ϵ，如果* `Adv` *能够以概率* `(1/2 + ϵ)` *将协议执行的输出与从* **K** *中均匀随机选择的密钥区分开来。更准确地说，给* `Adv` *提供协议参数和一次成功执行的会话记录。然后随机选择一位 b，如果 b* `= 0`*，则给* `Adv` *提供商定的会话密钥；如果 b* `= 1`*，则给* `Adv` *提供从* **K** *中随机选取的值。* `Adv` *若成功计算出 b 则获胜。*
 
-由于必须对对手保密会话密钥，我们可能期望公钥加密在密钥交换协议中发挥重要作用。然而，一种更灵活的原语是密钥封装机制（KEM）。尽管公钥加密方案和公钥 KEM 在形式上是等价的；但使用 KEM 避免了加密选定的输入值，因此效率可能更高。
+由于必须对对手保密会话密钥，我们可能期望公钥加密在密钥交换协议中发挥重要作用。然而，一种更灵活的原语是密钥封装机制（`KEM`）。尽管公钥加密方案和公钥 `KEM` 在形式上是等价的；但使用 `KEM` 避免了加密选定的输入值，因此效率可能更高。
 
-定义 9.3.– *KEM 由四个算法组成，前三个以隐式安全参数 λ 为输入且为随机算法，而第四个为确定性算法。*
+**定义 9.3** – *`KEM` 由四个算法组成，前三个以隐式安全参数 λ 为输入且为随机算法，而第四个为确定性算法。*
 
-*–* `KEMSetup()` *：输出一组公共参数 cp。*
+*–* `KEMSetup()` *：输出一组公共参数 `cp`。*
 
-*–* `KEMKeyGen`(![image](img/g1.jpg), *g*) *：输入参数 cp，输出一对公钥和私钥* (`pk`, `sk`)。*
+*–* `KEMKeyGen(cp, g)` *：输入参数 `cp`，输出一对公钥和私钥* (`pk`, `sk`)。*
 
-*–* `Encap`(`pk`) *：给定公钥* `pk` *，输出一个密钥 k 和一个封装密钥（密文）c。*
+*–* `Encap(pk)` *：给定公钥* `pk` *，输出一个密钥 `k` 和一个封装密钥（密文）`c`。*
 
-*–* `Decap`(`sk`, *c*) *：给定私钥* `sk` *和封装密钥 c，输出一个密钥 k。*
+*–* `Decap(sk, c)` *：给定私钥* `sk` *和封装密钥 `c`，输出一个密钥 `k`。*
 
-正确性意味着对于任何正确生成的密钥对 (pk, sk)，若 (*k, c*) ← `Encap`(`pk`)，则 *k* ← `Decap`(`sk`, *c`)。有时无法保证正确性，此时我们可能希望为其关联一个概率。
+正确性意味着对于任何正确生成的密钥对 (`pk`, `sk`)，若 (`k`, `c`) ← `Encap(pk)`，则 `k` ← `Decap(sk, c)`。有时无法保证正确性，此时我们可能希望为其关联一个概率。
 
-### 9.2.2. 构造与示例
+### 9.2.2 构造与示例
 
-图 9.2 展示了如何从 KEM 构造一个被动安全的密钥交换协议。存在一个直接的归约，可将针对图 9.2 中协议的对手转化为针对 CPA 安全 KEM 的对手。因此，我们可以得出以下安全性结果。
+图 9.2 展示了如何从 `KEM` 构造一个被动安全的密钥交换协议。存在一个直接的归约，可将针对图 9.2 中协议的对手转化为针对 CPA 安全 `KEM` 的对手。因此，我们可以得出以下安全性结果。
 
-定理 9.1.– *若图 9.2 所示构造中使用的 KEM 是 CPA 安全的，则该协议按定义 9.2 的意义是一个安全的未认证密钥交换协议。*
+**定理 9.1** – *若图 9.2 所示构造中使用的 `KEM` 是 CPA 安全的，则该协议按定义 9.2 的意义是一个安全的未认证密钥交换协议。*
 
-#### 9.2.2.1. Diffie–Hellman 密钥交换
+#### 9.2.2.1 Diffie–Hellman 密钥交换
 
-作为密钥交换协议使用的 KEM 最著名的例子是 Diffie–Hellman 协议（Diffie 和 Hellman，1976）。
-
- ![Figure 9.2. Generic key exchange from key encapsulation](img/fig9-2.jpg)
-
-**图 9.2.** *基于密钥封装的通用密钥交换*
-
-定义 9.4（Diffie–Hellman KEM）。– *沿用定义 9.3 的符号，步骤如下：*
-
-*–* `KEMSetup()` *：生成一个合适的乘法群* ![image](img/g1.jpg)*及其阶为 s 的元素 g。*
-
-*–* `KEMKeyGen`(![image](img/g1.jpg), *g*) *：随机选择* `sk` ![image](img/larrs.jpg)![image](img/z1.jpg)[*s*] *并设置* `pk` ← *g*`sk`。*
-
-*–* `Encap`(`pk`) *：随机选择 r* ![image](img/larrs.jpg)*并输出 k* = `pk`^(*r*) *和 c* = *g^r*。*
-
-*–* `Decap`(`sk`, *c`) *：设置 k* = *c*`sk`。*
-
-Diffie–Hellman 广泛用作认证密钥交换的构建模块，其中 ![image](img/g1.jpg) 是 ![image](img/zsp.jpg)（模素数 *p* 的非零整数）的子群，或各种椭圆曲线群之一。对于这些群，图 9.2 中推导出的未认证密钥交换协议构造被认为是安全的。然而，多年来已知该协议将被量子计算机高效破解，因为 Shor 算法可以在 ![image](img/zsp.jpg) 和椭圆曲线群中求离散对数。这引发了巨大的研究热潮，旨在寻找被认为对拥有量子计算能力的对手安全的 KEM。目前，在基于格的设置（如 Saber，D’Anvers 等人，2018）或基于同源的设置（如 SIKE，Jao 等人，2020）中，已有几个有希望的候选者。
+作为密钥交换协议使用的 `KEM` 最著名的例子是 Diffie–Hellman 协议（Diffie 和 Hellman，1976）。
 
 
 
-Diffie-Hellman 协议通常不被定义为 KEM，确实它具有一种通用 KEM 所不具备的特殊属性，即在 Encap 算法中生成的密文 `c` 独立于 `pk`。这导致了 Diffie-Hellman 协议的一个有趣特性：它可以在一轮中运行，以便双方均可在接收对方消息之前计算出各自的消息。许多被提议作为后量子安全性的 Diffie-Hellman 替代方案的 KEM 都不具备这一属性。这并不妨碍图 9.2 中的通用构造，但这确实意味着协议现在必须分两轮运行，因为 `B` 需要在响应前接收来自 `A` 的消息。
+![Figure 9.2. Generic key exchange from key encapsulation](img/fig9-2.jpg)
 
-#### 9.2.2.2. 未认证群密钥交换
+**图 9.2.** 基于密钥封装的通用密钥交换
+
+### 定义 9.4（Diffie–Hellman KEM）
+
+沿用定义 9.3 的符号，步骤如下：
+
+* `KEMSetup()`：生成一个合适的乘法群`G`及其阶为 s 的元素 g。
+* `KEMKeyGen(G, g)`：随机选择`sk ← Z_s`并设置`pk ← g^sk`。
+* `Encap(pk)`：随机选择 r 并输出 `k = pk^r` 和 `c = g^r`。
+* `Decap(sk, c)`：设置 `k = c^sk`。
+
+Diffie–Hellman 广泛用作认证密钥交换的构建模块，其中 `G` 是 `Z_p^*`（模素数 p 的非零整数）的子群，或各种椭圆曲线群之一。对于这些群，图 9.2 中推导出的未认证密钥交换协议构造被认为是安全的。然而，多年来已知该协议将被量子计算机高效破解，因为 Shor 算法可以在 `Z_p^*` 和椭圆曲线群中求离散对数。这引发了巨大的研究热潮，旨在寻找被认为对拥有量子计算能力的对手安全的 KEM。目前，在基于格的设置（如 Saber，D’Anvers 等人，2018）或基于同源的设置（如 SIKE，Jao 等人，2020）中，已有几个有希望的候选者。
+
+Diffie-Hellman 协议通常不被定义为 KEM，确实它具有一种通用 KEM 所不具备的特殊属性，即在 `Encap` 算法中生成的密文 `c` 独立于 `pk`。这导致了 Diffie-Hellman 协议的一个有趣特性：它可以在一轮中运行，以便双方均可在接收对方消息之前计算出各自的消息。许多被提议作为后量子安全性的 Diffie-Hellman 替代方案的 KEM 都不具备这一属性。这并不妨碍图 9.2 中的通用构造，但这确实意味着协议现在必须分两轮运行，因为 `B` 需要在响应前接收来自 `A` 的消息。
+
+### 9.2.2.2. 未认证群密钥交换
 
 为了构建群密钥交换，我们希望拥有一个适用于两方以上参与者的 Diffie-Hellman 协议版本。Joux (2004) 利用双线性配对 `e: G1 × G1 → GT` 构建了一个三方版本，使得三方中的每一方都可以选择随机输入 `a`、`b` 和 `c` 并广播 `g^a`、`g^b` 和 `g^c`（参见第 5 章）。随后，知道其中一个输入就足以计算出共享密钥值 `e(g, g)^(abc) = e(g^a, g^b)^c = e(g^a, g^c)^b = e(g^b, g^c)^a`。利用合适的多重线性映射（Boneh 和 Silverberg，2002），原理上可以将这一想法扩展到任意数量的参与方，但尽管这一想法很吸引人，目前尚不知晓合适的映射。
 
@@ -3808,11 +3668,11 @@ Diffie-Hellman 协议通常不被定义为 KEM，确实它具有一种通用 KEM
 
 可以说，最简单的 AKE 协议是仅使用长期密钥而不使用任何临时密钥的协议。如果我们假设协议参与者可以从某个目录（例如，经过认证的公钥目录）获取长期密钥，那么我们可以获得无需任何消息的协议，即非交互式协议。
 
-**定义 9.5.** – *非交互式密钥交换（NIKE）协议由三个算法组成，前两个算法以隐含安全参数 λ 为输入，且是随机化的，而第三个算法是确定性的。*
+**定义 9.5.** 非交互式密钥交换（NIKE）协议由三个算法组成，前两个算法以隐含安全参数 λ 为输入，且是随机化的，而第三个算法是确定性的。
 
-*   **NIKESetup()**：输出一组公共参数 `cp`。
-*   **NIKEKeyGen(cp, ID)**：以参数 `cp` 和身份 `ID` 为输入，输出一对公钥和私钥 `(pk, sk)`。
-*   **NIKEkey(ID[1], pk¹, ID[2], sk²)**：给定公钥 `pk¹` 和私钥 `sk²`，输出共享密钥 `K` 或一个失败符号。
+* **`NIKESetup()`**：输出一组公共参数 `cp`。
+* **`NIKEKeyGen(cp, ID)`**：以参数 `cp` 和身份 `ID` 为输入，输出一对公钥和私钥 `(pk, sk)`。
+* **`NIKEkey(ID[1], pk¹, ID[2], sk²)`**：给定公钥 `pk¹` 和私钥 `sk²`，输出共享密钥 `K` 或一个失败符号。
 
 NIKE 协议的正确性要求：
 
@@ -3820,9 +3680,9 @@ NIKE 协议的正确性要求：
 Pr[NIKEkey(ID[1], pk¹, ID[2], sk²) = NIKEkey(ID[2], pk², ID[1], sk¹)] = 1
 ```
 
-虽然我们可以将 NIKE 协议视为一种使用长期密钥且无需消息的协议，但也可以将其视为一种未认证协议，其中双方 `A` 和 `B` 各自生成一个临时密钥对，将公钥发送给对等方，然后计算共享密钥。通过这种方式，定义 9.4 中介绍的 Diffie-Hellman 协议可以重新表述为 NIKE 协议。**NIKESetup()** 算法与定义 9.4 中的 **KEMSetup** 相同；**NIKEKeyGen(cp, U[i])** 算法为参与方 `U[i]` 生成私钥和公钥对 `(sk^(i), g^(sk[i]))`，而 **NIKEkey(U[1], pk¹, U[2], sk²)** 为 `g^(sk[1] * sk[2])`。其他 NIKE 协议可以基于因式分解和椭圆曲线配对等问题构建（Freire 等人，2013）。
+虽然我们可以将 NIKE 协议视为一种使用长期密钥且无需消息的协议，但也可以将其视为一种未认证协议，其中双方 `A` 和 `B` 各自生成一个临时密钥对，将公钥发送给对等方，然后计算共享密钥。通过这种方式，定义 9.4 中介绍的 Diffie-Hellman 协议可以重新表述为 NIKE 协议。`NIKESetup()` 算法与定义 9.4 中的 `KEMSetup` 相同；`NIKEKeyGen(cp, U[i])` 算法为参与方 `U[i]` 生成私钥和公钥对 `(sk^(i), g^(sk[i]))`，而 `NIKEkey(U[1], pk¹, U[2], sk²)` 为 `g^(sk[1] * sk[2])`。其他 NIKE 协议可以基于因式分解和椭圆曲线配对等问题构建（Freire 等人，2013）。
 
-Freire 等人（2013）给出了从任意 NIKE 到 KEM 的通用转换的形式化分析。这种映射使用 **NIKEKeyGen(cp, ID)** 为 Encap(`pk`) 生成一个独立于 `pk` 的新密钥。通常，我们不能反向操作，直接将 KEM 用作 NIKE 协议，因为 Encap(`pk`) 生成的封装密钥可能依赖于 `pk`。然而，在封装独立于接收方公钥的情况下（如 Diffie-Hellman KEM），NIKE 和 KEM 可以互换使用。
+Freire 等人（2013）给出了从任意 NIKE 到 KEM 的通用转换的形式化分析。这种映射使用 `NIKEKeyGen(cp, ID)` 为 `Encap(pk)` 生成一个独立于 `pk` 的新密钥。通常，我们不能反向操作，直接将 KEM 用作 NIKE 协议，因为 `Encap(pk)` 生成的封装密钥可能依赖于 `pk`。然而，在封装独立于接收方公钥的情况下（如 Diffie-Hellman KEM），NIKE 和 KEM 可以互换使用。
 
 Freire 等人（2013）为 NIKE 安全性提供了一个安全模型层级。在所有模型中，攻击者的目标是区分由攻击者选择的未被攻破的一对参与方所共享的密钥与随机值。更强的模型允许攻击者注册和/或攻破公钥和私钥，或拥有更多猜测尝试。一些先前的研究（Freire 等人，2014）也在 UC 模型中提出了安全功能。
 
@@ -3834,13 +3694,11 @@ Freire 等人（2013）为 NIKE 安全性提供了一个安全模型层级。在
 
 #### 9.3.2.1. 基于博弈的 AKE 模型
 
-
-
 基于游戏的安全模型历史可追溯至 Bellare 和 Rogaway 1993 年的论文，于 1994 年正式发表（Bellare and Rogaway 1994）。该模型被称为 BR93 模型，为实体认证定义了单独的安全目标，保证协议运行中的接受方拥有一个参与了该运行的特定且唯一的对等方。在实践中，许多 AKE 协议不提供此类属性，许多后续模型（包括 Bellare 和 Rogaway 1995 年的后续论文）移除了显式认证的要求。取而代之的是，此类模型仅要求*隐式认证*，即要求当一方接受会话密钥时，已知的对等方是唯一可能计算出相同会话密钥的一方。
 
 AKE 安全的基于游戏的定义可通过多种因素区分，但最明显的或许是赋予对手的能力集合（预言机）。我们允许对手 `Adv` 完全控制网络，使得在安全游戏中，除非对手发起请求，否则不会发生任何事情。因此，这些模型总是包含一个对抗性查询，通常称为 `Send`，它允许 `Adv` 向某方的协议会话发送输入（可能为空）并观察该会话运行当前协议步骤后的响应。因此，`Send` 查询允许 `Adv` 作为被动对手观察良性协议运行，或作为主动对手发送其能计算出的任何消息。安全性通常通过 `Test` 查询定义，对手借此选择一个作为攻击目标的*目标会话*，并接收该会话中接受的会话密钥或一个随机密钥；如果 `Adv` 能区分这两种可能性，则赢得安全游戏。
 
-**表 9.1.** *AKE 安全模型中常见的对抗性查询*
+**表 9.1.** AKE 安全模型中常见的对抗性查询
 
 | 查询 | 目的 | 模型 |
 | --- | --- | --- |
@@ -3855,11 +3713,11 @@ AKE 安全的基于游戏的定义可通过多种因素区分，但最明显的�
 
 早期的密钥交换模型通常旨在捕获针对现有协议的已知攻击类型。因此，当对手被赋予特定权力时，可以建模以下攻击。
 
-- *已知密钥安全性*：允许 `Adv` 通过 `Reveal` 查询获取其他协议运行的会话密钥。
-- *未知密钥共享*：允许 `Adv` 通过 `Send` 查询向非预期方发送消息，使各方接受与预期不同的对等方的密钥。
-- *前向保密性*：允许 `Adv` 在目标会话完成后，通过 `Corrupt` 查询获取长期密钥。
-- *密钥泄露冒充*：允许 `Adv` 在任意时间访问目标会话预期伙伴的长期密钥，从而发起冒充攻击，但可能仍无法赢得安全游戏。
-- *事后安全性*：允许 `Adv` 在目标会话前访问不断演进的特定方密钥，但如果发生了重新同步步骤，可能仍无法赢得安全游戏（Cohn-Gordon et al. 2016）。
+* *已知密钥安全性*：允许 `Adv` 通过 `Reveal` 查询获取其他协议运行的会话密钥。
+* *未知密钥共享*：允许 `Adv` 通过 `Send` 查询向非预期方发送消息，使各方接受与预期不同的对等方的密钥。
+* *前向保密性*：允许 `Adv` 在目标会话完成后，通过 `Corrupt` 查询获取长期密钥。
+* *密钥泄露冒充*：允许 `Adv` 在任意时间访问目标会话预期伙伴的长期密钥，从而发起冒充攻击，但可能仍无法赢得安全游戏。
+* *事后安全性*：允许 `Adv` 在目标会话前访问不断演进的特定方密钥，但如果发生了重新同步步骤，可能仍无法赢得安全游戏（Cohn-Gordon et al. 2016）。
 
 从 LaMacchia 等人（2007）的模型开始，人们致力于定义*最大安全性*，即寻找我们仍能保证安全的最强对手。他们的 eCK 模型（Canetti 和 Krawczyk (CK) 模型的扩展（Canetti and Krawczyk 2001））增加了一个查询，允许 `Adv` 获取临时会话秘密，如临时 Diffie-Hellman 秘密密钥。只要不导致安全游戏的平凡胜利，`Adv` 被允许获取各方的临时或长期密钥，甚至包括目标会话中的各方。遗憾的是，寻找最强安全模型甚至模型偏序的探索尚未成功。Cremers (2011) 表明，CK 模型（两个版本）和 eCK 模型无法比较，因为某协议可能在一个模型中安全而在另一个模型中不安全。
 
@@ -3873,15 +3731,13 @@ AKE 安全的基于游戏的定义可通过多种因素区分，但最明显的�
 
 此表述可用于指定大多数已知的基于游戏的安全模型。
 
-### 9.3.2.2. *前向保密性的变体*
+#### 9.3.2.2. 前向保密性的变体
 
 前向保密性是指只要会话密钥在腐败发生前已被接受，则该会话密钥在某方被腐败时应保持安全。最强的定义将允许 `Adv` 在会话密钥被接受后腐败所有方，但某些协议可能仅能容忍有限的腐败。一个重要情况是基于身份的协议，其中密钥生成中心（KGC）可找到所有用户的私钥。基于身份的 AKE 协议即使在 KGC 被腐败时，也可能提供* KGC 前向保密性*（Chen et al. 2007）。
 
 一个重要的变体是*弱前向保密性*，其中不允许 `Adv` 在目标会话运行期间保持活跃。许多著名的两消息协议仅能实现这种较弱的前向保密性（本章后面将见示例），这导致了一个不幸的误解，即认为没有两消息协议能实现完全前向保密性。事实上，存在许多能实现完全前向保密性的两消息协议，通常通过签名或 MAC 提供各方的显式认证。可以说，弱前向保密性在许多场景下已足够，因为具有弱前向保密性的协议可通过增加确认双方均能计算会话密钥的额外消息，转换为具有完全前向保密性的协议。这是因为具有弱前向保密性安全性的协议不会允许主动对手在会话密钥被接受前展示其对会话密钥的了解。
 
-### 9.3.2.3. *ACCE 模型*
-
-
+#### 9.3.2.3. ACCE 模型
 
 基于游戏的 AKE 安全定义的一个后果是，对手永远不允许看到实际使用的真实会话密钥，因为这很可能被用作预言机来区分会话密钥和随机密钥。当密钥交换在使用商定密钥的单独会话之前完成时，这不会造成问题，但不幸的是，这在现实世界的协议中并不总是发生，并且当 `early data`（早期数据）在 0-RTT 协议中被允许时，可能无法实现。形式化安全目标与现实之间的这种不匹配，长期以来阻碍了对应用最广泛的实用密钥交换协议 TLS 的安全性证明。
 
@@ -3901,6 +3757,8 @@ AKE 安全的基于游戏的定义可通过多种因素区分，但最明显的�
 
 #### 9.3.2.6. 通用可组合性
 
+
+
 尽管基于游戏的定义在研究文献中更为常见，但也有大量工作基于理想世界和现实世界视图之间的可模拟性建立模型，特别是在通用可组合性（UC）模型中（Canetti 和 Krawczyk，2002）。在这些模型中，为协议行为定义了理想功能，安全性通过证明现实世界中对手与功能的交互与理想世界中的交互不可区分来定义。此类模型在 PAKE 协议领域（见第 10 章）中很突出。
 
 ### 9.3.3. 构造与示例
@@ -3913,7 +3771,7 @@ AKE 安全的基于游戏的定义可通过多种因素区分，但最明显的�
 
 ![Figure 9.3. Bergsma–Jager–Schwenk (BJS) generic protocol from NIKE (Bergsma et al. 2015)](img/fig9-3.jpg)
 
-**图 9.3.** *Bergsma–Jager–Schwenk (BJS) 从 NIKE 构造的通用协议（Bergsma 等人，2015）*
+**图 9.3.** Bergsma–Jager–Schwenk (BJS) 从 NIKE 构造的通用协议（Bergsma 等人，2015）
 
 BJS 协议使用了四次 NIKE 协议，利用共享的 NIKEkey 将 `A` 和 `B` 的密钥以长期密钥和临时密钥的四种可能组合进行组合。该协议还使用了一个 PRF `F` 和一个确定性签名方案，其中 `Sig`^(`X`) (`M`) 表示参与方 `X` 对消息 `M` 的签名。Bergsma 等人（2015）证明，只要 NIKE、PRF 和签名方案在常用意义上是安全的，他们的协议在强 AKE 安全模型下就是安全的。使用通用 NIKE 的灵活性允许不同的实例化——当 NIKE 在标准模型下有安全性证明时，BJS 协议也是如此。在随机预言机模型下有证明的 NIKE 是已知的（Freire 等人，2013），包括 Diffie-Hellman 实例化，并且往往比具有标准模型证明的 NIKE 更高效。
 
@@ -3923,12 +3781,6 @@ BJS 协议使用了四次 NIKE 协议，利用共享的 NIKEkey 将 `A` 和 `B` 
 
 #### 9.3.3.2. 从 KEM 构造 AKE
 
-
-
-
-
-## 9.3.3 从 KEM 构建认证密钥交换
-
 正如 9.2 节 所讨论的，KEM 可用作未认证密钥交换协议。有几种已知方法可向被动安全的密钥交换协议添加认证，以将其转换为 AKE 协议。也许最简单的方法是在 图 9.2 的协议消息中添加签名。通过 Bellare 等人 (1998) 和 Canetti 与 Krawczyk (2001) 提出的*认证器*，可实现从未认证协议到 AKE 协议的通用转换。将其基于签名的认证器应用于 图 9.2 中的协议，可得到 图 9.4 所示的协议构造。双方对原始未认证协议中交换的消息提供签名。Canetti 和 Krawczyk (2001) 的通用定理保证了在其模型中的安全性。
 
 尽管 图 9.4 中的协议因其简洁性和灵活性而具有吸引力，但源自通用认证器的此类协议也有其局限性。一是需要额外的消息流，因此无法实现具有相互认证的两消息协议。第二个局限性是独立应用认证的协议无法达到最高安全级别，因为它们必然不安全于能够获取临时密钥的对手。（然而请注意，该方法始终能实现前向保密，因为长期密钥仅用于认证。）
@@ -3937,7 +3789,7 @@ BJS 协议使用了四次 NIKE 协议，利用共享的 NIKEkey 将 `A` 和 `B` 
 
 ![Figure 9.4. Generic authenticated key exchange from signed KEMs](img/fig9-4.jpg)
 
-**图 9.4.** *基于签名 KEM 的通用认证密钥交换*
+**图 9.4.** 基于签名 KEM 的通用认证密钥交换
 
 这种通用方法的优势在于可应用不同的具体 KEM 构造，包括为后量子安全设计的构造。图 9.5 中使用的两个 KEM 采用相同符号表示，但可以是相同的，也可以是不同的。KEM 的选择当然会影响协议的安全性和效率。Fujioka 等人 (2012) 在强安全模型 (Krawczyk 2005) 下提供了安全性证明，假设配合长期密钥使用的 KEM 是 CCA 安全的，而配合临时密钥使用的 KEM 是 CPA 安全的。他们给出了基于分解、编码和格的具体实例化。Hülsing 等人 (2021) 以 FSXY 协议为基础，构建了 WireGuard 协议的后量子版本。
 
@@ -3947,7 +3799,7 @@ FSXY 协议中使用的随机性输入值 `r[A]` 和 `r[B]` 可以通过不同�
 
 ![Figure 9.5. Simplified protocol of Fujioka et al. (2012)](img/fig9-5.jpg)
 
-**图 9.5.** *Fujioka 等人 (2012) 的简化协议*
+**图 9.5.** Fujioka 等人 (2012) 的简化协议
 
 - **NAXOS 技巧**：随机性值计算为 `H(e, l)`，其中 `e` 是临时秘密，`ℓ` 是长期秘密，`H` 是哈希函数。在 NAXOS 协议 (LaMacchia 等人, 2007) 中，`H` 被建模为随机预言机，且 `H(e, l)` 被用作 Diffie-Hellman 临时输入。
 
@@ -3959,7 +3811,7 @@ FSXY 协议中使用的随机性输入值 `r[A]` 和 `r[B]` 可以通过不同�
 
 ![Figure 9.6. HMQV protocol](img/fig9-6.jpg)
 
-**图 9.6.** *HMQV 协议*
+**图 9.6.** HMQV 协议
 
 HMQV 协议消息与临时 Diffie-Hellman 相同，但会话密钥计算使用长期密钥和临时密钥的函数来计算共享秘密 `Z` = `g^((esk[A]+d·sk[A])(esk[B]+e·sk[B]))`。临时值 `d` 和 `e` 使用哈希函数 `H` 计算，其输出大小仅为 Diffie-Hellman 计算中使用的指数长度的一半。这导致该协议中每方大约使用 2.5 次指数运算即可实现认证密钥交换，相比之下，普通未认证 Diffie-Hellman 密钥交换使用 2 次指数运算。Krawczyk 在类似 CK 模型 (Canetti 和 Krawczyk, 2001) 的模型中提供了安全性证明，假设哈希函数 `H` 充当随机预言机。请注意，HMQV 仅实现弱前向保密，因为主动对手可自由选择 `esk[A]` 的有效输入，在 `B` 接受后，破坏 `A` 以获取 `sk^(A)` 并计算 `S[A]`，然后像 `A` 一样计算 `K`。
 
@@ -3968,10 +3820,6 @@ HMQV 协议刚发表时引起了争议，特别是关于其安全性证明是否
 如何将 HMQV 协议推广到其他代数设定并不明显。Zhang 等人 (2015) 的一项协议以 HMQV 为基础，构建了格设定下的 AKE 协议，旨在实现后量子安全。然而，他们并不声称达到相同的安全级别，具体而言是不允许对手获取会话状态。此外，其单消息变体已遭受攻击 (Gong 和 Zhao, 2017)。
 
 ### 9.3.3.5 认证群密钥交换
-
-
-
-
 
 组密钥交换的安全性比双方密钥交换更复杂。除了来自外部对手的威胁外，对手还有机会在协议运行中充当内部人员，并欺骗其他参与者关于活跃组成员的信息。另一个不适用于双方情况的复杂性在于，组密钥交换协议可以是*动态的*，提供添加或移除当前组成员的机会。特别是对于大型组，使用动态操作而不是在组成员发生变化时必须重新运行整个协议，可能会带来显著的效率提升。
 
@@ -4013,9 +3861,13 @@ Bresson, E., Chevassut, O., Pointcheval, D. (2002). Dynamic group Diffie–Hellm
 
 Burmester, M. and Desmedt, Y. (1995). A secure and efficient conference key distribution system (extended abstract). In *EUROCRYPT’94*, vol. 950 of *LNCS*, Santis, A.D. (ed.). Springer, Heidelberg.
 
+
+
+# 参考文献
+
 Canetti, R. and Krawczyk, H. (2001). Analysis of key-exchange protocols and their use for building secure channels. In *EUROCRYPT 2001*, vol. 2045 of *LNCS*, Pfitzmann, B. (ed.). Springer, Heidelberg.
 
-Canetti, R. and Krawczyk, H. (2002). Security analysis of IKE’s signature-based key-exchange protocol. In *CRYPTO 2002*, vol. 2442 of *LNCS*, Yung, M. (ed.). Springer, Heidelberg \[Online\]. Available at: [`eprint.iacr.org/2002/120/`](https://eprint.iacr.org/2002/120/).
+Canetti, R. and Krawczyk, H. (2002). Security analysis of IKE’s signature-based key-exchange protocol. In *CRYPTO 2002*, vol. 2442 of *LNCS*, Yung, M. (ed.). Springer, Heidelberg [Online]. Available at: [`eprint.iacr.org/2002/120/`](https://eprint.iacr.org/2002/120/).
 
 Castryck, W., Lange, T., Martindale, C., Panny, L., Renes, J. (2018). CSIDH: An efficient post-quantum commutative group action. In *ASIACRYPT 2018, Part III*, vol. 11274 of *LNCS*, Peyrin, T., Galbraith, S. (eds). Springer, Heidelberg.
 
@@ -4030,12 +3882,6 @@ Cohn-Gordon, K., Cremers, C., Gjøsteen, K., Jacobsen, H., Jager, T. (2019). Hig
 Cremers, C. (2011). Examining indistinguishability-based security models for key exchange protocols: The case of CK, CK-HMQV, and eCK. In *ASIACCS 11*, Cheung, B.S.N., Hui, L.C.K., Sandhu, R.S., Wong, D.S. (eds). ACM Press.
 
 Cremers, C.J.F. and Feltz, M. (2012). Beyond eCK: Perfect forward secrecy under actor compromise and ephemeral-key reveal. In *ESORICS 2012*, vol. 7459 of *LNCS*, Foresti, S., Yung, M., Martinelli, F. (eds). Springer, Heidelberg.
-
-
-
-
-
-# 参考文献
 
 D’Anvers, J.-P., Karmakar, A., Roy, S.S., Vercauteren, F. (2018). Saber: Module-LWR based key exchange, CPA-secure encryption and CCA-secure KEM. In *AFRICACRYPT 18*, vol. 10831 of *LNCS*, Joux, A., Nitaj, A., Rachidi, T. (eds). Springer, Heidelberg.
 
@@ -4101,15 +3947,15 @@ Okamoto, T. (2007). Authenticated key exchange and key encapsulation in the stan
 
 Pan, J., Qian, C., Ringerud, M. (2021). Signed Diffie–Hellman key exchange with tight security. In *CT-RSA 2021*, vol. 12704 of *LNCS*, Paterson, K.G. (ed.). Springer, Heidelberg.
 
+
+
 Poettering, B., Rösler, P., Schwenk, J., Stebila, D. (2021). SoK: Game-based security models for group key exchange. In *CT-RSA 2021*, vol. 12704 of *LNCS*, Paterson, K.G. (ed.). Springer, Heidelberg.
 
 Yao, A.C.-C. and Zhao, Y. (2010). Deniable Internet key exchange. In *ACNS 10*, vol. 6123 of *LNCS*, Zhou, J., Yung, M. (eds). Springer, Heidelberg.
 
 Zhang, J., Zhang, Z., Ding, J., Snook, M., Dagdelen, Ö. (2015). Authenticated key exchange from ideal lattices. In *EUROCRYPT 2015, Part II*, vol. 9057 of *LNCS*, Oswald, E., Fischlin, M. (eds). Springer, Heidelberg.
 
-# 10
-
-密码认证密钥交换：协议与安全模型
+# 10 密码认证密钥交换：协议与安全模型
 
 **Stanislaw JARECKI**
 
@@ -4119,20 +3965,17 @@ Zhang, J., Zhang, Z., Ding, J., Snook, M., Dagdelen, Ö. (2015). Authenticated k
 
 *密码认证密钥交换*（PAKE）协议允许仅共享一个低熵密码的双方，通过在不安全网络上通信，协商出一个密码学上强健的密钥。PAKE 协议在密码学文献中已被广泛研究，始于 Bellovin 和 Merritt (1992) 的开创性论文。PAKE 协议备受关注，因为密码一直是且仍然是互联网上用户认证的常用手段。密码认证在实践中存在许多漏洞：部分用户选择的密码熵较低，导致攻击者可对其进行猜测。许多人重复使用密码，因此某一互联网服务的密码泄露会让攻击者得以攻破该用户在其他服务上的账户。用户也会忘记密码，这迫使他们回退到其他通常安全性较低的认证方式。此类问题不胜枚举，然而尽管存在这些弱点，密码在安全性与易用性之间提供的权衡依然足够吸引人，使其成为一种主导的认证技术。
 
+### 关注 PAKE 安全定义
 
+本章概述了关于 PAKE 的密码学文献，但深入讨论了 PAKE 安全模型，在这方面它更像是一篇教程和重新评估，而非综述。一旦定义之间的差异变得清晰，我们将调查各种 PAKE 方案，将它们划分为标准计算模型和随机预言机模型 (`ROM`)。最后，我们调查了 PAKE 问题的两个重要变体：客户端-服务器，也称为非对称 PAKE，以及多服务器，即阈值 PAKE。有许多 PAKE 相关领域未包含在本综述中，例如三方 PAKE、群组 PAKE，或扩展到多因子或生物识别认证。我们也没有包含基于格和抗量子 PAKE，这是一个日益重要的领域，但可能更适合包含在基于格的密码系统综述中。
 
+### 密钥交换
 
-# 关注 PAKE 安全定义
+PAKE 是密钥交换 (KE) 的一种特化，也称为密钥协商。KE 协议允许双方通过不安全网络通信来创建共享对称密钥 `k`，该密钥能抵抗窃听者，即被动攻击者的攻击。例如，给定 KE 会话记录，没有高效算法能区分该 KE 实例中任一方输出的会话密钥 `sk` 与一个独立的随机密钥 `sk'`。根据 Impagliazzo 和 Rudich (1989) 的结果，我们知道 KE 不太可能仅基于对称密钥密码学而存在。特别地，不难看出两轮 KE 与密钥封装机制 (`KEM`) 之间的等价性，`KEM` 是公钥加密 (`PKE`) 的一种变体，用于加密随机密钥而非任意消息（参见第 9 章）。
 
-本章概述了关于 PAKE 的密码学文献，但深入讨论了 PAKE 安全模型，在这方面它更像是一篇教程和重新评估，而非综述。一旦定义之间的差异变得清晰，我们将调查各种 PAKE 方案，将它们划分为标准计算模型和随机预言机模型 (ROM)。最后，我们调查了 PAKE 问题的两个重要变体：客户端-服务器，也称为非对称 PAKE，以及多服务器，即阈值 PAKE。有许多 PAKE 相关领域未包含在本综述中，例如三方 PAKE、群组 PAKE，或扩展到多因子或生物识别认证。我们也没有包含基于格和抗量子 PAKE，这是一个日益重要的领域，但可能更适合包含在基于格的密码系统综述中。
+### 向 KE 添加密码认证
 
-# 密钥交换
-
-PAKE 是密钥交换 (KE) 的一种特化，也称为密钥协商。KE 协议允许双方通过不安全网络通信来创建共享对称密钥 `k`，该密钥能抵抗窃听者，即被动攻击者的攻击。例如，给定 KE 会话记录，没有高效算法能区分该 KE 实例中任一方输出的会话密钥 `sk` 与一个独立的随机密钥 `sk'`。根据 Impagliazzo 和 Rudich (1989) 的结果，我们知道 KE 不太可能仅基于对称密钥密码学而存在。特别地，不难看出两轮 KE 与密钥封装机制 (KEM) 之间的等价性，KEM 是公钥加密 (PKE) 的一种变体，用于加密随机密钥而非任意消息（参见第 9 章）。
-
-# 向 KE 添加密码认证
-
-KE 协议本身对主动攻击者是不安全的，主动攻击者可以与任一方交互并仅遵循 KE 协议。PAKE 所探讨的问题是如何向 KE 添加密码认证：如果双方 A 和 B 共享密码 `pw`，他们能否利用这个预先约定的密码来保护他们的会话密钥免受主动攻击者的侵害？共享密码意味着什么？请注意，如果 A 和 B 选择的共享密码具有高熵，则可以使用提取器 (Trevisan 2001) 从中提取加密密钥，然后使用 PRF 从中导出任意数量的新伪随机会话密钥。然而，如果 `pw` 仅以常数熵选择，则攻击者将以常数概率找到以这种方式导出的密钥。PAKE 所问的问题是：如果 A 和 B 选择的共享密码 `pw` 具有最小熵 `t`，即猜中 `pw` 的概率为 `2^(-t)`，那么是否存在一种协议允许它们建立共享密钥 `sk`，使得
+KE 协议本身对主动攻击者是不安全的，主动攻击者可以与任一方交互并仅遵循 KE 协议。PAKE 所探讨的问题是如何向 KE 添加密码认证：如果双方 A 和 B 共享密码 `pw`，他们能否利用这个预先约定的密码来保护他们的会话密钥免受主动攻击者的侵害？共享密码意味着什么？请注意，如果 A 和 B 选择的共享密码具有高熵，则可以使用提取器 (Trevisan 2001) 从中提取加密密钥，然后使用 `PRF` 从中导出任意数量的新伪随机会话密钥。然而，如果 `pw` 仅以常数熵选择，则攻击者将以常数概率找到以这种方式导出的密钥。PAKE 所问的问题是：如果 A 和 B 选择的共享密码 `pw` 具有最小熵 `t`，即猜中 `pw` 的概率为 `2^(-t)`，那么是否存在一种协议允许它们建立共享密钥 `sk`，使得
 
 1. 密钥 `sk` 应像未认证 KE 一样能抵抗被动攻击者，无论密码 `pw` 中的熵如何；
 2. 如果攻击者是主动的，则它获知被攻击方输出的密钥 `sk` 任何信息的概率至多为 `2^(-t)`；
@@ -4140,47 +3983,43 @@ KE 协议本身对主动攻击者是不安全的，主动攻击者可以与任�
 
 要求 (1) 要求 PAKE 不比 KE 差；例如，即使攻击者知道密码，PAKE 协议记录也绝不能泄露已建立密钥的任何信息。关于要求 (2)，请注意主动攻击者可以在任意密码猜测 `pw'` 上遵循规定的 PAKE 协议，如果该猜测正确，即 `pw' = pw`，则攻击者将计算出与其交互的一方相同的密钥 `sk`。根据 `pw` 选择熵的假设，该策略成功的概率为 `2^(-t)`，要求 (2) 要求不存在针对 PAKE 协议的其他（或至少没有更好）攻击，而这种不可避免的“在线密码测试”攻击除外。最后，要求 (3) 要求 A 和 B 可以在多个 PAKE 实例中重复使用同一密码。具体而言，在攻击者被动观察的每个实例中，生成的密钥必须像在 KE 中一样安全；如果攻击者主动攻击任意协议实例，则其最佳策略是进行不同的密码猜测，并针对被攻击的会话实例测试每个猜测。特别地，PAKE 协议绝不能易受“离线密码测试”攻击，即协议记录绝不能允许攻击者离线测试任何（进一步的）密码猜测。针对协议实例的在线攻击必须是测试密码的唯一方式，且每个实例必须只允许攻击者测试一个猜测。
 
-# 大纲
+### 大纲
 
-在第 10.2 节中，我们以*加密密钥交换* (EKE) (Bellovin 和 Merritt 1992) 作为旗舰协议示例，略述 PAKE 的挑战。随后我们深入回顾了为 PAKE 提出的三种安全模型：基于博弈的 BPR 模型 (Bellare 等人 2000) 见第 10.3 节，基于仿真的 BMP 模型 (Boyko 等人 2000) 见第 10.4 节，以及 UC PAKE 模型 (Canetti 等人 2005) 见第 10.5 节。接下来，我们调查 PAKE 结果，将它们划分为标准模型解决方案见第 10.6 节和 ROM 或理想密码 (IC) 模型解决方案见第 10.7 节。最后，我们调查非对称或客户端-服务器 PAKE 的结果见第 10.8 节和阈值 PAKE 见第 10.9 节。
+在第 10.2 节中，我们以*加密密钥交换* (EKE) (Bellovin 和 Merritt 1992) 作为旗舰协议示例，略述 PAKE 的挑战。随后我们深入回顾了为 PAKE 提出的三种安全模型：基于博弈的 BPR 模型 (Bellare 等人 2000) 见第 10.3 节，基于仿真的 BMP 模型 (Boyko 等人 2000) 见第 10.4 节，以及 UC PAKE 模型 (Canetti 等人 2005) 见第 10.5 节。接下来，我们调查 PAKE 结果，将它们划分为标准模型解决方案见第 10.6 节和 `ROM` 或理想密码 (`IC`) 模型解决方案见第 10.7 节。最后，我们调查非对称或客户端-服务器 PAKE 的结果见第 10.8 节和阈值 PAKE 见第 10.9 节。
 
-## 10.2. 首个 PAKE：EKE
+## 10.2 首个 PAKE：EKE
 
 首个密码认证 KE 是 Bellovin 和 Merritt (1992) 的 EKE 方案。在本节中，我们将详细介绍 EKE 协议，以说明尽管协议提案看似简单，PAKE 安全分析仍面临诸多挑战。这种对 PAKE 领域的初步探索也将凸显 PAKE 研究中几个反复出现的主题，例如，抵抗离线攻击的安全性以及协议消息形成对密码承诺的必要性。
 
 ### EKE 编译器
 
-EKE 协议是一种编译器，它从两个要素构建 PAKE：一种未认证 KE 和一种为 KE 设计的对称密钥加密 (SKE) 方案 (`E`, `D`)。在 EKE 协议中，Alice 和 Bob 运行底层 KE 协议，但每当 Alice 生成下一条 KE 协议消息 `m[A]` 时，她都使用她的密码 `pw^A` 对其进行认证，通过将其加密为 `c[A] = E(pw^A, m[A])` 发送给 Bob。如果 Bob 使用他的密码 `pw^B` 将其解密为 `m'[A] = D(pw^B, c[A])`，那么当 `pw^B = pw^A` 时，`m'[A] = m[A]`。确实，如果双方以这种方式对每条 KE 协议消息进行密码加密，当他们的密码匹配时，他们将计算出相同的密钥。另一方面，如果他们的密码不同，则存在自然的 KE 和 SKE 方案，确保双方输出不相关的密钥。
+EKE 协议是一种编译器，它从两个要素构建 PAKE：一种未认证 KE 和一种为 KE 设计的对称密钥加密 (`SKE`) 方案 (`E`, `D`)。在 EKE 协议中，Alice 和 Bob 运行底层 KE 协议，但每当 Alice 生成下一条 KE 协议消息 `m[A]` 时，她都使用她的密码 `pw^A` 对其进行认证，通过将其加密为 `c[A] = E(pw^A, m[A])` 发送给 Bob。如果 Bob 使用他的密码 `pw^B` 将其解密为 `m'[A] = D(pw^B, c[A])`，那么当 `pw^B = pw^A` 时，`m'[A] = m[A]`。确实，如果双方以这种方式对每条 KE 协议消息进行密码加密，当他们的密码匹配时，他们将计算出相同的密钥。另一方面，如果他们的密码不同，则存在自然的 KE 和 `SKE` 方案，确保双方输出不相关的密钥。
 
 ![Figure 10.1. Encrypted key exchange (EKE) (Bellovin and Merritt 1992) (without key confirmation)](img/fig10-1.jpg)
 
 **图 10.1.** *加密密钥交换 (EKE) (Bellovin 和 Merritt 1992) (不含密钥确认)*
 
+在图 10.1 中，我们展示了针对具有两个消息流的 KE 方案实例化的 EKE 协议，例如，基于 `KEM` 构建的 KE 即属于这种情况。在 EKE 的最初展示中（Bellovin 和 Merritt，1992），该协议后跟 `key confirmation`（密钥确认）消息，用于确认双方是否计算出了相同的密钥。我们将在下文回到密钥确认步骤。在图 10.1 中，我们将 KE 方案表示为算法元组 `KE = (KE^A_1, KE^B, KE^A_2)`，其中 `KE^A_1` 在安全参数 `κ` 上采样 Alice 的消息 `m[A]`，`KE^B` 给定消息 `m[A]` 计算 Bob 的响应 `m[B]` 和会话密钥 `sk[B]`，而 `KE^A_2` 给定 `m[B]` 以及 `KE^A_1` 输出的状态 `st` 计算 Alice 的会话密钥 `sk[A]`。如果 `KE` 是基于 `KEM` 构建的，则 `KE^A_1` 是密钥生成算法，`m[A]` 是公钥，`st` 是私钥，`KE^B` 是加密算法，`m[B]` 是密文，`KE^A_2` 是解密算法，且 `sk[A]` = `sk[B]` 是在公钥 `m[A]` 下密文 `m[B]` 中加密的一次性密钥。例如，使用哈希 Diffie-Hellman `KEM`，我们将得到 `m[A]` = `g^x`，`m[B]` = `g^y` 以及 `sk[A]` = `sk[B]` = `H(g^(xy))`。
 
+*EKE 对 KE 和对称加密的要求*：对 EKE 的一个直接质疑是它使用口令作为密钥，由于口令并非全熵字符串，且合理口令的编码可能仅占据密钥空间中可忽略不计的一小部分，加密的标准安全属性可能无法说明在从口令派生的密钥上使用 `E` 的任何情况。事实上，EKE 编译器仅在密钥协商和加密具有若干特殊属性时才有效。第一个属性是任一方发送的密文不允许对用于加密它们的口令进行离线测试。对于任何口令猜测 `pw*`，密文 `c = E(pw, m)` 的解密 `m* = D(pw*, c)` 必须看起来像是为该轮次计算出的合理 KE 消息。这将在以下条件下得到保证。首先，KE 必须具有 `random transcripts`（随机会话记录），即在每一轮中存在一个消息空间 `M`，使得对于之前所有轮次发送的消息，诚实方生成的消息与 `M` 中的随机值不可区分。（如果 KE 基于 `KEM` 构建，这要求 `KEM` 具有 `key privacy`（密钥隐私），即密文无法链接到公钥（Bellare 等人，2001）。）其次，对于任意两个密钥 `k, k'`，解密 `m' = D[k'](E[k](m←[$]M))` 在 `M` 中也必须是伪随机的，这意味着 `SKE` 必须满足以下 `uniform ciphertexts`（均匀密文）属性：
 
-在图 10.1 中，我们展示了针对具有两个消息流的 KE 方案实例化的 EKE 协议，例如，基于 KEM 构建的 KE 即属于这种情况。在 EKE 的最初展示中（Bellovin 和 Merritt，1992），该协议后跟 `key confirmation`（密钥确认）消息，用于确认双方是否计算出了相同的密钥。我们将在下文回到密钥确认步骤。在图 10.1 中，我们将 KE 方案表示为算法元组 ![image](img/i305.jpg)，其中 ![image](img/kea1.jpg) 在安全参数 `κ` 上采样 Alice 的消息 `m[A]`，`KE`^(`B`) 给定消息 `m[A]` 计算 Bob 的响应 `m[B]` 和会话密钥 `sk [B]`，而 ![image](img/kea2.jpg) 给定 `m[B]` 以及 ![image](img/kea1.jpg) 输出的状态 `st` 计算 Alice 的会话密钥 `sk[A]`。如果 `KE` 是基于 KEM 构建的，则 ![image](img/kea1.jpg) 是密钥生成算法，`m[A]` 是公钥，`st` 是私钥，`KE`^(`B`) 是加密算法，`m[B]` 是密文，![image](img/kea2.jpg) 是解密算法，且 `sk[A]` = `sk[B]` 是在公钥 `m[A]` 下密文 `m[B]` 中加密的一次性密钥。例如，使用哈希 Diffie-Hellman KEM，我们将得到 `m[A]` = `g^x`，`m[B]` = `g^y` 以及 `sk [A]` = `sk [B]` = `H`(`g^(xy)`)。
+**定义 10.1.** – *对称密钥加密方案* (`E`, `D`) *在消息空间 M 上具有* `均匀密文` *如果对于任意一对密钥 `k[0]`, `k[1]`，`分布* `{E[k[0]](m)}[m←[$]M]` *和* `{E[k[1]](m)}[m←[$]M]` *在计算上不可区分。*
 
-*EKE 对 KE 和对称加密的要求*：对 EKE 的一个直接质疑是它使用口令作为密钥，由于口令并非全熵字符串，且合理口令的编码可能仅占据密钥空间中可忽略不计的一小部分，加密的标准安全属性可能无法说明在从口令派生的密钥上使用 `E` 的任何情况。事实上，EKE 编译器仅在密钥协商和加密具有若干特殊属性时才有效。第一个属性是任一方发送的密文不允许对用于加密它们的口令进行离线测试。对于任何口令猜测 `pw`^∗，密文 `c` = `E`(`pw, m`) 的解密 `m`^∗ = `D`(`pw`^∗, `c`) 必须看起来像是为该轮次计算出的合理 KE 消息。这将在以下条件下得到保证。首先，KE 必须具有 `random transcripts`（随机会话记录），即在每一轮中存在一个消息空间 `M`，使得对于之前所有轮次发送的消息，诚实方生成的消息与 `M` 中的随机值不可区分。（如果 KE 基于 KEM 构建，这要求 KEM 具有 `key privacy`（密钥隐私），即密文无法链接到公钥（Bellare 等人，2001）。）其次，对于任意两个密钥 `k, k`′，解密 `m`′ = `D`[`k`′] (`E``k`)[`m`←[$]`M`] 在 `M` 中也必须是伪随机的，这意味着 SKE 必须满足以下 `uniform ciphertexts`（均匀密文）属性：
+如果对于每个 `k`，`E[k]` 都是 `M` 上的排列，则均匀密文属性成立。例如，`E[k] = G(k) ⊕ m`，其中 `G` 是范围为 `M` 的 `PRG`。如果 `M` 是固定长度比特串的集合，则 `G` 可使用标准密码实现。然而，DH KE 中的消息是随机群元素，这要求要么将群元素作为比特串进行满射编码，要么使用原生为群上排列的加密。采用 RSA `KEM` 会更棘手，因为我们需要在 RSA 公钥空间上具有均匀密文的加密。
 
-定义 10.1.– `对称密钥加密方案` (`E`, `D`) `在消息空间 M 上具有` `均匀密文` `如果对于任意一对密钥 k`[0], `k`[1]，`分布` {`E`[`k`[0]] (`m`)}[`m`←[$]`M`] `和` {`E`[`k`[1]] (`m`)}[`m`←[$]`M`] `在计算上不可区分。`
+EKE 必须满足的第二个属性是 `SKE` 密文必须将其发送者绑定到用作加密密钥的口令。例如，如果 Alice 找到两个口令 `pw, pw'` 使得 `c = E[pw](m) = E[pw'](m')`，其中 `m, m'` 是两个 KE 实例输出的第一轮消息，那么她可以发送该密文作为她的消息，并通过在 `pw` 和 `pw'` 下解密 Bob 的响应，如果 Bob 的口令是 `either pw` 或 `pw'`，她就能完成该 KE 实例。这将是针对 PAKE 的攻击，因为 Alice 将在一次交互中测试两个口令猜测。我们可以使对称加密 `key-committing`（密钥绑定）（Abdalla 等人，2010；Canetti 等人，2010；Farshim 等人，2017），例如使用 `MAC`，它是密钥上的抗碰撞哈希（Krawczyk，2010）。然而，这将使 EKE 不再安全抵御离线口令测试。事实上，`E` 的均匀密文属性似乎排除了任何密钥绑定概念，因为它要求每个密文在任意密钥下解密都得到一个合理的消息。因此，EKE 似乎对 `SKE` 施加了两个相互矛盾的要求，因为密文必须看起来像是对每个口令都合理的加密，同时又必须将其发送者绑定到单个口令。Bellovin 和 Merritt（1992）并未明确指出足以使 EKE 成为安全 PAKE 的 KE 和 `SKE` 属性。事实上，只有在建立了一个可以证明此类条件充分性的安全模型后，这才成为可能。
 
-如果对于每个 `k`，`E`[`k`] 都是 `M` 上的排列，则均匀密文属性成立。例如，`E``k` = `G`(`k`) ⊕ `m`，其中 `G` 是范围为 `M` 的 PRG。如果 `M` 是固定长度比特串的集合，则 `G` 可使用标准密码实现。然而，DH KE 中的消息是随机群元素，这要求要么将群元素作为比特串进行满射编码，要么使用原生为群上排列的加密。采用 RSA KEM 会更棘手，因为我们需要在 RSA 公钥空间上具有均匀密文的加密。
+## 10.3 基于博弈的 PAKE 安全模型
 
-EKE 必须满足的第二个属性是 SKE 密文必须将其发送者绑定到用作加密密钥的口令。例如，如果 Alice 找到两个口令 `pw, pw`′ 使得 `c` = `E`[`pw`] (`m`) = `E`[`pw`′] (`m`′)，其中 `m, m`′ 是两个 KE 实例输出的第一轮消息，那么她可以发送该密文作为她的消息，并通过在 `pw` 和 `pw`′ 下解密 Bob 的响应，如果 Bob 的口令是 `either pw` 或 `pw`′，她就能完成该 KE 实例。这将是针对 PAKE 的攻击，因为 Alice 将在一次交互中测试两个口令猜测。我们可以使对称加密 `key-committing`（密钥绑定）（Abdalla 等人，2010；Canetti 等人，2010；Farshim 等人，2017），例如使用 MAC，它是密钥上的抗碰撞哈希（Krawczyk，2010）。然而，这将使 EKE 不再安全抵御离线口令测试。事实上，`E` 的均匀密文属性似乎排除了任何密钥绑定概念，因为它要求每个密文在任意密钥下解密都得到一个合理的消息。因此，EKE 似乎对 SKE 施加了两个相互矛盾的要求，因为密文必须看起来像是对每个口令都合理的加密，同时又必须将其发送者绑定到单个口令。Bellovin 和 Merritt（1992）并未明确指出足以使 EKE 成为安全 PAKE 的 KE 和 SKE 属性。事实上，只有在建立了一个可以证明此类条件充分性的安全模型后，这才成为可能。
+EKE 协议以其简洁性而优雅，但这种简洁性掩盖了微妙的实现和安全分析挑战。为 EKE 寻找令人信服的安全论证（以及令人信服的安全实现）的困难，以及创建安全口令认证协议的需求，激发了大量后续工作（Bellovin 和 Merritt，1993；Gong 等人，1993；Gong，1995；Steiner 等人，1995；Jablon，1996；Lucks，1998；Jablon，1997；Patel，1997；Wu，1998；MacKenzie 等人，2000；Buhler 等人，2000；Kaufman 和 Perlman，2001）。在此过程中，越来越清楚地认识到，要将 PAKE 研究置于坚实基础之上，需要在一个定义良好的安全模型中捕捉 PAKE 的安全目标。这一呼吁得到了 Bellare-Pointcheval-Rogaway (BPR)（Bellare 等人，2000）和 Boyko-MacKenzie-Patel (BMP)（Boyko 等人，2000）的同步回应，他们提出了两个独立的 PAKE 安全模型。
 
-## 10.3. 基于博弈的 PAKE 安全模型
-
-EKE 协议以其简洁性而优雅，但这种简洁性掩盖了微妙的实现和安全分析挑战。为 EKE 寻找令人信服的安全论证（以及令人信服的安全实现）的困难，以及创建安全口令认证协议的需求，激发了大量后续工作（Bellovin 和 Merritt，1993；Gong 等人，1993；Gong，1995；Steiner 等人，1995；Jablon，1996；Lucks，1998；Jablon，1997；Patel，1997；Wu，1998；MacKenzie 等人，2000；Buhler 等人，2000；Kaufman 和 Perlman，2001）。在此过程中，越来越清楚地认识到，要将 PAKE 研究置于坚实基础之上，需要在一个定义良好的安全模型中捕捉 PAKE 的安全目标。这一呼吁得到了 Bellare-Pointcheval-Rogaway (BPR)（Bellare 等人，2000）和 Boyko-MacKenzie-Patel (BMP)（Boyko 等人，2000）的同步回应，他们提出了两个独立的 PAKE 安全模型。^()
-
-### 10.3.1. BPR 安全模型
-
-
+### 10.3.1 BPR 安全模型
 
 Bellare 等人（2000）提出的 PAKE 安全模型遵循*基于博弈*的范式：(1) 它考虑一个安全博弈，即对手与运行 PAKE 协议多项式多个实例的诚实参与者之间的交互；(2) 它将某些事件定义为该协议的“破坏”；(3) 它将 PAKE 安全性定义为：对于所有有效对手，这种破坏发生的概率至多比不可避免的情况（即因 PAKE 方案规定的功能而在每个 PAKE 方案中必然发生的情况）微乎其微地高出一点。由于 PAKE 可被视为 AKE 的一种特化，BPR 安全博弈基于 Bellare-Rogaway 的 AKE 模型（Bellare 和 Rogaway 1994）。即，`A` 与代表诚实参与者实现 PAKE 协议动作的协议实例预言机进行交互。`A` 可以在这些实例之间扮演中间人对手，但也可以选择通过来回转发消息来“连接”两个实例，这模拟了会话上的被动对抗行为。`A` 交互的协议会话要么不产生输出即终止（例如因为会话拒绝了对方），要么输出一个会话密钥 `sk`。安全性建模方式与 KE 相同，即协议必须保证诚实参与者的会话密钥与随机字符串不可区分。技术上讲，在 BPR 安全博弈中，`A` 在某一时刻选择其想要 `test` 的会话，一个随机挑战比特 `b` 决定 `A` 接收的是该会话输出的 `真实密钥 sk` 还是一个独立的 `随机密钥 sk'`。`A` 的目标是区分这两种情况。即，在任意数量的进一步交互后，`A` 输出比特 `b'`，其优势定义为 `Adv = |Pr[b' = b] - 1/2|`，这衡量了 `A` 区分真实密钥和随机密钥的能力比随机猜测好多少。
 
 第一个要求是，无论会话使用何种密码，即即使对手选择了其密码，PAKE 对被动攻击者而言必须不比未认证 KE 差。因此，如果对手被动地 `连接` 两个会话，则其对它们的优势应至多可忽略不计。然而，如果对手在某个 PAKE 会话上是主动的，即它向其发送自己选择的消息，那么仅通过在密码猜测 `pw*` 上运行 PAKE 协议，如果被攻击会话运行在密码 `pw*` 上，对手就会计算出与该会话相同的会话密钥。因此，任何 PAKE 方案中主动对手的基线优势 `Adv_active` 取决于被攻击会话采样其密码的分布。BPR 安全博弈让每对诚实参与者从固定集合 `D`（称为 `密码字典`）中均匀选取一个密码，从而得出以下安全概念：
 
-**定义 10.2。** – *如果对于所有集合 D 和所有有效算法* `A`，
+**定义 10.2.** – *如果对于所有集合 D 和所有有效算法* `A`，
 
 ```
 Adv_A^PAKE <= q_ses / |D| + negl
@@ -4188,15 +4027,19 @@ Adv_A^PAKE <= q_ses / |D| + negl
 
 *其中 `q_ses` 是 `A` 为主动的会话数量，`Adv_active` 定义如上，`negl` 是可忽略函数，则称 PAKE 协议在 BPR 模型中是安全的（Bellare 等人，2000）。*
 
-*哪些会话密钥可以泄露给对手？* 在上述安全博弈中，`A` 完全控制网络，但除了其选择测试的单个会话外，无法获得诚实会话内部输出的任何信息。这种 KE 安全概念是不充分的，因为它会使即使攻击者能使同一参与者的两个诚实会话输出相同会话密钥的方案也变得安全。如果其中一个密钥被高层应用以揭示密钥的方式使用（经典示例是将密钥用于一次性加密垫加密或作为一次性认证器），这将使另一个会话变得不安全。BPR 安全博弈通过添加 `reveal` 接口引入了每个 `sk` 输出必须是新鲜的要求，`A` 可以使用该接口查看每个诚实会话输出的 `sk`（如果会话以拒绝终止，则 `sk` = ⊥），除了其测试的会话。
+
+
+### 哪些会话密钥可以泄露给对手？
+
+在上述安全博弈中，`A` 完全控制网络，但除了其选择测试的单个会话外，无法获得诚实会话内部输出的任何信息。这种 KE 安全概念是不充分的，因为它会使即使攻击者能使同一参与者的两个诚实会话输出相同会话密钥的方案也变得安全。如果其中一个密钥被高层应用以揭示密钥的方式使用（经典示例是将密钥用于一次性加密垫加密或作为一次性认证器），这将使另一个会话变得不安全。BPR 安全博弈通过添加 `reveal` 接口引入了每个 `sk` 输出必须是新鲜的要求，`A` 可以使用该接口查看每个诚实会话输出的 `sk`（如果会话以拒绝终止，则 `sk` = ⊥），除了其测试的会话。
 
 然而，添加 reveal 查询使情况复杂化，因为如果对手可以揭示除测试会话外所有会话的密钥，那么与测试会话“连接”的会话怎么办？注意，如果消息被交换且它们运行在相同的输入 `pw` 上，PAKE 必须允许两个会话输出相同的密钥。因此，PAKE 安全模型必须禁止对手不仅揭示测试会话的密钥，还揭示与测试会话连接的会话的密钥。BPR 通过为每个 PAKE 会话假设额外的输入和输出来定义会话伙伴关系。额外的输入为：(1) 参与方的 `自身标识符`，一个被公开认可为该参与方身份的唯一字符串；(2) `比特` `role`，决定该参与方在协议中是发起者还是响应者。额外的输出为：(1) `会话标识符` `sid`，一个可以唯一标识两个诚实参与方之间单个会话的随机数（不失一般性，`sid` 可设为协议记录）；(2) `伙伴标识符` `pid`，参与方（表面上）与其建立会话密钥的对方的标识符。BPR 模型随后定义：当且仅当 (`sid_i`, `P`, `pid_i`, `pw_i`) = (`sid_j`, `pid_j`, `P'`, `pw_j`) 且 `role_i` ≠ `role_j` 时，两个会话 `P_i` 和 `P_j` 为*伙伴关系*，并放宽了正确性要求，仅要求两个会话在它们是伙伴时建立相同的会话密钥。最后，安全博弈允许 `A` 揭示除测试会话及与其伙伴关系的会话外的每个会话。
 
-*泄露密码和会话状态（PFS 和自适应安全）*：当对手与 PAKE 会话交互时，它能了解到的不仅是它发送的消息及其输出。首先，对手可能在某一时刻得知诚实参与方的密码，或关于它的某些部分信息。其次，它可能得知会话的临时状态。如果 `A` 得知 `P` 的密码 `pw`，则 PAKE 方案仍可保护 `P` 的被动观察会话以及攻击者在得知 `pw` *之前* 为主动的会话。由于密码是长期秘密，针对未来密码泄露的过去 PAKE 会话安全性被称为*完美前向保密 (PFS)*。（将 PFS 限制为仅针对长期秘密泄露时被动观察 KE 会话的安全性称为*弱 PFS*，例如 Krawczyk (2005)。）向 `A` 泄露会话状态称为*自适应妥协*（或*腐败*），在自适应妥协存在下的安全性称为*自适应安全*。注意自适应安全蕴含 PFS，因为会话状态包含密码（实际上 PFS 在 Bellare 等人 (2000) 中被定义为自适应安全），且由于会话状态揭示会话输出，`A` 无法测试被妥协的会话，也无法测试与被测试会话有伙伴关系的会话。
+### 泄露密码和会话状态（PFS 和自适应安全）
+
+当对手与 PAKE 会话交互时，它能了解到的不仅是它发送的消息及其输出。首先，对手可能在某一时刻得知诚实参与方的密码，或关于它的某些部分信息。其次，它可能得知会话的临时状态。如果 `A` 得知 `P` 的密码 `pw`，则 PAKE 方案仍可保护 `P` 的被动观察会话以及攻击者在得知 `pw` *之前* 为主动的会话。由于密码是长期秘密，针对未来密码泄露的过去 PAKE 会话安全性被称为*完美前向保密 (PFS)*。（将 PFS 限制为仅针对长期秘密泄露时被动观察 KE 会话的安全性称为*弱 PFS*，例如 Krawczyk (2005)。）向 `A` 泄露会话状态称为*自适应妥协*（或*腐败*），在自适应妥协存在下的安全性称为*自适应安全*。注意自适应安全蕴含 PFS，因为会话状态包含密码（实际上 PFS 在 Bellare 等人 (2000) 中被定义为自适应安全），且由于会话状态揭示会话输出，`A` 无法测试被妥协的会话，也无法测试与被测试会话有伙伴关系的会话。
 
 ### 10.3.2. 隐式认证与显式认证
-
-
 
 目前我们假设 PAKE 的目标是让会话 `P[i]` 和 `P[j]` 输出新鲜密钥 `sk[i]`、`sk[j]`，使得若这些会话运行在匹配的密码上（即 `pw^i = pw^j`），则 `sk[i] = sk[j]`。（通常，若 `P[i]` 和 `P[j]` 是伙伴关系，这还要求会话标识符和实体标识符相等，见上文。）然而，这并未对 `P[i]` 在*不*与匹配对手交互时的输出施加任何限制。特别是，此类会话也可以输出一个新鲜会话密钥 `sk[i]`。不过，PAKE 协议必须蕴含*隐式认证*属性：会话 `P[i]` 不知道其对手能否计算出相同的密钥 `sk[i]`，但*如果*能，则该对手必定知晓 `P[i]` 的密码 `pw^i`，且在与 `P[i]` 交互时必定使用了它。（BPR 模型的局限之一在于，不清楚它是否正式蕴含上述陈述，这与 BMP 模型形成对比；见第 10.4 节。）
 
@@ -4212,9 +4055,13 @@ Adv_A^PAKE <= q_ses / |D| + negl
 
 **图 10.2.** *从隐式认证 PAKE 到 PAKE-EA 的编译器*
 
-*不支持相关密码分布和动态信息泄露*：似乎难以将 BPR 安全游戏推广到常见的现实世界情况——*相关密码分布*，即计算机用户选择的新密码依赖于其先前建立的密码，或许是与不同的对手建立的。一个常被引用的应用是密码输错：诚实用户可能在与正确密码极其相关的密码上运行协议，而 BPR 定义并不蕴含在如此相关的密码上执行协议是安全的。另一个难以在 BPR 定义中捕捉的方面是密码信息的*动态泄露*，例如，在安全游戏中途向对手泄露部分密码信息的效果。
+#### 不支持相关密码分布和动态信息泄露
 
-*BPR 模型的其他非自适应方面*：在第 10.3.1 节讨论 PFS 安全性时，我们注意到 BPR 安全模型允许自适应会话状态妥协。然而，BPR 模型中的某些定义选择具有微妙的非自适应方面。其中之一是*对手必须预先决定发动被动攻击还是主动攻击*，即对手分别调用允许被动观察会话的预言机和允许攻击者与活跃会话交互的预言机。只有第二类查询计入对手优势的 `q_ses/|D|` 界限，但对手能否先查看会话发送的消息，然后再决定是否主动攻击它？此外，若对手只能测试一个会话，则不清楚这对许多会话的同时安全性意味着什么，因为标准混合论证仅蕴含对手优势的次优界限 `(q_ses)²/|D|`，如果挑战比特决定的是 `q_ses` 个被测试会话的真实或随机状态，而不是单个会话。后一个问题由 Abdalla 等人（2005b）解决，他们扩展了 BPR 模型，使对手可测试任意数量的会话。前一个问题也可解决，但会进一步使模型复杂化。
+似乎难以将 BPR 安全游戏推广到常见的现实世界情况——*相关密码分布*，即计算机用户选择的新密码依赖于其先前建立的密码，或许是与不同的对手建立的。一个常被引用的应用是密码输错：诚实用户可能在与正确密码极其相关的密码上运行协议，而 BPR 定义并不蕴含在如此相关的密码上执行协议是安全的。另一个难以在 BPR 定义中捕捉的方面是密码信息的*动态泄露*，例如，在安全游戏中途向对手泄露部分密码信息的效果。
+
+#### BPR 模型的其他非自适应方面
+
+在第 10.3.1 节讨论 PFS 安全性时，我们注意到 BPR 安全模型允许自适应会话状态妥协。然而，BPR 模型中的某些定义选择具有微妙的非自适应方面。其中之一是*对手必须预先决定发动被动攻击还是主动攻击*，即对手分别调用允许被动观察会话的预言机和允许攻击者与活跃会话交互的预言机。只有第二类查询计入对手优势的 `q_ses/|D|` 界限，但对手能否先查看会话发送的消息，然后再决定是否主动攻击它？此外，若对手只能测试一个会话，则不清楚这对许多会话的同时安全性意味着什么，因为标准混合论证仅蕴含对手优势的次优界限 `(q_ses)²/|D|`，如果挑战比特决定的是 `q_ses` 个被测试会话的真实或随机状态，而不是单个会话。后一个问题由 Abdalla 等人（2005b）解决，他们扩展了 BPR 模型，使对手可测试任意数量的会话。前一个问题也可解决，但会进一步使模型复杂化。
 
 ### 10.3.4 基于 Diffie-Hellman KE 实例化的 EKE
 
@@ -4232,14 +4079,11 @@ Bellare 等人（2000）在 EKE 协议（见图 10.1）上测试了 BPR 安全�
 
 ### 10.3.5 在任意群上实现理想密码
 
+Bellare 等人（2000）对 EKE2 的安全性分析假设在 DH 密钥交换中使用的群 `⟨g⟩` 上存在一个理想密码（IC）`E`。可以在 `⟨g⟩` 上实现一个*随机化*的 IC `E`，即 `E(k, m) = E′(k, ξ(m))`，其中 `E′` 是 `{0, 1}^n` 上的 IC，而 `ξ : ⟨g⟩ → {0, 1}^n` 是一个随机化可逆编码，它是*均匀*的，意思是 `{ξ(m)}[m←[$]⟨g⟩]` 在统计上接近于一个均匀的 `n` 位比特串。这样的随机化 IC 在定理 10.1 的证明中就足够了：一个从密文 `c` 中提取 `(k, m′)` 的模拟器，使得 `m′ = D′(k, c)`，可以计算 `m = ξ^(−1)(m′)`，这满足 `m = D(k, c)`，并且它可以通过将 `ξ(m)` 嵌入 `D′(k, c)` 中，将 `m ∈ ⟨g⟩` 嵌入 `D(k, c)` 中。因此，`⟨g⟩` 上均匀随机化可逆编码的存在意味着在随机预言机模型（ROM）中是安全的，因为比特串上的 IC 可以使用 Feistel 网络从随机预言机构造而成（Holenstein 等人，2011；Dachman-Soled 等人，2016；Dai 和 Steinberger，2016）。在 `⟨g⟩ = Z_p^*`（素数 `p`）这一特殊情况下，即 `⟨g⟩` 是整数区间 `[1, ..., p-1]`，当 `n ← |p| + κ` 时，这种编码很容易构造：`ξ(m)` 选取 `r ← [$] [2^n/p]` 并输出 `m′ = m + rp`（在整数上），而 `ξ^(−1)(m′)` 输出 `m = (m′ mod p)`。然而，对于椭圆曲线群，这样的编码并非显而易见。
 
+在出现这种椭圆曲线编码之前，Black 和 Rogaway（2002）展示了在任意群 `G` 上实现 IC `E′` 的期望常数时间方法，该群在 `{0, 1}^n` 上是*稠密*的，即如果 `G` 的元素可以编码为 `n` 位比特串，使得 `|G|/2^n` 是一个常数，给定 `n` 位比特串上的 IC `E`。在该构造中，对于 `m ∈ G`，`E′(k, m)` 定义 `c[0] = E(k, m)` 和 `c[i+1] = E(k, c[i])` 对所有 `i ≥ 0` 成立，并设置 `E′(k, m) = c[i]`，其中 `i` 使得 `c[i]` 是序列 `c[1], ..., c[i]` 中第一个属于 `G` 的元素。解密在反方向实现相同的过程，即它对 `D(k, ·)` 进行递归，直到找到 `G` 中的一个元素。该方法的一个弱点是时序信息会泄露加密方/解密方应用 `E(k, ·)` 或 `D(k, ·)` 的次数，如果 `k = pw`，这将泄露关于密码的信息，因为对于任何密码猜测 `pw*`，对手都可以看到从给定密文 `c` 到达 `G` 中的一个元素需要多少次 `D(pw*, ·)` 操作。
 
-
-Bellare 等人（2000）对 EKE2 的安全性分析假设在 DH 密钥交换中使用的群〈*g*〉上存在一个理想密码（IC）`E`。可以在〈*g*〉上实现一个*随机化*的 IC `E`，即`E`(*k, m*) = `E`′(*k, ξ*(*m*))，其中`E`′是{0, 1}^(*n*)上的 IC，而*ξ* : 〈*g*〉 → {0, 1}^(*n*)是一个随机化可逆编码，它是*均匀*的，意思是{*ξ*(*m*)}[*m*←[$]〈*g*〉]在统计上接近于一个均匀的*n*位比特串。这样的随机化 IC 在定理 10.1 的证明中就足够了：一个从密文*c*中提取(*k, m*′)的模拟器，使得*m*′ = `D`′(*k, c*)，可以计算*m* = *ξ*^(−1)(*m*′)，这满足*m* = `D`(*k, c*)，并且它可以通过将*ξ*(*m*)嵌入`D`′(*k, c*)中，将*m* ∈ 〈*g*〉嵌入`D`(*k, c*)中。因此，〈*g*〉上均匀随机化可逆编码的存在意味着在随机预言机模型（ROM）中是安全的，因为比特串上的 IC 可以使用 Feistel 网络从随机预言机构造而成（Holenstein 等人，2011；Dachman-Soled 等人，2016；Dai 和 Steinberger，2016）。在〈*g*〉 = ![image](img/zsp.jpg)（素数*p*）这一特殊情况下，即〈*g*〉是整数区间\[1, *..., p* 1\]，当*n ← |p|* + *κ*时，这种编码很容易构造：*ξ*(*m*)选取*r* ←[$] \[2^(*n*)/*p*\]并输出*m*′ = *m* + *rp*（在整数上），而*ξ*^(−1)(*m*′)输出*m* = (*m*′ mod *p*)。然而，对于椭圆曲线群，这样的编码并非显而易见。
-
-在出现这种椭圆曲线编码之前，Black 和 Rogaway（2002）展示了在任意群![image](img/g1.jpg)上实现 IC `E`′的期望常数时间方法，该群在{0, 1}^(*n*)上是*稠密*的，即如果![image](img/g1.jpg)的元素可以编码为*n*位比特串，使得|![image](img/g1.jpg)|*/*2^(*n*)是一个常数，给定*n*位比特串上的 IC `E`。在该构造中，对于*m* ∈ ![image](img/g1.jpg)，`E`′(*k, m*)定义*c*[0] = `E`(*k, m*)和*c*[*i*+1] = `E`(*k, c[i]*)对所有*i* ≥ 0 成立，并设置`E`′(*k, m*) = *c[i]*，其中*i*使得*c[i]*是序列*c*[1], *..., c[i]*中第一个属于![image](img/g1.jpg)的元素。解密在反方向实现相同的过程，即它对`D`(*k, ·*)进行递归，直到找到![image](img/g1.jpg)中的一个元素。该方法的一个弱点是时序信息会泄露加密方/解密方应用`E`(*k, ·*)或`D`(*k, ·*)的次数，如果*k* = *pw*，这将泄露关于密码的信息，因为对于任何密码猜测*pw*^∗，对手都可以看到从给定密文*c*到达![image](img/g1.jpg)中的一个元素需要多少次`D`(*pw*^∗, ·)操作。
-
-Bernstein 等人（2013）为一类椭圆曲线群构造了一个均匀编码，称为*Elligator2*，它适用于群中一半的元素。具体来说，Elligator2 将*ξ* : G^′ → \[0, *...,* (*q* 1)*/*2\]映射为椭圆曲线群![image](img/g1.jpg)（阶为*q*）的子域![image](img/g1.jpg)^′，使得![image](img/g1.jpg)^′ = (*q*+1)*/*2。（由于\[0, *...,* (*q* − 1)*/*2\]是一个整数区间，Elligator2 将与上述整数区间编码组合使用。）然而，由于 Elligator2 仅适用于一半的域，每一方都必须重新采样其 DH 密钥交换贡献，直到找到![image](img/g1.jpg)′中的一个元素，这是次优的，因为预计需要 2 次迭代。Tibouchi（2014）；Kim 和 Tibouchi（2015）为更大一类椭圆曲线群展示了均匀编码，称为*Elligator-squared*，它适用于完整域〈*g*〉。其解码*ξ*^(−1)的成本与 Elligator2 解码相似，但编码*ξ*需要采样和测试原像点，并且似乎大约贵三倍（取决于曲线）。此外，Elligator-squared 将 EC 点编码为一对域元素，因此比 Elligator2 多使用 2 倍的带宽。或者，可以应用 Holenstein 等人（2011）；Dachman-Soled 等人（2016）；Dai 和 Steinberger（2016）的结果，使用“混合”Feistel 在群〈*g*〉上构造随机化 IC，其中一条线保存群元素，该线上的 XOR 被群运算替代，而作用于该线上的轮哈希函数是作用于〈*g*〉上的 RO 不可区分哈希。（这些 Feistel 结果的证明似乎可以推广到这种情况。）使用 Dachman-Soled 等人（2016）的 8 轮 Feistel，这将在加密和解密中各产生四次哈希到群操作，但 McQuoid 等人（2020）显著优化了该设计，表明两轮混合 Feistel，因此单次哈希到群操作，实现了一种足以满足 EKE2 的“一次性”IC 形式。
+Bernstein 等人（2013）为一类椭圆曲线群构造了一个均匀编码，称为*Elligator2*，它适用于群中一半的元素。具体来说，Elligator2 将 `ξ : G′ → [0, ..., (q-1)/2]` 映射为椭圆曲线群 `G`（阶为 `q`）的子域 `G′`，使得 `|G′| = (q+1)/2`。（由于 `[0, ..., (q-1)/2]` 是一个整数区间，Elligator2 将与上述整数区间编码组合使用。）然而，由于 Elligator2 仅适用于一半的域，每一方都必须重新采样其 DH 密钥交换贡献，直到找到 `G′` 中的一个元素，这是次优的，因为预计需要 2 次迭代。Tibouchi（2014）；Kim 和 Tibouchi（2015）为更大一类椭圆曲线群展示了均匀编码，称为*Elligator-squared*，它适用于完整域 `⟨g⟩`。其解码 `ξ^(−1)` 的成本与 Elligator2 解码相似，但编码 `ξ` 需要采样和测试原像点，并且似乎大约贵三倍（取决于曲线）。此外，Elligator-squared 将 EC 点编码为一对域元素，因此比 Elligator2 多使用 2 倍的带宽。或者，可以应用 Holenstein 等人（2011）；Dachman-Soled 等人（2016）；Dai 和 Steinberger（2016）的结果，使用“混合”Feistel 在群 `⟨g⟩` 上构造随机化 IC，其中一条线保存群元素，该线上的 XOR 被群运算替代，而作用于该线上的轮哈希函数是作用于 `⟨g⟩` 上的 RO 不可区分哈希。（这些 Feistel 结果的证明似乎可以推广到这种情况。）使用 Dachman-Soled 等人（2016）的 8 轮 Feistel，这将在加密和解密中各产生四次哈希到群操作，但 McQuoid 等人（2020）显著优化了该设计，表明两轮混合 Feistel，因此单次哈希到群操作，实现了一种足以满足 EKE2 的“一次性”IC 形式。
 
 ## 10.4. 基于模拟的 PAKE 安全模型
 
@@ -4247,50 +4091,51 @@ Boyko–MacKenzie–Patel（BMP）PAKE 安全模型（Boyko 等人，2000）与 
 
 ### 10.4.1. BMP 安全模型
 
-PAKE 的 BMP 安全模型借鉴了 Bellare–Canetti–Krawczyk 的 AKE 协议模型（Bellare 等人，1998），及其由 Shoup（1999）所做的改进。这些模型遵循*基于模拟*的安全定义范式，该范式此前曾用于建模安全多方计算（MPC）（例如 Beaver，1991；Micali 和 Rogaway，1992；Canetti，2000；参见第 4 章）。基于模拟的范式考虑两个安全游戏，涉及两类对手。第一个游戏称为*真实世界*游戏，是对手![image](img/a.jpg)与运行协议Π的诚实参与方之间的交互。第二个游戏称为*理想世界*游戏，是一个称为*理想世界对手*的算法![image](img/a.jpg)^∗与理想化系统（记为![image](img/f.jpg)，代表*功能*）之间的交互，该系统根据定义除了方案功能所必需的信息外，不向对手泄露任何信息。如果对于所有有效的真实世界对手![image](img/a.jpg)，都存在一个有效的理想世界对手![image](img/a.jpg)^∗（也称为*模拟器*），使得这两个游戏产生不可区分的视图，则该方案被定义为安全的，其中两种情况下的“视图”都定义为对手的输出（不失一般性地包括其完整交互记录）与所有诚实参与方输出的联合分布。这一概念捕捉了方案Π的安全性，因为它意味着对手![image](img/a.jpg)在与运行Π的诚实参与方交互时能做的一切（这“一切”包括![image](img/a.jpg)学到的一切，即其交互记录，以及![image](img/a.jpg)导致诚实参与方做的一切，即它们的输出），也可以由模拟器![image](img/a.jpg)^∗在与理想系统![image](img/f.jpg)交互时完成。^()
+PAKE 的 BMP 安全模型借鉴了 Bellare–Canetti–Krawczyk 的 AKE 协议模型（Bellare 等人，1998），及其由 Shoup（1999）所做的改进。这些模型遵循*基于模拟*的安全定义范式，该范式此前曾用于建模安全多方计算（MPC）（例如 Beaver，1991；Micali 和 Rogaway，1992；Canetti，2000；参见第 4 章）。基于模拟的范式考虑两个安全游戏，涉及两类对手。第一个游戏称为*真实世界*游戏，是对手 `A` 与运行协议 `Π` 的诚实参与方之间的交互。第二个游戏称为*理想世界*游戏，是一个称为*理想世界对手*的算法 `A*` 与理想化系统（记为 `F`，代表*功能*）之间的交互，该系统根据定义除了方案功能所必需的信息外，不向对手泄露任何信息。如果对于所有有效的真实世界对手 `A`，都存在一个有效的理想世界对手 `A*`（也称为*模拟器*），使得这两个游戏产生不可区分的视图，则该方案被定义为安全的，其中两种情况下的“视图”都定义为对手的输出（不失一般性地包括其完整交互记录）与所有诚实参与方输出的联合分布。这一概念捕捉了方案 `Π` 的安全性，因为它意味着对手 `A` 在与运行 `Π` 的诚实参与方交互时能做的一切（这“一切”包括 `A` 学到的一切，即其交互记录，以及 `A` 导致诚实参与方做的一切，即它们的输出），也可以由模拟器 `A*` 在与理想系统 `F` 交互时完成。
 
-*真实世界游戏*：让我们首先描述 BMP 模型中的真实世界游戏，它捕捉了对手![image](img/a.jpg)与运行 PAKE 协议多项式多个实例的诚实参与方（`P`[1]*,...,* `P`[*n*]）之间的交互。这种交互类似于 BPR 安全游戏，就像在那里一样，假设对手![image](img/a.jpg)完全控制所有诚实参与方之间的网络。然而，与 BPR 安全游戏不同，这里没有定义“攻破”该协议的事件，也没有对手必须预测的挑战比特*b*。^()
+#### 真实世界游戏
+
+让我们首先描述 BMP 模型中的真实世界游戏，它捕捉了对手 `A` 与运行 PAKE 协议多项式多个实例的诚实参与方（`P[1], ..., P[n]`）之间的交互。这种交互类似于 BPR 安全游戏，就像在那里一样，假设对手 `A` 完全控制所有诚实参与方之间的网络。然而，与 BPR 安全游戏不同，这里没有定义“攻破”该协议的事件，也没有对手必须预测的挑战比特 `b`。
 
 
 
-
-与 BPR 安全博弈最显著的对比在于谁决定诚实 `P[i]` 的密码输入。在 BMP 模型中，诚实参与方的输入由一个称为*环主*的特殊实体决定，但不失一般性，环主可以遵循对手 ![image](img/a.jpg) 的指示。因此，有些反直觉的是，是对手 ![image](img/a.jpg) 决定了所有密码。这与 BPR 安全博弈形成强烈对比，在 BPR 中 `P[i]` 的密码是由博弈挑战者从某个字典中随机选择的，而非由对手选择。然而，正如我们稍后将看到的，这种看似反直觉的选择不仅讲得通，而且意味着对任意密码分布的安全性，还有助于克服 BPR 模型的其他几个局限性（参见第 10.3.3 节）。与 BPR 模型一样，![image](img/a.jpg) 可以揭示任意诚实参与方的会话密钥，但由于不再存在对手“测试”的会话，不失一般性，![image](img/a.jpg) 可以获取所有 `P[i]` 输出的会话密钥。
+与 BPR 安全博弈最显著的对比在于谁决定诚实 `P[i]` 的密码输入。在 BMP 模型中，诚实参与方的输入由一个称为*环主*的特殊实体决定，但不失一般性，环主可以遵循对手 `A` 的指示。因此，有些反直觉的是，是对手 `A` 决定了所有密码。这与 BPR 安全博弈形成强烈对比，在 BPR 中 `P[i]` 的密码是由博弈挑战者从某个字典中随机选择的，而非由对手选择。然而，正如我们稍后将看到的，这种看似反直觉的选择不仅讲得通，而且意味着对任意密码分布的安全性，还有助于克服 BPR 模型的其他几个局限性（参见第 10.3.3 节）。与 BPR 模型一样，`A` 可以揭示任意诚实参与方的会话密钥，但由于不再存在对手“测试”的会话，不失一般性，`A` 可以获取所有 `P[i]` 输出的会话密钥。
 
 ### 理想世界博弈
 
-我们颠倒了 Boyko 等人 (2000) 采用的表述顺序，从*隐式认证* PAKE 情况入手，这作为 BPR 定义的基本情况，随后成为了 PAKE 的标准概念。我们将在第 10.4.4 节解释向*显式认证*（PAKE-EA）的扩展。BMP 模型中的理想世界博弈是模拟器算法 ![image](img/a.jpg)^∗ 与 PAKE 方案的理想功能 ![image](img/f.jpg)`PAKE` 之间的交互，过程如下：
+我们颠倒了 Boyko 等人 (2000) 采用的表述顺序，从*隐式认证* PAKE 情况入手，这作为 BPR 定义的基本情况，随后成为了 PAKE 的标准概念。我们将在第 10.4.4 节解释向*显式认证*（PAKE-EA）的扩展。BMP 模型中的理想世界博弈是模拟器算法 `S*` 与 PAKE 方案的理想功能 `FPAKE` 之间的交互，过程如下：
 
-1.  当诚实参与方 `P[i]` 被环主以某个密码 `pw [P[i]]` 调用时，![image](img/f.jpg)`PAKE` 向 ![image](img/a.jpg)^∗ 发送 (`NewSession`, `P`, `i`) 并为此会话创建一个内部状态，将其标记为 `fresh`。因此，理想世界对手知道是否有某个 `P[i]` 正在运行协议，但它不知道他们的密码输入。环主在 ![image](img/a.jpg)^∗ 的信号下启动 `P[i]`，同时设置 `P[i]` 的 `role` 位及其预期的对端标识符 `pid`。
+1.  当诚实参与方 `P[i]` 被环主以某个密码 `pw[P[i]]` 调用时，`FPAKE` 向 `S*` 发送 (`NewSession`, `P`, `i`) 并为此会话创建一个内部状态，将其标记为 `fresh`。因此，理想世界对手知道是否有某个 `P[i]` 正在运行协议，但它不知道他们的密码输入。环主在 `S*` 的信号下启动 `P[i]`，同时设置 `P[i]` 的 `role` 位及其预期的对端标识符 `pid`。
 
-2.  对于任意会话 `P[i]`，对手 ![image](img/a.jpg)^∗ 可以向 ![image](img/f.jpg)`PAKE` 发送消息 (`TestPwd`, `P`, `i, pw*`^∗)，这模拟了一种主动攻击，即真实世界的对手在与 `P[i]` 交互时，遵循 PAKE 方案使用密码猜测 `pw*`^∗。如果 `pw*`^∗ = `pw[P[i]]`，则 ![image](img/f.jpg)`PAKE` 将 `P[i]` 的会话标记为 `compromised`，否则将其标记为 `interrupted`。（这些标记将决定 ![image](img/f.jpg)`PAKE` 如何响应 `NewKey` 查询；见下文。）此外，![image](img/f.jpg)`PAKE` 将此标记揭示给 ![image](img/a.jpg)^∗，这意味着真实世界的 PAKE 协议可以揭示主动攻击是否成功。关键在于，![image](img/a.jpg)^∗ 对每个 `P[i]` 会话*最多只能发送一个* `TestPwd` 查询，这强制要求对手在被攻击的会话上最多只能测试一个密码猜测。此查询可以在 `fresh` 会话或 `dangling` 终止会话上进行；见下文 `NewKey` 处理。确实，![image](img/a.jpg)^∗ 能够进行*终止后*密码测试的能力（这在 PAKE-EA 中依然保留，见第 10.4.4 节）是基于模拟的 BMP 模型与 Canetti 等人 (2005) 的 UC PAKE 模型（见第 10.5 节）之间的一个关键区别。
+2.  对于任意会话 `P[i]`，对手 `S*` 可以向 `FPAKE` 发送消息 (`TestPwd`, `P`, `i, pw*`)，这模拟了一种主动攻击，即真实世界的对手在与 `P[i]` 交互时，遵循 PAKE 方案使用密码猜测 `pw*`。如果 `pw*` = `pw[P[i]]`，则 `FPAKE` 将 `P[i]` 的会话标记为 `compromised`，否则将其标记为 `interrupted`。（这些标记将决定 `FPAKE` 如何响应 `NewKey` 查询；见下文。）此外，`FPAKE` 将此标记揭示给 `S*`，这意味着真实世界的 PAKE 协议可以揭示主动攻击是否成功。关键在于，`S*` 对每个 `P[i]` 会话*最多只能发送一个* `TestPwd` 查询，这强制要求对手在被攻击的会话上最多只能测试一个密码猜测。此查询可以在 `fresh` 会话或 `dangling` 终止会话上进行；见下文 `NewKey` 处理。确实，`S*` 能够进行*终止后*密码测试的能力（这在 PAKE-EA 中依然保留，见第 10.4.4 节）是基于模拟的 BMP 模型与 Canetti 等人 (2005) 的 UC PAKE 模型（见第 10.5 节）之间的一个关键区别。
 
-3.  对于任意会话 `P[i]`，对手 ![image](img/a.jpg)^∗ 可以向 ![image](img/f.jpg)`PAKE` 发送 (`NewKey`, `P`, `i,` `P`′, `j, sk*`^∗)，这模拟 `P[i]` 接收到最后一条协议消息（假定来自 ![image](img/ppj.jpg)）并终止并产生某个输出。作为响应，![image](img/f.jpg)`PAKE` 终止此会话并按如下方式决定其输出 `sk[i]`：
+3.  对于任意会话 `P[i]`，对手 `S*` 可以向 `FPAKE` 发送 (`NewKey`, `P`, `i,` `P`′, `j, sk*`)，这模拟 `P[i]` 接收到最后一条协议消息（假定来自 `P[j]`）并终止并产生某个输出。作为响应，`FPAKE` 终止此会话并按如下方式决定其输出 `sk[i]`：
 
-    a) 如果 `P[i]` 会话是 `compromised`，则设置 `sk[i]` ← `sk*`^∗。
+    a) 如果 `P[i]` 会话是 `compromised`，则设置 `sk[i]` ← `sk*`。
 
-    b) 如果 `P[i]` 和 ![image](img/ppj.jpg) 均为 `fresh`，`pw [P[i]]` = `pw ![image]`，`pid[P[i]]` = `P`′ 且 `pid![image]` = `P`，![image](img/ppj.jpg) 和 `P[i]` 的 `role` 位将它们定义为先完成方和后完成方，并且 ![image](img/ppj.jpg) 输出了 `sk[j]`，则 `sk[i]` ← `sk[j]`。
+    b) 如果 `P[i]` 和 `P[j]` 均为 `fresh`，`pw[P[i]]` = `pw[P[j]]`，`pid[P[i]]` = `P`′ 且 `pid[P[j]]` = `P`，`P[j]` 和 `P[i]` 的 `role` 位将它们定义为先完成方和后完成方，并且 `P[j]` 输出了 `sk[j]`，则 `sk[i]` ← `sk[j]`。
 
-    c) 否则设置 `sk[i]` ←[$] {0, 1}^(*κ*)，且如果 ![image](img/a.jpg)^∗ 请求，则将 `P[i]` 标记为 `dangling`。
+    c) 否则设置 `sk[i]` ←[$] {0, 1}^(*κ*)，且如果 `S*` 请求，则将 `P[i]` 标记为 `dangling`。
 
-4.  ![image](img/a.jpg)^∗ 还可以请求任意已终止会话 `P[i]` 的输出 `sk[i]`（因此不失一般性，可以假设所有 `sk[i]` 输出都发送给 ![image](img/a.jpg)^∗），并终止任意正在运行的会话 `P[i]` 使其输出 ⊥（这在真实世界中模拟了对 `P[i]` 的拒绝服务攻击）。
+4.  `S*` 还可以请求任意已终止会话 `P[i]` 的输出 `sk[i]`（因此不失一般性，可以假设所有 `sk[i]` 输出都发送给 `S*`），并终止任意正在运行的会话 `P[i]` 使其输出 ⊥（这在真实世界中模拟了对 `P[i]` 的拒绝服务攻击）。
 
-5.  每个 `P[i]` 的输入 `pw^i` 和输出 `sk[i]` 都被记录在理想世界交互记录 `transcriptideal![image^∗, ![image](img/f.jpg)PAKE]` 中，![image](img/a.jpg)^∗ 也可以在任何时刻向记录中添加任意消息，以模拟 ![image](img/a.jpg) 在真实世界协议中会接收和发送的消息。
+5.  每个 `P[i]` 的输入 `pw^i` 和输出 `sk[i]` 都被记录在理想世界交互记录 `transcriptideal[S*, FPAKE]` 中，`S*` 也可以在任何时刻向记录中添加任意消息，以模拟 `A` 在真实世界协议中会接收和发送的消息。
 
 ### BMP 安全定义
 
 鉴于上述真实世界和理想世界博弈的规则，PAKE 安全性的 BMP 定义如下：
 
-**定义 10.3。** – *如果对于所有高效算法* ![image](img/a.jpg) *都存在一个高效算法* ![image](img/a.jpg)^∗ *使得*
+**定义 10.3。** – *如果对于所有高效算法* `A` *都存在一个高效算法* `S*` *使得*
 
-![image](img/p228-1.jpg)
+```
+Real[A, Π] ≈ Ideal[S*, FPAKE]
+```
 
-*即由* ![image](img/a.jpg) *和* Π *定义的真实世界博弈记录，与由* ![image](img/a.jpg)^∗ *和* ![image](img/f.jpg)`PAKE` *定义的理想世界博弈记录，在计算上是不可区分的。*
+*即由* `A` *和* Π *定义的真实世界博弈记录，与由* `S*` *和* `FPAKE` *定义的理想世界博弈记录，在计算上是不可区分的。*
 
-由于证明必须展示一个对任意 ![image](img/a.jpg) 都有效的算法 ![image](img/a.jpg)^∗，因此 ![image](img/a.jpg)^∗ 的一种自然构造是将 ![image](img/a.jpg) 作为*预言机*使用。由于 ![image](img/a.jpg) 期望与运行协议 Π 的真实世界 `P[i]` 交互，![image](img/a.jpg)^∗ 需要向 ![image](img/a.jpg) *模拟* 这些 Π 实例，即它需要创建与协议 Π 中 `P[i]` 的消息不可区分的消息。安全性证明的挑战在于 ![image](img/a.jpg)^∗ 必须仅凭 ![image](img/f.jpg)`PAKE` 提供的信息来完成此模拟，例如，这些信息不包含 `P[i]` 的输入 `pw`。然而，如果 ![image](img/a.jpg)^∗ 成功完成了这种模拟，那么 ![image](img/a.jpg) 必须像在真实世界博弈中那样回复这些模拟消息（除非以可忽略的概率区分出 ![image](img/a.jpg)^∗ 的模拟消息与 `P[i]` 的真实消息），并且如果 ![image](img/a.jpg)^∗ 将其发送给和从预言机 ![image](img/a.jpg) 接收到的所有消息都放入 `transcriptideal![image^∗, ![image](img/f.jpg)PAKE]` 中，则理想世界记录可以与真实世界记录不可区分。
+由于证明必须展示一个对任意 `A` 都有效的算法 `S*`，因此 `S*` 的一种自然构造是将 `A` 作为*预言机*使用。由于 `A` 期望与运行协议 Π 的真实世界 `P[i]` 交互，`S*` 需要向 `A` *模拟* 这些 Π 实例，即它需要创建与协议 Π 中 `P[i]` 的消息不可区分的消息。安全性证明的挑战在于 `S*` 必须仅凭 `FPAKE` 提供的信息来完成此模拟，例如，这些信息不包含 `P[i]` 的输入 `pw`。然而，如果 `S*` 成功完成了这种模拟，那么 `A` 必须像在真实世界博弈中那样回复这些模拟消息（除非以可忽略的概率区分出 `S*` 的模拟消息与 `P[i]` 的真实消息），并且如果 `S*` 将其发送给和从预言机 `A` 接收到的所有消息都放入 `transcriptideal[S*, FPAKE]` 中，则理想世界记录可以与真实世界记录不可区分。
 
 ### 10.4.2. BMP 定义的优势：任意密码、紧致安全性
-
-
 
 基于模拟的定义相对于基于博弈的定义的一个优势在于，前者能够适应*任意密码分布*，包括相关密码，以及任意密码信息泄露。理解这一点的一种方法是将 BMP 模型中的对手 `A` 拆分为两部分，分别称为 `real` 和 `rm`。令 `real` 为 `A` 中建模“真实对手”的部分，即观察和/或干扰诚实方 PAKE 实例的网络攻击者；令 `rm` 为 `A` 中扮演“主持人”角色的部分，它通过自适应地决定任意会话 `P[i]` 的密码（以及 `pid`、`role` 输入），来建模运行这些实例的诚实方的任意人为行为和应用驱动行为。由于 BMP 模型将这两个实体结合在一起，这意味着 `real` 和 `rm` 可以任意通信。展望后文，将 BMP 模型对手拆分为主持人 `rm` 和真实世界对手 `A`，反映了 Canetti (2001) 的通用可组合性 (UC) 框架（参见第 10.5 节），其中 `rm` 是 UC 框架所谓的*环境* `Z`，而 `real` 是 UC 框架所谓的*对手* `A`。
 
@@ -4318,53 +4163,53 @@ Boyko 等人 (2000) 在判定 DH 假设下陈述了 PPK 的安全性，尽管这
 
 ### 10.4.4. 具有显式认证的 PAKE (PAKE-EA) 的 BMP 模型
 
+第 10.4.1 节中讨论的 BMP 安全模型对应于具有隐式认证的 PAKE。然而，Boyko 等人（2000）还定义了其基于模拟模型的一个变体，该变体对应于 PAKE-EA，即具有显式认证的 PAKE。这是通过对定义理想化方案的功能 `FPAKE` 的代码进行两项更改来处理的。第一项更改在于对（`NewKey`，`P`，*i*，`P`′，*j*，*sk*）查询的处理；参见第 10.4.1 节中理想世界游戏的第（3）项。首先，`S*` 不能再请求 `P[i]` 处于 `dangling` 状态下终止。其次，NewKey 处理的情况 3 被以下情况取代：
 
+3a) 如果 `P[i]` 被标记为 `fresh`，它是第一个完成的，*pw* \[`P[i]`\]= *pw* \[`P`′[*j*]\]，`pid`[`P[i]`\]= `P`′，且没有其他会话针对指定相同对应方 `P`′[*j*] 的 `NewKey` 输出了 *sk* ≠ ⊥，则设置 *sk[i]* ←[$] {0, 1}^(*κ*)。
 
-第 10.4.1 节中讨论的 BMP 安全模型对应于具有隐式认证的 PAKE。然而，Boyko 等人（2000）还定义了其基于模拟模型的一个变体，该变体对应于 PAKE-EA，即具有显式认证的 PAKE。这是通过对定义理想化方案的功能`PAKE`的代码进行两项更改来处理的。第一项更改在于对（`NewKey`，`P`，*i*，`P`′，*j*，*sk*^∗）查询的处理；参见第 10.4.1 节中理想世界游戏的第（3）项。首先，`A`^∗不能再请求`P`[*i*]处于`dangling`状态下终止。其次，NewKey 处理的情况 3 被以下情况取代：
+3b) 在所有其他情况下，设置 *sk[i]* ← ⊥。
 
-3a) 如果`P`[*i*]被标记为`fresh`，它是第一个完成的，*pw* \[`P`[*i*]\]= *pw* \[`P`′[*j*]\]，`pid`[`P`[*i*]\]= `P`′，且没有其他会话针对指定相同对应方`P`′[*j*]的`NewKey`输出了*sk* ≠ ⊥，则设置*sk[i]* ←[$] {0, 1}^(*κ*)。
-
-3b) 在所有其他情况下，设置*sk[i]* ← ⊥。
-
-换句话说，`P`[*i*]输出*sk[i]* ≠ ⊥的唯一途径是情况 1，即它使用正确密码遭受主动攻击时；或情况 2 和 3a，即`NewKey`请求涉及两个会话，因为它们运行在相同密码上且其角色和预期对应方标识符匹配，所以它们是*partnered*（伙伴）关系。第二项更改在于确定`A`^∗能否为会话`P`[*i*]发送`TestPwd`的`PAKE`规则，参见理想世界游戏中的第（2）项。由于 PAKE-EA 模型消除了“悬空”会话，因此可以为`fresh`会话以及以中止输出*sk* = ⊥终止的会话发起`TestPwd`查询。
+换句话说，`P[i]` 输出 *sk[i]* ≠ ⊥ 的唯一途径是情况 1，即它使用正确密码遭受主动攻击时；或情况 2 和 3a，即 `NewKey` 请求涉及两个会话，因为它们运行在相同密码上且其角色和预期对应方标识符匹配，所以它们是*partnered*（伙伴）关系。第二项更改在于确定 `S*` 能否为会话 `P[i]` 发送 `TestPwd` 的 `FPAKE` 规则，参见理想世界游戏中的第（2）项。由于 PAKE-EA 模型消除了“悬空”会话，因此可以为 `fresh` 会话以及以中止输出 *sk* = ⊥ 终止的会话发起 `TestPwd` 查询。
 
 ### Boyko 等人（2000）的 PAKE-EA 协议
 
-**带密钥确认的单向 EKE**：Boyko 等人（2000）；MacKenzie（2002）的 PAKE-EA 协议，称为 PAK，其工作方式类似于用 PPK 实例化的通用 PAKE 到 PAKE-EA 编译器（图 10.2），但有以下优化：如果 PPK 被顺序使用，且响应方的密钥确认消息搭载在其 KE 消息中，则响应方可以明文发送其 KE 消息*g^y*，即它不必对其进行密码加密。这是因为密钥确认消息充当了响应方在解密发起方 EKE 消息时所用密码的充分承诺。
+**带密钥确认的单向 EKE**：Boyko 等人（2000）；MacKenzie（2002）的 PAKE-EA 协议，称为 PAK，其工作方式类似于用 PPK 实例化的通用 PAKE 到 PAKE-EA 编译器（图 10.2），但有以下优化：如果 PPK 被顺序使用，且响应方的密钥确认消息搭载在其 KE 消息中，则响应方可以明文发送其 KE 消息 *g^y*，即它不必对其进行密码加密。这是因为密钥确认消息充当了响应方在解密发起方 EKE 消息时所用密码的充分承诺。
 
 ## 10.5. PAKE 安全的通用可组合模型
 
+
+
 Bellare–Pointcheval–Rogaway（BPR）的基于游戏模型（Bellare 等人，2000）和 Boyko–MacKenzie–Patel（BMP）的基于模拟模型（Boyko 等人，2000）似乎都不完全令人满意。BPR 模型有几个弱点（参见第 10.3.3 节），而 BMP 模型的主要弱点似乎在于它是非标准的，并且编写和理解 BMP 模型证明需要理解一个专用模型，其后果难以评估。然而，5 年后，Canetti 等人提出了一个用于 PAKE 安全的*通用可组合*（UC）模型（Canetti 等人，2005），这有效地将 BMP 模型投射到 Canetti（2001）的通用 UC 框架中。由于 BPR 模型比 BMP 模型成为更广泛使用的参考点，Canetti 等人（2005）表明 UC PAKE 模型至少与 BPR 模型一样强，即每个 UC 安全的 PAKE 也是 BPR 安全的（在 BPR 模型调整为会话和参与方标识符按 UC PAKE 模型方式工作后）。对于 BMP 模型，似乎可以证明一个强得多的陈述，即在进行下文讨论的两项调整后，BMP 和 UC PAKE 模型是等价的。尽管如此，通过细化 BMP 模型并将其投射到通用框架中，Canetti 等人（2005）给出了一个比 BMP 模型更易于使用的基于模拟的 PAKE 模型。学习曲线依然存在，因为必须理解 UC 框架才能理解 UC PAKE 证明，但它不再是仅用于 PAKE 协议的专用框架，不像 Boyko 等人（2000）那样。
 
-### 通用可组合性框架
+## 通用可组合性框架
 
-Canetti（2001）的 UC 框架允许使用基于模拟的范式来指定加密方案的安全性，类似于第 10.4 节中描述的 BMP 模型。事实上，后者可以被视为该框架针对 PAKE 的特化，但两者几乎同时出现，因为两者都从 MPC 安全的基于模拟的定义中获得灵感。与 BMP 安全模型一样，UC 框架将安全性定义为对于任何高效的区分环境`Z`和任何高效的对抗算法`A`，*真实世界*游戏与*理想世界*游戏之间的不可区分性。在真实世界游戏中，真实世界对抗者`A`与执行真实世界方案Π的诚实参与方交互；在理想世界游戏中，一个高效的理想世界对抗者，即*模拟器*，`A`^∗与定义该加密方案理想化模型的*功能*`F`交互。遵循这一范式，Canetti 等人（2005）指定了一个理想 PAKE 功能`PAKE`（采用了 Canetti 和 Krawczyk（2002）为 UC AKE 提出的一些约定），从而将 UC PAKE 定义为存在一个高效模拟器`A`^∗以确保上述真实世界和理想世界游戏之间不可区分性的协议Π。
+Canetti（2001）的 UC 框架允许使用基于模拟的范式来指定加密方案的安全性，类似于第 10.4 节中描述的 BMP 模型。事实上，后者可以被视为该框架针对 PAKE 的特化，但两者几乎同时出现，因为两者都从 MPC 安全的基于模拟的定义中获得灵感。与 BMP 安全模型一样，UC 框架将安全性定义为对于任何高效的区分环境`Z`和任何高效的对抗算法`A`，*真实世界*游戏与*理想世界*游戏之间的不可区分性。在真实世界游戏中，真实世界对抗者`A`与执行真实世界方案`Π`的诚实参与方交互；在理想世界游戏中，一个高效的理想世界对抗者，即*模拟器*，`A*`与定义该加密方案理想化模型的*功能*`F`交互。遵循这一范式，Canetti 等人（2005）指定了一个理想 PAKE 功能`PAKE`（采用了 Canetti 和 Krawczyk（2002）为 UC AKE 提出的一些约定），从而将 UC PAKE 定义为存在一个高效模拟器`A*`以确保上述真实世界和理想世界游戏之间不可区分性的协议`Π`。
 
-与 BMP 模型一样，UC PAKE 模型保证在任意密码分布和任意密码信息泄露下的安全性（意味着相关密码的安全性，以及在输入错误密码时执行的安全性）以及并发协议执行的安全性，包括关于协议输出的任意信息泄露。然而，通过融入通用 UC 框架，UC PAKE 模型具有在任意协议组合下确保安全性的优势：如果 PAKE 协议Π被证明是 UC 安全的，则任何将Π作为子程序的协议Π′都可以在Π被功能`PAKE`替代（即被一个“理想”PAKE 方案替代）的简化设置中进行分析。PAKE 协议确实可以这样使用，因为它们实现了一个*相等性测试功能*，这是安全协议设计中非常自然的构建块。举一个例子，（对称）UC PAKE 协议已被用作几种非对称 PAKE 黑盒构造中的子协议（例如 Gentry 等人，2006；Hwang 等人，2018；Jarecki 等人，2018；参见第 10.8 节）。
+与 BMP 模型一样，UC PAKE 模型保证在任意密码分布和任意密码信息泄露下的安全性（意味着相关密码的安全性，以及在输入错误密码时执行的安全性）以及并发协议执行的安全性，包括关于协议输出的任意信息泄露。然而，通过融入通用 UC 框架，UC PAKE 模型具有在任意协议组合下确保安全性的优势：如果 PAKE 协议`Π`被证明是 UC 安全的，则任何将`Π`作为子程序的协议`Π'`都可以在`Π`被功能`PAKE`替代（即被一个“理想”PAKE 方案替代）的简化设置中进行分析。PAKE 协议确实可以这样使用，因为它们实现了一个*相等性测试功能*，这是安全协议设计中非常自然的构建块。举一个例子，（对称）UC PAKE 协议已被用作几种非对称 PAKE 黑盒构造中的子协议（例如 Gentry 等人，2006；Hwang 等人，2018；Jarecki 等人，2018；参见第 10.8 节）。
 
+## PAKE 的 UC 安全性要求
 
-
-
-# PAKE 的 UC 安全性要求
-
-Canetti 等人 (2005) 所示的 UC PAKE 协议是 Katz–Ostrovsky–Yung (KOY) 协议 (Katz 等人, 2001) 的一种修改版，后者是首个被证明在标准模型下 BPR 安全的 PAKE 协议（参见 第 10.6 节）。Canetti 等人 (2005) 提出的 KOY 的 UC 安全版本在 *A* 的最后一条消息中增加了第二个密文 `cpa`，该密文加密相同的密码 `pw^A`，以及一个模拟可靠的零知识证明，证明密文 `cpa` 和 `c[A]` 加密的是同一个值（参见 图 10.5 中的 KOY 协议）。这一额外流程的意义乍看之下并不明确。然而，UC 安全 PAKE 往往比 BPR 安全 PAKE 代价更高，主要有以下两个原因：
+Canetti 等人 (2005) 所示的 UC PAKE 协议是 Katz–Ostrovsky–Yung (KOY) 协议 (Katz 等人, 2001) 的一种修改版，后者是首个被证明在标准模型下 BPR 安全的 PAKE 协议（参见 第 10.6 节）。Canetti 等人 (2005) 提出的 KOY 的 UC 安全版本在 `A` 的最后一条消息中增加了第二个密文 `cpa`，该密文加密相同的密码 `pw^A`，以及一个模拟可靠的零知识证明，证明密文 `cpa` 和 `c[A]` 加密的是同一个值（参见 图 10.5 中的 KOY 协议）。这一额外流程的意义乍看之下并不明确。然而，UC 安全 PAKE 往往比 BPR 安全 PAKE 代价更高，主要有以下两个原因：
 
 1.  **输入提取**：在 UC PAKE 证明中，模拟器 `S*` 需要从攻击者的消息中（直线式地）提取出攻击者在该会话中测试的唯一密码 `pw*`。（这源于通用的 UC 安全框架，其中真实世界攻击者的任何动作都必须由 `S*` 转化为对理想功能的唯一输入。）在 BPR 模型中，不存在此要求，且许多在 BPR 模型下安全的 PAKE 似乎不支持这种提取。
+
 2.  **模拟“被成功攻击”的参与方**：在 UC PAKE 证明模拟器中，`S*` 必须在所有情况下正确模拟真实世界的视图，包括攻击者的密码猜测 `pw*` 与诚实会话密码 `pw` 匹配的情况。在 BPR 模型中，这种事件会结束安全游戏，因此模拟器能否高效计算被攻击方输出的会话密钥并不重要。确实，Canetti 等人 (2005) 添加到 KOY 协议中那个神秘的“密码重加密 + NIZK”步骤的好处在于，它允许在模拟会话已被攻击且模拟器必须计算真实世界被攻击方将输出的会话密钥这一确切情况下进行高效模拟。
 
 在标准计算模型中，目前已知的最优 UC PAKE 与 BPR 模型 PAKE 之间存在效率/假设上的差距（参见 第 10.6 节），而在 ROM 中，这些效率差异已被弥合 (Abdalla 等人, 2020; McQuoid 等人, 2020)（参见 第 10.7 节）。然而，我们应注意到，UC 安全 PAKE 与任何非平凡的 UC 功能一样，只能存在于公共参考串 (CRS) 模型中 (Canetti, 2001)，而 BPR 安全 PAKE 则是在没有任何公共信任假设的情况下构建的 (Goldreich 和 Lindell, 2001; Nguyen 和 Vadhan, 2004; Barak 等人, 2005; Goyal 等人, 2010)，尽管具体成本高得多（参见 第 10.6 节）。
 
-# 与 BMP 模型的差异
+## 与 BMP 模型的差异
 
 BMP 安全模型可被视为上述范式在 PAKE 协议情况下的一种特化（参见 第 10.4.2 节）。然而，Canetti 等人 (2005) 做出了一些定义选择，使其 UC PAKE 概念与 Boyko 等人 (2000) 的 BMP 模型有所区别。这些差异可概括如下（对比请见 第 10.4.1 节 中的“理想世界游戏”段落）：
 
 - 参与方通过命令 (`NewSession`, `sid`, `P`, `P'`, `pw`, `role`) 启动，其中 `P`, `P'`, `pw`, `role` 与 BMP 模型中的含义相同，即参与方的身份、预期对端身份、密码以及参与方在协议中扮演的发起方/响应方角色。然而，在 UC PAKE 模型中有一个新的输入元素，即*会话标识符* `sid`，假定它是*全局唯一*的，除了打算相互运行 PAKE 的两方之外。与 BMP 一样，除 `pw` 外的所有输入均假定为非秘密，因此 `F_Pake` 将它们发送给 `S*`。
+
 - 理想世界对手只能为 `fresh` 会话发送 `TestPwd` 命令，特别是不能为处于悬空状态终止的会话发送。
+
 - `NewKey` 规则与 BMP 中的相同，不同之处在于：两个会话 `Psid` 和 `P'sid'` 建立相同的密钥，仅当除了满足 BMP 模型标准（即两个会话均为 `fresh`，`P = P'` 且 `P' = P`）外，还满足 `sid` = `sid'`。
 
 与 BMP 模型一样，对手可以为每个会话设置输入 `pw` 并接收输出 `sk`，但在 UC 框架中这是隐含的，因为环境 `Z` 确定每个参与方的输入并观察其输出，且由于 UC 安全性意味着对于任意环境 `Z` 和对手 `A`，真实世界游戏与理想世界游戏不可区分，所有这些值均可无损一般性地传递给 `A` 并从 `A` 获取。确实，无损一般性地可以认为 `A` 是 `Z` 的子过程，因此在安全性证明中可将它们视为同一实体，正如在 BMP 模型中那样。
 
-# UC PAKE 模型的放宽
+## UC PAKE 模型的放宽
 
 上述建模决策造成了与 BMP 模型的两个独立差异：首先，运行 PAKE 的参与方必须首先建立一个匹配的全局唯一标识符 `sid`。其次，主动攻击中的密码测试必须在被攻击会话终止前完成。如果每次 PAKE 交互之前都有一个随机数交换，将 `sid` 定义为这些随机数的拼接，则可满足第一个要求。不过，这会给协议增加一个额外流程（第二个随机数可搭载在第一个 PAKE 流程上）。第二个要求意味着模拟器 `S*` 必须在会话 `Psid` 终止前，有效提取主动攻击者 `A` 对该会话实际使用的密码猜测 `pw*`，这排除了像 Boyko 等人 (2000) 的 PPK 这样的协议（参见 图 10.4），其协议消息的分布独立于密码，且 `S*` 可以从对手对 `H'` 的哈希查询中提取对手使用的密码 `pw*`，而这些查询可能在参与方 `Psid` 终止后发生。
 
@@ -4372,13 +4217,9 @@ BMP 安全模型可被视为上述范式在 PAKE 协议情况下的一种特化�
 
 Boyko 等人 (2000) 的会话终止后密码测试被 Abdalla 等人 (2020) 作为*惰性提取* UC PAKE 重新引入 UC 框架。除了匹配 `sid` 要求（Abdalla 等人, 2020）是沿用自 Canetti 等人 (2005) 之外，Abdalla 等人 (2020) 的惰性提取 UC PAKE 模型似乎等价于 BMP 模型。因此，图 10.4 中的 PPK 在进行简单调整以强制满足 UC PAKE 匹配 `sid` 要求后，很可能是一个安全的惰性提取 UC PAKE。
 
+### PAKE-EA 的 UC 变体
 
-
-
-
-## PAKE-EA 的 UC 变体
-
-*显式认证* PAKE 首先由 Abdalla 等人 (2008) 在 UC 框架内针对客户端到服务器认证的情况进行了形式化，随后由 Groce 和 Katz (2010) 针对相互认证的情况进行了形式化。从技术上讲，UC PAKE-EA 在 Abdalla 等人 (2008) 和 Groce 和 Katz (2010) 中通过一种功能性定义来定义，该功能通过消除终止后的密码测试，并为两个伙伴会话何时可以建立密钥制定了更严格的规则，从而强化了基于模拟的 BMP 的 PAKE-EA 变体（参见 第 10.4.4 节），特别是确保如果诚实方输出 `sk` ≠ ⊥，则其伙伴对方只能输出 `sk`′ = `sk` 或 ⊥。
+*显式认证* PAKE 首先由 Abdalla 等人 (2008) 在 UC 框架内针对客户端到服务器认证的情况进行了形式化，随后由 Groce 和 Katz (2010) 针对相互认证的情况进行了形式化。从技术上讲，UC PAKE-EA 在 Abdalla 等人 (2008) 和 Groce 和 Katz (2010) 中通过一种功能性定义来定义，该功能通过消除终止后的密码测试，并为两个伙伴会话何时可以建立密钥制定了更严格的规则，从而强化了基于模拟的 BMP 的 PAKE-EA 变体（参见 第 10.4.4 节），特别是确保如果诚实方输出 `sk` ≠ ⊥，则其伙伴对方只能输出 `sk'` = `sk` 或 ⊥。
 
 ## 10.6. 标准模型中的 PAKE 协议
 
@@ -4386,64 +4227,131 @@ Boyko 等人 (2000) 的会话终止后密码测试被 Abdalla 等人 (2020) 作�
 
 ### KOY 协议
 
-第一个此类解决方案由 Goldreich 和 Lindell (2001) 提出，但他们的标准模型 PAKE 不实用，且仅在有限意义上被证明安全（见脚注 1）。Katz 等人 (2001) 在 DDH 假设下，假设 CRS，构建了第一个在 BPR 模型中安全的实用 PAKE。KOY 协议的思路受 Cramer 和 Shoup (2002) 引入的 SPHF 概念启发。如果每一方发送其密码的承诺，那么如果方 *A* 能够 (1) 向方 *B* 证明其承诺 `c[A]` 承诺的是 *B* 的密码 `pw^B`，并且 (2) 该证明可以与 KE 绑定，使得 *A* 和 *B* 建立共享密钥当且仅当这两个被证明的陈述正确，则问题即可解决。不幸的是，不清楚如何使用零知识证明在不启用离线攻击的情况下完成任务
-
-(1)，因为 *A* 需要向 *B* 在 ZK 中证明的陈述 *x* 是“`c[A]` 承诺 `pw^B`”（证明者 *A* 将使用 `pw^A` 代替 `pw^B`），因此密码不是 ZK 证明所隐藏的见证者，而是陈述的一部分，而 ZK 证明可能会揭示陈述。（特别是，使用任何 NIZK 都会启用离线攻击，因为验证者可以使用任何密码猜测 `pw`^∗ 完成的陈述 *x* 来验证 NIZK 证明。）然而，用 Cramer 和 Shoup (2002) 的 SPHF 替换 ZK 证明解决了这个问题。语言的 SPHF 允许验证者将陈述 *x* *哈希* 为随机值 `sk`，同时创建一个*投影密钥 `hp`*，使得 (1) 如果证明者知道 *x* ∈ L 的见证者 *w*，则给定 (`hp, w`) 可以重新计算相同的哈希值 `sk`，但 (2) 如果 *x* ∉ L，则给定投影密钥 `hp`，哈希值 `sk` 是（统计上）随机的。（从技术上讲，SPHF 必须具有 `hp` 不泄露其计算所基于的陈述 *x* 的属性，但 KOY 协议中使用的 SPHF 满足这一情况。）双向执行此操作即可创建 PAKE，除了源自中间人攻击的几个微妙之处。首先，承诺必须是不可延展的（这一要求在后续工作中有所降低，例如 Abdalla 等人 (2015b)），例如，Katz 等人 (2001) 通过 CCA 加密实现了它，具体为 Cramer-Shoup 加密 (Cramer 和 Shoup 1998)。其次，由于 SPHF 具有延展性，除非 SPHF 更好地“绑定”到 `c[A], c[B]` 值，否则会导致中间人攻击（和/或黑盒安全论证失败）。KOY 使用一次性签名 (OTS) 方案实现了这一点：(1) 发起方 *A* 选择一个 OTS 公钥并将其用作其密文 `c[A]` 中的标签，因此即使攻击者使用另一个 OTS 密钥重用 `c[A]`，`c[A]` 也隐藏 `pw^A`，(2) *B* 将其投影密钥 `hp^B` 用作密文 `c[B]` 中的标签，因此即使攻击者使用另一个投影密钥重用 `c[B]`，`c[B]` 也隐藏 `pw^B`，(3) 在其最后一条消息中，*A* 对其投影密钥 `hp^A` 连同 *B* 的加密中使用的标签进行签名（该举动在一定程度上是非黑盒的，在 Gennaro 和 Lindell (2003) 中，它被简单地对整个会话记录签名所取代）。
+第一个此类解决方案由 Goldreich 和 Lindell (2001) 提出，但他们的标准模型 PAKE 不实用，且仅在有限意义上被证明安全（见脚注 1）。Katz 等人 (2001) 在 DDH 假设下，假设 CRS，构建了第一个在 BPR 模型中安全的实用 PAKE。KOY 协议的思路受 Cramer 和 Shoup (2002) 引入的 SPHF 概念启发。如果每一方发送其密码的承诺，那么如果方 *A* 能够 (1) 向方 *B* 证明其承诺 `c[A]` 承诺的是 *B* 的密码 `pw^B`，并且 (2) 该证明可以与 KE 绑定，使得 *A* 和 *B* 建立共享密钥当且仅当这两个被证明的陈述正确，则问题即可解决。不幸的是，不清楚如何使用零知识证明在不启用离线攻击的情况下完成任务 (1)，因为 *A* 需要向 *B* 在 ZK 中证明的陈述 *x* 是“`c[A]` 承诺 `pw^B`”（证明者 *A* 将使用 `pw^A` 代替 `pw^B`），因此密码不是 ZK 证明所隐藏的见证者，而是陈述的一部分，而 ZK 证明可能会揭示陈述。（特别是，使用任何 NIZK 都会启用离线攻击，因为验证者可以使用任何密码猜测 `pw*` 完成的陈述 *x* 来验证 NIZK 证明。）然而，用 Cramer 和 Shoup (2002) 的 SPHF 替换 ZK 证明解决了这个问题。语言的 SPHF 允许验证者将陈述 *x* *哈希* 为随机值 `sk`，同时创建一个*投影密钥 `hp`*，使得 (1) 如果证明者知道 *x* ∈ L 的见证者 *w*，则给定 (`hp, w`) 可以重新计算相同的哈希值 `sk`，但 (2) 如果 *x* ∉ L，则给定投影密钥 `hp`，哈希值 `sk` 是（统计上）随机的。（从技术上讲，SPHF 必须具有 `hp` 不泄露其计算所基于的陈述 *x* 的属性，但 KOY 协议中使用的 SPHF 满足这一情况。）双向执行此操作即可创建 PAKE，除了源自中间人攻击的几个微妙之处。首先，承诺必须是不可延展的（这一要求在后续工作中有所降低，例如 Abdalla 等人 (2015b)），例如，Katz 等人 (2001) 通过 CCA 加密实现了它，具体为 Cramer-Shoup 加密 (Cramer 和 Shoup 1998)。其次，由于 SPHF 具有延展性，除非 SPHF 更好地“绑定”到 `c[A], c[B]` 值，否则会导致中间人攻击（和/或黑盒安全论证失败）。KOY 使用一次性签名 (OTS) 方案实现了这一点：(1) 发起方 *A* 选择一个 OTS 公钥并将其用作其密文 `c[A]` 中的标签，因此即使攻击者使用另一个 OTS 密钥重用 `c[A]`，`c[A]` 也隐藏 `pw^A`，(2) *B* 将其投影密钥 `hp^B` 用作密文 `c[B]` 中的标签，因此即使攻击者使用另一个投影密钥重用 `c[B]`，`c[B]` 也隐藏 `pw^B`，(3) 在其最后一条消息中，*A* 对其投影密钥 `hp^A` 连同 *B* 的加密中使用的标签进行签名（该举动在一定程度上是非黑盒的，在 Gennaro 和 Lindell (2003) 中，它被简单地对整个会话记录签名所取代）。
 
 ![Figure 10.5. Protocol KOY: PAKE of Katz et al. (2001) in generic form given by Gennaro and Lindell (2003)](img/fig10-5.jpg)
 
 **图 10.5.** *KOY 协议：Katz 等人 (2001) 的 PAKE，采用 Gennaro 和 Lindell (2003) 给出的通用形式*
 
-我们在 图 10.5 中以通用形式展示 KOY 协议，如 Gennaro-Lindell (GL) (Gennaro 和 Lindell 2003) 所示，但不包含后者的修改。图中 `OTS` = (`KG`, `S`, `V`) 是一次性签名，`Enc` 是带标签的 CCA PKE，(H, PH) 是语言 `CE` 的平滑投影哈希函数 (SPHF) 系统 (Cramer 和 Shoup 2002)，该语言由元组 (`pk, c, m, ℓ`) 组成，使得 `c` = `Enc`(`pk, m, ℓ`; *r*) 对某些 *r* 成立。我们使用简化的 SPHF 语法，其中 `H`(*x*) 采样 (`hp, sk`)，`PH`(`hp, x, w`) 输出 `sk`′，使得 (1) 如果 *w* 是 *x* ∈ L 的见证者，则 `sk`′ = `sk`，(2) 如果 *x* ∈ L，则给定 `hp`，`sk` 是随机的。Katz 等人 (2001) 中的 KOY 协议用 Cramer-Shoup 加密 (Cramer 和 Shoup 1998) 实例化 图 10.5 中的通用协议，其中 `Enc` 需要 6 个固定底数 (fb) 指数运算，`H` 需要 5 个 fb，`PH` 需要 1 个（多底数）可变底数 (vb) 指数运算，从而得到一个每方 11 个 fb 和 1 个 vb 的 PAKE。假设 1 个 vb ≈ 6 个 fb，总成本大约是 EKE2 或 PPK 的 3 倍，后两者仅在 ROM 中被证明安全。
-
-
-
-
+我们在 图 10.5 中以通用形式展示 KOY 协议，如 Gennaro-Lindell (GL) (Gennaro 和 Lindell 2003) 所示，但不包含后者的修改。图中 `OTS` = (`KG`, `S`, `V`) 是一次性签名，`Enc` 是带标签的 CCA PKE，(H, PH) 是语言 `CE` 的平滑投影哈希函数 (SPHF) 系统 (Cramer 和 Shoup 2002)，该语言由元组 (`pk, c, m, ℓ`) 组成，使得 `c` = `Enc`(`pk, m, ℓ`; *r*) 对某些 *r* 成立。我们使用简化的 SPHF 语法，其中 `H`(*x*) 采样 (`hp, sk`)，`PH`(`hp, x, w`) 输出 `sk'`，使得 (1) 如果 *w* 是 *x* ∈ L 的见证者，则 `sk'` = `sk`，(2) 如果 *x* ∈ L，则给定 `hp`，`sk` 是随机的。Katz 等人 (2001) 中的 KOY 协议用 Cramer-Shoup 加密 (Cramer 和 Shoup 1998) 实例化 图 10.5 中的通用协议，其中 `Enc` 需要 6 个固定底数 (fb) 指数运算，`H` 需要 5 个 fb，`PH` 需要 1 个（多底数）可变底数 (vb) 指数运算，从而得到一个每方 11 个 fb 和 1 个 vb 的 PAKE。假设 1 个 vb ≈ 6 个 fb，总成本大约是 EKE2 或 PPK 的 3 倍，后两者仅在 ROM 中被证明安全。
 
 ## 标准模型中的其他 PAKE
 
-Nguyen 和 Vadhan (2004)、Barak 等人 (2005) 以及 Goyal 等人 (2010) 改进了 Goldreich-Lindell 标准模型 PAKE (Goldreich 和 Lindell 2001)，但这些标准模型构造都不实用。关于 CRS 模型，Gennaro 和 Lindell (2003) 推广了 KOY 协议，允许采用其他 SPHF 友好的 Cramer-Shoup 加密实例化，例如基于二次剩余假设或 Paillier 加密 (Paillier 1999) 中使用的 N-剩余假设。同一篇论文还指出，CCA 安全加密可以放宽为非延展性承诺。Katz 等人 (2005) 观察到，复用 Canetti 等人 (2005) 在 UC PAKE 背景下应用的思路，`B` 的加密只需满足 CPA 安全。Gennaro (2008) 表明可以用 MAC 替换 `A` 的一次性签名。Jiang 和 Gong (2004) 展示了 KOY 更强的简化（也实现了 3 轮 PAKE-EA，见 第 10.4.4 节）：`A` 的加密可以是带有关联 SPHF 的 CPA 安全，而 `B` 可以使用不需要 SPHF 的 CCA 安全加密。取而代之的是，以一种类似于 Fujisaki-Okamoto 编译器 (Fujisaki 和 Okamoto 1999) 从 CPA 到 CCA PKE 的方式（然而，Fujisaki 和 Okamoto (1999) 的编译器在 ROM 中工作，而 Jiang 和 Gong (2004) 的 PAKE 在标准模型中工作），`B` 在加密 `c[B]` 中的随机性源自其 SPHF 密钥 `sk[B]`，因此可以由 `A` 重新计算（从而验证）。Abdalla 等人 (2015b) 还展示了一个 BPR 安全版本的 KOY，其中 `B` 的加密是 CPA 安全的，而 `A` 的加密是 PCA 安全的，即仅针对明文检查攻击安全（直观上，解密预言机可以被仅识别加密值是否为固定挑战密码的预言机所替代）。
+
+
+## 标准模型中的 PAKE 改进
+
+Nguyen 和 Vadhan (2004)、Barak 等人 (2005) 以及 Goyal 等人 (2010) 改进了 Goldreich-Lindell 标准模型 PAKE (Goldreich 和 Lindell 2001)，但这些标准模型构造都不实用。
+
+关于 CRS 模型，Gennaro 和 Lindell (2003) 推广了 KOY 协议，允许采用其他 SPHF 友好的 Cramer-Shoup 加密实例化，例如基于二次剩余假设或 Paillier 加密 (Paillier 1999) 中使用的 N-剩余假设。同一篇论文还指出，CCA 安全加密可以放宽为非延展性承诺。
+
+Katz 等人 (2005) 观察到，复用 Canetti 等人 (2005) 在 UC PAKE 背景下应用的思路，`B` 的加密只需满足 CPA 安全。
+
+Gennaro (2008) 表明可以用 MAC 替换 `A` 的一次性签名。
+
+Jiang 和 Gong (2004) 展示了 KOY 更强的简化（也实现了 3 轮 PAKE-EA，见第 10.4.4 节）：`A` 的加密可以是带有关联 SPHF 的 CPA 安全，而 `B` 可以使用不需要 SPHF 的 CCA 安全加密。取而代之的是，以一种类似于 Fujisaki-Okamoto 编译器 (Fujisaki 和 Okamoto 1999) 从 CPA 到 CCA PKE 的方式（然而，Fujisaki 和 Okamoto (1999) 的编译器在 ROM 中工作，而 Jiang 和 Gong (2004) 的 PAKE 在标准模型中工作），`B` 在加密 `c[B]` 中的随机性源自其 SPHF 密钥 `sk[B]`，因此可以由 `A` 重新计算（从而验证）。
+
+Abdalla 等人 (2015b) 还展示了一个 BPR 安全版本的 KOY，其中 `B` 的加密是 CPA 安全的，而 `A` 的加密是 PCA 安全的，即仅针对明文检查攻击安全（直观上，解密预言机可以被仅识别加密值是否为固定挑战密码的预言机所替代）。
 
 ## 最小轮数 PAKE
 
-Katz 和 Vaikuntanathan (2011) 表明 KOY 协议可以变为*非交互式*，即各方可以独立选择带有投影的 SPHF 哈希密钥，加密其密码，将加密和投影对发送给对方，然后各方可以使用接收到的投影密钥在本地对其陈述进行哈希，并使用自己的哈希密钥对对方的陈述进行哈希。如果 CCA PKE 拥有 SPHF，且投影密钥可以在没有（完整）陈述的情况下计算，这将成为可能。（此类 SPHF 从此被称为 *KV-SPHF*）。Katz 和 Vaikuntanathan (2011) 在标准群中使用 Naor-Yung CCA PKE (Naor 和 Yung 1990) 实现了这一点，该 PKE 由两个 ElGamal 密文和 Sahai (1999) 的模拟可靠 NIZK（明文相等性）组成；在双线性映射群中使用决策线性 (DLIN) 假设和 Groth-Sahai NIZK (Groth 和 Sahai 2008)，生成的 PAKE 每方使用 70 个群元素。Libert 和 Yung (2012) 将其减少到 32 个元素，随后 Jutla 和 Roy (2012) 展示了模拟可靠 NIZK 的一种放宽，在双线性映射曲线上的对称外部 Diffie-Hellman (SXDH) 假设下，实现了每方 20 个群元素的非交互式 BPR 模型 PAKE。Benhamouda 等人 (2013) 随后展示了 Cramer-Shoup CCA PKE 的高效 KV-SPHF，在标准群中实现了非交互式 BPR 模型 PAKE，基于 DDH 安全，每方仅需 6 个群元素。
+Katz 和 Vaikuntanathan (2011) 表明 KOY 协议可以变为*非交互式*，即各方可以独立选择带有投影的 SPHF 哈希密钥，加密其密码，将加密和投影对发送给对方，然后各方可以使用接收到的投影密钥在本地对其陈述进行哈希，并使用自己的哈希密钥对对方的陈述进行哈希。如果 CCA PKE 拥有 SPHF，且投影密钥可以在没有（完整）陈述的情况下计算，这将成为可能。（此类 SPHF 从此被称为 *KV-SPHF*）。
+
+Katz 和 Vaikuntanathan (2011) 在标准群中使用 Naor-Yung CCA PKE (Naor 和 Yung 1990) 实现了这一点，该 PKE 由两个 ElGamal 密文和 Sahai (1999) 的模拟可靠 NIZK（明文相等性）组成；在双线性映射群中使用决策线性 (DLIN) 假设和 Groth-Sahai NIZK (Groth 和 Sahai 2008)，生成的 PAKE 每方使用 70 个群元素。
+
+Libert 和 Yung (2012) 将其减少到 32 个元素，随后 Jutla 和 Roy (2012) 展示了模拟可靠 NIZK 的一种放宽，在双线性映射曲线上的对称外部 Diffie-Hellman (SXDH) 假设下，实现了每方 20 个群元素的非交互式 BPR 模型 PAKE。
+
+Benhamouda 等人 (2013) 随后展示了 Cramer-Shoup CCA PKE 的高效 KV-SPHF，在标准群中实现了非交互式 BPR 模型 PAKE，基于 DDH 安全，每方仅需 6 个群元素。
 
 ## 标准模型中的 UC PAKE
 
-Canetti 等人 (2005) 通过在 KOY 协议的最后一轮添加密码重加密和模拟可靠 NIZK，展示了首个 UC PAKE（见 第 10.5 节）。Groce 和 Katz (2010) 推广了 Jiang 和 Gong (2004) 的 BPR 模型 PAKE 方案，并展示了其形式化为 UC PAKE-EA 的 UC 安全版本。Groce 和 Katz (2010) 的 UC PAKE-EA 在 Jiang 和 Gong (2004) 的 PAKE-EA 基础上增加了一个额外的加密流和明文相等性的模拟可靠 NIZK，其开销本质上与 Canetti 等人 (2005) 的 UC PAKE 在 KOY 协议 (Katz 等人 2001) 的 BPR 模型 PAKE 基础上增加的开销相同。
+Canetti 等人 (2005) 通过在 KOY 协议的最后一轮添加密码重加密和模拟可靠 NIZK，展示了首个 UC PAKE（见第 10.5 节）。
 
-Katz 和 Vaikuntanathan (2011) 将他们的非交互式 BPR 模型 PAKE 扩展为非交互式 UC PAKE，方法是在 SPHF 中构建一个陷门（他们在 CRS 下加密哈希密钥，并添加一个模拟可靠 NIZK 证明加密的哈希密钥对应于投影密钥），以便模拟器甚至可以在*不正确*陈述上计算 SPHF 哈希值（回想一下模拟器不知道诚实方的密码）。他们的非交互式 UC PAKE 在标准群上基于 DLIN 安全，但这是一个可行性结果（(Jutla 和 Roy 2015) 估计每方需要超过 65 个群元素）。Benhamouda 等人 (2013) 将此类 SPHF 形式化为*陷门 SPHF* (TSPHF)，并在 SXDH 下展示了更高效的 TSPHF 构造，实现了每方 11 个群元素的非交互式 UC PAKE。
+Groce 和 Katz (2010) 推广了 Jiang 和 Gong (2004) 的 BPR 模型 PAKE 方案，并展示了其形式化为 UC PAKE-EA 的 UC 安全版本。Groce 和 Katz (2010) 的 UC PAKE-EA 在 Jiang 和 Gong (2004) 的 PAKE-EA 基础上增加了一个额外的加密流和明文相等性的模拟可靠 NIZK，其开销本质上与 Canetti 等人 (2005) 的 UC PAKE 在 KOY 协议 (Katz 等人 2001) 的 BPR 模型 PAKE 基础上增加的开销相同。
+
+Katz 和 Vaikuntanathan (2011) 将他们的非交互式 BPR 模型 PAKE 扩展为非交互式 UC PAKE，方法是在 SPHF 中构建一个陷门（他们在 CRS 下加密哈希密钥，并添加一个模拟可靠 NIZK 证明加密的哈希密钥对应于投影密钥），以便模拟器甚至可以在*不正确*陈述上计算 SPHF 哈希值（回想一下模拟器不知道诚实方的密码）。他们的非交互式 UC PAKE 在标准群上基于 DLIN 安全，但这是一个可行性结果（(Jutla 和 Roy 2015) 估计每方需要超过 65 个群元素）。
+
+Benhamouda 等人 (2013) 将此类 SPHF 形式化为*陷门 SPHF* (TSPHF)，并在 SXDH 下展示了更高效的 TSPHF 构造，实现了每方 11 个群元素的非交互式 UC PAKE。
 
 ## 自适应 UC PAKE
 
-Abdalla 等人 (2009) 使用可提取和模棱两可 (`E`²) 承诺，将 Canetti 等人 (2005) 的 UC PAKE 升级到*自适应对手*设置（假设可靠擦除），但他们的构造使用了 Ω(`κ`²) 个群元素。Abdalla 等人 (2013) 使用 SPHF 友好的 `E`² 承诺对此进行了改进，使得生成的自适应 UC PAKE（带擦除）是非交互式的，并在 SXDH 曲线上使用了 Ω(`κ`) 个元素。随后 Jutla 和 Roy (2015) 展示了 Katz-Vaikuntanathan 非交互式 PAKE 的一个版本，该版本使用他们引入的*对偶系统*模拟可靠 NIZK 保持安全，在相同的 SXDH 设置下，实现了仅使用 4 个群元素的自适应 UC PAKE（带擦除）。关于无擦除的自适应安全性，我们仅知晓 Canetti 等人 (2012) 基于 OT 的 PAKE，它使用 Θ(`κ`) 个 UC OT 实例。
+Abdalla 等人 (2009) 使用可提取和模棱两可 (`E`²) 承诺，将 Canetti 等人 (2005) 的 UC PAKE 升级到*自适应对手*设置（假设可靠擦除），但他们的构造使用了 Ω(`κ`²) 个群元素。
+
+Abdalla 等人 (2013) 使用 SPHF 友好的 `E`² 承诺对此进行了改进，使得生成的自适应 UC PAKE（带擦除）是非交互式的，并在 SXDH 曲线上使用了 Ω(`κ`) 个元素。
+
+随后 Jutla 和 Roy (2015) 展示了 Katz-Vaikuntanathan 非交互式 PAKE 的一个版本，该版本使用他们引入的*对偶系统*模拟可靠 NIZK 保持安全，在相同的 SXDH 设置下，实现了仅使用 4 个群元素的自适应 UC PAKE（带擦除）。
+
+关于无擦除的自适应安全性，我们仅知晓 Canetti 等人 (2012) 基于 OT 的 PAKE，它使用 Θ(`κ`) 个 UC OT 实例。
 
 ## 10.7. PAKE 效率优化
 
-第 10.3 节 和 第 10.4 节 中讨论的两个 EKE 版本，即 Bellare 等人 (2000) 的 EKE2 协议和 Boyko 等人 (2000) 的 PPK 协议，在假设理想化模型 IC 和 ROM 的情况下，被证明在 CDH 和/或 DDH 下安全。（回想一下，IC 此处代表群元素上的 IC；见 第 10.3.5 节。）在 第 10.6 节 中，我们讨论了标准模型中的 PAKE，但假设理想化模型的 PAKE 不限于 Bellare 等人 (2000) 和 Boyko 等人 (2000) 的结果。EKE2 版本的 EKE (图 10.3) 最大的问题是它使用了群上的 IC，而 PPK 版本 (图 10.4) 使用了到群的哈希。此外，任一版本的完整证明都花了一些时间才出现和/或由后续工作开发。
+第 10.3 节 和 第 10.4 节 中讨论的两个 EKE 版本，即 Bellare 等人 (2000) 的 EKE2 协议和 Boyko 等人 (2000) 的 PPK 协议，在假设理想化模型 IC 和 ROM 的情况下，被证明在 CDH 和/或 DDH 下安全。（回想一下，IC 此处代表群元素上的 IC；见第 10.3.5 节。）
 
-Bresson 等人 (2003) 在 IC+ROM 模型下，基于 CDH 为 Bellare 和 Rogaway (2000) 的 *AuthA* 协议给出了 BPR 模型安全性证明，该协议曾被考虑用于 IEEE P1363.2 公钥密码学标准。协议 AuthA 类似于 EKE2 (图 10.3)，不同之处在于 `A` 先发送 `g^x` 而不进行密码加密，但有一个第三协议流，`A` 发送密钥确认消息，例如 图 10.2 中的值 `τ`。关键在于，`B` 不能将其认证器 `γ` 附加到第二流，否则会存在离线攻击，因此 AuthA 意味着四轮相互 PAKE-EA，这与 Boyko 等人 (2000) 的 EKE 的三轮 PAKE-EA 版本 *PAK* 形成对比；MacKenzie (2001b, 2002) (见 第 10.4.4 节)，它也节省了密码加密的一方，但来自响应方 `B`。Bresson 等人 (2004) 还在 ROM 下基于 CDH 为 Boyko 等人 (2000) 的 PAKE-EA 变体展示了 BPR 模型安全性，该变体去掉了最后 `A` 到 `B` 的密钥确认流，实现了具有服务器到客户端认证的两流 PAKE。
+在 第 10.6 节 中，我们讨论了标准模型中的 PAKE，但假设理想化模型的 PAKE 不限于 Bellare 等人 (2000) 和 Boyko 等人 (2000) 的结果。
 
+EKE2 版本的 EKE (图 10.3) 最大的问题是它使用了群上的 IC，而 PPK 版本 (图 10.4) 使用了到群的哈希。此外，任一版本的完整证明都花了一些时间才出现和/或由后续工作开发。
 
+Bresson 等人 (2003) 在 IC+ROM 模型下，基于 CDH 为 Bellare 和 Rogaway (2000) 的 *AuthA* 协议给出了 BPR 模型安全性证明，该协议曾被考虑用于 IEEE P1363.2 公钥密码学标准。
 
+协议 AuthA 类似于 EKE2 (图 10.3)，不同之处在于 `A` 先发送 `g^x` 而不进行密码加密，但有一个第三协议流，`A` 发送密钥确认消息，例如 图 10.2 中的值 `τ`。关键在于，`B` 不能将其认证器 `γ` 附加到第二流，否则会存在离线攻击，因此 AuthA 意味着四轮相互 PAKE-EA，这与 Boyko 等人 (2000) 的 EKE 的三轮 PAKE-EA 版本 *PAK* 形成对比；MacKenzie (2001b, 2002) (见第 10.4.4 节)，它也节省了密码加密的一方，但来自响应方 `B`。
+
+Bresson 等人 (2004) 还在 ROM 下基于 CDH 为 Boyko 等人 (2000) 的 PAKE-EA 变体展示了 BPR 模型安全性，该变体去掉了最后 `A` 到 `B` 的密钥确认流，实现了具有服务器到客户端认证的两流 PAKE。
 
 Abdalla 和 Pointcheval (2005) 证明了 SPAKE2 在 ROM 中基于 CDH 假设具有 BPR 安全性，SPAKE2 是 EKE 的一个最小轮数版本，其流程类似于图 10.4 的协议 PPK，不同之处在于 CRS 由两个随机群元素 `M, N` 修正，且 `H(pw^A)` 和 `H(pw^B)` 分别被群元素 `M^(pwd[A])` 和 `N^(pw[B])` 替换。（假设密码被哈希到 `q` 上，并且必须以某种方式打破对称性，因为 `A` 和 `B` 不能使用相同的 CRS 元素。）
 
-Jablon (1996) 的 SPEKE 协议以及 Hao 和 Shahandashti (2014) 提出了对 EKE 的如下变体：在用 DH 密钥交换实例化的 EKE 中，双方不再在密码下加密 `g^x` 和 `g^y`，而是可以使用设置为 `g = H(pw)` 的 DH 基 `g` 来运行 DH 密钥交换，其中 `H` 是映射到群上的 RO 哈希。Haase 和 Labrique (2019) 提出了 SPEKE 的一种特定椭圆曲线实例化，称为 CPace，并被 IETF CFRG 在对称 PAKE 类别的竞赛中推荐采纳 (Smyshlyaev 2020)。MacKenzie (2001a) 证明了 SPEKE 在 *反转加法 DDH* 假设下具有 BMP 模型安全性（如果模拟器针对每个被攻击会话获得*两个*测试密码查询），即元组 `(g^(1/x), g^(1/y), g^(1/(x+y)))` 与随机群元素三元组不可区分。请注意，除了非标准安全假设外，SPEKE 需要哈希到群，而 SPAKE2 不需要；且 SPEKE 每方成本为 2vb 指数运算，而 SPAKE2 为 3fb+1vb，因此仅在无法利用预计算加速固定基指数运算的空间受限场景下，SPEKE 才开销更小。然而，Pointcheval 和 Wang (2017) 提出了一个 SPEKE 变体，称为 TBPEKE，它通过设置 `g = M^(H(pw)) * N`（其中 `M, N` 是 CRS 中的两个（随机）群元素）同时解决了这两个问题。
+Jablon (1996) 的 SPEKE 协议以及 Hao 和 Shahandashti (2014) 提出了对 EKE 的如下变体：在用 DH 密钥交换实例化的 EKE 中，双方不再在密码下加密 `g^x` 和 `g^y`，而是可以使用设置为 `g = H(pw)` 的 DH 基 `g` 来运行 DH 密钥交换，其中 `H` 是映射到群上的 RO 哈希。
 
-在实践中获得关注的*非* EKE 变体的 PAKE 协议是 J-PAKE (Hao 和 Ryan 2010)，它被包含在 OpenSSL 库中。Abdalla 等人 (2015a) 证明了 J-PAKE 在 ROM 中基于 DDH 变体具有 BPR 安全性，但 J-PAKE 似乎相较于 SPAKE2 或 TBPEKE 没有优势，因为它需要更多轮次，且带宽和计算量大约多 6 倍。
+Haase 和 Labrique (2019) 提出了 SPEKE 的一种特定椭圆曲线实例化，称为 CPace，并被 IETF CFRG 在对称 PAKE 类别的竞赛中推荐采纳 (Smyshlyaev 2020)。
+
+MacKenzie (2001a) 证明了 SPEKE 在 *反转加法 DDH* 假设下具有 BMP 模型安全性（如果模拟器针对每个被攻击会话获得*两个*测试密码查询），即元组 `(g^(1/x), g^(1/y), g^(1/(x+y)))` 与随机群元素三元组不可区分。
+
+请注意，除了非标准安全假设外，SPEKE 需要哈希到群，而 SPAKE2 不需要；且 SPEKE 每方成本为 2vb 指数运算，而 SPAKE2 为 3fb+1vb，因此仅在无法利用预计算加速固定基指数运算的空间受限场景下，SPEKE 才开销更小。
+
+然而，Pointcheval 和 Wang (2017) 提出了一个 SPEKE 变体，称为 TBPEKE，它通过设置 `g = M^(H(pw)) * N`（其中 `M, N` 是 CRS 中的两个（随机）群元素）同时解决了这两个问题。
+
+在实践中获得关注的*非* EKE 变体的 PAKE 协议是 J-PAKE (Hao 和 Ryan 2010)，它被包含在 OpenSSL 库中。
+
+Abdalla 等人 (2015a) 证明了 J-PAKE 在 ROM 中基于 DDH 变体具有 BPR 安全性，但 J-PAKE 似乎相较于 SPAKE2 或 TBPEKE 没有优势，因为它需要更多轮次，且带宽和计算量大约多 6 倍。
 
 ### 基于 RSA 的 PAKE
 
-基于用 RSA 类 KEM 实例化的 EKE 来构建 PAKE 看似是一个有吸引力的选项，因为它可以创建一个开销不对称的 PAKE：如果客户端发送 `c[A] ← E(pw, (r^e mod N))`（针对随机密钥 `r`），服务端恢复 KEM 密钥为 `r ← [D(pw, c[A])]^d mod N`，那么如果指数 `e` 可以很短，这样的 PAKE 将支持弱客户端。然而，如果 `(e, N)` 被篡改使得 `r^e mod N` 不是模 `N` 的随机整数，服务端一方就能作弊。确实，随后几个基于 RSA 的 EKE 版本 (Bellovin 和 Merritt 1992; Lucks 1998) 都被攻破了 (Patel 1997; MacKenzie 等人 2000; Zhang 2004a)。MacKenzie 等人 (2000)、Zhang (2004b) 和 Park 等人 (2007) 给出了安全版本（在 ROM 中基于 RSA 假设的 BPR 模型下），适用于长度递减的 `e`，但即使是 (Park 等人 2007) 也要求 `|e| = Ω(κ)`，且客户端必须测试 `e` 的素性。基于 RSA 的 PAKE 提案包含一些可证明安全的研究 (Zhu 等人 2002; Wong 等人 2003; Catalano 等人 2004; Zhang 2004c; Gentry 等人 2005)，但它们要么客户端开销高，要么比使用素数阶群的 PAKE 需要更多轮次和带宽。为弱客户端创建 PAKE 仍是一个未解之谜，但对基于 RSA 方案的兴趣似乎已减退，可能是因为任何客户端成本的节省都以固有的更高带宽为代价。
+基于用 RSA 类 KEM 实例化的 EKE 来构建 PAKE 看似是一个有吸引力的选项，因为它可以创建一个开销不对称的 PAKE：如果客户端发送 `c[A] ← E(pw, (r^e mod N))`（针对随机密钥 `r`），服务端恢复 KEM 密钥为 `r ← [D(pw, c[A])]^d mod N`，那么如果指数 `e` 可以很短，这样的 PAKE 将支持弱客户端。
+
+然而，如果 `(e, N)` 被篡改使得 `r^e mod N` 不是模 `N` 的随机整数，服务端一方就能作弊。
+
+确实，随后几个基于 RSA 的 EKE 版本 (Bellovin 和 Merritt 1992; Lucks 1998) 都被攻破了 (Patel 1997; MacKenzie 等人 2000; Zhang 2004a)。
+
+MacKenzie 等人 (2000)、Zhang (2004b) 和 Park 等人 (2007) 给出了安全版本（在 ROM 中基于 RSA 假设的 BPR 模型下），适用于长度递减的 `e`，但即使是 (Park 等人 2007) 也要求 `|e| = Ω(κ)`，且客户端必须测试 `e` 的素性。
+
+基于 RSA 的 PAKE 提案包含一些可证明安全的研究 (Zhu 等人 2002; Wong 等人 2003; Catalano 等人 2004; Zhang 2004c; Gentry 等人 2005)，但它们要么客户端开销高，要么比使用素数阶群的 PAKE 需要更多轮次和带宽。
+
+为弱客户端创建 PAKE 仍是一个未解之谜，但对基于 RSA 方案的兴趣似乎已减退，可能是因为任何客户端成本的节省都以固有的更高带宽为代价。
 
 ### RO 或 IC 模型中的 UC PAKE
 
-Abdalla 等人 (2008) 证明了三轮 EKE 变体 AuthA (Bellare 和 Rogaway 2000; Bresson 等人 2003)（见上文）在 IC+RO 模型中基于 CDH 假设，甚至针对*自适应对手*且无需擦除，实现了 Canetti 等人 (2005) 的 UC PAKE 功能。Bradley 等人 (2019a) 证明了两个实现 UC PAKE 的两轮 EKE 变体，一个是最小开销但处于 IC+RO 模型，另一个在 RO 模型但需要额外的指数运算。Abdalla 等人 (2020) 提出了一种 UC PAKE 功能的“懒惰提取”松弛（见第 10.5 节），并证明了几个高效的最小轮数 EKE 版本，包括 SPAKE2、SPEKE、CPace 和 TBPEKE，在 ROM 中基于相应 BPR 模型证明中所用假设的 Gap 版本，实现了懒惰提取 UC PAKE 模型。McQuoid 等人 (2020) 证明了使用特定两轮 Feistel 结构实现加密的 EKE2（见第 10.3.5 节）在 ROM 中基于 CDH 实现了 Canetti 等人 (2005) 的 UC PAKE 定义。因此，目前最高效且最小轮数的 EKE 版本 EKE2 和 SPAKE2，分别在 CDH 和 GapDH 假设下实现了 UC PAKE 和懒惰提取 UC PAKE，其中按 McQuoid 等人 (2020) 实现的 EKE2 每方成本为 1fb+1vb 加 2 次映射到群上的 RO 哈希，SPAKE2 每方成本为 3fb+1vb。
+Abdalla 等人 (2008) 证明了三轮 EKE 变体 AuthA (Bellare 和 Rogaway 2000; Bresson 等人 2003)（见上文）在 IC+RO 模型中基于 CDH 假设，甚至针对*自适应对手*且无需擦除，实现了 Canetti 等人 (2005) 的 UC PAKE 功能。
+
+Bradley 等人 (2019a) 证明了两个实现 UC PAKE 的两轮 EKE 变体，一个是最小开销但处于 IC+RO 模型，另一个在 RO 模型但需要额外的指数运算。
+
+Abdalla 等人 (2020) 提出了一种 UC PAKE 功能的“懒惰提取”松弛（见第 10.5 节），并证明了几个高效的最小轮数 EKE 版本，包括 SPAKE2、SPEKE、CPace 和 TBPEKE，在 ROM 中基于相应 BPR 模型证明中所用假设的 Gap 版本，实现了懒惰提取 UC PAKE 模型。
+
+McQuoid 等人 (2020) 证明了使用特定两轮 Feistel 结构实现加密的 EKE2（见第 10.3.5 节）在 ROM 中基于 CDH 实现了 Canetti 等人 (2005) 的 UC PAKE 定义。
+
+因此，目前最高效且最小轮数的 EKE 版本 EKE2 和 SPAKE2，分别在 CDH 和 GapDH 假设下实现了 UC PAKE 和懒惰提取 UC PAKE，其中按 McQuoid 等人 (2020) 实现的 EKE2 每方成本为 1fb+1vb 加 2 次映射到群上的 RO 哈希，SPAKE2 每方成本为 3fb+1vb。
 
 ## 10.8. 非对称 PAKE：面向客户端-服务端设置的 PAKE
 
-Bellovin 和 Merritt (1993) 为客户端-服务端设置提出了*增强型* PAKE (aPAKE)，其中服务端持有密码*哈希 hpw* = *f* (*pw*) 而非密码本身，协议检查 `C` 和 `S` 分别持有 `pw^C` 和 `hpw^S` 使得 `f(pwd^C) = (pw^S)`，而不是检查 `pw^C` 和 `pw^S` 使得 `pw^C = pw^S`。如果 *f* 是*紧致*单向函数 (OWF) (Benhamouda 和 Pointcheval 2013)，即对于任意域 *D*，给定 *y* = *f* (*x*)（其中 *x* ←[$] *D*），要以至少 *ϵ* 的概率找到 *x* 需要 Ω(*ϵ|D|*) 的工作量，那么攻破 `S` 所持 `hpw` 的攻击者只能以 Ω(2^(*d*)) 的工作量恢复密码 *pw*，其中 *d* 是密码熵。这是最优的，因为给定 `hpw` 的攻击者可以通过在输入 `pw`^∗ 和 `hpw` 上分别模拟 aPAKE 执行来离线测试任意 `pw`^∗。在 ROM 中，可设 *f* (*x*) = `H(x)`，但此时 aPAKE 协议将依赖于 `H` 的电路复杂度。然而，设 *f* (*x*) = *g*^(`H(x)`) 在通用群模型和 ROM 中仍给出紧致 OWF (Benhamouda 和 Pointcheval 2013)，并允许高效 aPAKE 检查 `C` 持有的 `hpw^C = H(pw^C)` 是否为 `S` 持有的 `hpw^S` 的离散对数。这可以使用 Diffie-Hellman KEM 或 DL 知识的零知识证明来完成，无论哪种选择，这种 DL 关系验证都必须受到保护以抵御离线攻击。
+Bellovin 和 Merritt (1993) 为客户端-服务端设置提出了*增强型* PAKE (aPAKE)，其中服务端持有密码*哈希 hpw* = *f* (*pw*) 而非密码本身，协议检查 `C` 和 `S` 分别持有 `pw^C` 和 `hpw^S` 使得 `f(pwd^C) = (pw^S)`，而不是检查 `pw^C` 和 `pw^S` 使得 `pw^C = pw^S`。
+
+如果 *f* 是*紧致*单向函数 (OWF) (Benhamouda 和 Pointcheval 2013)，即对于任意域 *D*，给定 *y* = *f* (*x*)（其中 *x* ←[$] *D*），要以至少 *ϵ* 的概率找到 *x* 需要 Ω(*ϵ|D|*) 的工作量，那么攻破 `S` 所持 `hpw` 的攻击者只能以 Ω(2^(*d*)) 的工作量恢复密码 *pw*，其中 *d* 是密码熵。
+
+这是最优的，因为给定 `hpw` 的攻击者可以通过在输入 `pw`^∗ 和 `hpw` 上分别模拟 aPAKE 执行来离线测试任意 `pw`^∗。
+
+在 ROM 中，可设 *f* (*x*) = `H(x)`，但此时 aPAKE 协议将依赖于 `H` 的电路复杂度。
+
+然而，设 *f* (*x*) = *g*^(`H(x)`) 在通用群模型和 ROM 中仍给出紧致 OWF (Benhamouda 和 Pointcheval 2013)，并允许高效 aPAKE 检查 `C` 持有的 `hpw^C = H(pw^C)` 是否为 `S` 持有的 `hpw^S` 的离散对数。
+
+这可以使用 Diffie-Hellman KEM 或 DL 知识的零知识证明来完成，无论哪种选择，这种 DL 关系验证都必须受到保护以抵御离线攻击。
 
 
 
@@ -4453,16 +4361,13 @@ Bellovin 和 Merritt (1993) 为客户端-服务端设置提出了*增强型* PAK
 
 aPAKE 的安全性强于 Web 上使用的“密码通过 TLS”认证，因为后者依赖 PKI 向客户端 `C` 认证服务器 `S`。然而，密码通过 TLS 支持（私有）加盐密码哈希，即 `S` 可以持有 (*s, hpw*)，其中 *hpw* = *f* (*s*\|*pw*)，这里 *s* 是随机值，这实现了两个目标：首先，通过攻破 `S` 学到 *hpw* 的对手，必须对每个用户账户执行 Ω(*D*) 的工作量。其次，该工作量无法通过预计算来减轻。（aPAKE 协议可以通过一个额外的 `S` 到 `C` 流通用地支持加盐密码，该流将 `S` 持有的盐 *s* 发送给 `C`，但这支持的是*公开*盐，仅实现了目标 #1 而非 #2。）Boyen (2009b) 展示了首个*私有加盐* aPAKE，在增强型 BPR 模型中分析，结合了 Ford 和 Kaliski Jr. (2000) 的*密码强化*协议（被概念化为*隐藏凭证检索* (Boyen 2009a)）与一个 AKE 方案。Jarecki 等人 (2018) 在 UC 框架中定义了私有加盐 aPAKE 为 UC *强* aPAKE (saPAKE)，并证明它本质上由与 Boyen 相同的协议实现，但重新表述为 UC 不知情 PRF (OPRF) (Freedman 等人 2005；Jarecki 等人 2014) 与 AKE 的组合。一个名为 *OPAQUE* 的具体实例化，在 ROM 下基于*一次更多* GapDH 假设 (OM-GapDH) 证明安全，需三流且每方 2 或 3 次 vb 指数运算（后在 Jarecki 等人 (2021) 中降至每方 2 次 vb 指数运算），在 IETF CFRG 非对称 PAKE 类别竞赛中获选 (Smyshlyaev 2020)。Bradley 等人 (2019b) 还展示了另一种 UC saPAKE，仅需两流且每方 1 或 2 次 vb 指数运算，但需要更多固定基指数运算。
 
-## 10.9. 阈值 PAKE
+## 10.9 阈值 PAKE
 
 除了非对称 PAKE（见第 10.8 节）外，还可以通过使用 (*t, n*)-*阈值密码系统* (Desmedt 1993) 实现服务器来保护服务器持有的数据，其中服务器的数据被秘密共享给服务器 `S`[1], ..., `S`[*n*]；任意 *t* 个 `S`[*i*] 的泄露不泄露任何信息；而 *t* + 1 个服务器足以在单服务器 PAKE 方案中模拟服务器。原则上，任何 PAKE 都可以通过多方计算 (MPC) (Goldreich 等人 1987；Ben-Or 等人 1988；Beaver 1991) 以这种方式实现，但在实践中，我们需要具有*对 MPC 友好*服务器代码的 PAKE。
 
 首先，Ford 和 Kaliski Jr. (2000) 以及 Jablon (2001) 提出了 T-PAKE 方案，但仅有非形式化的安全论证。MacKenzie 等人 (2002) 给出了首个高效的 (*t, n*)-阈值 PAKE (T-PAKE)，在 ROM 中基于 BPR 模型的多服务器扩展证明安全，需要三轮服务器间通信，但假设 PKI 用于 `S`[*i*]-到-`C` 的认证。Di Raimondo 和 Gennaro (2003) 展示了 KOY 协议（见第 10.6 节）的 MPC 版本，得到了首个仅密码设置下的 T-PAKE，适用于 *t < n*/3，在标准模型中证明安全，但通信复杂度为 Ω(*κ*³) 且至少需要 12 轮通信。Abdalla 等人 (2005a) 展示了一种仅密码 T-PAKE（专用服务器获得会话密钥），适用于 *t < n*/2，在 ROM 中基于 DH 假设变体证明安全，需要五轮服务器间通信（包括三轮可靠广播）。
 
 Bagherzandi 等人 (2011) 给出了受密码保护的秘密共享 (PPSS) 方案的基于博弈的定义，该方案允许对秘密共享的秘密进行密码认证恢复。随后，Camenisch 等人 (2014) 在 UC 框架中定义了相同概念为阈值密码认证秘密共享 (TPASS)，基于 Camenisch 等人 (2012) 早先定义的双服务器变体。(Abdalla 等人 (2016) 也研究了最小轮数 PPSS 的鲁棒性。) PPSS/TPASS 以最小开销蕴含 T-PAKE，因为恢复的秘密可以包含密钥凭证，使 `C` 能与每个服务器运行 AKE (Jarecki 等人 2014, 2016)。Bagherzandi 等人 (2011) 的 PPSS 在 ROM 中基于 DDH 假设证明安全，处于 PKI 模型，但只需两轮 `C`-到-`S`[*i*] 通信，从而改进了 PKI 模型 T-PAKE 的轮数。Camenisch 等人 (2014) 的 UC TPASS 处于仅密码设置（带 CRS），在 ROM 中基于 DDH 实例化时具有五轮 `C`-到-`S`[*i*] 通信，蕴含成本与 Abdalla 等人 (2005a) 相当的 T-PAKE。Yi 等人 (2015) 展示了一种 UC TPASS（因此也蕴含 T-PAKE），在标准模型中基于 DDH 假设证明安全，即不依赖 ROM，需要四轮服务器间通信（包括两次广播），从而在假设和轮数复杂度上均改进了 Abdalla 等人 (2005a)。在一系列 PPSS 论文中，Jarecki 等人 (2014, 2016, 2017) 提出了一种放宽了 Camenisch 等人 (2014) UC TPASS 的 UC PPSS 概念，并展示了仅密码 PPSS，仅需*单轮* C-到-S[*i*] 通信，蕴含两轮 T-PAKE，成本低至 `C` 2 次指数运算（对任意 *n*）和 `S` 1 次指数运算，在 ROM 中基于（广义）OM-GapDH 假设证明安全。
-
-
-
 
 ## 双服务器 PAKE (2-PAKE)
 
@@ -4474,7 +4379,7 @@ Camenisch 等人 (2015b) 给出了*分布式密码验证* (DPV) 协议的 UC 定
 
 Everspaugh 等人 (2015) 利用*部分无感 PRF* (POPRF) 的阈值实现，构建了通用 (*t*, *n*) 阈值情况下的 DPV。其思路类似于 Ford-Kaliski 密码强化 (Ford 和 Kaliski Jr. 2000)，但与 Boyen (2009a) 和 Jarecki 等人 (2018) 的 saPAKE 不同，POPRF 客户端的角色由服务器 `S[1]` 扮演，而非远程用户。他们的计算成本略高于 (Camenisch 等人 2015b)，因为他们的方案使用了双线性映射群，并且他们仅给出了基于游戏的安全性分析，在 ROM 中基于 OM-DH 假设。Schneider 等人 (2016) 和 Lai 等人 (2017) 给出了针对 *n* = 2 台服务器特定情况的其他 DPV 方案，但他们通过包含仅更新每台服务器存储密钥的主动更新扩展了 DPV 功能，因此具有 *O*(1) 带宽，然后仅服务器 `S[1]` 在本地执行 *O*(*m*) 工作量来更新 *m* 个用户的（加密）密码数据。
 
-## 10.10. 参考文献
+## 10.10 参考文献
 
 Abdalla, M. and Pointcheval, D. (2005). Simple password-based encrypted key exchange protocols, In *CT-RSA 2005*, vol. 3376 of *LNCS*, Menezes, A. (ed.). Springer, Heidelberg.
 
@@ -4500,6 +4405,10 @@ Abdalla, M., Barbosa, M., Bradley, T., Jarecki, S., Katz, J., Xu, J. (2020). Uni
 
 Bagherzandi, A., Jarecki, S., Saxena, N., Lu, Y. (2011). Password-protected secret sharing. In *ACM CCS 2011*, Chen, Y., Danezis, G., Shmatikov, V. (eds). ACM Press.
 
+
+
+# 参考文献
+
 Barak, B., Canetti, R., Lindell, Y., Pass, R., Rabin, T. (2005). Secure computation without authentication. In *CRYPTO 2005*, vol. 3621 of *LNCS*, Shoup, V. (ed.). Springer, Heidelberg.
 
 Beaver, D. (1991). Secure multiparty protocols and zero-knowledge proof systems tolerating a faulty minority. *Journal of Cryptology*, 4(2), 75–122.
@@ -4521,12 +4430,6 @@ Bellovin, S.M. and Merritt, M. (1992). Encrypted key exchange: Password-based pr
 Bellovin, S.M. and Merritt, M. (1993). Augmented encrypted key exchange: A password-based protocol secure against dictionary attacks and password file compromise. In *ACM CCS 93*, Denning, D.E., Pyle, R., Ganesan, R., Sandhu, R.S., Ashby, V. (eds). ACM Press.
 
 Ben-Or, M., Goldwasser, S., Wigderson, A. (1988). Completeness theorems for non-cryptographic fault-tolerant distributed computation (extended abstract). In *20th ACM STOC*. ACM Press.
-
-
-
-
-
-# 参考文献
 
 Benhamouda, F. and Pointcheval, D. (2013). Verifier-based password-authenticated key exchange: New models and constructions. *Cryptology ePrint Archive*, Report 2013/833 [Online]. Available at: [`eprint.iacr.org/2013/833`](https://eprint.iacr.org/2013/833).
 
@@ -4588,6 +4491,10 @@ Cramer, R. and Shoup, V. (2002). Universal hash proofs and a paradigm for adapti
 
 Dachman-Soled, D., Katz, J., Thiruvengadam, A. (2016). 10-Round Feistel is indifferentiable from an ideal cipher. In *EUROCRYPT 2016, Part II*, vol. 9666 of *LNCS*, Fischlin, M., Coron, J.-S. (eds). Springer, Heidelberg.
 
+
+
+## 参考文献
+
 Dai, Y. and Steinberger, J.P. (2016). Indifferentiability of 8-round Feistel networks. In *CRYPTO 2016, Part I*, vol. 9814 of *LNCS*, Robshaw, M., Katz, J. (eds). Springer, Heidelberg.
 
 Desmedt, Y. (1993). Treshold cryptosystems (invited talk). In *AUSCRYPT’92*, Seberry, J., vol. 718 of *LNCS*, Zheng, Y. (eds). Springer, Heidelberg.
@@ -4607,12 +4514,6 @@ Freedman, M.J., Ishai, Y., Pinkas, B., Reingold, O. (2005). Keyword search and o
 Fujisaki, E. and Okamoto, T. (1999). How to enhance the security of public-key encryption at minimum cost. In *PKC’99*, vol. 1560 of *LNCS*, Imai, H., Zheng, Y. (eds). Springer, Heidelberg.
 
 Gennaro, R. (2008). Faster and shorter password-authenticated key exchange. In *TCC 2008*, vol. 4948 of *LNCS*, Canetti, R. (ed.). Springer, Heidelberg.
-
-
-
-
-
-## 参考文献
 
 Gennaro, R. and Lindell, Y. (2003). A framework for password-based authenticated key exchange. In *EUROCRYPT 2003*, vol. 2656 of *LNCS*, Biham, E. (ed.). Springer, Heidelberg [Online]. Available at: <https://eprint.iacr.org/2003/032.ps.gz>.
 
@@ -4676,6 +4577,10 @@ Jutla, C.S. and Roy, A. (2012). Relatively-sound NIZKs and password-based key-ex
 
 Jutla, C.S. and Roy, A. (2015). Dual-system simulation-soundness with applications to UC-PAKE and more. In *ASIACRYPT 2015, Part I*, vol. 9452 of *LNCS*, Iwata, T., Cheon, J.H. (eds). Springer, Heidelberg.
 
+
+
+# 参考文献
+
 Jutla, C.S. and Roy, A. (2018). Smooth NIZK arguments. In *TCC 2018, Part I*, vol. 11239 of *LNCS*, Beimel, A., Dziembowski, S. (eds). Springer, Heidelberg.
 
 Katz, J., Ostrovsky, R., Yung, M. (2001). Efficient password-authenticated key exchange using human-memorable passwords. In *EUROCRYPT 2001*, vol. 2045 of *LNCS*, Pfitzmann, B. (ed.). Springer, Heidelberg.
@@ -4695,12 +4600,6 @@ Kim, T. and Tibouchi, M. (2015). Invalid curve attacks in a GLS setting. In *IWS
 Kobara, K. and Imai, H. (2002). Pretty-simple password-authenticated key-exchange under standard assumptions. *IEICE Transactions*, E85-A(10), 2229–2237.
 
 Krawczyk, H. (2005). HMQV: A high-performance secure Diffie–Hellman protocol. In *CRYPTO 2005*, vol. 3621 of *LNCS*, Shoup, V. (ed.). Springer, Heidelberg.
-
-
-
-
-
-# 参考文献
 
 Krawczyk, H. (2010). Cryptographic extraction and key derivation: The HKDF scheme. In *CRYPTO 2010*, vol. 6223 of *LNCS*, Rabin, T. (ed.). Springer, Heidelberg.
 
@@ -4770,6 +4669,8 @@ Zhang, M. (2004a). Further analysis of password authenticated key exchange proto
 
 Zhang, M. (2004b). New approaches to password authenticated key exchange based on RSA. In *ASIACRYPT 2004*, vol. 3329 of *LNCS*, Lee, P.J. (ed.). Springer, Heidelberg.
 
+
+
 Zhang, M. (2004c). Password authenticated key exchange using quadratic residues. In *ACNS 04*, vol. 3089 of *LNCS*, Jakobsson, M., Yung, M., Zhou, J. (eds). Springer, Heidelberg.
 
 Zhang, L., Zhang, Z., Hu, X. (2016). UC-secure two-server password-based authentication protocol and its applications. In *ASIACCS 16*, Chen, X., Wang, X., Huang, X. (eds). ACM Press.
@@ -4778,13 +4679,9 @@ Zhu, F., Wong, D.S., Chan, A.H., Ye, R. (2002). Password authenticated key excha
 
 ## 注释
 
-1.  1 在 Bellare 等人 (2000)、Boyko 等人 (2000)、Halevi 和 Krawczyk (1998) 以及 Boyarsky (1999) 的工作之前，他们将 Bellare 和 Rogaway (1994) 的认证密钥交换 (AKE) 模型扩展到了“半 PKI”情况，即除了密码外，一方拥有公钥，其对手方可以对该公钥进行认证。我们还注意到 Goldreich 和 Lindell (2001) 同时提出了另一个 PAKE 模型，但它可以被视为 BPR 模型的弱化，仅允许各方按顺序执行，并将定义 10.2 中的界限 `q_ses / |D|` 放宽为 `O(q_ses) / |D|`。
+1. 在 Bellare 等人 (2000)、Boyko 等人 (2000)、Halevi 和 Krawczyk (1998) 以及 Boyarsky (1999) 的工作之前，他们将 Bellare 和 Rogaway (1994) 的认证密钥交换 (AKE) 模型扩展到了“半 PKI”情况，即除了密码外，一方拥有公钥，其对手方可以对该公钥进行认证。我们还注意到 Goldreich 和 Lindell (2001) 同时提出了另一个 PAKE 模型，但它可以被视为 BPR 模型的弱化，仅允许各方按顺序执行，并将定义 10.2 中的界限 `q_ses / |D|` 放宽为 `O(q_ses) / |D|`。
 
-2.  2 本节中此处及后文使用的术语与 Boyko 等人 (2000) 所用的术语不同，后者特别是没有使用“功能性”这一术语来描述理想世界游戏。然而，这正是 Canetti (2001) 的 UC 框架对 BMP 定义的解释方式，也是随后 Canetti 等人 (2005) 的 UC PAKE 模型中重新表述的方式（参见 第 10.5 节）。
-
-
-
-
+2. 本节中此处及后文使用的术语与 Boyko 等人 (2000) 所用的术语不同，后者特别是没有使用“功能性”这一术语来描述理想世界游戏。然而，这正是 Canetti (2001) 的 UC 框架对 BMP 定义的解释方式，也是随后 Canetti 等人 (2005) 的 UC PAKE 模型中重新表述的方式（参见第 10.5 节）。
 
 ## 3
 
@@ -4798,9 +4695,7 @@ Zhu, F., Wong, D.S., Chan, A.H., Ye, R. (2002). Password authenticated key excha
 
 Kobara-Imai（Kobara 和 Imai，2002）声称在标准模型中几乎相同的协议是 BPR 安全的，不同之处在于他们的版本中 `M = N`，协议后跟一个密钥确认轮，见图 10.2，且会话密钥和密钥确认消息 `τ, γ` 是通过将 PRF/MAC 直接应用于 DH 密钥 `g^(xy)` 来派生的，而不是通过 RO 哈希从 `g^(xy)` 派生 `sk`。然而，Kobara 和 Imai（2002）依赖一种强且非标准的 MAC 安全概念，这在标准模型中似乎难以实现。
 
-# 11
-
-可验证计算与 NP 的简洁论证
+# 11 可验证计算与 NP 的简洁论证
 
 **Dario FIORE**
 
@@ -4832,15 +4727,11 @@ Gennaro 等人（2010）提出了一种完全不同的 VC 方法，他们定义�
 
 最后，另一种（非交互式）VC 方法是基于针对 `NP` 的简洁非交互式论证（SNARG）（例如 Parno 等人，2013）。针对 `NP` 的 SNARG 本质上是用于非确定性计算的 VC 协议，即证明 ∃`w` : `C(x, w) = y`，并基本上进一步形式化了 Micali 提出的 CS 证明概念。然而，虽然 Micali 的构造具体依赖于使用 Fiat-Shamir 变换的随机预言机启发式方法，但 SNARG 可能在标准模型下是安全的，尽管需要强密码学假设。确实，在一项著名的工作中，Gentry 和 Wichs（2011）证明了 SNARG 很可能需要不可证伪假设，即在这些假设中，可能无法高效地判断对手是否获胜。
 
-
-
-
-
-# 构建 SNARGs
+## 构建 SNARGs
 
 构建 SNARGs 是一个多产的研究领域，已经产生了许多效率显著提升的协议。值得注意的是，其中一些协议已被实现并部署在现实系统中（例如 Zcash）。
 
-## 11.2. 预备知识
+## 11.2 预备知识
 
 **符号。** 我们用 `λ` ∈ ℕ 表示安全参数，用 `poly(λ)` 和 `negl(λ)` 分别表示多项式函数集和可忽略函数集。如果函数 `ε(λ)` 比 `λ` 中任意多项式的倒数消失得更快，则称该函数为*可忽略*，记作 `ε(λ) = negl(λ)`。如果算法可以建模为在概率多项式时间内运行的图灵机，则称其为 PPT。
 
@@ -4848,7 +4739,7 @@ Gennaro 等人（2010）提出了一种完全不同的 VC 方法，他们定义�
 
 我们用 `F` 表示有限域，用 `F[X[1], ..., X[μ]]` 表示变量 **X** = `X[1], ..., X[μ]` 上的 `μ` 元多项式环。
 
-## 11.3. 可验证计算
+## 11.3 可验证计算
 
 本节的目标是给出非交互式 VC 方案的形式化定义。简言之，VC 方案由一组算法组成，借助这些算法，客户端可以将函数 `f` 的计算外包给一台不受信任的机器，从而使客户端能够验证该机器返回结果的正确性。为了使外包有利可图，一个关键要求是验证成本对客户端而言必须比自行计算函数更低廉。正如 Gennaro 等人（2010）的原始形式化所引入的，只需这种效率要求在摊还意义上成立即可。即，客户端可以执行一次性预处理，其成本与运行函数成正比，但在此之后，委托特定输入的计算并验证结果必须比在本地运行函数便宜得多。值得注意的是，在 VC 中，验证者必须知道它想要检查的计算，并且至少必须读取其描述。在某些计算模型中，例如电路，读取描述的成本可能与执行计算一样高。因此，在这种情况下，采用摊还预处理模型也可能是使 VC 有意义的必要条件。
 
@@ -4859,8 +4750,11 @@ Gennaro 等人（2010）在一个模型中将 VC 形式化，其中委托和验�
 **定义 11.1 (VC)。** 设 `F` 为函数族。`F` 的公开 VC 方案 `VC` 由以下算法定义：
 
 *   `KGen(1^λ, f) → (pk[f], ek[f])`：输入安全参数 `λ` 和函数 `f` ∈ `F`，输出用于输入委托和验证的公钥 `pk[f]`，以及交给服务器用于委托 `f` 计算的公开评估密钥 `ek[f]`。
+
 *   `ProbGen(pk[f], x) → (σ[x], vk[x])`：给定输入 `x`，问题生成算法由委托方运行，以生成 `x` 的编码 `σ[x]`，连同公开验证密钥 `vk[x]`。
+
 *   `Compute(ek[f], σ[x]) → σ[y]`：给定评估密钥 `ek[f]` 和编码输入 `σ[x]`，该算法由服务器运行，以计算 `y = f(x)` 的编码输出 `σ[y]`。
+
 *   `Verify(pk[f], vk[x], σ[y]) → y ∪ ⊥`：输入公钥 `pk[f]`、验证密钥 `vk[x]` 和编码输出 `σ[y]`，该算法返回值 `y` 或错误 `⊥`。
 
 VC 方案需要满足下文定义的*正确性*、*安全性*和*可外包性*属性。
@@ -4881,19 +4775,19 @@ Exp_VC^A(λ):
 
 **可外包性。** 如果运行 `ProbGen` 和 `Verify` 所需的时间（渐近意义上）在计算 `f(x)` 所需时间的亚线性级别，则 `VC` 是可外包的。
 
-## 11.4. 构建 VC
+## 11.4 构建 VC
 
 在定义了 VC 的概念后，本章其余部分重点展示如何为一个重要的计算类——多项式规模的算术电路——构建 VC 方案。
 
 在下一节中，我们将概述我们的构建方法，该方法通过模块化方式组合三个主要步骤而获得。
 
-### 11.4.1. 面向电路的三步法 VC
+### 11.4.1 面向电路的三步法 VC
 
 在构建 VC 方案的多种现有方法中，本文选择展示基于 NP 语言 SNARGs 的方法，这一概念与 VC 非常接近（但比 VC 更强大、更强有力）。
 
 我们选择展示基于 SNARG 的 VC 构建，是因为该方法的高效性，以及近年来衍生出丰富研究路线的相关技术的流行度。
 
-我们展示如何通过三个主要步骤获得面向电路的 VC；该方法的总结如 图 11.1 所示。
+我们展示如何通过三个主要步骤获得面向电路的 VC；该方法的总结如图 11.1 所示。
 
 ![图 11.1. 构建面向算术电路 VC 的模块化方法](img/fig11-1.jpg)
 
@@ -4907,13 +4801,9 @@ Exp_VC^A(λ):
 
 通过组合这三个步骤，我们获得了一个面向算术电路的 VC 方案，其安全性基于 AGM 中离散对数假设的一个强化版本。
 
-### 11.4.2. 面向非确定性计算的简洁非交互式论证
+### 11.4.2 面向非确定性计算的简洁非交互式论证
 
 为了定义 SNARGs，我们首先回顾 `NP` 关系的概念。
-
-
-
-
 
 ## 定义 11.2 (NP 关系)
 
@@ -4924,7 +4814,9 @@ Exp_VC^A(λ):
 设 `R` 为一族关系。`R` 的简洁非交互式论证系统 简称 **SNARG** `Π` 是一个由三个算法组成的三元组 (`Setup`, `P`, `V`)，满足：
 
 *   **`Setup`(1^λ, `R`) → `crs`**：这是一个概率算法，输入安全参数和一个关系 `R` ∈ `R`，生成一个公共参考字符串 `crs`。
+
 *   **`P`(`crs`, `R`, `x`, `w`) → `π`**：概率证明者算法，输入一个公共参考字符串和一个三元组 (`R`, `x`, `w`) 使得 `R`(`x`, `w`) = `true`，生成一个证明 `π`。
+
 *   **`V`(`crs`, `x`, `π`) → `b` ∈ {0, 1}**：确定性验证算法，输入一个公共参考字符串、一个陈述 `x` 和一个证明 `π`，返回一个比特 `b` ∈ {0, 1}，其中 `b` = 1 表示“接受”，`b` = 0 表示“拒绝”。
 
 若 `Π` = (`Setup`, `P`, `V`) 满足下文定义的正确性、可靠性和简洁性，则称其为 SNARG。
@@ -4933,9 +4825,9 @@ Exp_VC^A(λ):
 
 若对于任意 `R` ∈ `R` 以及满足 `R`(`x`, `w`) = true 的任意 (`x`, `w`) 均有：
 
-```
+
+
 Pr[crs ← Setup(1^λ, R); π ← P(crs, R, x, w) : V(crs, x, π) = 1] = 1
-```
 
 则称 `Π` 是正确的。
 
@@ -4959,11 +4851,11 @@ Pr[crs ← Setup(1^λ, R); (x, π) ← A(crs, R) : V(crs, x, π) = 1 ∧ x ∉ L
 
 给定一个针对 `NP` 完全语言的 SNARG，即可立即构建一个 VC 方案。该构造基于如下思想：给定任意在多项式时间内可计算的函数 `f`，可以定义一个 `NP` 关系 `R[f]`，使其在输入 (`x`, `y`) 时输出 `true` 当且仅当 `y` = `f`(`x`)。然后，通过让 `Compute` 算法为 `NP` 陈述 `y` = `f`(`x`) 生成一个 SNARG 证明，即可获得 VC。
 
-为完整起见，我们在 图 11.2 中给出了正式构造，并在下面的定理中说明其性质。
+为完整起见，我们在图 11.2 中给出了正式构造，并在下面的定理中说明其性质。
 
 ### 定理 11.1
 
-若 `Π` 是针对 `NP` 的 SNARG（见定义 11.3），则 图 11.2 中描述的 VC 方案是针对多项式时间计算的 VC（见定义 11.1）。
+若 `Π` 是针对 `NP` 的 SNARG（见定义 11.3），则图 11.2 中描述的 VC 方案是针对多项式时间计算的 VC（见定义 11.1）。
 
 我们将该定理的证明作为练习留给读者。简言之，VC 的完备性、安全性和可外包性分别源于 SNARG 的完备性、可靠性和简洁性。
 
@@ -4973,7 +4865,7 @@ Pr[crs ← Setup(1^λ, R); (x, π) ← A(crs, R) : V(crs, x, π) = 1 ∧ x ∉ L
 
 多项工作已采用此模块化方法。此处，我们具体采用 Bitansky 等人 (2013) 形式化的方法，其中信息论证明为 *线性概率可检查证明* (LPCP)，密码学组件为线性唯一编码。
 
-简而言之，LPCP 是经典 PCP 的一种变体，其中验证者的查询是证明的线性函数，而非检查证明中少数几个符号的查询。在 第 11.5.1 节 中，我们定义了 LPCP 概念的一个特例，称为非交互式线性证明 (NILP)，这足以构建 SNARG。
+简而言之，LPCP 是经典 PCP 的一种变体，其中验证者的查询是证明的线性函数，而非检查证明中少数几个符号的查询。在 11.5.1 节 中，我们定义了 LPCP 概念的一个特例，称为非交互式线性证明 (NILP)，这足以构建 SNARG。
 
 ![Figure 11.2. VC from SNARG](img/fig11-2.jpg)
 
@@ -4985,7 +4877,7 @@ Pr[crs ← Setup(1^λ, R); (x, π) ← A(crs, R) : V(crs, x, π) = 1 ∧ x ∉ L
 
 ### 11.5.1. 代数非交互式线性证明
 
-*非交互式线性证明* (NILP) 是一种信息论证明系统，其中证明者生成的证明为一个矩阵 `Π`；验证者可通过发送一个向量 `q` 并获得回答 `a = Π · q` 来“查询”证明（见 图 11.3）。此外，若验证者的查询和判定算法分别可用度数为 `d_Q` 和 `d_D` 的算术电路计算，则称该 NILP 为 (`d_Q`, `d_D`)-代数 NILP。
+*非交互式线性证明* (NILP) 是一种信息论证明系统，其中证明者生成的证明为一个矩阵 `Π`；验证者可通过发送一个向量 `q` 并获得回答 `a = Π · q` 来“查询”证明（见图 11.3）。此外，若验证者的查询和判定算法分别可用度数为 `d_Q` 和 `d_D` 的算术电路计算，则称该 NILP 为 (`d_Q`, `d_D`)-代数 NILP。
 
 我们强调，NILP 在一个理想抽象模型中工作，在该模型中，即使在可靠性实验中，回答也是由矩阵 `Π` 诚实计算得出的。然而，在可靠性博弈中，`Π` 可能由不诚实的证明者生成。
 
@@ -4998,39 +4890,38 @@ Pr[crs ← Setup(1^λ, R); (x, π) ← A(crs, R) : V(crs, x, π) = 1 ∧ x ∉ L
 设 `R` = {`R_i`}_i 为一族关系，`F` 为有限域。`R` 上的 (`d_Q`, `d_D`)-代数 NILP 由三个算法组成，其工作方式如下：
 
 *   **`P_NILP`(`R`, `x`, `w`) → `Π`**：概率证明者算法，输入一个关系 `R` ∈ `R` 和一个满足 `R`(`x`, `w`) = `true` 的对 (`x`, `w`)，输出一个由矩阵 `Π` ∈ `F`^(k×m) 组成的证明。
+
 *   **`Q_NILP`(`R`) → `q`**：概率查询算法，输入一个关系 `R` ∈ `R`，包含两步：
+
     1.  （确定性地）生成一个包含 `m` 个 μ 元多项式 `p_i` 的向量 `p`，其度数 ≤ `d_Q`；
+    2.  从 `F`^μ 中采样随机点 `s` ←[$]，计算 `q` ← `p`(`s`) 并返回 `q`。为简化起见，我们假设 `q` 始终包含一个条目 1；这样我们就不必区分仿射和线性（对抗性）证明者策略。查询答案计算为 `a` = Π · `q`。
 
+*   **`D_NILP`(`q`, `x`, `a`) ∈ {0, 1}**：确定性决策算法输出 1（接受）或 0（拒绝），包含两个步骤：
 
-
-
-
-## 2. 2) 从 `F`^(*μ*) 中采样随机点 `s` ←[$]，计算 `q` ← `p`(`s`) 并返回 `q`。为简化起见，我们假设 `q` 始终包含一个条目 1；这样我们就不必区分仿射和线性（对抗性）证明者策略。查询答案计算为 `a` = Π · `q`。
-
-– `D`(`q`, `x`, `a`) ∈ {0, 1}：确定性决策算法输出 1（接受）或 0（拒绝），包含两个步骤：
-
-1.  1) 运行 `t`1,..., `t`η ← `Test`(`R`, `x`) 以获得 η 个多项式 {`t[i]` : `F`^(*m*+*k*) → `F`}[*i*]，其次数 ≤ `d`[D]；
-2.  2) 当且仅当 ∀*i* ∈ [*η*] : `t[i]`(`q`, `a`) = 0 时返回 1。
+    1.  运行 `t_1`,..., `t_η` ← `Test`(`R`, `x`) 以获得 η 个多项式 {`t[i]` : `F`^(`m`+`k`) → `F`}[`i`]，其次数 ≤ `d_D`；
+    2.  当且仅当 ∀`i` ∈ [`η`] : `t[i]`(`q`, `a`) = 0 时返回 1。
 
 ### 完备性
+
 如果对于每个 `R` ∈ `R`，(`x`, `w`) ∈ `R`，所有 `q` ← `Q`(`R`)，Π ← `P`(`R`, `x`, `w`)，都有 `D`(`q`, `x`, Π · `q`) = 1，则关系族 `R` 的代数 NILP 是完全完备的。
 
 ### 可靠性
-如果对于每个关系 `R` ∈ `R`，任意 `x` ∉ `L`(`R`) 和任意证明矩阵 Π^∗ ∈ `F`^(*k*×*m*)，对于 `s` 和 `t`[1],..., `t`[η] ← `Test`(`R`, `x`)，至少存在一个索引 *i* ∈ [*η*] 使得 `t[i]`(`p`(`s`), Π^∗ · `p`(`s`)) 在 `F`[`s`] 上非零，则代数 NILP 是可靠的。
 
-上述可靠性概念被定义为针对验证者确定性代数查询版本的完美成立。利用众所周知的 Schwartz (1980) 和 Zippel (1979) 引理，上述概念意味着对于验证者查询的完整概率版本具有 (*d*[Q] · `d`[D] / `F`)-统计可靠性。即，它保证在 `Q`(`R`) 的随机币（即 `s` ←[$] `F`^(*μ*) 的选择）上，对于任意 `x` ∉ `L`(`R`) 和任意证明矩阵 Π^∗ ∈ `F`^(*k*×*m*)，有 Pr[`D`(`p`(`s`), `x`, Π^∗ • `p`(`s`)) = 1] ≤ (*d*[Q] · `d`[D]) / |`F`|。
+如果对于每个关系 `R` ∈ `R`，任意 `x` ∉ `L`(`R`) 和任意证明矩阵 Π^∗ ∈ `F`^(`k`×`m`)，对于 `s` 和 `t_1`,..., `t_η` ← `Test`(`R`, `x`)，至少存在一个索引 `i` ∈ [`η`] 使得 `t[i]`(`p`(`s`), Π^∗ · `p`(`s`)) 在 `F`[`s`] 上非零，则代数 NILP 是可靠的。
+
+上述可靠性概念被定义为针对验证者确定性代数查询版本的完美成立。利用众所周知的 Schwartz (1980) 和 Zippel (1979) 引理，上述概念意味着对于验证者查询的完整概率版本具有 (`d_Q` · `d_D` / `F`)-统计可靠性。即，它保证在 `Q`(`R`) 的随机币（即 `s` ←[$] `F`^μ 的选择）上，对于任意 `x` ∉ `L`(`R`) 和任意证明矩阵 Π^∗ ∈ `F`^(`k`×`m`)，有 Pr[`D`(`p`(`s`), `x`, Π^∗ • `p`(`s`)) = 1] ≤ (`d_Q` · `d_D`) / |`F`|。
 
 上述代数 NILP 的概念与 Bitansky 等人 (2013) 引入的代数、输入无关、两轮线性交互式证明的概念非常相似。语法上的主要区别在于，在 LIP 概念中，证明应该是一个单一的线性函数，即一个向量 `π`，而验证者进行更多的线性查询，即查询是一个矩阵。
 
 ### 11.5.2. 双线性群
 
-第 5 章已对配对进行了总体介绍；我们在此简要说明我们的符号约定。*双线性群生成器* `BG`(1^(*λ*)) 输出 (`p`, `G`[1], `G`[2], `G`[*T*], `e`)，其中 `G`[1], `G`[2], `G`[*T*] 是素数阶 `q` 的加法群，`e` : `G`[1] × `G`[2] → `G`[*T*] 是一个可高效计算、非退化的双线性映射。我们使用 Escala 等人 (2013) 的括号表示法，即对于 `s` ∈ {1, 2, *T*} 和 `a` ∈ `Z`[*q*]，我们写作 [`a`][`s`] 来表示 `a · g`[`s`] ∈ `G`[`s`]，其中 `g`[`s`] 是 `G`[`s`] 的固定生成元。从元素 [`a`][`s`] ∈ `G`[`s`] 和标量 `b`，可以高效计算 [`ab`] ∈ `G`[`s`]。此外，给定元素 [`a`][1] ∈ `G`[1] 和 [`b`][2] ∈ `G`[2]，可以通过使用配对 `e`([`a`][1], [`b`][2]) 高效计算 [`a · b`][*T*]，我们紧凑地将其表示为 [`a`][1] · [`b`][2]。利用这些性质，我们观察到可以对两个元素向量 ([`a`][1], [`b`][2]) 求值二次多项式 `f` 并在目标群中获得其结果，即 [`f`(`a`, `b`)][*T*] —— 略微滥用符号，我们用 `f`([`a`][1], [`b`][2]) 表示此操作。虽然从编码 [`f`(`a`, `b`)][*T*] 中提取结果 `f`(`a`, `b`) 可能并不高效，但可以高效检查结果是否为 0。在我们的编译器中，我们利用了后一性质。此外，为简化表述，本文使用 Type-1（也称为对称）配对，其中 `G`[1] = `G`[2]，记为 `G`。
+第 5 章已对配对进行了总体介绍；我们在此简要说明我们的符号约定。*双线性群生成器* `BG`(1^λ) 输出 (`p`, `G_1`, `G_2`, `G_T`, `e`)，其中 `G_1`, `G_2`, `G_T` 是素数阶 `q` 的加法群，`e` : `G_1` × `G_2` → `G_T` 是一个可高效计算、非退化的双线性映射。我们使用 Escala 等人 (2013) 的括号表示法，即对于 `s` ∈ {1, 2, `T`} 和 `a` ∈ `Z_q`，我们写作 [`a`]_`s` 来表示 `a · g_s` ∈ `G_s`，其中 `g_s` 是 `G_s` 的固定生成元。从元素 [`a`]_`s` ∈ `G_s` 和标量 `b`，可以高效计算 [`ab`]_`s` ∈ `G_s`。此外，给定元素 [`a`]_1 ∈ `G_1` 和 [`b`]_2 ∈ `G_2`，可以通过使用配对 `e`([`a`]_1, [`b`]_2) 高效计算 [`a · b`]_`T`，我们紧凑地将其表示为 [`a`]_1 · [`b`]_2。利用这些性质，我们观察到可以对两个元素向量 ([`a`]_1, [`b`]_2) 求值二次多项式 `f` 并在目标群中获得其结果，即 [`f`(`a`, `b`)]_`T` —— 略微滥用符号，我们用 `f`([`a`]_1, [`b`]_2) 表示此操作。虽然从编码 [`f`(`a`, `b`)]_`T` 中提取结果 `f`(`a`, `b`) 可能并不高效，但可以高效检查结果是否为 0。在我们的编译器中，我们利用了后一性质。此外，为简化表述，本文使用 Type-1（也称为对称）配对，其中 `G_1` = `G_2`，记为 `G`。
 
 在接下来的章节中，我们将解释 Fuchsbauer 等人 (2018) 的 AGM，它形式化了安全归约中代数对手的概念，然后陈述我们的 SNARG 构造所需的计算假设。
 
 #### 11.5.2.1. 代数群模型
 
-考虑一个素数阶 `p` 的群 `G`。*代数安全游戏*是一个实验，其中区分群 `G` 的元素和所有不依赖于群元素的其他元素。*代数算法*是在代数游戏中执行的算法，对于它输出的任何群元素 `h` ∈ `G`，它还会返回相对于所有先前接收元素的 `h` 的“代数解释”。即，如果 `A` 在代数游戏中执行，接收群元素向量 [`v`] 作为输入并输出 `h`，则 `A` 额外输出一个向量 `z`[`h`] ∈ `Z`[*p*] 使得 `h` = Σ `z`[`h`]_i [`v`]_i。
+考虑一个素数阶 `p` 的群 `G`。*代数安全游戏*是一个实验，其中区分群 `G` 的元素和所有不依赖于群元素的其他元素。*代数算法*是在代数游戏中执行的算法，对于它输出的任何群元素 `h` ∈ `G`，它还会返回相对于所有先前接收元素的 `h` 的“代数解释”。即，如果 `A` 在代数游戏中执行，接收群元素向量 [`v`] 作为输入并输出 `h`，则 `A` 额外输出一个向量 `z_h` ∈ `Z_p` 使得 `h` = Σ `z_h,i` [`v`]_i。
 
 证明某加密方案在代数群模型下归约到某个假设，意味着针对该方案安全性的任何代数对手都可以转化为针对该假设的代数对手，且具有多项式相关的运行时间和成功概率。
 
@@ -5048,13 +4939,9 @@ Pr[BG(1^λ) → (p, G1, G2, GT, e), s ← Zp : A(p, G1, G2, GT, e, [s], [s²], .
 
 更准确地说，我们在以下假设下证明我们的 SNARG 的安全性，Bitansky 等人 (2013) 表明该假设可归约到上述 PDL 假设。
 
-
-
-
-
 ## 定义 11.6 ((d, μ)-MPDL 假设)
 
-设 `G` 为双线性群生成器，`d` ∈ ℕ 为正整数，且 `p₁(X), ..., pₙ(X)` ∈ ℤₚ[X] 为总次数至多为 `d` 的 μ 元多项式。我们称 `(d, μ)`-多元幂离散对数假设 `((d, μ)-MPDL)` 在 `G` 中成立，如果对于每个 PPT `A`，有
+设 `G` 为双线性群生成器，`d` ∈ ℕ 为正整数，且 `p₁(X)`, ..., `pₙ(X)` ∈ ℤₚ[X] 为总次数至多为 `d` 的 μ 元多项式。我们称 `(d, μ)`-多元幂离散对数假设 (`(d, μ)`-MPDL) 在 `G` 中成立，如果对于每个 PPT `A`，有
 
 ```
 Pr[s ←$ 𝔽^μ; (p₁(s), ..., pₙ(s)) ← A(p₁(X), ..., pₙ(X)) : τ(X) ≠ 0 ∧ τ(s) = 0] ≤ negl(λ)
@@ -5070,9 +4957,9 @@ Pr[s ←$ 𝔽^μ; (p₁(s), ..., pₙ(s)) ← A(p₁(X), ..., pₙ(X)) : τ(X) 
 
 ### 11.5.3. 利用双线性群从具有 2 次验证器的代数 NILP 构造 SNARG
 
-在本节中，我们展示如何将关系族 `R` 的一个 `(d_Q, 2)`-代数 NILP 转换为 `R` 的一个 SNARG。该构造使用双线性群。
+在本节中，我们展示如何将关系族 `R` 的一个 (`d_Q`, 2)-代数 NILP 转换为 `R` 的一个 SNARG。该构造使用双线性群。
 
-设 `G` 为素数阶 `p` 的双线性群生成器，且 `(P_NILP, Q_NILP, D_NILP)` 为有限域 `𝔽 := ℤₚ` 上关系族 `R` 的一个 `(d_Q, 2)`-代数 NILP。
+设 `G` 为素数阶 `p` 的双线性群生成器，且 (`P_NILP`, `Q_NILP`, `D_NILP`) 为有限域 `𝔽 := ℤₚ` 上关系族 `R` 的一个 (`d_Q`, 2)-代数 NILP。
 
 我们在图 11.4 中给出了 `R` 的 SNARG 构造。为简化起见，我们给出使用对称配对的构造。
 
@@ -5088,17 +4975,17 @@ SNARG 构造的正确性直接源于 NILP 的正确性，利用了双线性群�
 
 ## 定理 11.2
 
-设 `(P_NILP, Q_NILP, D_NILP)` 为一个 `(d_Q, 2)`-代数 NILP。若 `G` 为满足 `(d_Q, μ)`-MPDL 假设的双线性群生成器，则图 11.4 中的 SNARG 在代数群模型中是可靠的。
+设 (`P_NILP`, `Q_NILP`, `D_NILP`) 为一个 (`d_Q`, 2)-代数 NILP。若 `G` 为满足 (`d_Q`, `μ`)-MPDL 假设的双线性群生成器，则图 11.4 中的 SNARG 在代数群模型中是可靠的。
 
 *证明。* 我们展示如何将针对 SNARG 可靠性的代数对手 `A` 转换为针对 MPDL 假设的代数对手 `B`。
 
 设 `R` ∈ `R` 为 `A` 企图破坏其可靠性的关系，且 `q₁, ..., q_m` 为通过确定性 `Q_NILP` 算法获得的 `m` 个多项式。我们考虑一个 MPDL 假设的实例化，其中 `p₁(X), ..., p_m(X)` 为 `μ` 个变量且总次数为 `d_Q` 的 `m` 个多项式。
 
-因此，我们的对手 `B` 在输入 `(p₁(s), ..., p_m(s)) ∈ G₁^n`（其中 `s ←$ 𝔽^μ` 为随机选取）上运行，并按如下步骤进行。
+因此，我们的对手 `B` 在输入 (`p₁(s), ..., p_m(s)`) ∈ `G₁^n`（其中 `s` ←$ `𝔽^μ` 为随机选取）上运行，并按如下步骤进行。
 
-它设置 `crs := [q] = [p(s)]`，然后运行 SNARG 对手 `(x, [α]) ← A(crs)`。根据 AGM 假设，`A` 是代数的，因此它也返回一个矩阵 `Π*` 使得 `[α] = Π* · [q]`。
+它设置 `crs := [q] = [p(s)]`，然后运行 SNARG 对手 (`x, [α]`) ← `A(crs)`。根据 AGM 假设，`A` 是代数的，因此它也返回一个矩阵 `Π*` 使得 `[α] = Π* · [q]`。
 
-接着 `B` 生成 `t₁, ..., t_η ← Test(R, x)`，寻找一个索引 `i ∈ [η]` 使得
+接着 `B` 生成 `t₁, ..., t_η` ← `Test(R, x)`，寻找一个索引 `i` ∈ [`η`] 使得
 
 ```
 τ_i(X) := t_i(p(X), Π* · p(X)) ≠ 0
@@ -5108,9 +4995,9 @@ SNARG 构造的正确性直接源于 NILP 的正确性，利用了双线性群�
 
 我们证明如果 `A` 以概率 `ϵ` 破坏可靠性，则 `B` 以相同概率破坏 MPDL 假设。
 
-若 `A` 破坏可靠性，则 `(x, [α])` 满足 `x ∉ L_R` 且 `V(crs, x, [α]) = 1`。根据代数 NILP 的可靠性概念，若 `x ∉ L_R`，则对于任意证明者策略 `Π*`，存在索引 `i ∈ [η]` 使得 `t_i(p(X), Π* · p(X))` 非零。
+若 `A` 破坏可靠性，则 (`x, [α]`) 满足 `x ∉ L_R` 且 `V(crs, x, [α]) = 1`。根据代数 NILP 的可靠性概念，若 `x ∉ L_R`，则对于任意证明者策略 `Π*`，存在索引 `i` ∈ [`η`] 使得 `t_i(p(X), Π* · p(X))` 非零。
 
-另一方面，由于证明通过验证，我们对所有 `i ∈ [η]` 有 `t_i([q], [α]) = [0]_T`，因此 `τ_i(s) = 0`。
+另一方面，由于证明通过验证，我们对所有 `i` ∈ [`η`] 有 `t_i([q], [α]) = [0]_T`，因此 `τ_i(s) = 0`。
 
 因此，`B` 找到了一个非零多项式 `τ_i(X)` 使得 `τ_i(s) = 0`，即 MPDL 假设的一个解。
 
@@ -5124,49 +5011,49 @@ SNARG 构造的正确性直接源于 NILP 的正确性，利用了双线性群�
 
 ### 11.6.1. 算术电路
 
-域 `𝔽` 上且变量集为 `X₁, ..., Xₙ` 的算术电路是一个具有以下性质的有向无环图。每个节点称为一个 *门*；入度为 0 的门要么是标记有某个变量 `Xᵢ` 的 *输入* 门，要么是标记有域值 `c ∈ 𝔽` 的 *常数* 门；出度为 0 的门称为 *输出* 门；入度和出度均大于 0 的门称为 *内部* 门。不失一般性，我们考虑入度为 2 的算术电路。内部门有两种类型：*加法* 门和 *乘法* 门，分别计算两个输入的和与积。
 
 
+# 域 $\mathbb{F}$ 上且变量集为 $X_1, ..., X_n$ 的算术电路
 
+域 $\mathbb{F}$ 上且变量集为 $X_1, ..., X_n$ 的算术电路是一个具有以下性质的有向无环图。每个节点称为一个*门*；入度为 0 的门要么是标记有某个变量 $X_i$ 的*输入*门，要么是标记有域值 $c \in \mathbb{F}$ 的*常数*门；出度为 0 的门称为*输出*门；入度和出度均大于 0 的门称为*内部*门。不失一般性，我们考虑入度为 2 的算术电路。内部门有两种类型：*加法*门和*乘法*门，分别计算两个输入的和与积。
 
+## 定义 11.7（算术电路可满足性）
 
-# 定义 11.7（算术电路可满足性）
-
-设 `\mathbb{F}` 为有限域，`C : \mathbb{F}^{\ell_{in}} \times \mathbb{F}^{\ell_{wit}} \to \mathbb{F}^{\ell_{out}}` 为一个算术电路。算术电路可满足性关系 `R_C : (\mathbb{F}^{\ell_{in}} \times \mathbb{F}^{\ell_{out}}) \times \mathbb{F}^{\ell_{wit}} \to \{true, false\}` 是这样一种关系：输入元组 `((\vec{x}, \vec{y}), \vec{w})` 时，若 `C(\vec{x}, \vec{w}) = \vec{y}` 则返回 `true`，否则返回 `false`。
+设 $\mathbb{F}$ 为有限域，$C : \mathbb{F}^{\ell_{in}} \times \mathbb{F}^{\ell_{wit}} \to \mathbb{F}^{\ell_{out}}$ 为一个算术电路。算术电路可满足性关系 $R_C : (\mathbb{F}^{\ell_{in}} \times \mathbb{F}^{\ell_{out}}) \times \mathbb{F}^{\ell_{wit}} \to \{\text{true}, \text{false}\}$ 是这样一种关系：输入元组 $((\vec{x}, \vec{y}), \vec{w})$ 时，若 $C(\vec{x}, \vec{w}) = \vec{y}$ 则返回 $\text{true}$，否则返回 $\text{false}$。
 
 ### 11.6.2. 二次算术程序
 
 我们介绍 Gennaro 等人 (2013) 引入的 QAP 概念。
 
-### 定义 11.8（QAP (Gennaro 等人, 2013)）
+#### 定义 11.8（QAP (Gennaro 等人, 2013)）
 
-QAP 是一个元组 `(\mathbb{F}, n, m, \ell, v(X), \vec{a}(X), \vec{b}(X), \vec{c}(X))`，其中 `\mathbb{F}` 是有限域，`n, m, \ell \in \mathbb{N}` 为正整数，`v(X)` 是一个 `n` 次多项式，`\vec{a}(X), \vec{b}(X), \vec{c}(X)` 是三个包含 `m` 个次数 `< n` 的多项式的向量。QAP 关系 `R_{QAP} : \mathbb{F}^\ell \times \mathbb{F}^{m-\ell-1} \to \{true, false\}` 是一种二元关系，输入 `(\vec{x}, \vec{w})` 时，当且仅当满足以下条件返回 `true`：
+QAP 是一个元组 $(\mathbb{F}, n, m, \ell, v(X), \vec{a}(X), \vec{b}(X), \vec{c}(X))$，其中 $\mathbb{F}$ 是有限域，$n, m, \ell \in \mathbb{N}$ 为正整数，$v(X)$ 是一个 $n$ 次多项式，$\vec{a}(X), \vec{b}(X), \vec{c}(X)$ 是三个包含 $m$ 个次数 $< n$ 的多项式的向量。QAP 关系 $R_{QAP} : \mathbb{F}^\ell \times \mathbb{F}^{m-\ell-1} \to \{\text{true}, \text{false}\}$ 是一种二元关系，输入 $(\vec{x}, \vec{w})$ 时，当且仅当满足以下条件返回 $\text{true}$：
 
 ```
 \sum_{j=1}^m z_j a_j(X) \cdot \sum_{j=1}^m z_j b_j(X) - \sum_{j=1}^m z_j c_j(X) = h(X) v(X)
 ```
 
-其中 `\vec{z} := (1, \vec{x}, \vec{w})`。
+其中 $\vec{z} := (1, \vec{x}, \vec{w})$。
 
 Gennaro 等人 (2013) 证明了如何用 QAP 编码算术电路可满足性。下文我们将陈述并证明他们的结果，我们认为这是一个将电路检查算术化的很好的例子。
 
-### 定理 11.3
+#### 定理 11.3
 
-设 `C : \mathbb{F}^{\ell_{in}} \times \mathbb{F}^{\ell_{wit}} \to \mathbb{F}^{\ell_{out}}` 为一个包含 `N` 个乘法门的算术电路，`R_C` 为其关联的算术电路可满足性关系。则存在一个 QAP 关系 `R_{QAP} := (\mathbb{F}, n, m, \ell, v(X), \vec{a}(X), \vec{b}(X), \vec{c}(X))`，其中 `n = \ell_{out} + N`，`m = \ell_{in} + \ell_{out} + N + 1` 且 `\ell = \ell_{in} + \ell_{out}`，使得：
+设 $C : \mathbb{F}^{\ell_{in}} \times \mathbb{F}^{\ell_{wit}} \to \mathbb{F}^{\ell_{out}}$ 为一个包含 $N$ 个乘法门的算术电路，$R_C$ 为其关联的算术电路可满足性关系。则存在一个 QAP 关系 $R_{QAP} := (\mathbb{F}, n, m, \ell, v(X), \vec{a}(X), \vec{b}(X), \vec{c}(X))$，其中 $n = \ell_{out} + N$，$m = \ell_{in} + \ell_{out} + N + 1$ 且 $\ell = \ell_{in} + \ell_{out}$，使得：
 
 ```
 R_C((\vec{x}, \vec{y}), \vec{w}) = R_{QAP}(\vec{x}, (\vec{y}, \vec{w}))
 ```
 
-#### 证明
+##### 证明
 
-在证明中，我们展示如何从电路 `C` 构造一个 QAP。通过其构造可以看出，QAP 关系表达的语言与 `R_C` 相同，即它接受的 `(\vec{x}, \vec{y}) \in \mathbb{F}^{\ell_{in}} \times \mathbb{F}^{\ell_{out}}` 的集合与电路 `C` 相同。
+在证明中，我们展示如何从电路 $C$ 构造一个 QAP。通过其构造可以看出，QAP 关系表达的语言与 $R_C$ 相同，即它接受的 $(\vec{x}, \vec{y}) \in \mathbb{F}^{\ell_{in}} \times \mathbb{F}^{\ell_{out}}$ 的集合与电路 $C$ 相同。
 
-思路是通过验证是否存在一个对所有输入、输出和乘法门的赋值且该赋值与电路一致，来检查电路的可满足性。更准确地说，由于输入和输出是公开的，我们需要证明存在内部门的有效赋值。设 `\vec{w}' \in \mathbb{F}^N` 为包含此类赋值的向量，并定义 `\vec{z} := (1, \vec{x}, \vec{y}, \vec{w}') \in \mathbb{F}^m` 为包含输入、输出和内部门的值（以及常数 1）的向量。
+思路是通过验证是否存在一个对所有输入、输出和乘法门的赋值且该赋值与电路一致，来检查电路的可满足性。更准确地说，由于输入和输出是公开的，我们需要证明存在内部门的有效赋值。设 $\vec{w}' \in \mathbb{F}^N$ 为包含此类赋值的向量，并定义 $\vec{z} := (1, \vec{x}, \vec{y}, \vec{w}') \in \mathbb{F}^m$ 为包含输入、输出和内部门的值（以及常数 1）的向量。
 
-令 `m = \ell_{in} + \ell_{out} + N + 1` 和 `\ell = \ell_{in} + \ell_{out} + 1`，如定理所述，并将集合 `[m]` 划分为三个集合：`I_{in} = \{2, ..., \ell_{in} + 1\}`，`I_{out} = \{\ell_{in} + 2, ..., \ell\}` 和 `I_{mid} = \{\ell + 1, ..., m\}`。
+令 $m = \ell_{in} + \ell_{out} + N + 1$ 和 $\ell = \ell_{in} + \ell_{out} + 1$，如定理所述，并将集合 $[m]$ 划分为三个集合：$I_{in} = \{2, ..., \ell_{in} + 1\}$，$I_{out} = \{\ell_{in} + 2, ..., \ell\}$ 和 $I_{mid} = \{\ell + 1, ..., m\}$。
 
-直观上，我们用 `I_{mid}` 中的整数标记电路 `C` 的所有 `N` 个乘法门，用 `I_{in}`（分别 `I_{out}`）中的整数标记 `\ell_{in}`（分别 `\ell_{out}`）个输入（分别输出）门。
+直观上，我们用 $I_{mid}$ 中的整数标记电路 $C$ 的所有 $N$ 个乘法门，用 $I_{in}$（分别 $I_{out}$）中的整数标记 $\ell_{in}$（分别 $\ell_{out}$）个输入（分别输出）门。
 
 然后，所有乘法门的一致性可以通过以下方式检查：
 
@@ -5174,7 +5061,7 @@ R_C((\vec{x}, \vec{y}), \vec{w}) = R_{QAP}(\vec{x}, (\vec{y}, \vec{w}))
 \forall j \in I_{mid}: \langle \vec{a}^j, \vec{z} \rangle \cdot \langle \vec{b}^j, \vec{z} \rangle = \langle \vec{c}^j, \vec{z} \rangle
 ```
 
-其中，对于每个 `j \in I_{mid}`，`\vec{a}^j, \vec{b}^j` 是表达第 `j` 个乘法门左、右输入线的线性子电路的适当向量。
+其中，对于每个 $j \in I_{mid}$，$\vec{a}^j, \vec{b}^j$ 是表达第 $j$ 个乘法门左、右输入线的线性子电路的适当向量。
 
 接下来，我们为公开输出添加约束：
 
@@ -5182,9 +5069,9 @@ R_C((\vec{x}, \vec{y}), \vec{w}) = R_{QAP}(\vec{x}, (\vec{y}, \vec{w}))
 \forall j \in I_{out}: z_j = \langle \vec{a}^j, \vec{z} \rangle
 ```
 
-其中每个 `\vec{a}^j` 的支撑集仅在 `I_{mid}` 上。由于 `z_1 = 1`，这些约束检查 `z_j = \langle \vec{a}^j, \vec{z} \rangle`，确保每个公开输出 `z[j]` 在乘法门的输出上通过由向量 `\vec{a}^j` 表达的线性子电路计算后正确获得。我们注意到，对于每个输出门都是乘法门的电路，这组约束可以省略。
+其中每个 $\vec{a}^j$ 的支撑集仅在 $I_{mid}$ 上。由于 $z_1 = 1$，这些约束检查 $z_j = \langle \vec{a}^j, \vec{z} \rangle$，确保每个公开输出 $z[j]$ 在乘法门的输出上通过由向量 $\vec{a}^j$ 表达的线性子电路计算后正确获得。我们注意到，对于每个输出门都是乘法门的电路，这组约束可以省略。
 
-此时，我们可以将上述所有约束汇总为三个矩阵 `\mathbf{A, B, C} \in \mathbb{F}^{n \times m}` 的形式，定义如下：
+此时，我们可以将上述所有约束汇总为三个矩阵 $\mathbf{A, B, C} \in \mathbb{F}^{n \times m}$ 的形式，定义如下：
 
 ```
 \mathbf{A} = \begin{bmatrix} \mathbf{I}_{\ell} \\ \mathbf{A}_{mid} \end{bmatrix}, \quad
@@ -5192,23 +5079,23 @@ R_C((\vec{x}, \vec{y}), \vec{w}) = R_{QAP}(\vec{x}, (\vec{y}, \vec{w}))
 \mathbf{C} = \begin{bmatrix} \mathbf{0} \\ \mathbf{C}_{mid} \end{bmatrix}
 ```
 
-其中 `\vec{e}^j \in \mathbb{F}^{1 \times m}` 是 `m \times m` 单位矩阵的第 `j` 行。
+其中 $\vec{e}^j \in \mathbb{F}^{1 \times m}$ 是 $m \times m$ 单位矩阵的第 $j$ 行。
 
-可以看出，`C(\vec{x}, \vec{w}) = \vec{y}` 当且仅当
+可以看出，$C(\vec{x}, \vec{w}) = \vec{y}$ 当且仅当
 
 ```
 (\mathbf{A}\vec{z}) \circ (\mathbf{B}\vec{z}) = \mathbf{C}\vec{z}
 ```
 
-其中向量 `\vec{z}` 定义如上，即 `(1, \vec{x}, \vec{w})`。上述方程在文献中被称为一阶约束系统 (R1CS)。
+其中向量 $\vec{z}$ 定义如上，即 $(1, \vec{x}, \vec{w})$。上述方程在文献中被称为一阶约束系统 (R1CS)。
 
 为了完成定理的证明，我们展示如何通过插值将上述二次方程组转换为多项式形式。
 
-- 选取 `\mathbb{F}` 中的 `n` 个不同点构建子集 `\mathbb{H} := \{h_1, ..., h_n\} \subset \mathbb{F}`；
-- 计算 `v(X) = \prod_{h \in \mathbb{H}} (X - h)`，这是一个在 `\mathbb{H}` 上消失的 `n` 次多项式，即 `\forall h \in \mathbb{H}: v(h) = 0`；
-- 对任意 `j \in [m]`，构造 `a_j(X)`（分别 `b_j(X), c_j(X)`）为唯一的一个次数为 `(n - 1)` 的多项式，使得 `\forall i \in [n], a_j(h_i) = A_{i,j}`（分别 `b_j(h_i) = B_{i,j}, c_j(h_i) = C_{i,j}`）。
+- 选取 $\mathbb{F}$ 中的 $n$ 个不同点构建子集 $\mathbb{H} := \{h_1, ..., h_n\} \subset \mathbb{F}$；
+- 计算 $v(X) = \prod_{h \in \mathbb{H}} (X - h)$，这是一个在 $\mathbb{H}$ 上消失的 $n$ 次多项式，即 $\forall h \in \mathbb{H}: v(h) = 0$；
+- 对任意 $j \in [m]$，构造 $a_j(X)$（分别 $b_j(X), c_j(X)$）为唯一的一个次数为 $(n - 1)$ 的多项式，使得 $\forall i \in [n], a_j(h_i) = A_{i,j}$（分别 $b_j(h_i) = B_{i,j}, c_j(h_i) = C_{i,j}$）。
 
-我们留作练习验证，通过这种多项式 `\vec{a}(X), \vec{b}(X), \vec{c}(X)` 和 `v(X)` 的构造，我们有
+我们留作练习验证，通过这种多项式 $\vec{a}(X), \vec{b}(X), \vec{c}(X)$ 和 $v(X)$ 的构造，我们有
 
 ```
 (\mathbf{A}\vec{z}) \circ (\mathbf{B}\vec{z}) = \mathbf{C}\vec{z}
@@ -5224,28 +5111,28 @@ R_C((\vec{x}, \vec{y}), \vec{w}) = R_{QAP}(\vec{x}, (\vec{y}, \vec{w}))
 
 ### 11.6.3. 面向 QAP 的代数 NILP
 
-设 `R_{QAP} := (\mathbb{F}, n, m, \ell, v(X), \vec{a}(X), \vec{b}(X), \vec{c}(X))` 为定义 11.8 中的 QAP 关系。下文我们描述一个在 `\mathbb{F}` 上面向 `R_{QAP}` 的 `(n, 2)`-代数 NILP。
+设 $R_{QAP} := (\mathbb{F}, n, m, \ell, v(X), \vec{a}(X), \vec{b}(X), \vec{c}(X))$ 为定义 11.8 中的 QAP 关系。下文我们描述一个在 $\mathbb{F}$ 上面向 $R_{QAP}$ 的 $(n, 2)$-代数 NILP。
 
 该 NILP 抽象了 Parno 等人 (2013) 的 Pinocchio SNARG 构造。这并非目前最高效的 NILP（及 SNARG）；例如，著名的 Groth16 方案 (Groth 2016) 经过更多优化，证明大小近乎最优。尽管如此，Parno 等人 (2013) 背后的技术引出的 NILP 更具直觉性，因此我们出于展示原因更倾向于此构造。
 
 我们首先给出代数 NILP 的完整描述，然后给出直观解释。
 
-- `\mathsf{NILP}(R_{QAP}) \to \vec{q}`：该算法采样 `\vec{s} \leftarrow \mathbb{F}⁷` 并返回查询向量 `\vec{q} = \mathsf{enc}(\vec{s})`。
+- $\mathsf{NILP}(R_{QAP}) \to \vec{q}$：该算法采样 $\vec{s} \leftarrow \mathbb{F}^7$ 并返回查询向量 $\vec{q} = \mathsf{enc}(\vec{s})$。
 
 ```
 \vec{q}(X, Y) = \begin{bmatrix}
 1 \\
 X \\
 Y \\
-X² \\
+X^2 \\
 XY \\
-Y² \\
+Y^2 \\
 v(X) \\
 X v(X)
 \end{bmatrix}
 ```
 
-其次，采样 `\vec{r} \leftarrow \mathbb{F}^{7m + n - 4\ell + 1}` 并返回查询向量 `\vec{q} = \mathsf{enc}(\vec{r})`。
+其次，采样 $\vec{r} \leftarrow \mathbb{F}^{7m + n - 4\ell + 1}$ 并返回查询向量 $\vec{q} = \mathsf{enc}(\vec{r})$。
 
 ```
 \vec{q}(X, Y) = \begin{bmatrix}
@@ -5260,7 +5147,7 @@ v(X) \vec{1}
 \end{bmatrix}
 ```
 
-令 `\vec{h}` 为系数向量 `\vec{h} = (h_0, ..., h_{n-1})`，证明矩阵 `\mathbf{\Pi} \in \mathbb{F}^{8 \times (7m + n - 4\ell + 1)}` 构造如下：
+令 $\vec{h}$ 为系数向量 $\vec{h} = (h_0, ..., h_{n-1})$，证明矩阵 $\mathbf{\Pi} \in \mathbb{F}^{8 \times (7m + n - 4\ell + 1)}$ 构造如下：
 
 ```
 \mathbf{\Pi} = \begin{bmatrix}
@@ -5275,29 +5162,25 @@ v(X) \vec{1}
 \end{bmatrix}
 ```
 
-
-
-
-
 ## 算法 `Test` 与多项式定义
 
-**`NILP`(`q`, `x`, `π`)** 0, 1: 我们定义算法 `Test`，该算法输出五个二次多项式 *t*[1], ..., *t*[5]。通过定义 `x`′ = (1, `x`) 并解析 `π` := (*α, β, γ, α*′, *β*′, *γ*′, *δ, η*)，多项式 *t*[1], ..., *t*[5] 满足：
+**`NILP`(`q`, `x`, `π`)** 0, 1: 我们定义算法 `Test`，该算法输出五个二次多项式 $t_1, ..., t_5$。通过定义 $x' = (1, x)$ 并解析 $\pi := (\alpha, \beta, \gamma, \alpha', \beta', \gamma', \delta, \eta)$，多项式 $t_1, ..., t_5$ 满足：
 
 ![image](img/p275-2.jpg)
 
 ### 直观理解
 
-通过查询多项式 `p`(`x`) 和证明矩阵 Π 的构造，诚实的证明回答 `π` := (*α, β, γ, α*′, *β*′, *γ*′, *δ, η*) 满足：
+通过查询多项式 $p(x)$ 和证明矩阵 $\Pi$ 的构造，诚实的证明回答 $\pi := (\alpha, \beta, \gamma, \alpha', \beta', \gamma', \delta, \eta)$ 满足：
 
 ![image](img/p275-3.jpg)![image](img/p276-1.jpg)
 
-这五个多项式测试的目标是确保：即使证明回答 (*α, β, γ, α*′, *β*′, *γ*′, *δ, η*) 是从查询向量的任意线性函数获得的，它也具有上述所示的确切形式。
+这五个多项式测试的目标是确保：即使证明回答 $(\alpha, \beta, \gamma, \alpha', \beta', \gamma', \delta, \eta)$ 是从查询向量的任意线性函数获得的，它也具有上述所示的确切形式。
 
-直观上，多项式 *t*[2], *t*[3], *t*[4] 的目标是确保前三个回答 (*α, β, γ*) 分别位于元素 `i336` 和 `i337` 的张成中。这就是查询包含三组多项式的原因，这些多项式通过将前三组多项式与新的不可确定量 `i338` 相乘来定义。更准确地说，这些新的不可确定量仅应用于索引为 *j* = *ℓ* + 1, ..., *m* 的条目；这防止了对手在前三行的错误位置放置非零值。
+直观上，多项式 $t_2, t_3, t_4$ 的目标是确保前三个回答 $(\alpha, \beta, \gamma)$ 分别位于元素 $i336$ 和 $i337$ 的张成中。这就是查询包含三组多项式的原因，这些多项式通过将前三组多项式与新的不可确定量 $i338$ 相乘来定义。更准确地说，这些新的不可确定量仅应用于索引为 $j = \ell + 1, ..., m$ 的条目；这防止了对手在前三行的错误位置放置非零值。
 
-最后一个多项式 *t*[5] 用于确保 (*α, β, γ*) 是通过使用相同的线性组合获得的。为此，查询包含多项式集合 `i339`。
+最后一个多项式 $t_5$ 用于确保 $(\alpha, \beta, \gamma)$ 是通过使用相同的线性组合获得的。为此，查询包含多项式集合 $i339$。
 
-最后，第一个多项式 *t*[1] 检查 QAP 的可除性条件。为此，验证者首先用公共元素 (1, `x`) 的线性组合“补全”证明者的回答。由其他四个多项式测试强制执行的条件可知，QAP 可除性检查确实应用于 *a*(*X*)*b*(*X*) ∈ *c*(*X*)，其中每个多项式 *a*(*X*), *b*(*X*), *c*(*X*) 分别通过对相应的多项式向量 *a*(*X*), *b*(*X*), *c*(*X*) 应用相同的线性组合 `z` 而获得。
+最后，第一个多项式 $t_1$ 检查 QAP 的可除性条件。为此，验证者首先用公共元素 $(1, x)$ 的线性组合“补全”证明者的回答。由其他四个多项式测试强制执行的条件可知，QAP 可除性检查确实应用于 $a(X)b(X) \in c(X)$，其中每个多项式 $a(X), b(X), c(X)$ 分别通过对相应的多项式向量 $\vec{a}(X), \vec{b}(X), \vec{c}(X)$ 应用相同的线性组合 $z$ 而获得。
 
 ### 定理 11.4
 
@@ -5305,41 +5188,43 @@ v(X) \vec{1}
 
 *证明。* 完备性由构造显然成立，故省略其证明。为证明可靠性，我们按如下步骤进行。
 
-固定一个 QAP 关系 `R`[*QAP*] = (`f1`, *n, m, ℓ, υ*(*X*), *a*(*X*), *b*(*X*), *c*(*X*)) 和一个向量 `x` ∉ `L`[*R*[*QAP*]]，且令矩阵 Π^∗ 为任意证明者策略。令 `q` 为由 `q` `NILP`(`R`[*QAP*]) 构建的多项式向量。为简洁起见，记作 `i341`。
+固定一个 QAP 关系 $R_{QAP} = (\mathbb{F}, n, m, \ell, v(X), \vec{a}(X), \vec{b}(X), \vec{c}(X))$ 和一个向量 $x \notin L_{R_{QAP}}$，且令矩阵 $\Pi^*$ 为任意证明者策略。令 $q$ 为由 $q = \mathsf{NILP}(R_{QAP})$ 构建的多项式向量。为简洁起见，记作 $i341$。
 
-为方便起见，我们用以下符号表示 Π^∗ 的各行：
+为方便起见，我们用以下符号表示 $\Pi^*$ 的各行：
 
 ![image](img/p276-2.jpg)
 
-此外，对于 *χ* = *α, β, γ, α*′, *β*′, *γ*′, *η, δ*，我们将每行 `i342` 解析为以下块的连接：
+此外，对于 $\chi = \alpha, \beta, \gamma, \alpha', \beta', \gamma', \eta, \delta$，我们将每行 $i342$ 解析为以下块的连接：
 
 ![image](img/p277-1.jpg)
 
-对于 *i* = 1, ..., 5，定义 *τ[i]*(`x`) := *t[i]*(`p`(`x`), Π^∗ · `p`(*X, T[a], T[b], T[c]*)). 由每个 *t[i]* 的构造可得：
+对于 $i = 1, ..., 5$，定义 $\tau_i(x) := t_i(p(x), \Pi^* \cdot p(X, T_a, T_b, T_c))$。由每个 $t_i$ 的构造可得：
 
 ![image](img/p277-2.jpg)
 
-为证明可靠性，我们需要论证至少有一个 `i343` 是非零多项式。
+为证明可靠性，我们需要论证至少有一个 $i343$ 是非零多项式。
 
-假设反面，即它们均为零。我们展示如何导出矛盾，即在这种情况下必须有 `x` ∈ `L`[*R*[*QAP*]]。
+假设反面，即它们均为零。我们展示如何导出矛盾，即在这种情况下必须有 $x \in L_{R_{QAP}}$。
 
-首先，注意到 *τ*2 = 0 意味着：
+首先，注意到 $\tau_2 = 0$ 意味着：
 
 ![image](img/p277-3.jpg)
 
-由于在 `p`(`x`) 中变量 `tpa` 仅出现在项 `i344` 和 `tpa` 中，因此必须有：
+由于在 $p(x)$ 中变量 $tpa$ 仅出现在项 $i344$ 和 $tpa$ 中，因此必须有：
 
 [\[11.1\]](#c11.xhtml#req11-1)![equation](img/eq11-1.jpg)
 
+
+
 即除 `i345` 之外的所有块均为 0。通过对 *τ*3 = 0 和 *τ*4 = 0 的类似推理，我们得到：
 
-\[11.2\]![equation](img/eq11-2.jpg)[\[11.3\]](#c11.xhtml#req11-3)![equation](img/eq11-3.jpg)
+[11.2]![equation](img/eq11-2.jpg)[[11.3]](#c11.xhtml#req11-3)![equation](img/eq11-3.jpg)
 
 其次，注意到 *τ*5 = 0 意味着：
 
 ![image](img/p278-1.jpg)
 
-其中第二个等式是通过应用方程 \[11.1\]–\[11.3\] 得到的。
+其中第二个等式是通过应用方程 [11.1]–[11.3] 得到的。
 
 注意，由 `i346` 的构造可知，它不包含含有 `i347`（分别为 `i348`）的项。因此，我们得到 `i349`。
 
@@ -5347,7 +5232,7 @@ v(X) \vec{1}
 
 ![image](img/p278-2.jpg)
 
-由 *T[a], T[b]* 和 *T[a]T[b]* 的线性无关性可得：
+由 `T[a], T[b]` 和 `T[a]T[b]` 的线性无关性可得：
 
 ![image](img/p278-3.jpg)
 
@@ -5374,10 +5259,6 @@ v(X) \vec{1}
 ## 11.8 参考文献
 
 Arora, S. and Safra, S. (1992). Probabilistic checking of proofs: A new characterization of NP. In *33rd FOCS*. IEEE Computer Society Press, 24–27 October.
-
-
-
-
 
 # 参考文献
 
@@ -5438,55 +5319,81 @@ Zippel, R. (1979). 稀疏多项式的概率算法。载于 *EUROSM ‘79*, *Lect
 # 作者名单
 
 Nuttapong ATTRAPADUNG  
+
 国立先进产业科学技术研究所 (AIST)  
+
 东京, 日本
 
 Olivier BLAZY  
+
 巴黎综合理工学院  
+
 Palaiseau, 法国
 
 Colin BOYD  
+
 NTNU  
+
 特隆赫姆, 挪威
 
 Dario FIORE  
+
 IMDEA 软件研究所  
+
 马德里, 西班牙
 
 Marc FISCHLIN  
+
 达姆施塔特工业大学  
+
 德国
 
 Romain GAY  
+
 IBM Research Zurich  
+
 瑞士
 
 Duong HIEU PHAN  
+
 Telecom Paris – 巴黎综合理工学院  
+
 法国
 
 Stanislaw JARECKI  
+
 加州大学欧文分校  
+
 美国
 
 Yehuda LINDELL  
+
 Coinbase, 旧金山  
+
 美国
 
 Takahiro MATSUDA  
+
 国立先进产业科学技术研究所 (AIST)  
+
 东京, 日本
 
 David POINTCHEVAL  
+
 CNRS, ENS/PSL, Inria  
+
 巴黎, 法国
 
 Olivier SANDERS  
+
 Orange Labs, Rennes  
+
 法国
 
 Ivan VISCONTI  
+
 萨莱诺大学  
+
 意大利
 
 # 索引
@@ -5494,118 +5401,167 @@ Ivan VISCONTI
 ## A
 
 *   匿名凭证, 173–175, 177–179, 183
+
 *   算术电路, 258, 261, 262, 266, 271, 272
+
 *   非对称 PAKE, 214, 233, 242–244
+
 *   基于属性的加密 (ABE), 151, 156
 
 ## B
 
 *   双线性群, 108, 113, 115, 262, 265, 267–269
+
 *   黑盒追踪, 124, 126, 127, 137
+
 *   广播加密, 121–125, 143
 
 ## C
 
 *   选择密文攻击 (CCA), 1, 4, 5
+
 *   选择明文攻击 (CPA), 2
+
 *   抗共谋码, 127, 132
+
 *   正确性, 86–89
+
 *   腐败/受攻击, 90
+
 *   Cramer–Shoup, 1, 8, 11, 12, 14, 15, 21
 
 ## D, E
 
 *   Diffie–Hellman, 192, 193
+
 *   直接匿名认证 (DAA), 180
+
 *   ECDSA, 49, 50, 55, 58, 59
+
 *   椭圆曲线, 107, 108, 110
+
 *   加密密钥交换 (EKE), 215, 216
+
 *   加密, 1–3, 6–8, 11, 15–19, 21–24, 27–30
+
 *   EPID (增强隐私 ID), 180, 183
 
 ## F, G
 
 *   公平性, 88, 89, 93
+
 *   Fiat–Shamir, 76
+
 *   指纹码, 134, 135
-
-
-
-
-
-# 索引
 
 ## F, G
 
 *   前向保密，197–199，205
+
 *   群签名，176–180，183
 
 ## H, I
 
 *   HMQV，204–206
+
 *   诚实
+
     *   \-多数派，95，100
+
     *   \-验证者，72
+
 *   可识别父代属性 (IPP)，132
+
 *   基于身份的加密 (IBE)，152，154
+
 *   不可区分性 (IND)，1，2，4，5，24，29，30
 
 ## K, M
 
 *   密钥
+
     *   协商，188
+
     *   派生函数 (KDF)，188，189
+
     *   交换（*另见* NIKE），187
+
 *   单调跨度程序，154，155
+
 *   多方计算，85
 
 ## N
 
 *   NAXOS，203，204
+
 *   非交互式密钥交换 (NIKE)，189，195
+
 *   非延展性，4，5，25
+
 *   NP 语言，64，67，70，73
 
 ## P, R
 
 *   配对，107–111，113，115，116，151，152，164
+
 *   密码，213，214，216，217，221，222，229，239，243
+
 *   完美前向保密 (PFS)，220
+
 *   谓词编码，152–154，158，164
+
 *   隐私，85–87，89，93，101，102
+
 *   私有集合求交，87，97，98
+
 *   证明系统，63–68，70–72，75，76，79
+
 *   随机预言机模型，4，16
+
 *   撤销，122–127，129，132，137，140
 
 ## S
 
 *   Schnorr，50，51，54–56，58
+
 *   安全性，1，2，4，5，7，9，15，16，25，26，28，30
+
 *   半诚实，90，95，97，98
+
 *   签名，47–55，57，167，168，170，172，176，178，182，183
+
 *   平滑投影哈希函数 (SPHF)，237
+
 *   可靠性，64，65，68，69，71，74，76，79，263，264，267，270，276，277
+
 *   强不可伪造性，47，56，58，59
+
 *   保持结构，172
+
 *   子集覆盖，125，129
+
 *   简洁非交互式论证 (SNARG)，259，263
 
 ## T, U, V
 
 *   Tate 配对，111，112
+
 *   叛徒追踪，121，122，135
+
 *   不可伪造性，47，48，51，52，54，56–59
+
 *   通用可组合性 (UC)，229，232
+
 *   可验证计算 (VC)，257，260，264
 
 ## W, Z
 
 *   Weil 配对，110，111
+
 *   见证人不可区分性，73
+
 *   零知识，63，64，66–69，72，78，168–170，172，176，178，179，181，183
 
 # WILEY 最终用户许可协议
 
 访问 [www.wiley.com/go/eula](http://www.wiley.com/go/eula) 以获取 Wiley 的电子书 EULA。
-

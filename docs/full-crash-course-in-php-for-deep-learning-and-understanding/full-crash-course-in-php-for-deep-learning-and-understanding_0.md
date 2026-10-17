@@ -1,14 +1,11 @@
+
 # PHP 深度学习与理解完全教程
-
-
 
 ![](img/image00874.jpeg)
 
-
-
 ## PHP 简析
 
-PHP 代表 Hypertext Processor（超文本处理器）。它是一种服务器端脚本语言，主要用于生成动态网页内容等。这意味着 `PHP` 执行的所有操作并不是在用于查看网页的计算机（称为客户端）上完成的，而是在一台称为服务器的专用计算机上完成的，服务器托管了你在客户端机器上查看的所有网页。
+`PHP` 代表 Hypertext Processor（超文本处理器）。它是一种服务器端脚本语言，主要用于生成动态网页内容等。这意味着 `PHP` 执行的所有操作并不是在用于查看网页的计算机（称为客户端）上完成的，而是在一台称为服务器的专用计算机上完成的，服务器托管了你在客户端机器上查看的所有网页。
 
 作为一种脚本语言，`PHP` 实际上不能用于制作在你的计算机上运行的独立应用程序，因为它被设计为仅在网页内发生事件时执行操作，例如：点击链接或提交 Web 表单时获取表单数据。
 
@@ -56,12 +53,6 @@ PHP 代表 Hypertext Processor（超文本处理器）。它是一种服务器�
 
 让我们开始吧。拿起你的第一杯咖啡！
 
-
-
-
-
-
-
 请耐心一下。我知道编程书的第一章都会堆砌一些理论，以确保你知道自己在面对什么。但那是以后的事。现在你需要安装服务器并选择一个合适的文本编辑器！
 
 ## 安装 Web 服务器
@@ -81,10 +72,6 @@ PHP 代表 Hypertext Processor（超文本处理器）。它是一种服务器�
 现在，你需要一个文本编辑器来编写优美的 `PHP`。理想情况下，任何文本编辑器都可以，甚至 Windows 默认的记事本或 Mac OS X 的终端都可以用于编写 `PHP`。我们将使用 `notepad++`，因为它有一些非常实用的功能，有助于快速编写整洁高效的代码，例如语法高亮和自动补全。
 
 而且它是免费的！
-
-
-
-
 
 这些文本编辑器将通过此处下载并安装来为你节省时间并避免许多痛苦。下载一个文本编辑器并安装它。只需记住，任何编辑器都可以。所以即使你没有 `notepad++`，也可以使用任何你喜欢的工具。
 
@@ -179,6 +166,7 @@ $myInt = 10;
 你只需要记住，每个 PHP 语句都以分号结束（注释除外。我们将在本节的晚些时候讨论它们）。
 
 关于变量的几点注意事项：
+
 - (Images/image0883.jpeg) 它们是大小敏感的
 - (Images/image0884.jpeg) 它们必须以字母开头
 - (Images/image0885.jpeg) 它们可以是数字
@@ -241,12 +229,12 @@ PHP 使用运算符对变量和值进行各种操作。我们现在来看组使�
 
 | 示例 | 运算符 | 结果 |
 | --- | --- | --- |
-| `$x + $y` | 加法 | $x$ 和 $y$ 的和 |
-| `$x - $y` | 减法 | $x$ 和 $y$ 之间的差 |
-| `$x * $y` | 乘法 | $x$ 和 $y$ 的积 |
-| `$x / $y` | 除法 | $x$ 除以 $y$ 的商 |
-| `$x % $y` | 取模 | $x$ 除以 $y$ 的余数 |
-| `$x ** $y` | 幂 | $x$ 的 $y$ 次方（PHP.6 新增） |
+| `$x + $y` | 加法 | `$x` 和 `$y` 的和 |
+| `$x - $y` | 减法 | `$x` 和 `$y` 之间的差 |
+| `$x * $y` | 乘法 | `$x` 和 `$y` 的积 |
+| `$x / $y` | 除法 | `$x` 除以 `$y` 的商 |
+| `$x % $y` | 取模 | `$x` 除以 `$y` 的余数 |
+| `$x ** $y` | 幂 | `$x` 的 `$y` 次方（PHP.6 新增） |
 
 ### 赋值运算符
 
@@ -254,16 +242,11 @@ PHP 使用运算符对变量和值进行各种操作。我们现在来看组使�
 
 | 赋值 | 等同于 | 描述 |
 | --- | --- | --- |
-| `$x = $y` | `$x = $y` | 获取 $y$ 的值并将其赋值给 $x$ |
-| `$x += $y` | `$x = $x + $y` | 获取 $x$ 和 $y$ 的和并将结果赋值给 $x$ |
-| `$x -= $y` | `$x = $x - $y` | 获取 $x$ 和 $y$ 的差并将结果赋值给 $x$ |
-| `$x *= $y` | `$x = $x * $y` | 获取 $x$ 和 $y$ 的积并将结果赋值给 $x$ |
-
-
-
-
-
-| `$x %= $y || $x \= $x % $y` | 获取 `$x` 除以 `$y` 的余数并将结果赋值给 `$x` |
+| `$x = $y` | `$x = $y` | 获取 `$y` 的值并将其赋值给 `$x` |
+| `$x += $y` | `$x = $x + $y` | 获取 `$x` 和 `$y` 的和并将结果赋值给 `$x` |
+| `$x -= $y` | `$x = $x - $y` | 获取 `$x` 和 `$y` 的差并将结果赋值给 `$x` |
+| `$x *= $y` | `$x = $x * $y` | 获取 `$x` 和 `$y` 的积并将结果赋值给 `$x` |
+| `$x %= $y` | `$x = $x % $y` | 获取 `$x` 除以 `$y` 的余数并将结果赋值给 `$x` |
 
 ## 比较运算符
 
@@ -271,7 +254,7 @@ PHP 中的比较运算符用于比较两个值：
 
 | 示例 | 名称 | 结果 |
 | :--- | :--- | :--- |
-| `$x \== $y` | 等于 | 如果 `$x` 和 `$y` 都相等，则返回 true |
+| `$x == $y` | 等于 | 如果 `$x` 和 `$y` 都相等，则返回 true |
 | `$x === $y` | 相同 | 如果 `$x` 和 `$y` 相等且数据类型相同，则返回 true |
 | `$x != $y` | 不等于 | 如果 `$x` 和 `$y` 不相等，则返回 true |
 | `$x <> $y` | 不等于 | 如果 `$x` 和 `$y` 不相等，则返回 true |
@@ -296,7 +279,7 @@ PHP 中的比较运算符用于比较两个值：
 
 ## 增/减（三元）运算符
 
-这些运算符也称为三元运算符，用于增加/减少变量的值 1
+这些运算符也称为三元运算符，用于增加/减少变量的值 1：
 
 | 示例 | 名称 | 结果 |
 | :--- | :--- | :--- |
@@ -320,22 +303,31 @@ PHP 中的比较运算符用于比较两个值：
 
 | 示例 | 运算符 | 结果 |
 | :--- | :--- | :--- |
+
+
+
 | `$x + $y` | 并集 | `$x` 和 `$y` 的并集 |
+
 | `$x \== $y` | 等于 | 如果 `$x` 和 `$y` 具有相同的键值对，则结果为 true |
+
 | `$x === $y` | 恒等 | 如果 `$x` 和 `$y` 具有相同顺序的相同键值对且数据类型相同，则结果为 true |
+
 | `$x != $y` | 不等于 | 如果 `$x` 的值不等于 `$y` 的值，则返回 true |
+
 | `$x <> $y` | 不等 | 如果 `$x` 的值不等于 `$y` 的值，则返回 true |
+
 | `$x !== $y` | 非相同 | 如果 `$x` 和 `$y` 不相同，则返回 true |
 
 ## 总结
 
 到为止，我们已经涵盖了为了开始学习并看到 PHP 运行所需了解的大量内容。我们安装了一个名为 XAMPP 的服务器，它带有 Apache 服务，允许我们在浏览器中运行 PHP 脚本。你现在应该非常熟悉创建和运行 PHP 脚本，并了解了如何向屏幕输出信息。我们还涵盖了 PHP 的一些基础知识，如变量和常量，并查看了一些运算符；其中一些在下一小时将很有用。让我们继续前进吧！
 
-
 “空谈是廉的。给我看代码” – Thomas C. Gale
 
 在这一章中我们将涵盖：
+
 - 条件语句
+
 - 循环
 
 这一部分我们将深入探讨 PHP 的基础，并进行许多酷炫的操作。你完成了基础知识的“沙拉部分”，现在是“肉菜部分”。
@@ -345,8 +337,11 @@ PHP 中的比较运算符用于比较两个值：
 条件语句允许代码中进行一些决策。它们根据程序员指定的条件被求值为为 true 还是 false 来执行不同的操作。以下是 PHP 中使用的条件语句列表：
 
 - If 语句
+
 - If…else 语句
+
 - If…else…else 语句
+
 - Switch 语句
 
 ### If 语句
@@ -361,7 +356,9 @@ if ($x < 10) {
 }
 ?>
 ```
+
 输出：
+
 5 小于 10
 
 ### If…else 语句
@@ -378,7 +375,9 @@ if ($x < 10) {
 }
 ?>
 ```
+
 输出：
+
 50 大于 20
 
 ### If…elseif…else 语句
@@ -397,7 +396,9 @@ if ($x < 10) {
 }
 ?>
 ```
+
 输出：
+
 15 在 10 到 20 之间
 
 ### Switch 语句
@@ -435,10 +436,6 @@ while ($x <= 5) {
 ?>
 ```
 
-
-
-
-
 ```php
 while ($x <= 5) {
     echo “The value of x is: ” . $x . “<br />”;
@@ -446,11 +443,17 @@ while ($x <= 5) {
 }
 ?>
 ```
+
 Output:
+
 The value of x is: 1
+
 The value of x is: 2
+
 The value of x is: 3
+
 The value of x is: 4
+
 The value of x is: 5
 
 ### Do Loop
@@ -466,12 +469,19 @@ do {
 } while ($x >= 0);
 ?>
 ```
+
 Output:
+
 The value of x is: 5
+
 The value of x is: 4
+
 The value of x is: 3
+
 The value of x is: 2
+
 The value of x is: 1
+
 The value of x is 0
 
 ## For Loop
@@ -479,7 +489,9 @@ The value of x is 0
 循环执行代码块指定的次数。为了使循环工作，需要三个要素。下面的示例包含了所有这些要素：
 
 1. **初始化**：在这里声明一个变量来启动循环计数器。在我们的示例中，它是 `$x=1`。这意味着 `$x` 是初始化器，并被设置为 1。
+
 2. **条件**：这是循环的第二部分，我们在这里检查循环计数器是否仍然符合条件。当它返回假时，循环停止对代码块的执行。我们在下面的示例中的条件是 `$x <= 5`。
+
 3. **递增**：当循环结束时，这部分代码将执行一次，然后循环循环。在这里我们可以对循环计数器进行一些操作。在我们的情况下，我们通过 `$x++` 将 `$x` 的值增加 1。
 
 ```php
@@ -489,11 +501,17 @@ for ($x = 1; $x <= 5; $x++) {
 }
 ?>
 ```
+
 Output:
+
 The value of x is: 1
+
 The value of x is: 2
+
 The value of x is: 3
+
 The value of x is: 4
+
 The value of x is: 5
 
 ## For each Loop
@@ -514,8 +532,11 @@ foreach ($foods as $food) {
 函数是程序中可以反复使用的代码段。函数接收一个或多个称为参数（也称为参数）的输入，并对它们进行某些操作。函数在处理完成后有时可以返回一个值。
 
 关于函数有需要记住的几点：
+
 - 它们对大小写不敏感
+
 - 在页面加载时，除非被某些代码调用，否则它们不会自动执行
+
 - PHP 拥有超过 1000 个内置函数，可以满足你的需求
 
 ### 创建函数
@@ -532,7 +553,9 @@ function echoMessage() {
 echoMessage();
 ?>
 ```
+
 Output:
+
 Hello, I am a PHP function!
 
 ### 函数参数
@@ -548,7 +571,9 @@ function subFunction($num1, $num2) {
 subFunction(5, 6);
 ?>
 ```
+
 Output:
+
 The difference between 5 and 6 is: -1
 
 ### 返回值的函数
@@ -565,7 +590,9 @@ $return_val = addFunction(20, 15);
 echo “The value returned by the function is: ” . $return_val;
 ?>
 ```
+
 Output:
+
 The value returned by the function is: 35
 
 在没有传递任何参数的情况下，我们可以为参数指定一个默认值。在下面的示例中：
@@ -580,9 +607,13 @@ PrintName(“Jill”);
 PrintName(“Adam”);
 ?>
 ```
+
 Output:
+
 Hi, my name is Jack
+
 Hi, my name is Jill
+
 Hi, my name is Adam
 
 ### Arrays
@@ -592,7 +623,9 @@ Hi, my name is Adam
 ### 数字数组
 
 这些数组使用数字作为索引。索引默认从零开始。创建数字数组有两种方法：
+
 1. 这种方法自动分配索引：`$dairy = array(“yoghurt”, “ice cream”, “cheese cake”);`
+
 2. 这种方法手动分配索引：`$dairy[0] = “yoghurt”`, `$dairy[1] = “ice cream”`, `$dairy[2] = “cheese cake”`
 
 示例显示了如何使用索引从数字数组获取值：
@@ -609,16 +642,23 @@ for ($i = 0; $i < $arrayCount; $i++) {
 }
 ?>
 ```
+
 Output:
+
 I to eat yoghurt, ice cream and cheese cake!
+
 yoghurt
+
 ice cream
+
 cheese cake
 
 ### 关联数组
 
 使用字符串作为索引，这使得键和值之间建立了强关联。创建关联数组有两种方法。我们将通过使用奇装的价格来演示：
+
 1. 第一种方法：`$suit_prices = array(“batman” => 4000, “arrow” => 1500, “superman” => 0);`
+
 2. 第二种方法：`$suit_prices["batman"] = 4000;`, `$suit_prices["arrow"] = 1500;`, `$suit_prices["superman"] = 0;`
 
 注意：输出关联数组的值时，不要将数组放在双引号内，否则值无法输出。下面的示例演示了如何访问关联数组的值：
@@ -631,13 +671,14 @@ echo “The Green Arrow suit costs: ” . $suit_prices['arrow'] . “<br />”;
 echo “The Superman is free. It suit costs: ” . $suit_prices['superman'] . “<br />”;
 ?>
 ```
+
 Output:
+
 The Bat suit costs: 4000
+
 The Green Arrow suit costs: 1500
+
 The Superman is free. It suit costs: 0
-
-
-
 
 另一种值得的数组类型是多维数组。这些是包含其他数组的数组。但这是一个高级主题，你可以进一步研究。
 
@@ -647,7 +688,6 @@ The Superman is free. It suit costs: 0
 
 现在，你准备好从 PHP 中休息一下，去泡杯咖啡了。这只会变得更有趣！
 
-
 [“告诉我，我会忘记；教我，我可能会记得；让我参与，我就会学会。” - 班杰明·富兰林](http://www.goodreads.com/author/show/289513.Benjamin_Franklin)
 
 [富兰林](http://www.goodreads.com/author/show/289513.Benjamin_Franklin)
@@ -655,7 +695,9 @@ The Superman is free. It suit costs: 0
 在本章中我们将涵盖：
 
 ![](img/image00910.jpeg) 启动 MySQL
+
 ![](img/image00911.jpeg) 创建和删除数据库
+
 ![](img/image00912.jpeg) 创建、读取、更新和删除表 (CRUD)
 
 既然我们已经研究了 PHP，让我们看看是什么让 PHP 能够在网页中填充内容。那就是如 `MySQL` 这样的数据库。我们将学习你认为自己 `MySQL` 基础大师需要知道的大部分内容，并完成你实现梦想的下一步所需的操作。
@@ -702,6 +744,8 @@ mysql -u your_username -p
 
 让我们从输入以下命令来创建一个数据库开始：
 
+
+
 ```sql
 CREATE DATABASE music;
 ```
@@ -724,7 +768,7 @@ DROP database_name;
 USE music;
 ```
 
-**警告**：命令行提示符看起来 own 像 `music>`。
+**警告**：命令行提示符看起来像 `music>`。
 
 ## 创建、修改和删除表
 
@@ -760,34 +804,37 @@ SHOW TABLES;
 +----------------+
 ```
 
-
-
-
 `ENUM` 类型是一个拥有一组值的字符串对象。在我们的案例中允许的值为‘L’（长久播放 Long Play）、‘E’（扩展播放 Extended Play）和‘M’（混音 mix）。
 
 ### 添加 `numTracks`
+
 如果你觉得这不对，说明你观察得很敏锐！这个字段用于存储曲目数量，它应该是数值类型而不是字符串类型。这样做是有意意的，为了演示以后如何更改字段的数据类型和名称。
 
 ### 添加 `DateReleased`
+
 最后一行创建的代码存储了专辑发布的日期。使用日期类型来存储值。让我们来看你将用到的常用数据类型：
 
 #### 数值类型
+
 - `INT`: 整数
 - `FLOAT`: 1E38 到 -1E37
 - `Double`: 1E38 到 -1E37
 
 #### 字符串类型
+
 - `CHAR`: 固定长度
 - `VARCHAR`: 可变长度
 - `ENUM`: 总值数量有限的字符串，你必须定义它们
 
 #### 日期和时间
+
 - `DATE`: YYYY-MM-DD
 - `TIME`: HH:MM:SS
 - `DATETIME`: YYYY-MM-DD HH:MM:SS
 - `YEAR`: YYYY
 
 ### 修改表
+
 有时候你会犯错，或者想要更改表中的内容。幸运的是，你可以通过 `ALTER` 语句来实现。我们将查看更改表名和数据类型。首先，我们需要通过输入以下命令来查看我们刚刚创建的表：
 
 ```
@@ -795,6 +842,7 @@ DESC Album;
 ```
 
 你应该看到如下输出：
+
 ```
 +------+------+------+------+----+
 | Field | Type | Null | Key | Extra |
@@ -811,6 +859,7 @@ DESC Album;
 看起来我们确实可以更改其中的一些东西：
 
 #### 1. 修改表名
+
 单数形式“Album”作为表是不合理的，因为表是用来存储多条记录的。我们应该使用复数形式并将其从 `Album` 改为 `Albums`，这样更符合逻辑。以下是更改表的方法：
 
 ```
@@ -818,6 +867,7 @@ RENAME TABLE Album to Albums;
 ```
 
 如果我们输入 `show tables` 命令，应该能看到表名已经更改：
+
 ```
 +----------------+
 | Tables_in_music |
@@ -827,6 +877,7 @@ RENAME TABLE Album to Albums;
 ```
 
 #### 2. 修改 `numTracks` 的数据类型
+
 `numTracks` 字段不应该是字符串类型而应该是数值。以下代码将其数据类型更改为合适的类型：
 
 ```
@@ -835,12 +886,14 @@ MODIFY COLUMN numTracks smallint(2) NOT NULL;
 ```
 
 #### 3. 修改 `numTracks` 的列名
+
 看来我们还没有处理完 `numTracks` 字段。我们需要将其从 `numTracks` 改为 `NumberOfTracks`，以使其更具可读性。
 
 ```sql
 ALTER TABLE Albums
 CHANGE numTracks NumberOfTracks smallint(2) NOT NULL;
 ```
+
 注意：更改列名时我们仍然需要定义数据类型。通过以下更改，当我们输入描述表的语句时，应该会看到：
 
 ```
@@ -855,17 +908,21 @@ CHANGE numTracks NumberOfTracks smallint(2) NOT NULL;
 | DateReleased | date | NO | | |
 +------+------+------+------+----+
 ```
+
 这看起来好多多了！
 
 ### 删除表
+
 下面的代码可以删除数据库中的表及其所有数据：
 
 ```
 DROP TABLE table_name;
 ```
+
 其中 `table_name` 是你想要删除的表名。
 
-字体 向表中插入记录
+## 向表中插入记录
+
 我们使用 `INSERT INTO` 语句向表中插入新记录：
 
 ```
@@ -881,6 +938,7 @@ INSERT INTO Albums VALUES
 ```
 
 ### SELECT 语句
+
 `SELECT` 允许从表中检索数据。以下示例展示了如何使用 `SELECT` 表，输出应该是这样的：
 
 ```
@@ -897,6 +955,7 @@ INSERT INTO Albums VALUES
 | 8 | X & Y | Coldplay | A | 2005-06-01 |
 +----------+-------------+---------------+---------------+---------------+
 ```
+
 选择特定的列，我们使用：
 
 ```sql
@@ -905,6 +964,7 @@ FROM Albums;
 ```
 
 输出应该是：
+
 ```
 +-----------+-------------+---------------+---------------+
 | AlbumName | AlbumArtist | DateReleased | NumberTracks |
@@ -921,6 +981,7 @@ FROM Albums;
 ```
 
 #### WHERE 子句
+
 有时你需要过滤记录，只选择符合特定标准的记录。这就是 `WHERE` 子句发挥作用的地方，如下例所示：
 
 ```sql
@@ -930,6 +991,7 @@ WHERE AlbumArtist = 'Coldplay';
 ```
 
 这应该输出：
+
 ```
 +-----------+-------------+---------------+---------------+
 | AlbumName | AlbumArtist | DateReleased | NumberTracks |
@@ -939,10 +1001,6 @@ WHERE AlbumArtist = 'Coldplay';
 | X & Y | Coldplay | 2005-06-01 | 13 |
 +-----------+-------------+---------------+---------------+
 ```
-
-
-
-
 
 | AlbumName | AlbumArtist | DateReleased | NumberOfTracks |
 | :--- | :--- | :--- | :--- |
@@ -1031,6 +1089,8 @@ FROM Albums;
 
 我们像这样更新该记录：
 
+
+
 ```sql
 UPDATE Albums
 SET AlbumArtist = 'Coldplay' WHERE AlbumID = 1;
@@ -1074,13 +1134,14 @@ WHERE AlbumID = 1;
 
 ## 总结
 
- 好的，现在你已经熟悉了 MySQL 的基础，可以使用命令行访问它并创建和删除数据库；创建、修改和删除表；查询、插入、更新和删除数据；并对数据进行过滤和排序。
+好的，现在你已经熟悉了 MySQL 的基础，可以使用命令行访问它并创建和删除数据库；创建、修改和删除表；查询、插入、更新和删除数据；并对数据进行过滤和排序。
 
 ## 第 4 章 - 第 4 节：PHP 与 MySQL：黄金搭档
 
-“一种不影响你思考方式的语言是不值得知道的” —— Alan J. 
+“一种不影响你思考方式的语言是不值得知道的” —— Alan J.
 
 在本章中，我们将涵盖：
+
 - `Images/00923.jpeg` 创建家庭数据库
 - `Images/00924.jpeg` 创建并向家庭成员表插入值
 - `Images/00925.jpeg` 创建网站 PHP 配置
@@ -1092,11 +1153,7 @@ WHERE AlbumID = 1;
 
 ### 创建家庭数据库
 
-打开命令行并启动 MySQL 客户端，以 ‘root’ 身份登录（见第 3 章）。
-
-
-
-
+打开命令行并启动 MySQL 客户端，以 `root` 身份登录（见第 3 章）。
 
 ### 创建数据库
 
@@ -1132,7 +1189,7 @@ CREATE TABLE FamilyMembers
 (
 MemberID int unsigned NOT NULL auto_increment PRIMARY KEY, FirstName varchar(80) NOT NULL,
 LastName varchar(80) NOT NULL, Age int(3) unsigned NOT NULL,
-Gender ENUM (‘Male’, ‘Female’) NOT NULL, Relationship varchar(80) NOT NULL
+Gender ENUM ('Male', 'Female') NOT NULL, Relationship varchar(80) NOT NULL
 );
 ```
 
@@ -1144,14 +1201,14 @@ Gender ENUM (‘Male’, ‘Female’) NOT NULL, Relationship varchar(80) NOT NU
 | FirstName | varchar(80) | NO | | NULL | |
 | LastName | varchar(80) | NO | | NULL | |
 | Age | int(3) unsigned | NO | | NULL | |
-| Gender | enum(‘Male’,‘Female’) | NO | | NULL | |
+| Gender | enum('Male','Female') | NO | | NULL | |
 | Relationship | varchar(80) | NO | | NULL | |
 
 然后我们向表中插入值：
 
 ```sql
 INSERT INTO FamilyMembers VALUES
-(NULL, ‘Robert’, ‘Williams’, 52, ‘Male’, ‘Father’), (NULL, ‘Martha’, ‘Williams’, 49, ‘Female’, ‘Mother’), (NULL, ‘Doreen’, ‘Williams’, 18, ‘Female’, ‘Sister’), (NULL, ‘Jace’, ‘Williams’, 13, ‘Female’, ‘Adoptive Sister’), (NULL, ‘Benson’, ‘Williams’, 22, ‘Male’, ‘Brother’), (NULL, ‘Timothy’, ‘James’, 23, ‘Male’, ‘Cousin’);
+(NULL, 'Robert', 'Williams', 52, 'Male', 'Father'), (NULL, 'Martha', 'Williams', 49, 'Female', 'Mother'), (NULL, 'Doreen', 'Williams', 18, 'Female', 'Sister'), (NULL, 'Jace', 'Williams', 13, 'Female', 'Adoptive Sister'), (NULL, 'Benson', 'Williams', 22, 'Male', 'Brother'), (NULL, 'Timothy', 'James', 23, 'Male', 'Cousin');
 ```
 
 当我们查询表中的所有记录时，我们会看到类似这样的内容：
@@ -1271,9 +1328,6 @@ mysqli_close($conn);
 </html>
 ```
 
-
-
-
 这里涉及的内容很多，但我们不会一一详介绍。我们不会讨论任何 HTML 和 CSS，因为本书假设你已经具备这些方面的基础知识，并知道如何链接外部样式表。
 
 首先，在 PHP 代码中，我们通过调用 `require_once` 函数来包含 `config.php` 文件，并将文件路径作为参数传递（由于是配置文件，我们传递的是相对路径）。这将允许我们访问在该文件中定义的数据库连接：
@@ -1285,7 +1339,7 @@ require_once('config.php');
 接下来，我们创建一个查询字符串，用于使用 SQL 从数据库中检索数据，并将其赋值给变量 `$sql`：
 
 ```php
-$sql = “SELECT MemberID, FirstName, LastName, Age, Gender, Relationship FROM FamilyMembers”;
+$sql = "SELECT MemberID, FirstName, LastName, Age, Gender, Relationship FROM FamilyMembers";
 ```
 
 我们使用 `SELECT` 语句从 `FamilyMembers` 表中选择我们想要显示的字段，其语法规则与我们在命令行中使用的规则相同。
@@ -1307,7 +1361,7 @@ if ($response){
 如果收到了数据库的响应，我们将在 PHP 代码中嵌入 HTML 并在 `if` 语句内部输出它，创建一个带有表行和表头的表格：
 
 ```php
-echo ‘<table>
+echo '<table>
 <tr>
     <th>Member ID</th>
     <th>First Name</th>
@@ -1315,21 +1369,21 @@ echo ‘<table>
     <th>Age</th>
     <th>Gender</th>
     <th>Relationship</th>
-</tr>’;
+</tr>';
 ```
 
 好了，列的部分完成了。现在我们需要动态地逐显示行，以防有很多数据。以下代码可以实现这一点：
 
 ```php
 while ($row = mysqli_fetch_array($response)){
-echo ‘<tr>
-    <td>’ . $row['MemberID'] . ‘</td>
-    <td>’ . $row['FirstName'] . ‘</td>
-    <td>’ . $row['LastName'] . ‘</td>
-    <td>’ . $row['Age'] . ‘</td>
-    <td>’ . $row['Gender'] . ‘</td>
-    <td>’ . $row['Relationship'] . ‘</td>
-</tr>’;
+echo '<tr>
+    <td>' . $row['MemberID'] . '</td>
+    <td>' . $row['FirstName'] . '</td>
+    <td>' . $row['LastName'] . '</td>
+    <td>' . $row['Age'] . '</td>
+    <td>' . $row['Gender'] . '</td>
+    <td>' . $row['Relationship'] . '</td>
+</tr>';
 }
 ```
 
@@ -1338,14 +1392,14 @@ echo ‘<tr>
 然后，我们关闭表格，动态显示数据的工作就此完成：
 
 ```php
-echo ‘</table>’;
+echo '</table>';
 ```
 
 但如果由于某些错误导致数据库没有响应呢？这种情况是有可能的。在这种情况下，我们在 `if` 语句之后添加一个 `else` 语句，使用 `mysqli_error` 函数显示错误信息，并将我们的连接作为参数：
 
 ```php
 else{
-echo “Cound not get a response from database ” . mysqli_error($conn);
+echo "Cound not get a response from database " . mysqli_error($conn);
 }
 ```
 
@@ -1370,6 +1424,8 @@ mysqli_close($conn);
 在网站根目录下创建一个 `css` 文件夹，并创建两个文件 `main.css` 和 `table_styling.css`。这些是页面的样式表。
 
 我们在 `main.css` 中输入以下代码来设置主体、表头和链接。它还将内容居中：
+
+
 
 ```css
 body {
@@ -1403,7 +1459,7 @@ a:hover, a:active {
 }
 ```
 
-然后我们在 `table_styling.css` 中输入以下代码来设置表格：
+然后我们在`table_styling.css`中输入以下代码来设置表格：
 
 ```css
 table {
@@ -1423,9 +1479,9 @@ color: white;
 }
 ```
 
-### 创建数据的表单
+## 创建数据的表单
 
-我们在网站根目录创建一个名为 `form.php` 的文件，然后放置以下代码：
+我们在网站根目录创建一个名为`form.php`的文件，然后放置以下代码：
 
 ```html
 <!DOCTYPE html>
@@ -1467,16 +1523,16 @@ color: white;
 
 这里没有发生任何异常。这只是你的基础 HTML 表单，我们将用它将输入字段中的数据发送到数据库。表单有两个我们感兴趣的属性：
 
-- `action`：告诉表单将数据发送到 `member_added.php` 脚本（稍后我们将创建），它将在点击 ADD 按钮时处理信息。
-- `method="post"`：告诉表单通过 HTTP POST 发送数据。这意味着数据被附加在 HTTP 请求的体内部。这对于发送敏感数据（如密码）很有用，而 `get` 方法只是将数据附加到 URL，任何人都能看到。
+- `action`：告诉表单将数据发送到`member_added.php`脚本（稍后我们将创建），它将在点击 ADD 按钮时处理信息。
+- `method="post"`：告诉表单通过 HTTP POST 发送数据。这意味着数据被附加在 HTTP 请求的体内部。这对于发送敏感数据（如密码）很有用，而`get`方法只是将数据附加到 URL，任何人都能看到。
 
 进入浏览器显示 index 页。点击表格右上角的 ADD 按钮，应该显示如下带有添加家庭成员表单页面：
 
 ![](img/image030.jpeg)
 
-### 表单页的 CSS
+## 表单页的 CSS
 
-创建一个名为 `form_styling.css` 的 CSS 文件并将其放在网站的根目录下。在该文件中放置以下规则以使用此外部样式表设置表单：
+创建一个名为`form_styling.css`的 CSS 文件并将其放在网站的根目录下。在该文件中放置以下规则以使用此外部样式表设置表单：
 
 ```css
 input[type=text], input[type=number], select {
@@ -1503,9 +1559,9 @@ background-color: #2ca089;
 }
 ```
 
-### 创建添加成员页面
+## 创建添加成员页面
 
-最后，你需要创建一个最终的 PHP 脚本来处理表单发送的数据。我们创建一个名为 `member_added` 的新 PHP 脚本，并将其放在网站的根目录下。然后在我们在脚本中放置以下代码：
+最后，你需要创建一个最终的 PHP 脚本来处理表单发送的数据。我们创建一个名为`member_added`的新 PHP 脚本，并将其放在网站的根目录下。然后在我们在脚本中放置以下代码：
 
 ```html
 <!DOCTYPE html>
@@ -1518,10 +1574,9 @@ background-color: #2ca089;
 <div id="container">
 ```
 
-
-
-
+```html
 <div id="content">
+```
 
 ```php
 <?php
@@ -1576,8 +1631,10 @@ if(isset($_POST['submit'])) {
     }
 }
 ?>
+```
 
-<<div>
+```html
+<div>
 <form action="member_added.php" method="post">
     <div id="header">
         <h3>Add Family Member</h3>
@@ -1604,13 +1661,15 @@ if(isset($_POST['submit'])) {
 </div>
 </body>
 </html>
+```
 
-# 让我们来拆解一下并看看最有趣的部分。
+## 让我们来拆解一下并看看最有趣的部分
 
-在处理信息之前，我们必须检查该信息是否由表单提交。我们通过一个 `if` 语句并使用 PHP 内置函数 `isset()` 来实现，该函数用于检查变量是否为空。我们将关联数组 `$_POST` 作为参数传递。它包含了在 `form.php` 表单中输入的所有值。该数组通过表单的 `post` 方法传递给脚本：
+在处理信息之前，我们必须检查该信息是否由表单提交。我们通过一个`if`语句并使用 PHP 内置函数`isset()`来实现，该函数用于检查变量是否为空。我们将关联数组`$_POST`作为参数传递。它包含了在`form.php`表单中输入的所有值。该数组通过表单的`post`方法传递给脚本：
 
 ```php
 if(isset($_POST['submit'])) {
+
 }
 ```
 
@@ -1620,21 +1679,25 @@ if(isset($_POST['submit'])) {
 $null_fields = array();
 ```
 
-接下来，在将值发送到数据库之前，我们开始检查数组中的任何值是否为空。如果是，我们就将其添加到 `$null_fields` 数组中；否则我们创建一个变量并将它们存储在其中。我们只需要看一个 `if…else` 语句，因为其他的都是相似的：
+接下来，在将值发送到数据库之前，我们开始检查数组中的任何值是否为空。如果是，我们就将其添加到`$null_fields`数组中；否则我们创建一个变量并将它们存储在其中。我们只需要看一个`if…else`语句，因为其他的都是相似的：
 
 ```php
 if (empty($_POST['first_name'])) {
+
     $null_fields[] = 'First Name';
+
 } else {
+
     $first_name = trim($_POST['first_name']);
+
 }
 ```
 
-我们对 `$_POST` 数组中的其余值执行同样的操作。
+我们对`$_POST`数组中的其余值执行同样的操作。
 
 **警告**：这可能不是最安全的。
 
-在处理信息之前，我们必须检查该信息是否由表单提交。我们通过一个 `if` 语句并使用 PHP 内置函数 `isset()` 来实现，该函数用于检查变量是否为空。我们将关联数组 `$_POST` 作为参数传递。它包含了在 `form.php` 表单中输入的所有值。
+在处理信息之前，我们必须检查该信息是否由表单提交。我们通过一个`if`语句并使用 PHP 内置函数`isset()`来实现，该函数用于检查变量是否为空。我们将关联数组`$_POST`作为参数传递。它包含了在`form.php`表单中输入的所有值。
 
 所以，如果数组为空，我们就关闭数据库连接：
 
@@ -1646,7 +1709,7 @@ mysqli_close($conn);
 
 我们大功告成了！现在我们应该能够添加家庭成员并查看它们了。我们还应该可以使用表单或表格右上角的按钮在页面之间导航，这些按钮允许我们在页面之间切换。
 
-启动首页页面并进入表单页面添加一些数据
+启动首页页面并进入表单页面添加一些数据：
 
 ![](img/00931.jpeg)
 
@@ -1663,4 +1726,3 @@ mysqli_close($conn);
 就是这样！在本章之前，我们分别学习了 PHP 和 MySQL，而本章旨在整合这两者，并展示如何使用它们生成动态内容。由于你现在已经具备了能力，修改网站以满足你的需求应该并不难。
 
 在本章中，我们创建了一个存储数据库连接的配置文件，并在整个网站中使用它来建立数据库连接并查询以存储和检索数据。我们创建了一个页面，让你能够查看添加到数据库的家庭成员信息。
-

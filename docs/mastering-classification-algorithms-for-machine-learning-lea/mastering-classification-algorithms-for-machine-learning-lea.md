@@ -1,24 +1,8 @@
+
 # 机器学习分类算法精通：学习如何应用分类算法实现高效的机器学习解决方案（英文版）
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 献给我亲爱的妻子：
+
 Deepshree
 
 # 关于作者
@@ -55,79 +39,35 @@ Partha 与 Deepshree 结为夫妻，有两个女儿——Riya 和 Ranoo。
 
 最后，章节介绍了使用机器学习解决的问题。
 
-书中所有的代码均使用 Python 编写。Python 是目前最流行的编程语言。本书使用的主要库是 Scikit-Learn，它是机器学习领域最流行的库。虽然 Scikit-Learn 适用于 Python，但我也希望你会发现这本书内容丰富且有帮助。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+书中所有的代码均使用 `Python` 编写。`Python` 是目前最流行的编程语言。本书使用的主要库是 `Scikit-Learn`，它是机器学习领域最流行的库。虽然 `Scikit-Learn` 适用于 `Python`，但我也希望你会发现这本书内容丰富且有帮助。
 
 # 代码包与彩色图片
 
 请点击链接下载书籍的代码包和彩色图片：
 
-https://rebrand.ly/5j8ua05
+`https://rebrand.ly/5j8ua05`
 
-书籍的代码也托管在 GitHub 上：https://github.com/bppbubublic/Mastering-Classification-Algorithms-for-Machine-Learning。如果代码更新，将在现有的 GitHub 仓库中更新。
+书籍的代码也托管在 GitHub 上：`https://github.com/bppbubublic/Mastering-Classification-Algorithms-for-Machine-Learning`。如果代码更新，将在现有的 GitHub 仓库中更新。
 
-我们从丰富的书籍和视频目录中提供代码包，可在 https://github.com/bppbublications 获取。去看看吧！
+我们从丰富的书籍和视频目录中提供代码包，可在 `https://github.com/bppbublications` 获取。去看看吧！
 
 # 勘误
 
 我们对 BPB Publications 的工作感到非常自豪，并遵循最佳实践以确保内容的准确性，为订阅者提供极佳的阅读体验。我们的读者是镜子，我们利用他们的反馈来反映并改进出版过程中可能发生的任何人为错误。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    - 元组数据类型........................................................................................... 283
-    - 布尔型数据类型....................................................................................................... 287
-    - 比较运算符..................................................................................... 288
-    - 逻辑运算符...................................................................................... 288
-        - for 循环语句....................................................................................... 290
+- 元组数据类型........................................................................................... 283
+- 布尔型数据类型....................................................................................................... 287
+- 比较运算符..................................................................................... 288
+- 逻辑运算符...................................................................................... 288
+  - for 循环语句....................................................................................... 290
 - 注意事项......................................................................................................... 292
-
 - 结构......................................................................................................... 293
-    - 压缩黑白图像...............................................299
-    - 压缩彩色图像............................................................... 303
-
-
-
-
+  - 压缩黑白图像...............................................299
+  - 压缩彩色图像............................................................... 303
 结论 ................................................................................................................ 308
 
-
-
-
-
-
-
 # 第一章
+
 ## 机器学习导论
 
 欢迎来到本书。
@@ -138,7 +78,6 @@ https://rebrand.ly/5j8ua05
 
 本书将讨论通过各种模型进行分类。在讨论这些模型之前，我们从什么是机器学习开始。我们将探讨如何让机器学习。
 
-![](img/11af2c4c7dddfed06ed008516c0c6dfb_21_0.png
 结构
 
 在本章中，我们将讨论以下主题：
@@ -159,17 +98,15 @@ https://rebrand.ly/5j8ua05
 
 神经科学家沃伦·麦卡洛（Warren S. McCulloch）和逻辑学家沃尔特·皮茨（Walter H. Pitts）于1943年在《神经生物学学报》（Bulletin of Mathematical Biophysics）上发表了关于神经活动中思想的逻辑计算论文。这是让机器像人类一样思考的首次尝试。
 
-¹ https://www.cse.chalmers.se/~coquand/AUTOMATA/mcp.pdf.
+¹ `https://www.cse.chalmers.se/~coquand/AUTOMATA/mcp.pdf`.
 
 “什么是能够思考”是一个非常广泛的话题。我们可以像图11所示进行简单的抽象。思考是一个收集数据、发现数据中的模式并根据模式进行推断的过程。
 
 ## 思考过程
 
-![](img/11af2c4c7dddfed06ed008516c0c6dfb_22_0.png
+![](img/11af2c4c7dddfed06ed008516c0c6dfb_22_0.png)
+
 图1.1"
-
-
-
 
 在传统编程中，我们拥有数据和规则。我们将规则应用于数据，以得到输出（Output）。参考图 1.3：
 
@@ -183,7 +120,7 @@ https://rebrand.ly/5j8ua05
 
 动量 = 质量 * 速度
 
-动量 = mv
+动量 = `mv`
 
 通常写为，
 
@@ -205,7 +142,7 @@ https://rebrand.ly/5j8ua05
 
 | 质量 (KG) | 速度 (KM/h) | 动量 (KG*KM/h) |
 | :--- | :--- | :--- |
-| m | v | M |
+| `m` | `v` | `M` |
 | 2 | 20 | 42 |
 | 4 | 100 | 403 |
 | 5 | 50 | 245 |
@@ -214,7 +151,7 @@ https://rebrand.ly/5j8ua05
 
 图 1.5：输入计算机以创建机器学习模型
 
-为了让机器建立模型，数据科学家必须告诉机器要制作什么。通常，数据科学家会尝试理解数据。这一步被称为探索性数据分析（Exploratory Data Analysis）。在前面的情况中，我们有两个独立变量 m 和 v，以及一个因变量 M。我们可以将这些数据绘制在二维图表中，如图 1.6 所示：
+为了让机器建立模型，数据科学家必须告诉机器要制作什么。通常，数据科学家会尝试理解数据。这一步被称为探索性数据分析（Exploratory Data Analysis）。在前面的情况中，我们有两个独立变量 `m` 和 `v`，以及一个因变量 `M`。我们可以将这些数据绘制在二维图表中，如图 1.6 所示：
 
 ![](img/11af2c4c7dddfed06ed008516c0c6dfb_24_0.png)
 
@@ -222,38 +159,38 @@ https://rebrand.ly/5j8ua05
 
 ## 掌握机器学习的分类算法
 
-假设数据科学家决定创建一个形式为 M = $\beta_0 + \beta_1 * m + \beta_2 * v$ 的线性模型。机器需要估计 $\beta_0, \beta_1$ 和 $\beta_2$ 的值。
+假设数据科学家决定创建一个形式为 `M = β₀ + β₁ * m + β₂ * v` 的线性模型。机器需要估计 `β₀`, `β₁` 和 `β₂` 的值。
 
-数据科学家提供了 $\beta_0, \beta_1$ 和 $\beta_2$ 的初始值。假设这些值为 $\beta_0 = 5, \beta_1 = 5, beta_2 = 5$。使用这些值，机器计算出 M 的值，如图 1.7 所示。我们将机器计算的值称为 M。
+数据科学家提供了 `β₀`, `β₁` 和 `β₂` 的初始值。假设这些值为 `β₀ = 5, β₁ = 5, beta_2 = 5`。使用这些值，机器计算出 `M` 的值，如图 1.7 所示。我们将机器计算的值称为 `Mhat`。
 
-| 质量 (KG) | 速度 (KM/h) | 动量 (KG*KM/h) | 对于 $\beta_0=5, \beta_1=5, \beta_2=5$ |
+| 质量 (KG) | 速度 (KM/h) | 动量 (KG*KM/h) | 对于 `β₀=5, β₁=5, β₂=5` |
 | :--- | :--- | :--- | :--- |
-| m | v | M | Mhat |
+| `m` | `v` | `M` | `Mhat` |
 | 2 | 20 | 42 | 115 |
 | 4 | 100 | 403 | 525 |
 | 5 | 50 | 245 | 280 |
 | 8 | 60 | 477 | 345 |
 | 3 | 30 | 94 | 170 |
 
-图 1.7：机器对动量 (M) 的初始估计
+图 1.7：机器对动量 (`M`) 的初始估计
 
-| $\beta_0 = 5$ |
-| $\beta_1 = 5$ |
-| $\beta_2 = 5$ |
+| `β₀ = 5` |
+| `β₁ = 5` |
+| `β₂ = 5` |
 
-如果我们绘制这些数据，就会得到图 1.8 所示的图表，其中点是提供给机器的 M 的值。星号是机器估计的 M 值：
+如果我们绘制这些数据，就会得到图 1.8 所示的图表，其中点是提供给机器的 `M` 的值。星号是机器估计的 `M` 值：
 
 ![](img/11af2c4c7dddfed06ed008516c0c6dfb_25_0.png)
 
-图 1.8：机器初始动量 (M) 估计图
+图 1.8：机器初始动量 (`M`) 估计图
 
 ## 机器学习简介 7
 
 我们可以看到机器的表现并不理想。然而，机器仍在继续。机器计算其在估计中的误差，如图 1.9 所示。我们看到机器可能会高估或低估。因此，误差可以是负的也可以是正的。我们不再考虑误差的值，而是考虑误差平方的值。进一步，我们通过平方取平均值计算所有数据点的均方误差（MSE）。
 
-| 质量 (KG) | 速度 (KM/h) | 动量 (KG*KM/h) | 对于 $\beta_0 = 5, \beta_1 = 5, \beta_2 = 5$ | 误差 | $E^2$ |
+| 质量 (KG) | 速度 (KM/h) | 动量 (KG*KM/h) | 对于 `β₀ = 5, β₁ = 5, β₂ = 5` | 误差 | `E²` |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2 | 20 | 42 | 115 | $M - \hat{M}$ | -73 | 5329 |
+| 2 | 20 | 42 | 115 | `M - M̂` | -73 | 5329 |
 | 4 | 100 | 403 | 525 | -122 | 14884 |
 | 5 | 50 | 245 | 280 | -35 | 1225 |
 | 8 | 60 | 477 | 345 | 132 | 17424 |
@@ -262,11 +199,11 @@ https://rebrand.ly/5j8ua05
 
 图 1.9：机器计算的误差
 
-现在，机器考虑 $\beta_0, \beta_1$ 和 $\beta_2$ 的其他值，使得 MSE 的值最小化。经过几轮计算，机器得到了以下 $\beta_0, \beta_1$ 和 $\beta_2$ 的值，如图 1.10 所示。（注：图 1.10 的文本在 OCR 中略有碎片，但表格紧随其后）。
+现在，机器考虑 `β₀`, `β₁` 和 `β₂` 的其他值，使得 MSE 的值最小化。经过几轮计算，机器得到了以下 `β₀`, `β₁` 和 `β₂` 的值，如图 1.10 所示。
 
-| 质量 (KG) | 速度 (KM/h) | 动量 (KG*KM/h) | 对于 $\beta_0 = 0, \beta_1 = 32.74260, \beta_2 = 2.50428593$ | 误差 | $E^2$ |
+| 质量 (KG) | 速度 (KM/h) | 动量 (KG*KM/h) | 对于 `β₀ = 0, β₁ = 32.74260, β₂ = 2.50428593` | 误差 | `E²` |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2 | 20 | 42 | 115 | $M - \hat{M}$ | -73.50749 | 5402.61 |
+| 2 | 20 | 42 | 115 | `M - M̂` | -73.50749 | 5402.61 |
 | 4 | 100 | 403 | 525 | -121.61831 | 14644.2 |
 | 5 | 50 | 245 | 288 | -43.52032 | 1894.05 |
 | 8 | 60 | 477 | 412.15262 | 64.68070 | 4183.59 |
@@ -274,10 +211,6 @@ https://rebrand.ly/5j8ua05
 | | | | 均方误差 = 3601.12 | |
 
 图 1.10：最小化 MSE 后的动量估计
-
-
-
-
 
 # 主掌握机器学习中的分类算法
 
@@ -320,6 +253,8 @@ https://rebrand.ly/5j8ua05
 
 表 1.1：垃圾邮件检测示例数据集
 
+
+
 在这个示例中，表 1.1 中的数据集仅包含 6 个数据点。在实际情况下，数据集拥有数千甚至数百万数据点。尽管如此，数据集包含 4 个变量：包含拼写错误、包含“Urgent”单词、“ASAP”单词以及包含可点击链接。在机器学习语言中，这些变量被称为独立变量（Independent Variables）。对于这四个变量，每个数据点都有数据。在正常情况下，专家会研究真实的邮件并为每封邮件收集这四个特征。除了收集有关邮件特征的数据，专家还会分配一个标签，说明邮件是良性的还是垃圾邮件。我们所指的标签变量在机器学习语言中也称为因变量（dependent variable）。
 
 在监督学习中，机器将在考虑相关因变量的情况下从独立变量中找到模式。从模式中产生一条规则，机器在给定新值时将使用该规则。前一个示例是机器需要判断邮件是良性还是垃圾邮件的分类问题。这种分类问题被称为二分类（Binary classification），因为机器必须在两个选项之间做出。还有需要在多个类别之间选择的分类问题，此类分类问题被称为多分类（Multi-class classification）。表 1.1 提供数据的分类实现如下：
@@ -360,7 +295,7 @@ lr.fit(XL, YL)
 testData = ['NO', 'YES', 'NO', 'YES']
 Xtest = leX.transform(testData)
 prediction = lr.predict(Xtest.reshape(1, -1))
-``` 
+```
 
 再看另一个例子。假设我们有某个城市（如班加罗尔）每年的气温。我们有三个属性：日期、当天是否多云以及当天的温度，如表 1.2 所示：
 
@@ -406,8 +341,6 @@ df = pd.DataFrame([['01-01-2001', 'YES', 14.3],
 columns = ['Date', 'Cloudy', 'Temperature'])
 ```
 
-
-
 ```python
 import datetime
 import numpy as np
@@ -422,6 +355,7 @@ df['DayOfYear'] = (pd.to_datetime(df['Date']) - referenceDate).days
 ### 将多云转换为数字
 lec = LabelEncoder()
 df['Cloudy'] = lec.fit_transform(df['Cloudy'])
+```
 
 | Date | Cloudy | Month | DayOfYear |
 |---|---|---|---|
@@ -436,9 +370,10 @@ df['Cloudy'] = lec.fit_transform(df['Cloudy'])
 | 8 | 01-09-2001 | 0 | 11.7 |
 | 9 | 01-10-2001 | 0 | 12.1 |
 
-X = df[['Month', 'DayOfYear', 'Cloudy']]
-y = df['Temperature']
+`X = df[['Month', 'DayOfYear', 'Cloudy']]`
+`y = df['Temperature']`
 
+```python
 from sklearn.ensemble import RandomForestRegressor
 from dateutil import parser
 
@@ -534,6 +469,7 @@ dRFM.drop(['MostRecentPurchase'], axis=1, inplace=True)
 print('Shape of Customer Data:', dRFM.shape)
 print(dRFM.head())
 ```
+
 Shape of Customer Data: (6, 4)
 
 ### 数据标准化
@@ -549,7 +485,7 @@ X = pd.DataFrame(X, columns=['Frequency', 'MonetaryValue', 'Recency'])
 X.head()
 ```
 
-| | Frequency | MonetaryValue | Recency |
+|  | Frequency | MonetaryValue | Recency |
 |---|---|---|---|
 | 0 | 0.47214 | -0.73948 | -0.48654 |
 | 1 | 1.788854 | 1.67405 | -0.793829 |
@@ -581,7 +517,9 @@ ax.set_ylabel('Frequency')
 ax.set_zlabel('Monetary Value')
 plt.show()
 ```
+
 ![](img/11af2c4c7dddfed06ed00851c0c6dfb_40_0.png)
+
 图 1.15: 客户数据的可视化
 
 ```python
@@ -597,6 +535,8 @@ kmeans.fit(X, y)
 ### 可视化
 np.random.seed(1968081)
 ```
+
+
 
 ```python
 fig = plt.figure(figsize=(15, 10))
@@ -626,9 +566,6 @@ for index, row in dfTemp.iterrows():
                int(row['CustomerID']), transform=trans_offset)
 ```
 
-
-
-
 在这个数据集中，我们有四个特征。我们将在不丢失信息的情况下将特征数量减少到2个。
 
 实现这一目标的一种方法是应用奇异值分解（SVD）。要了解更多关于SVD的信息，请参阅附录3。
@@ -651,10 +588,9 @@ df = pd.DataFrame([['NO', 'NO', 'NO', 'YES', 'Benign'],
 columns = ['ContainsSpellingMistakes', 'ContainsUrgent', 'ContainsASAP', 'ContainsLink', 'Label']
 ```
 
-```python
-df
+`df`
+
 ContainsSpellingMistakes ContainsUrgent ContainsASAP ContainsLink
-```
 
 | | ContainsSpellingMistakes | ContainsUrgent | ContainsASAP | ContainsLink | Label |
 |---|---|---|---|---|---|
@@ -672,8 +608,8 @@ y = df['Label']
 
 ```python
 print(X, '\n\n', y)
-ContainsSpellingMistakes ContainsUrgent ContainsASAP ContainsLink
 ```
+ContainsSpellingMistakes ContainsUrgent ContainsASAP ContainsLink
 
 | | ContainsSpellingMistakes | ContainsUrgent | ContainsASAP | ContainsLink |
 |---|---|---|---|---|
@@ -696,6 +632,7 @@ ContainsSpellingMistakes ContainsUrgent ContainsASAP ContainsLink
 ```
 
 Name: Label, dtype: object
+
 from sklearn.preprocessing import LabelEncoder
 
 ```python
@@ -708,6 +645,7 @@ yL = leY.fit_transform(y)
 
 ```python
 print(XL, '\n\n', yL)
+```
 ContainsSpellingMistakes ContainsUrgent ContainsASAP ContainsLink
 0 0 0 0 1
 1 0 0 0 0
@@ -715,7 +653,6 @@ ContainsSpellingMistakes ContainsUrgent ContainsASAP ContainsLink
 3 0 1 1 0
 4 1 0 0 1
 5 1 1 1 1
-```
 
 ```python
 from sklearn import decomposition
@@ -725,7 +662,6 @@ X = pca.transform(XL)
 X = pd.DataFrame(X, columns ['Feature1', 'Feature2'])
 ```
 
-```python
 Feature1 Feature2
 0 -0.569933 -0.580462
 1 -0.882814 -0.010497
@@ -733,7 +669,6 @@ Feature1 Feature2
 3 0.715967 -0.614335
 4 -0.295684 0.132684
 5 0.990216 0.098810
-```
 
 ```python
 import matplotlib.pyplot as plt
@@ -773,6 +708,7 @@ plt.show()
 ![](img/11af2c4c7dddfed06ed008516c0df6b_46.png)
 
 # 第二章
+
 ## 朴素贝叶斯算法
 
 在第一章机器学习简介中，我们讨论了机器可以执行的操作类型。我们强调了机器本质上是基于数学模型学习的。本章将讨论其中一种数学模型，即朴素贝叶斯算法。使用朴素贝叶斯算法，我们将开发一个用于垃圾邮件检测的机器学习模型。
@@ -806,7 +742,7 @@ plt.show()
 通过以下实验来理解概率：
 
 | 投掷次数 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
-|---|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|---|---|
 | 结果 | H | T | T | H | H | T | T | T | H |
 
 > **表 2.1:** 投掷十次的结果
@@ -853,6 +789,7 @@ plt.show()
 ```
 
 让我们为20次投掷运行上述函数。得到的结果如图2.1所示。运行相同命令时得到的结果可能会不同。
+
 probabilityOfHead(20)
 
 ![](img/11af2c4c7dddfed06ed008516c0df6b_51.png)
@@ -860,10 +797,6 @@ probabilityOfHead(20)
 图 2.2: 投掷硬币20次得到正面的概率
 
 ## 精通机器学习的分类算法
-
-
-
-
 
 让我们分别进行投掷 50、100、500 和 1000 次实验。得到的结果所示：
 
@@ -925,6 +858,7 @@ probabilityOfHead(20)
 我们可以通过另一个例子来理解这一点。假设事件 Y 是一个人购买的事件。X 是一个人可能考虑购买的事件。因此我们有：
 
 X = 人购买的事件
+
 Y = 人购买的事件
 
 所以，对于 P(X | Y)，我们想要找到事件 Y 发生的条件下事件 X 的条件概率。记得 P(X|Y) ≠ P(Y|X)。
@@ -956,13 +890,17 @@ P(X and Y) = P(X ∩ Y) = P(X,Y) = P(Y|X) * P(X)
 从表 2.4 中，我们得到：
 
 P(X = Female) = 165/346
+
 P(Y = Graduate) = 259/346
+
 P(Y|X) = 133/165
+
 P(X|Y) = 133/259
 
 然后，根据乘法法则，我们得到：
 
 P(X,Y) = 165/346 * 133/165 = 133/346
+
 P(Y,X) = 259/346 * 133/259 = 133 /346
 
 注意 P(X,Y) = P(Y,X)。
@@ -993,21 +931,19 @@ P(X|Y) = (P(X,Y))/(P(Y))
 
 图 2.6: 样本空间
 
+
+
 ![](img/11af2c4c7dddfed06ed008516c0c6df_57_0.png)
 
 图 2.7: 样本空间
 
-所以，A = B1 ∪ B2，或者 B1 和 B2 的并集。现在，B1 ∩ A 和 B2 ∩ A 是交集。我们可以得出：
+所以，`A = B1 ∪ B2`，或者 `B1` 和 `B2` 的并集。现在，`B1 ∩ A` 和 `B2 ∩ A` 是交集。我们可以得出：
 
-P(A) = P(B1) + P(B2)，因为 B1 和 B2 是互斥事件。
-
-
-
-
+`P(A) = P(B1) + P(B2)`，因为 `B1` 和 `B2` 是互斥事件。
 
 ### 贝斯定理 2
 
-假设 X 和 Y 是两个事件。那么，贝斯定理规定：
+假设 `X` 和 `Y` 是两个事件。那么，贝斯定理规定：
 
 ```
 $P(X|Y) = \frac{P(Y|X) \cdot P(X)}{P(Y)}$
@@ -1015,13 +951,13 @@ $P(X|Y) = \frac{P(Y|X) \cdot P(X)}{P(Y)}$
 
 我们将专注于贝斯定理中我们处理朴素贝叶斯（Naïve Bayes）算法所需的部分。
 
-注意，我们在贝斯定理中反转了需要寻找的内容。为了找到 $P(X|Y)$，我们将确定 $P(Y|X)$ 以及 $P(X)$ 和 $P(Y)$。这在很多情况下都是很有用的。让我们通过这个例子来理解。
+注意，我们在贝斯定理中反转了需要寻找的内容。为了找到 `$P(X|Y)$`，我们将确定 `$P(Y|X)$` 以及 `$P(X)$` 和 `$P(Y)$`。这在很多情况下都是很有用的。让我们通过这个例子来理解。
 
 我们考虑之前用于理解全概率定理的同一个例子。假设一个班级中有 40% 的女性。男性学生身高 6 英尺的概率是 20%，而女性学生身高 6 英尺的可能性是 1%。现在，假设我们观察到了一个身高 6 英尺的学生。我们想要确定这个 6 英尺的学生是女性的概率。
 
-我们认为 Y 是学生身高 6 英尺的事件。因此，$P(6') = P(Y)$。
+我们认为 `Y` 是学生身高 6 英尺的事件。因此，`$P(6') = P(Y)$`。
 
-同样，假设 $X_i$ 是学生为男性的事件，即 $P(Male) = P(X_i)$，$X_j$ 是学生为女性的事件，即 $P(Female) = P(X_j)$。我们知道：
+同样，假设 `$X_i$` 是学生为男性的事件，即 `$P(Male) = P(X_i)$`，`$X_j$` 是学生为女性的事件，即 `$P(Female) = P(X_j)$`。我们知道：
 
 ```
 $P(Female) = P(X_j) = 40\%$  $P(Male) = P(X_i) = 1 - P(Female) = 1 - P(X_j) = 60\%$
@@ -1031,7 +967,7 @@ $P(Female) = P(X_j) = 40\%$  $P(Male) = P(X_i) = 1 - P(Female) = 1 - P(X_j) = 60
 $P(6'|Male) = P(Y|X_i) = 20\%$ 和 $P(6'|Female) = P(Y|X_j) = 1\%$
 ```
 
-我们需要找到在学生身高 6 英尺的情况下，该学生为女性的概率。或者我们想要找到 $P(Female|6') = P(X_j|Y)$。
+我们需要找到在学生身高 6 英尺的情况下，该学生为女性的概率。或者我们想要找到 `$P(Female|6') = P(X_j|Y)$`。
 
 使用贝斯定理，我们知道：
 
@@ -1048,14 +984,14 @@ $P(Y) = P(Y|X_i) \cdot P(X_i) + P(Y|X_j) \cdot P(X_j)$
 因此，我们得到：
 
 ```
-$P(X_2|Y) = \frac{P(Y|X_2) \cdot P(X_2)}{P(X_1) \cdot P(X_1) + P(Y|X_2) \cdot P(X_2)}
+$P(X_2|Y) = \frac{P(Y|X_2) \cdot P(X_2)}{P(X_1) \cdot P(X_1) + P(Y|X_2) \cdot P(X_2)}$
 ```
 
 # 掌握机器学习分类算法
 
-需要注意的一点是，我们没有 P($X_2$ | Y) 的值。因此，我们可以通过反转需求来计算它的值。
+需要注意的一点是，我们没有 `P($X_2$ | Y)` 的值。因此，我们可以通过反转需求来计算它的值。
 
-所以，我们得到 $P(X_2 \mid Y) = \frac{1\%+40\%}{20\%-60\%+1\%+40\%} = 3.226\%$。
+所以，我们得到 `$P(X_2 \mid Y) = \frac{1\%+40\%}{20\%-60\%+1\%+40\%} = 3.226\%$`。
 
 注意，我们的基础知识是 6 英尺的学生中有 1% 是女性。当我们注意到一个学生身高 6 英尺时，我们关于该学生可能是女性的知识增加到了 3.226%。初始知识被称为**先验知识**（Prior knowledge）。在获得关于此的数据后获得的知识被称为**后验知识**（Posterior knowledge）。因此，我们也写成了贝斯定理，如**图 2.8** 所示：
 
@@ -1088,9 +1024,9 @@ P(Problem \mid NoMcAfee) = 1/20
 
 因此，根据全概率定理，
 
-P(Problem) = P(Problem|McAfee) * P(McAfee) + P(Problem|NoMcAfee) * P(NoMcAfee) = 1 / 10 * 1/3 + 1 / 20 * 2 / 3 = 1 / 30 + 1 / 30 = 2 / 30
+`P(Problem) = P(Problem|McAfee) * P(McAfee) + P(Problem|NoMcAfee) * P(NoMcAfee) = 1 / 10 * 1/3 + 1 / 20 * 2 / 3 = 1 / 30 + 1 / 30 = 2 / 30`
 
-所以，根据贝斯公式，McAfee 软件是问题导致概率 = P(McAfee|Problem) = 1/30+1/30=1/2=50%
+所以，根据贝斯公式，McAfee 软件是问题导致概率 = `P(McAfee|Problem) = 1/30+1/30=1/2=50%`
 
 这个贝叶斯分析表明，从所有服务器上卸载 McAfee 软件的决定可能不是最好的。相反，本可以隔离那台服务器并对其进行分析。
 
@@ -1108,7 +1044,7 @@ P(Problem) = P(Problem|McAfee) * P(McAfee) + P(Problem|NoMcAfee) * P(NoMcAfee) =
 
 > 表 2.5：用于垃圾邮件检测的示例数据集
 
-让我们对表 2.5 中的数据进行预处理，移除 me、at、6 AM、9111222222、my 和 can。移除的单词将不会影响垃圾邮件检测算法。我们的数据如表 2.6 所示：
+让我们对表 2.5 中的数据进行预处理，移除 `me`、`at`、`6 AM`、`9111222222`、`my` 和 `can`。移除的单词将不会影响垃圾邮件检测算法。我们的数据如表 2.6 所示：
 
 | 预处理后的消息文本 | 标签 |
 | :--- | :--- |
@@ -1140,16 +1076,13 @@ P(Problem) = P(Problem|McAfee) * P(McAfee) + P(Problem|NoMcAfee) * P(NoMcAfee) =
 
 所以，我们有了单词“please”出现在消息中的概率。让我们确定在消息中出现“please”的情况下，消息为正常的概率：
 
-> $P(Benign|please) = \frac{P(please|Benign) \cdot P(Benign)}{P(please)} = \frac{(2/3) \cdot (3/4)}{2/12} = 3/420 = 1/140$.
+> `$P(Benign|please) = \frac{P(please|Benign) \cdot P(Benign)}{P(please)} = \frac{(2/3) \cdot (3/4)}{2/12} = 3/420 = 1/140$`.
 
-
-
-
-现在，看到 $P(Benign | please) > P(Spam | please)$。因此，如果消息中包含“please”一词，那么该消息更有可能是良性的（Benign）。
+现在，看到 `$P(Benign | please) > P(Spam | please)$`。因此，如果消息中包含“please”一词，那么该消息更有可能是良性的（Benign）。
 
 我们设计了一种机制，根据消息中出现的特定单词来判断一条消息是良性的（Benign）还是垃圾邮件（Spam）。然而，一条消息会包含多个单词，每个单词的存在以及消息中单词的组合都可能导致消息成为良性或垃圾邮件。因此，我们需要完善我们的模型。
 
-在上面的示例中，我们确定了 $P(Spam | asap)$。假设消息除了“asap”之外还包含“call”。因此，我们需要找到 $P(Spam | call \text{ AND } asap)$，写作 $P(Spam | (call, asap))$。
+在上面的示例中，我们确定了 `$P(Spam | asap)$`。假设消息除了“asap”之外还包含“call”。因此，我们需要找到 `$P(Spam | call \text{ AND } asap)$`，写作 `$P(Spam | (call, asap))$`。
 
 根据贝叶斯定理，我们有：
 
@@ -1157,17 +1090,17 @@ P(Problem) = P(Problem|McAfee) * P(McAfee) + P(Problem|NoMcAfee) * P(NoMcAfee) =
 P(Spam|(call, asap)) = P((call,asap)|Spam)*P(Spam) / P(call,asap) --- eqA
 ```
 
-在这里，$P(call, asap)$ 是 $P(call \text{ AND } asap)$ 或 $P(call \text{ } asap)$。利用概率的乘法法则，我们知道：
+在这里，`$P(call, asap)$` 是 `$P(call \text{ AND } asap)$` 或 `$P(call \text{ } asap)$`。利用概率的乘法法则，我们知道：
 
 ```
 P(call, asap) = P(call | asap) * P(asap)
 ```
 
-我们知道 $P(asap)$。然而，为了计算 $P(call | asap)$，我们必须扫描所有存在“asap”的消息，然后查看“call”是否存在。对于少数单词来说，这可能是可能的。但我们的数据集通常包含数万个单词或单词组合。因此，在任何计算机上执行这些操作都是昂贵的。我们通过假设消息中每个单词的出现与其他任何单词的出现是独立的来简化我们的解决方案。这在现实中很少见。尽管如此，这个假设引导我们得到了合理的解决方案，称为朴素贝叶斯（Naïve Bayes theorem）。
+我们知道 `$P(asap)$`。然而，为了计算 `$P(call | asap)$`，我们必须扫描所有存在“asap”的消息，然后查看“call”是否存在。对于少数单词来说，这可能是可能的。但我们的数据集通常包含数万个单词或单词组合。因此，在任何计算机上执行这些操作都是昂贵的。我们通过假设消息中每个单词的出现与其他任何单词的出现是独立的来简化我们的解决方案。这在现实中很少见。尽管如此，这个假设引导我们得到了合理的解决方案，称为朴素贝叶斯（Naïve Bayes theorem）。
 
 ## 使用朴素贝叶斯定理检测垃圾邮件
 
-继续我们的示例，我们处于计算 $P((call | asap) \text{ and } (call, asap)|Spam)$ 的阶段。现在，如果我们考虑单词“call”在消息中出现的事件与单词“asap”在消息中出现的事件是独立的，那么我们就知道：
+继续我们的示例，我们处于计算 `$P((call | asap) \text{ and } (call, asap)|Spam)$` 的阶段。现在，如果我们考虑单词“call”在消息中出现的事件与单词“asap”在消息中出现的事件是独立的，那么我们就知道：
 
 ```
 P(call | asap) = P(call)
@@ -1177,45 +1110,45 @@ P(call | asap) = P(call)
 
 ## 朴素贝叶斯算法
 
-$P((call, asap) | Spam) = \frac{P((call, asap),Spam)}{P(Spam)} = \frac{P(call,Spam)+P(asap,Spam)}{P(Spam)}$
+`$P((call, asap) | Spam) = \frac{P((call, asap),Spam)}{P(Spam)} = \frac{P(call,Spam)+P(asap,Spam)}{P(Spam)}$`
 
-$\frac{[P(call|Spam)*P(Spam)][P(asap|Spam)*P(Spam)]}{P(Spam)}$
+`$\frac{[P(call|Spam)*P(Spam)][P(asap|Spam)*P(Spam)]}{P(Spam)}$`
 
-$P(call|Spam) * P(asap|Spam) * P(Spam)$
+`$P(call|Spam) * P(asap|Spam) * P(Spam)$`
 
-在方程 eqA 中进行此代换，我们得到：
+在方程 `eqA` 中进行此代换，我们得到：
 
-$P(Spam|(call, asap)) = \frac{P(call|Spam)*P(asap|Spam)*P(Spam)}{P(call,asap)} --- eqB$
+`$P(Spam|(call, asap)) = \frac{P(call|Spam)*P(asap|Spam)*P(Spam)}{P(call,asap)} --- eqB$`
 
-在朴素贝叶斯算法中，去掉方程 eqB 中的分母得到：
+在朴素贝叶斯算法中，去掉方程 `eqB` 中的分母得到：
 
-$P(Spam|(call, asap)) = P(call|Spam) * P(asap|Spam) * P(Spam) --- eqC$
+`$P(Spam|(call, asap)) = P(call|Spam) * P(asap|Spam) * P(Spam) --- eqC$`
 
-让我们泛化方程 eqC。设消息事件为事件 $X$。消息中单词的出现为事件 $A_{\mu_1}, A_{\mu_2}, ..., A_{\mu_n}$（这里考虑考虑消息中有 $n$ 个单词）。因此，eqC 可以写为：
+让我们泛化方程 `eqC`。设消息事件为事件 `$X$`。消息中单词的出现为事件 `$A_{\mu_1}, A_{\mu_2}, ..., A_{\mu_n}$`（这里考虑考虑消息中有 `n` 个单词）。因此，`eqC` 可以写为：
 
-$P(X|(A_{\mu_1}, A_{\mu_2}, ..., A_{\mu_n})) = P(A_1|X) * ... * P(A_{\mu_n}|X) * P(X) --- eqD$
+`$P(X|(A_{\mu_1}, A_{\mu_2}, ..., A_{\mu_n})) = P(A_1|X) * ... * P(A_{\mu_n}|X) * P(X) --- eqD$`
 
-方程 eqD 就是朴素贝叶斯定理。
+方程 `eqD` 就是朴素贝叶斯定理。
 
-使用朴素贝叶斯定理，让我们计算 $P(Spam|(call, asap))$。
+使用朴素贝叶斯定理，让我们计算 `$P(Spam|(call, asap))$`。
 
 从表 2.8 中我们得到
 
-$P(Spam|(call, asap)) = 1/5, P(asap|Spam) = 2/5$。
+`$P(Spam|(call, asap)) = 1/5, P(asap|Spam) = 2/5$`。
 
-我们知道 $P(Spam) = 2/5$。
+我们知道 `$P(Spam) = 2/5$`。
 
 因此，
 
-$P(Spam|(call, asap)) = (1/5) * (2/5) * (2/5) = 4/25$
+`$P(Spam|(call, asap)) = (1/5) * (2/5) * (2/5) = 4/25$`
 
-如果我们计算 $P(Benign|(call, asap))$，那么比较 $P(Benign|(call, asap))$ 和 $P(Spam|(call, asap))$。其中哪一个较大，在给定这两个单词出现在消息中的情况下，消息属于该类的概率就越大。将这种想法泛化到相同空间内事件 $X$ 的任意数量的事件 $A_{\mu_1}, A_{\mu_2}, ..., A_{\mu_n}$ 就是朴素贝叶斯。
+如果我们计算 `$P(Benign|(call, asap))$`，那么比较 `$P(Benign|(call, asap))$` 和 `$P(Spam|(call, asap))$`。其中哪一个较大，在给定这两个单词出现在消息中的情况下，消息属于该类的概率就越大。将这种想法泛化到相同空间内事件 `$X$` 的任意数量的事件 `$A_{\mu_1}, A_{\mu_2}, ..., A_{\mu_n}$` 就是朴素贝叶斯。
 
 ## 贝叶斯的变体
 
-朴素贝叶斯算法可用于二分类（即分为两类）或多分类。这些贝叶斯算法的变体在 Scikit-Learn 库中可用。让我们讨论这些实现：
+朴素贝叶斯算法可用于二分类（即分为两类）或多分类。这些贝叶斯算法的变体在 `Scikit-Learn` 库中可用。让我们讨论这些实现：
 
-- 离散变量可以假设有限数量的值。例如，如果一个变量可以假设 [0, 1]，那么它是离散的，因为值的数量是的。离散变量也是分类变量。
+- 离散变量可以假设有限数量的值。例如，如果一个变量可以假设 `[0, 1]`，那么它是离散的，因为值的数量是的。离散变量也是分类变量。
 - 连续变量是假设无限数量值的变量。例如，如果一个变量可以假设任何自然数，它就是连续变量。只有当目标变量（或依赖变量）是离散的时，我们才能进行分类。如果目标变量是连续的，我们只能进行回归。
 
 ## 伯努利朴素贝叶斯
@@ -1224,7 +1157,7 @@ $P(Spam|(call, asap)) = (1/5) * (2/5) * (2/5) = 4/25$
 
 ## 多项朴素贝叶斯
 
-多项朴素贝叶斯允许分类两个或多个类。如果独立变量是分类的或连续的，多项朴素贝叶斯工作良好。如果使用像 TF-IDF Vectorizers 和 Count Vectorizers 来创建独立变量，这种变体在文本数据上的效果优于其他变体。有关向量器的细节请参考附录 6。
+多项朴素贝叶斯允许分类两个或多个类。如果独立变量是分类的或连续的，多项朴素贝叶斯工作良好。如果使用像 `TF-IDF Vectorizers` 和 `Count Vectorizers` 来创建独立变量，这种变体在文本数据上的效果优于其他变体。有关向量器的细节请参考附录 6。
 
 ## 互补朴素贝叶斯
 
@@ -1246,10 +1179,7 @@ $P(Spam|(call, asap)) = (1/5) * (2/5) * (2/5) = 4/25$
 $P(X_i|Y) = \frac{1}{\sqrt{2\pi\sigma_y^2}} e^{-\frac{(x_i-\mu_y)^2}{2\sigma_y^2}}$
 ```
 
-其中 $\mu_y$ 和 $\sigma_y$ 是目标类的均值和标准差。高斯朴素贝叶斯实现用于所有独立变量都是连续的且从正态分布的情况。注意：如果分布围绕均值均匀分布并形成钟形曲线，则该分布为正态分布。图 2.1、2.2、2.3、2.4 和 2.5 中的分布是正态分布的。
-
-
-
+其中 `$\mu_y$` 和 `$\sigma_y$` 是目标类的均值和标准差。高斯朴素贝叶斯实现用于所有独立变量都是连续的且从正态分布的情况。注意：如果分布围绕均值均匀分布并形成钟形曲线，则该分布为正态分布。图 2.1、2.2、2.3、2.4 和 2.5 中的分布是正态分布的。
 
 ## 朴叶贝斯算法 49
 
@@ -1262,7 +1192,7 @@ $P(X_i|Y) = \frac{1}{\sqrt{2\pi\sigma_y^2}} e^{-\frac{(x_i-\mu_y)^2}{2\sigma_y^2
 
 [5572 行 x 5 列]
 
-如果数据框上传正确，你会发现该数据框有 5 列和 5572 行。列名应该为 v1, v2, Unnamed: 2, Unnamed: 3 和 Unnamed: 4。列 v2 包含短信文本，而列 v1 包含标签，对应 v2 列中的短信文本是垃圾短信（Spam）还是正常短信（Good）。我们只需要 v1 和 v2 列。因此，我们首先保留 v1 和 v2 列。
+如果数据框上传正确，你会发现该数据框有 5 列和 5572 行。列名应该为 `v1`, `v2`, `Unnamed: 2`, `Unnamed: 3` 和 `Unnamed: 4`。列 `v2` 包含短信文本，而列 `v1` 包含标签，对应 `v2` 列中的短信文本是垃圾短信（Spam）还是正常短信（Good）。我们只需要 `v1` 和 `v2` 列。因此，我们首先保留 `v1` 和 `v2` 列。
 
 ```python
 df = df[['v1', 'v2']]
@@ -1277,7 +1207,7 @@ df.head()
 | 3 ham | U say so early hour... U already then say... |
 | 4 ham | Nah I don't think he goes to us, lives aro... |
 
-列 v2 是我们的自变量，列 v1 是因变量。让我们查看列 v1 列中的唯一值：
+列 `v2` 是我们的自变量，列 `v1` 是因变量。让我们查看列 `v1` 列中的唯一值：
 
 ```python
 # Checking the unique values in the column v1 in the data frame
@@ -1285,7 +1215,7 @@ df.v1.unique()
 array(['ham', 'spam'], dtype=object)
 ```
 
-注意列 v1 有 ham 和 spam 值。在这里，ham 表示对应的短信是正常的，而 spam 表示对应的短信是垃圾短信。
+注意列 `v1` 有 `ham` 和 `spam` 值。在这里，`ham` 表示对应的短信是正常的，而 `spam` 表示对应的短信是垃圾短信。
 
 让我们检查数据集中这两种类型的数据有多少个。
 
@@ -1298,7 +1228,9 @@ Name: v1, dtype: int64
 
 我们看到数据集需要进行平衡，因为正常短信的数量几乎是垃圾短信数量的七倍。
 
-列 v1（我们的因变量）包含文本 'ham' 或 'spam'。然而，我们知道计算机无法理解 v1 列中提供的任何文本。因此，我们需要将 v1 列的内容转换为数字。我们将使用 Label Encoder（标签编码器）将 v1 列中的值编码为数字。Label Encoder 会提取列中的唯一值并分配从 0 开始到 (n-1) 的值，其中 n 是该列中唯一值的数量。要了解更多关于编码器的信息，请参考附录 7。
+列 `v1`（我们的因变量）包含文本 'ham' 或 'spam'。然而，我们知道计算机无法理解 `v1` 列中提供的任何文本。因此，我们需要将 `v1` 列的内容转换为数字。我们将使用 `Label Encoder`（标签编码器）将 `v1` 列中的值编码为数字。`Label Encoder` 会提取列中的唯一值并分配从 0 开始到 `(n-1)` 的值，其中 `n` 是该列中唯一值的数量。要了解更多关于编码器的信息，请参考附录 7。
+
+
 
 ```python
 from sklearn.preprocessing import LabelEncoder
@@ -1317,9 +1249,9 @@ print("Unique values of the column 'label'", df.label.unique())
 | 3 ham | U say so early hour... U already then say... |
 | 4 ham | Nah I don't think he goes to us, lives aro... |
 
-列 "label" 的唯一值 [0 1]
+列 `label` 的唯一值 [0 1]
 
-我们将 v2 列的内容赋给变量。X 将是我们的自变量。我们将 label 列的内容赋给变量。Y 将是我们的因变量。
+我们将 `v2` 列的内容赋给变量。`X` 将是我们的自变量。我们将 `label` 列的内容赋给变量。`Y` 将是我们的因变量。
 
 ```python
 X = df['v2']
@@ -1338,6 +1270,7 @@ print("Number of data points in the test set = %d" % (X_test.shape[0]))
 ```
 
 训练集的数据点数量为 5014
+
 测试集的数据点数量为 558
 
 `train_test_split()` 返回数据集。我们将这些数据集捕获在变量 `X_train`, `X_test`, `y_train` 和 `y_test` 中。`X_train` 包含了原始数据集 90% 的自变量，`y_train` 是其对应的因变量。`X_test` 包含了剩余 10% 的自变量，`y_test` 是其对应的因变量。
@@ -1356,9 +1289,9 @@ print("Number of data points in the test set = %d" % (X_test.shape[0]))
 - 数字
 - 多余空格
 
-在上述类别中，URL 是特殊类别。通常，垃圾短信包含一些 URL。由于我们无法让计算机从 URL 推断，我们将在 dataframe 中创建一个列，如果 X 中存在 URL 则值为 1，否则为 0。让我们先执行此操作。
+在上述类别中，URL 是特殊类别。通常，垃圾短信包含一些 URL。由于我们无法让计算机从 URL 推断，我们将在 dataframe 中创建一个列，如果 `X` 中存在 URL 则值为 1，否则为 0。让我们先执行此操作。
 
-## 检测文本中是否存在 URL
+### 检测文本中是否存在 URL
 
 让我们写一个函数来检测提供的中是否存在一个或多个 URL。如果存在一个或多个 URL，函数返回 1 并从文本中移除 URL。如果文本不包含短信，函数应返回 0。
 
@@ -1376,14 +1309,16 @@ def identifyAndRemoveURLs(text):
 让我们测试这个函数。`identifyAndRemoveURLs("Click this link to register -")`
 
 print('Example 1:', identifyAndRemoveURLs('https://www.fake.com OR this link for information - http://info.org or download this file:/test.txt'))
+
 print('Example 2:', identifyAndRemoveURLs('This contains no URLs'))
 
 Example 1: ('Click this link to register - OR this link for information - or download this file - ', 1)
+
 Example 2: ('This contains no URLs', 0)
 
 ## 朴叶贝斯算法 53
 
-我们将此函数应用于训练数据集并移除文本中所有的 URL。此外，让我们创建一个新的 Series URLPresent，它分别包含 1 或 0。一旦我们将 `X_train` 转换为 TF-IDF，我们将添加 `URLPresent` 以形成训练数据。
+我们将此函数应用于训练数据集并移除文本中所有的 URL。此外，让我们创建一个新的 Series `URLPresent`，它分别包含 1 或 0。一旦我们将 `X_train` 转换为 TF-IDF，我们将添加 `URLPresent` 以形成训练数据。
 
 ```python
 URLPresent = pd.Series([identifyAndRemoveURLs(text)[1] for text in X_train])
@@ -1398,9 +1333,13 @@ print('\n Present Indicator:\n', URLPresent.head())
 新文本：
 
 0 LookMe!: Thanks for your purchase of a video
+
 1 Aight, I'll hit you when I get some cash
+
 2 Donno whats you plan?
+
 3 Going to take your babe out
+
 4 No need de phone card.
 
 ```
@@ -1471,10 +1410,6 @@ def cleanData(text):
     return text
 ```
 
-
-
-
-
 # 朴素贝叶斯算法 55
 
 现在我们的函数已经准备就绪，我们将把此函数应用到输入数据上。目前我们只处理 **X_train** 数据集中的文本，因为这是我们用于训练模型的数据。
@@ -1494,6 +1429,7 @@ X_train.head()
 3 going take babe
 4 need lar jus testing e phone card dunno networ...
 ```
+
 dtype: object
 
 # 构建 TF-IDF（将文本转换为数字）
@@ -1517,7 +1453,7 @@ Shape of transformed Training Data: (5014, 87653)
 
 # 掌握机器学习分类算法
 
-我们看到最初有一列包含所有文本。在通过 TfidfVectorizer 转换后，我们现在有了 87653 列。
+我们看到最初有一列包含所有文本。在通过 `TfidfVectorizer` 转换后，我们现在有了 87653 列。
 
 让我们看看转换后的数据看起来什么样。
 
@@ -1540,7 +1476,7 @@ dfTrain
 ```
 
 | | joys | joys father | father ans_11 |
-|---|---|---|---|---|
+|---|---|---|---|
 | 0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | 1 | 0.0 | 0.0 | 0.0 | 0.0 |
 | 2 | 0.0 | 0.0 | 0.0 | 0.0 |
@@ -1592,7 +1528,7 @@ dfTrain
 | 5012 | 0.0 | 0.0 | 0.0 | 0.0 |
 | 5013 | 0.0 | 0.0 | 0.0 | 0.0 |
 
-[5014 行 x 87653 列] 在上面的帧中，我们将添加系列 URLPresent，表示文本是否包含 URL：
+[5014 行 x 87653 列] 在上面的帧中，我们将添加系列 `URLPresent`，表示文本是否包含 URL：
 
 ```python
 dfTrain['URLPresent'] = URLPresent
@@ -1603,29 +1539,42 @@ dfTrain.head()
 |---|---|---|---|---|
 | 0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | 1 | 0.0 | 0.0 | 0.0 | 0.0 |
+
+
+
 | 2 | 0.0 | 0.0 | 0.0 | 0.0 |
+
 | 3 | 0.0 | 0.0 | 0.0 | 0.0 |
+
 | 4 | 0.0 | 0.0 | 0.0 | 0.0 |
 
 | | _11 finish buying | _11 submitting | _11 submitting da | _11 submitting project |
+
 |---|---|---|---|---|
+
 | 0 | 0.0 | 0.0 | 0.0 | 0.0 |
+
 | 1 | 0.0 | 0.0 | 0.0 | 0.0 |
+
 | 2 | 0.0 | 0.0 | 0.0 | 0.0 |
+
 | 3 | 0.0 | 0.0 | 0.0 | 0.0 |
+
 | 4 | 0.0 | 0.0 | 0.0 | 0.0 |
 
 | | zoom cine actually | zoom cine tonight | zouk nichols parisfree | zouk nichols parisfree |
+
 |---|---|---|---|---|
+
 | 0 | 0.0 | 0.0 | 0.0 | 0.0 |
+
 | 1 | 0.0 | 0.0 | 0.0 | 0.0 |
+
 | 2 | 0.0 | 0.0 | 0.0 | 0.0 |
+
 | 3 | 0.0 | 0.0 | 0.0 | 0.0 |
+
 | 4 | 0.0 | 0.0 | 0.0 | 0.0 |
-
-
-
-
 
 ## 检查模型的训练准确率
 
@@ -1658,10 +1607,15 @@ X_test = X_test.str.lower()
 X_test = X_test.apply(cleanData)
 X_test.head())
 ```
+
 0 funny fact nobody telocanoes erupt tsun...
+
 1 sent scores sophas secondary application schoo...
+
 2 know someone how fannies find pobox lhb p
+
 3 promise getting soon youll text morning let kn...
+
 4 congratulations ur awarded either cd gift vouc...
 
 dtype: object
@@ -1711,6 +1665,7 @@ print("Test Accuracy = %5.5f" % (metrics.accuracy_score(y_test))
 ```
 
 Test Accuracy = 0.97491
+
 所以，模型的测试准确率为97.491%。
 
 ## 使用我们的模型进行预测
@@ -1765,25 +1720,32 @@ array(['ham'], dtype=object)
 testSMS = "You won the lottery. Click this link http://fake.com as soon as possible"
 ```
 
-
-
-
-
 ### K-近邻算法
 
 在表 3.1 中，针对客户类别。与每个客户关联的标签是零售商店专家（数据来源处）分配的某些分类形式。几乎所有公司都试图将其客户分为不同的类别，以便进行各种分析，例如为不同类别的客户规划合适的促销活动、为不同客户制定新的定价策略、规划新产品/品牌等。
 
 | 客户 ID | 上次发票日期 | 总金额 (Rs.) | 客户类别 |
+
 |---|---|---|--|
+
 | A1 | 29-Aug-2022 | 1,500 | A |
+
 | A2 | 29-Sep-2022 | 1,000 | A |
+
 | A3 | 31-Aug-2022 | 6,000 | B |
+
 | A4 | 12-Sep-2022 | 1,100 | A |
+
 | A5 | 02-Oct-2022 | 1,250 | A |
+
 | A6 | 20-Aug-2022 | 2,000 | A |
+
 | A7 | 20-Sep-2022 | 5,500 | B |
+
 | A8 | 20-Sep-2022 | 1,000 | A |
+
 | A9 | 22-Sep-2022 | 2,000 | A |
+
 | A10 | 09-Sep-2022 | 5,000 | B |
 
 > 表 3.1: 某零售商店的发票数据
@@ -1801,16 +1763,27 @@ testSMS = "You won the lottery. Click this link http://fake.com as soon as possi
 为了计算最近性，我们需要考虑一个参考日期。假设我们的参考日期是 09-Oct-2022。我们将计算每个客户的最近性，即参考日期与上次发票日期之间的差值。结果所示表 3.2。
 
 | 客户 ID | 上次发票日期 | 最近性 | 总金额 (Rs.) | 客户类别 |
+
 |---|---|---|---|--|
+
 | A1 | 29-Aug-2022 | 41 | 1,500 | A |
+
 | A2 | 29-Sep-2022 | 10 | 1,000 | A |
+
 | A3 | 31-Aug-2022 | 39 | 6,000 | B |
+
 | A4 | 12-Sep-2022 | 27 | 1,100 | A |
+
 | A5 | 02-Oct-2022 | 7 | 1,250 | A |
+
 | A6 | 20-Aug-2022 | 50 | 2,000 | A |
+
 | A7 | 20-Sep-2022 | 19 | 5,500 | B |
+
 | A8 | 20-Sep-2022 | 19 | 1,000 | A |
+
 | A9 | 22-Sep-2022 | 17 | 2,000 | A |
+
 | A10 | 09-Sep-2022 | 30 | 5,000 | B |
 
 表 3.2: 以 09-Oct-2022 为参考日期计算的最近性
@@ -1822,15 +1795,19 @@ testSMS = "You won the lottery. Click this link http://fake.com as soon as possi
 现在，假设我们有一个新客户需要分析，并且知道其上次发票日期和总金额。假设该客户 ID 为 C1，上次发票日期是 25-Sep-2022，该客户购买的总金额为 7,000 Rs。从上述数据，我们可以计算该客户的最近性。因此，客户 C1 的最近性 = (09-Oct-2022 – 25-Sep-2022) = 14 天。我们在表 3.3 中显示：
 
 | 客户 ID | 上次发票日期 | 最近性 | 总金额 (Rs.) | 客户类别 |
+
 |---|---|---|---|---|
+
 | C1 | 25-Sep-2022 | 14 | 7,000 | |
 
 ### K-近邻算法
 
 为了确定 C1 的“客户类别”，我们将找到它与表 3.2 中提供的所有其他数据点的距离。我们知道二维数据点 $(x_i, y_i)$ 和 $(x_j, y_j)$ 之间的欧式距离定义为：
+
 $$\sqrt{(x_i - x_j)^2 + (y_i - y_j)^2}$$
 
 使用此公式，我们可以考虑“最近性”作为 $x$，“金额”作为 $y$ 来找到每个客户之间的距离。因此，C1 和 A1 之间的欧式距离可以计算为：
+
 $$\sqrt{(14 - 41)^2 + (7000 - 1500)^2} = \sqrt{(-27)^2 + (5500)^2} = \sqrt{729 + 30250000} = \sqrt{30250729} \approx 5500.066$$
 
 然而，我们注意到欧式距离计算严重偏于“金额”值，因为“金额”值远大于“最近性”值。为了解决这个问题，我们需要对数据进行标准化。
@@ -1838,26 +1815,41 @@ $$\sqrt{(14 - 41)^2 + (7000 - 1500)^2} = \sqrt{(-27)^2 + (5500)^2} = \sqrt{729 +
 ### 数据标准化
 
 为了标准化数据，我们可以找到每个数据点的 $z$ 值。可以使用公式找到：
+
 $$z = \frac{x-\mu}{\sigma}$$
+
 在这里，$x$ 是数据点，$\mu$ 是平均值，$\sigma$ 是标准差。让我们从实践角度理解这一点。让我们取“最近性”属性。对于所有数据点，我们可以找到平均值：
+
 $$\mu_{Recency} = \frac{\sum_{i=1}^{n} x_i}{n} = \frac{41+10+39+27+7+50+19+19+17+30}{10} = \frac{259}{10} = 25.9$$
 
 现在，我们可以找到“最近性”数据点的标准差：
+
 $$\sigma_{Recency} = \sqrt{\frac{\sum_{i=1}^{n}(x_i-\mu)^2}{n}} = \sqrt{\frac{(41-25.9)^2+(10-25.9)^2+\dots+(30-25.9)^2}{10}} \approx 13.5$$
 
 现在，我们可以按照表 3.4 所示计算“最近性”的标准值：
 
 | 客户 ID | 最近性 | 标准最近性 | 总金额 (Rs.) | 客户类别 |
+
 |---|---|---|---|---|
+
 | A1 | 41 | (41 - 25.9) / 13.35 = 1.13 | 1,500 | A |
+
 | A2 | 10 | (10 - 25.9) / 13.35 = -1.19 | 1,000 | A |
+
 | A3 | 39 | 0.98 | 6,000 | B |
+
 | A4 | 27 | 0.08 | 1,100 | A |
+
 | A5 | 7 | -1.42 | 1,250 | A |
+
 | A6 | 50 | 1.80 | 2,000 | A |
+
 | A7 | 19 | -0.52 | 5,500 | B |
+
 | A8 | 19 | -0.52 | 1,000 | A |
+
 | A9 | 17 | -0.67 | 2,000 | A |
+
 | A10 | 30 | 0.31 | 5,000 | B |
 
 表 3.4: 标准最近性的计算
@@ -1867,27 +1859,41 @@ $$\sigma_{Recency} = \sqrt{\frac{\sum_{i=1}^{n}(x_i-\mu)^2}{n}} = \sqrt{\frac{(4
 接下来，让我们标准化“总金额”的值。我们可以像“最近性”一样找到“总金额”的 $\mu$ 和 $\sigma$ 值。由你来进行计算。我们将得到 $\mu_{TotalAmount} = 2,635$ 和 $\sigma_{TotalAmount} = 1,919.38$。因此，我们按照表 3.5 所示计算标准“总金额”值：
 
 | 客户 ID | 最近性 | 标准最近性 | 总金额 (Rs.) | 标准金额 | 客户类别 |
+
 |---|---|---|---|---|---|
+
 | A1 | 41 | 1.13 | 1,500 | -0.59 | A |
+
 | A2 | 10 | -1.19 | 1,000 | -0.85 | A |
+
 | A3 | 39 | 0.98 | 6,000 | 1.75 | B |
+
 | A4 | 27 | 0.08 | 1,100 | -0.80 | A |
+
 | A5 | 7 | -1.42 | 1,250 | -0.72 | A |
+
 | A6 | 50 | 1.80 | 2,000 | -0.33 | A |
+
 | A7 | 19 | -0.52 | 5,500 | 1.49 | B |
+
+
+
 | A8 | 19 | -0.52 | 1,000 | -0.85 | A |
+
 | A9 | 17 | -0.67 | 2,000 | -0.33 | A |
+
 | A10 | 30 | 0.31 | 5,000 | 1.23 | B |
 
-表 3.5: 标准化金额计算
+### 表 3.5: 标准化金额计算
 
 为了确定 C1 的“客户类别”，我们将找到它与表 3.6 中提供的所有其他标准化数据的距离。我们使用标准化后的值来计算 C1 和其他客户之间的距离：
+
 $$\sqrt{(-0.89 - 1.13)^2 + (2.27 - (-0.59))^2} = \sqrt{(-2.02)^2 + (2.86)^2} = \sqrt{4.0804 + 8.1796} = \sqrt{12.26} \approx 3.51$$
 
-表 3.6: 标准化数据
+### 表 3.6: 标准化数据
 
 | 客户 ID | 最近性 | 标准最近性 | 总金额 (Rs.) | 标准金额 | 距离 C1 | 客户类别 |
-|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|
 | A1 | 41 | 1.13 | 1,500 | -0.59 | 3.51 | A |
 | A2 | 10 | -1.19 | 1,000 | -0.85 | 3.14 | A |
 | A3 | 39 | 0.98 | 6,000 | 1.75 | 1.94 | B |
@@ -1899,10 +1905,6 @@ $$\sqrt{(-0.89 - 1.13)^2 + (2.27 - (-0.59))^2} = \sqrt{(-2.02)^2 + (2.86)^2} = \
 | A9 | 17 | -0.67 | 2,000 | -0.33 | 3.29 | A |
 | A10 | 30 | 0.31 | 5,000 | 1.23 | 2.11 | B |
 
-
-
-
-
 ## 74 精通机器学习的分类算法
 
 | 客户 ID | 最近消费度 (Recency) | 标准化最近消费度 | 总金额 (卢比) | 标准化总金额 | 与 C1 的距离 | 客户类别 |
@@ -1913,9 +1915,6 @@ $$\sqrt{(-0.89 - 1.13)^2 + (2.27 - (-0.59))^2} = \sqrt{(-2.02)^2 + (2.86)^2} = \
 | A10 | 30 | 0.31 | 5,000 | 1.23 | 1.59 | B |
 
 表 3.7：计算新数据点与现有数据点之间的分类距离
-
-
-
 
 ## 最近邻算法
 
@@ -1966,11 +1965,11 @@ print("Shape of X_test =", X_test.shape)
 print("\nDistribution of labels in X_train\n")
 ```
 
-X_train 的形状 (3466, 3)
+`X_train` 的形状 (3466, 3)
 
-X_test 的形状 (867, 3)
+`X_test` 的形状 (867, 3)
 
-X_train 中的标签分布：
+`X_train` 中的标签分布：
 
 ```
 0 1358
@@ -2025,7 +2024,7 @@ print("Shape of X after oversampling =", X0.shape)
 Name: Segment, dtype: int64
 ```
 
-过采样后 X 的形状 = (16296, 3)
+过采样后 `X` 的形状 = (16296, 3)
 
 ## 学习分类算法
 
@@ -2137,10 +2136,6 @@ print(accuracy_score(y_test, y_pred_res))
 
 性能应该在少数类上得到提高。
 
-
-
-
-
 ## K-最近邻算法
 
 去重前：(27096, 8)
@@ -2148,6 +2143,7 @@ print(accuracy_score(y_test, y_pred_res))
 去重后：(27082, 8)
 
 我们看到有 14 条记录是重复的。
+
 数据包含了所有发票的记录。当在线零售商在发生销售、订单取消或对之前的销售进行调整时，会开具发票。取消订单的发票号以“C”开头，调整的发票号以“A”开头。常规销售的发票号仅包含数字。在（我们目前的语境）下，我们不需要已取消和调整的发票的数据。因此，我们将删除所有在取消和调整发票之前的之前的记录。
 
 ```python
@@ -2181,6 +2177,8 @@ print("Before Dropping Invoice with Negative Quantity", dfLive.shape)
 dfLive = dfLive[dfLive.Quantity > 0]
 ```
 
+
+
 ```python
 print("After Dropping Invoice with Negative Quantity", dfLive.shape)
 Before Dropping Invoice with Negative Quantity: (26591, 8)
@@ -2204,9 +2202,10 @@ for stockcode in dfTemp.StockCode ]
 dfLive = dfLive[dfLive.StockCode == 'Keep'] # 注意：此处代码逻辑似乎可能有误，应为类型判断，但保持原样
 dfLive.drop('StockCodeType', axis = 1, inplace = True)
 ```
+
 *(注：原文代码中存在逻辑小瑕疵，如后文 `After Dropping Invalid Stock Codes` 逻辑未完全体现，此处翻译注释部分。)*
 
-最后，我们将创建一个新列来存储发票的价值。发票价值是销售物品的数量乘以该发票应用于该物品的单价。我们将发票价值存储在一个标题为 'TotalAmount'的新列中。
+最后，我们将创建一个新列来存储发票的价值。发票价值是销售物品的数量乘以该发票应用于该物品的单价。我们将发票价值存储在一个标题为 `TotalAmount` 的新列中。
 
 ### 创建一个存储发票金额的列
 
@@ -2276,7 +2275,7 @@ dfCustomerDF.head()
 | 3 | 12353.0 | 2 | 59.70 | 2011-05-19 17:47:00 |
 | 4 | 12354.0 | 3 | 41.35 | 2011-04-21 13:11:00 |
 
-我们拥有每个客户的发票总和，位于 "MonetaryValue" 列。我们拥有每个客户的最后一次发票日期，位于 "MostRecentPurchase" 列。
+我们拥有每个客户的发票总和，位于 `MonetaryValue` 列。我们拥有每个客户的最后一次发票日期，位于 `MostRecentPurchase` 列。
 
 现在我们有了频率和货币价值的值。我们只需要为每个客户建立最近性（Recency）值。为了计算最近性，通常我们会考虑一个参考日期。然而，由于这些数据比较旧（现在是 2022 年，而数据是 2011 年），我们将所有客户最大的发票日期作为参考日期。
 
@@ -2291,9 +2290,6 @@ dfCustomerDF.head()
 | 12347.0 | 11 | 218.20 | 146 |
 | 12348.0 | 1 | 41.76 | 348 |
 
-
-
-
 分段可以按照模型分配的方式分配给客户：
 
 ```python
@@ -2303,7 +2299,7 @@ dfCustomerDF.head()
 ```
 
 | CustomerID | Frequency | MonetaryValue | Recency | Segment |
-|---|---|---|---|---|---|
+|---|---|---|---|---|
 | 0 | 12347.0 | 218.20 | 2 | 0 |
 | 1 | 12348.0 | 1 | 41.76 | 318 | 10 |
 | 2 | 12349.0 | 5 | 112.54 | 18 | 0 |
@@ -2347,7 +2343,7 @@ plt.show()
 - KNN算法可以用于分类和回归。
 - 在KNN算法中，我们找到数据点之间的距离，并根据最近邻居的类别分配类别。
 - 我们可以使用欧几里得距离（Euclidean distance）、曼哈顿距离（Manhattan distance）或汉明距离（Hamming distance）来寻找数据点之间的距离。
-- KNeighborsClassifier是sklearn.neighbors包中的类，它实现了用于分类的KNN算法。
+- `KNeighborsClassifier`是`sklearn.neighbors`包中的类，它实现了用于分类的KNN算法。
 
 ## 加入我们书籍的Discord社区
 
@@ -2358,7 +2354,8 @@ https://discord.bpbonline.com
 ![](img/11af2c4c7dddfed06ed008516c0c6dfb_111_0.png)
 
 ## 第4章
- 逻辑回归
+
+逻辑回归
 
 逻辑回归算法是解决分类问题的最早的算法之一。算法名称中的“回归”（Regression）一词可能会引起误解，因为这这是一个解决回归问题的算法。第一章《机器学习导论》讨论了当输出变量是连续的时，机器学习模型是为了解决回归问题而建立的。当输出变量是类别时，机器学习模型是为了解决分类问题而建立的。在逻辑回归中，采用线性回归算法的形式，我们估计某个类别出现的概率。由于概率是0到1之间的数字，逻辑回归算法输出的是0到1之间的数字。通过设置一个像0.5这样的阈值，我们可以说，如果逻辑回归算法的输出小于阈值，则它属于一类；如果大于阈值，则属于另一类。
 
@@ -2434,7 +2431,7 @@ $y = \beta_0 + \beta_1 x_1 + \beta_2 x_2$
 为了计算$y$的值，机器拥有$A^2$和$B^2$的值。因此，机器需要计算$\beta_0, \beta_1$的值，并通过与实际的$y$值进行比较，比较估计的合理性。科学家提供了$\beta_0, \beta_1$和$\beta_2$的初始值为2、2和2。因此，机器估计了$C$的值，如图4.5所示：
 
 | 工程化特征 | 工程化目标 | $\beta_0=2, \beta_1=2, \beta_2=2$ 时的估计 | C的估计 |
-|---|---|---|---|---|
+|---|---|---|---|
 | $x_1=A^2$ | $x_2=B^2$ | $y=C^2$ | $\hat{y}=\hat{\beta}_0 + \hat{\beta}_1 x_1 + \hat{\beta}_2 x_2$ | $\hat{y}=\text{sort}(\hat{y})$ |
 | 16 | 4 | 19.8025 | 42 | 492.73 |
 | 36 | 36 | 72.25 | 146 | 5439.06 |
@@ -2471,8 +2468,6 @@ $y = \beta_0 + \beta_1 x_1 + \beta_2 x_2$
 
 我们已经确定必须最小化MSE。因此，机器计算所有平方误差的平均值，即所有的这被称为均方误差（MSE）。让我们来写下MSE的公式：
 
-
-
 # MSE = $\frac{1}{m} \sum_{i=1}^m (\overline{y}_i - y_i)^2$
 
 这里，$m$ 是数据集中数据点的数量。
@@ -2499,6 +2494,8 @@ $J = \frac{1}{m} \sum_{i=1}^m ((\beta_0 + \beta_1x_1 + \beta_2x_2) - y_i)^2$
 
 我们可以将代价写为 $\beta$ 的函数。
 
+
+
 ```
 $J = f(\beta_{\mu}, \beta_{\nu}, \beta_{\zeta})$
 ```
@@ -2513,9 +2510,9 @@ $J = f(\beta_{\mu}, \beta_{\nu}, \beta_{\zeta})$
 
 ## 逻辑回归
 
-如果 $J \le$ 阈值，我们停止并将 $\beta_{0'}$、$\beta_{1'}$ 和 $\beta_{2'}$ 的值视为我们找到最佳估计点。
+如果 `J <=` 阈值，我们停止并将 `β0'`、`β1'` 和 `β2'` 的值视为我们找到最佳估计点。
 
-如果 $J >$ 阈值，我们计算 $\beta_{0'}$、$\beta_{1'}$ 和 $\beta_{2'}$ 的新值：
+如果 `J >` 阈值，我们计算 `β0'`、`β1'` 和 `β2'` 的新值：
 
 ```
 $$\beta_{0'} = \beta_{0} - \alpha \frac{\delta J}{\delta \beta_{0}}$$ 其中 $\frac{\delta J}{\delta \beta_{0}}$ 是 $J$ 对 $\beta_{0}$ 的偏导数，$\alpha$ 是一个称为学习率的超参数。
@@ -2529,11 +2526,7 @@ $$\beta_{1'} = \beta_{1} - \frac{\delta J}{\delta \beta_{1}}$$ 其中 $\frac{\de
 $$\beta_{2'} = \beta_{2} - \frac{\delta J}{\delta \beta_{2}}$$ 其中 $\frac{\delta J}{\delta \beta_{2}}$ 是 $J$ 对 $\beta_{2}$ 的偏导数
 ```
 
-我们重复步骤 3、4 和 5。让我们用一些数字来理解前面的策略。假设我们从 $\beta_{0'}, \beta_{1'}, \beta_{2}$ 设置为 2 开始。让我们考虑 $\beta_{0'}, \beta_{1'}, \beta_{2}$ 设置为 2。我们可以计算 $J$。由于 $J >$ 阈值，我们需要计算 $\beta_{0'}, \beta_{1'}$ 的新值。对于 $\beta_{0'}, \beta_{1'}$ 和 $\beta_{2}$，根据图 4.6，我们得到 $J = 7.58$。由于 $J >$ 阈值，我们需要再次计算 $\beta_{0'}, \beta_{1'}$ 和 $\beta_{2}$ 的值。
-
-
-
-
+我们重复步骤 3、4 和 5。让我们用一些数字来理解前面的策略。假设我们从 `β0', β1', β2` 设置为 2 开始。让我们考虑 `β0', β1', β2` 设置为 2。我们可以计算 `J`。由于 `J >` 阈值，我们需要计算 `β0', β1'` 的新值。对于 `β0', β1'` 和 `β2`，根据图 4.6，我们得到 `J = 7.58`。由于 `J >` 阈值，我们需要再次计算 `β0', β1'` 和 `β2` 的值。
 
 ## 逻辑回归
 
@@ -2547,7 +2540,7 @@ $$\beta_{2'} = \beta_{2} - \frac{\delta J}{\delta \beta_{2}}$$ 其中 $\frac{\de
 
 因此，我们正在使用线性回归方法来进行预测。通过获取预测结果，我们将预测值与阈值比较以得到预测的二分类。
 
-## Sigmoid 函数
+### Sigmoid 函数
 
 对于逻辑回归算法，我们需要一个输出 0 到 1 之间值的函数。实现此功能的函数是 Sigmoid 函数。函数的形式如下：
 
@@ -2621,7 +2614,7 @@ $$J = -\frac{1}{m} \sum_{i=1}^{m} [y_i \log(\sigma(y_i)) + (1-y_i) \log(1-\sigma
 
 $a_i = a_i - \alpha \frac{\partial J}{\partial a_i}$ 其中 $\alpha$ 是学习率。
 
-我们在 Python 中使用 **sympy** 库提供了一个简单的方法来寻找 $\frac{\partial J}{\partial a_i}$，如图 4.9 所示：
+我们在 Python 中使用 `sympy` 库提供了一个简单的方法来寻找 $\frac{\partial J}{\partial a_i}$，如图 4.9 所示：
 
 ```python
 from sympy import symbols, log, exp, diff
@@ -2637,9 +2630,6 @@ a0, a1, a2, x1, x2 = symbols('a0 a1 a2 x1 x2')
 ### 应用逻辑回归算法
 
 让我们运行一个将逻辑回归算法应用于分类问题的简单示例。
-
-
-
 
 我们对任何地方的温度进行了标记，分类为 0 表示热（HOT），1 表示冷（COLD），如图 4.10 所示。
 
@@ -2730,36 +2720,47 @@ del_j_a1 = ((1 / (len(df))) * sumdiff_x1)
 ### 更新参数
 
 a0_val = a0_val - (alpha * del_j_a0)
+
 a1_val = a1_val - (alpha * del_j_a1)
 
 Iteration: 0, Cost - 14766.723588
+
 a0 - 5.000000, a1 - 5.000000
 
 Iteration: 1, Cost - 876.45461
+
 a0 - 3.053107, a1 - 1.037362
 
 Iteration: 2, Cost - 170.045108
+
 a0 - 2.396249, a1 - -0.545897
 
 Iteration: 3, Cost - 31.870917
+
 a0 - 2.633374, a1 - 0.148471
 
 Iteration: 4, Cost - 6.492363
+
 a0 - 2.486089, a1 - -0.143966
 
 Iteration: 5, Cost - 2.124769
+
 a0 - 2.499813, a1 - -0.026896
 
 Iteration: 41, Cost - 0.049555
+
 a0 - 1.614739, a1 - -0.034913
 
 Iteration: 42, Cost - 0.027046
+
 a0 - 1.596394, a1 - -0.034430
 
 Iteration: 43, Cost - 0.005170
+
 a0 - 1.578308, a1 - -0.033954
 
 Iteration: 44, Cost - -0.016089
+
 a0 - 1.560479, a1 - -0.033498
 
 我们可以如下测试模型：
@@ -2774,11 +2775,15 @@ def testWeather(test):
 ```
 
 $Y = (1 / (1 + exp(-(a0 + (a1*x1))))) Y.evalf(subs={a0: testList[-2][0], a1: testList[-2][1], x1: 43})$
+
 testWeather(test)
+
 'HOT'
 
 $test = Y.evalf(subs={a0: testList[-2][0], a1: testList[-2][1], x1: 43})$
+
 testWeather(test)
+
 'COLD'
 
 注意，我们使用了 0.8 的阈值来进行决策。梯度下降算法和逻辑回归算法是神经网络的基础。
@@ -2801,6 +2806,8 @@ df['1 - P'] = tList
 df = df.sort_values('X')
 ```
 
+
+
 | X | y | P | 1 - P |
 |---|---|---|---|
 | 11 | -5 | 0.8517300213465 | 0.1482699786535 |
@@ -2818,23 +2825,19 @@ df = df.sort_values('X')
 | 0 | 40 | 0.5548156673591 | 0.4451843326409 |
 | 9 | 50 | 0.4701865372324 | 0.5298134627676 |
 
+# 逻辑回归
 
+注意：对于多分类问题，我们还有 `SoftMax()` 函数。然而，对 `SoftMax()` 函数的讨论超出了本书的范围。
 
+# 肝炎诊断预测分类器
 
-
-## 逻辑回归
-
-注意：对于多分类问题，我们还有 SoftMax() 函数。然而，对 SoftMax() 函数的讨论超出了本书的范围。
-
-## 肝炎诊断预测分类器
-
-我们选取一个医学领域的问题来讨论如何在 Scikit-Learn 库中实现逻辑回归算法，并查看该逻辑回归算法的应用。
+我们选取一个医学领域的问题来讨论如何在 `Scikit-Learn` 库中实现逻辑回归算法，并查看该逻辑回归算法的应用。
 
 该数据集是由卡内基梅隆大学的 G. Gong 在1988年提供的。该数据集包含了患有肝炎患者的详细信息。数据集中有19个特征和一个目标变量。从患者的年龄和性别，数据集包含了不同的医疗状况，包括胆红素水平和肝脏是否肿大。目标变量的值：患者死亡为 1，患者未死亡为 2。数据集中总共有155个数据点。模型的目标是根据患者的状况预测患者是否死亡。该数据集可以在 UCI 机器学习库找到：[肝炎数据集](https://archive.uci.uci.edu/ml/datasets/Hepatitis)。
 
-### 加载数据
+## 加载数据
 
-首先，我们需要加载数据。由于数据以逗号分隔值（CSV）文件的存在，我们可以使用 pandas 库中的 `read_csv()` 函数来加载数据。通过文本编辑器打开数据文件，发现 UCI 没有任何表头。
+首先，我们需要加载数据。由于数据以逗号分隔值（CSV）文件的存在，我们可以使用 `pandas` 库中的 `read_csv()` 函数来加载数据。通过文本编辑器打开数据文件，发现 UCI 没有任何表头。
 
 ```python
 import pandas as pd
@@ -2844,7 +2847,7 @@ df
 ```
 
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---||
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|||
 | 0 | 2 | 30 | 2 | 1 | 2 | 2 | 2 | 1 | 2 | 2 | 2 | 2 | | 1.00 | 85 | 18 | 4.0 | |
 | ? | 1 | | | | | | | | | | | | | | | | | |
 | 1 | 2 | 50 | 1 | 1 | 2 | 1 | 2 | 1 | 2 | 2 | 2 | 2 | 0.90 | 135 | 42 | 3.5 | |
@@ -2869,6 +2872,7 @@ df
 [155 行 x 20 列]
 
 我们注意到有 155 个包含 20 列的数据点。
+
 第一列包含目标变量，即患者是否死亡。我们将重命名这一列，并保持其他列名不变：
 
 ```python
@@ -2896,7 +2900,7 @@ df.head()
 
 对于连续型列，我们将使用列的中位数来填充缺失值。中位数是指将列数据一分为二半的值。
 
-在填充数据之前，我们必须将所有的“?”替换为 Python 中用于表示空值的符号 – Nan。以下代码用于此目的。
+在填充数据之前，我们必须将所有的“?”替换为 Python 中用于表示空值的符号 – `Nan`。以下代码用于此目的。
 
 ```python
 df.replace('?', np.nan, inplace = True)
@@ -2904,7 +2908,7 @@ df.head()
 ```
 
 | target | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---||
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|||
 | 0 | 2 | 30 | 2 | 1 | 2 | 2 | 2 | 1 | 2 | 2 | 2 | 2 | 1.00 | 85 | 18 | 4.0 | | | |
 | 1 | 2 | 50 | 1 | 1 | 2 | 1 | 2 | 1 | 2 | 2 | 2 | 2 | 0.90 | 135 | 42 | 3.5 | | | |
 | 2 | 2 | 78 | 1 | 2 | 1 | 2 | 2 | 2 | 2 | 2 | 2 | | | 96 | 32 | 4.0 | | | |
@@ -2920,12 +2924,13 @@ df.head()
 
 *(注：此处由于原文文本中存在重复的表格和描述，译文按要求进行了逻辑整合与翻译)*
 
+`X = df.drop("target", axis=1, inplace=False)`
 
+`y = df["target"]`
 
-
-X = df.drop("target", axis=1, inplace=False)
-y = df["target"]
+```python
 from sklearn.model_selection import train_test_split
+```
 
 ```python
 XTrain, XTest, yTrain, yTest = train_test_split(X, y, test_size=0.1,
@@ -2947,7 +2952,9 @@ Name: target, dtype: int64
 
 由于连续数据列的范围很大，我们将对数据进行标准化，使得所有数据处于相同的范围内。参考第3章K-最近邻算法中关于 Standard Scaler 的讨论：
 
+```python
 from sklearn.preprocessing import StandardScaler
+```
 
 ```python
 columns_to_scale = [1, 15, 16, 17, 18, 19]
@@ -2966,6 +2973,7 @@ array([[ 0.06306600, -0.84976737, -0.21832346, -0.01053376, -1.83085539,
 ```
 
 [-0.58291898, -1.54714292, -0.69706258, 0.31016074, 0.85637457,
+
 -0.950146199]]
 
 在标准化数据后，我们将移除原始列（已标准化的列）并添加包含标准化后数据的列。
@@ -2994,7 +3002,7 @@ state=42,
 solver="liblinear")
 ```
 
-用于创建 LogisticRegression 类实例时使用的参数：
+用于创建 `LogisticRegression` 类实例时使用的参数：
 
 - 参数 `solver` 设置了用于获取系数最佳值的算法。这里使用的 `“liblinear` 求解器最适用于小型数据集。
 - 参数 `class_weight = “balanced”` 给数据点较少的类别赋予更高的权重。通过这种方式，我们解决了数据集不平衡的问题。
@@ -3003,10 +3011,12 @@ solver="liblinear")
 
 # 124 机器学习分类算法大师
 
+```python
 from sklearn.metrics import confusion_matrix, accuracy_score,
 ConfusionMatrixDisplay
+```
 
-yTrain = lr.predict(XTrain)
+`yTrain = lr.predict(XTrain)`
 
 ```python
 print("Accuracy = %7.5f%% %n" (accuracy_score(yTrain, yTrainPred) * 100, "%"))
@@ -3023,14 +3033,11 @@ Accuracy = 86.86131%
 
 因此，训练数据集的准确率为 86.86131%。
 
-
-
-
 # 使用 Gini 指数构建决策树
 
 我们将通过一个示例来讨论这个概念。
 
-假设我们有一个包含 10 条记录的数据集，其中有两个独立变量和一个因分类变量。设独立变量为 $x_1$ 和 $x_2$，因分类变量为 $y$。参考下表：
+假设我们有一个包含 10 条记录的数据集，其中有两个独立变量和一个因分类变量。设独立变量为 `$x_1$` 和 `$x_2$`，因分类变量为 `$y$`。参考下表：
 
 | $x_1$ | $x_2$ | $y$ |
 |---|---|---|
@@ -3047,7 +3054,7 @@ Accuracy = 86.86131%
 
 **表 5.1:** 原始数据
 
-考虑表 5.1 中的数据，因分类变量 $y$ 有两个值——0 和 1。因此，数据被分为两类——0 和 1。
+考虑表 5.1 中的数据，因分类变量 `$y$` 有两个值——0 和 1。因此，数据被分为两类——0 和 1。
 
 如果我们绘制表 5.1 中的数据，将得到如图 5.1 所示的图：
 
@@ -3057,13 +3064,15 @@ Accuracy = 86.86131%
 
 # 掌握机器学习分类算法
 
-在图 5.1 中，绿色三角形代表 $y = 1$ 的数据点，红色圆圈代表 $y = 0$ 的数据点。
+在图 5.1 中，绿色三角形代表 `$y = 1$` 的数据点，红色圆圈代表 `$y = 0$` 的数据点。
 
-我们想要构建的决策树能够根据变量 $x_i$ 和 $x_j$ 的值判断数据点的类别（即 $y$）。因此，我们必须根据 $x_i$ 或 $x_j$ 的取值来做出决定，决定采取哪个方向。为了理解这一点，请考虑图 5.2 所示的虚拟决策树：
+我们想要构建的决策树能够根据变量 `$x_i$` 和 `$x_j$` 的值判断数据点的类别（即 `$y$`）。因此，我们必须根据 `$x_i$` 或 `$x_j$` 的取值来做出决定，决定采取哪个方向。为了理解这一点，请考虑图 5.2 所示的虚拟决策树：
 
 ![](img/11af2c4c7dddfed06ed008516c0c6dfb_149_0.png)
 
 图 5.3: 虚拟决策树
+
+
 
 在图 5.2 中，我们正根据 $x_i > 5$ 来判断数据点（即 $y$）是 1 还是 0。因此，为了形成决策树，我们需要找出所有通向决策的问题。
 
@@ -3132,6 +3141,7 @@ $$J = \frac{m_{left}Gini(left) + m_{right}Gini(right)}{m}$$
 计算 $Gini(left)$，我们从表 5.2 得到：
 
 $$P(0|left) = 2/4 = 0.5$$
+
 $$P(1|left) = 2/4 = 0.5$$
 
 因此，$Gini(left) = 1 - (0.5^2 + 0.5^2) = 1 - (0.25 + 0.25) = 1 - 0.5 = 0.5$
@@ -3139,6 +3149,7 @@ $$P(1|left) = 2/4 = 0.5$$
 计算 $Gini(right)$，我们从表 5.2 得到：
 
 $$P(0|right) = 3/6 = 0.5$$
+
 $$P(1|right) = 3/6 = 0.5$$
 
 因此，$Gini(right) = 1 - (0.5^2 + 0.5^2) = 1 - (0.25 + 0.25) = 1 - 0.5 = 0.5$
@@ -3162,10 +3173,6 @@ $$J(x_1=1.00) = \frac{4*0.5+6*0.5}{10} = \frac{2+3}{10} = \frac{5}{10}=0.5$$
 
 **表 5.3:** $x_2 \le 2.50$ 的划分
 
-
-
-
-
 # 主掌握机器学习分类算法
 
 | $x_s \le 2.50$ | | | $x_s > 2.50$ | | | |
@@ -3186,6 +3193,7 @@ $$J(x_1=1.00) = \frac{4*0.5+6*0.5}{10} = \frac{2+3}{10} = \frac{5}{10}=0.5$$
 计算 Gini(left)，我们从**表 5.3** 中得到：
 
 $P(0|left) = 0/3 = 0.0$
+
 $P(1|left) = 3/3 = 1.0$
 
 因此，$Gini(left) = 1 - (0.0^2 + 1.0^2) = 1 - (0.00 + 1.00) = 1 - 1.0 = 0$
@@ -3193,6 +3201,7 @@ $P(1|left) = 3/3 = 1.0$
 计算 Gini(right)，我们从**表 5.3** 中得到：
 
 $P(0|right) = 5/7 = 0.7143$
+
 $P(1|right) = 2/7 = 0.2857$
 
 因此，$Gini(right) = 1 - (0.7143^2 + 0.2857^2) = 1 - (0.5102 + 0.0816) = 1 - 0.5918 = 0.4082$
@@ -3269,6 +3278,7 @@ $J(x_2 = 2.50) = \frac{3+0+7+0.4082}{10} = \frac{10.4082}{10} = 0.28571$
 让我们计算表 5.7 所示数据集的 Gini 指数。我们将表 5.7 中的数据集称为 $d2$。我们得到如下：
 
 $P(0|d2) = 0/3 = 0$
+
 $P(1|d2) = 3/3 = 1$
 
 $Gini(d2) = 1 - (0^2 + 1^2) = 1 - 1 = 0$
@@ -3300,6 +3310,7 @@ $Gini(d2) = 1 - (0^2 + 1^2) = 1 - 1 = 0$
 让我们考虑表 5.8 所示的数据集 $d3$。现在，我们需要计算数据集 $d3$ 的 Gini 指数。我们得到如下：
 
 $P(0|d3) = 5/7$
+
 $P(1|d3) = 2/7 = 0.2857$
 
 $Gini(d3) = 1 - (0.7143^2 + 0.2857^2) = 1 - (0.5102 + 0.0816) = 1 - 0.5918 = 0.4082$
@@ -3341,9 +3352,6 @@ $Gini(d3) = 1 - (0.7143^2 + 0.2857^2) = 1 - (0.5102 + 0.0816) = 1 - 0.5918 = 0.4
 
 （注：此处原文表格数据与逻辑描述存在细微对应关系，翻译已严格遵循原文结构）
 
-
-
-
 Gini(d4) = 1 - ( ) = 1 - (1 + 0) = 1 - 1 = 0
 
 所以，数据集 d4 是纯的；因此，我们得到了一个叶节点。
@@ -3379,15 +3387,17 @@ Gini(d5) = 1 - ( ) = 1 - (0 + 1) = 1 - 1 = 0
 
 ### 关于 JPEG 文件
 
+
+
 JPEG 是 Joint Photographic Experts（联合摄影专家小组）的缩写，该小组在 1992 年开发了这种存储数字照片的标准。JPEG 以压缩格式存储数字图像。在本章中，我们不会涉及 JPEG 文件的格式，因为我们关注的是机器学习。但要注意，2010 年 JPEG 包含了 EXIF 标签，这允许添加关于图像的额外信息。EXIF 标签的一个重要特点是，大多数标签可以使用适当的软件进行修改。从 JPEG 文件移除恶意软件的方法之一是将 JPEG 文件转换为位图（也称为 BMP 文件）。BMP 文件仅存储图像信息，不携带任何 EXIF 标签。总之，我们分析 JPEG 文件中的 EXIF 标签来确定文件是洁的还是恶意的。
 
-### 策略
+## 策略
 
 JPEG 文件中的 EXIF 标签可能包含字符串或数字值。当黑客操纵数字时，我们感兴趣的是字符串，字符串通常包含黑客想要在用户机器上执行的代码。我们现在知道，为了构建机器学习模型，我们使用某些向量化器将字符串表示为数字。因此，我们将把 JPEG 文件中存在的所有 EXIF 标签汇总成单个字符串，然后对该字符串进行向量化。
 
 在第 4 章“逻辑回归”中，我们讨论了 TF-IDF 向量化器。我们将使用 TF-IDF 向量对从数据集中每个 JPEG 文件中提取的 EXIF 标签字符串进行向量化。一旦我们有了 TF-IDF 向量，我们将使用它们来创建决策树模型。
 
-### 构建模型
+## 构建模型
 
 现在我们将讨论构建检测 JPEG 文件恶意软件模型所需的所有步骤。我们从定义常量开始。程序单元将需要这些常量。使用常量是一种良好的编程习惯，因为它允许在不修改多个位置代码的情况下对程序进行更改。
 
@@ -3402,7 +3412,7 @@ FILE_WITH_MALWARE = 1
 
 ### 从 JPEG 文件中提取 EXIF 标签
 
-以下函数可以从 JPEG 文件中提取 EXIF 标签。我们首先编写一个函数来判断输入文件是否为 JPEG 文件。JPEG 文件在开头有一个签名 0xFFD8。我们将使用 Python Image 库提供的 `verify()` 函数来判断提供的文件是否为 JPEG 文件。
+以下函数可以从 JPEG 文件中提取 EXIF 标签。我们首先编写一个函数来判断输入文件是否为 JPEG 文件。JPEG 文件在开头有一个签名 `0xFFD8`。我们将使用 Python Image 库提供的 `verify()` 函数来判断提供的文件是否为 JPEG 文件。
 
 ```python
 from PIL import Image
@@ -3449,11 +3459,10 @@ def JPEGFeatureExtractorToDictionary(imageFile):
         returnValue[tag] = data
 ```
 
-现在我们有了一个从单个 JPEG 文件提取所有 EXIF 标签的函数。接下来，我们将编写一个名为 `extractTagsFromirectory()` 的函数来提取目录中所有文件的 EXIF 标签。该函数将读取目录中的所有文件，并对每个文件调用 `JPEGFeatureExtractorToDictionary()`。该文件会将函数返回的所有字典合并到一个列表中并返回该列表。
+现在我们有了一个从单个 JPEG 文件提取所有 EXIF 标签的函数。接下来，我们将编写一个名为 `extractTagsFromDirectory()` 的函数来提取目录中所有文件的 EXIF 标签。该函数将读取目录中的所有文件，并对每个文件调用 `JPEGFeatureExtractorToDictionary()`。该文件会将函数返回的所有字典合并到一个列表中并返回该列表。
 
 ```python
 import glob
-```
 
 def extractTagsFromADirectory(inputDirectory):
     # 定义计数器
@@ -3463,60 +3472,41 @@ def extractTagsFromADirectory(inputDirectory):
 
     # 创建存储所有文件特征的空列表
     returnValue = []
-
     n = 0
 
     # 遍历输入目录中的所有文件
     for file in glob.glob(inputDirectory):
         # 创建空字典
         oneFileFeatures = {}
-
         try:
             # 读取文件并提取特征
             fileFeatures = JPEGFeatureExtractorToDictionary(file)
-
             # 如果文件具有某些特征，则为文件创建一个条目
             if len(fileFeatures.keys()) > 0:
                 # 文件名
                 oneFileFeatures[FILE_NAME_COLUMN_NAME] = file
+                # 将文件特征添加到主字典
+                oneFileFeatures.update(fileFeatures)
+                # 将条目添加到返回值
+                returnValue.append(oneFileFeatures)
+                getNumberOfValidFiles = numberOfValidFiles + 1
+            else:
+                # 检查文件是否为有效的图像文件
+                if isImageFile(file):
+                    numberOfFilesWithoutTags = numberOfFilesWithoutTags + 1
+                else:
+                    numberOfInvalidFiles = numberOfInvalidFiles + 1
+        except:
+            # 检查文件是否为有效的图像文件
+            if isImageFile(file):
+                numberOfFilesWithoutTags = numberOfFilesWithoutTags + 1
+            else:
+                numberOfInvalidFiles = numberOfInvalidFiles + 1
+
+    return (returnValue, numberOfValidFiles, numberOfInvalidFiles, numberOfFilesWithoutTags)
 ```
 
-
-
-
-# 将文件特征添加到主字典
-
-oneFileFeatures.update(fileFeatures)
-
-# 将条目添加到返回值
-returnValue.append(oneFileFeatures)
-
-```python
-getNumberOfValidFiles = numberOfValidFiles + 1
-else:
-    # 检查文件是否为有效的图像文件
-    if isImageFile(file):
-        numberOfFilesWithoutTags = numberOfFilesWithoutTags + 1
-    else:
-        numberOfInvalidFiles = numberOfInvalidFiles + 1
-```
-
-```python
-except:
-    # 检查文件是否为有效的图像文件
-    if isImageFile(file):
-        numberOfFilesWithoutTags = numberOfFilesWithoutTags + 1
-    else:
-        numberOfInvalidFiles = numberOfInvalidFiles + 1
-```
-
-```python
-return (returnValue, numberOfValidFiles, numberOfInvalidFiles, numberOfFilesWithoutTags)
-```
-
-函数 extractTagsFromDirectory 返回一个字典列表，其中包含目录（作为输入提供）中所有可用文件的 EXIF 标签。该函数还返回了输入文件中有效的 JPEG 文件且包含 EXIF 标签的数量、不是有效 JPEG文件的输入文件数量，以及是有效 JPEG 文件但不包含任何 EXIF 标签的输入文件数量。
-
-## 148 精通机器学习的分类算法
+函数 `extractTagsFromDirectory` 返回一个字典列表，其中包含目录（作为输入提供）中所有可用文件的 EXIF 标签。该函数还返回了输入文件中有效的 JPEG 文件且包含 EXIF 标签的数量、不是有效 JPEG文件的输入文件数量，以及是有效 JPEG 文件但不包含任何 EXIF 标签的输入文件数量。
 
 在这里，我们需要考虑如果一个 JPEG 文件不包含任何 EXIF 标签，那么此类 JPEG 文件就不可能包含任何恶意软件。
 
@@ -3574,7 +3564,7 @@ JPEG Files without Tags = 3
 
 现在我们已经获取了数据集中所有 JPEG 文件的 EXIF 标签，我们将一个 JPEG 中所有的 EXIF 标签组成一个字符串，并将其作为记录存储在 DataFrame 中。一旦完成这个练习，我们将得到一个包含每个 JPEG 文件中所有 EXIF 标签字符串的 DataFrame。此外，我们会将每个记录标记为它是干净的 JPEG 文件还是包含恶意软件的 JPEG 文件。通过这样，我们就创建了用于构建监督学习模型的标记数据。
 
-函数 fillDataDataFrame 接收由函数 extractTagsFrom 返回的字典列表并创建一个 DataFrame。该 DataFrame 将包含两列——一列包含 JPEG 文件中所有的 EXIF 标签，另一列标明相关的字符串是干净的 JPEG 文件还是包含恶意软件的 JPEG 文件。
+函数 `fillDataDataFrame` 接收由函数 `extractTagsFrom` 返回的字典列表并创建一个 DataFrame。该 DataFrame 将包含两列——一列包含 JPEG 文件中所有的 EXIF 标签，另一列标明相关的字符串是干净的 JPEG 文件还是包含恶意软件的 JPEG 文件。
 
 ```python
 import pandas as pd
@@ -3583,14 +3573,11 @@ from tqdm import tqdm
 def fillDataDataFrame(featureDictionary, extractionDescription, fileType):
     # 创建一个空的 DataFrame
     df = pd.DataFrame()
-
     for record in tqdm(featureDictionary, desc=extractionDescription):
         # 创建一个空的字典
         oneRecord = {}
-
         # 创建一个空字符串
         recordString = ""
-
         # 遍历记录中的所有特征
         for k in record.keys():
             # 提取键的值并将其添加到记录中
@@ -3598,21 +3585,14 @@ def fillDataDataFrame(featureDictionary, extractionDescription, fileType):
             # 不包含文件名
             if k != FILE_COLUMN_NAME:
                 recordString = recordString + str(record[k]) + " "
-
         # 将记录字符串作为单独的一列添加到记录中
         oneRecord[TAG_STRING_NAME] = recordString[:-1]
-
         # 添加列以标记为良文件
         oneRecord[FILE_COLUMN_NAME] = pd.to_numeric(fileType, downcast='integer')
-
         # 将记录添加到 DataFrame
         df = pd.concat([df, pd.DataFrame(oneRecord, [TAG_STRING_NAME])])
-
     return df
 ```
-
-
-
 
 现在，我们有 4,982 个数据点，对应 4,800 个特征。
 
@@ -3657,11 +3637,12 @@ Name: FileType, dtype: int64
 
 ```python
 from sklearn.tree import DecisionTreeClassifier
-
 modelDT = DecisionTreeClassifier(random_state = 42)
 modelDT.fit(X, y)
 DecisionTreeClassifier(random_state=42)
 ```
+
+
 
 模型现在准备就绪。
 
@@ -3671,17 +3652,19 @@ DecisionTreeClassifier(random_state=42)
 
 如果训练准确率和测试准确率都很高，我们可以确定所构建的模型对于该目的是有效的。
 
-如果训练准确率高而测试准确率低，我们就会担心，因为我们可以得出模型对训练数据的学习太好了，因此当向模型提供未见过的数据时，它的表现并不好。这可能发生在模型过于复杂的情况下。复杂模型意味着模型具有太多变量且不具泛化能力。常见的做法是通过减少变量的数量来降低模型的复杂性。我们将此类模型称为过拟合模型（overfitting models）。
+如果训练准确率高而测试准确率低，我们就会担心，因为我们可以得出模型对训练数据的学习太好了，因此当向模型提供未见过的数据时，它的表现并不好。这可能发生在模型过于复杂的情况下。复杂模型意味着模型具有太多变量且不具泛化能力。常见的做法是通过减少变量的数量来降低模型的复杂性。我们将此类模型称为过拟合模型（`overfitting models`）。
 
-虽然虽然罕见，但我们也可能遇到训练准确率低而测试准确率高的情况。在这种情况下，模型可能太简单。我们将此类模型称为欠拟合模型（underfitting models）。在这种情况下，我们需要向模型中添加更多变量。
+虽然虽然罕见，但我们也可能遇到训练准确率低而测试准确率高的情况。在这种情况下，模型可能太简单。我们将此类模型称为欠拟合模型（`underfitting models`）。在这种情况下，我们需要向模型中添加更多变量。
 
-## 查找训练准确率得分
+### 查找训练准确率得分
 
 我们首先在训练数据上测试模型。
 
 ```python
 from sklearn import metrics
+
 import matplotlib.pyplot as plt
+
 import seaborn as sns
 ```
 
@@ -3691,6 +3674,7 @@ y_pred = modelDT.predict(X)
 cm = metrics.confusion_matrix(y, y_pred)
 
 ax = plt.subplot()
+
 sns.heatmap(cm, annot=True, fmt='g', ax=ax)
 
 # labels, title and ticks
@@ -3724,7 +3708,7 @@ print(metrics.classification_report(y, y_pred))
 
 准确率: 99.96726%
 
-## 查找测试准确率得分
+### 查找测试准确率得分
 
 我们现在将测试模型。为了测试模型，我们将检查模型在训练数据上的表现。一旦获得模型在训练数据上的准确率，我们将在测试数据上测试模型。
 
@@ -3734,7 +3718,7 @@ print(metrics.classification_report(y, y_pred))
 
 虽然罕见，但我们也可能遇到训练准确率低而测试准确率高的情况。在这种情况下，模型可能太简单。我们将此类模型称为欠拟合模型。在这种情况下，我们需要向模型中添加更多变量。
 
-## 决策树算法
+### 决策树算法
 
 在使用模型之前，我们需要预处理数据。预处理数据的步骤如下：
 
@@ -3745,14 +3729,11 @@ print(metrics.classification_report(y, y_pred))
 
 在执行这些步骤后，我们可以应用模型进行预测。测试准确率为92.0863%。
 
-## 结论
+### 结论
 
 决策树算法是一种贪心算法。这是因为决策树尝试在根节点寻找最优划分，并在随后的每个节点继续寻找最优划分，直到无法进一步减少纯度。由于这种方法，决策树算法往往会过拟合数据。当模型过拟合时，它在预测的新数据上无法进行良好的泛化。
 
 在本章中，除了讨论决策树模型外，我们还讨论了数据集不平衡时如何平衡数据集。对于平衡数据集，我们讨论了 SMOTE 算法。主成分分析（PCA）可以在不遭受显著信息损失的情况下减少构建模型时特征的数量。
-
-
-
 
 # 第6 章
 
@@ -3761,9 +3742,9 @@ print(metrics.classification_report(y, y_pred))
 在上一章中，我们了解了使用决策树算法构建的模型倾向于过拟合。与决策树算法一样，所有算法都有某些缺点。克服这一问题的一种方法是使用多个模型进行预测，然后根据所有模型的集体智能做出决定。当有许多模型共同工作做出决策时，我们将此类模型称为集成模型（Ensemble models）。
 
 在本章中，我们将探索不同类型的集成模型：
-![](img/1af2c47dddfed008516c06df_178_0.png) 
+![](img/1af2c47dddfed008516c06df_178_0.png)
 
-## 结构
+### 结构
 
 在本章中，我们将讨论以下主题：
 - 集成模型
@@ -3778,11 +3759,11 @@ print(metrics.classification_report(y, y_pred))
 - Librosa 库
 - 构建集成模型
 
-## 目标
+### 目标
 
 读完本章后，你将清晰集成集成模型的细节。此外，你将学习如何使用 Scikit-Learn 库实现的不同集成模型。最后，在本章结束时，你还将学习如何使用 Bagging 来解决提取情感的分类问题。
 
-## 集成模型
+### 集成模型
 
 面对非常复杂的问题时，我们可以向一位专家提问并获得意见。在这里，我们将取决于专家的智慧。每个人都有某些偏见。因此，专家提供的答案是基于他们的偏好的。该解决方案准确的概率可能有限。假设我们改变方法，向几位专家提问。然后，我们汇总所有专家的答案，选择大多数专家同意的解决方案。在大多数情况下，这样的结论比一个专家的意见更准确。
 
@@ -3792,17 +3773,17 @@ print(metrics.classification_report(y, y_pred))
 
 这种创建模型的技术被称为集成技术（ensemble technique），此类模型被称为集成模型（Ensemble models）。
 
-## 集成模型背后的直觉
+### 集成模型背后的直觉
 
 假设我们有一个偏硬币，得到正面的概率为 51%（得到反面的概率为 49%）。如果我们投掷一次硬币，得到正面或反面的机会相等。然而，如果我们投掷这种硬币 100 次，得到 51 次正面和 49 次反面的概率很大。但是，如果我们投掷 10,000 次，得到正面 5,100 次、反面 4,900 次的可能性。注意，随着我们投掷硬币次数的增加，我们的结论变得明显区分。
 
 集成的工作原理相同。假设我们有几个结果比随机猜测结果更好的分类器。那么，当我们使用这些分类器利用足够的数据点创建集成并取结果的多数时，集成通常会提供超过 75% 的准确率。需要注意的关键点是我们需要足够的数据点。在统计学中，这被称为大数法则。
 
-## 不同类型的集成模型
+### 不同类型的集成模型
 
 有很多类型的集成模型。我们将关注四种集成模型，即 Voting（投票）、Bagging、Boosting（提升）和 Stacking（堆叠）。
 
-## Voting 集成模型
+### Voting 集成模型
 
 在 Voting 集成模型中，我们将使用不同算法构建的多个模型处理相同的数据。然后，我们分别从每个模型进行预测，并采取大多数模型提供的决策。
 
@@ -3819,15 +3800,9 @@ print(metrics.classification_report(y, y_pred))
 
 > 注意：在图 6.1 的插图中，我们考虑了三个模型。这只是一个例子。我们可以使用所需的任意数量的模型。
 
-## Bagging 集成模型
+### Bagging 集成模型
 
 在 Bagging 集成模型中，我们使用相同的算法创建多个模型。然而，我们为每个模型提供不同的数据子集。因此，没有任何模型看到完整的数据集。为了为每个模型提供不同的数据子集，我们创建原始数据集的随机子集。然后，我们在其中一个数据子集上训练每个模型。
-
-
-
-
-
-# 164 精通机器学习分类算法
 
 现在要创建数据子集，我们有两种选择。第一种选择是通过有放回的对原始数据集进行采样来创建子集。当我们使用这种创建数据子集的技术并使用相同的算法创建模型来构建集成模型时，它被称为 **Bagging（袋）集成模型**。
 
@@ -3849,7 +3824,7 @@ Bagging 集成模型可以使用任何算法在原始数据集的不同子集上
 
 当我们通过有放回采样创建数据子集时，通常原始数据集中的某些数据点不会进入任何子集。约 37% 的数据点未用于创建 Bagging 集成模型，这 37% 的数据点被称为**袋外（Out-of-Bag）数据点**。我们可以使用袋外数据点来测试 Bagging 集成模型，通过评估预测的准确性。
 
-# Boosting 集成模型
+### Boosting 集成模型
 
 与 Voting 集成模型不同，Boosting 集成模型使用相同的算法来训练模型。此外，它们在完整的数据上训练模型。
 
@@ -3857,7 +3832,7 @@ Boosting 集成模型是顺序训练的。其思想是先在数据集上训练�
 
 我们将在第 8 章“Boosting”中详细讨论 Boosting 模型。
 
-# Stacking 集成模型
+### Stacking 集成模型
 
 Stacking 集成模型的核心思想是，如果我们使用不同的算法构建了多个产生良好预测的模型，为什么不用一种机制来选择信赖的模型呢？换句话说，在使用多种算法训练模型后，我们设计了一种选择可靠模型的方法。
 
@@ -3877,7 +3852,7 @@ Stacking 集成模型的机制如图 6.4 所示：
 
 我们本书中不再进一步讨论 Stacking 集成模型，因为在机器学习领域它并不广泛使用。
 
-# Scikit-Learn 中的集成模型实现
+### Scikit-Learn 中的集成模型实现
 
 在本章之前我们讨论的所有算法（即朴素贝叶斯算法、K-近邻算法、逻辑回归算法和决策树算法）都可以通过手动演示来理解。此外，这些算法做出的预测很容易解释。这类模型被称为**白盒模型（White Box Models）**。
 
@@ -3889,27 +3864,35 @@ Stacking 集成模型的机制如图 6.4 所示：
 
 Scikit-Learn 库有一个专门用于集成模型的模块 `sklearn.ensemble`。
 
-## VotingClassifier
+#### VotingClassifier
 
 在 `sklearn.ensemble` 中，`VotingClassifier` 可用于实现分类的 Voting 集成模型。`VotingClassifier` 类的核心参数是 `estimators`。用于 Voting 集成模型的不同估估计器可以通过 `estimators` 参数提供：
 
 ```python
 from sklearn.ensemble import VotingClassifier
+
 ...
+
 from sklearn.naive_bayes import MultinomialNB
+
 from sklearn.neighbors import KNeighborsClassifier
+
 from sklearn.tree import DecisionTreeClassifier
 ```
 
 ```python
 nbCls = MultinomialNB()
+
 knnCls = KNeighborsClassifier()
+
 dtClfs = DecisionTreeClassifier()
+
 ..."
 ```
 
 ```python
 votingClf = VotingClassifier(estimators=[('nb', nbCls), ('knn', knnCls), ('dt', dtClfs)])
+
 ...
 ```
 
@@ -3917,7 +3900,7 @@ votingClf = VotingClassifier(estimators=[('nb', nbCls), ('knn', knnCls), ('dt', 
 
 ## BaggingClassifier
 
-在 sklearn 中，**BaggingClassifier** 类用于实现分类的 Bagging 集成模型。表 6.1 列出了 **BaggingClassifier** 类的关键参数：
+在 sklearn 中，`BaggingClassifier` 类用于实现分类的 Bagging 集成模型。表 6.1 列出了 `BaggingClassifier` 类的关键参数：
 
 | 参数 | 解释 |
 | --- | --- |
@@ -3945,9 +3928,9 @@ baggingClf = BaggingClassifier(estimator=DecisionTreeClassifier(), n_estimators 
 
 ## StackingClassifier
 
-在 sklearn.ensemble 中，**StackingClassifier** 类用于实现分类的 Stacking 集成模型。StackingClassifier 类有两个关键参数。第一个关键参数是 **estimators**，它接收一个不同分类器的列表用于构建基模型。第二个关键参数是 **final_estimator**，它接收用于构建元模型的类。
+在 sklearn.ensemble 中，`StackingClassifier` 类用于实现分类的 Stacking 集成模型。StackingClassifier 类有两个关键参数。第一个关键参数是 `estimators`，它接收一个不同分类器的列表用于构建基模型。第二个关键参数是 `final_estimator`，它接收用于构建元模型的类。
 
-**StackingClassifier** 的另一个重要参数是 passthrough。它接收一个布尔值（即，我们将此参数设置为 True 或 False）。当 `passthrough` 设置为 False 时，**StackingClassifier** 使用基模型的预测结果作为构建元模型的输入。当 `passthrough` 设置为 True 时，**StackingClassifier** 将使用基模型的预测结果和原始数据集来构建元模型，如下代码所示：
+`StackingClassifier` 的另一个重要参数是 passthrough。它接收一个布尔值（即，我们将此参数设置为 True 或 False）。当 `passthrough` 设置为 False 时，`StackingClassifier` 使用基模型的预测结果作为构建元模型的输入。当 `passthrough` 设置为 True 时，`StackingClassifier` 将使用基模型的预测结果和原始数据集来构建元模型，如下代码所示：
 
 ```python
 from sklearn.ensemble import StackingClassifier
@@ -3998,16 +3981,12 @@ TESS 数据集包含 2880 个文件，每个文件都包含一段录音。200 �
 
 Ravdess 数据集包含 2880 个文件，每个文件都包含一段录音。200 个目标词由两位女演员在“Say the word ______”的短语中读出，并录制了七种不同的情感（愤怒、厌恶、恐惧、快乐、惊讶、悲伤和中性）。两位女演员的英语均为母语，拥有大学学历，并接受过音乐训练。听学测试显示两者的阈值都在正常范围内。
 
-
-
-
 # 掌握机器学习中的分类算法
 
 一旦加载了数据集，就可以使用以下代码播放音频文件：
 
 ```python
 import IPython.display as ipd
-
 sampleAudio1 = ravdessFiles[0]
 ipd.Audio(sampleAudio1)
 <IPython.lib.display.Audio object>
@@ -4123,7 +4102,6 @@ Tess 和 Rav 文件 文件合并后每种情绪的音频片段数量
 ```python
 from matplotlib import pyplot as plt
 import seaborn as sb
-
 sb.barplot(x = dfCombinedCount['Emotion'], y = dfCombinedCount['count'])
 plt.show()
 ```
@@ -4141,85 +4119,41 @@ plt.show()
 !pip install librosa
 ```
 
-（注：此处根据原文逻辑调整了安装逻辑翻译）
 
-现在我们将可视化音频文件中的音频信号。为了做到这一点，我们将使用 librosa 库。在大多数情况下，可能需要安装 librosa 库。使用以下代码在你的机器上安装 librosa。要安装 librosa 库，你需要至少 0.53 版本的 numba（这是撰写本章时的情况）。检查你的机器上是否安装了适当版本的 numba。以下代码将在你的机器上安装 librosa：
-
-（注：原文此处似乎有中断，此处根据上下文补全翻译逻辑）
-
-现在我们将可视化音频文件中的音频信号。为了做到这一点，我们将使用 librosa 库。在大多数情况下，可能需要安装 librosa 库。使用以下代码在你的机器上安装 librosa。要安装 librosa 库，你需要至少 0.53 版本的 numba（这是撰写本章时的情况）。检查你的机器上是否安装了适当版本的 numba。以下代码将在你的机器上安装 librosa：
-
-（修正：由于原文文本存在重复段，以下为按意意整合后的翻译）
-
-现在我们将可视化音频文件中的音频信号。为了做到这一点，我们将使用 librosa 库。在大多数情况下，可能需要安装 librosa 库。使用以下代码在你的机器上安装 librosa。要安装 librosa 库，你需要至少 0.53 版本的 numba（这是撰写本章时的情况）。检查你的机器上是否安装了适当版本的 numba。以下代码将在你的机器上安装 librosa：
-
-（注：原文提供的待翻译文本在部分存在明显的重复和中断，以下为基于高级文档工程师视角的逻辑连贯性翻译）
-
-我们看到除了中性（neutral）外，所有情绪的文件数量几乎相同。我们可以认为该数据集是平衡的。现在我们将可视化音频文件中的音频信号。为了做到这一点，我们将使用 librosa 库。在大多数情况下，可能需要安装 librosa 库。使用以下代码在你的机器上安装 librosa。要安装 librosa 库，你需要至少 0.53 版本的 numba（这是撰写本章时的情况）。检查你的机器上是否安装了适当版本的 numba。以下代码将在你的机器上安装 librosa：
-
-（由于原文文本内容较为混乱，我将严格按照原文提供的行进行逐行翻译）
-
-我们看到除了中性（neutral）外，所有情绪的文件数量几乎相同。我们可以认为该数据集是平衡的。现在我们将可视化音频文件中的音频信号。为了做到这一点，我们将使用 librosa 库。在大多数情况下，可能需要安装 librosa 库。使用以下代码在你的机器上安装 librosa。要安装 librosa 库，你需要至少 0.53 版本的 numba（这是撰写本章时的情况）。检查你的机器上是否安装了适当版本的 numba。以下代码将在你的机器上安装 librosa：
-
-（此处由于原文文本存在大量重复和错误，我将提供最符合逻辑的段段译文）
-
-我们看到除了中性（neutral）外，所有情绪的文件数量几乎相同。我们可以认为该数据集是平衡的。现在我们将可视化音频文件中的音频信号。为了做到这一点，我们将使用 librosa 库。在大多数情况下，可能需要安装 librosa 库。使用以下代码在你的机器上安装 librosa。要安装 librosa 库，你需要至少 0.53 版本的 numba（这是撰写本章时的情况）。检查你的机器上是否安装了适当版本的 numba。以下代码将在你的机器上安装 librosa：
-
-（抱歉，由于原始文本本身存在严重的重复和错误，我将为您提供一份经过清理的翻译版本）
-
-我们看到除了中性（neutral）外，所有情绪的文件数量几乎相同。我们可以认为该数据集是平衡的。现在我们将可视化音频文件中的音频信号。为了做到这一点，我们将使用 librosa 库。在大多数情况下，可能需要安装 librosa 库。使用以下代码在你的机器上安装 librosa。要安装 librosa 库，你需要至少 0.53 版本的 numba（这是撰写本章时的情况）。检查你的机器上是否安装了适当版本的 numba。以下代码将在你的机器上安装 librosa：
-
-（注：为了遵循您的指令“绝对不要重复输出原文”，且原文中包含大量重复内容，我将仅对核心逻辑部分进行高质量翻译）
-
----
-**以下是针对您提供的文本中核心逻辑部分的精简译文：**
 
 # 音频信号可视化
 
-我们看到除了中性（neutral）外，所有情绪的文件数量几乎相同。我们可以认为该数据集是平衡的。现在我们将可视化音频文件中的音频信号。为了做到这一点，我们将使用 librosa 库。在大多数情况下，可能需要安装 librosa 库。使用以下代码在你的机器上安装 librosa。要安装 librosa 库，你需要至少 0.53 版本的 numba（这是撰写本章时的情况）。检查你的机器上是否安装了适当版本的 numba。以下代码将在你的机器上安装 librosa：
-
-（由于您提供的原始文本在 `Visualizing audio signals` 之后出现了多次完全相同的重复和断句，为了保证文档质量，我已去除了冗余，仅翻译了有效部分。）
-
----
-**说明：由于您提供的待翻译文本在 "Visualizing audio signals" 之后存在大量重复的段落和代码断句（例如 `pip install` 相关部分重复了多次），为了符合“高级文档工程师”的专业标准并遵循“不要重复输出”的指令，我在最终译文中剔处了这些冗余重复，以确保文档的逻辑连贯。**
-
-（如果您需要我逐行翻译那些重复的错误文本，请告知。）
-
-
-
-
+我们看到除了中性（`neutral`）外，所有情绪的文件数量几乎相同。我们可以认为该数据集是平衡的。现在我们将可视化音频文件中的音频信号。为了做到这一点，我们将使用 `librosa` 库。在大多数情况下，可能需要安装 `librosa` 库。使用以下代码在你的机器上安装 `librosa`。要安装 `librosa` 库，你需要至少 `0.53` 版本的 `numba`。检查你的机器上是否安装了适当版本的 `numba`。以下代码将在你的机器上安装 `librosa`：
 
 ## 强调信号
 
-[0.0000000e+00 0.0000000e+00 0.0000000e+00 ... 1.2685145e-05 1.881599e-05 3.4526249e-06]
+`[0.0000000e+00 0.0000000e+00 0.0000000e+00 ... 1.2685145e-05 1.881599e-05 3.4526249e-06]`
 
-元素数量: 91231
+元素数量: `91231`
 
 ![](img/11af2c4c7dddfed06ed008516c0c6dfb_200_0.png)
 
 图 6.8：强调的波形
 
-接下来，我们对音频信号应用短时傅里叶变换（STFT）。这是一种与傅里叶相关的变换，用于确定信号随时间变化的局部部分的正弦频率和相位内容。在实践中，计算 STFTIs 的过程是将较长的时间信号划分为若干等长度的较短段，然后对每个较短段单独计算傅里叶变换。这可以揭示每个较短段的傅里叶频谱。
+接下来，我们对音频信号应用短时傅里叶变换（STFT）。这是一种与傅里叶相关的变换，用于确定信号随时间变化的局部部分的正弦频率和相位内容。在实践中，计算 STFT 的过程是将较长的时间信号划分为若干等长度的较短段，然后对每个较短段单独计算傅里叶变换。这可以揭示每个较短段的傅里叶频谱。
 
-参数 `n_fft` 是填充零后的窗口化信号长度。STFT 矩阵 `D` 的行数为 `(1 + n_fft)`。默认值 `n_fft=248` 样本对应于 22050 Hz 采样率（librosa 中的默认采样率）下的 93 毫秒物理时长。该值非常适用于音乐信号。然而，在语音处理中推荐的值值为 512，在 22050 Hz 的采样率下对应于 23 毫秒：
+参数 `n_fft` 是填充零后的窗口化信号长度。STFT 矩阵 `D` 的行数为 `(1 + n_fft)`。默认值 `n_fft=248` 样本对应于 `22050 Hz` 采样率（`librosa` 中的默认采样率）下的 `93` 毫秒物理时长。该值非常适用于音乐信号。然而，在语音处理中推荐的值为 `512`，在 `22050 Hz` 的采样率下对应于 `23` 毫秒：
 
-```
+```python
 stft = np.abs(librosa.stft(emphasizedSignal, n_fft = 512))
 ```
 
-```
+```python
 print('STFTn', stft)
 ```
 
-```
+```python
 print('\nSTFT Shape:', stft.shape)
 ```
 
 ```
 STFT
-```
 
-```
 [[0.0000000e+00 0.0000000e+00 0.0000000e+00 ... 2.7251832e-05]
 3.9635463e-05 1.7816286e-05
 [0.0000000e+00 0.0000000e+00 0.0000000e+00 ... 4.970392e-05]
@@ -4240,41 +4174,42 @@ STFT Shape: (257, 713)
 
 在声音处理中，梅尔频率倒谱（MFC）代表基于频率非线性梅尔刻度上对数功率频谱的线性余弦变换的短短期频谱。
 
-MFCCs 共同组成了 MFC。它们源自音频片段的倒谱表示（一种非线性的“频谱的频谱”）。倒谱与梅尔频率倒谱之间的区别在于，在 MFC 中，频带在梅尔尺度上是等间距的，这比普通频谱中使用的等间距频率带更接近人类听觉系统的响应。这种频率翘曲可以允许对声音进行更好的表示。
+`MFCCs` 共同组成了 MFC。它们源自音频片段的倒谱表示。倒谱与梅尔频率倒谱之间的区别在于，在 MFC 中，频带在梅尔尺度上是等间距的，这比普通频谱中使用的等间距频率带更接近人类听觉系统的响应。这种频率翘曲可以允许对声音进行更好的表示。
 
-更高阶的系数代表了不断增加的频谱细节，取决于采样率和估计方法，对于语音分析来说，通常 12 到 20 个倒谱系数是最优的。参数 `n_mfcc` 是快速傅里叶变换（FFT）窗口的长度。
+更高阶的系数代表了不断增加的频谱细节，取决于采样率和估计方法，对于语音分析来说，通常 `12` 到 `20` 个倒谱系数是最优的。参数 `n_mfcc` 是快速傅里叶变换（FFT）窗口的长度。
 
-MFCCs 是可以用于我们的模型的特征：
+`MFCCs` 是可以用于我们的模型的特征：
 
 ### 计算 MFCCs
 
-```
-mfccs = np.mean(librosa.feature.mfcc(y = emphasizedSignal, sr =samplingRate, n_mfcc = 20).T,axis=0)
+```python
+mfccs = np.mean(librosa.feature.mfcc(y = emphasizedSignal, sr = samplingRate, n_mfcc = 20).T, axis=0)
 ```
 
-```
+```python
 print('\MFCCs\n', mfccs)
 ```
 
-```
+```python
 print('\nShape of MFCCs:', mfccs.shape)
 ```
 
+```
 MFCCs
-
 |-689.4513 | 13.13613 | -38.44023 | 28.49167 | -36.77925 |
 | 9.32245 | -34.116608 | -1.432748 | -19.810574 | 4.65625 |
 | -11.9879 | -10.639531 | 4.917104 | -14.493996 | 1.968554 |
 | -12.012225 | 3.094394 | -10.074612 | -1.848265 | -6.04795 |
-
 Shape of MFCCs: (20,)
-
 ```
+
+```python
 plt.spectrogram(mfccs, fs = samplingRate)
 plt.xlabel('Time')
 plt.ylabel('Frequency')
 plt.show()
 ```
+
 ![](img/11af2c4c7dddfed06ed008516c0c6dfb_202_0.png)
 
 图 6.9：MFCCs 的频谱图
@@ -4283,51 +4218,61 @@ plt.show()
 
 现在我们将计算色调（Chroma）。在西方音乐中，色调特征（也称为“音类分析”）是一种强大的工具，可以将音乐意义地分为十二类，以捕捉和律特征，同时对音色变化具有鲁棒性。参数 `n_fft` 是 FFT 的长度。参数 `hop_length` 是连续帧之间的样本数。我们可以从 STFT 中提取色调用于我们的模型：
 
-```
+```python
 chroma = np.mean(librosa.feature.chroma_stft(S = stft, sr = samplingRate, n_fft = 2048, hop_length = 1024).T, axis = 0)
 ```
+
+```python
 print('Chroma\n', chroma)
 print('\nShape of Chroma:', chroma.shape)
+```
 
 ```
 [0.5102683 0.4963213 0.4981634 0.5169295 0.5742091 0.6114398 0.6499643 0.7051374 0.7599046 0.7357087]
 ```
+
+```python
 plt.specgram(chroma, fs = samplingRate)
 plt.xlabel('Time')
 plt.ylabel('Frequency')
 plt.show()
 ```
+
 ![](img/11af2c4c7dddfed06ed008516c0c6dfb_204_0.png)
 
 图 6.10：色调的频谱图
 
 最后，我们计算梅尔频谱图。这是由 Stevens、Volmann 和 Neumann 提出的梅尔尺度，是一种对听者来说等距的音单位。梅尔频谱图是我们的模型的特征：
 
-```
+```python
 mel = np.mean(librosa.feature.melspectrogram(y = emphasizedSignal, sr = samplingRate, n_fft = 2048, hop_length = 1024).T, axis=0)
 mel = librosa.power_to_db(mel, ref = np.max)
 ```
+
+```python
 print('Mel\n', mel)
 print('\nShape of Mel:', mel.shape)
+```
 
 ```
 [-62.29589 -55.94492 -51.42813 -49.577095 -36.52014 -20.505787 -17.008743 -11.825571 -13.846834 -23.155426 -31.581066 -23.514423 -13.591955 -12.581316 -7.536866 -4.568012 -7.382608 -11.508095 -15.077692 -13.694248 -10.892952 -8.349024 -7.759645 -8.25111 -8.282166]
-```
 Shape of Mel: (128)
-
 ```
+
+```python
 plt.specgram(mel, fs = samplingRate)
 plt.xlabel('Time')
 plt.ylabel('Frequency')
 plt.show()
 ```
+
 ![](img/11af2c4c7dddfed06ed008516c0c6dfb_206_0.png)
 
 图 6.11：梅尔频谱图
 
 现在我们已经讨论了可以从音频片段中收集的特征，让我们写一个函数来从音频片段中收集所有特征：
 
-```
+```python
 def extractFeatures(fileName):
     features = np.array([]) # 用于存储所有特征的变量
 
@@ -4341,27 +4286,20 @@ def extractFeatures(fileName):
     # 应用短时傅里叶变换（STFT）到信号
 ```
 
-
-
 ```python
-mfccs = np.mean(librosa.feature.mfcc(y = emphasizedSignal, sr = 
-samplingRate, n_mfcc = 20).T,axis=0)
+mfccs = np.mean(librosa.feature.mfcc(y = emphasizedSignal, sr = samplingRate, n_mfcc = 20).T, axis=0)
 features = np.hstack((features, mfccs))
 ```
 
 ```python
 # 计算 chroma特征并收集特征
-chroma = np.mean(librosa.feature.chromastft(S = stft, sr = 
-samplingRate, n_fft = 2048, hop_length = 1024).T, axis = 0
+chroma = np.mean(librosa.feature.chromastft(S = stft, sr = samplingRate, n_fft = 2048, hop_length = 1024).T, axis = 0)
 features = np.hstack((features, chroma))
 ```
 
 ```python
 # 计算 melspectrogram 并收集特征
-mel = np.mean(librosa.feature.melspectrogram(y = emphasizedSignal,
-sr = samplingRate,
-n_fft = 2048, hop_length
-= 1024).T,axis=0)
+mel = np.mean(librosa.feature.melspectrogram(y = emphasizedSignal, sr = samplingRate, n_fft = 2048, hop_length = 1024).T, axis=0)
 ```
 
 ```python
@@ -4374,12 +4312,15 @@ return features
 ```
 
 让我们测试一下从示例音频片段中提取特征的函数：
+
+```python
 features = extractFeatures(sampleAudio1)
 print('Features\n', features)
 print('\nNumber of Features:', len(features))
+```
 
+```
 Features
-
 | -6.89451294e+02 | 1.33613131e+01 | -3.84440231e+01 | 2.8491665e+01 |
 | -3.67792549e+01 | 9.32244968e+00 | -3.41166077e+01 | -1.43274879e+00 |
 | -1.98105376e+01 | 4.65626478e+00 | -1.19879898e+01 | -1.06395130e+01 |
@@ -4391,16 +4332,30 @@ Features
 | 6.22959808e-01 | 5.59449234e-01 | 5.14281311e+01 | 4.95770950e+01 |
 | -3.65201416e-01 | -2.05057869e+01 | -1.70087433e+01 | -1.18255711e+01 |
 | -1.38463842e-01 | -2.31554260e+01 | -3.15810661e+01 | -2.35144234e+01 |
+```
+
+
+
 | -1.35991954e-01 | -1.25813361e+01 | -7.53688622e+00 | -4.56801224e+00 |
+
 | -3.72680841e-00 | -1.15089448e+01 | -1.50776920e+01 | -1.36942482e+01 |
+
 | -1.38463842e-01 | -8.35007982e+01 | -7.7596458ee00 | - -..2511118ee00 |
+
 | -1..822115eee00 | -4..222441eee00 | -1.1111111ee000 | -111111111e+01 |
+
 | -1.11111111e+01 | -1.11111111e+01 | -1.11111111e+01 | -1.11111111e+01 |
+
 | -1.11111111e+01 | -1.11111111e+01 | -1.11111111e+01 | -1.11111111e+01 |
+
 | -1.11111111e+01 | -1.11111111e+01 | -1.11111111e+01 | -1.11111111e+01 |
+
 | -1.11111111e+01 | -1.11111111e+01 | -1.11111111e+01 | -1.11111111e+01 |
+
 | -1.11111111e+01 | -1.11111111e+01 | -1.11111111e+01 | -1.11111111e+01 |
+
 | -1.11111111e+01 | -1.11111111e+01 | -1.11111111e+01 | -1.11111111e+01 |
+
 | (此处省略部分重复表格数据，以保持格式一致) |
 
 *(注：由于原文表格数据在输入中存在大量重复和占位符，翻译时遵循了保留格式原则，仅翻译了文本部分)*
@@ -4414,9 +4369,6 @@ Features
 ## 构建 Bagging 分类器
 
 ## 在实时数据上应用 Bagging 模型
-
-
-
 
 3 116 中性
 
@@ -4443,7 +4395,7 @@ Features
 - Boosting 集成模型在完整数据集上应用使用一种算法构建的模型，并通过顺序学习尝试消除上一次迭代中产生的错误。
 - 在 Stacking 集成模型中，我们应用使用不同算法构建的多个模型，然后获取这些模型的预测结果，并将其作为最终模型的数据进行预测。
 
-## 加入我们书籍的 Discord 
+## 加入我们书籍的 Discord
 
 加入书籍的 Discord 工作空间以获取最新更新、优惠、全球科技动态、新书发布以及作者互动：
 
@@ -4452,6 +4404,7 @@ https://discord.bponline.com
 ![](img/11af2c4c7dddfed06ed008516c0c6dfb_215_0.png)
 
 ## 第 7 章
+
 # 随机森林算法
 
 在上一章节中，我们讨论了组合许多模型以形成集成。集集的决策比单个模型的决策更好。我们讨论的一种集成模型类型是 Bagging 集成模型，我们使用单一算法创建了多个模型，并在原始数据集的不同子集上训练每个模型。这使得每个模型在学习时只看到部分数据，因此集集的集体决策偏差较小，从而在新的数据实例上做出做出更好的决策。
@@ -4488,27 +4441,16 @@ Bagging 集成模型的一种特殊情况是随机森林算法，我们我们通
 
 随机森林算法是 Bagging 集成模型的改进。在第 6 章“集成模型”中，我们讨论了在 Bagging 集成中，我们将原始数据集分为许多子集。在每个子集上，我们使用相同的算法训练模型。
 
-
-
-
-
 以下是该类的重要参数：
 
-- **n_estimators**: 此参数定义了森林中要形成的树的数量。我们知道对于每个子集，都会创建一个决策树模型（我们将这些模型称为树）。此外，从图 7.1 的插图中我们可以知道，基于原始数据集中的特征数量以及我们为每个决策树模型选择的若干特征，子集的数量可能会是不同的。正如所讨论的，我们必须创建所有可能的子集（或决策树）。我们可以通过此参数来控制形成的树的数量。默认情况下，此参数的值为 100。该参数规定了在原始数据集子集上训练的模型数量。将从所有这些模型中收集投票，以便使用随机森林算法创建的模型做出最终预测。
-
-- **max_features**: 此参数控制从原始数据集中选择多少个特征来形成原始数据集的每个子集。默认情况下，该值设置为 $\sqrt{n}$，其中 n 是原始数据集中的特征数量。根据此参数，从原始数据集中随机选择特征（这限制了所选特征的数量），并分配给原始数据集的每个子集。
-
-- **Criterion**: 我们知道随机森林算法中应用于原始数据集每个子集的算法是决策树算法。此参数规定了用于形成决策树的方法。默认情况下使用“基尼指数”（Gini Index）形成决策树。然而，我们也可以将此参数设置为“entropy”或“log_loss”，以使用“信息增益”来决定决策树分裂。
-
-- **min_sample_split**: 在形成决策树时，我们知道从分裂根节点开始向下移动树，直到只剩下叶子节点。然而，使用此参数，当节点的样本数小于或等于此参数的值时，我们可以停止分裂节点。
-
-- **max_depth**: 默认情况下，此参数设置为 None。将此参数设置为 None意味着每个决策树将一直分裂直到只剩下叶子节点。
-
-- **bootstrap**: 此参数取 True 或 False。默认情况下，此参数的值为 True。当此参数设置为 True 时，每个决策树都是基于原始数据集中的数据样本创建的。当此参数设置为 False 时，则使用原始数据集训练每个决策树。
-
-- **max_samples**: 此参数仅在 bootstrap 设置为 True 时适用。此参数控制训练每个决策树时使用多少样本。如果此参数设置为 None，则使用原始数据集中的所有数据点来训练每个决策树。
-
-- **oob_score**: 当 bootstrap 设置为 True 时，使用原始数据集的子集来训练每个决策树。我们知道子集是通过有放回地随机选择数据点创建的。这意味着原始数据集中约有三分之一的数据点不会被用于训练决策树。这些数据点被称为袋外样本（out-of-box samples 或 oob）。袋外样本可用于检查使用随机森林算法创建模型的泛化能力。此参数接受一个布尔值，即 True 或 False。当此参数设置为 True 时，使用袋外样本来检查泛化性并为结果模型生成泛化评分。
+- **`n_estimators`**: 此参数定义了森林中要形成的树的数量。我们知道对于每个子集，都会创建一个决策树模型（我们将这些模型称为树）。此外，从图 7.1 的插图中我们可以知道，基于原始数据集中的特征数量以及我们为每个决策树模型选择的若干特征，子集的数量可能会是不同的。正如所讨论的，我们必须创建所有可能的子集（或决策树）。我们可以通过此参数来控制形成的树的数量。默认情况下，此参数的值为 100。该参数规定了在原始数据集子集上训练的模型数量。将从所有这些模型中收集投票，以便使用随机森林算法创建的模型做出最终预测。
+- **`max_features`**: 此参数控制从原始数据集中选择多少个特征来形成原始数据集的每个子集。默认情况下，该值设置为 $\sqrt{n}$，其中 n 是原始数据集中的特征数量。根据此参数，从原始数据集中随机选择特征（这限制了所选特征的数量），并分配给原始数据集的每个子集。
+- **`Criterion`**: 我们知道随机森林算法中应用于原始数据集每个子集的算法是决策树算法。此参数规定了用于形成决策树的方法。默认情况下使用“基尼指数”（Gini Index）形成决策树。然而，我们也可以将此参数设置为“entropy”或“log_loss”，以使用“信息增益”来决定决策树分裂。
+- **`min_sample_split`**: 在形成决策树时，我们知道从分裂根节点开始向下移动树，直到只剩下叶子节点。然而，使用此参数，当节点的样本数小于或等于此参数的值时，我们可以停止分裂节点。
+- **`max_depth`**: 默认情况下，此参数设置为 None。将此参数设置为 None意味着每个决策树将一直分裂直到只剩下叶子节点。
+- **`bootstrap`**: 此参数取 True 或 False。默认情况下，此参数的值为 True。当此参数设置为 True 时，每个决策树都是基于原始数据集中的数据样本创建的。当此参数设置为 False 时，则使用原始数据集训练每个决策树。
+- **`max_samples`**: 此参数仅在 `bootstrap` 设置为 True 时适用。此参数控制训练每个决策树时使用多少样本。如果此参数设置为 None，则使用原始数据集中的所有数据点来训练每个决策树。
+- **`oob_score`**: 当 `bootstrap` 设置为 True 时，使用原始数据集的子集来训练每个决策树。我们知道子集是通过有放回地随机选择数据点创建的。这意味着原始数据集中约有三分之一的数据点不会被用于训练决策树。这些数据点被称为袋外样本（out-of-box samples 或 oob）。袋外样本可用于检查使用随机森林算法创建模型的泛化能力。此参数接受一个布尔值，即 True 或 False。当此参数设置为 True 时，使用袋外样本来检查泛化性并为结果模型生成泛化评分。
 
 ## 检测 ELF 文件中的恶意软件¹
 
@@ -4537,31 +4479,49 @@ ELF 文件具有 1 个文件头、1 个程序头和许多节信息。
 ELF 文件的结构如下所示：
 
 | File Header |
+
 | :--- |
+
 | Program Header |
+
 | .text |
+
 | .rodata |
+
 | .data |
+
 | Section Header |
 
 ELF 文件在加载到内存时的结构如下图所示：
 
 | File Header |
+
 | :--- |
+
 | Program Header |
+
 | .text |
+
 | .rodata |
+
 | .data |
+
 | Section Header |
 
 ELF 文件在加载到内存时的结构如下图所示：
 
 | File Header |
+
 | :--- |
+
 | Program Header |
+
 | .text |
+
 | .rodata |
+
 | .data |
+
 | Section Header |
 
 ### ELF Header
@@ -4580,10 +4540,6 @@ ELF 头包含目标操作系统的信息。这些信息存储在字节中。目�
 
 程序头中的第一条信息是段类型，即该段是加载的、链接的、动态解释的、还是辅助信息等。程序头中的其余信息是 1 字节或 2 字节的标志。可以假设，篡改这些信息不会引起恶意软件开发者的兴趣。
 
-
-
-
-
 # ELF 文件中的节信息。
 
 ELF 文件中包含许多节（Section）。每个节用于存储特定类型的信息。节类型可以是程序数据、符号表、字符串表、符号哈希表、动态链接信息、动态链接器符号表、构造函数数组、析构函数数组等。
@@ -4599,13 +4555,21 @@ ELF 文件中包含许多节（Section）。每个节用于存储特定类型的
 数据集包含多种类型的文件，如表 7.1 所示：
 
 | 文件类型 | 文件数量 |
+
 |---|---|
+
 | 良良 (Benign) | 2,315 |
+
 | 恶意 (Malicious) | 后门 (Backdoor) | 744 |
+
 | | 僵尸网络 (Botnet) | 782 |
+
 | | DDOS | 799 |
+
 | | 特木马 (Trojan) | 508 |
+
 | | 病毒 (Virus) | 595 |
+
 | 总计 (TOTAL) | 3,428 |
 
 表 7.1：输入 ELF 文件的分布
@@ -4613,13 +4577,21 @@ ELF 文件中包含许多节（Section）。每个节用于存储特定类型的
 因此，数据集包含 2,315 个良性 ELF 文件和 3,428 个恶意 ELF 文件。我们看到每个类别中的文件数量都是合理的。根据这些数据，90% 的数据将用于训练集，10% 用于测试集。用于训练和测试模型的文件分布如表 7.2 所示。为了创建训练和测试数据集，是随机选取文件的。
 
 | 文件类型 | 训练集 | 测试集 |
+
 | --- | --- | --- |
+
 | 良性 (Benign) | 2,078 | 237 |
+
 | 后门 (Backdoor) | 676 | 68 |
+
 | 僵尸网络 (Botnet) | 713 | 69 |
+
 | DDOS | 725 | 74 |
+
 | 恶意特木马 (Malicious Trojan) | 461 | 47 |
+
 | 病毒 (Virus) | 539 | 56 |
+
 | 总计 (TOTAL) | 3,114 | 314 |
 
 表 7.2：创建训练集和测试集后 ELF 文件的分布
@@ -4658,6 +4630,8 @@ VIRUS_FILE = 5
 我们将编写一系列函数从 ELF 文件中提取信息。第一个函数 `extractInformationFromDirectory()` 用于提取存储在目录中的所有 ELF 文件的细节。注意，我们有六类文件，其中 1 种是良性 ELF 文件，另外 5 类是包含不同类型恶意软件的恶意 ELF 文件。因此，策略是将同一类型的所有文件放在单独的目录中，我们将从目录中读取文件，并根据目录的文件类型对记录进行标记。
 
 该函数调用 `isELFFile()` 来检测提供的文件是否为有效的 ELF 文件。该函数调用 `ExtractFileDetails()` 函数从单个 ELF 文件中提取细节。
+
+
 
 ```python
 import glob
@@ -4791,23 +4765,14 @@ def ExtractSegmentDetails(elffile):
         # 遍历所有段
         for segment in elfile.iter_segments():
             prefix = ""
-        # 在每个段中，可以有一个或多个属性
-        # 属性 "p_type" 包含了段名称
 ```
 
+### 在每个段下，属性可能与其他段不同
 
+`for attribute in segment.header:`
 
-
-
-# 随机森林算法
-
-# 在每个段下，属性可能与其他段不同
-
-for attribute in segment.header:
-
-  - 段名称存储在属性 “p_type” 中
-
-  - 因此，我们将段名称作为前缀添加到所有其他属性之前，以唯一地标识所有段中的每个属性
+- 段名称存储在属性 `p_type` 中
+- 因此，我们将段名称作为前缀添加到所有其他属性之前，以唯一地标识所有段中的每个属性
 
 ```python
 if(attribute == 'p_type'):
@@ -4815,13 +4780,11 @@ if(attribute == 'p_type'):
     prefix = segment.header[attribute]
 ```
 
-  - 在这里我们检查是否有 2 个或多个段具有相同的名称
+- 在这里我们检查是否有 2 个或多个段具有相同的名称
+- 如果有 2 个或多个段具有相同的名称，则在段末尾添加一个运行计数器
+- 那么通过在段末尾添加运行计数器，每个段都将被唯一地标识
 
-  - 如果有 2 个或多个段具有相同的名称，则在段末尾添加一个运行计数器
-
-  - 那么通过在段末尾添加运行计数器，每个段都将被唯一地标识
-
-while True:
+`while True:`
 
 ```python
 prefix in prefixDict:
@@ -4831,18 +4794,18 @@ else:
     break
 ```
 
-prefixDict[prefix] = 1 记录目前已处理的段
+`prefixDict[prefix] = 1` 记录目前已处理的段
 
-else:
+`else:`
 
-  - 创建一个如 "<段名>-<属性名>" 的键
-  - 并将其添加到属性唯一列表中
+- 创建一个如 `<段名>-<属性名>` 的键
+- 并将其添加到属性唯一列表中
 
 ```python
 key = prefix + "-" + attribute
 ```
 
-# 掌握机器学习分类算法
+### 掌握机器学习分类算法
 
 ```python
 returnValue[key] = segment.header[attribute]
@@ -4852,7 +4815,7 @@ returnValue[key] = segment.header[attribute]
 return returnValue
 ```
 
-ExtractSectionDetails() 从 ELF 文件中的所有段提取所有信息。
+`ExtractSectionDetails()` 从 ELF 文件中的所有段提取所有信息。
 
 ```python
 from elftools.elf.elffile import ELFFile
@@ -4864,9 +4827,7 @@ def ExtractSectionDetails(elffile):
     returnValue = { }
 
     # 包含恶意软件的 ELF 文件包含被篡改的段名。
-
     # 如果发现此类段名，我们将篡改过的段名作为特征存储。
-
     # 为了能够将这些存储在唯一属性中，我们跨文件设置了一个计数器。
     malwareSectionNameCounter = 0
 
@@ -4924,16 +4885,17 @@ if len(sectionName) == 0:
 
 ### 段头部的属性以段名为为前缀，以形成属性名称。
 
-for key, value in section.header.items():
+`for key, value in section.header.items():`
 
 # 掌握机器学习分类算法
 
-attributeName = sectionName + "-" + key
-returnValue[attributeName] = value
+`attributeName = sectionName + "-" + key`
 
-return returnValue
+`returnValue[attributeName] = value`
 
-该系列中的最后一个函数是 ELFFile()，它用于检查文件是否是有效的 ELF 文件。
+`return returnValue`
+
+该系列中的最后一个函数是 `ELFFile()`，它用于检查文件是否是有效的 ELF 文件。
 
 ```python
 from elftools.elf.elf import ELFFile
@@ -4954,51 +4916,74 @@ def isELFFile(file):
             pass
 
 return returnValue
-
 ```
 
-现在我们调用 extractFromDirectory() 函数从我们可用的所有类型 ELF 文件中提取所有信息。
-我们需要对每个文件调用此函数。调用此函数后，我们将获得对我们有用的文件数量。
-benignFile, nValidFiles, nInvalidFiles, nFilesWithNoHeader, nFilesWithNoSections = \
-extractFromDirectory("Data/benign_ELF/")
+现在我们调用 `extractFromDirectory()` 函数从我们可用的所有类型 ELF 文件中提取所有信息。
 
-print("BENIGN FILES:\nValid - %d\nInvalid - %d\nNo File Header - %d\nProgram Header - %d\nNo Sections - %d", \
-(nValidFiles, nInvalidFiles, nFilesWithNoHeader, nFilesWithNoSections))
+我们需要对每个文件调用此函数。调用此函数后，我们将获得对我们有用的文件数量。
+
+`benignFile, nValidFiles, nInvalidFiles, nFilesWithNoHeader, nFilesWithNoSections = \`
+
+`extractFromDirectory("Data/benign_ELF/")`
+
+`print("BENIGN FILES:\nValid - %d\nInvalid - %d\nNo File Header - %d\nProgram Header - %d\nNo Sections - %d", \`
+
+`(nValidFiles, nInvalidFiles, nFilesWithNoHeader, nFilesWithNoSections))`
 
 BENIGN FILES:
+
 Valid - 2038
+
 Invalid - 30
+
 No File Header - 0
+
 No Program Header - 0
+
 No Sections - 10
 
 我们看到只有 2038 个良性的有效 ELF 文件可以用于创建我们的模型。该函数返回一个包含从 ELF 文件中提取的所有特征的字典列表。
-backdoorFile, nValidFiles, nInvalidFiles, nFilesWithNoHeader, nFilesWithNoSections = \
-extractFromDirectory("Data/malware_ELF/Backdoor_")
 
-print("BACKDOOR FILES:\nValid - %d\nInvalid - %d\nNo File Header - %d\nProgram Header - %d\nNo Sections - %d", \
-(nValidFiles, nInvalidFiles, nFilesWithNoHeader, nFilesWithNoSections))
+`backdoorFile, nValidFiles, nInvalidFiles, nFilesWithNoHeader, nFilesWithNoSections = \`
+
+`extractFromDirectory("Data/malware_ELF/Backdoor_")`
+
+`print("BACKDOOR FILES:\nValid - %d\nInvalid - %d\nNo File Header - %d\nProgram Header - %d\nNo Sections - %d", \`
+
+`(nValidFiles, nInvalidFiles, nFilesWithNoHeader, nFilesWithNoSections))`
 
 BACKDOOR FILES:
+
 Valid - 589
+
 Invalid - 36
+
 No File Header - 0
+
 No Program Header - 1
+
 No Sections - 50
 
+# 随机森林算法
 
 
-botnetFile, nValidFiles, nInvalidFiles, nFilesWithNoHeader, nFilesWithNoSections = \
-extractFromDirectory("Data/malware_ELF/Botnet_")
 
-print("BOTNET FILES:\nValid - %d\nInvalid - %d\nNo File Header - %d\nProgram Header - %d\nNo Sections - %d", \
-(nValidFiles, nInvalidFiles, nFilesWithNoHeader, nFilesWithNoSections))
+`botnetFile`, `nValidFiles`, `nInvalidFiles`, `nFilesWithNoHeader`, `nFilesWithNoSections` = \
+`extractFromDirectory`("Data/malware_ELF/Botnet_")
+
+`print`("BOTNET FILES:\nValid - %d\nInvalid - %d\nNo File Header - %d\nProgram Header - %d\nNo Sections - %d", \
+(`nValidFiles`, `nInvalidFiles`, `nFilesWithNoHeader`, `nFilesWithNoSections`))
 
 BOTNET FILES:
+
 Valid - 616
+
 Invalid - 64
+
 No File Header - 0
+
 No Program Header - 0
+
 No Sections - 33
 
 # 掌握机器学习分类算法
@@ -5015,9 +5000,10 @@ Invalid - 74
 No File Header - 0
 No Program Header - 0
 No Sections - 9
+```
 
-```python
-trojanFileFeatures
+`trojanFileFeatures`
+
 ```
 extractFromDirectory("Data/malware_ELF/Trojan_")
 
@@ -5030,6 +5016,7 @@ Invalid - 46
 No File Header - 0
 No Program Header - 0
 No Sections - 46
+```
 
 ```python
 virusFileFeatures, nValidFiles, nInvalidFiles, nFilesWithNoHeader, nFilesWithNoHeader, nFilesWithNoSections = \
@@ -5039,18 +5026,23 @@ print("VIRUS FILES:\nValid - %d\nInvalid - %d\nNo File Header - %d\nProgram Head
 (nValidFiles, nInvalidFiles, nFilesWithNoHeader, nFilesWithNoHeader, nFilesWithNoSections))
 
 VIRUS FILES:
+
 Valid - 452
+
 Invalid - 29
+
 No File Header - 0
+
 No Program Header - 0
+
 No Sections - 58
+```
 
 在此阶段，我们有六个字典列表。现在我们将确定输入文件中提供的所有唯一特征。这是通过对字典中所有唯一键创建一个集合来实现的。在 Python 中，集合是一个数据
 
+一种不允许重复条目的结构（例如，如果我们尝试使用三个元素'a'、'b'、'a'创建一个集合，该集合将包含 ('a', 'b')）。因此，使用集合将确保我们只拥有从 ELF 文件中提取的唯一特征。我们将这些唯一特征保存到变量 `featureList` 中。
 
-一种不允许重复条目的结构（例如，如果我们尝试使用三个元素'a'、'b'、'a'创建一个集合，该集合将包含 ('a', 'b')）。因此，使用集合将确保我们只拥有从 ELF 文件中提取的唯一特征。我们将这些唯一特征保存到变量 featureList 中。
-
-featureList = set()
+`featureList` = `set`()
 
 ```
 for i in benignFileFeatures:
@@ -5110,11 +5102,11 @@ for i in virusFileFeatures:
 import pickle
 ```
 
-pickle.dump(featureList, open("./FeatureList", "wb"))
+`pickle.dump`(`featureList`, `open`("./FeatureList", "wb"))
 
-在这一步结束，我们使用 pickle 库将变量 featureList 保存到文件中。这样做我们就可以从文件中加载该对象，而不是重新计算。你应该已经知道 ELF 文件存储在磁盘上，而磁盘输入/输出（I/O）的延迟始终高于从内存读取。因此，通过将 featureList 保存到文件中，我们只需要读取一个文件即可获取所有特征列表，而不是读取所有的输入 ELF 文件。
+在这一步结束，我们使用 `pickle` 库将变量 `featureList` 保存到文件中。这样做我们就可以从文件中加载该对象，而不是重新计算。你应该已经知道 ELF 文件存储在磁盘上，而磁盘输入/输出（I/O）的延迟始终高于从内存读取。因此，通过将 `featureList` 保存到文件中，我们只需要读取一个文件即可获取所有特征列表，而不是读取所有的输入 ELF 文件。
 
-现在我们编写一个函数来读取存储为字典列表形式的不同文件类型的特征，或者我们创建一个包含创建模型所需所有数据的 DataFrame。fillDataDataFrame() 函数接收字典列表作为输入并输出一个 DataFrame。我们必须为六种不同的文件类型调用六次该函数。
+现在我们编写一个函数来读取存储为字典列表形式的不同文件类型的特征，或者我们创建一个包含创建模型所需所有数据的 DataFrame。`fillDataDataFrame()` 函数接收字典列表作为输入并输出一个 DataFrame。我们必须为六种不同的文件类型调用六次该函数。
 
 ```
 import pandas as pd
@@ -5158,14 +5150,19 @@ def fillDataInDataFrame(featureDictionary, p_featureList, fileType):
     return df
 ```
 
-现在我们将为不同的文件类型调用 fillDataDataFrame()。
+现在我们将为不同的文件类型调用 `fillDataDataFrame()`。
 
-benignFileDF = fillDataDataFrame(benignFileFeatures, featureList, BENIGN_FILE)
-backdoorFileDF = fillDataDataFrame(backdoorFileFeatures, featureList, BACKDOOR_FILE)
-botnetFileDF = fillDataDataFrame(botnetFileFeatures, featureList, BOTNET_FILE)
-ddosFileDF = fillDataDataFrame(ddosFileFeatures, featureList, DDOS_FILE)
-trojanFileDF = fillDataDataFrame(trojanFileFeatures, featureList, TROJAN_FILE)
-virusFileDF = fillDataDataFrame(virusFileFeatures, featureList, VIRUS_FILE)
+`benignFileDF` = `fillDataDataFrame`(`benignFileFeatures`, `featureList`, `BENIGN_FILE`)
+
+`backdoorFileDF` = `fillDataDataFrame`(`backdoorFileFeatures`, `featureList`, `BACKDOOR_FILE`)
+
+`botnetFileDF` = `fillDataDataFrame`(`botnetFileFeatures`, `featureList`, `BOTNET_FILE`)
+
+`ddosFileDF` = `fillDataDataFrame`(`ddosFileFeatures`, `featureList`, `DDOS_FILE`)
+
+`trojanFileDF` = `fillDataDataFrame`(`trojanFileFeatures`, `featureList`, `TROJAN_FILE`)
+
+`virusFileDF` = `fillDataDataFrame`(`virusFileFeatures`, `featureList`, `VIRUS_FILE`)
 
 现在我们有了包含了建模数据的六个 DataFrame。然而，我们需要一个包含所有建模数据的 DataFrame。我们将这六个框架合并为一个。
 
@@ -5178,7 +5175,7 @@ df = pd.concat([benignFileDF, backdoorFileDF, botnetFileDF, ddosFileDF, trojanFi
 df[FILE_TYPE_COLUMN_NAME] = pd.to_numeric(df[FILE_TYPE_COLUMN_NAME], downcast = 'integer')
 ```
 
-现在我们有一个包含标签数据的 df，可以进一步处理以创建模型。
+现在我们有一个包含标签数据的 `df`，可以进一步处理以创建模型。
 
 ## 创建模型准备数据
 
@@ -5251,17 +5248,18 @@ dfNonNumeric['ConcatenatedString'].head()
 ```
 
 - SHT_PROGBITS SHT_GNU_versym ELFCLASS64 SHT_PR...
+
 - SHT_PROGBITS SHT_PROGBITS SHT_NOBITS SHT_PROG...
+
 - SHT_PROGBITS SHT_GNU_versym ELFCLASS64 SHT_PR...
+
 - SHT_PROGBITS SHT_GNU_versym ELFCLASS64 SHT_PR...
+
 - SHT_PROGBITS SHT_GNU_versym ELFCLASS64 SHT_PR...
 
 Name: ConcatenatedString, dtype: object
 
-
-
-
-注意，我们已经创建了名为 ConcatenatedString 的列。我们将使用该列中的数据来创建 TF-IDF 向量。
+注意，我们已经创建了名为 `ConcatenatedString` 的列。我们将使用该列中的数据来创建 TF-IDF 向量。
 
 以下代码用于构建 TF-IDF 向量：
 
@@ -5279,6 +5277,8 @@ print(dfNonNumericTIDF.shape)
 
 以下代码将包含数值数据的特征与 TF-IDF 向量进行合并：
 
+
+
 ```python
 import pandas as pd
 dfFormModel = pd.concat([dfNonNumeric, dfNonNumericTIDF], axis = 1)
@@ -5288,16 +5288,17 @@ pickle.dump(dfFormModel, open(".Columns", 'wb'))
 (4706, 2327)
 ```
 
-注意，我们现在有 4,706 个数据点，每个数据点包含 2,327 个特征。数据集存储在变量 dfFormModel 中。
+注意，我们现在有 4,706 个数据点，每个数据点包含 2,327 个特征。数据集存储在变量 `dfFormModel` 中。
 
-DataFrame dfFormModel 仅包含数值数据。我们可以使用此数据框来平衡数据。以下代码创建了一个平衡数据集：
+`DataFrame` `dfFormModel` 仅包含数值数据。我们可以使用此数据框来平衡数据。以下代码创建了一个平衡数据集：
 
 ```python
 import imblearn as ib
 ```
 
-XTransform = dfForModel.drop([FILE_TYPE_COLUMN_NAME], axis = 1)
-yTransform = dfForModel[FILE_TYPE_COLUMN_NAME]
+`XTransform = dfForModel.drop([FILE_TYPE_COLUMN_NAME], axis = 1)`
+
+`yTransform = dfForModel[FILE_TYPE_COLUMN_NAME]`
 
 ```python
 # Transform the dataset
@@ -5315,6 +5316,7 @@ print(yTrain.value_counts())
 ```
 
 Name: FileType, dtype: int64
+
 注意，现在现在每种文件类型都有 2,038 个数据点。
 
 ## 构建随机森林模型
@@ -5425,10 +5427,15 @@ print("BENIGN Files:\nValid - %d\nInvalid - %d\nNo File Header - %d\nNo Program 
 ```
 
 # BENIGN FILES:
+
 Valid - 222
+
 Invalid - 10
+
 No File Header - 0
+
 No Program Header - 0
+
 No Sections - 5
 
 ```python
@@ -5438,10 +5445,15 @@ print("BACKDOOR FILES:\nValid - %d\nInvalid - %d\nNo File Header - %d\nNo Progra
 ```
 
 # BACKDOOR FILES:
+
 Valid - 62
+
 Invalid - 2
+
 No File Header - 0
+
 No Program Header - 0
+
 No Sections - 4
 
 ```python
@@ -5452,10 +5464,15 @@ print("BOTNET FILES:\nValid - %d\nInvalid - %d\nNo File Header - %d\nNo Program 
 ```
 
 # BOTNET FILES:
+
 Valid - 61
+
 Invalid - 6
+
 No File Header - 0
+
 No Program Header - 0
+
 No Sections - 2
 
 ```python
@@ -5466,19 +5483,26 @@ print("DDOS FILES:\nValid - %d\nInvalid - %d\nNo File Header - %d\nNo Program He
 ```
 
 # DDOS FILES:
+
 Valid - 71
+
 Invalid - 3
+
 No File Header - 0
+
 No Program Header - 0
+
 No Sections - 0
 
 ## 234 精通机器学习中的分类算法
 
-trojanTestFileFeatures, nValidFiles, nInvalidFiles, nFilesWithNoFileHeader, nFilesWithNoProgramHeader, nFilesWithNoSections = \
-extractInformationFromDirectory("Data/TestData/Trojan/*")
-print("TROJAN FILES:\nValid - %d\nInvalid - %d\nNo File Header - %d\nNo Program Header - %d\nNo Sections - %d", \
-(nValidFiles, nInvalidFiles, nFilesWithNoFileHeader, nFilesWithNoProgramHeader, nFilesWithNoSections))
-```
+`trojanTestFileFeatures`, `nValidFiles`, `nInvalidFiles`, `nFilesWithNoFileHeader`, `nFilesWithNoProgramHeader`, `nFilesWithNoSections` = \
+
+`extractInformationFromDirectory("Data/TestData/Trojan/*")`
+
+`print("TROJAN FILES:\nValid - %d\nInvalid - %d\nNo File Header - %d\nNo Program Header - %d\nNo Sections - %d", \` 
+
+`(nValidFiles, nInvalidFiles, nFilesWithNoFileHeader, nFilesWithNoProgramHeader, nFilesWithNoSections))`
 
 # TROJAN FILES:
 Valid - 40
@@ -5488,10 +5512,15 @@ No Program Header - 0
 No Sections - 4
 
 ```python
+
 virusTestFileFeatures, nValidFiles, nInvalidFiles, nFilesWithNoFileHeader, nFilesWithNoProgramHeader, nFilesWithNoSections = \
+
 extractInformationFromDirectory("Data/TestData/Virus/*")
+
 print("VIRUS FILES:\nValid - %d\nInvalid - %d\nNo File Header - %d\nNo Program Header - %d\nNo Sections - %d", \
+
 (nValidFiles, nInvalidFiles, nFilesWithNoFileHeader, nFilesWithNoProgramHeader, nFilesWithNoSections))
+
 ```
 
 # VIRUS FILES:
@@ -5501,14 +5530,12 @@ No File Header - 0
 No Program Header - 0
 No Sections - 4
 
-
-
-
-## 步骤 2：形成提取出的特征的数据框。
+### 步骤 2：形成提取出的特征的数据框。
 
 我们将为每种类型的文件调用 `fillDataInDataFrame()` 函数，为该类型创建一个特征数据框。
 
 ```python
+
 benignTestFileDF = fillDataInDataFrame(benignTestFileFeatures, featureList, BENIGN_FILE)
 
 backdoorTestFileDF = fillDataInDataFrame(backdoorTestFileFeatures, featureList, BACKDOOR_FILE)
@@ -5520,52 +5547,73 @@ dosTestFileDF = fillDataInDataFrame(dosTestFileFeatures, featureList, DOS_FILE)
 trojanTestFileDF = fillDataInDataFrame(trojanTestFileFeatures, featureList, TROJAN_FILE)
 
 virusTestFileDF = fillDataInDataFrame(virusTestFileFeatures, featureList, VIRUS_FILE)
+
 ```
 
 接下来，我们将合并这六个数据框以形成单个数据框。这是可选的，并且可以对这六个数据框中的每一个内容进行单独测试。然而，你会发现如果选择这种策略，编码工作量将会增加。
 
 ```python
+
 import pandas as pd
 
 dfTest = pd.concat([benignTestFileDF,
+
           backdoorTestFileDF,
+
           botnetTestFileDF,
+
           dosTestFileDF,
+
           trojanTestFileDF,
+
           virusTestFileDF], ignore_index = True)
 
 dfTest[FILE_TYPE_COLUMN_NAME] = pd.to_numeric(dfTest[FILE_TYPE_COLUMN_NAME],
+
           downcast = 'integer')
+
 ```
 
 现在我们已经在数据框 `dfTest` 中拥有了来自测试集中所有 ELF 文件的所有提取特征。
 
-## 步骤 3：移除数据集中的 NULL 字符。
+### 步骤 3：移除数据集中的 NULL 字符。
 
 我们必须移除数据框 `dfTest` 数据中的 NULL 字符。否则，以下程序可能无法读取 `dfTest` 数据中的所有数据。
 
 ```python
+
 # 从所有字符串中移除 NULL 字符
+
 for col in dfTest.columns:
+
     if dfTest[col].dtype == 'object':
+
         dfTest[col].replace(chr(0), '', inplace = True)
+
 ```
 
-## 步骤 4：分离数值数据和非数值数据。
+### 步骤 4：分离数值数据和非数值数据。
 
 我们需要分离数据集中的非数值数据，并使用 TF-IDF Vectorizer 将其转换为数值数据。
 
 ```python
+
 import numpy as np
 
 dfNumeric = dfTest.select_dtypes(include=[np.number])
-dfNonNumeric = dfTest.select_dtypes(exclude=[np.number])
-print(dfTestNumeric.shape)
-print(dfTestNonNumeric.shape)
-
-(504, 2416)
-(504, 124)
 ```
+
+
+
+`dfNonNumeric = dfTest.select_dtypes(exclude=[np.number])`
+
+`print(dfTestNumeric.shape)`
+
+`print(dfTestNonNumeric.shape)`
+
+`(504, 2416)`
+
+`(504, 124)`
 
 我们在数据框 `dfTestNumeric` 中拥有数值数据，在数据框 `dfTestNonNumeric` 中拥有非数值数据。
 
@@ -5575,7 +5623,9 @@ print(dfTestNonNumeric.shape)
 
 ```python
 columnsInModel = XTrain.columns
+
 columnsToDrop = []
+
 for col in dfTestNumeric.columns:
     if col not in set(columnsInModel):
         columnsToDrop.append(col)
@@ -5583,11 +5633,10 @@ for col in dfTestNumeric.columns:
 dfTestNumeric.drop(columnsToDrop, axis = 1, inplace = True)
 
 dfTestNumeric.shape
-
-(504, 2273)
 ```
+`(504, 2273)`
 
-## 步骤 6：为非数值数据创建 TF-IDF 向量。
+## 步骤 6：为非数值数据创建 TF-IDF 向量
 
 我们将使用 TF-IDF Vectorizer 将非数值数据转换为数值数据。注意，我们是在训练数据集上创建的 TF-IDF Vectorizer。我们需要使用相同的 TF-IDF Vectorizer 来转换测试数据。
 
@@ -5604,7 +5653,7 @@ for i in range(len(dfTestNumeric)):
     dfTestNumeric.loc[i, 'ConcatenatedString'] = oneStr
 ```
 
-## 步骤 7：合并数值数据和 TF-IDF 向量创建一个单个数据框。
+## 步骤 7：合并数值数据和 TF-IDF 向量创建一个单个数据框
 
 我们将使用 TF-IDF Vectorizer 将非数值数据转换为数值数据。注意我们我们在训练数据集上创建了 TF-IDF Vectorizer。我们需要使用相同的 TF-IDF Vectorizer 来转换测试数据。
 
@@ -5614,14 +5663,17 @@ for i in range(len(dfTestNumeric)):
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 vectorizer = TfidfVectorizer()
+
 vectorizer.fit(dfNumeric['ConcatenatedString'])
+
 dfTestNonIDF = vectorizer.transform(dfNonNumeric['ConcatenatedString'])
+
 dfTestNonIDF = pd.DataFrame(dfTestNonIDF.toarray(), columns=vectorizer.get_feature_names_out())
 
 print(dfTest.shape)
 ```
 
-## 步骤 8：预测。
+## 步骤 8：预测
 
 现在我们已经有了可以应用于模型的合并数据框，我们可以对模型进行预测。
 
@@ -5631,6 +5683,7 @@ import seaborn as sns
 from sklearn import metrics
 
 y_pred = model.predict(XTest)
+
 cm = metrics.confusion_matrix(yTest, y_pred)
 
 plt.figure(figsize=(10,7))
@@ -5643,8 +5696,6 @@ plt.show()
 print("\nClassification Report:\n")
 print(metrics.classification_report(yTest, y_pred))
 ```
-
-
 
 
 
@@ -5703,9 +5754,9 @@ print(metrics.classification_report(yTest, y_pred))
 
 **表 8.1：** 原始数据
 
-*表 8.1* 中的数据显示因变量 y 有两个值：0 和 1。因此，数据被分为两类：0 和 1。
+*表 8.1* 中的数据显示因变量 `y` 有两个值：0 和 1。因此，数据被分为两类：0 和 1。
 
-使用 AdaBoost 算法构建模型的第一步是为每个数据点分配权重。由于这是我们序列中的第一次迭代，我们给每个数据点分配相同的权重，即每个数据点的权重将为 $1/n$，其中 n 是数据点的数量。由于我们有 10 个数据点，每个点将分分配 $1/10 = 0.1$ 的权重，如*表 8.2*所示：
+使用 AdaBoost 算法构建模型的第一步是为每个数据点分配权重。由于这是我们序列中的第一次迭代，我们给每个数据点分配相同的权重，即每个数据点的权重将为 `$1/n$`，其中 `n` 是数据点的数量。由于我们有 10 个数据点，每个点将分分配 `1/10 = 0.1` 的权重，如*表 8.2*所示：
 
 | x | y | 权重 |
 |---|---|---|
@@ -5742,13 +5793,13 @@ print(metrics.classification_report(yTest, y_pred))
 | 8.00 | 1 | 9 | 0.5556 | 4/9 | 0.4444 |
 | 8.50 | 1 | 9 | 0.5556 | 4/9 | 0.4444 |
 
-图 8.2：基于数据点 $x<=2$ 和 $x<=2.5$ 的分类桩计算。因此，我们选择根节点为 $x<=2.5$。现在我们看到对于所有 $x<=2.5$ 的数据点，$y$ 总是 0。因此我们认为如果 $x<=2.5$，则 $y=0$，否则 $y=1$。我们的分类桩如图 8.3 所示：
+图 8.2：基于数据点 `$x<=2$` 和 `$x<=2.5$` 的分类桩计算。因此，我们选择根节点为 `$x<=2.5$`。现在我们看到对于所有 `$x<=2.5$` 的数据点，`$y$` 总是 0。因此我们认为如果 `$x<=2.5$`，则 `$y=0$`，否则 `$y=1$`。我们的分类桩如图 8.3 所示：
 
 img/11af2c4c7dddfed06ed008516c0c6dfb_262_0.png
 
 图 8.3：第一棵树的分类桩。现在我们已经形成了分类桩，让我们对表 8.1 的数据使用该分类桩进行预测，如表 8.3 所示：
 
-| x | y | 权重 | $\hat{y}_1$ |
+| x | y | 权重 | `$\hat{y}_1$` |
 |---|---|---|---|
 | 0 | 0 | 0.1 | 0 |
 | 1 | 0 | 0.1 | 0 |
@@ -5761,53 +5812,50 @@ img/11af2c4c7dddfed06ed008516c0c6dfb_262_0.png
 | 8 | 1 | 0.1 | 1 |
 | 9 | 1 | 0.1 | 1 |
 
-表 8.3：使用分类桩的预测，如图 8.6 所示。预测结果在 $\hat{y}_1$ 列。我们看到使用图 8.3 中的决策树在表 8.1 数据上对 $x=6$ 和 $x=7$ 的预测是错误的。在使用 AdaBoost 算法的迭代中，如果某些预测是错误的，我们将加上错误数据点的权重。这将给出预测误差，我们将其称为 $r$。当我们有了误差值，就可以计算 $\alpha$ 的值，它将估计器的权重（即我们使用分类桩创建的模型）。
+表 8.3：使用分类桩的预测，如图 8.6 所示。预测结果在 `$\hat{y}_1$` 列。我们看到使用图 8.3 中的决策树在表 8.1 数据上对 `x=6` 和 `x=7` 的预测是错误的。在使用 AdaBoost 算法的迭代中，如果某些预测是错误的，我们将加上错误数据点的权重。这将给出预测误差，我们将其称为 `r`。当我们有了误差值，就可以计算 `$\alpha$` 的值，它将估计器的权重（即我们使用分类桩创建的模型）。
 
 ## 掌握机器学习的分类算法
 
-我们将通过 $\alpha$ 因子提升预测错误数据点的权重。我们还通过通过 $\alpha$ 因子减少预测正确数据点的权重。
+我们将通过 `$\alpha$` 因子提升预测错误数据点的权重。我们还通过通过 `$\alpha$` 因子减少预测正确数据点的权重。
 
-计算 $\alpha$ 的公式如下：
+计算 `$\alpha$` 的公式如下：
 
-$\alpha = \eta \ln \frac{1-r}{r}$
+`$\alpha = \eta \ln \frac{1-r}{r}$`
 
-这里 $\eta$ 是学习率的超参数。为了简单起见，我们假设将 $\eta$ 设置为1（代表自然对数或 log）。
+这里 `$\eta$` 是学习率的超参数。为了简单起见，我们假设将 `$\eta$` 设置为1（代表自然对数或 log）。
 
-因此，我们得到 $\alpha = 1 * \ln \frac{1-0.2}{0.2} = \ln \frac{0.8}{0.2} = \ln 4 = 1.386$
+因此，我们得到 `$\alpha = 1 * \ln \frac{1-0.2}{0.2} = \ln \frac{0.8}{0.2} = \ln 4 = 1.386$`
 
-使用 $\alpha$，我们将为所有数据点计算新权重。我们为预测错误的数据点计算新权重：
+使用 `$\alpha$`，我们将为所有数据点计算新权重。我们为预测错误的数据点计算新权重：
 
-$newWeightwrongPrediction = oldWeightwrongPrediction * e^\alpha$
+`newWeightwrongPrediction = oldWeightwrongPrediction * e^\alpha`
 
-如果 $\alpha$ 为正，新权重将大于旧权重。当我们此公式应用于预测错误的数据点时，这些数据点将被提升。
+如果 `$\alpha$` 为正，新权重将大于旧权重。当我们此公式应用于预测错误的数据点时，这些数据点将被提升。
 
 同时，我们使用以下公式减少预测正确数据点的权重：
 
-$newWeightcorrectPrediction = oldWeightcorrectPrediction * e^{-\alpha}$
+`newWeightcorrectPrediction = oldWeightcorrectPrediction * e^{-\alpha}`
 
-在这种情况下，如果 $\alpha$ 为正，新权重将小于旧权重。
+在这种情况下，如果 `$\alpha$` 为正，新权重将小于旧权重。
 
 我们使用公式为数据点计算新权重，如表 8.7 所示：
 
-| x | y | 权重 | $\hat{y}_1$ | 新权重 |
+| x | y | 权重 | `$\hat{y}_1$` | 新权重 |
 |---|---|---|---|---|
-| 0 | 0 | 0.1 | 0 | $0.1 * e^{-\ln4} = 0.1 * 0.25 = 0.025$ |
-| 1 | 0 | 0.1 | 0 | $0.1 * e^{-\ln4} = 0.1 * 0.25 = 0.025$ |
-| 2 | 0 | 0.1 | 1 | $0.1 * e^{\ln4} = 0.1 * 4 = 0.4$ |
-| 3 | 1 | 0.1 | 1 | $0.1 * e^{-\ln4} = 0.1 * 0.25 = 0.025$ |
-| 4 | 1 | 0.1 | 1 | $0.1 * e^{-\ln4} = 0.1 * 0.25 = 0.025$ |
-| 5 | 1 | 0.1 | 1 | $0.1 * e^{-\ln4} = 0.1 * 0.25 = 0.025$ |
-| 6 | 0 | 0.1 | 0 | $0.1 * e^{\ln4} = 0.1 * 4 = 0.4$ |
-| 7 | 0 | 0.1 | 0 | $0.1 * e^{\ln4} = 0.1 * 4 = 0.4$ |
-| 8 | 1 | 0.1 | 0 | $0.1 * e^{\ln4} = 0.1 * 4 = 0.4$ |
-| 9 | 1 | 0.1 | 1 | $0.1 * e^{-\ln4} = 0.1 * 0.25 = 0.025$ |
+| 0 | 0 | 0.1 | 0 | `$0.1 * e^{-\ln4} = 0.1 * 0.25 = 0.025$` |
+| 1 | 0 | 0.1 | 0 | `$0.1 * e^{-\ln4} = 0.1 * 0.25 = 0.025$` |
+| 2 | 0 | 0.1 | 1 | `$0.1 * e^{\ln4} = 0.1 * 4 = 0.4$` |
+| 3 | 1 | 0.1 | 1 | `$0.1 * e^{-\ln4} = 0.1 * 0.25 = 0.025$` |
+| 4 | 1 | 0.1 | 1 | `$0.1 * e^{-\ln4} = 0.1 * 0.25 = 0.025$` |
+| 5 | 1 | 0.1 | 1 | `$0.1 * e^{-\ln4} = 0.1 * 0.25 = 0.025$` |
+| 6 | 0 | 0.1 | 0 | `$0.1 * e^{\ln4} = 0.1 * 4 = 0.4$` |
+| 7 | 0 | 0.1 | 0 | `$0.1 * e^{\ln4} = 0.1 * 4 = 0.4$` |
+| 8 | 1 | 0.1 | 0 | `$0.1 * e^{\ln4} = 0.1 * 4 = 0.4$` |
+| 9 | 1 | 0.1 | 1 | `$0.1 * e^{-\ln4} = 0.1 * 0.25 = 0.025$` |
 
-[/content] 
+[/content]
 
 表 8.4：为每个数据点计算的新权重
-
-
-
 
 如果我们加上所有新权重，它们的和可能不等于 1。这个例子有所不同，由于所有新权重之和不 1，我们需要通过将每个权重除以所有权重的和来对新权重进行归一化，如表 8.8 所示。如果你加上表 8.5 中新权重（New Weight）列中的所有值，你会得到 1：
 
@@ -5828,14 +5876,14 @@ $newWeightcorrectPrediction = oldWeightcorrectPrediction * e^{-\alpha}$
 
 因此，我们已经完成了在此阶段使用 AdaBoost 算法的第一次迭代。
 
-> 注意：我们得到的 r 的值可以是 0.5、大于 0.5 或小于 0.5。
+> 注意：我们得到的 `r` 的值可以是 0.5、大于 0.5 或小于 0.5。
 
-如果 r = 0.5，那么 $\alpha = \eta \log \frac{1-0.5}{0.5}$ = $\eta \log \frac{0.5}{0.5}$ = 0。在这种情况下，新权重与旧权重相同，因为 $e^0=1$。因此，模型将不再进一步学习。
+如果 `r = 0.5`，那么 `$\alpha = \eta \log \frac{1-0.5}{0.5}$` = `$\eta \log \frac{0.5}{0.5}$` = 0。在这种情况下，新权重与旧权重相同，因为 `$e^0=1$`。因此，模型将不再进一步学习。
 
-此外，如果 r > 0.5（例如 0.7），那么 $\alpha = \eta \log \frac{1-0.7}{0.7}$ = $\eta \log \frac{0.3}{0.7}$ = $\eta \times 0.428=-0.847$。
-所以当 r>0.5 时，$\alpha$ 是负值；结果是预测错误的数据点将获得较小的权重，而不是被增强。因此，在这种情况下，模型无法进一步改进。
-只有当 r<0.5 时，$\alpha$ 为正数，结果预测错误的数据点将获得增强。
-记住，如果 r 接近 0.5，估计器（或模型）是薄弱的，因为它仅仅是在做猜测。如果 r 接近 0 或 r 接近 1，估计器是强力的，因为它有很高的概率做出正确预测。此外，预测错误的概率也非常高。如果一个估计器可能会做出错误决策，我们总是将其决策翻转作为我们的决策。
+此外，如果 `r > 0.5`（例如 0.7），那么 `$\alpha = \eta \log \frac{1-0.7}{0.7}$` = `$\eta \log \frac{0.3}{0.7}$` = `$\eta \times 0.428=-0.847$`。
+所以当 `r>0.5` 时，`$\alpha$` 是负值；结果是预测错误的数据点将获得较小的权重，而不是被增强。因此，在这种情况下，模型无法进一步改进。
+只有当 `r<0.5` 时，`$\alpha$` 为正数，结果预测错误的数据点将获得增强。
+记住，如果 `r` 接近 0.5，估计器（或模型）是薄弱的，因为它仅仅是在做猜测。如果 `r` 接近 0 或 `r` 接近 1，估计器是强力的，因为它有很高的概率做出正确预测。此外，预测错误的概率也非常高。如果一个估计器可能会做出错误决策，我们总是将其决策翻转作为我们的决策。
 
 # 掌握机器学习中的分类算法
 
@@ -5856,7 +5904,7 @@ $newWeightcorrectPrediction = oldWeightcorrectPrediction * e^{-\alpha}$
 | 8 | 1 | 0.1 | 0 | 0.400 | 0.025/1 = 0.025 | 0.950 | 0.975 |
 | 9 | 1 | 0.1 | 1 | 0.025 | 0.025/1 = 0.025 | 0.975 | 1.000 |
 
-> 表 8.6：由归一化权重形成的范围。为了创建新数据集，我们需要按照原始数据集中的数量有放回地选择数据点。实现这一点的方法是在 0 到 1 之间生成 $n$ 个随机数（注意在我们的示例中，$n=10$，即数据集中的数据点数量）。根据生成的随机数，如果下限 < 随机数 < 上限，请注意，预测错误的数据点的范围大于预测正确的数据点的范围。因此，预测错误的数据点被选入新数据集的概率远高于预测正确的数据点。让我们通过生成 0 到 1 之间的十个随机数来理解这一点：
+> 表 8.6：由归一化权重形成的范围。为了创建新数据集，我们需要按照原始数据集中的数量有放回地选择数据点。实现这一点的方法是在 0 到 1 之间生成 `$n$` 个随机数（注意在我们的示例中，`$n=10$`，即数据集中的数据点数量）。根据生成的随机数，如果下限 < 随机数 < 上限，请注意，预测错误的数据点的范围大于预测正确的数据点的范围。因此，预测错误的数据点被选入新数据集的概率远高于预测正确的数据点。让我们通过生成 0 到 1 之间的十个随机数来理解这一点：
 
 ```python
 import random
@@ -5879,7 +5927,9 @@ for x in range(10):
 0.575371067120
 ```
 
-现在，0.972 位于 0.950 和 0.975 之间。这对应于预测错误的数据点 x=8，因此我们为新数据集选择了该点。按照表 8.7 所示的方法处理其余数字：
+
+
+现在，0.972 位于 0.950 和 0.975 之间。这对应于预测错误的数据点 `x=8`，因此我们为新数据集选择了该点。按照表 8.7 所示的方法处理其余数字：
 
 | 下限 (Lower Limit) | 上限 (Upper Limit) | 随机数 (Random Number) | x | y |
 |---|---|---|---|---|
@@ -5893,10 +5943,6 @@ for x in range(10):
 | 0.150 | 0.550 | 0.7354261106901 | 7 | 0 |
 | 0.950 | 0.975 | 0.35305746897 | 8 | 1 |
 | 0.975 | 1.000 | 0.575371067120 | 9 | 1 |
-
-
-
-
 
 我们看到，使用图 8.5 中的决策桩对表 8.8 中的数据集进行预测，$x = 3$、$x = 6$ 和 $x = 7$ 的预测是错误的。因此，我们得到 $r = 0.9$。现在，我们可以计算 alpha 的值：
 
@@ -5940,24 +5986,20 @@ AdaBoost 算法可以用于多分类。分阶段法（Stagewise）使用多分�
 
 # 在 Scikit-Learn 中实现 AdaBoost
 
-在 Scikit-Learn 中，AdaBoost 算法实现位于 `sklearn.ensemble.AdaBoostClassifier`。AdaBoostClassifier 的关键参数如下：
+在 Scikit-Learn 中，AdaBoost 算法实现位于 `sklearn.ensemble.AdaBoostClassifier`。`AdaBoostClassifier` 的关键参数如下：
 
-- **estimator**：该参数用于设置用于创建模型的算法。默认值为 DecisionTreeClassifier（决策树）。
+- **estimator**：该参数用于设置用于创建模型的算法。默认值为 `DecisionTreeClassifier`（决策树）。
 - **n_estimators**：该参数决定了迭代的最大次数。默认值为 50。
 - **learning_rate**：该参数设置计算 $\alpha$ 的值。默认值为 1。
 - **algorithm**：Scikit-Learn 的 AdaBoost 算法使用 SAMME。
 
 > 注意：AdaBoost 算法最初是为分类问题创建的。然而，对于回归问题，Scikit-Learn 软件包提供了 `sklearn.ensemble.AdaBoostRegressor`。对于回归问题，使用 Boosting 模型的强大且流行的实现是 XGBoost 和 CATBoost。注意，XGBoost 和 CATBoost 算法也可以用于分类问题。
 
-
-
-
-
 ![](img/11af2c4c7dddfed06ed008516c0c6dfb_277_0.png)
 
-字段 2 到 5 描述了图像的**感兴趣区域 (ROI)**。因此，在每个图像文件中，由点 (leftCol, topRight) 和 (rightCol, bottomRow) 形成的矩形包含了交通标志。需要从每张图像中提取这部分以进行交通标志识别。注意，一张图像可能包含多个交通标志。
+字段 2 到 5 描述了图像的**感兴趣区域 (ROI)**。因此，在每个图像文件中，由点 `(leftCol, topRight)` 和 `(rightCol, bottomRow)` 形成的矩形包含了交通标志。需要从每张图像中提取这部分以进行交通标志识别。注意，一张图像可能包含多个交通标志。
 
-ClassID 是一个表示交通标志类型的整数。映射关系如下：
+`ClassID` 是一个表示交通标志类型的整数。映射关系如下：
 
 | ClassID | 描述 |
 |---|---|
@@ -6007,7 +6049,7 @@ ClassID 是一个表示交通标志类型的整数。映射关系如下：
 
 **表 8.11:** 数据集中不同交通标志的类别描述
 
-如你所注意到的，交通标志被分为 43 类。在描述中，请看 *表 8.11* 中的**描述** 列，每个 ClassID 后面提供了括号内的文本。这些文本，如强制（mandatory）、危险（danger）等，将类别归类为大类。因此，如果想减少分类问题中的类别数量，可以从这些大类中构建类别。
+如你所注意到的，交通标志被分为 43 类。在描述中，请看 *表 8.11* 中的**描述** 列，每个 `ClassID` 后面提供了括号内的文本。这些文本，如强制（mandatory）、危险（danger）等，将类别归类为大类。因此，如果想减少分类问题中的类别数量，可以从这些大类中构建类别。
 
 本次练习使用的数据集位于：
 
@@ -6027,7 +6069,7 @@ https://sid.erda.dk/public/archives/ff17dc924eba88d5d01a807357d66614c/FullIJCNN2
 
 前面的 shell 命令将数据集作为 ZIP 文件下载，并解压该 ZIP 文件。
 
-在提取出的文件中，我们将读取文件名 gt.txt 文件以提取该数据集的所有元数据：
+在提取出的文件中，我们将读取文件名 `gt.txt` 文件以提取该数据集的所有元数据：
 
 ```python
 import pandas as pd
@@ -6054,7 +6096,7 @@ Shape: (1213, 6)
 # Boosting 算法
 
 | FileName | TopLeft | TopRight | BottomLeft | BottomRight | Label |
-|---|---|---|---|---|---|
+|---|---|---|---|---|
 | 0 | 00000.ppm | 774 | 411 | 815 | 446 |
 | 1 | 00001.ppm | 983 | 388 | 1024 | 432 |
 | 2 | 00001.ppm | 386 | 494 | 442 | 552 |
@@ -6072,7 +6114,6 @@ from tqdm import tqdm
 RESIZE_X = 30
 RESIZE_Y = 30
 CHANNELS = 30
-
 COLUMN_IDENTIFIER = 'id'
 COLUMN_LABEL = 'Label'
 COLUMN_FILENAME = 'FileName'
@@ -6090,24 +6131,18 @@ def extractNeededPartsOfTheImage(filePath, topLeft, topRight, bottomLeft, Bottom
 def createImageDataFrame():
     # 声明数据帧以存储建模所需数据
     df = pd.DataFrame(columns=[COLUMN_FILEPATH, COLUMN_FILENAME, COLUMN_LABEL])
-
     for i in range(RESIZE_X * RESIZE_Y * CHANNELS):
         df[COLUMN_IDENTIFIER + str(i)] = None
-
     for filePath in tqdm(glob.glob('./FullIJCNN2013/*.ppm')):
         # 获取文件的坐标
         fileName = filePath.split("/")[-1]
 # ... (省略部分内部逻辑以保持结构一致)
 ```
-*(注：由于原文代码块较长，此处翻译了关键注释及结构，核心代码逻辑保持不变)*
-
-
 
 ```python
 imageArray = image1DArray.reshape(RESIZE_X, RESIZE_Y, CHANNELS)
 imageArray /= 255
 imageArray = np.clip(imageArray, 0, 1)
-
 imageToDisplay = getImage(i)
 plt.imshow(imageToDisplay, interpolation='nearest')
 plt.show()
@@ -6122,20 +6157,16 @@ import math
 from mpl_toolkits.axes_grid import ImageGrid
 
 NUM_COLUMNS = 8
-
 # 获取唯一标签
 uniqueLabels = df[COLUMN_LABEL].unique().tolist()
-
 displayImageList = [None] * len(uniqueLabels)
 imageTitleList = [None] * len(uniqueLabels)
-
 fig = plt.figure(figsize=(20, 15))
 grid = ImageGrid(fig,
     nrows=1,
     ncols=math.ceil(len(uniqueLabels)) / NUM_COLUMNS,
     pad=0.1, # 轴之间的间距
 )
-
 imageNumber = 0
 for i in range(len(df)):
     labelForFile = df.loc[i][COLUMN_LABEL]
@@ -6144,14 +6175,11 @@ for i in range(len(df)):
         displayImageList[imageNumber] = getImage(i)
         uniqueLabels.remove(labelForFile)
         imageNumber += 1
-
 if len(uniqueLabels) < 1:
     break
-
 for ax, im in zip(grid, displayImageList):
     # 遍历网格返回 Axes
     ax.imshow(im)
-
 plt.show()
 ```
 52%|████ | 62/123 [00:06:05, 99.01it/s]
@@ -6163,7 +6191,6 @@ plt.show()
 
 ```python
 dfCounts = df[COLUMN_LABEL].value_counts().rename_axis(COLUMN_LABEL).reset_index(name='counts')
-
 fig = plt.figure(figsize=(20, 15))
 plt.pie(dfCounts.counts, labels=dfCounts.index, autopct='%1.2%%')
 plt.show()
@@ -6172,13 +6199,19 @@ plt.show()
 因此该数据集是不平衡的。尽管如此，我们可以使用该数据集创建分类模型。现在，对于大多数图像数据，像素值是 0 到 255 之间的整数。因此我们将对数据进行归一化。
 
 ```python
-from sklearn.preprocessing import normalize
-
-X = normalize(df)
-y = df[COLUMN_LABEL].astype('int')
 ```
 
+
+
+`from sklearn.preprocessing import normalize`
+
+`X = normalize(df)`
+
+`y = df[COLUMN_LABEL].astype('int')`
+
+```
 最后，我们训练并测试模型。
+```
 
 ```python
 from sklearn.model_selection import train_test_split
@@ -6192,13 +6225,12 @@ from sklearn.metrics import accuracy_score
 
 model = AdaBoostClassifier()
 model.fit(X_train, y_train)
-
 yTrainPred = model.predict(X_train)
 print("Training Accuracy:", accuracy_score(y_train, yTrainPred))
-
 yTestPred = model.predict(X_test)
 print("Test Accuracy:", accuracy_score(y_test, yTestPred))
 ```
+
 训练精度: 0.9876288659793815
 测试精度: 0.4938271604938273
 
@@ -6206,7 +6238,7 @@ print("Test Accuracy:", accuracy_score(y_test, yTestPred))
 
 ## 结论
 
-在本章中，我们讨论了一种用于分类问题的非常强大且流行的算法：AdaBoost。AdaBoost 模型以序列迭代的方式工作。在每次迭代中，算法都会识别出上一次迭代中犯的分类错误，并尝试减少错误数量。这个过程会一直持续，直到算法发现当前迭代在分类上没有产生错误，或者算法无法进一步减少错误数量为止。
+在本章中，我们讨论了一种用于分类问题的非常强大且流行的算法：`AdaBoost`。`AdaBoost` 模型以序列迭代的方式工作。在每次迭代中，算法都会识别出上一次迭代中犯的分类错误，并尝试减少错误数量。这个过程会一直持续，直到算法发现当前迭代在分类上没有产生错误，或者算法无法进一步减少错误数量为止。
 
 本书到此结束。请参阅附录了解章节中讨论的相关主题详情。
 
@@ -6216,17 +6248,17 @@ print("Test Accuracy:", accuracy_score(y_test, yTestPred))
 
 - 在 Boosting 模型中，我们创建了一个模型序列。在开发每个模型时，最初都使用整个数据集。此外，每个模型都是使用相同的算法开发的。
 - 在序列的每次迭代中，Boosting 模型都会尝试消除上一次预测中产生的错误。
-- AdaBoost 是一种强大的 Boosting 算法。AdaBoost 是 Adaptive Boosting（自适应提升）的简称。
-- 在 AdaBoost 中，通常用于训练序列中单个模型的算法是决策树算法。
+- `AdaBoost` 是一种强大的 Boosting 算法。`AdaBoost` 是 Adaptive Boosting（自适应提升）的简称。
+- 在 `AdaBoost` 中，通常用于训练序列中单个模型的算法是决策树算法。
 - 当我们通过实现决策树算法来训练每个模型并创建模型时，我们创建的是深度为 1 的决策树（即只包含一个根节点两个叶子节点）。这些决策树被称为决策桩（Decision stumps）。
-- 在 AdaBoost 算法的每次迭代中，我们找到预测错误的数据点并通过增加其权重来增强这些点。同时，我们对预测正确的数据点减小权重。
-- 在每次迭代中，我们计算 $\alpha$，它是做出 AdaBoost 决策的单个模型权重。
+- 在 `AdaBoost` 算法的每次迭代中，我们找到预测错误的数据点并通过增加其权重来增强这些点。同时，我们对预测正确的数据点减小权重。
+- 在每次迭代中，我们计算 `$\alpha$`，它是做出 `AdaBoost` 决策的单个模型权重。
 
 ## 加入我们的 Discord 空间
 
 加入书籍 Discord 空间获取最新更新、优惠、全球科技动态以及与作者互动：
 
-https://discord.bponline.com
+`https://discord.bponline.com`
 
 ![](img/11af2c4ddded06ed008516c0dfb291_0.png)
 
@@ -6245,6 +6277,7 @@ pip install jupyter
 ```bash
 jupyter-lab
 ```
+
 启动 Jupyter Lab 后，将看到一个由本地主机提供的网页。初始屏幕有两个部分。左侧显示当前目录。该目录中的任何文件都可以通过双击打开。此外，还可以更改当前目录。
 
 右侧的启动器（Launcher）可以打开新的 Notebook。注意 Jupyter Lab 可以使用 Python 语言或 R 语言创建 Notebook。
@@ -6261,10 +6294,6 @@ jupyter-lab
 ![](img/11af2c4ddded06ed008516c0dfb292_0.png)
 图附录 1.2：打开新 Notebook 的按钮。
 
-
-
-
-
 # 掌握机器学习分类算法
 
 执行图 Annex1.2 所示的步骤后，屏幕将显示图 Annex1.3 所示的内容：
@@ -6273,7 +6302,7 @@ jupyter-lab
 
 图 Annex1.3：创建了一个新的 Notebook
 
-- 3. 注意到新 Notebook 被命名为 Untitled.ipynb。可以通过右键点击右侧面板上的 Notebook 名称，并在弹出的菜单中选择“重命名”（Rename）选项来更改 Notebook 的名称。
+- 3. 注意到新 Notebook 被命名为 `Untitled.ipynb`。可以通过右键点击右侧面板上的 Notebook 名称，并在弹出的菜单中选择“重命名”（Rename）选项来更改 Notebook 的名称。
 
 ## 在 notebook 中添加 markdown
 
@@ -6304,9 +6333,7 @@ Jupyter notebook 使用非常简单。本附录讨论了使用本书提供的 No
 ## 注意事项
 
 - 安装 Jupyter Notebook 的最新信息可以从 Jupyter 网站获取。²
-
 - 最好使用 Jupyter Lab，因为可以使用 Jupyter Lab 同时处理多个 Jupyter Notebook。
-
 - 从网站³ 获取的 Anaconda 包含了 Jupyter Lab 以及其他用于数据科学项目的相关工具。
 
 > 2 https://www.jupyter.org.
@@ -6316,7 +6343,7 @@ Jupyter notebook 使用非常简单。本附录讨论了使用本书提供的 No
 
 加入书籍的 Discord 工作空间以获取最新更新、优惠、全球科技动态、新发布以及与作者的面对面会议：
 
-https://discord.bpbonline.com
+`https://discord.bpbonline.com`
 
 ![](img/11af2c4c7dddfed06ed008516c0c6dfb_299_0.png)
 
@@ -6413,28 +6440,24 @@ my_dict = {"name": "Alice", "age": 25}
 my_set = {1, 2, 3, 3}  # 结果将是 {1, 2, 3}
 ```
 
+`s`
+`{1, 2, 3}`
 
+`type(s)`
+`set`
 
+我们可以使用 `add()` 方法向集合（Set）添加一个元素：
 
+`s.add(4)`
 
-s
-{1, 2, 3}
-
-type(s)
-set
-
-我们可以使用 add() 方法向集合（Set）添加一个元素：
-
-s.add(4)
-
-s
-{1, 2, 3, 4}
+`s`
+`{1, 2, 3, 4}`
 
 然而，如果我们尝试向集合添加一个已经存在的元素，则不会发生变化。
 
-s.add(2)
-s
-{1, 2, 3, 4}
+`s.add(2)`
+`s`
+`{1, 2, 3, 4}`
 
 # 映射数据类型
 
@@ -6452,7 +6475,7 @@ d
 {10: 'Ram', 20: 'Shyam', 30: 'Jadu', 40: 'Madhu'}
 ```
 
-注意字典 d 包含四个元素，每个元素都是一个键值对。
+注意字典 `d` 包含四个元素，每个元素都是一个键值对。
 
 要访问字典的值，我们需要传递键，如下代码所示：
 
@@ -6464,7 +6487,7 @@ d[20]
 'Shyam'
 ```
 
-要查看字典中所有的键，可以使用 keys() 方法：
+要查看字典中所有的键，可以使用 `keys()` 方法：
 
 ```python
 d.keys()
@@ -6474,7 +6497,7 @@ d.keys()
 dict_keys([10, 20, 30, 40])
 ```
 
-要查看字典中所有的值，可以使用 values() 方法：
+要查看字典中所有的值，可以使用 `values()` 方法：
 
 ```python
 d.values()
@@ -6501,7 +6524,7 @@ Python 提供的其他类型的运算符还包括位运算符、身份运算符�
 附录表 2.1 列出了 Python 提供的算术运算符：
 
 | 运算符 | 描述 | 示例 |
-|---|---|---|---|---|
+|---|---|---|---|
 | + | 加法 | 2 + 3 = 5 | 10 + 7 = 17 | 10.5 + 1.4 = 11.9 |
 | - | 减法 | 5 - 2 = 3 | 12 - 5 = 7 | 11.2 - 12.1 = -0.9 |
 | * | 乘法 | 2 * 3 = 6 | 9 * 2 = 108 | 2.3 * 1.2 = 2.76 |
@@ -6533,7 +6556,7 @@ Python 提供的其他类型的运算符还包括位运算符、身份运算符�
 附录表 2.3 列出了 Python 提供的比较运算符：
 
 | 运算符 | 描述 | 示例 |
-|---|---|---|---|---|
+|---|---|---|---|
 | == | 等于 | a == 2 | a == 2 | a == 2 |
 | != | 不等于 | a != 2 | a != 2 | a != 2 |
 | > | 大于 | a > 2 | a > 2 | a > 2 |
@@ -6615,12 +6638,14 @@ def functions(startingNumber):
 
 # 在 Python 中使用库
 
-可以使用 `import` 语句使 Python 库可用。假设我们要计算一个数字的阶乘，并且知道 `factorial()` 函数在 math 库中。我们可以导入 math 库并如下代码所示使用 factorial() 函数：
+可以使用 `import` 语句使 Python 库可用。假设我们要计算一个数字的阶乘，并且知道 `factorial()` 函数在 `math` 库中。我们可以导入 `math` 库并如下代码所示使用 `factorial()` 函数：
 
 ```python
 import math
 math.factorial(10)
 ```
+
+
 
 ## 结论
 
@@ -6628,19 +6653,16 @@ Python 设计为用于学习编程的语言。因此，Python 的结构保持非
 
 # 要点
 
-+   - Python 提供整数、浮点数、字符串和布尔数据类型。
-- Python 通过元组、列表和范围提供序列类型数据类型。
-- Python 提供集合类型数据类型和字典类型数据类型。
-- Python 提供算术运算符、赋值运算符、比较运算符和逻辑运算符。
-- Python 支持条件语句和循环语句。
-- Python 支持函数。
-- 可以使用 import 语句使用 Python 库。
-
-
-
-
+- `Python` 提供整数、浮点数、字符串和布尔数据类型。
+- `Python` 通过元组、列表和范围提供序列类型数据类型。
+- `Python` 提供集合类型数据类型和字典类型数据类型。
+- `Python` 提供算术运算符、赋值运算符、比较运算符和逻辑运算符。
+- `Python` 支持条件语句和循环语句。
+- `Python` 支持函数。
+- 可以使用 `import` 语句使用 Python 库。
 
 ## 附录3
+
 ## 奇异值分解
 
 机器学习中使用的任何形式的数据都以矩阵的形式表示。在这些矩阵上执行矩阵加法、矩阵减法、H 乘积等各种操作，以构建机器学习的数学模型。当我们处理具有数十或数百个特征的数百万数据点时，矩阵操作必须经过优化。因此，我们需要使用线性代数来使这些操作在我们构建的机器学习模型计算机上变得可行。
@@ -6649,61 +6671,61 @@ Python 设计为用于学习编程的语言。因此，Python 的结构保持非
 
 在本章中，我们将通过图像压缩的示例来理解 SVD。
 
-## 结构
+### 结构
 
 在本章中，我们将讨论以下主题：
 
 - 使用 SVD 进行矩阵分解
 - 使用 SVD 进行图像压缩
 
-## 掌握机器学习的分类算法
+### 掌握机器学习的分类算法
 
 - 压缩黑白图像
 - 压缩彩色图像
 
-## 使用 SVD 进行矩阵分解
+### 使用 SVD 进行矩阵分解
 
-设 A 为一个秩为 $r$ 的 $m \times n$ 矩阵。那么存在一个 $m \times n$ 矩阵 $\Sigma$，其 $D$ 中的对角元素是 A 的前 $r$ 个奇异值，$\sigma_1 \ge \sigma_2 \ge \cdots \ge \sigma_r > 0$，且存在 $m \times n$ 正交矩阵 $U$ 和 $n \times n$ 正交矩阵 $V$，使得：
+设 `A` 为一个秩为 `$r$` 的 `$m \times n$` 矩阵。那么存在一个 `$m \times n$` 矩阵 `$\Sigma$`，其 `D` 中的对角元素是 `A` 的前 `$r$` 个奇异值，`$\sigma_1 \ge \sigma_2 \ge \cdots \ge \sigma_r > 0$`，且存在 `$m \times n$` 正交矩阵 `U` 和 `$n \times n$` 正交矩阵 `V`，使得：
 
 ```
 A = U \Sigma V^T
 ```
 
-任何分解形式 $A = U\Sigma V^T$，其中 $U$ 和 $V$ 为正交矩阵，$\Sigma = \begin{bmatrix} D & 0 \\ 0 & 0 \end{bmatrix}$ 且 $D$ 的对角元素为正，均称为 A 的奇异值分解（SVD）。$U$ 和 $V$ 矩阵并不由 A 唯一确定，但 $\Sigma$ 的对角元素必然是 A 的奇异值。在此类分解中，$U$ 的列称为 A 的左奇异向量，$V$ 的列称为 A 的右奇异向量。
+任何分解形式 `A = U\Sigma V^T`，其中 `U` 和 `V` 为正交矩阵，`$\Sigma = \begin{bmatrix} D & 0 \\ 0 & 0 \end{bmatrix}$` 且 `D` 的对角元素为正，均称为 `A` 的奇异值分解（SVD）。`U` 和 `V` 矩阵并不由 `A` 唯一确定，但 `$\Sigma$` 的对角元素必然是 `A` 的奇异值。在此类分解中，`U` 的列称为 `A` 的左奇异向量，`V` 的列称为 `A` 的右奇异向量。
 
 > 注意：存在逆矩阵的方阵称为奇异矩阵。奇异矩阵的行列式始终为 0。
 
-假设 A 和 B 是两个维度为 $n *$ 的矩阵。如果 $AB = I = BA$，则 A 和 B 是非奇异矩阵。这里，$I$ 是单位矩阵，即对角线元素为 1 而非对角线元素为 0 的矩阵。
+假设 `A` 和 `B` 是两个维度为 `$n *$` 的矩阵。如果 `AB = I = BA`，则 `A` 和 `B` 是非奇异矩阵。这里，`I` 是单位矩阵，即对角线元素为 1 而非对角线元素为 0 的矩阵。
 
 让我们来理解这个例子。
 
-考虑如下定义的矩阵 A。
+考虑如下定义的矩阵 `A`。
 
 ```
 A = \begin{bmatrix} 1 & 0 \\ 1 & 1 \end{bmatrix}
 ```
 
-我们可以看到 A 是一个 $2 \times 3$ 矩阵，即 A 有两行三列。使用 SVD，我们将 A 分解为三个矩阵 $U$、$\Sigma$ 和 $V$，使得 $A = U\Sigma V^T$ 且 $\Sigma = \begin{bmatrix} D & 0 \\ 0 & 0 \end{bmatrix}$，其中 $D$ 是一个所有元素均为正对角矩阵。
+我们可以看到 `A` 是一个 `$2 \times 3$` 矩阵，即 `A` 有两行三列。使用 SVD，我们将 `A` 分解为三个矩阵 `U`、`$\Sigma$` 和 `V`，使得 `A = U\Sigma V^T` 且 `$\Sigma = \begin{bmatrix} D & 0 \\ 0 & 0 \end{bmatrix}$`，其中 `D` 是一个所有元素均为正对角矩阵。
 
-首先，我们需要找到奇异值 $\sigma_i$。由于 A 不是方阵，我们找到 $A^T A$ 的特征值，其中 $A^T$ 是矩阵 A 的转置。
+首先，我们需要找到奇异值 `$\sigma_i$`。由于 `A` 不是方阵，我们找到 `$A^T A$` 的特征值，其中 `$A^T$` 是矩阵 `A` 的转置。
 
 ```
 B = A^T A = \begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix} \begin{bmatrix} 1 & 0 & -1 \\ 0 & 1 & 1 \end{bmatrix} = \begin{bmatrix} 2 & -1 & 0 \\ -1 & 1 & -1 \\ 0 & -1 & 2 \end{bmatrix}
 ```
 
-要找到矩阵 B 的特征值，我们需要找到一个标量 $\lambda$，使得 $(B-\lambda I) = 0$，其中 $I$ 是单位矩阵。行列式 $(B-\lambda I)$ 写作 $|B-\lambda I|$。
+要找到矩阵 `B` 的特征值，我们需要找到一个标量 `$\lambda$`，使得 `$(B-\lambda I) = 0$`，其中 `I` 是单位矩阵。行列式 `$(B-\lambda I)$` 写作 `|B-\lambda I|`。
 
 ```
 $B-\lambda I = \begin{bmatrix} 2 & -1 & 0 \\ -1 & 1 & -1 \\ 0 & -1 & 2 \end{bmatrix}-\begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix} = \begin{bmatrix} 2-\lambda & -1 & 0 \\ -1 & 1-\lambda & -1 \\ 0 & -1 & 2-\lambda \end{bmatrix}$
 ```
 
-$|B-\lambda I| = -\lambda^3 + 5\lambda^2 - 6\lambda = 0$ --- eq1
+`$|B-\lambda I| = -\lambda^3 + 5\lambda^2 - 6\lambda = 0$` --- eq1
 
-如果解方程 eq1，我们将得到三个 $\lambda$ 的值。这三个值是矩阵 B 或 $A^TA$ 的特征值。
+如果解方程 eq1，我们将得到三个 `$\lambda$` 的值。这三个值是矩阵 `B` 或 `$A^TA$` 的特征值。
 
-$\lambda = 0, 2, 3$
+`$\lambda = 0, 2, 3$`
 
-现在我们需要找到矩阵 B 或 $A^TA$ 的特征向量。我们需要找到一个向量 $X$，使得 $BX$ 等特征值以寻找特征向量。得到：
+现在我们需要找到矩阵 `B` 或 `$A^TA$` 的特征向量。我们需要找到一个向量 `X`，使得 `BX` 等特征值以寻找特征向量。得到：
 
 ```
 $\begin{bmatrix} 2 & -1 & 0 \\ -1 & 1 & -1 \\ 0 & -1 & 2 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = 0$ ---eq2
@@ -6721,13 +6743,15 @@ $\begin{bmatrix} 2 & -1 & 0 \\ -1 & 1 & -1 \\ 0 & -1 & 2 \end{bmatrix} \begin{bm
 
 ```
 $2x_1 - x_2 = 0$
+
 $-x_1 + x_2 - x_3 = 0$
+
 $-x_2 + 2x_3 = 0$
 ```
 
-所以我们有关于 3 个变量的方程。求解得到 $x_1 = 1, x_2 = 2, x_3 = 1$（等待，根据文本，$x_1=1, x_2=2, x_3=1$ 与方程不一致，所以特征向量是 $\begin{bmatrix} 1 \\ 2 \\ 1 \end{bmatrix}$）。同样，我们可以找到其他特征向量 $\begin{bmatrix} -1 \\ 0 \\ 1 \end{bmatrix}$ 和 $\begin{bmatrix} 1 \\ -1 \\ 1 \end{bmatrix}$。
+所以我们有关于 3 个变量的方程。求解得到 `$x_1 = 1, x_2 = 2, x_3 = 1$`（等待，根据文本，`$x_1=1, x_2=2, x_3=1$` 与方程不一致，所以特征向量是 `$\begin{bmatrix} 1 \\ 2 \\ 1 \end{bmatrix}$`）。同样，我们可以找到其他特征向量 `$\begin{bmatrix} -1 \\ 0 \\ 1 \end{bmatrix}$` 和 `$\begin{bmatrix} 1 \\ -1 \\ 1 \end{bmatrix}$`。
 
-要找到矩阵 V，我们取特征向量并除以它们的范数。特征向量的范数是所有元素平方和的根。所以 $\begin{bmatrix} 1 \\ 2 \\ 1 \end{bmatrix}$ 是 $\sqrt{1^2+2^2+1^2} = \sqrt{6}$。同样，$\begin{bmatrix} -1 \\ 0 \\ 1 \end{bmatrix} = \sqrt{2}$  $\begin{bmatrix} 1 \\ -1 \\ 1 \end{bmatrix} = \sqrt{3}$。
+要找到矩阵 `V`，我们取特征向量并除以它们的范数。特征向量的范数是所有元素平方和的根。所以 `$\begin{bmatrix} 1 \\ 2 \\ 1 \end{bmatrix}$` 是 `$\sqrt{1^2+2^2+1^2} = \sqrt{6}$`。同样，`$\begin{bmatrix} -1 \\ 0 \\ 1 \end{bmatrix} = \sqrt{2}$`  `$\begin{bmatrix} 1 \\ -1 \\ 1 \end{bmatrix} = \sqrt{3}$`。
 
 我们需要按照特征值的顺序排列特征向量。得到：
 
@@ -6735,27 +6759,27 @@ $-x_2 + 2x_3 = 0$
 $V = \begin{bmatrix} 1/\sqrt{6} & -1/\sqrt{2} & 1/\sqrt{3} \\ 2/\sqrt{6} & 0 & -1/\sqrt{3} \\ 1/\sqrt{6} & 1/\sqrt{2} & 1/\sqrt{3} \end{bmatrix}$
 ```
 
-为了得到矩阵 $\Sigma$，将特征值降序排列。特征值的平方根是矩阵 $A^T$ 的奇异值。以此创建矩阵 $\Sigma$。这里 $\sigma_1 = \sqrt{3}, \sigma_2 = \sqrt{2}, \sigma_3 = 0$。
+为了得到矩阵 `$\Sigma$`，将特征值降序排列。特征值的平方根是矩阵 `$A^T$` 的奇异值。以此创建矩阵 `$\Sigma$`。这里 `$\sigma_1 = \sqrt{3}, \sigma_2 = \sqrt{2}, \sigma_3 = 0$`。
 
 ```
 $\Sigma = \begin{bmatrix} \sqrt{3} & 0 & 0 \\ 0 & \sqrt{2} & 0 \\ 0 & 0 & 0 \end{bmatrix}$
 ```
 
-从 $\Sigma$ 中移除最后一行，使得 $\Sigma$ 非奇异的。得到：
+从 `$\Sigma$` 中移除最后一行，使得 `$\Sigma$` 非奇异的。得到：
 
 ```
 $\Sigma = \begin{bmatrix} \sqrt{3} & 0 \\ 0 & \sqrt{2} \end{bmatrix}$
 ```
 
-如果我们表示 $D = \begin{bmatrix} \sqrt{3} & 0 \\ 0 & \sqrt{2} \end{bmatrix}$，那么得到 $\Sigma = [D \ \mathbf{0}]$。我们需要确定矩阵 $U$ 以完成奇异值分解。当矩阵 A 的秩为 $r$ 时，为了构造 $U$，取 $U$ 的前 $r$ 列，使得它们成为归一化向量 $Av_1, Av_2, ...$。这里 $v_1, v_2, ...$ 和 $v_r$ 是矩阵 V 的列。
+如果我们表示 `D = \begin{bmatrix} \sqrt{3} & 0 \\ 0 & \sqrt{2} \end{bmatrix}`，那么得到 `$\Sigma = [D \ \mathbf{0}]$`。我们需要确定矩阵 `U` 以完成奇异值分解。当矩阵 `A` 的秩为 `$r$` 时，为了构造 `U`，取 `U` 的前 `$r$` 列，使得它们成为归一化向量 `Av_1, Av_2, ...`。这里 `v_1, v_2, ...` 和 `v_r` 是矩阵 `V` 的列。
 
-在我们的例子中，A 的秩 $min[2,3] = 2$。因此，我们需要找到 $u_1$ 和 $u_2$，其中 $u_1$ 和 $u_2$ 是矩阵 U 的列。得到：
+在我们的例子中，`A` 的秩 `min[2,3] = 2`。因此，我们需要找到 `u_1` 和 `u_2`，其中 `u_1` 和 `u_2` 是矩阵 `U` 的列。得到：
 
 ```
 $u_i = \frac{1}{||Av_i||} Av_i$
 ```
 
-现在，$||Av_i|| = \sqrt{\lambda_i}$。得到：
+现在，`$||Av_i|| = \sqrt{\lambda_i}$`。得到：
 
 ```
 $u_i = \frac{1}{\sqrt{\lambda_i}} Av_i$
@@ -6764,50 +6788,46 @@ $u_i = \frac{1}{\sqrt{\lambda_i}} Av_i$
 得到：
 
 ```
-$u_1 = \begin{bmatrix} 1 & 0 \\ -1 & 1 \end{bmatrix} \begin{bmatrix} -1 \\ -1/\sqrt{3} \\ 1/\sqrt{3} \end{bmatrix} / \sqrt{3} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}
+$u_1 = \begin{bmatrix} 1 & 0 \\ -1 & 1 \end{bmatrix} \begin{bmatrix} -1 \\ -1/\sqrt{3} \\ 1/\sqrt{3} \end{bmatrix} / \sqrt{3} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$
 ```
-（注：此处原文结果为 $\begin{bmatrix} 0 \\ 1 \end{bmatrix}$，计算逻辑可能存在跳跃）
+（注：此处原文结果为 `$\begin{bmatrix} 0 \\ 1 \end{bmatrix}$`，计算逻辑可能存在跳跃）
 
-$u_2 = \begin{bmatrix} 1 & 0 \\ 1 & -1 \end{bmatrix} \begin{bmatrix} -1/\sqrt{2} \\ 0 \\ -1/\sqrt{2} \end{bmatrix} / \sqrt{2} = \begin{bmatrix} -1 \\ 0 \end{bmatrix}$
+`$u_2 = \begin{bmatrix} 1 & 0 \\ 1 & -1 \end{bmatrix} \begin{bmatrix} -1/\sqrt{2} \\ 0 \\ -1/\sqrt{2} \end{bmatrix} / \sqrt{2} = \begin{bmatrix} -1 \\ 0 \end{bmatrix}$`
 
 得到：
 
-$U = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}$
+`$U = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}$`
 
-让我们验证 $A = U\Sigma V^T$：
+让我们验证 `A = U\Sigma V^T`：
 
-$U\Sigma V^T = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} \sqrt{3} & 0 \\ 0 & \sqrt{2} \end{bmatrix} \begin{bmatrix} 1/\sqrt{3} & -1/\sqrt{2} & 1/\sqrt{6} \\ 2/\sqrt{3} & 0 & 2/\sqrt{6} \\ 1/\sqrt{3} & 1/\sqrt{2} & 1/\sqrt{6} \end{bmatrix} =$
+`$U\Sigma V^T = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} \sqrt{3} & 0 \\ 0 & \sqrt{2} \end{bmatrix} \begin{bmatrix} 1/\sqrt{3} & -1/\sqrt{2} & 1/\sqrt{6} \\ 2/\sqrt{3} & 0 & 2/\sqrt{6} \\ 1/\sqrt{3} & 1/\sqrt{2} & 1/\sqrt{6} \end{bmatrix} =$`
 
-$\begin{bmatrix} 0 & -\sqrt{2} \\ \sqrt{3} & 0 \end{bmatrix} \begin{bmatrix} 1/\sqrt{3} & -1/\sqrt{2} & 1/\sqrt{6} \\ 2/\sqrt{3} & 0 & 2/\sqrt{6} \\ 1/\sqrt{3} & 1/\sqrt{2} & 1/\sqrt{6} \end{bmatrix} = \begin{bmatrix} -2 & 0 & -2 \\ 1 & -1 & 1 \end{bmatrix} = A$
+`$\begin{bmatrix} 0 & -\sqrt{2} \\ \sqrt{3} & 0 \end{bmatrix} \begin{bmatrix} 1/\sqrt{3} & -1/\sqrt{2} & 1/\sqrt{6} \\ 2/\sqrt{3} & 0 & 2/\sqrt{6} \\ 1/\sqrt{3} & 1/\sqrt{2} & 1/\sqrt{6} \end{bmatrix} = \begin{bmatrix} -2 & 0 & -2 \\ 1 & -1 & 1 \end{bmatrix} = A$`
 
-
-
-
-
-# 使用 SVD 进行图像压缩
+### 使用 SVD 进行图像压缩
 
 ```
 $$\begin{bmatrix} 0 & -\sqrt{2} & 1/\sqrt{3} & -1/\sqrt{3} & 1/\sqrt{3} \\ -\sqrt{3} & 0 & -1/\sqrt{2} & 0 & 1/\sqrt{2} \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}=A$$
 ```
 
-设 $A$ 为一个 $n \times m$ 矩阵。设 $k$ 为自然数，其中 $k \leq \text{rank}(A) \leq \min(n, m)$。
+设 `A` 为一个 `$n \times m$` 矩阵。设 `k` 为自然数，其中 `k \leq \text{rank}(A) \leq \min(n, m)`。
 
 > 注意：矩阵的秩（Rank）等于矩阵中线性无关行（或列）的最大数量。
 如果矩阵的某行（或列）不能表示为矩阵其他其他行（或列）的线性组合，则该行（或列）是线性独立的。
 
-利用 $A$ 的 SVD 分解，如果 $A=UDV^T$，我们保留 $D$ 中的前 $k$ 个值，并将后续的奇异值设为零。设所得对角矩阵为 $D_k$。易见，我们只需要保留 $U$ 的前 $k$ 列和 $V$ 的前 $k$ 行，因为它们的其他列乘以零，如图 A3.1 所示。总之，$A_k=U_kD_kV_k^T$ 是秩为 $k$ 的最接近 $A$ 的矩阵，其中 $U_k$ 和 $V_k$ 分别由 $U$ 和 $V$ 的前 $k$ 列和行组成。
+利用 `A` 的 SVD 分解，如果 `A=UDV^T`，我们保留 `D` 中的前 `k` 个值，并将后续的奇异值设为零。设所得对角矩阵为 `D_k`。易见，我们只需要保留 `U` 的前 `k` 列和 `V` 的前 `k` 行，因为它们的其他列乘以零，如图 A3.1 所示。总之，`A_k=U_kD_kV_k^T` 是秩为 `k` 的最接近 `A` 的矩阵，其中 `U_k` 和 `V_k` 分别由 `U` 和 `V` 的前 `k` 列和行组成。
 
-如果 $A$ 很大，$n, m$ 很大且 $k$ 较小，为了近似 $A$ 中存储的信息，我们需要的信息要少得多。也就是说，我们可以显著减少存储空间，同时存储与原始矩阵几乎相同的信息。
+如果 `A` 很大，`n, m` 很大且 `k` 较小，为了近似 `A` 中存储的信息，我们需要的信息要少得多。也就是说，我们可以显著减少存储空间，同时存储与原始矩阵几乎相同的信息。
 
 在这里看到矩阵的低秩近似如何为图像压缩提供解决方案。
 
-图像表示为矩形数组，其中每个元素对应像素的灰度值。对于彩色图像，我们有一个大小为 $n \times m \times 3$ 的三维数组，其中 $n$ 和 $m$ 分别代表垂直和水平方向的像素数量。对于每个像素，我们存储红、绿、蓝颜色的强度。
+图像表示为矩形数组，其中每个元素对应像素的灰度值。对于彩色图像，我们有一个大小为 `$n \times m \times 3$` 的三维数组，其中 `n` 和 `m` 分别代表垂直和水平方向的像素数量。对于每个像素，我们存储红、绿、蓝颜色的强度。
 
 我们在一个更大的矩阵上重复上述低秩近似过程；也就是说，我们为代表每种颜色的图像创建低秩近似。得到的三维数组将是原始图像的良好近似。
 
-$k$ 的不同值会导致不同的压缩质量；$k$ 越高，压缩后的图像越接近原始图像，但增加 $k$ 意味着矩阵更大。
+`k` 的不同值会导致不同的压缩质量；`k` 越高，压缩后的图像越接近原始图像，但增加 `k` 意味着矩阵更大。
 
-# 压缩黑白图像
+### 压缩黑白图像
 
 我们首先讨论如何压缩黑白图像。
 
@@ -6820,7 +6840,7 @@ import numpy as np
 from PIL import Image
 ```
 
-### 读取图像并存储为数组
+#### 读取图像并存储为数组
 
 ```python
 imageArray = np.array(Image.open('./TempleBW.jpeg'))
@@ -6828,7 +6848,7 @@ imageArray.shape
 (4032, 3024)
 ```
 
-所以，这张图像中有 4032 * 3024 个像素。
+所以，这张图像中有 `4032 * 3024` 个像素。
 
 我们看到这是一个二维字节序列。如果我们研究这些字节，会发现每个字节包含一个 0 到 255 之间的数字。
 
@@ -6881,13 +6901,12 @@ plt.show()
 
 附录图 3.2：原始黑白图像
 
-# 奇异值分解
+### 奇异值分解
 
 让我们检查存储图像所需的空间：
 
 ```python
 originalBytes = image.nbytes
-
 print("Space needed to store this image is", originalBytes/1024/1024, 'MB')
 ```
 
@@ -6895,20 +6914,22 @@ print("Space needed to store this image is", originalBytes/1024/1024, 'MB')
 
 现在，我们开始使用 SVD 方法压缩图像。
 
-# SVD 分解
+### SVD 分解
 
 ```python
 U, D, VT = np.linalg.svd(image, full_matrices=True)
-
 # 检查要存储的字节
-bytesToBeStored = sum([matrix.nbytes for matrix in [U, D, VT]])
-
-print("The matrix that we store has a total size (in bytes):", bytesToBeStored)
 ```
+
+
+
+`bytesToBeStored = sum([matrix.nbytes for matrix in [U, D, VT]])`
+
+`print("The matrix that we store has a total size (in bytes):", bytesToBeStored)`
 
 我们存储的矩阵总大小（字节）：203269992
 
-我们将仅保留矩阵 D 中的前 $k$ 个值，并将剩余部分置 0。令 $k = 1000$，这远小于图像的两个维度（4032 和 3024）。
+我们将仅保留矩阵 `D` 中的前 `$k$` 个值，并将剩余部分置 0。令 `$k = 1000$`，这远小于图像的两个维度（4032 和 3024）。
 
 ```python
 k = 1000
@@ -6920,9 +6941,7 @@ k = 1000
 U_k = U[:, 0:k]
 VT_k = VT[0:k, :]
 D_k = D[0:k]
-
 compressedBytes = sum([matrix.nbytes for matrix in [U_k, D_k, VT_k]])
-
 print("Compressed matrix that we store now has a total size:", compressedBytes/1024/1024, 'MB')
 ```
 
@@ -6941,40 +6960,30 @@ ratio = compressedBytes / originalBytes * 100
 ```python
 # 重构图像
 imageApprox = np.dot(U_k, np.dot(D_k, VT_k))
-
 # 修正强度超出 [0, 1] 范围的像素
 imageApprox[imageApprox < 0] = 0
 imageApprox[imageApprox > 1] = 1
+```
 
-``````python
+```python
 # 显示重构的图像
 fig = plt.figure(figsize=(12, 10))
 a = fig.add_subplot(1, 1, 1)
 plt.tick_params(bottom=False, left=False, labelbottom=False, labelleft=False)
-
 imgplot = plt.imshow(imageApprox, cmap='gray')
 plt.show()
 ```
 
 附录图 3.3：重构图像
 
-
-
-
-
 306 掌握机器学习的分类算法
 
-D_g_k = D_g[0:k]
-
-D_b_k = D_b[0:k]
-
-compressedBytes = sum([matrix.nbytes for matrix in [U_r_k, D_r_k, VT_r_k, U_g_k, D_g_k, U_b_k, D_b_k, VT_b_k]])
-
-print("Compressed matrices that we store have total size:", compressedBytes/1024/1024, 'MB')
-
-ratio = compressedBytes / originalBytes * 100
-
-print("nThe compression ratio between the original image size and the compressed image is %.2f%%" % (ratio, '%'))
+`D_g_k = D_g[0:k]`
+`D_b_k = D_b[0:k]`
+`compressedBytes = sum([matrix.nbytes for matrix in [U_r_k, D_r_k, VT_r_k, U_g_k, D_g_k, U_b_k, D_b_k, VT_b_k]])`
+`print("Compressed matrices that we store have total size:", compressedBytes/1024/1024, 'MB')`
+`ratio = compressedBytes / originalBytes * 100`
+`print("nThe compression ratio between the original image size and the compressed image is %.2f%%" % (ratio, '%'))`
 
 我们现在拥有的压缩矩阵总大小为161.5219116210935 MB
 
@@ -6984,27 +6993,21 @@ print("nThe compression ratio between the original image size and the compressed
 
 # 为每种颜色重建矩阵
 
-image_red_approx = np.dot(U_r_k, np.dot(np.diag(D_r_k), VT_r_k))
-
-image_green_approx = np.dot(U_g_k, np.dot(np.diag(D_g_k), VT_g_k))
-
-image_blue_approx = np.dot(U_b_k, np.dot(np.diag(D_b_k), VT_b_k))
+`image_red_approx = np.dot(U_r_k, np.dot(np.diag(D_r_k), VT_r_k))`
+`image_green_approx = np.dot(U_g_k, np.dot(np.diag(D_g_k), VT_g_k))`
+`image_blue_approx = np.dot(U_b_k, np.dot(np.diag(D_b_k), VT_b_k))`
 
 # 从颜色矩阵重构原始图像
 
-imageReconstructed = np.zeros((image.shape[0], image.shape[1], 3))
-
-imageReconstructed[:, :, 0] = image_red_approx
-
-imageReconstructed[:, :, 1] = image_green_approx
-
-imageReconstructed[:, :, 2] = image_blue_approx
+`imageReconstructed = np.zeros((image.shape[0], image.shape[1], 3))`
+`imageReconstructed[:, :, 0] = image_red_approx`
+`imageReconstructed[:, :, 1] = image_green_approx`
+`imageReconstructed[:, :, 2] = image_blue_approx`
 
 # 修正强度值在 [0,1] 范围之外的像素
 
-imageReconstructed[imageReconstructed < 0] = 0
-
-imageReconstructed[imageReconstructed > 1] = 1
+`imageReconstructed[imageReconstructed < 0] = 0`
+`imageReconstructed[imageReconstructed > 1] = 1`
 
 最后，我们显示并保存压缩图像。
 
@@ -7038,7 +7041,8 @@ https://discord.bponline.com
 # 附录 4
 
 # 预处理
-文本数据
+
+## 文本数据
 
 当我们处理文本数据时，我们以文档的形式接收数据。文档可以是报纸文章、书的一个章节、书中的某一个段落、电子邮件、短信、推特推文、Facebook 帖子等。每一个此类文档被称为一个语料库（corpus）。此类文档的集合称为语料库（corpora）。
 
@@ -7062,9 +7066,9 @@ https://discord.bponline.com
 
 停止词是语言中常用的单词。在英语语言中，如 "I", "me", "so", "this", "that", "you" 等单词被称为停止词。通常情况下，停止词在分析数据时没有价值。因此，通常做法是在分析数据之前从语料库中移除停止词。
 
-英语停止词列表在许多库中可用。自然语言工具包（nltk）通常用于获取停止词列表。nltk库在 Python 和 R 中可用。我们将讨论如何使用 nltk 库来移除停止词。
+英语停止词列表在许多库中可用。自然语言工具包（nltk）通常用于获取停止词列表。`nltk`库在 Python 和 R 中可用。我们将讨论如何使用 `nltk` 库来移除停止词。
 
-在使用 nltk 库之前，必须在机器上安装它。在 Jupyter Notebook 中使用的命令是：
+在使用 `nltk` 库之前，必须在机器上安装它。在 Jupyter Notebook 中使用的命令是：
 
 ```python
 pip install nltk
@@ -7078,9 +7082,9 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 ```
 
-# 收集停止词列表
+## 收集停止词列表
 
-# 移除停止词函数
+## 移除停止词函数
 
 ```python
 def removeStopWords(text):
@@ -7090,17 +7094,16 @@ def removeStopWords(text):
     # 过滤掉停止词
     filtered_tokens = [token for token in tokens if token not in stopwords.words('english')]
     filtered_text = ' '.join(filtered_tokens)
-
     return filtered_text
 ```
 
 我们可以测试 `removeStopWords()` 函数。
 
-removeStopWords("This is a test of Stop Word remover".lower())
+`removeStopWords("This is a test of Stop Word remover".lower())`
 
 # 移除特殊字符
 
-在文本分析中，我们通常关注文本的单词。然而，根据分析的性质，可能会有例外。特殊字符通常从文本中移除，以便只剩下单词。我们必须决定在哪个阶段消除特殊字符。特殊字符是文本的一部分，例如邮箱地址、标签、URL、引用等。移除特殊字符意味着我们需要保留字母和数字并移除其他所有内容。对于替换，可以使用 Python 可用的 **re** 库。
+在文本分析中，我们通常关注文本的单词。然而，根据分析的性质，可能会有例外。特殊字符通常从文本中移除，以便只剩下单词。我们必须决定在哪个阶段消除特殊字符。特殊字符是文本的一部分，例如邮箱地址、标签、URL、引用等。移除特殊字符意味着我们需要保留字母和数字并移除其他所有内容。对于替换，可以使用 Python 可用的 `re` 库。
 
 ```python
 import re
@@ -7110,6 +7113,7 @@ def removeSpecialCharacters(text):
     return re.sub(pattern, '', text)
 
 removeSpecialCharacters("This is a #test $string, sent: @someone")
+```
 
 'This is a string sent someone
 
@@ -7117,14 +7121,14 @@ removeSpecialCharacters("This is a #test $string, sent: @someone")
 
 这是移除特殊字符的一种特殊情况。
 
+```python
 import string
 
-```python
 def removePunctctuations(text):
     return text.translate(str.maketrans('', '', string.punctuation))
 ```
 
-removePunctctuations("This is a test; of punctuation. Does it work?")
+`removePunctctuations("This is a test; of punctuation. Does it work?")`
 
 'This is a test of punctuation Does it work
 
@@ -7132,14 +7136,14 @@ removePunctctuations("This is a test; of punctuation. Does it work?")
 
 许多应用涉及文本分析，其中数字对分析来说是可选的。例如，在制作垃圾邮件检测应用时，可能不需要分析文本中的数字。在这种情况下，我们从文本中移除数字。其想法是找到文本中的任何数字并将其替换为空字符串。
 
+```python
 import re
 
-```python
 def removeNumbers(text):
     return re.sub(r'[0-9]+', '', text)
 ```
 
-removeNumbers("This text contains 66 numbers and 1654 characters.")
+`removeNumbers("This text contains 66 numbers and 1654 characters.")`
 
 'This text contains numbers and characters.'
 
@@ -7152,7 +7156,7 @@ def removeExtraWhiteSpaces(text):
     return " ".join(text.split())
 ```
 
-removeExtraWhiteSpaces("This is a  test of removing extra white spaces")
+`removeExtraWhiteSpaces("This is a  test of removing extra white spaces")`
 
 'This is a test of removing extra spaces
 
@@ -7173,12 +7177,6 @@ def identifyAndRemoveURLs(text, remove = True):
 if remove:
     return re.sub(r'\w+:\{2}[\d\w]+\.[\d\w]+*(?::\\.\d\w]+)**(?:\\/\\s*))*)', '', text, 1)
 ```
-
-
-
-
-
-314 精通机器学习的分类算法
 
 else:
 
@@ -7222,8 +7220,9 @@ def identifyAndRemoveEmailAddress(text, remove = True):
 
 ```python
 import re
-
 identifyAndRemoveEmailAddress('Immediately reply to some.one@somewhere.com and send the filled form to leader@somewhere.com')
+```
+
 # ('Immediately reply to and send the filled form to ', 1)
 
 # 检测并处理文本中的标签（hashtags）和提及（mentions）
@@ -7237,6 +7236,8 @@ def removeHashtagsAndMentions(text):
     return re.sub('(@[A-Za-z0-9]+)|([^0-9A-Za-z t][A-Za-z0-9]+) |(\w+:\//\S+)', '', text)
 
 removeHashtagsAndMentions('#MIT this is a test @Ramesh Harvard')
+```
+
 # ‘this is a test Harvard’
 
 # 处理表情符号（emojis）
@@ -7245,19 +7246,22 @@ removeHashtagsAndMentions('#MIT this is a test @Ramesh Harvard')
 
 精通机器学习的分类算法
 
-要处理表情符号，需要安装 **emoji** 库。
+要处理表情符号，需要安装 `emoji` 库。
 
 ```bash
 !pip install emoji
 ```
 
-一旦 emoji 可用，就可以使用库中的函数来决定对表情符号进行什么操作。
+一旦 `emoji` 可用，就可以使用库中的函数来决定对表情符号进行什么操作。
 
 ```python
 import emoji
 emoji.is_emoji('👍')
-True
 ```
+
+True
+
+
 
 ## 结论
 
@@ -7267,11 +7271,12 @@ True
 
 加入书籍的 Discord 工作空间获取最新更新、优惠、全球科技动态、新发布以及与作者的交流：
 
-**https://discord.bponline.com**
+`https://discord.bponline.com`
 
 ![](img/11af2c4c7dddfed06ed008516c0c6dfb_335_0.png)
 
 # 附录 5
+
 ## 词干（Stemming）与词还原（Lemmatization）
 
 在文本中，许多单词源于同一个词。我们需要根据单词使用的语境包含这些词。例如，我们可能在不同的句子中使用“seem”、“seemed”、“seeming”和“seemingly”这些词。然而，所有这些词都有同一个根，“seem”。
@@ -7280,29 +7285,28 @@ True
 
 将一个单词替换为它的词根被称为文本归一化（Normalizing the Text）或文本归一化（Text Normalization）。文本归一化是自然语言处理中的一个基本步骤。为了归一化文本，我们使用词干（Stemming）和词还原（Lemmatization）技术。
 
-## 结构
+### 结构
 
 在本章中，我们将讨论以下主题：
 
 - 词干
 - 词还原
 
-# 词干（Stemming）
+## 词干（Stemming）
 
 词干是一种文本归一化技术，它从单词的开头或结尾截断部分。截断的部分称为后缀（affix）。例如，如果我们对单词“seeming”进行词干提取我们将得到“seem”。
 
 通常，词干是一种简单且有效的文本归一化技术。然而，在许多情况下它可能无法产生预期的结果。例如，如果我们对“seemingly”进行词干提取我们将得到“seemingly”。在这里，单词在句子中的含义将随着无关的内容而丢失。
 
-对于词干，我们可以使用 nltk 库中的函数。nltk 代表自然语言工具包。一种流行的词干算法是 Porter Stemmer。
+对于词干，我们可以使用 `nltk` 库中的函数。`nltk` 代表自然语言工具包。一种流行的词干算法是 `Porter Stemmer`。
 
 ```python
 import nltk
 from nltk.stem import PorterStemmer
-
 ps = PorterStemmer()
 ```
 
-实例化后，我们可以使用 Porter Stemmer 的实例对单词进行词干提取。
+实例化后，我们可以使用 `Porter Stemmer` 的实例对单词进行词干提取。
 
 ```python
 ps.stem('seemingly')
@@ -7323,11 +7327,11 @@ ps.stem('studying')
 # studi
 ```
 
-# 词还原（Lemmatization）
+## 词还原（Lemmatization）
 
 词还原是一种根据语境找到单词词元的文本归一化技术。在词干提取示例中，我们看到“Studying”和“studies”得到“studi”。这是不正确的。可以通过词还原来修正。
 
-词还原库位于 **nltk** 中。在使用这些库之前，我们需要安装并初始化这些库。
+词还原库位于 `nltk` 中。在使用这些库之前，我们需要安装并初始化这些库。
 
 ```python
 import nltk
@@ -7353,28 +7357,26 @@ wordnetlemmatizer.lemmatize('wonders')
 # wonder
 ```
 
-## 结论
+### 结论
 
 文本归一化是文本处理中的一个至关重要的步骤。词干和词还原都用于文本归一化。虽然词干很简单，但词还原通常更受欢迎，因为它试图保留单词的语境。
 
 # 附录 6
+
 ## 向量化（Vectorizers）
 
 从文本中创建模型非常重要。这是因为有大量的文本数据。报纸、杂志、书籍、短信、电子邮件和社交媒体（如 Facebook、Twitter、WhatsApp、LinkedIn 等）的数据都是文本。文本向量化是将文本数据转换为数字表示的机制。
 
 在本附录中，我们将讨论两个文本向量化。一个是计数向量化（Count Vectorizer）。这是一种将文本表示为数字的简单机制。一旦通过对计数向量化的讨论了向量化的概念，我们将讨论一种更复杂的向量化，即 TF-IDF 向量化（TF-IDF vectorizer）。TF-IDF 代表词频-逆文档频率（Term-Frequency Inverse Document Frequency）。
 
-
-
-
-## 结构
+### 结构
 
 在本章中，我们将讨论以下主题：
 
 - 计数向量化 (Count vectorizer)
 - TF-IDF 向量化 (TF-IDF vectorizer)
 
-# 计数向量化
+## 计数向量化
 
 计数向量化，是指统计一个单词在给定文本中出现的次数。
 
@@ -7424,37 +7426,35 @@ wordnetlemmatizer.lemmatize('wonders')
 
 现在，我们可以看到，我们已经将附录 6.1 表数据集中的文本转换成了一个包含 14 个数字的数组，如附录 6.3 表所示。附录 6.3 表中的这些数据被视为具有 14 个特征的数据集，可以用于构建机器学习模型。
 
-计数向量化是在 Scikit-Learn 库的 **sklearn.feature_extraction.text.CountVectorizer** 包中实现的。
+计数向量化是在 Scikit-Learn 库的 `sklearn.feature_extraction.text.CountVectorizer` 包中实现的。
 
-```
+```python
 data = [['I went to the Ice Cream Parlor to have an Ice Cream.',
-
 ['Great. Did you enjoy the Ice Cream?']
-
 ]]
 ```
 
-```
+```python
 [['I went to the Ice Cream Parlor to have an Ice Cream.',
-
-['Great. Did you enjoy the Ice Cream?]]]]
+['Great. Did you enjoy the Ice Cream?']]]
 ```
 
-```
+```python
 import pandas as pd
-
 df = pd.DataFrame(data, columns = ['text'])
-
 df
 ```
 
 # 掌握机器学习分类算法
 
-text
+`text`
 
 ```
 0 I went to the Ice Cream Parlor to have an Ice ...
 1 Great. Did you enjoy the Ice Cream?
+```
+
+```python
 from sklearn.feature_extraction.text import CountVectorizer
 cv = CountVectorizer(stop_words = 'english')
 transformed = cv.fit_transform(df.text)
@@ -7469,9 +7469,9 @@ cream did enjoy great ice went
 1 1 1 1 1 0 1
 ```
 
-注意，在初始化 CountVectorizer 时，我们传递了一个参数来移除英语停用词（Stop Words）。停用词是语言中常用的单词。例如，在英语中，我们将“I”、“you”、“the”、“so”等单词视为停用词。因此，在移除所有停用词后，创建了计数向量。
+注意，在初始化 `CountVectorizer` 时，我们传递了一个参数来移除英语停用词（Stop Words）。停用词是语言中常用的单词。例如，在英语中，我们将“I”、“you”、“the”、“so”等单词视为停用词。因此，在移除所有停用词后，创建了计数向量。
 
-# TF-IDF 向量化
+## TF-IDF 向量化
 
 对于附录 6.1 表中的数据，我们理解每个文本都被视为一个文档。在每个文档内部，每个单词都被视为一个术语（term）。
 
@@ -7495,25 +7495,23 @@ IDF = log(语料库中的文档总数
 
 接下来，取术语“parlor”。文档总数为 2。包含术语“parlor”的文档数量为 1。因此，IDF=log(2)/1。
 
-
-
-
 # 加入我们的书籍 Discord 空间
 
 加入书籍的 Discord 工作区，获取最新更新、优惠、全球科技动态、新发布以及与作者交流的机会：
 
-https://discord.bponline.com
+`https://discord.bponline.com`
 
 ![](img/11af2c4c7dddfed06ed008516c0c6dfb_347_0.png)
 
-## 附录 7
-编码器 (Encoders)
+# 附录 7
+
+## 编码器 (Encoders)
 
 在许多情况下，数据包含有助于创建机器学习模型的非数值（non-numeric values）。然而，机器学习模型只能使用数值数据进行构建。因此，我们需要一种机制将非数值数据转换为数值数据，同时保留数据背后的含义。
 
 我们使用编码器（Encoders）将某些类型的非数值数据转换为数值数据。本附录将讨论不同类型的编码器及其在 Scikit-Learn 中的实现。
 
-## 结构
+### 结构
 
 在本章中，我们将讨论以下主题：
 
@@ -7558,7 +7556,7 @@ https://discord.bponline.com
 
 我们定义数据为：
 
-```
+```python
 data = [['E001','Partha','Director','Married',2],
   ['E002','Deepshree','Manager','Married',2],
   ['E003','Riya','Programmer','Single',0],
@@ -7566,10 +7564,9 @@ data = [['E001','Partha','Director','Married',2],
   ['E005','Ujwala','Programmer','Widow',1],
   ['E006','Anita','Manager','Married',1],
   ['E007','Nomita','Programmer','Divorceee',2],
-  ['E008','Anil','Programmer','Widower',0],
-  ['E009','Amarendra','Programmer','Married',1],
-  ['E010','Anuj','Manager','Married',2]]
 ```
+
+
 
 ```python
 [['E001', 'Partha', 'Director', 'Married', 2],
@@ -7588,20 +7585,17 @@ data = [['E001','Partha','Director','Married',2],
 
 ```python
 import pandas as pd
+
 df = pd.DataFrame(data, columns=['EmployeeID', 'Name', 'Designation', 'MaritalStatus', 'NumberOfChildren'])
 ```
-
-
-
-
 
 编码器 335
 
 )
-df
+`df`
 
 | EmployeeID | 姓名 | 职位 | 婚姻状况 | 数量 |
-|---|---|---|---|---|---|
+|---|---|---|---|---|
 | 0 | E001 | Partha | Director | Married | 2 |
 | 1 | E002 | Deepshree | Manager | Married | 2 |
 | 2 | E003 | Riya | Programmer | Single | 0 |
@@ -7613,8 +7607,8 @@ df
 | 8 | E009 | Amarendra | Programmer | Married | 1 |
 | 9 | E010 | Anuj | Manager | Married | 2 |
 
-我们将在“Designation”（职位）列上应用独热编码（One-Hot Encoding）：
-from sklearn.preprocessing import OneHotEncoder
+我们将在`Designation`列上应用独热编码`One-Hot Encoding`：
+`from sklearn.preprocessing import OneHotEncoder`
 
 ```python
 oheDesignation = OneHotEncoder()
@@ -7640,7 +7634,7 @@ Designation_Director Designation_Manager Designation_Programmer
 
 # 掌握机器学习分类算法
 
-注意，为“Designation”列中的三个值创建了三列。当我们把这些列添加到原始 dataframe 中时，将得到如下：
+注意，为`Designation`列中的三个值创建了三列。当我们把这些列添加到原始 dataframe 中时，将得到如下：
 
 ```python
 df = pd.concat([df, dfTemp], axis=1)
@@ -7660,20 +7654,20 @@ df[['Name', 'Designation', 'Designation_Director', 'Designation_Manager', 'Desig
 | 8 | Amarendra | Programmer | 0.0 | 0.0 | 1.0 |
 | 9 | Anuj | Manager | 0.0 | 1.0 | 0.0 |
 
-注意，对于“Designation”的每一个值，列值中有一个 1，其余值为 0。如果我们使用独热编码，将为数据集带来额外的特征。这些额外特征将等于应用独热编码的列中的唯一值。例如，“Designation”有三个唯一值。因此，我们得到了三个额外的特征。
+注意，对于`Designation`的每一个值，列值中有一个 1，其余值为 0。如果我们使用独热编码，将为数据集带来额外的特征。这些额外特征将等于应用独热编码的列中的唯一值。例如，`Designation`有三个唯一值。因此，我们得到了三个额外的特征。
 
 ## 结论
 
-编码器对于将非数值数据转换为数值至关重要。这一步是必要的，因为我们只能用数值数据来创建机器学习模型。我们讨论了两种编码器：标签编码器（Label Encoder）和独热编码器（One-Hot Encoder）。这两个是我们常用的编码器。
+编码器对于将非数值数据转换为数值至关重要。这一步是必要的，因为我们只能用数值数据来创建机器学习模型。我们讨论了两种编码器：标签编码器`Label Encoder`和独热编码器`One-Hot Encoder`。这两个是我们常用的编码器。
 
-其他编码器还包括目标编码器（Target Encoder）、频率/计数编码器（Frequency/Count Encoder）、二进制编码器（Binary Encoder）等。然而，这些很少使用。
+其他编码器还包括目标编码器`Target Encoder`、频率/计数编码器`Frequency/Count Encoder`、二进制编码器`Binary Encoder`等。然而，这些很少使用。
 
 # 注意事项
 
-- 当一列具有固定数量的非数值唯一值时，我们使用 Label Encoder 将这些非数值值转换为数值。
-- Scikit-Learn 中的 Label Encoder 从 0 开始为唯一标签分配唯一值。
-- 如果是为了建模，则我们使用 One-Hot Encoder。
-- One-Hot Encoder 创建的向量包含的元素数量与列中唯一值的数量相同。
+- 当一列具有固定数量的非数值唯一值时，我们使用 `Label Encoder` 将这些非数值值转换为数值。
+- `Scikit-Learn` 中的 `Label Encoder` 从 0 开始为唯一标签分配唯一值。
+- 如果是为了建模，则我们使用 `One-Hot Encoder`。
+- `One-Hot Encoder` 创建的向量包含的元素数量与列中唯一值的数量相同。
   - 创建的向量中的元素只能是 0 和 1。
   - 创建的向量中的元素是与要表示的值相关的元素之一，向量中的所有其他值均为 0。
 
@@ -7686,9 +7680,9 @@ https://discord.gg/example
 ![](img/11af2c4c7dddfed06ed0085160c6dfb_357_0.png)
 
 # 附录 8
-熵
+## 熵
 
-在第 5 章决策树算法中，我们讨论了如何使用 Gini 指数创建决策树。另一种方法是使用熵（Entropy）和信息增（Information Gain）创建决策树。在本附录中，我们将讨论如何使用熵和信息增的概念创建决策树。为了使此讨论与第 5 章决策树算法的讨论相关，我们在本附录中使用与第 5 章相同的示例数据集。
+在第 5 章决策树算法中，我们讨论了如何使用 Gini 指数创建决策树。另一种方法是使用熵`Entropy`和信息增`Information Gain`创建决策树。在本附录中，我们将讨论如何使用熵和信息增的概念创建决策树。为了使此讨论与第 5 章决策树算法的讨论相关，我们在本附录中使用与第 5 章相同的示例数据集。
 
 ## 结构
 
@@ -7697,7 +7691,7 @@ https://discord.gg/example
 - 熵
 - 信息增
 - 使用熵构建决策树
-- 使用 Scikit-Learn 利用熵构建决策树
+- 使用 `Scikit-Learn` 利用熵构建决策树
 
 # 熵
 
@@ -7709,19 +7703,19 @@ https://discord.gg/example
 Entropy = -\sum_{i=1}^{n}(p_i \log_2(p_i))
 ```
 
-这里，i 指数据集中唯一类别的数量，从 1 变到 n，意味着数据集有 n 个类。$p_i$ 是数据集中类 i 出现的概率。
+这里，`i` 指数据集中唯一类别的数量，从 1 变到 `n`，意味着数据集有 `n` 个类。`p_i` 是数据集中类 `i` 出现的概率。
 
-为了理解，假设一个数据集有两个类，0 和 1。假设该数据集有三个类 0 的元素和七个类 1 的元素。那么 $p_0 = 3/10$，$p_1 = 7/10$。熵的计算为：
+为了理解，假设一个数据集有两个类，0 和 1。假设该数据集有三个类 0 的元素和七个类 1 的元素。那么 `p_0 = 3/10`，`p_1 = 7/10`。熵的计算为：
 
-$Entropy = -(0.3 \log_2(0.3) + 0.7 \log_2(0.7)) \approx 0.88$
+`Entropy = -(0.3 \log_2(0.3) + 0.7 \log_2(0.7)) \approx 0.88`
 
-如果数据集只有一个类，例如十个类 0 元素和零个类 1 元素，那么 $p_0 = 10/10 = 1$，$p_1 = 0/10 = 0$。
+如果数据集只有一个类，例如十个类 0 元素和零个类 1 元素，那么 `p_0 = 10/10 = 1`，`p_1 = 0/10 = 0`。
 
-$Entropy = -(1 \log_2(1) + 0 \log_2(0)) = 0$
+`Entropy = -(1 \log_2(1) + 0 \log_2(0)) = 0`
 
 # 信息增
 
-回想在决策树中，有一个根节点。在根节点下，有两个或多个节点（这些节点可以是全是叶子节点、决策节点，或者是叶子节点和决策节点的混合）。在每个决策节点下，我们可能都有类似的结构。
+回想在决策树中，有一个根节点。在根节点下，有两个或多个节点。这些节点可以是全是叶子节点、决策节点，或者是叶子节点和决策节点的混合。在每个决策节点下，我们可能都有类似的结构。
 
 考虑图 A8.1 中的决策树。在这里，节点 A 是根节点。节点 B 是决策节点。节点 C、D 和 E 是叶子节点。在图 A8.1 中，节点 A 是 B 的父节点，节点 B 是 A 的子节点。
 
@@ -7733,23 +7727,19 @@ $Entropy = -(1 \log_2(1) + 0 \log_2(0)) = 0$
 
 节点的信息增公式如下：
 
-$Information Gain = Entroparent - Entropychild$
+`Information Gain = Entroparent - Entropychild`
 
-假设节点 A 的熵为 0.9，节点 B 的熵为 0.3。那么节点 B 的信息增将为 $(0.9 - 0.3) = 0.6$。
-
-
-
-
+假设节点 A 的熵为 0.9，节点 B 的熵为 0.3。那么节点 B 的信息增将为 `(0.9 - 0.3) = 0.6`。
 
 掌握机器学习的分类算法
 
-在第 5 章决策树算法中，我们已经看到尝试了许多可以划分决策树的值。使用吉尼指数（Gini index），我们考虑在损失（Loss）最小处进行划分。使用熵（Entropy），我们将在信息增益（Information Gain）最大值处划分决策树。
+在第 5 章决策树算法中，我们已经看到尝试了许多可以划分决策树的值。使用吉尼指数`Gini index`，我们考虑在损失`Loss`最小处进行划分。使用熵`Entropy`，我们将在信息增益`Information Gain`最大值处划分决策树。
 
 ## 使用熵构建决策树
 
-我们有一个包含 10 条记录的数据集，其中有两个独立变量和一个因变量。设独立变量为 $x_1$ 和 $x_2$，因变量为 $y$。参考下表：
+我们有一个包含 10 条记录的数据集，其中有两个独立变量和一个因变量。设独立变量为 `x_1` 和 `x_2`，因变量为 `y`。参考下表：
 
-| $x_1$ | $x_2$ | $y$ |
+| `x_1` | `x_2` | `y` |
 |---|---|---|
 | 1 | 4 | 0 |
 | 7 | 6 | 0 |
@@ -7764,13 +7754,13 @@ $Information Gain = Entroparent - Entropychild$
 
 表附录 8.1：原始数据
 
-表附录 8.1 中的数据显示因变量 $y$ 有两个值——0 和 1。因此，数据被分为两类——0 和 1。
+表附录 8.1 中的数据显示因变量 `y` 有两个值——0 和 1。因此，数据被分为两类——0 和 1。
 
 首先，让我们计算整个数据集的熵。我们看到，类别 0 有 5 个数据点，类别 1 有 5 个数据点。因此，结果如下。
 
-$$P_0 = \frac{5}{10} = 0.5 \text{ 且 } P_1 = \frac{5}{10} = 0.5$$
+`P_0 = 5/10 = 0.5` 且 `P_1 = 5/10 = 0.5`
 
-使用这些 $P_0$ 和 $P_1$ 值，我们可以如下计算整个数据集的熵：
+使用这些 `P_0` 和 `P_1` 值，我们可以如下计算整个数据集的熵：
 
 ```
 Entropy = - ((0.5 * log_2(0.5)) + (0.5 * log_2(0.5))) = - ((0.5 * (-1.0)) + (0.5 * (-1.0)) = - (-0.5) + (-0.5)) = - (-1.0) = 1
@@ -7778,25 +7768,25 @@ Entropy = - ((0.5 * log_2(0.5)) + (0.5 * log_2(0.5))) = - ((0.5 * (-1.0)) + (0.5
 
 由于整个数据集的熵就是根节点的熵，我们将写为：
 
-$$Entropy_{root} = 1$$
+`Entropy_root = 1`
 
-为了构建决策树，我们需要对特征 $x_1$ 和 $x_2$ 尝试不同的点以进行决策划分。因此，我们计算 $x_1$ 和 $x_2$ 可能出现划分的数值。我们将通过表 A8.1 中的数据来理解这一概念。
+为了构建决策树，我们需要对特征 `x_1` 和 `x_2` 尝试不同的点以进行决策划分。因此，我们计算 `x_1` 和 `x_2` 可能出现划分的数值。我们将通过表 A8.1 中的数据来理解这一概念。
 
-为了计算 $x_1$ 的差异，我们考虑从 $x_1$ 最小值到最大值的范围。然后，我们在该范围内按间隔取点。$minimum(x_1) = 1$ 且 $maximum(x_1) = 7$。为了避免边界情况，我们将范围的上限考虑 $maximum(x_1) + 1$。因此，$x_1$ 的范围是 1 到 8。我们将在该范围内考虑 0.5 的间隔。因此，我们尝试用于划分决策的 $x_1$ 值如下：
+为了计算 `x_1` 的差异，我们考虑从 `x_1` 最小值到最大值的范围。然后，我们在该范围内按间隔取点。`minimum(x_1) = 1` 且 `maximum(x_1) = 7`。为了避免边界情况，我们将范围的上限考虑 `maximum(x_1) + 1`。因此，`x_1` 的范围是 1 到 8。我们将在该范围内考虑 0.5 的间隔。因此，我们尝试用于划分决策的 `x_1` 值如下：
 
 1. 1.00, 2.50, 3.00, 3.50, 4.50, 5.00, 5.50, 6.00, 6.50, 6.00, 7.00, 7.50
 
-同样，我们考虑变量 $x_2$ 用于划分决策。$minimum(x_2) = 2$ 且 $maximum(x_2) = 7$。因此，$x_2$ 的范围是 2 到 8。我们尝试用于划分决策的 $x_2$ 值如下。
+同样，我们考虑变量 `x_2` 用于划分决策。`minimum(x_2) = 2` 且 `maximum(x_2) = 7`。因此，`x_2` 的范围是 2 到 8。我们尝试用于划分决策的 `x_2` 值如下。
 
 2.00, 2.50, 3.00, 3.50, 4.00, 5.00, 5.50, 6.00, 6.50, 7.00, 7.50
 
-我们用于划分决策树的点被称为**阈值（thresholds）**。
+我们用于划分决策树的点被称为**阈值`thresholds`**。
 
-让我们计算阈值 $x_1 = 1.00$ 的熵。因此，我们根据 $x_1 \le 1.00$ 划分数据集，划分左侧的数据集和右侧的数据集如表附录 8.2 所示：
+让我们计算阈值 `x_1 = 1.00` 的熵。因此，我们根据 `x_1 <= 1.00` 划分数据集，划分左侧的数据集和右侧的数据集如表附录 8.2 所示：
 
-| $x_1 \le 1.00$ | | | $x_1 > 1.00$ | | |
+| `x_1 <= 1.00` | | | `x_1 > 1.00` | | |
 |---|---|---|---|---|---|
-| $x_1$ | $x_2$ | $y$ | $x_1$ | $x_2$ | $y$ |
+| `x_1` | `x_2` | `y` | `x_1` | `x_2` | `y` |
 | 1 | 4 | | 2 | 4 | 0 |
 | 1 | 6 | 0 | 2 | 7 | 1 |
 | 1 | 2 | 1 | 5 | 2 | 1 |
@@ -7804,17 +7794,17 @@ $$Entropy_{root} = 1$$
 | | | | 7 | 2 | 1 |
 | | | | 7 | 6 | 0 |
 
-*表附录 8.2：$x_1 \le 1.00$ 的左、右数据集*
+*表附录 8.2：`x_1 <= 1.00` 的左、右数据集*
 
 从表附录 8.2 中我们得到划分左侧有 4 个数据点，右侧有 6 个数据点。我们计算左侧数据集和右侧数据集的熵。
 
 计算左侧数据集的熵如下：
 
 ```
-$p_0 = \frac{2}{4} = 0.5 \text{ 且 } p_1 = \frac{2}{4} = 0.5
+p_0 = 2/4 = 0.5 且 p_1 = 2/4 = 0.5
 ```
 
-使用这些 $p_0$ 和 $p_1$ 值，我们计算左侧数据集的熵：
+使用这些 `p_0` 和 `p_1` 值，我们计算左侧数据集的熵：
 
 ```
 Entropyleft = - ((0.5 * log_2(0.5)) + (0.5 * log_2(0.5))) = - ((0.5 * (-1.0)) + (0.5 * (-1.0)) = - (-0.5) + (-0.5)) = - (-1.0) = 1
@@ -7823,52 +7813,54 @@ Entropyleft = - ((0.5 * log_2(0.5)) + (0.5 * log_2(0.5))) = - ((0.5 * (-1.0)) + 
 同样，我们计算右侧数据集的熵：
 
 ```
-$p_0 = \frac{3}{6} = 0.5 \text{ 且 } p_1 = \frac{3}{6} = 0.5
+p_0 = 3/6 = 0.5 且 p_1 = 3/6 = 0.5
 ```
 
-$Entropyright = - ((0.5 * log_2(0.5)) + (0.5 * log_2(0.5))) = - ((0.5 * (-1.0)) + (0.5 * (-1.0)) = - (-0.5) + (-0.5)) = - (-1.0) = 1$
+`Entropyright = - ((0.5 * log_2(0.5)) + (0.5 * log_2(0.5))) = - ((0.5 * (-1.0)) + (0.5 * (-1.0)) = - (-0.5) + (-0.5)) = - (-1.0) = 1`
 
 在计算了左侧和右侧的熵后，我们计算该决策节点的加权平均熵。注意划分左侧有 4 个数据点，右侧有 6 个数据点。如下：
 
 ```
-$Entropy_0 = \frac{4}{10} * 1.0 + \frac{6}{10} * 1.0 = 0.4 + 0.6 = 1.0
+Entropy_0 = 4/10 * 1.0 + 6/10 * 1.0 = 0.4 + 0.6 = 1.0
 ```
 
-现在我们有了 $Entropy_{Root}$ 和 $Entropy_{x=1.0}$ 的值，可以如下计算划分点 $x=1.0$ 的信息增益（GAIN）：
+现在我们有了 `Entropy_Root` 和 `Entropy_x=1.0` 的值，可以如下计算划分点 `x=1.0` 的信息增益`GAIN`：
 
 ```
-$IG_x = Entropy_{Root} - Entropy_0 = 1.0 - 1.0 = 0
+IG_x = Entropy_Root - Entropy_0 = 1.0 - 1.0 = 0
 ```
+
+
 
 使用这种机制，我们可以计算图 8.2 所示的所有测试划分点的信息增益：
 
 | 变量 | 决策点 | 左 | 右 | P(Left) | P(1Left) | P(Right) | P(1Right) | Entropy(Left) | Entropy(Right) | 信息增益 |
 |---|---|---|---|---|---|---|---|---|---|
-| x1 | 1.00 | 4 | 6 | 2/4 | 0.5000 | 3/6 | 0.5000 | 1.0000 | 1.0000 | 0 |
-| x1 | 1.50 | 4 | 6 | 2/4 | 0.5000 | 3/6 | 0.5000 | 1.0000 | 1.0000 | 0 |
-| x1 | 2.00 | 4 | 6 | 2/4 | 0.5000 | 3/6 | 0.5000 | 1.0000 | 1.0000 | 0 |
-| x1 | 2.50 | 4 | 6 | 3/5 | 0.6000 | 2/5 | 0.4000 | 0.9710 | 0.9710 | 0.028 |
-| x1 | 3.00 | 4 | 6 | 3/5 | 0.6000 | 2/5 | 0.4000 | 0.9710 | 0.9710 | 0.028 |
-| x1 | 3.50 | 4 | 6 | 3/5 | 0.6000 | 2/5 | 0.4000 | 0.9710 | 0.9710 | 0.028 |
-| x1 | 4.00 | 4 | 6 | 3/5 | 0.6000 | 2/5 | 0.4000 | 0.9710 | 0.9710 | 0.028 |
-| x1 | 4.50 | 4 | 6 | 3/5 | 0.6000 | 2/5 | 0.4000 | 0.9710 | 0.9710 | 0.028 |
-| x1 | 5.00 | 8 | 2 | 4/8 | 0.5000 | 1/2 | 0.5000 | 1.0000 | 1.0000 | 0 |
-| x1 | 5.50 | 8 | 2 | 4/8 | 0.5000 | 1/2 | 0.5000 | 1.0000 | 1.0000 | 0 |
-| x1 | 6.00 | 8 | 2 | 4/8 | 0.5000 | 1/2 | 0.5000 | 1.0000 | 1.0000 | 0 |
-| x1 | 6.50 | 8 | 2 | 4/8 | 0.5000 | 1/2 | 0.5000 | 1.0000 | 1.0000 | 0 |
-| x1 | 7.50 | 10 | 0 | 0/10 | 0.0000 | 5/10 | 0.5000 | 0.0000 | 1.0000 | 0 |
-| x2 | 2.0 | 7 | 3 | 5/7 | 0.7143 | 2/7 | 0.2857 | 0.8612 | 0.3942 | 0.142 |
-| x2 | 2.50 | 7 | 3 | 3/7 | 0.4286 | 4/7 | 0.5714 | 0.9714 | 0.9018 | 0.142 |
-| x2 | 3.00 | 7 | 3 | 3/7 | 0.4286 | 4/7 | 0.5714 | 0.9714 | 0.9018 | 0.142 |
-| x2 | 3.50 | 7 | 3 | 3/7 | 0.4286 | 4/7 | 0.5714 | 0.9714 | 0.9018 | 0.142 |
-| x2 | 4.00 | 6 | 4 | 3/5 | 0.6000 | 2/5 | 0.4000 | 0.9710 | 0.9710 | 0.028 |
-| x2 | 4.50 | 6 | 4 | 3/5 | 0.6000 | 2/5 | 0.4000 | 0.9710 | 0.9710 | 0.028 |
-| x2 | 5.00 | 6 | 4 | 3/5 | 0.6000 | 2/5 | 0.4000 | 0.9710 | 0.9710 | 0.028 |
-| x2 | 5.50 | 6 | 4 | 3/5 | 0.6000 | 2/5 | 0.4000 | 0.9710 | 0.9710 | 0.028 |
-| x2 | 6.00 | 6 | 4 | 3/5 | 0.6000 | 2/5 | 0.4000 | 0.9710 | 0.9710 | 0.028 |
-| x2 | 6.50 | 8 | 2 | 5/8 | 0.6250 | 3/8 | 0.3750 | 0.9183 | 0.2365 | 0.142 |
-| x2 | 7.00 | 9 | 1 | 1/9 | 0.1111 | 8/9 | 0.3849 | 0.7635 | 0.2365 | 0.142 |
-| x2 | 7.50 | 10 | 0 | 0/10 | 0.0000 | 5/10 | 0.5000 | 0.0000 | 1.0000 | 0 |
+| `x1` | 1.00 | 4 | 6 | 2/4 | 0.5000 | 3/6 | 0.5000 | 1.0000 | 1.0000 | 0 |
+| `x1` | 1.50 | 4 | 6 | 2/4 | 0.5000 | 3/6 | 0.5000 | 1.0000 | 1.0000 | 0 |
+| `x1` | 2.00 | 4 | 6 | 2/4 | 0.5000 | 3/6 | 0.5000 | 1.0000 | 1.0000 | 0 |
+| `x1` | 2.50 | 4 | 6 | 3/5 | 0.6000 | 2/5 | 0.4000 | 0.9710 | 0.9710 | 0.028 |
+| `x1` | 3.00 | 4 | 6 | 3/5 | 0.6000 | 2/5 | 0.4000 | 0.9710 | 0.9710 | 0.028 |
+| `x1` | 3.50 | 4 | 6 | 3/5 | 0.6000 | 2/5 | 0.4000 | 0.9710 | 0.9710 | 0.028 |
+| `x1` | 4.00 | 4 | 6 | 3/5 | 0.6000 | 2/5 | 0.4000 | 0.9710 | 0.9710 | 0.028 |
+| `x1` | 4.50 | 4 | 6 | 3/5 | 0.6000 | 2/5 | 0.4000 | 0.9710 | 0.9710 | 0.028 |
+| `x1` | 5.00 | 8 | 2 | 4/8 | 0.5000 | 1/2 | 0.5000 | 1.0000 | 1.0000 | 0 |
+| `x1` | 5.50 | 8 | 2 | 4/8 | 0.5000 | 1/2 | 0.5000 | 1.0000 | 1.0000 | 0 |
+| `x1` | 6.00 | 8 | 2 | 4/8 | 0.5000 | 1/2 | 0.5000 | 1.0000 | 1.0000 | 0 |
+| `x1` | 6.50 | 8 | 2 | 4/8 | 0.5000 | 1/2 | 0.5000 | 1.0000 | 1.0000 | 0 |
+| `x1` | 7.50 | 10 | 0 | 0/10 | 0.0000 | 5/10 | 0.5000 | 0.0000 | 1.0000 | 0 |
+| `x2` | 2.0 | 7 | 3 | 5/7 | 0.7143 | 2/7 | 0.2857 | 0.8612 | 0.3942 | 0.142 |
+| `x2` | 2.50 | 7 | 3 | 3/7 | 0.4286 | 4/7 | 0.5714 | 0.9714 | 0.9018 | 0.142 |
+| `x2` | 3.00 | 7 | 3 | 3/7 | 0.4286 | 4/7 | 0.5714 | 0.9714 | 0.9018 | 0.142 |
+| `x2` | 3.50 | 7 | 3 | 3/7 | 0.4286 | 4/7 | 0.5714 | 0.9714 | 0.9018 | 0.142 |
+| `x2` | 4.00 | 6 | 4 | 3/5 | 0.6000 | 2/5 | 0.4000 | 0.9710 | 0.9710 | 0.028 |
+| `x2` | 4.50 | 6 | 4 | 3/5 | 0.6000 | 2/5 | 0.4000 | 0.9710 | 0.9710 | 0.028 |
+| `x2` | 5.00 | 6 | 4 | 3/5 | 0.6000 | 2/5 | 0.4000 | 0.9710 | 0.9710 | 0.028 |
+| `x2` | 5.50 | 6 | 4 | 3/5 | 0.6000 | 2/5 | 0.4000 | 0.9710 | 0.9710 | 0.028 |
+| `x2` | 6.00 | 6 | 4 | 3/5 | 0.6000 | 2/5 | 0.4000 | 0.9710 | 0.9710 | 0.028 |
+| `x2` | 6.50 | 8 | 2 | 5/8 | 0.6250 | 3/8 | 0.3750 | 0.9183 | 0.2365 | 0.142 |
+| `x2` | 7.00 | 9 | 1 | 1/9 | 0.1111 | 8/9 | 0.3849 | 0.7635 | 0.2365 | 0.142 |
+| `x2` | 7.50 | 10 | 0 | 0/10 | 0.0000 | 5/10 | 0.5000 | 0.0000 | 1.0000 | 0 |
 
 图 8.2：计算信息增益以确定决策树的第一次划分。
 
@@ -7878,42 +7870,38 @@ $IG_x = Entropy_{Root} - Entropy_0 = 1.0 - 1.0 = 0
 
 图 8.3：决策树的根节点
 
-$x_3 = 3.5$ 处的数据集如表 5.6 所示。
+`$x_3 = 3.5$` 处的数据集如表 5.6 所示。
 
-| x1 | x2 | y | x1 | x2 | y |
+| `x1` | `x2` | `y` | `x1` | `x2` | `y` |
 | --- | --- | --- | --- | --- | --- |
 | 1 | 2 | 1 | 1 | 4 | 0 |
 | 5 | 2 | 1 | 1 | 6 | 0 |
 | 7 | 2 | 1 | 1 | 7 | 1 |
 | | | | 2 | 4 | 0 |
 
-
-
-
-
 # 掌握机器学习中的分类算法
 
-| x₂ ≤ 3.50 | | x₂ > 3.50 |
-| x1 | x2 | y | x1 | x2 | y |
+| `x₂ ≤ 3.50` | | `x₂ > 3.50` |
+| `x1` | `x2` | `y` | `x1` | `x2` | `y` |
 | | | | 2 | 7 | 1 |
 | | | | 5 | 4 | 0 |
 | | | | 7 | 6 | 0 |
 
-附录表 8.3：在分裂点 $x_2 < 3.5$ 处划分的数据集
+附录表 8.3：在分裂点 `$x_2 < 3.5$` 处划分的数据集
 
-我们注意到在左侧，所有数据点的 $y$ 值均为 1。因此，我们在这里有一个叶子节点，决策为 $y = 1$。
+我们注意到在左侧，所有数据点的 `y` 值均为 1。因此，我们在这里有一个叶子节点，决策为 `y = 1`。
 
 因此，我们的决策树如图附录图 8.4 所示：
 
 ![](img/11af2c4c7dddfed06ed008516c0c6dfb_365_0.png)
 
-决策：y = 1
+决策：`y = 1`
 
 附录图 8.4：带有叶子节点（橙色显示）的更新决策树
 
-现在，让我们考虑根节点右侧的数据集，如附录图 8.4 所示。换句话说，我们只考虑 $x_2 > 3.5$ 的数据点（如附录表 5.1 所示）。我们的数据集如附录表 8.4 所示：
+现在，让我们考虑根节点右侧的数据集，如附录图 8.4 所示。换句话说，我们只考虑 `x₂ > 3.5` 的数据点（如附录表 5.1 所示）。我们的数据集如附录表 8.4 所示：
 
-| x1 | x2 | y |
+| `x1` | `x2` | `y` |
 | 1 | 4 | 0 |
 | 7 | 6 | 0 |
 | 1 | 6 | 0 |
@@ -7922,25 +7910,29 @@ $x_3 = 3.5$ 处的数据集如表 5.6 所示。
 | 1 | 7 | 1 |
 | 2 | 7 | 1 |
 
-附录表 8.4：数据集中 $x_2 > 3.50$ 的数据点（表附录表 8.1）
+附录表 8.4：数据集中 `x₂ > 3.50` 的数据点（表附录表 8.1）
 
 让我们计算表 A8.4 所示数据点的熵（Entropy）。结果如下。
 
-$P_0 = \frac{5}{7}=0.714 \text{ 和 } P_1 = \frac{2}{7}$
+`P₀ = 5/7 = 0.714` 和 `P₁ = 2/7`
 
-使用这些 $P_0$ 和 $P_1$ 值，我们可以计算在 $x_2=3.5$ 分裂点右侧数据集的熵。我们将此熵称为 Entropy$_{parent}$，因为它将是我们尝试划分的下一组数据点的父节点。
+使用这些 `P₀` 和 `P₁` 值，我们可以计算在 `x₂ = 3.5` 分裂点右侧数据集的熵。我们将此熵称为 `Entropy_parent`，因为它将是我们尝试划分的下一组数据点的父节点。
 
 ```
 Entropyparent = ((0.714 * log(0.714)) + (0.286 * log2(0.286)))
+
 = ((0.714 * (-0.3485)) + (0.286 * (-1.807)))
+
 = (-0.347 + (-0.516)) = -0.863
 ```
 
-由于附录表 8.4 中数据集熵不是 0，因此数据集是不纯的，我们需要划分该数据集以找到决策点或叶子节点。因此，我们必须计算所有阈值的信息增益（Information Gain）。由于 $x_1$ 和 $x_2$ 的范围发生了变化，我们必须重新建立阈值。使用特征的最大和最小值来建立阈值的相同逻辑，我们得到了 $x_1$ 的考虑值如下：
+
+
+由于附录表 8.4 中数据集熵不是 0，因此数据集是不纯的，我们需要划分该数据集以找到决策点或叶子节点。因此，我们必须计算所有阈值的信息增益（Information Gain）。由于 `$x_1$` 和 `$x_2$` 的范围发生了变化，我们必须重新建立阈值。使用特征的最大和最小值来建立阈值的相同逻辑，我们得到了 `x1` 的考虑值如下：
 
 - 1.00, 1.50, 2.00, 2.50, 3.00, 3.50, 4.00, 4.50, 5.00, 5.50, 6.00
 
-$x_2$ 的考虑值如下：
+`x2` 的考虑值如下：
 - 4.00, 5.00, 5.50, 5.50, 6.00
 
 图 8.5 显示了附录表 8.4 中数据集的信息增益计算过程：
@@ -7965,7 +7957,7 @@ $x_2$ 的考虑值如下：
 
 图 8.5：表 A8.4 中数据集的信息增益计算
 
-附录 8.5 显示最大的信息增益出现在 $x_2=6.0$ 和 $x_2=6.5$ 处。根据我们取变量最大值的策略，我们将划分 $x_2=6.5$ 决策树。
+附录 8.5 显示最大的信息增益出现在 `$x_2=6.0$` 和 `$x_2=6.5$` 处。根据我们取变量最大值的策略，我们将划分 `x2=6.5` 决策树。
 
 因此，我们的决策树如图附录图 8.6 所示：
 
@@ -7973,7 +7965,7 @@ $x_2$ 的考虑值如下：
 
 附录图 8.6：第二次划分后的决策树
 
-正如我们之前做的那样，我们将根据附录图 8.6 所示创建的新决策节点来划分附录表 8.4 所示的数据集，即根据 $x_2 \le 6.5$ 进行划分。基于此，左侧数据集如附录表 8.5 所示，右侧数据集如附录表 8.6 所示：
+正如我们之前做的那样，我们将根据附录图 8.6 所示创建的新决策节点来划分附录表 8.4 所示的数据集，即根据 `x2 <= 6.5` 进行划分。基于此，左侧数据集如附录表 8.5 所示，右侧数据集如附录表 8.6 所示：
 
 | x1 | x2 | y |
 | 1 | 4 | 0 |
@@ -7982,19 +7974,15 @@ $x_2$ 的考虑值如下：
 | 5 | 4 | 0 |
 | 2 | 4 | 0 |
 
-附录表 8.5：数据 $x_2 \le 6.50$ 的数据点（如表 A8.4 所示）
+附录表 8.5：数据 `x2 <= 6.50` 的数据点（如表 A8.4 所示）
 
-从附录表 8.5 可以看到，对于所有数据点，$y$ 值均为 0。因此，我们有一个决策为 $y = 0$ 的叶子节点。
+从附录表 8.5 可以看到，对于所有数据点，`y` 值均为 0。因此，我们有一个决策为 `y = 0` 的叶子节点。
 
 | x1 | x2 | y |
 | 1 | 7 | 1 |
 | 2 | 7 | 1 |
 
-附录表 8.6：数据 $x_2 > 6.50$ 的数据点（如表 A8.4 所示）
-
-
-
-
+附录表 8.6：数据 `x2 > 6.50` 的数据点（如表 A8.4 所示）
 
 ## 记忆点
 
@@ -8015,7 +8003,7 @@ https://discord.bpbonline.com
 
 ## 索引
 
-## A
+### A
 
 - 实际值 (Actual values) 60
 - AdaBoost 算法 244, 245
@@ -8038,7 +8026,7 @@ https://discord.bpbonline.com
 - Boosting 集成模型 (Boosting ensemble model) 165
 - 僵尸网络 (botnet) 202
 
-## C
+### C
 
 - 类别朴贝叶斯 (Categorical Naïve Bayes) 76
 - Chroma 特征 (Chroma features) 184
@@ -8047,7 +8035,7 @@ https://discord.bpbonline.com
 - 分类问题 (Classification problem) 12
 - 聚类 (Clustering) 10, 17, 18
 
-## B
+### B
 
 - Bagging 分类器 (BaggingClassifier) 169
 - Bagging 集成模型 (Bagging ensemble model) 163-165
@@ -8098,7 +8086,7 @@ https://discord.bpbonline.com
 - 海明距离 (hamming distance) 76
 - 曼哈顿距离 (Manhattan distance) 76
 
-## E
+### E
 
 ## 编码器 (Encoders)
 
@@ -8120,7 +8108,7 @@ https://discord.bpbonline.com
 - TF-IDF 拟合 (TF-IDF, fitting) 55-58
 - Python 数据类型 (data types, Python) 282, 283
 
-## I
+### I
 
 - 熵 (Entropy) 127, 339, 340
 - SVD 图像压缩 (image compression, with SVD) 298
@@ -8139,20 +8127,20 @@ https://discord.bpbonline.com
 - 物联网 (Internet of Things (IoT)) 202
 - 逆文档频率 (Inverse Document Frequency (IDF)) 325
 
-## F
+### F
 
 - 快速傅里叶变换 (Fast Fourier Transformation (FFT)) 182
 - for 循环语句 (for loop statement) 290
 - Python 函数 (functions, Python) 290
 
-## J
+### J
 
 - JPEG 文件 (JPEG files) 143, 143
 - Jupyter Notebook 273-274
 - 创建笔记本 (notebook, creating) 275, 276
 - 运行笔记本 (running) 278, 279
 
-## G
+### G
 
 - 高斯朴贝叶斯 (Gaussian Naïve Bayes) 47
 - 德国交通标志基准 (German Traffic Benchmark (GTDB)) 257
@@ -8160,14 +8148,14 @@ https://discord.bpbonline.com
 - 用于形成决策树 (for forming decision tree) 131
 - 梯度下降算法 (Gradient Descent algorithm) 98
 
-## K
+### K
 
 - K 近邻算法 (K-Nearest Neighbor (KNN)) 67, 68
 - 应用于 (applying) 74, 75
 - 数据准备 (data, preparing) 69, 70
 - 数据点之间的距离 (distance between points) 70, 71
 
-## H
+### H
 
 - 海明距离 (Hamming distance) 76
 - 肝炎诊断预测器 (Hepatitis predictor) 115
@@ -8177,7 +8165,7 @@ https://discord.bpbonline.com
 
 ## 356 精通分类算法
 
-## L
+### L
 
 - L1 范 (L1 Norm) 76
 - L2 范 (L2 Norm) 76
@@ -8215,7 +8203,7 @@ https://discord.bpbonline.com
 - 策略 (strategy) 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171
 - 熵 (entropy) 127, 339, 340, 342
 
-## N
+### N
 
 - 朴贝叶斯算法 (Naive Bayes algorithm) 47
 - 朴贝叶斯变体 (Naive variations) 45-50
@@ -8235,7 +8223,7 @@ https://discord.bpbonline.com
 - 矩阵分解 (matrix decomposition) 294-297
 - sklearn.ensemble 168
 
-## R
+### R
 
 - 随机森林算法 (Random Forest algorithm) 197, 198
 - 在 Scikit-Learn 中实现 (implementing, in Scikit-Learn) 200-202
@@ -8250,7 +8238,7 @@ https://discord.bpbonline.com
 - 根因分析 (Root Cause Analysis (RCA)) 38
 - 根节点 (root node) 136
 
-## S
+### S
 
 - SAMME 255
 - SAMME.R 255
@@ -8280,11 +8268,7 @@ https://discord.bpbonline.com
 - 循环语句 (loop statements) 290
 - 词干提取 (stemming) 318
 
-
-
-
-
-# 索引 359
+## 索引 359
 
 停用词 310
 
@@ -8363,4 +8347,3 @@ VotingClassifier 168
 while 循环语句 290
 
 白盒模型 167
-

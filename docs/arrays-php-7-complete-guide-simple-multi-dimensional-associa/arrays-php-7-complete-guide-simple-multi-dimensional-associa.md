@@ -1,26 +1,7 @@
+
 # 数组：PHP 7 完整指南：简单、多维、关联及对象数组（PHP 7 快速指南系列第 1 册）
 
-
-
-
-
-
-
 ![](img/169720e22813d8cd81c3e332f7f3f17e_0_0.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # 前言
 
@@ -54,22 +35,24 @@ Steve Prettyman 于 1979 年毕业于 Oglethorpe 大学获得教育学学士学�
 
 献给我的妻子 Beverly。感谢你二十来的爱与支持，没有你，这本书是不可能的。
 
+# 第 1 章 简单数组
 
-第 1 章 简单数组
 完成本章后，学生将能够
+
 - 定义并描述使用数组的优势
 - 创建一个验证信息的 html 表单
 - 创建简单 PHP 数组
 - 将值存入简单 PHP 数组
 - 在简单数组中显示值
 - 从 html 表单添加值
+
 什么是数组？为什么我们需要它们？每当程序使用信息时，该信息必须存储在计算机内存中。可以通过创建属性来存储个人信息。
 
 ```
 $propertyName = value;
 ```
 
-使用 $ 声明属性。PHP 属性名以小写字母开头。如果程序员想对名称使用多个单词，可以使用驼峰格式并通过特殊字符（如 _）分隔单词。
+使用 `$` 声明属性。PHP 属性名以小写字母开头。如果程序员想对名称使用多个单词，可以使用驼峰格式并通过特殊字符（如 `_`）分隔单词。
 
 ```
 $firstName = "";
@@ -93,7 +76,7 @@ $a = "";
 $last_name = "";
 ```
 
-在这个示例中，$a 没有意义。然而，$last_name 是意义的，我们理解人的姓氏将被存储。PHP 本身不会阻止你用大写字母声明属性。但这通常留给类名和常量。让我们快速看一下使用属性（或变量）存储信息的代码示例。我们的示例程序将通过表单向用户请求个人信息（如姓名、地址、州、邮政）。
+在这个示例中，`$a` 没有意义。然而，`$last_name` 是意义的，我们理解人的姓氏将被存储。PHP 本身不会阻止你用大写字母声明属性。但这通常留给类名和常量。让我们快速看一下使用属性（或变量）存储信息的代码示例。我们的示例程序将通过表单向用户请求个人信息（如姓名、地址、州、邮政）。
 
 # 图像 1–1 – example1.html
 
@@ -107,21 +90,37 @@ $last_name = "";
 ```
 
 <head>
+
 <title>客户信息</title>
+
 </head>
+
 <body>
+
 <form method='post' action='process_customer.php'>
+
 <h2>请在所有字段中输入信息</h2>
+
 名字 <input type='text' pattern='[a-zA-Z]*' title='15个字母以内' maxLength='15' name='first_name' id='first_name/><br />
+
 姓 <input type='text' pattern='[a-zA-Z]*' title='20个字母以内' maxLength='20' name='last_name' id='last_name/><br />
+
 地址 <input type='text' title='30个字符以内' maxLength='30' name='address' id='address'/>br />
+
 城市 <input type='text' pattern='[a-zA-Z]*' title='20个字符以内' maxLength='20' name='city' id='city/><br />
+
 州 <input type='text' pattern='[a-zA-Z]*' title='2个字符' maxLength='2' name='state' id='state/><br />
+
 邮编 <input type='number' min='11111' max='99999' title='5位数字' name='zip_code' id='zip_code/><br />
+
 <input type='submit' value="提交您的信息" />
+
 </form>
+
 </body>
+
 </html>
+
 ```
 
 注意：为了在您的 Kindle 设备上获得更好的显示，书中的示例移除了一些缩进和空白。从作者网站下载代码以帮助您理解代码。
@@ -130,11 +129,9 @@ $last_name = "";
 
 注意：如果您不知道 html，应该查看网络提供的一些免费教程和视频。PHP 是一种 Web 应用程序语言，通常与 html 和 JavaScript 接口。
 
-一旦用户以正确的格式输入信息并点击提交按钮，信息将发送到 Web 服务器上的程序进行处理。在这个示例中，html 表单行表明 process_customer.php 将接收并处理这些信息。
+一旦用户以正确的格式输入信息并点击提交按钮，信息将发送到 Web 服务器上的程序进行处理。在这个示例中，html 表单行表明 `process_customer.php` 将接收并处理这些信息。
 
 当信息发送时，它实际上是作为一系列属性和
-
-
 
 值（也称为键值）。属性名由 html 表单中 `name` 属性中显示的值决定（例如上例中的 `first_name`）。分配给属性的值是从用户在文本框中输入的信息获取的。
 
@@ -158,7 +155,7 @@ $zip_code = "30001"
 $zip_code = 30001;
 ```
 
-上述第一条语句将字符串 “30001” 放入属性 $zip_code 中。如果该属性之前不存在，它也将被创建。第二条语句将把存储在 $zip_code 中的信息类型从字符串更改为整数。
+上述第一条语句将字符串 `"30001"` 放入属性 `$zip_code` 中。如果该属性之前不存在，它也将被创建。第二条语句将把存储在 `$zip_code` 中的信息类型从字符串更改为整数。
 
 ## 示例 1–3 – process_customer.php
 
@@ -169,16 +166,12 @@ $zip_code = 30001;
 // 清除 /input 中的任何
 $first_name = validate_first_name($_POST['first_name']);
 $last_name = validate_last_name($_POST['last_name']);
-
 $address = validate_address($_POST['address']);
-
 $city = validate_city($_POST['city']);
-
 $state = validate_state($_POST['state']);
-
 $zip_code = validate_zip_code($_POST['zip_code']);
-
 print "Your name is $first_name $last_name. You live at $address, $city, $state, $zip_code";?>
+```
 
 PHP 程序可以使用 `$_POST` 或 `$_GET` 方法访问从 html 表单传递的信息。PHP 程序中使用的方法必须与 html 表单属性中指定的类型匹配。通过 post 传递的信息不会通过浏览器的 URL 地址显示。通过 get 传递的信息将显示在 URL 行上。
 
@@ -186,13 +179,13 @@ PHP 程序可以使用 `$_POST` 或 `$_GET` 方法访问从 html 表单传递的
 
 通过 get 传递的信息不使用那么多服务器内存，因为它包含在 URL 地址中。通过 post 传递的信息存储在服务器的内存中。流量巨大的网站（例如搜索引擎）需要尽可能地提高内存效率。虽然通过 post 传递信息可以“隐藏”URL 行上的信息，但它通常不被认为是安全的，因为通常没有经过加密。
 
-`$_POST` 和 `$_GET` 方法使用 html 表单创建的属性名（‘first_name’）来检索传递的值（‘Fred’）。该信息可以被放入程序本身定义的属性（$first_name）中。请记住，通过 `$_POST`（或 `$_GET`）方法收集的所有信息都存储为字符串数据类型（因为 html 表单只能传递字符串）。
+`$_POST` 和 `$_GET` 方法使用 html 表单创建的属性名（‘first_name’）来检索传递的值（‘Fred’）。该信息可以被放入程序本身定义的属性（`$first_name`）中。请记住，通过 `$_POST`（或 `$_GET`）方法收集的所有信息都存储为字符串数据类型（因为 html 表单只能传递字符串）。
 
 PHP 在第一次使用属性时动态创建它，Web 服务器的操作系统会为属性及其值分配内存空间。
 
-$first_name = validate_first_name($_POST['first_name']);
+`$first_name = validate_first_name($_POST['first_name']);`
 
-上述行将从表单中 `first_name` 所在的 html 文本框中提取数据。它将验证数据，如果数据有效，它将创建属性 $first_name 并将其置入。除了 print 语句外，示例中的其他行都会进行此过程。print 语句将显示属性中的值。
+上述行将从表单中 `first_name` 所在的 html 文本框中提取数据。它将验证数据，如果数据有效，它将创建属性 `$first_name` 并将其置入。除了 print 语句外，示例中的其他行都会进行此过程。print 语句将显示属性中的值。
 
 注意：在将其放入属性之前，对从客户端接收的信息进行验证是非常重要的。示例表明存在验证方法（如 `validate_first_name`）来完成此任务。
 
@@ -250,7 +243,6 @@ function validate_zip_code(string $value) : string
 
 所示的 `validate_first_name` 函数使用 `strlen` 来确定从 html 表单传递的字符串是否符合这些要求。
 
-
 属性。
 
 在 PHP 中，将值存储到数组时，不需要包含下标。
@@ -285,10 +277,11 @@ $customer_record[2] = validate_last_name($POST['last_name']);
 
 在 Java 这样的语言中，如果数组中的某个位置没有赋予初始值，该位置将持有一个 `null` 值。`null` 值是零，且它是空的。如果 Java 程序尝试对数组中未赋值的值进行计算，程序将产生错误，指示该位置上有一个 `null` 值。如果一个 PHP 数组中跳过了某个位置，该位置仅仅是不存在。
 
-print_r($customer_record);
+`print_r($customer_record);`
+
 Array ( [0] => Fred [2] => Smith [3] => 123 Main Street [4] => Atlanta [5] => GA [6] => 30001 )
 
-从对填充的 $customer_record 数组执行 `print_r` 的结果可以看出，数组中不存在位置 1。
+从对填充的 `$customer_record` 数组执行 `print_r` 的结果可以看出，数组中不存在位置 1。
 
 你可能会想这是否会在从数组中检索值时引起任何问题。
 
@@ -303,54 +296,61 @@ foreach($customer_record as $value)
 }
 ```
 
-$customer_record 是数组的名称，`as` 是一个必须的关键字。$value 代表该方法当前正在访问的位置中存在的值。程序员可以为 $value 分配任何名称。它是一个临时属性，用于保存数组中当前位置的值。
+
+
+`$customer_record` 是数组的名称，`as` 是一个必须的关键字。`$value` 代表该方法当前正在访问的位置中存在的值。程序员可以为 `$value` 分配任何名称。它是一个临时属性，用于保存数组中当前位置的值。
 
 如果我们使用这个循环来打印上数组中的值，循环将从位置 0 开始并打印第一个位置的内容（Fred）。循环将移动到数组中的下一个位置，即位置 2（没有位置 1）。它将打印该位置的内容（Smith），并持续到数组中的所有位置都打印完毕。
 
 Fred 123 Main Street Atlanta GA 30001
 
-**`foreach` 循环使得从 PHP 数组中检索值变得简单。** 该循环将消除任何尝试从数组中不存在的位置检索值的可能性，并将消除超出数组末尾（大小）的可能性。数组的大小和位置可以随时改变，而这个小小的 `foreach` 循环仍然能够正常工作。
+`foreach` 循环使得从 PHP 数组中检索值变得简单。该循环将消除任何尝试从数组中不存在的位置检索值的可能性，并将消除超出数组末尾（大小）的可能性。数组的大小和位置可以随时改变，而这个小小的 `foreach` 循环仍然能够正常工作。
 
 你还会发现，有许多 PHP 函数可以在读取、检索或更新数组中的值时，消除使用循环的需要。
 
-
 在 PHP 中，如果你知道数组的初始值，可以使用类似于其他语言的结构创建。
-$customer_record = array('Fred', 'Smith', '123 Main Street', 'Atlanta', 'GA', '30001');
-print_r($customer_record);
+
+`$customer_record = array('Fred', 'Smith', '123 Main Street', 'Atlanta', 'GA', '30001');`
+
+`print_r($customer_record);`
 
 Array ( [0] => Fred [1] => Smith [2] => 123 Main Street [3] => Atlanta [4] => GA [5] => 30001 )
 
 在这个示例中，我们最初创建了一个具有特定数量（6个）元素初始值的数组。PHP 与其他语言一样，会自动为每个位置的下标编号，从零开始。由于 PHP 以相同的格式存储所有数组，我们可以使用讨论过的技术更改此数组中的值。
 
-print_r($customer_record);
+`print_r($customer_record);`
+
 Array ( [0] => Pete [1] => Smith [2] => 123 Main Street [3] => Atlanta [4] => GA [5] => 30001 )
 
 你可以看到，Fred 被 Pete 取代，向正确的位置传递了新值。
 
 如果我们尝试在一个不存在的位置放置一个值会发生什么？
-$customer_record[6] = '777777';
-print_r($customer_record);
+
+`$customer_record[6] = '777777';`
+
+`print_r($customer_record);`
 
 Array ( [0] => Pete [1] => Smith [2] => 123 Main Street [3] => Atlanta [4] => GA [5] => 30001 [6] => 777777 )
 
 正如你所看到的，数组会创建一个新位置并将值放在该位置。PHP 数组会自动在末尾添加值，如果位置不存在。这在其他语言中不是真的。许多语言会指示你越界（超过了数组的大小）。在上面使用的格式中，PHP 数组包含了与之前数组完全相同的信息和位置。如果我们向该位置加载一个数字而不是字符串会发生什么？
-$customer_record[5] = 30001;
 
-print_r($customer_record);
+`$customer_record[5] = 30001;`
+
+`print_r($customer_record);`
 
 Array ( [0] => Pete [1] => Smith [2] => 123 Main Street [3] => Atlanta [4] => GA [5] => 30001 )
 
 `print_r` 语句的输出会产生数据类型的差异。然而，我们可以首先将数组转换为 JSON 格式（使用 `json_encode` 方法），然后显示结果。我们还可以使用 PHP `var_dump` 方法。我们将在后面的章节中使用这种方法。
 
-$json = json_encode($customer_record);
+`$json = json_encode($customer_record);`
 
-print_r($json);
+`print_r($json);`
 
 ["Pete","Smith","123 Main Street","Atlanta","GA",30001]
 
 JSON 格式让你看到邮政的数据类型从字符串值（'30001'）变为了数值（30001）。即使邮政编码已经作为字符串存在，当我们将其替换为数值时，该数字（而不是字符串）现在存在于数组中。
 
-HTML 数组
+### HTML 数组
 
 现在我们对 PHP 数组如何工作有了大致了解，我们可以在 HTML 表单中使用此概念，并发现可以轻松将数组传递给我们的 PHP 程序。
 
@@ -387,7 +387,6 @@ id='customer_record[5]><br />
 </body>
 </html>
 ```
-
 
 ```html
 <input type='submit'
@@ -436,19 +435,31 @@ return $input_array;
 ## 删除
 
 Array (
+
 [0] => Fred
+
 [1] => Smith
+
 [2] => 123 Main Street
+
 [3] => Atlanta
+
 [4] => GA
+
 [5] => 3001)
 
 逻辑将会解释说明创建一个循环来删除数组中间某个值的必要性。如果我们删除第二个值（`[1]`），书本将解释说被删除值之后的每个值都需要重新定位到上方，以填补被删除的值。这通常是必要的，以避免任何 NULL 值。Array
+
 [0] => Fred
+
 [1] => Smith
+
 [2] => 123 Main Street
+
 [3] => Atlanta
+
 [4] => GA
+
 [5] => 3001)
 
 循环将更新数组为类似于上面示例的内容。在 PHP 中，这是没必要的。正如之前解释的那样，数组在处理缺失订阅者时运行良好。`foreach` 循环会自动跳过缺失的订阅者。因此，我们可以通过创建一个简单的函数来从数组中删除任何下标。
@@ -466,7 +477,8 @@ delete_array_value(1);
 ```
 
 示例 1-8 使用 `unset` 方法来删除传递到函数 `delete_array_value` 的任何下标。在这个示例中，删除方法将从数组移除 `Smith` 的位置。数组现在将包含：
-$customer_record = array('Pete','123 Main Street','Atlanta','GA',3001);
+
+`$customer_record = array('Pete','123 Main Street','Atlanta','GA',3001);`
 
 如果我们执行以下语句，你将看到下标及其值已被移除。
 
@@ -482,7 +494,7 @@ Array (
 
 如果我们执行以下语句，你将看到下标及其值已被移除。
 
-``````php
+```php
 print_r($customer_record);
 Array (
 [0] => Pete
@@ -492,7 +504,7 @@ Array (
 [5] => 3001)
 ```
 
-在 ` ` 之前，我们已经展示了多个通过 `array_push` 在数组末尾值的示例。让我们看看另一个方法。
+在之前，我们已经展示了多个通过 `array_push` 在数组末尾值的示例。让我们看看另一个方法。
 
 示例 1-9 insert.php
 
@@ -537,11 +549,6 @@ array_push($customer_record, $value);
 print_r($customer_record);
 ```
 
-
-
-
-
-
 完成本章后，学生将能够……
 
 - 定义并描述使用多维数组的优势
@@ -556,6 +563,7 @@ print_r($customer_record);
 - 将数组信息保存到 MySQL 数据库
 
 上一章展示了数组是多么的高效。
+
 然而，一个没有被回答的问题是
 
 > “我们如何处理来自多个客户的数据？”
@@ -566,7 +574,7 @@ print_r($customer_record);
 
 电子表格的工作原理也是一样的。
 
-## 图 2-1 客户表
+### 图 2-1 客户表
 
 | "Pete" "Smith" | "123 Main Street" |
 | :--- | :--- |
@@ -583,13 +591,16 @@ print_r($customer_record);
 此表包含六列四行。然而，请记住，电子表格和程序对元素的编号是从零开始的，而不是从一。左上角的元素（包含“Pete”）位于第 0 行第 0 列 (0, 0)。右下角的元素（30018）位于第 3 行第 5 列 (3, 5)。
 
 第 2 行第 2 列显示的是什么？“111 Peachtree Street"
+
 为什么我们说是行 x 和列 y，而不是列 y 和行 x？
 
-答案在于信息在内存中的存储方式。操作系统按行存储二维数组。行被保持完好，因为某行中的所有内容都是相关的（*Pete Smith* 的所有信息）。行信息被放置在相互连续（相邻）的内存位置中。其他行并不一定存储在内存中与前一个行相邻的存储上。这使得操作系统在内存存储上更加高效。
 
-当从*二维数组*中检索数据时，我们通常一次检索或查看一行信息（例如 *Pete Smith* 的所有信息）。这反允许操作系统访问内存中的一个连续区域来提取信息。当需要一列信息时，效率就会降低，因为操作系统可能需要访问内存中多个不连续的位置来检索信息。
 
-当我们将信息存储到表格或数组中时，我们（通常）在存储另一行信息之前，先存储一整行信息（Pete Smith 的所有信息）。这再次对应于操作系统在保存下一行信息（可能在内存中完全不同的位置）之前，将所有相关信息存储到内存的同一个通用位置。
+答案在于信息在内存中的存储方式。操作系统按行存储二维数组。行被保持完好，因为某行中的所有内容都是相关的（`Pete Smith`的所有信息）。行信息被放置在相互连续（相邻）的内存位置中。其他行并不一定存储在内存中与前一个行相邻的存储上。这使得操作系统在内存存储上更加高效。
+
+当从*二维数组*中检索数据时，我们通常一次检索或查看一行信息（例如 `Pete Smith` 的所有信息）。这反允许操作系统访问内存中的一个连续区域来提取信息。当需要一列信息时，效率就会降低，因为操作系统可能需要访问内存中多个不连续的位置来检索信息。
+
+当我们将信息存储到表格或数组中时，我们（通常）在存储另一行信息之前，先存储一整行信息（`Pete Smith` 的所有信息）。这再次对应于操作系统在保存下一行信息（可能在内存中完全不同的位置）之前，将所有相关信息存储到内存的同一个通用位置。
 
 **所有这些都只是为了让我们记住，在二维数组中保存或检索信息时，始终要先列出第一行，然后是列。**
 
@@ -603,9 +614,9 @@ $customer_record[0];
 $customer_record[1][0];
 ```
 
-在该语句中，第一个下标表示行 (1)，第二个下标表示列 (0)。如果上文显示的表格是一个数组，此语句将打印 Sally。
+在该语句中，第一个下标表示行 `1`，第二个下标表示列 `0`。如果上文显示的表格是一个数组，此语句将打印 `Sally`。
 
-$customer_record[2][4]; 会显示 GA
+`$customer_record[2][4];` 会显示 `GA`
 
 在 PHP 中动态创建一个二维数组时，我们使用的语句与用于单维的几乎相同。
 
@@ -624,7 +635,7 @@ $customer_record[1][4] = "GA";
 $customer_record[1][5] = 30001;
 ```
 
-当我们把信息存储到表格或数组时，我们也（通常）在存储另一行信息之前先存储一整行信息（Pete Smith 的所有信息）。这再次映射到操作系统在保存下一行信息（可能在内存中完全不同的位置）之前，将所有相关信息存储到内存的同一个通用位置。
+当我们把信息存储到表格或数组时，我们也（通常）在存储另一行信息之前先存储一整行信息（`Pete Smith` 的所有信息）。这再次映射到操作系统在保存下一行信息（可能在内存中完全不同的位置）之前，将所有相关信息存储到内存的同一个通用位置。
 
 让我们看看 `print_r` 的结果：
 
@@ -653,7 +664,7 @@ Array
 )
 ```
 
-$customer_record[2][4]; 会显示 GA
+`$customer_record[2][4];` 会显示 `GA`
 
 在 PHP 中动态创建一个二维数组时，我们使用的语句与用于单维的几乎相同。
 
@@ -699,14 +710,9 @@ Array
 )
 ```
 
-$customer_record[2][4]; 会显示 GA
+`$customer_record[2][4];` 会显示 `GA`
 
 在 PHP 中动态创建一个二维数组时，我们使用的语句与用于单维的几乎相同。
-
-（注：由于原文文本中后期出现了大量重复内容，根据“不要重复输出原文”的原则，此处翻译已根据逻辑进行了精简，确保核心含义的完整传递。）
-
-
-
 
 产生与示例 2-1 相同的结果。你必须小心确保像上面所示包含所有必需的逗号。还要注意，在完整语句的末尾仍然需要分号。
 
@@ -729,6 +735,7 @@ $customer_record[2] = array('Jake', 'Boukari',
 ```
 
 Array (
+
 ```
 [1] => Array ([0] => Sally [1] => Parisi [2] => 101 South Street [3] => Atlanta [4] => GA [5] => 30001
 ```
@@ -773,16 +780,15 @@ name='customer_record[4]'id='customer_record[4]'><br />
 Zip code <input type='number' min='11111' max='99999' title='5 numerical characters'
 name='customer_record[5]'id='customer_record[5]'><br />
 <input type='submit' value='Click to submit your information' />
-```
-
-```
 </form>
 </body>
 </html>
 ```
 
-对 html 文件（示例 2-2）所唯一更改是更改了调用的 PHP 程序的名称（process_customer_array_twodim.php）。
+对 html 文件（示例 2-2）所唯一更改是更改了调用的 PHP 程序的名称（`process_customer_array_twodim.php`）。
+
 示例 2-3 – process_customer_array_twodim.php
+
 ```php
 <?php
 $customer_record = array (
@@ -796,14 +802,20 @@ print_r($customer_record);
 ?>
 ```
 
-在示例 2-3 中，声明了一个二维数组 ($customer_record)。将 html 数据添加到数组的过程仅在第 1 章的示例基础上额外添加一行。PHP 方法 `array_push` 确定现有数组的大小并将值添加到现有数组的末尾。$customer_info 包含了客户在 html 表单中输入的值数组。`array_push` 将此数组附加到 $customer_record 数组的末尾。
+在示例 2-3 中，声明了一个二维数组 (`$customer_record`)。将 html 数据添加到数组的过程仅在第 1 章的示例基础上额外添加一行。PHP 方法 `array_push` 确定现有数组的大小并将值添加到现有数组的末尾。`$customer_info` 包含了客户在 html 表单中输入的值数组。`array_push` 将此数组附加到 `$customer_record` 数组的末尾。
 
 Array (
+
 [0] =>
+
 Array ([0] => Pete [1] => Smith [2] => 123 Main Street [3] => Atlanta [4] => GA [5] => 30001)
+
 [1] =>
+
 Array ([0] => Sally [1] => Parisi [2] => 101 South Street [3] => Atlanta [4] => GA [5] => 30001)
+
 [2] =>
+
 Array ([0] => Fred [1] => Smith [2] => 123 Main Street [3] => Atlanta [4] => GA [5] => 30001 )
 
 只需一条代码语句，所有值都添加到数组的末尾！
@@ -852,11 +864,11 @@ catch(Error $e) {
 ?>
 ```
 
-
 示例 2-6 提供了一个使用 MySQL 数据库的非常简单的示例。
-$mysqli = new mysqli("localhost", "website"
 
-`fetch_all` 方法将数据库行转换为一个二维数组（带有数字下标）。该数组被放入 $customer_record 中。
+`$mysqli = new mysqli("localhost", "website"`
+
+`fetch_all` 方法将数据库行转换为一个二维数组（带有数字下标）。该数组被放入 `$customer_record` 中。
 
 接下来的行与上一个示例相同。
 
@@ -866,7 +878,7 @@ $query .= $customer_info[0] . "," . $customer_info[1] . "," . $customer_info[2] 
 $query .= $customer_info[3] . "," . $customer_info[4] . "," . $customer_info[5] . ")";
 ```
 
-在将 html 表单中的信息附加到 $customer_record 数组（并显示）后，根据从 html 表单中收集的信息创建一个 SQL 字符串。
+在将 html 表单中的信息附加到 `$customer_record` 数组（并显示）后，根据从 html 表单中收集的信息创建一个 SQL 字符串。
 
 ```php
 $result = $mysqli->query($query);
@@ -887,27 +899,31 @@ $customer_record = array(
 );
 ```
 
+
+
 ```php
 foreach($customer_record as $row) {
     foreach($row as $column_value) {
         print $column_value . " ";
     }
 }
-foreach($customer_record as $row) {
-第一个 `foreach` 语句包含了数组 ($customer_record) 和循环当前访问的行 ($row)。
 ```
 
+第一个 `foreach` 语句包含了数组 (`$customer_record`) 和循环当前访问的行 (`$row`)。
+
 ```php
-这与从二维数组中检索信息时使用单个下标是类似的。上面的语句将提取当前行（数组）并显示它。外层 `foreach` 循环也会提取当前行（数组）并将其放置在 $row 中。
+foreach($customer_record as $row) {
+```
+这与从二维数组中检索信息时使用单个下标是类似的。上面的语句将提取当前行（数组）并显示它。外层 `foreach` 循环也会提取当前行（数组）并将其放置在 `$row` 中。
 
 当循环第一次执行时，它将位于第 0 行（Pete）。每当程序到达外层循环的底部并返回顶部，`foreach` 循环将移动到下一行，直到没有更多行。
 
 ```php
 foreach($row as $column_value) {
-内部循环遍历由 `foreach` 循环选定的行中每一列的值。$row 包含了当前行中的所有列（值）。$column_value 包含了当前列的内容。每当程序到达内层循环的底部并返回顶部时，内部循环将选择下一列。当行中不再有更多列时，循环结束。
 ```
+内部循环遍历由 `foreach` 循环选定的行中每一列的值。`$row` 包含了当前行中的所有列（值）。`$column_value` 包含了当前列的内容。每当程序到达内层循环的底部并返回顶部时，内部循环将选择下一列。当行中不再有更多列时，循环结束。
 
-当这种情况发生时，程序的执行流也将跳转到最后。这会将执行流传回外层循环的顶部，获取下一行（如果有）。循环内部的 `print` 语句显示每行中的值。上面使用的格式不允许我们检索下标数字（0, 1）或列下标（0, 1, 2, 3, 4, 5）。要要访问这些信息，我们必须将 $row 属性拆分为两个部分。目前 $row 是将要访问的实际数组（行）。要访问下标，我们必须使用以下格式同时请求行下标和行中的值：
+当这种情况发生时，程序的执行流也将跳转到最后。这会将执行流传回外层循环的顶部，获取下一行（如果有）。循环内部的 `print` 语句显示每行中的值。上面使用的格式不允许我们检索下标数字（0, 1）或列下标（0, 1, 2, 3, 4, 5）。要访问这些信息，我们必须将 `$row` 属性拆分为两个部分。目前 `$row` 是将要访问的实际数组（行）。要访问下标，我们必须使用以下格式同时请求行下标和行中的值：
 
 ```php
 foreach($customer_record as $row => $row_array) {
@@ -935,13 +951,11 @@ print "<br>";
 第 1 行：列 4 Value: GA
 第 1 行：列 5 Value: 30001
 
-
-
-上述循环将遍历三维数组 $square\array$ 以显示数组中的值（s），然后将每个位置的值更改为 345。
+上述循环将遍历三维数组 `$square\array$` 以显示数组中的值（s），然后将每个位置的值更改为 345。
 
 ## 删除
 
-示例 1-8 deletesubscript.php
+示例 1-8 `deletesubscript.php`
 
 ```php
 $customer_record = array (
@@ -959,7 +973,7 @@ delete_array_value(1);
 
 如果我们正在使用二维数组并想从其中某行中删除一个值，我们可以对示例进行细调。
 
-示例 2-7 deletesubscript2dim.php
+示例 2-7 `deletesubscript2dim.php`
 
 ```php
 $customer_record = array (
@@ -993,10 +1007,10 @@ $customer_record[$subscript] = $value;
 }
 ```
 
-$temp_array = array('Pete', 'Smith','1234 Main Street', 'Atlanta', 'GA', 30001);
-update_array_value(0, $temp_array);
+`$temp_array = array('Pete', 'Smith','1234 Main Street', 'Atlanta', 'GA', 30001);`
+`update_array_value(0, $temp_array);`
 
-这个示例完全用一个 Peter 数组替换了 Pete 的值。当调用方法时，0 被传递给 $subscript$，而 Peter 数组被传递给 $value$。然后该方法用 Peter 数组中的值替换位置 0 的内容。实际上，如果该位置在数组中不存在，它也会插入该数组。
+这个示例完全用一个 Peter 数组替换了 Pete 的值。当调用方法时，0 被传递给 `$subscript$`，而 Peter 数组被传递给 `$value$`。然后该方法用 Peter 数组中的值替换位置 0 的内容。实际上，如果该位置在数组中不存在，它也会插入该数组。
 
 如果我们只想更改数组中的一个值，可以进行细微调整。
 
@@ -1012,113 +1026,7 @@ $customer_record[$first_subscript][$second_subscript] = $value;
 update_array_value(0, 0, "Peter");
 ```
 
-这个示例将把 Pete 替换为 Peter。0 被传递给 $first_subscript$。0 也被传递给 $second_subscript$。当调用方法时，Peter 被传递给 $value$。该方法用 Peter 数组中的值替换位置 0 的内容。实际上，如果该位置在数组中不存在，它也会插入该数组。
-
-如果我们只想更改数组中的一个值，可以进行略微的调整。
-
-```php
-$customer_record = array (
-array('Pete', 'Smith','123 Main Street', 'Atlanta', 'GA', 30001),
-array('Sally', 'Parisi','101 South Street', 'Atlanta', 'GA', 30001)
-);
-declare(strict_types=1);
-function update_array_value(int $first_subscript, int $second_subscript, $value) {
-$customer_record[$first_subscript][$second_subscript] = $value;
-}
-update_array_value(0, 0, "Peter");
-```
-
-这个示例将把 Pete 替换为 Peter。0 被传递给 $first_subscript$。0 也被传递给 $second_subscript$。当调用方法时，Peter 被传递给 $value$。该方法用 Peter 数组中的值替换位置 0 的内容。实际上，如果该位置在数组中不存在，它也会插入该数组。
-
-如果我们只想更改数组中的一个值，可以进行略微的调整。
-
-```php
-$customer_record = array (
-array('Pete', 'Smith','123 Main Street', 'Atlanta', 'GA', 30001),
-array('Sally', 'Parisi','101 South Street', 'Atlanta', 'GA', 30001)
-);
-declare(strict_types=1);
-function update_array_value(int $first_subscript, int $second_subscript, $value) {
-$customer_record[$first_subscript][$second_subscript] = $value;
-}
-update_array_value(0, 0, "Peter");
-```
-
-这个示例将把 Pete 替换为 Peter。0 被传递给 $first_subscript$。0 也被传递给 $second_subscript$。当调用方法时，Peter 被传递给 $value$。该方法用 Peter 数组中的值替换位置 0 的内容。实际上，如果该位置在数组中不存在，它也会插入该数组。
-
-（注：原文中存在部分段落重复，已按要求合并翻译）
-
-```php
-$customer_record = array (
-array('Pete', 'Smith','123 Main Street', 'Atlanta', 'GA', 30001),
-array('Sally', 'Parisi','101 South Street', 'Atlanta', 'GA', 30001)
-);
-declare(strict_types=1);
-function update_array_value(int $first_subscript, int $second_subscript, $value) {
-$customer_record[$first_subscript][$second_subscript] = $value;
-}
-update_array_value(0, 0, "Peter");
-```
-
-这个示例将把 Pete 替换为 Peter。0 被传递给 $first_subscript$。0 也被传递给 $second_subscript$。当调用方法时，Peter 被传递给 $value$。该方法用 Peter 数组中的值替换位置 0 的内容。实际上，如果该位置在数组中不存在，它也会插入该数组。
-
-（为了逻辑连贯，此处根据原文重复内容进行了去重处理）
-
-如果我们只想更改数组中的一个值，可以进行略微的调整。
-
-```php
-$customer_record = array (
-array('Pete', 'Smith','123 Main Street', 'Atlanta', 'GA', 30001),
-array('Sally', 'Parisi','101 South Street', 'Atlanta', 'GA', 30001)
-);
-declare(strict_types=1);
-function update_array_value(int $first_subscript, int $second_subscript, $value) {
-$customer_record[$first_subscript][$second_subscript] = $value;
-}
-update_array_value(0, 0, "Peter");
-```
-
-这个示例将把 Pete 替换为 Peter。0 被传递给 $first_subscript$。0 也被传递给 $second_subscript$。当调用方法时，Peter 被传递给 $value$。该方法用 Peter 数组中的值替换位置 0 的内容。实际上，如果该位置在数组中不存在，它也会插入该数组。
-
-（注：原文后半部分存在大量重复代码和文字，已根据“不要重复输出原文”的原则保留核心逻辑翻译）
-
-```php
-$customer_record = array (
-array('Pete', 'Smith','123 Main Street', 'Atlanta', 'GA', 30001),
-array('Sally', 'Parisi','101 South Street', 'Atlanta', 'GA', 30001)
-);
-declare(strict_types=1);
-function update_array_value(int $first_subscript, int $second_subscript, $value) {
-$customer_record[$first_subscript][$second_subscript] = $value;
-}
-update_array_value(0, 0, "Peter");
-```
-
-这个示例将把 Pete 替换为 Peter。0 被传递给 $first_subscript$。0 也被传递给 $second_subscript$。当调用方法时，Peter 被传递给 $value$。该方法用 Peter 数组中的值替换位置 0 的内容。实际上，如果该位置在数组中不存在，它也会插入该数组。
-
-（注：由于提供的原文文本存在严重的逻辑重复，以上译文仅针对非重复的说明部分，以确保输出质量符合要求。）
-
-如果我们只想更改数组中的一个值，可以进行略微的调整。
-
-```php
-$customer_record = array (
-array('Pete', 'Smith','123 Main Street', 'Atlanta', 'GA', 30001),
-array('Sally', 'Parisi','101 South Street', 'Atlanta', 'GA', 30001)
-);
-declare(strict_types=1);
-function update_array_value(int $first_subscript, int $second_subscript, $value) {
-$customer_record[$first_subscript][$second_subscript] = $value;
-}
-update_array_value(0, 0, "Peter");
-```
-
-这个示例将把 Pete 替换为 Peter。0 被传递给 $first_subscript$。0 也被传递给 $second_subscript$。当调用方法时，Peter 被传递给 $value$。该方法用 Peter 数组中的值替换位置 0 的内容。实际上，如果该位置在数组中不存在，它也会插入该数组。
-
-（注：原文中包含大量循环重复，高级文档工程师已根据指令进行去重处理。）
-
-
-
-
+这个示例将把 Pete 替换为 Peter。0 被传递给 `$first_subscript$`。0 也被传递给 `$second_subscript$`。当调用方法时，Peter 被传递给 `$value$`。该方法用 Peter 数组中的值替换位置 0 的内容。实际上，如果该位置在数组中不存在，它也会插入该数组。
 
 有些学生在学习关联数组（Associative Arrays）时会迷困。然而，没有理由恐慌。你已经在本书的每一个示例中见过它们了！！
 
@@ -1126,9 +1034,9 @@ update_array_value(0, 0, "Peter");
 
 是的，请记住，第一章提到过 PHP 中的所有数组都是相同的。所有的数组都是关联数组。我们之前讨论的内容与现在内容的唯一区别在于下标中的内容。回想一下
 
-### 示例 1-4:
+### 示例 1-4
 
-### 示例 1–4 – process_customer_record.php
+### 示例 1–4 – `process_customer_record.php`
 
 ```php
 <?php
@@ -1152,34 +1060,53 @@ $customer_record[4], $customer_record[5]";
 
 ```php
 <?php
-// 接收来自 example1.html 的信息
-// 这不是一个完整的程序。需要创建 validate 方法以清理任何 // 输入
-$customer_record["first_name"] = validate_first_name($_POST['first_name']);
-$customer_record["last_name"] = validate_last_name($_POST['last_name']);
-$customer_record["address"] = validate_address($_POST['address']);
 ```
+
+
+
+// 接收来自 example1.html 的信息
+
+// 这不是一个完整的程序。需要创建 validate 方法以清理任何 // 输入
+
+`$customer_record["first_name"]` = `validate_first_name`(`$_POST['first_name']`);
+
+`$customer_record["last_name"]` = `validate_last_name`(`$_POST['last_name']`);
+
+`$customer_record["address"]` = `validate_address`(`$_POST['address']`);
 
 ```php
 $customer_record["city"] = validate_city($_POST['city']);
+
 $customer_record["state"] = validate_state($_POST['state']);
+
 $customer_record["zip_code"] = validate_zip_code($_POST['zip_code']);
+
 print "Your name is " . $customer_record["first_name"] . ". You live at " . $customer_record["address"] . ", " . $customer_record["city"] . ", " . $customer_record["state"] . ", " . $customer_record["zip_code"];
+
 ?>
 ```
 
-如果我们将每个数字下标替换为更具意义的字母下标，我们发现 "first_name" 值是通过 `$_POST` 从 html 表单接收的。属性中的值在名为 `first_name` 的位置进行验证。所有其他检索到的数据也发生类似的过程。注意：注意 `print` 语句在下标周围使用了单引号（'first_name'）而不是双引号。你不能在双引号内部嵌入双引号（包含要打印字符串的双引号内）。在许多情况下（并非所有情况），你可以使用单引号代替。让我们来看另一个示例。
+如果我们将每个数字下标替换为更具意义的字母下标，我们发现 `"first_name"` 值是通过 `$_POST` 从 html 表单接收的。属性中的值在名为 `first_name` 的位置进行验证。所有其他检索到的数据也发生类似的过程。注意：注意 `print` 语句在下标周围使用了单引号（`'first_name'`）而不是双引号。你不能在双引号内部嵌入双引号（包含要打印字符串的双引号内）。在许多情况下（并非所有情况），你可以使用单引号代替。让我们来看另一个示例。
 
 ### 示例 2-4 - process_customer_array_twodim_saved.php
 
 ```php
 <?php
+
 $customer_file = file_get_contents("customer_data.json");
+
 $customer_record = json_decode($customer_file, TRUE);
+
 $customer = filter_input_array($_POST);
+
 $customer_info = validate_array($customer_record);
+
 array_push($customer_record, $customer_info);
+
 print_r($customer_record);
+
 file_put_contents("customer_data.json", json_encode($customer_record));
+
 ?>
 ```
 
@@ -1189,17 +1116,25 @@ file_put_contents("customer_data.json", json_encode($customer_record));
 
 ```php
 <?php
+
 $customer_file = file_get_contents("customer_data.json");
+
 $customer_record = json_decode($customer_file, TRUE);
+
 $customer = filter_input_array($_POST);
+
 list(
     $customer_info['first_name'], $customer_info['last_name'],
     $customer_info['address'], $customer_info['city'],
     $customer_info['state'], $customer_info['zip_code']
 ) = validate_array($customer_record);
+
 array_push($customer_record, $customer_info);
+
 print_r($customer_record);
+
 file_put_contents("customer_data.json", json_encode($customer_record));
+
 ?>
 ```
 
@@ -1232,6 +1167,7 @@ Array (
 
 ```php
 <?php
+
 try
 {
 $mysqli = new mysqli("localhost", "userid", "password", "database");
@@ -1255,7 +1191,6 @@ catch(Exception $e)
 
 当用 MySQL 处理关联数组时，所需的更改非常少。
 
-
 可能的。
 
 ```php
@@ -1269,13 +1204,11 @@ print_r($customer_record);
 ```
 
 Array (
-
 ```
 [0] =>
 Array ([first_name] => Pete [last_name] => Smith [address] => 123 Main Street [city]
 => Atlanta [state] => GA [zip_code] => 30001 )
 ```
-
 ```
 [1] =>
 ```
@@ -1284,7 +1217,7 @@ Array ([first_name] => Sally [last_name] => Parisi [address] => 101 South Street
 )
 ```
 
-为了向此示例添加字母下标，我们使用了在 `foreach` 循环中发现的语法。`key => value` 被用于定义数组中的每个位置。key 是下标名称（'first_name'）。value 是放置在该位置上的信息（'Pete'）。
+为了向此示例添加字母下标，我们使用了在 `foreach` 循环中发现的语法。`key => value` 被用于定义数组中的每个位置。key 是下标名称（`'first_name'`）。value 是放置在该位置上的信息（`'Pete'`）。
 
 ```php
 'first_name' => 'Pete'
@@ -1397,6 +1330,8 @@ delete_array_value(1,'last_name');
 
 实际上，我们已经在之前的章节中展示了多个更新值的示例。让我们快速查看处理关联数组所需的更改。
 
+
+
 ```php
 $customer_record = array (
 array('first_name'=>'Pete','last_name' =>'Smith','address'=>'123 Main Street','city'
@@ -1412,7 +1347,7 @@ function update_array_value($subscriber, $value)
 update_array_value(0,$temp_array);
 ```
 
-如之前所示，这个示例完全替换了 Pete 数组。因为没有为数组提供名称， 0 仍然传递给 $subscriber。
+如之前所示，这个示例完全替换了 `Pete` 数组。因为没有为数组提供名称，`0` 仍然传递给 `$subscriber`。
 
 ```php
 $customer_record = array (
@@ -1434,9 +1369,9 @@ $temp_array = array('first_name' =>'Pete', 'last_name' =>'Smith', 'address' => '
 update_array_value('first_customer', $temp_array);
 ```
 
-如果我们使用名称，那么除了数组本身，还需要一个微小的更改。下标的数据类型需要更改为 string 或者完全删除。此外，传递函数的下标需要提供要替换数组的名称。
+如果我们使用名称，那么除了数组本身，还需要一个微小的更改。下标的数据类型需要更改为 `string` 或者完全删除。此外，传递函数的下标需要提供要替换数组的名称。
 
-这两个示例都会替换包含 Pete 的数组。实际上，如果数组中当前不存在该位置，它也会插入数组。
+这两个示例都会替换包含 `Pete` 的数组。实际上，如果数组中当前不存在该位置，它也会插入数组。
 
 ```php
 $customer_record = array (
@@ -1455,7 +1390,7 @@ function update_array_value(int $first_subscript, string $second_subscript, $val
 update_array_value(0, 'first_name', 'Peter');
 ```
 
-与第 2 章的原始示例相比，除了数组本身，只需要两个微小的更改。第二个下标的数据类型更改为 string，并将字符串下标（first_name）传递给方法。正如我们之前看到的，这将把 Pete 替换为 Peter。再次，如果位置不存在，它会将值插入该位置。
+与第 2 章的原始示例相比，除了数组本身，只需要两个微小的更改。第二个下标的数据类型更改为 `string`，并将字符串下标（`first_name`）传递给方法。正如我们之前看到的，这将把 `Pete` 替换为 `Peter`。再次，如果位置不存在，它会将值插入该位置。
 
 如果我们提供字母行，我们只需要更改数组、第一个下标的数据类型以及传递第一个下标的值。
 
@@ -1498,13 +1433,17 @@ update_array_value($temp_array, "second_customer");
 update_array_value($temp_array);
 ```
 
-如前所述，这种更新方法允许我们将单个值插入到任何缺失的位置（或者实际上是替换当前位置的值）。如果同时提供了两个位置（"second_customer"、"phone_number"），则该方法将使用这两个位置来更新值（在本例中，电话号码实际上是带有下标 `phone_number` 添加到 Sally 数组的末尾的）。如果只提供了一个位置，第二个位置（$second_subscript）将默认为 "none"。如果该数组是二维的（如下所示），则可以传递一个数组来完全替换现有的数组（行）。
-update_array_value($temp_array, "second_subscript");
-对此方法的第二次调用将用 Jackie 数组替换掉 Sally 数组。
-update_array_value($temp_array);
-如果没有传递任何位置，该方法将把 $first_subscript 和 $second_subscript 设置为 "none"。这将导致该方法执行 `if` 语句的 `else` 部分，该部分将使用 `array_push` 将数组添加到现有数组的末尾。将创建一个数字下标（0）来存放新行。
+如前所述，这种更新方法允许我们将单个值插入到任何缺失的位置（或者实际上是替换当前位置的值）。如果同时提供了两个位置（`"second_customer"`、`"phone_number"`），则该方法将使用这两个位置来更新值（在本例中，电话号码实际上是带有下标 `phone_number` 添加到 `Sally` 数组的末尾的）。如果只提供了一个位置，第二个位置（`$second_subscript`）将默认为 `"none"`。如果该数组是二维的（如下所示），则可以传递一个数组来完全替换现有的数组（行）。
 
-## 这种更新方法实际上允许我们向现有位置输入值，因为插入和更新之间的唯一区别在于该位置实际上是否已经存在内容。
+`update_array_value($temp_array, "second_subscript");`
+
+对此方法的第二次调用将用 `Jackie` 数组替换掉 `Sally` 数组。
+
+`update_array_value($temp_array);`
+
+如果没有传递任何位置，该方法将把 `$first_subscript` 和 `$second_subscript` 设置为 `"none"`。这将导致该方法执行 `if` 语句的 `else` 部分，该部分将使用 `array_push` 将数组添加到现有数组的末尾。将创建一个数字下标（`0`）来存放新行。
+
+这种更新方法实际上允许我们向现有位置输入值，因为插入和更新之间的唯一区别在于该位置实际上是否已经存在内容。
 
 希望你现在可以看到关联数组是 PHP 提供的一个极佳工具。使用关联数组的代码可读性高得多。效率上也没有任何区别，因为 PHP 中的所有数组都以相同的方式存储在内存中。
 
@@ -1520,7 +1459,7 @@ class Customer
 }?>
 ```
 
-PHP 类使用 `class` 关键字后跟类名来创建。类名应该以大写字母开头（Customer）。所有代码在 `{}` 中被封装（包含）起来。如果类包含在单独的文件中，文件名应与类 Customer.php 匹配。
+PHP 类使用 `class` 关键字后跟类名来创建。类名应该以大写字母开头（`Customer`）。所有代码在 `{}` 中被封装（包含）起来。如果类包含在单独的文件中，文件名应与类 `Customer.php` 匹配。
 
 ```php
 class Customer
@@ -1534,7 +1473,7 @@ class Customer
 }
 ```
 
-属性使用 `private` 关键字进行保护。显示的每个属性都已给了一个默认值。然而，当设置 'sets' 属性时，值将被改变。Set 方法用于更改属性值。Get 方法用于检索属性值。
+属性使用 `private` 关键字进行保护。显示的每个属性都已给了一个默认值。然而，当设置 'sets' 属性时，值将被改变。`Set` 方法用于更改属性值。`Get` 方法用于检索属性值。
 
 ```php
 declare(strict_types=1);
@@ -1550,13 +1489,13 @@ function set_first_name(string $value)
 }
 ```
 
-使用 set 方法允许在存储之前对数据进行验证，这与之前讨论的验证方法类似。PHP 7 还允许限制进入方法接收的数据类型（int, string, float, bool），这需要使用 `declare` 语句并指定预期的数据类型。
+使用 `set` 方法允许在存储之前对数据进行验证，这与之前讨论的验证方法类似。PHP 7 还允许限制进入方法接收的数据类型（`int`, `string`, `float`, `bool`），这需要使用 `declare` 语句并指定预期的数据类型。
 
 ```php
 function set_first_name(string $value)
 ```
 
-在此示例中，函数期望从调用程序向 $value 传递一个字符串。
+在此示例中，函数期望从调用程序向 `$value` 传递一个字符串。
 
 ```php
 if(strlen($value) > 0) && (strlen($value) < 21)
@@ -1572,7 +1511,7 @@ $this->first_name = $value;
 
 如果值无效会发生什么？
 
-在此示例中，如果值不是字符串，将抛出一个异常。然而，如果字符串长度不是 1 到 20 个字符，则不会抛出异常。由于最初已在属性中放置了默认值（NFN），该值将被保留且程序继续运行。
+在此示例中，如果值不是字符串，将抛出一个异常。然而，如果字符串长度不是 1 到 20 个字符，则不会抛出异常。由于最初已在属性中放置了默认值（`NFN`），该值将被保留且程序继续运行。
 
 ```php
 declare(strict_types=1);
@@ -1585,7 +1524,9 @@ function get_first_name() : string
 }
 ```
 
-PHP 7 还可以限制返回的数据类型。Set 方法不接受值。它们只返回值。
+PHP 7 还可以限制返回的数据类型。`Set` 方法不接受值。它们只返回值。
+
+
 
 ```php
 class Customer
@@ -1706,24 +1647,21 @@ class Customer
 }
 ```
 
-上面的类为存储客户信息提供了一个基础结构。构造函数将值传递给 set 方法，以便在存储之前验证数据。使用这种结构可以声明一个对象数组来包含所有需要的客户对象。
+上面的类为存储客户信息提供了一个基础结构。构造函数将值传递给 `set` 方法，以便在存储之前验证数据。使用这种结构可以声明一个对象数组来包含所有需要的客户对象。
 
-现在我们只需一行代码即可为一个客户传递所有信息。$customer_record[] = new Customer("Pete", "Smith", "123 Main Street", "Atlanta", "GA", 30001);
+现在我们只需一行代码即可为一个客户传递所有信息。`$customer_record[] = new Customer("Pete", "Smith", "123 Main Street", "Atlanta", "GA", 30001);`
 
-customer_record 数组的索引零现在将指向一个对象
+`customer_record` 数组的索引零现在将指向一个对象持有 Pete 的所有信息。
 
-
-持有 Pete 的所有信息。
-
-$customer_record[0].get_first_name();
+`$customer_record[0].get_first_name();`
 
 Pete
 
-从数组中检索信息只需调用 get 方法。
+从数组中检索信息只需调用 `get` 方法。
 
-$customer_record[0].set_first_name('Pete');
+`$customer_record[0].set_first_name('Pete');`
 
-## 修改值只需调用 set 方法。
+## 修改值只需调用 `set` 方法。
 
 如果我们对构造函数进行细小的更改，可以用极少的代码传入数据。
 
@@ -1738,7 +1676,8 @@ function __construct($value)
     $this->set_zip_code($value[5]);
 }
 ```
-每个位置的值被传递给 set 方法以填充新的 Customer 对象属性。最后，Customer 对象被附加到 PHP $customer_record 数组的位置 0（或下一个可用位置）。
+
+每个位置的值被传递给 `set` 方法以填充新的 `Customer` 对象属性。最后，`Customer` 对象被附加到 PHP `$customer_record` 数组的位置 0（或下一个可用位置）。
 
 这一切操作都是因为这一行代码！
 
@@ -1748,7 +1687,7 @@ array(1)
 ["first_name":"Customer":private
 ```
 
-在示例中，使用了 `var_dump` 而不是 `print_r` 来提供数组更详细的视图。我们可以看到 Customer 对象附加在 customer_record 数组的位置 0，带有 first_name (“fred”）和 last_name (“smith”）。
+在示例中，使用了 `var_dump` 而不是 `print_r` 来提供数组更详细的视图。我们可以看到 `Customer` 对象附加在 `customer_record` 数组的位置 0，带有 `first_name`（“fred”）和 `last_name`（“smith”）。
 
 关于对象数组我们还有更多可以发现。然而，意图只是为了让你上手。
 
@@ -1756,7 +1695,7 @@ array(1)
 
 游戏行业提供了一个很好的例子。在许多游戏中，一旦用户获得了某个专家级别，就会邀请进入额外关卡。为了进入额外关卡，必须保存用户获得的所有级别信息。屏幕上的所有内容（包括外星人）都是对象。当用户玩额外关卡时，这些对象可以临时保存到对象数组中。当用户完成关卡后，可以从数组中检索对象并将其放回屏幕上的原始位置。每个对象将包含指示其最后位置以完成此过程。
 
-我们已经讨论完了关联和对象数组。正如我们看到的，使用关联数组代替数值数组只需要少量代码更改。关联数组允许我们创建可读性更高的代码语法。我们不再需要猜测 $customer_record[0] 包含什么。可以看到 $customer_record['first_name'] 将持有一个名字。
+我们已经讨论完了关联和对象数组。正如我们看到的，使用关联数组代替数值数组只需要少量代码更改。关联数组允许我们创建可读性更高的代码语法。我们不再需要猜测 `$customer_record[0]` 包含什么。可以看到 `$customer_record['first_name']` 将持有一个名字。
 
 在下一个章节之前尝试一个练习。
 
@@ -1773,87 +1712,18 @@ array(1)
 # 第 4 章 – PHP 函数 – 修改、分割、切片和排序数组
 
 完成本章后，学生将能够...
+
 - 创建一个更改现有数组内容的 PHP 程序
+
 - 创建一个根据值分割数组的 PHP 程序
+
 - 创建一个根据值切片数组的 PHP 程序
+
 - 创建一个根据值或键排序数组的 PHP 程序
 
 在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
 
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-在本章中，我们将简要查看用于修改、分割、切片和排序的 PHP 函数。
-
-
-
+### `array_filter`
 
 ```php
 if(is_string($unfiltered_value))
@@ -1862,16 +1732,22 @@ if(is_string($unfiltered_value))
 }
 ```
 
-print_r(array_filter($first_array, "filter_array"));
+`print_r(array_filter($first_array, "filter_array"));`
 
 ### 输出:
 
 Array (
+
 [first_name] => Pete
+
 [last_name] => Smith
+
 [address] => 123 Main Street
+
 [city] => Atlanta
+
 [state] => GA
+
 )
 
 此示例将过滤掉所有非字符串的空值。
@@ -1891,16 +1767,20 @@ print_r(array_filter($first_array));
 ### 输出:
 
 Array (
+
 [city] => Atlanta
+
 [state] => GA
+
 [zip] => 30001
+
 )
 
-可以使用 PHP 比较函数来代替用户自定义函数。这些函数包括 strcmp、strcasecmp、strncasecmp、substrcmp 或其他返回结果为 < 0、0 或 > 0 的 PHP 比较函数。
+可以使用 PHP 比较函数来代替用户自定义函数。这些函数包括 `strcmp`、`strcasecmp`、`strncasecmp`、`substrcmp` 或其他返回结果为 < 0、0 或 > 0 的 PHP 比较函数。
 
-### array_flip — 返回数组中所有的键及其关联的值
+### `array_flip` — 返回数组中所有的键及其关联的值
 
-“array_flip() 返回一个翻转顺序的数组，即数组的键变为值，而数组的值变为键。”
+“`array_flip()` 返回一个翻转顺序的数组，即数组的键变为值，而数组的值变为键。”
 
 语法:
 
@@ -1935,11 +1815,11 @@ Array (
 )
 ```
 
-在此示例中，数组 $first_array 的键和值被反转了。
+在此示例中，数组 `$first_array` 的键和值被反转了。
 
-### array_pad — 用指定的值填充数组到指定的长度
+### `array_pad` — 用指定的值填充数组到指定的长度
 
-array_pad() 返回数组的副本，该副本根据 `size` 指定的大小用 `value` 值进行填充。如果 `size` 为正，则在数组右侧填充；如果是负数，则在左侧填充。
+`array_pad()` 返回数组的副本，该副本根据 `size` 指定的大小用 `value` 值进行填充。如果 `size` 为正，则在数组右侧填充；如果是负数，则在左侧填充。
 
 ### 语法:
 
@@ -1992,11 +1872,13 @@ Array (
 )
 ```
 
-first_array 在数组末尾增加了两个元素。原始数组长度为 6，填充大小为 8，因此创建了两个额外位置。second_array 在数组开头增加了两个元素。填充大小为 -8。
+`first_array` 在数组末尾增加了两个元素。原始数组长度为 6，填充大小为 8，因此创建了两个额外位置。`second_array` 在数组开头增加了两个元素。填充大小为 -8。
 
-### array_pop — 弹出数组末尾的元素
+### `array_pop` — 弹出数组末尾的元素
 
-“array_pop() 弹出并返回数组的最后一个值，使数组缩短一个元素。”
+
+
+“`array_pop()` 弹出并返回数组的最后一个值，使数组缩短一个元素。”
 
 ### 语法:
 
@@ -2021,19 +1903,26 @@ print_r($first_array);
 输出:
 
 30001
+
 Array (
+
 [0] => Pete
+
 [1] => Smith
+
 [2] => 123 Main Street
+
 [3] => Atlanta
+
 [4] => GA
+
 )
 
-first_array 的最后一个元素已从数组取出并打印。数组大小比原来减少了。
+`$first_array` 的最后一个元素已从数组取出并打印。数组大小比原来减少了。
 
-### array_push — 将一个或多个元素推入数组末尾
+### `array_push` — 将一个或多个元素推入数组末尾
 
-“array_push() 将数组视为栈，并将传递的变量推入数组末尾。数组的长度增加了变量的数量。”
+“`array_push()` 将数组视为栈，并将传递的变量推入数组末尾。数组的长度增加了变量的数量。”
 
 ### 语法:
 
@@ -2065,36 +1954,60 @@ print_r($customer_record);
 ### 输出:
 
 Array (
+
 [0] => Array (
+
 [0] => Pete
+
 [1] => Smith
+
 [2] => 123 Main Street
+
 [3] => Atlanta
+
 [4] => GA
+
 [5] => 30001
+
 )
+
 [1] => Array (
+
 [0] => Sally
+
 [1] => Parisi
+
 [2] => 101 South Street
+
 [3] => Atlanta
+
 [4] => GA
+
 [5] => 30001
+
 )
+
 [2] => Array (
+
 [0] => Happy
+
 [1] => 111 North Street
+
 [2] => Atlanta
+
 [3] => GA
+
 [4] => 30001
+
 )
+
 )
 
-array_push 将数组添加到现有数组的末尾。
+`array_push` 将数组添加到现有数组的末尾。
 
-### array_shift — 移出数组开头的元素
+### `array_shift` — 移出数组开头的元素
 
-“array_shift() 移出并返回数组的第一个值，使数组缩短一个元素并将后续向下移动。所有数字键将从零开始修改，而字面键不受影响。”
+“`array_shift()` 移出并返回数组的第一个值，使数组缩短一个元素并将后续向下移动。所有数字键将从零开始修改，而字面键不受影响。”
 
 ### 语法:
 
@@ -2102,9 +2015,9 @@ array_push 将数组添加到现有数组的末尾。
 mixed array_shift ( array &$array )
 ```
 
-$first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
+`$first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);`
 
-$second_array = array('Sally', 'Parisi', '101 South Street', 'Atlanta', 'GA', 30001);
+`$second_array = array('Sally', 'Parisi', '101 South Street', 'Atlanta', 'GA', 30001);`
 
 ```php
 array_shift($first_array);
@@ -2125,26 +2038,38 @@ print_r($second_array);
 ### 输出:
 
 Array (
+
 [last_name] => Smith
+
 [address] => 123 Main Street
+
 [city] => Atlanta
+
 [state] => GA
+
 [zip_code] => 30001
+
 )
 
 Array (
+
 [0] => Parisi
+
 [1] => 101 South Street
+
 [2] => Atlanta
+
 [3] => GA
+
 [4] => 30001
+
 )
 
-$first_array 的 first_name 已从数组开头移除。在 $second_array 中，Sally 被移除且索引从 0 开始重新编号。
+`$first_array` 的 `first_name` 已从数组开头移除。在 `$second_array` 中，Sally 被移除且索引从 0 开始重新编号。
 
-### array_shift — 将一个或多个元素插入到数组开头
+### `array_shift` — 将一个或多个元素插入到数组开头
 
-“array_shift() 将元素插入到数组前面。注意元素列表是作为一个整体插入的，以确保插入的元素保持原有顺序。所有数字键将从零开始计数，而字面键不受影响。”
+“`array_shift()` 将元素插入到数组前面。注意元素列表是作为一个整体插入的，以确保插入的元素保持原有顺序。所有数字键将从零开始计数，而字面键不受影响。”
 
 语法:
 
@@ -2171,19 +2096,28 @@ print_r($first_array);
 8
 
 Array (
+
 [0] => 770-777-7777
+
 [1] => adm@no.co
+
 [2] => Pete
+
 [3] => Smith
+
 [4] => 123 Main Street
+
 [5] => Atlanta
+
 [6] => CA
+
 [7] => 30001
+
 )
 
-array_unshift 将项追加到数组开头。该函数返回数组的新大小。在此示例中，$first_array 在开头增加了两个项。
+`array_unshift` 将项追加到数组开头。该函数返回数组的新大小。在此示例中，`$first_array` 在开头增加了两个项。
 
-### compact — 创建包含变量及其值的数组
+### `compact` — 创建包含变量及其值的数组
 
 语法:
 
@@ -2217,17 +2151,24 @@ print_r($first_array);
 ### 输出:
 
 Array (
+
 [first_name] => Pete
+
 [last_name] => Smith
+
 [address] => 123 Main Street
+
 [city] => Atlanta
+
 [state] => GA
+
 [zip_code] => 30001
+
 )
 
-compact 从传递的现有变量名构建数组。它使用变量名作为键创建一个关联数组。在此示例中，传入了一个变量名数组，它提取变量中的值并创建所示数组。如果变量不存在，则将忽略它。
+`compact` 从传递的现有变量名构建数组。它使用变量名作为键创建一个关联数组。在此示例中，传入了一个变量名数组，它提取变量中的值并创建所示数组。如果变量不存在，则将忽略它。
 
-### range — 创建包含范围元素的数组
+### `range` — 创建包含范围元素的数组
 
 ### 语法:
 
@@ -2244,21 +2185,28 @@ print_r(range(1,10));
 ### 输出:
 
 Array (
+
 [0] => 1
+
 [1] => 2
+
 [2] => 3
+
 [3] => 4
+
 [4] => 5
+
 [5] => 6
+
 [6] => 7
+
 [7] => 8
+
 [8] => 9
+
 [9] => 10
+
 )
-
-
-
-
 
 ```
 [9] => 10
@@ -2311,7 +2259,7 @@ Array (
 
 ## 数组的拆分与切片
 
-array_chunk — 将数组拆分成多个块
+`array_chunk` — 将数组拆分成多个块
 
 “将数组分成若干具有 `size` 个元素的数组。最后一个块包含的元素可能少于 `size`。”
 
@@ -2393,17 +2341,17 @@ Array
 
 在此示例中，原始键名（下标）保留在新的二维数组中。
 
-**array_slice** 提取数组的切片
+**`array_slice`** 提取数组的切片
 
-> “array_slice() 根据 `offset`（偏移量）和 `length`（长度）参数返回数组中的元素序列。”
+> “`array_slice()` 根据 `offset`（偏移量）和 `length`（长度）参数返回数组中的元素序列。”
 
-### 语法：
+### 语法:
 
 ```
 array_slice ( array $array , int $offset [, int $length = NULL [, bool $preserve_keys = false ] ] )
 ```
 
-### 示例：
+### 示例:
 
 ```
 $second_array = array('Sally', 'Parisi', '101 South Street', 'Atlanta', 'GA', 30001);
@@ -2413,7 +2361,7 @@ print_r(array_slice($second_array, 0, 2));
 print_r(array_slice($second_array, 2, -1, true));
 ```
 
-# 输出：
+# 输出:
 
 ```
 Array (
@@ -2436,9 +2384,13 @@ Array (
 ```
 
 ) Array => (
+
 [2] => 101 South Street
+
 [3] => Atlanta
+
 [4] => GA
+
 )
 
 仅传递一个 `2`，将返回从位置 2 开始的所有值（101 South Street, Atlanta, 30001）。
@@ -2451,17 +2403,17 @@ Array (
 
 传递 `2`, `-1`, `TRUE` 将返回与上一个示例相同的结果，但保留了原始索引。
 
-array_splice — 移除数组的一部分并用其他内容替换
+`array_splice` — 移除数组的一部分并用其他内容替换
 
 > “从输入数组中删除由 `offset` 和 `length` 指定的元素，如果提供了替换数组，则用替换数组中的元素替换它们。”
 
-语法：
+语法:
 
 ```
 array_splice ( array &$input, int $offset, int $length = 0 [,n$replacement = array() ] )
 ```
 
-示例：
+示例:
 
 ```
 $second_array = array('Sally', 'Parisi', '101 South Street', 'Atlanta', 'GA', 30001);
@@ -2472,7 +2424,7 @@ print_r(array_splice($second_array, 2));
 print_r(array_splice($second_array, 0, 1));
 ```
 
-# 输出：
+# 输出:
 
 ```
 Array (
@@ -2490,26 +2442,31 @@ Array (
 
 ## 数组排序
 
-array_multisort — 对多个数组或多维数组进行排序
+`array_multisort` — 对多个数组或多维数组进行排序
 
 `array_multisort()` 可同时对多个数组，或通过一个或多个维度对多维数组进行排序。关联键（字符串）将被保留，但数字键将重新索引。
 
 排序标志：
 
-- SORT_REGULAR - 正常比较项目（不改变类型）
-- SORT_NUMERIC - 以数值比较项目
-- SORT_STRING - 将项目作为字符串比较
-- SORT_LOCALE_STRING - 根据当前语言区域将项目作为字符串比较。可以使用 `setlocale()` 进行更改。
-- SORT_NATURAL - 使用“自然排序”（如 `natsort`）比较项目
-- SORT_CASE - 可以与 `SORT_STRING` 结合（按位运算）
+- `SORT_REGULAR` - 正常比较项目（不改变类型）
 
-语法：
+- `SORT_NUMERIC` - 以数值比较项目
+
+- `SORT_STRING` - 将项目作为字符串比较
+
+- `SORT_LOCALE_STRING` - 根据当前语言区域将项目作为字符串比较。可以使用 `setlocale()` 进行更改。
+
+- `SORT_NATURAL` - 使用“自然排序”（如 `natsort`）比较项目
+
+- `SORT_CASE` - 可以与 `SORT_STRING` 结合（按位运算）
+
+语法:
 
 ```
 array_multisort ( array &$array1, mixed $array1_sort = SORT_REGULAR, ... )
 ```
 
-示例：
+示例:
 
 ```
 $first_array = array('Jeff', 'Smith', '123 Main Street', 'Atlanta', 'GA', '30001');
@@ -2528,26 +2485,40 @@ print_r($second_array);
 输出：
 
 Array (
+
 [0] => 123 Main Street
+
 [1] => 30001
+
 [2] => Atlanta
+
 [3] => GA
+
 [4] => Pete
+
 [5] => Smith
+
 )
 
 Array (
+
 [0] => 101 South Street
+
 [1] => 30001
+
 [2] => Atlanta
+
 [3] => GA
+
 [4] => Sally
+
 [5] => Parisi
+
 )
 
 在此示例中，`$first_array` 的值按升序排列，`$second_array` 的值按降序排列（数字 123, 30001）。
 
-array_reverse — 返回一个反序的数组
+`array_reverse` — 返回一个反序的数组
 
 “接收一个输入数组并返回一个顺序反转的新数组。”
 
@@ -2564,7 +2535,9 @@ Array (
 
 在此示例中，`$first_array` 的元素按反序返回。`$second_array` 也按反序返回。在第二个参数中传递 `TRUE` 时将保留原始数字索引。
 
-arsort — 反序排序数组并保留索引
+`arsort` — 反序排序数组并保留索引
+
+
 
 “此函数对数组进行排序，使索引与其关联的元素保持一致。主要用于对实际元素顺序重要的关联数组。”
 
@@ -2591,19 +2564,22 @@ print_r($first_array);
 输出：
 
 Array (
+
 [address] => 123 Main Street
+
 [city] => Atlanta
+
 [first_name] => Pete
+
 [last_name] => Smith
+
 [state] => CA
+
 [zip_code] => 30001
+
 )
 
-arsort 用于关联数组的值排序。它按反字母顺序对值进行排序。在此示例中，邮政编码因为是数字所以排在第一个。其余值按反序排列。键（下标）被保留。
-
-
-
-
+`arsort` 用于关联数组的值排序。它按反字母顺序对值进行排序。在此示例中，邮政编码因为是数字所以排在第一个。其余值按反序排列。键（下标）被保留。
 
 ```
 [state] => CA
@@ -2648,7 +2624,7 @@ Array (
 )
 ```
 
-ksort 按字母反序键键排序。在这个示例中，zip_code 现在位于数组的第一位，address 在最后。
+`ksort` 按字母反序键键排序。在这个示例中，`zip_code` 现在位于数组的第一位，`address` 在最后。
 
 ### ksort — 按键对数组排序
 
@@ -2684,7 +2660,7 @@ Array (
 )
 ```
 
-ksort 按字母顺序排序数组键。在这个示例中，address 现在位于数组的第一位，zip_code 在最后。
+`ksort` 按字母顺序排序数组键。在这个示例中，`address` 现在位于数组的第一位，`zip_code` 在最后。
 
 ### natcasesort — 使用不区分大小写的“自然顺序”算法对数组进行排序
 
@@ -2700,9 +2676,13 @@ bool natcasesort ( array &$array )
 
 ```
 $name_array = array("Pete", "peter", "jones", "Jones");
+```
 
+```
 natcasesort($name_array);
+```
 
+```
 print_r($name_array);
 ```
 
@@ -2717,7 +2697,7 @@ Array (
 )
 ```
 
-natcasesort 以更符合人类的方式排列项目。在这个示例中，所有的 Jones 值都出现在任何 Peter 值之前。它忽略了大小写。
+`natcasesort` 以更符合人类的方式排列项目。在这个示例中，所有的 Jones 值都出现在任何 Peter 值之前。它忽略了大小写。
 
 ### natsort — 使用“自然顺序”算法对数组进行排序
 
@@ -2733,9 +2713,13 @@ bool natsort ( array &$array )
 
 ```php
 $name_array = array("Pete", "peter", "jones", "Jones");
+```
 
+```
 natsort($name_array);
+```
 
+```
 print_r($name_array);
 ```
 
@@ -2750,11 +2734,11 @@ Array (
 )
 ```
 
-natsort 以人类自然的方式排序数组。然而，它并没有忽略大小写。在上面的示例中，所有大写单词都出现在小写单词之前。但请注意键（下标）被保留了，与 sort 不同。
+`natsort` 以人类自然的方式排序数组。然而，它并没有忽略大小写。在上面的示例中，所有大写单词都出现在小写单词之前。但请注意键（下标）被保留了，与 `sort` 不同。
 
 ### rsort — 反序对数组排序
 
-“此函数按反序对数组进行排序（从高到低）。”,
+“此函数按反序对数组进行排序（从高到低）。”
 
 ### 语法：
 
@@ -2766,7 +2750,9 @@ bool rsort ( array &$array, int $sort_flags = SORT_REGULAR )
 
 ```php
 $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'CA', 'zip_code' => 30001);
+```
 
+```
 rsort($first_array);
 print_r($first_array);
 ```
@@ -2784,7 +2770,7 @@ Array (
 )
 ```
 
-rsort 按反序对数组中的值。它不保留原始数组的键（下标）。
+`rsort` 按反序对数组中的值。它不保留原始数组的键（下标）。
 
 ### shuffle — 打乱数组顺序
 
@@ -2800,7 +2786,9 @@ bool shuffle ( array &$array )
 
 ```php
 $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'CA', 'zip_code' => 30001);
+```
 
+```
 shuffle($first_array);
 print_r($first_array);
 ```
@@ -2818,7 +2806,7 @@ Array (
 )
 ```
 
-shuffle 随机打乱数组中的值。它不保留键（下标）。
+`shuffle` 随机打乱数组中的值。它不保留键（下标）。
 
 ### sort — 对数组进行排序
 
@@ -2834,7 +2822,9 @@ bool sort ( array &$array, int $sort_flags = SORT_REGULAR )
 
 ```php
 $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'CA', 'zip_code' => 30001);
+```
 
+```
 sort($first_array);
 print_r($first_array);
 ```
@@ -2852,11 +2842,11 @@ Array (
 )
 ```
 
-sort 按字母顺序排列值，它保留了键（下标）。
+`sort` 按字母顺序排列值，它保留了键（下标）。
 
 ### usort — 使用自定义比较函数对数组进行排序
 
-> “usort 使用用户提供的比较函数对数组的键进行排序。如果你需要根据某些非标准标准对关联数组进行排序，则应该使用此函数。”
+> “`usort` 使用用户提供的比较函数对数组的键进行排序。如果你需要根据某些非标准标准对关联数组进行排序，则应该使用此函数。”
 
 ### 语法：
 
@@ -2876,11 +2866,17 @@ function value_compare($first_value, $second_value)
     else
         return -1;
 }
+```
 
+```
 $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'CA', 'zip_code' => 30001);
+```
 
+```
 usort($first_array, 'value_compare');
+```
 
+```
 print_r($first_array);
 ```
 
@@ -2897,20 +2893,20 @@ Array (
 )
 ```
 
-uasort 根据用户提供的函数对数组中的值进行升序排序，并保持键的关联。这主要用于需要根据特定标准进行排序的关联数组。
+`uasort` 根据用户提供的函数对数组中的值进行升序排序，并保持键的关联。这主要用于需要根据特定标准进行排序的关联数组。
 
-用户可以修改比较（例如使用 === 代替 ==）来确定什么是“相等”。用户提供的函数必须返回小于 0、0 或大于 0 的值，如示例函数所示。
+用户可以修改比较（例如使用 `===` 代替 `==`）来确定什么是“相等”。用户提供的函数必须返回小于 0、0 或大于 0 的值，如示例函数所示。
 
 ```
 uasort($first_array, "strcmp");
 print_r($first_array);
 ```
 
-可以使用 PHP 比较函数代替自定义函数。这些可以包括 strcmp、strcasecmp、strnatcasecmp、substrcmp 或其他返回小于 0、0 或大于 0 结果的 PHP 比较函数
+可以使用 PHP 比较函数代替自定义函数。这些可以包括 `strcmp`、`strcasecmp`、`strnatcasecmp`、`substrcmp` 或其他返回小于 0、0 或大于 0 结果的 PHP 比较函数
 
 ### uksort — 使用自定义比较函数按键对数组排序
 
-“uksort 使用用户提供的比较函数对数组的键进行排序。如果你想要排序的数组需要根据某些复杂的标准进行排序，则应该使用此函数。”
+“`uksort` 使用用户提供的比较函数对数组的键进行排序。如果你想要排序的数组需要根据某些复杂的标准进行排序，则应该使用此函数。”
 
 ### 语法：
 
@@ -2930,9 +2926,12 @@ function key_compare($first_key, $second_key)
     else
         return -1;
 }
+```
 
+```
 uksort($first_array, "key_compare");
 print_r($first_array);
+```
 
 ## 输出：
 
@@ -2947,9 +2946,7 @@ Array (
 )
 ```
 
-uksort 根据用户提供的比较对键（下标）对数组进行升序排序。
-
-
+`uksort` 根据用户提供的比较对键（下标）对数组进行升序排序。
 
 ```php
 if ($first_value == $second_value)
@@ -2985,7 +2982,7 @@ Array (
 [5] => 30001
 )
 
-usort 根据用户提供的函数对数组中每个元素的值进行升序排序，该函数用于评估值是否相等、大于或小于。数组的键（下标）不会按照原始数组的顺序保持。
+`usort` 根据用户提供的函数对数组中每个元素的值进行升序排序，该函数用于评估值是否相等、大于或小于。数组的键（下标）不会按照原始数组的顺序保持。
 
 用户可以修改此处所示的比较逻辑（例如使用 `===` 代替 `==`）来确定什么是“相等”。用户提供的函数必须返回一个小于 0、0 或大于 0 的值，如示例函数所示。
 
@@ -3002,7 +2999,6 @@ print_r($first_array);
 # 练习
 
 - 1. 创建一个 PHP 程序，其中包含一个包含班级所有学生姓名的数组。按姓氏的字母顺序对数组进行排序。同时也对数组进行反序排序。
-
 - 2. 将第 1 题中的数组分为两个数组；一个包含名，另一个包含姓。
 
 # 第 5 章 – PHP 函数 – 比较与合并数组
@@ -3010,7 +3006,6 @@ print_r($first_array);
 完成本章后，学生将能够……
 
 - 创建一个简单的 PHP 程序，根据值、键或用户自定义函数比较两个数组。
-
 - 创建一个简单的 PHP 程序，通过并集或交集合并两个数组。
 
 在本章中，我们将简要查看比较和合并数组的 PHP 函数。许多此类函数适用于多种数组类型（单维、多维和/或关联数组）。
@@ -3019,21 +3014,21 @@ print_r($first_array);
 
 ## 比较数组
 
-array_diff_assoc — 带有额外的索引检查，计算两个关联数组的差异
+`array_diff_assoc` — 带有额外的索引检查，计算两个关联数组的差异
 
-“比较 array1 和 array2 并返回差异。”
+“比较 `array1` 和 `array2` 并返回差异。”
 
 语法：
 
+```
 array_diff_assoc ( array $array1, array $array2 [, array $... ] )
+```
 
 示例：
 
 ```php
 $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
-
 $second_array = array('first_name' => 'Sally', 'last_name' => 'Parisi', 'address' => '101 South Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
-
 $difference = array_diff_assoc($first_array, $second_array);
 print_r($difference);
 ```
@@ -3049,51 +3044,55 @@ Array
 )
 ```
 
-此示例比较了 $first_array 和 $second_array。它返回第一个数组中不同的部分。
+此示例比较了 `$first_array` 和 `$second_array`。它返回第一个数组中不同的部分。
 
 如果我们交换参数：
 
 示例：
 
 ```php
-$difference = array_diff_assoc($second_array, $first_array);
 ```
 
+
+
+`$difference = array_diff_assoc($second_array, $first_array);`
+
+```
 Output:
 
 Array
 ([first_name] => Sally
 [last_name] => Parisi
 [address] => 101 South Street)
+```
 
-此示例比较了 $first_array 和 $second_array。它返回第二个数组中不同的部分。
+此示例比较了 `$first_array` 和 `$second_array`。它返回第二个数组中不同的部分。
 
-## array_diff_key — 使用键进行比较，计算数组的差异
+## `array_diff_key` — 使用键进行比较，计算数组的差异
 
-“比较 array1 的键和 array2 的键并返回差异。”
+“比较 `array1` 的键和 `array2` 的键并返回差异。”
 
 语法：
 
-array_diff_key ( array $array1 , array $array2 [, array $ ... ] )
+`array_diff_key ( array $array1 , array $array2 [, array $ ... ] )`
 
 示例：
 
 ```php
 $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
+
 $second_array = array('firstname' => 'Sally', 'lastname' => 'Parisi', 'address' => '101 South Street');
 
 // 假设比较键
+
 ...
+
 array_diff_key($first_array, $second_array);
 ```
 
 Output:
 
-Array ([first_name] => Pete, [last_name] => Smith, [city] => Atlanta, [state] => GA
-)
-
-
-
+Array ([first_name] => Pete, [last_name] => Smith, [city] => Atlanta, [state] => GA)
 
 语法：
 
@@ -3105,7 +3104,9 @@ array_diff ( array $array1 , array $array2 [, array $... ] )
 
 ```
 $first_array = array("a", "b", "c", "d", "e");
+
 $second_array = array("a", "d", "f", "g", "h");
+
 $difference = array_diff($first_array,
 $second_array);
 
@@ -3124,9 +3125,9 @@ Array (
 
 在此示例中，对数组进行了比较。如果发现差异，则返回第一个数组（`$_first_array`）的键和值。
 
-### array_diff_assoc — 计算带有额外索引检查的数组差异，通过回调函数比较数据
+### `array_diff_assoc` — 计算带有额外索引检查的数组差异，通过回调函数比较数据
 
-“`array_diff_assoc()` 返回一个包含 array1 中所有不在其他任何参数中的值的数组。请注意，与 `array_diff()` 和 `array_udiff()` 不同，该函数会将键也参与比较。数组数据的比较通过使用用户提供的回调函数执行。”
+“`array_diff_assoc()` 返回一个包含 `array1` 中所有不在其他任何参数中的值的数组。请注意，与 `array_diff()` 和 `array_udiff()` 不同，该函数会将键也参与比较。数组数据的比较通过使用用户提供的回调函数执行。”
 
 语法：
 
@@ -3139,10 +3140,8 @@ $value_compare_func )
 
 ```
 $first_array = array('first_name' => 'Pete');
-
 $second_array = array('firstname' => 'Pete', 'last_name' => 'Jones', 'address' =>
 '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zipcode' => 30001);
-
 function key_compare($first_key, $second_key)
 {
     if ($first_key == $second_key)
@@ -3152,7 +3151,6 @@ function key_compare($first_key, $second_key)
     else
         return -1;
 }
-
 print_r(array_udiff_assoc($first_array, $second_array, "key_compare"));
 ```
 
@@ -3173,23 +3171,21 @@ Array (
 
 可以使用 PHP 比较函数代替用户自定义函数。这些函数包括 `strcmp`、`strcasecmp`、`strncasecmp`、`substr` 或其他返回 < 0、0 或 > 0 结果的 PHP 比较函数。
 
-### array_udiff_uassoc — 计算带有额外索引检查的数组差异，通过回调函数比较数据和索引
+### `array_udiff_uassoc` — 计算带有额外索引检查的数组差异，通过回调函数比较数据和索引
 
-“返回一个包含 array1 中所有不在其他任何参数中的值的数组。”
+“返回一个包含 `array1` 中所有不在其他任何参数中的值的数组。”
 
-### 语法：
+#### 语法：
 
 ```
 array_udiff_uassoc ( array $array1 , array $array2 [, array $... ], callable $value_compare_func , callable $key_compare_func )
 ```
 
-### 示例：
+#### 示例：
 
 ```
 $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'CA', 'zip_code' => 30001);
-
 $second_array = array('first_name' => 'Pete', 'last_name' => 'Jones', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zipcode' => 30001);
-
 function key_compare($first_key, $second_key)
 {
     if ($first_key == $second_key)
@@ -3199,7 +3195,6 @@ function key_compare($first_key, $second_key)
     else
         return -1;
 }
-
 function value_compare($first_value,
 $second_value)
 {
@@ -3210,7 +3205,6 @@ $second_value)
     else
         return -1;
 }
-
 print_r(array_udiff_uassoc($first_array, $second_array, "value_compare", "key_compare"));
 ```
 
@@ -3229,23 +3223,21 @@ Array (
 
 可以使用 PHP 比较函数代替用户自定义函数。这些函数包括 `strcmp`、`strcasecmp`、`strncasecmp`、`substr` 或其他返回 < 0、0 或 > 0 结果的 PHP 比较函数。
 
-### array_udiff — 使用回调函数进行数据比较以计算数组差异
+### `array_udiff` — 使用回调函数进行数据比较以计算数组差异
 
-“返回一个包含 array1 中所有不在其他任何参数中的值的数组。”
+“返回一个包含 `array1` 中所有不在其他任何参数中的值的数组。”
 
-### 语法：
+#### 语法：
 
 ```
 array_udiff ( array $array1, array $array2 [, array ... ], callable $value_compare_func )
 ```
 
-### 示例：
+#### 示例：
 
 ```
 $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'CA', 'zip_code' => 30001);
-
 $second_array = array('firstname' => 'Pete', 'last_name' => 'Jones', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zipcode' => 30001);
-
 function value_compare($first_value,
 $second_value)
 {
@@ -3256,7 +3248,6 @@ $second_value)
     else
         return -1;
 }
-
 print_r(array_udiff($first_array, $second_array, "value_compare"));
 ```
 
@@ -3272,23 +3263,21 @@ Array (
 
 可以使用 PHP 比较函数代替用户自定义函数。这些函数包括 `strcmp`、`strcasecmp`、`strncasecmp` 或其他返回 < 0、0 或 > 0 结果的 PHP 比较函数。
 
-### array_uintersect_assoc — 计算带有额外索引检查的数组交集，通过回调函数比较数据
+### `array_uintersect_assoc` — 计算带有额外索引检查的数组交集，通过回调函数比较数据
 
-“返回一个包含 array1 中存在于所有参数中的值的数组。”
+“返回一个包含 `array1` 中存在于所有参数中的值的数组。”
 
-### 语法：
+#### 语法：
 
 ```
 array_uintersect_assoc ( array $array1, array $array2 [, array ... ], callable $value_compare_func )
 ```
 
-### 示例：
+#### 示例：
 
 ```
 $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'CA', 'zip_code' => 30001);
-
 $second_array = array('firstname' => 'Pete', 'last_name' => 'Jones', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zipcode' => 30001);
-
 print_r(array_uintersect_assoc($first_array, $second_array, "strcasecmp"));
 ```
 
@@ -3305,9 +3294,9 @@ Array (
 
 其他可能使用的 PHP 函数包括 `strcmp`、`strcasecmp`、`substrcmp` 或其他返回 < 0、0 或 > 0 结果的 PHP 比较函数。
 
-### array_uintersect_uassoc — 计算带有额外索引检查的数组交集，通过单独的回调函数比较数据和索引
+### `array_uintersect_uassoc` — 计算带有额外索引检查的数组交集，通过单独的回调函数比较数据和索引
 
-“返回一个包含 array1 中存在于所有参数中的值的数组。”
+“返回一个包含 `array1` 中存在于所有参数中的值的数组。”
 
 ```php
 function value_compare($first_value, $second_value)
@@ -3319,8 +3308,8 @@ function value_compare($first_value, $second_value)
   else
     return -1;
 }
-
 print_r(array_intersect_uassoc($first_array, $second_array, "key_compare", "value_compare"));
+```
 
 ### 输出:
 
@@ -3328,15 +3317,14 @@ Array (
   [address] => 123 Main Street
   [city] => Atlanta
 )
-```
 
 此函数需要用户提供键和值。PHP 函数会返回所用过的键和值（例如 `strncasecmp`）。用户提供的函数（除由于使用 `==` 而不是 `===` 导致的情况外）会精确匹配地返回键和值。在这个示例中，地址和城市是唯一的匹配项（键和值均匹配）。
 
- PHP 比较函数可以代替用户定义的函数。这些可以包括 `strcmp`、`strncasecmp`、`substrcmp` 或返回结果为 `< 0`、`0` 或 `>` 的其他 PHP 比较函数。
+PHP 比较函数可以代替用户定义的函数。这些可以包括 `strcmp`、`strncasecmp`、`substrcmp` 或返回结果为 `< 0`、`0` 或 `>` 的其他 PHP 比较函数。
 
-array_intersect_uassoc — 计算数组交集，通过回调函数比较数据
+`array_intersect_uassoc` — 计算数组交集，通过回调函数比较数据
 
-> “返回一个包含 array1 中所有在所有参数中都值的数组。”
+> “返回一个包含 `array1` 中所有在所有参数中都值的数组。”
 
 语法：
 
@@ -3348,9 +3336,7 @@ array_uintersect ( array $array1, array $array2 [, $... ], callable $value_compa
 
 ```php
 $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'CA', 'zip_code' => 30001);
-
 $second_array = array('firstname' => 'Pete', 'last_name' => 'Jones', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zipcode' => 30001);
-
 function value_compare($first_value, $second_value)
 {
     if ($first_value == $second_value)
@@ -3360,7 +3346,6 @@ function value_compare($first_value, $second_value)
     else
         return -1;
 }
-
 print_r(array_uintersect($first_array, $second_array, "value_compare"));
 ```
 
@@ -3385,11 +3370,13 @@ Array (
 print_r(array_uintersect($first_array, $second_array, "strcmp"));
 ```
 
+
+
 PHP 比较函数可以代替用户定义的函数。这些可以包括 `strcmp`、`strcasecmp`、`strnatcasecmp`、`substrcmp` 或其他返回结果为 `< 0`、`0` 或 `> 0` 的 PHP 比较函数。
 
 # 合并数组
 
-array_combine - 使用一个数组作为键，另一个数组作为值来创建一个数组
+`array_combine` - 使用一个数组作为键，另一个数组作为值来创建一个数组
 
 “使用键数组中的值作为键，使用值数组中的值作为对应的值创建一个数组。”
 
@@ -3405,7 +3392,6 @@ array_combine ( array $keys , array $values )
 $first_names = array('Pete', 'Sally', 'Fred');
 $last_names = array('Smith', 'Parisi', 'Jones');
 $names = array_combine($last_names, $first_names);
-
 print_r($names);
 ```
 
@@ -3422,16 +3408,16 @@ Array
 
 此示例使用 `$last_names` 数组填充键，使用 `$first_names` 数组填充值。
 
-array_intersect_assoc — 计算带有额外索引检查的数组交集
+`array_intersect_assoc` — 计算带有额外索引检查的数组交集
 
-“array_intersect_assoc() 返回一个包含 array1 中所有在所有数组中都存在的值的数组。注意，与 array_intersect() 不同，键也被用于比较。”
+“`array_intersect_assoc()` 返回一个包含 `array1` 中所有在所有数组中都存在的值的数组。注意，与 `array_intersect()` 不同，键也被用于比较。”
 
 此函数比较数组并返回两个数组中共同有的部分。索引和值都必须相同。
 
 语法：
 
 ```php
-array_intersect_assoc ( array $array1, array $array2 [ , array ... ]
+array_intersect_assoc ( array $array1, array $array2 [ , array ... ] )
 ```
 
 ### 示例：
@@ -3439,9 +3425,7 @@ array_intersect_assoc ( array $array1, array $array2 [ , array ... ]
 ```php
 $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
 $second_array = array('firstname' => 'Sally', 'lastname' => 'Parisi', 'address' => '101 South Street', 'city' => 'Atlanta', 'state' => 'GA', 'zipcode' => 30001);
-
 $result_array = array_intersect_assoc($first_array, $second_array);
-
 print_r($result_array);
 ```
 
@@ -3455,14 +3439,14 @@ Array
 
 注意邮政编码没有被包含；因为索引不相同。只有城市和州在两个数组中是相同的。
 
-array_intersect_key — 使用键比较数组的交集
+`array_intersect_key` — 使用键比较数组的交集
 
-array_intersect_key() 返回 array1 中在所有参数中都存在的条目。
+`array_intersect_key()` 返回 `array1` 中在所有参数中都存在的条目。
 
 ### 语法：
 
 ```php
-array_intersect_key ( array $array1, array $array2 [ , array ... ]
+array_intersect_key ( array $array1, array $array2 [ , array ... ] )
 ```
 
 ### 示例：
@@ -3470,9 +3454,7 @@ array_intersect_key ( array $array1, array $array2 [ , array ... ]
 ```php
 $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
 $second_array = array('firstname' => 'Sally', 'lastname' => 'Parisi', 'address' => '101 South Street', 'city' => 'Atlanta', 'state' => 'GA', 'zipcode' => 30001);
-
 $result_array = array_intersect_key($first_array, $second_array);
-
 print_r($result_array);
 ```
 
@@ -3488,8 +3470,6 @@ Array (
 
 此函数仅比较键，并返回第一个数组中在第二个数组中匹配的键值对。在这个示例中，尽管每个数组中的值不同，但地址、城市和州的键是相同的。
 
-
-
 ```php
 return 0;
 else if ($first_key > $second_key)
@@ -3499,9 +3479,8 @@ return -1;
 }
 ```
 
-$result_array = array_intersect_ukey($first_array, $second_array, 'key_compare');
-
-print_r($result_array);
+`$result_array = array_intersect_ukey($first_array, $second_array, 'key_compare');`
+`print_r($result_array);`
 
 ### 输出:
 
@@ -3515,29 +3494,24 @@ Array (
 
 此函数忽略值而仅比较键。因此，在这个示例中，尽管值不同，但由于键匹配，返回了地址。你可以使用 PHP 函数（例如 `strcasecmp`）代替自定义的函数。
 
-可以使用 PHP 比较函数代替自定义函数。这些函数包括 `strncmp`、`strcasecmp`、`substr` 或其它返回 < 0、0 或 > 0 结果的 PHP 比较函数。
+可以使用 PHP 比较函数代替自定义函数。这些函数包括 `strncmp`、`strcasecmp`、`substr` 或其它返回 `< 0`、`0` 或 `> 0` 结果的 PHP 比较函数。
 
-## array_intersect — 计算数组的交集
+## `array_intersect` — 计算数组的交集
 
-“array_intersect() 返回一个数组，包含 array1 中在所有参数都存在的值。注意会保留键。”
+“`array_intersect()` 返回一个数组，包含 `array1` 中在所有参数都存在的值。注意会保留键。”
 
 ### 语法：
 
 ```
-array_intersect ( array $array1 , array $array2 [, array $... ])
+array_intersect ( array $array1 , array $array2 [, array $... ] )
 ```
 
 示例：
 
 ```php
-$first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123
-Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
-
-$second_array = array('firstname' => 'Sally', 'lastname' => 'Parisi', 'address' => '101
-South Street', 'city' => 'Atlanta', 'state' => 'GA', 'zipcode' => 30001);
-
+$first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
+$second_array = array('firstname' => 'Sally', 'lastname' => 'Parisi', 'address' => '101 South Street', 'city' => 'Atlanta', 'state' => 'GA', 'zipcode' => 30001);
 $result_array = array_intersect($first_array, $second_array);
-
 print_r($result_array);
 ```
 
@@ -3553,29 +3527,24 @@ Array (
 
 此函数比较值并忽略键。它返回存在于数组中的键。
 
-## array_merge_recursive — 递归合并两个或多个数组
+## `array_merge_recursive` — 递归合并两个或多个数组
 
-array_merge_recursive() 将一个或多个数组的元素合并在一起，其中一个数组的值附加到前一个值的末。它返回生成的数组。
+`array_merge_recursive()` 将一个或多个数组的元素合并在一起，其中一个数组的值附加到前一个值的末。它返回生成的数组。
 
 如果输入数组具有相同的字符串键
 
 ### 语法：
 
 ```
-array_merge_recursive ( array $array1 [, array $... )
+array_merge_recursive ( array $array1 [, array $... ) )
 ```
 
 ### 示例：
 
 ```php
-$first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123
-Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
-
-$second_array = array('first_name' => 'Sally', 'last_name' => 'Parisi', 'address' =>
-101 South Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
-
-$result = array_merge_recursive($first_array,
-$second_array);
+$first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
+$second_array = array('first_name' => 'Sally', 'last_name' => 'Parisi', 'address' => 101 South Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
+$result = array_merge_recursive($first_array, $second_array);
 print_r($result);
 ```
 
@@ -3614,9 +3583,9 @@ Array (
 )
 ```
 
-重复的键如上所示放入数组中。这产生了一个具有相同项（如 first_name）的多维数组。
+重复的键如上所示放入数组中。这产生了一个具有相同项（如 `first_name`）的多维数组。
 
-## array_merge — 合并一个或多个数组
+## `array_merge` — 合并一个或多个数组
 
 “将一个或多个数组的元素合并在一起，其中一个数组的值附加到前一个值的末尾。它返回生成的数组。如果输入数组具有相同的字符串键，则该键的后一个值将覆盖前面的值。然而，如果数组包含数字键，则后一个值将不会覆盖原始值，而是附加。输入数组中的数字键将在结果数组中从零开始重新编号。”
 
@@ -3629,18 +3598,15 @@ array_merge ( $array1, array $... )
 示例：
 
 ```php
-$first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123
-Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
+$first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
 ```
 
 ```php
-$second_array = array('first_name' => 'Sally', 'last_name' => 'Parisi', 'address' =>
-101 South Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
+$second_array = array('first_name' => 'Sally', 'last_name' => 'Parisi', 'address' => 101 South Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
 ```
 
 ```php
-$result = array_merge($first_array,
-$second_array);
+$result = array_merge($first_array, $second_array);
 print_r($result);
 ```
 
@@ -3659,10 +3625,6 @@ Array (
 
 如果输入数组具有相同的字符串键，则该键的后一个值将覆盖前面的值。然而，如果数组包含数字键，则后一个值将不会覆盖原始值，而是附加。输入数组中的数字键将在结果数组中从零开始重新编号。
 
-
-
-
-
 输出：
 
 ```
@@ -3678,12 +3640,11 @@ Array (
 )
 ```
 
-比较 `$first_array` 和 `$second_array`，姓（last name）和邮政编码（zip code）索引是不同的。此函数将尝试将第二个参数（$second_array）数组中包含的值替换到第一个参数（$first_array）数组中。如果第二个数组中没有相关值（没有 last_name 或 zip_code），它将保留第一个数组中的值。如果第二个数组中存在第一个数组中不存在的值，它将它们添加到生成的数组末尾（lastname, zipcode）。此过程不是递归的。
+比较 `$first_array` 和 `$second_array`，姓（last name）和邮政编码（zip code）索引是不同的。此函数将尝试将第二个参数（`$second_array`）数组中包含的值替换到第一个参数（`$first_array`）数组中。如果第二个数组中没有相关值（没有 `last_name` 或 `zip_code`），它将保留第一个数组中的值。如果第二个数组中存在第一个数组中不存在的值，它将它们添加到生成的数组末尾（`lastname`, `zipcode`）。此过程不是递归的。
 
 # 练习题
 
 - 1. 创建一个 PHP 程序，其中包含一个位于佐治亚州且人口超过 100,000 的城市数组。包含一个部分数组，该数组包含位于佛罗里达州且人口超过 100,000 的城市。使用本章所示的 PHP 函数之一比较这些数组并显示公共元素。
-
 - 2. 使用 #1 中的数组，使用本章所示的函数之一合并数组，并确保新数组中不存在任何重复项。
 
 # 第 6 章 – PHP 函数 – 数组的搜索、遍历和显示
@@ -3700,7 +3661,7 @@ Array (
 
 ## 搜索数组
 
-array_count_values — 统计数组中所有值的次数
+`array_count_values` — 统计数组中所有值的次数
 
 “返回一个数组，数组的值作为键，它们在数组中的频率作为值。”
 
@@ -3720,7 +3681,6 @@ print_r(array_count_values($silly_array));
 输出：
 
 Array
-
 ```
 (
 [hey] => 3
@@ -3731,11 +3691,11 @@ Array
 )
 ```
 
-此示例统计了 $silly_array 中值的频率。它创建了一个以值作为索引、频率作为值的数组。
+此示例统计了 `$silly_array` 中值的频率。它创建了一个以值作为索引、频率作为值的数组。
 
-array_column - 返回输入数组中单列的值。
+`array_column` - 返回输入数组中单列的值。
 
-“array_column() 返回输入中由 column_key 标识的单列的值。可选，可以提供 index_key，以便通过输入中 index_key 列的值对返回数组中的值进行索引。”
+“`array_column()` 返回输入中由 `column_key` 标识的单列的值。可选，可以提供 `index_key`，以便通过输入中 `index_key` 列的值对返回数组中的值进行索引。”
 
 语法：
 
@@ -3749,7 +3709,6 @@ array array_column ( array $input, mixed $column_key [ , mixed $index_key = null
 $customer_record = array (
 array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001),
 array('first_name' => 'Sally', 'last_name' => 'Parisi', 'address' => '101 South Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
-
 $first_names = array_column($customer_record, 'first_name');
 print_r($first_names);
 ```
@@ -3757,7 +3716,6 @@ print_r($first_names);
 输出：
 
 Array
-
 ```
 (
 [0] => Pete
@@ -3765,7 +3723,7 @@ Array
 )
 ```
 
-在此示例中，返回了 customer_array 中所有的名字（first names）。
+在此示例中，返回了 `customer_array` 中所有的名字（first names）。
 
 在 PHP 7 中，你可以在第二个参数中指定索引。
 
@@ -3774,40 +3732,39 @@ Array
 ```php
 $customer_record = array (
 array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001),
-array('first_name' => 'Sally', 'last_name' => 'Parisi', 'address' => '101 South Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001)
-);
 ```
+
+
+
+`array('first_name' => 'Sally', 'last_name' => 'Parisi', 'address' => '101 South Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001)`;
 
 ```php
 $first_names = array_column($customer_record, 'first_name', 'last_name');
+
 print_r($first_names);
 ```
 
 输出：
-
-Array
-
 ```
+Array
 (
 [Smith] => Pete
 [Parisi] => Sally
 )
 ```
 
-在此示例中，last_name 中的值被用于填充从函数返回的新键（下标）。
+在此示例中，`last_name` 中的值被用于填充从函数返回的新键（下标）。
 
-array_key_exists — 检查给定的键或索引是否存在于数组中
+### `array_key_exists` — 检查给定的键或索引是否存在于数组中
 
-array_key_exists() 如果给定的键在数组中已设置，则返回 TRUE。键可以是数组索引的任何可能值。
+`array_key_exists()` 如果给定的键在数组中已设置，则返回 `TRUE`。键可以是数组索引的任何可能值。
 
 语法：
-
 ```
 bool array_key_exists ( mixed $key , array $array )
 ```
 
 示例：
-
 ```php
 $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
 ```
@@ -3819,34 +3776,31 @@ if (array_key_exists('first_name', $first_array)) {
 ```
 
 输出：
-
+```
 first_name is in the array
+```
 
-array_keys — 返回数组子集的键
+### `array_keys` — 返回数组子集的键
 
-“array_keys() 返回数组的数字和字符串键。”
+`array_keys()` 返回数组的数字和字符串键。
 
 语法：
-
 ```
 array array_keys ( array $array [, mixed $search = null ] [, bool $recursive = false )
 ```
 
 示例：
-
 ```php
 $customer_record = array (
 array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Street Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001),
 array('first_name' => 'Sally', 'last_name' => 'Parisi', 'address' => '101 South Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001)
 );
-
 print_r(array_keys($customer_record));
 ```
 
 输出：
-
+```
 Array
-
 ```
 [0] => first_name
 [1] => last_name
@@ -3860,51 +3814,45 @@ Array
 [9] => city
 [10] => state
 [11] => zip_code
-```
 
-array_search — 在数组中搜索值并返回对应的键
+### `array_search` — 在数组中搜索值并返回对应的键
 
-“array_search() 如果在数组中找到则返回键，否则返回 FALSE。”
+`array_search()` 如果在数组中找到则返回键，否则返回 `FALSE`。
 
 语法：
-
 ```
 mixed array_search ( mixed $needle, array $haystack [, bool $strict = false )
 ```
 
 示例：
-
 ```php
 $customer_record = array (
 array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001),
 array('first_name' => 'Sally', 'last_name' => 'Parisi', 'address' => '101 South Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001)
 );
-
 print array_search('123 Main Street', $customer_record);
 ```
 
 输出：
-
+```
 2
+```
 
-in_array — 检查值是否存在于数组中
+### `in_array` — 检查值是否存在于数组中
 
-“如果在数组中找到 needle 则返回 TRUE，否则返回 FALSE。”
+如果在数组中找到 `needle` 则返回 `TRUE`，否则返回 `FALSE`。
 
 语法：
-
 ```
 bool in_array ( mixed $needle, array $haystack [, bool $strict = false )
 ```
 
 示例：
-
 ```php
 $customer_record = array (
 array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001),
 array('first_name' => 'Sally', 'last_name' => 'Parisi', 'address' => '101 South Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001)
 );
-
 if(in_array("Pete", $customer_record)) {
     print "Found Pete!";
 } else {
@@ -3913,30 +3861,28 @@ if(in_array("Pete", $customer_record)) {
 ```
 
 输出：
-
+```
 Found Pete!
+```
 
-array_merge — 合并多个数组
+### `array_merge` — 合并多个数组
 
-“array_merge() 合并多个数组的元素。如果数组具有相同的键，后面的值将覆盖前面的值。”
+`array_merge()` 合并多个数组的元素。如果数组具有相同的键，后面的值将覆盖前面的值。
 
 语法：
-
 ```
 array array_merge ( array $array, array ...$arrays )
 ```
 
 示例：
-
 ```php
 $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
 $second_array = array('lastname' => 'Parisi', 'zipcode' => 30001);
-
 print_r(array_merge($first_array, $second_array));
 ```
 
 输出：
-
+```
 Array
 (
 [first_name] => Pete
@@ -3948,55 +3894,51 @@ Array
 [lastname] => Parisi
 [zipcode] => 30001
 )
+```
 
-array_diff — 返回第一个数组中不在其他数组中的值
+### `array_diff` — 返回第一个数组中不在其他数组中的值
 
-“array_diff() 返回一个包含 $array 中不在任何其他数组中的元素的数组。使用字符串进行比较，整数和浮点数将转换为字符串。”
+`array_diff()` 返回一个包含 `$array` 中不在任何其他数组中的元素的数组。使用字符串进行比较，整数和浮点数将转换为字符串。
 
 语法：
-
 ```
 array array_diff ( array $array, array ...$arrays )
 ```
 
 示例：
-
 ```php
 $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
 $second_array = array('first_name' => 'Sally', 'last_name' => 'Parisi', 'address' => '101 South Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
-
 print_r(array_diff($first_array, $second_array));
 ```
 
 输出：
-
+```
 Array
 (
 [address] => 123 Main Street
 [zip_code] => 30001
 )
+```
 
-array_intersect — 返回第一个数组中存在于所有数组中的值
+### `array_intersect` — 返回第一个数组中存在于所有数组中的值
 
-“array_intersect() 返回一个包含存在于所有输入数组中的第一个数组元素的数组。使用字符串进行比较，整数和浮点数将转换为字符串。”
+`array_intersect()` 返回一个包含存在于所有输入数组中的第一个数组元素的数组。使用字符串进行比较，整数和浮点数将转换为字符串。
 
 语法：
-
 ```
 array array_intersect ( array $array, array ...$arrays )
 ```
 
 示例：
-
 ```php
 $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
 $second_array = array('first_name' => 'Sally', 'last_name' => 'Parisi', 'address' => '101 South Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
-
 print_r(array_intersect($first_array, $second_array));
 ```
 
 输出：
-
+```
 Array
 (
 [first_name] => Pete
@@ -4004,50 +3946,45 @@ Array
 [state] => GA
 [zip_code] => 30001
 )
+```
 
-array_unique — 从数组中移除重复值
+### `array_unique` — 从数组中移除重复值
 
-“array_unique() 返回一个删除了重复值的新数组，保留剩余值的第一个索引键。使用字符串进行比较。”
+`array_unique()` 返回一个删除了重复值的新数组，保留剩余值的第一个索引键。使用字符串进行比较。
 
 语法：
-
 ```
 array array_unique ( array $array, int $flags = SORT_REGULAR )
 ```
 
 示例：
-
 ```php
 $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
 $second_array = array('first_name' => 'Sally', 'last_name' => 'Parisi', 'address' => '101 South Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
-
 print_r(array_unique($first_array));
 ```
 
-（注：此处示例中使用了 $first_array 逻辑，符合原文）
+（注：此处示例中使用了 `$first_array` 逻辑，符合原文）
 
 顺序会变化（Order will vary）
 
-array_flip — 交换数组的键和值
+### `array_flip` — 交换数组的键和值
 
-“array_flip() 返回一个键值交换的数组。如果数组有重复值，最后遇到的值将覆盖之前的。”
+`array_flip()` 返回一个键值交换的数组。如果数组有重复值，最后遇到的值将覆盖之前的。
 
 语法：
-
 ```
 array array_flip ( array $array )
 ```
 
 示例：
-
 ```php
 $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
-
 print_r(array_flip($first_array));
 ```
 
 输出：
-
+```
 Array
 (
 [Pete] => first_name
@@ -4057,27 +3994,25 @@ Array
 [GA] => state
 [30001] => zip_code
 )
+```
 
-array_keys — 返回数组的键
+### `array_keys` — 返回数组的键
 
-“array_keys() 返回一个以输入数组键为键、以指定值为值的数组。”
+`array_keys()` 返回一个以输入数组键为键、以指定值为值的数组。
 
 语法：
-
 ```
 array array_keys ( array $array, mixed $search_key = null )
 ```
 
 示例：
-
 ```php
 $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
-
 print_r(array_keys($first_array));
 ```
 
 输出：
-
+```
 Array
 (
 [0] => first_name
@@ -4087,27 +4022,25 @@ Array
 [4] => state
 [5] => zip_code
 )
+```
 
-array_values — 返回数组的值
+### `array_values` — 返回数组的值
 
-“array_values() 返回一个从 0 开始数字索引的输入数组的值。”
+`array_values()` 返回一个从 0 开始数字索引的输入数组的值。
 
 语法：
-
 ```
 array array_values ( array $array )
 ```
 
 示例：
-
 ```php
 $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
-
 print_r(array_values($first_array));
 ```
 
 输出：
-
+```
 Array
 (
 [0] => Pete
@@ -4117,30 +4050,27 @@ Array
 [4] => GA
 [5] => 30001
 )
+```
 
-array_pop — 移除数组的最后一个元素
+### `array_pop` — 移除数组的最后一个元素
 
-“array_pop() 移除数组的最后一个元素并返回它。”
+`array_pop()` 移除数组的最后一个元素并返回它。
 
 语法：
-
 ```
 mixed array_pop ( array &$array )
 ```
 
 示例：
-
 ```php
 $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
-
 $last_element = array_pop($first_array);
-
 print $last_element;
 print_r($first_array);
 ```
 
 输出：
-
+```
 30001
 Array
 (
@@ -4150,30 +4080,27 @@ Array
 [city] => Atlanta
 [state] => GA
 )
+```
 
-array_shift — 移除数组的第一个元素
+### `array_shift` — 移除数组的第一个元素
 
-“array_shift() 移除数组的第一个元素并返回它，重新索引剩余的元素。”
+`array_shift()` 移除数组的第一个元素并返回它，重新索引剩余的元素。
 
 语法：
-
 ```
 mixed array_shift ( array &$array )
 ```
 
 示例：
-
 ```php
 $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
-
 $first_element = array_shift($first_array);
-
 print $first_element;
 print_r($first_array);
 ```
 
 输出：
-
+```
 Pete
 Array
 (
@@ -4183,29 +4110,31 @@ Array
 [state] => GA
 [zip_code] => 30001
 )
+```
 
-array_push — 将元素推到数组末尾
+### `array_push` — 将元素推到数组末尾
 
-“array_push() 向数组末尾添加一个或多个元素。”
+`array_push()` 向数组末尾添加一个或多个元素。
 
 语法：
-
 ```
 int array_push ( array &$array, mixed ...$elements )
 ```
 
 示例：
-
 ```php
-$first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
-
-array_push($first_array, "new element", "another element");
-
-print_r($first_array);
 ```
 
-输出：
 
+
+`$first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);`
+
+`array_push($first_array, "new element", "another element");`
+
+`print_r($first_array);`
+
+```
+输出：
 Array
 (
 [first_name] => Pete
@@ -4217,10 +4146,11 @@ Array
 [6] => new element
 [7] => another element
 )
+```
 
-array_replace — 用其他数组的元素替换一个数组的元素
+### `array_replace` — 用其他数组的元素替换一个数组的元素
 
-“array_replace() 用一个或多个数组的元素替换第一个数组的元素。”
+“`array_replace()` 用一个或多个数组的元素替换第一个数组的元素。”
 
 语法：
 
@@ -4232,6 +4162,7 @@ array array_replace ( array $array, array ...$arrays )
 
 ```php
 $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
+
 $second_array = array('first_name' => 'Sally', 'last_name' => 'Parisi', 'address' => '101 South Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001);
 
 print_r(array_replace($first_array, $second_array));
@@ -4249,9 +4180,9 @@ Array
 [zip_code] => 30001
 )
 
-array_sort — 按值对数组进行排序
+### `array_sort` — 按值对数组进行排序
 
-“array_sort() 按值的升序对数组进行排序，并保持键值对应关系。”
+“`array_sort()` 按值的升序对数组进行排序，并保持键值对应关系。”
 
 语法：
 
@@ -4281,9 +4212,9 @@ Array
 [1] => Smith
 )
 
-array_keysort — 按键对数组进行排序
+### `array_keysort` — 按键对数组进行排序
 
-“array_keysort() 按键的升序对数组进行排序，并保持键值对应关系。”
+“`array_keysort()` 按键的升序对数组进行排序，并保持键值对应关系。”
 
 语法：
 
@@ -4313,13 +4244,9 @@ Array
 [5] => 30001
 )
 
-（注：原文中 array_sort 和 array_keysort 的示例与输出存在，已已完整翻译）
+（注：原文中 `array_sort` 和 `array_keysort` 的示例与输出存在，已已完整翻译）
 
-
-
-
-
-在每个(each) 执行后
+在每个 `each` 执行后
 
 ### 语法：
 
@@ -4335,6 +4262,7 @@ $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' =
 
 ```php
 print_r(each($first_array));
+
 print_r(each($first_array));
 ```
 
@@ -4358,178 +4286,11 @@ Array (
 )
 ```
 
-each 将将当前位置的键 放在两个不同的元素中（[0] 和 [key]）。它还会将值放在两个不同的元素中（[1] 和 [value]）。它还会将光标（数组中的位置）移动到下一个元素。在这个示例中，键和值是从 $first_name 数组的第一个位置提取的。然后光标移动到下一个元素。该函数再次被调用，显示第二个元素的信息。光标现在位于第三个元素。
+`each` 将将当前位置的键 放在两个不同的元素中（`[0]` 和 `[key]`）。它还会将值放在两个不同的元素中（`[1]` 和 `[value]`）。它还会将光标（数组中的位置）移动到下一个元素。在这个示例中，键和值是从 `$first_name` 数组的第一个位置提取的。然后光标移动到下一个元素。该函数再次被调用，显示第二个元素的信息。光标现在位于第三个元素。
 
-## end — 将数组的内部指针设置为其最后一个元素
+## `end` — 将数组的内部指针设置为其最后一个元素
 
-“end() 将数组的内部指针移动到最后一个元素，并返回其值。”
-
-### 语法：
-
-```php
-mixed end ( array &$array )
-```
-
-### 示例：
-
-```php
-$first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'CA', 'zip_code' => 30001);
-```
-
-```php
-print current($first_array) . "<br>";
-print next($first_array) . "<br>";
-print prev($first_array) . "<br>";
-print end($first_array) . "<br>";
-```
-
-# 输出：
-
-Pete
-Smith
-Pete
-30001
-
-在这个示例中，end 将光标移动到最后一个元素并返回元素中的值。显示了邮政编码。
-
-## key — 从数组中获取键
-
-“key() 函数简单地返回内部指针当前指向的数组元素的键。它不会以任何方式移动指针。”
-
-### 语法：
-
-```php
-mixed key ( array &$array )
-```
-
-### 示例：
-
-```php
-$first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'CA', 'zip_code' => 30001);
-
-print key($first_array);
-```
-
-# 输出：
-
-first_name
-
-在这个示例中，数组当前位于顶部。key 将显示当前位置的键。此函数不会移动光标。
-
-## next — 进数组的内部指针
-
-“next() 的行为与 current() 相似，但有一处不同。它在返回元素之前将数组指针向前移动一位。这意味着它返回下一个数组值并将内部数组指针向前移动一位。”
-
-### 语法：
-
-```php
-mixed next ( array &$array )
-```
-
-### 示例：
-
-```php
-$first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'CA', 'zip_code' => 30001);
-
-print current($first_array) . "<br>";
-print next($first_array) . "<br>";
-print prev($first_array) . "<br>";
-print end($first_array) . "<br>";
-```
-
-# 输出：
-
-Pete
-Smith
-Pete
-30001
-
-Next 移动到下一个元素并显示它。在这个示例中，current 显示第一个值（Pete），但没有移动到下一个元素。next 移动到下一个元素并显示它（Smith）。
-
-## pos — current() 的别名
-
-pos() 函数简单地返回内部指针当前指向的数组元素的值。它不会以任何方式移动指针。如果内部指针指向元素末尾之外或数组为空，pos() 将返回 FALSE。
-
-### 语法：
-
-```php
-mixed pos ( array &$array )
-```
-
-### 示例：
-
-```php
-$first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'CA', 'zip_code' => 30001);
-
-print pos($first_array) . "<br>";
-print next($first_array) . "<br>";
-print prev($first_array) . "<br>";
-print end($first_array) . "<br>";
-```
-
-# 输出：
-
-Pete
-Smith
-Pete
-30001
-
-pos 显示当前值但不会移动到下一个值。在这个示例中，pos 将从第一个位置显示 Pete，但不会将光标移动到下一个位置。next 移动到下一个位置并显示值（Smith）。
-
-## prev — 回置内部数组指针
-
-“prev() 的行为与 next() 相似，它是将内部数组指针向回移动一位而不是向前移动。”
-
-### 语法：
-
-```php
-mixed prev ( array &$array )
-```
-
-### 示例：
-
-```php
-$first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'CA', 'zip_code' => 30001);
-
-print pos($first_array) . "<br>";
-print next($first_array) . "<br>";
-print prev($first_array) . "<br>";
-print end($first_array) . "<br>";
-```
-
-## reset — 将数组的内部指针设置为第一个元素
-
-“reset() 将数组的内部指针移动到第一个元素，并返回其值。”
-
-### 语法：
-
-```php
-mixed reset ( array &$array )
-```
-
-### 示例：
-
-```php
-$first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'CA', 'zip_code' => 30001);
-
-print current($first_array) . "<br>";
-print next($first_array) . "<br>";
-print prev($first_array) . "<br>";
-print end($first_array) . "<br>";
-```
-
-# 输出：
-
-Pete
-Smith
-Pete
-30001
-
-在这个示例中，reset 将光标移动到第一个元素并返回元素中的值。
-
-## end — 将数组的内部指针设置为最后一个元素
-
-“end() 将数组的内部指针移动到最后一个元素，并返回其值。”
+“`end()` 将数组的内部指针移动到最后一个元素，并返回其值。”
 
 ### 语法：
 
@@ -4557,11 +4318,11 @@ Smith
 Pete
 30001
 
-在这个示例中，end 将光标移动到最后一个元素并返回元素中的值。显示了邮政编码。
+在这个示例中，`end` 将光标移动到最后一个元素并返回元素中的值。显示了邮政编码。
 
-## key — 从数组中获取键
+## `key` — 从数组中获取键
 
-“key() 函数简单地返回内部指针当前指向的数组元素的键。它不会以任何方式移动指针。”
+“`key()` 函数简单地返回内部指针当前指向的数组元素的键。它不会以任何方式移动指针。”
 
 ### 语法：
 
@@ -4581,11 +4342,11 @@ print key($first_array);
 
 first_name
 
-在这个示例中，数组当前位于顶部。key 将显示当前位置的键。此函数不会移动光标。
+在这个示例中，数组当前位于顶部。`key` 将显示当前位置的键。此函数不会移动光标。
 
-## next — 进数组的内部指针
+## `next` — 进数组的内部指针
 
-“next() 的行为与 current() 相似，但有一处不同。它在返回元素之前将数组指针向前移动一位。这意味着它返回下一个数组值并将内部数组指针向前移动一位。”
+“`next()` 的行为与 `current()` 相似，但有一处不同。它在返回元素之前将数组指针向前移动一位。这意味着它返回下一个数组值并将内部数组指针向前移动一位。”
 
 ### 语法：
 
@@ -4611,11 +4372,11 @@ Smith
 Pete
 30001
 
-Next 移动到下一个元素并显示它。在这个示例中，current 显示第一个值（Pete），但没有移动到下一个元素。next 移动到下一个元素并显示它（Smith）。
+`Next` 移动到下一个元素并显示它。在这个示例中，`current` 显示第一个值（Pete），但没有移动到下一个元素。`next` 移动到下一个元素并显示它（Smith）。
 
-## pos — current() 的别名
+## `pos` — `current()` 的别名
 
-pos() 函数简单地返回内部指针当前指向的数组元素的值。它不会以任何方式移动指针。如果内部指针指向元素末尾之外或数组为空，pos() 将返回 FALSE。
+`pos()` 函数简单地返回内部指针当前指向的数组元素的值。它不会以任何方式移动指针。如果内部指针指向元素末尾之外或数组为空，`pos()` 将返回 FALSE。
 
 ### 语法：
 
@@ -4641,11 +4402,11 @@ Smith
 Pete
 30001
 
-pos 显示当前值但不会移动到下一个值。在这个示例中，pos 将从第一个位置显示 Pete，但不会将光标移动到下一个位置。next 移动到下一个位置并显示值（Smith）。
+`pos` 显示当前值但不会移动到下一个值。在这个示例中，`pos` 将从第一个位置显示 Pete，但不会将光标移动到下一个位置。`next` 移动到下一个位置并显示值（Smith）。
 
-## prev — 回置内部数组指针
+## `prev` — 回置内部数组指针
 
-“prev() 的行为与 next() 相似，它是将内部数组指针向回移动一位而不是向前移动。”
+“`prev()` 的行为与 `next()` 相似，它是将内部数组指针向回移动一位而不是向前移动。”
 
 ### 语法：
 
@@ -4664,9 +4425,9 @@ print prev($first_array) . "<br>";
 print end($first_array) . "<br>";
 ```
 
-## reset — 将数组的内部指针设置为第一个元素
+## `reset` — 将数组的内部指针设置为第一个元素
 
-“reset() 将数组的内部指针移动到第一个元素，并返回其值。”
+“`reset()` 将数组的内部指针移动到第一个元素，并返回其值。”
 
 ### 语法：
 
@@ -4692,11 +4453,11 @@ Smith
 Pete
 30001
 
-在这个示例中，reset 将光标移动到第一个元素并返回元素中的值。
+在这个示例中，`reset` 将光标移动到第一个元素并返回元素中的值。
 
-## end — 将数组的内部指针设置为最后一个元素
+## `end` — 将数组的内部指针设置为最后一个元素
 
-“end() 将数组的内部指针移动到最后一个元素，并返回其值。”
+“`end()` 将数组的内部指针移动到最后一个元素，并返回其值。”
 
 ### 语法：
 
@@ -4724,11 +4485,11 @@ Smith
 Pete
 30001
 
-在这个示例中，end 将光标移动到最后一个元素并返回元素中的值。显示了邮政编码。
+在这个示例中，`end` 将光标移动到最后一个元素并返回元素中的值。显示了邮政编码。
 
-## key — 从数组中获取键
+## `key` — 从数组中获取键
 
-“key() 函数简单地返回内部指针当前指向的数组元素的键。它不会以任何方式移动指针。”
+“`key()` 函数简单地返回内部指针当前指向的数组元素的键。它不会以任何方式移动指针。”
 
 ### 语法：
 
@@ -4748,11 +4509,11 @@ print key($first_array);
 
 first_name
 
-在这个示例中，数组当前位于顶部。key 将显示当前位置的键。此函数不会移动光标。
+在这个示例中，数组当前位于顶部。`key` 将显示当前位置的键。此函数不会移动光标。
 
-## next — 进数组的内部指针
+## `next` — 进数组的内部指针
 
-“next() 的行为与 current() 相似，但有一处不同。它在返回元素之前将数组指针向前移动一位。这意味着它返回下一个数组值并将内部数组指针向前移动一位。”
+“`next()` 的行为与 `current()` 相似，但有一处不同。它在返回元素之前将数组指针向前移动一位。这意味着它返回下一个数组值并将内部数组指针向前移动一位。”
 
 ### 语法：
 
@@ -4778,11 +4539,11 @@ Smith
 Pete
 30001
 
-Next 移动到下一个元素并显示它。在这个示例中，current 显示第一个值（Pete），但没有移动到下一个元素。next 移动到下一个元素并显示它（Smith）。
+`Next` 移动到下一个元素并显示它。在这个示例中，`current` 显示第一个值（Pete），但没有移动到下一个元素。`next` 移动到下一个元素并显示它（Smith）。
 
-## pos — current() 的别名
+## `pos` — `current()` 的别名
 
-pos() 函数简单地返回内部指针当前指向的数组元素的值。它不会以任何方式移动指针。如果内部指针指向元素末尾之外或数组为空，pos() 将返回 FALSE。
+`pos()` 函数简单地返回内部指针当前指向的数组元素的值。它不会以任何方式移动指针。如果内部指针指向元素末尾之外或数组为空，`pos()` 将返回 FALSE。
 
 ### 语法：
 
@@ -4801,6 +4562,8 @@ print prev($first_array) . "<br>";
 print end($first_array) . "<br>";
 ```
 
+
+
 # 输出：
 
 Pete
@@ -4808,11 +4571,11 @@ Smith
 Pete
 30001
 
-pos 显示当前值但不会移动到下一个值。在这个示例中，pos 将从第一个位置显示 Pete，但不会将光标移动到下一个位置。next 移动到下一个位置并显示值（Smith）。
+`pos` 显示当前值但不会移动到下一个值。在这个示例中，`pos` 将从第一个位置显示 Pete，但不会将光标移动到下一个位置。`next` 移动到下一个位置并显示值（Smith）。
 
-## prev — 回置内部数组指针
+## `prev` — 回置内部数组指针
 
-“prev() 的行为与 next() 相似，它是将内部数组指针向回移动一位而不是向前移动。”
+“`prev()` 的行为与 `next()` 相似，它是将内部数组指针向回移动一位而不是向前移动。”
 
 ### 语法：
 
@@ -4826,14 +4589,17 @@ mixed prev ( array &$array )
 $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'CA', 'zip_code' => 30001);
 
 print pos($first_array) . "<br>";
+
 print next($first_array) . "<br>";
+
 print prev($first_array) . "<br>";
+
 print end($first_array) . "<br>";
 ```
 
-## reset — 将数组的内部指针设置为第一个元素
+## `reset` — 将数组的内部指针设置为第一个元素
 
-“reset() 将数组的内部指针移动到第一个元素，并返回其值。”
+“`reset()` 将数组的内部指针移动到第一个元素，并返回其值。”
 
 ### 语法：
 
@@ -4847,14 +4613,199 @@ mixed reset ( array &$array )
 $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'CA', 'zip_code' => 30001);
 
 print current($first_array) . "<br>";
+
 print next($first_array) . "<br>";
+
 print prev($first_array) . "<br>";
+
 print end($first_array) . "<br>";
 ```
 
-## array_map — 将回调函数应用到数组元素
+# 输出：
 
-“array_map() 迭代地将回调函数应用到数组的元素上，从而将数组归约为单个值。”
+Pete
+Smith
+Pete
+30001
+
+在这个示例中，`reset` 将光标移动到第一个元素并返回元素中的值。
+
+## `end` — 将数组的内部指针设置为最后一个元素
+
+“`end()` 将数组的内部指针移动到最后一个元素，并返回其值。”
+
+### 语法：
+
+```php
+mixed end ( array &$array )
+```
+
+### 示例：
+
+```php
+$first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'CA', 'zip_code' => 30001);
+```
+
+```php
+print current($first_array) . "<br>";
+
+print next($first_array) . "<br>";
+
+print prev($first_array) . "<br>";
+
+print end($first_array) . "<br>";
+```
+
+# 输出：
+
+Pete
+Smith
+Pete
+30001
+
+在这个示例中，`end` 将光标移动到最后一个元素并返回元素中的值。显示了邮政编码。
+
+## `key` — 从数组中获取键
+
+“`key()` 函数简单地返回内部指针当前指向的数组元素的键。它不会以任何方式移动指针。”
+
+### 语法：
+
+```php
+mixed key ( array &$array )
+```
+
+### 示例：
+
+```php
+$first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'CA', 'zip_code' => 30001);
+
+print key($first_array);
+```
+
+# 输出：
+
+first_name
+
+在这个示例中，数组当前位于顶部。`key` 将显示当前位置的键。此函数不会移动光标。
+
+## `next` — 进数组的内部指针
+
+“`next()` 的行为与 `current()` 相似，但有一处不同。它在返回元素之前将数组指针向前移动一位。这意味着它返回下一个数组值并将内部数组指针向前移动一位。”
+
+### 语法：
+
+```php
+mixed next ( array &$array )
+```
+
+### 示例：
+
+```php
+$first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'CA', 'zip_code' => 30001);
+
+print current($first_array) . "<br>";
+
+print next($first_array) . "<br>";
+
+print prev($first_array) . "<br>";
+
+print end($first_array) . "<br>";
+```
+
+# 输出：
+
+Pete
+Smith
+Pete
+30001
+
+`Next` 移动到下一个元素并显示它。在这个示例中，`current` 显示第一个值（Pete），但没有移动到下一个元素。`next` 移动到下一个元素并显示它（Smith）。
+
+## `pos` — `current()` 的别名
+
+`pos()` 函数简单地返回内部指针当前指向的数组元素的值。它不会以任何方式移动指针。如果内部指针指向元素末尾之外或数组为空，`pos()` 将返回 FALSE。
+
+### 语法：
+
+```php
+mixed pos ( array &$array )
+```
+
+### 示例：
+
+```php
+$first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'CA', 'zip_code' => 30001);
+
+print pos($first_array) . "<br>";
+
+print next($first_array) . "<br>";
+
+print prev($first_array) . "<br>";
+
+print end($first_array) . "<br>";
+```
+
+# 输出：
+
+Pete
+Smith
+Pete
+30001
+
+`pos` 显示当前值但不会移动到下一个值。在这个示例中，`pos` 将从第一个位置显示 Pete，但不会将光标移动到下一个位置。`next` 移动到下一个位置并显示值（Smith）。
+
+## `prev` — 回置内部数组指针
+
+“`prev()` 的行为与 `next()` 相似，它是将内部数组指针向回移动一位而不是向前移动。”
+
+### 语法：
+
+```php
+mixed prev ( array &$array )
+```
+
+### 示例：
+
+```php
+$first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'CA', 'zip_code' => 30001);
+
+print pos($first_array) . "<br>";
+
+print next($first_array) . "<br>";
+
+print prev($first_array) . "<br>";
+
+print end($first_array) . "<br>";
+```
+
+## `reset` — 将数组的内部指针设置为第一个元素
+
+“`reset()` 将数组的内部指针移动到第一个元素，并返回其值。”
+
+### 语法：
+
+```php
+mixed reset ( array &$array )
+```
+
+### 示例：
+
+```php
+$first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'CA', 'zip_code' => 30001);
+
+print current($first_array) . "<br>";
+
+print next($first_array) . "<br>";
+
+print prev($first_array) . "<br>";
+
+print end($first_array) . "<br>";
+```
+
+## `array_map` — 将回调函数应用到数组元素
+
+“`array_map()` 迭代地将回调函数应用到数组的元素上，从而将数组归约为单个值。”
 
 ### 语法：
 
@@ -4875,7 +4826,7 @@ function add_info($value)
 print_r(array_map("add_info", $first_array));
 ```
 
- 输出：
+输出：
 
 Array (
   [first_name] => This value is Pete
@@ -4886,9 +4837,9 @@ Array (
   [zip_code] => This value is 30001
 )
 
-## array_product — 计算数组的积
+## `array_product` — 计算数组的积
 
-“array_product() 返回数组元素的积。”
+“`array_product()` 返回数组元素的积。”
 
 ### 语法：
 
@@ -4900,10 +4851,11 @@ number array_product ( array $array )
 
 ```php
 $product = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
 print array_product($product);
 ```
 
- 输出：
+输出：
 
 362880
 
@@ -4913,7 +4865,7 @@ print array_product($product);
 1 x 2 x 3 x 4 x 5 x 6 x 7 x 8 x 9 x 10 = 362880
 ```
 
-## array_rand — 从数组中随机选取一个或多个元素
+## `array_rand` — 从数组中随机选取一个或多个元素
 
 “从数组中随机选取一个或多个元素，并返回随机元素的键（或键）。”
 
@@ -4927,21 +4879,22 @@ mixed array_rand ( array $array, int $num = 1 )
 
 ```php
 $first_array = array('Pete', 'Smith', '123 Main Street', 'Atlanta', 'GA', '30001');
+
 print_r(array_rand($first_array, 2));
 ```
 
- 输出：
+输出：
 
 Array (
   [0] => 3
   [1] => 5
 )
 
-在这个示例中 array_rand 选取了第三个元素（Atlanta）和第五个元素（30001）。
+在这个示例中 `array_rand` 选取了第三个元素（Atlanta）和第五个元素（30001）。
 
-## array_reduce — 使用回调函数迭代地将数组归约为单个值
+## `array_reduce` — 使用回调函数迭代地将数组归约为单个值
 
-“array_reduce() 迭代地将回调函数应用到数组元素，从而将数组归约为单个值。”
+“`array_reduce()` 迭代地将回调函数应用到数组元素，从而将数组归约为单个值。”
 
 ### 语法：
 
@@ -4953,15 +4906,15 @@ mixed array_reduce ( array $array, callable $callback [, mixed $initial = NULL )
 
 ```php
 $numerical_values = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
 function add($value, $number)
 {
   $value += $number;
   return $value;
 }
+
 print array_reduce($numerical_values, "add");
 ```
-
-
 
 ```php
 function subtract($value, $number)
@@ -4987,10 +4940,10 @@ function divide($value, $number)
 }
 ```
 
-print array_reduce($numerical_values, "add"). "<br>";
-print array_reduce($numerical_values, "subtract"). "<br>";
-print array_reduce($numerical_values, "multiply", -5). "<br>"; // 从 $value 为 -5 开始
-print array_reduce($numerical_values, "divide", 5). "<br>"; // 从 $value 为 5 开始
+`print array_reduce($numerical_values, "add"). "<br>";`
+`print array_reduce($numerical_values, "subtract"). "<br>";`
+`print array_reduce($numerical_values, "multiply", -5). "<br>"; // 从 $value 为 -5 开始`
+`print array_reduce($numerical_values, "divide", 5). "<br>"; // 从 $value 为 5 开始`
 
 输出:
 
@@ -4999,27 +4952,28 @@ print array_reduce($numerical_values, "divide", 5). "<br>"; // 从 $value 为 5 
 -18144000
 1.3778659611993E-6
 
-*   *array_reduce* 允许你创建自定义函数来遍历数组，选取每个项目并对该项进行操作。在这些示例中，展示了如何对数组中的项进行加、减、乘、除操作。
+*   *`array_reduce`* 允许你创建自定义函数来遍历数组，选取每个项目并对该项进行操作。在这些示例中，展示了如何对数组中的项进行加、减、乘、除操作。
 
-print array_reduce($numerical_values, "multiply", -5). "<br>"; // 从 $value 为 -5 开始
+`print array_reduce($numerical_values, "multiply", -5). "<br>"; // 从 $value 为 -5 开始`
 
-此调用从初始值 -5 开始（放置于 $value 中）。结果（如上所示）是一个负值。
+此调用从初始值 -5 开始（放置于 `$value` 中）。结果（如上所示）是一个负值。
 
-print array_reduce($numerical_values, "divide", 5). "<br>"; // 从 $value 为 5 开始
+`print array_reduce($numerical_values, "divide", 5). "<br>"; // 从 $value 为 5 开始`
 
-此调用在对每个元素值进行除法之前，将 5 放入 $value 中。
+此调用在对每个元素值进行除法之前，将 5 放入 `$value` 中。
 
-### array_sum — 计算数组中值的和
+### `array_sum` — 计算数组中值的和
 
 “返回作为整数或浮点数的数组之和。”
 
 ### 语法:
-# array_sum
+# `array_sum`
 
 ### 示例:
 
 ```php
 $sum = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
 print array_sum($sum);
 ```
 
@@ -5031,12 +4985,12 @@ print array_sum($sum);
 
 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55
 
-### array_unique — 移除数组中的重复值
+### `array_unique` — 移除数组中的重复值
 
-“接收一个输入数组并返回一个没有重复值的新数组。注意键会被保留。array_unique() 会首先对被视为字符串的值进行排序，然后为每个值保留遇到的第一个键，并忽略后续所有的键。这并不意味着未排序数组中第一个相关值的键会被保留。”
+“接收一个输入数组并返回一个没有重复值的新数组。注意键会被保留。`array_unique()` 会首先对被视为字符串的值进行排序，然后为每个值保留遇到的第一个键，并忽略后续所有的键。这并不意味着未排序数组中第一个相关值的键会被保留。”
 
 语法:
-array array_unique ( array $array, int $sort_flags = SORT_STRING )
+`array array_unique ( array $array, int $sort_flags = SORT_STRING )`
 
 示例:
 
@@ -5062,42 +5016,53 @@ Array (
 
 此函数返回每个值的第一个唯一键。在示例中，每个键的首次出现情况会被返回。
 
-### array_values — 返回数组的所有值
+### `array_values` — 返回数组的所有值
 
 “返回值的索引数组。”
 
 语法:
-array array_values ( array $array )
+`array array_values ( array $array )`
 
 示例:
 
 ```php
-$first_array = array('first_name''Pete', 'last_name'=> 'Smith', 'address'=> '123 Main Street', 'city'=> 'Atlanta', 'state'=> 'CA', 'zip_code' => 30001);
-
-print_r(array_values($first_array));
 ```
 
-输出:
 
+
+`$first_array = array('first_name''Pete', 'last_name'=> 'Smith', 'address'=> '123 Main Street', 'city'=> 'Atlanta', 'state'=> 'CA', 'zip_code' => 30001);`
+
+`print_r(array_values($first_array));`
+
+```
+输出:
+```
 ```
 Array (
+
 [0] => Pete
+
 [1] => Smith
+
 [2] => 123 Main Street
+
 [3] => Atlanta
+
 [4] => CA
+
 [5] => 30001
+
 )
 ```
 
-array_values 构建了传入数组的数值数组。它不保留原始数组的键（下标）。
+`array_values`构建了传入数组的数值数组。它不保留原始数组的键（下标）。
 
-### array_walk_recursive — 递归地对数组的每个成员应用函数
+### `array_walk_recursive` — 递归地对数组的每个成员应用函数
 
 “将定义的回调函数应用于数组的每个元素。此函数将递归进入深度数组。”
 
 语法:
-bool array_walk_recursive ( array &$array , callable $callback [, mixed $userdata = NULL ])
+`bool array_walk_recursive ( array &$array , callable $callback [, mixed $userdata = NULL ])`
 
 示例:
 
@@ -5106,12 +5071,10 @@ $customer_record = array (
 'first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001,
 'second_customer' => array('first_name' => 'Sally', 'last_name' => 'Parisi', 'address' => '101 South Street', 'city' => 'Atlanta', 'state' => 'GA', 'zip_code' => 30001)
 );
-
 function print_customer_info($value, $key)
 {
   print "Customer $key is $value";
 }
-
 array_walk_recursive($customer_record, 'print_customer_info');
 ```
 
@@ -5128,23 +5091,21 @@ Customer address is 101 South Street
 Customer city is Atlanta
 Customer state is GA
 
-### array_walk — 对数组的每个成员应用函数
+### `array_walk` — 对数组的每个成员应用函数
 
-“array_walk() 不受内部数组指针的影响。array_walk() 将遍历整个数组。”
+“`array_walk()`不受内部数组指针的影响。`array_walk()`将遍历整个数组。”
 
 语法:
-bool array_walk ( array &$array , callable $callback [, mixed $userdata = NULL )
+`bool array_walk ( array &$array , callable $callback [, mixed $userdata = NULL ])`
 
 示例:
 
 ```php
 $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'CA', 'zip_code' => 30001);
-
 function print_customer_info($value, $key)
 {
     print "Customer $key is $value";
 }
-
 array_walk($first_array, 'print_customer_info');
 ```
 
@@ -5156,18 +5117,17 @@ Customer address is 123 Main Street
 Customer city is Atlanta
 Customer state is CA
 
-### count — 统计数组或对象中的所有元素
+### `count` — 统计数组或对象中的所有元素
 
-“返回 array_or_countable 中的元素数量。如果参数不是数组或实现了 Countable 接口的对象，将返回 1。”
+“返回 `array_or_countable` 中的元素数量。如果参数不是数组或实现了 `Countable` 接口的对象，将返回 1。”
 
 语法:
-int count ( mixed $array_or_countable [, int $mode = COUNT_NORMAL )
+`int count ( mixed $array_or_countable [, int $mode = COUNT_NORMAL ])`
 
 示例:
 
 ```php
 $first_array = array('first_name' => 'Pete', 'last_name' => 'Smith', 'address' => '123 Main Street', 'city' => 'Atlanta', 'state' => 'CA', 'zip_code' => 30001);
-
 print count($first_array);
 ```
 
@@ -5175,22 +5135,20 @@ print count($first_array);
 
 6
 
-count 返回数组元素的数量（大小）。在此示例中，有 6 个元素。参见 sizeof 另一个用于 count 的示例。
+`count`返回数组元素的数量（大小）。在此示例中，有 6 个元素。参见 `sizeof` 另一个用于 `count` 的示例。
 
-### extract — 从数组将变量导入当前符号表
+### `extract` — 从数组将变量导入当前符号表
 
 语法:
 ```php
-int extract ( array &$array , int $flags = EXTR_OVERWRITE [, string $prefix = NULL )
+int extract ( array &$array , int $flags = EXTR_OVERWRITE [, string $prefix = NULL ])
 ```
 
 示例:
 
 ```php
 $first_array = array('first_name'=>'Pete', 'last_name'=>'Smith', 'address'=>'123 Main Street', 'city'=>'Atlanta', 'state'=>'CA', 'zip_code' => 30001);
-
 extract($first_array);
-
 print "The first name is " . $first_name . ". The last name is " . $last_name . ". The address is " . $address . ". The city is " . $city . ". The state is " . $state . ". The zip is " . $zip_code . ". ";
 ```
 
@@ -5198,29 +5156,27 @@ print "The first name is " . $first_name . ". The last name is " . $last_name . 
 
 The first name is Pete. The last name is Smith. The address is 123 Main Street. The city is Atlanta. The state is CA. The zip is 30001.
 
-此函数适用于关联数组。使用数组中的键创建变量（属性）。数组中的值被放置在属性中。在此示例中，使用 extract 函数创建了六个属性。
+此函数适用于关联数组。使用数组中的键创建变量（属性）。数组中的值被放置在属性中。在此示例中，使用 `extract` 函数创建了六个属性。
 
-### sizeof — count 的别名
+### `sizeof` — `count` 的别名
 
 语法:
 ```php
-int sizeof ( mixed $array_or_countable [, int $mode = COUNT_NORMAL )
+int sizeof ( mixed $array_or_countable [, int $mode = COUNT_NORMAL ])
 ```
 
 示例:
 
 ```php
 $first_array = array('Pete','Smith','123 Main Street','Atlanta','CA', 30001);
-
 $count = sizeof($first_array);
-
 for($I=0; $I < $count; $I++)
 {
     print $first_array[$I] . "<br />";
 }
 ```
 
-**输出:**
+输出:
 
 Pete
 Smith
@@ -5229,16 +5185,10 @@ Atlanta
 CA
 30001
 
-
-
-
-
 # 练习题
 
 - 1. 创建一个 PHP 程序，其中包含一个美国州数组。使用本章中现有的函数之一，找到任何以“M”开头的州。
-
 - 2. 创建一个 PHP 程序，包含第 1 题中的数组，在不使用循环的情况下遍历并显示数组的内容。
-
 - 3. 创建一个 PHP 程序，其中包含美国各州及其首府。使用本章中的 PHP 函数之一，为每个州显示一条类似于下面的信息：
 
 “佐治亚州的首府是亚特兰大”。

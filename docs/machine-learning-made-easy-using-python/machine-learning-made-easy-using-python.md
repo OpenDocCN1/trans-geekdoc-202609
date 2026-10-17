@@ -1,28 +1,17 @@
+
 # Python 机器学习使用指南
-
-
-
-
-
 
 机器学习是被认为是未来几年必不可少的技能之一。随着任务的增加，编程已变得非常耗时；机器学习允许机器自主学习，而学习又让机器学会如何产生相同的结果。机器学习通过向其喂送数据让机器能够自主地学习。我假设你已经有了 Python 编程和数据科学的先知识；如果你没有，可以查看下一页的这些书籍。
 
 一本面向任何想要用 Python 精通机器学习的人的完整指南。
 
-
-
-
-
-
-# 确保查看这些内容
+## 确保查看这些内容
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_2_0.png)
-
 
 使用 Python 编程的初学者指南
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_2_1.png)
-
 
 学习如何执行数据处理、清洗、分析和可视化等任务
 
@@ -32,41 +21,15 @@
 
 企业和机构正试图通过使用数据科学、数据挖掘和机器学习的概念和方法来构建智能系统来解决这个问题。在其中，机器学习是计算机科学中最令人兴奋的领域。如果我们将机器学习称为为数据提供意义的算法的应用和科学，那将没错。
 
-本书专为初学者（数据科学和机器学习）准备的，但你应该熟悉 Python 编程。我们将使用 NumPy、SciPy、Pandas、Matplotlib、Scikit-Learn 等包和模块来执行分析和其他任务。我让本书涵盖了数据科学的基础概念，以帮助初学者在机器学习之前做好数据科学概念准备，正如书名所示，书只涵盖了数据科学；如果你正在寻找数据科学，那么这本书不适合你，你可以查看其他书籍页面来找到它们。我还包含了高级主题，而不让你局限于基础。机器学习、算法、数据科学等可能看起来困难且无聊，但当你处理越来越多的数据时，你将能够玩转它们！
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+本书专为初学者（数据科学和机器学习）准备的，但你应该熟悉 Python 编程。我们将使用 `NumPy`、`SciPy`、`Pandas`、`Matplotlib`、`Scikit-Learn` 等包和模块来执行分析和其他任务。我让本书涵盖了数据科学的基础概念，以帮助初学者在机器学习之前做好数据科学概念准备，正如书名所示，书只涵盖了数据科学；如果你正在寻找数据科学，那么这本书不适合你，你可以查看其他书籍页面来找到它们。我还包含了高级主题，而不让你局限于基础。机器学习、算法、数据科学等可能看起来困难且无聊，但当你处理越来越多的数据时，你将能够玩转它们！
 
 - 多变量图
-
 - 线性回归
-
-
-
 - 层次聚类
-
-
-
-
 - 处理
-
 - 决策
-
 - 形成
-
 - 匹配
-
 - 数据集
 
 # 01 章：机器学习简介
@@ -77,8 +40,6 @@
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_11_0.png)
 
-# 01 章：机器学习简介
-
 ## 什么是机器学习？
 
 数据是你进行分析所需的，信息是你进行业务所需的。数据通常被称为“21世纪的石油”，数字数据在业务中至关重要。机器学习是一种人工智能，它在原始数据中发现模式并像人类一样进行预测。机器学习意味着机器自主学习。为了更好地理解，想象一个婴儿并将其比作机器学习模型。父母无法教他们一切，这就是为什么他们把孩子交给学校，在这种情况下就是你。学校有教科书、测试等来帮助你自主学习![](img/d75fea3635f5553f1cb0585b399b1b4b_12_0.png)
@@ -87,11 +48,7 @@
 - 模型创建
 - 通过数据模式学习
 
-
-
-
-
-## 机器是如何学习的？
+### 机器是如何学习的？
 
 究竟是什么魔法让机器能像我们一样学习并执行任务？让我们通过一个例子来理解。假设你是一个新的电脑经销商，对这方面的经验非常基础。于是你向另一位经销商请教信息。你总结了以下要点，如处理器核心、内存和 GPU。经销商告诉你这些信息，你也随之学习。随后，你获得了以下关于不同品牌 8gb 内存的数据：
 
@@ -107,7 +64,7 @@
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_15_0.png)
 
-现在我们可以使用这条线作为参考并预测值。因此，对于 2600Mhz，成本大约是 77。我们如何画出这条线？我们遵循公式 `cost = a + b * Mhz`，但 a 和 b 是什么？a 和 b 是直线的参数，你不需要担心它们。
+现在我们可以使用这条线作为参考并预测值。因此，对于 2600Mhz，成本大约是 77。我们如何画出这条线？我们遵循公式 `cost = a + b * Mhz`，但 `a` 和 `b` 是什么？`a` 和 `b` 是直线的参数，你不需要担心它们。
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_15_1.png)
 
@@ -126,13 +83,13 @@
 
 ### 安装 Anaconda
 
-访问 anaconda.com/products/individual 下载最新版本的 Anaconda。
+访问 `anaconda.com/products/individual` 下载最新版本的 Anaconda。
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_18_0.png)
 
 你可以根据你的系统下载 anaconda 安装程序，无论是 Windows、Mac 还是 Linux。下载好后，只需运行安装程序并照常安装即可。
 
-安装完成后，搜索 "anaconda prompt" 并运行它。
+安装完成后，搜索 "`anaconda prompt`" 并运行它。
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_18_1.png)
 
@@ -159,10 +116,15 @@ Anaconda Prompt (anaconda3)
 ```
 (base) C:\Users\Rahul> jupyter notebook
 ```
-NotebookApp 已从 C:\Users\Rahul\anaconda\lib\site-packages 加载
-Notebook 目录 C:\Users\Rahul\anaconda\share\jupyter
+
+NotebookApp 已从 `C:\Users\Rahul\anaconda\lib\site-packages` 加载
+
+Notebook 目录 `C:\Users\Rahul\anaconda\share\jupyter`
+
 Jupyter Notebook 运行在 http://localhost:8888/?token=b3da5d8a2f2015a0f3d48f9054acf 使用 Ctrl-C 停止此服务器并关闭所有内核。要访问 notebook，在浏览器中打开此文件：file:///C:/Users/Rahul/AppData/Roaming/jupyter/runtime/server-123.html
+
 或将以下 URL 粘贴到浏览器：http://localhost:8888/?token=b3da5d8a2f2015a0f3d48f9054acf
+
 127.0.0.1:8888/?token=b3da5d8a2f2015a0f3d48f9054acf 将你重定向到浏览器，其中会出现一个带有 Jupyter notebook 的新标签。你可以在这里托管 Python 文件并随时运行代码。
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_20_0.png)
@@ -179,7 +141,7 @@ Jupyter Notebook 运行在 http://localhost:8888/?token=b3da5d8a2f2015a0f3d48f90
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_21_1.png)
 
-如果你无法创建新文件或遇到任何错误，可以直接前往 jupyter.org/try 并选择 Python。
+如果你无法创建新文件或遇到任何错误，可以直接前往 `jupyter.org/try` 并选择 Python。
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_21_2.png)
 
@@ -215,7 +177,7 @@ In []:
 Out[1]: 64575
 ```
 
-要在选定的单元格下方插入新单元格，按下键盘上的 b 或点击 + 图标。
+要在选定的单元格下方插入新单元格，按下键盘上的 `b` 或点击 `+` 图标。
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_23_2.png)
 
@@ -238,7 +200,7 @@ In []:
 Out[1]: 64575
 ```
 
-我们对 markdown 单元格有更广泛的权限，可以优雅地显示文本。我们可以使用 # 1, 2 和 3 添加标题、子标题和低级标题。
+我们对 markdown 单元格有更广泛的权限，可以优雅地显示文本。我们可以使用 `# 1, 2 和 3` 添加标题、子标题和低级标题。
 
 ```
 ### Jupyter Notebook
@@ -255,23 +217,35 @@ Data
 我们可以创建有序列表和项目列表：
 
 - 1. Data Science
+
    1. Python
+
    2. Jupyter Notebook
+
    3. Libraries
 
 1. Data Science
+
    A Python
+
    B Jupyter Notebook
+
    C Libraries
 
 - Data Science
+
   * Python
+
   * Jupyter Notebook
+
   * Libraries
 
 Data Science
+
   * Python
+
   * Jupyter Notebook
+
   * Libraries
 
 > 有序列表
@@ -280,11 +254,7 @@ Data Science
 
 创建有序列表，使用 1 作为第一个列表项，然后使用制表键创建子项目并使用正确的编号。文本应在数字后加上空格。
 
-创建项目列表，使用 - 作为方块符号，使用 * 作为圆点符号，以以相同的方式处理列表和子项目。
-
-
-
-
+创建项目列表，使用 `-` 作为方块符号，使用 `*` 作为圆点符号，以以相同的方式处理列表和子项目。
 
 ### 环境设置
 
@@ -332,8 +302,6 @@ Data Science
 - Dataframes（数据框）
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_27_0.png)
-
-## 03 PANDAS 库
 
 ### Pandas
 
@@ -399,7 +367,6 @@ DataFrame 是一个带有异构数据的二维数组：
 - 列表 vs ndarrays
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_31_0.png)
-## NUMPY 包
 
 ### NumPy
 
@@ -408,9 +375,8 @@ NumPy 是一个 Python 包，全称为“Numerical Python”。它是一个由�
 ### 1D 数组
 
 | | 5.2 | 3.0 | 4.5 |
-|---|---|---|
+|---|---|---|---|
 | 9.1 | 0.1 | 0.3 |
-
 | | 1 | 2 | 9 | 10 |
 |---|---|---|---|
 
@@ -436,39 +402,58 @@ NumPy 非常强大，包含许多特性，如：
 
 ### ndarray 对象
 
-NumPy 的目标是提供一种比传统 Python 列表快 50 倍的数组对象。NumPy 中的数组对象称为 ndarray，它提供了许多支持函数，使得处理 ndarray 变得非常简单。
 
 
-
-
+NumPy 的目标是提供一种比传统 Python 列表快 50 倍的数组对象。NumPy 中的数组对象称为 `ndarray`，它提供了许多支持函数，使得处理 `ndarray` 变得非常简单。
 
 ### 数据结构
 
 SciPy 使用的基础数据结构是由 NumPy 模块提供的多维数组。NumPy 提供了一些用于线性代数、傅里叶变换和随机数生成的函数，但在通用性上不如 SciPy 中的等效函数。除了这些之外，SciPy 还提供了物理和数学常数、傅里叶变换、插值、数据输入输出、稀疏矩阵等。
 
 | | | | | | | | | | | |
+
 |---|---|---|---|---|---|---|---|---|---|
+
 | 1 | 2 | 3 | 21 | 9 | 7 | 34 | 22 | 11 | 5 |
+
 | 11 | 92 | 4 | 3 | 22 | 2 | 3 | 3 | 2 | 1 |
+
 | 3 | 9 | 13 | 81 | 21 | 10 | 7 | 4 | | |
+
 | 8 | 32 | 1 | 2 | 34 | 18 | 78 | 10 | 7 | | |
+
 | 9 | 22 | 3 | 9 | 24 | 81 | 71 | 22 | 17 | 3 |
+
 | 13 | 21 | 29 | 2 | 47 | 1 | 81 | 21 | 9 | | |
+
 | 21 | 12 | 53 | 91 | 21 | 8 | 81 | 9 | 2 | | |
+
 | 6 | 8 | 33 | 82 | 19 | 87 | 16 | 3 | 1 | 55 |
+
 | 54 | 4 | 78 | 24 | 18 | 11 | 4 | 2 | 99 | 5 |
+
 | 13 | 22 | 32 | 42 | 15 | 9 | 22 | 1 | 21 | | |
 
 | | | | | | | | | | | |
+
 |---|---|---|---|---|---|---|---|---|---|---|
+
 | 1 | 3 | 9 | | | | | 2 | 1 | | |
+
 | 11 | | | | | | | | | | | |
+
 | | | | 1 | | | | | | | | |
+
 | 8 | | | | 3 | | | | | | | |
+
 | | | | 9 | | | 17 | | | | | |
+
 | 13 | 21 | | | 9 | 2 | 47 | 1 | 81 | 21 | | |
+
 | 54 | | | | 11 | | | 55 | | | | |
+
 | 11 | | | | | | | | | | | |
+
 | | 2 | | | | | 22 | 21 | | | | |
 
 稀疏矩阵的使用
@@ -478,25 +463,38 @@ SciPy 使用的基础数据结构是由 NumPy 模块提供的多维数组。NumP
 众所周知，SciPy 被分为涵盖科学计算领域的子包，我们可以根据需要导入它们，而不是导入整个库。下表显示了 SciPy 所有子包的列表：
 
 | | |
+
 |---|---|
+
 | scipy.constants | 数学常数 |
+
 | scipy.fftpack | 傅里叶变换 |
+
 | scipy.integrate | 积分例程 |
+
 | scipy.interpolate | 插值 |
+
 | scipy.io | 数据输入输出 |
+
 | scipy.linalg | 线性代数例程 |
+
 | scipy.optimize | 优化 |
+
 | scipy.signal | 信号处理 |
+
 | scipy.sparse | 稀疏矩阵 |
+
 | scipy.spatial | 空间数据结构 |
+
 | scipy.special | 特殊数学 |
+
 | scipy.stats | 统计 |
 
 ### 关键点
 
 - SciPy 包是一个用于解决常见科学问题的工具箱。
 - SciPy 与 NumPy 一起创建了用于数据的动态工具。
-- 配合 NumPy，SciPy 提供了许多使用 ndarrays 执行不同任务的函数。
+- 配合 NumPy，SciPy 提供了许多使用 `ndarrays` 执行不同任务的函数。
 - SciPy 被分为子包以处理不同的任务。
 
 ## 06 Matplotlib 库
@@ -509,26 +507,27 @@ SciPy 使用的基础数据结构是由 NumPy 模块提供的多维数组。NumP
 
 # Matplotlib 库
 
-Matplotlib 是一个 Python 库，用于使用脚本创建 2D 图表。它有一个名为 pyplot 的模块，通过提供控制线条样式、字体属性等功能，使绘图变得简单。
+Matplotlib 是一个 Python 库，用于使用脚本创建 2D 图表。它有一个名为 `pyplot` 的模块，通过提供控制线条样式、字体属性等功能，使绘图变得简单。
 
 ![](img/d75fea3635f553f1cb0585b39b1b4b_41.png)
 
 ### Matplotlib 的关键特性
 
 Matplotlib 是数据可视化的最佳选择，因为它具有以下特性：
+
 - 它支持各种图表，如直方图、柱状图、误差图等。
 - 它与 NumPy 使用，提供了一个有效的 MATLAB 替代环境。
 - 使用其 PyPlot 模块，绘制简单图表或其他任何图表都是可能的。
 
 ### 数据可视化
 
-数据可视化是信息的图形化表示。通过使用图表、地图等元素，可视化工具提供了一种易于查看和理解趋势、离群值和模式的方法。![](img/d75fea3635f553f1cb0585b39b1b4b_42.png)
+数据可视化是信息的图形化表示。通过使用图表、地图等元素，可视化工具提供了一种易于查看和理解趋势、离群值和模式的方法。![](img/d75fea3635f5553f1cb0585b399b1b4b_42.png)
 
 在大数据世界中，数据可视化工具和技术对于分析大量信息并做出数据驱动的决策至关重要。可视化有助于以图形化或更有趣的方式查看数据，如果我们不可视化数据，将失去以柱状图、饼图等形式呈现数据的影响。
 
 ### Matplotlib 中的 PyPlot
 
-matplotlib.pyplot是一系列函数集合，使得 matplotlib 的工作类似于 MATLAB。每个 pyplot 函数都可以对图形进行某些更改：创建图形、在图上绘制线条等。要测试它，跳转到 Jupyter Notebook 并开始导入 matplotlib.pyplot 模块。
+`matplotlib.pyplot`是一系列函数集合，使得 `matplotlib` 的工作类似于 MATLAB。每个 `pyplot` 函数都可以对图形进行某些更改：创建图形、在图上绘制线条等。要测试它，跳转到 Jupyter Notebook 并开始导入 `matplotlib.pyplot` 模块。
 
 ```python
 import matplotlib.pyplot as plt
@@ -573,38 +572,67 @@ plt.show()
 ### 线和形状样式
 
 | | |
+
 |---|---|
+
 | - | 实线 |
+
 | -- | 虚线 |
+
 | : | 点状线 |
+
 | -. | 划点线 |
+
 | 'o' | 圆形 |
+
 | '+' | 加号 |
+
 | '*' | 星号 |
+
 | '.' | 点 |
+
 | 'x' | 叉 |
+
 | _ | 横线 |
+
 | '| | 垂直线 |
+
 | 's' | 正方形 |
+
 | 'd' | 菱形 |
+
 | '^' | 上三角形 |
+
 | 'v' | 下三角形 |
+
 | '>' | 向右三角形 |
+
 | '<' | 向左三角形 |
+
 | 'p' | 五角星 |
+
 | 'h' | 六角星 |
 
 ### 颜色样式
 
 | | |
+
 |---|---|
+
 | y | 黄色 |
+
 | m | 品红色 |
+
 | c | 青色 |
+
 | r | 红色 |
+
 | g | 绿色 |
+
 | b | 蓝色 |
+
 | w | 白色 |
+
 | k | 黑色 |
 
 除了颜色和线形状样式之外，我们对绘制的图形有很大的编辑性，你可以在专门用于数据科学或数据可视化的书中学习这些内容。
@@ -630,9 +658,6 @@ Scikit-learn 或 Sklearn 是 Python 中实用且稳健的机器学习库。它�
 
 - 监督学习算法如线性回归、支持向量机 (SVM)、决策树等是 scikit-learn 的一部分。
 - 无监督学习算法如聚类、因子分析、主成分分析 (PCA) 到无监督神经网络也是它的的一部分。
-
-
-
 
 交叉验证、降维、集成方法、特征提取、特征选择也是 scikit-learn 的特性，它们分别用于检查监督模型的准确性、减少数据中的属性数量、结合多个监督模型的预测、从数据中提取特征以及识别中有用的特征。
 
@@ -690,6 +715,7 @@ Scikit-learn 或 Sklearn 是 Python 中实用且稳健的机器学习库。它�
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_53_1.png)
 
 | 圆形 | 正方形 | 椭圆 | 圆正方形 |
+
 | --- | --- | --- | --- |
 
 # ## 机器学习的类型
@@ -709,6 +735,7 @@ Scikit-learn 或 Sklearn 是 Python 中实用且稳健的机器学习库。它�
 ### 深度学习
 
 深度学习模型基于人工神经网络 (ANN) 或更具体的卷积神经网络 (CNN)。深度学习使用了几种架构，如深度信赖网络、循环神经网络和卷积神经网络。这些模型用于解决如：
+
 - 计算机视觉、图像分类
 - 生物信息学
 - 药物设计
@@ -742,18 +769,20 @@ Scikit-learn 或 Sklearn 是 Python 中实用且稳健的机器学习库。它�
 
 强化学习由根据环境所采取的行为获得奖励或惩罚的学习模型组成。其目标是最大化累计奖励。
 
-
-
-
 ## 机器学习中的数学
 
 - 连续型，或无限的值。这些值没有限制，例如在以下数据中，不同人的特征重量（weight）不是有限的。它可能是 110 磅，也可以是 110.20 磅，甚至是 110.21 磅，即连续型数据。
 
 | 人员 | 重量 |
+
 |---|---|
+
 | Jhon | 110 |
+
 | Max | 122 |
+
 | Mary | 96 |
+
 | Alex | 120 |
 
 ## 数据收集
@@ -779,13 +808,19 @@ Scikit-learn 或 Sklearn 是 Python 中实用且稳健的机器学习库。它�
 在描述性统计中，我们处理的是整个数据，即总体而不是样本。在描述性统计中我们有以下内容：
 
 - **集中趋势**
+
 数据的平均值、中位数众数被称为其集中趋势。我们可以很容易地找到每一个每一个，让我们考虑以下数据并找到它的集中趋势，
 
 | 天数 | 销售额 |
+
 |---|---|
+
 | 周一 | 33 |
+
 | 周二 | 37 |
+
 | 周三 | 14 |
+
 | 周四 | 29 |
 
 要找到销售额的平均值（mean），我们需要将所有值相加并除以值的总个数。
@@ -804,15 +839,22 @@ Total no. of values 4
 56 是上述数据的中位数。但如果数据个数是偶数，比如我们的销售数据，我们需要找到中间两个数之和并除以 2。
 
 | 销售额 |
+
 |---|---|
+
 | 14 |
+
 | 29 |
+
 | 33 |
+
 | 37 |
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_63_1.png)
 
-median (x) = \frac{\text{sum of mid pair}}{2} = \frac{29 + 33}{2} = 31
+
+
+`median (x) = \frac{\text{sum of mid pair}}{2} = \frac{29 + 33}{2} = 31`
 
 最后我们有众数（mode）或出现频率最高的值。可以通过视觉化计算，但在我们的数据中没有没有任何重复的值，因此我们考虑以下示例：
 
@@ -820,7 +862,8 @@ median (x) = \frac{\text{sum of mid pair}}{2} = \frac{29 + 33}{2} = 31
 
 12 是上述数据的众数，因为它出现了三次，数据中可能会有很多重复。
 
-- **变异性或离散度**
+### 变异性或离散度
+
 范围、四分位距、方差和标准差被称为变异性或离散程度的度量。
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_64_0.png)
@@ -841,10 +884,6 @@ range = max - min = 37 - 14 = 23
 四分位距（Interquartile Range）与范围相似但略有不同。考虑以下数据，我们将数字 12 27 33 42 45 47 53 54 将数据分成四部分，并从第一个分界点减去第一个分界点。
 
 方差（Variance）是数据值与其平均值之差的平方平均值。
-
-
-
-
 
 # 70 机器学习中的数学
 
@@ -987,7 +1026,9 @@ F-measure \approx 0.86
 概率函数说明了以下几点：
 
 - 它在区间内是连续的
+
 - 曲线与 x 轴之间的面积等于 1
+
 - 事件的概率落在 a 和 b 之间
 
 任何满足这些条件的变量都是连续随机变量![](img/d75fea3635f5553f1cb0585b399b1b4b_73_0)
@@ -1011,7 +1052,9 @@ f (Normal Variable) = \frac{1}{\sigma \sqrt{2\pi}} e^{-(X-\mu)^2/2\sigma^2}
 概率可以分为以下三种类型：
 
 - 边缘概率：在不考虑条件的情况下事件发生的概率。
+
 - 联合概率：两个事件同时发生的概率，例如从扑克牌中抽取红牌。
+
 - 条件概率：在已知一个或多个事件发生的情况下事件发生的概率。例如从你的朋友那里抽取王牌![](img/75.png)
 
 ### 贝叶斯定理
@@ -1021,9 +1064,6 @@ f (Normal Variable) = \frac{1}{\sigma \sqrt{2\pi}} e^{-(X-\mu)^2/2\sigma^2}
 ```
 P(A|B) = \frac{P(B|A) P(A)}{P(B)}
 ```
-
-
-
 
 ## SCIKIT LEARN 算法
 
@@ -1048,18 +1088,20 @@ P(A|B) = \frac{P(B|A) P(A)}{P(B)}
 ## 11 导入数据
 
 - 导入 CSV 数据
+
 - 导入 JSON 数据
+
 - 导入 XLS 数据
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_81_0.png)
 
-## 导入数据
+### 导入数据
 
-### 数据文件
+#### 数据文件
 
 我们通常有多种文件格式的数据，例如任何产品的销售数据、订阅人数等。导入数据有很多方法，但我们在这里将使用 pandas 库。
 
-### 导入 CSV 数据
+#### 导入 CSV 数据
 
 从 CSV（逗号分隔值）读取数据是数据科学中的基本需求。我们通常从各种来源获取数据，这些数据可以导出为 CSV 格式以便其他系统使用。处理 csv 文件，我们首先需要一个，你可以从这里下载示例文件 csv.data（检查 Resources）。
 
@@ -1072,7 +1114,7 @@ In [32]: import os
 C:\Users\Rahul
 ```
 
-将文件移动到那里，并使用 pandas 库的 read_csv 函数来导入 csv 文件
+将文件移动到那里，并使用 pandas 库的 `read_csv` 函数来导入 csv 文件
 
 ```python
 In [38]: import pandas as pd
@@ -1172,9 +1214,9 @@ biscuits_sales
 
 数据存储为 ndarrays，要访问单个元素可以使用类似于 DataFrame 的切片。
 
-## 导入数据
+### 导入数据
 
-JSON 文件以人类可读的格式存储数据。JSON 代表 JavaScript 对象表示。在这里获取你的示例 json_data（检查 Resources）。Pandas 使用 read_json 函数读取 JSON 文件。
+JSON 文件以人类可读的格式存储数据。JSON 代表 JavaScript 对象表示。在这里获取你的示例 json_data（检查 Resources）。Pandas 使用 `read_json` 函数读取 JSON 文件。
 
 ```python
 In [2]: import pandas as pd
@@ -1193,6 +1235,8 @@ dt
 
 与 CSV 文件类似，我们可以对 JSON 文件执行所有的切片和数据提取：
 
+
+
 ```python
 In [6]: import pandas as pd
 dt = pd.read_json("json_data.json")
@@ -1201,25 +1245,38 @@ print(dt.values)
 ```
 
 | | ID | Name | Sales |
+
 |---|---|---|
+
 | 0 | 11 | Biscuits | 227 |
+
 | 1 | 102 | Cookies | 158 |
+
 | 2 | 103 | Cake | 52 |
+
 | 3 | 104 | Wheat Supplement | 24 |
+
 | 4 | 105 | Protein Bars | 85 |
+
 | 5 | 106 | Potato Chips | 121 |
 
 0 Biscuits
+
 1 Cookies
+
 2 Cake
+
 3 Wheat Supplement
+
 4 Protein Bars
+
 5 Potato Chips
+
 HomeFoods
 
 ### EXCEL 数据
 
-Microsoft Excel 是一个广泛使用的电子表格程序。它的用户友好性和吸引特性使其成为数据科学中常用的工具。在这里获取你的示例数据 xls_data（检查 Resources）。pandas 库的 read_excel 函数用于将 Excel 文件的内容读取到 python 环境中的 pandas DataFrame。
+Microsoft Excel 是一个广泛使用的电子表格程序。它的用户友好性和吸引特性使其成为数据科学中常用的工具。在这里获取你的示例数据 `xls_data`（检查 Resources）。`pandas` 库的 `read_excel` 函数用于将 Excel 文件的内容读取到 python 环境中的 pandas DataFrame。
 
 ```python
 In [9]: import pandas as pd
@@ -1228,17 +1285,24 @@ dt
 ```
 
 | id | name | price | sales | brand | Unnamed: 5 |
+
 |---|---|---|---|---|---|
+
 | 0 | 101 | biscuits | 5.00 | 227 | HomeFoods | NaN |
+
 | 1 | 102 | cookies | 7.25 | 158 | TBakery | NaN |
+
 | 2 | 103 | cake | 12.00 | 50 | TBakery |
+
 | 3 | 104 | whey_supplement | 34.90 | 24 | MuscleUp |
+
 | 4 | 105 | protein_bars | 4.90 | 85 | MuscleUp |
+
 | 5 | 106 | potato_chips | 1.75 | 121 | HomeFoods |
 
  |
 
-由于 excel 表格被导入为 pandas DataFrame，我们可以对 excel 数据执行所有任务。你可能会注意到，我们有一个带有 NaN 值的 Unnamed: 5 列（除了 dt.value[2,5]）。让我们清理一下数据。首先我们需要移除 Unnamed: 5 列，我们可以使用 del 关键字。
+由于 excel 表格被导入为 pandas DataFrame，我们可以对 excel 数据执行所有任务。你可能会注意到，我们有一个带有 NaN 值的 `Unnamed: 5` 列（除了 `dt.value[2,5]`）。让我们清理一下数据。首先我们需要移除 `Unnamed: 5` 列，我们可以使用 `del` 关键字。
 
 ```python
 In [10]: import pandas as pd
@@ -1246,7 +1310,7 @@ dt = pd.read_excel("xlsx_data.xlsx")
 del dt["Unnamed: 5"]
 ```
 
-正如我们之前学过的，del 删除了整个列，我们不需要处理数据清洗了。我们已经移除了 Unnamed: 5 列：
+正如我们之前学过的，`del` 删除了整个列，我们不需要处理数据清洗了。我们已经移除了 `Unnamed: 5` 列：
 
 ```python
 In [11]: import pandas as pd
@@ -1257,15 +1321,22 @@ dt
 ```
 
 | id | name | price | sales | brand |
+
 |---|---|---|---|---|
+
 | 0 | 101 | biscuits | 5.00 | 227 | HomeFoods |
+
 | 1 | 102 | cookies | 7.25 | 158 | TBakery |
+
 | 2 | 103 | cake | 12.00 | 50 | |
+
 | 3 | 104 | whey_supplement | 34.90 | 24 | MuscleUp |
+
 | 4 | 105 | protein_bars | 4.90 | 85 | MuscleUp |
+
 | 5 | 106 | potato_chips | 1.75 | 121 | HomeFoods |
 
-现在，我们需要将 dt.value[2,5] 即 34 替换为 TBakery。我们可以使用 replace 方法
+现在，我们需要将 `dt.value[2,5]` 即 34 替换为 TBakery。我们可以使用 `replace` 方法
 
 ```python
 In [12]: import pandas as pd
@@ -1274,14 +1345,12 @@ del dt["Unnamed: 5"]
 dt.replace({34:"TBakery"})
 ```
 
-
-
-
-
 ## 12 数据操作
 
 - NumPy 操作
+
 - Pandas 操作
+
 - 数据清洗
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_88_0.png)
@@ -1292,13 +1361,13 @@ Python 主要通过 Pandas 和 Numpy 这两个库来处理各种格式的数据�
 
 ### NumPy 操作
 
-要开始使用 NumPy，我们需要导入 numpy 来创建 NumPy 数组（arrays）。
+要开始使用 NumPy，我们需要导入 `numpy` 来创建 NumPy 数组（arrays）。
 
 ```
 In [ ]: import numpy
 ```
 
-让我们使用 array() 函数创建一个数组并将其打印出来。
+让我们使用 `array()` 函数创建一个数组并将其打印出来。
 
 ```
 In [2]: import numpy
@@ -1308,7 +1377,7 @@ print(ar)
 [1 5 7]
 ```
 
-ar 是一个 1 维数组，我们也可以在另一个数组内部创建一个或多个 1 维数组来创建一个 2 维数组。
+`ar` 是一个 1 维数组，我们也可以在另一个数组内部创建一个或多个 1 维数组来创建一个 2 维数组。
 
 ```
 In [8]: import numpy
@@ -1321,7 +1390,7 @@ print(ar)
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_89_0.png)
 
-我们可以在创建数组时使用 ndmin 参数来指定数组的维度。
+我们可以在创建数组时使用 `ndmin` 参数来指定数组的维度。
 
 ```
 In [10]: import numpy
@@ -1331,9 +1400,9 @@ print(ar)
 [[1 5 7]]
 ```
 
-虽然我们传递了一个 1 维数组，但由于 ndmin 参数指定了数组的维度，它变成了一个 2 维数组。
+虽然我们传递了一个 1 维数组，但由于 `ndmin` 参数指定了数组的维度，它变成了一个 2 维数组。
 
-我们创建了一个整数数组，所以让我们使用 dtype 参数使用相同的值创建字符串数组和浮点数数组。
+我们创建了一个整数数组，所以让我们使用 `dtype` 参数使用相同的值创建字符串数组和浮点数数组。
 
 ```
 In [11]: import numpy
@@ -1346,7 +1415,7 @@ print(ar_flt)
 [1. 5. 7. ]
 ```
 
-ar_str 是字符串字面量数组，ar_flt 是浮点数数组。我们也可以同样使用 complex 作为 dtype 将这些数字改为复数。
+`ar_str` 是字符串字面量数组，`ar_flt` 是浮点数数组。我们也可以同样使用 `complex` 作为 `dtype` 将这些数字改为复数。
 
 ```
 In [13]: import numpy
@@ -1361,7 +1430,7 @@ print(ar_cmx)
 [1.+0.j 5.+0.j 7.+0.j]
 ```
 
-ar_str, ar_flt 和 ar_cmx 是用相同数据创建的数组，但数据类型分别为字符串、浮点数和复数。
+`ar_str`, `ar_flt` 和 `ar_cmx` 是用相同数据创建的数组，但数据类型分别为字符串、浮点数和复数。
 
 ### Pandas 操作
 
@@ -1369,7 +1438,7 @@ Pandas 通过 Series、Data Frame 和 Panel 处理数据。我们将学习创建
 
 ### Pandas Series
 
-我们已经知道 Pandas Series 是什么。可以使用 Series() 函数创建 pandas Series，所以让我们导入 pandas 创建 series。
+我们已经知道 Pandas Series 是什么。可以使用 `Series()` 函数创建 pandas Series，所以让我们导入 pandas 创建 series。
 
 ```
 In [14]: import pandas
@@ -1382,7 +1451,7 @@ print(sr)
 dtype: int64
 ```
 
-如你所见，我们的数据索引从 0 到 2，数据类型为整数，我们可以在 index 参数中指定自己的索引。
+如你所见，我们的数据索引从 0 到 2，数据类型为整数，我们可以在 `index` 参数中指定自己的索引。
 
 ```
 In [16]: import pandas
@@ -1395,7 +1464,7 @@ C    7
 dtype: int64
 ```
 
-就像 ndarrays 一，我们也可以在创建 series 时使用 dtype 参数指定 pandas series 的数据类型。
+就像 ndarrays 一，我们也可以在创建 series 时使用 `dtype` 参数指定 pandas series 的数据类型。
 
 ```
 In [18]: import pandas
@@ -1425,7 +1494,7 @@ print(sr)
 dtype: int64
 ```
 
-传递 ndarray 作为 series 的数据，data 参数是必需的，还使用了 copy 参数创建数据的副本。如果你想获取没有索引的数据，使用 values 函数。
+传递 ndarray 作为 series 的数据，`data` 参数是必需的，还使用了 `copy` 参数创建数据的副本。如果你想获取没有索引的数据，使用 `values` 函数。
 
 ```
 In [21]: import numpy
@@ -1437,9 +1506,9 @@ print(sr.values)
 [1 5 7]
 ```
 
-可以使用 array 函数打印上面的更详细版本 ![](img/d75fea3635f5553f1cb0585b399b1b4b_92_0.png)。
+可以使用 `array` 函数打印上面的更详细版本 ![](img/d75fea3635f5553f1cb0585b399b1b4b_92_0.png)。
 
-注意 NumPy 和 Pandas 之间的 array 函数差异。Pandas Data Frames 以表格形式对齐数据。可以使用 DataFrame() 函数创建 pandas DataFrame。字典的键是列，值是行内容。我们在这里也可以使用 index 参数。
+注意 NumPy 和 Pandas 之间的 `array` 函数差异。Pandas Data Frames 以表格形式对齐数据。可以使用 `DataFrame()` 函数创建 pandas DataFrame。字典的键是列，值是行内容。我们在这里也可以使用 `index` 参数。
 
 ```
 In [23]: import pandas
@@ -1522,10 +1591,15 @@ print(ar3[1,0,1])
 ar3[]
 
 ```
+
 [[[1, 3],
+
 [5, 2]],
+
 [[2, 4],
+
 [4, 6]]]
+
 ```
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_95_0.png)
@@ -1533,7 +1607,9 @@ ar3[]
 ar3[1]
 
 ```
+
 [[[1, 3], [5, 2]], [[2, 4], [4, 6]]]
+
 ```
 
 第一切片
@@ -1541,7 +1617,9 @@ ar3[1]
 ar3[1,0]
 
 ```
+
 [[[1, 3], [5, 2]], [[2, 4], [4, 6]]]
+
 ```
 
 第二切片
@@ -1549,23 +1627,25 @@ ar3[1,0]
 ar3[1,0,1]
 
 ```
+
 4
+
 ```
 
 最终切片
 
-
-
-
-
 假设我们有如下一个 DataFrame
 
 ```python
+
 [In 27]: import pandas as pd
+
 sr = pd.DataFrame({'Product':['Biscuit','Cookies'],
+
     'Sales':[227,158]}, index = [1,2])
 
 sr
+
 ```
 
 | | Product | Sales |
@@ -1576,40 +1656,61 @@ sr
 我们只需要 Sales 列，因此使用 `DataFrame[column_label]` 语法
 
 ```python
+
 [In 32]: import pandas as pd
+
 sr = pd.DataFrame({'Product':['Biscuit','Cookies'],
+
     'Sales':[227,158]}, index = [1,2])
+
 sr['Sales']
 
 Out[32]: 
+
 1    227
+
 2    158
+
 Name: Sales, dtype: int64
+
 ```
 
 或者只获取第二行，因此使用 `DataFrame.loc[row_index]` 语法
 
 ```python
+
 [In 33]: import pandas as pd
+
 sr = pd.DataFrame({'Product':['Biscuit','Cookies'],
+
     'Sales':[227,158]}, index = [1,2])
+
 sr.loc[2] #你也可以使用 sr.iloc[1]
 
 Out[33]: 
+
 Product  Cookies
+
 Sales      158
+
 Name: Sales, dtype: object
+
 ```
 
 或者只获取 cookies 的销售额，因此使用 `DataFrame.values[index]` 语法
 
 ```python
+
 [In 37]: import pandas as pd
+
 sr = pd.DataFrame({'Product':['Biscuit','Cookies'],
+
     'Sales':[227,158]}, index = [1,2])
+
 sr.values[1,1]
 
 Out[37]: 158
+
 ```
 
 值是以 ndarrays 形式存储的，这就是为什么我们使用了类似于二维 ndarrays 的切片方法
@@ -1617,9 +1718,13 @@ Out[37]: 158
 ### 我们可以从 DataFrame 中删除一整列
 
 ```python
+
 In [41]: import pandas as pd
+
 sr = pd.DataFrame({'Product':['Biscuit', 'Cookies'],
+
     'Sales':[227,158]}, index = [1,2])
+
 ```
 
 | | Product | Sales |
@@ -1628,8 +1733,11 @@ sr = pd.DataFrame({'Product':['Biscuit', 'Cookies'],
 | 2 | Cookies | 158 |
 
 ```python
+
 In [45]: del sr['Sales']
+
 sr
+
 ```
 
 | | Product |
@@ -1640,12 +1748,18 @@ sr
 ### 但我们不能删除一个值
 
 ```python
-In [47]: import pandas as pd
-sr = pd.DataFrame({'Product':['Biscuit', 'Cookies'],
-    'Sales':[227,158]}, index = [1,2])
-sr.values=[1,1]
-```
 
+In [47]: import pandas as pd
+
+sr = pd.DataFrame({'Product':['Biscuit', 'Cookies'],
+
+    'Sales':[227,158]}, index = [1,2])
+
+sr.values=[1,1]
+
+
+
+```
 > ValueError Traceback (most recent call last)
 <ipython-input-4422e071c59> in module
 3 sr = pd.DataFrame({'Product':['Biscuit', 'Cookies'],
@@ -1653,11 +1767,13 @@ sr.values=[1,1]
 ---> 4 del sr.values=[1,1]
 
 ValueError: cannot delete array
+```
 
 ### 不能修改值
 
 ```python
 In [48]: import pandas as pd
+
 sr = pd.DataFrame({'Product':['Biscuit', 'Cookies'],
     'Sales':[227,158]}, index = [1,2])
 ```
@@ -1679,9 +1795,13 @@ In [51]: 158
 
 ```python
 In [56]: import numpy as np
+
 ar = np.array([1, 2, 3, 4])
+
 Out[56]: array([1 2 3 4])
+
 In [55]: ar = ar[::-1]
+
 Out[55]: array([4 3 2 1])
 ```
 
@@ -1689,10 +1809,15 @@ Out[55]: array([4 3 2 1])
 
 ```python
 In [56]: import numpy as np
+
 ar = np.array([1, 2, 3, 4])
+
 Out[56]: array([1 2 3 4])
+
 In [62]: # 这种方法 - ar + [1,1,1,1]
+
 ar = ar + 1
+
 Out[62]: array([2 3 4 5])
 ```
 
@@ -1700,9 +1825,13 @@ Out[62]: array([2 3 4 5])
 
 ```python
 In [63]: import numpy as np
+
 ar = np.array([5, 1, 3, 9])
+
 Out[63]: array([5 1 3 9])
+
 In [64]: ar.sort()
+
 Out[64]: array([1 3 5 9])
 ```
 
@@ -1714,15 +1843,23 @@ Out[64]: array([1 3 5 9])
 
 ```python
 In [71]: import pandas as pd
+
 import numpy as np
+
 ar = np.array([[1,2,3],[6,7,2],[4,9,1]])
+
 df = pd.DataFrame(data = ar, index = ['a','c','e'], columns = ['C1','C2','C3'])
 
 Out[71]:
+
       C1  C2  C3
+
 a     4   7   2
+
 c     9   1
+
 In [72]: df = df.reindex(['a','b','c','e'])
+
 df
 ```
 
@@ -1740,11 +1877,17 @@ df
 In [73]: df['C1'].isnull()
 
 Out[73]:
+
 a    False
+
 b     True
+
 c    False
+
 d     True
+
 e    False
+
 Name: C1, dtype: bool
 ```
 
@@ -1752,12 +1895,19 @@ Pandas 提供了各种清理缺失值的方法。`fillna` 可以用几种方式�
 
 ```python
 In [74]: df.fillna(0)
+
 Out[74]:
+
       C1  C2  C3
+
 a  1.0 2.0 3.0
+
 b  0.0 0.0 0.0
+
 c  4.0 7.0 2.0
+
 d  0.0 0.0 0.0
+
 e  4.0 9.0 1.0
 ```
 
@@ -1765,12 +1915,19 @@ e  4.0 9.0 1.0
 
 ```python
 In [75]: df.fillna(method='pad')
+
 Out[75]:
+
       C1  C2  C3
+
 a  1.0 2.0 3.0
+
 b  1.0 2.0 3.0
+
 c  4.0 7.0 2.0
+
 d  4.0 7.0 2.0
+
 e  4.0 9.0 1.0
 ```
 
@@ -1778,10 +1935,15 @@ e  4.0 9.0 1.0
 
 ```python
 In [76]: df.dropna()
+
 Out[76]:
+
       C1  C2  C3
+
 a  1.0 2.0 3.0
+
 c  4.0 7.0 2.0
+
 e  4.0 9.0 1.0
 ```
 
@@ -1789,16 +1951,23 @@ e  4.0 9.0 1.0
 
 ```python
 In [78]: import pandas as pd
+
 import numpy as np
+
 ar = np.array([[1,2,3],[4,7,2],[4,9,1]])
+
 df = pd.DataFrame(data = ar, index = ['a','c','e'], columns = ['C1','C2','C3'])
 
 df.replace({3:1})
 
 Out[78]:
+
   C1 C2 C3
+
 a  1  2  1
+
 c  4  7  2
+
 e  4  9  1
 ```
 
@@ -1816,7 +1985,9 @@ e  4  9  1
 
 ```python
 In [2]: import pandas as pd
+
 dt = pd.read_csv('trees.csv')
+
 dt
 ```
 
@@ -1835,7 +2006,9 @@ dt
 
 ```python
 In [4]: import pandas as pd
+
 dt = pd.read_csv('trees.csv')
+
 dt.shape
 
 Out[4]: (31, 4)
@@ -1845,7 +2018,9 @@ Out[4]: (31, 4)
 
 ```python
 In [5]: import pandas as pd
+
 dt = pd.read_csv('trees.csv')
+
 dt.head(10)
 ```
 
@@ -1866,7 +2041,9 @@ dt.head(10)
 
 ```python
 In [6]: import pandas as pd
+
 dt = pd.read_csv('trees.csv')
+
 dt.describe()
 ```
 
@@ -1885,8 +2062,11 @@ dt.describe()
 
 ```python
 In [7]: import pandas as pd
+
 dt = pd.read_csv('trees.csv')
+
 pd.set_option('precision',2)
+
 dt.describe()
 ```
 
@@ -1901,10 +2081,6 @@ dt.describe()
 | 75% | 23.50 | 15.25 | 80.00 |
 | max | 31.00 | 20.60 | 87.00 |
 
-
-
-
-
 ### 属性之间的相关性
 
 数据中两个属性（特征或标签）之间的关系被称为相关性。了解属性之间的关系非常。我们可以使用 `corr()` 函数并使用皮尔逊相关系数来计算它。皮尔逊相关系数可以理解为：
@@ -1915,13 +2091,16 @@ dt.describe()
 
 ```python
 In [2]:
+
 dt = pandas.read_csv('trees.csv')
+
 pandas.set_option('precision',2)
+
 dt.corr(method='pearson')
 ```
 
 | Index | Girth (in) | Height (ft) | Volume(ft3) |
-|---|---|---|---|---|
+|---|---|---|---|
 | Index | 1.00 | 0.97 | 0.47 | 0.90 |
 | Girth (in) | 0.97 | 1.00 | 0.52 | 0.97 |
 | Height (ft) | 0.47 | 0.52 | 1.00 | 0.60 |
@@ -1939,8 +2118,11 @@ dt.corr(method='pearson')
 
 ```python
 import pandas
+
 dt = pandas.read_csv('trees.csv')
+
 pandas.set_option('precision',2)
+
 type(dt.skew)
 ```
 
@@ -1963,12 +2145,19 @@ index 列的值从 1 到 31，它的偏度度为 0，即完全没有偏度。另
 
 ```python
 import pandas as pd
+
 from sklearn.preprocessing import MinMaxScaler
+
 dt = pandas.read_csv('trees.csv')
+
 ar = dt.values # Scaler Object
+
 Sclr = MinMaxScaler(feature_range=(0,1))
+
 skl_ar = Sclr.fit_transform(ar) #Scaling Scaled data
+
 skl_dt = pandas.DataFrame(skl_ar, columns=['S.No.', 'Height', 'Volume'])
+
 skl_dt.round(1).loc[5:10]
 ```
 
@@ -1998,15 +2187,24 @@ skl_dt.round(1).loc[5:10]
 
 ```python
 import pandas
+
 from sklearn.preprocessing import Normalizer
+
 dt = pandas.read_csv('trees.csv')
+
 ar = dt.values
+
 nm = Normalizer(norm='l1')
+
 nm_ar = nm.transform(ar)
+
 print(nm_ar[:5]) # Sum of the rows
+
 for i in [0,1,2,3,4]:
     print(sum(nm_ar[i]))
 ```
+
+
 
 | | 0.1116071 | 0.0926393 | 0.78125 | 0.1149536 |
 |---|---|---|---|---|
@@ -2024,26 +2222,36 @@ for i in [0,1,2,3,4]:
 
 我们还创建了一个循环来打印归一化数据每行的和，即 1（第 4 行除外，为 0.99）。注意我们没有进行任何舍入。
 
-在下一个方法即 L2 归一化中，每行的值的平方和为 1。因此让我们在 `norm` 参数中使用 ‘l2’ 并检查它们的和
+在下一个方法即 L2 归一化中，每行的值的平方和为 1。因此让我们在 `norm` 参数中使用 `l2` 并检查它们的和
 
 ```python
 In [12]: import pandas
+
 from sklearn.preprocessing import Normalizer
+
 dt = pandas.read_csv('trees.csv')
+
 ar = dt.values
+
 nm = Normalizer(norm='l2')
+
 nm_ar = nm.transform(ar)
 
 print('\L2 Normalization\n')
+
 print(nm_ar[:5])
 
 ### Sum of values in the rows
+
 print('\nsum of the values in each row\n')
+
 for i in [0,1,2]:
     print(sum(nm_ar[i]))
 
 ### Sum of the squares of the values in each row
+
 sm_row = '\nsum of squares of the values in each row\n'
+
 for i in [0,1,2]:
     sm_row = 0
     for val in nm_ar[i]:
@@ -2054,9 +2262,13 @@ for i in [0,1,2]:
 
 ```python
 [0.01403589 0.11649791 0.9825125 0.1445618]
+
 [0.03012517 0.1295167 0.233824]
+
 [0.04651114 0.1336447 0.2578315]
+
 [0.05355175 0.1581543 0.2195621]
+
 [0.08593241 0.2739911]
 ```
 
@@ -2070,14 +2282,21 @@ for i in [0,1,2]:
 
 ```python
 In [21]: import pandas
+
 from sklearn.preprocessing import Normalizer, Binarizer
+
 dt = pandas.read_csv('trees.csv')
+
 ar = dt.values
+
 Nm = Normalizer(norm='l1')
+
 nm_ar = Nm.transform(ar)
 
 Bin = Binarizer(threshold=0.1)
+
 bin_ar = Bin.transform(nm_ar)
+
 bin_ar[10:16]
 ```
 
@@ -2094,30 +2313,33 @@ Out[21]: array([[0., 0., 1., 1., 1],
 
 因此所有低于 0.1 的值都被更改为 0，所有大于 0.1 的值都被更改为 1。
 
-
-
-
-
 ### 标准化
 
 标准化（Standardization）或标准缩放是将数据属性的分布改变为高斯分布（正态分布）的方法。在此过程中，均值被变为 0，标准差被变为 1。让我们使用 `StandardScaler` 类及其 `fit()` 和 `transform()` 方法来对我们的数据。
 
 ```python
 In [14]: import pandas
+
 import numpy
+
 from sklearn import preprocessing
+
 dt = pandas.read_csv('trees.csv')
+
 ar = dt.values
+
 ### Standardizer
+
 Std = preprocessing.StandardScaler().fit(ar)
+
 std_ar = Std.transform(ar)
+
 print(std_ar[0:3])
 ```
 
 ```python
 print('Mean:', round(numpy.mean(std_ar),2))
 print('Std.Deviation:', round(numpy.std(std_ar),2))
-
 [[-1.67705098 -1.6231968 -0.9572112 -1.22883711]
  [-1.56524758 -1.50874137 -1.75488995 -1.22883711]
  [-1.45344419 -1.44095583 -2.07396086 -1.23502119]]
@@ -2136,11 +2358,13 @@ Std.Deviation: 1.0
 
 ```python
 In [15]: import pandas
+
 from sklearn import preprocessing
+
 dt = pandas.DataFrame({'Questions':['A','B','C','D','E'],
 'Answers':['True','True','False','True','False']})
-
 Out[15]:
+
 | Questions | Answers |
 |---|---|
 | 0 | True |
@@ -2154,15 +2378,22 @@ Out[15]:
 
 ```python
 In [17]: import pandas
+
 from sklearn import preprocessing
+
 dt = pandas.DataFrame({'Questions':['A','B','C','D','E'],
 'Answers':['True','True','False','True','False']})
+
 Enc = preprocessing.LabelEncoder()
+
 Enc.fit(dt['Answers'])
+
 ### Encoded Labels
+
 dt['Answers'] = Enc.transform(dt['Answers'])
 
 Out[17]:
+
 | Questions | Answers |
 |---|---|
 | 0 | 1 |
@@ -2178,16 +2409,23 @@ Out[17]:
 
 ```python
 In [18]: import pandas
+
 from sklearn import preprocessing
+
 dt = pandas.DataFrame({'Questions':['A','B','C','D','E'],
                                'Answers':['True','True','False','True','False']})
-Enc = preprocessing.LabelEncoder()
-Enc.fit(dt['Answers'])
-### Encoded labels
-dt['Answers'] = Enc.transform(dt['Answers'])
-### Decoding Labels
-print(Enc.inverse_transform([0,1]))
 
+Enc = preprocessing.LabelEncoder()
+
+Enc.fit(dt['Answers'])
+
+### Encoded labels
+
+dt['Answers'] = Enc.transform(dt['Answers'])
+
+### Decoding Labels
+
+print(Enc.inverse_transform([0,1]))
 ['False' 'True']
 ```
 
@@ -2203,18 +2441,20 @@ print(Enc.inverse_transform([0,1]))
 
 ## 14 数据可视化
 
-Python 拥有许多出色的数据可视化库。Pandas、numpy 和 matplotlib 的组合可以帮助创建几乎几乎所有类型的可视化图表。我们可以使用视觉效果来更好地理解我们的数据。
+Python 拥有许多出色的数据可视化库。`Pandas`、`numpy` 和 `matplotlib` 的组合可以帮助创建几乎几乎所有类型的可视化图表。我们可以使用视觉效果来更好地理解我们的数据。
 
 ### 绘制数据
 
-我们使用 `numpy` 库来创建映射图表所需的数字，并使用 matplotlib 的 `pyplot` 模块绘制实际的图表。
+我们使用 `numpy` 库来创建映射图表所需的数字，并使用 `matplotlib` 的 `pyplot` 模块绘制实际的图表。
 
 ```python
 In [11]: import numpy as npy
+
 import matplotlib.pyplot as plt
 
 x = np.arange(0,10) #outputs [0 1 2 3 4 5 6 7 8 9]
 y = x ^ 2
+
 plt.plot(x,y)
 ```
 
@@ -2228,19 +2468,28 @@ Out[11]: [<matplotlib.lines.Line2D at 0x26c>]
 
 ### 编辑标签和颜色
 
-我们知道 matplotlib 使用格式化字符串来自定义颜色并为图添加标签。
+我们知道 `matplotlib` 使用格式化字符串来自定义颜色并为图添加标签。
 
 ```python
 In [15]: import numpy as np
+
 import matplotlib.pyplot as plt
+
 x = np.arange(0,10)
 y = x**2
+
 ### Editing Labels
+
 plt.title("Matplotlib")
+
 plt.xlabel("X_Axis")
+
 plt.ylabel("Y_Axis")
+
 ### Editing Line style and color
+
 plt.plot(x,y,'c')
+
 plt.plot(x,y,'*')
 ```
 
@@ -2248,17 +2497,19 @@ plt.plot(x,y,'*')
 Out[15]: [<matplotlib.lines.Line2D at 0x26c>]
 ```
 
-![](img/d75fea3635f5553f1cb0585b39b1b4b_120_0.png)
+![](img/d75fea3635f5553f1cb0585b399b1b4b_120_0.png)
 
-我们使用 `title` 函数为图表添加标题，使用 `xlabel` 和 `ylabel` 分别添加 X 轴和 Y 轴标签。`'c'` 代表青色颜色，`'*'` 是符号。我们在任何参数中传递这些值是因为 matplotlib 将它们视为格式化字符串。
+我们使用 `title` 函数为图表添加标题，使用 `xlabel` 和 `ylabel` 分别添加 X 轴和 Y 轴标签。`'c'` 代表青色颜色，`'*'` 是符号。我们在任何参数中传递这些值是因为 `matplotlib` 将它们视为格式化字符串。
 
 ### 单变量图
 
-单变量图是用于单独理解每个变量的图表。我们将使用上一节中的 `trees.csv` 数据。首先，使用 pandas 的 `hist()` 函数为每个变量绘制直方图。
+单变量图是用于单独理解每个变量的图表。我们将使用上一节中的 `trees.csv` 数据。首先，使用 `pandas` 的 `hist()` 函数为每个变量绘制直方图。
 
 ```python
 In [1]: import pandas
+
 dt = pandas.read_csv('trees.csv')
+
 dt.hist()
 ```
 
@@ -2274,9 +2525,12 @@ Out[1]: [[<matplotlib.axes.Subplot>, <matplotlib.axes.Subplot>, <matplotlib.axes
 
 ```python
 In [2]: import pandas
+
 dt = pandas.read_csv('trees.csv',
 names=['Index', 'Girth', 'Volume'])
+
 dt.drop(0, inplace=True)
+
 dt['Height'].hist()
 ```
 
@@ -2293,12 +2547,15 @@ Out [2]: <matplotlib.axes.Subplot at 0x26f>
 
 ### 数据可视化
 
-我们使用 pandas 的 `plot()` 函数并在 `kind` 参数中指定密度创建密度图。
+我们使用 `pandas` 的 `plot()` 函数并在 `kind` 参数中指定密度创建密度图。
 
 ```python
 In [7]: import pandas
+
 dt = pandas.read_csv('trees.csv')
+
 del dt['Index']
+
 dt.plot(kind='density')
 ```
 
@@ -2324,8 +2581,11 @@ Out [8]: array([<matplotlib.axes._subplots.AxesSubplot, <matplotlib.axes._subplo
 
 ```python
 In [9]: import pandas
+
 dt = pandas.read_csv('trees.csv')
+
 del dt['Index']
+
 dt.plot(kind='box',subplots=True)
 ```
 
@@ -2336,15 +2596,13 @@ Out [9]:   "Girth (in)"               AxesSubplot(0.125;0.125;0.22941:
            dtype: object
 ```
 
+
+
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_124_0.png)
 
 箱线图具有以下特征：
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_124_1.png)
-
-
-
-
 
 ### 多变量图表
 
@@ -2352,22 +2610,33 @@ Out [9]:   "Girth (in)"               AxesSubplot(0.125;0.125;0.22941:
 
 ```python
 In [16]: from matplotlib import pyplot
+
 import pandas
+
 dt = pandas.read_csv('trees.csv')
+
 del dt['Index']
+
 cor = dt.corr() # correlations
+
 ### Plotting correlation matrix
+
 vis = plt.figure()
+
 ### Adding the color meter
+
 ax = vis.add_subplot(111)
+
 cax = ax.matshow(cor, vmin=-1, vmax=1)
+
 vis.colorbar(cax)
+
 pyplot.show()
 ```
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_125_0.png)
 
-我们使用了 matplotlib 库的 `figure()` 函数，结合矩阵，我们还添加了颜色条来根据相关性数据指示颜色的值（即使用 `corr()` 函数计算出的值）。我们使用 `add_subplot()` 函数添加矩阵，并以 `111` 作为参数（即其位置）。然后我们使用 `matshow()` 函数并传入了相关性以及最小值和最大值。最后我们通过 `colorbar` 绘制了矩阵。
+我们使用了 `matplotlib` 库的 `figure()` 函数，结合矩阵，我们还添加了颜色条来根据相关性数据指示颜色的值（即使用 `corr()` 函数计算出的值）。我们使用 `add_subplot()` 函数添加矩阵，并以 `111` 作为参数（即其位置）。然后我们使用 `matshow()` 函数并传入了相关性以及最小值和最大值。最后我们通过 `colorbar` 绘制了矩阵。
 
 ### 数据可视化
 
@@ -2375,29 +2644,41 @@ pyplot.show()
 
 ```python
 In [19]: vis = plt.figure()
+
 ax = vis.add_subplot(111)
+
 cax = ax.matshow(cor, vmin=-1, vmax=1)
+
 vis.colorbar(cax)
+
 ax.set_xticks([0,1,2])
+
 ax.set_yticks([0,1,2])
+
 ax.set_xticklabels(['Girth', 'Height', 'Volume'])
+
 ax.set_yticklabels(['Girth', 'Height', 'Volume'])
+
 plt.show()
 ```
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_126_0.png)
 
-我们可以轻松理解变量之间的关系，例如 Girth（胸围）与 Volume（体积）的相关性接近 1（完全正相关），而 Height（高度）与 Volume（体积）之间的关系比 Girth 与 Volume 小一点。
+我们可以轻松理解变量之间的关系，例如 `Girth`（胸围）与 `Volume`（体积）的相关性接近 `1`（完全正相关），而 `Height`（高度）与 `Volume`（体积）之间的关系比 `Girth` 与 `Volume` 小一点。
 
-我们还可以查看散点矩阵图，通过点图来理解变量或属性之间的关系。我们可以使用 pandas 的 `scatter_matrix()` 函数来实现这一点。我们需要使用 `pandas.plotting.scatter_matrix()` 语法来调用该函数并在函数的括号内传递数据。
+我们还可以查看散点矩阵图，通过点图来理解变量或属性之间的关系。我们可以使用 `pandas` 的 `scatter_matrix()` 函数来实现这一点。我们需要使用 `pandas.plotting.scatter_matrix()` 语法来调用该函数并在函数的括号内传递数据。
 
 ### 数据可视化
 
 ```python
 In [1]: from matplotlib import pyplot
+
 import pandas
+
 dt = pandas.read_csv('trees.csv')
+
 dt = dt['Index']
+
 pandas.plotting.scatter_matrix(dt)
 ```
 
@@ -2438,7 +2719,7 @@ Girth & Volume
 
 回归模型是描述输入和输出之间关系的数学模型。最常见的类型是线性回归，它假设变量之间存在线性关系。
 
-我们可以使用 scikit-learn 库来构建回归模型。首先，我们需要准备数据，然后将其分为训练集和测试集。接着，我们在训练集上训练模型，最后在测试集上评估模型的性能。
+我们可以使用 `scikit-learn` 库来构建回归模型。首先，我们需要准备数据，然后将其分为训练集和测试集。接着，我们在训练集上训练模型，最后在测试集上评估模型的性能。
 
 ### 线性回归
 
@@ -2446,8 +2727,11 @@ Girth & Volume
 
 ```python
 import pandas
+
 from sklearn import linear_model
+
 import sklearn.metrics
+
 import matplotlib.pyplot
 ```
 
@@ -2457,31 +2741,33 @@ import matplotlib.pyplot
 
 ```python
 import pandas
+
 from sklearn import linear_model
+
 import sklearn.metrics
+
 import matplotlib.pyplot
 ```
 
-我们需要 pandas 库来导入 CSV 数据，linear_model 来构建回归模型，sklearn.metrics 来评估模型性能，以及 matplotlib 来进行可视化。在训练模型之前，我们可以查看我们的 CSV 数据。
+我们需要 `pandas` 库来导入 CSV 数据，`linear_model` 来构建回归模型，`sklearn.metrics` 来评估模型性能，以及 `matplotlib` 来进行可视化。在训练模型之前，我们可以查看我们的 CSV 数据。
 
 ## 回归
 
 ```python
 import pandas
+
 from sklearn import linear_model
+
 import sklearn.metrics
+
 import matplotlib.pyplot
 ```
 
-我们需要 pandas 库来导入 CSV 数据，linear_model 来构建回归模型，sklearn.metrics 来评估模型性能，以及 matplotlib 来进行可视化。
-
-
-
-
+我们需要 `pandas` 库来导入 CSV 数据，`linear_model` 来构建回归模型，`sklearn.metrics` 来评估模型性能，以及 `matplotlib` 来进行可视化。
 
 # 回归
 
-对 `test_size` 参数设置为 0.1(10%)。数据的划分和分配可以从下图所示：
+对 `test_size` 参数设置为 `0.1`（10%）。数据的划分和分配可以从下图所示：
 
 ```
 inp_X, tst_X, out_y, tst_y = train_test_split(height,weight,test_size=0.1)
@@ -2490,12 +2776,14 @@ inp_X, tst_X, out_y, tst_y = train_test_split(height,weight,test_size=0.1)
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_133_0.png)
 
 之后，我们我们之前的那样创建了模型并对其进行训练。
-现在我们可以让 RegModel 预测 tst_X 值的权重，并将其与 tst_y 值进行比较。
+现在我们可以让 `RegModel` 预测 `tst_X` 值的权重，并将其与 `tst_y` 值进行比较。
 
 ```
 In [3]: pred_y = RegModel.predict(tst_X)
+
 cmp = pandas.DataFrame({'Predictions':pred_y.flatten(),
-    'Actual values':tst_y['Weight(lbs)']])
+    'Actual values':tst_y['Weight(lbs)']})
+
 cmp.plot(kind='bar',figsize=(7.5,6))
 ```
 
@@ -2509,7 +2797,9 @@ cmp.plot(kind='bar',figsize=(7.5,6))
 
 ```
 In [4]: pyplot.scatter(tst_X, tst_y, color='black')
+
 pyplot.plot(tst_X, pred_y, color='yellow')
+
 plt.show()
 ```
 
@@ -2521,6 +2811,7 @@ plt.show()
 
 ```
 In [6]: metrics.mean_absolute_error(tst_y, pred_y)
+
 Out[6]: 11.529538265252379
 ```
 
@@ -2571,9 +2862,13 @@ y 是实际值或因变量。MLR 模型的训练过程与之前相同，但这�
 
 ```
 import pandas
+
 from sklearn import linear_model
+
 from sklearn import metrics
+
 from matplotlib import pyplot
+
 from sklearn.model_selection import train_test_split
 ```
 
@@ -2583,10 +2878,15 @@ from sklearn.model_selection import train_test_split
 
 ```
 In [1]: import pandas
+
 from sklearn import linear_model, metrics
+
 from sklearn.model_selection import train_test_split
+
 from matplotlib import pyplot
+
 dt = pandas.read_csv('Mall_Customers.csv')
+
 dt.head()
 ```
 
@@ -2604,14 +2904,23 @@ Out[1]:
 
 ```
 In [2]: import pandas
+
 from sklearn import linear_model, metrics
+
 from sklearn.model_selection import train_test_split
+
 from matplotlib import pyplot
+
 from sklearn import preprocessing
+
 dt = pandas.read_csv('Mall_Customers.csv')
+
 Enc = preprocessing.LabelEncoder()
+
 Enc.fit(['Male', 'Female'])
+
 dt['Genre'] = Enc.transform(dt['Genre'])
+
 dt.head()
 ```
 
@@ -2630,36 +2939,49 @@ Out[2]:
 ```
 In [3]: Input = dt.drop(columns=['CustomerID',
                                  'Annual Income (k$)',
-                                 'Spending Score (1-100)')
+                                 'Spending Score (1-100)'])
+
             Output = dt.drop(columns=['CustomerID',
                                  'Genre', 'Age',
-                                 'Spending Score (1-100)')
+                                 'Spending Score (1-100)'])
+
 inp_X,tst_X,out_y,tst_y = train_test_split(
                                Input,Output,test_size=0.1)
 ```
 
-输入值存储在 Input 中，输出值存储在 Output 中。然后我们使用 `train_test_split()` 函数划分数据进行训练和测试。现在我们可以创建模型并对其进行训练。
+输入值存储在 `Input` 中，输出值存储在 `Output` 中。然后我们使用 `train_test_split()` 函数划分数据进行训练和测试。现在我们可以创建模型并对其进行训练。
 
 ```
 In [4]: Input = dt.drop(columns=['CustomerID',
                                  'Annual Income (k$)',
-                                 'Spending Score (1-100)')
+                                 'Spending Score (1-100)'])
+
             Output = dt.drop(columns=['CustomerID',
                                  'Genre', 'Age',
-                                 'Spending Score (1-100)')
+                                 'Spending Score (1-100)'])
+
 inp_X,tst_X,out_y,tst_y = train_test_split(
                                Input,Output,test_size=0.1)
 
 ## Training模型
-RegModel = linear_LinearRegression()
-RegModel.fit(inp_X,out_y)
 ```
 
+
+
+`RegModel` = `linear_LinearRegression()`
+
+`RegModel.fit(inp_X,out_y)`
+
+
 ```
-Out [4]: LinearRegression()
 ```
 
-我们的 RegModel 准备好在传入性别和年龄作为输入时预测人的年收入。但我们在这里不知道年龄的范围，所以可以执行以下代码来了解：
+Out [4]: `LinearRegression()`
+
+```
+
+我们的 `RegModel` 准备好在传入性别和年龄作为输入时预测人的年收入。但我们在这里不知道年龄的范围，所以可以执行以下代码来了解：
+
 
 ```
 In [31]: dt['Age'].max() - dt['Age'].min()
@@ -2669,24 +2991,19 @@ Out [31]: 52
 
 数据集中的年龄范围是 52
 
-
-
-
 在比较预测值和实际值之前，我们可以要求模型预测一些值，例如 30 岁女性的收入以及 42 岁男性的收入是多少。
 
 ```python
 In [5]: RegModel.predict([0,30], [1,42])
-
 Out[5]: array([[60.5504497], [62.09356734]])
 ```
 
-我们传递值的方式。由于 Female（女性）和 Male（男性）被编码为 0 和 1，我们传递了 [0,30], [1,42]，模型告诉我们30 岁的女性收入约为 60.5k，42 岁的男性的收入约为 62k。现在，让我们预测测试输入并与实际结果进行比较。
+我们传递值的方式。由于 Female（女性）和 Male（男性）被编码为 0 和 1，我们传递了 `[0,30]`, `[1,42]`，模型告诉我们30 岁的女性收入约为 60.5k，42 岁的男性的收入约为 62k。现在，让我们预测测试输入并与实际结果进行比较。
 
 ```python
 In [6]: pred_y = RegModel.predict(test_X)
 cmp = pandas.DataFrame({'Predicted':pred_y.flatten(), 'Actual':test_y['kind='Annual Income ($k)'].values})
 cmp.plot(kind='bar',figsize=(7.5,6))
-
 Out[6]: <matplotlib.axes.AxesSubplot object at 0x1402ccc89a0>
 ```
 
@@ -2720,10 +3037,10 @@ plt.show()
 
 我们已经知道什么是分类算法了，但分类算法有两种类型：懒学习器（lazy learners）和急学习器（eager learners）。即懒学习器在训练期间学习较少，例如 KNN 算法；而急学习器在训练中学习而在测试中减少，例如决策树、朴素贝叶斯等。现在让我们使用决策树创建一个分类器。
 
-### # 决策树
+### 决策树
 
 让我们创建一个分类器，在提供年龄和性别输入的情况下，将客户分类为他们喜欢的口味。为此，我们将使用决策树，这是一种可以执行分类和回归任务的算法。它学习数据集中的类别并使用决策树创建类别，然后预测输入的类别。
-我们将使用 scikit-learn 的 DecisionTreeClassifier 来创建我们的模型。你可以从这里下载数据集——
+我们将使用 scikit-learn 的 `DecisionTreeClassifier` 来创建我们的模型。你可以从这里下载数据集——
 现在进入你的 Jupyter notebook 并导入此项目所需的包和模块。
 
 ```python
@@ -2740,7 +3057,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
 ```
 
-我们可以导入数据集并使用 head() 函数进行预览。
+我们可以导入数据集并使用 `head()` 函数进行预览。
 
 ```python
 In [2]: import pandas
@@ -2777,9 +3094,9 @@ dt.head()
 | 3 | 8 | Strawberry |
 | 4 | 11 | Butterscotch |
 
-Male 和 Female 标签使用 LabelEncoder 分别编码为 1 和 0。注意我们对 Male 和 Female 进行了拟合。
+`Male` 和 `Female` 标签使用 `LabelEncoder` 分别编码为 1 和 0。注意我们对 `Male` 和 `Female` 进行了拟合。
 
-现在我们可以移动新单元格，并将数据拆分为输入和输出。然后我们将使用 DecisionTreeClassifier 创建分类器，并使用输入和输出值训练模型。
+现在我们可以移动新单元格，并将数据拆分为输入和输出。然后我们将使用 `DecisionTreeClassifier` 创建分类器，并使用输入和输出值训练模型。
 
 ```python
 In [4]: inp_X = dt.drop(columns='Flavour')
@@ -2788,28 +3105,27 @@ out_y = dt.drop(columns=['Age', 'Gender'])
 model = DecisionTreeClassifier()
 model.fit(inp_X,out_y)
 ```
-Out[4]: DecisionTreeClassifier()
+Out[4]: `DecisionTreeClassifier()`
 
-我们使用 fit() 函数训练了模型，模型已准备好进行预测。让我们询问模型 7 岁男孩和 9 岁女孩会喜欢什么：
+我们使用 `fit()` 函数训练了模型，模型已准备好进行预测。让我们询问模型 7 岁男孩和 9 岁女孩会喜欢什么：
 
 ```python
 In [5]: model.predict([[7,1], [9,0]])
 ```
 Out[5]: array(['Chocolate', 'Strawberry'], dtype=object)
 
-根据我们的模型，7 岁的男孩 [7,1] 会喜欢巧克力，9 岁的女孩会喜欢草莓，这很准确。但我们只训练了 20 行数据，得到了一些结果。如果我们询问模型预测 30 岁的女性会喜欢什么，即超出了数据提供的年龄范围：
+根据我们的模型，7 岁的男孩 `[7,1]` 会喜欢巧克力，9 岁的女孩会喜欢草莓，这很准确。但我们只训练了 20 行数据，得到了一些结果。如果我们询问模型预测 30 岁的女性会喜欢什么，即超出了数据提供的年龄范围：
 
 ```python
 In [8]: model.predict([[30,0]])
 ```
 Out[8]: array(['Coffee'], dtype=object)
 
-根据我们的模型，30 岁的女性 [7,1] 会喜欢咖啡，这可能是错误的，因为数据集提供的最大年龄是 24。为了查看模型用于分类数值的决策树，可以使用以下代码：
+根据我们的模型，30 岁的女性 `[7,1]` 会喜欢咖啡，这可能是错误的，因为数据集提供的最大年龄是 24。为了查看模型用于分类数值的决策树，可以使用以下代码：
 
 ```python
 In [1]: import graphviz
 from sklearn.tree import export_graphviz
-
 data = export_graphviz(model,
 out_file='dt_tree.dot', feature_names=['Age', 'Gender'],
 class_names=['Chocolate', 'Strawberry', 'Butterscotch', 'Vanilla', 'Mango', 'Almond_Choco', 'Coffee'], filled=True, rounded=True, special_characters=True)
@@ -2820,12 +3136,12 @@ graph = graphviz.Source(data)
 
 此时你需要在 anaconda prompt 中使用以下代码安装 graphviz
 `conda install -c conda-forge python-graphviz`
-然后导入 export_graphviz 和 graphviz。使用 export_graphviz 可视化决策树并使用 graphviz 的 Source 函数将其存储在 data 中。我们查看树，但你可以看到树太大无法放入页面，所以让我们通过拆分来理解它。
-看看如果输入 [7,1]（7岁男孩）会发生什么：
+然后导入 `export_graphviz` 和 `graphviz`。使用 `export_graphviz` 可视化决策树并使用 `graphviz` 的 `Source` 函数将其存储在 `data` 中。我们查看树，但你可以看到树太大无法放入页面，所以让我们通过拆分来理解它。
+看看如果输入 `[7,1]`（7岁男孩）会发生什么：
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_147_0.png)
 
-从根节点开始，第一次比较是年龄是否小于等于20.5（Age <= 20.5），输入的年龄为7，所以我们移动到 True 侧。
+从根节点开始，第一次比较是年龄是否小于等于20.5（`Age <= 20.5`），输入的年龄为7，所以我们移动到 True 侧。
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_147_1.png)
 
@@ -2849,16 +3165,13 @@ graph = graphviz.Source(data)
 
 但你可能会问还有哪些其他属性，如 gini、samples 等。Gini 是代价函数的名称，用于评估数据集中的二分划分，并与分类目标变量“Success”（成功）或“Failure”（失败）配合。完美的 Gini 指值为 0，最差的是 0.5，用于判断是否进一步拆分。你可以看到 gini 分数为 0 的没有被进一步拆分。samples 是给定数据集中具有相应特征的数据点数量。
 
-
-
-
 这里是 7 岁男孩偏好分类的完整决策树。如果你想以更高质量查看整棵树，请执行该代码。
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_149_0.png)
 
 同样，我们可以使用决策树来解决基于分类的不同类型的问题。但你可能会问，树是如何创建这些比较或划分的呢？这并不是必须知道，但你应该了解。首先，算法使用下面的公式为每个属性计算基尼指数（gini index）：
 
-$p^2 + q^2$
+`p^2 + q^2`
 
 这是成功(p) 和失败(q) 概率平方之和。然后，数据集被分为两个行列表，具有一个属性的索引和该属性的划分值。接着，它通过评估划分的成本(gini)来找到最佳的划分方式。
 
@@ -2903,7 +3216,7 @@ dt = pandas.read_csv('Rainfall_data.csv')
 ```
 
 | Unnamed: 0 | Temperature | Humidity% | Rain |
-|---|---|---|---|---|
+|---|---|---|---|
 | 0 | 0 | 34 | 74.2 | Yes |
 | 1 | 1 | 19 | 68.2 | No |
 | 2 | 2 | 28 | 67.2 | Yes |
@@ -2940,9 +3253,7 @@ CModel = linear_model.LogisticRegression()
 CModel.fit(inp_X, out_y)
 ```
 
-Out [4]: LogisticRegression()
-
-```
+Out [4]: `LogisticRegression()`
 
 所以我们的模型已经准备好进行预测了，让我们移动到新单元格让模型进行预测。我们将比较这些值并打印准确率。
 
@@ -2955,6 +3266,8 @@ print('Accuracy Score:',accuracy_score(test_y,pred_y))
 ```
 
 Out [5]: 0.91
+
+
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_151_0.png)
 
@@ -2974,7 +3287,7 @@ Out [5]: 0.91
 
 让我们使用一个数据集来预测是否会下雨，提供了温度和湿度百分比作为输入。你可以从这里下载数据集 -
 
-让我们一起导入模块和数据集。这次我们将从 sklearn 中导入 `linear_model` 和 `train_test_split`。
+让我们一起导入模块和数据集。这次我们将从 `sklearn` 中导入 `linear_model` 和 `train_test_split`。
 
 ```
 import pandas
@@ -3005,7 +3318,7 @@ dt = pandas.read_csv('Rainfall_data.csv')
 ```
 
 | Unnamed: 0 | Temperature | Humidity% | Rain |
-|---|---|---|---|---|
+|---|---|---|---|
 | 0 | 0 | 34 | 74.2 | Yes |
 | 1 | 1 | 19 | 68.2 | No |
 | 2 | 2 | 28 | 67.2 | Yes |
@@ -3045,23 +3358,24 @@ CModel.fit(inp_X, out_y)
 Out [4]: LogisticRegression()
 
 ```
-
 所以我们的模型已经准备好进行预测了，让我们移动到新单元格让模型进行预测。我们将比较这些值并打印准确率。
+```
 
 ```
 In [5]: from sklearn import preprocessing
+
 pred_y = CModel.predict(test_X)
+
 Enc = preprocessing.LabelEncoder().fit(['Yes', 'No'])
+
 cmp = pandas.DataFrame({'Predicted':pred_y,'Actual':test_y})
+
 print('Accuracy Score:',accuracy_score(test_y,pred_y))
 ```
 
 Out [5]: 0.91
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_151_0.png)
-
-
-
 
 In [4]: from sklearn import preprocessing
 Input = preprocessing.scale(dt.drop(columns='Rainfall')).values
@@ -3099,13 +3413,13 @@ Out[5]: <matplotlib.axes.AxesSubplot object at 0x239fe07>
 
 那么，让我们使用朴素贝叶斯算法，利用逻辑回归中使用的数据集创建一个模型，来预测是否会下雨。我们将为此模型使用朴素贝叶斯算法。
 
-| | |
+|  |  |
 |---|---|
-| [1]: import pandas | |
-| from sklearn import naive_bayes, metrics | |
-| from sklearn.preprocessing import LabelEncoder | |
-| from sklearn.model_selection import train_test_split | |
-| dt = pandas.read_csv('Rainfall.csv') | |
+| [1]: import pandas |  |
+| from sklearn import naive_bayes, metrics |  |
+| from sklearn.preprocessing import LabelEncoder |  |
+| from sklearn.model_selection import train_test_split |  |
+| dt = pandas.read_csv('Rainfall.csv') |  |
 
 这次我们从 `sklearn` 导入了 `naive_bayes` 用来创建模型，并使用 `LabelEncoder` 在比较预测时对标签进行编码。接下来，我们可以使用 `train_test_split()` 函数并将 `test_size` 设置为 0.1，分别划分为训练输入、测试输入、训练输出和测试输出。
 
@@ -3193,9 +3507,6 @@ In [2]: X, y = make_blobs(n_samples=100, centers=2, cluster_std=0.5)
 
 最后簇的标准差为 0.5，即在 `cluster_std` 参数指定的。
 
-
-
-
 现在我们可以使用散点图来可视化我们的数据集。
 
 ```
@@ -3238,11 +3549,13 @@ for m, b, d in [[0.375,0.5,3],(-0.5,2,6)]:
  yfit = m * xfit + b
  plt.plot(xfit, yfit, '-k')
  plt.fill_between(xfit, yfit - d, yfit + d,
-                 edgecolor='none',color='#AAAAAA', alpha=0.4)
+ edgecolor='none',color='#AAAAAA', alpha=0.4)
  plt.xlim(-5,5)
 ```
 
-Out[16]: (-5.0, 5.0)
+
+
+`Out[16]`: `(-5.0, 5.0)`
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_166_0.png)
 
@@ -3250,15 +3563,18 @@ Out[16]: (-5.0, 5.0)
 
 我们采取的方法与之前相同，绘制了包含数据簇、分离线的图表，然后使用 `fill_between()` 函数创建了这些间隔。我们传递了其中一个 X 轴和两个 Y 轴的值来填充它们，以表示间隔。我们不需要 `edgecolor`，填充颜色设为黑色，`alpha` 为 0.4（透明度）。
 
-现在我们可以从 `sklearn.svm` 导入 SVC 支持向量分类器来创建我们的模型。
+现在我们可以从 `sklearn.svm` 导入 `SVC` 支持向量分类器来创建我们的模型。
 
+```
 In [36]: from sklearn.svm import SVC
 SVC(kernel='linear')
 fit(X, y)
 [36]: SVC(kernel='linear')
+```
 
 让我们创建一个函数，使用我们的模型来绘制最大间隔超平面和支持向量。
 
+```
 In [40]: def MMH(model, ax=None, plot_support=True):
 ## 2-D 图绘制
 if ax is None:
@@ -3279,12 +3595,11 @@ ax.contour(X, Y, P, colors='k',
 if plot_support:
  ax.scatter(model.support_vectors_[:, 0],
             model.support_vectors_[:, 1])
-
-
-
+```
 
 ## 支持向量机
 
+```
 In [5]: Z = SvcModel.predict(X_plot)
 z = Z.reshape(xx.shape)
 plt.figure(figsize=(15, 5))
@@ -3292,21 +3607,29 @@ plt.subplot(121)
 plt.contour(xx, yy, Z, alpha=0.3)
 plt.scatter(X[:, 0], X[:, 1], c=y)
 plt.xlim(xx.min(), xx.max())
+```
 
-Out[5]: (3.3, 8.88272727272751)
+`Out[5]`: `(3.3, 8.88272727272751)`
 
 ![](img/d75fea3635f5553f1cb0585b39b1b4b_171.png)
 
-同样，我们可以使用径向基函数内核创建 SVC。
+同样，我们可以使用径向基函数内核创建 `SVC`。
 
 ```
 In [10]: RbfSvc = svm.Svc(kernel='rbf', C=1.0).fit(X, y)
+
 Z = RbfSvc.predict(X_plot)
+
 z = Z.reshape(xx.shape)
+
 plt.figure(figsize=(15, 5))
+
 plt.subplot(121)
+
 plt.contour(xx, yy, Z, alpha=0.3)
+
 plt.scatter(X[:, 0], X[:, 1], c=y)
+
 plt.xlim(xx.min(), xx.max())
 ```
 
@@ -3321,8 +3644,8 @@ Out[10]: (3.3, 8.88272727272751)
 ## 聚类算法
 
 - K-Means
-- 均值偏移 (Mean shift)
-- 层次聚类 (Hierarchical)
+- 均值偏移 `Mean shift`
+- 层次聚类 `Hierarchical`
 
 ![](img/d75fea3635f5553f1cb0585b39b1b4b_173.png)
 
@@ -3334,14 +3657,14 @@ Out[10]: (3.3, 8.88272727272751)
 
 发现的结果是不同类型的聚类：
 
-- 基于密度的：聚类作为稠密区域形成。这些算法具有良好的准确率和合并两个聚类的能力。带噪声的基于密度的空间聚类 (DBSCAN)、用于识别聚类的点排序 (OPTICS)。
-- 基于层次的：聚类在层次树中形成，具有凝聚性聚类（自下而上的方法）和分裂性聚类（自上而下的方法）。使用代表点进行聚类 (CURE)、基于层次结构的平衡迭代聚类 (BIRCH)。
-- 划分的：聚类通过将对象划分为 k 份形成，聚类的数量将等于划分数量。K-Means。
-- 网格的：聚类以网格形式形成。这种方法速度快，且与对象的数量无关。统计信息网格 (STING)、聚类 CLIQUE。
+- 基于密度的：聚类作为稠密区域形成。这些算法具有良好的准确率和合并两个聚类的能力。带噪声的基于密度的空间聚类 `DBSCAN`、用于识别聚类的点排序 `OPTICS`。
+- 基于层次的：聚类在层次树中形成，具有凝聚性聚类（自下而上的方法）和分裂性聚类（自上而下的方法）。使用代表点进行聚类 `CURE`、基于层次结构的平衡迭代聚类 `BIRCH`。
+- 划分的：聚类通过将对象划分为 k 份形成，聚类的数量将等于划分数量。`K-Means`。
+- 网格的：聚类以网格形式形成。这种方法速度快，且与对象的数量无关。统计信息网格 `STING`、聚类 `CLIQUE`。
 
 到为止，我们已经通过预测值和实际值计算了监督学习的准确率，那么当我们处理无标记数据时，如何对无监督学习这样做呢？
 
-有一些指标可以根据聚类的变化来评估不同无监督学习算法的性能或质量。轮廓分析（Silhouette analysis）用于通过衡量聚类之间的距离来检查聚类模型的质量。它基本上为我们提供了一种通过轮廓系数评估聚类数量等参数的方法。
+有一些指标可以根据聚类的变化来评估不同无监督学习算法的性能或质量。轮廓分析 `Silhouette analysis` 用于通过衡量聚类之间的距离来检查聚类模型的质量。它基本上为我们提供了一种通过轮廓系数评估聚类数量等参数的方法。
 
 轮廓系数的范围从 -1 到 1。不同的数字代表以下：
 
@@ -3351,9 +3674,9 @@ Out[10]: (3.3, 8.88272727272751)
 
 可以使用以下公式计算轮廓系数：
 
-Silhouette Score = p - q / max(p, q)
+`Silhouette Score = p - q / max(p, q)`
 
-其中 p 是到最近聚类中点的平均距离，q 是到所有点的类内平均距离。
+其中 `p` 是到最近聚类中点的平均距离，`q` 是到所有点的类内平均距离。
 
 接下来，我们可以使用 Davis-Bouldin 指数来判断聚类之间的间距是否良好以及聚类的密度。我们可以使用以下公式计算 DB 指数：
 
@@ -3361,11 +3684,11 @@ Silhouette Score = p - q / max(p, q)
 
 ## 聚类
 
-$DB = \frac{1}{n} \max_{j\neq i} \left(\frac{\sigma_i + \sigma_j}{d(c_i, c_j)}\right)$
+`$DB = \frac{1}{n} \max_{j\neq i} \left(\frac{\sigma_i + \sigma_j}{d(c_i, c_j)}\right)$`
 
-$n$ 是聚类的数量，$\sigma^i$ 是聚类 $i$ 中所有点到聚类中心 $c_i$ 的平均距离。
+`n` 是聚类的数量，`$\sigma^i$` 是聚类 `i` 中所有点到聚类中心 `c_i` 的平均距离。
 
-较低的值表示性能良好，其中 $\theta$ 是最小值。
+较低的值表示性能良好，其中 `$\theta$` 是最小值。
 
 Dunn 指数是另一个用于评估聚类算法性能的指标。它与 DB 指数相似，区别在于：
 
@@ -3374,9 +3697,9 @@ Dunn 指数是另一个用于评估聚类算法性能的指标。它与 DB 指�
 
 Dunn 指数可以使用以下公式计算：
 
-$D = \frac{\min_{i \neq j} P(i,j)}{\max_{k} q(k)}$
+`$D = \frac{\min_{i \neq j} P(i,j)}{\max_{k} q(k)}$`
 
-$i,j,n$ 是类的索引，$P$ 是类间距离，$q$ 是类内距离。
+`i,j,n` 是类的索引，`P` 是类间距离，`q` 是类内距离。
 
 Dunn 指数随着聚类算法的提高而增加。
 
@@ -3394,7 +3717,7 @@ from sklearn.datasets import make_blobs
 from matplotlib import pyplot
 ```
 
-dt, y = make_blobs(n_samples=240, centers=4, std=0.6)
+`dt, y = make_blobs(n_samples=240, centers=4, std=0.6)`
 
 ```python
 kmeans = KMeans(n_clusters=4)
@@ -3429,7 +3752,6 @@ plt.scatter(dt[:,0], dt[:,1], c=pred, s=30)
 plt.plot(centers[:,0], centers[:,1], c='x', s=100)
 ```
 
-
 这次我们指定了聚类的位置，并将中心（x 和 y 值）作为 2D 数组传递，且点数等于聚类的数量。我们可以使用 `scatter()` 散图来查看数据
 
 ```python
@@ -3438,11 +3760,11 @@ X2 = dt[:,1]
 pyplot.scatter(X1,X2)
 ```
 
-Out[3]: <matplotlib.collections.PathCollection at 0x1dbd820e
+`Out[3]`: `<matplotlib.collections.PathCollection at 0x1dbd820e`
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_181_0.png)
 
-现在我们可以使用 MeanShift 算法创建一个聚类模型，并传递我们的 `dt` 数据
+现在我们可以使用 `MeanShift` 算法创建一个聚类模型，并传递我们的 `dt` 数据
 
 ```python
 In [4]: Clstr = MeanShift()
@@ -3466,9 +3788,9 @@ for i in range(len(dt)):
     plt.scatter(cen[i,0],cen[i,1], marker='x',color='k',s=100,zorder=10)
 ```
 
-Estimated No. of Clusters: 3
+`Estimated No. of Clusters: 3`
 
-Out[5]: <matplotlib.collections.PathCollection at 0x1dbd92972
+`Out[5]`: `<matplotlib.collections.PathCollection at 0x1dbd92972`
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_182_0.png)
 
@@ -3486,11 +3808,11 @@ Out[5]: <matplotlib.collections.PathCollection at 0x1dbd92972
 
 层次聚类分为以下两种：
 
-- 凝聚法（Agglomerative）：层次聚类的一种类型，其中每个单独的数据点被视为一个聚类，然后合并或汇合成 2 个、4 个、8 个聚类，反之亦然，直到形成包含整个数据集的聚类
+- 凝聚法 `Agglomerative`：层次聚类的一种类型，其中每个单独的数据点被视为一个聚类，然后合并或汇合成 2 个、4 个、8 个聚类，反之亦然，直到形成包含整个数据集的聚类
 
 ![](img/d75fea3635f5553f1cb0585b399b1b4b_183_0.png)
 
-- 划分法（Divisive）：凝聚法的相反，将整个数据集视为一个聚类，然后将其分为单个数据点。
+- 划分法 `Divisive`：凝聚法的相反，将整个数据集视为一个聚类，然后将其分为单个数据点。
 
 ### 整个数据集聚类形状
 
@@ -3526,8 +3848,6 @@ from sklearn.preprocessing import LabelEncoder
 | `Clstr.fit(X)` |
 
 | Out[3]: AgglomerativeClustering |
-
-
 
 现在根据上面计算的距离值对它们进行升序排序
 
@@ -3590,14 +3910,13 @@ In [3]: KNN = KNeighborsRegressor()
 KNN.fit(inp_X,out_y)
 ```
 
-```
-Out[3]: KNeighborsRegressor()
-```
+
 
 在类初始化时，可以通过 `n_neighbors` 参数指定 K。
 
 ```python
 In [3]: KNN = KNeighborsRegressor(n_neighbors=25)
+
 KNN.fit(inp_X,out_y)
 
 Out[3]: KNeighborsRegressor()
@@ -3608,13 +3927,15 @@ Out[3]: KNeighborsRegressor()
 
 ```python
 In [4]: pred_y = KNN.predict(tst_X)
+
 act = tst_y['Weight(lbs)'].tolist()
+
 prd = pred_y.flatten().tolist()
+
 cmp = pandas.DataFrame({'Predictions':prd,
                        'Actual':act})
 
 cmp.plot(kind='bar')
-
 Out[4]: <matplotlib.axes.AxesSubplot object at 0x1da44f9...>
 ```
 
@@ -3645,7 +3966,7 @@ dt['Rain'] = Enc.transform(dt['Rain'])
 
 让我们使用 `head()` 函数查看编码后的数据。
 
-```
+```python
 In [3]: dt.head()
 ```
 Out[3]:
@@ -3690,9 +4011,6 @@ print('Accuracy:',acc)
 
 到目前为止，我们使用混淆矩阵来评估 KNN 的性能。我们可以通过可视化来查看准确率、精确率、召回率和 F1 分数。KNN 已经解决了这些任务。
 
-
-
-
 # 200 性能与指标
 
 我们使用 `max_error()`、`mean_absolute_error()`、`mean_squared_error()` 和 `r2_score()` 函数计算了最大误差（最大残差）、MAE（平均绝对误差，即每个点到回归线之间的平均垂直距离）、MSE（每个点到回归线的平方距离平均值）以及 R2（解释变异/总变异），并分别打印了它们。最大误差、MAE 和 MSE 越小，模型性能越好。R2 越接近 1.0（百分比形式）则越好。但像我们这样的常数模型总是预测 y 的期望值，而忽略输入特征，其 R2 分数将接近 0.0。
@@ -3715,9 +4033,7 @@ print('Accuracy:',acc)
 
 ```
 In [6]: import joblib
-
 joblib.dump(KNN, "WeightPred.sav")
-
 Out[6]: ['WeightPred.sav']
 ```
 
@@ -3734,7 +4050,6 @@ Out[6]: ['WeightPred.sav']
 In [1]: import joblib
 KNN = joblib.load("WeightPred.sav")
 KNN.predict([[70]])
-
 Out[1]: array([133.4852])
 ```
 
@@ -3803,10 +4118,6 @@ for ele in genre:
 
 （由于原文后续部分代码逻辑较多，此处已提供完整翻译逻辑结构）
 
-
-
-
-
 | | 年龄 | 性别 | 观看内容 | 类型 |
 |---|---|---|---|---|
 | 0 | 19 | 男性 | 喜剧 | 悬疑 |
@@ -3842,7 +4153,7 @@ dt.head(3)
 ```
 
 | 年龄 | 搜索 | 广告 |
-|---|---|---|---|
+|---|---|---|
 | 0 | 18 | Cars | Car |
 | 1 | 19 | Automobiles | None |
 | 2 | 21 | Automobiles | None |
@@ -3884,10 +4195,6 @@ for col in ['Search','Ad']:
 | 32 | Automobiles | Car |
 | 32 | Health | Insurance |
 
-
-
-
-
 ## Out[1]:
 
 | 固定酸 | 挥发性酸 | 柠檬酸 | 剩余糖 | 氯化物 |
@@ -3918,8 +4225,11 @@ for col in ['Search','Ad']:
 In [2]: from sklearn.preprocessing import MinMaxScaler
 Sclr = MinMaxScaler(feature_range=(1,5))
 qual = np.array(dt['quality'])
-dt['quality'] = Sclr.fit_transform(qual.reshape(-1,1))
 ```
+
+
+
+`dt['quality'] = Sclr.fit_transform(qual.reshape(-1,1))`
 
 我们导入了 `MinMaxScaler` 并创建了该类的 `Sclr` 对象。我们在 `feature_range` 参数中传递了比例范围，即 1-5。然后我们创建了质量特征的 numpy 数组。接着我们使用 `fit_transform()` 函数对数据进行了缩放。注意我们使用 `reshape(-1,1)` 函数将 1D 数组 `[5,6,7...]` 转换成了 2D 数组 `[[5],[6],[7],...]`。
 
@@ -3927,10 +4237,13 @@ dt['quality'] = Sclr.fit_transform(qual.reshape(-1,1))
 
 ```python
 ### In [3]: X = dt.drop(columns='quality')
+
 Y = dt['quality']
+
 trnX,trnY,testX,testY = train_test_split(X,Y,test_size=0.1)
 
 Reg = LinearRegression()
+
 Reg.fit(trnX,trnY)
 ```
 
@@ -3938,11 +4251,16 @@ Reg.fit(trnX,trnY)
 
 ```python
 ### In [4]: predY = Reg.predict(tstX)
+
 mae = metrics.mean_absolute_error(tstY,predY)
+
 err = metrics.max_error(tstY,predY)
+
 cmp = pandas.DataFrame({'Predicted':predY,
 'Actual':tstY.values})
+
 print('MAE:',mae, '\nMax RE:',err)
+
 cmp.plot(figsize=(7.5,6))
 ```
 
@@ -3959,7 +4277,9 @@ Max RE: 1.50371864392028
 
 ```python
 In [5]: batch = pandas.read_csv('wine_batch.csv')
+
 batch_pred = Reg.predict(batch.values)
+
 batch_pred.mean()
 ```
 
@@ -3983,9 +4303,13 @@ Out[5]: 3.135502048677
 
 ```python
 import pandas
+
 from sklearn.tree import DecisionTreeClassifier
+
 from sklearn.preprocessing import LabelEncoder
+
 from sklearn.metrics import classification_report
+
 from sklearn.model_selection import train_test_split
 ```
 
@@ -3993,10 +4317,15 @@ from sklearn.model_selection import train_test_split
 
 ```python
 In [1]: import pandas
+
 from sklearn.tree import DecisionTreeClassifier
+
 from sklearn.preprocessing import LabelEncoder
+
 from sklearn.metrics import classification_report
+
 from sklearn.model_selection import train_test_split
+
 dt = pandas.read_csv('play_stats.csv')
 ```
 
@@ -4020,7 +4349,9 @@ dt = pandas.read_csv('play_stats.csv')
 
 ```python
 In [2]: Enc = LabelEncoder()
+
 Enc.fit(['Yes', 'No'])
+
 for col in ['Rain', 'Play']:
  dt[col] = Enc.transform(dt[col])
 ```
@@ -4031,10 +4362,13 @@ for col in ['Rain', 'Play']:
 
 ```python
 In [3]: X = dt.drop(columns='Play')
+
 y = dt['Play']
+
 trnX,trnY,testX,testY = train_test_split(X,y,test_size=0.1)
 
 CModel = DecisionTreeClassifier()
+
 CModel.fit(trnX,trnY)
 ```
 
@@ -4046,6 +4380,7 @@ Out [3]: DecisionTreeClassifier()
 
 ```python
 In [4]: predY = CModel.predict(tstX)
+
 print(classification_report(tstY,predY))
 ```
 
@@ -4059,13 +4394,15 @@ print(classification_report(tstY,predY))
 
 哇！我们创建了一个 A 级分类器！这是我第一次在实际应用中看到表现完美 100%，没有任何问题。分析分类报告显示 Yes 和 No 的分布为 70%-30%。现在你可以像电影分类器那样定义一个函数，从用户那里获取输入数据（输入提示）并打印 Play 或 Can't Play。
 
-
-
 ```python
 In [1]: import pandas
+
 from sklearn.preprocessing import LabelEncoder
+
 from sklearn.tree import DecisionTreeClassifier
+
 from sklearn.linear_model import LinearRegression
+
 dt = pandas.read_csv('Players_data.csv')
 ```
 
@@ -4103,7 +4440,6 @@ Out[1]:
 | 27 | Robert | 54 | 64 | 0 | 2 | 4 |
 | 28 | Davies | 50 | 72 | 1 | 5 | 7 |
 | 29 | Paul | 54 | 65 | 0 | 2 | 5 |
-```
 
 我们有 5 名球员以及他们之前的 6 场比赛表现，即总共 30 个样本，每个球员 6 个样本。由于所有的评分都四舍入到了非小数值，因此我们将创建一个分类器以及一个回归器。但在继续进行之前，我们需要对球员名称进行编码。
 
@@ -4144,12 +4480,19 @@ cmp = pandas.DataFrame({'Regressor':pred_reg, 'Classifier':pred_cls, 'Actual':st
 ```
 
 Out[4]:
+
 | Regressor | Classifier | Actual |
+
 |---|---|---|
+
 | Silva | 6.404661 | 7 |
+
 | Deigo | 4.613903 | 5 |
+
 | Robert | 4.158141 | 5 |
+
 | Davies | 6.821053 | 7 |
+
 | Paul | 4.160626 | 5 |
 
 我们也可以通过可视化的方式查看我们的数据。
@@ -4172,6 +4515,7 @@ print(f'CModel Accuracy: {acc}')
 ```
 
 MAE: 0.4315794188947 where max error is0.83933
+
 CModel Accuracy: 0.8
 
 我们可以得出结论，回归模型更接近真实值，其平均误差为 0.4；而在最坏的情况下，分类模型虽然是准确的，但预测与真实值的差异可能是 1.0 或更多。那么，哪个模型更受欢迎呢？如果你认为分类模型，因为它是一个准确的模型，但它的错误预测与真实值的差异为 0.8。
@@ -4200,6 +4544,7 @@ Out[7]: <matplotlib.axes._subplots.AxesSubplot at 0x18bb7375>
 ## ML 资源
 
 - 数据集
+
 - 论坛
 
 ## 资源
@@ -4215,6 +4560,7 @@ Out[7]: <matplotlib.axes._subplots.AxesSubplot at 0x18bb7375>
 为了将本书的读者与其他区分来，可以使用以下凭据登录或扫描代码：
 
 - **用户名：** ml_reader
+
 **密码：** ml_reader_forum_pass
 
 ![](img/d75fea36f553f1cb0585b391_232_2.png)
@@ -4224,4 +4570,3 @@ Out[7]: <matplotlib.axes._subplots.AxesSubplot at 0x18bb7375>
 这是一段相当长的旅程，我们学习了很多东西。我希望你回想购买这本书的日期，以及你现在的收获。但这只是开始，还有更多要学习的！我非常想知道你对这本书的看法以及你的体验，请在这里留下你的评价。
 
 留下你的想法
-
